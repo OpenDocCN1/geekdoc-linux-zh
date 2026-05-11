@@ -25,3 +25,4 @@
 +   [通过示例学习技术 2023](docs/tech-exmpl/README.md)
 +   [理解 Linux 进程](docs/udstd-linux-proc/README.md)
 +   [像 IDE 一样使用 vim](docs/use-vim-ide/README.md)
++   [操作系统与中间件：支持受控交互](docs/操作系统与中间件——支持控制交互/README.md)
