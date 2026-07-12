@@ -1,0 +1,1853 @@
+groups:
+- md: '# Mobile Software Diagnostics
+
+
+    ## Introduction
+
+
+    Version 1.0
+
+
+    Dmitry Vostokov
+
+    Software Diagnostics Services
+
+
+    Published by OpenTask, Republic of Ireland
+
+
+    Copyright © 2013 by OpenTask
+
+
+    Copyright © 2013 by Software Diagnostics Services
+
+
+    Copyright © 2013 by Dmitry Vostokov
+
+
+    All rights reserved. No part of this book may be reproduced, stored in a retrieval
+    system, or transmitted, in any form or by any means, without the prior written
+    permission of the publisher.
+
+
+    You must not circulate this book in any other binding or cover, and you must impose
+    the same condition on any acquirer.
+
+
+    Product and company names mentioned in this book may be trademarks of their owners.
+
+
+    OpenTask books and magazines are available through booksellers and distributors
+    worldwide. For further information or comments send requests to press@opentask.com.
+
+
+    A CIP catalogue record for this book is available from the British Library.
+
+
+    ISBN-13: 978-1-908043-65-8 (Paperback)
+
+
+    First printing, 2013
+
+
+    Revision 2.0 (July 2015)
+
+
+    ## Mobile Software Diagnostics Introduction
+
+
+    Hello Everyone, my name is Dmitry Vostokov, and I introduce pattern-oriented mobile
+    software diagnostics today. I decided to keep this presentation short and as simple
+    as possible. If anything needs to be added or modified in the future, I create
+    another version of it.
+
+
+    - Facebook: <http://www.facebook.com/SoftwareDiagnosticsServices>
+
+    - Linkedin: <http://www.linkedin.com/company/software-diagnostics-services>
+
+    - Twitter: <http://twitter.com/DumpAnalysis>
+
+
+    ## Prerequisites
+
+
+    Interest in software diagnostics, troubleshooting and debugging
+
+
+    These prerequisites are very simple, and I suppose you all like me enjoy diagnosing
+    software problems, troubleshooting and debugging.
+
+
+    ## Audience
+
+
+    - Desktop/server development and support
+
+    - Mobile development and support
+
+
+    This introductory presentation is either for desktop and server development and
+    support engineers who are moving to mobile development and support and would like
+    to reuse pattern-oriented software diagnostics there, but it is also for mobile
+    development and support who want to learn about recent advances in pattern-oriented
+    software diagnostics methodology originally coming from complex server environments.
+
+
+    ## The Current State
+
+
+    ### Diagnostics 20 years ago
+
+
+    The current state of mobile software diagnostics on some platforms (for example,
+    memory dump analysis) is like desktop diagnostics decades ago.
+
+
+    However, all this is rapidly changing, and mobile devices now acquire hardware
+    power that was unthinkable some time ago. Such devices might completely displace
+    desktops even for traditional applications because it would be possible to connect
+    mobile devices to large visualization devices to perform traditional desktop work
+    such as editing and designing.
+
+
+    As hardware power increases the traditional desktop and server diagnostics ability
+    also come in. For example, memory analysis role would increase and trace analysis
+    would become more sophisticated on some mobile platforms. For example, the old
+    methods of displaying message boxes for tracking variable values is dying as there
+    is console log and tracing API for JavaScript.
+
+
+    ## The Vision
+
+
+    - Pattern-Oriented Diagnostics
+
+    - Unified Pattern Catalogues
+
+
+    So our vision is reuse of traditional desktop/server diagnostics methods and tools
+    and with this come adoption of pattern orientation and unification of pattern
+    catalogues and languages. Now I show you some slides from a few previous presentations
+    mainly for those who are unfamiliar with pattern-oriented software diagnostics.
+
+
+    First, I would like to remind you a definition of pattern-oriented software diagnostics
+    as pattern-driven and pattern-based.
+
+
+    ### Pattern-driven:
+
+
+    [Pattern-driven materials](http://www.patterndiagnostics.com/Introduction-Software-Diagnostics-materials)
+
+
+    ### Pattern-based:
+
+
+    [Pattern-based materials](http://www.patterndiagnostics.com/pattern-based-diagnostics-materials)
+
+
+    ## Diagnostics Pattern
+
+
+    A common recurrent identifiable problem together with **a set of recommendations**
+    and **possible solutions** to apply in a specific context.
+
+
+    © 2013 Software Diagnostics Services
+
+
+    Next, I would like to remind you a definition of a software diagnostics pattern.
+
+
+    ## Pattern Orientation
+
+
+    ### Pattern-Driven
+
+    Software Diagnostics
+
+    Process
+
+
+    ### Pattern-Based
+
+    Software Diagnostics
+
+    Evolution
+
+
+    Pattern-Oriented Software Diagnostics Methodology
+
+    www.DumpAnalysis.org + www.TraceAnalysis.org
+
+
+    So you see that software diagnostics is about patterns. Pattern-driven part is
+    about diagnostics pattern recognition and the pattern-based part is about pattern
+    and pattern catalogue life cycle.
+
+
+    To repeat, pattern-driven means finding patterns of abnormal structure and behavior
+    in software execution artifacts such as memory dumps, software logs, and network
+    traces. To help with this, there are checklists, pattern catalogs, and tools.
+
+
+    ### Pattern-Based
+
+
+    - Pattern evolution
+
+    - Catalogue evolution
+
+    - Catalogue distribution
+
+
+    Pattern-based part is about evolution and distribution. New patterns are constantly
+    added, old ones are refined, new pattern descriptions for different platforms
+    (we say pattern implementations as would be seen later on) are added. The customers
+    of this technology need to be updated of all changes.
+
+
+    ## Economic Benefits
+
+
+    - Improved communication of diagnostics reports using uniform pattern language
+
+    - Increased productivity by systematic pattern usage
+
+    - Increased quality by leveraging existing expertise
+
+    - Support for global teams
+
+    - Quantifiable analysis
+
+
+    And so the reuse of pattern-oriented software diagnostics brings tangible economic
+    benefits including quantifiable analysis such the number of patterns searched,
+    and the number of them identified.
+
+
+    ## Native/Hybrid/Web Apps
+
+
+    We see the main advantages of pattern-oriented diagnostics on this unification
+    diagram for main mobile platforms. Such modern platforms are based on traditional
+    desktop operating systems, and so it is already possible to reuse tracing there.
+    Unified pattern catalogues even allow for pattern prediction if a particular pattern
+    implementation is missing on one platform but available for the other.
+
+
+    ## Stack Trace Collection
+
+
+    ```
+
+    09-08 22:38:11.569: V/AudioHardwareMSM7XXX(94): count : count : 4800
+
+    09-08 22:38:11.739: W/AudioFlinger(94): write blocked for 169 msecs, 1549 delayed
+    writes, thread 0xccd0
+
+    09-08 22:38:14.309: I/System.out(21804): --- Stack Trace Collection ---
+
+    09-08 22:38:14.309: I/System.out(21804): --- Stack Trace Collection ---
+
+    09-08 22:38:14.309: I/System.out(21804): Thread[JDWP,5,system]:
+
+    09-08 22:38:14.309: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.309: I/System.out(21804): Thread[GC,5,system]:
+
+    09-08 22:38:14.309: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[Signal Catcher,5,system]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[main,5,main]:
+
+    09-08 22:38:14.319: I/System.out(21804): android.os.MessageQueue.nativePollOnce(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): android.os.MessageQueue.next(MessageQueue.java:119)
+
+    09-08 22:38:14.319: I/System.out(21804): android.os.Looper.loop(Looper.java:117)
+
+    09-08 22:38:14.319: I/System.out(21804): android.app.ActivityThread.main(ActivityThread.java:3687)
+
+    09-08 22:38:14.319: I/System.out(21804): java.lang.reflect.Method.invoke(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): java.lang.reflect.Method.invoke(Method.java:507)
+
+    09-08 22:38:14.319: I/System.out(21804): com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:867)
+
+    09-08 22:38:14.319: I/System.out(21804): com.android.internal.os.ZygoteInit.main(ZygoteInit.java:625)
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.main(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[HeapWorker,5,system]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[Compiler,5,system]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[Binder Thread #1,5,main]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.VMStack.getStackTrace(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): lang.Thread.getStackTrace(Thread.java:737)
+
+    09-08 22:38:14.329: I/System.out(21804): lang.Thread.getAllStackTraces(Thread.java:630)
+
+    09-08 22:38:14.329: I/System.out(21804): com.example.deadlock.FullscreenActivity$3.run(FullscreenActivity.java:67)
+
+    09-08 22:38:14.329: I/System.out(21804): java.lang.Thread.run(Thread.java:1019)
+
+    09-08 22:38:14.329: I/System.out(21804): Thread[Binder Thread #2,5,main]:
+
+    09-08 22:38:14.329: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.329: I/System.out(21804): --- end ---
+
+    ```
+
+
+    One example here we can provide is **Stack Trace Collection** memory analysis
+    pattern. Originally it was discerned on Windows platforms for WinDbg debugger
+    from Debugging Tools for Windows where we can get a collection of stack traces
+    from all threads from a specific process or system including managed .NET stack
+    traces. Later on another implementation was created for Mac OS X / GDB and to
+    some extent it is possible to reuse it on Linux GDB debugger and other platforms
+    that support GDB. Here is an example output from Android / Java platform and it
+    is possible to reuse it for other Java implementations as well. You can see this
+    Java implementation including modelling source code in one of the Debugging TV
+    episodes I provide the link to the Further Reading slide.'
+  mdcn: "\n# 移动软件诊断\n## 前言\n版本1.0\n德米特里·沃斯托科夫\n软件诊断服务公司\n由爱尔兰共和国OpenTask出版\n版权所有 ©\
+    \ 2013 OpenTask\n版权所有 © 2013 软件诊断服务公司\n版权所有 © 2013 德米特里·沃斯托科夫\n保留所有权利。未经出版方事先书面许可，本书任何部分不得以任何形式或任何方式复制、存储在检索系统中或传输。\n\
+    不得使用其他装订或封面流通本书，且需向任何购书者施加相同的限制条件。\n本书提及的产品和公司名称可能是其所有者的 trademark。\nOpenTask的图书和杂志在全球各地通过书商和分销商发售。\n\
+    如需了解更多信息或提交反馈，请发送请求至press@opentask.com。\n本书的CIP目录记录可在英国图书馆获取。\nISBN-13：978-1-908043-65-8（平装本）\n\
+    2013年首版\n修订版2.0（2015年7月）\n## 移动软件诊断 前言\n大家好，我是德米特里·沃斯托科夫，今天我将为大家介绍面向模式的移动软件诊断技术。\n\
+    我决定本次分享尽可能简短通俗。\n若未来有需要新增或修改的内容，我会另行发布新版本。\n- 脸书：<http://www.facebook.com/SoftwareDiagnosticsServices>\n\
+    - 领英：<http://www.linkedin.com/company/software-diagnostics-services>\n- 推特：<http://twitter.com/DumpAnalysis>\n\
+    ## 前置要求\n对软件诊断、故障排查与调试感兴趣\n这些前置要求非常简单，我想各位都和我一样热衷于诊断软件问题、排查故障与调试。\n## 受众\n- 桌面/服务器开发与支持人员\n\
+    - 移动开发与支持人员\n本次入门分享既适合转向移动开发与支持领域、希望在此复用面向模式软件诊断技术的桌面及服务器开发与支持工程师，也适合希望了解面向模式软件诊断方法论最新进展的移动开发与支持人员，该方法论最初源于复杂服务器环境。\n\
+    ## 现状\n### 20年前的诊断技术\n部分平台（例如内存转储分析）上的移动软件诊断技术现状，相当于几十年前的桌面诊断水平。\n然而这一切都在快速变化，如今移动设备的硬件性能已达到不久之前难以想象的水平。\n\
+    这类设备甚至可能完全取代桌面设备用于传统应用场景，因为可以将移动设备连接到大屏可视化设备，完成编辑、设计等传统桌面端工作。\n随着硬件性能提升，传统的桌面与服务器诊断能力也开始向移动端迁移。\n\
+    例如，在部分移动平台上，内存分析的作用将进一步凸显，跟踪分析也将更加精细。\n例如，过去通过弹窗跟踪变量值的方法正逐渐被淘汰，因为JavaScript已有控制台日志和跟踪API可用。\n\
+    ## 愿景\n- 面向模式的诊断技术\n- 统一的模式目录\n因此我们的愿景是复用传统的桌面/服务器诊断方法与工具，同时引入模式导向理念，实现模式目录与语言的统一。\n\
+    接下来我将展示部分过往分享的幻灯片，主要面向不熟悉面向模式软件诊断技术的听众。\n首先，我想和大家回顾一下面向模式软件诊断的定义：它分为模式驱动型和模式基础型两种。\n\
+    ### 模式驱动型：[模式驱动型材料](http://www.patterndiagnostics.com/Introduction-Software-Diagnostics-materials)\n\
+    ### 模式基础型：[模式基础型材料](http://www.patterndiagnostics.com/pattern-based-diagnostics-materials)\n\
+    ## 诊断模式\n在特定场景下可识别的、反复出现的常见问题，以及**一套可实施的建议**和**可能的解决方案**。\n© 2013 软件诊断服务公司\n接下来，我想和大家回顾一下软件诊断模式的定义。\n\
+    ## 模式导向\n### 模式驱动型软件诊断流程\n### 模式基础型软件诊断演进\n面向模式软件诊断方法论\n官网：www.DumpAnalysis.org\
+    \ + www.TraceAnalysis.org\n由此可见，软件诊断的核心就是模式。模式驱动型部分关注诊断模式的识别，模式基础型部分关注模式与模式目录的生命周期。\n\
+    再重复一遍，模式驱动型指的是在软件执行产物（如内存转储、软件日志、网络跟踪数据）中寻找异常结构与行为的模式。\n为辅助完成这一过程，有对应的检查清单、模式目录与工具可供使用。\n\
+    ### 模式基础型\n- 模式演进\n- 目录演进\n- 目录分发\n模式基础型部分关注的是模式的演进与分发。\n新模式会持续新增，旧模式会被逐步优化，不同平台的新模式描述（我们后续称之为模式实现）也会被补充进来。\n\
+    该技术的使用者需要了解所有的变更信息。\n## 经济效益\n- 使用统一的模式语言优化诊断报告沟通效率\n- 通过系统化使用模式提升生产力\n- 依托现有专业知识提升质量\n\
+    - 为全球团队提供支持\n- 可量化分析\n因此，复用面向模式的软件诊断技术可带来切实的经济效益，包括可量化分析指标，如检索的模式总数、已识别的模式数量等。\n\
+    ## 原生/混合/Web应用\n从主流移动平台的统一架构图中，我们可以看到面向模式诊断技术的主要优势。\n这类现代平台基于传统桌面操作系统，因此已经可以在其上复用跟踪技术。\n\
+    统一的模式目录甚至支持模式预测：如果某个模式在某平台缺失实现，但在另一平台已有对应实现，即可实现预测。\n## 堆栈跟踪收集\n``` \n09-08 22:38:11.569:\
+    \ V/AudioHardwareMSM7XXX(94): count : count : 4800\n09-08 22:38:11.739: W/AudioFlinger(94):\
+    \ write blocked for 169 msecs, 1549 delayed writes, thread 0xccd0\n09-08 22:38:14.309:\
+    \ I/System.out(21804): --- Stack Trace Collection ---\n09-08 22:38:14.309: I/System.out(21804):\
+    \ --- Stack Trace Collection ---\n09-08 22:38:14.309: I/System.out(21804): Thread[JDWP,5,system]:\n\
+    09-08 22:38:14.309: I/System.out(21804): dalvik.system.NativeStart.run(Native\
+    \ Method)\n09-08 22:38:14.309: I/System.out(21804): Thread[GC,5,system]:\n09-08\
+    \ 22:38:14.309: I/System.out(21804): dalvik.system.NativeStart.run(Native Method)\n\
+    09-08 22:38:14.319: I/System.out(21804): Thread[Signal Catcher,5,system]:\n09-08\
+    \ 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native Method)\n\
+    09-08 22:38:14.319: I/System.out(21804): Thread[main,5,main]:\n09-08 22:38:14.319:\
+    \ I/System.out(21804): android.os.MessageQueue.nativePollOnce(Native Method)\n\
+    09-08 22:38:14.319: I/System.out(21804): android.os.MessageQueue.next(MessageQueue.java:119)\n\
+    09-08 22:38:14.319: I/System.out(21804): android.os.Looper.loop(Looper.java:117)\n\
+    09-08 22:38:14.319: I/System.out(21804): android.app.ActivityThread.main(ActivityThread.java:3687)\n\
+    09-08 22:38:14.319: I/System.out(21804): java.lang.reflect.Method.invoke(Native\
+    \ Method)\n09-08 22:38:14.319: I/System.out(21804): java.lang.reflect.Method.invoke(Method.java:507)\n\
+    09-08 22:38:14.319: I/System.out(21804): com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:867)\n\
+    09-08 22:38:14.319: I/System.out(21804): com.android.internal.os.ZygoteInit.main(ZygoteInit.java:625)\n\
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.main(Native\
+    \ Method)\n09-08 22:38:14.319: I/System.out(21804): Thread[HeapWorker,5,system]:\n\
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native\
+    \ Method)\n09-08 22:38:14.319: I/System.out(21804): Thread[Compiler,5,system]:\n\
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native\
+    \ Method)\n09-08 22:38:14.319: I/System.out(21804): Thread[Binder Thread #1,5,main]:\n\
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native\
+    \ Method)\n09-08 22:38:14.319: I/System.out(21804): dalvik.system.VMStack.getStackTrace(Native\
+    \ Method)\n09-08 22:38:14.319: I/System.out(21804): lang.Thread.getStackTrace(Thread.java:737)\n\
+    09-08 22:38:14.329: I/System.out(21804): lang.Thread.getAllStackTraces(Thread.java:630)\n\
+    09-08 22:38:14.329: I/System.out(21804): com.example.deadlock.FullscreenActivity$3.run(FullscreenActivity.java:67)\n\
+    09-08 22:38:14.329: I/System.out(21804): java.lang.Thread.run(Thread.java:1019)\n\
+    09-08 22:38:14.329: I/System.out(21804): Thread[Binder Thread #2,5,main]:\n09-08\
+    \ 22:38:14.329: I/System.out(21804): dalvik.system.NativeStart.run(Native Method)\n\
+    09-08 22:38:14.329: I/System.out(21804): --- end ---\n```\n这里可以举的一个例子是**堆栈跟踪收集**内存分析模式。\n\
+    该模式最初在Windows平台上被识别，适用于Windows调试工具中的WinDbg调试器，可获取特定进程或系统的所有线程的堆栈跟踪集合，包含受管.NET堆栈跟踪。\n\
+    之后为Mac OS X / GDB开发了另一套实现，在某种程度上也可复用于Linux GDB调试器及其他支持GDB的平台。\n以下是Android/Java平台上的示例输出，也可复用于其他Java实现版本。\n\
+    你可以在某一期《调试电视》节目中看到这套Java实现，包含建模源代码，相关链接我会放在“延伸阅读”幻灯片中。\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_0_0.png)
+
+
+    # Mobile Software Diagnostics
+
+
+    # Introduction
+
+
+    Version 1.0
+
+
+    Dmitry Vostokov
+
+    Software Diagnostics Services'
+  - '[PAGE 1]
+
+
+    Published by OpenTask, Republic of Ireland
+
+
+    Copyright © 2013 by OpenTask
+
+
+    Copyright © 2013 by Software Diagnostics Services
+
+
+    Copyright © 2013 by Dmitry Vostokov
+
+
+    All rights reserved. No part of this book may be reproduced, stored in a retrieval
+    system, or transmitted, in any form or by any means, without the prior written
+    permission of the publisher.
+
+
+    You must not circulate this book in any other binding or cover, and you must impose
+    the same condition on any acquirer.
+
+
+    Product and company names mentioned in this book may be trademarks of their owners.
+
+
+    OpenTask books and magazines are available through booksellers and distributors
+    worldwide. For further information or comments send requests to press@opentask.com.
+
+
+    A CIP catalogue record for this book is available from the British Library.
+
+
+    ISBN-13: 978-1-908043-65-8 (Paperback)
+
+
+    First printing, 2013
+
+
+    Revision 2.0 (July 2015)'
+  - '[PAGE 2]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_2_0.png)
+
+
+    # Mobile Software Diagnostics Introduction
+
+
+    Hello Everyone, my name is Dmitry Vostokov, and I introduce pattern-oriented mobile
+    software diagnostics today. I decided to keep this presentation short and as simple
+    as possible. If anything needs to be added or modified in the future, I create
+    another version of it.
+
+
+    +   - **Facebook:** <http://www.facebook.com/SoftwareDiagnosticsServices>
+
+    - **Linkedin:** <http://www.linkedin.com/company/software-diagnostics-services>
+
+    - **Twitter:** <http://twitter.com/DumpAnalysis>'
+  - '[PAGE 3]
+
+
+    # # Prerequisites
+
+
+    # Interest in software diagnostics, troubleshooting and debugging
+
+
+    These prerequisites are very simple, and I suppose you all like me enjoy diagnosing
+    software problems, troubleshooting and debugging.'
+  - '[PAGE 4]
+
+
+    # **Audience**
+
+
+    +   - Desktop/server development and support
+
+
+    +   - Mobile development and support
+
+
+    This introductory presentation is either for desktop and server development and
+    support engineers who are moving to mobile development and support and would like
+    to reuse pattern-oriented software diagnostics there, but it is also for mobile
+    development and support who want to learn about recent advances in pattern-oriented
+    software diagnostics methodology originally coming from complex server environments.'
+  - '[PAGE 5]
+
+
+    # The Current State
+
+
+    # Diagnostics 20 years ago
+
+
+    The current state of mobile software diagnostics on some platforms (for example,
+    memory dump analysis) is like desktop diagnostics decades ago.'
+  - '[PAGE 6]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_6_0.png)
+
+
+    However, all this is rapidly changing, and mobile devices now acquire hardware
+    power that was unthinkable some time ago. Such devices might completely displace
+    desktops even for traditional applications because it would be possible to connect
+    mobile devices to large visualization devices to perform traditional desktop work
+    such as editing and designing.'
+  - '[PAGE 7]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_7_0.png)
+
+
+    As hardware power increases the traditional desktop and server diagnostics ability
+    also come in. For example, memory analysis role would increase and trace analysis
+    would become more sophisticated on some mobile platforms. For example, the old
+    methods of displaying message boxes for tracking variable values is dying as there
+    is console log and tracing API for JavaScript.'
+  - '[PAGE 8]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_8_0.png)
+
+
+    # The Vision
+
+
+    +   - Pattern-Oriented Diagnostics
+
+    - Unified Pattern Catalogues
+
+
+    So our vision is reuse of traditional desktop/server diagnostics methods and tools
+    and with this come adoption of pattern orientation and unification of pattern
+    catalogues and languages. Now I show you some slides from a few previous presentations
+    mainly for those who are unfamiliar with pattern-oriented software diagnostics.'
+  - '[PAGE 9]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_9_0.png)
+
+
+    First, I would like to remind you a definition of pattern-oriented software diagnostics
+    as pattern-driven and pattern-based.
+
+
+    # Pattern-driven:
+
+
+    [Pattern-driven materials](http://www.patterndiagnostics.com/Introduction-Software-Diagnostics-materials)
+
+
+    # Pattern-based:
+
+
+    [Pattern-based materials](http://www.patterndiagnostics.com/pattern-based-diagnostics-materials)'
+  - '[PAGE 10]
+
+
+    # Diagnostics Pattern
+
+
+    A common recurrent identifiable problem together with **a set of recommendations**
+    and **possible solutions** to apply in a specific context.
+
+
+    © 2013 Software Diagnostics Services
+
+
+    Next, I would like to remind you a definition of a software diagnostics pattern.'
+  - '[PAGE 11]
+
+
+    # Pattern Orientation
+
+
+    # Pattern-Driven
+
+    Software Diagnostics
+
+    Process
+
+
+    # Pattern-Based
+
+    Software Diagnostics
+
+    Evolution
+
+
+    Pattern-Oriented Software Diagnostics Methodology
+
+    www.DumpAnalysis.org + www.TraceAnalysis.org
+
+
+    So you see that software diagnostics is about patterns. Pattern-driven part is
+    about diagnostics pattern recognition and the pattern-based part is about pattern
+    and pattern catalogue life cycle.'
+  - '[PAGE 12]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_12_0.png)
+
+
+    To repeat, pattern-driven means finding patterns of abnormal structure and behavior
+    in software execution artifacts such as memory dumps, software logs, and network
+    traces. To help with this, there are checklists, pattern catalogs, and tools.'
+  - '[PAGE 13]
+
+
+    # # Pattern-Based
+
+
+    +   - Pattern evolution
+
+    - Catalogue evolution
+
+    - Catalogue distribution
+
+
+    Patten-based part is about evolution and distribution. New patterns are constantly
+    added, old ones are refined, new pattern descriptions for different platforms
+    (we say pattern implementations as would be seen later on) are added. The customers
+    of this technology need to be updated of all changes.'
+  - '[PAGE 14]
+
+
+    # Economic Benefits
+
+
+    +   * Improved communication of diagnostics reports using uniform pattern language
+
+    * Increased productivity by systematic pattern usage
+
+    * Increased quality by leveraging existing expertise
+
+    * Support for global teams
+
+    * Quantifiable analysis
+
+
+    And so the reuse of pattern-oriented software diagnostics brings tangible economic
+    benefits including quantifiable analysis such the number of patterns searched,
+    and the number of them identified.'
+  - '[PAGE 15]
+
+
+    # Native/Hybrid/Web Apps
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_15_0.png)
+
+
+    We see the main advantages of pattern-oriented diagnostics on this unification
+    diagram for main mobile platforms. Such modern platforms are based on traditional
+    desktop operating systems, and so it is already possible to reuse tracing there.
+    Unified pattern catalogues even allow for pattern prediction if a particular pattern
+    implementation is missing on one platform but available for the other.'
+  - '[PAGE 16]
+
+
+    # Stack Trace Collection
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_16_0.png)
+
+
+    ```
+
+    09-08 22:38:11.569: V/AudioHardwareMSM7XXX(94): count : count : 4800
+
+    09-08 22:38:11.739: W/AudioFlinger(94): write blocked for 169 msecs, 1549 delayed
+    writes, thread 0xccd0
+
+    09-08 22:38:14.309: I/System.out(21804): --- Stack Trace Collection ---
+
+    09-08 22:38:14.309: I/System.out(21804): --- Stack Trace Collection ---
+
+    09-08 22:38:14.309: I/System.out(21804): Thread[JDWP,5,system]:
+
+    09-08 22:38:14.309: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.309: I/System.out(21804): Thread[GC,5,system]:
+
+    09-08 22:38:14.309: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[Signal Catcher,5,system]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[main,5,main]:
+
+    09-08 22:38:14.319: I/System.out(21804): android.os.MessageQueue.nativePollOnce(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): android.os.MessageQueue.next(MessageQueue.java:119)
+
+    09-08 22:38:14.319: I/System.out(21804): android.os.Looper.loop(Looper.java:117)
+
+    09-08 22:38:14.319: I/System.out(21804): android.app.ActivityThread.main(ActivityThread.java:3687)
+
+    09-08 22:38:14.319: I/System.out(21804): java.lang.reflect.Method.invoke(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): java.lang.reflect.Method.invoke(Method.java:507)
+
+    09-08 22:38:14.319: I/System.out(21804): com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:867)
+
+    09-08 22:38:14.319: I/System.out(21804): com.android.internal.os.ZygoteInit.main(ZygoteInit.java:625)
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.main(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[HeapWorker,5,system]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[Compiler,5,system]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[Binder Thread #1,5,main]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.VMStack.getStackTrace(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): lang.Thread.getStackTrace(Thread.java:737)
+
+    09-08 22:38:14.329: I/System.out(21804): lang.Thread.getAllStackTraces(Thread.java:630)
+
+    09-08 22:38:14.329: I/System.out(21804): com.example.deadlock.FullscreenActivity$3.run(FullscreenActivity.java:67)
+
+    09-08 22:38:14.329: I/System.out(21804): java.lang.Thread.run(Thread.java:1019)
+
+    09-08 22:38:14.329: I/System.out(21804): Thread[Binder Thread #2,5,main]:
+
+    09-08 22:38:14.329: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.329: I/System.out(21804): --- end ---
+
+    ```
+
+
+    One example here we can provide is **Stack Trace Collection** memory analysis
+    pattern. Originally it was discerned on Windows platforms for WinDbg debugger
+    from Debugging Tools for Windows where we can get a collection of stack traces
+    from all threads from a specific process or system including managed .NET stack
+    traces. Later on another implementation was created for Mac OS X / GDB and to
+    some extent it is possible to reuse it on Linux GDB debugger and other platforms
+    that support GDB. Here is an example output from Android / Java platform and it
+    is possible to reuse it for other Java implementations as well. You can see this
+    Java implementation including modelling source code in one of the Debugging TV
+    episodes I provide the link to the Further Reading slide.'
+- md: '## Memory Analysis Patterns
+
+    - Not limited to memory dumps
+
+    - Can be applied to traces / logs
+
+    ![](img/9a116c36857552617bbaaa814c688b61_17_0.png)
+
+
+    We saw on the previous slide that stack trace collection was taken from a log
+    file. Contrary to common belief, memory analysis is not limited to memory dumps
+    or live debugging. It is common in software diagnostics of artefacts from the
+    complex environments to process memory dumps into log files and then recognize
+    patterns there.
+
+
+    ## Problem
+
+    - No / Limited memory dump analysis
+
+    - Limited OS debugger support
+
+
+    Now a few slides about one problem we found in the current state of mobile software
+    diagnostics on some platforms. There is very limited memory dump analysis, and
+    if this is possible, there is limited OS support for the platform debugger for
+    postmortem analysis.
+
+
+    ## Solution
+
+    ![](img/9a116c36857552617bbaaa814c688b61_19_0.png)
+
+    - State Dump trace analysis pattern
+
+    - Paratext memory analysis pattern
+
+
+    The solution we found for limited memory analysis is to introduce yet another
+    trace analysis pattern that would allow reuse of some memory analysis patterns.
+    It is called **State Dump** pattern, and you would see a diagram explaining it
+    on the next slide. For limited OS debugger support we reuse the so-called **Paratext**
+    pattern we explain further later on.
+
+
+    ## State Dump
+
+    ![](img/9a116c36857552617bbaaa814c688b61_20_0.png)
+
+    - stack traces
+
+    - variables
+
+    - status reports
+
+
+    State Dump means periodic logging of stack traces, important variables, and status
+    reports.
+
+
+    ## Paratext Android / Java example
+
+    ![](img/9a116c36857552617bbaaa814c688b61_19_0.png)
+
+    | USER | PID | PPID | VSIZE | RSS | WCHAN | PC | NAME |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | app_42 | 24101 | 24100 | 137696 | 15756 | ffffffff | 00000000 | HeapWorker |
+
+    | app_42 | 24102 | 24100 | 137696 | 15756 | ffffffff | 00000000 | GC |
+
+    | app_42 | 24103 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Signal Catcher
+    |
+
+    | app_42 | 24104 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Compiler |
+
+    | app_42 | 24105 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_42 | 24106 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_42 | 24107 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_57 | 24109 | 93 | 146876 | 19268 | ffffffff | 00000000 | com.example.spikingthread
+    |
+
+    | app_57 | 24110 | 24109 | 146876 | 19268 | ffffffff | 00000000 | HeapWorker |
+
+    | app_57 | 24111 | 24109 | 146876 | 19268 | ffffffff | 00000000 | GC |
+
+    | app_57 | 24112 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Signal Catcher
+    |
+
+    | app_57 | 24113 | 24109 | 146876 | 19268 | ffffffff | 00000000 | JDWP |
+
+    | app_57 | 24114 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Compiler |
+
+    | app_57 | 24115 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_57 | 24116 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_57 | 24117 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Thread-10 |
+
+    | app_57 | 24122 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Thread-11 |
+
+    | shell | 24123 | 143 | 800 | 336 | c00a6fc8 | afd0c3bc | /system/bin/sh |
+
+    | root | 24125 | 2 | 0 | 0 | ffffffff | 00000000 | flush-138:14 |
+
+    | root | 24126 | 2 | 0 | 0 | ffffffff | 00000000 | flush-179:0 |
+
+
+    © 2013 Software Diagnostics Services **Paratext** name originally comes from narratology
+    and means extra information to supplement a textual narrative, for example, notes,
+    and text description. Here information from a system collected by OS tools may
+    assist in memory analysis. In this slide, we see an indication of a running thread
+    that helps with the diagnosing **Spiking Thread** memory analysis pattern.
+
+
+    ## Mobile DA+TA
+
+    - Dump Analysis
+
+    - Memory analysis patterns
+
+    - Trace Analysis
+
+    - Trace analysis patterns
+
+
+    To summarize, it is possible to reuse Dump Analysis and Trace Analysis pattern
+    catalogues: what we call mobile DA+TA.
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_23_0.png)
+
+
+    There is another meaning of "mobile" we would like to cover at the end of this
+    presentation. It means flexible software diagnostics independent from support
+    and engineering organizational structure and interaction. This is mainly for big
+    companies of course.
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_24_0.png)
+
+
+    In this slide, I included links to relevant past presentations focused on pattern-driven
+    and pattern-based parts where you can find additional references such as for Software
+    Narratology. There are also the recent Debugging TV episodes which provide pattern
+    reuse examples for Android/Java platform I mentioned previously.
+
+    - **Introduction to Pattern-Driven Software Diagnostics:** http://www.patterndiagnostics.com/Introduction-Software-Diagnostics-materials
+
+    - **Introduction to Pattern-Based Software Diagnostics:** http://www.patterndiagnostics.com/pattern-based-diagnostics-materials
+
+    - **Debugging TV episodes 0x32 and 0x33:** http://www.debugging.tv/'
+  mdcn: '
+
+    ## 内存分析模式
+
+    - 不仅限于内存转储
+
+    - 可应用于跟踪/日志
+
+    ![](img/9a116c36857552617bbaaa814c688b61_17_0.png)
+
+
+    我们在上一页幻灯片中看到，堆栈跟踪收集是从日志文件中获取的。与普遍认知相反，内存分析并不局限于内存转储或实时调试。在复杂环境中对工件进行软件诊断时，将内存转储处理成日志文件然后在其中识别模式是很常见的做法。
+
+
+    ## 问题
+
+    - 无/有限的内存转储分析
+
+    - 有限的操作系统调试器支持
+
+
+    接下来用几张幻灯片介绍我们在当前移动软件诊断领域中发现的一个问题。在某些平台上，内存转储分析能力非常有限，即使可以进行，平台调试器用于事后分析的操作系统支持也很有限。
+
+
+    ## 解决方案
+
+    ![](img/9a116c36857552617bbaaa814c688b61_19_0.png)
+
+    - 状态转储跟踪分析模式
+
+    - 副文本内存分析模式
+
+
+    我们为有限内存分析找到的解决方案是引入另一种跟踪分析模式，以便复用一些内存分析模式。它被称为**状态转储**模式，你将在下一张幻灯片中看到解释它的图表。对于有限的操作系统调试器支持，我们复用了所谓的**副文本**模式，稍后会进一步解释。
+
+
+    ## 状态转储
+
+    ![](img/9a116c36857552617bbaaa814c688b61_20_0.png)
+
+    - 堆栈跟踪
+
+    - 变量
+
+    - 状态报告
+
+
+    状态转储是指定期记录堆栈跟踪、重要变量和状态报告。
+
+
+    ## 副文本 Android / Java 示例
+
+    ![](img/9a116c36857552617bbaaa814c688b61_19_0.png)
+
+    | USER | PID | PPID | VSIZE | RSS | WCHAN | PC | NAME |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | app_42 | 24101 | 24100 | 137696 | 15756 | ffffffff | 00000000 | HeapWorker |
+
+    | app_42 | 24102 | 24100 | 137696 | 15756 | ffffffff | 00000000 | GC |
+
+    | app_42 | 24103 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Signal Catcher
+    |
+
+    | app_42 | 24104 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Compiler |
+
+    | app_42 | 24105 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_42 | 24106 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_42 | 24107 | 24100 | 137696 | 15756 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_57 | 24109 | 93 | 146876 | 19268 | ffffffff | 00000000 | com.example.spikingthread
+    |
+
+    | app_57 | 24110 | 24109 | 146876 | 19268 | ffffffff | 00000000 | HeapWorker |
+
+    | app_57 | 24111 | 24109 | 146876 | 19268 | ffffffff | 00000000 | GC |
+
+    | app_57 | 24112 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Signal Catcher
+    |
+
+    | app_57 | 24113 | 24109 | 146876 | 19268 | ffffffff | 00000000 | JDWP |
+
+    | app_57 | 24114 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Compiler |
+
+    | app_57 | 24115 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_57 | 24116 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Binder Thread
+    # |
+
+    | app_57 | 24117 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Thread-10 |
+
+    | app_57 | 24122 | 24109 | 146876 | 19268 | ffffffff | 00000000 | Thread-11 |
+
+    | shell | 24123 | 143 | 800 | 336 | c00a6fc8 | afd0c3bc | /system/bin/sh |
+
+    | root | 24125 | 2 | 0 | 0 | ffffffff | 00000000 | flush-138:14 |
+
+    | root | 24126 | 2 | 0 | 0 | ffffffff | 00000000 | flush-179:0 |
+
+
+    © 2013 Software Diagnostics Services **副文本**一词最初来自叙事学，指的是补充文本叙事的额外信息，例如注释和文字描述。在此处，操作系统工具从系统中收集的信息可以辅助内存分析。在这张幻灯片中，我们看到一个正在运行的线程的指示，这有助于诊断**尖峰线程**内存分析模式。
+
+
+    ## 移动 DA+TA
+
+    - 转储分析
+
+    - 内存分析模式
+
+    - 跟踪分析
+
+    - 跟踪分析模式
+
+
+    总结一下，复用转储分析和跟踪分析模式目录是可行的：这就是我们所说的移动 DA+TA。
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_23_0.png)
+
+
+    我们还想在本次演讲结束时讨论"移动"的另一层含义。它指的是独立于支持和工程组织结构及交互的灵活软件诊断。这主要适用于大型公司。
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_24_0.png)
+
+
+    在这张幻灯片中，我包含了相关过往演讲的链接，这些演讲侧重于模式驱动和基于模式的部分，你可以在其中找到更多参考资料，例如关于软件叙事学的内容。还有最近的 Debugging
+    TV 集数，提供了我之前提到的 Android/Java 平台模式复用示例。
+
+    - **模式驱动软件诊断简介：** http://www.patterndiagnostics.com/Introduction-Software-Diagnostics-materials
+
+    - **基于模式的软件诊断简介：** http://www.patterndiagnostics.com/pattern-based-diagnostics-materials
+
+    - **Debugging TV 第 0x32 和 0x33 集：** http://www.debugging.tv/
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 17]
+
+
+    # Memory Analysis Patterns
+
+
+    +   - Not limited to memory dumps
+
+    - Can be applied to traces / logs
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_17_0.png)
+
+
+    We saw on the previous slide that stack trace collection was taken from a log
+    file. Contrary to common belief memory analysis is not limited to memory dumps
+    or live debugging. It is common in software diagnostics of artefacts from the
+    complex environments to process memory dumps into log files and then recognize
+    patterns there.'
+  - '[PAGE 18]
+
+
+    # Problem
+
+
+    +   - No / Limited memory dump analysis
+
+
+    +   - Limited OS debugger support
+
+
+    Now a few slides about one problem we found in the current state of mobile software
+    diagnostics on some platforms. There is very limited memory dump analysis, and
+    if this is possible, there is limited OS support for the platform debugger for
+    postmortem analysis.'
+  - '[PAGE 19]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_19_0.png)
+
+
+    # Solution
+
+
+    +   - State Dump trace analysis pattern
+
+    - Paratext memory analysis pattern
+
+
+    The solution we found for limited memory analysis is to introduce yet another
+    trace analysis pattern that would allow reuse of some memory analysis patterns.
+    It is called **State Dump** pattern, and you would see a diagram explaining it
+    on the next slide. For limited OS debugger support we reuse the so-called **Paratext**
+    pattern we explain further later on.'
+  - '[PAGE 20]
+
+
+    # State Dump
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_20_0.png)
+
+
+    +   - stack traces
+
+    - variables
+
+    - status reports
+
+
+    State Dump means periodic logging of stack traces, important variables, and status
+    reports.'
+  - '[PAGE 21]
+
+
+    # Paratext
+
+
+    Android / Java example
+
+
+    ```
+
+    $ ps -t
+
+    ps -t
+
+    USER     PID PPID VSIZE RSS    WCHAN    PC         NAME
+
+    [...]
+
+    app_42    24101 24100 137696 15756 ffffffff 00000000 S HeapWorker
+
+    app_42    24102 24100 137696 15756 ffffffff 00000000 S GC
+
+    app_42    24103 24100 137696 15756 ffffffff 00000000 S Signal Catcher
+
+    app_42    24104 24100 137696 15756 ffffffff 00000000 S Compiler
+
+    app_42    24105 24100 137696 15756 ffffffff 00000000 S Binder Thread #
+
+    app_42    24106 24100 137696 15756 ffffffff 00000000 S Binder Thread #
+
+    app_42    24107 24100 137696 15756 ffffffff 00000000 S Binder Thread #
+
+    app_57    24109 93     146876 19268 ffffffff 00000000 S com.example.spikingthread
+
+    app_57    24110 24109 146876 19268 ffffffff 00000000 S HeapWorker
+
+    app_57    24111 24109 146876 19268 ffffffff 00000000 S GC
+
+    app_57    24112 24109 146876 19268 ffffffff 00000000 S Signal Catcher
+
+    app_57    24113 24109 146876 19268 ffffffff 00000000 S JDWP
+
+    app_57    24114 24109 146876 19268 ffffffff 00000000 S Compiler
+
+    app_57    24115 24109 146876 19268 ffffffff 00000000 S Binder Thread #
+
+    app_57    24116 24109 146876 19268 ffffffff 00000000 S Binder Thread #
+
+    app_57    24117 24109 146876 19268 ffffffff 00000000 S Thread-10
+
+    app_57    24122 24109 146876 19268 ffffffff 00000000 R Thread-11
+
+    shell     24123 143    800    336   c00a6fc8 afd0c3bc S /system/bin/sh
+
+    root      24125 2      0      0     ffffffff 00000000 S flush-138:14
+
+    root      24126 2      0      0     ffffffff 00000000 S flush-179:0
+
+    ```
+
+
+    © 2013 Software Diagnostics Services
+
+
+    **Paratext** name originally comes from narratology and means extra information
+    to supplement a textual narrative, for example, notes, and text description. Here
+    information from a system collected by OS tools may assist in memory analysis.
+    In this slide, we see an indication of a running thread that helps with the diagnosing
+    **Spiking Thread** memory analysis pattern.'
+  - "[PAGE 22]\n\n# Mobile DA+TA\n\n+   - Dump Analysis\n  - Memory analysis patterns\n\
+    - Trace Analysis\n  - Trace analysis patterns\n\nTo summarize, it is possible\
+    \ to reuse Dump Analysis and Trace Analysis pattern catalogues: what we call mobile\
+    \ DA+TA."
+  - '[PAGE 23]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_23_0.png)
+
+
+    There is another meaning of "mobile" we would like to cover at the end of this
+    presentation. It means flexible software diagnostics independent from support
+    and engineering organizational structure and interaction. This is mainly for big
+    companies of course.'
+  - '[PAGE 24]
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_24_0.png)
+
+
+    In this slide, I included links to relevant past presentations focused on pattern-driven
+    and pattern-based parts where you can find additional references such as for Software
+    Narratology. There are also the recent Debugging TV episodes which provide pattern
+    reuse examples for Android/Java platform I mentioned previously.
+
+
+    +   **Introduction to Pattern-Driven Software Diagnostics:**
+
+    http://www.patterndiagnostics.com/Introduction-Software-Diagnostics-materials
+
+
+    +   **Introduction to Pattern-Based Software Diagnostics:**
+
+    http://www.patterndiagnostics.com/pattern-based-diagnostics-materials
+
+
+    +   **Debugging TV episodes 0x32 and 0x33:**
+
+    http://www.debugging.tv/'
+pages:
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_0_0.png)
+
+
+    # Mobile Software Diagnostics
+
+
+    # Introduction
+
+
+    Version 1.0
+
+
+    Dmitry Vostokov
+
+    Software Diagnostics Services'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Published by OpenTask, Republic of Ireland
+
+
+    Copyright © 2013 by OpenTask
+
+
+    Copyright © 2013 by Software Diagnostics Services
+
+
+    Copyright © 2013 by Dmitry Vostokov
+
+
+    All rights reserved. No part of this book may be reproduced, stored in a retrieval
+    system, or transmitted, in any form or by any means, without the prior written
+    permission of the publisher.
+
+
+    You must not circulate this book in any other binding or cover, and you must impose
+    the same condition on any acquirer.
+
+
+    Product and company names mentioned in this book may be trademarks of their owners.
+
+
+    OpenTask books and magazines are available through booksellers and distributors
+    worldwide. For further information or comments send requests to press@opentask.com.
+
+
+    A CIP catalogue record for this book is available from the British Library.
+
+
+    ISBN-13: 978-1-908043-65-8 (Paperback)
+
+
+    First printing, 2013
+
+
+    Revision 2.0 (July 2015)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_2_0.png)
+
+
+    # Mobile Software Diagnostics Introduction
+
+
+    Hello Everyone, my name is Dmitry Vostokov, and I introduce pattern-oriented mobile
+    software diagnostics today. I decided to keep this presentation short and as simple
+    as possible. If anything needs to be added or modified in the future, I create
+    another version of it.
+
+
+    +   - **Facebook:** <http://www.facebook.com/SoftwareDiagnosticsServices>
+
+    - **Linkedin:** <http://www.linkedin.com/company/software-diagnostics-services>
+
+    - **Twitter:** <http://twitter.com/DumpAnalysis>'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# # Prerequisites
+
+
+    # Interest in software diagnostics, troubleshooting and debugging
+
+
+    These prerequisites are very simple, and I suppose you all like me enjoy diagnosing
+    software problems, troubleshooting and debugging.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# **Audience**
+
+
+    +   - Desktop/server development and support
+
+
+    +   - Mobile development and support
+
+
+    This introductory presentation is either for desktop and server development and
+    support engineers who are moving to mobile development and support and would like
+    to reuse pattern-oriented software diagnostics there, but it is also for mobile
+    development and support who want to learn about recent advances in pattern-oriented
+    software diagnostics methodology originally coming from complex server environments.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# The Current State
+
+
+    # Diagnostics 20 years ago
+
+
+    The current state of mobile software diagnostics on some platforms (for example,
+    memory dump analysis) is like desktop diagnostics decades ago.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_6_0.png)
+
+
+    However, all this is rapidly changing, and mobile devices now acquire hardware
+    power that was unthinkable some time ago. Such devices might completely displace
+    desktops even for traditional applications because it would be possible to connect
+    mobile devices to large visualization devices to perform traditional desktop work
+    such as editing and designing.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_7_0.png)
+
+
+    As hardware power increases the traditional desktop and server diagnostics ability
+    also come in. For example, memory analysis role would increase and trace analysis
+    would become more sophisticated on some mobile platforms. For example, the old
+    methods of displaying message boxes for tracking variable values is dying as there
+    is console log and tracing API for JavaScript.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_8_0.png)
+
+
+    # The Vision
+
+
+    +   - Pattern-Oriented Diagnostics
+
+    - Unified Pattern Catalogues
+
+
+    So our vision is reuse of traditional desktop/server diagnostics methods and tools
+    and with this come adoption of pattern orientation and unification of pattern
+    catalogues and languages. Now I show you some slides from a few previous presentations
+    mainly for those who are unfamiliar with pattern-oriented software diagnostics.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_9_0.png)
+
+
+    First, I would like to remind you a definition of pattern-oriented software diagnostics
+    as pattern-driven and pattern-based.
+
+
+    # Pattern-driven:
+
+
+    [Pattern-driven materials](http://www.patterndiagnostics.com/Introduction-Software-Diagnostics-materials)
+
+
+    # Pattern-based:
+
+
+    [Pattern-based materials](http://www.patterndiagnostics.com/pattern-based-diagnostics-materials)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Diagnostics Pattern
+
+
+    A common recurrent identifiable problem together with **a set of recommendations**
+    and **possible solutions** to apply in a specific context.
+
+
+    © 2013 Software Diagnostics Services
+
+
+    Next, I would like to remind you a definition of a software diagnostics pattern.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Pattern Orientation
+
+
+    # Pattern-Driven
+
+    Software Diagnostics
+
+    Process
+
+
+    # Pattern-Based
+
+    Software Diagnostics
+
+    Evolution
+
+
+    Pattern-Oriented Software Diagnostics Methodology
+
+    www.DumpAnalysis.org + www.TraceAnalysis.org
+
+
+    So you see that software diagnostics is about patterns. Pattern-driven part is
+    about diagnostics pattern recognition and the pattern-based part is about pattern
+    and pattern catalogue life cycle.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_12_0.png)
+
+
+    To repeat, pattern-driven means finding patterns of abnormal structure and behavior
+    in software execution artifacts such as memory dumps, software logs, and network
+    traces. To help with this, there are checklists, pattern catalogs, and tools.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# # Pattern-Based
+
+
+    +   - Pattern evolution
+
+    - Catalogue evolution
+
+    - Catalogue distribution
+
+
+    Patten-based part is about evolution and distribution. New patterns are constantly
+    added, old ones are refined, new pattern descriptions for different platforms
+    (we say pattern implementations as would be seen later on) are added. The customers
+    of this technology need to be updated of all changes.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Economic Benefits
+
+
+    +   * Improved communication of diagnostics reports using uniform pattern language
+
+    * Increased productivity by systematic pattern usage
+
+    * Increased quality by leveraging existing expertise
+
+    * Support for global teams
+
+    * Quantifiable analysis
+
+
+    And so the reuse of pattern-oriented software diagnostics brings tangible economic
+    benefits including quantifiable analysis such the number of patterns searched,
+    and the number of them identified.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Native/Hybrid/Web Apps
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_15_0.png)
+
+
+    We see the main advantages of pattern-oriented diagnostics on this unification
+    diagram for main mobile platforms. Such modern platforms are based on traditional
+    desktop operating systems, and so it is already possible to reuse tracing there.
+    Unified pattern catalogues even allow for pattern prediction if a particular pattern
+    implementation is missing on one platform but available for the other.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Stack Trace Collection
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_16_0.png)
+
+
+    ```
+
+    09-08 22:38:11.569: V/AudioHardwareMSM7XXX(94): count : count : 4800
+
+    09-08 22:38:11.739: W/AudioFlinger(94): write blocked for 169 msecs, 1549 delayed
+    writes, thread 0xccd0
+
+    09-08 22:38:14.309: I/System.out(21804): --- Stack Trace Collection ---
+
+    09-08 22:38:14.309: I/System.out(21804): --- Stack Trace Collection ---
+
+    09-08 22:38:14.309: I/System.out(21804): Thread[JDWP,5,system]:
+
+    09-08 22:38:14.309: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.309: I/System.out(21804): Thread[GC,5,system]:
+
+    09-08 22:38:14.309: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[Signal Catcher,5,system]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[main,5,main]:
+
+    09-08 22:38:14.319: I/System.out(21804): android.os.MessageQueue.nativePollOnce(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): android.os.MessageQueue.next(MessageQueue.java:119)
+
+    09-08 22:38:14.319: I/System.out(21804): android.os.Looper.loop(Looper.java:117)
+
+    09-08 22:38:14.319: I/System.out(21804): android.app.ActivityThread.main(ActivityThread.java:3687)
+
+    09-08 22:38:14.319: I/System.out(21804): java.lang.reflect.Method.invoke(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): java.lang.reflect.Method.invoke(Method.java:507)
+
+    09-08 22:38:14.319: I/System.out(21804): com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:867)
+
+    09-08 22:38:14.319: I/System.out(21804): com.android.internal.os.ZygoteInit.main(ZygoteInit.java:625)
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.main(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[HeapWorker,5,system]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[Compiler,5,system]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): Thread[Binder Thread #1,5,main]:
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): dalvik.system.VMStack.getStackTrace(Native
+    Method)
+
+    09-08 22:38:14.319: I/System.out(21804): lang.Thread.getStackTrace(Thread.java:737)
+
+    09-08 22:38:14.329: I/System.out(21804): lang.Thread.getAllStackTraces(Thread.java:630)
+
+    09-08 22:38:14.329: I/System.out(21804): com.example.deadlock.FullscreenActivity$3.run(FullscreenActivity.java:67)
+
+    09-08 22:38:14.329: I/System.out(21804): java.lang.Thread.run(Thread.java:1019)
+
+    09-08 22:38:14.329: I/System.out(21804): Thread[Binder Thread #2,5,main]:
+
+    09-08 22:38:14.329: I/System.out(21804): dalvik.system.NativeStart.run(Native
+    Method)
+
+    09-08 22:38:14.329: I/System.out(21804): --- end ---
+
+    ```
+
+
+    One example here we can provide is **Stack Trace Collection** memory analysis
+    pattern. Originally it was discerned on Windows platforms for WinDbg debugger
+    from Debugging Tools for Windows where we can get a collection of stack traces
+    from all threads from a specific process or system including managed .NET stack
+    traces. Later on another implementation was created for Mac OS X / GDB and to
+    some extent it is possible to reuse it on Linux GDB debugger and other platforms
+    that support GDB. Here is an example output from Android / Java platform and it
+    is possible to reuse it for other Java implementations as well. You can see this
+    Java implementation including modelling source code in one of the Debugging TV
+    episodes I provide the link to the Further Reading slide.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Memory Analysis Patterns
+
+
+    +   - Not limited to memory dumps
+
+    - Can be applied to traces / logs
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_17_0.png)
+
+
+    We saw on the previous slide that stack trace collection was taken from a log
+    file. Contrary to common belief memory analysis is not limited to memory dumps
+    or live debugging. It is common in software diagnostics of artefacts from the
+    complex environments to process memory dumps into log files and then recognize
+    patterns there.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Problem
+
+
+    +   - No / Limited memory dump analysis
+
+
+    +   - Limited OS debugger support
+
+
+    Now a few slides about one problem we found in the current state of mobile software
+    diagnostics on some platforms. There is very limited memory dump analysis, and
+    if this is possible, there is limited OS support for the platform debugger for
+    postmortem analysis.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_19_0.png)
+
+
+    # Solution
+
+
+    +   - State Dump trace analysis pattern
+
+    - Paratext memory analysis pattern
+
+
+    The solution we found for limited memory analysis is to introduce yet another
+    trace analysis pattern that would allow reuse of some memory analysis patterns.
+    It is called **State Dump** pattern, and you would see a diagram explaining it
+    on the next slide. For limited OS debugger support we reuse the so-called **Paratext**
+    pattern we explain further later on.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# State Dump
+
+
+    ![](img/9a116c36857552617bbaaa814c688b61_20_0.png)
+
+
+    +   - stack traces
+
+    - variables
+
+    - status reports
+
+
+    State Dump means periodic logging of stack traces, important variables, and status
+    reports.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Paratext
+
+
+    Android / Java example
+
+
+    ```
+
+    $ ps -t
+
+    ps -t
+
+    USER     PID PPID VSIZE RSS    WCHAN    PC         NAME
+
+    [...]
+
+    app_42    24101 24100 137696 15756 ffffffff 00000000 S HeapWorker
+
+    app_42    24102 24100 137696 15756 ffffffff 00000000 S GC
+
+    app_42    24103 24100 137696 15756 ffffffff 00000000 S Signal Catcher
+
+    app_42    24104 24100 137696 15756 ffffffff 00000000 S Compiler
+
+    app_42    24105 24100 137696 15756 ffffffff 00000000 S Binder Thread #
+
+    app_42    24106 24100 137696 15756 ffffffff 00000000 S Binder Thread #
+
+    app_42    24107 24100 137696 15756 ffffffff 00000000 S Binder Thread #
+
+    app_57    24109 93     146876 19268 ffffffff 00000000 S com.example.spikingthread
+
+    app_57    24110 24109 146876 19268 ffffffff 00000000 S HeapWorker
+
+    app_57    24111 24109 146876 19268 ffffffff 00000000 S GC
+
+    app_57    24112 24109 146876 19268 ffffffff 00000000 S Signal Catcher
+
+    app_57    24113 24109 146876 19268 ffffffff 00000000 S JDWP
+
+    app_57    24114 24109 146876 19268 ffffffff 00000000 S Compiler
+
+    app_57    24115 24109 146876 19268 ffffffff 00000000 S Binder Thread #
+
+    app_57    24116 24109 146876 19268 ffffffff 00000000 S Binder Thread #
+
+    app_57    24117 24109 146876 19268 ffffffff 00000000 S Thread-10
+
+    app_57    24122 24109 146876 19268 ffffffff 00000000 R Thread-11
+
+    shell     24123 143    800    336   c00a6fc8 afd0c3bc S /system/bin/sh
+
+    root      24125 2      0      0     ffffffff 00000000 S flush-138:14
+
+    root      24126 2      0      0     ffffffff 00000000 S flush-179:0
+
+    ```
+
+
+    © 2013 Software Diagnostics Services
+
+
+    **Paratext** name originally comes from narratology and means extra information
+    to supplement a textual narrative, for example, notes, and text description. Here
+    information from a system collected by OS tools may assist in memory analysis.
+    In this slide, we see an indication of a running thread that helps with the diagnosing
+    **Spiking Thread** memory analysis pattern.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Mobile DA+TA\n\n+   - Dump Analysis\n  - Memory analysis patterns\n- Trace\
+    \ Analysis\n  - Trace analysis patterns\n\nTo summarize, it is possible to reuse\
+    \ Dump Analysis and Trace Analysis pattern catalogues: what we call mobile DA+TA."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_23_0.png)
+
+
+    There is another meaning of "mobile" we would like to cover at the end of this
+    presentation. It means flexible software diagnostics independent from support
+    and engineering organizational structure and interaction. This is mainly for big
+    companies of course.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/9a116c36857552617bbaaa814c688b61_24_0.png)
+
+
+    In this slide, I included links to relevant past presentations focused on pattern-driven
+    and pattern-based parts where you can find additional references such as for Software
+    Narratology. There are also the recent Debugging TV episodes which provide pattern
+    reuse examples for Android/Java platform I mentioned previously.
+
+
+    +   **Introduction to Pattern-Driven Software Diagnostics:**
+
+    http://www.patterndiagnostics.com/Introduction-Software-Diagnostics-materials
+
+
+    +   **Introduction to Pattern-Based Software Diagnostics:**
+
+    http://www.patterndiagnostics.com/pattern-based-diagnostics-materials
+
+
+    +   **Debugging TV episodes 0x32 and 0x33:**
+
+    http://www.debugging.tv/'
+  merge: -1
+  pgno: 24
+toc:
+- - '##'
+  - 移动软件诊断
+- - '###'
+  - 前言
+- - '##'
+  - 前置要求
+- - '##'
+  - 受众
+- - '##'
+  - 模式基础型
+- - '##'
+  - 附录文本 Android / Java 示例

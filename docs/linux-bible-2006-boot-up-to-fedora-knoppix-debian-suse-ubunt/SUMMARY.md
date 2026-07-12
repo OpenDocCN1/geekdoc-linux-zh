@@ -1,0 +1,2 @@
++   [《Linux圣经 2006版：可引导启动Fedora、KNOPPIX、Debian、SUSE、Ubuntu及其他7种发行版（附CD-ROM与DVD）》](README.md)
++   [《Linux圣经 2006版：可引导启动Fedora、KNOPPIX、Debian、SUSE、Ubuntu及其他7种发行版（附CD-ROM与DVD）》](linux-bible-2006-boot-up-to-fedora-knoppix-debian-suse-ubunt.md)
