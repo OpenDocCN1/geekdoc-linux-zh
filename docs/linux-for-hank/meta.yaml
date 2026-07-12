@@ -1,0 +1,869 @@
+groups:
+- md: '## Linux for Hank
+
+    by Bryan Lunduke
+
+
+    This book is dedicated to my daughter, Josie.
+
+    Because she is amazing.
+
+
+    "Linux for Hank"
+
+    Copyright 2013 Bryan Lunduke
+
+
+    Licensed under the, most triumphant, Greater Lunduke License.
+
+    For more information go to www.Lunduke.com.
+
+
+    This is the story of one man called Hank.
+
+    Who was having some trouble, his computer screen blank.
+
+
+    He pushed every button and lots of mouse clicking.
+
+    Frustrated and mad, he even tried kicking.
+
+
+    But it was no use. His computer was busted.
+
+    He needed some help. Someone he trusted.
+
+
+    Hank quickly stood up and went to his phone.
+
+    He must call his friend, Hank hoped Stanley was home.
+
+
+    The phone rang and it rang and it rang and it rang.
+
+    When from the front door there came a loud bang.
+
+
+    Hank put down his phone and raced to the door.
+
+    "Who is out there?", Hank did implore.
+
+
+    "It''s Stanley!", said Stanley. "I''ve come to your aid!"
+
+    "We''ll fix your computer. Be not afraid!"
+
+
+    "But how?", asked Hank. "It won''t even turn on!"
+
+    "Windows won''t start. I''ve waited so long!"
+
+
+    "Worry not, my friend," Stanley declared.
+
+    "We will install Linux, now let''s get prepared!"
+
+
+    "Linux? What''s that?" asked Hank, all confused.
+
+    "That doesn''t sound like anything I''ve ever used."
+
+
+    "It helps make your computer be all it can be!"
+
+    Stanley declared, "and Linux is Free!"
+
+
+    "It''s fun, it''s fast and it''s built to share."
+
+    "It''s made by people, people that care!"
+
+
+    "Sounds great," Hank said, "But how do I start?"
+
+    Stanley smiled and said "I''ll help with that part."
+
+
+    "The first thing to do is to pick out your Distro."
+
+    "Linux comes in all flavors. Just like cookie dough."
+
+
+    "I can have chocolate Linux?" asked Hank in delight.
+
+    Stanley just laughed. "No Hank, not quite."
+
+
+    "No two types of Linux are quite the same."
+
+    "I''ll tell you my favorites, I''ll tell you their names."
+
+
+    "There is good old Slackware, who''s been around since the start."
+
+    "With Slackware your computer will never need to restart."
+
+
+    "Sounds great!" said Hank, "That''s the one that I''ll use!"
+
+    "Whoah there!" said Stanley, "There''s plenty more to choose!"
+
+
+    "But why stop there? Down the rabbit hole we go!"
+
+    "Linux From Scratch and you''ll be a real pro!"
+
+
+    "Then there''s Gentoo if you love to compile..."
+
+    "It''s sure pretty cool, but can take quite a while."
+
+
+    "Or you could use Sabayon. Can''t go wrong with that."
+
+    "It''s sorta like Gentoo with a pretty blue hat."
+
+
+    "I don''t understand," said Hank in wimple.
+
+    "I just want it to work. I want it real simple."
+
+
+    Stanley thought for a second and came up with a plan.
+
+    "We''ll find you a distro where you won''t even need ''man''."
+
+
+    "SUSE is easy and makes you feel like a wizard."
+
+    "It''s awesome and green and comes with a lizard."
+
+
+    "And of course there''s Ubuntu, if you just don''t like green."
+
+    "It''s brown and it''s orange with purple between."
+
+
+    "And Mint is Ubuntu. Except when it''s not."
+
+    "I hear on the street some folks like it a lot."
+
+
+    "Elementary is fun, it certainly has style."
+
+    "It''s pretty and fancy and sure to make you smile."
+
+
+    "Fedora is cool if you like big red hats."
+
+    "And there''s certainly not anything at all wrong with that."
+
+
+    "Then there''s Puppy and CrunchBang, which are just fun to say."
+
+    "You might want to try them! You might want to stay!"
+
+
+    "Let me stop you right there!" Hank said in delight.
+
+    "I''ll try them all! I''ll try every last byte!"
+
+
+    "I''ll try SUSE and Mint and Puppy and Gentoo!"
+
+    "I''ll try Slackware and CrunchBang, Fedora, Ubuntu!"
+
+
+    "Then Debian and Puppy and Linux from Scratch!"
+
+    "And on to Elementary, Sabayon and Arch!"
+
+
+    "Glad I could help!" in Stanley did chime.
+
+    "Let''s order pizza! It''s install party time!"'
+  mdcn: '
+
+    ## 给汉克的 Linux 指南
+
+    作者：Bryan Lunduke
+
+
+    这本书献给我的女儿，Josie。
+
+    因为她太棒了。
+
+
+    "给汉克的 Linux 指南"
+
+    版权所有 2013 Bryan Lunduke
+
+
+    基于最伟大的 Greater Lunduke 许可证授权。
+
+    欲了解更多信息，请访问 www.Lunduke.com。
+
+
+    这是一个关于一个叫汉克的人的故事。
+
+    他遇到了麻烦，电脑屏幕一片空白。
+
+
+    他按下每一个按钮，不停地点击鼠标。
+
+    沮丧又愤怒，他甚至尝试踢它一脚。
+
+
+    但毫无作用。他的电脑坏了。
+
+    他需要一些帮助，找一个他信任的人。
+
+
+    汉克迅速起身，走向他的电话。
+
+    他必须给朋友打电话，汉克希望斯坦利在家。
+
+
+    电话响了，响了，响了，响了。
+
+    这时前门传来一声巨大的响声。
+
+
+    汉克放下电话，冲向门口。
+
+    “谁在那儿？”汉克焦急地询问。
+
+
+    “是我，斯坦利！”斯坦利说，“我来帮你了！”
+
+    “我们会修好你的电脑。不要害怕！”
+
+
+    “但怎么修？”汉克问，“它甚至无法启动！”
+
+    “Windows 起不来，我已经等了这么久！”
+
+
+    “别担心，我的朋友，”斯坦利宣布。
+
+    “我们将安装 Linux，现在让我们准备起来！”
+
+
+    “Linux？那是什么？”汉克一脸困惑地问。
+
+    “这听起来不像我用过的任何东西。”
+
+
+    “它能让你的电脑发挥出全部潜能！”
+
+    斯坦利宣布，“而且 Linux 是自由的！”
+
+
+    “它有趣，它快速，而且为了共享而构建。”
+
+    “它是由人们创造的，那些在乎它的人们！”
+
+
+    “听起来很棒，”汉克说，“但我该如何开始？”
+
+    斯坦利笑了笑说：“那部分我来帮你。”
+
+
+    “首先要做的是选择你的发行版（Distro）。”
+
+    “Linux 有各种风味，就像曲奇面团一样。”
+
+
+    “我可以拥有巧克力 Linux 吗？”汉克兴奋地问。
+
+    斯坦利笑了。“不，汉克，并非如此。”
+
+
+    “没有两种 Linux 是完全相同的。”
+
+    “我会告诉你我最喜欢的，我会告诉你它们的名字。”
+
+
+    “有古老的 Slackware，从一开始就在那里。”
+
+    “使用 Slackware，你的电脑永远不需要重启。”
+
+
+    “听起来太棒了！”汉克说，“我就用那个！”
+
+    “慢着！”斯坦利说，“还有很多可供选择的！”
+
+
+    “但为什么停在那？让我们深入探索吧！”
+
+    “Linux From Scratch，你会成为真正的专业人士！”
+
+
+    “如果你热爱编译，那么还有 Gentoo……”
+
+    “它确实很酷，但可能需要花 quite a while（很长时间）。”
+
+
+    “或者你可以用 Sabayon。选它准没错。”
+
+    “它有点像戴了顶漂亮蓝色帽子的 Gentoo。”
+
+
+    “我不明白，”汉克哭丧着脸说。
+
+    “我只想让它能工作，我想要简单点。”
+
+
+    斯坦利思考了一会儿，想出了一个计划。
+
+    “我们会为你找一个发行版，让你甚至不需要查 `man` 手册。”
+
+
+    “SUSE 很简单，让你感觉像个巫师。”
+
+    “它很棒，它是绿色的，还配有一只蜥蜴。”
+
+
+    “当然，如果你不喜欢绿色，还有 Ubuntu。”
+
+    “它是棕色的，它是橙色的，中间还夹着紫色。”
+
+
+    “Mint 就是 Ubuntu，除非它不是的时候。”
+
+    “我听说街上的很多人非常喜欢它。”
+
+
+    “Elementary 很有趣，它确实有格调。”
+
+    “它漂亮且精致，一定会让你微笑。”
+
+
+    “如果你喜欢大红帽子，Fedora 很酷。”
+
+    “而这当然完全没有问题。”
+
+
+    “然后是 Puppy 和 CrunchBang，它们的名字读起来就很有趣。”
+
+    “你可能想试试它们！你可能想留下来！”
+
+
+    “快停下来！”汉克兴奋地说。
+
+    “我要全部尝试！我要尝试每一个字节！”
+
+
+    “我要试 SUSE，试 Mint，试 Puppy 和 Gentoo！”
+
+    “我要试 Slackware，试 CrunchBang，Fedora 和 Ubuntu！”
+
+
+    “然后是 Debian，Puppy 和 Linux from Scratch！”
+
+    “接着是 Elementary，Sabayon 和 Arch！”
+
+
+    “很高兴能帮到你！”斯坦利随之唱道。
+
+    “让我们点披萨吧！安装派对时间到！”
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_0_0.png)
+
+
+    # # Linux for Hank
+
+
+    by Bryan Lunduke'
+  - '[PAGE 1]
+
+
+    This book is dedicated to my daughter, Josie.
+
+    Because she is amazing.
+
+
+    "Linux for Hank"
+
+    Copyright 2013 Bryan Lunduke
+
+
+    Licensed under the, most triumphant, Greater Lunduke License.
+
+    For more information go to www.Lunduke.com.'
+  - '[PAGE 2]
+
+
+    This is the story of one man called Hank.
+
+    Who was having some trouble, his computer screen blank.
+
+
+    He pushed every button and lots of mouse clicking.
+
+    Frustrated and mad, he even tried kicking.
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_2_0.png)
+
+
+    But it was no use. His computer was busted.
+
+    He needed some help. Someone he trusted.'
+  - '[PAGE 3]
+
+
+    Hank quickly stood up and went to his phone.
+
+    He must call his friend, Hank hoped Stanley was home.
+
+
+    The phone rang and it rang and it rang and it rang.
+
+    When from the front door there came a loud bang.
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_3_0.png)
+
+
+    Hank put down his phone and raced to the door.
+
+    "Who is out there?", Hank did implore.'
+  - '[PAGE 4]
+
+
+    "It''s Stanley!", said Stanley. "I''ve come to your aid!"
+
+    "We''ll fix your computer. Be not afraid!"
+
+
+    "But how?", asked Hank. "It won''t even turn on!"
+
+    "Windows won''t start. I''ve waited so long!"
+
+
+    "Worry not, my friend," Stanley declared.
+
+    "We will install Linux, now let''s get prepared!"
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_4_0.png)'
+  - '[PAGE 5]
+
+
+    "Linux? What''s that?" asked Hank, all confused.
+
+    "That doesn''t sound like anything I''ve ever used."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_5_0.png)
+
+
+    "It helps make your computer be all it can be!"
+
+    Stanley declared, "and Linux is Free!"
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_5_1.png)
+
+
+    "It''s fun, it''s fast and it''s built to share."
+
+    "It''s made by people, people that care!"'
+  - '[PAGE 6]
+
+
+    "Sounds great," Hank said, "But how do I start?"
+
+    Stanley smiled and said "I''ll help with that part."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_6_0.png)
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_6_1.png)
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_6_2.png)
+
+
+    "The first thing to do is to pick out your Distro."
+
+    "Linux comes in all flavors. Just like cookie dough."
+
+
+    "I can have chocolate Linux?" asked Hank in delight.
+
+    Stanley just laughed. "No Hank, not quite."'
+  - '[PAGE 7]
+
+
+    "No two types of Linux are quite the same."
+
+    "I''ll tell you my favorites, I''ll tell you their names."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_7_0.png)
+
+
+    "There is good old Slackware, who''s been around since the start."
+
+    "With Slackware your computer will never need to restart."
+
+
+    "Sounds great!" said Hank, "That''s the one that I''ll use!"
+
+    "Whoah there!" said Stanley, "There''s plenty more to choose!"'
+  - '[PAGE 8]
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_8_0.png)
+
+
+    "But why stop there? Down the rabbit hole we go!"
+
+    "Linux From Scratch and you''ll be a real pro!"
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_8_1.png)
+
+
+    "Then there''s Gentoo if you love to compile..."
+
+    "It''s sure pretty cool, but can take quite a while."'
+  - '[PAGE 9]
+
+
+    "Or you could use Sabayon. Can''t go wrong with that."
+
+    "It''s sorta like Gentoo with a pretty blue hat."
+
+
+    "I don''t understand," said Hank in wimple.
+
+    "I just want it to work. I want it real simple."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_9_0.png)
+
+
+    Stanley thought for a second and came up with a plan.
+
+    "We''ll find you a distro where you won''t even need ''man''."'
+  - '[PAGE 10]
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_10_0.png)
+
+
+    > "SUSE is easy and makes you feel like a wizard."
+
+    "It''s awesome and green and comes with a lizard."
+
+
+    > "And of course there''s Ubuntu, if you just don''t like green."
+
+    "It''s brown and it''s orange with purple between."
+
+
+    > "And Mint is Ubuntu. Except when it''s not."
+
+    "I hear on the street some folks like it a lot."'
+  - '[PAGE 11]
+
+
+    "Elementary is fun, it certainly has style."
+
+    "It''s pretty and fancy and sure to make you smile."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_11_0.png)
+
+
+    "Fedora is cool if you like big red hats."
+
+    "And there''s certainly not anything at all wrong with that."
+
+
+    "Then there''s Puppy and CrunchBang, which are just fun to say."
+
+    "You might want to try them! You might want to stay!"'
+  - '[PAGE 12]
+
+
+    "Let me stop you right there!" Hank said in delight.
+
+    "I''ll try them all! I''ll try every last byte!"
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_12_0.png)
+
+
+    "I''ll try SUSE and Mint and Puppy and Gentoo!"
+
+    "I''ll try Slackware and CrunchBang, Fedora, Ubuntu!"
+
+
+    "Then Debian and Puppy and Linux from Scratch!"
+
+    "And on to Elementary, Sabayon and Arch!"
+
+
+    "Glad I could help!" in Stanley did chime.
+
+    "Let''s order pizza! It''s install party time!"'
+pages:
+- img_proc: true
+  md: '![](img/038fe818182594714bb281b8b2e5db45_0_0.png)
+
+
+    # # Linux for Hank
+
+
+    by Bryan Lunduke'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'This book is dedicated to my daughter, Josie.
+
+    Because she is amazing.
+
+
+    "Linux for Hank"
+
+    Copyright 2013 Bryan Lunduke
+
+
+    Licensed under the, most triumphant, Greater Lunduke License.
+
+    For more information go to www.Lunduke.com.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'This is the story of one man called Hank.
+
+    Who was having some trouble, his computer screen blank.
+
+
+    He pushed every button and lots of mouse clicking.
+
+    Frustrated and mad, he even tried kicking.
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_2_0.png)
+
+
+    But it was no use. His computer was busted.
+
+    He needed some help. Someone he trusted.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Hank quickly stood up and went to his phone.
+
+    He must call his friend, Hank hoped Stanley was home.
+
+
+    The phone rang and it rang and it rang and it rang.
+
+    When from the front door there came a loud bang.
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_3_0.png)
+
+
+    Hank put down his phone and raced to the door.
+
+    "Who is out there?", Hank did implore.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '"It''s Stanley!", said Stanley. "I''ve come to your aid!"
+
+    "We''ll fix your computer. Be not afraid!"
+
+
+    "But how?", asked Hank. "It won''t even turn on!"
+
+    "Windows won''t start. I''ve waited so long!"
+
+
+    "Worry not, my friend," Stanley declared.
+
+    "We will install Linux, now let''s get prepared!"
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '"Linux? What''s that?" asked Hank, all confused.
+
+    "That doesn''t sound like anything I''ve ever used."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_5_0.png)
+
+
+    "It helps make your computer be all it can be!"
+
+    Stanley declared, "and Linux is Free!"
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_5_1.png)
+
+
+    "It''s fun, it''s fast and it''s built to share."
+
+    "It''s made by people, people that care!"'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '"Sounds great," Hank said, "But how do I start?"
+
+    Stanley smiled and said "I''ll help with that part."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_6_0.png)
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_6_1.png)
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_6_2.png)
+
+
+    "The first thing to do is to pick out your Distro."
+
+    "Linux comes in all flavors. Just like cookie dough."
+
+
+    "I can have chocolate Linux?" asked Hank in delight.
+
+    Stanley just laughed. "No Hank, not quite."'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '"No two types of Linux are quite the same."
+
+    "I''ll tell you my favorites, I''ll tell you their names."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_7_0.png)
+
+
+    "There is good old Slackware, who''s been around since the start."
+
+    "With Slackware your computer will never need to restart."
+
+
+    "Sounds great!" said Hank, "That''s the one that I''ll use!"
+
+    "Whoah there!" said Stanley, "There''s plenty more to choose!"'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '![](img/038fe818182594714bb281b8b2e5db45_8_0.png)
+
+
+    "But why stop there? Down the rabbit hole we go!"
+
+    "Linux From Scratch and you''ll be a real pro!"
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_8_1.png)
+
+
+    "Then there''s Gentoo if you love to compile..."
+
+    "It''s sure pretty cool, but can take quite a while."'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '"Or you could use Sabayon. Can''t go wrong with that."
+
+    "It''s sorta like Gentoo with a pretty blue hat."
+
+
+    "I don''t understand," said Hank in wimple.
+
+    "I just want it to work. I want it real simple."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_9_0.png)
+
+
+    Stanley thought for a second and came up with a plan.
+
+    "We''ll find you a distro where you won''t even need ''man''."'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '![](img/038fe818182594714bb281b8b2e5db45_10_0.png)
+
+
+    > "SUSE is easy and makes you feel like a wizard."
+
+    "It''s awesome and green and comes with a lizard."
+
+
+    > "And of course there''s Ubuntu, if you just don''t like green."
+
+    "It''s brown and it''s orange with purple between."
+
+
+    > "And Mint is Ubuntu. Except when it''s not."
+
+    "I hear on the street some folks like it a lot."'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '"Elementary is fun, it certainly has style."
+
+    "It''s pretty and fancy and sure to make you smile."
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_11_0.png)
+
+
+    "Fedora is cool if you like big red hats."
+
+    "And there''s certainly not anything at all wrong with that."
+
+
+    "Then there''s Puppy and CrunchBang, which are just fun to say."
+
+    "You might want to try them! You might want to stay!"'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '"Let me stop you right there!" Hank said in delight.
+
+    "I''ll try them all! I''ll try every last byte!"
+
+
+    ![](img/038fe818182594714bb281b8b2e5db45_12_0.png)
+
+
+    "I''ll try SUSE and Mint and Puppy and Gentoo!"
+
+    "I''ll try Slackware and CrunchBang, Fedora, Ubuntu!"
+
+
+    "Then Debian and Puppy and Linux from Scratch!"
+
+    "And on to Elementary, Sabayon and Arch!"
+
+
+    "Glad I could help!" in Stanley did chime.
+
+    "Let''s order pizza! It''s install party time!"'
+  merge: -1
+  pgno: 12
+toc: []
