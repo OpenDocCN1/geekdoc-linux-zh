@@ -1,0 +1,5416 @@
+groups:
+- md: " # 500+ COMPUTER SHORTCUTS\n\nA well compiled and tested shortcut keys combination\
+    \ for PC (Windows, Linux, Unix and Apple Macintosh) for your use.\n\nJADEN STEPHEN\n\
+    \n# COPYRIGHT © 2020 JADEN STEPHEN\n\nAll rights reserved. No part of this book\
+    \ may be reproduced, transmitted in any form or by any means—electronic, mechanical,\
+    \ photocopy, recording, or any other except for brief quotations in printed reviews,\
+    \ without prior permission of the publisher.\n\n# Table of Contents\n\n- COMPUTER\
+    \ KEYBOARD SHORTCUT KEYS\n- SHORTCUT KEYS ABCs\n- TOP 10 KEYBOARD SHORTCUTS EVERYONE\
+    \ SHOULD KNOW\n- PC SHORTCUT KEYS FOR SPECIAL CHARACTERS\n- MICROSOFT WINDOWS\
+    \ SHORTCUT KEYS\n  - GENERAL WINDOWS SHORTCUT\n  - FUNCTION KEYS\n  - WINDOWS\
+    \ KEY SHORTCUT\n- APPLE SHORTCUT KEYS\n- UNIX AND LINUX SHORTCUT KEYS\n  - KEYBOARD\
+    \ SHORTCUT KEYS\n  - COMMAND LINE SHORTCUTS\n- MICROSOFT EXCEL SHORTCUT KEYS\n\
+    - MICROSOFT WORD SHORTCUT KEYS\n- MICROSOFT WORD MOUSE SHORTCUTS\n- GOOGLE CHROME\
+    \ KEYBOARD SHORTCUT KEYS\n- INTERNET EXPLORER KEYBOARD SHORTCUT\n- MICROSOFT FRONTPAGE\
+    \ SHORTCUT KEYS\n- MICROSOFT OUTLOOK KEYBOARD SHORTCUTS\n- MOZILLA FIREFOX KEYBOARD\
+    \ SHORT CUT FOR WINDOWS\n- YOUTUBE SHORTCUT KEYS\n\n# COMPUTER KEYBOARD SHORTCUT\
+    \ KEYS\n\n## SHORTCUT KEYS ABCs\n\nHelps give a simpler and snappier technique\
+    \ for exploring and executing orders in the PC programming. Shortcut keys are\
+    \ usually gotten to by utilizing the Alt key (on IBM perfect PCs), Command key\
+    \ (on Apple PCs), CTRL key, or SHIFT key related to another key. The true standard\
+    \ for posting a shortcut is posting the modifier key, and or more image, and another\
+    \ key. At the end of the day, \"CTRL+S\" is instructing you to press and hold\
+    \ the CTRL key, and afterward, press the S key as well.\n\nYou can likewise discover\
+    \ the easy shortcuts in well-known projects by searching for underlined letters\
+    \ in their menus. For instance, the document menu picture has an underline on\
+    \ the \"F\" in File, which implies you can press the Alt key and \"F\" key to\
+    \ get to the record menu.\n\nA few programs require the user to press and hold\
+    \ Alt to see the underlined characters. In the picture above, you can see that\
+    \ a portion of the basic highlights, for example, Open (CTRL+O) and Save (CTRL+S),\
+    \ have alternate route keys relegated to them. As you remember easy shortcut keys,\
+    \ you'll notice that numerous applications share them. We have a rundown of the\
+    \ most normally shared ones in the essential PC easy shortcut keys segment.\n\n\
+    Below is a list of the commonly used shortcut keys that works with IBM compatible\
+    \ computers. And it would be of great help to you if you could try to memorize\
+    \ as much as you could.\n\n## TOP 10 KEYBOARD SHORTCUTS EVERYONE SHOULD KNOW\n\
+    \nBelow are 10 keyboard short cuts that I recommend everyone to memorize and use.\n\
+    \n| SHORTCUT KEYS | ACTION |\n| --- | --- |\n| CTRL+C OR CTRL+INSERT AND CTRL+X\
+    \ | Both CTRL+C and CTRL+INSERT will copy highlighted text or a selected item.\
+    \ If you want to cut an item instead of copying it, press CTRL+X. This action\
+    \ removes the text or item and stores it in the clipboard for you, rather than\
+    \ copying it to the clipboard while leaving the original behind.<br><br>Apple\
+    \ computer users can substitute the CTRL key for the command (CMD) key on their\
+    \ computers. For example, pressing CMD+C copies highlighted text. |\n| CTRL+V\
+    \ OR SHIFT+INSERT | Both the CTRL+V and SHIFT+INSERT will paste the text |\n|\
+    \ CTRL+Z AND CTRL+Y | Pressing CTRL+Z will undo any change. For example, if you\
+    \ cut text, pressing this key combination will undo the cut. These shortcuts can\
+    \ also be pressed multiple times to undo or redo multiple changes. Pressing CTRL+Y\
+    \ would redo the undo. |\n| CTRL+F AND CTRL+G | Pressing CTRL+F opens the Find\
+    \ field, which allows you to search the text currently displayed in any program\
+    \ that supports it. For example, CTRL+F can be used in your Internet browser to\
+    \ find text on the current page. Press CTRL+F now to open the Find in your browser\
+    \ and search for \"shortcut\" to display each time shortcut is mentioned on this\
+    \ page. CTRL+G may be used to repeat a search (from using CTRL+F) in a document\
+    \ or on a web page. |\n| ALT+TAB OR CTRL+TAB | Pressing ALT+TAB switches between\
+    \ open programs moving forward. For example, if you have your browser window open\
+    \ and other programs running in the background press and hold ALT and then press\
+    \ the TAB key to cycle through each open program.<br><br>On Apple computers, instead\
+    \ of using the Alt key use the Command (CMD) key. For example, CMD+TAB to switch\
+    \ between open programs.<br><br>TIP: Press CTRL+TAB to switch between tabs in\
+    \ a program. For example, if you have multiple tabs open in your Internet browser,\
+    \ press CTRL+TAB to switch between them.<br><br>TIP: Adding the Shift key to ALT+TAB\
+    \ or CTRL+TAB moves backward. For example, if you are pressing ALT+TAB and pass\
+    \ the program you want to use, press ALT+SHIFT+TAB to move back to that program.<br><br>TIP:\
+    \ Windows Vista, 7, 8, and 10 users can also press the WINDOWS KEY+TAB to switch\
+    \ through open programs in a full screenshot of the window. |\n| CTRL+BACKSPACE\
+    \ AND CTRL+LEFT OR RIGHT ARROW | Pressing CTRL+BACKSPACE deletes a full word at\
+    \ a time instead of a single character. |\n| CTRL+BACKSPACE AND CTRL+LEFT OR RIGHT\
+    \ ARROW | Holding down the CTRL key while pressing the left or right arrow moves\
+    \ the cursor one word at a time instead of one character at a time. If you want\
+    \ to highlight one word at a time, hold down CTRL+SHIFT, then press the left or\
+    \ right arrow key. Your highlighted selection moves one word at a time in that\
+    \ direction. |\n| CTRL+S | While working on a document or another file in almost\
+    \ every program, pressing CTRL+S saves that file. Use this shortcut key frequently\
+    \ if you're working on anything important in case of an error, lost power, or\
+    \ any other issues that causes you to lose any work since the last save.<br><br>On\
+    \ Apple computers, use Cmd+S to save a file |\n| CTRL+HOME OR CTRL+END | CTRL+HOME\
+    \ moves the cursor to the beginning of the document, and CTRL+END moves the cursor\
+    \ to the end of a document. These shortcuts work with most documents, as well\
+    \ as web pages.<br><br>On Apple computers, use the Cmd + up arrow to get to the\
+    \ beginning or Cmd + down arrow to get to the end of a document or text. |\n|\
+    \ CTRL+P | CONTROL+P is used to open a print preview of the page or document currently\
+    \ being viewed. For example, press CTRL+P now to view a print preview of this\
+    \ page.<br><br>On Apple computers, use Cmd+P to open the print preview. |\n| PAGE\
+    \ UP, SPACEBAR, AND PAGE DOWN | As you may have guessed, pressing either the page\
+    \ up or page down key moves to the next or previous page. When browsing the Internet,\
+    \ pressing the spacebar moves the scrollbar down a page. Similarly, SHIFT+SPACEBAR\
+    \ moves the scrollbar up one page. |\n\n| SHORTCUT KEYS | ACTION |\n| --- | ---\
+    \ |\n| ALT+F | File menu options in current running program. |\n| ALT+E | Open\
+    \ edit option in current program. |\n| ALT+TAB | Switch between open programs.\
+    \ |\n| F1 | To view the help information. |\n| F2 | Rename a selected file. |\n\
+    | F5 | Refresh the current programs window. |\n| CTRL+D | Bookmark the current\
+    \ page in internet browsers. |\n| CTRL+N | Creates a new document in programs\
+    \ or opens in new TAB in most internet browsers. |\n| CTRL+O | Open a file in\
+    \ the current running program. |\n| CTRL+A | Select all text. |\n| CTRL+B | Change\
+    \ selected text to be bold. |\n| CTRL+I | Change selected text to be in italics.\
+    \ |\n| CTRL+U | Change selected text to be underlined |\n| CTRL+F | Open find\
+    \ window for current document or window. |\n| CTRL+S | Save current document file.\
+    \ |\n\n| Shortcut | Action |\n| --- | --- |\n| CTRL+X | Cut selected item. |\n\
+    | SHIFT+DEL | Cut selected item. |\n| CTRL+C | Copy selected item. |\n| CTRL+INS\
+    \ | Copy selected item. |\n| CTRL+V | Paste. |\n| SHIFT+INS | Paste. |\n| CTRL+Y\
+    \ | Redo last action. |\n| CTRL+Z | Undo last action. |\n| CTRL+K | Insert hyperlink\
+    \ for selected text. |\n| CTRL+P | Print the current page or document. |\n| HOME\
+    \ | Goes to beginning of current line. |\n| CTRL+HOME | Goes to beginning of document.\
+    \ |\n| END | Goes to end of current line. |\n| CTRL+END | Goes to end of document.\
+    \ |\n| SHIFT+HOME | Highlights from current position to beginning of line. |\n\
+    | SHIFT+END | Highlights from current position to END of line. |\n| CTRL+Left\
+    \ arrow | Moves one word to the left at a time. |\n| CTRL+Right arrow | Moves\
+    \ one word to the right at a time. |\n| CTRL+ESC | Open the Start menu. |\n| CTRL+SHIFT+ESC\
+    \ | Open Windows Task Manager. |\n| Alt+F4 | Close the currently active program.\
+    \ |\n| Alt+ENTER | Open the properties for the selected item (file, folder, shortcut,\
+    \ etc.). |\n\n## PC SHORTCUT KEYS FOR SPECIAL CHARACTERS\n\n| SHORTCUT KEYS |\
+    \ SPECIAL CHARACTERS |\n| --- | --- |\n| ALT+0224 | à |\n| ALT+0232 | è |\n| ALT+0236\
+    \ | ì |"
+  mdcn: "\n # 500+ 计算机快捷键\n\n为 PC（Windows、Linux、Unix 和 Apple Macintosh）精心编写并测试的快捷键组合，供您使用。\n\
+    \nJADEN STEPHEN\n\n# 版权所有 © 2020 JADEN STEPHEN\n\n保留所有权利。未经出版商事先许可，不得以任何形式或任何方式复制、传播本书的任何部分——无论是电子、机械、影印、录音还是其他方式，除印刷评论中的简短引文外。\n\
+    \n# 目录\n\n- 计算机键盘快捷键\n- 快捷键基础\n- 每个人都应知道的十大键盘快捷键\n- PC 特殊字符快捷键\n- Microsoft Windows\
+    \ 快捷键\n  - 通用 Windows 快捷方式\n  - 功能键\n  - Windows 键快捷方式\n- Apple 快捷键\n- Unix 和\
+    \ Linux 快捷键\n  - 键盘快捷键\n  - 命令行快捷方式\n- Microsoft Excel 快捷键\n- Microsoft Word 快捷键\n\
+    - Microsoft Word 鼠标快捷键\n- Google Chrome 键盘快捷键\n- Internet Explorer 键盘快捷键\n- Microsoft\
+    \ Frontpage 快捷键\n- Microsoft Outlook 键盘快捷键\n- Mozilla Firefox Windows 版键盘快捷键\n\
+    - YouTube 快捷键\n\n# 计算机键盘快捷键\n\n## 快捷键基础\n\n有助于提供更简单、更快捷的探索和执行计算机软件命令的方法。快捷键通常通过使用\
+    \ Alt 键（在 IBM 兼容 PC 上）、Command 键（在 Apple 电脑上）、CTRL 键或 SHIFT 键与另一个键组合来访问。列出快捷键的标准惯例是先列出修饰键，然后加号，再加另一个键。换句话说，\"\
+    CTRL+S\" 是让您按住 CTRL 键，然后同时按下 S 键。\n\n您还可以通过在常用程序菜单中查找带下划线的字母来发现快捷方式。例如，文件菜单图片中\
+    \ \"File\" 的 \"F\" 带有下划线，这意味着您可以按下 Alt 键和 \"F\" 键来访问文件菜单。\n\n某些程序需要用户按住 Alt 键才能看到带下划线的字符。在上图中，您可以看到一些常用功能，如打开（CTRL+O）和保存（CTRL+S），都有分配的快捷键。当您记住快捷键后，您会发现许多应用程序都共享这些快捷键。我们在基本\
+    \ PC 快捷键部分列出了最常见的共享快捷键。\n\n以下是适用于 IBM 兼容计算机的常用快捷键列表。如果您能尽可能多地记住它们，将大有裨益。\n\n##\
+    \ 每个人都应知道的十大键盘快捷键\n\n以下是我推荐每个人记住并使用的 10 个键盘快捷键。\n\n| 快捷键 | 操作 |\n| --- | --- |\n\
+    | CTRL+C 或 CTRL+INSERT 以及 CTRL+X | CTRL+C 和 CTRL+INSERT 都会复制高亮文本或选定项目。如果您想剪切项目而非复制，请按\
+    \ CTRL+X。此操作会移除文本或项目并将其存储在剪贴板中，而不是在复制到剪贴板的同时保留原始内容。<br><br>Apple 电脑用户可以用 command\
+    \ (CMD) 键替代其电脑上的 CTRL 键。例如，按 CMD+C 可复制高亮文本。 |\n| CTRL+V 或 SHIFT+INSERT | CTRL+V\
+    \ 和 SHIFT+INSERT 都会粘贴文本 |\n| CTRL+Z 和 CTRL+Y | 按 CTRL+Z 可撤销任何更改。例如，如果您剪切了文本，按此组合键将撤销剪切操作。这些快捷键也可以多次按下以撤销或重做多项更改。按\
+    \ CTRL+Y 将重做已撤销的操作。 |\n| CTRL+F 和 CTRL+G | 按 CTRL+F 可打开查找字段，允许您在支持该功能的任何程序中搜索当前显示的文本。例如，CTRL+F\
+    \ 可在 Internet 浏览器中使用以查找当前页面上的文本。立即按 CTRL+F 在浏览器中打开查找功能，搜索\"shortcut\"以显示本页中每次提到\
+    \ shortcut 的位置。CTRL+G 可用于在文档或网页中重复搜索（从使用 CTRL+F 开始）。 |\n| ALT+TAB 或 CTRL+TAB |\
+    \ 按 ALT+TAB 可在打开的程序之间向前切换。例如，如果您已打开浏览器窗口，并且其他程序在后台运行，请按住 ALT 键然后按 TAB 键来循环切换每个打开的程序。<br><br>在\
+    \ Apple 电脑上，使用 Command (CMD) 键替代 Alt 键。例如，CMD+TAB 可在打开的程序之间切换。<br><br>提示：按 CTRL+TAB\
+    \ 可在程序内的标签页之间切换。例如，如果您在 Internet 浏览器中打开了多个标签页，按 CTRL+TAB 可在它们之间切换。<br><br>提示：添加\
+    \ Shift 键到 ALT+TAB 或 CTRL+TAB 可以向后移动。例如，如果您按 ALT+TAB 时跳过了想要使用的程序，请按 ALT+SHIFT+TAB\
+    \ 返回到该程序。<br><br>提示：Windows Vista、7、8 和 10 用户还可以按 WINDOWS 键+TAB 以窗口的完整截图方式切换打开的程序。\
+    \ |\n| CTRL+BACKSPACE 和 CTRL+左或右箭头 | 按 CTRL+BACKSPACE 每次删除一个完整的单词，而不是单个字符。 |\n\
+    | CTRL+BACKSPACE 和 CTRL+左或右箭头 | 按住 CTRL 键同时按左或右箭头，光标每次移动一个单词，而非一个字符。如果您想每次高亮一个单词，请按住\
+    \ CTRL+SHIFT，然后按左或右箭头键。您的高亮选择将沿该每次方向移动一个单词。 |\n| CTRL+S | 在几乎所有程序中处理文档或其他文件时，按\
+    \ CTRL+S 可保存该文件。如果您正在处理任何重要内容，请频繁使用此快捷键，以防出现错误、断电或任何其他导致您自上次保存以来丢失工作的问题。<br><br>在\
+    \ Apple 电脑上，使用 Cmd+S 保存文件 |\n| CTRL+HOME 或 CTRL+END | CTRL+HOME 将光标移动到文档开头，CTRL+END\
+    \ 将光标移动到文档末尾。这些快捷键适用于大多数文档以及网页。<br><br>在 Apple 电脑上，使用 Cmd + 向上箭头到达文档或文本的开头，或使用\
+    \ Cmd + 向下箭头到达末尾。 |\n| CTRL+P | CONTROL+P 用于打开当前查看的页面或文档的打印预览。例如，立即按 CTRL+P 查看本页的打印预览。<br><br>在\
+    \ Apple 电脑上，使用 Cmd+P 打开打印预览。 |\n| PAGE UP、空格键和 PAGE DOWN | 正如您可能猜到的，按 Page Up\
+    \ 或 Page Down 键可移动到上一页或下一页。浏览 Internet 时，按空格键向下滚动一页。同样，SHIFT+空格键向上滚动一页。 |\n\n\
+    | 快捷键 | 操作 |\n| --- | --- |\n| ALT+F | 当前运行程序中的文件菜单选项。 |\n| ALT+E | 在当前程序中打开编辑选项。\
+    \ |\n| ALT+TAB | 在打开的程序之间切换。 |\n| F1 | 查看帮助信息。 |\n| F2 | 重命名选定的文件。 |\n| F5 | 刷新当前程序窗口。\
+    \ |\n| CTRL+D | 在 Internet 浏览器中为当前页面添加书签。 |\n| CTRL+N | 在程序中创建新文档或在大多数 Internet\
+    \ 浏览器中打开新标签页。 |\n| CTRL+O | 在当前运行的程序中打开文件。 |\n| CTRL+A | 选择所有文本。 |\n| CTRL+B |\
+    \ 将选定的文本更改为**粗体**。 |\n| CTRL+I | 将选定的文本更改为*斜体*。 |\n| CTRL+U | 将选定的文本更改为<u>下划线</u>\
+    \ |\n| CTRL+F | 为当前文档或窗口打开查找窗口。 |\n| CTRL+S | 保存当前文档文件。 |\n\n| 快捷键 | 操作 |\n| ---\
+    \ | --- |\n| CTRL+X | 剪切选定项目。 |\n| SHIFT+DEL | 剪切选定项目。 |\n| CTRL+C | 复制选定项目。 |\n\
+    | CTRL+INS | 复制选定项目。 |\n| CTRL+V | 粘贴。 |\n| SHIFT+INS | 粘贴。 |\n| CTRL+Y | 重做上一个动作。\
+    \ |\n| CTRL+Z | 撤销上一个动作。 |\n| CTRL+K | 为选定文本插入超链接。 |\n| CTRL+P | 打印当前页面或文档。 |\n\
+    | HOME | 转到当前行开头。 |\n| CTRL+HOME | 转到文档开头。 |\n| END | 转到当前行末尾。 |\n| CTRL+END |\
+    \ 转到文档末尾。 |\n| SHIFT+HOME | 从高亮当前位置到行开头。 |\n| SHIFT+END | 从高亮当前位置到行末尾。 |\n| CTRL+左箭头\
+    \ | 每次向左移动一个单词。 |\n| CTRL+右箭头 | 每次向右移动一个单词。 |\n| CTRL+ESC | 打开\"开始\"菜单。 |\n| CTRL+SHIFT+ESC\
+    \ | 打开 Windows 任务管理器。 |\n| Alt+F4 | 关闭当前活动的程序。 |\n| Alt+ENTER | 打开选定项目（文件、文件夹、快捷方式等）的属性。\
+    \ |\n\n## PC 特殊字符快捷键\n\n| 快捷键 | 特殊字符 |\n| --- | --- |\n| ALT+0224 | à |\n| ALT+0232\
+    \ | è |\n| ALT+0236 | ì |\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # 500+ COMPUTER SHORTCUTS
+
+
+    A well compiled and tested shortcut keys combination for PC (Windows, Linux, Unix
+    and Apple Macintosh) for your use.
+
+
+    JADEN STEPHEN'
+  - "[PAGE 1]\n\n# COPYRIGHT © 2020 JADEN STEPHEN\n\nAll rights reserved. No part\
+    \ of this book may be reproduced, transmitted in any form or by any means-electronic,\
+    \ mechanical, photocopy, recording, or any other except for brief quotations in\
+    \ printed reviews, without prior permission of the publisher.\n\n# Table of Contents\n\
+    \n+   - [COMPUTER KEYBOARD SHORTCUT KEYS](about:blank)\n  - [SHORTCUT KEYS ABCs](about:blank)\n\
+    \  - [TOP 10 KEYBOARD SHORTCUTS EVERYONE SHOULD KNOW](about:blank)\n  - [PC SHORTCUT\
+    \ KEYS FOR SPECIAL CHARACTERS](about:blank)\n- [MICROSOFT WINDOWS SHORTCUT KEYS](about:blank)\n\
+    \  - [GENERAL WINDOWS SHORTCUT](about:blank)\n  - [FUNCTION KEYS](about:blank)\n\
+    \  - [WINDOWS KEY SHORTCUT](about:blank)"
+  - "[PAGE 2]\n\n+   - [APPLE SHORTCUT KEYS](#)\n- [UNIX AND LINUX SHORTCUT KEYS](#)\n\
+    \  - [KEYBOARD SHORTCUT KEYS](#)\n  - [COMMAND LINE SHORTCUTS](#)\n- [MICROSOFT\
+    \ EXCEL SHORTCUT KEYS](#)\n- [MICROSOFT WORD SHORTCUT KEYS](#)\n- [MICROSOFT WORD\
+    \ MOUSE SHORTCUTS](#)\n- [GOOGLE CHROME KEYBOARD SHORTCUT KEYS](#)\n- [INTERNET\
+    \ EXPLORER KEYBOARD SHORTCUT](#)\n- [MICROSOFT FRONTPAGE SHORTCUT KEYS](#)\n-\
+    \ [MICROSOFT OUTLOOK KEYBORAD SHORTCUTS](#)\n- [MOZILLA FIREFOX KEYBOARD SHORT\
+    \ CUT FOR WINDOWS](#)\n- [YOUTUBE SHORTCUT KEYS](#)"
+  - '[PAGE 3]
+
+
+    # COMPUTER KEYBOARD SHORTCUT KEYS
+
+
+    # SHORTCUT KEYS ABCs
+
+
+    Helps give a simpler and snappier technique for exploring and executing orders
+    in the PC programming. Shortcut keys are usually gotten to by utilizing the Alt
+    key (on IBM perfect PCs), Command key (on Apple PCs), CTRL key, or SHIFT key related
+    to another key. The true standard for posting a shortcut is posting the modifier
+    key, and or more image, and another key. At the end of the day, "CTRL+S" is instructing
+    you to press and hold the CTRL key, and afterward, press the S key as well.
+
+
+    You can likewise discover the easy shortcuts in well-known projects by searching
+    for underlined letters in their menus. For instance, the document menu picture
+    has an underline on the "F" in File, which implies you can press'
+  - '[PAGE 4]
+
+
+    the Alt key and "F" key to get to the record menu.
+
+
+    A few programs require the user to press and hold Alt to see the underlined characters.
+    In the picture above, you can see that a portion of the basic highlights, for
+    example, Open (CTRL+O) and Save (CTRL+S), have alternate route keys relegated
+    to them. As you remember easy shortcut keys, you''ll notice that numerous applications
+    share them. We have a rundown of the most normally shared ones in the essential
+    PC easy shortcut keys segment.
+
+
+    Below is a list of the commonly used shortcut keys that works with IBM compatible
+    computers. And it would be of great help to you if you could try to memorize as
+    much as you could.
+
+
+    # TOP 10 KEYBOARD SHORTCUTS EVERYONE SHOULD KNOW
+
+
+    Below are 10 keyboard short cuts that I recommend everyone to memorize and use.
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | CTRL+C OR CTRL+INSERT AND CTRL+X | Both CTRL+C and CTRL+INSERT will copy highlighted
+    text or a selected item. If you want to cut an item instead of copying it, press
+    CTRL+X. This action removes the text or item and stores it in the clipboard for
+    you, rather than copying it to the clipboard while leaving the original behind.<br><br>Apple
+    computer users can substitute the CTRL key for the command (CMD) key on their
+    computers. For example, pressing CMD+C copies highlighted text. |
+
+    | CTRL+V OR SHIFT+INSERT | Both the CTRL+V and SHIFT+INSERT will paste the text'
+  - '[PAGE 5]
+
+
+    | Ctrl+V | Paste selected text. A user can also copy something to the clipboard
+    and paste it in another location by using this shortcut. |
+
+    | --- | --- |
+
+    | **CTRL+Z AND CTRL+Y** | Pressing CTRL+Z will undo any change. For example, if
+    you cut text, pressing this key combination will undo the cut. These shortcuts
+    can also be pressed multiple times to undo or redo multiple changes. Pressing
+    CTRL+Y would redo the undo. |
+
+    | **CTRL+F AND CTRL+G** | Pressing CTRL+F opens the Find field, which allows you
+    to search the text currently displayed in any program that supports it. For example,
+    CTRL+F can be used in your Internet browser to find text on the current page.
+    Press CTRL+F now to open the Find in your browser and search for "shortcut" to
+    display each time shortcut is mentioned on this page. CTRL+G may be used to repeat
+    a search (from using CTRL+F) in a document or on a web page. |
+
+    | **ALT+TAB OR CTRL+TAB** | Pressing ALT+TAB switches between open programs moving
+    forward. For example, if you have your browser window open and |'
+  - '[PAGE 6]
+
+
+    other programs running in the background press and hold ALT and then press the
+    TAB key to cycle through each open program.
+
+
+    On Apple computers, instead of using the Alt key use the Command (CMD) key. For
+    example, CMD+TAB to switch between open programs.
+
+
+    TIP: Press CTRL+TAB to switch between tabs in a program. For example, if you have
+    multiple tabs open in your Internet browser, press CTRL+TAB to switch between
+    them.
+
+
+    TIP: Adding the Shift key to ALT+TAB or CTRL+TAB moves backward. For example,
+    if you are pressing ALT+TAB and pass the program you want to use, press ALT+SHIFT+TAB
+    to move back to that program.
+
+
+    TIP: Windows Vista, 7, 8, and 10 users can also press the WINDOWS KEY+TAB to switch
+    through open programs in a full screenshot of the window.
+
+
+    | CTRL+BACKSPACE AND CTRL+LEFT OR RIGHT ARROW | Pressing CTRL+BACKSPACE deletes
+    a full word at a time instead of a single character. |
+
+
+    | CTRL+BACKSPACE AND CTRL+LEFT OR RIGHT ARROW | Holding down the CTRL key while
+    pressing the left or right arrow moves the cursor one word at a time instead of
+    one character at a time. If |'
+  - '[PAGE 7]
+
+
+    you want to highlight one word at a time, hold down CTRL+SHIFT, then press the
+    left or right arrow key. Your highlighted selection moves one word at a time in
+    that direction.
+
+
+    | Shortcut | Description |
+
+    | --- | --- |
+
+    | CTRL+S | While working on a document or another file in almost every program,
+    pressing CTRL+S saves that file. Use this shortcut key frequently if you''re working
+    on anything important in case of an error, lost power, or any other issues that
+    causes you to lose any work since the last save.<br><br>On Apple computers, use
+    Cmd+S to save a file |
+
+    | CTRL+HOME OR CTRL+END | CTRL+HOME moves the cursor to the beginning of the document,
+    and CTRL+END moves the cursor to the end of a document. These shortcuts work with
+    most documents, as well as web pages.<br><br>On Apple computers, use the Cmd +
+    up arrow to get to the beginning or Cmd + down arrow to get to the end of a document
+    or text. |
+
+    | CTRL+P | CONTROL+P is used to open a print preview of the page or document currently
+    being viewed. For example, press CTRL+P now to view a print preview of this page.<br><br>On
+    Apple computers, use Cmd+P to open the print preview. |'
+  - '[PAGE 8]
+
+
+    | PAGE UP, SPACEBAR, AND PAGE DOWN | As you may have guessed, pressing either
+    the page up or page down key moves to the next or previous page. When browsing
+    the Internet, pressing the spacebar moves the scrollbar down a page. Similarly,
+    SHIFT+SPACEBAR moves the scrollbar up one page. |
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | ALT+F | File menu options in current running program. |
+
+    | ALT+E | Open edit option in current program. |
+
+    | ALT+TAB | Switch between open programs. |
+
+    | F1 | To view the help information. |
+
+    | F2 | Rename a selected file. |
+
+    | F5 | Refresh the current programs window. |
+
+    | CTRL+D | Bookmark the current page in internet browsers. |
+
+    | CTRL +N | Creates a new document in programs or opens in new TAB in most internet
+    browsers. |
+
+    | CTRL +O | Open a file in the current running program. |
+
+    | CTRL+A | Select all text. |
+
+    | CTRL+B | Change selected text to be bold. |
+
+    | CTRL+I | Change selected text to be in italics. |
+
+    | CTRL+U | Change selected text to be underlined |
+
+    | CTRL+F | Open find window for current document or window. |
+
+    | CTRL+S | Save current document file. |'
+  - '[PAGE 9]
+
+
+    | Shortcut | Action |
+
+    | --- | --- |
+
+    | CTRL+X | Cut selected item. |
+
+    | SHIFT+DEL | Cut selected item. |
+
+    | CTRL+C | Copy selected item. |
+
+    | CTRL+INS | Copy selected item. |
+
+    | CTRL+V | Paste. |
+
+    | SHIFT+INS | Paste. |
+
+    | CTRL+Y | Redo last action. |
+
+    | CTRL+Z | Undo last action. |
+
+    | CTRL+K | Insert hyperlink for selected text. |
+
+    | CTRL+P | Print the current page or document. |
+
+    | HOME | Goes to beginning of current line. |
+
+    | CTRL+HOME | Goes to beginning of document. |
+
+    | END | Goes to end of current line. |
+
+    | CTRL+END | Goes to end of document. |
+
+    | SHIFT+HOME | Highlights from current position to beginning of line. |
+
+    | SHIFT+END | Highlights from current position to END of line. |
+
+    | CTRL+Left arrow | Moves one word to the left at a time. |
+
+    | CTRL+Right arrow | Moves one word to the right at a time. |
+
+    | CTRL+ESC | Open the Start menu. |
+
+    | CTRL+SHIFT+ESC | Open Windows Task Manager. |
+
+    | Alt+F4 | Close the currently active program. |
+
+    | Alt+ENTER | Open the properties for the selected item (file, folder, shortcut,
+    etc.). |
+
+
+    # PC SHORTCUT KEYS FOR SPECIAL CHARACTERS
+
+
+    | SHORTCUT KEYS | SPECIAL CHARACTERS |
+
+    | --- | --- |
+
+    | ALT+0224 | à |
+
+    | ALT+0232 | è |
+
+    | ALT+0236 | ì |'
+- md: ' | ALT+0242 | ò |
+
+    | ALT+0241 | ñ |
+
+    | ALT+0228 | ä |
+
+    | ALT+0246 | ö |
+
+    | ALT+0252 | ü |
+
+    | ALT+0248 | ø |
+
+    | ALT+0223 | ß |
+
+    | ALT+0198 | Æ |
+
+    | ALT+0231 | ç |
+
+    | ALT+0191 | ¿ |
+
+    | ALT+0176 | ° (degree symbol) |
+
+    | ALT+0177 | ± (plus/minus symbol) |
+
+    | ALT+0153 | ™ |
+
+    | ALT+0169 | © |
+
+    | ALT+0174 | ® |
+
+    | ALT+0128 | € (Euro currency) |
+
+    | ALT+0162 | ¢ (Cent symbol) |
+
+    | ALT+0163 | £ (British Pound currency) |
+
+    | ALT+0165 | ¥ (Japanese Yen currency) |
+
+
+    ## MICROSOFT WINDOWS SHORTCUT KEYS
+
+
+    ## GENERAL WINDOWS SHORTCUT
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | ALT+TAB | Switch between open applications in all versions of Windows. Reverse
+    the direction by pressing ALT+SHIFT+TAB at the same time. |
+
+    | Ctrl+TAB | Switches between program groups, TABs, or document windows in applications-all
+    support this feature. |
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | (unspecified) | Reverse the direction by pressing Ctrl+SHIFT+TAB at the same
+    time. |
+
+    | ALT+double-click | In Windows 95 or later, display the properties of the object
+    you double-click. For example, doing this on a file would display its properties.
+    |
+
+    | ALT+PRINT SCREEN | Create a screenshot only for the active program window in
+    all versions of Windows. For example, if you opened the calculator and pressed
+    these shortcut keys, only the calculator window would be created as a screenshot.
+    If the PRINT SCREEN key is pressed alone, the whole screen will be made into a
+    screenshot. |
+
+    | Ctrl+ALT+DEL | Open the Windows option screen for locking computer, switching
+    user, Task Manager, etc. in later versions of Windows. Pressing Ctrl+ALT+DEL multiple
+    times reboots the computer. |
+
+    | Ctrl+SHIFT+ESC | Immediately bring up the Windows Task Manager in Windows 2000
+    and later. |
+
+    | Ctrl+ESC | Open the Windows Start menu in most versions of Windows. In Windows
+    8, this opens the Start screen and in Windows 3.x, this opens the Task Manager.
+    |
+
+    | ALT+ESC | Switch between open applications on Taskbar in Windows 95 and later.
+    |
+
+    | ALT+SPACEBAR | Drops down the window control menu for the currently open Windows
+    program in Windows 95 and later. |
+
+
+    | Shortcut | Actions |
+
+    | --- | --- |
+
+    | ALT+ENTER | Opens properties window of selected icon or program in Windows 95
+    and later. |
+
+    | SHIFT+DEL | Permanently Delete any file or another object without throwing it
+    into the Recycle Bin in Windows 95 and later. |
+
+    | Hold down the SHIFT key | When putting in an audio or data CD that uses Auto
+    play, holding down the SHIFT key prevents that CD from playing. |
+
+
+    ## FUNCTION KEYS
+
+
+    | FUNCTION SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | F1 | • Activates help for current open application. If you''re at the Windows
+    desktop, this activates the help for Windows. |
+
+    | F2 | • Renames a highlighted icon, file, or folder in all versions of Windows.<br>•
+    In Microsoft Excel, edits the active cell.<br>• ALT+CTRL+F2 opens document window
+    in Microsoft Word.<br>• CTRL+F2 displays the print preview window in Microsoft
+    Word. |
+
+
+    | Key | Functions |
+
+    |-----|-----------|
+
+    | | • Quickly rename a selected file or folder.<br>• Enter CMOS setup. |
+
+    | F3 | • Starts find or search when at the Windows desktop in all versions of
+    Windows.<br>• In some programs, after an initial search is performed, F3 will
+    find the next search value.<br>• In MS-DOS or Windows command line, F3 repeats
+    the last command entered.<br>• In Microsoft Word CTRL+F3 will lowercase any highlighted
+    text.<br>• SHIFT+F3 changes the text in Microsoft Word from upper to lowercase
+    or a capital letter at the beginning of every word.<br>• Windows Key + F3 opens
+    the Advanced find window in Microsoft Outlook.<br>• In Windows Explorer, start
+    the search function.<br>• Open Mission Control on an Apple computer running the
+    macOS X operating system. |
+
+    | F4 | • In Windows 95 and later, F4 opens the drive selection or address bar
+    when browsing files in Windows Explorer. |
+
+
+    | F5 | • In all modern Internet browsers, pressing F5 refreshes or reloads the
+    page or document window. • CTRL+F5 forces a complete refresh of the web page,
+    clearing the cache and downloading all contents of the page again. • Refresh the
+    list of contents in a folder. • Open the find, replace, and go to window in Microsoft
+    Word. • Starts a slideshow in PowerPoint. |
+
+    | F6 | • Move the cursor to the address bar in Internet Explorer, Mozilla Firefox,
+    and most other Internet browsers. • CTRL+SHIFT+F6 opens to |
+
+
+    | | |
+
+    |---|---|
+
+    | F7 | • Commonly used to spell check and grammar check a document in Microsoft
+    programs such as Microsoft Word, Outlook, etc.<br>• SHIFT+F7 runs a Thesaurus
+    check on the word highlighted.<br>• Turns on Caret Browsing in Mozilla Firefox.<br>•
+    Increase laptop speaker volume (on some laptops). |
+
+    | F8 | • Pressing F8 over and over as the computer is booting starts the computer
+    in Safe Mode.<br>• Used by some computers to access the Windows recovery system,
+    but may require a Windows installation CD.<br>• Displays a thumbnail image for
+    all workspaces in macOS. |
+
+    | F9 | • Refresh document in Microsoft Word.<br>• Send and receive e-mail in Microsoft
+    Outlook.<br>• Opens the Measurements toolbar in Quark 5.0. |
+
+
+    | F10 | • Reduce laptop screen brightness (on some laptops).<br>• With macOS 10.3
+    or later, displays a thumbnail for each window in a single workspace.<br>• Using
+    the Fn key and F9 at the same time opens Mission Control on an Apple computer
+    running the macOS X operating system.<br>• In Microsoft Windows, activates the
+    menu bar of an open application.<br>• SHIFT+F10 is the same as right-clicking
+    on a highlighted icon, file, or Internet link.<br>• Access the hidden recovery
+    partition on Compaq, HP, and Sony computers.<br>• Enter CMOS setup on some computers.<br>•
+    Increase laptop screen brightness (on some laptops).<br>• With macOS 10.3 or later,
+    shows all open Windows for the active program. |
+
+    | F11 | • Enter and exit full screen mode in all modern Internet browsers.<br>•
+    CTRL+F11 as the computer is starting to access the hidden recovery partition on
+    many |
+
+
+    | Key | Functions |
+
+    |:---|:---|
+
+    | F11 | • Dell computers.\n• Pressing F11 by itself accesses the hidden recovery
+    partition on eMachines, Gateway, and Lenovo computers.\n• With macOS 10.4 or later,
+    hides all open windows and shows the desktop |
+
+    | F12 | • Open the Save as window in Microsoft Word.\n• CTRL+F12 opens a document
+    in Word.\n• SHIFT+F12 saves the Microsoft Word document (like CTRL+S).\n• CTRL+SHIFT+F12
+    prints a document in Microsoft Word.\n• Preview a page in Microsoft Expression
+    Web.\n• Open Firebug or browser debug tool.\n• With an Apple running macOS 10.4
+    or later, F12 shows or hides the Dashboard.\n• Access the list of bootable devices
+    on a computer at startup, allowing you to select a different device to boot from
+    (e.g., hard drive, CD or DVD drive, floppy drive, USB drive, and network). |
+
+
+    ## WINDOWS KEY SHORTCUT
+
+
+    Below we have combined and listed down all the shortcuts by the windows key by
+    their various windows versions.
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | ALL VERSIONS OF WINDOWS | |
+
+    | WINKEY | Pressing the Windows key alone opens or hides the Windows Start menu.
+    In Windows 8, this opens or hides the Start screen. |
+
+    | WINKEY+F1 | Open the Microsoft Windows help and support center. |
+
+    | WINKEY+PAUSE / BREAK KEY | Open the System Properties window. |
+
+    | WINKEY+D | Display and hide the Windows desktop. |
+
+    | WINKEY+E | Open Microsoft Windows Explorer. |
+
+    | WINKEY+F | Display the Windows Search or Find feature. |
+
+    | WINKEY+CTRL+F | Display the search for computers window. |
+
+    | WINKEY+L | Lock the computer and switch users if needed (Windows XP and above
+    only). |
+
+    | WINKEY+M | Minimizes all windows. |
+
+    | WINKEY+SHIFT+M | Undo the minimize done by WINKEY+M and WINKEY+D. |
+
+    | WINKEY+R | Open the run window. |
+
+    | WINKEY+U | Open Utility Manager or the Ease of Access CENTER. |
+
+    | WINDOWS XP | |
+
+    | WINKEY+TAB | Cycle through open programs on the Taskbar. |
+
+    | WINDOWS 7 AND 8 | |
+
+    | WINKEY+1-0 | Pressing the Windows key and any top row number key from 1 to 0
+    opens the program corresponding to the number of the program icon on the Taskbar.
+    For example, if the first icon on the Taskbar is Internet Explorer, pressing WINKEY+1
+    would open that program or switch to it if already open. |
+
+    | WINKEY+(PLUS (+) or MINUS (-)) | Open Windows Magnifier and zoom in with the
+    PLUS symbol (+) and zoom out with the MINUS symbol (-). |
+
+    | WINKEY+ESC | Closes the Magnifier. |
+
+    | WINKEY+HOME | Minimize all windows except the active window |
+
+    | WINKEY+P | Change between the monitor and projection display types or how second
+    screen displays computer screen. |
+
+    | WINKEY+T | Set the focus on the Taskbar icons. |
+
+    | WINKEY+LEFT ARROW | Shrinks the window to 1/2 screen on the left side for side
+    by side viewing. |
+
+    | WINKEY+RIGHT ARROW | Shrinks the window to 1/2 screen on the right side for
+    side by side viewing |
+
+    | WINKEY+UP ARROW | When in the side by side viewing mode, this shortcut takes
+    the screen back to full size. |
+
+    | WINKEY+DOWN ARROW | Minimizes the screen. Also, when in the side by side viewing
+    mode, this shortcut takes the screen back to a minimized size. |
+
+    | **WINDOWS 8** | |'
+  mdcn: "\n | ALT+0242 | ò |\n| ALT+0241 | ñ |\n| ALT+0228 | ä |\n| ALT+0246 | ö |\n\
+    | ALT+0252 | ü |\n| ALT+0248 | ø |\n| ALT+0223 | ß |\n| ALT+0198 | Æ |\n| ALT+0231\
+    \ | ç |\n| ALT+0191 | ¿ |\n| ALT+0176 | ° （度数符号）|\n| ALT+0177 | ± （正负号）|\n| ALT+0153\
+    \ | ™ |\n| ALT+0169 | © |\n| ALT+0174 | ® |\n| ALT+0128 | € （欧元货币）|\n| ALT+0162\
+    \ | ¢ （美分符号）|\n| ALT+0163 | £ （英镑货币）|\n| ALT+0165 | ¥ （日元货币）|\n\n## 微软 Windows\
+    \ 快捷键\n\n## 通用 Windows 快捷键\n\n| 快捷键 | 操作 |\n| ALT+TAB | 在所有版本的 Windows 中在打开的应用程序之间切换。同时按下\
+    \ ALT+SHIFT+TAB 可反向切换。 |\n| Ctrl+TAB | 在应用程序中切换程序组、选项卡或文档窗口——所有应用程序均支持此功能。 |\n\
+    \n| 快捷键 | 说明 |\n|----------|-------------|\n| （未指定） | 同时按下 Ctrl+SHIFT+TAB 可反向切换。\
+    \ |\n| ALT+双击 | 在 Windows 95 或更高版本中，显示双击对象的属性。例如，对文件执行此操作将显示其属性。 |\n| ALT+PRINT\
+    \ SCREEN | 在所有版本的 Windows 中仅为活动程序窗口创建截图。例如，如果打开计算器并按下这些快捷键，则仅将计算器窗口创建为截图。如果单独按下\
+    \ PRINT SCREEN 键，则整个屏幕将被截取为截图。 |\n| Ctrl+ALT+DEL | 在较新版本的 Windows 中打开 Windows\
+    \ 选项屏幕，用于锁定计算机、切换用户、任务管理器等。多次按下 Ctrl+ALT+DEL 可重新启动计算机。 |\n| Ctrl+SHIFT+ESC | 在\
+    \ Windows 2000 及更高版本中立即调出 Windows 任务管理器。 |\n| Ctrl+ESC | 在大多数版本的 Windows 中打开 Windows\
+    \ 开始菜单。在 Windows 8 中，这会打开开始屏幕；在 Windows 3.x 中，这会打开任务管理器。 |\n| ALT+ESC | 在 Windows\
+    \ 95 及更高版本中在任务栏上的打开应用程序之间切换。 |\n| ALT+空格键 | 在 Windows 95 及更高版本中为当前打开的 Windows\
+    \ 程序放下拉窗口控制菜单。 |\n\n| 快捷键 | 操作 |\n| --- | --- |\n| ALT+ENTER | 在 Windows 95 及更高版本中打开选定图标或程序的属性窗口。\
+    \ |\n| SHIFT+DEL | 在 Windows 95 及更高版本中永久删除任何文件或其他对象，而不将其丢入回收站。 |\n| 按住 SHIFT 键\
+    \ | 当放入使用自动播放的音频或数据 CD 时，按住 SHIFT 键可阻止该 CD 播放。 |\n\n## 功能键\n\n| 功能快捷键 | 操作 |\n\
+    | --- | --- |\n| F1 | • 激活当前打开应用程序的帮助。如果在 Windows 桌面上，这将激活 Windows 的帮助。 |\n| F2\
+    \ | • 在所有版本的 Windows 中重命名高亮显示的图标、文件或文件夹。<br>• 在 Microsoft Excel 中，编辑活动单元格。<br>•\
+    \ ALT+CTRL+F2 在 Microsoft Word 中打开文档窗口。<br>• CTRL+F2 在 Microsoft Word 中显示打印预览窗口。\
+    \ |\n\n| 按键 | 功能 |\n|-----|-----------|\n| | • 快速重命名选定的文件或文件夹。<br>• 进入 CMOS 设置。\
+    \ |\n| F3 | • 在所有版本的 Windows 中处于 Windows 桌面时启动查找或搜索。<br>• 在某些程序中，执行初始搜索后，F3 将查找下一个搜索值。<br>•\
+    \ 在 MS-DOS 或 Windows 命令行中，F3 重复输入的最后一条命令。<br>• 在 Microsoft Word 中，CTRL+F3 将任何高亮显示的文本变为小写。<br>•\
+    \ SHIFT+F3 在 Microsoft Word 中将文本从大写改为小写，或将每个单词的首字母改为大写。<br>• Windows 键 + F3 在\
+    \ Microsoft Outlook 中打开高级查找窗口。<br>• 在 Windows 资源管理器中，启动搜索功能。<br>• 在运行 macOS X\
+    \ 操作系统的 Apple 电脑上打开调度中心。 |\n| F4 | • 在 Windows 95 及更高版本中，在 Windows 资源管理器中浏览文件时，F4\
+    \ 打开驱动器选择或地址栏。 |\n\n| F5 | • 在所有现代 Internet 浏览器中，按 F5 刷新或重新加载页面或文档窗口。<br>• CTRL+F5\
+    \ 强制完全刷新网页，清除缓存并重新下载页面的所有内容。<br>• 刷新文件夹中的内容列表。<br>• 在 Microsoft Word 中打开查找、替换和转到窗口。<br>•\
+    \ 在 PowerPoint 中开始幻灯片放映。 |\n| F6 | • 在 Internet Explorer、Mozilla Firefox 和大多数其他\
+    \ Internet 浏览器中，将光标移到地址栏。<br>• CTRL+SHIFT+F6 打开 |\n\n| | |\n|---|---|\n| F7 |\
+    \ • 通常用于在 Microsoft 程序（如 Microsoft Word、Outlook 等）中对文档进行拼写检查和语法检查。<br>• SHIFT+F7\
+    \ 对高亮显示的单词运行同义词库检查。<br>• 在 Mozilla Firefox 中打开光标浏览。<br>• 增大笔记本电脑扬声器音量（在某些笔记本电脑上）。\
+    \ |\n| F8 | • 在计算机启动时反复按 F8 可将计算机启动到安全模式。<br>• 某些计算机使用它来访问 Windows 恢复系统，但可能需要\
+    \ Windows 安装光盘。<br>• 在 macOS 中显示所有工作区的缩略图。 |\n| F9 | • 在 Microsoft Word 中刷新文档。<br>•\
+    \ 在 Microsoft Outlook 中发送和接收电子邮件。<br>• 在 Quark 5.0 中打开测量工具栏。 |\n\n| F10 | • 降低笔记本电脑屏幕亮度（在某些笔记本电脑上）。<br>•\
+    \ 在 macOS 10.3 或更高版本中，显示单个工作区中每个窗口的缩略图。<br>• 同时按下 Fn 键和 F9 可在运行 macOS X 操作系统的\
+    \ Apple 电脑上打开调度中心。<br>• 在 Microsoft Windows 中，激活打开应用程序的菜单栏。<br>• SHIFT+F10 等同于右键单击高亮显示的图标、文件或\
+    \ Internet 链接。<br>• 访问 Compaq、HP 和 Sony 计算机上的隐藏恢复分区。<br>• 在某些计算机上进入 CMOS 设置。<br>•\
+    \ 增大笔记本电脑屏幕亮度（在某些笔记本电脑上）。<br>• 在 macOS 10.3 或更高版本中，显示活动程序的所有打开窗口。 |\n| F11 | •\
+    \ 在所有现代 Internet 浏览器中进入和退出全屏模式。<br>• 计算机启动时按 CTRL+F11 可访问许多 |\n\n| 按键 | 功能 |\n\
+    |:---|:---|\n| F11 | • Dell 计算机上的隐藏恢复分区。\\n• 单独按 F11 可访问 eMachines、Gateway 和 Lenovo\
+    \ 计算机上的隐藏恢复分区。\\n• 在 macOS 10.4 或更高版本中，隐藏所有打开的窗口并显示桌面 |\n| F12 | • 在 Microsoft\
+    \ Word 中打开另存为窗口。<br>• CTRL+F12 在 Word 中打开文档。<br>• SHIFT+F12 保存 Microsoft Word\
+    \ 文档（类似于 CTRL+S）。<br>• CTRL+SHIFT+F12 在 Microsoft Word 中打印文档。<br>• 在 Microsoft\
+    \ Expression Web 中预览页面。<br>• 打开 Firebug 或浏览器调试工具。<br>• 在运行 macOS 10.4 或更高版本的 Apple\
+    \ 电脑上，F12 显示或隐藏 Dashboard。<br>• 在计算机启动时访问可引导设备列表，允许你选择不同的设备来引导（例如，硬盘驱动器、CD 或 DVD\
+    \ 驱动器、软盘驱动器、USB 驱动器和网络）。 |\n\n## Windows 键快捷键\n\n下面我们按各种 Windows 版本汇总并列出所有 Windows\
+    \ 键快捷键。\n\n| 快捷键 | 操作 |\n| --- | --- |\n| 所有版本的 Windows | |\n| WINKEY | 单独按下 Windows\
+    \ 键可打开或隐藏 Windows 开始菜单。在 Windows 8 中，这会打开或隐藏开始屏幕。 |\n| WINKEY+F1 | 打开 Microsoft\
+    \ Windows 帮助和支持中心。 |\n| WINKEY+PAUSE / BREAK 键 | 打开系统属性窗口。 |\n| WINKEY+D | 显示和隐藏\
+    \ Windows 桌面。 |\n| WINKEY+E | 打开 Microsoft Windows 资源管理器。 |\n| WINKEY+F | 显示 Windows\
+    \ 搜索或查找功能。 |\n| WINKEY+CTRL+F | 显示搜索计算机窗口。 |\n| WINKEY+L | 锁定计算机并在需要时切换用户（仅限 Windows\
+    \ XP 及更高版本）。 |\n| WINKEY+M | 最小化所有窗口。 |\n| WINKEY+SHIFT+M | 撤消 WINKEY+M 和 WINKEY+D\
+    \ 执行的最小化操作。 |\n| WINKEY+R | 打开运行窗口。 |\n| WINKEY+U | 打开辅助功能管理器或轻松访问中心。 |\n| WINDOWS\
+    \ XP | |\n| WINKEY+TAB | 在任务栏上的打开程序之间循环切换。 |\n| WINDOWS 7 和 8 | |\n| WINKEY+1-0\
+    \ | 按下 Windows 键和从 1 到 0 的任意顶行数字键，可打开任务栏上对应数字的程序图标所关联的程序。例如，如果任务栏上的第一个图标是 Internet\
+    \ Explorer，则按 WINKEY+1 将打开该程序，或如果已打开则切换到该程序。 |\n| WINKEY+（加号 (+) 或减号 (-)） | 打开\
+    \ Windows 放大镜，使用加号 (+) 放大，使用减号 (-) 缩小。 |\n| WINKEY+ESC || 关闭放大镜。 |\n| WINKEY+HOME\
+    \ | 最小化除活动窗口外的所有窗口 |\n| WINKEY+P | 在监视器和投影显示类型之间切换，或更改第二屏幕显示计算机屏幕的方式。 |\n| WINKEY+T\
+    \ | 将焦点设置到任务栏图标。 |\n| WINKEY+左箭头 | 将窗口缩小到屏幕左侧的 1/2 以进行并排查看。 |\n| WINKEY+右箭头 |\
+    \ 将窗口缩小到屏幕右侧的 1/2 以进行并排查看 |\n| WINKEY+上箭头 | 在并排查看模式下，此快捷键将屏幕恢复为全尺寸。 |\n| WINKEY+向下箭头\
+    \ | 最小化屏幕。此外，在并排查看模式下，此快捷键将屏幕恢复为最小化尺寸。 |\n| **WINDOWS 8** | |\n"
+  merge: 0
+  raw:
+  - '[PAGE 10]
+
+
+    | ALT+0242 | ò |
+
+    | ALT+0241 | ñ |
+
+    | ALT+0228 | ä |
+
+    | ALT+0246 | ö |
+
+    | ALT+0252 | ü |
+
+    | ALT+0248 | ø |
+
+    | ALT+0223 | ß |
+
+    | ALT+0198 | Æ |
+
+    | ALT+0231 | ç |
+
+    | ALT+0191 | ¿ |
+
+    | ALT+0176 | ° (degree symbol) |
+
+    | ALT+0177 | ± (plus/minus symbol) |
+
+    | ALT+0153 | ™ |
+
+    | ALT+0169 | © |
+
+    | ALT+0174 | ® |
+
+    | ALT+0128 | € (Euro currency) |
+
+    | ALT+0162 | ¢ (Cent symbol) |
+
+    | ALT+0163 | £ (British Pound currency) |
+
+    | ALT+0165 | ¥ (Japanese Yen currency) |
+
+
+    # MICROSOFT WINDOWS SHORTCUT KEYS
+
+
+    # GENERAL WINDOWS SHORTCUT
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | ALT+TAB | Switch between open applications in all versions of Windows. Reverse
+    the direction by pressing ALT+SHIFT+TAB at the same time. |
+
+    | Ctrl+TAB | Switches between program groups, TABs, or document windows in applications-all
+    support this feature. |'
+  - '[PAGE 11]
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | (unspecified) | Reverse the direction by pressing Ctrl+SHIFT+TAB at the same
+    time. |
+
+    | ALT+double-click | In Windows 95 or later, display the properties of the object
+    you double-click. For example, doing this on a file would display its properties.
+    |
+
+    | ALT+PRINT SCREEN | Create a screenshot only for the active program window in
+    all versions of Windows. For example, if you opened the calculator and pressed
+    these shortcut keys, only the calculator window would be created as a screenshot.
+    If the PRINT SCREEN key is pressed alone, the whole screen will be made into a
+    screenshot. |
+
+    | Ctrl+ALT+DEL | Open the Windows option screen for locking computer, switching
+    user, Task Manager, etc. in later versions of Windows. Pressing Ctrl+ALT+DEL multiple
+    times reboots the computer. |
+
+    | Ctrl+SHIFT+ESC | Immediately bring up the Windows Task Manager in Windows 2000
+    and later. |
+
+    | Ctrl+ESC | Open the Windows Start menu in most versions of Windows. In Windows
+    8, this opens the Start screen and in Windows 3.x, this opens the Task Manager.
+    |
+
+    | ALT+ESC | Switch between open applications on Taskbar in Windows 95 and later.
+    |
+
+    | ALT+SPACEBAR | Drops down the window control menu for the currently open Windows
+    program in Windows 95 and later. |'
+  - '[PAGE 12]
+
+
+    | Shortcut | Actions |
+
+    | --- | --- |
+
+    | ALT+ENTER | Opens properties window of selected icon or program in Windows 95
+    and later. |
+
+    | SHIFT+DEL | Permanently Delete any file or another object without throwing it
+    into the Recycle Bin in Windows 95 and later. |
+
+    | Hold down the SHIFT key | When putting in an audio or data CD that uses Auto
+    play, holding down the SHIFT key prevents that CD from playing. |
+
+
+    # FUNCTION KEYS
+
+
+    | FUNCTION SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | F1 | • Activates help for current open application. If you''re at the Windows
+    desktop, this activates the help for Windows. |
+
+    | F2 | • Renames a highlighted icon, file, or folder in all versions of Windows.<br>•
+    In Microsoft Excel, edits the active cell.<br>• ALT+CTRL+F2 opens document window
+    in Microsoft Word.<br>• CTRL+F2 displays the print preview window in Microsoft
+    Word. |'
+  - '[PAGE 13]
+
+
+    | Key | Functions |
+
+    |-----|-----------|
+
+    | | • Quickly rename a selected file or folder.<br>• Enter CMOS setup. |
+
+    | F3 | • Starts find or search when at the Windows desktop in all versions of
+    Windows.<br>• In some programs, after an initial search is performed, F3 will
+    find the next search value.<br>• In MS-DOS or Windows command line, F3 repeats
+    the last command entered.<br>• In Microsoft Word CTRL+F3 will lowercase any highlighted
+    text.<br>• SHIFT+F3 changes the text in Microsoft Word from upper to lowercase
+    or a capital letter at the beginning of every word.<br>• Windows Key + F3 opens
+    the Advanced find window in Microsoft Outlook.<br>• In Windows Explorer, start
+    the search function.<br>• Open Mission Control on an Apple computer running the
+    macOS X operating system. |
+
+    | F4 | • In Windows 95 and later, F4 opens the drive selection or address bar
+    when browsing files in Windows Explorer. |'
+  - '[PAGE 14]
+
+
+    | F5 | • In all modern Internet browsers, pressing F5 refreshes or reloads the
+    page or document window. • CTRL+F5 forces a complete refresh of the web page,
+    clearing the cache and downloading all contents of the page again. • Refresh the
+    list of contents in a folder. • Open the find, replace, and go to window in Microsoft
+    Word. • Starts a slideshow in PowerPoint. |
+
+    | F6 | • Move the cursor to the address bar in Internet Explorer, Mozilla Firefox,
+    and most other Internet browsers. • CTRL+SHIFT+F6 opens to |'
+  - '[PAGE 15]
+
+
+    | | |
+
+    |---|---|
+
+    | F7 | • Commonly used to spell check and grammar check a document in Microsoft
+    programs such as Microsoft Word, Outlook, etc.<br>• SHIFT+F7 runs a Thesaurus
+    check on the word highlighted.<br>• Turns on Caret Browsing in Mozilla Firefox.<br>•
+    Increase laptop speaker volume (on some laptops). |
+
+    | F8 | • Pressing F8 over and over as the computer is booting starts the computer
+    in Safe Mode.<br>• Used by some computers to access the Windows recovery system,
+    but may require a Windows installation CD.<br>• Displays a thumbnail image for
+    all workspaces in macOS. |
+
+    | F9 | • Refresh document in Microsoft Word.<br>• Send and receive e-mail in Microsoft
+    Outlook.<br>• Opens the Measurements toolbar in Quark 5.0. |'
+  - '[PAGE 16]
+
+
+    | F10 | • Reduce laptop screen brightness (on some laptops).<br>• With macOS 10.3
+    or later, displays a thumbnail for each window in a single workspace.<br>• Using
+    the Fn key and F9 at the same time opens Mission Control on an Apple computer
+    running the macOS X operating system.<br>• In Microsoft Windows, activates the
+    menu bar of an open application.<br>• SHIFT+F10 is the same as right-clicking
+    on a highlighted icon, file, or Internet link.<br>• Access the hidden recovery
+    partition on Compaq, HP, and Sony computers.<br>• Enter CMOS setup on some computers.<br>•
+    Increase laptop screen brightness (on some laptops).<br>• With macOS 10.3 or later,
+    shows all open Windows for the active program. |
+
+    | F11 | • Enter and exit full screen mode in all modern Internet browsers.<br>•
+    CTRL+F11 as the computer is starting to access the hidden recovery partition on
+    many |'
+  - '[PAGE 17]
+
+
+    | Key | Functions |
+
+    |:---|:---|
+
+    | F11 | • Dell computers.\n• Pressing F11 by itself accesses the hidden recovery
+    partition on eMachines, Gateway, and Lenovo computers.\n• With macOS 10.4 or later,
+    hides all open windows and shows the desktop |
+
+    | F12 | • Open the Save as window in Microsoft Word.\n• CTRL+F12 opens a document
+    in Word.\n• SHIFT+F12 saves the Microsoft Word document (like CTRL+S).\n• CTRL+SHIFT+F12
+    prints a document in Microsoft Word.\n• Preview a page in Microsoft Expression
+    Web.\n• Open Firebug or browser debug tool.\n• With an Apple running macOS 10.4
+    or later, F12 shows or hides the Dashboard.\n• Access the list of bootable devices
+    on a computer at startup, allowing you to select a different device to boot from
+    (e.g., hard drive, CD or DVD drive, floppy drive, USB drive, and network). |'
+  - '[PAGE 18]
+
+
+    # WINDOWS KEY SHORTCUT
+
+
+    Below we have combined and listed down all the shortcuts by the windows key by
+    their various windows versions.
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | ALL VERSIONS OF WINDOWS | |
+
+    | WINKEY | Pressing the Windows key alone opens or hides the Windows Start menu.
+    In Windows 8, this opens or hides the Start screen. |
+
+    | WINKEY+F1 | Open the Microsoft Windows help and support center. |
+
+    | WINKEY+PAUSE / BREAK KEY | Open the System Properties window. |
+
+    | WINKEY+D | Display and hide the Windows desktop. |
+
+    | WINKEY+E | Open Microsoft Windows Explorer. |
+
+    | WINKEY+F | Display the Windows Search or Find feature. |
+
+    | WINKEY+CTRL+F | Display the search for computers window. |
+
+    | WINKEY+L | Lock the computer and switch users if needed (Windows XP and above
+    only). |
+
+    | WINKEY+M | Minimizes all windows. |
+
+    | WINKEY+SHIFT+M | Undo the minimize done by WINKEY+M and WINKEY+D. |
+
+    | WINKEY+R | Open the run window. |
+
+    | WINKEY+U | Open Utility Manager or the Ease of Access CENTER. |
+
+    | WINDOWS XP | |
+
+    | WINKEY+TAB | Cycle through open programs on the Taskbar. |
+
+    | WINDOWS 7 AND 8 | |'
+  - '[PAGE 19]
+
+
+    | WINKEY+1-0 | Pressing the Windows key and any top row number key from 1 to 0
+    opens the program corresponding to the number of the program icon on the Taskbar.
+    For example, if the first icon on the Taskbar is Internet Explorer, pressing WINKEY+1
+    would open that program or switch to it if already open. |
+
+    | WINKEY+(PLUS (+) or MINUS (-)) | Open Windows Magnifier and zoom in with the
+    PLUS symbol (+) and zoom out with the MINUS symbol (-). |
+
+    | WINKEY+ESC | Closes the Magnifier. |
+
+    | WINKEY+HOME | Minimize all windows except the active window |
+
+    | WINKEY+P | Change between the monitor and projection display types or how second
+    screen displays computer screen. |
+
+    | WINKEY+T | Set the focus on the Taskbar icons. |
+
+    | WINKEY+LEFT ARROW | Shrinks the window to 1/2 screen on the left side for side
+    by side viewing. |
+
+    | WINKEY+RIGHT ARROW | Shrinks the window to 1/2 screen on the right side for
+    side by side viewing |
+
+    | WINKEY+UP ARROW | When in the side by side viewing mode, this shortcut takes
+    the screen back to full size. |
+
+    | WINKEY+DOWN ARROW | Minimizes the screen. Also, when in the side by side viewing
+    mode, this shortcut takes the screen back to a minimized size. |
+
+    | **WINDOWS 8** | |'
+- md: ' | WINKEY+ COMMA (,) | Peek at the Windows desktop. |
+
+    | --- | --- |
+
+    | WINKEY+ FULL STOP (,) | Snap a Windows App to the sides of the screen. Pressing
+    it multiple times will switch between the right and left side of the screen or
+    unsnap the app. |
+
+    | WINKEY+ENTER | Open Windows Narrator. |
+
+    | WINKEY+C | Open the Charms. |
+
+    | WINKEY+G | Cycle through desktop gadgets. |
+
+    | WINKEY+H | Open Share in Charms. |
+
+    | WINKEY+I | Open the Settings in Charms. |
+
+    | WINKEY+J | Switch between snapped apps. |
+
+    | WINKEY+K | Open Devices in Charms. |
+
+    | WINKEY+O | Lock the screen orientation. |
+
+    | WINKEY+X | Open the Power User Menu, which gives you access to many of the features
+    most power users would want to use such as Device Manager, Control Panel, Event
+    Viewer, command Prompt, and much more. |
+
+
+    ## WINDOWS 10
+
+
+    | WINKEY+ COMMA (,) | Peek at the Windows desktop. |
+
+    | --- | --- |
+
+    | WINKEY+A | Open the Windows 10 Action center. |
+
+    | WINKEY+G | Open the Game bar. Only works if a game is running. |
+
+    | WINKEY+I | Open the Windows 10 Settings window. |
+
+    | WINKEY+S | Open the Windows Search utility. |
+
+    | WINKEY+X | Open the Power User Menu, which gives you access to many of the features
+    most power users would want to use such as Device Manager, Control Panel, Event
+    Viewer, command Prompt, and much more. |
+
+
+    ## APPLE SHORTCUT KEYS
+
+
+    You may be able to use the "COMMAND" key in place of "OPEN APPLE" key in later
+    version of the macOS.
+
+
+    | APPLE SHORTCUT KEYS | FUNCTION |
+
+    | --- | --- |
+
+    | OPEN APPLE+DOWN | Opens the selected icon. |
+
+    | SHIFT+CLICK | Select the icon and add it to the set of those selected. |
+
+    | TAB | Highlight the next icon inside the folder, in alphabetical order. |
+
+    | SHIFT+TAB | Highlight the previous icon inside the folder, in alphabetical order.
+    |
+
+    | LEFT ARROW | Used when viewing by icon |
+
+
+    | Key | Function |
+
+    | --- | --- |
+
+    | RIGHT ARROW | Used when viewing by icon to select icon to the right of the one
+    highlighted. |
+
+    | UP ARROW | Used to select the icon above the one currently highlighted |
+
+    | DOWN ARROW | Used to select the icon below the one currently highlighted. |
+
+    | OPEN APPLE+? | Mac help. |
+
+    | OPEN APPLE+E | Eject |
+
+    | OPEN APPLE+SHIFT+UP ARROW | Used to direct the input focus to the desktop level.
+    |
+
+    | OPEN APPLE+M | Minimize window. |
+
+    | OPEN APPLE+N | New finder window. |
+
+    | OPEN APPLE+SHIFT+N | New folder. |
+
+    | OPEN APPLE+W | Close the current window. |
+
+    | OPEN APPLE+C | Copy the selected item to the clipboard. |
+
+    | OPEN APPLE+X | Cut the selected item. |
+
+    | OPEN APPLE+V | Paste item from the clipboard. |
+
+    | OPEN APPLE+L | Make alias. |
+
+    | OPEN APPLE+R | Show original item. |
+
+    | OPEN APPLE+T | Add to favorites. |
+
+    | OPEN APPLE+O | Open the selected icon. |
+
+    | OPEN APPLE+F | Display the find dialog box. |
+
+    | OPEN APPLE+G | Repeat the last find operation. |
+
+    | OPEN APPLE+SHIFT+G | Takes a snapshot of the screen and saves it to a PICT file.
+    |
+
+    | COMMAND+A | Select all text and objects. |
+
+    | COMMAND+B | Change selected text to boldface. |
+
+
+    | KEYBOARD SHORTCUT | ACTION |
+
+    | --- | --- |
+
+    | COMMAND+F | Open the Find window. |
+
+    | COMMAND+I | Italicize the selected text. |
+
+    | COMMAND+P | Open the Print dialog window. |
+
+    | COMMAND+U | Underline the selected text. |
+
+    | COMMAND+SHIFT+P | Open the Page Setup window, to change document parameters.
+    |
+
+    | COMMAND+SHIFT+CONTROL+3 | Capture screenshot of current screen and save to the
+    Clipboard. |
+
+
+    ## UNIX AND LINUX SHORTCUT KEYS
+
+
+    ### KEYBOARD SHORTCUT KEYS
+
+
+    Not all of the following shortcut keys are universally compatible with every variant
+    of Unix and Linux. Some of these shortcut keys are designed for use in a terminal
+    environment, while others are for use in a desktop environment.
+
+
+    | KEYBOARD SHORTCUT | ACTION |
+
+    | --- | --- |
+
+    | CTRL+A | Moves the cursor to the beginning of the line. |
+
+    | CTRL+B | Moves the cursor backward one character. |
+
+    | CTRL+C | Cancels the currently running command. |
+
+    | CTRL+D | Logs out of the current session. |
+
+    | CTRL+E | Moves the cursor to the end of the line. |
+
+    | CTRL+F | Moves the cursor forward one character. |
+
+    | CTRL+H | Erase one character. Similar to |
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+P | Paste previous line(s). |
+
+    | CTRL+R | Allows you to search for a previously used command or switch. |
+
+    | CTRL+S | Stops all output on-screen (XOFF). |
+
+    | CTRL+Q | Turns all output stopped on-screen back on (XON). Also, closes an application
+    window. |
+
+    | CTRL+U | Erases the complete line. |
+
+    | CTRL+W | Deletes the last word typed. For example, if you typed mv file1 file2,
+    this shortcut would delete file2. |
+
+    | CTRL+Z | Cancels the current operation, moves back a directory or takes the
+    current operation and moves it to the background. See bg command for additional
+    information about background. |
+
+    | CTRL+ALT+D | Minimizes all application windows and shows the desktop. |
+
+    | CTRL+ALT+L | Locks the screen. |
+
+    | CTRL+ALT+T | Opens a new terminal window. |
+
+    | CTRL+ALT+UP/DOWN ARROW | Switches between workspaces (if you are a power user
+    and use workspaces). |
+
+    | ALT+F2 | Open the console to run a command (must be a power user). |
+
+    | ARROW UP/DOWN | Scroll through previously used commands. |
+
+
+    ## COMMAND LINE SHORTCUTS
+
+
+    You may also try making use of the alias command to create your own shortcuts
+    for long or frequently used commands
+
+
+    | SHORTCUTS | ACTIONS |
+
+    | --- | --- |
+
+    | ~ | Moves to the user''s home directory. |
+
+    | !! | Repeats the line last entered at the shell. |
+
+    | !$ | !$ |
+
+    | reset | Resets the terminal if the terminal screen is not displaying correctly.
+    |
+
+    | shutdown -h now | Remotely or locally shuts the system down. |
+
+
+    ## MICROSOFT EXCEL SHORTCUT KEYS
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | TAB | Move to the next cell, to the right of the currently selected cell. |
+
+    | CTRL+A | Select all contents of a worksheet. |
+
+    | CTRL+B | Bold all cells in the highlighted section. |
+
+    | CTRL+C | Copy all cells in the highlighted section. |
+
+    | CTRL+D | Fill down. Fills the cell beneath with the contents of the selected
+    cell. To fill more than one cell, select the source cell and press CTRL+SHIFT+DOWN
+    to select multiple cells. Then press CTRL+D to fill them with the contents of
+    the original cell. |
+
+    | CTRL+F | Search current sheet |
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+G | Go to a certain area. |
+
+    | CTRL+H | Find and replace |
+
+    | CTRL+I | Puts italics on all cells in the highlighted section. |
+
+    | CTRL+K | Inserts a hyperlink. |
+
+    | CTRL+L | Opens the Create Table dialog box. |
+
+    | CTRL+N | Creates a new workbook. |
+
+    | CTRL+O | Opens a workbook. |
+
+    | CTRL+P | Print the current sheet. |
+
+    | CTRL+R | Fill right. Fills the cell to the right with the contents of the selected
+    cell. To fill more than one cell, select the source cell and press CTRL+SHIFT+RIGHT
+    to select multiple cells. Then press CTRL+R to fill them with the contents of
+    the original cell. |
+
+    | CTRL+S | Saves the open worksheet. |
+
+    | CTRL+T | Open the Create Table dialog box. |
+
+    | CTRL+U | Underlines all cells in the highlighted section. |
+
+    | CTRL+V | Pastes everything copied onto the clipboard. |
+
+    | CTRL+W | Closes the current workbook. |
+
+    | CTRL+X | Cuts all cells in the highlighted section. |
+
+    | CTRL+Y | Repeats the last entry (redo). |
+
+    | CTRL+Z | Undo the last action. |
+
+    | CTRL+1 | Changes the format of the selected cells. |
+
+    | CTRL+2 | Bolds all cells in the highlighted section. |
+
+    | CTRL+3 | Puts italics all cells in the highlighted section. |
+
+
+    | 快捷键 | 功能 |
+
+    | --- | --- |
+
+    | CTRL+4 | Underlines all cells in highlighted section. |
+
+    | CTRL+5 | Puts a strikethrough all cells in the highlighted section. |
+
+    | CTRL+6 | Shows or hides objects. |
+
+    | CTRL+7 | Shows or hides the toolbar. |
+
+    | CTRL+8 | Toggles the outline symbols. |
+
+    | CTRL+9 | Hides rows. |
+
+    | CTRL+0 | Hides columns. |
+
+    | CTRL+SHIFT+ COLON (:) | Enters the current time. |
+
+    | CTRL+ SEMI COLON (;) | Enters the current date. |
+
+    | CTRL+` | Changes between displaying cell values or formulas in the worksheet.
+    |
+
+    | CTRL+'' | Copies a formula from the cell above. |
+
+    | CTRL+SHIFT+" | Copies value from cell above. |
+
+    | CTRL+- | Deletes the selected column or row. |
+
+    | CTRL+SHIFT+= | Inserts a new column or row. |
+
+    | CTRL+SHIFT+~ | Switches between showing Excel formulas or their values in cells.
+    |
+
+    | CTRL+SHIFT+@ | Applies time formatting. |
+
+    | CTRL+SHIFT+! | Applies comma formatting. |
+
+    | CTRL+SHIFT+$ | Applies currency formatting. |
+
+    | CTRL+SHIFT+# | Applies date formatting. |
+
+    | CTRL+SHIFT+% | Applies percentage formatting. |
+
+    | CTRL+SHIFT+^ | Applies exponential formatting. |
+
+    | CTRL+SHIFT+* | Selects the current region around the active cell. |
+
+    | CTRL+SHIFT+& | Places border around selected cells. |
+
+    | CTRL+SHIFT+_ | Removes a border. |
+
+    | CTRL++ | Insert. |
+
+    | CTRL+- | Delete. |'
+  mdcn: "\n | WINKEY+ COMMA (,) | 快速查看 Windows 桌面。 |\n| --- | --- |\n| WINKEY+ FULL\
+    \ POINT (,) | 将 Windows 应用贴靠到屏幕两侧。多次按下会在屏幕左右两侧之间切换或取消贴靠。 |\n| WINKEY+ENTER | 打开\
+    \ Windows 讲述人。 |\n| WINKEY+C | 打开超级按钮。 |\n| WINKEY+G | 循环切换桌面小工具。 |\n| WINKEY+H\
+    \ | 在超级按钮中打开共享。 |\n| WINKEY+I | 在超级按钮中打开设置。 |\n| WINKEY+J | 在贴靠的应用之间切换。 |\n| WINKEY+K\
+    \ | 在超级按钮中打开设备。 |\n| WINKEY+O | 锁定屏幕方向。 |\n| WINKEY+X | 打开高级用户菜单，可以访问大多数高级用户希望使用的许多功能，例如设备管理器、控制面板、事件查看器、命令提示符等。\
+    \ |\n\n## WINDOWS 10\n\n| WINKEY+ COMMA (,) | 快速查看 Windows 桌面。 |\n| --- | ---\
+    \ |\n| WINKEY+A | 打开 Windows 10 操作中心。 |\n| WINKEY+G | 打开游戏栏。仅在运行游戏时有效。 |\n| WINKEY+I\
+    \ | 打开 Windows 10 设置窗口。 |\n| WINKEY+S | 打开 Windows 搜索工具。 |\n| WINKEY+X | 打开高级用户菜单，可以访问大多数高级用户希望使用的许多功能，例如设备管理器、控制面板、事件查看器、命令提示符等。\
+    \ |\n\n## APPLE 快捷键\n\n在较新版本的 macOS 中，您可能可以使用 \"COMMAND\" 键代替 \"OPEN APPLE\" 键。\n\
+    \n| APPLE 快捷键 | 功能 |\n| --- | --- |\n| OPEN APPLE+DOWN | 打开选中的图标。 |\n| SHIFT+CLICK\
+    \ | 选择图标并将其添加到已选集合中。 |\n| TAB | 按字母顺序高亮文件夹中的下一个图标。 |\n| SHIFT+TAB | 按字母顺序高亮文件夹中的上一个图标。\
+    \ |\n| LEFT ARROW | 按图标查看时使用 |\n\n| 按键 | 功能 |\n| --- | --- |\n| RIGHT ARROW |\
+    \ 按图标查看时选择高亮图标右侧的图标。 |\n| UP ARROW | 用于选择当前高亮图标上方的图标 |\n| DOWN ARROW | 用于选择当前高亮图标下方的图标。\
+    \ |\n| OPEN APPLE+? | Mac 帮助。 |\n| OPEN APPLE+E | 弹出 |\n| OPEN APPLE+SHIFT+UP\
+    \ ARROW | 用于将输入焦点定向到桌面级别。 |\n| OPEN APPLE+M | 最小化窗口。 |\n| OPEN APPLE+N | 新建 Finder\
+    \ 窗口。 |\n| OPEN APPLE+SHIFT+N | 新建文件夹。 |\n| OPEN APPLE+W | 关闭当前窗口。 |\n| OPEN APPLE+C\
+    \ | 将选中的项目复制到剪贴板。 |\n| OPEN APPLE+X | 剪切选中的项目。 |\n| OPEN APPLE+V | 从剪贴板粘贴项目。 |\n\
+    | OPEN APPLE+L | 创建别名。 |\n| OPEN APPLE+R | 显示原始项目。 |\n| OPEN APPLE+T | 添加到收藏夹。\
+    \ |\n| OPEN APPLE+O | 打开选中的图标。 |\n| OPEN APPLE+F | 显示查找对话框。 |\n| OPEN APPLE+G\
+    \ | 重复上一次查找操作。 |\n| OPEN APPLE+SHIFT+G | 截取屏幕快照并保存为 PICT 文件。 |\n| COMMAND+A |\
+    \ 选择所有文本和对象。 |\n| COMMAND+B | 将选中的文本改为**粗体**。 |\n\n| 键盘快捷键 | 操作 |\n| --- | ---\
+    \ |\n| COMMAND+F | 打开查找窗口。 |\n| COMMAND+I | 将选中的文字设为*斜体*。 |\n| COMMAND+P | 打开打印对话框窗口。\
+    \ |\n| COMMAND+U | 为选中的文字添加下划线。 |\n| COMMAND+SHIFT+P | 打开页面设置窗口，更改文档参数。 |\n| COMMAND+SHIFT+CONTROL+3\
+    \ | 截取当前屏幕的快照并保存到剪贴板。 |\n\n## UNIX 和 LINUX 快捷键\n\n### 键盘快捷键\n\n并非以下所有快捷键都适用于所有\
+    \ Unix 和 Linux 变体。其中一些快捷键设计用于终端环境，而另一些则用于桌面环境。\n\n| 键盘快捷键 | 操作 |\n| --- | ---\
+    \ |\n| CTRL+A | 将光标移动到行首。 |\n| CTRL+B | 将光标向后移动一个字符。 |\n| CTRL+C | 取消当前正在运行的命令。\
+    \ |\n| CTRL+D | 注销当前会话。 |\n| CTRL+E | 将光标移动到行尾。 |\n| CTRL+F | 将光标向前移动一个字符。 |\n\
+    | CTRL+H | 删除一个字符。类似于 |\n\n| 快捷键 | 说明 |\n|----------|-------------|\n| CTRL+P\
+    \ | 粘贴上一行。 |\n| CTRL+R | 允许您搜索以前使用过的命令或开关。 |\n| CTRL+S | 停止屏幕上的所有输出（XOFF）。 |\n\
+    | CTRL+Q | 重新开启屏幕上停止的所有输出（XON）。同时，关闭应用程序窗口。 |\n| CTRL+U | 擦除整行。 |\n| CTRL+W |\
+    \ 删除最后输入的单词。例如，如果您输入了 mv file1 file2，此快捷键将删除 file2。 |\n| CTRL+Z | 取消当前操作、返回上一级目录，或将当前操作移至后台。有关后台的更多信息，请参阅\
+    \ bg 命令。 |\n| CTRL+ALT+D | 最小化所有应用程序窗口并显示桌面。 |\n| CTRL+ALT+L | 锁定屏幕。 |\n| CTRL+ALT+T\
+    \ | 打开新的终端窗口。 |\n| CTRL+ALT+UP/DOWN ARROW | 在工作区之间切换（如果您是高级用户并使用工作区）。 |\n| ALT+F2\
+    \ | 打开控制台运行命令（必须是高级用户）。 |\n| ARROW UP/DOWN | 滚动浏览以前使用过的命令。 |\n\n## 命令行快捷方式\n\n\
+    您还可以尝试使用 alias 命令为长命令或常用命令创建自己的快捷方式\n\n| 快捷方式 | 操作 |\n| --- | --- |\n| ~ | 移动到用户的主目录。\
+    \ |\n| !! | 重复上次在 shell 中输入的行。 |\n| !$ | !$ |\n| reset | 如果终端屏幕显示不正确，则重置终端。 |\n\
+    | shutdown -h now | 远程或本地关闭系统。 |\n\n## MICROSOFT EXCEL 快捷键\n\n| 快捷键 | 操作 |\n|\
+    \ --- | --- |\n| TAB | 移动到下一个单元格，即当前选中单元格的右侧。 |\n| CTRL+A | 选择工作表的所有内容。 |\n| CTRL+B\
+    \ | 将高亮部分的所有单元格设为**粗体**。 |\n| CTRL+C | 复制高亮部分的所有单元格。 |\n| CTRL+D | 向下填充。用选中单元格的内容填充下方单元格。要填充多个单元格，选择源单元格并按\
+    \ CTRL+SHIFT+DOWN 选择多个单元格。然后按 CTRL+D 用原始单元格的内容填充它们。 |\n| CTRL+F | 搜索当前工作表 |\n\n\
+    | 快捷键 | 说明 |\n|----------|-------------|\n| CTRL+G | 转到某个区域。 |\n| CTRL+H | 查找和替换\
+    \ |\n| CTRL+I | 将高亮部分的所有单元格设为*斜体*。 |\n| CTRL+K | 插入超链接。 |\n| CTRL+L | 打开\"创建表格\"\
+    对话框。 |\n| CTRL+N | 创建新工作簿。 |\n| CTRL+O | 打开工作簿。 |\n| CTRL+P | 打印当前工作表。 |\n| CTRL+R\
+    \ | 向右填充。用选中单元格的内容填充右侧单元格。要填充多个单元格，选择源单元格并按 CTRL+SHIFT+RIGHT 选择多个单元格。然后按 CTRL+R\
+    \ 用原始单元格的内容填充它们。 |\n| CTRL+S | 保存打开的工作表。 |\n| CTRL+T | 打开\"创建表格\"对话框。 |\n| CTRL+U\
+    \ | 为 highlighted 部分的所有单元格添加下划线。 |\n| CTRL+V | 粘贴剪贴板上复制的所有内容。 |\n| CTRL+W | 关闭当前工作簿。\
+    \ |\n| CTRL+X | 剪切高亮部分的所有单元格。 |\n| CTRL+Y | 重复上一个条目（重做）。 |\n| CTRL+Z | 撤销上一个操作。\
+    \ |\n| CTRL+1 | 更改选中单元格的格式。 |\n| CTRL+2 | 将高亮部分的所有单元格设为**粗体**。 |\n| CTRL+3 | 将高亮部分的所有单元格设为*斜体*。\
+    \ |\n\n| 快捷键 | 功能 |\n| --- | --- |\n| CTRL+4 | 为 highlighted 部分的所有单元格添加下划线。 |\n\
+    | CTRL+5 | 为高亮部分的所有单元格添加删除线。 |\n| CTRL+6 | 显示或隐藏对象。 |\n| CTRL+7 | 显示或隐藏工具栏。 |\n\
+    | CTRL+8 | 切换大纲符号。 |\n| CTRL+9 | 隐藏行。 |\n| CTRL+0 | 隐藏列。 |\n| CTRL+SHIFT+ COLON\
+    \ (:) | 输入当前时间。 |\n| CTRL+ SEMI COLON (;) | 输入当前日期。 |\n| CTRL+` | 在工作表中切换显示单元格值或公式。\
+    \ |\n| CTRL+' | 从上方单元格复制公式。 |\n| CTRL+SHIFT+\" | 从上方单元格复制值。 |\n| CTRL+- | 删除选中的列或行。\
+    \ |\n| CTRL+SHIFT+= | 插入新列或行。 |\n| CTRL+SHIFT+~ | 在单元格中显示 Excel 公式或其值之间切换。 |\n\
+    | CTRL+SHIFT+@ | 应用时间格式。 |\n| CTRL+SHIFT+! | 应用逗号格式。 |\n| CTRL+SHIFT+$ | 应用货币格式。\
+    \ |\n| CTRL+SHIFT+# | 应用日期格式。 |\n| CTRL+SHIFT+% | 应用百分比格式。 |\n| CTRL+SHIFT+^ |\
+    \ 应用指数格式。 |\n| CTRL+SHIFT+* | 选择活动单元格周围的当前区域。 |\n| CTRL+SHIFT+& | 为选中的单元格添加边框。\
+    \ |\n| CTRL+SHIFT+_ | 移除边框。 |\n| CTRL++ | 插入。 |\n| CTRL+- | 删除。 |\n"
+  merge: 0
+  raw:
+  - '[PAGE 20]
+
+
+    | WINKEY+ COMMA (,) | Peek at the Windows desktop. |
+
+    | --- | --- |
+
+    | WINKEY+ FULL STOP (,) | Snap a Windows App to the sides of the screen. Pressing
+    it multiple times will switch between the right and left side of the screen or
+    unsnap the app. |
+
+    | WINKEY+ENTER | Open Windows Narrator. |
+
+    | WINKEY+C | Open the Charms. |
+
+    | WINKEY+G | Cycle through desktop gadgets. |
+
+    | WINKEY+H | Open Share in Charms. |
+
+    | WINKEY+I | Open the Settings in Charms. |
+
+    | WINKEY+J | Switch between snapped apps. |
+
+    | WINKEY+K | Open Devices in Charms. |
+
+    | WINKEY+O | Lock the screen orientation. |
+
+    | WINKEY+X | Open the Power User Menu, which gives you access to many of the features
+    most power users would want to use such as Device Manager, Control Panel, Event
+    Viewer, command Prompt, and much more. |
+
+
+    # WINDOWS 10
+
+
+    | WINKEY+ COMMA (,) | Peek at the Windows desktop. |
+
+    | --- | --- |
+
+    | WINKEY+A | Open the Windows 10 Action center. |
+
+    | WINKEY+G | Open the Game bar. Only works if a game is running. |
+
+    | WINKEY+I | Open the Windows 10 Settings window. |
+
+    | WINKEY+S | Open the Windows Search utility. |
+
+    | WINKEY+X | Open the Power User Menu, which gives you access to many of the features
+    most power users would want to use such as Device Manager, Control Panel, Event
+    |'
+  - '[PAGE 21]
+
+
+    Viewer, command Prompt, and much more.
+
+
+    # APPLE SHORTCUT KEYS
+
+
+    You may be able to use the "COMMAND" key in place of "OPEN APPLE" key in later
+    version of the macOS.
+
+
+    | APPLE SHORTCUT KEYS | FUNCTION |
+
+    | --- | --- |
+
+    | OPEN APPLE+DOWN | Opens the selected icon. |
+
+    | SHIFT+CLICK | Select the icon and add it to the set of those selected. |
+
+    | TAB | Highlight the next icon inside the folder, in alphabetical order. |
+
+    | SHIFT+TAB | Highlight the previous icon inside the folder, in alphabetical order.
+    |
+
+    | LEFT ARROW | Used when viewing by icon |'
+  - '[PAGE 22]
+
+
+    | Key | Function |
+
+    | --- | --- |
+
+    | RIGHT ARROW | Used when viewing by icon to select icon to the right of the one
+    highlighted. |
+
+    | UP ARROW | Used to select the icon above the one currently highlighted |
+
+    | DOWN ARROW | Used to select the icon below the one currently highlighted. |
+
+    | OPEN APPLE+? | Mac help. |
+
+    | OPEN APPLE+E | Eject |
+
+    | OPEN APPLE+SHIFT+UP ARROW | Used to direct the input focus to the desktop level.
+    |
+
+    | OPEN APPLE+M | Minimize window. |
+
+    | OPEN APPLE+N | New finder window. |
+
+    | OPEN APPLE+SHIFT+N | New folder. |
+
+    | OPEN APPLE+W | Close the current window. |
+
+    | OPEN APPLE+C | Copy the selected item to the clipboard. |
+
+    | OPEN APPLE+X | Cut the selected item. |
+
+    | OPEN APPLE+V | Paste item from the clipboard. |
+
+    | OPEN APPLE+L | Make alias. |
+
+    | OPEN APPLE+R | Show original item. |
+
+    | OPEN APPLE+T | Add to favorites. |
+
+    | OPEN APPLE+O | Open the selected icon. |
+
+    | OPEN APPLE+F | Display the find dialog box. |
+
+    | OPEN APPLE+G | Repeat the last find operation. |
+
+    | OPEN APPLE+SHIFT+G | Takes a snapshot of the screen and saves it to a PICT file.
+    |
+
+    | COMMAND+A | Select all text and objects. |
+
+    | COMMAND+B | Change selected text to boldface. |'
+  - '[PAGE 23]
+
+
+    | KEYBOARD SHORTCUT | ACTION |
+
+    | --- | --- |
+
+    | COMMAND+F | Open the Find window. |
+
+    | COMMAND+I | Italicize the selected text. |
+
+    | COMMAND+P | Open the Print dialog window. |
+
+    | COMMAND+U | Underline the selected text. |
+
+    | COMMAND+SHIFT+P | Open the Page Setup window, to change document parameters.
+    |
+
+    | COMMAND+SHIFT+CONTROL+3 | Capture screenshot of current screen and save to the
+    Clipboard. |
+
+
+    # # UNIX AND LINUX SHORTCUT KEYS
+
+
+    # ## KEYBOARD SHORTCUT KEYS
+
+
+    Not all of the following shortcut keys are universally compatible with every variant
+    of Unix and Linux. Some of these shortcut keys are designed for use in a terminal
+    environment, while others are for use in a desktop environment.
+
+
+    | KEYBOARD SHORTCUT | ACTION |
+
+    | --- | --- |
+
+    | CTRL+A | Moves the cursor to the beginning of the line. |
+
+    | CTRL+B | Moves the cursor backward one character. |
+
+    | CTRL+C | Cancels the currently running command. |
+
+    | CTRL+D | Logs out of the current session. |
+
+    | CTRL+E | Moves the cursor to the end of the line. |
+
+    | CTRL+F | Moves the cursor forward one character. |
+
+    | CTRL+H | Erase one character. Similar to |'
+  - '[PAGE 24]
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+P | Paste previous line(s). |
+
+    | CTRL+R | Allows you to search for a previously used command or switch. |
+
+    | CTRL+S | Stops all output on-screen (XOFF). |
+
+    | CTRL+Q | Turns all output stopped on-screen back on (XON). Also, closes an application
+    window. |
+
+    | CTRL+U | Erases the complete line. |
+
+    | CTRL+W | Deletes the last word typed. For example, if you typed mv file1 file2,
+    this shortcut would delete file2. |
+
+    | CTRL+Z | Cancels the current operation, moves back a directory or takes the
+    current operation and moves it to the background. See bg command for additional
+    information about background. |
+
+    | CTRL+ALT+D | Minimizes all application windows and shows the desktop. |
+
+    | CTRL+ALT+L | Locks the screen. |
+
+    | CTRL+ALT+T | Opens a new terminal window. |
+
+    | CTRL+ALT+UP/DOWN ARROW | Switches between workspaces (if you are a power user
+    and use workspaces). |
+
+    | ALT+F2 | Open the console to run a command (must be a power user). |
+
+    | ARROW UP/DOWN | Scroll through previously used commands. |
+
+
+    # COMMAND LINE SHORTCUTS'
+  - '[PAGE 25]
+
+
+    You may also try making use of the alias command to create your own shortcuts
+    for long or frequently used commands
+
+
+    | SHORTCUTS | ACTIONS |
+
+    | --- | --- |
+
+    | ~ | Moves to the user''s home directory. |
+
+    | !! | Repeats the line last entered at the shell. |
+
+    | !$ | !$ |
+
+    | reset | Resets the terminal if the terminal screen is not displaying correctly.
+    |
+
+    | shutdown -h now | Remotely or locally shuts the system down. |
+
+
+    # MICROSOFT EXCEL SHORTCUT KEYS
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | TAB | Move to the next cell, to the right of the currently selected cell. |
+
+    | CTRL+A | Select all contents of a worksheet. |
+
+    | CTRL+B | Bold all cells in the highlighted section. |
+
+    | CTRL+C | Copy all cells in the highlighted section. |
+
+    | CTRL+D | Fill down. Fills the cell beneath with the contents of the selected
+    cell. To fill more than one cell, select the source cell and press CTRL+SHIFT+DOWN
+    to select multiple cells. Then press CTRL+D to fill them with the contents of
+    the original cell. |
+
+    | CTRL+F | Search current sheet |'
+  - '[PAGE 26]
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+G | Go to a certain area. |
+
+    | CTRL+H | Find and replace |
+
+    | CTRL+I | Puts italics on all cells in the highlighted section. |
+
+    | CTRL+K | Inserts a hyperlink. |
+
+    | CTRL+L | Opens the Create Table dialog box. |
+
+    | CTRL+N | Creates a new workbook. |
+
+    | CTRL+O | Opens a workbook. |
+
+    | CTRL+P | Print the current sheet. |
+
+    | CTRL+R | Fill right. Fills the cell to the right with the contents of the selected
+    cell. To fill more than one cell, select the source cell and press CTRL+SHIFT+RIGHT
+    to select multiple cells. Then press CTRL+R to fill them with the contents of
+    the original cell. |
+
+    | CTRL+S | Saves the open worksheet. |
+
+    | CTRL+T | Open the Create Table dialog box. |
+
+    | CTRL+U | Underlines all cells in the highlighted section. |
+
+    | CTRL+V | Pastes everything copied onto the clipboard. |
+
+    | CTRL+W | Closes the current workbook. |
+
+    | CTRL+X | Cuts all cells in the highlighted section. |
+
+    | CTRL+Y | Repeats the last entry (redo). |
+
+    | CTRL+Z | Undo the last action. |
+
+    | CTRL+1 | Changes the format of the selected cells. |
+
+    | CTRL+2 | Bolds all cells in the highlighted section. |
+
+    | CTRL+3 | Puts italics all cells in the highlighted section. |'
+  - '[PAGE 27]
+
+
+    | 快捷键 | 功能 |
+
+    | --- | --- |
+
+    | CTRL+4 | Underlines all cells in highlighted section. |
+
+    | CTRL+5 | Puts a strikethrough all cells in the highlighted section. |
+
+    | CTRL+6 | Shows or hides objects. |
+
+    | CTRL+7 | Shows or hides the toolbar. |
+
+    | CTRL+8 | Toggles the outline symbols. |
+
+    | CTRL+9 | Hides rows. |
+
+    | CTRL+0 | Hides columns. |
+
+    | CTRL+SHIFT+ COLON (:) | Enters the current time. |
+
+    | CTRL+ SEMI COLON (;) | Enters the current date. |
+
+    | CTRL+` | Changes between displaying cell values or formulas in the worksheet.
+    |
+
+    | CTRL+'' | Copies a formula from the cell above. |
+
+    | CTRL+SHIFT+" | Copies value from cell above. |
+
+    | CTRL+- | Deletes the selected column or row. |
+
+    | CTRL+SHIFT+= | Inserts a new column or row. |
+
+    | CTRL+SHIFT+~ | Switches between showing Excel formulas or their values in cells.
+    |
+
+    | CTRL+SHIFT+@ | Applies time formatting. |
+
+    | CTRL+SHIFT+! | Applies comma formatting. |
+
+    | CTRL+SHIFT+$ | Applies currency formatting. |
+
+    | CTRL+SHIFT+# | Applies date formatting. |
+
+    | CTRL+SHIFT+% | Applies percentage formatting. |
+
+    | CTRL+SHIFT+^ | Applies exponential formatting. |
+
+    | CTRL+SHIFT+* | Selects the current region around the active cell. |
+
+    | CTRL+SHIFT+& | Places border around selected cells. |
+
+    | CTRL+SHIFT+_ | Removes a border. |
+
+    | CTRL++ | Insert. |
+
+    | CTRL+- | Delete. |'
+- md: ' | Shortcut | Description |
+
+    | --- | --- |
+
+    | CTRL+SHIFT+( | Unhide rows. |
+
+    | CTRL+SHIFT+) | Unhide columns. |
+
+    | CTRL+/ | Selects the array containing the active cell. |
+
+    | CTRL+\ | Selects the cells that have a static value or don''t match the formula
+    in the active cell. |
+
+    | CTRL+[ | Selects all cells referenced by formulas in the highlighted section.
+    |
+
+    | CTRL+] | Selects cells that contain formulas that reference the active cell.
+    |
+
+    | CTRL+SHIFT+{ | Selects all cells directly or indirectly referenced by formulas
+    in the highlighted section. |
+
+    | CTRL+SHIFT+} | Selects cells which contain formulas that directly or indirectly
+    reference the active cell. |
+
+    | CTRL+SHIFT+\| (PIPE) | Selects the cells within a column that don''t match the
+    formula or static value in the active cell. |
+
+    | CTRL+ENTER | Fills the selected cells with the current entry. |
+
+    | CTRL+SPACEBAR | Selects the entire column. |
+
+    | CTRL+SHIFT+SPACEBAR | Selects the entire worksheet. |
+
+    | CTRL+HOME | Move to cell A1. |
+
+    | CTRL+END | Move to last cell with text on the worksheet. |
+
+    | CTRL+TAB | Move between Two or more open Excel files. |
+
+    | CTRL+SHIFT+TAB | Activates the previous workbook. |
+
+    | CTRL+SHIFT+A | Inserts argument names into a formula. |
+
+    | CTRL+SHIFT+F | Opens the drop-down menu for fonts. |
+
+
+    | Shortcut | Description |
+
+    | --- | --- |
+
+    | CTRL+SHIFT+O | Selects all of the cells that contain comments. |
+
+    | CTRL+SHIFT+P | Opens the drop-down menu for point size. |
+
+    | SHIFT+INSERT | Pastes what is stored on the clipboard. |
+
+    | SHIFT+PAGE UP | In a single column, highlights all cells above that are selected.
+    |
+
+    | SHIFT+PAGE DOWN | In a single column, highlights all cells below that are selected.
+    |
+
+    | SHIFT+HOME | Highlights all text to the left of the cursor. |
+
+    | SHIFT+END | Highlights all text to the right of the cursor. |
+
+    | SHIFT+UP ARROW | Extends the highlighted area up one cell. |
+
+    | SHIFT+DOWN ARROW | Extends the highlighted area down one cell. |
+
+    | SHIFT+LEFT ARROW | Extends the highlighted area left one character. |
+
+    | SHIFT+RIGHT ARROW | Extends the highlighted area right one character. |
+
+    | ALT+TAB | Cycles through applications. |
+
+    | ALT+SPACEBAR | Opens the system menu. |
+
+    | ALT+BACKSPACE | Undo. |
+
+    | ALT+ENTER | While typing text in a cell, pressing ALT+ENTER moves to the next
+    line, allowing for multiple lines of text in one cell. |
+
+    | ALT+= | Creates a formula to sum all of the above cells. |
+
+    | ALT+'' | Allows formatting on a dialog box. |
+
+    | F1 | Opens the help menu. |
+
+    | F2 | Edits the selected cell. |
+
+
+    | Shortcut | Description |
+
+    | --- | --- |
+
+    | F3 | After a name is created, F3 will paste names. |
+
+    | F4 | Repeats last action. For example, if you changed the color of text in another
+    cell, pressing F4 changes the text in cell to the same color. |
+
+    | F5 | Goes to a specific cell. For example, C6. |
+
+    | F6 | Move to the next pane. |
+
+    | F7 | Spell check selected text or document. |
+
+    | F8 | Enters Extend Mode. |
+
+    | F9 | Recalculates every workbook. |
+
+    | F10 | Activates the menu bar. |
+
+    | F11 | Creates a chart from selected data. |
+
+    | F12 | Save As option. |
+
+    | SHIFT+F1 | Opens the "What''s This?" window. |
+
+    | SHIFT+F2 | Allows the user to edit a cell comment. |
+
+    | SHIFT+F3 | Opens the Excel formula window. |
+
+    | SHIFT+F5 | Brings up a search box. |
+
+    | SHIFT+F6 | Move to previous pane. |
+
+    | SHIFT+F8 | Add to selection. |
+
+    | SHIFT+F9 | Performs calculate function on active sheet. |
+
+    | CTRL+F3 | Open Excel Name Manager. |
+
+    | CTRL+F4 | Closes current window. |
+
+    | CTRL+F5 | Restores window size. |
+
+    | CTRL+F6 | Next workbook |
+
+    | CTRL+SHIFT+F6 | Previous workbook. |
+
+    | CTRL+F7 | Moves the window |
+
+    | CTRL+F8 | Resizes the window. |
+
+    | CTRL+F9 | Minimize current window. |
+
+    | CTRL+F10 | Maximize currently selected |
+
+
+    | Shortcut | Description |
+
+    | --- | --- |
+
+    | CTRL+F11 | Inserts a Macro sheet. |
+
+    | CTRL+F12 | Opens a file. |
+
+    | CTRL+SHIFT+F3 | Creates names by using those of either row or column labels.
+    |
+
+    | CTRL+SHIFT+F6 | Moves to the previous worksheet window. |
+
+    | CTRL+SHIFT+F12 | Prints the current worksheet. |
+
+    | ALT+F1 | Inserts a chart. |
+
+    | ALT+F2 | Save As option. |
+
+    | ALT+F4 | Exits Excel. |
+
+    | ALT+F8 | Opens the macro dialog box. |
+
+    | ALT+F11 | Opens the Visual Basic editor. |
+
+    | ALT+SHIFT+F1 | Creates a new worksheet. |
+
+    | ALT+SHIFT+F2 | Saves the current worksheet. |
+
+
+    ## MICROSOFT WORD SHORTCUT KEYS
+
+
+    If your device doesn''t have the F1-F12 keys on your keyboard, like the Chromebook,
+    some of these shortcuts might not be available to you.
+
+
+    | Shortcut | Description |
+
+    | --- | --- |
+
+    | CTRL+0 | Toggles 6pts of spacing above the paragraph. |
+
+    | CTRL+A | Select all contents of the page. |
+
+    | CTRL+B | Bold highlighted selection. |
+
+    | CTRL+C | Copy selected text. |
+
+    | CTRL+D | Open the font preferences window. |
+
+    | CTRL+E | Aligns the line or selected text to the center of the screen. |
+
+    | CTRL+F | Open find box. |
+
+    | CTRL+I | Italic highlighted selection. |
+
+    | CTRL+J | Aligns the selected text or line to justify the screen. |
+
+    | CTRL+K | Insert a hyperlink. |
+
+    | CTRL+L | Aligns the line or selected text to the left of the screen. |
+
+    | CTRL+M | Indent the paragraph. |
+
+    | CTRL+N | Opens new, blank document window. |
+
+    | CTRL+O | Opens the dialog box or page for selecting a file to open. |
+
+    | CTRL+P | Open the print window. |
+
+    | CTRL+R | Aligns the line or selected text to the right of the screen. |
+
+    | CTRL+S | Save the open document. Like Shift+F12. |
+
+    | ALT+F,A | Save the document under a different file name. |
+
+    | ALT+X | Show the Unicode code of a highlighted character. |
+
+    | CTRL+T | Create a hanging indent. |
+
+    | CTRL+U | Underline the selected text. |
+
+    | CTRL+V | Paste. |
+
+    | CTRL+W | Close the currently open document. |
+
+    | CTRL+X | Cut selected text. |
+
+    | CTRL+Y | Redo the last action performed. |
+
+    | CTRL+Z | Undo last action. |
+
+    | CTRL+SHIFT+L | Quickly create a bullet point. |
+
+    | CTRL+SHIFT+F | Change the font |
+
+    | CTRL+SHIFT+> | Increase selected font +1pts up to 12pt and then increase font
+    +2pts. |
+
+    | CTRL+] | Increase selected font +1pts. |
+
+    | CTRL+SHIFT+< | Decrease selected font -1pts if 12pt or lower; if above 12, |
+
+    | CTRL+[ | Decrease selected font -1pts. |
+
+    | CTRL+/+C | Insert a cent sign (¢). |
+
+    | CTRL+''+<CHAR> | Insert a character with an accent (acute) mark, where <char>
+    is the character you want. For example, if you wanted an accented é you would
+    use Ctrl+''+e as your shortcut key. To reverse the accent mark, use the opposite
+    accent mark, often found on the tilde key. |
+
+    | CTRL+SHIFT+* | View or hide non printing characters. |
+
+    | CTRL+<LEFT ARROW> | Moves one word to the left. |
+
+    | CTRL+<RIGHT ARROW> | Moves one word to the right. |
+
+    | CTRL+<UP ARROW> | Moves to the beginning of the line or paragraph. |
+
+    | CTRL+<DOWN ARROW> | Moves to the end of the paragraph. |
+
+    | CTRL+DEL | Deletes word to right of cursor. |
+
+    | CTRL+BACKSPACE | Deletes word to left of cursor. |
+
+    | CTRL+END | Moves the cursor to the end of the document. |
+
+    | CTRL+HOME | Moves the cursor to the beginning of the document. |
+
+    | CTRL+SPACEBAR | Reset highlighted text to the default font. |
+
+    | CTRL+1 | Single-space lines. |
+
+    | CTRL+2 | Double-space lines. |
+
+    | CTRL+5 | 1.5-line spacing. |
+
+    | CTRL+ALT+1 | Changes text to heading 1. |
+
+    | CTRL+ALT+2 | Changes text to heading 2 |
+
+    | CTRL+ALT+3 | Changes text to heading 3. |
+
+    | ALT+CTRL+F2 | Open new document. |
+
+    | CTRL+F1 | Open the Task Pane. |
+
+    | CTRL+F2 | Display the print preview. |
+
+    | CTRL+SHIFT+> | Increases the selected text size by one font size. |
+
+    | CTRL+SHIFT+< | Decreases the selected text size by one font size. |
+
+    | CTRL+SHIFT+F6 | Switches to another open Microsoft Word document. |
+
+    | CTRL+SHIFT+F12 | Prints the document. |
+
+    | F1 | Open help. |
+
+    | F4 | Repeat the last action performed (Word 2000+). |
+
+    | F5 | Open the Find, Replace, and Go To window in Microsoft Word. |
+
+    | F7 | Spellcheck and grammar check selected text or document. |
+
+    | F12 | Save As. |
+
+    | SHIFT+F3 | Change the text in Microsoft Word from uppercase to lowercase or
+    a capital letter at the beginning of every word. |
+
+    | SHIFT+F7 | Runs a Thesaurus check on the selected word. |
+
+    | SHIFT+F12 | Save the open document. Like CTRL+S. |
+
+    | SHIFT+ENTER | Create a soft break instead of a new paragraph. |
+
+    | SHIFT+INSERT | Paste. |
+
+    | SHIFT+ALT+D | Insert the current date. |
+
+    | SHIFT+ALT+T | Insert the current time. |'
+  mdcn: "\n | 快捷键 | 说明 |\n| --- | --- |\n| CTRL+SHIFT+( | 取消隐藏行。 |\n| CTRL+SHIFT+)\
+    \ | 取消隐藏列。 |\n| CTRL+/ | 选择包含活动单元格的数组。 |\n| CTRL+\\ | 选择具有静态值或不匹配活动单元格中公式的单元格。\
+    \ |\n| CTRL+[ | 选择高亮区域中公式引用的所有单元格。 |\n| CTRL+] | 选择包含引用活动单元格的公式的单元格。 |\n| CTRL+SHIFT+{\
+    \ | 选择高亮区域中公式直接或间接引用的所有单元格。 |\n| CTRL+SHIFT+} | 选择包含直接或间接引用活动单元格的公式的单元格。 |\n|\
+    \ CTRL+SHIFT+\\| (竖线) | 选择列中不匹配活动单元格公式或静态值的单元格。 |\n| CTRL+ENTER | 用当前输入填充所选单元格。\
+    \ |\n| CTRL+空格 | 选择整列。 |\n| CTRL+SHIFT+空格 | 选择整个工作表。 |\n| CTRL+HOME | 移动到单元格 A1。\
+    \ |\n| CTRL+END | 移动到工作表上有文本的最后一个单元格。 |\n| CTRL+TAB | 在两个或多个打开的 Excel 文件之间移动。\
+    \ |\n| CTRL+SHIFT+TAB | 激活上一个工作簿。 |\n| CTRL+SHIFT+A | 在公式中插入参数名称。 |\n| CTRL+SHIFT+F\
+    \ | 打开字体下拉菜单。 |\n\n| 快捷键 | 说明 |\n| --- | --- |\n| CTRL+SHIFT+O | 选择所有包含注释的单元格。\
+    \ |\n| CTRL+SHIFT+P | 打开字号下拉菜单。 |\n| SHIFT+INSERT | 粘贴剪贴板中的内容。 |\n| SHIFT+PAGE\
+    \ UP | 在单列中，高亮显示所选单元格上方的所有单元格。 |\n| SHIFT+PAGE DOWN | 在单列中，高亮显示所选单元格下方的所有单元格。\
+    \ |\n| SHIFT+HOME | 高亮显示光标左侧的所有文本。 |\n| SHIFT+END | 高亮显示光标右侧的所有文本。 |\n| SHIFT+上箭头\
+    \ | 将高亮区域向上扩展一个单元格。 |\n| SHIFT+下箭头 | 将高亮区域向下扩展一个单元格。 |\n| SHIFT+左箭头 | 将高亮区域向左扩展一个字符。\
+    \ |\n| SHIFT+右箭头 | 将高亮区域向右扩展一个字符。 |\n| ALT+TAB | 在应用程序之间切换。 |\n| ALT+空格 | 打开系统菜单。\
+    \ |\n| ALT+BACKSPACE | 撤销。 |\n| ALT+ENTER | 在单元格中输入文本时，按 ALT+ENTER 可以移动到下一行，从而在一个单元格中实现多行文本。\
+    \ |\n| ALT+= | 创建一个公式，用于求和上方所有单元格。 |\n| ALT+' | 允许在对话框中进行格式化。 |\n| F1 | 打开帮助菜单。\
+    \ |\n| F2 | 编辑所选单元格。 |\n\n| 快捷键 | 说明 |\n| --- | --- |\n| F3 | 创建名称后，F3 将粘贴名称。\
+    \ |\n| F4 | 重复上一次操作。例如，如果你更改了另一个单元格中的文本颜色，按 F4 会将所选单元格中的文本更改为相同的颜色。 |\n| F5 |\
+    \ 转到特定单元格。例如，C6。 |\n| F6 | 移动到下一个窗格。 |\n| F7 | 对所选文本或文档进行拼写检查。 |\n| F8 | 进入扩展模式。\
+    \ |\n| F9 | 重新计算所有工作簿。 |\n| F10 | 激活菜单栏。 |\n| F11 | 从所选数据创建图表。 |\n| F12 | 另存为选项。\
+    \ |\n| SHIFT+F1 | 打开\"这是什么？\"窗口。 |\n| SHIFT+F2 | 允许用户编辑单元格注释。 |\n| SHIFT+F3 |\
+    \ 打开 Excel 公式窗口。 |\n| SHIFT+F5 | 调出搜索框。 |\n| SHIFT+F6 | 移动到上一个窗格。 |\n| SHIFT+F8\
+    \ | 添加到选择。 |\n| SHIFT+F9 | 在活动工作表上执行计算功能。 |\n| CTRL+F3 | 打开 Excel 名称管理器。 |\n|\
+    \ CTRL+F4 | 关闭当前窗口。 |\n| CTRL+F5 | 恢复窗口大小。 |\n| CTRL+F6 | 下一个工作簿 |\n| CTRL+SHIFT+F6\
+    \ | 上一个工作簿。 |\n| CTRL+F7 | 移动窗口 |\n| CTRL+F8 | 调整窗口大小。 |\n| CTRL+F9 | 最小化当前窗口。\
+    \ |\n| CTRL+F10 | 最大化当前选中窗口 |\n\n| 快捷键 | 说明 |\n| --- | --- |\n| CTRL+F11 | 插入宏工作表。\
+    \ |\n| CTRL+F12 | 打开文件。 |\n| CTRL+SHIFT+F3 | 使用行或列标签的名称创建名称。 |\n| CTRL+SHIFT+F6\
+    \ | 移动到上一个工作表窗口。 |\n| CTRL+SHIFT+F12 | 打印当前工作表。 |\n| ALT+F1 | 插入图表。 |\n| ALT+F2\
+    \ | 另存为选项。 |\n| ALT+F4 | 退出 Excel。 |\n| ALT+F8 | 打开宏对话框。 |\n| ALT+F11 | 打开 Visual\
+    \ Basic 编辑器。 |\n| ALT+SHIFT+F1 | 创建新工作表。 |\n| ALT+SHIFT+F2 | 保存当前工作表。 |\n\n##\
+    \ 微软 Word 快捷键\n\n如果你的设备键盘上没有 F1-F12 键，如 Chromebook，则其中一些快捷键可能无法使用。\n\n| 快捷键 |\
+    \ 说明 |\n| --- | --- |\n| CTRL+0 | 切换段落上方 6 磅的间距。 |\n| CTRL+A | 全选页面内容。 |\n| CTRL+B\
+    \ | **加粗**高亮显示的选择。 |\n| CTRL+C | 复制所选文本。 |\n| CTRL+D | 打开字体首选项窗口。 |\n| CTRL+E\
+    \ | 将行或所选文本对齐到屏幕中央。 |\n| CTRL+F | 打开查找框。 |\n| CTRL+I | *斜体*高亮显示的选择。 |\n| CTRL+J\
+    \ | 将所选文本或行对齐到屏幕两端。 |\n| CTRL+K | 插入超链接。 |\n| CTRL+L | 将行或所选文本对齐到屏幕左侧。 |\n| CTRL+M\
+    \ | 缩进段落。 |\n| CTRL+N | 打开新的空白文档窗口。 |\n| CTRL+O | 打开对话框或页面以选择要打开的文件。 |\n| CTRL+P\
+    \ | 打开打印窗口。 |\n| CTRL+R | 将行或所选文本对齐到屏幕右侧。 |\n| CTRL+S | 保存打开的文档。与 Shift+F12 相同。\
+    \ |\n| ALT+F,A | 以不同的文件名称保存文档。 |\n| ALT+X | 显示高亮字符的 Unicode 代码。 |\n| CTRL+T |\
+    \ 创建悬挂缩进。 |\n| CTRL+U | <u>为所选文本添加下划线。</u> |\n| CTRL+V | 粘贴。 |\n| CTRL+W | 关闭当前打开的文档。\
+    \ |\n| CTRL+X | 剪切所选文本。 |\n| CTRL+Y | 重做上一次执行的操作。 |\n| CTRL+Z | 撤销上一次操作。 |\n|\
+    \ CTRL+SHIFT+L | 快速创建项目符号。 |\n| CTRL+SHIFT+F | 更改字体 |\n| CTRL+SHIFT+> | 将所选字体增加\
+    \ +1 磅，最高到 12 磅，然后每次增加 +2 磅。 |\n| CTRL+] | 将所选字体增加 +1 磅。 |\n| CTRL+SHIFT+< | 如果字体为\
+    \ 12 磅或更小，则减少 -1 磅；如果大于 12 磅， |\n| CTRL+[ | 将所选字体减少 -1 磅。 |\n| CTRL+/+C | 插入美分符号\
+    \ (¢)。 |\n| CTRL+'+<CHAR> | 插入带重音符号（锐音）的字符，其中 <char> 是你想要的字符。例如，如果你想要带重音的 é，你可以使用\
+    \ Ctrl+'+e 作为快捷键。要反转重音符号，请使用相反的重音符号，通常可在波浪号键上找到。 |\n| CTRL+SHIFT+* | 显示或隐藏非打印字符。\
+    \ |\n| CTRL+<左箭头> | 向左移动一个单词。 |\n| CTRL+<右箭头> | 向右移动一个单词。 |\n| CTRL+<上箭头> | 移动到行首或段落开头。\
+    \ |\n| CTRL+<下箭头> | 移动到段落末尾。 |\n| CTRL+DEL | 删除光标右侧的单词。 |\n| CTRL+BACKSPACE |\
+    \ 删除光标左侧的单词。 |\n| CTRL+END | 将光标移动到文档末尾。 |\n| CTRL+HOME | 将光标移动到文档开头。 |\n| CTRL+空格\
+    \ | 将高亮文本重置为默认字体。 |\n| CTRL+1 | 单倍行距。 |\n| CTRL+2 | 双倍行距。 |\n| CTRL+5 | 1.5 倍行距。\
+    \ |\n| CTRL+ALT+1 | 将文本更改为标题 1。 |\n| CTRL+ALT+2 | 将文本更改为标题 2 |\n| CTRL+ALT+3 |\
+    \ 将文本更改为标题 3。 |\n| ALT+CTRL+F2 | 打开新文档。 |\n| CTRL+F1 | 打开任务窗格。 |\n| CTRL+F2 |\
+    \ 显示打印预览。 |\n| CTRL+SHIFT+> | 将所选文本大小增加一个字号。 |\n| CTRL+SHIFT+< | 将所选文本大小减少一个字号。\
+    \ |\n| CTRL+SHIFT+F6 | 切换到另一个打开的 Microsoft Word 文档。 |\n| CTRL+SHIFT+F12 | 打印文档。\
+    \ |\n| F1 | 打开帮助。 |\n| F4 | 重复上一次执行的操作 (Word 2000+)。 |\n| F5 | 在 Microsoft Word\
+    \ 中打开查找、替换和跳转窗口。 |\n| F7 | 对所选文本或文档进行拼写检查和语法检查。 |\n| F12 | 另存为。 |\n| SHIFT+F3\
+    \ | 将 Microsoft Word 中的文本从大写更改为小写，或将每个单词的首字母改为大写。 |\n| SHIFT+F7 | 对所选单词运行同义词库检查。\
+    \ |\n| SHIFT+F12 | 保存打开的文档。与 CTRL+S 相同。 |\n| SHIFT+ENTER | 创建软换行而非新段落。 |\n| SHIFT+INSERT\
+    \ | 粘贴。 |\n| SHIFT+ALT+D | 插入当前日期。 |\n| SHIFT+ALT+T | 插入当前时间。 |\n"
+  merge: 0
+  raw:
+  - '[PAGE 28]
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+SHIFT+( | Unhide rows. |
+
+    | CTRL+SHIFT+) | Unhide columns. |
+
+    | CTRL+/ | Selects the array containing the active cell. |
+
+    | CTRL+\ | Selects the cells that have a static value or don''t match the formula
+    in the active cell. |
+
+    | CTRL+[ | Selects all cells referenced by formulas in the highlighted section.
+    |
+
+    | CTRL+] | Selects cells that contain formulas that reference the active cell.
+    |
+
+    | CTRL+SHIFT+{ | Selects all cells directly or indirectly referenced by formulas
+    in the highlighted section. |
+
+    | CTRL+SHIFT+} | Selects cells which contain formulas that directly or indirectly
+    reference the active cell. |
+
+    | CTRL+SHIFT+\| (PIPE) | Selects the cells within a column that don''t match the
+    formula or static value in the active cell. |
+
+    | CTRL+ENTER | Fills the selected cells with the current entry. |
+
+    | CTRL+SPACEBAR | Selects the entire column. |
+
+    | CTRL+SHIFT+SPACEBAR | Selects the entire worksheet. |
+
+    | CTRL+HOME | Move to cell A1. |
+
+    | CTRL+END | Move to last cell with text on the worksheet. |
+
+    | CTRL+TAB | Move between Two or more open Excel files. |
+
+    | CTRL+SHIFT+TAB | Activates the previous workbook. |
+
+    | CTRL+SHIFT+A | Inserts argument names into a formula. |
+
+    | CTRL+SHIFT+F | Opens the drop-down menu for fonts. |'
+  - '[PAGE 29]
+
+
+    | 快捷键 | 功能 |
+
+    | --- | --- |
+
+    | CTRL+SHIFT+O | Selects all of the cells that contain comments. |
+
+    | CTRL+SHIFT+P | Opens the drop-down menu for point size. |
+
+    | SHIFT+INSERT | Pastes what is stored on the clipboard. |
+
+    | SHIFT+PAGE UP | In a single column, highlights all cells above that are selected.
+    |
+
+    | SHIFT+PAGE DOWN | In a single column, highlights all cells below that are selected.
+    |
+
+    | SHIFT+HOME | Highlights all text to the left of the cursor. |
+
+    | SHIFT+END | Highlights all text to the right of the cursor. |
+
+    | SHIFT+UP ARROW | Extends the highlighted area up one cell. |
+
+    | SHIFT+DOWN ARROW | Extends the highlighted area down one cell. |
+
+    | SHIFT+LEFT ARROW | Extends the highlighted area left one character. |
+
+    | SHIFT +RIGHT ARROW | Extends the highlighted area right one character. |
+
+    | ALT+TAB | Cycles through applications. |
+
+    | ALT+SPACEBAR | Opens the system menu. |
+
+    | ALT+BACKSPACE | Undo. |
+
+    | ALT+ENTER | While typing text in a cell, pressing ALT+ENTER moves to the next
+    line, allowing for multiple lines of text in one cell. |
+
+    | ALT+= | Creates a formula to sum all of the above cells. |
+
+    | ALT+'' | Allows formatting on a dialog box. |
+
+    | F1 | Opens the help menu. |
+
+    | F2 | Edits the selected cell. |'
+  - '[PAGE 30]
+
+
+    | F3 | After a name is created, F3 will paste names. |
+
+    | F4 | Repeats last action. For example, if you changed the color of text in another
+    cell, pressing F4 changes the text in cell to the same color. |
+
+    | F5 | Goes to a specific cell. For example, C6. |
+
+    | F6 | Move to the next pane. |
+
+    | F7 | Spell check selected text or document. |
+
+    | F8 | Enters Extend Mode. |
+
+    | F9 | Recalculates every workbook. |
+
+    | F10 | Activates the menu bar. |
+
+    | F11 | Creates a chart from selected data. |
+
+    | F12 | Save As option. |
+
+    | SHIFT+F1 | Opens the "What''s This?" window. |
+
+    | SHIFT+F2 | Allows the user to edit a cell comment. |
+
+    | SHIFT+F3 | Opens the Excel formula window. |
+
+    | SHIFT+F5 | Brings up a search box. |
+
+    | SHIFT+F6 | Move to previous pane. |
+
+    | SHIFT+F8 | Add to selection. |
+
+    | SHIFT+F9 | Performs calculate function on active sheet. |
+
+    | CTRL+F3 | Open Excel Name Manager. |
+
+    | CTRL+F4 | Closes current window. |
+
+    | CTRL+F5 | Restores window size. |
+
+    | CTRL+F6 | Next workbook |
+
+    | CTRL+SHIFT+F6 | Previous workbook. |
+
+    | CTRL+F7 | Moves the window |
+
+    | CTRL+F8 | Resizes the window. |
+
+    | CTRL+F9 | Minimize current window. |
+
+    | CTRL+F10 | Maximize currently selected |'
+  - '[PAGE 31]
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | CTRL+F11 | Inserts a Macro sheet. |
+
+    | CTRL+F12 | Opens a file. |
+
+    | CTRL+SHIFT+F3 | Creates names by using those of either row or column labels.
+    |
+
+    | CTRL+SHIFT+F6 | Moves to the previous worksheet window. |
+
+    | CTRL+SHIFT+F12 | Prints the current worksheet. |
+
+    | ALT+F1 | Inserts a chart. |
+
+    | ALT+F2 | Save As option. |
+
+    | ALT+F4 | Exits Excel. |
+
+    | ALT+F8 | Opens the macro dialog box. |
+
+    | ALT+F11 | Opens the Visual Basic editor. |
+
+    | ALT+SHIFT+F1 | Creates a new worksheet. |
+
+    | ALT+SHIFT+F2 | Saves the current worksheet. |
+
+
+    # MICROSOFT WORD SHORTCUT KEYS
+
+
+    If your devices doesn''t have the F1-F12 keys on your keyboard, like the chrome
+    book, some of these shortcuts might not be available to you.
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | CTRL+0 | Toggles 6pts of spacing above the paragraph. |
+
+    | CTRL+A | Select all contents of the page. |
+
+    | CTRL+B | Bold highlighted selection. |
+
+    | CTRL+C | Copy selected text. |
+
+    | CTRL+D | Open the font preferences window. |
+
+    | CTRL+E | Aligns the line or selected text to the center of the screen. |
+
+    | CTRL+F | Open find box. |
+
+    | CTRL+I | Italic highlighted selection. |'
+  - '[PAGE 32]
+
+
+    | 快捷键 | 功能 |
+
+    | --- | --- |
+
+    | CTRL+J | Aligns the selected text or line to justify the screen. |
+
+    | CTRL+K | Insert a hyperlink. |
+
+    | CTRL+L | Aligns the line or selected text to the left of the screen. |
+
+    | CTRL+M | Indent the paragraph. |
+
+    | CTRL+N | Opens new, blank document window. |
+
+    | CTRL+O | Opens the dialog box or page for selecting a file to open. |
+
+    | CTRL+P | Open the print window. |
+
+    | CTRL+R | Aligns the line or selected text to the right of the screen. |
+
+    | CTRL+S | Save the open document. Like Shift+F12. |
+
+    | ALT+F,A | Save the document under a different file name. |
+
+    | ALT+X | Show the Unicode code of a highlighted character. |
+
+    | CTRL+T | Create a hanging indent. |
+
+    | CTRL+U | Underline the selected text. |
+
+    | CTRL+V | Paste. |
+
+    | CTRL+W | Close the currently open document. |
+
+    | CTRL+X | Cut selected text. |
+
+    | CTRL+Y | Redo the last action performed. |
+
+    | CTRL+Z | Undo last action. |
+
+    | CTRL+SHIFT+L | Quickly create a bullet point. |
+
+    | CTRL+SHIFT+F | Change the font |
+
+    | CTRL+SHIFT+> | Increase selected font +1pts up to 12pt and then increase font
+    +2pts. |
+
+    | CTRL+] | Increase selected font +1pts. |
+
+    | CTRL+SHIFT+< | Decrease selected font -1pts if 12pt or lower; if above 12, |'
+  - '[PAGE 33]
+
+
+    | 快捷键 | 功能 |
+
+    | --- | --- |
+
+    | CTRL+[ | Decrease selected font -1pts. |
+
+    | CTRL+/+C | Insert a cent sign (¢). |
+
+    | CTRL+''+<CHAR> | Insert a character with an accent (acute) mark, where <char>
+    is the character you want. For example, if you wanted an accented é you would
+    use Ctrl+''+e as your shortcut key. To reverse the accent mark, use the opposite
+    accent mark, often found on the tilde key. |
+
+    | CTRL+SHIFT+* | View or hide non printing characters. |
+
+    | CTRL+<LEFT ARROW> | Moves one word to the left. |
+
+    | CTRL+<RIGHT ARROW> | Moves one word to the right. |
+
+    | CTRL+<UP ARROW> | Moves to the beginning of the line or paragraph. |
+
+    | CTRL+<DOWN ARROW> | Moves to the end of the paragraph. |
+
+    | CTRL+DEL | Deletes word to right of cursor. |
+
+    | CTRL+BACKSPACE | Deletes word to left of cursor. |
+
+    | CTRL+END | Moves the cursor to the end of the document. |
+
+    | CTRL+HOME | Moves the cursor to the beginning of the document. |
+
+    | CTRL+SPACEBAR | Reset highlighted text to the default font. |
+
+    | CTRL+1 | Single-space lines. |
+
+    | CTRL+2 | Double-space lines. |
+
+    | CTRL+5 | 1.5-line spacing. |
+
+    | CTRL+ALT+1 | Changes text to heading 1. |
+
+    | CTRL+ALT+2 | Changes text to heading 2 |
+
+    | CTRL+ALT+3 | Changes text to heading 3. |
+
+    | ALT+CTRL+F2 | Open new document. |
+
+    | CTRL+F1 | Open the Task Pane. |'
+  - '[PAGE 34]
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+F2 | Display the print preview. |
+
+    | CTRL+SHIFT+> | Increases the selected text size by one font size. |
+
+    | CTRL+SHIFT+< | Decreases the selected text size by one font size. |
+
+    | CTRL+SHIFT+F6 | Switches to another open Microsoft Word document. |
+
+    | CTRL+SHIFT+F12 | Prints the document. |
+
+    | F1 | Open help. |
+
+    | F4 | Repeat the last action performed (Word 2000+). |
+
+    | F5 | Open the Find, Replace, and Go To window in Microsoft Word. |
+
+    | F7 | Spellcheck and grammar check selected text or document. |
+
+    | F12 | Save As. |
+
+    | SHIFT+F3 | Change the text in Microsoft Word from uppercase to lowercase or
+    a capital letter at the beginning of every word. |
+
+    | SHIFT+F7 | Runs a Thesaurus check on the selected word. |
+
+    | SHIFT+F12 | Save the open document. Like CTRL+S. |
+
+    | SHIFT+ENTER | Create a soft break instead of a new paragraph. |
+
+    | SHIFT+INSERT | Paste. |
+
+    | SHIFT+ALT+D | Insert the current date. |
+
+    | SHIFT+ALT+T | Insert the current time. |'
+- md: ' ## MICROSOFT WORD MOUSE SHORTCUTS
+
+
+    You can also make use of the mouse for some of these shortcuts below.
+
+
+    | SHORTCUTS | ACTION |
+
+    | --- | --- |
+
+    | CLICK, HOLD, AND DRAG | Selects text from where you click and hold to the point
+    you drag and let go. |
+
+    | DOUBLE-CLICK | If double-clicking a word, selects the complete word. |
+
+    | DOUBLE-CLICK | Double-clicking on the left, center, or right of a blank line
+    makes the alignment of the text left, center, or right aligned. |
+
+    | DOUBLE-CLICK | Double-clicking anywhere after text on a line sets a tab stop.
+    |
+
+    | TRIPLE-CLICK | Selects the line or paragraph of the text where the mouse is
+    triple-clicked. |
+
+    | CTRL+MOUSE WHEEL | Zooms in and out of document. |
+
+
+    ## GOOGLE CHROME KEYBOARD SHORTCUT KEYS
+
+
+    If you are using chrome on a MAC system, make use of the "COMMAND KEY" in place
+    "CTRL".
+
+
+    | SHORTCUT | ACTION |
+
+    | --- | --- |
+
+    | ALT+HOME | Open your homepage. |
+
+    | ALT+LEFT ARROW | Back a page. |
+
+    | ALT+RIGHT ARROW | Forward a page. |
+
+    | F11 | Display the current website in full-screen mode. Pressing F11 again will
+    exit this mode. |
+
+    | ESC | Stop loading the page or a download from loading. |
+
+    | CTRL+(- OR +) | Zoom in or out of a page, "-" will zoom out and "+" will zoom
+    in on the page. |
+
+    | CTRL+1-8 | Pressing Ctrl and any number 1 through 8 moves to the corresponding
+    tab in your tab bar. |
+
+    | CTRL+9 | Switch to last tab. |
+
+    | CTRL+0 | Reset browser zoom to default. |
+
+    | CTRL+ENTER | This combination is used to quickly complete an address. For example,
+    type "genesis" in the address bar and press CTRL+ENTER to get https://www.genesis.com.
+    |
+
+    | CTRL+SHIFT+DEL | Open the Clear browsing data window to quickly clear private
+    data. |
+
+    | CTRL+SHIFT+B | Toggle the bookmarks bar between hidden and shown. |
+
+    | CTRL+A | Select everything on a page. |
+
+    | CTRL+D | Add a bookmark for the page currently opened. |
+
+    | CTRL+F | Open the "find" bar to search text on the current page. |
+
+    | CTRL+O | Open a file in the browser. |
+
+    | CTRL+SHIFT+O | Open the Bookmark manager. |
+
+    | CTRL+H | Open browser history in a new tab. |
+
+    | CTRL+J | Display the downloads window. |
+
+    | CTRL+K OR CTRL+E | Moves your text cursor to the omnibox so that you can begin
+    typing your search query and perform a Google search. |
+
+    | CTRL+L, ALT+D | Move the cursor to the browser address bar and highlight everything
+    in it. |
+
+    | CTRL+N | Open New browser window. |
+
+    | CTRL+SHIFT+N | Open a new window in incognito (private) mode. |
+
+    | CTRL+P | Print current page or frame. |
+
+    | CTRL+R OR F5 | Refresh the current page or frame. |
+
+    | CTRL+S | Opens the Save As window to save the current page. |
+
+    | CTRL+T | Opens a new tab. |
+
+    | CTRL+U | View a web page''s source code. |
+
+    | CTRL+W | Closes the current tab. |
+
+    | CTRL+SHIFT+T | This combination reopens the last tab you''ve closed. If you''ve
+    closed multiple tabs, you can press this shortcut key multiple times to restore
+    each of the closed tabs. |
+
+    | CTRL+TAB | Moves through each of the open tabs going to the right. |
+
+    | CTRL+SHIFT+TAB | Moves through each of the open tabs going to the left. |
+
+    | CTRL+LEFT-CLICK | Open a link in a new tab in the background. |
+
+    | CTRL+SHIFT LEFT-CLICK | Open a link in a new tab and switch to the new tab.
+    |
+
+    | CTRL+PAGE DOWN | Open the browser tab to the right. |
+
+    | CTRL+PAGE UP | Open the browser tab to the left. |
+
+    | SPACEBAR | Moves down a page at a time. |
+
+    | SHIFT+SPACEBAR | Moves up a page at a time. |
+
+    | HOME | Go to top of page. |
+
+    | END | Go to bottom of page. |
+
+    | ALT+DOWN ARROW | Display all previous text entered in a text box and available
+    options on a drop-down menu. |
+
+
+    ## INTERNET EXPLORER KEYBOARD SHORTCUT
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | ALT | Displays the File/Edit/View menu bar at the top. |
+
+    | ALT+LEFT ARROW | Back a page. |
+
+    | BACKSPACE | Back a page. |
+
+    | ALT+RIGHT ARROW | Forward a page. |
+
+    | F5 | Refresh current page, frame, or tab. |
+
+    | F11 | Display the current website in fullscreen mode. Pressing F11 again will
+    exit this mode. |
+
+    | ESC | Stop page or download from loading. |
+
+    | CTRL+(- OR +) | Increase or decrease the font size. Pressing ''-'' decreases
+    and ''+'' increases. |
+
+    | CTRL+ENTER | Quickly complete an address. For example, type "genesis" in the
+    address bar and press CTRL+ENTER to get https://www.genesis.com. |
+
+    | CTRL+D | Add a favorite for the page currently opened. |
+
+    | CTRL+I | Display available bookmarks. |
+
+    | CTRL+N | Open New browser window. |
+
+    | CTRL+P | Print current page or frame. |
+
+    | CTRL+T | Opens a new tab. |
+
+    | CTRL+U | Open debugger to view a web page''s source code. |
+
+    | CTRL+F4 | Closes the currently selected tab. |
+
+    | CTRL+TAB | Moves through each of the open tabs. |
+
+    | SPACEBAR | Moves down a page at a time. |
+
+    | SHIFT+SPACEBAR | Moves up a page at a time. |
+
+    | ALT+DOWN ARROW | Display all previous text entered in a text box or available
+    options on drop-down menu. |
+
+    | ALT+D | Highlights the text in the address bar. |
+
+
+    ## MICROSOFT FRONTPAGE SHORTCUT KEYS
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | CTRL+C | Copy selected text. |
+
+    | CTRL+X | Cut selected text. |
+
+    | CTRL+V | Paste selected text. |
+
+    | CTRL+K | Create a hyperlink. |
+
+    | CTRL+B | Bold highlighted selection. |
+
+    | CTRL+I | Italic highlighted selection. |
+
+    | CTRL+U | Underline highlighted selection. |
+
+    | CTRL+L | Left align the text. |
+
+    | CTRL+R | Right align the text. |
+
+    | CTRL+E | Center the text. |
+
+    | CTRL+/ | Turn on or off the display of HTML tags. |
+
+    | CTRL+S | Save document. |
+
+    | CTRL+TAB | Switch between open web pages. |
+
+    | CTRL+INS | Enter Line break. |
+
+    | CTRL+ENTER | Move cursor above or below a table. |
+
+    | CTRL+SHIFT+B | Preview in web browser window. |
+
+    | CTRL+SHIFT+< | Decrease font size. |
+
+    | CTRL+SHIFT+> | Increase font size. |
+
+    | CTRL+DEL | Deletes word to right of cursor. |
+
+    | CTRL+BACKSPACE | Deletes word to left of cursor. |
+
+    | ALT+MOUSE DOUBLE-CLICK | View the properties of a selected item. For example,
+    doing this on a table cell would display the properties for that cell. |
+
+
+    ## MICROSOFT OUTLOOK KEYBOARD SHORTCUTS
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | ALT+S | Send the e-mail. |
+
+    | CTRL+ENTER | Send the e-mail you''re composing. |
+
+    | CTRL+C | Copy selected text. |
+
+    | CTRL+X | Cut selected text. |
+
+    | CTRL+V | Paste selected text. |
+
+    | CTRL+K | Complete the name or e-mail being typed in the e-mail field if found
+    in the address book. |
+
+    | CTRL+B | Bold highlighted selection. |
+
+    | CTRL+I | Italic highlighted selection. |
+
+    | CTRL+U | Underline highlighted text (within an e-mail message). |
+
+    | CTRL+M | Send and receive all e-mail. |
+
+    | CTRL+Q | Mark selected e-mail as read. |
+
+    | CTRL+R | Reply to an e-mail. |
+
+    | CTRL+F | Forward an e-mail. |
+
+    | CTRL+N | Create a new e-mail (when in the Mail section). Create a new appointment
+    in your calendar (when in the Calendar section). |
+
+    | CTRL+Y | Go to folder. |
+
+    | CTRL+SHIFT+A | Create a new appointment in your calendar (from any section of
+    Outlook). |
+
+    | CTRL+SHIFT+O | Open the Outbox. |
+
+    | CTRL+SHIFT+I | Open the Inbox. |
+
+    | CTRL+SHIFT+K | Add a new task. |
+
+    | CTRL+SHIFT+C | Create a new contact. |
+
+    | CTRL+SHIFT+J | Create a new journal entry. |
+
+    | CTRL+SHIFT+V | Move e-mail to folder. |
+
+
+    ## MOZILLA FIREFOX KEYBOARD SHORTCUT FOR WINDOWS
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | F5 | Refresh current page, frame, or tab. |
+
+    | F11 | Display the current website in fullscreen mode. Pressing F11 again will
+    exit this mode. |
+
+    | ESC | Stop page or download from loading. |
+
+    | SPACEBAR | Moves down a page at a time. |
+
+    | ALT+HOME | Open your homepage. |
+
+    | ALT+DOWN ARROW | Display all previous text entered in a text box and available
+    options on drop-down menu. |
+
+    | ALT+LEFT ARROW | Back a page. |
+
+    | ALT+RIGHT ARROW | Forward a page. |
+
+    | CTRL+(- OR +) | Increase or decrease the font size, pressing ''-'' decreases
+    and ''+'' increases. Ctrl+0 will reset back to default. |
+
+    | CTRL+A | Selects all text. |
+
+    | CTRL+B | Open the Bookmarks window, to view all bookmarks in Firefox. |
+
+    | CTRL+C | Copies selected text. |
+
+    | CTRL+D | Add a bookmark for the page currently opened. |
+
+    | CTRL+E | Move the cursor to the search box. |
+
+    | CTRL+F | Access the Find option, to search for any text on the currently open
+    web page. |
+
+    | CTRL+G | Advance to the next result of a search performed with CTRL+F. Press
+    CTRL+SHIFT+G to return to a previous search result. |
+
+    | CTRL+H | View browsing history. |'
+  mdcn: "\n ## 微软 Word 鼠标快捷键\n\n你也可以使用鼠标来实现以下部分快捷操作。\n\n| 快捷键 | 操作 |\n| --- | ---\
+    \ |\n| 单击、按住并拖动 | 从单击并按住的位置开始，到你拖动并松开的位置，选中文本。 |\n| 双击 | 如果在某个词上双击，则选中完整的词。 |\n\
+    | 双击 | 在空白行的左侧、中间或右侧双击，可使文本左对齐、居中或右对齐。 |\n| 双击 | 在文本末尾行任意位置双击，可设置制表位。 |\n| 三击\
+    \ | 选中鼠标三击处的行或段落。 |\n| CTRL+鼠标滚轮 | 放大或缩小文档。 |\n\n## 谷歌 Chrome 键盘快捷键\n\n如果你在 MAC\
+    \ 系统上使用 Chrome，请用\"**COMMAND 键**\"代替\"**CTRL**\"。\n\n| 快捷键 | 操作 |\n| --- | ---\
+    \ |\n| ALT+HOME | 打开主页。 |\n| ALT+左方向键 | 后退一页。 |\n| ALT+右方向键 | 前进一页。 |\n| F11 |\
+    \ 以全屏模式显示当前网站。再次按 F11 可退出此模式。 |\n| ESC | 停止加载页面或停止下载。 |\n| CTRL+(- 或 +) | 放大或缩小页面，\"\
+    -\"缩小页面，\"+\"放大页面。 |\n| CTRL+1-8 | 按下 Ctrl 和数字 1 到 8，可切换到标签栏中对应的标签页。 |\n| CTRL+9\
+    \ | 切换到最后一个标签页。 |\n| CTRL+0 | 将浏览器缩放重置为默认值。 |\n| CTRL+ENTER | 此组合键用于快速补全网址。例如，在地址栏输入\"\
+    genesis\"并按 CTRL+ENTER，即可打开 https://www.genesis.com。 |\n| CTRL+SHIFT+DEL | 打开\"\
+    清除浏览数据\"窗口，快速清除私人数据。 |\n| CTRL+SHIFT+B | 在显示和隐藏书签栏之间切换。 |\n| CTRL+A | 选中页面上的所有内容。\
+    \ |\n| CTRL+D | 为当前打开的页面添加书签。 |\n| CTRL+F | 打开\"查找\"栏，搜索当前页面上的文本。 |\n| CTRL+O\
+    \ | 在浏览器中打开文件。 |\n| CTRL+SHIFT+O | 打开书签管理器。 |\n| CTRL+H | 在新标签页中打开浏览器历史记录。 |\n\
+    | CTRL+J | 显示下载窗口。 |\n| CTRL+K 或 CTRL+E | 将光标移动到地址栏，以便开始输入搜索内容并进行谷歌搜索。 |\n| CTRL+L、ALT+D\
+    \ | 将光标移动到浏览器地址栏并高亮显示所有内容。 |\n| CTRL+N | 打开新的浏览器窗口。 |\n| CTRL+SHIFT+N | 在无痕（隐私）模式下打开新窗口。\
+    \ |\n| CTRL+P | 打印当前页面或框架。 |\n| CTRL+R或F5 | 刷新当前页面或框架。 |\n| CTRL+S | 打开\"另存为\"\
+    窗口，保存当前页面。 |\n| CTRL+T | 打开新标签页。 |\n| CTRL+U | 查看网页源代码。 |\n| CTRL+W | 关闭当前标签页。\
+    \ |\n| CTRL+SHIFT+T | 此组合键重新打开你最后关闭的标签页。如果你关闭了多个标签页，可以多次按此快捷键来恢复每个关闭的标签页。 |\n\
+    | CTRL+TAB | 向右切换每个打开的标签页。 |\n| CTRL+SHIFT+TAB | 向左切换每个打开的标签页。 |\n| CTRL+左键点击\
+    \ | 在后台的新标签页中打开链接。 |\n| CTRL+SHIFT+左键点击 | 在新标签页中打开链接并切换到新标签页。 |\n| CTRL+PAGE DOWN\
+    \ | 打开右侧的浏览器标签页。 |\n| CTRL+PAGE UP | 打开左侧的浏览器标签页。 |\n| 空格键 | 向下滚动一页。 |\n| SHIFT+空格键\
+    \ | 向上滚动一页。 |\n| HOME | 转到页面顶部。 |\n| END | 转到页面底部。 |\n| ALT+下方向键 | 在文本框中显示所有先前输入的文本，并在下拉菜单中显示可用选项。\
+    \ |\n\n## 互联网浏览器键盘快捷键\n\n| 快捷键 | 操作 |\n| --- | --- |\n| ALT | 在顶部显示文件/编辑/视图菜单栏。\
+    \ |\n| ALT+左方向键 | 后退一页。 |\n| BACKSPACE | 后退一页。 |\n| ALT+右方向键 | 前进一页。 |\n| F5 |\
+    \ 刷新当前页面、框架或标签页。 |\n| F11 | 以全屏模式显示当前网站。再次按 F11 可退出此模式。 |\n| ESC | 停止加载页面或下载。\
+    \ |\n| CTRL+(- 或 +) | 增大或减小字体大小。按 '-' 减小，按 '+' 增大。 |\n| CTRL+ENTER | 快速补全网址。例如，在地址栏输入\"\
+    genesis\"并按 CTRL+ENTER，即可打开 https://www.genesis.com。 |\n| CTRL+D | 为当前打开的页面添加收藏夹。\
+    \ |\n| CTRL+I | 显示可用的书签。 |\n| CTRL+N | 打开新的浏览器窗口。 |\n| CTRL+P | 打印当前页面或框架。 |\n\
+    | CTRL+T | 打开新标签页。 |\n| CTRL+U | 打开调试器以查看网页源代码。 |\n| CTRL+F4 | 关闭当前选中的标签页。 |\n\
+    | CTRL+TAB | 切换每个打开的标签页。 |\n| 空格键 | 向下滚动一页。 |\n| SHIFT+空格键 | 向上滚动一页。 |\n| ALT+下方向键\
+    \ | 在文本框中显示所有先前输入的文本或下拉菜单中的可用选项。 |\n| ALT+D | 高亮显示地址栏中的文本。 |\n\n## 微软 Frontpage\
+    \ 快捷键\n\n| 快捷键 | 操作 |\n| --- | --- |\n| CTRL+C | 复制选中的文本。 |\n| CTRL+X | 剪切选中的文本。\
+    \ |\n| CTRL+V | 粘贴选中的文本。 |\n| CTRL+K | 创建超链接。 |\n| CTRL+B | 将选中的内容加粗。 |\n| CTRL+I\
+    \ | 将选中的内容设为斜体。 |\n| CTRL+U | 为选中的内容添加下划线。 |\n| CTRL+L | 文本左对齐。 |\n| CTRL+R |\
+    \ 文本右对齐。 |\n| CTRL+E | 文本居中。 |\n| CTRL+/ | 打开或关闭 HTML 标签的显示。 |\n| CTRL+S | 保存文档。\
+    \ |\n| CTRL+TAB | 在打开的网页之间切换。 |\n| CTRL+INS | 输入换行符。 |\n| CTRL+ENTER | 将光标移到表格上方或下方。\
+    \ |\n| CTRL+SHIFT+B | 在网页浏览器窗口中预览。 |\n| CTRL+SHIFT+< | 减小字体大小。 |\n| CTRL+SHIFT+>\
+    \ | 增大字体大小。 |\n| CTRL+DEL | 删除光标右侧的词。 |\n| CTRL+BACKSPACE | 删除光标左侧的词。 |\n| ALT+鼠标双击\
+    \ | 查看所选项目的属性。例如，对表格单元格执行此操作，将显示该单元格的属性。 |\n\n## 微软 Outlook 键盘快捷键\n\n| 快捷键 | 操作\
+    \ |\n| --- | --- |\n| ALT+S | 发送电子邮件。 |\n| CTRL+ENTER | 发送你正在撰写的电子邮件。 |\n| CTRL+C\
+    \ | 复制选中的文本。 |\n| CTRL+X | 剪切选中的文本。 |\n| CTRL+V | 粘贴选中的文本。 |\n| CTRL+K | 如果在通讯录中能找到，则补全电子邮件字段中正在输入的姓名或电子邮件地址。\
+    \ |\n| CTRL+B | 将选中的内容加粗。 |\n| CTRL+I | 将选中的内容设为斜体。 |\n| CTRL+U | 为选中的文本添加下划线（在电子邮件消息内）。\
+    \ |\n| CTRL+M | 发送和接收所有电子邮件。 |\n| CTRL+Q | 将选中的电子邮件标记为已读。 |\n| CTRL+R | 回复电子邮件。\
+    \ |\n| CTRL+F | 转发电子邮件。 |\n| CTRL+N | 创建新电子邮件（在邮件部分时）。在日历部分时，创建新的日程安排。 |\n| CTRL+Y\
+    \ | 转到文件夹。 |\n| CTRL+SHIFT+A | 在 Outlook 的任何部分中创建新的日程安排。 |\n| CTRL+SHIFT+O | 打开发件箱。\
+    \ |\n| CTRL+SHIFT+I | 打开收件箱。 |\n| CTRL+SHIFT+K | 添加新任务。 |\n| CTRL+SHIFT+C | 创建新联系人。\
+    \ |\n| CTRL+SHIFT+J | 创建新日志条目。 |\n| CTRL+SHIFT+V | 将电子邮件移动到文件夹。 |\n\n## 火狐浏览器\
+    \ Windows 版键盘快捷键\n\n| 快捷键 | 操作 |\n| --- | --- |\n| F5 | 刷新当前页面、框架或标签页。 |\n| F11\
+    \ | 以全屏模式显示当前网站。再次按 F11 可退出此模式。 |\n| ESC | 停止加载页面或下载。 |\n| 空格键 | 向下滚动一页。 |\n|\
+    \ ALT+HOME | 打开主页。 |\n| ALT+下方向键 | 在文本框中显示所有先前输入的文本并在下拉菜单中显示可用选项。 |\n| ALT+左方向键\
+    \ | 后退一页。 |\n| ALT+右方向键 | 前进一页。 |\n| CTRL+(- 或 +) | 增大或减小字体大小，按 '-' 减小，按 '+' 增大。Ctrl+0\
+    \ 将重置为默认值。 |\n| CTRL+A | 选中所有文本。 |\n| CTRL+B | 打开书签窗口，查看火狐中的所有书签。 |\n| CTRL+C\
+    \ | 复制选中的文本。 |\n| CTRL+D | 为当前打开的页面添加书签。 |\n| CTRL+E | 将光标移动到搜索框。 |\n| CTRL+F\
+    \ | 打开查找功能，在当前打开的网页上搜索文本。 |\n| CTRL+G | 前进到 CTRL+F 搜索的下一个结果。按 CTRL+SHIFT+G 返回到上一个搜索结果。\
+    \ |\n| CTRL+H | 查看浏览历史。 |\n"
+  merge: 0
+  raw:
+  - '[PAGE 35]
+
+
+    # MICROSOFT WORD MOUSE SHORTCUTS
+
+
+    You can also make use of the mouse for some of these shortcuts below.
+
+
+    | SHORTCUTS | ACTION |
+
+    | --- | --- |
+
+    | CLICK, HOLD, AND DRAG | Selects text from where you click and hold to the point
+    you drag and let go. |
+
+    | DOUBLE-CLICK | If double-clicking a word, selects the complete word. |
+
+    | DOUBLE-CLICK | Double-clicking on the left, center, or right of a blank line
+    makes the alignment of the text left, center, or right aligned. |
+
+    | DOUBLE-CLICK | Double-clicking anywhere after text on a line sets a tab stop.
+    |
+
+    | TRIPLE-CLICK | Selects the line or paragraph of the text where the mouse is
+    triple-clicked. |
+
+    | CTRL+MOUSE WHEEL | Zooms in and out of document. |
+
+
+    # GOOGLE CHROME KEYBOARD SHORTCUT KEYS
+
+
+    If you are using chrome on a MAC system, make use of the'
+  - '[PAGE 36]
+
+
+    "COMMAND KEY" in place "CTRL".
+
+
+    | SHORTCUT | ACTION |
+
+    | --- | --- |
+
+    | ALT+HOME | Open your homepage. |
+
+    | ALT+LEFT ARROW | Back a page. |
+
+    | ALT+RIGHT ARROW | Forward a page. |
+
+    | F11 | Display the current website in full-screen mode. Pressing F11 again will
+    exit this mode |
+
+    | ESC | Stop loading the page or a download from loading. |
+
+    | CTRL+(- OR +) | Zoom in or out of a page, "-" will zoom out and "+" will zoom
+    in on the page. |
+
+    | CTRL+1-8 | Pressing Ctrl and any number 1 through 8 moves to the corresponding
+    tab in your tab bar. |
+
+    | CTRL+9 | Switch to last tab. |
+
+    | CTRL+0 | Reset browser zoom to default. |
+
+    | CTRL+ENTER | This combination is used to quickly complete an address. For example,
+    type "genesis" in the address bar and press CTRL+ENTER to get https://www.genesis.com.
+    |
+
+    | CTRL+SHIFT+DEL | Open the Clear browsing data window to quickly clear private
+    data. |
+
+    | CTRL+SHIFT+B | Toggle the bookmarks bar between hidden and shown. |
+
+    | CTRL+A | Select everything on a page. |
+
+    | CTRL+D | Add a bookmark for the page currently opened. |
+
+    | CTRL+F | Open the "find" bar to search text on the current page. |
+
+    | CTRL+O | Open a file in the browser. |
+
+    | CTRL+SHIFT+O | Open the Bookmark manager. |'
+  - '[PAGE 37]
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+H | Open browser history in a new tab. |
+
+    | CTRL+J | Display the downloads window. |
+
+    | CTRL+K OR CTRL+E | Moves your text cursor to the omnibox so that you can begin
+    typing your search query and perform a Google search. |
+
+    | CTRL+L, ALT+D | Move the cursor to the browser address bar and highlight everything
+    in it. |
+
+    | CTRL+N | Open New browser window. |
+
+    | CTRL+SHIFT+N | Open a new window in incognito (private) mode. |
+
+    | CTRL+P | Print current page or frame. |
+
+    | CTRL+R OR F5 | Refresh the current page or frame. |
+
+    | CTRL+S | Opens the Save As window to save the current page. |
+
+    | CTRL+T | Opens a new tab. |
+
+    | CTRL+U | View a web page''s source code. |
+
+    | CTRL+W | Closes the current tab. |
+
+    | CTRL+SHIFT+T | This combination reopens the last tab you''ve closed. If you''ve
+    closed multiple tabs, you can press this shortcut key multiple times to restore
+    each of the closed tabs. |
+
+    | CTRL+TAB | Moves through each of the open tabs going to the right. |
+
+    | CTRL+SHIFT+TAB | Moves through each of the open tabs going to the left. |
+
+    | CTRL+LEFT-CLICK | Open a link in a new tab in the background. |
+
+    | CTRL+SHIFT LEFT-CLICK | Open a link in a new tab and switch to the new tab.
+    |
+
+    | CTRL+PAGE DOWN | Open the browser tab to the right. |
+
+    | CTRL+PAGE UP | Open the browser tab to the left. |
+
+    | SPACEBAR | Moves down a page at a time. |'
+  - '[PAGE 38]
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | SHIFT+SPACEBAR | Moves up a page at a time. |
+
+    | HOME | Go to top of page. |
+
+    | END | Go to bottom of page. |
+
+    | ALT+DOWN ARROW | Display all previous text entered in a text box and available
+    options on a drop-down menu. |
+
+
+    # INTERNET EXPLORER KEYBOARD SHORTCUT
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | ALT | Displays the File/Edit/View menu bar at the top. |
+
+    | ALT+LEFT ARROW | Back a page |
+
+    | BACKSPACE | Back a page. |
+
+    | ALT+RIGHT ARROW | Forward a page. |
+
+    | F5 | Refresh current page, frame, or tab. |
+
+    | F11 | Display the current website in fullscreen mode. Pressing F11 again will
+    exit this mode. |
+
+    | ESC | Stop page or download from loading. |
+
+    | CTRL+(- OR +) | Increase or decrease the font size. Pressing ''-'' decreases
+    and ''+'' increases. |
+
+    | CTRL+ENTER | Quickly complete an address. For |'
+  - '[PAGE 39]
+
+
+    | 快捷键 | 功能描述 |
+
+    |--------|---------|
+
+    | CTRL+D | Add a favorite for the page currently opened. |
+
+    | CTRL+I | Display available bookmarks. |
+
+    | CTRL+N | Open New browser window. |
+
+    | CTRL+P | Print current page or frame. |
+
+    | CTRL+T | Opens a new tab. |
+
+    | CTRL+U | Open debugger to view a web page''s source code. |
+
+    | CTRL+F4 | Closes the currently selected tab. |
+
+    | CTRL+TAB | Moves through each of the open tabs. |
+
+    | SPACEBAR | Moves down a page at a time. |
+
+    | SHIFT+SPACEBAR | Moves up a page at a time. |
+
+    | ALT+DOWN ARROW | Display all previous text entered in a text box or available
+    options on drop-down menu. |
+
+    | ALT+D | Highlights the text in the address bar. |'
+  - '[PAGE 40]
+
+
+    # MICROSOFT FRONTPAGE SHORTCUT KEYS
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | CTRL+C | Copy selected text. |
+
+    | CTRL+X | Cut selected text. |
+
+    | CTRL+P | Paste selected text. |
+
+    | CTRL+K | Create a hyperlink. |
+
+    | CTRL+B | Bold highlighted selection. |
+
+    | CTRL+I | Italic highlighted selection. |
+
+    | CTRL+U | Underline highlighted selection. |
+
+    | CTRL+L | Left align the text. |
+
+    | CTRL+R | Right align the text. |
+
+    | CTRL+E | Center the text. |
+
+    | CTRL+/ | Turn on or off the display of HTML tags. |
+
+    | CTRL+S | Save document. |
+
+    | CTRL+TAB | Switch between open web pages. |
+
+    | CTRL+INS | Enter Line break. |
+
+    | CTRL+ENTER | Move cursor above or below a table. |
+
+    | CTRL+SHIFT+B | Preview in web browser window. |
+
+    | CTRL+SHIFT+< | Decrease font size. |
+
+    | CTRL+SHIFT+> | Increase font size. |
+
+    | CTRL+DEL | Deletes word to right of cursor. |
+
+    | CTRL+BACKSPACE | Deletes word to left of cursor. |
+
+    | ALT+MOUSE DOUBLE-CLICK | View the properties of a selected item. For example,
+    doing this on a table cell would display the properties for that cell. |
+
+
+    # MICROSOFT OUTLOOK KEYBORAD SHORTCUTS'
+  - '[PAGE 41]
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | ALT+S | Send the e-mail |
+
+    | CTRL+ENTER | Send the e-mail you''re composing. |
+
+    | CTRL+C | Copy selected text. |
+
+    | CTRL+X | Cut selected text. |
+
+    | CTRL+P | Open the Print window. |
+
+    | CTRL+K | Complete the name or e-mail being typed in the e-mail field if found
+    in the address book. |
+
+    | CTRL+B | Bold highlighted selection. |
+
+    | CTRL+I | Italic highlighted selection. |
+
+    | CTRL+M | Send and receive all e-mail. |
+
+    | CTRL+Q | Mark selected e-mail as read. |
+
+    | CTRL+U | Mark selected e-mail as unread. Underline highlighted text (within
+    an e-mail message). |
+
+    | CTRL+R | Reply to an e-mail. |
+
+    | CTRL+F | Forward an e-mail. |
+
+    | CTRL+N | Create a new e-mail (when in the Mail section). Create a new appointment
+    in your calendar (when in the Calendar section). |
+
+    | CTRL+Y | Go to folder. |
+
+    | CTRL+SHIFT+A | Create a new appointment in your calendar (from any section of
+    Outlook). |
+
+    | CTRL+SHIFT+O | Open the Outbox. |
+
+    | CTRL+SHIFT+I | Open the Inbox. |
+
+    | CTRL+SHIFT+K | Add a new task. |
+
+    | CTRL+SHIFT+C | Create a new contact. |
+
+    | CTRL+SHIFT+J | Create a new journal entry. |
+
+    | CTRL+SHIFT+V | Move e-mail to folder. |'
+  - '[PAGE 42]
+
+
+    # MOZILLA FIREFOX KEYBOARD SHORTCUT\nFOR WINDOWS
+
+
+    | SHORTCYT KEYS | ACTIONS |\n| --- | --- |\n| F5 | Refresh current page, frame,
+    or tab. |\n| F11 | Display the current website in fullscreen mode. Pressing F11
+    again will exit this mode. |\n| ESC | Stop page or download from loading. |\n|
+    SPACEBAR | Moves down a page at a time. |\n| ALT+HOME | Open your homepage. |\n|
+    ALT+DOWN ARROW | Display all previous text entered in a text box and available
+    options on drop-down menu. |\n| ALT+LEFT ARROW | Back a page. |\n| ALT+RIGHT ARROW
+    | Forward a page. |\n| CTRL+(- OR +) | Increase or decrease the font size, pressing
+    ''-'' decreases and ''+'' increases. Ctrl+0 will reset back to default. |\n| CTRL+A
+    | Selects all text. |\n| CTRL+B | Open the Bookmarks window, to view all bookmarks
+    in Firefox. |\n| CTRL+C | Copies selected text. |\n| CTRL+D | Add a bookmark for
+    the page currently opened. |\n| CTRL+E | Move the cursor to the search box. |\n|
+    CTRL+F | Access the Find option, to search for any text on the currently open
+    web page. |\n| CTRL+G | Advance to the next result of a search performed with
+    CTRL+F. Press CTRL+SHIFT+G to return to a previous search result. |\n| CTRL+H
+    | View browsing history. |'
+- md: ' | Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+I | Display available bookmarks. |
+
+    | CTRL+J | Display the download window. |
+
+    | CTRL+K | Move the cursor to the search box. |
+
+    | CTRL+L | Move cursor to address box. |
+
+    | CTRL+N | Open New browser window. |
+
+    | CTRL+O | Access the Open File window to open a file in Firefox. |
+
+    | CTRL+P | Print current page or frame. |
+
+    | CTRL+T | Opens a new tab. |
+
+    | CTRL+U | View a web page''s source code. |
+
+    | CTRL+F4 OR CTRL+W | Closes the currently selected tab. |
+
+    | CTRL+F5 | Refresh the page, ignoring the Internet cache (force full refresh).
+    |
+
+    | CTRL+ENTER | Quickly complete an address. For example, type genesis in the address
+    bar and press CTRL+ENTER to get https://www.genesis.com. |
+
+    | CTRL+TAB | Moves through each of the open tabs. |
+
+    | CTRL+SHIFT+DEL | Open the Clear Data window to quickly clear private data. |
+
+    | CTRL+SHIFT+J | Open the Browser Console to troubleshoot an unresponsive script
+    error. |
+
+    | CTRL+SHIFT+P | Open a new private browsing window. |
+
+    | CTRL+SHIFT+T | Undo the close of a window. |
+
+    | CTRL+SHIFT+W | Close the Firefox browser window. |
+
+    | SHIFT+SPACEBAR | Moves up a page at a time. |
+
+
+    ## YOUTUBE SHORTCUT KEYS
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | PLAY AND PAUSE A VIDEO | • Press the spacebar or the ''K'' key on your keyboard
+    to play and pause a video.<br>• Tip: Holding down either of these keys also plays
+    the video in slow motion. |
+
+    | JUMP TO START OF A VIDEO | • Pressing the ''0'' (zero) key on your keyboard
+    will jump to the beginning of a video. The Home key also works for jumping to
+    the start of a video. |
+
+    | JUMP TO THE END OF A VIDEO OR GO TO THE NEXT VIDEO | • Pressing the END key
+    on your keyboard will go to the end of the video. If you are watching a playlist,
+    it goes to the next video in the playlist. |
+
+    | SKIP OR JUMP IN THE VIDEO | • FAST FORWARD OR REWIND: If you want to fast forward
+    or rewind in increments of five seconds, press the left or right arrow keys. If
+    you need to jump more than five seconds, press the ''J'' key to rewind ten seconds
+    or press the ''L'' key to fast forward 10 seconds.<br>- SKIP TO VIDEO SECTION
+    节: Pressing the number keys from 1 to 9 seeks (jumps) to that percentage of the
+    video. In other words, 1 jumps to 10%, 2 jumps to 20%, 3 jumps to 30%, etc. |
+
+    | CHANGE VIDEO PLAYBACK SPEED | • To decrease the playback speed of a video, hold
+    down the Shift key and press the '','' (comma) key.<br>• To increase the playback
+    speed of a video, hold down the Shift key and press the ''.'' (period) key. |
+
+    | SWITCH THE VIDEO TO FULL-SCREEN OR THEATER MODE | • Pressing the ''F'' key switches
+    between full-screen and normal mode.<br>• Tip: Pressing ESC also exits full-screen
+    mode.<br>• Pressing the ''T'' key switches between theater mode and normal mode.
+    |
+
+    | TURN ON OR OFF CLOSED CAPTIONS AND SUBTITLES | • If a video has closed captions
+    or subtitles, you can turn them on by pressing the ''C'' key. Pressing ''C'' a
+    second... |
+
+    | TURN UP AND DOWN THEOLUME | • When in full-screen mode, pressing the up or down
+    arrow keys turns up and down the volume of the video. If you are turning down
+    the volume and continue to hold the down arrow key, it will eventually mute the
+    volume.<br>• Tip: Pressing ''M'' on the keyboard also mutes and unmutes the volume.
+    |'
+  mdcn: '
+
+    | 快捷键 | 说明 |
+
+    |----------|-------------|
+
+    | CTRL+I | 显示可用的书签。 |
+
+    | CTRL+J | 显示下载窗口。 |
+
+    | CTRL+K | 将光标移至搜索框。 |
+
+    | CTRL+L | 将光标移至地址栏。 |
+
+    | CTRL+N | 打开新的浏览器窗口。 |
+
+    | CTRL+O | 打开"打开文件"窗口，以便在 Firefox 中打开文件。 |
+
+    | CTRL+P | 打印当前页面或框架。 |
+
+    | CTRL+T | 打开新标签页。 |
+
+    | CTRL+U | 查看网页源代码。 |
+
+    | CTRL+F4 或 CTRL+W | 关闭当前选中的标签页。 |
+
+    | CTRL+F5 | 刷新页面，忽略 Internet 缓存（强制完全刷新）。 |
+
+    | CTRL+ENTER | 快速补全地址。例如，在地址栏中输入 genesis，然后按 CTRL+ENTER 即可得到 https://www.genesis.com。
+    |
+
+    | CTRL+TAB | 在打开的标签页之间切换。 |
+
+    | CTRL+SHIFT+DEL | 打开"清除数据"窗口，快速清除隐私数据。 |
+
+    | CTRL+SHIFT+J | 打开浏览器控制台，以排查无响应脚本错误。 |
+
+    | CTRL+SHIFT+P | 打开新的隐私浏览窗口。 |
+
+    | CTRL+SHIFT+T | 撤销关闭窗口操作。 |
+
+    | CTRL+SHIFT+W | 关闭 Firefox 浏览器窗口。 |
+
+    | SHIFT+SPACEBAR | 每次向上移动一页。 |
+
+
+    ## YOUTUBE 快捷键
+
+
+    | 快捷键 | 操作 |
+
+    | --- | --- |
+
+    | 播放和暂停视频 | • 按键盘上的空格键或 **''K''** 键可播放和暂停视频。<br>• 提示：按住任一按键还可慢速播放视频。 |
+
+    | 跳转到视频开头 | • 按键盘上的 **''0''**（零）键可跳转到视频开头。Home 键也可用于跳转到视频开头。 |
+
+    | 跳转到视频结尾或切换到下一个视频 | • 按键盘上的 **END** 键可跳转到视频结尾。如果您正在观看播放列表，则会切换到播放列表中的下一个视频。 |
+
+    | 在视频中跳过或跳转 | • 快进或快退：如果您想以 5 秒为增量快进或快退，请按左箭头键或右箭头键。如果需要跳过超过 5 秒，请按 **''J''**
+    键快退 10 秒，或按 **''L''** 键快进 10 秒。<br>- 跳转到视频章节：按数字键 **1** 到 **9** 可定位（跳转）到视频的相应百分比位置。换句话说，1
+    跳转到 10%，2 跳转到 20%，3 跳转到 30%，以此类推。 |
+
+    | 调整视频播放速度 | • 要降低视频播放速度，请按住 Shift 键并按 **'',''**（逗号）键。<br>• 要提高视频播放速度，请按住 Shift
+    键并按 **''.''**（句点）键。 |
+
+    | 切换视频至全屏或影院模式 | • 按 **''F''** 键可在全屏模式和普通模式之间切换。<br>• 提示：按 **ESC** 也可退出全屏模式。<br>•
+    按 **''T''** 键可在影院模式和普通模式之间切换。 |
+
+    | 打开或关闭隐藏式字幕和字幕 | • 如果视频有隐藏式字幕或字幕，您可以按 **''C''** 键将其打开。再按一次 **''C''**... |
+
+    | 调高和调低音量 | • 在全屏模式下，按上箭头键或下箭头键可调高或调低视频音量。如果您正在调低音量并持续按住下箭头键，最终会将音量静音。<br>• 提示：按键盘上的
+    **''M''** 键也可静音和取消静音。 |
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 43]
+
+
+    | Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+I | Display available bookmarks. |
+
+    | CTRL+J | Display the download window. |
+
+    | CTRL+K | Move the cursor to the search box. |
+
+    | CTRL+L | Move cursor to address box. |
+
+    | CTRL+N | Open New browser window. |
+
+    | CTRL+O | Access the Open File window to open a file in Firefox. |
+
+    | CTRL+P | Print current page or frame. |
+
+    | CTRL+T | Opens a new tab. |
+
+    | CTRL+U | View a web page''s source code. |
+
+    | CTRL+F4 OR CTRL+W | Closes the currently selected tab. |
+
+    | CTRL+F5 | Refresh the page, ignoring the Internet cache (force full refresh).
+    |
+
+    | CTRL+ENTER | Quickly complete an address. For example, type genesis in the address
+    bar and press CTRL+ENTER to get https://www.genesis.com. |
+
+    | CTRL+TAB | Moves through each of the open tabs. |
+
+    | CTRL+SHIFT+DEL | Open the Clear Data window to quickly clear private data. |
+
+    | CTRL+SHIFT+J | Open the Browser Console to troubleshoot an unresponsive script
+    error. |
+
+    | CTRL+SHIFT+P | Open a new private browsing window. |
+
+    | CTRL+SHIFT+T | Undo the close of a window. |
+
+    | CTRL+SHIFT+W | Close the Firefox browser window. |
+
+    | SHIFT+SPACEBAR | Moves up a page at a time. |'
+  - '[PAGE 44]
+
+
+    # YOUTUBE SHORTCUT KEYS
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | PLAY AND PAUSE A VIDEO | • Press the spacebar or the ''K'' key on your keyboard
+    to play and pause a video.<br>• Tip: Holding down either of these keys also plays
+    the video in slow motion. |
+
+    | JUMP TO START OF A VIDEO | • Pressing the ''0'' (zero) key on your keyboard
+    will jump to the beginning of a video. The Home key also works for jumping to
+    the start of a video. |
+
+    | JUMP TO THE END OF A VIDEO OR GO TO THE NEXT VIDEO | • Pressing the END key
+    on your keyboard will go to the end of the video. If you are watching a playlist,
+    it goes to the next video in the playlist. |
+
+    | SKIP OR JUMP IN THE VIDEO | • FAST FORWARD OR REWIND: If you want to fast forward
+    or rewind in increments of five seconds, press the left or right arrow keys. If
+    you need to jump more than five seconds, press the ''J'' key to rewind ten seconds
+    or press the ''L'' |'
+  - '[PAGE 45]
+
+
+    +   key to fast forward 10 seconds.
+
+    - SKIP TO VIDEO SECTIONS: Pressing the number keys from 1 to 9 seeks (jumps) to
+    that percentage of the video. In other words, 1 jumps to 10%, 2 jumps to 20%,
+    3 jumps to 30%, etc.
+
+
+    | CHANGE VIDEO PLAYBACK SPEED | • To decrease the playback speed of a video, hold
+    down the Shift key and press the '','' (comma) key. |
+
+    | | • To increase the playback speed of a video, hold down the Shift key and press
+    the ''.'' (period) key. |
+
+
+    | SWITCH THE VIDEO TO FULL-SCREEN OR THEATER MODE | • Pressing the ''F'' key switches
+    between full-screen and normal mode. |
+
+    | | • Tip: Pressing ESC also exits full-screen mode. |
+
+    | | • Pressing the ''T'' key switches between theater mode and normal mode. |
+
+
+    | TURN ON OR OFF CLOSED CAPTIONS AND SUBTITLES | • If a video has closed captions
+    or subtitles, you can turn them on by pressing the ''C'' key. Pressing ''C'' a
+    second... |'
+  - '[PAGE 46]
+
+
+    | TURN UP AND DOWN THE VOLUME |  · When in full-screen mode, pressing the up or
+    down arrow keys turns up and down the volume of the video. If you are turning
+    down the volume and continue to hold the down arrow key, it will eventually mute
+    the volume.\n· Tip: Pressing ''M'' on the keyboard also mutes and unmutes the
+    volume. |
+
+
+    # TURN UP AND DOWN THE VOLUME
+
+
+    +   · When in full-screen mode, pressing the up or down arrow keys turns up and
+    down the volume of the video. If you are turning down the volume and continue
+    to hold the down arrow key, it will eventually mute the volume.
+
+    · Tip: Pressing ''M'' on the keyboard also mutes and unmutes the volume.'
+pages:
+- img_proc: true
+  md: '# 500+ COMPUTER SHORTCUTS
+
+
+    A well compiled and tested shortcut keys combination for PC (Windows, Linux, Unix
+    and Apple Macintosh) for your use.
+
+
+    JADEN STEPHEN'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: "# COPYRIGHT © 2020 JADEN STEPHEN\n\nAll rights reserved. No part of this book\
+    \ may be reproduced, transmitted in any form or by any means-electronic, mechanical,\
+    \ photocopy, recording, or any other except for brief quotations in printed reviews,\
+    \ without prior permission of the publisher.\n\n# Table of Contents\n\n+   - [COMPUTER\
+    \ KEYBOARD SHORTCUT KEYS](about:blank)\n  - [SHORTCUT KEYS ABCs](about:blank)\n\
+    \  - [TOP 10 KEYBOARD SHORTCUTS EVERYONE SHOULD KNOW](about:blank)\n  - [PC SHORTCUT\
+    \ KEYS FOR SPECIAL CHARACTERS](about:blank)\n- [MICROSOFT WINDOWS SHORTCUT KEYS](about:blank)\n\
+    \  - [GENERAL WINDOWS SHORTCUT](about:blank)\n  - [FUNCTION KEYS](about:blank)\n\
+    \  - [WINDOWS KEY SHORTCUT](about:blank)"
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "+   - [APPLE SHORTCUT KEYS](#)\n- [UNIX AND LINUX SHORTCUT KEYS](#)\n  - [KEYBOARD\
+    \ SHORTCUT KEYS](#)\n  - [COMMAND LINE SHORTCUTS](#)\n- [MICROSOFT EXCEL SHORTCUT\
+    \ KEYS](#)\n- [MICROSOFT WORD SHORTCUT KEYS](#)\n- [MICROSOFT WORD MOUSE SHORTCUTS](#)\n\
+    - [GOOGLE CHROME KEYBOARD SHORTCUT KEYS](#)\n- [INTERNET EXPLORER KEYBOARD SHORTCUT](#)\n\
+    - [MICROSOFT FRONTPAGE SHORTCUT KEYS](#)\n- [MICROSOFT OUTLOOK KEYBORAD SHORTCUTS](#)\n\
+    - [MOZILLA FIREFOX KEYBOARD SHORT CUT FOR WINDOWS](#)\n- [YOUTUBE SHORTCUT KEYS](#)"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# COMPUTER KEYBOARD SHORTCUT KEYS
+
+
+    # SHORTCUT KEYS ABCs
+
+
+    Helps give a simpler and snappier technique for exploring and executing orders
+    in the PC programming. Shortcut keys are usually gotten to by utilizing the Alt
+    key (on IBM perfect PCs), Command key (on Apple PCs), CTRL key, or SHIFT key related
+    to another key. The true standard for posting a shortcut is posting the modifier
+    key, and or more image, and another key. At the end of the day, "CTRL+S" is instructing
+    you to press and hold the CTRL key, and afterward, press the S key as well.
+
+
+    You can likewise discover the easy shortcuts in well-known projects by searching
+    for underlined letters in their menus. For instance, the document menu picture
+    has an underline on the "F" in File, which implies you can press'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'the Alt key and "F" key to get to the record menu.
+
+
+    A few programs require the user to press and hold Alt to see the underlined characters.
+    In the picture above, you can see that a portion of the basic highlights, for
+    example, Open (CTRL+O) and Save (CTRL+S), have alternate route keys relegated
+    to them. As you remember easy shortcut keys, you''ll notice that numerous applications
+    share them. We have a rundown of the most normally shared ones in the essential
+    PC easy shortcut keys segment.
+
+
+    Below is a list of the commonly used shortcut keys that works with IBM compatible
+    computers. And it would be of great help to you if you could try to memorize as
+    much as you could.
+
+
+    # TOP 10 KEYBOARD SHORTCUTS EVERYONE SHOULD KNOW
+
+
+    Below are 10 keyboard short cuts that I recommend everyone to memorize and use.
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | CTRL+C OR CTRL+INSERT AND CTRL+X | Both CTRL+C and CTRL+INSERT will copy highlighted
+    text or a selected item. If you want to cut an item instead of copying it, press
+    CTRL+X. This action removes the text or item and stores it in the clipboard for
+    you, rather than copying it to the clipboard while leaving the original behind.<br><br>Apple
+    computer users can substitute the CTRL key for the command (CMD) key on their
+    computers. For example, pressing CMD+C copies highlighted text. |
+
+    | CTRL+V OR SHIFT+INSERT | Both the CTRL+V and SHIFT+INSERT will paste the text'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '| Ctrl+V | Paste selected text. A user can also copy something to the clipboard
+    and paste it in another location by using this shortcut. |
+
+    | --- | --- |
+
+    | **CTRL+Z AND CTRL+Y** | Pressing CTRL+Z will undo any change. For example, if
+    you cut text, pressing this key combination will undo the cut. These shortcuts
+    can also be pressed multiple times to undo or redo multiple changes. Pressing
+    CTRL+Y would redo the undo. |
+
+    | **CTRL+F AND CTRL+G** | Pressing CTRL+F opens the Find field, which allows you
+    to search the text currently displayed in any program that supports it. For example,
+    CTRL+F can be used in your Internet browser to find text on the current page.
+    Press CTRL+F now to open the Find in your browser and search for "shortcut" to
+    display each time shortcut is mentioned on this page. CTRL+G may be used to repeat
+    a search (from using CTRL+F) in a document or on a web page. |
+
+    | **ALT+TAB OR CTRL+TAB** | Pressing ALT+TAB switches between open programs moving
+    forward. For example, if you have your browser window open and |'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'other programs running in the background press and hold ALT and then press
+    the TAB key to cycle through each open program.
+
+
+    On Apple computers, instead of using the Alt key use the Command (CMD) key. For
+    example, CMD+TAB to switch between open programs.
+
+
+    TIP: Press CTRL+TAB to switch between tabs in a program. For example, if you have
+    multiple tabs open in your Internet browser, press CTRL+TAB to switch between
+    them.
+
+
+    TIP: Adding the Shift key to ALT+TAB or CTRL+TAB moves backward. For example,
+    if you are pressing ALT+TAB and pass the program you want to use, press ALT+SHIFT+TAB
+    to move back to that program.
+
+
+    TIP: Windows Vista, 7, 8, and 10 users can also press the WINDOWS KEY+TAB to switch
+    through open programs in a full screenshot of the window.
+
+
+    | CTRL+BACKSPACE AND CTRL+LEFT OR RIGHT ARROW | Pressing CTRL+BACKSPACE deletes
+    a full word at a time instead of a single character. |
+
+
+    | CTRL+BACKSPACE AND CTRL+LEFT OR RIGHT ARROW | Holding down the CTRL key while
+    pressing the left or right arrow moves the cursor one word at a time instead of
+    one character at a time. If |'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'you want to highlight one word at a time, hold down CTRL+SHIFT, then press
+    the left or right arrow key. Your highlighted selection moves one word at a time
+    in that direction.
+
+
+    | Shortcut | Description |
+
+    | --- | --- |
+
+    | CTRL+S | While working on a document or another file in almost every program,
+    pressing CTRL+S saves that file. Use this shortcut key frequently if you''re working
+    on anything important in case of an error, lost power, or any other issues that
+    causes you to lose any work since the last save.<br><br>On Apple computers, use
+    Cmd+S to save a file |
+
+    | CTRL+HOME OR CTRL+END | CTRL+HOME moves the cursor to the beginning of the document,
+    and CTRL+END moves the cursor to the end of a document. These shortcuts work with
+    most documents, as well as web pages.<br><br>On Apple computers, use the Cmd +
+    up arrow to get to the beginning or Cmd + down arrow to get to the end of a document
+    or text. |
+
+    | CTRL+P | CONTROL+P is used to open a print preview of the page or document currently
+    being viewed. For example, press CTRL+P now to view a print preview of this page.<br><br>On
+    Apple computers, use Cmd+P to open the print preview. |'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '| PAGE UP, SPACEBAR, AND PAGE DOWN | As you may have guessed, pressing either
+    the page up or page down key moves to the next or previous page. When browsing
+    the Internet, pressing the spacebar moves the scrollbar down a page. Similarly,
+    SHIFT+SPACEBAR moves the scrollbar up one page. |
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | ALT+F | File menu options in current running program. |
+
+    | ALT+E | Open edit option in current program. |
+
+    | ALT+TAB | Switch between open programs. |
+
+    | F1 | To view the help information. |
+
+    | F2 | Rename a selected file. |
+
+    | F5 | Refresh the current programs window. |
+
+    | CTRL+D | Bookmark the current page in internet browsers. |
+
+    | CTRL +N | Creates a new document in programs or opens in new TAB in most internet
+    browsers. |
+
+    | CTRL +O | Open a file in the current running program. |
+
+    | CTRL+A | Select all text. |
+
+    | CTRL+B | Change selected text to be bold. |
+
+    | CTRL+I | Change selected text to be in italics. |
+
+    | CTRL+U | Change selected text to be underlined |
+
+    | CTRL+F | Open find window for current document or window. |
+
+    | CTRL+S | Save current document file. |'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '| Shortcut | Action |
+
+    | --- | --- |
+
+    | CTRL+X | Cut selected item. |
+
+    | SHIFT+DEL | Cut selected item. |
+
+    | CTRL+C | Copy selected item. |
+
+    | CTRL+INS | Copy selected item. |
+
+    | CTRL+V | Paste. |
+
+    | SHIFT+INS | Paste. |
+
+    | CTRL+Y | Redo last action. |
+
+    | CTRL+Z | Undo last action. |
+
+    | CTRL+K | Insert hyperlink for selected text. |
+
+    | CTRL+P | Print the current page or document. |
+
+    | HOME | Goes to beginning of current line. |
+
+    | CTRL+HOME | Goes to beginning of document. |
+
+    | END | Goes to end of current line. |
+
+    | CTRL+END | Goes to end of document. |
+
+    | SHIFT+HOME | Highlights from current position to beginning of line. |
+
+    | SHIFT+END | Highlights from current position to END of line. |
+
+    | CTRL+Left arrow | Moves one word to the left at a time. |
+
+    | CTRL+Right arrow | Moves one word to the right at a time. |
+
+    | CTRL+ESC | Open the Start menu. |
+
+    | CTRL+SHIFT+ESC | Open Windows Task Manager. |
+
+    | Alt+F4 | Close the currently active program. |
+
+    | Alt+ENTER | Open the properties for the selected item (file, folder, shortcut,
+    etc.). |
+
+
+    # PC SHORTCUT KEYS FOR SPECIAL CHARACTERS
+
+
+    | SHORTCUT KEYS | SPECIAL CHARACTERS |
+
+    | --- | --- |
+
+    | ALT+0224 | à |
+
+    | ALT+0232 | è |
+
+    | ALT+0236 | ì |'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '| ALT+0242 | ò |
+
+    | ALT+0241 | ñ |
+
+    | ALT+0228 | ä |
+
+    | ALT+0246 | ö |
+
+    | ALT+0252 | ü |
+
+    | ALT+0248 | ø |
+
+    | ALT+0223 | ß |
+
+    | ALT+0198 | Æ |
+
+    | ALT+0231 | ç |
+
+    | ALT+0191 | ¿ |
+
+    | ALT+0176 | ° (degree symbol) |
+
+    | ALT+0177 | ± (plus/minus symbol) |
+
+    | ALT+0153 | ™ |
+
+    | ALT+0169 | © |
+
+    | ALT+0174 | ® |
+
+    | ALT+0128 | € (Euro currency) |
+
+    | ALT+0162 | ¢ (Cent symbol) |
+
+    | ALT+0163 | £ (British Pound currency) |
+
+    | ALT+0165 | ¥ (Japanese Yen currency) |
+
+
+    # MICROSOFT WINDOWS SHORTCUT KEYS
+
+
+    # GENERAL WINDOWS SHORTCUT
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | ALT+TAB | Switch between open applications in all versions of Windows. Reverse
+    the direction by pressing ALT+SHIFT+TAB at the same time. |
+
+    | Ctrl+TAB | Switches between program groups, TABs, or document windows in applications-all
+    support this feature. |'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '| Shortcut | Description |
+
+    |----------|-------------|
+
+    | (unspecified) | Reverse the direction by pressing Ctrl+SHIFT+TAB at the same
+    time. |
+
+    | ALT+double-click | In Windows 95 or later, display the properties of the object
+    you double-click. For example, doing this on a file would display its properties.
+    |
+
+    | ALT+PRINT SCREEN | Create a screenshot only for the active program window in
+    all versions of Windows. For example, if you opened the calculator and pressed
+    these shortcut keys, only the calculator window would be created as a screenshot.
+    If the PRINT SCREEN key is pressed alone, the whole screen will be made into a
+    screenshot. |
+
+    | Ctrl+ALT+DEL | Open the Windows option screen for locking computer, switching
+    user, Task Manager, etc. in later versions of Windows. Pressing Ctrl+ALT+DEL multiple
+    times reboots the computer. |
+
+    | Ctrl+SHIFT+ESC | Immediately bring up the Windows Task Manager in Windows 2000
+    and later. |
+
+    | Ctrl+ESC | Open the Windows Start menu in most versions of Windows. In Windows
+    8, this opens the Start screen and in Windows 3.x, this opens the Task Manager.
+    |
+
+    | ALT+ESC | Switch between open applications on Taskbar in Windows 95 and later.
+    |
+
+    | ALT+SPACEBAR | Drops down the window control menu for the currently open Windows
+    program in Windows 95 and later. |'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '| Shortcut | Actions |
+
+    | --- | --- |
+
+    | ALT+ENTER | Opens properties window of selected icon or program in Windows 95
+    and later. |
+
+    | SHIFT+DEL | Permanently Delete any file or another object without throwing it
+    into the Recycle Bin in Windows 95 and later. |
+
+    | Hold down the SHIFT key | When putting in an audio or data CD that uses Auto
+    play, holding down the SHIFT key prevents that CD from playing. |
+
+
+    # FUNCTION KEYS
+
+
+    | FUNCTION SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | F1 | • Activates help for current open application. If you''re at the Windows
+    desktop, this activates the help for Windows. |
+
+    | F2 | • Renames a highlighted icon, file, or folder in all versions of Windows.<br>•
+    In Microsoft Excel, edits the active cell.<br>• ALT+CTRL+F2 opens document window
+    in Microsoft Word.<br>• CTRL+F2 displays the print preview window in Microsoft
+    Word. |'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '| Key | Functions |
+
+    |-----|-----------|
+
+    | | • Quickly rename a selected file or folder.<br>• Enter CMOS setup. |
+
+    | F3 | • Starts find or search when at the Windows desktop in all versions of
+    Windows.<br>• In some programs, after an initial search is performed, F3 will
+    find the next search value.<br>• In MS-DOS or Windows command line, F3 repeats
+    the last command entered.<br>• In Microsoft Word CTRL+F3 will lowercase any highlighted
+    text.<br>• SHIFT+F3 changes the text in Microsoft Word from upper to lowercase
+    or a capital letter at the beginning of every word.<br>• Windows Key + F3 opens
+    the Advanced find window in Microsoft Outlook.<br>• In Windows Explorer, start
+    the search function.<br>• Open Mission Control on an Apple computer running the
+    macOS X operating system. |
+
+    | F4 | • In Windows 95 and later, F4 opens the drive selection or address bar
+    when browsing files in Windows Explorer. |'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '| F5 | • In all modern Internet browsers, pressing F5 refreshes or reloads
+    the page or document window. • CTRL+F5 forces a complete refresh of the web page,
+    clearing the cache and downloading all contents of the page again. • Refresh the
+    list of contents in a folder. • Open the find, replace, and go to window in Microsoft
+    Word. • Starts a slideshow in PowerPoint. |
+
+    | F6 | • Move the cursor to the address bar in Internet Explorer, Mozilla Firefox,
+    and most other Internet browsers. • CTRL+SHIFT+F6 opens to |'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '| | |
+
+    |---|---|
+
+    | F7 | • Commonly used to spell check and grammar check a document in Microsoft
+    programs such as Microsoft Word, Outlook, etc.<br>• SHIFT+F7 runs a Thesaurus
+    check on the word highlighted.<br>• Turns on Caret Browsing in Mozilla Firefox.<br>•
+    Increase laptop speaker volume (on some laptops). |
+
+    | F8 | • Pressing F8 over and over as the computer is booting starts the computer
+    in Safe Mode.<br>• Used by some computers to access the Windows recovery system,
+    but may require a Windows installation CD.<br>• Displays a thumbnail image for
+    all workspaces in macOS. |
+
+    | F9 | • Refresh document in Microsoft Word.<br>• Send and receive e-mail in Microsoft
+    Outlook.<br>• Opens the Measurements toolbar in Quark 5.0. |'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '| F10 | • Reduce laptop screen brightness (on some laptops).<br>• With macOS
+    10.3 or later, displays a thumbnail for each window in a single workspace.<br>•
+    Using the Fn key and F9 at the same time opens Mission Control on an Apple computer
+    running the macOS X operating system.<br>• In Microsoft Windows, activates the
+    menu bar of an open application.<br>• SHIFT+F10 is the same as right-clicking
+    on a highlighted icon, file, or Internet link.<br>• Access the hidden recovery
+    partition on Compaq, HP, and Sony computers.<br>• Enter CMOS setup on some computers.<br>•
+    Increase laptop screen brightness (on some laptops).<br>• With macOS 10.3 or later,
+    shows all open Windows for the active program. |
+
+    | F11 | • Enter and exit full screen mode in all modern Internet browsers.<br>•
+    CTRL+F11 as the computer is starting to access the hidden recovery partition on
+    many |'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '| Key | Functions |
+
+    |:---|:---|
+
+    | F11 | • Dell computers.\n• Pressing F11 by itself accesses the hidden recovery
+    partition on eMachines, Gateway, and Lenovo computers.\n• With macOS 10.4 or later,
+    hides all open windows and shows the desktop |
+
+    | F12 | • Open the Save as window in Microsoft Word.\n• CTRL+F12 opens a document
+    in Word.\n• SHIFT+F12 saves the Microsoft Word document (like CTRL+S).\n• CTRL+SHIFT+F12
+    prints a document in Microsoft Word.\n• Preview a page in Microsoft Expression
+    Web.\n• Open Firebug or browser debug tool.\n• With an Apple running macOS 10.4
+    or later, F12 shows or hides the Dashboard.\n• Access the list of bootable devices
+    on a computer at startup, allowing you to select a different device to boot from
+    (e.g., hard drive, CD or DVD drive, floppy drive, USB drive, and network). |'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# WINDOWS KEY SHORTCUT
+
+
+    Below we have combined and listed down all the shortcuts by the windows key by
+    their various windows versions.
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | ALL VERSIONS OF WINDOWS | |
+
+    | WINKEY | Pressing the Windows key alone opens or hides the Windows Start menu.
+    In Windows 8, this opens or hides the Start screen. |
+
+    | WINKEY+F1 | Open the Microsoft Windows help and support center. |
+
+    | WINKEY+PAUSE / BREAK KEY | Open the System Properties window. |
+
+    | WINKEY+D | Display and hide the Windows desktop. |
+
+    | WINKEY+E | Open Microsoft Windows Explorer. |
+
+    | WINKEY+F | Display the Windows Search or Find feature. |
+
+    | WINKEY+CTRL+F | Display the search for computers window. |
+
+    | WINKEY+L | Lock the computer and switch users if needed (Windows XP and above
+    only). |
+
+    | WINKEY+M | Minimizes all windows. |
+
+    | WINKEY+SHIFT+M | Undo the minimize done by WINKEY+M and WINKEY+D. |
+
+    | WINKEY+R | Open the run window. |
+
+    | WINKEY+U | Open Utility Manager or the Ease of Access CENTER. |
+
+    | WINDOWS XP | |
+
+    | WINKEY+TAB | Cycle through open programs on the Taskbar. |
+
+    | WINDOWS 7 AND 8 | |'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '| WINKEY+1-0 | Pressing the Windows key and any top row number key from 1 to
+    0 opens the program corresponding to the number of the program icon on the Taskbar.
+    For example, if the first icon on the Taskbar is Internet Explorer, pressing WINKEY+1
+    would open that program or switch to it if already open. |
+
+    | WINKEY+(PLUS (+) or MINUS (-)) | Open Windows Magnifier and zoom in with the
+    PLUS symbol (+) and zoom out with the MINUS symbol (-). |
+
+    | WINKEY+ESC | Closes the Magnifier. |
+
+    | WINKEY+HOME | Minimize all windows except the active window |
+
+    | WINKEY+P | Change between the monitor and projection display types or how second
+    screen displays computer screen. |
+
+    | WINKEY+T | Set the focus on the Taskbar icons. |
+
+    | WINKEY+LEFT ARROW | Shrinks the window to 1/2 screen on the left side for side
+    by side viewing. |
+
+    | WINKEY+RIGHT ARROW | Shrinks the window to 1/2 screen on the right side for
+    side by side viewing |
+
+    | WINKEY+UP ARROW | When in the side by side viewing mode, this shortcut takes
+    the screen back to full size. |
+
+    | WINKEY+DOWN ARROW | Minimizes the screen. Also, when in the side by side viewing
+    mode, this shortcut takes the screen back to a minimized size. |
+
+    | **WINDOWS 8** | |'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '| WINKEY+ COMMA (,) | Peek at the Windows desktop. |
+
+    | --- | --- |
+
+    | WINKEY+ FULL STOP (,) | Snap a Windows App to the sides of the screen. Pressing
+    it multiple times will switch between the right and left side of the screen or
+    unsnap the app. |
+
+    | WINKEY+ENTER | Open Windows Narrator. |
+
+    | WINKEY+C | Open the Charms. |
+
+    | WINKEY+G | Cycle through desktop gadgets. |
+
+    | WINKEY+H | Open Share in Charms. |
+
+    | WINKEY+I | Open the Settings in Charms. |
+
+    | WINKEY+J | Switch between snapped apps. |
+
+    | WINKEY+K | Open Devices in Charms. |
+
+    | WINKEY+O | Lock the screen orientation. |
+
+    | WINKEY+X | Open the Power User Menu, which gives you access to many of the features
+    most power users would want to use such as Device Manager, Control Panel, Event
+    Viewer, command Prompt, and much more. |
+
+
+    # WINDOWS 10
+
+
+    | WINKEY+ COMMA (,) | Peek at the Windows desktop. |
+
+    | --- | --- |
+
+    | WINKEY+A | Open the Windows 10 Action center. |
+
+    | WINKEY+G | Open the Game bar. Only works if a game is running. |
+
+    | WINKEY+I | Open the Windows 10 Settings window. |
+
+    | WINKEY+S | Open the Windows Search utility. |
+
+    | WINKEY+X | Open the Power User Menu, which gives you access to many of the features
+    most power users would want to use such as Device Manager, Control Panel, Event
+    |'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Viewer, command Prompt, and much more.
+
+
+    # APPLE SHORTCUT KEYS
+
+
+    You may be able to use the "COMMAND" key in place of "OPEN APPLE" key in later
+    version of the macOS.
+
+
+    | APPLE SHORTCUT KEYS | FUNCTION |
+
+    | --- | --- |
+
+    | OPEN APPLE+DOWN | Opens the selected icon. |
+
+    | SHIFT+CLICK | Select the icon and add it to the set of those selected. |
+
+    | TAB | Highlight the next icon inside the folder, in alphabetical order. |
+
+    | SHIFT+TAB | Highlight the previous icon inside the folder, in alphabetical order.
+    |
+
+    | LEFT ARROW | Used when viewing by icon |'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '| Key | Function |
+
+    | --- | --- |
+
+    | RIGHT ARROW | Used when viewing by icon to select icon to the right of the one
+    highlighted. |
+
+    | UP ARROW | Used to select the icon above the one currently highlighted |
+
+    | DOWN ARROW | Used to select the icon below the one currently highlighted. |
+
+    | OPEN APPLE+? | Mac help. |
+
+    | OPEN APPLE+E | Eject |
+
+    | OPEN APPLE+SHIFT+UP ARROW | Used to direct the input focus to the desktop level.
+    |
+
+    | OPEN APPLE+M | Minimize window. |
+
+    | OPEN APPLE+N | New finder window. |
+
+    | OPEN APPLE+SHIFT+N | New folder. |
+
+    | OPEN APPLE+W | Close the current window. |
+
+    | OPEN APPLE+C | Copy the selected item to the clipboard. |
+
+    | OPEN APPLE+X | Cut the selected item. |
+
+    | OPEN APPLE+V | Paste item from the clipboard. |
+
+    | OPEN APPLE+L | Make alias. |
+
+    | OPEN APPLE+R | Show original item. |
+
+    | OPEN APPLE+T | Add to favorites. |
+
+    | OPEN APPLE+O | Open the selected icon. |
+
+    | OPEN APPLE+F | Display the find dialog box. |
+
+    | OPEN APPLE+G | Repeat the last find operation. |
+
+    | OPEN APPLE+SHIFT+G | Takes a snapshot of the screen and saves it to a PICT file.
+    |
+
+    | COMMAND+A | Select all text and objects. |
+
+    | COMMAND+B | Change selected text to boldface. |'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '| KEYBOARD SHORTCUT | ACTION |
+
+    | --- | --- |
+
+    | COMMAND+F | Open the Find window. |
+
+    | COMMAND+I | Italicize the selected text. |
+
+    | COMMAND+P | Open the Print dialog window. |
+
+    | COMMAND+U | Underline the selected text. |
+
+    | COMMAND+SHIFT+P | Open the Page Setup window, to change document parameters.
+    |
+
+    | COMMAND+SHIFT+CONTROL+3 | Capture screenshot of current screen and save to the
+    Clipboard. |
+
+
+    # # UNIX AND LINUX SHORTCUT KEYS
+
+
+    # ## KEYBOARD SHORTCUT KEYS
+
+
+    Not all of the following shortcut keys are universally compatible with every variant
+    of Unix and Linux. Some of these shortcut keys are designed for use in a terminal
+    environment, while others are for use in a desktop environment.
+
+
+    | KEYBOARD SHORTCUT | ACTION |
+
+    | --- | --- |
+
+    | CTRL+A | Moves the cursor to the beginning of the line. |
+
+    | CTRL+B | Moves the cursor backward one character. |
+
+    | CTRL+C | Cancels the currently running command. |
+
+    | CTRL+D | Logs out of the current session. |
+
+    | CTRL+E | Moves the cursor to the end of the line. |
+
+    | CTRL+F | Moves the cursor forward one character. |
+
+    | CTRL+H | Erase one character. Similar to |'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '| Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+P | Paste previous line(s). |
+
+    | CTRL+R | Allows you to search for a previously used command or switch. |
+
+    | CTRL+S | Stops all output on-screen (XOFF). |
+
+    | CTRL+Q | Turns all output stopped on-screen back on (XON). Also, closes an application
+    window. |
+
+    | CTRL+U | Erases the complete line. |
+
+    | CTRL+W | Deletes the last word typed. For example, if you typed mv file1 file2,
+    this shortcut would delete file2. |
+
+    | CTRL+Z | Cancels the current operation, moves back a directory or takes the
+    current operation and moves it to the background. See bg command for additional
+    information about background. |
+
+    | CTRL+ALT+D | Minimizes all application windows and shows the desktop. |
+
+    | CTRL+ALT+L | Locks the screen. |
+
+    | CTRL+ALT+T | Opens a new terminal window. |
+
+    | CTRL+ALT+UP/DOWN ARROW | Switches between workspaces (if you are a power user
+    and use workspaces). |
+
+    | ALT+F2 | Open the console to run a command (must be a power user). |
+
+    | ARROW UP/DOWN | Scroll through previously used commands. |
+
+
+    # COMMAND LINE SHORTCUTS'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'You may also try making use of the alias command to create your own shortcuts
+    for long or frequently used commands
+
+
+    | SHORTCUTS | ACTIONS |
+
+    | --- | --- |
+
+    | ~ | Moves to the user''s home directory. |
+
+    | !! | Repeats the line last entered at the shell. |
+
+    | !$ | !$ |
+
+    | reset | Resets the terminal if the terminal screen is not displaying correctly.
+    |
+
+    | shutdown -h now | Remotely or locally shuts the system down. |
+
+
+    # MICROSOFT EXCEL SHORTCUT KEYS
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | TAB | Move to the next cell, to the right of the currently selected cell. |
+
+    | CTRL+A | Select all contents of a worksheet. |
+
+    | CTRL+B | Bold all cells in the highlighted section. |
+
+    | CTRL+C | Copy all cells in the highlighted section. |
+
+    | CTRL+D | Fill down. Fills the cell beneath with the contents of the selected
+    cell. To fill more than one cell, select the source cell and press CTRL+SHIFT+DOWN
+    to select multiple cells. Then press CTRL+D to fill them with the contents of
+    the original cell. |
+
+    | CTRL+F | Search current sheet |'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '| Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+G | Go to a certain area. |
+
+    | CTRL+H | Find and replace |
+
+    | CTRL+I | Puts italics on all cells in the highlighted section. |
+
+    | CTRL+K | Inserts a hyperlink. |
+
+    | CTRL+L | Opens the Create Table dialog box. |
+
+    | CTRL+N | Creates a new workbook. |
+
+    | CTRL+O | Opens a workbook. |
+
+    | CTRL+P | Print the current sheet. |
+
+    | CTRL+R | Fill right. Fills the cell to the right with the contents of the selected
+    cell. To fill more than one cell, select the source cell and press CTRL+SHIFT+RIGHT
+    to select multiple cells. Then press CTRL+R to fill them with the contents of
+    the original cell. |
+
+    | CTRL+S | Saves the open worksheet. |
+
+    | CTRL+T | Open the Create Table dialog box. |
+
+    | CTRL+U | Underlines all cells in the highlighted section. |
+
+    | CTRL+V | Pastes everything copied onto the clipboard. |
+
+    | CTRL+W | Closes the current workbook. |
+
+    | CTRL+X | Cuts all cells in the highlighted section. |
+
+    | CTRL+Y | Repeats the last entry (redo). |
+
+    | CTRL+Z | Undo the last action. |
+
+    | CTRL+1 | Changes the format of the selected cells. |
+
+    | CTRL+2 | Bolds all cells in the highlighted section. |
+
+    | CTRL+3 | Puts italics all cells in the highlighted section. |'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '| 快捷键 | 功能 |
+
+    | --- | --- |
+
+    | CTRL+4 | Underlines all cells in highlighted section. |
+
+    | CTRL+5 | Puts a strikethrough all cells in the highlighted section. |
+
+    | CTRL+6 | Shows or hides objects. |
+
+    | CTRL+7 | Shows or hides the toolbar. |
+
+    | CTRL+8 | Toggles the outline symbols. |
+
+    | CTRL+9 | Hides rows. |
+
+    | CTRL+0 | Hides columns. |
+
+    | CTRL+SHIFT+ COLON (:) | Enters the current time. |
+
+    | CTRL+ SEMI COLON (;) | Enters the current date. |
+
+    | CTRL+` | Changes between displaying cell values or formulas in the worksheet.
+    |
+
+    | CTRL+'' | Copies a formula from the cell above. |
+
+    | CTRL+SHIFT+" | Copies value from cell above. |
+
+    | CTRL+- | Deletes the selected column or row. |
+
+    | CTRL+SHIFT+= | Inserts a new column or row. |
+
+    | CTRL+SHIFT+~ | Switches between showing Excel formulas or their values in cells.
+    |
+
+    | CTRL+SHIFT+@ | Applies time formatting. |
+
+    | CTRL+SHIFT+! | Applies comma formatting. |
+
+    | CTRL+SHIFT+$ | Applies currency formatting. |
+
+    | CTRL+SHIFT+# | Applies date formatting. |
+
+    | CTRL+SHIFT+% | Applies percentage formatting. |
+
+    | CTRL+SHIFT+^ | Applies exponential formatting. |
+
+    | CTRL+SHIFT+* | Selects the current region around the active cell. |
+
+    | CTRL+SHIFT+& | Places border around selected cells. |
+
+    | CTRL+SHIFT+_ | Removes a border. |
+
+    | CTRL++ | Insert. |
+
+    | CTRL+- | Delete. |'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '| Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+SHIFT+( | Unhide rows. |
+
+    | CTRL+SHIFT+) | Unhide columns. |
+
+    | CTRL+/ | Selects the array containing the active cell. |
+
+    | CTRL+\ | Selects the cells that have a static value or don''t match the formula
+    in the active cell. |
+
+    | CTRL+[ | Selects all cells referenced by formulas in the highlighted section.
+    |
+
+    | CTRL+] | Selects cells that contain formulas that reference the active cell.
+    |
+
+    | CTRL+SHIFT+{ | Selects all cells directly or indirectly referenced by formulas
+    in the highlighted section. |
+
+    | CTRL+SHIFT+} | Selects cells which contain formulas that directly or indirectly
+    reference the active cell. |
+
+    | CTRL+SHIFT+\| (PIPE) | Selects the cells within a column that don''t match the
+    formula or static value in the active cell. |
+
+    | CTRL+ENTER | Fills the selected cells with the current entry. |
+
+    | CTRL+SPACEBAR | Selects the entire column. |
+
+    | CTRL+SHIFT+SPACEBAR | Selects the entire worksheet. |
+
+    | CTRL+HOME | Move to cell A1. |
+
+    | CTRL+END | Move to last cell with text on the worksheet. |
+
+    | CTRL+TAB | Move between Two or more open Excel files. |
+
+    | CTRL+SHIFT+TAB | Activates the previous workbook. |
+
+    | CTRL+SHIFT+A | Inserts argument names into a formula. |
+
+    | CTRL+SHIFT+F | Opens the drop-down menu for fonts. |'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '| 快捷键 | 功能 |
+
+    | --- | --- |
+
+    | CTRL+SHIFT+O | Selects all of the cells that contain comments. |
+
+    | CTRL+SHIFT+P | Opens the drop-down menu for point size. |
+
+    | SHIFT+INSERT | Pastes what is stored on the clipboard. |
+
+    | SHIFT+PAGE UP | In a single column, highlights all cells above that are selected.
+    |
+
+    | SHIFT+PAGE DOWN | In a single column, highlights all cells below that are selected.
+    |
+
+    | SHIFT+HOME | Highlights all text to the left of the cursor. |
+
+    | SHIFT+END | Highlights all text to the right of the cursor. |
+
+    | SHIFT+UP ARROW | Extends the highlighted area up one cell. |
+
+    | SHIFT+DOWN ARROW | Extends the highlighted area down one cell. |
+
+    | SHIFT+LEFT ARROW | Extends the highlighted area left one character. |
+
+    | SHIFT +RIGHT ARROW | Extends the highlighted area right one character. |
+
+    | ALT+TAB | Cycles through applications. |
+
+    | ALT+SPACEBAR | Opens the system menu. |
+
+    | ALT+BACKSPACE | Undo. |
+
+    | ALT+ENTER | While typing text in a cell, pressing ALT+ENTER moves to the next
+    line, allowing for multiple lines of text in one cell. |
+
+    | ALT+= | Creates a formula to sum all of the above cells. |
+
+    | ALT+'' | Allows formatting on a dialog box. |
+
+    | F1 | Opens the help menu. |
+
+    | F2 | Edits the selected cell. |'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '| F3 | After a name is created, F3 will paste names. |
+
+    | F4 | Repeats last action. For example, if you changed the color of text in another
+    cell, pressing F4 changes the text in cell to the same color. |
+
+    | F5 | Goes to a specific cell. For example, C6. |
+
+    | F6 | Move to the next pane. |
+
+    | F7 | Spell check selected text or document. |
+
+    | F8 | Enters Extend Mode. |
+
+    | F9 | Recalculates every workbook. |
+
+    | F10 | Activates the menu bar. |
+
+    | F11 | Creates a chart from selected data. |
+
+    | F12 | Save As option. |
+
+    | SHIFT+F1 | Opens the "What''s This?" window. |
+
+    | SHIFT+F2 | Allows the user to edit a cell comment. |
+
+    | SHIFT+F3 | Opens the Excel formula window. |
+
+    | SHIFT+F5 | Brings up a search box. |
+
+    | SHIFT+F6 | Move to previous pane. |
+
+    | SHIFT+F8 | Add to selection. |
+
+    | SHIFT+F9 | Performs calculate function on active sheet. |
+
+    | CTRL+F3 | Open Excel Name Manager. |
+
+    | CTRL+F4 | Closes current window. |
+
+    | CTRL+F5 | Restores window size. |
+
+    | CTRL+F6 | Next workbook |
+
+    | CTRL+SHIFT+F6 | Previous workbook. |
+
+    | CTRL+F7 | Moves the window |
+
+    | CTRL+F8 | Resizes the window. |
+
+    | CTRL+F9 | Minimize current window. |
+
+    | CTRL+F10 | Maximize currently selected |'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '| SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | CTRL+F11 | Inserts a Macro sheet. |
+
+    | CTRL+F12 | Opens a file. |
+
+    | CTRL+SHIFT+F3 | Creates names by using those of either row or column labels.
+    |
+
+    | CTRL+SHIFT+F6 | Moves to the previous worksheet window. |
+
+    | CTRL+SHIFT+F12 | Prints the current worksheet. |
+
+    | ALT+F1 | Inserts a chart. |
+
+    | ALT+F2 | Save As option. |
+
+    | ALT+F4 | Exits Excel. |
+
+    | ALT+F8 | Opens the macro dialog box. |
+
+    | ALT+F11 | Opens the Visual Basic editor. |
+
+    | ALT+SHIFT+F1 | Creates a new worksheet. |
+
+    | ALT+SHIFT+F2 | Saves the current worksheet. |
+
+
+    # MICROSOFT WORD SHORTCUT KEYS
+
+
+    If your devices doesn''t have the F1-F12 keys on your keyboard, like the chrome
+    book, some of these shortcuts might not be available to you.
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | CTRL+0 | Toggles 6pts of spacing above the paragraph. |
+
+    | CTRL+A | Select all contents of the page. |
+
+    | CTRL+B | Bold highlighted selection. |
+
+    | CTRL+C | Copy selected text. |
+
+    | CTRL+D | Open the font preferences window. |
+
+    | CTRL+E | Aligns the line or selected text to the center of the screen. |
+
+    | CTRL+F | Open find box. |
+
+    | CTRL+I | Italic highlighted selection. |'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '| 快捷键 | 功能 |
+
+    | --- | --- |
+
+    | CTRL+J | Aligns the selected text or line to justify the screen. |
+
+    | CTRL+K | Insert a hyperlink. |
+
+    | CTRL+L | Aligns the line or selected text to the left of the screen. |
+
+    | CTRL+M | Indent the paragraph. |
+
+    | CTRL+N | Opens new, blank document window. |
+
+    | CTRL+O | Opens the dialog box or page for selecting a file to open. |
+
+    | CTRL+P | Open the print window. |
+
+    | CTRL+R | Aligns the line or selected text to the right of the screen. |
+
+    | CTRL+S | Save the open document. Like Shift+F12. |
+
+    | ALT+F,A | Save the document under a different file name. |
+
+    | ALT+X | Show the Unicode code of a highlighted character. |
+
+    | CTRL+T | Create a hanging indent. |
+
+    | CTRL+U | Underline the selected text. |
+
+    | CTRL+V | Paste. |
+
+    | CTRL+W | Close the currently open document. |
+
+    | CTRL+X | Cut selected text. |
+
+    | CTRL+Y | Redo the last action performed. |
+
+    | CTRL+Z | Undo last action. |
+
+    | CTRL+SHIFT+L | Quickly create a bullet point. |
+
+    | CTRL+SHIFT+F | Change the font |
+
+    | CTRL+SHIFT+> | Increase selected font +1pts up to 12pt and then increase font
+    +2pts. |
+
+    | CTRL+] | Increase selected font +1pts. |
+
+    | CTRL+SHIFT+< | Decrease selected font -1pts if 12pt or lower; if above 12, |'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '| 快捷键 | 功能 |
+
+    | --- | --- |
+
+    | CTRL+[ | Decrease selected font -1pts. |
+
+    | CTRL+/+C | Insert a cent sign (¢). |
+
+    | CTRL+''+<CHAR> | Insert a character with an accent (acute) mark, where <char>
+    is the character you want. For example, if you wanted an accented é you would
+    use Ctrl+''+e as your shortcut key. To reverse the accent mark, use the opposite
+    accent mark, often found on the tilde key. |
+
+    | CTRL+SHIFT+* | View or hide non printing characters. |
+
+    | CTRL+<LEFT ARROW> | Moves one word to the left. |
+
+    | CTRL+<RIGHT ARROW> | Moves one word to the right. |
+
+    | CTRL+<UP ARROW> | Moves to the beginning of the line or paragraph. |
+
+    | CTRL+<DOWN ARROW> | Moves to the end of the paragraph. |
+
+    | CTRL+DEL | Deletes word to right of cursor. |
+
+    | CTRL+BACKSPACE | Deletes word to left of cursor. |
+
+    | CTRL+END | Moves the cursor to the end of the document. |
+
+    | CTRL+HOME | Moves the cursor to the beginning of the document. |
+
+    | CTRL+SPACEBAR | Reset highlighted text to the default font. |
+
+    | CTRL+1 | Single-space lines. |
+
+    | CTRL+2 | Double-space lines. |
+
+    | CTRL+5 | 1.5-line spacing. |
+
+    | CTRL+ALT+1 | Changes text to heading 1. |
+
+    | CTRL+ALT+2 | Changes text to heading 2 |
+
+    | CTRL+ALT+3 | Changes text to heading 3. |
+
+    | ALT+CTRL+F2 | Open new document. |
+
+    | CTRL+F1 | Open the Task Pane. |'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '| Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+F2 | Display the print preview. |
+
+    | CTRL+SHIFT+> | Increases the selected text size by one font size. |
+
+    | CTRL+SHIFT+< | Decreases the selected text size by one font size. |
+
+    | CTRL+SHIFT+F6 | Switches to another open Microsoft Word document. |
+
+    | CTRL+SHIFT+F12 | Prints the document. |
+
+    | F1 | Open help. |
+
+    | F4 | Repeat the last action performed (Word 2000+). |
+
+    | F5 | Open the Find, Replace, and Go To window in Microsoft Word. |
+
+    | F7 | Spellcheck and grammar check selected text or document. |
+
+    | F12 | Save As. |
+
+    | SHIFT+F3 | Change the text in Microsoft Word from uppercase to lowercase or
+    a capital letter at the beginning of every word. |
+
+    | SHIFT+F7 | Runs a Thesaurus check on the selected word. |
+
+    | SHIFT+F12 | Save the open document. Like CTRL+S. |
+
+    | SHIFT+ENTER | Create a soft break instead of a new paragraph. |
+
+    | SHIFT+INSERT | Paste. |
+
+    | SHIFT+ALT+D | Insert the current date. |
+
+    | SHIFT+ALT+T | Insert the current time. |'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# MICROSOFT WORD MOUSE SHORTCUTS
+
+
+    You can also make use of the mouse for some of these shortcuts below.
+
+
+    | SHORTCUTS | ACTION |
+
+    | --- | --- |
+
+    | CLICK, HOLD, AND DRAG | Selects text from where you click and hold to the point
+    you drag and let go. |
+
+    | DOUBLE-CLICK | If double-clicking a word, selects the complete word. |
+
+    | DOUBLE-CLICK | Double-clicking on the left, center, or right of a blank line
+    makes the alignment of the text left, center, or right aligned. |
+
+    | DOUBLE-CLICK | Double-clicking anywhere after text on a line sets a tab stop.
+    |
+
+    | TRIPLE-CLICK | Selects the line or paragraph of the text where the mouse is
+    triple-clicked. |
+
+    | CTRL+MOUSE WHEEL | Zooms in and out of document. |
+
+
+    # GOOGLE CHROME KEYBOARD SHORTCUT KEYS
+
+
+    If you are using chrome on a MAC system, make use of the'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '"COMMAND KEY" in place "CTRL".
+
+
+    | SHORTCUT | ACTION |
+
+    | --- | --- |
+
+    | ALT+HOME | Open your homepage. |
+
+    | ALT+LEFT ARROW | Back a page. |
+
+    | ALT+RIGHT ARROW | Forward a page. |
+
+    | F11 | Display the current website in full-screen mode. Pressing F11 again will
+    exit this mode |
+
+    | ESC | Stop loading the page or a download from loading. |
+
+    | CTRL+(- OR +) | Zoom in or out of a page, "-" will zoom out and "+" will zoom
+    in on the page. |
+
+    | CTRL+1-8 | Pressing Ctrl and any number 1 through 8 moves to the corresponding
+    tab in your tab bar. |
+
+    | CTRL+9 | Switch to last tab. |
+
+    | CTRL+0 | Reset browser zoom to default. |
+
+    | CTRL+ENTER | This combination is used to quickly complete an address. For example,
+    type "genesis" in the address bar and press CTRL+ENTER to get https://www.genesis.com.
+    |
+
+    | CTRL+SHIFT+DEL | Open the Clear browsing data window to quickly clear private
+    data. |
+
+    | CTRL+SHIFT+B | Toggle the bookmarks bar between hidden and shown. |
+
+    | CTRL+A | Select everything on a page. |
+
+    | CTRL+D | Add a bookmark for the page currently opened. |
+
+    | CTRL+F | Open the "find" bar to search text on the current page. |
+
+    | CTRL+O | Open a file in the browser. |
+
+    | CTRL+SHIFT+O | Open the Bookmark manager. |'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '| Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+H | Open browser history in a new tab. |
+
+    | CTRL+J | Display the downloads window. |
+
+    | CTRL+K OR CTRL+E | Moves your text cursor to the omnibox so that you can begin
+    typing your search query and perform a Google search. |
+
+    | CTRL+L, ALT+D | Move the cursor to the browser address bar and highlight everything
+    in it. |
+
+    | CTRL+N | Open New browser window. |
+
+    | CTRL+SHIFT+N | Open a new window in incognito (private) mode. |
+
+    | CTRL+P | Print current page or frame. |
+
+    | CTRL+R OR F5 | Refresh the current page or frame. |
+
+    | CTRL+S | Opens the Save As window to save the current page. |
+
+    | CTRL+T | Opens a new tab. |
+
+    | CTRL+U | View a web page''s source code. |
+
+    | CTRL+W | Closes the current tab. |
+
+    | CTRL+SHIFT+T | This combination reopens the last tab you''ve closed. If you''ve
+    closed multiple tabs, you can press this shortcut key multiple times to restore
+    each of the closed tabs. |
+
+    | CTRL+TAB | Moves through each of the open tabs going to the right. |
+
+    | CTRL+SHIFT+TAB | Moves through each of the open tabs going to the left. |
+
+    | CTRL+LEFT-CLICK | Open a link in a new tab in the background. |
+
+    | CTRL+SHIFT LEFT-CLICK | Open a link in a new tab and switch to the new tab.
+    |
+
+    | CTRL+PAGE DOWN | Open the browser tab to the right. |
+
+    | CTRL+PAGE UP | Open the browser tab to the left. |
+
+    | SPACEBAR | Moves down a page at a time. |'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '| SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | SHIFT+SPACEBAR | Moves up a page at a time. |
+
+    | HOME | Go to top of page. |
+
+    | END | Go to bottom of page. |
+
+    | ALT+DOWN ARROW | Display all previous text entered in a text box and available
+    options on a drop-down menu. |
+
+
+    # INTERNET EXPLORER KEYBOARD SHORTCUT
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | ALT | Displays the File/Edit/View menu bar at the top. |
+
+    | ALT+LEFT ARROW | Back a page |
+
+    | BACKSPACE | Back a page. |
+
+    | ALT+RIGHT ARROW | Forward a page. |
+
+    | F5 | Refresh current page, frame, or tab. |
+
+    | F11 | Display the current website in fullscreen mode. Pressing F11 again will
+    exit this mode. |
+
+    | ESC | Stop page or download from loading. |
+
+    | CTRL+(- OR +) | Increase or decrease the font size. Pressing ''-'' decreases
+    and ''+'' increases. |
+
+    | CTRL+ENTER | Quickly complete an address. For |'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '| 快捷键 | 功能描述 |
+
+    |--------|---------|
+
+    | CTRL+D | Add a favorite for the page currently opened. |
+
+    | CTRL+I | Display available bookmarks. |
+
+    | CTRL+N | Open New browser window. |
+
+    | CTRL+P | Print current page or frame. |
+
+    | CTRL+T | Opens a new tab. |
+
+    | CTRL+U | Open debugger to view a web page''s source code. |
+
+    | CTRL+F4 | Closes the currently selected tab. |
+
+    | CTRL+TAB | Moves through each of the open tabs. |
+
+    | SPACEBAR | Moves down a page at a time. |
+
+    | SHIFT+SPACEBAR | Moves up a page at a time. |
+
+    | ALT+DOWN ARROW | Display all previous text entered in a text box or available
+    options on drop-down menu. |
+
+    | ALT+D | Highlights the text in the address bar. |'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# MICROSOFT FRONTPAGE SHORTCUT KEYS
+
+
+    | SHORTCUT KEYS | ACTIONS |
+
+    | --- | --- |
+
+    | CTRL+C | Copy selected text. |
+
+    | CTRL+X | Cut selected text. |
+
+    | CTRL+P | Paste selected text. |
+
+    | CTRL+K | Create a hyperlink. |
+
+    | CTRL+B | Bold highlighted selection. |
+
+    | CTRL+I | Italic highlighted selection. |
+
+    | CTRL+U | Underline highlighted selection. |
+
+    | CTRL+L | Left align the text. |
+
+    | CTRL+R | Right align the text. |
+
+    | CTRL+E | Center the text. |
+
+    | CTRL+/ | Turn on or off the display of HTML tags. |
+
+    | CTRL+S | Save document. |
+
+    | CTRL+TAB | Switch between open web pages. |
+
+    | CTRL+INS | Enter Line break. |
+
+    | CTRL+ENTER | Move cursor above or below a table. |
+
+    | CTRL+SHIFT+B | Preview in web browser window. |
+
+    | CTRL+SHIFT+< | Decrease font size. |
+
+    | CTRL+SHIFT+> | Increase font size. |
+
+    | CTRL+DEL | Deletes word to right of cursor. |
+
+    | CTRL+BACKSPACE | Deletes word to left of cursor. |
+
+    | ALT+MOUSE DOUBLE-CLICK | View the properties of a selected item. For example,
+    doing this on a table cell would display the properties for that cell. |
+
+
+    # MICROSOFT OUTLOOK KEYBORAD SHORTCUTS'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '| SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | ALT+S | Send the e-mail |
+
+    | CTRL+ENTER | Send the e-mail you''re composing. |
+
+    | CTRL+C | Copy selected text. |
+
+    | CTRL+X | Cut selected text. |
+
+    | CTRL+P | Open the Print window. |
+
+    | CTRL+K | Complete the name or e-mail being typed in the e-mail field if found
+    in the address book. |
+
+    | CTRL+B | Bold highlighted selection. |
+
+    | CTRL+I | Italic highlighted selection. |
+
+    | CTRL+M | Send and receive all e-mail. |
+
+    | CTRL+Q | Mark selected e-mail as read. |
+
+    | CTRL+U | Mark selected e-mail as unread. Underline highlighted text (within
+    an e-mail message). |
+
+    | CTRL+R | Reply to an e-mail. |
+
+    | CTRL+F | Forward an e-mail. |
+
+    | CTRL+N | Create a new e-mail (when in the Mail section). Create a new appointment
+    in your calendar (when in the Calendar section). |
+
+    | CTRL+Y | Go to folder. |
+
+    | CTRL+SHIFT+A | Create a new appointment in your calendar (from any section of
+    Outlook). |
+
+    | CTRL+SHIFT+O | Open the Outbox. |
+
+    | CTRL+SHIFT+I | Open the Inbox. |
+
+    | CTRL+SHIFT+K | Add a new task. |
+
+    | CTRL+SHIFT+C | Create a new contact. |
+
+    | CTRL+SHIFT+J | Create a new journal entry. |
+
+    | CTRL+SHIFT+V | Move e-mail to folder. |'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# MOZILLA FIREFOX KEYBOARD SHORTCUT\nFOR WINDOWS
+
+
+    | SHORTCYT KEYS | ACTIONS |\n| --- | --- |\n| F5 | Refresh current page, frame,
+    or tab. |\n| F11 | Display the current website in fullscreen mode. Pressing F11
+    again will exit this mode. |\n| ESC | Stop page or download from loading. |\n|
+    SPACEBAR | Moves down a page at a time. |\n| ALT+HOME | Open your homepage. |\n|
+    ALT+DOWN ARROW | Display all previous text entered in a text box and available
+    options on drop-down menu. |\n| ALT+LEFT ARROW | Back a page. |\n| ALT+RIGHT ARROW
+    | Forward a page. |\n| CTRL+(- OR +) | Increase or decrease the font size, pressing
+    ''-'' decreases and ''+'' increases. Ctrl+0 will reset back to default. |\n| CTRL+A
+    | Selects all text. |\n| CTRL+B | Open the Bookmarks window, to view all bookmarks
+    in Firefox. |\n| CTRL+C | Copies selected text. |\n| CTRL+D | Add a bookmark for
+    the page currently opened. |\n| CTRL+E | Move the cursor to the search box. |\n|
+    CTRL+F | Access the Find option, to search for any text on the currently open
+    web page. |\n| CTRL+G | Advance to the next result of a search performed with
+    CTRL+F. Press CTRL+SHIFT+G to return to a previous search result. |\n| CTRL+H
+    | View browsing history. |'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '| Shortcut | Description |
+
+    |----------|-------------|
+
+    | CTRL+I | Display available bookmarks. |
+
+    | CTRL+J | Display the download window. |
+
+    | CTRL+K | Move the cursor to the search box. |
+
+    | CTRL+L | Move cursor to address box. |
+
+    | CTRL+N | Open New browser window. |
+
+    | CTRL+O | Access the Open File window to open a file in Firefox. |
+
+    | CTRL+P | Print current page or frame. |
+
+    | CTRL+T | Opens a new tab. |
+
+    | CTRL+U | View a web page''s source code. |
+
+    | CTRL+F4 OR CTRL+W | Closes the currently selected tab. |
+
+    | CTRL+F5 | Refresh the page, ignoring the Internet cache (force full refresh).
+    |
+
+    | CTRL+ENTER | Quickly complete an address. For example, type genesis in the address
+    bar and press CTRL+ENTER to get https://www.genesis.com. |
+
+    | CTRL+TAB | Moves through each of the open tabs. |
+
+    | CTRL+SHIFT+DEL | Open the Clear Data window to quickly clear private data. |
+
+    | CTRL+SHIFT+J | Open the Browser Console to troubleshoot an unresponsive script
+    error. |
+
+    | CTRL+SHIFT+P | Open a new private browsing window. |
+
+    | CTRL+SHIFT+T | Undo the close of a window. |
+
+    | CTRL+SHIFT+W | Close the Firefox browser window. |
+
+    | SHIFT+SPACEBAR | Moves up a page at a time. |'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# YOUTUBE SHORTCUT KEYS
+
+
+    | SHORTCUT KEYS | ACTION |
+
+    | --- | --- |
+
+    | PLAY AND PAUSE A VIDEO | • Press the spacebar or the ''K'' key on your keyboard
+    to play and pause a video.<br>• Tip: Holding down either of these keys also plays
+    the video in slow motion. |
+
+    | JUMP TO START OF A VIDEO | • Pressing the ''0'' (zero) key on your keyboard
+    will jump to the beginning of a video. The Home key also works for jumping to
+    the start of a video. |
+
+    | JUMP TO THE END OF A VIDEO OR GO TO THE NEXT VIDEO | • Pressing the END key
+    on your keyboard will go to the end of the video. If you are watching a playlist,
+    it goes to the next video in the playlist. |
+
+    | SKIP OR JUMP IN THE VIDEO | • FAST FORWARD OR REWIND: If you want to fast forward
+    or rewind in increments of five seconds, press the left or right arrow keys. If
+    you need to jump more than five seconds, press the ''J'' key to rewind ten seconds
+    or press the ''L'' |'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '+   key to fast forward 10 seconds.
+
+    - SKIP TO VIDEO SECTIONS: Pressing the number keys from 1 to 9 seeks (jumps) to
+    that percentage of the video. In other words, 1 jumps to 10%, 2 jumps to 20%,
+    3 jumps to 30%, etc.
+
+
+    | CHANGE VIDEO PLAYBACK SPEED | • To decrease the playback speed of a video, hold
+    down the Shift key and press the '','' (comma) key. |
+
+    | | • To increase the playback speed of a video, hold down the Shift key and press
+    the ''.'' (period) key. |
+
+
+    | SWITCH THE VIDEO TO FULL-SCREEN OR THEATER MODE | • Pressing the ''F'' key switches
+    between full-screen and normal mode. |
+
+    | | • Tip: Pressing ESC also exits full-screen mode. |
+
+    | | • Pressing the ''T'' key switches between theater mode and normal mode. |
+
+
+    | TURN ON OR OFF CLOSED CAPTIONS AND SUBTITLES | • If a video has closed captions
+    or subtitles, you can turn them on by pressing the ''C'' key. Pressing ''C'' a
+    second... |'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '| TURN UP AND DOWN THE VOLUME |  · When in full-screen mode, pressing the up
+    or down arrow keys turns up and down the volume of the video. If you are turning
+    down the volume and continue to hold the down arrow key, it will eventually mute
+    the volume.\n· Tip: Pressing ''M'' on the keyboard also mutes and unmutes the
+    volume. |
+
+
+    # TURN UP AND DOWN THE VOLUME
+
+
+    +   · When in full-screen mode, pressing the up or down arrow keys turns up and
+    down the volume of the video. If you are turning down the volume and continue
+    to hold the down arrow key, it will eventually mute the volume.
+
+    · Tip: Pressing ''M'' on the keyboard also mutes and unmutes the volume.'
+  merge: -1
+  pgno: 46
+toc:
+- - '##'
+  - 计算机键盘快捷键
+- - '###'
+  - 快捷键基础
+- - '###'
+  - 每个人都应知道的十大键盘快捷键
+- - '###'
+  - PC 特殊字符快捷键
+- - '###'
+  - 微软 Windows 快捷键
+- - '####'
+  - 通用 Windows 快捷键
+- - '####'
+  - 功能键
+- - '####'
+  - Windows 键快捷键
+- - '####'
+  - WINDOWS 10
+- - '###'
+  - APPLE 快捷键
+- - '###'
+  - UNIX 和 LINUX 快捷键
+- - '####'
+  - 键盘快捷键
+- - '####'
+  - 命令行快捷方式
+- - '###'
+  - MICROSOFT EXCEL 快捷键
+- - '###'
+  - 微软 Word 快捷键
+- - '###'
+  - 谷歌 Chrome 键盘快捷键
+- - '###'
+  - 互联网浏览器键盘快捷键
+- - '###'
+  - 微软 Frontpage 快捷键
+- - '###'
+  - 微软 Outlook 键盘快捷键
+- - '###'
+  - 火狐浏览器 Windows 版键盘快捷键
+- - '###'
+  - YOUTUBE 快捷键
