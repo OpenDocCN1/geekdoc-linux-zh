@@ -1,0 +1,645 @@
+name: Ansible Linux Users & Groups By Examples： 20+ Automation Examples on Linux Users
+  and Groups Operation for Modern IT Infrastructure
+name_cn: Ansible Linux 用户和组 示例
+slug: ansible-linux-users-groups-by-examples-20-automation-example
+toc:
+- - '#'
+  - Ansible Linux 用户和组 示例
+- - '#'
+  - 简介
+- - '##'
+  - 谁是 Luca Berton
+- - '###'
+  - 奖项与认可
+- - '####'
+  - '2022'
+- - '####'
+  - '2021'
+- - '#'
+  - 带示例的 Ansible 入门
+- - '##'
+  - 什么是 Ansible
+- - '###'
+  - Ansible
+- - '###'
+  - Ansible 三大用例
+- - '####'
+  - 部署 (Provisioning)
+- - '####'
+  - 配置管理 (Configuration management)
+- - '##'
+  - 应用部署
+- - '##'
+  - DevOps 中的 Ansible
+- - '##'
+  - Ansible 的四个核心原则
+- - '##'
+  - Ansible 的六大价值
+- - '##'
+  - Ansible 历史
+- - '##'
+  - Ansible & Ansible Tower & Ansible 自动化平台
+- - '##'
+  - 入门
+- - '###'
+  - Ansible 架构
+- - '###'
+  - 与受托管节点的连接
+- - '##'
+  - 创建基础清单
+- - '##'
+  - 运行你的第一个 Ansible 命令
+- - '##'
+  - 在 Ansible 上运行即性命令
+- - '##'
+  - 在 Ansible 上运行带权限提升的即性命令
+- - '##'
+  - 总结
+- - '##'
+  - 清单 (Inventory)
+- - '###'
+  - 简单的 INI 清单
+- - '###'
+  - 简单的 YAML 清单
+- - '###'
+  - 主机范围
+- - '###'
+  - 多组主机
+- - '###'
+  - 主机变量
+- - '###'
+  - 组变量
+- - '###'
+  - 变量值的继承
+- - '###'
+  - 使用多个清单源
+- - '###'
+  - localhost 清单
+- - '###'
+  - 总结
+- - '##'
+  - Playbook
+- - '###'
+  - YAML 语法
+- - '###'
+  - helloworld.yml
+- - '###'
+  - 提示 1：ansible-playbook --check 选项
+- - '###'
+  - 提示 2：debug 的用法
+- - '###'
+  - helloworld_debug.yml - 执行 - 部分 1
+- - '###'
+  - helloworld_debug.yml - 执行 - 部分 2
+- - '###'
+  - 等幂性
+- - '###'
+  - multipleplays.yml
+- - '###'
+  - privilege_escalation.yml
+- - '###'
+  - 最常用的 Ansible 模块
+- - '####'
+  - '**文件模块**'
+- - '####'
+  - '**软件包模块**'
+- - '####'
+  - '**系统模块**'
+- - '####'
+  - '**网络工具模块**'
+- - '###'
+  - 总结
+- - '##'
+  - 变量
+- - '###'
+  - variableprint.yml - 额外变量
+- - '###'
+  - 主机变量和组变量
+- - '###'
+  - 数组变量
+- - '###'
+  - array.yml - 执行
+- - '###'
+  - 注册变量（Registered Variables）
+- - '###'
+  - 使用 ad-hoc 命令列出机器的所有事实
+- - '###'
+  - 使用 playbook 列出机器的所有事实
+- - '###'
+  - '`facts_printall.yml` - 执行'
+- - '###'
+  - 加密已有的文件
+- - '###'
+  - 解密已有的文件
+- - '###'
+  - 修改加密文件的密码
+- - '###'
+  - Playbooks 与 Ansible Vault
+- - '###'
+  - 总结
+- - '##'
+  - 条件
+- - '###'
+  - 使用“when”的基础条件判断
+- - '###'
+  - 基于 ansible_facts 的条件判断
+- - '###'
+  - 总结
+- - '##'
+  - 循环 Loop
+- - '###'
+  - with_* 语句
+- - '###'
+  - loop_with_items.yml
+- - '###'
+  - 总结
+- - '##'
+  - Handler
+- - '###'
+  - rollingupdate.yml
+- - '##'
+  - Role
+- - '###'
+  - Role 目录树
+- - '###'
+  - 在 playbook 中使用 Ansible roles
+- - '###'
+  - 执行顺序
+- - '##'
+  - Ansible Galaxy
+- - '###'
+  - 手动从 Ansible Galaxy 安装 Roles
+- - '###'
+  - 从 Ansible Galaxy 的 requirements.yml 安装 Roles
+- - '##'
+  - Ansible 最佳实践
+- - '###'
+  - 使用空格
+- - '###'
+  - 为每个步骤分配“名称 (name)”
+- - '###'
+  - 为变量使用人类可读且有意义的名称
+- - '###'
+  - 使用原生 YAML
+- - '###'
+  - 使用原生模块代替运行命令
+- - '#'
+  - 安装 Ansible
+- - '##'
+  - Ansible 术语 - ansible 与 ansible-core 包
+- - '###'
+  - 什么是 `ansible-core`？什么是 ansible 社区包？
+- - '###'
+  - ansible vs ansible-core
+- - '####'
+  - Ansible 社区包发布周期
+- - '####'
+  - ansible community
+- - '####'
+  - ansible-core (曾为 ansible-base 2.10)
+- - '###'
+  - ansible-core
+- - '####'
+  - 什么是 `ansible-core` 包？
+- - '###'
+  - ansible community
+- - '####'
+  - 什么是 ansible 社区包？
+- - '###'
+  - Links
+- - '##'
+  - 在 RedHat Enterprise Linux (RHEL) 8 上使用 Ansible Engine 安装 Ansible
+- - '###'
+  - 在 RHEL 8 中安装 Ansible
+- - '###'
+  - Demo
+- - '##'
+  - 在 Ubuntu 20.04 上安装 Ansible
+- - '###'
+  - 在 Ubuntu 20.04 中安装 Ansible
+- - '####'
+  - 第一种方法：Universe 仓库
+- - '####'
+  - 第二种方法：PPA 仓库
+- - '####'
+  - 代码 PPA
+- - '##'
+  - 如何在 Fedora 35 中安装 Ansible
+- - '###'
+  - 如何在 Fedora 35 中安装 Ansible
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '#'
+  - 如何在 CentOS 9 Stream 中安装 Ansible
+- - '###'
+  - 在 CentOS Stream 9 中安装 Ansible
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '##'
+  - 执行前
+- - '##'
+  - 执行后
+- - '##'
+  - 如何在 Windows 11 WSL（Windows Linux 子系统）中安装 Ansible
+- - '###'
+  - 在 Windows 11 中安装 Ansible
+- - '###'
+  - 链接
+- - '##'
+  - 演示
+- - '###'
+  - 代码
+- - '###'
+  - 执行
+- - '###'
+  - 回顾
+- - '##'
+  - 如何在 SUSE Linux Enterprise Server (SLES) 15 SP3 中安装 Ansible
+- - '###'
+  - 在 SLES 15 SP3 中安装 Ansible
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '##'
+  - 如何使用 PIP 安装 Ansible
+- - '###'
+  - 使用 PIP 安装 Ansible 演示
+- - '####'
+  - PIP 用户代码
+- - '####'
+  - PIP 全局代码
+- - '##'
+  - 如何在 RedHat Enterprise Linux 9 Beta 中安装 Ansible
+- - '###'
+  - 在 RHEL 9 Beta 中安装 Ansible
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '##'
+  - 在 Amazon Linux 2 (AWS EC2) 中安装 Ansible
+- - '###'
+  - 如何在 Amazon Linux 2 中安装 Ansible
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '####'
+  - Amazon Extras Library 代码
+- - '####'
+  - Amazon Extras Library 执行结果
+- - '###'
+  - 执行后的 Amazon Extras 库
+- - '####'
+  - EPEL 代码
+- - '####'
+  - EPEL 执行
+- - '###'
+  - Ansible 卸载与安装示例
+- - '###'
+  - 执行后的 EPEL
+- - '###'
+  - 回顾
+- - '###'
+  - 在 Debian 中安装 Ansible
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '#'
+  - Ansible 基础
+- - '##'
+  - Ansible 术语 - `ansible_hostname` 与 `inventory_hostname` 与 `ansible_fqdn`
+- - '###'
+  - '`ansible_hostname` vs `inventory_hostname` vs `ansible_fqdn`'
+- - '####'
+  - '`ansible_hostname` 和 `ansible_fqdn`'
+- - '####'
+  - '`inventory_hostname`'
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '###'
+  - 执行
+- - '###'
+  - 错误执行
+- - '###'
+  - Ansible Playbook 主机
+- - '###'
+  - Ansible Playbook 主机代码
+- - '###'
+  - 执行
+- - '###'
+  - Ansible Playbook 主机进阶
+- - '###'
+  - 代码
+- - '###'
+  - 执行
+- - '###'
+  - 错误执行
+- - '###'
+  - 链接
+- - '##'
+  - 测试主机可用性 - Ansible 模块
+- - '###'
+  - 主要参数和返回值
+- - '###'
+  - 示例
+- - '###'
+  - Ansible debug 模块演示
+- - '#'
+  - Ansible Linux 用户管理
+- - '##'
+  - Ansible 创建用户账户
+- - '###'
+  - 参数
+- - '###'
+  - code
+- - '##'
+  - Ansible 删除用户账户
+- - '###'
+  - 参数
+- - '###'
+  - code
+- - '##'
+  - Ansible 修改密码
+- - '###'
+  - 参数
+- - '###'
+  - demo
+- - '####'
+  - code
+- - '####'
+  - execution
+- - '####'
+  - verification
+- - '##'
+  - Ansible 禁用用户账户
+- - '##'
+  - 参数
+- - '###'
+  - 示例
+- - '####'
+  - 代码
+- - '####'
+  - 输出
+- - '####'
+  - 验证
+- - '###'
+  - 执行后的结果
+- - '##'
+  - Ansible 创建组
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 验证
+- - '###'
+  - demo
+- - '####'
+  - code
+- - '####'
+  - execution
+- - '####'
+  - before execution
+- - '####'
+  - after execution
+- - '##'
+  - Ansible 将用户添加到次要组（组）
+- - '###'
+  - Parameters
+- - '###'
+  - demo
+- - '####'
+  - code
+- - '####'
+  - execution
+- - '####'
+  - before execution
+- - '####'
+  - after execution
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '####'
+  - 错误
+- - '####'
+  - 修复
+- - '##'
+  - Ansible 故障排除 - 缩进错误
+- - '###'
+  - 演示
+- - '####'
+  - 错误
+- - '####'
+  - 修复
+- - '##'
+  - Ansible 故障排除 - 语法错误
+- - '###'
+  - 演示
+- - '####'
+  - 错误代码
+- - '####'
+  - 错误执行
+- - '####'
+  - 修复代码
+- - '####'
+  - 修复执行
+- - '##'
+  - Ansible 故障排除 - 未定义变量
+- - '###'
+  - 演示
+- - '####'
+  - 错误代码
+- - '####'
+  - 错误执行
+- - '####'
+  - 修复代码
+- - '####'
+  - 修复执行
+- - '##'
+  - Ansible 故障排除 - 无效参数
+- - '###'
+  - 错误代码
+- - '###'
+  - 执行错误结果
+- - '###'
+  - 高详细日志执行 (`-vvv`)
+- - '#'
+  - Ansible 执行日志分析
+- - '###'
+  - 环境信息
+- - '###'
+  - 资源解析
+- - '###'
+  - 任务执行
+- - '###'
+  - Python 解释器发现
+- - '###'
+  - 错误堆栈信息
+- - '###'
+  - 最终结果
+- - '###'
+  - 修复代码
+- - '###'
+  - 修复执行
+- - '##'
+  - Ansible 故障排除 - 权限提升错误
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '####'
+  - 错误
+- - '####'
+  - 修复
+- - '##'
+  - Ansible 故障排除 - 缺少 sudo 密码和 sudo 密码错误
+- - '###'
+  - 演示
+- - '####'
+  - 错误代码
+- - '####'
+  - 错误执行
+- - '####'
+  - 故障排除
+- - '##'
+  - Fix code
+- - '##'
+  - Ansible 故障排除 - 下载失败
+- - '###'
+  - demo
+- - '###'
+  - code
+- - '##'
+  - Ansible 故障排除 - chgrp 失败
+- - '###'
+  - demo
+- - '###'
+  - code
+- - '##'
+  - Ansible 故障排除 - not a valid attribute for a Play 错误
+- - '###'
+  - demo
+- - '###'
+  - error code
+- - '###'
+  - error execution
+- - '###'
+  - fix code
+- - '###'
+  - fix execution
+- - '#'
+  - Ansible 故障排除 - 无密码账户
+- - '###'
+  - demo
+- - '####'
+  - 错误代码
+- - '####'
+  - 错误验证
+- - '####'
+  - 错误执行
+- - '####'
+  - 修复代码
+- - '###'
+  - 修复执行
+- - '####'
+  - 修复验证
+- - '###'
+  - 故障排除
+- - '###'
+  - 解决方案
+- - '###'
+  - 解决方案执行
+- - '##'
+  - Ansible 故障排除 - urlopen 错误
+- - '###'
+  - 演示
+- - '####'
+  - 错误代码
+- - '####'
+  - 错误执行
+- - '####'
+  - 修复代码
+- - '####'
+  - 修复执行
+- - '##'
+  - Ansible 故障排除 - 目标不存在
+- - '###'
+  - 演示
+- - '####'
+  - 错误代码
+- - '####'
+  - 错误执行
+- - '####'
+  - 修复代码
+- - '####'
+  - 修复执行
+- - '####'
+  - 验证
+- - '##'
+  - 故障排除
+- - '###'
+  - win_user 故障排除
+- - '####'
+  - 修复代码
+- - '####'
+  - 修复执行
+- - '##'
+  - Ansible 故障排除 - 此命令必须在 root 用户下运行
+- - '###'
+  - 演示
+- - '####'
+  - 错误代码
+- - '####'
+  - 错误执行
+- - '####'
+  - 修复代码
+- - '####'
+  - 修复执行
+- - '#'
+  - 感谢

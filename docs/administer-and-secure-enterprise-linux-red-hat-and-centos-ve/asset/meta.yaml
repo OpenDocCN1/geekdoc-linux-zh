@@ -1,0 +1,458 @@
+name: Administer and Secure Enterprise Linux： Red Hat and CentOS versions 7 and 8
+name_cn: 企业Linux管理与安全：Red Hat和CentOS 7和8版本
+slug: administer-and-secure-enterprise-linux-red-hat-and-centos-ve
+toc:
+- - '#'
+  - 企业Linux管理与安全：Red Hat和CentOS 7和8版本
+- - '#'
+  - 模块 1：引言
+- - '#'
+  - 模块 2：文件与目录
+- - '#'
+  - 模块 3：vi
+- - '#'
+  - 模块 4：用户与组
+- - '#'
+  - 模块 5：权限与所有权
+- - '#'
+  - 模块 6：正则表达式
+- - '#'
+  - 模块 7：启动
+- - '#'
+  - 模块 8：进程与服务
+- - '#'
+  - 模块 9：文件系统
+- - '#'
+  - 模块 10：事件调度
+- - '#'
+  - 模块 11：网络
+- - '#'
+  - 模块 12：远程访问
+- - '#'
+  - 模块 13：SELinux
+- - '#'
+  - 模块 14：日志
+- - '#'
+  - 模块 15：安装软件
+- - '##'
+  - ls /var
+- - '##'
+  - cd audit
+- - '##'
+  - cd /var/log/audit
+- - '##'
+  - pwd
+- - '##'
+  - cd ..
+- - '##'
+  - cd .. / .. /
+- - '##'
+  - 标准目录
+- - '##'
+  - 命令语法
+- - '##'
+  - ls
+- - '##'
+  - '`ls -l -a`'
+- - '##'
+  - '`ls -la /home`'
+- - '##'
+  - 在 bash 中输入
+- - '##'
+  - 确保历史文件是追加而非覆盖
+- - '##'
+  - 在获取提示符之前追加历史
+- - '##'
+  - 重定向
+- - '##'
+  - ls –la
+- - '##'
+  - ls /usr/lib/udev
+- - '##'
+  - ls
+- - '##'
+  - file link
+- - '##'
+  - stat link
+- - '##'
+  - locate cp | head
+- - '##'
+  - locate cp | grep /cp\$
+- - '##'
+  - 定义搜索空间
+- - '##'
+  - find
+- - '##'
+  - find /1 -type f
+- - '##'
+  - find /1 -mindepth 2 -maxdepth 4 -type f
+- - '##'
+  - 按名称搜索
+- - '##'
+  - find /etc -iname "c*" -name "*.conf"
+- - '##'
+  - 按属性搜索
+- - '###'
+  - cat, head, tail
+- - '###'
+  - touch, echo
+- - '###'
+  - mkdir, rm
+- - '###'
+  - cp, mv
+- - '###'
+  - sort, wc, tr, uniq, diff
+- - '###'
+  - 将小写转为大写
+- - '##'
+  - ps
+- - '##'
+  - ps | tr [:lower:] [:upper:]
+- - '###'
+  - 压缩连续空格使内容更紧凑：
+- - '##'
+  - ps | tr -s [:space:]
+- - '###'
+  - 删除输出中的数字：
+- - '##'
+  - ps | tr -d [:digit:]
+- - '###'
+  - 删除所有非数字内容：
+- - '##'
+  - ps | tr -cd [:digit:]
+- - '##'
+  - ps | tr 'bash' 'shell'
+- - '##'
+  - cat song
+- - '##'
+  - uniq song
+- - '##'
+  - diff file1 file1.bk
+- - '##'
+  - diff -y file1 file1.bk | tr -s [:space:] | cat -n
+- - '##'
+  - (vi 模式说明部分)
+- - '####'
+  - 基础操作 (Basics)
+- - '##'
+  - vi filename
+- - '####'
+  - 在普通模式下移动
+- - '####'
+  - 进行选择
+- - '####'
+  - 退出 vi
+- - '###'
+  - 插入内容
+- - '###'
+  - 避免重复
+- - '###'
+  - 全局命令
+- - '###'
+  - 运行命令
+- - '###'
+  - 快速移动
+- - '###'
+  - 其他
+- - '##'
+  - /etc/group, passwd, shadow
+- - '##'
+  - 用户身份管理
+- - '##'
+  - useradd 命令
+- - '##'
+  - chmod
+- - '##'
+  - chmod 755 list
+- - '##'
+  - chmod u=rwx,g=rx,o=rx list
+- - '###'
+  - 特殊用途访问模式
+- - '##'
+  - chmod 7777 file
+- - '##'
+  - ls -l file
+- - '##'
+  - chmod u+s,g+s,o+t file
+- - '##'
+  - ls -l file
+- - '###'
+  - umask
+- - '###'
+  - 访问控制列表 (ACL)
+- - '##'
+  - ls -l
+- - '##'
+  - 正则表达式
+- - '##'
+  - 元字符
+- - '##'
+  - 字符集
+- - '##'
+  - 锚点
+- - '##'
+  - 修饰符与或
+- - '##'
+  - 反向引用 (Backreferences)
+- - '##'
+  - 再次观察
+- - '##'
+  - sed
+- - '###'
+  - 关于 `sed` 的几点说明
+- - '###'
+  - awk
+- - '###'
+  - awk 替换
+- - '###'
+  - awk 程序
+- - '##'
+  - 使用 echo -e "hi \t there \n"
+- - '##'
+  - 启动序列
+- - '##'
+  - Grub 配置
+- - '##'
+  - 单元文件 (Unit Files)
+- - '##'
+  - man -k systemd | grep "unit configuration"
+- - '##'
+  - systemd-analyze verify name.service
+- - '##'
+  - systemctl daemon-reload
+- - '###'
+  - ps, pgrep, kill, pkill, killall
+- - '##'
+  - ps -eo pid,user,pmem,args --sort pme – 所有内容，支持列选择和排序
+- - '##'
+  - '`ps -eo nice,pid,user,com`'
+- - '##'
+  - '`renice PID`'
+- - '##'
+  - '`cgroups: slices, scopes, services`'
+- - '##'
+  - 'systemctl daemon-reload name && # systemctl restart name'
+- - '##'
+  - limits.conf, ulimit
+- - '##'
+  - Inodes
+- - '##'
+  - ls -i /test
+- - '##'
+  - cat /test/file
+- - '##'
+  - ls –li file
+- - '##'
+  - ln file link
+- - '##'
+  - ls –li
+- - '##'
+  - rm file
+- - '##'
+  - ls –li
+- - '##'
+  - cat link
+- - '##'
+  - ln -s /path/original-file /path/created-link
+- - '##'
+  - ln -s /test/link /test/file
+- - '##'
+  - ls -li
+- - '###'
+  - 准备设备
+- - '##'
+  - lsblk
+- - '##'
+  - parted /dev/sdb mkpart data 1MiB 1025MiB
+- - '###'
+  - 创建文件系统
+- - '###'
+  - mount 挂载
+- - '###'
+  - systemd.automount
+- - '###'
+  - /etc/fstab
+- - '####'
+  - free -m
+- - '####'
+  - swapon -s
+- - '##'
+  - fallocate -l 1G /swapfile
+- - '##'
+  - dd if=/dev/zero of=/swapfile count=1024 bs=1024
+- - '##'
+  - chmod 0600 /swapfile
+- - '##'
+  - ls -l /swapfile
+- - '##'
+  - 逻辑卷管理器 (LVM)
+- - '###'
+  - 物理卷 → 卷组
+- - '###'
+  - 卷组 → 逻辑卷
+- - '###'
+  - 逻辑卷 → 文件系统
+- - '##'
+  - pvcreate /dev/sdb4
+- - '##'
+  - vgextend ExampleVG /sdb4
+- - '##'
+  - lvextend /dev/ExampleVG/ExampleLV -L +500M
+- - '##'
+  - LUKS
+- - '##'
+  - 设备上的 LUKS
+- - '##'
+  - lsblk
+- - '##'
+  - cryptsetup luksFormat /dev/sdb
+- - '##'
+  - cryptsetup luksopen /dev/sdb encDisk
+- - '##'
+  - lsblk
+- - '##'
+  - mkfs.ext4 /dev/mapper/encDisk
+- - '##'
+  - mount /dev/mapper/encDisk
+- - '##'
+  - ls /mnt
+- - '##'
+  - LUKS 和 LVM
+- - '##'
+  - 加密设备的挂载自动化
+- - '##'
+  - tail -1 /etc/crypttab
+- - '##'
+  - tail -1 /etc/fstab
+- - '##'
+  - mount /secret
+- - '##'
+  - 密钥
+- - '##'
+  - name device [optional password] [options]
+- - '##'
+  - chmod 0400 /root/keyfile
+- - '##'
+  - cryptsetup luksAddKey /dev/sdb /root/keyfile
+- - '##'
+  - umount /secret
+- - '##'
+  - cryptsetup luksClose encDisk
+- - '##'
+  - cryptsetup luksOpen /dev/sdb encDisk --key-file=/root/keyfile
+- - '##'
+  - mount /secret
+- - '##'
+  - systemd.timer
+- - '##'
+  - timers.timer
+- - '##'
+  - 时间规范
+- - '##'
+  - '`systemd-analyze calendar some-time-spec`'
+- - '##'
+  - '`systemd-run .timers` '
+- - '##'
+  - systemd-run --on-active="1 h 30 m" command
+- - '##'
+  - systemd-run --on-active="1 hour" --on-calendar=daily command
+- - '##'
+  - anacron
+- - '##'
+  - Interval Days Delay Min Name Path/Command
+- - '##'
+  - cron, crontab
+- - '##'
+  - crontab -e -u username
+- - '##'
+  - Min Hour Date Month Day Path/Command
+- - '##'
+  - at, atq, atrm, batch
+- - '##'
+  - hostnamectl
+- - '##'
+  - /etc/hosts
+- - '##'
+  - 网络工具
+- - '##'
+  - NFS
+- - '##'
+  - 创建 NFS 服务器
+- - '##'
+  - 如何配置 X2go 服务器：
+- - '##'
+  - 如何实现 vnc：
+- - '####'
+  - 在 EL7 上：
+- - '####'
+  - 在 EL8 上：
+- - '##'
+  - Enforcement（强制执行）
+- - '##'
+  - setenforce 1
+- - '##'
+  - getenforce
+- - '##'
+  - Enforcing
+- - '##'
+  - setenforce permissive
+- - '##'
+  - getenforce
+- - '##'
+  - Permissive
+- - '##'
+  - User Classes and Roles（用户类和角色）
+- - '##'
+  - setsebool -P ssh_sysadm_login 1
+- - '##'
+  - 类型与策略
+- - '##'
+  - 此文件由 libsemanage 自动生成。请勿直接编辑。
+- - '###'
+  - 布尔值 (Booleans)
+- - '##'
+  - SELinux 管理
+- - '##'
+  - setsebool -P httpd_read_user_content 1
+- - '##'
+  - 生成并
+- - '##'
+  - 移动和复制
+- - '##'
+  - logger -p cron.warning
+- - '###'
+  - auditd
+- - '##'
+  - auditctl -l
+- - '###'
+  - auditisp
+- - '##'
+  - 策略
+- - '##'
+  - 编译策略
+- - '##'
+  - 订阅管理器
+- - '##'
+  - 创建自定义仓库
+- - '##'
+  - Yum 配置
+- - '##'
+  - Yum 插件与选项
+- - '##'
+  - RPM 验证
+- - '##'
+  - Linux 安装
+- - '##'
+  - rsync
+- - '##'
+  - ReaR
+- - '##'
+  - 服务列表
+- - '##'
+  - 'Aide: 高级入侵环境'
+- - '##'
+  - OpenSCAP
+- - '##'
+  - 安全网络
+- - '##'
+  - 命令总结

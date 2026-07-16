@@ -1,0 +1,44 @@
+name: Building Full Linux Mail Server Solution with Virtual Domains and Users
+name_cn: 全 Linux 邮件服务器解决方案构建指南：虚拟域与用户
+slug: building-full-linux-mail-server-solution-with-virtual-domain
+toc:
+- - '#'
+  - 全 Linux 邮件服务器解决方案构建指南：虚拟域与用户
+- - '##'
+  - 1. 引言
+- - '##'
+  - 2. 项目描述
+- - '###'
+  - 2.1 主要目标
+- - '###'
+  - 2.2 系统概述
+- - '###'
+  - 2.3 主要服务器组件
+- - '##'
+  - 3. 邮件服务器软件包的主要安装与配置：
+- - '###'
+  - 3.1 安装 Postfix：
+- - '###'
+  - 3.2 Postfix 的初始配置：
+- - '###'
+  - 3.3 安装 MySQL 软件包：
+- - '###'
+  - 3.4 创建表：
+- - '###'
+  - 3.5 为数据库填充数据：
+- - '###'
+  - 3.6 创建 Postfix-MysSql 配置：
+- - '###'
+  - 3.7 创建虚拟用户和虚拟目录：
+- - '###'
+  - 3.8 使用 MySQL maps 配置 Postfix：
+- - '###'
+  - 3.9 安装 Courier-IMAP 和 Courier-authlib：
+- - '###'
+  - 3.10 Courier-IMAP 配置：
+- - '###'
+  - 3.11 配置 Postfixadmin：
+- - '##'
+  - 4. 安装和配置 MailScanner、ClamAV 和 SpamAssassin
+- - '##'
+  - 5. 测试配置

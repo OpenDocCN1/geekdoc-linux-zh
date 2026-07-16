@@ -1,0 +1,4423 @@
+- fmt: "\n![](images/cover.jpeg)\n\n![cover](images/cover.jpeg)Dr. Hedaya Mahmood\
+    \ Alasooly\n\n# Building Full Linux Mail Server Solution with Virtual Domains\
+    \ and Users\n\nBookRix GmbH & Co. KG\n80331 Munich\n\n### Building Full Linux\
+    \ Mail Server Solution with Virtual Domains and Users\n\nBuilding Full Linux Mail\
+    \ Server Solution with Virtual Domains and Users\n\nBy\n\nDr. Hedaya Mahmood Alasooly\n\
+    Hedaya_alasooly@yahoo.com\n\n### Building Full Linux Mail Server Solution with\
+    \ Virtual Domains and Users\n\nBuilding Full Linux Mail Server Solution with Virtual\
+    \ Domains and Users\n\nSupervised by:\nDr. Hidaia Alassouli\n\nStudent Name\n\
+    Khumalo, Khumbulani V.\n\n### Abstract\n\nIt is common these days for a single\
+    \ system to host many domains, for example uniswa.com and mtn.com or acme.com\
+    \ may run on a single host machine, but behave as if they were on three different\
+    \ hosts. A system usually has a canonical domain, it has its usual or local domain\
+    \ name, and additional domains are configured as virtual domains.\n\nThe purpose\
+    \ behind this work is to create a mail server solution based on `Postfix` that\
+    \ is based on virtual users and domains, i..e. users and domains that are in a\
+    \ MySQL database. The goal is to have completely virtual users and domains. `bob@uniswa.com\
+    \ != bob@acme.com`. This means creating a separate name spaces for reach domain.\n\
+    \nIt will also demonstrate the installation and configuration of `Courier-Imap`\
+    \ (IMAP/POP3), so it can authenticate against the same MySQL database `Postfix`\
+    \ uses. The resulting `postfix` server is capable of quota which is not built\
+    \ into `Postfix` by default; the project will demonstrate how to patch `postfix`\
+    \ appropriately. Passwords are stored in encrypted form in the database. The work\
+    \ also covers the installation of `Mail Scanner`, `SpamAssassin` and `ClamAv`\
+    \ so that emails will be scanned for spams and viruses. The administration of\
+    \ MySQL database can be done through a web based tool `Postfixadmin` or can be\
+    \ done manually in the `MySQL` shell. `Postfixadmin` is a web based management\
+    \ tool created for `Postfix` that handles `Postfix` style virtual domains and\
+    \ users that are stored in MySQL. The `squirrelmail` web based email client is\
+    \ installed, in order to check emails from anywhere in world via internet. All\
+    \ installations were done in Fedora 5 Linux machine.\n\n### Table of contents\n\
+    \n1. Introduction\n2. Description of the Project\n    2.1 Main Objectives\n  \
+    \  2.2 System Overview\n    2.3 Main Server Components\n3. Main installation and\
+    \ configuration of the mail server packages\n    3.1 Installing `Postfix`\n  \
+    \  3.2 Initial Configuration of `Postfix`\n    3.3 Installing MySQL packages\n\
+    \    3.4 Creating MySQL Tables\n    3.5 Populating database with some data\n \
+    \   3.6 Creating `Postfix-MySQl` Configuration Files\n    3.7 Creating Virtual\
+    \ User and Virtual Directory\n    3.8 Configuring `Postfix` with MySQL maps\n\
+    \    3.9 Installing `Courier-IMAP` and `Courier-authlib6`\n    3.10 `Courier-IMAP`\
+    \ Configuration\n    3.11 Configuring `Postfixadmin`\n    3.12 Configuring `Squirrelmail`\n\
+    \    3.13 Installing and Configuring `MailScanner`, `ClamAV` and `SpamAssassin`\n\
+    4 Testing the configuration\n5 Conclusion\n\n### 1. Introduction\n\nThe purpose\
+    \ behind this project is to create a mail server solution based on `Postfix` that\
+    \ is based on virtual users and domains, i..e. users and domains that are in a\
+    \ MySQL database. It will also demonstrate the installation and configuration\
+    \ of `Courier-Imap` (IMAP/POP3), so it can authenticate against the same MySQL\
+    \ database `Postfix` uses. The resulting `postfix` server is capable of quota\
+    \ which is not built into `Postfix` by default; the project will demonstrate how\
+    \ to patch `postfix` appropriately. Passwords are stored in encrypted form in\
+    \ the database. The project also covers the installation of `Mail Scanner`, `SpamAssassin`\
+    \ and `ClamAv` so that emails will be scanned for spams and viruses. The administration\
+    \ of MySQL database can be done through a web based tool `Postfixadmin` or can\
+    \ be done manually in the `MySQL` shell. `Postfixadmin` is a web based management\
+    \ tool created for `Postfix` that handles `Postfix` style virtual domains and\
+    \ users that are stored in MySQL. The `squirrelmail` web based email client is\
+    \ installed, in order to check emails from anywhere in world via internet. All\
+    \ installations were done in Fedora 5 machine.\n\nThe project composed from the\
+    \ following parts:\n\n* Installing `Postfix`.\n* Installing `Courier-IMAP` (in\
+    \ case you want to use `Courier` as IMAP).\n* Creating MySQL Tables.\n* Populating\
+    \ database.\n* Creating `Postfix-Mysql` Configuration Files.\n* Installing `Postfixadmin`.\n\
+    * Installing `MailScanner`.\n* Installing `ClamAV`.\n* Creating Virtual User and\
+    \ Virtual Directory.\n* Configuring `Postfix`.\n* `Courier-IMAP` Configuration.\n\
+    * Configuring `Squirrelmail`.\n* Testing the Configuration.\n\n### 2. Description\
+    \ of the Project\n\n#### 2.1 Main Objectives\n\nThe main objective of this work\
+    \ is to create an email server that supports multiple domains for example `bob@mtn.com`\
+    \ and `bob@acme.com` receive. When the mail server setup has been completed it\
+    \ must be able to:\n\n* Receive and store emails for users.\n* Support quota to\
+    \ keep the mailboxes to reasonable size.\n* Let users retrieve emails through\
+    \ IMAP and POP3.\n* Receive and forward email.\n* Offer a webmail interface to\
+    \ read.\n* Detect virus and spam and filter them.\n\n#### 2.2 System Overview\n\
+    \nThe project describes how to create an email server with virtual domains and\
+    \ virtual users (users can not log into the system, they can only exist in database).\
+    \ Basic knowledge of the following components is required to successfully set\
+    \ up the server:\n\n* `MySQL` (creating a database, granting access to users),\
+    \ this is a database system that stores information about the domains, the user\
+    \ accounts and email forwarding.\n* `SMTP` (`Postfix`) this is a protocol used\
+    \ between mail servers to send email messages.\n* `POP3`, IMAP the type used here\
+    \ is `Courier-IMAP` an alternative could be `dovecot`, this is a server that provides\
+    \ access to mail directories.\n* `Fedora` (Linux), understanding the general system\
+    \ administration, using text editor, command line and reading log files.\n\nThe\
+    \ accounts are stored in a MySQL databaseThe domains will have separate name spaces,\
+    \ for example mail for `bob@acme.com` and `bob@mtn.com` will go to separate mailboxes.\
+    \ So the arrangement will be separate mailboxes for each virtual account.\n\n\
+    The server will use a POP/IMAP server that supports multiple domains. In this\
+    \ arrangement the administrator need not create and maintain system accounts for\
+    \ email addresses on the server, instead he will configure `Postfix` to deliver\
+    \ mail to a local message store where each virtual email address can have its\
+    \ mailbox file. The users then retrieve their messages through the POP IMAP server.\n\
+    \nIn addition the server will be capable of quota support and scanning of spam\
+    \ and viruses (`Mail Scanner`, `Spam Assassin`). The database (`MySQL`) will be\
+    \ managed manually from the command line `mysql` shell or by a web based management\
+    \ tool (`Postfixadmin`) created for `postfix`, and the users access their emails\
+    \ through a web based email client interface (`Squirrelmail`).The block diagram\
+    \ below (figure 1) illustrates the system.\n\n![](images/159551731830073699_1.jpg)\n\
+    \n**Fig. 2.1 Server System Block Diagram**\n\n#### 2.3 Main Server Components\n\
+    \nThe mail server will be created with the following packages in Fedora core 5\
+    \ operating system:\n\n* `Postfix` - `2.2.8-1.2`.\n* `MySQL` - `5.0.18-2.1`.\n\
+    * `Courier – Imap` – `4.4.1-1.5`.\n* `Courier – Authlib` – `0.62.1-1.fc5`.\n"
+  raw: '
+
+
+    ![](images/cover.jpeg)
+
+
+    ![cover](images/cover.jpeg)Dr. Hedaya Mahmood Alasooly
+
+
+    # Building Full Linux Mail Server Solution with Virtual Domains and Users
+
+
+    BookRix GmbH & Co. KG
+
+
+    80331 Munich
+
+
+    ### Building Full Linux Mail Server Solution with Virtual Domains and Users
+
+
+    Building Full Linux Mail Server Solution with Virtual Domains and Users
+
+
+    By
+
+
+    Dr. Hedaya Mahmood Alasooly
+
+
+    Hedaya_alasooly@yahoo.com
+
+
+    ### Building Full Linux Mail Server Solution with Virtual Domains and Users
+
+
+    **Building Full Linux Mail Server Solution with Virtual Domains and Users**
+
+
+    Supervised by:
+
+
+    Dr. Hidaia Alassouli
+
+
+    Student Name
+
+
+    Khumalo, Khumbulani V.
+
+
+    ### Abstract
+
+
+    **Abstract**
+
+
+    It is common these days for a single system to host many domains, for example
+    uniswa.com and mtn.com or acme .com may run on a single host machine, but behave
+    as if they were on three different hosts. A system usually has a canonical domain,
+    it has its usual or local domain name, and additional domains are configured as
+    virtual domains.
+
+
+    The purpose behind this work is to create a mail server solution based on Postfix
+    that is based on virtual users and domains, i..e. users and domains that are in
+    a MySQL database. The goal is to have completely virtual users and domains. bob@uniswa.com
+    != bob@acme.com. This means creating a separate name spaces for reach domain.
+
+
+    It will also demonstrate the installation and configuration of Courier-Imap (IMAP/POP3),
+    so it can authenticate against the same MySQL database Postfix uses. The resulting
+    postfix server is capable of quota which is not built into Postfix by default;
+    the project will demonstrate how to patch postfix appropriately. Passwords are
+    stored in encrypted form in the database. The work also covers the installation
+    of Mail Scanner, SpamAssassin and ClamAv so that emails will be scanned for spams
+    and viruses. The administration of MySQL database can be done through a web based
+    tool Postfixadmin or can be done manually in the MySQL shell. Postfixadmin is
+    a web based management tool created for Postfix that handles Postfix style virtual
+    domains and users that are stored in MySQL. The squirrelmail web based email client
+    is installed, in order to check emails from anywhere in world via internet. All
+    installations were done in Fedora 5 Linux machine.
+
+
+    ### Table of contents
+
+
+    **Table of contents**
+
+
+    1\. Introduction
+
+
+    2\. Description of the Project      
+
+
+    2.1 Main Objectives
+
+
+    2.2 System Overview
+
+
+    2.3 Main Server Components
+
+
+    3\. Main installation and configuration of the mail server packages
+
+
+    3.1 Installing Postfix
+
+
+    3.2 Initial Configuration of Postfix
+
+
+    3.3 Installing MySQL packages
+
+
+    3.4 Creating MySQL Tables
+
+
+    3.5 Populating database with some data
+
+
+    3.6 Creating Postfix-MySQl Configuration Files
+
+
+    3.7 Creating Virtual User and Virtual Directory
+
+
+    3.8 Configuring Postfix with MySQL maps
+
+
+    3.9 Installing Courier-IMAP and Courier-authlib6
+
+
+    3.10 Courier-IMAP Configuration19
+
+
+    3.11 Configuring Postfixadmin
+
+
+    3.12 Configuring Squirrelmail
+
+
+    **3.13 Installing** **and Configuring MailScanner, ClamAV and SpamAssassin**
+
+
+    **4 Testing** **the configuration**
+
+
+    **5 Conclusion**
+
+
+    ### 1. Introduction:
+
+
+    **1\. Introduction:**
+
+
+    The purpose behind this project is to create a mail server solution based on Postfix
+    that is based on virtual users and domains, i..e. users and domains that are in
+    a MySQL database. It will also demonstrate the installation and configuration
+    of Courier-Imap (IMAP/POP3), so it can authenticate against the same MySQL database
+    Postfix uses. The resulting postfix server is capable of quota which is not built
+    into Postfix by default; the project will demonstrate how to patch postfix appropriately.
+    Passwords are stored in encrypted form in the database. The project also covers
+    the installation of Mail Scanner, SpamAssassin and ClamAV so that emails will
+    be scanned for spams and viruses. The administration of MySQL database can be
+    done through a web based tool Postfixadmin or can be done manually in the MySQL
+    shell. Postfixadmin is a web based management tool created for Postfix that handles
+    Postfix style virtual domains and users that are stored in MySQL. The squirrelmail
+    web based email client is installed, in order to check emails from anywhere in
+    world via internet. All installations were done in Fedora 5 machine.
+
+
+    The project composed from the following parts:
+
+
+    • **I**nstalling Postfix.
+
+
+    • Installing Courier-IMAP (in case you want to use Courier as IMAP/POP Server).
+
+
+    • Creating the Database Tables.
+
+
+    • Populating Database with Some Data.
+
+
+    • Creating the Postfix-Mysql Configuration Files.
+
+
+    • Installing Postfixadmin.
+
+
+    • Installing MailScanner.
+
+
+    • Installing ClamAV and SpamAssassin.
+
+
+    • Creating the Virtual User and Virtual Directory.
+
+
+    • Configuring MailScanner.
+
+
+    • Configuring Postfix.
+
+
+    • Courier-IMAP Configuration.
+
+
+    • Configuring Squirrellmail.
+
+
+    • Testing the Configuration.
+
+
+    I advice that you install the necessary packages from rpm.pbone.net. All installations
+    were done in Fedora 5 Linux machine.
+
+
+    ### 2. Description of the Project:
+
+
+    **2\. Description of the Project:**
+
+
+    2.1 Main Objectives:
+
+
+    The main objective of this work is to create an email server that supports mail
+    delivery to multiple virtual domains .Each email address will be authentic to
+    only that domain, for example Bob@mtn.com and Bob@acme.com are two different accounts
+    that each receives different emails.
+
+
+    When the mail server setup has been completed it must be able to:
+
+
+    *   Receive and store emails for users.
+
+
+    *   Support quota to keep the mailboxes to a reasonable size of choice.
+
+
+    *   Let users retrieve emails through IMAP and POP3.
+
+
+    *   Receive and forward email for users if they are authenticated.
+
+
+    *   Offer a webmail interface to read emails in a web browser.
+
+
+    *   Detect virus and spam emails and filter them out or tag them.
+
+
+    2.2 System Overview:
+
+
+    The project describes how to create an email server with virtual domains and virtual
+    users (users who can not log into the system, they can only exist in a database).
+
+
+    Basic knowledge of the following components is required to successfully set up
+    the server.
+
+
+    *   MySQL (creating a database, granting access to users), this is a database
+    system that stores information about the domains, the user accounts and email
+    forwarding.
+
+
+    *   SMTP (Postfix) this is a protocol used between mail servers to send email
+    messages.
+
+
+    *   POP3, IMAP the type used here is Courier-IMAP an alternative could be dovecot,
+    this is a server that provides access to mail directories.
+
+
+    *   Fedora (Linux), understanding the general system administration, using text
+    editor, command line and reading log files.
+
+
+    The accounts are stored in a MySQL database .The domains will have separate name
+    spaces, for example mail for Bob@acme.com and Bob@mtn.com will go to separate
+    mailboxes. So the arrangement will be separate mailboxes for each virtual account.
+
+
+    The server will use a POP/IMAP server that supports multiple domains. In this
+    arrangement the administrator need not create and maintain system accounts for
+    email addresses on the server, instead he will configure Postfix to deliver mail
+    to a local message store where each virtual email address can have its own mailbox
+    file. The users then retrieve their messages through the POP /IMAP server.
+
+
+    In addition the server will be capable of quota support and scanning of spam and
+    viruses (Mail Scanner, Spam Assassin). The database (MySQL) will be managed manually
+    from the command line mysql shell or by a web based management tool (Postfixadmin)
+    created for postfix, and the users access their emails through a web based email
+    client interface client (Squirrelmail).The block diagram below (figure 1) illustrates
+    the system.
+
+
+    ![](images/159551731830073699_1.jpg)
+
+
+    **Fig. 2.1 Server System Block Diagram**
+
+
+    2.3 Main Server Components:
+
+
+    The mail server will be created with the following packages in Fedora core 5 operating
+    system:
+
+
+    *   Postfix -2.2.8-1.2.
+
+
+    *   MySQL -5.0.18-2.1.
+
+
+    *   Courier – Imap – 4.4.1-1.5.
+
+
+    *   Courier – Authlib – 0.62.1- 1.fc5.'
+  toc: []
+  trans: "\n\n![](img/cover.jpeg)\n\n![cover](img/cover.jpeg)Hedaya Mahmood Alasooly\
+    \ 博士\n\n# 构建基于虚拟域名和用户的完整 Linux 邮件服务器解决方案\n\nBookRix GmbH & Co. KG\n80331 慕尼黑\n\
+    \n### 构建基于虚拟域名和用户的完整 Linux 邮件服务器解决方案\n\n构建基于虚拟域名和用户的完整 Linux 邮件服务器解决方案\n\n作者\n\
+    \nHedaya Mahmood Alasooly\nHedaya_alasooly@yahoo.com\n\n### 构建基于虚拟域名和用户的完整 Linux\
+    \ 邮件服务器解决方案\n\n构建基于虚拟域名和用户的完整 Linux 邮件服务器解决方案\n\n指导老师：\nHidaia Alassouli 博士\n\n\
+    学生姓名\nKhumalo, Khumbulani V.\n\n### 摘要\n\n如今，一个系统托管多个域名已很常见，例如，uniswa.com 和 mtn.com\
+    \ 或 acme.com 可能运行在同一台主机机器上，但表现得就像运行在三个不同的主机上一样。一个系统通常有一个规范域名，它有其通常或本地域名，而额外的域名被配置为虚拟域名。\n\
+    \n这项工作的目的是创建一个基于 `Postfix` 的邮件服务器解决方案，该方案基于虚拟用户和域名，即存储在 MySQL 数据库中的用户和域名。目标是实现完全虚拟化的用户和域名。`bob@uniswa.com\
+    \ != bob@acme.com`。这意味着为每个域名创建一个独立的命名空间。\n\n它还将演示 `Courier-Imap` (IMAP/POP3) 的安装和配置，使其能够通过\
+    \ `Postfix` 使用的同一个 MySQL 数据库进行身份验证。生成的 `postfix` 服务器具备配额管理功能，而这是 `Postfix` 默认并不包含的；该项目将演示如何适当地修补\
+    \ `postfix`。密码以加密形式存储在数据库中。该工作还涵盖了 `Mail Scanner`、`SpamAssassin` 和 `ClamAv` 的安装，以便对邮件进行垃圾邮件和病毒扫描。MySQL\
+    \ 数据库的管理可以通过基于 Web 的工具 `Postfixadmin` 完成，也可以在 `MySQL` 终端中手动完成。`Postfixadmin` 是一个为\
+    \ `Postfix` 创建的 Web 端管理工具，用于处理存储在 MySQL 中的 `Postfix` 风格的虚拟域名和用户。安装了基于 Web 的 `squirrelmail`\
+    \ 邮件客户端，以便用户通过互联网从世界任何地方检查邮件。所有安装均在 Fedora 5 Linux 机器上完成。\n\n### 目录\n\n1. 引言\n\
+    2. 项目描述\n    2.1 主要目标\n    2.2 系统概述\n    2.3 主要服务器组件\n3. 邮件服务器软件包的主要安装与配置\n  \
+    \  3.1 安装 `Postfix`\n    3.2 `Postfix` 的初始配置\n    3.3 安装 MySQL 软件包\n    3.4 创建\
+    \ MySQL 表\n    3.5 为数据库填充数据\n    3.6 创建 `Postfix-MySQl` 配置文件\n    3.7 创建虚拟用户和虚拟目录\n\
+    \    3.8 使用 MySQL 映射配置 `Postfix`\n    3.9 安装 `Courier-IMAP` 和 `Courier-authlib6`\n\
+    \    3.10 `Courier-IMAP` 配置\n    3.11 配置 `Postfixadmin`\n    3.12 配置 `Squirrelmail`\n\
+    \    3.13 安装并配置 `MailScanner`、`ClamAV` 和 `SpamAssassin`\n4. 测试配置\n5. 结论\n\n###\
+    \ 1. 引言\n\n项目的目的是创建一个基于 `Postfix` 的邮件服务器解决方案，该方案基于虚拟用户和域名，即存储在 MySQL 数据库中的用户和域名。它还将演示\
+    \ `Courier-Imap` (IMAP/POP3) 的安装和配置，使其能够通过 `Postfix` 使用的同一个 MySQL 数据库进行身份验证。生成的\
+    \ `postfix` 服务器具备配额管理功能，而这是 `Postfix` 默认并不包含的；该项目将演示如何适当地修补 `postfix`。密码以加密形式存储在数据库中。项目还涵盖了\
+    \ `Mail Scanner`、`SpamAssassin` 和 `ClamAv` 的安装，以便对邮件进行垃圾邮件和病毒扫描。MySQL 数据库的管理可以通过命令行\
+    \ `mysql` 终端手动完成，也可以通过为 `postfix` 创建的 Web 端管理工具 (`Postfixadmin`) 完成，用户通过基于 Web\
+    \ 的邮件客户端界面 (`Squirrelmail`) 访问其邮件。所有安装均在 Fedora 5 机器上完成。\n\n项目由以下部分组成：\n\n* 安装\
+    \ `Postfix`。\n* 安装 `Courier-IMAP`（如果你想使用 `Courier` 作为 IMAP）。\n* 创建 MySQL 表。\n\
+    * 填充数据库。\n* 创建 `Postfix-Mysql` 配置文件。\n* 安装 `Postfixadmin`。\n* 安装 `MailScanner`。\n\
+    * 安装 `ClamAV`。\n* 创建虚拟用户和虚拟目录。\n* 配置 `Postfix`。\n* `Courier-IMAP` 配置。\n* 配置 `Squirrelmail`。\n\
+    * 测试配置。\n\n### 2. 项目描述\n\n#### 2.1 主要目标\n\n这项工作的主要目标是创建一个支持多个域名的邮件服务器，例如接收 `bob@mtn.com`\
+    \ 和 `bob@acme.com` 的邮件。当邮件服务器设置完成后，它必须能够：\n\n* 为用户接收并存储邮件。\n* 支持配额管理以将邮箱保持在合理范围内。\n\
+    * 让用户通过 IMAP 和 POP3 获取邮件。\n* 接收并转发邮件。\n* 提供一个 Web 邮件界面进行阅读。\n* 检测病毒和垃圾邮件并进行过滤。\n\
+    \n#### 2.2 系统概述\n\n该项目描述了如何创建一个虚拟域名和虚拟用户的邮件服务器（用户无法登录系统，他们仅存在于数据库中）。成功设置服务器需要具备以下组件的基础知识：\n\
+    \n* `MySQL`（创建数据库、授予用户访问权限），这是一个存储域名、用户帐户和邮件转发信息的数据库系统。\n* `SMTP` (`Postfix`)，这是邮件服务器之间发送邮件消息的协议。\n\
+    * `POP3`, IMAP，这里使用的类型是 `Courier-IMAP`，替代方案可以是 `dovecot`，这是一个提供邮件目录访问的服务器。\n*\
+    \ `Fedora` (Linux)，理解一般的系统管理、使用文本编辑器、命令行以及读取日志文件。\n\n帐户存储在 MySQL 数据库中。域名将具有独立的命名空间，例如，`bob@acme.com`\
+    \ 和 `bob@mtn.com` 的邮件将进入不同的邮箱。因此，安排将为每个虚拟账户设置独立的邮箱。\n\n服务器将使用一个支持多个域的 POP/IMAP\
+    \ 服务器。在这种安排下，管理员不需要为服务器上的电子邮件地址创建和维护系统帐户，相反，他将配置 `Postfix` 将邮件递送到本地消息存储，每个虚拟邮件地址都可以有一个邮箱文件。用户随后通过\
+    \ POP IMAP 服务器检索其消息。\n\n此外，服务器将具备配额支持以及垃圾邮件和病毒扫描功能（`Mail Scanner`、`Spam Assassin`）。数据库\
+    \ (`MySQL`) 将通过命令行 `mysql` 终端手动管理，或通过为 `postfix` 创建的 Web 端管理工具 (`Postfixadmin`)\
+    \ 管理，用户通过基于 Web 的邮件客户端界面 (`Squirrelmail`) 访问其邮件。下方的框图（图 1）展示了该系统。\n\n![](img/159551731830073699_1.jpg)\n\
+    \n**图 2.1 服务器系统框图**\n\n#### 2.3 主要服务器组件\n\n邮件服务器将在 Fedora core 5 操作系统中使用以下软件包创建：\n\
+    \n* `Postfix` - `2.2.8-1.2`。\n* `MySQL` - `5.0.18-2.1`。\n* `Courier – Imap` –\
+    \ `4.4.1-1.5`。\n* `Courier – Authlib` – `0.62.1-1.fc5`。\n\n"
+- fmt: "\n* `Squirrelmail` – `1.4.6.tar.bz2`.\n* `PostfixAdmin` – `2.3.3.tar.gz`.\n\
+    * `Apache2` that comes by default with Fedora core 5.\n* `Mail Scanner-4.84.3-1.rpm.tar.gz`.\n\
+    * `Install-Clam-0.96.5-SA-3.3.1` or any `clamav` package.\n* `SpamAssassin` which\
+    \ comes by default with Fedora core 5.\n* `Fedora core 5` (Operating system).\n\
+    * `Compaq 610 laptop Intel core Duo 3GHz 2GB RAM 320 GB Hard Drive`.\n\nAll packages\
+    \ used are the `i386` types. It is assumed that Fedora core 5 and `Mozilla Fire\
+    \ Fox` have been successfully installed and support for `HTTP` and `SMTP` enabled\
+    \ with the Firewall turned off.\n\n## 3. Main installation and configuration of\
+    \ the mail server packages:\n\nThe project covers the following parts:\n* Installing\
+    \ `Postfix`.\n* Installing `Courier-IMAP` (in case you want to use `Courier` as\
+    \ `IMAP/POP` Server).\n* Creating the Database Tables.\n* Populating Database\
+    \ with Some Data.\n* Creating the `Postfix-Mysql` Configuration Files.\n* Installing\
+    \ `Postfixadmin`.\n* Installing `MailScanner`.\n* Installing `ClamAV` and `SpamAssassin`.\n\
+    * Creating the Virtual User and Virtual Directory.\n* Configuring `MailScanner`.\n\
+    * Configuring `Postfix`.\n* `Courier-IMAP` Configuration.\n* Configuring `Squirrellmail`.\n\
+    \n### 3.1 Installing Postfix:\n\nPostfix is not shipped with quota and `MySQL`\
+    \ databases support, so for it to support these a `Postfix` source package and\
+    \ a `Postfix` quota patch are obtained, extracted and the specification file of\
+    \ the patch edited as done below. `Postfix` is patched and a new `Postfix` package\
+    \ specific to the environment `Postfix` will run on is obtained. The new `Postfix`\
+    \ is then installed. \n\nDownload `Postfix – 2.2.8 – 1.2.src.rpm` and `Postfix\
+    \ – 2.2.8 – vda.patch.gz` or any other version in `/usr/redhat/SOURCES` directory.\n\
+    \n```bash\nrpm -ivh Postfix – 2.2.8 – 1.2.src.rpm\ngunzip postfix-2.2.8-vda.patch.gz\n\
+    cd /usr/src/redhat/SPECS/\ngedit postfix.spec # editing the specification file\n\
+    ```\n\n- change `% define MYSQL 0` to `% define MYSQL 1`\n- add `Patch 0: postfix-2.2.8-vda.patch`\
+    \ to the `# Patches` stanza\n- add `%patch0 -p1 -b .vda` to the `%setup -q` stanza\n\
+    \nThen build a new `postfix` package with quota and `MySQL` databases support\
+    \ and install it.\n\n```bash\nrpmbuild -ba postfix.spec\n```\n\nNavigate to the\
+    \ `i386` directory and install `postfix` and two other packages found inside the\
+    \ folder (`postfix_debuginfo` and `pflogsumm`)\n\n```bash\ncd /usr/src/redhat\
+    \ /RPMS/i386\nrpm - ivh postfix - 2.2.8-1.2.i386.rpm\n```\n\nThe installation\
+    \ required some dependencies depending on the installed packages your system,\
+    \ so you should download and install them then try reinstalling `postfix`.\n\n\
+    ### 3.2 Initial Configuration of Postfix:\n\nTo configure `Postfix`, the following\
+    \ lines are edited and uncommented in the `/etc/postfix/main.cf` file. `Postfix`\
+    \ is made aware of the fully qualified name and the local domain name of the server.\
+    \ Also given the server’s outbound domain name that will be used when the emails\
+    \ sent by the server, what Ethernet interfaces will be allowed to accept, and\
+    \ the email clients IP addresses that are allowed to log in locally in the network\
+    \ .\n\n```ini\nmyhostname =project.uniswa.com\nmydomain =uniswa.com\nmyorigin\
+    \ =$myhostname\ninet_interfaces = all\nmydestination = $myhostname, localhost.$mydomain,\
+    \ localhost\nmynetworks_style = subnet\n```\n\nTo test if this was a success do\
+    \ the following:\n\n```bash\nservice postfix restart\ntelnet localhost 25 // an\
+    \ output similar to the one below will come up\n```\n\n```\nTrying 127.0.0.1 …\n\
+    Connected to localhost.localdomain (127.0.0.1)\nEscape character is ‘^].\n220\
+    \ project.uniswa.com ESMTP Postfix\nmail from: xyz\nrcpt to: root@project.uniswa.sz\n\
+    data\nHi testing\n.\nquit\n```\n\n### 3.3 Installing MySQL packages:\n\nInstall\
+    \ `MySQL`, `mysql-devel`, `mysql-server`, `mysql-client` packages from the `RPMS`\
+    \ that come with Fedora along with any dependency packages. To install for example\
+    \ `mysql`, write:\n\n```bash\nrpm –ivh mysql-*.rpm\n```\n\n### 3.4 Creating MySQL\
+    \ Tables:\n\nInside the `MySQL` shell, the `Postfix` and `Postfix Admin` users\
+    \ and passwords are created and given privileges to use `Postfix`. Here the table\
+    \ structure for `MySQL` that you need in order to configure `Postfix Admin` and\
+    \ `Postfix` in general to work with Virtual Domains and Users.\n\n```sql\nmysql\n\
+    USE mysql;\n```\n\nTo create `Postfix` user & password :\n\n```sql\nINSERT INTO\
+    \ user (Host, User, Password) VALUES (‘localhost’, ‘postfix’, password (‘postfix’));\n\
+    INSERT INTO db (Host, Db, User, Select_priv) VALUES (‘localhost’, ‘postfix’, ‘Y’);\n\
+    ```\n\nTo create `Postfixadmin` user & password:\n\n```sql\nINSERT INTO user (Host,\
+    \ User, Password) VALUES (‘localhost’, ‘postfixadmin’, password (‘postfixadmin’));\n\
+    FLUSH PRIVILEGES;\nGRANT ALL ON mysql.* TO `postfix`@`localhost`;\nGRANT ALL ON\
+    \ mysql.* TO `postfixadmin`@`localhost`;\nGRANT ALL ON mysql.* TO `postfix`@`localhost`;\n\
+    ```\n\nTo create `postfix` database:\n\n```sql\nCREATE DATABASE postfix;\nUSE\
+    \ postfix;\n```\n\nNow the needed database and `user` have been added and given\
+    \ the correct permissions. The table structure for `postfix` package with quota\
+    \ and MySQL support.\n\nThe `admin` table will store information about `postfix`:\n\
+    \n```sql\nCREATE TABLE admin (username (255) NOT NULL, password (255) NOT NULL,\
+    \ Created datetime NOT NULL default ‘0000-00-00 00:00:00’, Modified datetime default\
+    \ ‘0000-00-00 00:00:00’, active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY\
+    \ (username));\n```\n\nThe `alias` table is for aliasing one email address to\
+    \ another:\n\n```sql\nCREATE TABLE alias (address (255) NOT NULL, domain (255)\
+    \ NOT NULL, Created datetime NOT NULL default ‘0000-00-00 00:00:00’, Modified\
+    \ datetime default ‘0000-00-00 00:00:00’, active tinyint (1) NOT NULL default\
+    \ ‘1’, PRIMARY KEY (username));\n```\n\nThe `domain` table will store each virtual\
+    \ domain that `Postfix` should receive emails for:\n\n```sql\nCREATE TABLE domain\
+    \ (domain (255) NOT NULL, description (255) NOT NULL, Aliases int (10) NOT NULL\
+    \ default ‘0’, Mailboxes int (10) NOT NULL default ‘0’, Maxquota int (10) NOT\
+    \ NULL default ‘0’, transport (255) default NULL, backupmx tinyint (1) NOT NULL\
+    \ default ‘1’, Created datetime NOT NULL default ‘0000-00-00 00:00:00’, Modified\
+    \ datetime default ‘0000-00-00 00:00:00’, active tinyint (1) NOT NULL default\
+    \ ‘1’, PRIMARY KEY (domain));\n```\n\nThe `domain_admins` table will store information\
+    \ about domain administrators:\n\n```sql\nCREATE TABLE domain_admins (username\
+    \ (255) NOT NULL, domain (255) NOT NULL, Create datetime NOT NULL default ‘0000-00-00\
+    \ 00:00:00’, Modified datetime default ‘0000-00-00 00:00:00’, active tinyint (1)\
+    \ NOT NULL default ‘1’, PRIMARY KEY (username));\n```\n\nThe `log` table will\
+    \ store the time of activity for each virtual domain and user:\n\n```sql\nCREATE\
+    \ TABLE log (timestamp datetime NOT NULL default ‘0000-00-00 00:00:00’, Username\
+    \ (255) NOT NULL, Domain (255) NOT NULL, Action (255) NOT NULL, Data (255) NOT\
+    \ NULL, KEY timestamp (timestamp));\n```\n"
+  raw: '*   Squirrelmail – 1.4.6.tar.bz2.
+
+
+    *   PostfixAdmin – 2.3.3.tar.gz.
+
+
+    *   Apache2 that comes by default with Fedora core 5.
+
+
+    *   Mail Scanner-4.84.3-1.rpm.tar.gz.
+
+
+    *   Install-Clam-0.96.5-SA-3.3.1 or any clamav package.
+
+
+    *   SpamAssassin which comes by default with Fedora core 5.
+
+
+    *   Fedora core 5 (Operating system).
+
+
+    *   Compaq 610 laptop Intel core Duo 3GHz 2GB RAM 320 GB Hard Drive.
+
+
+    All packages used are the i386 types. It is assumed that Fedora core 5 and Mozilla
+    Fire Fox have been successfully installed and support for HTTP and SMTP enabled
+    with the Firewall turned off.
+
+
+    ### 3. Main installation and configuration of the mail server packages:
+
+
+    **3\. Main installation and configuration of the mail server packages:**
+
+
+    The project covers the following parts:
+
+
+    • **I**nstalling Postfix.
+
+
+    • Installing Courier-IMAP (in case you want to use Courier as IMAP/POP Server).
+
+
+    • Creating the Database Tables.
+
+
+    • Populating Database with Some Data.
+
+
+    • Creating the Postfix-Mysql Configuration Files.
+
+
+    • Installing Postfixadmin.
+
+
+    • Installing MailScanner.
+
+
+    • Installing ClamAV and SpamAssassin.
+
+
+    • Creating the Virtual User and Virtual Directory.
+
+
+    • Configuring MailScanner.
+
+
+    • Configuring Postfix.
+
+
+    • Courier-IMAP Configuration.
+
+
+    • Configuring Squirrellmail.
+
+
+    3.1 Installing Postfix:
+
+
+    Postfix is not shipped with quota and MySQL databases support, so for it to support
+    these a Postfix source package and a Postfix quota patch are obtained, extracted
+    and the specification file of the patch edited as done below. Postfix is patched
+    and a new Postfix package specific to the environment Postfix will run on is obtained.
+    The new Postfix is then installed.
+
+
+    Download Postfix – 2.2.8 – 1.2.src.rpm and Postfix – 2.2.8 – vda.patch.gz or any
+    other version in usr/redhat/SOURCES directory.
+
+
+    #rpm -ivh Postfix – 2.2.8 – 1.2.src.rpm.
+
+
+    #gunzip postfix-2.2.8-vda.patch.gz
+
+
+    #cd /usr/src/redhat/SPECS/
+
+
+    #gedit postfix.spec (editing the specification file)
+
+
+    - change % define MYSQL 0 to % define MYSQL 1
+
+
+    - add Patch 0: postfix-2.2.8-vda.patch to the # Patches stanza
+
+
+    - add %patch0 -p1 -b .vda to the %setup -q stanza
+
+
+    Then build a new postfix package with quota and MySQL databases support and install
+    it.
+
+
+    #rpmbuild -ba postfix.spec
+
+
+    Navigate to the i386 directory and install postfix and two other packages found
+    inside the folder (postfix_debuginfo and pflogsumm)
+
+
+    #cd /usr/src/redhat /RPMS/i386
+
+
+    #rpm - ivh postfix - 2.2.8-1.2.i386.rpm
+
+
+    The installation required some dependencies depending on the installed packages
+    your system, so you should download and install them then try reinstalling postfix.
+
+
+    3.2 Initial Configuration of Postfix:
+
+
+    To configure Postfix, the following lines are edited and uncommented in the /etc/postfix/main.cf
+    file. Postfix is made aware of the fully qualified name and the local domain name
+    of the server. Also given the server’s outbound domain name that will be used
+    when the emails sent by the server, what Ethernet interfaces will be allowed to
+    accept, and the email clients IP addresses that are allowed to log in locally
+    in the network .
+
+
+    myhostname =project.uniswa.com
+
+
+    mydomain =uniswa.com
+
+
+    myorigin =$myhostname
+
+
+    inet_interfaces = all
+
+
+    mydestination = $myhostname, localhost.$mydomain, localhost
+
+
+    mynetworks_style = subnet
+
+
+    To test if this was a success do the following:
+
+
+    #service postfix restart
+
+
+    #telnet localhost 25 // an output similar to the one below will come up
+
+
+    Trying 127.0.0.1 …
+
+
+    Connected to localhost.localdomain (127.0.0.1)
+
+
+    Escape character is ‘^].
+
+
+    220 project.uniswa.com ESMTP Postfix
+
+
+    mail from: xyz
+
+
+    rcpt to: root@project.uniswa.sz
+
+
+    data
+
+
+    Hi testing
+
+
+    .
+
+
+    quit
+
+
+    3.3 Installing MySQL packages:
+
+
+    Install MySQL, mysql-devel, mysql-server, mysql-client packages from the RPMS
+    that come with Fedora along with any dependency packages. To install for example
+    mysql, write
+
+
+    # rpm –ivh mysql-*.rpm
+
+
+    3.4 Creating MySQL Tables:
+
+
+    Inside the MySQL shell, the Postfix and Postfix Admin users and passwords are
+    created and given privileges to use Postfix. Here the table structure for MySQL
+    that you need in order to
+
+
+    configure Postfix Admin and Postfix in general to work with Virtual Domains and
+    Users.
+
+
+    #mysql
+
+
+    Mysql> USE mysql;
+
+
+    To create Postfix user & password :
+
+
+    Mysql>INSERT INTO user (Host, User, Password) VALUES (‘localhost’, ‘postfix’.
+    password (‘postfix’);
+
+
+    INSERT INT db (Host, Db, User, Select_priv) VALUES (‘localhost’, ‘postfix’, ‘Y’);
+
+
+    To create Postfixadmin user & password:
+
+
+    Mysql> INSERT INTO user (Host, User, Password) VALUES (‘localhost’, ‘postfixadmin’,
+    password (‘postfixadmin’))
+
+
+    Mysql>INSERT INTO db (Host,Db,User,Select_priv,Insrte_priv,updata_priv,delete_priv)
+    values (‘local host’,’postfix’,’postfixadmin’,’Y’,’Y’,’Y’,’Y’);
+
+
+    Mysql>FLUSH PRIVILEGES;
+
+
+    Mysql>GRANT USAGE ON postfix.* TO postfix@localhost;
+
+
+    Mysql>GRANT SELECT, INSERT, DELETE, UPDATE, CREATE, ALTER ON postfix.* TO postfix@localhost;
+
+
+    Mysql>GRANT USAGE ON postfix.* TO postfixadmin@localhost;
+
+
+    Mysql>GRANT SELECT, INSERT, DELETE, UPDATE, CREATE, ALTER ON postfix.* TO postfixadmin@localhost;
+
+
+    To create database postfix:
+
+
+    Still on the MySQL shell, create the database Postfix and the tables that Postfix
+    and courier need.
+
+
+    Mysql> CREATE DATABASE postfix;
+
+
+    Mysql> USE postfix;
+
+
+    Now the needed database and useres have been added and given the correct permissions.
+    Add the Postfix tables now.
+
+
+    The admin table will store information about the postfixadmin administrator. Table
+    structure for table admin
+
+
+    Mysql> CREATE TABLE admin (username varchar (255) NOT NULL default”.password varchar
+    (255) NOT NULL default”, Created datetime NOT NULL default ‘0000-00-00 00:00:00’,
+    Modified datetime default ‘0000-00-00 00:00:00’, Active tinyint (1) NOT NULL default
+    ‘1’, PRIMARY KEY (username), KEY username (username)) TYPE = MYISAM COMMENT =’Postfix
+    Admin – Virtual Admins’,
+
+
+    The alias table is for aliasing one email address to another, e.g. forward emails
+    for billfo@acme.com to johns@eeng.com. The table structure for table alias
+
+
+    Mysql>CREATE TABLE alias (address varchar (255) NOT NULL default”, go to text
+    NOT NULL, domain varchar (255) NOT NULL default”, Created datetime NOT NULL default
+    ‘0000-00-00 00:00:00’, Modified datetime default ‘0000-00-00 00:00:00’, active
+    tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (username), KEY username (username))
+    TYPE = MYISAM COMMENT =’Postfix Admin – Virtual Aliases’,
+
+
+    The domain table will store each virtual domain that Postfix should receive emails
+    for (e.g. mtn.com). The table structure for table domain
+
+
+    Mysql> CREATE TABLE domain ( domain varchar (255) NOT NULL default”, description
+    varchar (255) NOT NULL default”, Aliases int (10) NOT NULL default’0’,
+
+
+    Mailboxes int (10) NOT NULL default ‘0’, Maxquota int (10) NOT NULL default ‘0’,
+
+
+    transport varchar (255) default NULL”, backupmx tinyint (1) NOT NULL default ‘1’,
+
+
+    Created datetime NOT NULL default ‘0000-00-00 00:00:00’, Modified datetime default
+    ‘0000-00-00 00:00:00’, active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (domain),
+    KEY username (domain)) TYPE = MYISAM COMMENT =’Postfix Admin – Virtual Domains’;
+
+
+    The domain_admins table will store information about domain administrators. The
+    table structure for domain_admins
+
+
+    Mysql> CREATE TABLE domain_admins ( username varchar (255) NOT NULL default”,
+    domain varchar (255) NOT NULL default”, Create datetime NOT NULL default ‘0000-00-00
+    00:00:00’, Modified datetime default ‘0000-00-00 00:00:00’, active tinyint (1)
+    NOT NULL default ‘1’, KEY username (username)) TYPE = MYISAM COMMENT =’Postfix
+    Admin – Domains Admins’,
+
+
+    The log table will store the time of activity for each virtual domain and user.
+    The table structure for table log
+
+
+    Mysql> CREATE TABLE log (timestamp datetime NOT NULL default ‘0000-00-00 00:00:00’,
+    Username varchar (255) NOT NULL default”, Domain varchar (255) NOT NULL default”,
+    Action varchar (255) NOT NULL default”, Data varchar (255) NOT NULL default”,
+    KEY timestamp (timestamp)) TYPE = MYISAM COMMENT =’Postfix Admin – Log’'
+  toc: []
+  trans: "\n\n* `Squirrelmail` – `1.4.6.tar.bz2`\n* `PostfixAdmin` – `2.3.3.tar.gz`\n\
+    * Fedora core 5 默认带的 `Apache2`。\n* `Mail Scanner-4.84.3-1.rpm.tar.gz`。\n* `Install-Clam-0.96.5-SA-3.3.1`\
+    \ 或任何 `clamav` 软件包。\n* Fedora core 5 默认带的 `SpamAssassin`。\n* `Fedora core 5`（操作系统）。\n\
+    * `Compaq 610 笔记本 Intel core Duo 3GHz 2GB RAM 320 GB HDD`。\n\n所有使用的软件包均为 `i386`\
+    \ 类型。假设 Fedora core 5 和 `Mozilla Fire Fox` 已成功安装，并启用了 `HTTP` 和 `SMTP` 支持，同时关闭了防火墙。\n\
+    \n## 3. 邮件服务器软件包的主要安装与配置：\n\n该项目涵盖以下部分：\n* 安装 `Postfix`。\n* 安装 `Courier-IMAP`（如果你想使用\
+    \ `Courier` 作为 `IMAP/POP` 服务器）。\n* 创建数据库表。\n* 为数据库填充部分数据。\n* 创建 `Postfix-Mysql`\
+    \ 配置文件。\n* 安装 `Postfixadmin`。\n* 安装 `MailScanner`。\n* 安装 `ClamAV` 和 `SpamAssassin`。\n\
+    * 创建虚拟用户和虚拟目录。\n* 配置 `MailScanner`。\n* 配置 `Postfix`。\n* `Courier-IMAP` 配置。\n*\
+    \ 配置 `Squirrellmail`。\n\n### 3.1 安装 Postfix：\n\nPostfix 不带配额（quota）和 `MySQL` 数据库支持，因此为了支持这些功能，需要获取\
+    \ `Postfix` 源码包和 `Postfix` 配额补丁，进行解压，并按照下文所示编辑补丁的规范文件。对 `Postfix` 进行补丁后，获取一个针对特定运行环境的新\
+    \ `Postfix` 软件包。然后安装新的 `Postfix`。\n\n在 `/usr/redhat/SOURCES` 目录下下载 `Postfix –\
+    \ 2.2.8 – 1.2.src.rpm` 和 `Postfix – 2.2.8 – vda.patch.gz` 或任何其他版本。\n\n```bash\n\
+    rpm -ivh Postfix – 2.2.8 – 1.2.src.rpm\ngunzip postfix-2.2.8-vda.patch.gz\ncd\
+    \ /usr/src/redhat/SPECS/\ngedit postfix.spec # 编辑规范文件\n```\n\n- 将 `% define MYSQL\
+    \ 0` 改为 `% define MYSQL 1`\n- 在 `# Patches` 语句块中添加 `Patch 0: postfix-2.2.8-vda.patch`\n\
+    - 在 `%setup -q` 语句块中添加 `%patch0 -p1 -b .vda`\n\n然后构建一个带有配额和 `MySQL` 数据库支持的新 `postfix`\
+    \ 软件包并安装它。\n\n```bash\nrpmbuild -ba postfix.spec\n```\n\n进入 `i386` 目录并安装 `postfix`\
+    \ 以及文件夹内的另外两个软件包（`postfix_debuginfo` 和 `pflogsumm`）。\n\n```bash\ncd /usr/src/redhat\
+    \ /RPMS/i386\nrpm - ivh postfix - 2.2.8-1.2.i386.rpm\n```\n\n安装所需的依赖项取决于系统中安装的软件包，因此你应该下载并安装这些依赖，然后尝试重新安装\
+    \ `postfix`。\n\n### 3.2 Postfix 的初始配置：\n\n要配置 `Postfix`，需要在 `/etc/postfix/main.cf`\
+    \ 文件中编辑并取消以下行的注释。`Postfix` 将识别服务器的全限定域名和本地域名。同时指定服务器发送邮件时使用的出站域名、允许接收的以太网接口以及允许在本地登录的邮件客户端\
+    \ IP 地址。\n\n```ini\nmyhostname =project.uniswa.com\nmydomain =uniswa.com\nmyorigin\
+    \ =$myhostname\ninet_interfaces = all\nmydestination = $myhostname, localhost.$mydomain,\
+    \ localhost\nmynetworks_style = subnet\n```\n\n执行以下操作以测试是否成功：\n\n```bash\nservice\
+    \ postfix restart\ntelnet localhost 25 // 将出现类似下面的输出\n```\n\n```\nTrying 127.0.0.1\
+    \ …\nConnected to localhost.localdomain (127.0.0.1)\nEscape character is ‘^].\n\
+    220 project.uniswa.com ESMTP Postfix\nmail from: xyz\nrcpt to: root@project.uniswa.sz\n\
+    data\nHi testing\n.\nquit\n```\n\n### 3.3 安装 MySQL 软件包：\n\n从 Fedora 自带的 `RPMS`\
+    \ 安装 `MySQL`、`mysql-devel`、`mysql-server`、`mysql-client` 软件包以及任何依赖包。例如安装 `mysql`：\n\
+    \n```bash\nrpm -ivh mysql*\n```\n\n### 3.4 创建表：\n\n在 `MySQL` Shell 中，创建 `Postfix`\
+    \ 对应的 `admin` 用户并授予权限，以便 `Postfix` 配置和虚拟域名。\n\n```sql\nmysql\n```\n\n（创建 `postfix`\
+    \ 数据库）\n```sql\nCREATE DATABASE postfix;\nUSE postfix;\n```\n\n现在 `postfix` 数据库已创建，并包含了支持配额的\
+    \ `admin` 表结构。`admin` 表用于存储用户信息：\n\n```sql\nCREATE TABLE admin (\n  username varchar(255)\
+    \ NOT NULL,\n  password varchar(255) NOT NULL,\n  created datetime NOT NULL DEFAULT\
+    \ '0000-00-00 00:00:00',\n  modified datetime DEFAULT '0000-00-00 00:00:00',\n\
+    \  active tinyint(1) DEFAULT 1,\n  PRIMARY KEY (username)\n);\n```\n\n`alias`\
+    \ 表用于将一个邮件地址映射到另一个：\n\n```sql\nCREATE TABLE alias (\n  address varchar(255) NOT\
+    \ NULL,\n  domain varchar(255) NOT NULL,\n  created datetime NOT NULL DEFAULT\
+    \ '0000-00-00 00:00:00',\n  modified datetime DEFAULT '0000-00-00 00:00:00',\n\
+    \  active tinyint(1) DEFAULT 1,\n  PRIMARY KEY (address)\n);\n```\n\n`domain`\
+    \ 表用于存储 `Postfix` 应该接收邮件的虚拟域名：\n\n```sql\nCREATE TABLE domain (\n  domain varchar(255)\
+    \ NOT NULL,\n  description varchar(255) NOT NULL,\n  aliases int(10) DEFAULT 0,\n\
+    \  mailboxes int(10) DEFAULT 0,\n  maxquota int(10) DEFAULT 0,\n  transport varchar(255)\
+    \ DEFAULT NULL,\n  backupmx tinyint(1) DEFAULT 1,\n  created datetime NOT NULL\
+    \ DEFAULT '0000-00-00 00:00:00',\n  modified datetime DEFAULT '0000-00-00 00:00:00',\n\
+    \  active tinyint(1) DEFAULT 1,\n  PRIMARY KEY (domain)\n);\n```\n\n`domain_admins`\
+    \ 表存储域管理员信息：\n\n```sql\nCREATE TABLE domain_admins (\n  username varchar(255)\
+    \ NOT NULL,\n  domain varchar(255) NOT NULL,\n  create datetime NOT NULL DEFAULT\
+    \ '0000-00-00 00:00:00',\n  modified datetime DEFAULT '0000-00-00 00:00:00',\n\
+    \  active tinyint(1) DEFAULT 1,\n  PRIMARY KEY (username)\n);\n```\n\n`log` 表存储每个虚拟域名和用户的活动记录：\n\
+    \n```sql\nCREATE TABLE log (\n  timestamp datetime NOT NULL DEFAULT '0000-00-00\
+    \ 00:00:00',\n  username varchar(255) NOT NULL,\n  domain varchar(255) NOT NULL,\n\
+    \  action varchar(255) NOT NULL,\n  data varchar(255) NOT NULL,\n  KEY (timestamp)\n\
+    );\n```\n\n"
+- fmt: '
+
+    The `mailbox` table stores all virtual users (i.e. email addresses, because the
+    email address and user name is the same), passwords (in encrypted form) and the
+    quota value for each mailbox. The table structure for table `mailbox`:
+
+
+    ```sql
+
+    CREATE TABLE mailbox ( username varchar(255) NOT NULL default '''', password varchar(255)
+    NOT NULL default '''', name varchar(255) NOT NULL default '''', maildir varchar(255)
+    NOT NULL default '''', quota int(10) NOT NULL default ''0'', domain varchar(255)
+    NOT NULL default '''', created datetime NOT NULL default ''0000-00-00 00:00:00'',
+    modified datetime NOT NULL default ''0000-00-00 00:00:00'', active tinyint(1)
+    NOT NULL default ''1'', PRIMARY KEY (username), KEY username (username) ) TYPE=MyISAM
+    COMMENT=''Postfix Admin - Virtual Mailboxes'';
+
+    ```
+
+
+    Virtual Vacation is done with a local shell account that can receive email. The
+    email is then handled by a Perl script which sends the Vacation message back to
+    the sender. The table structure for table `vacation`:
+
+
+    ```sql
+
+    CREATE TABLE vacation (email varchar (255) NOT NULL default”, subject varchar
+    (255) NOT NULL default”, body text NOT NULL default”, cache text NOT NULL default”,
+    domain varchar (255) NOT NULL default”, Created datetime NOT NULL default ‘0000-00-00
+    00:00:00’, Active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (email), KEY email
+    (email), TYPE = MYISAM COMMENT =’Postfix Admin – virtual vacation’;
+
+    ```
+
+
+    The `transport` table is optional, it is for advanced users. It allows to forward
+    mails for single users, whole domains or all mails to another server. The table
+    structure for `transport`:
+
+
+    ```sql
+
+    CREATE TABLE transport (username varchar (255) NOT NULL default”, domain varchar
+    (255) NOT NULL default”, destination varchar (255) NOT NULL default”, Created
+    datetime NOT NULL default ‘0000-00-00 00:00:00’, Modified datetime default ‘0000-00-00
+    00:00:00’, active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (domain));
+
+    ```
+
+
+    ### 3.5 Populating database with some data:
+
+
+    Next, the Postfix database has to be filled with some data which otherwise can
+    still be filled through `Postfixadmin`.
+
+
+    ```bash
+
+    Use postfix;
+
+    INSERT INTO domain (domain, description) VALUES (‘uniswa.com’, ‘Test Domain’);
+
+    INSERT INTO alias (address, goto) VALUES (‘alias@uniswa.com’, ‘user@uniswa.com
+    ‘);
+
+    INSERT INTO mailbox (username, password, name, quota, maildir) VALUES (‘user@uniswa.com’,
+    ENCRYPT(password),‘Mailbox User’,‘104857600’, ‘user@uniswa.com/’);
+
+    quit;
+
+    ```
+
+
+    ### 3.6 Creating Postfix-MySql Configuration Files:
+
+
+    Postfix has to be told where to find all the information in the database. Therefore
+    six access text files have to be created and mapped in `etc/main.cf` file to allow
+    postfix to read from MySQL tables.
+
+
+    Create `/etc/postfix/mysql/mysql_virtual_alias_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query =SELECT go to FROM alias WHERE address =’%s’ AND active =1
+
+    ```
+
+
+    Create `/etc/postfix/mysql/mysql_virtual_domains_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query = SELECT domain FROM domain WHERE domain = ‘%s’
+
+    ```
+
+    #optimal query to use when relaying for backup MX
+
+
+    Create `/etc/postfix/mysql/mysql_virtual_mailbox_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query =SELECT maildir FROM mailbox WHERE username =’%s’ AND active =1
+
+    ```
+
+
+    Create `/etc/postfix/mysql/mysql_virtual_mailbox_limit_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query =SELECT quota FROM mailbox WHERE username =’%s’
+
+    ```
+
+
+    Create `/etc/postfix/mysql/mysql_relay_domains_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query =SELECT domain FROM domain WHERE domain=’%s’ backupmx = ‘1’
+
+    ```
+
+
+    Create `/etc/postfix/mysql/transport_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    table = transport
+
+    select_ field = destination
+
+    where_ field =domain
+
+    additional_conditions= and active = ‘true’
+
+    ```
+
+
+    ### 3.7 Creating Virtual User and Virtual Directory:
+
+
+    The system can hold mailboxes for thousands of users. All of these users are virtual
+    users and none of them is a Linux system user. One would probably do not want
+    to assign a unique `UID` (user ID) to every user, so let''s create a Linux user
+    who will become the owner of all mailboxes.
+
+
+    The virtual postfix user with id = `89` and a folder named `/vmail` are created
+    and made to own mail. The user is given permissions to read and write mail.
+
+
+    ```bash
+
+    # mkdir /vmail
+
+    # chown –R postfix: postfix /vmail
+
+    #chmod –R 771 /vmail
+
+    ```
+
+
+    ### 3.8 Configuring Postfix with MySQL maps:
+
+
+    The six MySQL maps configuration files have already been created and now it is
+    the time to setup Postfix `main.cf` file so that Postfix can query MySQL database
+    for virtual mailboxes and domains. Open the `main.cf` file.
+
+
+    ```bash
+
+    # gedit /etc/postfix/main.cf
+
+    ```
+
+
+    Then add the following code segment to `main.cf`
+
+
+    ```
+
+    virtual_mailbox_domains = mysql:/etc/postfix/mysql/mysql_virtual_domains_maps.cf
+
+    virtual_alias_maps =mysql:/etc/postfix/mysql/mysql_virtual_alias_maps.cf
+
+    virtual_mailbox_maps =mysql:/etc/postfix/mysql/mysql_virtual_mailbox_maps.cf
+
+    ```
+
+
+    Then the user id and group id of the user that will deliver mail to the virtual
+    mailbox directory are assigned and the mailbox limit is declared.
+
+
+    ```
+
+    virtual_gid_maps = static: 89
+
+    virtual_mailbox_limit =51200000
+
+    virtual _ uid_maps = static: 89
+
+    virtual_minimum_uid =10
+
+    virtual_ transport =virtual
+
+    ```
+
+
+    These configurations are made for quota support:
+
+    ```
+
+    virtual_create_maildirsize =yes
+
+    virtual_mailbox_extended =yes
+
+    virtual_mailbox_limit_maps= mysql:/etc/postfix/mysql/mysql_virtual_mailbox_limit_maps.cf
+
+    virtual_mailbox_limit_ override= yes
+
+    virtual_maildir_limit_message =Sorry, the user’s maildir has overdrawn his diskspace
+    quota, please try again later.
+
+    virtual_overquota_bounce =yes
+
+    ```
+
+
+    ### 3.9 Installing Courier-IMAP and Courier-authlib:
+
+
+    The POP3 service enables a server to host e-mail accounts and includes tools to
+    administer the servers, domains, and mailboxes. The POP3 service performs the
+    tasks of message download and request handling on a server, where message download
+    consists of transmitting the messages from a folder in the file system to clients
+    and request handling is performed according to the POP3 protocol, which defines
+    how the server responds to requests sent from an e-mail client.
+
+
+    The SMTP service receives e-mail from other domains, saves the e-mail to the `Queue`
+    folder, and notifies the SMTP delivery service for POP3 of the arrival of e-mail.
+    The delivery service then moves the e-mail to the POP3 mail store, where it is
+    available for download to POP3 e-mail clients.
+
+
+    To install Courier–Imap, a regular system user other than the Root user has to
+    be created because root dismally fails to build this package.
+
+
+    ```bash
+
+    #useradd test (creating a user called test)
+
+    #passwd test (you can put any password)
+
+    #/bin/su -test (changing to user test)
+
+    ```
+
+
+    Create an RPM development hierarchy.
+
+
+    ```bash
+
+    #mkdir $ HOME /rpm
+
+    #mkdir $ HOME/rpm/SOURCES
+
+    #mkdir $HOME/rpm/ SPECS
+
+    #mkdir $HOME/rpm/ BUILD
+
+    #mkdir $HOME/rpm/SRPMS
+
+    #mkdir $HOME/rpm/RPMS
+
+    #mkdir $HOME/rpm/RPMS/i386
+
+    #echo “%_topdir $HOME/rpm”>>$HOME/.rpmmacros
+
+    ```
+
+
+    Download `courier-imap` tarball (old version that can be used with Fedora 5),
+    and save it in `/home/test/rpm/SOURCES` directory and unpack it:
+
+
+    ```bash
+
+    #cp courier-imap-4.4.1.tar.bz2 /home/test/rpm/SOURCES
+
+    #cd /home/rpm/SOURCES
+
+    #tar xjf courier-imap-4.4.1.tar.bz2
+
+    ```
+
+
+    Go to `/home/test/rpm/sources/courier-imap-4.4.1` and edit the specification file:
+
+
+    ```bash
+
+    # cd courier-imap-4.0.1
+
+    # gedit courier-imap.spec
+
+    ```
+
+
+    Change the following lines to have things in more standard places ( eg. /etc )
+
+
+    ```
+
+    %define _sysconfdir /etc/courier
+
+    %define _mandir /usr/share/man
+
+    %define _prefix /etc/courier
+
+    %define _localstatedir /var/run
+
+    ```
+
+
+    ```
+
+    %configure
+
+    --with-redhat
+
+    --enable-workaround-for-imap-client-bugs
+
+
+    %{?xflags: %{xflags}}
+
+
+    #%{__make} check
+
+    ```
+
+    '
+  raw: 'The mailbox table stores all virtual users (i.e. email addresses, because
+    the email address and user name is the same), passwords (in encrypted form) and
+    the quota value for each mailbox. The table structure for table mailbox
+
+
+    Mysql> CREATE TABLE mailbox ( username varchar(255) NOT NULL default '''', password
+    varchar(255) NOT NULL default '''', name varchar(255) NOT NULL default '''', maildir
+    varchar(255) NOT NULL default '''', quota int(10) NOT NULL default ''0'', domain
+    varchar(255) NOT NULL default '''', created datetime NOT NULL default ''0000-00-00
+    00:00:00'', modified datetime NOT NULL default ''0000-00-00 00:00:00'', active
+    tinyint(1) NOT NULL default ''1'', PRIMARY KEY (username), KEY username (username)
+    ) TYPE=MyISAM COMMENT=''Postfix Admin - Virtual Mailboxes'';
+
+
+    Virtual Vacation is done with a local shell account that can receive email. The
+    email is then handled by a Perl script which sends the Vacation message back to
+    the sender. The table structure for table vacation
+
+
+    Mysql> CREATE TABLE vacation (email varchar (255) NOT NULL default”, subject varchar
+    (255) NOT NULL default”, body text NOT NULL default”, cache text NOT NULL default”,
+    domain varchar (255) NOT NULL default”, Created datetime NOT NULL default ‘0000-00-00
+    00:00:00’, Active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (email), KEY email
+    (email), TYPE = MYISAM COMMENT =’Postfix Admin – virtual vacation’;
+
+
+    The transport table is optional, it is for advanced users. It allows to forward
+    mails for single users, whole domains or all mails to another server. The table
+    structure for transport
+
+
+    Mysql> CREATE TABLE transport (username varchar (255) NOT NULL default”, domain
+    varchar (255) NOT NULL default”, destination varchar (255) NOT NULL default”,
+    Created datetime NOT NULL default ‘0000-00-00 00:00:00’, Modified datetime default
+    ‘0000-00-00 00:00:00’, active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (domain));
+
+
+    3.5 Populating database with some data:
+
+
+    Next, the Postfix database has to be filled with some data which otherwise can
+    still be filled through Postfixadmin.
+
+
+    #mysql
+
+
+    Mysql> Use postfix;
+
+
+    Mysql> INSERT INTO domain (domain, description) VALUES (‘uniswa.com’, ‘Test Domain’);
+    Mysql> INSERT INTO alias (address, goto) VALUES (‘alias@uniswa.com’, ‘user@uniswa.com
+    ‘);
+
+
+    Mysql> INSERT INTO mailbox (username, password, name, quota, maildir) VALUES (‘user@uniswa.com’,
+    ENCRYPT(password),‘Mailbox User’,‘104857600’, ‘user@uniswa.com/’);
+
+
+    quit;      
+
+
+    3.6 Creating Postfix-MySql Configuration Files:
+
+
+    Postfix has to be told where to find all the information in the database. Therefore
+    six access text files have to be created and mapped in etc/main.cf file to allow
+    postfix to read from MySQL tables.
+
+
+    Create /etc/postfix/mysql/mysql_virtual_alias_maps.cf
+
+
+    user = postfix
+
+
+    password = postfix
+
+
+    host = localhost
+
+
+    dname = postfix
+
+
+    query =SELECT go to FROM alias WHERE address =’%s’ AND active =1
+
+
+    Create /etc/postfix/mysql/mysql_virtual_domains_maps.cf
+
+
+    user = postfix
+
+
+    password = postfix
+
+
+    host = localhost
+
+
+    dname = postfix
+
+
+    query = SELECT domain FROM domain WHERE domain = ‘%s’
+
+
+    #optimal query to use when relaying for backup MX
+
+
+    Create /etc/postfix/mysql/mysql_virtual_mailbox_maps.cf
+
+
+    user = postfix
+
+
+    password = postfix
+
+
+    host = localhost
+
+
+    dname = postfix
+
+
+    query =SELECT maildir FROM mailbox WHERE username =’%s’ AND active =1
+
+
+    Create /etc/postfix/mysql/mysql_virtual_mailbox_limit_maps.cf
+
+
+    user = postfix
+
+
+    password = postfix
+
+
+    host = localhost
+
+
+    dname = postfix
+
+
+    query =SELECT quota FROM mailbox WHERE username =’%s’
+
+
+    Create /etc/postfix/mysql/mysql_relay_domains_maps.cf
+
+
+    user = postfix
+
+
+    password = postfix
+
+
+    host = localhost
+
+
+    dname = postfix
+
+
+    query =SELECT domain FROM domain WHERE domain=’%s’ backupmx = ‘1’
+
+
+    Create /etc/postfix/mysql/transport_maps.cf
+
+
+    user = postfix
+
+
+    password = postfix
+
+
+    host = localhost
+
+
+    dname = postfix
+
+
+    table = transport
+
+
+    select_ field = destination
+
+
+    where_ field =domain
+
+
+    additional_conditions= and active = ‘true’
+
+
+    3.7 Creating Virtual User and Virtual Directory:
+
+
+    The system can hold mailboxes for thousands of users. All of these users are virtual
+    users and none of them is a Linux system user. One would probably do not want
+    to assign a unique UID (user ID) to every user, so let''s create a Linux user
+    who will become the owner of all mailboxes.
+
+
+    The virtual postfix user with id = 89 and a folder named /vmail are created and
+    made to own mail. The user is given permissions to read and write mail.
+
+
+    # mkdir /vmail
+
+
+    # chown –R postfix: postfix /vmail
+
+
+    #chmod –R 771 /vmail
+
+
+    3.8 Configuring Postfix with MySQL maps:
+
+
+    The six MySQL maps configuration files have already been created and now is the
+    time to setup Postfix main.cf file so that Postfix can query MySQL database for
+    virtual mailboxes and domains. Open the main.cf file.
+
+
+    # gedit /etc/postfix/main.cf
+
+
+    Then add the following code segment to main.cf
+
+
+    virtual_mailbox_ domains = mysql:/etc/postfix/mysql/mysql_virtual_domains_maps.cf
+
+
+    virtual_ alias_maps =mysql:/etc/postfix/mysql/mysql_virtual_alias_maps.cf
+
+
+    virtual_mailbox_maps =mysql:/etc/postfix/mysql/mysql_virtual_mailbox_maps.cf
+
+
+    Then the user id and group id of the user that will deliver mail to the virtual
+    mailbox directory are assigned and the mailbox limit is declared.
+
+
+    virtual_gid_maps = static: 89
+
+
+    virtual_mailbox_limit =51200000
+
+
+    virtual _ uid_maps = static: 89
+
+
+    virtual_minimum_uid =10
+
+
+    virtual_ transport =virtual
+
+
+    These configurations are made for quota support
+
+
+    virtual_create_maildirsize =yes
+
+
+    virtual_mailbox_extended =yes
+
+
+    virtual_mailbox_limit_maps= mysql:/etc/postfix/mysql/mysql_virtual_mailbox_limit_maps.cf
+
+
+    virtual_mailbox_limit_ override= yes
+
+
+    virtual_maildir_limit_message =Sorry, the user’s maildir has overdrawn his diskspace
+    quota, please try again later.
+
+
+    virtual_overquota_bounce =yes
+
+
+    3.9 Installing Courier-IMAP and Courier-authlib:
+
+
+    The POP3 service enables a server to host e-mail accounts and includes tools to
+    administer the servers, domains, and mailboxes. The POP3 service performs the
+    tasks of message download and request handling on a server, where message download
+    consists of transmitting the messages from a folder in the file system to clients
+    and request handling is performed according to the POP3 protocol, which defines
+    how the server responds to requests sent from an e-mail client.
+
+
+    The SMTP service receives e-mail from other domains, saves the e-mail to the Queue
+    folder, and notifies the SMTP delivery service for POP3 of the arrival of e-mail.
+    The delivery service then moves the e-mail to the POP3 mail store, where it is
+    available for download to POP3 e-mail clients.
+
+
+    To install Courier –Imap, a regular system user other than the Root user has to
+    be created because root dismally fails to build this package.
+
+
+    #useradd test (creating a user called test)
+
+
+    #passwd test (you can put any password)
+
+
+    #/bin/su -test (changing to user test)
+
+
+    Create an RPM development hierarchy.
+
+
+    #mkdir $ HOME /rpm
+
+
+    #mkdir $ HOME/rpm/SOURCES
+
+
+    #mkdir $ HOME/rpm/ SPECS
+
+
+    #mkdir $ HOME/rpm/ BUILD
+
+
+    #mkdir $ HOME/rpm/SRPMS
+
+
+    #mkdir $ HOME/rpm/RPMS
+
+
+    #mkdir $ HOME/rpm/RPMS/i386
+
+
+    #echo “%_topdir $HOME/rpm”>>$HOME/.rpmmacros
+
+
+    Download courier-imap tarball (old version that can be used with Fedora 5), and
+    save it in /home/test/rpm/SOURCES directory and unpack it
+
+
+    #cp courier-imap-4.4.1.tar.bz2 /home/test/rpm/SOURCES
+
+
+    #cd /home/rpm/SOURCES
+
+
+    #tar xjf courier-imap-4.4.1.tar.bz2
+
+
+    Go to /home/test/rpm/sources/courier-imap-4.4.1 and edit the specification file
+
+
+    # cd courier-imap-4.0.1
+
+
+    # gedit courier-imap.spec
+
+
+    Change the following lines to have things in more standard places ( eg. /etc )
+
+
+    %define _sysconfdir /etc/courier
+
+
+    %define _mandir /usr/share/man
+
+
+    %define _prefix /etc/courier
+
+
+    %define _localstatedir /var/run
+
+
+    %configure
+
+
+    --with-redhat
+
+
+    --enable-workaround-for-imap-client-bugs
+
+
+    %{?xflags: %{xflags}}
+
+
+    #%{__make} check'
+  toc: []
+  trans: '
+
+
+    `mailbox` 表存储了所有虚拟用户（即邮箱地址，因为邮箱地址和用户名相同）、密码（加密形式）以及每个邮箱箱的配额值。`mailbox` 表的结构如下：
+
+
+    ```sql
+
+    CREATE TABLE mailbox ( username varchar(255) NOT NULL default '''', password varchar(255)
+    NOT NULL default '''', name varchar(255) NOT NULL default '''', maildir varchar(255)
+    NOT NULL default '''', quota int(10) NOT NULL default ''0'', domain varchar(255)
+    NOT NULL default '''', created datetime NOT NULL default ''0000-00-00 00:00:00'',
+    modified datetime NOT NULL default ''0000-00-00 00:00:00'', active tinyint(1)
+    NOT NULL default ''1'', PRIMARY KEY (username), KEY username (username) ) TYPE=MyISAM
+    COMMENT=''Postfix Admin - Virtual Mailboxes'';
+
+    ```
+
+
+    虚拟假期（Virtual Vacation）是通过一个接收邮件的本地 shell 账户实现的。邮件随后由 Perl 脚本处理，该脚本会将假期回复消息发给发送者。`vacation`
+    表的结构如下：
+
+
+    ```sql
+
+    CREATE TABLE vacation (email varchar (255) NOT NULL default”, subject varchar
+    (255) NOT NULL default”, body text NOT NULL default”, cache text NOT NULL default”,
+    domain varchar (255) NOT NULL default”, Created datetime NOT NULL default ‘0000-00-00
+    00:00:00’, Active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (email), KEY email
+    (email), TYPE = MYISAM COMMENT =’Postfix Admin – virtual vacation’;
+
+    ```
+
+
+    `transport` 表是可选的，适用于高级用户。它允许将单个用户、整个域名或所有邮件转发到另一个服务器。`transport` 表的结构如下：
+
+
+    ```sql
+
+    CREATE TABLE transport (username varchar (255) NOT NULL default”, domain varchar
+    (255) NOT NULL default”, destination varchar (255) NOT NULL default”, Created
+    datetime NOT NULL default ‘0000-00-00 00:00:00’, Modified datetime default ‘0000-00-00
+    00:00:00’, active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (domain));
+
+    ```
+
+
+    ### 3.5 为数据库填充数据：
+
+
+    接下来，必须向 Postfix 数据库中填充一些数据，否则这些数据仍然可以通过 `Postfixadmin` 进行填充。
+
+
+    ```bash
+
+    Use postfix;
+
+    INSERT INTO domain (domain, description) VALUES (‘uniswa.com’, ‘Test Domain’);
+
+    INSERT INTO alias (address, goto) VALUES (‘alias@uniswa.com’, ‘user@uniswa.com
+    ‘);
+
+    INSERT INTO mailbox (username, password, name, quota, maildir) VALUES (‘user@uniswa.com’,
+    ENCRYPT(password),‘Mailbox User’,‘104857600’, ‘user@uniswa.com/’);
+
+    quit;
+
+    ```
+
+
+    ### 3.6 创建 Postfix-MysSql 配置：
+
+
+    必须告诉 Postfix 在哪里查找数据库中的所有信息。因此，必须创建六个访问文本并在 `etc/main.cf` 文件中进行映射，以允许 postfix
+    读取 MySQL 表格。
+
+
+    创建 `/etc/postfix/mysql/mysql_virtual_alias_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query =SELECT go to FROM alias WHERE address =’%s’ AND active =1
+
+    ```
+
+
+    创建 `/etc/postfix/mysql/mysql_virtual_domains_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query = SELECT domain FROM domain WHERE domain = ‘%s’
+
+    ```
+
+    # 备份 MX 转发时使用的优化查询
+
+
+    创建 `/etc/postfix/mysql/mysql_virtual_mailbox_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query =SELECT maildir FROM mailbox WHERE username =’%s’ AND active =1
+
+    ```
+
+
+    创建 `/etc/postfix/mysql/mysql_virtual_mailbox_limit_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query =SELECT quota FROM mailbox WHERE username =’%s’
+
+    ```
+
+
+    创建 `/etc/postfix/mysql/mysql_relay_domains_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    query =SELECT domain FROM domain WHERE domain=’%s’ backupmx = ‘1’
+
+    ```
+
+
+    创建 `/etc/postfix/mysql/transport_maps.cf`
+
+    ```
+
+    user = postfix
+
+    password = postfix
+
+    host = localhost
+
+    dname = postfix
+
+    table = transport
+
+    select_ field = destination
+
+    where_ field =domain
+
+    additional_conditions= and active = ‘true’
+
+    ```
+
+
+    ### 3.7 创建虚拟用户和虚拟目录：
+
+
+    系统可以存储数千个用户的邮箱箱。所有这些用户都是虚拟用户，其中没有任何一个是是 Linux 系统用户。你可能不想为每个用户分配唯一的 `UID`（用户 ID），因此让我们创建一个
+    Linux 用户，它将成为所有邮箱箱的所有者。
+
+
+    创建一个 id 为 `89` 且名为 `/vmail` 文件夹的虚拟 postfix 用户，并使其拥有邮件。该用户被赋予读写邮件权限。
+
+
+    ```bash
+
+    # mkdir /vmail
+
+    # chown –R postfix: postfix /vmail
+
+    #chmod –R 771 /vmail
+
+    ```
+
+
+    ### 3.8 使用 MySQL maps 配置 Postfix：
+
+
+    六个 MySQL maps 配置文件已经创建，现在是时候设置 Postfix `main.cf` 文件了，以便 Postfix 能够查询 MySQL 数据库以获取虚拟邮箱箱和域名。打开
+    `main.cf` 文件。
+
+
+    ```bash
+
+    # gedit /etc/postfix/main.cf
+
+    ```
+
+
+    然后将以下代码段添加到 `main.cf`
+
+
+    ```
+
+    virtual_mailbox_domains = mysql:/etc/postfix/mysql/mysql_virtual_domains_maps.cf
+
+    virtual_alias_maps =mysql:/etc/postfix/mysql/mysql_virtual_alias_maps.cf
+
+    virtual_mailbox_maps =mysql:/etc/postfix/mysql/mysql_virtual_mailbox_maps.cf
+
+    ```
+
+
+    然后为投递到虚拟邮箱箱目录的用户分配 ID 和组 ID，并声明邮箱箱限制。
+
+
+    ```
+
+    virtual_gid_maps = static: 89
+
+    virtual_mailbox_limit =51200000
+
+    virtual _ uid_maps = static: 89
+
+    virtual_minimum_uid =10
+
+    virtual_ transport =virtual
+
+    ```
+
+
+    这些配置是为了支持配额而做的：
+
+    ```
+
+    virtual_create_maildirsize =yes
+
+    virtual_mailbox_extended =yes
+
+    virtual_mailbox_limit_maps= mysql:/etc/postfix/mysql/mysql_virtual_mailbox_limit_maps.cf
+
+    virtual_mailbox_limit_ override= yes
+
+    virtual_maildir_limit_message =Sorry, the user’s maildir has overdrawn his diskspace
+    quota, please try again later.
+
+    virtual_overquota_bounce =yes
+
+    ```
+
+
+    ### 3.9 安装 Courier-IMAP 和 Courier-authlib：
+
+
+    POP3 服务允许服务器托管电子邮件账户，并包含了管理服务器、域名和邮箱箱的工具。POP3 服务在服务器上执行消息下载和请求处理任务，其中消息下载包括将消息从文件系统中的文件夹传输到客户端，而请求处理则根据
+    POP3 协议执行，该协议定义了服务器如何响应从电子邮件客户端发送的请求。
+
+
+    SMTP 服务接收来自其他域的邮件，将其保存到 `Queue` 文件夹中，并通知 SMTP 投递服务邮件已到达。投递服务随后会将邮件移动到 POP3 邮件存储中，以便供
+    POP3 电子邮件客户端下载。
+
+
+    要安装 Courier–Imap，必须创建一个除 Root 用户之外的普通系统用户，因为 root 用户无法成功构建此包。
+
+
+    ```bash
+
+    #useradd test (创建一个名为 test 的用户)
+
+    #passwd test (你可以输入任何密码)
+
+    #/bin/su -test (切换到用户 test)
+
+    ```
+
+
+    创建 RPM 开发层次结构。
+
+
+    ```bash
+
+    #mkdir $ HOME /rpm
+
+    #mkdir $ HOME/rpm/SOURCES
+
+    #mkdir $HOME/rpm/ SPECS
+
+    #mkdir $HOME/rpm/ BUILD
+
+    #mkdir $HOME/rpm/SRPMS
+
+    #mkdir $HOME/rpm/RPMS
+
+    #mkdir $HOME/rpm/RPMS/i386
+
+    #echo “%_topdir $HOME/rpm”>>$HOME/.rpmmacros
+
+    ```
+
+
+    下载 `courier-imap` 压缩包（可用于 Fedora 5 的旧版本），将其保存到 `/home/test/rpm/SOURCES` 目录并解压：
+
+
+    ```bash
+
+    #cp courier-imap-4.4.1.tar.bz2 /home/test/rpm/SOURCES
+
+    #cd /home/rpm/SOURCES
+
+    #tar xjf courier-imap-4.4.1.tar.bz2
+
+    ```
+
+
+    进入 `/home/test/rpm/sources/courier-imap-4.4.1` 并编辑规范文件：
+
+
+    ```bash
+
+    # cd courier-imap-4.0.1
+
+    # gedit courier-imap.spec
+
+    ```
+
+
+    将以下行更改为将其放在更标准的地方（例如 /etc ）
+
+
+    ```
+
+    %define _sysconfdir /etc/courier
+
+    %define _mandir /usr/share/man
+
+    %define _prefix /etc/courier
+
+    %define _localstatedir /var/run
+
+    ```
+
+
+    ```
+
+    %configure
+
+    --with-redhat
+
+    --enable-workaround-for-imap-client-bugs
+
+
+    %{?xflags: %{xflags}}
+
+
+    #%{__make} check
+
+    ```
+
+
+    '
+- fmt: '
+
+    After editing, copy the `courier-imap.spec` file to `/home/test/rpm/SPECS` directory.
+    Before building the `courier-imap`, it is required that `courier–authlib` package
+    (for authentication) is installed. Download `courier-authlib-0.62.1.tar.bz2` or
+    any suitable version and save it in the `SOURCES` directory. Unpack it and edit
+    the specification file, then copy it to `/home/test/rpm/SPECS` directory, build
+    it and install it as root in the `i386` directory.
+
+
+    ```bash
+
+    cp courier-authlib-0.62.1.tar.bz2 /home/test/rpm/SOURCES
+
+    cd /home/rpm/SOURCES
+
+    tar xjf courier-authlib-0.59.1.tar.bz2
+
+    ```
+
+
+    ### Install the courier-authlib
+
+
+    ```bash
+
+    cd $HOME/rpm/SPECS
+
+    rmpbuild -bb courier-authlib.spec
+
+    su root
+
+    cd /home/test/rpm/RPMS/i356/
+
+    rpm-ivh courier-authlib-*
+
+    ```
+
+
+    It asks for `libtool-itdl-devel` as a failed dependency, install it and install
+    any other required dependencies after downloading them. You shall install all
+    `courier-authlib` packages found in the `i386` folder if you want your `courier-imap`
+    to support them. You will find there the following packages: `courier_authlib`,
+    `courier_authlib_devel`, `courier_authlib_debuginfo`, `courier_authlib_userdb`,
+    `courier_authlib_mysql`, `courier_authlib_pgsql`, `courier_authlib_userdb_ldab`.
+
+
+    Build the `courier–imap` package as user `test` and install it as root user.
+
+
+    ```bash
+
+    su test
+
+    cd $HOME/rpm/SPECS
+
+    rpmbuild-bb courier-imap.spec
+
+    su root
+
+    cd /home/test/rpm/RPMS/i386/
+
+    rpm-ivh courier-imap-*
+
+    ```
+
+
+    Install any failed dependencies as required. Then start the package as follows:
+
+
+    ```bash
+
+    authdaemond restart
+
+    service courier-authlib restart
+
+    service courier-imap restart
+
+    ```
+
+
+    ### 3.10 Courier-IMAP Configuration:
+
+
+    To tell Courier that it should authenticate against the MySQL database, first
+    edit `/etc/authlib/authdaemonrc` and change the value of `authmodulelist` so that
+    it reads from mysql database.
+
+
+    `authmodulelist = “authmysql”`
+
+
+    The `Courier- Imap` `imapd` file `/etc/courier/imapd` should have a line similar
+    to this:
+
+    `IMAP_CAPABILITY =”IMAP4rev 1 UIDPLUS CHILDREN NAMESPACE THREAD = ORDEREDSUBJECT
+    THREAD= REFERENCES SORT QUOTA IDLE"`
+
+
+    The `authmysqlrc` file in `/etc/authlib` directory is edited and modified and
+    these lines added to it:
+
+
+    ```text
+
+    #DEFAULT _DOMAIN uniswa.com
+
+    MYSQL_CRYPT_PWFIELD password
+
+    MYSQL_DATABASE postfix
+
+    MYSQL_GID_FIELD ‘89’
+
+    MYSQL_HOME_FIELD ‘/vmail/’
+
+    MYSQL_LOGIN _FIELD username
+
+    MYSQL_MAILDIR_FIELD maildir
+
+    MYSQL_NAME _FIELD name
+
+    MYSQL_OPT 0
+
+    MYSQL_ PASSWORD postfix
+
+    #MYSQL_ PORT 0
+
+    #Uncomment below for quota support.
+
+    MYQL_QUOTA_FIELD quota
+
+    MYSQL_ SERVER localhost
+
+    #Default RedHat Socket
+
+    MYSQL _SOCKET /var/lib/mysql.Sock
+
+    MYSQL_UID_FIELD ‘89’
+
+    MYSQL_USERNAME postfix
+
+    MYSQL_USER _TABLE mailbox
+
+    #MYSQL _WHER_CLAUSE server = ‘project.uniswa.com’
+
+    ```
+
+
+    A file `/etc/authlib/hostdomains` is created that contains `uniswa.com`, the domain
+    that will be hosted by this server.
+
+
+    For testing with `courier-imap`:
+
+
+    ```bash
+
+    service postfix reload
+
+    authdaemond restart
+
+    service courier-authlib restart
+
+    service courier-imap restart
+
+    telnet localhost 25
+
+    mail from: hedaya
+
+    rcpt to: user@uniswa.com
+
+    data
+
+    hi testing
+
+    .
+
+    quit
+
+
+    telnet localhost 110
+
+    user user@uniswa.com
+
+    pass password
+
+    list
+
+    retr (msg no)
+
+    quit
+
+    ```
+
+
+    ### 3.11 Configuring Postfixadmin:
+
+
+    Postfix will allow the administrator to add, delete and edit mailboxes and full
+    domains. This web based application allows the administrator to access MySQL configuration
+    for postfix and edits it directly. The prerequisite for the installation of Postfixadmin
+    is to install Apache. Postfix tar is downloaded from `http://high5.net` and saved
+    in the apache directory `/var/www/html` and then unarchive it.
+
+
+    ```bash
+
+    tar –zxvf postfixadmin-*.tar.gz
+
+    ```
+
+
+    The following configurations are performed in the `config.inc.php` file.
+
+
+    The first thing to do is to tell Postfix that you have configured the application.
+
+    `$CONF[''configured''] = true;`
+
+
+    Then the full url of the postfix admin build is defined.
+
+    `$CONF [''postfix_admin_url''] = ''http: //uniswa.com/postfixadmin’;`
+
+
+    Next is the setting up of the database connection.
+
+
+    ```php
+
+    $CONF [''database_type''] = ''mysql'';
+
+    $CONF [''database_host''] = ''localhost'';
+
+    $CONF [''database_user''] = ''postfixadmin'';
+
+    $CONF [''database_password''] = ''postfixadmin'';
+
+    $CONF [''database_name''] = ''postfix'';
+
+    $CONF [''database_prefix''] = **;
+
+    ```
+
+
+    The email address that all problems will be reported to and the sends messages
+    to everyone.
+
+    `$CONF [''admin_email''] = ''postmaster@example.com'';`
+
+
+    This is used to send email to Postfix in order to create mailboxes.
+
+    `$CONF [''smtp_server''] = ''localhost'';`
+
+    `$CONF [''smtp_port''] = ''localhost'';`
+
+
+    This portion defines the encryption method to be used.
+
+    `$CONF [''encrypt''] = ''md5'';`
+
+
+    The minimum length required for passwords.
+
+    `$CONF [''min_password_length''] = 5;`
+
+
+    The default password for the admin.
+
+    `$CONF [''default_password''] = '''';`
+
+
+    This message is sent to every newly created mailbox.
+
+    `$CONF [''welcome_text''] = EOM
+
+    Hi,
+
+    Welcome to your new account.
+
+    EOM;`
+
+
+    The setup password that has been generated.
+
+    `$CONF [''setup_password''] = 5;`
+
+
+    The setup will create the admin database.
+
+    `$CONF [''setup_password''] = ''YES'';`
+
+
+    The path to the setupadmin.
+
+    `$CONF [''domain_path''] = ''YES'';`
+
+
+    The domain in the mailbox.
+
+    `$CONF [''domain_in_mailbox''] = ''YES'';`
+
+
+    The aliases for the admin.
+
+    `$CONF [''aliases''] = ''YES'';`
+
+
+    The mailboxes are set.
+
+    `$CONF [''mailboxes''] = ''YES'';`
+
+
+    The quota for the user.
+
+    `$CONF [''maxquota''] = ''10'';`
+
+
+    The multiplier for the quota.
+
+    `$CONF [''quota_multiplier''] = ''10'';`
+
+
+    The domain for the user.
+
+    `$CONF [''domain''] = ''YES'';`
+
+
+    The transport options.
+
+    `$CONF [''transport_options''] = array (''virtual'', ''local'', ''relay'');`
+
+
+    The default transport.
+
+    `$CONF [''transport_default''] = ''virtual'';`
+
+
+    The control for the alias.
+
+    `$CONF [''control''] = ''YES'';`
+
+
+    The admin control.
+
+    `$CONF [''alias_control_admin''] = ''YES'';`
+
+
+    The setup for the domain.
+
+    `$CONF [''setup''] = ''YES'';`
+
+
+    The hash for the password.
+
+    `$CONF [''hash''] = ''md5'';`
+
+
+    The domain control for the domain.
+
+    `$CONF [''domain_control''] = ''YES'';`
+
+
+    The setup for the alias.
+
+    `$CONF [''alias_setup''] = ''YES'';`
+
+
+    The path for the domain.
+
+    `$CONF [''domain_path''] = ''YES'';`
+
+
+    The hash for the alias.
+
+    `$CONF [''alias_hash''] = ''md5'';`
+
+
+    The control for the user.
+
+    `$CONF [''user_control''] = ''YES'';`
+
+
+    The setup for the user.
+
+    `$CONF [''user_setup''] = ''YES'';`
+
+
+    The path for the user.
+
+    `$CONF [''user_path''] = ''YES'';`
+
+
+    The hash for the user.
+
+    `$CONF [''user_hash''] = ''md5'';`
+
+    '
+  raw: 'After editing, copy the courier-imap.spec file to /home/test/rpm/SPECS directory.
+    Before building the courier-imap, it is required that courier–authlib package
+    (for authentication) is installed. Download courier-authlib-0.62.1.tar.bz2 or
+    any suitable version and save it in the SOURCES directory. Unpack it and edit
+    the specification file, then copy it to /home/test/rpm/SPECS directory, build
+    it and install it as root in the i386 directory.
+
+
+    #cp courier-authlib-0.62.1.tar.bz2 /home/test/rpm/SOURCES
+
+
+    #cd /home/rpm/SOURCES
+
+
+    #tar xjf courier-authlib-0.59.1.tar.bz2
+
+
+    Install the courier-authlib
+
+
+    #cd $HOME/rpm/SPECS
+
+
+    #rmpbuild - bb courier - authlib. spec
+
+
+    #su root
+
+
+    #cd/home/test/rpm/RPMS/i356/
+
+
+    # rpm-ivh courier-authlib-*
+
+
+    It asks for libtool-itdl-devel as a failed dependency, install it and install
+    any other required dependencies after downloading them. You shall install all
+    courier-authlib packages found in the i386 folder if you want your courier-imap
+    to support them. You will find there the following packages:courier_authlib, courier_authlib_devel,
+    courier_authlib_debuginfo, courier_authlib_userdb, courier_authlib_mysql, courier_authlib_pgsql,
+    courier_authlib_userdb_ldab.
+
+
+    Build the courier–imap package as user test and install it as root user.
+
+
+    #su test
+
+
+    #cd $HOME/rpm/SPECS
+
+
+    #rpmbuilb-bb courier-imap.spec
+
+
+    #su root
+
+
+    #cd/home/test/rpm/RPMS/i386/
+
+
+    #rpm-ivh courier-imap-*
+
+
+    Install any failed dependencies as required. Then start the package as follows:
+
+
+    #authdaemond restart
+
+
+    #service courier-authlib restart
+
+
+    #service courier-imap restart
+
+
+    3.10 Courier-IMAP Configuration:
+
+
+    To tell Courier that it should authenticate against the MySQL database, first
+    edit /etc/authlib/authdaemonrc and change the value of authmodulelist so that
+    it reads from mysql database.
+
+
+    Authmodulelist = “authmysql”
+
+
+    The Courier- Imap imapd file /etc/courier/imapd should have a line similar to
+    this, IMAP_CAPABILITY =”IMAP4rev 1 UIDPLUS CHILDREN NAMESPACE
+
+
+    THREAD = ORDEREDSUBJECT THREAD= REFERENCES SORT QUOTA IDLE”
+
+
+    The ‘authmysqlrc’ file in /etc/authlib directory is edited and modified and these
+    lines added to it:
+
+
+    #DEFAULT _DOMAIN uniswa.com
+
+
+    MYSQL_CRYPT_PWFIELD password
+
+
+    MYSQL_ DATABASE postfix
+
+
+    MYSQL_GID_FIELD ‘89’
+
+
+    MYSQL_HOME_FIELD ‘/vmail/’
+
+
+    MYSQL_ LOGIN _FIELD username
+
+
+    MYSQL_MAILDIR_FIELD maildir
+
+
+    MYSQL_NAME _FIELD name
+
+
+    MYSQL_OPT 0
+
+
+    MYSQL_ PASSWORD postfix
+
+
+    #MYSQL_ PORT 0
+
+
+    #Uncomment below for quota support.
+
+
+    MYQL_QUOTA_FIELD quota
+
+
+    MYSQL_ SERVER localhost
+
+
+    #Default RedHat Socket
+
+
+    MYSQL _SOCKET /var/lib/mysql. Sock
+
+
+    MYSQL_UID_FIELD ‘89’
+
+
+    MYSQL_USERNAME postfix
+
+
+    MYSQL_USER _TABLE mailbox
+
+
+    #MYSQL _WHER_CLAUSE server = ‘project.uniswa.com’
+
+
+    A file /etc/authlib/hostdomains is created that contains **uniswa.com**, the domain
+    that will be hosted by this server.
+
+
+    For testing with courier-imap
+
+
+    # service postfix reload
+
+
+    # authdaemond restart
+
+
+    # service courier-authlib restart
+
+
+    # service courier-imap restart
+
+
+    # telnet localhost 25
+
+
+    mail from: hedaya
+
+
+    rcpt to: user@uniswa.com
+
+
+    data
+
+
+    hi testing
+
+
+    .
+
+
+    quit
+
+
+    # telnet localhost 110
+
+
+    user user@uniswa.com
+
+
+    pass password
+
+
+    list
+
+
+    retr (msg no)
+
+
+    quit
+
+
+    3.11 Configuring Postfixadmin:
+
+
+    Postfix will allow the administrator to add, delete and edit mailboxes and full
+    domains. This web based application allows the administrator to access MySQL configuration
+    for postfix and edits it directly .The prerequisite for the installation of Postfixadmin
+    is to install Apache. Postfix tar is downloaded from http://high5.net and saved
+    in the apache directory /var/www/html and then unarchive it.
+
+
+    #tar –zxvf postfixadmin-*.tar.gz
+
+
+    The following configurations are performed in the config.inc.php file.
+
+
+    The first thing to do is to tell Postfix that you have configured the application.
+
+
+    $CONF[''configured''] = true;
+
+
+    Then the full url of the postfix admin build is defined.
+
+
+    $CONF [''postfix_admin_url''] = ''http: //uniswa.com/postfixadmin’;
+
+
+    Next is the setting up of the database connection.
+
+
+    $CONF [''database_type''] = ''mysql'';
+
+
+    $CONF [''database_host''] = ''localhost'';
+
+
+    $CONF [''database_user''] = ''postfixadmin'';
+
+
+    $CONF [''database_password''] = ''postfixadmin'';
+
+
+    $CONF [''database_name''] = ''postfix'';
+
+
+    $CONF [''database_prefix''] = *;*
+
+
+    The email address that all problems will be reported to and the sends messages
+    to everyone.
+
+
+    $CONF [''admin_email''] = ''postmaster@example.com'';
+
+
+    This is used to send email to Postfix in order to create mailboxes.
+
+
+    $CONF [''smtp_server''] = ''localhost'';
+
+
+    $CONF [''smtp_port''] = ''25'';
+
+
+    This portion defines the encryption method to be used to encrypt passwords.
+
+
+    $CONF [''encrypt''] = ''md5'';
+
+
+    This will be assigned during the postfixadmin Superadmin setup.
+
+
+    $CONF [''setup_password''] = '''';
+
+
+    Minimum length required for passwords.
+
+
+    $CONF [''min_password_length''] = 5;
+
+
+    The default aliases that need to be created for all domains.
+
+
+    $CONF [''default_aliases''] = array (
+
+
+    ''postmaster'' => ''postmaster@example.com'',
+
+
+    );
+
+
+    This part is set to ‘yes’ if the mailboxes are to be stored per domain, otherwise
+    it is set to ‘no’.
+
+
+    $CONF [''domain_path''] = ''YES'';
+
+
+    This is set to ‘no’ if putting the domain in the mailbox is not desired.
+
+
+    $CONF [''domain_in_mailbox''] = ''YES'';
+
+
+    This specifies the quota value in MB.
+
+
+    $CONF [''aliases''] = ''10'';
+
+
+    $CONF [''mailboxes''] = ''10'';
+
+
+    $CONF [''maxquota''] = ''10'';
+
+
+    To enforce quota for mailbox users this is set to ‘yes''.
+
+
+    $CONF[''quota''] = ''YES'';
+
+
+    There are two choices, either use ''1024000'' or ''1048576''
+
+
+    $CONF [''quota_multiplier''] = ''1024000'';
+
+
+    If there is a need to define additional transport options for a domain this is
+    set to ''yes''.
+
+
+    $CONF [''transport''] = ''YES'';
+
+
+    If additional transport options are to be defined, they should be put in the array
+    below.
+
+
+    $CONF [''transport_options''] = array (
+
+
+    ''virtual'', // for virtual accounts
+
+
+    ''local'', // for system accounts
+
+
+    ''relay'' // for backup mx
+
+
+    );
+
+
+    Transport default
+
+
+    $CONF [''transport_default''] = ''virtual'';
+
+
+    PostfixAdmin inserts an alias in the alias table for every mailbox it creates.
+    The reason for this is that when you want catch-all and normal mailboxes to work
+    you need to have the mailbox replicated in the alias table. If you want to take
+    control of these aliases as well set this to ''yes''.
+
+
+    $CONF [''alias control''] = ''YES'';
+
+
+    Alias Control for admins.
+
+
+    $CONF [''alias_control_admin''] = ''YES'';
+
+
+    This message is sent to every newly created mailbox.
+
+
+    $CONF [''welcome_text''] = <<<EOM
+
+
+    Hi,
+
+
+    Welcome to your new account.
+
+
+    EOM;
+
+
+    Next go to the URL that you have set in PostfixAdmin, and go to the setup page.
+
+
+    In Mozilla Firefox browser type the URL http://uniswa.com/postfixadmin/setup.php,
+    travel down to the bottom of the page and create a strong ‘setup password’ by
+    only using the password form and hit enter. Copy the hashed output presented and
+    paste it into the postfixadmin configuration file on the appropriate line that
+    has $conf [setup_password]
+
+
+    Create a super admin account with an email address and admin password, by using
+    the setup password that has just been used to generate the hash output. If everything
+    is correct, the setup will create the admin database. Now super admin will be
+    able to access Postfixadmin management through http://uniswa.com/postfixadmin/admin/.
+    The figures below show the postfixadmin interface. Fig. 3.1 shows the screen presented
+    in postfixadmin/setup.php to set up the Superadmin account. Fig. 3.2 shows the
+    screen presented to log into administration site of postfixadmin in postfixadmin/admin/.
+    Fig. 3.3 shows the screen after logging into the admin site and choosing Domain
+    List.
+
+
+    ![](images/159551731848054418_1.jpg)
+
+
+    Fig. 3.1\. The screen presented in postfixadmin/setup.php to set up the Superadmin
+    account.
+
+
+    ![](images/159551731816836925_2.jpg)
+
+
+    Fig. 3.2\. The screen presented to log into dministration site of postfixadmin
+    in postfixadmin/admin/.
+
+
+    ![](images/15955173199077433_3.jpg)
+
+
+    Figure 3.3
+
+
+    The screen after logging into the admin site and choosing domain list.
+
+
+    3.12 Configuring Squirrelmail:
+
+
+    This is a client web mail interface that users use to access their mail.'
+  toc: []
+  trans: '
+
+
+    编辑完成后，将 `courier-imap.spec` 文件拷贝到 `/home/test/rpm/SPECS` 目录。在构建 `courier-imap`
+    之前，需要安装 `courier–authlib` 软件包（用于身份验证）。下载 `courier-authlib-0.62.1.tar.bz2` 或任何可用版本并保存到
+    `SOURCES` 目录。解压并编辑规格文件，然后将其拷贝到 `/home/test/rpm/SPECS` 目录，以 root 身份在 `i386` 目录中构建并安装。
+
+
+    ```bash
+
+    cp courier-authlib-0.62.1.tar.bz2 /home/test/rpm/SOURCES
+
+    cd /home/rpm/SOURCES
+
+    tar xjf courier-authlib-0.59.1.tar.bz2
+
+    ```
+
+
+    ### 安装 courier-authlib
+
+
+    ```bash
+
+    cd $HOME/rpm/SPECS
+
+    rmpbuild -bb courier-authlib.spec
+
+    su root
+
+    cd /home/test/rpm/RPMS/i356/
+
+    rpm-ivh courier-authlib-*
+
+    ```
+
+
+    系统会提示 `libtool-itdl-devel` 依赖项失败，请下载并安装任何其他所需的依赖项。如果你想让 `courier-imap` 支持这些功能，你应该安装
+    `i386` 文件夹中找到的所有 `courier-authlib` 软件包。你会在那里找到以下软件包：`courier_authlib`, `courier_authlib_devel`,
+    `courier_authlib_debuginfo`, `courier_authlib_userdb`, `courier_authlib_mysql`,
+    `courier_authlib_pgsql`, `courier_authlib_userdb_ldab`。
+
+
+    以用户 `test` 构建 `courier–imap` 软件包并以 root 用户身份安装。
+
+
+    ```bash
+
+    su test
+
+    cd $HOME/rpm/SPECS
+
+    rpmbuild-bb courier-imap.spec
+
+    su root
+
+    cd /home/test/rpm/RPMS/i386/
+
+    rpm-ivh courier-imap-*
+
+    ```
+
+
+    根据需要安装任何失败的依赖项。然后按照以下方式启动软件包：
+
+
+    ```bash
+
+    authdaemond restart
+
+    service courier-authlib restart
+
+    service courier-imap restart
+
+    ```
+
+
+    ### 3.10 Courier-IMAP 配置：
+
+
+    要告诉 Courier 它应该针对 MySQL 数据库进行身份验证，首先编辑 `/etc/authlib/authdaemonrc` 并更改 `authmodulelist`
+    的值，使其从 mysql 数据库读取。
+
+
+    `authmodulelist = “authmysql”`
+
+
+    `Courier- Imap` 的 `imapd` 文件 `/etc/courier/imapd` 包含类似下面的行：
+
+    `IMAP_CAPABILITY =”IMAP4rev 1 UIDPLUS CHILDREN NAMESPACE THREAD = ORDEREDSUBJECT
+    THREAD= REFERENCES SORT QUOTA IDLE"`
+
+
+    修改 `/etc/authlib` 目录下的 `authmysqlrc` 文件，并添加这些行：
+
+
+    ```text
+
+    #DEFAULT _DOMAIN uniswa.com
+
+    MYSQL_CRYPT_PWFIELD password
+
+    MYSQL_DATABASE postfix
+
+    MYSQL_GID_FIELD ‘89’
+
+    MYSQL_HOME_FIELD ‘/vmail/’
+
+    MYSQL_LOGIN _FIELD username
+
+    MYSQL_MAILDIR_FIELD maildir
+
+    MYSQL_NAME _FIELD name
+
+    MYSQL_OPT 0
+
+    MYSQL_ PASSWORD postfix
+
+    #MYSQL_ PORT 0
+
+    # 取消取消注释以支持配额。
+
+    MYQL_QUOTA_FIELD quota
+
+    MYSQL_ SERVER localhost
+
+    #Default RedHat Socket
+
+    MYSQL _SOCKET /var/lib/mysql.Sock
+
+    MYSQL_UID_FIELD ‘89’
+
+    MYSQL_USERNAME postfix
+
+    MYSQL_USER _TABLE mailbox
+
+    #MYSQL _WHER_CLAUSE server = ‘project.uniswa.com’
+
+    ```
+
+
+    创建 `/etc/authlib/hostdomains` 文件，其中包含 `uniswa.com`，即由该服务器托管的域名。
+
+
+    使用 `courier-imap` 进行测试：
+
+
+    ```bash
+
+    service postfix reload
+
+    authdaemond restart
+
+    service courier-authlib restart
+
+    service courier-imap restart
+
+    telnet localhost 25
+
+    mail from: hedaya
+
+    rcpt to: user@uniswa.com
+
+    data
+
+    hi testing
+
+    .
+
+    quit
+
+
+    telnet localhost 110
+
+    user user@uniswa.com
+
+    pass password
+
+    list
+
+    retr (msg no)
+
+    quit
+
+    ```
+
+
+    ### 3.11 配置 Postfixadmin：
+
+
+    Postfix 将允许管理员添加、删除和编辑邮箱以及完整域名。此基于 Web 的应用程序允许管理员访问 postfix 的 MySQL 配置并直接进行编辑。安装
+    Postfixadmin 的前提是安装 Apache。从 `http://high5.net` 下载 Postfix 包并保存到 apache 目录 `/var/www/html`
+    中，然后解压。
+
+
+    ```bash
+
+    tar –zxvf postfixadmin-*.tar.gz
+
+    ```
+
+
+    在 `config.inc.php` 文件中执行以下配置。
+
+
+    第一件事是告诉 Postfix 你已经配置了该应用程序。
+
+    `$CONF[''configured''] = true;`
+
+
+    然后定义 postfix admin 版本的完整 URL。
+
+    `$CONF [''postfix_admin_url''] = ''http: //uniswa.com/postfixadmin’;`
+
+
+    接下来是设置数据库连接。
+
+
+    ```php
+
+    $CONF [''database_type''] = ''mysql'';
+
+    $CONF [''database_host''] = ''localhost'';
+
+    $CONF [''database_user''] = ''postfixadmin'';
+
+    $CONF [''database_password''] = ''postfixadmin'';
+
+    $CONF [''database_name''] = ''postfix'';
+
+    $CONF [''database_prefix''] = **;
+
+    ```
+
+
+    所有问题将报告到的以及发送给所有人的邮箱地址。
+
+    `$CONF [''admin_email''] = ''postmaster@example.com'';`
+
+
+    这用于向 Postfix 发送邮件以便邮箱。
+
+    `$CONF [''smtp_server''] = ''localhost'';`
+
+    `$CONF [''smtp_port''] = ''localhost'';`
+
+
+    此部分定义了使用的加密方法。
+
+    `$CONF [''encrypt''] = ''md5'';`
+
+
+    密码所需的最小长度。
+
+    `$CONF [''min_password_length''] = 5;`
+
+
+    管理员的默认密码。
+
+    `$CONF [''default_password''] = '''';`
+
+
+    此消息将发送给每个新建的邮箱。
+
+    `$CONF [''welcome_text''] = EOM
+
+    Hi,
+
+    Welcome to your new account.
+
+    EOM;`
+
+
+    生成的设置密码。
+
+    `$CONF [''setup_password''] = 5;`
+
+
+    该设置将创建管理员数据库。
+
+    `$CONF [''setup_password''] = ''YES'';`
+
+
+    setupadmin 的路径。
+
+    `$CONF [''domain_path''] = ''YES'';`
+
+
+    邮箱中的域名。
+
+    `$CONF [''domain_in_mailbox''] = ''YES'';`
+
+
+    管理员的别名。
+
+    `$CONF [''aliases''] = ''YES'';`
+
+
+    已设置邮箱。
+
+    `$CONF [''mailboxes''] = ''YES'';`
+
+
+    用户的配额。
+
+    `$CONF [''maxquota''] = ''10'';`
+
+
+    配额的倍数。
+
+    `$CONF [''quota_multiplier''] = ''10'';`
+
+
+    用户的域名。
+
+    `$CONF [''domain''] = ''YES'';`
+
+
+    传输选项。
+
+    `$CONF [''transport_options''] = array (''virtual'', ''local'', ''relay'');`
+
+
+    默认传输。
+
+    `$CONF [''transport_default''] = ''virtual'';`
+
+
+    别名的控制。
+
+    `$CONF [''control''] = ''YES'';`
+
+
+    管理员控制。
+
+    `$CONF [''alias_control_admin''] = ''YES'';`
+
+
+    设置。
+
+    `$CONF [''setup''] = ''YES'';`
+
+
+    密码的哈希值。
+
+    `$CONF [''hash''] = ''md5'';`
+
+
+    域名的控制。
+
+    `$CONF [''domain_control''] = ''YES'';`
+
+
+    别名的设置。
+
+    `$CONF [''alias_setup''] = ''YES'';`
+
+
+    域名的路径。
+
+    `$CONF [''domain_path''] = ''YES'';`
+
+
+    别名的哈希值。
+
+    `$CONF [''alias_hash''] = ''md5'';`
+
+
+    用户的控制。
+
+    `$CONF [''user_control''] = ''YES'';`
+
+
+    用户的设置。
+
+    `$CONF [''user_setup''] = ''YES'';`
+
+
+    用户的路径。
+
+    `$CONF [''user_path''] = ''YES'';`
+
+
+    用户的哈希值。
+
+    `$CONF [''user_hash''] = ''md5'';`
+
+
+    '
+- fmt: '
+
+    1. Download `squirrelmail` from `www.squirrelmail.org`. Download for example `squirrelmail-1.4.6.tar.bz2`
+    or any other version.
+
+
+    2. Extract the `squirrelmail`.
+
+
+    3. Copy the `squirrelmail` to folder `/var/www/html/squirrelmail`.
+
+
+    6. Change to directory `/var/www/squirrelmail/config`.
+
+
+    7. Rename the file `config_default.php` to `config.php`.
+
+
+    8. Create directories `/var/www/html/squirrelmail/attach` and `/var/www/html/squirrelmail/data`,
+    and change their ownership.
+
+
+    ```
+
+    chown –R apache data
+
+    chgrp- R apache data
+
+    chown – R apache attach
+
+    chgrp –R apache attach
+
+    chmod 730 data
+
+    chmod 730 attach
+
+    ```
+
+
+    9. Download a quota usage plugin from squirrel site to `/var/www/html/squirrelmail/plugins`.
+
+
+    ```
+
+    cd /var/www/hml/squirrelmail/plugins
+
+    tar –zxvf quota_usage-1.3-1.2.7.tar.gz
+
+    ```
+
+
+    10. Change into the `quota_usage` directory, copy `config.php.sample` to `config.php`
+    and edit `config.php`, making adjustments as you deem necessary.
+
+
+    ```
+
+    cd quota_usage
+
+    cp config.php.sample config.php
+
+    ```
+
+
+    9. From the command line at `/var/www/html/squirrelmail/config`, execute perl
+    script:
+
+
+    ```bash
+
+    ./config.pl
+
+    ```
+
+
+    - Choose `2.` Server Setting Change Domain:
+
+    - Choose `4.` General Option, Change attachment directory to `.../attach/`, Change
+    data directory to `.../data/`
+
+    - Choose `8.` Plug- in, Add all plug-in including `quota _usage`
+
+    - Choose `S` to save the configuration.
+
+
+    10. Restart `httpd` service.
+
+
+    ```
+
+    service httpd restart
+
+    ```
+
+
+    11. In browser, browse `http://project.uniswa.com/squirrelmail/`.
+
+
+    ## 3. Installing and Configuring MailScanner, ClamAV and SpamAssassin
+
+
+    Postfix puts all incoming email into a hold queue so Mailscanner can safely access
+    these emails for scanning and then pass them back to the Postfix active queue
+    for delivery. I downloaded Mailscanner from `http://www.mailscanner.info/downloads.html`.
+    After unpacking the package, it will create a new directory. Move into the new
+    directory using the `cd` command, then run the command:
+
+
+    ```bash
+
+    ./install.sh
+
+    ```
+
+
+    This will produce a very large amount of output, as it tries to build and install
+    all the packages that MailScanner uses. If not, you should first install all dependency
+    packages that MailScanner uses.
+
+
+    Here are the options you will need to change in the MailScanner configuration
+    file:
+
+
+    - %org-name% = yoursite
+
+    - Run As User = postfix
+
+    - Run As Group = postfix
+
+    - Incoming Queue Dir = `/var/spool/postfix/hold`
+
+    - Outgoing Queue Dir = /var/spool/postfix/incoming
+
+    - MTA = postfix
+
+    - Virus Scanning = yes
+
+    - Virus Scanners = clamav
+
+    - Spam List = spamhaus.org spamcop.net ORDB-RBL
+
+    - Use SpamAssassin = yes
+
+
+    The best way for proper installation of ClamAV and SpamAssassin is through the
+    package that was prepared specially for this purpose in `www.mailscanner.info`.
+    Download the package from `http://www.mailscanner.info/files/4/install-Clam-0.88.7-SA-3.1.7.tar.gz`
+    or any other version.
+
+
+    You need to unpack the tar file, move into the new directory using the `cd` command,
+    then run the command:
+
+
+    ```bash
+
+    ./install.sh
+
+    ```
+
+
+    You can adjust the file `freshclam.conf` to suite your proxy setting:
+
+
+    ```
+
+    UpdateLogFile /var/log/freshclam.log
+
+    HTTPProxyServer proxy.uniswa.sz
+
+    HTTPProxyPort 80
+
+    ```
+
+
+    To start `clamav` and `spanassassin`, run:
+
+
+    ```bash
+
+    service spamd start
+
+    clamd start
+
+    ```
+
+
+    For auto update, run:
+
+
+    ```bash
+
+    freshclam
+
+    ```
+
+
+    We will need to edit postfix to hold all email messages so that MailScanner can
+    scan them and then put them in the mail queue. The following line should be added
+    to `/etc/postfix/main.cf`:
+
+
+    ```
+
+    header_checks = regexp:/etc/postfix/header_checks
+
+    ```
+
+
+    Then we will need to create the `header_checks` file `/etc/postfix/header_checks`
+    and put in this information:
+
+
+    ```
+
+    /^Received:/ HOLD
+
+    ```
+
+
+    You will need to ensure that the user `postfix` can write to `/var/spool/MailScanner/incoming`
+    and `/var/spool/MailScanner/quarantine`:
+
+
+    ```
+
+    chown postfix.postfix /var/spool/MailScanner/incoming
+
+    chown postfix.postfix /var/spool/MailScanner/quarantine
+
+    ```
+
+
+    To start MailScanner, run:
+
+
+    ```bash
+
+    service MailScanner start
+
+    ```
+
+
+    The problem is that the MailScanner could not be loaded successfully after starting
+    and so that part of project could be implemented successfully. The emails could
+    not be scanned for spams and viruses.
+
+
+    ## 4. Testing the configuration
+
+
+    For testing the configurations go, to root directory and do the following steps:
+
+
+    ```
+
+    service postfix reload
+
+    authdaemond restart
+
+    service courier-authlib restart
+
+    service courier-imap restart
+
+    service mysqld restart
+
+    service httpd restart
+
+    telnet localhost 25
+
+    mail from: khumalo
+
+    rcpt to: user@uniswa.com
+
+    data
+
+    just testing
+
+    .
+
+    quit
+
+
+    telnet localhost 110
+
+    user user@uiswa.com
+
+    pass password
+
+    list
+
+    retr (msg no)
+
+    quit
+
+    ```
+
+
+    Testing is done in the Linux shell first using commands as shown in Fig. 4.1 and
+    Fig. 4.2 below.
+
+
+    Then open Mozilla Firefox and connect to `http://project.uniswa.com/squirrelmail/`
+    to test the mail server using the graphical interface `squirrelmail` as shown
+    in Fig. 4.3, Fig. 4.4, Fig. 4.5, Fig. 4.6 and Fig. 4.7.
+
+    '
+  raw: '1-Download squirrelmail from www.squirrelmail.org. Download for example squirrelmail-1.4.6.tar.bz2
+    or any other version.
+
+
+    2-Extract the squirrelmail
+
+
+    3-Copy the squirrelmail to folder /var/www/html/squirrelmail
+
+
+    6-Change to directory /var/www/squirrelmail/config
+
+
+    7-Rename the file config_default.php to config.php
+
+
+    8-Create directories /var/www/html/squirrelmail/attach and /var/www/html/squirrelmail/data,
+    and change their ownership
+
+
+    # chown –R apache data
+
+
+    # chgrp- R apache data
+
+
+    # chown – R apache attach
+
+
+    #chgrp –R apache attach
+
+
+    # chmod 730 data
+
+
+    #chmod 730 attach
+
+
+    9- Download a quota usage plugin from squirrel site to /var/www/html/squirrelmail/plugins.
+
+
+    # cd /var/www/hml/squirrelmail/plugins
+
+
+    # tar –zxvf quota_usage-1.3-1.2.7.tar.gz
+
+
+    10- Change into the quota_ usage directory, copy config.php.sample to config.php
+    and edit config.php, making adjustments as you deem necessary.
+
+
+    # cd quota_usage
+
+
+    #cp config.php.sample config.php
+
+
+    9- From the command line at /var/www/html/squirrelmail/config, excute perl script
+
+
+    #./config.pl
+
+
+    Choose 2\. Server Setting Change Domain:
+
+
+    Choose 4\. General Option, Change attachment directory to.../attach/, Change data
+    directory to .../data/
+
+
+    Choose 8\. Plug- in, Add all plug-in including quota _usage
+
+
+    Choose S to save the configuration
+
+
+    10- Restart httpd service
+
+
+    # Service httpd restart
+
+
+    11- In browser, browse http://project.uniswa.com/squirrelmail/
+
+
+    3.13 Installing and Configuring MailScanner, ClamAV and SpamAssassin :
+
+
+    Postfix puts all incoming email into a hold queue so Mailscanner can safely access
+    these emails for scanning and then pass them back to the Postfix active queue
+    for delivery. I downloaded Mailscanner from http://www.mailscanner.info/downloads.html.
+    After unpacking the package, it will create a new directory. Move into the new
+    directory using the "cd" command, then run the command
+
+
+    # ./install.sh
+
+
+    This will produce a very large amount of output, as it tries to build and install
+    all the packages that MailScanner uses. If not, you should first install all dependency
+    packages that MailScanner uses.
+
+
+    Here are the options you will need to change in the MailScanner configuration
+    file.
+
+
+    %org-name% = yoursite
+
+
+    Run As User = postfix
+
+
+    Run As Group = postfix
+
+
+    Incoming Queue Dir = /var/spool/postfix/hold
+
+
+    Outgoing Queue Dir = /var/spool/postfix/incoming
+
+
+    MTA = postfix
+
+
+    Virus Scanning = yes
+
+
+    Virus Scanners = clamav
+
+
+    Spam List = spamhaus.org spamcop.net ORDB-RBL
+
+
+    Use SpamAssassin = yes
+
+
+    The best way for proper installation of ClamAV and SpamAssassin is through the
+    package that was prepared specially for this purpose in www.mailscanner.info.
+    Download the package from http://www.mailscanner.info/files/4/install-Clam-0.88.7-SA-3.1.7.tar.gz
+    or any other version.
+
+
+    You need to unpack the tar file, move into the new directory using the "cd" command,
+    then run the command
+
+
+    # ./install.sh
+
+
+    You can adjust the file freshclam.conf to suite your proxy setting,
+
+
+    UpdateLogFile /var/log/freshclam.log
+
+
+    HTTPProxyServer proxy.uniswa.sz
+
+
+    HTTPProxyPort 80
+
+
+    To start clamav and spanassassin, run
+
+
+    # service spamd start
+
+
+    # clamd start
+
+
+    For auto update, run
+
+
+    # freshclam
+
+
+    We will need to edit postfix to hold all email messages so that MailScanner can
+    scan them and then put them in the mail queue. The following line should be added
+    to /etc/postfix/main.cf
+
+
+    header_checks = regexp:/etc/postfix/header_checks
+
+
+    Then we will need to create the header_checks file /etc/postfix/header_checks
+    and put in
+
+
+    this information:
+
+
+    /^Received:/ HOLD
+
+
+    You will need to ensure that the user "postfix" can write to
+
+
+    /var/spool/MailScanner/incoming and /var/spool/MailScanner/quarantine:
+
+
+    # chown postfix.postfix /var/spool/MailScanner/incoming
+
+
+    # chown postfix.postfix /var/spool/MailScanner/quarantine
+
+
+    To start MailScanner, run
+
+
+    # service MailScanner start
+
+
+    The problem is that the MailScanner could not be loaded successfully after starting
+    and so that part of project could be implemented successfully. The emails could
+    not be scanned for spams and viruses.
+
+
+    ### 4 Testing the configuration:
+
+
+    **4 Testing the configuration:**
+
+
+    For testing the configurations go, to root directory and do the following steps:
+
+
+    #service postfix reload
+
+
+    #authdaemond restart
+
+
+    #service courier-authlib restart
+
+
+    #service courier-imap restart
+
+
+    # service mysqld restart
+
+
+    # service httpd restart
+
+
+    # telnet localhost 25
+
+
+    mail from: khumalo
+
+
+    rcpt to: user@uniswa.com
+
+
+    data
+
+
+    just testing
+
+
+    .
+
+
+    quit
+
+
+    # telnet localhost 110
+
+
+    user user@uiswa.com
+
+
+    pass password
+
+
+    list
+
+
+    retr (msg no)
+
+
+    quit
+
+
+    Testing is done in the Linux shell first using commands as shown in Fig. 4.1 and
+    Fig. 4.2 below.
+
+
+    Then open Mozilla Firefox and connect to http://project.uniswa.com/squirrelmail/
+    to test the mail server using the graphical interface squirrelmail as shown in
+    Fig. 4.3, Fig. 4.4, Fig. 4.5, Fig. 4.6 and Fig. 4.7\. Fig. 4.3 shows user bob@uniswa.com
+    logs into the system. Fig. 4.4 shows user bob@uniswa.com composes mail to user
+    bill@acme.com. Fig. 4.5 shows user bill@acme.com logs to the system. Fig. 6 shows
+    user bill@acme.com is notified of his new mail from user bob@uniswa.com. Fig.
+    4.7\. shows user bill@acme.com reads his mail from user bob@uniswa.com
+
+
+    As the installation of MailScanner was not successful, testing the mail server
+    in scanning viruses and spams was not possible.
+
+
+    ![](images/159551731957721505_1.jpg)
+
+
+    Fig. 4.1\. Testing the email server using command lines, user khumalo is sending
+    mail to user@uniswa.com.
+
+
+    ![](images/15955173195193168_2.jpg)
+
+
+    **Fig. 4.2\. Testing the email server using command lines,** **user@uniswa.com
+    reads his mail from khumalo**
+
+
+    ![](images/159551732015875801_3.jpg)
+
+
+    Figure 4.3\. Testing logging to mail server through squirrelmail, user bob@uniswa.com
+    logs into the system
+
+
+    ![](images/159551732082525338_4.jpg)
+
+
+    Figure 4.4\. Testing logging to mail server through squirrelmail, user bob@uniswa.com
+    composes mail to user bill@acme.com
+
+
+    ![](images/159551732024122233_5.jpg)
+
+
+    **Figure 4.5\. Testing logging to mail server through squirrelmail, user bill@acme.com**
+    **logs to the system**
+
+
+    ![](images/159551732181163561_6.jpg)
+
+
+    Figure 4.6\. Testing logging to mail server through squirrelmail, user bill@acme.com
+    is notified of his new mail from user bob@uniswa.com
+
+
+    ![](images/159551732111138821_7.jpg)
+
+
+    Figure 4.7\. Testing logging to mail server through squirrelmail, user bill@acme.com
+    reads his mail from user bob@uniswa.com
+
+
+    ### 5 Conclusion:
+
+
+    **5 Conclusion:**
+
+
+    The initial objective of this work was to build an email server that supports
+    mail delivery to multiple virtual domains where each email address will be authentic
+    to its own domain. It has been demonstrated that by following the configuration
+    steps that involve building and installing rpm packages in the Linux command line
+    this can be achieved.
+
+
+    Further more the administration of the domains and users proved to be easy when
+    using the Postfixadmin web tool as compared to doing it inside the MySQL shell
+    using SQL commands. Using the squirrelmail webmail interface made it simple for
+    users to send and retrieve mail instead of doing it in the command line where
+    one is supposed to always remember all the necessary commands.
+
+
+    The security part of the system proved to be the down side in the whole system.
+    There has not been sufficient time to fully integrate the scanning of the mail
+    and killing of the spam and viruses. Although the installation of the anti virus
+    and anti spam was successful integrating these with the mail scanner was more
+    of a challenge, work is ongoing and there is hope that meaningful progress will
+    be realized to allow for the demonstration of this part of the work.
+
+
+    The experience gained during the implementation of the system has provided immense
+    knowledge in the behavior and working of Linux servers in general and also with
+    the MySQL server.
+
+
+    Publisher:
+
+
+    BookRix GmbH & Co. KG
+
+
+    Implerstraße 24
+
+
+    80331 Munich
+
+
+    Germany
+
+
+    Publication Date: July 23rd 2020
+
+
+    [https://www.bookrix.com/-kf086886aac2de5](https://www.bookrix.com/-kf086886aac2de5)'
+  toc: []
+  trans: '
+
+
+    1. 从 `www.squirrelmail.org` 下载 `squirrelmail`。例如下载 `squirrelmail-1.4.6.tar.bz2`
+    或其他版本。
+
+
+    2. 解压 `squirrelmail`。
+
+
+    3. 将 `squirrelmail` 复制到文件夹 `/var/www/html/squirrelmail`。
+
+
+    6. 进入目录 `/var/www/squirrelmail/config`。
+
+
+    7. 将文件 `config_default.php` 重命名为 `config.php`。
+
+
+    8. 创建目录 `/var/www/html/squirrelmail/attach` 和 `/var/www/html/squirrelmail/data`，并更改它们的所有权。
+
+
+    ```
+
+    chown –R apache data
+
+    chgrp- R apache data
+
+    chown – R apache attach
+
+    chgrp –R apache attach
+
+    chmod 730 data
+
+    chmod 730 attach
+
+    ```
+
+
+    9. 从 squirrel 网站下载配额使用插件到 `/var/www/html/squirrelmail/plugins`。
+
+
+    ```
+
+    cd /var/www/hml/squirrelmail/plugins
+
+    tar –zxvf quota_usage-1.3-1.2.7.tar.gz
+
+    ```
+
+
+    10. 进入 `quota_usage` 目录，将 `config.php.sample` 复制为 `config.php` 并编辑 `config.php`，根据需要进行调整。
+
+
+    ```
+
+    cd quota_usage
+
+    cp config.php.sample config.php
+
+    ```
+
+
+    9. 在 `/var/www/html/squirrelmail/config` 路径命令行执行 perl 脚本：
+
+
+    ```bash
+
+    ./config.pl
+
+    ```
+
+
+    - 选择 `2.` Server Setting Change Domain:
+
+    - 选择 `4.` General Option，将附件目录更改为 `.../attach/`，将数据目录更改为 `.../data/`
+
+    - 选择 `8.` Plug- in，添加包括 `quota _usage` 在内的所有插件
+
+    - 选择 `S` 保存配置。
+
+
+    10. 重启 `httpd` 服务。
+
+
+    ```
+
+    service httpd restart
+
+    ```
+
+
+    11. 在浏览器中访问 `http://project.uniswa.com/squirrelmail/`。
+
+
+    ## 3. 安装和配置 MailScanner、ClamAV 和 SpamAssassin
+
+
+    Postfix 将所有入邮件放入等待队列（hold queue），这样 Mailscanner 就可以安全地访问这些邮件进行扫描，然后将它们传回 Postfix
+    活动队列进行递。我从 `http://www.mailscanner.info/downloads.html` 下载了 Mailscanner。解压包后，它会创建一个新目录。使用
+    `cd` 命令进入新目录，然后运行命令：
+
+
+    ```bash
+
+    ./install.sh
+
+    ```
+
+
+    这将产生大量的输出，因为它会尝试构建并安装 MailScanner 使用的所有包。如果执行没有成功，你应该先安装 MailScanner 使用的所有依赖包。
+
+
+    以下是你需要在 MailScanner 配置文件中更改的选项：
+
+
+    - %org-name% = yoursite
+
+    - Run As User = postfix
+
+    - Run As Group = postfix
+
+    - Incoming Queue Dir = `/var/spool/postfix/hold`
+
+    - Outgoing Queue Dir = /var/spool/postfix/incoming
+
+    - MTA = postfix
+
+    - Virus Scanning = yes
+
+    - Virus Scanners = clamav
+
+    - Spam List = spamhaus.org spamcop.net ORDB-RBL
+
+    - Use SpamAssassin = yes
+
+
+    正确安装 ClamAV 和 SpamAssassin 的最佳方法是通过 `www.mailscanner.info` 中专门为此目的准备的包。从 `http://www.mailscanner.info/files/4/install-Clam-0.88.7-SA-3.1.7.tar.gz`
+    下载该包或任何版本。
+
+
+    你需要解压 tar 文件，使用 `cd` 命令进入新目录，然后运行命令：
+
+
+    ```bash
+
+    ./install.sh
+
+    ```
+
+
+    你可以调整 `freshclam.conf` 文件以适应你的代理设置：
+
+
+    ```
+
+    UpdateLogFile /var/log/freshclam.log
+
+    HTTPProxyServer proxy.uniswa.sz
+
+    HTTPProxyPort 80
+
+    ```
+
+
+    要启动 `clamav` 和 `spanassassin`，请运行：
+
+
+    ```bash
+
+    service spamd start
+
+    clamd start
+
+    ```
+
+
+    自动更新请运行：
+
+
+    ```bash
+
+    freshclam
+
+    ```
+
+
+    我们需要编辑 postfix 以保留所有邮件消息，以便 MailScanner 能够扫描它们并将它们放入邮件队列。在 `/etc/postfix/main.cf`
+    中应添加以下行：
+
+
+    ```
+
+    header_checks = regexp:/etc/postfix/header_checks
+
+    ```
+
+
+    然后我们需要创建 `header_checks` 文件 `/etc/postfix/header_checks` 并存入以下信息：
+
+
+    ```
+
+    /^Received:/ HOLD
+
+    ```
+
+
+    你需要确保用户 `postfix` 可以写入 `/var/spool/MailScanner/incoming` 和 `/var/spool/MailScanner/quarantine`：
+
+
+    ```
+
+    chown postfix.postfix /var/spool/MailScanner/incoming
+
+    chown postfix.postfix /var/spool/MailScanner/quarantine
+
+    ```
+
+
+    启动 MailScanner，请运行：
+
+
+    ```bash
+
+    service MailScanner start
+
+    ```
+
+
+    问题是 MailScanner 在启动后无法成功加载，因此项目的该部分无法成功实现。邮件无法针对垃圾邮件和病毒进行扫描。
+
+
+    ## 4. 测试配置
+
+
+    要测试配置，进入根目录并执行以下步骤：
+
+
+    ```
+
+    service postfix reload
+
+    authdaemond restart
+
+    service courier-authlib restart
+
+    service courier-imap restart
+
+    service mysqld restart
+
+    service httpd restart
+
+    telnet localhost 25
+
+    mail from: khumalo
+
+    rcpt to: user@uniswa.com
+
+    data
+
+    just testing
+
+    .
+
+    quit
+
+
+    telnet localhost 110
+
+    user user@uiswa.com
+
+    pass password
+
+    list
+
+    retr (msg no)
+
+    quit
+
+    ```
+
+
+    首先在 Linux Shell 中通过下图 4.1 和图 4.2 所示的命令进行测试。
+
+
+    然后打开 Mozilla Firefox 并访问 `http://project.uniswa.com/squirrelmail/`，使用图形化界面 `squirrelmail`
+    测试邮件服务器，如图 4.3、图 4.4、图 4.5、图 4.6 和图 4.7 所示。
+
+
+    '
+- fmt: '
+
+    # ISBN: 978-3-7487-5107-6
+
+
+    ## BookRix-Edition publishing information
+
+
+    We thank you for choosing to purchase this book from BookRix.com. We want to invite
+    you back to [BookRix.com](https://www.bookrix.com/) in order to evaluate the [book](https://www.bookrix.com/_ebook-dr-hedaya-mahmood-alasooly-building-full-linux-mail-server-solution-with-virtual-domains-and-users).
+    Here you can discuss with other readers, discover more [books](https://www.bookrix.com/books.html)
+    and even become an author yourself.
+
+
+    Thank you again for supporting our BookRix-community.
+
+    '
+  raw: 'ISBN: 978-3-7487-5107-6
+
+
+    BookRix-Edition, publishing informationWe thank you for choosing to purchase this
+    book from BookRix.com. We want to invite you back to [BookRix.com](https://www.bookrix.com/)
+    in order to evaluate the [book](https://www.bookrix.com/_ebook-dr-hedaya-mahmood-alasooly-building-full-linux-mail-server-solution-with-virtual-domains-and-users).
+    Here you can discuss with other readers, discover more [books](https://www.bookrix.com/books.html)
+    and even become an author yourself.
+
+
+    Thank you again for supporting our BookRix-community.'
+  toc: []
+  trans: '
+
+
+    # ISBN: 978-3-7487-5107-6
+
+
+    ## BookRix 出版出版信息
+
+
+    感谢您选择在 BookRix.com 购买本书。我们邀请您再次访问 [BookRix.com](https://www.bookrix.com/) 对此[书籍](https://www.bookrix.com/_ebook-dr-hedaya-mahmood-alasooly-building-full-linux-mail-server-solution-with-virtual-domains-and-users)
+    进行评价。在这里，您可以与其他读者讨论，发现更多[书籍](https://www.bookrix.com/books.html)，甚至自己成为一名作者。
+
+
+    再次感谢您对我们 BookRix 社区的支持。
+
+
+    '

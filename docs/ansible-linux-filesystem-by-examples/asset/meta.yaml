@@ -1,0 +1,412 @@
+name: Ansible Linux Filesystem By Examples
+name_cn: Ansible Linux Filesystem 示例
+slug: ansible-linux-filesystem-by-examples
+toc:
+- - '#'
+  - Ansible Linux Filesystem 示例
+- - '##'
+  - 引言
+- - '##'
+  - 谁是 Luca Berton
+- - '##'
+  - 什么是 Ansible
+- - '##'
+  - Ansible
+- - '##'
+  - Ansible 的三个用例
+- - '###'
+  - 资源准备 (Provisioning)
+- - '###'
+  - 配置管理 (Configuration management)
+- - '###'
+  - 应用部署 (Application deployment)
+- - '##'
+  - DevOps 中的 Ansible
+- - '##'
+  - Ansible 的四个核心原则
+- - '#'
+  - Ansible & Ansible Tower & Ansible Automation Platform
+- - '##'
+  - Ansible
+- - '##'
+  - Red Hat Ansible Tower / Ansible Automation Platform
+- - '#'
+  - 入门
+- - '##'
+  - Ansible 架构
+- - '##'
+  - 与托管节点的连接
+- - '##'
+  - 创建基础清单
+- - '##'
+  - 运行您的第一个 Ansible 命令
+- - '##'
+  - 在 Ansible 上运行即时命令
+- - '##'
+  - 在 Ansible 上运行带权限提升的即时命令
+- - '##'
+  - 总结
+- - '#'
+  - 清单
+- - '##'
+  - 简单的 INI 清单
+- - '##'
+  - 简单的 YAML 清单
+- - '##'
+  - 添加主机范围
+- - '##'
+  - 多个组中的主机
+- - '##'
+  - 主机变量
+- - '##'
+  - 组变量
+- - '##'
+  - 变量值的继承
+- - '##'
+  - 使用多个清单源
+- - '##'
+  - localhost 清单
+- - '##'
+  - 总结
+- - '##'
+  - Playbook
+- - '##'
+  - YAML 语法
+- - '##'
+  - ansible-playbook --check 选项
+- - '#'
+  - '`helloworld_debug.yml`'
+- - '##'
+  - '`helloworld_debug.yml` - 执行 - 部分 1'
+- - '##'
+  - 等幂性 (Idempotency)
+- - '##'
+  - '`multipleplays.yml`'
+- - '##'
+  - '`privilegeescalation.yml`'
+- - '##'
+  - 总结 (Recap)
+- - '##'
+  - 变量 (Variables)
+- - '##'
+  - 不允许的变量名
+- - '##'
+  - 常用 Ansible 模块
+- - '##'
+  - '`variableprint.yml`'
+- - '###'
+  - variableprint.yml - 执行
+- - '###'
+  - variableprint.yml - 额外变量
+- - '###'
+  - 主机变量与组变量
+- - '####'
+  - inventory_host_variables
+- - '####'
+  - inventory_group_variables
+- - '####'
+  - inventory_host_dir
+- - '####'
+  - host_vars/demo1.example.com
+- - '####'
+  - inventory_group_dir
+- - '####'
+  - group_vars/servers
+- - '###'
+  - 数组变量
+- - '####'
+  - array.yml
+- - '###'
+  - array.yml - 执行
+- - '###'
+  - 注册变量
+- - '####'
+  - registeredvariables.yml
+- - '##'
+  - 总结
+- - '##'
+  - Facts 和魔法变量
+- - '##'
+  - Ansible Facts
+- - '###'
+  - 1. facts 是与远程主机相关的变量。
+- - '#'
+  - Ansible Vault
+- - '##'
+  - 创建加密文件
+- - '##'
+  - 查看加密文件
+- - '##'
+  - 编辑现有加密文件
+- - '##'
+  - 加密现有文件
+- - '##'
+  - 解密现有文件
+- - '##'
+  - 修改加密文件的密码
+- - '##'
+  - Playbooks 与 Ansible Vault
+- - '##'
+  - 总结
+- - '#'
+  - 条件
+- - '##'
+  - 使用“when” 的基础条件
+- - '##'
+  - 基于 ansible_facts 的条件判断
+- - '###'
+  - 执行
+- - '##'
+  - 总结
+- - '##'
+  - 循环 (Loop)
+- - '###'
+  - 使用循环自动化重复任务
+- - '##'
+  - with_* 语句
+- - '##'
+  - 总结
+- - '##'
+  - 处理器 (Handler)
+- - '###'
+  - Handler 在变化时运行
+- - '##'
+  - 角色 (Role)
+- - '###'
+  - Role 目录树
+- - '##'
+  - 在 playbook 中使用 Ansible 角色
+- - '##'
+  - 执行顺序
+- - '##'
+  - Ansible Galaxy
+- - '###'
+  - 手动从 Ansible Galaxy 安装角色
+- - '###'
+  - 从 Ansible requirements.yml 安装角色
+- - '##'
+  - Ansible 最佳实践
+- - '###'
+  - 使用空格
+- - '###'
+  - 为每一步分配“名称 (name)”
+- - '###'
+  - 为变量使用易读且有意义的名称
+- - '###'
+  - 使用原生 YAML
+- - '###'
+  - 使用原生模块代替命令
+- - '###'
+  - 配置调试消息
+- - '###'
+  - 以最小权限执行任务
+- - '###'
+  - 始终提及“state”参数
+- - '##'
+  - 使用注释
+- - '##'
+  - 安装 Ansible
+- - '##'
+  - Ansible 术语 - ansible vs ansible-core 软件包
+- - '##'
+  - 什么是 ansible-core? 什么是 ansible 社区包？
+- - '##'
+  - Ansible vs ansible-core
+- - '##'
+  - Ansible 社区包发布周期
+- - '###'
+  - ansible 社区
+- - '###'
+  - ansible-core（2.10 版本为 `ansible_base`）
+- - '##'
+  - ansible-core
+- - '###'
+  - 什么是 ansible-core 软件包？
+- - '##'
+  - ansible 社区
+- - '###'
+  - 什么是 ansible 社区包？
+- - '##'
+  - 链接
+- - '##'
+  - 在 RedHat Enterprise Linux (RHEL) 8 上安装 Ansible
+- - '##'
+  - 在 RHEL 8 中安装 Ansible
+- - '##'
+  - 演示
+- - '##'
+  - 如何在 Fedora 35 中安装 Ansible
+- - '##'
+  - 让我们在 Fedora 35 中安装 Ansible
+- - '##'
+  - 演示
+- - '##'
+  - 如何在 Fedora 中安装最新版本的 Ansible
+- - '##'
+  - 代码
+- - '##'
+  - '`install-Ansible-Fedora.sh`'
+- - '##'
+  - 执行
+- - '#'
+  - Fedora 安装 Ansible 示例
+- - '##'
+  - 检查可用软件包
+- - '##'
+  - 安装 Ansible
+- - '##'
+  - 验证安装
+- - '##'
+  - 执行前
+- - '##'
+  - 执行后
+- - '##'
+  - 如何在 CentOS 9 Stream 中安装 Ansible
+- - '###'
+  - 使用系统 AppStream 仓库中的 `ansible-core`
+- - '###'
+  - 使用 Extra Packages for Enterprise Linux - EPEL Next
+- - '##'
+  - 链接
+- - '#'
+  - CentOS Stream 9 环境配置与 Ansible 安装
+- - '##'
+  - 登录与系统信息
+- - '##'
+  - Ansible 软件包搜索
+- - '##'
+  - 安装 ansible-core
+- - '##'
+  - 执行前
+- - '##'
+  - 执行后
+- - '##'
+  - 如何在 Windows 11 WSL（Windows 的 Linux 子系统）中安装 Ansible
+- - '###'
+  - 如何使用 Windows Linux 子系统和 Ubuntu 20.04 LTS 在 Windows 11 中安装和维护 Ansible。
+- - '###'
+  - 使用 Windows Linux 子系统在 Windows 11 中安装和维护 Ansible 的简单方法。
+- - '###'
+  - 如何在 Windows 11 中安装 Ansible
+- - '##'
+  - 兼容性考虑
+- - '###'
+  - Cygwin
+- - '###'
+  - Windows Linux 子系统 (WSL)
+- - '##'
+  - 链接
+- - '###'
+  - 更多技术信息：
+- - '##'
+  - 演示
+- - '###'
+  - 如何使用 Windows Linux 子系统在 Windows 中安装最新版本和特定版本的 Ansible。
+- - '###'
+  - 代码
+- - '#'
+  - install_wsl.ps1
+- - '###'
+  - 执行
+- - '###'
+  - 安装 WSL
+- - '#'
+  - 欢迎使用 Ubuntu 20.04 LTS (GNU/Linux 4.4.0-22000-Microsoft x86_64)
+- - '##'
+  - 系统信息
+- - '#'
+  - 回顾
+- - '##'
+  - 如何在 SUSE Linux Enterprise Server (SLES) 15 SP3 中安装 `Ansible`
+- - '##'
+  - 如何使用 SUSE Package Hub 仓库在 SLES 15 SP3 中安装并维护最新版本的 `Ansible`
+- - '##'
+  - 使用 SUSE Package Hub 仓库
+- - '#'
+  - 链接
+- - '##'
+  - 演示
+- - '##'
+  - 如何在 SUSE Linux Enterprise Server 15 SP3 中安装最新版本的 `ansible`
+- - '#'
+  - 代码
+- - '##'
+  - '`Install-Ansible-SLES-15-SP3.sh`'
+- - '#'
+  - 执行
+- - '#'
+  - SLES 环境配置与 Ansible 安装日志
+- - '##'
+  - 1. 登录与系统信息查看
+- - '##'
+  - 2. 订阅状态与仓库更新
+- - '##'
+  - 3. 安装尝试
+- - '##'
+  - 4. 验证安装
+- - '##'
+  - 5. 详细查询
+- - '##'
+  - 执行前
+- - '#'
+  - zypper search ansible
+- - '##'
+  - 执行后
+- - '#'
+  - zypper info ansible
+- - '##'
+  - 如何使用 PIP 安装 Ansible
+- - '##'
+  - 使用 PIP 安装 Ansible 演示
+- - '###'
+  - PIP 用户
+- - '###'
+  - PIP 全局
+- - '##'
+  - 如何在 RedHat Enterprise Linux 9 Beta 中安装 Ansible
+- - '##'
+  - 如何在 RHEL 9 Beta 中安装 Ansible
+- - '##'
+  - 关键信息
+- - '##'
+  - 链接
+- - '#'
+  - 系统登录与基础信息
+- - '##'
+  - 主机配置查询
+- - '##'
+  - Ansible 软件包搜索
+- - '##'
+  - 安装详细信息
+- - '##'
+  - 执行前
+- - '#'
+  - dnf info ansible-core
+- - '##'
+  - 执行后
+- - '#'
+  - dnf info ansible-core
+- - '##'
+  - 如何在 Amazon Linux 2 (AWS EC2) 中安装 Ansible
+- - '###'
+  - 使用 Amazon Extras Library “amazon-linux-extras” 和 EPEL（Extra Packages for Enterprise
+    Linux）仓库在 Amazon Linux 2 中安装 Ansible。
+- - '##'
+  - 如何在 Amazon Linux 2 中安装 Ansible
+- - '###'
+  - Extras Library 仓库中的 `ansible2` 主题
+- - '###'
+  - Extra Packages for Enterprise Linux (EPEL) 附加软件包，适用于：Red Hat Enterprise Linux
+    (RHEL)、Rocky Linux 和 Scientific Linux (SL)、Oracle Linux (OL) 以及 Amazon Linux
+- - '##'
+  - 链接
+- - '##'
+  - 演示
+- - '###'
+  - 如何使用 Amazon Extras Library 和 EPEL 仓库在 Amazon Linux (EC2) 2 中安装 Ansible。
+- - '##'
+  - 代码
+- - '###'
+  - Amazon Linux 2 环境安装
+- - '##'
+  - '1. 登录与 ##                                      '

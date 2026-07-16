@@ -1,0 +1,2 @@
++   [BeeWare：Python 跨平台 GUI 开发：打造在 Windows、macOS、Linux、Android 甚至 iOS 上流畅运行的精美响应式应用程序。](README.md)
++   [BeeWare：Python 跨平台 GUI 开发：打造在 Windows、macOS、Linux、Android 甚至 iOS 上流畅运行的精美响应式应用程序。](beeware-cross-platform-gui-development-with-python-craft-stu_0.md)
