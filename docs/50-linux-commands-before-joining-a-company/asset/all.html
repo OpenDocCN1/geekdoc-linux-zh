@@ -1,0 +1,2332 @@
+<p><img src="Images/cover00088.jpeg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div id="part0000.xhtml_aid-1">
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:3.0rem; font-weight:bold">50+ Linux Commands
+before joining a Company</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.3rem; font-weight:bold">Aditya Chatterjee x
+Benjamin QoChuk</span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<p><span id="part0000.xhtml_aid-S"
+style=" font-size:2.3rem; font-weight:bold">Introduction</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Linux and its variants like Ubuntu,
+RedHat, OpenSUSE and others are the preferred development workspace for
+most serious developers today.</span></p>
+<p><span style=" font-size:1.0rem">Moreover, when one is developing a
+software system that will be used by customers, it is important to test
+in different Linux variants and the key is to use Linux smoothly for
+wide collaboration.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This book will prepare you to use
+Linux in a way a professional developer would use. You can fit in any
+developer group instantly and will feel confident in using your
+computing system. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We have covered </span><span
+style=" font-size:1.0rem; font-weight:bold">over 50 commands</span><span
+style=" font-size:1.0rem">, and this will enable you to use Linux
+efficiently for any basic development work. All commands are important
+and has been chosen by analyzing the development work done in top
+companies.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">High level
+ideas</span><span style=" font-size:1.0rem"> we have covered
+are:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">Get hardware details about your
+system</span></li>
+<li><span style=" font-size:1.0rem">Get software details about your
+system</span></li>
+<li><span style=" font-size:1.0rem">Running and handling processes
+efficiently and in background</span></li>
+<li><span style=" font-size:1.0rem">Handling file system</span></li>
+<li><span style=" font-size:1.0rem">Other key commands</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">At the end, we have present
+</span><span style=" font-size:1.0rem; font-weight:bold">key advices of
+using Linux</span><span style=" font-size:1.0rem"> that will make you a
+“</span><span style=" font-size:1.0rem; font-style:italic">great
+developer</span><span style=" font-size:1.0rem">” clearly.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Let us get started directly by
+capturing the details of the current computing system. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This is important so that you can
+share the details along with the main work (may be an application or
+benchmark data) so it is reproducible. </span></p>
+<p><span style=" font-size:2.3rem; font-weight:bold"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<p><span id="part0000.xhtml_aid-2H"
+style=" font-size:2.3rem; font-weight:bold">Get details about your
+system</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Getting information about a system
+and recording it correctly is important for a wide range of use cases.
+This allows one to recreate the same system environment and hence, work
+in same flow and get same performance measurements.</span></p>
+<p><span style=" font-size:1.0rem">This involves both hardware and
+software details.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">While working in a professional
+setting, often, one is required to keep a track of System details for
+every measurement/ experiment done. This is because at a later point the
+same performance can be replicated by creating same
+environment.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This is how a basic record of our
+system configuration looks like:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="text-align:center">
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse;margin:0 auto; width:486.5pt"
+data-border="1">
+<tbody>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 474.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">System
+Information</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:16.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Model</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">Intel(R) Xeon(R) Platinum 8180 CPU @
+2.50GHz</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">NUMA nodes</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">4</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Sockets</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Cores</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">28</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Threads per socket</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">CPUs</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">112</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Hyperthreading</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">OFF</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Frequency</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2494.256 MHz</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">RAM</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">512 GB</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Rank</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">DIMMs</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">4</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Clock Frequency</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">4200 MHz</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Clock Speed</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2133 MT/s</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 474.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Software
+Information</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Kernel</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">Linux linux-mzys 4.4.162-94.72-default
+</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">GCC version</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">GCC (SUSE Linux) 6.2.1
+20160826</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">OS</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">OpenSUSE 12.3 (Dartmouth)</span></p></td>
+</tr>
+<tr style=" ">
+<td style="width: 152.75pt; border: none"></td>
+<td style="width: 333pt; border: none"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We will go through the process so
+that you can recreate the details for your own system.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">It is highly
+suggested that you try the commands in your system</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We will get started with the
+process.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">lscpu command</span></p>
+<p><span style=" font-size:1.0rem">lscpu command will provide
+information about the CPU architecture by reading two files:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">sysfs </span></li>
+<li><span style=" font-size:1.0rem">/proc/cpuinfo</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The output is the first step of
+collecting system configuration information. This command provides some
+key information which is used to run processes efficiently. The idea is
+that there are commands to control the execution of processes and we
+have explored this later in this book.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">lscpu</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We will present the output in our
+system first so that you can go through it and analyze it. We explain
+the background knowledge and go through the command following
+this.</span></p>
+<p><span style=" font-size:1.0rem">It provides several information, so
+it is highly advised that you examine it carefully on your own
+first.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span
+style=" font-size:0.88rem; color:#ffffff">Architecture:         
+x86_64</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">CPU
+op-mode(s):        32-bit, 64-bit</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Byte
+Order:            Little Endian</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">CPU(s):               
+112</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">On-line CPU(s)
+list:   0-111</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Thread(s) per
+core:    2</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Core(s) per
+socket:    28</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">Socket(s):            
+2</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">NUMA
+node(s):          4</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Vendor
+ID:             GenuineIntel</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">CPU
+family:            6</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">Model:                
+85</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Model
+name:            Intel(R) Xeon(R) Platinum 8180 CPU @ 2.50GHz</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">Stepping:             
+4</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">CPU
+MHz:               2494.256</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">BogoMIPS:             
+4988.51</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">Virtualization:       
+VT-x</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">L1d
+cache:             32K</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">L1i
+cache:             32K</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">L2
+cache:              1024K</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">L3
+cache:              39424K</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">NUMA node0
+CPU(s):    
+0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100,104,108</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">NUMA node1
+CPU(s):    
+1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93,97,101,105,109</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">NUMA node2
+CPU(s):    
+2,6,10,14,18,22,26,30,34,38,42,46,50,54,58,62,66,70,74,78,82,86,90,94,98,102,106,110</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">NUMA node3
+CPU(s):    
+3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63,67,71,75,79,83,87,91,95,99,103,107,111</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">Flags:                 fpu vme
+de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush
+dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm
+constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology
+nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx
+smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic
+movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm
+3dnowprefetch ida arat epb invpcid_single pln pts dtherm intel_pt kaiser
+tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2
+smep bmi2 erms invpcid rtm cqm mpx avx512f avx512dq rdseed adx smap
+clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1
+cqm_llc cqm_occup_llc pku ospke</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">A system has a couple of NUMA nodes
+which is a division of the entire system. The idea is that processes can
+run on separate NUMA nodes without any interference and overhead for
+memory access point of view.</span></p>
+<p><span style=" font-size:1.0rem">Each NUMA node has a set of CPUs and
+separate memory assigned to it.</span></p>
+<p><span style=" font-size:1.0rem">In our case, with the lscpu command,
+we get the following information:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">We have 4 NUMA nodes</span></li>
+<li><span style=" font-size:1.0rem">We have 112 CPUs</span></li>
+<li><span style=" font-size:1.0rem">We get the entire list of CPUs and
+the NUMA node each belongs to.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We have sockets which are the number
+of distinct physical components. Each socket has a set of cores assigned
+to it.</span></p>
+<p><span style=" font-size:1.0rem">Each core can have several CPUs
+assigned to it and the number of CPUs is same as the number of threads
+assigned to a core.</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">Note</span><span
+style=" font-size:1.0rem">: A CPU can run only one thread at a time. A
+thread means one line of execution/ one process.</span></p>
+<p><span style=" font-size:1.0rem">From our lscpu output, we get the
+following details:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">2 sockets</span></li>
+<li><span style=" font-size:1.0rem">28 cores per socket</span></li>
+<li><span style=" font-size:1.0rem">2 threads per cores</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you do the calculation, the
+numbers will match on your system.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">(Number of Sockets)
+x (Number of cores per socket) x (Number of threads per core) = (Number
+of CPUs)</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">2 x 28 x 2 =
+112</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">Note</span><span
+style=" font-size:1.0rem">: If hyperthreading (a property) is on, then
+the above calculation will not hold, and we will get the twice the
+number of CPUs. In hyperthreading, the number of threads per core is
+doubled. Hence, this gives us another key information: </span><span
+style=" font-size:1.0rem; font-style:italic">the state of
+hyperthreading</span><span style=" font-size:1.0rem">.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If hyperthreading is on,
+then:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">(Number of Sockets)
+x (Number of cores per socket) x (Number of threads per core) = (Number
+of CPUs) x 2</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">2 x 28 x 4 = 112 x
+2</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">With this, we got a good idea of the
+system design. This information shall be recorded and will be used
+extensively in our later sections where we run processes
+efficiently.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We get other important details to
+identify our system as well. These are:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">Model name: Intel(R) Xeon(R)
+Platinum 8180 CPU @ 2.50GHz</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">CPU frequency is 2494.256 MHz. This
+is important as it impact performance of programs directly and must be
+same to enable us to replicate a benchmark result.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The flag values indicate the
+different features supported by the system. For example, AVX2 and AVX512
+are supported in our system. For common systems, AVX512 is not supported
+and the performance of specific applications may be low which use AVX512
+to their benefit.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This gives a good indication why the
+performance of the same application may vary significantly across
+systems.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Following is the summary of the key
+information we recorded using lscpu command:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="text-align:center">
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse;margin:0 auto; width:437pt"
+data-border="1">
+<tbody>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 425.45pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">System Information
+(lscpu)</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 102.15pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 312.5pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:29pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 102.15pt"><p><span
+style=" font-size:1.0rem">Model</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 312.5pt"><p><span
+style=" font-size:1.0rem">Intel(R) Xeon(R) Platinum 8180 CPU @
+2.50GHz</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 102.15pt"><p><span
+style=" font-size:1.0rem">NUMA nodes</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 312.5pt"><p><span
+style=" font-size:1.0rem">4</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 102.15pt"><p><span
+style=" font-size:1.0rem">Sockets</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 312.5pt"><p><span
+style=" font-size:1.0rem">2</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 102.15pt"><p><span
+style=" font-size:1.0rem">Cores</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 312.5pt"><p><span
+style=" font-size:1.0rem">28</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 102.15pt"><p><span
+style=" font-size:1.0rem">Threads per socket</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 312.5pt"><p><span
+style=" font-size:1.0rem">2</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 102.15pt"><p><span
+style=" font-size:1.0rem">CPUs</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 312.5pt"><p><span
+style=" font-size:1.0rem">112</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 102.15pt"><p><span
+style=" font-size:1.0rem">Hyperthreading</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 312.5pt"><p><span
+style=" font-size:1.0rem">OFF</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 102.15pt"><p><span
+style=" font-size:1.0rem">Frequency</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 312.5pt"><p><span
+style=" font-size:1.0rem">2494.256 MHz</span></p></td>
+</tr>
+<tr style=" ">
+<td style="width: 112.95pt; border: none"></td>
+<td style="width: 323.3pt; border: none"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">You must take a note of these details
+for your system as well. Do this before moving on to the next
+command.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-9G"
+style=" font-size:2.3rem; font-weight:bold">uname -a</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This command will provide the kernel
+name. This is important so because operating systems play a major role.
+</span></p>
+<p><span style=" font-size:1.0rem">In most benchmarking setting,
+measurements are taken on different operating systems and hence, kernel
+is a key information.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">uname -a</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Sample output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:0.88rem; color:#ffffff">Linux linux-mzys
+4.4.162-94.72-default #1 </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">SMP Mon Nov 12
+18:57:45 UTC 2018 (9de753f) </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">x86_64 x86_64 x86_64
+GNU/Linux</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Following is the record of our kernel
+information:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="text-align:center">
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse;margin:0 auto; width:378.5pt"
+data-border="1">
+<tbody>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 366.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">System Information (uname
+-a)</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 96.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 259.2pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 96.95pt"><p><span
+style=" font-size:1.0rem">Kernel</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 259.2pt"><p><span
+style=" font-size:1.0rem">Linux linux-mzys 4.4.162-94.72-default
+</span></p></td>
+</tr>
+<tr style=" ">
+<td style="width: 107.75pt; border: none"></td>
+<td style="width: 270pt; border: none"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-AO"
+style=" font-size:2.3rem; font-weight:bold">sudo dmidecode</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This command provides several
+important information such as Desktop Management Interface and is linked
+to System Management BIOS. It provides the memory structure, system
+components, device information and much more.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We will investigate parts of it one
+by one to understand and get relevant information quickly.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Clock speed</span></p>
+<p><span style=" font-size:1.0rem">The first information we need is the
+clock speed. We can grep MT on the output of sudo dmidecode to get this
+information conveniently. Grep is a UNIX tool which allows us to filter
+text.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">sudo dmidecode | grep
+MT</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:0.88rem; color:#ffffff">MTRR (Memory type
+range registers)</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">        Speed: 2133
+MT/s</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">        Configured
+Clock Speed: 1067 MT/s</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">In this command, we will get the
+Physical memory slot using grep DDR</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">sudo dmidecode | grep
+DDR</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Type: DDR4</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To get the memory rank, grep Rank as
+follows:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">sudo dmidecode | grep
+Rank</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.75rem; color:#ffffff">Rank: 2</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To get the clock frequency, use the
+following command:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">sudo dmidecode | grep
+MHz</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:0.88rem; color:#ffffff">External Clock: 100
+MHz</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Max Speed: 4200
+MHz</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Current Speed: 3400
+MHz</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To get the DIMM information, get the
+following command:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">sudo dmidecode | grep
+DIMM</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:0.88rem; color:#ffffff">Form Factor:
+DIMM</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Locator: DIMM
+0</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Form Factor:
+DIMM</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Locator: DIMM
+1</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To get the system memory/
+RAM:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">sudo dmidecode | grep
+GB</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:0.88rem; color:#ffffff">Maximum Capacity: 512
+GB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Range Size: 128
+GB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Range Size: 128
+GB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Range Size: 128
+GB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Range Size: 128
+GB</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Hence, our system has 512GB of RAM
+(Random Access Memory).</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">With this, following are the key
+information of our system which shall be recorded for all
+purposes:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="text-align:center">
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse;margin:0 auto; width:329.25pt"
+data-border="1">
+<tbody>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 317.7pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">System Information
+(dmidecode)</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 168.7pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 138.2pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:16.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 168.7pt"><p><span
+style=" font-size:1.0rem">RAM</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 138.2pt"><p><span
+style=" font-size:1.0rem">512 GB</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 168.7pt"><p><span
+style=" font-size:1.0rem">Rank</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 138.2pt"><p><span
+style=" font-size:1.0rem">2</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 168.7pt"><p><span
+style=" font-size:1.0rem">DIMMs</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 138.2pt"><p><span
+style=" font-size:1.0rem">4</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 168.7pt"><p><span
+style=" font-size:1.0rem">Clock Frequency</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 138.2pt"><p><span
+style=" font-size:1.0rem">4200 MHz</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 168.7pt"><p><span
+style=" font-size:1.0rem">Clock Speed</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 138.2pt"><p><span
+style=" font-size:1.0rem">2133 MT/s</span></p></td>
+</tr>
+<tr style=" ">
+<td style="width: 179.5pt; border: none"></td>
+<td style="width: 149pt; border: none"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Other </span><span
+style=" font-size:1.0rem; font-weight:bold">dmidecode</span><span
+style=" font-size:1.0rem"> commands you should try out are:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">sudo dmidecode -s
+system-manufacturer</span></li>
+<li><span style=" font-size:1.0rem">sudo dmidecode | grep
+Product</span></li>
+<li><span style=" font-size:1.0rem">sudo dmidecode -s
+system-product-name</span></li>
+<li><span style=" font-size:1.0rem">sudo dmidecode | egrep -i
+'manufacturer|product'</span></li>
+<li><span style=" font-size:1.0rem">sudo dmidecode | egrep -i
+'vendor'</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">These commands provide important
+information involving the manufacturer/ vendor of your system and much
+more.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">A computing system has several key
+components like processor, motherboard and more. These are the dmidecode
+commands to get information regarding these components:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<ul>
+<li><span style=" font-size:1.0rem">sudo dmidecode -t processor (for the
+processor)</span></li>
+<li><span style=" font-size:1.0rem">sudo dmidecode -t system</span></li>
+<li><span style=" font-size:1.0rem">sudo dmidecode -t
+baseboard</span></li>
+<li><span style=" font-size:1.0rem">sudo dmidecode -t
+chassis</span></li>
+<li><span style=" font-size:1.0rem">sudo dmidecode -t bios</span></li>
+<li><span style=" font-size:1.0rem">sudo dmidecode -t cache</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">You must try the above commands on
+your system, record the output and analyze it carefully.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-GN"
+style=" font-size:2.3rem; font-weight:bold">cat /proc/meminfo</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">meminfo is a file in Linux system
+that stores the information related to memory usage. To get memory
+statistics of your system, use this command:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">cat
+/proc/meminfo</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:0.88rem; color:#ffffff">MemTotal:      
+394877600 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">MemFree:       
+322057928 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">MemAvailable:  
+391704744 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Buffers:        
+2735168 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Cached:        
+66592340 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">SwapCached:       
+39408 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Active:        
+44374924 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Inactive:      
+25087292 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Active(anon):     
+89332 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Inactive(anon):   
+94996 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Active(file):  
+44285592 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Inactive(file):
+24992296 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Unevictable:         
+80 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Mlocked:             
+80 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">SwapTotal:     
+16779260 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">SwapFree:      
+12971548 kB</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">Dirty:                 0
+kB</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">Writeback:             4
+kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">AnonPages:        
+98584 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Mapped:           
+73280 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Shmem:            
+49620 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Slab:           
+2853688 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">SReclaimable:   
+2744528 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">SUnreclaim:      
+109160 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">KernelStack:      
+20608 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">PageTables:        
+7668 kB</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">NFS_Unstable:          0
+kB</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">Bounce:                0
+kB</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">WritebackTmp:          0
+kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">CommitLimit:   
+214218060 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Committed_AS:   
+4248960 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">VmallocTotal:  
+34359738367 kB</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">VmallocUsed:           0
+kB</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">VmallocChunk:          0
+kB</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">HardwareCorrupted:     0
+kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">AnonHugePages:    
+32768 kB</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">HugePages_Total:      
+0</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">HugePages_Free:       
+0</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">HugePages_Rsvd:       
+0</span></p>
+<p><span
+style=" font-size:0.88rem; color:#ffffff">HugePages_Surp:       
+0</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Hugepagesize:      
+2048 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">DirectMap4k:     
+669504 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">DirectMap2M:   
+50388992 kB</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">DirectMap1G:   
+352321536 kB</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This gives good insights and you must
+analyze it carefully.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-K6"
+style=" font-size:2.3rem; font-weight:bold">gcc –version</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This command is used to get the gcc
+version. This is an important information to record as gcc plays a major
+role in a wide range of applications.</span></p>
+<p><span style=" font-size:1.0rem">Depending on the application/ focus
+on hand, we need to track different information.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">gcc
+--version</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:0.75rem; color:#ffffff">gcc (SUSE Linux)
+6.2.1 20160826 [gcc-6-branch revision 239773]</span></p>
+<p><span style=" font-size:0.75rem; color:#ffffff">Copyright (C) 2016
+Free Software Foundation, Inc.</span></p>
+<p><span style=" font-size:0.75rem; color:#ffffff">This is free
+software; see the source for copying conditions.  There is NO</span></p>
+<p><span style=" font-size:0.75rem; color:#ffffff">warranty; not even
+for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">So, the GCC detected is: GCC (SUSE
+Linux) 6.2.1 20160826</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-L9"
+style=" font-size:2.3rem; font-weight:bold">lsb_release -a</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This command is used to get details
+of the operating system.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">lsb_release
+-a</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:0.88rem; color:#ffffff">LSB Version:   
+n/a</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Distributor ID:
+SUSE</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Description:   
+</span><span id="part0000.xhtml__Hlk47639435"><span
+style=" font-size:0.88rem; color:#ffffff">openSUSE 12.3
+(Dartmouth)</span></span><span
+style=" font-size:0.88rem; color:#ffffff"> (x86_64)</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Release:       
+12.3</span></p>
+<p><span style=" font-size:0.88rem; color:#ffffff">Codename:      
+n/a</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">With this, we get the operating
+system as OpenSUSE 12.3 (Dartmouth).</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">With this, we get two key information
+which is recorded as:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="text-align:center">
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse;margin:0 auto; width:392.25pt"
+data-border="1">
+<tbody>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 380.7pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Software
+Information</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 104.25pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 265.65pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 104.25pt"><p><span
+style=" font-size:1.0rem">GCC version</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 265.65pt"><p><span
+style=" font-size:1.0rem">GCC (SUSE Linux) 6.2.1
+20160826</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 104.25pt"><p><span
+style=" font-size:1.0rem">OS</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 265.65pt"><p><span
+style=" font-size:1.0rem">OpenSUSE 12.3 (Dartmouth)</span></p></td>
+</tr>
+<tr style=" ">
+<td style="width: 115.05pt; border: none"></td>
+<td style="width: 276.45pt; border: none"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The entire sample record of System
+and Software details for our computing system is as follows:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="text-align:center">
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse;margin:0 auto; width:486.5pt"
+data-border="1">
+<tbody>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 474.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">System
+Information</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:16.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Model</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">Intel(R) Xeon(R) Platinum 8180 CPU @
+2.50GHz</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">NUMA nodes</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">4</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Sockets</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Cores</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">28</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Threads per socket</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">CPUs</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">112</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Hyperthreading</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">OFF</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Frequency</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2494.256 MHz</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">RAM</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">512 GB</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Rank</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">DIMMs</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">4</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Clock Frequency</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">4200 MHz</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Clock Speed</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">2133 MT/s</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 474.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Software
+Information</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">Kernel</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">Linux linux-mzys 4.4.162-94.72-default
+</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">GCC version</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">GCC (SUSE Linux) 6.2.1
+20160826</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 141.95pt"><p><span
+style=" font-size:1.0rem">OS</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 322.2pt"><p><span
+style=" font-size:1.0rem">OpenSUSE 12.3 (Dartmouth)</span></p></td>
+</tr>
+<tr style=" ">
+<td style="width: 152.75pt; border: none"></td>
+<td style="width: 333pt; border: none"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">You should follow the commands, run
+it on your system and make your own table of system and software
+information. This is important as you shall prepare this everything you
+run a software on a particular system so that other professional
+programmers can replicate your work.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Fill this table for your
+system:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="text-align:center">
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse;margin:0 auto; width:365pt"
+data-border="1">
+<tbody>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 353.45pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">System
+Information</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Model</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">NUMA nodes</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Sockets</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Cores</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Threads per socket</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">CPUs</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Hyperthreading</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Frequency</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">RAM</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Rank</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">DIMMs</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Clock Frequency</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Clock Speed</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td colspan="2"
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 353.45pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Software
+Information</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Attribute</span></p></td>
+<td
+style="background-color: #e2efda; border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">Value</span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">Kernel</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">GCC version</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style="height:14.5pt">
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.03pt; padding-right: 5.03pt; vertical-align: bottom; width: 137.45pt"><p><span
+style=" font-size:1.0rem">OS</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.75pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.75pt; padding-left: 5.4pt; padding-right: 5.03pt; vertical-align: bottom; width: 205.2pt"><p><span
+style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr style=" ">
+<td style="width: 148.25pt; border: none"></td>
+<td style="width: 216pt; border: none"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">With this, we will move on to work
+with processes that is running commands/ applications on our
+systems.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-NE"
+style=" font-size:1.8rem; font-weight:bold">Run a process in
+background</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Running a process in the background
+means that the process will not occupy the screen and we can continue
+working on it with different commands. The process will continue running
+but output can come to the screen but it will not take any input. We can
+later bring it back on the screen as well.</span></p>
+<p><span style=" font-size:1.0rem">In short, the syntax is:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">&lt;command&gt;
+&amp;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Note that this does not mean that the
+process will continue to run on closing the terminal.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Note, there are two types of
+processes namely:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">background process</span></li>
+<li><span style=" font-size:1.0rem">foreground process</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The idea is that the background
+process does not link with the STDOUT and STDERR pipes of the screen
+session while foreground process is linked with the STDOUT and STDERR
+pipes of the screen session. Hence, if the background process produces
+an output in the terminal, it will get printed. So, it is useful if a
+process does not produce any output or output is piped to a
+file.</span></p>
+<p><span style=" font-size:1.0rem">Note that both background and
+foreground processes are linked with STDIN pipe. So, if a background
+process needs an input from STDIN pipe, it gets stuck (hang) until we
+bring it to the foreground.</span></p>
+<p><span style=" font-size:1.0rem">To make a process run in the
+background, we need to append the command with &amp;.</span></p>
+<p><span style=" font-size:1.0rem">Syntax:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">command
+&amp;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Example:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">python code.py
+&amp;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">It will give an output as:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[1] 121378</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">1 is the job id and 121378 is the
+process id.</span></p>
+<p><span id="part0000.xhtml_aid-P1"
+style=" font-size:2.3rem; font-weight:bold">Check background
+processes</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We can check the processes that are
+in background as follows:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">jobs</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The output in our case is as
+follows:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">[1]- 
+Running                 python code.py &amp;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[2]+ 
+Running                 python opengenus.py &amp;</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The first integer is the Job ID of
+the command that is given along side.</span></p>
+<p><span style=" font-size:1.0rem">For example, the command
+"</span><span style=" font-size:1.0rem; font-weight:bold">python
+opengenus.py &amp;</span><span style=" font-size:1.0rem">" has Job ID
+2.</span></p>
+<p><span style=" font-size:1.0rem">We can use the Job ID to manage the
+background process and do several things like:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">bring a background process to
+foreground</span></li>
+<li><span style=" font-size:1.0rem">killing a background
+process</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-Q3"
+style=" font-size:1.8rem; font-weight:bold">Bring a process
+back</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To bring a process back in
+foreground, we need to use the following command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">fg
+%&lt;job_ib&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Example:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">fg %2</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This will bring the process "python
+opengenus.py &amp;" to the foreground. The output will be
+like:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">(base)
+[opengenus@localhost Desktop]$ fg %2</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">python
+opengenus.py</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If your code is waiting for an input,
+it can be provided now.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-R0"
+style=" font-size:1.5rem; font-weight:bold">Make a running process go
+into background</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Now, if your process is already
+running and you want to take it to the background, you can follow the
+following steps:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">Press control key +
+Z</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">// check job id using
+jobs</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">jobs</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">// make job go to
+background</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">bg %&lt;job
+id&gt;</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The process will have moved to the
+background.</span></p>
+<p><span style=" font-size:1.0rem">If you just press control key + z. It
+will stop the process which we can see in the jobs command:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">[1]  
+Running                 python code.py &amp;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[2]- 
+Running                 python opengenus.py &amp;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[3]+ 
+Stopped                 python code_2.py</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Now, if we move the Job ID 3 to
+background using bg command, we can check the impact using the jobs
+command.</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">bg %3</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">It will give an output as:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[3]+ python code_2.py
+&amp;</span></p>
+<p><span style=" font-size:1.0rem">Note the &amp; sign at the end. It
+signifies that the process is running in the background.</span></p>
+<p><span style=" font-size:1.0rem">Try the jobs command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">jobs</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The output will be as
+follows:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">[1]  
+Running                 python code.py &amp;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[2]- 
+Running                 python opengenus.py &amp;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[3]+ 
+Running                 python code_2.py &amp;</span></p>
+</div>
+<p><span style=" font-size:1.0rem; font-weight:bold"> </span></p>
+<p><span id="part0000.xhtml_aid-T1"
+style=" font-size:1.8rem; font-weight:bold">Get Process ID of a
+job</span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold"> </span></p>
+<p><span style=" font-size:1.0rem">We can get the process ID of all
+background jobs using the jobs command as follows:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">jobs -l</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The output will be as
+follows:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">[1]  121378
+Running                 python code.py &amp;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[2]- 127536
+Running                 python opengenus.py &amp;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[3]+ 12623
+Running                 python code_2.py &amp;</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Note that the first number (1, 2 and
+3) are Job IDs while the second numbers (like 121378) are Process
+ID.</span></p>
+<p><span id="part0000.xhtml_aid-TO"
+style=" font-size:1.8rem; font-weight:bold">Kill a process</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">There are two ways to kill a
+process:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">Kill it directly using process
+ID</span></li>
+<li><span style=" font-size:1.0rem">Bring it to foreground and kill it
+using control + C</span></li>
+</ul>
+<p><span style=" font-size:1.0rem">Once we get the process ID of a job,
+we can kill it directly like:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">kill 121378</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This will kill the first job. It will
+give an output as:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[1]  
+Terminated              python code.py</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We can verify this using our jobs
+command as follows:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">jobs -l</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The output will be as:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">[2]- 127536
+Running                 python opengenus.py &amp;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[3]+ 12623
+Running                 python code_2.py &amp;</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Notice that the first background job
+is missing.</span></p>
+<p><span style=" font-size:1.0rem">We will use the second approach of
+bring it to the foreground and killing it as follows.</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">fg %3</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This will give an output
+as:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">(base)
+[opengenus@localhost Desktop]$ fg %3</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">python
+code_2.py</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The terminal is stuck. If we press
+Control + C, the process will be terminated as follows:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">(base)
+[opengenus@localhost Desktop]$ fg %3</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">python
+code_2.py</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">^CTraceback (most
+recent call last):</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">  File "code.py", line
+7, in &lt;module&gt;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">   
+time.sleep(1)</span></p>
+<p><span
+style=" font-size:1.0rem; color:#ffffff">KeyboardInterrupt</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We can verify this using </span><span
+style=" font-size:1.0rem; font-weight:bold">jobs -l</span><span
+style=" font-size:1.0rem"> command.</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">jobs -l</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The output will be as
+follows:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">[2]+ 127536
+Running                 python opengenus.py &amp;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Hence, only process is in the
+background.</span></p>
+<p><span style=" font-size:1.0rem">With this, you have the complete
+knowledge of working with background process.</span></p>
+<p><span style=" font-size:1.0rem">The problem with this is that if you
+close the terminal it will kill the process. To enable the process to
+continue even after closing the terminal, we need to detach the process
+from the terminal which can be done using screen, disown and
+nohup.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-10M"
+style=" font-size:2.3rem; font-weight:bold">Screen command</span></p>
+<p><span style=" font-size:1.0rem">Screen is an application in Linux
+system which is used to manage terminal sessions and run processes even
+when the terminal screen is closed. In this guide, we have demonstrated
+all screen commands so that you can use it in your daily
+work.</span></p>
+<p><span style=" font-size:1.0rem">The most common use of screen command
+is </span><span style=" font-size:1.0rem; font-weight:bold">running
+processes in background</span><span
+style=" font-size:1.0rem">.</span></p>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+style=" font-size:1.0rem; font-weight:bold"> </span></h2>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-110"
+style=" font-size:1.8rem; font-weight:bold">Install Screen</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We can install screen application on
+Linux versions like Ubuntu as follows:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">sudo apt-get install
+screen</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">For other systems like RedHat (RHEL),
+we can use:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">sudo yum install
+screen</span></p>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+style=" font-size:1.0rem; font-weight:bold"> </span></h2>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-11G"
+style=" font-size:1.6rem; font-weight:bold">Start a screen
+session</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To start a screen session, use the
+following command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">screen</span></p>
+<p><span style=" font-size:1.0rem">This will open a new session with a
+clear screen. We can work on this screen and use the features provided
+by screen application for it.</span></p>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-11Q"
+style=" font-size:1.5rem; font-weight:bold">Get help of
+screen</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To get the help options of screen
+application, press the following keys in order:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">Control key + A key 
+followed by ? key</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Note: for this to work, you should be
+within a screen session.</span></p>
+<p><span style=" font-size:1.0rem">Following is the output:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">                   
+Screen key bindings, page 1 of 2.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">                   
+Command key: ^A   Literal ^A:  a</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">break      ^B
+b         license     ,            removebuf   =</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">clear      
+C            lockscreen ^X x         reset       Z</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">colon      
+:            log         H            screen     ^C c</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">copy       ^[
+[         login       L            select      '</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">detach      ^D
+d         meta        a            silence     _</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">digraph    
+^V           monitor     M            split       S</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">displays   
+*            next        ^@ ^N sp n   suspend     ^Z z</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">dumptermcap
+.            number      N            time        ^T t</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">fit        
+F            only        Q            title       A</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">flow        ^F
+f         other       ^A           vbell       ^G</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">focus      
+^I           pow_break   B            version     v</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">hardcopy   
+h            pow_detach  D            width       W</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">help       
+?            prev        ^H ^P p ^?   windows     ^W w</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">history     {
+}          quit        \            wrap        ^R r</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">info       
+i            readbuf     &lt;            writebuf    &gt;</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">kill        K
+k          redisplay   ^L l         xoff        ^S s</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">lastmsg     ^M
+m         remove      X            xon         ^Q q</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">                
+[Press Space for next page; Return to end.]</span></p>
+</div>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+style=" font-size:1.0rem; font-weight:bold"> </span></h2>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+style=" font-size:1.5rem; font-weight:bold">Exit a screen
+session</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To exit a screen session, we can
+detach it using the following keys:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">Control key + A
+followed by d</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The output will be like:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">[detached from
+129921.pts-1.localhost]</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">(base)
+[opengenus@localhost ~]$</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">129921.pts-1.localhost is the name of
+our screen session and we can use this name to get back into
+it.</span></p>
+<p><span style=" font-size:1.0rem">This will allow us to get back into
+this screen session later and the processes within it will keep running
+on the system. We will see later in section "Delete a screen session" to
+learn how we can delete it and terminate all processes within
+it.</span></p>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-14I"
+style=" font-size:1.8rem; font-weight:bold">List existing screen
+sessions</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Once we are out of a screen session,
+we may go back into it. For this, we shall use the following
+command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">screen -ls</span></p>
+<p><span style=" font-size:1.0rem">In our case, following is the
+output:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">There are screens
+on:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">       
+129921.pts-1.localhost  (Detached)</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">       
+120455.pts-1.localhost  (Detached)</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">2 Sockets in
+/var/run/screen/S-opengenus.</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We have two screen sessions
+namely:</span></p>
+<p><span style=" font-size:1.0rem">129921</span><br />
+<span style=" font-size:1.0rem">120455</span></p>
+<p><span style=" font-size:1.0rem">We can go back into one of the
+sessions as well.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-15G"
+style=" font-size:1.5rem; font-weight:bold">Run a command in a screen
+session</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The advantage of using screen is that
+you can run a command in a screen session and then, close the terminal
+and even then, the process will continue to run. It is useful if you are
+working on a remote machine or need to close the terminal.</span></p>
+<p><span style=" font-size:1.0rem">The flow will be as
+follows:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">// create a screen
+session</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">screen</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">// run the command now
+in background</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">command
+&amp;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">// exit the
+screen</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">control key + A
+followed by d</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">// now you can close
+the terminal safely</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">exit</span></p>
+</div>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+style=" font-size:1.0rem; font-weight:bold"> </span></h2>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-16H"
+style=" font-size:1.5rem; font-weight:bold">Go back into a
+session</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To go back into an existing screen
+session, we should get the name of the session (say 129921) using the
+list screen command and use the following command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">screen -r
+129921</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This will give you access to the
+session.</span></p>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-16T"
+style=" font-size:1.6rem; font-weight:bold">How to know you are in a
+screen?</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The simplest way to detect is to do
+the screen list command and if any screen session is active, it may
+signify that you or some other user is within it.</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">screen -ls</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Alternatively, you can try to exit a
+screen as well. If you within a screen, it will get detacted and if you
+are not in one, it will not work.</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">control key + A
+followed by d</span></p>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+style=" font-size:1.0rem; font-weight:bold"> </span></h2>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-17D"
+style=" font-size:1.5rem; font-weight:bold">Delete a screen
+session</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To delete a screen session, we need
+to get into the screen session we want to delete and following it, there
+are two options:</span></p>
+<p><span style=" font-size:1.0rem">Use exit command as:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">exit</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Use the following command:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">Control key + A
+followed by k</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">A prompt will come as:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">Really kill this
+window [y/n]</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">On pressing y key, the screen session
+is terminated with the following message:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">[screen is
+terminating]</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">(base)
+[opengenus@localhost ~]$</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This will terminate the session and
+kill all process within it.</span></p>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-18I"
+style=" font-size:1.8rem; font-weight:bold">Name a screen
+session</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We may need to name a screen session
+so that when we list the sessions, we can understand which session is
+for which task.</span></p>
+<p><span style=" font-size:1.0rem">To do this, during the creation of a
+screen session, we can use the following command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">screen -S
+name</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This will create a screen session
+named "name" and following is the output of the screen list
+command:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">There are screens
+on:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">        113050.name 
+   (Detached)</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">       
+105349.pts-1.localhost  (Detached)</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">       
+129921.pts-1.localhost  (Detached)</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">       
+120455.pts-1.localhost  (Detached)</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">4 Sockets in
+/var/run/screen/S-opengenus.</span></p>
+</div>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-19D"
+style=" font-size:1.6rem; font-weight:bold">Lock your screen
+session</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you want to lock your screen
+session, you can use the following key combination:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">control key + A
+followed by x</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This will turn the screen into
+this:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">Screen used by
+opengenus &lt;opengenus&gt; on localhost.</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">Password:</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">One can enter the UNIX user password
+to log back into the session.</span></p>
+<h2 style="margin:0.93% 0.00% 0.37%; background-color:#ffffff"><span
+id="part0000.xhtml_aid-1A2"
+style=" font-size:1.0rem; font-weight:bold">Log screen session
+activity</span></h2>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We can log all activity in a screen
+session by creating a session using the following command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">screen -L</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If one is already in a screen
+session, one can use the following key combination:</span></p>
+<p><span id="part0000.xhtml__Hlk47652047"><span
+style=" font-size:1.0rem; color:#ffffff">control key + A followed by
+H</span></span></p>
+<p><span style="-aw-bookmark-end:_Hlk47652047"></span><span
+style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This will save a file with all
+activity.</span></p>
+<p><span style=" font-size:1.0rem">There are several other options
+available with screen application. You may go through the help option
+that we have demonstrate previously and try out each option. In fact,
+the options we have demonstrate are enough to use screen like a
+master.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-1AQ"
+style=" font-size:2.3rem; font-weight:bold">File handling</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We have created the folder structure
+with files as a workspace to work on.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">--- file1</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">---
+folder1.0.0</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">--- --- ---
+file2</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">--- --- ---
+folder1.1.0</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">--- --- --- --- ---
+--- folder1.1.1</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">--- --- --- --- ---
+--- file3</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">--- --- --- --- ---
+--- file4 </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">--- --- ---
+folder1.2.0</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">---
+folder2.0.0</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">--- --- ---
+file5</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We will work on this.</span></p>
+<p><span style=" font-size:1.0rem">ls command is used to list the files
+and directories in the current directory level.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">ls</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">file1  folder1.0.0 
+folder2.0.0</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">“ls -l” command is an incremental to
+the above “ls” command where other key information are included like
+size of file/ directory, modified date, owner, permissions and much
+more.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">ls -l</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span style=" font-size:1.0rem; color:#ffffff">total 0</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">-rw-rw-r--. 1
+opengenus aditya  0 Aug  7 00:10 file1</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">drwxrwxr-x. 4
+opengenus aditya 57 Aug  7 00:11 folder1.0.0</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">drwxrwxr-x. 2
+opengenus aditya 19 Aug  7 00:11 folder2.0.0</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">“ls -R”</span></p>
+<p><span style=" font-size:1.0rem">This is an important command as it
+lists out all files and sub-directories recursively to any depth.
+</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">ls -R</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; clear:both;margin:0.00% 0.00%">
+<p><span
+style=" font-size:0.63rem; color:#ffffff ;letter-spacing:0.16rem"> </span><span
+style=" font-size:1.0rem; color:#ffffff">.:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">file1  folder1.0.0 
+folder2.0.0</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span
+style=" font-size:1.0rem; color:#ffffff">./folder1.0.0:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">file2  folder1.1.0 
+folder1.2.0</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span
+style=" font-size:1.0rem; color:#ffffff">./folder1.0.0/folder1.1.0:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">folder1.1.1</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span
+style=" font-size:1.0rem; color:#ffffff">./folder1.0.0/folder1.1.0/folder1.1.1:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">file3 
+file4</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span
+style=" font-size:1.0rem; color:#ffffff">./folder1.0.0/folder1.2.0:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span
+style=" font-size:1.0rem; color:#ffffff">./folder2.0.0:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">file5</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Other ls commands you should try
+quickly are:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<ul>
+<li><span style=" font-size:1.0rem; font-weight:bold">ls -n</span><span
+style=" font-size:1.0rem"> (to display user ID and group ID of files and
+directories)</span></li>
+<li><span style=" font-size:1.0rem; font-weight:bold">ls
+relative_or_absolute_path</span><span style=" font-size:1.0rem"> (ls on
+specific directory and not on current working directory)</span></li>
+<li><span style=" font-size:1.0rem; font-weight:bold">ls -i</span><span
+style=" font-size:1.0rem"> (to get inode numbers)</span></li>
+<li><span style=" font-size:1.0rem; font-weight:bold">ls -IS</span><span
+style=" font-size:1.0rem"> (to get files in order of file
+size)</span></li>
+<li><span style=" font-size:1.0rem; font-weight:bold">ls -F</span><span
+style=" font-size:1.0rem"> (to add / after every directory)</span></li>
+<li><span style=" font-size:1.0rem; font-weight:bold">ls -lh</span><span
+style=" font-size:1.0rem"> (to display size in human readable
+format)</span></li>
+<li><span style=" font-size:1.0rem; font-weight:bold">ls
+–help</span><span style=" font-size:1.0rem"> (to display the guide on
+using ls)</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-1FK"
+style=" font-size:2.3rem; font-weight:bold">top/ htop command</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">While running an application, we may
+need to monitor how the system is being used. This can be done using the
+top or htop command.</span></p>
+<p><span style=" font-size:1.0rem">Top command comes by
+default.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">top</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><img src="Images/image00085.gif"
+style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline; width:100.00%; " /></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To install htop, you may use the
+command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">sudo apt-get install
+htop</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">htop is an improvement over top and
+should be used preferably. It displays the thread utilization
+visually.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">htop</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Output:</span></p>
+<p><img src="Images/image00086.gif"
+style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline; width:100.00%; " /></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">It is, highly advised in a
+professional development setting that you run htop on one terminal while
+running an application and observe the utilization in htop
+output.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span id="part0000.xhtml_aid-1H2"
+style=" font-size:1.8rem; font-weight:bold">vi command</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To open a file, you can use the vi
+command simply. </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Command:</span></p>
+<p><span style=" font-size:1.0rem; color:#ffffff">vi filename</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This will open a terminal where the
+file contents will be displayed. To start writing, press “I” key and you
+will go to insert mode.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To go to command mode, press ESC key
+and then use the following commands (without quotes and followed by
+enter):</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<ul>
+<li><span style=" font-size:1.0rem">“:q” -&gt; quit vi
+editor</span></li>
+<li><span style=" font-size:1.0rem">“:q!” -&gt; quit vi editor without
+saving unsaved changes</span></li>
+<li><span style=" font-size:1.0rem">“:w” -&gt; save unsaved
+changes</span></li>
+<li><span style=" font-size:1.0rem">“:wq” -&gt; save unsaved changes and
+quit editor</span></li>
+<li><span style=" font-size:1.0rem">“:&lt;integer&gt;” -&gt; go to line
+number as the specified integer</span></li>
+<li><span style=" font-size:1.0rem">:/&lt;text&gt; -&gt; to find the
+particular text  </span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Other related commands you must
+explore are:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<ul>
+<li><span style=" font-size:1.0rem">pwd (displays the absolute path of
+present working directory)</span></li>
+<li><span style=" font-size:1.0rem">du (lists out directories with
+memory occupied)</span></li>
+<li><span style=" font-size:1.0rem">du -mh (same as above command + get
+size in MB)</span></li>
+<li><span style=" font-size:1.0rem">cat filename (to get file contents
+in terminal)</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">There are several other commands, but
+these commands will give you a good understanding and enable you to
+start you work smoothly without any friction.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.3rem; font-weight:bold">Key
+advices:</span></p>
+<ul>
+<li><span style=" font-size:1.0rem">Always keep track of system
+details</span></li>
+<li><span style=" font-size:1.0rem">Version of software components play
+a major role and can be source of bugs. Keep track of it.</span></li>
+<li><span style=" font-size:1.0rem">Always ensure no process is running
+in background before running a new command (to ensure performance is not
+impacted)</span></li>
+<li><span style=" font-size:1.0rem">Always analyze htop output while a
+command is running</span></li>
+<li><span style=" font-size:1.0rem">Always run process that will consume
+time as a background process (to save time)</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem; font-weight:bold">With practice and
+as situation arises, you will be able to master using Linux.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<p><img src="Images/image00087.jpeg"
+style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline; width:66.03%; "
+alt="Social media and Internet presence of OpenGenus" /></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.4rem; font-weight:bold">Best of luck for
+your upcoming job/ interview.</span></p>
+<p><span style=" font-size:1.4rem; font-weight:bold"> </span></p>
+<p><span style=" font-size:1.4rem; font-weight:bold">With the current
+Linux knowledge, you will be able to work in a professional development
+setting smoothly and make huge contributions from the first
+day.</span></p>
+</div>

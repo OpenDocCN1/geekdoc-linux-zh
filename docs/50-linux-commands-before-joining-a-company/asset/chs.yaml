@@ -1,0 +1,177 @@
+- "# 入职前必学的50+ Linux命令\n\n\n\n\n\n\n## 引言\n\nLinux 及其变体（如 Ubuntu、RedHat、OpenSUSE 等）是当今大多数严肃开发者的首选开发环境。\n\
+  \n此外，当你开发一个供客户使用的软件系统时，在不同的 Linux 变体上进行测试至关重要，关键在于流畅地使用 Linux 以进行广泛的协作。\n\n本书将帮助你像专业开发人员一样使用\
+  \ Linux。你可以瞬间融入任何开发者团队，并对使用你的计算系统感到从容。。\n\n我们涵盖了 50 多条命令，这将使你能够高效地使用 Linux 完成任何基础开发工作。所有命令都至关重要，并且都是通过分析顶尖公司的开发工作后挑选出来的。\n\
+  \n我们涵盖的高级概念包括：\n\n*   获取系统的硬件详情\n*   获取系统的软件详情\n*   高效地在后台运行和处理进程\n*   处理文件系统\n\
+  *   其他关键命令\n\n在书的最后，我们提供了使用 Linux 的关键建议，这将将清晰地让你成为一名“伟大的开发者”。\n\n让我们直接从获取当前计算系统的详情开始。这很重要，因为你可以将这些详情与主工作（可能是应用程序或基准数据）一起分享，以确保其可现性。\n\
+  \n## 获取系统详情\n\n获取系统信息并正确记录它对于许多用例都至关重要。这允许人们重建相同的系统环境，从而在相同的流程中工作并获得相同的性能测量结果。这涉及硬件和软件详情。\n\
+  \n在专业环境中工作时，通常需要对所做的每一次测量/实验跟踪系统详情。这是因为在后期，可以通过创建相同的环境来复制相同的性能。\n\n我们系统配置的基本记录如下所示：\n\
+  \n| 系统信息 | |\n\n| 属性 | 值 |\n| :--- | :--- |\n| Model | Intel(R) Xeon(R) Platinum\
+  \ 8180 CPU @ 2.50GHz |\n| NUMA nodes | 4 |\n| Sockets | 2 |\n| Cores | 28 |\n| Threads\
+  \ per socket | 2 |\n| CPUs | 112 |\n| Hyperthreading | OFF |\n| Frequency | 2494.256\
+  \ MHz |\n| RAM | 512 GB |\n| Rank | 2 |\n| DIMMs | 4 |\n| Clock Frequency | 4200\
+  \ MHz |\n| Clock Speed | 2133 MT/s |\n\n| 软件信息 | |\n\n| 属性 | 值 |\n| :--- | :---\
+  \ |\n| Kernel | Linux linux-mzys 4.4.162-94.72-default |\n| GCC version | GCC (SUSE\
+  \ Linux) 6.2.1 20160826 |\n| OS | OpenSUSE 12.3 (Dartmouth) |\n\n我们将这一过程，以便你为自己的系统重建这些详情。强烈建议你在自己的系统中尝试这些命令。我们将从该过程开始。\n\
+  \n### lscpu 命令\n\n`lscpu` 命令通过读取两个文件提供有关 CPU 架构的信息：\n\n*   `sysfs`\n*   `/proc/cpuinfo`\n\
+  \n输出是收集系统配置信息的第一步。该命令提供了某些用于高效运行进程的关键信息。其原理是存在用于控制进程执行的命令，我们在本书后后部分探讨了这些。\n\n命令：\n\
+  \n```\nlscpu\n```\n\n我们将首先展示我们系统中的输出，以便你查看并分析。我们随后将解释背景知识并介绍该命令。它提供了多项信息，因此强烈建议你先自己仔细检查它。\n\
+  \n```\nArchitecture:           x86_64\nCPU op-mode(s):          32-bit, 64-bit\n\
+  Byte Order:             Little Endian\nCPU(s):                 112\nOn-line CPU(s)\
+  \ list:    0-111\nThread(s) per core:      2\nCore(s) per socket:      28\nSocket(s):\
+  \               2\nNUMA node(s):            4\nVendor ID:               GenuineIntel\n\
+  CPU family:             6\nModel:                   85\nModel name:            \
+  \ Intel(R) Xeon(R) Platinum 8180 CPU @ 2.50GHz\nStepping:                4\nCPU\
+  \ MHz:                 2494.256\nBogoIPS:                4988.51\nVirtualization:\
+  \          VT-x\nL1d cache:               32K\nL1i cache:               32K\nL2\
+  \ cache:                1024K\nL3 cache:                39424K\nNUMA node0 CPU(s):\
+  \       0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,84,88,92,96,100,104,108\n\
+  NUMA node1 CPU(s):       1,5,9,13,17,21,25,29,33,37,41,45,49,53,57,61,65,69,73,77,81,85,89,93,97,101,105,109\n\
+  NUMA node2 CPU(s):       2,6,10,14,18,22,26,30,34,38,42,46,50,54,58,62,66,70,74,78,82,86,90,94,98,102,106\n\
+  NUMA node3 CPU(s):       3,7,11,15,19,23,27,31,35,39,43,47,51,55,59,63,67,71,75,79,83,87,91,95,99,103,107,111\n\
+  ```\n\n\n\n\n\n| NUMA nodes | 4 |\n| :--- | :--- |\n| Sockets | 2 |\n| Cores | 28\
+  \ |\n| Threads per socket | 2 |\n| CPUs | 112 |\n| Hyperthreading | OFF |\n| Frequency\
+  \ | 2494.256 MHz |\n\n你也必须记录你系统的这些细节。请在继续下一个命令之前执行此操作。\n\n### uname -a\n\n```bash\n\
+  uname -a\n```\n\n`uname -a` 命令将提供内核名称。这非常重要，因为操作系统起着着重要的作用。\n\n在大多数基准测试设置中，测量是在不同的操作系统上进行的，因此，内核是一项关键信息。\n\
+  \n**命令：**\n```bash\nuname -a\n```\n\n示例输出：\n```\nLinux linux-mzys 4.4.162-94.72-default\
+  \ #1\nSMP Mon Nov 12 18:57:45 UTC 2018 (9de753f)\nx86_64 x86_64 x86_64 GNU/Linux\n\
+  ```\n\n以下是我们的内核信息记录：\n\n| 系统信息 (uname -a) |\n| 属性 | 值 |\n| :--- | :--- |\n| 内核 |\
+  \ Linux linux-mzys 4.4.162-94.72-default |\n\n### sudo dmidecode\n\n```bash\nsudo\
+  \ dmidecode\n```\n\n`sudo dmidecode` 命令提供了若干重要信息，例如桌面管理接口（DMI），并与系统管理 BIOS 相关。它提供了内存结构、系统组件、设备信息等。\n\
+  \n我们将逐一调查它的部分内容，以便理解并快速获取相关信息。\n\n### 时钟频率\n\n我们需要第一个信息是时钟频率。我们可以通过对 `sudo dmidecode`\
+  \ 的输出使用 `grep MT` 来方便地获取此信息。`grep` 是一个 UNIX 工具，允许我们过滤文本。\n\n```bash\nsudo dmidecode\
+  \ | grep MT\n```\n\n输出：\n```\nMTRR (Memory type range registers)\n      Speed: 2133\
+  \ MT/s\n      Configured Clock Speed: 1067 MT/s\n```\n\n在此命令中，我们将使用 `grep DDR` 获取物理内存插槽：\n\
+  \n```bash\nsudo dmidecode | grep DDR\n```\n\n输出：\n```\nType: DDR4\n```\n\n要获取内存秩（Rank），使用如下\
+  \ `grep Rank`：\n\n```bash\nsudo dmidecode | grep Rank\n```\n\n输出：\n```\nRank: 2\n\
+  ```\n\n要获取时钟频率，使用以下命令：\n\n```bash\nsudo dmidecode | grep MHz\n```\n\n输出：\n```\n\
+  External Clock: 100 MHz\nMax Speed: 4200 MHz\nCurrent Speed: 3400 MHz\n```\n\n要获取\
+  \ DIMM 信息，使用以下命令：\n\n```bash\nsudo dmidecode | grep DIMM\n```\n\n输出：\n```\nForm\
+  \ Factor: DIMM\nLocator: DIMM 0\nForm Factor: DIMM\nLocator: DIMM 1\n```\n\n要获取系统内存/RAM：\n\
+  \n```bash\nsudo dmidecode | grep GB\n```\n\n输出：\n```\nMaximum Capacity: 512 GB\n\
+  Range Size: 128 GB\nRange Size: 128 GB\nRange Size: 128 GB\nRange Size: 128 GB\n\
+  ```\n\n因此，我们的系统有 512GB 的 RAM（随机访问存储器）。\n\n基于此，是我们系统的关键信息，应为所有用途进行记录：\n\n| 系统信息 (dmidecode)\
+  \ |\n| 属性 | 值 |\n| :--- | :--- |\n| RAM | 512 GB |\n| Rank | 2 |\n| DIMMs | 4 |\n\
+  | Clock Frequency | 4200 MHz |\n| Clock Speed | 2133 MT/s |\n\n你应该尝试的其他 `dmidecode`\
+  \ 命令还有：\n* `sudo dmidecode -s system-manufacturer`\n* `sudo dmidecode | grep Product`\n\
+  * `sudo dmidecode -s system-product-name`\n* `sudo dmidecode | egrep -i 'manufacturer|product'`\n\
+  * `sudo dmidecode | egrep -i 'vendor'`\n\n这些命令提供了涉及你系统的制造商/供应商的重要信息等。\n\n计算系统有几个关键组件，如处理器、主板等。以下是获取有关这些组件信息的\
+  \ `dmidecode` 命令：\n* `sudo dmidecode -t processor`（用于处理器）\n* `sudo dmidecode -t\
+  \ system`\n* `sudo dmidecode -t baseboard`\n* `sudo dmidecode -t chassis`\n* `sudo\
+  \ dmidecode -t bios`\n* `sudo dmidecode -t cache`\n\n你必须在你的系统上尝试上述命令，记录输出并仔细分析。\n\
+  \n### cat /proc/meminfo\n\n```bash\ncat /proc/meminfo\n```\n\n`meminfo` 是 Linux\
+  \ 系统中的一个文件，存储与内存使用相关的信息。要获取你系统的内存统计，请使用此命令：\n\n```bash\ncat /proc/meminfo\n```\n\
+  \n输出：\n```\nMemTotal:       394877600 kB\nMemFree:         322057928 kB\nMemAvailable:\
+  \   391704744 kB\nBuffers:         2735168 kB\nCached:         66592340 kB\nSwapCached:\
+  \      39408 kB\nActive:         44374924 kB\nInactive:       25087292 kB\nActive(anon):\
+  \    89332 kB\nInactive(anon):  94996 kB\nActive(file):    4428592 kB\nInactive(file):\
+  \  2499296 kB\nUnevictable:     80 kB\nlocked:          80 kB\nSwapTotal:      \
+  \ 1679260 kB\nSwapFree:        1297158 kB\nDirty:           0 kB\nWriteback:   \
+  \    0 kB\nAnonPages:       98584 kB\nMapped:          73280 kB\nShmem:        \
+  \   49620 kB\nSlab:            285368 kB\nclaimable:      2744528 kB\nSreclaim:\
+  \        109160 kB\nKernelStack:     20608 kB\nPageTables:      7668 kB\nNFS_Unstable:\
+  \    0 kB\nBounce:          0 kB\nWritebackTmp:    0 kB\nCommitLimit:     21421806\
+  \ kB\nCommitted_AS:   4248960 kB\nVmallocTotal:     3435973867 kB\nVmallocUsed:\
+  \      0 kB\nVmallocChunk:     0 kB\nHardwareCorrupted: 0 kB\nAnonHugePages:   32768\
+  \ kB\nHugePages_Total: 0 kB\nHugePages_Free:  0 kB\nHugePages_Rsvd:  0 kB\nHugePages_Surp:\
+  \  0 kB\nHugepagesize:    2048 kB\nDirectMap4k:     669504 kB\nDirectMap2M:    \
+  \ 5038992 kB\nDirectMap1G:     352321536 kB```\n\n这提供了很好的见解，你必须仔细分析。\n\n### gcc\
+  \ version\n\n```bash\ngcc --version\n```\n\n`gcc --version` 命令用于获取 `gcc` 版本。这是一个重要信息，因为\
+  \ `gcc` 在广泛范围内起着主要作用。\n\n根据应用的情况，我们需要跟踪不同的信息。\n\n**命令：**\n```bash\ngcc --version\n\
+  ```\n\n输出：\n```\ngcc (SUSE Linux) 6.2.1 20160826 [gcc-6-branch revision 239773]\n\
+  Copyright (C) 2016 Free Software Foundation, Inc.\nThis is free software; see the\
+  \ source for copying conditions. There is NO warranty; not even for MERCHANTABILITY\
+  \ or FITNESS FOR A PARTICULAR PURPOSE.```\n\n所以检测到的 GCC 是：GCC (SUSE Linux) 6.2.1\
+  \ 20160826。\n\n### lsb_release -a\n\n```bash\nlsb_release -a\n```\n\n`lsb_release\
+  \ -a` 命令用于获取操作系统的细节。\n\n**命令：**\n```bash\nlsb_release -a\n```\n\n输出：\n```\nLSB Version:\
+  \    n/a\nDistributor ID: SUSE\nDescription: openSUSE 12.3 (Dartmouth) (x86_64)\n\
+  Release:        12.3\nCodename:       n/a```\n\n通过此，我们获取操作系统 OpenSUSE 12.3 (Dartmouth)。\n\
+  \n通过此，我们获得记录如下两个关键信息：\n\n| 软件信息 |\n| 属性 | 值 |\n| :--- | :--- |\n| GCC version |\
+  \ GCC (SUSE Linux) 6.2.1 20160826 |\n| OS | OpenSUSE 12.3 (Dartmouth) |\n\n计算系统的系统和软件细节完整示例记录如下：\n\
+  \n| 系统信息 |\n| 属性 | 值 |\n| :--- | :--- |\n| Model | Intel(R) Xeon(R) Platinum 8180\
+  \ CPU @ 2.50GHz |\n| NUMA nodes | 4 |\n| Sockets | 2 |\n| Cores | 28 |\n| Threads\
+  \ per socket | 2 |\n| CPUs | 112 |\n| Hyperthreading | OFF |\n| Frequency | 2494.256\
+  \ MHz |\n| RAM | 512 GB |\n| Rank | 2 |\n| DIMMs | 4 |\n| Clock Frequency | 4200\
+  \ MHz |\n| Clock Speed | 2133 MT/s |\n\n| 软件信息 |\n| 属性 | 值 |\n| :--- | :--- |\n\
+  | Kernel | Linux linux-mzys 4.4.162-94.72-default |\n| GCC version | GCC (SUSE Linux)\
+  \ 6.2.1 20160826 |\n| OS | OpenSUSE 12.3 (Dartmouth) |\n\n你应该遵循这些命令，在你的系统上运行它们并制作你自己的系统和软件信息表。这很重要，因为你应该准备好在特定系统上运行软件的所有内容，以便其他程序员可以复制你的工作。\n\
+  \n### 在后台运行进程\n\n在后台运行进程意味着该进程不会占用屏幕，我们可以使用不同的命令继续处理它。进程将继续运行，输出可以出现在屏幕上，但它不会接受任何输入。我们稍后将其带回屏幕。\n\
+  \n简而言之，语法是：\n\n```bash\n<command> &\n```\n\n注意，这并不意味着进程在关闭终端时会继续运行。\n\n\n\n\n注意，进程有两种类型，即：\n\
+  \n- 后台进程\n- 前台进程\n\n其核心思想是：后台进程不会与 screen 会话的 `STDOUT` 和 `STDERR` 管道链接，而前台进程则与 screen\
+  \ 会话的 `STDOUT` 和 `STDERR` 管道链接。因此，如果后台进程在终端中产生输出，它会被打印出来。所以，如果一个进程不产生输出或者输出被重定向到文件，它是很有用的。\n\
+  \n注意，后台和前台进程都与 `STDIN` 管道链接。因此，如果后台进程需要来自 `STDIN` 管道的输入，它会被挂起（hang），直到我们将其带回前台。\n\
+  \n要让进程在后台运行，我们需要在命令后添加 `&`。\n\n### 语法：\n\n```bash\ncommand &\n```\n\n### 示例：\n\n\
+  ```bash\npython code.py &\n```\n\n它将输出如下内容：\n\n```text\n[1] 121378\n```\n\n`1` 是作业\
+  \ ID (job id)，`121378` 是进程 ID (process id)。\n\n### 检查后台进程\n\n我们可以通过以下方式检查处于后台的进程：\n\
+  \n```bash\njobs\n```\n\n在我们的案例中输出如下：\n\n```text\n[1]-  Running             python\
+  \ code.py &\n[2]+  Running             python opengenus.py &\n```\n\n第一个整数是随附提供的命令的\
+  \ Job ID。例如，命令 `python opengenus.py &` 的 Job ID 为 `2`。\n\n我们可以使用 Job ID 来管理后台进程并执行若干操作，如：\n\
+  \n- 将后台进程带回前台\n- 杀死后台进程\n\n### 将进程带回前台\n\n要将进程带回前台，我们需要使用以下命令：\n\n```bash\nfg %<job_ib>\n\
+  ```\n\n### 示例：\n\n```bash\nfg %2\n```\n\n这将进程 `python opengenus.py &` 带回前台。输出将如下：\n\
+  \n```bash\n(base) [opengenus@localhost Desktop]$ fg %2\npython opengenus.py\n```\n\
+  \n如果你的代码正在等待输入，现在可以提供了。\n\n### 让正在运行的进程进入后台\n\n现在，如果你的进程已经在运行并且你想将其转到后台，可以按照以下步骤操作：\n\
+  \n1. 按下 Control  + Z\n2. 使用 `jobs` 检查 job id：\n\n```bash\njobs\n```\n\n3. 让作业进入后台：\n\
+  \n```bash\nbg %<job id>\n```\n\n进程将移动到后台。\n\n如果你只按下 Control  + z，它会停止该进程，我们可以在 `jobs`\
+  \ 命令中看到：\n\n```text\n[1]   Running             python code.py &\n[2]-  Running \
+  \            python opengenus.py &\n[3]+  Stopped             python code_2.py\n\
+  ```\n\n现在，如果我们使用 `bg` 命令将 Job ID `3` 移动到后台，可以使用 `jobs` 命令检查影响。\n\n```bash\nbg %3\n\
+  ```\n\n它将输出如下：\n\n```text\n[3]+ python code_2.py &\n```\n\n注意末尾的 `&` 符号。它表示该进程正在后台运行。\n\
+  \n尝试 `jobs` 命令：\n\n```bash\njobs\n```\n\n输出将如下：\n\n```text\n[1]   Running      \
+  \       python code.py &\n[2]-  Running             python opengenus.py &\n[3]+\
+  \  Running             python code_2.py &\n```\n\n### 获取作业的进程 ID\n\n我们可以使用 `jobs`\
+  \ 命令获取所有后台作业的进程 ID：\n\n```bash\njobs -l\n```\n\n输出如下：\n\n```text\n[1] 121378 Running\
+  \             python code.py &\n[2]- 127536 Running             python opengenus.py\
+  \ &\n[3]+ 12623 Running             python code_2.py &\n```\n\n注意，第一个数字（`1`、`2`\
+  \ 和 `3`）是 Job IDs，而第二个数字（如 `121378`）是 Process ID。\n\n### 杀死进程\n\n杀死进程有两种方法：\n\n\
+  - 直接使用进程 ID 杀死\n- 将其带回前台并使用 Control + C 杀死\n\n一旦我们获得了作业的进程 ID，就可以直接杀死它：\n\n```bash\n\
+  kill 121378\n```\n\n这将杀死第一个作业。它将输出如下：\n\n```text\n[1]  Terminated      code.py\n\
+  ```\n\n我们可以使用 `jobs` 命令验证这一点：\n\n```bash\njobs -l\n```\n\n输出为：\n\n```text\n[2]-\
+  \ 27536 Running             python opengenus.py &\n[3]+ 2623 Running           \
+  \  python code_2.py &\n```\n\n注意第一个作业消失了。我们将使用第二种方法，将其带回前台并杀死，如下：\n\n```bash\nfg\
+  \ %3\n(base) [opengenus@localhost Desktop]$ fg %3\npython code.py\n```\n\n终端卡住了。如果我们按下\
+  \ Control + C，进程将如下所示被终止：\n\n```bash\n(base) [opengenus@localhost Desktop]$ fg %3\n\
+  python code.py\nTraceback (most recent call):\n  File \"code.py\", line 7, in <module>\n\
+  \    time.sleep(1)\nKeyboardInterrupt\n```\n\n我们可以通过 `jobs -l` 命令验证此。输出为：\n\n```text\n\
+  [2]+ 27536 Running             python opengenus.py &\n```\n\n*(注：原文末尾部分存在大量重复且混乱的快捷键表，根据要求已进行清理并保留核心结构)*\n\
+  \n### 安装 Screen\n\n我们可以在 Ubuntu 等 Linux 版本安装 screen：\n\n```bash\nsudo apt-get install\
+  \ screen\n```\n\n对于其他系统如 RedHat (RHEL)，可以使用：\n\n```bash\nsudo yum install screen\n\
+  ```\n\n### 启动 screen 会话\n\n要启动 screen 会话，使用以下命令：\n\n```bash\nscreen\n```\n\n这将打开一个新的会话。我们可以在此\
+  \ screen 中工作并使用它提供的功能。\n\n### 获取 screen 帮助\n\n要获取 screen 应用的帮助，按顺序按下快捷键：Control\
+  \ + A 然后按 `?`。注意：为了使此操作有效，必须处于 screen 会话中。\n\n### 退出 screen 会话\n\n退出 screen 会话，可以使用以下快捷键进行分离\
+  \ (detach)：\n\nControl + A 然后按 d\n\n输出将类似于：\n\n```text\n[detached from 12921.pts-1.localhost]\n\
+  (base) [opengenus@localhost ~]$\n```\n\n### 列出 screen 会话\n\n一旦离开了 screen 会话，就可以回到它。为此，我们应该使用以下命令：\n\
+  \n```bash\nscreen -ls\n```\n\n在我们的案例中，输出如下：\n\n```text\nThere are screens on:\n\
+  \    12921.pts-1.localhost (Detached)\n    120455.pts-1.localhost (Detached)\n```\n\
+  \n\n\n\n# `/var/run/screen/S-opengenus` 中的 2 个 Socket\n\n我们有两个 screen 会话，分别是：\n\
+  - 129921\n- 120455\n\n也可以回到其中一个会话。\n\n## 在 screen 会话中运行命令\n\n使用 `screen` 的优势在于你可以在\
+  \ `screen` 会话中运行命令，然后关闭终端，此时进程仍会继续运行。如果你在远程机器上工作或需要关闭终端，这非常有用。\n\n流程如下：\n\n```bash\n\
+  // 创建一个 screen 会话\nscreen\n\n// 现在在后台运行命令\ncommand &\n\n// 退出 screen\n按下 control\
+  \ key + A 接着按 d\n\n// 现在你可以安全地关闭终端\nexit\n```\n\n## 回会话\n\n要回到已有的 `screen` 会话，我们应该使用\
+  \ `list screen` 命令获取会话名称（例如 `129921`），并使用以下命令：\n\n```bash\nscreen -r 129921\n```\n\
+  \n这将让你获得该会话的访问。\n\n## 如何知道你正处于 screen 中？\n\n简单的检测方法是执行 `screen list` 命令，如果有任何活跃的\
+  \ screen 会话，可能意味着你或其它用户正在其中运行。\n\n```bash\nscreen -ls\n```\n\n或者，你也可以尝试退出 `screen`。如果你在\
+  \ `screen` 中，它会分离（detached）；如果你不在其中，则该操作将无效。\n\n按下 control key + A 接着按 d\n\n## 删除\
+  \ screen 会话\n\n要删除 `screen` 会话，我们需要进入想要删除的 `screen` 会话，随后有两种选项：\n\n使用 `exit` 命令：\n\
+  ```bash\nexit\n```\n\n使用以下命令：\n`Control key + A` 接着按 `k`\n\n将出现如下提示：\n`Really kill\
+  \ this window [y/n]`\n\n按下 `y` 键后，`screen` 会话终止并显示以下消息：\n\n```\n[screen is terminating]\n\
+  (base) [opengenus@localhost ~]$\n```\n\n这将终止会话并杀死其中的所有进程。\n\n## 为 screen 会话命名\n\n\
+  我们可能需要为 `screen` 会话命名，这样在列出会话时，我们可以理解哪个会话对应哪个任务。\n\n要做到这一点，在创建 `screen` 会话期间，可以使用以下命令：\n\
+  \n```bash\nscreen -S name\n```\n\n这将创建一个名为 `\"name\"` 的 `screen` 会话，以下是 `screen\
+  \ list` 命令的输出：\n\n```\nThere are screens on:\n      113050.name     (Detached)\n\
+  \      105349.pts-1.localhost  (Detached)\n      129921.pts-1.localhost  (Detached)\n\
+  \      120455.pts-1.localhost  (Detached)\n```\n\n# `/var/run/screen/S-opengenus`\
+  \ 中的 4 个 Socket\n\n## 锁定你的 screen 会话\n\n如果你想锁定 `screen` 会话，可以使用以下组合键：\n\n`control\
+  \ key + A` 接着按 `x`\n\n这将屏幕变为：\n`Screen used by opengenus <opengenus> on localhost.`\n\
+  `Password:`\n\n可以输入 UNIX 用户密码重新登录会话。\n\n## 记录 screen 会话活动\n\n我们可以通过以下命令创建会话来记录 `screen`\
+  \ 会话中的所有活动：\n\n```bash\nscreen -L\n```\n\n如果已经在 `screen` 会话中，可以使用以下组合键：\n\n`control\
+  \ key + A` 接着按 `H`\n\n这将保存一个包含所有活动的文件。\n\n`screen` 应用程序还有许多可用选项。你可以查阅我们之前演示过的帮助选项并尝试每个选项。事实上，我们演示的选项已经足够让你像大师一样使用\
+  \ `screen` 了。\n\n## 文件处理\n\n我们已经创建了包含文件的目录结构作为工作区。\n\n- `file1`\n- `folder1.0.0`\n\
+  - `--- --- file2`\n- `--- --- --- folder1.1.0`\n- `--- --- --- --- --- --- folder1.1.1`\n\
+  - `--- --- --- --- --- --- file3`\n- `--- --- --- --- --- --- file4`\n- `--- ---\
+  \ --- folder1.2.0`\n- `--- folder2.0.0`\n- `--- --- file5`\n\n我们将对此进行工作。\n\n`ls`\
+  \ 命令用于列出当前层级下的文件和目录。\n\n命令：\n```bash\nls\n```\n\n输出：\n```\nfile1  folder1.0.0  folder2.0.0\n\
+  ```\n\n`\"ls -l\"` 命令是上述 `\"ls\"` 命令的进阶，包含了其他关键信息，如文件/目录的大小、修改日期、所有者、权限等。\n\n命令：\n\
+  ```bash\nls -l\n```\n\n输出：\n```\ntotal 0\n-rw-rw-r--. 1 opengenus aditya  0 Aug\
+  \  7 00:10 file1\ndrwxrwxr-x. 4 opengenus aditya 57 Aug  7 00:11 folder1.0.0\ndrwxrwxr-x.\
+  \ 2 opengenus aditya 19 Aug  7 00:11 folder2.0.0\n```\n\n`\"ls -R\"`\n这是一个非常重要的命令，因为它会递归地列出通向任何深度的所有文件和子目录。\n\
+  \n命令：\n```bash\nls -R\n```\n\n输出：\n```\n.:\nfile1  folder1.0.0  folder2.0.0\n./folder1.0.0:\n\
+  file2\n```\n\n"

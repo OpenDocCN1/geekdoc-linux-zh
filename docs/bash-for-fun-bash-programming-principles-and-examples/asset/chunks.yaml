@@ -1,0 +1,2662 @@
+- fmt: '
+
+    ![](resources/title_page.jpg)
+
+
+    ![Bash for Fun](resources/title_page.jpg)
+
+
+    # Bash for Fun
+
+
+    ## Bash Programming: Principles and Examples
+
+
+    ### Libor Spacek
+
+
+    This book is for sale at [http://leanpub.com/bashforfun](http://leanpub.com/bashforfun)
+
+    This version was published on 2022-01-08
+
+    ![publisher''s logo](resources/leanpub-logo.png)
+
+
+    This is a [Leanpub](http://leanpub.com) book. Leanpub empowers authors and publishers
+    with the Lean Publishing process. [Lean Publishing](http://leanpub.com/manifesto)
+    is the act of publishing an in-progress ebook using lightweight tools and many
+    iterations to get reader feedback, pivot until you have the right book and build
+    traction once you do.
+
+
+    © 2021 - 2022 Libor Spacek
+
+    ISBN for EPUB version: 978-0-6453971-0-9
+
+
+    ## Table of Contents
+
+
+    ## Guide
+
+
+    1. [Begin Reading](#chap00.xhtml)
+
+
+    # Introduction
+
+
+    The intended audience of this book are all those who want to gain a better understanding
+    of their computers. Those who wish to use Bash effectively and with confidence.
+    This book spans the full range of Bash programming skills: from beginners to advanced,
+    with amusing anecdotal insights and examples of doing useful things.
+
+
+    The ignorant ‘clicking of buttons’ has done much disservice to laudable ambitions
+    of programming education over the past four decades or so. It is time to rediscover
+    the ancient lore! You, too, will become a wizard of retro programming. Armed with
+    this book, you will massively increase your productivity and gain true ownership
+    of your device.
+
+
+    This book is for you if in the past you got waylaid and discouraged from programming,
+    if you never even started or if you ever thought: “surely, there must be a simpler
+    and better way of doing this!”.
+
+
+    Above all, what you will discover here is that one most rare and precious thing:
+    understanding.
+
+
+    This book is definitely not another boring reference manual. Real programming
+    is a skilful art. This applies especially to programming in Bash. Art is not easily
+    learnt from manuals. Not even from pedagogically perfectly organised treatises
+    full of exhortations and exercises. Manuals are for looking things up, same as
+    are search engines on the internet. By all means, look up the details as and when
+    needed [(1)](https://www.gnu.org/software/bash/manual/bash.html) but please read
+    this first.
+
+
+    This book is based on the author’s lifetime experience with using and teaching
+    numerous programming languages. The experience has shown that the most effective
+    way to learn programming is by playing with fun examples.
+
+
+    Examples from cheat sheets [(2)](https://devhints.io/bash), examples of ‘boiler
+    plate’, examples of powerful techniques that actually accomplish useful things,
+    examples of advanced tips and tricks, examples of amazing solutions to interesting
+    problems. Examples, examples, examples.
+
+
+    It is playing with those inspiring snippets of code that brings on those ‘eureka’
+    moments, when we want to shout:
+
+
+    “Wow, I did not know that!”
+
+    “So, this is how to do it! Yes now I really get it!”
+
+    “What fun, let me try this myself!”
+
+    “Now, let me just change this a bit and it will solve my own fascinating problem!”
+
+
+    ## Typesetting conventions
+
+
+    - technical terms and software packages that are not in common English use, inline
+    bits of code, etc, are all literalised in a fixed width ‘computer’ font like this:
+    `wget`
+
+    - bigger chunks of Bash code are additionally block set and partially coloured
+
+    - special terms are single quoted, e.g.: ‘guru’. Sometimes this may involve a
+    measure of gentle irony
+
+    - author’s emphasis is indicated by italicised text
+
+    - acronyms are capitalised and introduced after their first use in parenthesis
+    (round brackets): (REPL)
+
+    - double quotes “…” mark, as usual, speech
+
+    - link references are placed in round brackets (1)
+
+
+    ## Program in Bash anywhere
+
+
+    One of the objectives of this book is to make programming accessible to everybody.
+    It is actually quite easy to stop clicking on the icons for a while and start
+    running powerful, automated, general Bash scripts instead. It is the secret of
+    the computing professionals, known as the Command Line Interface (CLI).
+
+
+    There are some Unix/Linux utilities (commands) within Bash, for example `wget`,
+    that put at your fingertips direct access to the whole of the internet and all
+    the servers and cloud services that you may have been using. All in an organised
+    and automated fashion.
+
+
+    Under `Linux` and `MacOS`, there is no need to install anything. Just open the
+    default terminal and you are ready to go. The terminal is an interactive Bash
+    session.
+
+
+    Under `Windows` (10-11), install Windows Subsystem for Linux (`WSL`). Then you
+    get most of the benefits of a proper operating system, without having to partition
+    your disks and dual boot your computer. Most of all, you get a little Linux (Ubuntu)
+    Icon, which activates the real Bash terminal with full access to the whole file
+    system.
+
+
+    It is even possible to program in Bash on a mobile Android phone. Install an app
+    called `F-Droid`. That in turn will allow the installation of the latest version
+    of `Termux`, which is a fully fledged Linux with Bash included. You can also install
+    any other Linux compilers and applications, even though they will probably eat
+    up a fair chunk of your phone’s memory. Let us hope that the developers of `Termux`
+    will, in time, make it possible to use an SD.
+
+
+    ## Dialects and styles
+
+
+    When searching the internet for answers to questions and problems related to Bash,
+    it quickly becomes apparent that there are many questions but even more answers.
+    This is partly due to the long and active history of shell programming. At first
+    glance, it is not all obvious, which of the suggested methods or styles are ‘deprecated’,
+    outdated, pertaining to some obscure dialect fallen to disuse, or just plain wrong.
+    At the same time, there are often more than one solutions with different merits.
+    Accordingly, this book prefers a simple, unified, rational, style. Insignificant
+    alternatives are rarely offered or discussed, in order to keep the complexity
+    down. That is not to say that other valid styles and solution are not ‘out there’.
+
+
+    ## Why Bash?
+
+
+    > “To Bash or not to Bash, that is the question!”
+
+
+    Bash shell script is one of the ‘old school’ languages, going back to mid1980s
+    and beyond. It was originally developed as part of the Unix project in conjunction
+    with C. That is why some of its (Unix/Linux) functions/utilities are in fact the
+    same as in C. For example, the print command `printf`. Bash is the user facing
+    heart of any UNIX/Linux based Operating System (OS). That is why today it remains
+    important to grey bearded systems admin gurus and skilled users alike. Its longevity
+    speaks volumes about its proven strength, usability and versatility.
+
+
+    It is because of this close integration with the OS that, in fact, all Unix/Linux
+    commands, plus anything that you might install or implement yourself, are all
+    directly available and trivially simply invokable in Bash.
+
+
+    ## Notes for the professionals
+
+
+    On the other hand, if you need a lot of ‘hand holding’ in case you do something
+    silly, if you work on large collaborative projects and if you do not mind a much
+    steeper learning curve, long compilations and large executables, then probably
+    you should go to the other extreme and use Rust.
+
+
+    Actually, there is a lot to be said for combining within the same overall project
+    Rust and its prodigious speed and safety, with Bash. Bash is great for effectively
+    automating the overall project administration: files marshalling, moving, renaming,
+    archiving, updating, uploading, downloading, compiling, backing up, program executions,
+    etc. Thus one can get the best of both worlds.
+
+    '
+  raw: '
+
+
+    ![](resources/title_page.jpg)
+
+
+    ![Bash for Fun](resources/title_page.jpg)
+
+
+    ## Bash for Fun
+
+
+    ### Bash Programming: Principles and Examples
+
+
+    #### Libor Spacek
+
+
+    This book is for sale at [http://leanpub.com/bashforfun](http://leanpub.com/bashforfun)
+
+
+    This version was published on 2022-01-08
+
+
+    ![publisher''s logo](resources/leanpub-logo.png)
+
+
+    *   *   *   *   *
+
+
+    This is a [Leanpub](http://leanpub.com) book. Leanpub empowers authors and publishers
+    with the Lean Publishing process. [Lean Publishing](http://leanpub.com/manifesto)
+    is the act of publishing an in-progress ebook using lightweight tools and many
+    iterations to get reader feedback, pivot until you have the right book and build
+    traction once you do.
+
+
+    *   *   *   *   *
+
+
+    © 2021 - 2022 Libor Spacek
+
+
+    ISBN for EPUB version: 978-0-6453971-0-9
+
+
+    ## Table of Contents
+
+
+    ## Guide
+
+
+    1.  [Begin Reading](#chap00.xhtml)
+
+
+    # Introduction
+
+
+    The intended audience of this book are all those who want to gain a better understanding
+    of their computers. Those who wish to use Bash effectively and with confidence.
+    This book spans the full range of Bash programming skills: from beginners to advanced,
+    with amusing anecdotal insights and examples of doing useful things.
+
+
+    The ignorant ‘clicking of buttons’ has done much disservice to laudable ambitions
+    of programming education over the past four decades or so. It is time to rediscover
+    the ancient lore! You, too, will become a wizard of *retro programming*. Armed
+    with this book, you will massively increase your productivity and gain true ownership
+    of your device.
+
+
+    This book is for you if in the past you got waylaid and discouraged from programming,
+    if you never even started or if you ever thought: “surely, there must be a simpler
+    and better way of doing this!”.
+
+
+    Above all, what you will discover here is that one most rare and precious thing:
+    *understanding*.
+
+
+    This book is definitely not another boring reference manual. Real programming
+    is a skilful art. This applies especially to programming in Bash. Art is not easily
+    learnt from manuals. Not even from pedagogically perfectly organised treatises
+    full of exhortations and exercises. Manuals are for looking things up, same as
+    are search engines on the internet. By all means, look up the details as and when
+    needed [(1)](https://www.gnu.org/software/bash/manual/bash.html) but please read
+    this first.
+
+
+    This book is based on the author’s lifetime experience with using and teaching
+    numerous programming languages. The experience has shown that the most effective
+    way to learn programming is by playing with fun examples.
+
+
+    Examples from cheat sheets [(2)](https://devhints.io/bash), examples of ‘boiler
+    plate’, examples of powerful techniques that actually accomplish useful things,
+    examples of advanced tips and tricks, examples of amazing solutions to interesting
+    problems. Examples, examples, examples.
+
+
+    It is playing with those inspiring snippets of code that brings on those ‘eureka’
+    moments, when we want to shout:
+
+
+    “Wow, I did not know that!”
+
+
+    “So, this is how to do it! Yes now I really get it!”
+
+
+    “What fun, let me try this myself!”
+
+
+    “Now, let me just change this a bit and it will solve my own fascinating problem!”
+
+
+    ## Typesetting conventions
+
+
+    *   technical terms and software packages that are not in common English use,
+    inline bits of code, etc, are all literalised in a fixed width ‘computer’ font
+    like this: `wget`
+
+
+    *   bigger chunks of Bash code are additionally block set and partially coloured
+
+
+    *   special terms are single quoted, e.g.: ‘guru’. Sometimes this may involve
+    a measure of gentle irony
+
+
+    *   author’s emphasis is indicated by *italicised text*
+
+
+    *   acronyms are capitalised and introduced after their first use in parenthesis
+    (round brackets): (REPL)
+
+
+    *   double quotes “…” mark, as usual, speech
+
+
+    *   link references are placed in round brackets (1)
+
+
+    ## Program in Bash anywhere
+
+
+    One of the objectives of this book is to make programming accessible to everybody.
+    It is actually quite easy to stop clicking on the icons for a while and start
+    running powerful, automated, general Bash scripts instead. It is the secret of
+    the computing professionals, known as the Command Line Interface (CLI).
+
+
+    There are some Unix/Linux utilities (commands) within Bash, for example `wget`,
+    that put at your fingertips direct access to the whole of the internet and all
+    the servers and cloud services that you may have been using. All in an organised
+    and automated fashion.
+
+
+    Under `Linux` and `MacOS`, there is no need to install anything. Just open the
+    default terminal and you are ready to go. The terminal is an interactive Bash
+    session.
+
+
+    Under `Windows` (10-11), install Windows Subsystem for Linux (`WSL`). Then you
+    get most of the benefits of a proper operating system, without having to partition
+    your disks and dual boot your computer. Most of all, you get a little Linux (Ubuntu)
+    Icon, which activates the real Bash terminal with full access to the whole file
+    system.
+
+
+    It is even possible to program in Bash on a mobile Android phone. Install an app
+    called `F-Droid`. That in turn will allow the installation of the latest version
+    of `Termux`, which is a fully fledged Linux with Bash included. You can also install
+    any other Linux compilers and applications, even though they will probably eat
+    up a fair chunk of your phone’s memory. Let us hope that the developers of `Termux`
+    will, in time, make it possible to use an SD card instead. Anyway, even the basic
+    install is perfectly adequate for enjoying Bash programming.
+
+
+    It is probably true to say that no other useful programming language is so simple
+    and so easily and universally available.
+
+
+    ## Dialects and styles
+
+
+    When searching the internet for answers to questions and problems related to Bash,
+    it quickly becomes apparent that there are many questions but even more answers.
+    This is partly due to the long and active history of shell programming. At first
+    glance, it is not at all obvious, which of the suggested methods or styles are
+    ‘deprecated’, outdated, pertaining to some obscure dialect fallen to disuse, or
+    just plain wrong. At the same time, there are often more than one valid solutions
+    with different merits. All that can be somewhat confusing.
+
+
+    Accordingly, this book prefers a simple, unified, rational, style. Insignificant
+    alternatives are rarely offered or discussed, in order to keep the complexity
+    down. That is not to say that other valid styles and solution are not ‘out there’.
+
+
+    ## Why Bash?
+
+
+    > “To Bash or not to Bash, that is the question!”
+
+
+    Bash shell script is one of the ‘old school’ languages, going back to mid 1980s
+    and beyond. It was originally developed as part of the Unix project in conjunction
+    with C. That is why some of its (Unix/Linux) functions/utilities are in fact the
+    same as in C. For example, the print command `printf`. Bash is the user facing
+    heart of any UNIX/Linux based Operating System (OS). That is why today it remains
+    important to grey bearded systems admin gurus and skilled users alike. Its longevity
+    speaks volumes about its proven strength, usability and versatility.
+
+
+    It is because of this close integration with the OS that, in fact, all Unix/Linux
+    commands, plus anything that you might install or implement yourself, are all
+    directly available and trivially simply invokable in Bash.
+
+
+    ## Notes for the professionals
+
+
+    On the other hand, if you need a lot of ‘hand holding’ in case you do something
+    silly, if you work on large collaborative projects and if you do not mind a much
+    steeper learning curve, long compilations and large executables, then probably
+    you should go to the other extreme and use Rust.
+
+
+    Actually, there is a lot to be said for combining within the same overall project
+    Rust and its prodigious speed and safety, with Bash. Bash is great for effectively
+    automating the overall project administration: files marshalling, moving, renaming,
+    archiving, updating, uploading, downloading, compiling, backing up, program executions,
+    etc. Thus one can get the best of both worlds.'
+  toc: []
+  trans: "\n\n![](img/title_page.jpg)\n\n![Bash 之趣](img/title_page.jpg)\n\n# Bash\
+    \ 之趣\n\n## Bash 编程：原理与示例\n\n### Libor Spacek\n\n本书已售：[`leanpub.com/bashforfun`](http://leanpub.com/bashforfun)\
+    \ \n此版本发布于 2022-01-08\n![出版者标志](img/leanpub-logo.png)\n\n这是一本来自 [Leanpub](http://leanpub.com)\
+    \ 的书籍。Leanpub 通过精益出版（Lean Publishing）流程为作者和出版社提供支持。[精益出版](http://leanpub.com/manifesto)是指使用轻量级工具和多次迭代发布开发中的电子书，以获取读者反馈，不断调整方向直到获得正确的书籍，并在完成后建立影响力。\n\
+    \n© 2021 - 2022 Libor Spacek\nEPUB 版本的 ISBN：978-0-6453971-0-9\n\n## 目录\n\n## 指南\n\
+    \n1. 开始阅读\n\n# 引言\n\n本书的预期读者群是所有希望更好地了解自己电脑的人。那些希望高效且自信地使用 Bash 的人。本书涵盖了 Bash\
+    \ 编程技能的各个范围：从初学者到高级学者，并配有有趣的逸见解和完成实用任务的示例。\n\n在过去的四多年里，无知的“点击按钮”对编程教育中值得赞誉的理想造成了很大损害。是时候重新发现那些古老的智慧了！你也将成为一名复古编程的魔法师。有了这本书，你将极大提高你的生产力，并获得对设备的真正所有权。\n\
+    \n如果你过去在编程上遇到阻碍感到沮丧，如果你从未开始过，或者你曾想：“一定有更简单、更好的方法来做这件事！”，那么这本书就是为你准备的。\n\n最重要的是，你在这里将发现一种最稀有且珍贵的东西：理解。\n\
+    \n本书绝对不是另一本枯燥的参考手册。编程是一门高技巧的艺术。这在 Bash 编程中尤其如此。艺术不能从手册中轻易学会，即使是从那些组织完美、充满劝诫和练习的教学著作中也一样。手册是用来查阅的，正如互联网上的搜索引擎一样。在需要的时候请尽管查阅细节\
+    \ [(1)](https://www.gnu.org/software/bash/manual/bash.html)，但请先读这一本。\n\n本书基于作者使用和教学多种编程语言的长期经验。经验表明，学习编程最有效的方法是玩转有趣的示例。\n\
+    \n来自速查表的示例 [(2)](https://devhints.io/bash)、“模板代码”示例、实际上能完成有用任务的强大技术示例、高级技巧和窍门示例、针对有趣问题的惊人解决方案。示例、示例、示例。\n\
+    \n正是通过玩转那些激发灵感的代码片段，带来了那些“灵光一现”的时刻，让我们想大喊：\n\n“哇，我竟然！”\n“原来是这样做的！是的，现在我真的懂了！”\n\
+    “太有趣了，让我自己试一下！”\n“现在，我只要稍微改一下这里就能解决我自己的那个迷人的问题！”\n\n## 排版规范\n\n- 不在英语中通用的技术术语和软件包、内联代码片段等，均使用等宽“计算机”字体原样呈现，例如：`wget`\n\
+    - 较大的 Bash 代码块会额外进行块设置并部分着色\n- 特殊术语使用单引号，例如：‘guru’。有时这可能带有某种温和的讽刺\n- 作者的强调通过斜体文本表示\n\
+    - 缩写大写，并在首次使用后在圆括号内介绍形式：(REPL)\n- 双引号“……”照常标记对话\n- 链接引用放在圆括号内 (1)\n\n## 在任何地方用\
+    \ Bash 编程\n\n本书的目标之一是让每个人都能触及编程。实际上，停止点击图标一段时间，转而运行强大的、自动化的通用 Bash 脚本其实很容易。这是计算专业的秘密，被称为命令行界面\
+    \ (CLI)。\n\nBash 内部有一些 Unix/Linux 工具（命令），例如 `wget`，它们让你能够直接访问整个互联网以及你可能使用的所有服务器和云服务。这一切都以有序且自动的方式进行。\n\
+    \n在 `Linux` 和 `MacOS` 下，无需安装任何东西。只需打开默认终端即可开始。终端是一个交互式的 Bash 会话。\n\n在 `Windows`\
+    \ (10-11) 上，安装 Windows Linux 子系统 (`WSL`)。然后你就可以获得真正的操作系统的大部分好处，而无需划分磁盘和双启动电脑。最重要的是，你会得到一个小\
+    \ Linux (Ubuntu) 图标，它会激活具有完整文件系统访问权限的真实 Bash 终端。\n\n可以在 Android 手机上使用 Bash 编程。安装一个名为\
+    \ `F-Droid` 的应用。这又允许安装最新版本的 `Termux`，它是一个包含 Bash 的完整 Linux 系统。你也可以安装任何其他 Linux\
+    \ 编译器和应用程序，尽管它们可能会占用手机很大一部分内存。让我们希望 `Termux` 的开发者最终能让使用 SD 卡成为可能。\n\n## 方言与风格\n\
+    \n当在互联网上搜索与 Bash 相关的问题和问题的答案时，很快就会发现问题很多，但答案更多。这部分归功于 Shell 编程悠久而活跃的历史。乍一看，并不明显哪些建议的方法或风格是“过时的”、“陈旧的”、“属于某种被遗忘的方言或仅仅是错误的”。同时，通常有多种各有优的解决方案。因此，本书倾向于简单、统一、理性的风格。为了降低复杂性，很少提供或讨论无关紧要的替代方案。并不是说没有其他有效的风格和解决方案。\n\
+    \n## 为什么选择 Bash？\n\n> “用 Bash 还是不用 Bash，这是一个问题！”\n\nBash 脚本语言是‘老派’语言之一，可以追溯到 20\
+    \ 世纪 80 年代中期。它最初是作为 Unix 项目的一部分联合开发的。这就是为什么它的某些 (Unix/Linux) 函数/工具与 C 是相同的。例如，打印命令\
+    \ `printf`。Bash 是任何基于 Unix/Linux 操作系统 (OS) 面向的核心。这就是为什么今天它对资深系统管理员专家和熟练用户来说仍然重要。它的长寿充分说明了它的实力、易用性和多功能性。\n\
+    \n正因为与操作系统的紧密集成，事实上，所有的 Unix/Linux 命令加上你可能安装或实现的任何内容，在 Bash 中都是直接可用且极易调用的。\n\n\
+    ## 专业人士\n\n另一方面，如果你在犯蠢错误时需要大量的‘手把手教学’，如果你在大型协作项目中工作，如果你不介意更陡峭的学习曲线、长时间的编译和大型执行文件，那么你可能应该走向另一个极端使用\
+    \ Rust。\n\n实际上，在同一个大项目中结合 Rust 及其卓越的速度和安全性与 Bash 是非常有价值的。Bash 非常适合有效地自动化整个项目管理：文件整理、移动、重命名、归档、更新、上传、下载、编译、备份、程序执行等。因此，可以兼得两者。\n\
+    \n"
+- fmt: '
+
+    This book took shape when the author started using `Bash` within his TokenCrypt
+    project [(4)](https://github.com/liborty/TokenCrypt), originally just for the
+    prosaic convenience of it. Warming up to it, it came as a bit of a shock to realise
+    that two modern programming styles, namely Logic Programming and Functional Programming,
+    since then much loved and hyped in the academic circles, are in fact already available
+    in `Bash`. Admittedly in a dormant and embryonic form but they are there. In retrospect
+    view, `Bash` can be said to have been seminal to their development.
+
+
+    `Bash` is said to be the language which many use (or need to use, or wish to use)
+    but few understand. Maybe this book will help to change that.
+
+
+    # First steps
+
+
+    Anyone can certainly list a few commands like `cd ..; ls -al` in a script file
+    and then run it. In fact, doing just that, is an excellent way to get started
+    with `Bash` programming.
+
+
+    Create a file called `myscript`, put some commands in it and make it executable
+    with `chmod +x myscript`. Then just typing `./myscript` will make `Bash` execute
+    all the commands contained in it.
+
+
+    Apart from `Bash`, there are several other dialects of shell scripting. The convention
+    dictates that scripts should always start on the first line with so called ‘shriek-bang’
+    `#!`, which indicates which interpreter (shell) is wanted and where exactly it
+    is to be found. Most often, it will be this: `#!/bin/bash`
+
+
+    However, on Android phones, `Bash` will be installed in a non-standard location
+    with a longer path. The specification should therefore always point to exactly
+    where it resides, otherwise it may not run. Any normal commands will then follow,
+    exactly as you might type them prompt. `#` turns the rest of the line into a comment.
+    `Bash` is very terse. A lot can be happening in just line of code, so it is a
+    good idea to be generous with explanatory comments.
+
+
+    Note: sometimes it is good to try things out directly by Read Eval Print Loop
+    (REPL), which is what interactive terminal is. It can happen after typing out
+    the correct answer, command found. For example, try this little bit of arithmetic:
+    `$((1+1))`. There is nothing wrong, really. The message is just `2` as well. You
+    can stop it happening by using `echo` or `printf` commands, which drop their values
+    (in this case not pass them back to REPL), like this: `echo $((1+1))`
+
+
+    Moving beyond this, to really understand subtle points of `Bash` as a full programming
+    language that opens up entirely new horizons, I hear some you exclaim: “Why not
+    Python?”. It has to be said that `Bash` still holds some big advantages over Python
+    and other similar languages (Ruby, etc.), making it easier to learn:
+
+
+    1. `Bash` needs no installations and voluminous searching.
+
+    2. The Read-Eval-Print-Loop (REPL) for trying things out is right there in any
+    terminal.
+
+    3. `Bash` is tightly integrated with the Operating System (OS), right of the box.
+    This helps understand how OS works.
+
+    4. The EIJAS principle ‘Everything is just a string’ (more on this later).
+
+
+    # Chapters outline
+
+
+    * **Introduction** - the why and how of `Bash`.
+
+    * **Quoting Quoting Quoting** - develops understanding of fundamental principles:
+    what is most needed for confident and successful `Bash` programming.
+
+    * **Bash Branching** - the practicalities of `Bash`: conditionals, program control,
+    functions, loops. An example of applying them to the common task of processing
+    and interpreting arguments.
+
+    * **Input-Output (I/O)** handling is an important part of any language. In `Bash`
+    this applies especially. Its streams, redirections and pipes act like glue that
+    ties everything together. That means internally as well as taking care of the
+    traditional role of communicating with the outside world. After this follow increasingly
+    sophisticated applications and projects with examples of code.
+
+    * **Amazing Arithmetic** is a useful project exploiting the EIJAS property of
+    `Bash` to implement fixed point arithmetic. This is achieved by inserting the
+    decimal point in the right place in the strings without any external utilities,
+    just using the default integer arithmetic.
+
+    * **SubShell Scheduling** is an advanced project that shows how to automatically
+    orchestrate background jobs in separate threads. It deploys an interesting technique
+    of program self modification. It is also a good template for using files and directories
+    effectively.
+
+    * **Conclusion**
+
+    * **Link References**
+
+
+    # Quoting, Quoting, Quoting
+
+
+    `Bash` is nowadays considered by sloppy programmers to be prone to programming
+    errors but it is really not bad, as long as we watch out for a few pitfalls and
+    ‘gotchas’.
+
+
+    The main potential problem are spaces in the wrong places. This is the price we
+    pay for programs and data all being one and the same thing to `Bash`. You may
+    still be able to read this. However, computers are ‘syntax nazis’. They ‘hate’
+    any typing errors or ambiguities. Spaces are important to the structure of any
+    text, which means they are also important to the structure of the `Bash` programming
+    language.
+
+
+    Everything in `Bash` is just a string of text ( EIJAS principle). That means `Bash`
+    only knows about and understands chunks of text. We will see later how this simplicity
+    brings about some amazing opportunities and advantages.
+
+
+    The first and foremost advantage is simplicity: neither the user, nor `Bash`,
+    have to worry about all kinds of different types and checking them all. There
+    is really only text and sometimes explicitly annotated text interpreted as digits.
+
+
+    However, with power comes responsibility. We have to be prepared to get more errors
+    and therefore it is wise to test small units of program at a time. In case of
+    big trouble, that means hard to find bugs, it is highly recommended to introduce
+    extra `printf` statements into the program code to print out values of variables
+    that you suspect may be wrong. This method is almost always more focussed and
+    therefore more successful than uninformed general debugging in any language. Afterwards,
+    it is easy to comment out or to delete those extra statements.
+
+
+    In order to handle text effectively in different situations, there are several
+    different ways of annotating or quoting it. Each has its own specific effects
+    and determines how the quoted text is to be interpreted and/or acted upon. It
+    is important to understand them all and the differences between them.
+
+
+    ## Individual characters
+
+
+    First of all, there is ‘escaping’ of some special and non-printable individual
+    characters. Funny example:
+
+
+    ```
+
+    printf "My book sales reached 200%%\n"
+
+    ```
+
+
+    There are specific rules which only apply within printf formatting strings. Here
+    the non-printable character ‘newline’ is encoded as `\n`. The printable character
+    `%` is escaped by being doubled, as otherwise it has a different interpretation
+    within the printf formatting string. In other words, it is a ‘reserved character’,
+    just in this context.
+
+    '
+  raw: 'This book took shape when the author started using Bash within his TokenCrypt
+    project [(4)](https://github.com/liborty/TokenCrypt), originally just for the
+    prosaic convenience of it. Warming up to it, it came as a bit of a shock to realise
+    that two modern programming styles, namely Logic Programming and Functional Programming,
+    since then much loved and hyped in the academic circles, are in fact already available
+    in Bash. Admittedly in a dormant and embryonic form but they are there. In retrospect
+    view, Bash can be said to have been seminal to their development.
+
+
+    Bash is said to be the language which many use (or need to use, or wish to use)
+    but few understand. Maybe this book will help to change that.
+
+
+    ## First steps
+
+
+    Anyone can certainly list a few commands like `cd ..; ls -al` in a script file
+    and then run it. In fact, doing just that, is an excellent way to get started
+    with Bash programming.
+
+
+    Create a file called `myscript`, put some commands in it and make it executable
+    with `chmod +x myscript`. Then just typing `./myscript` will make Bash execute
+    all the commands contained in it.
+
+
+    Apart from Bash, there are several other dialects of shell scripting languages.
+    The convention dictates that the scripts should always start on the very first
+    line with the so called ‘shriek-bang’ `#!`, which indicates which particular interpreter
+    (shell) is wanted and where exactly it is to be found. Most often, it will be
+    just this: `#!/bin/bash`
+
+
+    However, on Android phones, Bash will be installed in a non-standard location
+    with a longer path. The path specification should therefore always point to exactly
+    where on the filesystem Bash resides, otherwise it may not run.
+
+
+    Any normal commands will then follow, exactly as you might type them to the terminal
+    prompt. Hash `#` turns the rest of the line into a comment. Bash is very terse.
+    A lot can be happening in just one line of Bash code, so it is a good idea to
+    be generous with explanatory comments.
+
+
+    Note: sometimes it is good to try things out by typing them directly to the Read
+    Eval Print Loop (REPL), which is what an interactive Bash terminal is. It can
+    happen that after typing out the correct answer, the REPL will add a complaint:
+    `command not found`. For example, try this little bit of arithmetic: `$(( 1+1
+    ))`. There is nothing wrong, really. The message is just Bash trying to evaluate
+    the answer `2` as well. You can stop it happening by using `echo` or `printf`
+    commands, which drop their values (in this case do not pass them back to REPL),
+    like this: `echo $(( 1+1 ))`
+
+
+    Moving beyond this, to really understand the subtle points of Bash as a ‘full-on’
+    programming language, that opens up entirely new horizons.
+
+
+    I hear some of you exclaim in horror: “Why not Python?”. It has to be said that
+    Bash still holds some big advantages over Python and other similar interpreted
+    scripting languages (Ruby, etc.), making Bash easier to learn as the first programming
+    language:
+
+
+    1.  Bash needs no installations and voluminous libraries searching.
+
+
+    2.  The ‘Read-Eval-Print-Loop’ (REPL) for trying things out is right there, in
+    any terminal. It is recommended to open a terminal alongside this book and experiment
+    with the code.
+
+
+    3.  Bash is tightly integrated with the Operating System (OS), right out of the
+    box. This has the side benefit that learning Bash, you will also get to understand
+    much better how your OS works. This is somewhat like what learning Latin used
+    to do for european human languages. The same can not be said for Python, etc.
+
+
+    4.  The EIJAS principle = ‘Everything is just a string’ (more on this later).
+
+
+    ## Chapters outline
+
+
+    *   **Introduction** - the why and how of Bashing.
+
+
+    1.  **Quoting Quoting Quoting** - develops an understanding of the fundamental
+    principles: what is most needed for confident and successful Bash programming.
+
+
+    2.  **Bash Branching** - the practicalities of Bash: conditionals, program control,
+    functions, loops. An example of applying them to perform the common task of processing
+    and interpreting program arguments.
+
+
+    3.  **Input-Output** (I/O) handling is an important part of any programming language.
+    In Bash this applies especially. Its streams, redirections and pipes act like
+    glue that ties everything together. That means internally as well as taking care
+    of the traditional role of communicating with the outside world. After this chapter
+    follow increasingly sophisticated real applications and projects. With examples
+    of code, of course.
+
+
+    4.  **Amazing Arithmetic** is a useful project exploiting the EIJAS property of
+    Bash to implement fixed point arithmetic. This is achieved by inserting the decimal
+    point in the right place in the strings of digits. All without any external utilities,
+    just using the default Bash integer arithmetic.
+
+
+    5.  **SubShell Scheduling** is an advanced project that shows how to automatically
+    orchestrate background jobs in separate threads. It deploys an interesting technique
+    of program self modification. It is also a good template code for using files
+    and directories effectively.
+
+
+    *   **Conclusion**
+
+
+    *   **Link References**
+
+
+    # Quoting, Quoting, Quoting
+
+
+    Bash is nowadays considered by sloppy programmers to be prone to programming errors
+    but it is really not so bad, as long as we watch out for a few pitfalls and ‘gotchas’.
+
+
+    The main potential problem are *spaces in the wrong places*. This is the price
+    we pay for programs and data all being one and the same thing to Bash. Youmaystillbeabletoreadthis.
+    However, computers are ‘syntax nazis’. They ‘hate’ any typing errors or ambiguities.
+    Spaces are important to the structure of any text, that means they are also important
+    to the structure of the Bash programming language.
+
+
+    Everything in Bash is just a string of text (the EIJAS principle). That means,
+    Bash only knows about and understands chunks of text. We will see later how this
+    simplicity brings about some amazing programming opportunities and advantages.
+
+
+    The first and foremost advantage is simplicity: neither the user, nor Bash, have
+    to worry about all kinds of different types and about checking them all. There
+    is really only text and sometimes explicitly annotated text interpreted as digits.
+
+
+    However, with power comes responsibility. We have to be prepared to get more errors
+    and therefore it is wise to test small units of program at a time. In case of
+    big trouble, that means hard to find bugs, it is highly recommended to
+
+
+    introduce extra `printf` statements into the program code to print out values
+    of variables that you suspect may be wrong. This method is almost always more
+    focussed and therefore more successful than uninformed general debugging, in any
+    language. Afterwards, it is easy to comment out or to delete those extra statements.
+
+
+    In order to handle text effectively in different situations, there are several
+    different ways of annotating or *quoting* it. Each has its own specific effects
+    and determines how is the quoted text to be interpreted and/or acted upon. It
+    is important to understand them all and the differences between them.
+
+
+    ## Individual characters
+
+
+    First of all, there is ‘escaping’ of some special and non-printable individual
+    characters. Funny example:
+
+
+    ```
+
+    1 printf "My book sales reached 200%%\n"
+
+    ```
+
+
+    There are specific rules which only apply within printf formatting strings.
+
+
+    Here the non-printable character ‘newline’ is encoded as `\n`. The printable character
+    `%` is escaped by being doubled, as otherwise it has a different interpretation
+    within the printf formatting string. In other words, it is a ‘reserved character’,
+    just in this context.
+
+
+    The complete character ‘escaping’ rules are the one thing that nobody even claims
+    to remember fully. They are what the search engines are good for. Most people
+    manage pretty well most of the time with just these two, plus maybe the tab `\t`
+    for tidy printouts.'
+  toc: []
+  trans: '
+
+
+    这本书的成形是因为作者在自己的 TokenCrypt 项目 [(4)](https://github.com/liborty/TokenCrypt) 中开始使用
+    `Bash`，起初仅仅是为了处理平庸工作的便利。随着对它的逐渐熟悉，他有些惊讶地发现，两种现代编程风格——即逻辑编程和函数式编程（自那时以来在学术界备受推崇和炒热），实际上已经实现在
+    `Bash` 中。诚然，虽然它们还处于休眠和胚胎阶段，但它们确实存在。回首来看，可以说 `Bash` 对它们的发展具有开创性意义。
+
+
+    `Bash` 被认为是一种许多人使用（或需要使用、或希望使用）但很少有人理解的语言。也许这本书将帮助改变现状。
+
+
+    # 第一步
+
+
+    任何人当然可以在脚本文件中列出诸如 `cd ..; ls -al` 这样的命令并运行它。事实上，这样做是入门 `Bash` 编程的极佳方式。
+
+
+    创建一个名为 `myscript` 的文件，在其中放入一些命令，并使用 `chmod +x myscript` 使其具有执行权限。然后只需输入 `./myscript`，`Bash`
+    就会执行其中包含的所有命令。
+
+
+    除了 `Bash` 之外，还有其他几种 Shell 脚本变体。规定脚本的第一行应该始终以所谓的“shriekbang” `#!` 开头，这指示了需要哪种解释器（shell）以及它具体的所在位置。通常情况下，它是：`#!/bin/bash`
+
+
+    然而，在 Android 手机上，`Bash` 会安装在一个非标准的、路径较长的位置。因此，规范应该始终指向它所在的确切位置，否则它可能无法运行。随后的任何普通命令都将像你在提示符中输入它们时一样执行。`#`
+    将行的剩余部分变为注释。`Bash` 非常简洁。仅仅的一行代码就可能发生很多事情，因此慷慨地编写解释性注释是一个明智的主意。
+
+
+    注意：有时直接通过读取-评估-打印循环（REPL）尝试操作是很好的，这就是交互式终端的本质。在输入正确答案后，可能会出现“已找到命令（command found）”。例如，尝试这段简单的算术运算：`$((1+1))`。这其实没有问题，输出信息也是
+    `2`。你可以使用 `echo` 或 `printf` 命令来阻止这种情况发生，这些命令会丢弃它们的值（在此情况下不将其传回 REPL），如下所示：`echo
+    $((1+1))`
+
+
+    更进一步，为了真正理解 `Bash` 作为一门开启了全新视野的完整编程语言的微妙之处，我听到一些人惊叹：“为什么不用 Python 呢？”必须说，`Bash`
+    相比 Python 和其他类似语言（Ruby 等）仍然具有一些巨大的优势，使其更容易学习：
+
+
+    1. `Bash` 不需要安装和大量的搜索。
+
+    2. 任何终端中都有可以直接用于尝试操作的读取-评估-打印循环（REPL）。
+
+    3. `Bash` 与操作系统（OS）紧密集成，开箱即用。这有助于理解操作系统是如何工作的。
+
+    4. EIJAS 原则“一切都是字符串”（后文将详细介绍）。
+
+
+    # 章节目录
+
+
+    *   **引言** - `Bash` 的为什么以及如何做。
+
+    *   **引号引号（Quoting Quoting Quoting）** - 对基本原理的理解：进行自信且成功的 `Bash` 编程最需要什么。
+
+    *   **Bash 分支** - `Bash` 的实用性：条件判断、程序控制、函数、循环。将它们应用于处理和解释参数这一常见任务的示例。
+
+    *   **输入/输出 (I/O) 处理**是任何语言的重要部分。在 `Bash` 中这尤为如此。它的流、重定向和管道像胶水一样将一切连接在一起。这意味着它既处理内部逻辑，也承担了与外部通信的传统角色。之后是带有代码示例的日益复杂的应用程序和项目。
+
+    *   **神奇算术** 是一个实用的项目，利用 `Bash` 的 EIJAS 属性来实现定点算术。这是通过在字符串的正确位置插入小数点实现的，不需要任何外部工具，仅使用默认的整数运算。
+
+    *   **子 调度 (SubShell Scheduling)** 是一个高级项目，展示了如何在单独线程中自动调度后台作业。它采用了一种有趣的程序自修改技术。它也是有效使用文件和目录的良好模板。
+
+    *   **结论**
+
+    *   **链接引用**
+
+
+    # 引号、引号、引号
+
+
+    如今，`Bash` 被粗粗心的程序员认为容易产生编程错误，但它实际上并不糟糕，只要我们注意一些陷阱和“坑（gotchas）”。
+
+
+    主要的潜在问题是空格位置错误。这是我们为 `Bash` 将程序和数据视为同一物而付出的代价。你可能还能读懂这些。然而，计算机是“语法纳西主义”。它们“讨厌”任何输入错误或歧义。空格对任何文本的结构都关重要，这意味着它们对
+    `Bash` 编程语言的结构同样重要。
+
+
+    `Bash` 中的一切都只是文本字符串（EIJ 原则）。这意味着 `Bash` 只知道并理解文本块。稍后我们将看到这种简单性如何带来一些惊的机会和优势。
+
+
+    第一个首要的优势是简单：用户和 `Bash` 都不需要担心各种不同的类型并对它们进行检查。真的只有文本以及有时被显式注释为数字的文本。
+
+
+    然而，能力越大责任越大。我们必须准备好更多的错误，因此一次测试一小单元程序是明智的。如果遇到大麻烦（即难以找到 bug），强烈建议在程序代码中引入额外的 `printf`
+    语句，打印出你怀疑可能有错误的变量值。这种方法比任何语言中盲目的通用调试更有针对性，因此更成功。之后，可以很容易注释掉或删除这些额外的语句。
+
+
+    为了在不同情况下有效处理文本，有几种不同的标记或引用方式。每种方式都有其特定的效果，并决定了引用文本如何被解释或执行。理解所有它们以及它们之间的差异非常重要。
+
+
+    ## 字符
+
+
+    首先，是对某些特殊和不可见的单个字符进行“转义”。一个有趣的例子：
+
+
+    ```
+
+    printf "My book sales reached 200%%\n"
+
+    ```
+
+
+    某些特定规则仅适用于 printf 格式化字符串。在这里，不可打印的字符“换行符”被编码为 `\n`。可打印字符 `%` 通过双倍处理来转义，否则它在 printf
+    格式化字符串中具有不同的含义。换句话说，在这一语境下，它是一个“保留字符”。
+
+
+    '
+- fmt: "\nThe general rule for double quoted strings anywhere (not just after `printf`),\
+    \ states that the following Bash reserved characters must be escaped by being\
+    \ preceded by a backslash: dollar, backtick, double-quote, backslash, newline.\
+    \ The escaped ‘newline’ here means an actual newline, such as at the end of a\
+    \ line of code, which we want to continue uninterrupted onto the next line.\n\n\
+    Let us move on to strings (sequences of characters).\n\n## Literal string\n\n\
+    Single quotes `'...'` enclose a simple unit of literal text. Nothing inside the\
+    \ single quotes is evaluated. Example:\n\n```\n1 'the cat sat on the mat'\n```\n\
+    \nTo make a single quote part of the string, without terminating it prematurely,\
+    \ it is necessary to use outer double quotes, like this:\n\n```\n1  \"the cat's\
+    \ mat was eaten by a rat\"\n```\n\n## Interpreted string\n\nDouble quotes have\
+    \ the additional function of evaluating (expanding) any variables or expressions\
+    \ found within them. The `expansion` is indicated by sticking a dollar sign `$`\
+    \ immediately in front of the variable/expression. In fact, the dollar sign causes\
+    \ the `expansion` anywhere else as well, apart from within those literal strings\
+    \ above. Example:\n\n```\n1 \"The cat's name is $NAME\"\n```\n\nCapitalising the\
+    \ variables is just a useful convention.\n\nNote: Double quoting of just a variable\
+    \ alone, e.g. `\"$FILENAME\"`, is often advised in all evaluation contexts to\
+    \ prevent filenames containing spaces (a horrific Windows ‘invention’), from being\
+    \ interpreted as several different files, instead of just one file as was intended.\
+    \ Similarly, in tests, double quoting a variable ensures that it always returns\
+    \ at least an ‘empty string’ value. Otherwise an unset variable just disappears\
+    \ after expansion and this can sometimes cause program syntax errors.\n\n## Assignment\n\
+    \nWhen assigning to variables, the left hand side of an assignment is unevaluated,\
+    \ so it does not take the dollar sign:\n\n```\n1 NAME='Bob'; ANOTHERBOB=$NAME\n\
+    ```\n\nAlso, be very careful not to use any spaces around the assignment operator\
+    \ `=`.\n\n## Variable expansion\n\n`${VAR}`, using braces with `$` outside, is\
+    \ another way of quoting variables, called the variable expansion. After the usual\
+    \ evaluation of the variable, it can also apply some special functions to its\
+    \ value. Those functions may involve, for example, searching and selecting specific\
+    \ parts of a path/filename, as in:\n\n`EX=\"${FILESPEC##*.}\"`\n\nThis assigns\
+    \ the last file extension to `EX`, by deleting everything in `$FILESPEC` value\
+    \ before and including the last dot. The wildcard character `*` is use to match\
+    \ everything before that last dot.\n\n`${V#*\"$C\"}` deletes everything from the\
+    \ value of `$V`, from its beginning up to and including the first occurrence of\
+    \ the character specified in `$C`.\n\n`${V##*\"$C\"}` deletes everything from\
+    \ the beginning up to and including the last occurrence of `$C`.\n\n`${V%\"$C\"\
+    *}` deletes everything from the end up to and including the first occurrence (from\
+    \ the end) `$C`.\n\n`${V%%\"$C\"*}` deletes everything from the end up to and\
+    \ including the last occurrence (from the end) `$C`.\n\n`${V:=value}` initialises\
+    \ V to (default) value if it was unset.\n\n`${V:?error message}` prints error\
+    \ message and exits if V is unset. The message can be a double quoted interpreted\
+    \ string.\n\n`${VAR@Q}` automatically transforms the value of `$VAR`, by applying\
+    \ the individual character backslash escaping rules, where necessary. When in\
+    \ doubt about which characters require escaping, then ask the expert (Bash itself).\
+    \ This is useful whenever some text, (possibly containing special characters),\
+    \ is read into `$VAR` and it is then to be interpreted in some way by Bash.\n\n\
+    ## Logical eval\n\n`[...]` logical evaluation (test) of an expression. It is expected\
+    \ to return a boolean true/false value. It can use the comparator operators `-lt`\
+    \ `-le` `-eq` `-ne` `-gt` `-ge` when comparing numbers and `=`, `!=` when comparing\
+    \ strings. It can form part of a bigger expression, with several sets of square\
+    \ bracket tests joined by logical operators: `!`, `||`, `&&` (meaning ‘logical\
+    \ not’, ‘logical or’ and ‘logical and’, respectively).\n\nIn fact, everything\
+    \ in Bash is an expression. Even an executed command returns an ‘exit status’\
+    \ value: 0 (true) for success and 1-255 for user defined failures. Zero is interpreted\
+    \ as true because it indictates a successful exit, so that program calls can be\
+    \ included in the tests.\n\nRegular expressions (regexp) comparison tests using\
+    \ `=~` operator should be enclosed in double brackets `[[...]]`.\n\nSimple invocations\
+    \ of programs, functions and utilities can be tested for successful outcomes directly,\
+    \ without the square brackets, for example:\n\n```\n1 mkdir somedir || echo failed\
+    \ to create somedir\n```\n\nSee the next chapter for these simple forms of conditional\
+    \ statements.\n\nIt is common to test variables for being set or unset:\n\n- `[\
+    \ -n \"$VAR\" ]` true if `$VAR` has been set to something of non zero length\n\
+    - `[ -z \"$VAR\" ]` is true if it is unset\n- `[ -f \"$VAR\" ]` is true if value\
+    \ of `$VAR` is an existing file\n- `[ -d \"$VAR\" ]` is true if value of `$VAR`\
+    \ is an existing directory\n- `[ -r \"$VAR\" ]` is a readable file\n- `[ -h \"\
+    $VAR\" ]` is a symlink\n- `[ -w \"$VAR\" ]` is a writable file\n- `[ -s \"$VAR\"\
+    \ ]` is a file of nonzero size\n- `[ -x \"$VAR\" ]` is an executable file\n- `[\
+    \ \"$F1\" -ef \"$F2\" ]` F1 is equal to F2\n- `[ \"$F1\" -nt \"$F2\" ]` F1 is\
+    \ newer than F2\n- `[ \"$F1\" -ot \"$F2\" ]` F1 is older than F2\n- `[ \"$F1\"\
+    \ -eq \"$F2\" ]` F1 is equal to F2\n\n## Arithmetic eval\n\n`$(( NUM1+NUM2 ))`\
+    \ or ‘arithmetic evaluation’, causes the evaluation of the enclosed expression.\
+    \ Bash has no floating point types or calculations with them (but see in a later\
+    \ chapter).\n\nThere are the usual (integer) arithmetic operators: `+`, `-`, `*`,\
+    \ `/`, `%` and their assignment versions, `+=`, `-=`, `*=`, `/=`, `%=` which adds\
+    \ the right side (RHS) value to the existing value of LHS. If `$COUNTER` was not\
+    \ initialised, it will be given initial value 0 (only in these assignments).\n\
+    \nThe `let` form triggers an arithmetic evaluation, somewhat like the double parenthesis\
+    \ but then it drops the produced value.\n\nWhen unsure about the operator’s precedence,\
+    \ use extra parenthesis.\n\n## Eval\n\n`eval command1 ... argn` is the normal\
+    \ evaluation. It executes `command1 ... argn` in the current shell. It can be\
+    \ used to construct and execute any function call, or a call to linux external\
+    \ utility.\n\nComparison: `printf \"$P: \"` returns (formatted) value of variable\
+    \ `$P`, whereas `eval $P` in addition also executes its value as a command.\n\n\
+    ```\n1 P=pwd; printf \"$P: \"; eval $P\n```\n\n## Braces\n\n```\n1 { P=pwd; printf\
+    \ \"$P: \";  $P; }\n2 \n3 {\n     P=pwd\n     printf \"$P: \"\n     $P\n7 }\n\
+    ```\n\nBraces are used to bind together a number of commands into a ‘block’, executed\
+    \ at the current shell. Note the last semicolon before the closing brace, without\
+    \ which the value of $P would not be executed.\n\nIn the multi line syntax (the\
+    \ last version), the new lines substitute the role of the semicolons.\n\nControl\
+    \ question: what will this print out? Try it out! Only a few other languages have\
+    \ this very powerful ( some say downright dangerous ) ‘program as data’ facility.\
+    \ Lisp is one of them.\n\nIn fact, all these three versions produce the same results,\
+    \ the differences are only in their syntax.\n\n## Subshell eval\n\n`$( command1;\
+    \ command2; )&` has the same effect as the braces above, except that it starts\
+    \ a new subshell for the evaluation (command substitution). This has some small\
+    \ overhead costs associated with it. However, it is useful for ‘spinning off’\
+    \ background processes by optionally appending `&` after the closing paranthesis.\
+    \ Such processes will then run in parallel, in separate threads.\n"
+  raw: "The general rule for double quoted strings anywhere (not just after `printf`),\
+    \ states that the following Bash reserved characters must be escaped by being\
+    \ preceded by a backslash: dollar, backtick, double-quote, backslash, newline.\
+    \ The escaped ‘newline’ here means an actual newline, such as at the end of a\
+    \ line of code, which we want to continue uninterrupted onto the next line.\n\n\
+    Let us move on to strings (sequences of characters).\n\n## Literal string\n\n\
+    Single quotes `'...'` enclose a simple unit of literal text. Nothing inside the\
+    \ single quotes is evaluated. Example:\n\n```\n1 'the cat sat on the mat'\n```\n\
+    \nTo make a single quote part of the string, without terminating it prematurely,\
+    \ it is necessary to use outer double quotes, like this:\n\n```\n1  \"the cat's\
+    \ mat was eaten by a rat\"\n```\n\n## Interpreted string\n\nDouble quotes have\
+    \ the additional function of evaluating (expanding) any variables or expressions\
+    \ found within them. The *expansion* is indicated by sticking a dollar sign `$`\
+    \ immediately in front of the variable/expression. In fact, the dollar sign causes\
+    \ the *expansion* anywhere else as well, apart from within those literal strings\
+    \ above. Example:\n\n```\n1 \"The cat's name is $NAME\"\n```\n\nCapitalising the\
+    \ variables is just a useful convention.\n\nNote: Double quoting of just a variable\
+    \ alone, e.g. `\"$FILENAME\"`, is often advised in all evaluation contexts to\
+    \ prevent filenames containing spaces (a horrific Windows ‘invention’), from being\
+    \ interpreted as several different files, instead of just one file as was intended.\
+    \ Similarly, in tests, double quoting a variable ensures that it always returns\
+    \ at least an ‘empty string’ value. Otherwise an unset variable just disappears\
+    \ after expansion and this can sometimes cause program syntax errors.\n\n## Assignment\n\
+    \nWhen assigning to variables, the left hand side of an assignment is unevaluated,\
+    \ so it does not take the dollar sign:\n\n```\n1 NAME='Bob'; ANOTHERBOB=$NAME\n\
+    ```\n\nAlso, be very careful not to use any spaces around the assignment operator\
+    \ `=`.\n\n## Variable expansion\n\n`${VAR}`, using braces with `$` outside, is\
+    \ another way of quoting variables, called the variable expansion. After the usual\
+    \ evaluation of the variable, it can also apply some special functions to its\
+    \ value. Those functions may involve, for example, searching and selecting specific\
+    \ parts of a path/filename, as in:\n\n`EX=\"${FILESPEC##*.}\"`\n\nThis assigns\
+    \ the last file extension to `EX`, by deleting everything in `$FILESPEC` value\
+    \ before and including the last dot. The wildcard character `*` is use to match\
+    \ everything before that last dot.\n\n`${V#*\"$C\"}` deletes everything from the\
+    \ value of `$V`, from its beginning up to and including the first occurrence of\
+    \ the character specified in `$C`.\n\n`${V##*\"$C\"}` deletes everything from\
+    \ the beginning up to and including the last occurrence of `$C`.\n\n`${V%\"$C\"\
+    *}` deletes everything from the end up to and including the first occurrence (from\
+    \ the end) of `$C`.\n\n`${V%%\"$C\"*}` deletes everything from the end up to and\
+    \ including the last occurrence (from the end) of `$C`.\n\n`${V:=value}` initialises\
+    \ V to (default) value if it was unset.\n\n`${V:?error message}` prints error\
+    \ message and exits if V is unset. The message can be a double quoted interpreted\
+    \ string.\n\n`${VAR@Q}` automatically transforms the value of $VAR, by applying\
+    \ the individual character backslash escaping rules, where necessary. When in\
+    \ doubt about which characters require escaping, then ask the expert (Bash itself).\
+    \ This is useful whenever some text, (possibly containing special characters),\
+    \ is read into $VAR and it is then to be interpreted in some way by Bash.\n\n\
+    ## Logical eval\n\n`[...]` logical evaluation (test) of an expression. It is expected\
+    \ to return a boolean true/false value. It can use the comparator operators `-lt\
+    \ -le -eq -ne -gt -ge` when comparing numbers and `=`,`!=` when comparing strings.\
+    \ It can form part of a bigger expression, with several sets of square bracket\
+    \ tests joined by logical operators: `!, ||, &&` (meaning ‘logical not’, ‘logical\
+    \ or’ and ‘logical and’, respectively).\n\nIn fact, everything in Bash is an expression.\
+    \ Even an executed command returns an ‘exit status’ value: 0 (true) for success\
+    \ and 1-255 for user defined failures. Zero is interpreted as true because it\
+    \ indictates a successful exit, so that program calls can be included in the tests.\n\
+    \nRegular expressions (regexp) comparison tests using `=~` operator should be\
+    \ enclosed in double brackets `[[...]]`.\n\nSimple invocations of programs, functions\
+    \ and utilities can be tested for successful outcomes directly, without the square\
+    \ brackets, for example:\n\n```\n1 mkdir somedir || echo failed to create somedir\n\
+    ```\n\nSee the next chapter for these simple forms of conditional statements.\n\
+    \nIt is common to test variables for being set or unset:\n\n*   `[ -n \"$VAR\"\
+    \ ]` true if `$VAR` has been set to something of non zero length\n\n*   `[ -z\
+    \ \"$VAR\" ]` is true if it is unset\n\n*   `[ -f \"$VAR\" ]` is true if value\
+    \ of `$VAR` is an existing file\n\n*   `[ -d \"$VAR\" ]` is true if value of `$VAR`\
+    \ is an existing directory\n\n*   `[ -r \"$VAR\" ]` is a readable file\n\n*  \
+    \ `[ -h \"$VAR\" ]` is a symlink\n\n*   `[ -w \"$VAR\" ]` is a writable file\n\
+    \n*   `[ -s \"$VAR\" ]` is a file of nonzero size\n\n*   `[ -x \"$VAR\" ]` is\
+    \ an executable file\n\n*   `[ \"$F1\" -ef \"$F2\" ]` F1 is equal to F2 (same\
+    \ file content)\n\n*   `[ \"$F1\" -nt \"$F2\" ]` F1 is newer file than F2\n\n\
+    *   `[ \"$F1\" -ot \"$F2\" ]` F1 is older file than F2\n\n## Arithmetic eval\n\
+    \n`$(( $NUM1+$NUM2 ))` or ‘arithmetic evaluation’, causes the evaluation of the\
+    \ enclosed arithmetic expression. In this case the sum of two integers. There\
+    \ must be spaces left between the double paranthesis and the expression inside.\n\
+    \nBash has no floating point types or calculations with them (but see in a later\
+    \ chapter our fixed point arithmetic project).\n\nThere are the usual (integer)\
+    \ arithmetic operators: `+,-,*,**,/,%` and their updating assignment versions,\
+    \ e.g. `+=` which adds the right hand side (RHS) value to the existing value of\
+    \ the LHS variable, e.g.: `let COUNTER+=1`. If `$COUNTER` was not initialised,\
+    \ it will be given initial value 0 (only in these updating assignments).\n\nThe\
+    \ `let` form triggers an arithmetic evaluation, somewhat like the double paranthesis\
+    \ above but then it drops the produced value. Therefore `let` is often used for\
+    \ arithmetic assignments.\n\nWhen unsure about the operator’s precedence, use\
+    \ extra paranthesis.\n\n## Eval\n\n`eval command arg1 ... argn` is the normal\
+    \ evaluation. It executes `command arg1 ... argn` in the current shell. It can\
+    \ be used to *construct* and execute any function call, or a call to a linux external\
+    \ utility.\n\nComparison: `printf \"$P: \"` returns (formatted) value of variable\
+    \ `$P`, whereas `eval $P` in addition also executes its value as a command.\n\n\
+    ```\n1 P=pwd; printf \"$P: \"; eval $P\n```\n\n## Braces\n\n```\n1 { P=pwd; printf\
+    \ \"$P: \";  $P; }\n2 \n3 {\n4     P=pwd\n5     printf \"$P: \"\n6     $P\n7 }\n\
+    ```\n\nBraces are used to bind together a number of commands into a ‘block’, executed\
+    \ at the current shell. Note the last semicolon before the closing brace, without\
+    \ which the value of $P would not be executed.\n\nIn the multi line syntax (the\
+    \ last version), the new lines substitute the role of the semicolons.\n\nControl\
+    \ question: what will this print out? Try it out! Only a few other languages have\
+    \ this very powerful ( some say downright dangerous ) ‘program as data’ facility.\
+    \ Lisp is one of them.\n\nIn fact, all these three versions produce the same results,\
+    \ the differences are only in their syntax.\n\n## Subshell eval\n\n`$( command1;\
+    \ command2; )&` has the same effect as the braces above, except that it starts\
+    \ a new subshell for the evaluation (command substitution). This has some small\
+    \ overhead costs associated with it. However, it is useful for ‘spinning off’\
+    \ background processes by optionally appending `&` after the closing paranthesis.\
+    \ Such processes will then run in parallel, in separate threads."
+  toc: []
+  trans: "\n\n在任何地方（不仅仅是 `printf` 之后）双引号字符串的通用规则规定，以下 Bash 保留字符必须在它们前面加上反斜杠 `\\` 来进行转义：美元符号、反引号、双引号、反斜杠、换行符。这里的转义“换行”指的是实际的换行，例如代码行末尾，我们希望它不中断地延续到下一行。\n\
+    \n让我们来看字符串（字符序列）。\n\n## 字面量字符串 (Literal string)\n\n单引号 `'...'` 包围着一个简单的字面文本单元。单引号内的任何内容都不会被求值。示例：\n\
+    \n```\n1 'the cat sat on the mat'\n```\n\n要让单引号成为字符串的一部分而不提前终止它，有必要使用外部双引号，如下：\n\
+    \n```\n1  \"the cat's mat was eaten by a rat\"\n```\n\n## 解释性字符串 (Interpreted\
+    \ string)\n\n双引号具有额外功能，可以评估（扩展）其中找到任何变量或表达式。`expansion` 通过在变量/表达式前面紧跟一个美元符号 `$`\
+    \ 来指示。事实上，除了上述字面字符串外，美元符号在任何其他地方也会引起 `expansion`。示例：\n\n```\n1 \"The cat's name\
+    \ is $NAME\"\n```\n\n变量大写只是一种实用的约定。\n\n注意：在所有的评估上下文中，通常建议对单个变量使用双引号引用，例如 `\"$FILENAME\"\
+    `，以防止包含空格的文件名（一种极其糟糕的 Windows “发明”）被误解释为几个不同的文件，而不是我们预期的单个文件。同样，在测试中，对变量进行双引号引用可以确保它始终至少返回一个“空字符串”值。否则，未设置的变量在扩展后就会消失，这有时会导致程序语法错误。\n\
+    \n## 赋值 (Assignment)\n\n在给变量赋值时，赋值的左侧是不进行求值的，因此它不需要美元符号：\n\n```\n1 NAME='Bob';\
+    \ ANOTHERBOB=$NAME\n```\n\n此外，要非常小心不要在赋值运算符 `=` 周围使用任何空格。\n\n## 变量扩展 (Variable\
+    \ expansion)\n\n`${VAR}`（在 `$` 之外使用大括号）是另一种引用变量的方法，称为变量扩展。在对变量进行常规的求值后，它还可以对该值应用某些特殊函数。这些函数可能涉及（例如）搜索和选择路径/文件名的特定部分，如下：\n\
+    \n`EX=\"${FILESPEC##*.}\"`\n\n这会将最后一个文件扩展赋值给 `EX`，方法是删除 `$FILESPEC` 值中从最后一个点之前及包含的所有内容。通配符字符\
+    \ `*` 用于匹配该点之前的所有内容。\n\n`${V#*\"$C\"}` 删除 `$V` 值中从开始到包括 `$C` 中指定字符第一次出现处之前的所有内容。\n\
+    \n`${V##*\"$C\"}` 删除从开始到包括 `$C` 最后一次出现处之前的所有内容。\n\n`${V%\"$C\"*}` 删除从末尾到包括（从末尾开始）第一次出现\
+    \ `$C` 的的所有内容。\n\n`${V%%\"$C\"*}` 删除从末尾到包括（从末尾开始）最后一次出现 `$C` 的的所有内容。\n\n`${V:=value}`\
+    \ 如果 V 未设置，则将其初始化为（默认）值。\n\n`${V:?error message}` 如果 V 未设置，则打印错误消息并退出。该消息可以是一个双引号的解释性字符串。\n\
+    \n`${VAR@Q}` 通过在需要时应用单个字符的反斜杠转义规则，自动转换 `$VAR` 的值。如果不确定哪些字符需要转义，请请教专家（Bash 本身）。当某些文本（可能包含特殊字符）被读入\
+    \ `$VAR` 然后需要由 Bash 以某种方式进行解释时，这非常有用。\n\n## 逻辑求值 (Logical eval)\n\n`[...]` 对表达式进行逻辑求值（测试）。它预期返回一个布尔真/假值。在比较数字时，可以使用比较运算符\
+    \ `-lt` `-le` `-eq` `-ne` `-gt` `-ge`，在比较字符串时使用 `=` 和 `!=`。它可以作为更大表达式的一部分，通过逻辑运算符连接几组方括号测试：`!`、`||`、`&&`（分别意味着“逻辑非”、“逻辑或”和“逻辑与”）。\n\
+    \n事实上，Bash 中的一切（In fact, everything in Bash is an expression）都是一个表达式。即使是执行的命令也会返回一个“退出状态”值：成功返回\
+    \ 0（真），用户定义的失败返回 1-255。0 被解释为真，因为它表示成功退出，因此程序调用可以包含在测试中。\n\n使用 `=~` 运算符的正则表达式（regexp）比较测试应该包含在双括号\
+    \ `[[...]]` 中。\n\n可以直接对程序、函数和工具的简单调用进行成功结果测试，而不需要方括号，例如：\n\n```\n1 mkdir somedir\
+    \ || echo failed to create somedir\n```\n\n请参下一章节了解这些条件语句的简单形式。\n\n测试变量是否设置或未设置是常见的：\n\
+    \n- `[ -n \"$VAR\" ]` 如果 `$VAR` 被设置为非零长度的内容，则为真\n- `[ -z \"$VAR\" ]` 如果它未设置，则为真\n\
+    - `[ -f \"$VAR\" ]` 如果 `$VAR` 的值是一个存在的文件，则为真\n- `[ -d \"$VAR\" ]` 如果 `$VAR` 的值是一个存在的目录，则为真\n\
+    - `[ -r \"$VAR\" ]` 是一个可读的文件\n- `[ -h \"$VAR\" ]` 是一个符号链接\n- `[ -w \"$VAR\" ]`\
+    \ 是一个可写的文件\n- `[ -s \"$VAR\" ]` 是一个非零大小的文件\n- `[ -x \"$VAR\" ]` 是一个可执行文件\n- `[\
+    \ \"$F1\" -ef \"$F2\" ]` F1 等于 F2\n- `[ \"$F1\" -nt \"$F2\" ]` F1 比 F2 新\n- `[\
+    \ \"$F1\" -ot \"$F2\" ]` F1 比 F2 旧\n- `[ \"$F1\" -eq \"$F2\" ]` F1 等于 F2\n\n##\
+    \ 算术求值 (Arithmetic eval)\n\n`$(( NUM1+NUM2 ))` 或“算术求值”会导致包含的表达式进行求值。Bash 没有浮点类型或对其进行计算（但请参见稍后的章节）。\n\
+    \n有常用的（整数）算术运算符：`+`、`-`、`*`、`/`、`%` 以及它们的赋值版本 `+=`、`-=`、`*=` `/=`、`%=`，它们将右侧（RHS）的值加到左侧的现有值上。如果\
+    \ `$COUNTER` 未初始化，将被赋予初始值 0（仅在这些赋值中）。\n\n`let` 形式触发算术求值，类似于双括号，但它随后会丢弃产生的值。\n\n\
+    当不确定运算符的优先级时，使用额外的括号。\n\n## Eval (Eval)\n\n`eval command1 ... argn` 是普通的求值。它在当前\
+    \ shell 中执行 `command1 ... argn`。它可以用于构造并执行任何函数调用或外部工具调用。\n\n对比：`printf \"$P: \"\
+    ` 返回变量 `$P` 的格式化值，而 `eval $P` 此外还将其作为命令执行。\n\n```\n1 P=pwd; printf \"$P: \"; eval\
+    \ $P\n```\n\n## 花括号 (Braces)\n\n```\n1 { P=pwd; printf \"$P: \";  $P; }\n2 \n\
+    3 {\n     P=pwd\n     printf \"$P: \"\n     $P\n7 }\n```\n\n花括号用于将多个命令绑定为一个“块”，在当前\
+    \ shell 中执行。注意最后一个括号之前的分号，如果没有它，$P 的值就不会执行。\n\n在多行语法（最后一个版本）中，换行取代了分号的作用。\n\n\
+    思考问题：这会打印什么？试一试！只有少数语言拥有这种强大（某些人说非常危险）的“程序即数据”机制。Lisp 就是其中之一。\n\n事实上，这三个版本产生相同的结果，区别仅在于它们的语法。\n\
+    \n## 子 shell 求值 (Subshell eval)\n\n`$( command1; command2; )&` 与上述花括号的效果相同，不同之处在于为求值（命令替换）启动一个新的子\
+    \ shell。这会带来一些微小的开销。然而，它对于通过在右括号后可选添加 `&` 来“分出”后台进程非常有用。此类进程将在独立的线程中并行运行。\n"
+- fmt: "\nBeware of their inputs and outputs getting out of sequence. Also, be very\
+    \ careful that you use the `wait` command before starting another process which\
+    \ relies on the results of a background job! To exploit parallelism requires generally\
+    \ a lot more careful thought than the traditional single sequential process does.\
+    \ As a rough rule of thumb, take it ‘from the top’, that is run in parallel the\
+    \ big independent jobs first. Then all the computations within them will run on\
+    \ separate cores, without getting tied up in knots over their fine grained details.\n\
+    \nThis `&` mechanism is very useful for better utilising modern multicore processors.\
+    \ The OS takes care of assigning the threads for execution to the available physical\
+    \ cores.\n\nIt is sometimes more convenient to use for simple commands the more\
+    \ concise backtick syntax: `command `` but this is not recommended for nested\
+    \ evaluations, as escaping multiple backticks can get messy and prone to typing\
+    \ and oversight errors.\n\n## Text juxtaposition\n\nWe can build up arbitrary\
+    \ strings by trivial juxtaposition of variables, characters and other strings.\
+    \ No messing around with explicit calls to `concatenate`, `append`, etc, like\
+    \ in most other programming languages:\n\n```\n1 H=Hello\n2 W=World\n3 # build\
+    \ up a sentence: \n4 # insert an escaped space between the two words \n5 # and\
+    \ append ! onto the end\n6 echo $H\\ $W!\n```\n\nAnother common use of juxtaposition:\n\
+    \n`$PATH/$FILE.$EXT`\n\n## Bash Branching\n\nThe `if` statement has the following\
+    \ structure. The `else` block is optional, `fi` is always mandatory.\n\n```\n\
+    1 if logical-expression; then\n2     statement1\n3     ...\n4     statementn\n\
+    5 else\n6     neg-statement1\n7     ...\n8     neg-statementn\n9 fi\n```\n\nThe\
+    \ tabbing somewhat improves the readability of the code. The expression typically\
+    \ involves the logical tests in square brackets and logical operators.\n\nBash\
+    \ is easy to love but sometimes it is a love-hate relationship. Take this `if`\
+    \ statement, for example. Forget to put that semicolon before `then` and you are\
+    \ then in deep trouble. It would be a pity if this quirky syntax were to put people\
+    \ off shell programming.\n\nFortunately, there is a better way of branching, at\
+    \ least in simple situations. Complicated `if` statements are best avoided anyway,\
+    \ as they are the biggest source of errors affecting the fundamental program logic\
+    \ and can be hard to discover.\n\nUse simple verification tests leading to an\
+    \ early `continue` or `break` from within loops, `return` from functions and `exit`\
+    \ from programs, whenever some necessary condition is not satisfied. This, in\
+    \ effect, turns the following code into an `else` branch, without a complex conditional\
+    \ structure dragging all the way along with it. Besides being a good coding practice,\
+    \ it tends to increase program efficiency. We will call it an *early break principle*\
+    \ (EBP).\n\n## Short circuit logic evaluation\n\nWhen evaluating a logical (boolean)\
+    \ expression, in any context, the value of the result is often known well before\
+    \ all the individual parts of the expression have been evaluated. How is that\
+    \ possible?\n\nIn a conjunction (`&&`), the whole result is known to be false\
+    \ as soon as the first conjunct returns `false`.\n\nConversely, in a disjunction\
+    \ (`||`), the result is known to be true as soon as the first disjunct returns\
+    \ `true`.\n\nThese logical operators have equal precedence and are normally processed\
+    \ from left to right.\n\nThe *short circuit evaluation* property of logic is used\
+    \ in Artificial Intelligence (AI) for efficient evaluation of so called AND-OR\
+    \ trees in game-playing and search applications. However, we can use it too in\
+    \ our humble Bash programs.\n\nIn oder to utilise this property, we introduce\
+    \ two kinds of conditionals:\n\n### Positive conditional\n\n```\n1 [ test1 ] &&\
+    \ [ test2 ] && [ testn ] && { posblock }\n```\n\nHere the posblock of statements\
+    \ at the end gets executed only when each of the tests returns true. As soon as\
+    \ the first test evaluates to false, the whole thing fails and quits there and\
+    \ then. Hence the expression ‘short circuit evaluation’.\n\n### Negative conditional\n\
+    \n```\n1 [ test1 ] || [ test2 ] || [ testn ] || { negblock }\n```\n\nHere the\
+    \ negblock of statements at the end gets executed only when each of the tests\
+    \ returns false. As soon as the first one evaluates to true, the whole thing succeeds\
+    \ and quits.\n\n### Logical form of an if statement\n\nCompare these two forms\
+    \ and understand the greater facility of logic to express diverse conditionals:\n\
+    \n```\n1 if [ condition ]; then posblock; else negblock; fi\n2 [ condition ] &&\
+    \ posblock || negblock\n```\n\n### Benefits\n\nThis syntax (structure) is cleaner,\
+    \ more compact, more general and less prone to errors than the `if` statements\
+    \ provided in `bash` and most other languages.\n\nThe semantics (meaning) is more\
+    \ expressive, with several types of different if-statements for the price of one.\n\
+    \nProgram efficiency can be improved by ordering the individual tests to encourage\
+    \ an *early break*. See EPB principle introduced above. In a positive conditional,\
+    \ the tests most likely to fail should come first. In a negative conditional,\
+    \ the tests most likely to succeed should come first.\n\nWhen unsure about the\
+    \ likelihoods of their outcomes, then ordering the tests from the fastest to the\
+    \ slowest is the best, in both cases.\n\nArbitrarily complex propositional logic\
+    \ expressions can be built with this framework, using `&&, ||, ! (not)`. Square\
+    \ brackets should be added for disambiguation, as and when needed (just as the\
+    \ paranthesis are used in arithmetic). So, for example, `! test1` can be used\
+    \ to intermix a positive `test1` into the negative conditional. Alternatively,\
+    \ `! test2` to add a negative `test2` into a positive conditional. The negations\
+    \ or even primitive negative tests can often be avoided altogether by changing\
+    \ the negative conditional (disjunction) to a positive one (conjunction).\n\n\
+    ## Chaining statements\n\nBecause in Bash there is no real difference between\
+    \ statements and expressions, the above short circuit mechanism can be just as\
+    \ employed to chain commands. Furthermore, because they return values as success\
+    \ (true) or failure (false), there will be similar EBP gains in efficiency.\n\n\
+    There is a clear relationship here to the kind of programming known as ‘Logic\
+    \ Programming’, invented much later. See, for example, the programming language\
+    \ Prolog, which is built around the ideas of evaluating the (positive) conjuncts\
+    \ and backtracking on failures.\n\n### Positive (and) commands chaining\n\n```\n\
+    1 command1 && ... commandn\n```\n\nThis is normally used in situations where it\
+    \ is required that all the commands should succeed.\n\nNote that the logical ‘and’\
+    \ operator is used here for joining up the commands, in place of the previously\
+    \ used semicolons. The effect of this is going to be an *early break* with false\
+    \ value returned, as soon as any individual command exits with failure status.\
+    \ Presumably, this outcome should be reported by some kind of error message, by\
+    \ tacking on the end `|| printf \"error message\\n\"`, or deploying some remedial\
+    \ actions.\n\nThe rest of the commands will then be ignored, whereas with the\
+    \ semicolon separator they would all continue executed regardless of their return\
+    \ status.\n\n### Negative (or) commands chaining\n\n```\n1 command1 || ... commandn\n\
+    ```\n\nNote that the logical ‘or’ operator is now used in place of the semicolons.\
+    \ The effect of this is going to be an *early break* from this block, as soon\
+    \ as any command exits with success status. The rest of the commands will then\
+    \ be ignored. Here the logical intent is that the success of any one of the commands\
+    \ is all that is required.\n\nAlternatively, this form may be used when it is\
+    \ expected (hoped for?) that they should all fail, such as when checking for occurrences\
+    \ of security breaches. Then the whole block should return failure. Should it\
+    \ succeed at some point, this can be reported by tacking on the end `&& printf\
+    \ \"Security breached!\\n\"` or any other remedial actions.\n"
+  raw: "Beware of their inputs and outputs getting out of sequence. Also, be very\
+    \ careful that you use the `wait` command before starting another process which\
+    \ relies on the results of a background job! To exploit parallelism requires generally\
+    \ a lot more careful thought than the traditional single sequential process does.\
+    \ As a rough rule of thumb, take it ‘from the top’, that is run in parallel the\
+    \ big independent jobs first. Then all the computations within them will run on\
+    \ separate cores, without getting tied up in knots over their fine grained details.\n\
+    \nThis `&` mechanism is very useful for better utilising modern multicore processors.\
+    \ The OS takes care of assigning the threads for execution to the available physical\
+    \ cores.\n\nIt is sometimes more convenient to use for simple commands the more\
+    \ concise backtick syntax: `command ` but this is not recommended for nested evaluations,\
+    \ as escaping multiple backticks can get messy and prone to typing and oversight\
+    \ errors.\n\n## Text juxtaposition\n\nWe can build up arbitrary strings by trivial\
+    \ juxtaposition of variables, characters and other strings. No messing around\
+    \ with explicit calls to `concatenate`, `append`, etc, like in most other programming\
+    \ languages:\n\n```\n1 H=Hello\n2 W=World\n3 # build up a sentence: \n4 # insert\
+    \ an escaped space between the two words \n5 # and append ! onto the end\n6 echo\
+    \ $H\\ $W!\n```\n\nAnother common use of juxtaposition:\n\n`$PATH/$FILE.$EXT`\n\
+    \n# Bash Branching\n\nThe `if` statement has the following structure. The `else`\
+    \ block is optional, `fi` is always mandatory.\n\n```\n1 if logical-expression;\
+    \ then\n2     statement1\n3     ...\n4     statementn\n5 else\n6     neg-statement1\n\
+    7     ...\n8     neg-statementn\n9 fi\n```\n\nThe tabbing somewhat improves the\
+    \ readability of the code. The expression typically involves the logical tests\
+    \ in square brackets and logical operators.\n\nBash is easy to love but sometimes\
+    \ it is a love-hate relationship. Take this `if` statement, for example. Forget\
+    \ to put that semicolon *before* `then` and you are then in deep trouble. It would\
+    \ be a pity if this quirky syntax were to put people off shell programming.\n\n\
+    Fortunately, there is a better way of branching, at least in simple situations.\
+    \ Complicated `if` statements are best avoided anyway, as they are the biggest\
+    \ source of errors affecting the fundamental program logic and can be hard to\
+    \ discover.\n\nUse simple verification tests leading to an early `continue` or\
+    \ `break` from within loops, `return` from functions and `exit` from programs,\
+    \ whenever some necessary condition is not satisfied. This, in effect, turns the\
+    \ following code into an `else` branch, without a complex conditional structure\
+    \ dragging all the way along with it. Besides being a good coding practice, it\
+    \ tends to increase program efficiency. We will call it an *early break principle*\
+    \ (EBP).\n\n## Short circuit logic evaluation\n\nWhen evaluating a logical (boolean)\
+    \ expression, in any context, the value of the result is often known well before\
+    \ all the individual parts of the expression have been evaluated. How is that\
+    \ possible?\n\nIn a conjunction (`&&`), the whole result is known to be false\
+    \ as soon as the first conjunct returns `false`.\n\nConversely, in a disjunction\
+    \ (`||`), the result is known to be true as soon as the first disjunct returns\
+    \ `true`.\n\nThese logical operators have equal precedence and are normally processed\
+    \ from left to right.\n\nThe *short circuit evaluation* property of logic is used\
+    \ in Artificial Intelligence (AI) for efficient evaluation of so called AND-OR\
+    \ trees in game-playing and search applications. However, we can use it too in\
+    \ our humble Bash programs.\n\nIn oder to utilise this property, we introduce\
+    \ two kinds of conditionals:\n\n### Positive conditional\n\n```\n1 [ test1 ] &&\
+    \ [ test2 ] && [ testn ] && { posblock }\n```\n\nHere the posblock of statements\
+    \ at the end gets executed only when each of the tests returns true. As soon as\
+    \ the first test evaluates to false, the whole thing fails and quits there and\
+    \ then. Hence the expression ‘short circuit evaluation’.\n\n### Negative conditional\n\
+    \n```\n1 [ test1 ] || [ test2 ] || [ testn ] || { negblock }\n```\n\nHere the\
+    \ negblock of statements at the end gets executed only when each of the tests\
+    \ returns false. As soon as the first one evaluates to true, the whole thing succeeds\
+    \ and quits.\n\n### Logical form of an if statement\n\nCompare these two forms\
+    \ and understand the greater facility of logic to express diverse conditionals:\n\
+    \n```\n1 if [ condition ]; then posblock; else negblock; fi\n2 [ condition ] &&\
+    \ posblock || negblock\n```\n\n### Benefits\n\nThis syntax (structure) is cleaner,\
+    \ more compact, more general and less prone to errors than the `if` statements\
+    \ provided in `bash` and most other languages.\n\nThe semantics (meaning) is more\
+    \ expressive, with several types of different if-statements for the price of one.\n\
+    \nProgram efficiency can be improved by ordering the individual tests to encourage\
+    \ an *early break*. See EPB principle introduced above. In a positive conditional,\
+    \ the tests most likely to fail should come first. In a negative conditional,\
+    \ the tests most likely to succeed should come first.\n\nWhen unsure about the\
+    \ likelihoods of their outcomes, then ordering the tests from the fastest to the\
+    \ slowest is the best, in both cases.\n\nArbitrarily complex propositional logic\
+    \ expressions can be built with this framework, using `&&, ||, ! (not)`. Square\
+    \ brackets should be added for disambiguation, as and when needed (just as the\
+    \ paranthesis are used in arithmetic). So, for example, `! test1` can be used\
+    \ to intermix a positive `test1` into the negative conditional. Alternatively,\
+    \ `! test2` to add a negative `test2` into a positive conditional. The negations\
+    \ or even primitive negative tests can often be avoided altogether by changing\
+    \ the negative conditional (disjunction) to a positive one (conjunction) and vice-versa.\n\
+    \n## Chaining statements\n\nBecause in Bash there is no real difference between\
+    \ statements and expressions, the above logical short circuit mechanism can be\
+    \ just as well employed to chain together commands. Furthermore, because they\
+    \ return values interpreted as success (true) or failure (false), there will be\
+    \ similar EBP gains in efficiency.\n\nThere is a clear relationship here to the\
+    \ kind of programming known as ‘Logic Programming’, invented much later. See,\
+    \ for example, the programming language Prolog, which is built around the ideas\
+    \ of evaluating the (positive) conjuncts and backtracking on failures.\n\n###\
+    \ Positive (and) commands chaining\n\n```\n1 command1 && ... commandn \n```\n\n\
+    This is normally used in situations where it is required that all the commands\
+    \ should succeed.\n\nNote that the logical ‘and’ operator is used here for joining\
+    \ up the commands, in place of the previously used semicolons. The effect of this\
+    \ is going to be an *early break* with false value returned, as soon as any individual\
+    \ command exits with failure status. Presumably, this outcome should be reported\
+    \ by some kind of error message, by tacking on the end `|| printf \"error message\\\
+    n\"`, or deploying some remedial actions.\n\nThe rest of the commands will then\
+    \ be ignored, whereas with the semicolon separator they would all continue being\
+    \ executed regardless of their return status.\n\n### Negative (or) commands chaining\n\
+    \n```\n1 command1 || ... commandn\n```\n\nNote that the logical ‘or’ operator\
+    \ is now used in place of the semicolons. The effect of this is going to be an\
+    \ *early break* from this block, as soon as any command exits with success status.\
+    \ The rest of the commands will then be ignored. Here the logical intent is that\
+    \ the success of any one of the commands is all that is required.\n\nAlternatively,\
+    \ this form may be used when it is expected (hoped for?) that they should all\
+    \ fail, such as when checking for occurrences of security breaches. Then the whole\
+    \ block should return failure. Should it succeed at some point, this can be reported\
+    \ by tacking on the end `&& printf \"Security breached!\\n\"` or any other remedial\
+    \ actions.\n\n## Functions"
+  toc: []
+  trans: "\n\n注意它们的输入和输出不要错乱。此外，在启动另一个依赖后台作业结果的进程之前，务必小心地使用 `wait` 命令！利用并行性通常比传统的单线程顺序进程需要更细致的思考。作为一个粗略的法则，可以“从顶部开始”，即首先并行运行大型独立任务。这样，这些任务中的所有计算都将在单独的核心上运行，而不会被细粒度的细节所缠绕。\n\
+    \n这种 `&` 机制对于更好地利用现代多核处理器非常有用。操作系统负责将用于执行的线程分配到可用的物理核心。\n\n对于简单命令，使用更简洁的反引号语法\
+    \ `` `command` `` 有时会更方便，但不推荐用于嵌套求值，因为转义多个反引号可能会变得混乱，并且容易出现输入错误和疏忽错误。\n\n## 文本并置\
+    \ (Text juxtaposition)\n\n我们可以通过变量、字符和其他字符串的简单并置来构建任意字符串。不需要像大多数其他编程语言那样显式地调用\
+    \ `concatenate`、`append` 等函数：\n\n```\n1 H=Hello\n2 W=World\n3 # 构建一个句子: \n4 #\
+    \ 在两个单词之间插入一个转义空格 \n5 # 并在末尾添加 !\n6 echo $H\\ $W!\n```\n\n并置的另一个常见用途：\n\n`$PATH/$FILE.$EXT`\n\
+    \n## Bash 分支 (Bash Branching)\n\n`if` 语句具有以下结构。`else` 块是可选的，而 `fi` 是始终强制的。\n\n\
+    ```\n1 if logical-expression; then\n2     statement1\n3     ...\n4     statementn\n\
+    5 else\n6     neg-statement1\n7     ...\n8     neg-statementn\n9 fi\n```\n\n制表符缩进（Tabbing）在某种程度上提高了代码的可读性。该表达式通常涉及方括号中的逻辑测试和逻辑运算符。\n\
+    \nBash 很容易爱，但有时是一种爱恨交织的关系。以这个 `if` 语句为例，忘记在 `then` 之前加上分号，你就会陷入深渊。如果这种奇特的语法让人们对\
+    \ Shell 编程产生反，那就太可惜了。\n\n幸运的是，有更好的分支方法，至少在简单情况下是。复杂的 `if` 语句最好还是避免，因为它们是影响程序基础逻辑的最大错误来源，并且很难被发现。\n\
+    \n当某些必要条件不满足时，使用简单的验证测试，从循环内部提前 `continue` 或 `break`，从函数中 `return` 以及从程序中 `exit`。这在实际上将下面的代码转换为了\
+    \ `else` 分支，而没有让复杂的条件结构一直拖下去。除了是一种良好的编码习惯外，它倾向于提高程序效率。我们将其称为*提前中断原则* (early break\
+    \ principle, EBP)。\n\n## 短路逻辑评估 (Short circuit logic evaluation)\n\n在任何上下求值逻辑（布尔）表达式时，在表达式的所有各个部分被求值之前，结果的值通常是已知的。这怎么可能呢？\n\
+    \n在合取 (`&&`) 中，只要第一个合取项返回 `false`，整个结果就为 `false`。\n\n相反，在析取 (`||`) 中，只要第一个析取项返回\
+    \ `true`，结果就为 `true`。\n\n这些逻辑运算符具有相同的优先级，并且通常从左到右处理。\n\n逻辑的*短路求值*属性用于人工智能 (AI)，以便对游戏播放和搜索应用中的所谓的\
+    \ AND-OR 树进行高效评估。然而，我们也可以在谦陋的 Bash 程序中使用它。\n\n为了利用这一属性，我们引入了两种条件判断：\n\n### 正向条件\
+    \ (Positive conditional)\n\n```\n1 [ test1 ] && [ test2 ] && [ testn ] && { posblock\
+    \ }\n```\n\n在这里，只有当每个测试都返回 `true` 时，才会执行结尾的 posblock 。一旦第一个测试求值为 `false`，整个操作就会失败并立即停止。因此该表达式“短路求值”。\n\
+    \n### 负向条件 (Negative conditional)\n\n```\n1 [ test1 ] || [ test2 ] || [ testn\
+    \ ] || { negblock }\n```\n\n在这里，只有当每个测试都返回 `false` 时，才会执行结尾的 negblock 。一旦第一个测试求值为\
+    \ `true`，整个操作就会成功并退出。\n\n### if 语句的逻辑形式\n\n比较这两种形式，理解逻辑在表达多样化条件时更优的便利性：\n\n```\n\
+    1 if [ condition ]; then posblock; else negblock; fi\n2 [ condition ] && posblock\
+    \ || negblock\n```\n\n### 优点 (Benefits)\n\n这种语法（结构）比 `bash` 以及大多数其他语言提供的 `if`\
+    \ 语句更清晰、更紧凑、更通用且不易出错。\n\n语义（含义）更具表现力，一份的价格提供了多种类型不同的 `if` 语句。\n\n通过排列各个测试来鼓励*提前中断*，可以提高程序效率。参见上面介绍的\
+    \ EPB 原则。在正向条件中，最可能失败的测试应该放在前面。在负向条件中，最可能成功的测试应该放在前面。\n\n当不确定结果的概率时，在两种情况下，按照从快到慢顺序排列测试都是最好的。\n\
+    \n可以使用此框架构建任意复杂的命题逻辑表达式，使用 `&&, ||, ! (not)`。在需要时应添加方括号以消除歧义（就像算术中使用括号一样）。例如，`!\
+    \ test1` 可用于将正向的 `test1` 混入到负向条件中。或者，使用 `! test2` 将一个负向的 `test2` 添加到正向条件中。通过将负向条件（析取）改为正向条件（合取），通常可以完全避免否定甚至原始的负向测试。\n\
+    \n## 语句链 (Chaining statements)\n\n因为在 Bash 中，语句和表达式之间没有真实区别，上面的短路机制可以同样用于链式命令。此外，因为它们返回成功（真）或失败（假）作为值，将在效率上获得类似的\
+    \ EBP 收益。\n\n这与后来发明的被称为“逻辑编程”的编程类型有明确的关系。例如查看 Prolog 编程语言，它是围绕求值（正向）合取项和在失败时回溯的思想构建的。\n\
+    \n### 正向（与）命令链 (Positive (and) commands chaining)\n\n```\n1 command1 && ... commandn\n\
+    ```\n\n这通常用于需要所有命令都成功的情况。\n\n注意，这里使用逻辑“与”运算符来连接命令，代替了之前使用的分号。这种的效果是，一旦任何单个命令以失败状态退出，就会返回假值并*提前中断*。推测这种结果应该通过某种错误消息来报告，在末尾加上\
+    \ `|| printf \"error message\\n\"` 或部署某些补救措施。\n\n其余的命令将被忽略，而如果使用分号分隔符，它们无论返回状态如何都会继续执行。\n\
+    \n### 负向（或）命令链 (Negative (or) commands chaining)\n\n```\n1 command1 || ... commandn\n\
+    ```\n\n注意，现在使用逻辑“或”运算符代替了分号。这种的效果是，一旦任何命令以成功状态退出，就会从该块中*提前中断*。其余的命令将被忽略。这里的的逻辑意图是，任何一个命令的成功就是我们需要的。\n\
+    \n或者，这种形式也可用于预期（或希望？）它们都应该失败的情况，例如在检查安全违规的发生时。那么整个块应该返回失败。如果它在某点成功了，可以通过在末尾加上\
+    \ `&& printf \"Security breached!\\n\"` 或任何其他补救措施来报告。\n\n"
+- fmt: "\nBash also has `functions`, which work just like any external script, except\
+    \ that they are textually inserted into the script in which they are then used.\
+    \ The benefit of being called from the file in which they are defined is that\
+    \ they are not run in a subshell.\n\nWith all that convenience comes the danger\
+    \ of unintended global variables clashes, which generally result in horrible bugs.\
+    \ It is therefore strongly advised to use `local` declarations for functions’\
+    \ own working variables. This will insulate them, as if the function really was\
+    \ in its own separate script file and run in a subshell. Note that the functions\
+    \ also inherit any file stream identifiers declared and belonging globally to\
+    \ their script (shell). More on input/output later.\n\nIn a function, as in any\
+    \ program script, its formal arguments are identified by special variables `$1`,\
+    \ `$2`... and so on. Matching one for one, they are assigned the values of the\
+    \ actual arguments supplied in the function/program call.\n\nTo return values\
+    \ other than 0-255 from Bash functions, the global `stdout` stream 1 should normally\
+    \ be used. That is, in the simplest case, use `echo` or `printf` commands within\
+    \ the function to write its return value(s) to standard output. This will then\
+    \ be returned as the function call result.\n\nHere is an example of a recursive\
+    \ function with one formal argument `$1`.\n\nWhen writing recursive functions,\
+    \ the termination condition should always come first. Note the extensive but here\
+    \ unfortunately necessary use of the arithmetic evaluation double paranthesis:\
+    \ `$((...))`. To keep the number of the paranthesis down, the recursive call itself\
+    \ is evaluated here with the backtick subshell eval, sometimes called the command\
+    \ expansion, which works just like: `$(...)`.\n\n```\n1 function factorial {\n\
+    2   [ $1 -lt 3 ] && echo $1 || \\\n3      echo $(( $1*`factorial $(( $1-1 ))`\
+    \ ))\n4 }\n5 time factorial 20\n6 2432902008176640000\n7 real    0m0.027s\n8 user\
+    \    0m0.026s\n9 sys     0m0.005s\n```\n\nBeware that the answers will overflow\
+    \ without warnings for relatively small arguments, as the factorial of 21 is already\
+    \ bigger than the maximum 64bit integer.\n\nAn iterative implementation will be\
+    \ more efficient than the above stacking up of multiple subshell calls. Here we\
+    \ use the ‘C-like’ form of the iterative for loop, which will count down to 2,\
+    \ cumulatively multiplying all the (descending) integers into the local variable\
+    \ `F`. If the supplied argument is smaller than three, the loop will do nothing\
+    \ and the argument value will get immediately echoed to stdout as the answer.\n\
+    \n```\n 1 function itfactorial {\n2   local F=$1\n3   for (( i=$1-1; i>1; i--\
+    \ )); do F=$(( $F*i )); done\n4   echo $F\n5 }\n6 time itfactorial 20\n7 2432902008176640000\n\
+    8 real    0m0.000s\n9 user    0m0.000s\n10 sys     0m0.000s\n```\n\nThis time\
+    \ it was too fast to register on the timer, thanks to being evaluated within the\
+    \ current shell and not using the stack.\n\nHowever, it should be pointed out\
+    \ that Bash, being an interpreted language, is not exactly fast. Therefore, maximum\
+    \ speed is rarely of the main concern. Speed is relative. Nowadays, thanks to\
+    \ faster processors, even Bash runs faster than the fast languages, like C, did\
+    \ a few years ago. Another good reason for its revival? Nonetheless, the stronger\
+    \ points of Bash are undoubtedly convenience, versatility and compactness.\n\n\
+    ## Loops and control statements\n\nBash is also equipped with the usual set of\
+    \ `while`, `until` and `for` iterative loops, plus a `case` statement. This is\
+    \ not a difficult or exciting topic, so we will not dwell on it much. It is far\
+    \ more effortlessly absorbed by simply reading some existing useful code. We have\
+    \ already met one form of the `for` loop. The `case` statement will be used in\
+    \ some of the examples in the following chapters.\n\nAn infinite loop (relying\
+    \ on calling `break` to exit when the data runs out or something like that) can\
+    \ be a useful mechanism. It is also used for human-computer interactions, a good\
+    \ example of which is, in fact, REPL. The user usually manually terminates such\
+    \ interactive sessions by closing the input with `Ctrl-D`, or closing the terminal\
+    \ with `exit`. Should you try the following examples in your terminal, be prepared\
+    \ to type `Ctrl-C` quickly to terminate them. Note that they both set up an infinite\
+    \ loop.\n\n```\n1 while true; do\n2   echo 'I am a lumberjack and I am OK'\n3\
+    \ done\n```\n\n```\n1 until false; do\n2   echo 'I sleep all night and work all\
+    \ day'\n3 done\n```\n\nOf course, the more usual form of `while` statement is\
+    \ to read some ordinary text file `$F`. Here the `read` statement will return\
+    \ `false` at the end of the file:\n\n```\n1 cat \"$F\".txt | while read LINE;\
+    \ do\n2   processline $LINE\n3 done\n```\n\nWe have already met the C-like version\
+    \ of the `for` loop command but it has two more useful forms. This one will apply\
+    \ `processfile` to all the `txt` (text) files in the current directory:\n\n```\n\
+    1 for F in ./*.txt; do\n2   processfile \"$F\"\n3 done\n```\n\nThis version of\
+    \ `for` goes through the range of values 0..100 in steps of 3 (and prints them\
+    \ all on the same line):\n\n```\n1 echo 'Multiples of three: '\n2 for MULT3 in\
+    \ {0..100..3}; do\n3   printf \"$MULT3 \"\n4 done\n```\n\nSo far, we have discussed\
+    \ the different possibilities of evaluating and joining up commands, the conditionals,\
+    \ functions and loop statements.\n\nAt this point, you should be able to read\
+    \ real Bash code. Therefore we will now move towards some interesting examples\
+    \ of code and projects, with explanatory comments.\n\n## Processing arguments\n\
+    \nPassing arguments to programs and functions is the chief way of making them\
+    \ more general and a lot more useful. It is an important part of the abstraction\
+    \ process. Therefore, most Bash scripts expect some arguments and they need to\
+    \ process (read) them.\n\nIt is a good idea to put a human readable comment just\
+    \ after the first line, explaining what arguments the script expects. At the same\
+    \ time, the conventional options `-h` and `--help` should cause the script to\
+    \ print out similar helpful information.\n"
+  raw: "Bash also has `functions`, which work just like any external script, except\
+    \ that they are textually inserted into the script in which they are then used.\
+    \ The benefit of being called from the file in which they are defined is that\
+    \ they are not run in a subshell.\n\nWith all that convenience comes the danger\
+    \ of unintended global variables clashes, which generally result in horrible bugs.\
+    \ It is therefore strongly advised to use `local` declarations for functions’\
+    \ own working variables. This will insulate them, as if the function really was\
+    \ in its own separate script file and run in a subshell. Note that the functions\
+    \ also inherit any file stream identifiers declared and belonging globally to\
+    \ their script (shell). More on input/output later.\n\nIn a function, as in any\
+    \ program script, its formal arguments are identified by special variables `$1,$2...`\
+    \ and so on. Matching one for one, they are assigned the values of the actual\
+    \ arguments supplied in the function/program call.\n\nTo return values other than\
+    \ 0-255 from Bash functions, the global `stdout` stream 1 should normally be used.\
+    \ That is, in the simplest case, use `echo` or `printf` commands within the function\
+    \ to write its return value(s) to standard output. This will then be returned\
+    \ as the function call result.\n\nHere is an example of a recursive function with\
+    \ one formal argument `$1`.\n\nWhen writing recursive functions, the termination\
+    \ condition should always come first. Note the extensive but here unfortunately\
+    \ necessary use of the arithmetic evaluation double paranthesis: `$((...))`. To\
+    \ keep the number of the paranthesis down, the recursive call itself is evaluated\
+    \ here with the backtick subshell eval, sometimes called the command expansion,\
+    \ which works just like: `$(...)`.\n\n```\n1 function factorial {\n2   [ $1 -lt\
+    \ 3 ] && echo $1 || \\\n3      echo $(( $1*`factorial $(( $1-1 ))` ))\n4 }\n5\
+    \ time factorial 20\n6 2432902008176640000\n7 real    0m0.027s\n8 user    0m0.026s\n\
+    9 sys     0m0.005s\n```\n\nBeware that the answers will overflow without warnings\
+    \ for relatively small arguments, as the factorial of 21 is already bigger than\
+    \ the maximum 64bit integer.\n\nAn iterative implementation will be more efficient\
+    \ than the above stacking up of multiple subshell calls. Here we use the ‘C-like’\
+    \ form of the iterative for loop, which will count down to 2, cumulatively multiplying\
+    \ all the (descending) integers into the local variable `F`. If the supplied argument\
+    \ is smaller than three, the loop will do nothing and the argument value will\
+    \ get immediately echoed to stdout as the answer.\n\n```\n 1 function itfactorial\
+    \ {\n 2   local F=$1\n 3   for (( i=$1-1; i>1; i-- )); do F=$(( $F*i )); done\n\
+    \ 4   echo $F\n 5 }\n 6 time itfactorial 20\n 7 2432902008176640000\n 8 real \
+    \   0m0.000s\n 9 user    0m0.000s\n10 sys     0m0.000s\n```\n\nThis time it was\
+    \ too fast to register on the timer, thanks to being evaluated within the current\
+    \ shell and not using the stack.\n\nHowever, it should be pointed out that Bash,\
+    \ being an interpreted language, is not exactly fast. Therefore, maximum speed\
+    \ is rarely of the main concern. Speed is relative. Nowadays, thanks to faster\
+    \ processors, even Bash runs faster than the fast languages, like C, did a few\
+    \ years ago. Another good reason for its revival? Nonetheless, the stronger points\
+    \ of Bash are undoubtedly convenience, versatility and compactness.\n\n## Loops\
+    \ and control statements\n\nBash is also equipped with the usual set of `while`,\
+    \ `until` and `for` iterative loops, plus a `case` statement. This is not a difficult\
+    \ or exciting topic, so we will not dwell on it much. It is far more effortlessly\
+    \ absorbed by simply reading some existing useful code. We have already met one\
+    \ form of the `for` loop. The `case` statement will be used in some of the examples\
+    \ in the following chapters.\n\nAn infinite loop (relying on calling `break` to\
+    \ exit when the data runs out or something like that) can be a useful mechanism.\
+    \ It is also used for human-computer interactions, a good example of which is,\
+    \ in fact, REPL. The user usually manually terminates such interactive sessions\
+    \ by closing the input with `Ctrl-D`, or closing the terminal with `exit`. Should\
+    \ you try the following examples in your terminal, be prepared to type `Ctrl-C`\
+    \ quickly to terminate them. Note that they both set up an infinite loop.\n\n\
+    ```\n1 while true; do\n2   echo 'I am a lumberjack and I am OK'\n3 done\n```\n\
+    \n```\n1 until false; do\n2   echo 'I sleep all night and work all day'\n3 done\n\
+    ```\n\nOf course, the more usual form of `while` statement is to read some ordinary\
+    \ text file `$F`. Here the `read` statement will return `false` at the end of\
+    \ the file:\n\n```\n1 cat \"$F\".txt | while read LINE; do\n2   processline $LINE\n\
+    3 done\n```\n\nWe have already met the C-like version of the `for` loop command\
+    \ but it has two more useful forms. This one will apply `processfile` to all the\
+    \ `txt` (text) files in the current directory:\n\n```\n1 for F in ./*.txt; do\n\
+    2   processfile \"$F\"\n3 done\n```\n\nThis version of `for` goes through the\
+    \ range of values 0..100 in steps of 3 (and prints them all on the same line):\n\
+    \n```\n1 echo 'Multiples of three: '\n2 for MULT3 in {0..100..3}; do\n3   printf\
+    \ \"$MULT3 \"\n4 done\n```\n\nSo far, we have discussed the different possibilities\
+    \ of evaluating and joining up commands, the conditionals, functions and loop\
+    \ statements.\n\nAt this point, you should be able to read real Bash code. Therefore\
+    \ we will now move towards some interesting examples of code and projects, with\
+    \ explanatory comments.\n\n## Processing arguments\n\nPassing arguments to programs\
+    \ and functions is the chief way of making them more general and a lot more useful.\
+    \ It is an important part of the abstraction process. Therefore, most Bash scripts\
+    \ expect some arguments and they need to process (read) them.\n\nIt is a good\
+    \ idea to put a human readable comment just after the first line, explaining what\
+    \ arguments the script expects. At the same time, the conventional options `-h`\
+    \ and `--help` should cause the script to print out similar helpful information."
+  toc: []
+  trans: "\nBash 也拥有 `functions`（函数），它们的工作方式与任何外部脚本都一样，不同之处它们以文本形式插入到被使用的脚本中。在定义它们的文件中调用它们的好处是，它们不会在子壳（subshell）中运行。\n\
+    \n尽管有这些便利性，但也存在意外的全局变量冲突的危险，这通常会导致严重的错误。因此，强烈建议对函数自身的工作变量使用 `local` 声明。这可以将它们隔离开来，就像该函数实际上位于自己一个独立的脚本文件中并在子壳中运行一样。请注意，函数还会继承全局声明并属于其脚本（shell）的任何文件流标识符。关于输入/输出的更多内容稍后介绍。\n\
+    \n在函数中，就像在任何程序脚本中一样，形式参数通过特殊变量 `$1`、`$2`……等来标识。它们一一对应，并赋值为在函数/程序调用时提供的实际参数值。\n\
+    \n为了从 Bash 函数中返回 0-255 以外的值，通常应该使用全局 `stdout` 流 1。也就是说，在最简单的情况下，在函数内部使用 `echo`\
+    \ 或 `printf` 命令将其返回值写入标准输出。这将作为函数调用的结果返回。\n\n这里有一个带形式参数 `$1` 的递归函数示例。\n\n在编写递归函数时，终止条件应该始终放在第一。注意这里使用了大量但在此遗憾是必要的算术评估双括号：`$((...))`。为了减少括号的数量，递归调用本身在这里通过反引号子壳评估（有时称为命令扩展）进行评估，它的工作方式与\
+    \ `$(...)` 相似：\n\n```\n1 function factorial {\n2   [ $1 -lt 3 ] && echo $1 ||\
+    \ \\\n3      echo $(( $1*`factorial $(( $1-1 ))` ))\n4 }\n5 time factorial 20\n\
+    6 2432902008176640000\n7 real    0m0.027s\n8 user    0m0.026s\n9 sys     0m0.005s\n\
+    ```\n\n请注意，对于较小的参数，答案将在没有警告的情况下溢出，因为 21 的阶乘已经大于 64 位整数的最大值。\n\n使用迭代实现将比上述堆叠多个子壳调用更有效。在这里我们使用了“类\
+    \ C”形式的迭代 `for` 循环，它递减到 2，并将所有（降序）整数累积乘到局部变量 `F` 中。如果提供的参数小于三，循环将什么都不做，参数值将立即作为答案回显到\
+    \ stdout。\n\n```\n 1 function itfactorial {\n2   local F=$1\n3   for (( i=$1-1;\
+    \ i>1; i-- )); do F=$(( $F*i )); done\n4   echo $F\n5 }\n6 time itfactorial 20\n\
+    7 2432902008176640000\n8 real    0m0.000s\n9 user    0m0.000s\n10 sys     0m0.000s\n\
+    ```\n\n这次由于是在当前 shell 中进行评估的且没有使用栈，速度快到计时器都无法记录。\n\n然而，应该指出的是，Bash 作为一种解释型语言，并不算快。因此，最大速度很少是主要关注的问题。速度是相对的。如今，得益于更快的处理器，即使是\
+    \ Bash 的运行速度也比几年前的 C 等快速语言要快。复兴的另一个良好理由？尽管如此，Bash 更强大的点无疑是便利性、多功能性和紧凑性。\n\n##\
+    \ 循环和控制语句\n\nBash 还配备了常用的 `while`、`until` 和 `for` 迭代循环，外加 `case` 语句。这不是一个困难或有趣的话题，所以我们不会对其进行过多探讨。通过简单阅读一些现有的实用代码可以更轻松地吸收。我们已经遇到过\
+    \ `for` 循环的一种形式。`case` 语句将在接下来的章节中的某些示例中使用。\n\n无限循环（依赖在数据耗尽或类似情况下调用 `break` 退出）可以是一种非常有用的机制。它也被用于人机交互，其实一个很好的例子是\
+    \ REPL（读取-评估-打印循环）。用户通常通过 `Ctrl-D` 关闭输入或通过 `exit` 关闭终端来手动终止此类交互式会话。如果你在终端中尝试以下示例，请准备好快速输入\
+    \ `Ctrl-C` 来终止它们。请注意它们都设置了无限循环。\n\n```\n1 while true; do\n2   echo 'I am a lumberjack\
+    \ and I am OK'\n3 done\n```\n\n```\n1 until false; do\n2   echo 'I sleep all night\
+    \ and work all day'\n3 done\n```\n\n当然，`while` 语句更常用的形式是读取某些普通文本文件 `$F`。在这里，`read`\
+    \ 语句将在末尾返回 `false`：\n\n```\n1 cat \"$F\".txt | while read LINE; do\n2   processline\
+    \ $LINE\n3 done\n```\n\n我们已经遇到过类 C 版本的 `for` 命令，但它还有两种更有用的形式。这种形式对当前目录下的所有 `txt`（文本）文件应用\
+    \ `processfile`：\n\n```\n1 for F in ./*.txt; do\n2   processfile \"$F\"\n3 done\n\
+    ```\n\n这个版本的 `for` 以步长 3 遍历 0..100 的取值范围（并将它们全部打印在同一行）：\n\n```\n1 echo 'Multiples\
+    \ of three: '\n2 for MULT3 in {0..100..3}; do\n3   printf \"$MULT3 \"\n4 done\n\
+    ```\n\n为止，我们讨论了评估和连接命令的各种可能性、条件语句、函数和循环语句。\n\n到目前，你应该能够阅读真实的 Bash 代码了。因此，我们现在将转向一些有趣的代码和项目示例，并附有说明注释。\n\
+    \n## 处理参数\n\n将参数传递给程序和函数是使其更通用、更有用的主要方法。它是抽象过程的一个重要部分。因此，大多数 Bash 脚本都期望某些参数，并且需要处理（读取）这些参数。\n"
+- fmt: "\n```bash\n#!/bin/bash\n# This program expects some options, \n# followed\
+    \ by three mandatory directory paths.\n\n# The program path/name is always in\
+    \ $0\\. \n# Here we chop off the path \n# before the program's name, with `##*/`\n\
+    PROGN=${0##*/}\n\n# Frequently used messages subsumed into functions;\n# their\
+    \ output is redirected to stderr with >&2\nfunction usage {\n   printf \"Usage:\
+    \ $PROGN \\\n   [-h][-b][-c][-x][-q][-r][-u][-v][-z] \\\n   indir keydir outdir\\\
+    n\" >&2\n}\n\nfunction helpmsg {\n   usage\n   printf \"\\t%s\\n\" \\\n     '-b\
+    \ | --b64 : test for base64 encoded files' \\\n     '-c | --clean : the archive'\
+    \ \\\n     '-h | --help : print this text' \\\n     '-q | --quiet : turn off the\
+    \ final summary' \\\n     '-r | --recurse : process also subdirectories' \\\n\
+    \     '-u | --update : the archive' \\\n     '-v | --verbose : detailed reporting'\
+    \ \\\n     '-x | --hex : test for hexadecimal files' \\\n     '-z | --zstd : use\
+    \ zstd compression' >&2\n   exit 1\n}\n\n# Use the utility `getops` for options\
+    \ parsing: \n# puts listed options, that is words that can  follow -,\n# into\
+    \ $OPT\nwhile getopts hbcxqruvz-: OPT; do\n  # Long options start with --,\n \
+    \ # this gets detected by the last option in the list: `-`\n  # then assign the\
+    \ long option name to $OPT manually:\n  if [ \"$OPT\" = \"-\" ]; then\n    # found\
+    \ --: reset OPT and OPTARG\n    OPT=\"${OPTARG%%=*}\"  # extract long option name\n\
+    \    # extract long option argument (here empty)\n    OPTARG=\"${OPTARG#$OPT}\"\
+    \ \n    # remove any assignments `=` from long options\n    OPTARG=\"${OPTARG#=}\"\
+    \ \n  fi\n  # now process and record all options, in any order\n  # here we set\
+    \ their variables, \n  # later detect them being set, e.g. with: [ -n \"$VAR\"\
+    \ ]\n  case \"$OPT\" in\n    h | help ) helpmsg;;\n    b | b64 ) B64TEST=0;;\n\
+    \    c | clean ) CLEAN=0;; \n    x | hex ) HEXTEST=0;;\n    q | quiet ) QUIET=0;;\n\
+    \    v | verbose ) VERBOSE=0;; \n    r | recurse ) RECURSE=0;;\n    u | update\
+    \ ) UPDATE=0;;\n    z | zstd ) COMPRESSOR=zstd;; \n    ??* ) printf \\\n    \"\
+    $PROGN quitting, bad long option: $OPT\\n\" >&2\n       usage; exit 2;; \n   \
+    \ # bad short option (will be reported via getopts) \n    *) exit 2;; \n  esac\n\
+    done\n# Remove all parsed options and args from their\n# list $@  \n# so that\
+    \ we can parse the remaining arguments.\n# The next one will be in $1, \n# as\
+    \ if no options were given: \nshift $((OPTIND-1)) \n\n# Validate the input directory\n\
+    [ -d \"$1\" ] || { \n   printf \"$PROGN: input directory $1 not found\\n\" >&2\n\
+    \   exit 2\n}\n...\n# optional final report\n[ $QUIET ] || { printf ... } \n```\n\
+    \nNow, the user can invoke this program with any combinations of the listed options,\
+    \ preceded by `-` and followed by three directory paths. The options, as their\
+    \ name suggests, give the program optional capabilities and modes of operation.\
+    \ For example:\n\n`ncrpt -rbxuc dir1 dir2 dir3`\n\n# Input-Output\n\nOf all the\
+    \ programming languages, `Bash` must have just about the simplest and convenient\
+    \ input/output (I/O) handling.\n\n## Basic terminology\n\n*   files\n    *   are\
+    \ usually stored on a filesystem, where they are identified by their path, filename\
+    \ and filename extension(s)\n    *   when stored on the internet, then their universal\
+    \ resource locator (`URL`) fulfils the role of the path. These files need to be\
+    \ copied (downloaded) over the network by some utility program, such as `scp`\
+    \ (ssh secure copy) or `wget`. Once securely on the local filesystem, they can\
+    \ be read and manipulated much faster and more securely.\n*   streams are sequences\
+    \ of bytes, i.e. the actual data, with an associated internally memorised current\
+    \ position. Reads and writes automatically advance that position.\n    *   input\
+    \ streams are for reading\n    *   output streams are for writing\n    *   in\
+    \ input streams are for reading output streams are for writing\n"
+  raw: "```\n 1 #!/bin/bash\n 2 # This program expects some options, \n 3 # followed\
+    \ by three mandatory directory paths.\n 4 \n 5 # The program path/name is always\
+    \ in $0\\. \n 6 # Here we chop off the path \n 7 # before the program's name,\
+    \ with `##*/`\n 8 PROGN=${0##*/}\n 9 \n10 # Frequently used messages subsumed\
+    \ into functions;\n11 # their output is redirected to stderr with >&2\n12 function\
+    \ usage {\n13    printf \"Usage: $PROGN \\\n14    [-h][-b][-c][-x][-q][-r][-u][-v][-z]\
+    \ \\\n15    indir keydir outdir\\n\" >&2\n16 }\n17 \n18 function helpmsg {\n19\
+    \    usage\n20    printf \"\\t%s\\n\" \\\n21      '-b | --b64 : test for base64\
+    \ encoded files' \\\n22      '-c | --clean : the archive' \\\n23      '-h | --help\
+    \ : print this text' \\\n24      '-q | --quiet : turn off the final summary' \\\
+    \n25      '-r | --recurse : process also subdirectories' \\\n26      '-u | --update\
+    \ : the archive' \\\n27      '-v | --verbose : detailed reporting' \\\n28    \
+    \  '-x | --hex : test for hexadecimal files' \\\n29      '-z | --zstd : use zstd\
+    \ compression' >&2\n30    exit 1\n31 }\n32 \n33 # Use the utility `getops` for\
+    \ options parsing: \n34 # puts listed options, that is words that can  follow\
+    \ -,\n35 # into $OPT\n36 while getopts hbcxqruvz-: OPT; do\n37  # Long options\
+    \ start with --,\n38  # this gets detected by the last option in the list: `-`\n\
+    39  # then assign the long option name to $OPT manually:\n40  if [ \"$OPT\" =\
+    \ \"-\" ]; then\n41  # found --: reset OPT and OPTARG\n42    OPT=\"${OPTARG%%=*}\"\
+    \  # extract long option name\n43    # extract long option argument (here empty)\n\
+    44    OPTARG=\"${OPTARG#$OPT}\" \n45    # remove any assignments `=` from long\
+    \ options\n46    OPTARG=\"${OPTARG#=}\" \n47  fi\n48  # now process and record\
+    \ all options, in any order\n49  # here we set their variables, \n50  # later\
+    \ detect them being set, e.g. with: [ -n \"$VAR\" ]\n51  case \"$OPT\" in\n52\
+    \    h | help ) helpmsg;;\n53    b | b64 ) B64TEST=0;;\n54    c | clean ) CLEAN=0;;\
+    \ \n55    x | hex ) HEXTEST=0;;\n56    q | quiet ) QUIET=0;;\n57    v | verbose\
+    \ ) VERBOSE=0;; \n58    r | recurse ) RECURSE=0;;\n59    u | update ) UPDATE=0;;\n\
+    60    z | zstd ) COMPRESSOR=zstd;; \n61    ??* ) printf \\\n62    \"$PROGN quitting,\
+    \ bad long option: $OPT\\n\" >&2\n63       usage; exit 2;; \n64    # bad short\
+    \ option (will be reported via getopts) \n65    *) exit 2;; \n66  esac\n67 done\n\
+    68 # Remove all parsed options and args from their\n69 # list $@  \n70 # so that\
+    \ we can parse the remaining arguments.\n71 # The next one will be in $1, \n72\
+    \ # as if no options were given: \n73 shift $((OPTIND-1)) \n74 \n75 # Validate\
+    \ the input directory\n76 [ -d \"$1\" ] || { \n77    printf \"$PROGN: input directory\
+    \ $1 not found\\n\" >&2\n78    exit 2\n79 }\n80 ...\n81 # optional final report\n\
+    82 [ $QUIET ] || {  printf ... } \n```\n\nNow, the user can invoke this program\
+    \ with any combinations of the listed options, preceded by `-` and followed by\
+    \ three directory paths. The options, as their name suggests, give the program\
+    \ optional capabilities and modes of operation. For example:\n\n`ncrpt -rbxuc\
+    \ dir1 dir2 dir3`\n\n# Input-Output\n\nOf all the programming languages, Bash\
+    \ must have just about the simplest and most convenient input/output (I/O) handling.\n\
+    \n## Basic terminology\n\n*   files\n\n    *   are usually stored on a filesystem,\
+    \ where they are identified by their path, filename and filename extension(s)\n\
+    \n    *   when stored on the internet, then their universal resource locator (URL)\
+    \ fulfils the role of the path. These files need to be copied (downloaded) over\
+    \ the network by some utility program, such as `scp` (ssh secure copy) or `wget`.\
+    \ Once securely on the local filesystem, they can be read and manipulated much\
+    \ faster and more securely.\n\n*   streams are sequences of bytes, i.e. the actual\
+    \ data, with an associated internally memorised current position. Reads and writes\
+    \ automatically advance that position.\n\n    *   input streams are for reading\n\
+    \n    *   output streams are for writing\n\n    *   in-out streams are for both\
+    \ reading and writing\n\n*   file descriptor (perhaps more accurately a stream\
+    \ descriptor) is the means of referring internally, within a program, to a particular\
+    \ stream of data. A program will use these to communicate with the ‘outside world’,\
+    \ i.e. to read and write some data. The streams need to be named (in Bash actually\
+    \ by single digit characters) because several different streams can be used at\
+    \ the same time for different kinds of data and different purposes. For example,\
+    \ one stream for writing clean results to a file and a separate one for writing\
+    \ out warnings (and errors) which we do not want intermixed with the results.\n\
+    \nOpening a file associates a nominated stream descriptor with the named file\
+    \ and specifies if that file is to be used for input, output, or both.\n\nStream\
+    \ descriptors in Bash are just digit characters 0-9\\. The first three, 0-2, have\
+    \ special meanings. They are always opened automatically in every shell:\n\n*\
+    \   0 standard input (known as stdin), is the default input to any Bash command.\n\
+    \n*   1 standard output (known as stdout), is the default output from a command.\n\
+    \n*   2 standard error (known as stderr), is the ‘error’ output.\n\n*   3 to 9\
+    \ can be explicitly opened and assigned to files or other streams by the user.\n\
+    \n0-2 should not be opened for a real named file. In fact, they have predefined\
+    \ system files associated with them, see later. Their streams of data are either\
+    \ directed to processes and files with `<`, `>`, `>>` or sent/received to/from\
+    \ a pipe `|`, which is a hidden buffer inserted by Bash between two ‘piped’ commands,\
+    \ whereby the first one writes to it and the second one (asynchronously) reads\
+    \ from it.\n\n## The meaning of zero\n\nThis is a word of warning. Zero is for\
+    \ some reason very important to Bash. Its designers must have been very fond of\
+    \ it. Oh, seeker, realise the meaning of zero and become a Bash Master!\n\nVariable\
+    \ `$0` always holds as its value the path and the name of the current program\
+    \ or function. It is often used by the program to identify itself as the source\
+    \ of an error message. `PROGN=${0##*/}` holds its root name (with the path up\
+    \ to the last / stripped off) in our examples.\n\nNot to be confused with `0`\
+    \ written to stdout to indicate a successful outcome.\n\nWhich happens to be the\
+    \ same as the value of ‘true’.\n\nWhich also happens to be the same as the character\
+    \ `0` (binary ascii value 48) in strings etc.\n\nNot to be confused with `0` within\
+    \ an arithmetic evaluation context `$(( 0 ))`, where it means the integer zero\
+    \ (binary value 0).\n\nNot to be confused with the character `0` where stream\
+    \ identifiers might be expected, as there it becomes the standard input (stdin)\
+    \ stream identifier!\n\nAll clear now?\n\n## Using I/O\n\nThe streams (1-2) are\
+    \ often simply directed (written) to real files with `> $FILENAME`, without having\
+    \ to ‘open’ those files.\n\n`>> $FILENAME` will append to the end of an existing\
+    \ file instead of creating a new one (or overwriting and existing one).\n\nTo\
+    \ append several files at once into stream 0 (stdin), we can invoke program `cat\
+    \ $F1 $F2` or `tac $F2 $F1`, where `tac` presents the file’s lines backwards.\n\
+    \nSometimes we may wish to read chunks of an input file and to remember the current\
+    \ reading position in-between, down to the last byte. It is better to define our\
+    \ own dedicated stream to do this. Let us open file `$F1` for reading on stream\
+    \ `3`. We use special command `exec` which replaces the default shell stream(s)\
+    \ with the new one(s). In this case, it adds the newly created stream 3:\n\n```\n\
+    1 exec 3<$F1 || {\n2   printf \"$PROGN: '$F1' failed to open for reading\\n\"\
+    \ >&2\n3   exit 2\n4 }\n```\n\nTo open an output file, use `>` and for both input\
+    \ and output, use `<>`.\n\nExample: invoking utility program `head` to read just\
+    \ the next `$N` bytes from stream `3` and writing them to `$FILE2`:\n\n```\n1\
+    \ head -c $N <&3 >$FILE2\n```\n\nThe next execution of this command will read\
+    \ the following `$N` bytes from `$FILE1` and so on. Note that, unlike `cat` and\
+    \ `tac`, this disregards the ‘lines structure’ of text files and thus is particularly\
+    \ suitable for reading binary files."
+  toc: []
+  trans: "\n\n```bash\n#!/bin/bash\n# 此程序期望一些选项，\n# 随后是三个强制性的的目录路径。\n\n# 程序的路径/名称始终位于\
+    \ $0 中。 \n# 在这里我们使用 `##*/` 删掉程序名称之前的路径\nPROGN=${0##*/}\n\n# 将频繁使用的消息封装到函数中；\n\
+    # 它们的输出被重定向到 stderr (>&2)\nfunction usage {\n   printf \"Usage: $PROGN \\\n  \
+    \ [-h][-b][-c][-x][-q][-r][-u][-v][-z] \\\n   indir keydir outdir\\n\" >&2\n}\n\
+    \nfunction helpmsg {\n   usage\n   printf \"\\t%s\\n\" \\\n     '-b | --b64 :\
+    \ 测试 base64 编码文件' \\\n     '-c | --clean : 归档' \\\n     '-h | --help : 打印此文本'\
+    \ \\\n     '-q | --quiet : 关闭最终总结' \\\n     '-r | --recurse : 同时处理子目录' \\\n  \
+    \   '-u | --update : 归档' \\\n     '-v | --verbose : 详细报告' \\\n     '-x | --hex\
+    \ : 测试十六进制文件' \\\n     '-z | --zstd : 使用 zstd 压缩' >&2\n   exit 1\n}\n\n# 使用实用工具\
+    \ `getops` 进行选项解析： \n# 将列出的选项（即跟在 - 后面的单词）\n# 放入 $OPT 中\nwhile getopts hbcxqruvz-:\
+    \ OPT; do\n  # 长选项以 -- 开头，\n  # 这通过列表中的最后一个选项检测：`-`\n  # 然后手动将长选项名称赋值给 $OPT：\n\
+    \  if [ \"$OPT\" = \"-\" ]; then\n    # 找到 --：重置 OPT 和 OPTARG\n    OPT=\"${OPTARG%%=*}\"\
+    \  # 提取长选项名称\n    # 提取长选项参数（此处为空）\n    OPTARG=\"${OPTARG#$OPT}\" \n    # 移除长选项中的任何赋值\
+    \ `=`\n    OPTARG=\"${OPTARG#=}\" \n  fi\n  # 现在按任意顺序处理并记录所有选项\n  # 在这里我们设置它们的变量，\n\
+    \  # 稍后检测它们被设置，例如：[ -n \"$VAR\" ]\n  case \"$OPT\" in\n    h | help ) helpmsg;;\n\
+    \    b | b64 ) B64TEST=0;;\n    c | clean ) CLEAN=0;; \n    x | hex ) HEXTEST=0;;\n\
+    \    q | quiet ) QUIET=0;;\n    v | verbose ) VERBOSE=0;; \n    r | recurse )\
+    \ RECURSE=0;;\n    u | update ) UPDATE=0;;\n    z | zstd ) COMPRESSOR=zstd;; \n\
+    \    ??* ) printf \\\n    \"$PROGN quitting, bad long option: $OPT\\n\" >&2\n\
+    \       usage; exit 2;; \n    # 错误的短选项（将通过 getopts 报告） \n    *) exit 2;; \n  esac\n\
+    done\n# 从列表 $@ 中移除所有解析过的选项和参数\n# 这样我们就可以解析剩余的参数。\n# 下一个将位于 $1，\n# 就像没有提供选项一样：\n\
+    shift $((OPTIND-1)) \n\n# 验证输入目录\n[ -d \"$1\" ] || { \n   printf \"$PROGN: input\
+    \ directory $1 not found\\n\" >&2\n   exit 2\n}\n...\n# 可选的最终报告\n[ $QUIET ] ||\
+    \ { printf ... } \n```\n\n现在，用户可以使用列出的选项的任意组合调用此程序，这些选项前加 `-`，后跟三个目录路径。这些选项正如其名称所示，为程序提供了可选的功能和运行模式。例如：\n\
+    \n`ncrpt -rbxuc dir1 dir2 dir3`\n\n# 输入-输出\n\n在所有的编程语言中，`Bash` 一定拥有最简单方便的输入/输出\
+    \ (I/O) 处理。\n\n## 基本术语\n\n*   文件\n    *   通常存储在文件系统中，通过路径、文件名和文件扩展名进行识别\n    *\
+    \   当存储在互联网上时，它们的通用资源定位符 (`URL`) 充当路径的角色。这些文件需要通过某些实用程序（如 `scp` (ssh 安全拷贝) 或 `wget`）通过网络复制（下载）。一旦安全地存储在本地文件系统中，就可以更快、更安全地进行读取和操作。\n\
+    *   流（streams）是字节序列，即实际数据，并关联一个内部存储的当前位置。读取和写入会自动推进该位置。\n    *   输入流用于读取\n   \
+    \ *   输出流用于写入\n    *   输入流用于读取，输出流用于写入\n\n"
+- fmt: "\nWhen we no longer need stream 3, we close it with: `exec 3>&-`. The dash\
+    \ means ‘close this stream’.\n\nStreams can also be redirected from one to another.\
+    \ For example, `1>&2` redirects `stdout` to `stderr`. Leaving `1` out, it will\
+    \ be assumed by default. Thus `>&2` has the same effect (see above).\n\nOccasionally,\
+    \ we may need a stream to directly stand in for a file.\n\nSuppose we wish to\
+    \ pipe 100 random hexadecimal characters to an external program `prog`, which\
+    \ for some reason does not have the ability to read from `stdin`. Instead, `prog`\
+    \ expects an explicit input filename argument. For this situation, there are certain\
+    \ standard system filenames, permanently associated with the standard streams:\n\
+    \n```\n1 tr -dc '0-9a-f' < /dev/urandom | \\\n2 head -c 100 | prog /dev/stdin\n\
+    ```\n\nHere we sent a ‘lazy’ stream of random valued bytes (0-255) from `/dev/urandom`\
+    \ to utility program `tr`, which deletes all but the specified hexadecimal characters\
+    \ ranges and pipes the surviving ones to `head`. Head then takes just one hundred\
+    \ of them and pipes them to `prog`. Prog can not read the pipe on stream 0 (`stdin`),\
+    \ as per usual but instead opens the file `/dev/stdin` and finds the bytes there.\n\
+    \nSimilarly, to throw away some unwanted messages, data, or spam, direct them\
+    \ to `>/dev/null`\n\n## Pipes and functional composition\n\nFunction calls, subshell\
+    \ evaluations, Bash commands, invocations of other programs, basically everything\
+    \ in Bash, are functions which write their produced values by default to stream\
+    \ `1`. The results are then received from stream `0` as the returned value of\
+    \ their call or passed on via the pipe.\n\nThis mechanism is somewhat like what\
+    \ happens in *functional programming*: it facilitates convenient composition.\
+    \ In fact, with a bit of self imposed discipline not to abuse global variables,\
+    \ good old Bash can be used for functional programming. Abusing global variables\
+    \ is a bad practice anyway, it is bound to bite you painfully when you start using\
+    \ `&` (background parallel execution of sub processes).\n\nWe will now demonstrate\
+    \ the piping to and from any Bash statements on an example of `case` command.\
+    \ The following text fragment is taken from TokenCrypt project [(4)](https://github.com/liborty/TokenCrypt).\n\
+    \nIt shows how we can *switch pipes*. That is, factor out all common computations\
+    \ and put them upfront. Then pipe their results to a `case` statement, within\
+    \ which each branch is going to continue the pipe actions in its own specific\
+    \ way. Then we continue again with one common path after the `case` statement\
+    \ is finished. That is, in this example, write the decrypted decompressed result\
+    \ into `$OUTFILE`.\n\nThe code reads a key of known `$FSIZE` from stream `3`,\
+    \ decrypts `$INFILE` with it and then chooses the relevant method of decompression,\
+    \ depending on the value of `$CH`. What gets written into `$OUTFILE` in the end\
+    \ will depend on which branch of the case statement was selected.\n\n```\n 1 head\
+    \ -c $FSIZE <&3 | symcrypt $INFILE | case \"$CH\" in\n 2    h ) hexify;;\n 3 \
+    \   b ) base64 -w 0;;\n 4    i ) lzma -d;;\n 5    j ) lzma -d | hexify;; \n 6\
+    \    k ) lzma -d | base64 -w 0;; \n 7    l ) zstd -d -c;; \n 8    m ) zstd -d\
+    \ -c | hexify;; \n 9    n ) zstd -d -c | base64 -w 0;;\n10    * ) printf \"$PROGN\
+    \ importfile: unrecognised ch\\n\";\n11        exit 2;;\n12 esac > $OUTFILE\n\
+    ```\n\nSimilar pipes can be set up for any Bash statements. Think of them all\
+    \ as filters of some data streams.\n\n## Amazing Arithmetic\n\nIn fairness, there\
+    \ is one practical drawback to the ‘everything is just a string’ (EIJAS) philosophy\
+    \ of Bash. Namely, the lack of floating point arithmetic.\n\nSuppose we want to\
+    \ do a simple floating point division `C=$A/$B`. That is, we are not satisfied\
+    \ with just the truncated answer that the Bash default integer division gives,\
+    \ e.g. ‘5/2 = 2’ and we want greater precision (in this case 2.5).\n\nWe could\
+    \ reach for external Linux utilities, such as `awk`, `dc`, `bc`, etc., and most\
+    \ people do. However, embedding their code is somewhat messy in Bash. Most of\
+    \ the facilities that these external programs offer are an overkill for a simple\
+    \ one line calculation. Plus we have to start a sub-process for them every time,\
+    \ even for trivial examples, such as this one:\n\n```\n1 C=$( awk \"BEGIN { print\
+    \ $A / $B }\" )\n```\n\nLuckily, there is a simpler and more efficient alternative:\
+    \ *fixed point arithmetic*. As an exercise, we are now going to implemented it\
+    \ in Bash. The full source is available in [(3)](https://github.com/liborty/fdiv).\n\
+    \nFixed point arithmetic is used in situations, where the numbers being handled\
+    \ are all of similar magnitudes, so that they do not need the separately maintained\
+    \ exponents of floating point numbers.\n\nTwo good examples are calculating percentages\
+    \ and money. In both of these common use cases, the decimal point has a fixed\
+    \ meaning (and position). This is in fact preferable in many applications, as\
+    \ the truncation errors are more predictable and controllable.\n\nThen the ‘mantissa’\
+    \ can be, in effect, expanded to the full 64 bits word. Note that the commonly\
+    \ used ‘Double Precision IEEE 754 Floating Point Standard’ has only 5 bits.\n\n\
+    ## Ratio in fixed point arithmetic\n\nRatios are easier for internal calculations\
+    \ than percentages. We get this precision by making a temporary left shift by\
+    \ five decimal places and then carrying out ordinary integer division. Of course,\
+    \ this should be followed by somehow shifting back those five decimal places to\
+    \ the right, to produce the final result.\n\nIn general, it is easy to check that\
+    \ we are always dividing by the bigger of the two numbers and not by zero. That\
+    \ is enough to ensure that the ratio will always be well behaved and in the interval\
+    \ [0,1].\n\nBack to our ratio application. The following line calls `du` (disk\
+    \ usage) to fill an array, here called `SIZES`, with the sizes and names of the\
+    \ two directories:\n\n```\n1 # create array SIZES[size1, dir1, size2, dir2]\n\
+    2 SIZES=$( du -hbs $INDIR $OUTDIR )\n```\n\nNext we use printf formatting to turn\
+    \ an ordinary integer `%d` into a fixed point number `0.%5d`.\n\nIn the printf\
+    \ formatting string, `%s` (for strings), `%d` (for decimal numbers), etc., get\
+    \ filled in order by the actual values of the evaluated arguments (if any), following\
+    \ the formatting string. Here they are the sizes and names of the two directories\
+    \ and finally the calculated compression ratio ( `\\` simply allows continuing\
+    \ the code onto the next line):\n\n```\n1 printf \"Output size:\\t%s (%s)\\n\\\
+    \n2    Original size:\\t%s (%s)\\n\\\n3    Compressed to:\\t0.%05d\\n\" \\\n4\
+    \    ${SIZES[0]} ${SIZES[1]} ${SIZES[2]} ${SIZES[3]} \\\n5      $(( 100000*${SIZES[2]}/${SIZES[0]}\
+    \ ))\n```\n\nThe last line is the actual fixed point (integer) calculation. We\
+    \ have chosen here to calculate the ratio to five decimal places `0.%05d`, so\
+    \ we premultiply by 10000\\. The five zeroes correspond to the five decimal places\
+    \ we will output via the formatting string. The numerator is the size of the smaller\
+    \ compressed `$OUTDIR`, so the true ratio will be less than one.\n"
+  raw: "When we no longer need stream 3, we close it with: `exec 3>&-`. The dash means\
+    \ ‘close this stream’.\n\nStreams can also be redirected from one to another.\
+    \ For example, `1>&2` redirects stdout to stderr. Leaving 1 out, it will be assumed\
+    \ by default. Thus `>&2` has the same effect (see above).\n\nOccasionally, we\
+    \ may need a stream to directly stand in for a file.\n\nSuppose we wish to pipe\
+    \ 100 random hexadecimal characters to an external program `prog`, which for some\
+    \ reason does not have the ability to read from stdin. Instead, `prog` expects\
+    \ an explicit input filename argument. For this situation, there are certain standard\
+    \ system filenames, permanently associated with the standard streams:\n\n```\n\
+    1 tr -dc '0-9a-f' < /dev/urandom | \\\n2 head -c 100 | prog /dev/stdin\n```\n\n\
+    Here we sent a ‘lazy’ stream of random valued bytes (0-255) from `/dev/urandom`\
+    \ to utility program `tr`, which deletes all but the specified hexadecimal characters\
+    \ ranges and pipes the surviving ones to `head`. Head then takes just one hundred\
+    \ of them and pipes them to `prog`. Prog can not read the pipe on stream 0 (stdin),\
+    \ as per usual but instead opens the file `/dev/stdin` and finds the bytes there.\n\
+    \nSimilarly, to throw away some unwanted messages, data, or spam, direct them\
+    \ to `>/dev/null`\n\n## Pipes and functional composition\n\nFunction calls, subshell\
+    \ evaluations, Bash commands, invocations of other programs, basically everything\
+    \ in Bash, are functions which write their produced values by default to stream\
+    \ 1\\. The results are then received from stream 0 as the returned value of their\
+    \ call or passed on via the pipe.\n\nThis mechanism is somewhat like what happens\
+    \ in *functional programming*: it facilitates convenient composition. In fact,\
+    \ with a bit of self imposed discipline not to abuse global variables, good old\
+    \ Bash can be used for functional programming. Abusing global variables is a bad\
+    \ practice anyway, it is bound to bite you painfully when you start using `&`\
+    \ (background parallel execution of sub processes).\n\nWe will now demonstrate\
+    \ the piping to and from any Bash statements on an example of `case` command.\
+    \ The following text fragment is taken from TokenCrypt project [(4)](https://github.com/liborty/TokenCrypt).\n\
+    \nIt shows how we can *switch pipes*. That is, factor out all common computations\
+    \ and put them upfront. Then pipe their results to a `case` statement, within\
+    \ which each branch is going to continue the pipe actions in its own specific\
+    \ way. Then we continue again with one common path after the `case` statement\
+    \ is finished. That is, in this example, write the decrypted decompressed result\
+    \ into `$OUTFILE`.\n\nThe code reads a key of known `$FSIZE` from stream `3`,\
+    \ decrypts $INFILE with it and then chooses the relevant method of decompression,\
+    \ depending on the value of `$CH`. What gets written into `$OUTFILE` in the end\
+    \ will depend on which branch of the case statement was selected.\n\n```\n 1 head\
+    \ -c $FSIZE <&3 | symcrypt $INFILE | case \"$CH\" in\n 2    h ) hexify;;\n 3 \
+    \   b ) base64 -w 0;;\n 4    i ) lzma -d;;\n 5    j ) lzma -d | hexify;; \n 6\
+    \    k ) lzma -d | base64 -w 0;; \n 7    l ) zstd -d -c;; \n 8    m ) zstd -d\
+    \ -c | hexify;; \n 9    n ) zstd -d -c | base64 -w 0;;\n10    * ) printf \"$PROGN\
+    \ importfile: unrecognised ch\\n\";\n11        exit 2;;\n12 esac > $OUTFILE\n\
+    ```\n\nSimilar pipes can be set up for any Bash statements. Think of them all\
+    \ as filters of some data streams.\n\n# Amazing Arithmetic\n\nIn fairness, there\
+    \ is one practical drawback to the ‘everything is just a string’ (EIJAS) philosophy\
+    \ of Bash. Namely, the lack of floating point arithmetic.\n\nSuppose we want to\
+    \ do a simple floating point division `C=$A/$B`. That is, we are not satisfied\
+    \ with just the truncated answer that the Bash default integer division gives,\
+    \ e.g. ‘5/2 = 2’ and we want greater precision (in this case 2.5).\n\nWe could\
+    \ reach for external Linux utilities, such as `awk`,`dc`,`bc`, etc., and most\
+    \ people do. However, embedding their code is somewhat messy in Bash. Most of\
+    \ the facilities that these external programs offer are an overkill for a simple\
+    \ one line calculation. Plus we have to start a sub-process for them every time,\
+    \ even for trivial examples, such as this one:\n\n```\n1 C=$( awk \"BEGIN { print\
+    \ $A / $B }\" )\n```\n\nLuckily, there is a simpler and more efficient alternative:\
+    \ *fixed point arithmetic*. As an exercise, we are now going to implemented it\
+    \ in Bash. The full source is available in [(3)](https://github.com/liborty/fdiv).\n\
+    \nFixed point arithmetic is used in situations, where the numbers being handled\
+    \ are all of similar magnitudes, so that they do not need the separately maintained\
+    \ exponents of floating point numbers.\n\nTwo good examples are calculating percentages\
+    \ and money. In both of these common use cases, the decimal point has a fixed\
+    \ meaning (and position). This is in fact preferable in many applications, as\
+    \ the truncation errors are more predictable and controllable.\n\nThen the ‘mantissa’\
+    \ can be, in effect, expanded to the full 64 bits word. Note that the commonly\
+    \ used ‘Double Precision IEEE 754 Floating Point Standard’ has only 52 bits allocated\
+    \ for the mantissa. Therefore our fixed point arithmetic implemented on top of\
+    \ ordinary 64 bit integer arithmetic used by Bash, will gain up to 12 bits of\
+    \ extra precision.\n\n## Ratio in fixed point arithmetic\n\nRatios are easier\
+    \ for internal calculations than percentages. Besides, any barely numerate person\
+    \ is able to mentally translate them to percentages by simply multiplying them\
+    \ by a hundred.\n\nSuppose we want to calculate the ratio of the byte sizes of\
+    \ two directories: $INDIR and $OUTDIR. The second one, $OUTDIR, is a compressed\
+    \ version of the first, and we want to find its compression ratio.\n\nBy taking\
+    \ the ratio, where we always divide by the bigger of the two numbers, we are normalising\
+    \ from two hard to handle ranges of the original values `[0,infinity)`, to a much\
+    \ more compact and convenient range of their ratio: [0,1].\n\n*   Mathematical\
+    \ notation: the round closing bracket above denotes a half open interval. Computers\
+    \ can not handle infinity, so we excluded it from the interval. We can only ever\
+    \ approach it.\n\nIn general, it is easy to check that we are always dividing\
+    \ by the bigger of the two numbers and not by zero. That is enough to ensure that\
+    \ the ratio will always be well behaved and in the interval [0,1].\n\nBack to\
+    \ our compression ratio application. The following line calls `du` (disk usage)\
+    \ to fill an array, here called `SIZES`, with the sizes and names of the two directories:\n\
+    \n```\n1 # create array SIZES[size1, dir1, size2, dir2]\n2 SIZES=$( du -hbs $INDIR\
+    \ $OUTDIR ) \n```\n\nNext we use printf formatting to turn an ordinary integer\
+    \ `%d` into a fixed point number `0.%05d`.\n\nIn the printf formatting string,\
+    \ `%s` (for strings), `%d` (for decimal numbers), etc., get filled in order by\
+    \ the actual values of the evaluated arguments (if any), following the formatting\
+    \ string. Here they are the sizes and names of the two directories and finally\
+    \ the calculated compression ratio ( `\\` simply allows continuing the code onto\
+    \ the next line):\n\n```\n1 printf \"Output size:\\t%s (%s)\\n\\\n2    Original\
+    \ size:\\t%s (%s)\\n\\\n3    Compressed to:\\t0.%05d\\n\" \\ \n4    ${SIZES[0]}\
+    \ ${SIZES[1]} ${SIZES[2]} ${SIZES[3]} \\\n5      $(( 100000*${SIZES[2]}/${SIZES[0]}\
+    \ ))\n```\n\nThe last line is the actual fixed point (integer) calculation. We\
+    \ have chosen here to calculate the ratio to five decimal places `0.%05d`, so\
+    \ we premultiply by 100000\\. The five zeroes correspond to the five decimal places\
+    \ we will output via the formatting string. The numerator is the size of the smaller\
+    \ compressed $OUTDIR, so the true ratio will be less than one.\n\nWe get this\
+    \ precision by making a temporary left shift by five decimal places and then carrying\
+    \ out ordinary integer division. Of course, this should be followed by somehow\
+    \ shifting back those five decimal places to the right, to produce the final result."
+  toc: []
+  trans: "\n\n当我们不再需要流 3 时，可以使用 `exec 3>&-` 将其关闭。横线表示“关闭此流”。\n\n流 也可以从一个流重定向到另一个流。例如，`1>&2`\
+    \ 将 `stdout` 重定向到 `stderr`。如果省略 `1`，默认会认为它是 1。因此 `>&2` 具有相同的效果（见上文）。\n\n有时，我们可能需要一个流直接代表一个文件。\n\
+    \n假设我们希望将 100 个随机十六进制字符管道到外部程序 `prog`，但由于某种原因，该程序没有从 `stdin` 读取的能力。相反，`prog` 期望一个显式的输入文件名参数。对于这种情况，有一些标准的系统文件名与标准流是永久关联的：\n\
+    \n```\n1 tr -dc '0-9a-f' < /dev/urandom | \\\n2 head -c 100 | prog /dev/stdin\n\
+    ```\n\n在这里，我们从 `/dev/urandom` 向工具程序 `tr` 发送了一个随机字节（0-255）的“懒加载”流，它删除了除了指定的十六进制字符范围以外的所有内容，并将幸存的内容传给\
+    \ `head`。然后 `head` 只取其中的一百个并将它们传给 `prog`。`prog` 像通常一样无法读取流 0 (`stdin`) 上的管道，而是打开文件\
+    \ `/dev/stdin` 并找到那里的字节。\n\n同样地，为了丢弃某些不需要的消息、数据或垃圾邮件，可以将它们重定向到 `>/dev/null`\n\n\
+    ## 管道与函数式组合\n\n函数调用、子壳求值、Bash 命令、其他程序的调用，基本上 Bash 中的几乎所有内容都是默认将其产生的值写入流 `1` 的函数。然后，结果将从流\
+    \ `0` 接收并作为调用的返回值，或者通过管道传递。\n\n这种机制与*函数式编程*中发生的情况有些相似：它促进了方便的组合。事实上，只要自律地不滥用全局变量，老牌\
+    \ Bash 就可以用于函数式编程。无论如何，滥用全局变量都是一种坏习惯，当你开始使用 `&`（子进程的后台并行执行）时，它注定会带来痛苦的代价。\n\n\
+    现在我们将通过 `case` 命令的示例来演示向任何 Bash 语句进行管道输入和输出。以下文本片段摘自 TokenCrypt 项目 [(4)](https://github.com/liborty/TokenCrypt)。\n\
+    \n它展示了我们如何*切换管道*。也就是说，将所有公共计算提取出来并放在前面。然后将它们的结果管道到 `case` 语句中，在语句内部，每个分支将以其特定的方式继续管道操作。然后，在\
+    \ `case` 语句完成后，我们再次继续通过一个公共路径。也就是说，在这个示例中，将解密解压后的结果写入 `$OUTFILE`。\n\n代码从流 `3`\
+    \ 读取已知 `$FSIZE` 的密钥，用它解密 `$INFILE`，然后根据 `$CH` 的值选择相关的解压方法。最终写入 `$OUTFILE` 的取决于选择了\
+    \ `case` 语句的哪个分支。\n\n```\n 1 head -c $FSIZE <&3 | symcrypt $INFILE | case \"$CH\"\
+    \ in\n 2    h ) hexify;;\n 3    b ) base64 -w 0;;\n 4    i ) lzma -d;;\n 5   \
+    \ j ) lzma -d | hexify;; \n 6    k ) lzma -d | base64 -w 0;; \n 7    l ) zstd\
+    \ -d -c;; \n 8    m ) zstd -d -c | hexify;; \n 9    n ) zstd -d -c | base64 -w\
+    \ 0;;\n10    * ) printf \"$PROGN importfile: unrecognised ch\\n\";\n11       \
+    \ exit 2;;\n12 esac > $OUTFILE\n```\n\n为任何 Bash 语句都可以设置类似的管道。将它们都看作某些数据流的过滤器。\n\
+    \n## 惊叹的算术\n\n公平地说，Bash 的“万物皆字符串”（EIJAS）哲学确实有一个实际的缺点。即：缺乏浮点数算术。\n\n假设我们想要进行简单的浮点数除法\
+    \ `C=$A/$B`。也就是说，我们不满足于 Bash 默认整数除法给出的截断答案，例如“5/2 = 2”，我们希望获得更高的精度（在这种情况下为 2.5）。\n\
+    \n我们可以寻求外部 Linux 工具，如 `awk`、`dc`、`bc` 等，大多数人也是这样做。然而，在 Bash 中嵌入它们的代码有些混乱。这些外部程序提供的大多数功能对于一个简单的单行计算来说是大材小用。此外，我们每次都要为它们启动一个子进程，即使是像这里这样微不足道的例子：\n\
+    \n```\n1 C=$( awk \"BEGIN { print $A / $B }\" )\n```\n\n幸运的是，这里有一种更简单、更高效的替代方案：*定点算术*。作为一个练习，我们现在将在\
+    \ Bash 中实现它。完整源代码可在 [(3)](https://github.com/liborty/fdiv) 中找到。\n\n定点算术用于处理的数字数量级相似的情况，这样它们就不需要维护浮点数的指数。\n\
+    \n两个很好的例子是计算百分比和货币。在这两个常见用例中，小数点具有固定的意义（和位置）。这在许多应用程序中实际上是更优的，因为截断误差更具预测性且可控。\n\
+    \n那么，“尾数”实际上可以扩展到整个 64 位字。请注意，通用的“双精度 IEEE 754 浮点数标准”只有 5 位有效。\n\n## 定点算术中的比例\n\
+    \n比例的计算比百分比更容易。我们通过将临时左移五位小数然后进行普通的除法来获得这种精度。当然，这应该通过某种方式右移这五个小数，以产生最终结果。\n\n\
+    通常情况下，很容易检查我们总是除以两个数字中较大的一个而不是除以零。这足以确保比例始终是正常的且处于 [0,1] 区间。\n\n回到我们的比例应用。以下行调用\
+    \ `du`（磁盘使用）来填充一个名为 `SIZES` 的数组，包含两个目录的大小和名称：\n\n```\n # 创建数组 SIZES[size1, dir1,\
+    \ size2, dir2]\n2 SIZES=$( du -hbs $INDIR $OUTDIR )\n```\n\n接下来我们使用 `printf` 格式将普通整数\
+    \ `%d` 转换为定点数 `0.%5d`。\n\n在 `printf` 格式字符串中，`%s`（字符串）、`%d`（小数）等按顺序由求值参数的实际值（如果有）填充。在这里是两个目录的大小和名称，最后是计算出的比例（`\\\
+    ` 允许代码延续到下一行）：\n\n```\n1 printf \"Output size:\\t%s (%s)\\n\\\n2    Original size:\\\
+    t%s (%s)\\n\\\n3    Compressed to:\\t0.%05d\\n\" \\\n4    ${SIZES[0]} ${SIZES[1]}\
+    \ ${SIZES[2]} ${SIZES[3]} \\\n5      $(( 100000*${SIZES[2]}/${SIZES[0]} ))\n```\n\
+    \n最后一行是实际的定点（整数）计算。我们在这里选择计算五位小数 `比例.%0d`，因此我们，乘以 10000。这五个零对应于我们通过格式字符串输出的五个小数。分子是较小的压缩\
+    \ `$OUTDIR` 的大小，因此真实的比例将小于一。\n\n"
+- fmt: "\nGood plan but how to shift right (divide by 100000), without a numeric type\
+    \ capable of holding those five decimal places of the result? Are we not going\
+    \ around in circles with this?\n\nHere is the trick. We can break out of the circle\
+    \ with simple `textual manipulation`. Forget about dividing back by `100000`.\
+    \ We just textually construct a fixed point number, by prepending onto the integer\
+    \ result the literal string `0.`. We can do this whenever we know that the result\
+    \ is less than one. I bet you missed seeing that trick in the `printf` format\
+    \ string above? Note that this gives us a ‘new fixed point type’, without violating\
+    \ the `EIJ` principle.\n\nAt a stroke of a horrible type-violating magic that\
+    \ would make any modern day compiler die in convulsions, we turned the upscaled\
+    \ integer division result, say `1234`, into `0.01234`. In `Bash` this is not nearly\
+    \ as strange as it may seem, as everything returns only strings, anyway.\n\nOf\
+    \ course, any leading zeroes after the decimal point are significant, so we have\
+    \ to pad on the left with them. The leading zero after `%` in the format string\
+    \ `\"%05d\"` does just that.\n\nThe digit `5` (significant places) always has\
+    \ to agree with the number of zeroes in our multiplication left shifting factor,\
+    \ in this case `100000`. It should be assigned to a variable, say `SIGDIGITS=5`\
+    \ and used as `\"%0$SIGDIGITSd\"` in the formatting string and as `10**$SIGDIGITS`\
+    \ in the scaling factor, thus avoiding any potential oversight mismatch problems.\n\
+    \n## Percentages (in integer arithmetic)\n\nSimilarly, the following prints the\
+    \ compression ratio (CR) as a percentage of the original size, rounded to the\
+    \ nearest one hundredth of a percent. All done in integer arithmetic:\n\n```bash\n\
+    \ 1 # compression ratio as a percentage: xx.xx%\n 2 # multiplying by 10**5, then\
+    \ taking the ratio,\n 3 # adding 5 and dividing by 10,\n 4 # rounds to one hundredth\
+    \ of one percent.\n 5 # SIZES is an array holding: size1,dir1,size2,dir2\n 6 SIZES=$(\
+    \ du -bs $INDIR $OUTDIR ) \n 7 printf \"$PROGN: ${SIZES[1]} ${SIZES[0]} \"\n 8\
+    \ printf \"=> ${SIZES[3]} ${SIZES[2]} \"\n 9 if [ ${SIZES[0]} = ${SIZES[2]} ];\
+    \ then \n10    printf \"(100 %%)\\n\"\n11 else\n12    # calculate percentage rounded\
+    \ to two decimal places\n13    CR=$(( (5+100000*${SIZES[2]}/${SIZES[0]})/10 ))\n\
+    14    # compression ratio printed as xx.xx%\n15    printf \"(${CR: 0:2}.${CR:\
+    \ 2:4} %%)\\n\" \n16 fi\n```\n\nHere we are not using the `printf` format string\
+    \ substitution but directly constructing the percentage number by selecting the\
+    \ first two digits of `$CR`, then splicing in the decimal point character, and\
+    \ ending up with the next two digits: `${CR: 0:2}.${CR: 2:4}`. The selection of\
+    \ individual characters and their ranges is one of the functions available in\
+    \ variable expansion `${CR}`.\n\n`Bash` is perfect for such textual hacks, precisely\
+    \ because ‘everything is just a string’.\n\n## General division\n\nIt could be\
+    \ objected that these are just specialised printing tricks and that numbers are\
+    \ not of much use unless we can do general calculations with them. Can we therefore\
+    \ write a `Bash` function that will do the division without any predetermined\
+    \ hard coded number of decimal places? Ideally, always giving the maximum precision\
+    \ possible?\n\nLet us call that function `fdiv`. Here are some more detailed requirements\
+    \ for it:\n\n* `fdiv` `bash` script takes two integer arguments: `numerator` and\
+    \ `denominator`. It checks the arguments and returns errors if they are missing\
+    \ or not integers or the divisor (`denominator`) is zero. It deals correctly with\
+    \ negative argument(s).\n\n* it returns a fixed point number division result to\
+    \ the best possible precision allowed by up to two 64 bit integers, rounded to\
+    \ the nearest next digit, for example:\n\n```\n1    fdiv -2 -3\n2    0.666666666666666667\
+    \  \n3    fdiv 355 113\n4    3.14159222035398230\n```\n\n* When the `numerator`\
+    \ is zero, `0.0` is immediately returned.\n\n* Automatically calculates with the\
+    \ maximum precision. Truncation error will be less than `5E-19`.\n\n* When `numerator\
+    \ > denominator,` then the answer is composed from the whole number (`numerator/denominator`\
+    \ integer division), followed by the decimal point and then the upscaled remainder\
+    \ divided by the `denominator`. The last part is less than one and therefore gives\
+    \ the digits after the decimal point, similarly to ‘Fixed Point Ratio’ section\
+    \ above. Overall, this maintains the `5E-19` guaranteed precision even for some\
+    \ quite large numbers. For example:\n\n```\n1    fdiv $(( 2**63-1 )) 3\n2    3074457345618258602.333333333333333333\n\
+    ```\n\n* When the `denominator` is divisible by 10, or its multiples, then the\
+    \ decimal precision can be also increased, this time by the relevant number of\
+    \ zeroes inserted after the decimal point. In the following:\n\n```bash\n#!/bin/bash\n\
+    # Adding fixed point\n\n# check arguments\nif [[ -z \"$1\" || -z \"$2\" ]]; then\n\
+    \    printf \"error: needs two arguments\\n\"\n    exit 1\nfi\n\nif ! [[ \"$1\"\
+    \ =~ ^-?[0-9]+$ ]] || ! [[ \"$2\" =~ ^-?[0-9]+$ ]]; then\n    printf \"error:\
+    \ must be integers\\n\"\n    exit 1\nfi\n\nif [[ \"$2\" -eq 0 ]]; then\n    printf\
+    \ \"error: divisor cannot be zero\\n\"\n    exit 1\nfi\n\n# parse both into whole\
+    \ and fractional parts\nARR1=(${1//./})\nARR2=(${2//./})\nF1=${ARR1[1]}\nF2=${ARR2[1]}\n\
+    \n# swap fractional parts so that $F1 is the longer\n[[ ${#F1} -lt ${#F2} ]] &&\
+    \ { \n    FT=$F1; F1=$F2; F2=$FT\n}\nLF2=${#F2} # save the shorter length\n\n\
+    # strip trailing zeroes from the longer F1 while longer\nwhile [[ ${#F1} -gt $LF2\
+    \ ]]; do\n    [[ ${F1: -1:1} == 0 ]] && F1=${F1:0:-1} || break\ndone\nLF1=${#F1}\
+    \ # finished chopping F1 now\n\n# and/or pad the shorter F2 with rhs zeroes\n\
+    # until the same length\nwhile [[ $LF1 -gt ${#F2} ]]; do F2=${F2}0; done\n\n#\
+    \ do the adding\nWHOLE=$(( ${ARR1[0]}+${ARR2[0]} ))\nFRACT=$(( $F1+$F2 ))\n\n\
+    # check for fractional overflow i.e. >= 1\n[[ ${#FRACT} -gt $LF1 ]] && {\n   \
+    \ let WHOLE+=${FRACT:0:1}\n    FRACT=${FRACT:1}\n}\necho $WHOLE.$FRACT \n```\n\
+    \nProject for the reader: implement a similar script `fsub`, that will carry out\
+    \ subtraction of these fixed point numbers. Hint: begin by copying this code `https://github.com/liborty/fdiv/blob/master/fadd`\
+    \ and then just suitably modify it.\n"
+  raw: "Good plan but how to shift right (divide by 100000), without a numeric type\
+    \ capable of holding those five decimal places of the result? Are we not going\
+    \ around in circles with this?\n\nHere is the trick. We can break out of the circle\
+    \ with simple *textual manipulation*. Forget about dividing back by 100000\\.\
+    \ We just textually construct a fixed point number, by prepending onto the integer\
+    \ result the literal string `0.`. We can do this whenever we know that the result\
+    \ is less than one. I bet you missed seeing that trick in the `printf` format\
+    \ string above? Note that this gives us a ‘new fixed point type’, without violating\
+    \ the EIJAS principle.\n\nAt a stroke of a horrible type-violating magic that\
+    \ would make any modern day compiler die in convulsions, we turned the upscaled\
+    \ integer division result, say `1234`, into `0.01234`. In Bash this is not nearly\
+    \ as strange as it may seem, as everything returns only strings, anyway.\n\nOf\
+    \ course, any leading zeroes after the decimal point are significant, so we have\
+    \ to pad on the left with them. The leading zero after `%` in the format string\
+    \ `\"%05d\"` does just that.\n\nThe digit `5` (significant places) always has\
+    \ to agree with the number of zeroes in our multiplication left shifting factor,\
+    \ in this case `100000`. It should be assigned to a variable, say `SIGDIGITS=5`\
+    \ and used as `\"%0$SIGDIGITSd\"` in the formatting string and as `10**$SIGDIGITS`\
+    \ in the scaling factor, thus avoiding any potential oversight mismatch problems.\n\
+    \n## Percentages (in integer arithmetic)\n\nSimilarly, the following prints the\
+    \ compression ratio (CR) as a percentage of the original size, rounded to the\
+    \ nearest one hundredth of a percent. All done in integer arithmetic:\n\n```\n\
+    \ 1 # compression ratio as a percentage: xx.xx%\n 2 # multiplying by 10**5, then\
+    \ taking the ratio,\n 3 # adding 5 and dividing by 10,\n 4 # rounds to one hundredth\
+    \ of one percent.\n 5 # SIZES is an array holding: size1,dir1,size2,dir2\n 6 SIZES=$(\
+    \ du -bs $INDIR $OUTDIR ) \n 7 printf \"$PROGN: ${SIZES[1]} ${SIZES[0]} \"\n 8\
+    \ printf \"=> ${SIZES[3]} ${SIZES[2]} \"\n 9 if [ ${SIZES[0]} = ${SIZES[2]} ];\
+    \ then \n10    printf \"(100 %%)\\n\"\n11 else\n12    # calculate percentage rounded\
+    \ to two decimal places\n13    CR=$(( (5+100000*${SIZES[2]}/${SIZES[0]})/10 ))\n\
+    14    # compression ratio printed as xx.xx%\n15    printf \"(${CR: 0:2}.${CR:\
+    \ 2:4} %%)\\n\" \n16 fi\n```\n\nHere we are not using the printf format string\
+    \ substitution but directly constructing the percentage number by selecting the\
+    \ first two digits of `$CR`, then splicing in the decimal point character, and\
+    \ ending up with the next two digits: `${CR: 0:2}.${CR: 2:4}`. The selection of\
+    \ individual characters and their ranges is one of the functions available in\
+    \ variable expansion `${CR}`.\n\nBash is perfect for such textual hacks, precisely\
+    \ because ‘everything is just a string’.\n\n## General division\n\nIt could be\
+    \ objected that these are just specialised printing tricks and that numbers are\
+    \ not of much use unless we can do general calculations with them. Can we therefore\
+    \ write a Bash function that will do the division without any predetermined hard\
+    \ coded number of decimal places? Ideally, always giving the maximum precision\
+    \ possible?\n\nLet us call that function `fdiv`. Here are some more detailed requirements\
+    \ for it:\n\n*   `fdiv` bash script takes two integer arguments: numerator and\
+    \ denominator. It checks the arguments and returns errors if they are missing\
+    \ or not integers or the divisor (denominator) is zero. It deals correctly with\
+    \ negative argument(s).\n\n*   it returns a fixed point number division result\
+    \ to the best possible precision allowed by up to two 64 bit integers, rounded\
+    \ to the nearest next digit, for example:\n\n```\n1    fdiv -2 -3\n2    0.666666666666666667\
+    \  \n3    fdiv 355 113\n4    3.14159292035398230\n```\n\n*   When the numerator\
+    \ is zero, 0.0 is immediately returned.\n\n*   Automatically calculates with the\
+    \ maximum precision. Truncation error will be less than 5E-19.\n\n*   When `numerator\
+    \ > denominator,` then the answer is composed from the whole number (numerator/denominator\
+    \ integer division), followed by the decimal point and then the upscaled remainder\
+    \ divided by the denominator. The last part is less than one and therefore gives\
+    \ the digits after the decimal point, similarly to ‘Fixed Point Ratio’ section\
+    \ above. Overall, this maintains the 5E-19 guaranteed precision even for some\
+    \ quite large numbers. For example:\n\n```\n1    fdiv $(( 2**63-1 )) 3\n2    3074457345618258602.333333333333333333\n\
+    ```\n\n*   When the denominator is divisible by 10, or its multiples, then the\
+    \ decimal precision can be also increased, this time by the relevant number of\
+    \ zeroes inserted after the decimal point. In the following example, the truncation\
+    \ error is now less than 5E-22:\n\n```\n1     fdiv 5 30000\n2     0.0001666666666666666667\n\
+    ```\n\nWe could do this zero shuffling just as well in binary by detecting divisibility\
+    \ by two but this is easier for demonstration purposes. In fact, that is just\
+    \ what the floating point arithmetic does, where the exponent represents ‘the\
+    \ balance of the zeroes’. In general, the cleanest method (though not the fastest)\
+    \ is to carry out Euclid’s greatest common divisor (GCD) algorithm and to eliminate\
+    \ (all) common multiples first. However, here it is not necessary, as they will\
+    \ be eliminated much faster by the integer divisions anyway. With our method of\
+    \ transferring denominator zeroes we in fact gain significant digits.\n\nNote\
+    \ that `fdiv` is not like Bignum package using an unlimited number of computer\
+    \ words. Therefore, apart from the zeroes transfer trick, there are natural limits\
+    \ to the number of significant digits that can be produced, namely two 64 bit\
+    \ words. Still, that is quite a lot better than the 52 bits of the ‘double precision’\
+    \ standard floating point mantissa.\n\n## Adding fixed point numbers\n\nWithout\
+    \ wishing to labour the point, we ought to also demonstrate that we can do arithmetic\
+    \ on these fixed point numbers. The next script, `fadd`, shows their addition.\
+    \ It is an instructive exercise in Bash textual manipulation for the unlikely\
+    \ purpose of arithmetic:\n\n```\n 1 #!/bin/bash\n 2 # fadd takes two positive\
+    \ fixed point arguments \n 3 # each of the form whole.fract\n 4 # and returns\
+    \ a fixed point number addition result \n 5 # for example: fadd 9.876543 0.987\
+    \ 10.863543\n 6 \n 7 PROGN=${0##*/}\n 8 MAXINT=9223372036854775807 # 2**63-1\n\
+    \ 9 \n10 # arguments verification\n11 NUM1=${1:?$PROGN needs fnum first argument}\n\
+    12 NUM2=${2:?$PROGN needs fnum second argument}\n13 [[ $NUM1 =~ ^[+-]?[0-9]+[.][0-9]+$\
+    \ ]] || { printf \\\n14    \"$PROGN error: first argument $NUM1 is not an fnum\\\
+    n\";\n15    exit 2\n16 }\n17 [[ $NUM2 =~ ^[+-]?[0-9]+[.][0-9]+$ ]] || { printf\
+    \ \\\n18    \"$PROGN error: second argument $NUM2 is not an fnum\\n\";\n19   \
+    \ exit 2\n20 }\n21 \n22 # parse both args into whole and fractional parts\n23\
+    \ ARR1=(${NUM1//./ })\n24 ARR2=(${NUM2//./ })\n25 F1=${ARR1[1]}\n26 F2=${ARR2[1]}\n\
+    27 \n28 # swap fractional parts so that $F1 is the longer\n29 [[ ${#F1} -lt ${#F2}\
+    \ ]] && { \n30    FT=$F1; F1=$F2; F2=$FT\n31 } \n32 LF2=${#F2} #  save the shorter\
+    \ length\n33 \n34 # strip trailing zeroes from the longer F1 while longer\n35\
+    \ while [[ ${#F1} -gt $LF2 ]]; do\n36 [[ ${F1: -1:1} == 0 ]] && F1=${F1:0:-1}\
+    \ || break\n37 done\n38 LF1=${#F1} # finished chopping F1 now\n39 \n40 # and/or\
+    \ pad the shorter F2 with rhs zeroes\n41 # until of the same length\n42 while\
+    \ [[ $LF1 -gt ${#F2} ]]; do F2=${F2}0; done\n43 \n44 # do the adding \n45 WHOLE=$((\
+    \ ${ARR1[0]}+${ARR2[0]} ))\n46 FRACT=$(( $F1+$F2 ))\n47 \n48 # check for fractional\
+    \ overflow i.e. >= 1\n49 [[ ${#FRACT} -gt $LF1 ]] && {\n50    let WHOLE+=${FRACT:0:1}\n\
+    51    FRACT=${FRACT:1}\n52 }\n53 expr $WHOLE.$FRACT \n```\n\nProject for the reader:\
+    \ implement a similar script `fsub`, that will carry out subtraction of these\
+    \ fixed point numbers. Hint: begin by copying this code [(9)](https://github.com/liborty/fdiv/blob/master/fadd)\
+    \ and then just suitably modify it.\n\n# Subshell Scheduling"
+  toc: []
+  trans: "\n好计划，但如何右移（除以 100000）呢，而且在没有能够容纳结果后五位小数的数值类型的情况下？我们不是在绕圈子吗？\n\n这里有一个技巧。我们可以通过简单的`文本操作`跳出这个循环。忘记再除回\
+    \ `100000` 吧。我们只需要在整数结果前面加上字面量字符串 `0.`，通过文本方式构造一个定点数。每当我们知道结果小于 1 时，就可以这样做。我敢打赌你错过了上面\
+    \ `printf` 格式化字符串中的那个技巧？请注意，这为我们提供了一个“新的定点类型”，且没有违反 `EIJ` 原则。\n\n通过一种会让任何现代编译器都会在抽搐中死掉的、糟糕且违反类型的魔法，我们将放大后的整数除法结果（例如\
+    \ `1234`）转换成了 `0.01234`。在 `Bash` 中，这并不像看起来那么奇怪，因为反正一切返回的都是字符串。\n\n当然，小数点后的任何前导零是有意义的，所以我们必须在左侧填充这些零。格式化字符串\
+    \ `\"%05d\"` 中 `%` 之后的前导零正是为此。\n\n数字 `5`（有效位数）必须与我们乘法左移因子中的零的数量一致，在本例中为 `100000`。它应该被赋值给变量，例如\
+    \ `SIGDIGITS=5`，并在格式化字符串中使用 `\"%0$SIGDIGITSd\"`，在缩放因子中使用 `10**$SIGDIGITS`，从而避免任何潜在的视觉不匹配问题。\n\
+    \n## 百分比（整数运算中）\n\n同样，以下代码将压缩率（CR）打印为原始大小的百分比，并四舍五入到最近的百分分之一。全部通过整数运算完成：\n\n```bash\n\
+    \ 1 # 百分比压缩率：xx.xx%\n 2 # 乘以 10**5，然后取比例，\n 3 # 加上 5 并除以 10，\n 4 # 四舍五入到百分之分之一。\n\
+    \ 5 # SIZES 是一个存储：size1,dir1,size2,dir2 的数组\n 6 SIZES=$( du -bs $INDIR $OUTDIR\
+    \ ) \n 7 printf \"$PROGN: ${SIZES[1]} ${SIZES[0]} \"\n 8 printf \"=> ${SIZES[3]}\
+    \ ${SIZES[2]} \"\n 9 if [ ${SIZES[0]} = ${SIZES[2]} ]; then \n10    printf \"\
+    (100 %%)\\n\"\n11 else\n12    # 计算保留两位小数的百分比\n13    CR=$(( (5+100000*${SIZES[2]}/${SIZES[0]})/10\
+    \ ))\n14    # 压缩率以 xx.xx% 格式打印\n15    printf \"(${CR: 0:2}.${CR: 2:4} %%)\\n\"\
+    \ \n16 fi\n```\n\n在这里，我们没有使用 `printf` 格式化字符串替换，而是通过选择 `$CR` 的前两个数字、拼接小数点字符、最后加上接两个数字来直接构造百分比数字：`${CR:\
+    \ 0:2}.${CR: 2:4}`。单个字符及其范围的选择是变量扩展 `${CR}` 可用功能之一。\n\n`Bash` 非常适合这种文本黑客技巧，正因为“一切都只是字符串”。\n\
+    \n## 通用除法\n\n有人可能会反对认为这些只是特殊的打印技巧，除非我们能对数字进行通用计算，否则数字并没有太大用。我们是否可以写一个 `Bash` 函数，在没有预设硬编码小数位数的情况下进行除法？理想情况下，始终提供可能的精度？\n\
+    \n让我们该函数命名为 `fdiv`。以下是对它更详细的要求：\n\n* `fdiv` `bash` 脚本接受两个整数参数：`numerator`（分子）和\
+    \ `denominator`（除数）。它检查参数，如果缺失、不是整数或除数（`denominator`）为零，则返回错误。它能正确处理负参数。\n\n*\
+    \ 它返回一个定点数除法结果，精度达到两个 64 位整数允许的最佳精度，四舍五入到最近的一位，例如：\n\n```\n1    fdiv -2 -3\n2\
+    \    0.666666666666666667  \n3    fdiv 355 113\n4    3.14159222035398230\n```\n\
+    \n* 当 `numerator` 为 0 时，立即返回 `0.0`。\n\n* 自动以最高精度计算。截断误差将小于 `5E-19`。\n\n* 当 `numerator\
+    \ > denominator` 时，答案由整数（`numerator/denominator` 整数除法）组成，后面跟着小数点，然后是放大后的余数除以 `denominator`。最后部分小于\
+    \ 1，因此提供了小数点后的数字，类似于上面的“定点比率”部分。总体而言，即使对于某些非常大的数字，这也保持了 `5E-19` 的保证精度。例如：\n\n\
+    ```\n1    fdiv $(( 2**63-1 )) 3\n2    3074457345618258602.333333333333333333\n\
+    ```\n\n* 当 `denominator` 可以被 10 或其倍数整除时，小数精度也可以增加，这次是在小数点后插入相应数量的零。在如下：\n\n```bash\n\
+    #!/bin/bash\n# 添加定点\n\n# 检查参数\nif [[ -z \"$1\" || -z \"$2\" ]]; then\n    printf\
+    \ \"error: needs two arguments\\n\"\n    exit 1\nfi\n\nif ! [[ \"$1\" =~ ^-?[0-9]+$\
+    \ ]] || ! [[ \"$2\" =~ ^-?[0-9]+$ ]]; then\n    printf \"error: must be integers\\\
+    n\"\n    exit 1\nfi\n\nif [[ \"$2\" -eq 0 ]]; then\n    printf \"error: divisor\
+    \ cannot be zero\\n\"\n    exit 1\nfi\n\n# 将两者解析为整数部分和小数部分\nARR1=(${1//./})\n\
+    ARR2=(${2//./})\nF1=${ARR1[1]}\nF2=${ARR2[1]}\n\n# 交换小数部分使 $F1 更长\n[[ ${#F1} -lt\
+    \ ${#F2} ]] && { \n    FT=$F1; F1=$F2; F2=$FT\n}\nLF2=${#F2} # 保存较短的长度\n\n# 从较长的\
+    \ F1 中删除末尾零，直到不再较长\nwhile [[ ${#F1} -gt $LF2 ]]; do\n    [[ ${F1: -1:1} == 0 ]]\
+    \ && F1=${F1:0:-1} || break\ndone\nLF1=${#F1} # 现在完成对 F1 的裁剪\n\n# 在较短的 F2 右侧补零，直到长度相同\n\
+    while [[ $LF1 -gt ${#F2} ]]; do F2=${F2}0; done\n\n# 执行加法\nWHOLE=$(( ${ARR1[0]}+${ARR2[0]}\
+    \ ))\nFRACT=$(( $F1+$F2 ))\n\n# 检查小数溢出，即 >= 1\n[[ ${#FRACT} -gt $LF1 ]] && {\n\
+    \    let WHOLE+=${FRACT:0:1}\n    FRACT=${FRACT:1}\n}\necho $WHOLE.$FRACT \n```\n\
+    \n给读者的作业：实现一个类似的脚本 `fsub`，执行这些定点数的减法。提示：先复制这段代码 `https://github.com/liborty/fdiv/blob/master/fadd`，然后对其进行适当修改。\n"
+- fmt: "\nAs has been outlined before, running processes in the background with `&`,\
+    \ potentially in a different processor core, while we get on with the job on hand,\
+    \ is an important part of Bash. It always has been but lately, with multicore\
+    \ processors being the norm, it has become more topical. When you have thirty\
+    \ two or more cores sitting in your processor, most of them so to speak ‘twiddling\
+    \ their thumbs’, it behoves a responsible programmer to think of ways of spreading\
+    \ the jobs around.\n\n## Automatic multithreading\n\nMany Bash applications just\
+    \ handle lots of files. As does, for example, the open-source github project `TokenCrypt`,\
+    \ [(4)](https://github.com/liborty/TokenCrypt). Many of the tasks depend on the\
+    \ file alone and so they can be run in parallel. Disk bottlenecks may limit the\
+    \ expected speedups but we will not worry about them here.\n\nHere we shall see\
+    \ how to automate the spawning of background jobs within a Bash script. This technique\
+    \ is of general use and it can speed up many naturally parallel tasks, such as\
+    \ the processing of several files.\n\nA better way of doing intricate multithreaded\
+    \ and asynchronous programming (and many other things besides) is Rust, of course.\
+    \ However, Bash remains by far the easiest for simple tasks.\n\n## Rant about\
+    \ security and privacy\n\nThis project was born out of frustration with the state\
+    \ of encryption on the internet. Many of the offerings appear to be achieving\
+    \ only the objectives of obfuscation and insecurity. Amongst them even some well\
+    \ intentioned ones.\n\nHowever, there is a very simple and effective alternative:\
+    \ XOR symmetric encryption. Symmetric means that the same key is used for both\
+    \ encryption and decryption, which much simplifies the key management. It also\
+    \ allows such useful operations as merging of keys for multi authorisations.\n\
+    \nFurthermore, with the key of the same length as the message, this encryption\
+    \ is theoretically unbreakable, i.e., the strongest possible. It is implemented\
+    \ in `TokenCrypt` in an easily usable form.\n\nThere is one reasonable objection,\
+    \ that generating such long keys in effect doubles the amount of storage needed.\
+    \ This is mitigated by compressing the files first and some care is taken to do\
+    \ it effectively. So, for example, with 50% compression achieved, there is no\
+    \ storage overhead at all. In any case, disks are cheap and the security is worth\
+    \ it even with some overhead. On the plus side, the encryption and decryption\
+    \ are very fast, being so simple.\n\n## Encrypting many files faster\n\nThe tasks\
+    \ of compressing, encrypting, decompressing and decrypting all the files in a\
+    \ given directory are clearly I/O bound. They only depend on one file at a time,\
+    \ so can be performed in parallel, without communications between them.\n\nThe\
+    \ most suitable compression method is selected and applied for each file individually\
+    \ and also the key of the right length is generated on encryption or looked up\
+    \ on decryption. The code is general enough to take care of this. We will not\
+    \ dwell on the details here, they can be found in [(4)](https://github.com/liborty/TokenCrypt),\
+    \ [(5)](https://github.com/liborty/TokenCrypt/ncrpt), [(6)](https://github.com/liborty/TokenCrypt/expcrypt),\
+    \ [(7)](https://github.com/liborty/TokenCrypt/impcrypt).\n\nOur aim is to fire\
+    \ off background jobs for longer files first and leave the shorter ones to be\
+    \ processed in the current shell in the end, to avoid the subshell overheads for\
+    \ them. This will minimise the overall script execution time. We also want simple\
+    \ code without too many tests and complicated ‘if’ statements.\n\nFirst the script\
+    \ arguments and flags are processed and used to set up the correct input and output\
+    \ directories. Then the input files are sorted by their lengths:\n\n```\n1 # size\
+    \ of files to be encrypted in the subshells\n2 BACKSZ=10000 \n3 # list sorted\
+    \ files in INDIR by size (in bytes)\n4 ITEMS=$(ls -SL $INDIR)\n5 # prepare to\
+    \ fire off subshells\n6 BJ=\\&\n```\n\nThe last line above is a wondrous hack\
+    \ to set up the default textual command ending `$BJ` to `&`.\n\nThis will cause\
+    \ jobs over big files, followed by “$BJ”, to be run in the background subshell,\
+    \ to start with.\n\nWhat remains now is to process all the files in the order\
+    \ of their decreasing size and when the threshold `BACKSZ` is reached, permanently\
+    \ turn off the sub-shelling with `BJ=''`:\n\n```\n 1 for FILEND in $ITEMS; do\n\
+    \ 2    # reconstruct one full path/filename\n 3    INFILE=$INDIR/$FILEND \n 4\
+    \    # only process a genuine file\n 5    [ -f \"$INFILE\" ] || continue \n 6\
+    \    # turn off subshells when file size falls \n 7    # below the threshold BACKSZ\n\
+    \ 8    # once $BJ has been set to an empty string, \n 9    # do not check filesizes\
+    \ any more\n10    [ -z \"$BJ\" ] || \\\n11    [ $( stat -c%s $INFILE ) -ge $BACKSZ\
+    \ ] || BJ='' \n12    # the function that processes one file\n 13    # either in\
+    \ the background or in this shell\n 14    # depending on the value of $BJ\n 15\
+    \    processfile $INFILE $BJ \n 16 done\n17 wait # for all processfiles to finish\n\
+    ```\n\nRemember that Bash functions are executed in a sub shell when their invocation\
+    \ ends in `&`. When `$BJ` variable is programmatically unset, its value simply\
+    \ disappears from the program text and executions of `processfile` are thereafter\
+    \ done in the current shell.\n\nSelf modifying program, ha! (The beautitudes of\
+    \ EIJAS in Bash).\n\nWe use logical or `||` instead of `if`. It only executes\
+    \ the last command, unsetting `BJ=''`, once `$BJ` was still set to `&` but the\
+    \ size of the current `$INFILE` has fallen below the threshold. The only check\
+    \ performed thereafter is the first part: `[ -z \"$BJ\" ]` evaluates to true and\
+    \ exits immediately. If there are lots of short files, it saves the relatively\
+    \ expensive `stat` system calls on all the rest of them.\n\nOf course, in this\
+    \ simple example, we could have achieved the same effect by testing `$BJ` in an\
+    \ `if` statement and issuing two explicit calls to `processfile`, as follows:\n\
+    \n```\n1 if [ -n \"$BJ\" ]; then\n2    processfile $INFILE &\n3 else\n4    processfile\
+    \ $INFILE\n5 fi\n```\n\nbut we wanted to demonstrate the general opportunities\
+    \ in Bash for self-modification.\n\nPossibly the most exciting thing about Bash\
+    \ is just how quickly we were able to move with this book ‘from zero to hero’.\
+    \ gain confidence and to start implementing practical projects that would actually\
+    \ be quite challenging and long winded to do in most modern languages.\n\nSome\
+    \ modern languages, of which Rust is a prime example, produce rather the opposite\
+    \ experience of going ‘from hero to zero’. That is to say, from a confident programmer\
+    \ who has previously mastered a number of languages, to a human wreck feeling\
+    \ very much at the deep end, with snail pace productivity. Don’t get me wrong,\
+    \ I love Rust really and will probably write my next book about it.\n\nAnother\
+    \ anecdote in a similar vein used to be told about Java when that one first came\
+    \ out: “have you heard of this wonderful new language, in which you can print\
+    \ ‘hello world’ in mere five pages of code”?\n"
+  raw: "As has been outlined before, running processes in the background with `&`,\
+    \ potentially in a different processor core, while we get on with the job on hand,\
+    \ is an important part of Bash. It always has been but lately, with multicore\
+    \ processors being the norm, it has become more topical. When you have thirty\
+    \ two or more cores sitting in your processor, most of them so to speak ‘twiddling\
+    \ their thumbs’, it behoves a responsible programmer to think of ways of spreading\
+    \ the jobs around.\n\n## Automatic multithreading\n\nMany Bash applications just\
+    \ handle lots of files. As does, for example, the open-source github project TokenCrypt,\
+    \ [(4)](https://github.com/liborty/TokenCrypt). Many of the tasks depend on the\
+    \ file alone and so they can be run in parallel. Disk bottlenecks may limit the\
+    \ expected speedups but we will not worry about them here.\n\nHere we shall see\
+    \ how to automate the spawning of background jobs within a Bash script. This technique\
+    \ is of general use and it can speed up many naturally parallel tasks, such as\
+    \ the processing of several files.\n\nA better way of doing intricate multithreaded\
+    \ and asynchronous programming (and many other things besides) is Rust, of course.\
+    \ However, Bash remains by far the easiest for simple tasks.\n\n## Rant about\
+    \ security and privacy\n\nThis project was born out of frustration with the state\
+    \ of encryption on the internet. Many of the offerings appear to be achieving\
+    \ only the objectives of obfuscation and insecurity. Amongst them even some well\
+    \ intentioned ones.\n\nHowever, there is a very simple and effective alternative:\
+    \ XOR symmetric encryption. Symmetric means that the same key is used for both\
+    \ encryption and decryption, which much simplifies the key management. It also\
+    \ allows such useful operations as merging of keys for multi authorisations.\n\
+    \nFurthermore, with the key of the same length as the message, this encryption\
+    \ is theoretically unbreakable, i.e. the strongest possible. It is implemented\
+    \ in TokenCrypt in an easily usable form.\n\nThere is one reasonable objection,\
+    \ that generating such long keys in effect doubles the amount of storage needed.\
+    \ This is mitigated by compressing the files first and some care is taken to do\
+    \ it effectively. So, for example, with 50% compression achieved, there is no\
+    \ storage overhead at all. In any case, disks are cheap and the security is worth\
+    \ it even with some overhead. On the plus side, the encryption and decryption\
+    \ are very fast, being so simple.\n\n## Encrypting many files faster\n\nThe tasks\
+    \ of compressing, encrypting, decompressing and decrypting all the files in a\
+    \ given directory are clearly I/O bound. They only depend on one file at a time,\
+    \ so can be performed in parallel, without communications between them.\n\nThe\
+    \ most suitable compression method is selected and applied for each file individually\
+    \ and also the key of the right length is generated on encryption or looked up\
+    \ on decryption. The code is general enough to take care of this. We will not\
+    \ dwell on the details here, they can be found in [(4)](https://github.com/liborty/TokenCrypt),\
+    \ [(5)](https://github.com/liborty/TokenCrypt/ncrpt), [(6)](https://github.com/liborty/TokenCrypt/expcrypt),\
+    \ [(7)](https://github.com/liborty/TokenCrypt/impcrypt).\n\nOur aim is to fire\
+    \ off background jobs for longer files first and leave the shorter ones to be\
+    \ processed in the current shell in the end, to avoid the subshell overheads for\
+    \ them. This will minimise the overall script execution time. We also want simple\
+    \ code without too many tests and complicated ‘if’ statements.\n\nFirst the script\
+    \ arguments and flags are processed and used to set up the correct input and output\
+    \ directories. Then the input files are sorted by their lengths:\n\n```\n1 # size\
+    \ of files to be encrypted in the subshells\n2 BACKSZ=10000 \n3 # list sorted\
+    \ files in INDIR by size (in bytes)\n4 ITEMS=$(ls -SL $INDIR)\n5 # prepare to\
+    \ fire off subshells\n6 BJ=\\&\n```\n\nThe last line above is a wondrous hack\
+    \ to set up the default textual command ending `$BJ` to `&`.\n\nThis will cause\
+    \ jobs over big files, followed by “$BJ”, to be run in the background subshell,\
+    \ to start with.\n\nWhat remains now is to process all the files in the order\
+    \ of their decreasing size and when the threshold `BACKSZ` is reached, permanently\
+    \ turn off the sub-shelling with `BJ=''`:\n\n```\n 1 for FILEND in $ITEMS; do\n\
+    \ 2    # reconstruct one full path/filename\n 3    INFILE=$INDIR/$FILEND \n 4\
+    \    # only process a genuine file\n 5    [ -f \"$INFILE\" ] || continue \n 6\
+    \    # turn off subshells when file size falls \n 7    # below the threshold BACKSZ\n\
+    \ 8    # once $BJ has been set to an empty string, \n 9    # do not check filesizes\
+    \ any more\n10    [ -z \"$BJ\" ] || \\\n11    [ $( stat -c%s $INFILE ) -ge $BACKSZ\
+    \ ] || BJ='' \n12    # the function that processes one file\n13    # either in\
+    \ the background or in this shell\n14    # depending on the value of $BJ\n15 \
+    \   processfile $INFILE $BJ \n16 done\n17 wait # for all processfiles to finish\n\
+    ```\n\nRemember that Bash functions are executed in a sub shell when their invocation\
+    \ ends in `&`. When `$BJ` variable is programmatically unset, its value simply\
+    \ disappears from the program text and executions of `processfile` are thereafter\
+    \ done in the current shell.\n\nSelf modifying program, ha! (The beautitudes of\
+    \ EIJAS in Bash).\n\nWe use logical or `||` instead of `if`. It only executes\
+    \ the last command, unsetting `BJ=''`, once. When `$BJ` was still set to `&` but\
+    \ the size of the current `$INFILE` has fallen below the threshold `$BACKSZ`.\
+    \ The only check performed thereafter is the first part: `[ -z \"$BJ\" ]` is `$BJ`\
+    \ unset? (evaluates to true and exits `||` immediately). If there are lots of\
+    \ short files, it saves the relatively expensive `stat` system calls on all the\
+    \ rest of them. They are already sorted, so none of them will exceed the threshold\
+    \ any more.\n\nOf course, in this simple example, we could have achieved the same\
+    \ effect by testing $BJ in an if statement and issuing two different explicit\
+    \ calls to `processfile`, as follows:\n\n```\n1 if [ -n \"$BJ\" ]; then\n2   \
+    \ processfile $INFILE &\n3 else\n4    processfile $INFILE\n5 fi\n```\n\nbut we\
+    \ wanted to demonstrate the general opportunities in Bash programs for self-modification.\n\
+    \nHopefully, it can be seen that without too much extra difficulty, we could set\
+    \ up a fully fledged scheduler with a managed queue of jobs with priorities and\
+    \ a dispatcher for their execution. However, mostly people use a ‘gunshot’ technique\
+    \ of firing off almost anything and everything with & and letting the operating\
+    \ system take care of the details of their executions.\n\nNonetheless, as pointed\
+    \ out above, we need to be careful about disrupting any sequential inputs/outputs\
+    \ and generally anything that has to be done in specific order.\n\n# Conclusion\n\
+    \nPossibly the most exciting thing about Bash is just how quickly we were able\
+    \ to move with this book ‘from zero to hero’ . That means gain confidence and\
+    \ to start implementing practical projects that would actually be quite challenging\
+    \ and long winded to do in most modern programming languages.\n\nSome modern languages,\
+    \ of which Rust is a prime example, produce rather the opposite experience of\
+    \ going ‘from hero to zero’. That is to say, from a confident programmer who has\
+    \ previously mastered a number of languages, to a human wreck feeling very much\
+    \ at the deep end, with snail pace productivity. Don’t get me wrong, I love Rust\
+    \ really and will probably write my next book about it.\n\nAnother anecdote in\
+    \ a similar vein used to be told about Java when that one first came out: “have\
+    \ you heard of this wonderful new language, in which you can print ‘hello world’\
+    \ in mere five pages of code”?"
+  toc: []
+  trans: "\n如前所述，使用 `&` 将进程在后台运行（可能在不同的处理器核心上运行），同时我们继续处理手头的工作，是 Bash 的重要部分。这过去一直如此，但最近随着多核处理器成为常态，这变得更具话题性。当你的处理器中坐着三十二或更多核心时，通俗地说，其中大多数核心都在“闲着摸鱼”，那么一个负责任的程序员应该想办法如何分配这些任务。\n\
+    \n## 自动多线程\n\n许多 Bash 应用只是处理大量文件。例如，开源 GitHub 项目 `TokenCrypt` [(4)](https://github.com/liborty/TokenCrypt)\
+    \ 也是如此。许多任务仅依赖于文件，因此它们可以并行运行。磁盘瓶颈可能会限制预期的加速效果，但我们在这里不会考虑这些问题。\n\n在这里，我们将看到如何在\
+    \ Bash 脚本中自动生成后台作业。这种技术具有通用性，并且可以加速许多天然并行的任务，例如多个文件的处理。\n\n当然，进行复杂的多线程和异步编程（以及许多其他事情）的更好方法是\
+    \ Rust。然而，对于简单任务来说，Bash 仍然是最简单的。\n\n## 关于安全和隐私的吐槽\n\n该项目的诞生是因为对互联网加密状态的沮丧。许多产品似乎只实现了混淆和不安全的目标。其中甚至包括一些初衷良好的产品。\n\
+    \n然而，有一个非常简单且有效的替代方案：异或（XOR）对称加密。对称意味着加密解密使用相同的密钥，这极大地简化了密钥管理。它还允许多重授权的密钥合并等有用操作。\n\
+    \n此外，由于密钥与消息等长，这种加密在理论上是不可破解的，即是最强的加密方式。它在 `TokenCrypt` 中以易于使用的形式实现。\n\n有一个合理的反对意见，即生成如此长的密钥实际上使所需的存储空间增加了一倍。这通过先压缩文件来缓解，并采取了措施以有效地进行压缩。例如，如果实现了\
+    \ 50% 的压缩率，就没有任何存储开销。无论如何，磁盘是廉价的，即使有一定的开销，安全性也是值得的。优点是，加密和解密非常快，因为非常简单。\n\n##\
+    \ 更快地加密多个文件\n\n对给定目录下的文件进行压缩、加密、解压缩和解密任务显然是 I/O 密集型的。它们一次只依赖一个文件，因此可以并行执行，它们之间不需要通信。\n\
+    \n对每个文件单独选择并应用最合适的压缩方法，并在加密时生成正确长度的密钥或在解密时查找。代码足够通用可以处理这些。我们在这里不详述细节，细节可以在 [(4)](https://github.com/liborty/TokenCrypt),\
+    \ [(5)](https://github.com/liborty/TokenCrypt/ncrpt), [(6)](https://github.com/liborty/TokenCrypt/expcrypt),\
+    \ [(7)](https://github.com/liborty/TokenCrypt/impcrypt) 中找到。\n\n我们的目标首先为长文件启动后台作业，将短文件留到最后在当前\
+    \ shell 中处理，以避免子壳开销。这将最小脚本的整体执行时间。我们还希望代码简单，没有过多的测试和复杂的 `if` 语句。\n\n首先处理脚本参数和标志，并用它们设置正确的输入输出目录。然后按长度对输入文件排序：\n\
+    \n```\n1 # 子壳中加密的文件大小\n2 BACKSZ=10000 \n3 # INDIR 中按大小（字节）排序的文件列表\n4 ITEMS=$(ls\
+    \ -SL $INDIR)\n5 # 准备启动子壳\n6 BJ=\\&\n```\n\n上面的最后一行是一个奇妙的黑科技，将默认文本命令结束符 `$BJ`\
+    \ 设置为 `&`。\n\n这将导致大文件的作业（后面跟着“$BJ”）将首先在后台子壳中运行。\n\n现在剩下的就是按大小从大到小的顺序处理所有文件，当达到阈值\
+    \ `BACKSZ` 时，通过 `BJ=''` 永久关闭子壳模式：\n\n```\n 1 for FILEND in $ITEMS; do\n 2    #\
+    \ 重建一个完整的路径/文件名\n 3    INFILE=$INDIR/$FILEND \n 4    # 仅处理真实文件\n 5    [ -f \"\
+    $INFILE\" ] || continue \n 6    # 当文件大小小于\n 7    # 阈值 BACKSZ 时关闭子壳\n 8    # 一旦\
+    \ $BJ 被为空字符串，\n 9    # 不再检查文件大小\n10    [ -z \"$BJ\" ] || \\\n11    [ $( stat -c%s\
+    \ $INFILE ) -ge $BACKSZ ] || BJ='' \n 12    # 处理单个文件的函数\n 13    # 要么在后台，要么在此 shell\
+    \ 中\n 14    # 取决于 $BJ 的值\n 15    processfile $INFILE $BJ \n 16 done\n17 wait #\
+    \ 等待所有 processfiles 完成\n```\n\n记住，当 Bash 函数的调用以 `&` 结束时，它们是在子 shell 中执行的。当变量 `$BJ`\
+    \ 被程序化地取消时，它的值将直接从程序文本中消失，此后的 `processfile` 执行将在当前 shell 中进行。\n\n自修改程序，哈！（Bash\
+    \ 中 EIJAS 的福分啊）。\n\n我们使用逻辑或 `||` 代替 `if`。只有当 `$BJ` 仍设置为 `&` 但当前 `$INFILE` 的大小已低于阈值时，它才会执行最后一个命令设置\
+    \ `BJ=''`。之后执行的唯一检查是第一部分：`[ -z \"$BJ\" ]` 计算为真并立即退出。如果有大量短文件，它节省了对其余文件昂贵的 `stat`\
+    \ 系统调用。\n\n当然，在这个简单的示例中，我们可以通过在 `if` 语句中测试 `$BJ` 并显式调用两次 `processfile` 来实现相同效果，如下：\n\
+    \n```\n1 if [ -n \"$BJ\" ]; then\n2    processfile $INFILE &\n3 else\n4    processfile\
+    \ $INFILE\n5 fi\n```\n\n但我们想展示 Bash 中自修改的通用机会。\n\nBash 最令人兴奋的事情可能是我们通过这本书能有多快地实现“从零到英雄”。获得信心，并开始实现实际项目，而这些项目在大多数现代语言中实际上会非常有挑战性且冗长。\n\
+    \n某些现代语言（Rust 是一个典型的例子）产生的恰恰相反的体验，即“从英雄到零”。也就是说，从一个以前掌握了多种语言的充满自信的程序员，变成一个感到深陷泥潭的人力残废，生产力如蜗牛。不要误会我的意思，我真的很喜欢\
+    \ Rust，并且可能我的下一本书就会写关于它的。\n\n另一个类似的轶闻在 Java 刚出来时曾被传过：“你听说过奇妙的新语言吗？你只需要五页代码就能打印出‘hello\
+    \ world’？”\n"
+- fmt: '
+
+    Behind this hilarity, there is a serious point to be made. Programming is getting
+    more and more complex. Following current trends, we might lose ownership of it
+    altogether. It may become a reserve for the last few dorks alive, who can still
+    (just about) cut it and paste it, in their own narrow field, using proprietary
+    applications libraries that someone long ago dead has bequeathed onto them. That
+    would be a sad, dystopian world.
+
+
+    Is such a bleak future really inevitable? Perhaps this book has managed to inspire
+    you towards (re)discovering the joys of ‘owning’ programming and sharing its fruits.
+    Then its mission was a success.
+
+
+    # Links References
+
+
+    (1) Gnu Foundation, Bash Reference Manual,
+
+
+    [https://www.gnu.org/software/bash/manual/bash.html](https://www.gnu.org/software/bash/manual/bash.html).
+
+
+    (2) Bash Scripting Cheatsheet,
+
+
+    [https://devhints.io/bash](https://devhints.io/bash).
+
+
+    (3) `fdiv` Fixed Point Arithmetic in Shell Scripts, github repository,
+
+
+    [https://github.com/liborty/fdiv](https://github.com/liborty/fdiv).
+
+
+    (4) TokenCrypt Encrypting Archiver, github repository,
+
+
+    [https://github.com/liborty/TokenCrypt](https://github.com/liborty/TokenCrypt).
+
+
+    (5) `ncrpt`, bash script in (4),
+
+
+    [https://github.com/liborty/TokenCrypt/blob/master/ncrpt](https://github.com/liborty/TokenCrypt/blob/master/ncrpt).
+
+
+    (6) `expcrypt`, bash script in (4),
+
+
+    [https://github.com/liborty/TokenCrypt/blob/master/expcrypt](https://github.com/liborty/TokenCrypt/blob/master/expcrypt)
+
+
+    (7) `impcrypt`, bash script in (4),
+
+
+    [https://github.com/liborty/TokenCrypt/blob/master/impcrypt](https://github.com/liborty/TokenCrypt/blob/master/impcrypt)
+
+
+    (8) Encryption and E-Democracy, blog,
+
+
+    [https://oldmill.cz/2020-06-10-crypt.html](https://oldmill.cz/2020-06-10-crypt.html)
+
+
+    (9) `fadd` bash script to add fixed point numbers, in (3),
+
+
+    [https://github.com/liborty/fdiv/blob/master/fadd](https://github.com/liborty/fdiv/blob/master/fadd)
+
+    '
+  raw: 'Behind this hilarity, there is a serious point to be made. Programming is
+    getting more and more complex. Following current trends, we might lose ownership
+    of it altogether. It may become a reserve for the last few dorks alive, who can
+    still (just about) cut it and paste it, in their own narrow field, using proprietary
+    applications libraries that someone long ago dead has bequeathed onto them. That
+    would be a sad, dystopian world.
+
+
+    Is such a bleak future really inevitable? Perhaps this book has managed to inspire
+    you towards (re)discovering the joys of ‘owning’ programming and sharing its fruits.
+    Then its mission was a success.
+
+
+    # Links References
+
+
+    (1) Gnu Foundation, Bash Reference Manual,
+
+
+    [https://www.gnu.org/software/bash/manual/bash.html](https://www.gnu.org/software/bash/manual/bash.html).
+
+
+    (2) Bash Scripting Cheatsheet,
+
+
+    [https://devhints.io/bash](https://devhints.io/bash).
+
+
+    (3) `fdiv` Fixed Point Arithmetic in Shell Scripts, github repository,
+
+
+    [https://github.com/liborty/fdiv](https://github.com/liborty/fdiv).
+
+
+    (4) TokenCrypt Encrypting Archiver, github repository,
+
+
+    [https://github.com/liborty/TokenCrypt](https://github.com/liborty/TokenCrypt).
+
+
+    (5) `ncrpt`, bash script in (4),
+
+
+    [https://github.com/liborty/TokenCrypt/blob/master/ncrpt](https://github.com/liborty/TokenCrypt/blob/master/ncrpt).
+
+
+    (6) `expcrypt`, bash script in (4),
+
+
+    [https://github.com/liborty/TokenCrypt/blob/master/expcrypt](https://github.com/liborty/TokenCrypt/blob/master/expcrypt)
+
+
+    (7) `impcrypt`, bash script in (4),
+
+
+    [https://github.com/liborty/TokenCrypt/blob/master/impcrypt](https://github.com/liborty/TokenCrypt/blob/master/impcrypt)
+
+
+    (8) Encryption and E-Democracy, blog,
+
+
+    [https://oldmill.cz/2020-06-10-crypt.html](https://oldmill.cz/2020-06-10-crypt.html)
+
+
+    (9) `fadd` bash script to add fixed point numbers, in (3),
+
+
+    [https://github.com/liborty/fdiv/blob/master/fadd](https://github.com/liborty/fdiv/blob/master/fadd)'
+  toc: []
+  trans: '
+
+    在这种幽默的背后，其实隐藏着一个严肃的问题。编程正变得越来越复杂。遵循目前的趋势，我们可能会完全失去对编程的所有权。它可能会变成最后几个活着的“书呆子”的领地，他们在自己狭窄的领域内，还能（几乎）进行剪切和粘贴，而使用的是某些早已故去的人遗留给他们的专有应用程序库。那将是一个悲哀的、反乌托邦的世界。
+
+
+    这样一个暗淡的未来真的不可避免吗？也许这本书已经成功地激发了你去（重新）发现“拥有”编程的乐趣并分享其成果。如果是如此，那么它的使命就成功了。
+
+
+    # 链接与参考文献
+
+
+    (1) Gnu 基金会，Bash 参考手册，
+
+
+    [`www.gnu.org/software/bash/manual/bash.html`](https://www.gnu.org/software/bash/manual/bash.html)。
+
+
+    (2) Bash 脚本快速上手指南，
+
+
+    [`devhints.io/bash`](https://devhints.io/bash)。
+
+
+    (3) Shell 脚本中的 `fdiv` 定点算术，github 仓库，
+
+
+    [`github.com/liborty/fdiv`](https://github.com/liborty/fdiv)。
+
+
+    (4) TokenCrypt 加密归档，github 仓库，
+
+
+    [`github.com/liborty/TokenCrypt`](https://github.com/liborty/TokenCrypt)。
+
+
+    (5) `ncrpt` (4) 中的 bash 脚本，
+
+
+    [`github.com/liborty/TokenCrypt/blob/master/ncrpt`](https://github.com/liborty/TokenCrypt/blob/master/ncrpt)。
+
+
+    (6) `expcrypt` (4) 中的 bash 脚本，
+
+
+    [`github.com/liborty/TokenCrypt/blob/master/expcrypt`](https://github.com/liborty/TokenCrypt/blob/master/expcrypt)
+
+
+    (7) `impcrypt` (4) 中的 bash 脚本，
+
+
+    [`github.com/liborty/TokenCrypt/blob/master/impcrypt`](https://github.com/liborty/TokenCrypt/blob/master/impcrypt)
+
+
+    (8) 加密与电子民主，博客，
+
+
+    [`oldmill.cz/2020-06-10-crypt.html`](https://oldmill.cz/2020-06-10-crypt.html)
+
+
+    (9) (3) 中用于相定点数的 `fadd` bash 脚本，
+
+
+    [`github.com/liborty/fdiv/blob/master/fadd`](https://github.com/liborty/fdiv/blob/master/fadd)
+
+    '

@@ -1,0 +1,1693 @@
+<p><img src="resources/title_page.jpg" /></p>
+<p><span id="title_page.xhtml"></span></p>
+<div id="title_page.xhtml_cover-image">
+<img src="resources/title_page.jpg" alt="Bash for Fun" />
+</div>
+<p><span id="verso_page.xhtml"></span></p>
+<h2>Bash for Fun</h2>
+<h3>Bash Programming: Principles and Examples</h3>
+<p> </p>
+<h4>Libor Spacek</h4>
+<p> </p>
+<p>This book is for sale at <a
+href="http://leanpub.com/bashforfun">http://leanpub.com/bashforfun</a></p>
+<p>This version was published on 2022-01-08</p>
+<p><img src="resources/leanpub-logo.png" id="publisher-logo"
+alt="publisher&#39;s logo" /></p>
+<p>*   *   *   *   *</p>
+<p>This is a <a href="http://leanpub.com">Leanpub</a> book. Leanpub
+empowers authors and publishers with the Lean Publishing process. <a
+href="http://leanpub.com/manifesto">Lean Publishing</a> is the act of
+publishing an in-progress ebook using lightweight tools and many
+iterations to get reader feedback, pivot until you have the right book
+and build traction once you do.</p>
+<p>*   *   *   *   *</p>
+<div>
+© 2021 - 2022 Libor Spacek
+</div>
+<p>ISBN for EPUB version: 978-0-6453971-0-9</p>
+<p><span id="toc.xhtml"></span></p>
+<section class="frontmatter TableOfContents toc">
+<h2 id="toc.xhtml_toc">Table of Contents</h2>
+<nav xmlns:epub="http://www.idpf.org/2007/ops" epub:type="landmarks" id="guide">
+<h2>Guide</h2>
+<ol>
+<li><a href="#chap00.xhtml" class="bodymatter">Begin Reading</a></li>
+</ol>
+</nav>
+</section>
+<p><span id="chap00.xhtml"></span></p>
+<h1 class="chapter"
+id="chap00.xhtml_leanpub-auto-introduction">Introduction</h1>
+<p>The intended audience of this book are all those who want to gain a
+better understanding of their computers. Those who wish to use Bash
+effectively and with confidence. This book spans the full range of Bash
+programming skills: from beginners to advanced, with amusing anecdotal
+insights and examples of doing useful things.</p>
+<p>The ignorant ‘clicking of buttons’ has done much disservice to
+laudable ambitions of programming education over the past four decades
+or so. It is time to rediscover the ancient lore! You, too, will become
+a wizard of <em>retro programming</em>. Armed with this book, you will
+massively increase your productivity and gain true ownership of your
+device.</p>
+<p>This book is for you if in the past you got waylaid and discouraged
+from programming, if you never even started or if you ever thought:
+“surely, there must be a simpler and better way of doing this!”.</p>
+<p>Above all, what you will discover here is that one most rare and
+precious thing: <em>understanding</em>.</p>
+<p>This book is definitely not another boring reference manual. Real
+programming is a skilful art. This applies especially to programming in
+Bash. Art is not easily learnt from manuals. Not even from pedagogically
+perfectly organised treatises full of exhortations and exercises.
+Manuals are for looking things up, same as are search engines on the
+internet. By all means, look up the details as and when needed <a
+href="https://www.gnu.org/software/bash/manual/bash.html">(1)</a> but
+please read this first.</p>
+<p>This book is based on the author’s lifetime experience with using and
+teaching numerous programming languages. The experience has shown that
+the most effective way to learn programming is by playing with fun
+examples.</p>
+<p>Examples from cheat sheets <a
+href="https://devhints.io/bash">(2)</a>, examples of ‘boiler plate’,
+examples of powerful techniques that actually accomplish useful things,
+examples of advanced tips and tricks, examples of amazing solutions to
+interesting problems. Examples, examples, examples.</p>
+<p>It is playing with those inspiring snippets of code that brings on
+those ‘eureka’ moments, when we want to shout:</p>
+<p>“Wow, I did not know that!”</p>
+<p>“So, this is how to do it! Yes now I really get it!”</p>
+<p>“What fun, let me try this myself!”</p>
+<p>“Now, let me just change this a bit and it will solve my own
+fascinating problem!”</p>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-typesetting-conventions">Typesetting
+conventions</h2>
+<ul>
+<li>technical terms and software packages that are not in common English
+use, inline bits of code, etc, are all literalised in a fixed width
+‘computer’ font like this: <code>wget</code></li>
+<li>bigger chunks of Bash code are additionally block set and partially
+coloured</li>
+<li>special terms are single quoted, e.g.: ‘guru’. Sometimes this may
+involve a measure of gentle irony</li>
+<li>author’s emphasis is indicated by <em>italicised text</em></li>
+<li>acronyms are capitalised and introduced after their first use in
+parenthesis (round brackets): (REPL)</li>
+<li>double quotes “…” mark, as usual, speech</li>
+<li>link references are placed in round brackets (1)</li>
+</ul>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-program-in-bash-anywhere">Program in Bash
+anywhere</h2>
+<p>One of the objectives of this book is to make programming accessible
+to everybody. It is actually quite easy to stop clicking on the icons
+for a while and start running powerful, automated, general Bash scripts
+instead. It is the secret of the computing professionals, known as the
+Command Line Interface (CLI).</p>
+<p>There are some Unix/Linux utilities (commands) within Bash, for
+example <code>wget</code>, that put at your fingertips direct access to
+the whole of the internet and all the servers and cloud services that
+you may have been using. All in an organised and automated fashion.</p>
+<p>Under <code>Linux</code> and <code>MacOS</code>, there is no need to
+install anything. Just open the default terminal and you are ready to
+go. The terminal is an interactive Bash session.</p>
+<p>Under <code>Windows</code> (10-11), install Windows Subsystem for
+Linux (<code>WSL</code>). Then you get most of the benefits of a proper
+operating system, without having to partition your disks and dual boot
+your computer. Most of all, you get a little Linux (Ubuntu) Icon, which
+activates the real Bash terminal with full access to the whole file
+system.</p>
+<p>It is even possible to program in Bash on a mobile Android phone.
+Install an app called <code>F-Droid</code>. That in turn will allow the
+installation of the latest version of <code>Termux</code>, which is a
+fully fledged Linux with Bash included. You can also install any other
+Linux compilers and applications, even though they will probably eat up
+a fair chunk of your phone’s memory. Let us hope that the developers of
+<code>Termux</code> will, in time, make it possible to use an SD card
+instead. Anyway, even the basic install is perfectly adequate for
+enjoying Bash programming.</p>
+<p>It is probably true to say that no other useful programming language
+is so simple and so easily and universally available.</p>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-dialects-and-styles">Dialects and
+styles</h2>
+<p>When searching the internet for answers to questions and problems
+related to Bash, it quickly becomes apparent that there are many
+questions but even more answers. This is partly due to the long and
+active history of shell programming. At first glance, it is not at all
+obvious, which of the suggested methods or styles are ‘deprecated’,
+outdated, pertaining to some obscure dialect fallen to disuse, or just
+plain wrong. At the same time, there are often more than one valid
+solutions with different merits. All that can be somewhat confusing.</p>
+<p>Accordingly, this book prefers a simple, unified, rational, style.
+Insignificant alternatives are rarely offered or discussed, in order to
+keep the complexity down. That is not to say that other valid styles and
+solution are not ‘out there’.</p>
+<h2 class="section" id="chap00.xhtml_leanpub-auto-why-bash">Why
+Bash?</h2>
+<blockquote>
+<p>“To Bash or not to Bash, that is the question!”</p>
+</blockquote>
+<p>Bash shell script is one of the ‘old school’ languages, going back to
+mid 1980s and beyond. It was originally developed as part of the Unix
+project in conjunction with C. That is why some of its (Unix/Linux)
+functions/utilities are in fact the same as in C. For example, the print
+command <code>printf</code>. Bash is the user facing heart of any
+UNIX/Linux based Operating System (OS). That is why today it remains
+important to grey bearded systems admin gurus and skilled users alike.
+Its longevity speaks volumes about its proven strength, usability and
+versatility.</p>
+<p>It is because of this close integration with the OS that, in fact,
+all Unix/Linux commands, plus anything that you might install or
+implement yourself, are all directly available and trivially simply
+invokable in Bash.</p>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-notes-for-the-professionals">Notes for the
+professionals</h2>
+<p>On the other hand, if you need a lot of ‘hand holding’ in case you do
+something silly, if you work on large collaborative projects and if you
+do not mind a much steeper learning curve, long compilations and large
+executables, then probably you should go to the other extreme and use
+Rust.</p>
+<p>Actually, there is a lot to be said for combining within the same
+overall project Rust and its prodigious speed and safety, with Bash.
+Bash is great for effectively automating the overall project
+administration: files marshalling, moving, renaming, archiving,
+updating, uploading, downloading, compiling, backing up, program
+executions, etc. Thus one can get the best of both worlds.</p>
+<p>This book took shape when the author started using Bash within his
+TokenCrypt project <a
+href="https://github.com/liborty/TokenCrypt">(4)</a>, originally just
+for the prosaic convenience of it. Warming up to it, it came as a bit of
+a shock to realise that two modern programming styles, namely Logic
+Programming and Functional Programming, since then much loved and hyped
+in the academic circles, are in fact already available in Bash.
+Admittedly in a dormant and embryonic form but they are there. In
+retrospect view, Bash can be said to have been seminal to their
+development.</p>
+<p>Bash is said to be the language which many use (or need to use, or
+wish to use) but few understand. Maybe this book will help to change
+that.</p>
+<h2 class="section" id="chap00.xhtml_leanpub-auto-first-steps">First
+steps</h2>
+<p>Anyone can certainly list a few commands like
+<code>cd ..; ls -al</code> in a script file and then run it. In fact,
+doing just that, is an excellent way to get started with Bash
+programming.</p>
+<p>Create a file called <code>myscript</code>, put some commands in it
+and make it executable with <code>chmod +x myscript</code>. Then just
+typing <code>./myscript</code> will make Bash execute all the commands
+contained in it.</p>
+<p>Apart from Bash, there are several other dialects of shell scripting
+languages. The convention dictates that the scripts should always start
+on the very first line with the so called ‘shriek-bang’ <code>#!</code>,
+which indicates which particular interpreter (shell) is wanted and where
+exactly it is to be found. Most often, it will be just this:
+<code>#!/bin/bash</code></p>
+<p>However, on Android phones, Bash will be installed in a non-standard
+location with a longer path. The path specification should therefore
+always point to exactly where on the filesystem Bash resides, otherwise
+it may not run.</p>
+<p>Any normal commands will then follow, exactly as you might type them
+to the terminal prompt. Hash <code>#</code> turns the rest of the line
+into a comment. Bash is very terse. A lot can be happening in just one
+line of Bash code, so it is a good idea to be generous with explanatory
+comments.</p>
+<p>Note: sometimes it is good to try things out by typing them directly
+to the Read Eval Print Loop (REPL), which is what an interactive Bash
+terminal is. It can happen that after typing out the correct answer, the
+REPL will add a complaint: <code>command not found</code>. For example,
+try this little bit of arithmetic: <code>$(( 1+1 ))</code>. There is
+nothing wrong, really. The message is just Bash trying to evaluate the
+answer <code>2</code> as well. You can stop it happening by using
+<code>echo</code> or <code>printf</code> commands, which drop their
+values (in this case do not pass them back to REPL), like this:
+<code>echo $(( 1+1 ))</code></p>
+<p>Moving beyond this, to really understand the subtle points of Bash as
+a ‘full-on’ programming language, that opens up entirely new
+horizons.</p>
+<p>I hear some of you exclaim in horror: “Why not Python?”. It has to be
+said that Bash still holds some big advantages over Python and other
+similar interpreted scripting languages (Ruby, etc.), making Bash easier
+to learn as the first programming language:</p>
+<ol>
+<li>Bash needs no installations and voluminous libraries searching.</li>
+<li>The ‘Read-Eval-Print-Loop’ (REPL) for trying things out is right
+there, in any terminal. It is recommended to open a terminal alongside
+this book and experiment with the code.</li>
+<li>Bash is tightly integrated with the Operating System (OS), right out
+of the box. This has the side benefit that learning Bash, you will also
+get to understand much better how your OS works. This is somewhat like
+what learning Latin used to do for european human languages. The same
+can not be said for Python, etc.</li>
+<li>The EIJAS principle = ‘Everything is just a string’ (more on this
+later).</li>
+</ol>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-chapters-outline">Chapters outline</h2>
+<ul>
+<li><strong>Introduction</strong> - the why and how of Bashing.</li>
+</ul>
+<ol>
+<li><strong>Quoting Quoting Quoting</strong> - develops an understanding
+of the fundamental principles: what is most needed for confident and
+successful Bash programming.</li>
+<li><strong>Bash Branching</strong> - the practicalities of Bash:
+conditionals, program control, functions, loops. An example of applying
+them to perform the common task of processing and interpreting program
+arguments.</li>
+<li><strong>Input-Output</strong> (I/O) handling is an important part of
+any programming language. In Bash this applies especially. Its streams,
+redirections and pipes act like glue that ties everything together. That
+means internally as well as taking care of the traditional role of
+communicating with the outside world. After this chapter follow
+increasingly sophisticated real applications and projects. With examples
+of code, of course.</li>
+<li><strong>Amazing Arithmetic</strong> is a useful project exploiting
+the EIJAS property of Bash to implement fixed point arithmetic. This is
+achieved by inserting the decimal point in the right place in the
+strings of digits. All without any external utilities, just using the
+default Bash integer arithmetic.</li>
+<li><strong>SubShell Scheduling</strong> is an advanced project that
+shows how to automatically orchestrate background jobs in separate
+threads. It deploys an interesting technique of program self
+modification. It is also a good template code for using files and
+directories effectively.</li>
+</ol>
+<ul>
+<li><strong>Conclusion</strong></li>
+<li><strong>Link References</strong></li>
+</ul>
+<p><span id="chap01.xhtml"></span></p>
+<h1 class="chapter"
+id="chap01.xhtml_leanpub-auto-quoting-quoting-quoting">Quoting, Quoting,
+Quoting</h1>
+<p>Bash is nowadays considered by sloppy programmers to be prone to
+programming errors but it is really not so bad, as long as we watch out
+for a few pitfalls and ‘gotchas’.</p>
+<p>The main potential problem are <em>spaces in the wrong places</em>.
+This is the price we pay for programs and data all being one and the
+same thing to Bash. Youmaystillbeabletoreadthis. However, computers are
+‘syntax nazis’. They ‘hate’ any typing errors or ambiguities. Spaces are
+important to the structure of any text, that means they are also
+important to the structure of the Bash programming language.</p>
+<p>Everything in Bash is just a string of text (the EIJAS principle).
+That means, Bash only knows about and understands chunks of text. We
+will see later how this simplicity brings about some amazing programming
+opportunities and advantages.</p>
+<p>The first and foremost advantage is simplicity: neither the user, nor
+Bash, have to worry about all kinds of different types and about
+checking them all. There is really only text and sometimes explicitly
+annotated text interpreted as digits.</p>
+<p>However, with power comes responsibility. We have to be prepared to
+get more errors and therefore it is wise to test small units of program
+at a time. In case of big trouble, that means hard to find bugs, it is
+highly recommended to<br />
+introduce extra <code>printf</code> statements into the program code to
+print out values of variables that you suspect may be wrong. This method
+is almost always more focussed and therefore more successful than
+uninformed general debugging, in any language. Afterwards, it is easy to
+comment out or to delete those extra statements.</p>
+<p>In order to handle text effectively in different situations, there
+are several different ways of annotating or <em>quoting</em> it. Each
+has its own specific effects and determines how is the quoted text to be
+interpreted and/or acted upon. It is important to understand them all
+and the differences between them.</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-individual-characters">Individual
+characters</h2>
+<p>First of all, there is ‘escaping’ of some special and non-printable
+individual characters. Funny example:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 printf &quot;My book sales reached 200%%\n&quot;</code></pre>
+</div>
+</figure>
+<p>There are specific rules which only apply within printf formatting
+strings.<br />
+Here the non-printable character ‘newline’ is encoded as
+<code>\n</code>. The printable character <code>%</code> is escaped by
+being doubled, as otherwise it has a different interpretation within the
+printf formatting string. In other words, it is a ‘reserved character’,
+just in this context.</p>
+<p>The complete character ‘escaping’ rules are the one thing that nobody
+even claims to remember fully. They are what the search engines are good
+for. Most people manage pretty well most of the time with just these
+two, plus maybe the tab <code>\t</code> for tidy printouts.</p>
+<p>The general rule for double quoted strings anywhere (not just after
+<code>printf</code>), states that the following Bash reserved characters
+must be escaped by being preceded by a backslash: dollar, backtick,
+double-quote, backslash, newline. The escaped ‘newline’ here means an
+actual newline, such as at the end of a line of code, which we want to
+continue uninterrupted onto the next line.</p>
+<p>Let us move on to strings (sequences of characters).</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-literal-string">Literal string</h2>
+<p>Single quotes <code>'...'</code> enclose a simple unit of literal
+text. Nothing inside the single quotes is evaluated. Example:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 &#39;the cat sat on the mat&#39;</code></pre>
+</div>
+</figure>
+<p>To make a single quote part of the string, without terminating it
+prematurely, it is necessary to use outer double quotes, like this:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1  &quot;the cat&#39;s mat was eaten by a rat&quot;</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-interpreted-string">Interpreted
+string</h2>
+<p>Double quotes have the additional function of evaluating (expanding)
+any variables or expressions found within them. The <em>expansion</em>
+is indicated by sticking a dollar sign <code>$</code> immediately in
+front of the variable/expression. In fact, the dollar sign causes the
+<em>expansion</em> anywhere else as well, apart from within those
+literal strings above. Example:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 &quot;The cat&#39;s name is $NAME&quot;</code></pre>
+</div>
+</figure>
+<p>Capitalising the variables is just a useful convention.</p>
+<p>Note: Double quoting of just a variable alone, e.g.
+<code>"$FILENAME"</code>, is often advised in all evaluation contexts to
+prevent filenames containing spaces (a horrific Windows ‘invention’),
+from being interpreted as several different files, instead of just one
+file as was intended. Similarly, in tests, double quoting a variable
+ensures that it always returns at least an ‘empty string’ value.
+Otherwise an unset variable just disappears after expansion and this can
+sometimes cause program syntax errors.</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-assignment">Assignment</h2>
+<p>When assigning to variables, the left hand side of an assignment is
+unevaluated, so it does not take the dollar sign:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 NAME=&#39;Bob&#39;; ANOTHERBOB=$NAME</code></pre>
+</div>
+</figure>
+<p>Also, be very careful not to use any spaces around the assignment
+operator <code>=</code>.</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-variable-expansion">Variable
+expansion</h2>
+<p><code>${VAR}</code>, using braces with <code>$</code> outside, is
+another way of quoting variables, called the variable expansion. After
+the usual evaluation of the variable, it can also apply some special
+functions to its value. Those functions may involve, for example,
+searching and selecting specific parts of a path/filename, as in:</p>
+<p><code>EX="${FILESPEC##*.}"</code></p>
+<p>This assigns the last file extension to <code>EX</code>, by deleting
+everything in <code>$FILESPEC</code> value before and including the last
+dot. The wildcard character <code>*</code> is use to match everything
+before that last dot.</p>
+<p><code>${V#*"$C"}</code> deletes everything from the value of
+<code>$V</code>, from its beginning up to and including the first
+occurrence of the character specified in <code>$C</code>.</p>
+<p><code>${V##*"$C"}</code> deletes everything from the beginning up to
+and including the last occurrence of <code>$C</code>.</p>
+<p><code>${V%"$C"*}</code> deletes everything from the end up to and
+including the first occurrence (from the end) of <code>$C</code>.</p>
+<p><code>${V%%"$C"*}</code> deletes everything from the end up to and
+including the last occurrence (from the end) of <code>$C</code>.</p>
+<p><code>${V:=value}</code> initialises V to (default) value if it was
+unset.</p>
+<p><code>${V:?error message}</code> prints error message and exits if V
+is unset. The message can be a double quoted interpreted string.</p>
+<p><code>${VAR@Q}</code> automatically transforms the value of $VAR, by
+applying the individual character backslash escaping rules, where
+necessary. When in doubt about which characters require escaping, then
+ask the expert (Bash itself). This is useful whenever some text,
+(possibly containing special characters), is read into $VAR and it is
+then to be interpreted in some way by Bash.</p>
+<h2 class="section" id="chap01.xhtml_leanpub-auto-logical-eval">Logical
+eval</h2>
+<p><code>[...]</code> logical evaluation (test) of an expression. It is
+expected to return a boolean true/false value. It can use the comparator
+operators <code>-lt -le -eq -ne -gt -ge</code> when comparing numbers
+and <code>=</code>,<code>!=</code> when comparing strings. It can form
+part of a bigger expression, with several sets of square bracket tests
+joined by logical operators: <code>!, ||, &amp;&amp;</code> (meaning
+‘logical not’, ‘logical or’ and ‘logical and’, respectively).</p>
+<p>In fact, everything in Bash is an expression. Even an executed
+command returns an ‘exit status’ value: 0 (true) for success and 1-255
+for user defined failures. Zero is interpreted as true because it
+indictates a successful exit, so that program calls can be included in
+the tests.</p>
+<p>Regular expressions (regexp) comparison tests using <code>=~</code>
+operator should be enclosed in double brackets <code>[[...]]</code>.</p>
+<p>Simple invocations of programs, functions and utilities can be tested
+for successful outcomes directly, without the square brackets, for
+example:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 mkdir somedir || echo failed to create somedir</code></pre>
+</div>
+</figure>
+<p>See the next chapter for these simple forms of conditional
+statements.</p>
+<p>It is common to test variables for being set or unset:</p>
+<ul>
+<li><code>[ -n "$VAR" ]</code> true if <code>$VAR</code> has been set to
+something of non zero length</li>
+<li><code>[ -z "$VAR" ]</code> is true if it is unset</li>
+<li><code>[ -f "$VAR" ]</code> is true if value of <code>$VAR</code> is
+an existing file</li>
+<li><code>[ -d "$VAR" ]</code> is true if value of <code>$VAR</code> is
+an existing directory</li>
+<li><code>[ -r "$VAR" ]</code> is a readable file</li>
+<li><code>[ -h "$VAR" ]</code> is a symlink</li>
+<li><code>[ -w "$VAR" ]</code> is a writable file</li>
+<li><code>[ -s "$VAR" ]</code> is a file of nonzero size</li>
+<li><code>[ -x "$VAR" ]</code> is an executable file</li>
+<li><code>[ "$F1" -ef "$F2" ]</code> F1 is equal to F2 (same file
+content)</li>
+<li><code>[ "$F1" -nt "$F2" ]</code> F1 is newer file than F2</li>
+<li><code>[ "$F1" -ot "$F2" ]</code> F1 is older file than F2</li>
+</ul>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-arithmetic-eval">Arithmetic eval</h2>
+<p><code>$(( $NUM1+$NUM2 ))</code> or ‘arithmetic evaluation’, causes
+the evaluation of the enclosed arithmetic expression. In this case the
+sum of two integers. There must be spaces left between the double
+paranthesis and the expression inside.</p>
+<p>Bash has no floating point types or calculations with them (but see
+in a later chapter our fixed point arithmetic project).</p>
+<p>There are the usual (integer) arithmetic operators:
+<code>+,-,*,**,/,%</code> and their updating assignment versions, e.g.
+<code>+=</code> which adds the right hand side (RHS) value to the
+existing value of the LHS variable, e.g.: <code>let COUNTER+=1</code>.
+If <code>$COUNTER</code> was not initialised, it will be given initial
+value 0 (only in these updating assignments).</p>
+<p>The <code>let</code> form triggers an arithmetic evaluation, somewhat
+like the double paranthesis above but then it drops the produced value.
+Therefore <code>let</code> is often used for arithmetic assignments.</p>
+<p>When unsure about the operator’s precedence, use extra
+paranthesis.</p>
+<h2 class="section" id="chap01.xhtml_leanpub-auto-eval">Eval</h2>
+<p><code>eval command arg1 ... argn</code> is the normal evaluation. It
+executes <code>command arg1 ... argn</code> in the current shell. It can
+be used to <em>construct</em> and execute any function call, or a call
+to a linux external utility.</p>
+<p>Comparison: <code>printf "$P: "</code> returns (formatted) value of
+variable <code>$P</code>, whereas <code>eval $P</code> in addition also
+executes its value as a command.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 P=pwd; printf &quot;$P: &quot;; eval $P</code></pre>
+</div>
+</figure>
+<h2 class="section" id="chap01.xhtml_leanpub-auto-braces">Braces</h2>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 { P=pwd; printf &quot;$P: &quot;;  $P; }
+2 
+3 {
+4     P=pwd
+5     printf &quot;$P: &quot;
+6     $P
+7 }</code></pre>
+</div>
+</figure>
+<p>Braces are used to bind together a number of commands into a ‘block’,
+executed at the current shell. Note the last semicolon before the
+closing brace, without which the value of $P would not be executed.</p>
+<p>In the multi line syntax (the last version), the new lines substitute
+the role of the semicolons.</p>
+<p>Control question: what will this print out? Try it out! Only a few
+other languages have this very powerful ( some say downright dangerous )
+‘program as data’ facility. Lisp is one of them.</p>
+<p>In fact, all these three versions produce the same results, the
+differences are only in their syntax.</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-subshell-eval">Subshell eval</h2>
+<p><code>$( command1; command2; )&amp;</code> has the same effect as the
+braces above, except that it starts a new subshell for the evaluation
+(command substitution). This has some small overhead costs associated
+with it. However, it is useful for ‘spinning off’ background processes
+by optionally appending <code>&amp;</code> after the closing
+paranthesis. Such processes will then run in parallel, in separate
+threads.</p>
+<p>Beware of their inputs and outputs getting out of sequence. Also, be
+very careful that you use the <code>wait</code> command before starting
+another process which relies on the results of a background job! To
+exploit parallelism requires generally a lot more careful thought than
+the traditional single sequential process does. As a rough rule of
+thumb, take it ‘from the top’, that is run in parallel the big
+independent jobs first. Then all the computations within them will run
+on separate cores, without getting tied up in knots over their fine
+grained details.</p>
+<p>This <code>&amp;</code> mechanism is very useful for better utilising
+modern multicore processors. The OS takes care of assigning the threads
+for execution to the available physical cores.</p>
+<p>It is sometimes more convenient to use for simple commands the more
+concise backtick syntax: `command ` but this is not recommended for
+nested evaluations, as escaping multiple backticks can get messy and
+prone to typing and oversight errors.</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-text-juxtaposition">Text
+juxtaposition</h2>
+<p>We can build up arbitrary strings by trivial juxtaposition of
+variables, characters and other strings. No messing around with explicit
+calls to <code>concatenate</code>, <code>append</code>, etc, like in
+most other programming languages:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 H=Hello
+2 W=World
+3 # build up a sentence: 
+4 # insert an escaped space between the two words 
+5 # and append ! onto the end
+6 echo $H\ $W!</code></pre>
+</div>
+</figure>
+<p>Another common use of juxtaposition:<br />
+<code>$PATH/$FILE.$EXT</code></p>
+<p><span id="chap02.xhtml"></span></p>
+<h1 class="chapter" id="chap02.xhtml_leanpub-auto-bash-branching">Bash
+Branching</h1>
+<p>The <code>if</code> statement has the following structure. The
+<code>else</code> block is optional, <code>fi</code> is always
+mandatory.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 if logical-expression; then
+2     statement1
+3     ...
+4     statementn
+5 else
+6     neg-statement1
+7     ...
+8     neg-statementn
+9 fi</code></pre>
+</div>
+</figure>
+<p>The tabbing somewhat improves the readability of the code. The
+expression typically involves the logical tests in square brackets and
+logical operators.</p>
+<p>Bash is easy to love but sometimes it is a love-hate relationship.
+Take this <code>if</code> statement, for example. Forget to put that
+semicolon <em>before</em> <code>then</code> and you are then in deep
+trouble. It would be a pity if this quirky syntax were to put people off
+shell programming.</p>
+<p>Fortunately, there is a better way of branching, at least in simple
+situations. Complicated <code>if</code> statements are best avoided
+anyway, as they are the biggest source of errors affecting the
+fundamental program logic and can be hard to discover.</p>
+<p>Use simple verification tests leading to an early
+<code>continue</code> or <code>break</code> from within loops,
+<code>return</code> from functions and <code>exit</code> from programs,
+whenever some necessary condition is not satisfied. This, in effect,
+turns the following code into an <code>else</code> branch, without a
+complex conditional structure dragging all the way along with it.
+Besides being a good coding practice, it tends to increase program
+efficiency. We will call it an <em>early break principle</em> (EBP).</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-short-circuit-logic-evaluation">Short
+circuit logic evaluation</h2>
+<p>When evaluating a logical (boolean) expression, in any context, the
+value of the result is often known well before all the individual parts
+of the expression have been evaluated. How is that possible?</p>
+<p>In a conjunction (<code>&amp;&amp;</code>), the whole result is known
+to be false as soon as the first conjunct returns
+<code>false</code>.</p>
+<p>Conversely, in a disjunction (<code>||</code>), the result is known
+to be true as soon as the first disjunct returns <code>true</code>.</p>
+<p>These logical operators have equal precedence and are normally
+processed from left to right.</p>
+<p>The <em>short circuit evaluation</em> property of logic is used in
+Artificial Intelligence (AI) for efficient evaluation of so called
+AND-OR trees in game-playing and search applications. However, we can
+use it too in our humble Bash programs.</p>
+<p>In oder to utilise this property, we introduce two kinds of
+conditionals:</p>
+<h3 class="subsection"
+id="chap02.xhtml_leanpub-auto-positive-conditional">Positive
+conditional</h3>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 [ test1 ] &amp;&amp; [ test2 ] &amp;&amp; [ testn ] &amp;&amp; { posblock }</code></pre>
+</div>
+</figure>
+<p>Here the posblock of statements at the end gets executed only when
+each of the tests returns true. As soon as the first test evaluates to
+false, the whole thing fails and quits there and then. Hence the
+expression ‘short circuit evaluation’.</p>
+<h3 class="subsection"
+id="chap02.xhtml_leanpub-auto-negative-conditional">Negative
+conditional</h3>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 [ test1 ] || [ test2 ] || [ testn ] || { negblock }</code></pre>
+</div>
+</figure>
+<p>Here the negblock of statements at the end gets executed only when
+each of the tests returns false. As soon as the first one evaluates to
+true, the whole thing succeeds and quits.</p>
+<h3 class="subsection"
+id="chap02.xhtml_leanpub-auto-logical-form-of-an-if-statement">Logical
+form of an if statement</h3>
+<p>Compare these two forms and understand the greater facility of logic
+to express diverse conditionals:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 if [ condition ]; then posblock; else negblock; fi
+2 [ condition ] &amp;&amp; posblock || negblock</code></pre>
+</div>
+</figure>
+<h3 class="subsection"
+id="chap02.xhtml_leanpub-auto-benefits">Benefits</h3>
+<p>This syntax (structure) is cleaner, more compact, more general and
+less prone to errors than the <code>if</code> statements provided in
+<code>bash</code> and most other languages.</p>
+<p>The semantics (meaning) is more expressive, with several types of
+different if-statements for the price of one.</p>
+<p>Program efficiency can be improved by ordering the individual tests
+to encourage an <em>early break</em>. See EPB principle introduced
+above. In a positive conditional, the tests most likely to fail should
+come first. In a negative conditional, the tests most likely to succeed
+should come first.</p>
+<p>When unsure about the likelihoods of their outcomes, then ordering
+the tests from the fastest to the slowest is the best, in both
+cases.</p>
+<p>Arbitrarily complex propositional logic expressions can be built with
+this framework, using <code>&amp;&amp;, ||, ! (not)</code>. Square
+brackets should be added for disambiguation, as and when needed (just as
+the paranthesis are used in arithmetic). So, for example,
+<code>! test1</code> can be used to intermix a positive
+<code>test1</code> into the negative conditional. Alternatively,
+<code>! test2</code> to add a negative <code>test2</code> into a
+positive conditional. The negations or even primitive negative tests can
+often be avoided altogether by changing the negative conditional
+(disjunction) to a positive one (conjunction) and vice-versa.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-chaining-statements">Chaining
+statements</h2>
+<p>Because in Bash there is no real difference between statements and
+expressions, the above logical short circuit mechanism can be just as
+well employed to chain together commands. Furthermore, because they
+return values interpreted as success (true) or failure (false), there
+will be similar EBP gains in efficiency.</p>
+<p>There is a clear relationship here to the kind of programming known
+as ‘Logic Programming’, invented much later. See, for example, the
+programming language Prolog, which is built around the ideas of
+evaluating the (positive) conjuncts and backtracking on failures.</p>
+<h3 class="subsection"
+id="chap02.xhtml_leanpub-auto-positive-and-commands-chaining">Positive
+(and) commands chaining</h3>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 command1 &amp;&amp; ... commandn </code></pre>
+</div>
+</figure>
+<p>This is normally used in situations where it is required that all the
+commands should succeed.<br />
+Note that the logical ‘and’ operator is used here for joining up the
+commands, in place of the previously used semicolons. The effect of this
+is going to be an <em>early break</em> with false value returned, as
+soon as any individual command exits with failure status. Presumably,
+this outcome should be reported by some kind of error message, by
+tacking on the end <code>|| printf "error message\n"</code>, or
+deploying some remedial actions.</p>
+<p>The rest of the commands will then be ignored, whereas with the
+semicolon separator they would all continue being executed regardless of
+their return status.</p>
+<h3 class="subsection"
+id="chap02.xhtml_leanpub-auto-negative-or-commands-chaining">Negative
+(or) commands chaining</h3>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 command1 || ... commandn</code></pre>
+</div>
+</figure>
+<p>Note that the logical ‘or’ operator is now used in place of the
+semicolons. The effect of this is going to be an <em>early break</em>
+from this block, as soon as any command exits with success status. The
+rest of the commands will then be ignored. Here the logical intent is
+that the success of any one of the commands is all that is required.</p>
+<p>Alternatively, this form may be used when it is expected (hoped for?)
+that they should all fail, such as when checking for occurrences of
+security breaches. Then the whole block should return failure. Should it
+succeed at some point, this can be reported by tacking on the end
+<code>&amp;&amp; printf "Security breached!\n"</code> or any other
+remedial actions.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-functions">Functions</h2>
+<p>Bash also has <code>functions</code>, which work just like any
+external script, except that they are textually inserted into the script
+in which they are then used. The benefit of being called from the file
+in which they are defined is that they are not run in a subshell.</p>
+<p>With all that convenience comes the danger of unintended global
+variables clashes, which generally result in horrible bugs. It is
+therefore strongly advised to use <code>local</code> declarations for
+functions’ own working variables. This will insulate them, as if the
+function really was in its own separate script file and run in a
+subshell. Note that the functions also inherit any file stream
+identifiers declared and belonging globally to their script (shell).
+More on input/output later.</p>
+<p>In a function, as in any program script, its formal arguments are
+identified by special variables <code>$1,$2...</code> and so on.
+Matching one for one, they are assigned the values of the actual
+arguments supplied in the function/program call.</p>
+<p>To return values other than 0-255 from Bash functions, the global
+<code>stdout</code> stream 1 should normally be used. That is, in the
+simplest case, use <code>echo</code> or <code>printf</code> commands
+within the function to write its return value(s) to standard output.
+This will then be returned as the function call result.</p>
+<p>Here is an example of a recursive function with one formal argument
+<code>$1</code>.<br />
+When writing recursive functions, the termination condition should
+always come first. Note the extensive but here unfortunately necessary
+use of the arithmetic evaluation double paranthesis:
+<code>$((...))</code>. To keep the number of the paranthesis down, the
+recursive call itself is evaluated here with the backtick subshell eval,
+sometimes called the command expansion, which works just like:
+<code>$(...)</code>.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 function factorial {
+2   [ $1 -lt 3 ] &amp;&amp; echo $1 || \
+3      echo $(( $1*`factorial $(( $1-1 ))` ))
+4 }
+5 time factorial 20
+6 2432902008176640000
+7 real    0m0.027s
+8 user    0m0.026s
+9 sys     0m0.005s</code></pre>
+</div>
+</figure>
+<p>Beware that the answers will overflow without warnings for relatively
+small arguments, as the factorial of 21 is already bigger than the
+maximum 64bit integer.</p>
+<p>An iterative implementation will be more efficient than the above
+stacking up of multiple subshell calls. Here we use the ‘C-like’ form of
+the iterative for loop, which will count down to 2, cumulatively
+multiplying all the (descending) integers into the local variable
+<code>F</code>. If the supplied argument is smaller than three, the loop
+will do nothing and the argument value will get immediately echoed to
+stdout as the answer.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 function itfactorial {
+ 2   local F=$1
+ 3   for (( i=$1-1; i&gt;1; i-- )); do F=$(( $F*i )); done
+ 4   echo $F
+ 5 }
+ 6 time itfactorial 20
+ 7 2432902008176640000
+ 8 real    0m0.000s
+ 9 user    0m0.000s
+10 sys     0m0.000s</code></pre>
+</div>
+</figure>
+<p>This time it was too fast to register on the timer, thanks to being
+evaluated within the current shell and not using the stack.</p>
+<p>However, it should be pointed out that Bash, being an interpreted
+language, is not exactly fast. Therefore, maximum speed is rarely of the
+main concern. Speed is relative. Nowadays, thanks to faster processors,
+even Bash runs faster than the fast languages, like C, did a few years
+ago. Another good reason for its revival? Nonetheless, the stronger
+points of Bash are undoubtedly convenience, versatility and
+compactness.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-loops-and-control-statements">Loops and
+control statements</h2>
+<p>Bash is also equipped with the usual set of <code>while</code>,
+<code>until</code> and <code>for</code> iterative loops, plus a
+<code>case</code> statement. This is not a difficult or exciting topic,
+so we will not dwell on it much. It is far more effortlessly absorbed by
+simply reading some existing useful code. We have already met one form
+of the <code>for</code> loop. The <code>case</code> statement will be
+used in some of the examples in the following chapters.</p>
+<p>An infinite loop (relying on calling <code>break</code> to exit when
+the data runs out or something like that) can be a useful mechanism. It
+is also used for human-computer interactions, a good example of which
+is, in fact, REPL. The user usually manually terminates such interactive
+sessions by closing the input with <code>Ctrl-D</code>, or closing the
+terminal with <code>exit</code>. Should you try the following examples
+in your terminal, be prepared to type <code>Ctrl-C</code> quickly to
+terminate them. Note that they both set up an infinite loop.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 while true; do
+2   echo &#39;I am a lumberjack and I am OK&#39;
+3 done</code></pre>
+</div>
+</figure>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 until false; do
+2   echo &#39;I sleep all night and work all day&#39;
+3 done</code></pre>
+</div>
+</figure>
+<p>Of course, the more usual form of <code>while</code> statement is to
+read some ordinary text file <code>$F</code>. Here the <code>read</code>
+statement will return <code>false</code> at the end of the file:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 cat &quot;$F&quot;.txt | while read LINE; do
+2   processline $LINE
+3 done</code></pre>
+</div>
+</figure>
+<p>We have already met the C-like version of the <code>for</code> loop
+command but it has two more useful forms. This one will apply
+<code>processfile</code> to all the <code>txt</code> (text) files in the
+current directory:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 for F in ./*.txt; do
+2   processfile &quot;$F&quot;
+3 done</code></pre>
+</div>
+</figure>
+<p>This version of <code>for</code> goes through the range of values
+0..100 in steps of 3 (and prints them all on the same line):</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 echo &#39;Multiples of three: &#39;
+2 for MULT3 in {0..100..3}; do
+3   printf &quot;$MULT3 &quot;
+4 done</code></pre>
+</div>
+</figure>
+<p>So far, we have discussed the different possibilities of evaluating
+and joining up commands, the conditionals, functions and loop
+statements.</p>
+<p>At this point, you should be able to read real Bash code. Therefore
+we will now move towards some interesting examples of code and projects,
+with explanatory comments.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-processing-arguments">Processing
+arguments</h2>
+<p>Passing arguments to programs and functions is the chief way of
+making them more general and a lot more useful. It is an important part
+of the abstraction process. Therefore, most Bash scripts expect some
+arguments and they need to process (read) them.</p>
+<p>It is a good idea to put a human readable comment just after the
+first line, explaining what arguments the script expects. At the same
+time, the conventional options <code>-h</code> and <code>--help</code>
+should cause the script to print out similar helpful information.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 #!/bin/bash
+ 2 # This program expects some options, 
+ 3 # followed by three mandatory directory paths.
+ 4 
+ 5 # The program path/name is always in $0. 
+ 6 # Here we chop off the path 
+ 7 # before the program&#39;s name, with `##*/`
+ 8 PROGN=${0##*/}
+ 9 
+10 # Frequently used messages subsumed into functions;
+11 # their output is redirected to stderr with &gt;&amp;2
+12 function usage {
+13    printf &quot;Usage: $PROGN \
+14    [-h][-b][-c][-x][-q][-r][-u][-v][-z] \
+15    indir keydir outdir\n&quot; &gt;&amp;2
+16 }
+17 
+18 function helpmsg {
+19    usage
+20    printf &quot;\t%s\n&quot; \
+21      &#39;-b | --b64 : test for base64 encoded files&#39; \
+22      &#39;-c | --clean : the archive&#39; \
+23      &#39;-h | --help : print this text&#39; \
+24      &#39;-q | --quiet : turn off the final summary&#39; \
+25      &#39;-r | --recurse : process also subdirectories&#39; \
+26      &#39;-u | --update : the archive&#39; \
+27      &#39;-v | --verbose : detailed reporting&#39; \
+28      &#39;-x | --hex : test for hexadecimal files&#39; \
+29      &#39;-z | --zstd : use zstd compression&#39; &gt;&amp;2
+30    exit 1
+31 }
+32 
+33 # Use the utility `getops` for options parsing: 
+34 # puts listed options, that is words that can  follow -,
+35 # into $OPT
+36 while getopts hbcxqruvz-: OPT; do
+37  # Long options start with --,
+38  # this gets detected by the last option in the list: `-`
+39  # then assign the long option name to $OPT manually:
+40  if [ &quot;$OPT&quot; = &quot;-&quot; ]; then
+41  # found --: reset OPT and OPTARG
+42    OPT=&quot;${OPTARG%%=*}&quot;  # extract long option name
+43    # extract long option argument (here empty)
+44    OPTARG=&quot;${OPTARG#$OPT}&quot; 
+45    # remove any assignments `=` from long options
+46    OPTARG=&quot;${OPTARG#=}&quot; 
+47  fi
+48  # now process and record all options, in any order
+49  # here we set their variables, 
+50  # later detect them being set, e.g. with: [ -n &quot;$VAR&quot; ]
+51  case &quot;$OPT&quot; in
+52    h | help ) helpmsg;;
+53    b | b64 ) B64TEST=0;;
+54    c | clean ) CLEAN=0;; 
+55    x | hex ) HEXTEST=0;;
+56    q | quiet ) QUIET=0;;
+57    v | verbose ) VERBOSE=0;; 
+58    r | recurse ) RECURSE=0;;
+59    u | update ) UPDATE=0;;
+60    z | zstd ) COMPRESSOR=zstd;; 
+61    ??* ) printf \
+62    &quot;$PROGN quitting, bad long option: $OPT\n&quot; &gt;&amp;2
+63       usage; exit 2;; 
+64    # bad short option (will be reported via getopts) 
+65    *) exit 2;; 
+66  esac
+67 done
+68 # Remove all parsed options and args from their
+69 # list $@  
+70 # so that we can parse the remaining arguments.
+71 # The next one will be in $1, 
+72 # as if no options were given: 
+73 shift $((OPTIND-1)) 
+74 
+75 # Validate the input directory
+76 [ -d &quot;$1&quot; ] || { 
+77    printf &quot;$PROGN: input directory $1 not found\n&quot; &gt;&amp;2
+78    exit 2
+79 }
+80 ...
+81 # optional final report
+82 [ $QUIET ] || {  printf ... } </code></pre>
+</div>
+</figure>
+<p>Now, the user can invoke this program with any combinations of the
+listed options, preceded by <code>-</code> and followed by three
+directory paths. The options, as their name suggests, give the program
+optional capabilities and modes of operation. For example:</p>
+<p><code>ncrpt -rbxuc dir1 dir2 dir3</code></p>
+<p><span id="chap03.xhtml"></span></p>
+<h1 class="chapter"
+id="chap03.xhtml_leanpub-auto-input-output">Input-Output</h1>
+<p>Of all the programming languages, Bash must have just about the
+simplest and most convenient input/output (I/O) handling.</p>
+<h2 class="section"
+id="chap03.xhtml_leanpub-auto-basic-terminology">Basic terminology</h2>
+<ul>
+<li>files
+<ul>
+<li>are usually stored on a filesystem, where they are identified by
+their path, filename and filename extension(s)</li>
+<li>when stored on the internet, then their universal resource locator
+(URL) fulfils the role of the path. These files need to be copied
+(downloaded) over the network by some utility program, such as
+<code>scp</code> (ssh secure copy) or <code>wget</code>. Once securely
+on the local filesystem, they can be read and manipulated much faster
+and more securely.</li>
+</ul></li>
+<li>streams are sequences of bytes, i.e. the actual data, with an
+associated internally memorised current position. Reads and writes
+automatically advance that position.
+<ul>
+<li>input streams are for reading</li>
+<li>output streams are for writing</li>
+<li>in-out streams are for both reading and writing</li>
+</ul></li>
+<li>file descriptor (perhaps more accurately a stream descriptor) is the
+means of referring internally, within a program, to a particular stream
+of data. A program will use these to communicate with the ‘outside
+world’, i.e. to read and write some data. The streams need to be named
+(in Bash actually by single digit characters) because several different
+streams can be used at the same time for different kinds of data and
+different purposes. For example, one stream for writing clean results to
+a file and a separate one for writing out warnings (and errors) which we
+do not want intermixed with the results.</li>
+</ul>
+<p>Opening a file associates a nominated stream descriptor with the
+named file and specifies if that file is to be used for input, output,
+or both.</p>
+<p>Stream descriptors in Bash are just digit characters 0-9. The first
+three, 0-2, have special meanings. They are always opened automatically
+in every shell:</p>
+<ul>
+<li>0 standard input (known as stdin), is the default input to any Bash
+command.</li>
+<li>1 standard output (known as stdout), is the default output from a
+command.</li>
+<li>2 standard error (known as stderr), is the ‘error’ output.</li>
+<li>3 to 9 can be explicitly opened and assigned to files or other
+streams by the user.</li>
+</ul>
+<p>0-2 should not be opened for a real named file. In fact, they have
+predefined system files associated with them, see later. Their streams
+of data are either directed to processes and files with
+<code>&lt;</code>, <code>&gt;</code>, <code>&gt;&gt;</code> or
+sent/received to/from a pipe <code>|</code>, which is a hidden buffer
+inserted by Bash between two ‘piped’ commands, whereby the first one
+writes to it and the second one (asynchronously) reads from it.</p>
+<h2 class="section"
+id="chap03.xhtml_leanpub-auto-the-meaning-of-zero">The meaning of
+zero</h2>
+<p>This is a word of warning. Zero is for some reason very important to
+Bash. Its designers must have been very fond of it. Oh, seeker, realise
+the meaning of zero and become a Bash Master!</p>
+<p>Variable <code>$0</code> always holds as its value the path and the
+name of the current program or function. It is often used by the program
+to identify itself as the source of an error message.
+<code>PROGN=${0##*/}</code> holds its root name (with the path up to the
+last / stripped off) in our examples.</p>
+<p>Not to be confused with <code>0</code> written to stdout to indicate
+a successful outcome.</p>
+<p>Which happens to be the same as the value of ‘true’.</p>
+<p>Which also happens to be the same as the character <code>0</code>
+(binary ascii value 48) in strings etc.</p>
+<p>Not to be confused with <code>0</code> within an arithmetic
+evaluation context <code>$(( 0 ))</code>, where it means the integer
+zero (binary value 0).</p>
+<p>Not to be confused with the character <code>0</code> where stream
+identifiers might be expected, as there it becomes the standard input
+(stdin) stream identifier!</p>
+<p>All clear now?</p>
+<h2 class="section" id="chap03.xhtml_leanpub-auto-using-io">Using
+I/O</h2>
+<p>The streams (1-2) are often simply directed (written) to real files
+with <code>&gt; $FILENAME</code>, without having to ‘open’ those
+files.</p>
+<p><code>&gt;&gt; $FILENAME</code> will append to the end of an existing
+file instead of creating a new one (or overwriting and existing
+one).</p>
+<p>To append several files at once into stream 0 (stdin), we can invoke
+program <code>cat $F1 $F2</code> or <code>tac $F2 $F1</code>, where
+<code>tac</code> presents the file’s lines backwards.</p>
+<p>Sometimes we may wish to read chunks of an input file and to remember
+the current reading position in-between, down to the last byte. It is
+better to define our own dedicated stream to do this. Let us open file
+<code>$F1</code> for reading on stream <code>3</code>. We use special
+command <code>exec</code> which replaces the default shell stream(s)
+with the new one(s). In this case, it adds the newly created stream
+3:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 exec 3&lt;$F1 || {
+2   printf &quot;$PROGN: &#39;$F1&#39; failed to open for reading\n&quot; &gt;&amp;2
+3   exit 2
+4 }</code></pre>
+</div>
+</figure>
+<p>To open an output file, use <code>&gt;</code> and for both input and
+output, use <code>&lt;&gt;</code>.</p>
+<p>Example: invoking utility program <code>head</code> to read just the
+next <code>$N</code> bytes from stream <code>3</code> and writing them
+to <code>$FILE2</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 head -c $N &lt;&amp;3 &gt;$FILE2</code></pre>
+</div>
+</figure>
+<p>The next execution of this command will read the following
+<code>$N</code> bytes from <code>$FILE1</code> and so on. Note that,
+unlike <code>cat</code> and <code>tac</code>, this disregards the ‘lines
+structure’ of text files and thus is particularly suitable for reading
+binary files.</p>
+<p>When we no longer need stream 3, we close it with:
+<code>exec 3&gt;&amp;-</code>. The dash means ‘close this stream’.</p>
+<p>Streams can also be redirected from one to another. For example,
+<code>1&gt;&amp;2</code> redirects stdout to stderr. Leaving 1 out, it
+will be assumed by default. Thus <code>&gt;&amp;2</code> has the same
+effect (see above).</p>
+<p>Occasionally, we may need a stream to directly stand in for a
+file.<br />
+Suppose we wish to pipe 100 random hexadecimal characters to an external
+program <code>prog</code>, which for some reason does not have the
+ability to read from stdin. Instead, <code>prog</code> expects an
+explicit input filename argument. For this situation, there are certain
+standard system filenames, permanently associated with the standard
+streams:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 tr -dc &#39;0-9a-f&#39; &lt; /dev/urandom | \
+2 head -c 100 | prog /dev/stdin</code></pre>
+</div>
+</figure>
+<p>Here we sent a ‘lazy’ stream of random valued bytes (0-255) from
+<code>/dev/urandom</code> to utility program <code>tr</code>, which
+deletes all but the specified hexadecimal characters ranges and pipes
+the surviving ones to <code>head</code>. Head then takes just one
+hundred of them and pipes them to <code>prog</code>. Prog can not read
+the pipe on stream 0 (stdin), as per usual but instead opens the file
+<code>/dev/stdin</code> and finds the bytes there.</p>
+<p>Similarly, to throw away some unwanted messages, data, or spam,
+direct them to <code>&gt;/dev/null</code></p>
+<h2 class="section"
+id="chap03.xhtml_leanpub-auto-pipes-and-functional-composition">Pipes
+and functional composition</h2>
+<p>Function calls, subshell evaluations, Bash commands, invocations of
+other programs, basically everything in Bash, are functions which write
+their produced values by default to stream 1. The results are then
+received from stream 0 as the returned value of their call or passed on
+via the pipe.</p>
+<p>This mechanism is somewhat like what happens in <em>functional
+programming</em>: it facilitates convenient composition. In fact, with a
+bit of self imposed discipline not to abuse global variables, good old
+Bash can be used for functional programming. Abusing global variables is
+a bad practice anyway, it is bound to bite you painfully when you start
+using <code>&amp;</code> (background parallel execution of sub
+processes).</p>
+<p>We will now demonstrate the piping to and from any Bash statements on
+an example of <code>case</code> command. The following text fragment is
+taken from TokenCrypt project <a
+href="https://github.com/liborty/TokenCrypt">(4)</a>.</p>
+<p>It shows how we can <em>switch pipes</em>. That is, factor out all
+common computations and put them upfront. Then pipe their results to a
+<code>case</code> statement, within which each branch is going to
+continue the pipe actions in its own specific way. Then we continue
+again with one common path after the <code>case</code> statement is
+finished. That is, in this example, write the decrypted decompressed
+result into <code>$OUTFILE</code>.</p>
+<p>The code reads a key of known <code>$FSIZE</code> from stream
+<code>3</code>, decrypts $INFILE with it and then chooses the relevant
+method of decompression, depending on the value of <code>$CH</code>.
+What gets written into <code>$OUTFILE</code> in the end will depend on
+which branch of the case statement was selected.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 head -c $FSIZE &lt;&amp;3 | symcrypt $INFILE | case &quot;$CH&quot; in
+ 2    h ) hexify;;
+ 3    b ) base64 -w 0;;
+ 4    i ) lzma -d;;
+ 5    j ) lzma -d | hexify;; 
+ 6    k ) lzma -d | base64 -w 0;; 
+ 7    l ) zstd -d -c;; 
+ 8    m ) zstd -d -c | hexify;; 
+ 9    n ) zstd -d -c | base64 -w 0;;
+10    * ) printf &quot;$PROGN importfile: unrecognised ch\n&quot;;
+11        exit 2;;
+12 esac &gt; $OUTFILE</code></pre>
+</div>
+</figure>
+<p>Similar pipes can be set up for any Bash statements. Think of them
+all as filters of some data streams.</p>
+<p><span id="chap04.xhtml"></span></p>
+<h1 class="chapter"
+id="chap04.xhtml_leanpub-auto-amazing-arithmetic">Amazing
+Arithmetic</h1>
+<p>In fairness, there is one practical drawback to the ‘everything is
+just a string’ (EIJAS) philosophy of Bash. Namely, the lack of floating
+point arithmetic.</p>
+<p>Suppose we want to do a simple floating point division
+<code>C=$A/$B</code>. That is, we are not satisfied with just the
+truncated answer that the Bash default integer division gives, e.g. ‘5/2
+= 2’ and we want greater precision (in this case 2.5).</p>
+<p>We could reach for external Linux utilities, such as
+<code>awk</code>,<code>dc</code>,<code>bc</code>, etc., and most people
+do. However, embedding their code is somewhat messy in Bash. Most of the
+facilities that these external programs offer are an overkill for a
+simple one line calculation. Plus we have to start a sub-process for
+them every time, even for trivial examples, such as this one:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 C=$( awk &quot;BEGIN { print $A / $B }&quot; )</code></pre>
+</div>
+</figure>
+<p>Luckily, there is a simpler and more efficient alternative: <em>fixed
+point arithmetic</em>. As an exercise, we are now going to implemented
+it in Bash. The full source is available in <a
+href="https://github.com/liborty/fdiv">(3)</a>.</p>
+<p>Fixed point arithmetic is used in situations, where the numbers being
+handled are all of similar magnitudes, so that they do not need the
+separately maintained exponents of floating point numbers.</p>
+<p>Two good examples are calculating percentages and money. In both of
+these common use cases, the decimal point has a fixed meaning (and
+position). This is in fact preferable in many applications, as the
+truncation errors are more predictable and controllable.</p>
+<p>Then the ‘mantissa’ can be, in effect, expanded to the full 64 bits
+word. Note that the commonly used ‘Double Precision IEEE 754 Floating
+Point Standard’ has only 52 bits allocated for the mantissa. Therefore
+our fixed point arithmetic implemented on top of ordinary 64 bit integer
+arithmetic used by Bash, will gain up to 12 bits of extra precision.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-ratio-in-fixed-point-arithmetic">Ratio in
+fixed point arithmetic</h2>
+<p>Ratios are easier for internal calculations than percentages.
+Besides, any barely numerate person is able to mentally translate them
+to percentages by simply multiplying them by a hundred.</p>
+<p>Suppose we want to calculate the ratio of the byte sizes of two
+directories: $INDIR and $OUTDIR. The second one, $OUTDIR, is a
+compressed version of the first, and we want to find its compression
+ratio.</p>
+<p>By taking the ratio, where we always divide by the bigger of the two
+numbers, we are normalising from two hard to handle ranges of the
+original values <code>[0,infinity)</code>, to a much more compact and
+convenient range of their ratio: [0,1].</p>
+<ul>
+<li>Mathematical notation: the round closing bracket above denotes a
+half open interval. Computers can not handle infinity, so we excluded it
+from the interval. We can only ever approach it.</li>
+</ul>
+<p>In general, it is easy to check that we are always dividing by the
+bigger of the two numbers and not by zero. That is enough to ensure that
+the ratio will always be well behaved and in the interval [0,1].</p>
+<p>Back to our compression ratio application. The following line calls
+<code>du</code> (disk usage) to fill an array, here called
+<code>SIZES</code>, with the sizes and names of the two directories:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 # create array SIZES[size1, dir1, size2, dir2]
+2 SIZES=$( du -hbs $INDIR $OUTDIR ) </code></pre>
+</div>
+</figure>
+<p>Next we use printf formatting to turn an ordinary integer
+<code>%d</code> into a fixed point number <code>0.%05d</code>.</p>
+<p>In the printf formatting string, <code>%s</code> (for strings),
+<code>%d</code> (for decimal numbers), etc., get filled in order by the
+actual values of the evaluated arguments (if any), following the
+formatting string. Here they are the sizes and names of the two
+directories and finally the calculated compression ratio (
+<code>\</code> simply allows continuing the code onto the next
+line):</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 printf &quot;Output size:\t%s (%s)\n\
+2    Original size:\t%s (%s)\n\
+3    Compressed to:\t0.%05d\n&quot; \ 
+4    ${SIZES[0]} ${SIZES[1]} ${SIZES[2]} ${SIZES[3]} \
+5      $(( 100000*${SIZES[2]}/${SIZES[0]} ))</code></pre>
+</div>
+</figure>
+<p>The last line is the actual fixed point (integer) calculation. We
+have chosen here to calculate the ratio to five decimal places
+<code>0.%05d</code>, so we premultiply by 100000. The five zeroes
+correspond to the five decimal places we will output via the formatting
+string. The numerator is the size of the smaller compressed $OUTDIR, so
+the true ratio will be less than one.</p>
+<p>We get this precision by making a temporary left shift by five
+decimal places and then carrying out ordinary integer division. Of
+course, this should be followed by somehow shifting back those five
+decimal places to the right, to produce the final result.</p>
+<p>Good plan but how to shift right (divide by 100000), without a
+numeric type capable of holding those five decimal places of the result?
+Are we not going around in circles with this?</p>
+<p>Here is the trick. We can break out of the circle with simple
+<em>textual manipulation</em>. Forget about dividing back by 100000. We
+just textually construct a fixed point number, by prepending onto the
+integer result the literal string <code>0.</code>. We can do this
+whenever we know that the result is less than one. I bet you missed
+seeing that trick in the <code>printf</code> format string above? Note
+that this gives us a ‘new fixed point type’, without violating the EIJAS
+principle.</p>
+<p>At a stroke of a horrible type-violating magic that would make any
+modern day compiler die in convulsions, we turned the upscaled integer
+division result, say <code>1234</code>, into <code>0.01234</code>. In
+Bash this is not nearly as strange as it may seem, as everything returns
+only strings, anyway.</p>
+<p>Of course, any leading zeroes after the decimal point are
+significant, so we have to pad on the left with them. The leading zero
+after <code>%</code> in the format string <code>"%05d"</code> does just
+that.</p>
+<p>The digit <code>5</code> (significant places) always has to agree
+with the number of zeroes in our multiplication left shifting factor, in
+this case <code>100000</code>. It should be assigned to a variable, say
+<code>SIGDIGITS=5</code> and used as <code>"%0$SIGDIGITSd"</code> in the
+formatting string and as <code>10**$SIGDIGITS</code> in the scaling
+factor, thus avoiding any potential oversight mismatch problems.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-percentages-in-integer-arithmetic">Percentages
+(in integer arithmetic)</h2>
+<p>Similarly, the following prints the compression ratio (CR) as a
+percentage of the original size, rounded to the nearest one hundredth of
+a percent. All done in integer arithmetic:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 # compression ratio as a percentage: xx.xx%
+ 2 # multiplying by 10**5, then taking the ratio,
+ 3 # adding 5 and dividing by 10,
+ 4 # rounds to one hundredth of one percent.
+ 5 # SIZES is an array holding: size1,dir1,size2,dir2
+ 6 SIZES=$( du -bs $INDIR $OUTDIR ) 
+ 7 printf &quot;$PROGN: ${SIZES[1]} ${SIZES[0]} &quot;
+ 8 printf &quot;=&gt; ${SIZES[3]} ${SIZES[2]} &quot;
+ 9 if [ ${SIZES[0]} = ${SIZES[2]} ]; then 
+10    printf &quot;(100 %%)\n&quot;
+11 else
+12    # calculate percentage rounded to two decimal places
+13    CR=$(( (5+100000*${SIZES[2]}/${SIZES[0]})/10 ))
+14    # compression ratio printed as xx.xx%
+15    printf &quot;(${CR: 0:2}.${CR: 2:4} %%)\n&quot; 
+16 fi</code></pre>
+</div>
+</figure>
+<p>Here we are not using the printf format string substitution but
+directly constructing the percentage number by selecting the first two
+digits of <code>$CR</code>, then splicing in the decimal point
+character, and ending up with the next two digits:
+<code>${CR: 0:2}.${CR: 2:4}</code>. The selection of individual
+characters and their ranges is one of the functions available in
+variable expansion <code>${CR}</code>.</p>
+<p>Bash is perfect for such textual hacks, precisely because ‘everything
+is just a string’.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-general-division">General division</h2>
+<p>It could be objected that these are just specialised printing tricks
+and that numbers are not of much use unless we can do general
+calculations with them. Can we therefore write a Bash function that will
+do the division without any predetermined hard coded number of decimal
+places? Ideally, always giving the maximum precision possible?</p>
+<p>Let us call that function <code>fdiv</code>. Here are some more
+detailed requirements for it:</p>
+<ul>
+<li><code>fdiv</code> bash script takes two integer arguments: numerator
+and denominator. It checks the arguments and returns errors if they are
+missing or not integers or the divisor (denominator) is zero. It deals
+correctly with negative argument(s).</li>
+<li>it returns a fixed point number division result to the best possible
+precision allowed by up to two 64 bit integers, rounded to the nearest
+next digit, for example:</li>
+</ul>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1    fdiv -2 -3
+2    0.666666666666666667  
+3    fdiv 355 113
+4    3.14159292035398230</code></pre>
+</div>
+</figure>
+<ul>
+<li>When the numerator is zero, 0.0 is immediately returned.</li>
+<li>Automatically calculates with the maximum precision. Truncation
+error will be less than 5E-19.</li>
+<li>When <code>numerator &gt; denominator,</code> then the answer is
+composed from the whole number (numerator/denominator integer division),
+followed by the decimal point and then the upscaled remainder divided by
+the denominator. The last part is less than one and therefore gives the
+digits after the decimal point, similarly to ‘Fixed Point Ratio’ section
+above. Overall, this maintains the 5E-19 guaranteed precision even for
+some quite large numbers. For example:</li>
+</ul>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1    fdiv $(( 2**63-1 )) 3
+2    3074457345618258602.333333333333333333</code></pre>
+</div>
+</figure>
+<ul>
+<li>When the denominator is divisible by 10, or its multiples, then the
+decimal precision can be also increased, this time by the relevant
+number of zeroes inserted after the decimal point. In the following
+example, the truncation error is now less than 5E-22:</li>
+</ul>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1     fdiv 5 30000
+2     0.0001666666666666666667</code></pre>
+</div>
+</figure>
+<p>We could do this zero shuffling just as well in binary by detecting
+divisibility by two but this is easier for demonstration purposes. In
+fact, that is just what the floating point arithmetic does, where the
+exponent represents ‘the balance of the zeroes’. In general, the
+cleanest method (though not the fastest) is to carry out Euclid’s
+greatest common divisor (GCD) algorithm and to eliminate (all) common
+multiples first. However, here it is not necessary, as they will be
+eliminated much faster by the integer divisions anyway. With our method
+of transferring denominator zeroes we in fact gain significant
+digits.</p>
+<p>Note that <code>fdiv</code> is not like Bignum package using an
+unlimited number of computer words. Therefore, apart from the zeroes
+transfer trick, there are natural limits to the number of significant
+digits that can be produced, namely two 64 bit words. Still, that is
+quite a lot better than the 52 bits of the ‘double precision’ standard
+floating point mantissa.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-adding-fixed-point-numbers">Adding fixed
+point numbers</h2>
+<p>Without wishing to labour the point, we ought to also demonstrate
+that we can do arithmetic on these fixed point numbers. The next script,
+<code>fadd</code>, shows their addition. It is an instructive exercise
+in Bash textual manipulation for the unlikely purpose of arithmetic:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 #!/bin/bash
+ 2 # fadd takes two positive fixed point arguments 
+ 3 # each of the form whole.fract
+ 4 # and returns a fixed point number addition result 
+ 5 # for example: fadd 9.876543 0.987 10.863543
+ 6 
+ 7 PROGN=${0##*/}
+ 8 MAXINT=9223372036854775807 # 2**63-1
+ 9 
+10 # arguments verification
+11 NUM1=${1:?$PROGN needs fnum first argument}
+12 NUM2=${2:?$PROGN needs fnum second argument}
+13 [[ $NUM1 =~ ^[+-]?[0-9]+[.][0-9]+$ ]] || { printf \
+14    &quot;$PROGN error: first argument $NUM1 is not an fnum\n&quot;;
+15    exit 2
+16 }
+17 [[ $NUM2 =~ ^[+-]?[0-9]+[.][0-9]+$ ]] || { printf \
+18    &quot;$PROGN error: second argument $NUM2 is not an fnum\n&quot;;
+19    exit 2
+20 }
+21 
+22 # parse both args into whole and fractional parts
+23 ARR1=(${NUM1//./ })
+24 ARR2=(${NUM2//./ })
+25 F1=${ARR1[1]}
+26 F2=${ARR2[1]}
+27 
+28 # swap fractional parts so that $F1 is the longer
+29 [[ ${#F1} -lt ${#F2} ]] &amp;&amp; { 
+30    FT=$F1; F1=$F2; F2=$FT
+31 } 
+32 LF2=${#F2} #  save the shorter length
+33 
+34 # strip trailing zeroes from the longer F1 while longer
+35 while [[ ${#F1} -gt $LF2 ]]; do
+36 [[ ${F1: -1:1} == 0 ]] &amp;&amp; F1=${F1:0:-1} || break
+37 done
+38 LF1=${#F1} # finished chopping F1 now
+39 
+40 # and/or pad the shorter F2 with rhs zeroes
+41 # until of the same length
+42 while [[ $LF1 -gt ${#F2} ]]; do F2=${F2}0; done
+43 
+44 # do the adding 
+45 WHOLE=$(( ${ARR1[0]}+${ARR2[0]} ))
+46 FRACT=$(( $F1+$F2 ))
+47 
+48 # check for fractional overflow i.e. &gt;= 1
+49 [[ ${#FRACT} -gt $LF1 ]] &amp;&amp; {
+50    let WHOLE+=${FRACT:0:1}
+51    FRACT=${FRACT:1}
+52 }
+53 expr $WHOLE.$FRACT </code></pre>
+</div>
+</figure>
+<p>Project for the reader: implement a similar script <code>fsub</code>,
+that will carry out subtraction of these fixed point numbers. Hint:
+begin by copying this code <a
+href="https://github.com/liborty/fdiv/blob/master/fadd">(9)</a> and then
+just suitably modify it.</p>
+<p><span id="chap05.xhtml"></span></p>
+<h1 class="chapter"
+id="chap05.xhtml_leanpub-auto-subshell-scheduling">Subshell
+Scheduling</h1>
+<p>As has been outlined before, running processes in the background with
+<code>&amp;</code>, potentially in a different processor core, while we
+get on with the job on hand, is an important part of Bash. It always has
+been but lately, with multicore processors being the norm, it has become
+more topical. When you have thirty two or more cores sitting in your
+processor, most of them so to speak ‘twiddling their thumbs’, it behoves
+a responsible programmer to think of ways of spreading the jobs
+around.</p>
+<h2 class="section"
+id="chap05.xhtml_leanpub-auto-automatic-multithreading">Automatic
+multithreading</h2>
+<p>Many Bash applications just handle lots of files. As does, for
+example, the open-source github project TokenCrypt, <a
+href="https://github.com/liborty/TokenCrypt">(4)</a>. Many of the tasks
+depend on the file alone and so they can be run in parallel. Disk
+bottlenecks may limit the expected speedups but we will not worry about
+them here.</p>
+<p>Here we shall see how to automate the spawning of background jobs
+within a Bash script. This technique is of general use and it can speed
+up many naturally parallel tasks, such as the processing of several
+files.</p>
+<p>A better way of doing intricate multithreaded and asynchronous
+programming (and many other things besides) is Rust, of course. However,
+Bash remains by far the easiest for simple tasks.</p>
+<h2 class="section"
+id="chap05.xhtml_leanpub-auto-rant-about-security-and-privacy">Rant
+about security and privacy</h2>
+<p>This project was born out of frustration with the state of encryption
+on the internet. Many of the offerings appear to be achieving only the
+objectives of obfuscation and insecurity. Amongst them even some well
+intentioned ones.</p>
+<p>However, there is a very simple and effective alternative: XOR
+symmetric encryption. Symmetric means that the same key is used for both
+encryption and decryption, which much simplifies the key management. It
+also allows such useful operations as merging of keys for multi
+authorisations.</p>
+<p>Furthermore, with the key of the same length as the message, this
+encryption is theoretically unbreakable, i.e. the strongest possible. It
+is implemented in TokenCrypt in an easily usable form.</p>
+<p>There is one reasonable objection, that generating such long keys in
+effect doubles the amount of storage needed. This is mitigated by
+compressing the files first and some care is taken to do it effectively.
+So, for example, with 50% compression achieved, there is no storage
+overhead at all. In any case, disks are cheap and the security is worth
+it even with some overhead. On the plus side, the encryption and
+decryption are very fast, being so simple.</p>
+<h2 class="section"
+id="chap05.xhtml_leanpub-auto-encrypting-many-files-faster">Encrypting
+many files faster</h2>
+<p>The tasks of compressing, encrypting, decompressing and decrypting
+all the files in a given directory are clearly I/O bound. They only
+depend on one file at a time, so can be performed in parallel, without
+communications between them.</p>
+<p>The most suitable compression method is selected and applied for each
+file individually and also the key of the right length is generated on
+encryption or looked up on decryption. The code is general enough to
+take care of this. We will not dwell on the details here, they can be
+found in <a href="https://github.com/liborty/TokenCrypt">(4)</a>, <a
+href="https://github.com/liborty/TokenCrypt/ncrpt">(5)</a>, <a
+href="https://github.com/liborty/TokenCrypt/expcrypt">(6)</a>, <a
+href="https://github.com/liborty/TokenCrypt/impcrypt">(7)</a>.</p>
+<p>Our aim is to fire off background jobs for longer files first and
+leave the shorter ones to be processed in the current shell in the end,
+to avoid the subshell overheads for them. This will minimise the overall
+script execution time. We also want simple code without too many tests
+and complicated ‘if’ statements.</p>
+<p>First the script arguments and flags are processed and used to set up
+the correct input and output directories. Then the input files are
+sorted by their lengths:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 # size of files to be encrypted in the subshells
+2 BACKSZ=10000 
+3 # list sorted files in INDIR by size (in bytes)
+4 ITEMS=$(ls -SL $INDIR)
+5 # prepare to fire off subshells
+6 BJ=\&amp;</code></pre>
+</div>
+</figure>
+<p>The last line above is a wondrous hack to set up the default textual
+command ending <code>$BJ</code> to <code>&amp;</code>.<br />
+This will cause jobs over big files, followed by “$BJ”, to be run in the
+background subshell, to start with.</p>
+<p>What remains now is to process all the files in the order of their
+decreasing size and when the threshold <code>BACKSZ</code> is reached,
+permanently turn off the sub-shelling with <code>BJ=''</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code> 1 for FILEND in $ITEMS; do
+ 2    # reconstruct one full path/filename
+ 3    INFILE=$INDIR/$FILEND 
+ 4    # only process a genuine file
+ 5    [ -f &quot;$INFILE&quot; ] || continue 
+ 6    # turn off subshells when file size falls 
+ 7    # below the threshold BACKSZ
+ 8    # once $BJ has been set to an empty string, 
+ 9    # do not check filesizes any more
+10    [ -z &quot;$BJ&quot; ] || \
+11    [ $( stat -c%s $INFILE ) -ge $BACKSZ ] || BJ=&#39;&#39; 
+12    # the function that processes one file
+13    # either in the background or in this shell
+14    # depending on the value of $BJ
+15    processfile $INFILE $BJ 
+16 done
+17 wait # for all processfiles to finish</code></pre>
+</div>
+</figure>
+<p>Remember that Bash functions are executed in a sub shell when their
+invocation ends in <code>&amp;</code>. When <code>$BJ</code> variable is
+programmatically unset, its value simply disappears from the program
+text and executions of <code>processfile</code> are thereafter done in
+the current shell.</p>
+<p>Self modifying program, ha! (The beautitudes of EIJAS in Bash).</p>
+<p>We use logical or <code>||</code> instead of <code>if</code>. It only
+executes the last command, unsetting <code>BJ=''</code>, once. When
+<code>$BJ</code> was still set to <code>&amp;</code> but the size of the
+current <code>$INFILE</code> has fallen below the threshold
+<code>$BACKSZ</code>. The only check performed thereafter is the first
+part: <code>[ -z "$BJ" ]</code> is <code>$BJ</code> unset? (evaluates to
+true and exits <code>||</code> immediately). If there are lots of short
+files, it saves the relatively expensive <code>stat</code> system calls
+on all the rest of them. They are already sorted, so none of them will
+exceed the threshold any more.</p>
+<p>Of course, in this simple example, we could have achieved the same
+effect by testing $BJ in an if statement and issuing two different
+explicit calls to <code>processfile</code>, as follows:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 if [ -n &quot;$BJ&quot; ]; then
+2    processfile $INFILE &amp;
+3 else
+4    processfile $INFILE
+5 fi</code></pre>
+</div>
+</figure>
+<p>but we wanted to demonstrate the general opportunities in Bash
+programs for self-modification.</p>
+<p>Hopefully, it can be seen that without too much extra difficulty, we
+could set up a fully fledged scheduler with a managed queue of jobs with
+priorities and a dispatcher for their execution. However, mostly people
+use a ‘gunshot’ technique of firing off almost anything and everything
+with &amp; and letting the operating system take care of the details of
+their executions.</p>
+<p>Nonetheless, as pointed out above, we need to be careful about
+disrupting any sequential inputs/outputs and generally anything that has
+to be done in specific order.</p>
+<p><span id="chap06.xhtml"></span></p>
+<h1 class="chapter"
+id="chap06.xhtml_leanpub-auto-conclusion">Conclusion</h1>
+<p>Possibly the most exciting thing about Bash is just how quickly we
+were able to move with this book ‘from zero to hero’ . That means gain
+confidence and to start implementing practical projects that would
+actually be quite challenging and long winded to do in most modern
+programming languages.</p>
+<p>Some modern languages, of which Rust is a prime example, produce
+rather the opposite experience of going ‘from hero to zero’. That is to
+say, from a confident programmer who has previously mastered a number of
+languages, to a human wreck feeling very much at the deep end, with
+snail pace productivity. Don’t get me wrong, I love Rust really and will
+probably write my next book about it.</p>
+<p>Another anecdote in a similar vein used to be told about Java when
+that one first came out: “have you heard of this wonderful new language,
+in which you can print ‘hello world’ in mere five pages of code”?</p>
+<p>Behind this hilarity, there is a serious point to be made.
+Programming is getting more and more complex. Following current trends,
+we might lose ownership of it altogether. It may become a reserve for
+the last few dorks alive, who can still (just about) cut it and paste
+it, in their own narrow field, using proprietary applications libraries
+that someone long ago dead has bequeathed onto them. That would be a
+sad, dystopian world.</p>
+<p>Is such a bleak future really inevitable? Perhaps this book has
+managed to inspire you towards (re)discovering the joys of ‘owning’
+programming and sharing its fruits. Then its mission was a success.</p>
+<p><span id="chap07.xhtml"></span></p>
+<h1 class="chapter"
+id="chap07.xhtml_leanpub-auto-links-references">Links References</h1>
+<p>(1) Gnu Foundation, Bash Reference Manual,<br />
+<a
+href="https://www.gnu.org/software/bash/manual/bash.html">https://www.gnu.org/software/bash/manual/bash.html</a>.</p>
+<p>(2) Bash Scripting Cheatsheet,<br />
+<a href="https://devhints.io/bash">https://devhints.io/bash</a>.</p>
+<p>(3) <code>fdiv</code> Fixed Point Arithmetic in Shell Scripts, github
+repository,<br />
+<a
+href="https://github.com/liborty/fdiv">https://github.com/liborty/fdiv</a>.</p>
+<p>(4) TokenCrypt Encrypting Archiver, github repository,<br />
+<a
+href="https://github.com/liborty/TokenCrypt">https://github.com/liborty/TokenCrypt</a>.</p>
+<p>(5) <code>ncrpt</code>, bash script in (4),<br />
+<a
+href="https://github.com/liborty/TokenCrypt/blob/master/ncrpt">https://github.com/liborty/TokenCrypt/blob/master/ncrpt</a>.</p>
+<p>(6) <code>expcrypt</code>, bash script in (4),<br />
+<a
+href="https://github.com/liborty/TokenCrypt/blob/master/expcrypt">https://github.com/liborty/TokenCrypt/blob/master/expcrypt</a></p>
+<p>(7) <code>impcrypt</code>, bash script in (4),<br />
+<a
+href="https://github.com/liborty/TokenCrypt/blob/master/impcrypt">https://github.com/liborty/TokenCrypt/blob/master/impcrypt</a></p>
+<p>(8) Encryption and E-Democracy, blog,<br />
+<a
+href="https://oldmill.cz/2020-06-10-crypt.html">https://oldmill.cz/2020-06-10-crypt.html</a></p>
+<p>(9) <code>fadd</code> bash script to add fixed point numbers, in
+(3),<br />
+<a
+href="https://github.com/liborty/fdiv/blob/master/fadd">https://github.com/liborty/fdiv/blob/master/fadd</a></p>

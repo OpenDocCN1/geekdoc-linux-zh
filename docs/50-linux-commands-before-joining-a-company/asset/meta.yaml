@@ -1,0 +1,72 @@
+name: 50+ Linux Commands before joining a Company
+name_cn: 入职前必学的50+ Linux命令
+slug: 50-linux-commands-before-joining-a-company
+toc:
+- - '#'
+  - 入职前必学的50+ Linux命令
+- - '##'
+  - 引言
+- - '##'
+  - 获取系统详情
+- - '###'
+  - lscpu 命令
+- - '###'
+  - uname -a
+- - '###'
+  - sudo dmidecode
+- - '###'
+  - 时钟频率
+- - '###'
+  - cat /proc/meminfo
+- - '###'
+  - gcc version
+- - '###'
+  - lsb_release -a
+- - '###'
+  - 在后台运行进程
+- - '###'
+  - 语法：
+- - '###'
+  - 示例：
+- - '###'
+  - 检查后台进程
+- - '###'
+  - 将进程带回前台
+- - '###'
+  - 示例：
+- - '###'
+  - 让正在运行的进程进入后台
+- - '###'
+  - 获取作业的进程 ID
+- - '###'
+  - 杀死进程
+- - '###'
+  - 安装 Screen
+- - '###'
+  - 启动 screen 会话
+- - '###'
+  - 获取 screen 帮助
+- - '###'
+  - 退出 screen 会话
+- - '###'
+  - 列出 screen 会话
+- - '#'
+  - '`/var/run/screen/S-opggenus` 中的 2 个 Socket'
+- - '##'
+  - 在 screen 会话中运行命令
+- - '##'
+  - 回会话
+- - '##'
+  - 如何知道你正处于 screen 中？
+- - '##'
+  - 删除 screen 会话
+- - '##'
+  - 为 screen 会话命名
+- - '#'
+  - '`/var/run/screen/S-opggenus` 中的 4 个 Socket'
+- - '##'
+  - 锁定你的 screen 会话
+- - '##'
+  - 记录 screen 会话活动
+- - '##'
+  - 文件处理
