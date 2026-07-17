@@ -1,0 +1,2 @@
++   [学习 Python、Java、JavaScript、C、C++、C#、CSS、HTML、jQuery、MySQL、SQL、Linux、Perl、PHP 或 XML：300+ 份免费教材、100+ 份速查表、100+ 份 vi 快速链接](README.md)
++   [学习 Python、Java、JavaScript、C、C++、C#、CSS、HTML、jQuery、MySQL、SQL、Linux、Perl、PHP 或 XML：300+ 份免费教材、100+ 份速查表、100+ 份 vi 快速链接](learning-python-java-javascript-c-c-c-css-html-jquery-mysql-_0.md)
