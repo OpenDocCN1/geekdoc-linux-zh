@@ -454,6 +454,7 @@
 +   [精通 KVM：现代 IT 基础设施的虚拟化](docs/mastering-kvm-virtualization-for-modern-it-infrastructures/README.md)
 +   [Linux Linux 管理：全面指南](docs/mastering-linux-administration-a-comprehensive-guide/README.md)
 +   [精通 Linux Mint 22：安装、配置与高级功能完全指南](docs/mastering-linux-mint-22-the-complete-guide-to-installation-c/README.md)
++   [Linux 系统管理精指南](docs/mastering-linux-system-administration/README.md)
 +   [UNIX Shell 脚本高级指南（第二版）](docs/mastering-unix-shell-scripting-second-edition/README.md)
 +   [RPM 权威指南](docs/maximum-rpm-rpm-other-sams/README.md)
 +   [Microsoft Word - Linux 与 Windows 集成指南](docs/microsoft-word---integrating-linux-and-windowsdoc/README.md)
