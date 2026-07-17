@@ -217,6 +217,7 @@
 +   [Web开发者的HTML5指南](docs/html-5-guidelines-for-web-developmers/README.md)
 +   [Red Hat Linux 6.1 安装、配置与自定义指南](docs/install-configure-and-customize-red-hat-linux-61-electronic-/README.md)
 +   [Bash 脚本编程入门](docs/intd-bsh-scp/README.md)
++   [Kali Linux 中级安全测试指南](docs/intermediate-security-testing-with-kali-linux-2/README.md)
 +   [Linux 进程间通信：细节全解](docs/interprocess-communications-in-linux-the-nooks-and-crannies/README.md)
 +   [Ubuntu 桌面 Linux 入门指南](docs/introducing-ubuntu-desktop-linux/README.md)
 +   [计算机组织入门指南：硬件与 X86-64 汇编底层深度解析](docs/introduction-to-computer-organization-an-under-the-hood-look/README.md)
