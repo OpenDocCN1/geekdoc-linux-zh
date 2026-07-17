@@ -1,0 +1,105 @@
+name: Linux Hacking： A Beginner's Guide to Mastering CyberSecurity and Ethical Hacking
+  with Linux Tools and Techniques
+name_cn: Linux 黑客：使用 Linux 工具和技术精通网络安全与道德黑客的初学者指南
+slug: linux-hacking-a-beginners-guide-to-mastering-cybersecurity-a
+toc:
+- - '#'
+  - Linux 黑客：使用 Linux 工具和技术精通网络安全与道德黑客的初学者指南
+- - '##'
+  - 引言
+- - '##'
+  - 第 1 章：基础与高级 Linux 概念
+- - '###'
+  - 终端与 Shell
+- - '###'
+  - 导航
+- - '###'
+  - 文件操作
+- - '###'
+  - 复制
+- - '###'
+  - CPU
+- - '###'
+  - 进程
+- - '###'
+  - 内核
+- - '###'
+  - 抽象
+- - '###'
+  - 多用户系统
+- - '###'
+  - 高级概念
+- - '##'
+  - 第 2 章：Linux 安装
+- - '###'
+  - 要求
+- - '###'
+  - 安装过程
+- - '###'
+  - Kali Linux 简介
+- - '###'
+  - 为什么你应该安装 Kali Linux？
+- - '###'
+  - 安装后操作
+- - '###'
+  - Bash 命令技巧与快捷键
+- - '###'
+  - Python 中的格式
+- - '###'
+  - 道德黑客
+- - '###'
+  - 在黑客过程中如何保持安全和匿名
+- - '##'
+  - 第 4 章：伦理与不伦理黑客攻击
+- - '###'
+  - 黑客伦理
+- - '###'
+  - 黑客层级（使用和滥用服务）
+- - '##'
+  - 第 5 章：服务器与网络
+- - '###'
+  - LAN（局域网）
+- - '###'
+  - WAN（广域网）
+- - '###'
+  - WLAN（无线局域网）
+- - '##'
+  - 第 6 章：网络攻击与恶意软件
+- - '###'
+  - 网络攻击与注入方法
+- - '###'
+  - 暴力破解与凭据窃取
+- - '###'
+  - 基于系统的攻击
+- - '###'
+  - 检测与预防
+- - '##'
+  - 第 7 章：密码学
+- - '###'
+  - 加密的优势
+- - '###'
+  - 密码学的类型
+- - '###'
+  - Overview of Cryptography
+- - '###'
+  - Principles of Public-Key Encryption
+- - '###'
+  - Symmetric Encryption
+- - '###'
+  - 无线利用
+- - '##'
+  - 暗网：概述与风险
+- - '###'
+  - 暗网详解
+- - '###'
+  - 洋葱网络（The Onion Network）
+- - '###'
+  - 隐藏钱包（The hidden wallet）是
+- - '###'
+  - 黑市（The dark market）
+- - '###'
+  - 隐藏钱包（The hidden wallet）
+- - '###'
+  - 使用暗网的缺点
+- - '##'
+  - 结论

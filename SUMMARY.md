@@ -341,6 +341,7 @@
 +   [Hank 的 Linux](docs/linux-for-hank/README.md)
 +   [普通人的 Linux：初学者需要的 Linux 问答指南](docs/linux-for-the-rest-of-us-a-readable-linux-guide-with-answers/README.md)
 +   [Linux 初学者指南：Linux 操作系统与 Linux 命令最佳指南](docs/linux-guide-for-beginners-the-best-guide-to-the-linux-operat/README.md)
++   [Linux 黑客：使用 Linux 工具和技术精通网络安全与道德黑客的初学者指南](docs/linux-hacking-a-beginners-guide-to-mastering-cybersecurity-a/README.md)
 +   [Linux硬件手册（Sams白皮书系列）](docs/linux-hardware-handbook-sams-white-book-series/README.md)
 +   [Linux 简明指南 (Plain English 系列)](docs/linux-in-plain-english-in-plain-english/README.md)
 +   [职场Linux使用指南](docs/linux-in-the-workplace-how-to-use-linux-in-your-workplace/README.md)
