@@ -1,0 +1,121 @@
+name: Linux for Absolute Beginners： An Introduction to the Linux Operating System,
+  Including Commands, Editors, and Shell Programming
+name_cn: Linux 初学者指南：Linux 操作系统入门指南，包含命令、编辑器和 Shell 编程
+slug: linux-for-absolute-beginners-an-introduction-to-the-linux-op
+toc:
+- - '#'
+  - Linux 初学者指南：Linux 操作系统入门指南，包含命令、编辑器和 Shell 编程
+- - '##'
+  - 引言
+- - '##'
+  - 本书将带给你什么
+- - '##'
+  - 一些基础术语
+- - '##'
+  - 第一章：是什么导致了 Linux 的诞生？
+- - '###'
+  - 简述历史
+- - '###'
+  - 开源概念与分发版
+- - '##'
+  - Linux Mint
+- - '##'
+  - 红帽企业 Linux (RHEL)
+- - '##'
+  - Kali Linux
+- - '##'
+  - Fedora
+- - '##'
+  - Elementary OS
+- - '##'
+  - 下载和安装 Linux
+- - '###'
+  - 第 1 步：下载虚拟化软件
+- - '###'
+  - 第 2 步：下载你的 Linux 副本
+- - '###'
+  - 第 3 步：安装
+- - '###'
+  - 第 4 步：设置 Ubuntu
+- - '##'
+  - 熟悉界面
+- - '##'
+  - 文件系统和目录：“什么”和“如何”
+- - '###'
+  - 根目录 (Root Directory)
+- - '###'
+  - Home 目录 (Home Directory)
+- - '###'
+  - Usr 目录
+- - '###'
+  - Bin 目录 (Bin Directory)
+- - '###'
+  - Dev 目录 (Dev Directory)
+- - '###'
+  - Etcetera 目录 (Etcetera Directory)
+- - '###'
+  - Libraries (Libraries)
+- - '###'
+  - Lost+Found
+- - '###'
+  - Media 和 /mnt 目录 (Media and /mnt Directories)
+- - '###'
+  - Optional 目录 (Optional Directory)
+- - '###'
+  - Process 目录 (Process Directory)
+- - '##'
+  - '`ls` 命令'
+- - '###'
+  - '`ls -r`'
+- - '###'
+  - '`ls -l`'
+- - '##'
+  - 修改用户密码
+- - '##'
+  - 创建组
+- - '##'
+  - 修改组权限
+- - '##'
+  - “但我们还没有向组中添加用户。”
+- - '##'
+  - 配置你的系统
+- - '##'
+  - 资源与进程
+- - '##'
+  - 第五章：了解你的网络配置
+- - '###'
+  - 网络：基础
+- - '###'
+  - 使用网络传输文件
+- - '###'
+  - Secure Shell (SSH)
+- - '###'
+  - 网络应用程序
+- - '##'
+  - 第六章：Shell、脚本和工具
+- - '##'
+  - 选择你的开发工具
+- - '###'
+  - C 编译器
+- - '###'
+  - Python
+- - '###'
+  - 调试器
+- - '##'
+  - 第七章：增强你的体验
+- - '###'
+  - 掌握新命令
+- - '####'
+  - find 命令
+- - '####'
+  - GREP 命令
+- - '####'
+  - MAN 命令
+- - '##'
+  - 接下来是什么？
+- - '##'
+  - Linux 的未来：光明还是其他？
+- - '##'
+  - 结
+- - '##'
+  - 参考文献

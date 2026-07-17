@@ -307,6 +307,7 @@
 +   [网络安全 Linux 基础实验手册 (Pearson IT 网络安全课程 (ITCC))](docs/linux-essentials-for-cybersecurity-lab-manual-pearson-it-cyb/README.md)
 +   [Linux 常见问题解答：中级用户指南](docs/linux-faqs-intermediate-users/README.md)
 +   [Linux 防火墙：iptables, psad 和 fwsnort 攻击检测与响应 [图解]](docs/linux-firewalls-attack-detection-and-response-with-iptables-/README.md)
++   [Linux 初学者指南：Linux 操作系统入门指南，包含命令、编辑器和 Shell 编程](docs/linux-for-absolute-beginners-an-introduction-to-the-linux-op/README.md)
 +   [Linux 初学者指南（第17版，2024年）](docs/linux-for-beginners---17th-edition-2024/README.md)
 +   [Linux 入门指南：Linux 全方位初学者指南](docs/linux-for-beginners-linux-for-beginners-the-complete-beginne/README.md)
 +   [Linux 初学者指南：关于 Linux 的方位百科指南](docs/linux-for-beginners-linux-for-beginnersthe-essantail-guide-o/README.md)
