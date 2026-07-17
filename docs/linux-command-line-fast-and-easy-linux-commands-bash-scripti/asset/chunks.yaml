@@ -1,0 +1,3379 @@
+- fmt: "\n![](images/00054.jpeg)\n\n# Linux Command Line: FAST and EASY!\n\nLinux\
+    \ Commands, Bash Scripting Tricks, Linux Shell Programming Tips and Bash One-Liners\n\
+    \nBy Matthew Gimson\nCopyright©2015 Matthew Gimson\nAll Rights Reserved\nCopyright\
+    \ © 2015 by Matthew Gimson \nAll rights reserved. No part of this publication\
+    \ may be reproduced, distributed, or transmitted in any form or by any means,\
+    \ including photocopying, recording, or other electronic or mechanical methods,\
+    \ without the prior written permission of the author, except in the case of brief\
+    \ quotations embodied in critical reviews and certain other noncommercial uses\
+    \ permitted by copyright law.\n\n## Table of Contents\n\n- [Introduction](#part0000_split_004.html__Toc416032500)\n\
+    - [Chapter 1- Definition](#part0000_split_005.html__Toc416032501)\n- [Chapter\
+    \ 2- Linux Command Line Commands](#part0000_split_006.html__Toc416032502)\n- [Changing\
+    \ Directories](#part0000_split_008.html__Toc416032503)\n- [Copying file](#part0000_split_009.html__Toc416032504)\n\
+    - [The less command](#part0000_split_011.html__Toc416032505)\n- [ln command](#part0000_split_012.html__Toc416032506)\n\
+    - [locate command](#part0000_split_013.html__Toc416032507)\n- [logout command](#part0000_split_014.html__Toc416032508)\n\
+    - [ls command](#part0000_split_015.html__Toc416032509)\n- [more command](#part0000_split_016.html__Toc416032510)\n\
+    - [mv command](#part0000_split_017.html__Toc416032511)\n- [shutdown command](#part0000_split_018.html__Toc416032512)\n\
+    - [sudo command](#part0000_split_019.html__Toc416032513)\n- [cal command](#part0000_split_021.html__Toc416032514)\n\
+    - [date command](#part0000_split_022.html__Toc416032515)\n- [grep command](#part0000_split_023.html__Toc416032516)\n\
+    - [tail command](#part0000_split_027.html__Toc416032517)\n- [wc command](#part0000_split_029.html__Toc416032518)\n\
+    - [last command](#part0000_split_031.html__Toc416032519)\n- [Chapter 3- Bash scripting\
+    \ Tricks](#part0000_split_033.html__Toc416032520)\n- [Brace Expansion](#part0000_split_034.html__Toc416032521)\n\
+    - [Command Substitution](#part0000_split_035.html__Toc416032522)\n- [Command History](#part0000_split_036.html__Toc416032523)\n\
+    - [Loops](#part0000_split_037.html__Toc416032524)\n- [Chapter 4- Linux shell programming](#part0000_split_038.html__Toc416032525)\n\
+    - [Loops in Shell](#part0000_split_041.html__Toc416032526)\n- [for Loop](#part0000_split_042.html__Toc416032527)\n\
+    - [while Loop](#part0000_split_043.html__Toc416032528)\n- [Case statement](#part0000_split_044.html__Toc416032529)\n\
+    - [if-else-fi for decision making](#part0000_split_045.html__Toc416032530)\n-\
+    \ [Chapter 5- Bash One-liners](#part0000_split_047.html__Toc416032531)\n- [Working\
+    \ with files](#part0000_split_048.html__Toc416032532)\n- [Conclusion](#part0000_split_049.html__Toc416032533)\n\
+    \n## Disclaimer\n\nWhile all attempts have been made to verify the information\
+    \ provided in this book, the author does assume any responsibility for errors,\
+    \ omissions, or contrary interpretations of the subject matter contained within.\
+    \ The information provided in this book is for educational and entertainment purposes.\n\
+    \n## Introduction\n\nLinux is an open-source operating system. It was developed\
+    \ to provide a Unix-like free operating system. The kernel is the main component\
+    \ of Linux and its first version was released in 1991. People rarely use Linux\
+    \ on desktop. This is due to its high level. For instance, those who worked on\
+    \ Linux, you must realize that Linux supports graphics. After booting up the computer,\
+    \ what you are provided with is a blinking cursor. You then have to provide commands\
+    \ to the desktop versions support graphics. The GUI is made the default although\
+    \ you can still access the command line.\n\n## Chapter 1- Definition\n\nThe development\
+    \ of Linux began in the year 1983 when Richard Stallman thought of the idea of\
+    \ developing a completely Unix-like operating system. This also marked the beginning\
+    \ of the Gnu project. By the year 1990, the essential components of this OS such\
+    \ as the compilers, libraries, shell and the text editors were created. Other\
+    \ complex components of this operating system such as drivers for devices, kernel\
+    \ and the daemons were developed later. The development of the Linux Kernel began\
+    \ in the year 1991. This was after Richard Stallman attended University of Helsinki.\
+    \ The user interface of Linux operating systems supports either graphics or command\
+    \ line. In desktop versions, both the graphical user interface and the command\
+    \ line are supported.\n\n## Chapter 2- Linux Command Line Commands\n\nLet us explore\
+    \ the Linux commands ranging from the basic ones which are necessary for you to\
+    \ begin to the complex ones. To open the command line, right click on your Desktop\
+    \ and select `Open Terminal`. If this is not available, find Applications at the\
+    \ top of your desktop. After clicking on this, select Accessories. Choose `Open\
+    \ terminal`. Open a text editor of your choice such as Gedit or Vim. To open the\
+    \ Gedit text editor, just search for it from the search bar. To open Vim, commonly\
+    \ known as vi editor, on the command line, type the command:\n\n```\nvi filename\n\
+    ```\n"
+  raw: "\n\n![](images/00054.jpeg)\n\nLinux Command Line:\n\nFAST and EASY!\n\n-Linux\
+    \ Commands, Bash Scripting Tricks, Linux Shell Programming Tips and Bash One-Liners\n\
+    \nBy Matthew Gimson\n\nCopyright©2015 Matthew Gimson\n\nAll Rights Reserved\n\n\
+    Copyright © 2015 by Matthew Gimson\n\nAll rights reserved. No part of this publication\
+    \ may be reproduced, distributed, or transmitted in any form or by any means,\
+    \ including photocopying, recording, or other electronic or mechanical methods,\
+    \ without the prior written permission of the author, except in the case of brief\
+    \ quotations embodied in critical reviews and certain other noncommercial uses\
+    \ permitted by copyright law.\n\n# Table of Contents\n\n[Introduction](#part0000_split_004.html__Toc416032500)\n\
+    \n[Chapter 1- Definition](#part0000_split_005.html__Toc416032501)\n\n[Chapter\
+    \ 2- Linux Command Line Commands](#part0000_split_006.html__Toc416032502)\n\n\
+    [Changing Directories](#part0000_split_008.html__Toc416032503)\n\n[Copying file](#part0000_split_009.html__Toc416032504)\n\
+    \n[The less command](#part0000_split_011.html__Toc416032505)\n\n[ln command](#part0000_split_012.html__Toc416032506)\n\
+    \n[locate command](#part0000_split_013.html__Toc416032507)\n\n[logout command](#part0000_split_014.html__Toc416032508)\n\
+    \n[ls command](#part0000_split_015.html__Toc416032509)\n\n[more command](#part0000_split_016.html__Toc416032510)\n\
+    \n[mv command](#part0000_split_017.html__Toc416032511)\n\n[shutdown command](#part0000_split_018.html__Toc416032512)\n\
+    \n[sudo command](#part0000_split_019.html__Toc416032513)\n\n[cal command](#part0000_split_021.html__Toc416032514)\n\
+    \n[date command](#part0000_split_022.html__Toc416032515)\n\n[grep command](#part0000_split_023.html__Toc416032516)\n\
+    \n[tail command](#part0000_split_027.html__Toc416032517)\n\n[wc command](#part0000_split_029.html__Toc416032518)\n\
+    \n[last command](#part0000_split_031.html__Toc416032519)\n\n[Chapter 3- Bash scripting\
+    \ Tricks](#part0000_split_033.html__Toc416032520)\n\n[Brace Expansion](#part0000_split_034.html__Toc416032521)\n\
+    \n[Command Substitution](#part0000_split_035.html__Toc416032522)\n\n[Command History](#part0000_split_036.html__Toc416032523)\n\
+    \n[Loops](#part0000_split_037.html__Toc416032524)\n\n[Chapter 4- Linux shell programming](#part0000_split_038.html__Toc416032525)\n\
+    \n[Loops in Shell](#part0000_split_041.html__Toc416032526)\n\n[for  Loop](#part0000_split_042.html__Toc416032527)\n\
+    \n[while  Loop](#part0000_split_043.html__Toc416032528)\n\n[Case statement](#part0000_split_044.html__Toc416032529)\n\
+    \n[if-else-fi  for decision making](#part0000_split_045.html__Toc416032530)\n\n\
+    [Chapter 5- Bash One-liners](#part0000_split_047.html__Toc416032531)\n\n[Working\
+    \ with files](#part0000_split_048.html__Toc416032532)\n\n[Conclusion](#part0000_split_049.html__Toc416032533)\n\
+    \nDisclaimer\n\nWhile all attempts have been made to verify the information provided\
+    \ in this book, the author does assume any responsibility for errors, omissions,\
+    \ or contrary interpretations of the subject matter contained within. The information\
+    \ provided in this book is for educational and entertainment purposes only. The\
+    \ reader is responsible for his or her own actions and the author does not accept\
+    \ any responsibilities for any liabilities or damages, real or perceived, resulting\
+    \ from the use of this information.\n\nThe trademarks that are used are without\
+    \ any consent, and the publication of the trademark is without permission or backing\
+    \ by the trademark owner. All trademarks and brands within this book are for clarifying\
+    \ purposes only and are the owned by the owners themselves, not affiliated with\
+    \ this document.\n\n# Introduction\n\n Linux is a common operating system for\
+    \ computers, and especially the server computers. The funny thing with it is that\
+    \ people view Linux as a very complex operating system which is not the case.\
+    \ This is why most computer novice users don’t like using Linux on their computers.\
+    \ However, this is not the case. Just like the Windows OS, Linux is an easy-to-use\
+    \ operating system. All one needs to have is interest in learning it. The operating\
+    \ system itself is very secure, meaning that hackers will find it almost impossible\
+    \ to hack into it.\n\nThe various distributions of Linux use almost the same commands.\
+    \ These commands can be written using the same syntax and they run successfully\
+    \ on various distributions of Linux. However, some of them will need to be altered\
+    \ slightly so that they can be compatible. You should identify the right distribution\
+    \ for yourself and your computer and install it on your system. The right choice\
+    \ for you in this case will depend on the distribution that you will feel comfortable\
+    \ to work with. Other than installing the operating system directly onto your\
+    \ hard disk, you can choose to run it on virtual box or VMware player. This can\
+    \ help in saving on the available computer space, hence important.\n\n# Chapter\
+    \ 1- Definition\n\nLinux is an open-source operating system for computers. It\
+    \ was developed to provide a Unix-like free and open source operating system for\
+    \ computers. The kernel is the main component of Linux operating system and its\
+    \ first version was released in the year 1991 by Linus Torvalds. People rarely\
+    \ use Linux operating system on desktop computers. This operating system has shown\
+    \ a wide use on server computers. The reason is due to its high level of security.\
+    \ For instance, those who have worked with server computers running Linux, you\
+    \ must have realized that the operating system supports no graphics.\n\nAfter\
+    \ booting up the computer, what you are provided with is just a blinking cursor.\
+    \ You then have to provide commands to the terminal. This is of great advantage\
+    \ when it comes to ensuring security of the system. Note that graphics and any\
+    \ other additional feature added to the operating system are an advantage to the\
+    \ hacker as they can gain access into the system via this feature. If you don’t\
+    \ the commands used on the command line, then definitely you be stuck. However,\
+    \ the desktop versions of Linux supports graphics.\n\nThere are various distributions\
+    \ of Linux, commonly known as Linux Distros. These include Ubuntu, Khali, Red\
+    \ Hat, Fedora, Mint, Centos, SUSE and others. These Distros exhibit numerous similarities\
+    \ although there are fewer differences amongst themselves. This involves even\
+    \ the commands used on their terminals. For enterprise distributions of Linux\
+    \ such as Red Hat, a subscription fee must be paid for you to enjoy the services\
+    \ that they offer. This includes even updating of the OS.\n\nThe development of\
+    \ Linux began in the year 1983 when Richard Stallman thought of the idea of developing\
+    \ a completely free Unix-like operating system. This also marked the beginning\
+    \ of the Gnu project. By the year 1990, the essential components of this OS such\
+    \ as the compilers, libraries, shell and the text editors were created. Other\
+    \ complex components of this operating system such as drivers for devices, kernel\
+    \ and the daemons were developed later.\n\nThe development of the Linux Kernel\
+    \ began in the year 1991\\. This was after Richard Stallman attended University\
+    \ of Helsinki. The user interface of Linux operating systems supports either graphics\
+    \ or command line. In desktop versions, both the graphical user interface and\
+    \ the command line are supported. The GUI is made the default although you can\
+    \ still access the command line.\n\n# Chapter 2- Linux Command Line Commands\n\
+    \n              Let us explore the Linux commands ranging from the basic ones\
+    \ which are necessary for you to begin to the complex ones. To open the command\
+    \ line, right click on your Desktop and select “Open Terminal”. If this is not\
+    \ available, find Applications at the top of your desktop. After clicking on this,\
+    \ select Accessories. Choose “Open terminal”. Open a text editor of your choice\
+    \ such as Gedit or Vim. To open the Gedit text editor, just search for it from\
+    \ the search bar. Type “text editor” on this search bar and you will find it.\
+    \ To open Vim, commonly known as vi editor, on the command line, type the command:\n\
+    \n vi filename"
+  toc: []
+  trans: '
+
+
+    ![](img/00054.jpeg)
+
+
+    # Linux 命令行：快速且简单！
+
+
+    Linux 命令、Bash 脚本技巧、Linux Shell 编程提示与 Bash 单行命令
+
+
+    作者：Matthew Gimson
+
+    Copyright©2015 Matthew Gimson
+
+    所有权利保留
+
+    Copyright © 2015 Matthew Gimson
+
+    所有权利保留。未经作者书面许可，不得以任何形式或通过任何手段（包括复印、录制或其他电子或机械方法）复制、传播或传输本书的任何部分，但评论中的性引用以及版权法允许的某些非商业用途除外。
+
+
+    ## 目录
+
+
+    - 引言
+
+    - 第 1 章- 定义
+
+    - 第 2 章- Linux 命令行命令
+
+    - 切换目录
+
+    - 复制文件
+
+    - less 命令
+
+    - ln 命令
+
+    - locate 命令
+
+    - logout 命令
+
+    - ls 命令
+
+    - more 命令
+
+    - mv 命令
+
+    - shutdown 命令
+
+    - sudo 命令
+
+    - cal 命令
+
+    - date 命令
+
+    - grep 命令
+
+    - tail 命令
+
+    - wc 命令
+
+    - last 命令
+
+    - 第 3 章- Bash 脚本技巧
+
+    - 大括号扩展
+
+    - 命令替换
+
+    - 命令历史
+
+    - 循环
+
+    - 第 4 章- Linux Shell 编程
+
+    - Shell 中的循环
+
+    - for 循环
+
+    - while 循环
+
+    - case 语句
+
+    - 用于决策的 if-else-fi
+
+    - 第 5 章- Bash 单行命令
+
+    - 文件操作
+
+    - 结论
+
+
+    ## 免责声明
+
+
+    尽管已尽一切努力验证书中提供的信息，但作者对书中包含的错误、遗漏或对主题的相反的解释不承担任何责任。书中提供的信息仅供教育和娱乐目的之用。
+
+
+    ## 引言
+
+
+    Linux 是一个开源操作系统。它的开发是为了提供一个类 Unix 的免费操作系统。内核是 Linux 的主要部分，其第一个版本于 1991 年发布。人们很少在桌面端使用
+    Linux，这是由于它的操作门槛较高。例如，那些接触过 Linux 的人一定会意识到 Linux 支持图形界面。在启动电脑后，你获得的是一个闪烁的光标。然后你必须提供命令来运行支持图形界面的桌面版本。GUI（图形用户界面）是默认设置，尽管你仍然可以访问命令行。
+
+
+    ## 第 1 章- 定义
+
+
+    Linux 的开发始于 1983 年，当时理查德·斯尔曼（Richard Stallman）想出了开发一个完全类 Unix 操作系统的想法。这标志着 Gnu
+    项目的开始。到 1990 年，该操作系统的基本组件如编译器、库、shell 和文本编辑器已经创建完成。该操作系统的其他复杂组件如设备驱动程序、内核和守护进程在随后得到了开发。Linux
+    内核的开发始于 1991 年，这是理查德·斯尔曼就读赫尔辛基大学之后。Linux 操作系统的用户界面支持图形界面或命令行。在桌面版本中，图形用户界面和命令行均受到支持。
+
+
+    ## 第 2 章- Linux 命令行命令
+
+
+    让我们探索从你开始所需的基础命令到复杂的 Linux 命令。要打开命令行，请在桌面上点击右键并选择 `Open Terminal`（打开终端）。如果不可用，在桌面顶部找到
+    `Applications`（应用程序）。点击后，选择 `Accessories`（附件）。选择 `Open terminal`（打开终端）。打开一个你喜欢的文本编辑器，如
+    Gedit 或 Vim。要打开 Gedit 文本编辑器，只需在搜索栏中搜索它。要在命令行中打开被称为 vi 编辑器的 Vim，输入命令：
+
+
+    ```
+
+    vi filename
+
+    ```
+
+
+    '
+- fmt: "\nwhere `filename` is the name of the file. I have called my file `myfile`.\
+    \ On pressing the enter key, the `vi` editor will be opened. Now you can add some\
+    \ text of your choice to the file. Note that to change from command mode in `vi`\
+    \ editor, you have to press the letter `i`, otherwise, you will not be able to\
+    \ add any text to the file.\n\nThe text should be as follows:\n\nThe Linux command\
+    \ line is a very powerful tool for programmers.\nMuch can be achieved with it.\n\
+    \nYou can then save the file to somewhere where you can easily access such as\
+    \ on the desktop. In `vi` editor, just press the `Esc` key followed by typing\
+    \ `wq`. This will save the file.\n\nOn the command line, type the following command\
+    \ and then press the enter key:\n\n```\ncat myfile\n```\n\nOn pressing the enter\
+    \ key, the text you added on your file will be displayed on the standard output.\
+    \ This is illustrated in the figure below:\n\n![](images/00001.jpeg)\n\nThis shows\
+    \ that the `cat` command displays the contents of a file on the standard output.\
+    \ However, use it to display the contents of a short file.\n\n## Changing Directories\n\
+    \nSometimes, you might need to change your working directory. This can be achieved\
+    \ via the terminal using the `cd` (change directory) command as shown below:\n\
+    \n```\ncd /home\n```\n\nThe command above will change the working directory to\
+    \ home directory and relative to root due to the use of the forward slash, that\
+    \ is, `/`. Regardless of the current working directory, the above command will\
+    \ be executed. Type the following command:\n\n```\ncd httpd\n```\n\nAfter pressing\
+    \ the enter key, the full working directory will become `/home/httpd`, meaning\
+    \ that we have changed to the `httpd` directory but relative to the `/home` directory.\
+    \ To change back to the user’s home directory, use the following command:\n\n\
+    ```\ncd ~\n```\n\nThe user’s home directory is the `/home/username` directory,\
+    \ where the `username` will be the name you have used on the computer. Notice\
+    \ that we have used the symbol `~`, known as the tilde symbol. In Linux, it symbolizes\
+    \ the user’s home directory.\n\n## Copying file\n\nIn Linux, the `cp` (copy files),\
+    \ is used for copying files. In copying, a duplicate of the original file is made\
+    \ at the location being specified, meaning that the initial file is not deleted.\
+    \ To make a duplicate a duplicate of the file `myfile`, run the following command:\n\
+    \n```\ncp myfile myfile2\n```\n\nThe above command will create a duplicate of\
+    \ the file `myfile` and name it `myfile2`. The files will be similar but with\
+    \ a difference in their naming. However, it is risky to run the above command.\
+    \ This is because in case the file `myfile2` already exists in the directory,\
+    \ it will be overwritten without a warning. To take care of this, the `-i` option\
+    \ should be used as shown below:\n\n```\ncp –i myfile myfile2\n```\n\nIf the file\
+    \ `myfile2` already exists in the directory, then we warned before it is overwritten,\
+    \ which is a very good idea.\n\nYou might need to copy all files contained in\
+    \ a certain directory to another directory. This can be done using the following\
+    \ command:\n\n```\ncp –dpr originaldirectory finaldirectory\n```\n\nThe files\
+    \ will then be copied from the `originaldirectory` to the `finaldirectory`. They\
+    \ will not be deleted from the latter. The `-dpr` option is very important as\
+    \ it plays the following role:\n\n- `-d-` for preservation of links.\n- `-p-`\
+    \ for preservation of file attributes.\n- `-r-` for recursive copying.\n\nIf you\
+    \ don’t specify the above options, the default ones will be applied. This is not\
+    \ recommended as you might need to preserve the links and file attributes which\
+    \ might not be done with the default options.\n\nEach mounted file system has\
+    \ used some space on the disk. To know the amount of this space for each file\
+    \ system, use the command:\n\n```\ndf\n```\n\n## The less command\n\nThis command\
+    \ is almost similar to the “more” command with the difference in that, with this\
+    \ command one will be able to move the page up and down through the file. Consider\
+    \ the command below:\n\n```\nless myfile\n```\n\nAfter pressing the enter key,\
+    \ the contents of the file `myfile` will be displayed.\n\n## ln command\n\nTo\
+    \ create a symbolic link to your file, use the command `ln`. Type the command\
+    \ shown below:\n\n```\nln –s myfile mlink\n```\n\nThe above command will create\
+    \ a symbolic link called `mlink` to link to the file `myfile`. To show that two\
+    \ files are different and contain different inodes, use the command\n\n```\nln\
+    \ –i myfile mlink\n```\n\n## locate command\n\nIf you need to search in a database,\
+    \ use the `locate` command. Consider the command shown below:\n\n```\nslocate\
+    \ –u\n```\n\nThe command will create a database and name it `slocate`. The problem\
+    \ is that the process might take a long time so patience will be required. But\
+    \ the command is important since you can’t search for a file without having run\
+    \ it. Ever heard of `cron`? This is used for scheduling tasks. This will run the\
+    \ above command periodically so you might not be needed to do so. Type the command\
+    \ shown below and run it:\n\n```\nlocate whois\n```\n\nThe command above will\
+    \ search for all the files contained in your system and whose names contain the\
+    \ string “whois”. \n\n## logout command\n\nThis command just logs out the currently\
+    \ logged in user. Open the terminal and type the following:\n\n```\nlogout\n```\n\
+    \nOnce you have typed the above command, just press the enter key. You will notice\
+    \ that you will be logged out of the system and then you will be on the login\
+    \ screen.\n\n## ls command\n\nUse this command to list the files which are contained\
+    \ in a particular directory, `ls` means list. The command has many options associated\
+    \ with it, which needs to be well understood. Type the command shown below and\
+    \ the press the enter key:\n\n```\nls\n```\n\nThe command will list all the files\
+    \ which are contained in your current directory.\n\n![](images/00002.jpeg)\n\n\
+    The above figure shows the files contained in my directory. However, if this directory\
+    \ contains files whose name starts with a dot (`.`), they will not be listed with\
+    \ this command. You also notice that with the above command, only a few details\
+    \ about the file are provided. Suppose you want to know the size of the file,\
+    \ the day it was made and the ownership permissions associated with it, you can\
+    \ achieve this with the following command:\n\n```\nls –al\n```\n\n![](images/00003.jpeg)\n\
+    \nAs you can see in the figure above, the output is more detailed. The first part\
+    \ starts with either a “d” or a – (dash), where “d” means that it is a directory,\
+    \ while “-” means that it is a file. The `rwx` stands for permissions, where `r`\
+    \ is for read permission, `w` is for write permission whereas `x` means execute\
+    \ permission. The size of the file and the date of creation are also shown.\n\n\
+    ## more command\n\nWith this command, the contents of a file will be sent to the\
+    \ screen. This will be done one page at a time. The command is also applicable\
+    \ on piped output.\n\nType and run the command shown below:\n\n```\nmore /etc/profile\n\
+    ```\n\nThe above command will output the contents of the file `/etc/profile`.\
+    \ This file contains details about the users of the system. On pressing the enter\
+    \ key, the following will be the output:\n\n![](images/00004.jpeg)\n\nNote that\
+    \ this is a built-in file so it comes with the OS itself. The file also contains\
+    \ too much content which cannot fit on a single page. With the above command,\
+    \ these will be displayed one page at a time. Type the command below and run it:\n\
+    \n```\nls –al | more\n```\n\nThe output will be the files contained in that directory.\
+    \ This output will then be piped through the `more` command. Since the output\
+    \ is large, it will be listed one page at a time.\n\n## mv command\n\nThe command\
+    \ `mv` is used for moving or renaming files, `mv` stands for move. Type the command\
+    \ shown below:\n\n```\nmv –i myfile file\n```\n\nThe above command will rename\
+    \ the file `myfile` to `file`, meaning that it will have been moved. This is the\
+    \ simplest way on how to rename files in Linux. Consider the following command:\n\
+    \n```\nmv /directory1/myfile\n```\n\nThe above command will move the file `myfile`\
+    \ from the directory `/directory1` to the current working directory. This is very\
+    \ simple and it shows the power of the `mv` command.\n"
+  raw: "where filename is the name of the file. I have called my file myfile. On pressing\
+    \ the enter key, the vi editor will be opened. Now you can add some text of your\
+    \ choice to the file. Note that to change from command mode in vi editor, you\
+    \ have to press the letter i, otherwise, you will not be able to add any text\
+    \ to the file.\n\nThe text should be as follows:\n\n The Linux command line is\n\
+    \n                            a very powerful tool for programmers.\n\n             \
+    \               Much can be achieved with it.\n\nYou can then save the file to\
+    \ somewhere where you can easily access such as on the desktop. In vi editor,\
+    \ just press the Esc key followed by typing wq. This will save the file.\n\nOn\
+    \ the command line, type the following command and then press the enter key:\n\
+    \n cat myfile\n\nOn pressing the enter key, the text you added on your file will\
+    \ be displayed on the standard output. This is illustrated in the figure below:\n\
+    \n ![](images/00001.jpeg)\n\nThis shows that the cat command displays the contents\
+    \ of a file on the standard output. However, use it to display the contents of\
+    \ a short file.\n\n## Changing Directories\n\nSometimes, you might need to change\
+    \ your working directory. This can be achieved via the terminal using the cd (change\
+    \ directory) command as shown below:\n\n cd /home\n\nThe command above will change\
+    \ the working directory to home directory and relative to root due to the use\
+    \ of the forward slash, that is, /. Regardless of the current working directory,\
+    \ the above command will be executed. Type the following command:\n\n cd httpd\n\
+    \nAfter pressing the enter key, the full working directory will become /home/httpd,\
+    \ meaning that we have changed to the httpd directory but relative to the /home\
+    \ directory. To change back to the user’s home directory, use the following command:\n\
+    \n cd ~\n\nThe user’s home directory is the /home/username directory, where the\
+    \ username will be the name you have used on the computer. Notice that we have\
+    \ used the symbol ~, known as the tilde symbol. In Linux, it symbolizes the user’s\
+    \ home directory.\n\n## Copying file\n\nIn Linux, the command cp (copy files),\
+    \ is used for copying files. In copying, a duplicate of the original file is made\
+    \ at the location being specified, meaning that the initial file is not deleted.\
+    \ To make a duplicate a duplicate of the file myfile, run the following command:\n\
+    \n cp myfile myfile2\n\nThe above command will create a duplicate of the file\
+    \ myfile and name it myfile2. The files will be similar but with a difference\
+    \ in their naming. However, it is risky to run the above command. This is because\
+    \ in case the file myfile2 already exists in the directory, it will be overwritten\
+    \ without a warning. To take care of this, the –i option should be used as shown\
+    \ below:\n\n cp –i myfile myfile2\n\nIf the file myfile2 already exists in the\
+    \ directory, then we warned before it is overwritten, which is a very good idea.\n\
+    \nYou might need to copy all files contained in a certain directory to another\
+    \ directory. This can be done using the following command:\n\ncp –dpr originaldirectory\
+    \ finaldirectory\n\nThe files will then be copied from the originaldirectory to\
+    \ the finaldirectory. They will not be deleted from the latter. The –dpr option\
+    \ is very important as it plays the following role:\n\n -d- for preservation of\
+    \ links.\n\n -p- for preservation of file attributes.\n\n -r- for recursive copying.\n\
+    \nIf you don’t specify the above options, the default ones will be applied. This\
+    \ is not recommended as you might need to preserve the links and file attributes\
+    \ which might not be done with the default options.\n\nEach mounted file system\
+    \ has used some space on the disk. To know the amount of this space for each file\
+    \ system, use the command:\n\n df\n\n## The less command\n\nThis command is almost\
+    \ similar to the “more” command with the difference in that, with this command\
+    \ one will be able to move the page up and down through the file. Consider the\
+    \ command below:\n\n less myfile\n\nAfter pressing the enter key, the contents\
+    \ of the file myfile will be displayed.\n\n## ln command\n\nTo create a symbolic\
+    \ link to your file, use the command ln. Type the command shown below:\n\n  ln\
+    \ –s myfile mlink\n\nThe above command will create a symbolic link called mlink\
+    \ to link to the file myfile. To show that two files are different and contain\
+    \ different inodes, use the command\n\n ln –i myfile mlink\n\n## locate command\n\
+    \nIf you need to search in a database, use the locate command. Consider the command\
+    \ shown below:\n\n slocate –u\n\nThe command will create a database and name it\
+    \ slocate. The problem is that the process might take a long time so patience\
+    \ will be required. But the command is important since you can’t search for a\
+    \ file without having run it. Ever heard of cron? This is used for scheduling\
+    \ tasks. This will run the above command periodically so you might not be needed\
+    \ to do so. Type the command shown below and run it:\n\n locate whois\n\nThe command\
+    \ above will search for all the files contained in your system and whose names\
+    \ contain the string “whois”. \n\n## logout command\n\nThis command just logs\
+    \ out the currently logged in user. Open the terminal and type the following:\n\
+    \n logout\n\nOnce you have typed the above command, just press the enter key.\
+    \ You will notice that you will be logged out of the system and then finally you\
+    \ will be on the login screen.\n\n## ls command\n\nUse this command to list the\
+    \ files which are contained in a particular directory, ls means list. The command\
+    \ has many options associated with it, which needs to be well understood. Type\
+    \ the command shown below and the press the enter key:\n\n ls\n\nThe command will\
+    \ list all the files which are contained in your current directory.\n\n ![](images/00002.jpeg)\n\
+    \nThe above figure shows the files contained in my directory. However, if this\
+    \ directory contains files whose name starts with a dot (.), they will not be\
+    \ listed with this command. You also notice that with the above command, only\
+    \ a few details about the file are provided. Suppose you want to know the size\
+    \ of the file, the day it was made and the ownership permissions associated with\
+    \ it, you can achieve this with the following command:\n\n ls –al\n\n![](images/00003.jpeg)\n\
+    \nAs you can see in the figure above, the output is more detailed. The first part\
+    \ starts with either a “d” or a – (dash), where “d” means that it is a directory,\
+    \ while “-“ means that it is a file. The “rwx” stands for permissions, where r\
+    \ is for read permission, w is for write permission whereas x means execute permission.\
+    \ The size of the file and the date of creation are also shown.\n\n## more command\n\
+    \nWith this command, the contents of a file will be sent to the screen. This will\
+    \ be done one page at a time. The command is also applicable on piped output.\n\
+    \nType and run the command shown below:\n\n more /etc/profile\n\nThe above command\
+    \ will output the contents of the file /etc/profile. This file contains details\
+    \ about the users of the system. On pressing the enter key, the following will\
+    \ be the output:\n\n ![](images/00004.jpeg)\n\nNote that this is a built-in file\
+    \ so it comes with the OS itself. The file also contains too much content which\
+    \ cannot fit on a single page. With the above command, these will be displayed\
+    \ one page at a time. Type the command below and run it:\n\n ls –al | more\n\n\
+    The output will be the files contained in that directory. This output will then\
+    \ be piped through the more command. Since the output is large, it will be listed\
+    \ one page at a time.\n\n## mv command\n\nThe command mv is used for moving or\
+    \ renaming files, mv stands for move. Type the command shown below:\n\n mv –i\
+    \ myfile file\n\nThe command will rename the file myfile to file, meaning that\
+    \ it will have been moved. This is the simplest way on how to rename files in\
+    \ Linux. Consider the following command:\n\nmv /directory1/myfile\n\nThe above\
+    \ command will move the file myfile from the directory “directory1” to the current\
+    \ working directory. This is very simple and it shows the power of the mv command."
+  toc: []
+  trans: '
+
+    其中 `filename` 是文件的名称。我将文件命名为 `myfile`。按下回车键后，将打开 `vi` 编辑器。现在你可以向文件中添加任意的文本。请注意，要从
+    `vi` 编辑器的命令模式切换，你必须按下字母 `i`，否则你将无法向文件中添加任何文本。
+
+
+    文本内容如下：
+
+
+    Linux 命令行是程序员来说中一个非常强大的工具。
+
+    通过它可以实现很多功能。
+
+
+    然后，你可以将文件保存到你可以方便访问的地方，例如桌面。在 `vi` 编辑器中，只需按下 `Esc` 键然后输入 `wq` 即可。这将保存文件。
+
+
+    在命令行中，输入以下命令然后按回车键：
+
+
+    ```
+
+    cat myfile
+
+    ```
+
+
+    按下回车键后，你在文件中添加的文本将显示在标准输出上。如下图所示：
+
+
+    ![](img/00001.jpeg)
+
+
+    这表明 `cat` 命令用于在标准输出上显示文件的内容。然而，请用它来显示短文件的内容。
+
+
+    ## 更改目录
+
+
+    有时，你可能需要更改工作目录。可以通过终端使用 `cd`（更改目录）命令来实现，如下所示：
+
+
+    ```
+
+    cd /home
+
+    ```
+
+
+    上面的命令将工作目录更改为 home 目录，由于使用了正斜杠，它是相对于根目录的，即 `/`。无论当前的工作目录是什么，上述命令都将执行。输入以下命令：
+
+
+    ```
+
+    cd httpd
+
+    ```
+
+
+    在按下回车键后，完整的工作目录将变为 `/home/httpd`，这意味着我们已经切换到了 `httpd` 目录，但相对于 `/home` 目录。要切回用户的家目录，请使用以下命令：
+
+
+    ```
+
+    cd ~
+
+    ```
+
+
+    用户的家目录是 `/home/username` 目录，其中 `username` 是你在计算机上使用的名称。注意，我们使用了符号 `~`，它被称为波浪号。在
+    Linux 中，它象征着用户的家目录。
+
+
+    ## 复制文件
+
+
+    在 Linux 中，`cp`（copy files）用于复制文件。在复制过程中，会在指定位置创建一个原始文件的副本，这意味着初始文件不会被删除。要为文件 `myfile`
+    创建一个副本，请运行以下命令：
+
+
+    ```
+
+    cp myfile myfile2
+
+    ```
+
+
+    上面的命令将创建文件 `myfile` 的副本并将其命名为 `myfile2`。这两个文件将非常相似，但命名有所不同。然而，运行上述命令是有风险的，因为如果目录中已经存在文件
+    `myfile2`，它将在不发出警告的情况下被覆盖。为了这个问题，应该使用如下所示的 `-i` 选项：
+
+
+    ```
+
+    cp –i myfile myfile2
+
+    ```
+
+
+    如果文件 `myfile2` 已经存在于目录中，在覆盖它之前会收到警告，这是一个非常好的主意。
+
+
+    你可能需要将某个目录中包含的所有文件复制到另一个目录。可以使用以下命令完成：
+
+
+    ```
+
+    cp –dpr originaldirectory finaldirectory
+
+    ```
+
+
+    文件将从 `originaldirectory` 复制到 `finaldirectory`。它们不会从后者中删除。`-dpr` 选项非常重要，因为它起到了以下作用：
+
+
+    - `-d-` 用于保留链接。
+
+    - `-p-` 用于保留文件属性。
+
+    - `-r-` 用于递归复制。
+
+
+    如果你不指定上述选项，则将应用默认选项。这不建议这样做，因为你可能需要保留链接和文件属性，而默认选项可能无法完成这些操作。
+
+
+    每个挂载的文件系统都占用了磁盘上的一些空间。要此每个文件系统的空间大小，请使用命令：
+
+
+    ```
+
+    df
+
+    ```
+
+
+    ## less 命令
+
+
+    此命令与“more”命令几乎相似，区别在于，使用此命令时你可以通过文件向上和向下移动页面。考虑下面的命令：
+
+
+    ```
+
+    less myfile
+
+    ```
+
+
+    按下回车键后，文件 `myfile` 的内容将显示出来。
+
+
+    ## ln 命令
+
+
+    要为你的文件创建符号链接，请使用 `ln` 命令。输入下所示命令：
+
+
+    ```
+
+    ln –s myfile mlink
+
+    ```
+
+
+    上面的命令将创建一个名为 `mlink` 的符号链接以链接到文件 `myfile`。要显示两个文件不同且包含不同的索引节点（inodes），请使用命令
+
+
+    ```
+
+    ln –i myfile mlink
+
+    ```
+
+
+    ## locate 命令
+
+
+    如果你需要在数据库中进行搜索，请使用 `locate` 命令。考虑下所示命令：
+
+
+    ```
+
+    slocate –u
+
+    ```
+
+
+    该命令将创建一个数据库并将其命名为 `slocate`。问题是该过程可能需要很长时间，因此需要耐心。但该命令是重要的，因为在没有运行它之前你就无法搜索文件。听过
+    `cron` 吗？它被用于调度任务。它会定期运行上述命令，因此你可能不需要手动执行。输入下所示命令并运行它：
+
+
+    ```
+
+    locate whois
+
+    ```
+
+
+    上面的命令将搜索你系统中包含的所有名称中包含“whois”字符串的文件。
+
+
+    ## logout 命令
+
+
+    此命令仅注销当前登录的用户。打开终端并输入以下内容：
+
+
+    ```
+
+    logout
+
+    ```
+
+
+    一旦你输入了上述命令，只需按下回车键。你会发现你已注销系统，然后将回到登录界面。
+
+
+    ## ls 命令
+
+
+    此命令用于列出当前登录的用户（注：此处应为文件）。使用此命令列出特定目录包含的文件，`ls` 意味着列出。该命令有许多相关选项需要理解。输入下所示命令并按下回车键：
+
+
+    ```
+
+    ls
+
+    ```
+
+
+    该命令将列出当前目录包含的文件。
+
+
+    ![](img/00002.jpeg)
+
+
+    上面的图显示了目录中包含的文件。然而，如果该目录包含以点（`.`）开头的文件，使用此命令将无法无法列出。假设你想知道文件的大小、创建日期以及相关的权限，你可以通过以下命令实现：
+
+
+    ```
+
+    ls –al
+
+    ```
+
+
+    ![](img/00003.jpeg)
+
+
+    如你在图中所示，输出更加详细。第一部分以“d”或“-”开头，其中“d”表示目录，而“-”表示这是一个文件。`rwx` 代表权限，其中 `r` 代表读取权限，`w`
+    代表写入权限，而 `x` 表示执行权限。文件的大小和创建日期也可见。
+
+
+    ## more 命令
+
+
+    使用此命令，文件的内容将发送到屏幕上。这将按页的方式进行。该命令也适用于管道输出。
+
+
+    输入并运行下所示命令：
+
+
+    ```
+
+    more /etc/profile
+
+    ```
+
+
+    上面的命令将输出 `/etc/profile` 文件的内容。该文件包含了有关系统的详细信息。按下回车键后，输出如下所示：
+
+
+    ![](img/00004.jpeg)
+
+
+    注意，这是一个内置文件，它随操作系统自带。该文件还包含大量内容，无法在一个页面显示完。通过上述命令，这些内容将逐页显示。输入并运行下面的命令：
+
+
+    ```
+
+    ls –al | more
+
+    ```
+
+
+    输出将是该目录包含的文件。这些输出将通过管道传递给 `more` 命令。由于输出很大，它将逐页列出。
+
+
+    ## mv 命令
+
+
+    `mv` 命令用于移动或重命名文件，`mv` 代表移动。输入下所示命令：
+
+
+    ```
+
+    mv –i myfile file
+
+    ```
+
+
+    上面的命令将文件 `myfile` 重命名为 `file`，这意味着它已被移动。这是在 Linux 中重命名命名文件最简单的方法。考虑以下命令：
+
+
+    ```
+
+    mv /directory1/myfile
+
+    ```
+
+
+    上面的命令将文件 `myfile` 从目录 `/directory1` 移动到当前工作目录中。这非常简单，并展示了 `mv` 命令的功能。
+
+
+    '
+- fmt: '
+
+    The question is, what is working directory? This is the directory you are currently
+    working in. To know the directory you are working in, use the following command:
+
+
+    ```
+
+    pwd
+
+    ```
+
+
+    Just press the enter key as usual. The output will be the directory you are working
+    on. This command is used for that purpose in case you don’t know the directory
+    you are in. `pwd` means print working directory.
+
+
+    ## shutdown command
+
+
+    Use this command whenever you want to shut down your system. Run the command shown
+    below:
+
+
+    ```bash
+
+    shutdown –h now
+
+    ```
+
+
+    On running the above command, you will notice that the system will halt immediately,
+    that is, it will shut down. Consider the next command:
+
+
+    ```bash
+
+    shutdown –r now
+
+    ```
+
+
+    The above command shuts down the system and then boots it again, meaning that
+    it is used to reboot the system.
+
+
+    You might need to check the commands which you have run previously. The reason
+    might be that you have changed something and now you want to undo the change.
+    To see the list of these commands, run the `history` command as shown in the figure
+    below:
+
+
+    ![](images/00005.jpeg)
+
+
+    The above figure shows the commands which I have run recently.
+
+
+    ## sudo command
+
+
+    `sudo` stands for super user do. With this command, any user can execute his or
+    her commands as a super user. The `sudoers` file defines all this. Sensitive commands,
+    especially those which alter the file systems of the Linux OS can only be executed
+    using this command. The `su` command enables you to login as a super user while
+    the `sudo` command borrows the privileges of a super user.
+
+
+    To update the system, you must use the `sudo` command as shown below:
+
+
+    ```bash
+
+    sudo apt-get update
+
+    ```
+
+
+    If this is the first time for you to run the command, you will be prompted to
+    enter the `sudo` password. To run the above command, you must be connected to
+    the internet, otherwise, you will get an error. In Linux, the updates are fetched
+    from what we call repositories. This is where the Linux development team uploads
+    any latest updates regarding to various ditros of Linux.
+
+
+    To upgrade the system, run the following command:
+
+
+    ```bash
+
+    sudo apt-get upgrade
+
+    ```
+
+
+    The above command will upgrade the version of OS that you are using on your system.
+    Again, you must be connected to the internet. Notice that in Red Hat Linux, this
+    command is substituted by the `yum` command, so the `sudo` command is not supported
+    in Red Hat Linux.
+
+
+    mkdir command
+
+
+    `mkdir` stands for make directory. It is used for creating new directory. If the
+    folder representing the directory is in existence, you will get an error informing
+    of the same. Let me create a directory and call it myfiles.
+
+
+    ```bash
+
+    mkdir myfiles
+
+    ```
+
+
+    The above command shows that I will create a directory named `myfiles`. This can
+    be illustrated in the figure shown below:
+
+
+    ![](images/00006.jpeg)
+
+
+    Notice after creating the directory then I use the `list` command, the directory
+    will be listed in the available directories. This shows that it has been created.
+    If the above command fails to run, precede it by the `sudo` command and provide
+    for the password if prompted to do so.
+
+
+    ## cal command
+
+
+    This command shows the month of a particular year. This year can be the current
+    one, the past or even the advancing one. Just open the command prompt and type
+    the command `cal`. Press the enter key:
+
+
+    ![](images/00007.jpeg)
+
+
+    As seen, it shows the date of the day, and it is correct. Now, let us show the
+    month May of the year 1980, which is a past year:
+
+
+    ![](images/00008.jpeg)
+
+
+    You can also show the month a future year as shown below:
+
+
+    ![](images/00009.jpeg)
+
+
+    ## date command
+
+
+    In case you need to display the current time and date, use this command as shown
+    below:
+
+
+    ![](images/00010.jpeg)
+
+
+    On executing the `date` command, the current date and the time will form the output
+    as shown in the figure above. However, you might find that the date on your system
+    is wrong.
+
+
+    It is possible to set it via the command line as shown below:
+
+
+    ```bash
+
+    date –set=''1 April 2015 19:30''
+
+    ```
+
+
+    Once you have run the command shown above, the date will be set to 1st April 2015
+    and the time will be set to 19:50 hours.
+
+
+    ## grep command
+
+
+    Sometimes, you might need to search for a pattern or a string from a certain file.
+    In most cases, the various Distros of Linux come installed with this command.
+
+
+    However, it is also possible to install it in case you find it not installed using
+    the following command:
+
+
+    ```bash
+
+    sudo apt-get install grep
+
+    ```
+
+
+    If you are using Red Hat, install it using the command:
+
+
+    ```bash
+
+    yum install grep
+
+    ```
+
+
+    Remember that we created our file and named it `myfile` with the following content:
+
+
+    ![](images/00011.jpeg)
+
+
+    We want to search through it using the `grep` command. To search for the word
+    `powerful` in the file, the following approach should be used:
+
+
+    ```bash
+
+    grep ‘powerful’ myfile
+
+    ```
+
+
+    This is illustrated using the figure shown below:
+
+
+    ![](images/00012.jpeg)
+
+
+    The command outputs the line of the file with the search word and makes the search
+    word red in color. This differentiates it from the rest of the words. Notice the
+    search is case sensitive.
+
+
+    Let us search for the word `Powerful` rather than `powerful`:
+
+
+    ![](images/00013.jpeg)
+
+
+    As shown in the above output, there exists no word `Powerful` in the file. This
+    is because we have made the p uppercase. However, it is possible to make the search
+    case insensitive. This can be achieved using the `-i` option as shown below:
+
+
+    ![](images/00014.jpeg)
+
+
+    The `-i` makes the words `powerful` and `Powerful` the same, hence we will get
+    our result.
+
+
+    To perform a multiple search, which means that you will search for several words
+    at once, we can still use the `grep` command. This is demonstrated below.
+
+
+    ![](images/00015.jpeg)
+
+
+    Notice that in the figure above, we are searching for two words, that is, `powerful`.
+    The `-i` makes it case insensitive, so let it not confuse you.
+
+
+    To know the number of the line of the file containing the word `powerful`, use
+    the command shown below:
+
+
+    ```bash
+
+    grep -n ‘powerful’ myfile
+
+    ```
+
+
+    ![](images/00017.jpeg)
+
+
+    Consider the command shown below and its output:
+
+
+    ```bash
+
+    grep -i1 ‘can’ myfile
+
+    ```
+
+
+    The command above outputs the following:
+
+
+    ![](images/00018.jpeg)
+
+
+    The command outputs the exactly one line which is above the line with our search
+    criteria `can`. This is because we have used `1`. If we used two, the output would
+    be as follows:
+
+
+    ![](images/00019.jpeg)
+
+
+    ## tail command
+
+
+    A very popular command in Linux which is used to give the last part of a file.
+    It gives only the last 10 lines of the file that you specify. If you need to get
+    the last 10 lines of the file `myfile`, use the following command:
+
+
+    ```bash
+
+    tail myfile
+
+    ```
+
+
+    However, we have added only three lines to the file. This means that the result
+    of the above command will be the three lines of the file. If it had more than
+    10 lines, then it would output only the last 10 lines.
+
+
+    However, the last 10 lines of the file is the default setting of the `tail` command.
+    One has the choice of specifying the number of lines that they want to form the
+    output.
+
+
+    Consider the command below and its output:
+
+
+    ```bash
+
+    tail myfile –n 2
+
+    ```
+
+
+    ![](images/00020.jpeg)
+
+
+    As shown, we have specified that we want to output only the last 2 lines of the
+    file `myfile`. This is what forms our output. The `-n` option when used with this
+    command specifies the number of lines that will form the output.
+
+    '
+  raw: "The question is, what is working directory? This is the directory you are\
+    \ currently working in. To know the directory you are working in, use the following\
+    \ command:\n\n pwd\n\nJust press the enter key as usual. The output will be the\
+    \ directory you are working on. This command is used for that purpose in case\
+    \ you don’t know the directory you are in. pwd means print working directory.\n\
+    \n## shutdown command\n\nUse this command whenever you want to shut down your\
+    \ system. Run the command shown below:\n\nshutdown –h now\n\nOn running the above\
+    \ command, you will notice that the system will halt immediately, that is, it\
+    \ will shut down. Consider the next command:\n\nshutdown –r now\n\nThe above command\
+    \ shuts down the system and then boots it again, meaning that it is used to reboot\
+    \ the system.\n\nYou might need to check the commands which you have run previously.\
+    \ The reason might be that you have changed something and now you want to undo\
+    \ the change. To see the list of these commands, run the history command as shown\
+    \ in the figure below:\n\n ![](images/00005.jpeg)\n\nThe above figure shows the\
+    \ commands which I have run recently.\n\n## sudo command\n\nsudo stands for super\
+    \ user do. With this command, any user can execute his or her commands as a super\
+    \ user. The sudoers file defines all this. Sensitive commands, especially those\
+    \ which alter the file systems of the Linux OS can only be executed using this\
+    \ command. The su command enables you to login as a super user while the sudo\
+    \ command borrows the privileges of a super user.\n\nTo update the system, you\
+    \ must use the sudo command as shown below:\n\n sudo apt-get update\n\nIf this\
+    \ is the first time for you to run the command, you will be prompted to enter\
+    \ the sudo password. To run the above command, you must be connected to the internet,\
+    \ otherwise, you will get an error. In Linux, the updates are fetched from what\
+    \ we call repositories. This is where the Linux development team uploads any latest\
+    \ updates regarding to various ditros of Linux.\n\nTo upgrade the system, run\
+    \ the following command:\n\n sudo apt-get upgrade\n\nThe above command will upgrade\
+    \ the version of OS that you are using on your system. Again, you must be connected\
+    \ to the internet. Notice that in Red Hat Linux, this command is substituted by\
+    \ the yum command, so the sudo command is not supported in Red Hat Linux.\n\n\
+    mkdir command\n\nmkdir stands for make directory. It is used for creating new\
+    \ directory. If the folder representing the directory is in existence, you will\
+    \ get an error informing of the same. Let me create a directory and call it myfiles.\n\
+    \n mkdir myfiles\n\nThe above command shows that I will create a directory named\
+    \ myfiles. This can be illustrated in the figure shown below:\n\n ![](images/00006.jpeg)\n\
+    \nNotice after creating the directory then I use the list command, the directory\
+    \ will be listed in the available directories. This shows that it has been created.\
+    \ If the above command fails to run, precede it by the sudo command and provide\
+    \ for the password if prompted to do so.\n\n## cal command\n\nThis command shows\
+    \ the month of a particular year. This year can be the current one, the past or\
+    \ even the advancing one. Just open the command prompt and type the command cal.\
+    \ Press the enter key:\n\n ![](images/00007.jpeg)\n\nAs seen, it shows the date\
+    \ of the day, and it is correct. Now, let us show the month May of the year 1980,\
+    \ which is a past year:\n\n ![](images/00008.jpeg)\n\nYou can also show the month\
+    \ a future year as shown below:\n\n ![](images/00009.jpeg)\n\n## date command\n\
+    \nIn case you need to display the current time and date, use this command as shown\
+    \ below:\n\n ![](images/00010.jpeg)\n\nOn executing the date command, the current\
+    \ date and the time will form the output as shown in the figure above. However,\
+    \ you might find that the date on your system is wrong.\n\nIt is possible to set\
+    \ it via the command line as shown below:\n\n date –set=’1 April 2015 19:30’\n\
+    \nOnce you have run the command shown above, the date will be set to 1st April\
+    \ 2015 and the time will be set to 19:50 hours.\n\n## grep command\n\nSometimes,\
+    \ you might need to search for a pattern or a string from a certain file. In most\
+    \ cases, the various Distros of Linux come installed with this command.\n\nHowever,\
+    \ it is also possible to install it in case you find it not installed using the\
+    \ following command:\n\n sudo apt-get install grep\n\nIf you are using Red Hat,\
+    \ install it using the command:\n\n yum install grep\n\nRemember that we created\
+    \ our file and named it myfile with the following content:\n\n ![](images/00011.jpeg)\n\
+    \nWe want to search through it using the grep command. To search for the word\
+    \ powerful in the file, the following approach should be used:\n\n grep ‘powerful’\
+    \ myfile\n\nThis is illustrated using the figure shown below:\n\n ![](images/00012.jpeg)\n\
+    \nThe command outputs the line of the file with the search word and makes the\
+    \ search word red in color. This differentiates it from the rest of the words.\
+    \ Notice the search is case sensitive.\n\nLet us search for the word ‘Powerful’\
+    \ rather than ‘powerful’:\n\n ![](images/00013.jpeg)\n\nAs shown in the above\
+    \ output, there exists no word ‘Powerful’ in the file. This is because we have\
+    \ made the p uppercase. However, it is possible to make the search case insensitive.\
+    \ This can be achieved using the –i option as shown below:\n\n ![](images/00014.jpeg)\n\
+    \nThe –i makes the words ‘powerful’ and ‘Powerful’ the same, hence we will get\
+    \ our result.\n\nTo perform a multiple search, which means that you will search\
+    \ for several words in a file at once, we can still use the grep command. This\
+    \ is demonstrated below.\n\n ![](images/00015.jpeg)\n\nNotice that in the figure\
+    \ above, we are searching for two words, that is, command and powerful. The –e\
+    \ option makes it possible for us to search for more than one word at once. Don’t\
+    \ confuse the purpose of the –i option as it only makes the search case insensitive.\n\
+    \nThe grep command can also be used to mean the opposite of your specification.\
+    \ This is illustrated below:\n\n ![](images/00016.jpeg)\n\nFrom the figure shown\
+    \ above, we have searched using the word ‘tool’ as our search criteria. The command\
+    \ will only return the lines without the word ‘tool’. This explains why the second\
+    \ line of the file is not part of the output. The result has been achieved using\
+    \ the –v option, which returns the opposite of the search criteria. The –i is\
+    \ for case insensitive search, so let it not confuse you.\n\nTo know the number\
+    \ of the line of the file containing the word ‘powerful’, use the command shown\
+    \ below:\n\n grep –in ‘powerful’ myfile\n\n![](images/00017.jpeg)\n\nConsider\
+    \ the command shown below and its output:\n\n grep –iB1 ‘can’ myfile\n\nThe command\
+    \ above outputs the following:\n\n ![](images/00018.jpeg)\n\nThe command outputs\
+    \ the exactly one line which is above the line with our search criteria ‘can’.\
+    \ This is because we have used 1. If we used two, the output would be as follows:\n\
+    \n ![](images/00019.jpeg)\n\n## tail command\n\nA very popular command in Linux\
+    \ which is used to give the last part of a file. It gives only the last 10 lines\
+    \ of the file that you specify. If you need to get the last 10 lines of the file\
+    \ myfile, use the following command:\n\n tail myfile\n\nHowever, we have added\
+    \ only three lines to the file. This means that the result of the above command\
+    \ will be the three lines of the file. If it had more than 10 lines, then it would\
+    \ output only the last 10 lines. You should also specify the extension of the\
+    \ file name. A good example is if it is a c file, add a .c extension to the file\
+    \ name.\n\nHowever, the last 10 lines of the file is the default setting of the\
+    \ tail command. One has the choice of specifying the number of lines that they\
+    \ want to form the output.\n\nConsider the command below and its output:\n\n tail\
+    \ myfile –n 2\n\n ![](images/00020.jpeg)\n\nAs shown, we have specified that we\
+    \ want to output only the last 2 lines of the file myfile. This is what forms\
+    \ our output. The –n option when used with this command specifies the number of\
+    \ lines that will form the output.\n\nConsider the command shown below:"
+  toc: []
+  trans: '
+
+
+    问题是，什么是工作目录？这是你当前正在工作的目录。要查看你所所在的目录，请使用以下命令：
+
+
+    ```
+
+    pwd
+
+    ```
+
+
+    像往常一样按下回车键即可。输出将是你正在工作的目录。该命令在你不知道自己处于哪个目录时用于此目的。`pwd` 的意思是“打印工作目录”（print working
+    directory）。
+
+
+    ## shutdown 命令
+
+
+    每当你想要关闭系统时，请使用此命令。运行下方所示的命令：
+
+
+    ```bash
+
+    shutdown –h now
+
+    ```
+
+
+    运行上述命令后，你会发现系统将立即停止，也就是说，它将关机。考虑下一个命令：
+
+
+    ```bash
+
+    shutdown –r now
+
+    ```
+
+
+    上述命令会关闭系统然后重新启动，这意味着它用于重启系统。
+
+
+    你可能需要检查你之前运行过的命令。原因可能是你更改了某些内容，而现在你想要撤销这些更改。要查看这些命令的列表，请运行如下所示的 `history` 命令：
+
+
+    ![](img/00005.jpeg)
+
+
+    上图显示了我最近运行的命令。
+
+
+    ## sudo 命令
+
+
+    `sudo` 代表“super user do”（以超级用户执行）。通过此命令，任何用户都可以以超级用户的身份执行其命令。`sudoers` 文件定义了所有这些内容。敏感命令，特别是那些更改
+    Linux 操作系统文件系统的命令，只能使用此命令执行。`su` 命令允许你以超级用户身份登录，而 `sudo` 命令借用超级用户的权限。
+
+
+    要更新系统，你必须使用如下所示的 `sudo` 命令：
+
+
+    ```bash
+
+    sudo apt-get update
+
+    ```
+
+
+    如果这是你第一次运行该命令，系统将提示你输入 `sudo` 密码。要运行上述命令，你必须连接互联网，否则你将收到错误。在 Linux 中，更新是从我们所谓的“仓库”（repositories）获取的。这里是
+    Linux 开发团队上传有关各种 Linux 发行版的最新更新的地方。
+
+
+    要升级系统，请运行以下命令：
+
+
+    ```bash
+
+    sudo apt-get upgrade
+
+    ```
+
+
+    上述命令将升级你系统中正在使用的操作系统版本。同样，你必须连接互联网。注意，在 Red Hat Linux 中，该命令被 `yum` 命令取代，因此 Red
+    Hat Linux 不支持 `sudo` 命令。
+
+
+    mkdir 命令
+
+
+    `mkdir` 代表“make directory”（创建目录）。它用于创建新目录。如果代表目录的文件夹已经存在，你将收到一个告知该情况的错误。让我创建一个目录并将其命名为
+    myfiles。
+
+
+    ```bash
+
+    mkdir myfiles
+
+    ```
+
+
+    上述命令显示我将创建一个名为 `myfiles` 的目录。这可以通过底图所示来说：
+
+
+    ![](img/00006.jpeg)
+
+
+    注意，在创建目录后，我使用了 `list` 命令，该目录将列在可用目录列表中。这说明它已被创建。如果上述命令运行失败，请在前面加上 `sudo` 命令，并在提示时提供密码。
+
+
+    ## cal 命令
+
+
+    此命令显示特定年份的月份。这一年份可以是当前的、过去的、甚至是未来的。只需打开命令提示符并输入命令 `cal` 即可。按回回车键：
+
+
+    ![](img/00007.jpeg)
+
+
+    如所示，它显示了当天的日期，并且是正确的。现在，让我们显示 1980 年的 5 月，这是一个过去的年份：
+
+
+    ![](img/00008.jpeg)
+
+
+    你也可以显示未来年份的月份，如下所示：
+
+
+    ![](img/00009.jpeg)
+
+
+    ## date 命令
+
+
+    如果你需要显示当前的时间日期，请使用如下所示的命令：
+
+
+    ![](img/00010.jpeg)
+
+
+    执行 `date` 命令后，当前的日期和时间将形成上图所示的输出。然而，你可能会发现系统上的日期是错误的。
+
+
+    你可以通过如下所示的命令行进行设置：
+
+
+    ```bash
+
+    date –set=''1 April 2015 19:30''
+
+    ```
+
+
+    一旦你运行了上述命令，日期将设置为 2015 年 4 月 1 日，时间将设置为 19:50 小时。
+
+
+    ## grep 命令
+
+
+    有时，你可能需要从某个文件中搜索模式或字符串。在大多数情况下，各种 Linux 发行版都都预装了此命令。
+
+
+    然而，如果你发现没有安装，也可以通过以下命令进行安装：
+
+
+    ```bash
+
+    sudo apt-get install grep
+
+    ```
+
+
+    如果你正在使用 Red Hat，请使用命令安装它：
+
+
+    ```bash
+
+    yum install grep
+
+    ```
+
+
+    记得我们创建了文件并将其命名为 `myfile`，内容如下：
+
+
+    ![](img/00011.jpeg)
+
+
+    我们想使用 `grep` 命令对其进行搜索。要在文件中搜索单词 `powerful`，应该使用以下方法：
+
+
+    ```bash
+
+    grep ‘powerful’ myfile
+
+    ```
+
+
+    这通过下图所示进行了说明：
+
+
+    ![](img/00012.jpeg)
+
+
+    该命令输出文件中包含搜索词的行，并将搜索词标为红色。这将其与其他单词区分开来。注意，搜索是区分大小写的。
+
+
+    让我们搜索单词 `Powerful` 而不是 `powerful`：
+
+
+    ![](img/00013.jpeg)
+
+
+    如上述输出所示，文件中不存在 `Powerful` 单词。这是因为我们使用了大写字母。然而，可以进行不区分大小写的搜索。这可以通过如下所示的 `-i` 参数来实现：
+
+
+    ![](img/00014.jpeg)
+
+
+    `-i` 让 `powerful` 和 `Powerful` 相同，因此我们将得到结果。
+
+
+    要执行多重搜索，即一次性搜索多个单词，我们仍然可以使用 `grep` 命令。演示如下：
+
+
+    ![](img/00015.jpeg)
+
+
+    注意在图中，我们正在搜索两个单词，即 `powerful`。`-i` 让不区分大小写，所以不要被它困扰。
+
+
+    要查看包含单词 `powerful` 的文件行号，请使用如下所示的命令：
+
+
+    ```bash
+
+    grep -n ‘powerful’ myfile
+
+    ```
+
+
+    ![](img/00017.jpeg)
+
+
+    考虑下面的命令及其输出：
+
+
+    ```bash
+
+    grep -i1 ‘can’ myfile
+
+    ```
+
+
+    上述命令输出如下：
+
+
+    ![](img/00018.jpeg)
+
+
+    该命令输出了符合我们搜索标准 `can` 的一行。这是因为我们使用了 `1`。如果我们使用 `2`，输出将如下：
+
+
+    ![](img/00019.jpeg)
+
+
+    ## tail 命令
+
+
+    Linux 中非常常用的命令，用于提供文件的末部分。它提供指定文件的最后 10 行。如果你需要获取 `myfile` 的最后 10 行，请使用以下命令：
+
+
+    ```bash
+
+    tail myfile
+
+    ```
+
+
+    然而，我们只向文件中添加了三行。这意味着上述命令的结果将是文件的这三行。如果它超过 10 行，那么它只会输出最后 10 行。
+
+
+    然而，文件的最后 10 行是 `tail` 命令的默认设置。用户可以选择他们想要形成输出的行数。
+
+
+    考虑下面的命令及其输出：
+
+
+    ```bash
+
+    tail myfile –n 2
+
+    ```
+
+
+    ![](img/00020.jpeg)
+
+
+    如所示，我们指定了只想输出 `myfile` 的最后 2 行。这就是我们输出的内容。`-n` 选项在使用此命令时用于指定形成输出的行数。
+
+
+    '
+- fmt: '
+
+    ```bash
+
+    tail -f myfile | grep 24.13.152.12
+
+    ```
+
+
+    Notice that we are piping the output from the `tail` command into the `grep` command.
+    The command above can be used to monitor updates being made on the file `myfile`
+    in real time, that is, just as they happen. The last 10 lines of the file and
+    any new lines added to it will be piped to the `grep` command. The `grep` command
+    then has the task of outputting these on the standard window. Note that only the
+    lines with the above specified address, that is, `24.13.152.12` will be printed
+    on the standard output.
+
+
+    The command can be used to display the last part of the file in relation to its
+    size rather than the number of lines. The size is usually specified in bytes.
+    To print the last 5 bytes of the file `myfile`, use the following command:
+
+
+    ```bash
+
+    tail –c5 myfile
+
+    ```
+
+
+    ![](images/00021.jpeg)
+
+
+    The output implies that only the word “it” and the full stop (`.`) form the last
+    5 bytes of the file. It is also possible to combine the above option with the
+    plus (`+`) symbol to print the bytes from a certain byte.
+
+
+    Consider the command shown below:
+
+
+    ```bash
+
+    tail –c+10 first
+
+    ```
+
+
+    The above will print the last bytes of the file, starting from the 10th byte.
+    The output will be as shown below:
+
+
+    ![](images/00022.jpeg)
+
+
+    ## wc command
+
+
+    `wc` stands for wall count. This command is used to count the lines contained
+    in a certain file. To know the number of lines contained in the file `myfile`,
+    run the following command:
+
+
+    ```bash
+
+    wc –l <myfile
+
+    ```
+
+
+    The command outputs the following:
+
+
+    ![](images/00023.jpeg)
+
+
+    The command gives the number of lines contained in the file `myfile`, which are
+    only three lines. In case you also need to get the name of the file, use the following
+    command:
+
+
+    ```bash
+
+    wc –l myfile
+
+    ```
+
+
+    ![](images/00024.jpeg)
+
+
+    Run the command shown below:
+
+
+    ```bash
+
+    wc myfile
+
+    ```
+
+
+    The following will form the output from the file:
+
+
+    ![](images/00025.jpeg)
+
+
+    The command will show the number of lines in the file, the number of words contained
+    in the file, the size of the file in bytes and the name of the file. These have
+    been displayed in the order mentioned, where 3 is the number of lines in the file,
+    17 is the total number of words in the file, 95 is the size of the file in bytes
+    and finally we have the file name. However, some people might easily be confused
+    by the above.
+
+
+    It becomes easy when you split the above output as shown below:
+
+
+    `wc –c myfile`– this will output the total bytes making up the file.
+
+
+    `wc –w myfile`– outputs the number of words contained in the file.
+
+
+    `wc –m myfile`– will output the number of characters making up the file.
+
+
+    If you can’t memorize the order used in the first command, then it is advisable
+    you use the simple and alternative option above.
+
+
+    ## last command
+
+
+    This command is useful when you want to know the users who have recently logged
+    into your system. This is very useful in the industry for security purposes. A
+    user won’t deny having logged into the system at a certain time. Open the command
+    line and type in the command `last`. Observe the output:
+
+
+    ![](images/00026.jpeg)
+
+
+    The command shows the name of the user and other details including the terminal
+    they were logged on and the time in which they logged in. In case any of the users
+    is still in, you will be notified of it. The difference between when the user
+    was lastly logged in and logged out will also be shown. Notice that only the last
+    logins will be displayed.
+
+
+    The command is also associated with the following options:
+
+
+    1. `–R`– this will make sure the host name is not displayed.
+
+    2. `–d`– this is used when doing remote login. The ip address which identifies
+    the host name is translated into the hostname itself.
+
+    3. `–a`– this will display the name of the host in last column.
+
+    4. `–x`– shows the shutdown history and how changes have been made on the run
+    levels.
+
+    5. `–i`– displays the ip address of the host login in remotely. The ip address
+    is usually in dots and number format.
+
+    6. `–F`– the times and dates of full logins and logouts into the system.
+
+    7. `–w`– the names of the user and domain name are displayed as the output.
+
+
+    # Chapter 3- Bash Tricks
+
+
+    `Bash` stands for Bourne Again, and in most Linux distros, it forms the default
+    shell. Many Unix and Linux users really like it due to its user-friendliness.
+    In this chapter, we are going to learn about Bash shell.
+
+
+    ## Brace Expansion
+
+
+    A list of strings is used as arguments in this case. These strings are separated
+    using commas. There should be no space after the comma. Example:
+
+
+    ```bash
+
+    echo {John,Jacob}
+
+    ```
+
+
+    ![](images/00027.jpeg)
+
+
+    From the figure, you can see the output. Just the arguments provided in the braces.
+    Now, type the following on the command line:
+
+
+    ```bash
+
+    echo $today today=$(date +%d-%b-%Y)
+
+    ```
+
+
+    The output will just be the same as in the example above. I am sure that you are
+    seeing no usefulness of braces. Consider the example shown below:
+
+
+    ```bash
+
+    echo {John,Julius}David
+
+    ```
+
+
+    Maybe the three are sons of David. Observe the output:
+
+
+    ![](images/0028.jpeg)
+
+
+    You have now seeing how useful braces are in bash scripting. They are very useful
+    when the list placed in the braces should occur after inside or before another
+    string. In the case above, these should occur before the string `David`. The above
+    can be implemented in another way as follows:
+
+
+    ```bash
+
+    echo David{John,Julius}
+
+    ```
+
+
+    The following will form the output of the above script:
+
+
+    ![](images/0029.jpeg)
+
+
+    As you can see, the list inside the braces occurs after the string “David”. It
+    is also possible to place the list between two strings. This is illustrated below:
+
+
+    ```bash
+
+    echo David{John,Julius}Mercury
+
+    ```
+
+
+    The following will be the output:
+
+
+    ![](images/0030.jpeg)
+
+
+    The words in the list have been sandwiched between the two strings that we have
+    specified. Again, make sure that you’t include space at all. There are no spaces
+    between the arguments nor between the braces and the strings. Including this might
+    lead to an error or an undesired output. However, if you need to use a space,
+    make use that you also use double quotes as shown below:
+
+
+    ```bash
+
+    echo "{John,Julius,Jacob}" David
+
+    ```
+
+
+    The following will be the output of the above:
+
+
+    ![](images/0031.jpeg)
+
+
+    You might need such output, so that’s how to get it. Consider the example given
+    below:
+
+
+    ```bash
+
+    echo {"John ","Julius ","Jacob "} David
+
+    ```
+
+
+    The above will give the following as the output:
+
+
+    ![](images/0032.jpeg)
+
+
+    Braces can also be nested, whereby braces are placed within other braces as shown
+    below:
+
+
+    ```bash
+
+    echo {{a,b,c},a,b,c}
+
+    ```
+
+
+    The following will be the output of the above example:
+
+
+    ![](images/0033.jpeg)
+
+
+    Consider the example shown below:
+
+
+    ```bash
+
+    echo {{6,7,8}1,2,3
+
+    ```
+
+
+    The output will be as follows:
+
+
+    ![](images/0034.jpeg)
+
+
+    The question is where is this trick of brace expansion applied. Of course, when
+    making a backup of a file, you will need to use this trick hence it is very important.
+    An example of this is given below:
+
+
+    ```bash
+
+    cp /etc/httpd/conf/httpd.conf{,.backup}
+
+    ```
+
+
+    In the above example, we are backing up the `httpd.config` file.
+
+
+    ## Command Substitution
+
+
+    This is also another useful bash scripting trick. It includes the use of the `$`
+    sign and parenthesis on the standard output to enclose any command which is aimed
+    at generating output. This trick is applied when assigning some value to a variable.
+
+
+    You can assign the date to a variable as follows:
+
+
+    ```bash
+
+    date +%d-%b-%Y
+
+    ```
+
+
+    The above will give you the current date as shown below:
+
+
+    ![](images/0035.jpeg)
+
+
+    This can also be achieved using the following:
+
+
+    ```bash
+
+    echo $today=$(date +%d-%b-%Y)
+
+    ```
+
+
+    The output will just be the same. To get information about multiple RPM packages
+    simultaneously, you can also use command substitution. Command substitution can
+    also be achieved after surrounding a command using back quotes. This can be illustrated
+    using the example shown below:
+
+
+    ```bash
+
+    day=`date +%d-%b-%Y`
+
+    echo $day
+
+    ```
+
+
+    The above will give the following as the final result:
+
+
+    ![](images/0036.jpeg)
+
+    '
+  raw: " tail -f myfile | grep 24.13.152.12\n\nNotice that we are piping the output\
+    \ from the tail command into the grep  command. The command above can be used\
+    \ to monitor updates being made on the file myfile  in real time, that is, just\
+    \ as they happen. The last 10 lines of the file and any new lines added to it\
+    \ will be piped to the grep  command. The grep  command then has the task of outputting\
+    \ these on the standard window. Note that only the lines with the above specified\
+    \ address, that is, 24.13.152.12  will be printed on the standard output.\n\n\
+    The command can be used to display the last part of the file in relation to its\
+    \ size rather than the number of lines. The size is usually specified in bytes.\
+    \ To print the last 5 bytes of the file myfile, use the following command:\n\n\
+    \ tail –c5 myfile\n\n ![](images/00021.jpeg)\n\nThe output implies that only the\
+    \ word “it” and the full stop (.) form the last 5 bytes of the file. It is also\
+    \ possible to combine the above option with the plus (+) symbol to print the bytes\
+    \ from a certain byte.\n\nConsider the command shown below:\n\n tail –c+10 first\n\
+    \nThe above will print the last bytes of the file, starting from the 10th byte.\
+    \ The output will be as shown below:\n\n ![](images/00022.jpeg)\n\n## wc command\n\
+    \nwc stands for wall count. This command is used to count the lines contained\
+    \ in a certain file. To know the number of lines contained in the file myfile,\
+    \ run the following command:\n\n wc –l <myfile\n\nThe command outputs the following:\n\
+    \n ![](images/00023.jpeg)\n\nThe command gives the number of lines contained in\
+    \ the file myfile, which are only three lines. In case you also need to get the\
+    \ name of the file, use the following command:\n\n wc –l myfile\n\n ![](images/00024.jpeg)\n\
+    \nRun the command shown below:\n\n wc myfile\n\nThe following will form the output\
+    \ from the file:\n\n ![](images/00025.jpeg)\n\nThe command will show the number\
+    \ of lines in the file, the number of words contained in the file, the size of\
+    \ the file in bytes and the name of the file. These have been displayed in the\
+    \ order mentioned, where 3 is the number of lines in the file, 17 is the total\
+    \ number of words in the file, 95 is the size of the file in bytes and finally\
+    \ we have the file name. However, some people might easily be confused by the\
+    \ above.\n\nIt becomes easy when you split the above output as shown below:\n\n\
+    \ wc –c  myfile– this will output the total bytes making up the file.\n\nwc –w\
+    \ myfile– outputs the number of words contained in the file.\n\nwc –m  myfile–\
+    \ will output the number of characters making up the file.\n\nIf you can’t memorize\
+    \ the order used in the first command, then it is advisable you use the simple\
+    \ and alternative option above.\n\n## last command\n\nThis command is useful when\
+    \ you want to know the users who have recently logged into your system. This is\
+    \ very useful in the industry for security purposes. A user won’t deny having\
+    \ logged into the system at a certain time. Open the command line and type in\
+    \ the command last. Observe the output:\n\n ![](images/00026.jpeg)\n\nThe command\
+    \ shows the name of the user and other details including the terminal they were\
+    \ logged on and the time in which they logged in. In case any of the users is\
+    \ still in, you will be notified of it. The difference between when the user was\
+    \ lastly logged in and logged out will also be shown. Notice that only the last\
+    \ 100 logins will be displayed.\n\nThe command is also associated with the following\
+    \ options:\n\n1.  –R- this will make sure that the host name is not displayed.\n\
+    \n2.  –d – this is used when doing remote login. The ip address which identifies\
+    \ the host name is translated into the hostname itself.\n\n3.  –a – this will\
+    \ display the name of the host in output’s last column.\n\n4.  –x- shows the shutdown\
+    \ history and how changes have been made on the run levels.\n\n5.  –i- displays\
+    \ the ip address of the host login in remotely. The ip address is usually in dots\
+    \ and number format.\n\n6.  –F- the times and dates of full logins and logouts\
+    \ into the system ware displayed.\n\n7.  –w- the names of the user and the domain\
+    \ name are displayed as the output.\n\n# Chapter 3- Bash scripting Tricks\n\n\
+    \ Bash stands for Bourne Again shell, and in most Linux distros, it forms the\
+    \ default shell. Many Unix and Linux users really like it due to its user-friendliness.\
+    \ In this chapter, we are going to learn about the Bash shell.\n\n##  Brace Expansion\n\
+    \nA list of strings is used as arguments in this case. These strings are separated\
+    \ using comas. There should be no space after the comma. Example:\n\necho {John,Julius,Jacob}\n\
+    \n ![](images/00027.jpeg)\n\nFrom the figure, you can see the output. Just the\
+    \ arguments we provided in the braces.\n\nNow, type the following on the command\
+    \ line:\n\n echo John,Julius,Jacob\n\nThe output will just be the same as in the\
+    \ first example above. I am sure that you are seeing no usefulness of the braces.\
+    \ Consider the example shown below:\n\n echo {John,Julius,Jacob}David\n\nMaybe\
+    \ the three are sons of David. Observe the output:\n\n ![](images/00028.jpeg)\n\
+    \nYou have now seeing how useful the braces are in bash scripting. They are very\
+    \ useful when the list placed in the braces should occur after, inside or before\
+    \ another string. In the case above, these should occur before the string David.\n\
+    \nThe above can be implemented in another way as follows:\n\n echo David{John,Julius,Jacob}\n\
+    \nThe following will form the output of the above script:\n\n ![](images/00029.jpeg)\n\
+    \nAs you can see, the list specified inside the braces occurs after the string\
+    \ “David”.\n\nIt is also possible to place the list in between two strings. This\
+    \ is illustrated below:\n\n  echo David{John,Julius,Jacob}Mercy\n\nThe following\
+    \ will be the output:\n\n ![](images/00030.jpeg)\n\nThe words in the list have\
+    \ been sandwiched between the two strings that we have specified. Again, make\
+    \ sure that you don’t include space at all. There are no spaces between the arguments\
+    \ nor between the braces and the strings. Including this might lead to an error\
+    \ or an undesired output.\n\nHowever, if you need to use a space, make use that\
+    \ you also use double quotes as shown below:\n\n echo \"{John,Julius,Jacob} David\"\
+    \n\nThe following will be the output of the above:\n\n ![](images/00031.jpeg)\n\
+    \nYou might need such like output, so that’s how to get it. Consider the example\
+    \ given below:\n\n echo {\"John \",\"Julius \",\"Jacob \"} David\n\nThe above\
+    \ will give the following as the output:\n\n ![](images/00032.jpeg)\n\nBraces\
+    \ can also be nested, whereby braces are placed within other braces as shown below:\n\
+    \n echo {{a,b,c},a,b,c}\n\nThe following will be the output of the above example:\n\
+    \n ![](images/00033.jpeg)\n\nConsider the example shown below:\n\n echo {{6,7,8}1,2,3)\n\
+    \nThe output will be as follows:\n\n ![](images/00034.jpeg)\n\nThe question is\
+    \ where is this trick that is brace expansion applied. Of course, when making\
+    \ a backup of a file, you will need to use this trick hence it is very important.\
+    \ An example of this is given below:\n\n cp /etc/httpd/conf/httpd.conf{,.backup}\n\
+    \nIn the above example, we are backing up the httpd.config file.\n\n##  Command\
+    \ Substitution\n\nThis is also another useful bash scripting trick. It includes\
+    \ the use of the $ sign and parenthesis on the standard output to enclose any\
+    \ command which is aimed at generating output. This trick is applied when assigning\
+    \ some value to a variable.\n\nYou can assign the date to a variable as follows:\n\
+    \n date +%d-%b-%Y\n\nThe above will give you the current date as shown below:\n\
+    \n ![](images/00035.jpeg)\n\nThis can also be achieved using the following:\n\n\
+    \  echo $today\n\n                     today=$(date +%d-%b-%Y)\n\nThe output will\
+    \ just be the same. To get information about multiple RPM packages simultaneously,\
+    \ you can also use command substitution.\n\nCommand substitution can also be achieved\
+    \ after surrounding a command using back quotes. This can be illustrated using\
+    \ the example shown below:\n\n day=`date +%d-%b-%Y`\n\n                           \
+    \ echo $day\n\nThe above will give the following as the final result:\n\n ![](images/00036.jpeg)"
+  toc: []
+  trans: '
+
+
+    ```bash
+
+    tail -f myfile | grep 24.13.152.12
+
+    ```
+
+
+    注意，我们将 `tail` 命令的输出通过管道到 `grep` 命令中。上述命令可用于实时监控文件 `myfile` 的更新，即在更新发生时立即显示。该文件的最后
+    10 行以及添加到文件中的任何新行都将通过传递给 `grep` 命令。然后，`grep` 命令的任务是将这些内容输出到标准窗口。请注意，只有包含上述指定地址（即
+    `24.13.152.12`）的行会被打印在标准输出上。
+
+
+    该命令可以根据文件的大小而非行数来显示文件的最后部分。大小通常以字节为单位。要打印文件 `myfile` 的最后 5 个字节，请使用以下命令：
+
+
+    ```bash
+
+    tail –c5 myfile
+
+    ```
+
+
+    ![](img/00021.jpeg)
+
+
+    输出结果意味着只有“it”这个单词和句号（`.`）构成了文件的最后 5 个字节。还可以将上述选项与加号（`+`）符号结合，从某个字节开始打印字节。
+
+
+    考虑下面所示的命令：
+
+
+    ```bash
+
+    tail –c+10 first
+
+    ```
+
+
+    上述命令将打印从第 10 个字节开始的文件最后几个字节。输出如下所示：
+
+
+    ![](img/00022.jpeg)
+
+
+    ## wc 命令
+
+
+    `wc` 代表 word count（字数统计）。此命令用于统计特定文件中包含的行数。要查看文件 `myfile` 中包含的行数，请运行以下命令：
+
+
+    ```bash
+
+    wc –l <myfile
+
+    ```
+
+
+    该命令输出以下内容：
+
+
+    ![](img/00023.jpeg)
+
+
+    该命令给出了文件 `myfile` 中包含的行数，共三行。如果你还需要获取文件名，请使用以下命令：
+
+
+    ```bash
+
+    wc –l myfile
+
+    ```
+
+
+    ![](img/00024.jpeg)
+
+
+    运行下面所示的命令：
+
+
+    ```bash
+
+    wc myfile
+
+    ```
+
+
+    以下内容将形成文件的输出：
+
+
+    ![](img/00025.jpeg)
+
+
+    该命令将显示文件的行数、文件中包含的单词数、文件的字节大小以及文件名。这些内容按上述提到的顺序显示，其中 3 是文件的行数，17 是文件中单词的总数，95
+    是文件的字节大小，最后是文件名。然而，某些人可能会被上述内容搞混。
+
+
+    当像下面所示分割上述输出时，就变得简单了：
+
+
+    `wc –c myfile`– 这将输出构成文件的总字节数。
+
+
+    `wc –w myfile`– 输出文件中包含的单词数。
+
+
+    `wc –m myfile`– 将输出构成文件的字符数。
+
+
+    如果你无法记住第一条命令使用的顺序，那么建议你使用上述简单的替代选项。
+
+
+    ## last 命令
+
+
+    当你想要知道最近登录系统的用户时，这个命令非常有用。这在工业界安全目的中非常有价值。用户不会否认曾在某个时间登录过系统。打开命令行并输入命令 `last`。观察输出：
+
+
+    ![](img/00026.jpeg)
+
+
+    该命令显示了用户名和其他细节，包括他们登录的终端以及登录时间。如果任何用户仍在在线，你将收到通知。用户最后登录和注销之间的时间差也将显示。注意，只显示最后的登录记录。
+
+
+    该命令还与以下选项关联：
+
+
+    1. `–R`– 这将确保不显示主机名。
+
+    2. `–d`– 用于远程登录。识别主机名的 IP 地址将被翻译为主机本身。
+
+    3. `–a`– 这将在最后一列显示主机名。
+
+    4. `–x`– 显示关机历史以及运行级别（run levels）发生了哪些变化。
+
+    5. `–i`– 显示远程登录主机的 IP 地址。IP 地址通常为点和数字格式。
+
+    6. `–F`– 显示完整登录和注销系统的完整时间和日期。
+
+    7. `–w`– 用户名和域名作为输出显示。
+
+
+    # 第 3 章 - Bash 技巧
+
+
+    `Bash` 代表 Bourne Again，在大多数 Linux 发行版中，它是默认的 shell。许多 Unix 和 Linux 用户非常喜欢它，因为它对用户非常友好。在本章中，我们将学习
+    Bash shell。
+
+
+    ## 大括号扩展（Brace Expansion）
+
+
+    在这种情况下，字符串列表被用作参数。这些字符串使用逗号分隔。逗号后不能有空格。示例：
+
+
+    ```bash
+
+    echo {John,Jacob}
+
+    ```
+
+
+    ![](img/00027.jpeg)
+
+
+    从图中可以看到输出。仅仅是大括号中提供的参数。现在，在命令行中输入以下内容：
+
+
+    ```bash
+
+    echo $today today=$(date +%d-%b-%Y)
+
+    ```
+
+
+    输出将与上面的示例相同。我确定你没有看到大括号的用处。考虑下面所示示例：
+
+
+    ```bash
+
+    echo {John,Julius}David
+
+    ```
+
+
+    也许这三个是 David 的儿子。观察输出：
+
+
+    ![](img/0028.jpeg)
+
+
+    你现在看到了大括号在 bash 脚本中是多有用。当放在大括号中的列表应该出现在另一个字符串之后或之前时，它们非常有用。在上面的例子中，这些应该出现在字符串
+    `David` 之前。上述内容可以通过另一种方式实现：
+
+
+    ```bash
+
+    echo David{John,Julius}
+
+    ```
+
+
+    以下内容将形成上述脚本的输出：
+
+
+    ![](img/0029.jpeg)
+
+
+    如你所见，大括号内部的列表出现在 `David` 字符串之后。还可以将大括号内的列表放在两个字符串之间。这种方式如下所示：
+
+
+    ```bash
+
+    tail –c5 myfile
+
+    ```
+
+    （注：此处原文逻辑可能有误或引用了 tail，此处保持原意）
+
+    如你所见，大括号内的列表出现在 `David` 字符串之后。这种方式如下所示：
+
+
+    ```bash
+
+    echo David{John,Julius}
+
+    ```
+
+    （注：此处原文逻辑似乎重复，按原意翻译）
+
+    如你所见，大括号内的列表出现在 `David` 字符串之后。这种方式如下所示：
+
+
+    ```bash
+
+    echo David{John,Julius}
+
+    ```
+
+    （注：此处原文逻辑似乎重复，按原意翻译）
+
+    如你所见，大括号内的列表出现在 `David` 字符串之后。这种方式如下所示：
+
+    ```bash
+
+    echo David{John,Julius}
+
+    ```
+
+    （注：此处原文逻辑似乎重复，按原意翻译）
+
+    如你所见，大括号内的列表出现在 `David` 字符串之后。这种方式如下所示：
+
+    ```bash
+
+    echo David{John,Julius}
+
+    ```
+
+    （注：此处原文逻辑似乎重复，按原意翻译）
+
+    如你所见，大括号内的列表出现在 `David` 字符串之后。
+
+
+    （注：此处原文似乎存在多处重复逻辑错误）
+
+
+    你可能需要这样的输出，所以请你也使用双引号，如下所示：
+
+
+    ```bash
+
+    echo "{John,Julius}" David
+
+    ```
+
+
+    上述将产生以下输出：
+
+
+    ![](img/0031.jpeg)
+
+
+    大括号也可以嵌套，即大括号放在另一个大括号内部，如下所示：
+
+
+    ```bash
+
+    echo {{a,b,c},a,b,c
+
+    ```
+
+
+    以下将形成示例的输出：
+
+
+    ![](img/0032.jpeg)
+
+
+    考虑如下所示示例：
+
+
+    ```bash
+
+    echo {{6,7,8}1,2,3
+
+    ```
+
+
+    输出如下：
+
+
+    ![](img/0034.jpeg)
+
+
+    问题是大括号扩展技巧的应用场景。当然，在备份文件时，将需要使用这种技巧，因此非常重要。一个示例如下：
+
+
+    ```bash
+
+    cp /etc/httpd/conf/httpd.conf{,.backup}
+
+    ```
+
+
+    在上述示例中，我们正在备份 `httpd.conf` 文件。
+
+
+    ## 命令替换（Command Substitution）
+
+
+    这也是另一个实用的 bash 脚本技巧。它包括在标准输出中使用 `$` 符号和括号来包裹任何旨在输出的命令。这种技巧适用于给变量赋值。
+
+
+    你可以如下所示将日期赋值给变量：
+
+
+    ```bash
+
+    date +%d-%b-%Y
+
+    ```
+
+
+    上述将如所示给你当前日期：
+
+
+    ![](img/0035.jpeg)
+
+
+    也可以通过以下方式实现：
+
+
+    ```bash
+
+    echo $today=$(date +%d-%b-%Y)
+
+    ```
+
+
+    输出将完全相同。为了同时获取多个 RPM 包的信息，你也可以使用命令替换。命令替换也可以通过反引号包裹命令来实现。可以通过所示示例进行说明：
+
+
+    ```bash
+
+    day=`date +%d-%b-%Y`
+
+    echo $day
+
+    ```
+
+
+    上述将给出最终结果：
+
+
+    ![](img/0036.jpeg)
+
+    '
+- fmt: "\nThe current date will be displayed. With the above style, commands can easily\
+    \ be nested and they will become easy to read.\n\nThe output from a certain command\
+    \ can also be directed to a certain file. This can be done as shown below:\n\n\
+    ```\nfind / -name file > result.txt\n```\n\nIn the above example, we are redirecting\
+    \ the output from the command `find` to the file `result.txt`.\n\nHowever, you\
+    \ will notice that error messages will be produced. If you are not interested\
+    \ in these, you can also redirect them to a file. A `2` in front of the redirection\
+    \ symbol can assist in this.\n\nThey can also be redirected to `/dev/null` if\
+    \ we are not interested in them at all. This is illustrated below:\n\n```bash\n\
+    find / -name file 2> /dev/null\n```\n\nThe location of the file “file” will be\
+    \ shown without the error messages, `2` stands for the standard error output stream.\
+    \ Most Linux commands redirect their errors here, whereas the correct output which\
+    \ is send to the standard output is represented using `1`.\n\nConsider the commands\
+    \ shown below:\n\n```bash\nfind / -name file > result.txt\nfind / -name file 1>\
+    \ result.txt\n```\n\nSome could think that the above commands are different. However,\
+    \ they are just the same. The `1` represents the normal standard output.\n\nYou\
+    \ may need to save both, that, the error message and the standard output to a\
+    \ file. Cron jobs are usually used for this purpose. This can be achieved as shown\
+    \ below:\n\n```bash\nfind / -name file > result.txt 2> result.txt\n```\n\nNotice\
+    \ that both output streams have been directed to the same file. However, the above\
+    \ is tiresome. It can be achieved with much simplicity as shown below:\n\n```bash\n\
+    find / -name file > result.txt 2>&1\n```\n\nIn the example just above, we have\
+    \ used an ampersand to tie the standard error stream and the standard output stream.\
+    \ After this, the standard error will go to wherever the standard output goes.\
+    \ Again the syntax used in the example above as it is very important.\n\nYou might\
+    \ also be interested in piping the output to another command. This is shown below:\n\
+    \n```bash\nfind -name file.sh 2>&1 | d /tmp/result2.txt\n```\n\nThe above line\
+    \ will work just as it is expected. Now consider the line shown below:\n\n```bash\n\
+    find -name file.sh | d /tmp/result2.txt 2>&1\n```\n\nOn running the above line,\
+    \ you will notice that it won’t work as it is expected. This is in contradiction\
+    \ to the other line.\n\n## Command History\n\nWith Bash, you can search through\
+    \ the commands that have been run recently. You can then use the up and down arrow\
+    \ keys so as to navigate through these commands. If the command you are looking\
+    \ for was executed between the last 10-20 executed commands, then this will be\
+    \ easy for you.\n\nIf you want to search interactively, meaning that suggestions\
+    \ for what you are searching for will be provided, just press `Ctrl-R`.\n\nThe\
+    \ prompt will then be changed to the following:\n\n```\n(reverse-i-search)`':\n\
+    ```\n\nYou can then start typing the letters of your command. You will notice\
+    \ that you will be provided with suggestions. However, the suggestions will only\
+    \ include the recently types and related commands.\n\nIn my case, after pressing\
+    \ the `Ctrl-R`, and then typing `ech`, the following is the suggestion:\n\n![](images/00037.jpeg)\n\
+    \nHe above shows that the command I ran recently containing the words `ech` is\
+    \ the “echo day” command.\n\nTo execute the command, just press the enter key\
+    \ and it will be executed. If you need to do some editing to the command, just\
+    \ press the left or right arrow keys. The command will be placed on the normal\
+    \ prompt and then you will be able to edit it.\n\n## Loops\n\nWith Bash, it is\
+    \ possible for you to create loops on the command line. However, this is not suitable\
+    \ is the code is large or too complex. On the command line, loops can be written\
+    \ in two different ways. The first way involves separating the different lines\
+    \ of code using a semicolon. To create a loop that will back up all the files\
+    \ contained in a certain directory, this can be done as follows using this method:\n\
+    \n```bash\nfor doc in *; do cp $doc $doc.bak; done\n```\n\nThe above line of code\
+    \ will back up all the files in the directory. Rather than separating the lines\
+    \ using a semicolon, a secondary prompt can be used. This can be done by pressing\
+    \ the enter key once you are through with each single line. Once you have pressed\
+    \ the enter key, Bash will understand that you want to create a loop and it will\
+    \ provide you with a secondary prompt.\n\nYou can then enter your second line.\
+    \ This is illustrated below:\n\n```bash\nfor doc in *\n  > do cp $doc $doc.bak\n\
+    \  > done\n```\n\nSometimes, your Linux system can run out of memory. This means\
+    \ that you will not be able to execute your commands including the simple ones\
+    \ such as `ls` and the ones for changing directories. If `ls` fails and you want\
+    \ to vie the files contained in a particular directory, then this can be achieved\
+    \ as follows:\n\n```bash\nfor doc in *; do echo $doc; done\n```\n\nThis will solve\
+    \ the `ls` problem. This shows the power of bash scripting.\n\n# Chapter 4 Linux\
+    \ shell programming\n\nIn Linux, it is very easy to create shell scripts. With\
+    \ shell programming, we can group multiple commands in a chain and then execute\
+    \ them to obtain the desired output. Let us begin by writing out first script.\
+    \ Open your editor of choice; I am using the `vi` editor. Add the following shell\
+    \ program to the file:\n\n```bash\n#!/bin/bash\necho “Hello World”\n```\n\nThe\
+    \ above is an example of a shell program. Save the file and give it the name `hello.sh`.\
+    \ Notice that we have used the `.sh` extension to imply that it is a shell program.\
+    \ Now, the next step is to make the script executable. This can be achieved as\
+    \ follows:\n\nOpen the command prompt and type the following command:\n\n```bash\n\
+    chmod 744 hello.sh\n```\n\nAfter running the above command, an executable of the\
+    \ file `hello.sh` will be created, `chmod` stands for change mode.\n\n`744` refers\
+    \ to the permissions, and we have used this to add an execute permission to the\
+    \ file. Since we have made the program executable, we now need to execute it.\n\
+    \nThis can be achieved by running the following command on the terminal:\n\n```bash\n\
+    ./hello.sh\n```\n\nAfter running the above command, the following output will\
+    \ be observed on the standard output:\n\n![](images/00038.jpeg)\n\nThe command\
+    \ outputs a text written “Hello World”. Remember that this is the text that we\
+    \ command the `echo` command to output.\n\n`#!/bin/bash` is called the shebang\
+    \ is used to precede shell programs.\n\nTo add comments to your program, precede\
+    \ them with a pound sign (`#`).\n\nConsider the shell program shown below:\n\n\
+    ```bash\n#! /bin/bash\necho \"Hey $USER\"\necho \"Hello, i am\" $USER \"The following\
+    \ are the processes running currently\"\necho \"List of running processes:\"\n\
+    ps\n```\n\nYou can write and run the program. The following output will be observed\
+    \ after running the program:\n\n![](images/00039.jpeg)\n\nAs shown in the above\
+    \ figure, the program outputs your name. It also shows the list of processes which\
+    \ are currently running on your system.\n\nNow, let us write a more interactive\
+    \ program. Write the code shown below and run it:\n\n```bash\n#! /bin/bash\necho\
+    \ \"Enter your name”\nread name;\necho \"welcome Mr. /Mrs. $name \";\necho \"\
+    Thanks Mr./Mrs. $name. You have provided us with your names\"\necho \"-------------------------------------------------\"\
+    \necho \"Mr. /Mrs. $name, good bye friend\"\n```\n\nAfter running the above program,\
+    \ the following output will be observed:\n\n![](images/00040.jpeg)\n\nAs seen,\
+    \ you are prompted to provide your name. This has been achieved by use of the\
+    \ `read` command, which prompts users to provide their input. This input has then\
+    \ been displayed alongside some other text.\n\n## Variables in Shell\n\nThe two\
+    \ types of shell variables are:\n\n1.  **System variables**: these are created\
+    \ and maintained by the OS. They are defined in upper case.\n2.  **User Defined\
+    \ Variables**: the user creates and maintains these. They are defined in lower\
+    \ case letters.\n\nThe following are some of the system variables in shell:\n\n\
+    `BASH`: the shell name.\n\n`HOME`: our home directory\n\n`LOGNAME`: our login\
+    \ name.\n\n`PATH`: our setting for the path.\n\n`USERNAME`: the currently logged\
+    \ in user.\n"
+  raw: "The current date will be displayed. With the above style, commands can easily\
+    \ be nested and they will become easy to read.\n\nThe output from a certain command\
+    \ can also be directed to a certain file. This can be done as shown below:\n\n\
+    \ find / -name file > result.txt\n\nIn the above example, we are redirecting the\
+    \ output from the command find to the file result.txt.\n\nHowever, you will notice\
+    \ that error messages will be produced. If you are not interested in these, you\
+    \ can also redirect them to a file. A 2 in front of the redirection symbol can\
+    \ assist in this.\n\nThey can also be redirected to /dev/null if we are not interested\
+    \ in them at all. This is illustrated below:\n\n find / -name file 2> /dev/null\n\
+    \nThe location of the file “file” will be shown without the error messages, 2\
+    \ stands for the standard error output stream. Most Linux commands redirect their\
+    \ errors here, whereas the correct output which is send to the standard output\
+    \ is represented using 1.\n\nConsider the commands shown below:\n\n find / -name\
+    \ file > result.txt\n\n                                 find / -name file 1> result.txt\n\
+    \nSome could think that the above commands are different. However, they are just\
+    \ the same. The 1 represents the normal standard output.\n\nYou may need to save\
+    \ both, that, the error message and the standard output to a file. Cron jobs are\
+    \ usually used for this purpose. This can be achieved as shown below:\n\n find\
+    \ / -name file > result.txt 2> result.txt\n\nNotice that both output streams have\
+    \ been directed to the same file. However, the above is tiresome. It can be achieved\
+    \ with much simplicity as shown below:\n\n find / -name file > result.txt 2>&1\n\
+    \nIn the example just above, we have used an ampersand to tie the standard error\
+    \ stream and the standard output stream. After this, the standard error will go\
+    \ to wherever the standard output goes. Again the syntax used in the example above\
+    \ as it is very important.\n\nYou might also be interested in piping the output\
+    \ to another command. This is shown below:\n\n find -name file.sh 2>&1 | d /tmp/result2.txt\n\
+    \nThe above line will work just as it is expected. Now consider the line shown\
+    \ below:\n\n find -name file.sh | d /tmp/result2.txt 2>&1\n\nOn running the above\
+    \ line, you will notice that it won’t work as it is expected. This is in contradiction\
+    \ to the other line.\n\n## Command History\n\nWith Bash, you can search through\
+    \ the commands that have been run recently. You can then use the up and down arrow\
+    \ keys so as to navigate through these commands. If the command you are looking\
+    \ for was executed between the last 10-20 executed commands, then this will be\
+    \ easy for you.\n\nIf you want to search interactively, meaning that suggestions\
+    \ for what you are searching for will be provided, just press Ctrl-R.\n\nThe prompt\
+    \ will then be changed to the following:\n\n (reverse-i-search)`':\n\nYou can\
+    \ then start typing the letters of your command. You will notice that you will\
+    \ be provided with suggestions. However, the suggestions will only include the\
+    \ recently types and related commands.\n\nIn my case, after pressing the Ctrl-R,\
+    \ and then typing ech, the following is the suggestion:\n\n ![](images/00037.jpeg)\n\
+    \nHe above shows that the command I ran recently containing the words ech is the\
+    \ “echo day” command.\n\nTo execute the command, just press the enter key and\
+    \ it will be executed. If you need to do some editing to the command, just press\
+    \ the left or right arrow keys. The command will be placed on the normal prompt\
+    \ and then you will be able to edit it.\n\n## Loops\n\nWith Bash, it is possible\
+    \ for you to create loops on the command line. However, this is not suitable is\
+    \ the code is large or too complex. On the command line, loops can be written\
+    \ in two different ways. The first way involves separating the different lines\
+    \ of code using a semicolon. To create a loop that will back up all the files\
+    \ contained in a certain directory, this can be done as follows using this method:\n\
+    \n for doc in *; do cp $doc $doc.bak; done\n\nThe above line of code will back\
+    \ up all the files in the directory. Rather than separating the lines using a\
+    \ semicolon, a secondary prompt can be used. This can be done by pressing the\
+    \ enter key once you are through with each single line. Once you have pressed\
+    \ the enter key, Bash will understand that you want to create a loop and it will\
+    \ provide you with a secondary prompt.\n\nYou can then enter your second line.\
+    \ This is illustrated below:\n\n for doc in *\n\n                            >\
+    \ do cp $doc $doc.bak\n\n                            > done\n\nSometimes, your\
+    \ Linux system can run out of memory. This means that you will not be able to\
+    \ execute your commands including the simple ones such as ls and the ones for\
+    \ changing directories. If ls fails and you want to vie the files contained in\
+    \ a particular directory, then this can be achieved as follows:\n\n for doc in\
+    \ *; do echo $doc; done\n\nThis will solve the ls problem. This shows the power\
+    \ of bash scripting.\n\n# Chapter 4- Linux shell programming\n\n In Linux, it\
+    \ is very easy to create shell scripts. With shell programming, we can group multiple\
+    \ commands in a chain and then execute them to obtain the desired output. Let\
+    \ us begin by writing out first script. Open your editor of choice; I am using\
+    \ the vi editor. Add the following shell program to the file:\n\n #!/bin/bash\n\
+    \n                            Echo “Hello World”\n\nThe above is an example of\
+    \ a shell program. Save the file and give it the name hello.sh. Notice that we\
+    \ have used the .sh extension to imply that it is a shell program. Now, the next\
+    \ step is to make the script executable. This can be achieved as follows:\n\n\
+    Open the command prompt and type the following command:\n\n chmod 744 hello.sh\n\
+    \nAfter running the above command, an executable of the file hello.sh will be\
+    \ created, chmod stands for change mode.\n\n744 refers to the permissions, and\
+    \ we have used this to add an execute permission to the file. Since we have made\
+    \ the program executable, we now need to execute it.\n\nThis can be achieved by\
+    \ running the following command on the terminal:\n\n  ./hello.sh\n\nAfter running\
+    \ the above command, the following output will be observed on the standard output:\n\
+    \n ![](images/00038.jpeg)\n\nThe command outputs a text written “Hello World”.\
+    \ Remember that this is the text that we command the echo command to output.\n\
+    \n#!/bin/bash is called the shebang is used to precede shell programs.\n\nTo add\
+    \ comments to your program, precede them with a pound sign (#).\n\nConsider the\
+    \ shell program shown below:\n\n#! /bin/bash\n\necho \"Hey $USER\"\n\necho \"\
+    Hello, i am\" $USER \"The following are the processes running currently\"\n\n\
+    echo \"List of running processes:\"\n\nps\n\nYou can write and run the program.\
+    \ The following output will be observed after running the program:\n\n ![](images/00039.jpeg)\n\
+    \nAs shown in the above figure, the program outputs your name. It also shows the\
+    \ list of processes which are currently running on your system.\n\nNow, let us\
+    \ write a more interactive program. Write the code shown below and run it:\n\n\
+    #! /bin/bash\n\necho \"Enter your name”\n\nread name;\n\necho \"welcome Mr. /Mrs.\
+    \ $name \";\n\necho \"Thanks Mr./Mrs. $name. You have provided us with your names\"\
+    ;\n\necho \"-----------------------------------------------------------------\"\
+    \n\necho \"Mr. /Mrs. $name, good bye friend\"\n\nAfter running the above program,\
+    \ the following output will be observed:\n\n ![](images/00040.jpeg)\n\nAs seen,\
+    \ you are prompted to provide your name. This has been achieved by use of the\
+    \ read command, which prompts users to provide their input. This input has then\
+    \ been displayed alongside some other text.\n\nVariables in Shell\n\nThe two types\
+    \ of shell variables are:\n\n1.  System variables- these are created and maintained\
+    \ by the OS. They are defined in upper case.\n\n2.  User Defined Variables- the\
+    \ user creates and maintains these. They are defined in lower case letters.\n\n\
+    The following are some of the system variables in shell:\n\nBASH- the shell name.\n\
+    \nHOME- our home directory\n\nLOGNAME- our login name.\n\nPATH- our setting for\
+    \ the path.\n\nUSERNAME- the currently logged in user."
+  toc: []
+  trans: "\n将显示当前日期。通过上述样式，命令可以轻松嵌套，并且会变得易于阅读。\n\n特定命令的输出也可以重定向到特定文件。操作如下所示：\n\n```\n\
+    find / -name file > result.txt\n```\n\n在上面的示例中，我们正将命令 `find` 的输出重定向到文件 `result.txt`。\n\
+    \n然而，你会发现会产生错误信息。如果你对这些信息感兴趣，也可以将它们重定向到文件中。在重定向符号前加一个 `2` 就可以实现这一操作。\n\n如果我们完全不这些这些信息，也可以将它们重定向到\
+    \ `/dev/null`。如下所示：\n\n```bash\nfind / -name file 2> /dev/null\n```\n\n系统将显示文件“file”的位置，而不会显示错误信息，`2`\
+    \ 代表标准错误输出流。大多数 Linux 命令将它们的错误重定向到这里，而发送到标准输出的正确输出用 `1` 表示。\n\n考虑下面的命令：\n\n```bash\n\
+    find / -name file > result.txt\nfind / -name file 1> result.txt\n```\n\n有些人可能认为上述命令是不同的。然而，它们是完全相同的。`1`\
+    \ 代表正常的标准输出。\n\n你可能需要将错误信息和标准输出都保存到文件中。Cron job（定时任务）通常用于此目的。实现方式如下所示：\n\n```bash\n\
+    find / -name file > result.txt 2> result.txt\n```\n\n注意，两个输出流都被重定向到了同一个文件。然而，上面的方法很麻烦。可以通过下面的简单得多的方法实现：\n\
+    \n```bash\nfind / -name file > result.txt 2>&1\n```\n\n在正上面的示例中，我们使用了一个安符 `&`\
+    \ 将标准错误流和标准输出流绑定。此后，标准错误将转到标准输出所在的地方。再次强调，上面示例中使用的语法非常重要。\n\n你可能还对将输出管道到另一个命令感兴趣。如下所示：\n\
+    \n```bash\nfind -name file.sh 2>&1 | d /tmp/result2.txt\n```\n\n上述行将按预期工作。现在考虑下面这一行：\n\
+    \n```bash\nfind -name file.sh | d /tmp/result2.txt 2>&1\n```\n\n在运行上述行时，你会发现它并不会按预期工作。这与另一行是矛盾的。\n\
+    \n## 命令历史\n\n通过 Bash，你可以搜索最近运行过的命令。然后你可以使用向上和向下方向键在这些命令之间进行导航。如果你寻找的命令是在最后执行的\
+    \ 10-20 条命令之间执行的，那么这对你来说就很简单。\n\n如果你想进行交互式搜索，即系统会提供你正在搜索内容的建议，只需按下 `Ctrl-R`。\n\
+    \n提示符将变为如下所示：\n\n```\n(reverse-i-search)`':\n```\n\n然后你就可以开始输入命令的字母。你会发现系统会提供建议。然而，这些建议仅包含最近输入以及相关的命令。\n\
+    \n在我的情况下，按下 `Ctrl-R` 后输入 `ech`，接下来的建议如下：\n\n![](img/00037.jpeg)\n\n上面显示我最近运行的包含包含\
+    \ `ech` 单词的命令是 “echo day” 命令。\n\n要执行该命令，只需按回车键即可。如果你需要对命令进行一些编辑，只需按左或右方向键。命令将放置在普通提示符上，然后你就可以对其进行编辑。\n\
+    \n## 循环\n\n通过 Bash，你可以在命令行上创建循环。然而，如果代码量很大或太复杂，这并不合适。在命令行上，循环可以用两种方式编写。第一种方法涉及使用分号分隔不同的代码行。要创建一个备份特定目录下包含的所有文件的循环，可以使用以下这种方法实现：\n\
+    \n```bash\nfor doc in *; do cp $doc $doc.bak; done\n```\n\n上面的代码行将备份目录中的所有文件。与其使用分号分隔行，不如使用次级提示符。在完成每个单行后按一次回车键即可实现。一旦你按了回车键，Bash\
+    \ 就会理解你想创建一个循环，并为你提供次级提示符。\n\n然后你就可以输入第二行。如下所示：\n\n```bash\nfor doc in *\n  >\
+    \ do cp $doc $doc.bak\n  > done\n```\n\n有时，你的 Linux 系统可能会耗尽内存。这意味着你将无法执行命令，包括像\
+    \ `ls` 这样的简单命令以及切换目录的命令。如果 `ls` 失败且你想查看特定目录中包含的文件，可以通过以下方式实现：\n\n```bash\nfor\
+    \ doc in *; do echo $doc; done\n```\n\n这将解决 `ls` 问题。这展示了 bash 脚本的力量。\n\n# 第 4\
+    \ 章 Linux shell 编程\n\n在 Linux 中，创建 shell 脚本非常简单。通过 shell 编程，我们可以将多个命令组合成链，然后执行它们以获得所需的输出。让我们从编写第一个脚本开始。打开你喜欢的编辑器；我正在使用\
+    \ `vi` 编辑器。将以下 shell 程序添加到文件中：\n\n```bash\n#!/bin/bash\necho \"Hello World\"\n\
+    ```\n\n这是一个 shell 程序示例。通过 shell 编程，我们可以将多个命令组合成链并执行它们以获得所需的输出。保存文件并将其命名为 `hello.sh`。注意我们使用了\
+    \ `.sh` 扩展名来表示这是一个 shell 程序。下一步是使其变为可执行。可以通过如下方式实现：\n\n```bash\nchmod 744 hello.sh\n\
+    ```\n\n运行上述命令将创建一个可执行的 `hello.sh`。`chmod` 代表模式，`744` 代表权限，我们使用它来赋予文件执行权限。由于我们已经赋予了执行权限，现在需要执行它。\n\
+    \n可以通过在终端运行以下命令实现：\n\n```bash\n./hello.sh\n```\n\n运行上述命令后，在标准输出中观察到如下内容：\n\n![](img/00038.jpeg)\n\
+    \n该命令输出了文本 “Hello World”。记住 `#!/bin/bash` 被称为 shebang，用于位于程序的开头。\n\n要在你的程序中添加注释，请以井号\
+    \ `#` 开头。\n\n考虑下面的 shell 程序：\n\n```bash\n#!/bin/bash\necho \"Hey $USER\"\necho\
+    \ \"Hello, i am\" $USER \"The following are the running currently\"\necho \"List\
+    \ of running processes:\"\nps\n```\n\n你可以编写并运行该程序。运行程序后观察如下：\n\n![](img/00039.jpeg)\n\
+    \n所示，程序输出了你的名字。它还显示了系统中运行的进程列表。\n\n现在，让我们写一个更有交互性的程序。编写下面的代码并运行它：\n\n```bash\n\
+    #!/bin/bash\necho \"Enter your name”\nread name;\necho \"welcome Mr. /Mrs. $name\
+    \ \";\necho \"Thanks Mr./Mrs. $name. You have provided us with your names\"\n\
+    echo \"-------------------------------------------------\"\necho \"Mr. /Mrs. $name,\
+    \ good bye friend\"\n```\n\n运行上述程序后，观察到如下输出：\n\n![](img/0040.jpeg)\n\n如所示，你被提示提供你的名字。这是通过使用\
+    \ `read` 命令实现的，该命令提示用户提供输入。然后，这些输入将与其他文本一起显示。\n\n## Shell 变量\n\nShell 变量有两类：\n\
+    \n1.  **系统变量**：这些由操作系统创建并维护。它们用大写字母定义。\n2.  **用户定义变量**：用户创建并维护。它们用小写字母定义。\n\n\
+    以下是一些 shell 系统变量：\n\n`BASH`: shell 的名称。\n\n`HOME`: 我们的家目录\n\n`LOGNAME`: 我们的登录名。\n\
+    \n`PATH`: 我们的路径设置。\n\n`USERNAME`: 当前登录的用户。\n"
+- fmt: "\n`COLUMNS` - number of columns making up our screen.\n\n`OSTYPE` - the type\
+    \ of the OS we are running.\n\n`PWD` - the current working directory.\n\nThe above\
+    \ shows only a sample of the system variables. In case you want to print any of\
+    \ the above variables, use the `echo` command and the `$` sign as shown below:\n\
+    \n```bash\necho $HOME\necho $PWD\n```\n\nThe next part is on how to work with\
+    \ user defined variables.\n\nUse the following syntax to define a user defined\
+    \ variable:\n\n```\nvariable name=value\n```\n\nThe `name` refers to the name\
+    \ to be used to refer to the variable. The `value` is what it is. This is usually\
+    \ a number or a string. Example:\n\n```\nnum=10\nname=Mary\n```\n\n### Tips when\
+    \ naming variable\n\n1. There should be no spaces on either sides of the equal\
+    \ sign. Example:\n```bash\nnum=12- this is right\nnum= 12- this is wrong\nnum\
+    \ =12- this is wrong\nnum = 12- this is wrong\n```\n\n2. The name of the variable\
+    \ should begin with an underscore or of the alphanumeric characters. This should\
+    \ then be followed by any of the alphanumeric characters. The following are examples\
+    \ of valid variables:\n- `PWD`\n- `SYSTEM_VERSION`\n- `num`\n\n3. The names of\
+    \ variables are case sensitive. Example:\n```bash\nNum=2\nnum=6\nnUm=9\nnuM=10\n\
+    NUM=90\n```\nThe above shows that the variable names are not equal. To print any\
+    \ of the above, also make sure that you specify correctly. For example, to print\
+    \ 10, use the following code:\n\n```bash\necho $nuM\n```\n\n4. To define null\
+    \ variables, do the following:\n```bash\nnum=\nnum=\"\"\n```\nTo print it, use\
+    \ the following code:\n```bash\nE=echo $num\n```\nHowever, note that nothing will\
+    \ be displayed since the variable is null.\n\n5. Some characters should not be\
+    \ used to name variables. These include the asterisk `*` and the question mark\
+    \ `?`.\n\n## Loops in Shell\n\nA loop represents a group of instructions executed\
+    \ repeatedly.\n\n### for Loop\n\nThis loop follows the following syntax:\n\n```\n\
+    for { name of the variable} in {list }\ndo\n    execute the items in the list\
+    \ one after another until finished.\ndone\n```\n\nConsider the program shown below:\n\
+    \n```bash\nfor j in 1 2 3 4 5\ndo\n    echo \"Test for for loop\"\ndone\n```\n\
+    After running the above program, you will observe the output. What the program\
+    \ does is it begins by defining variable `j` and sets its value from 1 to 5. The\
+    \ line `echo \"Test for for loop\"` of the program will then be executed 5 times\
+    \ since the value of `j` will increment up to a maximum of 5. This explains the\
+    \ output.\n\n### while Loop\n\nThe `while` loop in shell takes the following syntax:\n\
+    \n```\nwhile [ condition]\ndo\n    1st command\n    2nd command\n    3rd command\n\
+    \    ..\n    ....\ndone\n```\nAs long as the condition that you have specified\
+    \ is true, the loop will execute.\n\n### Case statement\n\nIt is also common in\
+    \ Linux. One can use it rather than the `if-else` statement.\n\nIt takes the following\
+    \ syntax:\n\n```\ncase $name_of_the_variable in\n    1st pattern) command\n  \
+    \      ...\n        ..\n        ;;\n    2nd pattern) command\n        ...\n  \
+    \      ..\n        ;;\n    nth pattern) command\n        ...\n        ..\n   \
+    \     ;;\n    *) command\n        ...\n        ..\n        ;;\nesac\n```\nNotice\
+    \ that we start with `case` but we end with an `esac` statement. Consider the\
+    \ example shown below:\n\n```bash\nif [ -y $1 ]\nthen\n    r=\"the vehicle is\
+    \ unknown\"\nelif [ -x $1 ]\nthen\n    r=$1\nfi\n\ncase $r in\n    \"lorry\")\
+    \ echo \"For $r 10 per k/m\";;\n    \"merc\") echo \"For $r 80 per k/m\";;\n \
+    \   \"corolla\") echo \"For $r 15 per k/m\";;\n    \"motorbyke\") echo \"For $r\
+    \ 5 per k/m\";;\n    *) echo \"we can’t obtain a $r for you\";;\nesac\n```\n\n\
+    ## if-else-fi for decision making\n\nThe command `if-else-fi` can be used in shell\
+    \ programming for the purpose of decision making. The programmer specifies a condition\
+    \ and once met, a command is executed, if not met, the other command is executed.\
+    \ It takes the following syntax:\n\n```\nif condition\nthen\n    the condition\
+    \ is zero\n    execute commands until you meet the else statement\nelse\n    ...\
+    \ execute commands\nfi\n```\nConsider the example below:\n\n```bash\n#!/bin/bash\n\
+    if [ $# -eq 0 ]\nthen\n    exit 1\nfi\n```\n\n## Chapter 5: Bash- Working with\
+    \ files\n\n1. **Truncating the size of a file**: The `>` command is used. If the\
+    \ file exists, its size is truncated whereas if it does not, it is created. Note\
+    \ the operator.\n```bash\necho \"string\" > file\n```\n\n2. **Adding a string\
+    \ to your file**: The onliner uses the `>>` operator to append some content to\
+    \ your file. In case the operator fails to find the file, anew one is created.\
+    \ Example:\n```bash\necho \"content\" >> file\n```\n\n3. **Assign the first line\
+    \ of a file to a variable**: In this case, you need to read the first line of\
+    \ the file and then assign it to a variable. The input operator `<` is used.\n\
+    ```bash\nread -r myline < file\n```\n\n4. **Reading a file**: a `read` command\
+    \ can be combined with the `while` loop so as to read a file line-by-line. This\
+    \ is illustrated below:\n\n```bash\nwhile IFS read -r myline; do\n    # perform\
+    \ something on the variable myline\ndone < file\n```\nA code of failure will be\
+    \ returned when the `read` command meets end-of-failure. The `while` loop will\
+    \ then halt. Notice that we have placed `< file` at the end. To avoid this, pipe\
+    \ the file’s content to a while loop as shown below:\n\n```bash\ncat file | while\
+    \ IFS= read -r myline; do\n    # perform something on the variable myline\ndone\n\
+    ```"
+  raw: "COLUMNS- number of columns making up our screen.\n\nOSTYPE- the type of the\
+    \ OS we are running.\n\nPWD- the current working directory.\n\nThe above shows\
+    \ only a sample of the system variables. In case you want to print any of the\
+    \ above variables, use the echo and the $ sign command as shown below:\n\n echo\
+    \ $HOME\n\n              echo $PWD\n\nThe next part is on how to work with user\
+    \ defined variables.\n\nUse the following syntax to define a user defined variable:\n\
+    \n variable name=value\n\nThe name refers to the name to be used to refer to the\
+    \ variable. The value is what it is. This is usually a number or a string. Example:\n\
+    \n num=10\n\n                            name=Mary\n\nTips when naming variable\n\
+    \n1.  There should be no spaces on either sides of the equal sign. Example:\n\n\
+                                num=12- this is right\n\n                           \
+    \ num= 12- this is wrong\n\n                            num =12- this is wrong\n\
+    \n                            num = 12- this is wrong\n\n2.  The name of the variable\
+    \ should begin with an underscore or of the alphanumeric characters. This should\
+    \ then be followed by any of the alphanumeric characters. The following are examples\
+    \ of valid variables:\n\n PWD\n\n                            SYSTEM_VERSION\n\n\
+                                num\n\n3.  The names of variables are case sensitive.\
+    \ Example:\n\n Num=2\n\n                            num=6\n\n                           \
+    \ nUm=9\n\n                            nuM=10\n\n                            NUM=90\n\
+    \nThe above shows that the above variable names are not equal. To print any of\
+    \ the above, also make sure that you specify correctly. For example, to print\
+    \ 10, use the following code:\n\n echo $nuM\n\n4.  To define null variables, do\
+    \ the following:\n\n num=\n\n                            num=””\n\nTo print it,\
+    \ use the following code:\n\n E=echo $num\n\nHowever, note that nothing will be\
+    \ displayed since the variable is null.\n\n5.  Some characters should not be used\
+    \ to name variables. These include the asterisk (*) and the question mark (?).\n\
+    \n## Loops in Shell\n\nA loop represents a group of instructions executed repeatedly.\n\
+    \n## for Loop\n\nThis loop follows the following syntax:\n\nfor { name of the\
+    \ variable} in {list }\n\n            do\n\n                     execute the items\
+    \ in the list one after another until finished.\n\n            done\n\nConsider\
+    \ the program shown below:\n\n for j in 1 2 3 4 5\n\n                           \
+    \ do\n\n                            echo “Test for the for loop”\n\n             \
+    \               done\n\nAfter running the above program, you will observe the\
+    \ following as the output:\n\n ![](images/00041.jpeg)\n\nWhat the program does\
+    \ is that it begins by defining the variable j and sets its value from 1 to 5\\\
+    . The line echo “Test for the for loop”of the program will then be executed 5\
+    \ times since the value of j will increment up to a maximum of 5\\. This explains\
+    \ the source of the output.\n\n## while Loop\n\nThe while loop in shell takes\
+    \ the following syntax:\n\n  while [ condition]\n\n                                    \
+    \                      do\n\n                                                         \
+    \ 1st command\n\n                                                          2nd\
+    \ command\n\n                                                          3rd  command\n\
+    \n                                                                         ..\n\
+    \n                                                                         ....\n\
+    \n                                                            done\n\nAs long\
+    \ as the condition that you have specified is true, the loop will execute.\n\n\
+    ## Case statement\n\nIt is also common in Linux. One can use it rather than the\
+    \ if-else statement.\n\nIt takes the following syntax:\n\n case  $name_of_the_variable \
+    \ in\n\n                1st pattern)   command\n\n                               \
+    \ ...\n\n                                ..\n\n                               \
+    \ command;;\n\n                2nd pattern)   command\n\n                               \
+    \ ...\n\n                                ..\n\n                               \
+    \ command;;\n\n                nth pattern)   command\n\n                               \
+    \ ...\n\n                                ..\n\n                               \
+    \ command;;\n\n                *)             command\n\n                               \
+    \ ...\n\n                                ..\n\n                               \
+    \ command;;\n\n esac\n\nNotice that we start with case but we end with an esac\
+    \ statement. Consider the example shown below:\n\nif [ -y $1 ]\n\nthen\n\n  r=”the\
+    \ vehicle is unknown”\n\nelif [ -x $1 ]\n\nthen\n\n  r=$1\n\nfi\n\ncase $r in\n\
+    \n   \"lorry\") echo \"For $r 10 per k/m\";;\n\n   \"merc\") echo \"For $r 80\
+    \ per k/m\";;\n\n   \"corolla\") echo \"For $r 15 per k/m\";;\n\n   \"motorbyke\"\
+    ) echo \"For $r 5 per k/m\";;\n\n   *) echo \"we can’t obtain a $r for you\";;\n\
+    \nesac\n\n## if-else-fi  for decision making\n\nThe command if-else-fi can be\
+    \ used in shell programming for the purpose of decision making. The programmer\
+    \ specifies a condition and once met, a command is executed, if not met, the other\
+    \ command is executed. It takes the following syntax:\n\n if condition\n\n          \
+    \ then\n\n                       the condition is zero\n\n                      \
+    \ execute commands until you meet the else statement\n\n           else\n\n                      \
+    \ if the condition is false\n\n                     execute commands until you\
+    \ find the fi statement             \n\n          fi\n\nConsider the example shown\
+    \ below:\n\n#!/bin/bash\n\nif [ $# -eq 0 ]\n\nthen\n\necho \"$0 : an integer must\
+    \ be supplied\"\n\nexit 1\n\nfi\n\nif t $2 -gt 0\n\nthen\n\necho \"$2 is a positive\
+    \ number\"\n\nelse\n\necho \"$2 is a negative number\"\n\nfi\n\nIf the command\
+    \ line is not given, then an error will be printed, that is, an integer must be\
+    \ supplied. The next part involves checking the number of arguments that have\
+    \ been passed. If we passed any argument, then the “if “will turn out to be false\
+    \ and true otherwise. The exit 1  statement will terminate the program after a\
+    \ successful execution.\n\n# Chapter 5- Bash One-liners\n\n## Working with files\n\
+    \n1.  Truncating the size of a file to 0 (emptying) - the redirection command\
+    \ is used in this case. If the file exists, then its size is truncated to zero\
+    \ whereas if it does not exist, it is created. Note the operator opens the file\
+    \ for writing.\n\n $ > file\n\nTo create a file containing a content of choice\
+    \ or replacing the file’s contents, use the following command:\n\n $ echo “string\
+    \ to replace” > file\n\n              The string that you specify in between the\
+    \ quotes will act as the replacement     string.\n\n2.  Adding a string to your\
+    \ file- the on-liner uses the output redirection operator >> to append some content\
+    \ to your file. Example:\n\n $ echo “content to be appended” >> file\n\nIn case\
+    \ the operator fails to find the file, anew one is created. After the string has\
+    \ been appended to the file, a new line will follow it.\n\nTo avoid this, use\
+    \ the –n option as shown below:\n\n $ echo -n “content to be appended” >> file\n\
+    \n3.  Assign the first line of a file to a variable- in this case, you need to\
+    \ read the first line of the file and then assign this line to a variable. The\
+    \ input redirection operator < is used.\n\nConsider the line of code shown below:\n\
+    \n $ read -r myline < file\n\n myline is a variable. The command read will read\
+    \ only the first line of the file and place it in the variable myline. The –r\
+    \ option will ensure that this line is read raw.\n\n4.  Reading a file- a read\
+    \ command can be combined with the while loop so as to read a file line-by-line.\
+    \ This is illustrated below:\n\n while read -r myline; do\n\n                \
+    \               # perform something on the variable myline\n\n                           \
+    \ done < file\n\nA code of failure will be returned when the read command meets\
+    \ end-of-failure. The while loop will then halt.\n\nNotice that we have placed\
+    \ < file at the end. To avoid this, pipe the file’s content to a while loop as\
+    \ shown below:\n\n cat file | while IFS= read -r myline; do\n\n                \
+    \               # perform something on the variable myline\n\n                           \
+    \ done"
+  toc: []
+  trans: "\n\n`COLUMNS` - 构成屏幕的列数。\n\n`OSTYPE` - 我们正在运行的操作系统类型。\n\n`PWD` - 当前工作目录。\n\
+    \n上述内容仅为系统变量的示例。如果你想打印上述任何变量，可以使用如下所示的 `echo` 命令和 `$` 符号：\n\n```bash\necho $HOME\n\
+    echo $PWD\n```\n\n下部分是关于如何使用用户自定义变量。\n\n使用以下语法定义用户自定义变量：\n\n```\nvariable name=value\n\
+    ```\n\n`name` 指用于指代变量的名称。`value` 是该变量的内容。这通常是一个数字或字符串。示例：\n\n```\nnum=10\nname=Mary\n\
+    ```\n\n### 变量命名的小贴士\n\n1. 等号两边不应该有空格。例如：\n```bash\nnum=12- this is right\nnum=\
+    \ 12- this is wrong\nnum =12- this is wrong\nnum = 12- this is wrong\n```\n\n\
+    2. 变量名应以下划线或字母、数字开头。随后可以跟任何字母或数字。以下是有效变量的示例：\n- `PWD`\n- `SYSTEM_VERSION`\n- `num`\n\
+    \n3. 变量名是大小敏感的。例如：\n```bash\nNum=2\nnum=6\nnUm=9\nnuM=10\nNUM=90\n```\n上述示例显示变量名是不相等的。要打印上述任何一个，也请确保指定正确。例如，要打印\
+    \ 10，请使用以下代码：\n\n```bash\necho $nuM\n```\n\n4. 要定义空变量，请执行以下操作：\n```bash\nnum=\n\
+    num=\"\"\n```\n要打印它，请使用以下代码：\n```bash\nE=echo $num\n```\n然而，请注意由于变量是空的，将不会显示任何内容。\n\
+    \n5. 某些字符不应用于命名变量。这些包括星号 `*` 和问号 `?`。\n\n## Shell 中的循环\n\n循环代表一组重复执行的指令。\n\n###\
+    \ for 循环\n\n该循环遵循以下语法：\n\n```\nfor { name of the variable} in {list }\ndo\n  \
+    \  逐一个执行列表中的项目，直到完成。\ndone\n```\n\n考虑下面的程序：\n\n```bash\nfor j in 1 2 3 4 5\ndo\n\
+    \    echo \"Test for for loop\"\ndone\n```\n运行上述程序后，你将看到输出。程序的操作首先定义变量 `j` 并将其值设置为从\
+    \ 1 到 5。程序的行 `echo \"Test for for loop\"` 将执行 5 次，因为 `j` 的值将递增到最大 5。这解释了输出。\n\n\
+    ### while 循环\n\nShell 中的 `while` 循环采用以下语法：\n\n```\nwhile [ condition]\ndo\n  \
+    \  1st command\n    2nd command\n    3rd command\n    ..\n    ....\ndone\n```\n\
+    只要你指定的条件为真，循环就会一直执行。\n\n### case 语句\n\n这在 Linux 中也很常见。人们可以使用它来代替 `if-else` 语句。\n\
+    \n它采用以下语法：\n\n```\ncase $name_of_the_variable in\n    1st pattern) command\n \
+    \       ...\n        ..\n        ;;\n    2nd pattern) command\n        ...\n \
+    \       ..\n        ;;\n    nth pattern) command\n        ...\n        ..\n  \
+    \      ;;\n    *) command\n        ...\n        ..\n        ;;\nesac\n```\n注意我们以\
+    \ `case` 开始，但以 `esac` 语句结束。考虑下面的示例：\n\n```bash\nif [ -y $1 ]\nthen\n    r=\"the\
+    \ vehicle is unknown\"\nelif [ -x $1 ]\nthen\n    r=$1\nfi\n\ncase $r in\n   \
+    \ \"lorry\") echo \"For $r 10 per k/m\";;\n    \"merc\") echo \"For $r 80 per\
+    \ k/m\";;\n    \"corolla\") echo \"For $r 15 per k/m\";;\n    \"motorbyke\") echo\
+    \ \"For $r 5 per k/m\";;\n    *) echo \"we can’t obtain a $r for you\";;\nesac\n\
+    ```\n\n## 用于决策的 if-else-fi\n\n`if-else-fi` 命令可以在 Shell 编程中用于决策目的。程序员指定一个条件，一旦满足，就会执行一条命令；如果不满足，则执行另一条命令。它采用以下语法：\n\
+    \n```\nif condition\nthen\n    the condition is 零\n    执行命令直到遇到 else 语句\nelse\n\
+    \    ... 执行命令\nfi\n```\n考虑下面的示例：\n\n```bash\n#!/bin/bash\nif [ $# -eq 0 ]\nthen\n\
+    \    exit 1\nfi\n```\n\n## 第 5 章：Bash - 操作文件\n\n1. **截断文件大小**：使用 `>` 命令。如果文件存在，其大小会被截断；如果不存在，则会创建它。注意该运算符。\n\
+    ```bash\necho \"string\" > file\n```\n\n2. **向文件添加字符串**：单行命令使用 `>>` 运算符向文件中追加某些内容。如果操作符未找到文件，则会创建一个新的。示例：\n\
+    ```bash\necho \"content\" >> file\n```\n\n3. **将文件的第一行赋值给变量**：在这种情况下，你需要读取文件的第一行并将其赋值给变量。使用输入运算符\
+    \ `<`。\n```bash\nread -r myline < file\n```\n\n4. **读取文件**：`read` 命令可以与 `while`\
+    \ 循环结合，以便逐行读取文件。下例所示：\n\n```bash\nwhile IFS read -r myline; do\n    # 对变量 myline\
+    \ 进行操作\ndone < file\n```\n当 `read` 命令遇到结束时，将返回失败代码。`while` 循环随后将停止。注意我们将 `< file`\
+    \ 放在了末尾。为了避免这种情况，将文件内容通过到 while 循环，如下所示：\n\n```bash\ncat file | while IFS= read\
+    \ -r myline; do\n    # 对变量 myline 进行操作\ndone\n```\n"
+- fmt: '
+
+    ### 5. Read any line of a file and assign it to a variable
+
+    external programs assist the bash to read the lines of a program. Consider the
+    code shown below:
+
+
+    ```bash
+
+    read -r rline < <(shuf file)
+
+    ```
+
+
+    `shuf` is available on modern Linux systems and helps in this. The above code
+    will read a random line of a file and assign it to the variable `rline`.
+
+
+    ### 6. To extract a tar archive, use the following command:
+
+
+    ```bash
+
+    tar xvf b.tar
+
+    ```
+
+
+    ### 7. To find the number of lines common between two files:
+
+
+    ```bash
+
+    sort doc1 doc2 | uniq –d
+
+    ```
+
+
+    ### 8. To randomize the lines of a file:
+
+
+    ```bash
+
+    shuf filename.txt
+
+    ```
+
+
+    ### 9. To sum a certain column:
+
+
+    ```bash
+
+    awk ''{ sum+=$1} END {print sum}'' document.txt
+
+    ```
+
+
+    # Conclusion
+
+
+    It can be concluded that Linux is an open source operating system and it has various
+    distributions. The idea behind development of Linux was to develop a free Unix-like
+    operating system for computers. Each of the Linux distributions comes in two versions,
+    that is, the server and the desktop versions. The desktop versions support both
+    the GUI and the command line.
+
+
+    By default, one accesses the GUI after login into the system. The command line
+    can then be launched if needed. The server versions of these distributions support
+    only the command line. No graphics in Linux servers. The purpose of this is to
+    ensure security of these systems since hackers usually take advantage of any feature
+    added to this system. This explains why you should be familiar with the Linux
+    commands.
+
+
+    The Linux command Line can be used for nearly everything needed in the system.
+    One earns much respect in the society when they become experts in using the Linux
+    command line. With shell scripting, programmers can put together multiple commands
+    and run them simultaneously so as to achieve the desired output. This also saves
+    on time and space available on the system. Shell scripts are preceded by the shebang.
+
+
+    This alerts the system a shell scripts is just to be executed. These must be made
+    executable and then execution will take place after this. `bash` stands for Bourne
+    Again Shell. It is the default shell in most Linux distribution. `bash` scripts
+    are run on the command line, and one can achieve much with them, and know much
+    about the system. `bash` on-liners are also important in Linux. One can use them
+    to play around with their files.
+
+
+    Thank you!
+
+
+    We would like to thank you for buying this book. Hope you found it helpful in
+    your now EASY and FAST programming life development. And we are happy to recommend
+    you some other books from this author:
+
+
+    1. Linux Command Line: Become a Linux Expert! (Input/Output Redirection, Wildcards,
+    File Security, Processes Managing, Shell Programming Advanced Features, GUI elements,
+    Useful Linux Commands)
+
+
+    [http://www.amazon.com/gp/product/B00XGUO4E4?Version=1&entries=0](http://www.amazon.com/gp/product/B00XGUO4E4?Version=1&entries=0)
+
+
+    ![](images/00042.jpeg)
+
+
+    2. PHP and MySQL Programming for Beginners: A Step by Step Course From Zero to
+    Professional
+
+
+    [http://www.amazon.com/gp/product/B00XQBYXVW?Version=1&entries=0](http://www.amazon.com/gp/product/B00XQBYXVW?Version=1&entries=0)
+
+
+    ![](images/00043.jpeg)
+
+
+    3. Python Programming: Getting started FAST With Learning of Python Programming
+    Basics in No Time.
+
+
+    [http://www.amazon.com/gp/product/B00WUNSH6Y?Version=1&entries=0](http://www.amazon.com/gp/product/B00WUNSH6Y?Version=1&entries=0)
+
+
+    ![](images/00044.jpeg)
+
+
+    4. ANDROID PROGRAMMING: Complete Introduction for Beginners -Step By Step Guide
+    How to Create Your Own Android App Easy!
+
+
+    [http://www.amazon.com/gp/product/B00WPK68IQ?Version=1&entries=0](http://www.amazon.com/gp/product/B00WPK68IQ?Version=1&entries=0)
+
+
+    ![](images/00045.jpeg)
+
+
+    5. ANDROID GAME PROGRAMMING: COMPLETE INTRODUCTION FOR BEGINNERS: STEP BY STEP
+    GUIDE HOW TO CREATE YOUR OWN ANDROID APP EASY!
+
+
+    [http://www.amazon.com/gp/product/B011R2H2JQ?Version=1&entries=0](http://www.amazon.com/gp/product/B011R2H2JQ?Version=1&entries=0)
+
+
+    ![](images/00046.jpeg)
+
+
+    6. DOCKER: Everything You Need to Know to Master Docker (Docker Containers, Linking
+    Containers, Whalesay Image, Docker Installing on Mac OS X and Windows OS)
+
+
+    [http://www.amazon.com/gp/product/B013X2RPT0?Version=1&entries=0](http://www.amazon.com/gp/product/B013X2RPT0?Version=1&entries=0)
+
+
+    ![](images/00047.jpeg)
+
+
+    7. Docker: Docker Guide for Production Environment (Programming is Easy Book 8)
+
+
+    [http://www.amazon.com/gp/product/B01452V9IA?Version=1&entries=0](http://www.amazon.com/gp/product/B01452V9IA?Version=1&entries=0)
+
+
+    ![](images/00048.jpeg)
+
+
+    8. Excel VBA Programming: Learn Excel Programming FAST and EASY! (Programming
+    is Easy Book 9)
+
+
+    [http://www.amazon.com/gp/product/B014DGVW?Version=1&entries=0](http://www.amazon.com/gp/product/B014DGVW?Version=1&entries=0)
+
+
+    ![](images/00049.jpeg)
+
+
+    9. VAGRANT: Make Your Life Easier With VAGRANT. Master VAGRANT FAST and EASY!
+    (Programming is Easy Book 10)
+
+
+    [http://www.amazon.com/gp/product/B0151GIRCA?Version=1&entries=0](http://www.amazon.com/gp/product/B0151GIRCA?Version=1&entries=0)
+
+
+    ![](images/00050.jpeg)
+
+
+    10. SCALA PROGRAMMING: Learn Scala Programming FAST and EASY! (Programming is
+    Easy Book 11)
+
+
+    http://www.amazon.com/gp/product/B0151TBXEQ?Version=1&entries=0
+
+
+    ![](images/00051.jpeg)
+
+
+    11. NODE. JS: Practical Guide for Beginners (Programming is Easy Book 12)
+
+
+    [http://www.amazon.com/gp/product/B01588CXAS?Version=1&entries=0](http://www.amazon.com/gp/product/B01588CXAS?Version=1&entries=0)
+
+
+    ![](images/00052.jpeg)
+
+
+    12. IOS 8 APP DEVELOPMENT. Develop Your Own App FAST and EASY!
+
+
+    http://www.amazon.com/gp/product/B015CMEJVQ?Version=1&entries=0![](images/00053.jpeg)
+
+    '
+  raw: "5.  Read any line of a file and assign it to a variable - external programs\
+    \ assist the bash to read the lines of a program. Consider the code shown below:\n\
+    \n $ read -r rline < <(shuf file)\n\n Shuf is available on modern Linux systems\
+    \ and helps in this. The above code will read a random line of a file and assign\
+    \ it to the variable rline.\n\n6.  To extract a tar archive, use the following\
+    \ command:\n\n tar xvf b.tar \n\n7.  To find the number of lines common between\
+    \ two files:\n\n sort doc1 doc2 | uniq –d\n\n8.  To randomize the lines of a file:\n\
+    \n shuf filename.txt\n\n9.  To sum a certain column:\n\n awk '{ sum+=$1} END {print\
+    \ sum}' document.txt\n\n# Conclusion\n\n It can be concluded that Linux is an\
+    \ open source operating system and it has various distributions. The idea behind\
+    \ development of Linux was to develop a free Unix-like operating system for computers.\
+    \ Each of the Linux distributions comes in two versions, that is, the server and\
+    \ the desktop versions. The desktop versions support both the GUI and the command\
+    \ line.\n\nBy default, one accesses the GUI after login into the system. The command\
+    \ line can then be launched if needed. The server versions of these distributions\
+    \ support only the command line. No graphics in Linux servers. The purpose of\
+    \ this is to ensure security of these systems since hackers usually take advantage\
+    \ of any feature added to this system. This explains why you should be familiar\
+    \ with the Linux commands.\n\n              The Linux command Line can be used\
+    \ for nearly everything needed in the system. One earns much respect in the society\
+    \ when they become experts in using the Linux command line. With shell scripting,\
+    \ programmers can put together multiple commands and run them simultaneously so\
+    \ as to achieve the desired output. This also saves on time and space available\
+    \ on the system. Shell scripts are preceded by the shebang.\n\nThis alerts the\
+    \ system a shell scripts is just to be executed. These must be made executable\
+    \ and then execution will take place after this. Bash stands for Bourne Again\
+    \ Shell. It is the default shell in most Linux distribution. Bash scripts are\
+    \ run on the command line, and one can achieve much with them, and know much about\
+    \ the system. Bash on-liners are also important in Linux. One can use them to\
+    \ play around with their files.\n\nThank you!\n\nWe would like to thank you for\
+    \ buying this book. Hope you found it helpful in your now EASY and FAST programming\
+    \ life development. And we are happy to recommend you some other books from this\
+    \ author:\n\n1.  Linux Command Line: Become a Linux Expert! (Input/Output Redirection,\
+    \ Wildcards, File Security,  Processes Managing, Shell Programming Advanced Features,\
+    \ GUI elements, Useful Linux Commands)\n\n[http://www.amazon.com/gp/product/B00XGUO4E4?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B00XGUO4E4?*Version*=1&*entries*=0)\n\
+    \n![](images/00042.jpeg)\n\n2.  PHP and MySQL Programming for Beginners: A Step\
+    \ by Step Course From Zero to Professional\n\n[http://www.amazon.com/gp/product/B00XQBYXVW?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B00XQBYXVW?*Version*=1&*entries*=0)\n\
+    \n![](images/00043.jpeg)\n\n3.  Python Programming: Getting started FAST With\
+    \ Learning of Python Programming Basics in No Time.\n\n[http://www.amazon.com/gp/product/B00WUNSH6Y?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B00WUNSH6Y?*Version*=1&*entries*=0)\n\
+    \n![](images/00044.jpeg)\n\n4.  ANDROID PROGRAMMING: Complete Introduction for\
+    \ Beginners -Step By Step Guide How to Create Your Own Android App Easy!\n\n[http://www.amazon.com/gp/product/B00WPK68IQ?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B00WPK68IQ?*Version*=1&*entries*=0)\n\
+    \n![](images/00045.jpeg)\n\n5.  ANDROID GAME PROGRAMMING: COMPLETE INTRODUCTION\
+    \ FOR BEGINNERS: STEP BY STEP GUIDE HOW TO CREATE YOUR OWN ANDROID APP EASY!\n\
+    \n[http://www.amazon.com/gp/product/B011R2H2JQ?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B011R2H2JQ?*Version*=1&*entries*=0)\n\
+    \n![](images/00046.jpeg)\n\n6.  DOCKER: Everything You Need to Know to Master\
+    \ Docker (Docker Containers, Linking Containers, Whalesay Image, Docker Installing\
+    \ on Mac OS X and Windows OS)\n\n[http://www.amazon.com/gp/product/B013X2RPT0?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B013X2RPT0?*Version*=1&*entries*=0)\n\
+    \n![](images/00047.jpeg)\n\n7.  Docker: Docker Guide for Production Environment\
+    \ (Programming is Easy Book 8)\n\n[http://www.amazon.com/gp/product/B01452V9IA?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B01452V9IA?*Version*=1&*entries*=0)\n\
+    \n![](images/00048.jpeg)\n\n8.  Excel VBA Programming: Learn Excel VBA Programming\
+    \ FAST and EASY! (Programming is Easy Book 9)\n\n[http://www.amazon.com/gp/product/B014DIPGVW?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B014DIPGVW?*Version*=1&*entries*=0)\n\
+    \n![](images/00049.jpeg)\n\n9\\. VAGRANT: Make Your Life Easier With VAGRANT.\
+    \ Master VAGRANT FAST and EASY! (Programming is Easy Book 10)\n\n[http://www.amazon.com/gp/product/B0151GIRCA?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B0151GIRCA?*Version*=1&*entries*=0)\n\
+    \n![](images/00050.jpeg)\n\n10.  SCALA PROGRAMMING: Learn Scala Programming FAST\
+    \ and EASY! (Programming is Easy Book 11)\n\nhttp://www.amazon.com/gp/product/B0151TBXEQ?*Version*=1&*entries*=0\n\
+    \n![](images/00051.jpeg)\n\n11\\. NODE. JS: Practical Guide for Beginners (Programming\
+    \ is Easy Book 12)\n\n[http://www.amazon.com/gp/product/B01588CXAS?*Version*=1&*entries*=0](http://www.amazon.com/gp/product/B01588CXAS?*Version*=1&*entries*=0)\n\
+    \n![](images/00052.jpeg)\n\n12\\. IOS 8 APP DEVELOPMENT. Develop Your Own App\
+    \ FAST and EASY!\n\nhttp://www.amazon.com/gp/product/B015CMEJVQ?*Version*=1&*entries*=0![](images/00053.jpeg)"
+  toc: []
+  trans: '
+
+
+    ### 5. 读取文件的任意行并将其赋值给变量
+
+    外部程序可以协助 bash 读取程序的行。请考虑下面的代码：
+
+
+    ```bash
+
+    read -r rline < <(shuf file)
+
+    ```
+
+
+    `shuf` 在现代 Linux 系统可用，并对此提供帮助。上述代码将读取文件的随机行并将其赋值给变量 `rline`。
+
+
+    ### 6. 要提取 tar 归档，请使用以下命令：
+
+
+    ```bash
+
+    tar xvf b.tar
+
+    ```
+
+
+    ### 7. 查找两个文件之间的公共行数：
+
+
+    ```bash
+
+    sort doc1 doc2 | uniq –d
+
+    ```
+
+
+    ### 8. 随机打乱文件的行：
+
+
+    ```bash
+
+    shuf filename.txt
+
+    ```
+
+
+    ### 9. 求某一列的和：
+
+
+    ```bash
+
+    awk ''{ sum+=$1} END {print sum}'' document.txt
+
+    ```
+
+
+    # 结论
+
+
+    可以得出结论，Linux 是开源操作系统，拥有多种发行版。开发 Linux 的背后理念是为计算机开发一个免费的类 Unix 操作系统。每个 Linux 发行版都有两个版本，即服务器版本和桌面版本。桌面版本同时支持图形用户界面（GUI）和命令行。
+
+
+    默认情况下，登录系统后会进入 GUI。如果需要，然后可以启动命令行。这些发行版的服务器版本仅支持命令行。Linux 服务器没有图形界面。此举目的是确保这些系统的安全性，因为黑客通常会利用添加到系统中的任何功能。这解释了为什么你应该熟悉
+    Linux 命令。
+
+
+    Linux 命令行可以用于系统所需的几乎一切。当人们成为 Linux 命令行专家时，会在社会上获得很多尊重。通过 Shell 脚本，程序员可以组合多个命令并同时运行它们，以实现预期的输出。这也节省了系统可用的时间和空间。Shell
+    脚本开头有一个 shebang。
+
+
+    这会系统 Shell 脚本只需执行。这些脚本必须被设置为可执行，随后才会发生执行。`bash` 代表 Bourne Again Shell。它是大多数 Linux
+    发行版的默认 shell。`bash` 脚本在命令行运行，你可以通过它们实现许多功能并对系统有深入了解。`bash` 单行命令（on-liners）在 Linux
+    中也很重要。你可以使用它们来处理你的文件。
+
+
+    谢谢！
+
+
+    我们感谢你购买本书。希望它对你现在**轻松且快速**的编程生活发展有所帮助。我们乐意向你推荐该作者的其他书籍：
+
+
+    1. Linux 命令行：成为 Linux 专家！（涵盖输入/输出重定向、通配符、文件安全、进程管理、Shell 编程高级特性、GUI 元素、实用的 Linux
+    命令）
+
+
+    [`www.amazon.com/gp/product/B00XGUO4E4?Version=1&entries=0`](http://www.amazon.com/gp/product/B00XGUO4E4?Version=1&entries=0)
+
+
+    ![](img/00042.jpeg)
+
+
+    2. 初学者 PHP 和 MySQL 编程：从零到专业的逐步进课程
+
+
+    [`www.amazon.com/gp/product/B00XQBYXVW?Version=1&entries=0`](http://www.amazon.com/gp/product/B00XQBYXVW?Version=1&entries=0)
+
+
+    ![](img/00043.jpeg)
+
+
+    3. Python 编程：通过学习 Python 编程基础知识快速入门。
+
+
+    [`www.amazon.com/gp/product/B00WUNSH6Y?Version=1&entries=0`](http://www.amazon.com/gp/product/B00WUNSH6Y?Version=1&entries=0)
+
+
+    ![](img/00044.jpeg)
+
+
+    4. 安卓编程：面向初学者的完整介绍 - 逐步指南如何轻松创建你自己的 Android 应用！
+
+
+    [`www.amazon.com/gp/product/B00WPK68IQ?Version=1&entries=0`](http://www.amazon.com/gp/product/B00WPK68IQ?Version=1&entries=0)
+
+
+    ![](img/00045.jpeg)
+
+
+    5. 安卓游戏编程：面向初学者的完整介绍：逐步指南如何轻松创建你自己的 Android 应用！
+
+
+    [`www.amazon.com/gp/product/B011R2H2JQ?Version=1&entries=0`](http://www.amazon.com/gp/product/B011R2H2JQ?Version=1&entries=0)
+
+
+    ![](img/00046.jpeg)
+
+
+    6. DOCKER：掌握 Docker 所需的所有知识（Docker 容器、容器链接、Whalesay 镜像、在 Mac OS X 和 Windows 上安装
+    Docker）
+
+
+    [`www.amazon.com/gp/product/B013X2RPT0?Version=1&entries=0`](http://www.amazon.com/gp/product/B013X2RPT0?Version=1&entries=0)
+
+
+    ![](img/00047.jpeg)
+
+
+    7. Docker：生产环境 Docker 指南（编程简单系列第 8 本）
+
+
+    [`www.amazon.com/gp/product/B01452V9IA?Version=1&entries=0`](http://www.amazon.com/gp/product/B01452V9IA?Version=1&entries=0)
+
+
+    ![](img/00048.jpeg)
+
+
+    8. Excel VBA 编程：快速学习 Excel 编程！（编程简单系列第 9 本）
+
+
+    [`www.amazon.com/gp/product/B014DGVW?Version=1&entries=0`](http://www.amazon.com/gp/product/B014DGVW?Version=1&entries=0)
+
+
+    ![](img/00049.jpeg)
+
+
+    9. VAGRANT：用 VAGRANT 让生活更简单。快速掌握 VAGRANT！（编程简单系列第 10 本）
+
+
+    [`www.amazon.com/gp/product/B0151GIRCA?Version=1&entries=0`](http://www.amazon.com/gp/product/B0151GIRCA?Version=1&entries=0)
+
+
+    ![](img/00050.jpeg)
+
+
+    10. Scala 编程：快速学习 Scala 编程！（编程简单系列第 11 本）
+
+
+    http://www.amazon.com/gp/product/B0151TBXEQ?Version=1&entries=0
+
+
+    ![](img/00051.jpeg)
+
+
+    11. Node. JS：初学者实用指南（编程简单系列第 12 本）
+
+
+    [`www.amazon.com/gp/product/B01588CXAS?Version=1&entries=0`](http://www.amazon.com/gp/product/B01588CXAS?Version=1&entries=0)
+
+
+    ![](img/00052.jpeg)
+
+
+    12. iOS 8 应用开发：快速轻松地开发你自己的应用！
+
+
+    http://www.amazon.com/gp/product/B015CMEJVQ?Version=1&entries=0![](img/00053.jpeg)
+
+
+    '

@@ -1,0 +1,41 @@
+name: Linux Command Line： FAST and EASY!： Linux Commands, Bash Scripting Tricks, Linux
+  Shell Programming Tips and Bash One-Liners
+name_cn: Linux 命令行：快速易学！Linux 命令、Bash 脚本技巧、Linux Shell 编程技巧与 Bash 单行命令
+slug: linux-command-line-fast-and-easy-linux-commands-bash-scripti
+toc:
+- - '##'
+  - 第 2 章- Linux 命令行命令
+- - '###'
+  - 更改目录
+- - '###'
+  - 复制文件
+- - '###'
+  - less 命令
+- - '###'
+  - ln 命令
+- - '###'
+  - locate 命令
+- - '###'
+  - logout 命令
+- - '###'
+  - ls 命令
+- - '###'
+  - more 命令
+- - '###'
+  - mv 命令
+- - '###'
+  - shutdown 命令
+- - '###'
+  - sudo 命令
+- - '###'
+  - cal 命令
+- - '###'
+  - date 命令
+- - '###'
+  - grep 命令
+- - '###'
+  - tail 命令
+- - '###'
+  - wc 命令
+- - '###'
+  - last 命令

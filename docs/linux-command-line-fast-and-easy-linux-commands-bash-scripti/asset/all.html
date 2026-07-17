@@ -1,0 +1,2882 @@
+<p><img src="images/00054.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 891 1186" preserveaspectratio="none">
+<image width="891" height="1186" xlink:href="images/00054.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<div class="calibre1">
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">Linux Command Line:</span></p>
+<p><span class="calibre5"> </span><span class="calibre3">FAST and
+EASY!</span></p>
+<p><span class="calibre5">-Linux Commands, Bash Scripting Tricks, Linux
+Shell Programming Tips and Bash One-Liners</span></p>
+<p><span class="calibre5"> </span></p>
+<p><span class="calibre5">By Matthew Gimson</span></p>
+<p><span class="calibre7">Copyright©2015 Matthew Gimson</span></p>
+<p><span class="calibre7">All Rights Reserved</span></p>
+<div id="part0000_split_000.html_calibre_pb_0" class="calibre8">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<div class="calibre1">
+<p><br />
+<span class="calibre10"> </span><span class="calibre11">Copyright © 2015
+by Matthew Gimson</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">All rights reserved. No part of this
+publication may be reproduced, distributed, or transmitted in any form
+or by any means, including photocopying, recording, or other electronic
+or mechanical methods, without the prior written permission of the
+author, except in the case of brief quotations embodied in critical
+reviews and certain other noncommercial uses permitted by copyright law.
+</span></p>
+</div>
+<p><span id="part0000_split_002.html"></span></p>
+<div class="calibre1">
+<h1 class="calibre12" id="part0000_split_002.html_calibre_pb_5"><span
+class="calibre13">Table of Contents </span></h1>
+<h1 class="calibre17"></h1>
+<p><span id="part0000_split_002.html_toc" class="calibre19"></span><a
+href="#part0000_split_004.html__Toc416032500" class="calibre19"><span
+class="calibre20">Introduction</span></a></p>
+<p><a href="#part0000_split_005.html__Toc416032501"
+class="calibre19"><span class="calibre20">Chapter 1-
+Definition</span></a></p>
+<p><a href="#part0000_split_006.html__Toc416032502"
+class="calibre19"><span class="calibre20">Chapter 2- Linux Command Line
+Commands</span></a></p>
+<p><a href="#part0000_split_008.html__Toc416032503"
+class="calibre19"><span class="calibre22">Changing
+Directories</span></a></p>
+<p><a href="#part0000_split_009.html__Toc416032504"
+class="calibre19"><span class="calibre22">Copying file</span></a></p>
+<p><a href="#part0000_split_011.html__Toc416032505"
+class="calibre19"><span class="calibre22">The </span><span
+class="calibre23">less </span><span
+class="calibre22">command</span></a></p>
+<p><a href="#part0000_split_012.html__Toc416032506"
+class="calibre19"><span class="calibre23">ln</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_013.html__Toc416032507"
+class="calibre19"><span class="calibre23">locate</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_014.html__Toc416032508"
+class="calibre19"><span class="calibre23">logout</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_015.html__Toc416032509"
+class="calibre19"><span class="calibre23">ls</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_016.html__Toc416032510"
+class="calibre19"><span class="calibre23">more</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_017.html__Toc416032511"
+class="calibre19"><span class="calibre23">mv </span><span
+class="calibre22">command</span></a></p>
+<p><a href="#part0000_split_018.html__Toc416032512"
+class="calibre19"><span class="calibre23">shutdown</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_019.html__Toc416032513"
+class="calibre19"><span class="calibre23">sudo</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_021.html__Toc416032514"
+class="calibre19"><span class="calibre23">cal</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_022.html__Toc416032515"
+class="calibre19"><span class="calibre23">date</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_023.html__Toc416032516"
+class="calibre19"><span class="calibre23">grep</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_027.html__Toc416032517"
+class="calibre19"><span class="calibre23">tail</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_029.html__Toc416032518"
+class="calibre19"><span class="calibre23">wc</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_031.html__Toc416032519"
+class="calibre19"><span class="calibre23">last</span><span
+class="calibre22"> command</span></a></p>
+<p><a href="#part0000_split_033.html__Toc416032520"
+class="calibre19"><span class="calibre22">Chapter 3- Bash scripting
+Tricks</span></a></p>
+<p><a href="#part0000_split_034.html__Toc416032521"
+class="calibre19"><span class="calibre22">Brace Expansion</span></a></p>
+<p><a href="#part0000_split_035.html__Toc416032522"
+class="calibre19"><span class="calibre23">Command</span><span
+class="calibre22"> Substitution</span></a></p>
+<p><a href="#part0000_split_036.html__Toc416032523"
+class="calibre19"><span class="calibre22">Command History</span></a></p>
+<p><a href="#part0000_split_037.html__Toc416032524"
+class="calibre19"><span class="calibre22">Loops</span></a></p>
+<p><a href="#part0000_split_038.html__Toc416032525"
+class="calibre19"><span class="calibre22">Chapter 4- Linux shell
+programming</span></a></p>
+<p><a href="#part0000_split_041.html__Toc416032526"
+class="calibre19"><span class="calibre24">Loops in Shell</span></a></p>
+<p><a href="#part0000_split_042.html__Toc416032527"
+class="calibre19"><span class="calibre25">for</span><span
+class="calibre22"> </span><span class="calibre24">Loop</span></a></p>
+<p><a href="#part0000_split_043.html__Toc416032528"
+class="calibre19"><span class="calibre25">while</span><span
+class="calibre22"> </span><span class="calibre24">Loop</span></a></p>
+<p><a href="#part0000_split_044.html__Toc416032529"
+class="calibre19"><span class="calibre24">Case statement</span></a></p>
+<p><a href="#part0000_split_045.html__Toc416032530"
+class="calibre19"><span class="calibre23">if-else-fi</span><span
+class="calibre22"> </span><span class="calibre24">for decision
+making</span></a></p>
+<p><a href="#part0000_split_047.html__Toc416032531"
+class="calibre19"><span class="calibre22">Chapter 5- Bash
+One-liners</span></a></p>
+<p><a href="#part0000_split_048.html__Toc416032532"
+class="calibre19"><span class="calibre24">Working with
+files</span></a></p>
+<p><a href="#part0000_split_049.html__Toc416032533"
+class="calibre19"><span class="calibre22">Conclusion</span></a></p>
+</div>
+<p><span id="part0000_split_003.html"></span></p>
+<section id="part0000_split_003.html_calibre_pb_6"
+class="calibre12 calibre1">
+<h1 class="calibre12"><br />
+</h1>
+<p><span class="calibre26"> </span></p>
+<p><span class="calibre27">Disclaimer</span></p>
+<p><span class="calibre28">While all attempts have been made to verify
+the information provided in this book, the author does assume any
+responsibility for errors, omissions, or contrary interpretations of the
+subject matter contained within. </span><span class="calibre29">The
+information provided in this book is for educational and entertainment
+purposes only. The reader is responsible for his or her own actions and
+the author does not accept any responsibilities for any liabilities or
+damages, real or perceived, resulting from the use of this
+information.</span></p>
+<p><span class="calibre28">The trademarks that are used are without any
+consent, and the publication of the trademark is without permission or
+backing by the trademark owner. All trademarks and brands within this
+book are for clarifying purposes only and are the owned by the owners
+themselves, not affiliated with this document.</span></p>
+</section>
+<p><span id="part0000_split_004.html"></span></p>
+<section id="part0000_split_004.html_calibre_pb_12"
+class="calibre12 calibre1">
+<h1 class="calibre12"><span id="part0000_split_004.html__Toc416032500"
+class="calibre19"><span
+class="calibre31">Introduction</span></span></h1>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre27">              </span><span
+class="calibre11">Linux is a common operating system for computers, and
+especially the server computers. The funny thing with it is that people
+view Linux as a very complex operating system which is not the case.
+This is why most computer novice users don’t like using Linux on their
+computers. However, this is not the case. Just like the Windows OS,
+Linux is an easy-to-use operating system. All one needs to have is
+interest in learning it. The operating system itself is very secure,
+meaning that hackers will find it almost impossible to hack into
+it.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> The various distributions of Linux use
+almost the same commands. These commands can be written using the same
+syntax and they run successfully on various distributions of Linux.
+However, some of them will need to be altered slightly so that they can
+be compatible. You should identify the right distribution for yourself
+and your computer and install it on your system. The right choice for
+you in this case will depend on the distribution that you will feel
+comfortable to work with. Other than installing the operating system
+directly onto your hard disk, you can choose to run it on virtual box or
+VMware player. This can help in saving on the available computer space,
+hence important. </span></p>
+<div id="part0000_split_004.html_calibre_pb_13" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_005.html"></span></p>
+<section id="part0000_split_005.html_calibre_pb_17"
+class="calibre12 calibre1">
+<h1 class="calibre12"><span class="calibre32"> </span><span
+id="part0000_split_005.html__Toc416032501" class="calibre19"><span
+class="calibre33">Chapter 1- Definition</span></span></h1>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">Linux is an open-source operating system for
+computers. It was developed to provide a Unix-like free and open source
+operating system for computers. The kernel is the main component of
+Linux operating system and its first version was released in the year
+1991 by Linus Torvalds. People rarely use Linux operating system on
+desktop computers. This operating system has shown a wide use on server
+computers. The reason is due to its high level of security. For
+instance, those who have worked with server computers running Linux, you
+must have realized that the operating system supports no
+graphics.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> After booting up the computer, what you are
+provided with is just a blinking cursor. You then have to provide
+commands to the terminal. This is of great advantage when it comes to
+ensuring security of the system. Note that graphics and any other
+additional feature added to the operating system are an advantage to the
+hacker as they can gain access into the system via this feature. If you
+don’t the commands used on the command line, then definitely you be
+stuck. However, the desktop versions of Linux supports
+graphics.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">There are various distributions of Linux,
+commonly known as Linux Distros. These include Ubuntu, Khali, Red Hat,
+Fedora, Mint, Centos, SUSE and others. These Distros exhibit numerous
+similarities although there are fewer differences amongst themselves.
+This involves even the commands used on their terminals. For enterprise
+distributions of Linux such as Red Hat, a subscription fee must be paid
+for you to enjoy the services that they offer. This includes even
+updating of the OS. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The development of Linux began in the year
+1983 when Richard Stallman thought of the idea of developing a
+completely free Unix-like operating system. This also marked the
+beginning of the Gnu project. By the year 1990, the essential components
+of this OS such as the compilers, libraries, shell and the text editors
+were created. Other complex components of this operating system such as
+drivers for devices, kernel and the daemons were developed
+later.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> The development of the Linux Kernel began in
+the year 1991. This was after Richard Stallman attended University of
+Helsinki. The user interface of Linux operating systems supports either
+graphics or command line. In desktop versions, both the graphical user
+interface and the command line are supported. The GUI is made the
+default although you can still access the command line. </span></p>
+<div id="part0000_split_005.html_calibre_pb_18" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_006.html"></span></p>
+<section id="part0000_split_006.html_calibre_pb_21"
+class="calibre12 calibre1">
+<h1 class="calibre12"><span id="part0000_split_006.html__Toc416032502"
+class="calibre19"><span class="calibre33">Chapter 2- Linux Command Line
+Commands</span></span></h1>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">              Let us explore the Linux
+commands ranging from the basic ones which are necessary for you to
+begin to the complex ones. To open the command line, right click on your
+Desktop and select “</span><span class="calibre34">Open
+Terminal</span><span class="calibre11">”. If this is not available, find
+Applications at the top of your desktop. After clicking on this, select
+</span><span class="calibre34">Accessories</span><span
+class="calibre11">. Choose “</span><span class="calibre34">Open
+terminal</span><span class="calibre11">”. Open a text editor of your
+choice such as </span><span class="calibre34">Gedit</span><span
+class="calibre11"> or </span><span class="calibre34">Vim</span><span
+class="calibre11">. To open the </span><span
+class="calibre34">Gedit</span><span class="calibre11"> text editor, just
+search for it from the search bar. Type “</span><span
+class="calibre34">text editor</span><span class="calibre11">” on this
+search bar and you will find it. To open </span><span
+class="calibre34">Vim</span><span class="calibre11">, commonly known as
+</span><span class="calibre34">vi editor</span><span class="calibre11">,
+on the command line, type the command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">vi filename</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">where </span><span
+class="calibre34">filename</span><span class="calibre11"> is the name of
+the file. I have called my file </span><span
+class="calibre34">myfile</span><span class="calibre11">. On pressing the
+enter key, the </span><span class="calibre34">vi editor</span><span
+class="calibre11"> will be opened. Now you can add some text of your
+choice to the file. Note that to change from command mode in
+</span><span class="calibre34">vi editor</span><span class="calibre11">,
+you have to press the letter </span><span
+class="calibre34">i</span><span class="calibre11">, otherwise, you will
+not be able to add any text to the file. </span></p>
+<div id="part0000_split_006.html_calibre_pb_22" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_007.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">The text should be as follows:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">The Linux command line is</span></p>
+<p><span class="calibre35">                            a very powerful
+tool for programmers.</span></p>
+<p><span class="calibre35">                            Much can be
+achieved with it. </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">You can then save the file to somewhere where
+you can easily access such as on the desktop. In </span><span
+class="calibre34">vi editor</span><span class="calibre11">, just press
+the </span><span class="calibre34">Esc</span><span class="calibre11">
+key followed by typing </span><span class="calibre34">wq</span><span
+class="calibre11">. This will save the file. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">On the command line, type the following
+command and then press the enter key:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">cat myfile</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">On pressing the enter key, the text you added
+on your file will be displayed on the standard output. This is
+illustrated in the figure below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00001.jpeg" class="calibre36" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">This shows that the </span><span
+class="calibre34">cat</span><span class="calibre11"> command displays
+the contents of a file on the standard output. However, use it to
+display the contents of a short file. </span></p>
+<p><span class="calibre11">                                         
+                            </span></p>
+<div id="part0000_split_007.html_calibre_pb_24" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_008.html"></span></p>
+<section id="part0000_split_008.html_calibre_pb_26"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_008.html__Toc416032503"
+class="calibre19"><span class="calibre38">Changing
+Directories</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">Sometimes, you might need to change your
+working directory. This can be achieved via the terminal using the
+</span><span class="calibre34">cd</span><span class="calibre11"> (change
+directory) command as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">cd /home </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The command above will change the working
+directory to home directory and relative to root due to the use of the
+forward slash, that is, /. Regardless of the current working directory,
+the above command will be executed. Type the following
+command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">cd httpd</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">After pressing the enter key, the full
+working directory will become </span><span
+class="calibre34">/home/httpd</span><span class="calibre11">, meaning
+that we have changed to the </span><span
+class="calibre34">httpd</span><span class="calibre11"> directory but
+relative to the </span><span class="calibre34">/home</span><span
+class="calibre11"> directory. To change back to the user’s home
+directory, use the following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">cd ~</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The user’s home directory is the
+/home/username directory, where the username will be the name you have
+used on the computer. Notice that we have used the symbol ~, known as
+the tilde symbol. In Linux, it symbolizes the user’s home directory.
+</span></p>
+<p><span class="calibre11">                                         
+                            </span></p>
+<div id="part0000_split_008.html_calibre_pb_27" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_009.html"></span></p>
+<section id="part0000_split_009.html_calibre_pb_29"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_009.html__Toc416032504"
+class="calibre19"><span class="calibre38">Copying
+file</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">In Linux, the command </span><span
+class="calibre34">cp</span><span class="calibre11"> (copy files), is
+used for copying files. In copying, a duplicate of the original file is
+made at the location being specified, meaning that the initial file is
+not deleted. To make a duplicate a duplicate of the file </span><span
+class="calibre34">myfile</span><span class="calibre11">, run the
+following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">cp myfile myfile2</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above command will create a duplicate of
+the file </span><span class="calibre34">myfile</span><span
+class="calibre11"> and name it </span><span
+class="calibre34">myfile2</span><span class="calibre11">. The files will
+be similar but with a difference in their naming. However, it is risky
+to run the above command. This is because in case the file </span><span
+class="calibre34">myfile2</span><span class="calibre11"> already exists
+in the directory, it will be overwritten without a warning. To take care
+of this, the </span><span class="calibre34">–i</span><span
+class="calibre11"> option should be used as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">cp –i myfile myfile2</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">If the file </span><span
+class="calibre34">myfile2</span><span class="calibre11"> already exists
+in the directory, then we warned before it is overwritten, which is a
+very good idea. </span></p>
+<div id="part0000_split_009.html_calibre_pb_30" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_010.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">You might need to copy all files contained in
+a certain directory to another directory. This can be done using the
+following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre40"> </span><span class="calibre35">cp –dpr
+originaldirectory finaldirectory</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The files will then be copied from the
+</span><span class="calibre34">originaldirectory</span><span
+class="calibre11"> to the </span><span
+class="calibre34">finaldirectory.</span><span class="calibre11"> They
+will not be deleted from the latter. The </span><span
+class="calibre34">–dpr</span><span class="calibre11"> option is very
+important as it plays the following role:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre27">-d</span><span class="calibre11">- for preservation of
+links.</span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre27">-p</span><span class="calibre11">- for preservation of
+file attributes.</span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre27">-r</span><span class="calibre11">- for recursive
+copying.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">If you don’t specify the above options, the
+default ones will be applied. This is not recommended as you might need
+to preserve the links and file attributes which might not be done with
+the default options. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Each mounted file system has used some space
+on the disk. To know the amount of this space for each file system, use
+the command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">df</span></p>
+<p><span class="calibre11">                                         
+                            </span></p>
+<div id="part0000_split_010.html_calibre_pb_32" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_011.html"></span></p>
+<section id="part0000_split_011.html_calibre_pb_34"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_011.html__Toc416032505"
+class="calibre19"><span class="calibre38">The </span><span
+class="calibre41">less </span><span
+class="calibre38">command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">This command is almost similar to the
+“</span><span class="calibre34">more”</span><span class="calibre11">
+command with the difference in that, with this command one will be able
+to move the page up and down through the file. Consider the command
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">less myfile</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">After pressing the enter key, the contents of
+the file </span><span class="calibre34">myfile</span><span
+class="calibre11"> will be displayed. </span></p>
+<p><span class="calibre11">                                         
+                              </span></p>
+<div id="part0000_split_011.html_calibre_pb_35" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_012.html"></span></p>
+<section id="part0000_split_012.html_calibre_pb_37"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_012.html__Toc416032506"
+class="calibre19"><span class="calibre41">ln</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">To create a symbolic link to your file, use
+the command </span><span class="calibre34">ln</span><span
+class="calibre11">. Type the command shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre40">              </span><span class="calibre35">ln –s
+myfile mlink</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The above command will create a symbolic link
+called </span><span class="calibre34">mlink</span><span
+class="calibre11"> to link to the file </span><span
+class="calibre34">myfile</span><span class="calibre11">. To show that
+two files are different and contain different inodes, use the
+command</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre27">                  </span><span
+class="calibre35">ln –i myfile mlink</span></p>
+<p><span class="calibre11">                                         
+              </span></p>
+<div id="part0000_split_012.html_calibre_pb_38" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_013.html"></span></p>
+<section id="part0000_split_013.html_calibre_pb_40"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_013.html__Toc416032507"
+class="calibre19"><span class="calibre41">locate</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">If you need to search in a database, use the
+</span><span class="calibre34">locate</span><span class="calibre11">
+command. Consider the command shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">slocate –u </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The command will create a database and name
+it </span><span class="calibre34">slocate</span><span
+class="calibre11">. The problem is that the process might take a long
+time so patience will be required. But the command is important since
+you can’t search for a file without having run it. Ever heard of cron?
+This is used for scheduling tasks. This will run the above command
+periodically so you might not be needed to do so. Type the command shown
+below and run it:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">locate whois</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The command above will search for all the
+files contained in your system and whose names contain the string
+“whois”.  </span></p>
+<p><span class="calibre11">                                         
+              </span></p>
+<div id="part0000_split_013.html_calibre_pb_41" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_014.html"></span></p>
+<section id="part0000_split_014.html_calibre_pb_43"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_014.html__Toc416032508"
+class="calibre19"><span class="calibre38">logout
+command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">This command just logs out the currently
+logged in user. Open the terminal and type the following:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">logout</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">Once you have typed the above command, just
+press the enter key. You will notice that you will be logged out of the
+system and then finally you will be on the login screen. </span></p>
+<p><span class="calibre11">                                         
+                            </span></p>
+<div id="part0000_split_014.html_calibre_pb_44" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_015.html"></span></p>
+<section id="part0000_split_015.html_calibre_pb_46"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_015.html__Toc416032509"
+class="calibre19"><span class="calibre41">ls</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">Use this command to list the files which are
+contained in a particular directory, </span><span
+class="calibre34">ls</span><span class="calibre11"> means list. The
+command has many options associated with it, which needs to be well
+understood. Type the command shown below and the press the enter
+key:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">ls</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The command will list all the files which are
+contained in your current directory. </span></p>
+<p><span class="calibre11">                                         
+                                                                       
+</span><img src="images/00002.jpeg" class="calibre43" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The above figure shows the files contained in
+my directory. However, if this directory contains files whose name
+starts with a dot (.), they will not be listed with this command. You
+also notice that with the above command, only a few details about the
+file are provided. Suppose you want to know the size of the file, the
+day it was made and the ownership permissions associated with it, you
+can achieve this with the following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">ls –al</span></p>
+<p><span class="calibre27"> </span></p>
+<p><img src="images/00003.jpeg" class="calibre45" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">As you can see in the figure above, the
+output is more detailed. The first part starts with either a “d” or a –
+(dash), where “d” means that it is a directory, while “-“ means that it
+is a file. The “</span><span class="calibre34">rwx</span><span
+class="calibre11">” stands for permissions, where </span><span
+class="calibre46">r</span><span class="calibre11"> is for read
+permission, </span><span class="calibre46">w</span><span
+class="calibre11"> is for write permission whereas </span><span
+class="calibre46">x</span><span class="calibre11"> means execute
+permission. The size of the file and the date of creation are also
+shown. </span></p>
+<p><span class="calibre11">                                       
+                                          </span></p>
+<div id="part0000_split_015.html_calibre_pb_47" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_016.html"></span></p>
+<section id="part0000_split_016.html_calibre_pb_49"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_016.html__Toc416032510"
+class="calibre19"><span class="calibre47">more</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">With this command, the contents of a file
+will be sent to the screen. This will be done one page at a time. The
+command is also applicable on piped output.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Type and run the command shown
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">more /etc/profile</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above command will output the contents of
+the file </span><span class="calibre34">/etc/profile</span><span
+class="calibre11">. This file contains details about the users of the
+system. On pressing the enter key, the following will be the
+output:</span></p>
+<p><span class="calibre11">              </span><img
+src="images/00004.jpeg" class="calibre48" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Note that this is a built-in file so it comes
+with the OS itself. The file also contains too much content which cannot
+fit on a single page. With the above command, these will be displayed
+one page at a time. Type the command below and run it:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre27"> </span><span class="calibre35">ls –al |
+more</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The output will be the files contained in
+that directory. This output will then be piped through the more command.
+Since the output is large, it will be listed one page at a time.
+</span></p>
+<div id="part0000_split_016.html_calibre_pb_50" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_017.html"></span></p>
+<section id="part0000_split_017.html_calibre_pb_52"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_017.html__Toc416032511"
+class="calibre19"><span class="calibre47">mv </span><span
+class="calibre38">command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">The command </span><span
+class="calibre46">mv</span><span class="calibre11"> is used for moving
+or renaming files, </span><span class="calibre46">mv</span><span
+class="calibre11"> stands for move. Type the command shown
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+</span><span class="calibre35">mv –i myfile file</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The command will rename the file </span><span
+class="calibre34">myfile</span><span class="calibre11"> to file, meaning
+that it will have been moved. This is the simplest way on how to rename
+files in Linux. Consider the following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre35">mv /directory1/myfile</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The above command will move the file
+</span><span class="calibre34">myfile</span><span class="calibre11">
+from the directory “</span><span
+class="calibre34">directory1”</span><span class="calibre11"> to the
+current working directory. This is very simple and it shows the power of
+the </span><span class="calibre46">mv</span><span class="calibre11">
+command.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The question is, what is working directory?
+This is the directory you are currently working in. To know the
+directory you are working in, use the following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+</span><span class="calibre35">pwd</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">Just press the enter key as usual. The output
+will be the directory you are working on. This command is used for that
+purpose in case you don’t know the directory you are in. </span><span
+class="calibre34">pwd</span><span class="calibre11"> means print working
+directory. </span></p>
+<div id="part0000_split_017.html_calibre_pb_53" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_018.html"></span></p>
+<section id="part0000_split_018.html_calibre_pb_55"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_018.html__Toc416032512"
+class="calibre19"><span class="calibre47">shutdown</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">Use this command whenever you want to shut
+down your system. Run the command shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre35">shutdown –h now </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">On running the above command, you will notice
+that the system will halt immediately, that is, it will shut down.
+Consider the next command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre35">shutdown –r now</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The above command shuts down the system and
+then boots it again, meaning that it is used to reboot the system.
+</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">You might need to check the commands which
+you have run previously. The reason might be that you have changed
+something and now you want to undo the change. To see the list of these
+commands, run the history command as shown in the figure
+below:</span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00005.jpeg" class="calibre50" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The above figure shows the commands which I
+have run recently. </span></p>
+<div id="part0000_split_018.html_calibre_pb_56" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_019.html"></span></p>
+<section id="part0000_split_019.html_calibre_pb_58"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_019.html__Toc416032513"
+class="calibre19"><span class="calibre47">sudo</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre46">sudo</span><span class="calibre11"> stands
+for </span><span class="calibre34">super user do</span><span
+class="calibre11">. With this command, any user can execute his or her
+commands as a super user. The </span><span
+class="calibre34">sudoers</span><span class="calibre11"> file defines
+all this. Sensitive commands, especially those which alter the file
+systems of the Linux OS can only be executed using this command. The
+</span><span class="calibre34">su </span><span class="calibre11">command
+enables you to login as a super user while the </span><span
+class="calibre46">sudo</span><span class="calibre11"> command borrows
+the privileges of a super user. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">To update the system, you must use the
+</span><span class="calibre46">sudo</span><span class="calibre11">
+command as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">sudo apt-get update</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">If this is the first time for you to run the
+command, you will be prompted to enter the </span><span
+class="calibre46">sudo</span><span class="calibre11"> password. To run
+the above command, you must be connected to the internet, otherwise, you
+will get an error. In Linux, the updates are fetched from what we call
+repositories. This is where the Linux development team uploads any
+latest updates regarding to various ditros of Linux.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> To upgrade the system, run the following
+command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">sudo apt-get upgrade</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above command will upgrade the version of
+OS that you are using on your system. Again, you must be connected to
+the internet. Notice that in Red Hat Linux, this command is substituted
+by the </span><span class="calibre46">yum</span><span class="calibre11">
+command, so the </span><span class="calibre46">sudo</span><span
+class="calibre11"> command is not supported in Red Hat Linux.
+</span></p>
+<div id="part0000_split_019.html_calibre_pb_59" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_020.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre51">mkdir</span><span class="calibre52">
+command</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre46">mkdir</span><span class="calibre11"> stands
+for </span><span class="calibre34">make directory</span><span
+class="calibre11">. It is used for creating new directory. If the folder
+representing the directory is in existence, you will get an error
+informing of the same. Let me create a directory and call it
+</span><span class="calibre34">myfiles</span><span
+class="calibre11">.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">mkdir myfiles</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above command shows that I will create a
+directory named</span><span class="calibre34"> myfiles</span><span
+class="calibre11">. This can be illustrated in the figure shown
+below:</span></p>
+<p><span class="calibre11">              </span><img
+src="images/00006.jpeg" class="calibre53" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Notice after creating the directory then I
+use the </span><span class="calibre34">list</span><span
+class="calibre11"> command, the directory will be listed in the
+available directories. This shows that it has been created. If the above
+command fails to run, precede it by the </span><span
+class="calibre34">sudo</span><span class="calibre11"> command and
+provide for the password if prompted to do so. </span></p>
+<p><span class="calibre11">                                         
+                            </span></p>
+<div id="part0000_split_020.html_calibre_pb_61" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_021.html"></span></p>
+<section id="part0000_split_021.html_calibre_pb_63"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_021.html__Toc416032514"
+class="calibre19"><span class="calibre47">cal</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">This command shows the month of a particular
+year. This year can be the current one, the past or even the advancing
+one. Just open the command </span><span
+class="calibre34">prompt</span><span class="calibre11"> and type the
+command </span><span class="calibre34">cal</span><span
+class="calibre11">. Press the enter key:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+              </span><img src="images/00007.jpeg"
+class="calibre54" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">As seen, it shows the date of the day, and it
+is correct. Now, let us show the month May of the year 1980, which is a
+past year:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+              </span><img src="images/00008.jpeg"
+class="calibre55" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">You can also show the month a future year as
+shown below:</span></p>
+<p><span class="calibre11">                                         
+              </span><img src="images/00009.jpeg"
+class="calibre56" /></p>
+<p><span class="calibre11">                                         
+                            </span></p>
+<div id="part0000_split_021.html_calibre_pb_64" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_022.html"></span></p>
+<section id="part0000_split_022.html_calibre_pb_66"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_022.html__Toc416032515"
+class="calibre19"><span class="calibre47">date</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">In case you need to display the current time
+and date, use this command as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00010.jpeg" class="calibre57" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">On executing the </span><span
+class="calibre34">date</span><span class="calibre11"> command, the
+current date and the time will form the output as shown in the figure
+above. However, you might find that the date on your system is
+wrong.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> It is possible to set it via the command
+line as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">date –set=’1 April 2015 19:30’</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">Once you have run the command shown above,
+the date will be set to </span><span class="calibre34">1</span><span
+class="calibre58">st</span><span class="calibre34"> April
+2015</span><span class="calibre11"> and the time will be set to
+</span><span class="calibre34">19:50 hours</span><span
+class="calibre11">.</span></p>
+<p><span class="calibre11">                                         
+                            </span></p>
+<div id="part0000_split_022.html_calibre_pb_67" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_023.html"></span></p>
+<section id="part0000_split_023.html_calibre_pb_69"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_023.html__Toc416032516"
+class="calibre19"><span class="calibre47">grep</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">Sometimes, you might need to search for a
+pattern or a string from a certain file. In most cases, the various
+Distros of Linux come installed with this command. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">However, it is also possible to install it in
+case you find it not installed using the following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre59">sudo apt-get install grep</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">If you are using Red Hat, install it using
+the command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre59">yum install grep</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<div id="part0000_split_023.html_calibre_pb_70" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_024.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">Remember that we created our file and named
+it </span><span class="calibre34">myfile</span><span class="calibre11">
+with the following content:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00011.jpeg" class="calibre60" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">We want to search through it using the
+</span><span class="calibre34">grep </span><span
+class="calibre11">command. To search for the word </span><span
+class="calibre34">powerful</span><span class="calibre11"> in the file,
+the following approach should be used:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">grep ‘powerful’ myfile</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">This is illustrated using the figure shown
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00012.jpeg" class="calibre61" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The command outputs the line of the file with
+the search word and makes the search word red in color. This
+differentiates it from the rest of the words. Notice the search is case
+sensitive. </span></p>
+<p><span class="calibre11">Let us search for the word ‘</span><span
+class="calibre34">Powerful’</span><span class="calibre11"> rather than
+‘</span><span class="calibre34">powerful’:</span></p>
+<p><span class="calibre11">              </span><img
+src="images/00013.jpeg" class="calibre62" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">As shown in the above output, there exists no
+word ‘</span><span class="calibre34">Powerful</span><span
+class="calibre11">’ in the file. This is because we have made
+the</span><span class="calibre34"> p</span><span class="calibre11">
+uppercase. However, it is possible to make the search case insensitive.
+This can be achieved using the </span><span
+class="calibre34">–i</span><span class="calibre11"> option as shown
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00014.jpeg" class="calibre63" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The –i makes the words ‘</span><span
+class="calibre34">powerful</span><span class="calibre11">’ and
+‘</span><span class="calibre34">Powerful</span><span class="calibre11">’
+the same, hence we will get our result. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">To perform a multiple search, which means
+that you will search for several words in a file at once, we can still
+use the </span><span class="calibre34">grep</span><span
+class="calibre11"> command. This is demonstrated below. </span></p>
+<p><span class="calibre11">              </span><img
+src="images/00015.jpeg" class="calibre64" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Notice that in the figure above, we are
+searching for two words, that is, </span><span
+class="calibre34">command</span><span class="calibre11"> and
+</span><span class="calibre34">powerfu</span><span class="calibre11">l.
+The </span><span class="calibre34">–e</span><span class="calibre11">
+option makes it possible for us to search for more than one word at
+once. Don’t confuse the purpose of the </span><span
+class="calibre34">–i</span><span class="calibre11"> option as it only
+makes the search case insensitive. </span></p>
+<div id="part0000_split_024.html_calibre_pb_72" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_025.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">The </span><span
+class="calibre34">grep</span><span class="calibre11"> command can also
+be used to mean the opposite of your specification. This is illustrated
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00016.jpeg" class="calibre65" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">From the figure shown above, we have searched
+using the word ‘</span><span class="calibre34">tool</span><span
+class="calibre11">’ as our search criteria. The command will only return
+the lines without the word ‘</span><span
+class="calibre34">tool</span><span class="calibre11">’. This explains
+why the second line of the file is not part of the output. The result
+has been achieved using the </span><span
+class="calibre34">–v</span><span class="calibre11"> option, which
+returns the opposite of the search criteria. The </span><span
+class="calibre34">–i</span><span class="calibre11"> is for case
+insensitive search, so let it not confuse you. </span></p>
+<div id="part0000_split_025.html_calibre_pb_74" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_026.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">To know the number of the line of the file
+containing the word ‘</span><span class="calibre34">powerful</span><span
+class="calibre11">’, use the command shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">grep –in ‘powerful’ myfile</span></p>
+<p><span class="calibre35"> </span></p>
+<p><img src="images/00017.jpeg" class="calibre67" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Consider the command shown below and its
+output:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre35">grep –iB1 ‘can’ myfile</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The command above outputs the
+following:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00018.jpeg" class="calibre68" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The command outputs the exactly one line
+which is above the line with our search criteria ‘</span><span
+class="calibre34">can</span><span class="calibre11">’. This is because
+we have used </span><span class="calibre34">1</span><span
+class="calibre11">. If we used two, the output would be as
+follows:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00019.jpeg" class="calibre69" /></p>
+<p><span class="calibre11">                                         
+                            </span></p>
+<div id="part0000_split_026.html_calibre_pb_76" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_027.html"></span></p>
+<section id="part0000_split_027.html_calibre_pb_78"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_027.html__Toc416032517"
+class="calibre19"><span class="calibre70">tail</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">A very popular command in Linux which is used
+to give the last part of a file. It gives only the last 10 lines of the
+file that you specify. If you need to get the last 10 lines of the file
+</span><span class="calibre34">myfile</span><span class="calibre11">,
+use the following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">tail myfile</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">However, we have added only three lines to
+the file. This means that the result of the above command will be the
+three lines of the file. If it had more than 10 lines, then it would
+output only the last 10 lines. You should also specify the extension of
+the file name. A good example is if it is a </span><span
+class="calibre34">c</span><span class="calibre11"> file, add a
+</span><span class="calibre34">.c</span><span class="calibre11">
+extension to the file name. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">However, the last 10 lines of the file is the
+default setting of the </span><span class="calibre34">tail </span><span
+class="calibre11">command. One has the choice of specifying the number
+of lines that they want to form the output. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Consider the command below and its
+output:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">tail myfile –n 2</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">              </span><img
+src="images/00020.jpeg" class="calibre71" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">As shown, we have specified that we want to
+output only the last 2 lines of the file </span><span
+class="calibre34">myfile</span><span class="calibre11">. This is what
+forms our output. The </span><span class="calibre34">–n</span><span
+class="calibre11"> option when used with this command specifies the
+number of lines that will form the output. </span></p>
+<div id="part0000_split_027.html_calibre_pb_79" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_028.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">Consider the command shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">tail -f myfile | grep 24.13.152.12</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">Notice that we are piping the output from the
+</span><span class="calibre34">tail</span><span class="calibre11">
+command into the </span><span class="calibre46">grep</span><span
+class="calibre40"> </span><span class="calibre11">command. The command
+above can be used to monitor updates being made on the file </span><span
+class="calibre46">myfile</span><span class="calibre40"> </span><span
+class="calibre11">in real time, that is, just as they happen. The last
+10 lines of the file and any new lines added to it will be piped to the
+</span><span class="calibre46">grep</span><span class="calibre40">
+</span><span class="calibre11">command. The </span><span
+class="calibre46">grep</span><span class="calibre40"> </span><span
+class="calibre11">command then has the task of outputting these on the
+standard window. Note that only the lines with the above specified
+address, that is, </span><span
+class="calibre46">24.13.152.12</span><span class="calibre40">
+</span><span class="calibre11">will be printed on the standard output.
+</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The command can be used to display the last
+part of the file in relation to its size rather than the number of
+lines. The size is usually specified in bytes. To print the last 5 bytes
+of the file </span><span class="calibre46">myfile</span><span
+class="calibre11">, use the following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">tail –c5 myfile</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00021.jpeg" class="calibre72" /></p>
+<p><span class="calibre11">The output implies that only the word
+“</span><span class="calibre46">it</span><span class="calibre11">” and
+the </span><span class="calibre46">full stop </span><span
+class="calibre34">(.)</span><span class="calibre11"> form the last 5
+bytes of the file. It is also possible to combine the above option with
+the </span><span class="calibre34">plus (+)</span><span
+class="calibre11"> symbol to print the bytes from a certain byte.
+</span></p>
+<p><span class="calibre11">Consider the command shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">tail –c+10 first</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above will print the last bytes of the
+file, starting from the 10</span><span class="calibre73">th</span><span
+class="calibre11"> byte. The output will be as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00022.jpeg" class="calibre74" /></p>
+<p><span class="calibre11">                            </span></p>
+<div id="part0000_split_028.html_calibre_pb_81" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_029.html"></span></p>
+<section id="part0000_split_029.html_calibre_pb_83"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_029.html__Toc416032518"
+class="calibre19"><span class="calibre47">wc</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre34">wc</span><span class="calibre11"> stands for
+</span><span class="calibre34">wall count</span><span
+class="calibre11">. This command is used to count the lines contained in
+a certain file. To know the number of lines contained in the file
+</span><span class="calibre34">myfile</span><span class="calibre11">,
+run the following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+</span><span class="calibre35">wc –l &lt;myfile</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The command outputs the following:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00023.jpeg" class="calibre75" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The command gives the number of lines
+contained in the file </span><span class="calibre34">myfile</span><span
+class="calibre11">, which are only three lines. In case you also need to
+get the name of the file, use the following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">wc –l myfile</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00024.jpeg" class="calibre76" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Run the command shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">wc myfile</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The following will form the output from the
+file:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00025.jpeg" class="calibre77" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The command will show the number of lines in
+the file, the number of words contained in the file, the size of the
+file in bytes and the name of the file. These have been displayed in the
+order mentioned, where 3 is the number of lines in the file, 17 is the
+total number of words in the file, 95 is the size of the file in bytes
+and finally we have the file name. However, some people might easily be
+confused by the above. </span></p>
+<p><span class="calibre11"> </span></p>
+<div id="part0000_split_029.html_calibre_pb_84" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_030.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">It becomes easy when you split the above
+output as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre27">wc –c  myfile</span><span class="calibre11">– this
+will output the total bytes making up the file.</span></p>
+<p><span class="calibre27">wc –w myfile</span><span class="calibre11">–
+outputs the number of words contained in the file.</span></p>
+<p><span class="calibre27">wc –m  myfile–</span><span class="calibre11">
+will output the number of characters making up the file.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">If you can’t memorize the order used in the
+first command, then it is advisable you use the simple and alternative
+option above. </span></p>
+<p><span class="calibre11">                                         
+                            </span></p>
+<div id="part0000_split_030.html_calibre_pb_86" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_031.html"></span></p>
+<section id="part0000_split_031.html_calibre_pb_88"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_031.html__Toc416032519"
+class="calibre19"><span class="calibre70">last</span><span
+class="calibre38"> command</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">This command is useful when you want to know
+the users who have recently logged into your system. This is very useful
+in the industry for security purposes. A user won’t deny having logged
+into the system at a certain time. Open the command line and type in the
+command </span><span class="calibre46">last</span><span
+class="calibre40">.</span><span class="calibre11"> Observe the
+output:</span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00026.jpeg" class="calibre78" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The command shows the name of the user and
+other details including the terminal they were logged on and the time in
+which they logged in. In case any of the users is still in, you will be
+notified of it. The difference between when the user was lastly logged
+in and logged out will also be shown. Notice that only the last 100
+logins will be displayed. </span></p>
+<div id="part0000_split_031.html_calibre_pb_89" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_032.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">The command is also associated with the
+following options:</span></p>
+<p><span class="calibre11"> </span></p>
+<ol type="1">
+<li><span class="calibre27">–R</span><span class="calibre11">- this will
+make sure that the host name is not displayed. </span></li>
+<li><span class="calibre27">–d</span><span class="calibre11"> – this is
+used when doing remote login. The </span><span
+class="calibre46">ip</span><span class="calibre11"> address which
+identifies the host name is translated into the hostname itself.
+</span></li>
+<li><span class="calibre27">–a</span><span class="calibre11"> – this
+will display the name of the host in output’s last column.</span></li>
+<li><span class="calibre27">–x</span><span class="calibre11">- shows the
+shutdown history and how changes have been made on the run levels.
+</span></li>
+<li><span class="calibre27">–i</span><span class="calibre11">- displays
+the </span><span class="calibre46">ip</span><span class="calibre11">
+address of the host login in remotely. The </span><span
+class="calibre46">ip</span><span class="calibre11"> address is usually
+in dots and number format.</span></li>
+<li><span class="calibre27">–F</span><span class="calibre11">- the times
+and dates of full logins and logouts into the system ware
+displayed.</span></li>
+<li><span class="calibre27">–w</span><span class="calibre11">- the names
+of the user and the domain name are displayed as the output.</span></li>
+</ol>
+<div id="part0000_split_032.html_calibre_pb_91" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_033.html"></span></p>
+<section id="part0000_split_033.html_calibre_pb_94"
+class="calibre12 calibre1">
+<h1 class="calibre12"><span id="part0000_split_033.html__Toc416032520"
+class="calibre19"><span class="calibre33">Chapter 3- Bash scripting
+Tricks</span></span></h1>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre27">              </span><span
+class="calibre34">Bash</span><span class="calibre11"> stands for
+</span><span class="calibre34">Bourne Again shell</span><span
+class="calibre11">, and in most Linux distros, it forms the default
+shell. Many Unix and Linux users really like it due to its
+user-friendliness. In this chapter, we are going to learn about the Bash
+shell. </span></p>
+<p><span class="calibre11"> </span></p>
+</section>
+<p><span id="part0000_split_034.html"></span></p>
+<section id="part0000_split_034.html_calibre_pb_95"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span class="calibre83">             
+                                                        </span><span
+id="part0000_split_034.html__Toc416032521" class="calibre19"><span
+class="calibre38">Brace Expansion</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">A list of strings is used as arguments in
+this case. These strings are separated using comas. There should be no
+space after the comma. Example:</span></p>
+<p><span class="calibre40"> </span></p>
+<p><span class="calibre35">echo {John,Julius,Jacob}</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00027.jpeg" class="calibre84" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">From the figure, you can see the output. Just
+the arguments we provided in the braces. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Now, type the following on the command
+line:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">echo John,Julius,Jacob</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The output will just be the same as in the
+first example above. I am sure that you are seeing no usefulness of the
+braces. Consider the example shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">echo {John,Julius,Jacob}David</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">Maybe the three are sons of David. Observe
+the output:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00028.jpeg" class="calibre85" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">You have now seeing how useful the braces are
+in bash scripting. They are very useful when the list placed in the
+braces should occur after, inside or before another string. In the case
+above, these should occur before the string David. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The above can be implemented in another way
+as follows:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">echo David{John,Julius,Jacob}</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The following will form the output of the
+above script:</span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00029.jpeg" class="calibre86" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">As you can see, the list specified inside the
+braces occurs after the string “David”. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">It is also possible to place the list in
+between two strings. This is illustrated below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre27">              </span><span class="calibre35">echo
+David{John,Julius,Jacob}Mercy</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The following will be the output:</span></p>
+<p><span class="calibre11">              </span><img
+src="images/00030.jpeg" class="calibre87" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The words in the list have been sandwiched
+between the two strings that we have specified. Again, make sure that
+you don’t include space at all. There are no spaces between the
+arguments nor between the braces and the strings. Including this might
+lead to an error or an undesired output. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">However, if you need to use a space, make use
+that you also use double quotes as shown below: </span></p>
+<p><span class="calibre40"> </span></p>
+<p><span class="calibre40">                            </span><span
+class="calibre35">echo "{John,Julius,Jacob} David" </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The following will be the output of the
+above:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                  </span><img
+src="images/00031.jpeg" class="calibre89" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">You might need such like output, so that’s
+how to get it. Consider the example given below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+</span><span class="calibre35">echo {"John ","Julius ","Jacob "}
+David</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above will give the following as the
+output:</span></p>
+<p><span class="calibre11">                                         
+</span><img src="images/00032.jpeg" class="calibre90" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Braces can also be nested, whereby braces are
+placed within other braces as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">echo {{a,b,c},a,b,c}</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The following will be the output of the above
+example:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00033.jpeg" class="calibre91" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Consider the example shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">echo {{6,7,8}1,2,3)</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The output will be as follows:</span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00034.jpeg" class="calibre92" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The question is where is this trick that is
+brace expansion applied. Of course, when making a backup of a file, you
+will need to use this trick hence it is very important. An example of
+this is given below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">cp /etc/httpd/conf/httpd.conf{,.backup}</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">In the above example, we are backing up the
+</span><span class="calibre34">httpd.config</span><span
+class="calibre11"> file. </span></p>
+<div id="part0000_split_034.html_calibre_pb_96" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_035.html"></span></p>
+<section id="part0000_split_035.html_calibre_pb_98"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span class="calibre83">              </span><span
+id="part0000_split_035.html__Toc416032522" class="calibre19"><span
+class="calibre41">Command</span><span class="calibre38">
+Substitution</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">This is also another useful bash scripting
+trick. It includes the use of the $ sign and parenthesis on the standard
+output to enclose any command which is aimed at generating output. This
+trick is applied when assigning some value to a variable. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">You can assign the date to a variable as
+follows:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">date +%d-%b-%Y</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above will give you the current date as
+shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00035.jpeg" class="calibre93" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">This can also be achieved using the
+following:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre27">              </span><span class="calibre35">echo
+$today</span></p>
+<p><span class="calibre35">                     today=$(date
++%d-%b-%Y)</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The output will just be the same. To get
+information about multiple </span><span
+class="calibre34">RPM</span><span class="calibre11"> packages
+simultaneously, you can also use command substitution. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Command substitution can also be achieved
+after surrounding a command using back quotes. This can be illustrated
+using the example shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">day=`date +%d-%b-%Y`</span></p>
+<p><span class="calibre35">                            echo
+$day</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The above will give the following as the
+final result:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00036.jpeg" class="calibre94" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The current date will be displayed. With the
+above style, commands can easily be nested and they will become easy to
+read. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The output from a certain command can also be
+directed to a certain file. This can be done as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">find / -name file &gt; result.txt</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">In the above example, we are redirecting the
+output from the command</span><span class="calibre34"> find</span><span
+class="calibre11"> to the file </span><span
+class="calibre34">result.txt.</span><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">However, you will notice that error messages
+will be produced. If you are not interested in these, you can also
+redirect them to a file. A </span><span class="calibre34">2</span><span
+class="calibre11"> in front of the redirection symbol can assist in
+this. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">They can also be redirected to </span><span
+class="calibre34">/dev/null</span><span class="calibre11"> if we are not
+interested in them at all. This is illustrated below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre29"> </span><span class="calibre35">find / -name file
+2&gt; /dev/null</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The location of the file “</span><span
+class="calibre34">file”</span><span class="calibre11"> will be shown
+without the error messages, </span><span class="calibre34">2</span><span
+class="calibre11"> stands for the standard error output stream. Most
+Linux commands redirect their errors here, whereas the correct output
+which is send to the standard output is represented using </span><span
+class="calibre34">1</span><span class="calibre11">.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> Consider the commands shown
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                              </span><span
+class="calibre35">find / -name file &gt; result.txt</span></p>
+<p><span class="calibre35">                                 find / -name
+file 1&gt; result.txt</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">Some could think that the above commands are
+different. However, they are just the same. The </span><span
+class="calibre46">1</span><span class="calibre11"> represents the normal
+standard output. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">You may need to save both, that, the error
+message and the standard output to a file. Cron jobs are usually used
+for this purpose. This can be achieved as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">find / -name file &gt; result.txt 2&gt;
+result.txt</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">Notice that both output streams have been
+directed to the same file. However, the above is tiresome. It can be
+achieved with much simplicity as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">find / -name file &gt; result.txt
+2&gt;&amp;1</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">In the example just above, we have used an
+ampersand to tie the standard error stream and the standard output
+stream. After this, the standard error will go to wherever the standard
+output goes. Again the syntax used in the example above as it is very
+important. </span></p>
+<p><br />
+<span class="calibre11"> </span></p>
+<p><span class="calibre11">You might also be interested in piping the
+output to another command. This is shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">find -name file.sh 2&gt;&amp;1 | d
+/tmp/result2.txt</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above line will work just as it is
+expected. Now consider the line shown below:</span></p>
+<p><span class="calibre40"> </span></p>
+<p><span class="calibre40">                            </span><span
+class="calibre35">find -name file.sh | d /tmp/result2.txt
+2&gt;&amp;1</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">On running the above line, you will notice
+that it won’t work as it is expected. This is in contradiction to the
+other line. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+              </span></p>
+<div id="part0000_split_035.html_calibre_pb_99" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_036.html"></span></p>
+<section id="part0000_split_036.html_calibre_pb_101"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_036.html__Toc416032523"
+class="calibre19"><span class="calibre38">Command
+History</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre11">With Bash, you can search through the
+commands that have been run recently. You can then use the up and down
+arrow keys so as to navigate through these commands. If the command you
+are looking for was executed between the last 10-20 executed commands,
+then this will be easy for you. </span></p>
+<p><span class="calibre11">If you want to search interactively, meaning
+that suggestions for what you are searching for will be provided, just
+press </span><span class="calibre34">Ctrl-R</span><span
+class="calibre11">. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The prompt will then be changed to the
+following:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">(reverse-i-search)`':</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">You can then start typing the letters of your
+command. You will notice that you will be provided with suggestions.
+However, the suggestions will only include the recently types and
+related commands. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">In my case, after pressing the </span><span
+class="calibre34">Ctrl-R</span><span class="calibre11">, and then typing
+</span><span class="calibre34">ech</span><span class="calibre11">, the
+following is the suggestion:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00037.jpeg" class="calibre95" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">He above shows that the command I ran
+recently containing the words </span><span
+class="calibre34">ech</span><span class="calibre11"> is the </span><span
+class="calibre34">“echo day”</span><span class="calibre11"> command.
+</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">To execute the command, just press the enter
+key and it will be executed. If you need to do some editing to the
+command, just press the left or right arrow keys. The command will be
+placed on the normal prompt and then you will be able to edit it.
+</span></p>
+<p><span class="calibre11">                                         
+               </span></p>
+<div id="part0000_split_036.html_calibre_pb_102" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_037.html"></span></p>
+<section id="part0000_split_037.html_calibre_pb_104"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span class="calibre83"> </span><span
+id="part0000_split_037.html__Toc416032524" class="calibre19"><span
+class="calibre38">Loops</span></span><span class="calibre38">
+</span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">With </span><span
+class="calibre34">Bash</span><span class="calibre11">, it is possible
+for you to create loops on the command line. However, this is not
+suitable is the code is large or too complex. On the command line, loops
+can be written in two different ways. The first way involves separating
+the different lines of code using a semicolon. To create a loop that
+will back up all the files contained in a certain directory, this can be
+done as follows using this method:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+</span><span class="calibre35">for doc in *; do cp $doc $doc.bak;
+done</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above line of code will back up all the
+files in the directory. Rather than separating the lines using a
+semicolon, a secondary prompt can be used. This can be done by pressing
+the enter key once you are through with each single line. Once you have
+pressed the enter key, Bash will understand that you want to create a
+loop and it will provide you with a secondary prompt. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">You can then enter your second line. This is
+illustrated below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">for doc in *</span></p>
+<p><span class="calibre35">                            &gt; do cp $doc
+$doc.bak</span></p>
+<p><span class="calibre35">                            &gt;
+done</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">Sometimes, your Linux system can run out of
+memory. This means that you will not be able to execute your commands
+including the simple ones such as </span><span
+class="calibre34">ls</span><span class="calibre11"> and the ones for
+changing directories. If </span><span class="calibre34">ls</span><span
+class="calibre11"> fails and you want to vie the files contained in a
+particular directory, then this can be achieved as follows:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">for doc in *; do echo $doc; done</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">This will solve the </span><span
+class="calibre34">ls</span><span class="calibre11"> problem. This shows
+the power of bash scripting. </span></p>
+<div id="part0000_split_037.html_calibre_pb_105" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_038.html"></span></p>
+<section id="part0000_split_038.html_calibre_pb_109"
+class="calibre12 calibre1">
+<h1 class="calibre12"><span id="part0000_split_038.html__Toc416032525"
+class="calibre19"><span class="calibre33">Chapter 4- Linux shell
+programming</span></span></h1>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre27">              </span><span
+class="calibre11">In Linux, it is very easy to create shell scripts.
+With shell programming, we can group multiple commands in a chain and
+then execute them to obtain the desired output. Let us begin by writing
+out first script. Open your editor of choice; I am using the
+</span><span class="calibre34">vi editor</span><span class="calibre11">.
+Add the following shell program to the file:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre27">#!/bin/bash</span></p>
+<p><span class="calibre27">                            Echo “Hello
+World”</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above is an example of a shell program.
+Save the file and give it the name hello.sh. Notice that we have used
+the </span><span class="calibre34">.sh</span><span class="calibre11">
+extension to imply that it is a shell program. Now, the next step is to
+make the script executable. This can be achieved as follows:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Open the command prompt and type the
+following command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">chmod 744 hello.sh</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">After running the above command, an
+executable of the file hello.sh will be created, </span><span
+class="calibre46">chmod</span><span class="calibre11"> stands for change
+mode. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre34">744</span><span class="calibre11"> refers to
+the permissions, and we have used this to add an execute permission to
+the file. Since we have made the program executable, we now need to
+execute it. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">This can be achieved by running the following
+command on the terminal:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre27">              </span><span
+class="calibre35">./hello.sh</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">After running the above command, the
+following output will be observed on the standard output:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><img
+src="images/00038.jpeg" class="calibre97" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The command outputs a text written
+“</span><span class="calibre34">Hello World”.</span><span
+class="calibre11"> Remember that this is the text that we command the
+echo command to output. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre34">#!/bin/bash</span><span class="calibre11"> is
+called the </span><span class="calibre34">shebang</span><span
+class="calibre11"> is used to precede shell programs.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> To add comments to your program, precede
+them with a pound sign (</span><span class="calibre34">#</span><span
+class="calibre11">). </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Consider the shell program shown
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre40"> </span></p>
+<p><span class="calibre35">#! /bin/bash</span></p>
+<p><span class="calibre35">echo "Hey $USER"</span></p>
+<p><span class="calibre35">echo "Hello, i am" $USER "The following are
+the processes running currently"</span></p>
+<p><span class="calibre35">echo "List of running processes:"</span></p>
+<p><span class="calibre35">ps</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">You can write and run the program. The
+following output will be observed after running the program:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><img
+src="images/00039.jpeg" class="calibre98" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">As shown in the above figure, the program
+outputs your name. It also shows the list of processes which are
+currently running on your system. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Now, let us write a more interactive program.
+Write the code shown below and run it:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre35">#! /bin/bash</span></p>
+<p><span class="calibre35">echo "Enter your name”</span></p>
+<p><span class="calibre35">read name;</span></p>
+<p><span class="calibre35">echo "welcome Mr. /Mrs. $name ";</span></p>
+<p><span class="calibre35">echo "Thanks Mr./Mrs. $name. You have
+provided us with your names";</span></p>
+<p><span class="calibre35">echo
+"-----------------------------------------------------------------"</span></p>
+<p><span class="calibre35">echo "Mr. /Mrs. $name, good bye
+friend"</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">After running the above program, the
+following output will be observed:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><img
+src="images/00040.jpeg" class="calibre99" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">As seen, you are prompted to provide your
+name. This has been achieved by use of the read command, which prompts
+users to provide their input. This input has then been displayed
+alongside some other text. </span></p>
+<p><span class="calibre11">                                         
+              </span></p>
+<div id="part0000_split_038.html_calibre_pb_110" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_039.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre52">Variables in Shell</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">The two types of shell variables
+are:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<ol type="1">
+<li><span class="calibre102">      </span><span class="calibre11">System
+variables- these are created and maintained by the OS. They are defined
+in upper case.</span></li>
+<li><span class="calibre102">      </span><span class="calibre11">User
+Defined Variables- the user creates and maintains these. They are
+defined in lower case letters.</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The following are some of the system
+variables in shell:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span></p>
+<p><span class="calibre11">BASH- the shell name.</span></p>
+<p><span class="calibre11">HOME- our home directory</span></p>
+<p><span class="calibre11">LOGNAME- our login name.</span></p>
+<p><span class="calibre11">PATH- our setting for the path.</span></p>
+<p><span class="calibre11">USERNAME- the currently logged in
+user.</span></p>
+<p><span class="calibre11">COLUMNS- number of columns making up our
+screen. </span></p>
+<p><span class="calibre11">OSTYPE- the type of the OS we are
+running.</span></p>
+<p><span class="calibre11">PWD- the current working directory.
+</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">The above shows only a sample of the system
+variables. In case you want to print any of the above variables, use the
+echo and the $ sign command as shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre27">echo $HOME</span></p>
+<p><span class="calibre27">              echo $PWD</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The next part is on how to work with user
+defined variables. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Use the following syntax to define a user
+defined variable:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+              </span><span class="calibre35">variable
+name=value</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The name refers to the name to be used to
+refer to the variable. The value is what it is. This is usually a number
+or a string. Example:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre40"> </span></p>
+<p><span class="calibre40">                            </span><span
+class="calibre35">num=10</span></p>
+<p><span class="calibre35">                           
+name=Mary</span></p>
+<div id="part0000_split_039.html_calibre_pb_112" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_040.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre104">Tips when naming variable</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<ol type="1">
+<li><span class="calibre102">      </span><span class="calibre11">There
+should be no spaces on either sides of the equal sign.
+Example:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre27">                            num=12- this is
+right</span></p>
+<p><span class="calibre27">                            num= 12- this is
+wrong</span></p>
+<p><span class="calibre27">                            num =12- this is
+wrong</span></p>
+<p><span class="calibre27">                            num = 12- this is
+wrong</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<ol start="2" type="1">
+<li><span class="calibre102">      </span><span class="calibre11">The
+name of the variable should begin with an underscore or of the
+alphanumeric characters. This should then be followed by any of the
+alphanumeric characters. The following are examples of valid
+variables:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre27">PWD</span></p>
+<p><span class="calibre27">                           
+SYSTEM_VERSION</span></p>
+<p><span class="calibre27">                            num</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<ol start="3" type="1">
+<li><span class="calibre102">      </span><span class="calibre11">The
+names of variables are case sensitive. Example:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre27">Num=2</span></p>
+<p><span class="calibre27">                            num=6</span></p>
+<p><span class="calibre27">                            nUm=9</span></p>
+<p><span class="calibre27">                            nuM=10</span></p>
+<p><span class="calibre27">                            NUM=90</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The above shows that the above variable names
+are not equal. To print any of the above, also make sure that you
+specify correctly. For example, to print 10, use the following
+code:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                             </span><span
+class="calibre35">echo $nuM</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<ol start="4" type="1">
+<li><span class="calibre102">      </span><span class="calibre11">To
+define null variables, do the following:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">num=</span></p>
+<p><span class="calibre35">                            num=””</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">To print it, use the following
+code:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre35">E=echo $num</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">However, note that nothing will be displayed
+since the variable is null. </span></p>
+<p><span class="calibre11"> </span></p>
+<ol start="5" type="1">
+<li><span class="calibre102">      </span><span class="calibre11">Some
+characters should not be used to name variables. These include the
+asterisk (*) and the question mark (?). </span></li>
+</ol>
+<p><span class="calibre11">                                         
+              </span></p>
+<div id="part0000_split_040.html_calibre_pb_114" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_041.html"></span></p>
+<section id="part0000_split_041.html_calibre_pb_116"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_041.html__Toc416032526"
+class="calibre19"><span class="calibre105">Loops in
+Shell</span></span></h2>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">A loop represents a group of instructions
+executed repeatedly. </span></p>
+<p><span class="calibre11"> </span></p>
+</section>
+<p><span id="part0000_split_042.html"></span></p>
+<section id="part0000_split_042.html_calibre_pb_117"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_042.html__Toc416032527"
+class="calibre19"><span class="calibre105">for Loop</span></span></h2>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">This loop follows the following
+syntax:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre35">for { name of the variable} in {list
+}</span></p>
+<p><span class="calibre35">            do</span></p>
+<p><span class="calibre35">                     execute the items in the
+list one after another until finished.</span></p>
+<p><span class="calibre35">            done</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">Consider the program shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">for j in 1 2 3 4 5</span></p>
+<p><span class="calibre35">                            do</span></p>
+<p><span class="calibre35">                            echo “Test for
+the for loop”</span></p>
+<p><span class="calibre35">                            done</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">After running the above program, you will
+observe the following as the output:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                                         
+</span><img src="images/00041.jpeg" class="calibre107" /></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">What the program does is that it begins by
+defining the variable </span><span class="calibre34">j</span><span
+class="calibre11"> and sets its value from 1 to 5. The line </span><span
+class="calibre34">echo “Test for the for loop”</span><span
+class="calibre11">  of the program will then be executed 5 times since
+the value of </span><span class="calibre34">j</span><span
+class="calibre11"> will increment up to a maximum of 5. This explains
+the source of the output. </span></p>
+<div id="part0000_split_042.html_calibre_pb_118" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_043.html"></span></p>
+<section id="part0000_split_043.html_calibre_pb_120"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_043.html__Toc416032528"
+class="calibre19"><span class="calibre38">while Loop</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The while loop in shell takes the following
+syntax:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre108">           </span><span class="calibre35">while [
+condition]</span></p>
+<p><span class="calibre35">                                    
+                     do</span></p>
+<p><span class="calibre35">                                           
+              1</span><span class="calibre109">st</span><span
+class="calibre35"> command</span></p>
+<p><span class="calibre35">                                           
+              2</span><span class="calibre109">nd</span><span
+class="calibre35"> command</span></p>
+<p><span class="calibre35">                                           
+              3</span><span class="calibre109">rd</span><span
+class="calibre35">  command</span></p>
+<p><span class="calibre35">                                         
+                               ..</span></p>
+<p><span class="calibre35">                                         
+                               ....</span></p>
+<p><span class="calibre35">                                    
+                       done</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">As long as the condition that you have
+specified is true, the loop will execute. </span></p>
+<div id="part0000_split_043.html_calibre_pb_121" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_044.html"></span></p>
+<section id="part0000_split_044.html_calibre_pb_123"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_044.html__Toc416032529"
+class="calibre19"><span class="calibre38">Case
+statement</span></span></h2>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">It is also common in Linux. One can use it
+rather than the </span><span class="calibre34">if-else</span><span
+class="calibre11"> statement. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">It takes the following syntax:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">case  $name_of_the_variable  in</span></p>
+<p><span class="calibre35">                1</span><span
+class="calibre109">st</span><span class="calibre35"> pattern)  
+command</span></p>
+<p><span class="calibre35">                               
+...</span></p>
+<p><span class="calibre35">                                ..</span></p>
+<p><span class="calibre35">                               
+command;;</span></p>
+<p><span class="calibre35">                2</span><span
+class="calibre109">nd</span><span class="calibre35"> pattern)  
+command</span></p>
+<p><span class="calibre35">                               
+...</span></p>
+<p><span class="calibre35">                                ..</span></p>
+<p><span class="calibre35">                               
+command;;</span></p>
+<p><span class="calibre35">                n</span><span
+class="calibre109">th</span><span class="calibre35"> pattern)  
+command</span></p>
+<p><span class="calibre35">                               
+...</span></p>
+<p><span class="calibre35">                                ..</span></p>
+<p><span class="calibre35">                               
+command;;</span></p>
+<p><span class="calibre35">                *)            
+command</span></p>
+<p><span class="calibre35">                               
+...</span></p>
+<p><span class="calibre35">                                ..</span></p>
+<p><span class="calibre35">                               
+command;;</span></p>
+<p><span class="calibre27">           </span><span
+class="calibre59">esac</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Notice that we start with </span><span
+class="calibre34">case</span><span class="calibre11"> but we end with an
+</span><span class="calibre34">esac</span><span class="calibre11">
+statement. Consider the example shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre35">if [ -y $1 ]</span><br />
+<span class="calibre35">then</span><br />
+<span class="calibre35">  r=”the vehicle is unknown”</span><br />
+<span class="calibre35">elif [ -x $1 ]</span><br />
+<span class="calibre35">then</span><br />
+<span class="calibre35">  r=$1</span><br />
+<span class="calibre35">fi</span></p>
+<p><span class="calibre35">case $r in</span><br />
+<span class="calibre35">   "lorry") echo "For $r 10 per
+k/m";;</span><br />
+<span class="calibre35">   "merc") echo "For $r 80 per
+k/m";;</span><br />
+<span class="calibre35">   "corolla") echo "For $r 15 per
+k/m";;</span><br />
+<span class="calibre35">   "motorbyke") echo "For $r 5 per
+k/m";;</span><br />
+<span class="calibre35">   *) echo "we can’t obtain a $r for
+you";;</span><br />
+<span class="calibre35">esac</span></p>
+<p><span class="calibre40"> </span></p>
+<div id="part0000_split_044.html_calibre_pb_124" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_045.html"></span></p>
+<section id="part0000_split_045.html_calibre_pb_126"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_045.html__Toc416032530"
+class="calibre19"><span class="calibre41">if-else-fi</span><span
+class="calibre38"> </span><span class="calibre38">for decision
+making</span></span></h2>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">The command </span><span
+class="calibre34">if-else-fi</span><span class="calibre11"> can be used
+in shell programming for the purpose of decision making. The programmer
+specifies a condition and once met, a command is executed, if not met,
+the other command is executed. It takes the following syntax:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre35">if condition</span></p>
+<p><span class="calibre35">           then</span></p>
+<p><span class="calibre35">                       the condition is
+zero</span></p>
+<p><span class="calibre35">                       execute commands until
+you meet the else statement</span></p>
+<p><span class="calibre35">           else</span></p>
+<p><span class="calibre35">                       if the condition is
+false</span></p>
+<p><span class="calibre35">                     execute commands until
+you find the fi statement              </span></p>
+<p><span class="calibre35">          fi</span></p>
+<p><span class="calibre11"> </span></p>
+<div id="part0000_split_045.html_calibre_pb_127" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_046.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">Consider the example shown below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre35">#!/bin/bash</span><br />
+<span class="calibre35">if [ $# -eq 0 ]</span><br />
+<span class="calibre35">then</span><br />
+<span class="calibre35">echo "$0 : an integer must be
+supplied"</span><br />
+<span class="calibre35">exit 1</span><br />
+<span class="calibre35">fi</span></p>
+<p><span class="calibre35">if t $2 -gt 0</span><br />
+<span class="calibre35">then</span><br />
+<span class="calibre35">echo "$2 is a positive number"</span><br />
+<span class="calibre35">else</span><br />
+<span class="calibre35">echo "$2 is a negative number"</span><br />
+<span class="calibre35"> fi</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">If the command line is not given, then an
+error will be printed, that is, an integer must be supplied. The next
+part involves checking the number of arguments that have been passed. If
+we passed any argument, then the</span><span class="calibre34">
+“if</span><span class="calibre11"> “will turn out to be false and true
+otherwise. The </span><span class="calibre46">exit 1</span><span
+class="calibre40"> </span><span class="calibre11">statement will
+terminate the program after a successful execution.</span></p>
+<p><span class="calibre11"> </span></p>
+<div id="part0000_split_046.html_calibre_pb_129" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_047.html"></span></p>
+<section id="part0000_split_047.html_calibre_pb_132"
+class="calibre12 calibre1">
+<h1 class="calibre12"><span id="part0000_split_047.html__Toc416032531"
+class="calibre19"><span class="calibre33">Chapter 5- Bash
+One-liners</span></span></h1>
+<p><span class="calibre27">                                         
+              </span></p>
+<p><span class="calibre27"> </span></p>
+</section>
+<p><span id="part0000_split_048.html"></span></p>
+<section id="part0000_split_048.html_calibre_pb_133"
+class="calibre37 calibre1">
+<h2 class="calibre37"><span id="part0000_split_048.html__Toc416032532"
+class="calibre19"><span class="calibre38">Working with
+files</span></span></h2>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<ol type="1">
+<li><span class="calibre102">                          </span><span
+class="calibre11">Truncating the size of a file to </span><span
+class="calibre34">0</span><span class="calibre11"> (emptying) - the
+redirection command is used in this case. If the file exists, then its
+size is truncated to zero whereas if it does not exist, it is created.
+Note the operator opens the file for writing. </span></li>
+</ol>
+<p><span class="calibre40"> </span></p>
+<p><span class="calibre40"> </span></p>
+<p><span class="calibre40">                            </span><span
+class="calibre35">$ &gt; file</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">To create a file containing a content of
+choice or replacing the file’s contents, use the following
+command:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">$ echo “string to replace” &gt; file</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre11">              The string that you specify in
+between the quotes will act as the replacement     string. </span></p>
+<p><span class="calibre11"> </span></p>
+<ol start="2" type="1">
+<li><span class="calibre102">                          </span><span
+class="calibre11">Adding a string to your file- the on-liner uses the
+output redirection operator &gt;&gt; to append some content to your
+file. Example:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre35">$ echo “content to be appended” &gt;&gt;
+file</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">In case the operator fails to find the file,
+anew one is created. After the string has been appended to the file, a
+new line will follow it. </span></p>
+<p><span class="calibre11">To avoid this, use the </span><span
+class="calibre34">–n</span><span class="calibre11"> option as shown
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">$ echo -n “content to be appended” &gt;&gt;
+file</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<ol start="3" type="1">
+<li><span class="calibre102">                          </span><span
+class="calibre11">Assign the first line of a file to a variable- in this
+case, you need to read the first line of the file and then assign this
+line to a variable. The input redirection operator &lt; is used.
+</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Consider the line of code shown
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">$ read -r myline &lt; file</span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre34">myline</span><span class="calibre11"> is a variable.
+The command read will read only the first line of the file and place it
+in the variable </span><span class="calibre34">myline</span><span
+class="calibre11">. The </span><span class="calibre34">–r</span><span
+class="calibre11"> option will ensure that this line is read raw.
+</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<ol start="4" type="1">
+<li><span class="calibre102">                          </span><span
+class="calibre11">Reading a file- a </span><span
+class="calibre34">read</span><span class="calibre11"> command can be
+combined with the </span><span class="calibre34">while</span><span
+class="calibre11"> loop so as to read a file line-by-line. This is
+illustrated below:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">while read -r myline; do</span></p>
+<p><span class="calibre35">                               # perform
+something on the variable myline</span></p>
+<p><span class="calibre35">                            done &lt;
+file</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">              A code of failure will be
+returned when the </span><span class="calibre34">read</span><span
+class="calibre11"> command meets end-of-failure. The </span><span
+class="calibre34">while loop</span><span class="calibre11"> will then
+halt. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">Notice that we have placed </span><span
+class="calibre34">&lt; file</span><span class="calibre11"> at the end.
+To avoid this, pipe the file’s content to a while loop as shown
+below:</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">cat file | while IFS= read -r myline; do</span></p>
+<p><span class="calibre35">                               # perform
+something on the variable myline</span></p>
+<p><span class="calibre35">                            done</span></p>
+<p><span class="calibre27"> </span></p>
+<ol start="5" type="1">
+<li><span class="calibre102">                          </span><span
+class="calibre11"> Read any line of a file and assign it to a
+variable</span> <u><span class="calibre11">-</span></u> <span
+class="calibre11"> external programs assist the bash to read the lines
+of a program. Consider the code shown below:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">                            </span><span
+class="calibre35">$ read -r rline &lt; &lt;(shuf file)</span></p>
+<p><span class="calibre35"> </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre34">Shuf</span><span class="calibre11"> is available on
+modern Linux systems and helps in this. The above code will read a
+random line of a file and assign it to the variable </span><span
+class="calibre34">rline</span><span class="calibre11">. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<ol start="6" type="1">
+<li><span class="calibre102">                          </span><span
+class="calibre11">To extract a tar archive, use the following
+command:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre35">tar xvf b.tar </span></p>
+<p><span class="calibre27"> </span></p>
+<p><span class="calibre27"> </span></p>
+<ol start="7" type="1">
+<li><span class="calibre102">                          </span><span
+class="calibre11">To find the number of lines common between two
+files:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre35">sort doc1 doc2 | uniq –d</span></p>
+<p><span class="calibre27"> </span></p>
+<ol start="8" type="1">
+<li><span class="calibre102">                          </span><span
+class="calibre11">To randomize the lines of a file:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              </span><span
+class="calibre35">shuf filename.txt</span></p>
+<p><span class="calibre35"> </span></p>
+<ol start="9" type="1">
+<li><span class="calibre102">                          </span><span
+class="calibre11">To sum a certain column:</span></li>
+</ol>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre27">              </span><span
+class="calibre35">awk '{ sum+=$1} END {print sum}'
+document.txt</span></p>
+<div id="part0000_split_048.html_calibre_pb_134" class="calibre15">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_049.html"></span></p>
+<div class="calibre1">
+<h1 class="calibre12" id="part0000_split_049.html_calibre_pb_136"><span
+class="calibre33"> </span></h1>
+<h1 class="calibre117"><span id="part0000_split_049.html__Toc416032533"
+class="calibre19"><span class="calibre33">Conclusion</span></span></h1>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre28"> </span></p>
+<p><span class="calibre27">              </span><span
+class="calibre11">It can be concluded that Linux is an open source
+operating system and it has various distributions. The idea behind
+development of Linux was to develop a free Unix-like operating system
+for computers. Each of the Linux distributions comes in two versions,
+that is, the server and the desktop versions. The desktop versions
+support both the GUI and the command line.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> By default, one accesses the GUI after login
+into the system. The command line can then be launched if needed. The
+server versions of these distributions support only the command line. No
+graphics in Linux servers. The purpose of this is to ensure security of
+these systems since hackers usually take advantage of any feature added
+to this system. This explains why you should be familiar with the Linux
+commands. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">              The Linux command Line can be
+used for nearly everything needed in the system. One earns much respect
+in the society when they become experts in using the Linux command line.
+With shell scripting, programmers can put together multiple commands and
+run them simultaneously so as to achieve the desired output. This also
+saves on time and space available on the system. Shell scripts are
+preceded by the shebang.</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> This alerts the system a shell scripts is
+just to be executed. These must be made executable and then execution
+will take place after this. Bash stands for Bourne Again Shell. It is
+the default shell in most Linux distribution. Bash scripts are run on
+the command line, and one can achieve much with them, and know much
+about the system. Bash on-liners are also important in Linux. One can
+use them to play around with their files. </span></p>
+<div id="part0000_split_049.html_calibre_pb_137" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_050.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre27">Thank you!</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">We would like to thank you for buying this
+book. Hope you found it helpful in your now EASY and FAST programming
+life development. And we are happy to recommend you some other books
+from this author:</span></p>
+<p><span class="calibre11"> </span></p>
+<ol type="1">
+<li><span class="calibre35">Linux Command Line: Become a Linux Expert!
+</span><span class="calibre27">(Input/Output Redirection, Wildcards,
+File Security,  Processes Managing, Shell Programming Advanced Features,
+GUI elements, Useful Linux Commands)</span></li>
+</ol>
+<p><a
+href="http://www.amazon.com/gp/product/B00XGUO4E4?*Version*=1&amp;*entries*=0"><span
+class="calibre120">http://www.amazon.com/gp/product/B00XGUO4E4?*Version*=1&amp;*entries*=0</span></a></p>
+<p><img src="images/00042.jpeg" class="calibre122" /></p>
+<div id="part0000_split_050.html_calibre_pb_139" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_051.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<ol start="2" type="1">
+<li><span class="calibre59">PHP and MySQL Programming for Beginners: A
+Step by Step Course From Zero to Professional</span></li>
+</ol>
+<p><span class="calibre124"> </span></p>
+<p><a
+href="http://www.amazon.com/gp/product/B00XQBYXVW?*Version*=1&amp;*entries*=0"><span
+class="calibre125">http://www.amazon.com/gp/product/B00XQBYXVW?*Version*=1&amp;*entries*=0</span></a></p>
+<p><span class="calibre124"> </span></p>
+<p><img src="images/00043.jpeg" class="calibre127" /></p>
+<div id="part0000_split_051.html_calibre_pb_141" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_052.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<ol start="3" type="1">
+<li><span class="calibre124"> </span><span class="calibre59">Python
+Programming: Getting started FAST With Learning of Python Programming
+Basics in No Time.</span></li>
+</ol>
+<p><a
+href="http://www.amazon.com/gp/product/B00WUNSH6Y?*Version*=1&amp;*entries*=0"><span
+class="calibre125">http://www.amazon.com/gp/product/B00WUNSH6Y?*Version*=1&amp;*entries*=0</span></a></p>
+<p><span class="calibre124"> </span></p>
+<p><img src="images/00044.jpeg" class="calibre129" /></p>
+<div id="part0000_split_052.html_calibre_pb_143" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_053.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre130"> </span></p>
+<ol start="4" type="1">
+<li><span class="calibre59">ANDROID PROGRAMMING: Complete Introduction
+for Beginners -Step By Step Guide How to Create Your Own Android App
+Easy! </span></li>
+</ol>
+<p><a
+href="http://www.amazon.com/gp/product/B00WPK68IQ?*Version*=1&amp;*entries*=0"><span
+class="calibre131">http://www.amazon.com/gp/product/B00WPK68IQ?*Version*=1&amp;*entries*=0</span></a></p>
+<p><img src="images/00045.jpeg" class="calibre133" /></p>
+<div id="part0000_split_053.html_calibre_pb_145" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_054.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre130"> </span></p>
+<ol start="5" type="1">
+<li><span class="calibre135">                       </span><span
+class="calibre27">ANDROID GAME PROGRAMMING: COMPLETE INTRODUCTION FOR
+BEGINNERS: STEP BY STEP GUIDE HOW TO CREATE YOUR OWN ANDROID APP
+EASY!</span></li>
+</ol>
+<p><a
+href="http://www.amazon.com/gp/product/B011R2H2JQ?*Version*=1&amp;*entries*=0"><span
+class="calibre131">http://www.amazon.com/gp/product/B011R2H2JQ?*Version*=1&amp;*entries*=0</span></a><span
+class="calibre11"> </span></p>
+<p><img src="images/00046.jpeg" class="calibre137" /></p>
+<div id="part0000_split_054.html_calibre_pb_147" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_055.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<ol start="6" type="1">
+<li><span class="calibre26">DOCKER: Everything You Need to Know to
+Master Docker </span><span class="calibre130">(Docker Containers,
+Linking Containers, Whalesay Image, Docker Installing on Mac OS X and
+Windows OS)</span></li>
+</ol>
+<p><span class="calibre130"> </span></p>
+<p><a
+href="http://www.amazon.com/gp/product/B013X2RPT0?*Version*=1&amp;*entries*=0"
+class="calibre19"><span
+class="calibre22">http://www.amazon.com/gp/product/B013X2RPT0?*Version*=1&amp;*entries*=0</span></a><span
+class="calibre130"> </span></p>
+<p><span class="calibre130"> </span></p>
+<p><img src="images/00047.jpeg" class="calibre141" /></p>
+<div id="part0000_split_055.html_calibre_pb_149" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_056.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<ol start="7" type="1">
+<li><span class="calibre59">Docker: Docker Guide for Production
+Environment (Programming is Easy Book 8)</span></li>
+</ol>
+<p><span class="calibre130"> </span></p>
+<p><a
+href="http://www.amazon.com/gp/product/B01452V9IA?*Version*=1&amp;*entries*=0"
+class="calibre19"><span
+class="calibre22">http://www.amazon.com/gp/product/B01452V9IA?*Version*=1&amp;*entries*=0</span></a></p>
+<p><span class="calibre130"> </span></p>
+<p><img src="images/00048.jpeg" class="calibre142" /></p>
+<div id="part0000_split_056.html_calibre_pb_151" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_057.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<ol start="8" type="1">
+<li><span class="calibre143">Excel VBA Programming: Learn Excel VBA
+Programming FAST and EASY! (Programming is Easy Book 9)</span></li>
+</ol>
+<p><span class="calibre59"> </span></p>
+<p><a
+href="http://www.amazon.com/gp/product/B014DIPGVW?*Version*=1&amp;*entries*=0"
+class="calibre19"><span
+class="calibre22">http://www.amazon.com/gp/product/B014DIPGVW?*Version*=1&amp;*entries*=0</span></a></p>
+<p><span class="calibre130"> </span></p>
+<p><img src="images/00049.jpeg" class="calibre144" /></p>
+<div id="part0000_split_057.html_calibre_pb_153" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_058.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre59">9. VAGRANT: Make Your Life Easier With
+VAGRANT. Master VAGRANT FAST and EASY! (Programming is Easy Book
+10)</span></p>
+<p><span class="calibre28"> </span></p>
+<p><a
+href="http://www.amazon.com/gp/product/B0151GIRCA?*Version*=1&amp;*entries*=0"
+class="calibre19"><span
+class="calibre22">http://www.amazon.com/gp/product/B0151GIRCA?*Version*=1&amp;*entries*=0</span></a></p>
+<p><span class="calibre130"> </span></p>
+<p><img src="images/00050.jpeg" class="calibre147" /></p>
+<div id="part0000_split_058.html_calibre_pb_155" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_059.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre27">10.</span><span class="calibre11">
+</span><span class="calibre27">SCALA PROGRAMMING: Learn Scala
+Programming FAST and EASY! (Programming is Easy Book 11)</span></p>
+<p><span class="calibre11"> </span><span
+class="calibre11">http://www.amazon.com/gp/product/B0151TBXEQ?*Version*=1&amp;*entries*=0</span></p>
+<p><img src="images/00051.jpeg" class="calibre150" /></p>
+<p><span class="calibre11"> </span></p>
+<div id="part0000_split_059.html_calibre_pb_157" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_060.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">11. </span><span class="calibre27">NODE. JS:
+Practical Guide for Beginners (Programming is Easy Book 12)</span></p>
+<p><a
+href="http://www.amazon.com/gp/product/B01588CXAS?*Version*=1&amp;*entries*=0"><span
+class="calibre131">http://www.amazon.com/gp/product/B01588CXAS?*Version*=1&amp;*entries*=0</span></a></p>
+<p><img src="images/00052.jpeg" class="calibre152" /></p>
+<div id="part0000_split_060.html_calibre_pb_159" class="calibre15">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_061.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre11">12. </span><span class="calibre27">IOS 8 APP
+DEVELOPMENT. Develop Your Own App FAST and EASY!</span></p>
+<p><span
+class="calibre27">http://www.amazon.com/gp/product/B015CMEJVQ?*Version*=1&amp;*entries*=0</span><img
+src="images/00053.jpeg" class="calibre153" /></p>
+<p><span class="calibre27"> </span></p>
+</div>
