@@ -1,0 +1,346 @@
+name: LINUX COMMAND LINE
+name_cn: Linux 命令行入门指南
+slug: linux-command-line
+toc:
+- - '#'
+  - Linux 命令行入门指南
+- - '#'
+  - 第 2 章. Linux 环境变量
+- - '#'
+  - 如何查找 Linux 系统的环境变量
+- - '##'
+  - 登录 Shell (Login Shell)
+- - '##'
+  - /etc/profile
+- - '##'
+  - .bash_profile
+- - '##'
+  - 交互式 Shell (Interactive Shell)
+- - '##'
+  - 虚拟控制台 (VIRTUAL CONSOLES)
+- - '#'
+  - 第 4 章。关于文件的更多知识
+- - '#'
+  - 第 6 章 启动与关机
+- - '##'
+  - 概述
+- - '##'
+  - 本节涵盖的命令：
+- - '##'
+  - 关闭系统。
+- - '##'
+  - 关机系统。
+- - '##'
+  - 重启系统。
+- - '##'
+  - 停止系统运行。
+- - '##'
+  - 本节使用的术语表：
+- - '###'
+  - Init (初始化程序)
+- - '###'
+  - Runlevel (运行级别)
+- - '###'
+  - Service (服务)
+- - '##'
+  - shutdown
+- - '##'
+  - poweroff
+- - '##'
+  - reboot
+- - '##'
+  - halt
+- - '##'
+  - telinit
+- - '##'
+  - runlevel
+- - '##'
+  - service
+- - '##'
+  - service ssh stop
+- - '##'
+  - service ssh start
+- - '##'
+  - service ssh restart
+- - '##'
+  - service ssh status
+- - '##'
+  - sysv-rc-conf
+- - '##'
+  - sysv-rc-conf --level 2345 apache off
+- - '##'
+  - sysv-rc-conf --list apache2
+- - '##'
+  - sysv-rc-conf --level 2345 apache2 on
+- - '##'
+  - sysv-rc-conf --list apache2
+- - '###'
+  - 使用 `sysv-rc-conf` 命令在命令行管理服务
+- - '###'
+  - '`chkconfig`'
+- - '##'
+  - chkconfig -l
+- - '####'
+  - 使用 `chkconfig` 命令列出服务配置
+- - '##'
+  - chkconfig -l apache2
+- - '####'
+  - 使用 `chkconfig` 命令列出特定服务
+- - '##'
+  - chkconfig -s apache2 off 2345
+- - '##'
+  - chkconfig -l apache2
+- - '##'
+  - chkconfig -s apache2 on 2345
+- - '##'
+  - chkconfig -l apache2
+- - '####'
+  - 使用 `chkconfig` 命令管理服务
+- - '###'
+  - '`rc-status`'
+- - '##'
+  - rc-status
+- - '####'
+  - '`rc-status` 命令的输出'
+- - '###'
+  - '`rc-update`'
+- - '##'
+  - rc-update show
+- - '####'
+  - 使用 `rc-update` 命令显示运行级别配置
+- - '##'
+  - rc-update add sshd default
+- - '##'
+  - rc-update del sshd default
+- - '####'
+  - 使用 `rc-update` 向默认级别添加和移除服务
+- - '###'
+  - '`lssrc`'
+- - '####'
+  - 使用 `lssrc` 命令列出服务配置
+- - '##'
+  - chkconfig -l apache2
+- - '####'
+  - 使用 `lssrc` 命令列出特定服务
+- - '##'
+  - chkconfig -s apache2 off 2345
+- - '##'
+  - chkconfig -l apache2
+- - '##'
+  - chkconfig -s apache2 on 2345
+- - '##'
+  - chkconfig -l apache2
+- - '####'
+  - 使用 `lssrc` 命令管理服务
+- - '##'
+  - svcs
+- - '##'
+  - '`svcs` 常见用法示例'
+- - '##'
+  - svcadm
+- - '##'
+  - svcadm enable sendmail
+- - '##'
+  - svcadm disable sendmail
+- - '##'
+  - svcadm restart sendmail
+- - '##'
+  - '`svcadm` 常见用法示例'
+- - '#'
+  - 第 7 章 Linux Shell 编程
+- - '##'
+  - 用于决策的 If-else-fi
+- - '#'
+  - 第 8 章：网络
+- - '##'
+  - 什么是 IP 地址？
+- - '###'
+  - 4. 读取文件
+- - '###'
+  - 5. 读取文件的任意行并赋值给变量
+- - '###'
+  - 6. 提取 tar 归包
+- - '###'
+  - 7. 查找两个文件中共同行的数
+- - '###'
+  - 8. 随机化文件的行
+- - '###'
+  - 9. 求特定列的和
+- - '#'
+  - 第 10 章. 文件共享命令
+- - '##'
+  - Samba
+- - '##'
+  - FTP
+- - '###'
+  - 在 Ubuntu 和 Debian 上安装 FTP 服务器
+- - '###'
+  - 在 Fedora 上安装 FTP 服务器
+- - '###'
+  - 防火墙
+- - '####'
+  - Ubuntu 和 Debian
+- - '####'
+  - 'Fedora '
+- - '###'
+  - FTP 客户端
+- - '####'
+  - 连接到服务器
+- - '####'
+  - 被动模式
+- - '####'
+  - 帮助
+- - '####'
+  - 列出远程文件
+- - '####'
+  - 列出本地文件
+- - '####'
+  - 当前远程目录
+- - '####'
+  - 当前本地目录
+- - '####'
+  - 更改远程目录
+- - '####'
+  - 更改本地目录
+- - '##'
+  - '获取文件 '
+- - '##'
+  - 上传文件
+- - '##'
+  - 退出 FTP
+- - '##'
+  - SFTP
+- - '##'
+  - HTTP/HTTPS
+- - '##'
+  - NFS
+- - '###'
+  - Ubuntu 和 Debian 服务器
+- - '###'
+  - 'Fedora 服务器  '
+- - '###'
+  - 防火墙
+- - '####'
+  - Ubuntu 和 Debian
+- - '####'
+  - Fedora
+- - '####'
+  - /etc/exports
+- - '###'
+  - NFS 客户端
+- - '####'
+  - Ubuntu 和 Debian
+- - '####'
+  - Fedora
+- - '####'
+  - mount
+- - '###'
+  - Fedora 服务器
+- - '###'
+  - 防火墙
+- - '####'
+  - Ubuntu 和 Debian
+- - '####'
+  - Fedora
+- - '####'
+  - 配置 Samba 密码
+- - '#####'
+  - '`/etc/samba/smb.conf`'
+- - '####'
+  - Ubuntu 和 Debian
+- - '####'
+  - Fedora
+- - '###'
+  - 连接到 Samba 服务器
+- - '####'
+  - Linux
+- - '#####'
+  - Ubuntu 和 Debian
+- - '#####'
+  - Fedora
+- - '#####'
+  - Ubuntu 和 Debian
+- - '#####'
+  - Fedora
+- - '####'
+  - Fstab
+- - '#####'
+  - 用户文件
+- - '#####'
+  - Windows
+- - '##'
+  - 从文件获取输入
+- - '##'
+  - 将命令输出到另一个文件
+- - '##'
+  - 将错误保存到文件中
+- - '##'
+  - 列出/显示文件
+- - '##'
+  - 创建、删除、移动、复制、重命名
+- - '###'
+  - 删除文件夹
+- - '###'
+  - 重命名文件和文件夹
+- - '##'
+  - 挂载驱动器 (Mounting Drives)
+- - '#'
+  - 第 15 章 进程 (The Processes)
+- - '##'
+  - 基础知识
+- - '###'
+  - 多用户与多任务
+- - '##'
+  - 不同类型的进程
+- - '###'
+  - 交互式进程 (Interactive Processes)
+- - '##'
+  - 自动进程
+- - '##'
+  - 守护进程 (Daemons)
+- - '##'
+  - 启动过程
+- - '###'
+  - 步骤
+- - '##'
+  - GRUB 的不同特性
+- - '##'
+  - INIT
+- - '##'
+  - 关机
+- - '##'
+  - 如何管理进程
+- - '###'
+  - 管理员的任务
+- - '##'
+  - 进程需要多少时间？
+- - '##'
+  - 性能
+- - '##'
+  - 负载
+- - '##'
+  - 优先级
+- - '##'
+  - CPU 资源
+- - '##'
+  - 用户
+- - '##'
+  - 可视化工具
+- - '##'
+  - 列出和显示信息
+- - '##'
+  - 在前台和后台运行进程
+- - '##'
+  - 杀死进程
+- - '#'
+  - 第 16 章. 让 Linux 更安全
+- - '###'
+  - 影子密码 (Shadow Passwords)
+- - '###'
+  - PAM (可插身份模块)
+- - '##'
+  - 配置默认权限
+- - '##'
+  - 关注设置用户 ID (User ID) 的权限
+- - '#'
+  - 结论

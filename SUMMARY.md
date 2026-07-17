@@ -278,6 +278,7 @@
 +   [Linux 线索](docs/linux-clues/README.md)
 +   [Linux 集群构建与维护指南](docs/linux-clustering-building-and-maintaining-linux-clusters/README.md)
 +   [Linux 命令初学者指南：用简单方法学习 Linux 命令、标志和选项](docs/linux-command-for-beginners-learn-linux-commands-flags-and-o/README.md)
++   [Linux 命令行入门指南](docs/linux-command-line/README.md)
 +   [Linux 命令行：学习 Linux 命令和 Shell 脚本初学者指南](docs/linux-command-line-beginners-guide-to-learn-linux-commands-a/README.md)
 +   [Linux 命令行简易：面向初学者和中级者的 Linux 命令实用分步指南](docs/linux-command-line-made-easy-a-practical-step-by-step-guide-/README.md)
 +   [Linux 调试、反汇编与逆向工程](docs/linux-debugging-dissasseblining-reversing/README.md)
