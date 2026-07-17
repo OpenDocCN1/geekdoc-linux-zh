@@ -280,6 +280,7 @@
 +   [Linux 命令初学者指南：用简单方法学习 Linux 命令、标志和选项](docs/linux-command-for-beginners-learn-linux-commands-flags-and-o/README.md)
 +   [Linux 命令行入门指南](docs/linux-command-line/README.md)
 +   [Linux 命令行：学习 Linux 命令和 Shell 脚本初学者指南](docs/linux-command-line-beginners-guide-to-learn-linux-commands-a/README.md)
++   [Linux 命令行：涵盖所有核心 Linux 命令的参考指南（第3版）：Linux 书籍与 Linux 内核](docs/linux-command-line-cover-all-essential-linux-commands-a-refe/README.md)
 +   [Linux 命令行简易：面向初学者和中级者的 Linux 命令实用分步指南](docs/linux-command-line-made-easy-a-practical-step-by-step-guide-/README.md)
 +   [Linux 调试、反汇编与逆向工程](docs/linux-debugging-dissasseblining-reversing/README.md)
 +   [Linux 入门指南](docs/linux-essentials/README.md)

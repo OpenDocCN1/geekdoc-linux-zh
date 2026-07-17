@@ -1,0 +1,722 @@
+- "# Linux 命令行：涵盖所有核心 Linux 命令的参考指南（第3版）：Linux 书籍与 Linux 内核\n\n\n\n![](img/image_rsrc4RW.jpg)\n\
+  \n\n\n\n\n\n## 关于作者：Ray Yao 团队\n- 美国 Zend 认证 PHP 工程师\n- 美国 Sun 认证 JAVA 程序员\n- 美国\
+  \ Oracle 认证 SCWCD 开发者\n- 美国 CompTIA 认证 A+ 专业人士\n- 美国 Microsoft 认证 ASP. NET 专家\n\
+  - 美国 Microsoft 认证 MCP 专业人士\n- 美国 Microsoft 认证 TECHNOLOGY 专家\n- 美国 CompTIA 认证 NETWORK+\
+  \ 专业人士\n\n- [www.amazon.com/author/ray-yao](http://mybook.to/yaowining)\n- [Ray\
+  \ Yao 编写的平装书籍](https://geni.us/ray-yao)\n- [C# 速查表](https://author.to/C_Sharp_Cheat_Sheet)\n\
+  - [C++ 速查表](https://mybook.to/C_Plus_cheat_sheet)\n- [JAVA 速查表](https://author.to/Java_Cheat_Sheet)\n\
+  - [JavaScript 速查表](https://mybook.to/JavaScript_cheat_sheet)\n- [PHP MySQL 速查表](https://mybook.to/PHP_cheat_sheet)\n\
+  - [Python 速查表](https://author.to/Python_Cheat_Sheet)\n- [Html Css 速查表](https://mybook.to/Html_Css_cheat_sheet)\n\
+  - [MySQL 速查表](https://geni.us/MySQL_chsh_paperback)\n- [SQL 速查表](https://geni.us/SQL_chsh_paperback)\n\
+  - [Linux 命令行](http://mybook.to/Linux_Command_Line)\n- [Ray Yao 编写的 Kindle 电子书](https://geni.us/ray-yao)\n\
+  \n*(注：每份速查表包含包含 300 个示例、300 多个输出和 300 多个解释。)*\n\n## 关于本书\n本书是一本快速学习 Linux 命令的参考指南，这些命令被\
+  \ Linux 管理员或初学者常用。书中涵盖了所有核心 Linux 命令及其操作、示例和解释。它还包含了 Linux 帮助命令、符号、快捷键、运行级别和 Vi\
+  \ 命令。通过本书，你可以轻松学习到：\n\n- 如何运行所有核心 Linux 指令。\n- 如何复制、移动和删除文件及目录。\n- 如何创建、删除和管理用户及组。\n\
+  - 如何访问 Linux 服务器并使用 `SSH` 命令。\n- 如何操作和更改运行级别。\n- 如何通过帮助命令在命令行中导航。\n- 如何比较文件、查找文件、处理文件内容。\n\
+  - 如何启动、停止和调度任务。\n- 如何管理文件、目录的权限和所有权。\n- 如何跨网络连接与网络通信。\n- 如何通过网络传输文件、发送网络消息。\n- 以及更多技能……\n\
+  \n书中有一个包含所有常用 Linux 指令的长表，这可以为你的工作或学习提供极大帮助。你可以快速学习所有核心 Linux 指令。\n\n**注意：** 本书是一份参考指南，可能并不适合完全全新的\
+  \ Linux 初学者。\n\n\n# 第 01 章\n## Linux 简介\n\n### 关于 Linux 操作系统\nLinux 是一种类 Unix 操作系统，在自由和开源软件开发与分发模式下构建，并大多符合\
+  \ POSIX 标准。\n\nLinux 通常作为服务器，因为其稳定性和安全性。\n\nLinux 操作系统在 IT 行业极具优势：\n- Linux 程序大多免费下载。\n\
+  - 它们频繁更新且免费！\n- 许多功能比 Windows 更好。某些功能在 Windows 中甚至不存在！\n\n为了更好地了解 Linux，我们需要回到 1984\
+  \ 年。\n\n#### 1984 年\n当我们回到 1984 年时，计算机科学的发展还并不完美。微软刚刚发布了第一个操作系统：`MS-DOS`，它通过命令行运行。\n\
+  \n#### 但是，当时 MS-DOS 是唯一的吗？\n#### 不！当时存在另一个操作系统，但公众较少知道。\n\n那个系统被称为 `Unix`。它比 `MS-DOS`\
+  \ 强大得多，但也复杂，这解释了为什么只有 IT 专业人士才能使用 `Unix`。\n\n从图形上看，`Unix` 类似于 `MS-DOS`，它们都显示为带有白色文本的黑色屏幕，并通过命令行运行。\n\
+  \n#### Linux 的诞生\n1991 年，赫尔辛基大学的学生 Linus Torvalds 开始创建他自己的自由操作系统。这个系统被称为 Linux，指的是其创造者的名字（Linux\
+  \ 是 Linus 和 UNIX 的缩写）。\n\n#### 如今三大操作系统\n`Mac OS` 和 Linux 均基于 `UNIX`，这是这两个操作系统的祖先。而来自\
+  \ `MS-DOS` 的 `Windows OS` 是一个独立分支。\n\n#### Linux 发行版\nLinux 发行版（简称 distro）是一个基于\
+  \ Linux 内核的软件包集合和软件包管理系统的操作系统。最为人知的发行版有 RedHat、SUSE、Debian、Mandriva、Slackware 和\
+  \ Ubuntu。你可以在不同的 Linux 发行版中找到大量软件。\n\n\n\n\n\n无论你安装哪种发行版，你都会获得一个 Linux 操作系统以及与其他系统的兼容性。大多数发行版在处理上都或多简单。\n\
+  \n## 各种现有发行版\n\n有许多不同的 Linux 发行版。很难选择吗？你一定会说：确实。起初并不清楚该选哪一个……尤其是它们都是免费的！别担心；我会帮助你做出选择。\n\
+  \n我不会列出所有的现有发行版，但这里至少有主要的几个：\n\n- **Slackware**：最老的 Linux 发行版之一。它今天仍然存在！\n- **Mandriva**：由一家法国公司出版，简单易；\n\
+  - **RedHat**（红帽）：由一家美国公司出版，该发行版在世界上广为人知，特别是在服务器领域；\n- **SUSE**：由 Novell 公司出版；顺便问一下，你知道著名的\
+  \ Novell Networking（新潮流）吗？\n- **Debian**：由独立开发者而非公司管理。这是最受欢迎的发行版之一。\n\n正如我所说，无论你选择哪种发行版（distribution\
+  \ 的缩写），你拥有的都是 Linux 操作系统。\n\n## Linux 操作系统--文件系统\n\n### 什么是文件系统？\n\n“文件系统”一词有两个含义：首先，指的是存储在某些特定目录中的组织文件集合。其次，它指的是用于在硬盘分区或外部磁盘上组织文件的低级数据结构。\n\
+  \nLinux 文件系统组织成由目录组成的逻辑树结构。下面的插图描述了一个文件系统树：\n\n| | | `/dev` | | |\n|---|---|---|---|---|\n\
+  | | `/bin` | `/lib` | `/sbin` | |\n| `/boot` | `/initrd` | `/etc` | `/proc` | |\n\
+  | `/mnt` | `/tmp` | `/var` | `/opt` | `/usr` |\n| | `/root` | `/home` | | |\n| |\
+  \ | `/` | | |\n\n**解释：**\n\n- `/bin`：包含基本的命令行工具，持有的用于操作系统的系统二进制文件或程序，包含所有用户可用的命令。\n\
+  - `/boot`：包含 Linux 在计算机上启动所需的命令和文件，包括内核、启动加载程序以及定义系统启动时在屏幕上打印文本的文件。\n- `/Dev`：包含所有访问系统上各种硬件组件的设备文件。该目录用于表示系统上设备的特殊文件。\n\
+  - `/etc`：包含一组系统配置文件，用于管理系统初始化以及网络、服务、密码和子系统的配置参数……\n- `/home`：包含用户的数据文件。它是存放用户个人配置和数据文件的默认位置。\n\
+  - `/lib`：包含许多不同应用程序以及 Linux 内核所需的程序库。\n- `/mnt`：包含各种移动设备的挂载点。\n- `/opt`：包含加载到系统上的可选文件和包。\n\
+  - `/proc`：包含当前运行的所有内核相关进程。\n- `/root`：超级用户的家目录。\n- `/sbin`：包含系统管理命令，这些是系统二进制文件。\n\
+  - `/tmp`：包含普通用户创建的临时文件。\n- `/usr`：包含所有用户可用的程序和数据，这是一个带有许多子目录和文件的巨大目录。\n- `/var`：包含变量数据，如系统日志、打印队列文件和锁文件。\n\
+  - `/initrd`：仅包含一个文件，警告该文件夹不能删除。否则，Linux 系统将无法启动。\n\nLinux 操作系统的运行方式与 Windows 不同。Linux\
+  \ 文件系统的结构看起来像一棵树。\n\n文件系统是从像硬盘之类的存储设备上组织和管理文件的技术。文件系统通常由各种文件组成，分成称为目录。目录可以包含文件或额外的子目录。\n\
+  \n## 总结\n\n- Windows、Mac OS 和 Linux 是最流行的操作系统。\n- Linux 通常作为服务器运行，因为它的稳定性和安全性特性。\n\
+  - Linux 是一个免费操作系统，它的源代码（制造配方）是开放的，任何人都可以查看。\n- 如今，有许多不同的 Linux 版本，被称为发行版。\n- 文件系统，Linux\
+  \ 操作系统由各种 Linux 系统文件组成。\n\n# 第 02 章\n\n## 输入第一条命令\n\n亲爱的朋友们，大日子终于到了！你准备好在控制台中编写第一条命令了！\n\
+  \n好了，压力不大吧？\n\n## 我向你保证，我们将从简单的事情开始，熟悉控制台。我们将真正看到 ABC，新手的基础生存指南。\n\n## Linux 命令与参数\n\
+  \nLinux shell 是一个命令行解释器，或者为 Linux 操作系统和类 Linux 系统提供传统的用户界面。\n\nshell 识别许多 Linux\
+  \ 命令及其改变其行为的选项。Linux 命令的典型语法如下：\n\n```\ncommand --option argument\n```\n或\n```\n\
+  command parameter\n```\n（通常 `--option argument` 参数）\n\n例如：\n\n- 命令看起来像：`ls`, `cat`,\
+  \ `pwd`, `cp`, `mv`, `date`……\n- 参数看起来像：`-a`, `-l`, `-s`, `--all`, `--help`……\n\n\
+  **示例：**\n\n```\nls -a\n```\n\n**解释：**\n\n- `ls` 是一个命令，意思是“列出当前目录的内容”。\n- `-a` 是一个参数，意思是“所有”。\n\
+  - 结果：列出当前目录下的所有内容。\n\nLinux 命令可以在文本界面模式运行，也可以在 shell 终端窗口运行。\n\n### 命令提示符\n\n命令提示符是提示你输入命令的消息。命令提示符显示在每个命令之前。\n\
+  \n**示例：**\n\n```\nusername@hostname ~ $\n```\n\n```\nroot@hostname ~ #\n```\n\n\
+  ```\nuser >\n```\n\n**解释：**\n\n- `username@hostname ~ $`：第一个元素是你的用户名。这是你登录账户的用户。\n\
+  - `@`：这个符号表示“位于”。它是一个分隔符。\n- `hostname`：你正在工作的计算机名称。在我的例子中它被称为 hostname，但你可以在安装期间给它起任何名字。\n\
+  - `:` 这个符号没有特殊含义，它是一个分隔符。\n- `~`：意味着你处于家目录，Linux 中所谓的“home”等于 Windows 上的“我的文档”文件夹。我们将在下一章详细学习文件的操作。\n\
+  - `$`：这个符号非常重要；它显示你在机器上的权限级别。\n- `ls`：ls 是一个命令。（显示当前目录的内容）。\n\n关于 `$` 的更多细节：\n\n\
+  - 意味着你目前以具有有限权限的“普通”账户身份工作（“普通”账户的用户无法更改最重要的系统文件）。我的账户 `user014` 是一个权限有限的普通账户；\n\
+  \n如你所见，一旦你和命令提示符使用相同的语言，你就能理解它的意思了！\n\n此时，Linux 机器似乎在对你说：\n\n“欢迎，你是 user-linux 机器上的\
+  \ user014。你现在位于普通账户的家目录，拥有有限权限。你正在使用命令 `ls` 列出当前目录的内容。”\n\n关于 `root@hostname:~#whoami`\n\
+  \n**示例：**\n\n```\nroot@user-linux:~# whoami\n```\n\n**解释：**\n\n- `root`：意味着你以超级用户“root”账户身份工作。\n\
+  - `@`：这个符号表示“位于”。它是一个分隔符。\n- `user-linux`：你正在工作的计算机名称。在我的例子中它被称为 user-linux，但你可以在安装期间给它起任何名字。\n\
+  - `:` 这个符号没有特殊含义，它是一个分隔符。\n- `~`：那是你当前所在的文件夹。你可以在控制台中在文件夹之间导航，在输入每个命令之前始终提醒你身处哪里，这是非常有用的。\n\
+  \n\n\n\n\n符号 `~` 表示你正处于主目录，Linux 中所谓的“home”等同于 Windows 上的“我的文档”文件夹。我们将在下一章详细学习 Linux\
+  \ 中文件的操作。\n\n`#` 表示你正在以“root”账户的超级用户（super user）身份工作。\n\n`whoami`：`whoami` 是一个命令。（显示当前用户名）。\n\
+  \n## 关于 `#` 的更多细节\n\n`#`:意味着你正在以“root”账户的超级用户身份工作。`root` 是管理员，拥有极大的权力，可以对计算机上的其他用户账户进行任何操作（甚至是摧毁它！）。我们稍后将详细查看\
+  \ `root` 的工作原理；\n\n此时，Linux 机器似乎在向你打招呼：\n\n“欢迎，你是 user-linux 机器上的一个超级用户。你目前处于 root\
+  \ 账户的主目录，并拥有超级用户权限。你正在使用命令 `whoami` 来显示当前用户名。”\n\n## 关于 `user>pwd`\n\n示例：\n\n```bash\n\
+  user>pwd\n```\n\n解释：\n\n`user>`：是一个自定义的命令提示符。\n\n`pwd`：`pwd` 是一个命令。（打印工作目录）。\n\n\
+  你可以自定义像 `user>` 这样的命令提示符。当然，在你熟悉了大多数 Linux 命令编程后，将能够自定义 shell 提示符。\n\n此时，Linux 机器似乎在向你打招呼：\n\
+  \n“欢迎，你是 user-linux 机器上的一个用户。你正在使用自定义的命令提示符。你目前处于主目录并拥有有限的用户权限。你正在使用 `pwd` 命令打印工作目录。”\n\
+  \n命令提示符可以完全配置。如果你发现它太长，可以缩短它；如果显示的信息不够，可以延长它。从理论上讲，你可以在提示符中放入任何想要的信息，例如当前时间。\n\n\
+  ## 关于 Linux 命令\n\nShell 命令的典型语法如下：\n\n```\ncommand   option   argument\n```\n或\n\
+  \n```\ncommand   parameter\n```\n\n让我们来看一些 Linux 命令示例。\n\n示例：\n\n输入 `date` 并按回车键。\n\
+  \n```bash\nuser2014 @ user-linux: ~ $ date\nMonday, September 20, 2010, 3:39:51\
+  \ p.m. (UTC-0200)\n```\n\n解释：\n\n第一行包含命令提示符和我输入的命令。在这里，`date` 是一个命令。\n\n第二行是计算机对该命令的响应：我刚刚请求了日期和时间！\n\
+  \n## 关于参数（Parameters）\n\n参数是输入命令后面的选项。命令和参数之间用空格分隔，如下：\n\n```bash\nuser2014 @ user-linux:\
+  \ ~ $ command parameters\n```\n\n参数本身可以包含空格、字母、数字……以及一些其他内容。参数的格式并没有真正的规则，但幸运的是，程序员们采用了一种“约定”，以便我们能够识别不同类型的参数。\n\
+  \n### 短参数（单字母）\n\n短参数由一个连字符开头的单个字母组成。\n\n例如：\n\n- `-d`\n- `-l`\n- `-a`\n\n如果我们必须给出几个参数，可以这样写：\n\
+  \n`-d -a -U -h`\n\n或者更短的：\n\n`-daUh`\n\n注意：不同命令中的短参数含义不同。\n\n示例：\n\n- `ls -t` (`-t`\
+  \ 表示“按时间戳列出”）\n- `eject -t` (`-t` 表示“关闭托盘”）\n- `chfn -f` (`-f` 表示“通过指纹名称更改信息”）\n\
+  - `cut -f` (`-f` 表示“按字段编号切割文本”）\n- `ps -f` (`-f` 表示“显示完整信息的进程状态”）\n\n注意！参数是对大小敏感的（大写/小写）。如果你输入\
+  \ `-u`，它的含义通常与 `-U` 不同。\n\n让我们用 `ls` 命令进行测试，并跟上参数 `-a`。（`-a` 表示“所有”）：\n\n示例：\n\n\
+  ```bash\nuser2014@user-linux: ~ $ ls -a.\n.gconfd .mozilla-thunderbird .. gimp-2.2\
+  \ .nautilus .bash_history .gksu.lock .profile .bash_logout .gnome .recently-used\
+  \ .bashrc .gnome2 .recently-used.xbel .config .gnome2_private .ssh Desktop .gstreamer-\
+  \ .sudo_as_admin_successful .dmrc .gtkrc 0.10-1.2-gnome2 .themes .esd_auth .ICEauthority\
+  \ .thumbnails .evolution .icons .Trash Examples .lesshst tutorials .face .local\
+  \ .update-manager-core .fontconfig .macromedia .update-notifier .gaim. metacity\
+  \ .Xauthority .gconf .mozilla .xsession-errors\n```\n\n屏幕显示当前目录下的所有文件，甚至是隐藏文件。通常，主目录包含许多隐藏文件，它们通常是程序的配置文件。\n\
+  \n### 长参数（多个字母）\n\n长参数由两个连字符开头的几个字母组成，如下：\n\n```\n--long parameter\n```\n\n例如：\n\
+  \n- `--all`\n`--all` 是长参数，意味着所有内容或所有事物。\n\n- `--version`\n`--version` 是长参数，意味着命令的版本。\n\
+  \n- `--help`\n`--help` 是长参数，意味着获取当前命令的帮助。\n\n如果你想将多个功能参数放在一起，它们之间会添加空格：\n\n```\n\
+  Command --long parametre1 --long parametre2\n```\n\n你也可以以这种方式结合长短参数：\n\n```\nCommand\
+  \ -daUh --All\n```\n\n注意，某些参数不提供短版本和长版本之间的选择。\n\n让我们用 `--all` 参数测试 `ls` 命令，它的意思是“所有事物”：\n\
+  \n示例：\n\n```bash\nuser2014@user-linux: ~ $ ls --all.\n.gconfd .mozilla-thunderbird\
+  \ .. gimp-2.2 .nautilus .bash_history .gksu.lock .profile .bash_logout .gnome .recently-used\
+  \ .bashrc .gnome2 .recently-used.xbel .config .gnome2_private .ssh Desktop .gstreamer-\
+  \ .sudo_as_admin_successful .dmrc .gtkrc 0.10-1.2-gnome2 .themes .esd_auth .ICEauthority\
+  \ .thumbnails .evolution .icons .Trash Examples .lesshst tutorials .face .local\
+  \ .update-manager-core .fontconfig .macromedia .update-notifier .gaim. metacity\
+  \ .Xauthority .gconf .mozilla .xsession-errors\n```\n\n如所示，`--all` 和 `-a` 是同义词，这说明命令提供了两种使用参数的方法：短版本和长版本。\n\
+  \n## 命令和参数示例\n\n好的！让我们进一步查看这些命令。\n\n`su -l`：切换用户\n\n示例：\n\n```bash\nuser>su -l\n\
+  ```\n(su 将以 root 用户身份登录，l 是一个表示“登录”的参数)\n\n`ls -l`：列出详细内容\n\n示例：\n\n```bash\nuser>ls\
+  \ -l\n```\n(ls 显示当前目录的内容。l 是表示“详细”的参数)\n\n`ls -a`：列出所有内容\n\n示例：\n\n```bash\nuser>ls\
+  \ -a\n```\n(ls 显示当前目录的内容。a 是表示“所有”的隐藏文件的参数。)\n\n`rm -ri`：删除目录及其内容\n\n示例：\n\n```bash\n\
+  user>rm -ri NonEmptyDir\n```\n(rm 删除目录。ri 是表示非空目录的参数。NonEmptyDir 是一个目录名。)\n\n`w\
+  \ -s`：显示每个用户的当前进程\n\n示例：\n\n```bash\nuser>w -s\n```\n(w 显示当前进程。s 是表示“摘要”的参数)\n\n\
+  `usermod -l`：修改现有用户账户\n\n示例：\n\n```bash\nuser>usermod -l oldname newname\n```\n\
+  (usermod 修改现有用户账户。l 是表示“登录名”的参数)\n\n## 虚拟控制台 (Virtual Console)\n\n### 什么是虚拟控制台？\n\
+  \n虚拟控制台是指输入设备和输出设备的接口，旨在让你与系统进行交互。\n\nLinux 有 7 个虚拟控制台，你可以使用 `Ctrl+Alt+F1` 到 `F7`\
+  \ 在之间切换。\n\n`Ctrl+Alt+F1~F6`：切换虚拟控制台 1~6\n\n`Ctrl+Alt+F7`：进入图形桌面，这是默认虚拟控制台。\n\n\
+  1. 当用户是普通用户时，使用：\n`username@hostname:~$ command parameter`\n\n2. 当用户是超级用户时，使用：\n\
+  `root@hostname:~# command parameter`\n\n3. 当 shell 提示符被自定义后，使用：\n`User> command\
+  \ parameter`\n\n4. Linux 命令：`ls, pwd, su, whoami, loginname, rm, exit…`\n\n5. 命令参数：`-a,\
+  \ -ri, -l,--all, --help…`\n\n6. 虚拟控制台：让你同时激活多个接口 shell 会话。\n\n\n\n\n\n## `su`: 将普通用户切换为\
+  \ root 超用户\n\n示例：\n```\nuser2014@user-linux:~$ su –l\n```\n(`su`: 将普通用户切换为 root\
+  \ 超用户。`–l`: 输入 root 密码并登录。注意：登录为超级用户后，`$` 将变为 `#`。）\n\n## `loginname`: 显示登录名\n\n\
+  示例：\n```\nroot@user-linux: ~ # loginname\n```\n(`loginname`: 显示登录名，输出为“root”。注意：登录为超级用户后，`$`\
+  \ 变为 `#`。）\n\n## `exit`: 退出 shell \n\n示例：\n```\nroot@user-linux:~# exit\n```\n(`exit`:\
+  \ 退出 shell。在此处：退出超级用户模式，并回到普通用户模式。注意：退出超级用户后，`#` 将变为 `$`。）\n\n## `whoami`: 显示当前用户名\n\
+  \n示例：\n```\nuser2014@user-linux: ~ $ whoami\n```\n(`whoami`: 显示当前用户名，输出为“user2014”。）\n\
+  \n## `hostname`: 显示当前主机名\n\n示例：\n```\nuser2014@user-linux: ~ $ hostname\n```\n(`hostname`:\
+  \ 显示当前主机名，输出为“user-linux”。）\n\n## `sudo`: 允许具有适当权限的用户以用户的身份执行命令，例如超级用户\n\n示例：\n\
+  ```\nroot> sudo -u andy ls /home/mydir\n```\n(以用户 andy 的身份列出 `/home/mydir` 目录的内容。`-u`:\
+  \ 指定用户)\n\n示例：\n```\nroot> sudo –v\n```\n(`-v`: 刷新认证超时，下次 `sudo` 命令将不需要密码。）\n\n\
+  示例：\n```\nroot> sudo -k\n```\n(`-k`: 过期认证超时，下次 `sudo` 命令将需要密码。）\n\n## 总结\n- `su`:\
+  \ 将普通用户切换为 root 超用户\n- `loginname`: 显示登录名\n- `exit`: 退出 shell。\n- `whoami`: 显示当前用户名\n\
+  - `hostname`: 显示当前主机名\n- `sudo`: 允许具有适当权限的用户以用户的身份执行命令，例如超级用户。\n\n# 第 04 章：导航 At\
+  \ 命令\n\n- `pwd`: 打印工作目录。\n- `cd dir`: 切换目录。\n- `cd~`: 切换到家目录。\n- `cd..`: 切换到父目录。\n\
+  - `type`: 确定命令类型。\n\n### `pwd` 示例\n```\nuser> pwd\n```\n(`pwd`: 打印工作目录，输出为你的当前工作目录。）\n\
+  \n### `cd dir` 示例\n```\nuser> cd mydir\n```\n(`cd`: 切换目录到 mydir，输出为 mydir。）\n\n\
+  ### `cd~` 示例\n```\nuser> cd ~\n```\n(`cd~`: 切换到家目录，输出为家目录。）\n\n### `cd..` 示例\n```\n\
+  user> cd ..\n```\n(`cd..`: 切换到父目录，输出为父目录。）\n\n### `type` 示例\n```\nuser> type pwd\n\
+  ```\n(输出: `pwd` 是 shell 内置命令。)\n\n## 总结\n- `pwd`: 打印工作目录。\n- `cd`: 切换目录。\n- `cd~`:\
+  \ 切换到家目录。\n- `cd..`: 切换到父目录。\n- `type`: 确定命令类型。\n\n# 第 05 章：文件操作命令\n\n- `cp`: 复制文件\n\
+  - `mv`: 移动文件\n- `mv`: 重命名文件\n- `rm`: 删除文件\n- `rm –ri`: 删除非空目录\n- `vi`: 打开 vi 编辑器并编辑文件\n\
+  - `find`: 查找文件\n- `wc`: 显示文件字数\n- `file`: 描述文件类型\n- `ln`: 在两个文件之间创建链接\n- `ln -s`:\
+  \ 创建文件的符号链接\n- `readlink`: 显示符号链接的目标\n- `lpr`: 将文件发送到打印机\n- `lpq`: 显示打印队列。\n\n###\
+  \ `cp` 示例\n```\nuser> cp myfile /dir1\n```\n(`cp`: 将 `myfile` 复制到 `/dir1` 目录。）\n\
+  \n### `mv` 示例（移动）\n```\nuser> mv myfile /dir2\n```\n(`mv`: 将 `myfile` 移动到 `/dir2`\
+  \ 目录。）\n\n### `mv` 示例（重命名）\n```\nuser> mv myfile1 myfile2\n```\n(`mv`: 将 `myfiel1`\
+  \ 重命名为 `myfile2`。）\n\n### `rm` 示例\n```\nuser> rm myfile\n```\n(`rm`: 删除 `myfile`。）\n\
+  \n### `rm –ri` 示例\n```\nuser> rm –ri NonEmptyDir\n```\n(`rm`: 删除名为 `NonEmptyDir`\
+  \ 的目录。`-ri`: 删除包含内容的目录。）\n\n### `vi` 示例\n```\nuser> vi myfile.txt\n```\n(`vi`: 打开\
+  \ vi 编辑器并编辑 `myfile.txt`。）\n\n### `find` 示例\n```\nuser> find directory –type f –name\
+  \ myfile.txt -print\n```\n(`find`: 查找文件。`-type f`: 指定文件，`-name`: 指定文件名，`-print`:\
+  \ 打印）\n\n### `wc` 示例\n```\nuser> wc myfile.txt\n```\n(`wc`: 显示 `myfile.txt` 的字数。）\n\
+  \n### `file` 示例\n```\nuser> file myfile.txt\n```\n(`file`: 描述 `myfile.txt` 的类型。）\n\
+  \n### `ln` 示例\n```\nuser> ln dir1/file1.txt dir2/file2.txt\n```\n(`ln`: 在 `file1`\
+  \ 和 `file2` 之间创建链接。）\n\n### `ln -s` 示例\n```\nuser> ln –s dir1/file1.txt dir2/file2.txt\n\
+  ```\n(`ln-s`: 在 `file1` 和 `file2` 之间创建符号链接。`-s`: 符号链接允许给定文件同时出现在多个地方或多个名称下。例如，符号链接可以链接到目录。）\n\
+  \n### `readlink` 示例\n```\nuser> readlink dir2/file2.txt\n```\n(输出：`dir1/file1.txt`)\n\
+  \n### `lpr` 示例\n```\nuser> lpr myfile.txt\n```\n(`lpr`: 将 `myfile.txt` 发送到打印机。）\n\
+  \n### `lpq` 示例\n```\nuser> lpq\n```\n(`lpq`: 显示打印队列。）\n\n## 总结\n- `cp`: 复制文件\n-\
+  \ `mv`: 移动文件\n- `mv`: 重命名文件\n- `rm`: 删除文件\n- `rm –ri`: 删除非空目录\n- `vi`: 打开 vi 编辑器并编辑文件\n\
+  - `find`: 查找文件\n- `wc`: 显示文件字数\n- `file`: 描述文件类型\n- `ln`: 在两个文件之间创建链接\n- `ln -s`:\
+  \ 创建文件的符号链接\n- `readlink`: 显示符号链接的目标\n- `lpr`: 将文件发送到打印机\n- `lpq`: 显示打印队列。\n\n#\
+  \ 第 06 章：查看文件命令\n\n- `cat`: 查看文件内容\n- `cat | less`: 分页查看文件内容\n- `cat | more`: 分屏查看文件内容\n\
+  - `head`: 查看文件开头部分\n- `tail`: 查看文件末尾部分\n- `aspell`: 检查拼写\n- `cut`: 提取特定列\n- `paste`:\
+  \ 合并文件\n- `sort`: 排序文件\n- `stat`: 查看文件状态\n- `nl`: 为每行添加编号\n- `tr`: 转换字符\n- `tee`:\
+  \ 读取标准输出并写入文件\n\n`cat` 示例\n```\nuser> cat myfile.txt\n```\n(`cat`: 查看文件内容。）\n\n\
+  `cat | less` 示例\n```\nuser> cat myfile.txt | less\n```\n(`cat`: 查看文件内容，`| less`:\
+  \ 分页查看文件内容。）\n\n`cat | more` 示例\n```\nuser> cat myfile.txt | more\n```\n(`cat`:\
+  \ 查看文件内容，`| more`: 分屏查看文件内容。）\n\n`head` 示例\n```\nuser> head myfile.txt\n```\n(`head`:\
+  \ 查看文件开头部分。）\n\n`tail` 示例\n```\nuser> tail myfile.txt\n```\n(`tail`: 查看文件末尾部分。）\n\
+  \n`aspell` 示例\n```\nuser> aspell myfile.txt\n```\n(`aspell`: 检查拼写。）\n\n`cut` 示例\n\
+  ```\nuser> cut –f2 myfile.txt\n```\n(`cut`: 提取特定列，`-f2`: 指定第二列。）\n\n`paste` 示例\n\
+  ```\nuser> paste myfile1.txt myfile2.txt\n```\n(`paste`: 合并文件。）\n\n`sort` 示例\n```\n\
+  user> sort myfile.txt\n```\n(`sort`: 排序文件。）\n\n`stat` 示例\n```\nuser> stat myfile.txt\n\
+  ```\n(`stat`: 查看文件状态。）\n\n`nl` 示例\n```\nuser> nl myfile.txt\n```\n(`nl`: 为每行添加编号。）\n\
+  \n`tr` 示例\n```\nuser> tr 'a-z' 'A-Z' < myfile.txt\n```\n(`tr`: 转换字符。）\n\n`tee` 示例\n\
+  ```\nuser> cat myfile.txt | tee output.txt\n```\n(`tee`: 读取标准输出并写入文件。）\n\n\n\n\n\
+  \n`nl`: 显示文件的每行数字\n\nExample:\n\n```bash\nroot> nl myfile.txt\n```\n(output:\n……\n\
+  023  sld slwflflf gjo4ijg gj4jf9ej\n024  wz wg tjletj geg4t4y\n025  sjflew gjlgnu4g\
+  \ jgu675h dk9fh fmj6ju\n026  jf5hjd fjtjfj  d8gj1nfj,nuigrr ? rit\n……)\n\n`vi`:\
+  \ 使用 `vi` 编辑器或创建文本文件\n\nExample:\n\n```bash\nroot> vi myfile.txt\n```\n(`vi`: 用\
+  \ `vi` 编辑器打开 `myfile.txt`)\n\n`tr`: 转换文件中的文本\n\nExample:\n\n```bash\nroot> echo\
+  \ apple | tr “apple” “banana”\n```\n(output: banana)\n\n`tee`: 打印标准输出并写入文件\n\nExample:\n\
+  \n```bash\nRoot> sort file1.txt | tee file2.txt\n```\n(`sort file1.txt` 结果并写入 `file2.txt`)\n\
+  \n### Summary\n\n- `cat`: 显示文件内容\n- `cat | less`: 分页显示文件内容\n- `cat | more`: 分屏显示文件内容\n\
+  - `head`: 显示文件的开头部分\n- `tail`: 显示文件的末尾部分\n- `aspell`: 对文件进行拼写检查\n- `cut`: 显示文本文件中指定的列\n\
+  - `paste`: 合并并显示两个文件的内容\n- `sort`: 按字母顺序显示文本行\n- `stat`: 显示文件或目录的属性\n- `wc`: 显示文件的单词数\n\
+  - `file`: 测试文件类型\n- `touch`: 创建文件或修改文件时间戳\n- `nl`: 显示文件的每行数字\n- `vi`: 使用 `vi` 编辑器或创建文本文件\n\
+  - `tr`: 转换文件中的文本\n- `tee`: 打印标准输出并写入文件\n\n# 第 07 章\n\n## 文件比较命令\n\n`diff`: 显示两个文件之间的差异\n\
+  \n`cmp`: 逐字节比较两个文件\n\n`comm`: 按行比较两个文件\n\n`md5sum`: 创建 md5 校验和数字\n\n`cksum`: 创建\
+  \ crc 校验码\n\n`diff`: 显示两个文件之间的差异\n\nExample:\n\n```bash\nuser> diff myfile1.txt\
+  \  myfile2.txt\n```\n(`diff`: 显示两个文件之间的差异。)\n\n`cmp`: 逐字节比较两个文件\n\nExample:\n\n\
+  ```bash\nuser> cmp myfile1.txt  myfile2.txt\n```\n(`cmp`: 逐字节比较两个文件。)\n\n`comm`:\
+  \ 按行比较两个文件\n\nExample:\n\n```bash\nuser> comm myfile1.txt  myfile2.txt\n```\n(`comm`:\
+  \ 按行比较两个文件。)\n\n`md5sum`: 创建 md5 校验和数字\n\nExample:\n\n```bash\nuser> md5sum  myfile1.txt\n\
+  ```\n(output:  f7tkgu5orj1fjt8kelc2os95nd57jf8r  myfile1.txt.)\n\n`cksum`: 创建 crc\
+  \ 校验码\n\nExample:\n\n```bash\nuser> chsum  myfile2.txt\n```\n(output: 4658791048\
+  \  19  myfile2.txt.)\n\n### Summary\n\n- `diff`: 显示两个文件之间的差异\n- `cmp`: 逐字节比较两个文件\n\
+  - `comm`: 按行比较两个文件\n- `md5sum`: 创建 md5 校验和数字\n- `cksum`: 创建 crc 校验码\n\n# 第 08 章\n\
+  \n## 文本匹配命令\n\n`grep`: 显示所有包含指定字符串的行\n\n`egrep`: 显示所有包含指定字符串的行\n\n`uniq`: 显示文件中唯一的行\n\
+  \n`find`: 在指定目录中查找文件\n\n`look`: 显示与给定前缀匹配的单词\n\n`grep`: 显示所有包含指定字符串的行\n\nExample:\n\
+  \n```bash\nuser> grep  good  myfile.txt\n```\n(`grep`: 显示所有包含“good”字符串的行。)\n\n`egrep`:\
+  \ 显示所有包含指定字符串的行\n\nExample:\n\n```bash\nuser> egrep  excellent  myfile.txt\n```\n\
+  (`egrep`: 显示所有包含“excellent”字符串的行。)\n\n`uniq`: 显示文件中唯一的行\n\nExample:\n\n```bash\n\
+  user> uniq myfile.txt\n```\n(`uniq`: 显示 `myfile.txt` 中的唯一行。)\n\n`find`: 在指定目录中查找文件\n\
+  \nExample:\n\n```bash\nuser> find /mydir –type f myfile.txt -print\n```\n(`find`:\
+  \ 在目录中查找文件。\n`-type f`: 指定为文件\n`-print`: 打印)\n\n`look`: 显示与给定前缀匹配的单词\n\nExample:\n\
+  \n```bash\nUser> look ab\n```\n(output: aba, abb, abc, abd…)\n\n### Summary\n\n\
+  - `grep`: 显示所有包含指定字符串的行\n- `egrep`: 显示所有包含指定字符串的行\n- `uniq`: 显示文件中唯一的行\n- `find`:\
+  \ 在指定目录中查找文件\n- `look`: 显示与给定前缀匹配的单词\n\n# 第 09 章\n\n## 目录命令\n\n`mkdir`: 创建新目录\n\n\
+  `rmdir`: 删除空目录\n\n`basename`: 显示文件路径的最后部分\n\n`dirname`: 只显示目录路径\n\n`mkdir`: 创建新目录\n\
+  \nExample:\n\n```bash\nuser> mkdir mydir\n```\n(`mkdir`: 创建新目录)\n\n`rmdir`: 删除空目录\n\
+  \nExample:\n\n```bash\nuser> rmdir mydir\n```\n(`rmdir`: 删除空目录)\n\n`basename`: 显示文件路径的最后部分\n\
+  \nExample:\n\n```bash\nuser> basename /home/foo/usr/file.txt\n```\n(output:  file.txt)\n\
+  \n`dirname`: 只显示目录路径\n\nExample:\n\n```bash\nUser>dirname  /foo/bar/baz/myfile.txt\n\
+  ```\n(output:  /foo/bar/baz)\n\n### Summary\n\n- `mkdir`: 创建新目录\n- `rmdir`: 删除空目录\n\
+  - `basename`: 显示文件路径的最后部分\n- `dirname`: 只显示目录路径\n\n# 第 10 章\n\n## 压缩命令\n\n`zip`:\
+  \ 压缩文件\n`unzip`: 解压缩文件\n\n`gzip`: 压缩文件\n`gunzip`: 解压缩文件\n\n`bzip2`: 压缩文件\n`bunzip2`:\
+  \ 解压缩文件\n\n`tar`: 归档文件\n\n`gzip`: 压缩文件\n`gunzip`: 解压缩文件\n\n`zip`: 压缩文件\n解压缩文件\n\n\
+  Example:\n\n```bash\nuser> zip myfile.txt\n```\n(`zip`: 压缩 `myfile.txt`)\n\n```bash\n\
+  user> unzip myfile.zip\n```\n(`unzip`: 解压缩 `myfile.zip`)\n\n```bash\nuser> gzip\
+  \ myfile.txt\n```\n(`gzip`: 压缩 `myfile.txt`)\n\n```bash\nuser> gunzip myfile.gz\n\
+  ```\n(`gunzip`: 解压缩 `myfile.gz`)\n\n```bash\nuser> bzip2 myfile.txt\n```\n(`bzip2`:\
+  \ 压缩 `myfile.txt`)\n\n```bash\nuser> bunzip2 myfile.txt.bz2\n```\n(`bunzip2`: 解压缩\
+  \ `myfile.txt.bz2`)\n\n```bash\nuser> tar -cvf archive.tar file1 file2\n```\n(`tar`:\
+  \ 归档文件)\n\n### Summary\n\n- `zip`: 压缩文件\n- `unzip`: 解压缩文件\n- `gzip`: 压缩文件\n- `gunzip`:\
+  \ 解压缩文件\n- `bzip2`: 压缩文件\n- `bunzip2`: 解压缩文件\n- `tar`: 归档文件\n\n# 第 11 章\n\n## 进程命令\n\
+  \n`ps`: 显示当前进程\n\n`kill`: 按 ID 杀死进程\n\n`w`: 显示所有工作进程\n\n`df`: 显示文件系统使用情况\n\n`uptime`:\
+  \ 显示系统运行时间\n\n`top`: 查看实时进程列表\n\n`ps`: 显示当前进程\n\nExample:\n\n```bash\nroot> ps -u\
+  \ root\n```\n(`ps`: 显示用户 `root` 运行的进程。)\n\n`kill`: 按 ID 杀死进程\n\nExample:\n\n```bash\n\
+  root> kill 6270\n```\n(`kill`: 杀死 PID 为 6270 的进程。)\n\n`w`: 显示所有工作进程\n\nExample:\n\
+  \n```bash\nroot> w -n 10\n```\n(`w`: 显示当前正在运行的进程。\n`-n 10`: 显示 10 个)\n\n`df`: 显示文件系统使用情况\n\
+  \nExample:\n\n```bash\nroot> df -h\n```\n(`df`: 显示文件系统使用情况。\n`-h`: 以易读格式显示)\n\n\
+  `uptime`: 显示系统运行时间\n\nExample:\n\n```bash\nroot> uptime\n```\n(`uptime`: 显示系统运行时间。)\n\
+  \n`top`: 查看实时进程列表\n\nExample:\n\n```bash\nroot> top -p 1234\n```\n(`top`: 查看 PID\
+  \ 为 1234 的进程。\n`-p`: 指定 PID\n1234: 进程)\n\n### Summary\n\n- `ps`: 显示当前进程\n- `kill`:\
+  \ 按 ID 杀死进程\n- `w`: 显示所有工作进程\n- `df`: 显示文件系统使用情况\n- `uptime`: 显示系统运行时间\n- `top`:\
+  \ 查看实时进程列表\n\n# 第 12 章\n\n## 账户命令\n\n`useradd`: 创建新用户\n\n`usermod`: 修改现有账户\n\n`userdel`:\
+  \ 删除现有账户\n\n`passwd`: 设置用户密码\n\n`chfn`: 修改用户详细信息\n\n`finger`: 显示用户个人详细信息\n\n`useradd`:\
+  \ 创建新用户\n\nExample:\n\n```bash\nroot> useradd username\n```\n(`useradd`: 创建新用户。)\n\
+  \n`usermod`: 修改现有账户\n\nExample:\n\n```bash\nroot> usermod –l oldname  newname\n\
+  ```\n(`usermod`: 修改现有账户。\n`-l`: 修改登录名)\n\n`userdel`: 删除现有账户\n\nExample:\n\n```bash\n\
+  root> userdel username\n```\n(`userdel`: 删除现有账户。)\n\n`passwd`: 设置用户密码\n\nExample:\n\
+  \n```bash\nroot> passwd username\n```\n(`passwd`: 为用户设置密码。)\n\n`chfn`: 修改用户详细信息\n\
+  \nExample:\n\n```bash\nroot> chfn username\n```\n(`chfn`: 修改用户的详细信息。)\n\n`finger`:\
+  \ 显示用户个人详细信息\n\nExample:\n\n```bash\nroot> finger username\n```\n(`finger`: 列出用户的登录名、邮箱、域名、时间等信息。)\n\
+  \n### Summary\n\n- `useradd`: 创建新用户\n- `usermod`: 修改现有账户\n- `userdel`: 删除现有账户\n\
+  - `passwd`: 设置用户密码\n- `chfn`: 修改用户详细信息\n- `finger`: 显示用户个人详细信息\n\n\n\n\n\n`userdel`:\
+  \ 删除现有的用户账户\n\n`passwd`: 设置用户账户密码\n\n`chfn`: 更改个人 finger 信息\n\n`finger`: 显示个人用户的\
+  \ finger 信息\n\n# 第 13 章\n\n## 组命令\n\n`groups`: 显示组成员关系\n`groupadd`: 创建新组\n`groupmod`:\
+  \ 修改现有的组\n`groupdel`: 删除现有的组\n`groups`: 显示组成员关系\n\n### 示例：\n```\nroot> groups username\n\
+  ```\n(`groups`: 显示用户的所属组信息。）\n\n`groupadd`: 创建新组\n### 示例：\n```\nroot> groupadd newgroup\n\
+  ```\n(`groupadd`: 创建一个名为 `newgroup` 的新组。）\n\n`groupmod`: 修改现有的组\n### 示例：\n```\n\
+  root> groupmod newgroup\n```\n(`groupmod`: 修改名为 `newgroup` 的现有组。）\n\n`groupdel`:\
+  \ 删除现有的组\n### 示例：\n```\nroot> groupdel newgroup\n```\n(`groupdel`: 删除名为 `newgroup`\
+  \ 的现有组。）\n\n## 总结\n`groups`: 显示组成员关系\n`groupadd`: 创建新组\n`groupmod`: 修改现有的组\n`groupdel`:\
+  \ 删除现有的组\n\n# 第 14 章\n\n## 权限命令\n\n`chmod`: 更改访问权限模式\n`chgrp`: 更改组所有\n`chown`: 更改文件或目录的所有者\n\
+  `chmod`: 更改访问权限模式\n### 示例：\n```\nroot> chmod 752 myfile1.txt\n```\n(`chmod`: 更改\
+  \ `myfile1.txt` 的访问权限。\n7: 设置用户读、写、执行权限\n5: 设置组用户读、执行权限\n2: 设置其他用户仅写权限。）\n\n`chmod`:\
+  \ 更改访问权限模式\n### 示例：\n```\nroot> chmod g+w myfile.txt\n```\n(`g+w`: 为文件所在组的成员赋予写权限）\n\
+  \n`chgrp`: 更改组所有\n### 示例：\n```\nroot> chgrp groupname myfile2.txt\n```\n(`chgrp`:\
+  \ 更改 `myfile2.txt` 的组所有`)\n\n`chown`: 更改文件或目录的所有者\n### 示例：\n```\nroot> chown username\
+  \ myfile3.txt\n```\n(`chown`: 更改 `myfile3` 的所有者`)\n### 示例：\n```\nroot> chown groupname\
+  \ /user/dir\n```\n(`chown`: 更改 `dir` 的所有者。）\n\n### 总结：\n`chmod`: 更改访问权限模式\n`chgrp`:\
+  \ 更改组所有\n`chown`: 更改文件或目录的所有者\n\n# 第 15 章\n\n## 作业命令\n\n`job`: 显示所有作业的状态\n`fg`:\
+  \ 在前台运行挂起的任务\n`bg`: 在后台运行挂起的任务\n`kill`: 通过编号杀死作业或通过 pid 杀死进程\n`at`: 在指定时间调度运行作业\n\
+  `atq`: 显示计划的作业\n`atrm`: 删除计划作业\n`ps`: 显示当前进程状态\n`w`: 显示谁登录了以及正在做什么\n`uptime`: 显示系统运行时间\n\
+  `top`: 查看最活跃的进程\n`crontab`: 创建一个在指定时间运行的作业\n`job`: 显示所有作业的状态\n### 示例：\n```\nroot>\
+  \ jobs\n```\n(`job`: 显示所有作业的状态。）\n\n`fg`: 在前台运行挂起的任务\n### 示例：\n```\nroot> fg %2\n\
+  ```\n(`fg %2`: 在前台运行挂起的作业 `%2`。）\n\n`bg`: 在后台运行挂起的任务\n### 示例：\n```\nroot> bg %3\n\
+  ```\n(`bg %3`: 在后台运行挂起的作业 `%3`。）\n\n`kill`: 通过编号杀死作业或通过 pid 杀死进程\n### 示例：\n```\n\
+  root> kill %4\n```\n(`kill %4`: 杀死正在运行的作业 `%4`。）\n\n`at`: 在指定时间调度运行作业\n### 示例：\n\
+  ```\nroot> at 9:30 pm\n```\n(`at 9:30`: 在 `9:30` 设置一个计划作业。）\n\n`atq`: 显示计划的作业\n\
+  ### 示例：\n```\nroot> atq\n```\n(`atq`: 显示所有计划作业）\n\n`atrm`: 删除计划作业\n### 示例：\n```\n\
+  root> atrm 25\n```\n(`atrm 25`: 删除计划作业 `25`。）\n\n`ps`: 显示当前进程状态\n### 示例：\n```\n\
+  root> ps -f\n```\n(`ps-f`: 显示当前进程的完整信息。）\n\n`ps`: 显示当前进程状态\n### 示例：\n```\nroot>\
+  \ ps -u username\n```\n(`ps -u`: 显示用户的当前进程。）\n\n`w`: 显示谁登录了以及正在做什么\n### 示例：\n```\n\
+  root> w -s username\n```\n(`-s`: 显示用户的摘要信息。）\n\n`uptime`: 显示系统运行时间\n### 示例：\n```\n\
+  root> uptime\n```\n(`uptime`: 显示系统运行时间。）\n\n`top`: 查看最活跃或指定的进程\n### 示例：\n```\nroot>\
+  \ top\n```\n(`top`: 显示系统上运行的所有进程）\n\n`crontab`: 创建一个在指定时间运行的作业\n### 示例：\n```\nroot>\
+  \ crontab -e\n```\n(`-e`: 编辑 `crontab` 文件，向表中添加一个 `crontab` 作业）\n\n## 总结\n`job`:\
+  \ 显示所有作业的状态\n`fg`: 在前台运行挂起的任务\n`bg`: 在后台运行挂起的任务\n`kill`: 通过编号杀死作业或通过 pid 杀死进程\n\
+  `at`: 在指定时间调度运行作业\n`atq`: 显示计划的作业\n`atrm`: 删除计划作业\n`ps`: 显示当前进程状态\n`w`: 显示谁登录了以及正在做什么\n\
+  `uptime`: 显示系统运行时间\n`top`: 查看最活跃的进程\n`crontab`: 创建一个在指定时间运行的作业\n\n# 第 16 章\n\n##\
+  \ 备份/恢复命令\n\n`cpio`: 输出或输入 cpio 档文件\n`tar`: 创建、查看、提取 tar 档文件\n`cpio -o`: 输出 cpio\
+  \ 档文件\n### 示例：\n```\nroot> cpio -o > directory.cpio\n```\n(`-o`: 备份到 cpio 档文件）\n\
+  \n`cpio -i`: 输入 cpio 档文件\n### 示例：\n```\nroot> cpio -i < directory.cpio\n```\n(`-i`:\
+  \ 从 cpio 档文件恢复）\n\n`tar -xf`: 提取 tar 档文件\n### 示例：\n```\nroot> tar -xf archived.tar\n\
+  ```\n(`-xf`: 提取 tar 档文件）\n\n`tar -cf`: 创建 tar 档文件\n### 示例：\n```\nroot> tar -cf archive.tar\
+  \ directory\n```\n(`-cf`: 创建 tar 档文件）\n\n## 总结\n`cpio`: 输出或输入 cpio 档文件\n`tar`: 创建、查看、提取\
+  \ tar 档文件\n\n# 第 17 章\n\n## 日期命令\n\n`date`: 显示日期和时间\n`cal`: 显示日历\n`date`: 显示日期和时间\n\
+  ### 示例：\n```\nroot> date\n```\n(`date`: 显示当前日期和时间。）\n\n`cal`: 显示日历\n### 示例：\n```\n\
+  root> cal\n```\n(`cal`: 显示日历。）\n\n## 总结\n`date`: 显示日期和时间\n`cal`: 显示日历\n\n# 第 18\
+  \ 章\n\n## 网络命令\n\n`host`: 查询主机名对应的 IP 地址\n`ifconfig`: 显示网络接口配置\n`ping`: 测试网络连通性\n\
+  `ssh`: 安全登录到远程主机\n`ftp`: 文件传输协议\n`mesg`: 向登录用户发送消息\n`write`: 向用户写入消息\n`netstat`:\
+  \ 显示网络统计信息\n`traceroute`: 跟踪数据传输路径\n`nslookup`: 查询 DNS 信息\n`ip`: 显示或配置 IP 地址\n`route`:\
+  \ 显示或配置路由表\n`host`: 查询主机名对应的 IP 地址\n`ifconfig`: 显示网络接口配置\n`ping`: 测试网络连通性\n`ssh`:\
+  \ 安全登录到远程主机\n`ftp`: 文件传输协议\n`mesg`: 向登录用户发送消息\n`write`: 向用户写入消息\n`netstat`: 显示网络统计信息\n\
+  `traceroute`: 跟踪数据传输路径\n`nslookup`: 查询 DNS 信息\n`ip`: 显示或配置 IP 地址\n`route`: 显示或配置路由表\n\
+  \n`host`: 查询主机名对应的 IP 地址\n### 示例：\n```\nroot> host google.com\n```\n(`host`: 查询主机名对应的\
+  \ IP。）\n\n`ifconfig`: 显示网络接口配置\n### 示例：\n```\nroot> ifconfig\n```\n(`ifconfig`:\
+  \ 显示网络接口配置。）\n\n`ping`: 测试网络连通性\n### 示例：\n```\nroot> ping -c 4 google.com\n```\n\
+  (`ping -c 4`: 向 google.com 发送 4 次 ping。）\n\n`ssh`: 安全登录到远程主机\n### 示例：\n```\nroot>\
+  \ ssh user@remotehost\n```\n(`ssh`: 安全登录到远程主机 `remotehost`。）\n\n`ftp`: 文件传输协议\n\
+  ### 示例：\n```\nroot> ftp myserver.com\n```\n(`ftp`: 连接到 ftp 服务器。）\n\n`mesg`: 向登录用户发送消息\n\
+  ### 示例：\n```\nroot> mesg all\n```\n(`mesg`: 向所有登录用户发送消息。）\n\n`write`: 向用户写入消息\n\
+  ### 示例：\n```\nroot> write username\n```\n(`write`: 向用户 `username` 写入消息。）\n\n`netstat`:\
+  \ 显示网络统计信息\n### 示例：\n```\nroot> netstat -a\n```\n(`netstat -a`: 显示所有套接字。）\n\n`traceroute`:\
+  \ 跟踪数据传输路径\n### 示例：\n```\nroot> traceroute google.com\n```\n(`traceroute`: 跟踪到 google.com\
+  \ 的路径。）\n\n`nslookup`: 查询 DNS 信息\n### 示例：\n```\nroot> nslookup google.com\n```\n\
+  (`nslookup`: 查询 google.com 的 DNS 信息。）\n\n`ip`: 显示或配置 IP 地址\n### 示例：\n```\nroot>\
+  \ ip addr\n```\n(`ip addr`: 显示所有 IP 地址。）\n\n`route`: 显示或配置路由表\n### 示例：\n```\nroot>\
+  \ route -n\n```\n(`route -n`: 显示路由表。）\n\n## 总结\n`host`: 查询主机名对应的 IP 地址\n`ifconfig`:\
+  \ 显示网络接口配置\n`ping`: 测试网络连通性\n`ssh`: 安全登录到远程主机\n`ftp`: 文件传输协议\n`mesg`: 向登录用户发送消息\n\
+  `write`: 向用户写入消息\n`netstat`: 显示网络统计信息\n`traceroute`: 跟踪数据传输路径\n`nslookup`: 查询 DNS\
+  \ 信息\n`ip`: 显示或配置 IP 地址\n`route`: 显示或配置路由表\n\n\n\n\n\n(`nslookup`: 手动查询 DNS 服务器。\n\
+  \nDNS（域名命名系统）协议允许你从名称服务器获取给定的主机名的 IP 地址。这个过程被称为解析。）\n\n## 总结\n- `host`: 显示远程主机名和\
+  \ IP\n- `ifconfig`: 显示本地网络配置\n- `ping`: 发送数据包以测试远程主机是否可达\n- `ssh`: 安全地连接到远程计算机\n\
+  - `ftp`: 通过“文件传输协议”传输文件\n- `mesg`: 启用或禁用消息传递功能\n- `write`: 向其他用户写入消息\n- `open`:\
+  \ 连接到 ftp 服务器\n- `mail`: 在本地和范围内发送和接收邮件\n- `dhclient`: 提供配置一个或多个网络接口的手段\n- `nslookup`:\
+  \ 交互式查询互联网名称服务器以获取 IP 信息。\n\n# 第 19 章：脚本命令\n\n- `echo`: 显示文本。\n- `expr`: 执行数学计算\n\
+  - `#!/bin/bash`: 放在 bash 脚本文件的第一行。\n- `echo`: 显示文本。\n\n### 示例\n```bash\nroot> STR=”Hello\
+  \ World!”\nroot> echo $STR\n```\n(`echo`: 显示文本。输出是 “Hello World!”)\n\n- `echo -e`:\
+  \ 使用转义序列显示文本。\n\n### 示例\n```bash\nroot> STR=”Hello World!”\nroot> echo –e “\\n$STR\\\
+  n”\n```\n(`echo -e`: 使用 `\\n` 显示文本。`\\n` 意味着换行。）\n输出是\n““\nHello World!\n””\n\n\
+  - `expr`: 执行数学计算\n\n### 示例\n```bash\nuser> expr 20 + 80\n```\n(输出是 “100”)\n\n###\
+  \ 示例\n```bash\nuser> expr 21/7\n```\n(输出是 “3”)\n\n### 示例\n```bash\nuser> expr 9\
+  \ “>” 6\n```\n(输出是 “1”，这个 1 表示真)\n\n### 示例\n```bash\nuser> expr 9 “<” 6\n```\n(输出是\
+  \ “0”，这个 0 表示假)\n\n- `#!/bin/bash`: 放在 bash shell 脚本的第一行。\n\n### 示例\n```bash\n#!/bin/bash\n\
+  If…then…else…fi\n```\n(`#!/bin/bash`: 始终放在 bash 脚本的第一行)\n\n## 总结\n- `echo`: 显示文本。\n\
+  - `expr`: 执行数学计算\n- `#!/bin/bash`: 始终放在 bash 脚本的第一行\n\n# 第 20 章：系统命令\n\n- `df`:\
+  \ 显示文件系统的磁盘占用情况\n- `mount`: 使设备对文件系统可用\n- `umount`: 使设备对文件系统不可用\n- `fsck`: 检查并修复文件系统\n\
+  - `init n`: 将系统切换到运行级别 n\n- `who -r`: 显示当前的运行级别\n- `free`: 显示空闲磁盘空间\n- `du`: 显示文件或目录的磁盘占用情况\n\
+  - `export`: 设置环境变量\n- `printenv`: 列出环境变量名称和值\n- `unset`: 移除环境变量\n- `clear`: 清除屏幕\n\
+  - `exit`: 退出 shell 或注销。\n- `shutdown –h +n`: 系统将在 n 分钟后关机！\n\n### 示例：df\n```bash\n\
+  root> df -h\n```\n(`df`: 显示文件系统的磁盘占用情况。`-h`: 使输出易于读）\n\n### 示例：mount\n```bash\n\
+  root> mount /cdrom\n```\n(`mount`: 使 cd-rom 对文件系统可用。）\n\n### 示例：umount\n```bash\n\
+  root> umount /dev/hda1\n```\n(`umount`: 使 `hda1` 对文件系统不可用。`hda1`: 一个硬盘分区）\n\n###\
+  \ 示例：fsck\n```bash\nroot> fsck\n```\n(`fsck`: 检查并修复文件系统。）\n\n### 示例：init\n```bash\n\
+  root@user-linux: ~ # init 5\n```\n(`init 5`: 将系统切换到运行级别 5)\n\n### 示例：who -r\n```bash\n\
+  root@user-linux: ~ # who -r\n```\n(`who -r`: 显示当前的运行级别。）\n\n### 示例：free\n```bash\n\
+  root@user-linux: ~ # free -m\n```\n(`free`: 显示空闲磁盘空间 `-m`: 以 MB 为单位显示空闲磁盘空间）\n\n\
+  ### 示例：du\n```bash\nroot@user-linux: ~ # du –b myfile.txt\n```\n(`du`: 显示文件或目录的磁盘占用情况。`-b`:\
+  \ 统计它占用的字节数。）\n\n### 示例：export\n```bash\nroot@user-linux: ~ # export newvar=8\n\
+  ```\n(`echo $newvar`. 输出是 8)\n\n### 示例：printenv\n```bash\nroot@user-linux: ~ # printenv\n\
+  ```\n(`printenv`: 列出环境变量名称和值）\n\n### 示例：unset\n```bash\nroot@user-linux: ~ # unset\
+  \ var\n```\n(`unset var`: 移除环境变量 `var`。）\n\n### 示例：clear\n```bash\nuser>clear\n\
+  ```\n(`clear`: 清除屏幕。）\n\n### 示例：exit\n```bash\nuser>exit\n```\n(`exit`: 退出 shell\
+  \ 或注销。）\n\n### 示例：shutdown\n```bash\nroot@user-linux: ~ # shutdown –h +5\n```\n\
+  (`shutdown –h +5`: 系统将在 5 分钟后关机！(`-h`: 停止系统 `+n`: n 秒后））\n\n## 总结\n- `df`: 显示文件系统的磁盘占用情况\n\
+  - `mount`: 使设备对文件系统可用\n- `umount`: 使设备对文件系统不可用\n- `fsck`: 检查并修复文件系统\n- `init n`:\
+  \ 将系统切换到运行级别 n\n- `who -r`: 显示当前的运行级别\n- `free`: 显示空闲磁盘空间\n- `du`: 显示文件或目录的磁盘占用情况\n\
+  - `export`: 设置环境变量\n- `printenv`: 列出环境变量名称和值\n- `unset`: 移除环境变量\n- `clear`: 清除屏幕\n\
+  - `exit`: 退出 shell 或注销。\n- `shutdown –h +n`: 系统将在 n 分钟后关机！\n\n# 第 21 章：帮助命令\n\n\
+  | 命令 | 操作与示例 |\n| :--- | :--- |\n| `man` | 显示命令的帮助手册。例如 `man nice` (显示 `nice` 命令的手册)\
+  \ |\n| `info` | 显示命令的信息。例如 `info chmod` (显示关于 `chmod` 命令的信息) |\n| `whatis` | 显示命令的描述。例如\
+  \ `whatis ifconfig` (显示 `ifconfig` 是什么的描述) |\n| `help` | 显示命令的帮助解释。例如 `help cd`\
+  \ (显示 `cd` 命令的帮助解释) |\n| `apropos` | 搜索手册页中的关键词。例如 `apropos download` (显示包含“download”的手册条目)\
+  \ |\n| `--help` | 使用 `-help` 选项获取命令的帮助。例如 `wget --help` (获取 `wget` 命令的帮助) |\n\n\
+  **注意：** 如果你熟悉这些帮助命令，你将了解完整的 Linux 命令及其用法。\n\n# 第 22 章：命令技巧\n\n### 利用 Tab 键进行自动补全\n\
+  Linux 提供了许多不同的命令，我们很容易迷失并忘记其中一个。对我个人来说，这种情况经常发生，但幸运的是这并不是什么麻烦。事实上，Linux 提供了多种方法来找到你遗漏的命令。\n\
+  \n知道第一个“技巧”是了解自动补全控制。\n\n### 示例：date 命令\n对于 `date` 命令：你现在有点头疼，不知道它是怎么拼写的。根据直觉，你确定命令的第一个或第二个字母是“da”。\n\
+  \n只需在控制台中输入 \"da\"，然后双击键盘左侧的 Tab 键。\n\n通过双击 Tab，你向电脑请求了一列表以 \"da\" 开头的命令。它们显示了 \"\
+  dash\" 和 \"date\"。所以有两个以 \"da\" 开头的命令，你只需要找到你寻找的那个，即 \"date\"。\n\n非常棒，电脑已经重写了下方的提示符和你输入命令的开头。你只需要补全缺失的字母\
+  \ \"you\" 并按回车键，就搞了。:-)\n\n更有趣的是，如果你的搜索只有一个结果，电脑会自动补全缺失的字母，你只需要按回车键了！\n\n### 示例：chsh\n\
+  如果你想输入 `chsh` 命令但不确定拼写，你只需要在控制台中输入“ch”并按两次 Tab。命令就会魔术般地完成。它会显示 ”chfn, chsh”，然后你可以选择“chfn”。\n\
+  \n命令也是如此！\n\n### 命令历史记录\n我们经常需要找到几分钟前（甚至是几秒钟前）输入的命令。有时是因为我们忘记了命令，但通常是因为你像我一样，真的懒得重写整个命令。\n\
+  \n这个快捷键是金子：按下方向上键；你将看到你输入的上一个命令。\n\n再次按下方向上键，你将看到倒数第二个命令，然后是倒数三个，以此此类推。\n\n如果你按下方向下键，你将返回最近的命令。\n\
+  \n因此，我可以倒序找到我刚刚输入的命令：\n```bash\nls --all;\nls -a,\nls;\nDate;\n```\n等等等。如果你想在命令历史中回溯非常久以前，不需要像疯子一样狂按上百次方向上键。\n\
+  \n有一个 `history` 命令可以提醒你命令历史：\n\n### 示例\n```bash\nhistory\n```\n\n\n\n\n\n按下向上方向键；你将看到你输入的上一条命令。然后屏幕将显示：\n\
+  \nDate 152 ls ls ls 153 154 155--all -a 156 157 history\n\n你会发现这些控制是有编号的：因此，我们可以知道\
+  \ `date` 是我在终端中输入的第 152 条命令，而三个 `ls` 分别是第 153、154 和 156 条命令。当然，你输入的上述最后一条命令始终会是\
+  \ `history`。\n\n### Ctrl + R：查找历史命令\n\n如果使用方向方向键和 `history` 命令不足以找到你输入过的旧命令，有一个超级实用的快捷键：`Ctrl+R`。它可以帮助你找到刚刚使用过的历史命令。因此，同时按下\
+  \ `Ctrl+R` 键，计算机将切换到“查找已输入的命令”模式（\"R\" 代表 research，搜索）。\n\n在那里，你可以输入任何与旧命令对应的字母序列。\n\
+  \n### 示例：\n\n如果你想查找之前使用过的带有“all”的命令，请按 `Ctrl+R` 并输入 \"all\"。然后，Linux 将找到包含单词“all”的\
+  \ `ls --all`。你只需按回车键即可运行该命令！:-)\n\n如果这不是你正在寻找的命令，再次按 `Ctrl + R` 向上移动包含 \"all\" 的命令列表。\n\
+  \n这在这样的驱动器上看起来可能很愚蠢，但有些命令非常长，不需要重新编写它们真是一件乐！\n\n## 使用通配符\n\n你可以在许多 Linux 命令中使用通配符。通配符表示其他字符的符号或符号组合。Linux\
+  \ 命令中有三种通配符：\n\n- `?` 问号（`?`）表示单个字符。\n  例如：`b??k` 匹配 bank, beak, back, bilk 或任何以\
+  \ b 开头并 k 结尾的四字母文件名。\n- `*` 星号（`*`）表示任意字符或一组字符，包括零字符或多个字符。\n  例如：`b*k` 匹配 bk, bkk,\
+  \ bark, break, backtrack。\n- `[ ]` 方括号内的字符（`[ ]`）通常表示集合中的任意字符。但请注意它们是区分大小写的。\n \
+  \ 例如：`b[a-z]k` 匹配 bak, bbk, bck, bzk，但不匹配 `bAk`, `bBk`, `bCk`, `bZk`，因为区分大小写敏感。\n\
+  \n通配符实际上是在 Linux 命令中实现的。\n\n### 示例：\n\n```bash\nuser2014@user-linux: ls b??k\n```\n\
+  （通配符 `b??k` 匹配当前目录下的五个文件。输出为“bank beak back bilk bark”）\n\n### 示例：\n\n```bash\n\
+  user2014@user-linux: ls a*d\n```\n（通配符 `a*d` 匹配当前目录下的某些文件。输出为“ad add acid abroad\
+  \ abounded abed aid”）\n\n### 示例：\n\n```bash\nuser2014@user-linux: ls se[a-e]\n```\n\
+  （通配符 `se[a-e]` 匹配当前目录下的五个文件。输出为“sea seb sec sed see”）\n\n## 关于运行级别 (Run Levels)\n\
+  \n什么是运行级别？运行级别一术指的是实现 Linux System V 风格初始的操作系统之一的运行模式。通常存在七个运行级别，编号从零到六；启动时只执行一个“运行级别”——运行级别不是顺序执行的，即执行运行级别\
+  \ 2 或 3 或 4，而不是先执行 2 再执行 3 然后 4。\n\n“运行级别”定义了机器启动后的状态。不同的运行级别通常分配给：\n\n0. halt-关机-系统正在关闭过程中。\n\
+  1. 单用户模式\n2. 未启动网络服务的多用户模式\n3. 已启动网络服务的多用户模式\n4. 系统关机\n6. 系统重启\n\n### 示例：\n\n```bash\n\
+  root@user-linux: ~ # init 3\n```\n(`init 3`：将系统切换到运行级别 3）\n\n### 总结：\n\n- `Tab`\
+  \ 键可以自动补全缺失的命令。\n- `向上方向键` 可以查看历史命令。\n- `向下方向键` 可以返回最近的命令。\n- `Ctrl+R` 可以通过关键词查找历史命令。\n\
+  - `?` 问号（`?`）表示单个字符。\n- `*` 星号（`*`）表示任意字符或一组字符，包括零字符或多个字符。\n- `[ ]` 方括号内的字符（`[ ]`）通常表示集合中的任意字符。但请注意它们是区分大小写的。\n\
+  - 运行级别数字描述了已初始化并正在运行的服务级别。\n\n# 第 23 章\n\n## 权限\n\n### 什么是 rwx？\n\n在使用 `ls –l` 查看文件的访问权限后，你可以看到类似这样的内容：\n\
+  \n`rwx ….. ……`\n\n解释：\n\n`rwx` 表示访问权限，可以用 1 到 7 的数字来描述。真的吗？是的，1 到 7 的数字表示访问权限。\n\
+  \n- `r` 代表读取权限，值为 4。\n- `w` 代表写权限，值为 2。\n- `x` 代表执行权限，值为 1。\n\n反之亦然：\n\n- `4` 表示读取权限\
+  \ (`r`)\n- `2` 表示写权限 (`w`)\n- `1` 表示执行权限 (`x`)\n\n### 示例：\n\n如果 `rwx` 值为 4，那么你可以判断出它的权限是只读。\n\
+  如果 `rwx` 值为 2，那么你可以判断出它的权限是只写。\n如果 `rwx` 值为 1，那么你可以判断出它的权限是只执行。\n\n1 到 7 的数字表示各种访问权限：\n\
+  \n- `7` 表示读、写、执行权限 (`7=4+2+1`)\n- `6` 表示读、写权限 (`6=4+2`)\n- `5` 表示读、执行权限 (`5=4+1`)\n\
+  - `4` 表示只读权限 (`4=4+0`)\n- `3` 表示写、执行权限 (`3=2+1`)\n- `2` 表示只写权限 (`2=2+0`)\n- `1`\
+  \ 表示只执行权限 (`1=1+0`)\n\n### 示例：\n\n如果 `rwx` 值为 7，那么你可以判断出它的权限是读、写和执行。\n如果 `rwx` 值为\
+  \ 6，那么你可以判断出它的权限是读和写。\n如果 `rwx` 值为 1，那么你可以判断出它的权限是只执行。\n\n什么是 `rwx`？\n`rwx` 表示访问权限，可以用\
+  \ 1 到 7 的数字来描述。真的吗？是的，1 到 7 的数字表示访问权限。\n\n`r` 代表读取权限，值为 4。\n`w` 代表写权限，值为 2。\n`x`\
+  \ 代表执行权限，值为 1。\n\n反之亦然：\n\n`4` 表示读取权限 (`r`)\n`2` 表示写权限 (`w`)\n`1` 表示执行权限 (`x`)\n\
+  \n示例：\n\n如果 `rwx` 值为 4，那么你可以判断出它的权限是只读。\n如果 `rwx` 值为 2，那么你可以判断出它的权限是只写。\n如果 `rwx`\
+  \ 值为 1，那么你可以判断出它的权限是只执行。\n\n1 到 7 的数字表示各种访问权限：\n\n- `7` 表示读、写、执行权限 (`7=4+2+1`)\n\
+  - `6` 表示读、写权限 (`6=4+2`)\n- `5` 表示读、执行权限 (`5=4+1`)\n- `4` 表示只读权限 (`4=4+0`)\n- `3`\
+  \ 表示写、执行权限 (`3=2+1`)\n- `2` 表示只写权限 (`2=2+0`)\n- `1` 表示只执行权限 (`1=1+0`)\n\n### 示例：\n\
+  \n如果 `rwx` 值为 7，那么你可以判断出它的权限是读、写和执行。\n如果 `rwx` 值为 6，那么你可以判断出它的权限是读和写。\n如果 `rwx`\
+  \ 值为 1，那么你可以判断出它的权限是只执行。\n\n什么是 `rwx`？\n`rwx` 表示访问权限，可以用 1 到 7 的数字来描述。真的吗？是的，1 到\
+  \ 7 的数字表示访问权限。\n\n`r` 代表读取权限，值为 4。\n`w` 代表写权限，值为 2。\n`x` 代表执行权限，值为 1。\n\n反之亦然：\n\
+  \n`4` 表示读取权限 (`r`)\n`2` 表示写权限 (`w`)\n`1` 表示执行权限 (`x`)\n\n示例：\n\n如果 `rwx` 值为 4，那么你可以判断出它的权限是只读。\n\
+  如果 `rwx` 值为 2，那么你可以判断出它的权限是只写。\n如果 `rwx` 值为 1，那么你可以判断出它的权限是只执行。\n\n1 到 7 的数字表示各种访问权限：\n\
+  \n- `7` 表示读、写、执行权限 (`7=4+2+1`)\n- `6` 表示读、写权限 (`6=4+2`)\n- `5` 表示读、执行权限 (`5=4+1`)\n\
+  - `4` 表示只读权限 (`4=4+0`)\n- `3` 表示写、执行权限 (`3=2+1`)\n- `2` 表示只写权限 (`2=2+0`)\n- `1`\
+  \ 表示只执行权限 (`1=1+0`)\n\n运行级别数字描述了已初始化并正在运行的服务级别。\n\n# 第 23 章\n\n## 访问\n\n##什么是 rwx？\n\
+  \n在使用 `ls –l` 查看文件的访问权限后，你可以看到类似这样的内容：\n\n`rwx ….. ……`\n\n解释：\n\n`rwx` 表示访问权限，可以用\
+  \ 1 到 7 的数字来描述。真的吗？是的，1 到 7 的数字表示访问权限。\n\n- `r` 代表读取权限，值为 4。\n- `w` 代表写权限，值为 2。\n\
+  - `x` 代表执行权限，值为 1。\n\n反之亦然：\n\n- `4` 表示读取权限 (`r`)\n- `2` 表示写权限 (`w`)\n- `1` 表示执行权限\
+  \ (`x`)\n\n### 示例：\n\n如果 `rwx` 值为 4，那么你可以判断出它的权限是只读。\n如果 `rwx` 值为 2，那么你可以判断出它的权限是只写。\n\
+  如果 `rwx` 值为 1，那么你可以判断出它的权限是只执行。\n\n1 到 7 的数字表示各种访问权限：\n\n- `7` 表示读、写、执行权限 (`7=4+2+1`)\n\
+  - `6` 表示读、写权限 (`6=4+2`)\n- `5` 表示读、执行权限 (`5=4+1`)\n- `4` 表示只读权限 (`4=4+0`)\n- `3`\
+  \ 表示写、执行权限 (`3=2+1`)\n- `2` 表示只写权限 (`2=2+0`)\n- `1` 表示只执行权限 (`1=1+0`)\n\n### 示例：\n\
+  \n如果 `rwx` 值为 7，那么你可以判断出它的权限是读、写和执行。\n如果 `rwx` 值为 6，那么你可以判断出它的权限是读和写。\n如果 `rwx`\
+  \ 值为 1，那么你可以判断出它的权限是只执行。\n\n什么是 `rwx`？\n`rwx` 表示访问权限，可以用 1 到 7 的数字来描述。真的吗？是的，1 到\
+  \ 7 的数字表示访问权限。\n\n`r` 代表读取权限，值为 4。\n`w` 代表写权限，值为 2。\n`x` 代表执行权限，值为 1。\n\n反之亦然：\n\
+  \n`4` 表示读取权限 (`r`)\n`2` 表示写权限 (`w`)\n`1` 表示执行权限 (`x`)\n\n示例：\n\n如果 `rwx` 值为 4，那么你可以判断出它的权限是只读。\n\
+  如果 `rwx` 值为 2，那么你可以判断出它的权限是只写。\n如果 `rwx` 值为 1，那么你可以判断出它的权限是只执行。\n\n1 到 7 的数字表示各种访问权限：\n\
+  \n- `7` 表示读、写、执行权限 (`7=4+2+1`)\n- `6` 表示读、写权限 (`6=4+2`)\n- `5` 表示读、执行权限 (`5=4+1`)\n\
+  - `4` 表示只读权限 (`4=4+0`)\n- `3` 表示写、执行权限 (`3=2+1`)\n- `2` 表示只写权限 (`2=2+0`)\n- `1`\
+  \ 表示只执行权限 (`1=1+0`)\n\n运行级别数字描述了已初始化并正在运行的服务级别。\n\n\n\n\n\n| 符号 | 说明 |\n| :--- |\
+  \ :--- |\n| `\\|` | 将 `cmd1` 的输出发送到 `cmd2` 的输入，例如 `ls -al /etc` \\| `less` |\n|\
+  \ `;` | 组合两个或多个命令，例如 `cd~; ls` |\n| `\\` | 转义特殊字符，例如 `echo -e \"\\n Hello \\t World!\
+  \ \\n\"` |\n| `./` | 在当前目录下运行脚本，例如 `./script.sh` |\n| `..` | 上级目录，例如 `cd..` |\n\
+  | `~` | 目录，例如 `cd~` |\n| `$` | 变量名和变量值的变量前缀，例如 `echo $var` |\n| `$$` | 显示当前运行的进程数，例如\
+  \ `echo $$` |\n| `!!` | 重复上一次命令，例如 `!!` |\n| `!string` | 运行最近以字符串开头的 `cmd`，例如 `!cat`\
+  \ |\n\n# 第 25 章\n\n## 快捷键\n\n| 键位 | 说明 |\n| :--- | :--- |\n| `CTRL+B` | 光标向后移动一个字符长度。\
+  \ |\n| `CTRL+C` | 取消正在运行的命令或杀死运行中的进程。 |\n| `CTRL+D` | 退出当前会话。类似于 `exit` 命令。 |\n\
+  | `CTRL+F` | 光标向前移动一个字符长度。 |\n| `CTRL+H` | 删除向后的一个字符。类似于按下退格键（backspace）。 |\n| `CTRL+P`\
+  \ | 将上一行或几行粘贴到指定的 Location。 |\n| `CTRL+R` | 输入以显示最近的命令，返回历史命令列表 |\n| `CTRL+S` |\
+  \ 停止屏幕上所有的输出。通过锁定终端输出来冻结 shell。 |\n| `CTRL+Q` | 恢复屏幕上所有已停止的输出，继续终端输出。 |\n| `CTRL+U`\
+  \ | 删除光标所在的整行。 |\n| `CTRL+W` | 删除最近输入的最后一个单词。 |\n| `CTRL+Z` | 挂起正在运行的进程。如果想恢复，请使用\
+  \ `fg` 或 `bg` 命令。 |\n\n# 第 26 章\n\n## 运行级别表\n\n| 运行级别 | same |\n| :--- | :--- |\n\
+  | `0` | 停止系统。当当前级别为此级别时，系统正处于关闭过程中。 |\n| `1` | 单用户模式。仅运行一小部分内核进程。几乎所有其他服务均已禁用。 |\n\
+  | `2` | 基础多用户模式。此级别启动大多数服务，但未启用网络连接服务。 |\n| `3` | 完整多用户模式。此级别启动包括网络连接在内的所有服务，但不会启动\
+  \ X 窗口。 |\n| `4` | 用户定义模式。运行级别 4 没有常规定义。它完全开放给用户配置。 |\n| `5` | 带有 X 窗口的完整多用户模式。启动所有启用的服务以及\
+  \ Linux 图形桌面环境。 |\n| `6` | 重启。当当前级别为此级别时，系统正在重启过程中。 |\n\n# 第 27 章\n\n## Vi 编辑器命令\n\
+  \n| 命令 | 操作 |\n| :--- | :--- |\n| `h,l,k,j` | 光标左、右、上、下移动 |\n| `w,b` | 光标向前、向后移动\
+  \ |\n| `0` | 跳到行首 |\n| `$` | 跳到行尾 |\n| `G` | 跳到文件最后一行 |\n| `J` | 将当前行与下一行合并 |\n\
+  | `z` | 撤销上一次命令 |\n| `.` | 重复上次命令 |\n| `ZZ` | 保存文件并退出 |\n| `i` | 在光标字符前插入 |\n| `I`\
+  \ | 在行首插入字符 |\n| `a` | 在光标字符后追加 |\n| `A` | 在行尾追加字符 |\n| `c` | 修改直到…… |\n| `C` |\
+  \ 修改到行尾 |\n| `d` | 删除直到…… |\n| `D` | 删除到行尾 |\n| `r` | 替换一个字符 |\n| `R` | 替换多个字符 |\n\
+  | `o` | 在下方开启新行 |\n| `O` | 在上方开启新行 |\n| `esc` | 退出插入模式，进入命令模式 |\n| `x` | 删除光标处的字符\
+  \ |\n| `X` | 删除左侧的字符 |\n| `u` | 撤销上次修改 |\n| `.` | 重做上次修改 |\n| `U` | 恢复行 |\n| `m`\
+  \ | 标记位置 |\n| `M` | 屏幕中间位置 |\n| `dw` | 删除当前单词 |\n| `dd` | 删除当前行 |\n| `cc` | 修改当前行\
+  \ |\n| `f x` | 在当前行查找 `x` |\n| `F x` | 在上一行查找 `x` |\n| `/string` | 搜索字符串，向前查找 |\n\
+  | `?string` | 搜索字符串，向后查找 |\n| `[n]G` | 跳到行号 “n” |\n| `n` | 向前搜索下一个匹配 |\n| `N` |\
+  \ 向后搜索下一个匹配 |\n| `p` | 将行粘贴到当前行下方 |\n| `P` | 将行粘贴到当前行上方 |\n| `t` | 直到…… |\n| `T`\
+  \ | 向后直到…… |\n| `s` | 替换 |\n| `S` | 替换整行 |\n| `ZZ` | 保存并退出 |\n| `:e` | 编辑文件 |\n\
+  | `:e!` | 放弃文件修改 |\n| `:$` | 跳到文件最后一行 |\n| `:number` | 跳到行号 |\n| `:w` | 写入并保存 |\n\
+  | `:w!` | 保存只读文件 |\n| `:w filename` | 使用新文件名保存 |\n| `:wq` | 写入、保存并退出 |\n| `:n` |\
+  \ 转到下一个文件 |\n| `:rew` | 回到第一个文件 |\n| `:q` | 使用 `:w` 保存后退出 |\n| `:q!` | 不保存直接退出 |\n\
+  | `:r filename` | 读取文件，在光标位置插入文件 |\n| `:! command` | 运行 shell 命令 |\n| `:sh` | 运行临时\
+  \ shell |\n\n# 第 28 章\n\n## 所有常用 Linux 命令\n\n注意：\n- `cmd` 意味着命令\n- `regex` 意味着正则表达式\n\
+  - `(*)` 意味着 root 用户运行的命令\n\n| 命令 | 操作与示例 |\n| :--- | :--- |\n| `a2p` | 将 `awk` 转换为\
+  \ perl 文件，例如 `a2p myfile.awk > myfile.pl`（将 `myfile.awk` 转换为 `myfile.pl`） |\n| `alias`\
+  \ | 为命令创建另一个名称，例如 `alias p=\"pwd\"`（将 `p` 设置为 `pwd` 的别名） |\n| `apropos` | 在帮助页中查看搜索词，例如\
+  \ `apropos find`（列出帮助页中包含 \"find\" 的条目） |\n| `apropos -e` | 在帮助页中查看精确搜索词，例如 `apropos\
+  \ –e nice` (-e: 在帮助页中显示精确词汇) |\n| `apt-get` | 安装、删除或更新包，例如 `apt-get install libc6`（安装\
+  \ `libc6` 包） |\n| `aspell` | 检查并纠正拼写错误，例如 `aspell -c test.txt` (-c:检查 `test.txt`\
+  \ 文件中的拼写） |\n| `at` | 在指定时间运行任务 |\n| `awk` | 通过正则表达式匹配文本，例如 `awk '$0'`（行的长度） |\n\
+  | `basename` | 显示路径的最后部分，例如 `basename /home/foo/file.txt` |\n| `bc` | 执行计算，例如 `bc+9`\
+  \ |\n| `bg` | 在后台恢复挂起的作业，例如 `bg %3` |\n| `bunzip2` | 从 zip 格式解压，例如 `bunzip2 myfile.tar`\
+  \ |\n| `bzip2` | 将文件压缩为 zip 格式，例如 `bzip2 myfile.dat` |\n| `cal` | 显示日历，例如 `cal 2014`\
+  \ |\n| `cal -3` | 显示 3 个月，例如 `cal -3`（月份） |\n| `cat` | 显示一个或多个文件的内容，例如 `cat file1.txt\
+  \ file2.txt` |\n| `cat -n` | 带行号显示内容，例如 `cat -n myfile.txt` |\n| `cd` | 切换目录，例如\
+  \ `cd /home/user/mydir` |\n| `chattr` | 为文件设置属性，例如 `chattr +i myfile.txt` (+i 使文件变为只读）\
+  \ |\n| `chfn` | 更改用户信息，例如 `chfn`（更改用户） |\n| `chfn -f` | 更改全名，例如 `chfn -f Full-Name`\
+  \ (-f: 全名) |\n| `chgrp` | 更改组所有，例如 `chgrp groupname /usr/myfile.txt` |\n| `chkconfig`\
+  \ | 查看和修改运行级别文件，例如 `chkconfig --list` (-list: 列出运行级别的服务） |\n| `chmod` | 修改访问权限，例如\
+  \ `chmod 755 filename`（设置文件权限为 755） |\n| `chown` | 更改文件或目录的所有者，例如 `chown username\
+  \ myfile.txt`（更改 `myfile.txt` 所有者） |\n| `chpasswd` | 更改用户密码，例如 `chpasswd`（然后输入用户名：密码）\
+  \ |\n| `chsh` | 更改用户的登录 shell，例如 `chsh -s /bin/bash` (-s 指定登录 shell) |\n| `cksum`\
+  \ | 生成 CRC 校验和数字，例如 `cksum file.txt`（输出 `file.txt` 的校验和） |\n| `clear` | 清除屏幕，例如\
+  \ `clear`（清除 shell 窗口） |\n| `cmp` | 按字节比较两个文件，例如 `cmp first.txt second.txt`（比较 `first.txt`\
+  \ 和 `second.txt`） |\n| `collectl` | 监控当前系统状态，例如 `collectl`（列出 cpu、sys、inter 信息）\
+  \ |\n| `comm` | 按行比较两个文件的文本，例如 `comm first.txt second.txt`（比较 `first.txt` `second.txt`）\
+  \ |\n| `cp` | 将文件复制到另一个目录，例如 `cp myfile.txt /mydir`（将 `myfile.txt` 复制到 `mydir`）\
+  \ |\n| `cp -p` | 将文件复制到另一个目录，例如 `cp -p myfile.txt /mydir` (-p: 保留原始权限） |\n\n\n\n\
+  \n\n| 命令 | 说明 |\n| :--- | :--- |\n| `cp -a` | 将文件（或）复制到另一个目录，例如 `cp –a myfile.txt\
+  \ /mydir` (`-a`: 保留原始属性） |\n| `cpio -o` | 输出归档的 cpio 文件，例如 `cpio -o > directory.cpio`\
+  \ (`-o`: 备份到归档 cpio 文件） |\n| `cpio -i` | 归归档的 cpio 文件，例如 `cpio -i < directory.cpio`\
+  \ (`-i`: 从归档 cpio 文件中恢复） |\n| `crontab` | 创建在指定时间运行的作业，例如 `crontab`（设置按固定间隔运行作业）\
+  \ |\n| `crontab -e` | 在指定时间运行周期性作业，例如 `crontab -e` (`-e` 允许编辑 crontab 文件） |\n| `crontab\
+  \ -l` | 在指定时间运行周期性作业，例如 `crontab -l` (`-l`: 列出 crontab 文件） |\n| `crontab -r` | 在指定时间运行周期性作业，例如\
+  \ `crontab -r` (`-r`: 删除 crontab 文件） |\n| `csplit` | 将文件拆分为一些分离的文件，例如 `csplit myfile.txt\
+  \ ”/part1/” “/part2/`（分离命名为 `xx00`, `xx01` 的文件） |\n| `cut -d` | 显示文件中指定的字段，例如 `cut\
+  \ –d “:” myfile.txt` (`-d`: 指定字段分隔符 `:`） |\n| `cut -c` | 从文件中提取内容，例如 `cut –c 6 myfile.txt`\
+  \ (`-c6`: 每行的第 6 个字符） |\n| `cut -f` | 从文件中提取内容，例如 `cut –f 3 myfile.txt` (`-f3`:\
+  \ 指定字段编号为 3） |\n| `date` | 显示日期和时间，例如 `date`（显示当前日期和时间） |\n| `date -s` | 设置日期和时间，例如\
+  \ `date -s \"11/20/2014\"` (`-s` 设置日期） |\n| `dc` | 打开命令行桌面计算器，例如 `dc` (`dc` 意味着桌面计算器）\
+  \ |\n| `dd` | 数据转储，用于转换和复制文件，例如 `dd if=/dev/sda of=/dev/sdb`（从 `sda` 复制数据到 `sdb`）\
+  \ |\n| `dmesg` | 打印所有内核日志消息，例如 `dmesg > kmsg.txt`（将内核消息输出到 `kmsg.txt`） |\n| `df`\
+  \ | 显示空磁盘空间，例如 `df`（显示文件系统空空间） |\n| `df -m` | 显示空磁盘空间，例如 `df -m` (`-m`: 以 Mb 显示大小）\
+  \ |\n| `dhclient` | 配置网络接口，例如 `dhclient eth0`（刷新 `eth0` 的 IP 地址） |\n| `diff` | 显示两个文件之间的差异，例如\
+  \ `diff firstfile.txt secondfile.txt`（显示两个文件之间的差异） |\n| `diff3` | 显示三个文件之间的差异，例如\
+  \ `diff3 file1.txt file2.txt file3.txt`（显示三个文件之间的差异） |\n| `dig` | 显示 DNS 器的详情，例如\
+  \ `dig xvxaxx.com`（列出关于 `xvxaxx.com` 的信息） |\n| `dir` | 显示目录内容，例如 `dir`（显示当前目录内容）\
+  \ |\n| `dircolors` | 显示 `ls` 命令的颜色设置，例如 `dircolors`（显示 `ls` 的目录颜色） |\n| `dirname`\
+  \ | 去文件路径的最后部分，例如 `dirname /foo/bar/baz/myfile.txt`（输出：`/foo/bar/baz`） |\n| `du\
+  \ -s` | 显示磁盘占用，例如 `du -s *.*` (`-s` 列出当前目录下的文件大小） |\n| `du -h` | 显示磁盘占用，例如 `du -h\
+  \ myfile.txt` (`-h`: 显示人类可读的单位） |\n| `dump -f` | 创建文件系统的备份，例如 `dump -f0 filebk /mydir`\
+  \ (`-f`:备份-0:转储级别 `filebk`: 转储文件） |\n| `echo` | 在标准输出上显示输入，例如 `echo “Hello World!”`（显示\
+  \ `Hello World!`） |\n| `echo -e` | 使用转义序列显示文本，例如 `echo –e \"\\n Hello World!”` (`-e`:\
+  \ 允许使用 `\\n` 显示文本） |\n| `ed` | 打开命令行文本编辑器，例如 `ed myfile.txt`（用文本编辑器打开 `myfile.txt`）\
+  \ |\n| `egrep` | 搜索文件中指定的正则表达式，例如 `egrep \"new | string\" myfile.txt`（在 `myfile.txt`\
+  \ 中搜索 `new | string`） |\n| `eject` | 弹出 cd 或 dvd 托盘，例如 `eject cdrom`（弹出 `cdrom`\
+  \ 盘） |\n| `eject -t` | 弹出或关闭 cd 或 dvd 托盘，例如 `eject –t cdrom` (`-t`: 关闭打开的 cdrom\
+  \ 盘） |\n| `emacs` | 强大的可扩展文件编辑器，例如 `emacs file.txt`（启动 `emacs` 并打开 `file.txt`） |\n\
+  | `env` | 显示、设置环境变量，例如 `env`（列出当前环境变量） |\n| `eval` | 根据其参数创建命令，例如 `UPLS=”eval cd..\
+  \ ; ls ”`（创建一个名为 `UPLS` 的命令） |\n| `exit` | 退出 shell，例如 `exit`（终止程序并退出） |\n| `expand`\
+  \ | 将制表符转换为空格，例如 `expand myfile.txt`（将 `myfile.txt` 中的制表符转换为空格） |\n| `expand -t`\
+  \ | 将制表符转换为空格，例如 `expand -t 3 myfile.txt` (`-t`: 设置制表间隔 3 个字符） |\n| `export` | 设置环境变量和值，例如\
+  \ `export newvar=8 echo $newvar`（输出：8） |\n| `expr` | 评估表达式，例如 `expr 10+8`（输出：18）\
+  \ |\n| `factor` | 显示数字的质因数，例如 `factor 1001`（输出：7 11 13） |\n| `fc` | 列出、编辑、重新执行上一个命令，例如\
+  \ `fc -l` (`-l`:列出命令历史） |\n| `fdisk` | 纵硬盘分区，例如 `fdisk /dev/hdb`（列出硬盘分区信息） |\n|\
+  \ `fg` | 在前台恢复已停止的作业，例如 `fg %3`（在前台恢复作业 3） |\n| `fgrep` | 在文件中搜索指定的字符串，例如 `fgrep\
+  \ \"good\" myfile.txt`（在 `myfile.txt` 中搜索 `good`） |\n| `file` | 检测文件类型，例如 `file\
+  \ myfile.tar`（确定 `myfile.tar` 的文件类型） |\n| `find –print–name` | 在名为 dir 的目录中查找文件，例如\
+  \ `find –print–name`（在 dir 中查找文件名） |\n| `file` | 显示文件的类型信息，例如 `file myfile.tar`（确定\
+  \ `myfile.tar` 的类型） |\n| `fmt` | 格式化文本，例如 `fmt myfile.txt`（格式化 `myfile.txt`） |\n\
+  | `fmt -u` | 统一格式化文本，例如 `fmt -u myfile.txt`（`-u`: 统一格式化） |\n| `fold` | 限制文本宽度，例如\
+  \ `fold -w 80 myfile.txt`（将 `myfile.txt` 宽度限制为 80） |\n| `fold -s` | 在空白处折行，例如 `fold\
+  \ -s myfile.txt`（`-s`: 在空白处折行） |\n| `head` | 查看文件的开头部分，例如 `head myfile.txt`（显示 `myfile.txt`\
+  \ 的前 10 行） |\n| `head -n` | 显示文件开头几行，例如 `head -n 20 myfile.txt`（`-n`: 显示前 20 行）\
+  \ |\n| `tail` | 查看文件的结尾部分，例如 `tail myfile.txt`（显示 `myfile.txt` 的最后 10 行） |\n| `tail\
+  \ -n` | 显示文件结尾几行，例如 `tail -n 5 myfile.txt`（`-n`: 显示最后 5 行） |\n| `tail -f` | 持续跟踪文件变化，例如\
+  \ `tail -f myfile.txt`（实时查看 `myfile.txt` 的变化） |\n| `wc` | 统计文件计数，例如 `wc myfile.txt`（统计\
+  \ `myfile.txt` 的行、字、字节） |\n| `wc -l` | 统计行数，例如 `wc -l myfile.txt`（统计 `myfile.txt`\
+  \ 的行数） |\n| `wc -w` | 统计单词数，例如 `wc -w myfile.txt`（统计 `myfile.txt` 的单词数） |\n| `wc\
+  \ -c` | 统计字节数，例如 `wc -c myfile.txt`（统计 `myfile.txt` 的字节数） |\n| `sort` | 对文件排序，例如\
+  \ `sort myfile.txt`（对 `myfile.txt` 进行行排序） |\n| `sort -r` | 反向排序，例如 `sort -r myfile.txt`（`-r`:\
+  \ 逆序排序） |\n| `sort -n` | 按数字排序，例如 `sort -n myfile.txt`（`-n`: 按数值排序） |\n| `sort -u`\
+  \ | 排序并合并重复项，例如 `sort -u myfile.txt`（`-u`: 排序并去重） |\n| `uniq` | 过滤相邻重复行，例如 `uniq\
+  \ myfile.txt`（合并 `myfile.txt` 中相邻的重复行） |\n| `uniq -c` | 统计出现次数，例如 `uniq -c myfile.txt`（`-c`:\
+  \ 显示每行出现的次数） |\n| `uniq -d` | 只显示重复的行，例如 `uniq -d myfile.txt`（`-d`: 只输出重复行） |\n\
+  | `sed` | 流编辑器，例如 `sed 's/old/new/g' myfile.txt`（将 `myfile.txt` 中的 `old` 替换为 `new`）\
+  \ |\n| `sed -i` | 直接修改文件，例如 `sed -i 's/old/new/g' myfile.txt`（`-i`: 原地直接修改文件） |\n\
+  | `grep` | 在文件中搜索模式，例如 `grep \"pattern\" myfile.txt`（在 `myfile.txt` 中搜索 `pattern`）\
+  \ |\n| `grep -i` | 忽略大小写搜索，例如 `grep -i \"pattern\" myfile.txt`（`-i`: 忽略大小写） |\n\
+  | `grep -v` | 反向搜索模式，例如 `grep -v \"pattern\" myfile.txt`（`-v`: 显示不匹配模式的行） |\n| `grep\
+  \ -r` | 递归搜索，例如 `grep -r \"pattern\" .`（在当前目录及其子目录搜索 `pattern`） |\n| `grep -n` |\
+  \ 显示行号，例如 `grep -n \"pattern\" myfile.txt`（`-n`: 显示匹配行的行号） |\n| `grep -l` | 只列出匹配的文件名，例如\
+  \ `grep -l \"pattern\" *.txt`（`-l`: 列出包含模式的文件名） |\n| `grep -E` | 使用扩展正则表达式，例如 `grep\
+  \ -E \"p1|p2\" myfile.txt`（`-E`: 使用扩展正则） |\n| `awk` | 文本处理语言，例如 `awk '{print $1}'\
+  \ myfile.txt`（打印 `myfile.txt` 的第一列） |\n| `awk -F` | 指定分隔符，例如 `awk -F ':' '{print\
+  \ $1}' myfile.txt`（`-F`: 指定冒号为分隔符） |\n| `tr` | 翻译或删除字符，例如 `tr 'a-z' 'A-Z' < file.txt`（将小写转为大写）\
+  \ |\n| `tar` | 归档工具，例如 `tar -cvf archive.tar dir/`（将 `dir/` 创建为 `archive.tar`） |\n\
+  | `tar -xvf` | 解归档，例如 `tar -xvf archive.tar`（解压 `archive.tar`） |\n| `tar -zcf` |\
+  \ 使用 gzip 压缩，例如 `tar -zcf archive.tar.gz dir/`（`-z`: 使用 gzip 压缩） |\n| `tar -zxvf`\
+  \ | 解压 gzip 压缩包，例如 `tar -zxvf archive.tar.gz`（`-z`: 解压 gzip 压缩包） |\n| `zip` | 压缩文件，例如\
+  \ `zip archive.zip file1`（将 `file` 压缩为 `archive.zip`） |\n| `unzip` | 解压缩 zip 文件，例如\
+  \ `unzip archive.zip`（解压 `archive.zip`） |\n| `gzip` | 压缩文件，例如 `gzip file.txt`（将\
+  \ `file.txt` 压缩为 `file.txt.gz`） |\n| `gunzip` | 解压缩文件，例如 `gunzip file.txt.gz`（解压\
+  \ `file.txt.gz` 还原为 `file.txt`） |\n| `ls` | 列出目录内容，例如 `ls`（显示目录内容） |\n| `ls -l`\
+  \ | 以详细格式列出，例如 `ls -l`（显示权限、所有者、大小、时间等信息） |\n| `ls -a` | 显示隐藏文件，例如 `ls -a`（`-a`:\
+  \ 显示以 `.` 开头的文件） |\n| `ls -h` | 以可读格式显示，例如 `ls -lh`（`-h`: 以 KB, MB 等单位显示大小） |\n\
+  | `ls -t` | 按时间排序，例如 `ls -lt`（`-t`: 按修改时间排序） |\n| `mkdir` | 创建目录，例如 `mkdir new_dir`（创建一个名为\
+  \ `new_dir` 的目录） |\n| `mkdir -p` | 递归创建目录，例如 `mkdir -p a/b/c`（`-p`: 如果父目录不存在则自动创建）\
+  \ |\n| `rm` | 删除文件，例如 `rm file.txt`（删除 `file.txt`） |\n| `rm -r` | 递归删除目录，例如 `rm\
+  \ -r dir_name`（`-r`: 递归删除目录及其所有内容） |\n| `rm -f` | 强制删除，例如 `rm -f file.txt`（`-f`:\
+  \ 不提示强制删除） |\n| `mv` | 移动或重命名文件，例如 `mv old.txt new.txt`（将 `old.txt` 重命名为 `new.txt`）\
+  \ |\n| `mv` | 移动文件，例如 `mv file.txt /tmp/`（将 `file.txt` 移动到 `/tmp/`） |\n| `touch`\
+  \ | 创建空文件或更新时间，例如 `touch file.txt`（创建一个空的 `file.txt`） |\n| `pwd` | 显示当前工作路径，例如 `pwd`（显示你当前在哪个目录）\
+  \ |\n| `cd` | 目录，例如 `cd /home/user`（切换到指定目录） |\n| `cd ..` | 返回上级目录，例如 `cd ..`（进入上一层目录）\
+  \ |\n| `cd ~` | 返回主目录，例如 `cd ~`（返回当前用户主目录） |\n| `clear` | 清空终端屏幕，例如 `clear`（清空显示内容）\
+  \ |\n| `history` | 查看命令历史，例如 `history`（显示最近执行过的命令列表） |\n| `alias` | 设置别名，例如 `alias\
+  \ ll='ls -l'`（为 `ls -l` 设置别名 `ll`） |\n| `unalias` | 取消别名，例如 `unalias ll`（取消别名） |\n\
+  | `whoami` | 显示当前用户名，例如 `whoami`（显示当前登录的用户） |\n| `who` | 显示登录的用户，例如 `who`（显示当前登录系统用户）\
+  \ |\n| `uptime` | 显示系统运行时间，例如 `uptime`（显示系统运行了多久、负载等） |\n| `free` | 显示内存使用情况，例如\
+  \ `free`（显示物理内存和交换内存） |\n| `top` | 实时显示系统进程，例如 `top`（动态监控系统资源和进程） |\n| `htop` |\
+  \ 交互式进程查看器，例如 `htop`（比 top 更直观的监控工具） |\n| `ps` | 显示当前进程状态，例如 `ps aux`（显示所有运行中的进程）\
+  \ |\n| `kill` | 杀死进程，例如 `kill 1234`（杀死 PID 为 1234 的进程） |\n| `kill -9` | 强制杀死进程，例如\
+  \ `kill -9 1234`（`-9`: 使用 SIGKILL 强制终止） |\n| `pgrep` | 查找进程 PID，例如 `pgrep \"python\"\
+  `（查找包含 \"python\" 的进程 ID） |\n| `killall` | 按名称杀死进程，例如 `killall firefox`（杀死所有名为 firefox\
+  \ 的进程） |\n| `sleep` | 暂停指定时间，例如 `sleep 10`（暂停 10 秒） |\n| `wait` | 等进程退出状态，例如 `wait`（等待后台作业完成）\
+  \ |\n| `|` | 管道，例如 `ls | grep \".txt\"`（将 `ls` 的输出传给 `grep`） |\n| `>` | 重定向输出，例如\
+  \ `echo \"hello\" > file.txt`（将输出写入 `file.txt`，覆盖原有） |\n| `>>` | 追加输出，例如 `echo \"\
+  hello\" >> file.txt`（将输出追加到 `file.txt` 末尾） |\n| `2>` | 重定向错误，例如 `command 2> error.log`（将标准错误重定向到文件）\
+  \ |\n| `> file 2>&1` | 同时重定向输出和错误，例如 `command > out.log 2>&1`（将输出和错误都重定向到文件） |\n\
+  \n\n\n\n## 常用 Linux 命令列表\n\n- `join`: 合并具有共同字段的文件行。例如：`join myfile1.txt myfile2.txt`（通过相同字段合并两个文件的行）\n\
+  - `join`: 合并两个文件。例如：`join -i myfile1.txt myfile2.txt` (`-i`: 忽略差异）\n- `kill`: 通过编号停止作业。例如：`kill\
+  \ %3`（终止作业 %3）\n- `kill`: 通过进程 ID（pid）停止进程。例如：`kill 3956`（终止进程 3956）\n- `killall`:\
+  \ 通过名称停止进程。例如：`killall norespond`（终止进程 norespond）\n- `last`: 显示最近登录的用户。例如：`last`（列出最近用户的日期、时间……）\n\
+  - `lastb`: 显示失败的登录尝试。例如：`lastb`（显示失败的登录尝试）\n- `lastlog`: 显示最后登录信息。例如：`lastlog -u\
+  \ username` (`-u`: 指定用户）\n- `less`: 分页显示内容。例如：`less myfile.txt`（分页显示 myfile.txt）\n\
+  - `let`: 对 shell 变量进行算运算。例如：`let a=12; let a=a+8; echo $a`（输出：20）\n- `link`: 创建文件的链接。例如：`link\
+  \ file1.txt file2.txt`（创建从 file1 到 file2 的链接）\n- `ln`: 创建文件的硬链接。例如：`~/myfile.txt`（为\
+  \ myfile.txt 创建硬链接）\n- `ln -s`: 在两个文件之间创建链接。例如：`ln -s file1.txt file2.txt`（为 file1/file2\
+  \ 创建符号链接）\n- `locate`: 查找文件或目录的位置。例如：`locate myfile.txt`（在本地机器上查找 myfile.txt）\n\
+  - `logname`: 显示当前用户的登录名。例如：`logname`（显示用户的登录名）\n- `look`: 显示匹配给定前缀的单词。例如：`look ab`（输出：aba,\
+  \ abb, abc, abd……）\n- `lpc`: 运行行打印控制程序。例如：`lpc status`（显示当前打印队列的状态）\n- `lpq`: 显示打印机队列状态。例如：`lpq`（列出打印队列）\n\
+  - `lpr`: 向打印机发送打印请求。例如：`lpr myfile.txt`（将 myfile.txt 发送到打印机）\n- `lprm`: 取消打印队列中的打印作业。例如：`lprm\
+  \ 2`（移除打印作业 2）\n- `ls`: 列出当前目录的内容。例如：`ls`（列出文件和子目录）\n- `ls -l`: 详细列出当前目录的内容。例如：`ls\
+  \ -l` (`-l`: 包含权限的长列表）\n- `ls -a`: 列出所有条目包括隐藏文件。例如：`ls -a` (`-a`: 显示所有文件）\n- `ls\
+  \ -t`: 按时间戳列出条目。例如：`ls -t` (`-t`: 按时间显示）\n- `ls -lh`: 列出当前目录的内容。例如：`ls -lh` (`-lh`:\
+  \ 以 mb 和 gb 单位列出文件）\n- `lsattr`: 列出文件或目录的属性。例如：`lsattr myfile.txt`（显示 myfile.txt\
+  \ 属性）\n- `lsof`: 列出打开的文件。例如：`lsof`（列出所有打开的文件）\n\n（ 待续 ）\n\n- `man`: 从手册中获取命令帮助。例如：`man\
+  \ cat`（显示 cat 的手册页）\n- `man -k`: 在手册页中搜索关键词。例如：`man -k printf` (`-k`: 指定关键词）\n-\
+  \ `md5sum`: 创建 md5 校验和。例如：`md5sum -c file.txt` (`-c`: 根据校验和验证文件）\n- `mesg`: 启用或禁用消息功能。例如：`mesg`（显示当前的写入状态）\n\
+  - `mesg y/n`: 启用或禁用消息功能。例如：`mesg y/n` (`y or n`: 允许或拒绝消息）\n- `mail`: 发送接收邮件。例如：`mail\
+  \ ray@websprogram.com`（向 ray@websprogram.com 发送邮件）\n- `mkdir`: 创建新目录。例如：`mkdir mydir`（创建一个名为\
+  \ mydir 的目录）\n- `mknod`: 创建设备文件。例如：`mknod /dev/dk b 45 0` (`dk`:设备;`b`:块设备; `45`:主设备号;\
+  \ `0`:从设备号）\n- `more`: 一次显示屏幕内容。例如：`more +2 myfile.txt` (`+2`: 从第 2 行开始）\n- `mount`:\
+  \ 挂载存储设备。例如：`mount /dev/cd`（挂载设备 cd）\n- `mount -l`: 挂载或显示设备。例如：`mount -l` (`-l`:\
+  \ 列出所有挂载的设备）\n- `mt`: 磁带驱动控制。例如：`mt -f /dev/tape eod` (`-f`: 选择文件；eod：数据末尾）\n- `mv`:\
+  \ 将文件移动到另一个目录。例如：`mv myfile.txt /home/user/mydir`（将 myfile.txt 移动到 mydir）\n- `mv`:\
+  \ 重命名文件。例如：`mv myfile1.txt myfile2.txt`（将 myfile1.txt 重命名为 myfile2.txt）\n- `netstat`:\
+  \ 显示网络状态。例如：`netstat`（打印网络连接、路由表等）\n- `nice`: 设置作业优先级。例如：`nice -19`（将优先级设置为 19）\n\
+  - `nl`: 为文本添加编号。例如：`nl mylist.txt`（为 mylist.txt 编号）\n- `nohup`: 忽略挂断信号。例如：`nohup\
+  \ command`（忽略挂断）\n- `nslookup`: 查询服务器。例如：`nslookup example.com`（返回 example.com 的\
+  \ IP）\n- `passwd`: 修改用户密码。例如：`passwd username`（修改 username 的密码）\n- `paste`: 合并多个文件的行。例如：`paste\
+  \ file1.txt file2.txt`（合并 file1 和 file2）\n- `pidof`: 显示运行程序的进程 ID。例如：`pidof console`（显示\
+  \ console 的进程 ID）\n- `ping`: 向主机发送数据并等待响应。例如：`ping example.com`（测试远程主机是否可访问）\n-\
+  \ `ping -c`: 测试远程主机是否可访问。例如：`ping -c 5` (`-c`: 指定 ping 次数）\n- `pkill`: 杀死运行的进程。例如：`pkill\
+  \ firefox`（停止浏览器）\n- `pr`: 为打印准备文件。例如：`pr myfile.txt`（准备打印 myfile.txt）\n- `pr -n`:\
+  \ 为打印准备文件。例如：`pr -n myfile.txt` (`-n`: 指定行数）\n- `pr -h`: 为打印准备文件。例如：`pr -h myfile.txt`\
+  \ (`-h`: 指定页眉）\n- `printenv`: 显示环境变量。例如：`printenv`（列出环境变量的值）\n- `printf`: 格式化并打印数据。例如：`printf\
+  \ \"start\"`（退格符）\n- `printf`: 格式化并打印数据。例如：`printf \"hello\\n\"`（换行符）\n- `ps -f`:\
+  \ 显示进程状态。例如：`ps -f` (`-f`: 当前进程完整信息）\n- `ps -u`: 显示进程状态。例如：`ps -u ray` (`-u`: 指定用户的当前进程）\n\
+  - `pstree`: 以树形结构显示进程。例如：`pstree`（以树的形式显示所有进程）\n- `pwd`: 打印工作目录。例如：`pwd`（显示当前目录）\n\
+  - `rcp`: 在两个主机之间远程拷贝文件。例如：`rcp file.txt host2:/dir2/file.txt`（将 file.txt 远程拷贝到 host2）\n\
+  - `read`: 从标准输入读取行。例如：`read name; echo \"$name\"`（输入 ray，输出 ray）\n- `reboot`: 重启系统。例如：`reboot`（导致重启）\n\
+  - `renice`: 修改作业优先级。例如：`renice 3 23001`（将作业 23001 的优先级设置为 3）\n- `restore`: 从备份文件恢复数据。例如：`restore\
+  \ -f databackup` (`-f`: 指定备份文件）\n- `rlogin`: 远程登录系统。例如：`rlogin -l username domain.com`\
+  \ (`-l`: 指定用户名）\n- `rm`: 删除一个或多个文件。例如：`rm myfile.txt`（删除 myfile.txt）\n- `rm -r`:\
+  \ 删除非空目录。例如：`rm -r /NonEmptyDir` (`-r`: 删除目录及其内容）\n- `rm -i`: 删除非空目录或文件。例如：`rm -i\
+  \ myfile.txt` (`-i`: 删除前询问）\n- `rmdir`: 删除空目录。例如：`rmdir /emptydir`（删除不含内容的目录）\n\
+  - `route`: 显示或修改 IP 路由表。例如：`route -n` (`-n`: 以数字格式显示）\n- `rsync`: 远程同步文件。例如：`rsync\
+  \ myfile host2:/dir2/myfile`（与远程 host2 同步 myfile）\n- `scp`: 在两个主机之间安全拷贝文件。例如：`scp\
+  \ file.txt host2:/dir2/file.txt`（将文件安全拷贝到远程主机 host2）\n- `screen`: 打开终端窗口管理器。例如：`screen`（开启一个新会话）\n\
+  - `sdiff`: 并排显示两个文件的差异。例如：`sdiff myfile1.txt myfile2.txt`（并排比较两个文件）\n- `sed`: 过滤和转换输入文本。例如：`sed\
+  \ \"{print $3}\" myfile.txt`（显示每行的第三个单词）\n- `seq`: 在给定范围内列出序列。例如：`seq 1 8`（输出：1\
+  \ 2 3 4 5 6 7 8）\n- `seq -w`: 在给定范围内列出序列。例如：`seq -w 1 3` (`-w`: 补零，输出：01 02 03）\n\
+  - `seq`: 在给定范围内列出序列。例如：`seq -s| 1 3` (`-s`: 使用分隔符，输出：1|2|3）\n- `set`: 设置 shell 变量或函数。例如：`set\
+  \ n=`who am i`; echo $n`（输出：who am i）\n- `sftp`: 通过 ftp 安全传输文件。例如：`sftp ServerURL`（向\
+  \ Server 安全传输文件）\n- `shopt`: 显示 shell 选项设置。例如：`shopt`（显示 shell 行为设置）\n\n\n\n\n\n\
+  | 命令 | 说明 | 示例 |\n| :--- | :--- | :--- |\n| `shutdown -h` | 关闭系统 | 例如 `shutdown\
+  \ -h +5` (-h+5: 在 5 分钟后停机) |\n| `shutdown -r` | 关机并重启 | 例如 `shutdown -r now` (-r:\
+  \ 关机并立即重启) |\n| `sleep` | 暂停指定的时间 | 例如 `sleep 10` (暂停 10 秒) |\n| `sort` | 按字母顺序显示排序后的内容\
+  \ | 例如 `sort -r myfile.txt` (-r: 逆序对文件排序) |\n| `split -b` | 按指定大小将文件分成多个文件 | 例如\
+  \ `split -b 11 file.txt` (将文件拆分成多个大小为 11 字节的文件，命名为 `xaa`、`xab`、`xac` 等) |\n| `split\
+  \ -l` | 按指定行数将文件分成多个文件 | 例如 `split -l 8 file.txt` (将文件拆分成多个大小为 8 行的文件，命名为 `xaa`、`xab`、`xac`\
+  \ 等) |\n| `ssh` | 登录到远程安全 shell | 例如 `ssh ray@myexample.com` (安全地连接到远程主机) |\n| `ssh\
+  \ -l` | 登录到远程安全 shell | 例如 `ssh -l username hostname` (-l: 指定你的远程用户名) |\n| `stat`\
+  \ | 列出关于文件大小、访问等的状态 | 例如 `stat myfile.txt` (显示 `myfile.txt` 的统计信息) |\n| `su` | 切换用户\
+  \ | 例如 `su user2` (切换到名为 `user2` 的用户) |\n| `su -l` | 以 root 超用户身份登录 | 例如 `su -l`\
+  \ (-l: 输入密码，登录 root 账户) |\n| `sudo -u` | 以其他用户的身份执行命令 | 例如 `sudo -u user2 ls /home/mydir`\
+  \ (-u: 指定由 `user2` 执行 `ls` 命令) |\n| `sudo -v` | 刷新身份验证超时 | 例如 `sudo -v` (下次 `sudo`\
+  \ 将不再需要密码) |\n| `sudo -k` | 使身份验证超时过期 | 例如 `sudo -k` (下次 `sudo` 将需要密码) |\n| `sum`\
+  \ | 使用校验和汇总文件 | 例如 `sum myfile.txt` (为 `myfile.txt` 创建校验和) |\n| `suspend` | 挂起运行中的\
+  \ shell | 例如 `suspend` (在执行期间暂停系统) |\n| `sync` | 将磁盘数据与内存同步 | 例如 `sync` (将所有文件系统缓冲区刷新到磁盘)\
+  \ |\n| `tac` | 逆序显示文件的行 | 例如 `tac myfile.txt` (从最后一行到第一行打印文件) |\n| `tail` | 显示文件的最后部分\
+  \ | 例如 `tail -n 20 file.txt` (-n20: 输出 `myfile.txt` 的最后 20 行) |\n| `talk` | 与另一个用户通信\
+  \ | 例如 `talk ray` (与用户 `ray` 通信) |\n| `tar -xf` | 提取归档的 tar 文件 | 例如 `tar -xf archive.tar`\
+  \ (-xf: 提取 tar 归档文件) |\n| `tar -cf` | 创建归档的 tar 文件 | 例如 `tar -cf archive.tar` (-cf:\
+  \ 创建 tar 归档文件) |\n| `tee` | 输出标准输出并写入文件 | 例如 `sort file1.txt | tee file2.txt` (排序\
+  \ `file1.txt` 并写入 `file2.txt`) |\n| `tee -a` | 输出标准输出并写入文件 | 例如 `sort file1.txt\
+  \ | tee -a file2.txt` (-a: 追加内容而非覆盖) |\n| `test` | 计算布尔表达式 | 例如 `[ 8 -gt 6 ]; echo\
+  \ $?` (输出: 0 0:真; 1:假) |\n| `test` | 计算布尔表达式 | 例如 `[ 5 -eq 6 ]; echo $?` (输出: 1\
+  \ 0:真; 1:假) |\n| `time` | 显示运行程序所需的时间 | 例如 `time ftp` (显示执行 `ftp` 所花费的时间) |\n| `times`\
+  \ | 显示 shell 的运行时间 | 例如 `times` (显示系统运行时间) |\n| `tload` | 显示系统负载的图形报告 | 例如 `tload`\
+  \ (向指定进程显示当前系统平均负载) |\n| `top` | 列出最活跃活跃或指定的进程 | 例如 `top -p pid` (-p: 通过 `pid` 显示特定进程)\
+  \ |\n| `touch` | 更新现有文件的时间戳 | 例如 `touch myfile.txt` (将 `myfile.txt` 修改为当前时间) |\n\
+  | `touch -t` | 更新现有文件的时间戳 | 例如 `touch -t myfile.txt` (-t: 指定时间) |\n| `tr` | 翻译字符集\
+  \ | 例如 `echo apple | tr “apple” “banana\"` (输出: banana) |\n| `traceroute` | 追踪到主机的路由\
+  \ | 例如 `traceroute xvauhdhxv.com` (追踪数据包到另一个主机的路由) |\n| `trap` | 接收信号时运行命令 | 例如\
+  \ `trap` (显示当前的信号捕获) |\n| `tree -p` | 以树形格式列出目录内容 | 例如 `tree –p` (-p: 也显示文件权限) |\n\
+  | `tty` | 显示终端设备的名称 | 例如 `tty` (显示终端文件名) |\n| `type` | 检测命令的类型 | 例如 `type wait`\
+  \ (输出: `wait` 是 shell 内置命令) |\n| `ulimit -a` | 限制用户资源 | 例如 `ulimit -a` (-a: 显示系统所有的限制)\
+  \ |\n| `umask` | 显示或设置文件权限值 | 例如 `umask 0022` (允许用户读写权限，其他用户读取) |\n| `umask` | 显示或设置文件权限值\
+  \ | 例如 `umask 0002` (允许用户组读写权限，其他用户读取) |\n| `umask` | 显示或设置文件权限值 | 例如 `umask 0077`\
+  \ (允许用户读写权限，其他人无权限) |\n| `umount` | 卸载设备或文件系统 | 例如 `umount /dev/dvd` (卸载 DVD 设备)\
+  \ |\n| `unalias` | 别名 | 例如 `unalias aliasname` (删除指定的别名) |\n| `uname -a` | 显示当前系统信息\
+  \ | 例如 `uname -a` (-a: 显示所有信息) |\n| `uname -n` | 显示当前系统信息 | 例如 `uname -n` (-n: 显示主机名)\
+  \ |\n| `unexpand` | 将空格转换为制表符 | 例如 `unexpand myfile.txt` (将 `myfile.txt` 中的空格转换为制表符)\
+  \ |\n| `uniq` | 过滤文件中重复的行 | 例如 `uniq myfile.txt` (显示 `myfile.txt` 中的唯一行) |\n| `unset`\
+  \ |  shell 变量或函数 | 例如 `unset var` (删除变量) |\n| `unzip` | 从 zip 格式解压缩文件 | 例如 `unzip\
+  \ archive.zip` (从 `archive.zip` 解压缩文件) |\n| `uptime` | 显示系统运行时间 | 例如 `uptime` (显示系统运行时间)\
+  \ |\n| `useradd` | 添加新用户账户 | 例如 `useradd username` (创建用户账户) |\n| `useradd -d` |\
+  \ 显示新用户的默认值 | 例如 `useradd -d` (显示新用户的默认数据) |\n| `userdel` | 删除现有用户账户 | 例如 `userdel\
+  \ username` (移除用户账户) |\n| `usermod -d` | 修改主目录 | 例如 `usermod -d /home/mydir andy`\
+  \ (-d: 为 `andy` 指定主目录) |\n| `usermod -l` | 修改现有用户账户 | 例如 `usermod -l oldname newname`\
+  \ (-l: 修改登录名) |\n| `usermod -p` | 修改现有用户账户 | 例如 `usermod -p password` (-p: 修改密码)\
+  \ |\n| `users` | 列出当前登录的用户 | 例如 `users` (显示当前登录的用户) |\n| `vdir` | 详细显示目录内容 | 例如\
+  \ `vdir` (像 `ls` 一样更详细) |\n| `vi` | 文本编辑器 | 例如 `vi filename` (打开文件) |\n| `vmstat`\
+  \ | 报告虚拟内存统计 | 例如 `vmstat` (报告交换、磁盘 i/o 等) |\n| `w` | 列出当前登录的用户 | 例如 `w username`\
+  \ (显示用户的进程) |\n| `w -s` | 只显示 shell 摘要 | 例如 `w -s` (-s: 显示 shell 摘要) |\n| `wc` |\
+  \ 统计行数、单词数和字节数 | 例如 `wc filename` (统计文件计数) |\n| `man` | 查看帮助手册 | 例如 `man command`\
+  \ (查看命令的手册) |\n\n\n\n\n\n| 命令 |  |\n| :--- | :--- |\n| `yum` | 基于 rpm 的包管理器。例如 `yum\
+  \ install update`（安装一个名为 \"update\" 的包） |\n| `zcat` | 输出压缩的文本。例如 `zcat myfiles.txt.gz\
+  \ \\| less`（解压文件并显示内容） |\n| `zless` | 显示未压缩/压缩文件的内容。例如 `zless myfile.txt.gz`（`zless`:\
+  \ 分页显示内容） |\n| `zmore` | 显示未压缩/压缩文件的内容。例如 `zmore myfile.txt.gz`（`zmore`: 按屏显示内容）\
+  \ |\n| `zip` | 将文件压缩为 zip 格式。例如 `zip documents *`（为所有文件创建 `documents.zip`） |\n|\
+  \ `unzip` | 从 zip 格式解压文件。例如 `unzip myfile.zip`（解压 `myfile.zip`） |\n\n## [Ray Yao\
+  \ 推荐书籍](https://geni.us/ray-yao)\n\n![C+ eCover202102021806.jpg](https://author.to/C_Sharp_Cheat_Sheet)\
+  \ ![RA eCover-202011182256.jpg](https://mybook.to/C_Plus_cheat_sheet)\n\n![JS eCover-202101301841.jpg](https://author.to/Java_Cheat_Sheet)\
+  \ ![HC eCover-202008071843.jpg](https://mybook.to/JavaScript_cheat_sheet)\n\n![PY\
+  \ eCover-202102042255.jpg](https://author.to/Python_Cheat_Sheet) ![VB eCover202101292345.jpg](https://mybook.to/PHP_cheat_sheet)\n\
+  \n![MS Cheat Sheet.jpg](https://geni.us/MySQL_chsh_paperback) ![SQ Cheat Sheet (300).jpg](https://geni.us/SQL_chsh_paperback)\n\
+  \n![C# eCover-202102052256.jpg](https://mybook.to/Linux_Command_Line) ![F:\\书山有路学海无边\\\
+  A1 Computer Books\\JAVA Books\\JV eCover(7.44x9.68)\\JV eCover-202102012325.jpg](https://mybook.to/Html_Css_cheat_sheet)\n\
+  \n（注：每份速查表包含 300 多个示例、300 多个输出和 300 多个解释。）\n\n## [Ray Yao 纸质书籍](https://geni.us/ray-yao)\n\
+  \n- [C# 速查表](https://author.to/C_Sharp_Cheat_Sheet)\n- [C++ 速查表](https://mybook.to/C_Plus_cheat_sheet)\n\
+  - [Java 速查表](https://author.to/Java_Cheat_Sheet)\n- [JavaScript 速查表](https://mybook.to/JavaScript_cheat_sheet)\n\
+  - [Php MySql 速查表](https://mybook.to/PHP_cheat_sheet)\n- [Python 速查表](https://author.to/Python_Cheat_Sheet)\n\
+  - [Html Css 速查表](https://mybook.to/Html_Css_cheat_sheet)\n- [MySQL 速查表](https://geni.us/MySQL_chsh_paperback)\n\
+  - [SQL 速查表](https://geni.us/SQL_chsh_paperback)\n- [Linux 命令行](http://mybook.to/Linux_Command_Line)\n\
+  \n## [100  题问答系列]\n\n- [C# 100 题问答](https://mybook.to/C_Sharp_Examination)\n- [C++\
+  \ 100 题问答](https://mybook.to/C_Plus_Examination)\n- [Java 100 题问答](https://mybook.to/Java_Examination)\n\
+  - [JavaScript 100 题问答](https://mybook.to/JavaScript_Examination)\n- [Php MySql 100\
+  \ 题问答](https://mybook.to/PHP_MySQL_Examination)\n- [Python 100 题问答](https://mybook.to/Python_Examination)\n\
+  - [Html Css 100 题问答](https://mybook.to/Html_Css_Examination)\n- [Linux 100 题问答](http://mybook.to/Linux_Examination)\n\
+  \n## [示例与详解]\n\n- [C# 示例与详解](https://mybook.to/C_Sharp_Examples)\n- [C++ 示例与详解](https://mybook.to/C_Plus_Examples)\n\
+  - [Java 示例与详解](https://mybook.to/Java_Examples)\n\n"
