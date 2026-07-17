@@ -1,0 +1,35 @@
+name: Linux for Beginners： The Ultimate Beginner Guide to Linux Command Line, Linux
+  Programming and Linux Operating System
+name_cn: Linux 初学者指南：Linux 命令行、Linux 编程与 Linux 操作系统终极初学者指南
+slug: linux-for-beginners-the-ultimate-beginner-guide-to-linux-com
+toc:
+- - '#'
+  - '# 第 3 章 – Shell'
+- - '##'
+  - Shell 简介
+- - '##'
+  - 命令提示符 (prompt)
+- - '##'
+  - 命令行概念
+- - '##'
+  - 标准输入/输出
+- - '##'
+  - 重定向 (Redirects)
+- - '##'
+  - 管道 (pipes)
+- - '##'
+  - 第 4 章 – 文件通配 (File Globbing)
+- - '##'
+  - Linux 中的文件层次结构
+- - '##'
+  - 主要 Linux Shell 命令表
+- - '##'
+  - 第 5 章 - 用户管理
+- - '###'
+  - 管理员的第一步
+- - '###'
+  - /etc/passwd 文件
+- - '###'
+  - /etc/group 文件
+- - '###'
+  - 自定义 shell

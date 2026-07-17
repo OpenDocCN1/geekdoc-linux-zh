@@ -1,0 +1,3913 @@
+- fmt: '
+
+    ![](images/00002.jpeg)
+
+
+    # Linux For Beginners
+
+    ## The Ultimate Guide to Linux Command Line, Linux Programming and Linux Operating
+    System
+
+
+    ## Table of Content
+
+    - [Introduction](#part0000_split_002.html_intro)
+
+    - [Chapter 1 – History Highlights](#part0000_split_003.html_ch1)
+
+    - [Chapter 2 – Installing Linux](#part0000_split_007.html_ch2)
+
+    - [Chapter 3 – The Shell](#part0000_split_017.html_ch3)
+
+    - [Chapter 4 – File Globbing](#part0000_split_024.html_ch4)
+
+    - [Chapter 5 - User Management](#part0000_split_027.html_ch5)
+
+    - [Chapter 6 - Linux Tips and Tricks](#part0000_split_033.html_ch6)
+
+    - [Chapter 7 - Vi Editor](#part0000_split_040.html_ch7)
+
+    - [Conclusion](#part0000_split_047.html_conclusion)
+
+
+    # Introduction
+
+    This book is for all computer users eager to learn or consolidate bases acquired
+    in the field.
+
+
+    As you will know when reading this book, there are different distributions of
+    the `Linux` kernel. In this book we will focus a little more on the `Redhat` distribution
+    because we consider it as the easier one to install and use. In the following
+    chapters, important methods and `Linux` administration commands are presented
+    and detailed.
+
+
+    A lot of computer users tend to avoid `Linux` for its “complexity” and “sophistication”.
+    This book is specially written and tailored to prove those people are wrong.
+
+
+    This book really popularizes and simplifies the `Linux` operating system and its
+    usage while following a good methodology. `Linux for beginners` covers all the
+    important facets which all beginners should know about. I am asking you to imagine
+    yourself using this great OS without having any difficulties or fogginess about
+    it.
+
+
+    Reading and understanding this book will make it happen. In the beginning we will
+    explore `Linux` history and genesis so we can have a clear vision and be methodological.
+    Then, we will learn and understand how to install the system knowing the necessary
+    equipments and devices needed to have an operational OS running.
+
+
+    We will also learn about the `shell` which is very important and all the relative
+    commands. And of course we must not forget about command lines which are really
+    useful and commonly used. `File globbing` will be covered too; it’s really indispensable
+    for `Linux` beginners to know about.
+
+
+    Then we will hit user’s management and authenticating which will certainly help
+    you secure data and manage access rights for all users. By the end, just to make
+    it complete and really useful for `Linux` learners and beginners, we included
+    some very important `Linux` tips and talked about the `Vi` editor which is really
+    an interesting thing to know about.
+
+
+    # Chapter 1 – History Highlights
+
+    In this chapter we will explore and learn about our OS history which is very important.
+    Also, once you are done reading it, you will know about a lot of general information
+    indispensable for `Linux` beginners.
+
+
+    ## History and genesis of Linux
+
+    `Linus B.Torvalds` is behind this entirely free OS. In the early 90s, `Linus`
+    wanted to develop his own OS and present it as his graduation project. He was
+    intended to develop a `UNIX` version that runs on a `80386` type architecture.
+    `Minix` was the first `UNIX` clone running on PC, written by `Andrew Tanenbaum`.
+    `Linus Torvalds` then decided to expand the possibilities of `Minix`, creating
+    what would become `Linux`. Amused by this initiative, many people contributed
+    to help `Linus Torvalds` to complete this system, so that in 1992 a first version
+    of the system was launched with almost no bug.
+
+
+    With the increasing number of developers working on this system, it has been able
+    to integrate quickly free redevelopments of tools present in commercial `UNIX`
+    systems. New tools for `Linux` now appear at breakneck speed.
+
+
+    The originality of this system lies in the fact that `Linux` was not developed
+    for commercial purposes. Indeed no line of code has been copied from the original
+    `UNIX` systems (`Linux`, in fact draws on many commercial `UNIX` versions: `UNIX
+    System V`). So everyone, since its inception, is free to use but also to improve
+    it.
+
+
+    Although `Linux` was initially designed to run on PC, it has now been developed
+    and adapted to many other platforms such as `SPARC` stations, `Macintosh`, and
+    even platforms such as personal assistants (`PDA`), even videogame consoles!
+
+
+    ## Core concepts and distribution
+
+    `Linux` is built around a `kernel` responsible for taking care of the equipment.
+    We call distribution assembling a set of software around a `Linux` kernel to provide
+    a turnkey system. The `kernel` of a distribution can be updated to allow for the
+    inclusion of recent material; however this operation consisting in rebuilding
+    the `kernel` is difficult because it requires a certain level of knowledge of
+    the system and equipment. The `kernel` recompilation is reserved for specialists
+    or users willing to make them unusable system to learn.
+
+
+    Most distributions also provide a graphical installation of their own and a package
+    management system to automatically install software by managing dependencies (software
+    under `Linux` is sometimes linked to external libraries or rely on other software).
+
+
+    Each distribution has its advantages and disadvantages. Indeed if some are more
+    suited to beginners and offer advanced graphics interfaces, others prefer the
+    security or scalability. The best known distributions are:
+
+
+    - The `RedHat` distribution
+
+    - The `Debian` distribution
+
+    - The `SuSe` distribution
+
+    - The `Knoppix` distribution
+
+    - `Slackware`
+
+    - The `Mageia` distribution
+
+
+    ## System features
+
+    `Linux` is an operating system similar to `UNIX` systems that can run on different
+    hardware platforms: `x86` (that is to say based on platforms `Intel`, `AMD`, etc.),
+    `Sparc`, `PowerPC`, `Alpha`, `ARM`, etc. So the `Linux` system can operate both
+    on personal computers as game consoles or personal assistants!
+
+
+    `Linux` is therefore a multi-platform system. It is also multi-user (several people
+    can simultaneously work on the same computer), but also multi-task (several applications
+    can be run simultaneously without any of them affects the other) and multiprocessor.
+
+
+    `Linux` is considered a reliable, robust and powerful. It is also capable of operating
+    with very few resources on low end computers very few powerful.
+
+
+    The `Linux` system has the following advantages in particular:
+
+
+    - Support for Internet standards, that is to say `TCP/IP` protocols, the group
+    of Internet protocols. `Linux` is a free way to create a local network to connect
+    to the Internet and to set up a server.
+
+    - More security due to its sourcecode’s transparency and the responsiveness of
+    the community during the vulnerabilities advertisements.
+
+    - A partitioning of memory space and disk space coupled with a sharp rights management
+    to manage large numbers of users with minimal risk.
+
+    - A fully configurable nucleus depending on the hardware of the machine on which
+    the system is installed to maximize performance.
+
+
+    # Chapter 2 – Installing Linux
+
+    This chapter is really useful since it covers a lot important details and proposes
+    the best solutions for Linux beginners.
+
+
+    ## Necessary material
+
+    `Linux` does not require the latest computer with minimal configuration:
+
+
+    - a `386SX` processor minimum
+
+    - `4MB` of memory (`8MB` recommended)
+
+    - a hard disk controller and a disk with free `20MB` (`100MB` recommended) (`Linux`
+    is able in practice to operate from a single disk)
+
+    - a `CD-ROM`
+
+
+    Regarding appendices devices, common hardware components on the market will have
+    much more chance of being supported by `Linux`...
+
+
+    ## Prerequisite
+
+    `Linux` can be installed in addition to the operating system already installed
+    on your machine. Make sure before you start installing the file system is healthy
+    by using a program as `scandisk` or `chkdsk` to verify the integrity of the reader,
+    because `Linux` makes use of much more muscular than the `DOS` disk e.g.
+
+
+    ## Installation Phases
+
+    Installing `Linux` is done in several phases to implement a file system supported
+    by `Linux` (`ext2fs`) on one or several dedicated partitions and then to proceed
+    with the installation itself, finally configure the kernel before booting from
+    disc, the steps are the following:
+
+
+    - creating floppy disks
+
+    '
+  raw: "\n\n![](images/00002.jpeg)\n\nLinux For Beginners\n\nThe Ultimate Guide to\
+    \ Linux Command Line, Linux Programming and Linux Operating System\n\nTable of\
+    \ Content\n\n[Introduction](#part0000_split_002.html_intro)\n\n[Chapter 1 – History\
+    \ Highlights](#part0000_split_003.html_ch1)\n\n[Chapter 2 – Installing Linux](#part0000_split_007.html_ch2)\n\
+    \n[Chapter 3 – The Shell](#part0000_split_017.html_ch3)\n\n[Chapter 4 – File Globbing](#part0000_split_024.html_ch4)\n\
+    \n[Chapter 5 - User Management](#part0000_split_027.html_ch5)\n\n[Chapter 6 -\
+    \ Linux Tips and Tricks](#part0000_split_033.html_ch6)\n\n[Chapter 7 - Vi Editor](#part0000_split_040.html_ch7)\n\
+    \n[Conclusion](#part0000_split_047.html_conclusion)\n\nIntroduction\n\nThis book\
+    \ is for all computer userseager to learn or consolidate bases acquired in the\
+    \ field.\n\nAs you will know when reading this book, there are different distributions\
+    \ of the Linux kernel. In this book we will focus a little more on the Redhat\
+    \ distribution because we consider it as the easier one to install and use. In\
+    \ the following chapters, important methods and Linux administration commands\
+    \ are presented and detailed.\n\nA lot of computer users tend to avoid Linux for\
+    \ its “complexity” and “sophistication”. This book is specially written and tailored\
+    \ to prove those people are wrong.\n\nThis book really popularizes and simplifies\
+    \ the Linux operating system and its usage while following a good methodology.\
+    \ Linux for beginners covers all the important facets which all beginners should\
+    \ know about. I am asking you to imagine yourself using this great OS without\
+    \ having any difficulties or fogginess about it.\n\nReading and understanding\
+    \ this book will make it happen.In the beginning we will explore Linux history\
+    \ and genesis so we can have a clear vision and be methodological. Then, we will\
+    \ learn and understand how to install the system knowing the necessary equipments\
+    \ and devices needed to have an operational OS running.\n\nWe will also learn\
+    \ about the shell which is very important and all the relative commands. And of\
+    \ course we must not forget about command lines which are really useful and commonly\
+    \ used. File globbing will be covered too; it’s really indispensable for Linux\
+    \ beginners to know about.\n\nThen we will hit user’s management and authenticating\
+    \ which will certainly help you secure data and manage access rights for all users.\
+    \ By the end, just to make it complete and really useful for Linux learners and\
+    \ beginners, we included some very important Linux tips and talked about the Vi\
+    \ editor which is really an interesting thing to know about.\n\nChapter 1 – History\
+    \ Highlights\n\nIn this chapter we will explore and learn about our OS history\
+    \ which is very important. Also, once you are done reading it, you will know about\
+    \ a lot of general information indispensable for Linux beginners.\n\n## History\
+    \ and genesis of Linux\n\nLinus B.Torvalds is behind this entirely free OS. In\
+    \ the early 90s, Linus wanted to develop his own OSand present it as his graduation\
+    \ project. He was intended to develop a UNIX version that runs on a 80386 type\
+    \ architecture.Minixwasthe first UNIX clone running on PC, written by Andrew Tanenbaum.\
+    \ Linus Torvalds then decided to expand the possibilities of Minix, creating what\
+    \ would become Linux. Amused by this initiative, many people contributed to help\
+    \ Linus Torvalds to complete this system, so that in 1992 a first version of the\
+    \ system was launched with almost no bug.\n\nWith the increasing number of developers\
+    \ working on this system, it has been able to integrate quickly free redevelopments\
+    \ of tools present in commercial UNIX systems. New tools for Linux now appear\
+    \ at breakneck speed.\n\nThe originality of this system lies in the fact that\
+    \ Linux was not developed for commercial purposes. Indeed no line of code has\
+    \ been copied from the original UNIX systems (Linux, in fact draws on many commercial\
+    \ UNIX versions: UNIX System V). So everyone, since its inception, is free to\
+    \ use but also to improve it.\n\nAlthough Linux was initially designed to run\
+    \ on PC, it has now been developedand adapted to many other platforms such as\
+    \ SPARC stations, Macintosh,and even platforms such as personal assistants (PDA),\
+    \ even videogame consoles!\n\n## \n\nCore concepts and distribution\n\nLinux is\
+    \ built around a kernel responsible for taking care of the equipment. We call\
+    \ distribution assembling a set of software around a Linux kernel to provide a\
+    \ turnkey system. The kernel of a distribution can be updated to allow for the\
+    \ inclusion of recent material; however this operation consisting in rebuilding\
+    \ the kernel is difficult because it requires a certain level of knowledge of\
+    \ the system and equipment. The kernel recompilation is reserved for specialists\
+    \ or users willing to make them unusable system to learn.\n\nMost distributions\
+    \ also provide a graphical installation of their own and a package management\
+    \ system to automatically install software by managing dependencies (software\
+    \ under Linux is sometimes linked to external libraries or rely on other software).\n\
+    \nEach distribution has its advantages and disadvantages. Indeed if some are more\
+    \ suited to beginners and offer advanced graphics interfaces, others prefer the\
+    \ security or scalability. The best known distributions are:\n\n- The RedHat distribution\n\
+    \n- The Debian distribution\n\n- The SuSe distribution\n\n- The Knoppix distribution\n\
+    \n- Slackware\n\n- The Mageia distribution.\n\n## System features\n\nLinux is\
+    \ an operating system similar to UNIX systems that can run on different hardware\
+    \ platforms: x86 (that is to say based platforms Intel, AMD, etc.), Sparc, PowerPC,\
+    \ Alpha, ARM, etc. So the Linux system can operate both on personal computers\
+    \ as game consoles or personal assistants!\n\nLinux is therefore a multi-platform\
+    \ system. It is also multi-user (several people can simultaneously work on the\
+    \ same computer), but also multi-task (several applications can be run simultaneously\
+    \ without any of them affects the other) and multiprocessor.\n\nLinux is considered\
+    \ a reliable, robust and powerful. It is also capable of operating with very few\
+    \ resources on low end computers very few powerful.\n\nThe Linux system has the\
+    \ following advantages in particular:\n\n- Support for Internet standards, that\
+    \ is to say, TCP/IP protocols, the groupof Internetprotocols. Linux is a free\
+    \ way to create a local network to connect to the Internet and to set up a server.\n\
+    \n- More security due to its sourcecode’s transparency and the responsiveness\
+    \ of the community during the vulnerabilities advertisements.\n\n- A partitioning\
+    \ of memory space and disk space coupled with a sharp rights management to manage\
+    \ large numbers of users with minimal risk.\n\n- A fully configurable nucleus\
+    \ depending on the hardware of the machine on which the system is installed to\
+    \ maximize performance.\n\nChapter 2 –Installing Linux\n\nThis chapter is really\
+    \ useful since it covers a lot important details and proposes the best solutions\
+    \ for Linux beginners.\n\n## Necessary material\n\nLinux does not require the\
+    \ latest computer with minimal configuration:\n\n- a 386SX processor minimum\n\
+    \n- 4MB of memory (8MB recommended)\n\n- a hard disk controller and a disk with\
+    \ free 20MB (100MB recommended) (Linux is able in practice to operate from a single\
+    \ disk)\n\n- a CD-ROM\n\nRegarding appendices devices, common hardware components\
+    \ on the market will have much more chance of being supported by Linux...\n\n\
+    ## Prerequisite\n\nLinux can be installed in addition to the operating system\
+    \ already installed on your machine. Make sure before you start installing the\
+    \ file system is healthy by using a program such as scandisk or chkdsk to verify\
+    \ the integrity of the reader, because Linux makes use of much more muscular than\
+    \ the DOS disk e.g.\n\n## Installation Phases\n\nInstalling Linux is done in several\
+    \ phases to implement a file system supported by Linux (ext2fs) on one or several\
+    \ dedicated partitions and then to proceed with the installation itself, finally\
+    \ configure the kernel before booting from disc, the steps are the following:\n\
+    \n- creating floppy disks"
+  toc: []
+  trans: '
+
+
+    ![](img/00002.jpeg)
+
+
+    # Linux 入门
+
+    ## Linux 命令行、Linux 编程与 Linux 操作系统终极指南
+
+
+    ## 目录
+
+    - 引言
+
+    - 第 1 章 – 历史亮点
+
+    - 第 2 章 – 安装 Linux
+
+    - 第 3 章 – Shell
+
+    - 第 4 章 – 文件通配符
+
+    - 第 5 章 - 用户管理
+
+    - 第 6 章 - Linux 技巧与技巧
+
+    - 第 7 章 - Vi 编辑器
+
+    - 结论
+
+
+    # 引言
+
+    本书适用于所有渴望学习或巩固在该领域基础知识的计算机用户。
+
+
+    正如你在阅读本书时会发现的，`Linux` 内核有不同的发行版。在本书中，我们将更多地关注 `Redhat` 发行版，因为我们认为它更容易安装和使用。在接下来的章节中，将详细介绍重要的方法和
+    `Linux` 管理命令。
+
+
+    许多计算机用户因为 `Linux` 的“复杂性”和“高级性”而倾向于避免使用它。本书专门编写并定制，旨在证明这些人的观点是错误的。
+
+
+    本书遵循良好的方法论，真正普及并简化了 `Linux` 操作系统及其用法。`Linux for beginners` 涵盖了所有初学者应该知道的所有重要方面。我要求你想象一下在使用这个出色的操作系统时，没有任何困难或困惑。
+
+
+    阅读并理解这本书将使这一切成为现实。在开始，我们将探索 `Linux` 的历史和起源，以便我们有一个清晰的视野并遵循方法论。然后，我们将学习并理解如何安装系统，并了解运行操作系统所需的必要设备和硬件。
+
+
+    我们还将学习非常重要的 `shell` 以及所有相关的命令。当然，我们不能忘记非常有用且常用的命令行。`File globbing`（文件通配符）也将被涵盖；这对于
+    `Linux` 初学者来说真的是不可或缺的。
+
+
+    然后我们将进入用户管理和身份验证，这将无疑帮助你保护数据并管理所有用户的访问权限。在最后，为了使其完整并对 `Linux` 学习者和初学者真正有用，我们包含了一些非常重要的
+    `Linux` 技巧，并讨论了 `Vi` 编辑器，这是一个非常值得了解的话题。
+
+
+    # 第 1 章 – 历史亮点
+
+    在本章中，我们将探索并学习我们的操作系统历史，这非常重要。此外，一旦你阅读完毕，将了解许多 `Linux` 初学者必不可少的通用信息。
+
+
+    ## Linux 的历史与起源
+
+    `Linus B.Torvalds` 是这个完全免费的操作系统背后的功臣。在 90 世纪初，`Linus` 想开发自己的操作系统并作为毕业项目提交。他打算开发一个运行在
+    `80386` 类型架构上的 `UNIX` 版本。`Minix` 是第一个运行在 PC 上的 `UNIX` 克隆系统，由 `Andrew Tanenbaum`
+    编写。Linus Torvalds` 决定扩展 `Minix` 的可能性，创建了后来成为 `Linux` 的东西。许多人对这一倡议感到好奇并帮助 `Linus
+    Torvalds` 完成了这个系统，以便在 1992 年发布了几乎没有 bug 的第一个版本系统。
+
+
+    随着开发该系统的开发者数量增加，它能够快速整合商业 `UNIX` 系统中工具的免费重新开发。`Linux` 的新工具现在以惊人的速度出现。
+
+
+    该系统的独特性在于 `Linux` 并不是为了商业目的而开发的。事实上，没有任何代码是从原始的 `UNIX` 系统复制的（实际上 `Linux` 借鉴了许多商业
+    `UNIX` 版本：如 `UNIX System V`）。因此，从诞生起，每个人都可以自由地使用并改进它。
+
+
+    尽管 `Linux` 最初设计为在 PC 上运行，但它现在已经开发并适应了许多其他平台，例如 `SPARC` 工作站、`Macintosh`，甚至如个人助理
+    (`PDA`) 等平台，甚至是视频游戏机！
+
+
+    ## 核心概念与发行版
+
+    `Linux` 围绕一个负责处理设备的 `kernel`（内核）构建。我们将发行版称为在 `Linux` 内核周围汇组装的一套软件，以提供一个开箱即用的系统。发行版的
+    `kernel` 可以更新以包含最新的材料；然而，这种涉及重新构建 `kernel` 的操作是困难的，因为它需要对系统和设备有一定程度的知识。`kernel`
+    的重新编译留给专家或愿意通过制作出不可用的系统来学习的用户。
+
+
+    大多数发行版还提供它们自己的图形化安装和一个包管理系统，通过管理依赖关系自动安装软件（`Linux` 下的软件有时与外部库链接或依赖其他软件）。
+
+
+    每个发行版都有其优缺点。事实上，某些更适合初学者并提供高级的图形界面，而另一些则偏安全性或扩展性。最著名的发行版有：
+
+
+    - `RedHat` 发行版
+
+    - `Debian` 发行版
+
+    - `SuSe` 发行版
+
+    - `Knoppix` 发行版
+
+    - `Slackware`
+
+    - `Mageia` 发行版
+
+
+    ## 系统特性
+
+    `Linux` 是一种类似于 `UNIX` 系统的操作系统，可以在不同的硬件平台上运行：`x86`（即基于 `Intel`、`AMD` 等平台）、`Sparc`、`PowerPC`、`Alpha`、`ARM`
+    等。因此，`Linux` 系统可以在个人电脑上作为游戏机或个人助理运行！
+
+
+    `Linux` 因此是一个多平台系统。它也是多用户的（几个人可以同时在同一台计算机上工作），也是多任务的（多个应用程序可以同时运行而互不影响）以及多处理器的。
+
+
+    `Linux` 被认为是可靠、健壮且强大的。它还能够在资源非常少的低端或低性能计算机上运行。
+
+
+    `Linux` 系统特别具有以下优势：
+
+
+    - 支持互联网标准，即 `TCP/IP` 协议，一组互联网协议。`Linux` 是一种创建本地网络以连接互联网并建立服务器的免费方法。
+
+    - 由于源代码的透明性以及社区在漏洞公告期间的响应，具有更高的安全性。
+
+    - 内存空间和磁盘空间的划分，配合严格的权限管理，以最小的风险管理大量用户。
+
+    - 完全可配置的内核，取决于安装该系统的机器硬件，以实现性能最大化。
+
+
+    # 第 2 章 – 安装 Linux
+
+    这一章非常有用，因为它涵盖了许多重要细节，并为 Linux 初学者提供了最佳解决方案。
+
+
+    ## 必要材料
+
+    `Linux` 并不需要配置要求的最新计算机：
+
+
+    - 最低 `386SX` 处理器
+
+    - `4MB` 内存（推荐 `8MB`）
+
+    - 硬盘控制器和一个具有 `20MB` 空闲空间的磁盘（推荐 `100MB`）（`Linux` 实际上可以从单磁盘运行）
+
+    - 一个 `CD-ROM`
+
+
+    关于外接设备，市场上常见的硬件组件更有可能被 `Linux` 支持……
+
+
+    ## 前提条件
+
+    除了机器上已经安装的操作系统外，还可以安装 `Linux`。在开始安装之前，请确保使用 `scandisk` 或 `chkdsk` 等程序检查文件系统以验证读取器的完整性，因为
+    `Linux` 使用的磁盘比 `DOS` 磁盘强大得多例如
+
+
+    ## 安装阶段
+
+    `Linux` 的安装分阶段完成，以便在 `Linux` 支持的文件系统（`ext2fs`）上现在一个或多个专用分区，然后进行安装本身，最后在从光盘启动之前配置内核，步骤如下：
+
+
+    - 创建软盘
+
+
+    '
+- fmt: '
+
+    - system boot from the diskette
+
+    - creating the primary partition of the hard drive
+
+    - creation of the swap partition
+
+    - creation of the file system
+
+    - Linux Installation
+
+    - Kernel Configuration
+
+    - system reboot
+
+
+    ## Creating boot and root disks
+
+
+    Through floppy disks to boot the system with minimal Linux kernel we will be able
+    to install Linux. These disks will be created using a program to copy image files
+    (all data to put on floppy disks) on a disk. These disks are two in number:
+
+
+    - Boot disk: containing a Linux kernel for booting the system
+
+    - Root disk: contains the installation software
+
+
+    The image file to be chosen in each case depends on the configuration of your
+    system, it will be called:
+
+
+    - `scsi`, in the case of a SCSI CD-ROM drive
+
+    - `sbcd`, in the case of a Panasonic CD-ROM drive or connected to a Sound Blaster
+    Pro
+
+    - `nec260`, in the case of a CD-ROM Nec 260
+
+    - `Mitsumi`, in the case of a CD-ROM Mitsumi
+
+    - `cdu31a`, in the case of a CD-ROM or Sony cdu31 CDU33a
+
+    - `cdu535`, in the case of a CD-ROM or Sony CDU531 CDU535
+
+
+    It only remains for you for each of the two image files (boot and root) to type
+    in the directory containing the proper image file `\rawrite`, the program will
+    ask you the name of the image file (`scsi` for example), then the drive (`a:`)
+
+
+    You can optionally create an additional disk for later use (e.g. if you plan to
+    buy a SCSI card while you have an IDE CD-ROM drive ...
+
+
+    ## Booting from the boot disk
+
+
+    Once the disks created, restart the computer taking care to place the boot disk
+    in drive `a :`.
+
+
+    After displaying some messages the system displays the line: "boot", press enter
+    to proceed.The system then calls the root disk.
+
+
+    ## Creating Partitions
+
+
+    To use Linux, you need to create a partition (preferably larger than 900MB to
+    install all options) using the `Linux Ext2` file system and (optionally) a swap
+    partition (virtual memory, that is, i.e. a part of the disk used in case of lack
+    of memory) of tens of MBs.
+
+
+    Creating partitions can be done in different ways:
+
+
+    Under a Microsoft system before booting the system with the diskette boot:
+
+
+    - In Windows 9x, the software `Partition Magic 4` makes it very easy to create
+    `ext2fs` and swap partitions without losing data on the disk
+
+    - Under MS-DOS, with the `fdisk` software supplied as standard, which is more
+    ergonomic than his colleague of the same name supplied with Linux
+
+    - There is also a DOS utility called `fips`. It allows performing operations on
+    partitions.
+
+
+    On Linux, after starting the system. Next distributing the installation procedure
+    is different:
+
+
+    - with Slackware type distributions you will need to enter the commands manually,
+    that is to say format, partition, create the file system and install successively
+
+    - with RedHat type distributions, these operations are automated, you will answer
+    questions ...
+
+
+    When creating partitions, you will surely be asked the type of the previous partitions
+
+
+    Follow these steps:
+
+
+    - type 82 for the secondary memory
+
+    - type 83 for the main partition
+
+    - The primary partition must be within the range of the disc between the first
+    and 1023ame cylinder!
+
+    - Note on a paper the size (in blocks) of the main partition and of the swap partition
+    on a paper because this helps later
+
+
+    ## Creating the file system
+
+
+    Under certain distributions you will be asked to create a file system before launching
+    the installation (this is not the case, among other things, distributions RedHat
+    5.2 and Mandrake 6.0, for which all the following operations are automated through
+    menus).
+
+
+    When you have created the main partition and the secondary memory partition (swap
+    partition), this is to activate the secondary memory and create the file system
+    of the root partition.
+
+
+    Activating the secondary memory is done with the command:
+
+
+    ```
+
+    mkswap -c partition size
+
+    ```
+
+
+    For example, for a secondary memory using 10000 blocks on the second partition
+    of the second disc (`hdb2`) command would be:
+
+
+    ```
+
+    mkswap -c / dev / hdb2 11000
+
+    ```
+
+
+    Then the `swapon` command to launch it
+
+
+    The creation of ext2 file system is done through the following command:
+
+
+    ```
+
+    mke2fs -c partition size
+
+    ```
+
+
+    for example:
+
+
+    ```
+
+    mke2fs -c / dev / hda2 202137
+
+    ```
+
+
+    ## Installing RedHat
+
+
+    The RedHat distribution is currently one of the most acclaimed distributions given
+    that the installation procedure is quite simple. In fact, this procedure simply
+    asks you to make choices from a drop-down list for your main devices and for choices
+    related to language or packages needed to be installed. Here are the different
+    steps to be followed:
+
+
+    - Choice of language: choose the language in which the installation procedure
+    will be
+
+    - Choice of keyboard
+
+    - Choice of installation support: If your Linux distribution is on CD, choose
+    CD-ROM, otherwise, choose the Hard drive if the copy is downloaded
+
+    - Choice of installation style: if it is an update of a previous system or a full
+    install
+
+    - Type of installation: the system allows you to choose between workstation, server
+    or customized. You have every interest to opt for custom configuration that will
+    leave you more flexibility
+
+    - Choice of SCSI adapters: If you have a SCSI adapter, you should answer yes.
+    The system will detect your hardware. If ever this automatic search is unsuccessful,
+    you can simply enter a line of parameters enabling it to know what kind of SCSI
+    adapter in question, as well as knowing his IRQ and memory address. One Card "AHA1520"
+    to address `0x140` and IRQ `10` will be located in the command line: `= aha152x
+    0x140,10`
+
+    - Hard disk partitioning: RedHat allows you to partition your disk at this level
+    of the installation (if you have not done it previously) and leaves you the choice
+    between disk druid and `fdisk`
+
+    - choose the hard drive: the software lets you choose from a list the hard disk
+    on which to create the partitions
+
+    - Unnecessary partitions Removal: under `fdisk` using the `d` key you can delete
+    unnecessary partitions (be careful not to delete your Windows partitions!)
+
+    - Creating Linux partitions: the `n` button and the `p` button will allow you
+    to create root and swap partitions, and all other partitions you may need. The
+    first cylinder number of the partition and its size (in MB) will be required
+
+    - Change the partition type: with the key `t` you can allocate the type 82 to
+    the swap partition, and type 83 to the Linux partitions ...
+
+    - fdisk output: by pressing the `q` key you exit `fdisk` abandoning the changes.
+    By pressing the button `w` you save the changes before leaving
+
+    - Selecting mount points: a screen offers several partitions, at this point you
+    need to select the one you would like to use and name them one by one, that is
+    to say, specify the mount point. The root is mandatory, it is the master partition
+    and must be named `/`. Each partition that you wish to use under Linux must be
+    assigned a mount point (`/home` for example, or `/mnt/dos` for your DOS partition,
+    if you want it to be mounted automatically after installation
+
+    - Selecting the swap partition: the system naturally asks you to select the partition
+    that will be used as secondary memory
+
+    - Formatting partitions: you must select all new partitions that you have created.
+    Be careful not to format partitions containing data!
+
+    - Choice of packages: this option requires you to simply select from a list, what
+    to install
+
+    - Installing / copying packages: installs the system one by one all the required
+    packages. This operation can be very long! (Up to half an hour ...)
+
+    - Network configuration: these computers with a network card (not a modem)
+
+    - Choice of the clock: Choose appropriate clock to your country
+
+    - Choice of start-up services: you can select from a list the services that will
+    be activated at each start.
+
+    - choice of printer: a series of questions will allow you to configure your printer
+    by choosing it from a list and specifying the port on which it is connected
+
+    - the password input: password You will be asked for the super user account (`root`),
+    that is to say, a user who has all rights
+
+    '
+  raw: '- system boot from the diskette
+
+
+    - creating the primary partition of the hard drive
+
+
+    - creation of the swap partition
+
+
+    - creation of the file system
+
+
+    - Linux Installation
+
+
+    - Kernel Configuration
+
+
+    - system reboot
+
+
+    ## Creating boot and root disks
+
+
+    Through floppy disks to boot the system with minimal Linux kernel we will be able
+    to install Linux. These disks will be created using a program to copy image files
+    (all data to put on floppy disks) on a disk. These disks are two in number:
+
+
+    - Boot disk: containing a Linux kernel for booting the system
+
+
+    - Root disk: contains the installation software
+
+
+    The image file to be chosen in each case depends on the configuration of your
+    system, it will be called:
+
+
+    - scsi, in the case of a SCSI CD-ROM drive
+
+
+    - sbpcd, in the case of a Panasonic CD-ROM drive or connected to a Sound Blaster
+    Pro
+
+
+    - nec260, in the case of a CD-ROM Nec 260
+
+
+    - Mitsumi, in the case of a CD-ROM Mitsumi
+
+
+    - cdu31a, in the case of a CD-ROM or Sony cdu31 CDU33a
+
+
+    - cdu535, in the case of a CD-ROM or Sony CDU531 CDU535
+
+
+    It only remains for you for each of the two image files (boot and root) totype
+    in the directory containing the proper image file "\rawrite", the program will
+    ask you the name of the image file (scsi for example), then the drive (a:)
+
+
+    You can optionally create an additional disk for later use (e.g. if you plan to
+    buy a SCSI card while you have an IDE CD-ROM drive ...).
+
+
+    ## Booting from the boot disk
+
+
+    Once the disks created, restart the computer taking care to place the boot disk
+    in drive a :.
+
+
+    After displaying some messages the system displays the line: "boot", press enter
+    to proceed.The system then calls the root disk.
+
+
+    ## Creating Partitions
+
+
+    To use Linux, you need to create a partition (preferably larger than 900MB to
+    install all options) using the "Linux Ext2" file system and (optionally) a swap
+    partition (virtual memory, that is, i.e. a part of the disk used in case of lack
+    of memory) of tens of MBs.
+
+
+    Creating partitions can be done in different ways:
+
+
+    Under a Microsoft system before booting the system with the diskette boot:
+
+
+    - In Windows 9x, the software Partition Magic 4 makes it very easy to create ext2fs
+    and swap partitions without losing data on the disk
+
+
+    - Under MS-DOS, with the fdisk software supplied as standard, which is more ergonomic
+    than his colleague of the same name supplied with Linux
+
+
+    - There’salsoa DOS utility called fips. It allows performing operations on partitions.
+
+
+    On Linux, after starting the system. Next distributing the installation procedure
+    is different:
+
+
+    - with Slackware type distributions you will need to enter the commands manually,
+    that is to say format, partition, create the file system and installsuccessively
+
+
+    - withRedHat type distributions, these operations are automated, you will answer
+    questions ...
+
+
+    When creating partitions, you will surely be asked the type of the previous partitions
+
+
+    Follow these steps:
+
+
+    - type 82 for the secondary memory
+
+
+    - type 83 for the main partition
+
+
+    - The primary partition must be within the range of the disc between the first
+    and 1023àme cylinder!
+
+
+    - Note on a paper the size (in blocks) of the main partition and of the swap partition
+    on a paper because this helps later
+
+
+    ## Creating the file system
+
+
+    Under certain distributions you will be asked to create a file system before launching
+    the installation (this is not the case, among other things, distributions RedHat
+    5.2 and Mandrake 6.0, for which all the following operations are automated through
+    menus).
+
+
+    When you have created the main partition and the secondary memory partition (swap
+    partition), this is to activate the secondary memory and create the file system
+    of the root partition.
+
+
+    Activating the secondary memory is done with the command:
+
+
+    <<mkswap -c partition size>>
+
+
+    For example, for a secondary memory using 10000 blocks on the second partition
+    of the second disc (hdb2) command would be:
+
+
+    <<mkswap -c / dev / hdb2 11000>>
+
+
+    Then the “swapon” command to launch it
+
+
+    The creation of ext2 file system is done through the following command:
+
+
+    <<mke2fs -c partition size>>
+
+
+    for example:
+
+
+    <<mke2fs -c / dev / hda2 202137 >>
+
+
+    Installing RedHat
+
+
+    The RedHat distribution is currently one of the most acclaimed distributions given
+    that the installation procedure is quite simple. In fact, this procedure simply
+    asks you to make choices from a drop-down list for your main devices and for choices
+    related to language or packages needed to be installed. Here are the different
+    steps to be followed:
+
+
+    - Choice of language: choose the language in which the installation procedure
+    will be
+
+
+    - Choice of keyboard
+
+
+    - Choice of installation support: If your Linux distribution is on CD, choose
+    CD-ROM, otherwise, choose the Hard drive if the copy is downloaded.
+
+
+    - Choice of installation style: if it is an update of a previous system or a full
+    install
+
+
+    - Type of installation: The system allows you to choose between workstation, server
+    or customized. You have every interest to opt for custom configuration that will
+    leave you more flexibility
+
+
+    - Choice of SCSI adapters: If you have a SCSI adapter, you should answer yes.
+    The system will detect your hardware. If ever this automatic search is unsuccessful,
+    you can simply enter a line of parameters enabling it to know what kind of SCSI
+    adapter in question, as well as knowing his IRQ and memory address. One Card "AHA1520"
+    to address 0x140 and IRQ 10 will be located in the command line: = aha152x 0x140,10
+
+
+    - Hard diskpartitioning: RedHat allows you to partition your disk at this level
+    of the installation (if you have not done it previously) and leaves you the choice
+    between disk druid and fdisk
+
+
+    - choose the hard drive: the software lets you choose from a list the hard disk
+    on which to create the partitions
+
+
+    -Unnecessary partitionsRemoval: under fdisk using the "d" key you can delete unnecessary
+    partitions (be careful not to delete your Windows partitions!)
+
+
+    -Creating Linux partitions: the “n” button and the “p” button will allow you to
+    create root and swap partitions, and all other partitions you may need. U The
+    first cylinder number of the partition and its size (in MB) will be required
+
+
+    -Change the partition type: with the key “t” you canallocate the type 82 to the
+    swap partition, and type 83 to the Linux partitions ...
+
+
+    -fdisk output: by pressing the “q” key you exit fdisk abandoning the changes.
+    By pressing the button “w” you save the changes before leaving
+
+
+    - Selecting mount points: a screen offers several partitions, at this point you
+    need to select the one you would like to use and name them one by one, that is
+    to say, specify the mount point. The root is mandatory, it is the master partition
+    and must be named /. Each partition that you wish to use under Linux must be assigned
+    a mount point (/home for example, or /mnt/dos for your DOS partition, if you want
+    it to be mounted automatically after installation
+
+
+    - Selecting the swap partition: the system naturally asks you to select the partition
+    that will be used as secondary memory
+
+
+    - Formatting partitions: you must select all new partitions that you have created.
+    Be careful not to format partitions containing data!
+
+
+    - Choice of packages: this option requires you to simply select from a list, what
+    to install
+
+
+    - Installing / copying packages: installs the system one by one all the required
+    packages. This operation can be very long! (Up to half an hour ...)
+
+
+    - Network configuration: these computers with a network card (not a modem)
+
+
+    - Choice of the clock: Choose appropriate clock to your country
+
+
+    - Choice of start-up services: you can select from a list the services that will
+    be activated at each start.
+
+
+    - choice of printer: a series of questions will allow you to configure your printer
+    by choosing it from a list and specifying the port on which it is connected
+
+
+    - the password input: password You will be asked for the super user account (root),
+    that is to say, a user who has all rights'
+  toc: []
+  trans: '
+
+
+    - 从软盘启动系统
+
+    - 创建硬盘的主分区
+
+    - 创建交换空间分区 (swap partition)
+
+    - 创建文件系统
+
+    - Linux 安装
+
+    - 内核配置
+
+    - 系统重启
+
+
+    ## 创建启动磁盘和根磁盘
+
+
+    通过软盘以带有最小化 Linux 内核的模式启动系统，我们将能够安装 Linux。这些磁盘将使用一个程序将镜像文件（所有要放入软盘的数据）拷贝到磁盘上。这些磁盘共有两个：
+
+
+    - 启动磁盘：包含用于启动系统的 Linux 内核
+
+    - 根磁盘：包含安装软件
+
+
+    在每情况下，选择的镜像文件取决于你的系统配置，其名称为：
+
+
+    - `scsi`，适用于 SCSI CD-ROM 驱动器
+
+    - `sbcd`，适用于松下 CD-ROM 驱动器或连接到 Sound Blaster Pro
+
+    - `nec260`，适用于 Nec 260 CD-ROM
+
+    - `Mitsumi`，适用于 Mitsumi CD-ROM
+
+    - `cdu31a`，适用于 Sony cdu31 CDU33a CD-ROM
+
+    - `cdu535`，适用于 Sony CDU531 CDU535 CD-ROM
+
+
+    你只需为两个镜像文件（启动和根）中的每一个，进入包含正确镜像文件的目录并输入程序 `\rawrite`，程序会询问你镜像文件的名称（例如 `scsi`），然后是驱动器（`a:`）
+
+
+    你还可以选择创建一个额外的磁盘以备后用（例如，如果你在拥有 IDE CD-ROM 驱动器的同时计划购买 SCSI 卡……）
+
+
+    ## 从启动磁盘启动
+
+
+    磁盘创建完成后，重启电脑并注意将启动磁盘放入 `a :` 驱动器中。
+
+
+    在显示一些消息后，系统会显示“boot”行，按回车继续。系统随后会调用根磁盘。
+
+
+    ## 创建分区
+
+
+    要使用 Linux，你需要使用 `Linux Ext2` 文件系统创建一个分区（最好大于 900MB 以安装所有选项），以及（可选的）一个几十 MB 的交换空间分区（即虚拟内存，也就是说，在内存不足时使用的磁盘部分）。
+
+
+    创建分区可以通过不同的方式完成：
+
+
+    在用软盘启动系统之前，在 Microsoft 系统下：
+
+
+    - 在 Windows 9x 中，使用 `Partition Magic 4` 软件可以非常方便地创建 `ext2fs` 和交换分区，而不会丢失磁盘上的数据
+
+    - 在 MS-DOS 下，使用标准提供的 `fdisk` 软件，它比 Linux 提供的同名同事更符合人体工程学
+
+    - 还有一个名为 `fips` 的 DOS 工具程序。它允许对分区执行操作。
+
+
+    在 Linux 上，启动系统后。接下来的发行安装程序有所不同：
+
+
+    - 对于 Slackware 类发行版，你需要手动输入命令，即依次执行格式化、分区、创建文件系统并安装
+
+    - 对于 RedHat 类发行版，这些操作是自动化的，你只需要回答问题……
+
+
+    在创建分区时，你肯定会被问到之前分区的类型
+
+
+    遵循以下步骤：
+
+
+    - 备内存输入类型 82
+
+    - 主分区输入类型 83
+
+    - 主分区必须在磁盘从第一个磁道到第 1023 个磁道的范围内！
+
+    - 在纸上记录主分区和交换分区的尺寸（以块为单位），因为这有助于后续操作
+
+
+    ## 创建文件系统
+
+
+    在某些发行版中，你将在启动安装前被要求创建一个文件系统（RedHat 5.2 和 Mandrake 6.0 等发行版就不属于这种情况，它们的以下所有操作都通过菜单自动完成）。
+
+
+    当你创建了主分区和备内存分区（交换分区）后，这是为了激活备内存并创建根分区的文件系统。
+
+
+    激活备内存通过命令完成：
+
+
+    ```
+
+    mkswap -c partition size
+
+    ```
+
+
+    例如，对于第二个磁盘的第二个分区 (`hdb2`) 上使用 10000 个块的备内存，命令为：
+
+
+    ```
+
+    mkswap -c / dev / hdb2 11000
+
+    ```
+
+
+    然后使用 `swapon` 命令启动它。
+
+
+    ext2 文件系统的创建通过以下命令完成：
+
+
+    ```
+
+    mke2fs -c partition size
+
+    ```
+
+
+    例如：
+
+
+    ```
+
+    mke2fs -c / dev / hda2 202137
+
+    ```
+
+
+    ## 安装 RedHat
+
+
+    RedHat 发行版目前是最受推崇的发行版之一，因为其安装过程非常简单。事实上，该程序只需要求你从下拉列表中为主设备做出选择，以及关于语言或需要安装的软件包的选择。以下是需要遵循的不同步骤：
+
+
+    - 语言选择：选择安装程序将使用的语言
+
+    - 键盘选择
+
+    - 安装支持选择：如果你的 Linux 发行版在 CD 上，选择 CD-ROM；否则，如果是下载的副本，请选择硬盘
+
+    - 安装样式选择：选择是对以前系统的更新还是全新安装
+
+    - 安装类型：系统允许你在工作站、服务器或自定义之间进行选择。你完全应该选择自定义配置，这会给你更大的灵活性
+
+    - SCSI 适配器选择：如果你有 SCSI 适配器，应回答是。系统将检测你的硬件。如果这种自动搜索失败，你只需要输入一行参数，让它知道是哪种 SCSI 适配器，以及其
+    IRQ 和内存地址。一张地址为 `0x140` 且 IRQ 为 `10` 的“AHA1520” 卡在命令行中将位于定位置为：`= aha152x 0x140,10`
+
+    - 硬盘分区：RedHat 允许在此安装阶段对磁盘进行分区（如果你之前没有做过的话），并让你在磁盘分区工具和 `fdisk` 之间进行选择
+
+    - 选择硬盘：软件允许你从列表中选择要创建分区的硬盘
+
+    - 删除不必要的分区：在 `fdisk` 下使用 `d` 键可以删除不必要的分区（注意不要删除你的 Windows 分区！）
+
+    - 创建 Linux 分区：`n` 键和 `p` 键允许你创建根分区、交换分区以及你可能需要的其他分区。需要分区的第一个磁道编号和其尺寸（单位为 MB）
+
+    - 修改分区类型：通过 `t` 键你可以为交换分区分配类型 82，为 Linux 分区分配类型 83……
+
+    - fdisk 输出：通过按下 `q` 键退出 `fdisk` 并放弃更改。通过按下 `w` 键在退出前保存更改
+
+    - 选择挂载点：屏幕提供几个分区，此时你需要选择你想要使用的分区并逐个命名，即指定挂载点。根分区是强制的，它是主分区且必须命名为 `/`。每个希望在 Linux
+    下使用的分区都必须分配一个挂载点（例如 `/home`，或者对于希望安装后自动挂载的 DOS 分区使用 `/mnt/dos`）
+
+    - 选择交换分区：系统要求选择作为备内存的分区
+
+    - 格式化分区：你必须选择你创建的所有新分区。注意不要格式化包含数据的分区！
+
+    - 软件包选择：此选项要求你只需从列表中选择要安装的内容
+
+    - 安装/拷贝软件包：逐个安装系统所有所需的软件包。此操作可能会非常长！（可能长达半小时……）
+
+    - 网络配置：适用于带有网卡（而非调制解调器）的计算机
+
+    - 时钟选择：选择适合你国家的时钟
+
+    - 启动服务选择：你可以从列表中选择每次启动时激活的服务
+
+    - 打印机选择：一系列问题将允许你通过从列表中选择打印机并指定其连接端口来配置
+
+    - 密码输入：密码你将被要求输入超级用户（`root`），也就是说，拥有所有权限的用户
+
+
+    '
+- fmt: "\nOnce you have completed all these steps, the computer will restart and you\
+    \ will be faced with a prompt indicating LILO: just type `Linux` to boot under\
+    \ Linux and `dos` to go to your DOS partition, on which is Windows 9 xs, DOS or\
+    \ other...\n\nWhen booting under Linux and entering your super user name (`root`)\
+    \ and password, you willneed to install a graphical interface which will be friendlier\
+    \ than the console (text mode).\n\n## Installing XFree86\n\nXFree86 is a graphical\
+    \ interface under Linux (XWindow is the interface of the UNIX stations). To configure\
+    \ XFree86, just type `XF86Setup` in the command line, in capital letters. A screen\
+    \ appears asking you for information on your screen and to be paid the display.\
+    \ A graphical window then appears in which you have tabs to configure each of\
+    \ the hardware in your computer.\n\nSo we must first configure the mouse which\
+    \ is mostly a Microsoft mouse type (PS / 2 or if it is connected to a special\
+    \ port) on `COM1` (or `COM2`).\n\nThe keyboard is generally not to change, be\
+    \ careful with the settings of the video card since they will directly impact\
+    \ the display, causing an unstable display on error (screen flickers for example).\n\
+    \nOnce all input parameters are good, you quit the setup program and return to\
+    \ the command line under the console.Just type `startx` to start X-Window.\n\n\
+    ## Chapter 3 – The Shell\n\nIn this chapter we will learn about a very important\
+    \ concept. You will find a lot of important details to know about the shell which\
+    \ will help you evolve during your self-study.\n\n### Introduction to the shell\n\
+    \nThe interface between the operating system and the useris the command interpreter,\
+    \ hence its name \"shell\".\n\n![http://i.stack.imgur.com/Znlqz.jpg](images/00001.jpeg)\n\
+    \nThe shell is thus responsible for making through the operating system and the\
+    \ user thanks to command lines entered by the latter. Its role is therefore to\
+    \ read command lines, interpret their meanings, execute them, and then returns\
+    \ the result to the outputs.\n\nThe shell is thus an executable file responsible\
+    \ for interpreting orders, transmitting them to the system and sending the result\
+    \ in return. There is a wide range of different shells; the most common being\
+    \ `sh` (called \"Bourne shell\"), `bash` (\"Bourne again shell\"), `csh` (\"C\
+    \ Shell\"), `Tcsh` (\"Tenex C shell\"), `ksh` (\"Korn shell\") and `zsh` (\"Zero\
+    \ shell\"). Their name is usually the name of the executable.\n\nEach user has\
+    \ a default shell, which will be launched at the opening of a command prompt.\
+    \ The default shell is specified in the configuration file `/etc/passwd` in the\
+    \ last field of the line corresponding to the user. It is possible to change the\
+    \ shell in a session by simply executing the corresponding file, here’s an example:\n\
+    \n```\n/Bin/bash\n```\n\n### Command prompt (prompt)\n\nThe shell is initialized\
+    \ by reading its overall configuration (in a file in the `/etc/`), followed by\
+    \ reading the user-specific configuration (in a hidden file whose name starts\
+    \ with a dot, located in the directory user base, that is to say `/home/username/`.\
+    \ Configuration file), then displays a command prompt as follows:\n\n`Machine:/directory/current$`\n\
+    \nBy default in most shells the prompt consists of the name of the machine,followed\
+    \ by a colon (`:`), the current directory, then a character indicating user type\
+    \ logged on:\n\n- A normal user is indicated with a `$` \n- The administrator,\
+    \ called \"root\" is indicated with a hash \"#\"\n\n### Command line concept\n\
+    \nA command line is a character string consisting of a command corresponding to\
+    \ an executable system or a shell command and the Optional arguments (parameters):\n\
+    \n```\nls –al /home/j/\n```\n\nIn the above command, `ls` is the name of the command,\
+    \ `-al` and `/home/jimmy/` are arguments. Arguments beginning with `-` are called\
+    \ options.\n\nFor each order there are usually a number of options available which\
+    \ can be detailed by typing the following commands:\n\n```\ncommand--help\n```\n\
+    \n```\ncommand -?\n```\n\n```\nman command\n```\n\n### Standard input-output\n\
+    \nWhen executing a command, a process is created.This will then open three flows:\n\
+    \n- `Stdin`: where the process will read the input data. It’s called standard\
+    \ input. By default `stdin` is the keyboard. `STDIN` is identified by the number\
+    \ `0`.\n- `Stdout`: where the process will write the output data. It’s called\
+    \ standard output. By default `stdin` corresponds to the screen; `STDOUT` is identified\
+    \ by the number `1`.\n- `Stderr`: where the process will write error messages.\
+    \ It’s called standard error. Default is `stderr` on the screen. `STDERR` is identified\
+    \ by the number `2`.\n\nBy default when executing a program, the data is read\
+    \ from the keyboard and the program sends its output and errors on the screen,\
+    \ but it is possible to read data from any device to input or from a file and\
+    \ send the output to a display device, a file, etc.\n\n### Redirects\n\nLinux,\
+    \ like any Unix-like system, has mechanisms to redirect the standard input-output\
+    \ to files.\n\nThus, the use of the character `>` redirects the standard of a\
+    \ command to the left output to the file locatedto the right:\n\n```\nls -al /home/jf/>\
+    \ test.txt\n```\n\n```\necho \"test\"> /etc/myconfigurationfile\n```\n\nThe following\
+    \ command is equivalent to copying files:\n\n```\ncat file1>file2\n```\n\nRedirection\
+    \ `> ` aims to create a new file. So if a file with same name existed, it is overwritten.\
+    \ The following command simply creates an empty file:\n\n```\n> File\n```\n\n\
+    The use of a double character `>>` concatenatesstandard output to the file, that\
+    \ is to say, add the output after the file without overwriting it.\n\nSimilarly,\
+    \ the `<` character indicates a standard input’sredirection. The next command\
+    \ sends the `foo.txt` file content as input to the `cat` command, whose sole purpose\
+    \ is to display the content on the standard output (useless but trainer example):\n\
+    \n```\ncat<foo.txt\n```\n\nFinally the use of redirection `<<` can be read on\
+    \ standard inputuntil the chain to the right is encountered. Thus, the following\
+    \ example willread the standard input until the word STOP is encountered, and\
+    \ then will display the result:\n\n```\ncat<< STOP\n```\n\n### Communicating tubes\
+    \ (pipes)\n\nThe pipes are a specific communication mechanism to all UNIX systems.\
+    \ A pipe, symbolized by a vertical bar (`|`), is used to assign the standard output\
+    \ of one command to the standard input of another, such as a pipe for communicating\
+    \ the standard input of a command with the standard output of another.\n\nSo in\
+    \ the following example, the standard output of the `ls -al` command is sent out\
+    \ on the program responsible for sorting the result in alphabetical order:\n\n\
+    ```\nls -al | sort\n```\n\nIt is possible in this way to chain a number of commands\
+    \ through successive pipes. In the following example the command displays all\
+    \ files in the current directory, selects the lines containing the word \"zip\"\
+    \ (using the `grep` command)and counts the total number of lines:\n\n```\nls -l\
+    \ | grep zip | wc -l\n```\n\n## Chapter 4 – File Globbing\n\nThis chapter is one\
+    \ of the most important ones since it covers a very interesting topic. Knowing\
+    \ about files hierarchy in Linux is indispensable. We will also learn about the\
+    \ main shell commands which are commonly used.\n\n### The hierarchy of files in\
+    \ Linux\n\nTo ensure portability and compatibility, a Linux system conformsthe\
+    \ single standard FHS (File Hierarchy Standard). The base hierarchy is as follows:\n\
+    \n| | | |\n| :--- | :--- | :--- |\n| | | the root, it contains the main directories\
+    \ |\n| `/bin` | | contains essential executables to the system used by all users\
+    \ (for example `ls`, `rm`, `cp`, `chmod`, `mount`, ...) |\n| `/boot` | | contains\
+    \ files that allow Linux to start |\n| `/dev` | | contains the devices entry points\
+    \ |\n| `/etc` | | contains commands and files needed to the system administrator\
+    \ (`group`, `passwd`, `ld.so.conf`, `inittab`,...) |\n| | `/etc/X11` | | contains\
+    \ the specific files for the configuration of X |\n| | `/etc/opt` | | contains\
+    \ the specific configuration files to applications installed in `/opt` |\n| `/home`\
+    \ | | Personal Directory users |\n| `/lib` | | contains shared libraries essential\
+    \ to the system during startup |\n| `/mnt` | | contains temporary mount points\
+    \ partitions (CD-ROM, floppy disk, ...) |\n| `/opt` | | contains additional application\
+    \ packages |\n"
+  raw: 'Once you have completed all these steps, the computer will restart and you
+    will be faced with a prompt indicating LILO: just type Linux to boot under Linux
+    and dos to go to your DOS partition, on which is Windows 9 xs, DOS or other...
+
+
+    When booting under Linux and entering your super user name (root) and password,
+    you willneed to install a graphical interface which will be friendlier than the
+    console (text mode).
+
+
+    ## Installing XFree86
+
+
+    XFree86 is a graphical interface under Linux (XWindow is the interface of the
+    UNIX stations). To configure XFree86, just type "XF86Setup" in the command line,
+    in capital letters. A screen appears asking you for information on your screen
+    and to be paid the display. A graphical window then appears in which you have
+    tabs to configure each of the hardware in your computer.
+
+
+    So we must first configure the mouse which is mostly a Microsoft mouse type (PS
+    / 2 or if it is connected to a special port) on COM1 (or COM2).
+
+
+    The keyboard is generally not to change, be careful with the settings of the video
+    card since they will directly impact the display, causing an unstable display
+    on error (screen flickers for example).
+
+
+    Once all input parameters are good, you quit the setup program and return the
+    command line under the console.Just type "startx" to start X-Window.
+
+
+    Chapter 3 –The Shell
+
+
+    In this chapter we will learn about a very important concept. You will find a
+    lot of important details to know about the shell which will help you evolve during
+    your self-study.
+
+
+    ## Introduction to the shell
+
+
+    The interface between the operating system and the useris the command interpreter,
+    hence its name "shell".
+
+
+    ![http://i.stack.imgur.com/Znlqz.jpg](images/00001.jpeg)
+
+
+    The shell is thus responsible for making through the operating system and the
+    user thanks to command lines entered by the latter. Its role is therefore to read
+    command lines, interpret their meanings, execute them, and then returns the result
+    to the outputs.
+
+
+    The shell is thus an executable file responsible for interpreting orders, transmitting
+    them to the system and sending the result in return. There is a wide range of
+    different shells; the most common being sh (called "Bourne shell"), bash ("Bourne
+    again shell"), csh ("C Shell"), Tcsh ("Tenex C shell"), ksh ("Korn shell") and
+    zsh ("Zero shell"). Their name is usually the name of the executable.
+
+
+    Each user has a default shell, which will be launched at the opening of a command
+    prompt. The default shell is specified in the configuration file /etc/passwd in
+    the last field of the line corresponding to the user. It is possible to change
+    the shell in a session by simply executing the corresponding file, here’s an example:
+
+
+    /Bin/bash
+
+
+    ## Command prompt (prompt)
+
+
+    The shell is initialized by reading its overall configuration (in a file in the
+    /etc/), followed by reading the user-specific configuration (in a hidden file
+    whose name starts with a dot, located in the directory user base, that is to say
+    /home/username/. Configuration file), then displays a command prompt as follows:
+
+
+    Machine:/directory/current$
+
+
+    By default in most shells the prompt consists of the name of the machine,followed
+    by a colon (:), the current directory, then a character indicating user type logged
+    on:
+
+
+    - A normal user is indicated with a "$" 
+
+
+    - The administrator, called "root" is indicated with a hash"#"
+
+
+    ## Command line concept
+
+
+    A command line is a character string consisting of a command corresponding to
+    an executable system or a shell command and the Optional arguments (parameters):
+
+
+    ls –al /home/j/
+
+
+    In the above command, lsis the name of the command, -al and /home/jimmy/ are arguments.
+    Arguments beginning with - are called options.
+
+
+    For each order there are usually a number of options available which can be detailed
+    by typing the following commands:
+
+
+    command--help
+
+
+    command -?
+
+
+    man command
+
+
+    ## Standard input-output
+
+
+    When executing a command, a process is created.This will then open three flows:
+
+
+    - Stdin: where the process will read the input data. It’s called standard input.
+    By default stdin is the keyboard. STDIN is identified by the number 0.
+
+
+    - Stdout: where the process will write the output data. It’s called standard output.
+    By default stdin corresponds to the screen; STDOUT is identified by the number
+    1.
+
+
+    - Stderr: where the process will write error messages. It’s called standard error.
+    Default is stderr on the screen. STDERR is identified by the number 2.
+
+
+    By default when executing a program, the data is read from the keyboard and the
+    program sends its output and errors on the screen, but it is possible to read
+    data from any device to input or from a file and send the output to a display
+    device, a file, etc.
+
+
+    ## Redirects
+
+
+    Linux, like any Unix-like system, has mechanisms to redirect the standard input-output
+    to files.
+
+
+    Thus, the use of the character ">" redirectsthe standard of a command to the left
+    output to the file locatedto the right:
+
+
+    ls -al /home/jf/> test.txt
+
+
+    echo "test"> /etc/myconfigurationfile
+
+
+    The following command is equivalent to copying files:
+
+
+    cat file1>file2
+
+
+    Redirection ">" aims to create a new file. So if a file with same name existed,
+    it is overwritten. The following command simply creates an empty file:
+
+
+    > File
+
+
+    The use of a double character ">>" concatenatesstandard output to the file, that
+    is to say, add the output after the file without overwriting it.
+
+
+    Similarly, the "<" character indicates a standard input’sredirection. The next
+    command sends the foo.txt file content as input to the cat command, whose sole
+    purpose is to display the content on the standard output (useless but trainer
+    example):
+
+
+    cat<foo.txt
+
+
+    Finally the use of redirection "<<" can be read on standard inputuntil the chain
+    to the right is encountered. Thus, the following example willread the standard
+    input until the word STOP is encountered, and then will display the result:
+
+
+    cat<< STOP
+
+
+    ## Communicating tubes (pipes)
+
+
+    The pipes are a specific communication mechanism to all UNIX systems. A pipe,
+    symbolized by a vertical bar ("|" character), is used to assign the standard output
+    of one command to the standard input of another, such as a pipe for communicating
+    the standard input of a command with the standard output of another.
+
+
+    So in the following example, the standard output of the ls -al command is sent
+    out on the program responsible for sorting the result in alphabetical order:
+
+
+    ls -al | sort
+
+
+    It is possible in this way to chain a number of commands through successive pipes.
+    In the following example the command displays all files in the current directory,
+    selects the lines containing the word "zip" (using the grep command)and counts
+    the total number of lines:
+
+
+    ls -l | grep zip | wc -l
+
+
+    Chapter 4 –File Globbing
+
+
+    This chapter is one of the most important ones since it covers a very interesting
+    topic. Knowing about files hierarchy in Linux is indispensable. We will also learn
+    about the main shell commands which are commonly used.
+
+
+    ## The hierarchy of files in Linux
+
+
+    To ensure portability and compatibility, a Linux system conformsthe single standard
+    FHS (File Hierarchy Standard). The base hierarchy is as follows:
+
+
+    |  |  |  | the root, it contains the main directories |
+
+
+    | bin |  |  | contains essential executables to the system used by all users (for
+    example, ls, rm, cp, chmod, mount, ...) |
+
+
+    | /boot |  |  | contains files that allow Linux to start |
+
+
+    | /dev |  |  | contains the devices entry points |
+
+
+    | /etc |  |  | contains commands and files needed to the system administrator
+    (group, passwd,ld.so.conf,inittab,...) |
+
+
+    |  | /etc/X11 |  | contains the specific files for the configuration of X |
+
+
+    |  | /etc/opt |  | contains the specific configuration files to applications installed
+    in /opt |
+
+
+    | /home |  |  | Personal Directory users |
+
+
+    | /lib |  |  | contains shared libraries essential to the system during startup
+    |
+
+
+    | /mnt |  |  | contains temporary mount points partitions (CD-ROM, floppy disk,
+    ...) |
+
+
+    | /opt |  |  | contains additional application packages |'
+  toc: []
+  trans: "\n一旦你完成了所有这些步骤，计算机将重启，你将面对一个显示 LILO 的提示：只需输入 `Linux` 即可在 Linux 下启动，输入 `dos`\
+    \ 进入你的 DOS 分区，上面有 Windows 9 xs、DOS 或其他系统……\n\n当在 Linux 下启动并输入超级用户用户名（`root`）和密码时，你需要安装一个图形界面，它会比控制台（文本模式）更友好。\n\
+    \n## 安装 XFree86\n\nXFree86 是 Linux 下的一个图形界面（XWindow 是 UNIX 工作站的界面）。若要配置 XFree86，只需在命令行中输入大写的\
+    \ `XF86Setup`。屏幕会出现一个界面，要求你提供屏幕信息并配置显示器。随后会出现一个图形窗口，你可以在其中标签页中配置计算机的每项硬件。\n\n\
+    因此，我们必须首先配置鼠标，它大多数是微软鼠标类型（PS / 2 或如果连接到特殊端口），连接在 `COM1`（或 `COM2`）。\n\n键盘通常不需要更改，但请务必小心显卡的设置，因为它们将直接影响显示，导致错误时显示不稳定（例如屏幕闪烁）。\n\
+    \n一旦所有输入参数都就绪，退出设置程序并返回控制台下的命令行。只需输入 `startx` 即可启动 X-Window。\n\n## 第 3 章 – Shell\n\
+    \n在本章中，我们将学习一个非常重要的概念。你将许多关于 shell 的重要细节，这些将帮助你在自学过程中不断进步。\n\n### Shell 简介\n\n\
+    操作系统与用户之间的界面是命令解释器，因此被称为“shell”（壳）。\n\n![`i.stack.imgur.com/Znlqz.jpg`](img/00001.jpeg)\n\
+    \n因此，shell 负责通过用户输入的命令行在操作系统和用户之间建立桥梁。它的作用是读取命令行、解释其含义、执行它们，然后将结果返回到输出端。\n\nshell\
+    \ 实际上是一个可执行文件，负责解释指令、将其传输给系统并返回结果。有很多不同的 shell；最常见的是 `sh`（称为 \"Bourne shell\"\
+    ）、`bash`（\"Bourne again shell\"）、`csh`（\"C Shell\"）、`Tcsh`（\"Tenex C shell\"）、`ksh`（\"\
+    Korn shell\"）和 `zsh`（\"Zero shell\"）。它们的名字通常就是可执行文件的名称。\n\n每个用户都有一个默认 shell，它会在打开命令提示符时启动。默认\
+    \ shell 指定在配置文件 `/etc/passwd` 中对应用户的行的最后一个字段中。你可以通过简单地执行对应文件来更改会话中的 shell，这是一个示例：\n\
+    \n```\n/Bin/bash\n```\n\n### 命令提示符 (prompt)\n\nshell 的初始化通过读取其整体配置（位于 `/etc/`\
+    \ 目录的文件中），接着读取用户特定的配置（位于一个以点开头的隐藏文件中，位于用户基础目录，即 `/home/username/` 下的配置文件），然后显示如下的命令提示符：\n\
+    \n`Machine:/directory/current$`\n\n在大多数 shell 中，默认提示符由机器名组成，后面跟着冒号（`:`）、当前目录，以及一个指示已登录用户类型的字符：\n\
+    \n- 普通用户用 `$` 表示 \n- 管理员（称为 \"root\"）用井号 \"#\" 表示\n\n### 命令行概念\n\n命令行是一个字符字符串，由一个对应系统可执行文件或\
+    \ shell 命令的命令以及可选参数（参数）组成：\n\n```\nls –al /home/j/\n```\n\n在上面的命令中，`ls` 是命令名，`-al`\
+    \ 和 `/home/jimmy/` 是参数。以 `-` 开头的参数称为选项。\n\n对于每个命令，通常有许多可用选项，可以通过输入以下命令查看详细信息：\n\
+    \n```\ncommand--help\n```\n\n```\ncommand -?\n```\n\n```\nman command\n```\n\n\
+    ### 标准输入/输出\n\n执行命令时，会创建一个进程。该进程将打开三个流：\n\n- `Stdin`：进程从这里读取输入数据。称为标准输入。默认情况下\
+    \ `stdin` 是键盘。`STDIN` 由数字 `0` 标识。\n- `Stdout`：进程写入输出数据的地方。称为标准输出。默认情况下 `stdin`\
+    \ 对应屏幕；`STDOUT` 由数字 `1` 标识。\n- `Stderr`：进程写入错误信息的地方。称为标准错误。默认 `stderr` 在屏幕上。`STDERR`\
+    \ 由数字 `2` 标识。\n\n默认情况下，执行程序时数据从键盘读取，程序将其输出和错误发送到屏幕，但也可以从任何设备读取数据作为输入，或从文件读取，并将输出发送到显示设备、文件等。\n\
+    \n### 重定向 (Redirects)\n\nLinux 与任何类 Unix 系统一样，都具有将标准输入输出重定向到文件的机制。\n\n因此，使用字符\
+    \ `>` 将命令的标准输出重定向到位于右侧的文件：\n\n```\nls -al /home/jf/> test.txt\n```\n\n```\necho\
+    \ \"test\"> /etc/myconfigurationfile\n```\n\n以下命令等同于复制文件：\n\n```\ncat file1>file2\n\
+    ```\n\n重定向 `> ` 旨在创建一个新文件。因此，如果存在同名文件，它将被覆盖。以下命令仅简单地创建一个空文件：\n\n```\n> File\n\
+    ```\n\n使用双字符 `>>` 将标准输出附加到文件，即在文件后添加输出而不覆盖它。\n\n类似地，`<` 字符表示标准输入的重定向。下一个命令将 `foo.txt`\
+    \ 文件的内容作为输入发送给 `cat` 命令，`cat` 的唯一目的是是将内容显示在标准输出上（虽然这没什么用，但可以作为练习示例）：\n\n```\n\
+    cat<foo.txt\n```\n\n最后，使用重定向 `<<` 可以从标准输入读取内容，直到遇到右侧的链。因此，以下示例将读取标准输入直到遇到单词 STOP，然后显示结果：\n\
+    \n```\ncat<< STOP\n```\n\n### 管道 (pipes)\n\n管道是所有 UNIX 系统中特有的通信机制。管道用竖线（`|`）表示，用于将一个命令的标准输出分配给另一个命令的标准输入，例如用于一个命令的标准输入与另一个命令的标准输出之间的通信。\n\
+    \n在下面的示例中，`ls -al` 命令的标准输出被发送给按字母顺序排序结果的程序：\n\n```\nls -al | sort\n```\n\n通过这种方式，可以通过连续的管道链接多个命令。在下面的示例中，命令显示当前目录下的所有文件，选择包含“zip”字样的行（使用\
+    \ `grep` 命令）并统计总行数：\n\n```\nls -l | grep zip | wc -l\n```\n\n## 第 4 章 – 文件通配 (File\
+    \ Globbing)\n\n这一章是最重要的章节之一，因为它涵盖了一个非常有趣的话题。了解 Linux 中的文件层次结构是必不可少的。我们还将学习常用的\
+    \ shell 命令。\n\n### Linux 中的文件层次结构\n\n为了确保可移植性和兼容性，Linux 系统遵循单一标准 FHS（文件层次结构标准）。基础层次结构如下：\n\
+    \n| | | |\n| :--- | :--- | :--- |\n| | | 根目录，包含主目录 |\n| `/bin` | | 包含所有用户使用的系统基本可执行文件（例如\
+    \ `ls`, `rm`, `cp`, `chmod`, `mount`, ...） |\n| `/boot` | | 包含允许 Linux 启动的文件 |\n\
+    | `/dev` | | 包含设备入口 |\n| `/etc` | | 包含系统管理员所需的命令和文件 (`group`, `passwd`, `ld.so.conf`,\
+    \ `inittab`,...) |\n| | `/etc/X11` | | 包含 X 配置特定文件 |\n| | `/etc/opt` | | 包含安装在\
+    \ /opt 中的应用程序特定配置文件 |\n| `/home` | | 用户目录 |\n| `/lib` | | 包含系统启动所需的共享库 |\n| `/mnt`\
+    \ | | 包含临时挂载点分区（光驱、软盘、...） |\n| `/opt` | | 包含额外的应用程序包 |\n\n"
+- fmt: '
+
+    | Path | Description |
+
+    | :--- | :--- |
+
+    | `/root` | root directory administrator |
+
+    | `/sbin` | contains the essential binary system (egadduser) |
+
+    | `/tmp` | contains temporary files |
+
+    | `/usr` | secondary hierarchy |
+
+    | `/usr/X11R6` | this directory is reserved for system X version 11 release 6
+    |
+
+    | `/usr/X386` | used before by X version 5, that is a symlink to `/usr/X11R6`
+    |
+
+    | `/usr/bin` | contains the majority of binary files and user commands |
+
+    | `/usr/include` | contains the header files for C and C++ programs |
+
+    | `/usr/lib` | contains most of the system shared libraries |
+
+    | `/usr/local` | contains data about installed programs on the local machine by
+    the root |
+
+    | `/usr/local/bin` | binaries of local programs |
+
+    | `/usr/local/games` | binaries of local games |
+
+    | `/usr/local/include` | local C and C++ header files |
+
+    | `/usr/local/lib` | Local Shared Libraries |
+
+    | `/usr/local/sbin` | Local binary system |
+
+    | `/usr/local/share` | autonomous hierarchy |
+
+    | `/usr/local/src` | local source files |
+
+    | `/usr/sbin` | contains non-essential binaries to the system reserved for system
+    administrator |
+
+    | `/usr/share` | Reserved for non-dependent data architecture |
+
+    | `/usr/src` | contains source code files |
+
+    | `/var` | contains variable data |
+
+
+    ## Table of main Linux Shell commands
+
+
+    | Command | Description | equivalent DOS |
+
+    | :--- | :--- | :--- |
+
+    | `Ls` | Lists the contents of a directory | `dir` |
+
+    | `Cd` | Changes the directory | `cd` |
+
+    | `cd ..` | Parent directory | `cd..` |
+
+    | `Mkdir` | Creates a new directory | `md` |
+
+    | `Rmdir` | Removes a directory | `deltree` |
+
+    | `Cp` | File Copy | `copy, xcopy` |
+
+    | `Mv` | File displacement | `move` |
+
+    | `Rm` | deletes the file | `del` |
+
+    | `Passwd` | changes the user''s password | |
+
+    | `Cat` | displays the file''s contents | `type` |
+
+    | `More` | displays the file content with pauses | `more` |
+
+    | `man apropos` | help for the requested command | `help` |
+
+    | `Lpr` | prints the requested file | `print` |
+
+    | `Chmod` | changes the attribute of a file`chmodxxx filexxx = User-Group-Others`
+    where `x` is an integer `1 < x<7`Read = 4, Write = 2, Execution = 1x = Read +
+    Write + Run0 means no permissions1 means execution permission2 means writing permission3
+    means writing and execution permission4 means readingpermission5 means reading
+    and execution permission6 means reading and writing permission7 means all permissions
+    | | |
+
+    | `Chfn` | Changes personal information viewed with finger | |
+
+    | `Chsh` | changes the shell : `chsh user shell_location` | |
+
+    | `Finger` | Lists online users | |
+
+    | `traceroute` | traces the path between the local machine and the remote machine
+    | |
+
+    | `[ftp](http://www.commentcamarche.net/contents/531-protocoles#FTP)[machine]
+    [port]getputquit` | file transfer between the local machine and the target machinrecovers
+    a filesends a filequits the FTP session | |
+
+    | `telnet [machine]` | performs a telnet | |
+
+    | `Talk` | Permits talking to a connected user (talk user) | |
+
+    | `Mesg` | authorizes or not the talk command`mesg n: Prevents reception of talk
+    messages` `mesg y: Authorizestalk messages reception` | |
+
+    | `Logout` | Disconnects | |
+
+
+    ## Chapter 5 - User Management
+
+
+    This chapter is also very important because it covers all the details about authentication
+    and user management. It also covers a lot of useful information which you will
+    certainly find very helpful as we advance more in our journey.
+
+
+    ### First step of the administrator
+
+
+    When several persons have access to a system, you need the system administrator
+    manages users. For this, the common commands and files to configure must be known.
+
+
+    Important files to know are:
+
+
+    - `/etc/passwd`
+
+    - `/etc/group`
+
+
+    ## The /etc/passwd file
+
+
+    The `/etc/passwd` file contains all the user information (login, password ...).
+    Only the super user (`root`) must be able to change it. We must therefore change
+    the rights of this file so that it is read-only for other users.
+
+
+    This file has a special format for identifying each user; each line has the following
+    format:
+
+
+    `Account Name: Password: User number: groupnumber: Comment: directory: startup
+    program`
+
+
+    Sevenfields are explained and separated by the character ":":
+
+
+    - The account name of the user
+
+    - User’s password (encrypted of course)
+
+    - The integer identifying the user for the operating system (`UID` = User ID,
+    user ID)
+
+    - The integer that identifies the user group (`GID` = Group ID, group ID)
+
+    - The comment in which one can find information on the user or simply its real
+    name
+
+    - Where the connection directoryis located after connecting to the system
+
+    - The command is executed after the connection to the system (that is often a
+    shell)
+
+
+    Here’s an example of a `passwd` file:
+
+
+    ```
+
+    root:x:0:0:root:/root:/bin/bash
+
+    bin:x:1:1:bin:/bin:/bin/bash
+
+    daemon:x:2:2:daemon:/sbin:/bin/bash
+
+    news:x:9:13:News system:/etc/news:/bin/bash
+
+    uucp:x:10:14::/var/lib/uucp/taylor_config:/bin/bash
+
+    cquoi:x:500:100:Cool......:/home/cquoi:/bin/bash
+
+    ```
+
+
+    It is veryimportant to note that in this filethe passwordsareencrypted.
+
+
+    It is therefore useless to edit and replace the field password by directly typing
+    the password that only leads to the blocking of the account. When a user connects,
+    the login program compares the password typed by the user (once encrypted) to
+    that in the `passwd` file. If they are different, the connection cannot be established.
+    To prohibit use, simply replace the encrypted password by a star: `"*`.
+
+
+    The account access may possibly be open with empty password field. In this case,
+    anyone wanting to connect with this account can do so. To change the password
+    of an account with the `passwd` command, you must be either system administrator
+    or account owner (the system will then prompt the user to enter the old password
+    before asking 2 times to enter the new password).
+
+
+    `UID`: identifier (unique) to each user account. The numbers ‘0’ to ‘99’ are reserved
+    for frequently own accounts.Numbers greater than ‘100’ are reserved for these
+    users.
+
+
+    `GID`: group ID. The default group’s number is 50\. In connection withaccess rights
+    to files, this identifier is used. This question tells you if your system has
+    more than one user group. (You will then have to worry about the `/etc/group`).
+
+
+    It is possible to modify the commands interpreter from the Shell. To do this,
+    use the `chsh` or `passwd -s` command. Linux then looks in the `/etc/shells` file
+    the program you have specified. Only orders present in this file will be accepted
+    and will replace the current value of the startup program field. These restrictions
+    do not apply to the superuser account.
+
+
+    Make sure the permissions of the `/etc/passwd`file are the same as for the file
+    `/etc/shells`. The `root` can be called names other than root. To change this,
+    just replace the name of the root account with the one you desire.
+
+
+    If an account’s identifier (`UID`) is zero, it means that it’s a privileged one.
+
+
+    ### The /etc/group file
+
+
+    The `/etc/group` file contains a list of users belonging to different groups.
+    Indeed, when many users can access the system, they are frequently combined in
+    different groups each with their own access rights to files and directories.
+
+
+    It consists of various fields separated by ":":
+
+
+    `Group Name: Specialfield: Group number: member1, member 2`
+
+
+    The special field is frequently blank.
+
+
+    The group number id the field that links the `/etc/group` and `/etc/passwd` files.
+
+
+    Here is an example /etc/group:
+
+
+    ```
+
+    root:x:0:root
+
+    bin:x:1:root,bin,daemon
+
+    daemon:x:2:
+
+    tty:x:5:
+
+    disk:x:6:
+
+    lp:x:7:
+
+    wwwadmin:x:8:
+
+    kmem:x:9:
+
+    wheel:x:10:
+
+    mail:x:12:cyrus
+
+    news:x:13:news
+
+    ```
+
+
+    -When using the `ls` command with the `-l` option, the group number is displayed
+    with the user number who owns the file (or directory).
+
+
+    -The same user can appear in several groups. When connecting to the system it
+    belongs to the group specified in the `/etc/passwd` (`GID` field). This may change
+    with the `newgrp` command. Access rights to files are then defined.
+
+    '
+  raw: '| /root |  |  | root directory administrator |
+
+
+    | /sbin |  |  | contains the essential binary system (egadduser) |
+
+
+    | /tmp |  |  | contains temporary files |
+
+
+    | /usr |  |  | secondary hierarchy |
+
+
+    |  | /usr/X11R6 |  | this directory is reserved for system X version 11 release
+    6 |
+
+
+    |  | /usr/X386 |  | used before by X version 5, that is a symlink to / usr / X11R6
+    |
+
+
+    |  | /usr/bin |  | contains the majority of binary files and user commands |
+
+
+    |  | /usr/include |  | contains the header files for C and C ++ programs |
+
+
+    |  | /usr/lib |  | contains most of the system shared libraries |
+
+
+    |  | /usr/local |  | contains data about installed programs on the local machine
+    by the root |
+
+
+    |  |  | /usr/local/bin | binaries of local programs |
+
+
+    |  |  | /usr/local/games | binaries of local games |
+
+
+    |  |  | /usr/local/include | local C and C ++ header files |
+
+
+    |  |  | /usr/local/lib | Local Shared Libraries |
+
+
+    |  |  | /usr/local/sbin | Local binary system |
+
+
+    |  |  | /usr/local/share | autonomous hierarchy |
+
+
+    |  |  | /usr/local/src | local source files |
+
+
+    |  | /usr/sbin |  | contains non-essential binaries to the system reserved for
+    system administrator |
+
+
+    |  | /usr/share |  | Reserved for non-dependent data architecture |
+
+
+    |  | /usr/src |  | contains source code files |
+
+
+    | /var |  |  | contains variable data |
+
+
+    ## Table of main Linux Shell commands
+
+
+    | Command | Description | equivalent DOS |
+
+
+    | Ls | Lists the contents of a directory | dir |
+
+
+    | Cd | Changes the directory | cd |
+
+
+    | cd .. | Parent directory | cd.. |
+
+
+    | Mkdir | Creates a new directory | md |
+
+
+    | Rmdir | Removes a directory | deltree |
+
+
+    | Cp | File Copy | copy, xcopy |
+
+
+    | Mv | File displacement | move |
+
+
+    | Rm | deletes the file | del |
+
+
+    | Passwd | changes the user''s password |  |
+
+
+    | Cat | displays the file''s contents | type |
+
+
+    | More | displays the file content with pauses | more |
+
+
+    | man apropos | help for the requested command | help |
+
+
+    | Lpr | prints the requested file | print |
+
+
+    | Chmod | changes the attribute of a filechmodxxx filexxx = User-Group-Others
+    where x is an integer 1 < x<7Read = 4, Write = 2, Execution = 1x = Read + Write
+    + Run0 means no permissions1 means execution permission2 means writing permission3
+    means writing and execution permission4 means readingpermission5 means reading
+    and execution permission6 means reading and writing permission7 means all permissions
+    |  |
+
+
+    | Chfn | Changes personal information viewed with finger |  |
+
+
+    | Chsh | changes the shell : chsh user shell_location |  |
+
+
+    | Finger | Lists online users |  |
+
+
+    | traceroute | traces the path between the local machine and the remote machine
+    |  |
+
+
+    | [ftp](http://www.commentcamarche.net/contents/531-protocoles#FTP)[machine] [port]getputquit
+    | file transfer between the local machine and the target machinerecovers a filesends
+    a filequits the FTP session |  |
+
+
+    | telnet [machine] | performs a telnet |  |
+
+
+    | Talk | Permits talking to a connected user (talk user) |  |
+
+
+    | Mesg | authorizes or not the talk commandmesg n: Prevents reception of talk
+    messagesmesg y: Authorizestalk messages reception |  |
+
+
+    | Logout | Disconnects |  |
+
+
+    Chapter 5 - User Management
+
+
+    This chapter is also very important because it covers all the details about authentication
+    and user management. It also covers a lot of useful information which you will
+    certainly find very helpful as we advance more in our journey.
+
+
+    First step of the administrator
+
+
+    When several persons have access to a system, you need the system administrator
+    manages users. For this, the common commands and files to configure must be known.
+
+
+    Important files to know are:
+
+
+    /etc/passwd
+
+
+    /etc/group
+
+
+    ## The /etc/passwd file
+
+
+    The /etc/passwd file contains all the user information (login, password ...).
+    Only the super user (root) must be able to change it. We must therefore change
+    the rights of this file so that it is read-only for other users.
+
+
+    This file has a special format for identifying each user; each line has the following
+    format:
+
+
+    Account Name: Password: User number: groupnumber: Comment: directory: startup
+    program
+
+
+    Sevenfields are explained and separated by the character ":":
+
+
+    - The account name of the user
+
+
+    - User’s password (encrypted of course)
+
+
+    - The integer identifying the user for the operating system (UID = User ID, user
+    ID)
+
+
+    - The integer that identifies the user group (GID = Group ID, group ID)
+
+
+    - The comment in which one can find information on the user or simply its real
+    name
+
+
+    - Where the connection directoryis located after connecting to the system
+
+
+    - The command is executed after the connection to the system (that is often a
+    shell)
+
+
+    Here’s an example of a passwd file:
+
+
+    | root:x:0:0:root:/root:/bin/bash |
+
+
+    | bin:x:1:1:bin:/bin:/bin/bash |
+
+
+    | daemon:x:2:2:daemon:/sbin:/bin/bash |
+
+
+    | news:x:9:13:News system:/etc/news:/bin/bash |
+
+
+    | uucp:x:10:14::/var/lib/uucp/taylor_config:/bin/bash |
+
+
+    | cquoi:x:500:100:Cool......:/home/cquoi:/bin/bash |
+
+
+    It is veryimportant to note that in this filethe passwordsareencrypted.
+
+
+    It is therefore useless to edit and replace the field password by directly typing
+    the password that only leads to the blocking of the account. When a user connects,
+    the login program compares the password typed by the user (once encrypted) to
+    that in the passwd file. If they are different, the connection cannot be established.
+    To prohibit use, simply replace the encrypted password by a star: "*".
+
+
+    The account access may possibly be open with empty password field. In this case,
+    anyone wanting to connect with this account can do so. To change the password
+    of an account with the passwd command, you must be either system administrator
+    or account owner (the system will then prompt the user to enter the old password
+    before asking 2 times to enter the new password).
+
+
+    UID: identifier (unique) to each user account. The numbers ‘0’ to ‘99’ are reserved
+    for frequently own accounts.Numbers greater than ‘100’ are reserved for these
+    users.
+
+
+    GID: group ID. The default group’s number is 50\. In connection withaccess rights
+    to files, this identifier is used. This question tells you if your system has
+    more than one user group. (You will then have to worry about the /etc/group).
+
+
+    It is possible to modify the commands interpreter from the Shell. To do this,
+    use the chsh or passwd -s command. Linux then looks in the /etc/shells file the
+    program you have specified. Only orders present in this file will be accepted
+    and will replace the current value of the startup program field. These restrictions
+    do not apply to the superuser account.
+
+
+    Make sure the permissions of the /etc/passwdfile are the same as for the file
+    /etc/shells. The root can be called names other than root. To change this, just
+    replace the name of the root account with the one you desire.
+
+
+    If an account’s identifier (UID) is zero, it means that it’s a privileged one.
+
+
+    The /etc/group file
+
+
+    The /etc/group contains a list of users belonging to different groups. Indeed,
+    when many users can access the system, they are frequently combined in different
+    groups each with their own access rights to files and directories.
+
+
+    It consists of various fields separated by ":":
+
+
+    Group Name: Specialfield: Group number: member1, member 2
+
+
+    The special field is frequently blank.
+
+
+    The group number id the field that links the /etc/group and /etc/passwd files.
+
+
+    Here is an example /etc/group:
+
+
+    | root:x:0:root |
+
+
+    | bin:x:1:root,bin,daemon |
+
+
+    | daemon:x:2: |
+
+
+    | tty:x:5: |
+
+
+    | disk:x:6: |
+
+
+    | lp:x:7: |
+
+
+    | wwwadmin:x:8: |
+
+
+    | kmem:x:9: |
+
+
+    | wheel:x:10: |
+
+
+    | mail:x:12:cyrus |
+
+
+    | news:x:13:news |
+
+
+    -When using the ls command with the -l option, the group number is displayed with
+    the user number who owns the file (or directory). This unique number corresponds
+    to a unique group name (often 8 characters max.).
+
+
+    -The same user can appear in several groups. When connecting to the system it
+    belongs to the group specified in the /etc/passwd (GID field). This may change
+    with the newgrp command. Access rights to files are then defined.'
+  toc: []
+  trans: '
+
+
+    | 路径 | 描述 |
+
+    | :--- | :--- |
+
+    | `/root` | 根目录管理员 |
+
+    | `/sbin` | 包含核心系统二进制文件（如 adduser） |
+
+    | `/tmp` | 包含临时文件 |
+
+    | `/usr` | 次级层次 |
+
+    | `/usr/X11R6` | 此目录保留用于系统 X 版本 11 发布 6 |
+
+    | `/usr/X386` | 曾用于 X 版本 5，是 `/usr/X11R6` 的符号链接 |
+
+    | `/usr/bin` | 包含大多数二进制文件和用户命令 |
+
+    | `/usr/include` | 包含 C 和 C++ 程序的头文件 |
+
+    | `/usr/lib` | 包含大多数系统共享库 |
+
+    | `/usr/local` | 包含 root 在本地机器上安装程序的数据 |
+
+    | `/usr/local/bin` | 本地程序的二进制文件 |
+
+    | `/usr/local/games` | 本地游戏的二进制文件 |
+
+    | `/usr/local/include` | 本地 C 和 C++ 头文件 |
+
+    | `/usr/local/lib` | 本地共享库 |
+
+    | `/usr/local/sbin` | 本地二进制系统 |
+
+    | `/usr/local/share` | 自治层次 |
+
+    | `/usr/local/src` | 本地源文件 |
+
+    | `/usr/sbin` | 包含供系统管理员使用的非核心系统二进制文件 |
+
+    | `/usr/share` | 保留用于非依赖数据架构 |
+
+    | `/usr/src` | 源代码文件 |
+
+    | `/var` | 包含变量数据 |
+
+
+    ## 主要 Linux Shell 命令表
+
+
+    | 命令 | 描述 | 等效 DOS 命令 |
+
+    | :--- | :--- | :--- |
+
+    | `Ls` | 列出目录内容 | `dir` |
+
+    | `Cd` | 切换目录 | `cd` |
+
+    | `cd ..` | 父级目录 | `cd..` |
+
+    | `Mkdir` | 创建新目录 | `md` |
+
+    | `Rmdir` | 目录 | `deltree` |
+
+    | `Cp` | 文件复制 | `copy, xcopy` |
+
+    | `Mv` | 文件移动 | `move` |
+
+    | `Rm` | 删除文件 | `del` |
+
+    | `Passwd` | 修改用户密码 | |
+
+    | `Cat` | 显示文件内容 | `type` |
+
+    | `More` | 分页显示文件内容 | `more` |
+
+    | `man apropos` | 请求命令的帮助信息 | `help` |
+
+    | `Lpr` | 打印请求的文件 | `print` |
+
+    | `Chmod` | 更改文件属性 `chmodxxx filexxx = User-Group-Others` 其中 `x` 为整数 `1 < x<7`
+    读 = 4，写 = 2，执行 = 1x = 读 + 写 + 运行 0 表示无权限 1 表示执行权限 2 表示写入权限 3 表示读写和执行权限 4 表示读取权限
+    5 表示读取和执行权限 6 表示读写权限 7 表示所有权限 | | |
+
+    | `Chfn` | 更改通过 finger 查看的个人信息 | |
+
+    | `Chsh` | 更改 shell：`chsh user shell_location` | |
+
+    | `Finger` | 列出在线用户 | |
+
+    | `traceroute` | 追踪本地机器与远程机器之间的路径 | |
+
+    | `[ftp](http://www.commentcamarche.net/contents/531-protocoles#FTP)[machine]
+    [port]getputquit` | 本地机器与目标机器之间的文件传输 恢复文件 发文件 退出 FTP 会话 | |
+
+    | `telnet [machine]` | 执行 telnet | |
+
+    | `Talk` | 允许与已连接的用户交谈 (talk user) | |
+
+    | `Mesg` | 授权或禁止 talk 命令 `mesg n: 防止接收 talk 消息` `mesg y: 允许接收 talk 消息` | |
+
+    | `Logout` | 断开连接 | |
+
+
+    ## 第 5 章 - 用户管理
+
+
+    这一章也非常重要，因为它涵盖了身份验证和用户管理的所有细节。它还包含了许多有用信息，随着我们旅程的深入，你一定会发现这些非常有帮助。
+
+
+    ### 管理员的第一步
+
+
+    当多个人可以访问系统时，你需要系统管理员来管理用户。为此，必须了解用于配置的常用命令和文件。
+
+
+    需要了解的重要文件：
+
+
+    - `/etc/passwd`
+
+    - `/etc/group`
+
+
+    ## /etc/passwd 文件
+
+
+    `/etc/passwd` 文件包含所有用户信息（登录、密码等）。只有超级用户（`root`）能够修改它。因此，我们必须更改此文件的权限，使其对其他用户仅只读。
+
+
+    该文件有一个特殊格式来识别每个用户；每行具有以下格式：
+
+
+    `账户名:密码:用户数:组组数:注释:目录:启动程序`
+
+
+    这七个字段由字符 ":" 分隔，解释如下：
+
+
+    - 用户的账户名
+
+    - 用户密码（当然是加密的）
+
+    - 操作系统识别用户的整数（`UID` = User ID，用户 ID）
+
+    - 识别用户组的整数（`GID` = Group ID，组组 ID）
+
+    - 注释，可以在其中找到用户的信息或直接是其真实姓名
+
+    - 连接系统后连接目录所在的位置
+
+    - 连接系统后执行的命令（通常是 shell）
+
+
+    这是一个 `passwd` 文件的示例：
+
+
+    ```
+
+    root:x:0:0:root:/root:/bin/bash
+
+    bin:x:1:1:bin:/bin:/bin/bash
+
+    daemon:x:2:2:daemon:/sbin:/bin/bash
+
+    news:x:9:13:News system:/etc/news:/bin/bash
+
+    uucp:x:10:14::/var/lib/uucp/taylor_config:/bin/bash
+
+    cquoi:x:500:100:Cool......:/home/cquoi:/bin/bash
+
+    ```
+
+
+    非常重要的一点是，该文件中的密码是加密的。
+
+
+    因此，通过直接输入密码来编辑和替换 `password` 字段是没用的，这会导致账户被锁定。当用户连接时，登录程序会将用户输入的密码（加密后）与 `passwd`
+    文件中的密码进行比比较。如果它们不同，则无法建立连接。要禁止使用，只需将加密密码替换为星号：`*`。
+
+
+    账户访问可能因密码为空而开放。在这种情况下，任何想要连接此账户的人都可以。要使用 `passwd` 命令更改账户密码，你必须是系统管理员或账户所有者（系统会提示用户输入旧密码，然后要求输入两次新密码）。
+
+
+    `UID`：每个用户账户的唯一标识符。数字‘0’到‘99’预留给经常拥有的账户。大于‘100’的数字预留给这些用户。
+
+
+    `GID`：组 ID。默认组的数字是 50。此标识符与对文件的访问权限有关。这个问题告诉你你的系统是否有多个用户组（你随后将需要担心 `/etc/group`）。
+
+
+    可以从 Shell 修改命令解释器。要这样做，使用 `chsh` 或 `passwd -s` 命令。Linux 随后会在 `/etc/shells` 文件中查找你指定的程序。只有文件中存在的命令会被接受，并替换启动程序字段的当前值。这些限制不适用于超级用户账户。
+
+
+    确保 `/etc/passwd` 文件的权限与 `/etc/shells` 文件相同。`root` 可以被称为除 root 外的名称。要更改此，只需将 root
+    账户名称替换为你所需的名称即可。
+
+
+    如果账户标识符（`UID`）为零，意味着它是一个特权账户。
+
+
+    ### /etc/group 文件
+
+
+    `/etc/group` 文件包含不同组的用户列表。事实上，当许多用户可以访问系统时，他们经常被组合在不同的组中，每个组对文件和目录都有自己的访问权限。
+
+
+    它由由 ":" 分隔的各种字段组成：
+
+
+    `组名:特殊字段:组编号:成员 1, 成员 2`
+
+
+    特殊字段通常是空白的。
+
+
+    组编号是连接 `/etc/group` 和 `/etc/passwd` 文件的字段。
+
+
+    这里是 /etc/group 的示例：
+
+
+    ```
+
+    root:x:0:root
+
+    bin:x:1:root,bin,daemon
+
+    daemon:x:2:
+
+    tty:x:5:
+
+    disk:x:6:
+
+    lp:x:7:
+
+    wwwadmin:x:8:
+
+    kmem:x:9:
+
+    wheel:x:10:
+
+    mail:x:12:cyrus
+
+    news:x:13:news
+
+    ```
+
+
+    - 当使用 `-l` 使用 `ls` 命令时，将显示与所有文件（或目录）的用户编号。
+
+
+    - 同一个用户出现在多个组中。连接系统时，它属于 `/etc/passwd` 中指定的组（`GID` 字段）。这可以通过 `newgrp` 命令进行更改。对文件的访问权限随后进行定义。
+
+
+    '
+- fmt: '
+
+    -The File protections must prevent editing by non-privileged users.
+
+    - To add a group, the administrator can edit the `/etc/group` using a text editor.
+    He also can use the `addgroup` or `groupadd` command (not always present). In
+    the first case, he will only have the row corresponding to the groups to add.
+    For example, the line: `admin:: 56: ccm`
+
+    - To add a user to a group, simply edit the `/etc/group` and add the name at the
+    end of the line separating the name of the members by a comma.
+
+    - To delete a group, simply edit the `/etc/group` and delete the corresponding
+    line. But beware, do not forget to change the `/etc/passwd` numbers (`GID`) of
+    the deleted group, if users belonged to it. It is also essential to look for files
+    and directories of this group to change (in the opposite case files and directories
+    may be inaccessible).
+
+
+    ## Customizing the shell
+
+
+    The `/etc/profile` configures the Shell. It concerns all users.
+
+
+    Firstly it includes Shell’s variables such as `PATH`, `OPENWINHOME`...
+
+
+    Then, the type of terminal and the `TERM` variable are accordingly defined. One
+    part is dedicated to the prompt; finally, a last one allows defining colors of
+    the `ls` command.
+
+
+    In Linux boot, it''s nice to have the lighted keypad, which is not the case by
+    default.
+
+
+    There are therefore a few lines that need to be added to the `/etc/profile`:
+
+
+    ```
+
+    INITTY=/dev/tty[1-7]
+
+    for tty in $INITTY;
+
+    do setleds -D +num< $tty
+
+    Done
+
+    ```
+
+
+    When connected to the Shell, the first thing that appears is the prompt; it can
+    be configured to suit the user.
+
+
+    If the administrator wants to have a prompt that is called: "Hello #", he only
+    needs to edit the `/etc/profile`. It contains a variable called `PS1`. All lines
+    related to this variable must then be preceded by a hash: `#`. It is then to add
+    the line `PS1 = ''Hello #''`.
+
+
+    All there’s left to do is to save and log in again. Then we can see the changes.
+
+
+    Tip: leave a blank after the prompt to improve readability. It is also possible
+    to use variables in the prompt (for example to display the time or name of the
+    machine ...):
+
+
+    | `\d` | to add the date (English format) |
+
+    | `\t` | to add the time (HH: MM: SS) |
+
+    | `\u` | to add the user''s name |
+
+    | `\r` | for a newline |
+
+    | `\w` | to add the full path of the current directory |
+
+    | `\W` | to add the current directory |
+
+    | `\h` | to add the name of the machine |
+
+
+    The color can also be changed. For this, use the `PS1` variable like this: `PS1
+    = ''\[\033 [color_number] wanted_prompt\033[0m]''`
+
+
+    The color number will be taken from the following list:
+
+
+    | Black | 0;30 |
+
+    | Red | 0;31 |
+
+    | Green | 0;32 |
+
+    | Brown | 0;33 |
+
+    | Blue | 0;34 |
+
+    | Purple | 0;35 |
+
+    | Cyan | 0;36 |
+
+    | Light Gray | 0;37 |
+
+    | Gray | 1;30 |
+
+    | Pink | 1;31 |
+
+    | Light green | 1;32 |
+
+    | Light brown | 1;33 |
+
+    | Light blue | 1;34 |
+
+    | Light purple | 1;35 |
+
+    | Light cyan | 1;36 |
+
+    | White | 1;37 |
+
+
+    An example showing the time followed by the user-name in red:
+
+
+    `PS1 = ''\ t \ [\ 033 [0; 31m] \ u \ 033 [0m]''`
+
+
+    # Chapter 6 - Linux Tips and Tricks
+
+
+    Just to make it complete, this chapter includes several interesting and really
+    useful tips.
+
+
+    ## Mounting a CD-ROM
+
+
+    To mount a CD-ROM on Linux you must login as system administrator, i.e. with the
+    login "root".
+
+
+    Then just mount the drive, that is to say "hang" the contents of the CD-ROM drive
+    in a directory (most of the time `/mnt/cdrom/`) by typing this command:
+
+
+    ```
+
+    Mount -t iso9660 /dev/cdrom/mnt/cdrom
+
+    ```
+
+
+    Do not forget to demount the drive with the command
+
+
+    ```
+
+    Umount /mnt/cdrom
+
+    ```
+
+
+    ## Mount a DOS partition
+
+
+    It is possible for Linux to access MS-DOS partitions by mounting them in the UNIX
+    file system. To mount the `/dev/hda1` just type:
+
+
+    ```
+
+    mount -t msdos/dev/hda1/mnt/hd
+
+    ```
+
+
+    Do not forget to demount the partition
+
+
+    ```
+
+    umount /mnt/hd
+
+    ```
+
+
+    ## Mount a floppy drive
+
+
+    In the same way as for the MS-DOS partition, you can mount a floppy disk drive
+    and access the data on a formatted disk in DOS with the command:
+
+
+    ```
+
+    mount -t msdos/dev/fd0/mnt/fd
+
+    ```
+
+
+    Do not forget to remove the floppy drive
+
+
+    ```
+
+    umount /mnt/fd.
+
+    ```
+
+
+    ## Restart the computer
+
+
+    To correctly restart the computer, just use the command `shutdown`. The key sequence
+    `<CTRL><ALT><DEL>` has on most Linux distributions programmed to match the shutdown
+    command.
+
+
+    For a quick restart simply type in `shutdown -r now`.
+
+
+    ## The SCSI controller forced recognition
+
+
+    When controllers have no bios they are generally not detected by Linux, in which
+    case it must force the detection by typing prompt LILO:
+
+
+    ```
+
+    Boot: linux tmx8xx = <IRQ>, <address>
+
+    ```
+
+
+    `tmx8xx` represents a `TMC-8xx` controller, if you have another you need to know
+    its designation. `IRQ` represents the interruption of the controller and `"address"`
+    the address of the shared memory.
+
+
+    ## Making an Alias
+
+
+    First of all what is an alias?
+
+
+    This is a shortcut command to run in another it may also extend to other concepts;
+    an alias can be a shortcut to an email.
+
+
+    The commands under Linux to mount a device are (as you saw above heavy typing.
+
+
+    So instead of typing the command:
+
+
+    `"Mount -t iso9660/dev/cdrom/mnt/cdrom"`
+
+
+    type:
+
+
+    ```bash
+
+    aliascdrom = "mount -t iso9660/dev/cdrom/mnt/cdrom ''
+
+    ```
+
+
+    Now just type `cdrom` to mount the device.
+
+
+    However, you may ask yourself, why should I type this command if I have to declare
+    it every time I reset the system?
+
+
+    To avoid that, edit the file `/etc/bashrc` and add the line:
+
+
+    ```bash
+
+    aliascdrom = "mount -t iso9660/dev/cdrom/mnt/cdrom ''
+
+    ```
+
+
+    # Chapter 7 - Vi Editor
+
+
+    Text editors are commonly used under Linux. In this chapter we learn about a widespread
+    one.
+
+
+    ## Introduction to Vi
+
+
+    Vi is one of the most popular text editors under Unix systems (with Emacs and
+    pico) Despite its very limited ergonomics. In Linux there is a free version of
+    Vi called `Vim` (Vi Improved). `Vi` (pronounced vee-eye) is an editor entirely
+    in text mode, which means that each action is done using text commands. This editor
+    although inconvenient at first sight is very powerful and can be very useful in
+    case of operation of the GUI.
+
+
+    The syntax to launch Vi is as follows:
+
+
+    ```bash
+
+    Vi file_name
+
+    ```
+
+
+    After opening the file, it is possible to move using cursors, and the `h`, `j`,
+    `k` and `l` (in case the keyboard does not possess arrow cursors).
+
+
+    ## The Vi modes
+
+
+    Vi has 3 modes of operation:
+
+
+    - **Normal mode**: the one in which you are opening the file. It allows you to
+    type commands.
+
+    - **Insert mode**: this mode allows you to insert characters you type in the document.
+    To switch to insert mode, simply press the `Insert` key on your keyboard, or,
+    if the `i` key.
+
+    - **Replacement mode**: this mode allows you to replace the existing text with
+    the text that you type. Simply press again `r` to enter replace mode, and press
+    the `Esc` key to return to normal mode.
+
+
+    ## The basic commands
+
+
+    | Command | Description |
+
+    | :--- | :--- |
+
+    | `:q` | Quit the editor (without saving) |
+
+    | `:q!` | Forces the editor to quit without saving (even if changes were made
+    to the document) |
+
+    | `:wq` | Saves the document and quits the editor |
+
+    | `:filename` | Saves the document under the specified name |
+
+
+    ## The editing commands
+
+
+    | Command | Description |
+
+    | :--- | :--- |
+
+    | `X` | Deletes the current character under the cursor |
+
+    | `Dd` | Deletes the current line under the cursor |
+
+    | `Dxd` | Deletes x lines from the one currently under the cursor |
+
+    | `Nx` | Delete n characters from the one currently under the cursor |
+
+    | `x>>` | Indent x lines to the right from the one currently under the cursor
+    |
+
+    | `x<<` | Indent x lines to the left from the one currently under the cursor |
+
+
+    ## Search and replace
+
+
+    To find a word in a document, simply (in normal mode) type `/` followed by the
+    search string, then confirm with the enter key.
+
+
+    It is then possible to go from occurrence to occurrence with the `n` button.
+
+
+    To replace a character string with another on a line, there is a very powerful
+    command in Vi using regular expressions with the following syntax:
+
+
+    ```bash
+
+    :S/string_to_be_replaced/new_string/
+
+    ```
+
+
+    It is possible to generalize to the entire document with the following syntax:
+
+
+    ```bash
+
+    :%S/string_to_be_replaced/new_string/
+
+    ```
+
+
+    ## The copy-paste and cut-paste
+
+
+    It is possible in Vi to copy and paste a selection of lines. To do this, just
+    type the following command to copy n lines:
+
+
+    ```bash
+
+    nyy
+
+    ```
+
+    '
+  raw: '-The File protections must prevent editing by non-privileged users.
+
+
+    - To add a group, the administrator can edit the /etc/group using a text editor.
+    He also can use the addgroup or groupadd command (not always present). In the
+    first case, he will only have the row corresponding to the groups to add. For
+    example, the line: admin:: 56: ccm
+
+
+    - To add a user to a group, simply edit the /etc/group and add the name at the
+    end of the line separating the name of the members by a comma.
+
+
+    - To delete a group, simply edit the /etc/group and delete the corresponding line.
+    But beware, do not forget to change the /etc/passwd numbers (GID) of the deleted
+    group, if users belonged to it. It is also essential to look for files and directories
+    of this group to change (in the opposite case files and directories may be inaccessible).
+
+
+    ## Customizing the shell
+
+
+    The /etc/profile configures the Shell. It concerns all users.
+
+
+    Firstly it includes Shell’s variables such asPATH,OPENWINHOME...
+
+
+    Then, the type of terminal and the TERM variable are accordingly defined. One
+    part is dedicated to the prompt; finally a last one allows defining colors of
+    the ls command.
+
+
+    In Linux boot, it''s nice to have the lighted keypad, which is not the case by
+    default.
+
+
+    There are therefore a few lines that need to be added to the /etc/profile:
+
+
+    | INITTY=/dev/tty[1-7] |
+
+
+    | for tty in $INITTY; |
+
+
+    | do setleds -D +num< $tty |
+
+
+    | Done |
+
+
+    When connected to the Shell, the first thing that appears is the prompt; it can
+    be configured to suit the user.
+
+
+    If the administrator wants to have a prompt that is called: "Hello #", he only
+    needs to edit the /etc/profile. It contains a variable called PS1\. All lines
+    related to this variable must then be preceded by a hash: #. It is then to add
+    the line PS1 = ''Hello #''.
+
+
+    All there’s left to do is to save and log in again. Then we can see the changes.
+
+
+    Tip: leave a blank after the prompt to improve readability. It is also possible
+    to use variables in the prompt (for example to display the time or name of the
+    machine ...):
+
+
+    | \d | to add the date (English format) |
+
+
+    | \t | to add the time (HH: MM: SS) |
+
+
+    | \u | to add the user''s name |
+
+
+    | \r | for a newline |
+
+
+    | \w | to add the full path of the current directory |
+
+
+    | \W | to add the current directory |
+
+
+    | \h | to add the name of the machine |
+
+
+    The color can also be changed. For this, use the PS1 variable like this: PS1 =
+    ''\[\033 [color_number] wanted_prompt\033[0m]''
+
+
+    The color number will be taken from the following list:
+
+
+    | Black | 0;30 |
+
+
+    | Red | 0;31 |
+
+
+    | Green | 0;32 |
+
+
+    | Brown | 0;33 |
+
+
+    | Blue | 0;34 |
+
+
+    | Purple | 0;35 |
+
+
+    | Cyan | 0;36 |
+
+
+    | Light Gray | 0;37 |
+
+
+    | Gray | 1;30 |
+
+
+    | Pink | 1;31 |
+
+
+    | Light green | 1;32 |
+
+
+    | Light brown | 1;33 |
+
+
+    | Light blue | 1;34 |
+
+
+    | Light purple | 1;35 |
+
+
+    | Light cyan | 1;36 |
+
+
+    | White | 1;37 |
+
+
+    An example showing the time followed by the user-name in red:
+
+
+    PS1 = ''\ t \ [\ 033 [0; 31m] \ u \ 033 [0m]''
+
+
+    Chapter 6 - Linux Tips and Tricks
+
+
+    Just to make it complete, this chapter includes several interesting and really
+    useful tips.
+
+
+    ## Mounting a CD-ROM
+
+
+    To mount a CD-ROM on Linux you must login as system administrator, i.e. with the
+    login "root".
+
+
+    Then just mount the drive, that is to say "hang" the contents of the CD-ROM drive
+    in a directory (most of the time /mnt/cdrom/) by typing this command:
+
+
+    Mount -t iso9660 /dev/cdrom/mnt/cdrom
+
+
+    Do not forget to demount the drive with the command
+
+
+    Umount /mnt/cdrom
+
+
+    ## Mount a DOS partition
+
+
+    It is possible for Linux to access MS-DOS partitions by mounting them in the UNIX
+    file system. To mount the /dev/hda1 just type:
+
+
+    mount -t msdos/dev/hda1/mnt/hd
+
+
+    Do not forget to demount the partition
+
+
+    umount /mnt/hd
+
+
+    ## Mount a floppy drive
+
+
+    In the same way as for the MS-DOS partition, you can mount a floppy disk drive
+    and access the data on a formatted disk in DOS with the command:
+
+
+    mount -t msdos/dev/fd0/mnt/fd
+
+
+    Do not forget to remove the floppy drive
+
+
+    umount /mnt/fd.
+
+
+    ## Restart the computer
+
+
+    To correctly restart the computer, just use the command "shutdown". The key sequence
+    <CTRL><ALT><DEL> has on most Linux distributions programmed to match the shutdown
+    command.
+
+
+    For a quick restart simply type in "shutdown -r now".
+
+
+    ## The SCSI controller forced recognition
+
+
+    When controllers have no bios they are generally not detected by Linux, in which
+    case it must force the detection by typing prompt LILO:
+
+
+    Boot: linux tmx8xx = <IRQ>, <address>
+
+
+    tmx8xx represents a TMC-8xx controller, if you have another you need to know its
+    designation. IRQ represents the interruption of the controller and "address" the
+    address of the shared memory.
+
+
+    ## Making an Alias
+
+
+    First of all what is an alias?
+
+
+    This is a shortcut command to run in another it may also extend to other concepts;
+    an alias can be a shortcut to an email.
+
+
+    The commands under Linux to mount a device are (as you saw above heavy typing.
+
+
+    So instead of typing the command:
+
+
+    "Mount -t iso9660/dev/cdrom/mnt/cdrom"
+
+
+    type:
+
+
+    aliascdrom = "mount -t iso9660/dev/cdrom/mnt/cdrom ''
+
+
+    Now just type "cdrom" to mount the device
+
+
+    However, you may ask yourself, why should I type this command if I have to declare
+    it every time I reset the system?
+
+
+    To avoid that, edit the file "/etc/bashrc" and add the line:
+
+
+    aliascdrom = "mount -t iso9660/dev/cdrom/mnt/cdrom ''
+
+
+    Chapter 7 - Vi Editor
+
+
+    Text editors are commonly used under Linux. In this chapter we learn about a widespread
+    one.
+
+
+    ## Introduction to Vi
+
+
+    Vi is one of the most popular text editors under Unix systems (with Emacs and
+    pico) Despite its very limited ergonomics. In Linux there is a free version of
+    Vi called Vim (Vi Improved). Vi (pronounced vee-eye) is an editor entirely in
+    text mode, which means that each action is done using text commands. This editor
+    although inconvenient at first sight is very powerful and can be very useful in
+    case of operation of the GUI.
+
+
+    The syntax to launch Vi is as follows:
+
+
+    Vifile_name
+
+
+    After opening the file, it is possible to move using cursors, and the h, j, k
+    and l (in case the keyboard does not possess arrow cursors).
+
+
+    ## The Vi modes
+
+
+    Vi has 3 modes of operation:
+
+
+    -Normal mode: the one in which you are opening the file.
+
+
+    It allows you to type commands.
+
+
+    - The insert mode: This mode allows you to insert characters you type in the document.
+    To switch to insert mode, simply press the Insert key on your keyboard, or, if
+    the i key
+
+
+    - Replacement mode: This mode allows you to replace the existing text with the
+    text that you type. Simply press again r to enter replace mode, and press the
+    Esc key to return to normal mode.
+
+
+    ## The basic commands
+
+
+    | Command | Description |
+
+
+    | :q | Quit the editor (without saving) |
+
+
+    | :q! | Forces the editor to quit without saving (even if changes were made to
+    the document) |
+
+
+    | :wq | Saves the document and quits the editor |
+
+
+    | :filename | Saves the document under the specified name |
+
+
+    ## The editing commands
+
+
+    | Command | Description |
+
+
+    | X | Deletes the current character under the cursor |
+
+
+    | Dd | Deletes the current line under the cursor |
+
+
+    | Dxd | Deletes x lines from the one currently under the cursor |
+
+
+    | Nx | Delete n characters from the one currently under the cursor |
+
+
+    | x>> | Indent x lines to the right from the one currently under the cursor |
+
+
+    | x<< | Indent x lines to the left from the one currently under the cursor |
+
+
+    ## Search and replace
+
+
+    To find a word in a document, simply (in normal mode) type / followed by the search
+    string, then confirm with the enter key.
+
+
+    It is then possible to go from occurrence to occurrence with the n button.
+
+
+    To replace a character string with another on a line, there is a very powerful
+    command in Vi using regular expressions with the following syntax:
+
+
+    :S/string_to_be_replaced/new_string/
+
+
+    It is possible to generalize to the entire document with the following syntax:
+
+
+    :%S/string_to_be_replaced/new_string/
+
+
+    ## The copy-paste and cut-paste
+
+
+    It is possible in Vi to copy and paste a selection of lines. To do this, just
+    type the following command to copy n lines:
+
+
+    nyy'
+  toc: []
+  trans: '
+
+
+    - 文件保护必须防止非特权用户编辑。
+
+    - 要添加一个组，管理员可以使用文本编辑器编辑 `/etc/group`。他也可以使用 `addgroup` 或 `groupadd` 命令（并非总是存在）。在第一种情况下，他将只拥有与要添加的组对应的行。例如，该行：`admin::
+    56: ccm`
+
+    - 要将一个用户添加到组中，只需编辑 `/etc/group` 并在行末尾添加名称，并用逗号分隔成员名称。
+
+    - 若要删除一个组，只需编辑 `/etc/group` 并删除相应的行。但请注意，如果用户属于该组，请不要忘记更改 `/etc/passwd` 中已删除组的数字（`GID`）。此外，查找并修改该组的文件和目录也是至关重要的（否则，这些文件和目录可能无法访问）。
+
+
+    ## 自定义 shell
+
+
+    `/etc/profile` 配置 Shell。它涉及所有用户。
+
+
+    首先，它包含了 Shell 的变量，如 `PATH`、`OPENWINHOME`……
+
+
+    然后，相应地定义了终端类型和 `TERM` 变量。一部分专门用于提示符；最后，最后一部分允许定义 `ls` 命令的颜色。
+
+
+    在 Linux 启动时，如果有发光的数字键盘会很好，但默认情况下不是这样的。
+
+
+    因此，需要在 `/etc/profile` 中添加几行：
+
+
+    ```
+
+    INITTY=/dev/tty[1-7]
+
+    for tty in $INITTY;
+
+    do setleds -D +num< $tty
+
+    Done
+
+    ```
+
+
+    连接到 Shell 时，首先出现的是提示符；它可以根据用户喜好进行配置。
+
+
+    如果管理员想要拥有一个名为“Hello #”的提示符，他只需要编辑 `/etc/profile`。它包含一个名为 `PS1` 的变量。所有与该变量相关的行都必须以哈号
+    `#` 开头。然后添加行 `PS1 = ''Hello #''`。
+
+
+    剩下的工作就是保存并重新登录。然后我们就可以看到更改了。
+
+
+    提示：在提示符后留一个空格以提高可读性。在提示符中使用变量也是可能的（例如显示时间或机器名称……）：
+
+
+    | `\d` | 添加日期（英文格式） |
+
+    | `\t` | 添加时间（HH: MM: SS） |
+
+    | `\u` | 添加用户名 |
+
+    | `\r` | 换行 |
+
+    | `\w` | 添加当前目录的完整路径 |
+
+    | `\W` | 添加当前目录 |
+
+    | `\h` | 添加机器名称 |
+
+
+    也可以更改颜色。为此，像这样使用 `PS1` 变量：`PS1 = ''\[\033 [color_number] wanted_prompt\033[0m]''`
+
+
+    颜色数字将取自列表：
+
+
+    | 黑色 | 0;30 |
+
+    | 红色 | 0;31 |
+
+    | 绿色 | 0;32 |
+
+    | 棕色 | 0;33 |
+
+    | 蓝色 | 0;34 |
+
+    | 紫色 | 0;35 |
+
+    | 青色 | 0;36 |
+
+    | 浅灰色 | 0;37 |
+
+    | 灰色 | 1;30 |
+
+    | 粉色 | 1;31 |
+
+    | 浅绿色 | 1;32 |
+
+    | 浅棕色 | 1;33 |
+
+    | 浅蓝色 | 1;34 |
+
+    | 浅紫色 | 1;35 |
+
+    | 浅青色 | 1;36 |
+
+    | 白色 | 1;37 |
+
+
+    一个显示时间后跟红色用户名的示例：
+
+
+    `PS1 = ''\ t \ [\ 033 [0; 31m] \ u \ 033 [0m]''`
+
+
+    # 第 6 章 - Linux 技巧与技巧
+
+
+    为了完整，本章包含了几个有趣且非常用的技巧。
+
+
+    ## 挂载 CD-ROM
+
+
+    在 Linux 上挂载 CD-ROM 必须以系统管理员身份登录，即使用登录名 "root"。
+
+
+    然后挂载驱动器，也就是说通过输入此命令将 CD-ROM 驱动器的内容“挂载”到一个目录（大多数情况下为 `/mnt/cdrom/`）：
+
+
+    ```
+
+    Mount -t iso9660 /dev/cdrom/mnt/cdrom
+
+    ```
+
+
+    不要忘记使用命令卸载驱动器
+
+
+    ```
+
+    Umount /mnt/cdrom
+
+    ```
+
+
+    ## 挂载 DOS 分区
+
+
+    Linux 可以通过将 MS-DOS 分区挂载到 UNIX 文件系统中来访问它们。要挂载 `/dev/hda1`，只需输入：
+
+
+    ```
+
+    mount -t msdos/dev/hda1/mnt/hd
+
+    ```
+
+
+    不要忘记卸载分区
+
+
+    ```
+
+    umount /mnt/hd
+
+    ```
+
+
+    ## 挂载软磁盘驱动器
+
+
+    与 MS-DOS 分区一样，你可以挂载软磁盘驱动器并使用命令访问 DOS 中格式化磁盘上的数据：
+
+
+    ```
+
+    mount -t msdos/dev/fd0/mnt/fd
+
+    ```
+
+
+    不要忘记移除软磁盘驱动器
+
+
+    ```
+
+    umount /mnt/fd.
+
+    ```
+
+
+    ## 重启电脑
+
+
+    正确重启电脑，只需使用 `shutdown` 命令。在大多数 Linux 发行版中，`<CTRL><ALT><DEL>` 序列已编程为匹配 shutdown
+    命令。
+
+
+    要快速重启只需输入 `shutdown -r now`。
+
+
+    ## 强制识别 SCSI 控制器
+
+
+    当控制器没有 bios 时，Linux 通常无法检测到，在这种情况下，必须通过输入 LILO 提示符来强制检测：
+
+
+    ```
+
+    Boot: linux tmx8xx = <IRQ>, <address>
+
+    ```
+
+
+    `tmx8xx` 代表 `TMC-8xx` 控制器，如果你有另一个，你需要知道它的名称。`IRQ` 代表控制器的中断，`"address"` 代表共享内存的地址。
+
+
+    ## 创建别名 (Alias)
+
+
+    首先，什么是别名？
+
+
+    这是一个在另一个地方运行的快捷命令，它可能也可以扩展到其他概念；别名可以是电子邮件的快捷方式。
+
+
+    Linux 下挂载设备的命令是（如你上面看到的，输入起来很费劲）。
+
+
+    所以，与其输入命令：
+
+
+    `"Mount -t iso9660/dev/cdrom/mnt/cdrom"`（注：此处原文可能有引号错误）
+
+
+    不如输入：
+
+
+    ```bash
+
+    aliascdrom = "mount -t iso9660/dev/cdrom/mnt/cdrom ''
+
+    ```
+
+
+    现在只需输入 `cdrom` 即可挂载设备。
+
+
+    但是，你可能会问，如果我每次重启系统都要声明它，为什么要输入这个命令呢？
+
+
+    为了避免这种情况，编辑 `/etc/bashrc` 文件并添加行：
+
+
+    ```bash
+
+    aliascdrom = "mount -t iso9660/dev/cdrom/mnt/cdrom ''
+
+    ```
+
+
+    # 第 7 章 - Vi 编辑器
+
+
+    文本编辑器在 Linux 下很常用。在本章中我们将学习一种广泛使用的编辑器。
+
+
+    ## Vi 简介
+
+
+    Vi 是 Unix 系统下最流行的文本编辑器之一（还有 Emacs 和 pico），尽管它的人体工程学非常有限。在 Linux 中，有一个 Vi 的免费版本叫做
+    `Vim` (增强版 Vi)。`Vi`（读作 vee-eye）是一个完全在文本模式下工作的编辑器，这意味着每个操作都是使用文本命令完成的。这个编辑器虽然乍看起来并不方便，但它非常强大，在操作
+    GUI 的情况下非常有用。
+
+
+    启动 Vi 的语法如下：
+
+
+    ```bash
+
+    Vi file_name
+
+    ```
+
+
+    打开文件后，可以使用光标移动，以及 `h`、`j`、`k` 和 `l`（在键盘没有方向键的情况下）。
+
+
+    ## Vi 模式
+
+
+    Vi 有 3 种操作模式：
+
+
+    - **普通模式 (Normal mode)**：你打开文件时所在的模式。它允许你输入命令。
+
+    - **插入模式 (Insert mode)**：此模式允许你在文档中插入你输入的字符。要切换到插入模式，只需按下键盘上的 `Insert` 键，或者按下
+    `i` 键。
+
+    - **替换模式 (Replacement mode)**：此模式允许你用输入的文本替换现有文本。只需再次按下 `r` 进入替换模式，并按下 `Esc` 键返回普通模式。
+
+
+    ## 基础命令
+
+
+    | 命令 | 说明 |
+
+    | :--- | :--- |
+
+    | `:q` | 退出编辑器（不保存） |
+
+    | `:q!` | 强制编辑器退出且不保存（即使对文档进行了更改） |
+
+    | `:wq` | 保存文档并退出编辑器 |
+
+    | `:filename` | 以指定的名称保存文档 |
+
+
+    ## 编辑命令
+
+
+    | 命令 | 说明 |
+
+    | :--- | :--- |
+
+    | `X` | 删除光标下方的当前字符 |
+
+    | `Dd` | 删除光标下方的当前行 |
+
+    | `Dxd` | 从当前光标处删除 x 行 |
+
+    | `Nx` | 从当前光标处删除 n 个字符 |
+
+    | `x>>` | 从当前光标处向右缩进 x 行 |
+
+    | `x<<` | 从当前光标处向左缩进 x 行 |
+
+
+    ## 搜索与替换
+
+
+    要在文档中查找单词，只需（在普通模式下）输入 `/` 后跟搜索字符串，然后按回车键确认。
+
+
+    随后可以使用 `n` 键在出现处之间跳转。
+
+
+    要在行内将一个字符串替换为另一个，Vi 中有一个使用正则表达式的强大命令，语法如下：
+
+
+    ```bash
+
+    :S/string_to_be_replaced/new_string/
+
+    ```
+
+
+    可以使用以下语法扩展到整个文档：
+
+
+    ```bash
+
+    :%S/string_to_be_replaced/new_string/
+
+    ```
+
+
+    ## 复制粘贴与剪切
+
+
+    在 Vi 中可以复制并粘贴一组行。要这样做，只需输入以下命令复制 n 行：
+
+
+    ```bash
+
+    nyy
+
+    ```
+
+
+    '
+- fmt: '
+
+    By way of example, here’s a command allowing to copy 16 lines in the buffer:
+
+
+    ```
+
+    16yy
+
+    ```
+
+
+    To paste the selection, just type the letter `p`.
+
+
+    Cutting and pasting `n` lines is similarly done with the command:
+
+
+    ```
+
+    Ndd
+
+    ```
+
+
+    Then `p` to paste!
+
+
+    ## Conclusion
+
+
+    A beautiful journey has come to an end at this level. But, we surly now have all
+    the tools and skills to begin using and enjoying this powerful operating system.
+    As you have witnessed, this book covers several interesting areas about Linux.
+
+
+    At the beginning we started talking about Linux history and genesis so we can
+    have a clear vision and be methodological. Then, we learnt and understood how
+    to install the system knowing the necessary equipments and devices needed to have
+    an operational OS running. We also learnt about the shell which is very important
+    and all the relative commands. And of course we must not forget about command
+    lines which are really useful and commonly used. Fileglobbing was covered too;
+    it’s indispensable for Linux beginners to know. User’s management and authenticating
+    will certainly help you secure data and manage access rights for all users. By
+    the end, just to make it complete and really useful for Linux learners and beginners,
+    we included some very important Linux tips and talked about the Vi editor which
+    is really an interesting thing to know. All that is left to say is that I wish
+    you prosperity, all the best and good luck, achieving your objectives and being
+    closer to your personal achievements.
+
+    '
+  raw: 'By way of example,here’s a command allowing to copy 16 lines in the buffer:
+
+
+    16yy
+
+
+    To paste the selection, just type the letter p.
+
+
+    Cutting and pasting n lines is similarly done with the command:
+
+
+    Ndd
+
+
+    Then p to paste!
+
+
+    Conclusion
+
+
+    A beautiful journey has come to an end at this level. But, we surly now have all
+    the tools and skills to begin using and enjoying this powerful operating system.
+    As you have witnessed, this book covers several interesting areas about Linux.
+    At the beginning we started talking about Linux history and genesis so we can
+    have a clear vision and be methodological. Then, we learnt and understood how
+    to install the system knowing the necessary equipments and devices needed to have
+    an operational OS running. We also learnt about the shell which is very important
+    and all the relative commands. And of course we must not forget about command
+    lines which are really useful and commonly used. Fileglobbingwas covered too;
+    it’s indispensable for Linux beginners to know.User’s management and authenticating
+    will certainly help you secure data and manage access rights for all users. By
+    the end, just to make it complete and really useful for Linux learners and beginners,
+    we included some very important Linux tips and talked about the Vi editor which
+    is really an interesting thing to know. All that is left to say is that I wish
+    you prosperity, all the best and good luck, achieving your objectives and being
+    closer to your personal achievements.'
+  toc: []
+  trans: '
+
+    举例来说，这里有一个复制缓冲区中 16 行内容的命令：
+
+
+    ```
+
+    16yy
+
+    ```
+
+
+    要粘贴选定内容，只需输入字母 `p` 即可。
+
+
+    剪切并粘贴 `n` 行同样可以通过以下命令完成：
+
+
+    ```
+
+    Ndd
+
+    ```
+
+
+    然后按 `p` 粘贴！
+
+
+    ## 结论
+
+
+    这一阶段的精彩旅程已经画上了句号。但是，我们现在确实拥有了所有的工具和技能，可以开始使用并享受这个强大的操作系统了。正如你所看到的，这本书涵盖了关于 Linux
+    的几个有趣领域。
+
+
+    在开始时，我们讨论了 Linux 的历史和起源，以便我们有一个清晰的视野并遵循方法论。接着，我们学习并理解了如何安装系统，了解了运行操作系统所需的必要设备和硬件。我们还学习了非常重要的
+    Shell（壳）以及所有相关的命令。当然，我们不能忘记非常实用且常用的命令行。书中还涵盖了文件通配符匹配（File-globbing），这对于 Linux
+    初学者来说是不可或缺的知识。用户管理和身份验证将极大地帮助你保护数据并管理所有用户的访问权限。最后，为了使内容更完整且对 Linux 学习者和学者真正有用，我们包含了一些非常重要的
+    Linux 技巧，并讨论了 Vi 编辑器，这是一个非常值得了解的东西。最后我想说，祝愿你繁荣、万事顺利、好运，实现你的目标并取得个人成就。
+
+    '
