@@ -265,6 +265,7 @@
 +   [道德黑客的 Linux 基础第一部分：Linux 入门指南](docs/linux-basic-for-ethical-hacking-part-1-by-raxxstar-linux-for/README.md)
 +   [黑客 Linux 基础：理解黑客工具、渗透测试、Linux Mint、Kali Linux 等更多：Kali Linux 黑客命令](docs/linux-basics-for-hacker-understanding-hacking-tools-penetrat/README.md)
 +   [Kali 网络、脚本和安全入门指南](docs/linux-basics-for-hackers---getting-started-with-networking-s/README.md)
++   [黑客 Linux 入门指南，第 2 版](docs/linux-basics-for-hackers-2nd-edition/README.md)
 +   [系统管理员 Linux 基础：学习核心 Linux 概念和命令行技能，开启你的系统管理职业](docs/linux-basics-for-sysadmin-learn-core-linux-concepts-and-comm/README.md)
 +   [Linux 基础：学习 Linux 命令与 Linux 编码指南 (1 小时上手)](docs/linux-basics-linux-guide-to-learn-linux-commands-and-linux-c/README.md)
 +   [Linux From Scratch](docs/linux-bd-gd/README.md)
