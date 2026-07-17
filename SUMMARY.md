@@ -324,6 +324,7 @@
 +   [适用于日常使用与关键基础设施的极轻极极稳定 Linux 发行版（英文版）](docs/linux-distro-super-ringan-super-stabil-untuk-penggunaan-hari/README.md)
 +   [LINUX：初学者指南](docs/linux-easy-linux-for-beginners/README.md)
 +   [Linux：初学者轻松学，学习 Linux 操作系统和命令行的步步指南](docs/linux-easy-linux-for-beginners-your-step-by-step-guide-to-le/README.md)
++   [Linux：初学者必备的100个知识点](docs/linux-essential-knowledge-for-beginners-100/README.md)
 +   [Linux 入门指南](docs/linux-essentials/README.md)
 +   [Linux Essentials (010-160)：助你首次尝试通过 LPI® Linux Essentials 考试的速成资源](docs/linux-essentials-010-160-a-time-compressed-resource-to-passi/README.md)
 +   [网络安全 Linux 入门指南](docs/linux-essentials-for-cybersecurity-for-true-epub/README.md)
