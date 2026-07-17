@@ -1,0 +1,3591 @@
+- fmt: '
+
+    ![](images/00001.jpeg)
+
+
+    # Linux: The Quick Start Beginner’s Guide
+
+
+    (Linux for Beginners, Linux Command Line, Linux Operating System, Learn Linux)
+
+
+    ## Table of Contents:
+
+    - [Introduction](#part0000_split_002.html_Introduction)
+
+    - [Linux vs. Windows](#part0000_split_003.html_Linux_vs_win)
+
+    - [Background](#part0000_split_004.html_Background)
+
+    - [Choosing a Distribution of Linux](#part0000_split_005.html_Many_distros)
+
+    - [Installing Linux](#part0000_split_006.html_Installing_Linux)
+
+    - [How Linux Works](#part0000_split_007.html_How_Linux_works)
+
+    - [Having Fun with Linux](#part0000_split_008.html_Fun_with_Linux)
+
+    - [Advanced Concepts in Linux](#part0000_split_009.html_Advanced_Concepts)
+
+    - [Conclusion](#part0000_split_010.html_Conclusion)
+
+
+    ## Introduction
+
+
+    ### What is Linux?
+
+    Linux is a free and open-source OS kernel used around the world for many purposes.
+    The kernel facilitates full-fledged operating systems that are free and open source
+    by giving software a way to interact with the hardware in our devices. Linux is
+    both widespread and prevalent in the computing world- there is a good chance that
+    if you reach in your pocket you’ll find a Linux machine right now (smartphones!).
+    Operating systems using Linux can be found running most of the world’s super computers,
+    and Linux is even used by many government agencies. It is found everywhere from
+    the New York Stock Exchange to the Sony PlayStation.
+
+
+    Does this mean that Linux is only for big-wigs and expensive supercomputers? Absolutely
+    not, because Linux can easily be used to write papers, browse the internet, watch
+    YouTube, or check email. Linux operating systems are free, so they are a fantastic
+    alternative to the expensive Windows and Apple operating systems. There are many
+    different distributions of Linux, often referred to as “distros” that are specialized
+    to suit differing needs. This book will go through some history, various distributions,
+    and a few uses of Linux-based operating systems. Overall it is highly recommended
+    that everyone learn at least a little bit about Linux, because it is used in so
+    many places.
+
+
+    ## Linux vs. Windows
+
+    An operating system (OS) is the backbone of a computer, and without one a computer
+    is nearly useless. Normally a computer will run an OS such as Windows, but computer
+    users are free to install any OS that can run on their hardware. While we are
+    all familiar with how Windows computers work, taking the plunge and installing
+    Linux offers many benefits. Besides being free, Linux is more secure, more reliable,
+    and more open.
+
+
+    Windows machines are plagued with viruses. Antivirus applications are expensive
+    and can slow down even the strongest Windows PCs. Linux is such a secure OS, and
+    it extremely difficult to contract a virus. Fortune 500 companies choose to run
+    their computers with Linux because of the enhanced security and unparalleled reliability.
+    Anybody suffering from virus and malware problems should surely consider giving
+    Linux a try.
+
+
+    Linux is fast, even on the oldest computers. An old device running Windows XP
+    might be useless currently, but installing Linux breathes a new breath of life
+    into dying technology. Some distributions are made specifically to be lightweight
+    and responsive, which can extend the useful life of a computer by many years.
+
+
+    The kernel and software that comes with Linux operating systems are free and open
+    source, and FOSS applications offer nearly identical functionality compared to
+    their expensive counterparts. For example, Adobe Photoshop costs upwards of $500,
+    but Linux’s free alternative “GIMP” is free. Even Microsoft Windows 10 costs about
+    $120, but the most popular Linux distro, Ubuntu, costs absolutely nothing. For
+    every paid component of a Windows PC there is a free Linux equivalent. Even the
+    method of downloading new programs is improved in Linux. On a Windows PC a user
+    must navigate a website and potentially download Trojan horse viruses to retrieve
+    new software, but on Linux there are secure and safe repositories that download
+    software with ease.
+
+
+    Compatibility remains high with Linux systems, for you can install Linux on a
+    wide range of devices. Whether it is a brand new computer, an old dinosaur, or
+    a laptop and tablet, Linux is compatible. Compare that to Apple’s OSX, which can
+    only run on iMacs, or Windows 10, which can only run on newer computers. Some
+    tech geeks have even managed to install Linux in cars and internet-enabled coffee
+    pots! What this means is that you will never have to worry if your device is compatible,
+    or if you need to buy a new computer. So long as the device still turns on there
+    is a large chance that Linux will run on it.
+
+
+    Many people choose Android over iOS for deep customization. The same holds for
+    choosing Linux over Windows, because Linux offers entire software freedom- many
+    distros are made for the tinkerer and customizer. In Windows you can change your
+    wallpaper and color scheme, but the personalization ends there. In addition to
+    colors and placement, Linux allows the user to add and remove components at will,
+    creating a unique environment. When it comes down to it, Linux prevails over Windows
+    in almost every category. Linux is free, secure, open, customizable, and stable.
+    Although not every computer user is used to Linux-based operating systems, they
+    will definitely benefit by switching away from Windows. Bricked devices, slow
+    and antiquated computers, and virus infested machines can all be saved by installing
+    Linux. If the possibility of a brand-new computing experience piques interest,
+    continue reading to find out all how Linux works and how to get a copy installed
+    on your computer.
+
+
+    ## Background
+
+    There is a lot of information surrounding Linux, its creation, and the contributing
+    parties. Additionally there are a few parts of Linux that are interesting and
+    unique. This chapter will discuss the roots of Linux and how it became the de
+    facto operating system.
+
+
+    ### Some History on Linux
+
+    On August 25th, 1991 in Finland, Helsinki, Linux was conceived. The then twenty
+    year old Finnish Student Linus Benedict Torvalds publicly announced the creation
+    of the Linux kernel in a Usenet post to the newsgroup `comp.os.minix`. Minix was
+    a currently existing kernel that Linux became based off of, and the pedigree of
+    both can be traced to an older operating system known as UNIX. The post referred
+    to Torvalds’s project as a hobby and small scale endeavor that would not carry
+    much weight in the computing world and might not even be compatible with all computers.
+
+
+    The humble and relatively quiet beginnings were a precursor to the industry giant
+    that Linux would become. The kernel grew from a hobby project into a usable product
+    in a short amount of time and in 1993 a large team of 100 volunteers contributed
+    to the project. Later, Linux was fused with Richard Stallman’s GNU core libraries
+    to create the full kernel version 1.0. Linux Torvalds initially intended for his
+    project to be named `Freax`, but one of Torvalds’ coworkers at Helsinki University
+    actually changed the name to Linux secretly and Linus later agreed to it. It is
+    with version 1.0 that Linux became usable as an operating system. 3rd parties
+    then added software suites and additional functionality on top of the Linux kernel
+    to create “distributions”, the oldest being Slackware and Debian.
+
+    '
+  raw: '
+
+
+    ![](images/00001.jpeg)
+
+
+    Linux: The Quick Start Beginner’s Guide
+
+
+    (Linux for Beginners, Linux Command Line, Linux Operating System, Learn Linux)
+
+
+    Table of Contents:
+
+
+    [Introduction](#part0000_split_002.html_Introduction)
+
+
+    [Linux vs. Windows](#part0000_split_003.html_Linux_vs_win)
+
+
+    [Background](#part0000_split_004.html_Background)
+
+
+    [Choosing a Distribution of Linux](#part0000_split_005.html_Many_distros)
+
+
+    [Installing Linux](#part0000_split_006.html_Installing_Linux)
+
+
+    [How Linux Works](#part0000_split_007.html_How_Linux_works)
+
+
+    [Having  Fun with Linux](#part0000_split_008.html_Fun_with_Linux)
+
+
+    [Advanced Concepts in Linux](#part0000_split_009.html_Advanced_Concepts)
+
+
+    [Conclusion](#part0000_split_010.html_Conclusion)
+
+
+    Introduction
+
+
+    What is Linux?
+
+
+                                Linux is a free and open-source              OS kernel
+    used around the world for many purposes.  The kernel facilitates full-fledged
+    operating systems that are free and open source by giving software a way to interact
+    with the hardware in our devices.  Linux is both widespread and prevalent in the
+    computing world- there is a good chance that if you reach in your pocket you’ll
+    find a Linux machine right now (smartphones!).  Operating systems using Linux
+    can be found running most of the world’s super computers, and Linux is even used
+    by many government agencies. It is found everywhere from the New York Stock Exchange
+    to the Sony PlayStation. 
+
+
+    Does this mean that Linux is only for big-wigs and expensive supercomputers? 
+    Absolutely not, because Linux can easily be used to write papers, browse the internet,
+    watch YouTube, or check email.  Linux operating systems are free, so they are
+    a fantastic alternative to the expensive Windows and Apple operating systems. 
+    There are many different distributions of Linux, often referred to as “distros”
+    that are specialized to suit differing needs.  This book will go through some
+    history, various distributions, and a few uses of Linux-based operating systems.
+    Overall it is highly recommended that everyone learn at least a little bit about
+    Linux, because it is used in so many places.
+
+
+    Linux vs. Windows
+
+
+    An operating system (OS) is the backbone of a computer, and without one a computer
+    is nearly useless.  Normally a computer will run an OS such as Windows, but computer
+    users are free to install any OS that can run on their hardware.  While we are
+    all familiar with how Windows computers work, taking the plunge and installing
+    Linux offers many benefits.  Besides being free, Linux is more secure, more reliable,
+    and more open.             
+
+
+    Windows machines are plagued with viruses.  Antivirus applications are expensive
+    and can slow down even the strongest Windows PCs.  Linux is such a secure OS,
+    and it extremely difficult to contract a virus.  Fortune 500 companies choose
+    to run their computers with Linux because of the enhanced security and unparalleled
+    reliability.  Anybody suffering from virus and malware problems should surely
+    consider giving Linux a try.
+
+
+    Linux is fast, even on the oldest computers.  An old device running Windows XP
+    might be useless currently, but installing Linux breathes a new breath of life
+    into dying technology.  Some distributions are made specifically to be lightweight
+    and responsive, which can extend the useful life of a computer by many years.
+
+
+    The kernel and software that comes with Linux operating systems are free and open
+    source, and FOSS applications offer nearly identical functionality compared to
+    their expensive counterparts.  For example, Adobe Photoshop costs upwards of $500,
+    but Linux’s free alternative “GIMP” is free. Even Microsoft Windows 10 costs about
+    $120, but the most popular Linux distro, Ubuntu, costs absolutely nothing.  For
+    every paid component of a Windows PC there is a free Linux equivalent. Even the
+    method of downloading new programs is improved in Linux.  On a Windows PC a user
+    must navigate a website and potentially download Trojan horse viruses to retrieve
+    new software, but on Linux there are secure and safe repositories that download
+    software with ease.   
+
+
+    Compatibility remains high with Linux systems, for you can install Linux on a
+    wide range of devices.  Whether it is a brand new computer, an old dinosaur, or
+    a laptop and tablet, Linux is compatible.   Compare that to Apple’s OSX, which
+    can only run on iMacs, or Windows 10, which can only run on newer computers. 
+    Some tech geeks have even managed to install Linux in cars and internet-enabled
+    coffee pots! What this means is that you will never have to worry if your device
+    is compatible, or if you need to buy a new computer.  So long as the device still
+    turns on there is a large chance that Linux will run on it.
+
+
+    Many people choose Android over iOS for deep customization.  The same holds for
+    choosing Linux over Windows, because Linux offers entire software freedom- many
+    distros are made for the tinkerer and customizer. In Windows you can change your
+    wallpaper and color scheme, but the personalization ends there.  Compare that
+    to Linux, which allows you to completely switch to a text-only interface if you
+    so choose.  In addition to colors and placement, Linux allows the user to add
+    and remove components at will, creating a unique environment for every user.
+
+
+    When it comes down to it, Linux prevails over Windows in almost every category. 
+    Linux is free, secure, open, transparent, customizable, and stable.  Although
+    not every computer user is used to Linux-based operating systems, they will definitely
+    benefit by switching away from Windows. Bricked devices, slow and antiquated computers,
+    and virus infested machines can all be saved by installing Linux.  If the possibility
+    of a brand-new computing experience piques interest, continue reading to find
+    out all about how Linux works and how to get a copy installed on your personal
+    computer.
+
+
+    Background
+
+
+    There is a lot of information surrounding Linux, its creation, and the contributing
+    parties. Additionally there are a few parts of Linux that are interesting and
+    unique.  This chapter will discuss the roots of Linux and how it became the de
+    facto alternative operating system.
+
+
+    Some History on Linux
+
+
+                  On August 25th, 1991 in Finland, Helsinki, Linux was conceived.
+    The then twenty one year old Finnish Student Linus Benedict Torvalds publicly
+    announced the creation of the Linux kernel in a Usenet post to the newsgroup titled
+    “comp.os.minix.”  Minix was a currently existing kernel that Linux became based
+    off of, and the pedigree of both can be traced to an older operating system known
+    as UNIX.  The post referred to Torvalds’s project as a hobby and small scale endeavor
+    that would not carry much weight in the computing world and might not even be
+    compatible with all computers. 
+
+
+                  The humble and relatively quiet beginnings were a precursor to the
+    industry giant that Linux would become. The kernel grew from a hobby project into
+    a usable product in a short amount of time and in 1993 a large team of 100 volunteers
+    contributed to the project. Later, Linux was fused with Richard Stallman’s GNU
+    core libraries to create the full kernel version 1.0.  Linus Torvalds initially
+    intended for his project to be named “Freax”, but one of Torvalds’ coworkers at
+    Helsinki University actually changed the name to Linux secretly and Linus later
+    agreed to it.  It is with version 1.0 that Linux became usable as an operating
+    system.  3rd parties then added software suites and additional functionality on
+    top of the Linux kernel to create “distributions”, the oldest being Slackware
+    and Debian.'
+  toc: []
+  trans: '
+
+
+    ![](img/00001.jpeg)
+
+
+    # Linux：新手快速入门指南
+
+
+    (Linux 学者、Linux 命令行、Linux 操作系统、学习 Linux)
+
+
+    ## 目录：
+
+    - 介绍
+
+    - Linux vs Windows
+
+    - 背景
+
+    - 选择 Linux 发行版
+
+    - 安装 Linux
+
+    - Linux 如何工作
+
+    - 玩转 Linux
+
+    - Linux 高级概念
+
+    - 结论
+
+
+    ## 介绍
+
+
+    ### 什么是 Linux？
+
+    Linux 是一个免费且开源的操作系统内核，在全球范围内用于许多用途。内核通过为软件提供一种与设备硬件交互的方式，促进了完整的免费开源操作系统的产生。Linux
+    在计算世界既广泛又盛行——很有可能你现在摸摸口袋，就会发现自己正拿着一台运行 Linux 的设备（智能手机！）。使用 Linux 的操作系统运行在世界上大多数超级计算机上，而且
+    Linux 甚至被许多政府机构使用。从纽约证券交易所到索尼 PlayStation，Linux 无处不在。
+
+
+    这是否意味着 Linux 仅供大人物和昂贵的超级计算机使用？绝对不是，因为 Linux 可以轻松地用于编写论文、浏览互联网、观看 YouTube 或检查电子邮件。Linux
+    操作系统是免费的，因此它们是昂贵的 Windows 和 Apple 操作系统的极佳替代方案。Linux 有许多不同的发行版本，通常被称为“distros”（发行版），它们为了满足不同的需求而设计。本书将介绍
+    Linux 的部分历史、各种发行版以及基于 Linux 的操作系统的用途。总的来说，强烈建议每个人至少学习一点 Linux，因为它被应用于许多领域。
+
+
+    ## Linux vs. Windows
+
+    操作系统（OS）是计算机的骨干，没有它，计算机几乎毫无用处。通常，计算机会运行如 Windows 等操作系统，但计算机用户可以自由安装任何可以在其硬件上运行的操作系统。虽然我们都熟悉
+    Windows 计算机是如何运作的，但尝试安装 Linux 具有许多益处。除了免费之外，Linux 更安全、更可靠、更开放。
+
+
+    Windows 机器深受病毒的困扰。杀毒软件价格昂贵，而且会减慢即使是最强大的 Windows 电脑。Linux 是一个非常安全的操作系统，感染病毒极其困难。财富
+    500 强企业选择运行 Linux 计算机是因为其增强的安全性和无与伦比的可靠性。任何遭受病毒和恶意软件困扰的人都应该考虑尝试 Linux。
+
+
+    Linux 运行很快，即使在最旧的计算机上也是如此。运行 Windows XP 的旧设备现在可能已经没用了，但安装 Linux 可以为这些即将死亡的技术注入新的生命。某些发行版专门设计为轻量化和快速响应而设计，这可以将计算机的使用寿命延长多年。
+
+
+    Linux 操作系统自带的内核和软件是免费开源的，FOSS（自由开源软件）应用程序提供的功能与其昂贵的对应品几乎相同。例如，Adobe Photoshop
+    的费用超过 500 美元，而 Linux 的免费替代品“GIMP”是免费的。即使 Microsoft Windows 10 大约花费 120 美元，但最流行的
+    Linux 发行版 Ubuntu 完全不需要费用。Windows PC 的每一个付费组件都有一个免费的 Linux 等效品。甚至下载新程序的方法在 Linux
+    中也得到了改进。在 Windows PC 上，用户必须浏览网站并可能通过下载木马病毒来获取新软件，但在 Linux 上，有安全的存储库可以轻松地下载软件。
+
+
+    Linux 系统的兼容性仍然很高，因为你可以在各种设备上安装 Linux。无论是全新的电脑、旧古董，还是笔记本电脑和平板，Linux 都是兼容的。相比之下，Apple
+    的 OSX 只能在 iMac 上运行，而 Windows 10 只能在较新的电脑上运行。一些极客甚至成功在汽车和联网咖啡壶上安装了 Linux！这意味着你永远不需要担心你的设备是否兼容，或者是否需要购买新电脑。只要设备还能启动，Linux
+    就很大可能在其上面运行。
+
+
+    许多人为了深度定制选择 Android 而不是 iOS。选择 Linux 而不是 Windows 也是如此，因为 Linux 提供了完全的软件自由——许多发行版是为折腾者和定制者设计的。在
+    Windows 中，你可以更改壁纸和配色方案，但个性化仅此此。除了颜色和位置，Linux 还允许用户随心地添加和删除组件，创建一个独特的环境。根结底，Linux
+    在几乎每一个类别上都优于 Windows。Linux 是免费、安全、开放、可定制且稳定的。虽然不是每个计算机用户都习惯基于 Linux 的操作系统，但他们从离开
+    Windows 的切换中一定会受益。砖掉的设备、缓慢且过时的计算机以及被病毒入侵的机器都可以通过安装 Linux 来挽救。如果全新计算体验的可能性激发了你的兴趣，请继续阅读以了解
+    Linux 的工作原理以及如何在你的计算机上安装副本。
+
+
+    ## 背景
+
+    关于 Linux、它的创建以及贡献者，有大量信息。此外，Linux 还有一些部分非常有趣且独特。本章将讨论 Linux 的根源以及它如何成为事实上的操作系统。
+
+
+    ### Linux 的历史
+
+    1991 年 8 月 25 日，在芬兰的赫尔辛基，Linux 诞生了。当时 20 岁的芬兰学生林纳斯·本尼迪克·托瓦尔斯（Linus Benedict Torvalds）在
+    Usenet 新组 `comp.os.minix` 上公开宣布了 Linux 内核的创建。Minix 是 Linux 所基于的当时存在的内核，两者的血缘都可以追溯到一种名为
+    UNIX 的旧操作系统。该帖子将托瓦尔斯的项目描述为一种爱好和小型规模的尝试，在计算世界中不会很有分量，而且可能不兼容所有的计算机。
+
+
+    这种谦逊且相对安静的开端是 Linux 成为行业巨头的先驱。内核在短时间内从一个爱好项目变成了可用产品，1993 年一个由 100 名志愿者组成的团队对项目做出了贡献。后来，Linux
+    与理查德·斯托曼（Richard Stallman）的 GNU 核心库融合，创建了完整的内核 1.0 版本。Linus Torvalds 最初本想将他的项目命名为
+    `Freax`，但他在赫尔辛基大学的一位同事偷偷将名字改成了 Linux，林纳斯后来同意了这一点。从 1.0 版本开始，Linux 变得作为操作系统可以使用。
+
+    '
+- fmt: '
+
+    Throughout 1995 the kernel was expanded and ported to a multitude of platforms,
+    increasing the outreach of Linus and his kernel. 1996 saw additional improvements
+    such as multiprocessing, which strengthened Linux’s use in corporate and university
+    environments. The early 2000s were marked by rapid improvement of Linux and a
+    huge increase in the number of distros available. Major companies such as Dell
+    and HP partnered with distributions and offered consumers a choice of operating
+    system upon purchase. Linux became an industry powerhouse in this time period
+    by offering an alternative OS for servers and clients that focused on performance
+    and stability rather than features and aesthetics. Today Linux is known for its
+    widespread use in smartphones, desktops, and servers, and it was only able to
+    reach this point through the dedicated work of Linus Torvalds and the numerous
+    volunteers that contributed to the project.
+
+
+    ## Free and Open Source Software
+
+
+    Linux is a shining example of open source and free software. Also called `FOSS`,
+    free and open source software are programs that exhibit certain characteristics
+    and philosophies of ethical development. Free software certainly means monetarily
+    free, but in this case it also means that the programs have “freedom”. “Free”
+    programs are applications that can be run, distributed, changed, and copied freely
+    and without consequence. Opposed to this are paid programs such as `Photoshop`;
+    there is a serious penalty for copying `Photoshop` and giving it to a friend.
+    Open source software refers to the transparency of a program’s code. If the source
+    code can be viewed then that program is open source. Source code that is hidden
+    and inaccessible is closed source. Open source code promotes truthfulness and
+    trust while closed source code is an analogy for hidden and shady practices. `FOSS`
+    combines the ideals of both free software and open source coding to supply applications
+    that are truly free and developed transparently. Even the text of this document,
+    “Liberation Serif”, is a free font commonly available in `FOSS` Linux applications.
+
+
+    Linux remains a particularly excellent example of `FOSS` because of the community-driven
+    nature of Linux development. Absolutely anybody at any time can view the source
+    code of Linux and propose changes. Multiple varied distributions of the OS exist
+    because any individual can use the Linux code as a core for their own operating
+    system. The philosophy has helped Linux throughout its development.
+
+
+    ## GNU
+
+
+    `GNU` is the name of both an operating system and its extensive collection of
+    `FOSS`. `GNU` funnily enough stands for “GNU is not UNIX”, explaining that `GNU`
+    is a UNIX-Like operating system containing no UNIX code. Computer guru Richard
+    Stallman created `GNU` in the mid 1980’s well before Linux was ever conceived
+    as a “free” alternative to UNIX. `GNU` remained a niche product until Linus Torvalds
+    fused core utilities of `GNU` into the Linux kernel. Honestly a large part of
+    Linux-based operating systems is actually `GNU` code, but Richard Stallman rarely
+    receives his credit for contribution. It is because of this that the kernel is
+    sometimes written as `GNU/Linux` instead of just `Linux`. Torvalds recognizes
+    the large part that `GNU` plays in his kernel but also believes that without a
+    kernel `GNU` is useless. The clashing personalities of the two industry giants
+    Torvalds and Stallman has led to a few heated arguments, but ultimately both men
+    created separate products that work well together to facilitate computer operating
+    systems. Whether the name is pronounced `Linux` of `GNU/Linux` is up to the user,
+    but each individual OS is usually called by the distribution name anyways!
+
+
+    ## Tux the Penguin
+
+
+    `Tux` is the mascot of the Linux kernel. His name is synonymous with `Linux` and
+    the two ideas are often seen together. Created by Larry Ewing in 1996, `Tux` was
+    created to win a place as Linux’s logo. The penguin did not win, however; rather
+    he was liked enough that he never really went away, so instead of a logo `Tux`
+    became the mascot. `FOSS` has a part in `Tux`, as he was drawn using the popular
+    `FOSS` image software `GIMP`.
+
+
+    Linus speaks of the origins of the penguin character as coming from a trip he
+    took to Australia that was uniquely marked by penguins. A joke obviously, Larry
+    Ewing spun the story into an inside joke that caught on very well.
+
+
+    `Tux` has had cameo appearances in other mediums as well, but the mascot can mostly
+    be seen destroying Windows computers or poking fun at closed source and proprietary
+    software.
+
+
+    ## Who uses Linux?
+
+
+    So after reading all about where Linux came from and where it is headed one might
+    wonder what the typical Linux user looks like. A wide variety of individuals enjoy
+    Linux-based operating systems, and each has their own reason for choosing it.
+    Whether you are a tinkerer that enjoys customization, a business owner wishing
+    to save on computer costs, or a system administrator looking for a new server
+    OS, Linux is a flexible and malleable operating system. The kernel itself is simple
+    and stable, and the huge amount of distributions guarantee there is a special
+    experience for every need. Read on to the next chapter to learn about distributions
+    and how they can suit your needs.
+
+
+    ## Choosing a Distribution of Linux
+
+
+    Distros are operating systems that take the Linux Kernel and provide preinstalled
+    applications and services for an all-inclusive computing environment. The vast
+    amount of distributions is mind-boggling, but each can provide a unique and custom
+    experience. Finding a distro that fits your needs might nudge you to install one
+    and try it on your computer. Here are the most notable.
+
+
+    `Ubuntu` is probably the most famous Linux-based OS. Based on `Debian`, `Ubuntu`
+    is described as “Linux for Humans”. The popularity of `Ubuntu` came about through
+    ease-of-use, as it is much more intuitive than `Debian`. The name `Ubuntu`, literally
+    meaning “humanness”, comes from a South African philosophy of the same name. `Ubuntu`
+    is developed by `Canonical`, a company in the United Kingdom owned by Mark Shuttleworth.
+    `Canonical` supports itself financially by selling technical support for `Ubuntu`
+    and technical support for other projects as well. `Ubuntu` remains free and open-source,
+    despite being developed by a proprietary company. Beginning from the first release
+    in 2004, `Ubuntu` is updated every six months. Every two years there is an `Ubuntu
+    LTS` (long term support), which is an update that offers long-term support by
+    `Canonical`. `Ubuntu` by default contains software such as `LibreOffice`, `Firefox`,
+    and `Transmission`. New software can be installed with `Ubuntu Software Center`,
+    a program specifically built for installing additional software on `Ubuntu`. This
+    is very advantageous for user new to Linux because it is so easy to use. Like
+    `Debian`, `Ubuntu` and its software are released using the FOSS-friendly GNU license,
+    so all of its default software is free and open-source. `Debian` and `Ubuntu`
+    also share the `deb` package format and thus can use the same software. Ultimately,
+    `Ubuntu` is the perfect OS for beginners to Linux, so starting off with `Ubuntu`
+    is a great choice.
+
+    '
+  raw: "Throughout 1995 the kernel was expanded and ported to a multitude of platforms,\
+    \ increasing the outreach of Linus and his kernel.  1996 saw additional improvements\
+    \ such as multiprocessing, which strengthened Linux’s use in corporate and university\
+    \ environments.    The early 2000s were marked by rapid improvement of Linux and\
+    \ a huge increase in the number of distros available.  Major companies such as\
+    \ Dell and HP partnered with distributions and offered consumers a choice of operating\
+    \ system upon purchase.  Linux became an industry powerhouse in this time period\
+    \ by offering an alternative OS for servers and clients that focused on performance\
+    \ and stability rather than features and aesthetics.  Today Linux is known for\
+    \ its widespread use in smartphones, desktops, and servers, and it was only able\
+    \ to reach this point through the dedicated work of Linus Torvalds and the numerous\
+    \ volunteers that contributed to the project.\n\nFree and Open Source Software\n\
+    \n              Linux is a shining example of open source and free software. \
+    \ Also called FOSS, free and open source software are programs that exhibit certain\
+    \ characteristics and philosophies of ethical development.  Free software certainly\
+    \ means monetarily free, but in this case it also means that the programs have\
+    \ “freedom”.  “Free” programs are applications that can be run, distributed, changed,\
+    \ and copied freely and without consequence.  Opposed to this are paid programs\
+    \ such as Photoshop; there is a serious penalty for copying Photoshop and giving\
+    \ it to a friend.  Open source software refers to the transparency of a program’s\
+    \ code.  If the source code can be viewed then that program is open source. Source\
+    \ code that is hidden and inaccessible is closed source.  Open source code promotes\
+    \ truthfulness and trust while closed source code is an analogy for hidden and\
+    \ shady practices.  FOSS combines the ideals of both free software and open source\
+    \ coding to supply applications that are truly free and developed transparently. \
+    \ Even the text of this document, “Liberation Serif”, is a free font commonly\
+    \ available in FOSS Linux applications.\n\nLinux remains a particularly excellent\
+    \ example of FOSS because of the community-driven nature of Linux development. \
+    \ Absolutely anybody at any time can view the source code of Linux and propose\
+    \ changes.  Multiple varied distributions of the OS exist because any individual\
+    \ can use the Linux code as a core for their own operating system.  Certainly\
+    \ the omnipresence of the free and open source philosophy has helped Linux throughout\
+    \ its development.\n\nGNU\n\n              GNU is the name of both an operating\
+    \ system and its extensive collection of FOSS.  GNU funnily enough stands for\
+    \ “GNU is not UNIX”, explaining that GNU is a UNIX-Like operating system containing\
+    \ no UNIX code.  Computer guru Richard Stallman created GNU in the mid 1980’s\
+    \ well before Linux was ever conceived as a “free” alternative to UNIX. GNU remained\
+    \ a niche product until Linus Torvalds fused core utilities of GNU into the Linux\
+    \ kernel.  Honestly a large part of Linux-based operating systems is actually\
+    \ GNU code, but Richard Stallman rarely receives his credit for contribution. \
+    \ It is because of this that the kernel is sometimes written as GNU/Linux instead\
+    \ of just Linux.  Torvalds recognizes the large part that GNU plays in his kernel\
+    \ but also believes that without a kernel GNU is useless.  The clashing personalities\
+    \ of the two industry giants Torvalds and Stallman has led to a few heated arguments,\
+    \ but ultimately both men created separate products that work well together to\
+    \ facilitate computer operating systems.  Whether the name is pronounced Linux\
+    \ of GNU/Linux is up to the user, but each individual OS is usually called by\
+    \ the distribution name anyways!\n\nTux the Penguin\n\n              Tux is the\
+    \ mascot of the Linux kernel.  His name is synonymous with Linux and the two ideas\
+    \ are often seen together.  Created by Larry Ewing in 1996, Tux was created to\
+    \ win a place as Linux’s logo.  The penguin did not win, however; rather he was\
+    \ liked enough that he never really went away, so instead of a logo Tux became\
+    \ the mascot. FOSS has a part in Tux, as he was drawn using the popular FOSS image\
+    \ software GIMP. \n\n              Linus speaks of the origins of the penguin\
+    \ character as coming from a trip he took to Australia that was uniquely marked\
+    \ by penguins.  A joke obviously, Larry Ewing spun the story into an inside joke\
+    \ that caught on very well.\n\nTux has had cameo appearances in other mediums\
+    \ as well, but the mascot can mostly be seen destroying Windows computers or poking\
+    \ fun at closed source and proprietary software. \n\nWho uses Linux?\n\n So after\
+    \ reading all about where Linux came from and where it is headed one might wonder\
+    \ what the typical Linux user looks like.  A wide variety of individuals enjoy\
+    \ Linux-based operating systems, and each has their own reason for choosing it. \
+    \ Whether you are a tinkerer that enjoys customization, a business owner wishing\
+    \ to save on computer costs, or a system administrator looking for a new server\
+    \ OS, Linux is a flexible and malleable operating system.  The kernel itself is\
+    \ simple and stable, and the huge amount of distributions guarantee there is a\
+    \ special experience for every need.  Read on to the next chapter to learn about\
+    \ distributions and how they can suit your needs.\n\nChoosing a Distribution of\
+    \ Linux\n\nDistros are operating systems that take the Linux Kernel and provide\
+    \ preinstalled applications and services for an all-inclusive computing environment. \
+    \ The vast amount of distributions is mind-boggling, but each can provide a unique\
+    \ and custom experience for the user.  Finding a distro that fits your needs might\
+    \ nudge you to install one yourself and try it out on your computer. Here are\
+    \ the most notable.\n\n              Ubuntu is probably the most famous Linux-based\
+    \ OS.  Based on Debian, Ubuntu is described as “Linux for Humans”. The popularity\
+    \ of Ubuntu came about through ease-of-use, as it is much more intuitive than\
+    \ Debian.  The name Ubuntu, literally meaning “humanness”, comes from a South\
+    \ African philosophy of the same name.  Ubuntu is developed by Canonical Ltd,\
+    \ a company in the United Kingdom owned by Mark Shuttleworth.  Canonical supports\
+    \ itself financially by selling technical support for Ubuntu and technical support\
+    \ for other projects as well.  Ubuntu remains free and open-source, despite being\
+    \ developed by a proprietary company.  Beginning from the first release in 2004,\
+    \ Ubuntu is updated every six months. Every two years there is an Ubuntu LTS (long\
+    \ term support), which is an update that offers long-term support by Canonical. \
+    \ Ubuntu by default contains software such as LibreOffice, Firefox, and Transmission. \
+    \ New software can be installed with Ubuntu Software Center, a program specifically\
+    \ built for installing additional software on Ubuntu.  This is very advantageous\
+    \ for user new to Linux, because it is so easy to use.  Like Debian, Ubuntu and\
+    \ its software are released using the FOSS-friendly GNU license, so all of its\
+    \ default software is free and open-source.  Debian and Ubuntu also share the\
+    \ deb package format and thus can use the same software.  Ultimately, Ubuntu is\
+    \ the perfect OS for beginners to Linux, so starting off with Ubuntu is a great\
+    \ choice. "
+  toc: []
+  trans: '
+
+    在 1995 年全年里，内核得到了扩展并移植到许多平台，扩大了 Linus 及其内核的影响力。1996 年引入了额外的改进，例如多处理器支持，这加强了 Linux
+    在企业和大学环境中的应用。21 世纪初的标志是 Linux 的快速改进以及可用发行版数量的剧增。戴尔（Dell）和惠普（HP）等大公司与发行版合作，为消费者在购买电脑时提供操作系统的选择。在此期间，Linux
+    通过为服务器和客户端提供一种替代操作系统，并关注性能和稳定性而非功能和美学，成为了一项行业支柱。如今，Linux 以其在智能手机、桌面电脑和服务器中的广泛应用而闻名，而这一点的实现得益于
+    Linus Torvalds 以及为项目做出贡献的无数志愿者的投入工作。
+
+
+    ## 自由开源软件
+
+
+    Linux 是开源和自由软件的优秀典范。它也被称为 `FOSS`，自由开源软件是指表现出某些伦理开发特征和哲学的程序。自由软件确实意味着金钱上的免费，在这种情况下，它也意味着程序拥有“自由”。“自由”程序是指可以自由运行、分发、更改和复制且不产生后果的应用。与之相反的是如
+    `Photoshop` 类的付费程序；复制 `Photoshop` 并送给朋友会有严重的后果。开源软件指的是程序代码的透明度。如果源代码可以查看，那么该程序就是开源的。隐藏且不可访问的源代码是闭源的。开源代码促进诚实和信任，而闭源代码则是隐藏和阴暗做法的类比。`FOSS`
+    结合了自由软件和开源编码的理念，以提供真正自由且透明化开发的应用程序。即使是本文档的文本“Liberation Serif”，也是 `FOSS` Linux
+    应用中常用的免费字体。
+
+
+    由于 Linux 开发的社区驱动的本质，Linux 仍然是一个特别出色的 `FOSS` 范例。任何时候的任何人都可以查看 Linux 的源代码并提出更改。存在多种不同的操作系统发行版，是因为任何个人都可以将
+    Linux 代码作为他们自己操作系统的核心。这种哲学在其整个开发过程中都提供了帮助。
+
+
+    ## GNU
+
+
+    `GNU` 既是一个操作系统的名称，也是其大量 `FOSS` 集合的名称。有趣的是，“GNU” 的意思是“GNU 不是 UNIX”，这解释了 `GNU` 是一个不包含
+    UNIX 代码的类 UNIX 操作系统。计算机大师 Richard Stallman 在 20 世纪 80 年代中期创建了 `GNU`，远在 Linux 被构想为
+    UNIX 的“自由”替代方案之前。在 Linus Torvalds 将 `GNU` 的核心工具融合到 Linux 内核之前，`GNU` 一直是一个小众产品。老地说，基于
+    Linux 的操作系统大部分实际上是 `GNU` 代码，但 Richard Stallman 很少获得对其贡献的认可。正因如此，内核有时被写成 `GNU/Linux`
+    而不仅仅是 `Linux`。Torvalds 承认 `GNU` 在他的内核中扮演了巨大角色，但也认为如果没有内核，`GNU` 将毫无用。这两位行业巨头 Torvalds
+    和 Stallman 冲突的性格导致了几次激烈的争论，但最终他们都创建了相互协作运行的产品，以促进计算机操作系统的发展。读作 `Linux` 还是 `GNU/Linux`
+    取决于用户，但每个操作系统通常按发行版的名称命名！
+
+
+    ## 企鹅 Tux
+
+
+    `Tux` 是 Linux 内核的吉祥物。他的名字与 `Linux` 同义，这两个概念经常一起出现。`Tux` 由 Larry Ewing 在 1996 年创建，旨在赢得
+    Linux 标志的位置。然而，这只企鹅并没有获胜；相反，它受欢迎，以至于从未真正离开过，因此 `Tux` 从标志变成了吉祥物。`FOSS` 在 `Tux`
+    中也占有一席，因为他是使用流行的 `FOSS` 图像软件 `GIMP` 绘制的。
+
+
+    Linus 提到企鹅角色的起源于他去澳大利亚的一次旅行，那次旅行以企鹅为独特标记。这显然是一个笑话，Larry Ewing 将这个故事编成了一个广受欢迎的内部梗。
+
+
+    `Tux` 也曾在其他媒介中客串过，但吉祥物大部分时候被看到破坏 Windows 电脑或嘲讽闭源和专有软件。
+
+
+    ## 谁在使用 Linux？
+
+
+    因此，在读了关于 Linux 从何而来以及它将走向何方之后，人们可能会好奇典型的 Linux 用户是什么样的。各种类型的人都喜欢基于 Linux 的操作系统，每个人都有选择它的自己的理由。无论你是一个喜欢自定义的极客、一个希望节省计算机成本的板主，还是一个寻找新服务器操作系统的系统管理员，Linux
+    都是一个灵活且易塑的操作系统。内核本身简单且稳定，海量的发行版保证了每种需求都有特殊的体验。请阅读下一章，了解发行版以及它们如何满足你的需求。
+
+
+    ## 选择 Linux 发行版
+
+
+    发行版是采用 Linux 内核并提供预装应用程序和服务的以构建全方位计算环境的操作系统。发行版的数量之大令人震惊，但每个发行版都能提供独特且定制的体验。找到一个适合你需求的发行版可能会促使你安装并在你的电脑上尝试。以下是最著名的。
+
+
+    `Ubuntu` 可能是最著名的基于 Linux 的操作系统。基于 `Debian`，`Ubuntu` 被描述为“面向人类的 Linux”。`Ubuntu`
+    的流行源于易用性，因为它比 `Debian` 直观得多。`Ubuntu` 这个词字面意思是“人性”，源于一种同名的南非哲学。`Ubuntu` 由 `Canonical`
+    开发，这是一家由 Mark Shuttleworth 拥有的英国公司。Canonical 通过通过销售 `Ubuntu` 以及其他项目的技术支持来维持财务状况。尽管由一家专有公司开发，`Ubuntu`
+    仍然是自由且开源的。从 2004 年首次发布开始，`Ubuntu` 每六个月更新一次。每两年有一个 `Ubuntu LTS`（长期支持版），这是由 `Canonical`
+    提供的长期支持的更新。`Ubuntu` 默认包含 `LibreOffice`、`Firefox` 和 `Transmission` 等软件。新软件可以通过
+    `Ubuntu Software Center` 安装，这是一个专门为在 `Ubuntu` 上安装额外软件而设计的程序。这对于 Linux 新手非常有利，因为它非常简单。像
+    `Debian` 一样，`Ubuntu` 及其软件使用符合 FOSS 的 GNU 许可证发布，因此它的默认软件都是自由开源的。`Debian` 和 `Ubuntu`
+    还共享 `deb` 软件包格式，因此可以使用相同的软件。最终，`Ubuntu` 是 Linux 初学者的完美操作系统，因此从 `Ubuntu` 开始是一个明智的选择。
+
+
+    '
+- fmt: '
+
+    There are various Ubuntu “flavors” which retain the core software and functionality
+    behind Ubuntu but add a unique specialization that makes them useful. For example,
+    Lubuntu is “lightweight Ubuntu”, an OS that keeps the beginner-friendly software
+    of Ubuntu but strips the extra effects so it can run on slower hardware. Xubuntu
+    is another “lightweight Ubuntu”, but Xu is more focused on useful functionality
+    rather than having speed as the only priority. Ubuntu Studio is a flavor for content
+    creators, as the OS comes with audio and visual editing tools preinstalled. Ubuntu
+    aims to be an Ubuntu variant designed for educational purposes. Kubuntu takes
+    the popular KDE interface to create an experience that is friendly and highly
+    customizable. Mythbuntu is built for media streaming and live television watching.
+    There are numerous Ubuntu variants available on the internet, and they are great
+    for Linux newbies to experiment with as their “2nd Linux OS” because they combine
+    Linux customization and experimentation with the relative “safety” and “familiarity”
+    of Ubuntu.
+
+
+    Slackware is a Linux distro created in 1993 by Patrick Vokerding based off of
+    the Softlanding Linux System. Slackware’s goal is to be designed to be stable,
+    simplistic, and the most “UNIX-like” Linux distro. Slackware has no graphical
+    installation method and no automatic dependency of software packages. It also
+    does not come with a graphical user interface and boots to a text-only command
+    line interface instead - Slackware is most suited for experienced Linux users
+    because of this. Slackware was started as a private side project with no serious
+    commitment, as the name implies. After the operating system became popular, however,
+    the name was still kept. The OS is a good choice for Linux veterans and those
+    that want to experience the roots of Linux.
+
+
+    Fedora is a community developed operating system sponsored by Red Hat enterprises
+    and based on the Linux kernel. Linux has previously developed and maintained the
+    Fedora Project as well. Linus Torvalds regularly uses Fedora, mostly because of
+    the “bleeding edge” nature of it and how well it can developed upon. The goal
+    of the Fedora Project is to make Fedora the most cutting edge operating system,
+    so don’t try installing it unless you wish to develop for Linux or like a challenge.
+
+
+    Debian is a distro composed entirely of FOSS, mostly under the GNU General Public
+    License. 1993 saw the first release of Debian by its creator Ian Murdock. Debian
+    is maintained and packaged by the volunteer Internet group, the Debian Project.
+    It was developed in the same spirit of the GNU Project and gained the support
+    of the Free Software Foundation from November of 1994 to November of 1995. After
+    the end of the Free Software Foundations sponsorship, the Debian Project created
+    the non-profit organization called “Software in the Public Interest” to help other
+    organizations distribute and create free and open-source hardware and software.
+    Debian’s claim to fame is stability, as it has been around for quite some time
+    and can offer a computing experience mostly free of bugs and crashing. The OS
+    has been used as a base and starting point for other operating systems, such as
+    Ubuntu and Knoppix. There are three versions of Debian: Testing, Unstable, and
+    Stable. Debian Testing and Debian Unstable are rolling release, meaning they are
+    continuously updated. New packages are loaded to Debian Unstable, and are tested
+    in Debian Testing. When these software packages are stable enough, the Debian
+    Testing becomes the New Debian Stable. The Debian software repositories contain
+    over 50,000 software packages. The official repositories contain only free and
+    open-source software, but non-free software can be downloaded as well. Richard
+    Stallman, founder of the Free Software Foundation criticized the Debian Project
+    for also using a non-free repository, but in 2004 the Debian Project decided to
+    continue hosting the non-free repository by a majority vote. The free and open-source
+    spirit of the Debian Project has posed a challenge for multimedia support, because
+    of the proprietary nature of video and audio codecs. Overall, Debian offers the
+    stereotypical Linux experience – stable, fast, FOSS, and reliable. Consider trying
+    out Debian if you are interested.
+
+
+    A very popular distro with a cult following is called Gentoo. Unlike a binary
+    software package distribution system, Gentoo’s software must be compiled specifically
+    for the user’s device. Compiling software is a long and difficult process, but
+    compiling specific to the device gives Gentoo unmatched speed and stability for
+    advanced users. The significant increase in speed in the OS is a reference to
+    the Gentoo penguin- the fastest known swimming penguin. Gentoo Linux is appealing
+    to Linux users who want full and entire control of the software they run with
+    a customized experience, so reflect on this when choosing which OS you want to
+    try out. The large difficulty curve in using Gentoo often wards off beginners
+    and leaves the cleverest Linux users.
+
+
+    Android is a mobile OS developed by Google for portable devices. The popular cell-phone
+    operating system was initially developed by an independent team but it was bought
+    by Google in 2005. Android has a huge market share on mobile phones, as most have
+    either an Android or an iPhone in their pocket right now. Android has great ARM
+    (a type of processor) support and can run millions of apps from “Play Store”.
+    While you might not typically install Android on a desktop machine, it has plenty
+    of uses on smaller computers and older devices with limited resources.
+
+
+    Tiny Core Linux is a minimal Linux kernel based operating system. It has limited
+    (or virtually no) preinstalled programs, but it can serve as an installation of
+    Linux for the oldest and slowest computers. The entire operating system is between
+    eleven and sixteen megabytes, so installing it on a thumb drive or SD card is
+    very possible. This OS is best installed by intermediate Linux users that wish
+    to create the most lightweight operating system possible from scratch.
+
+
+    Chrome OS is an operating system developed by Google, and- like Android-, it is
+    based on the Linux kernel. The project was announced by Google in July of the
+    year 2009. It is designed for both user data and applications to run in “the cloud”
+    rather than from the computer’s RAM. The very first Chrome OS laptop, called Chromebook,
+    was released in May of the year 2011. Chrome OS is designed to be connected to
+    the internet for running only simple applications and web browsing. Although features
+    such as an integrated media player and integrated file manager exist, most of
+    the applications are actually just websites owned by Google. This allows computers
+    with lower specifications to be made very cheaply for Chrome OS, making it suitable
+    for low-spec devices. Chrome OS is popular among college students, the non-tech
+    savvy buyer, and budget computers, and it is a very popular operating system.
+    You may not actually be able to install Chrome OS on a computer, but you can certainly
+    install the open-source equivalent – Chromium OS. Chromium OS is recommended for
+    low-spec laptops whose only purpose is web browsing and other common internet
+    tasks.
+
+    '
+  raw: '              There are various Ubuntu “flavors” which retain the core software
+    and functionality behind Ubuntu but add a unique specialization that makes them
+    useful.  For example, Lubuntu is “lightweight Ubuntu”, an OS that keeps the beginner-friendly
+    software of Ubuntu but strips the extra effects so it can run on slower hardware. 
+    Xubuntu is another “lightweight Ubuntu”, but Xu is more focused on useful functionality
+    rather than having speed as the only priority.  Ubuntu Studio is a flavor for
+    content creators, as the OS comes with audio and visual editing tools preinstalled. 
+    Ubuntu aims to be an Ubuntu variant designed for educational purposes.  Kubuntu
+    takes the popular KDE interface to create an experience that is friendly and highly
+    customizable.  Mythbuntu is built for media streaming and live television watching. 
+    There are numerous Ubuntu variants available on the internet, and they are great
+    for Linux newbies to experiment with as their “2nd Linux OS” because they combine
+    Linux customization and experimentation with the relative “safety” and “familiarity”
+    of Ubuntu.
+
+
+                  Slackware is a Linux distro created in 1993 by Patrick Vokerding
+    based off of the Softlanding Linux System.  Slackware’s goal is to be designed
+    to be stable, simplistic, and the most “UNIX-like” Linux distro.  Slackware has
+    no graphical installation method and no automatic dependency of software packages. 
+    It also does not come with a graphical user interface and boots to a text-only
+    command line interface instead - Slackware is most suited for experienced Linux
+    users because of this.  Slackware was started as a private side project with no
+    serious commitment, as the name implies.  After the operating system became popular,
+    however, the name was still kept.  The OS is a good choice for Linux veterans
+    and those that want to experience the roots of Linux. 
+
+
+                  Fedora is a community developed operating system sponsored by Red
+    Hat enterprises and based on the Linux kernel.  Linux has previously developed
+    and maintained the Fedora Project as well.  Linus Torvalds regularly uses Fedora,
+    mostly because of the “bleeding edge” nature of it and how well it can developed
+    upon.  The goal of the Fedora Project is to make Fedora the most cutting edge
+    operating system, so don’t try installing it unless you wish to develop for Linux
+    or like a challenge.
+
+
+    Debian is a distro composed entirely of FOSS, mostly under the GNU General Public
+    License.  1993 saw the first release of Debian by its creator Ian Murdock.  Debian
+    is maintained and packaged by the volunteer Internet group, the Debian Project. 
+    It was developed in the same spirit of the GNU Project and gained the support
+    of the Free Software Foundation from November of 1994 to November of 1995.  After
+    the end of the Free Software Foundations sponsorship, the Debian Project created
+    the non-profit organization called “Software in the Public Interest” to help other
+    organizations distribute and create free and open-source hardware and software. 
+    Debian’s claim to fame is stability, as it has been around for quite some time
+    and can offer a computing experience mostly free of bugs and crashing.  The OS
+    has been used as a base and starting point for other operating systems, such as
+    Ubuntu and Knoppix.  There are three versions of Debian: Testing, Unstable, and
+    Stable.  Debian Testing and Debian Unstable are rolling release, meaning they
+    are continuously updated.  New packages are loaded to Debian Unstable, and are
+    tested in Debian Testing.  When these software packages are stable enough, the
+    Debian Testing becomes the New Debian Stable.  The Debian software repositories
+    contain over 50,000 software packages.  The official repositories contain only
+    free and open-source software, but non-free software can be downloaded as well. 
+    Richard Stallman, founder of the Free Software Foundation criticized the Debian
+    Project for also using a non-free repository, but in 2004 the Debian Project decided
+    to continue hosting the non-free repository by a majority vote.  The free and
+    open-source spirit of the Debian Project has posed a challenge for multimedia
+    support, because of the proprietary nature of video and audio codecs.  Overall,
+    Debian offers the stereotypical Linux experience – stable, fast, FOSS, and reliable. 
+    Consider trying out Debian if you are interested.
+
+
+                  A very popular distro with a cult following is called Gentoo.  Unlike
+    a binary software package distribution system, Gentoo’s software must be compiled
+    specifically for the user’s device. Compiling software is a long and difficult
+    process, but compiling specific to the device gives Gentoo unmatched speed and
+    stability for advanced users. The significant increase in speed in the OS is a
+    reference to the Gentoo penguin- the fastest known swimming penguin.  Gentoo Linux
+    is appealing to Linux users who want full and entire control of the software they
+    run with a customized experience, so reflect on this when choosing which OS you
+    want to try out.  The large difficulty curve in using Gentoo often wards off beginners
+    and leaves the cleverest Linux users.
+
+
+                  Android is a mobile OS developed by Google for portable devices. 
+    The popular cell-phone operating system was initially developed by an independent
+    team but it was bought by Google in 2005.    Android has a huge market share on
+    mobile phones, as most have either an Android or an iPhone in their pocket right
+    now.  Android has great ARM (a type of processor) support and can run millions
+    of “apps” from Google’s “Play Store”.  While you might not typically install Android
+    on a desktop machine, it has plenty of uses on smaller computers and older devices
+    with limited resources. 
+
+
+                  Tiny Core Linux is a very minimal Linux kernel based operating system. 
+    It has limited (or virtually no) preinstalled programs, but it can serve as an
+    installation of Linux for the oldest and slowest computers.  The entire operating
+    system is between eleven and sixteen megabytes, so installing it on a thumb drive
+    or SD card is very possible.  This OS is best installed by intermediate Linux
+    users that wish to create the most lightweight operating system possible from
+    scratch. 
+
+
+                  Chrome OS is an operating system developed by Google, and- like
+    Android- , it is based on the Linux kernel.  The project was announced by Google
+    in July of the year 2009.  It is designed for both user data and applications
+    to run in “the cloud” rather than from the computer’s RAM.  The very first Chrome
+    OS laptop, called Chromebook, was released in May of the year 2011.  Chrome OS
+    is designed to be connected to the internet for running only simple applications
+    and web browsing.  Although features such as an integrated media player and integrated
+    file manager exist, most of the applications are actually just websites owned
+    by Google. This allows computers with lower specifications to be made very cheaply
+    for Chrome OS, making it suitable for low-spec devices.  Chrome OS is popular
+    among college students, the non-tech savvy buyer, and budget computers, and it
+    is a very popular operating system.  You may not actually be able to install Chrome
+    OS on a computer, but you can certainly install the open-source equivalent – Chromium
+    OS.  Chromium is recommended for low-spec laptops whose only purpose is web browsing
+    and other common internet tasks. '
+  toc: []
+  trans: '
+
+    有多种 Ubuntu “变体”，它们保留了 Ubuntu 的核心软件和功能，但添加了独特的特化功能，使其变得非常实用。例如，Lubuntu 是“轻量级 Ubuntu”，它保留了
+    Ubuntu 对初友的软件，但去除了额外的视觉效果，以便在较慢的硬件上运行。Xubuntu 是另一个“轻量级 Ubuntu”，但 X 更关注实用功能，而不是将速度作为唯一首要任务。Ubuntu
+    Studio 是为内容创作者设计的变体，因为该系统预装了音频和视频编辑工具。Ubuntu 旨在成为一种为教育设计的变变体。Kubuntu 采用了流行的 KDE
+    界面，创造出友好且高度可定制的体验。Mythbuntu 是为媒体流和电视直播构建的。互联网上有大量的 Ubuntu 变体，它们对于 Linux 新手来说是尝试“第二
+    Linux 系统”极极选择，因为它们结合了 Linux 的定制与实验性以及 Ubuntu 的相对“安全”和“熟悉”。
+
+
+    Slackware 是由 Patrick Vokerding 在 1993 年基于 Softlanding Linux System 创建的 Linux 发行版。Slackware
+    的目标是设计成稳定、简单且最“类 Unix”的 Linux 发行版。Slackware 没有图形化安装方法，也没有软件包的自动依赖关系。它不带有图形化用户界面，而是启动到纯文本的命令行界面——正因如此，Slackware
+    最适合经验丰富的 Linux 用户。正如其名称暗示的那样，Slackware 最初作为一个没有严肃承诺的私人侧项目启动的。然而，在该操作系统流行后，该名称被保留了下来。该操作系统是
+    Linux 老兵以及那些想要体验 Linux 根源的人的好选择。
+
+
+    Fedora 是一个由红帽企业赞助、基于 Linux 内核的社区开发操作系统。Linux 社区此前还开发并维护过 Fedora 项目。Linus Torvalds
+    经常使用 Fedora，主要是因为它的“尖端”特性以及它非常良好的可开发性。Fedora 项目的目标是让 Fedora 成为最尖端的操作系统，所以除非你想要为
+    Linux 开发或喜欢接受挑战，否则不要尝试安装它。
+
+
+    Debian 是一个完全由自由开源软件（FOSS）组成的发行版，大部分遵循 GNU 通用公共许可证。1993 年，其创始人 Ian Murdock 发布了第一个版本的
+    Debian。Debian 由志愿者网络团体 Debian 项目负责维护和分发。它是以与 GNU 项目相同的精神开发的，并在 1994 年 11 月至 1995
+    年 11 月期间获得了自由软件基金的支持。在自由软件基金会赞助结束后，Debian 项目创建了名为“公共利益软件”的非营利组织，帮助其他机构分发和创建自由开源硬件软件。Debian
+    的闻名在于稳定性，因为它已经存在了很长时间，可以提供几乎没有错误和崩溃的计算体验。该操作系统曾作为其他操作系统（如 Ubuntu 和 Knoppix）的基础和起点。Debian
+    有三个版本：Testing（测试版）、Unstable（不稳定）和 Stable（稳定）。Debian Testing 和 Debian Unstable
+    是滚动更新，意味着它们持续更新。新软件包被加载到 Debian Unstable，并在 Debian Testing 中进行测试。当这些软件包足够稳定时，Debian
+    Testing 就会变成新的 Debian Stable。Debian 软件仓库包含超过 50,000 个软件包。官方仓库仅包含自由和开源软件，也可以下载非自由软件。自由软件基金会创始人
+    Richard Stallman 曾批评 Debian 项目也使用非自由仓库，但在 2004 年，Debian 项目通过多数投票决定继续托管非自由仓库。由于视频和音频编码器的专有性质，Debian
+    项目的自由开源精神为多媒体支持带来了挑战。总的来说，Debian 提供了典型的 Linux 体验——稳定、快速、开源且可靠。如果你感兴趣，可以考虑尝试 Debian。
+
+
+    一个拥有忠实支持者的非常流行的发行版被称为 Gentoo。与二进制软件包发行系统不同，Gentoo 的软件必须针对用户的设备进行特定的编译。编译软件是一个漫长而困难的过程，但针对设备的特定编译为高级用户带来了
+    Gentoo 无与伦比的速度和稳定性。操作系统速度的显著提升是指 Gentoo 企鹅——已知游泳最快的企鹅。Gentoo Linux 对那些想要完全控制所运行软件并获得定制体验的
+    Linux 用户非常有力，因此在选择想要尝试的操作系统时请考虑这一点。使用 Gentoo 陡峭的学习曲线往往会阻挡学者，留下了最聪明的 Linux 用户。
+
+
+    Android 是 Google 为便携设备开发的移动操作系统。这个流行的手机操作系统最初由一个独立团队开发，但在 2005 年被 Google 收购。Android
+    在手机市场上拥有巨大的市场份额，因为现在大多数人口袋里要么有 Android 要有 iPhone。Android 具有极好的 ARM（一种处理器）支持，并可以运行来自“Play
+    Store”的数百万应用程序。虽然你可能不会在桌面电脑上安装 Android，但它在资源有限的小型计算机和旧设备上有许多用途。
+
+
+    Tiny Core Linux 是一个基于极简 Linux 内核的操作系统。它有有限（或几乎没有）预装程序，但可以作为最旧、最慢电脑的 Linux 安装系统。整个操作系统在十一到十六兆字节之间，因此在优
+    盘或 SD 卡上安装它是完全可能的。该操作系统最适合希望从零开始创建一个轻量化系统的中级 Linux 用户。
+
+
+    Chrome OS 是 Google 开发的操作系统，与 Android 类似，基于 Linux 内核。该项目由 Google 于 2009 年 7 月宣布。它旨在让用户数据和应用程序在“云端”而不是计算机内存中运行。第一台
+    Chrome OS 笔记本电脑被称为 Chromebook，于 2011 年 5 月发布。Chrome OS 设计用于连接网络以仅运行简单的应用程序和网页浏览。尽管存在集成媒体播放器和集成文件管理器等功能，但大多数应用程序实际上只是
+    Google 的网站。这使得低配置计算机可以非常廉价地制造用于 Chrome OS，使其适用于低规格设备。Chrome OS 在大学生、非技术型买家和预算计算机之间非常流行，是一个非常流行的操作系统。你可能实际上无法在计算机上安装
+    Chrome OS，但你完全可以安装开源等效物 – Chromium OS。Chromium OS 推荐用于仅用于网页浏览和其他常见互联网任务的低配置笔记本电脑。
+
+    '
+- fmt: '
+
+    Arch Linux is a Linux kernel based computer operating system based on the `IA-32`
+    and `x86/64` architectures. It is composed mainly of free and open source software,
+    and Arch is mostly known for the huge amount of customization that it can provide.
+    Arch Linux is supported by community involvement, which makes it relatively easy
+    to obtain support for. Arch Linux is designed with the KISS principle meaning
+    `Keep It Simple Stupid`. While the code design is simple in nature, actually using
+    the OS is fairly difficult. Arch comes with no graphical user interface, or any
+    specific applications at all.  The user is expected to “build” the entire system
+    piece by piece to their own liking. Through learning what to install and how,
+    the user eventually gains a deep understanding of distributions and Linux in general,
+    which is why Arch is recommended for users wishing to learn more about Linux.
+    While it is not recommended as a first distribution, every person interested in
+    Linux should build their own unique version of Arch at some point to further their
+    knowledge.
+
+
+    CrunchBang (#!) Linux is a Linux kernel based computer operating system based
+    off of Debian. The developer Phillip Newborough designed CrunchBang Linux to use
+    far less system resources than Debian, making it much more lightweight and flexible.
+    CrunchBang Linux has its own repository of software, but got the majority of its
+    packages from the Debian repositories. In 2013 Jim Lynch (a popular reviewer)
+    described CrunchBang as being functional, efficient, and capable of running effectively
+    on both older hardware and newer machines. It is true that CrunchBang avoids a
+    bogged-down experience by giving preference to usibility and speed, which makes
+    it an attractive distro choice for the intermediate Linux user wishing for a no-nonsense
+    sophistication.
+
+
+    Damn Small Linux (DSL) is a Linux kernel based computer operating system developed
+    with an extreme minimalism design philosophy in mind. Damn Small Linux is free
+    and open source, available under the `GNU GPL`. DSL was originally conceived and
+    maintained by the developer John Andrews as a project to determine just how much
+    could fit onto 50mb. DSL is actually very usable straight out of the box, and
+    it is best suited to users that need quick access to Linux tools. It is because
+    of this that DSL is best kept on a USB drive that can be booted form any computer.
+
+
+    Red Star OS is an interesting case in the Linux world. It is a North Korean operating
+    system used by residents of the communist country. Development on Red Star began
+    in the year 1998 at the Korea Computer Center. Before Red Star, computers in North
+    Korea typically ran Ubuntu. Since North Korea wishes to maintain control over
+    internet resources and citizen’s access, only a tiny amount of state government
+    officials and important tourists are allowed access to the Internet. These people
+    would be using Red Star OS, and the government’s control of the OS gives them
+    extra control over the citizens. The OS is actually closed-source and proprietary,
+    which goes against the most basic Linux and FOSS philosophies. Linux enthusiasts
+    like to study and marvel at Red Star due to its extremely niche user base and
+    function. Obviously it is not recommended to be installed for almost anyone reading
+    this book, but it exists as a novel concept and interesting read.
+
+
+    ## Installing Linux
+
+
+    After reading so much about Linux distributions, you must be very ready to give
+    one a try, and you can install a Linux OS though various methods. Generally, the
+    process of trying out a Linux distro involves obtaining an `.iso` copy of the
+    OS and burning it onto a removable media (CD, USB, etc…) and finally making your
+    PC boot from that media. In our extended example for this book we will download
+    and install Ubuntu. Certainly you can substitute any other Linux distro in our
+    examples, but the specifics here will still refer to Canonical’s easy-to-use beginner
+    OS.
+
+
+    Linux-based operating systems can be installed and booted either from a USB flash
+    drive, a CD or DVD, or even a floppy disk. The first step to installing Linux
+    involves obtaining a writable media that can hold your OS. A 4GB flash drive is
+    usually sufficient (and that is what we will continue the demonstration with),
+    but you may need an 8GB one for larger images.
+
+
+    Secondly, we need to obtain a copy of the OS. Through the website `http://www.ubuntu.com/`
+    you can navigate to the “Desktop” page and then “Download Ubuntu”. By default,
+    Ubuntu’s latest version will be displayed on this page with a few system requirements.
+    Take this time to make sure that your computer can cope. Also, printing out the
+    next few pages of this guide is a decent idea as well, because once you start
+    Linux you may not have a chance to pull this book back up. Click the “Download”
+    button to proceed. Ubuntu is monetarily free; to avoid donating to Canonical enter
+    `$0` in all of the boxes and click the “Download” button at the bottom. The image
+    will begin downloading.
+
+
+    Third, we will need an application with which to “write” the OS to the media.
+    The most popular tool for writing images is `UNetbootin` (`https://unetbootin.github.io/`),
+    but the free tool `Rufus` (`https://rufus.akeo.ie/`) is much easier to use. Snag
+    a copy of `Rufus` and wait for all downloads to finish.
+
+
+    Fourth, insert the removable media into a USB port and start `Rufus`. Your USB
+    drive should be listed in the top drop-down box. By writing the Ubuntu image onto
+    the drive you will be erasing all of its contents, so back it up now if you need
+    too. The default `Rufus` settings will suffice for our needs, but we will need
+    to make sure that “Create a bootable disk using” is checked, and that the dropdown
+    says “ISO Image”. Change that and click the disc button beside it to open up a
+    file explorer. Navigate to our downloaded Ubuntu image and double click it. We
+    can now press the “Start” button to begin writing Ubuntu onto the drive. Do so.
+    After the process is complete shut down the computer.
+
+
+    Fifth, start up the PC and enter the BIOS before Windows loads. The key to do
+    so varies as per motherboard manufacturer, but it is usually one of the `F` keys
+    at the very top of the keyboard. Every motherboard manufacturer also has their
+    own BIOS layout so the explanation here is general and vague. Find a “boot” tab
+    or something similar where you can view the “boot order” of your PC. The boot
+    order tells the computer where to look for operating system images, and typically
+    BIOS will look in the internal hard drive first. Change the order to place USB
+    or external hard drives first. Save and quit the BIOS.
+
+
+    Starting up the computer one last time will start our last step BIOS will search
+    in the external USB first and find the Ubuntu image. If Windows loads instead
+    of Ubuntu than repeat Step 5, but otherwise you will boot into your first Linux
+    system. Congratulations!
+
+
+    The OS that appears is fully intractable and usable, but there still is a slight
+    problem- it is still running from the USB drive and has thusly not installed itself.
+    Ubuntu variants contain an application on the desktop that you can double click
+    that will start the install process for you. If you are done testing Linux and
+    are ready to erase Windows, then click this option. Be warned that if you choose
+    certain options you will erase your entire computer, so read the directions carefully.
+    You can choose to “dual boot” with your current OS, or you can choose to completely
+    wipe the computer and start from scratch. It is recommended that you dual boot
+    at first, just in case you need to get back to Windows for a certain application
+    or feature. As a failsafe, though, definitely fully backup your computer before
+    attempting any installation.
+
+    '
+  raw: '              Arch Linux is a Linux kernel based computer operating system
+    based on the IA-32 and x86/64 architectures.  It is composed mainly of free and
+    open source software, and Arch is mostly known for the huge amount of customization
+    that it can provide.  Arch Linux is supported by community involvement, which
+    makes it relatively easy to obtain support for.  Arch Linux is designed with the
+    KISS principle meaning Keep It Simple Stupid.  While the code design is simple
+    in nature, actually using the OS is fairly difficult.  Arch comes with no graphical
+    user interface, or any specific applications at all.  The user is expected to
+    “build” the entire system piece by piece to their own liking.  Through learning
+    what to install and how, the user eventually gains a deep understanding of distributions
+    and Linux in general, which is why Arch is recommended for users wishing to learn
+    more about Linux.  While it is not recommended as a first distribution, every
+    person interested in Linux should build their own unique version of Arch at some
+    point to further their knowledge.
+
+
+                  CrunchBang (#!) Linux is a Linux kernel based computer operating
+    system based off of Debian.  The developer Phillip Newborough designed CrunchBang
+    Linux to use far less system resources than Debian, making it much more lightweight
+    and flexible.  CrunchBang Linux has its own repository of software, but got the
+    majority of its packages from the Debian repositories.  In 2013 Jim Lynch (a popular
+    reviewer) described CrunchBang as being functional, efficient, and capable of
+    running effectively on both older hardware and newer machines.  It is true that
+    CrunchBang avoids a bogged-down experience by giving preference to usibility and
+    speed, which makes it an attractive distro choice for the intermediate Linux user
+    wishing for a no-nonsense sophistication.
+
+
+                  Damn Small Linux (DSL) is a Linux kernel based computer operating
+    system developed with an extreme minimalism design philosophy in mind.  Damn Small
+    Linux is free and open source, available under the GNU GPL.  DSL was originally
+    conceived and maintained by the developer John Andrews as a project to determine
+    just how much could fit onto 50mb.  DSL is actually very usable straight out of
+    the box, and it is best suited to users that need quick access to Linux tools. 
+    It is because of this that DSL is best kept on a USB drive that can be booted
+    form any computer. 
+
+
+                  Red Star OS is an interesting case in the Linux world.  It is a
+    North Korean operating system used by residents of the communist country.  Development
+    on Red Star began in the year 1998 at the Korea Computer Center.  Before Red Star,
+    computers in North Korea typically ran Ubuntu.  Since North Korea wishes to maintain
+    control over internet resources and citizen’s access, only a tiny amount of state
+    government officials and important tourists are allowed access to the Internet. 
+    These people would be using Red Star OS, and the government’s control of the OS
+    gives them extra control over the citizens.  The OS is actually closed-source
+    and proprietary, which goes against the most basic Linux and FOSS philosophies. 
+    Linux enthusiasts like to study and marvel at Red Star due to its extremely niche
+    user base and function.  Obviously it is not recommended to be installed for almost
+    anyone reading this book, but it exists as a novel concept and interesting read.
+
+
+    Installing Linux
+
+
+                  After reading so much about Linux distributions, you must be very
+    ready to give one a try, and you can install a Linux OS though various methods. 
+    Generally, the process of trying out a Linux distro involves obtaining an .iso
+    copy of the OS and burning it onto a removable media (CD, USB, etc…) and finally
+    making your PC boot from that media. In our extended example for this book we
+    will download and install Ubuntu.  Certainly you can substitute any other Linux
+    distro in our examples, but the specifics here will still refer to Canonical’s
+    easy-to-use beginner OS.
+
+
+    Linux-based operating systems can be installed and booted either from a USB flash
+    drive, a CD or DVD, or even a floppy disk. The first step to installing Linux
+    involves obtaining a writable media that can hold your OS.  A 4GB flash drive
+    is usually sufficient (and that is what we will continue the demonstration with),
+    but you may need an 8GB one for larger images.
+
+
+    Secondly, we need to obtain a copy of the OS.  Through the website [http://www.ubuntu.com/](http://www.ubuntu.com/)
+    you can navigate to the “Desktop” page and then “Download Ubuntu”.  By default,
+    Ubuntu’s latest version will be displayed on this page with a few system requirements. 
+    Take this time to make sure that your computer can cope.  Also, printing out the
+    next few pages of this guide is a decent idea as well, because once you start
+    Linux you may not have a chance to pull this book back up.  Click the “Download”
+    button to proceed.  Ubuntu is monetarily free; to avoid donating to Canonical
+    enter “$0” in all of the boxes and click the “Download” button at the bottom. 
+    The image will begin downloading.
+
+
+    Third, we will need an application with which to “write” the OS to the media. 
+    The most popular tool for writing images is UNetbootin ([https://unetbootin.github.io/](https://unetbootin.github.io/)),
+    but the free tool Rufus ([https://rufus.akeo.ie/](https://rufus.akeo.ie/)) is
+    much easier to use.  Snag a copy of Rufus and wait for all downloads to finish.
+
+
+    Fourth, insert the removable media into a USB port and start Rufus.  Your USB
+    drive should be listed in the top drop-down box.  By writing the Ubuntu image
+    onto the drive you will be erasing all of its contents, so back it up now if you
+    need too.  The default Rufus settings will suffice for our needs, but we will
+    need to make sure that “Create a bootable disk using” is checked, and that the
+    dropdown says “ISO Image”.  Change that and click the disc button beside it to
+    open up a file explorer.  Navigate to our downloaded Ubuntu image and double click
+    it.  We can now press the “Start” button to begin writing Ubuntu onto the drive. 
+    Do so.  After the process is complete shut down the computer.
+
+
+    Fifth, start up the PC and enter the BIOS before Windows loads.  The key to do
+    so varies as per motherboard manufacturer, but it is usually one of the “F” keys
+    at the very top of the keyboard.  Every motherboard manufacturer also has their
+    own BIOS layout so the explanation here is general and vague.  Find a “boot” tab
+    or something similar where you can view the “boot order” of your PC.  The boot
+    order tells the computer where to look for operating system images, and typically
+    BIOS will look in the internal hard drive first.  Change the order to place USB
+    or external hard drives first.  Save and quit the BIOS.
+
+
+    Starting up the computer one last time will start our last step.  BIOS will search
+    in the external USB first and find the Ubuntu image.  If Windows loads instead
+    of Ubuntu than repeat Step 5, but otherwise you will boot into your first Linux
+    system.  Congratulations! 
+
+
+    The OS that appears is fully intractable and usable, but there still is a slight
+    problem- it is still running from the USB drive and has thusly not installed itself. 
+    Ubuntu variants contain an application on the desktop that you can double click
+    that will start the install process for you.  If you are done testing Linux and
+    are ready to erase Windows, then click this option.  Be warned that if you choose
+    certain options you will erase your entire computer, so read the directions carefully. 
+    You can choose to “dual boot” with your current OS, or you can choose to completely
+    wipe the computer and start from scratch.  It is recommended that you dual boot
+    at first, just in case you need to get back to Windows for a certain application
+    or feature.  As a failsafe, though, definitely fully backup your computer before
+    attempting any installation. '
+  toc: []
+  trans: '
+
+
+    Arch Linux 是一种基于 `IA-32` 和 `x86/64` 架构的 Linux 内核计算机操作系统。它主要由自由和开源软件组成，Arch 以其能够提供的极大的定制性而闻名。Arch
+    Linux 社区的支持，这使其相对容易获得支持。Arch Linux 的设计遵循 KISS 原则，即 `Keep It Simple Stupid`（保持简单愚蠢）。虽然其代码设计本质上是简单的，但实际上使用该操作系统相当困难。Arch
+    不带任何图形化用户界面，也没有任何特定的应用程序。用户需要按照自己的喜好逐步“构建”整个系统。通过学习安装什么以及如何安装，用户最终会对发行版和 Linux
+    本身有深入的理解，这就是为什么 Arch 推荐给想要学习更多 Linux 的用户。虽然不建议将其作为第一个发行版，但每个对 Linux 感兴趣的人都应该在某个时候构建自己独特的
+    Arch 版本，以加深知识。
+
+
+    CrunchBang (#!) Linux 是一种基于 Debian 的 Linux 内核计算机操作系统。开发者 Phillip Newborough 设计
+    CrunchBang Linux 是使用比 Debian 少得多的系统资源，使其更加轻量和灵活。CrunchBang Linux 有有自己的软件仓库，但其大部分软件包来自
+    Debian 仓库。2013 年，Jim Lynch（一位著名的评论员）描述 CrunchBang 功能完备、高效，并且能够在旧硬件和新机器上有效运行。事实是，CrunchBang
+    通过优先考虑可用性和速度避免了卡顿体验，这使其成为追求不务实的干练感的中级 Linux 用户极具吸引力的发行版选择。
+
+
+    Damn Small Linux (DSL) 是一种以极极简主义设计理念开发的 Linux 内核计算机操作系统。Damn Small Linux 是免费开源的，遵循
+    `GNU GPL` 许可。DSL 最初由开发者 John Andrews 构思并维护，旨在确定 50mb 空间内能装下多少内容。实际上，DSL 开箱即用且非常实用，最适合需要快速访问
+    Linux 工具的用户。正因为如此，DSL 最好放在可以从任何电脑启动的 USB 驱动器上。
+
+
+    红星（Red Star OS）是 Linux 世界中一个有趣的案例。它是该共产国家居民使用的操作系统。红星操作系统的开发于 1998 年在韩国计算机中心开始。在红星出现之前，朝鲜的电脑通常运行
+    Ubuntu。由于朝鲜希望保持对互联网资源和公民访问的控制，只有极少数政府官员和重要游客被允许访问互联网。这些人将使用红星操作系统，政府对操作系统的控制赋予了他们对公民的额外控制。该操作系统实际上是闭源且专有的，这违背了最基本的
+    Linux 和 FOSS（自由开源软件）哲学。Linux 爱好者喜欢研究并惊叹红星，因为其具有极其小众的用户群和功能。显然，不建议阅读此书的大多数人安装它，但它作为一种新颖的概念和有趣的读物而存在。
+
+
+    ## 安装 Linux
+
+
+    在阅读了这么多关于 Linux 发行版后，你一定已经准备好尝试一个，你可以通过多种方法安装 Linux 操作系统。通常，尝试 Linux 发行版的过程涉及获取操作系统的
+    `.iso` 副本并将其刻录到可移动介质（CD、USB 等）上，最后让你的 PC 从该介质启动。在我们本书的扩展示例中，我们将下载并安装 Ubuntu。当然，你可以在示例中替换任何其他
+    Linux 发行版，但此处的细节仍将引用 Canonical 的这款易于使用的新手操作系统。
+
+
+    基于 Linux 的操作系统可以从 USB 闪盘、CD 或 DVD 甚至软磁盘进行安装和启动。安装 Linux 的第一步是获取一个可以容纳操作系统的可写介质。一个
+    4GB 的闪盘通常足够（我们将继续使用它进行演示），但对于较大的镜像，你可能需要一个 8GB 的。
+
+
+    其次，我们需要获取操作系统的副本。通过网站 `http://www.ubuntu.com/`，你可以导航到“桌面版”页面，然后点击“下载 Ubuntu”。默认情况下，该页面将显示
+    Ubuntu 的最新版本以及几项系统要求。留点时间确保你的电脑可以胜任。此外，打印本指南的接下来几页也是个好主意，因为一旦你开始使用 Linux，可能就没有机会翻回这本书。点击“下载”按钮继续。Ubuntu
+    是免费的；为了避免向 Canonical 捐款，请在所有框中输入 `$0` 并点击底部的“下载”按钮。镜像将开始下载。
+
+
+    第三，我们需要一个应用程序将操作系统“写入”到介质中。写入镜像最流行的工具是 `UNetbootin` (`https://unetbootin.github.io/`)，但免费工具
+    `Rufus` (`https://rufus.akeo.ie/`) 使用起来要简单得多。获取一份 `Rufus` 副本并等待所有下载完成。
+
+
+    第四，将可移动介质插入 USB 端口并启动 `Rufus`。你的 USB 驱动器应该出现在顶部的下拉列表中。通过向驱动器写入 Ubuntu 镜像，你将删除其所有内容，因此如果需要，请现在备份。`Rufus`
+    的默认设置可以满足我们的需求，但我们需要确保勾选了“使用创建启动盘（Create a bootable disk using）”，并且下拉菜单显示“ISO
+    Image”。更改该设置并点击旁边的光盘按钮打开文件管理器。导航到我们下载的 Ubuntu 镜像并双击它。我们现在可以按“开始”按钮开始将 Ubuntu 写入驱动器。执行此操作。过程完成后关闭电脑。
+
+
+    第五，启动 PC 在 Windows 加载之前进入 BIOS。执行此操作的键取决于主板制造商，但通常是键盘最顶部的 `F` 键之一。每个主板制造商都有自己的
+    BIOS 布局，因此此处的解释是通用且模糊的。找到“启动（boot）”标签或类似的选项，你可以在那里查看 PC 的“启动顺序”。启动顺序告诉电脑去哪里寻找操作系统镜像，通常
+    BIOS 会首先查找内部硬盘。更改顺序，将 USB 或外部硬盘置于首位。保存并退出 BIOS。
+
+
+    最后一次启动电脑将开始我们的最后一步：BIOS 将首先搜索外部 USB 并找到 Ubuntu 镜像。如果加载 Windows 而不是 Ubuntu，请重复第
+    5 步，否则你将进入你的第一个 Linux 系统。恭喜你！
+
+
+    出现的操作系统是完全可操作且可用的，但仍然有一个小问题——它仍在从 USB 驱动器运行，因此尚未完成自安装。Ubuntu 变体在桌面上有一个应用程序，你可以双击它来为你启动安装过程。如果你已经测试完
+    Linux 并准备好删除 Windows，请点击此选项。提问你，如果你选择了某些选项，你将擦除整个电脑，因此请仔细阅读说明。你可以选择与当前操作系统进行“双启动”，也可以选择完全清空电脑并从头开始。建议起初选择双启动，以防你由于某些应用程序或功能需要返回
+    Windows。不过，作为应急措施，在尝试任何安装之前，务必完整备份你的电脑。
+
+
+    '
+- fmt: '
+
+    If the installation is successful and you chose dual boot, then every time the
+    computer turns on you will see `GRUB`, the GRand Unified Bootload. `GRUB` will
+    as which OS you want to begin, so you have a choice between Linux and Windows
+    every time you compute.
+
+
+    ## Using Ubuntu
+
+
+    For those that have only used a Windows-type interface, Ubuntu will not look completely
+    foreign. There is still a “desktop” and a “start menu”, but the placement of things
+    is slightly different. You start applications in the usual way, by either clicking
+    them on the start bar or searching for them after clicking the start button. If
+    you are on a desktop than you are most already connected to the internet, but
+    if you are on a laptop you might need to connect to Wi-Fi through the upper right
+    corner. Overall the usability of Ubuntu is high, and you should be able to understand
+    it fairly quickly. Browse the web and try out the default applications to get
+    an interactive feel for how Linux operating systems work and act.
+
+
+    ## The Terminal
+
+
+    Linux differentiates itself from Windows by offering an additional text-based
+    interface reminiscent of old DOS computers. Through the terminal, commands can
+    be run that perform actions on the PC. Starting the terminal differs on each distro,
+    but `ctrl+alt+T` is a common hotkey. Once in the terminal, you can browse the
+    filesystem and generally use the computer with the same level of control as a
+    graphical user interface. The user first enters a command and presses enter to
+    execute it. Here are a few essential commands. While reading this book, any text
+    that is italicized refers to the fact that it is a terminal command.
+
+
+    | Command | AKA | Use | Example |
+
+    | :--- | :--- | :--- | :--- |
+
+    | `cd` | Change Directory | Type to change current folder | `cd desktop` |
+
+    | `pwd` | Print Working Directory | Displays the current folder’s name | `pwd`
+    |
+
+    | `shutdown` | Shut down | Powers off the current system | `shutdown –h now` |
+
+    | `ls` | List | Lists all files in the current folder | `ls` |
+
+    | `cp` | Copy | Copies the specified file with an optional new name | `cp picture.png
+    dog.png` |
+
+    | `mkdir` | Make Directory | Creates a new folder with specified name | `mkdir
+    Documents` |
+
+    | `rm` | Remove | Remove the specified file | `rm dog.png` |
+
+    | `rmdir` | Remove Directory | Remove the specified folder | `rmdir Documents`
+    |
+
+    | `apt-get` | Advanced Packaging Tool - Get | A command that works in Ubuntu-type
+    systems that installs new software | `apt-get install minecraft` |
+
+    | `.` | Run | The period is used to run a file, such as a script. | `./a.out`
+    |
+
+
+    If you have every used DOS the above may seem familiar. Here is an exercise to
+    master the terminal.
+
+
+    1. Start terminal. Either `ctrl+shift+T` or find it in a programs menu.
+
+    2. Type `pwd` to find out where we are.
+
+    3. `cd Desktop` to travel to the desktop folder.
+
+    4. `mkdir Notes` to create a new folder called `Notes`.
+
+    5. `cd Notes` to travel there.
+
+    6. Using `nano secretfile.txt`, we will start editing a new file in the built-in
+    text editor `Nano`.
+
+    7. Type something secret! Press `ctrl+x` to save and exit the program.
+
+    8. Type `ls` to list the current directory’s contents. You should see `secretfile.txt`
+    there.
+
+    9. With `cp secretfile.txt totallynormalfile.txt`, we copy the file and make a
+    new one.
+
+
+    At this point you should minimize the terminal and see the folder and files you
+    just created on your desktop. Following the directions above might have taken
+    much longer than usual for you to create a folder and files, but with practice
+    you can manipulate a Linux system at a speedy pace through terminal. Additionally,
+    mastering the terminal is very difficult, but it provides a deep level of control
+    over your distribution that GUIs might not be able to give. Overall, it is definitely
+    recommended that a Linux user know how to use a terminal proficiently.
+
+
+    ## Software for Linux
+
+
+    You might be surprised to learn that you may not have to change your software
+    repertoire when you “jump ship” to Linux. Tech-inclined users may already be familiar
+    with some of the software available for Linux, such as Mozilla Firefox, `Google
+    Chrome`, `Opera`, `Adobe Reader`, `Mozilla Thunderbird`, and `VLC`.
+
+
+    If a certain software is not already installed on the machine than getting it
+    is a breeze. Ubuntu contains the application “Ubuntu Software Center” that acts
+    as an “app store” for Linux programs. Through the friendly interface you can search
+    for and 1-click-download plenty of programs- many of which are listed below. The
+    more obscure programs may not be listed in the software center, though, so you’ll
+    have to install them through the terminal. Inside a terminal window, type the
+    following:
+
+
+    ```bash
+
+    sudo apt-get install vlc
+
+    ```
+
+
+    `sudo` is a terminal prefix that instructs the system to run with highest privileges
+    possible. A password will need to be entered when `sudo` is run. `Apt-get` is
+    the Ubuntu application program; by specifying `install` we are signifying our
+    intentions. `Vlc` is the name of the program we want (`VLC` Media player). So
+    with this one line in a terminal we have downloaded and installed an entire application.
+    Replace `vlc` with any application name and Ubuntu will download it. Below are
+    the most popular applications for each category.
+
+
+    ### Web Browsing
+
+
+    | Mozilla Firefox |
+
+    | :--- |
+
+    | Familiar, highly customizable, and FOSS. `Firefox` is highly used on Windows.
+    |
+
+
+    | Google Chrome |
+
+    | :--- |
+
+    | Fast, stable, and compatible. `Google Chrome` is highly used on Windows. |
+
+
+    | Opera |
+
+    | :--- |
+
+    | Lightweight and runs of Chrome. `Opera` is highly used on Windows. |
+
+
+    | Midori |
+
+    | :--- |
+
+    | Simple. `Midori` is the default browser of `Elementary OS`. |
+
+
+    | Dillo |
+
+    | :--- |
+
+    | Small, stable, and fast. |
+
+
+    | Lynx |
+
+    | :--- |
+
+    | A text-based browser. `Lynx` is a text-based browser. |
+
+
+    | W3M |
+
+    | :--- |
+
+    | Another text browser. |
+
+
+    ### Media Players
+
+
+    | VLC |
+
+    | :--- |
+
+    | Also available on Windows. A very compatible and useful media player that can
+    handle anything from music, videos, podcasts, or live channels. |
+
+
+    | Miro |
+
+    | :--- |
+
+    | Unique its ability to connect and download videos from sources such as Crackle,
+    Hulu, and Yahoo Screen. |
+
+
+    | mplayer |
+
+    | :--- |
+
+    | Supports a wide range of codecs and file formats. Very small and customizable.
+    The media player of choice for Linux veterans. |
+
+
+    ### Audio-only Players
+
+
+    | DeaBeef |
+
+    | :--- |
+
+    | Minimalist, yet customizable. This audio player will resonate most with fans
+    of Windows’s `Foobar2000` application. You can change the layout and settings
+    of `DeaBeef` to be your own audio player. |
+
+
+    | Clementine |
+
+    | :--- |
+
+    | Cross platform, free and open source. Supports a large music library. Users
+    of Android and iPhones can rejoice knowing that `clementine` supports adding music
+    to mobile libraries. A great alternative to `iTunes`. |
+
+
+    | Cmus |
+
+    | :--- |
+
+    | The most lightweight music player around, as it runs from a terminal screen.
+    |
+
+
+    | Aqualung |
+
+    | :--- |
+
+    | Great gapless playback. Best choice for Jethro Tull fans. |
+
+
+    ### Image Editors
+
+
+    | GIMP |
+
+    | :--- |
+
+    | First and best choice for FOSS image editing. Also available for Windows, `GIMP`
+    provides many of the features of `Photoshop` for free. The advanced editor is
+    commonly preinstalled on various distrobutions, but it remains a must-have for
+    anybody doing image editing. |
+
+
+    | Pinta |
+
+    | :--- |
+
+    | `Pinta` is the Linux equivalent of `MS-Paint`. For simple image editing, you
+    cannot go wrong with `Pinta`. |
+
+
+    ### File Manager (Linux equivalent of Microsoft’s File Explorer)
+
+
+    | GNOME Commander |
+
+    | :--- |
+
+    | An elegant, but slow, file manager that is the default in the Gnome desktop
+    environment. This file manager is great for animations and icons and you can create
+    a beautiful desktop with this application. |
+
+
+    | PCManFM |
+
+    | :--- |
+
+    | Default FM in `LXDE`. Great for lightweight and simple graphical user interfaces.
+    |
+
+    '
+  raw: "If the installation is successful and you chose dual boot, then every time\
+    \ the computer turns on you will see GRUB, the GRand Unified Bootload.  GRUB will\
+    \ as which OS you want to begin, so you have a choice between Linux and Windows\
+    \ every time you compute.\n\nUsing Ubuntu\n\n              For those that have\
+    \ only used a Windows-type interface, Ubuntu will not look completely foreign. \
+    \ There is still a “desktop” and a “start menu”, but the placement of things is\
+    \ slightly different.  You start applications in the usual way, by either clicking\
+    \ them on the start bar or searching for them after clicking the start button. \
+    \ If you are on a desktop than you are most likely already connected to the internet,\
+    \ but if you are on a laptop you might need to connect to Wi-Fi through the upper\
+    \ right corner.  Overall the usability of Ubuntu is high, and you should be able\
+    \ to understand it fairly quickly.  Browse the web and try out the default applications\
+    \ to get an interactive feel for how Linux operating systems work and act.\n\n\
+    The Terminal\n\nLinux differentiates itself from Windows by offering an additional\
+    \ text-based interface reminiscent of old DOS computers.  Through the terminal,\
+    \ commands can be run that perform actions on the PC.  Starting the terminal differs\
+    \ on each distro, but ctrl+alt+T is a common hotkey.  Once in the terminal, you\
+    \ can browse the filesystem and generally use the computer with the same level\
+    \ of control as a graphical user interface. The user first enters a command and\
+    \ presses enter to execute it. Here are a few essential commands.  While reading\
+    \ this book, any text that is italicized refers to the fact that it is a terminal\
+    \ command.\n\n| Command | AKA | Use | Example |\n\n| cd | Change Directory | Type\
+    \ to change current folder | cd desktop |\n\n| pwd | Print Working Directory |\
+    \ Displays the current folder’s name | pwd |\n\n| shutdown | Shut down | Powers\
+    \ off the current system | shutdown –h now |\n\n| ls | List | Lists all files\
+    \ in the current folder | ls |\n\n| cp | Copy | Copies the specified file with\
+    \ an optional new name | cp picture.png dog.png |\n\n| mkdir | Make Directory\
+    \ | Creates a new folder with specified name | mkdir Documents |\n\n| rm | Remove\
+    \ | Remove the specified file | rm dog.png |\n\n| rmdir | Remove Directory | Remove\
+    \ the specified folder | rmdir Documents |\n\n| apt-get | Advanced Packaging Tool\
+    \ - Get | A command that works in Ubuntu-type systems that installs new software\
+    \ | apt-get install minecraft |\n\n| . | Run | The period is used to run a file,\
+    \ such as a script. | ./a.out |\n\nIf you have every used DOS the above may seem\
+    \ familiar.  Here is an exercise to master the terminal.\n\n1.  Start terminal. \
+    \ Either ctrl+shift+T or find it in a programs menu.\n\n2.  Type pwd to find out\
+    \ where we are.\n\n3.  cd Desktop to travel to the desktop folder.\n\n4.  mkdir\
+    \ Notes to create a new folder called Notes.\n\n5.  cd Notes to travel there.\n\
+    \n6.  Using nano secretfile.txt, we will start editing a new file in the built-in\
+    \ text editor Nano.\n\n7.  Type something secret!  Press ctrl+x to save and exit\
+    \ the program.\n\n8.  Type ls to list the current directory’s contents.  You should\
+    \ see secretfile.txt there.\n\n9.  With cp secretfile.txt totallynormalfile.txt,\
+    \ we copy the file and make a new one.\n\nAt this point you should minimize the\
+    \ terminal and see the folder and files you just created on your desktop.  Following\
+    \ the directions above might have taken much longer than usual for you to create\
+    \ a folder and files, but with practice you can manipulate a Linux system at a\
+    \ speedy pace through terminal. Additionally, mastering the terminal is very difficult,\
+    \ but it provides a deep level of control over your distribution that GUIs might\
+    \ not be able to give.  Overall, it is definitely recommended that a Linux user\
+    \ know how to use a terminal proficiently.\n\nSoftware for Linux\n\n You might\
+    \ be surprised to learn that you may not have to change your software repertoire\
+    \ when you “jump ship” to Linux.  Tech-inclined users may already be familiar\
+    \ with some of the software available for Linux, such as Mozilla Firefox, Google\
+    \ Chrome, Opera, Adobe Reader, Mozilla Thunderbird, and VLC.\n\n             \
+    \ If a certain software is not already installed on the machine than getting it\
+    \ is a breeze.  Ubuntu contains the application “Ubuntu Software Center” that\
+    \ acts as an “app store” for Linux programs.  Through the friendly interface you\
+    \ can search for and 1-click-download plenty of programs- many of which are listed\
+    \ below.  The more obscure programs may not be listed in the software center,\
+    \ though, so you’ll have to install them through the terminal.  Inside a terminal\
+    \ window, type the following:\n\nsudo apt-get install vlc\n\nSudo is a terminal\
+    \ prefix that instructs the system to run with highest privileges possible.  A\
+    \ password will need to be entered when sudo is run. Apt-get is the Ubuntu application\
+    \ program; by specifying install we are signifying our intentions. Vlc is the\
+    \ name of the program we want (VLC Media player).  So with this one line in a\
+    \ terminal we have downloaded and installed an entire application.  Replace vlc\
+    \ with any application name and Ubuntu will download it.  Below are the most popular\
+    \ applications for each category.\n\n| Web Browsing |\n\n| Mozilla Firefox | Familiar,\
+    \ highly customizable, and FOSS.  Firefox is a highly used browser on Windows,\
+    \ so transitioning to Linux won’t be as jarring. |\n\n| Google Chrome | Fast,\
+    \ stable, and compatible.  Google Chrome has a reputation for the quickest browser\
+    \ around and that speediness is only enhanced by Linux’s generally snappy nature.\
+    \ |\n\n| Opera | Lightweight and runs off of Chrome’s framework.  Opera is best\
+    \ for those that like the features of Chrome but not the look. |\n\n| Midori |\
+    \ Very lightweight without sacrificing functionality.  Default browser of Elementary\
+    \ OS. |\n\n| Dillo | Small, stable, and fast.  |\n\n| Arora | Simple. |\n\n| Lynx\
+    \ | A text-based browser.  Somewhat a novelty, but very handy if you are working\
+    \ in a command-line only interface. |\n\n| W3M | Another text browser.  Has more\
+    \ features than Lynx. |\n\n| Media Players |\n\n| VLC | Also available on Windows. \
+    \ A very compatible and useful media player that can handle anything from music,\
+    \ videos, podcasts, or live TV channels.  Most people coming from Windows will\
+    \ appreciate the familiar interface. |\n\n| Miro | Unique it its ability to connect\
+    \ and download videos from the internet from sources such as Crackle, Hulu, and\
+    \ Yahoo Screen.  |\n\n| Mplayer | Supports a wide range of codecs and file formats. \
+    \ Very small and customizable.  The media player of choice for Linux veterans.\
+    \ |\n\n| Audio-only Players |\n\n| DeaDBeef | Minimalist, yet customizable.  This\
+    \ audio player will resonate most with fans of Window’s Foobar2000 application. \
+    \ You can change the layout and settings of DeaDBeef to be your own personal audio\
+    \ player. |\n\n| Clementine | Cross platform, free and open source.  Supports\
+    \ a large music library.  Users of Android and iPhones can rejoice knowing that\
+    \ Clementine supports adding music to mobile libraries.  A great alternative to\
+    \ iTunes. |\n\n| Cmus | The most lightweight music player around, as it runs from\
+    \ a terminal screen.  |\n\n| Aqualung | Great gapless playback.  Best choice for\
+    \ Jethro Tull fans. |\n\n| Image Editors |\n\n| GIMP | First and best choice for\
+    \ FOSS image editing.  Also available for Windows, GIMP provides many of the features\
+    \ of Photoshop for free.  The advanced editor is commonly preinstalled on various\
+    \ distrobutions, but it remains a must-have for anybody doing image editing. |\n\
+    \n| Pinta | Pinta is the Linux equivalent of MS-Paint.  For simple image editing,\
+    \ you cannot go wrong with Pinta. |\n\n| File Manager (Linux equivalent of Microsoft’s\
+    \ File Explorer) |\n\n| GNOME Commander | An elegant, but slow, file manager that\
+    \ is the default in the Gnome desktop environment.  This file manager is great\
+    \ for animations and icons and you can create a beautiful desktop with this application.\
+    \ |\n\n| PCManFM | Default FM in LXDE.  Great for lightweight and simple graphical\
+    \ user interfaces.  |"
+  toc: []
+  trans: '
+
+
+    如果安装成功且你选择了双系统，那么每次启动电脑时你都会看到 `GRUB`，即通用统一引导加载程序。`GRUB` 会询问你想启动哪个操作系统，因此每次在计算时，你都可以在
+    Linux 和 Windows 之间进行选择。
+
+
+    ## 使用 Ubuntu
+
+
+    对于那些只用过 Windows 类型界面的用户来说，Ubuntu 并不完全陌生。它仍然有“桌面”和“开始菜单”，但物品的布局略有不同。你可以像通常一样启动应用程序：点击启动栏上的图标或在点击开始按钮后进行搜索。如果你在桌面上，通常已经连接了网络，但如果你使用的是笔记本电脑，可能需要通过右上角连接
+    Wi-Fi。总的来说，Ubuntu 的易用性很高，你应该能够很快上手。浏览网页并尝试默认应用程序，以直观地感受 Linux 操作系统的工作和运行。
+
+
+    ## 终端
+
+
+    Linux 与 Windows 的区别在于它提供了一个类似于旧 DOS 计算机的额外文本界面。通过终端，可以运行对 PC 执行操作的。启动终端在每个发行版中有所不同，但
+    `ctrl+alt+T` 是一个常用的快捷键。进入终端后，你可以浏览文件系统，并通常以与图形用户界面相同的控制级别使用计算机。用户首先输入命令并按回车执行。以下是几个基本命令。在阅读本书时，任何*斜体*文本均指它是一个终端命令。
+
+
+    | 命令 | 别名 | 用途 | 示例 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | `cd` | 切换目录 | 输入更改当前文件夹 | `cd desktop` |
+
+    | `pwd` | 显示工作目录 | 显示当前文件夹名称 | `pwd` |
+
+    | `shutdown` | 关机 | 关闭当前系统 | `shutdown –h now` |
+
+    | `ls` | 列 | 列出当前文件夹下的所有文件 | `ls` |
+
+    | `cp` | 复制 | 复制指定的文件并可选指定新名称 | `cp picture.png dog.png` |
+
+    | `mkdir` | 创建目录 | 创建一个指定名称的新文件夹 | `mkdir Documents` |
+
+    | `rm` | 删除 | 删除指定的文件 | `rm dog.png` |
+
+    | `rmdir` | 删除目录 | 删除指定的文件夹 | `rmdir Documents` |
+
+    | `apt-get` | 高级软件包工具 - 获取 | 在 Ubuntu 类型系统中运行的安装新软件的命令 | `apt-get install minecraft`
+    |
+
+    | `.` | 运行 | 点用于运行文件，例如脚本。 | `./a.out` |
+
+
+    如果你用过 DOS，上述内容可能看起来很熟悉。这里有一个旨在掌握终端的练习。
+
+
+    1. 启动终端。使用 `ctrl+shift+T` 或在程序菜单中找到它。
+
+    2. 输入 `pwd` 找到我们现在所在的位置。
+
+    3. 输入 `cd Desktop` 进入桌面文件夹。
+
+    4. 输入 `mkdir Notes` 创建一个名为 `Notes` 的新文件夹。
+
+    5. 输入 `cd Notes` 进入该文件夹。
+
+    6. 使用 `nano secretfile.txt`，我们将在内置文本编辑器 `Nano` 中开始编辑一个新文件。
+
+    7. 输入一些秘密！按 `ctrl+x` 保存并退出程序。
+
+    8. 输入 `ls` 列出当前目录的内容。你应该能在那里看到 `secretfile.txt`。
+
+    9. 使用 `cp secretfile.txt totallynormalfile.txt`，我们复制该文件并创建一个新文件。
+
+
+    此时，你应该最小化终端，并在桌面上看到你刚刚创建的文件夹和文件。遵循上面的指令可能比你平时创建文件夹和文件要花费更长的时间，但通过练习，你可以通过终端以快速速度操作
+    Linux 系统。此外，掌握终端是非常困难的，但它对你的发行版提供了 GUI 可能无法提供的深层控制。总的来说，绝对建议 Linux 用户学会会如何熟练地使用终端。
+
+
+    ## Linux 软件
+
+
+    你可能会惊讶地发现，当你“转投”到 Linux 时，可能不需要改变你的软件储备。技术偏向型用户可能已经熟悉 Linux 上可用的某些软件，例如 Mozilla
+    Firefox、`Google Chrome`、`Opera`、`Adobe Reader`、`Mozilla Thunderbird` 和 `VLC`。
+
+
+    如果机器上没有安装某个软件，获取它将轻而易举。Ubuntu 包含了“Ubuntu 软件中心”应用程序，它充当 Linux 程序的的“应用商店”。通过友好的界面，你可以搜索并一键下载许多程序——其中许多列在下方。不过，较冷门的程序可能不会列在软件中心中，因此你必须通过终端安装它们。在终端窗口中输入以下内容：
+
+
+    ```bash
+
+    sudo apt-get install vlc
+
+    ```
+
+
+    `sudo` 是一个终端前缀，指示系统以可能的最高权限运行。运行 `sudo` 时需要密码。`Apt-get` 是 Ubuntu 应用程序；通过指定 `install`，我们表达了意图。`Vlc`
+    是我们想要的程序名称（`VLC` 播放器）。因此，通过终端中的这一行，我们就下载并安装了整个应用程序。将 `vlc` 替换为任何应用程序名称，Ubuntu
+    就会下载它。以下是每个类别中最流行的应用程序。
+
+
+    | 浏览器
+
+
+    | Mozilla Firefox |
+
+    | :--- |
+
+    | 熟悉、高度可定制且是开源软件 (FOSS)。`Firefox` 在 Windows 上广泛使用。 |
+
+
+    | Google Chrome |
+
+    | :--- |
+
+    | 快速、稳定且兼容。`Google Chrome` 在 Windows 上广泛使用。 |
+
+
+    | Opera |
+
+    | :--- |
+
+    | 轻量且基于 Chrome 运行。`Opera` 在 Windows 上广泛使用。 |
+
+
+    | Midori |
+
+    | :--- |
+
+    | 简单。`Midori` 是 Elementary OS 的默认浏览器。 |
+
+
+    | Dillo |
+
+    | :--- |
+
+    | 小、稳定且快速。 |
+
+
+    | Lynx |
+
+    | :--- |
+
+    | 文本浏览器。`Lynx` 是一个文本浏览器。 |
+
+
+    | W3M |
+
+    | :--- |
+
+    | 另一个文本浏览器。 |
+
+
+    ### 媒体播放器
+
+
+    | VLC |
+
+    | :--- |
+
+    | 在 Windows 上同样可用。一个非常兼容且实用的媒体播放器，可以处理音乐、视频、播客或直播频道的任何内容。 |
+
+
+    | Miro |
+
+    | :--- |
+
+    | 独特之处在于它能够从 Crackle、Hulu 和 Yahoo Screen 等源连接并下载视频。 |
+
+
+    | mplayer |
+
+    | :--- |
+
+    | 支持广泛的解码器和文件格式。非常小且可定制。Linux 老兵的首选媒体播放器。 |
+
+
+    ### 纯音频播放器
+
+
+    | DeaBeef |
+
+    | :--- |
+
+    | 极简主义且可定制。这款音频播放器最引起 Windows `Foobar2000`粉丝的共鸣。你可以更改 `DeaBeef` 的布局和设置来实现自己的音频播放器。
+    |
+
+
+    | Clementine |
+
+    | :--- |
+
+    | 跨平台、免费开源。支持大型音乐库。Android 和 iPhone 用户可以高兴了，因为 `clementine` 支持向移动库添加音乐。`iTunes`
+    的绝佳替代品。 |
+
+
+    | Cmus |
+
+    | :--- |
+
+    | 最轻级的音乐播放器，因为它运行在终端界面上。 |
+
+
+    | Aqualung |
+
+    | :--- |
+
+    | 出色的无缝播放。Jethro Tull 粉丝的最佳选择。 |
+
+
+    ### 图像编辑器
+
+
+    | GIMP |
+
+    | :--- |
+
+    | 开源图像编辑的首选和最佳选择。Windows 同样可用，`GIMP` 免费提供了 `Photoshop` 的许多功能。高级编辑器通常在各种发行版中预装，但对于任何进行图像编辑的人来说，它都是必备的。
+    |
+
+
+    | Pinta |
+
+    | :--- |
+
+    | `Pinta` 是 Linux 版 `MS-Paint`。对于简单的图像编辑，选择 `Pinta` 不会出错。 |
+
+
+    ### 文件管理器（Windows 资源器的 Linux 版本）
+
+
+    | GNOME Commander |
+
+    | :--- |
+
+    | 一个优雅但运行缓慢的文件管理器，是 Gnome 桌面环境的默认管理器。这个管理器非常适合动画和图标，你可以通过这个应用程序创建一个精美的桌面。 |
+
+
+    | PCManFM |
+
+    | :--- |
+
+    | `LXDE` 的默认文件管理器。非常适合轻量且简单的图形用户界面。 |
+
+
+    '
+- fmt: '
+
+    | Thunar | Part of XFCE, `thunar` is another elegant but simple way to interact
+    with files. |
+
+    | Midnight Commander | Text-only file browser. For the hardcore Linux user only
+    using a terminal, `midnight commander` can easily show files. |
+
+    | Office Productivity | |
+
+    | LibreOffice Suite | Comparable to Microsoft Office in functionality. `LibreOffice`
+    contains equivalents of “Word”, “PowerPoint”, “Excel”, and more. Free and open
+    source, actively developed, and supports Windows `.docx` files. Still best office
+    applications for working cross with other Windows computers because of the relative
+    compatibility between the two applications. |
+
+    | Abiword | More simple and featureless document editor. `Abiword` provides a
+    clean interface and functionality so the user can focus on writing documents.
+    |
+
+    | Evince Document Viewer | FOSS application best fit for viewing PDFs. |
+
+    | Emacs | An “operating system within an OS”, `Emacs` is a gigantic text editor
+    that features numerous components. `Emacs` is extremaly customizable and useful
+    for Linux users. |
+
+    | Vi | Another highly used and customizable “Linux only” text editor. `Vi` focuses
+    on keyboard shortcuts and quick editing without ever having to use the mouse.
+    `Vi` and `Emacs` users are often at war with eachother over who has the best text
+    editor. |
+
+    | Nano | The most simple text editor for Linux. `Nano` can be launched in a terminal
+    by simply typing `nano`. Great for simple edits. |
+
+    | Other Great Linux Applications | |
+
+    | Code::Blocks | A programming IDE, `Code::Blocks` facilitates writing applications
+    in a variety of languages. Linux is known as a fantastic programmers OS, and `Code::Blocks`
+    is customizable and flexible enough to fit many needs. |
+
+    | Audacity | `Audacity` is a FOSS audio recording program. While not nearly as
+    advanced as its paid counterparts (`Ableton`, `FL Studio`), `Audacity` has the
+    functionality available for serious music production. |
+
+    | Telegram | An encrypted instant messaging application, `telegram` can even be
+    used to send messages to phones. The application is useful for those interested
+    in IM and security. |
+
+    | Thunderbird Mail | Office workers and those who have multiple email addresses
+    will be familiar with the time-saving functionality of `Microsoft Outlook`. `Thunderbird
+    Mail` steps up as the Linux counterpart that can work as a mailbox for all of
+    your email addresses. |
+
+    | qBittorrent | Downloading large files from the internet can be a frustrating
+    activity. Direct download servers are often slow and any corrupted packet can
+    ruin the entire download. Torrent clients solved this problem by offering a way
+    for files to download in small pieces from “peers” that “seed” files. Torrent
+    clients operate on a peer-to-peer basis, meaning you are never downloading from
+    a server but rather from other users. The speed benefits are incredible, and any
+    time a torrent file is offered over a direct download an experienced Linux user
+    should use `qBittorent` to download it. There is a stigma associated with torrent
+    recently, though, because of the large amount of piracy that occurs through public
+    trackers such as ` Pirate Bay` and `Kickass Torrents`. But as we’ve learned, sharing
+    and downloading FOSS is actually encouraged, so using `qBittorent` actually furthers
+    the Linux cause. |
+
+    | KeePass | As we’ll learn later security in Linux is top-notch but still vulnerable
+    to the usual hacking tricks. Having strong password security helps ensure that
+    our online accounts are safe. Remembering complex and difficult passwords is a
+    tough task, but `KeePass` is a great password manager that helps remember which
+    password you use for which sites. |
+
+    | Kupfer | App launchers are a subset of applications that aim to increase the
+    speed at which we launch applications. Windows has the advantage in application
+    launching because of the simple way programs can be run- start menu and type the
+    name. In Linux we can use a program such as `Kupfer` to give the same functionality-
+    press hotkey and type a program name. Definitely try `Kupfer` if you want increased
+    productivity. |
+
+    | Dropbox | Sharing files across Linux and Windows computers quickly becomes confusing
+    when filesystems come into play. The entire ordeal can be avoided entirely by
+    using an application such as `Dropbox`. With `dropbox`, a new folder is created
+    that is synced across computers, even if they run alternative operating systems.
+    Sharing a file is as easy as dragging and dropping the file into the folder. A
+    must for anyone with multiple computers and multiple operating systems. |
+
+
+    # How Linux Works
+
+
+    Linux is able to work through a complicated system of interactions that allows
+    the kernel and various pieces of software to control the hardware on your computer.
+    Mainly, Linux still contains the basic files, folders, and programs that we have
+    grown accustomed too. Differences arise, however, from discussing the customizable
+    parts that are not changeable in Windows. The most important bits are discussed
+    below in technical detail.
+
+
+    # The Desktop Environment
+
+
+    A desktop environment is what you see on the monitor when actually using a graphical
+    operating system. It is typically easier for a user to start and run software
+    by manipulating and clicking on the desktop environment than it is for them to
+    type commands into a text-only interface. The desktop environment usually consists
+    of icons, windows, folders, a wallpaper, widgets, and drag and drop functionality.
+    These familiar functions are standard in almost all operating systems. Just as
+    Windows has folders, windows, icons, and a mouse pointer, so does Linux through
+    desktop environments (DEs). There are many desktop environments available for
+    use such as `Cinnamon`, `Enlightenment`, `GNOME`, `MATE`, `Xfce`, `LXDE`, and
+    more. Each different distro has a preferred DE that is usually preinstalled and
+    gives those operating systems unique colors and looks. As you read about the different
+    DEs, consider the fact that you can install any DE onto any distro. Some DE might
+    appeal to you more because its functions, and do be afraid to switch.
+
+
+    ## GNOME
+
+    `GNOME` is a graphical desktop environment described as an “easy and elegant way
+    to use your computer”. In its 3rd iteration, `GNOME` is default on `Ubuntu`. The
+    format is designed to be simple and stylish as well- `GNOME`’s only downside is
+    the moderately high system requirements and the lag it can cause on older computers.
+    If you are coming straight from Windows, `GNOME` is a good stepping stone to other
+    desktop environments.
+
+
+    ## Cinnamon
+
+    `Cinnamon` is a popular desktop environment that utilizes many of the applications
+    that `GNOME` does- just in a more responsive and less flashy way. If you tried
+    `GNOME` but it was a little “heavy” and large, then `Cinnamon` may rectify your
+    situation. You will still need moderately high system requirements though, as
+    it takes a good amount of computing power to run `Cinnamon`.
+
+
+    ## Mate
+
+    `Mate` is the lighter `Cinnamon`. The important features of `GNOME` and `Cinnamon`
+    are present, but the extras are thrown out to create a DE that can run on slower
+    computers. Basically if you like the way `GNOME`-like desktops work, you can choose
+    between the 3 tiers of resource intensiveness with `Mate` being at the bottom.
+
+
+    ## LXDE
+
+    `LXDE` is an abbreviation for “Lightweight X11 Desktop Environment”. It has low
+    resource requirements, making it a good desktop environment for low-end and older
+    computers. 1GB PCs can run Linux with `LXDE` fairly easy, making it great for
+    reviving old computers. The interface is simple and light as well. `Lubuntu` is
+    a `Ubuntu` variant running `LXDE`, so if you are looking for a quick and speedy
+    OS that has the ease of use of Windows, `LXDE` can facilitate it.
+
+    '
+  raw: '| Thunar | Part of XFCE, thunar is another elegant but simple way to interact
+    with files. |
+
+
+    | Midnight Commander | Text-only file browser.  For the hardcore Linux user only
+    using a terminal, midnight commander can easily show files. |
+
+
+    | Office Productivity |
+
+
+    | LibreOffice Suite | Comparable to Microsoft Office in functionality.  LibreOffice
+    contains equivalents of “Word”, “PowerPoint”, “Excel”, and more.  Free and open
+    source, actively developed, and supports Windows .docx files.  Still best office
+    applications for working cross with other Windows computers because of the relative
+    compatibility between the two applications. |
+
+
+    | Abiword | More simple and featureless document editor.  Abiword provides a clean
+    interface and functionality so the user can focus on writing documents.  |
+
+
+    | Evince Document Viewer | FOSS application best fit for viewing PDFs. |
+
+
+    | Emacs | An “operating system within an OS”, Emacs is a gigantic text editor
+    that features numerous components.  Emacs is extremaly customizable and useful
+    for Linux users.  |
+
+
+    | Vi | Another highly used and customizable “Linux only” text editor.  Vi focuses
+    on keyboard shortcuts and quick editing without ever having to use the mouse. 
+    Vi and Emacs users are often at war with eachother over who has the best text
+    editor. |
+
+
+    | Nano | The most simple text editor for Linux.  Nano can be launched in a terminal
+    by simply typing nano.  Great for simple edits. |
+
+
+    | Other Great Linux Applications |
+
+
+    | Code::Blocks | A programming IDE, Code::Blocks facilitates writing applications
+    in a variety of languages.  Linux is known as a fantastic programmers OS, and
+    Code::Blocks is customizable and flexible enough to fit many needs. |
+
+
+    | Audacity | Audacity is a FOSS audio recording program.  While not nearly as
+    advanced as its paid counterparts (Ableton, FL Studio), Audacity has the functionality
+    available for serious music production. |
+
+
+    | Telegram | An encrypted instant messaging application, telegram can even be
+    used to send messages to phones.  The application is useful for those interested
+    in IM and security. |
+
+
+    | Thunderbird Mail | Office workers and those who have multiple email addresses
+    will be familiar with the time-saving functionality of Microsoft Outlook.  Thunderbird
+    Mail steps up as the Linux counterpart that can work as a mailbox for all of your
+    email addresses.  |
+
+
+    | qBittorrent | Downloading large files from the internet can be a frustrating
+    activity.  Direct download servers are often slow and any corrupted packet can
+    ruin the entire download.  Torrent clients solved this problem by offering a way
+    for files to download in small pieces from “peers” that “seed” files.  Torrent
+    clients operate on a peer-to-peer basis, meaning you are never downloading from
+    a server but rather from other users.  The speed benefits are incredible, and
+    any time a torrent file is offered over a direct download an experienced Linux
+    user should use qBittorent to download it.  There is a stigma associated with
+    torrent recently, though, because of the large amount of piracy that occurs through
+    public trackers such as The Pirate Bay and Kickass Torrents.  But as we’ve learned,
+    sharing and downloading FOSS is actually encouraged, so using qBittorent actually
+    furthers the Linux cause.  |
+
+
+    | KeePass | As we’ll learn later security in Linux is top-notch but still vulnerable
+    to the usual hacking tricks.  Having strong password security helps ensure that
+    our online accounts are safe.  Remembering complex and difficult passwords is
+    a tough task, but KeePass is a great password manager that helps remember which
+    password you use for which sites. |
+
+
+    | Kupfer | App launchers are a subset of applications that aim to increase the
+    speed at which we launch applications.  Windows has the advantage in application
+    launching because of the simple way programs can be run- start menu and type the
+    name.  In Linux we can use a program such as Kupfer to give the same functionality-
+    press hotkey and type a program name.  Definitely try Kupfer if you want increased
+    productivity. |
+
+
+    | Dropbox | Sharing files across Linux and Windows computers quickly becomes confusing
+    when filesystems come into play.  The entire ordeal can be avoided entirely by
+    using an application such as Dropbox.  With dropbox, a new folder is created that
+    is synced across computers, even if they run alternative operating systems.  Sharing
+    a file is as easy as dragging and dropping the file into the folder.  A must for
+    anyone with multiple computers and multiple operating systems. |
+
+
+    How Linux Works
+
+
+                  Linux is able to work through a complicated system of interactions
+    that allows the kernel and various pieces of software to control the hardware
+    on your computer.  Mainly, Linux still contains the basic files, folders, and
+    programs that we have grown accustomed too.  Differences arise, however, from
+    discussing the customizable parts that are not changeable in Windows.  The most
+    important bits are discussed below in technical detail.
+
+
+    The Desktop Environment
+
+
+                  A desktop environment is what you see on the monitor when actually
+    using a graphical operating system.  It is typically easier for a user to start
+    and run software by manipulating and clicking on the desktop environment than
+    it is for them to type commands into a text-only interface.  The desktop environment
+    usually consists of icons, windows, folders, a wallpaper, widgets, and drag and
+    drop functionality.  These familiar functions are standard in almost all operating
+    systems.  Just as Windows has folders, windows, icons, and a mouse pointer, so
+    does Linux through desktop environments (DEs). There are many desktop environments
+    available for use such as Cinnamon, Enlightenment, GNOME, MATE, Xfce, LXDE, and
+    more.  Each different distro has a preferred DE that is usually preinstalled and
+    gives those operating systems unique colors and looks.  As you read about the
+    different DEs below, consider the fact that you can install any DE onto any distro. 
+    Some DE might appeal to you more because of its functions, and do not be afraid
+    to switch.
+
+
+                  GNOME is a graphical desktop environment described as an “easy and
+    elegant way to use your computer”.  In its 3rd iteration, GNOME is default on
+    Ubuntu.  The format is designed to be simple and stylish as well- GNOME’s only
+    downside is the moderately high system requirements and the lag it can cause on
+    older computers.  If you are coming straight from Windows, GNOME is a good stepping
+    stone to other desktop environments.
+
+
+                  Cinnamon is a popular desktop environment that utilizes many of
+    the applications that GNOME does- just in a more responsive and less flashy way. 
+    If you tried GNOME but it was a little too “heavy” and large, then Cinnamon may
+    rectify your situation.  You will still need moderately high system requirements
+    though, as it takes a good amount of computing power to run Cinnamon.
+
+
+                  Mate is the lighter Cinnamon.  The important features of GNOME and
+    Cinnamon are present, but the extras are thrown out to create a DE that can run
+    on slower computers.  Basically if you like the way GNOME-like desktops work,
+    you can choose between the 3 tiers of resource intensiveness with Mate being at
+    the bottom.
+
+
+                  LXDE is an abbreviation for “Lightweight X11 Desktop Environment”. 
+    It has low resource requirements, making it a good desktop environment for low-end
+    and older computers.  1GB PCs can run Linux with LXDE fairly easy, making it great
+    for reviving old computers.  The interface is simple and light as well.  Lubuntu
+    is a Ubuntu variant running LXDE, so if you are looking for a quick and speedy
+    OS that has the ease of use of Windows, LXDE can facilitate it.'
+  toc: []
+  trans: '
+
+
+    | Thunar | `thunar` 是 XFCE 的一部分，是另一种优雅且简单的文件交互方式。 |
+
+    | Midnight Commander | 纯文本文件浏览器。对于仅使用终端的硬核 Linux 用户来说，`midnight commander` 可以轻松显示文件。
+    |
+
+    | 办公生产力 | |
+
+    | LibreOffice Suite | 功能上与 Microsoft Office 相当。`LibreOffice` 包含了“Word”、“PowerPoint”、“Excel”等替代品。它是免费开源的，开发活跃中，并支持
+    Windows `.docx` 文件。由于这两个应用程序之间具有较好的兼容性，它仍然是与其他 Windows 电脑进行协作时的最佳办公软件。 |
+
+    | Abiword | 更加简单且功能较少的文档编辑器。`Abiword` 提供了整洁的界面和功能，使用户可以专注于文档写作。 |
+
+    | Evince 文档查看 | 最适合查看 PDF 的开源软件 (FOSS) 应用。 |
+
+    | Emacs | 一个“操作系统中的操作系统”，`Emacs` 是一个包含许多组件巨型文本编辑器。`Emacs` 具有极高的可定制性，对 Linux 用户非常有用。
+    |
+
+    | Vi | 另一个被广泛使用且可定制的“仅限 Linux”文本编辑器。`Vi` 专注于键盘快捷键和快速编辑，完全无需使用鼠标。`Vi` 和 `Emacs`
+    用户经常为了谁的文本编辑器更好而争论不休。 |
+
+    | Nano | Linux 下最简单的文本编辑器。只需输入 `nano` 即可在终端中启动它。非常适合进行简单的编辑。 |
+
+    | 其他优秀的 Linux 应用 | |
+
+    | Code::Blocks | 一种编程集成开发环境 (IDE)，`Code::Blocks` 可使用多种语言编写应用程序。Linux 被誉为优秀的程序员操作系统，而
+    `Code::Blocks` 足够自定义且灵活，可以满足许多需求。 |
+
+    | Audacity | `Audacity` 是一个开源音频录制程序。虽然远不如它的付费对手（如 `Ableton`、`FL Studio`），但 `Audacity`
+    具备了严肃音乐制作的功能。 |
+
+    | Telegram | 一种加密即时通讯应用，`telegram` 甚至可以向手机发送消息。该应用对于对即时通讯和安全感兴趣的人非常有用。 |
+
+    | Thunderbird 邮件 | 办公人员和拥有多个邮箱地址的人会对 `Microsoft Outlook` 的节省时间功能非常熟悉。`Thunderbird
+    Mail` 是 Linux 上的对应品，可以作为你所有邮箱地址的邮箱。 |
+
+    | qBittorrent | 从互联网下载大文件是一项令人沮丧的活动。直接下载服务器通常很慢，任何损坏的数据包都会破坏整个下载。Torrent 客户端通过提供一种从“种子”文件的“对等节点”分小块下载文件的方法解决了这个问题。Torrent
+    客户端基于点对点机制运行，这意味着你从不是从服务器下载，而是从其他用户那里下载。速度上的优势是惊人的，每当通过直接下载提供 torrent 文件时，经验丰富的
+    Linux 用户都应该使用 `qBittorent` 来下载。尽管，由于通过 `Pirate Bay` 和 `Kickass Torrents` 等公共追踪器发生了大量盗版行为，Torrent
+    最近带有一种负面标签。但正如我们所学到的，分享和下载开源软件实际上是被鼓励的，因此使用 `qBittorent` 实际上推动了 Linux 的事业。 |
+
+    | KeePass | 正如我们之后将看到的，Linux 的安全性是顶级的，但仍然容易受到常见的黑客攻击手段。强大的密码安全性有助于确保我们的在线账户安全。记住复杂的密码是一项艰巨的任务，但
+    `KeePass` 是一个很棒的管理器，可以帮助记住你在哪个网站使用了哪个密码。 |
+
+    | Kupfer | 启动器是一类旨在提高启动应用程序速度的程序。Windows 在启动应用程序方面具有优势，因为运行程序的方式非常简单——打开开始菜单并输入名称。在
+    Linux 中，我们可以使用像 `Kupfer` 这样的程序来实现相同的功能——按下热键并输入程序名称。如果你想提高效率，一定要尝试 `Kupfer`。 |
+
+    | Dropbox | 当文件系统介入时，在 Linux 和 Windows 电脑之间共享文件会迅速变得混乱。使用像 `Dropbox` 这样的应用可以完全避免这种困扰。通过
+    `dropbox`，会创建一个跨电脑同步的新文件夹，即使它们运行的是不同的操作系统。共享文件只需将文件拖放到文件夹中，非常简单。对于任何拥有多台电脑和多个操作系统的用户来说，这是必备的。
+    |
+
+
+    # Linux 如何工作
+
+
+    Linux 能够通过一套复杂的交互系统运行，允许内核和各种软件部分控制你电脑上的硬件。主要，Linux 仍然包含了我们已经习惯的基础文件、文件夹和程序。然而，差异出现在讨论
+    Windows 中无法更改的自定义部分。最重要的部分将在下面进行详细的技术讨论。
+
+
+    # 桌面环境
+
+
+    桌面环境是你实际使用图形化操作系统时在显示器上看到的内容。对于用户来说，通过操作和点击桌面环境来启动和运行软件，通常比在纯文本界面中输入命令要容易。桌面环境通常由图标、窗口、文件夹、壁纸、小部件和拖放功能组成。这些熟悉的功能在几乎所有的操作系统中都是标准配置。就像
+    Windows 有文件夹、窗口、图标和鼠标指针一样，Linux 也通过桌面环境 (DE) 拥有这些功能。有许多可用的桌面环境，如 `Cinnamon`、`Enlightenment`、`GNOME`、`MATE`、`Xfce`、`LXDE`
+    等。每个不同的发行版都有一个偏好的 DE，这些 DE 通常是预装的，并赋予这些操作系统独特的颜色和外观。当你阅读关于不同 DE 时，请考虑你可以在任何发行版上安装任何
+    DE。某些 DE 可能会因为其功能而更吸引你，不要害怕切换。
+
+
+    ## GNOME
+
+    `GNOME` 是一种图形化桌面环境，被描述为“使用电脑的简单且优雅的方式”。在第三代迭代中，`GNOME` 是 `Ubuntu` 的默认选择。它的格式设计得既简单又时尚——`GNOME`
+    唯一的缺点是系统要求中等，以及在旧电脑上可能会导致卡顿。如果你直接从 Windows 转过来，`GNOME` 是通其他桌面环境的好跳板。
+
+
+    ## Cinnamon
+
+    `Cinnamon` 是一种流行的桌面环境，它利用了许多 `GNOME` 使用的应用程序——只是了一种更有响应且不那么花哨的方式。如果你尝试过 `GNOME`
+    但觉得它太“重”且太大，那么 `Cinnamon` 可能会解决你的问题。不过，你仍然需要中等的系统要求，因为运行 `Cinnamon` 需要相当计算能力。
+
+
+    ## Mate
+
+    `Mate` 是轻量版的 `Cinnamon`。`GNOME` 和 `Cinnamon` 的重要功能都存在，但去除了额外功能以创建一个可以在较慢电脑上运行的
+    DE。基本上，如果你喜欢 `GNOME` 风格桌面的工作方式，你可以在三个资源密集等级之间选择，`Mate` 处于最低级。
+
+
+    ## LXDE
+
+    `LXDE` 是“轻量 X11 桌面环境”的缩写。它对资源的要求很低，使其成为低端和旧电脑的良好桌面环境。1GB 内存的电脑运行带有 `LXDE` 的 Linux
+    非常容易，非常适合复活旧电脑。它的界面同样简单轻量。`Lubuntu` 是一个运行 `LXDE` 的 `Ubuntu` 变体，如果你正在寻找一种具有 Windows
+    易用性的快速操作系统，`LXDE` 可以实现这一点。
+
+
+    '
+- fmt: "\nXfce is a fast, resource uninventive, and aesthetically pleasing desktop\
+    \ environment. It often competes with LXDE for most lightweight DE, but while\
+    \ LXDE focuses more on speed, Xfce retains both functionality and speed to create\
+    \ a well-rounded lightweight DE. The layout of Xfce is user friendly and responsive,\
+    \ in addition to being customizable.\n\nKDE is a DE for beefy computers. Distributions\
+    \ that include KDE by default are known for being feature-rich and customizable,\
+    \ albeit a little slow and laggy. KDE’s widgets will inspire anybody that enjoyed\
+    \ Windows Vista, and the flashy transitions are loads of fun for people that like\
+    \ to enjoy their computing experience. It is so customizable that often two users\
+    \ can be running KDE side-by-side, yet neither would know the other is running\
+    \ the same DE.\n\nConclusively, each distro will come with a desktop environment\
+    \ preinstalled. The DE controls the looks are interactions with the desktop screen,\
+    \ and they work together with the windowing system and window manager (explained\
+    \ below) to provide your experience. \n\n# The Windowing System\n\nLinux-based\
+    \ operating systems use certain techniques to provide users with interfaces for\
+    \ their devices. The graphical user interface (GUI), often follows a scheme known\
+    \ as the windowing system. A windowing system or window system is a type of GUI\
+    \ that implements windows, icon, menus, and pointers in such a way that is very\
+    \ familiar to modern users. There are two main windowing systems available for\
+    \ Linux based operating systems-the X Window System and Wayland. It is important\
+    \ to understand how these systems work, as they are often how we interact with\
+    \ our Linux computers.\n\nThe X Window System provides the basic framework for\
+    \ a graphical user interface environment and controls the drawing and moving of\
+    \ application windows by allowing the user to interact with a mouse and a keyboard.\
+    \ The X Window System does not mandate the graphical user interface, thus applications\
+    \ can have any number of visual styles. The way an application looks and feels\
+    \ is handled by the application itself, the X Window System just facilitates the\
+    \ drawing of it onto the screen.\n\nWayland is an alternative to X existing as\
+    \ free and open source software. Wayland aims to replace the X Window System with\
+    \ a more modern and simple way of drawing onto the screen. Like the X Window System,\
+    \ Wayland is available under the MIT License (another FOSS-inspired license).\
+    \ The group behind Wayland also develops a display compositor for Wayland called\
+    \ `Weston` (compositors are another complicated set of tools that facilitate drawing\
+    \ windows to the screen). In the Wayland Frequently asked questions the question\
+    \ is asked “What is wrong with X?” and the answer from the Wayland project is\
+    \ generally straightforward. X has feature-creep and contains remnants of features\
+    \ long gone. Because the code remains in X, the functionality must be supported\
+    \ in all released of X in the off-chance that somebody is using it in their system.\
+    \ Wayland takes pride in taking the outdated and depreciated code and making it\
+    \ entirely optional while keeping the required “core” scripts in top shape.\n\n\
+    Basically, Wayland wants to advance the technology behind X while leaving the\
+    \ antiquated design and functionality behind. A good comparison for this is Microsoft’s\
+    \ Internet Explorer and their newer Edge browser. Edge was created to improve\
+    \ upon IE’s concepts but leave the old design and legacy compatibility issues\
+    \ behind. Unless you are building your Linux OS from scratch, though, most every\
+    \ distribution has a windowing system already installed.\n\n# The Init\n\nIn Linux\
+    \ the `init`, with is short for initialization, is the very first process that\
+    \ is started during the boot sequence of the computer system. The `init` is a\
+    \ daemon process that the system will continue to run until the moment that it\
+    \ powered off. `init` is started by the kernel using a static filename- and if\
+    \ the kernel is not able to start the `init`, the system will experience a “kernel\
+    \ panic” resulting in a fatal system error. Ever since March of 2015, most Linux\
+    \ kernel based operating systems have adopted `systemd` as the default init, though\
+    \ this has led to a great deal of controversy due to its monolithic nature. The\
+    \ use of `systemd` was so controversial that members of the Debian Project quit\
+    \ and forked to create their own operating system called Devaun. `systemd` and\
+    \ inits are important and discussed because they can control how the kernel, applications,\
+    \ and users interact. An all-powerful and poorly written init such as `systemd`\
+    \ undermines the philosophical principals of freedom and openness that Linux promotes.\n\
+    \n# More with the Terminal\n\nUltimately the terminal will provide the most amount\
+    \ of functionality to your Linux computer. After learning the basics of Linux,\
+    \ you can truly begin to interact with your PC through the text interface. As\
+    \ an example, Linux excels over Windows due to the ease of updating software.\
+    \ While in a normal Windows installation you would have to uninstall a program\
+    \ and install the newest version every time there is an update, Linux allows you\
+    \ to update every program on the system at the same time with a simple command.\
+    \ Within the terminal (on our Ubuntu system) type the following command:\n\n```\n\
+    sudo apt-get update\n```\n\nObservational users will remember that `apt-get` is\
+    \ also the method through which we install new programs. However, for this we\
+    \ type `apt-get install`; for updating we type `apt-get update`.\n\nYou might\
+    \ have tried to install a program through terminal only to be told that the application\
+    \ does not exist. What that statement means is the program does not exist within\
+    \ the installed repositories. Repositories are data store-houses that contain\
+    \ link to applications. By default Ubuntu only has a few repositories, but the\
+    \ Linux user is free to install more. Here’s how:\n\n```\nsudo add-apt-repository\
+    \ \"repository here\"\n```\n\nRepositories open up lots of new software to try\
+    \ out, so be sure to find a list online of the best repositories and have experimenting.\
+    \ Starting programs from the terminal is another easy task, just type the name\
+    \ of the program. For instance to launch the GIMP software just type `gimp`. You\
+    \ can specify parameters in the command as well, such as which file to open. With\
+    \ `gimp dog.png` we can open gimp and dog.png directly and with only one command.\n\
+    \nIt would take nearly forever to explain every terminal command and how they\
+    \ are used, so below is a chart containing the most used intermediate commands.\n\
+    \n| Command | AKA | Use | Example |\n| :--- | :--- | :--- | :--- |\n| `ifconfig`\
+    \ | IF/IP configuration | To display a variety of network information. | `ifconfig`\
+    \ |\n| `df` | Disk Free | Gives information about the disk drives in the computer\
+    \ and how much free space they have left. | `df` |\n| `uname` | Unix Name | Give\
+    \ information about the computer that you are on. | `uname -a` |\n| `passwd` |\
+    \ Password | Typing just the command allows you to change your user password.\
+    \ Definitely do this on new systems that don’t have a password. | `passwd` |\n\
+    | `chmod` | Change File Mode Bits | Linux files have permissions that keep them\
+    \ secure. Files can have separate access levels for reading, writing, and executing.\
+    \ `chmod` changes the level of permissions for all. | `chmod 777 dog.png` |\n\
+    | `wget` | Web Get | Download files from the entered website through the terminal.\
+    \ This is great for downloading something without having to open up an entire\
+    \ web browser. | `wget http://crouton.net/crouton.png` |\n"
+  raw: '              Xfce is a fast, resource uninventive, and aesthetically pleasing
+    desktop environment. It often competes with LXDE for most lightweight DE, but
+    while LXDE focuses more on speed, Xfce retains both functionality and speed to
+    create a well-rounded lightweight DE.  The layout of Xfce is user friendly and
+    responsive, in addition to being customizable. 
+
+
+                  KDE is a DE for beefy computers.  Distributions that include KDE
+    by default are known for being feature-rich and customizable, albeit a little
+    slow and laggy.  KDE’s widgets will inspire anybody that enjoyed Windows Vista,
+    and the flashy transitions are loads of fun for people that like to enjoy their
+    computing experience.  It is so customizable that often two users can be running
+    KDE side-by-side, yet neither would know the other is running the same DE. 
+
+
+                  Conclusively, each distro will come with a desktop environment preinstalled. 
+    The DE controls the looks are interactions with the desktop screen, and they work
+    together with the windowing system and window manager (explained below) to provide
+    your experience. 
+
+
+    The Windowing System
+
+
+    Linux-based operating systems use certain techniques to provide users with interfaces
+    for their devices.  The graphical user interface (GUI), often follows a scheme
+    known as the windowing system. A windowing system or window system is a type of
+    GUI that implements windows, icon, menus, and pointers in such a way that is very
+    familiar to modern users.  There are two main windowing systems available for
+    Linux based operating systems-the X Window System and Wayland.  It is important
+    to understand how these systems work, as they are often how we interact with our
+    Linux computers.
+
+
+    The X Window System provides the basic framework for a graphical user interface
+    environment and controls the drawing and moving of application windows by allowing
+    the user to interact with a mouse and a keyboard.  The X Window System does not
+    mandate the graphical user interface, thus applications can have any number of
+    visual styles.  The way an application looks and feels is handled by the application
+    itself, the X Window System just facilitates the drawing of it onto the screen.
+
+
+    Wayland is an alternative to X existing as free and open source software.  Wayland
+    aims to replace the X Window System with a more modern and simple way of drawing
+    onto the screen.  Like the X Window System, Wayland is available under the MIT
+    License (another FOSS-inspired license).  The group behind Wayland also develops
+    a display compositor for Wayland called Weston (compositors are another complicated
+    set of tools that facilitate drawing windows to the screen).  In the Wayland Frequently
+    asked questions the question is asked “What is wrong with X?” and the answer from
+    the Wayland project is generally straightforward.  X has feature-creep and contains
+    remnants of features long gone.  Because the code remains in X, the functionality
+    must be supported in all released of X in the off-chance that somebody is using
+    it in their system.  Wayland takes pride in taking the outdated and depreciated
+    code and making it entirely optional while keeping the required “core” scripts
+    in top shape.
+
+
+    Basically, Wayland wants to advance the technology behind X while leaving the
+    antiquated design and functionality behind.  A good comparison for this is Microsoft’s
+    Internet Explorer and their newer Edge browser.  Edge was created to improve upon
+    IE’s concepts but leave the old design and legacy compatibility issues behind. 
+    Unless you are building your Linux OS from scratch, though, most every distribution
+    has a windowing system already installed.
+
+
+    The Init
+
+
+                  In Linux the init, with is short for initialization, is the very
+    first process that is started during the boot sequence of the computer system. 
+    The init is a daemon process that the system will continue to run until the moment
+    that it powered off. Init is started by the kernel using a static filename- and
+    if the kernel is not able to start the init, the system will experience a “kernel
+    panic” resulting in a fatal system error.  Ever since March of 2015, most Linux
+    kernel based operating systems have adopted systemd as the default init, though
+    this has led to a great deal of controversy due to its monolithic nature.  The
+    use of systemd was so controversial that members of the Debian Project quit and
+    forked to create their own operating system called Devaun.  Systemd and inits
+    are important and discussed because they can control how the kernel, applications,
+    and users interact.  An all-powerful and poorly written init such as systemd undermines
+    the philosophical principals of freedom and openness that Linux promotes.
+
+
+    More with the Terminal
+
+
+                  Ultimately the terminal will provide the most amount of functionality
+    to your Linux computer.  After learning the basics of Linux, you can truly begin
+    to interact with your PC through the text interface. As an example, Linux excels
+    over Windows due to the ease of updating software.  While in a normal Windows
+    installation you would have to uninstall a program and install the newest version
+    every time there is an update, Linux allows you to update every program on the
+    system at the same time with a simple command.  Within the terminal (on our Ubuntu
+    system) type the following command:
+
+
+    sudo apt-get update
+
+
+    Observational users will remember that apt-get is also the method through which
+    we install new programs.  However, for this we type apt-get install; for updating
+    we type apt-get update.By executing the command Ubuntu will search through its
+    repositories and retrieve update files for every application that is out of date. 
+    Very handy and extremely fast, apt-get update doesn’t even require the computer
+    be restarted when program are updated. 
+
+
+    You might have tried to install a program through terminal only to be told that
+    the application does not exist.  What that statement means is that the program
+    does not exist within the installed repositories.  Repositories are data store-houses
+    that contain link to applications.  By default Ubuntu only has a few repositories
+    installed, but the Linux user is free to install more. Here’s how:
+
+
+    sudo add-apt-repository “repository http here”
+
+
+                  Repositories open up lots of new software to try out, so be sure
+    to find a list online of the best repositories and have fun experimenting. 
+
+
+    Starting programs from the terminal is another easy task, just type the name of
+    the program.  For instance to launch the GIMP software just type gimp.  You can
+    specify parameters in the command as well, such as which file to open.  With gimp
+    dog.png we can open gimp and dog.png directly and with only one command.
+
+
+    It would take nearly forever to explain every terminal command and how they are
+    used, so below is a chart containing the most used intermediate commands.
+
+
+    | Command | AKA | Use | Example |
+
+
+    | ifconfig | IF/IP configuration | To display a variety of network information.
+    | ifconfig |
+
+
+    | df | Disk Free | Gives information about the disk drives in the computer and
+    how much free space they have left. | df |
+
+
+    | uname | Unix Name | Give information about the computer that you are on. | uname
+    -a |
+
+
+    | passwd | Password | Typing just the command allows you to change your user password. 
+    Definitely do this on new systems that don’t have a password. | passwd |
+
+
+    | chmod | Change File Mode Bits | Linux files have permissions that keep them
+    secure.  Files can have separate access levels for reading, writing, and executing. 
+    Chmod changes the level of permissions for all. | chmod 777 dog.png |
+
+
+    | wget | Web Get | Download files from the entered website through the terminal. 
+    This is great for downloading something without having to open up an entire web
+    browser. | wget http://crouton.net/crouton.png |'
+  toc: []
+  trans: '
+
+
+    Xfce 是一个快速、低资源占用且美观的桌面环境。它经常与 LXDE 竞争成为最轻量级的桌面环境（DE），但 LXDE 更加关注速度，而 Xfce 则兼顾了功能性和速度，创造了一个全能的轻量级
+    DE。Xfce 的布局对用户友好且响应迅速，并且具有可定制性。
+
+
+    KDE 是一个为高性能电脑设计的桌面环境。默认包含 KDE 的发行版以功能丰富和可定制而闻名，尽管运行起来有些缓慢和卡顿。KDE 的组件会引起任何喜欢 Windows
+    Vista 用户的共鸣，而华丽的过渡效果对于喜欢享受计算体验的人来说充满了乐趣。它的定制化程度之高，以至于两个用户同时运行 KDE 时，彼此甚至不知道对方也在运行同一个
+    DE。
+
+
+    总而言之，每个发行版都会预装一个桌面环境。DE 控制着桌面屏幕的外观和交互，它们与窗口系统和窗口管理器（下文将解释）共同工作，提供您的体验。
+
+
+    # 窗口系统
+
+
+    基于 Linux 的操作系统使用某些技术为用户提供设备界面。图形用户界面（GUI）通常遵循一种被称为窗口系统的方案。窗口系统是 GUI 的一种类型，它以一种现代用户非常熟悉的方式实现了窗口、图标、菜单和指针。基于
+    Linux 的操作系统主要提供两种窗口系统——X 窗口系统（X Window System）和 Wayland。了解这些系统如何工作是至关重要的，因为它们通常是我们与
+    Linux 计算机交互的方式。
+
+
+    X 窗口系统为图形用户界面环境提供了基础框架，并通过允许用户与鼠标和键盘交互，控制应用程序窗口的绘制和移动。X 窗口系统并不强制规定图形用户界面，因此应用程序可以拥有任意数量的视觉样式。应用程序的外观和感受由应用程序本身处理，X
+    窗口系统仅负责将其绘制到屏幕上。
+
+
+    Wayland 是 X 的一种替代方案，作为自由开源软件存在。Wayland 旨在用更现代、更简单的屏幕绘制方式取代 X 窗口系统。与 X 窗口系统一样，Wayland
+    在 MIT 许可证下发布（另一种受自由开源软件启发的许可证）。Wayland 背后的团体还为 Wayland 开发了一个名为 `Weston` 的显示合成器（合合成器是另一组用于方便将窗口绘制到屏幕上的复杂工具）。在
+    Wayland 的常见问题解答中，有人问过“X 有什么问题吗？”，Wayland 项目的回答通常很直接：X 存在功能膨胀问题，并包含了早已过时的功能的遗迹。由于代码仍然留在
+    X 中，为了万一有人在系统中使用它们，这些功能在 X 的所有发布版本中必须都支持。Wayland 自豪于将这些过时且废弃的代码变为完全可选，同时保持必要的“核心”脚本处于良好状态。
+
+
+    基本上，Wayland 想要在推进 X 背后的技术的同时，抛弃陈旧的设计和功能。一个很好的对比是微软的 Internet Explorer 和它们较新的 Edge
+    浏览器。Edge 的创建是为了改进 IE 的概念，但抛弃旧的设计和遗留兼容性问题。不过，除非你从零构建 Linux 操作系统，否则大多数发行版都已安装了窗口系统。
+
+
+    # Init
+
+
+    在 Linux 中，`init` 是初始化（initialization）的缩写，它是计算机系统启动过程中启动的进程。`init` 是一个守护进程，系统将一直运行它直到关机时刻。`init`
+    由内核使用静态文件名启动——如果内核无法启动 `init`，系统将发生“内核恐”（kernel panic），导致致命的系统错误。自 2015 年 3 月以来，大多数基于
+    Linux 内核的操作系统已采用 `systemd` 作为默认 init，尽管由于其单体性质引起了巨大争议。`systemd` 的使用争议之大导致 Debian
+    项目的成员退出并分支创建了名为 Devaun 的自己的操作系统。`systemd` 和 init 非常重要且备受讨论，因为它们可以控制内核、应用程序和用户如何交互。像
+    `systemd` 这样一个全能且编写糟糕的 init 破坏了 Linux 提倡的自由和开放的哲学原则。
+
+
+    # 更多终端
+
+
+    最终，终端将为你的 Linux 计算机提供最多的功能。在学习了 Linux 基础知识后，你可以真正开始通过文本界面与 PC 交互。例如，Linux 优于 Windows
+    的地方在于软件更新简单。在普通的 Windows 安装中，每次更新你都必须卸载程序并安装最新版本，而 Linux 允许你通过简单的命令同时更新系统上的所有程序。在终端（在我们的
+    Ubuntu 系统上）输入以下命令：
+
+
+    ```
+
+    sudo apt-get update
+
+    ```
+
+
+    观察丰富的用户会记得 `apt-get` 也是我们安装新程序的方法。然而，对于安装，我们输入 `apt-get install`；对于更新，我们输入 `apt-get
+    update`。
+
+
+    你可能尝试过通过终端安装程序，却被告知该应用程序不存在。这句话的意思是程序在已安装的仓库中不存在。仓库是包含应用程序链接的数据仓库。默认情况下，Ubuntu
+    只有几个仓库，但 Linux 用户可以自由安装更多。方法如下：
+
+
+    ```
+
+    sudo add-apt-repository "repository here"
+
+    ```
+
+
+    仓库开启了许多新软件可供尝试，因此请务必在网上找到最佳仓库列表并进行尝试。从终端启动程序是另一项易任务，只需输入程序名称即可。例如，要启动 GIMP 软件只需输入
+    `gimp`。你还可以在命令中指定参数，例如要打开哪个文件。通过 `gimp dog.png`，我们可以仅用一个命令打开 gimp 和 dog.png。
+
+
+    解释每一个终端命令及其用法几乎需要永远的时间，因此下面是一个包含常用中间命令的图表。
+
+
+    | 命令 | 别名 | 用途 | 示例 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | `ifconfig` | IF/IP 配置 | 显示各种网络信息。 | `ifconfig` |
+
+    | `df` | 磁盘空间 | 提供计算机中磁盘驱动器及其剩余可用空间的信息。 | `df` |
+
+    | `uname` | Unix 名称 | 提供有关你所用计算机的信息。 | `uname -a` |
+
+    | `passwd` | 密码 | 仅输入命令即可允许更改用户密码。在没有密码的新系统上务必这样做。 | `passwd` |
+
+    | `chmod` | 修改文件模式位 | Linux 文件具有权限以确保安全。文件对于读取、写入和执行可以有不同的访问级别。`chmod` 修改所有权限的级别。
+    | `chmod 777 dog.png` |
+
+    | `wget` | 网络下载 | 通过终端从指定的网站下载文件。这对于在不打开整个浏览器的情况下下载东西非常有用。 | `wget http://crouton.net/crouton.png`
+    |
+
+
+    '
+- fmt: "\n| Command | Description | Example |\n| :--- | :--- | :--- |\n| `lpr/lpq`\
+    \ | Linux Printing / Linux Print Queue | `lpr` will print the specified file to\
+    \ the default printer, while `lpq` will display the print queue and the status\
+    \ of print jobs. | `lpr test.txt` |\n| `grep` | Globally Search a Regular Expression\
+    \ and Print | Search the specified file for a specific text. | `grep test.txt\
+    \ Linux` |\n| `\\|` | Pipe | The straight line character `|` is not actually a\
+    \ command by itself, but it links two terminal commands together. The output of\
+    \ the first command is “piped” into the input of the next command. | `hostname\
+    \ -i | awk '{print $3}'` |\n\nFinally, learning the terminal can prove to be laborious-\
+    \ sometimes it seems as though Linux only wants you to memorize all of the commands.\
+    \  Fear not, for no command needs to be internalized save for one- man. Man is\
+    \ short for manual, and through the single command `man` you can learn about any\
+    \ other command on the system. `man cp` would pull up the manual page for copy,\
+    \ and `man grep` would remind you what that command is for.  The pages are long\
+    \ and detailed, full of examples, and sure to help you out next time you forget\
+    \ how `tar` even works.\n\n# Staying Safe on Linux\n\nComputer viruses are a plague\
+    \ that mostly effect Windows machines. This comes about because of the large market\
+    \ share that Windows has. It makes sense that if Windows is installed on 80% of\
+    \ computers than 80% of viruses and malware are going to be made for Windows.\
+    \ The fact holds true, which is why Apple and Linux computers rarely have to worry\
+    \ about viruses.  However, risks still exist within Linux. Viruses are possible,\
+    \ so use the following tips to stay safe.\n\n*   Do not download just any program.\
+    \ The default repositories are obviously safe, but if you are following an internet\
+    \ tutorial on how to install a program they could be leading you down a dangerous\
+    \ path.  Only install from trusted sources.\n*   There are plenty of “jokes” in\
+    \ Linux that can wreck your system. Because Linux offers full control to users,\
+    \ it often gives them opportunities to ruin their computers. The running joke\
+    \ in Windows is to “delete system32” (obviously do NOT try this!) and the Linux\
+    \ equivalent is to `sudo rm –rf /`. The command deletes EVERY file on the system,\
+    \ so never run it, even if told.\n*   Network security still exists, so just because\
+    \ you are running Linux doesn’t mean that your online passwords and accounts are\
+    \ any more protected.\n*   Update your system often. Updating applications and\
+    \ the entire distribution can eliminate vulnerabilities and bugs that give hackers\
+    \ an entry point into your PC.\n*   Backup your data often too. Linux has the\
+    \ most secure and reliable operating systems, but there is still the possibility\
+    \ that Linux could fail or its files could become corrupted. Regular backups mitigate\
+    \ risks.\n*   Use `sudo` sparingly. Linux remains so secure because every serious\
+    \ command requires root access to actually do damage, and malicious programs will\
+    \ never actually get the opportunity provided you do not give it to them. Windows\
+    \ remains vulnerable because most home users utilize the admin profile as their\
+    \ daily account. Malware and viruses can take advantage of the admin’s enhanced\
+    \ permissions to wreak havoc, but since you are never admin in Linux that risk\
+    \ is much smaller.\n\nIn conclusion, the average Linux user is already much safer\
+    \ than the average Windows user.  Despite this, there are still a few best practices\
+    \ that every computer user should follow, regardless of operating system.\n\n\
+    # Fun with Linux\n\nThere are a number of free games and other oddities you can\
+    \ play around with on your Linux machine, even if you are running just a Command\
+    \ Line Interface. Most of these will need to be installed through the terminal\
+    \ (remember to `sudo apt-get install programname`). BSD Games is an example of\
+    \ a package that has numerous games you can run from the command line, such as:\
+    \ `tetris-bsd` (a clone of the game Tetris), `worm` (similar to the old Nokia\
+    \ game “Snake”), `atc` (an air traffic control game), and many more.\n\nLiquid\
+    \ War is perhaps one of the most unique games available for Linux. In this game,\
+    \ you control a cursor followed by a cluster of pixelated liquid and try to assimilate\
+    \ other players liquid. The player with the most amount of liquid when the timer\
+    \ is up, or if the player assimilates all the other player’s liquid, wins. Liquid\
+    \ War won the Most Original Linux Game award from The Linux Game Tome in 2002,\
+    \ and was nominated for the Les Trophées du Libre in 2003.\n\n`Cowsay` is perhaps\
+    \ the pinnacle of killing time with your Linux machine. With this program you\
+    \ can make an ASCII art cow say a line of text with a speech bubble. For example,\
+    \ typing `cowsay hello world` into a terminal emulator or Command Line Interface\
+    \ will yield you the following.\n\n```\n_____________\n< hello world >\n-------------\n\
+    \         \\  ^__^\n         \\  (oo)\\_______\n              (__)\\      )\\\
+    /\\\n               ||----w |\n               ||      ||\n```\n\nYou can get more\
+    \ creative with this by “pipeing” another command into this called `Figlet`. Figlet\
+    \ is a program that can generate “fancy” text. You can achieve this by typing\
+    \ `figlet hello world | cowsay -n` into your terminal emulator.\n\n```\n_____________________________________________________\n\
+    /  _           _ _                           _     _  \\\n| | |__   ___| | | ___\
+    \  __      _____  _ __| | __| | |\n| | | '_ \\ / _ \\ | |/ _ \\  \\ \\ /\\ / _\
+    \ \\ \\| | | __ | | |\n| | | '_ \\ / _ \\ | |/ _ \\  \\ \\ \\ / / \\ \\ | | |\
+    \ _` | | |\n| | | |    | | | | | |  | | | | | | | | | | | | | | |\n| |_| |\\___|_|_|\\\
+    ___/           \\_/\\_/ \\___|_| \\____|||||/\n-------------------------------------\n\
+    \         \\  ^__^\n         \\  (oo)\\_______\n              (__)\\      )\\\
+    /\\\n               ||----w |\n               ||      ||\n```\n\nThe above ascii\
+    \ art is hopefully rendered correctly through your reading medium. If not, sorry\
+    \ for the scrambled lines!\n\nThere are many other fun things you can do with\
+    \ `Cowsay`, such as piping the `Fortune` or `Date` into it to make the cow tell\
+    \ you a bit of wisdom or give you the time.\n\nHistorically, these simple open-source\
+    \ games have been the highlight of gaming on Linux systems, but in the future,\
+    \ it seems that will change.  Some commercial games are available for Linux now\
+    \ as well, and in the future that number is set to increase. `Minecraft` is one\
+    \ extremely popular proprietary game available for Linux systems, due to the fact\
+    \ that the game is written in the programming language `Java` and is thus cross\
+    \ platform.  The digital distribution platform, `Steam`, is even available for\
+    \ Linux today.  Gabe Newell, the man in charge of the company, `Valve`, that is\
+    \ responsible for `Steam`, described Microsoft’s Windows 8 as “a catastrophe for\
+    \ everyone in the PC space”, and thus is making Linux much more of an accessible\
+    \ platform for the future of PC gaming.\n\n`Half Life 2`, `Portal`, `Dota 2`,\
+    \ `Limbo`, `Psychonauts`, `Saints Row IV`, `Tomb Raider`, and `Danganrompa 2:\
+    \ Goodbye Despair` are some examples of mainstream games available for Linux through\
+    \ `Steam`.\n"
+  raw: "| lpr/lpq | Linux Printing / Linux Print Queue | Lpr will print the specified\
+    \ file to the default printer, while lpq will display the print queue and the\
+    \ status of print jobs. | lpr test.txt |\n\n| Grep | Globally Search a Regular\
+    \ Expression and Print | Search the specified file for a specific text.  | grep\
+    \ test.txt Linux |\n\n| &#124; | Pipe | The straight line character “&#124;” is\
+    \ not actually a command by itself, but it links two terminal commands together. \
+    \ The output of the first command is “piped” into the input of the next command.\
+    \ | hostname -i &#124; awk '{print $3}' |\n\nFinally, learning the terminal can\
+    \ prove to be laborious- sometimes it seems as though Linux only wants you to\
+    \ memorize all of the commands.  Fear not, for no command needs to be internalized\
+    \ save for one- man. Man is short for manual, and through the single command you\
+    \ can learn about any other command on the system. Man cp would pull up the manual\
+    \ page for copy, and man grep would remind you what that command is for.  The\
+    \ pages are long and detailed, full of examples, and sure to help you out next\
+    \ time you forget how tar even works.\n\nStaying Safe on Linux\n\n             \
+    \ Computer viruses are a plague that mostly effect Windows machines.  This comes\
+    \ about because of the large market share that Windows has.  It makes sense that\
+    \ if Windows is installed on 80% of computers than 80% of viruses and malware\
+    \ are going to be made for Windows.  The fact holds true, which is why Apple and\
+    \ Linux computers rarely have to worry about viruses.  However, risks still exist\
+    \ within Linux.  Viruses are possible, so use the following tips to stay safe.\n\
+    \n*   Do not download just any program.  The default repositories are obviously\
+    \ safe, but if you are following an internet tutorial on how to install a program\
+    \ they could be leading you down a dangerous path.  Only install from trusted\
+    \ sources.\n\n*   There are plenty of “jokes” in Linux that can wreck your system. \
+    \ Because Linux offers full control to users, it often gives them opportunities\
+    \ to ruin their computers.  The running joke in Windows is to “delete system32”\
+    \ (obviously do NOT try this!) and the Linux equivalent is to “sudo rm –rf /”. \
+    \ The command deletes EVERY file on the system, so never run it, even if told.\n\
+    \n*   Network security still exists, so just because you are running Linux doesn’t\
+    \ mean that your online passwords and accounts are any more protected. \n\n* \
+    \  Update your system often.  Updating applications and the entire distribution\
+    \ can eliminate vulnerabilities and bugs that give hackers an entry point into\
+    \ your PC.\n\n*   Backup your data often too.  Linux has the most secure and reliable\
+    \ operating systems, but there is still the possibility that Linux could fail\
+    \ or its files could become corrupted.  Regular backups mitigate risks.\n\n* \
+    \  Use sudo sparingly.  Linux remains so secure because every serious command\
+    \ requires root access to actually do damage, and malicious programs will never\
+    \ actually get the opportunity provided you do not give it to them.  Windows remains\
+    \ vulnerable because most home users utilize the admin profile as their daily\
+    \ account.  Malware and viruses can take advantage of the admin’s enhanced permissions\
+    \ to wreak havoc, but since you are never admin in Linux that risk is much smaller.\n\
+    \nIn conclusion, the average Linux user is already much safer than the average\
+    \ Windows user.  Despite this, there are still a few best practices that every\
+    \ computer user should follow, regardless of operating system.\n\nFun with Linux\n\
+    \nThere are a number of free games and other oddities you can play around with\
+    \ on your Linux machine, even if you are running just a Command Line Interface. \
+    \ Most of these will need to be installed through the terminal (remember to sudo\
+    \ apt-get install programname).  BSD Games is an example of a package that has\
+    \ numerous games you can run from the command line, such as: tetris-bsd (a clone\
+    \ of the game Tetris), worm (similar to the old Nokia game “Snake”), atc (an air\
+    \ traffic control game), and many more.\n\n Liquid War is perhaps one of the most\
+    \ unique games available for Linux.  In this game, you control a cursor followed\
+    \ by a cluster of pixelated liquid and try to assimilate other players liquid. \
+    \ The player with the most amount of liquid when the timer is up, or if the player\
+    \ assimilates all the other player’s liquid, wins. Liquid War won the Most Original\
+    \ Linux Game award from The Linux Game Tome in 2002, and was nominated for the\
+    \ Les Trophées du Libre in 2003.\n\n              Cowsay is perhaps the pinnacle\
+    \ of killing time with your Linux machine.  With this program you can make an\
+    \ ASCII art cow say a line of text with a speech bubble.  For example, typing\
+    \ “cowsay hello world” into a terminal emulator or Command Line Interface will\
+    \ yield you the following.\n\n_____________\n\n< hello world >\n\n-------------\n\
+    \n        \\   ^__^\n\n         \\  (oo)\\_______\n\n            (__)\\      \
+    \ )\\/\\\n\n                ||----w |\n\n                ||     ||\n\nYou can\
+    \ get more creative with this by “pipeing” another command into this called Figlet.\
+    \ Figlet is a program that can generate “fancy” text.  You can achieve this by\
+    \ typing “figlet hello world | cowsay -n” into your terminal emulator.\n\n_____________________________________________________\n\
+    \n/  _          _ _                            _     _  \\\n\n| | |__   ___| |\
+    \ | ___   __      _____  _ __| | __| | |\n\n| | '_ \\ / _ \\ | |/ _ \\  \\ \\\
+    \ /\\ / / _ \\| '__| |/ _` | |\n\n| | | | |  __/ | | (_) |  \\ V  V / (_) | | \
+    \ | | (_| | |\n\n| |_| |_|\\___|_|_|\\___/    \\_/\\_/ \\___/|_|  |_|\\__,_| |\n\
+    \n\\                                                     /\n\n-----------------------------------------------------\n\
+    \n        \\   ^__^\n\n         \\  (oo)\\_______\n\n            (__)\\      \
+    \ )\\/\\\n\n                ||----w |\n\n                ||     ||\n\nThe above\
+    \ ascii art is hopefully rendered correctly through your reading medium.  If not,\
+    \ sorry for the scrambled lines!\n\nThere are many other fun things you can do\
+    \ with Cowsay, such as piping the command Fortune or Date into it to make the\
+    \ cow tell you a bit of wisdom or give you the time.\n\nHistorically, these simple\
+    \ open-source games have been the highlight of gaming on Linux systems, but in\
+    \ the future, it seems that will change.  Some commercial games are available\
+    \ for Linux now as well, and in the future that number is set to increase. Minecraft\
+    \ is one extremely popular proprietary game available for Linux systems, due to\
+    \ the fact that the game is written in the programming language Java and is thus\
+    \ cross platform.  The digital distribution platform, Steam, is even available\
+    \ for Linux today.  Gabe Newell, the man in charge of the company, Valve, that\
+    \ is responsible for Steam described Microsoft’s Windows 8 as “a catastrophe for\
+    \ everyone in the PC space”, and thus is making Linux much more of an accessible\
+    \ platform for the future of PC gaming.\n\nHalf Life 2, Portal, Dota 2, Limbo,\
+    \ Psychonauts, Saints Row IV, Tomb Raider, and Danganrompa 2: Goodbye Despair\
+    \ are some examples of mainstream games available for Linux through Steam."
+  toc: []
+  trans: "\n\n| 命令 | 说明 | 示例 |\n| :--- | :--- | :--- |\n| `lpr/lpq` | Linux 打印 / Linux\
+    \ 打印队列 | `lpr` 将指定文件打印到默认打印机，而 `lpq` 将显示打印队列和作业状态。 | `lpr test.txt` |\n| `grep`\
+    \ | 全局搜索正则表达式并打印 | 在指定文件中搜索特定文本。 | `grep test.txt Linux` |\n| `\\|` | 管道 | 直线字符\
+    \ `|` 本身并不是一个命令，但它将两个终端命令连接在一起。第一个命令的输出被“管道”到下一个命令的输入中。 | `hostname -i | awk '{print\
+    \ $3}'` |\n\n最后，学习终端可能会证明是费力的——有时 Linux 似乎只想让你记住所有的命令。不要害怕，除了 `man` 命令之外，没有哪个命令需要内化的。`man`\
+    \ 是 manual（手册）的缩写，通过这条命令 `man`，你可以学习系统上的任何其他命令。`man cp` 会调出复制命令的手册页，而 `man grep`\
+    \ 会提醒你该命令的用途。这些页面很长且详细，充满了示例，一定能在你下次忘记 `tar` 到底如何工作时为你提供帮助。\n\n# 在 Linux 上保持安全\n\
+    \n计算机病毒主要是影响 Windows 机器的瘟疫。这是由于 Windows 拥有巨大的市场份额。如果 Windows 安装在 80% 的电脑上，那么 80%\
+    \ 的病毒和恶意软件就会为 Windows 制作，这是合理的。事实确实如此，这就是为什么 Apple 和 Linux 电脑很少需要担心病毒。然而，Linux\
+    \ 内部仍然存在风险。病毒是有可能的，请使用以下技巧来保持安全。\n\n*   不要随意下载任何程序。默认仓库显然是安全的，但如果你正在遵循互联网上的教程来安装程序，它们可能会引导你走向危险的道路。仅从受信任的源安装。\n\
+    *   Linux 中有很多可以毁坏你系统的“笑话”。因为 Linux 为用户提供了完全控制权，它经常给他们破坏电脑的机会。Windows 中盛行的笑话是“删除\
+    \ system32”（显然千万不要尝试！），而 Linux 对应的操作是执行 `sudo rm –rf /`。该命令会删除系统上的**每一个**文件，所以永远不要运行它，即使被要求这么做也不行。\n\
+    *   网络安全仍然存在，所以仅仅因为你在运行 Linux，并不意味着你的在线密码和账户就更受保护。\n*   经常更新你的系统。更新应用程序和整个发行版可以消除让黑客进入你\
+    \ PC 的漏洞和错误。\n*   也要经常备份你的数据。Linux 拥有最安全、最可靠的操作系统，但仍然存在 Linux 故障或其文件损坏的可能性。定期备份可以降低风险。\n\
+    *   谨慎使用 `sudo`。Linux 之所以保持如此安全，是因为每一条严重的命令都需要 root 权限才能造成实际伤害，只要你不给它机会，恶意程序永远无法获得机会。Windows\
+    \ 仍然很脆弱，是因为大多数家庭用户使用管理员配置作为他们的日常账户。恶意软件和病毒可以利用管理员增强的权限来大作可为，但由于你在 Linux 中永远不是管理员，这种风险要小得多。\n\
+    \n结论，普通的 Linux 用户已经比普通的 Windows 用户安全得多了。尽管如此，无论使用什么操作系统，仍然有每位电脑用户应该遵循的一些最佳实践。\n\
+    \n# 玩转 Linux\n\n在你的 Linux 机器上，你可以玩许多免费游戏和其他奇玩意，即使你运行的仅仅是命令行界面。其中大部分内容需要通过终端安装（记住使用\
+    \ `sudo apt-get install programname`）。BSD Games 是一个示例包，包含许多你可以从命令行运行的游戏，例如：`tetris-bsd`（俄罗斯俄罗斯克隆版）、`worm`（类似于老诺基亚游戏“吃蛇”）、`atc`（一种航空交通控制游戏）等等。\n\
+    \nLiquid War 可能是 Linux 上可用的最独特的游戏之一。在游戏中，你控制一个跟随像素化液体簇的光标，并试图同化其他玩家的液体。计时器结束或玩家同化所有其他玩家的液体时，液体最多的玩家获胜。Liquid\
+    \ War 在 2002 年获得了 Linux Game Tome 出的“最原创 Linux 游戏奖”，并在 2003 年入选了 Les Trophées\
+    \ du Libre。\n\n`Cowsay` 也许利用 Linux 机器消磨时间的巅峰。通过这个程序，你可以让一只 ASCII 艺术牛通过气泡说出一行文本。例如，在终端模拟器或命令行界面中输入\
+    \ `cowsay hello world` 将得到以下结果。\n\n```\n_____________\n< hello world >\n-------------\n\
+    \         \\  ^__^\n         \\  (oo)\\_______\n              (__)\\      )\\\
+    /\\\n               ||----w |\n               ||      ||\n```\n\n你可以通过将另一个名为 `Figlet`\
+    \ 的命令“管道”到这里来让它更具创意。Figlet 是一个可以生成“花哨”文本的程序。你可以通过在终端模拟器中输入 `figlet hello world\
+    \ | cowsay -n` 来实现。\n\n```\n_____________________________________________________\n\
+    /  _           _ _                           _     _  \\\n| | |__   ___| | | ___\
+    \  __      _____  _ __| | __| | |\n| | | '_ \\ / _ \\ | |/ _ \\  \\ \\ /\\ / _\
+    \ \\ \\| | | __ | | |\n| | | '_ \\ / _ \\ | |/ _ \\  \\ \\ \\ / / \\ \\ | | |\
+    \ _` | | |\n| | | | |    | | | | | |  | | | | | | | | | | | | | | |\n| |_| |\\\
+    ___|_|_|\\___/           \\_/\\_/ \\___|_| \\____|||||/\n-------------------------------------\n\
+    \         \\  ^__^\n         \\  (oo)\\_______\n              (__)\\      )\\\
+    /\\\n               ||----w |\n               ||      ||\n```\n\n希望上面的 ascii 艺术通过你的阅读媒介正确渲染。如果没有，很抱歉显示错乱的行了！\n\
+    \n你还可以做很多关于 `Cowsay` 的其他趣事，例如将 `Fortune` 或 `Date` 传给它，让牛给你讲一些智慧或告诉你时间。\n\n从历史角度来看，这些简单的开源游戏一直是\
+    \ Linux 系统上游戏的亮点，但在未来，这似乎会发生变化。现在 Linux 也有一些商业游戏可用，未来这个数量还将增加。`Minecraft` 是 Linux\
+    \ 系统上一个极其流行的专有游戏，因为该游戏是用 `Java` 语言编写的，因此是跨平台的。数字分发平台 `Steam` 今天也已适用于 Linux。负责\
+    \ `Steam` 的公司 `Valve` 的负责人 Gabe Newell 将微软的 Windows 8 描述为“PC 领域所有人的灾难”，因此正在让 Linux\
+    \ 成为未来 PC 游戏一个更易获取的平台。\n\n`Half Life 2`、`Portal`、`Dota 2`、`Limbo`、`Psychonauts`、`Saints\
+    \ Row IV`、`Tomb Raider` 和 `Danganrompa 2: Goodbye Despair` 是通过 `Steam` 在 Linux\
+    \ 上提供的的一些主流游戏示例。\n\n"
+- fmt: '
+
+    There are a number of home video game console emulators available freely available
+    for Linux, such as `PCSX2`, `ePSXe`, `Dolphin`, `FCEUX`, and more. `FCEUX` is
+    a free and open source Nintendo Entertainment System emulator. It is also capable
+    of emulating the Japanese’s Family Computer Disk System. `FCEUX` was resurrected
+    from the abandoned `FCE` and `FCE Ultra` by Anthony Giorgio and Mark Doliner.
+    `FCEUX` includes features such as debugging, gameplay video recording, and ROM
+    hacking tools. The emulator, `ePSXe`, is a Sony Playstation emulator. It stands
+    for “enhanced PSX emulator”. The first release of `ePSXe` was on October the 14th
+    2000. The emulator was later released for the Android mobile operating system
+    on August the 30th 2012. When `ePSXe` `1.6.0` was released rumors were soon started
+    that the development for the emulator has stopped. These rumors claimed that the
+    development had stopped due to a loss of the original source code due to a hard
+    disk failure. On April 5th of 2008, the developers of the emulator `ePSXe` made
+    a public statement revealing that development would continue. On May 24th 2008,
+    `ePSXe` version `1.7.0` was released. What makes `ePSXe` unique is the ability
+    to control and replace the plugins that it uses. The graphical processing unit
+    plugins can rung with `OpenGL` or the `Glide API`. The sound processing unit plugin
+    emulates the sounds and music of the games. There is a CD-ROM plugin as well as
+    an Input plugin. Retro Gamer stated that `ePSXe` is “the best free PlayStation
+    emulator”.
+
+
+    `PCSX2` Is a Sony PlayStation 2 emulator. It is free and open source software
+    under the GNU General Public License. Like `ePSXe`, `PCSX2`s architecture supports
+    plugins. Development for this emulator began in the year of 2001, led by programmers
+    known as `Linuzappz` and `Shadow`. It is reported to be compatible with 94.9%
+    of the 2,586 tested Sony PlayStation 2 video games. Performance is usually bottle
+    necked by the central processing unit of the system that is running off of, as
+    emulating hardware as complicated as a PlayStation 2 is extremely CPU intensive.
+    The emulator has been described by Matthew Humphries of Geek.com as “an impressive
+    piece of work".
+
+
+    `Dolphin` is a free and open source Nintendo GameCube and Nintendo Wii emulator.
+    `Dolphin` was released in September of the year 2003 by the programmer `Henrik
+    Rydgård` and the programmer know as `F|RES`. The `Dolphin` emulator was officially
+    discontinued in the year of 2004, but was revived by the developers in the year
+    of 2005. `Dolphin` became a free and open source project on the date of July the
+    13th of the year 2008. The source code was released publicly on an SVN repository
+    on Google Code under the `GPLv2` licenses. By the month of April of the year 2009,
+    most of the commercial GameCube games and commercial Wii games could be fully
+    played with minimal problems. The `Dolphin` emulator has been very well received,
+    for example, many prefer the look of The Legend of Zelda: The Windwaker being
+    ran by the `Dolphin` emulator over the Nintendo Wii U version of the game.
+
+
+    `DeSmuME` is a free and open source Nintendo DS emulator. The original emulator
+    was in French, but was later translated into English and other languages.
+
+
+    Gaming is wide and varied on Linux thanks to emulators like those mentioned above.
+    Taking the time to set them up correctly is difficult, though, so be sure to read
+    up online on the correct way to play older console games on Linux. With emulators,
+    ROMs, Steam, and other proprietary games released on Linux, the computer users
+    never need to be bored. Previously only Windows had good video game support, but
+    now Linux is joining the ranks of gamers.
+
+
+    # Advanced Concepts in Linux
+
+
+    ## The File Structure
+
+
+    In Linux-based operating systems there are two kinds of major partitions: the
+    data partition, and the swap partition. The data partition includes the normal
+    Linux system data and personal user data as well. The swap partition is an expansion
+    of the computer systems physical memory (`RAM`). Most Linux operating systems
+    require both partitions to run efficiently.
+
+
+    Swap is an extension of `RAM`. When programs need extra space, the swap partition
+    dedicates some of its data to the program. The Windows equivalent of this is the
+    `pagefile`.
+
+
+    The default filesystem in Linux is `ext4`, and drives formatted in Linux will
+    usually use it. This is not beneficial when sharing data back to a Windows system,
+    because Windows cannot normally read `ext4`.
+
+
+    Below are the folders found on the root of a drive in Linux. An important feature
+    of Linux distros is that every object on the computer is a file. This means that
+    every peripheral, piece of data, hardware component, and terminal command is represented
+    as a file in Linux. Accordingly, everything has to be stored somewhere, and the
+    folders below contain the entirety of the computer.
+
+
+    | Linux File System | Description |
+
+    | :--- | :--- |
+
+    | `Bin` | This is where shared programs are located. |
+
+    | `Boot` | Where boot files, such as the kernel and boot loader are stored. |
+
+    | `Dev` | Has files that point to CPU hardware. The files in here can be referenced
+    when you are working with the CPU |
+
+    | `Etc` | Config files and settings. |
+
+    | `Home` | User’s data is stored here. |
+
+    | `Initrd` | Used for booting. |
+
+    | `Lib` | Library files, which give functionality to applications are in. |
+
+    | `Lost+found` | `ext4` is a journaling file system. Any files that become corrupt
+    can potentially be saved here. |
+
+    | `Misc` | When removable storage are plugged in devices can be accessed here.
+    |
+
+    | `Mnt` | Mnt stands for mount, and this directory is how you interact with mounted
+    hardware. |
+
+    | `Net` | Where network folders are typically mounted. |
+
+    | `Proc` | Resource accessed by programs |
+
+    | `Sbin` | Where system commands are located. |
+
+    | `Tmp` | A temporary directory. |
+
+    | `Usr` | Where user programs are installed |
+
+    | `var` | For log files |
+
+
+    ## WINE
+
+
+    An astute user might have noticed that Linux does not run exe files. For Linux
+    users that refuse to give up certain Windows programs, `WINE` can help. `WINE`
+    is a ”compatibility layer” capable of running Microsoft Windows files in order
+    to “emulate” applications as if they were running in Windows. For Linux users
+    this means that you can run Linux without fully giving up Windows. `WINE` is not
+    a replacement for running Windows programs, though. To install `WINE`, the following
+    commands must be run:
+
+
+    ```
+
+    sudo apt-get-repository ppa:ubuntu-wine/ppa
+
+    sudo apt-get update
+
+    sudo apt-get install -y wine1.7
+
+    ```
+
+
+    And to run an exe it must be downloaded. Using a terminal navigate to the download
+    location and type `wine programname.exe`.
+
+    '
+  raw: 'There are a number of home video game console emulators available freely available
+    for Linux, such as PCSX2, ePSXe, Dolphin, FCEUX, and more.  FCEUX is a free and
+    open source Nintendo Entertainment System emulator.  It is also capable of emulating
+    the Japanese’s Family Computer Disk System.  FCEUX was resurrected from the abandoned
+    FCE and FCE Ultra by Anthony Giorgio and Mark Doliner.  FCEUX includes features
+    such as debugging, gameplay video recording, and ROM hacking tools.  The emulator,
+    ePSXe, is a Sony Playstation emulator.  It stands for “enhanced PSX emulator”. 
+    The first release of ePSXe was on October the 14th 2000.  The emulator was later
+    released for the Android mobile operating system on August the 30th 2012.  When
+    ePSXe 1.6.0 was released rumors were soon started that the development for the
+    emulator has stopped.  These rumors claimed that the development had stopped due
+    to a loss of the original source code due to a hard disk failure.  On April 5th
+    of 2008, the developers of the emulator ePSXe made a public statement revealing
+    that development would continue.  On May 24th 2008, ePSXe version 1.7.0 was released. 
+    What makes ePSXe unique is the ability to control and replace the plugins that
+    it uses.  The graphical processing unit plugins can rung with OpenGL or the Glide
+    API.  The sound processing unit plugin emulates the sounds and music of the games. 
+    There is a CD-ROM plugin as well as an Input plugin.  Retro Gamer stated that
+    ePSXe is “the best free PlayStation emulator”.
+
+
+    PCSX2 Is a Sony PlayStation 2 emulator.  It is free and open source software under
+    the GNU General Public License.  Like ePSXe, PCSX2s architecture supports plugins. 
+    Development for this emulator began in the year of 2001, led by programmers known
+    as Linuzappz and Shadow.  It is reported to be compatible with 94.9% of the 2,586
+    tested Sony PlayStation 2 video games.  Performance is usually bottle necked by
+    the central processing unit of the system that is running off of, as emulating
+    hardware as complicated as a PlayStation 2 is extremely CPU intensive.  The emulator
+    has been described by Matthew Humphries of Geek.com as “an impressive piece of
+    work".
+
+
+    Dolphin is a free and open source Nintendo GameCube and Nintendo Wii emulator. 
+    Dolphin was released in September of the year 2003 by the programmer Henrik Rydgård
+    and the programmer know as F|RES.  The Dolphin emulator was officially discontinued
+    in the year of 2004, but was revived by the developers in the year of 2005.  Dolphin
+    became a free and open source project on the date of July the 13th of the year
+    2008.  The source code was released publicly on an SVN repository on Google Code
+    under the GPLv2 licenses.  By the month of April of the year 2009, most of the
+    commercial GameCube games and commercial Wii games could be fully played with
+    minimal problems.  The Dolphin emulator has been very well received, for example,
+    many prefer the look of The Legend of Zelda: The Windwaker being ran by the Dolphin
+    emulator over the Nintendo Wii U version of the game.
+
+
+    DeSmuME is a free and open source Nintendo DS emulator.  The original emulator
+    was in French, but was later translated into English and other languages. 
+
+
+    Gaming is wide and varied on Linux thanks to emulators like those mentioned above. 
+    Taking the time to set them up correctly is difficult, though, so be sure to read
+    up online on the correct way to play older console games on Linux.  With emulators,
+    ROMs, Steam, and other proprietary games released on Linux, the computer users
+    never need to be bored.  Previously only Windows had good video game support,
+    but now Linux is joining the ranks of gamers.
+
+
+    Advanced Concepts in Linux
+
+
+    The File Structure
+
+
+                  In Linux-based operating systems there are two kinds of major partitions:
+    the data partition, and the swap partition.  The data partition includes the normal
+    Linux system data and personal user data as well.  The swap partition is an expansion
+    of the computer systems physical memory (RAM).  Most Linux operating systems require
+    both partitions to run efficiently. 
+
+
+    Swap is an extension of RAM.  When programs need extra space, the swap partition
+    dedicates some of its data to the program.  The Windows equivalent of this is
+    the pagefile. 
+
+
+    The default filesystem in Linux is ext4, and drives formatted in Linux will usually
+    use it.  This is not beneficial when sharing data back to a Windows system, because
+    Windows cannot normally read ext4.
+
+
+    Below are the folders found on the root of a drive in Linux.  An important feature
+    of Linux distros is that every object on the computer is a file.  This means that
+    every peripheral, piece of data, hardware component, and terminal command is represented
+    as a file in Linux.  Accordingly, everything has to be stored somewhere, and the
+    folders below contain the entirety of the computer.
+
+
+    | Linux File System |
+
+
+    | Bin | This is where shared programs are located.  |
+
+
+    | Boot | Where boot files, such as the kernel and boot loader are stored.  |
+
+
+    | Dev | Has files that point to CPU hardware.  The files in here can be referenced
+    when you are working with the CPU |
+
+
+    | Etc | Config files and settings. |
+
+
+    | Home | User’s data is stored in home.  When a user creates a file in their documents,
+    desktop, or downloads, it can be found within this folder.  The Windows equivalent
+    is “C:/Users” |
+
+
+    | Initrd | Not on all distros.  Used for booting. |
+
+
+    | Lib | Library files, which give functionality to applications are in here. |
+
+
+    | Lost+found | Ext4 is a journaling file system.  In short, this means that any
+    files that become corrupt can potentially be saved and moved to this folder. |
+
+
+    | Misc | When removable storage are plugged in the devices can be accessed here.
+    |
+
+
+    | Mnt | Mnt stands for mount, and this directory is how you interact with mounted
+    hardware. |
+
+
+    | Net | This is where network folders are typically mounted. |
+
+
+    | Proc | A resource accessed by programs relating to the file system. |
+
+
+    | Sbin | The place where system terminal commands are located.  |
+
+
+    | Tmp | A temporary directory. |
+
+
+    | Usr | Where user programs are installed |
+
+
+    | var | For log files |
+
+
+      For beginner users the home directory is the most important.  Each user created
+    gets a folder in home, and within that folder is where the familiar documents,
+    downloads, music, videos, and desktop folders are created.  If you are trying
+    to find your files, there is a good chance they are located there.  The rest of
+    the root folders are usually only used by applications and Linux professionals,
+    but it is still good practice to know what is on your device.
+
+
+    WINE
+
+
+                  An astute user might have noticed that Linux does not run exe files. 
+    For Linux users that refuse to give up certain Windows programs, WINE can help. 
+    WINE is a ”compatibility layer” capable of running Microsoft Windows files in
+    order to “emulate” applications as if they were running in Windows.  For Linux
+    users this means that you can run Linux without fully giving up Windows.  WINE
+    is not a replacement for running Windows programs, though.  To install WINE, the
+    following commands must be run:
+
+
+    sudo apt-get-repository ppa:ubuntu-wine/ppa
+
+
+    sudo apt-get update
+
+
+    sudo apt-get install –y wine1.7
+
+
+    And to run an exe it must be downloaded.  Using a terminal navigate to the download
+    location and type wine programname.exe.  There is certainly a large number of
+    configuration options (winecfg) to sort through, and configuring a particular
+    program to run perfectly in WINE is a long process.  The huge difficulty and confusing
+    nature of WINE makes it a tough program to use, but it is a great way to use parts
+    of Windows that Linux just doesn’t provide.  For those wishing to fully immerse
+    themselves in Linux, though, WINE is not recommended at all.  Try installing a
+    FOSS alternative to the program you are trying to run instead.
+
+
+    Building your own Linux OS from Scratch'
+  toc: []
+  trans: '
+
+
+    有很多免费供 Linux 使用的家用游戏主机模拟器，例如 `PCSX2`、`ePSXe`、`Dolphin`、`FCEUX` 等。`FCEUX` 是免费开源的任天堂娱乐系统（NES）模拟器。它还能模拟日本的红白机光（Family
+    Computer Disk System）。`FCEUX` 由 Anthony Giorgio 和 Mark Doliner 从废弃的 `FCE` 和 `FCE
+    Ultra` 中复兴的。`FCEUX` 包含了调试、游戏视频录制和 ROM 破解工具等功能。模拟器 `ePSXe` 是一个 Sony Playstation
+    模拟器。它的意思是“增强型 PSX 模拟器”。`ePSXe` 第一版本发布于 2000 年 10 月 14 日。该模拟器后来于 2012 年 8 月 30
+    日发布了 Android 移动操作系统。当 `ePSXe` `1.6.0` 发布时，很快就出现了关于该模拟器开发已停止的传言。这些传言声称由于硬盘故障导致原始源代码丢失，开发已经停止。2008
+    年 4 月 5 日，模拟器 `ePSXe` 的开发者发布了公共声明，透露开发将继续。2008 年 5 月 24 日，`ePSXe` `1.7.0` 版本发布。`ePSXe`
+    的独特之处在于能够控制和替换它使用的插件。图形处理单元插件可以与 `OpenGL` 或 `Glide API` 运行。音频处理单元插件模拟游戏的音和音乐。它还有一个
+    CD-ROM 插件和一个输入插件。*Retro Gamer* 称 `ePSXe` 是“最佳的免费 PlayStation 模拟器”。
+
+
+    `PCSX2` 是一个 Sony PlayStation 2 模拟器。它是基于 GNU 通用公共许可证许可的免费开源软件。与 `ePSXe` 类似，`PCSX2`
+    的架构支持插件。该模拟器的开发始于 2001 年，由名为 `Linuzappz` 和 `Shadow` 的程序员领导。据报道，它兼容 2586 款经过测试的
+    Sony PlayStation 2 视频游戏中的 94.9%。由于模拟像 PlayStation 2 这样复杂的硬件极其消耗 CPU，性能通常受限于运行该系统的中央处理器。Geek.com
+    的 Matthew Humphries 将该模拟器描述为“令人印象深刻的作品”。
+
+
+    `Dolphin` 是免费开源的任天堂 GameCube 和任天堂 Wii 模拟器。`Dolphin` 由程序员 `Henrik Rydgård` 和名为
+    `F|RES` 的程序员于 2003 年 9 月发布。`Dolphin` 模拟器于 2004 年正式停止支持，但在 2005 年被开发者重新复活。`Dolphin`
+    于 2008 年 7 月 13 日成为一个免费开源项目。源代码已根据 `GPLv2` 许可证在 Google Code 的 SVN 仓库中公开发布。到 2009
+    年 4 月，大多数商业 GameCube 游戏和商业 Wii 游戏已经可以以极少的问题完全运行。`Dolphin` 模拟器广受欢迎，例如，许多人更喜欢由 `Dolphin`
+    模拟器运行的《塞尔达传说：风之杖》的效果，而不是游戏的任天堂 Wii U 版本。
+
+
+    `DeSmuME` 是免费开源的任天堂 DS 模拟器。原始模拟器是法语的，后来被翻译成英语和其他语言。
+
+
+    得益于上述等模拟器，Linux 上的游戏非常丰富多样。尽管如此，花时间正确设置它们是很的，因此请务必在网上查阅在 Linux 上玩旧主机机游戏的正确方法。有了模拟器、ROM、Steam
+    以及在 Linux 上发布的其他专有游戏，计算机用户永远不需要无聊。以前只有 Windows 有良好的视频游戏支持，但现在 Linux 正在加入玩家的行列。
+
+
+    # Linux 高级概念
+
+
+    ## 文件结构
+
+
+    在基于 Linux 的操作系统中有两种主要分区：数据分区和交换分区（swap）。数据分区包含了标准的 Linux 系统数据以及用户数据。交换分区是计算机系统物理内存（`RAM`）的扩展。大多数
+    Linux 操作系统都需要这两个分区才能高效运行。
+
+
+    Swap 是 `RAM` 的扩展。当程序需要额外空间时，交换分区会将部分数据分配给程序。Windows 的对应物是 `pagefile`。
+
+
+    Linux 的默认文件系统是 `ext4`，在 Linux 中格式化的驱动器通常会使用它。当将数据共享回 Windows 系统时，这不利，因为 Windows
+    通常无法读取 `ext4`。
+
+
+    以下是 Linux 驱动器根目录下的文件夹。Linux 发行版的一个重要特性是计算机上的每个对象都是文件。这意味着每个外设、数据数据、硬件组件和终端命令在
+    Linux 中都以文件的形式表示。因此，一切都必须存储在某个地方，下面的文件夹包含了计算机的全部。
+
+
+    | Linux 文件系统 | 描述 |
+
+    | :--- | :--- |
+
+    | `Bin` | 共享程序所在的位置。 |
+
+    | `Boot` | 存储启动文件（如内核和启动加载程序）的地方。 |
+
+    | `Dev` | 包含指向 CPU 硬件的文件。处理 CPU 时可以引用这里的文件。 |
+
+    | `Etc` | 配置文件和设置。 |
+
+    | `Home` | 用户数据存储在这里。 |
+
+    | `Initrd` | 用于引导。 |
+
+    | `Lib` | 库文件，为应用程序提供功能。 |
+
+    | `Lost+found` | `ext4` 是日志文件系统。任何损坏的文件可能被保存在这里。 |
+
+    | `Misc` | 当插入可移动存储设备时，可以在这里访问。 |
+
+    | `Mnt` | Mnt 代表挂载（mount），这是你与挂载硬件交互的方式。 |
+
+    | `Net` | 通常挂载网络文件夹的地方。 |
+
+    | `Proc` | 程序访问的资源。 |
+
+    | `Sbin` | 系统命令所在的位置。 |
+
+    | `Tmp` | 临时目录。 |
+
+    | `Usr` | 用户程序安装的地方。 |
+
+    | `var` | 用于日志文件。 |
+
+
+    ## WINE
+
+
+    敏锐的用户可能已经注意到 Linux 不运行 exe 文件。对于拒绝放弃某些 Windows 程序的 Linux 用户，`WINE` 可以提供帮助。`WINE`
+    是一个“兼容层”，能够运行微软 Windows 文件，以模拟在 Windows 中运行应用程序。对于 Linux 用户来说，这意味着你可以在不完全放弃 Windows
+    的情况下运行 Linux。不过，WINE 并不是运行 Windows 程序的替代品。要安装 `WINE`，必须运行以下命令：
+
+
+    ```
+
+    sudo apt-get-repository ppa:ubuntu-wine/ppa
+
+    sudo apt-get update
+
+    sudo apt-get install -y wine1.7
+
+    ```
+
+
+    要运行 exe 必须先下载。使用终端导航到下载位置并输入 `wine programname.exe`。
+
+
+    '
+- fmt: "\n# LFS, also known as Linux from Scratch is a book and resource explaining\
+    \ how to create your very own distro. A user that has experienced Linux and figured\
+    \ out exactly what components they like can take customization to an extreme by\
+    \ following the handy guide. It is a fantastic way to learn how each individual\
+    \ part of a Linux system works together to provide a computing experience. Plus,\
+    \ the creator has full customization to include and leave out any part of the\
+    \ system that they like. Wouldn’t it be great to have a distro named after yourself?\n\
+    \n## Raspberry Pi\n\nOne of the smallest and cheapest ways to experiment with\
+    \ Linux involves a credit-card sized computer known as the `Raspberry Pi`. As\
+    \ low as 25 dollars, the `Pi` is a system on a chip with no moving parts that\
+    \ can be used for Linux development and learning. For those not wishing to fully\
+    \ install Linux to replace their desktop OS, a `Raspberry Pi` can be the device\
+    \ you do your experimenting on. It was initially developed to teach school children\
+    \ how to program, but the `Pi` quickly turned into a popular tool for hobby projects.\
+    \ Since it runs Linux, do-it-yourselfers can take their weekend projects to the\
+    \ next level with a `Pi` and some Linux knowledge.\n\n## Programming on Linux\n\
+    \nLinux, OSX, and other UNIX-based operating systems use the terminal for many\
+    \ functions, just as they have historically before GUIs became common. The first\
+    \ programmers would use the terminal as their “toolchain” to create, code, compile,\
+    \ and run their software. Coding functionality was never dropped from the terminal,\
+    \ so serious programmers still prefer the ease of use received from Linux’s coding\
+    \ workflow. Applications can be written in a terminal editor such as `nano`, then\
+    \ be compiled with the built-in `gcc` GNU compiler, and finally run all without\
+    \ leaving the default programs in almost all Linux distros. Any programmer interested\
+    \ in coding but disheartened in the large, complex IDEs available for Windows\
+    \ should switch to an OS where programming and tinkering is encouraged. Here is\
+    \ a small example of the workflow for programming “hello world” in C.\n\nIn terminal,\
+    \ type `nano` to access a small text editor. Type:\n\n```c\n#include <stdio.h>\n\
+    \nint main(){\n    printf(\"Hello World!\\n\");\n    return 0;\n}\n```\n\nPress\
+    \ `ctrl+x` to quit, and “y” when it asks to save the file. Pick “hello.c” as the\
+    \ name. Now the program needs to be compiled. In terminal type `gcc hello.c`.\
+    \ So long as the program was copied exactly, it will compile without error, creating\
+    \ an executable file named `a.out` in the current directory. To launch it type\
+    \ `./a.out`, and you should see “Hello World!”. Without downloading any extra\
+    \ programs, Linux has proven that it is a heaven for programmers. Learning to\
+    \ program will increase your Linux knowledge as well, and you can even create\
+    \ your own applications.\n\n## Linux and Embedded Applications\n\nBecause of the\
+    \ portable and open-source nature of Linux-based operating systems, they often\
+    \ find their way onto embedded computers such as cars, smart televisions, and\
+    \ internet-of-things devices. Learning how to use Linux translates into learning\
+    \ how to configure and customize embedded applications as well. As devices become\
+    \ smaller and more household appliances become “smart enabled”, it is apparent\
+    \ that being able to understand how these devices operate will become a lucrative\
+    \ skill. The `Raspberry Pi` computers mentioned above can actually be used to\
+    \ turn any device “smart” with enough Linux skill and programming knowledge.\n\
+    \n## Building a Beowulf Cluster\n\nLinux is versatile enough to be used in personal\
+    \ computers and large supercomputers as well. A Beowulf cluster is a cluster of\
+    \ computers that synchronize hardware resources to become a makeshift supercomputer\
+    \ powerhouse. With a minimum of two computers and Linux installed you can network\
+    \ them together and have them share resources (`Raspberry Pi` computers make exceptional\
+    \ cluster nodes!). The process won’t be explained here, but steps can be found\
+    \ online. The entire idea proves just how flexible and useful Linux can be.\n\n\
+    ## Windows 10 and Linux\n\nWith Windows 10’s anniversary update, Microsoft added\
+    \ a little bit of Linux into Windows. `Bash`, the terminal “language” used in\
+    \ Linux is fully implemented into Windows 10’s command prompt. In short, this\
+    \ means that any Linux program can easily be ported into the Windows environment\
+    \ (kind of like reverse WINE). Windows user can even type `sudo apt-get update`\
+    \ to update their Windows systems now! An interesting update, the whole situation\
+    \ shows how the “year of the Linux desktop” is fast approaching, and Linux will\
+    \ play an even larger part in the future of computing.\n\n## Conclusion\n\nHopefully\
+    \ now you are well informed about Linux and its related software, how to use Linux,\
+    \ the components of a Linux-based operating system, and some basic Linux distributions.\
+    \ You can now begin your own Linux adventures. Whether you wish to customize your\
+    \ desktop, or if you want to take control full control of your computer, Linux\
+    \ is a fantastic operating system tool. Only through exploration and discovery\
+    \ can you truly learn how Linux works, because it is too complex to explain in\
+    \ this book alone. If you’d like to continue learning, then experiment with more\
+    \ Linux distros. Install a bunch of them, figure out what you like. Try building\
+    \ one from scratch, or do a DIY project involving Linux. Your knowledge will increase\
+    \ in time through regular use and self-study.\n\nAlthough the demonstrations and\
+    \ applications discussed may have seemed overly complicated and unnecessary, they\
+    \ exist to explain how advanced and varied a Linux-based operating system can\
+    \ be. From creating a supercomputer to making a cow say funny things, Linux facilitates\
+    \ computing.\n\nInstead of paying to use hardware you already own, and instead\
+    \ of being under the control of Microsoft or Apple, Linux gives the freedom to\
+    \ do whatever you want with your devices. And although the learning curve is steep,\
+    \ by just installing a distro and playing around you are gaining useful computer\
+    \ knowledge that sets you apart from everyone else.\n\nLinux isn’t just for computer\
+    \ geeks. It isn’t just for corporate environments. Linux is for anyone that wants\
+    \ to use their computer to its full potential. After reading this book you should\
+    \ have the beginner’s knowledge necessary to navigate and interact with your Linux\
+    \ machine. Thank you for downloading and reading this short beginner’s guide to\
+    \ Linux. Continue experimenting and tinkering and soon you will amaze with your\
+    \ computer-savvy.\n"
+  raw: "LFS, also known as Linux from Scratch is a book and resource explaining how\
+    \ to create your very own distro.  A user that has experienced Linux and figured\
+    \ out exactly what components they like can take customization to an extreme by\
+    \ following the handy guide.  It is a fantastic way to learn how each individual\
+    \ part of a Linux system works together to provide a computing experience.  Plus,\
+    \ the creator has full customization to include and leave out any part of the\
+    \ system that they like.  Wouldn’t it be great to have a distro named after yourself?\n\
+    \nRaspberry Pi\n\n              One of the smallest and cheapest ways to experiment\
+    \ with Linux involves a credit-card sized computer known as the Raspberry Pi. \
+    \ As low as 25 dollars, the Pi is a system on a chip with no moving parts that\
+    \ can be used for Linux development and learning.  For those not wishing to fully\
+    \ install Linux to replace their desktop OS, a Raspberry Pi can be the device\
+    \ you do your experimenting on.  It was initially developed to teach school children\
+    \ how to program, but the Pi quickly turned into a popular tool for hobby projects. \
+    \ Since it runs Linux, do-it-yourselfers can take their weekend projects to the\
+    \ next level with a Pi and some Linux knowledge. \n\nProgramming on Linux\n\n\
+    \ Linux, OSX, and other UNIX-based operating systems use the terminal for many\
+    \ functions, just as they have historically before GUIs became common.  The first\
+    \ programmers would use the terminal as their “toolchain” to create, code, compile,\
+    \ and run their software.  Coding functionality was never dropped from the terminal,\
+    \ so serious programmers still prefer the ease of use received from Linux’s coding\
+    \ workflow. Applications can be written in a terminal editor such as nano, then\
+    \ be compiled with the built-in gcc GNU compiler, and finally run all without\
+    \ leaving the default programs in almost all Linux distros.  Any programmer interested\
+    \ in coding but disheartened in the large, complex IDEs available for Windows\
+    \ should switch to an OS where programming and tinkering is encouraged.  Here\
+    \ is a small example of the workflow for programming “hello world” in C.\n\nIn\
+    \ terminal, type nano to access a small text editor.  Type:\n\n#include <stdio.h>\n\
+    \nint main(){\n\n              printf(“Hello World!\\n”);\n\n              return\
+    \ 0;\n\n}\n\nPress ctrl+x to quit, and “y” when it asks to save the file.  Pick\
+    \ “hello.c” as the name.  Now the program needs to be compiled.  In terminal type\
+    \ gcc hello.c.  So long as the program was copied exactly, it will compile without\
+    \ error, creating an executable file named a.out in the current directory.  To\
+    \ launch it type ./a.out, and you should see “Hello World!”.  Without downloading\
+    \ any extra programs, Linux has proven that it is a heaven for programmers.  Learning\
+    \ to program will increase your Linux knowledge as well, and you can even create\
+    \ your own applications.\n\nLinux and Embedded Applications\n\n Because of the\
+    \ portable and open-source nature of Linux-based operating systems, they often\
+    \ find their way onto embedded computers such as cars, smart televisions, and\
+    \ internet-of-things devices.  Learning how to use Linux translates into learning\
+    \ how to configure and customize embedded applications as well.  As devices become\
+    \ smaller and more household appliances become “smart enabled”, it is apparent\
+    \ that being able to understand how these devices operate will become a lucrative\
+    \ skill.  The Raspberry Pi computers mentioned above can actually be used to turn\
+    \ any device “smart” with enough Linux skill and programming knowledge.\n\nBuilding\
+    \ a Beowulf Cluster\n\n Linux is versatile enough to be used in personal computers\
+    \ and large supercomputers as well.  A Beowulf cluster is a cluster of computers\
+    \ that synchronize hardware resources to become a makeshift supercomputer powerhouse. \
+    \ With a minimum of two computers and Linux installed you can network them together\
+    \ and have them share resources (Raspberry Pi computers make exceptional cluster\
+    \ nodes!).  The process won’t be explained here, but steps can be found online. \
+    \ The entire idea proves just how flexible and useful Linux can be.\n\nWindows\
+    \ 10 and Linux\n\n With Windows 10’s anniversary update, Microsoft added a little\
+    \ bit of Linux into Windows.  Bash, the terminal “language” used in Linux is fully\
+    \ implemented into Windows 10’s command prompt.  In short, this means that any\
+    \ Linux program can easily be ported into the Windows environment (kind of like\
+    \ reverse WINE).  Windows user can even type sudo apt-get update to update their\
+    \ Windows systems now!  An interesting update, the whole situation shows how the\
+    \ “year of the Linux desktop” is fast approaching, and Linux will play an even\
+    \ larger part in the future of computing.\n\nConclusion\n\n              Hopefully\
+    \ now you are well informed about Linux and its related software, how to use Linux,\
+    \ the components of a Linux-based operating system, and some basic Linux distributions. \
+    \ You can now begin your own Linux adventures.  Whether you wish to customize\
+    \ your desktop, or if you want to take control full control of your computer,\
+    \ Linux is a fantastic operating system tool.  Only through exploration and discovery\
+    \ can you truly learn how Linux works, because it is too complex to explain in\
+    \ this book alone.  If you’d like to continue learning, then experiment with more\
+    \ Linux distros.  Install a bunch of them, figure out what you like.  Try building\
+    \ one from scratch, or do a DIY project involving Linux.  Your knowledge will\
+    \ increase in time through regular use and self-study. \n\n              Although\
+    \ the demonstrations and applications discussed may have seemed overly complicated\
+    \ and unnecessary, they exist to explain how advanced and varied a Linux-based\
+    \ operating system can be.  From creating a supercomputer to making a cow say\
+    \ funny things, Linux facilitates computing. \n\n              Instead of paying\
+    \ to use hardware you already own, and instead of being under the control of Microsoft\
+    \ or Apple, Linux gives the freedom to do whatever you want with your devices. \
+    \ And although the learning curve is steep, by just installing a distro and playing\
+    \ around you are gaining useful computer knowledge that sets you apart from everyone\
+    \ else.\n\n              Linux isn’t just for computer geeks.  It isn’t just for\
+    \ corporate environments.  Linux is for anyone that wants to use their computer\
+    \ to its full potential.  After reading this book you should have the beginner’s\
+    \ knowledge necessary to navigate and interact with your Linux machine.  Thank\
+    \ you for downloading and reading this short beginner’s guide to Linux. Continue\
+    \ experimenting and tinkering and soon you will amaze with your computer-savvy."
+  toc: []
+  trans: "\n\n# LFS，也称为从零构建 Linux（Linux from Scratch），这是一本解释如何创建你自己的发行版的书籍和资源。对于体验过\
+    \ Linux 并确切知道自己喜欢哪些组件的用户，可以通过遵循这份实用的指南将定制推到极致。这是学习 Linux 系统每个部分如何协同工作以提供计算体验的绝佳方式。此外，创建者可以完全自定义，包含或排除他们喜欢的任何系统部分。拥有一个以自己命名的发行版不是很棒吗？\n\
+    \n## 树莓派 (Raspberry Pi)\n\n实验 Linux 最最小且最廉价的方法之一是使用一种信用卡大小的电脑，即 `Raspberry Pi`。`Pi`\
+    \ 仅需 25 美元起，是一个没有移动部件的单芯片系统，可用于 Linux 开发和学习。对于那些不希望完全安装 Linux 来替换桌面操作系统的人来说，`Raspberry\
+    \ Pi` 可以作为你进行实验的设备。它最初是为了教学生儿童如何编程而开发的，但 `Pi` 迅速变成了爱好者项目的流行工具。由于它运行 Linux，DIY\
+    \ 爱好者可以通过 `Pi` 和一些 Linux 知识将他们的周末项目提升到新的高度。\n\n## 在 Linux 上编程\n\nLinux、OSX 和其他基于\
+    \ UNIX 的操作系统使用终端来实现许多功能，就像在 GUI 变得常见之前的历史一样。第一批程序员会使用终端作为他们的“工具链”来创建、编码、编译和运行他们的软件。编码功能从未从终端中被弃，因此严肃程序员仍然倾向于\
+    \ Linux 编码工作流带来的易用性。应用程序可以在 `nano` 等终端编辑器中编写，然后用内置的 `gcc` GNU 编译器进行编译，最后在完全不离开几乎所有\
+    \ Linux 发行版默认程序的情况下运行所有操作。任何对编程感兴趣但对 Windows 上提供的大型、复杂的 IDE 感到沮丧的程序员，都应该切换到一个鼓励编程和折腾的操作系统。这里有一个用\
+    \ C 语言编写“hello world”工作流的小型示例。\n\n在终端中，输入 `nano` 进入一个小型文本编辑器。输入：\n\n```c\n#include\
+    \ <stdio.h>\n\nint main(){\n    printf(\"Hello World!\\n\");\n    return 0;\n\
+    }\n```\n\n按 `ctrl+x` 退出，并在询问是否保存文件时按“y”。选择“hello.c”作为文件名。现在需要编译程序了。在终端中输入 `gcc\
+    \ hello.c`。只要程序被完全复制，它就会无错误编译，并在当前目录下创建一个名为 `a.out` 的可执行文件。输入 `./a.out` 启动它，你应该看到“Hello\
+    \ World!”。在不下载任何额外程序的情况下，Linux 证明了它是程序员的天堂。学习编程也将增加你的 Linux 知识，你甚至可以创建自己的应用程序。\n\
+    \n## Linux 与嵌入式应用\n\n由于基于 Linux 操作系统的可携性和开源特性，它们经常出现在嵌入式计算机上，如汽车、智能电视和物联网。学习如何使用\
+    \ Linux 也意味着学习如何配置和定制嵌入式应用。随着设备变得越来越小，越来越多的家用电器变得“智能化”，显而易见，能够理解这些设备如何运行将成为一项利润丰厚的技能。上述提及的\
+    \ `Raspberry Pi` 电脑实际上可以利用足够的 Linux 技能和编程知识，将任何设备变得“智能化”。\n\n## 构建 Beowulf 集群\
+    \ (Beowulf Cluster)\n\nLinux 非常通用，既可以用于个人电脑也可以用于大型超级计算机。Beowulf 集群是一组计算机，通过同步硬件资源来变成一个临时的超级计算机中心。至少两台安装了\
+    \ Linux 的电脑，你就可以将它们连接到网络并共享资源（`Raspberry Pi` 电脑是极的集群节点！）。这里不会解释该过程，但可以在网上找到相关步骤。整个理念证明了\
+    \ Linux 可以多么灵活和有用。\n\n## Windows 10 与 Linux\n\n随着 Windows 10 的周年更新，微软在 Windows\
+    \ 中加入了一点 Linux 内容。`Bash`（Linux 中使用的终端“语言”）已完全实现在 Windows 10 的命令提示符中。简而言之，这意味着任何\
+    \ Linux 程序都可以轻松地移植到 Windows 环境（有点类似于反向的 WINE）。Windows 用户现在甚至输入 `sudo apt-get update`\
+    \ 来更新他们的 Windows 系统了！这是一个有趣的更新，整个情况显示了“Linux 桌面年”正快速临近，Linux 在未来的计算中将发挥更更大的作用。\n\
+    \n## 结论\n\n希望现在你已经充分了解了 Linux 及其相关软件、如何使用 Linux、基于 Linux 的操作系统的组件以及一些基础 Linux\
+    \ 发行版。你现在可以开始自己的 Linux 冒险了。无论你是想自定义桌面，还是想获得对计算机的完全控制权，Linux 都是一个极佳的操作系统工具。只有通过探索和发现，你才能真正学会\
+    \ Linux 是如何工作的，因为仅凭这本书无法解释它的复杂性。如果你想继续学习，请尝试更多的 Linux 发行版。安装许多个，找出你喜的。尝试从零开始构建一个，或者做一个涉及\
+    \ Linux 的 DIY 项目。你的知识将随着时间的经常使用和自学而增加。\n\n尽管讨论的演示和应用可能看起来过于复杂且没有必要，但它们的存在是为了解释基于\
+    \ Linux 的操作系统可以多么先进和多样。从创建超级计算机到让牛说出幽默的话，Linux 促进了计算。\n\n与其花钱使用你已经拥有的硬件，与其受制微软或苹果的控制，Linux\
+    \ 给了你对你的设备做任何你想做事情的自由。尽管学习曲线很陡，但只需安装一个发行版并玩玩，你就能获得与他人区分开来的有用计算机知识。\n\nLinux 不仅仅是为电脑极客准备的。它也不仅仅适用于企业环境。Linux\
+    \ 适用于任何想要充分发挥计算机潜能的人。读完这本书后，你应该具备导航和与你的 Linux 机器交互所需的入门知识。感谢下载并阅读这本简短的 Linux 初学者指南。继续实验和折腾，很快你就会用你的计算机技术令大家惊讶。\n\
+    \n"
