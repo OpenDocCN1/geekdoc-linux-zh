@@ -1,0 +1,94 @@
+name: Linux for system administrators and DevOps
+name_cn: 系统管理员与 DevOps 的 Linux 指南
+slug: linux-for-system-administrators-and-devops
+toc:
+- - '#'
+  - 系统管理员与 DevOps 的 Linux 指南
+- - '#'
+  - 免责声明
+- - '#'
+  - 引言
+- - '#'
+  - 1 Linux 桌面、服务器与云镜像
+- - '##'
+  - 1.1 什么是 Linux？
+- - '##'
+  - 1.2 Linux GUI 与桌面电脑
+- - '##'
+  - 1.3 Linux 服务器与集群
+- - '##'
+  - 1.4 Linux 云镜像与虚拟机
+- - '##'
+  - 1.6 自定义 Linux Shell
+- - '##'
+  - 1.7 基础 Linux命令
+- - '##'
+  - 1.8 Shell 编程基础
+- - '##'
+  - 1.9 安装命令和包配置
+- - '##'
+  - 1.10 操作仓库
+- - '##'
+  - 1.11 更新、升级和发行版升级
+- - '#'
+  - Linux 基础架构
+- - '##'
+  - 2.1 安装 DNS 和 DHCP
+- - '##'
+  - 2.2 管理用户和组
+- - '###'
+  - 添加新用户
+- - '###'
+  - 创建组
+- - '##'
+  - 2.3 安装和管理 Linux 防墙
+- - '##'
+  - 2.4 安装和管理 Web 服务器
+- - '##'
+  - 2.5 安装和管理邮件服务器
+- - '##'
+  - 2.6 安装和管理 FTP, SFTP
+- - '#'
+  - 将 manon 更改为你操作系统的用户名
+- - '##'
+  - 2.7 安装和配置 SAMBA 并管理共享
+- - '##'
+  - 2.8 安装 GIT 服务器
+- - '###'
+  - 安装另一个 GIT 服务器
+- - '#'
+  - 3 Linux 安全安全
+- - '##'
+  - 3.1 安装 SSH
+- - '##'
+  - 3.2 使用 SSL 创建证书
+- - '##'
+  - 3.3 使用 SELinux 和访问控制
+- - '##'
+  - 3.4 连接到 Linux 机器
+- - '##'
+  - 3.5 在 Linux 中保护你的 Web 服务器
+- - '##'
+  - 3.6 在 Linux 中保护你的数据库服务器
+- - '##'
+  - 3.7 保护你的 Linux 虚拟机
+- - '##'
+  - 4.2 Linux 中的无线网络
+- - '##'
+  - 4.3 Linux 中的 Network Manager
+- - '##'
+  - 4.4 Linux 中的网络监控
+- - '##'
+  - 4.5 Linux 中的网络扫描
+- - '#'
+  - 5 Linux 中的私有云
+- - '##'
+  - 5.1 安装 Openstack
+- - '##'
+  - 5.2 使用 Openstack Keystone
+- - '##'
+  - 5.3 使用 Openstack Heat
+- - '##'
+  - 5.4 使用 Openstack Swift
+- - '##'
+  - 5.5 使用 Openstack Glance

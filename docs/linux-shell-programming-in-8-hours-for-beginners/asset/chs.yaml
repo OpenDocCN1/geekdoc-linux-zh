@@ -1,0 +1,428 @@
+- "# Linux Shell 编程：8 小时入门，初学者指南！\n\n\n\n![](img/rsrc3KW.jpg)\n![](img/rsrc3KW.jpg)\n\
+  \n\n\n## 关于作者\nRay Yao\n- 美国 Zend 认证 PHP 工程师\n- 美国 Sun 认证 JAVA 程序员\n- 美国 Oracle\
+  \ 认证 SCWCD 开发人员\n- 美国 CompTIA 认证 A+ 专业人士\n- Microsoft 认证 ASP. NET 专家\n- Microsoft\
+  \ 认证 MCP 专业人士\n- Microsoft 认证 TECHNOLOGY 专家\n- 美国 CompTIA 认证 NETWORK+ 专业人士\n\n\n\
+  ## 前言\n本书涵盖了所有必要的 Linux Shell 语言知识。你可以快速轻松地掌握 Linux Shell 编程的核心技能。\n\n本书为初学者提供了超过\
+  \ 60 多个实战示例，并包含了针对大学考试、工程师认证考试以及工作面试的测试与答案。\n\n\n\n\n\n# 源代码下载\n\n本书提供了源代码下载；你可以下载源代码以便更好地学习，或者将源代码复制到你喜爱的编辑器中测试程序。\n\
+  \n下载链接：[`forms.aweber.com/form/11/1793939911.htm`](https://forms.aweber.com/form/11/1793939911.htm)\n\
+  \n注意：本书仅适合初学者，不适合有经验的程序员。\n\n- 第 1 小时\n- 什么是 Linux Shell?\n- Shell 脚本编程\n- 第一个 Shell\
+  \ 脚本\n- Shell 注释\n- 多行注释\n- Shell 变量\n- 变量名\n- 只读变量\n- 删除变量\n- 变量输入\n- 第 2 小时\n\
+  - Shell 字符串 (1)\n- Shell 字符串 (2)\n- 字符串连接\n- 字符串长度\n- 提取子字符串\n- 关于 `expr…`\n- 搜索索引\n\
+  - Shell 参数\n- 内置参数\n- 第 3 小时\n- Shell 数组\n- 访问元素\n- 获取所有元素\n- 数组长度\n- Printf 命令\n\
+  - 转义序列\n- 第 4 小时\n- 运算符\n- if…then…else…fi\n- 算术运算符\n- 比较运算符\n- 布尔运算符\n- 第 5 小时\n\
+  - 字符串运算符\n- 文件运算符\n- “echo” 命令\n- 第 6 小时\n- Test 命令\n- [[  ] 符号](#part0046.xhtml)\n\
+  - 测试相等性\n- 测试存在性\n- 测试空字符串\n- Shell 函数\n- 带参数的函数\n- 返回值\n- 第 7 小时\n- if..then ..elif..then..else\n\
+  - For 循环\n- While 循环\n- Until 循环\n- Case 语句\n- Break 命令\n- Continue 命令\n- 第 8 小时\n\
+  - Select 语句\n- I/O 重定向\n- 输出重定向\n- 追加重定向\n- 输入重定向\n- 文件描述符\n- Here Document\n- 包含文件\n\
+  - 附录 1\n- 内置参数表\n- Printf 命令表\n- 转义序列表\n- 比较运算符表\n- 布尔运算符表\n- 字符串运算符表\n- 文件运算符表\n\
+  - I/O 重定向表\n- 附录 2\n- 测试\n- 答案\n- 推荐书籍\n\n# 第 1 小时\n\n## 什么是 Linux Shell?\nshell\
+  \ 是用户和内核之间的接口。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。例如，shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell 是允许用户与操作系统交互的命令行解释器。shell\
+  \ 是允许用户与操作系统交互的命令行解释器。## Shell 脚本编程\n\n\n\n\n\n### 示例 1.5\n```bash\n#!/bin/bash\n\
+  myVar=\"C# in 8 Hours\"\nreadonly myVar\nmyVar=\"Scala in 8 Hours\"    # 修改变量值\n\
+  ```\n输出：\n(错误信息如下:)\n```\ntest. sh: line 4: myVar: readonly variable\n```\n解释：\n\
+  `readonly myVar` 将 `myVar` 设置为只读。输出是一个错误信息。在 `myVar` 变为只读变量后，对 `myVar` 值的任何更改都会导致错误。\n\
+  \n## 删除变量\n`unset` 命令可以删除变量。\n\n```bash\nunset variable\n```\n\n### 示例 1.6\n```bash\n\
+  #! /bin/sh\nmyVar=\"C++ in 8 Hours\"\nunset myVar        # 移除变量\necho $myVar\n```\n\
+  输出：\n(无输出)\n解释：\n变量被移除后，该变量不再存在，其值也不复存在。因此，你不会看到任何输出。\n\n## 变量输入\n变量的值可以由用户从键盘输入。\n\
+  \n```bash\nread variable\n```\n\n### 示例 1.7\n```bash\n#! /bin/sh\necho \"Please\
+  \ input your name. \"\nread myInput         # 输入值将存储在 myInput 中\necho \"Hi! Your\
+  \ name is: $myInput\"  # 假设我输入我的名字：Ray Yao\n```\n输出：\nPlease input your name.\n\
+  Ray Yao\nHi! Your name is Ray Yao\n解释：\n假设我输入了名字：Ray Yao。`read myInput` 将输入值存储在\
+  \ `myInput` 中。`echo \"Hi! Your name is: $myInput\"` 显示了输入值。\n\n# 第 2 小\n## Shell\
+  \ 字符串 (1)\n字符串被单引号包裹。\n\n```bash\nstr='This is a string'\n```\n*   单引号内的任何字符将以其原始格式打印。\n\
+  *   单引号内的字符串变量是无效。\n\n### 示例 2.1\n```bash\n#! /bin/sh\nvar=Andy\nstr='Hello, $var'\
+  \    # 单引号字符串\necho $str\n```\n输出：\nHello, $var\n解释：\n`'Hello, $var'` 是一个单引号字符串。单引号内的任何字符将以其原始格式打印。\n\
+  \n## Shell 字符串 (2)\n字符串被双引号包裹。\n\n```bash\nstr=\"This is a string\"\n```\n*   双引号内的任何字符将通过其返回值打印。\n\
+  *   双引号内的字符串变量是有效的。\n\n### 示例 2.2\n```bash\n#! /bin/sh\nvar=Andy\nstr=\"Hello, $var\"\
+  \       # 双引号字符串\necho $str\n```\n输出：\nHello, Andy\n解释：\n`\"Hello, $var\"` 是一个双引号字符串。双引号内的任何字符将通过其返回值打印。\n\
+  \n## 连接字符串\n我们可以使用双引号连接两个字符串。\n\n### 示例 2.3\n```bash\n#! /bin/sh\nstr1=\"Kotlin\"\
+  \nstr2=\"in 8 Hours\"\nmyString=\"$str1 $str2\"     # 连接两个字符串\necho $myString\n\
+  ```\n输出：\nKotlin in 8 Hours\n解释：\n`\"$str1 $str2\"` 使用双引号将两个字符串连接为一个字符串。\n\n## 字符串长度\n\
+  我们可以通过 `#` 符号获取字符串的长度。\n\n```bash\n#string\n```\n\n### 示例 2.4\n```bash\n#! /bin/sh\n\
+  str=\"jQuery in 8 Hours\"\necho ${#str }      # 获取字符串的长度\n```\n输出：\n17\n解释：\n`#str`\
+  \ 可以获取字符串的长度。字符串长度为 17 个字符（包括空格）。\n\n## 提取子字符串\n我们可以从字符串中提取子字符串。\n\n```bash\nstring\
+  \ : start : length\n```\n*   `start`: 提取从此索引开始。\n*   `length`: 提取的大小。\n\n### 示例\
+  \ 2.5\n```bash\n#! /bin/sh\nstr=\"DjanGo in 8 Hours\"\necho ${str:4:16 }     # 提取子字符串\n\
+  ```\n输出：\nGo in 8 Hours\n解释：\n`\"str: 4: 16\"` 从从索引 4 开始提取子字符串，提取长度为 16。\n\n## 关于\
+  \ `expr…`\n`expr…` 是一个表达式，用于计算。\n\n```bash\nexpr…\n```\n注意：`` ` 是反引号，而不是单引号。`` `\
+  \ 键位于键盘的最左侧。\n\n### 示例 2.6\n```bash\n#! /bin/sh\nx=100\ny=200\nz=`expr $x + $y`\
+  \       # 一个表达式\necho \"The sum is $z\"\n```\n输出：\nThe sum is 300\n解释：\n`expr $x\
+  \ + $y` 是一个表达式，计算结果将赋值给 `z`。\n注意：`` ` 是反引号，而不是单引号。`` ` 键位于键盘的最左侧。\n\n## 搜索索引\n我们可以找到字符串中字符首次出现的索引。\n\
+  \n```bash\nexpr index \"string\" character\n```\n注意：`` ` 是反引号，而不是单引号。`\"string\"\
+  ` 是一个参数，用于搜索字符的索引。`\"character\"` 是一个参数。\n\n### 示例 2.7\n```bash\nstr=\"Kotlin in\
+  \ 8 Hours\"\nexpr index \"$str\" o\n```\n输出：\n10\n解释：\n`expr index \"$str\" o` 查找字符\
+  \ \"o\" 的索引。\n\n\n\n\n\n## 数组操作\n\n| `array_name[@]` 或 `array_name[*]` |\n\n###\
+  \ 示例 3.2\n```bash\n#!/bin/bash\nmy_array[0]=Java\nmy_array[1]=Ruby\nmy_array[2]=Html\n\
+  my_array[3]=Rust\necho \"All elements are: ${my_array[@] }\"\necho \"All elements\
+  \ are: ${my_array[*] }\"\n```\n**输出：**\n```\nAll elements are: Java  Ruby  Html\
+  \  Rust\nAll elements are: Java  Ruby  Html  Rust\n```\n**解释：** `my_array[@]` 或\
+  \ `my_array[*]` 可以获取数组的所有元素。\n\n### 数组长度\n`#array_name[@]` 或 `#array_name[*]` 可以获取的长度。\n\
+  \n| `#array_name[@]` 或 `#array_name[*]` |\n\n### 示例 3.3\n```bash\n#!/bin/bash\n\
+  my_array=(PHP MySQL in 8 Hours)\nlength1=${#my_array[@] }\nlength2=${#my_array[*]\
+  \ }\necho $length1\necho $length2\n```\n**输出：**\n```\n5\n5\n```\n**解释：** `#my_array[@]`\
+  \ 或 `#my_array[*]` 可以获取数组的长度。\n\n## Printf 命令\n\n`printf` 是 Shell 中用于格式化输出的命令。\n\
+  \n| `printf` `type` `variables` |\n\n`type` 是用于格式化输出的参数。\n\n| 类型 | 描述 |\n| :---\
+  \ | :--- |\n| `%b` | 以二进制值打印 |\n| `%d` | 以整数值打印 |\n| `%f` | 以浮点值打印 |\n| `%o` | 以八进制值打印\
+  \ |\n| `%s` | 以字符串值打印 |\n| `%x` | 以十六进制值打印 |\n\n例如：\n- `%10s` 表示格式化为最大宽度为 10 个字符的字符串\n\
+  - `%-10s` 表示格式化为最大宽度为 10 个字符的字符串（`-` 符号表示左对齐，无 `-` 则表示右对齐）\n- `%8. 2f` 表示格式化为浮点值，`8`\
+  \ 表示 8 位整数，`2` 表示 2 位小数\n- `%-8. 2f` 表示格式化为浮点值，`8` 表示 8 位整数，`2` 表示 2 位小数（`-` 符号表示左对齐，无\
+  \ `-` 则表示右对齐）\n\n### 示例 3.4\n```bash\nprintf \"%-10s %-7s %-8s\\n\" Name Age Weight\n\
+  ```\n**输出：**\n```\nName      Age     Weight\n```\n**解释：**\n- `%-10s` 被 `Name` 替换，`Name`\
+  \ 被格式化为最大 10 个字符的字符串，左对齐。\n- `%-7s` 被 `Age` 替换，`Age` 被格式化为最大 7 个字符的字符串，左对齐。\n- `%-8s`\
+  \ 被 `Weight` 替换，`Weight` 被格式化为最大 8 个字符的字符串，左对齐。\n- `\\n` 用于换行。\n\n### 示例 3.5\n```bash\n\
+  #!/bin/bash\nprintf \"%-10s %-7s %-8s\\n\" Name Age Weight\nprintf \"%-10s %-7d\
+  \ %-5. 2f\\n\" Andy 18 91.8843\nprintf \"%-10s %-7d %-5. 2f\\n\" Tomy 19 95.4675\n\
+  printf \"%-10s %-7d %-5. 2f\\n\" Rosy 17 80.8563\n```\n**输出：**\n```\nName      Age\
+  \     Weight\nAndy      18      91.88\nTomy      19      95.47\nRosy      17   \
+  \   80.86\n```\n**解释：**\n- `printf \"%-10s %-7d %-5. 2f\\n\" Andy 18 91.8843` 格式化了三个参数\
+  \ `Andy`、`18`、`91.8843`。\n- `%-10s` 被 `Andy` 替换，`Andy` 被格式化为最大 10 个字符的字符串，左对齐。\n\
+  - `%-7d` 被 `18` 替换，`18` 被格式化为最大 7 位数字的整数类型，左对齐。\n- `%-5. 2f` 被 `91.88` 替换，`91.88`\
+  \ 被格式化为最大 5 位整数、2 位小数的浮点类型，左对齐。\n- `\\n` 用于换行。\n\n## 转义序列\n\n`\\` 反斜线字符可以用于转义字符。\n\
+  - `\\a` 输出警报。\n- `\\n` 将内容输出到下一行。\n- `\\r` 使回车。\n- `\\t` 使制表符。\n- `\\f` 将内容输出到下一页。\n\
+  - `\\'` 输出单引号。\n- `\\\"` 输出双引号。\n\n### 示例 3.6\n```bash\n#!/bin/bash\nprintf \"%s\
+  \ %s \\'%s\\' \\n\" He said OK\nprintf \"%d\\t %d\\n\" 10 100\nprintf \"%s\\n %s\\\
+  n\" \n```\n**输出：**\n```\nHe said 'OK'\n10\t100\n```\n**解释：**\n- `%\\'` 输出单引号。\n\
+  - `%d\\t` 输出数字和制表符。\n- `%s\\n` 输出字符串。\n\n## 运算符\n\nShell 与其他编程语言一样支持多种运算符，包括：算术运算符、关系运算符、布尔运算符、字符串运算符。\n\
+  \n| `expr…` |\n\n`expr…` 是一个表达式。\n\n### 示例 4.1\n```bash\n#!/bin/bash\nsum=`expr\
+  \ 100 + 20`\necho \"The sum is: $sum\"\n```\n**输出：**\n```\nThe sum is: 120\n```\n\
+  \n## if 语句\n\n`if...then...else...fi` 当条件为真时执行代码，否则执行 else。\n\n### 示例 4.2\n```bash\n\
+  #!/bin/bash\na=10\nb=20\nif [ $a == $b ]; then\n  echo \"a is equal to b\"\nelse\n\
+  \  echo \"a is not equal to b\"\nfi\n```\n**输出：**\n```\na is not equal to b\n```\n\
+  **解释：** `[ $a == $b ]` 比较 `a` 和 `b`。`==` 是比较运算符。\n\n## 算术运算符\n\n| 运算符 | 操作 |\n|\
+  \ :--- | :--- |\n| `+` | 加法 |\n| `-` | 减法 |\n| `*` | 乘法 |\n| `/` | 除法 |\n| `%` |\
+  \ 取模 |\n| `=` | 赋值 |\n| `==` | 检查相等 |\n| `!=` | 检查不等 |\n\n### 示例 4.3\n```bash\n\
+  #!/bin/bash\na=100\nb=20\nresult=`expr $a + b`\necho \"a + b : $result\"\nresult=`expr\
+  \ $a - b`\necho \"a - b : $result\"\nresult=`expr $a * b`\necho \"a * b : $result\"\
+  \nresult=`expr $a / b`\necho \"a / b : $result\"\nresult=`expr $a % b`\necho \"\
+  a % b : $result\"\n```\n**输出：**\n```\na + b : 120\na - b : 80\na * b : 2000\na /\
+  \ b : 5\na % b : 0\n```\n\n## 比较运算符\n\n| 运算符 | 检查 |\n| :--- | :--- |\n| `-eq` |\
+  \ 等于 |\n| `-ne` | 不等于 |\n| `-gt` | 大于 |\n| `-ge` | 大于 |\n| `-lt` | 小于 |\n| `-le`\
+  \ | 小于 |\n\n比较表达式返回真或假。\n\n### 示例 4.4\n```bash\n#!/bin/bash\na=100\nb=200\nif [\
+  \ $a -eq $b ]; then\n  echo \"$a -eq $b is equal to b\"\nelse\n  echo \"$a -eq $b\
+  \ is not equal to b\"\nfi\nif [ $a -ne $b ]; then\n  echo \"$a -ne $b is not equal\
+  \ to b\"\nelse\n  echo \"$a -ne $b is equal to b\"\nfi\nif [ $a -gt $b ]; then\n\
+  \  echo \"$a -gt $b is greater than b\"\nelse\n  echo \"$a -gt $b is not greater\
+  \ than\"\nfi\nif [ $a -lt $b ]; then\n  echo \"$a -lt $b is less than b\"\nelse\n\
+  \  echo \"$a -lt $b is not less than b\"\nfi\nif [ $a -ge $b ]; then\n  echo \"\
+  $a -ge $b is greater than or equal to b\"\nelse\n  echo \"$a -ge $b is less than\
+  \ b\"\nfi\nif [ $a -le $b ]; then\n  echo \"$a -le $b is less than or equal to b\"\
+  \nelse\n  echo \"$a -le $b is greater than b\"\nfi\n```\n**输出：**\n```\n100 -eq 200\
+  \ is not equal to b\n100 -ne 200 is not equal to b\n100 -gt 200 is not greater than\n\
+  100 -lt 200 is less than b\n100 -ge 200 is less than b\n100 -le 200 is less than\
+  \ or equal to b\n```\n\n### 示例 4.5\n```bash\n#!/bin/bash\na=100\nb=200\nif [ $a\
+  \ -eq $b ]; then\n  echo \"$a -eq $b is equal to b\"\nelse\n  echo \"$a -eq $b is\
+  \ not equal to b\"\nfi\n## (剩余逻辑遵循相同模式)\n```\n*(注：示例 4.5 输出演示了表格中所有比较运算符的逻辑).*\n\
+  \n\n\n\n\n### 示例 4.6\n\n```bash\n#!/bin/bash\nx=true\ny=false\nif [ $x -a $y ] \
+  \     # -a 表示“与”\nthen\n    echo flase\nfi\nif [ $x -o $y ]      # -o 表示“或”\nthen\n\
+  \    echo true\nfi\nif [ !$x ]          # ! 表示“非”\nthen\n    echo flase\nfi\n```\n\
+  \n输出：\n```\nflase\ntrue\nflase\n```\n\n### 解析：\n| true -a true;返回 true; | true -a\
+  \ false;返回 false; | false -a false;返回 false; |\n| true -o true;返回 true; | true -o\
+  \ false;返回 true; | false -o false;return false; |\n| ! false;返回 true; | ! true;返回\
+  \ false; | |\n\n# 第 5 小时：字符串运算符\n\n| 运算符 | 检查项 |\n| :--- | :--- |\n| `=` | 如果两个字符串相等，返回\
+  \ true . |\n| `!=` | 如果两个字符串不等相等，返回 true . |\n| `-z` | 如果字符串长度为零，返回 true . |\n|\
+  \ `-n` | 如果字符串长度不为零，返回 true |\n| `$` | 如果字符串不为空，返回 true . |\n\n### 示例 5.1\n\n```bash\n\
+  #!/bin/bash\na=\"Java\"\nb=\"Ruby\"\nif [ $a = $b ]      # 检查 a 是否等于 b\nthen\n \
+  \   echo \"$a = $b ?  a is equal to b\"\nelse\n    echo \"$a = $b ?  a isn't equal\
+  \ to b\"\nfi\nif [ $a != $b ]      # 检查 a 是否等于 b\nthen\n    echo \"$a ! = $b ? \
+  \ a isn't equal to b\"\nelse\n    echo \"$a ! = $b ?  a is equal to b\"\nfi\nif\
+  \ [ -z $a ]      # 检查字符串长度是否为 0\nthen\n    echo \"-z $a ?  The string length is\
+  \ 0\"\nelse\n    echo \"-z $a ?  The string length isn't 0\"\nfi\nif [ -n \"$a\"\
+  \ ]        # 检查字符串长度是否不为 0\nthen\n    echo \"-n $a ?  The string length isn't 0\"\
+  \nelse\n    echo \"-n $a ?  The string length is 0\"\nfi\nif [ $a ]        # 检查字符串是否为空\n\
+  then\n    echo \"$a ?  The string isn't empty\"\nelse\n    echo \"$a ?  The string\
+  \ is empty\"\nfi\n```\n\n输出：\n```\nJava = Ruby ?  a isn't equal to b\nJava ! = Ruby\
+  \ ?  a isn't equal to b\n-z Java ?  The string length isn't 0\n-n Java ?  The string\
+  \ length isn't 0\nJava ?  The string isn't empty.\n```\n\n### 解析：\n| `=` | 如果两个字符串相等，返回\
+  \ true . |\n| `!=` | 如果两个字符串不等相等，返回 true . |\n| `-z` | 如果字符串长度为零，返回 true . |\n|\
+  \ `-n` | 如果字符串长度不为零，返回 true |\n| `$` | 如果字符串不为空，返回 true . |\n\n## 文件运算符\n文件运算符用于检测\
+  \ Linux 文件的各种属性。\n\n| 运算符 | 检查项 |\n| :--- | :--- |\n| `-d file` | 如果对象是目录，返回 true\
+  \ . |\n| `-f file` | 如果对象是文件，返回 true . |\n| `-p file` | 如果对象是管道，返回 true . |\n| `-r\
+  \ file` | 如果对象是可读文件，返回 true . |\n| `-w file` | 如果对象是可写文件，返回 true . |\n| `-x file`\
+  \ | 如果对象是可执行文件，返回 true . |\n| `-e file` | 如果对象是空文件，返回 true . |\n| `-s file` | 如果对象不是空文件，返回\
+  \ true . |\n| `-b file` | 如果对象是块设备文件，返回 true . |\n| `-c file` | 如果对象是字符设备文件，返回 true\
+  \ . |\n\n### 示例 5.2\n假设文件 `myFile.sh` 不存在，但仍然检查该文件的属性。\n\n```bash\n#!/bin/bash\n\
+  file=\"/root/myFile.sh\"\nif [ -r $file ]      # 检查对象是否可读\nthen\n    echo \"The\
+  \ object is readable\"\nelse\n    echo \"The object isn't readable\"\nfi\nif [ -w\
+  \ $file ]      # 检查对象是否可写\nthen\n    echo \"The object is writable\"\nelse\n   \
+  \ echo \"The object isn't writable\"\nfi\nif [ -x $file ]      # 检查对象是否可执行\nthen\n\
+  \    echo \"The object is executable\"\nelse\n    echo \"The object isn't executable\"\
+  \nfi\nif [ -f $file ]      # 检查对象是否为文件\nthen\n    echo \"The object is a file\"\n\
+  else\n    echo \"The object isn't a file\"\nfi\nif [ -d $file ]      # 检查对象是否为目录\n\
+  then\n    echo \"The object is a directory\"\nelse\n    echo \"The object isn't\
+  \ a directory\"\nfi\nif [ -s $file ]      # 检查对象是否不是空文件\nthen\n    echo \"The object\
+  \ isn't empty\"\nelse\n    echo \"The object is empty\"\nfi\nif [ -e $file ]   \
+  \   # 检查文件是否存在\nthen\n    echo \"The file exists\"\nelse\n    echo \"The file doesn't\
+  \ exist\"\nfi\n```\n\n输出：\n```\nThe object isn't readable\nThe object isn't writable\n\
+  The object isn't executable\nThe object isn't a file\nThe object isn't a directory\n\
+  The object is empty\nThe file doesn't exist\n```\n\n### 解析：\n假设 `root` 目录下没有 `myFile.sh`，但我们仍然检查该文件的属性。回顾以下运算符：\n\
+  | `-d` | 如果对象是目录，返回 true |\n| `-f` | 如果对象是文件，返回 true |\n| `-r` | 如果对象是可读文件，返回 true\
+  \ |\n| `-w` | 如果对象是可写文件，返回 true |\n| `-x` | 如果对象是可执行文件，返回 true |\n| `-e` | 如果对象存在，返回\
+  \ true |\n| `-s` | 如果对象不是空文件，返回 true |\n\n## `echo` 命令\n`echo` 命令用于输出内容。这里是它的用法。\n\
+  \n### 转义字符\n```bash\n#!/bin/bash\necho \"Hello World\"\n```\n输出：\n```\nHello World\n\
+  ```\n\n### 变量\n```bash\n#!/bin/bash\nbook=\"Shell\"\necho \"$book is great\"\n```\n\
+  输出：\n```\nShell is great\n```\n\n### 同行输出\n```bash\n#!/bin/bash\necho -e \"Hello\\\
+  nWorld\" # -e 开启转义\n```\n输出：\n```\nHello\nWorld\n```\n\n### 输出到文件\n```bash\n#!/bin/bash\n\
+  echo \"Hello\" > myFile # > 重定向到文件\n```\n（此时创建了 myFile）\n\n### 原始格式\n```bash\n#!/bin/bash\n\
+  echo 'He said: OK!' # 使用单引号\n```\n输出：\n```\nHe said: OK!\n```\n\n### 执行结果\n```bash\n\
+  #!/bin/bash\necho date # 使用双引号而非单引号\n```\n输出：\n```\nThu Aug 22 09:01:19 UTC 2023\n\
+  ```\n\n### 用户输入\n```bash\n#!/bin/bash\necho \"Please type your name:\"\nread name\
+  \ # read 接受用户输入\necho \"My name is $name\"\n```\n输出：\n```\nPlease type your name:\n\
+  My name is Ray Yao\n```\n\n# 第 6 小时：test 命令\n`test` 命令用于检查条件是否真。它可以测试三个方面：数字、字符和文件。`[]`\
+  \ 用于执行运算。\n\n| test 测试数字 / 字符 / 文件 |\n| :--- |\n| `[]` 符号用于执行运算。 |\n\n### 示例 6.1\n\
+  ```bash\n#!/bin/bash\nnum1=10\nnum2=20\nif [ $num1 -eq $num2 ]\nthen\n    echo 'Two\
+  \ numbers are equal.'\nelse\n    echo 'Two numbers are not equal.'\nfi\n```\n输出：\n\
+  ```\nTwo numbers are not equal.\n```\n### 解析：\n`test $num1 -eq $num2` 测试两个数字的相等性。在表达式中，`=`\
+  \ 两边不能有空格。\n\n### 示例 6.2\n```bash\n#!/bin/bash\nx=100\ny=200\nz=$[x + y]\necho \"\
+  The result is： $z\"\n```\n输出：\n```\nThe result is： 300\n```\n### 解析：\n`[x + y]`\
+  \ 执行运算。注意：`=` 两边不能有空格。\n\n## 测试相等性\n`test` 命令可以测试两个字符串是否相等。\n\n### 示例 6.3\n```bash\n\
+  #!/bin/bash\nstr1=\"Java\"\nstr2=\"JavaScript\"\nif test $str1 = $str2\nthen\n \
+  \   echo 'Two strings are equal!'\nelse\n    echo 'Two strings are not equal!'\n\
+  fi\n```\n输出：\n```\nTwo strings are not equal!\n```\n### 解析：\n`test $str1 = $str2`\
+  \ 测试两个字符串的相等性。\n\n## 测试存在性\n`test` 命令可以测试文件是否存在。\n\n### 示例 6.4\n```bash\n#!/bin/bash\n\
+  ## 假设 theFile .sh 不存在。\nif test -e /root/theFile.sh      # -e 检查存在性\nthen\n    echo\
+  \ 'The file exists!'\nelse\n    echo ' The file doesn't exist! '\nfi\n```\n输出：\n\
+  ```\nThe file doesn't exist!\n```\n### 解析：\n假设 `theFile.sh` 不存在。`test -e /root/theFile.sh`\
+  \ 测试文件是否存在。\n\n### 测试空字符串\n`test` 命令可以测试字符串是否为空。\n\n### 示例 6.5\n```bash\n#!/bin/bash\n\
+  ## 假设 “$myString” 尚未被赋值。\nif test -n \"$myString\"      # -n 检查非空字符串\nthen\n   \
+  \ echo \"It's not an empty string.\"\nelse\n    echo \"It's an empty string. \"\n\
+  fi\n```\n输出：\n```\nIt's an empty string.\n```\n### 解析：\n由于 `myString` 没有被赋值任何值，它是一个空字符串。\n\
+  \n\n\n\n\n### 示例 6.6\n\n```bash\n#! /bin/bash\nmyFunction() {\n    # define a function\n\
+  \    echo \"jQuery in 8 Hours\"\n}\necho \"Before calling the function. \"\nmyFunction\
+  \     # call the function\necho \"After calling the function. \"\n```\n**输出：**\n\
+  ```\nBefore calling the function.\njQuery in 8 Hours\nAfter calling the function.\n\
+  ```\n**解释：**\n`myFunction(){ }` 定义了一个函数。`myFunction` 调用了该函数。\n\n## 带参数的函数\n\n在调用函数时，你可以将参数传递给函数体。例如，将第一个参数传递给\
+  \ `${1}`，将第二个参数传递给 `${2}` ...\n\n### 示例 6.7\n```bash\n#! /bin/bash\nmyFunction(){\n\
+  \  echo \"The first parameter is: ${1} ! \"\n  echo \"The second parameter is: ${2}\
+  \ ! \"\n  echo \"The third parameter is: ${3} ! \"\n  echo \"The fourth parameter\
+  \ is: ${4} ! \"\n  echo \"All parameters are: $* ! \"\n}\nmyFunction Kotlin in 8\
+  \ Hour     # pass four parameters\n```\n**输出：**\n```\nThe first parameter is: Kotlin\
+  \ !\nThe second parameter is: in !\nThe third parameter is: 8 !\nThe fourth parameter\
+  \ is: Hours !\nAll parameters are: Kotlin in 8 Hours !\n```\n**解释：**\n`${1}` 接收第一个参数，`${2}`\
+  \ 接收第二个参数。`$*` 显示所有参数。`myFunction Kotlin in 8 Hour ` 调用了函数并传递了四个参数。\n\n## 返回值\n\n\
+  `return` 可以向 `$?` 返回一个值。`$?` 显示返回值。（在某些机器上，`$?` 只显示显示 0 到 255 之间的值。）\n\n| function_name\
+  \ { return value } |\n| :--- | :--- |\n| `$?` | # 显示返回值 |\n\n### 示例 6.8\n```bash\n\
+  #! /bin/bash\nadd(){\n    # define a function\n    x=100\n    y=155\n    z=`expr\
+  \ $x + $y`\n    return $z    # returns the value to $ ?\n}\nadd      # call the\
+  \ function\necho \"The sum of two numbers is $? \"\n```\n**输出：**\n```\nThe sum of\
+  \ two numbers is 255\n```\n**解释：**\n`return $z` 将值返回给 `$?`。`$?` 显示返回值。（在某些机器上，`$?`\
+  \ 只显示 0 到 255 之间的值。）\n\n### 示例 6.9\n```bash\n#! /bin/bash\nmyFunction(){\n  echo\
+  \ \"Please enter the first number:\"\n  read x          # assume entering 80\n \
+  \ echo \"Please enter the second number:\"\n  read y          # assume entering\
+  \ 90\n  z=`expr $x + $y`\n  return $z       # returns a value to $ ?\n}\nmyFunction\n\
+  echo \"The return value is $?\"\n```\n**输出：**\n```\nPlease enter the first number:\n\
+  80\nPlease enter the second number:\n90\nThe return value is 170\n```\n**解释：**\n\
+  `return $z` 向 `$?` 返回一个值。`$?` 显示返回值。\n\n# 7 小 if .. then .. elif .. then .. else\n\
+  \n`if...then…elif…else` 在条件为真时执行代码，在条件为假时执行该代码。\n\n### 示例 7.1\n```bash\n#! /bin/bash\n\
+  x=100\ny=80\nif [ $x == $y ]\nthen\n  echo \"x is equal to y\"\nelif [ $x -gt $y\
+  \ ]\nthen\n  echo \"x is greater than y\"\nelse\n  echo \"x is less than y\"\nfi\n\
+  ```\n**输出：**\n```\nx is greater than y\n```\n**解释：**\n`elif` 表示 `else…`。`elif [\
+  \ $x -gt $y ]` 测试 `$x` 是否大于 `$y`。\n\n## For 循环\n\n`For loop` 通过指定的项目重复执行代码块。\n\n\
+  | for var in item1 item2… do code1 code2… |\n\n### 示例 7.2\n```bash\n#! /bin/bash\n\
+  for var in 1 2 3\ndo\n  echo \"The number is: $var\"\ndone\n```\n**输出：**\n```\n\
+  The number is: 1\nThe number is: 2\nThe number is: 3\n```\n**解释：**\n`for var in\
+  \ 1 2 3` 在 `var=1`、`var=2`、`var=3` 时重复执行代码。\n\n### 示例 7.3\n```bash\n#! /bin/bash\n\
+  for str in Rust 8\ndo\n  echo $str\ndone\n```\n**输出：**\n```\nRust\n8\n```\n**解释：**\n\
+  `for str in Rust 8` 在 `str=Rust`、`str=8` 时重复执行代码。\n\n## While 循环\n\n`while loop`\
+  \ 在条件为真时循环执行代码。\n\n| while condition code done |\n\n### 示例 7.4\n```bash\n#! /bin/bash\n\
+  counter=1\nwhile(( $counter<=4 )) # run 4 times\ndo\n  echo $counter\n  counter=`expr\
+  \ $counter + 1`\ndone\n```\n**输出：**\n```\n1\n2\n3\n4\n```\n**解释：**\n`($counter<=4)`\
+  \ 是测试条件，如果条件为真，最多循环四次。`While Loop` 语句用于连续输入，但如果你想结束输入，请按 `<ctrl + d>` 退出程序。\n\n\
+  ### 示例 7.5\n```bash\n#! /bin/bash\necho 'Please enter a name: '\nwhile read book\
+  \ # accepts the input from user\ndo\n  echo \"OK! $book!\"\n  echo \"If quit, please\
+  \ press <ctrl + d>.\"\ndone\n```\n**输出：**\n```\nPlease enter a name: \nPHP\nOK!\
+  \ PHP!\n```\n**解释：**\n`while read book` 接受用户的连续输入。你可以根据需要多次输入。\n\n## Until 循环\n\n\
+  `until loop` 在条件为假时循环执行代码，在条件为真时退出循环。\n\n| until condition code done |\n\n### 示例\
+  \ 7.6\n```bash\n#! /bin/bash\nn=0\nuntil [ $n -ge 4 ] # will quit the loop if true\n\
+  do\n  echo $n\n  n=`expr $n + 1`\ndone\n```\n**输出：**\n```\n0\n1\n2\n3\n```\n**解释：**\n\
+  `until [ $n -ge 4 ]` 在 `$n` 等于 4 时退出循环。\n\n## Case 语句\n\n`case statement` 是多重选择。`case\
+  \ statement` 将值与模式匹配。如果匹配成功，则执行匹配命令。\n\n| case value in pattern1) code1;; pattern2)\
+  \ code2;; pattern3) code3;; pattern*) code4;; # match nothing, run this esac |\n\
+  \n### 示例 7.7\n```bash\n#! /bin/bash\necho 'Please input a number between 1 to 4:'\n\
+  read num\ncase $num in\n  1)\n    echo 'You have input 1';;\n  2)\n    echo 'You\
+  \ have input 2';;\n  3)\n    echo 'You have input 3';;\n  4)\n    echo 'You have\
+  \ input 4';;\n  *)\n    echo 'Your number is not between 1 to 4';;\nesac\n```\n\
+  **输出：**\n```\nPlease input a number between 1 to 4:\n2\nYou have input 2\n```\n\
+  **解释：**\n假设我们输入数字 2，它匹配第二个 case，因此执行了第二个代码。\n\n## Break 命令\n\n`break` 关键字用于根据条件停止循环的运行。\n\
+  \n| break |\n\n### 示例 7.8\n```bash\n#! /bin/bash\nnum=0\nwhile(( $num<=8))\ndo\n\
+  \  if [ $num == 3 ]\n  then\n    break # quit the while loop\n  fi\n  num=`expr\
+  \ $num + 1`\ndone\necho $num\n```\n**输出：**\n```\n3\n```\n**解释：**\n如果 `$num` 为 3，程序将运行\
+  \ `break` 命令并退出循环。\n\n## Continue 命令\n\n`continue` 命令用于停止当前迭代，忽略后续代码，然后继续下一次循环。\n\
+  \n| continue |\n\n### 示例 7.9\n```bash\n#! /bin/sh\nnums=\"1 2 3 4 5 \"\nfor n in\
+  \ $nums\ndo\n  if [ $n -eq 3 ]\n  then\n    continue # run the next for\n  fi\n\
+  \  echo $n\ndone\n```\n**输出：**\n```\n1\n2\n4\n5\n```\n**解释：**\n注意：没有 3。如果 `$n` 为\
+  \ 3，则执行 `continue` 运行下一次 `for` 循环。\n\n## Select 语句\n\n`select statement` 允许用户选择项目以满足条件。`select`\
+  \ 语句通常与 `case` 语句配合使用。\n\n| select var in item1 item2... do |\n\n### 示例 8.1\n```bash\n\
+  #! /bin/bash\necho \"Please select a number between 1 to 4:\"\necho \"Input 4 to\
+  \ exit.\"\nselect choice in 1 2 3 4  # select one number\ncase $choice in\n  1)\n\
+  \    echo \"You choose 1\";;\n  2)\n    echo \"You choose 2\";;\n  3)\n    echo\
+  \ \"You choose 3\";;\n  4)\n    echo \"You choose 4 to exit\"\n    break;;\n  *)\n\
+  \    echo \"Enter error! \"\n    break;;\nesac\ndone\n```\n**输出：**\n```\nPlease\
+  \ select a number between 1 to 4:\nInput 4 to exit.\n1) 1\n2) 2\n3) 3\n4) 4\n? 2\n\
+  You choose 2\n? 4\nYou choose 4 to exit\n```\n**解释：**\n假设我们第一次输入 2，第二次输入 4。`?` 是输入提示符，你可以输入数字。\n\
+  \n# I/O 重定向\n\nLinux Shell 系统命令从终端获取输入并将结果输出传回终端。命令通常从标准输入读取数据并向标准输出数据。重定向命令如下：\n\
+  \n| 命令 | 描述 |\n| :--- | :--- |\n| command > file | 将输出重定向到文件。 |\n| command < file\
+  \ | 将输入重定向到文件。 |\n| command >> file | 将输出追加到文件。 |\n| n > file | 将文件 n 重定向到文件 |\n\
+  | n >> file | 追加文件 n 到文件 |\n| n >& m | 合并输出 m 和文件 n |\n| n <& m | 合并输入文件 m 和文件 n\
+  \ |\n| << tag | 将标签之间的内容作为输入。 |\n\n\n\n\n\n“File n”, “File m”意味着文件描述符为 `0`、`1` 或\
+  \ `2` 的文件。`0` 表示标准输入 (STDIN)，`1` 表示标准输出 (STDOUT)，`2` 表示标准错误 (STDERR)。\n\n## 输出重定向\n\
+  输出重定向：使用 `>` 执行命令并将输出内容存储到文件中。\n\n| `command > file` |\n\n### 示例 8.2\n```bash\n\
+  echo \"R in 8 Hours\" > myFile\ncat myFile # “cat”查看 myfile 内容\n```\n**输出：**\n`R\
+  \ in 8 Hours`\n**解释：** `echo \"R in 8 Hours\" > myFile` 将输出重定向到 `myFile`。你需要使用 `cat`\
+  \ 命令来查看 `myFile` 的内容。(rsrc3M2.jpg)\n\n## 追加重定向\n如果你不想覆盖文件内容，请使用 `>>` 将内容追加到文件末尾。\n\
+  \n| `command >> file` |\n\n### 示例 8.3\n```bash\necho \"R in 8 Hours\" > myFile\n\
+  echo \"It is good! \" >> myFile\ncat myFile # “cat”查看 myfile 内容\n```\n**输出：**\n\
+  `R in 8 Hours`\n`It is good!`\n**解释：** `echo \"It is good! \" >> myFile` 将内容追加到\
+  \ `myFile`。(rsrc3M3.jpg)\n\n## 输入重定向\n输入重定向：使用 `<` 从文件获取输入。\n\n| `command < file`\
+  \ |\n\n### 示例 8.4\n```bash\nwc < myFile # myFile 在上一页创建。\n```\n**输出：**\n`2 7 25`\n\
+  **解释：** `wc < myFile` 从 `myFile` 获取输入。`wc` 统计文件中行数、单词和字符数。\n- `2`：两行。\n- `7`：七个单词。\n\
+  - `25`：字符（包括空格）。\n`myFile` 是上一页创建的文件。\n\n## 文件描述符\n当每个 Linux 命令执行时，它们会打开三个文件：\n\n\
+  1. **标准输入文件 (stdin)：** `stdin` 的文件描述符为 `0`，Shell 程序默认从 `stdin` 读取数据。\n2. **标准输出文件\
+  \ (stdout)：** `stdout` 的文件描述符为 `1`，Shell 程序默认向 `stdout` 写入数据。\n3. **标准错误文件 (stderr)：**\
+  \ `stderr` 的文件描述符为 `2`，Shell 程序向 `stderr` 流写入错误信息。\n\n### 示例：\n`command < file`\
+  \ 将 `stdin` 重定向到文件。\n| `$ command < file` |\n\n示例：`command > file` 将 `stdout` 重定向到文件。\n\
+  | `$ command > file` |\n\n示例：从 `infile` 文件读取输入，将输出写入 `outfile`。\n| `$ command <\
+  \ infile > outfile` |\n\n## Here Document（在此文档中）\nHere Document 用于将文件内容重定向到命令。\n\
+  \n| `command << delimiter delimiter` |\n\n第二个分隔符必须位于最左侧，前面不能有字符，后面也没有字符。\n\n###\
+  \ 示例 8.5\n```bash\n#! /bin/bash\ncat << DOC # DOC 定义了一个 Here Document\nAngularJS\
+  \ in 8 Hours\nJavaScript in 8 Hours\nVisual Basics in 8 Hours\nDOC\n```\n**输出：**\n\
+  `AngularJS in 8 Hours`\n`JavaScript in 8 Hours`\n`Visual Basics in 8 Hours`\n**解释：**\
+  \ `cat << DOC...DOC` 是一种特殊的重定向模式，将文件内容重定向到命令。`cat` 显示文件内容。`DOC` 是分隔符。你可以指定其他字符作为分隔符。`DOC...DOC`\
+  \ 定义了一个 Here Document。\n\n### 示例 8.6\n```bash\n#! /bin/bash\nwc << EOF # wc 统计行、单词、字符数\n\
+  AngularJS in 8 Hours\nJavaScript in 8 Hours\nVisual Basics in 8 Hours\nEOF\n```\n\
+  **输出：**\n`3 13 68`\n**解释：** `wc << EOF...EOF` 将文档内容重定向到 `wc`。`wc` 用于统计行、单词和字符数。`EOF`\
+  \ 是分隔符，定义了一个 Here Document。\n- `3`：表示 3 行。\n- `13`：表示 13 个单词。\n- `68`：表示 68 个字符（包括空格）。\n\
+  \n## 包含文件\nShell 可以将外部脚本文件包含到当前文件中。\n\n| `source ./external_file` |\n\n`./` 定位外部文件。我们将创建两个文件作为示例。\n\
+  \n**(1) 文件 `file1.sh` 如下：**\n### 示例 8.7\n```bash\n#! /bin/bash\nurl =\"http://www.lulu.com/spotlight/Ray_Yao\"\
+  \n```\n**(2) 文件 `file2.sh` 如下：**\n### 示例 8.8\n```bash\n#! /bin/bash\nsource ./file1.sh\
+  \ # 包含外部文件\necho \"The website of Ray Yao is： $url \"\n```\n**输出：**\n`The website\
+  \ of Ray Yao is： http://www.lulu.com/spotlight/Ray_Yao`\n**解释：** `source ./file1.sh`\
+  \ 包含了一个外部文件。\n\n## Printf 命令\n`printf` 用于格式化输出。\n\n## 转义序列\n- `%b`: 二进制\n- `%d`:\
+  \ 进制\n- `%f`: 浮点\n- `%o`: 八进制\n- `%s`: 字符串\n- `%x`: 十六进制\n- `\\n`: 新行\n- `\\a`:\
+  \ 警报\n- `\\r`: 回车\n- `\\t`: 制表符\n- `\\f`: 分页\n\n`printf` 用于格式化输出。\n\n| 类型 | 描述 |\n\
+  | :--- | :--- |\n| `%b` | 二进制 |\n| `%d` | 进制 |\n| `%f` | 浮点 |\n| `%o` | 八进制 |\n\
+  | `%s` | 字符串 |\n| `%x` | 十六进制 |\n\n## 比较运算符\nLinux Shell 拥有比较运算符：\n\n| 运算符 | 检查\
+  \ |\n| :--- | :--- |\n| `-eq` | 等于 |\n| `-ne` | 不等于 |\n| `-gt` | 大于 |\n| `-ge` |\
+  \ 大于等于\n| `-lt` | 小于 |\n| `-le` | 小于等于 |\n\n## 布尔运算符\n使用逻辑运算符后，结果将为真或假。\n\n| 运算符\
+  \ | |\n| :--- | :--- |\n| `-a` | 与 (AND) |\n| `-o` | 或 (OR) |\n| `!` | 非 (NOT) |\n\
+  \n## 字符串运算符\n| 运算符 | 检查 |\n| :--- | :--- |\n| `=` | 字符串相等 |\n| `!` | 字符串不相等 |\n\
+  | `-z` | 字符串长度为 0\n- `-n` | 字符串长度不为 0 |\n\n## 参数\nShell 中内置参数：\n\n| 参数 | 描述 |\n\
+  | :--- | :--- |\n| `$0` | 脚本名称 |\n| `$#` | 参数总数 |\n| `$*` | 所有参数 |\n| `$@` | 作为参数的所有参数\
+  \ |\n| `$$` | 当前进程 ID |\n| `$?` | 上一个命令的状态 |\n| `$!` | 上一个后台进程 |\n\n## 文件运算符\n文件运算符用于检测文件的各种属性。\n\
+  \n| 运算符 | 检查 |\n| :--- | :--- |\n| `-d` | 是否为目录 |\n| `-f` | 是否为文件 |\n| `-p` | 是否为管道\
+  \ |\n| `-r` | 是否可读文件 |\n| `-w` | 是否可写文件 |\n| `-x` | 是否为可执行文件 |\n| `-e` | 是否存在 |\n\
+  | `-s` | 是否非空 |\n| `-b` | 是否为块设备文件 |\n| `-c` | 是否为字符设备文件 |\n\n## I/O 重定向图\nLinux\
+  \ Shell 系统命令从终端获取输入并将输出发送回终端。命令通常从标准输入读取数据，向标准输出写入数据。重定向命令如下：\n\n| 命令 | 描述 |\n|\
+  \ `command > file` | 将输出重定向到文件。 |\n| `command < file` | 将输入重定向到文件。 |\n| `command\
+  \ >> file` | 将输出追加到文件。 |\n| `n > file` | 将文件 n 重定向到文件 |\n| `n >> file` | 将文件 n 追加到文件\
+  \ |\n| `n >& m` |合并输出文件 m 和文件 n |\n| `n <& m` |合并输入文件 m 和文件 n |\n| `<< tag` | 将标签之间的内容作为输入。\
+  \ |\n\n\n\n\n\n# 附录 2：测试\n\n请选择正确答案。\n\n(01) 填充 `# 填充字符作为多行注释`\n```bash\ncomment\
+  \ 1\ncomment 2\ncomment 3...EOF\n```\nA. EOF\nB. `#EOF`\nC. `<<EOF`\nD. `: <<EOF`\n\
+  \n(02)\n```bash\n#! /bin/sh\nstr1=\"Kotlin\"\nstr2=\"in 8 Hours\"\nmyString=\"$str1\
+  \ fill in $str2\" # 连接两个字符串\necho $myString\n```\nA. `+`\nB. `-`\nC. 无 (nothing)\n\
+  D. `concat`\n\n(03) 访问数组元素的语法是 fill in ?\n1. `$(array_name[index])`\n2. `${array_name[index]}`\n\
+  3. `array_name(index)`\n4. `array_name{index}`\n\n(04)\n```bash\n#! /bin/bash\n\
+  sum= fill in expr 100 + 200 fill in\necho \"The sum is: $sum\"\n```\nA. 双引号 (double\
+  \ quotes)\nB. 单引号 (single quotes)\nC. 反引号 (back quotes)\nD. 无 (nothing)\n\n(05)\
+  \ 参数 `-s file` 检查 fill in ?\nA. 如果对象不是空文件，返回 true。\nB. 如果对象是空文件，返回 true。\nC. 如果对象是块设备文件，返回\
+  \ true。\nD. 如果对象是字符设备文件，返回 true。\n\n(06)\n```bash\n#! /bin/bash\nif test fill in\
+  \ /root/myFile.sh # 检查 myFile 是否存在\nthen\n  echo 'The file exists! '\nelse\n  echo\
+  \ ' The file doesn't exist! '\nfi\n```\nA. `-o`\nB. `-e`\nC. `-n`\nD. `-s`\n\n(07)\
+  \ `if fill in condition fill then encode1 elsecode2 fi`\nA. `( )`\nB. `{ }`\nC.\
+  \ `[ ]`\nD. 无 (nothing)\n\n(08) `# 将输出重定向到 myFile`\n```bash\necho \"R in 8 Hours\"\
+  \ fill in myFile\n```\nA. `->`\nB. `>`\nC. `in`\nD. `to`\n\n(09)\n```bash\n#! /bin/sh\n\
+  echo \"Please input your name. \"\nfill in myInput # 输入值将存储在 myInput\necho \"Hi!\
+  \ Your name is: $myInput\"\n```\nA. `input`\nB. `var`\nC. `$myInput=`\nD. `read`\n\
+  \n(10)\n```bash\n#! /bin/sh\nstr=\"jQuery in 8 Hours\"\necho fill in # 获取字符串的长度\n\
+  ```\nA. `str.length()`\nB. `length(str)`\nC. `${#str}`\nD. `[$#str]`\n\n(11) `fill\
+  \ in` 可以获取数组的所有元素。\n1. `array_name[@]`\n2. `array_name[#]`\n3. `array_name[%]`\n\
+  4. `array_name[&]`\n\n(12)\n| 运算符 | 运行 |\n| :--- | :--- |\n| `+` | 加 |\n| `-` |\
+  \ 减 |\n| `fill in` | 乘 |\n| `/` | 除 |\n\nA. `*`\nB. `\\*`\nC. `X`\nD. `\\x`\n\n\
+  (13)\n```bash\n#! /bin/sh\necho fill in \"Go \\c \" # 开启转义开关\necho \"in 8 Hours\"\
+  \n```\nA. `-a`\nB. `-o`\nC. `-s`\nD. `-e`\n\n(14)\n```bash\n#! /bin/bash\nif test\
+  \ fill in \"$myString\" # 检查空字符串\nthen\n  echo \"It's not an empty string.\"\nelse\n\
+  \  echo \"It's an empty string.\"\nfi\n```\nA. `-o`\nB. `-e`\nC. `-n`\nD. `-s`\n\
+  \n(15) `until` 循环在指定条件为 `fill in` 时执行代码块，如果条件变为为 `fill in`，则退出循环。\n1. true, true\n\
+  2. true, false\n3. false, false\n4. false, true\n\n(16) 如果你不想覆盖文件内容，请使用 `fill in`\
+  \ 符号将内容追加到文件末尾。\nA. `>>`\nB. `->`\nC. `=>`\nD. `>=`\n\n(17)\n| 参数 |or |\n| :---\
+  \ | :--- |\n| `fill in` | 返回文件名 |\n| `$#` | 返回参数的总数 |\n| `$*` | 返回用户输入的所有参数 |\n\
+  | `$@` | 返回用户输入的所有参数 |\n\nA. `$n`\nB. `$0`\nC. `$f`\nD. (%)\n\n(18)\n```bash\n#!\
+  \ /bin/bash\narr=(PHP in 8 Hours)\nlength= fill in # 获取数组的长度\necho $length\n```\n\
+  A. `arr.length()`\nB. `length(arr)`\nC. `size(arr)`\nD. `${#arr[@]}`\n\n(19)\n|\
+  \ `true -a true; 返回 true;` | `true -a false; 返回 false;` | `false -a false; 返回 false;`\
+  \ |\n| `false -a true; 返回 false;` | `true -a true; 返回 false;` | `! true -a true;\
+  \ 返回 false;` |\n| `! true -a false; 返回 true;` | `! false -a true; 返回 true;` | `!\
+  \ false -a false; 返回 true;` |\n| `true -a true; 返回 true;` | `true -a false; 返回 false;`\
+  \ | `true -a false; 返回 false;` |\n| `false -a true; 返回 false;` | `false -a false;\
+  \ 返回 false;` | `false -a false; 返回 false;` |\n\n1. true, true\n2. true, false\n\
+  3. false, false\n4. false, true\n\n(20)\n```bash\n#! /bin/bash\nadd(){\n  # 定义函数\n\
+  \  x=100\n  y=155\n  z=`expr $x + $y`\n  return $z # 返回值\n}\nadd # 调用函数\necho \"\
+  The sum is: \" \" 显示 显示```\n```\nA. `$\n\nB. `$`\n\n. `$**\nD. `$?`\n\n(21)\n```bash\n\
+  #! /bin/bash\necho 'Please input a number between 1 to 4:'\nread num\ncase $num\
+  \ in\n  1) echo 'You have input 1' fill in\n  2) echo 'You have input 2' fill in\n\
+  \  3) echo 'You have input 3' fill in\n  4) echo 'You have input 4' fill in\n  *)\
+  \ echo 'Your number is not between 1 to 4' fill in\nesac\n```\nA. `;`\nB. `;;`\n\
+  C. `;;;`\nD. `;;;;`\n\n(22)\n```bash\n#! /bin/bash\nfill in # 计算行、字、字符数\n```\n1.\
+  \ `num << DOC`\n2. `ls << DOC`\n3. `wc << EOF`\n4. `cat << EOF`\n\n(23)\n```bash\n\
+  #! /bin/bash\nfill in ./file.sh # 外部文件 \"file1.sh\"\necho \"The website of Ray Yao\
+  \ is： $url \"\n```\nA. `include`\nB. `import`\nC. `resource`\nD. `source`\n\n# 答案\n\
+  | 01. D |\n| 02. C |\n| 03. B |\n| 04. C |\n| 05. A |\n| 06. B |\n| 07. C |\n| 08.\
+  \ B |\n| 09. D |\n| 10. C |\n| 11. A |\n| 12. B |\n\n\n\n\n\n# 注意\n本书仅供初学者阅读，不适合有经验的程序员。\n\
+  \n## 源代码下载链接\n[https://forms.aweber.com/form/11/1793939911.htm]()\n\n## 推荐书籍\n-\
+  \ [8 小时精通高级 C++编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通高级 JAVA 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 AngularJS 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [C# 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 C# 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [C# 编程：包含 100 个问答](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [C++ 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 C++ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [编程面试：1000 问答](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 Django 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 Go 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [HTML CSS 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 HTML CSS 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [JAVA 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 JAVA 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [JAVA 编程：包含 100 个问答](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [JavaScript 50 个实用程序](https://www.amazon.com/-/e/B0863BQT8T)\n- [JavaScript 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 JavaScript 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [JQuery 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 JQuery 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 Kotlin 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [Linux 命令行](https://www.amazon.com/-/e/B0863BQT8T)\n- [Linux 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 Linux Shell 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 MySQL 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [Node](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 js 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [PHP 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 PHP MySQL 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 PowerShell 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [Python 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 Python 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [Python 编程：包含 100 个问答](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [初学者 R 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 Ruby 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [8 小时精通 Rust 编程](https://www.amazon.com/-/e/B0863BQT8T)\n- [8 小时精通 Scala 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\
+  - [Visual Basic 面试与认证考试](https://www.amazon.com/-/e/B0863BQT8T)\n- [初学者 Visual Basic\
+  \ 编程](https://www.amazon.com/-/e/B0863BQT8T)\n\n"
