@@ -1,0 +1,8 @@
+name: Linux Shell Scripting：From Basics to Expert Proficiency
+name_cn: Linux Shell 脚本：从基础到精通
+slug: linux-shell-scriptingfrom-basics-to-expert-proficiency
+toc:
+- - '###'
+  - 1.8 基础 Shell 脚本 - 示例
+- - '####'
+  - 此脚本显示欢迎消息和当前日期时间
