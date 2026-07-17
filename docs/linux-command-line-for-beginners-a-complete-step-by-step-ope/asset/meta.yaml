@@ -1,0 +1,30 @@
+name: LINUX Command-Line for Beginners： A Complete Step-by-Step Opening Guide to Study
+  Linux from Scratch to Scripting and SSH commands, Linux terminals, editors, and
+  shell
+name_cn: Linux 命令行初学者指南：从零开始学习脚本、SSH 命令、Linux 终端、编辑器和 Shell 的完整分步入门指南
+slug: linux-command-line-for-beginners-a-complete-step-by-step-ope
+toc:
+- - '##'
+  - 为什么要使用 Linux？
+- - '##'
+  - 第 2 章：Linux 发行版和安装类型
+- - '##'
+  - 服务器角色与安装类型
+- - '##'
+  - 第 6 章：Linux 文件系统
+- - '##'
+  - 第 7 章：处理磁盘、介质和数据文件 (gzip – tar)
+- - '##'
+  - 第 8 章：文件、目录管理器、权限、网络和 SSH
+- - '##'
+  - 第 9 章：Linux 终端、编辑器和 Shell
+- - '##'
+  - 第 10 章：
+- - '##'
+  - 第 11 章：Shell 脚本
+- - '##'
+  - 第 12 章：构建脚本
+- - '##'
+  - 第 13 章：基础 Bash Shell 命令
+- - '##'
+  - 第 14 章：高级 Bash Shell 命令

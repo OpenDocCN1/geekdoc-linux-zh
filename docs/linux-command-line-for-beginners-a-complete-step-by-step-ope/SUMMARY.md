@@ -1,0 +1,2 @@
++   [Linux 命令行初学者指南：从零开始学习脚本、SSH 命令、Linux 终端、编辑器和 Shell 的完整分步入门指南](README.md)
++   [Linux 命令行初学者指南：从零开始学习脚本、SSH 命令、Linux 终端、编辑器和 Shell 的完整分步入门指南](linux-command-line-for-beginners-a-complete-step-by-step-ope_0.md)
