@@ -1,0 +1,3419 @@
+<p><img src="images/00067.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 791 1186" preserveaspectratio="none">
+<image width="791" height="1186" xlink:href="images/00067.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<div class="calibre1">
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre5">Index</span></p>
+<p><span id="part0000_split_000.html_toc"></span><a
+href="#part0000_split_002.html__Toc48980319" class="calibre7"><span
+class="calibre8">Linux Basics</span></a></p>
+<p><a href="#part0000_split_003.html__Toc48980320"
+class="calibre7"><span class="calibre8">Logs and
+monitoring</span></a></p>
+<p><a href="#part0000_split_004.html__Toc48980321"
+class="calibre7"><span class="calibre8">Managing Users and
+Groups</span></a></p>
+<p><a href="#part0000_split_005.html__Toc48980322"
+class="calibre7"><span class="calibre8">Performing a General System
+Health Check</span></a></p>
+<p><a href="#part0000_split_006.html__Toc48980323"
+class="calibre7"><span class="calibre8">Managing Processes and
+Services</span></a></p>
+<p><a href="#part0000_split_007.html__Toc48980324"
+class="calibre7"><span class="calibre8">How to Create Scheduled
+Tasks</span></a></p>
+<p><a href="#part0000_split_008.html__Toc48980325"
+class="calibre7"><span class="calibre8">Managing the
+Network</span></a></p>
+<div id="part0000_split_000.html_calibre_pb_0" class="calibre9">
+
+</div>
+</p>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<div class="calibre1">
+<p><br />
+</p>
+<p><span class="calibre3">1HourToStart</span></p>
+<p><span class="calibre12"> </span></p>
+</div>
+<p><span id="part0000_split_002.html"></span></p>
+<section id="part0000_split_002.html_calibre_pb_2"
+class="calibre13 calibre1">
+<h1 class="calibre13"><span id="part0000_split_002.html__Toc48980319"
+class="calibre14"><span class="calibre15">Linux
+Basics</span></span></h1>
+<p><span class="calibre16"> </span></p>
+<p><span class="calibre12">In this guide we are going to work with the
+command line. Though it may result so unfamiliar at the beginning, you
+will learn how important is for an aspirant administrator to be
+knowledgeable of the operations available only through the terminal. The
+modern practice, even for learners, is going toward this direction with
+cloud servers that offer operating systems available through the
+terminal. Amazon AWS is an example of cloud servers where you find a
+large number of machines free to be explored, just enabling the
+services, setting up your settings and ready to go with the ISO you
+prefer. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In this guide we use Linux distribution
+Ubuntu 18.04. You will be able to operate exclusively through the
+command line to install excellent tools to monitor services and
+processes, control users, network management, logs, and more.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">One of the most frequent command repeated in
+the book is “cd”. This command is used to move from one directory to
+another, followed then by the directory you want to move to. The path of
+the directory is separated by “/” that indicates to specify the name of
+the folder.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">cd desktop/folder1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">With the following syntax instead, you are
+able to go back to a previous path. The two dots refers to the structure
+and indicate the hierarchy of folders. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">cd ..</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Permissions</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">A reminder for the next chapter is the
+importance of permissions. Taking as an assumption that you can always
+use the current user in your machine, some operations may not be allowed
+to all users. That’s why it is important to keep an eye on the user you
+are working with. Sometimes it is necessary to run commands with “sudo”
+in front of the command itself to be able to properly execute an
+operation. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The Man command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">When information about one command is not
+exhaustive, you may find handful to use the “man” command. Each command
+has a “man” available to show information about the command such
+as:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">man kill</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Kill is the command that kills processes.
+With man you can find out all possible options for this command.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">What is the Kernel?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In this guide there are many references about
+the Kernel. If you have not never heard about this term, you may find
+interesting to have a full understanding of what it is and how it works.
+</span></p>
+<p><span class="calibre12">With Kernel we mean the level that works in
+cooperation between the software and the hardware and it allows the
+communication between these two through drivers. Though a variety of
+distributions, there is always a Kernel for the same purpose.
+</span></p>
+<p><span class="calibre12">When any application needs to apply changes
+to the hardware, it transfers the request to the Kernel which translates
+this request and communicates directly with the driver to accept or
+refuse requests. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The Kernel is one of the main components of
+an operating system that connects to the resources. This is why it also
+takes care of the management of the resources in an operating system.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The Linux Kernel is monolithic which means
+that is able to run complex operations applying exactly the concept we
+talked about earlier in this section. So, it takes care of the resources
+such as CPU, memory, hard drives, I/O devices, while it manages file
+systems, drivers, etc…</span></p>
+<p><span class="calibre12">While on one hand this type of kernel is able
+to work appropriately with more precautions on all tasks because all the
+requests are handled directly by the kernel, on the other hand, this
+method require to accept all the requests each time. And this process
+may result in critical issues, when there is a request that still needs
+to be approved. Some of the advantages of this communication are the
+access from software to hardware, simple method to speak with each side,
+no additional drivers may be required, quick response from both sides.
+It is also true that there are negative aspects of using a Kernel. For
+instance, it requires memory, and it is not so much a safe choice.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Where are the files?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The Kernel files in Ubuntu are collected
+under the folder /boot.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">What are deamons?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">A specific section of this guide is about how
+to manage processes, but even in others you always find the term
+“deamons”. Processes are instances of programs that run to complete
+tasks. Processes are managed by the Kernel that gives them an
+identification number (PID). As we will see the PID is essential to work
+with processes as well as monitor the activities. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Some specific processes run and complete the
+requests on background while users are working. An example is the mail
+server that receives and forwards emails while you are working. These
+processes are not activated by the user but usually they start on their
+own when as soon as the operating system is booted. Some famous examples
+of deamons are </span><span class="calibre17">httpd</span><span
+class="calibre12">, </span><span class="calibre17">Apache,
+MySQL</span><span class="calibre12"> that are available while you work
+on different activities. </span></p>
+<p><span class="calibre16"> </span></p>
+</section>
+<p><span id="part0000_split_003.html"></span></p>
+<section id="part0000_split_003.html_calibre_pb_3"
+class="calibre13 calibre1">
+<h1 class="calibre13"><span id="part0000_split_003.html__Toc48980320"
+class="calibre14"><span class="calibre15">Logs and
+monitoring</span></span></h1>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">While exploring one of the most used
+operating system as Linux, it is also fundamental to keep track of the
+execution of processes including applications and services that are
+running at the same time. Whether you are a developer or just a user
+with strong interest toward the topic, having a clear understanding of
+logs in Linux will be useful to have a comprehensive knowledge of the
+logics of the operating system no matter what distribution you are
+working on.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Whatever error is occurring, such as a crash
+in your operating system, all the events and applications running are
+recorded in specific files named </span><span class="calibre16">log
+files</span><span class="calibre12">. These files trace a list of the
+past events registered in the lifetime of an operating system. Are you
+the administrator of the OS? Through the log files you will be able to
+troubleshoot the issue and be able then to find the appropriate
+solution. Also, log files will result a great resource to </span><span
+class="calibre17">monitor activities</span><span class="calibre12"> and
+be able to translate what they say.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In Linux, all the log files are stored in the
+</span><span class="calibre17">path /var/log</span><span
+class="calibre12">. Under this directory there all the logs that refer
+to processes related to the operating system itself. Then, depending for
+each application you’ll be able to identify the log files under separate
+folders in the same directory. Use the command line from any Linux
+distribution to complete this operation. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The logs are standard plain ASCII text files
+displayed as a list under the subdirectory /var/log. Their names change
+accordingly to their purpose such as auth.log or kern.log.</span></p>
+<p><span class="calibre16"> </span></p>
+<p><span class="calibre16">In this guide we are going use Ubuntu 18.04
+as reference for almost all the tasks. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Categories of files</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The main categories for these log files
+are:</span></p>
+<ul>
+<li><span class="calibre16">System logs</span></li>
+<li><span class="calibre16">Application logs</span></li>
+<li><span class="calibre16">Event logs</span></li>
+<li><span class="calibre16">Service Logs</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">They are critical files that has to be
+monitored to take care of centralized activities based also on the needs
+of the developer or administrator of the system.</span></p>
+<p><span class="calibre16"> </span></p>
+<p><span class="calibre17">System Logs</span></p>
+<p><span class="calibre16"> </span></p>
+<p><span class="calibre12">One of the main groups of log files is the
+system logs. To this category belongs all the logs that are essentially
+based on activities executed directly on the operating system and not
+log files created by other applications. The origin of the syslog can
+depend on syslog service, syslog protocol or syslog message. Syslog
+service addresses to receiving or forwarding messages. Based on a
+listener that then translates messages that are written or sent out to a
+remote server. Through the protocol log it is possible to figure the
+structure of messages and see how they are transmitted to another
+server. And finally, the syslog message is any message which has a
+standard header and a content that includes the timestamp, the
+application, the location in the system, and the priority. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Some examples of these files are:</span></p>
+<ul>
+<li><span class="calibre12">System Log</span></li>
+<li><span class="calibre12">Authorization Log</span></li>
+<li><span class="calibre12">Deamon Log</span></li>
+<li><span class="calibre12">Kernel Log</span></li>
+<li><span class="calibre12">Debug Log</span></li>
+</ul>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">System Log Files</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The System Log is the file that includes the
+majority of information related to the operating system. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the System log file
+is</span><span class="calibre21">:</span><span class="calibre12">
+/var/log/syslog</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In Ubuntu as well as other Debian-based
+systems all the files related to the system are stored under the
+</span><span class="calibre16">syslog</span><span class="calibre12">
+directory. While with some Linux distributions there is an exception for
+the messages which are available in a separate folder under the
+directory</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/message</span><span
+class="calibre21">s</span><span class="calibre12">. These are generic
+files that describe who logged in when starting the machine such as any
+hardware issues that has to be identified at the reboot. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Authorization Log Files</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">This category of log files refers to a record
+with all the authentications including attempts which can be successful
+or failed accesses, the sudo command, passwords, management of users
+also through the Pluggable Authentication Module (PAM) system, and
+remote accesses through SSH (sshd logins). </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Authorization log file
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/auth.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Other Linux distributions such as Redhat and
+CentrOS save the authorization logs in  </span><span class="calibre21">
+</span><span class="calibre12">/var/log/secur</span><span
+class="calibre21">e</span><span class="calibre12">.</span></p>
+<p><span class="calibre12">Through the use of these files you will be
+able to keep track of vulnerable methods and possible unauthorized
+accesses from not listed users. As an administrator you will need a
+further investigation to track these activities.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Deamon Log Files</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">This group relates to all the services and
+application deamons that run on background with no direct intervention
+from the user and no output shown. Some examples are printing services,
+Bluetooth applications, Gnome Display Manager, MySQL database (mysqld),
+etc…</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Deamon log file
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/daemon.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Kernel Log Files</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">They give all the information about the Linux
+kernel such as who has logged in through the kernel. These logs provide
+warning and other messages that are really helpful for troubleshooting,
+such as for example a custom-built kernel as well as issues on hardware
+or network. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Deamon log file
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/kern.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">Kernel Ring Buffer</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Using the utility </span><span
+class="calibre3">dmesg utility</span><span class="calibre12"> you are
+able to access to messages that describe any related issues with
+hardware at the boot. The Kernel Ring Buffer messages provide
+information that are effectively useful to detect and solve any critical
+problem of communication between a device and its driver. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Kernel Ring Buffer messages
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/dmesg</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Kernel Log Files</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">It provides information about the debug
+messages of the operating system. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Debug log files
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/debug</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre23">Application Logs</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Applications may create the log files under
+the directory</span><span class="calibre21"> </span><span
+class="calibre12">/var/log</span><span class="calibre21">/</span><span
+class="calibre12">. They are usually well recognizable because you can
+find exactly the name of the application they refer to. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Apache server log files</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In Ubuntu all the log files of apache are
+located under the subdirectory</span><span class="calibre21">
+</span><span class="calibre12">/var/log/apache2</span><span
+class="calibre21">/</span><span class="calibre12">. Other Linux
+distributions contain the Apache log files under</span><span
+class="calibre21"> </span><span
+class="calibre12">var/log/httpd</span><span
+class="calibre21">/</span><span class="calibre12">. </span></p>
+<p><span class="calibre12">Here there are all the files used and loaded
+by Apache. This also means including in the list the IP address, user id
+all clients that are sending a request to the web server, time, date,
+HTTP resulting from a query.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">All accesses to the Apache server are stored
+separately in two files: the </span><span
+class="calibre16">access_log</span><span class="calibre12"> and
+</span><span class="calibre16">error_log</span><span class="calibre12">.
+The </span><span class="calibre17">access log</span><span
+class="calibre12"> refers to issues with the memory as well as the
+request sent to the web server in order to access. Whereas the
+</span><span class="calibre17">error_log</span><span class="calibre12">
+reports all errors related to the web server which means issues occurred
+over the httpd requests. </span></p>
+<p><span class="calibre12">In addition to these two files, the Apache
+server also has a different file for the attempts and accesses which is
+the access_log file. </span></p>
+<p><span class="calibre12">Whether the attempts are successfully
+finalized or not, all the logs are anyway registered. And this
+information is clearly resourceful to reiterate critical bugs.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">MySQL Log Files</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">For some Linux distributions, the MySQL Log
+files are placed in the directory</span><span class="calibre21">
+</span><span class="calibre12">/var/log/mysqld.lo</span><span
+class="calibre21">g</span><span class="calibre12"> or</span><span
+class="calibre21"> </span><span
+class="calibre12">/var/log/mysql.lo</span><span
+class="calibre21">g</span><span class="calibre12">. The error logs for
+the newer versions of Linux Ubuntu can be found in</span><span
+class="calibre21"> </span><span
+class="calibre12">/var/log/mysql/error.lo</span><span
+class="calibre21">g</span><span class="calibre12">. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">While the location of the file can be
+different according to the Linux versions that you are using, the
+activity of monitoring is almost the same. You may use the file to trace
+unexpected behaviors of MySQL daemon mysqld such as starting while
+running or completing operations. A closer diagnosis on behaviors of the
+client with connections to a MySQL and requests of queries are examples
+of issues that may impact performances. Being knowledgeable of the
+content of a log file, you will be able to solve problems, crashes, and
+delays related to your database. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">CUPS Print System Logs (Ubuntu
+versions)</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">The term </span><span
+class="calibre16">CUPS</span><span class="calibre12"> stands for
+</span><span class="calibre17">Common Unix Printing System</span><span
+class="calibre12"> and the error_log contains all the error related to
+printing issues on Ubuntu versions. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the CUPS Print System Log files
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/cups/error_log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Rootkit Hunter Log (Ubuntu
+versions)</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">The </span><span class="calibre16">Rootkit
+Hunter</span><span class="calibre12"> is a utility that has the goal to
+look for possible backdoors, sniffers and rootkits that may constitute a
+thread for your operating system. The Rootkit Hunter is available in the
+latest versions of Linux Ubuntu. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Rootkit Hunter</span><span
+class="calibre3"> </span><span class="calibre12">Log files
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/rkhunter.log</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">Samba (SMB) Server</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre16">SMB</span><span class="calibre12"> which
+stands for Server Message Block is a protocol used to share and transfer
+files between the same version of operating system as well as a variety
+of distributions or operating systems. That’s why it is so important as
+an administrator to be confident with these category of log files. Some
+attacks could come from a connection to another computer, and it is
+therefore a priority to be aware about how to face problems with the SMB
+protocol. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Samba Server Log files
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/samba</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Under the directory “samba” for the latest
+Ubuntu versions, you fill other categories which are the log.nmbd,
+log.smbd, and log.[IP_ADDRESS]. The first group named log.nmbd
+identifies with operations on the network which means Samba's NETBIOS
+over IP adresses. The log.smbd provides information on the activities of
+sharing files, also known as Samba's SMB/CIFS. The last typology,
+log.[IP_ADDRESS], contains information on requests for specific services
+sent by IP addresses. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">X11 Server Log (Ubuntu versions)</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In case you need solving issues with the X11
+environment, you can look for the specific log files. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the X11 Server Log files
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/Xorg.0.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you are using an Ubuntu version, Xorg X11
+is the default server used to run X11 Windowing Server. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre23">Other services and events logs</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Kernel</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The information is about connections through
+the kernel. This type of log is useful to retrieve any issues such as
+warnings related to the kernel. </span></p>
+<p><span class="calibre16"> </span></p>
+<p><span class="calibre3">Login History </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">Keeping track of the history of the
+logins</span><span class="calibre3">, </span><span class="calibre12">you
+are able to parse incoming external attacks that attempted to enter a
+username and password to log on your operating system. Having access to
+this information you are conscious about who are other users who tried
+to access to your personal data. In this category you will find records
+on the last login sessions, current logins, and login
+failure.</span></p>
+<p><span class="calibre3">Last Logins</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">In this list you will find the last logins to
+your system, meaning records on user that logged in and logged out.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Last Logins</span><span
+class="calibre3"> </span><span class="calibre12">Log files
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log</span><span class="calibre21">/</span><span
+class="calibre12"> lastlog</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In the Ubuntu versions, you can use the
+following command from terminal to show a list of accesses. The less
+command will just help you to list this information in each page. You
+will be able to review the content in a more manageable way instead of
+scrolling down an endless list. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">lastlog | less</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The result on the output will be a list with
+username, IP address, date and time of access, pts/0 (which shows that
+the server has been accessed via SSH connection), date of creation of
+the folder. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Current Logins</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">You can check the current users logged in to
+your operating system. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Current Logins Log files
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/wtmp</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In addition to the folder wtmp that stores
+the information, using the command below you are also able to list the
+names of the users currently logged in:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">who</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00001.jpeg" class="calibre24" /></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">Login Failures</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Under the same directory /var/log reside
+other log files including the </span><span
+class="calibre17">failog</span><span class="calibre12">. As suggested by
+the name, this log file is used to monitor information on the failures
+on login sessions. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path for the Login Failog Log files
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/var/log/faillog</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In Ubuntu versions as well as other
+distributions, the faillog log files are placed in the directory
+/var/log/faillog. In order to display the failure on logins on Ubuntu,
+execute the following command from the terminal:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">faillog</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The syslogd (System Logging Daemon)</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Both used for Linux and Unix operating
+systems make use of the </span><span
+class="calibre16">syslogd</span><span class="calibre12"> also known as
+System Logging Daemon. It handles messages from different sources
+putting them in communication with the final destination. The syslogd
+works through the configuration file, reading information reported and
+forwarding the messages to the specified recipient. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The path of the configuration file
+is:</span><span class="calibre21"> </span><span
+class="calibre12">/etc/syslog.conf. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Each life of this file contains the selector
+and the action, which respectively is identified with the facility that
+matches with the recipient. The facility is meant as the process that
+triggers an event. </span></p>
+<p><span class="calibre12">Taking the example here below, the line of
+that will be forwarded to the configuration file is made of the facility
+“mail” and the action “/var/log/mail” which is the file of
+destination.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Defining the priorities</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Also, the line consists in a priority
+assigned to the facility. The level of priority varies each time
+separated by “.”. </span></p>
+<p><span class="calibre26">mail.emerg</span><span class="calibre16"> 
+</span><span class="calibre26">/var/log/mail </span></p>
+<p><span class="calibre12">Some examples of facilities are auth, daemon,
+and more. Priorities are listed from the lowest in terms of importance
+like “debug, info, notice, warning, err, crit, alert” to the highest
+level “emerg”. </span></p>
+<p><span class="calibre26">As shown in the example, “mail” is the
+facility while “emerg” is the priority.</span></p>
+<p><span class="calibre26">You can also use the @ to redirect the
+message to a hostname. </span></p>
+<p><span class="calibre26">*.emerg     @mail.domain.com</span></p>
+<p><span class="calibre26">The message will be interpreted by the system
+taking all messages with priority “emerg” and sending them to the user
+with the hostname mail.domain.com.</span></p>
+<p><span class="calibre26">In fact, the symbol “*” means all the
+facilities. Typing as it follows here below you will refer to all the
+facilities and all levels of priority:</span></p>
+<p><span class="calibre26">*.*     @mail.domain.com</span></p>
+<p><span class="calibre12">Then, the “=” indicates messages with similar
+priority, while usually it is applied to the ones which have the same
+level or an increasing number. </span></p>
+<p><span class="calibre12">As opposite to the equal sign, the “!” sign
+is used to apply the rules of message and exclude the ones with certain
+priorities. </span></p>
+<p><span class="calibre12">In the configuration file, in the same line
+with the action that has to be sent, more selectors can be added using
+the “;” symbol. Moreover, also facilities can be added using the “,”
+symbol that separates one from each other.  </span></p>
+<p><span class="calibre3">What does a log file contains?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Open the terminal and execute the following
+command to move to the folder containing the logs: </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">cd /var/log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">“cd” is the command used in the Unix
+operating systems to move from the current position to another folder
+separated by “/”. </span></p>
+<p><span class="calibre12">Then type the following command to see the
+content listed under the folder “log”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ls</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00002.jpeg" class="calibre27"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The example above shown a screenshot from the
+console using Amazon AWS. Some of the directories listed are the same
+took in exam at the beginning of this guide. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">When displaying this information, you may
+find some sort of duplicates such as “daemon.log.0” reported in sequence
+with different numbers. Don’t panic. These files are generated by the
+system copying and pasting the initial file to generate new ones. The
+starting files are not completely deleted from your operating system,
+but they are compressed separately. This utility known as </span><span
+class="calibre17">log rotation</span><span class="calibre12"> works
+efficiently to save some space. As a result, you may find in your list
+of files something similar to daemon.log.0.gz that indicates the files
+compressed in the .gz archive. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">One of the easiest ways to edit files with no
+issues is just using the “nano” command in the console. Typing the
+example below you are able to read the content of the kernel.log
+file:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">nano kernel.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Once you finished with your edits, you can
+simply close it using the combination CTRL + C. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Other two helpful features to edit the log
+files are “head” and “tail”. These two commands are used to show the
+head of the file, and the content at the bottom.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">head file.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Using the command “head” you will be able to
+view the first lines at the top of the file file.log. </span></p>
+<p><span class="calibre12">If you need to display an amount of lines at
+15 from the beginning, just type:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">head -n 15 file.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As a consequence, the command “tail” works as
+the opposite to the head command. This command shows exactly the content
+at the bottom:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">tail file.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Like the head command also tail has the same
+functionalities. Specifying the number of lines, it shows 15 lines
+instead of the fixed number of 10 lines:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">tail -n 10 file.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you need to monitor at the same time a
+file and see edits on the file you can use the command line “tail
+-f”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">tail -f file.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Another command you may perform is any search
+of the log files in terms of content. You may want to use the command
+here below to seek the word “mail” in the file file.log:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">grep "mail" file.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Also, you can use grep with “^” to look for
+words repeated in each line:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">grep "^mail" file.log</span></p>
+<p><span class="calibre12"> </span></p>
+</section>
+<p><span id="part0000_split_004.html"></span></p>
+<section id="part0000_split_004.html_calibre_pb_4"
+class="calibre13 calibre1">
+<h1 class="calibre13"><span id="part0000_split_004.html__Toc48980321"
+class="calibre14"><span class="calibre15">Managing Users and
+Groups</span></span></h1>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Knowing how to manage users and groups is a
+critical task for any user or administrator. One of the main reasons is
+because good practices on the management can be effective on the
+security of the network and the system. Also, it is essential to be
+confident about this topic to protect your data from external sources.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Before starting to mention any command used
+to these procedures you should be aware of how users and groups work. 
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Each user is separated from others and under
+its account there are folders, files, and applications that are being
+used while in action. So, once the session is active with the specific
+user the operations are completed with a profile. Also, the user has a
+home directory assigned to it with the same name. </span></p>
+<p><span class="calibre12">By default, a new operating system that is
+installed has a username defined as “root user”. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the following command to work as the
+root administrator:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">su</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">However, this operation requires to apply a
+password which is not usually available on the system. So, one of the
+common practices to avoid any issue is just using the </span><span
+class="calibre23">sudu</span><span class="calibre12"> word in front of
+any command. This method authorizes automatically to run a command with
+the root permissions. If you are enabled to work as a root user, you’ll
+be able to apply any edit. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Through the use of the sudo command you are
+able to run commands and apply changes on files such as the
+configuration file, applications common to all users, edit the
+permissions on folders and files for all the users. Not having access to
+the root user may prevent you from installing or editing settings on the
+system. All the root privileges are added to the file “sudoers”
+available under /etc/sudoers. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo cat /etc/sudoers</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Running the command above you are able to see
+the content of the folder </span><span
+class="calibre23">/etc</span><span class="calibre12"> which is not
+otherwise available. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The following command shows the list of users
+available on the current operating system:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">cut -d: -f1 /etc/passwd</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In addition to this, you can take a look to
+the user you are using right now:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">whoami</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00003.jpeg" class="calibre28" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The next step to manage users is also how to
+create groups. The main goal of this operation is creating groups that
+have the same rules and functionalities. This task is very useful
+because all the users that belong to the same group are then able to
+work with the same set of folders, files, and they are allowed to
+execute certain applications.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Applying changes on users:</span></p>
+<p><span class="calibre3">Adding a new user</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">One of the common operations is about adding
+a new user. To perform this task, you just need to type as here below
+with the command “adduser” followed by the name of the new
+user:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre29">sudo adduser user1</span></p>
+<p><span class="calibre29"> </span></p>
+<p><img src="images/00004.jpeg" class="calibre30"
+alt="A picture containing holding, bird Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">First of all, the password as administrator
+is required to run the command </span><span
+class="calibre17">adduser</span><span class="calibre12">. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Then, it asks to enter the password
+associated to the new user and renter it again. </span></p>
+<p><span class="calibre12">Also, another requirement is the full name of
+the user which is “User1” in our example.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">After that, the operating system also
+requires information such as the room number, the work phone, home
+phone, and other. All of this information is optional. At the end, it
+asks if the information is correct. Just type:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Y</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The new user is now added to your list.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Verifying if a user is a member</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Run the command “id” to see if the user is a
+member:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">id user1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Deleting a user</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">You can delete a user using he command
+“deluser” attached then to the name of the user you are going to
+delete:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo deluser user1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Locking and Unlocking specific
+users</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Each user can be locked or unlocked with the
+following commands: </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo passwd -l user1</span></p>
+<p><span class="calibre12">sudo passwd -u user1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The options </span><span class="calibre17">-l
+and -u</span><span class="calibre12"> work in this sense to respectively
+lock and unlock the users. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">View all the processes related to a
+user</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you want to find details about the
+processes that involve one user like “user1”, type the command
+“ps”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ps -u user1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">Applying changes to the groups</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">How to see if you belong to a group</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Run the command below to see what group you
+belong to:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">groups</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00005.jpeg" class="calibre31" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The groups reported in the example are
+</span><span class="calibre3">ubuntu, adm, dialout, cdrom, floppy, sudo,
+audio, dip, video, plugdev, lxd, netdev</span><span
+class="calibre12">.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Also, you can use the following command to
+revise what groups your user is part of. You can display a list of the
+services and what permissions you need such as root.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo cat /etc/group</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Adding a user to a group</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">The command used to add a user to a known
+group is “usermod”. You need to specify as arguments the name of the
+user and then the group that has to be associated to. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo usermod -a -G user1 ubuntu</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In the example above, the “user1” is added to
+the group “ubuntu”.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Running again the command to see the list of
+users, you are able to check if the user has been added:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre29">sudo cat /etc/group</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As shown here below the user has been
+successfully added and displayed under “ubuntu”.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre29">user1:x:1001:ubuntu</span></p>
+<p><span class="calibre29"> </span></p>
+<p><img src="images/00006.gif" class="calibre32" /></p>
+<p><span class="calibre3">Creating a new group</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">When you need to create a new group that it
+does not exist you can intervein with the command “groupadd” and the
+name of the group which can be “usergroup1”.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo groupadd usergroup1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Deleting a user from a group</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Like we have previously seen in this section
+for the users, also the user can be removed from the groups. To apply
+these changes, use the command “deluser” followed then by the name of
+the user and then the group.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo deluser user1 usergroup1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you want to review what groups a user
+belongs to, just use the following command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo groups user1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Then, press the combination CTRL + X in order
+to exit from the file and enter “Y” to save the changes. It is asked to
+save the file with the same name “visudo” to override it. To proceed
+press “enter”.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The new “user1” is now able to perform any
+command with the root privileges.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Permissions</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">A useful operation for users is about
+permissions. In this case you need to enter a list of
+information:</span></p>
+<p><span class="calibre12"> </span></p>
+<ul>
+<li><span class="calibre12">The first one is the </span><span
+class="calibre23">type</span><span class="calibre12"> which can be a
+file (-), directory (d), or symlink (l)</span></li>
+<li><span class="calibre12">The user permissions, group permission, and
+other permissions are then divided in:</span>
+<ul>
+<li><span class="calibre12">read (r)</span></li>
+<li><span class="calibre12">write (w)</span></li>
+<li><span class="calibre12">execute (x)</span></li>
+</ul></li>
+</ul>
+<p><span class="calibre12">For each of the operations </span><span
+class="calibre3">read, write, and execute</span><span class="calibre12">
+has been assigned a number depending on the role. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Giving privileges to a user</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">One of the operations that may result handful
+is editing the privileges of a specific user. This action requires to
+revise the file “visudo” that contains all the information about
+users.</span></p>
+<p><span class="calibre12">First of all, open the file visudo with the
+following command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo nano visudo</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Now, type as follows here and replace “user1”
+with the name of the user you need to give the root
+privileges:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">user1 ALL=(ALL) ALL </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Also, you can give the permissions to the
+user1 as it follows here:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">User_Alias ADMINS = user1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Cmnd_Alias HTTPD =
+/etc/init.d/httpd</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ADMINS ALL = HTTPD</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">How to add permissions to a
+directory</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Here below you find a way to add permissions
+to read and write to the folder “NewFolder”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo chmod -R g+w
+$HOME/Documents/NewFolder</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Similarly, permissions can also be denied to
+users that want to access to the folder “NewFolder”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo chmod -R o-x NewFolder</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">With this procedure you are able to give the
+permissions to only one group of users and multiple groups at the same
+time. To overcome this limitation, you can use the access control lists.
+The command that follows here below enables the permissions to “read”
+the folder “NewFolder”. This means that the folder is now accessible
+even to a group named “users3” without involving any permissions for
+other users. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">setfacl -m g:usergroup3:rx -R
+$HOME/Documents/NewFolder</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To allow the same group of users to write the
+folder “NewFolder” use the following command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">setfacl -m g:auditors:rwx -R
+$HOME/Documents/NewFolder</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+</section>
+<p><span id="part0000_split_005.html"></span></p>
+<section id="part0000_split_005.html_calibre_pb_5"
+class="calibre13 calibre1">
+<h1 class="calibre13"><span id="part0000_split_005.html__Toc48980322"
+class="calibre14"><span class="calibre15">Performing a General System
+Health Check</span></span></h1>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">A good practice to keep steady the
+performances of your system is checking and running a checkup of the
+entire system. The reliability of the operating system depends on the
+status of the virtual memory that can be accessed through the
+</span><span class="calibre17">vmstat system utility</span><span
+class="calibre12">, the CPU usage, the hard drives usage, devices in
+input and output, an analysis of the network, and processes currently
+running. All these operations are fundamental for a Linux server
+administrator. </span></p>
+<p><span class="calibre12">To perform a health check of the system, we
+are going to use different sets of commands. Also, running commands
+includes using utilities that are handful for this purpose. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The command Top – Monitoring the
+tasks</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">One of the main steps that is very important
+to keep in mind is monitoring sources and what hardware are using in
+real-time. While it may seem useless, you may find that this method
+helps to supervise all the activities and make decisions on where to
+intervein. The command shows the CPU usage, memory status, swap memory,
+cache size, suffer size, process PID, etc…</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The command “top”</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Run the following command “top” to see all
+services running:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">top</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00007.jpeg" class="calibre35"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As displayed above, you have a complete
+report of what are services running at this time. You can quit the
+utility, just pressing “</span><span class="calibre17">q</span><span
+class="calibre12">” from your keyboard. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">You can also quit after showing 10 results
+with the following command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">top -n 10  </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">More in details the terms listed
+are:</span></p>
+<ul>
+<li><span class="calibre12">PID: The process id</span></li>
+<li><span class="calibre12">PR: It identifies the priority of the
+task</span></li>
+<li><span class="calibre12">SHR: The shared memory usage for each
+activity</span></li>
+<li><span class="calibre12">VIRT: The virtual memory usage for each
+activity</span></li>
+<li><span class="calibre12">USER: User who is running the
+task</span></li>
+<li><span class="calibre12">%CPU: The CPU usage.</span></li>
+<li><span class="calibre12">TIME+: CPU Time expressed in
+seconds</span></li>
+<li><span class="calibre12">SHR: The Shared Memory size (kb) usage for
+each activity</span></li>
+<li><span class="calibre12">NI: The Nice Value of an activity. The
+priority can be positive or negative, meaning a lower level of priority
+or higher</span></li>
+<li><span class="calibre12">%MEM: The Memory usage for each
+activity</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">Sorting information with different
+orders</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command “top” allows to list information
+with different orders. Here you may see some examples of how to sort
+tasks.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Sorting by process PID</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">For instance, you may want to sort of the
+statistics with the PID of process. To add a filter to sort data, press
+the combination of </span><span class="calibre17">SHIFT + O</span><span
+class="calibre12">. You are now able to decide how to filter your
+information. Press “</span><span class="calibre17">a</span><span
+class="calibre12">” to view the </span><span class="calibre17">process
+PID. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">After pressing SHIFT + O from the keyboard,
+type the following:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">a</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -k – kill process</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Now that you know the name of a PID process,
+you can kill a process with the option “k”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">top -k</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Then, press any key to come back to the top
+of the screen. After that, if you want to exit from the report, just
+press:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">q</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Sorting by CPU Usage</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The combination SHIFT + P allows you to sort
+the tasks by CPU usage.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -u - User</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the following option if you need to
+display the report of a known user:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">top -u user1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As shown in the example the command top if
+followed then by the option “u” and the “user1” which is currently the
+user who is performing the operations.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00008.jpeg" class="calibre36"
+alt="A close up of a street Description automatically generated" /></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">The -b option - Batch mode</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">Use the option -b to display the output to a
+file or any other application:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">top -b</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">The option -s – Secure mode</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">The option top -s enables the secure
+mode:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">top -s</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">The option -d – Delay time</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">While the default settings for the delay time
+is 3s, you are able to edit this setting, just using the option -d as
+reported here below:</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">top -d 2</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">Passing as argument “-d” and “2”, it sets the
+delay time to 2 seconds. </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">The option -c - </span><span
+class="calibre12">Absolute path</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Press the option “c” to list the absolute
+path of running process.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00009.jpeg" class="calibre38"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Again, press “q” to leave the terminal open
+without showing the list of tasks. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -h – Help</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you need a summarize of all commands
+available, press the following:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">top -h</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Now, you can see options you can use for your
+Linux distributions.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">Monitoring the Memory</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">With the first step, you took a look to the
+general performances of your system. Now you can dig into some more
+details about the memory usage. Why is so important?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">A higher load of tasks and size of data at
+the same time can imply an increase in use of memory. As a result, when
+memory is not enough, the system may occur in decreasing the
+performances and using other resources, such as the CPU, that usually
+should be regularly used without overcoming a certain level.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">One of the main activities that you would
+like to approach is checking the </span><span class="calibre17">free
+space</span><span class="calibre12"> available in your operating system.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the following command to see the space
+currently available in your memory:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">watch free -m</span></p>
+<p><img src="images/00010.jpeg" class="calibre39"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">By default, every two seconds the memory
+usage is updated. You can update this setting, adding “-n 10” to set up
+a refresh every 10 seconds:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">watch -n 5 free -m</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00011.jpeg" class="calibre40"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The amount of memory used is expressed in MB.
+This means that the total physical memory in the machine is 978 MB, with
+114 MB used, 310 MB free, with no space shared. The buff cache is 553MB
+with still 718 MB available. Instead, the swap space is 0.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To exit, just press CTRL + X. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The VmStat (virtual memory statics)</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">VmStat is an essential utility that provides
+information about the virtual memory statistics. This means that it
+shows a summarize with memory usage, paging, hard drives status and CPU
+usage, and more. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Run the command here below to see the
+information from the last reboot:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">vmstat</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00012.jpeg" class="calibre41"
+alt="A picture containing screenshot, clock Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">More in details you find a report about
+processes, memory, swap, io, system and CPU:</span></p>
+<ul>
+<li><span class="calibre12">Procs</span>
+<ul>
+<li><span class="calibre12">r: The number of processes waiting for run
+time. </span></li>
+<li><span class="calibre12">b: The number of processes in
+uninterruptible sleep.</span></li>
+</ul></li>
+<li><span class="calibre12">Memory</span>
+<ul>
+<li><span class="calibre12">swpd: the amount of virtual memory
+used.</span></li>
+<li><span class="calibre12">free: the amount of idle memory.</span></li>
+<li><span class="calibre12">buff: the amount of memory used as
+buffers.</span></li>
+<li><span class="calibre12">cache: the amount of memory used as
+cache.</span></li>
+<li><span class="calibre12">inact: the amount of inactive memory. (-a
+option)</span></li>
+<li><span class="calibre12">active: the amount of active memory. (-a
+option)</span></li>
+</ul></li>
+<li><span class="calibre12">Swap</span>
+<ul>
+<li><span class="calibre12">si: the amount of memory swapped in from
+disk (/s).</span></li>
+<li><span class="calibre12">so: the amount of memory swapped to disk
+(/s).</span></li>
+</ul></li>
+<li><span class="calibre12">IO</span>
+<ul>
+<li><span class="calibre12">bi: blocks received from a block device
+(blocks/s).</span></li>
+<li><span class="calibre12">bo: blocks sent to a block device
+(blocks/s).</span></li>
+</ul></li>
+<li><span class="calibre12">System</span>
+<ul>
+<li><span class="calibre12">in: the number of interrupts per second,
+including the clock.</span></li>
+<li><span class="calibre12">cs: the number of context switches per
+second.</span></li>
+</ul></li>
+<li><span class="calibre12">CPU</span></li>
+</ul>
+<p><span class="calibre12">These are percentages of total CPU
+time.</span></p>
+<ul>
+<li><span class="calibre12">us: time spent running non-kernel code.
+(user time, including nice time)</span></li>
+<li><span class="calibre12">sy: time spent running kernel code. (system
+time)</span></li>
+<li><span class="calibre12">id: time spent idle. Prior to Linux 2.5.41,
+this includes IO-wait time.</span></li>
+<li><span class="calibre12">wa: time spent waiting for IO. Prior to
+Linux 2.5.41, included in idle.</span></li>
+<li><span class="calibre12">st: time stolen from a virtual machine.
+Prior to Linux 2.6.11, unknown.</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">All the information reported above are
+accessible typing:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">man vmstat</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Why is so crucial to check the
+VmStat?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">One of the columns you should focus your
+attention is the “swap”. It is significant important to assure that this
+data is set to 0 or close to. A higher value indicates there are
+considerable issues. Some causes for swapping may include an application
+that impacted the memory causing an exceed of usage, some problems in
+the configurations, or a low amount of memory installed in the machine.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Whatever is the case, trying to identify the
+problem is always positive to contain any issue in the future. As seen
+earlier, the command “top” is able to help you to monitor the activities
+on processes. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Executing the VmStat for a specific number of
+seconds</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the following command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">vmstat 2 4</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Executing this command, the report will be
+updated every 2 seconds for 4 times before stopping. As mentioned
+earlier in this section, data refer to the updated values from the last
+time of the reboot. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00013.jpeg" class="calibre35"
+alt="A screen shot of a computer Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As also illustrated with a recap from “man
+vmstat”, the “r” addresses to the run queue, which refers to the queue
+that each application has to wait in order to be executed. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Some options you can see more details about
+the information.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -a – active and inactive
+memory</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option -a also specifies the status
+active and inactive of the memory.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -t – timestamp</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Use the option -t to view the timestamps in
+each line. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">vmstat -t</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00014.jpeg" class="calibre43"
+alt="A picture containing orange, room Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -d – Disk</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">With the option -d, you can view the disk
+status like here below:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00015.jpeg" class="calibre36"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The data about the hard drives provides three
+columns with reads, writes, IO. In the summarize there is a full list of
+written sectors, readable sectors, and the time to access this
+information.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -s – switch</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">With the option -s, you are able to see the
+events and memory statics.</span></p>
+<p><img src="images/00016.jpeg" class="calibre44"
+alt="A screenshot of text Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">The iostat command – CPU and I/O statistics
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre16">Iostat</span><span class="calibre12"> is a
+tool that monitors data about input and output devices and the CPU. In
+order to optimize all sources, it is essential to have a clear idea of
+the loading time of each device, the average to transfer files,
+etc.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Attempting to execute the command iostat you
+may find a similar output that asks to install systat:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">iostat</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00017.jpeg" class="calibre45"
+alt="A screenshot of a social media post Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the following command as it
+follows:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre29">sudo apt install sysstat</span></p>
+<p><span class="calibre29"> </span></p>
+<p><img src="images/00018.jpeg" class="calibre46"
+alt="A picture containing indoor, bird Description automatically generated" /></p>
+<p><span class="calibre29"> </span></p>
+<p><span class="calibre29">Just type “y” to continue with the systat
+installation. </span></p>
+<p><img src="images/00018.jpeg" class="calibre47"
+alt="A picture containing indoor, bird Description automatically generated" /></p>
+<p><span class="calibre29"> </span></p>
+<p><span class="calibre12">Once that the installation is completed type
+again:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">iostat</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">You are then able to display the information
+as it follows:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00019.jpeg" class="calibre48"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -c – CPU statistics</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option -c is used to display only the
+statistics related to CPU: </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">iostat -c</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Statistics on the CPU usage are useful to
+identify how to figure the slowdowns of the machine, especially if it
+only has one instead of two. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -d – Disk I/O statistics</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option -d is used to display only the
+partitions of the disk showing the devices such as sda. Information
+includes the time of response to write on disks displayed in disk.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">iostat -d</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00020.jpeg" class="calibre36"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The operating system stores all the
+information on the memory. The best way to perform successfully this
+activity is saving data on a temporary memory instead of just using the
+physical memory. Accessing to what is called “cache”, your information
+can be delivered more quickly. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -p – Disk I/O statistics</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">Once that you know the disk you would like to
+take in exam, you can further investigate about it, using the option -p
+as it follows here:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">iostat -p loop0</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00021.jpeg" class="calibre38"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As shown above, there is specific information
+about the device “loop0” that describes the speed rate on writing,
+reading, etc.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -N – LVM statistics</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">The option -N offers information about the
+statisticd on LVM:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">iostat -N </span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00022.jpeg" class="calibre40"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -v –Iostat Version</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">Type the option -v to find out the iostat
+version.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The iotop command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre16">Iotop</span><span class="calibre12"> is a
+utility that can be installed on the Ubuntu distributions to trace
+activities that use input and output devices. It makes use of the kernel
+and python to work. </span></p>
+<p><span class="calibre12">In Ubuntu, the iotop utility can be easily
+installed through the apt command. Type the “iotop” command to see the
+results:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span><img src="images/00023.jpeg"
+class="calibre49"
+alt="A screenshot of a social media post Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Then, when the installation is completed, run
+the command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo iotop</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The results of the command show a list with
+the columns TID PRIO USER, DISK READ DISK WRITE, SWAPIN, IO&gt;, and
+COMMAND. The column “command” refers to the type of process or thread
+taken in exam, while the other columns just displays the time to read
+and write while waiting for a I/O. The “IO” command operates on the I/o
+usage for each process. “Swapin” works on the swap usage of each listed
+process. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">You can also apply a filter to view only the
+processes that show more specific information toward the I/O:
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00024.jpeg" class="calibre50"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12">Some useful options for this command
+are:</span></p>
+<ul>
+<li><span class="calibre12">Option -d SEC, --delay=SEC. It sets the
+delay between iterations in seconds (1 second by default).  It accepts
+non-integer values such as 1.1 seconds</span></li>
+<li><span class="calibre12">Option -p PID, --pid=PID. It provides a list
+of processes/threads to monitor (all by default)</span></li>
+<li><span class="calibre12">Option -u USER, --user=USER. It provides a
+list of users to monitor (all by default)</span></li>
+<li><span class="calibre12">Option -P, --processes. It only shows
+processes. Normally iotop shows all threads.</span></li>
+<li><span class="calibre12">Option -a, --accumulated. It shows
+accumulated I/O instead of bandwidth. In this mode, iotop  shows  the
+amount of I/O processes have done since iotop started.</span></li>
+<li><span class="calibre12">Option -k, --kilobytes. It uses kilobytes
+instead  of a human friendly unit. This mode is useful when scripting
+the batch mode of iotop. Instead of choosing the most appropriate unit
+iotop will display all sizes in kilobytes.</span></li>
+<li><span class="calibre12">Option -t, --time. It adds a timestamp on
+each line (implies --batch). Each line will be prefixed by the current
+time.</span></li>
+<li><span class="calibre12">Option -q, --quiet. It suppresses some lines
+of header (implies --batch). This option can be specified up to three
+times to remove header lines.</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type “man iotop” to see all the options
+available as reported here above.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">The htop command </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The </span><span
+class="calibre16">htop</span><span class="calibre12"> command is a tool
+available in Ubuntu with no installation required. It’s a good
+alternative to the top command and similarly it provides the real-time
+processes currently executing in the machine. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the command to see the
+results:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">htop</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00025.jpeg" class="calibre35"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As shown above, you are able to scroll in
+vertical to see the list and then in horizontal to see the full
+overview. You can directly kill a process with no need to enter the PID,
+as instead required by the top command. Also, htop is more user friendly
+because you can use the pointer to select a process. Some of the main
+information highlighted is the CPU usage, Memory usage, and Time of
+delay.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Like shown in the example above, you should
+have a progress bar with different colors. Each color matches with a
+meaning:</span></p>
+<ul>
+<li><span class="calibre12">Blue: CPU usage with low
+priority</span></li>
+<li><span class="calibre12">Green: CPU usage with regular
+priority</span></li>
+<li><span class="calibre12">Red: CPU usage with system
+processes</span></li>
+<li><span class="calibre12">Orange: CPU usage through IRQ
+time</span></li>
+<li><span class="calibre12">Magenta: CPU usage with regular priority
+through Soft IRQ time</span></li>
+<li><span class="calibre12">Grey: CPU usage through IO Wait
+time</span></li>
+<li><span class="calibre12">Cyan: DCPU usage through Steal
+time</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">What indicates the tabs in the columns? Here
+you can review more details about what each term stands for:</span></p>
+<ul>
+<li><span class="calibre12">PID: Process ID</span></li>
+<li><span class="calibre12">USER: The who is using the
+machine</span></li>
+<li><span class="calibre12">PRI: The priority of a process in
+use</span></li>
+<li><span class="calibre12">N: The priority of a process reset by the
+user or root.</span></li>
+<li><span class="calibre12">VIR – Virtual memory in use</span></li>
+<li><span class="calibre12">RES – Physical memory in use</span></li>
+<li><span class="calibre12">SHR – Shared memory in use</span></li>
+<li><span class="calibre12">S – The state of a process</span></li>
+<li><span class="calibre12">CPU% – CPU usage by process</span></li>
+<li><span class="calibre12">MEM% – Memory usage by process</span></li>
+<li><span class="calibre12">TIME+: Time needed to execute a process
+Command: The process itself is referred to.</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Below that, you find the statistics about the
+CPU, Memory, Swap and also shows tasks, load average, and
+Up-time.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">All the processes are by default filtered
+according to the CPU usage.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Some additional functionalities can be tried
+using the keyboards:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Up and Down: Use the keyboard to see the
+processes</span></p>
+<p><span class="calibre12">U: Use it to processes of a particular
+user</span></p>
+<p><span class="calibre12">P: To filter the process with higher CPU
+usage</span></p>
+<p><span class="calibre12">M: To filter the processes with higher memory
+usage</span></p>
+<p><span class="calibre12">T: To filter the processes depending on the
+time</span></p>
+<p><span class="calibre12">H: Use it for the htop help</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">At the bottom of htop command, you find the
+options you can access to using the commands from F1 to F10 (like help,
+setup, filter tree kill, nice, quit).</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The /proc/meminfo file</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The “meminfo” file under the directory /proc
+summarizes the memory used by the machine, which means the physical and
+virtual memory, the shared memory, and the buffers. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the following command to find out the
+ouput:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">cat /proc/meminfo</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Some important information is about MemTotal,
+MemFree, MemShared, MemShared, Buffers, SwapCache. The MemTotal is the
+memory available and part of this is used by the kernel. Buffers is the
+memory in buffer cache. Cached is the memory in the pagecache. SwapCache
+is the memory available in the swapfile.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00026.jpeg" class="calibre51"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The VM Statistics provides details about the
+status “active” and “inactive” of the memory. When the load exceeds the
+unused part can be used for the purpose. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Other information is about HighTotal (memory
+in high regions), RAM, LowTotal, LowFree, SwapTotal (The physical swap
+memory), SwapFree (free wap memory), Dirty (memory where it can be
+written), Writeback Memory which is actively being written back to the,
+Mapped (files to be mapped), Slab, Committed_AS, PageTables, ReverseMaps
+(number of reverse mapping completed), VmallocTotal (vmalloc memory
+area), VmallocUsed (vmalloc area used), VmallocChunk.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Lsof – List Open files</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As suggested by the name, </span><span
+class="calibre16">Lsof</span><span class="calibre12"> stands for
+</span><span class="calibre3">List of open files</span><span
+class="calibre12"> and refers to files such as disk files, network
+sockets, pipes, devices, and processes. The files are open which means
+that they are currently running. </span></p>
+<p><img src="images/00027.jpeg" class="calibre35"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">On top of the table reported you would have
+the values COMMAND, PID, TID, USER, FD, TYPE, DEVICE SIZE/OFF, and NODE
+NAME. </span></p>
+<p><span class="calibre12">Digging into more information about it, FD
+means “File descriptor” and accepts the values:</span></p>
+<ul>
+<li><span class="calibre12">Cwd: current directory</span></li>
+<li><span class="calibre12">Rtd: root directory</span></li>
+<li><span class="calibre12">Txt: text file</span></li>
+<li><span class="calibre12">Mem: memory-mapped file</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Then, the values are followed by:</span></p>
+<ul>
+<li><span class="calibre12">R: Read</span></li>
+<li><span class="calibre12">W: Write</span></li>
+<li><span class="calibre12">U: Read and write</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">Other utilities for your health
+check</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The Nmon Utility</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">The utility has the goal to analyze the
+performances of a system regarding the cpu, memory, network, disks, file
+systems, nfs, top processes, resources, and power
+micro-partition.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In the Ubuntu distributions you need to
+install the utility with the following command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo apt install nmon</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">When the installation is completed, launch
+the command here below </span><span class="calibre21">“</span><span
+class="calibre12">nmo</span><span class="calibre21">n</span><span
+class="calibre12">”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">nmon</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As shown below all the statistics are shown.
+With the option “c” you are able to filter the information about the
+CPU. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Press CTRL + C to exit from the
+utility.</span></p>
+<p><img src="images/00028.jpeg" class="calibre52"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option “t” – Top processes</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option “t” shows the top processes
+listed:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">nmon -t</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00029.jpeg" class="calibre53"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option “r” – Resources</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option “r” displays information about the
+resources used which can be the CPU.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00030.jpeg" class="calibre54"
+alt="A screen shot of a computer Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">The option “n” – Network</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option “n” shows the details about the
+network.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option “d” – I/O Disks</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option “d” displays information about the
+I/O disks.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option “k” – Kernel</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option “k” displays information about the
+kernel.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option “n” – NFS</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option “n” displays information the data
+NFS.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option “j” – File System</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option “j” displays information the file
+system.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The Collectl utility</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">An additional tool to “top” and “htop”
+commands is the </span><span class="calibre16">Collectl</span><span
+class="calibre12"> utility. The name “Collectl” can give a hint about
+the purpose of this application. In fact, the utility is used to collect
+data about the status of the system such as cpu, disk, memory, network,
+sockets, tcp, inodes, etc.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Some of the main functionalities are the
+exportation of the output in a diversity of formats, the monitoring of
+the subsystem, the monitoring of the remote machines, the ability to
+write a file or a socket. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Typing “collectl” you see that the command is
+not found in Ubuntu:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">collectl</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00031.jpeg" class="calibre47"
+alt="A screenshot of a social media post Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Run the command to install
+“collectl”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo apt install collect</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">It asks to confirm pressing “y” in order to
+continue the installation.</span></p>
+<p><span class="calibre12">After this, it asks what kind of web server
+to use. The options are Apache2, Lighttpd, and more. Pressing the
+selection and then “ok”, the installation is then completed. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The information is about the subsystem which
+includes cpu, disks, and network.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00032.jpeg" class="calibre55"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option “--all” – File System</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option “--all” displays information all
+the subsystems.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option “stc” – File System</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The option “stc” displays information about
+the tcp and cpu. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Here below you find a detailed list of the
+options:</span></p>
+<ul>
+<li><span class="calibre12">b – buddy info (memory
+fragmentation)</span></li>
+<li><span class="calibre12">c – CPU</span></li>
+<li><span class="calibre12">d – Disk</span></li>
+<li><span class="calibre12">f – NFS V3 Data</span></li>
+<li><span class="calibre12">i – Inode and File System</span></li>
+<li><span class="calibre12">j – Interrupts</span></li>
+<li><span class="calibre12">l – Lustre</span></li>
+<li><span class="calibre12">m – Memory</span></li>
+<li><span class="calibre12">n – Networks</span></li>
+<li><span class="calibre12">s – Sockets</span></li>
+<li><span class="calibre12">t – TCP</span></li>
+<li><span class="calibre12">x – Interconnect</span></li>
+<li><span class="calibre12">y – Slabs (system object caches)</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+</section>
+<p><span id="part0000_split_006.html"></span></p>
+<section id="part0000_split_006.html_calibre_pb_6"
+class="calibre13 calibre1">
+<h1 class="calibre13"><span id="part0000_split_006.html__Toc48980323"
+class="calibre14"><span class="calibre15">Managing Processes and
+Services</span></span></h1>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Before analyzing in depth handy commands to
+manage processes and services, we need to clarify what are processes and
+services. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">What do we mean with “process”?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre16">Process</span><span class="calibre12"> is an
+instance of a running program. As a consequence, all the times that an
+application is running, a process is initiated and an identification
+number called “PID”, that stands for Process ID, is attributed together
+with the group or the user. Processes are running at the same while the
+machine is working on different tasks using the same sources such the
+memory and the CPU. This means that whereas there is a variety of tasks
+completed at the same time, the number or sources is still the same.
+That’s why as an administrator you should be able to maximize the
+performances of your machine. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Processes can be divided in two major groups
+which are the </span><span class="calibre23">background
+processes</span><span class="calibre12"> and the </span><span
+class="calibre23">interactive processes</span><span class="calibre12">.
+With the first group we mean all the processes that are not started
+directly by the user, but they are working automatically on the
+background. One of the most famous processes is the Deamons. This
+category of processes runs on the background and with no input by the
+user, though they can be managed directly if needed. In the second case,
+the interactive group identifies the processes that are started by the
+user, recalling a command from the command line. Therefore, the user is
+in complete control of these processes. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">A new process</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Creating a new process for the Linux
+distributions means copying and then pasting the current process. The
+PID is changed to a new one as seen earlier is a different ID.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In addition to the PID that identifies the
+process itself, each process can be recognized through the PPID which is
+the parent process ID. Executing the tasks, parent processes activate
+other processes which are the child processes that complete their
+operations at the same time. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">One of the most famous processes is the
+</span><span class="calibre23">init process</span><span
+class="calibre12">. This process is so important because is executed at
+the boot while still other processes are not running. For this reason,
+its ID is always 1, as it is the first process to be run. To find the
+PID of a process you can use the command </span><span
+class="calibre16">“pidof”</span><span class="calibre12">. So, if you
+would like to know the PID of system, you can use:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">pidof system</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">What are the states of processes in
+Linux?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">A process can change the state on the run.
+Each process is created, then accepted and when is ready to be used it
+can be finally executed through the schedule dispatch. Also, a process
+may be put a waiting status if there are I/O sources needed or an event
+that requires the attention. The event then can change status once that
+the waiting time is completed. If there is a no hardware request, the
+process can be interrupted before being able to run. At the end of the
+steps, the execution is stopped.  </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Here below you find some examples:</span></p>
+<ul>
+<li><span class="calibre16">Running</span><span class="calibre12">: In
+this state, processes are running which means that the process has been
+created and it is active</span></li>
+<li><span class="calibre16">Waiting</span><span class="calibre12">: The
+process is waiting for an answer from a program or some resource which
+is fundamental to the process in order to accomplish the directions.
+Some processes may be interrupted if they are waiting for some services
+or not physical sources. If they are waiting to use for example the hard
+drive, processes cannot be interrupted. </span></li>
+<li><span class="calibre16">Stopped</span><span class="calibre12">: The
+process stopped to work for some reasons such as the debug mode.
+</span></li>
+<li><span class="calibre16">Zombie</span><span class="calibre12">: The
+process is listed but it does not work anymore. </span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Some of the most useful commands in Linux to
+manage operations with processes are </span><span
+class="calibre16">“ps”</span><span class="calibre12"> and </span><span
+class="calibre16">“top”</span><span class="calibre12"> commands.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The command ps</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The word “</span><span
+class="calibre16">ps</span><span class="calibre12">” stands for process
+status. Executing this command, you can see the processes currently
+active:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00033.jpeg" class="calibre56"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you want to list all the processes use one
+of the two choices:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ps -a</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ps -e</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">Monitoring processes through kill, pkill and
+killall</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">The Kill command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Knowing what is the PID of a process is
+essential to act and kill it. In case you want to kill the Chrome
+process you need to know the name of the process:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">pidof chrome</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Now that you have the PID, you can directly
+kill the process:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">kill PID_NUMBER</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">After that, you can check to see if the
+Chrome process is still active:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">pidof chrome</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Another useful option is applying the kill
+command to delete multiple processes at the same time with only one
+command like here:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">kill PID_NUMBER1 PID_NUMBER2</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Always keep in mind that each user is able to
+kill its own processes but not the ones belonging to another user as
+well as the System processes. Only a user with the root privileges is
+allowed to kill processes from any user or System processes. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The Pkill command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Instead of using the PID which is the number
+that identifies the process, you can apply the same concept to delete a
+process by name. In the example that follows here you are going to use
+the </span><span class="calibre16">“pkill”</span><span
+class="calibre12"> command to kills the MySQL process.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">pkill mysqld</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The killall command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As you can imagine from the name, the
+“killall” command is able to kill all processes related to a main
+process. For example, if you have a parent process with child processes
+and other instances, it will take time to figure with what processes to
+act. While using the killall command is much easier. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Repeating similarly the example seen
+previously, you can kill the MySQL process like here below, deleting all
+the instances linked to it:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">killall mysqld</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Finally, always check if the process is still
+running or not using the “pidof” command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">pidof mysqld</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The pgrep utility</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Pgrep is a valid alternative utility used for
+a similar purpose to what we have seen earlier. Pgrep is a command that
+allows to find the ID of a process. Executing this command from the
+command line, it returns the numeric values. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">For instance, if you want to find the PID of
+the SSH server, you can type the following command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">pgrep ssh</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The output should show something similar to
+here. If nothing matches with the name of the program requested, it
+should report a “0” value meaning that there are no entries with what
+you are looking for. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00034.jpeg" class="calibre57"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">After identifying the PID, you are able to
+use the same command “kill” followed by the name ID. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you would like to know the name too for
+each entry listed, you apply the option “-l” as here below:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">pgrep ssh -l</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command shown displays the name sshd so
+that you are to see to what each PID matches with. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00035.jpeg" class="calibre44"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">Monitoring Tools</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Glances tool</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre16">Glances</span><span class="calibre12"> is a
+cross-platform tool that works on a variety of operating systems and
+Linux distributions. Written in Python this tool operates on real-time
+and monitors the performances of these resources:</span></p>
+<ul>
+<li><span class="calibre12">CPU</span></li>
+<li><span class="calibre12">Memory</span></li>
+<li><span class="calibre12">Load</span></li>
+<li><span class="calibre12">Process list</span></li>
+<li><span class="calibre12">Network interface</span></li>
+<li><span class="calibre12">Disk I/O</span></li>
+<li><span class="calibre12">IRQ / Raid</span></li>
+<li><span class="calibre12">Sensors</span></li>
+<li><span class="calibre12">Filesystem</span></li>
+<li><span class="calibre12">Docker</span></li>
+<li><span class="calibre12">Monitor</span></li>
+<li><span class="calibre12">Alert</span></li>
+<li><span class="calibre12">System info</span></li>
+<li><span class="calibre12">Uptime</span></li>
+<li><span class="calibre12">Quicklook (CPU, MEM, LOAD)</span></li>
+</ul>
+<p><span class="calibre12">Glances can be used as a replacement to the
+“top” command because it works with more precision providing detailed
+data about each resource, its usage in the system, and evidencing which
+resources are making more use. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Installing Glances</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Glances is not a native application in Linux
+Ubuntu. Running the command “glances” Ubuntu requires to install the
+application through the APT:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">glances</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00036.jpeg" class="calibre58"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Then, start the installation of glances with
+the command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo apt install glances</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command line asks if you want to continue
+because installing the software requires around 100MB of additional
+space. Type “Y” to complete the installation.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span><img src="images/00037.jpeg"
+class="calibre59" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">All the packages would be download and
+installed.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Now, run again the command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">glances</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The new utility installed should show
+something similar to this here below:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00038.jpeg" class="calibre35"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In this utility you find a summary section
+with all information about the system that can be scrolled
+horizontally.  </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">From the top, in the first row you find
+</span><span class="calibre16">hostname, the Linux distribution, the
+kernel version, and the system uptime</span><span class="calibre12">.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In the next row, there is a list of data
+reported about </span><span class="calibre16">CPU, memory usage, swap,
+and load statistics</span><span class="calibre12">. All information is
+shown in percentage with a short summarize at the beginning of the row
+on the left. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">For what concerns the </span><span
+class="calibre16">CPU</span><span class="calibre12">, Glances offers
+many details about:</span></p>
+<ul>
+<li><span class="calibre16">CPU</span><span class="calibre12">: CPU
+usage in percentage</span></li>
+<li><span class="calibre16">User</span><span class="calibre12">:
+Applications available in the user environment</span></li>
+<li><span class="calibre16">System</span><span class="calibre12">:
+Kernel applications running</span></li>
+<li><span class="calibre16">Idle</span><span class="calibre12">: Idle
+time</span></li>
+<li><span class="calibre16">Nice</span><span class="calibre12">: This
+value defines the priority of processes </span></li>
+<li><span class="calibre16">Irq</span><span class="calibre12">: Requests
+that interrupts the CPU</span></li>
+<li><span class="calibre16">Iowait</span><span class="calibre12">:
+Waiting state for I/O inputs before running again a process</span></li>
+<li><span class="calibre16">Steal</span><span class="calibre12">: The
+virtual CPU is waiting for the physical CPU which is working on other
+processes</span></li>
+<li><span class="calibre16">Ctx-sw</span><span class="calibre12">:
+Context switches per second</span></li>
+<li><span class="calibre16">Inter</span><span class="calibre12">:
+“Inter” stands for interruptions and it means the time needed to
+interrupt the use of the CPU from working on a device</span></li>
+<li><span class="calibre16">Sw_int</span><span class="calibre12">:
+Interruptions related to the software </span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">For what concerns instead the </span><span
+class="calibre16">memory</span><span class="calibre12"> you find more
+details here below:</span></p>
+<p><span class="calibre16">MEM</span><span class="calibre12">: Memory
+usage expressed in percentage</span></p>
+<p><span class="calibre16">Total</span><span class="calibre12">: The
+total amount of RAM physically installed on the machine</span></p>
+<p><span class="calibre16">Used</span><span class="calibre12">: The
+amount of memory excluding cache or buffers </span></p>
+<p><span class="calibre16">Free</span><span class="calibre12">: The
+memory still available</span></p>
+<p><span class="calibre16">Active</span><span class="calibre12">: The
+current actively used memory</span></p>
+<p><span class="calibre16">Inactive</span><span class="calibre12">: The
+current not actively used memory</span></p>
+<p><span class="calibre16">Buffers</span><span class="calibre12">:
+Buffer space usually used to connect with the input or output
+devices</span></p>
+<p><span class="calibre16">Cached</span><span class="calibre12">: The
+memory used to temporarily save date before moving them to a physical
+memory</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In the </span><span
+class="calibre16">process</span><span class="calibre12"> section you
+find information about the processes currently running on the
+machine:</span></p>
+<ul>
+<li><span class="calibre16">CPU%</span><span class="calibre12">: The CPU
+for each core expressed in percentage</span></li>
+<li><span class="calibre16">MEM%</span><span class="calibre12">: The RAM
+memory used by each process while running </span></li>
+<li><span class="calibre16">VIRT</span><span class="calibre12">: The
+virtual memory used by each process expressed in Megabytes</span></li>
+<li><span class="calibre16">RES</span><span class="calibre12">: “RES”
+refers to resident, which means the physical memory used by each process
+expressed in kilobytes, megabytes, and gigabytes depending on the amount
+of space available </span></li>
+<li><span class="calibre16">PID</span><span class="calibre12">: ID
+number that identifies each process</span></li>
+<li><span class="calibre16">USER</span><span class="calibre12">: The
+name of the user who is running the process</span></li>
+<li><span class="calibre16">TIME+</span><span class="calibre12">:
+Cumulative amount of CPU time used by each process since the beginning
+</span></li>
+<li><span class="calibre16">THR</span><span class="calibre12">: Threads
+running for the process</span></li>
+<li><span class="calibre16">NI</span><span class="calibre12">: The nice
+number of the process</span></li>
+<li><span class="calibre16">S</span><span class="calibre12">: “S” stands
+for status; it can be R - running, S - sleeping, I - Idle, T or t -
+stopped during a debug mode, or Z – Zombie when the process died, and it
+is not anymore available but still visible in the list of
+processes</span></li>
+<li><span class="calibre16">R/s and W/s</span><span class="calibre12">:
+Rate time to read and write the disks</span></li>
+<li><span class="calibre16">Command</span><span class="calibre12">: The
+command that activated the process currently under analysis </span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In another section you can identify the
+warnings and the alerts which are helpful in case you need further
+investigation about a few sections of the utility. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The colors change then the importance to
+where to look at first glance. With the green color, we know that
+everything is fine. A blue color instead requires our attention to
+figure what is going on. A violet indicates a warning, while the red
+points out a critical issue that requires a quick action.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Options in Glances</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Here you also find some options to evidence
+particular details:</span></p>
+<ul>
+<li><span class="calibre12">a: It lists processes
+automatically</span></li>
+<li><span class="calibre12">c: It lists processes by amount of CPU
+</span></li>
+<li><span class="calibre12">m: It lists processes by amount of
+memory</span></li>
+<li><span class="calibre12">p: It lists processes by name</span></li>
+<li><span class="calibre12">i: It lists processes by I/O
+rate</span></li>
+<li><span class="calibre12">d: it shows or hides disk I/O stats
+ols</span></li>
+<li><span class="calibre12">f: it shows or hides file system
+statshddtemp</span></li>
+<li><span class="calibre12">n: it shows or hides network
+stats</span></li>
+<li><span class="calibre12">s: it shows or hides sensors
+stats</span></li>
+<li><span class="calibre12">y: it shows or hides hddtemp
+stats</span></li>
+<li><span class="calibre12">l: it shows or hides logs</span></li>
+<li><span class="calibre12">b: Bytes or bits for network
+I/Oools</span></li>
+<li><span class="calibre12">w: it removes warning logs</span></li>
+<li><span class="calibre12">x: it removes warning and critical
+logs</span></li>
+<li><span class="calibre12">t: To review settings on network and I/O
+devices</span></li>
+<li><span class="calibre12">u: To review cumulative network
+I/O</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">This utility also allows to monitor local
+machine with the web interface (Web UI) or export stats to a CSV file.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">You can view all the information about
+Glances from the help option “-h” or typing “man glances”.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To leave the utility press quit:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">q</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre22">What are services?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">When an application is running tasks are
+executed on the machine. A service waits for a request and it gives an
+answer. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The question you may have is about what
+services are available in your operating system. To answer to this
+question, you can list here below the services available:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">service --status-all</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00039.jpeg" class="calibre60"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The Systemd Utility</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The </span><span
+class="calibre16">Systemd</span><span class="calibre12"> is a system and
+service manager that traces processese while they are running. You can
+use this useful utility to run, stop, or restart services. In the
+Systemd, </span><span class="calibre16">units</span><span
+class="calibre12"> are the blocks that can be identified with services
+such as (.service), devices (.device), sockets (.sockets), slice,
+etc…</span></p>
+<p><span class="calibre12">Services can run in parallel taking advantage
+of a new way to show services. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">At the boot, the system is loaded after the
+BIOS recalled it through the boot loader. After that, the Kernel loads
+the systemd and processes are run. At this point the user is loaded and
+its environment is loaded through the systemd. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">These are some important directories to
+remember where to find unit files:</span></p>
+<ul>
+<li><span class="calibre12">/usr/lib/systemd/user/: Under the folder of
+created for each user, you find all files</span></li>
+<li><span class="calibre12">/run/systemd/system/: Location runtime for
+unit files</span></li>
+<li><span class="calibre12">/etc/systemd/system/: Unit files can be
+extended storing them in this folder.</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Running the command “systemctl” you can
+retrieve a list of all units available under the Systemd:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00040.jpeg" class="calibre35"
+alt="A picture containing text, newspaper Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In this list you can see the same of the
+“Unit”, the status for “Load”, “Active”, “Sub”, and the “Description”
+that summarizes what type of unit is for each row. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Run then the following command to see the
+list of unit files with the current state for each unit:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl list-unit-files</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00041.jpeg" class="calibre61"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">You can also display units which are failed
+to be initialized:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl –failed</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To restrict the analysis to only the services
+instead of a list of all services, you may want to use the following
+command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl list-unit-files
+–type=service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To restart a service, you type the word
+</span><span class="calibre16">“start” </span><span
+class="calibre12">and then the name of the service followed by the
+extension “.service”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl start name.service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To restart a service, you type the word
+</span><span class="calibre16">“stop”</span><span class="calibre12"> and
+then the name of the service followed by the extension
+“.service”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl stop name.service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To restart a service, you type the word
+</span><span class="calibre16">“restart”</span><span class="calibre12">
+and then the name of the service followed by the extension
+“.service”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl restart name.service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To restart a service, you type the word
+</span><span class="calibre16">“reload”</span><span class="calibre12">
+and then the name of the service followed by the extension
+“.service”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl reload name.service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To restart a service, you type the word
+</span><span class="calibre16">“status”</span><span class="calibre12">
+and then the name of the service followed by the extension
+“.service”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl status name.service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Enable and Disable a service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Services can be enabled and disabled
+accordingly using the Systemctl. The following command is used to enable
+a service:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl enable name.service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">This command here below is used to disable a
+service:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl disable name.service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Mask or unmask a service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Each service can be masked or unmasked to
+avoid that all units are running at the same time. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">This is the command to run to mask the
+service:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl mask name.service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">This is the command to run to unmask the
+service:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">systemctl unmask name.service</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The Acct tool</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">The </span><span class="calibre16">Acct
+tool</span><span class="calibre12"> is an application running on
+background to monitor activities run by users. The goal of the tool is
+checking the amount of resources used for tasks. As a developer or
+administrator, you constantly need to assure that the usage does not
+overcome the threshold and performances are steady. Otherwise, major
+issues on services such as Apache Web Server may occur and lead to
+latency while loading important files. For this reason, having a tool
+like Acct is a great help to reduce time in using different commands to
+solve the same issues. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Some of the main features of this tool
+are:</span></p>
+<ul>
+<li><span class="calibre12">Statistics of users that logged in and
+logged off</span></li>
+<li><span class="calibre12">Statistics of users that accessed to the
+machine</span></li>
+<li><span class="calibre12">Commands previously executed by a user are
+still available</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To install the Acct utility, you can use the
+APT as shown here below:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo apt-get install acct</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In this case, you need to run this command
+with the sudo at the beginning in order to have permission as root to
+run the command. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the following command to see the data
+collected from the wtmp file. They provide the time the user connected
+to the system:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ac</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00042.jpeg" class="calibre62" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -d</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The “option -d” shows the time expressed in
+days:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ac -d</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00043.jpeg" class="calibre63"
+alt="A screen shot of a computer Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -p</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The “option -p” shows the total login time of
+each user:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ac -p</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00044.jpeg" class="calibre64" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The command “sa”</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">Executing the command “sa” you are able to
+see a summary of the commands available and recently
+executed:</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">sa</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00045.jpeg" class="calibre65"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Taking a closer analysis of the tabled
+collecting the data, you see to what each column corresponds
+to:</span></p>
+<ul>
+<li><span class="calibre16">Column 2</span><span class="calibre12">:
+0.00re - time expressed in wall clock minutes</span></li>
+<li><span class="calibre16">Column 3</span><span class="calibre12">:
+0.00cp - system/user time expressed in cp</span></li>
+<li><span class="calibre16">Column 5</span><span class="calibre12">:
+1131k – time of CPU expressed for the numbers of units</span></li>
+<li><span class="calibre16">Column 6</span><span class="calibre12">: ac
+– the command it refers to</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -u</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The “option -u” shows information about the
+individual user:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sa -u</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The option -m</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command “sa” attached to the “option -m”
+works to show the number of processes expressed in cpu
+minutes:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sa -m</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00046.jpeg" class="calibre66"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">The option -c</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command “sa” attached to the “option -c”
+works to show the percentage of users: </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sa -c</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00047.jpeg" class="calibre36"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+</section>
+<p><span id="part0000_split_007.html"></span></p>
+<section id="part0000_split_007.html_calibre_pb_7"
+class="calibre13 calibre1">
+<h1 class="calibre13"><span id="part0000_split_007.html__Toc48980324"
+class="calibre14"><span class="calibre15">How to Create Scheduled
+Tasks</span></span></h1>
+<p><span class="calibre16"> </span></p>
+<p><span class="calibre12">A frequent operation in Linux requires to
+create scheduled tasks. To accomplish this activity, you may use
+</span><span class="calibre16">Cron</span><span class="calibre12">, a
+handful utility that can enable tasks that work on the background while
+you are working on other files. You can decide when to schedule these
+tasks so that they work at different times such as backup,
+notifications, cleanup system files, synchronize files, and more. All
+these operations are called “cron jobs” and they can be run with the
+“crontab” command. The “tab” refers to the tables where all the tasks
+are listed. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In this short introduction to this section,
+you may revise how to check if you already have a version of Cron
+installed in your system, then run the task through the command line.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Users can create their own cron jobs which
+are collected in the directory</span><span class="calibre21">
+</span><span class="calibre12">/var/spool/cron/crontab</span><span
+class="calibre21">s</span><span class="calibre12">, although it is only
+accessible through the command line. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Permissions on crontabs</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">The file in the directory</span><span
+class="calibre21"> </span><span
+class="calibre12">/etc/cron.deny</span><span class="calibre21">
+</span><span class="calibre12">can limit user to edit the crontab. If
+the file “cron.deny” exists, the name of the user is usually listed in
+this file and this means that the user is not able to apply changes to
+the cron jobs. On the other hand, if the file “cron.allow” is available
+under the same directory /etc/ it means that only the users listed are
+able to edit the scheduled jobs. When both the files exist at the same
+time, the “cron.allow” fiel is able to override the “cron.deny” file.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The information is usually available in these
+folders:</span></p>
+<ul>
+<li><span class="calibre17">/etc/cron.allow</span></li>
+<li><span class="calibre17">/etc/cron.deny</span><span
+class="calibre12"> (editing the file we may disable some users to the
+features)</span></li>
+<li><span class="calibre17">/var/spool/cron/crontabs</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Cron is usually already installed in the
+Linux distributions. Just in case you don’t have a version ready to be
+run, you may proceed with updating the APT:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo apt update</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00048.jpeg" class="calibre67"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">After completing the update, you should have
+a similar screenshot showing the number of packages upgraded for the
+APT.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">And then, you can go on installing
+Cron:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo apt install cron</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">When the installation is completed, you can
+start the Cron Service. You have to use the “sudo” before the command to
+run the commands as an administrator. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo service cron start</span></p>
+<p><span class="calibre29"> </span></p>
+<p><span class="calibre12">After that, you can check the status of the
+Cron Service. Here below you can see how it should look like. The
+service results to be enabled with the status “active (running)”.
+</span></p>
+<p><span class="calibre29"> </span></p>
+<p><img src="images/00049.jpeg" class="calibre35"
+alt="A close up of a newspaper Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">All the times that you would like to add a
+scheduled task, you open to edit the crontab file and edit it adding an
+expression. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Running the following command, you are able
+to edit the crontab file for the current user:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">cronta</span><span
+class="calibre21">b</span><span class="calibre12"> -e</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The expressions with the crontabs</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To create the expressions there is a precise
+syntax that you could follow: </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">0 7 * * * /root/backup.sh</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">This example executes a backup at 7 am. No
+information has been provided for day of month, month of the year, and
+day of the week. This means that the con job is activated and repeated
+each day. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Here below a summarize of the
+expression:</span></p>
+<ul>
+<li><span class="calibre12">First position: </span><span
+class="calibre23">Minute</span><span class="calibre12"> with values
+between 0 and 59 – In the example the value is </span><span
+class="calibre16">0</span></li>
+<li><span class="calibre12">Second position: </span><span
+class="calibre23">Hour</span><span class="calibre12"> with values
+between 0 and 23 – In the example the value is </span><span
+class="calibre16">3 </span></li>
+<li><span class="calibre12">Third position: </span><span
+class="calibre23">Day of Month</span><span class="calibre12"> with
+values between 1 and 31 – In the example the value is </span><span
+class="calibre16">*</span></li>
+<li><span class="calibre12">Fourth position: </span><span
+class="calibre23">Month of the year</span><span class="calibre12"> with
+values between 1 and 12 or Jan through Dec – In the example the value is
+</span><span class="calibre16">*</span></li>
+<li><span class="calibre12">Fifth position: </span><span
+class="calibre23">Day of week</span><span class="calibre12"> with values
+between 0 and 6 or Sun through Sat – In the example the value is
+</span><span class="calibre16">*</span></li>
+<li><span class="calibre12">Sixth position: </span><span
+class="calibre23">Script or command</span><span class="calibre12"> (This
+includes the path to the command) – In the example the value is
+</span><span class="calibre16">/root/backup.sh</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The operators for the cron jobs
+are:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre16">Asterisk</span><span class="calibre12"> (*):
+all values or any possible one for the field</span></p>
+<p><span class="calibre16">Comma</span><span class="calibre12"> (,):
+refers to a list of different values</span></p>
+<p><span class="calibre16">Dash</span><span class="calibre12"> (-):
+refers to a range of values</span></p>
+<p><span class="calibre16">Separator</span><span class="calibre12"> (/):
+refers to 1/10 or increment of a range</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Examples of use that combine an operator with
+the number shown in a position like here:</span></p>
+<ul>
+<li><span class="calibre12">* * * * - Executes the operation every
+minute.</span></li>
+</ul>
+<ul>
+<li><span class="calibre12">15 * * * * - Executes the operation 15
+minutes after every hour.</span></li>
+<li><span class="calibre12">0,15,30,45 * * * * - Executes the operation
+every 15 minutes.</span></li>
+<li><span class="calibre12">*/15 * * * * - Executes the operation every
+15 minutes.</span></li>
+<li><span class="calibre12">0 5 * * * - Executes the operation every day
+at 5:00 AM.</span></li>
+<li><span class="calibre12">0 7 * * 2-4 - Executes the operation every
+Tuesday, Wednesday, and Thursday at 7:00 AM.</span></li>
+<li><span class="calibre12">15,30 */7 * 7-12 * - Executes the operation
+on the 15th and 30rd minute of every 7th hour every day of the last 6
+months of the year</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Another example to clarify the use of
+expressions:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">15 7 10 * * /root/backup.sh</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">With the command here above, the cron job has
+been setup to run a backup every 10 of the month at 7:15. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">An example with the day in
+letters:</span></p>
+<p><span class="calibre12">30 2 * * mon /root/backup.sh</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The task runs a backup every Monday at
+2:30.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">How to list the Cron jobs</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As seen earlier, the cron jobs run on the
+background and the deamons is able to read the information. The option
+-e refers to the user.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">crontab -e</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Running the command, usually a list of
+choices for the text editor is presented to you. By default, the editor
+widely used is Nano if no option is listed:</span></p>
+<ul>
+<li><span class="calibre12">/bin/nano</span></li>
+<li><span class="calibre12">/usr/bin/vim.basic</span></li>
+<li><span class="calibre12">/usr/bin/vim.tiny</span></li>
+<li><span class="calibre12">/bin/ed</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you are able to decide the editor, you can
+just enter the option from 1 to 4. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The “option -l” instead refers to the list.
+It allows to view the file without editing it:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo crontab -l</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Even if you are running the command with
+sudo, you may not be able to execute the code if the file “cron.deny”
+exists or the “cron.allow”.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Or you can also use the command here below
+specifying the username:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo crontab -u user1 -l</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Usually this command should be executed with
+the “sudo” because only the administrator has the privileges to the cron
+jobs of all the users. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">How to delete the cron jobs</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">You can decide to delete all the cron jobs.
+The “option -r” stands for “erase” and it can be applied with the
+following command:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">crontab -r</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Also, you can delete the cron job for a
+specific user such as “user1”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">crontab -r -u user1</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Another option also offers the chance to
+confirm before deleting the crontab:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">crontab -i -r</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The strings in Crontab</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Another useful feature of the Cron Jobs is
+the use of the strings that allow to avoid a waste of time not repeating
+the same part of the expressions. Here there is a list:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre16">@hourly</span><span class="calibre12">:
+Performed once every hour i.e. “0 * * * *“</span></p>
+<p><span class="calibre16">@midnight</span><span class="calibre12">:
+Performed once every day i.e. “0 0 * * *“</span></p>
+<p><span class="calibre16">@daily</span><span class="calibre12">:
+Performed when is midnight</span></p>
+<p><span class="calibre16">@weekly</span><span class="calibre12">:
+Performed once every week, i.e. “0 0 * * 0“</span></p>
+<p><span class="calibre16">@monthly</span><span class="calibre12">:
+Performed once every month i.e. “0 0 1 * *“</span></p>
+<p><span class="calibre16">@annually</span><span class="calibre12">:
+Performed once every year i.e. “0 0 1 1 *“</span></p>
+<p><span class="calibre16">@yearly</span><span class="calibre12"> or
+</span><span class="calibre16">@annually</span><span class="calibre12">:
+Performed once a year</span></p>
+<p><span class="calibre16">@reboot</span><span class="calibre12">:
+Performed once at startup</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">Other examples to schedule tasks</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Though seems very simple at the beginning, it
+is obvious that there are commands that may result more complex when you
+try to manage the commands for specific tasks.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">This is the syntax to create a log
+file:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">0 * * * * /path/to/your/script &gt;&gt;
+/var/log/cron.log</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Check out the execution of the cron job in
+the syslog:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">grep 'CRON.*(yourusername)'
+/var/log/syslog</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">For more details about the “crontab” command
+in Linux Ubuntu, you can enter as it follows here:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">man crontab</span></p>
+<p><span class="calibre16"> </span></p>
+<p><span class="calibre12"> </span></p>
+</section>
+<p><span id="part0000_split_008.html"></span></p>
+<section id="part0000_split_008.html_calibre_pb_8"
+class="calibre13 calibre1">
+<h1 class="calibre13"><span id="part0000_split_008.html__Toc48980325"
+class="calibre14"><span class="calibre15">Managing the
+Network</span></span></h1>
+<p><span class="calibre16"> </span></p>
+<p><span class="calibre12">Whether you are working as an administrator
+or you are just operating on your desktop computer, managing the network
+results as an important activity to know about how to configure it.
+Also, these methods are particularly useful if are troubleshooting a
+network, understanding issues such as conflicts among IP addresses and
+more. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Here we start reviewing some common commands
+and specific use. All these commands combined together result as a
+powerful source to know how to manage the network. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The ping command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The ping command which stands for Packet
+Internet Groper is widely used to test the activity of a server
+providing the IP address. Through the ping command you are able to check
+out if the Ip you are looking for is currently active. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command works sending the requests
+through the packages (Internet Control Message Protocol). At the same
+time, the recipient answers to the message with another Internet Control
+Message Protocol. The communication may result in problems such as
+delays that are evidenced launching the command ping. Also, some
+packages would result as lost during the transmission of data.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Once that the command ping has been typed, it
+will reiterate the same operation for an infinite time. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the command here below to ping
+google.com:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ping google.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00050.jpeg" class="calibre68"
+alt="A close up of a screen Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In each line you can see the result of the
+ping command. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">56 bytes is the default number of data bytes
+which then 64 bytes for the Internet Control Message Protocol. While the
+IP address is</span><span class="calibre21"> </span><span
+class="calibre29">ord30s31-in-f238.1e100.net 172.217.4.23</span><span
+class="calibre69">8</span><span class="calibre12">. The sequence of
+consecutive packages is then generated from 1 to n, with the like it
+follows here below: </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">icmp_seq=1</span></p>
+<p><span class="calibre29"> </span></p>
+<p><span class="calibre12">Use the “option -c” to avoid repeating
+endlessly the same operation:</span></p>
+<p><span class="calibre29"> </span></p>
+<p><span class="calibre29">ping -c 4 google.com</span></p>
+<p><span class="calibre29"> </span></p>
+<p><span class="calibre12">The number “4” refers to the packages sent,
+so the ping command is able to interpret how many packages are expected
+to be sent and then stop the execution. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The ping command is so important because it
+allows to quickly check if the server you are trying to reach is
+working.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00051.jpeg" class="calibre70"
+alt="A close up of a person Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you do not receive an answer typing the
+command “ping” there may be a problem on the network. In some cases,
+network issues also produce a loss of packages over the connection to
+the destination. One of the solutions that can be applied is just using
+the command here below to check the status of the lost packages and see
+what happens:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">traceroute</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Another useful option for the ping command,
+in addition to “-c”, is using the “-i” option. This rule can be used
+when there is another gateway source like here below:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ping -I eth0 www.yourdomain.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Also, you can choose form which kind of
+internet protocol between IPv4 and IPv6 you want to send the ping. The
+IPv4 and IPv6 with respectively interpreted with -4 and -6.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00052.jpeg" class="calibre71"
+alt="A picture containing table, bird Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre72"><span class="calibre73"></span></span><span
+class="calibre3">The Netstat command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The netstat command is a great source to
+figure the statistics of the network. This means checking the if the
+ports TCP and UDP are open and more. The netstat utility is usually
+already available in your system.  </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the following command to see the current
+version of netstat:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">netstat -v</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Before digging in-depth the potentials of the
+netstat command, you should have a clear idea of how the ports TCP and
+UDP work. In fact, TCP and UDP are the two methods that can be chosen to
+send packets through a network. What you need to forward is the number
+of the port, the type of port, and the IP address of your destination.
+</span></p>
+<p><span class="calibre12">Just to refresh your memory, TCP stands for
+Transmission Control protocol and it is the most reliable method between
+the two. It connects the sender with the receiver, and it waits for an
+answer from the second one. The connection is established directly
+between the two and it only stops at the end. On the other hand, UDP
+stands for User Datagram protocol is a less reliable transmission of
+data, but at the same time also requires a lower load of work though the
+network. </span></p>
+<p><span class="calibre12">In order for a server to communicate with
+another machine, it needs a port that can be used as listener of
+incoming connections that have to be accepted from the server itself.
+Ports can be open or closed depending if there is a service such as a
+firewall that blocks the transmission of data. One of most common ports
+used by default for the TCP port is the port 80.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the following command to list the TCP
+ports available as listener which means they accept
+connections:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo netstat -t</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00053.jpeg" class="calibre74"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">While the option “sudo netstat -u” shows the
+UDP ports they are listening:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo netstat -u</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command with the option “-l” shows the
+listening ports:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo netstat -l</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00054.jpeg" class="calibre35"
+alt="A close up of text on a white background Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As listed in the example here above, there is
+some important information displayed by the command. Starting with
+“</span><span class="calibre16">proto</span><span class="calibre12">”,
+the ping command produced the protocol used by the socket, then “local
+address” which indicates the IP address as well as the port that is
+listening to, and finally the “state” that specifies “LISTEN”.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Other options that can be used:</span></p>
+<ul>
+<li><span class="calibre12">-n shows the addresses separated by
+dots</span></li>
+<li><span class="calibre12">-p displays PID (process identifier
+associated with a connection) and it has to be used with permissions as
+administrator. </span></li>
+<li><span class="calibre12">-a shows the sockets available for incoming
+connections</span></li>
+</ul>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">All the options can be used at the same time
+all together to see the particular results.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">To check the statics of a network interface
+“option  -I”  in the kernel “option -a” :</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">netstat -ai</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">With the following command you can check the
+services, their state and the PID:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo netstat -tunlp</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Adding “grep” you can filter the ports and
+see what services are using the specified port 80:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo netstat -tnlp | grep :22</span></p>
+<p><img src="images/00055.jpeg" class="calibre70" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3">The ifconfig command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre16">Ifconfig</span><span class="calibre12"> is
+another of most widely used commands by an administrator to configure
+the network. As the name itself describes, ifconfig deals with the
+interface configuration, showing the network interfaces that can be used
+such as eth0, lo, etc.:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00056.jpeg" class="calibre75"
+alt="A screenshot of text Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As a consequence, using the following
+command, you are able to see the configuration on the interface
+eth0:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Ifconfig eth0</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Each interface can also be activated or
+disabled according to your needs. </span></p>
+<p><span class="calibre12">The commands ““ifconfig up” and ““ifup” work
+in this way to apply changes. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If the interface is already enabled, anything
+does not change:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0 up</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Similarly, to disable an interface such as
+eth0, use the commands “ifconfig down” or “ifdown eth0”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0 down </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The same ifcong command is also used to
+assign an IP address to an interface like the wth0:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0 192.16.20.120</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Also, the ifconfig can be used with the
+command netmask to enable the network mask on a specific interface such
+as eth0: </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0 netmask
+255.255.255.220</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">While the setting of the same command with
+“broadcast” sets the broadcast address on a specific interface:
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0 broadcas</span><span
+class="calibre21">t</span><span class="calibre12">
+192.16.20.120</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The MUT, which stands for maximum
+transmission unit, is the largest part in a unit sent through a network
+interface. The attribution to the type of interface can be edited, also
+defining the threshold for the number of packets that can be sent each
+time. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The example below sets up the transmission to
+a limit of 800 packets:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0 mtu 800</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Whereas usually the regular process checks if
+the packets belong to the interface currently in use, there is also an
+option to activate or disable what it is defined as promiscuous mode.
+With this type of mode packets are anywhere accepted. The following
+command in then used for this purpose:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0 promisc</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In opposition to the “promisc” command used
+to enable the configuration of the of the promiscuous mode, the
+“promisc” command disables this setting:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0 -promisc</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Another interesting feature is the alias that
+can be assigned to the interface eth0. The value is in the same range of
+the subnet mask. Adding the IP address to “ifconfig eth0:0” you give the
+alias, while just “ifconfig eth0:0” checks the alias itself.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0:0 192.16.20.120</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0:0</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The simple inclusion of “down” at the end of
+the command removes the alias assigned to the interface.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0:0 down</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">From the command line you can find out what
+is your MAC address and edit it. </span><span
+class="calibre16">MAC</span><span class="calibre12"> stands for Media
+Access Control and it is the identification number assigned to a
+network. Adding “hw ether” to ifconfig you are able to change the
+information. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">ifconfig eth0 hw ether
+AA:BB:CC:DD:EE:FF</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The Tcpdump tool</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre16">Tcpdump</span><span class="calibre12"> is a
+utility that works only from command line. It analyzes the TCP/IP
+packets that are received and sent through a network interface and it
+decides if they can be stored to be interpreted in the future.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Type the command to see the
+results:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">sudo tcpdump</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">If you want to limit your search to just a
+specific type of interface, you can add to the command “-i” to the
+command “tcpdump”.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">tcpdump -i eth0</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Through your search you can also filter the
+number of packets to displayed as output just adding the option
+“-c”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">tcpdump -c 5 -i eth0</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The Route command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Before digging into the command “</span><span
+class="calibre16">route</span><span class="calibre12">” is useful to
+have an overview of the concept of IP routing. With the term “IP
+routing” we mean a process where a host reaches another host before
+forwarding data to the final destination. With this method, the
+recipient works in between and takes care of the packets received
+deciding how to sort them before sending them to the final host. It is
+usually identified with a router that is used by the first host whether
+the final host is connected or not. In the main step the IP address is
+checked to see if it belongs to the same network or not. The TCP is then
+in charge of recreating the information collected over the transmission.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">With this overall introduction, keep in mind
+what is the goal of the command you are learning. Typing the
+</span><span class="calibre17">route</span><span class="calibre12">
+command you are able to show or edit the routing tables.</span></p>
+<p><span class="calibre12">The routing tables contain information about
+how the process of transmission of the packets sent and received,
+included the details of the network. One of the main features of this
+command is setting up static routes and interfaces in a network.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As shown in the example here below, you can
+type the command to access to the current routing tables:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">route</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00057.jpeg" class="calibre76"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The data reported in the screenshot offer a
+preview of the routing tables. Following the columns, “Destination”
+indicates the IP address of the host of destination or the network.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Then, the “Gateway” is expressed as an IP
+address of the router that filters the data available at the
+destination. The router, which is the mediator of the transmission,
+takes decisions in terms of how to send the data received to the final
+host. “Flags” describes the type of host of the final recipient and it
+is useful to figure if it is a router or a different device. Also,
+“Iface” provides the interface that it is used in the network. In the
+example shown the interface is the common eth0. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Through the process of routing table, the
+first host tries to reach the host of destination and names the router
+that handles the traffic. In this way, the communication can be
+performed even if the final host is not in the same network of the
+sender. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The route command has some options that can
+be added to display the information slightly differently. With the
+“option -n” you can see the list of the IP addresses in
+numbers:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">route -n</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00058.jpeg" class="calibre77"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The IP address </span><span
+class="calibre21">“</span><span
+class="calibre29">ip-172-31-32-</span><span
+class="calibre69">1</span><span class="calibre12">” is now replaced with
+the digits </span><span class="calibre21">“</span><span
+class="calibre29">172.31.32.</span><span class="calibre69">1</span><span
+class="calibre12">”.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">With the same command you can also set up a
+default gateway to use in case the final IP address does not belong to
+the same network:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre29">route add default gw 172.31.32.3</span></p>
+<p><span class="calibre29"> </span></p>
+<p><span class="calibre12">Instead of the IP address the destination
+would have the word “gateway” displayed under “Destination”.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The following command is used to edit the
+host:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">route add -host </span><span
+class="calibre29">172.31.32.3 </span><span class="calibre12">reject
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The Nslookup command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command </span><span
+class="calibre16">Nslookup</span><span class="calibre12">, which stands
+for “name server lookup”, is another great utility to work with the
+network. You can simply use it to discover the IP address or the domain
+name. </span></p>
+<p><span class="calibre12">The data provided by the DNS can be
+transferred through the interactive and noninteractive mode. While the
+interactive mode shows a list of the hosts belonging to the same domain,
+the noninteractive mode shows only the information for a specific host.
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command has the purpose to find problems
+linked to DNS configurations, </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Just typing the command, you are able to use
+the interactive mode:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">nslookup</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00059.jpeg" class="calibre78"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">After typing “nslookup” it would be asked to
+enter other information starting with the domain like in the example
+reported is “google.com”. All the information is then displayed to you
+for what concerns the server and the IP address. All the time you enter
+an IP address or domain you request a query that will disclose the
+information of your search. When the IP address is provided instead of
+the domain, you are making use of a reverse DNS lookup. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The second method instead is more specific
+for users who already have knowledge about the topic and know what
+parameters to look for. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Similarly, you can also request to find
+information on the MX records. In this specific case you need to add
+“set type=mx”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00060.jpeg" class="calibre47"
+alt="A picture containing table Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As shown in the preview, after entering:
+</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">nslookup</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">You have to enter the filter: </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">set type=mx</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">and then the domain:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">google.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">In the same way you can find the information
+about the DNS server typing the type=”ns”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">set type=ns</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Further options can be applied for example to
+see the SOA with the type=”soa”:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">set type=soa</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00061.jpeg" class="calibre79"
+alt="A picture containing bird Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As explained previousl, the second method
+that can be applied to the nslookup is the noninteractive mode. Instead
+of inserting the parameter separately, at the same time you type
+“nslookup” you also need to include the domain name as it follows
+here:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">nslookup google.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">or you can ask for a query on the IP
+address:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">nslookup 209.18.47.62</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The host command</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Given a domain name, the host command can be
+used to find the IP address or providing the IP address the associated
+IP address can be found. Just typing the command “host”, a list of
+options is available:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">host</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00062.jpeg" class="calibre80"
+alt="A screenshot of text Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As shown above, without no specific argument
+passed to the command, options are listed above.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Enter the following to see the IP address of
+google:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">host google.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00063.jpeg" class="calibre81"
+alt="A picture containing table, photo, sitting, computer Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">As shown in the preview, the address
+172.217.10.238 matches the domain name google.com.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Similarly, also the reverse can be found.
+This means retrieving the domain name of an IP address.</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">host 172.217.10.238</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The “option -C” is able to compare the SOA
+records on authoritative nameservers:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">host -C google.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00064.jpeg" class="calibre82"
+alt="A picture containing indoor, table, bird Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The “option -a” stands for ANY and it means
+that it tries to find any information about the Google host:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">host -a google.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The “option -t” can be applied to look for a
+specific DNS like ns:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">host -t ns google.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00065.jpeg" class="calibre83"
+alt="A screen shot of a computer Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">The whois command</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre12">The </span><span
+class="calibre16">whois</span><span class="calibre12"> is able to find
+information about a registered domain name, IP address, and name
+servers. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The command whois is a utility used to find
+information about the whois server you are reaching out. It accepts the
+requests through the default port which is the 43 and it translates the
+data received so that can be read in a different format. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Using the command you can list all the
+information about the registrar of the domain, the domain status, the
+name servers, expiration date:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">whois google.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><img src="images/00066.jpeg" class="calibre84"
+alt="A screenshot of a cell phone Description automatically generated" /></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Also, the same command can be used to get the
+information given an IP address:</span></p>
+<p><span class="calibre16"> </span></p>
+<p><span class="calibre12">whois 209.18.47.62</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre3">But how this information can be provided to
+you?</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">The ICANN is a non-profit organization that
+manages the IP address assigned to each domain name and they work with
+the registries. They are in charge of the domains such as .com. Below
+this level, registrars operate with the final customers such as GoDaddy,
+TuCows, and more. As a result, anyone who would like to register a new
+domain will apply for a registration to common registrars. </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Using the command “whois google.com” you send
+a request for a query to the listening port 43 which provides a series
+of information collected from the registry.  </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Additional information is provided to you if
+in the same query you also include the registrar where the domain is
+registered:</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">whois -h whois.markmonitor.com
+google.com</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+</section>
