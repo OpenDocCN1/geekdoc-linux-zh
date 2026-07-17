@@ -382,6 +382,7 @@
 +   [Linux 内核编程：字符、块、USB 及网络接口的内核架构与设备驱动开发](docs/linux-kernel-programming-developing-kernel-architecture-and-/README.md)
 +   [Linux 内核模块编程指南](docs/linux-krn-mdl-prog-dg/README.md)
 +   [LINUX：轻松学习 Linux 操作系统 - Linux 初学者指南，学习 Linux 命令行、Linux Shell 脚本与 Linux 编程](docs/linux-learn-the-linux-operating-system-with-ease---the-linux/README.md)
++   [Linux：掌握操作系统与命令行终极策略。提升计算机编程技能并开始编码](docs/linux-learn-the-ultimate-strategies-to-master-operating-syst/README.md)
 +   [Linux：Linux 文件系统](docs/linux-linux-file-systems/README.md)
 +   [Linux 初学者指南：学习 Linux 命令行、Linux 操作系统和 Linux 命令](docs/linux-linux-for-beginners-guide-to-learn-linux-command-line-/README.md)
 +   [Linux 精通：Linux 操作系统与命令行终极指南](docs/linux-linux-mastery-the-ultimate-linux-operating-system-and-/README.md)
