@@ -108,6 +108,7 @@
 +   [Linux 网络深度解析：防火墙、VPN 与安全连接配置指南](docs/deep-dive-into-linux-networking-configuring-firewalls-vpns-a/README.md)
 +   [Red Hat Enterprise Linux 管理与运维技能开发及 RHCSA 认证备考指南](docs/develop-the-skill-to-manage-and-administer-red-hat-enterpris/README.md)
 +   [跨平台着色器开发与调试](docs/developing-and-debugging-cross-platform-shaders/README.md)
++   [系统管理员 Docker：Linux Windows VMware](docs/docker-for-sysadmins-linux-windows-vmware/README.md)
 +   [绘画学校：完整课程](docs/drawing-school-the-complete-course/README.md)
 +   [Dreamweaver CS3 入门指南](docs/dreamweaver-cs3-for-dummies/README.md)
 +   [Linux 入门指南：全彩图解，即学即做](docs/easy-linux-in-full-colour-see-it-done-do-it-yourself/README.md)
