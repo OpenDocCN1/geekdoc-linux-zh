@@ -1,0 +1,36 @@
+name: Mastering Linux Administration： A Comprehensive Guide
+name_cn: Linux Linux 管理：全面指南
+slug: mastering-linux-administration-a-comprehensive-guide
+toc:
+- - '#'
+  - 第 4 章：网络与安全
+- - '##'
+  - 实现 SSL/TLS 证书
+- - '#'
+  - 第 6 章：包管理与软件安装
+- - '##'
+  - 包管理器与存储库
+- - '###'
+  - 安装和更新软件软件包
+- - '###'
+  - APT (基于 Debian/Ubuntu 的系统)
+- - '###'
+  - YUM (基于 Red Hat/Fedora 的系统)
+- - '###'
+  - 从源码编译和安装
+- - '###'
+  - 管理依赖项
+- - '#'
+  - 第 7 章：备份、恢复与系统维护
+- - '##'
+  - 系统更新与补丁管理
+- - '#'
+  - 第 9 章：故障排除与性能调优
+- - '##'
+  - 内核调优与优化
+- - '#'
+  - 第 10 章：高级主题与最佳实践
+- - '##'
+  - 可扩展性与性能优化
+- - '###'
+  - 15. NUMA 感知
