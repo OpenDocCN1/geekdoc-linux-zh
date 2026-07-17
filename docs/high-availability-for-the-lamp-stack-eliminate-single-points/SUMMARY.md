@@ -1,0 +1,2 @@
++   [LAMP 栈高可用性：消除单点故障并提高 Linux、Apache、MySQL 和 PHP Web 的运行时间](README.md)
++   [LAMP 栈高可用性：消除单点故障并提高 Linux、Apache、MySQL 和 PHP Web 的运行时间](high-availability-for-the-lamp-stack-eliminate-single-points_0.md)

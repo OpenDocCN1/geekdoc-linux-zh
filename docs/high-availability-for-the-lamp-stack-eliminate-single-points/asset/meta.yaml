@@ -1,0 +1,105 @@
+name: High Availability for the LAMP Stack： Eliminate Single Points of Failure and
+  Increase Uptime for Your Linux, Apache, MySQL, and PHP Based Web Applications
+name_cn: LAMP 栈高可用性：消除单点故障并提高 Linux、Apache、MySQL 和 PHP Web 的运行时间
+slug: high-availability-for-the-lamp-stack-eliminate-single-points
+toc:
+- - '#'
+  - LAMP 栈高可用性：消除单点故障并提高 Linux、Apache、MySQL 和 PHP Web 的运行时间
+- - '#'
+  - 引言
+- - '#'
+  - 准备本地测试环境
+- - '#'
+  - Vagrant 快速入门课程
+- - '##'
+  - 总结
+- - '##'
+  - 示例
+- - '#'
+  - 设计
+- - '##'
+  - 单机服务器上的典型应用
+- - '##'
+  - 扩展性 VS 可用性
+- - '###'
+  - 垂直扩展
+- - '###'
+  - 水平扩展
+- - '##'
+  - 兼得其者
+- - '##'
+  - 高可用架构
+- - '###'
+  - 构建服务器 (Vagrant 配置)
+- - '###'
+  - 安装和配置负载均衡器
+- - '###'
+  - 安装和配置 Apache 和 PHP
+- - '###'
+  - 如果你更改了端口或在这里添加了更多端口，你可能需要 更改 /etc/apache2/sites-enabled/000-default.conf 中的 VirtualHost
+    语句
+- - '##'
+  - 安装和配置高可用存储
+- - '###'
+  - 存储准备
+- - '###'
+  - 集群配置
+- - '#'
+  - 浮动 IP
+- - '##'
+  - 公网地址
+- - '##'
+  - 私网地址
+- - '##'
+  - 卷创建
+- - '#'
+  - 安装和配置数据库
+- - '###'
+  - 引导集群 (Bootstrapping)
+- - '###'
+  - 配置集群检查工具
+- - '###'
+  - 安装 WordPress
+- - '#'
+  - 扩展
+- - '##'
+  - Web 服务器
+- - '###'
+  - 如果你在这里更改了端口或添加了更多端口，你可能也更改 /etc/apache2/sites-enabled/000-default.conf 中的 VirtualHost
+    语句
+- - '##'
+  - 数据库服务器
+- - '###'
+  - Galera 库路径。
+- - '###'
+  - 集群连接 URL 包含所有节点的私有 IP。
+- - '###'
+  - 为了让 Galera 正常工作，binlog 格式应为 ROW。
+- - '###'
+  - MyISAM 存储引擎仅有实验支持
+- - '###'
+  - 这更改了 InnoDB 自增锁的管理方式，是 Galera 的要求。
+- - '###'
+  - SST 方法
+- - '###'
+  - 集群名称
+- - '###'
+  - SST 方法的身份验证
+- - '##'
+  - db01 私有 IP 地址
+- - '##'
+  - db02 私有 IP 地址
+- - '##'
+  - db03 私有 IP 地址
+- - '##'
+  - db04 私有 IP 地址
+- - '##'
+  - 存储
+- - '#'
+  - 基于 LAMP 栈的流行开源应用程序
+- - '#'
+  - Linux 初学者
+- - '#'
+  - 5 天学会 Linux
+- - '#'
+  - 附录
