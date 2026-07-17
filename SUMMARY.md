@@ -417,6 +417,7 @@
 +   [Linux 初学者快速入门：立即开始！](docs/linux-the-beginners-crash-course-get-started-today/README.md)
 +   [Linux：初学者完全指南 - 黑书](docs/linux-the-complete-beginners-guide---the-black-book/README.md)
 +   [Linux：从灾难到精通](docs/linux-the-disaster-to-master/README.md)
++   [LINUX：终极初学者指南！](docs/linux-the-ultimate-beginners-guide/README.md)
 +   [Linux 工具快速教程](docs/linux-tool-qkgd/README.md)
 +   [Linux 用户与开发者 138 - 7 天精通树莓派 138](docs/linux-user-developer-138---master-raspberry-pi-in-7-days-138/README.md)
 +   [Linux 用户与开发者 141 - Kano：像乐高一样简单，由 Pi 驱动 141](docs/linux-user-developer-141---kano-simple-as-lego-powered-by-pi/README.md)
