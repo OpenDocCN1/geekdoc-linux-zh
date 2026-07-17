@@ -254,6 +254,7 @@
 +   [老式 Linux 入门指南](docs/learning-old-school-linux/README.md)
 +   [学习 Python、Java、JavaScript、C、C++、C#、CSS、HTML、jQuery、MySQL、SQL、Linux、Perl、PHP 或 XML：300+ 份免费教材、100+ 份速查表、100+ 份 vi 快速链接](docs/learning-python-java-javascript-c-c-c-css-html-jquery-mysql-/README.md)
 +   [学习 Ubuntu：Linux 使用初学者指南](docs/learning-ubuntu-a-beginners-guide-to-using-linux/README.md)
++   [刑事诉讼法重大案例 第10版](docs/les-grands-arrêts-de-la-procédure-pénale---10e-ed/README.md)
 +   [LibreOffice 高级指南：深度探索全球最强大的免费办公套件](docs/libreoffice-expert-dive-deep-into-the-worlds-greatest-free-o/README.md)
 +   [Linux 101 考试：模块化培训笔记](docs/linux-101-examination-modular-training-notes/README.md)
 +   [Linux 101 Hacks](docs/linux-101-hack/README.md)
