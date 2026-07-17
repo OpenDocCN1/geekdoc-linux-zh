@@ -467,6 +467,7 @@
 +   [鸟哥的 Linux 私房菜：基础学习篇 第四版](docs/niaoge-linux-basic-4e/README.md)
 +   [鸟哥的 Linux 私房菜：服务器架设篇 第三版](docs/niaoge-linux-svr-3e/README.md)
 +   [NW.js 精要：使用最新 Web 技术构建适用于 Windows、Mac OS 或 Linux 的原生桌面应用程序](docs/nwjs-essentials-build-native-desktop-applications-for-window/README.md)
++   [旧电脑，新生命：使用 Ubuntu 修复旧硬件](docs/old-computer-new-life-restoring-old-hardware-with-ubuntu/README.md)
 +   [GNU/Linux 入门指南](docs/on-gnulinux/README.md)
 +   [Linux 和 UNIX 的 Oracle Real Application Clusters 安装指南](docs/oracle-real-application-clusters-installation-guide-for-linu/README.md)
 +   [Perl黑皮书](docs/perl-black-book/README.md)
