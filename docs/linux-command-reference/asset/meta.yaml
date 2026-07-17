@@ -1,0 +1,964 @@
+name: Linux Command Reference
+name_cn: Linux 命令参考指南
+slug: linux-command-reference
+toc:
+- - '#'
+  - Linux 命令参考指南
+- - '#'
+  - 使用说明
+- - '#'
+  - 屏幕显示说明
+- - '##'
+  - apt-file
+- - '###'
+  - 示例
+- - '##'
+  - apt-get 命令
+- - '###'
+  - 示例
+- - '###'
+  - apt-key 命令
+- - '##'
+  - /etc/apt/sources.d/myrepo.list
+- - '###'
+  - aptitude [options] [command]
+- - '####'
+  - aptitude search
+- - '####'
+  - 示例
+- - '###'
+  - arp [options] [hosts/ipaddresses/network]
+- - '###'
+  - arp-scan [options] [hosts/ipadresses/network]
+- - '####'
+  - 示例
+- - '###'
+  - at [options] time
+- - '####'
+  - 时间规范
+- - '####'
+  - 选项
+- - '####'
+  - 示例
+- - '###'
+  - '`atq` 列出所有使用 at 设置在未来某时间点执行的作业。如果由 `root` 运行 `atq`，它将显示所有用户的作业；否则，只显示其自身的作业。'
+- - '###'
+  - '`atrm n`'
+- - '###'
+  - '`attr [options] files`'
+- - '###'
+  - '`awk [options] ''code'' text files`'
+- - '##'
+  - 安装与调试
+- - '##'
+  - 语法与在线帮助
+- - '##'
+  - S3 管理
+- - '##'
+  - EC2 管理
+- - '##'
+  - 示例
+- - '##'
+  - B
+- - '###'
+  - badblocks 设备
+- - '###'
+  - basename 字符串 [结尾]
+- - '####'
+  - 示例
+- - '###'
+  - bat 文件
+- - '###'
+  - batch
+- - '####'
+  - 示例
+- - '###'
+  - bc [file]
+- - '####'
+  - 示例
+- - '####'
+  - 备选方案
+- - '###'
+  - bg [process]
+- - '###'
+  - blkid [options] [device]
+- - '##'
+  - 示例
+- - '##'
+  - bluetoothctl
+- - '##'
+  - 示例
+- - '##'
+  - boltctl 命令
+- - '###'
+  - break [n]
+- - '###'
+  - btrfs command
+- - '####'
+  - 示例
+- - '####'
+  - 文档
+- - '###'
+  - bunzip2 file.bz2
+- - '###'
+  - bzip2 file
+- - '####'
+  - 示例
+- - '##'
+  - C
+- - '###'
+  - cadaver [options] [files]
+- - '####'
+  - 示例
+- - '###'
+  - canonical-livepatch [command]
+- - '####'
+  - 示例
+- - '###'
+  - case expression in
+- - '####'
+  - 示例
+- - '###'
+  - cat [options] [files]
+- - '####'
+  - 示例
+- - '####'
+  - 变体
+- - '###'
+  - cd [directory]
+- - '###'
+  - chacl [options] 文件
+- - '###'
+  - chage [options] 登录名
+- - '####'
+  - 示例
+- - '###'
+  - chattr [options] +-=[aAcCdDeijsStTu] 文件
+- - '####'
+  - 示例
+- - '###'
+  - chcon [options] 上文文件
+- - '###'
+  - 示例
+- - '###'
+  - chgrp [options] group files
+- - '####'
+  - 示例
+- - '###'
+  - chkrootkit [options]
+- - '####'
+  - 示例
+- - '####'
+  - 变体
+- - '###'
+  - chmod [options] changes files
+- - '####'
+  - setuid, setgid, and sticky Bits
+- - '##'
+  - 八进制表示法
+- - '##'
+  - 选项
+- - '##'
+  - 示例
+- - '##'
+  - chown [options] user[:group] files
+- - '###'
+  - 示例
+- - '###'
+  - chpasswd [options]
+- - '###'
+  - 示例
+- - '##'
+  - chroot directory [command]
+- - '###'
+  - 示例
+- - '##'
+  - chsh -s shell [user]
+- - '###'
+  - 示例
+- - '##'
+  - chvt n
+- - '##'
+  - cksum file
+- - '##'
+  - clear
+- - '##'
+  - cmp [options] file1 file2
+- - '##'
+  - cnf command
+- - '###'
+  - 示例
+- - '##'
+  - column [options] file
+- - '##'
+  - compress [options] file
+- - '##'
+  - continue [n]
+- - '##'
+  - convert or magick [options] image old image new
+- - '##'
+  - /etc/ImageMagick-6/policy.xml or /etc/ImageMagick-7/policy.xml
+- - '###'
+  - 示例
+- - '###'
+  - cp [option] source target
+- - '####'
+  - 复制目录
+- - '###'
+  - cpio command [options]
+- - '###'
+  - crontab [options]
+- - '###'
+  - 示例
+- - '###'
+  - csplit [options] 文件分割位置
+- - '####'
+  - 分割位置的说明
+- - '####'
+  - 选项
+- - '####'
+  - 示例
+- - '###'
+  - curl [options] [url]
+- - '####'
+  - 示例
+- - '####'
+  - 替代方案
+- - '###'
+  - cut [options] file
+- - '####'
+  - 示例
+- - '##'
+  - D
+- - '###'
+  - date [options] [+format]
+- - '####'
+  - 示例
+- - '###'
+  - dconf 命令
+- - '####'
+  - 示例
+- - '###'
+  - dd 选项
+- - '####'
+  - 示例
+- - '####'
+  - 替代方案
+- - '###'
+  - declare [options] var=value
+- - '###'
+  - delgroup [options] name
+- - '###'
+  - delta [options] file1 file2
+- - '###'
+  - deluser [options] name `deluser name group`
+- - '###'
+  - depmod [options]
+- - '###'
+  - df [options] [directory]
+- - '####'
+  - Example
+- - '####'
+  - Alternatives
+- - '###'
+  - dhclient interface
+- - '####'
+  - Example
+- - '###'
+  - diff [options] file1 file2
+- - '####'
+  - 示例
+- - '####'
+  - 替代方案
+- - '###'
+  - dig [options] [@dnsserver] host/ipaddr [type]
+- - '####'
+  - 示例
+- - '###'
+  - dircolors [option] [file]
+- - '####'
+  - 示例
+- - '###'
+  - dirname string
+- - '###'
+  - dirs
+- - '###'
+  - disown [options] [jobspec]
+- - '####'
+  - Example
+- - '###'
+  - dmesg [options]
+- - '###'
+  - dnf [options] command
+- - '####'
+  - 示例
+- - '###'
+  - docker [options] 命令
+- - '####'
+  - 示例
+- - '##'
+  - dpkg 选项 [filename/packagename]
+- - '###'
+  - 示例
+- - '###'
+  - dracut [options] initrd file kernel version
+- - '###'
+  - 示例
+- - '###'
+  - du [options] [directory]
+- - '####'
+  - 示例
+- - '####'
+  - 替代方案
+- - '###'
+  - dumpe2fs device
+- - '###'
+  - dvips [options] name.dvi
+- - '##'
+  - E
+- - '###'
+  - e4defrag [options] file/directory/device
+- - '###'
+  - echo [options] string
+- - '####'
+  - 示例
+- - '###'
+  - efiboot [options]
+- - '####'
+  - 示例
+- - '###'
+  - egrep [options] 搜索模式文件
+- - '###'
+  - enscript [options] 源文件 -p 目标
+- - '###'
+  - epstopdf [options] file.eps
+- - '###'
+  - erd [options] 文件
+- - '###'
+  - etherwake [options] mac
+- - '####'
+  - 示例
+- - '###'
+  - ethtool [options] device [parameter]
+- - '####'
+  - 示例
+- - '###'
+  - eval $var
+- - '####'
+  - 示例
+- - '###'
+  - exec command
+- - '###'
+  - exfat [options] [label] [label]
+- - '####'
+  - 示例
+- - '###'
+  - exiftool [options] file/directory
+- - '####'
+  - 示例
+- - '###'
+  - exit [value]
+- - '####'
+  - 示例
+- - '###'
+  - expand [options] file
+- - '####'
+  - 示例
+- - '###'
+  - export [options] variable
+- - '####'
+  - 示例
+- - '###'
+  - exportfs [options]
+- - '###'
+  - expr expression
+- - '####'
+  - 示例
+- - '##'
+  - F
+- - '###'
+  - fail2ban-client [options] command
+- - '####'
+  - 示例
+- - '###'
+  - fc-list [pattern]
+- - '###'
+  - fdisk [options] [device]
+- - '###'
+  - ffmpeg [options] -i infile [out] outfile
+- - '####'
+  - 示例
+- - '###'
+  - fg [process]
+- - '###'
+  - fgconsole [--next-available] file
+- - '####'
+  - 示例
+- - '###'
+  - find [options] [path]
+- - '####'
+  - 通用选项
+- - '####'
+  - 示例
+- - '####'
+  - 动作
+- - '###'
+  - findmnt [options] [device/mountpoint]
+- - '####'
+  - 示例
+- - '###'
+  - firewall-cmd [options]
+- - '####'
+  - 示例
+- - '###'
+  - flatpak [options]
+- - '####'
+  - 示例
+- - '###'
+  - free [options]
+- - '####'
+  - 示例
+- - '###'
+  - fsck [options] device
+- - '####'
+  - 示例
+- - '###'
+  - fstrim [options] mount
+- - '####'
+  - 示例
+- - '###'
+  - ftp [options] ftpserver
+- - '####'
+  - 示例
+- - '##'
+  - G
+- - '###'
+  - getcap [options] file
+- - '####'
+  - 示例
+- - '###'
+  - getenforce
+- - '###'
+  - getfacl [options] file
+- - '####'
+  - 示例
+- - '###'
+  - getget [options] group
+- - '####'
+  - 示例
+- - '###'
+  - getattr [options] file
+- - '####'
+  - 示例
+- - '###'
+  - getopts "format"
+- - '####'
+  - 示例
+- - '###'
+  - getuser [options] username
+- - '####'
+  - 示例
+- - '###'
+  - git command [options/parameters]
+- - '##'
+  - J
+- - '###'
+  - j directory
+- - '##'
+  - john [options] [hashfile]
+- - '####'
+  - 示例
+- - '####'
+  - 替代方案
+- - '##'
+  - journalctl [options] [search expression]
+- - '####'
+  - 示例
+- - '##'
+  - jq [options] filter expression [file.json]
+- - '####'
+  - 示例
+- - '##'
+  - K
+- - '###'
+  - kbdrate [options]
+- - '###'
+  - kexec [options]
+- - '####'
+  - 示例
+- - '###'
+  - kill [-s signal] processno
+- - '###'
+  - killall [-signal] process name
+- - '####'
+  - 示例
+- - '###'
+  - kpartx [diskdevice]
+- - '####'
+  - 示例
+- - '##'
+  - kvm [options] [imagefile]
+- - '##'
+  - L
+- - '###'
+  - l2ping [options] bluetoothmac
+- - '###'
+  - lame [options] in out.mp3
+- - '####'
+  - 示例
+- - '###'
+  - last [options]
+- - '####'
+  - 示例
+- - '###'
+  - last [options]
+- - '####'
+  - 示例
+- - '###'
+  - last [options]
+- - '####'
+  - 示例
+- - '###'
+  - last [options]
+- - '####'
+  - 示例
+- - '###'
+  - 'last [options] '
+- - '####'
+  - 示例
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '###'
+  - ldconfig
+- - '####'
+  - 示例
+- - '####'
+  - 示例
+- - '####'
+  - 示例
+- - '####'
+  - 示例
+- - '####'
+  - 示例
+- - '###'
+  - 'ldconfig [options] '
+- - '####'
+  - 示例
+- - '##'
+  - M
+- - '###'
+  - magick [options] imageold imagenew
+- - '###'
+  - mail [options] mail@hostname [< message text]
+- - '####'
+  - 示例
+- - '####'
+  - 替代方案
+- - '###'
+  - makepasswd [options]
+- - '####'
+  - 示例
+- - '###'
+  - man [group] [options] name
+- - '###'
+  - md5sum files
+- - '###'
+  - mdadm [options]
+- - '####'
+  - 示例
+- - '###'
+  - mkdir 目录
+- - '###'
+  - mkfifo 文件
+- - '####'
+  - 示例
+- - '###'
+  - mkfs [options] device [blocks]
+- - '####'
+  - 示例
+- - '###'
+  - mkfs.exfat [options] device
+- - '###'
+  - mkfs.ext2 [options] device [blocks]
+- - '####'
+  - 示例
+- - '###'
+  - mkfs.ntfs [options] device
+- - '###'
+  - mkfs.vfat [options] device
+- - '####'
+  - 示例
+- - '###'
+  - mkfs.xfs [options] device
+- - '###'
+  - mknod devicefile [b|c] major minor
+- - '###'
+  - mkpasswd [options]
+- - '####'
+  - 示例
+- - '###'
+  - mkswap device/file
+- - '####'
+  - 示例
+- - '##'
+  - modinfo 模块名称
+- - '##'
+  - modprobe [options] 模块名称 [parameter=value ...]
+- - '##'
+  - mogrify [options] 图像文件
+- - '####'
+  - 示例
+- - '##'
+  - more 文件
+- - '##'
+  - mount [options] 设备 目录
+- - '####'
+  - 通用 mount 选项
+- - '####'
+  - 通用文件系统选项
+- - '###'
+  - btrfs 选项
+- - '###'
+  - CIFS 选项
+- - '###'
+  - exFAT 选项
+- - '###'
+  - ext3/ext4 选项
+- - '###'
+  - ext3/ext4 日志模式
+- - '###'
+  - NFS 选项
+- - '###'
+  - NTFS 选项
+- - '###'
+  - VFAT 选项
+- - '###'
+  - XFS 选项
+- - '####'
+  - 示例
+- - '##'
+  - mtr [options] 主机名
+- - '####'
+  - 示例
+- - '##'
+  - multitail [options] file1 [file2 file3 ...]
+- - '##'
+  - mv source target
+- - '####'
+  - 示例
+- - '##'
+  - mysql [options] [database name] [< filename]
+- - '####'
+  - 示例
+- - '####'
+  - 替代方案
+- - '###'
+  - mysqladmin [options] command1 command2 ...
+- - '####'
+  - 示例
+- - '###'
+  - mysqlbinlog [options] loggingfile1 file2 ...
+- - '####'
+  - 示例
+- - '###'
+  - mysqldump [options] dbname [table1 table2 ...]
+- - '####'
+  - 示例
+- - '#'
+  - 在备份脚本中，--defaults-extra-file 必须是第一个选项
+- - '##'
+  - N
+- - '###'
+  - namei [options] file
+- - '###'
+  - nc [options] [hostname/ip-address] [port]
+- - '####'
+  - 示例
+- - '###'
+  - ncdu [options] [directory]
+- - '####'
+  - 示例
+- - '###'
+  - needs-restarting [options]
+- - '####'
+  - 示例
+- - '###'
+  - netplan [command]
+- - '###'
+  - netstat [options]
+- - '####'
+  - 示例
+- - '###'
+  - networkctl [command]
+- - '####'
+  - 示例
+- - '###'
+  - newaliases
+- - '###'
+  - newgrp [options] group
+- - '####'
+  - 示例
+- - '###'
+  - newusers [options] file
+- - '####'
+  - 示例
+- - '##'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '##'
+  - P
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '
+- - '####'
+  - 示例
+- - '###'
+  - 'nft [options] '

@@ -1,0 +1,16431 @@
+# Linux 命令参考指南
+
+
+
+![](img/cover.jpg)
+
+![Linux 命令参考 – 封面](img/cover.jpg)
+
+
+
+
+
+
+2025 年第一版
+
+# 使用说明
+
+本电子书受版权保护。通过购买本电子书，您表示同意接受并遵守相关版权规定。您有权出于个人目的使用本电子书。您也可以进行打印和复制，但同样仅限于个人使用。然而，不允许与他人共享电子版或打印版，无论是整体还是部分。当然，在互联网或公司网络上发布这些内容也是违法的。
+
+有关更详细且具有法律约束力的使用条件，请参阅法律备注章节。
+
+# 屏幕显示说明
+
+您正在以文件格式（EPUB 或 Mobi）阅读本电子书，该格式使书籍内容能够适应您阅读设备的显示选项和个人需求。这是一件好事；但遗憾的是，并不是所有设备都以相同的方式显示内容，图片、表格等功能的渲染或连字符可能会导致困难。本电子书已针对尽可能常见的阅读设备进行了显示优化。
+
+如果您想放大插图（特别是在 iPad 上的 iBooks 中），请点击一下相应的图片。再次点击一次即可返回上一个屏幕。您可以在服务页面上找到更多关于屏幕布局自定义的建议。
+
+
+以下命令返回所有名称包含 `gimp` 的软件包的排序列表：
+
+```
+root# apt-cache search --names-only gimp | sort
+  gimp-cbmplugs    - GIMP 扩展，用于导入/导出
+                     Commodore-64 文件
+  gimp-data        - GIMP 数据
+  gimp-data-extras - GIMP 的额外刷子和图案
+  ... 
+```
+
+第二个示例显示了安装了哪个版本的 `openjdk-17-jre` 软件包以及是否存在备用版本。`apt-cache` 只找到了一个旧版本（17.0.2 而不是 17.0.10）：
+
+```
+user$ apt-cache policy openjdk-11-jre
+openjdk-17-jre:
+  Installed: 17.0.10+7-1~22.04.1
+  Candidate: 17.0.10+7-1
+```
+
+## apt-file
+
+来自同名软件包的 `apt-file` 命令使得搜索 Debian 中包含的文件成为可能——即使该软件包尚未安装。
+
+#### 示例
+
+以下命令首先创建或更新本地数据库，然后搜索包含 `main.cf` 的软件包：
+
+```
+root# apt-file update
+user$ apt-file find main.cf
+postfix:     /usr/share/postfix/main.cf.debian
+postfix:     /usr/share/postfix/main.cf.dist
+postfix:     /usr/share/postfix/main.cf.tls
+postfix-doc: /usr/share/doc/postfix/examples/main.cf.default
+postsrsd:    /usr/share/doc/postsrsd/main.cf.ex
+... 
+```
+
+## apt-get 命令
+
+`apt-get` 命令是 Debian 和 Ubuntu 特有的，用于安装、更新和卸载软件包。对于交互式使用，今天建议使用 apt 命令代替 `apt-get`。 它针对易用性进行了优化，并提供了软件包搜索的子命令（`apt show`、`apt search` 和 `apt list`），这些在 `apt-get` 中是缺失的。
+
+然而，`apt-get` 并没有淘汰。它可以在所有基于 Debian 和 Ubuntu 的发行版上使用。如果你想在脚本中自动化软件包管理，特别推荐使用它。以下列表描述了最重要的命令：
+
+* `autoclean`
+
+  从软件包缓存中删除那些已有新版本的可用软件包。
+
+* `autoremove`
+
+  卸载所有不再需要的且由于依赖关系而安装的软件包。
+
+* `check`
+
+
+
+
+更新所有已安装软件包的缓存，并检测任何存在的软件包冲突和未解决的依赖关系。只有在未通过 APT 安装（卸载）软件包并导致发生冲突时，此操作才是必要的。
+
+- `clean`
+  从软件包缓存中删除所有下载的软件包。
+- `dist-upgrade`
+  工作方式与 `upgrade` 类似，但在需要时还会安装新软件包。
+- `install name1 name2 ...`
+  安装软件包 `name1`、`name2` 等，并考虑软件包的依赖关系。如果某个软件包已经安装，`apt-get install name` 将更新该软件包。
+- `remove name1 name2 ...`
+  卸载指定的软件包。
+- `source name`
+  在当前目录下安装软件包的源代码。
+- `update`
+  更新 `sources.list` 中指定的归档的软件包列表。（更多细节请参阅 `apt` `update`。）
+- `upgrade`
+  如果软件包源中有更新版本，则更新所有已安装的软件包。
+
+命令的详细行为由选项控制：
+
+- `-d` 或 `--download-only`
+  仅将软件包下载到 `/var/cache/apt/archives` 目录，但不进行安装。
+- `--no-install-recommends`
+  跳过安装推荐软件包。
+- `-s` 或 `--simulate`
+  模拟安装，但不进行任何实际更改。
+- `-y` 或 `--assume-yes`
+  对所有问题均回答是，允许该命令在脚本中使用。
+
+#### 示例
+
+以下命令展示了如何使用 `apt-get`：
+
+```
+root# apt-get update && apt-get dist-upgrade   
+(执行完整更新)
+root# apt-get remove -y emacs                  
+(在不询问的情况下卸载 emacs) 
+```
+
+### apt-key 命令
+
+尽管 `apt-key` 命令在无数网络手册中仍提及，但它已经过时了。在过去，该命令帮助管理软件包源的密钥。它通常以 `apt-key add keyfile` 的形式执行。
+
+该命令在当前的发行版中不再可用。现在必须手动将密钥文件保存到 `/etc/apt/trusted.gpg.d` 目录。此外，在 `/etc/apt/sources.list` 或 `/etc/apt/sources.d/repo.list` 中指定软件包源时，必须使用 `signed-by` 显式引用密钥文件：
+
+```
+## /etc/apt/sources.d/myrepo.list
+deb [signed-by=/etc/apt/trusted.gpg.d/myrepo.asc] https://apt.myrepo.com ... 
+```
+
+### aptitude [options] [command]
+
+Debian 特有的 `aptitude` 命令用于安装、更新和删除软件包，并访问类似 `apt` 和 `apt-get` 的 APT 基础设施。这两个命令相比的优势是 `aptitude` 在安装过程中会记住依赖包，并在卸载时自动删除它们。
+
+所有软件包管理功能都以命令的形式进行执行（例如 `aptitude install package name`）。基本命令与 `apt-get` 中的命令对应，并在那里有描述。然而，`aptitude` 中不提供 `check` 和 `autoremove` 命令。强大的 `search` 命令可用于此目的。
+
+此外，你也可以通过直接在不带任何参数的情况下启动程序，在控制台中中使用带有文本界面的程序。使用键盘快捷键 Ctrl+T 选择菜单。尽管有菜单，但 `aptitude` 的使用并不十分直观，这就是为什么大多数用户使用 `aptitude`（像 `apt-get` 一样）仅仅运行单个命令。
+
+大多数发行版默认没有安装 `aptitude`，必须通过 `apt` 或 `apt-get` 安装后才能使用。
+
+#### aptitude search
+
+`aptitude search` 为搜索软件包数据库提供了全面的选项。在最形式的形式，你可以使用 `aptitude search search term` 来搜索名称包含搜索词的软件包。你可以使用 `~` 和字母来制定各种搜索标准。例如，`~i` 将搜索限制为已安装的软件包，而 `~U` 显示可用更新的软件包。`-F` 允许你控制在特定宽度的列中显示搜索结果的哪些细节。
+
+`/usr/share/doc/aptitude/README 以及下一页描述了许多其他搜索选项：
+
+www.debian.org/doc/manuals/aptitude/ch02s04s05.en.html
+
+#### 示例
+
+以下两个命令首先安装 `mysql-server` 软件包，然后再次删除。值得注意的是，第二个命令删除了几乎所有与 `mysql-server` 一起安装的依赖包。（但是，独立于服务器的客户端工具和库会被保留）。
+
+
+
+
+
+```
+root# aptitude install mysql-server
+The following NEW packages will be installed:
+   libcgi-fast-perl{a} libcgi-pm-perl{a} libevent-core-2.1-7{a} ...
+   mysql-server mysql-server-8.0{a} mysql-server-core-8.0{a}
+0 packages upgraded, 19 newly installed
+...
+root# aptitude remove mysql-server
+The following packages will be REMOVED:
+  libcgi-fast-perl{u} ... mysql-server-core-8.0{u}
+0 packages upgraded, 0 newly installed, 19 to remove 
+```
+
+以下命令提供了所有已安装软件包的列表。包组或包源指定在第一列（`%20s`，Source，列宽为 20 个字符），包名指定在第二列中。
+
+```
+user$ aptitude search ~i -F "%20s  %p"
+utils               acl
+admin               adduser
+gnome               adwaita-icon-theme
+games               aisleriot
+... 
+```
+
+你可以使用 `egrep 来过滤结果中源自 Ubuntu 包源 `universe` 或 `multiverse` 的软件包。
+
+```
+user$ aptitude search ~i -F "%20s  %p" | egrep "universe|multiverse"
+universe/admin          aptitude
+universe/admin          aptitude-common
+universe/introspection  gir1.2-gtk-vnc-2.0
+universe/editors        joe
+universe/libs           libburn4
+... 
+```
+
+### arp [options] [hosts/ipaddresses/network]
+
+来自 `net-tools` 包的 `arp` 帮助管理地址解析协议 (ARP) 的缓存。该缓存包含本地网络设备列表，并允许分配其 MAC 地址。在不带任何进一步参数的情况下，该命令返回当前缓存内容。使用 `-n` 选项，将显示相应的 IP 地址而不是主机名。
+
+```
+user$ arp
+Address                  HWtype  HWaddress           Flags Mask  Iface
+fritz.box                ether   3c:37:12:b7:a1:cb   C           enp0s1
+Archer-C6.fritz.box      ether   d8:07:b6:4f:19:af   C           enp0s1
+m3.fritz.box             ether   80:a9:97:32:c5:d7   C           enp0s1
+BRN001BA99C5DA4.fritz.b  ether   00:1b:a9:9c:5d:a4   C           enp0s1
+user$ arp -n
+Address                  HWtype  HWaddress           Flags Mask  Iface
+192.168.178.1            ether   3c:37:12:b7:a1:cb   C           enp0s1
+192.168.178.21           ether   d8:07:b6:4f:19:af   C           enp0s1
+192.168.178.146          ether   80:a9:97:32:c5:d7   C           enp0s1
+192.168.178.20           ether   00:1b:a9:9c:5d:a4   C           enp0s1 
+```
+
+### arp-scan [options] [hosts/ipadresses/network]
+
+`arp-scan` 向指定的主机或 IP 地址发送地址解析协议 (ARP) 包并显示相应的响应。因此，`arp-scan` 提供了一种极其快速的方法来查找哪些主机或 IP 地址正在运行活动设备以及它们具有哪些 MAC 地址。像通常一样，也可以以 `10.17.0.0/16` 的形式指定地址范围。
+
+`nmap` 命令提供了类似的功能，尽管技术基础完全不同。简而言之，`nmap` 较慢但更彻底。
+
+- `-f` `filename` 或 `--file=filename`: 
+  从指定文件加载主机或 IP 地址。
+- `-I` `interface` 或 `--interface=interface`: 
+  显式选择发送 ARP 包的网络接口。如果未指定此选项，`arp-scan` 将直接使用第一个接口，忽略回环接口。
+- `-l` `--local`: 
+  搜索本地网络。
+
+#### 示例
+
+以下 `arp-scan` 命令用于执行：
+```
+root# arp-scan --interface=eth0
+```
+
+### at [options] time
+
+你可以使用 `at` 指定在稍后运行一个或多个命令。在 `at` 之后以交互方式输入命令；输入以 `Ctrl+D` 结束。如果作业产生标准输出，输出将在完成后通过电子邮件发送给执行 `at` 的用户。这需要安装 `/usr/sbin/sendmail`。
+
+#### 时间规范
+
+时间有多种变体，这里展示了最重要的几种：
+
+- `3:45 [tomorrow]`: 在今天凌晨 3:45 运行命令（如果现在早于那时），或者在明天凌晨 3:45 运行（如果已经过去）。你可以通过后续 `tomorrow` 显式指定第二天的时间。
+- `[16:30] [2025-]12-31`: 在指定的日期和时间运行命令。年份和时间是可选的。如果缺少这些数据，将使用当前年份和当前时间。因此，`at 11-30` 意味着：今年 11 月 30 日，执行 `at` 命令时的同一时刻。
+- `noon | teatime | midnight`: 分别对应 12:00、16:00 和 0:00。
+- `now`: 立即运行命令。`now` 经常与 `+ xxx` 结合。
+- `+ 2 days`: 在前面的时间规范基础上增加两天。允许的时间单位有 `minutes`、`hours`、`days` 和 `weeks`。语法上存疑的语句 `at now + 1 hours` 意味着：在一小时后。（时间单位应始终使用复数。）
+
+#### 选项
+
+- `-b`: 在系统负载低时运行命令。使用此选项将省略时间规范。`at -b` 对应于 [batch] 命令。
+
+
+
+
+
+* `-c n`:
+    指定由指定编号作业运行的命令。你可以通过 atq 确定作业编号。
+* `-d` 或 `-r n`:
+    从已标记作业列表中删除指定编号的作业。`at -d` 或 `at -r` 对应于 atrm。
+* `-f file`:
+    从指定的文件加载要执行的命令，而不是从标准输入加载。
+* `-l`:
+    列出所有作业。`at -l` 对应于 atq 命令。
+* `-m`:
+    始终发送邮件，即使作业没有返回任何输出也是如此。
+* `-M`:
+    在作业完成后不发送电子邮件。
+* `-qx`:
+    将作业分配给队列 `x`，其中 `x` 可以是小写或大写字母。字母 `a` 和 `b` 用于普通的 `at` 作业和批量 作业。所选的队列字母越高，执行作业时的 `nice` 值就越高。因此，`-qz` 适用于紧急性极低的作业。
+* `-t YYYYMMDDhhmm`:
+    在指定时间运行作业。`-t` 选项是其他时间指定形式的替代方案。
+
+#### 示例
+Web 服务器的配置已更改，这些更改将在重启后才会生效。然而，为了防止网站的活跃用户丢失会话数据，Web 服务器不应立即重启，而是在第二天凌晨 1:00 重启。服务名 `apache2` 适用于 Debian 和 Ubuntu。在 Fedora 和 RHEL 上，你必须输入 `httpd`。
+
+```
+root# at 1:00
+service apache2 restart
+<Ctrl>+<D> 
+```
+
+### `atq` 列出所有使用 at 设置在未来某时间点执行的作业。如果由 `root` 运行 `atq`，它将显示所有用户的作业；否则，只显示其自身的作业。
+
+### `atrm n`
+`atrm` 根据指定的编号删除指定的作业。你可以使用 atq 来确定所有设置在未来执行的作业编号。
+
+### `attr [options] files`
+`attr` 确定或更改指定文件或目录的扩展访问属性。这仅在文件系统支持扩展属性（EA）时才有效。对于 ext3/ext4 文件系统，必须使用 `mount` 选项 `user_xattr`。
+
+与其使用 `attr`，你应该优先使用 getfattr 或 setfattr 命令。`attr` 只为了兼容 IRIX SGI 而仍然可用。
+
+### `awk [options] 'code' text files`
+`awk [options] -f code file text files`
+
+`awk` 不是一个简单的命令，而是一门独立的编程语言，有助于结构化文本的处理和分析。例如，你可以用它在文本文件中搜索关键词，并从后续文本部分中提取文本列。你可以直接输入程序代码，也可以使用 `-f` 选项从代码文件中读取。`awk` 然后逐行处理作为参数传递的所有文本文件，并将结果写入标准输出。
+
+供 `awk` 处理的程序代码遵循以下简化语法：
+```
+pattern {action}
+```
+
+
+
+
+`aws` 命令用于管理各种 Amazon 云服务。由于这些服务通常在 Linux 计算机上使用，许多管理员都会与 `aws` 打交道。
+
+本节涉及 Amazon 推荐的 `aws` 版本 2。你可以使用 `aws --version` 来确保你没有安装仍在广泛使用的版本 1！两个 `aws` 版本使用相同的命令名称，并且很大程度上是相互兼容的，但也存在一些差异：
+
+[CLI 迁移指南](https://docs.aws.amazon.com/cli/latest/userguide/cliv2-migration.html)
+
+## 安装与调试
+
+`aws` 默认不安装，且通常不会作为包提供于你的发行版中。相反，你必须运行以下命令进行安装。对于带有 ARM CPU 的计算机，你需要将 `x86_64` 替换为 `aarch64`。
+
+```
+user$ sudo apt/dnf/yum/zypper install curl
+user$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" \
+       -o "awscliv2.zip"
+user$ unzip awscliv2.zip
+user$ sudo ./aws/install 
+```
+
+该 ZIP 文件包含一个带有所有所需包的最小 Python 3 发行版。这意味着你的发行版中既没有 Python 包的依赖，也不会因为版本号不同产生冲突。`aws` 安装在 `/usr/local/bin` 目录下。如果该目录不在 `PATH` 中，你必须显式指定路径。
+
+```
+root# aws --version
+aws-cli/2.15.28 Python/3.11.8 Linux/6.1.0-18-arm64 exe/aarch64.debian.12 
+```
+
+与 Amazon 云服务的连接是加密的。在进一步配置 `aws` 命令使用之前，你必须先在 AWS 身份和访问管理 (IAM) 页面上设置用户和组。该组应关联 `AmazonS3Full Access` 策略以及新用户。你可以在此处找到 AWS 页面：
+
+[AWS IAM 控制台](https://console.aws.amazon.com/iam)
+
+现在在终端中运行 `aws configure`，并输入设置用户时收到的 Access Key ID 和 Secret Access Key。`aws` 将这些数据和其他选项保存在 `.aws/credentials` 和 `.aws/config` 中。
+
+```
+root# aws configure
+AWS Access Key ID [None]:     AKxxxxxxx
+AWS Secret Access Key [None]: ZRxxxxxxxxxxxxxxxx
+Default region name [None]:   eu-central-1
+Default output format [None]: 
+```
+
+## 语法与在线帮助
+
+你通常向 `aws` 命令传递一个主命令（用于选择所需的 AWS 服务），以及一个适用于特定服务的子命令。例如，`aws s3 ls` 列出你在 S3 服务中的桶（buckets）。出于空间考虑，我将限制在 EC2（弹性计算云）和 S3（简单存储服务）服务的少数命令。
+
+`aws` 没有 `man` 手页。相反，`aws help` 语法的概述。特定服务的命令概述由 `aws <service> help` 提供，例如 `aws ec2 help`。子命令的详情可以在 `aws <service> <subcommand> help` 中找到，例如 `aws s3 cp help`。
+
+## S3 管理
+
+- `aws s3 ls [path]`
+  在不带进一步参数的情况下列出所有 S3 桶，或者显示存储在该处的桶目录或文件的内容。路径以 `s3://<bucketname>/<directory>/<file>` 的格式输入（例如 `s3://my-bucket/my-dir/my-file`）。
+
+- `aws s3 cp path1 path2`
+  将本地文件复制到 S3 桶并从那里传回本地文件系统。你也可以将 S3 文件复制到另一个 S3 位置。你可以使用 `--recursive` 选项递归复制目录。为了测试，你需要传递 `--dryrun`：该命令将显示它将执行的操作，但不会更改任何内容。
+
+  如果你使用 S3 进行数据备份，建议只向 S3 上传你事先加密过的文件。过去曾反复发生配置错误，导致所谓的私有桶最终实际上是公开访问的。此外，情报机构获取访问的可能性无法排除。
+
+- `aws s3 mv path1 path2`
+  与上一条目类似，但用于移动已经在 S3 内存中的文件或重命名文件。
+
+- `aws s3 sync path1 path2`
+  同步两个目录：一个是本地的，另一个在 S3 存储中。这比 `aws s3 cp` 更快，因为未更改的文件不会再次传输。源路径中删除的文件将保留在目标路径中。如果你不想这样做，必须传递 `--delete` 选项。
+
+- `aws s3 mb newbucket`
+  创建一个新桶，并以常规方式指定名称（即 `s3://<bucketname>`）。该名称在范围内必须是唯一的。
+
+  通过 `--region` 选项，你可以指定设置桶时的数据中心，这与 `aws configure` 中预设的区域不同。
+
+  新桶默认不是公开访问的。访问权限和访问规则（ACLs，即访问控制列表）必须通过 AWS 网页控制台设置。
+
+- `aws s3 rb bucket`
+  删除指定的桶。只有当桶为空时，操作才会成功。否则，你可以使用 `--force` 选项强制删除。
+
+## EC2 管理
+
+
+
+
+虽然用于 S3 管理的 `aws` 命令易于使用，但遗憾的是这并不适用于 EC2：光是子命令的数量就令人望而畏——有 400 多个。许多命令还提供或期望 JSON 数据结构，因此它们仅旨在用于脚本编程，而不供人类使用。你可以尝试从 `aws ec2 describe instances` 开始作为起点。该命令以 JSON 文档的形式列出了你已设置的所有实例：
+
+```
+root# aws ec2 describe-instances
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-02fc41eea1852",
+                    ... 
+```
+
+#### 示例
+
+以下两个命令设置了一个新存储桶并将 `/etc` 目录下的所有文件复制到其中：
+
+```
+root# aws s3 mb s3://info.kofler.etcbak
+root# aws s3 sync /etc s3://info.kofler.etcbak 
+```
+
+## B
+
+### badblocks 设备
+
+`badblocks` 对数据介质进行低级检查。只有在你怀疑硬盘或 SSD 可能存在缺陷时，它才有用。如果你打算在硬盘（分区）上建立 ext 文件系统，最好在格式化时使用 `-c` 参数进行检查。
+
+通常，`badblocks` 不破坏任何数据，仅执行只读测试。你可以通过添加 `-n` 或 `-w` 选项来执行更彻底的测试：
+
+- `-n`
+  执行读写测试，但会恢复数据块的原始内容。如果数据介质或分区当前正在使用（即通过 `mount` 挂载到目录树中），则无法使用该选项。
+
+- `-w`
+  执行位模式的写入测试。注意：数据介质或分区的内容将被删除！
+
+### basename 字符串 [结尾]
+
+`basename` 返回传输路径的文件名。因此，`basename /etc/X11/Xmodmap` 会得到结果 `Xmodmap`。如果指定文件扩展名作为额外参数，该文件扩展名（如果存在）将从文件名中移除。
+
+#### 示例
+
+`basename` 删除了路径和标识符 `.jpg`。剩下的是 `white`。
+
+```
+user$ basename /home/kofler/Bilder/Wallpapers/white.jpg .jpg
+ white 
+```
+
+### bat 文件
+
+来自同名包的 `bat` 命令是 `cat` 命令的变体。与 `cat` 不同，`bat` 尝试识别文本内容并在显示时进行彩色语法高亮。在某些发行版中（例如 Debian），必须以 `batcat` 的名称调用 `bat` 以避免命名冲突。
+
+`bat` 默认依赖终端使用深色背景。如果你使用浅色背景，必须向 `bat` 传递相应的选项（例如 `--theme gruvbox-light`），或者在配置文件 `.config/bat/config` 中永久设置颜色主题。
+
+### batch
+
+`batch` 标记一个作业顺序供以后执行。与 `at` 一样，随后以交互方式输入要执行的命令。必须使用 Ctrl+D 完成输入。与 `at` 不同，它没有指定作业运行的时间。相反，后台守护进程 `atd` 会等待系统负载较低时。阈值定义为 `load` 平均值为 1.5。如果作业提供了输出，将通过电子邮件发送给用户，这需要计算机上可用 `/usr/sbin/sendmail`。
+
+`batch` 不处理选项或参数。如果你想从文件读取作业顺序，必须运行 `batch -f file`。
+
+#### 示例
+
+一旦系统负载较低，备份脚本的执行就会开始：
+
+```
+user$ batch
+./backup-script
+```
+
+### bc [file]]
+
+`bc` 代表 basic calculator（基础计算器），是一种面向命令的口袋计算器。它可以以交互式方式执行简单计算。如果 `bash` 的有限计算功能不足，`bc` 在脚本中也有用。`bc` 期望从标准输入或文件读取计算语句。
+
+#### 示例
+
+以下示例显示了 `bc` 的交互式用法及其在命令中的用法。`scale=3` 语句控制输出的小位数。
+
+```
+user bc
+> 2+3
+5
+> Ctrl+D
+user$ echo "5 + 7" | bc
+26
+user$ echo "scale=3; sqrt(2)" | bc
+1.414 
+```
+
+#### 备选方案
+
+`bc` 只知道少数高级数学函数。对于更复杂的计算，使用 `qalc` 更好。然而，`qalc` 的缺点是必须单独安装。
+
+### bg [process]
+
+`bg` shell 命令在后台继续执行被中断的进程。如果没有指定进程号，`bg` 适用于上一个使用 Ctrl+Z 中断的进程。否则，必须通过名称或 `bash` 内部作业号指定进程（而不是通过 PID！）。
+
+### blkid [options] [device]
+
+`blkid` 提供由设备名称指定的块设备信息，例如硬盘分区、逻辑卷或 RAID 设备。`blkid` 指定文件系统类型、UUID 和文件系统的名称（标签）。当调用 `blkid` 时缺少设备指定，`blkid` 将为所有活动分区和逻辑卷提供此类信息。通过指定选项，你可以搜索特定的文件系统：
+
+- `-k`
+  列出内核支持的所有文件系统类型。
+
+
+
+
+
+*   `-L` `label`
+    查找具有指定名称的文件系统。
+
+*   `-n` `fstyp1,fstyp2,fstyp3`
+    查找对应指定类型的文件系统。
+
+*   `-t` `name=value`
+    查找匹配搜索标准的文件系统。允许的标准标准包括 `TYPE`（文件系统类型）、`LABEL`（文件系统名称）、`PARTLABEL`（分区名称）、`UUID`（文件系统的 UUID）和 `PARTUUID`（分区的 UUID）。`blkid -t TYPE=ext4` 对应 `blkid -n ext4` 并返回所有 ext4 文件系统的列表。
+
+*   `-U` `uuid`
+    查找具有指定 UUID 的文件系统。
+
+#### 示例
+
+`/dev/sda1` 分区包含一个 UUID 为 2716...19e4 的 ext4 文件系统：
+
+```
+root# blkid /dev/sda1
+/dev/sda1: UUID="27162884-8fe9-4fa9-8b5e-712ab82d19e4" TYPE="ext4" 
+```
+
+查找标签为 `lvm2` 的分区返回 `/dev/sdb2`：
+
+```
+root# blkid -t PARTLABEL=lvm2
+/dev/sdb2: PARTLABEL="lvm2" PARTUUID="371cc374-847f-407a-bb5b-7ff015722383" 
+```
+
+## bluetoothctl
+
+在桌面系统上，蓝牙配置通常通过图形用户界面完成。如果没有图形用户界面（例如，在未连接显示器的树莓派上）或不起作用，也可以通过 `bluetoothctl` 在文本模式下进行配置。为此，你需要启动 `bluetoothctl` 交互式会话，然后运行命令来查找并配对蓝牙设备。
+
+你可以在 `bluetoothctl` 会话中运行列表描述的命令。重要的是不断按想要重新配置的蓝牙设备上的蓝牙按钮（配对按钮），以便设备向环境发出准备好连接的信号。在许多设备上，蓝色 LED 将会闪烁。如果没有此类按钮，你也可以尝试关闭设备并重新打开。
+
+*   `agent on/off`
+    （反）激活蓝牙代理。该软件组件负责授权新设备，并允许（例如）通过键盘输入配对码。
+
+*   `connect` `xx:xx:xx`
+    建立连接。（仅在之前执行了 `pair` 和 `trust` 后才有效！）如果一切顺利，响应将连接成功。现在可以使用该设备了。
+
+*   `exit` 或 `quit`
+    结束 `bluetoothctl` 会话。
+
+*   `info` `xx:xx:xx`
+    显示连接状态和关于设备的各种其他信息。
+
+*   `pair` `xx:xx:xx`
+    启动与设备的连接。如果你使用键盘，将提示你输入多位代码。别忘记按回车键完成输入！你可以通过配对成功的消息识别配对是否成功。没有输入选项设备（鼠标、耳机、扬声器等）可以在不输入代码的情况下配对。
+
+*   `pairable on/off`
+    激活/停用配对模式。
+
+*   `scan on/off`
+    （反）激活扫描模式。在扫描模式下，程序列出所有设备。此过程可能需要一些时间，各个设备会反复显示。当你找到所需的设备后，应通过 `scan off` 再次关闭模式。
+
+*   `trust` `xx:xx:xx`
+    信任指定的设备。
+
+`bluetoothctl` 将特定设备的蓝牙配置保存在 `/var/lib/bluetooth/id1/id2`。在那里，`id1` 是控制器的 ID，`id2` 是设备的 ID。`bluetoothctl` 实际上用于交互式使用。要运行单个命令，可以按照如下操作：
+
+```
+root# echo -e "connect ...\nquit" | bluetoothctl
+```
+
+#### 示例
+
+以下行略略缩的形式显示了配置键盘的输入和输出：
+
+```
+user$ bluetoothctl
+[bluetooth]# agent on
+[bluetooth]# pairable on
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller 00:1A:7D:71:13 Discovering: yes
+[NEW] Device 70:10:00:1A:92:20 70-10-00-1A-92-20 Name: Bluetooth 3.0
+...
+[bluetooth]# scan off
+[bluetooth]# pair 70:10:00:1A:92:20
+Attempting to pair with 70:10:00:1A:92:20
+[CHG] Device 70:10:00:1A:92:20 Connected: yes
+[agent] PIN code: 963064
+[CHG] Device 70:10:00:1A:92:20 Paired: yes
+Pairing successful
+[bluetooth]# trust 70:10:00:1A:92:20
+[bluetooth]# connect 70:10:00:1A:92:20
+[bluetooth]# info 70:10:00:1A:92:20
+Device 70:10:00:1A:92:20
+        Name: Bluetooth 3.0 Keyboard
+        Paired: yes
+        Trusted: yes
+        Connected: yes
+...
+[bluetooth]# exit
+```
+
+## boltctl 命令
+
+`boltctl` 控制通过 Thunderbolt 接口连接的设备。Thunderbolt 目前主要用于带有 Intel CPU 的笔记本电脑。由于 Thunderbolt 是新 USB4 标准的一部分，未来可能会变得更加普及。
+
+*   `authorize` `device`
+    允许使用一次 Thunderbolt 设备。你可以通过 `boltctl list` 确定所有已连接设备的列表。要给予永久权限，必须使用 `boltctl enroll`。
+
+*   `config` `key` `config` `key newvalue`
+    加载或更改配置选项（需要 `root` 权限）。`boltctl config --describe` 提供所有选项的列表。
+
+
+
+
+
+*   `enroll [--policy auto|manual|default] device`
+    允许设备通过 Thunderbolt（雷电）接口进行永久通信。只有当设备通过 Thunderbolt 使用 PCI 总线时（例如扩展坞），且仅在 BIOS/EFI 中设置了严格的 Thunderbolt 安全准则时，才需要显式许可。
+    `auto` 表示该设备以后可以使用，无需再次查询。`manual` 要求每次重新连接时都使用 `boltctl authorize` 进行确认。`default` 接受 Thunderbolt 守护进程的规范（通常为 `auto`）。
+
+*   `forget device`
+    从注册数据库中移除设备 ID，从而撤销 `boltctl enroll` 操作。
+
+*   `info device`
+    显示指定设备的详细信息。
+
+*   `list -a`
+    列出所有连接的设备。
+
+*   `monitor`
+    跟踪并记录哪些设备被连接或移除，直到使用 Ctrl+C 结束命令为止。
+
+*   `power`
+    激活处于睡眠模式的 Thunderbolt 控制器。
+
+### break [n]
+
+`bash` 命令 `break` 用于提前提前终止 shell 脚本中的 `for`、`while` 或 `until` 循环。shell 程序随后将执行循环结束后的下一个命令。通过指定可选的数值 `n`，可以取消 `n` 级循环。
+
+### btrfs command
+
+`btrfs` 是用于 Btrfs 文件系统的中央管理命令。在没有歧义的情况下，你可以缩写本节描述的命令，以节省大量的输入时间。`btrfs fi sh` 对应 `btrfs filesystem show`。
+
+Btrfs 文件系统的管理极其复杂。因此，这里只总结了最重要的命令。这里没有足够的空间来详细描述 `btrfs` 的基础知识。
+
+*   `balance start|pause|resume|cancel|status mount directory`
+    将数据均匀地分布在文件系统的所有设备上。此过程需要很长的时间，并在后台运行。可以通过 `btrfs balance pause` 中断，通过 `btrfs balance resume` 恢复，或使用 `btrfs balance cancel` 完全停止。`btrfs balance status` 提供有关平衡过程进度的信息。
+
+*   `device add devicename mount directory`
+    向激活的 Btrfs 文件系统添加另一个设备，从而扩大其数据池。
+
+*   `device delete devicename mount directory`
+    从 Btrfs 文件系统的数据池中移除设备。设备包含的数据将传输到文件系统中的其他设备，对于大型文件系统，这无疑需要很长时间。
+    如果你想移除一个故障（不再可用）的设备，应输入 `missing` 作为设备名。对于 RAID-1 系统，你必须先添加替换设备并运行 `btrfs filesystem balance`！
+
+*   `filesystem df directory`
+    显示关于为数据、元数据和系统数据预留了多少空间以及这些空间已使用的多少详细信息。然而，该命令没有提供关于可用未预留内存空间的信息，这使得正确解释数据变得困难。
+
+*   `filesystem resize [+/-]size mount directory`
+    在运行期间扩大或缩小文件系统。可以使用绝对或相对值指定新大小。允许使用 KiB、MiB 和 GiB 的缩写 `k`、`m` 和 `g`。`Max` 也允许作为大小规格——此时文件系统将使用底层设备的全部大小。请记住，在扩大文件系统**之前**你可能需要调整底层设备的大小，但在缩小系统后则不需要！
+    与 `resize` 相比，向 Btrfs 文件系统添加额外设备（`btrfs add device`）更为简单。
+
+*   `filesystem show [directory/device]`
+    显示 Btrfs 设备的基本信息。此外，该命令还提供了有关设备大小以及设备上尚未预留给数据、元数据或系统数据的可用空间的信息。
+
+*   `filesystem sync directory`
+    同步文件系统或其某个目录的内容。
+
+*   `scrub start|cancel|resume|status directory/device`
+    控制 scrub（数据清理）过程。`scrub start` 加载文件中的所有文件并使用校验和检查其完整性。此过程在后台运行。可以使用 `scrub status` 检查进度。`scrub cancel` 中断 scrub 过程，而 `scrub resume` 恢复它。
+
+
+
+
+
+* `subvolume create directory /name`
+
+  创建子卷 `name`。必须指定 `mount` 目录或 Btrfs 文件系统内的某个目录作为目录。如果未指定目录，`btrfs` 将使用当前目录。
+
+* `subvolume delete directory /name`
+
+  删除指定的子卷或指定的快照。然而，占用的内存将由后台进程逐渐释放。
+
+* `subvolume list mount directory`
+
+  列出所有子卷和快照。指定文件系统的 `mount` 目录作为目录。输出可能会受到几个选项的影响。事实证明组合组合 `-a -p -t` 是推荐的。它能够精确地指定子卷在目录层级中的位置，同时为每个子卷或快照指定其父子卷，并将结果格式化为表格。
+
+* `subvolume set-default id mount directory`
+
+  确定未来 `mount` 默认将使用哪个子卷或快照。你可以通过 `btrfs subvolume list` 确定卷 ID。
+
+* `subvolume snapshot [-r] source directory target directory /name`
+
+  创建快照 `name`。必须指定文件系统的 `mount` 目录或现有子卷/快照的目录作为源目录。目标目录必须位于 Btrfs 文件系统之内。
+
+  通常，快照是可变的（即文件系统被分为两个分支，两者都是独立可变的）。如果你需要用于备份的只读快照，必须使用 `-r` 选项。
+
+#### 示例
+
+`btrfs subvolume list` 显示了 (open)SUSE 系统中默认设置的子卷以及所有快照：
+
+```
+root# btrfs subvolume list / -p -a –t
+ID    gen     parent  top level  path
+-–    ---     ------  ---------  ----
+257   106     5       5          <FS_TREE>/@
+260   106     257     257        <FS_TREE>/@/boot/grub2/i386-pc
+261   106     257     257        <FS_TREE>/@/boot/grub2/x86_64-efi
+262   1305    257     257        <FS_TREE>/@/home
+...
+268   106     257     257        <FS_TREE>/@/var/lib/libvirt/images
+269   106     257     257        <FS_TREE>/@/var/lib/mailman
+270   106     257     257        <FS_TREE>/@/var/lib/mariadb
+271   106     257     257        <FS_TREE>/@/var/lib/mysql
+...
+258   1158    257     257        <FS_TREE>/@/.snapshots
+259   1310    258     258        <FS_TREE>/@/.snapshots/1/snapshot
+283   106     258     258        <FS_TREE>/@/.snapshots/2/snapshot
+304   669     258     258        <FS_TREE>/@/.snapshots/20/snapshot
+... 
+```
+
+为了在操作期间为 MariaDB 数据库文件创建备份，为子卷 `/var/lib/mariadb` 临时创建一个只读快照：
+
+```
+root# btrfs subvolume snapshot -r /var/lib/mariadb/ /var/lib/mariadb-backup
+Create a readonly snapshot of '/var/lib/mariadb/' in '/var/lib/mariadb-backup'
+root# cd /var/lib/mariadb-backup
+root# tar czf /home/kofler/mariadb.tgz .  
+(create backup)
+root# cd                                  
+(leave directory)
+root# btrfs subvolume delete /var/lib/mariadb-backup
+Delete subvolume (no-commit): '/var/lib/mariadb-backup' 
+```
+
+#### 文档
+
+`btrfs` 的 `man` 页分布在多个页面上，每个页面包含一个连字符和一个主命令。因此，可以通过 `man btrfs-scan` 读取 `btrfs scan` 的详细信息。
+
+### bunzip2 file.bz2
+
+`bunzip2` 解压缩已压缩的文件。文件名中的 `.bz2` 标识符会被自动移除。`bunzip` 是 `bzip2` 的链接，其中 `-d` 选项会被自动激活。
+
+### bzip2 file
+
+`bzip2` 压缩指定的文件并为其添加 `.bz2` 扩展名。该命令产生的文件通常使用 gzip 压缩的文件小 20% 到 30%。然而，bzip2 压缩所需的计算时间要长得多。
+
+* `-1` 到 `-9`
+
+  指定压缩算法允许使用的内存（RAM）。默认设置为 `-9` 并能提供最佳结果。
+
+  如果可用内存 较少，你应该选择较小的值；但压缩效果也会略差。
+
+* `-c` 或 `--stdout` 或 `--to-stdout`
+
+  保持文件在（解）压缩时不发生变化，并将结果重定向到标准输出。从那里，可以使用 `>` 将其重定向到任何文件。
+
+* `-d` 或 `--decompress` 或 `--uncompress`
+
+  解压缩指定的文件而不是压缩它（对应 bunzip2）。
+
+#### 示例
+
+第一个命令压缩 `file.eps`。新文件名现在为 `file.eps.bz2`。第二个命令恢复原始文件。
+
+```
+user$ bzip2 file.eps
+user$ bunzip2 file.eps.bz2
+```
+
+## C
+
+### cadaver [options] [files]
+
+来自同名软件包、具有奇怪名称的 `cadaver` 命令是一个 WebDAV 客户端。你可以使用它类似于 ftp 的方式下载或上传文件。
+
+
+
+
+
+`cadaver` 中的大多数命令都对应 FTP 命令，例如 `get`、`mget`、`put`、`mput` 等（参见 ftp）。根本区别在于使用了基于 HTTP(S) 的 WebDAV 协议。
+
+#### 示例
+
+在下面的命令中，首先与 IP 地址为 172.28.128.5、端口为 8585 的 HTTP 服务器建立 WebDAV 连接。然后将 `test.php` 文件上传到 `uploads` 目录。
+
+```
+user$ cadaver http://172.28.128.5:8585/uploads
+dav:/uploads/> put test.php
+  Uploading test.php to /uploads/test.php:
+  Progress: ... 100,0% of 20 bytes succeeded.
+dav:/uploads/> <Strg>+<D>
+  Connection to 172.28.128.5 closed. 
+```
+
+### canonical-livepatch [command]
+
+如果安装了同名的 snap 包，`canonical-livepatch` 将控制 Ubuntu 专有的内核实时补丁功能。
+
+* `config`
+  设置实时补丁功能或更改其配置。此命令需要一个 Ubuntu One  way。
+
+* `enable/disable`
+  激活或禁用实时补丁系统。
+
+* `refresh`
+  检查是否有可用更新，必要时进行下载并将其应用于运行中的内核。这会每隔固定时间自动完成。
+
+* `status`
+  显示实时补丁系统的状态。
+
+#### 示例
+
+所有可用的内核补丁已应用于此服务器：
+
+```
+root# canonical-livepatch status
+last check:      52 minutes ago
+kernel:          5.4.0-173.191-generic
+server check-in: succeeded
+kernel state:    kernel series 5.4 is covered by Livepatch
+patch state:     no livepatches available for kernel 5.4.0-173.191-generic 
+```
+
+### case expression in
+
+```bash
+pattern1 ) commands;;
+
+pattern2 ) commands;;
+
+...
+
+esac
+```
+
+`bash` 壳的 `case` 结构在脚本中形成多个分支，其中字符字符串被指定为分支的准则——通常是传递给壳程序的变量或参数。该字符字符串与模式按顺序比较，其中这些模式中可以使用文件名的通配符（`*?[]`）。在 `case` 分支中，还可以指定由管道运算符（`|`）分隔的多个模式。一旦模式匹配，就会执行闭右括号（`)`）和两个分号（`;`）之间的后续命令。程序随后根据 `esac` 继续执行。
+
+#### 示例
+
+在接下来的列表中，`case` 用于将传输的参数分类为文件名和选项。在循环内部，使用 `case` 分析每一个参数。如果参数以连字符开头，则将参数添加到 `opt` 变量的末尾；否则，将其添加到 `dat` 的末尾。
+
+```bash
+#!/bin/bash
+for i do    # 遍历所有传输参数
+  case "$i" in
+    -* ) opt="$opt $i";;
+    *  ) dat="$dat $i";;
+  esac
+done        # 循环结束
+echo "Options: $opt"
+echo "Files:  $dat" 
+```
+
+### cat [options] [files]
+
+`cat` 显示指定文本文件的内容。`cat` 也经常用于将多个文件合并为一个较大的文件。为此，必须使用 `>` 将标准输出重定向到文件（参见示例）。如果要让 `cat` 从标准输入读取，则不应输入文件名或输入字符 `-`。
+
+对于较长的文本，你应该使用 less 命令代替 `cat`，因为这允许你逐行或逐页滚动文本。
+
+* `-s`
+  将多个连续空行压缩为一个空行。
+
+* `-T`
+  将制表字符显示为 `^I`。
+
+* `-v`
+  以 `^xxx` 表示法显示非打印字符。
+
+#### 示例
+
+下面的命令将各个 `part1.tex` 文件、`part2.tex` 文件等合并为一个名为 `total.tex` 的总文件。各个文件按字母顺序处理。
+
+```
+user$ cat part*.tex > total.tex 
+```
+
+在第二个示例中，标准输入被重定向到一个新文件。
+
+一旦你按下回车键确认命令，所有后续输入都将写入新文件。Ctrl+D 终止输入，因此 `cat` 可用于在没有编辑器的情况下创建新的文本文件。
+
+```bash
+root# cat > newfile
+line 1
+line 2
+<Ctrl>+<D> 
+```
+
+#### 变体
+
+`cat` 有无数种变体：
+
+* bat 和 `ccat` 命令以带语法高亮的颜色显示常用编程语言的代码文件。
+
+* more 和 less 命令允许你逐行或逐页滚动文本。
+
+* tac 命令反向顺序输出文本，即最后一行优先。
+
+* zcat 和 zless 命令可以直接显示压缩的文本文件。
+
+### cd [directory]
+
+
+
+
+
+`cfdisk` 帮助对硬盘和 SSD 进行格式化。它支持 MBR 和 GPT 格式的分区表。与更熟悉的 `fdisk` 和 `parted` 命令相比，它的操作稍微方便，因为当前的分区表以菜单的形式显示。你可以使用方向键选择要编辑的分区。`cfdisk` 仅用于交互式使用，不适用于脚本编程。
+
+### chacl [options] 文件
+
+`chacl` 确定或更改指定文件或目录的扩展访问权限。这仅在文件系统支持 ACL（访问控制列表）时才有效。对于 ext3/ext4 文件系统，你必须使用挂载选项 `acl`。
+
+如果可能，你应该使用 `getfacl` 或 `setfacl` 而不是 `chacl`。提供 `chacl` 仅是为了兼容 IRIX SGI 的考虑。
+
+### chage [options] 登录名
+
+你可以使用 `chage` 设置用户账户的使用时长、密码过期并必须更改的时间，以及密码可以或必须更改的频率。
+
+*   `-d date`
+    指定上次更改密码的日期。日期格式为 YYYY-MM-DD（例如 `2020-12-31`）。`-d 0` 意味着用户必须在首次登录后立即更改密码。在更改密码之前，用户无法运行命令。
+*   `-E date`
+    确定账户过期的日期。在此日期之后，将无法登录。`-E -1` 意味着未设置过期日期。过期的账户可以使用 `passwd -u` 重新激活。
+*   `-I n`
+    指定密码过期后多少天账户将被停用。`-I -1` 防止停用。
+*   `-l`
+    显示当前设置。
+*   `-m n`
+    指定在更改密码后再次更改密码之前必须经过的最少天数。默认设置 `0` 意味着用户可以随时更改密码。
+*   `-M n`
+    指定密码后必须更改的最大天数。`-1` 意味着密码永久有效。`183` 意味着密码每年必须更改两次。
+*   `-W n`
+    指定在密码过期前多少天显示警告（默认设置为 `7`）。
+
+#### 示例
+
+你可以使用以下命令来设置新用户，定义其初始密码，并强制他们在首次登录时以及未来至少每年更改一次密码。过期警告将提前一个月出现。
+
+```
+root# useradd peter
+root# passwd peter
+New password: ********
+Retype new password: ********
+root# chage -d 0 -M 365 -W 31 peter 
+```
+
+账户的过期日期（选项 `-E`）必须以 ISO 格式指定。不支持相对时间。不过，你可以使用 `date` 计算日期。以下命令会导致账户在 100 天后停用：
+
+```
+root# chage -E $(date -d +180days +%Y-%m-%d) peter 
+```
+
+### chattr [options] +-=[aAcCdDeijsStTu] 文件
+
+在 Linux 文件系统（ext2 到 ext4、Btrfs、XFS 等）中，除了用户信息外，每个文件还可以保存一些额外的属性（参见 `chmod` 和 `chown`）。例如，这些带有字母代码 `aAcCdDeijsStTu` 的属性控制文件是否需要压缩，或者是否使用写时复制（copy-on-write）程序进行更改。`man chattr` 提供了这些属性的简短描述。然而，目前只有少数属性被实际使用。你可以使用 `lsattr` 来加载属性。
+
+*   `-R`
+    递归更改目录中所有文件的属性。
+
+#### 示例
+
+`chattr` 的一个重要用法是在 Btrfs 文件系统，其中你可以使用 `chattr +C` 禁用自动激活的写时复制（COW）程序，并使用 `chattr -C` 重新启用。禁用 COW 是为了高效存储来自虚拟化程序的镜像文件或大型数据库文件。
+
+你可以将单个文件或整个目录传递给命令。使用 `-R`，命令会在目录树中递归更改属性：
+
+```
+root# chattr +C -R /var/lib/mysql
+```
+
+然而，属性仅适用于新文件。要禁用大小不为 0 字节现有文件的 COW，必须复制文件：
+
+```
+root# mv dir backup
+root# mkdir dir
+root# chattr +C dir
+root# cp -a backup/* dir
+root# rm -rf backup 
+```
+
+### chcon [options] 上文文件
+
+chcon [options] --reference=reference 文件 文件
+
+chcon [options] [-u user] [-r role] [-t type] [-l level] 文件
+
+`chcon` 更改指定文件的 SELinux 上文。新的上下文可以通过三种方式指定：使用 `user:role:type:level` 符号、通过指定引用文件，或使用选项 `-u`、`-r`、`-l` 和 `-t`。第三种变体的优势是只需要更改整个上下文的一部分。如果你将文件或目录保存到 SELinux 规则指定的其他位置，通常需要手动设置 SELinux 上文——例如，位于 `/disk2/var/www/html` 中的 Apache 文件，而不是 `/var/www/html`。
+
+
+
+
+
+如果你只感兴趣修正已经位于目标目录的文件的 SELinux 上下文，那么 `restorecon` 会简单得多。要确定现有文件的 SELinux 上下文，你应该使用带有 `-Z` 选项的 `ls` 命令。
+
+*   `-l` `level`: 修改 SELinux 上下文的级别。通常应用于 RHEL 和 Fedora 的规则（目标安全策略）中不使用级别。上下文级别通常为 `s0`（另见文件 `/etc/selinux/targeted/setrans.conf`）。
+*   `-r` `role`: 修改 SELinux 上下文的角色。SELinux 角色决定了文件被分配给哪个“域”。SELinux 域反过来决定了进程拥有哪些权限。
+*   `--reference=reference file`: 读取参考文件的 SELinux 上下文并将其传输到其他指定文件中。
+*   `-R`: 同时也考虑所有子目录（递归）。
+*   `-t` `type`: 修改 SELinux 上下文的类型。SELinux 类型决定文件的权限，就像 SELinux 域控制进程权限一样。
+*   `-u` `user`: 修改 SELinux 上下文的用户信息。SELinux 用户是 SELinux 规则已知的身份。普通 Linux 用户通过 SELinux 规则连接（映射）到 SELinux 身份。
+*   `-v`: 显示所做的更改（详细模式）。
+
+#### 示例
+
+默认情况下，RHEL  Apache 在 `/var/www/html` 目录具有只读权限。要允许 Web 服务器更改特定目录下的文件，必须运行以下命令：
+
+```
+root# chcon -R system_u:object_r:httpd_sys_content_rw_t:s0 \
+         /var/www/html/wordpress 
+```
+
+如果你想让 Apache 访问位于另一个数据介质目录下的 Web 文件（这次是只读），你应该按照以下步骤操作：
+
+```
+root# chcon -R system_u:object_r:httpd_sys_content_t:s0 /disk2/var/www/html/ 
+```
+
+### chgrp [options] group files
+
+`chgrp` 更改文件的组所有权。文件的所有者只能将此文件分配给自己的组，而 `root` 可以进行任何分配。
+
+*   `-R` 或 `--recursive`: 同时也更改所有子目录下文件的组分配。
+
+#### 示例
+
+以下命令将 `/var/www` 目录下的所有文件分配给 `www-data` 组。在 Debian 和 Ubuntu 上，Apache Web 服务器在此账户下运行。
+
+```
+root# chgrp -R www-data /var/www/ 
+```
+
+### chkrootkit [options]
+
+来自同名包的 `chkrootkit` 命令在系统中搜索已知的 rootkit。该过程非常简单：该命令尝试使用简单的准则或签名（例如二进制文件中是否存在某些字符字符串）来检测恶意软件。
+
+*   `-n`: 忽略 NFS 目录。
+*   `-r` `directory`: 使用指定的目录作为起始点（作为根目录）。
+
+尽管该项目仍然活跃，但进一步的开发仅以小步进行。误报和未能检测到真实威胁都是可能的。
+
+#### 示例
+
+```
+root# chkrootkit
+ROOTDIR is /
+Checking amd...                               not found
+Checking basename...                          not infected
+Checking biff...                              not found
+Checking chfn...                              not infected
+Searching for sniffer's logs ...              nothing found
+Searching for rootkit HiDrootkit's files...   nothing found
+Searching for rootkit t0rn's default files... nothing found
+Checking asp...                               not infected
+Checking bindshell...                         not infected
+Checking lkm...                               chkproc: nothing detected
+... 
+```
+
+#### 变体
+
+由于 `chkrootkit` 使用简单，它可以可以作为 rootkit 搜索的起点。替代或补充工具例如 `rkhunter` 以及商业工具 `Lynis` 和 `Snort`。后两个程序都包含一个可以免费使用的开源内核。
+
+### chmod [options] changes files
+
+`chmod` 更改文件的访问位。与每个文件一起的还存储了所有者（用户）、组（组）和其他用户（其他）是否允许读取、写入和执行该文件。
+
+可以使用字符组 `+/-` 访问类型更改访问位，例如 `g+w`，以赋予所有组成员写入权限。你通过 `u`（用户）、`g`（组）、`o`（其他）或 `a`（所有）来指定组；通过 `r`（读取）、`w`（写入）或 `x`（执行）来指定访问类型。
+
+#### setuid, setgid, and sticky Bits
+
+`setuid` 位（通常称为 `suid` 位）导致程序执行时就像所有者本人启动了程序一样。如果程序的所有者是 `root`，那么任何人都可以像 `root` 一样运行该程序。
+
+`setgid` 位对程序的功能与 `setuid` 相同，但针对的是组所有权。对于目录，`setgid` 位导致在该目录中新创建的文件属于目录的组，而不是像通常那样属于创建文件的用户的组。
+
+对于所有人允许更改文件的目录，`sticky` 位确保每个人只允许删除自己的文件，而不允许删除其他用户的文件。例如，`/tmp` 目录设置了该位。每个用户都允许在此目录中创建临时文件。
+
+
+
+
+要使用 `chmod` 设置特殊的 `setuid`、`setgid` 和 `sticky` 位，提供了以下字符组合：
+
+```
+setuid: u+s setgid: g+s sticky: +t 
+```
+
+要使 `setuid` 生效，必须设置所有者的执行位（`u+x`）。
+
+要使 `setgid` 生效，必须设置所属组的执行位（`g+x`）。
+
+## 八进制表示法
+
+除了使用字母外，还可以使用最多四位数的八进制数来指定访问类型。对于访问位，`u`、`g` 和 `o` 分别分配一个数字。每个数字由对应 `r`、`w` 和 `x` 的值 `4`、`2` 和 `1` 组成。因此，`660`意味着 `rw-rw----`，而 `777` 代表 `rwxrwxrwx`。
+
+三个特殊位 `setuid`、`setgid` 和 `sticky` 的八进制值为 4000、2000 和 1000。虽然在八进制表示中设置这些位非常简单，但一种安全机制防止这些位在目录上被意外禁用。在执行 `chmod 2770 dir` 和 `chmod 770 dir` 后，`setgid 位` 仍然保持设置！要移除它，你必须运行 `chmod g-s dir` 或 `chmod 00770 dir`（带有两个前零）。
+
+要用八进制表示法确定现有文件或目录的访问位，必须使用 `stat` 命令。
+
+#### 选项
+
+* `-f` 或 `--silent` 或 `--quiet`
+    不显示任何错误信息。
+
+* `-R` 或 `--recursive`
+    同时更改所有子目录下文件的访问权限。
+
+#### 示例
+
+`secure` 文件现在可以由所有用户执行。例如，`secure` 可以作为一个用于备份的壳脚本。
+
+```
+user$ chmod a+rx secure 
+```
+
+以下命令取消了你自己组之外的所有用户对当前目录下所有 `*.odt` 文件的读写权限：
+
+```
+user$ chmod o-rw *.odt 
+```
+
+仅允许 `root` 读取 `server.key` 文件，任何人都无法修改它：
+
+```
+root# chown root:root server.key
+root# chmod 400 server.key 
+```
+
+## chown [options] user[:group] files
+
+`chown` 更改文件的所有者和（可选的）其所属组。文件的所有者只能由 `root` 更改，而组也可以由其他用户设置（参见 `chgrp`）。
+
+* `-R` 或 `--recursive`
+    同时更改所有子目录下文件的组分配。
+
+#### 示例
+
+以下命令确保 `/var/lib/mysql` 内的所有文件都分配给用户和 `mysql` 组，使得只有 MySQL 服务器进程可以读取和修改这些文件：
+
+```
+root# chown -R mysql:mysql /var/lib/mysql
+root# chmod -R o-rwx /var/lib/mysql 
+```
+
+### chpasswd [options]
+
+`chpasswd` 允许在脚本更改密码，这与 `passwd` 不同，不需要用户交互。该命令从标准输入读取用户名和密码，信息必须以 `name:password` 的形式逐行输入。该命令通常以 `chpasswd < pwfile` 的形式调用，以处理文件中的组合。
+
+你可以使用选项来控制密码的加密方式（参见 `man chpasswd`）。然而，通常不建议使用这些选项。`chpasswd` 将使用发行版在 `/etc/logins.def` 文件指定的默认设置。
+
+#### 示例
+
+以下脚本使用 `useradd` 设置了 30 个账户：`user01` 到 `user30`。对于每个账户，设置了通过 `mkpasswd` 生成的密码。为此，使用 `echo` 输出名称和密码，并通过管道操作符将输出直接传递给 `chpasswd`。所有账户名和相应的密码也保存在文本文件 `students.txt` 中。最后，使用 `chage` 定义用户必须在首次登录后立即更改密码。
+
+```bash
+#!/bin/bash
+for i in {01..30}; do
+  user="user$i"
+  pw=$(mkpasswd -l 8 -d 0 -C 0 -s 0)
+  echo "Account: $user  Password: $pw" >> students.txt
+  useradd $user
+  echo "$user:$pw" | chpasswd
+  chage -d 0 $user
+done
+```
+
+## chroot directory [command]
+
+在没有进一步参数的情况下，`chroot` 会启动一个使用指定目录作为根目录（`/`）的新 shell。你可以在此 shell 中进行交互操作。`exit` 将带你回到原始 shell。
+
+如果你指定了一个可选命令，则将启动该命令而不是 shell。在命令执行期间，指定的目录将再次被根目录使用。
+
+#### 示例
+
+
+
+
+
+`chroot` 用于在启动时未激活的文件系统中执行行政管理任务。以下命令假设你已经从救援系统或 USB 闪存启动了计算机。然后将系统分区（在示例中为 `/dev/sda4`）挂载到 `/mnt/rescue`目录，并将该目录变为新的根目录，然后使用 `passwd` 重置忘记的 `root` 密码：
+
+```
+root# mkdir /mnt/rescue
+root# mount /dev/sda4 /mnt/rescue
+root# chroot /mnt/rescue
+root# passwd
+Change password for root user.
+Enter a new password: **********
+Enter the new password again: **********
+root# exit
+root# reboot 
+```
+
+## chsh -s shell [user]
+
+`chsh` 登录后自动调用的默认 shell。`/etc/shells` 中输入的所有 shell 均供选择——通常包括 `/bin/bash`、`/bin/csh` 和 `/bin/zsh`。`chsh` 命令更改 `passwd` 文件并在其中输入新的 shell。
+
+每个用户都可以按照意愿更改自己的默认 shell。另一个用户的 shell 只能由 `root` 用户更改。新 shell 必须指定完整的目录路径。更改将在下次登录时生效。
+
+#### 示例
+
+以下命令设置 `nologin` 程序而非 shell。它可以防止直接登录，如果你设置一个用户仅用于自动化（备份）脚本或仅用于访问电子邮件账户，则非常有用：
+
+```
+root# chsh -s /usr/sbin/nologin mailuser 
+```
+
+## chvt n
+
+`chvt` 激活控制台 `n`。在较旧的 Linux 发行版中，数字 1 到 6 留给文本控制台，而第一个用户的图形系统运行在控制台 7。控制台 8、9 等用于进一步的并行登录。
+
+在较新的发行版中，显示管理器通常在控制台 1 上以图形模式运行。控制台 2 留给第一个登录的用户的图形系统。控制台 3 到 6 以文本模式运行。
+
+## cksum file
+
+`cksum` 确定文件的校验和和字节长度。可以使用校验和可以快速判断两个文件是否相同。`cksum` 提供比相关的 `sum` 命令更可靠的结果。`sha` 命令在数学和加密方面要安全得多。
+
+## clear
+
+`clear` 或 Ctrl+L 删除控制台内容。
+
+## cmp [options] file1 file2
+
+`cmp` 逐字节比较两个文件并返回第一个差异点的位置。如果文件相同，命令将不会显示任何信息。对于比较文本文件，`diff` 通常比 `cmp` 更合适。
+
+*   `-c` 或 `--show-chars`
+    显示文件之间不同的第一个文本字符。
+*   `-l` 或 `--verbose`
+    提供所有差异列表。
+
+## cnf command
+
+`cnf` 代表 command not found（未找到命令），是一个 SUSE 特有的命令，显示哪个软件包尚未包含你寻找的命令。
+
+在 Red Hat 和 Fedora 发行版中，由 `bash` 执行的 `/usr/libexec/pk-command-not-found` 命令包含类似的功能；在 Ubuntu 上，这是 `command-not-found` 软件包中的 `/usr/lib/command-not-found`。该包也适用于 Debian。但在 Debian 上必须手动安装并使用 `update-command-not-found` 命令设置一次。
+
+#### 示例
+
+```
+user$ cnf jmacs
+The 'jmacs' program can be found in the following package:
+  * joe [ path: /usr/bin/jmacs, Repository: zypp (repo-oss) ]
+Try installing with:
+sudo zypper install joe
+```
+
+## column [options] file
+
+`column` 读取指定的文件，将每行分成若干部分，然后以缩进列的形式输出所有部分。
+
+*   `-o [outseparator]`
+    指定输出中列与列之间的分隔符（默认使用两个空格）。
+*   `-s [inseparator]`
+    指定导入数据的分隔方式。默认使用空白作为分隔符，即空格和制表符。
+*   `-t`
+    将输出格式化为表格。
+
+## compress [options] file
+
+`compress` 压缩或解压缩指定的文件。对于压缩文件，文件名后会添加 `.Z` 标识符。`compress` 仅为了兼容性存在。替代方案 `bzip2`、`gzip` 和 `xz` 要强大得多。
+
+## continue [n]
+
+`bash` 结构 `continue` 跳过 shell 脚本中 `for`、`while` 或 `until` 循环的体，并继续下一次循环。可以使用可选的数值执行多个循环层级的跳转。
+
+## convert or magick [options] image old image new
+
+ImageMagick 软件包中的 `convert` 将图像文件从一种格式转换为另一种。在最简单的形式下，它使用 `convert name.png name.jpg` 语法将指定的 PNG 文件转换为 JPEG 文件。保留原始文件。
+
+从版本 7 开始，ImageMagick 提供了 `magick` 命令。它未来将取代 `convert`。出于兼容考虑，在提供版本 7 的发行版中仍可以使用 `convert`。其他发行版尚未跃升 ImageMagick 7。这就是为什么我在本书中使用已有的名称 `convert` 来处理该命令。
+
+
+
+
+
+可以同时更改超过 100 种选项的各种图像参数。因此，以下列表仅为部分选择：
+
+- `-blur radius`
+    模糊图像。
+
+- `-colors n`
+    将 RGB 颜色数量减少到 `n`。
+
+- `-colorspace CMYK|GRAY|RGB|Transparent|YUV`
+    指定所需的颜色模型（还有许多其他模型可选）。
+
+- `-compress None|BZip|Fax|Group4|JPEG|JPEG2000|Lossless|LZW|RLE|Zip`
+    指定所需的压缩格式。然而，实际可选的格式取决于图像格式。
+
+- `-contrast` 或 `+contrast`
+    降低或增加图像的对比度。
+
+- `-crop geometry`
+    裁剪出图像所需的部分。例如，`-crop 50x50+100+100` 描述了一个从坐标位置 (100, 100) 开始的 50×50 像素区域。
+
+- `-filter Point|Box|Triangle|Hermite|Hanning|Hamming ...`
+    对图像应用指定的滤波器。
+
+- `-gaussian radius`
+    使用高斯算子模糊滤波器。
+
+- `-normalize`
+    归一化图像中的颜色分布。
+
+- `-quality n`
+    指定所需的压缩质量。`n` 的允许值取决于图像格式（例如 JPEG 为 `0` 到 `100`）。
+
+- `-resize NxN` 或 `-resize n%`
+    更改图像的分辨率。
+
+- `-rotate angle`
+    顺时针旋转图像指定的角度（度）。
+
+- `-trim`
+    如果单色图像的边缘与图像的角点颜色相同，则将其裁剪掉。
+
+更多选项在以下网站上进行了详细说明：
+
+https://imagemagick.org/script/command-line-processing.php
+
+出于安全考虑，`convert` 默认拒绝处理某些文件类型（例如 PDF 文件）。可以通过从 `policy.xml` 中删除相应的行来解决这个问题。我在下面的列表中注释了 PDF 行：
+
+```
+# file /etc/ImageMagick-6/policy.xml or /etc/ImageMagick-7/policy.xml
+<policymap>
+  ...
+  <!-- <policy domain="coder" rights="none" pattern="PDF" /> – >
+  ...
+</policymap> 
+```
+
+#### 示例
+
+以下三个示例展示了命令的简单应用：
+
+```
+user$ convert -resize 100x100 in.jpg out.png
+user$ convert -type Grayscale in.jpg out.eps
+user$ convert -quality 80     in.bmp out.jpg 
+```
+
+以下命令根据 PostScript Level 2 规范将 PNG 文件转换为 EPS 文件（`convert` 通常创建 PostScript Level 3 的文件。这些文件通常大得多，且没有任何优势）。所有的图像层都将叠在一起。PNG 文件的透明区域将显示为白色而不是黑色。
+
+```
+user$ convert -flatten -alpha remove -background white in.png EPS2:out.eps 
+```
+
+下一个命令创建一个包含当前目录下所有 JPEG 图像的 PDF 文件（每页一张）。你可以使用 `--quality` 和 `--density` 选项来控制生成的 PDF 的质量和大小。
+
+```
+user$ convert -density 200x200 -quality 80 *.jpg allebilder.pdf 
+```
+
+### cp [optionen] source target
+
+`cp [options] files target directory
+
+`cp` 复制文件和目录。可以在复制过程中重命名单个文件。在编辑多个文件（例如通过指定通配符）时，这些文件只能复制到另一个目录，而不能重命名。不允许类型 `cp *.bak` 的语句。类似于 `mv` 命令用于移动和重命名文件，类似于 `ln` 命令用于创建链接。`cp` 支持以下选项（不仅限于）：
+
+- `-a` 或 `--archive`
+    尽可能保留文件的属性。`-a` 是 `-dpR` 的缩写。
+
+- `-b` 或 `--backup`
+    将现有文件重命名为备份文件（文件名加上 `~`）而不是覆盖它们。
+
+- `-d` 或 `--dereference`
+    只复制链接的引用，而不是被引的文件。
+
+- `-i` 或 `--interactive`
+    在覆盖现有文件之前提示。
+
+- `-l` 或 `--link`
+    创建硬链接而不是复制文件。如果在 `cp` 中使用此选项，其功能与 `ln` 相同。
+
+- `-p` 或 `--preserve`
+    保留关于所有者、组组成、访问权限和最后修改时间的信息。如果没有此选项，复制的文件将属于执行 `cp` 的人（用户和组），且时间设置为当前时间。
+
+- `-r` 或 `-R` 或 `--recursive`
+    额外复制子目录及其包含的文件。
+
+- `--reflink[=auto]`
+    初始仅复制文件的元数据，即创建文件的浅拷贝。因此，该副本在文件系统中几乎不占用空间。尽管如此，它与原始是独立的：一旦原始文件或副本的数据块发生更改，这些块就会重新分配。
+
+
+
+
+
+浅拷贝仅在文件系统支持此功能时才有效。Btrfs 和当前版本的 XFS 支持此功能，但 ext4 不。如果文件系统不兼容，除非你指定 `auto` 模式（此时由 `cp` 自身决定哪种类型的拷贝是可能的），否则此选项将导致错误。
+
+*   `-s` 或 `--symbolic-link`
+    创建符号链接而不是复制文件或目录。因此 `cp` 具有 `ln -s` 的功能。
+
+*   `-u` 或 `--update`
+    仅当没有同名且日期较新的文件会被覆盖时，才复制文件。
+
+#### 复制目录
+
+如果你想复制整个目录及其包含的所有文件和子目录，你必须运行 `cp -r source directory target directory`。这也会复制隐藏文件和子目录。如果你希望在复制时保留访问权限和时间，需要使用 `-a` 选项而不是 `-r`。
+
+关于是复制源目录本身还是仅复制其内容这个问题有点复杂。如果目标目录已经存在，则会在其中创建一个名为 `sourcedirectory` 的新子目录，并将源目录的所有内容复制进去。然而，如果目标目录尚不存在，它将会被创建；在这种情况下，只有源目录的内容会被复制到新创建的目标目录，而不会复制源目录本身。`cpio`、`rsync` 和 `tar` 也适用于复制整个目录树。
+
+#### 
+
+以下命令将 `book` 子目录下的所有 `*.tex` 文件复制到当前目录。点号表示当前目录为目标目录。
+
+```
+user$ cp book/*.tex . 
+```
+
+第二个命令创建整个 `book` 目录的备份副本：
+
+```
+user$ cp -a book bak-book 
+```
+
+`cp` 无法在复制过程中重命名多个文件。因此 `cp *.xxx *.yyy` 不会将所有 `*.xxx` 文件复制为 `*.yyy` 文件。要执行此类操作，你必须使用 `for` 或 `sed`。在以下命令中，`for` 对所有 `*.xxx` 文件创建一个循环。表达式 `${i%.xxx}.yyy` 移除结尾的 `*.xxx` 并将其替换为 `.yyy`。如果你将 `cp` 替换为 `mv`，文件将不会被复制而是被重命名。
+
+```
+user$ for i in *.xxx; do cp $i ${i%.xxx}.yyy; done 
+```
+
+使用 `sed` 的过程要复杂一些：`ls` 提供要复制的文件列表并将其传递给 `sed`。`sed` 使用 `s` 命令（正则查找和替换）创建一个 `cp` 命令列表，并将这些命令传递给一个新的 `sh` shell，然后由该 shell 执行这些命令。
+
+```
+user$ ls *.xxx | sed 's/\(.*\)\.xxx$/cp & \1.yyy/' | sh 
+```
+
+### cpio command [options]
+
+`cpio` 将多个文件合并为一个归档并将其复制到另一个数据介质、流设备或其他目录。同样，该命令也可以用于加载此类数据。在 Linux 上，`cpio` 并不常见；通常代使用 `tar`。主要的 `cpio` 命令如下：
+
+*   `-i`
+    （输入）从标准输入读取归档并提取其中包含的文件。
+
+*   `-o`
+    （输出）将文件合并为归档，并将归档传输到标准输出。要处理的文件通常由 `find` 确定，然后通过管道传递给 `cpio`。
+
+*   `-p`
+    （透传）在不同的目录之间传输归档。
+
+*   `-t`
+    显示来自标准输入的归档内容。
+
+这些操作的细节可以通过额外的选项进行控制。
+
+示例
+
+以下命令首先将 `/etc` 目录下的所有文件归档。然后，`cpio -t` 显示备份的文件列表作为检查。
+
+```
+root# cd /etc
+root# find . | cpio -o > /tmp/etc-backup.cpio
+root# cpio -t < /tmp/etc-backup.cpio 
+```
+
+### crontab [options]
+
+`crontab` 命令帮助你在 `/var/spool/cron/username` 文件中管理自定义 cron 任务（参见 `crontab`）。Cron 任务会在指定的时间在后台自动执行，例如每小时一次或每周日晚上。
+
+*   `-e`
+    打开编辑器编辑 crontab 文件。通常使用 `vi` 作为编辑器。如果你想使用不同的编辑器，必须相应设置 `EDITOR` 环境变量。`crontab` 在保存时会检查是否符合 crontab 语法规则。
+
+*   `-l`
+    列出当前的 crontab 条目。
+
+*   `-r`
+    删除所有 crontab 条目。
+
+*   `-u` `username`
+    编辑指定用户的 crontab 文件。`-u` 选项仅对 `root`可用。
+
+
+
+
+
+同名软件包中的 `cryptsetup` 使用 `dm_crypt` 内核模块的功能。它用于设置、激活和停用加密设备。也可以使用足够大的镜像文件来代替设备。这可以提前创建，例如通过 `dd if=/dev/zero of=cryptoImage bs=1M count=n`，其中 `n` 是所需的以兆字节（MiB）为单位的大小。
+
+此时，我将仅描述 `cryptsetup` 中最重要的 LUKS 专有命令：
+
+- `luksAddKey` `device`
+  设置一个额外的密码以访问加密容器。运行此命令时，必须输入现有的密码（可以使用任何你喜欢的密码）。最多允许八个密码。
+
+- `luksClose` `device mappingname`
+  停用加密设备。
+
+- `luksDump` `device`
+  提供有关加密容器的元数据信息（例如加密算法）。
+
+- `luksFormat --type luks2` `device`
+  在指定的设备上以当前的 LUKS2 格式设置加密容器。如果不使用 `--type` 选项，命令将使用仍受支持但已过时的 LUKS1 格式。
+  你必须输入两次密码短，出于安全考虑，密码长度应至少为 20 个字符。你可以通过 `-c` 选择所需的加密算法，并通过 `-s` 设置不同的密钥长度。可选的算法列在伪文件 `/proc/crypto` 中。`cryptsetup --help` 命令的输出最后几行显示了默认使用的算法和密钥长度。目前默认是 `aes-xts-plain64` 算法，带有 256 位的密钥。
+
+- `luksOpen` `device mappingname`
+  激活指定设备中的加密容器并为其分配名称。生成的加密设备可以通过 `/dev/mapper/mappingname` 使用。
+
+#### 示例
+
+以下命令展示了如何首先将 USB 闪盘（`/dev/sdh1`）格式化为加密设备（`luksFormat`），然后以任意指定的名称 `mycontainer` 激活设备（`luksOpen`）。不用说，你的数据安全性取决于你的密码或由几个单词组成的短语。建议密码长度至少为 20 个字符。
+
+  然后你可以像使用硬盘分区或逻辑卷一样使用 `/dev/mapper/mycontainer`——即设置文件系统、将其集成到目录树中等等。在 `umount` 之后，你必须再次停用加密设备（`luksClose`）以释放 `/dev/sdh1`。只有在此之后你才能拔掉 USB 闪盘。
+
+```
+root# cryptsetup luksFormat --type luks2 /dev/sdh1
+这将不可恢复地覆盖 /dev/sdh1 上的数据。
+Are you sure? (输入大写的 yes): YES
+Enter LUKS passphrase: ********************
+Verify passphrase: ********************
+Command successful.
+root# cryptsetup luksOpen /dev/sdh1 mycontainer
+Enter LUKS passphrase: ********************
+root# mkfs.ext4 /dev/mapper/mycontainer
+root# mount /dev/mapper/mycontainer /test
+root# ... 使用加密文件系统 ...
+root# umount /test/
+root# cryptsetup luksClose mycontainer 
+```
+
+### csplit [options] 文件分割位置
+
+`csplit` 在预定义的位点将文本文件分割为多个单独的文件。分割位置可以通过直接指定行或搜索模式来指定。结果是该命令返回文件 `xx00`、`xx01` 等，并在屏幕上显示它们的长度。通过指定相应的选项，当然也可以获得更“美观”的文件名。
+
+`cat` 可以从这些单独的文件重新组合原始文件。除了 `csplit`，可以使用 `split` 命令来分割二进制文件。
+
+#### 分割位置的说明
+
+分割位置通过行数或搜索模式指定。在第一种情况下，文件在 `n` 行后被分割；而在另一种情况下，它在模式出现之前或之后被分割。如果让 `csplit` 对文件进行多次分割（这通常是），必须在行数或分割模式后面跟上操作重复的次数。
+
+- `/pattern`
+  在模式出现之前的行分割文件。（找到模式的该行将成为后续文件的第一行。）
+
+- `/pattern/+n` 或 `/pattern/-n`
+  在模式出现之后 (+) n 行或之前 (-) n 行分割文件。
+
+- `n`
+  在 `n` 行后分割文件。
+
+- `{n}`
+  将文件分割为 `n`+1 个单独的文件（而不仅仅是两个文件）。
+
+- `{*}`
+  每当搜索模式出现或每次在 `n` 行后，都将文件分割为相应数量的单独文件。
+
+#### 选项
+
+- `-f file` 或 `--prefix=file`
+  使用指定的文件名来命名输出文件。
+
+
+
+
+
+*   `-k` 或 `--keep-files`
+    防止在发生错误时再次删除已经创建的文件。该选项必须特别用于形如 `n `csplit{}`` 的模式规范。模式的指定方式参见 grep。
+
+*   `-z` 或 `--elide-empty-files`
+    防止创建空文件。如果没有此选项，特别当源文件的第一行已经匹配搜索模式时，可能会出现空文件。
+
+#### 示例
+
+`csplit` 将 `total.txt` 拆分为文件 `part.00`、`part.01` 等。每个单独的文件长度均为 100 行。然后使用 `cat` 创建原始文件的副本。
+
+```
+user$ csplit -k -f part. total.txt 100 {*}
+user$ cat part.* > copy.txt 
+```
+
+在第二个示例中，`csplit` 将 `total.txt` 文件拆分为更小的文件，其中拆分始终在行开头为文本 `% ===` 的时候发生。
+
+```
+user$ csplit -k -f part. total.txt '/^% ===/' {*} 
+```
+
+### curl [options] [url]
+
+`curl` 帮助从服务器或向服务器传输文件，支持所有可能的协议（HTTP, HTTPS, FTP, SFTP, SCP 等）。
+
+外部文件或目录通过 URL 字符串（统一资源定位符）指定，该字符串以协议名称开头（例如 `http://server.com/file`）。
+
+*   `-d` 或 `--data 'data'`
+    在请求中发送指定的数据。对于 `--data`，有以下替代方案：`--data-binary`、`--data-raw` 和 `--data-urlencode`。对于所有变体，都可以通过 `@file` 从指定的文件读取数据。
+
+*   `--limit-rate n`
+    将传输速率限制为每秒指定的字节数。`n` 后面可以字母 `k` 或 `m`可以将传输速率限制为每秒 `n` KiB 或 MiB。
+
+*   `-n` 或 `--netrc`
+    指示命令从 `.netrc` 文件读取登录数据。使用 `--netrc-file file.txt` 也可以指定该文件的不同位置。这两种变体都比通过 `-u` 传输密码更安全。
+
+*   `-o file`
+    将下载的数据保存到指定的文件，而不是将其转发到标准输出。
+
+*   `--oauth2-bearer 'token'`
+    在请求中发送指定的 own 令牌。
+
+*   `-r n1-n2`
+    传输文件的指定字节范围。
+
+*   `-s` 或 `--silent`
+    不输出状态信息。
+
+*   `-T file`
+    将指定的文件上传到服务器，即与 `curl` 的通常用法（传输）相反的方向。除了文件名外，还可以输入连字符 (`-`) 来从标准输入处理数据。
+
+*   `-u name:password`
+    指定登录名称和密码。
+
+*   `-X` 或 `--request GET|POST|PUT|...`
+    指定所需的请求类型（默认为 `GET`）。
+
+#### 示例
+
+以下命令将指定的文件传输到 FTP 服务器 `backupserver` 并将其保存在 `dir` 目录中：
+
+```
+user$ curl -T file -u username:password ftp://backupserver/dir 
+```
+
+若要处理来自标准输入的数据，可以使用 `-T` 指定一个连字符作为文件。以下命令将 `tar` 命令的结果直接保存在 FTP 服务器上的 `name.tgz` 文件中：
+
+```
+user$ tar czf - dir/ | curl -T - -uusern:pw ftp://server/name.tgz 
+```
+
+`curl` 也适用于如下方式测试 REST API：
+
+```
+user$ curl -X PUT https://httpbin.org/put?para=123 -d @mydata.json \
+             -H "Content-Type: application/json" 
+```
+
+#### 替代方案
+
+要通过 FTP 或 HTTP 下载文件，您可以使用 wget 代替 `curl`。相反，如果你对调试 REST API 更感兴趣，`curlie` 是一个很好的选择（参见 [`github.com/rs/curlie`](https://github.com/rs/curlie)）。这个 `curl` 替代方案默认显示传输的标头、以颜色格式化 JSON 文档等等。
+
+### cut [options] file
+
+`cut` 从每行文本中提取由选项指定的列。
+
+*   `-b list` 或 `--bytes list`
+    提取列表中指定的字符。单个项目可以用逗号分隔（但不能用空格）。除了单个字符，还可以指定整个范围，例如 `-b 3-6,9,11-15`。
+
+*   `-d character` 或 `--delimiter character`
+    指定用于 `-f` 的分隔符，以代替制表符。
+
+
+
+
+
+* `-f list` 或 `--fields list`
+
+  提取类似于 `-b` 的内容，但现在针对必须由制表符（tab）分隔的字段（数据记录）。
+
+* `-s` 或 `--only-delimited`
+
+  删除所有不包含与 `-f` 选项对应数据的行。此不能与 `-b` 配合使用。
+
+在实践中，通过 `awk` 提取单个文本列通常比使用 `cut` 得多。
+
+#### 示例
+
+在以下示例中，`cut` 从 `/etc/passwd` 文件中读取第一、第三和第七列，即用户名、UID 和默认 shell。该文件中的分隔符是冒号。
+
+```
+root# cut -d\: -f1,3,7 /etc/passwd
+root:0:/bin/bash
+bin:1:/sbin/nologin
+daemon:2:/sbin/nologin
+adm:3:/sbin/nologin
+... 
+```
+
+## D
+
+### date [options] [+format]
+
+`date` 返回当前日期和时间或更改这些数据。更改只能由 `root` 执行。`date` 可以以各种格式显示时间。
+
+* `-d time span`
+
+  对当前时间增加或减去时间段（例如 `-d +3days` 或 `-d -4hours`）。
+
+* `-s newtime`
+
+  更改计算机时钟的日期和或时间。
+
+以下列表列出了最重要的格式代码。格式字符串必须包含在引号中。
+
+* `%Y`
+
+  四位数的年份
+
+* `%l`
+
+  数字月份（`1` 到 `12`）
+
+* `%m`
+
+  两位数字月份（`01` 到 `12`）
+
+* `%b`
+
+  短字符字符串月份（`Jan` 到 `Dec`）
+
+* `%B`
+
+  长字符串月份（`January` 到 `December`）
+
+* `%d`
+
+  两位数字日期（`01` 到 `31`）
+
+* `%e`
+
+  数字数字日期（`1` 到 `31`），个位数数字前有一个空格
+
+* `%H`
+
+  两位数字小时（`00` 到 `23`）
+
+* `%M`
+
+  两位数字分钟（`00` 到 `59`）
+
+#### 示例
+
+以下三个语句提供了 ISO 格式的当前时间、三周后的日期以及四小时前的时间：
+
+```
+user$ date "+%Y-%m-%d %H:%M:%S"
+2025-03-12 17:46:39
+user$ date -d +3weeks "+%Y-%m-%d"
+2025-04-02
+user$ date -d -4hours "+%H:%M:%S"
+13:47:25 
+```
+
+以下脚本为 `/home/kofler/data` 目录创建一个压缩的 `tar` 归档。该归档以两个文件名保存。（注：原文中的重复文本已压缩以保持核心逻辑）。
+
+```bash
+#!/bin/bash
+fname1=/backup/day-$(date "+%d").tar.gz
+fname2=/backup/month-$(date "+%m").tar.gz
+tar czf $fname1 /home/kofler/data
+cp $fname1 $fname2
+chmod 600 $fname1 $fname2 
+```
+
+### dconf 命令
+
+`dconf` 是一个用于更改 `dconf` 数据库的低级命令，Gnome 将设置存储其中。通常您应该使用 `gsettings` 命令而不是 `dconf`，因为它包含了更多的控制机制。
+
+* `dump/load dir`
+
+  递归读取整个配置目录并写入标准输出（`dump`）或从标准输入读取（`load`）。
+
+* `list dir`
+
+  输出目录条目（非递归）。
+
+* `read key`
+
+  读取一个条目。
+
+* `reset key/dir`
+
+  将条目或整个配置目录重置为初始值。对于目录必须指定 `-f` 选项。
+
+* `write key value`
+
+  保存或覆盖条目。
+
+#### 示例
+
+以下两个命令展示了如何备份所有 Gnome 设置，并在稍后恢复保存的状态：
+
+```
+user dconf dump / > dconf.bak
+user dconf load / < dconf.bak
+```
+
+以下命令会导致所有 Gnome 设置的完全重置：
+
+```
+user$ dconf reset -f / 
+```
+
+### dd 选项
+
+`dd` 在不同的存储媒体（SSD、USB 闪存等）之间传输数据，并在需要时转换数据。该命令可用于在不同的计算机架构之间交换数据。
+
+
+
+
+
+`dd` 不仅可以复制单个文件，还可以直接访问设备。这允许你复制整个硬盘（分区）、更改硬盘的引导扇等。数据介质上不需要设置任何文件系统。如果在不带任何选项的情况下使用 `dd`，它将从标准输入（以 Ctrl+Z 结束）读取数据并写入标准输出。`dd` 的选项在指定时不需要在前面加减号！
+
+*   `bs=n`
+    确定输入和输出文件的块大小。（块大小表示单次读取或写入的字节数。）注意：默认情况下，`dd` 使用的块大小仅为 512 字节。这极地低了效率！如果你对硬盘或 SSD 进行读写操作并使用 `dd`，你至少应该使用 `bs=1M`。后缀 `M` 代表 1,024 × 1,024 字节，`K` 代表 1,024 字节。
+
+*   `conv=mode`
+    在复制过程中转换数据。`mode` 允许各种设置，包括 `lcase`（将大写转为小写）、`ucase`（将小写转为大写）、`swab`（每次交换 2 个字节）等。使用 `conv=fsync` 时，`dd` 以同步调用结束工作，即等待写入过程物理完成。如果你怀疑存储介质可能有缺陷，这一点尤为重要。只有在 `conv=fsync` 的情况下，`dd` 才能从内核接收错误消息。
+
+*   `count=n`
+    仅复制 `n` 个块（而不是全量数据）。
+
+*   `ibs=n`
+    确定源文件的块大小。
+
+*   `if=source file`
+    指定源文件（代替标准输入）。
+
+*   `obs=n`
+    确定目标文件的块大小。
+
+*   `of=target file`
+    指定目标文件（代替标准输出）。
+
+*   `seek=n`
+    在开始输出前跳过 `n` 个块。
+
+*   `skip=n`
+    在开始读取前跳过 `n` 个块。
+
+*   `status=progress`
+    显示复制过程的进度。（默认值为 `status=none`。）
+
+请注意，直接访问设备（例如通过 `cat /dev/xxx >`）通常比 `dd` 更快。你也不需要担心理想的块大小。
+
+#### 示例
+
+以下命令将 ISO 文件 `opensuse.iso` 直接传输到设备 `/dev/sdc` 数据介质（例如 USB 闪存盘）。你应该注意，该数据介质上之前保存的所有数据将丢失！因此，请确保输入了正确的设备名称。如果用 `of` 指定的设备是你当前的硬盘，你将丢失其所有内容！
+
+```
+root# dd if=opensuse.iso of=/dev/sdc bs=1M status=progress 
+```
+
+第二个命令为虚拟化程序（例如 QEMU/KVM）创建一个 10 GiB 的原始镜像文件。该镜像文件仅由从 `/dev/zero` 设备读取的零组成。
+
+```
+root# dd if=/dev/zero of=image.raw bs=1M count=10000 
+```
+
+#### 替代方案
+
+根据用途，可以使用以下两种变体代替 `dd`：
+
+*   `ddrescue` 或取决于发行发行 ` `ddrescue`（`ddrescue` 软件包），即使源设备的单个数据扇区有缺陷，也会尝试创建副本。
+*   `dldd` 针对取证任务进行了优化。除此之外，该命令可以使用校验和来验证副本是否完全相同。
+
+你可以在以下地址找到 `dd`、`ddrescue` 和 `dldd` 之间的良好对比：https://superuser.com/questions/355310
+
+### declare [options] var=value
+
+`bash` 命令 `declare` 为 shell 变量分配新值和/或各种属性。该命令主要用于 shell 脚本。如果在不带参数的情况下调用它，将列出所有已知变量及其内容。注意，等号前后不能有空格！
+
+*   `-A`
+    将变量声明为关联数组。
+
+*   `-r`
+    将变量声明为只读。该变量只能读取，不能修改。
+
+*   `-x`
+    将变量声明为环境变量（类似于 `export`）。因此，该变量在其他命令或子 shell 中也是可用的。
+
+### delgroup [options] name
+
+`delgroup` 在 Debian 和 Ubuntu 系统上删除删除指定的组，并遵循 `etc/deluser.conf` 中的规则。在 Fedora 和 Red Hat 中，`delgroup` 是指向 `groupdel` 命令的链接，后者具有其他选项。
+
+*   `--only-if-empty`
+    仅当组内没有分配用户时删除删除组。
+
+*   `--system`
+    仅当该组为系统组时才删除。
+
+### delta [options] file1 file2
+
+
+
+
+
+`delta` 是 diff 的变体。来自 `git-delta` 包的命令比较两个文本文件的内容并以图形方式显示差异（另参见 [`dandavison.github.io/delta`](https://dandavison.github.io/delta)）。虽然 `diff` 针对脚本使用和补丁管理进行了优化，但 `delta` 在交互式使用更为出色。
+
+* `--help`: 显示帮助文本。（没有 `man` 手页。）
+* `--light`: 使用适用于浅色背景终端的颜色。默认情况下，`delta` 为深色终端设计的（`--dark` 选项）。
+* `-s` 或 `--side-by-side`: 并排显示差异，而不是上下堆叠。
+
+### deluser [options] name `deluser name group`
+
+`deluser` 在 Debian 和 Ubuntu 系统上删除指定的用户，并遵循 etc/deluser.conf 中的规则。因此，通常不会删除主目录。在 Fedora 和 Red Hat 中，`deluser` 是指向 userdel 命令并带有其他的链接。
+
+* `--remove-all-files`: 删除用户的主目录及所有其他文件（例如各种池文件和邮件文件）。
+* `--remove-home`: 也删除用户的主目录。
+* `--system`: 仅当用户是系统用户时才删除。
+
+如果运行命令 `deluser name group`，它将该用户从指定的组中移除。因此，该命令是 `adduser name group` 的补充。
+
+### depmod [options]
+
+`depmod` 在 `/lib/modules/kernelversion/` 目录下创建模块依赖文件 `modules.dep` 以及各种 `*.map` 文件。`*-map` 文件指定了为哪个硬件组件加载哪个内核模块。
+
+* `-A` 或 `--quick`: 首先测试现有的 `*.dep` 和 `*.map` 文件是否仍然。在这种情况下，`depmod` 不会重新生成文件。
+* `-b` `directory` 或 `--basedir` `directory`: 指定要生成 `*.dep` 和 `*.map` 文件的目录。默认情况下，命令更新正在运行内核的文件。
+
+### df [options] [directory]
+
+`df` 提供有关硬磁盘（分区）或其他驱动器在文件树中挂载位置，以及它们可用存储空间的信息。通常，`df` 返回所有活动分区的列表。然而，如果你向命令传递一个目录，它仅显示该目录物理所在分区的数据。在具有许多分区的系统中，你可以轻松地确定特定目录存储在哪个分区中。
+
+* `-h`: 以易读的 MiB 或 GiB 格式指示存储空间。
+* `-i` 或 `--inodes`: 提供可用 i-nodes 信息（而不是 KiB 中的空闲存储空间）。
+* `-t` `fs`: 仅考虑指定类型的文件系统，例如使用 `-t ext4` 仅考虑 ext4 文件系统。
+* `-T`: 指定每个分区或数据介质的文件系统。
+* `-x` `fs`: 忽略指定的文件系统。
+
+#### Example
+
+在示例系统中，系统分区 `/` 仍有 15 GiB 的可用磁盘空间。其他文件系统用于管理目的（设备的动态显示）以及存储 Ubuntu 特有的 snap 包。由于 `-x tmpfs` 选项，许多临时文件系统（即仅位于 RAM 中的文件系统）未被考虑在内。
+
+```
+root# df -h -T -x tmpfs
+Filesystem                Type      Size  Used Avail Use% Mounted on
+udev                      devtmpfs   16G     0   16G   0% /dev
+/dev/nvme0n1p1            vfat     1021M  254M  768M  25% /boot/efi
+/dev/nvme0n1p4            ext4      119G   32G   81G   29% /
+/dev/mapper/mycrypt   ext4      1.5T  767G  634G  55% /crypt
+/dev/loop0                squashfs   62M   62M     0 100% /snap/authy/5
+/dev/loop1                squashfs   56M   56M     0 100% /snap/core18/188
+...
+```
+
+#### Alternatives
+
+有几种 `df` 的替代方案可以更易读地呈现结果。来自同名包的 `duf` 命令会自动区分“真实”和虚拟文件系统，并且输出格式比 `df` 清晰得多（参见图 1）。我们还推荐 `dysk`（参见 [`dystroy.org/dysk`](https://dystroy.org/dysk) 项目页面）。
+
+![“duf” Providing a Good Overview of the Free Storage Space on All Data Media](img/img-bD.1.xhtml)
+
+**图 1** “duf” Providing a Good Overview of the Free Storage Space on All Data Media
+
+### dhclient interface
+
+来自 `dhcp-client` 包的 `dhclient` 命令在大多数发行版中从 DHCP 服务器获取网络配置参数。该命令适用于新安装服务器的临时网络配置。某些发行版使用 `dhclient3` 或 `dhcpcd` 命令作为 `dhclient` 的替代方案。
+
+#### Example
+
+以下命令为 `eth0` 接口执行自动网络配置：
+
+
+
+
+
+```
+root# dhclient eth0 
+```
+
+### diff [options] file1 file2
+
+`diff` 通常比较两个文本文件。结果是所有相互差异的行列表。该命令具有相当“智能”性；也就是说，如果一个文件相对于另一个文件插入了一些行，则只会报告这一偏差。其他行会被再次识别为相同，尽管它们现在的行号已经不同。因此，该命令可以用于快速记录两个程序列表版本之间的差异。
+
+`diff` 还可以以 `-r dir1 dir2` 的形式比较两个目录。
+
+*   `-b`
+    将多个空格或行视为单个空格或行。
+
+*   `-q`
+    仅指示两个文件是否有差异。在这种变体中，`diff` 将省略对所有差异的详细列表。
+
+*   `-r`
+    递归比较两个目录。结果列出哪些文件仅存在于第一个目录，哪些仅存在于第二个目录。对于两个目录中都存在但内容不同的文件，`diff` 会显示差异。`diff -r` 可以与 `-q` 结合使用。
+
+*   `-w`
+    完全忽略空格和空行。
+
+#### 示例
+
+以下命令将您自己的 MySQL 配置内容与软件包建议的配置进行比较。以 `<` 开头的行显示当前状态（即传递给 `diff` 的第一个文件），以 `>` 开头的行显示第二个文件中对应的段落。
+
+```
+root# diff /etc/mysql/my.cnf /etc/mysql/my.cnf.dpkg-dist
+100,101c87,88
+< server-id             = 100
+< log_bin                       = /var/log/mysql/mysql-bin.log
+---
+> #server-id            = 1
+> #log_bin                      = /var/log/mysql/mysql-bin.log
+... 
+```
+
+#### 替代方案
+
+坦率地说，“阅读” `diff` 结果需要一些时间适应。使用 `delta` 命令要方便得多。如果您有图形用户界面，`meld` 程序会非常有帮助。大多数编辑器也可以高亮两个文件之间的差异（例如 VS Code）。
+
+### dig [options] [@dnsserver] host/ipaddr [type]
+
+`dig` 以类似于 `host` 和 `whois` 的方式对域名服务器运行查询。使用 `dig`，您可以通过大量的选项来控制过程，这些选项在这里甚至无法提及（参见 `man dig`）。
+
+在最简单的形式下，`dig host` 连接到 `etc/resolv.conf` 中设置的 DNS 服务器并返回 A 记录。通过 `@1.2.3.4`，您可以指定备用 DNS 服务器的 IP 地址。如果您对其他数据而不是 A 记录，必须在第三个参数中输入其类型。
+
+*   `-4 / -6`
+    仅使用 IPv4 或仅使用 IPv6。
+
+*   `+nocomments`
+    不输出任何注释。
+
+*   `+nostats`
+    不输出统计信息（查询时间、大小）。
+
+*   `+short`
+    以易于阅读的方式格式化输出。默认情况下，`dig` 提供摘要形式输出。
+
+#### 示例
+
+以下命令连接 DNS 服务器，确定条目并显示它：
+
+```
+user$ dig +short
+```
+
+### dircolors [option] [file]
+
+`dircolors` 提供设置颜色的代码。如果将文件传递给 `dircolors`，它会显示其中的设置。该文件必须符合 `ls`指定的语法。
+
+*   `-b`
+    使用 `bash` 壳的语法。
+
+*   `-c`
+    使用 C shell。
+
+*   `-p`
+    使用非常详细的语法。文件包含解释该语法的注释。
+
+#### 示例
+
+在许多发行版中，当 `bash` 启动时会分析 `.dircolors` 文件并用于设置颜色。要更改 `ls` 颜色，您必须先使用 `dircolors -p` 创建您自己的文件版本，然后在编辑器中对其进行更改。更改后的设置在您打开新终端窗口时立即生效。
+
+```
+user$ cd   
+(切换到主目录)
+user$ dircolors -p > .dircolors
+user$ yourEditor .dircolors 
+```
+
+如果更改 `.dircolors` 文件对于您的发行版来说不够，您可以使用 `dircolors` 创建一个设置 `LS_COLORS` 变量的语句，并将其添加到 `.bashrc` 文件的末尾：
+
+```
+user$ dircolors .dircolors >> .bashrc 
+```
+
+### dirname string
+
+`dirname` 返回完整文件的路径。因此，`dirname /usr/bin/groff` 返回 `/usr/bin`。
+
+### dirs
+
+`bash` 命令 `dirs` 返回由 `pushd` 保存的所有目录列表。该命令主要用于脚本编程。
+
+### disown [options] [jobspec]
+
+`bash` 命令 `disown` 将指定的进程从 shell 中移除。这意味着即使 shell 关闭，进程也会继续运行。进程可以通过进程 ID (PID) 或 shell 作业数指定，其中 shell 作业数以 `%` 字符开头。如果不指定作业号，则指当前（后台）进程。
+
+
+
+
+
+如果你计划从一开始就脱离 shell 运行程序，可以在启动时使用 `nohup` 以避免稍后调用 `disown`。
+
+* `-a`: 触发所有在 shell 中启动的进程。
+* `-r`: 触发所有在 shell 中启动且正在运行的进程。
+
+#### Example
+
+在下面的示例中，首先启动了一个较长的下载过程。通过 Ctrl+Z 中断下载，然后 `bg` 使其在后台继续。`disown` 将下载进程与 shell 分离，这样即使 shell 退出，下载也会继续。
+
+```
+user$ wget -q http://mirror.switch.ch/.../AlmaLinux-n.n.iso
+user$ <Ctrl>+<Z>
+user$ bg
+user$ disown 
+```
+
+### dmesg [options]
+
+`dmesg` 输出缓冲区中包含的内核消息。
+
+* `-c`: 输出后删除内核消息的缓冲区。此选项需要 `root` 权限。
+* `-H`: 以彩色形式输出，并以更易读的形式（人类可读）显示时间。
+* `-T`: 在每条消息之前显示绝对时间。
+* `-w`: 显示所有内核消息，然后持续运行直到通过 Ctrl+C 终止。
+* `-W` 或 `--follow-new`: 等待新的内核消息并显示它们，直到通过 Ctrl+C 终止。
+
+在某些 Linux 发行版中，`dmesg` 需要 `root` 权限。如果你想赋予所有用户读取内核消息的权限，需要在 `/etc/sysctl.conf` 文件中输入 `kernel.dmesg_#restrict=0` 然后运行 `sysctl -p`。
+
+### dnf [options] command
+
+`dnf` 是 Fedora、RHEL 及其发行版的包管理命令。`dnf` 取代了以前使用的 `yum` 命令。
+
+`dnf` 从 `/etc/yum.repos.d/*.repo` 中定义的包源下载软件包。（该目录名称清楚地说明了 `dnf` 的来源，并且没有从 `yum` 变为 `dnf` 而改变。）
+
+* `check-update`: 检查已安装软件包是否有可用更新。
+* `clean metadata`: 从缓存中删除包元数据。下次启动时，`dnf` 将通过重新加载所有包源的元数据来更新数据。
+* `clean packages`: 从缓存中删除已下载和已安装的包文件。
+* `config-manager [options]`: 管理 DNF/YUM 包源：
+    * `--add-repo` url 添加包源。
+    * `--set-enabled` name 或 `--set-disabled` name（激活）或禁用包源。
+* `copr [enable|disable|remove|list|search] [package source]`: 管理 Copr 包源。Copr 是某些开发者用于向公众提供自己的软件包的自动化构建系统。`copr` 不是 `dnf` 的内置命令。只有在安装了 `dnf-plugins-core` 包后才能使用。
+* `downgrade package`: 使用旧发行版的包替换软件包。你可以使用 `--releasever=n` 输入发行版版本号。
+* `download package`: 将软件包下载到当前目录，但不安装。结合 `--source` 选项时，`dnf` 会下载源码包。使用 `--resolve`，命令还会考虑依赖包。使用 `--url`，则只显示包的链接，而不下载包。
+* `grouplist, groupinfo, groupinstall, groupupdate, groupremove`: 提供有关包组的信息、安装、更新或删除包组。`dnf grouplist -v` 在每个包组旁括号列出对应的英文组 ID。
+* `history`: 提供最近执行的 `dnf` 操作的编号列表。`dnf history info n` 提供事务 `n` 的详细信息。
+* `info name`: 提供指定软件包的信息。
+* `install name1 name2 ...`: 从所有包源中查找 name1、name2 等包，然后下载并安装它们。如果有必要，还会加载并安装或更新额外的包以满足依赖关系。
+* `install rpmfile`: 安装存储在本地文件系统中的 RPM 包。会考虑包依赖关系。缺失的包将从包源下载并安装（如果需要）。
+* `install @package:version`: 安装指定版本的软件包。这是 `dnf module install` package:version 的简写。
+
+
+
+
+
+*   `list`
+
+    提供一个两部分的列表。第一部分包含（字母顺序排列）所有已安装的包；第二部分包含软件包源中可用但尚未安装的所有包。可以使用可选参数将结果限制为名称匹配特定模式的包（例如，`dnf list xorg*`）。
+
+*   `list available/updates/installed/extras/recent`
+
+    将 `dnf list` 的输出限制为特定的包。例如，`dnf list updates` 提供了所有可用更新的包列表。`dnf list recent` 提供了最近添加到软件包源的包概览。
+
+*   `makecache [fast]`
+
+    创建一个包含软件包源中所有可用包目录的缓存。使用额外的关键字 `fast`，`dnf` 会检查缓存是否为最新，仅在确实需要时才执行更新。
+
+    运行 `dnf makecache` 仅在特殊情况下是必需的。`dnf` 会自动检查其他命令以确保缓存不会过旧，并在必要时自行更新。
+
+*   `module install/update/remove/enable/disable/lock/unlock/list/info ...`
+
+    管理在不同版本中可用的包。此 `dnf` 命令的扩展是 Fedora 28 和 RHEL 8 引入的模块和流的一部分。在安装期间，除了包名外，必须指定所需的版本和配置，例如，`dnf module install nodejs:13/development`。
+
+*   `remove name1 name2 ...`
+
+    卸载指定的包。
+
+*   `repoquery name`
+
+    确定指定包的完整名称。无论该包是否已经安装都可以。通过额外的 `-i` 选项，`dnf repoquery` 以表格形式提供更多元数据，例如版本号、许可证、包源和项目 URL。通过 `--location` 选项，命令会指定一个可以手动下载包的地址。
+
+*   `search repo query term`
+
+    返回所有描述中包含搜索词的包列表。
+
+*   `update`
+
+    显示所有已安装的包。
+
+*   `update name1 name2 ...`
+
+    仅更新指定的包。
+
+*   `upgrade`
+
+    产生与 `update` 结合 `--obletes` 选项时相同的效果。
+
+*   `enablerpo=name`
+
+    激活一个禁用的软件包源。
+
+*   `exclude=package`
+
+    从操作中排除指定的包。
+
+*   `--obletes`
+
+    导致 `dnf` 删除更新后不再需要的包。
+
+*   `-y`
+
+    用 `yes` 回答 `dnf` 的所有问题。
+
+#### 示例
+
+以下两个命令首先更新现有的包，然后安装 `emacs` 编辑器：
+
+```
+root# dnf update
+Transaction Summary
+Install      0(s)
+Update      42(s)
+Remove       0(s)
+Total download size: 52 M
+Is this ok [y/N]: y
+
+root# dnf install emacs
+Installing:
+ emacs                    aarch64   1:29.2.fc39   32 M
+Installing dependencies:
+ dejavu-sans-fonts   noarch    2.37-20.fc39   469 k
+ emacs-common             aarch64   1:29.2.fc39   42 M
+...
+Transaction Summary: Install  20 Packages, total download size: 139 M,
+installed size: 728 M
+Is this ok [y/N]: y
+```
+
+`dnf repoquery` 提供关于包的许多元数据。以下列表是在 AlmaLinux 9 上创建的，在此我必须先安装 `dnf-utils` 包：
+
+```
+root# dnf repoquery -i joe
+Name         : joe
+Version      : 4.6
+Release      : 12.el9
+Summary      : An easy to use, modeless text editor
+```
+
+以下两个命令确定哪些版本的 `nodejs` 包是用，然后在 `minimal` 配置中安装最新版本：
+
+```
+root# dnf module list --all nodejs
+AlmaLinux 9 - AppStream
+Name         Stream  Profiles                               
+nodejs       18      common [d], development, minimal,s2i   Javascript runtime
+nodejs       20      common [d], development, minimal,s2i   Javascript runtime
+Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
+root# dnf module install nodejs:20/minimal
+```
+
+最后一个命令下载 Gnome 文本编辑器的源码包：
+
+```
+user$ dnf download --source gedit
+```
+
+### docker [options] 命令
+
+`docker` 命令管理 Docker 容器。首次在使用该命令之前，你必须安装 `docker`，最好是从当前的 Docker 包源安装（参见 https://docs.docker.com/get-docker）。
+
+在 Fedora 和 RHEL 兼容发行版中，可以使用几乎兼容的 `podman` 命令代替 `docker`。尽管在技术实现上存在各种差异，但列表描述的几乎所有命令的工作方式都与 `docker` 相同：
+
+
+
+
+
+- `build directory/url`
+  读取指定位置的 `Dockerfile` 文件并根据其创建对应的本地镜像。通过 `-t` name:tag 选项，可以为镜像命名并标记标签。
+
+- `compose up|down`
+  评估 `docker-compose.yml`（已过时）或 `compose.yaml`，创建其中描述的容器设置，并执行或再次停止它。该命令尚未适用于 `podman`（截至 2025 年春季）；在红帽世界中，你可以替代使用 `podman-compose` 脚本。`docker-compose.yml` 中允许的语法的参考可以在以下地址找到：[https://docs.docker.com/compose/compose-file]。
+
+- `create imagename/id [command]`
+  创建一个类似于 `docker run` 的容器，但不会启动它。
+
+- `exec containername/id command`
+  在已经在运行的容器中运行指定的命令。与 `docker run` 一样，`-i` 和 `-t` 选项允许交互式操作。使用 `-d`，命令将在后台执行。
+
+- `image prune|pull|push|rm [imagename/id]`
+  删除所有未使用的镜像、从 Docker Hub 下载镜像或上传镜像到 Docker Hub，或删除单个镜像。（Docker Hub 是公共 Docker 镜像的集合，参见 [`hub.docker.com`](https://hub.docker.com)。）
+
+- `images`
+  列出本地镜像并指定其大小。通过 `-q` 选项，仅列出镜像 ID，以便进行自动化后续处理。
+
+- `inspect containername/id`
+  提供指定容器的详细信息。
+
+- `logs containername/id`
+  显示容器的日志消息。这仅在底层镜像经过相应配置时才有效。
+
+- `network create|connect|inspect|rm [networkname/id]`
+  管理 Docker 容器的网络。
+
+- `port containername/id command`
+  列出容器的端口分配。
+
+- `ps`
+  输出所有运行中的容器。使用 `-a` 选项也会考虑已停止的容器。如果添加 `-s`，命令还会显示容器大小。
+
+- `rename oldname/id newname`
+  重命名容器。
+
+- `rm containername/id`
+  删除指定的容器。使用 `-f` 选项，即使容器仍在运行命令也会执行。
+
+- `rmi imagename/id`
+  删除指定的镜像。
+
+- `run imagename/id [command]`
+  从指定的镜像创建并启动新容器，然后在容器中执行默认命令或指定的命令。如果本地没有该镜像，则将从 Docker Hub 下载所需的镜像。新容器的属性由无数选项控制。最重要的选项列在此处：
+  - `-d` 在后台执行容器。
+  - `-e var=value` 为容器定义环境变量。
+  - `-h hostname` 为容器分配主机名。
+  - `-i -t` 启用容器的交互式操作。
+  - `--name cname` 为容器分配一个名称。
+  - `--network netname` 使用指定的 Docker 网络。
+  - `-p localport:cport` 将本地端口与容器的端口连接。
+  - `--rm` 在执行结束后立即删除容器。
+  - `-v localdir:cdir` 将本地目录与容器的卷连接。
+
+- `service create|inspect|logs|ls|ps|remove|update`
+  管理 Docker 集群 (swarm) 中的服务。
+
+- `start/stop containername`
+  启动或停止已设置的容器。
+
+- `system df`
+  列出所有镜像、容器和卷的空间需求。
+
+- `system info`
+  显示关于 Docker 安装的综合信息。
+
+- `system prune`
+  删除未运行的容器、未使用的镜像，以及在带有 `--volumes` 选项时的卷。
+
+- `tag containername/id newname:tag`
+  重命名容器。
+
+- `volume ls|inspect|prune|rm`
+  管理卷。
+
+#### 示例
+
+
+
+
+
+`docker run` 根据 Docker Hub 上的官方 MariaDB 镜像创建一个派生容器并将其命名为 `mydb`。如果镜像尚未下载到本地，`docker run` 将处理此操作。该命令第一次执行时需要稍长的时间。
+
+所有数据库文件都保存在 `/home/<username>/varlibmysql`。可以通过宿主机本地端口 13306 访问容器的 3306 端口。
+
+```
+root# mkdir /home/<username>/varlibmysql
+root# docker run -d --name mydb -p 13306:3306 \
+         -v /home/<username>/varlibmysql/:/var/lib/mysql mariadb 
+```
+
+容器将在后台运行，直到通过 `docker stop` 终止：
+
+```
+root# docker stop mydb 
+```
+
+如果你不再再次使用该容器，现在可以删除它：
+
+```bashroot# docker rm mydb 
+```
+
+## dpkg 选项 [filename/packagename]
+
+`dpkg` 处理所有基于 Debian 和 Ubuntu 的发行版中的低级包管理。然而，用户通常不直接使用 `dpkg` 进行包安装，而是使用基于它的命令，通常是 `apt-get`。
+
+*   `--configure` `package name`
+    运行指定包的配置脚本。这通常在安装期间完成，但在某些情况下，可能需要显式执行此步骤。某些包除了自动配置脚本外，还有交互式设置程序。如果你以后再次需要此类设置程序，应该运行 `dpkg-reconfigure package name`。
+
+*   `--get-selections`
+    返回所有已安装包的列表，类似于 `--list`。然而，结果包含的信息信息较少，因此更易读。如果你将列表重定向到文本文件并保存它，稍后可以使用 `--set-selections` 在另一台计算机上安装所有包。
+
+*   `-i` 或 `--install` `filename.deb`
+    安装指定的文件。如果已经安装了旧版本，它将会被替换。包中的配置脚本将被执行。在安装之前，将会确保所有依赖项都已满足。如果不是如此，错误信息将指示缺少哪些包。与其安装所有依赖项，最好运行 `apt install filename.deb`。`dpkg` 允许安装发行版中的包。如果你使用的是 64 位发行版但某个包只有 32 位版本，你必须使用 `--architecture`。
+
+*   `-l` 或 `--list`
+    提供所有已安装包的列表。
+
+*   `-l` 或 `--list` `pattern`
+    提供一个列表。第一列包含两个字母的代码。第一个字母表示所需的状态：
+    `i` = 安装
+    `n` = 不安装
+    `r` = 移除
+    `p` = 锁定
+    第二个字母描述实际状态：
+    `i` = 已安装
+    `n` = 未安装
+    `c` = 已配置
+    `u` = 已解压但未配置
+    `f` = 失败
+    信息来自 Debian 包数据库，它是 `/var/lib/dpkg` 目录下的文件集合。所有已安装包的元信息都存储在那里。
+
+*   `-L` 或 `--listfiles` `package name`
+    返回指定包中所有文件的列表。这仅适用于已安装的包。你可以使用命令 `dpkg-deb --contents filename` 确定未安装包的内容。
+
+*   `-P` 或 `--purge` `package name`
+    移除指定的包，包括所有包文件（即使你已经修改了它们）。
+
+*   `-r` 或 `--remove` `package name`
+    移除指定的包。
+
+*   `-S` 或 `--search` `filename`
+    确定指定文件的来源包。
+
+#### 示例
+
+第一个 `dpkg` 命令安装一个新包。`dpkg --search /etc/sensors3.conf` 确定该文件的来源包。`dpkg --listfiles` 返回该包中所有文件的列表。
+
+```
+root# dpkg --install paketname.deb
+root# dpkg --search /etc/sensors3.conf
+libsensors-config: /etc/sensors3.conf
+root# dpkg --listfiles libsensors-config
+...
+/.
+/etc
+/etc/sensors.d
+/etc/sensors.d/.placeholder
+/etc/sensors3.conf
+... 
+```
+
+### dracut [options] initrd file kernel version
+
+
+
+
+
+`dracut` 负责在 Fedora、RHEL 和 (open)SUSE 上创建 initrd 文件。如果在不带额外参数的情况下执行 `dracut`，它将为 `/boot` 目录中最新的内核创建一个名为 `/boot/initrd-kernelversion` 的 initrd 文件。`dracut` 会考虑 `/etc/dracut.conf` 中的设置以及 `man dracut` 中描述的无数选项。这里仅总结了三个最重要的选项：
+
+- `-d a,b,c`
+  将内核模块 `a`、`b` 和 `c` 集成到 initrd 文件中。通常情况下不需要此选项。`dracut` 会自动识别启动过程需要哪些模块。
+- `-f`
+  覆盖现有的 initrd 文件。
+
+- `--regenerate-all`
+  为系统上安装的所有内核版本创建新的 initrd 文件。
+
+Debian 和 Ubuntu 使用的是 `update-initramfs`。
+
+#### 示例
+
+要为位于 `/boot/vmlinuz-5.7.3` 文件中自编译的内核 5.7.3 手动创建 initrd 文件，你需要运行以下命令：
+
+```
+root# dracut /boot/initrd-5.7.3 5.7.3 
+```
+
+### du [options] [directory]
+
+`du` 输出关于文件或目录内存占用的信息。如果在目录参数中给出文件规范（例如 `*` 或 `*.tex`），`du` 将接收一个指示所有文件大小的列表。然而，如果仅指定目录，`du` 将确定所有子目录的内存占用。内存详情还包含所有子目录的内存占用。最后一个数值表示从指定目录开始的所有文件和子目录的内存占用总量。所有数字均为 KiB。
+
+- `-b` 或 `--bytes`
+  以字节显示大小（而不是 KiB）。
+- `-c` 或 `--total`
+  将最终总计显示为最后一个值。只有当 `du` 应用文件（而不是目录）时，此选项才是必要的，这使得相对容易确定具有特定 ID（例如 `*.pdf`）的所有文件占用了多少内存。
+- `-h` 或 `--human-readable`
+  以易读的格式显示大小。`K`、`M` 和 `G` 分别是 KiB、MiB 和 GiB 的缩写。
+- `--max-depth=n` 或 `--max n`
+  仅输出指定目录层级的目录大小。
+- `-s` 或 `--summarize`
+  仅显示最终总计。只有在显示目录的内存占用时，此选项才有用。
+- `-S` 或 `--dereference`
+  仅显示直接在目录中的内存占用。不考虑子目录中的内存占用。
+- `-x` 或 `--one-file-system`
+  忽略挂载了其他文件系统的目录。（此选项几乎总是总是建议的。在我的电脑上，我定义了相应的别名 `alias du="du -x"`。）
+
+#### 示例
+
+`du` 确定哪些目录占用了多少空间。使用 `--max 1` 时，子目录不会被单独列出，而是包含在结果中。
+
+```
+user$ du -h --max 1
+15M     ./Downloads
+29M     ./Videos
+69M     ./.local
+... 
+```
+
+#### 替代方案
+
+`du` 没有提供排序结果的选项。这正是交互式命令 `ncdu` 可以做的功能。它还提供了使用光标键导航子目录的选项。我强烈推荐这个！
+
+### dumpe2fs device
+
+`dumpe2fs` 提供了关于 ext 文件系统状态的无数内部信息，特别是关于超级块和数据介质块组结构的信息。
+
+- `-b`
+  仅出数据介质上的缺陷块。
+- `-h`
+  提供超级块数据的摘要。
+
+### dvips [options] name.dvi
+
+`dvips` 从 `*.dvi` 文件创建 PostScript 文件。如果在不使用 `-o` 选项的情况下使用 `dvips`，会将生成的 PostScript 文件重定向到默认打印机。
+
+- `-A`
+  仅转换奇页。
+- `-B`
+  仅转换偶页。
+- `-D n`
+  在生成 LaTeX 位图字体时使用 `n` dpi（每英寸点数）。默认分辨率通常为 600 dpi（见 `/etc/texmf/config.ps`）。或者，`n` 也可以是 `300`、`400` 或 `1270`（见 `/usr/bin/mktexpk`）。此选项仅对位图字体有效。PostScript 字体始终是分辨率无关的。
+- `-E`
+  创建一个 EPS 文件（封装的 PostScript），其边界框仅包含实际使用的页面部分。只有当 DVI 文件不超过一页且生成的 EPS 文件随后要嵌入另一个文档时，这才有意义。
+
+
+
+
+
+- `-i -S n`
+  将输出拆分为每个包含 `n` 页的文件。文件会自动编号。
+
+- `-l last page`
+  在指定的页面处结束转换。
+
+- `-o target file`
+  将结果写入指定的文件（而不是将其转发给 lpr 程序）。
+
+- `-p first page`
+  从指定的页面开始转换。
+
+- `-pp n1,n2-n3,n4,n5,n6-n7`
+  打印指定的页面。注意，页列表中不能有空格。
+
+`dvips` 的全局默认设置定义在 `config.ps` 文件中。根据发行版的不同，该文件可以在 `/etc/texmf` 目录或在 `/usr/share/texlive/texmf-dist/dvips/config` 中找到。
+
+## E
+
+### e4defrag [options] file/directory/device
+
+`e4defrag` 对单个文件、整个目录内容或整个 ext4 文件系统进行去碎片。没有 `root` 权限的用户只能对自己的文件进行去碎片。
+
+去碎片意味着将文件块在数据介质上尽可能按连续顺序预留。这可以加快读取访问，特别是在使用传统硬盘时。对于 SSD，去碎片化的效果不那么明显。
+
+- `-c`
+  显示相关文件的去碎片计数器，但不进行任何更改。如果使用此选项对整个文件系统执行 `e4defrag`，命令将在一段时间后返回碎片程度最严重的文件列表。
+
+- `-v`
+  显示每个文件去碎片前后的信息。
+
+### echo [options] string
+
+`bash` 命令 `echo` 输出指定的字符字符串。如果字符串包含空格或特殊字符，则必须用双引号或单引号括起来，取决于是否输出 shell 变量。
+
+- `-e`
+  解释各种反斜杠字符组合，例如将 `\n` 解析为换行，`\c` 为结束，`\t` 解析为制表符（参见 `echo`）。因此，`echo -e` 会输出信号。
+
+- `-n`
+  输出时不换到新行。
+
+#### 示例
+
+以下命令显示 `$PATH` 变量的当前内容：
+
+```
+echo $PATH
+```
+
+### efiboot [options]
+
+在以 EFI 模式安装并启动的系统中，可以使用 `efiboot` 修改各种 EFI 设置。这些设置存储在非易失性内存中。该命令主要用于设置新条目、删除现有条目以及定义定义序列。如果没有，你需要运行 `efiboot`。注意，`efiboot` 模块只有在 EFI 模式启动时才能使用。
+
+- `-b`
+  删除指定的 EFI 条目。可以通过运行不带参数的 `efiboot` 来确定 EFI 条目的数字。
+
+- `-c \grub.efi -L name`
+  创建一个新的 EFI 条目 (`-c`) 并指定相应加载器文件的位置。路径相对于 EFI 分区 `/boot/efi`，且必须使用 `\` 作为目录分隔符。`-L` 指定 EFI 条目的名称（通常是发行版名称，默认为 `Linux`）。新条目会自动成为默认条目。可选，你可以使用 `-p` 指定 EFI 分区的编号（通常为 1），并使用 `-d` 指定第一块硬盘的设备名称（通常为 `/dev/sda`）。
+
+- `-n sad`
+  确定下次重启时使用哪个 EFI 启动项。该设置不是永久的，仅适用于下一次计算机启动。
+
+- `-N`
+  删除通过 `-n` 指定的下次重启设置。
+
+- `-o n1,n2,n3,...`
+  永久设置 EFI 启动项的新顺序。如果你只想指定第一位置的条目，只需输入其数字即可。
+
+- `-p n`
+  确定 EFI 启动分区位于哪个分区（通常在第一个分区）。
+
+- `-q`
+  指定不需要输出（静默模式）。
+
+- `-t n`
+
+
+
+
+指定 EFI 在重启后激活默认启动项之前的等待时间（单位为秒）。然而，取决于 EFI 的实现，在这一等待期间是否会自动显示 EFI 菜单。在我的一台测试电脑上，EFI 菜单通常只在我按下相应的键（如 F8，华硕主板 P8H67-M Evo）时才会显示。
+
+*   `-T` ：删除使用 `-t` 设置的等待时间；即立即激活默认启动项。
+
+#### 示例
+
+如果在不带任何其他选项的情况下执行该命令，它将列出 EFI 启动项以及 EFI 启动加载器的其他参数：
+
+```bash
+root# efibootmgr
+BootCurrent: 0000
+Timeout: 1 seconds
+BootOrder: 0000,0005,0003,0001,0002
+Boot0000* ubuntu
+Boot0001* Hard Drive
+Boot0002* CD/DVD drive
+Boot0003* Windows Boot Manager
+Boot0005* Fedora 
+```
+
+在下一次重启时，Fedora 应该会被启动（这偏离了保存的启动序列，在序列中 Ubuntu 排在第一）。
+
+下一个命令创建一个新的 EFI 启动项。`\` 字符的双倍是必要的，因为 shell 将单个 `\` 解释为特殊字符的标识符。
+
+```bash
+root# efibootmgr -c -l \\EFI\\test\\abc.efi -L abc 
+```
+
+### egrep [options] 搜索模式文件
+
+`egrep` 在指定的文本文件中搜索搜索模式并显示找到的文本段。扩展正则表达式 (EREs) 的规则适用于搜索模式。
+
+`egrep` 本身并不是一个命令，仅仅是带有 `-E` 选项运行 `grep` 命令的别名或小型脚本。GNU 文档建议不要调用 `egrep`，而是直接运行 `grep -E`。更多信息和示例可以在 `grep` 中找到。
+
+### enscript [options] 源文件 -p 目标文件
+
+同名包中的 `enscript` 命令将文本文件转换为 PostScript、HTML 或 RTF 格式。
+
+*   `--color` ：进行彩色语法高亮（必须与 `-E` 结合）。
+*   `-E` ：对程序代码进行语法高亮（**粗体，*斜体***）。
+*   `-f font` ：使用指定的字体（默认使用 10 点 Courier）。
+*   `-M paper size` ：使用指定的纸张格式（例如 `A3`、`A4` 或 `Letter`）。
+*   `--n` ：以 `n` 列格式化文本。因此，`-2` 会导致双列格式化。
+*   `-r` 或 `--landscape` ：以横向格式填充页面。
+*   `-W format` 或 `--language=format` ：指定所需的格式。选项包括 `PostScript`（默认应用）、`html` 和 `rtf`。
+*   `-X charset` ：指定文本的字符集（例如 `ascii`、`latin-n`）。遗憾的是，不支持 Unicode。要将 Unicode 文本转换为 PostScript 格式，必须使用 `paps` 命令。
+
+### epstopdf [options] file.eps
+
+`epstopdf` 将 EPS 文件转换为 PDF 文件并将结果保存为 `file.pdf`。
+
+*   `--exact` ：评估 `ExactBoundingBox`（而不是普通的边界框）。
+*   `--hires` ：评估 `HiresBoundingBox`（而不是普通的边界框）。
+*   `--nocompress` ：不压缩 PDF 数据。
+*   `--outfile=name` ：按指定的文件名保存结果。
+
+### erd [options] 文件
+
+来自 `erdtree` 包的 `erd` 将 `du` 和 `ls` 的功能合并到一个命令中。输出在色彩上具有视觉吸引力（见图 2）。该命令会考虑 `.gitignore` 并不显示被排除的文件。
+
+*   `-.` ：显示隐藏文件。
+*   `-d line|word|block` ：以行、字或块显示文件大小。
+*   `-H` ：以 KiB、MiB 或 GiB 显示文件大小（而不是字节）。
+*   `-i` ：忽略 `.gitignore`；即显示 Git 目录中的所有文件。
+*   `-l` 或 `--long` ：显示访问权限、所有者和组。
+*   `-L` 或 `--level n` ：仅跟踪到指定深子目录。默认情况下，`erd` 会遍历所有子目录。
+*   `-p` 或 `--pattern regex` ：仅显示匹配正则表达式模式的文件。
+*   `-s` 或 `--sort name|rname|size|rsize|access|raccess|mod|rmod` ：根据文件名、文件大小、访问或修改时间排序输出。`r` 变体反转排序顺序。因此 `-s rsize` 会优先显示最大的文件。
+
+
+
+
+图 2 erd 提供了 /etc/systemd 目录概述
+
+### etherwake [options] mac
+
+来自同名包的 `etherwake` 命令向 MAC 地址发送一个特殊的网络包，并尝试从睡眠模式“唤醒”设备。该设备必须支持网络网络唤醒（Wake On LAN）标准。
+
+* `-i` `interface`
+  通过指定的网络接口（默认为 `eth0`）发送数据包。
+
+#### 示例
+
+以下命令激活了我家中的 NAS 设备，该设备位于地下室，通常处于睡眠模式以节省能量：
+
+```
+root# etherwake -i wlp0s20f3  00:11:32:12:DD:0D 
+```
+
+### ethtool [options] device [parameter]
+
+`ethtool` 用于确定或更改以太网适配器的（硬件）参数。如果你只是向命令传递一个接口名称而不包含任何其他选项，你将收到一份最重要的关键数据列表。这些包括支持的端口、链路模式、速度、双工模式等。
+
+* `-p` `device n`
+
+  开启接口 LED `n` 秒。对于具有多个适配器的服务器，这简化了连接插座的识别。对于某些适配器，LED 会在指定时间内闪烁。其他适配器完全不支持 LED 控制——在这种情况下，将显示错误信息 Operation not supported supported。
+
+* `-s` `device para1 value1 para2 value2 ...`
+
+  更改接口的多个参数。允许的参数名称包括 `speed`、`duplex`、`port`、`mdix`、`autoneg` 和 `advertise`。
+
+#### 示例
+
+以下命令显式将网络适配器的速度设置为 100 MBit/秒，激活双工模式并禁用自动协商功能：
+
+```
+root# ethtool -s eth0 speed 100 duplex full autoneg off 
+```
+
+### eval $var
+
+`bash` 命令 `eval` 将变量的内容解释为命令行，使用所有已知的替换机制评估该行，最后执行命令。如果要执行存储在变量中的命令，且该命令包含各种 shell 特字符，则始终需要 `eval`。
+
+#### 示例
+
+存储在 `kom` 变量中的命令在使用 `eval` 之前无法执行。第一次尝试运行命令失败了，因为 `bash` 在将 `$kom` 替换为其内容后不再评估管道字符 `|`。
+
+```
+user$ kom="ls | more"
+user$ $kom
+ls: |: No such file or directory
+ls: more: No such file or directory
+user$ eval $kom 
+```
+
+### exec command
+
+`bash` 命令 `exec` 以参数中指定的命令来替换正在运行的 shell。该命令可以用于启动另一个 shell。这将终止正在运行的 shell。然而，使用不带 `exec` 的普通命令启动，shell 在命令结束后继续运行并接受进一步输入，或继续运行该脚本。
+
+### exfatlabel device [label]
+
+`exfatlabel` 读取或更改 exFAT 文件系统的名称。在许多发行版的 `exfat-utils` 包中可以找到该命令。要设置 exFAT 文件系统，您可以使用 mkfs.exfat。
+
+### exiftool [options] file/directory
+
+来自同名包的 Perl 脚本 `exiftool` 可以提取并修改 JPEG 和 TIFF 文件中的交换图像文件格式（EXIF）数据。EXIF 描述了额外的元数据（例如拍摄照片的时间）是如何存储在位图文件中的。如果调用命令时不带选项，它将仅列出指定文件的所有 EXIF 信息。
+
+* `"-tag"`
+
+  仅读取指定的信息，例如使用 `-CreateDate` 读取创建日期。
+
+* `"-tag=value"`
+
+  用指定的值覆盖信息。
+
+* `"-tag1<tag2"`
+
+  用另一个标签覆盖标签。可以考虑通过 `-d` 指定的格式化字符串（见下例）。
+
+* `-lang de`
+
+  用德语输出 EXIF 元素。
+
+* `-v`
+
+  显示当前正在发生的情况（详细模式）。
+
+其他其他选项可以在 [`exiftool.org`](https://exiftool.org) 找到。
+
+#### 示例
+
+以下命令重命名当前目录下的所有图像。新文件名派自创建日期（例如 `2025-12-31-124500`），加上针对同一秒内创建的多张照片的连续数字（格式字符串 `%.c`），再加上原始文件标识符（格式字符串 `%%e`）。
+
+```
+user$ exiftool -v '-Filename<CreateDate' -d '%Y-%m-%d-%H%M%S-%.c.%%e' .
+user$ ls *.jpg
+2025-02-27-161642-0.jpg  2024-10-27-194700-0.jpg ... 
+```
+
+### exit [return value]
+
+`bash` 命令 `exit` 终止 shell 脚本或正在运行的 shell。如果没有指定返回值，shell 将返回 `0`，即“OK”。
+
+### expand [options] file
+
+`expand` 将指定文本文件中的所有制表符替换为相应数量的空格。如果没有指定选项，`expand` 假设制表符间距为八个字符。结果发送到标准输出。
+
+* `-n`
+
+  将制表符间距更改为 `n` 个字符。
+
+#### 示例
+
+
+
+
+以下命令会移除 `test.java` 中的制表符，并将结果保存到 `test-no-tabs.java`。原始文件在使用编辑器编写的，该编辑器将制表符等同于四个空格。
+
+```
+user$ expand -n 4 test.java > test-no-tabs.java 
+```
+
+### export [options] variable [=value]
+
+`bash` 命令 `export` 将指定的 shell 变量声明为环境变量。这意味着变量在所有调用的命令和子 shell 中都是可用的。可选，还可以为变量赋值。如果调用命令时不带参数，将显示所有的环境变量。
+
+* `-n`
+  将环境变量变回普通 shell 变量。因此，该命令的效果与不带选项使用时的效果完全相反。
+
+### exportfs [options]
+
+`exportfs -a` 命令将 NFS  `/etc/exports` 中的更改报告给运行中的 NFS 服务器。因此，必须执行该命令才能使 `/etc/exports` 中对的更改生效。
+
+### expr expression
+
+`expr string : pattern`
+
+`expr` 对指定的表达式进行算术求值，或对字符字符串进行模式比较。在指定的变量、数字和操作符之间必须有空格！所有允许的操作符的短描述可以在 `expr` 的 `man` 命令中找到。注意，shell 中的许多操作符字符必须使用 `\` 字符保护防止立即求值。
+
+如果你使用 `bash` 作为 shell，也可以在不使用 `expr` 的情况下进行计算：可以通过 `$[expression]` 指定指定算术表达式。`grep` 中描述的通配符可以用于模式。通常，模式必须放在单引号中，以防止 shell 求值特殊字符。
+
+#### 示例
+
+第一个 `expr` 命令执行一个简单的计算。第二个命令返回与模式表达式对应的最大长度。第三个命令从字符字符串中提取模式的括号部分。
+
+```
+user$ expr 3 + 7 \* 19
+136
+user$ expr abcdefghi : 'a.*g'
+7
+user$ expr abc_efg_hij : '.*_\(.*\)_.*'
+efg 
+```
+
+## F
+
+### fail2ban-client [options] command
+
+Fail2ban 是一个安全程序，用于监控登录情况，并在多次错误登录后在一段时间内锁定相关的 IP 地址。如果已经安装了 Fail2ban，可以通过 `fail2ban-client` own 并更改其功能。
+
+* `fail2ban-client get`
+  导入配置。
+* `fail2ban-client reload`
+  重新加载配置。
+* `fail2ban-client set`
+  更改参数。
+* `fail2ban-client start/stop`
+  启动或停止 Fail2ban。
+* `fail2ban-client status`
+  显示监狱（jail）的封禁地址列表。
+  显示封禁列表。
+
+如果使用 `-d` 选项执行 `fail2ban-client`，它将输出配置。除了这里列出的选项，还有无数。选项的最佳设置本身是一门科学。如果你不想处理这些，建议使用图形用户界面进行视频录制。
+
+#### 示例
+
+以下命令显示监狱处于激活状态。服务器设置已生效。
+
+```
+root# fail2ban-client status
+Status
+  Number of failed: 4
+  Jail list: dovecot, postfix
+root# fail2ban-client status sshd
+Status for the jail:
+  Filter
+  Currently failed: 4
+  Total failed: 1513
+  Journal: _SYSTEMD_UNIT=sshd
+  Actions
+  Currently banned: 3
+  Total banned: 1418
+  Banned:
+```
+
+你可以使用 `fail2ban-client set` 解锁被错误封禁的 IP（在这里，我们对此操作）：
+
+```
+root# fail2ban-client set sshd 1.2.3.4 
+```
+
+### fc-list [pattern]
+
+`fc-list` 列出所有匹配（可选）搜索模式的可缩字体。可以使用 `| sort` 对结果排序。
+
+### fdisk [options] [device]
+
+`fdisk` 是一个用于硬盘分区的过时程序。它只能处理具有 MBR 分区表的磁盘！因此，你应该习惯使用 `parted`，它兼容主引导记录 (MBR) 和更现代的 GUID 分区表 (GPT)。
+
+### ffmpeg [inopts] [-i infile] [outopts] outfile
+
+同名软件包中的 `ffmpeg` 命令将视频文件从一种格式转换为另一种格式。指定选项时，注意这些选项仅适用于指定的视频文件。因此，选项的顺序对于命令的正确功能至关重要。除非你作了不同的设置，否则 `ffmpeg` 对结果文件使用与源文件相同的编码器和设置。
+
+除了这里列出的选项，还有无数。选项的最佳设置本身是一门科学。如果你不想处理这些，建议使用图形用户界面进行视频录制，例如 HandBrake。
+
+* `-acodec/-vcodec`
+  指定所需的音频或视频编码器。`ffmpeg -codecs` 提供可用编码器的列表。
+* `-b n`
+  指定每秒秒比特率（默认为 200 kBit/s）。
+* `-f format`
+  使用指定的格式。
+
+
+
+
+
+* `-formats`: 列出支持的格式、编码器、过滤器等。
+* `-r n`: 指定所需的帧率（默认为每秒 25 帧）。
+* `-s size`: 以 `wxh` 的形式指定所需的帧大小（例如 `800x600`）。或者，你可以指定一个预定义的字符字符串（例如 `vga` 或 `hd720`；参见 `man ffmpeg`）。
+* `-ss position`: 从指定的时间开始转换。时间可以用秒为单位，也可以用 `hh:mm:ss[.xxx]` 格式。
+* `-t duration`: 仅转换指定的时间段（而不是整个文件）。时间段的指定方式与 `-ss` 相同。
+* `-target type`: 指定所需的目标文件格式（例如 `vcd`、`dvd` 等）。
+* `-vpre quality`: 为指定的编码器选择具有预定义选项（预设）的文件（例如 `default`、`medium`、`max` 或 `fast`）。可选预设文件通常位于 `/usr/share/ffmpeg` 目录。
+* `-y`: 覆盖现有文件。
+
+#### 示例
+
+
+
+以下命令创建一个 DVD 分辨率的电影文件：
+
+```
+user$ ffmpeg -i in.avi -target pal-dvd -y out.avi 
+```
+
+第二个示例将 OGV 电影文件转换为兼容 YouTube 的 MPEG 文件：
+
+```
+user$ ffmpeg -i in.ogv -vcodec libx264 -vpre medium -acodec copy -y out.mpg 
+```
+
+### fg [process]
+
+`bash` 命令 `fg` 可在前台恢复一个使用 `Ctrl + Z` 中断的进程。如果没有指定进程，`fg` 将适用于上一个被中断的进程或上一个在后台启动的进程。否则，必须通过进程名称或 `bash` 内部作业号（而不是 PID）来指定进程。
+
+除了 `fg process` 外，也允许缩写 `%process`。
+
+### fgconsole [--next-available]
+
+`fgconsole` 输出当前活动控制台的编号。使用 `--next-available` 选项，命令将确定第一个空闲（未使用）控制台的编号。要更改活动控制台，可以使用 `chvt` 命令。
+
+### file [options] file
+
+`file` 尝试确定指定文件的类型。结果是 `file` 返回一个包含文件名和文件类型的字符字符串。`file` 并不评估文件名或其标识符，而是评估文件的内容！
+
+* `-z`: 尝试识别压缩文件的数据类型。
+
+#### 示例
+
+正如文件名所示，`name.jpg` 包含一个 JPEG 位图文件：
+
+```
+user$ file name.jpg
+name.jpg: JPEG image data, JFIF standard 1.02 
+```
+
+### find [path] [search options]
+
+`find` 帮助你搜索文件。搜索时可以考虑各种搜索准则（文件名模式、文件大小、创建日期或最后访问日期等）。甚至可以使用另一个程序（例如 `grep`）对所有符合这些条件的文件应用进一步的筛选标准。例如，通过这种方法可以找到所有在过去三天内编辑过且包含“Graphics programming”文本的 `*.tex` 文件。由于可能的搜索准则很多，`man find` 提供的命令描述长达数页。
+
+以下语法描述明确指了 Linux 上常用的 GNU `find` 实现。它的特点是与其他 Unix 系统的 `find` 变体相比，具有一些细微的语法差异：在那些系统中，必须指定路径，而 GNU `find` 使用当前目录作为起始目录。此外，大多数 `find` 实现要求使用 `-print` 选项来显示搜索结果，而这 GNU `find` 中是不必要的。
+
+#### 通用选项
+
+与大多数其他命令不同，`find` 会自动搜索所有子目录。如果不需要此操作，则必须通过 `-maxdepth` 限制子目录的数量。
+
+* `-depth`: 先处理当前目录，然后处理子目录。根据你认为要查找的文件所在地，此程序可以更快地获得初始结果。
+* `-follow`: 同时也进入符号链接捕捉的目录。
+* `-maxdepth n`: 将搜索限制在 `n` 个目录级。使用 `-maxdepth 1` 时，完全不考虑子目录。
+
+#### 搜索准则
+
+你可以同时指定多个搜索准则。这些准则通过 AND 逻辑连接。一旦第一个准则不满足条件，搜索就会终止——因此准则的顺序会影响命令执行速度。准则可以使用 `\(` 和 `)` 进行分组，通过 `!` 取反，并使用 `-o` 进行逻辑 OR 连接（参见示例）。
+
+
+
+
+
+*   `-anewer` `reference file`
+    用法与 `-newer` 相同（参见该项），但它会考虑最后一次读取的时间。
+
+*   `-atime` `days` 或 `-cmin` `minutes`
+    考虑到最后一次读取（访问）的时间。单位为天或分钟（参见 `-mtime`）。
+
+*   `-cnewer` `reference file`
+    用法与 `-newer` 相同（参见该项），但它会考虑元数据最后更改的时间。
+
+*   `-ctime` `days` 或 `-cmin` `minutes`
+    评估文件元数据（访问权限等）最后一次更改的时间。
+
+*   `-executable`
+    查找可执行的文件，即设置了执行位的文件。
+
+*   `-group` `crime name` 或 `-nogroup` `group name`
+    查找属于指定组（或不属于该组）的文件。
+
+*   `-mmin` `n`
+    用法与 `mtime` 相同，但时间以分钟计算。
+
+*   `-mtime` `days` 或 `-mmin` `minutes`
+    查找内容最后修改恰在 n 天或几分钟前的文件（修改）。如果在数字前输入 `+`，则捕获所有比 n 旧的文件。在前面加 `-` 则返回比 n 新的的文件。`-mtime 0` 返回在过去 24 小时内更改过的文件。
+
+*   `-name` `search pattern`
+    查找匹配指定搜索模式的文件。如果搜索模式包含通配符，必须将其放在单引号中。如果你不想让 `find` 区分大小写，应该使用 `-iname` 选项代替 `-name`。
+
+*   `-newer` `reference file`
+    查找比参考文件更新过的文件，即在参考文件之后创建或修改的文件。例如，你可以使用 `touch` 在备份开始时创建一个 `timestamp` 文件。在稍后的某个时间点进行增量备份时，仅考虑符合 `-newer` 时间戳的文件。
+
+*   `-path` `search pattern`
+    查找匹配指定搜索模式的文件。该选项超出了 `-name` 的范围，因为搜索模式现在不仅影响文件名，还影响文件的路径。此选项比 `find` 第一个参数中的直接路径指定更灵活，因为这里的通配符字符也包含了 `/` 字符。
+
+*   `-perm` `access bits`
+    查找访问位与指定的八进制值完全对应的文件（参见 chmod）。如果八进制值前面有 `-`，则文件可能具有此之外的访问权限。如果在前面加 `/`，则只要搜索的访问位中至少有一个被设置即可。
+
+*   `-size` `file size`
+    指定所需的文件大小。默认规格为 512 的倍数。因此，`-size 3` 表示大小在 1,024 到 1,536 字节之间的文件。额外的字符 `c` 或 `k` 可指定字节或 KiB 为单位的大小。前缀 `+` 包含所有较大的文件，前缀 `-` 包含所有较小的文件。因此 `-size +10k` 返回所有大于 10 KiB 的文件。
+
+    注意在使用此选项时，该命令的逻辑有些独特！`find -size 1M` 会考虑大小在 1 字节到 1 MB 之间的文件。`-size -1M` 仅能找到空文件。使用 `-size +1M`，你得到的结果中是大于 1 MB 的文件。
+
+*   `-type` `character`
+    将搜索限制为特定的文件类型。最重要的字符是 `f`（普通文件）、`d`（目录）和 `l`（符号链接）。
+
+*   `-user` `username` 或 `-nouser` `username`
+    查找属于指定用户（或不属于该用户）的文件。
+
+#### 找到文件时的动作
+
+*   `-exec` `command [options]` {} \;`
+    调用指定的命令，并传递通过目前为止的所有标准找到的文件名。该命令可以执行执行测试以检查文件是否符合额外标准。被 `-exec` 调用的典型程序是 grep。或者，你也可以在这里调用移动、复制或其他处理找到的文件的命令。
+
+
+
+
+`{}` 是文件名的占位符。`;` 表示命令调用结束；也就是说，可以在之后指定额外的 `find` 选项。在 shell 中需要使用 `\` 来防止 `;` 被解释为特殊字符。
+
+*   `-exec command [options] {} +`
+
+    与前几个段落类似，但不会为找到的每个文件调用一次指定的命令。相反，`find` 尝试一次性将尽可能多的结果传递给命令，这样效率高得多。文件数量仅限于命令的最大长度。在当前的 Linux 发行版中，这大约是 200 万个字符。
+
+*   `-ls`
+
+    提供找到的每个文件的详细信息（类似于 ls `-l`）。
+
+*   `-print`
+
+    在屏幕上显示找到的文件名。除非使用 `-exec`，否则该选项是默认设置。
+
+*   `-print0`
+
+    用 0 字节分隔结果列表中的文件名。这允许通过 xargs 对包含空格的文件名进行进一步处理。
+
+*   `-printf format`
+
+    在屏幕上显示找到的文件名和其他信息。格式字符串可用于指定输出格式以及也需要输出的额外信息（例如文件大小或最后修改日期）。格式字符串的语法在 `man` 页面中有描述。
+
+#### 示例
+
+第一个 `find` 命令返回当前目录下的所有文件（包括隐藏文件，但不包含子目录中的文件）；第二个命令只返回普通文件（但不包含隐藏文件）：
+
+```
+user$ find -maxdepth 1 -type f -name '*'
+user$ find -maxdepth 1 -type f -name '[!.]*' 
+```
+
+以下命令搜索 `/etc` 目录搜索过去两周内更改过的文件。命令必须以 `root` 权限运行，因为 `/etc` 中的某些文件普通用户可能无法读取：
+
+```
+root# sudo find /etc -mtime -14 
+```
+
+以下命令删除所有文件名以 `~` 字符结尾的备份文件。`find` 还会考虑所有的子目录。要删除的文件列表通过命令替换 `$(command)` 被重定向到 `rm`。
+
+```
+root# rm $(find . -name '*~') 
+```
+
+如果文件数量很多，运行上述命令时会发生错误：包含所有 `*~` 文件的命令行将变得过长，超过命令行的最大长度。在这种情况下，你必须使用 `find` 命令的 `-exec` 选项或 xargs 命令。`xargs` 变体的优势在于它也可以处理包含空格的文件名。
+
+```
+user$ find -name '*~.jpg' -exec rm {} \; 
+```
+
+在下一个示例中，要将目录中的所有文件设置为所有人可读（参见 chmod）。使用 `find` 为所有子目录设置执行位（但不包括普通文件）稍微困难一些，以便计算机上的每个人都能使用 `cd` 切换目录。命令末尾的 `+` 意味着 `chmod` 并不是为每个目录单独调用，而是将尽可能多的目录一次性传递给 `chmod`。
+
+```
+root# cd /directory/for/all
+root# chmod -R a+r *
+root# find . -type d -exec chmod a+x {} + 
+```
+
+最后一个示例使用 touch 创建了一个日期为 2025/1/1 的引用文件和目录 `../new-images`。自 2025/1/1 以来在本地目录下创建的所有图像现在都被复制到那里。当前目录中不能创建 `new-images`；否则 `find` 也会捕捉到复制在那的文件。此外，请注意文件标识符 `*.jpg` 和 `*.png` 之间的 OR 链接。
+
+```
+user$ touch 2025 -t 202501010000
+user$ mkdir ../new-images
+user$ find . -newer 2025 \( -name \*.png -o -name \*.jpg \) \
+       -exec cp {} ../new-images +; 
+```
+
+更多 `find` 示例可以在 grep 和 xargs 命令的描述中找到。
+
+#### 替代方案
+
+`find` 是一个重要的命令，因为它很难使用，没有人能记住所有可能的选项。因此，有很多尝试创建更方便的 `find` 替代方案。我在本书中介绍了两个：
+
+*   erd 将 `du`、`find`、`ls` 和 `tree` 的最重要功能合并到一个命令中。
+
+*   fzf 则在交互式文件选择方面表现出色。
+
+另一个选项是 `fd`（参见 [`github.com/sharkdp/fd`](https://github.com/sharkdp/fd)），它与 `find` 非常相似。最大的优势是选项更容易记忆，并且搜索结果以颜色显示。
+
+### findmnt [options] [device/mountpoint]
+
+不带参数的 `findmnt` 返回集成到目录树中的所有文件系统的树形列表。结果还包含用于内部信息交换的各种 `/dev``/proc`/`/sys` 和 `/run` 文件系统。
+
+通过指定设备或挂载点，列表将缩小为这种方式选择的文件系统。其他允许的条目是文件系统的 UUID 或名称（标签），或者是 `major:minor` 表示法中的设备的主次号。
+
+*   `-A`
+
+    显示所有文件系统。
+
+
+
+
+
+*   `-l`
+    以表格形式显示结果（而非树形结构）。
+*   `--mtab` 或 `--fstab`
+    仅考虑 `/etc/mtab` 或 `/etc/fstab` 中的条目。默认情况下，`findmnt` 会考虑伪文件 `/proc/self/mountinfo` 中的内核挂载表。
+*   `-o columns` 或 `--output columns`
+    按列仅输出 `columns` 中指定的信息。允许的列代码包括 `SOURCE`：
+    设备
+    *   `TARGET`: `mount` 路径
+    *   `FSTYPE`: 文件系统类型
+    *   `OPTIONS`: 所有的 `mount` 选项
+    *   `SIZE`: 文件系统的大小
+    更多代码可以通过 `findmnt --help` 查看。列代码之间用逗号分隔，例如 `-o SOURCE,TARGET,FSTYPE`。不允许包含空格！
+*   `-t typelist` 或 `--types typelist`
+    仅返回指定类型的文件系统。使用 `-t ext2,ext3,ext4` 时，只考虑版本为 2、3 和 4 的 ext 文件系统。
+
+#### 示例
+
+`findmnt` 显示测试计算机上所有活跃的文件系统：
+
+```
+root# findmnt
+TARGET                    SOURCE      FSTYPE       OPTIONS
+/                         /dev/sda1   ext4         rw,relatime,errors=...
+ /sys                     sysfs       sysfs        rw,nosuid,nodev,noexec,...
+   /sys/kernel/security   securityfs  securityfs   rw,nosuid,nodev,noexec,...
+   /sys/fs/cgroup         tmpfs       tmpfs        ro,nosuid,nodev,noexec,...
+ ... 
+```
+
+### firewall-cmd 
+
+`firewall-cmd` 读取或更改 Fedora、RHEL 和 SUSE 发行版的防火墙配置。`firewall-cmd` 与后台运行的 `firewalld` 程序进行通信。该程序为每个网络接口分配一个区域（zone）。`firewalld` 意义上的区域是针对特定用途的规则集合。以下列表描述了最重要的区域：
+
+*   `block`
+    阻塞所有网络流量；发送者将收到一个 ICMP 错误消息。
+*   `drop`
+    阻塞所有网络流量；发送者不会收到通知。
+*   `external`
+    阻塞大多数端口并激活地址伪装（IPv4）。该区域用于路由器上连接互联网的接口。
+*   `FedoraWorkstation` 和 `FedoraServer`
+    默认用于 Fedora 安装的网络接口。`FedoraServer` 阻塞除 SSH 和 DHCP 客户端以外的所有服务。`FedoraWorkstation` 的容忍度得多，还接受 Samba 客户端连接以及 1025 到 65535 之间所有端口的流量。
+*   `home` 和 `internal`
+    阻塞大多数端口，但接受 Samba（仅作为客户端）、CUPS 以及 Zeroconf/Avahi/mdns。这些区域用于被认为相当安全的本地网络计算机。如果你想使用此区域并自己共享 Windows 网络目录，还必须启用 Samba 服务。
+*   `public`
+    与 `home` 类似，但也会阻塞 CUPS 和 Samba 客户端功能。该区域用于不安全网络中的互联网使用，例如在公共无线网络中。
+*   `trusted`
+    允许任何网络流量。该区域用于安全性良好的本地网络，但不适用于 Wi-Fi 连接。
+
+通常，`firewall-cmd` 仅动态进行更改。如果需要永久更改，必须指定 `--permanent` 选项。然后规则将保存在 `/etc/firewalld` 目录中。
+
+#### 选项
+
+*   `--add-interface=name` 或 `--remove-interface=name`
+    将指定接口分配给默认区域、由 `--zone` 选项指定的区域或移除此分配。在将接口分配给新区域之前，必须显式移除之前的分配！
+*   `--add-prot=name` 或 `--remove-port=name`
+    允许在 `--zone` 指定的区域中使用 TCP 端口或阻塞该端口。
+*   `--add-service=name` 或 `--remove-service=name`
+    允许在 `--zone` 指定的区域中使用网络服务（例如 `https` 或 `ssh`）或阻塞该服务。
+*   `--change-interface=iface`
+    活动区域分配给指定的网络接口。要将另一个区域连接到接口，必须传递 `--zone=name` 选项。
+*   `--get-active-zones`
+    列出所有正在使用的区域并指示哪些网络接口被分配到了这些区域。
+*   `--get-default-zone`
+    确定默认区域。
+*   `--get-services`
+
+
+
+
+
+列出 `firewall-cmd` 已知的所有网络服务。你可以通过 `--add-interface` 指定结果名称（如 `http`、`ssh` 等）。
+
+* `--get-zones`
+  列出 `firewall-cmd` 已知的所有区域（zones）。
+
+* `--get-zone-of-interface=name`
+  确定分配给指定网络接口的区域。
+
+* `--list-all-zones`
+  提供所有定义的防火墙区域的关键数据，并指定哪些网络接口分配到了这些区域。
+
+* `--list-ports`
+  列出当前激活防火墙区域中允许（即未被阻止）的端口。警告：该命令仅返回未分配服务名称的端口。端口 22 永远不会出现在结果中，因为它分配给了 `ssh` 服务。你可以通过 `--list-all-zones` 或 `--list-services` 选项获取未被阻塞的服务。
+
+* `--list-services`
+  列出当前激活防火墙区域中允许（即未被阻止）的所有网络服务。
+
+* `--permanent`
+  将更改永久保存到防火墙配置中。然而，更改不会直接应用。如果你想立即且永久地进行更改，必须运行两次相关命令：一次带有 `--permanent`，一次不带该选项。
+
+* `--set-default-zone=name`
+  定义默认区域。它适用于所有未显式分配到不同区域的网络接口。
+
+* `--state`
+  确定 `firewalld` 是否正在运行。
+
+* `--zone=name`
+  指示要更改、编辑或读取哪一个区域。
+
+#### 示例
+
+以下命令首先确定网络接口 `enp0s3` 被分配到了哪个区域，然后将该接口分配到 `trusted` 区域。这意味着可以通过此接口使用所有服务。这些更改不是永久的，因此它们仅持续到下一次计算机重启或防火墙守护进程重启。
+
+```
+root# firewall-cmd --get-zone-of-interface=enp0s3
+public
+root# firewall-cmd --zone=public --remove-interface=enp0s3
+success
+root# firewall-cmd --zone=trusted --add-interface=enp0s3
+success 
+```
+
+在第二个示例中，第一个命令用于确定网络接口 `enp0s5` 被分配到了哪个区域。该计算机旨在通过此接口向外部世界提供 Web 服务器。但并不是简单地将接口分配到 `trusted` 区域并启用所有其他可能的服务，而是永久地更改了该区域的规则（此处为 `FedoraWorkstation`）：该区域现在允许 HTTP 和 HTTPS 协议。`reload` 命令激活了区域的更改。
+
+```
+root# firewall-cmd --get-zone-of-interface=enp0s5  
+(determine active zone)
+FedoraWorkstation
+root# firewall-cmd --permanent --zone=FedoraWorkstation --add-service=http
+root# firewall-cmd --permanent --zone=FedoraWorkstation --add-service=https
+root# firewall-cmd --reload 
+```
+
+## flatpak [options] 命令
+
+`flatpak` 帮助安装、卸载和管理 Flatpak 包。这是一种新的包格式，旨在简化独立于发行版包源的桌面应用程序的安装。最大的官方 Flatpak 仓库是 [`flathub.org`](https://flathub.org)。
+
+与传统软件包相比，它具有额外的安全机制，例如沙箱。然而，Flatpak 包通常很大，因为它们包含了所有必要的库，并且没有考虑到任何现有的传统软件包。因此，安装多个 Flatpak 通常伴随着大量的冗余。
+
+Flatpak 包通常直接安装在桌面中，例如在 Gnome“软件”程序或浏览器中。程序在开始菜单或 Gnome 的活动视图中启动。因此，很少需要使用 `flatpak` 命令。
+
+Flatpak 在 Fedora 和 RHEL 中默认可用。然而，该命令可以轻松地安装并使用其他发行版，并旨在成为一个独立于发行版的 Linux 软件发行平台。作为 Flatpak 的替代方案，可以使用 Snap 包，Snap 更受 Ubuntu 青睐（参见 snap）。
+
+尽管 `flatpak` 命令不需要 `root` 权限，但在执行期间你必须使用自己的密码反复进行身份验证（对于单个操作，如安装包，有时需要验证几十次）。
+
+* `info package name`
+  显示已安装包的详情。注意，包名始终由多个部分组成，例如 `org.gnome.gedit2`。
+
+* `install [package source] package name`
+  从之前设置的包源安装所需的包。
+
+* `list [--system | --user]`
+  列出所有已安装的 Flatpak（如果适用，仅列出在系统级或当前用户安装的）。带有额外的 `-d` 选项，`flatpak` 还会显示包的大小和其他细节。
+
+* `remote-add [--if-not-exists] package source url`
+  设置包源。`--if-not-exists` 选项在包源之前已定义的情况下避免错误信息。
+
+* `remotes`
+  列出所有已的包源。
+
+* `search Flatpacks term`
+  在配置的包源中搜索在包名或描述中包含搜索词的包。
+
+* `uninstall package name`
+
+
+
+
+
+在不再进一步询问的情况下删除指定的包。你可能需要输入 `flatpak list` 显示的完整包名，例如 `flatpak uninstall org.gimp.GIMP/x86_64/stable`。
+
+* `update [--app package-name]`
+    更新所有已安装的 flatpak 包，或仅更新通过 `--app` 指定的包。
+
+#### 示例
+
+以下命令在系统级别安装 Visual Studio Code 编辑器，以便计算机上的所有用户都可以使用。请注意这些平台包惊人的下载大小。不久前，下载整个 Linux 发行版竟然还比这小得多！
+
+```
+root# flatpak install  com.visualstudio.code
+Required runtime for com.visualstudio.code/aarch64/stable (runtime/org.freedesktop.Sdk/aarch64/23.08) found in remote flathub
+Do you want to install it? [Y/n]: y
+
+com.visualstudio.code permissions:
+    ipc             network         pulseaudio              ssh-auth
+    x11             devices         devel
+    file access [1] dbus access [2] system dbus access [3]  tags [4]
+
+    [1] host
+    [2] ...
+
+    ID                                   ...  Remote    Download
+ 1\. org.freedesktop.Platform.GL.default       flathub    146 MB
+ 2\. org.freedesktop.Platform.GL.default       flathub    146 MB
+ 3\. org.freedesktop.Platform.openh264         flathub    884 kB
+ 4\. org.freedesktop.Sdk.Locale                flathub    366 MB (partial)
+ 5\. org.freedesktop.Sdk                       flathub    534 MB
+ 6\. com.visualstudio.code                     flathub     98 MB
+Proceed with these changes to the system installation? [Y/n]: y 
+```
+
+`flatpak search` 允许你在所有 Flatpak 源中搜索包。遗憾的是，没有官方的 Spotify 播放器，但有各种兼容的音频播放器：
+
+```
+user$ flatpak search spotify
+Name                      Description                      ...    Remotes
+ncspot                    Cross-platform ncurses Spotify          flathub
+Moosync                   Customizable music player               flathub
+Spot                      Listen to music on Spotify              flathub
+Oomox theme designer      customize icons, xrdb and GTK           flathub
+Tauon Music Box           Play your music with style              flathub
+Clementine Music Player   Plays music files and internet          fedora,flathub 
+```
+
+## fold [options] file
+
+`fold` 将长度为 80 字符的文本行折行并显示结果。
+
+* `-s`
+    在空格处折行。
+
+* `-w n`
+    设置最大宽度为 `n` 字符。如果不指定，默认为 80。
+
+## for [list]; do
+
+`for` 循环用于遍历列表中的元素。
+
+#### 示例
+
+`for` 循环可以用于 shell 脚本，也可以直接在终端中执行。该示例可以处理特定的文件名。
+
+```
+user$ for i in *.jpg; do echo $i;
+```
+
+### free [options]
+
+`free` 显示内存（内存和交换空间）的使用情况。
+
+* `-h`
+    以易读的单位显示。
+
+* `-m`
+    以 MiB 为单位。
+
+* `-g`
+    以 GiB 为单位显示。
+
+#### 示例
+
+在下面的示例中，`LANG` 变量被重置以运行 `free`。这防止了列名的德语翻译导致混淆。
+
+```
+user LANG= free –h
+
+          total    used    free    shared  buff/cache   available
+Mem:       1.9G    1.1G    171M       10M        686M        677M
+Swap:      947M    6.5M    940M 
+```
+
+### fsck [options] device
+
+`fsck` 检查文件系统的一致性并在必要时进行修复。只有 `root` 用户可以运行它。根据文件系统的类型，`fsck` 会调用相应的程序。在运行 `fsck` 之前，务必阅读相关的 `man` 手页！
+
+在检查文件系统之前，必须先卸载它。要检查根文件系统，首先需要执行 `touch /forcefsck` 然后重启计算机。包含错误的文件碎片将保存在 `lost+found` 目录中。
+
+
+
+
+
+* `-b n`
+  读取备用超级块 `n`。
+* `-n`
+  对所有查询回答 `n` (no) 且不进行任何更改。
+* `-p`
+  在不进行提示的情况下对文件系统进行修复（更改）。
+* `-y`
+  对所有查询回答 yes 并进行更改。
+
+### fstrim [options] mount directory
+
+`fstrim` 为 `mount` 挂点指定的文件系统运行 trim 命令。默认情况下，文件系统不再使用的所有数据块都会被报告给数据介质。
+
+只有当数据介质为固态硬盘 (SSD)，且文件系统没有在每次删除操作时自动运行 trim 命令时，该命令才有用（参见 ext4、Btrfs 和 XFS 文件系统的挂载选项 `discard`）。可以通过 cron 任务每天或每周运行 `fstrim`，以避免因 trim 命令执行过于频繁或完全不执行导致的性能损失。
+
+* `-l` 或 `--length n`
+  仅报告指定区域的未使用块。
+* `-m` 或 `--minimum n`
+  仅当未使用连续块的大小至少为 `n` 字节时才报告它们。这可以显著加快命令的执行速度。
+* `-o` 或 `--offset n`
+  仅从指定的偏移量（从文件系统开始计算）报告未使用块。规格可以使用相应的二进制 KiB、MiB、GiB 或 TiB 后缀（`K`、`M`、`G` 或 `T`）或十进制 KB、MB 等（`KB`、`MB`、`GB` 或 `TB`）。
+* `-v` 或 `--verbose`
+  返回使用 trim 命令报告的字节总数。
+
+#### 示例
+
+以下命令向 SSD 报告至少 64 KiB 的所有空数据块：
+
+```
+root# fstrim -m 64K /
+/: 13493051392 bytes were trimmed 
+```
+
+### ftp [options] ftpserver
+
+`ftp` 建立与指定 FTP 服务器的连接。登录后，你可以交互式地在本地计算机和 FTP 服务器之间传输文件。这里总结了交互式使用最重要的命令：
+
+* `?`
+  显示所有 FTP 命令列表
+* `!`
+  启用执行 shell 命令。
+* `ascii`
+  切换到文本模式。
+* `binary`
+  切换到二进制模式。
+* `bye` 或 `quit`
+  终止 FTP。
+* `cd dir`
+  切换到指定的 FTP 目录。
+* `get file`
+  将文件从 FTP 存档传输到当前目录。
+* `help command`
+  显示指定命令的概要信息。
+* `lcd dir`
+  更改本地计算机上的当前目录。
+* `ls`
+  显示 FTP 服务器上的文件列表。
+* `lls`
+  显示本地计算机上的文件列表。
+* `mget *.pattern`
+  将所有匹配的文件从 FTP 存档传输到当前目录（另见 `prompt`）。
+* `open`
+  建立与远程计算机的连接（如果第一次尝试没有成功）。
+* `prompt`
+  在 `mget` 传输每个文件之前激活或取消查询。
+* `put file`
+  将文件从当前目录传输到 FTP 存档（上传）。
+* `reget file`
+  继续传输已部分发送的文件。
+
+### [function] name
+
+{{commands}
+
+可选的 `function` 关键字定义了 `bash` 脚本中的子函数，可以像新命令一样被调用。你可以使用 `local` 在函数内部定义局部变量。函数也可以递归调用。函数必须在第一次调用之前声明！
+
+参数可以传递给函数。与许多编程语言不同，参数不能放在括号中。在函数内部，可以从变量 `$1`、`$2` 等获取参数。
+
+#### 示例
+
+以下微脚本输出 Hello World, abc!：
+
+```bash
+#!/bin/bash
+function myfunc {
+  echo "Hello World, $1!"
+}
+
+myfunc "abc" 
+```
+
+### fuser file name
+
+`fuser` 确定访问指定文件并可能阻塞其他程序访问程序。通常，`fuser` 只返回程序的进程号 (PID)。
+
+* `-k`
+  终止所有访问该文件的进程。
+* `-m`
+  列出访问指定为设备或通过文件的文件系统中任何文件的进程。
+* `-v`
+  还指定了哪个用户正在执行该进程（详细模式）。
+
+在输出中，进程号后面跟着一个表示访问类型的字母：
+
+* `c`
+  进程已将该目录设置为当前目录。
+
+
+
+
+
+* `e`
+  文件正在执行（正在运行可执行文件）。
+
+* `f`
+  文件以可读权限打开（打开的文件）。此字母仅在详细模式（verbose mode）下显示。
+
+* `F`
+  文件以可写权限打开。`F` 同样仅在详细模式下显示。
+
+* `m`
+  文件作为库或通过内存映射使用。
+
+* `r`
+  目录被用作根目录。
+
+`fuser` 的替代方案是 `lsof` 命令。
+
+#### 示例
+
+尝试从文件系统卸载 USB 闪存时失败。这是由于用户 `kofler` 的进程 32664 导致的，该进程正在使用 `less` 读取 USB 闪存上的文本文件。
+
+```
+root# umount /media/kofler/usb_backup
+umount: /media/kofler/usb_backup: target is busy.
+root# fuser -v -m /media/kofler/usb_backup
+                              USER      PID ACCESS   COMMAND 
+/run/media/kofler/usb_backup  kofler    32664 f....  less 
+```
+
+### fwupdmgr 命令
+
+命令名称 `fwupdmgr` 代表固件更新管理器（firmware update manager）。该命令允许你在现代 Linux 发行版中启动固件、BIOS 或 EFI 更新`fwupdmgr` 要求后台服务 `fwupdmgr` 运行。
+
+* `get-devices`
+  提供所有可以提供更新的组件的详细列表，以及最后一次执行的更新和当前可用更新的列表。然后你可以选择将状态报告上传到网站 `https://fwupd.org`。
+
+* `downgrade device`
+  撤销更新并重新激活旧版本。
+
+* `refresh`
+  更新更新信息（数据源：`https://fwupd.org`）。
+
+* `update device`
+  启动所有组件或仅指定组件的更新。`fwupdmgr` 仅准备更新。在大多数情况下，电脑下次重启之前无法执行更新。
+
+#### 示例
+
+第一个命令更新更新信息。第二个命令显示了类型为 `20MD0001GE` 的联想笔记本电脑的状态报告。
+
+```
+root# fwupdmgr refresh
+Fetching metadata https://cdn.fwupd.org/downloads/firmware.xml.gz
+Fetching signature https://cdn.fwupd.org/downloads/firmware.xml.gz.asc
+Successfully downloaded new metadata: 5 local devices supported
+
+root# fwupdmgr get-devices
+20MD0001GE
+  Thunderbolt Controller:
+       Device ID:           02dcd173032b1c4f136f185c0564b059a2e3d305
+       Summary:             Unmatched performance for high-speed I/O
+       Current version:     39.00
+       ...
+   PM981 NVMe Samsung 2048GB: ...
+   SAMSUNG MZVLB256HAHQ-000L7: ...
+   System Firmware: ...
+   UEFI Device Firmware: ...
+
+ 未正确更新设备：
+
+   * ThinkPad P1 Thunderbolt Controller (23.00 -> 39.00)
+
+ 已成功更新的设备：
+
+   * UEFI Device Firmware (192.24.1314 -> 192.35.1427)
+   * 20MD0001GE System Firmware (0.1.24 -> 0.1.25)
+   * UEFI Device Firmware (192.35.1427 -> 192.47.1524)
+上传固件报告有助于硬件供应商快速识别真实设备上更新的失败与成功。现在上传报告吗？
+（需要连接网络）：
+  0. 现在不上传报告，但在未来的更新中再次提示
+  1. 不上传报告，且以后在更新中不再请求上传报告
+  2. 仅在此次上传报告，但在未来的更新中再次提示
+  3. 本次上传报告，并在完成未来的更新后自动上传报告
+```
+
+最后一个命令启动了 Thunderbolt（雷电）控制器的更新：
+
+```
+root# fwupdmgr update
+Upgrade available for Thunderbolt Controller from 39.00 to 50.00
+更新期间 Thunderbolt 控制及所有连接的设备可能无法使用。继续更新吗？ [Y|n]: y 
+```
+
+### fx file.json
+
+`fx` 是一个交互式读取或搜索 JSON 文件的命令。JSON 文档的组件有颜色标记，并且可以展开和折叠。
+
+你可以通过 Docker 镜像或 GitHub 项目页面（`https://github.com/antonmedv/fx/releases`）找到极其非常有命令。如果你想自动处理 JSON 文件，`jq` 是更好的选择。
+
+### fzf [options]
+
+来自同名包的 `fzf` 代表模糊查找（fuzzy finder），是一个用于交互式搜索和选择文件的命令。如果启动命令时不带任何其他选项，它会搜索当前目录（类似于 `find . –type f`）并显示结果列表。通过输入搜索模式，你可以以极快的速度交互式过滤结果，然后使用光标键或 Tab 键选择一个或多个文件（多选要求启动 `fzf` 时带有 `-m` 选项）。回车键结束命令并显示文件名。
+
+这个基础功能听起来相当普通。`fzf` 的强大之处在于它与 shell 的集成。只要 `fzf` 安装正确，可以通过输入 `**` Tab 触发 `fzf`，允许命令的交互式补全：使用 `emacs **` Tab 可以打开之前选择的文件；使用 `kill -9 **` Tab，`fzf` 提供进程选择；使用 `ssh **` Tab 则返回主机名。Ctrl+T 列出所有文件，Ctrl+R 列出最近执行的命令，Alt+C 切换子目录。
+
+`fzf` 还有无数其他快捷键和功能，由于空间限制我在这里无法详述。相反，我建议你观看许多关于 `fzf` 的视频。尽管我通常不是视频粉丝，但在这种情况下它是值得的！
+
+因此，`fzf` 并没有取代 `find` 的所有功能。但一旦你习惯了 `fzf` 的便利，你对 `find` 的需求会少很多。
+
+## G
+
+### getcap [options] file name
+
+
+
+
+
+`getcap` 来自 `libcap` 或 `libcap-progs` 软件包，用于确定可执行文件允许程序执行的操作（能力/capabilities）。尽管 Linux 内核已支持能力多年，但此函数仅被零星使用。
+
+能力需要需要支持扩展属性的文件系统。对于 ext 文件系统，必须使用 `mount` 选项 `user_xattr`。
+
+#### 示例
+
+某些发行版对 `ping` 命令使用了能力。执行此命令实际上需要 `root` 权限。我们现在不再像过去那样简单地设置 `setuid` 位（因为这通常会导致安全问题），而是转而通过 `setcap` 为 `ping` 分配 `cap_net_raw+ep` 权限。这允许该命令使用基础网络功能，即使是由普通用户执行的。
+
+以下是在 Fedora 上获取的 `getcap` 结果。你可以看到只有极少数的命令和 Gnome 程序使用了能力。
+
+```
+user$ getcap /usr/bin/*
+/usr/bin/arping cap_net_raw=p
+/usr/bin/clockdiff cap_net_raw=p
+/usr/bin/newgidmap cap_setgid=ep
+/usr/bin/newuidmap cap_setuid=ep 
+```
+
+关于如何自行设置能力的示例，可以在 `setcap` 命令的描述中找到。
+
+### getenforce
+
+`getenforce` 提供 SELinux 系统的状态。可能的结果有 `Enforcing`、`Permissive` 或 `Disabled`。要更改状态，可以使用 `setenforce` 命令。
+
+### getfacl [options] file name
+
+`getfacl` 确定指定文件或目录的扩展访问权限。只有在文件系统支持访问控制列表 (ACLs) 时，它才有效。对于 ext3/ext4 文件系统，必须使用 `mount` 选项 `acl`。可以在 `setfacl` 命令的描述中找到示例。
+
+* `-d`
+    显示标准 ACL。
+
+* `-R`
+    显示所有子目录中所有文件的 ACL。
+
+* `--skip-base`
+    对于仅适用常规 Unix 访问权限但没有 ACL 规则的文件不返回任何结果。
+
+* `--tabular`
+    以表格形式显示 ACL。
+
+### getfattr [options] file name
+
+`getfattr` 确定指定文件或目录的扩展属性。只有在文件系统支持扩展属性时（ext 文件系统使用 `mount` 选项 `user_xattr`），它才有效。可以在 `setfattr` 命令的描述中找到示例。
+
+* `-d`
+    提供所有用户属性及其设置的列表。
+
+* `-m attribute pattern`
+    返回名称与指定模式匹配的属性。
+
+* `-n attribute name`
+    返回指定属性的值。必须指定完整的属性名称，例如 `user.attrname`。
+
+* `-R`
+    显示所有子目录中所有文件的扩展属性 (EAs)。
+
+### getopts "format"
+
+集成在 `bash` 中的 `getopts` 命令有助于在脚本编程期间处理传递的选项和参数。你向命令传递一个字符字符串，其中列出了几个单字母选项，然后在循环中运行 `getopts`。它会在每次循环通过时返回一个找到的选项，直到所有选项都处理完毕（见下面的代码示例）。
+
+以下规则适用于格式字符串：
+
+* `"abc"`
+    期望以任何顺序出现选项 `-a`、`-b` 和 `-c`，也可以是组合形式（例如用 `-bc` 代替 `-b -c`）。
+
+* `":abc"`
+    工作原理与 `"abc"` ，但对无效参数不返回任何错误信息。
+
+* `"ab:c:"`
+    在 `b` 和 `c` 后面带有冒号，表示这些选项中的每个都需要一个参数（例如 `-b 1024 -c 3`）。在评估期间，通过选项传递的参数可以从 `$OPTARGS` 变量中读取。
+
+#### 示例
+
+在处理选项期间，`$OPTIND` 引用参数列表下一个元素。只要先传递选项后传递参数，就可以使用 `shift` 从 `$*` 中移除所有已处理的选项（`shift <n>` 从 `$*` 中的前 `n` 个元素。但由于 `$OPTIND` 已经引用了下一个元素，因此只能从参数列表中弹出 `$OPTIND -1` 个元素）。
+
+```
+#!/bin/bash
+while getopts ":ab:c:" opt; do
+    case $opt in
+       a) echo "Option a";;
+       b) echo "Option b with parameter $OPTARG";;
+       c) echo "Option c with parameter $OPTARG";;
+       ?) echo "Invalid option"
+          echo "myscript [-a] [-b data] [-c data] [...]"
+          exit 2
+          ;;
+    esac
+done
+# remove processed options from $*
+shift $(( $OPTIND - 1 ))
+echo "More parameters: $*"
+```
+
+#### 替代方案
+
+`getopts` 只能处理单字母选项，不能处理像 `--search` 的长选项。要处理此类选项，可以使用 `getopt` 命令，它与 `bash` 是独立的。它通常包含在 `util-linux` 软件包中。
+
+### git command [options/parameters]
+
+
+
+
+
+同名软件包中的 `git` 命令控制 Git 版本管理系统。它最初仅为内核开发设计，但现在是开源世界之外使用最广泛的版本管理系统。
+
+Git 仓库中的文件可以处于三种状态：
+
+*   **committed（已提交）**：
+    本地文件已存储在仓库中，且之后未发生过更改。
+*   **modified（已修改）**：
+    本地文件已更改，但更改尚未通过 commit 保存到仓库中。
+*   **staged（已暂存）**：
+    已修改的文件将被包含在后续的提交中。
+
+### 命令
+
+* `add files/directories`
+    将文件或目录添加到仓库，或将仓库中已修改的本地文件标记为下次提交。这会将文件的状态从 `modified` 变为 `staged`。
+* `branch [-v]`
+    列出本地仓库分支，并在当前分支前用星号标记。使用 `-v` 选项，`git` 还会显示每个分支的最后一次提交。
+* `branch Linux name`
+    创建一个新的仓库分支。要切换到此分支，还必须运行 `git checkout branch name`。
+* `branch -d branch name`
+    删除指定的分支。只有当该分支之前连接到另一个分支或 `HEAD` 时，命令才会执行。如果想无视合并状态删除分支，可以使用 `-D` 选项。
+* `branch -u reponame/branch name`
+    永久设置当前分支的上游仓库，并将链接保存到 `.git/config` 中。或者，也可以在第一次 push 过程中使用 `git push -u repo branch` 设置上游仓库。
+    按照习惯，本地和远程分支的名称是相同的，但并非强制要求。该链接使得 `git pull` 和 `git push` 自动连接相关的本地分支，从而避免了你为这些命令重复指定目标仓库的麻烦。
+* `checkout [-b] branch name`
+    切换到指定的分支。这将将工作目录中的所有文件设为它们最后一次提交到该分支时的状态。使用 `-b` 选项，会先创建指定的分支然后激活它。因此，`git checkout -b b1` 对应于 `git branch b1; git checkout b1`。
+* `clone repo-url [directory]`
+    下载外部 Git 仓库并在当前或指定的目录中创建本地副本。取决于通信是通过 HTTPS 还是 SSH 进行，URL 的格式如下：
+    ```
+    https://github.com/<account>/<reponame>.git
+    git@github.com:<account>/<reponame>.git 
+    ```
+    根据你的仓库所在位置，你自然需要将 `github.com` 替换为你的 Git 平台。将来，外部仓库将通过 `origin` 名称进行引用。Git 允许使用通过 `git` `remotely` 管理的多个外部仓库。
+* `commit [-a] -m 'snapshot description'`
+    在 Git 仓库中创建一个新的本地快照（即“commit”）。自上次提交以来的所有更改都将保存在其中，但前提是文件状态必须为 `staged`。因此，你必须先使用 `git add` 将所有要保存的文件标记为 `staged`。
+    使用附加选项 `-a`，你可以避免这个麻烦，因为 `git commit` 此时会考虑所有对已版本化文件的更改。（但是，新创建的文件会被忽略。）
+    在第一次提交之前，你必须使用 `git config` 在 Git 配置中保存你的姓名和电子邮件地址。这些数据与其他元数据一起存储在 commit 中。
+    当前分支中的最后一个快照始终命名为 `HEAD`。倒数第二个快照可以使用 `HEAD^` 访问，倒数第三个可以使用 `HEAD²`，依此类推。（更多关于引用其他提交引用的示例请参见 Table 1。）
+* `config --list`
+    确定活动目录中所有有效的 Git 设置并显示它们。使用附加选项 `--show-origin` 时，命令还会指定设置的来源，即该设置是针对仓库本地制作的还是全局的。
+* `config [--global] parameter value`
+    在本地 Git 仓库的 `.git/config` 文件中保存 Git 参数设置。使用 `--global`，参数将保存在主目录下的全局 Git 配置 `.git/config` 中，因此成为多个仓库的默认设置。
+* `diff`
+    在没有任何其他参数的情况下，`git diff` 显示自上次提交以来的所有更改。默认情况下，`git diff` 比较项目目录与上次提交。如果你想比较暂存区与上次提交，则必须指定 `--stage` 选项。
+
+
+
+
+
+*   `git diff` 以一种类似于 diff 的特殊补丁语法显示更改。通过 `x--compact-summary`、`--numstat` 或 `--shortstat` 选项，你将获得更改行数的简要摘要。
+
+*   `diff file`
+    仅显示指定文件的更改。
+
+*   `diff revision [file]`
+    显示指定提交（commit）与项目目录中当前状态之间的更改。
+
+*   `diff revision1..revision2 [file]`
+    显示两个提交之间的更改。
+
+*   `fetch [reponame]`
+    从外部 Git 仓库下载最近的更改。默认情况下，`clone` 时指定的仓库是只读的，即 `origin`。因此，`git fetch` 命令会更新本地仓库并整合所有新的外部提交、分支和标签。为了避免命名冲突，新的外部分支被命名为 `origin/branchname` 或 `reponame/branchname`。
+
+    `git fetch` 有一个变体是 `git pull`，它不仅下载外部更改，还将它们合并到本地分支中。`git pull` 对应于 `git fetch; git merge`。通过这种方式，`merge` 将本地分支与跟踪的远程分支连接起来（参见 `git branch -u`）。
+
+*   `grep pattern`
+    在项目目录中的所有版本化文本文件中搜索搜索表达式。`pattern` 是类似于 grep 中的正则表达式。
+
+*   `init`
+    为当前目录设置 Git 仓库。
+
+*   `log [--oneline] [--graph] [branch/tag [non-branch]]`
+    提供最新提交的列表。`--oneline` 选项将每个提交的输出缩短为一行。`--graph` 可视化分支是如何相互连接的。
+
+    如果你指定分支或标签作为可选参数，则只显示对该分支产生影响的提交。这些很可能是在该分支创建之前就已经提交，因为它们构成了该分支的起点。为了进一步减少 `git log branch name` 产生的提交列表，可以使用 `^non-branch` 来隐藏指定分支的提交。因此，`git log bugfix ^main` 仅返回 `bugfix` 分支中尚未连接到 `main` 的提交。
+
+    输出由 `less` 引导，因此你可以使用光标键滚动查看结果，大多数结果有几页长。你可以通过使用 `--no-pager` 选项防止所有 `git` 命令出现此行为。
+
+    `git log` 的输出可以通过无数其他选项进行控制。如有必要，你可以查看 [`git-scm.com/docs/git-log`](https://git-scm.com/docs/git-log)，那里大约有 40 页文本！
+
+*   `merge branch name`
+    将指定的分支与当前分支连接。与 `git commit` 一样，产生的更改将保存到活动分支的一个新提交中。
+
+    如果在合并过程中发生冲突，合并过程将被中断。你可以手动修复冲突，然后使用 `git merge --continue` 继续合并过程。或者，使用 `git merge --abort` 取消该过程。
+
+*   `mv previously new`
+    重命名版本化文件或将其移动到另一个目录。
+
+*   `pull [reponame]`
+    从外部仓库传输所有提交（类似于 `git fetch`）并将其整合到本地仓库中（类似于 `git merge`）。仅考虑当前活跃的分支。
+
+    不带任何额外参数的 `git pull` 假设 `.git/config` 中已为当前分支配置了远程仓库。
+
+    使用 `--rebase` 选项`git` 不执行正常的合并过程，而是执行变基（rebasing）。
+
+*   `push [-u] [reponame [branch name]]`
+
+
+
+
+将 `branch name` 的本地执行提交上传到外部 Git 仓库 `reponame` 并在那里进行合并`merges`）。例如，`git push origin main` 会将你在 `main` 分支中的所有本地提交与外部 `origin` 仓库中同名的分支连接。如果外部仓库中不存在 `branch name`，则会在那里自动建立该分支。`-u` 选项会将本地分支与外部同名的分支进行关联（作用类似于 `git branch -u`）。
+
+如果存在尚未在本地执行的外部提交，则 `push` 命令将失败。出于如此，你应该在执行 `git push` 之前始终运行 `git pull`。
+
+如果你在不指定仓库和分支名称的情况下运行 `git push`，`git` 将与默认仓库（通常是 `origin`）通信并同步当前链接的分支（参见 `branch -u` 命令）。
+
+*   `rebase branch name`
+    `git merge` 的变体，它会更改你自己的提交（即将它们转换为新提交），仿佛这些提交是从基于外部分支的提交从一开始创建的一样。`git merge` 的优点是生成的提交序列看起来“更整洁”，也就是说不会被不断的合并提交所中断。然而，这会创建原本不存在的本地提交。
+
+*   `remote [-v]`
+    列出所有外部仓库。使用 `-v`，`git` 还会显示每个仓库的 URL。根仓库——`origin` 由 `git clone` 定义。额外的仓库可以使用 `git remote add` 或 `git remote remove` 等命令进行管理。
+
+*   `reset HEAD - file`
+    将误标记为已暂存（staged）的文件状态改为已修改（modified）。
+
+*   `reset [--hard] revision`
+    撤销更改并恢复到仓库的旧版本。`revision` 指定所需的版本：`HEAD` 指上次提交，`HEAD^` 指倒数第二个，`HEAD²` 指倒数第三个，以此此类推。或者，你也可以指定提交的十六进制 SHA1 校验的初始数字（参见表 1）。`reset origin/main` 会撤销所有本地更改并将本地分支与默认仓库的 `main` 分支同步。`--hard` 选项会导致本地更改被不可恢复地覆盖。
+
+*   `reset file`
+    将文件从暂存区移除，从而撤销 `git add file`。
+
+*   `restore file`
+    从上次提交中恢复文件的状态。自那之后所更改将被覆盖且不再进行询问。此命令自 Git 2.23 版本（2019 年 8 月）起才可用。如果你指定的是一个目录而不是文件，该命令将适用于该目录中更改的所有文件。
+
+*   `rm file`
+    从本地目录删除文件并将其从暂存区中移除。如果文件自上次提交以来已被修改，则你必须使用 `--force` 强制删除。
+
+*   `show revision:file`
+    显示在执行指定提交时文件所处的状态。
+
+*   `status [-s]`
+    提供有关当前 Git 分支和修改文件状态的信息。`-s` 选项使状态输出更加紧凑。所有文件名之前都有两个字母，其中第一个字母表示暂存状态（staging state），第二个字母表示修改状态（modifying state）。
+
+*   `tag`
+    在不带任何后续参数的情况下，`git tag` 列出所有标签（标记、版本标记）。
+
+*   `tag -a 'marker-text' [-m 'comment'] [revision]`
+    在最后一个提交上添加一个标签，即一个标记，它类似于书签。此功能非常适合标记发布版本，例如。指定修订版本使得之后能够标记较旧的提交。
+
+    Git 区分两种标签：`-a` 或 `-m` 选项会创建一个同时也存储元数据的注释标签（annotated tag）。如果不使用此选项，将创建一个没有元数据的轻量级标签（lightweight tag）。
+
+    `git` 并不只有一个 `man` 手页，而是有很多页面可用，因为每个 `git` 命令都有自己的文档页面。例如，`man git-clone` 提供了对 `git clone` 的全面描述。
+
+#### 修订语法
+
+
+
+
+
+# 介绍
+在 `git` 命令中，你可以通过多种方式引用过去的提交或修订（参见表 1）。分支的最新提交被视为头部（head）。`@{xxx}` 符号指向本地引用日志（reflog），因此只能用于在本地执行的操作。
+
+| 示例 | 含义 |
+| --- | --- |
+| `HEAD` | 当前分支的头部 |
+| `@` | 当前分支的头部（简写） |
+| `develop` | 不同分支的头部 |
+| `develop:readme.txt` | 另一个分支头部的 Readme 文件 |
+| `refs/remots/origin/feature` | 远程分支的头部 |
+| `v1.3` | 标签为 `v1.3` 的提交 |
+| `HEAD@{2 days ago}` | 当前分支在两天前的提交 |
+| `main@{7}` | `main` 分支两次操作之前的提交 |
+| `HEAD~` | 上次提交的前驱（父节点） |
+| `HEAD~3` | 上次提交的上上上前驱 |
+| `v1.3~3` | 标签为 `v1.3` 的上次提交的上上上前驱 |
+| `234ae33^` | 合并提交 `234ae33` 的第一个父节点 |
+| `234ae33^^` | 合并提交 `234ae33` 的第二个父节点 |
+
+**表 1** Git 修订语法示例
+
+#### 示例
+在第一个示例中，如果你还没有这样做，首先要在个人 Git 配置中保存你的姓名和电子邮件地址。然后，你从 GitHub 下载一个现有仓库：
+
+```
+user$ git config --global user.name  "Howard Hawks"
+user$ git config --global user.email "hawks@my-company.com"
+user$ git clone https://github.com/git-book/hello-world.git
+user$ cd hello-world 
+```
+
+第二个示例展示了如何在现有项目的 `main` 分支中快速修复错误。你可以使用 `git checkout` 切换到 `main` 分支。`git pull` 下载远程仓库中保存的任何更改。现在，你需要修正一个错误，使用 `git commit` 保存更改，并通过 `git push` 将更改传回 `origin 仓库`：
+
+```
+user$ cd directory/with/existing/git/repo
+user$ git checkout main user$ git pull
+user$ my-favorite-editor files ...
+user$ git commit -a -m 'Bugfix login authentication'
+user$ git push 
+```
+
+## glances [options]
+根据应用程序的不同，同名软件包中的 `glances` 命令是 top 的现代替代方案，或者是以客户端/服务器模式运行的简单监控程序。后者需要相应的配置，但也允许通过网络浏览器访问监控数据。
+
+当直接调用时，与 `top` 相比，该命令提供了网络和 I/O 活动概述以及文件系统的状态。颜色显示针对深色终端进行了优化。如果你设置了浅色背景，可以使用 `--theme-white` 选项运行 `glances`（参见图 3）。
+
+各种快捷键根据不同的标准对进程列表进行排序：C 按 CPU 使用排序、I 按 I/O 活动排序、M 按内存占用排序、P 按名称排序或 T 按 CPU 运行时排序。通过按回车，你可以根据搜索词过滤进程列表。其他快捷键显示或隐藏信息或激活不同的显示模式。例如，U 在当前网络吞吐量和累积数据量之间切换。按 H 可以调用帮助页面，显示更多快捷键。
+
+![使用“glances”的简单监控](img/img-bG.3.xhtml)
+
+**图 3** 使用“glances”的简单监控
+
+## gnome-session-quit [options]
+`gnome-session-quit` 程序显示一个对话框，你可以在其中注销、关闭或重启计算机。
+
+- `--force`: 即使还有未保存的文件也执行注销。此选项只能配合 `--logout` 配合。
+- `--logout`: 询问用户是否想注销。
+- `--no-prompt`: 执行提示的情况下执行注销。此选项只能配合 `--logout` 配合。
+- `--power-off`: 询问用户是否想关闭计算机。
+- `--reboot`: 询问用户是否想重启计算机。
+
+## gpasswd [options] group
+`gpasswd` 实际上用于设置组密码。然而，组中多个成员必须知道的密码被认为是不安全的，因此不再使用。
+
+尽管如此，`gpasswd` 履行着重要功能。在以下变体中，它从组中删除一个用户：
+
+```
+root# gpasswd -d user group 
+```
+
+这使得 `gpasswd -d` 成为 usermod `-a –G group user` 的对应项，后者是将用户添加到组。
+
+## gpg or gpg2 [options/commands]
+`gpg` 用于加密、解密或签名文件并管理密钥。`gpg` 由无数选项控制，手动使用的范围有限。邮件客户端使用该命令加密和签名消息，包管理工具用于验证软件包及其包源的完整性。
+
+通过 `-c` 和 `-d` 选项，`gpg` 可用于文件的对称加密和解密。这很简单，但在安全性方面并非理想。所有其他选项都假设你想使用非对称加密：加密使用通信伙伴密钥的公部分进行，而解密使用你自己密钥的私部分进行。这假设你同时也使用 `gpg` 进行密钥管理。
+
+
+
+
+
+`gpg` 用于服务器和嵌入式环境，并依赖于一些外部库。相反，`gpg2` 是为桌面使用设计的。该版本还支持 S/MIME。除此之外，这两个命令支持相同的选项。
+
+- `--batch`
+  激活批模式。在此模式下不允许使用交互式命令，且不会交互。批模式用于脚本编程。
+- `-c file` 或 `--symmetric file`
+  提示你输入密码，然后加密指定的文件，最后将结果保存为 `file.gpg`。
+- `--cipher-algo zip/zlib/bzip2/none`
+  定义加密算法。默认情况下，`gpg` 使用 CAST5 算法。通过 `gpg --version` 命令可以确定可选的算法。
+- `--compress-algo zip/zlib/bzip2/none`
+  指定是否以及如何压缩数据。使用 ZIP 过程作为标准。出于兼容性考虑，不建议使用 `zip` 或 `none`以外的设置。如果源数据已经压缩，则建议使用 `none`。否则重新压缩会在不减少空间需求的情况下消耗额外的时间。
+- `-d file` 或 `--decrypt file`
+  提示你输入密码，然后解密指定的文件，最后将结果写入标准输出。
+- `--decrypt file > plain text`
+  解密指定并将输出重定向到 `plain text` 文件。该文件必须使用你密钥的公钥部分加密。要解密它，你必须输入密钥的密码。
+- `--encrypt file`
+  加密指定的文件并将其保存为 `file.gpg`。你需要交互式输入密钥的电子邮件地址。可能需要先使用 `--import` 将密钥保存到密钥数据库。如果你在 `--encrypt` 选项之前指定了 `--armor`，则加密文件将以 ASCII 格式保存。这需要更多空间，但简化了通过邮件转发。
+- `--export name@host`
+  在指定文件中保存 `name@host` 的公钥部分的二进制表示。你必须将此文件传给向你发送加密文件或邮件的人。如果你在 `--export` 选项之前指定了 `--armor`，公钥将以兼容邮件的文本格式保存。
+- `--gen-key`
+  创建一个新密钥并将其保存到 `.gnupg/pubring.gpg`。你需要输入各种数据：密钥所需的类型和长度，以及你的姓名、电子邮件地址、密码等。
+- `--import public-key-file`
+  将他人密钥的公钥部分导入你自己的密钥集合。这是为了能够向该人发送加密文件或邮件。
+- `-k` 或 `--list-keys`
+  列出存储在 `.gnupg/pubring.gpg` 中的所有密钥。
+- `-no-tty`
+  抑制警告输出。
+- `--passphrase-file file`
+  从指定文件读取加密密码。
+- `--passphrase-repeat n`
+  指定密码输入重复的次数（默认为一次）。如果在脚本从文件中读取密码（参见 `--passphrase-repeat` 选项），你需要使用参数 `0` 禁用重复输入。
+- `-q` 或 `--quiet`
+  在很大程度上省略状态输出。
+- `--verify signature file`
+  检查签名文件和源文件是否匹配。
+- `--version`
+  显示 `gpg` 版本并提供所有支持的加密和哈希算法列表。
+
+#### 示例
+
+以下命令对 `secret.odt` 文档执行对称加密：
+
+```
+user gpg -c secret.odt
+Enter the passphrase: ***********
+Enter the passphrase again: ***********
+```
+
+`gpg` 创建新的 `secret.odt.gpg` 文件。原始的 `secret.odt` 文件不会被更改。如果你想防止在本地文件系统中访问此文件，必须显式删除该文件及其备份！要恢复加密文件，按按步骤操作：
+
+```
+user gpg -d secret.odt.gpg > secret.odt
+Enter the passphrase: ***********
+```
+
+在第二个示例中，`gpg` 在两个脚本中使用 AES256 算法解密文件。脚本需要一个密钥文件，该文件通过 `openssl` 生成。（虽然 32 字节看起来很小，但那是 256 位。对于对称过程，128 位已经被认为是足够安全的。）
+
+```bash
+root# openssl rand  32 > key.txt
+root# chmod 400 key.txt 
+```
+
+`mycrypt` 加密脚本内容如下：
+
+```bash
+#!/bin/sh
+# Usage: mycrypt < in > out.crypt
+gpg -c --batch --cipher-algo AES256 --compress-algo none  \
+  --passphrase-file key.txt --passphrase-repeat 0 
+```
+
+要再次解密加密文件，你必须使用 `myuncrypt`：
+
+
+
+
+
+```
+#!/bin/sh
+# Usage: myuncrypt < in.crypt > out
+gpg -d --batch --no-tty -q --cipher-algo AES256 --compress-algo none \
+  --passphrase-file key.txt --passphrase-repeat 0 
+```
+
+该应用程序的操作如下：
+
+```
+root# ./mycrypt   < backup.tar.gz       > backup.tar.gz.crypt
+root# ./myuncrypt < backup.tar.gz.crypt > backup-copy.tar.gz
+root# file backup.tar.gz.crypt
+backup.tar.gz.crypt: GPG symmetrically encrypted data (AES256 cipher)
+root# diff backup.tar.gz backup-copy.tar.gz
+
+(无输出，文件内容完全相同) 
+```
+
+最后一个示例展示了签名的验证。在许多网站上，除了实际下载的内容外，还会指定包含校验和文本文件。但你如何确保自己没有被骗下载错误的文件，并且你的校验和没有被篡改呢？在 Kali Linux 下载页面上，校验和文件来自 Kali 开发人员的密钥进行了签名。要验证签名，你首先需要导入此密钥，然后调用 `gpg --verify`：
+
+```
+user$ wget -q -O - https://www.kali.org/archive-key.asc | gpg --import
+  gpg: Key 7D8D0BF6: Public key
+    "Kali Linux Repository <devel@kali.org>" imported ...
+  Primary key fingerprint: 44C6 513A 8E4F B3D3 0875 F758 ED44 4FF0 7D8D 0BF6
+user$ gpg --verify SHA256SUMS.gpg SHA256SUMS
+  Signature made Thu 09 Nov 2017 05:21:22 PM CET
+  using RSA key ID 7D8D0BF6
+  Good signature from "Kali Linux Repository <devel@kali.org>"
+  WARNING: This key is not certified with a trusted signature!
+  There is no indication that the signature belongs to the owner.
+  Primary key fingerprint: 44C6 513A 8E4F B3D3 0875 F758 ED44 4FF0 7D8D 0BF6 
+```
+
+乍看之下，上述问题并不让人产生信心。然而，实际上一切正常：`gpg` 命令确认了签名与校验和文件匹配。`gpg` 输出的第三行以 `Good signature`（签名良好）开头。如果此时显示 `Wrong signature`（签名错误），那将是致命的！
+
+出现的警告是指 Kali 开发人员的密钥是自签名的，但该签名无法通过验证。你可以忽略此警告，因为你是从 `www.kali.org` 下载的密钥，并已确保其指纹（即上述命令中的十六进制数字序列 `44C6` . .）与预期值匹配。此外，为了验证密钥本身的签名，你和 Kali 开发人员必须通过面对面会议或信任网交换你们的个人 GPG 密钥：
+
+### gpioget [options] chipnr gpio1 gpio2 ...
+
+`gpioset [options] chipnr gpio1=status1 gpio2=status2 ...`
+
+通过 `gpioset`，你可以设置树莓派的通用输入/输出状态。`gpioget` 则用于读取状态。芯片号必须作为第一个参数传递给命令。对于树莓派 1 到 4 型，数字为 `0`。第 5 型安装了新的硬件芯片，必须传递数字 `4` 以确保正确地址（内部为 `/dev/gpiochip4`）。
+
+GPIO 编号作为额外参数传递，其中 GPIO 的内部编号相关而非 GPIO 引脚排上的引脚编号：
+
+```
+user$ chip=4              
+(适用于树莓派 5)
+user$ gpioset $chip 7=1   
+(GPIO 7 = 将引脚 26 设置为高电平)
+user$ gpioset $chip 7=0   
+(GPIO 7 = 将引脚 26 设置为低电平)
+```
+
+你可以同时控制多个输出（这里是 GPIO 7、8 和 25）：
+
+```
+user$ gpioset $chip 7=0 8=1 25=0 
+```
+
+各种选项允许你控制额外的功能：
+
+* `--bias=as-is|disable|pull-down|pull-up`
+    激活或禁用 GPIO 的内部上拉或下拉电阻。
+
+* `--mode=exit|wait|time|signal`
+    指定命令的运行时间。默认是 `exit`，即命令终止。使用 `wait` 时，程序将等待用户按下。使用 `time` 设置，可以通过 `--sec` 设置所需时间。`signal` 表示程序持续运行直到按下 Ctrl+C。
+
+* `--background`
+    将命令作为后台继续运行。
+
+#### 替代方案
+
+`gpioget` 和 `gpioset` 是树莓派默认安装的软件包的一部分。该包还包含 `gpioect` 和 `gpioinfo` 命令，让你能够确定有关微型电脑硬件的信息。除了 `gpioset`，还可以使用 `pinctrl` 命令控制 GPIO。
+
+### grep [options] search pattern file
+
+`grep -R [options] search pattern`
+
+`grep` 在指定的文本文件中搜索模式，并显示找到的文本段，或简单地指示模式出现在哪里或多少行中。`grep` 可以与 `find` 结合使用，搜索符合特定条件的文件。
+
+* `-n`
+    不仅显示找到文本的行，还显示其前后的行（例如 `-3`）。
+
+* `-c`
+    仅指示找到模式的行数，而不显示行本身。
+
+* `--color=auto`
+    在输出时用颜色标记匹配项。这仅在直接在控制台中显示 `grep` 结果时有效，如果用另一个命令处理结果（例如使用 `sort` 或 `less`），则无效。在这种情况下，要在输出中嵌入颜色信息，必须使用 `--color=always`。
+
+* `-E`
+    激活扩展正则表达式（ERE）。这种扩展语法允许在模式中使用字符 `?`（零或一次）、`+`（至少一次）和 `|`（逻辑或）。例如，`grep -E 'pattern1|pattern2' file` 会返回指定文件中包含两个模式之一的所有行。
+
+
+
+
+
+## Options
+
+* `-f file`: 读取指定文件中列出的选项（适用于复杂或频繁使用的搜索模式）。
+* `-i`: 不区分大小写。
+* `-l`: 仅显示找到搜索模式的文件名。
+* `-n`: 在输出中也标明每行的行号。
+* `-o`: 不输出整行，仅输出与搜索模式匹配的内（仅匹配项）。
+* `-P`: 根据 Perl 兼容正则表达式 (PCRE2) 解释正则模式。
+* `-q`: 不提供任何屏幕输出，仅返回返回值 `0`（找到搜索文本）或 `1`（未找到）。当 `grep` 被其他程序调用时，此选项非常有用（请参阅 find 中的示例）。
+* `-R`: 对目录树中的所有文件递归应用 `grep`。
+* `-v`: 应用反向效果：`grep` 返回所有不匹配搜索模式的行。`grep -v '^#' file | cat -s` 返回文件中不以 # 开头的行（其中 `cat -s` 将多个连续空行合并为一个）。
+* `-w`: 仅查找整个单词。如果指定此选项，则单词“these”中的搜索模式“the”将不再被识别。
+
+## Search Patterns
+
+搜索模式由两个部分组成：搜索内容的指定以及搜索表达式出现频率的指定。表 2 总结了最重要的字符的含义。缩写 ERE 标记用于扩展正则表达式（`-E` 选项或 `egrep` 命令）的字符。
+
+| 字符 | 含义 |
+| --- | --- |
+| `abc` | 字符串 `abc`。 |
+| `[abc]` | `a`、`b` 或 `c` 之一。 |
+| `[^abc]` | 不是 `a`、`b` 或 `c` （即任何其他字符）。 |
+| `[a-z]` | `a` 到 `z` 之间的字符之一。 |
+| `.` | 任意字符。 |
+| `?` | 前一个字符可以不出现，也可以出现一次（ERE）。 |
+| `*` | 该字符可以出现任意次（或不出现）。 |
+| `+` | 该字符可以出现任意次，但必须至少出现一次（ERE）。 |
+| `{n}` | 该字符必须恰出现 `n` 次。 |
+| `{n,n}` | 该字符最多出现 `n` 次。 |
+| `{n,}` | 该字符至少出现 `n` 次。 |
+| `{n,m}` | 该字符必须至少出现 `n` 次且不超过 `m` 次。 |
+| `^` | 行首。 |
+| `$` | 行尾。 |
+| `|` | 逻辑或 (ERE)。 |
+
+### “grep” 搜索模式的结构 (ERE = 扩展正则表达式)
+
+如果在搜索模式中使用 `?`、`*`、`+`、`[`、`]`、`(`、`)`、`#` 或 `!` 等特殊字符，必须在它们前面加上 `\`。某些字符组已经预定义了模式，例如用于数字的 `[:digit:]` 或用于空白字符的 `[:space:]`（空白空格，见 `man` 页面）。
+
+以下是搜索模式的示例：
+
+* `'abc'` 搜索完全匹配该字符串。
+* `'[a-z][0-9]+'` 搜索以小写字母开头并后跟一个或多个数字的字符串。
+* `'\\\(.*\)'` 搜索任何包含在两个括号内的字符字符串。
+
+`grep` 仅逐行应用搜索模式。被换行符中断的文本段无法被识别。
+
+#### Examples
+
+以下命令在 Apache 日志文件 `/var/log/apache2/access.log` 中搜索所有包含 IP 地址 1.2.3.4 的行。该命令必须以 `root` 权限执行，因为用户没有访问 Apache 日志文件的权限。
+
+```
+root# grep 1.2.3.4 /var/log/apache2/access.log
+```
+
+以下命令确定 `mysql` 字符串在 PHP 文件中以大写和小写形式被使用的次数：
+
+```
+user$ grep -c -i mysql code.php
+```
+
+
+
+
+
+在下一个示例中，程序将从一个起始目录递归搜索所有的 Apache 配置文件。`grep` 显示包含`ErrorDocument`关键字的文件名：
+
+```
+root# cd /etc/apache2
+root# grep -R -l ErrorDocument 
+```
+
+接下来的 `grep` 命令从内核消息中过滤出所有包含搜索模式 `eth`（不区分大小写）的行：
+
+```
+root# dmesg | grep -i eth
+e1000: eth0 NIC Link is Down
+e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX ... 
+```
+
+`df` 命令的输出包含各种临时文件系统的条目，这些条目通常没有意义。`grep -v` 可以消除这些行。（使用 `df -x tmpfs` 也会得到想要的结果。）
+
+```
+root# df | grep -v tmpfs
+File system             1K blocks   Used  Available Used% Mounted to
+/dev/mapper/fedora-root  16080304 4820060  10420360   32% /
+/dev/sda1                  487652  109669    348287   24% /boot 
+```
+
+`/etc` 目录下的某些配置文件看起来作者似乎将文件与手册搞混了。在成百上千甚至数万行的注释中，隐藏着少数真正有效的设置。以下命令消除了所有以 `#` 或 `;` 开头或为空的行：
+
+```
+root# cd /etc/samba
+root# cp smb.conf smb.conf.orig
+root# grep -Ev '^#|^;|^$' smb.conf.orig > smb.conf 
+```
+
+如果还想消除 `#` 或 `;` 不在行首的注释，以及包含空白字符（空格、制表符）的空行，你必须按照以下格式编写 `grep` 命令：
+
+```bash
+root# grep -Ev '^[[:space:]]*#|^[[:space:]]*;|^[[:space:]]*$' \
+        smb.conf.orig > smb.conf 
+```
+
+接下来的示例在 Apache 配置文件中搜索包含搜索模式 `SSL*File` 的行：
+
+```
+user$ grep 'SSL.*File' /etc/httpd/conf.d/ssl.conf
+SSLCertificateFile       /etc/letsencrypt/live/pi-book.info/cert.pem
+SSLCertificateKeyFile    /etc/letsencrypt/live/pi-book.info/privkey.pem
+SSLCertificateChainFile  /etc/letsencrypt/live/pi-book.info/chain.pem
+```
+
+你还可以结合 `find` 和 `grep` 使用，以执行特别有效的搜索。在下面的命令中，`find` 查找 `*.php` 文件，而 `grep` 检查它们是否包含 `mysql` 字符串。如果包含，则会在屏幕上显示相应的文件。注意，你必须在 `-exec` 之后指定 `-print` 选项。
+
+```
+root# find -name '*.php' -exec grep -q mysql \; -print
+```
+
+### grep 的变体
+
+- `ack` 和 `ag` 是针对程序员优化的 `grep` 变体。它们会忽略备份文件、二进制文件以及版本系统的目录。
+- `mail` 帮助在 mbox 格式的存档中搜索字符串。相比 `grep` 的优势在于它是从文件中提取整封邮件，而不是单行。
+- `zgrep` 搜索压缩文件。
+
+### grim [options] filename.png
+
+`grim` 代表“grab image”（获取图像），如果你的桌面运行在 Wayland 上，它会创建一个截图。默认情况下，截图覆盖整个屏幕并以 PNG 格式保存。各种选项允许你定义屏幕区域、更改输出格式（JPEG 或 PPM）并将鼠标指针集成到截图中。
+
+#### 示例
+
+如果你从终端截屏，在操作之前等待几秒通常很有用。这样做最简单的方法是通过 `sleep`：
+
+```
+user$ sleep 5; grim my-new-screenshot.png
+```
+
+`grim` 可以与其他命令很好地结合。对于接下来的命令，我们使用同名软件包中的 `slurp` 在屏幕上标记一个矩形区域。（不幸的是，这在所有的 Wayland 器上都有效。）该区域的坐标通过 `-g`（geometry）选项传递给 `grim`。由于 `grim` 以 `-` 结尾，它不会将截图写入文件，而是写入剪贴板。来自 `wl-clipboard` 软件包的 `wl-copy` 获取数据并将其插入 Wayland 剪贴板。从那里，你可以将截图复制到图形程序（例如 GIMP）。
+
+```
+user$ grim -g "$(slurp -d)" - | wl-copy
+```
+
+如果你想从终端在 X 图形系统中创建截图，`scrot`（SCReen shOT）提供了与 `grim` 的功能。
+
+### groupadd name
+
+`groupadd` 创建新组。
+
+- `-g n`: 使用 `n` 作为新的 GID（组标识符）。
+
+### groupdel name
+
+`groupdel` 删除指定的组。
+
+### groupmod [options] name
+
+`groupmod` 修改组的 GID 和名称。
+
+- `-g n`: 指定新的组标识符 (GID)。
+- `-n name`: 指定新的组名。
+
+#### 示例
+
+以下命令将组 `mysqladmins` 重命名为 `dbadmins`：
+
+```
+root# groupmod -n dbadmins mysqladmins 
+```
+
+### groups [username]
+
+`groups` 显示当前或指定用户所属的所有组列表。这些是在 `etc/passwd` 中指定的主组以及 `etc/group` 中指定的可选组。
+
+#### 示例
+
+当前用户属于 `kofler`、`docuteam` 和 `wheel` 组。`wheel` 组成员可以在 RHEL 6 中执行管理任务。
+
+```
+user$ groups
+kofler docuteam wheel 
+```
+
+
+
+
+
+# grub-install [device]
+
+grub2-install [device]
+
+`grub-install` 命令（Ubuntu, Debian）或 `grub2-install`（Fedora, SUSE, RHEL）将引导程序安装到指定的硬盘设备的引导区，或者对于 EFI 计算机，安装到 EFI 分区。`grub-install`要求在此先配置好 GRUB 配置文件 `/boot/grub/grub.cfg`，这通常通过调用 `update-grub`（Debian, Ubuntu）或通过 `grub2-mkconfig`（Fedora, SUSE, RHEL）来实现。
+
+#### 示例
+
+在 Ubuntu 上，`update-grub` 命令创建 GRUB 配置文件 `/boot/grub/grub.cfg`，自动为计算机发现的所有操作系统创建条目。`grub-install` 将 GRUB 2 安装到 BIOS 计算机第一个硬盘的引导区：
+
+```
+root# update_grub
+root# grub-install /dev/sda 
+```
+
+在 EFI 计算机上，省略了设备指定。`grub-install` 要求 `/boot/efi` 目录下的 EFI 分区包含在目录树中。
+
+```
+root# update_grub
+root# grub-install /dev/sda 
+```
+
+在 Fedora, SUSE 和 RHEL 上，你必须运行这些命令，是否为 `grub2-install` 带有设备指定，取决于是 BIOS 安装还是 EFI 安装：
+
+```
+root# grub2-mkconfig -o /boot/grub2/grub.cfg
+root# grub2-install [/dev/sda] 
+```
+
+# grub-mkconfig [options]
+
+grub2-mkconfig [options]
+
+`grub-mkconfig`（Ubuntu, Debian）或 `grub2-mkconfig`（Fedora, SUSE, RHEL）评估位于 `/etc/grub.d` 中的 GRUB 配置文件并分析所有硬盘分区。该命令根据这些信息创建一个新的 GRUB 配置文件并输出。
+
+- `-o file`：将生成的配置保存到指定文件中。
+
+# gsettings 命令
+
+`gsettings` 从 `dconf` 数据库读取值或将设置保存到那里。`dconf` 数据库通常位于 `.config/dconf/user` 文件中，并以二进制格式可用。该数据库用于存储较新 Gnome 程序的各种设置。
+
+- `get schema key`：确定指定架构的 `key` 参数的值。`schema` 表示软件提供程序、程序名称以及（可选的）设置目录。例如，所有针对图标视图的 Nautilus 设置都分配给 `org.gnome. nautilus.icon-view` 架构。
+- `list-keys schema`：返回指定架构下所有键的列表。
+- `list-schemas`：提供所有架构的无序列表。
+- `set schema key value`：为 `key` 参数分配新值。
+
+#### 示例
+
+以下命令设置了文本缩放因子，使所有文本放大了 66%。这对于 HiDPI 或 Retina 显示器非常有用，因为否则在这些显示器上，文本会小到无法阅读。
+
+```
+user$ gsettings set org.gnome.desktop.interface text-scaling-factor 1.66 
+```
+
+# gunzip file
+
+`gunzip` 解压指定的文件，无论它是使用 `gzip` 还是 `compress` 压缩的。文件名中的 `.gz` 或 `.Z` 标识符会被自动移除。`gunzip` 是 `gzip` 的链接，其中 `-d` 选项会被自动激活。
+
+# gzip [options] file
+
+`gzip` 压缩或解压指定的文件。压缩后的文件会自动附加标识符 `.gz`。`gzip` 适用于处理单个文件。如果你想将多个文件或整个目录保存到一个文件中，可以使用 `tar` 命令。
+
+- `-1` 到 `-9, --fast, --best`：控制压缩的速度和质量。`-1` 对应 `--fast`，结果是压缩快但文件稍大。`-9` 对应 `--best`，结果是计算时间长但文件更小。默认设置为 `-6`。
+- `-c`, `--stdout` 或 `--to-stdout`：保持被（解）压缩的文件不变，并将结果重定向到标准输出（通常是屏幕）。从那里，可以使用 `>` 将重定向到任何文件。
+- `-d`, `--decompress` 或 `--uncompress`：解压指定的文件而不是压缩它（对应 `gunzip`）。
+- `-r` 或 `--recursive`：也（解）压缩所有子目录中的文件。
+
+#### 示例
+
+以下命令压缩当前目录下所有的 `*.tif` 文件。结果只有 `*.tif.gz` 文件。
+
+```
+user$ gzip *.tif 
+```
+
+在第二个示例中，`gzip` 压缩了指定的文件，但保持其不变并将结果写入 `backup.gz`：
+
+```
+user$ gzip -c file > backup.gz 
+```
+
+# H
+
+### halt [options]
+
+`halt` 终止所有运行中的进程然后关闭计算机。`halt` 对应 `shutdown -h now`。
+
+
+
+
+
+*   `-p`
+
+在关机后关闭计算机（断电）。许多系统会自动关闭。只有当此操作不起作用时（例如在许多虚拟机中），才需要使用此选项。
+
+### hash [option]
+
+`bash` 命令 `hash` 显示哈希表的内容。该表记录了 shell 之前执行过的所有命令的路径名。这可以加速重复执行已知命令的速度，因为不再需要在所有 `PATH` 目录中搜索该程序。
+
+*   `-r`
+
+    删除 `bash` 的哈希表。如果哈希表中程序的目录发生了变化，则需要此操作。否则，`bash` 将找不到该命令。在 `tcsh` 中，必须使用 `rehash` 命令代替 `hash -r`。
+
+### hciconfig [hcidevice] [command]
+
+来自 `bluez` 包的 `hciconfig` 帮助通过主机控制器接口 (HCI) 配置本地蓝牙适配器。如果未指定 HCI 设备名称（通常为 `hci0` 或 `hci1`），`hciconfig` 将与所有本地蓝牙设备通信。如果不带参数执行命令，它将列出所有本地蓝牙适配器的信息。
+
+*   `reset`
+
+    启动蓝牙适配器的重启。
+
+*   `up/down`
+
+    激活或禁用蓝牙适配器。如果显示错误信息 `Operation not possible due to RF-kill`，你可以尝试先使用 `rfkill unblock` 开启适配器。
+
+### hcitool [options] [command]
+
+来自 `bluez` 包的 `hcitool` 命令帮助扫描和设置蓝牙设备。
+
+*   `-h`
+
+    列出所有支持的命令。
+
+*   `-i` `hciX`
+
+    将下一个命令应用于指定的蓝牙设备。如果没有此选项，则将将发送给第一个可用设备。
+
+#### Commands
+
+*   `cc` `bt-mac`
+
+    与指定 MAC 地址的蓝牙设备建立连接。
+
+*   `dc` `bt-mac`
+
+    再次终止指定的连接。
+
+*   `dev`
+
+    提供本地蓝牙设备的列表。通常，这是内置的蓝牙适配器，它通常被分配设备名称 `hci0`。
+
+*   `scan`
+
+    列出无线电范围内的所有外部蓝牙设备，包括它们的 MAC 地址。
+
+#### 示例
+
+只有一个设备名为 `hci0` 的本地蓝牙适配器。因此，所有其他命令都会发送到该适配器；可以省略 `-i` 选项。手机和鼠标也在无线范围内。
+
+```
+user$ hcitool dev
+Devices:
+        hci0    00:1F:CF:41:00:A2
+user$ hcitool scan
+  60:FB:42:FC:BB:8C   Logitech Mouse
+  10:86:F3:52:86:18   iPhone 13
+  ... 
+```
+
+### head [options] file
+
+`head` 在屏幕上显示文本文件的前 10 行。
+
+*   `-n` `lines`
+
+    输出指定数量的。
+
+*   `-n` `-lines`
+
+    返回除最后几行之外整个文件。因此，`head -n -3` 返回除最后三行之外的所有文本。
+
+#### 替代方案
+
+`tail` 实现相反的功能。例如，`tail -n 5 file` 返回文件的最后五行。如果你想跳过前五行，可以使用 `tail -n +6`（返回从第六行开始的所有行）。
+
+### help name
+
+`help` 显示指定的 `bash` 命令的简短描述。`help` 适用于集成到 `bash` 中的命令，如 `alias`、`cd` 或 `type`。
+
+### history [options] [n]
+
+`bash` 命令 `history` 显示带有连续编号的最近执行的命令。参数 `n` 将输出限制为最后运行的命令。通过 `!n`，你可以重复指定编号的命令：`!-1`、`!-2` 等分别运行最后一条命令、倒数第二条命令，依此类推。
+
+*   `-c`
+
+    删除内存中存储的命令序列（`bash_history` 会被保留）。
+
+*   `-r [filename]`
+
+    将存储在指定文件或 `.bash_history` 中的命令加载到历史内存中。
+
+*   `-w [filename]`
+
+    保存命令序列（默认在 `.bash_history`）。
+
+### host [options] name/ip-address
+
+`host` 返回指定网络名称的 IP 地址，或指定 IP 地址的网络名称。在许多发行版中，`host` 是 `bind` 包的组件，例如 `bind-utils` 或 `bind9-host`。
+
+*   `-a`
+
+
+
+
+提供可能有助于发现名称服务器配置错误的额外信息。
+
+- `-t` `type`
+
+返回指定类型的 DNS 条目。
+
+#### Example
+
+IP 地址 5.9.22.29 和 2a01:4f8:161:107::4 被分配给主机 `kofler.info`。邮件服务器的域名为 `mail.kofler.info`。邮件服务器的 SPF 信息可以在 DNS 文本条目找到。
+
+```
+user$ host kofler.info
+kofler.info has address 5.9.22.29
+kofler.info has IPv6 address 2a01:4f8:161:107::4
+kofler.info mail is handled by 10 mail.kofler.info.
+user$ host 5.9.22.29
+28.22.9.5.in-addr.arpa domain name pointer kofler.info.
+user$ host 2a01:4f8:161:107::4
+4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.7.0.1.0.1.6.1.0.8.f.4.0.1.0.a.2.ip6.arpa
+  domain name pointer kofler.info.
+user$ host -t txt kofler.info
+kofler.info descriptive text "v=spf1 ip4:5.9.22.29 ip6:2a01:4f8:161:107::4 -all" 
+```
+
+### hostname [name]
+
+`hostname` 返回系统的当前网络名称，或更改它直到下次重启。因此，更改不会被永久保存！如果你想执行此操作，必须运行 `hostnamectl` 或更改相应的配置文件。
+
+- `-d`
+
+返回域名而不是主机名。
+
+- `-i`
+
+返回分配给主机名的 IP 地址。由于主机可能分配了多个 IP 地址，可能的情况下你应该使用 `-I` 选项 own 此选项。`hostname -i` 经常返回地址 127.0.0.1，这并没有什么帮助。
+
+- `-I`
+
+以列表形式返回分配给主机名的所有 IP 地址并用空格分隔。不考虑 `localhost` 地址和本地 IPv6 地址。然而，并不是所有的 `hostname` 版本都支持 `-I` 选项。特别是在 Arch Linux 和 Alpine Linux 上，你可能无法使用 `-I`。
+
+### hostnamectl [options] [command]
+
+对于使用 systemd init 系统的发行版，可以使用 `hostnamectl` 命令重置主机名。与 `hostname` 命令不同，新设置会被永久保存。
+
+- `set-hostname` `name`
+
+设置新的主机名。你必须注销并重新登录更改才能生效。新的主机名同时会被保存在 `/etc/hostname` 中。
+
+- `status`
+
+显示当前主机名和有关运行系统的各种详细信息，包括发行版名称和内核版本。
+
+#### Example
+
+以下命令将主机设置为 `workstation`，域名设置为 `mylan`：
+
+```
+root# hostnamectl set-hostname workstation.mylan 
+```
+
+### htop [options]
+
+来自同名包的 `htop` 是 `top` 的变体。相比 `top`，它的主要优势是你可以使用光标水平和垂直滚动进程列表。按 K 键轻松结束选定的进程。你还可以使用功能键在不同的显示格式之间切换。
+
+- `-d` `n`
+
+指定每隔十分之一秒更新一次进程列表。
+
+- `-p` `n1,n2,n3,...`
+
+只显示指定的进程。
+
+- `-s` `name`
+
+根据指定的标准对进程列表排序。`htop -s help` 提供所有允许的关键字列表。
+
+- `-u` `name`
+
+只显示所选用户的进程。
+
+### htpasswd [options] file username [password]
+
+`htpasswd` 或在某些发行版中为 `htpasswd2` 为 Apache 服务器创建密码文件或更改现有密码文件中的条目。该文件可用于基本认证（`AuthType Basic`）。其位置必须在 Apache 配置文件中使用 `AuthUserFile` 关键字指定……出于安全考虑，你应该确保 Web 服务器可以读取该文件，但不被允许通过 HTTP 交付它！
+
+- `-b`
+
+期望密码作为参数。这简化了通过脚本创建密码条目，但是不安全的。
+
+- `-c`
+
+创建一个新的密码文件。
+
+- `-D`
+
+从密码文件中删除用户。
+
+- `-l`
+
+临时锁定账户。
+
+- `-u`
+
+重新激活被锁定的账户。
+
+#### Example
+
+以下命令创建新的密码文件 `passwords.pwd` 并为用户 `name1` 插入条目。在不使用 `-c` 选项的情况下添加用户名/密码对：
+
+```
+user$ htpasswd -c passwords.pwd name1
+New password: ********
+user$ htpasswd passwords.pwd name2
+New password: ********
+```
+
+### hwclock [options]
+
+在没有额外参数的情况下，`hwclock` 从计算机的硬件时读取时间并显示。
+
+- `-s` 或 `--hctosys`
+
+读取硬件时并用它设置计算机时间。
+
+- `-w` 或 `--systohc`
+
+将计算机的当前时间保存到硬件时。
+
+该命令还支持 `man hwclock` 中描述的特殊函数。
+
+### hydra [options] [hostname/ipaddress] service
+
+来自同名包的破解或渗透测试命令 `hydra` 从文件读取密码或自行生成密码，并尝试使用它们登录网络服务。
+
+
+
+
+
+`hydra` 支持广泛的服务，包括 FTP、HTTP(S)、IMAP、MySQL、Microsoft SQL、POP3、PostgreSQL、SMTP、Telnet 和 VNC。该命令还可以尝试 Web 表单登录（`GET`、`PUT`、`POST`）。你可以使用 `hydra -h` 来允许的服务列表。
+
+*   `-6`: 如果可能，则使用 IPv6。
+*   `-C filename`: 使用文件中指定的用户名密码组合。用户名和密码必须以 `login:password` 的格式逐行包含在文件中。
+*   `-e nsr`: 同时也尝试空密码（`n` 代表 null）、将用户名作为密码（`s` 代表 same）以及反转用户名（`r` 代表 reverse）。
+*   `-f`: 一旦找到有效的登录/密码组合，立即终止命令。
+*   `-l loginname`: 使用指定的用户名。
+*   `-L user file`: 从指定的文本文件中逐行读取用户名。
+*   `-m options`: 传输于网络服务的额外选项。你可以使用 `hydra -U` 服务来确定允许的选项，例如使用 `hydra -U http-get` 用于预期通过 HTTP `GET` 请求完成的登录。
+*   `-M host file`: 从文件中读取要攻击的主机名或 IP 地址并并行攻击所有主机。
+*   `-o result file`: 将成功的登录密码组合保存到指定文件中，而不是显示在标准输出中。
+*   `-p password`: 使用指定的密码。
+*   `-P pwfile`: 逐一尝试指定文本文件中的密码。
+*   `-R`: 恢复上次通过 Ctrl+C 中断的 `hydra` 调用，前提是 `hydra.restore` 文件存在。不需要指定其他选项；它们已包含在 `hydra.restore` 中。
+*   `-s portnr`: 使用指定的端口代替相应服务的默认端口。
+*   `-t n`: 并行运行 `n` 个任务（线程）。默认设置为 `16`。这可能太高了，因为某些服务在有过多并行请求（来自同一 IP 地址）时会阻止登录。
+*   `-x min:max:chars`: 生成长度在 `min` 到 `max` 之间且包含指定字符的密码。这里，`a` 是小写字母的缩写，`A` 是大写字母，`1` 是数字。所有其他字符（包括 `äöüß`）必须单独输入。
+
+    示例：使用 `-x '4:6:aA1-_$%'`，`hydra` 使用长度为四到六位且除字母和数字外包含 `-`、`_`、`$` 和 `%` 字符的密码。使用 `-x '4:4:1'`，`hydra` 会尝试所有四位数。这将产生 10,000 种可能性。
+
+`-x` 选项仅在特殊有用，即你有（无限）的时间且目标计算机容忍无限次的登录尝试。
+
+#### 示例
+
+在以下示例中，`hydra` 尝试在 Linux 服务器上寻找具有简单密码或无密码的 SSH 登录账户。为了实现这一点，`cut` 首先生成所有账户的列表。理想情况下，你应该在运行与目标计算机相同发行版的计算机上运行此命令。
+
+```
+user$ cut -d: -f1 /etc/passwd > logins.txt 
+```
+
+之后，`hydra` 应该为 `logins.txt` 中存储的所有账户尝试 SSH 登录，使用用户名、反转后的用户名和空字符串作为密码：
+
+```
+user$ hydra -L logins.txt -t 4 -e nsr 10.0.0.36 targethost 
+```
+
+#### 备选方案
+
+如果你知道哈希值形式的密码，可以尝试使用离线密码破解器（参见 `john`）找出明文密码。`hashcat` 更快。然而，此命令需要安装有时复杂的合适的 GPU 驱动。
+
+## I
+
+### iconv -f charset1 -t charset2 in.txt > out.txt
+
+`iconv` 执行从字符集 1 到字符集 2 的字符转换。`iconv --list` 提供所有支持字符集的完整列表。以下命令从 Latin-1 编码的文本文件创建一个对应的 UTF-8 文件：
+
+```
+user$ iconv -f latin1 -t utf-8 latin1dat > utf8dat 
+```
+
+### id
+
+`id` 指定用户的名称和 ID、其主组以及其他分配的组。在 Fedora 和 RHEL 上，该命令还提供 SELinux 上文。
+
+#### 示例
+
+
+
+
+
+用户 `kofler` 的 UID 为 `1000`，属于 GID 为 `1000` 的主组 `kofler`，并且 GID 为 `10` 的 `wheel` 组成员：
+
+```
+root# id
+uid=1000(kofler) gid=1000(kofler) groups=1000(kofler),10(wheel)
+  context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 
+```
+
+### if condition; then commands
+
+`[elif condition; then commands]`
+
+`[else commands]`
+
+`fi`
+
+`if` 在 `bash` 脚本中创建分支。`then` 之后的块仅在满足条件时执行。否则，将评估任意数量的 `elif` 条件。如有必要，还会执行可选的 `else` 块。
+
+可以指定多个命令作为条件。最后一个命令后面必须紧跟一个分号。最后一个命令的返回值将被用作判断标准。可以使用 `test` 命令进行比较和其他测试。除了 `test` 之外，也允许使用方括号的短形式。但在 `[` 之后和 `]` 之前必须输入空格。
+
+### ifconfig interface [options] [ip-address]
+
+`ifconfig` 帮助确定或更改当前的网络配置。然而，该命令已经过时多年，并且不支持 Linux 内核的所有网络功能。请使用 `ip`！
+
+### iftop [options]
+
+`iftop` 监控一个或所有网络接口的网络流量，并在页面上（每三秒更新一次）显示数据流向哪些主机或 IP 地址。`iftop` 的运行方式类似于 `top`，直到按下 `Q` 终止。
+
+*   `-B`
+    计算字节/s 而不是比特/s。
+*   `-F ipadr/mask`
+    仅考虑来自或指向指定地址的流量。
+*   `-G ip6adr/mask`
+    仅考虑来自或指向指定 IPv6 地址的流量。
+*   `-i name`
+    仅考虑指定的网络接口。
+*   `-n`
+    显示 IP 地址而不是主机名。
+
+### ifup interface
+
+ifdown interface
+
+`ifup` 激活指定的接口，`ifdown` 再次将其禁用。这些命令由 init 系统调用以进行网络初始化，并访问发行版特定的配置文件。因此，命令的实现因发行版而异；可用选项及其含义也取决于发行版（参见 `man ifup/ifdown`）。在某些当前的发行版（Ubuntu, Raspberry Pi OS）中，这些命令不再可用，或仅在重大限制下工作。
+
+#### 示例
+
+以下两个命令首先关闭 `eth0` 网络接口，然后重新启动——例如为了激活更改后的配置：
+
+```
+root# ifdown eth0
+root# ifup eth0 
+```
+
+### info [command]
+
+`info` 启动在线帮助。要导航帮助，可以使用键盘快捷键。或者，你也可以通过 `man` 系统读取 `info`。
+
+*   `-f file`
+    加载指定的文件。
+
+### init [n]
+
+`init` 激活由 `n` 指定的运行级别。这仅适用于使用传统 Init 系统的发行版。对于使用 systemd 的发行版，你需要使用 `systemctl` 命令更改目标。
+
+### inotifywait [options] [files/directories]
+
+来自 `inotify-tools` 包的 `inotifywait` 监控文件及其元数据的变化。在最形式的形式，你向命令传递一个或多个文件名。在这种情况下，命令将等待直到其中一个文件发生 `inotify` 事件，例如文件更改或读取访问。这会终止命令。
+
+该命令通常用于脚本中，以自动响应变化。或者，你也可以进行无限监控并记录事件。
+
+*   `-d` 或 `-m`
+    作为后台进程（`-d`，守护进程）或在前台（`-m`，监控）运行。`inotifywait` 不会在第一个事件后结束，而是运行到被显式终止（例如通过 `kill` 或 Ctrl+C）。
+*   `-e event`
+    仅对指定的事件做出。默认情况下，命令处理所有 `inotify` 事件。可以多次指定 `-e` 来选择多个事件。最重要的事件包括 `access`、`close`、`create`、`delete`、`modify`、`move` 和 `open`。所有事件的详细描述可以在 `man` 页面上找到。
+*   `--fromfile file.txt`
+    从 `file.txt` 逐行读取要监控的文件或目录列表。
+
+
+
+
+
+*   `-q`
+
+避免产生必要的输出（静默）。
+
+*   `-r`
+
+同时递归监控指定起始目录的所有子目录。为每个单独的文件设置 `inotify` 监控。对于包含许多文件的目录，这需要一些时间并消耗相对大量的资源。监控器的数量通常设置为 8,192。如果需要，你可以在 `/proc/sys/fs/inotify/max_user_watches` 文件中更改此值。
+
+*   `-t n`
+
+始终在 `n` 秒后结束，即使没有发生任何事件。
+
+#### 示例
+
+以下 shell 脚本监控当前目录下的 `*.md` 文件。每当这些文件中的一个发生变化时，它会检查是否存在比相应的 `*.pdf` 文件更新 `*.md` 文件。在这种情况下，将使用 `pandoc` 重新创建相关的 PDF 文档。脚本将一直运行，直到通过 Ctrl+C 终止。
+
+```
+#!/bin/bash
+while :
+do
+  for mdfile in *.md; do
+    pdffile=${mdfile%.md}.pdf
+    if [ $mdfile -nt $pdffile ]; then
+      echo $mdfile
+      pandoc -t beamer -H header.tex $mdfile -o $pdffile
+    fi
+  done
+  inotifywait -e modify -q *.md
+done 
+```
+
+### insmod [options] module file [parameter=value ...]
+
+`insmod` 加载指定的内核模块。必须传递完整文件名。此外，可以将参数（选项）传递给模块。如果你想指定十六进制值，必须在它们前面加上前缀 `0x`，例如 `option=0xff`。你可以使用 modinfo 来确定可选的模块参数。
+
+*   `-f`
+
+即使该模块没有为当前内核版本编译，也尝试加载它。这是否实际上有效取决于内核版本和模块版本之间是否存在任何不兼容之处。当硬件制造商仅提供二进制版本的模块（不带任何源代码）时，此选项特别有用。但是，该选项显然不能保证模块实际上与你的内核版本兼容。
+
+### install [options] source target
+
+`install` 将文件或整个目录复制到新位置，并可以同时设置所有者、组和访问权限。因此，`install` 结合了 `cp`、`chmod` 和 `chown` 的功能。正如名称所示，该命令主要用于安装脚本。
+
+*   `-d`
+
+递归复制整个目录，而不仅仅是一个文件。
+
+*   `-g group`
+
+定义新文件的组分配。
+
+*   `-m oct_permissions`
+
+使用八进制代码定义访问权限（参见 chmod）。
+
+*   `-o owner`
+
+确定目标文件的所有者。
+
+*   `-p` 或 `--preserve-timestamps`
+
+原封地采用源文件的时间数据。（默认情况下，当前时间被保存为目标文件的修改时间）。
+
+#### 示例
+
+以下命令将当前目录下的 `login_sample` 文件复制到 `/usr/share/myproject/logindata`。在这种情况下，目标目录 `/usr/share/myproject` 必须已经存在。目标文件属于 `apache` 用户，且只能由该用户读取和更改。（在 Debian 和 Ubuntu 系统上，你必须使用 `www-data` 用户代替 `apache`。）
+
+```
+root# install -m 600 -o apache login_sample /usr/share/myproject/logindata 
+```
+
+### inxi [options]
+
+来自相同的 Perl 脚本 `inxi` 收集有关计算机硬件、驱动程序和软件的信息。在没有更多选项的情况下，它只输出计算机的关键数据。在终端中，关键词用彩色显示，这使得文本比下面的更具可读性。
+
+*   `-A`
+
+提供关于音频系统的信息。
+
+*   `-B`
+
+提供电池的信息。
+
+*   `-D`
+
+提供数据（磁盘）的信息。
+
+*   `--export json|xml`
+
+将结果格式化为 JSON 或 XML 文档。
+
+*   `-E`
+
+提供关于蓝牙设置的信息。
+
+*   `-G`
+
+提供图形系统的信息。
+
+*   `-F`
+
+返回命令能够确定的所有数据（完整）。
+
+#### 示例
+
+```
+user$ inxi
+CPU: 4x 1-core EPYC-Rome (-SMP-) speed: 3593 MHz
+Kernel: 5.15.0-100-generic x86_64
+Up: 2d 5h 7m Mem: 2186/5779 MiB (37.8%) Storage: 108 GiB (66.3% used)
+Procs: 179 Shell: Bash
+```
+
+### ionice [options] [command]
+
+`ionice` 以更改的 I/O 优先级运行指定的命令。因此，`ionice` 的功能类似于 nice，但它影响的是 I/O 操作而不是 CPU 利用率。
+
+*   `-c n`
+
+指定所需的调度类。允许的设置为：
+
+    *   `0`: 无偏好。
+
+    *   `1`: 实时，即最大 I/O 速度。
+
+    *   `2`: 尽力而为，默认应用。
+
+    *   `3`: 空闲，即仅在系统没有负载时执行 I/O 操作。
+
+
+
+
+
+*   `-n ionic`
+    指示所选调度类内的优先级级别。允许的值范围从 `0`（最高优先级）到 `7`（最低优先级）。优先级级别仅针对调度类 `1` 和 `2` 提供，并允许在类内进行区分。
+*   `-p pid`
+    更改由指定 ID 标识进程的 I/O 优先级。
+
+#### 示例
+
+以下命令以最低 I/O 优先级启动备份脚本：
+
+```
+root# ionice -c 3 backupscript 
+```
+
+### iotop
+
+来自同名软件包的 `iotop` 用于显示所有运行进程的 I/O 活动情况。这在寻找对硬盘或其他数据介质产生极高负载的进程时非常有帮助。
+
+*   `-o`
+    仅显示实际上正在进行 I/O 活动的进程（默认不显示所有运行进程）。
+*   `-u` 或 `--user=user`
+    仅显示指定用户的进程。
+
+### ip [options] object command
+
+`ip` 是一个功能极其强大的命令，用于确定或更改关于网络设备、隧道、路由规则等信息。应该使用 `ip` 代替 `ifconfig` 和 `route`，因为这两个命令被认为是过时的。
+
+*   `-f fam` 或 `-family fam`
+    确定所需的网络协议（`inet`、`inet6` 或 `link`）。与其 `-f inet`，允许使用短格式 `-4`；与其 `-f inet6`，可以使用选项 `-6`；与其 `-f link`，可以使用选项 `-0`。
+*   `-o` 或 `-oneline`
+    将相关的输出汇总在一行。这降低了可读性，但简化了通过 `grep` 或 `wc` 进行的后续处理。
+*   `-r` 或 `-resolve`
+    解析 IP 地址并显示主机名。这需要域名服务器。
+
+必须指定以下关键字之一作为 `object`：`addr`、`addrlabel`、`link`（即网络接口）、`maddr`（多播地址）、`mroute`、`monitor`、`neighbor`（ARP 或 NDISC 缓存条目）、`route`、`rule` 或 `tunnel`。这些关键字可以缩写。大多数对象都支持 `add`、`delete` 和 `list = show` 命令。其他命令则特定于对象。在下面的参考中，我将局限于 `addr`、`link` 和 `route` 对象的最重要命令：
+
+*   `ip addr [show dev xxx]`
+    显示所有接口的 IP 地址。输出通常包含多行。以 `link/ether` 开头的行指定接口的 MAC 地址。以 `inet` 开头的行包含 IPv4 地址，包括短记法中的掩码（`/n`）以及广播地址。以 `inet6` 开头的行指定 IPv6 地址，并可能有多行。
+    使用 `-4` 或 `-6`，可以将输出限制为 IPv4 或 IPv6。`ip addr show dev xxx` 仅提供指定接口的信息。
+*   `ip addr add n/m dev xxx`
+    将带有掩码 `m` 的 IP 地址 `n` 添加到接口 `xxx`。允许的 IPv4 地址（包括掩码）例如 10.0.45.34/24。
+*   `ip addr del n/m dev xxx`
+    取消对接口 `xxx` 的地址分配。必须指定与 `ip addr add` 完全相同的参数。
+*   `ip addr flush dev xxx`
+    删除接口 `xxx` 的所有地址分配。
+*   `ip link [show dev xxx]`
+    提供所有网络接口的列表，与 `ip addr show` 不同，它不指定 IP 地址。
+*   `ip link set xxx up/down`
+    激活或禁用网络接口。
+*   `ip neigh`
+    提供本地网络中已知的所有其他 IP 地址列表，即“邻居”的枚举。
+
+
+
+
+
+*   `ip route [list]`
+
+    输出 IPv4 路由表。如果你想查看 IPv6 数据，必须指定 `-6` 选项。网关地址可以在以 `default` 开头的行找到。
+
+*   `ip route add default via n`
+
+    将 IP 地址 `n` 指定为默认网关。
+
+*   `ip route add n1/m via n2 dev xxx`
+
+    为地址范围 `n1/m` 定义路由网关 `n2`。IP 数据包将通过 `xxx` 接口进行路由。
+
+*   `ip route del ...`
+
+    删除指定的路由条目。参数必须与 `ip route add` 命令的参数完全匹配。
+
+`ip` 命令的文档跨越了多个 `man` 页面。`man ip` 仅提供概述。`man ip-address` 提供了关于 `ip addr` 的细节，`man ip-route` 提供了 `ip route` 的细节，以此此类推。你也可以使用 `ip object command help` 来确定特定命令的语法描述，例如通过 `ip addr del` 解析地址分配的语法。
+
+#### 示例
+
+以下命令显示当前路由表。在许多现代发行版中，使用了接口名称如 `enp0s3` 替代了 `eth0`。
+
+```
+user$ ip route show
+10.0.0.0/24 dev eth0  proto kernel  scope link  src 10.0.0.41  metric 1
+default via 10.0.0.138 dev eth0  proto static 
+```
+
+要将地址 10.0.0.41 分配给 `eth0` 接口并设置网关 10.0.0.138，必须运行以下命令：
+
+```
+root# ip route add 10.0.0.41/24 dev eth0
+root# ip route add default via 10.0.0.138 dev eth0 
+```
+
+以下命令显示了 IPv6 配置：
+
+```
+root# ip -6 addr add 2a01:4f8:161:107::2/64 dev eth0
+root# ip -6 route add default via fe80::1 dev eth0 
+```
+
+``` `ip -o link` 提供了所有网络接口的紧凑列表：
+
+```
+root# ip -o link
+1: lo:     <LOOPBACK,UP,LOWER_UP>              mtu 16436 ...
+2: eth0:   <BROADCAST,MULTICAST,UP,LOWER_UP>   mtu 1500 ...
+3: br0:    <BROADCAST,MULTICAST,UP,LOWER_UP>   mtu 1500 ...
+4: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 ...
+5: vnet0:  <BROADCAST,MULTICAST,UP,LOWER_UP>   mtu 1500 ... 
+```
+
+### ipcalc ipadress [netmask]
+
+来自同名软件包的 `ipcalc` 根据给定的 IPv4 地址和子网掩码确定所有其他参数，即网络地址、广播地址等。
+
+```
+user$ ipcalc 10.11.12.13/16
+Address:   10.11.12.13          00001010.00001011\. 00001100.00001101
+Netmask:   255.255.0.0 = 16     11111111.11111111\. 00000000.00000000
+```
+
+
+
+
+
+可以使用选项来限制有效性。大多数选项也可以通过感叹号 `!` 以否定的形式使用。例如，使用 `-p udp` 时，规则仅适用于 UDP 数据包。然而，使用 `-p ! udp` 时，它适用于除 UDP 数据包以外的所有数据包。
+
+并不是所有选项组合都是允许的。例如，`-d` 和 `-s` 选项只能用于 `tcp` 数据包，即必须与 `-p tcp` 结合使用。
+
+*   `-d ipaddress`
+    指定目的地址（destination）。地址范围可以使用以下格式指定：`192.168.0.0/24` 或 `192.168.0.0/255.255.255.0`。在两种情况下，指的都是所有 IP 数字 `192.168.0.*`。
+
+*   `--dport port[:port]`
+    指定目的地址的端口或端口范围（例如 `0:1023`）。
+
+*   `-i interface`
+    指定 IP 数据包源出的接口（仅用于 input、forward 和 prerouting 链）。在接口名称中，允许使用特殊字符 `+` 作为所有接口数字的占位符，例如 `ppp+` 代表 `ppp0`、`ppp1` 等。
+
+*   `-j ACCEPT/DROP/mychain/..`
+    指定对数据包执行什么操作（jump）。通常在这里指定预定义的程序之一（`ACCEPT`、`DROP` 等）。对于特殊应用，`iptables` 提供了 `REDIRECT` 或 `MASQUERADE`。
+
+    除了预定义的关键字，你还可以指定自定义的规则链。在这种情况下，该链的所有规则都将被应用。如果自定义链中没有规则规则，则将应用原始链中的下一条规则。在过程化编程中，这对应于子程序调用。
+
+*   `-m module`
+    表示将使用一个额外的模块。随后，可以使用由该额外模块定义的特殊选项。一个特别重要的额外模块是 `state`，它允许根据连接状态选择数据包。例如，带有 `-m state --state NEW` 的规则仅适用于发起新连接的 IP 数据包。下表显示了可以使用 `--state` 指定的状态关键字。
+
+    *   `NEW:` 数据包发起一个新连接。
+    *   `ESTABLISHED:` 数据包属于一个现有连接。
+    *   `RELATED:` 数据包发起一个新连接，但属于一个现有连接。
+    *   `INVALID:` 数据包不属于任何现有连接，且未发起新连接。
+
+*   `-o interface`
+    指定 IP 数据包传输的接口（仅用于 output）。
+
+*   `-p protocol`
+    确定协议（例如 `tcp`、`udp` 或 `icmp`）。
+
+*   `-s ipaddress`
+    指定发送者（source）。
+
+*   `--sport port[:port]`
+    指定发送者的端口或端口范围。
+
+*   `--syn`
+    指定该规则仅适用于设置了 SYN 位的 TCP 数据包。此类数据包用于建立连接（例如用于 HTTP 功能）。
+
+`iptables` 提供了使用 `syslog` 记录单条规则有效性的选项。要实现这一点，你可以将 `-j LOG` 作为规则的操作。为了让一条规则既生效又被记录，必须指定两次：一次使用 `-j LOG`，另一次使用 `-j ACCEPT` 或 `-j DROP`。请注意，日志规则可能会迅速产生巨大的日志文件。
+
+### iptables -N mychain
+`iptables -N` (new) 创建名为 mychain 的新链。
+
+### iptables -L [chain] [-t table] [-v]
+`iptables -L` (list) 在不带任何其他选项的情况下，返回 filter 表中三条链的所有规则，以及所有自定义链的规则。
+
+你可以使用其他选项来精确指定所需的链（例如 `iptables -L mychain` 或 `iptables -L POSTROUTING -t nat`）。额外的 `-v` 选项提供更详细的信息。`-n` 导致在输出中显示 IP 和端口号（而不是网络名或端口名）。
+
+### iptables -D chain [-t table] options
+`iptables -D` (delete) 从链中删除规则。必须指定与 `iptables -A` 完全相同的选项。
+
+### iptables -F chain [-t table]
+`iptables -F` (flush) 删除从指定链中的所有规则。
+
+### iptables -X [mychain]
+`iptables -X` 删除指定的自定义链。如果没有指定链，则将删除所有自定义链。
+
+#### 示例
+以下 `iptable` 命令为 IPv4 定义了一个微型防火墙。只有当入站数据包属于现有连接，或者不是来自计算机连接互联网的 `eth0` 接口时，才会被接受。
+
+
+
+
+此示例假设 `iptables` 表初始处于默认状态（即接受所有数据包），并且只有一个连接互联网的接口。
+
+```
+root# iptables -N wall
+root# iptables -A wall -m state --state ESTABLISHED,RELATED -j ACCEPT
+root# iptables -A wall -m state --state NEW ! -i eth0 -j ACCEPT
+root# iptables -A wall -j DROP
+root# iptables -A INPUT -j wall
+root# iptables -A FORWARD -j wall 
+```
+
+### ip[6]tables-save [options]
+
+`ip[6]tables-restore [options]`
+
+`ip[6]tables-xml [options]`
+
+`iptables-xxx` 或 `ip6tables-xxx` 命令有助于将数据包过滤防火墙的规则保存到文件中，或从文件中读取。下面简述的每个命令在 IPv6 变体中同样可用。
+
+- `iptables-save` 输出所有防火墙过滤器的规则。使用了易于阅读的语法。可以使用 `>` 将输出重定向到文件。`-t name` 选项仅保存指定过滤器的规则。
+- `iptables-restore` 从标准输入读取规则。规则通常会替换现有的过滤器链。如果你不想发生这种情况，必须指定 `-n` 选项。使用 `-T name`，则仅考虑指定过滤器的规则。
+- `iptables-xml` 的工作方式与 `iptables-save` ，但它会创建一个 XML 文档。
+
+### iw object command
+
+你可以使用 `iw` 命令控制支持 nl80211 接口的 Wi-Fi 适配器。大多数基于 mac80211 框架驱动的当前 Wi-Fi 适配器此类。
+
+有多种方法指定你想控制的对象。如果接口或设备名称是唯一的，可以省略缩写 `dev` 或 `phy`。
+
+- `dev name`
+  指定接口名称（例如 `dev wlan0`）。
+- `phy name` 或 `phy #n`
+  指示设备的名称或索引数字。对于带有 Wi-Fi 适配器的笔记本电脑，设备名称始终为 `phy0`。
+- `reg`
+  控制监管机构，即一组用于国家无线标准的规则。
+
+可选的命令取决于对象的类型。我在这里只展示几个选定的命令：
+
+- `dev name connect ssid`
+  建立与指定 Wi-Fi 网络的连接。这对于未使用加密的网络可行。如果无线网络受 WEP 保护，你必须使用可选的 `keys` 参数指定密钥（例如 `keys 0:0011223344`）。密钥以 5 或 13 个 ASCII 字符或 10 或 26 个十六进制数字的形式指定。
+  如果网络受 WPA 保护，你需要在运行 `iw dev connect` 之前在 `/etc/wpa/supplicant/wpa_supplicant.conf` 中指定密钥，并确保 `wpa_supplicant` 作为后台服务运行。
+- `dev name del`
+  移除（删除）接口。如果以后还要使用该接口，必须通过 `interface add` 重新设置。
+- `dev name disconnect`
+  终止连接。
+- `dev name info`
+  提供关于接口的一信息。
+- `dev name link`
+  提供活动网络连接或未连接的信息。
+- `dev name scan`
+  提供范围内所有无线网络的详细信息。
+- `phy phy0 interface add wlan0 type managed`
+  为 `phy0` 设备设置 `wlan0` 接口。其他接口类型为 `monitor`、`wds`、`mesh` 或 `mp`，以及 `ibss` 或 `adhoc`。然后必须使用 `ifconfig wlan0 up` 激活新接口。
+
+为了故障排除，在第二个窗口或控制台中运行 `iw event` 命令通常有用。该命令会返回所有状态和错误消息，直到按下 Ctrl+C 结束。
+
+#### 示例
+
+以下命令手动为不受密码保护的无线网络建立网络连接：
+
+```
+root# iw phy0 interface add wlan0 type managed
+root# ifconfig wlan0 up
+root# iw dev wlan0 connect hotel-wlan
+root# dhclient wlan0 
+```
+
+在许多当前的发行版中，Wi-Fi 接口不再被称为 `wlan0`、`wlan1` 等，而是 `wlpnsm`。
+
+## J
+
+### j directory
+
+来自 `autojump` 包的 `j` 命令有助于以特别高效的方式切换到目录。`j` 也可以说是 `cd` 命令的一种学习变体。例如，如果你执行过一次 `j /etc/X11/xorg.conf.d`，那么第二次只需执行 `j xorg.conf.d` 即可，即目录路径的最后部分（只要它是唯一的）。
+
+
+
+
+
+你可以通过 Tab 键补全进一步缩短输入，例如输入 `j xorg` 后按 Tab 键。如果有多个目录匹配，只需连续按几次 Tab 即可。如果需要，`jumpstats` 命令提供了所有最近访问过的目录的统计信息。
+
+`j` 的现代替代方案是 z。
+
+## john [options] [hashfile]
+
+John the Ripper 程序（命令和包名均为 `john`）是一个离线密码破解器。若要使用该程序，你必须拥有哈希值形式的密码。随后 `john` 会测试自生成的密码或预定义列表中的密码是否与这些哈希值对应。
+
+`john` 可以处理大多数常见的哈希算法。在最简单的情况下，你只需将一个包含逐行哈希值的文本文件路径传递给命令即可。文本文件的每一行也可以采用以下格式：`name:hashcode:xxx`。
+
+`john` 首先尝试将账户名作为密码（如果可用），然后尝试内置字典列表中的密码，最后尝试它自己生成的密码（`--single`、`--wordlist` 和 `--incremental` 模式）。破解出的密码存储在 `.john/john.pot` 中。
+
+*   `--format=hashname`
+    指定 `john` 应该使用的哈希方法。该命令支持以下格式等：`afs`、`bcrypt`、`bsdicrypt`、`crypt`、`descrypt`、`dummy lm md5crypt` 和 `tripcode`。只有当 `john` 无法识别哈希方法本身时，才需要此选项。
+    可以在以下网站找到哈希格式的简介。请注意，该网站还描述了仅包含在非官方“jumbo”版本中的格式（参见“替代方案”部分）。
+    [`pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats`](https://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats)
+
+*   `--incremental[:lower|lowernum|alpha|digits|alnum]`
+    自生成密码，首先尝试短密码，然后逐渐增加长度。注意，在此模式下，`john` 会无限运行，除非你正在寻找的密码非常易见。
+    默认情况下，此模式考虑字符 a–z、A–Z 和 0–9（对应 `alnum`，62 个字符）。你可以选择限制字符集：`lower` 对应 a–z，`lowernum` 包含 a–z 和 0–9，`alpha` 对应 a–z 和 A–Z，`digits` 仅包含数字。`/etc/john/john.conf` 中提供了其他定义的模式。（在 Ubuntu 上，许多模式无法工作，是因为 `/usr/share/john` 中缺少相应的字符集文件。）
+    最后，你可以使用 `john --make-charset` 生成自己的字符集文件，然后通过 `--incremental=charsetfile` 使用它。以下网站提供了关于此的一些实用提示：[`security.stackexchange.com/questions/66106`](https://security.stackexchange.com/questions/66106)。
+
+*   `--restore`
+    继续执行被 Ctrl+C 中断的 `john` 。
+
+*   `--show`
+    显示已经破解的密码。为此，程序会评估 `.john/john.pot` 文件。
+
+*   `--wordlist filename`
+    逐行尝试文件中所包含的密码。
+
+#### 示例
+
+此示例的起点是一台拥有多个账户的 Linux 计算机。`john` 提供的 `unshadow` 命令将 `/etc/passwd` 和 `/etc/shadow` 合并为一个新的 `hashes` 文件。（访问 `shadow` 文件需要 `root` 权限。）由于空间原因，结果中的哈希值在此被简化了：
+
+```
+root# unshadow /etc/passwd /etc/shadow > hashes
+root# chown user hashes
+user$ cat hashes
+...
+peter:$6$U.zGFBlF$LdNTE...:1001:1001::/home/peter:/bin/bash
+maria:$6$gSJg6.d8$mN.en...:1002:1002::/home/maria:/bin/bash
+hugh:$6$UinuQqJY$iD59.N...:1003:1003::/home/hugh:/bin/bash 
+```
+
+`john` 在几秒钟发现了两个特别不安全的密码。`peter` 使用了自己的名字作为密码，而 `hugh` 使用了流行的密码“123456”。然而，Maria 的密码无法立即破解，这就是为什么在过了一段时间后通过 Ctrl+C 停止了进程：
+
+```
+user$ john hashes
+Loaded 3 password hashes with 3 different salts
+Press 'q' or Ctrl-C to abort, almost any other key for status
+peter            (peter)
+123456           (hugh)
+  <Strg>+<C> 
+```
+
+你可以使用 git 从 GitHub 下载热门密码列表。（注意，这些列表所需的空间大约是 750 MiB！）这些字典中实际上一个实际上包含了 Maria 的密码！它的内容是 `secret`：
+
+```
+user$ git clone https://github.com/danielmiessler/SecLists.git
+user$ john --wordlist=SecLists/Passwords/Common-Credentials/ \
+                   10-million-password-list-top-10000.txt  hashes
+Loaded 3 password hashes with 3 different salts
+Remaining 1 password hash with 1 different salt
+secret           (maria) 
+```
+
+#### 替代方案
+
+在 GitHub 上有一个极大扩展、社区维护的 `john` “jumbo”版本：[`github.com/openwall/john`](https://github.com/openwall/john)。
+
+
+
+
+
+如果你想在 GPU 支持下显著加速哈希密码破解，你应该考虑使用 `hashcat`。在这种情况下，最大的障碍是安装合适的 GPU 驱动程序。要检查网络服务是否存在弱密码，可以使用在线密码破解器：hydra。
+
+## journalctl [options] [search expression]
+
+journal 是属于 `systemd` 的 syslog 服务。它现在运行在大多数常见的 Linux 发行版上，有时会与传统的日志系统（通常是 `rsyslogd`）并行运行。
+
+journal 文件以二进制格式保存，只能使用此处描述的 `journalctl` 命令进行读取。
+
+可以将一个多个搜索表达式编写为程序的路径或使用 `field=value` 语法。随后 `journalctl` 只显示符合所有搜索表达式的日志记录。带有逻辑或（OR）关系的搜索表达式可以使用 `+` 表示，例如 `field1=value1 + field2=value2`。
+
+`field` 允许使用 `MESSAGE`、`PRIORITY`、`ERRNO`、`_PID`、`_UID`、`_GID` 或 `_SELINUX_CONTEXT` 关键字。可以通过 `man systemd-journal` 更多额外参数及其含义的详细描述。
+
+当不带参数进行调用时，`journalctl` 会返回一个几乎无尽的消息列表，但你可以使用选项来过滤输出：
+
+* `-b`: 仅显示自计算机上次重启后的消息。
+* `--disk-usage`: 显示 journal 文件在 `/var/log` 中占用的空间。
+* `-e`: 立即跳转到要显示的消息的末尾。
+* `-f`: 以连续模式启动 `journalctl`，不断显示新到达的消息。Ctrl+C 终止命令。
+* `-k`: 仅显示内核消息。
+* `-n`: 仅显示最后 `n` 行。
+* `--no-pager`: 将输出直接写入标准输出，而不是使用分页器（通常是 `less` 命令）进行显示。
+* `-p`: 显示特定优先级的消息。范围从 `0` 到 `7`，分别对应 `emerg`、`alert`、`crit`、`warning`、`notice`、`info` 和 `debug`。`2` 表示只考虑级别为 `0`、`1` 和 `2` 的消息。
+* `-r`: 以反序显示消息，即最新的消息优先显示。
+* `--since [time]`: 仅显示在指定时间之后记录的消息。
+* `-t`: 仅显示指定标签（作为记录器）的消息。
+* `-u`: 仅显示指定服务（单元，例如 `avahi-daemon`）的消息。
+* `--user`: 显示来自用户 journal 的消息。现代 Linux 发行版中的用户 journal 用于记录来自图形系统、Gnome 或其他桌面系统以及运行在其中的程序的消息。
+* `--until [time]`: 仅显示记录到指定时间的消息。
+* `--vacuum-size=500M`: 删除旧日志文件，使总内存需求最大为 500 MiB。
+
+#### 示例
+
+以下命令按反序显示来自 Open SSH 服务器的所有消息，即最新的消息优先显示：
+
+```
+journalctl -u sshd -r
+```
+
+如果你想实时跟踪日志消息，应该如下所示调用 `journalctl`：
+
+```bash
+journalctl -u sshd -f
+```
+
+第三个示例显示所有包含 IP 地址 10.0.0.2 的消息：
+
+```bash
+journalctl | grep 10.0.0.2
+```
+
+## jq [options] filter expression [file.json]
+
+`jq` 代表 JSON query，用于帮助从 JSON 文件中提取数据。该命令可以在同名软件包中找到，必须在首次使用前安装。`jq` 从标准输入或作为参数传递的文件读取 JSON 文档。最简单的应用是以可读的方式格式化并缩进 JSON 文档。要实现这一点，你只需输入一个点作为过滤器表达式：`jq . file.json`。
+
+以下列表提供了一些更多的过滤器表达式示例：
+
+* `.key1`: 返回指定键的值。
+* `.[]`: 返回当前层级的所有数组元素。
+* `.[].key1.key2`: 返回数组中所有对应的元素。
+* `.[n]`: 返回第 `n` 个元素。
+* `filter | {json expression}`: 从找到的元素创建一个新的 JSON 文档。
+
+
+
+
+
+*   `filter | select {.key1.key2=="xxx"}`
+
+过滤具有特定属性的元素。
+
+#### 示例
+
+```
+user$ echo '{"key1":"123","key2":"456"}' | jq .
+{
+   "key1": "123",
+   "key2": "456"
+}
+user$ echo '{"key1":"123","key2":"456"}' | jq .key1
+"123" 
+```
+
+你可以在 `jq`教程中找到更复杂的应用示例：
+
+[`jqlang.org/tutorial/`](https://jqlang.org/tutorial/)
+
+## K
+
+### kbdrate [options]
+
+`kbdrate` 设置键盘按键重复的延迟时间和速度。如果不带选项，该命令将显示当前有效的设置。
+
+*   `-d` `n` 或 `--delay=n`
+
+    表示在多少毫秒后开始按键重复。允许的值有 `250`、`500`、`750` 和 `1000`。
+
+*   `-r` `n` 或 `--rate=n`
+
+    控制键盘在长按时每秒发送多少个字符。`n` 可以是浮点数，但并非每个值都允许（参见 `man kbdrate`）。命令会自动选择下一个允许的值。
+
+### kexec [options]
+
+来自 `kexec-tools` 包的 `kexec` 命令允许你在不重启计算机的情况下激活新内核。所有进程和 init 系统必须完全关闭。与真正的重启相比，使用 `kexec` 进行内核重启仍然快几秒：特别是不再需要 BIOS/EFI 初始化和 GRUB 过程。然而，在重新初始化各种硬件组件时可能会出现问题。
+
+`kexec` 分两个步骤使用：首先你需要使用 `kexec -l` 准备内核重启，然后使用 `kexec -e` 或 `systemctl isolate kexec` 执行内核切换。
+
+*   `--append=kernel parameters`
+
+    除了 `--command-line` 或 `--reuse-cmdline` 之外，将参数传递给内核。
+
+*   `--command-line=kernel parameters`
+
+    将参数传递给内核。
+
+*   `-e`
+
+    重启之前安装的内核 (exec)。
+
+*   `--initrd=initrd file`
+
+    指定 initrd 文件的位置。
+
+*   `-l kernel file`
+
+    指定要加载的新内核的位置 (load)。
+
+*   `--reuse-cmdline`
+
+    采用上一次内核启动时使用的参数。
+
+#### 示例
+
+以下命令准备了内核重启：
+
+```
+root# kexec -l /boot/vmlinuz-6.6.7-300 \
+            --initrd=/boot/initrd.img-6.6.7-300 --reuse-cmdline 
+```
+
+在第二步中，你必须激活新内核——可以通过立即通过 `kexec -e` 执行，也可以在通过 systemd 关闭所有运行的服务后执行。在服务器上，第二种选择明显更好！这是确保数据库服务器能够完成所有打开的事务并正确关闭所有文件的方法。
+
+```
+root# kexec -e                 
+(立即重启)
+root# systemctl isolate kexec  
+(首先关闭服务，然后重启) 
+```
+
+### kill [-s signal] processno
+
+`bash` 命令 `kill` 向运行中的进程发送信号。如果在使用 `kill` 时没有带 `-s` 选项，则默认发送 SIGTERM 信号 (15) 来终止（kill，因此命令名如此如此）进程。在特别顽固的情况下，`-9`、`-s SIGKILL` 或 `-KILL` 会有所帮助。然而，此时进程将没有机会执行任何清理工作。
+
+然而，`kill` 也可以用于发送更无害的信号。经常使用 `-1`、`-s SIGHUP` 或 `-HUP` 来请求守护进程重新加载配置文件。通过这种方式，你可以为某些程序激活新配置，而无需完全停止并重启守护进程。让 `kill` 获取所需的进程号 (PID) 的方便变体最简单的方法是使用 `ps` 命令：可以直接用鼠标“射掉”要终止的程序。
+
+### killall [-signal] process name
+
+`killall` 的工作几乎与 `kill` 命令一样。区别在于它指定的不是进程号 (PID)，而是进程名称。如果有多个同名进程，它们都会接收到指定的信号（再次，默认是 SIGTERM）。所需的信号可以通过数字 `-n` 或像 `-HUP` 这样的名称来指定。你可以通过 `killall -l` 获取所有信号名称的列表。
+
+#### 示例
+
+以下示例终止了当前用户的所有运行 Firefox 实例。如果由 `root` 执行 `killall` 命令，它将终止所有用户的所有运行 Firefox 进程。
+
+```
+user$ killall firefox 
+```
+
+### kpartx [diskdevice]
+
+同名包的低级 `kpartx` 命令确定指定数据介质的所有分区并创建相应的设备文件。通常，`udev` 系统在检测到新数据介质时（例如连接 USB 硬盘时）会自动创建设备文件。`kpartx` 主要用于编辑虚拟数据介质或虚拟机镜像文件。
+
+*   `-a`
+
+
+
+
+为指定的数据介质创建新的设备文件（添加）。
+
+* `-d`
+
+删除数据介质的设备文件（删除）。
+
+* `-l`
+
+读取数据介质的分区，但不创建任何设备文件。
+
+* `-u`
+
+更新已数据介质的设备文件（更新）。
+
+* `-v`
+
+提供执行操作的信息。
+
+#### 示例
+
+以下命令将原始镜像文件中所有的分区连接到循环设备：
+
+```
+root# kpartx -av image.raw
+add map loop0p1 (252:12): 0 1024000 linear /dev/loop0 2048
+add map loop0p2 (252:13): 0 19945472 linear /dev/loop0 1026048 
+```
+
+随后可以通过 `/dev/mapper/loop0` 设备访问整个虚拟硬盘。
+
+## kvm [options] [imagefile]
+
+`kvm` 脚本在 Ubuntu 上仍然常用，它用于运行虚拟机。它使用了 `qemu` 模拟器和 Linux 虚拟化系统内核级虚拟机 (KVM)。在大多数其他发行版中，虚拟机直接通过 `qemu` 命令启动，这就是为什么我在那里描述了许多相同的选项。
+
+## L
+
+### l2ping [options] bluetoothmac
+
+来自 `bluez` 包的 `l2ping` 向通过 MAC 地址指定的蓝牙设备发送 L2CAP 回显请求。通过这种方式，你可以测试本地蓝牙适配器与外部设备之间是否可以建立连接。`l2ping` 必须以 `root` 权限运行。你可以使用 `hcitool scan` 获取外部蓝牙设备的 MAC 地址。
+
+### lame [options] in out.mp3
+
+LAME 的缩写代表 LAME Ain't an MP3 Encoder，但 `lame` 命令实际上用于将 WAV 文件转换为与 MP3 格式兼容的压缩音频文件。`lame` 的替代方案是 `toolame` 或 `twolame`，它们都会创建 MPEG-1 Layer 2 格式的文件（即 MP2）。这种类型的文件也可以被大多数 MP3 播放器播放而无任何问题。
+
+* `-r`
+
+源文件为原始格式（而非 WAV 文件）。
+
+* `-s 8/11.025/12/16/22.05/24/32/44.1/48`
+
+指定原始文件中的采样频率。WAV 文件不需要此选项。
+
+#### 示例
+
+以下命令创建兼容 MP3 的音频文件 `title.mp3`：
+
+```
+user$ lame title.wav title.mp3 
+```
+
+### last [options]
+
+`last` 提供最后登录到这台电脑的用户列表。该命令会评估 `/var/log/wtmp` 文件。
+
+* `-i`
+
+对于 SSH 登录，显示远程计算机的 IP 地址而不是主机名。
+
+* `-n`
+
+`-n`
+
+控制显示的条目数量。
+
+* `-t`
+
+指示登录时间。
+
+#### 示例
+
+最后登录的用户是：
+
+```
+user$ last
+root  pts/0    192.168.1.1     Mon May 22 10:00  - 00:00 (still in)
+user  pts/1    192.168.1.2     Mon May 22 10:05  - 00:00 (still in)
+```
+
+### last [options]
+
+`last` 提供最后登录到这台电脑的用户列表。该命令会评估 `/var/log/wtmp` 文件。
+
+* `-i`
+
+对于 SSH 登录，显示远程计算机的 IP 地址而不是主机名。
+
+* `-n`
+
+`-n`
+
+控制显示的条目数量。
+
+* `-t`
+
+指示登录时间。
+
+#### 示例
+
+最后登录的用户是：
+
+```
+user$ last
+root  pts/0    192.168.1.1     Mon May 22 10:00  - 00:00 (still in)
+user  pts/1    192.168.1.2     Mon May 22 10:05  - 00:00 (still in)
+```
+
+### last [options]
+
+`last` 提供最后登录到这台电脑的用户列表。该命令会评估 `/var/log/wtmp` 文件。
+
+* `-i`
+
+对于 SSH 登录，显示远程计算机的 IP 地址而不是主机名。
+
+* `-n`
+
+`-n`
+
+控制显示的条目数量。
+
+* `-t`
+
+指示登录时间。
+
+#### 示例
+
+最后登录的用户是：
+
+```
+user$ last
+root  pts/0    192.168.1.1     Mon May 22 10:00  - 00:00 (still in)
+user  pts/1    192.168.1.2     Mon May 22 10:05  - 00:00 (still in)
+```
+
+### last [options]
+
+`last` 提供最后登录到这台电脑的用户列表。该命令会评估 `/var/log/wtmp` 文件。
+
+* `-i`
+
+对于 SSH 登录，显示远程计算机的 IP 地址而不是主机名。
+
+* `-n`
+
+`-n`
+
+控制显示的条目数量。
+
+* `-t`
+
+指示登录时间。
+
+#### 示例
+
+最后登录的用户是：
+
+```
+user$ last
+root  pts/0    192.168.1.1     Mon May 22 10:00  - 00:00 (still in)
+user  pts/1    192.168.1.2     Mon May 22 10:05  - 00:00 (still in)
+```
+
+### last [options]
+
+`last` 提供最后登录到这台电脑的用户列表。该命令会评估 `/var/log/wtmp` 文件。
+
+* `-i`
+
+对于 SSH 登录，显示远程计算机的 IP 地址而不是主机名。
+
+* `-n`
+
+`-n`
+
+控制显示的条目数量。
+
+* `-t`
+
+指示登录时间。
+
+#### 示例
+
+最后登录的用户是：
+
+```
+user$ last
+root  pts/0    192.168.1.1     Mon May 22 10:00  - 00:00 (still in)
+user  pts/1    192.168.1.2     Mon May 22 10:05  - 00:00 (still in)
+```
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig
+
+`ldconfig` 更新库链接并创建 `/etc/ld.so.cache`。该命令必须以 `root` 权限执行。
+
+### ldconfig-ldd-
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+### ldd
+
+`ldd` 提供运行程序所需的库列表。你可以使用该命令来确定计算机上提供了哪些库。
+
+
+
+
+
+*   `-c "command"`
+    在字符字符串中运行指定的并用分号分隔的 FTP 命令（例如，`lftp -c "open -u user,passw server; mirror -R dir"`）。
+*   `-f file`
+    从文件中逐行读取要执行的命令。
+
+`lftp` 登录设置可以逐行保存在 `.netrc` 文件中，适用于各种服务器。该文件中的条遵循如下模式：
+
+```
+machine backup.hostname.com   login u123456   password x234b0CT2xCb 
+```
+
+#### 示例
+
+以下命令将文件上传到 FTP 服务器：
+
+```
+root# lftp -c "open -u username,password backupserver; put file" 
+```
+
+若要将整个目录传输到备份服务器而不是单个文件，可以使用 `mirror -R` 命令。`mirror` 通常将目录从 FTP 服务器复制到本地计算机。`-R` 命令反转了传输方向。这里是另一个示例：
+
+```
+root# lftp -c "open -uusern,passw bserver; mirror -R directory" 
+```
+
+### libcamera-still [options]
+
+libcamera-vid [options]
+
+`libcamera-still` 和 `libcamera-vid` 用于在树莓派上拍照和摄像。事实上，rpicam-still 和 rpicam-vid 命令实际上用于此目的。命令的语法在该处描述。命令名 `libcamera-still` 和 `libcamera-vid` 已经过时，仅为了兼容性保留。
+
+### ll [options] files
+
+`ll` 是许多发行版中预定义的别名，用于带有 `-l` 选项或其他可能的选项运行 `ls` 命令。
+
+### ln [options] source [target]
+
+ln [options] files target directory
+
+`ln` 为文件和目录建立硬链接或符号链接。如果在 cp 命令中指定了 `-l` 或 `-s` 选项，其功能与 `ln` 相同。
+
+*   `-b` 或 `--backup`
+    将同名的现有文件重命名为备份文件（文件名加上 ~ 字符），而不是覆盖它们。
+*   `-d` 或 `--directory`
+    为目录创建硬链接。此操作仅允许 `root` 执行。其他用户都可以创建指向目录的符号链接。
+*   `-s` 或 `--symbolic`
+    生成符号链接。（如果没有此选项，`ln` 将返回硬链接。）
+
+#### 示例
+
+以下命令为现有文件 `abc` 创建符号链接 `xyz`：
+
+```
+user$ ln -s abc xyz 
+```
+
+### loadkeys [options] file name
+
+低级命令 `loadkeys` 为文本模式加载键盘映射表。所需的设置文件通常位于 `/lib/kbd/keymaps` 目录。如果输入不带路径的文件名，命令本身会尝试寻找带有 `.map.gz` 标识符的合适文件。
+
+由于此原因，这种方式更改的键盘设置仅在文本控制台中工作时生效。然而，图形模式的设置必须作为 X 配置的一部分进行更改；对于使用 systemd 的发行版，你也可以使用 `localectl` 命令。
+
+*   `-d`
+    加载默认键盘表，通常该文件为 `/lib/kbd/keymaps/defkeymap.map`。
+
+#### 示例
+
+以下命令在文本控制台中激活德语键盘布局：
+
+```
+root# loadkeys de-latin1
+Load /lib/kbd/keymaps/i386/qwertz/de.map.gz 
+```
+
+### local var[=value]
+
+`bash` 命令 `local` 在 shell 脚本函数内部定义局部变量。该命令只能在自定义函数中使用（参见 [](#F_001.xhtml_function)）。注意，等号前后都严禁输入任何空格。
+
+### localectl [options] [command]
+
+`localectl` 命令用于控制带有 systemd 初始化初始化系统的发行版中的语言和键盘设置。它更改以下文件：etc/locale.conf、etc/vconsole.conf 以及 `/etc/X11/xorg.conf/00-keyboard.conf`。
+
+#### 选项
+
+*   `--no-convert`
+    仅更改控制台键盘（`set-keymap` 命令）或图形模式键盘（`set-x11-keymap` 命令）。
+    默认情况下，`localectl` 尝试同时更改文本和图形模式的键盘设置。然而，相关文件的语法不同，这就是为什么参数转换有时会失败。
+*   `--no-pager`
+    直接在标准输出上运行输出，而不是使用 `less`。
+
+#### 命令
+
+*   `list-keymaps`
+    确定文本模式所有可能的键盘布局列表。
+*   `list-locales`
+    确定所有可能的语言设置列表。
+*   `list-x11-keymap-models`
+    `list-x11-keymap-layouts`
+    `list-x11-keymap-variants [layout]`
+    `list-x11-keymap-options`
+    确定在图形系统 X 中设置键盘布局的允许参数。
+*   `set-keymap` `name`
+    激活指定的键盘布局。
+*   `set-locale` `name`
+    激活指定的语言设置。
+
+
+
+
+
+* `set-x11-keymap layout [model variant options]`
+  为图形模式激活指定的键盘布局。
+* `status`
+  显示当前的语言和键盘设置。
+
+#### 示例
+
+以下两个命令设置了德语、UTF-8 字符集以及德语键盘布局，并考虑了 Apple 键盘的特殊特性：
+
+```
+root# localectl set-locale de_DE.UTF-8
+root# localectl set-x11-keymap de de mac grp:alt_shift_toggle 
+```
+
+### locate pattern
+
+`locate` 能够对文件进行特别快速的搜索。它搜索一个文件数据库（通常每天更新一次），指定的模式出现在完整文件名（包括路径）中。但是，数据库更新之后创建或更改的文件将无法找到。
+
+在大多数情况下，必须单独安装 `locate` 和底层 `updatedb` 系统（`mlocate` 包），并且通常还需要进行配置。
+
+### logger [options] message
+
+`logger` 使用 syslog 服务记录消息。根据发行版的不同，这通常是 `rsyslogd`，或者在更现代的发行版中使用 journal（参见 journalctl）。
+
+* `-p n`
+  按 `0` = `emerg` 到 `7` = `debug`之间指定的优先级级别记录消息。
+* `-p facility.level`
+  为指定的服务按指定的优先级级别记录消息。默认情况下，`logger` 使用 `user.notice` 设置。
+* `-t tag`
+  将指定的关键字与消息一起保存。这便于以后搜索相应的消息。
+
+#### 示例
+
+以下 `logger` 命令可以放置在备份脚本的末尾。它记录了备份成功结束。
+
+```
+user$ logger -p local0.notice -t mybackuptool "Backup completed" 
+```
+
+### loginctl [options] [command] [name]
+
+与 `systemctl` 和 `journalctl` ，`loginctl` 属于 systemd 家族。你可以使用该命令控制登录管理器（参见 `man systemd-logind.service`）或查询数据。如果没有选项或参数，该命令将显示所有活跃的登录（会话）。
+
+* `-p property`
+  指定要查询的属性。如果没有此选项，子命令如 `show-session` 或 `show-user` 将提供大量细节。
+* `active sessionname`
+  激活指定的会话。该命令也可以更改活跃的控制台，类似于以下快捷键：Ctrl+Alt+F1、Alt+F2 等。
+* `enable-linger loginname`
+  允许进程在用户注销后继续运行。这对于长时间进程（下载、计算）在注销后持续直到结束非常用。`loginctl disable-linger` 可再次禁用此功能。
+* `list-sessions`
+  显示所有活跃的会话（默认行为）。
+* `list-users`
+  显示所有登录用户。
+* `session-status sessionname`
+  显示会话中启动了哪些进程以及记录了哪些日志消息。
+* `show-session sessionname`
+  显示会话详情。
+* `show-user username`
+  显示用户的详细信息。
+* `terminate-session sessionname`
+  结束会话。所有分配的进程都会接收到 kill 信号。
+
+#### 示例
+
+示例计算机上有四个会话。在控制台 1 (`tty1`) 上，Gnome 显示管理器正在运行并显示登录框。用户本地登录在控制台 7 (`tty7`) 上。还有两个通过 SSH 进行的登录（`loginctl` 的输出未显示这些）。
+
+```
+root# loginctl
+   SESSION    UID   USER      SEAT     TTY
+         5   1000   kofler
+        c1    119   gdm       seat0    tty1
+         2   1000   kofler    seat0    tty7
+         4   1000   kofler 
+```
+
+第二个 `loginctl` 命令显示控制台 7 中的图形系统使用 Wayland。如果使用 Xorg，则输出为 `Type=x11`。
+
+```
+root# loginctl show-session 2 -p Type   Type=wayland 
+```
+
+### logname
+
+`logname` 显示登录名（用户名）。
+
+### logout
+
+`logout` 或更简单的 Ctrl+D 均终止控制台或终端窗口中的会话。
+
+### lpadmin [options]
+
+`lpadmin` 为 CUPS 打印系统设置新打印机，更改其网络操作的访问权限，或将其删除。
+
+* `-d name`
+  将指定的打印机定义为默认打印机。
+* `-E name`
+  激活指定的打印机。
+* `-p name`
+  设置新打印机。你可以可以使用其他选项指定配置参数（参见 `man lpadmin`）。
+* `-x name`
+  删除指定打印机的配置。
+
+### lpinfo [options]
+
+
+
+
+
+`lpinfo` 列出了 CUPS 可用的设备和驱动程序。
+
+- `-l`
+  提供特别详细的信息。该选项必须与 `-m` 或 `-v` 结合。
+- `-m`
+  提供所有可用打印机驱动程序的列表。
+- `-v`
+  提供所有已知打印设备的列表。
+
+### lpoptions [options]
+
+`lpoptions` 显示或更改 CUPS 打印机的选项。
+
+- `-l`
+  提供可用选项及其当前设置的列表。
+- `-o option name=value`
+  更改指定选项的设置。
+- `-p name`
+  指定所需的打印机。（如果没有该选项，`lpoptions` 指默认打印机。）
+
+### lpq [options]
+
+`lpq` 提供所有缓存文件或打印作业的列表。还指定了文件大小和作业号。你可以将此作业号作为 `lprm` 的参数，以从打印溢溢队列中删除文件。
+
+- `-a`
+  显示所有队列的打印作业。
+- `-Pname`
+  显示指定队列中的打印作业。
+
+### lpr file
+
+`lpr` 打印指定的文件。
+
+- `-l`
+  跳过过滤器系统，并将打印数据原封不动发送到打印机。如果打印文件已经是打印机特定的格式，则此选项非常有用。
+- `-o options`
+  传递各种额外的参数，例如 `-o media=A4` 或 `-o page-ranges=23-27,29,31`。在 CUPS 文档中有许多示例：www.cups.org/doc/options.html。
+- `-Pname`
+  使用指定的队列而不是默认打印机。注意，该选项后不能有空格！
+
+### lprm [options] [id]
+
+`lprm` 取消当前打印作业或指定的 ID 打印作业。
+
+- `-Pname`
+  指定队列。
+
+### lpstat [options]
+
+`lpstat` 显示关于 CUPS 类和打印作业的信息。`lpstat` 适用于本地和网络打印机。
+
+- `-a`
+  指示它们是否已就绪。
+- `-c`
+  显示类。
+- `-d`
+  显示默认值。
+- `-s`
+  显示状态。
+- `-t`
+  显示时间。
+- `-v`
+  显示打印机。
+
+### ls [-options] [path]
+
+`ls` 显示文件和目录列表。如果使用带额外参数的 `ls`，它将返回按名称排序的多列列表。
+
+- `-a` 或 `-all`
+  也显示以 `.` 和 `..` 开头的文件（分别对当前目录和父目录的引用将不会被显示）。
+- `--color[never|always]`
+  为不同的文件类型（链接、目录等）使用不同的颜色，或禁用颜色显示。你可以使用 `dircolors` 配置颜色。
+- `-d` 或 `--directory`
+  只显示目录名称，不显示其内容。此选项非常有用，例如当指定目录名称作为路径且需要检查该目录访问权限时。
+- `-h`
+  以 KiB、MiB 和 GiB 显示文件大小（人类可读）。
+- `-i` 或 `--inode`
+  除了其他信息外，还显示文件的 I-node。（I-node 是文件的内部标识符，Linux 内部文件管理需要它）。该选项可识别硬链接，因为以此方式链接的文件具有相同的 I-node。
+- `-Ifile` 或 `--ignore file`
+  将指定的文件排除在显示之外。例如，`-IPS` 防止扩展名为 `ps` 的文件被显示。如果在 `-I` 之后指定的是文件模式而不是单个文件，在 `-I` 和模式之间不能输入空格！
+- `-l` 或 `--format=long` 或 `--format=verbose`
+  在文件名之外显示更多信息，例如字节字节的文件大小、访问权限等。使用单独行显示每个文件（而不是节省空间的多列列表）。
+- `-L` 或 `--dereference`
+  对于目录的符号链接，不显示链接路径而是显示原始目录的内容。
+- `-o` 或 `--no-color`
+  不使用不同的颜色或字体。
+- `-p` 或 `-F`
+  添加文件类型指示。
+
+
+
+
+在文件名后附加一个特殊字符以指示文件类型。在某些 Linux 发行版中，此选项通过 `/etc/profile` 中的 `alias` 缩写默认激活。最重要的特殊字符是：用于目录的 `/`、用于符号链接的 `@`、用于可执行文件的 `*` 以及用于 FIFO 的 `|`。
+
+*   `-r` 或 `--reverse`
+    反转排序顺序。该选项通常与 `-t` 或 `-S` 配合使用。
+*   `-R` 或 `--recursive`
+    同样包含子目录中的文件。
+*   `-S` 或 `--sort=size`
+    根据大小对文件进行排序（最大的文件在前）。
+*   `-t` 或 `--sort=time*   `-u` 或 `--sort=access`
+    根据最后读取访问的时间对文件进行排序。该选项必须与 `-t` 一起指定（否则 `ls` 将不进行任何排序）。
+*   `-v`
+    以合理的方式对文件名中的数字进行排序，例如 `tty2` 在 `tty10` 之前。
+*   `-X` 或 `--sort=extension`
+    根据标识符对文件进行排序（即根据文件名中最后一个 `.` 之后的字母组合）。
+*   `-Z` 或 `--context`
+    显示 SELinux 上文信息。`--lcontext` 提供更多信息，`--scontext` 提供的信息较少。
+
+遗憾的是，`ls` 不显示所有列表数据的总内存需求。此任务由 `du` 命令完成。`ls` 不能以八进制格式显示文件的访问位。要此此，你可以使用 `stat` 命令。
+
+#### 示例
+以下命令显示当前目录下的所有文件并按日期排序（最新的文件在最后）：
+
+```
+user$ ls -ltr
+-rw-r--r-- 1 user 168276 2025-03-02 10:01 cimg3079.jpg
+-rw-r--r-- 1 user 1582496 2025-03-02 10:01 cimg3014.jpg
+-rw-r--r-- 1 user 1615070 2025-03-02 10:01 cimg2965.jpg
+```
+
+简要说明对 `ls` 结果的解释：行开头的 10 个字符表示文件类型和访问位。可能的文件类型有：普通文件用字符 `-`，`d` 表示目录，`b` 或 `c` 表示设备文件（块），或 `l` 表示符号链接。接下来的三个字符（`rwx`）表示所有者是否允许读取、写入和执行该文件。组成员以及所有其他用户也遵循类似的信息。类型和访问字符后的数字表示引用该文件的硬链接数。其他列表示文件的所有者和组（在本例中为 user）、文件大小、最后修改的日期和时间，最后是文件名。
+
+#### 替代方案
+`ls` 是执行最频繁的命令之一。因此，有许多尝试用更现代的命令来替换 `ls`，这些命令更易用、显示结果更美观或集成了额外功能。在书中，我将详细介绍 `erd`，它结合了 `du`、`find`、`ls` 和 `tree` 的功能。`eza`（以前名为 `exa`）和 `lsd` 命令也很有趣：
+
+- https://github.com/eza-community/eza
+- https://github.com/lsd-rs/lsd
+
+### lsattr [options] files
+`lsattr` 显示 Linux 文件系统（ext2 到 ext4, Btrfs, XFS 等）中文件或目录附加属性的状态。这些附加属性控制例如文件是否应该压缩、是否应使用写复制（copy-on-write）程序对文件进行更改等。这取决于相应文件系统的实现，哪些属性会被考虑——对于大多数文件系统来说，只有少数几个（参见更改这些属性的 `chattr` 命令说明）。
+
+*   `-a`
+    同时也显示隐藏文件。
+*   `-d`
+    显示目录的属性，而不是目录内文件的属性。
+*   `-R`
+    递归显示目录树中所有文件的属性。
+
+#### 示例
+在测试系统（安装了 Btrfs 文件系统的 openSUSE Leap）上，为 `/var/lib/mysql` 和 `/var/lib/libvirt/images` 目录设置了 `C` 属性。它禁用了该目录下文件的复制即写功能。
+
+```
+root# lsattr -d /var /var/lib /var/lib/libvirt/images /var/lib/mariadb
+---------------- /var
+---------------- /var/lib/
+---------------C /var/lib/libvirt/images
+---------------C /var/lib/mariadb/ 
+```
+
+### lsblk [options] [iodevice]
+`lsblk` 提供所有块设备或位于数据介质上的所有设备的分级列表。该命令用于快速获取所有分区和逻辑卷的良好概述。
+
+*   `-a`
+    结果中也包含空设备。
+*   `-b`
+    以字节指定大小。
+*   `-f`
+
+
+
+
+还会显示每个设备的系统类型、标签和 UUID。
+
+- `-p`
+
+指定完整的设备名称，例如逻辑卷的 `dev/mapper/fedora-swap`。
+
+#### 示例
+
+以下 `lsblk` 结果是在一个具有两个硬盘和 RAID 配置的服务器上生成的：
+
+```
+root# lsblk
+NAME    MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
+sda       8:0    1   3.7T  0 disk
+  sda1    8:1    1    16G  0 part
+    md0   9:0    0    16G  0 raid1 [SWAP]
+  sda2    8:2    1   512M  0 part
+    md1   9:1    0 511.4M  0 raid1 /boot
+  sda3    8:3    1     2T  0 part
+    md2   9:2    0     2T  0 raid1 /
+sdb       8:16   1   3.7T  0 disk
+  sdb1    8:17   1    16G  0 part
+    md0   9:0    0    16G  0 raid1 [SWAP]
+  sdb2    8:18   1   512M  0 part
+    md1    9:1    0 511.4M  0 raid1 /boot
+  sdb3    8:19   1     2T  0 part
+    md2   9:2    0     2T  0 raid1 / 
+```
+
+### lsb_release [options]
+
+`lsb_release` 用于确定发行版特定的信息，例如运行的 Linux 系统的名称和版本号。LSB 代表 Linux Standard Base（Linux 标准基础）。如果没有传递选项，则应用 `-v`。
+
+- `-a`
+
+显示所有可用信息：发行版名称、完整描述、版本号和代号（参见本文末尾的示例）。
+
+- `-v`
+
+显示 LSB 版本号，但仅在安装命令之外还安装了 LSB 模块（`lsb-core` 包）时才有效。通常情况下并非如此——命令会返回错误消息“no LSB modules are available”。但在实践中，LSB 版本号很少引起关注。如果你只想知道安装的 Linux 系统的版本，应该使用 `-a` 选项。
+
+#### 示例
+
+在以下示例中，`lsb_release` 在安装了 Ubuntu 24.04 上运行：
+
+```
+root# lsb_release -a
+Distributor ID: Ubuntu
+Description:    Ubuntu Noble Numbat (development branch)
+Release:        24.04
+Codename:       noble 
+```
+
+### lscpu [options]
+
+`lscpu` 显示有关 CPU、其核心和缓存以及（如果适用）虚拟化系统的详细信息。
+
+- `-e`
+
+以易于阅读的格式仅显示关键数据的摘要。
+
+- `-p`
+
+与 `-e` 类似，但提供可以在脚本中于处理的数据格式。
+
+### lshw [options]
+
+来自同名软件包的 `lshw` 命令创建计算机上所有硬件组件的层级列表。
+
+- `-businfo`
+
+行列出组件，并为每个组件使用的 SCSI、USB 或 PCI 总线指定一个 ID。
+
+- `-html`
+
+将输出格式化为 HTML 文档。
+
+- `-short`
+
+仅提供紧凑的摘要。
+
+- `-xml`
+
+将输出格式化为 XML 文档。
+
+#### 示例
+
+以下硬件概览是在树莓派 4B 上生成的：
+
+```
+root# lshw -businfo
+Bus info          Device  Class      Description
+================================================
+                          system     Raspberry Pi 4 Model B Rev 1.1
+                          bus        Motherboard
+cpu@0                     processor  cpu
+cpu@1                     processor  cpu
+cpu@2                     processor  cpu
+cpu@3                     processor  cpu
+                          memory     855MiB System memory
+pci@0000:00:00.0          bridge     Broadcom Limited
+pci@0000:01:00.0          bus        VL805 USB 3.0 Host Controller
+usb@1             usb1    bus        xHCI Host Controller
+usb@1:1                   bus        USB2.0 Hub
+usb@1:1.4                 bus        Keyboard Hub
+usb@1:1.4.2               input      Apple Keyboard
+usb@1:1.4.3               input      USB-PS/2 Optical Mouse
+usb@2             usb2    bus        xHCI Host Controller
+                  eth0    network    Ethernet interface
+                  wlan0   network    Wireless interface 
+```
+
+### lsmod
+
+`lsmod` 提供当前加载到内核中的所有模块列表。
+
+### lsof [options] [file/interface]
+
+在没有任何额外参数的情况下，`lsof` 通常会提供一个很长的列表，显示所有当前打开的文件或接口以及分配给它们的进程。`lsof file` 提供保持该文件的进程信息。
+
+- `-i address`
+
+提供使用指定网络地址的进程信息。地址的格式如下：`[46][protocol][@hostname|hostaddr] [:service|port]`。例如，`-i 4tcp` 提供所有在 IPv4 中使用 TCP 的进程信息。
+
+- `-n`
+
+不解析网络名称。
+
+- `-N`
+
+同样考虑 NFS 文件。
+
+- `-u user`
+
+仅提供由指定用户使用的文件/接口信息。也可以指定多个用户（名称或 UID，用逗号分隔）。
+
+- `-X`
+
+忽略所有 TCP 和 UDP 文件。
+
+#### 示例
+
+以下两个命令显示了所有使用 UDP 或端口 22 的进程：
+
+```
+root# lsof -i udp
+ntpd      3696     ntp   16u  IPv4   9026       UDP *:ntp
+portmap   4745  daemon    3u  IPv4  12931       UDP *:sunrpc
+rpc.statd 4764   statd    5u  IPv4  12962       UDP *:700
+...
+root# lsof -i :22
+COMMAND  PID USER   FD   TYPE NODE NAME
+sshd    5559 root    3u  IPv6  14097       TCP *:ssh (LISTEN)
+sshd    7729 root    3r  IPv6  33146       TCP mars.sol:ssh->merkur.sol:45368
+                                 (ESTABLISHED) 
+```
+
+### lspci [options]
+
+`lspci` 提供有关 PCI 总线及其连接到它的设备的信息。
+
+- `-k`
+
+显示哪个内核模块负责每个 PCI 设备。
+
+- `-tv`
+
+提供树形设备列表，清晰地显示设备之间的连接关系。
+
+- `-v` 或 `-vv` 或 `-vvv`
+
+提供更多详细信息。
+
+### lsscsi [options]
+
+`lsscsi` 提供所有连接的 SCSI 和 SATA 设备的信息。
+
+- `-c`
+
+以与 `/proc/scsi/scsi` 相同的格式显示数据。
+
+- `-H`
+
+
+
+
+
+列出 SCSI 主列表（而不是 SCSI 设备）。
+
+- `-l` 提供每个设备的详细信息。
+
+#### 示例
+
+以下结果是在一台带有两个 PCIe SSD 和一个外部 USB 硬盘的计算机上生成的：
+
+```
+root# lsscsi
+[0:0:0:0]    disk    WD Elements 25A2  1026         /dev/sda
+[N:0:4:1]    disk    PM981 NVMe Samsung 2048GB__1   /dev/nvme0n1
+[N:1:4:1]    disk    SAMSUNG MZVLB256HAHQ-000L7__1  /dev/nvme1n1 
+```
+
+### lsusb [options]
+
+`lsusb` 提供所有连接的 USB 设备的信息。
+
+- `-t` 以树状格式输出，从而清晰地显示哪个设备连接到哪个总线。
+- `-v` 提供每个设备的详细信息。
+
+#### 示例
+
+以下命令显示 Apple 键盘连接到了计算机：
+
+```
+user$ lsusb
+Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 004: ID 1058:25a2 Western Digital Technologies, Inc. Elements 25A2
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 007: ID 06cb:009a Synaptics, Inc.
+Bus 001 Device 019: ID 05ac:021e Apple, Inc. Aluminum Mini Keyboard (ISO) ... 
+```
+
+### lvcreate [options] name
+
+LVM 命令 `lvcreate` 在由 `name` 指定卷组（VG）中创建一个新的逻辑卷（LV）。
+
+- `-i n` 将 LV 均匀地分布到指定的数量物理卷（PV）上。这假设 VG 包含至少等数量的 PV。如果 PV 位于不同的硬盘上，你将获得类似于 RAID-0（条带化）的效果。
+- `-L size` 指定所需的大小。默认单位为 MiB，但也可以使用相应的后缀指定为字节、KiB、GiB 或 TiB（例如 `-L 2G`）。
+- `-n lvname` 指定 LV 的名称。如果缺少此选项，命令将使用名称 `lvoln`。
+- `-s` 创建快照，即现有 LV 的静态副本。在这种情况下，`name` 不指定 VG，而是指定底层 LV。大小规格 `-L` 表示如果底层 LV 发生变化，复制扇区所需的内存。一旦这些内存耗尽，快照的寿命就会结束。
+
+#### 示例
+
+以下命令在 `myvg1` VG 中创建一个名为 `myvol1`、大小为 50 GiB 的新逻辑卷：
+
+```
+root# lvcreate -L 50G -n myvol1 myvg1
+  Logical volume "myvol1" created 
+```
+
+该命令同时创建文件 `/dev/myvg1/myvol2`。这是指向 `/dev/mapper/myvg1-myvol2` 文件的链接。可以像普通硬盘分区一样，使用这两个设备名称之一使用该 LV。以下命令在此处设置文件系统：
+
+```
+root# mkfs.ext4 /dev/myvg1/myvol1 
+```
+
+### lvdisplay [options] lvname
+
+`lvdisplay` 显示 LV 的详细信息。
+
+### lvextend [options] lvname [pvname]
+
+`lvextend` 增加指定 LV 设备的内存。你可以通过 `-L` 选项指定新的总内存（参见 lvcreate）。或者，你可以使用符号 `-L +size` 来指定所需的更改。
+
+所需的内存保留在 LV 所在的同一个 VG 中。如果 VG 由多个物理卷（PV）组成，可以使用可选的规格 `pvname` 来选择由哪个 PV 提供存储。
+
+`lvextend` 的用法可以在 resize2fs 命令的描述中找到，它允许你更改 ext 文件系统的大小。
+
+### lvm [command]
+
+`lvm` 是逻辑管理器（LVM）的中心管理命令。`lvm` 通常位于 `lvm2` 软件包中，如果安装系统时尚未设置 LVM 系统，则对于许多发行版必须单独安装。
+
+如果你在不带任何其他命令的情况下运行 `lvm`，将进入一个可以在其中交互式执行 LVM 命令的 shell。`help` 提供了所有可选命令列表。或者，你可以将命令传递给 `lvm`，然后将立即执行。
+
+所有 LVM 命令都可以通过 `lvm` 或直接运行。因此，`lvm lvcreate xxx` 和 `lvcreate xxx` 命令是等价的。
+
+为了清晰起见，我决定在书中单独描述最重要的 LVM 命令。编辑逻辑卷的命令以字母 `lv` 开头，管理物理卷的命令以 `pv` 开头，管理卷组的命令以 `vg` 开头。
+
+### lvreduce [options] lvname
+
+`lvreduce` 缩小指定 LV 设备的内存空间。如果 LV 包含文件系统，必须先缩小其大小，否则将会丢失数据你可以你可以 `-L size` 格式输入新的总大小，或以 `-L -size` 格式输入所需的更改。
+
+### lvremove [options] lvname
+
+`lvremove` 删除指定的 LV。
+
+- `-f` 抑制系统查询。
+
+### lvrename oldlvname newlvname
+
+`lvrename` 给 LV 一个新名称。
+
+### lvscan [options]
+
+`lvscan` 列出所有的 LV。
+
+### lz4 [options] [filename]
+
+lzop [options] [filename]
+
+
+
+
+
+同名软件包中的 `lz4` 和 `lzop` 命令用于压缩文件。虽然它们的压缩率低于 gzip、[[]](#B_001.xhtml_bzip2) 或 [[]](#X_001.xhtml_xz)，但它们的速度快得多（尽管 `lz4` 仍然比 `lzop` 快一点）。`lz4` 和 `lzop` 的语法基于 `gzip` 命令。
+
+如果你想以节省空间的方式保存文件（例如备份），但不想消耗过多的 CPU ，`lz4` 或 `lzop` 是完美选择。你通常会在管道模式下使用这些命令，如本文后两个 `tar` 示例。
+
+*   `-c` 或 `--stdout` 或 `--to-stdout`
+    将结果重定向到标准输出。
+*   `-d`, `--decompress`, 或 `--uncompress`
+    解压指定的文件而不是压缩。
+*   `-n`
+    控制压缩的速度和质量。`-1` 最快，`-9` 在 `lzop` 中可产生最小的文件。对于 `lz4`，`-12` 提供了最佳压缩率。
+
+#### 示例
+
+第一条命令压缩文件并返回 `file.lzo`；第二个命令再次解压文件：
+
+```
+user$ lzop file
+user$ lzop -d file.lzw 
+```
+
+以下两个示例展示了 `lzop` 与 `tar` 结合使用：
+
+```
+user$ tar cf -c verz | lzop -c > backup.tar.lzo   
+(创建存档)
+user$ lzop -d < backup.tar.lzo | tar xf -         
+(解压存档) 
+```
+
+## M
+
+### magick [options] imageold imagenew
+
+ImageMagick 软件包中的 `magick` 将图像文件从一种格式转换为另一种格式。在书中，最重要的命令和选项在 convert 中描述，这是在版本 6 中有效的命令名称。从版本 7 开始，建议调用语法等效的 `magick` 命令代替 `convert`，尽管 `convert` 在大多数发行版中仍然可用。
+
+### mail [options] mail@hostname [< message text]
+
+你可以使用 `mailx` 或 `mailutils` 软件包（Debian, Ubuntu）中的 `mail` 命令读取存储在 `/var/mail/name` 中的本地邮件。然而，这种操作至少需要一些适应。如果你正在寻找文本模式的邮件客户端，最好安装 `mutt`。
+
+`mail` 的优势在于你可以轻松地通过交互式或脚本将电子邮件传输到本地邮件服务器。你可以简单地交互式运行 `mail recipient@site`。现在你可以输入额外的接收者（CC 地址）、主题，最后是消息正文，通过按 Ctrl+D 结束。这将使用 `loginname@hostname` 作为发送者将邮件传输到本地邮件服务器。
+
+对于脚本控制的邮件分发，你需要熟悉 `mail` 选项，我在这里只介绍最重要的三个选项：
+
+*   `-a "header"`
+    指定额外的标头行。这可以用于添加 BCC 地址或设置消息的字符集（参见下一个示例）。
+    `mail` 在许多配置中无法识别正确的邮件主机名，导致发送者地址生成错误。这甚至适用于 Debian 和 Ubuntu 系统，在这些系统中评估 `/etc/mailname` 非常简单。这个问题可以通过显式使用 `-a "From:name@myhost.com"` 指定发送者地址来解决。
+*   `-A file`
+    向邮件添加文件。
+*   `-s "subject"`
+    指定主题行的文本。
+
+#### 示例
+
+在最简单的形式下，`mail` 的用法完全非常简单：
+
+```
+user$ echo "message" | mail -s "subject" name@a-company.com 
+```
+
+以下命令将 `message.txt` 中的 UTF-8 文本发送到指定的接收者：
+
+```
+user$ mail name1@company.com,name1@company.com \
+        -s "Subject 1 2 3 äöü" \
+        -a "BCC: blindcopy@company.com" \
+        -a "Content-Type: text/plain; charset=UTF-8" < message.txt 
+```
+
+### makepasswd [options]
+
+同名软件包中的 `makepasswd` 生成一个新的随机密码。如果你需要新账户的密码但不想耗费自己的想象力，这个命令非常适合。
+
+在 CentOS、Fedora 和 RHEL 上，无法使用 `makepasswd`。相反，你可以安装包含 mkpasswd 命令的 `expect` 软件包。在 (open)SUSE 上，也没有 `mkpasswd`。那里你可以切换到 pwgen。
+
+*   `--chars n`
+    指定所需的密码长度（默认为 10 个字符）。
+*   `--count n`
+    返回 `n` 个密码（默认设置为一个）。
+*   `--strings string`
+    使用字符串中包含的字符组成密码。默认情况下，该命令只使用大小写字母（ASCII）和数字，但不使用特殊字符。
+
+#### 示例
+
+以下命令返回一个 12 个字符的密码：
+```
+
+
+
+
+```
+user$ makepasswd --chars 12
+TaQKD1VGYmax 
+```
+
+### man [group] [options] name
+
+`man` 显示关于指定命令或文件的联信息。可以通过指定组（group）来限制搜索。重要的组包括 `1`（用户命令）、`5`（配置文件）和 `8`（系统管理命令）。在大多数发行版中，`man` 文本由 `less` 显示；也就是说，键盘快捷键适用于在帮助文本中进行滚动或搜索，具体如[表 5.11] 中的 `less` 命令所示。
+
+*   `-a`
+    按顺序显示所有同名的 `man` 页面。如果不使用此选项，通常只会显示来自不同主题的多个同名文件中的第一个。某些 Linux 发行版将 `-a` 作为默认设置。
+*   `-f` `keyword`
+    显示关键字的含义（单行文本）。使用此选项时，`man` 等同于 `whatis` `thema` 命令。
+*   `-k` `keyword`
+    列出包含该关键字的现有 `man` 文本列表。但是，它不会执行全文搜索，而是只分析每个 `man` 文本的关键字。使用此选项时，`man` 等于 `apropos` `thema` 命令。
+
+### md5sum files
+
+`md5sum` 计算所有指定文件的校验和。消息摘要算法 5 (MD5) 校验和通常用于确保文件在传输后未发生变化。注意，MD5 算法不再被认为是安全的。`sha``sum` 命令在密码学上更好。
+
+### mdadm [options]
+
+来自同名软件包的 `mdadm` 命令帮助管理软件 RAID 连接。该命令由无数个选项控制。一个选项通常用于指定模式（例如，使用 `--create` 或 `-C` 建立新的 RAID 阵列）。其他选项则控制所需操作的细节。
+
+*   `mddevice --add device`
+    向网络添加分区。
+*   `--assemble mddevice device1 device2 ... devicem`
+    从硬盘磁盘分区 `device1` 到 `devicem` 重新组装 `mddevice` 网络。只有当 `device1` 到 `devicem` 之前使用 `--create` 作为 RAID 阵列的组件初始化过时，此操作才有效。
+*   `--assemble --scan mddevice`
+    根据 `mdadm.conf` 中指定的硬盘分区组成 RAID 分区 `mddevice`。
+*   `--create mddevice --level=n --raid-devices=m device1 device2 ... devicem`
+    为 RAID 级别 `n` 创建新的 `mddevice` 阵列，该阵列由 m 个硬盘分区 `device1` 到 `devicem` 组成。
+*   `--detail mddevice`
+    提供关于 RAID 分区的详细信息。
+*   `--examine device`
+    提供关于指定的硬盘分区的详细信息，该分区必须是 RAID 阵列的一部分。
+*   `--examine --scan`
+    以 `mdadm.conf` 的语法提供所有可用 RAID 分区的摘要。
+*   `mddevice --fail device`
+    将硬盘分区 `device` 标记为故障并将其停用。
+*   `--grow mddevice --size=max`
+    扩大网络，以最佳方式利用底层硬盘分区。该命令在扩大硬盘分区后以这种形式使用才有意义。
+*   `--grow mddevice --raid-devices=n`
+    增加集成到阵列中的硬盘分区数量（仅适用于 RAID 级别 1、5 和 6）。
+*   `--monitor device`
+    监控活动 RAID 阵列。该命令通常在计算机启动时启动并在发生问题时向管理员发送电子邮件（`-m` 选项）。
+*   `--query device`
+    测试分区是否为 RAID 分区或 RAID 阵列的一部分。
+*   `mddevice --remove device`
+
+
+
+
+从 RAID 阵列中移除硬盘分区 `device`。`device` 不得处于激活状态，因此可能需要先使用 `--fail` 将其禁用。
+
+*   `--stop` `mddevice`
+    禁用指定的网络设备。现在可以使用 `--assemble` 重新组装阵列。
+
+*   `--zero-superblock` `device`
+    删除硬盘分区的 RAID 元数据。
+
+#### 示例
+
+以下两个命令通过两个分区 `/dev/sda3` 和 `/dev/sdb3` 创建一个 RAID-0 阵列，并在其上设置 ext4 文件系统。必须先将这些分区标记为 RAID 分区。如果你使用 fdisk 进行分区，则需要使用 `T` 命令将分区 ID 设置为十六进制值 `fd`。在 parted 中，你必须运行 `set` `partition number` `raid on`。
+
+```
+root# mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/sda3 /dev/sdb3
+mdadm: array /dev/md0 started.
+root# mkfs.ext4 /dev/md0 
+```
+
+设置 RAID-1 阵列的过程与 RAID-0 完全相同。只是设置 RAID 系统的命令看起来略有不同，现在包含 `--level=1` 而不是 `--level=0`：
+
+```
+root# mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sda3 /dev/sdb3
+mdadm: array /dev/md0 started.
+root# mkfs.ext4 /dev/md0 
+```
+
+要测试 RAID-1 阵列的功能，你应该将一个分区标记为故障：
+
+```
+root# mdadm /dev/md0 --fail /dev/sdb3 
+```
+
+你可以继续使用该网络设备；然而，所有的更改现在只会保存到剩余的硬盘分区。要将 `/dev/sdb3` 加回 `/dev/md0`，你必须先显式移除被标记为故障的分区：
+
+```
+root# mdadm --remove /dev/md0 /dev/sdb3
+root# mdadm --add    /dev/md0 /dev/sdb3 
+```
+
+现在开始两个分区的自动重同步，这取决于网络设备的大小（对于传统的 SATA 硬盘，每 100 GiB 大约需要 20 分钟）。在此期间你可以继续工作。但是，文件系统的响应速度会比通常慢。`cat /proc/mdstat` 提供了同步进程进展的信息。
+
+要保存 RAID 配置文件 etc/mdadm/mdadm.conf 中的所有更改，你需要运行以下命令。然后你必须使用编辑器从配置文件中删除之前输入的 RAID 阵列，以确保文件中没有重复。
+
+```
+root# mdadm --examine --scan >> /etc/mdadm/mdadm.conf 
+```
+
+### mkdir 目录
+
+`mkdir` 创建新目录。这里列出了最重要的选项：
+
+*   `-m` `mode` 或 `--mode=mode`
+    按照指定的模式设置新目录的访问权限（参见 chmod）。
+
+*   `-p` 或 `--parents`
+    同时也创建中间目录。如果你运行 `mkdir -p a/b/c` 且目录 `a` 和 `a/b` 尚不存在，将创建这些目录。
+
+*   `-Z`
+    为新目录激活 SELinux 的默认上下文。
+
+### mkfifo 文件
+
+`mkfifo` 设置一个先进先出（FIFO）文件。基本上，FIFO 文件像管道一样工作，允许两个程序之间交换数据。
+
+#### 示例
+
+在以下示例中，`mkfifo` 设置了一个 FIFO 文件。`ls` 将目录列表重定向到此文件。`more` 从那里读取内容。`ls` 必须使用 `&` 作为后台进程启动，因为在 `more` 从 `fifo` 读取完所有数据之前，`ls` 进程不会结束。
+
+```
+user$ mkfifo fifo
+user$ ls -l > fifo &
+user$ more < fifo 
+```
+
+当然，通过 `more` 显示目录列表在不使用 FIFO 文件的情况下可以简单得多，即使用 `ls -l | more`。
+
+### mkfs [options] device [blocks]
+
+`mkfs` 在之前分过区的硬盘上设置文件系统。`mkfs` 只能由 `root` 运行。根据指定的文件系统，程序将跳转到 `mkfs.file system type` 命令。
+
+*   `-t` `file system type`
+    指定文件系统的类型。例如，`ext4` 和 `xfs` 是可能的。`-t` 必须作为第一个选项指定！所有其他选项将传递给实际设置文件系统的命令。它们取决于文件系统的类型。最重要的特定文件系统的 `mkfs.xxx` 命令将在接下来的六项中描述。
+
+### mkfs.btrfs [options] device1 [device2 device3 ...]
+
+`mkfs.btrfs` 设置 Btrfs 文件系统。根据发行版的不同，该命令可能是 `btrfs-tools`、`btrfs-progs` 或 `btrfsprogs` 包的一部分，可能需要单独安装。
+
+*   `-A` 或 `--alloc-start` `n`
+    在设备开头留出 `n` 字节未使用（默认 n=0）。
+
+*   `-d` 或 `--data` `type`
+
+
+
+
+指定数据所需的 RAID 类型。允许的值有 `raid0`、`raid1`、`raid10`、`raid1c3`、`raid1c4`、`raid5`、`raid6` 或 `single`（默认）。如果你设置了 Btrfs RAID ，必须指定对应数量（RAID-1 需要两个，RAID-10 需要四个）。
+
+* `-L` 或 `--label` `name`
+  为文件系统命名。
+
+* `-m` 或 `--data` `type`
+  指定元数据所需的 RAID 类型。除了 `-d` 选项指定的 RAID 变体外，还有 `dup`。该变体默认适用于仅包含一个设备的文件系统。因此，出于安全考虑，所有元数据都会存储两次。SSD 是例外，对于单设备文件系统，`single` 是默认值。`dup` 在这里并不可用，因为许多 SSD 的内部优化会识别数据的冗余并仅进行存储。这意味着通过复制所预期的安全收益将再次丢失。
+
+如果你在不指定任何其他选项的情况下将 Btrfs 文件系统分布在多个设备上，默认应用 RAID 类型 `raid1`。这意味着数据仅被保存，但元数据被保存了多次！
+
+在创建 RAID 阵时，你通常使用 `-m` 指定与 `-d` 选项相同的 RAID 类型。如果你希望你的文件系统尽可能快，可以使用 `-d raid0 -m raid0` 来消除所有冗余。
+
+#### 示例
+
+可以使用以下命令设置一个使用两个大小相同的分区 `/dev/sdb1` 和 `/dev/sdc1` 的 RAID 1 文件系统：
+
+```
+root# mkfs.btrfs -d raid1 -m raid1 /dev/sdb1 /dev/sdc1 
+```
+
+如果某个设备故障，你可以通过额外的 `mount` 选项 `degraded` 继续使用该文件系统：
+
+```
+root# mount -o degraded /dev/sdb1 /media/btrfs 
+```
+
+要恢复 RAID 阵，你应该向文件系统添加一个新设备。在接下来的示例中，仍然是 `/dev/sdc1`，但这次分区来自新的硬盘或 SSD。为了将文件系统重新分布到两个设备上并恢复 RAID-1 冗余，你必须运行 `btrfs filesystem balance`。对于大型文件系统，该命令的执行自然需要很长时间。毕竟，在此期间可以使用该文件系统，尽管速度会大大降低。
+
+```
+root# btrfs device add /dev/sdc1 /media/btrfs
+root# btrfs filesystem balance /media/btrfs 
+```
+
+只有现在才能从文件系统中移除故障设备。你可以使用 `missing` 关键字来指定该设备：
+
+```
+root# btrfs device delete missing /media/btrfs 
+```
+
+### mkfs.exfat [options] device
+
+来自 `exfat-utils` 包的 `mkfs.exfat` 用于设置 exFAT 文件系统。该文件系统针对大 SD 卡经过专门优化。它默认用于 SDXC 内存卡，并受兼容 SDXC 的数字相机和智能手机支持。
+
+* `-i` `id`
+  确定文件系统的 32 位 ID。该数字以十六进制代码给出。如果执行命令时未使用此选项，将设置随机 ID。
+
+* `-n` `name`
+  定义文件系统的名称（标签）。默认名称为空。如有必要，后续可以使用 `exfatlabel` 更改名称。
+
+### mkfs.ext2 [options] device [blocks]
+
+mkfs.ext3 [options] device [blocks]
+
+mkfs.ext4 [options] device [blocks]
+
+mke2fs [options] device [blocks]
+
+`mke2fs`、`mkfs.ext2`、`mkfs.ext3` 和 `mkfs.ext4` 设置 ext2、ext3 或 ext4 文件系统。所有四个命令通过链接引用同一个程序，但它们使用存储在 `/etc/mk2efs.conf` 中的不同默认选项。
+
+* `-b` `n`
+  确定块大小（通常为 4096 字节）。`n` 允许的值 `1024`、`2048`、`4096` 直到最大 `65536`（即 2¹⁰、2¹¹ 等直到 2¹⁶）。
+
+* `-c`
+  在用 `badblocks` 设置数据介质之前测试是否存在坏块。这种类型的块不会用于文件系统。该测试要求每个数据块都要被更改并再次读取，因此会大大延长设置文件系统所需的时间。
+
+* `-i` `n`
+  指定设置 I-node 之前的字节数。I-node 是文件系统的内部管理单元。文件的所有管理信息都存储在 I-node 中，名称除外，即访问位、所有者、最后访问日期等。I-node 的数量在格式化期间定义。例如，当 `n=4096` 时，每个 MiB 有 1,048,576 ÷ 4,096 = 256 个 I-node；这意味着无论文件多小，每个 MiB 最多可以存储 256 个文件或目录。
+
+如果你想保存大量极小文件，应该让 `n` 更小。最小值为 `1024`（这对应于每个 MiB 2048 个文件）。选择比块小的值是没有意义的，因为每个块本身只能保存一个文件。然而，如果你只想保存几个大文件，也可以选择一个较大的 `n`。这可以减少管理开销。
+
+* `-J`
+
+
+
+
+
+允许您传递额外的参数，例如设置日志文件的大小，或在另一个设备上设置日志文件。这可能会稍微提高文件系统的速度，但同时会使管理以及在系统崩溃后恢复文件系统变得更加复杂。可用选项在 `mke2fs` 的手册页中有详细说明。
+
+*   `-m` `n`
+
+    指定应为 `root` 数据保留的磁盘百分比（默认为 5%）。这部分预留内存使得即使文件系统对其他用户已完全满，`root` 也能继续工作。因此，这是一个安全备留。
+
+*   `-t ext2/ext3/ext4`
+
+    指定所需的 ext 版本（仅 `mke2fs` 需要）。
+
+#### 示例
+
+以下两个命令首先在 `/dev/sda5` 分区上建立一个新的 ext4 文件系统，然后停用自动文件系统检查（另请参阅 tune2fs 命令的描述）：
+
+```
+root# mkfs.ext4 /dev/sda5
+root# tune2fs -i 0 -c 0 /dev/sda5 
+```
+
+### mkfs.ntfs [options] device
+
+`mkfs.ntfs` 建立一个兼容所有当前 Windows 版本的 NTFS 系统。该命令是许多发行版中 `ntfsprogs` 包的一部分，必须单独安装。
+
+*   `-f` 或 `--fast`
+
+    不向每个数据块中填充 0 字节。此选项可以极大加快格式化速度，强烈建议使用。
+
+### mkfs.vfat [options] device
+
+`mkfs.vfat` 建立一个兼容所有常用 Windows 版本的文件系统。这种格式特别适用于在 Windows 或相机上使用的 USB 闪存盘和 SD 卡。
+
+*   `-F 12/16/32`
+
+    指定 FAT 表的类型（12 位、16 位或 32 位）。通常，`mkfs.vfat` 会自动为大数据介质选择 32 位模式。如果不是，此选项将大有帮助。
+
+*   `-I`
+
+    允许格式化整个磁盘而不创建分区表（`mkfs.vfat -I /dev/sdg`）。此方法有时用于 USB 闪存盘。
+
+*   `-n` `name`
+
+    为文件系统分配一个名称（标签），最大长度为 11 个字符。
+
+#### 示例
+
+以下命令在 `/dev/sdd1` 分区上建立一个名为 `MyPhotos` 的 32 位 VFAT 文件系统：
+
+```
+root# mkfs.vfat -F 32 -n MyPhotos /dev/sdd1 
+```
+
+### mkfs.xfs [options] device
+
+`mkfs.xfs` 建立一个 XFS 文件系统。此过程可以通过无数选项（`man mkfs.xfs`）控制，最重要的选项列在此：
+
+*   `-b size=n`
+
+    指定所需的块大小（默认为 4,096 字节）。
+
+*   `-l logdev=device`
+
+    将日志数据保存在单独的分区中。
+
+*   `-l size=n`
+
+    指定日志数据区域的大小。如果没有此选项，`mkfs.xfs` 将选择合适的大小。
+
+*   `-L label`
+
+    赋予文件系统指定的名称（最大 12 个字符）。
+
+### mknod devicefile [b|c] major minor
+
+`mknod` 建立一个新的设备文件。设备文件位于 `/dev` 目录中，允许访问各种硬件组件。设备文件的特征由三个信息组成：`major` 和 `minor` 设备号。`b` 或 `c` 字符表示设备是有缓冲的还是无缓冲的。在所有当前发行版中，设备文件均由 `udev` 系统设置。因此，不需要手动执行 `mknod`。重要的 Linux 设备及其相应设备列表可以在此处找到：[www.kernel.org/doc/admin-guide/devices.txt](http://www.kernel.org/doc/admin-guide/devices.txt)
+
+### mkpasswd [options]
+
+来自 `expect` 包（CentOS, Fedora, RHEL）的 `mkpasswd` 生成随机密码。
+
+*   `-c` `n`
+
+    指定密码中包含的小写字母最小数量（默认：2）。
+
+*   `-C` `n`
+
+    指定必须包含的大写字母最小数量（默认：2）。
+
+*   `-d` `n`
+
+    指定必须包含的数字最小数量（默认：2）。
+
+*   `-l` `n`
+
+    指定密码所需的字符数（默认：9）。
+
+*   `-s` `n`
+
+    指定必须包含的特殊字符最小数量（默认：1）。
+
+#### 示例
+
+以下命令生成一个不含特殊字符的六位密码：
+
+```
+root# mkpasswd -l 6 -s 0
+SX39vz 
+```
+
+### mkswap device/file
+
+`mkswap` 将设备（例如硬盘分区）或文件设置为交换区域（swap area）。`mkswap` 只能由 `root` 运行。随后可以使用 swapon 激活交换区域。必须在 `/etc/fstab` 文件中输入交换区域，以便每次启动计算机时自动使用它。
+
+#### 示例
+
+
+
+
+
+以下命令首先用零填充一个 512 MiB 文件，然后将该文件设置为交换文件，最后激活该文件：
+
+```
+root# dd if=/dev/zero of=swapfile bs=1M count=512
+root# chmod 600 swapfile
+root# mkswap swapfile
+root# swapon swapfile 
+```
+
+## modinfo 模块名称
+
+`modinfo` 提供关于指定模块的信息。这包括完整文件名、作者、许可证、依赖模块、简短描述以及该模块已知的的所有参数列表。
+
+## modprobe [options] 模块名称 [parameter=value ...]
+
+`modprobe` 将指定的模块加载到内核。该命令是 insmod 的扩展变体。它会考虑 `/usr/lib/modules/kernel-version/modules.dep` 中定义的模块依赖关系，并在必要时加载目标模块所需的模块。此外，它还包含在 `/etc/modprobe.d/*` 中指定的模块参数。
+
+- `-c`
+提供一个几乎无尽的当前有效模块选项和模块设置列表。这些参数源自 `modutils` 包的源码以及 `/etc/modprobe.d/*` 中的设置。
+
+- `-f`
+即使模块是为不同的内核版本编译的，也强制加载该模块。这是否生效取决于内核版本与模块版本之间是否存在任何不兼容性。
+
+- `-r`
+从内核中移除模块（而不是加载它）。
+
+## mogrify [options] 图像文件
+
+`mogrify` 更改图像文件的参数，例如分辨率或颜色数量。它使用与 `convert` 相同的选项。与创建新文件的 convert 不同，`mogrify` 会覆盖原始文件。该命令是 ImageMagick 软件包的一部分。
+
+#### 示例
+
+以下命令将图像的分辨率降低为 800 × 600 像素：
+
+```
+user$ mogrify -resize 800x600 photo.jpg 
+```
+
+## more 文件
+
+`more` 逐页显示文本文件的内容。在每页显示完后，显示会中断。此时 `more` 正在等待键盘输入。最重要的输入选项是 Enter（向下一行）、空格（向下一页）、B（向上一页）和 Q（退出）。通常使用更强大的 less 命令代替 `more`。
+
+## mount mount [options] 设备 目录
+
+不带参数的 `mount` 返回所有当前挂载的文件系统列表，包括文件系统类型和 `mount` 选项。在第二种语法变体中，`mount` 将数据介质（硬盘分区、USB Flash 等）集成到 Linux 文件系统中。你必须指定数据介质的设备名称（例如 `/dev/nvme0n1p3`）和目录树中的目标目录。你也可以指定文件系统的 UUID（即 `mount UIID=1234 directory`）。
+
+Linux 启动时的文件系统挂载由 `/etc/fstab` 文件控制。对于 `/etc/fstab` 中列出的所有设备，可以使用 `mount` 的短形式，只需指定设备文件或挂载目录。`mount` 会自动从 `fstab` 读取缺失的数据和选项。
+
+可以使用 umount 从文件系统中移除数据介质。按照规定，`mount` 和 `umount` 只能由 `root` 运行。在 `fstab` 中标记有 `user` 或 `users` 选项的驱动除外。
+
+此处关于通用和特定文件系统的 `mount` 选项的描述跨越几页，随后是几个示例。
+
+#### 通用 mount 选项
+
+- `--move olddir newdir`
+更改文件系统挂载的目录。
+
+- `-o options`
+允许你指定额外的选项，例如格式为 `-o acl,user_xattr`。以这种方式指定的选项之间不能有空格！请下一小节获取文件系统选项的参考。
+
+- `-r`
+防止对数据介质进行写操作（只读）。
+
+- `-t file system`
+指定文件系统。可能的选项包括 Linux 分区的 `ext2/3/4` 和 `btrfs` 或 `xfs`，Windows 分区的 `vfat` 和 `ntfs`，以及数据 CD 和 DVD 的 `iso9660` 和 `udf`。
+
+#### 通用文件系统选项
+
+使用 `-o`，你可以传递无数影响挂载文件系统行为的选项。通用选项的关键字总结在下列表中。特定文件系统的选项在稍后的位置出现。
+
+
+
+
+
+`mount -o` 的所有选项也可以在 `/etc/fstab` 的第四列中使用。该文件在启动过程中会被求值；在 Ubuntu 系统上，这是通过 `mountall` 命令完成的。因此，以下编译内容也适用于 `/etc/fstab` 和 `mountall`，并补充了一些 `fstab` 特有和 `mountall` 特有的关键词，这些关键词与 `mount` 命令并不直接相关。包括 `defaults`、`noauto`、`nobootwait`、`optional`、`owner`、`user` 和 `users`。
+
+*   `atime` / `noatime` / `relatime` / `strictatime`
+
+    指定文件 inode 访问时间的更新：每次读取访问（`atime` 或 `strictatime`，符合 POSIX 标准）、每天最多一次（`relatime`）或从不（`noatime`）。对于写入访问，inode 访问时间总是会被。
+
+    该选项对读取操作速度和闪存数据存储设备的寿命有较大的影响。当前内核版本的默认设置为 `relatime`。
+
+*   `defaults`
+
+    指定在目录树中使用默认选项包含该文件系统。如果不使用其他选项，则在 `/etc/fstab` 的第四列中指定 `defaults`。（该列不能空。）
+
+*   `dev` / `nodev`
+
+    导致或防止设备文件被解释为设备。在 Linux 上，文件可以被标记为块设备或字符设备。出于安全考虑，此选项对于外部数据媒体有用。
+
+*   `discard`
+
+    激活 ext4、Btrfs 和 XFS 文件系统的 trim 功能。内核现在会通知 SSD 哪些数据已被删除，为 SSD 提供优化内存单元内部管理的机会。trim 功能还可以与 LVM 和软件 RAID (`mdraid`) 结合工作。
+
+    是否应该使用 `discard` 选项存在争议：尽管它有助于 SSD 的长期优化，但可能会导致删除操作显著变慢（例如，如果短时间内要删除许多文件，请参见 [`forums.freebsd.org/threads/ssd-trim-maintenance.56951/#post-328912`](https://forums.freebsd.org/threads/ssd-trim-maintenance.56951/#post-328912)）。`discard` 选项的良好替代方案是每天或每周运行一次 `fstrim` 命令的 cron 任务，以此向 SSD 报告所有已删除的扇区。
+
+*   `exec` / `noexec`
+
+    决定是否可以在 Linux 上运行文件系统上的程序。对于大多数文件系统，默认应用 `exec` 设置。然而，注重安全的管理员会为 CD/DVD 驱动器和外部数据媒体指定 `noexec` 选项。（如果你使用 `user` 或 `users` 选项，`noexec` 将生效。可以使用 `exec` 选项再次更改。）
+
+*   `noauto`
+
+    仅在 `/etc/fstab` 中有用，确保此行中指定的数据媒体在系统启动时不会自动挂载。尽管如此，在 `fstab` 中输入数据媒体是有意义的，因为用户可以方便地执行 `mount` 而无需显式指定所有 `mount` 选项。例如，`noauto` 用于很少需要的分区。
+
+*   `nobootwait`
+
+    如果设备不可，则不会停止启动过程。该关键词由 Ubuntu 上的 `mountall` 解析，不能在其他发行版中使用。它特别适用于并不总是连接的外部数据媒体，例如 USB 磁盘。
+
+*   `nofail`
+
+    如果设备不存在，不报告错误。如果你希望在脚本中 `mount` 尝试访问 USB 驱动器或网络目录，此选项非常有用。
+
+*   `optional`
+
+    如果文件系统在启动过程中不可用，则忽略 `fstab` 条目。该关键词由 Ubuntu 上的 `mountall` 解析，不能在其他发行版中使用。
+
+*   `owner`
+
+    允许每个用户自行挂载或卸载相关文件系统。该选项仅在 `/etc/fstab` 中。与 `user` 的区别在于，只有当用户对相关设备文件（例如 `/dev/fd0`）具有权限时，才能运行 `mount` 或 `umount`。
+
+*   `remount`
+
+    更改已包含在目录树文件系统的选项。此选项只能直接调用 `mount` 时指定，不允许在 `/etc/fstab` 中指定。
+
+*   `ro` / `rw`
+
+    指定文件仅可读取或修改。通常，`rw`（即读写写）适用于大多数文件系统类型。
+
+
+
+
+
+*   `suid` / `nosuid`
+
+    允许或阻止对 SID 和 GID 访问位的评估。这些访问位允许普通用户以 `root` 权限执行程序，这通常会带来安全风险。`nosuid` 选项阻止对此类访问位的评估，应将其用于 CD、DVD 和外部数据介质。
+
+*   `sync`
+
+    使更改立即保存，而不是临时存储在 RAM 中几秒钟，稍后再传输到数据介质。`sync` 可以最大限度地减少在未运行 `umount` 的情况下意外移除数据介质（例如 USB 闪盘）或断开电缆连接时的数据丢失的风险。然而，`sync` 的缺点是取决于数据介质，写入数据的效率要低得多。特别是廉价 USB 闪盘和传统硬盘，速度会下降 10 倍或更多！
+
+*   `user`
+
+    允许普通用户使用 `umount` 卸载相关文件系统，并通过 `mount` 重新挂载它。否则，只有 `root` 能够执行此操作。数据介质只能由启动 `mount` 的用户从文件系统中移除。此选项仅在 `/etc/fstab` 中有效，主要用于外部数据介质。如果你使用 `user`，`noexec`、`nosuid` 和 `nodev` 选项也会自动应用。
+
+*   `users`
+
+    含义与 `user` 相同，但有一个小区别：每个用户都可以从文件系统中移除标记为 `users` 的数据介质（`umount`）。因此，`users` 允许用户 A 运行 `mount` 而用户 B 随后调用 `umount`。
+
+### btrfs 选项
+
+许多 `mount` 选项取决于各自的文件系统。因此，这里总结了最重要的特定文件系统的选项。我们从 `btrfs` 开始。
+
+*   `compress=zlib|lzo|zstd`
+
+    压缩所有新建或修改的文件。只要是只读的，现有文件将保持不变。你有三种压缩方法供选择：
+
+    *   `zlib`: 良好的压缩
+    *   `lzo`: 比 `zlib` 快，但压缩率较差
+    *   `zstd`: 压缩与 `zlib` 相似，但速度稍快
+
+Fedora 默认使用 `zstd`。这种方法目前（2025 年）被认为是良好的压缩率和速度之间的最佳折中方案。
+
+*   `compress-force=zlib|lzo`
+
+    即使文件看起来没有希望也对其进行压缩。通常，Btrfs 文件系统会识别已经压缩的文件，并且不再对其进行压缩，因为这通常无法节省任何空间，但会消耗大量的 CPU 时间。使用 `compress-force` 代替 `compress` 会禁用这种识别功能。
+
+*   `degraded`
+
+    即使某些 RAID 设备缺失，也整合文件系统。只有当由于 RAID 冗余使得所有数据可用时，此选项才有效；即存在降级的 RAID 阵列时。
+
+*   `noacl`
+
+    禁用 ACL 访问管理。
+
+*   `nobarrier`
+
+    禁用写入屏障。写入屏障会阻塞后续的写入操作，直到所有之前的写入操作已物理完成。没有屏障，文件系统运行更快，但同时发生崩溃时数据丢失的风险会增加，特别是对于分布在多个设备（RAID）上的文件系统。只有当硬盘确实遵循写入请求时，屏障才会起作用，但出于性能考虑，通常并非如此。
+
+*   `ssd`
+
+    为固态硬盘（SSD）优化文件操作。如果 Btrfs 驱动程序确定数据介质是 SSD，则该选项自动激活。然而，此选项对 trim 行为没有影响，trim 由 `discard` 选项单独控制。
+
+*   `subvolume=name` 或 `subvolid=n`
+
+    使用指定的子卷（而不是默认子卷）。你可以使用 `btrfs subvolume list` 确定 `subvolid` 的卷 ID。
+
+### CIFS 选项
+
+通用网络文件系统（CIFS）允许你将 Windows 目录集成到文件系统中。CIFS 取替了 SMBFS。要使用 CIFS，某些发行版要求你安装单独包，例如 `cifs-utils` 或 `smbfs`。
+
+关于访问权限，如果文件源自普通的 Windows PC，它们将被分配给 Linux 上的 `root` 用户。所有用户都可以读取文件，但只有 `root` 可以更改它们。要给普通用户访问文件的权限，你必须正确设置 `uid`、`gid`、`file_mode` 和 `dir_mode` 选项。
+
+然而，如果文件源自支持 CIFS Unix 扩展的文件服务器（如果 Samba 运行在 Linux 计算机上就是如此），那么文件的 UID、GID 和访问位将原封不动地传递。除非通过 `nounix` 选项禁用 Unix 扩展，否则 `uid`、`gid`、`file_mode` 和 `dir_mode` 选项将不起作用。
+
+
+
+
+
+关于 CIFS 特有的 `mount` 选项的更多细节，可以参考 `man mount.cifs`。
+
+*   `credentials=file`
+    指定一个包含登录 Windows 或 Samba 服务器所需的用户名和密码的文件。这避免了在 `/etc/fstab` 中输入密码。该文件包含三行，分别为 `username=xxx`（注意不是 `user=xxx`！）、`password=xxx`，以及在需要时指定的 `domain=xxx`。
+
+*   `dir_mode=n` (SMBFS 的 dmask)
+    指定访问目录时使用的权限。`dir_mode=0770` 赋予 `uid` 指定的用户和 `gid` 组的所有成员不受限制的权限（读取、打开和更改目录）。
+
+*   `domain=workgroup`
+    指定域或工作组。
+
+*   `file_mode=n` (SMBFS 的 fmask)
+    指定访问文件时使用的权限。`n` 必须以零开头，并包含类似于 `chmod` 中常见的八进制表示法的权限。`file_mode=0444` 赋予所有用户读取和写入权限。如果文件服务器支持 CIFS Unix 扩展，则该设置将被忽略。
+
+*   `iocharset=name`
+    指定所需的字符集。如果文件名中的特殊字符或其他非 ASCII 字符显示错误，使用 `iocharset=utf8` 通常会有帮助。
+
+*   `nodfs`
+    禁用分布式文件系统 (DFS) 功能，该功能允许标准访问不同服务器的网络目录。一些旧的 NAS 硬盘也使用带有已知 DFS 错误的旧 Samba 版本，这在在使用 `rsync` 命令时会导致问题。在这种情况下，`nodfs` 选项提供了一种解决方案。
+
+*   `nounix`
+    禁用 Unix 兼容模式。为了理解此选项，一些背景信息至关重要。CIFS 标准已通过 Unix 扩展进行了扩展，以实现与 Unix/Linux 系统的更好的兼容性。在某些 NAS 设备上，这些扩展也是激活的。在这种情况下，`mount` 将获取 NAS 设备的用户、组信息以及访问权限，并忽略 `uid`、`gid`、`dir_mode` 和 `file_mode` 选项。
+
+    这看起来很有用，但在大多数情况下并非如此：只有当本地计算机和 Samba 服务器的 UID 和 GID 匹配时，Unix 扩展才有意义。这种情况很少见，在 NAS 设备上几乎从未发生。因此，必须禁用兼容模式，以确保 `uid`、`gid`、`dir_mode` 和 `file_mode` 保持有效。
+
+    有时，你也可以通过 `nounix` 避免兼容性问题，这体现在模糊的错误信息“Operation not supported（不支持操作）”中。
+
+*   `password=pw`
+    指定用于 Windows 或 Samba 服务器身份验证的密码。直接输入密码是不安全的！最好将密码指定在文件中并使用 `credentials` 关键字引用它。
+
+*   `sec=mode`
+    指定身份验证模式。该模式控制与 Samba 服务器的验证。默认设置是 `ntlmssp`。此关键字指的是一种 Windows 特有的带有密码哈希的程序，数据被封装在 NTLMSSP 消息中。替代设置（如 `ntlmssp` 或 `krb5i` (Kerberos)）在 `man mount.cifs` 中有所描述。
+
+*   `uid=u,gid=g`
+    指定文件的所有者和组，与 VFAT 驱动相同。也可以将用户名或组名传递给选项，而不是 UID/GIDs。
+
+*   `user=name` (SMBFS 的用户名)
+    指定用于 Windows 或 Samba 服务器身份验证的用户名。工作组名和密码也可以传递到该选项中（`user=workgroup/name%password`）。
+
+*   `vers=n.n`
+    指定要使用的 SMB 协议版本。目前当前的 `mount` 版本默认使用版本 3，因为旧版本存在已知的安全问题。要与旧服务器通信，必须显式指定所需版本，例如使用 `vers=2.1`。
+
+### exFAT 选项
+
+
+
+
+
+exFAT 文件系统 (`t exfat`) 支持 `dmask`, `fmask`, `gid`, `noatime`, `ro`（只读）、`uid` 和 `umask` 选项。这些选项的效果与同名的 VFAT 选项相同，这些选项将在后几页中进行详细描述。只有 VFAT 文件系统不支持 `noatime` 选项。该选项可以在读取访问时不更新访问时间信息，从而减少写入操作次数。
+
+### ext3/ext4 选项
+
+以下选项适用于 Linux 标准文件系统 ext3 或 ext4：
+
+* `acl`
+激活访问控制列表 (ACL) 访问管理。这允许以访问控制列表的形式存储额外的访问信息。在当前的内核版本中，`acl` 是自动激活的。
+
+* `barrier=0`（仅限 ext4）
+禁用写入屏障（write barriers），写入屏障可确保更改按照正确的顺序写入硬盘。这会提高文件系统的速度，但只有当硬盘缓存受电池保护以防止断电和崩溃时，这种做法才是安全的。
+
+* `commit=n`
+每 `n` 秒同步一次日志（默认每五秒一次）。`laptop-mode` 包会增加笔记本电脑在电池模式下的此周期以节省能量。对于使用 `data=ordered` 的 `ext3`，所有文件更改都会与日志同步同步。然而，对于使用 `data=writeback` 的 ext3 以及使用延迟分配的 ext4，`commit` 间隙仅适用于日志。
+
+* `data=journal/ordered/writeback`
+确定日志模式（稍后将提供细节）。默认情况下，ext4 应用 `ordered` 模式。
+
+* `errors=continue/remount-ro/panic`
+确定文件系统检查期间发生错误时的行为。你可以使用 `tune2fs` 命令配合 `-e` 选项设置默认行为。
+
+* `grpid`
+使新文件自动采用其所在目录的组 ID。这使得文件系统的行为类似于在 BSD 下运行，或者在所有目录都设置了 `setgid` 位。（默认情况下，Linux 会为新文件分配创建该文件的用户的组 ID。）
+
+* `nodelalloc`（仅限 ext4）
+禁用延迟分配。
+
+* `noload`
+对于 `mount` 命令忽略现有的日志文件。如果日志文件存在缺陷，这非常有用。
+
+* `sb=n`
+使用块 `n` 作为超级块（而不是默认使用块 1）。在某些情况下，这使得读取损坏的文件系统成为。通常，`mke2fs` 每 8,192 块创建一个超级块副本。因此，建议 `n` 使用 `8193`、`16385` 等值。
+
+* `user_xattr`
+激活对扩展文件属性的支持。（此选项是当前内核版本的默认选项。）
+
+### ext3/ext4 日志模式
+
+ext 文件系统有三种执行日志的方法：
+
+* `data=ordered`
+在此模式下，只有元数据被保存在日志中，即关于文件的信息，但不包含内容。只有当文件完全保存后，在日志中会被标记为已提交。崩溃后，文件系统可以快速恢复到一致状态，因为未完全保存的文件会被日志立即识别。然而，无法恢复此类文件。
+
+在 `data=ordered` 模式下，日志每五秒与硬盘同步一次。对于 `ext3`，这意味着对任何文件的所有更改都会五秒内物理保存到硬盘中。尽管这种标准行为不是特别高效，但它非常安全：即使发生完全崩溃和断电，大规模数据丢失也是极罕见的。然而，`data=ordered` 在 `ext3` 中有一个令人讨厌的副作用：每次调用 `fsync` 函数时，不仅是特定文件，整个文件系统都会同步。这可能会导致明显的延迟。
+
+对于 ext4，日志也会每五秒同步一次，但由于延迟分配，实际的数据更改通常直到很晚才保存。只有显式调用 `fsync` 函数才能确保文件的立即物理存储！幸运的是，ext4 的 `fsync` 不需要同步整个文件系统，因此它的运行速度快得多。
+
+* `data=writeback`
+此模式与 `ordered` 模式相似。区别在于日志和文件操作并不总是完全同步的。文件系统不会等待日志中的提交条目等待硬盘存储操作完成。这使得文件系统比 `ordered` 模式更快。崩溃后，文件系统的完整性仍然得到保证。然而，更改的文件可能包含旧数据。如果应用程序（如 POSIX 标准所提供的）使用 `fsync` 完成保存过程（参见 `fsync` 条目），则不会发生这个问题。
+
+* `data=journal`
+与另外两种模式不同，实际数据现在也保存在日志中。这意味着所有更改必须保存两次（首先在日志中，然后在相关文件中）。这就是为什么 `ext3` 在此模式下明显慢得多。更改已完全进入日志（但尚未进入文件）的文件可以在崩溃后恢复。
+
+
+
+日志每五秒被物理保存到硬盘上。此时间间隔可以使用 `mount` 选项 `commit` 进行更改。在内部，集成到内核中的 `kjournald` 日志守护进程负责定期更新日志文件。
+
+### NFS 选项
+
+NFS 文件系统（`-t nfs`）是 Unix/Linux 上共享或使用网络目录的常用方法。注意，`-t nfs` 指的是 NFS2 和 NFS3。如果你想使用 NFS4，必须在 `mount` 命令中指定 `-t nfs4`。
+
+大多数 NFS 选项适用于所有 NFS 版本。所有选项的全面总结（包括 NFS2/3 与 NFS4 之间的区别）可以在 `man nfs` 中找到。
+
+-   `bg`
+    如果 NFS 服务器无法访问，则让 `mount` 进程在后台运行。该选项仅对 `/etc/fstab` 有效。
+
+-   `hard`
+    如果 NFS 服务器不再可用，导致访问 NFS 文件的程序将挂起。（`hard` 的替代方案是 `soft`，它会导致内核在等待一段时间后放弃尝试寻找 NFS 文件。这听起来可能更安全，但实际上它引起的问题比 `hard` 更多。）
+
+-   `intr`
+    即使打开的 NFS 文件不再可用，也允许使用 `kill` 或 Ctrl+C 停止程序。该选项仅与 `hard` 结合时有效。
+
+-   `nfsvers=2/3`
+    指定所需的 NFS 版本（仅用于 `-t nfs`）。
+
+-   `rsize=n,wsize=n`
+    指定读写操作的缓冲区大小（单位为 KiB）。两种情况默认值均为 `4096`。
+
+正确的 `mount` 选项对于 NFS 能够实现的速度至关重要！你可以通过这些选项实现高速：`hard`、`intr`、`rsize=8192` 和 `wsize=8192`。如果 NFS 速度仍低于你的预期，你应该确保 NFS 服务器上的 `/etc/exports` 使用了 `async` 选项。
+
+### NTFS 选项
+
+以下选项适用于 `ntfs3g` 驱动，大多数发行版都使用它来访问 NTFS 文件系统。
+
+-   `locale=name`
+    指定本地字符集（例如格式 `locale=en_EN.UTF-8`）。只有当文件系统在 Init-V 进程自动挂载时字符集尚未配置时，该选项在 `/etc/fstab` 中才是必要的。
+
+-   `show_sys_files`
+    同时也显示 NTFS 系统文件。
+
+-   `streams_interface=none|windows|xattr`
+    指定如何访问文件流：在默认的 `xattr` 设置下，通过 `getfattr` 或 `setfattr` 命令访问。`windows` 允许按照常规 Windows 表示法访问：`filename:streamname`。默认设置为 `none`。
+
+-   `uid=u,gid=g,umask=m|fmask=f,dmask=d`
+    与 VFAT 驱动含义相同（见下一个子节）。文件所有者是执行 `mount`的用户。所有用户都有读写权限！
+
+### VFAT 选项
+
+你可以使用 `mount -t vfat` 在目录树中挂载所有版本的 Windows VFAT 分区（FAT12、FAT16、FAT32）。许多选项控制谁对文件拥有何种访问权限、如何处理文件名中不同的字符集等。
+
+-   `codepage=name`
+    指定内部应用于 VFAT 短文件名（最多 8 + 3 个字符）的代码页（一种 DOS 字符集）。长文件名始终以 Unicode 格式保存；此选项对它们无效。当前的 Windows 版本也会以 VFAT 格式保存长文件的短文件名，以保持正确的大小写标记。由于由于原因，该选项变得越来越不重要。选项的默认值可以在编译期间确定，通常为 `cp437`。
+
+-   `flush`
+    使驱动立即开始将缓存数据保存到数据介质。此选项减少了在外部介质（如 USB 闪存）上保存更改所需的时间。与 `sync` 选项不同，文件系统不需要等待同步完成。因此，`flush` 对写入速度没有负影响。
+
+-   `fmask=f,dmask=d`
+    分别设置文件 (`fmask`) 和目录 (`dmask`) 的掩码。这特别有用，因为你通常想为目录设置 x 访问位，而不为文件设置。这允许用户进入所有目录，但不能运行任何文件或程序。
+
+
+
+
+一种可能的设置是 `fmask=177,dmask=077`，它允许所有者（UID）读写文件（`rw-------`）并进入目录（`rwx------`）。所有其他用户对文件没有权限。
+
+`fmask=133,dmask=022` 通常也有用。这意味着 `rw-r--r--` 应用于文件，`rwxr-xr-x` 应用于目录；也就是说任何人都可以读取一切，但只有所有者可以更改任何内容。
+
+*   `iocharset`
+    指定在 Linux 系统上处理 Windows 文件名时使用的字符集。默认设置为 `iso8859-1`。按照原则，只有当你在 Linux 上使用 8 位字符集时才会使用此选项。（在 VFAT 内部，长文件名始终使用 Unicode 字符集。该选项仅决定文件名在 Linux 上的显示方式。）
+
+    如果你在 Linux 上使用 UTF-8 字符集，应该使用列表末尾描述的 `utf8` 选项，而不是 `iocharset`。`iocharset=utf8` 看起来也可以工作，但不推荐，因为这样 VFAT 驱动程序将对大小写敏感，这与 Windows 的习惯相 contrary。
+
+*   `shortname=lower|win95|winnt|mixed`
+    指定以何种大写和小写形式呈现或保存短文件名（最多 8 + 3 字符）。这方面的行为根据 Windows 版本的不同而异。
+
+    在 Linux 上，默认应用 `lower` 设置，即短文件名以小写呈现。对于新文件，名称将以 VFAT 长文件名格式保存（即使没有超过 DOS 的 8 + 3 字符限制），以便保留大写和小写。此规则的唯一例外是完全由大写字母组成的短文件名；此类名称将像 DOS 那样保存为短文件名。
+
+    该设置对长文件名没有影响，长文件名一旦创建始终对大小写敏感。
+
+*   `uid=u,gid=g,umask=m`
+    确定由谁（`uid`）以及哪个组（`gid`）“拥有”Windows 文件，即允许谁读取或更改文件。你通常通过 `uid` 和 `gid` 输入所需的数字。你可以向 `umask` 传递带有反转访问位掩码的八进制数值。因此，`umask=0` 任何人都可以读取、写入和运行所有文件（`rwxrwxrwx`）。`umask=022` 对应于 `rwxr-xr-x`：每个人都可以读取所有文件，但只有所有者可以更改文件。
+
+    如果没有指定这些选项，VFAT 文件系统将应用以下默认值：
+    *   `uid`:运行 `mount` 的用户的 UID。通常情况下，只有 `root` 可以运行 `mount` 命令，除非 `/etc/fstab` 中的对应行包含 `user`、`users` 或 `owner` 选项。
+    *   `gid`:运行 `mount` 的用户的 GID。
+    *   `umask`: 022，即每个人都可以读取一切，但只有所有者可以更改文件或目录。
+
+    `fstab` 中经常包含 `gid=users` 设置。这意味着运行 `mount` 的用户的默认组将应用于 `gid`。如果没有此选项，可以先通过 `newgrp` 激活另一个组，然后该组也会应用于 `mount`。
+
+*   `utf8`
+    使驱动程序作为 UTF-8 字符字符串将文件名返回给 Linux。如果你在 Linux 上使用 UTF-8 作为字符集，则需要此选项来正确显示非 ASCII 字符。
+
+### XFS 选项
+
+XFS 文件系统的大多数选项都涉及很少使用的功能（参见 `man mount`）。ACL 和扩展属性在 XFS 文件系统上默认可用，且不受选项控制。
+
+*   `logdev=device`
+    指定存储日志数据的分区。只有在设置文件系统时指定了外部日志分区时，才需要此选项。
+
+*   `norecovery`
+    防止在挂载文件系统时评估日志数据。同时，你必须使用 `ro` 选项（只读访问）。
+
+#### 示例
+
+按照原则，你可以将 Linux 分区集成到文件系统中而不必显式指定文件系统（即不使用 `-t` 选项）：
+
+```
+root# mkdir /windows
+root# mount /dev/sda7 /media/backup-partition 
+```
+
+以下示例了通过 `/windows` 目录访问 USB 闪盘上的数据：
+
+```
+root# mkdir /usbstick
+root# mount -t vfat /dev/sdc1 /windows 
+```
+
+需要更多的选项，以便不仅是 `root`，用户 ID 为 1000 组 ID 为 1000 的普通用户也能访问 USB 闪盘并写入或更改文件：
+
+```
+root# mount -t vfat -o uid=1000,gid=1000,fmask=0022,dmask=0022 \
+        /dev/sdc1 /usbstick 
+```
+
+以下命令将 Windows 或 Samba 服务器（例如来自 NAS 设备）的网络目录集成到本地目录树。UID/GID 为 1000 的用户可以读取和更改数据。
+
+```
+root# mount -t cifs -o username=name,uid=1000,gid=1000,iocharset=utf8,nounix \
+       //diskstation/myshare /media/audio-archive
+Password for name: ******** 
+```
+
+
+
+
+
+你可以可以使用 `mount -o remount` 来更改已挂载文件系统的选项。例如，以下命令为 USB 闪存器激活了 `noexec` 选项，从而防止执行其中包含程序：
+
+```
+root# mount /dev/sdc1 -o remount,noexec 
+```
+
+如果在计算机启动期间挂载系统分区时出现问题，该分区将仅以只读模式挂载。然而，为了修复错误原因（例如 `/etc/fstab` 中的错误条目），通常需要对文件系统进行更改。要实现这一点，你可以运行以下命令。它会重新挂载系统分区，从而允许写入访问。
+
+```
+root# mount -o remount,rw / 
+```
+
+## mtr [options] 主机名
+
+`mtr` 命令定期向指定主机发送网络数据包并分析响应。结果列表结合了 ping 和 [](#T_001.xhtml_traceroute6) 的数据。注意，该程序有两个版本：此处描述的文本命令行版本和一个带有图形用户面的 GTK 版本。Debian 和 Ubuntu 的桌面版默认安装了 GTK 版本。如果想安装文本版本，你必须运行 `apt-get install mtr-tiny`。
+
+*   `-c` `n`
+
+    执行 `n` 次测试。（默认情况下，程序一直运行到通过 Ctrl+C 终止）。
+
+*   `-n` 或 `--no-dns`
+
+    省略域名解析，并将所有中间阶段指定为 IP 地址。
+
+*   `-r` 或 `--report`
+
+    在测试完成后提供文本格式的报告。此选项必须结合 `-c` 使用。
+
+#### 示例
+
+以下行显示了一个典型的 `mtr` 结果，该结果测试了本地互联网 WiFi 路由器与 [www.google.com](http://www.google.com) 之间的连接：
+
+```
+user$ mtr -c 10 -r google.com
+
+HOST: fedora.fritz.box            Loss%   Snt   Last   Avg  Best  Wrst StDev
+  1.|-- fritz.box                  0.0%    10    1.4   1.1   0.9   1.5   0.2
+  2.|-- dynamic-pd01.res.v6.highw  0.0%    10   37.2  36.0  20.5  42.7   5.8
+  3.|-- lg206-9080-3219.as8447.a1  0.0%    10   38.5  40.9  30.0  47.8   5.0
+  4.|-- lg23-9080.as8447.a1.net    0.0%    10   41.6  40.0  35.3  45.8   3.8
+  5.|-- lg4-9080.as8447.a1.net     0.0%    10   48.4  48.2  46.5  50.0   1.2
+  6.|-- 2001:4860:1:1::64e         0.0%    10   49.3  48.9  37.0  56.6   4.9
+  7.|-- 2001:4860:0:1::88ab        0.0%    10   47.2  52.4  46.8  58.8   4.6
+  8.|-- 2001:4860:0:1::8886        0.0%    10   46.8  49.2  42.0  57.7   4.7
+  9.|-- 2001:4860::c:4003:364e     0.0%    10   47.5  47.6  42.5  49.1   2.0
+ 10.|-- 2001:4860::9:4002:6cfc     0.0%    10   51.5  49.3  26.8  53.6   8.1
+ 11.|-- 2001:4860:0:1::7651        0.0%    10   53.9  52.5  23.8  60.7  10.4
+ 12.|-- 2001:4860:0:1::2ea5        0.0%    10   51.7  50.8  22.9  61.9  10.4
+ 13.|-- bud02s41-in-x0e.1e100.net  0.0%    10   52.4  49.3  22.9  54.9   9.3 
+```
+
+## multitail [options] file1 [file2 file3 ...]
+
+`multitail` 帮助同时监控多个日志文件。在简单形式，你应该运行 `multitail filei1 filei2 filei3 ...`。这会将终端分为多个等大的区域，每个区域显示指定文件的最后几行。如果你在文件前加上 `-I`，多个文件的更改将合并输出在一个区域中。但这样很难看出哪个文件发生了变化。
+
+## mv source target
+
+mv files target directory
+
+`mv` 重命名文件或目录，或将（一个或多个）文件移动到另一个目录。
+
+*   `-b` 或 `--backup`
+
+    将同名的现有文件重命名为备份文件（文件名加上 ~字符），而不是覆盖它们。
+
+*   `-i` 或 `--interactive`
+
+    在覆盖现有文件之前进行询问。
+
+#### 示例
+
+以下命令将当前目录下所有的 PDF 文件移动到 `pdf` 子目录：
+
+```
+user$ mv *.pdf pdf/ 
+```
+
+`mv` 不能用于重命名多个文件。`mv *.xxx *.yyy` 是不起作用的。要执行此类操作，你必须使用 `for` 或 `sed`。相应的示例可以在 [cp] 中找到。
+
+## mysql [options] [database name] [< filename]
+
+命令解释器 `mysql` 在 MySQL 或 MariaDB 服务器上执行 SQL 命令，可以是交互式的，也可以从标准输入以批模式执行。命令必须以分号结束。如果在调用 `mysql` 时没有指定数据库名称，则必须通过 `USE` 命令设置所需的数据库。
+
+以下选项仅影响连接设置，并以相同的形式应用于后续条目的 [mysqladmin](#M_mysqladmin] 和 [mysqldump] 命令。在实际生活中，通常只需要 `-u`、`-p` 和 `-h` 选项。
+
+*   `--default-character-set=name`
+
+    指定与 MySQL 或 MariaDB 服务器通信时使用的字符集（例如 `latin1` 或 `utf8`）。
+
+*   `--defaults-extra-file=filename`
+
+    从指定文件加载连接选项。这非常有用，例如通过 cron 定期运行 `mysql` 或 `mysqldump` 且无法输入密码时。
+
+*   `-h` 或 `--host=hostname`
+
+    指定运行服务器的计算机名称或 IP 号（默认为 `localhost`）。
+
+*   `--login-path=group`
+
+    评估 `.mylogin.cnf` 中的 `[group]` 数据。
+
+
+
+
+
+* `-P` 或 `--port=n`
+  指定 TCP/IP 连接的端口号（默认为 3306）。
+
+* `-p` 或 `--password`
+  在启动命令后立即提示你输入密码。如果缺少此选项，`mysql` 将从本地配置文件 `.my.cnf` 读取密码。如果该文件不存在或不包含任何密码数据，`mysql` 将尝试无无密码登录。
+
+* `-pxxxx` 或 `--password=xxx`
+  直接传递密码。然而，这是不安全的，因为密码会以明文形式出现在进程列表中！与其他选项不同，`-p` 选项不允许后面有空格。
+
+* `--protocol=tcp/socket`
+  指定用于 MySQL 客户端与数据库服务器之间通信的协议。默认情况下，如果客户端和服务器在同一台计算机上，则应用 `socket`；否则使用 `tcp`。
+
+* `-S` 或 `--socket=name`
+  指定 socket 文件的位置。只有当 `mysql` 无法自行找到 socket 文件时才需要此选项。在大多数发行版中，该文件名为 `/var/run/mysqld/mysqld.sock`。其位置可以在配置文件 `/etc/my.cnf` 或 `/etc/mysql/my.cnf` 中设置。
+
+* `-u` 或 `--user=name`
+  指定 MySQL 或 MariaDB 用户名（默认情况下为当前用户名）。
+
+还有一些 `mysql` 特有的选项：
+
+* `-B` 或 `--batch`
+  在输出结果时使用制表符（而不是空格和行图形）来分隔列。此外，只显示查询结果，不显示状态信息。
+
+* `-e` 或 `--execute='sql command'`
+  运行指定的命令。你也可以输入多个用分号隔开的命令。
+
+* `-h` 或 `--html`
+  将查询结果格式化为 HTML 代码。
+
+* `-N` 或 `--skip-column-names`
+  不为结果列标记标签。
+
+* `-r` 或 `--raw`
+  在查询结果中原样输出 0、制表符、换行符和 `\` 字符。（通常，这些字符被输出为 `\0`、`\t`、`\n` 和 `\\`。）该选项仅在与 `--batch` 结合时有效。
+
+* `-s` 或 `--silent`
+  仅输出结果本身。
+
+* `-x` 或 `--xml`
+  将查询结果格式化为 XML 代码。
+
+#### 示例
+
+以下命令在本地 MySQL 或 MariaDB 服务器上导入数据库备份。`dbname` 数据库必须已经存在。
+
+```
+user$ mysql -u name -p dbname < backup.sql
+Enter password: ******** 
+```
+
+如果备份文件经过压缩的，你应该按照以下方式操作：
+
+```
+user$ gunzip -c backup.sql.gz | mysql -u name -p dbname 
+```
+
+接下来的几行显示了一个小型脚本，该脚本将 SQL 命令传递给 `mysql`，以测试数据库是否存在：
+
+```bash
+#!/bin/bash
+dbname="ebooks"
+sql="SELECT schema_name FROM information_schema.schemas "
+sql="$sql WHERE schema_name='$dbname';"
+result=$(mysql -s -N -e "$sql")
+if [[ -n "$result" ]]; then
+  echo "Database exists"
+else
+  echo "unknown database"
+fi
+```
+
+#### 替代方案
+
+`mysqlsh` 和 `mariadb-shell` 是针对 MySQL 和 MariaDB 专门优化的新 shell，提供了各种额外功能。然而，这些 shell 使用不同的选项，并且与 `mysql` 命令不兼容。
+
+### mysqladmin [options] command1 command2 ...
+
+`mysqladmin` 帮助对 MySQL MariaDB 服务器进行各种管理任务，例如创建新数据库。你可以向 `mysqladmin` 传递多个命令，它们按顺序执行。`mysqladmin` 命令名称可以缩写，只要易于识别（例如用 `flush-l` 代替 `flush-logs`）。大多数 `mysqladmin` 命令也可以作为 SQL 命令运行，例如 `CREATE DATABASE`、`DROP DATABASE`、`FLUSH` 等。
+
+为了让 `mysqladmin` 建立与数据库服务器的连接，必须使用 `mysql` 命令中描述的连接选项，即 `-u`、`-p`、`-h` 等。此外，`mysqladmin` 更多选项：
+
+* `-f` 或 `--force`
+  在不询问的情况下运行命令。即使某个命令发生错误，也会继续执行多个命令。
+
+* `-i` 或 `--sleep=n`
+
+
+
+
+
+每隔 `n` 秒重复执行命令（例如用于定期显示状态）。`mysqladmin` 将会持续运行，必须通过 `Ctrl+C` 终止。
+
+*   `-r` 或 `--relative`
+  与 `-i` 和 `extended-status` 命令结合使用，显示与上一个状态相比的变化。
+
+这里描述了最重要的 `mysqladmin` 命令：
+
+* `create dbname`
+  创建一个新数据库。
+* `drop dbname`
+  不可逆地删除已存在的数据库。
+* `extended-status`
+  显示服务器的无数个状态变量。
+* `flush-logs`
+  关闭所有日志文件并重新打开。
+* `flush-privileges`
+  重新加载带有相关访问权限的数据库。
+* `kill id1, id2 ...`
+  关闭指定的线程。
+* `ping`
+  测试是否可以建立到数据库服务器的连接。
+* `shutdown`
+  终止 MySQL 或 MariaDB 服务器。
+* `status`
+  显示数据库服务器的各种状态变量。
+* `variables`
+  提供数据库服务器系统变量列表。
+* `version`
+  确定 MySQL 或 MariaDB 服务器的版本。
+
+#### 示例
+以下命令在本地 MySQL 或 MariaDB 服务器上创建一个新数据库：
+
+```
+user$ mysqladmin -u name -p create newdb
+Enter password: ******** 
+```
+
+### mysqlbinlog [options] loggingfile1 file2 ...
+
+MySQL 或 MariaDB 可以在二进制文件中记录所有更改，特别是所有的 `INSERT`、`UPDATE` 和 `DELETE` 命令。这些文件在需要时用作增量更新。`mysqlbinlog` 读取这些日志文件。与 `mysql` 命令相同的连接选项同样适用于（`-u`、`-p` 等）。
+
+* `--database=name`
+  仅考虑影响特定数据库的命令。
+* `-j n`
+  仅评估从某个位置开始的日志文件。
+* `--no-defaults`
+  不考虑如 `.my.cnf` 等配置文件。在实践中，如果 `.my.cnf` 包含一个适用于所有 MySQL 客户端命令但 `mysqlbinlog` 不允许的选项（例如 `default-character-set=utf8`），则通常需要使用此选项。这样可以避免出现 `unknown variable xy` 错误信息。
+
+#### 示例
+在导入最后一次完整的备份后，应用来自两个 binlog 文件的增量更新：
+
+```
+root# cd /var/log/mysql
+root# mysqlbinlog -j 120 mariadb-bin.001380 mariadb-bin.001380 | \
+        mysql -u root -p 
+```
+
+### mysqldump [options] dbname [table1 table2 ...]
+
+`mysqldump [options] --databases [dbname1 dbname2 ...]`
+
+`mysqldump [options] --all-databases`
+
+`mysqldump` 是一个用于 MySQL 和 MariaDB 数据库系统的简单备份工具。该命令返回一个长长的 SQL 命令列表，可以通过这些命令精确地还原数据库。`mysqldump` 有三种语法变体，取决于保存一个数据库、多个列出的数据库还是 MySQL 管理的所有数据库。只有第一种变体允许备份限制到单个表。
+
+为了让 `mysqldump` 建立到数据库服务器，必须使用为 `mysql` 命令描述的连接选项，即 `-u`、`-p`、`-h` 等。许多其他选项控制备份的细节。
+
+* `--add-locks`
+  在第一个 `INSERT` 命令之前插入 `LOCK TABLE`，在最后一个 `INSERT` 命令之后插入 `UNLOCK`。这可以加速 MyISAM 表的重新加载。然而，此选项不 InnoDB 表。
+* `--create-options`
+  在 `CREATE-TABLE` 命令中包含 MySQL 特有的选项。
+* `--disable-keys`
+  在重新加载数据期间禁用索引更新。索引在过程结束前不会更新，这样速度更快。
+* `--extended-insert`
+  创建更长的 `INSERT` 命令，一次插入多条数据记录。
+* `--lock-all-tables`
+  对整个数据库运行 `LOCK TABLE READ`。这确保了在整个备份期间任何表都不会被更改。此选项仅对 MyISAM 表有用。对于 InnoDB 表，最好使用 `--single-transaction`。
+* `--lock-tables`
+  在备份期间读取数据之前，对每个单独表运行 `LOCK TABLE READ`。
+* `--no-create-info`
+  仅保存数据，不保存数据库的结构。在生成的备份中有 `INSERT` 命令，但没有 `CREATE TABLE`。
+* `--no-data`
+  仅保存数据库的结构（模式），但不保存其包含的数据。
+* `--no-tablespaces`
+
+
+
+
+
+防止 `mysqldump` 在备份中包含 `CREATE LOGFILE GROUP` 或 `CREATE TABLESPACE` SQL 命令。如果你在没有 `Process` 权限的账户中运行该命令，在当前的 MySQL 服务器版本中必须使用此选项，否则会导致拒绝访问（Access denied）错误。
+
+*   `--opt`
+    作为以下选项的简写：`--add-drop-table`, `--add-locks`, `--create-options`, `--disable-keys`, `--extended-insert`, `--lock-tables`, `--quick` 和 `--set-charset`。由于历史原因，`--opt` 默认处于激活状态。然而，只有当你对 MyISAM 表进行备份时，生成的设置才是优化的（因此这也是该选项的名称）。
+
+*   `--quick`
+    直接输出要保存的数据记录，而不会在内存中进行中间存储。
+
+*   `--routines`
+    同时也保存存储过程的代码。
+
+*   `--set-charset`
+    在 `mysqldump` 输出开始时更改活动字符集，并在结束时恢复之前的字符集。
+
+*   `--single-transaction`
+    确保整个备份作为单个事务的一部分执行。这对于 InnoDB 表非常有用，并可以防止单个表在备份期间发生变化。这确保了备份整体的一致性。
+
+*   `--skip-opt`
+    禁用默认激活的 `--opt` 选项。
+
+*   `--triggers`
+    同时也保存触发器的代码。
+
+#### 示例
+
+备份带有 MyISAM 表的数据库只需要几个选项。如果你想防止单个表在备份期间发生变化，你需要在命令中添加 `--lock-all-tables` 选项。但请注意，这将阻塞备份期间数据库中所有的写操作。
+
+```
+user$ mysqldump -u user -p dbname > backup.sql
+Enter password: ******** 
+```
+
+如果你想保存压缩后的备份，应该按照以下步骤操作：
+
+```
+user$ mysqldump -u user -p dbname | gzip -c > backup.sql.gz 
+```
+
+对 InnoDB 表执行优化备份需要多得选项，因为 `mysqldump` 的默认设置并没有针对这种情况情况进行优化：
+
+```
+user$ mysqldump -u user -p --skip-opt --single-transaction \
+        --create-options --quick --extended-insert \
+        --disable-keys --add-drop-table dbname > backup.sql 
+```
+
+如果你使用 cron 业自动运行备份，必须将 `-u user -p` 替换为以下选项，并在仅限 root 访问的文件 `/root/.my.cnf` 中输入连接参数：
+
+```
+# 在备份脚本中，--defaults-extra-file 必须是第一个选项
+mysqldump --defaults-extra-file=/root/.my.cnf ... 
+```
+
+稍后恢复备份时，必须运行以下命令：
+
+```
+user$ mysqladmin  -u user -p create dbname
+user$ mysql  -u user -p --default-character-set=utf8 dbname < backup.sql 
+```
+
+## N
+
+### namei [options] file
+
+`namei` 显示形成指定文件路径的所有目录的权限：
+
+```
+user$ namei -l ~/.ssh
+f: /home/kofler/.ssh
+drwxr-xr-x root   root   /
+drwxr-xr-x root   root   home
+drwxr-xr-x kofler kofler kofler
+drwx------ kofler kofler .ssh 
+```
+
+### nc [options] [hostname/ip-address] [port]
+
+`nc` 命令广为人知的 Netcat。它将 TCP/UDP 端口重定向到标准输入输出，并提供许多其他功能。你可以使用该命令类似于 `telnet` 来交互式测试 HTTP 或 SMTP 等网络协议。通过 `nc`，你还可以通过任何网络端口复制文件、实现聊天，或设置一个通过端口接收并执行命令的简单后门。因此，`nc` 在黑客和渗透测试人员中极其流行并不意外。
+
+在某些 Linux 发行版中，`nc` 命令包含在同名的包中；在其他发行版中，你必须安装 `netcat`。注意 Netcat 有不同的实现。例如，Debian 和 Ubuntu 使用 `netcat-traditional`，而 RHEL 提供了来自 `nmap` 开发者的变体（[`nmap.org/ncat`](https://nmap.org/ncat)）。在实践中，这不会导致任何重大差异，但根据版本，单个选项的实现可能不同（或未实现）。
+
+*   `-4` 或 `-6`
+    仅使用 IPv4 或 IPv6。
+
+*   `-l`
+    在指定的端口等待连接建立（监听）。
+
+*   `-p` `portnr`
+    定义本地端口（源端口）。通常在 `nc` 命令末尾指定的端口是目标端口。
+
+*   `-x` `proxyadr:portnr`
+    使用指定的代理地址和相应的端口。
+
+`man nc` 中描述了许多其他选项。`nc` 的一个可能替代方案是 `socat` 命令，本书未涵盖它。它还支持 SCTP，可以通过代理服务器工作，可以操作串口接口，并对传输数据进行加密：
+
+[www.dest-unreach.org/socat](http://www.dest-unreach.org/socat)
+
+#### 示例
+
+要从主机 1 通过任意任何端口（这里是 1234）将文件复制到主机 2，你首先必须在主机 2（右列）上启动接收端，然后向主机 1 发起文件传输（左列）：
+
+```
+ host2$ nc -l 1234 > file
+host1$ nc host2 1234 < file 
+```
+
+进行聊天同样简单。你只需与对方约定一个端口即可。聊天在计算机上通过 `nc -l`（左列）启动。通过这样，`nc` 会监控指定的端口 1234 并等待连接建立。
+
+
+
+
+
+在第二台主机上，启动不带选项的 `nc` 以连接到第一台主机。虽然没有可见的确认显示连接已建立，但只要任何一方输入文本（标准输入）并按回车键确认，文本就会出现在另一方的终端中（标准输出）。
+
+```
+host1$ nc -l 1234
+                                     host2$ nc host1 1234
+ how are you?
+                                     how are you?
+                                     good
+good
+<Ctrl>+<C> 
+```
+
+第三个示例展示了 Netcat 的潜在危险：在这里，主机 1 上的 `nc` 设置为将在端口 1234 上接收的所有输入传递给 `bash` shell。它们的输出会被传回给发送者。现在可以从第二台主机在主机 1 上运行 shell 命令。因此，`ls` 显示的是位于主机 1 上的文件！
+
+```
+host1$  nc -l 1234 -e /bin/bash
+                                        host2$ nc host1 1234
+                                        ls
+                                        file1
+                                        file2
+                                        file3 
+```
+
+然而，并不是所有 Netcat 版本都支持执行命令的 `-e` 选项。在 Debian 和 Ubuntu 上常用的 `netcat-traditional` 实现中特别缺少该选项。解决方案是安装 `nmap` 包并运行其中包含的 `ncat` 命令。
+
+### ncdu [options] [directory]
+
+`ncdu` 是 `du` 命令的交互变体。通常，直接不带选项和参数调用它即可。它会显示当前目录下占用空间最大的子目录。
+
+现在你可以使用方向键和回车键在子目录之间导航。可以通过键盘快捷键访问其他各种功能。输入 `?` 可以获取重要快捷键概述。但要注意——`D` 会在查询后删除当前文件或目录。
+
+- `-r`
+以只读模式运行命令。因此无法意外删除文件或目录。
+- `-x`
+留在当前文件系统中，即不考虑任何 `mount` 目录。
+
+#### 示例
+
+主目录中目录所需的空间也用条形图表示：
+
+```
+user$ ncdu
+--- /home/kofler ---
+     1.5 GiB [##########] /Nextcloud
+     1.0 GiB [######    ] /Downloads
+   528.5 MiB [###       ] /Images
+   209.4 MiB [#         ] /Documents
+   ... 
+```
+
+### needs-restarting [options]
+
+`needs-restarting` 命令适用于 Fedora、Red Hat 及相关发行版，用于指定是否由于内核、基础库或固件文件的更新而需要重启计算机或单个程序。
+
+该命令在基于 Debian 或 Ubuntu 的发行版可用。在那里，`/var/run/reboot-required` 文件表示需要重启。
+
+- `-r`
+指示是否以及为什么需要重启计算机。
+- `-u`
+列出需要重启的当前用户进程。此选项默认适用。
+
+#### 示例
+
+以下命令显示了应该重启的计算机状态：
+
+```
+root# needs-restarting -r
+自启动以来核心库或服务已更新：
+  * glibc
+需要重启以充分利用这些更新。
+更多信息：https://access.redhat.com/solutions/27943
+root# needs-restarting | sort -n
+782 : /usr/lib/polkit-1/polkitd --no-debug
+783 : /usr/libexec/power-profiles-daemon
+784 : /usr/bin/qemu-ga --method=virtio-serial ...
+787 : /usr/libexec/accounts-daemon
+... 
+```
+
+### netplan [command]
+
+Netplan (https://netplan.io) 是由 Ubuntu 开发的框架，用于配置和集成其他网络后端，如 NetworkManager 和 networkd（一个 systemd 组件，见 `networkctl`）。它用于 Ubuntu，并评估位于 `/etc/netplan` 的配置文件（见 `etc/netplan/netplan.yaml`）。
+
+- `apply`
+运行 `netplan generate` 然后激活更改后的配置。
+- `generate`
+从 `/etc/netplan`、`/lib/netplan` 和 `/var/netplan` 中的 YAML 文件读取 Netplan 配置，然后为网络后端生成相应的配置文件。新文件位于 `/run/NetworkManager` 或 `/run/systemd/network` 中。
+新配置不会激活！只有当请求相应的后端评估文件（或在下次重启）时，更改的设置才会生效。
+- `ip leases interface`
+输出相关接口的 DHCP 租用数据。这仅在使用 networkd 后端和 DHCP 配置时才有效。否则，命令将返回误导性的错误信息。
+
+### netstat [options]
+
+`netstat` 提供有关本地计算机网络活动的信息。如果不带选项调用命令，它将返回所有打开的互联网连接和套字列表。
+
+- `-a`
+还会考虑非活动套字，即正在网络端口上等待连接的服务（`LISTEN` 状态）。
+- `-e`
+还会指定互联网连接的用户。
+- `-n`
+提供数值地址和端口号，而不是主机和网络服务名。
+- `-p`
+还会指定负责连接的程序的进程 ID (PID) 和进程名称。`netstat` 需要 `root` 权限以便提供有关非原生进程的信息。
+- `-t`, `-u`, `-w`, 或 `-X`
+限制输出为使用 TCP、UDP、Raw 或 Unix 协议的连接。
+
+#### 示例
+
+以下命令列出了所有活动连接（`established`）或监控的端口（`LISTEN`）。由于空间限制，输出已大幅精简。
+
+
+
+
+
+```
+root# netstat -atupe
+Active Internet connections (servers and established)
+Proto Local Address           Foreign Addr   State    User     PID/Prog name
+tcp   *:nfs                   *:*            LISTEN   root     -
+tcp   *:ldap                  *:*            LISTEN   root     5842/slapd
+tcp   localhost:mysql         *:*            LISTEN   mysql    5785/mysqld
+tcp6  [::]:ssh                [::]:*         LISTEN   root     5559/sshd
+udp   *:nfs                   *:*                     root     - 
+```
+
+### networkctl [command]
+
+`networkctl` 是 systemd 系列中的管理命令之一。如果使用 networkd 作为网络后端，`networkctl` 有助于分析网络状态。
+
+尽管许多发行版默认安装了 networkd，但它仅在少数发行版中处于状态。其中一个例外是 Ubuntu Server，networkd 作为 Ubuntu 自有 Netplan 系统的后端运行（参见 netplan）。networkd 会评估来自 `/etc/systemd/network`、`/lib/systemd/network` 和 `/run/systemd/network` 目录的配置文件（参见 etc/systemd/network/networkd.network）。
+
+*   `list`
+
+    列出所有网络接口。结果中的 `SETUP` 列显示接口是否由 networkd 控制（`configured`）或否（`unmanaged`）。
+
+*   `lldp`
+
+    显示通过链路层发现协议（LLDP）发现的网络中其他设备。
+
+*   `status [interface]`
+
+    提供有关网络接口状态的详细信息。如果没有指定接口，该命令将尝试总结整个网络状态。
+
+#### 示例
+
+以下 `networkctl` 输出是在虚拟机中的 Ubuntu 服务器上创建的：
+
+```
+root# networkctl list
+IDX  LINK      TYPE       OPERATIONAL   SETUP
+  1  lo        loopback   carrier       unmanaged
+  2  ens3      ether      routable      configured
+root# networkctl status ens3
+      Link File: /lib/systemd/network/99-default.link
+   Network File: /run/systemd/network/10-netplan-ens3.network
+           Type: ether
+          State: routable (configured)
+             ...
+     HW Address: 52:54:00:0a:8d:fc
+        Address: 138.201.20.182
+                 fe80::5054:ff:fe0a:8dfc
+        Gateway: 138.201.20.176 (Fujitsu Technology Solutions GmbH)
+            DNS: 213.133.100.100
+                  213.133.98.98
+   Search Domains: ubuntu-buch.info 
+```
+
+第二个列表显示另一个具有 IPv6 配置的服务器安装的状态摘要：
+
+```
+root# networkctl status
+        State: routable
+ Online state: online
+      Address: 168.119.33.110 on eth0
+               172.17.0.1 on docker0
+               2a01:4f8:242:1f88::4 on eth0
+               fe80::5054:ff:fe4a:7321 on eth0
+      Gateway: 168.119.33.119 on eth0
+               2a01:4f8:242:1f88::2 on eth0
+          DNS: 213.133.100.100
+               213.133.99.99
+               2a01:4f8:0:1::add:1010
+               2a01:4f8:0:1::add:9999 
+```
+
+### newaliases
+
+etc/aliases 文件包含邮件服务器的别名列表，它可以确保例如所有发送给 `postmaster` 的邮件都转发到 `root`。要让邮件服务器采用此文件的更改，你必须运行 `newaliases`。
+
+### newgrp [group name]
+
+`newgrp` 命令确定属于多个组的用户当前的活动组。活动组决定了新创建的文件所属的组。可以通过 groups 确定可供选择的组。如果没有指定组名，将使用主组。该组在登录后也会自动视为活动组。
+
+#### 示例
+
+在下面的示例中，`newgroup` 命令让 `docuteam` 用户 `kofler` 的活动组。结果是，新创建的 `newfile` 文件被分配给 `docuteam` 组，文档团队的其他成员可以编辑。
+
+```
+user$ groups
+kofler docuteam wheel
+user$ newgroups docuteam
+user$ touch newfile 
+```
+
+### newusers file
+
+`newusers` 读取文本文件并为每一行创建一个新用户。文本文件的格式基本上与 etc/passwd 相同。但是，必须在第二列以明文形式输入密码。大多数其他参数（UID，GID）都是可选的。`newusers` 会为每个指定的用户创建新账户，并在需要时创建关联组。对于缺失的参数，`newusers` 会根据 etc/login.defs 中的设置选择合适的默认值。
+
+注意，如果在第六列中指定了位置，`newusers` 会创建新的家目录。但是，该命令并不负责复制 `/etc/skel` 内容。
+
+#### 示例
+
+以下行显示了极简文本文件 `users.txt`，它符合 `newusers` 的要求。由于 `users.txt` 包含明文密码，你必须确保除了 `root` 之外无人读取该文件，或者在运行 `newusers` 之后删除该文件。
+
+```
+hawks:secret1:::Howard Hawks:/home/hawks:/bin/bash
+moore:secret2:::Grace Moore:/home/moore:/bin/bash
+smith:secret3:::Peter Smith:/home/smith:/bin/bash 
+```
+
+`newusers` 现在创建三个新用户 `hawks`、`moore` 和 `smith` 以及同名的主组。`newusers` 本身决定合适的 UID 和 GID。
+
+```
+root# newusers users.txt 
+```
+
+### nft command [options]
+
+大多数现代 Linux 发行版现在使用新的 nftables 防火墙系统，它取代了它的任者 Netfilter。然而，旧的 iptables 命令通常仍被用于配置防火墙，得益于兼容层，它继续工作。
+
+
+
+
+然而，新的或 nftables 特有的功能只能通过 `nft` 命令进行控制。以下描述提供了该命令最重要的子命令和选项的概览。你可以在 `man nft` 以及以下 wiki 中找到更多关于 nftables 功能和 `nft` 语法的详细信息：
+
+[`wiki.nftables.org`](https://wiki.nftables.org)
+
+在调用 `nft` 之前，你应该确保你的发行版版中没有正在运行的防火墙。例如，在 Fedora、RHEL 和 SUSE 上，Firewalld 是激活的（参见 firewall-cmd）。自定义的防火墙规则通常会与发行版的防火墙产生冲突。
+
+## nft 术语
+
+`nft` 使用一套独立的术语：防火墙规则始终是链（chain）的一部分。表（table）则由多个链组成。与 `iptables` 不同，它没有预定义的表，也没有预定义的链。因此，你可以根据自己定义的链组合任意数量的自定义表。
+
+表、链和规则适用于不同网络数据包，这些数据包被分配给以下族（families）：
+
+* `ip`: 仅适用于 IPv4 的规则。
+* `ip6`: 仅适用于 IPv6 的规则。
+* `inet`: 同时适用于 IPv4 和 IPv6 的规则。
+* `arp`: 第 2 层规则，在第 3 层规则之前进行分析。
+* `bridge`: 交换规则。
+* `netdev`: 低级规则，在所有其他规则之前进行分析，例如可以实现针对 DDOS 攻击的特别高效的防御。
+
+## nft 选项
+
+* `-a`: 将句柄（handles）集成到 `nft list` 的输出中。这些是用于唯一标识组内每个对象（例如链中的规则）的数字。句柄使得删除或替换单个对象，或指定新对象的插入位置成为可能。
+* `-f fname`: 从指定的文件读取要执行的命令。允许两种语法变体：文件可以逐行包含普通的 `nft` 命令，也可以包含按层级结构的表、链和规则的序列。第二种变体的文件结构对应于 `nft list ruleset` 的输出。
+* `-S`: 使用 `/etc/services` 中指定的网络服务名称而不是端口号（例如用 `ssh` 代替 22）。
+* `-v`: 显示版本号。
+
+## nft 命令
+
+* `add chain family tname cname`: 在指定的表中创建一个名为 `cname` 的新链。
+* `add rule family tname cname matches statements`: 向指定的 `cname` 链中添加新规则。在这里，`matches` 指定了规则适用于数据包。`statements` 描述了对相应数据包应该执行的操作。除了 `add` 外，还允许使用 `insert` 和 `replace` 关键字在规则列表的特定位置插入规则，或用新规则替换现有规则。
+* `add table family tname`: 为指定的族创建一个新表。
+* `delete/flush chain family tname cname`: 从表中删除指定的链。`flush` 删除该链的所有规则，但不删除链本身。
+* `delete rule family tname cname handle came`: 从 `cname` 链中删除由 `handle` 指定的规则。
+* `delete/flush table family tname`: 删除指定的表。使用 `flush` 时，表中的所有链和规则将被删除，但会保留现在为空的表。
+* `flush ruleset`: 删除所有表，包括其中包含的所有链和规则。这对应于防火墙的完全重置。防火墙现在接受所有数据包。
+* `list tables`, `list table family name`, `list chain family tname cname`: 列出表、链和规则。
+* `list ruleset`: 列出所有表、链和规则。大括号结构的输出符合 `nft -f` 的语法规则，因此可以作为新规则文件的基础。配合额外的 `-j` 选项，输出将为 JSON 格式。
+* `monitor [filter criteria]`: 显示 nftables 事件（例如作为调试帮助）。
+
+#### 示例
+
+前两个命令显示了测试计算机（Fedora 32）上定义了哪些防火墙表，以及哪些链和规则适用于 `ip` 族中的 `firewalld` 表。（nftables 允许对不同的族使用匹配的表名。出于如此，在第二个 `list` 命令中必须指定族。）
+
+```
+root# nft list tables
+table bridge filter
+table bridge nat
+table inet firewalld
+table ip firewalld
+table ip6 firewalld
+root# nft list table ip firewalld
+table ip firewalld {
+   chain nat_PREROUTING {
+     type nat hook prerouting priority dstnat + 10; policy accept;
+     jump nat_PREROUTING_ZONES
+   }
+   chain nat_PREROUTING_ZONES {
+      iifname "enp1s0" goto nat_PRE_FedoraWorkstation
+      goto nat_PRE_FedoraWorkstation
+   }
+   ... 
+```
+
+
+
+`systemctl` 现在可以禁用默认的 Fedora 防火墙守护进程：
+
+```
+root# systemctl disable --now firewalld 
+```
+
+现在，你可以使用 `nft` 创建自己的防火墙。通常通过重复调用 `nft` 来定义规则并不常见，更优雅的方法是在文本文件中编写规则并像运行脚本一样运行该文件。要做到这一点，你必须在行中使用 `nft -f` 作为 shell 解释器。
+
+```
+#!/sbin/nft -f
+# 删除现有防火墙
+flush ruleset
+# 为 IPv4 和 IPv6 创建新表
+table inet myfilter {
+   chain input {
+      type filter hook input priority 0; policy drop;
+      # 阻塞无效数据包
+      ct state invalid drop
+      # 接受自生成连接的数据包
+      ct state {established, related} accept
+      # 接受内部网络流量
+      iif lo accept
+      # 阻塞指向环回地址但来自外部地址的数据包
+      iif != lo ip daddr 127.0.0.1/8 drop
+      iif != lo ip6 daddr ::1/128 drop
+      # 接受 ICMP 数据包
+      ip protocol icmp accept
+      ip6 nexthdr icmpv6 accept
+      # 接受来自外部的 SSH 连接
+      tcp dport 22 accept
+      # 用于服务器配置：更多针对
+      # HTTP + HTTPS (端口 80 + 443)，Samba 等
+      # ...
+    }
+    # 禁用转发
+    chain forward {
+       type filter hook forward priority 0; policy drop;
+    }
+} 
+```
+
+现在你可以运行该脚本了：
+
+```
+root# chmod +x myfirewall
+root# ./myfirewall 
+```
+
+`nft -f` 首先会执行语法检查。如果检测到错误，它将带有错误消息并终止进程。在这种情况下，之前的防火墙将被保留。
+
+上述脚本在 Gentoo wiki 的基础上进行了略微修改。你可以在那里以及 ArchLinux Wiki 中找到更多示例：
+
+- https://wiki.gentoo.org/wiki/Nftables/Examples
+- https://wiki.archlinux.org/title/Nftables
+
+### ngrep [options] [grep-search-expression] [pcap-filter-expression]
+
+`ngrep` 被数据包嗅探器。该命令读取端口的网络流量并对其过滤。`ngrep` 提供与 `tcpdump` 命令类似的功能，并一样使用 `pcap` 库来读取网络包。然而，与 `tcpdump` 不同，`ngrep` 还会考虑数据包的内容。当然，这仅适用于非加密协议（如 HTTP 或 FTP）。搜索表达式必须像 `grep` 一样编写成正则表达式的形式。`tcpdump` 中的语法适用于 `pcap` 过滤器表达式。
+
+- `-d` `interface|any`: 指定网络接口。
+- `-i`: 在 `grep` 搜索中忽略大小写。
+- `-v`: 反转搜索。因此 `ngrep` 只返回未识别到 `grep` 搜索模式的数据包。
+- `-w`: 将 `grep` 搜索表达式解释为单词。
+- `-W`: 考虑换行符，使结果更具读性。
+
+#### 示例
+以下示例在所有接口上监听包含 `user`、`pass` 等关键词的 HTTP 数据包：
+
+```
+root# ngrep -d any -i 'user|pass|mail|login' port 80
+interface: any
+filter: (ip or ip6) and ( port 80 )
+match: user|pass|mail|login
+10.0.0.87:58480 -> 91.229.57.14:80 POST /index.php
+HTTP/1.1..Host: ... user=pass=geheim=Login
+```
+
+### nice [options] program
+
+`nice` 以降低或增加优先级启动指定的程序。该命令可用于低优先级启动非时间敏感型程序，以免影响系统的其他部分。
+
+- `-n+/-`: 指定 `nice` 值。默认情况下（即不使用 `nice`），程序启动时的 `nice` 值为 `0`。`-20` 表示最高优先级，`+19` 表示最低优先级。小于 `0` 的值只能由 `root` 指定；这意味着大多数用户只能使用 `nice` 启动优先级降低的程序。如果省略此选项，`nice` 将以 `+10` 的 `nice` 值启动程序。
+
+注意，`nice` 只控制 CPU 负载。如果你想减少命令的 I/O 负载，最好使用 `ionice`。
+
+#### 示例
+以下命令以较低优先级启动 `mybackup.sh` 脚本：
+
+```
+user$ nice -n 10 mybackup.sh 
+```
+
+### nl [options] file
+
+`nl` 为指定文本文件的所有非空行编号，并将结果写入标准输出。通过设置各种选项，你可以实现逐页编号、页眉和页脚编号等。
+
+### nmap [options] hostname/ip-address/ip-address-range
+
+来自同名包的 `nmap`（网络映射器）命令执行端口扫描，并尝试确定指定计算机或网络上活跃哪些网络服务。`nmap` 应该仅用于分析自己的计算机，或在咨询相应管理员后使用。对其他计算机进行端口扫描可能被视为尝试攻击！
+
+- `-A`: 执行深度（激进）扫描，对应于 `-sV -O -sC --traceroute`。
+- `-F`: 仅考虑 `/usr/share/nmap/nmap-services` 中最重要的 100 个端口（快速扫描）。
+- `-iL` `file`: 扫描文件中指定的 IP 地址。
+
+
+
+
+
+* `-oN file /-oG file /-oX file.xml`
+
+  将结果写入到普通文本文件、可以用 `grep` 轻松处理的文本文件或 XML 文件。如果不使用此选项，`nmap` 将使用标准输出和普通文本格式。
+
+* `-O`
+
+  尝试识别操作系统；此选项必须与扫描选项结合，例如 `-sS`、`-sT` 或 `-sF`。
+
+* `-p1-10,22,80`
+
+  仅考虑指定的端口。
+
+* `-Pn`
+
+  不进行 ping 测试。这意味着 `nmap` 认为所有主机都在线，并且在任何情况下都会进行扫描（尽管速度很慢！）。
+
+* `-sL`
+
+  列出所有端口并指定过去分配的主机名。这种方法非常快，但即使对于当前已离线的设备也会提供过时的数据。
+
+* `-sP`
+
+  仅执行 ping 测试（速度快）。
+
+* `-sS`
+
+  执行 TCP SYN 扫描（默认应用）。
+
+* `-sU`
+
+  同样考虑 UDP。此选项可以与另一个 `-s` 选项一起使用。
+
+* `-sV`
+
+  尝试找出开放端口上提供的服务（服务版本检测），或者哪个程序负责该服务以及其版本是多少。
+
+* `-T0` 到 `-T5`
+
+  选择计时方案：
+
+  * `-T5` 是最快的。
+  * `-T3` 是默认值。
+  * `-T0` 和 `-T1` 极慢，但可以最大限度地减少扫描被检测的风险。
+
+* `-v`
+
+  输出详细信息（冗模式）。
+
+调用时必须选择一个 `-s` 选项。只有 `-sU` 可以与其他 `-s` 选项结合。通常情况下，正确选择选项是在彻底性和速度之间进行权衡。
+
+在许多情况下，`nmap -v -A name` 就足够获取指定计算机网络服务的初始概览了。高级 `nmap` 用户可以在 `man` 页面以及以下网站上找到更多细节：
+
+[`insecure.org/nmap`](https://insecure.org/nmap)
+
+[`nmap.org/book`](https://nmap.org/book)
+
+`nmap` 也有图形化用户界面，例如 `nmap-frontend` 或 `zenmap`。
+
+#### 示例
+
+以下命令执行了快速网络扫描：
+
+```
+nmap -sS -p 1-24 192.168.1.1
+Starting scan for 192.168.1.1
+Host 192.168.1.1 is up.
+Scan report for 192.168.1.1:
+Nmap scan report (1024 ports filtered)
+4 ports open:
+PORT     STATE SERVICE
+192.168.1.1:22/tcp   open  ssh
+192.168.1.1:80/tcp   open  http
+192.168.1.1:443/tcp  open  https
+192.168.1.1:445/tcp  open  sm-tcp
+All scan completed in 0.05 seconds
+```
+
+
+
+
+
+可选择的命令取决于它们所指的对象。可以使用 `-t`、`-p` 等选项来控制 `nmcli` 输出的格式——取决于输出是需要经过适当格式化，还是由脚本进一步处理（详情请参阅 `man nmcli`）。
+
+*   `con down name` 或 `con down uuid n`
+    停用指定的连接。
+
+*   `con show`
+    列出所有配置的连接，并指定每个连接的名称和 UUID。
+
+*   `con up name` 或 `con up uuid n`
+    激活指定的连接。
+
+*   `dev disconnect name`
+    终止指定接口的连接。
+
+*   `dev`
+    列出 Network Manager 已知的所有网络接口并指定它们的属性。
+
+*   `dev show`
+    显示所有网络接口的详细信息。
+
+*   `dev wifi hotspot`
+    将 Wi-Fi 适配器配置为路由器。
+
+*   `dev wifi list`
+    提供范围内所有 Wi-Fi 网络的列表，包括信号强度。该命令要求 `wpa_supplicant` 服务正在运行。
+
+*   `general [status]`
+    显示 Network Manager 的状态。
+
+*   `networking [on|off]`
+    指示是否有网络连接。可以通过选择 `off` 或 `on` 来中断或恢复所有网络连接。
+
+*   `radio [wifi|wwan|wimax|all] [on|off]`
+    显示无线网络状态或更改其状态。`wifi` 指 Wi-Fi 连接，`wwan` 指移动连接，`wimax` 指 WiMAX 技术。
+
+#### 示例
+
+第一个命令列出 Network Manager 知的所有的所有连接。接两个命令停用并重新激活名为 "Wired connection 1" 的连接：
+
+```
+root# nmcli con show
+NAME                         UUID          TYP             DEVICE
+Wired connection 1           effd094d-...  802-3-ethernet  enp0s3
+virbr0                       207d9f4f-...  bridge          virbr0
+root# nmcli con down   id 'Wired connection 1'
+root# nmcli con up     id 'Wired connection 1' 
+```
+
+第二个示例从详细的接口信息中过滤出服务器的 IP 地址。这在 Ubuntu 上特别有用，因为这些地址没有列在 `/etc/resolv.conf` 中。相反，该发行版的 `resolv.conf` 引用了本地名称服务器，即地址 127.0.0.1。
+
+```
+root# nmcli dev show | grep DNS
+IP4.DNS[1]:  10.0.0.138
+IP4.DNS[2]:  4.4.8.8 
+```
+
+第三个命令在通过太网线连接到局域网的树莓派上设置热点：
+
+```
+root# device wifi hotspot ssid 'wlan-name' password 'wlan-pw' 
+```
+
+### nohup 命令
+
+如果你在窗口中启动命令并然后关闭窗口，或者在控制台中启动命令后退出，该进程将被自动终止。通常情况下，这是合理的。但有时你可能希望启动一个持续运行的进程——这就是 `nohup` 的用途。该命令无法将输出写入到标准输出。如有必要，这些输出将被重定向到本地目录下的 `nohup.out` 文件中。
+
+#### 示例
+
+在以下示例中，管理员通过 `ssh` 登录服务器，在后台启动一个脚本，然后再次退出。脚本将继续运行。
+
+```
+someone@localhost$ ssh user@remotehost
+user@remotehost$ nohup backup-script &
+user@remotehost$ exit
+```
+
+### nproc
+
+`nproc` 表示有多个 CPU 核心可用。对于带有超线程的 CPU，虚拟核心也包含在计算内。`lscpu` 命令和 `/proc/cpuinfo` 的内容提供了关于 CPU 的更详细信息。
+
+### nvidia-xconfig [options]
+
+`nvidia-xconfig` 帮助配置专用图形驱动。只有在安装了此驱动时该命令才可用。
+
+如果执行时不带参数，它将创建或更改 `/etc/X11/xorg.conf` 文件，以便将来使用 NVIDIA 图形驱动。如果重启电脑后图形系统正常工作，可以使用 `nvidia-settings` 图形界面进行进一步配置。
+
+*   `-c file`
+    使用指定的文件代替 `/etc/X11/xorg.conf`。
+
+*   `--mode=WxH`
+    为 `xorg.conf` 添加一个 `W`×H` 像素的图形模式。
+
+*   `--query-gpu-infos`
+    显示所有可用显卡和连接显示器的详细信息。
+
+*   `-t`
+    读取 `xorg.conf` 并以清晰的树状视图其中包含的设置。
+
+### openssl 命令
+
+来自同名包的 `openssl` 帮助创建和进一步管理证书以及私钥和公钥。该命令使用 OpenSSL 库。如果你没有通过 `-out` 指定目标文件，新的证书或密钥将写入标准输出。
+
+*   `dhparam [options] [n]`
+
+
+
+
+生成或处理 Diffie-Hellman 方法的参数文件。`n` 参数指定密钥大小的大小。在最简单的情况下，`openssl dhparam -out keyfile 512` 会生成一个长度为 512 位的 Diffie-Hellman 密钥。
+
+* `enc [options]`
+  从标准输入读取数据，对其进行对称编码或解码（选项 `-d`），并将结果写入标准输出。你需要通过选项指定要使用的算法和密钥，例如使用 `-aes-256-cbc -pass file:mykeyfile` 格式。注意，`openssl enc` 仅适用于较少的数据。要加密大文件，最好使用 `gpg` 命令。
+
+* `genpkey [options]`
+  生成私钥。要向文件写入一个 2,048 位的 RSA 密钥，需要以下选项：
+
+```
+openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 –out server.key
+```
+  如果密钥本身需要加密，你必须通过额外选项指定加密算法名称，例如 `-aes256`。在命令执行期间，`openssl` 会要求两次加密密码。
+
+* `list-standard-commands | list-message-digest-commands |`
+  * `list-cipher-commands | list-cipher-algorithms |`
+  * `list-message-digest-algorithms | list-public-key-algorithms`
+    列出 `openssl` 支持的命令、算法等。
+
+* `rand [options] n`
+  向标准输出写入 `n` 字节的伪随机数据。注意输出是二进制数据，而不是 ASCII 文本！`-base64` 选项会导致 `openssl` 执行 ASCII 格式的 Base64 编码。这会使生成的字符串长度增加约三分之一。
+
+* `req [options]`
+  生成用于签名证书的请求（即证书签名请求 [CSR] 文件）。使用 `-new` 可以你可以指定必须设置新证书。`-key` 指定要使用的密钥文件。如果不指定此选项，`openssl` 将为此目的生成一个新的 RSA 密钥，你可以使用 `-keyout` 将其保存到单独的文件。
+
+```
+openssl req -new -sha256 -key server.key -out server.csr
+```
+  `openssl` 然后会交互式请求证书的密钥数据，即国家代码、位置、你的名称、主机名（通用名称）等。通过额外的 `-x509 -days n` 选项，`openssl` 将生成有效期为 `n` 天的自签名证书，而不是证书请求。
+
+* `rsa [options]`
+  处理 RSA 密钥并在不同的形式和格式之间进行它们转换。`-in file` 和 `-out file` 指定读取原始密钥的文件和写入新密钥的文件。如果不指定任何其他选项，`openssl` 将移除密钥的加密（口令）。密钥的形式可以通过 `-inform` 和 `-outform` 指定（默认为 `PEM`，其他备可选为 `DER` 或 `NET`）。通过 `-in file -text`，你可以确定现有密钥的属性，例如密钥长度（位数）。
+
+* `sclient [options]`
+  作为 SSL/TLS 客户端，测试与加密服务器的连接。你可以在以下地址找到应用程序示例：
+  https://www.misterpki.com/openssl-s-client/
+
+* `speed`
+  执行多次基准测试，每个测试持续三秒。结果显示了相应算法处理了多少字节（处理的字节越多，运行速度越快，或者执行测试的硬件优化越好）。
+
+* `x509 [options]`
+  显示证书数据、签名证书并在不同形式之间转换证书。同样，`-in` 和 `-out` 指定源证书和目标证书的文件名。使用 `-req`，`openssl` 期望输入证书请求而不是证书本身。`-CA` 指定用于签名的 CA 证书。`-CAkey` 指定相应的私钥。
+
+大多数 `openssl` 命令都有单独的 `man` 页。例如，`man req` 描述了 `openssl req` 的无数选项，`man rsa` 描述了 `openssl rsa` 的选项，以此此类推。
+
+#### 示例
+
+如果你想让官方认证机构（例如 Thawte）为你的 Web 服务器签名，你应该首先生成一个密钥（如果你还没有的话），然后生成证书签名请求。这里密钥没有加密，否则 Web 服务器每次启动时都必须询问加密密码。
+
+```
+root# genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out server.key
+root# chmod 400 server.key
+root# openssl req -new -key server.key -out server.csr
+...
+Common Name (eg server FQDN or YOUR name) []: company-abc.com 
+```
+
+你可以查看 CSR 文件来检查这一点：
+
+```
+root# openssl req -in server.csr -noout -text 
+```
+
+
+
+然后，你需要将 CSR 文件发送给认证机构。随后，你将从那里获得签名的证书（通常的文件标识符为 `.pem` 或 `.crt`）。你必须在 Apache 配置中输入此文件、你的密钥以及来自认证机构的 CA 证书。
+
+```
+# Apache configuration file
+SSLCertificateFile      /etc/apache2/server.pem
+SSLCertificateKeyFile   /etc/apache2/server.key
+SSLCertificateChainFile /etc/apache2/sub.class1.server.ca.pem
+SSLCACertificateFile    /etc/apache2/ca.pem 
+```
+
+如果你不想为官方签名付费，可以自己签名证书：
+
+```
+root# openssl x509 -req -days 1900 -in server.csr  \
+         -signkey server.key -sha256 -out server.pem
+Signature ok
+subject=/C=DE/L=Boston/O=John Doe/CN=www.company-abc.com/
+  emailAddress=webmaster@company-abc.com
+Getting Private key 
+```
+
+要查看证书文件，你可以运行 `openssl x509 -text`：
+
+```
+root# openssl x509 -text -in server.pem
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number: 12669601459972319941 (0xafd37766c36baac5)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=DE, L=Boston, O=John Doe,
+                CN=www.company-abc.com/emailAddress=webmaster@company-abc.com
+        Validity
+            Not Before: Sep 28 14:48:03 2025 GMT
+            Not After : Dec 10 14:48:03 2029 GMT     ... 
+```
+
+密钥生成、证书请求和自签名也可以通过一条命令完成：以下命令为邮件服务器生成一个有效期为 10 年的自签名证书。在运行 `openssl` 时，将服务器的主机作为通用名称（common name）输入是关重要的。由于证书本身是经过签名的，你的邮件客户端在配置期间会提示该证书不可信。
+
+```
+root# openssl req -new -x509 -days 3650 -nodes \
+        -out    /etc/ssl/certs/postfix.pem \
+        -keyout /etc/ssl/private/postfix.key
+...
+Common Name (eg server FQDN or YOUR name) []: company-abc.com
+root# chmod 400 /etc/ssl/private/postfix.key 
+```
+
+## P
+
+## pacman [options]
+
+`pacman` 代表包管理器（package manager），是 Arch Linux 及其发行版的包管理命令。
+
+*   `-Q`
+
+    提供所有安装包的列表（query）。
+
+*   `-Qi` `package name`
+
+    显示包的描述。
+
+*   `-Ql` `package name`
+
+    列出包包含的文件。
+
+*   `-Qo` `filename`
+
+    指示指定文件属于哪个包。
+
+*   `-R` `package name`
+
+    删除指定的包（remove）。如果你使用 `-Rs` 变体代替 `-R`，则不再需要的依赖包也会被卸载。
+
+*   `-S` `package name` 或 `-S` `reponame/package name`
+
+    安装或更新指定的包，在第二种变体中，只考虑指定的仓库。如果该包已经安装，将重复安装并在必要时更新包。额外的 `--needed` 选项可以防止不必要的作业，仅在包尚未安装或安装的是旧版本时执行安装。顺便说，通用的 `-S` 选项代表 sync（同步）。
+
+*   `-Sy`
+
+    重新加载包源。
+
+*   `-Su`
+
+    显示所有已安装的包。
+
+*   `-Syu`
+
+    首先更新包源然后更新所有已安装的包，即执行系统更新。
+
+*   `-Ss` `pattern`
+
+    搜索所有包的名称和短描述，包括未安装的包。
+
+#### 示例
+
+以下命令首先对所有包源进行完整更新，然后安装 `emacs` 编辑器，包括所有所需的库。`--needed` 防止重新安装已安装的包。
+
+`pacman -Qo` 确定哪个包提供了 `/etc/resolv.conf` 文件。随后 `pacman -Qi` 提供关于该包的详细信息。
+
+```
+root# pacman -Syu
+root# pacman -S --needed emacs
+root# pacman -Qo /etc/resolv.conf
+/etc/resolv.conf is owned by filesystem 2025.01.19-1
+root# pacman -Qi filesystem
+  Name            : filesystem
+  Description     : Base Linux files
+  Install Reason  : Installed as a dependency for another package
+  ...
+```
+
+#### 替代方案
+
+`pacman` 适用于适用于普通包”。然而，Arch 用户仓库 (AUR) 包在 Arch Linux 中也常用。AUR 是 GitHub 上的构建脚本集合。由于手动安装此类包非常繁琐，AUR 助手接管了这项任务，例如 `aura`、`aurman`、`pacaur` 或 `yay`。这些命令整合了 `pacman` 的功能并将 AUR 包视为普通包处理。因此，`yay -S` name 会安装指定的包，无论它是普通包还是 AUR 包。
+
+## pactl command [parameter]
+
+`pactl` 控制 PulseAudio 系统。这个支持网络的音频服务器默认安装在大多数 Linux 发行版上，通常以 ALSA 为基础。PulseAudio 让多个程序能够并行使用音频系统而产生任何问题。`pactl` 包含约 30 条命令，这里仅介绍了最重要的：
+
+*   `info|stat`
+
+    显示 PulseAudio 系统的关键数据或内存占用情况。
+
+*   `list [short] [modules|sinks|sources|clients|cards|...]`
+
+
+
+详细描述由 PulseAudio 管理的所有模块、音频源和输出、流等内容。使用额外的 `short` 关键字可以将输出缩减为每个元素一行。指定 `modules` 或 `sinks` 等参数会使 `pactl` 仅列出相关元素。
+
+* `set-default-sink n`
+  定义默认音频输出。除了音频系统的数字 `n`（参见 `/proc/asound/cards`）外，也可以输入其名称。可以使用 `pactl list short cards` 确定允许的名称。
+
+* `set-sink-mute n 0|1|toggle`
+  对音频输出 `n` 取消静音、激活静音或切换静音状态。
+
+* `set-sink-volume n vol`
+  设置音频输出 `n` 的音量。音量可以是整数、百分比或分贝值（例如 `10%` 或 `20dB`）。
+
+#### Example
+以下两个命令使第一个音频设备作为标准输出设备，音量设为 20%：
+
+```
+user$ pactl set-default-sink 0
+user$ pactl set-sink-volume 0 20% 
+```
+
+### pandoc [options] in1 [in2 in3 ...] [> out]
+
+同名软件包中 `pandoc` 的主要任务是将 Markdown 文本文件转换为其他格式，例如 HTML 文件、PDF 文档或 Microsoft Office 文件。带有某些限制，`pandoc` 也可以处理 Markdown 文件以外的格式，包括 HTML 和 LaTeX。
+
+* `-c cssfile`
+  将指定的 CSS 文件嵌入 HTML 文档。如果需要多个 CSS 文件，可以多次指定该选项。
+
+* `-f format`
+  指定源格式（from）。重要的源格式有 `asciidoc`、`docbook`、`latex` 和 `markdown`。`pandoc` 会尝试根据输入输出文件的标识自动识别所需的源和目标格式。只有在识别失败时才需要 `-f` 和 `-t` 选项。
+
+* `-H header file`
+  在 HTML 或 LaTeX 源文本的开头插入指定的头文件。如果需要多个头文件，可以多次指定该选项。
+
+* `-o output.identifier`
+  将结果写入指定的文件而不是标准输出。对于二进制输出格式（DOCX, ODT, PDF），此选项是强制性的。
+
+* `-s`
+  创建一个独立的文档（standalone）。此选项对于 HTML、LaTeX 和 RTF 输出格式特别为相关。如果没有此选项，`pandoc` 创建的文件将不包含任何头部信息；此类文件无法单独使用，必须嵌入另一个文档中。
+
+* `-t format`
+  指定目标格式（to）。重要的目标格式有 `docx`、`latex`、`html`、`html5`、`man`、`odt` 和 `rtf`。注意 `pdf` 不在支持格式列表中。要创建 PDF 文档，必须指定 `-o out.pdf` 选项。`pandoc` 首先将源文本转换为 LaTeX 格式，然后使用 `pdflatex` 创建 PDF 文件。
+
+* `--toc`
+  在生成的文档中嵌入目录。
+
+#### Examples
+第一个命令从 `input.text` 文件创建一个独立的 HTML 文档。第二个命令从章节存储在独立文件中的书中创建一个 EPUB 文件。第三个命令在后台使用 LaTeX 的情况下创建一个 PDF 文件。
+
+```
+user$ pandoc -s -c my.css input.text > output.html
+user$ pandoc chap1.text chap2.text -t epub3 -o book.epub
+user$ pandoc preface.text chap01.text chap02.text -o out.pdf 
+```
+
+### paplay
+`paplay` 通过 PulseAudio 系统播放指定的音频文件。`parecord` 进行录制并将音频流保存为文件。
+
+* `-d id`
+  指定输出设备（paplay）或音频源（parecord）。如果没有此选项，将使用相应的默认设备。
+
+* `--file-format=name`
+  指定所需的音频格式，例如 `raw` 或 `wav`。
+
+* `--list-file-formats`
+  列出所有支持的音频格式。
+
+* `--volume=n`
+  指定播放音量。值范围从 `0` 到 `65535`（最大音量）。
+
+#### Example
+以下命令播放 LibreOffice 提供的音频文件之一：
+
+```
+user$ paplay /usr/lib/libreoffice/share/gallery/sounds/train.wav 
+```
+
+### paplay [options] [file]
+
+### parecord [options] [file]
+
+### paps [options] text files > out.ps
+
+`paps` 将指定的 UTF-8 文件转换为 PostScript 格式并将结果写入标准输出。UTF-8 字符不会显示为字母，而是显示为行。由于由于，在 PostScript 查看器（Evince, Okular 等）中显示 PostScript 文件可能会出现像素化。无法选择文本。但是，打印质量很好。
+
+
+
+
+
+* `--columns=n`
+  定义文本的列数（默认为一列）。
+
+* `--cpi=n`
+  控制每英寸的字符数，从而控制字体大小。
+
+* `--font=name`
+  指定所需的字符集（默认设置是等宽字体 12）。
+
+* `--landscape`
+  以横向格式化文本。
+
+#### 示例
+
+以下命令会生成双列的 PostScript 文件 `text.ps`：
+
+```
+user$ paps --landscape --columns 2 text.txt > print.ps 
+```
+
+### parallel [options] ['command']
+
+来自同名包的 `parallel` 帮助并行运行多个命令，甚至可能在不同的计算机上运行。`parallel` 支持一些与 `xargs` 相同的选项。
+
+* `-eta`
+  提供并行处理状态的信息，以及 `parallel` 可能完成任务的时间，即预计到达时间（ETA）。该时间估计假设每个作业所需的时间大约相同。
+
+* `-j n`
+  并行运行最多 `n` 个进程实例。
+
+* `-j +n` 或 `-j -n`
+  与 `-j n` 相同，但规范是相对于 CPU/核心数量的。在具有八核的 CPU 上，`-j +0` 导致并行运行最多八个命令实例。相应地，`-j -1` 将并行调用的次数限制为七次。
+
+* `-S host1,host2,host3`
+  将作业分发到主机：`host1`、`host2`、`host3` 等。如果主机列表以逗号结尾，这意味着本地计算机也将使用。
+
+  `-S` 假设可以通过 `ssh` 和 `scp` 与主机进行通信而无需密码；因此，你必须预先使用 `ssh-copy-id` 设置相应的密钥文件。此外，要执行的命令必须在所有主机上都可用。最后，所有主机上都应安装 `parallel` 命令。需要确定 CPU（核心）的数量。
+
+  `-S` 通常与 `--transfer`、`--return {.}.result` 和 `--cleanup` 结合结合，将本地文件复制到外部主机，使用 `*.result` 标识传回新文件，最后删除主机上的临时数据。这三个选项的简写为 `-trc {.}.result`。
+
+  在理论上，`-S` 承诺在可以通过 SSH 访问的多个主机之间简单地分发作业。但在我的测试中，该选项证明极易出错。如果你想通过 SSH 并行任务（例如在几十个主机或云实例上运行命令），可以使用 `pssh` (parallel SSH) 或 `clusterssh` 命令代替 `parallel`，尽管这些未在书中涵盖。
+
+#### 示例
+
+`parallel` 的一个简单应用是压缩、解压或其他处理多个文件。与其使用 `gunzip *.gz` 一个接一个地压缩多个文件，你可以通过 `parallel` 为每个文件启动一个独立的 `gunzip` 实例。在具有多个 CPU/核心的计算机上，这将比串行处理文件快得多。
+
+```
+user$ ls *.gz | parallel gunzip 
+```
+
+在第二个示例中，打算使用 `convert` 将许多 PNG 转换为 EPS 格式。然而，仅仅传输文件名是不够的。`convert` 期望原始文件名以及去掉标识符 `*.png` 的名称，但加上新的标识符 `*.eps`。为了此目的，`parallel` 将命令字符串中的 `{}` 替换为文件名，并将 `{.}` 替换为不带标识符的名称。
+
+```
+user$ ls *.png | parallel -eta -j +0 \
+        'convert -density 90 -flatten -background white {} {.}.eps' 
+```
+
+### parted [options] [device [command [options]]]
+
+`parted` 支持硬盘和 SSD 的分区。与已经过时的 `fdisk` 命令相比，`parted` 同样使用 GUID 分区表 (GPT)。
+
+如果你不向 `parted` 传递命令，可以以交互方式使用该程序并顺序输入多个命令。只要输入是唯一的，命令就可以缩写（例如用 `q` 代替 `quit`）。
+
+但是，你应该注意，与 `fdisk` 不同，命令是立即执行的且无法撤销！与其使用不那么方便的 `parted` 程序，你也可以使用其名为 `gparted` 的图形用户界面。
+
+* `-a` 或 `--align`
+
+
+
+
+
+指定新分区的对齐方式。允许的设置为 `none`、`cylinder`（对齐到柱面限制）、`minimal`（对齐到块限制）或 `optimal`（对齐到 1 MiB 的倍数）。您始终可以使用 `-a optimal` 选项以最高速度使用数据介质。
+
+* `-l` 或 `--list`
+  列出所有分区。
+* `-s` 或 `--script`
+  运行所有作为参数传递的命令，无需交互查询。
+
+这里简要描述了最重要的 `parted` 命令：
+
+* `align-check min/opt nr`
+  检查指定的分区是否从最佳位置开始。`parted align-check min` 仅测试分区是否从物理块边界开始。通过 `parted align-check opt`，`parted` 会尝试根据数据介质的关键数据计算分区的最佳起始位置。如果无法计算，则认为 1 MiB 的倍数是最佳。
+
+* `mklabel msdos/gpt`
+  以 MBR 或 GPT 格式设置新的分区表。注意：整个硬盘的内容将将会丢失！`parted` 也支持其他其他分区格式，但这些在 Linux 环境下很少用（参见 `man parted`）。
+
+* `mkpart primary/logical/extended/ name [file system] start end`
+  创建一个新分区。注意，您必须指定起始位置和结束位置，而不是起始位置和大小！结束位置也可以指定为负数，然后从数据介质的末尾计算。
+
+  指定分区类型（`primary`、`logical` 或 `extended`）仅对于带有 MBR 分区表的数据介质有用。如果数据介质上有 GPT，您应该在第一个 `mkpart` 参数中提供分区名称。
+
+  可选的文件系统指定仅用于定义分区类型。然而，在新分区上不会设置文件系统。允许的类型有 `fat16`、`fat32`、`ext2`、`HFS`、`linux-swap`、`NTFS` 和 `ufs`。
+
+* `print`
+  列出所有分区。
+* `quit`
+  退出 `parted`。
+
+* `resize nr start end`
+  更改指定分区的大小。遗憾的是，该命令只能用于 MBR 磁盘的扩展分区。要更改其他分区的大小，您必须删除它们然后使用完全相同的起始点重新设置。这无疑是一个容易出错的操作，而且要求分区所在有空空间。
+
+* `rm nr`
+  删除指定的分区。
+* `set nr flag on/off`
+  更改分区的标志（额外属性）。`parted` 可以使用 `boot`、`root`、`swap`、`hidden`、`raid`、`lvm`、`lba` 和 `bios_grub` 等标志。
+
+* `unit bios grub`
+  定义位置和大小的单位。可用选项有：
+  * `s`（扇区）
+  * `B`（字节）
+  * `kB`, `MB`, `GB`, 和 `TB`（10³、10⁶、10⁹ 和 10¹² 字节）
+  * `KiB`, `MiB`, `GiB`, 和 `TiB`（2¹⁰、2²⁰、2³⁰ 和 2⁴⁰ 字节）
+  * `%`（百分比，相对于数据介质的总大小）
+  * `compact`（输入的十进制兆字节，易于阅读的输出）
+
+  默认应用 `compact` 设置。如果启动 `parted` 时使用了 `--align` 选项，则在创建新分区时相应调整位置和大小指定。
+
+#### 示例
+
+以下行显示了您如何使用 `parted` 在带有 GPT 的 SSD 上设置一个新的 LVM 分区：
+
+
+
+
+
+```
+root# parted -a optimal /dev/sda
+(parted) print
+Model: ATA SAMSUNG SSD 830 (scsi)
+Hard disk  /dev/sda:  512GB
+Sector size (logical/physical): 512B/512B
+Partition table: gpt
+Number  Start  End     Size    Filesys  Name                Flags
+ 1     17.4kB  1000MB  1000MB  fat32    EFI System Part...  boot, hidden
+ 2     1000MB  21.0GB  20.0GB  ext4                         hidden
+ 3     21.0GB  21.1GB  134MB            Microsoft reser...  hidden, msftres
+ 4     21.1GB  61.2GB  40.1GB  ntfs     Basic data part...  hidden
+ 5     61.2GB  82.2GB  21.0GB  ext4                         hidden
+ 6     82.2GB  103GB   21.0GB  ext4                         boot, hidden
+ 7     103GB   124GB   21.0GB  ext4                         boot
+ 8     124GB   281GB   157GB   ext4
+ 9     281GB   386GB   105GB                                lvm
+10     386GB   407GB   21.0GB  ext4
+(parted) mkpart lvm-partition 407GB 450GB
+(parted) set 11 lvm on
+(parted) print
+...
+11     407GB   450GB   42.7GB           lvm-partition       lvm
+(parted) quit 
+```
+
+`parted` 也可以直接处理命令而无需手动交互。以下命令假设 `/dev/sdb` 是 USB 闪盘或 SD 卡的设备。第一条 `parted` 命令会在那里创建一个新的 MBR 分区表并删除所有现有数据。第二个命令创建一个主分区，在磁盘的开头和结尾留出 1 MiB 的空空间。`mkfs.vfat` 在此分区中设置 VFAT 文件系统。
+
+```
+root# parted /dev/sdb mklabel msdos
+  Warning: The existing partition table and all data
+  on /dev/sdb will be deleted. Do you want to continue?
+  Yes/No? yes
+root# parted /dev/sdb 'mkpart primary fat32 1mib -1mib'
+root# mkfs.vfat -F 32 -n FOTOS /dev/sdb1 
+```
+
+最后一个示例展示了 `parted` 在脚本模式下的用法。该命令在指定的数据介质上设置 GPT。注意：所有之前保存的数据将丢失！
+
+```
+root# mkpart /dev/sdb -s mklabel gpt 
+```
+
+### partprobe [options] [devices]
+
+在更改本地硬盘或 SSD 的分区后（例如在完成 `fdisk` 操作后），通常会在不带任何选项或其他参数的情况下运行 `partprobe`。该命令会通知内核所做的更改，使得新建或修改的分区无需重启电脑即可。
+
+### partx [options] [partition] [disk]
+
+`partx` 是一个低级命令，用于确定数据介质的分区信息或将其传递给内核。`partx` 同样适用于 MBR 分区表和 GPT。
+
+通常直接通过设备文件指定要编辑的分区。或者，你可以使用设备文件指定数据介质并通过 `-n` 选项指定分区号，例如使用 `partx -n 3 /dev/sda`。如果分区本身包含子分区，因此应被视为独立的数据介质，你需要在分区设备前加一个连字符，例如 `partx - /dev/sda4`。
+
+与 `fdisk` 和 `parted` 不同，`partx` 不更改数据介质，因此它不适用于设置或删除物理分区！`-a`、`-d` 和 `-u` 选项仅更改 Linux 内核的分区表，而保持磁盘不变。这些选项的唯一目的是通知内核另一个程序引起的分区更改。通常使用 `partprobe` 命令完成这一点更简单。在实践中，`partx` 通常用于处理虚拟数据介质，例如回环设备或镜像文件。
+
+*   `-a`: 添加新分区。分区必须已存在于数据介质上。`partx -a` 仅更新内核的分区表！
+*   `-b`: 以字节为单位处理大小。
+*   `-d`: 从内核分区表中删除分区。
+*   `-n M:N`: 以数字指定要处理的介质分区。可以使用不同的表示法，如下例所示：
+    *   `-n 4` 表示第四个分区。
+    *   `-n -2` 表示倒数第二个分区。
+    *   `-n 3:6` 指代分区 3 到 6。
+    *   `-n 3:` 指代从 3 开始的所有分区。
+    *   `-n :5` 包含分区 1 到 5。
+*   `-o columns` 或 `--output`: 显示关于选定磁盘或分区的选。`columns` 可以包含以下关键字（以及其他）：`NR`（分区号）、`START`（起始扇区）、`END`（结束扇区）、`SIZE`（字节大小）、`TYPE`（十六进制代码或 UUID 分区类型）和 `FLAGS`（附加信息）。因此，`partx -o NR,START,END` 提供了带有起始和结束扇区的分区列表。无论数据介质的实际扇区大小如何，扇区大小通常为 512 字节。
+*   `-s` 或 `--show`: 显示选定数据介质或分区的信息。通过 `-s` 或 `-o` 显示的数据来自物理磁盘，可能与 Linux 内核的分区表不匹配。
+*   `-u`: 更改内核分区表中分区的大小或其他数据。更改必须先在数据介质上物理完成。
+
+#### 示例
+
+以下命令提供了带有 MBR 分区表的硬盘的详细信息：
+
+```
+root# partx -o NR,TYPE,FLAGS,START,END,SECTORS,SIZE /dev/sda
+NR TYPE FLAGS  START      END  SECTORS  SIZE
+ 1 0x83 0x80    2048   411647   409600  200M
+ 2 0x8e 0x0   411648 31457279 31045632 14,8G 
+```
+
+### passwd [options] [username]
+
+
+
+
+
+不带参数的 `passwd` 允许你更改当前用户的密码。执行此操作时，必须先输入旧密码，然后连续输入两次新密码。新密码加密后存储在 `/etc/shadow` 文件中。然而在某些发行版中，新密码必须符合特定的安全规则才能被接受。
+
+`root` 可以通过 `passwd name` 更改其他用户的密码。不需要输入旧密码；这意味着即使用户忘记了密码，`root` 也可以更改。前面的密码限制不适用于 `root`，因此它也可以定义仅由单个字符组成的密码。然而，即使是 `root` 也不允许不输入密码（即直接按回车）。
+
+通过指定选项，`passwd` 还可以锁定单个账户、重新激活账户并为账户或密码设置过期时间（参见 `chage` 命令的描述，该命令在这方面提供了更多设置选项）。
+
+**`-g`
+    设置组密码。此功能很少使用。它允许你通过 `newgrp` 使用密码来保护对非主组的访问。由于组密码必须被多个用户知道，该过程在本质上是不安全的。
+
+*   `-l`
+    停用账户（锁定）。
+
+*   `-u`
+    重新激活已停用的账户（解锁）。
+
+*   `-x n`
+    指定密码有效的最大天数。换句话说，`-x 180` 意味着每六个月必须设置一次新密码。
+
+`passwd` 只能交互式使用。无法将密码作为参数或选项传递。要自动设置，必须使用 `chpasswd` 命令。
+
+#### 示例
+
+在接下来的示例中，`root` 为用户 `hawks` 设置了新密码。从以后，他们每年必须更改一次密码。
+
+```
+root# passwd hawks
+change password for user hawks.
+Enter a new password: *********
+Enter the new password again: *********
+passwd: all authentication features successfully updated.
+root# passwd -x 365 hawks 
+```
+
+### paste file1 file2 . . .
+
+`paste` 将指定文件的行合并成新的（更长的）行，并在屏幕上显示结果。因此，生成文本的第一行是由第一个文件的第一行加上第二个文件的第一行产生的，依此类推。在新行的组件之间会插入制表符。可以使用 `> target file` 将结果保存到文件中。
+
+*   `-d 'separator'`
+    指定分隔符字符串。通过 `paste -d ':' file1 file2`，在每行的 `file1` 内容和 `file2` 内容之间放置一个冒号，即：
+
+    ```
+    line1 from file1:line1 from file2
+    line2 from file1:line2 from file2
+    line3 from file1:line3 from file2
+    ... 
+    ```
+
+### patch [options] < patch file
+
+`patch` 应用 `diff` 文件中汇总的更改。该命令通常用于应用代码更改（例如内核代码）。
+
+*   `-b`
+    为所有更改的文件创建备份文件。
+
+*   `--dry-run`
+    测试补丁但不进行任何更改。通常情况下，在用 `--dry-run` 选项应用任何补丁之前，你应该确保没有发生任何问题。没有比错误或部分应用的补丁更令人恼恼了！
+
+*   `-pn`
+    从补丁文件的文件名中移除 `n` 个目录级。如果原始文件名为 `/a/b/name.c`，`-p1` 将其变为 `a/b/name.c`，`-p2` 返回 `b/name.c`。`n` 的正确值取决于运行 `patch` 的目录。
+
+*   `-R` 或 `--reverse`
+    反向应用补丁。通过这种方式，已经应用的补丁将被撤销。
+
+#### 示例
+
+以下命令显示了如何将内核代码从版本 6.7.5 到 6.7.6。要做到这一点，在应用 6.7.6 的补丁之前，必须先撤销 6.7 版本的补丁。内核补丁通常指的是最新的主版本，在本例中为版本 6.7。
+
+```
+root# cd /usr/src/6.7.5
+root# bunzip2 -c patch-6.7.5.bz2 | patch -p1 --dry-run 
+(test inverse patch)
+... no error messages
+root# bunzip2 -c patch-6.7.5.bz2 | patch -p1 
+(6.7.5 -> 6.7)
+root# bunzip2 -c patch-6.7.6.bz2 | patch -p1 --dry-run 
+(test patch)
+... no error messages
+root# bunzip2 -c patch-6.7.6.bz2 | patch -p1 
+(6.7 -> 6.7.6)
+root# cd /usr/src root# mv linux-6.7.5 linux-6.7.6 
+```
+
+### pdf2ps source.pdf [target.ps]
+
+`pdf2ps` 从 PDF 文档创建 PostScript 文件。如果你没有指定 `target.ps`，新的 PDF 文件将命名为 `source.pdf`。`pdf2ps` 的替代方案是 Poppler 库中的 `pdftops` 命令。要将 PostScript 文件转换为 PDF 文档，可以使用 `ps2pdf`。
+
+*   `-dLanguageLevel=n`
+    指定输出使用的哪种 PostScript 级别（默认是 PostScript  2；或者也支持级别 1 和 3）。
+
+### pdfimages [options] file.pdf [image name]
+
+`pdfimages` 尝试从 PDF 文件中提取图像。然而，这并不总是完美工作，因为经常会识别出无数微小的图像。识别相关图像的最佳方法是根据其文件大小。
+
+
+
+
+
+你向命令传递一个 PDF 文件和一个图像名称。该命令将创建图像，并使用 `imagename-nnn.type` 格式进行命名。默认情况下，命令将以不常用的 PBM 和 PPM 格式写入图像，除非你使用 `-f` 选择了不同的格式。
+
+*   `-all`:
+    如果可能，按指定的格式保存嵌入图像。如果无法实现，将生成 PNG 图像。
+*   `-f` `n` 和 `-t` `n`:
+    指定分析 PDF 文件的起始页和结束页。如果不使用这些选项，命令将考虑整个文档。
+*   `-j`:
+    将 PDF 文件中嵌入的图像保持为 JPEG 格式。
+*   `-list`:
+    列出找到的图像，但不会创建任何图像文件。
+*   `-png` 或 `-tiff`:
+    以 PNG 或 TIFF 格式保存所有图像。
+
+#### 示例
+
+`pdfimages -list` 提供了关于所有找到图像的详细信息。出于空间考虑，这里的输出已精简。
+
+```
+user$ pdfimages -list book.pdf
+page   type   width height color comp bpc  enc interp  object  ...  size ratio
+   1  stencil     1     1   -      1   1  image  no   [inline]        1B   -
+   4  stencil     1     1  -       1   1  image  no   [inline]        1B   -
+   4  stencil     1     1  -       1   1  image  no   [inline]        1B   -
+   4  stencil     1     1  -       1   1  image  no   [inline]        1B   -
+   4  image     415   324  rgb     3   8  image  no        71      11.5K 2.9%
+   5  image     626   441  rgb     3   8  image  no        81      19.3K 2.4%
+   7  image    1173   635  rgb     3   8  jpeg   no       134      59.1K
+```
+
+在接下来的示例中，`pdfimages` 从 PDF 中提取图像：
+
+```
+user$ pdfimages -list book.pdf
+```
+
+### pdftk 使用
+
+`pdftk` 用于处理 PDF 文件。你可以用它合并页面、加密 PDF 文档或删除它们。出于空间考虑，完整的语法由 `pdftk` 提供：
+
+*   `output`:
+    指定命令的输出文件。
+*   `cat`:
+    合并多个文件。
+*   `list`:
+    列出 PDF 中的页面。
+*   `burst`:
+    为文档的每一页创建一个单独的文件。
+*   `owner_pw` 或 `user_pw`:
+    加密 PDF。`owner_pw` 密码适用于打印和其他 PDF 操作，而 `user_pw` 密码适用于打开文件。
+
+#### 示例
+
+以下命令从 `in.pdf` 中读取第 10 到 20 页以及第 30 到 40 页，并将它们写入新文件 `out.pdf` 中：
+
+```
+user$ pdftk in.pdf cat 10-20 30-40 output out.pdf
+```
+
+你也可以 le 使用 `cat` 命令将多个 PDF 文件连接在一起：
+
+```
+user$ pdftk in1.pdf in2.pdf in3.pdf cat output out.pdf
+```
+
+以下示例为 `in.pdf` 中的每一个单独页面创建一个名为 `pg_n` 的独立文件，其中 `n` 是页码：
+
+```
+user$ pdftk in.pdf burst
+```
+
+下一个示例创建了一个加密的 PDF 文件。该文件可以在没有 `xxx` 密码的情况下读取，但无法以任何其他方式打印或编辑。如果你想自己保护文件的读取权限，必须使用 `user_pw` 命令而不是 `owner_pw`：
+
+```
+user$ pdftk in.pdf output encrpyted.pdf owner_pw xxx
+```
+
+
+
+
+
+`pdftops` 属于 Poppler 库，在 Debian 和 Ubuntu 的 `poppler-utils` 包中提供，它可以从 PDF 文档生成 PostScript 文件。与 pdf2ps 不同，它支持许多用于影响 PostScript 文件的选项。
+
+*   `-eps`
+    创建一个 EPS 文件。对于多页 PDF 文档，必须使用 `-f` 和 `-l` 选择页面。
+*   `-f n` 和 `-l n`
+    指定起始和结束页（第一页和最后一页）。
+*   `-level n`
+    指定的 PostScript 级别（`1` 到 `3`）。
+*   `-level n sep`
+    同时执行色彩分离。为此，所有颜色将转换为 CMYK 格式。
+*   `-opw password` 或 `-upw password`
+    指定所有者密码或用户密码以处理受保护的 PDF 文档。
+*   `-paper format`
+    指定的纸张格式（`A3`、`A4`、`letter` 或 `legal`）。
+*   `-paperw n` 和 `-paperh n`
+    指定点单位的纸尺寸。
+
+### pdftotext [options] source.pdf [target.txt]
+
+`pdftotext` 从 PDF 文件中提取文本并将其保存到纯文本文件中（默认为 `source.txt`）。所有的格式和图像都将丢失。`pdftotext` 也是 Poppler 库的一部分。
+
+`-f`、`-l`、`-opw` 和 `-upw` 选项的含义与 pdftops 相同（参见后者）。
+
+*   `-layout`
+    尝试保留页面布局。
+*   `-nopgbrk`
+    不使用特殊字符标记页码。
+
+### pdfunite in1.pdf in2.pdf . . . out.pdf
+
+`pdfunite` 属于 Poppler 库，可以将多个 PDF 文件合并为一个新文档（最后一个文件名）。你也可以使用 `pdftk` 实现，但 `pdfunite` 更易于使用。
+
+### pg_dump [options] [> backup.sql]
+
+`pg_dump` 创建 PostgreSQL 数据库的备份。建立连接的选项与 psql 命令中的对应（参见“psql”条目）。要自动化备份，你可以将密码保存在 `.pgpass` 文件中（参见 [www.postgresql.org/docs/current/libpq-pgpass.html](http://www.postgresql.org/docs/current/libpq-pgpass.html)）。
+
+*   `-a`
+    创建纯数据备份（即不 `CREATE DATABASE`）。
+*   `-C`
+    在备份中包含 `CREATE DATABASE` 命令。
+*   `-F plain|directory|tar`
+    定义数据库格式。通常会生成 SQL 文件（`plain`），可以通过 `psql -f` 重新加载。`-F directory` 创建二进制数据库文件，稍后可以使用 `pg_restore` 恢复。`-F tar` 创建相同的文件，但将其封装成 TAR 归包。
+*   `-f backupfile/backupdirectory`
+    定义备份的存储位置。如有必要，将创建该目录。
+*   `-s`
+    仅创建架构（schema）的备份。备份仅包含 `CREATE` 命令，不包含数据。
+*   `-t pattern`
+    备份时仅考虑示例中指定的表。你可以多次指定该选项（`-T table1 -T table2`）。
+*   `-T pattern`
+    忽略指定的表。
+
+#### 示例
+
+以下命令建立到运行在本地计算机上的 PostgreSQL 服务器的网络连接，然后创建 `test` 数据库的备份：
+
+```
+user$ pg_dump -h localhost -U name -d test > test.sql
+Password: ******** 
+```
+
+### pidof program name
+
+`pidof` 确定命名进程的所有实例的进程号（PID）。
+
+*   `-o %PPID`
+    忽略父进程，即在 shell 脚本的情况下，忽略当前运行脚本的 shell。
+*   `-s`
+    仅返回第一个匹配的进程（单次执行）。
+
+#### 示例
+
+以下命令返回所有正在运行的 `bash` shell 的 PID：
+
+```
+root# pidof /bin/bash
+32329 21636 21600 3351 1739 922 
+```
+
+### pinctrl command
+
+该命令用于确定或更改树莓派 GPIO 引脚的状态。它取代了过时的 `raspi-gpio` 命令，并兼容树莓派 5 的 RP1-I/O 芯片。
+
+*   `funcs [nr]`
+    指示指定的 GPIO 可以执行的功能。如果缺少 `nr`，`raspi-gpio func` 将提供所有 GPIO 的此类数据。
+
+
+
+
+
+nrnr 指的是根据 Broadcom 制造商文档对 GPIO 进行编号。这些**并不是** J8 针的引脚编号！
+
+*   `get[nr]`
+    显示所有 GPIO 或由 `nr` 指定 GPIO 的状态。
+
+*   `help`
+    显示相对详细的帮助文本。遗憾的是，在此上下文中没有可用的 `man` 页面。
+
+*   `set nr state`
+    激活指定的 GPIO 状态。可能的值列如下：
+    *   `ip` = 输入
+    *   `op` = 输出
+    *   `no` = 禁用（无功能）
+    *   `dl` = 状态 0（低电）
+    *   `dh` = 状态 1（高电）
+    *   `pu` = 上拉电阻激活
+    *   `pd` = 下拉电阻激活
+    *   `pn` = 上拉/下拉电阻停用（无拉伸）
+    *   `a0` 到 `a5` = 复用功能 0 到 5
+
+对于有意义的组合，可以同时使用上述列表中的多个关键词，每个关键词用空格分隔。你可以使用 `pinctrl func` 来检查 GPIO 支持哪些复用功能以及它们是如何编号的。
+
+#### 示例
+
+第一个命令确定编号为 23 的 GPIO 支持哪些功能。在树莓派上，该 GPIO 连接到 J8 针脚的第 16 位。第二个命令将此 GPIO 作为简单的信号输出，并将电平设置为高电（3.3 V）。通过串联电阻连接到引脚 16 的 LED 现在会亮起。第三个命令验证 GPIO 23 的状态。
+
+```
+user$ pinctrl funcs 23
+23, GPIO23, SD0_CMD, DPI_D19, I2S0_SDO1, SCL3, I2S1_SDO1,
+    SYS_RIO023, PROC_RIO023, PIO23, -
+user$ pinctrl set 23 op dh
+user$ pinctrl get 23
+23: op dh pd | hi // GPIO23 = output 
+```
+
+### ping [options] 地址
+
+ping6 [options] 地址
+
+`ping` 每秒向指定地址发送一次网络数据包（根据互联网控制消息协议 [ICMP] 的 ECHO_REQUEST）。如果地址可达且防火墙没有拦截回包，`ping` 将接收响应包并指示通信往返的时间。默认情况下，`ping` 会无限运行，直到通过 Ctrl+ C 终止。
+
+*   `-4` 或 `-6`
+    仅使用 IPv4 或 IPv6。在某些发行版中，你也可以调用 `ping4` 或 `ping6` 命令。
+
+*   `-c n`
+    仅发送 `n` 个数据包后终止。
+
+*   `-i n`
+    指定两个数据包之间的间隔时间（秒）。`n` 是浮点数；这意味着 `ping -i 0.1` 也是可能的。
+
+*   `-n`
+    仅显示 IP 地址，不显示接收者的主机。
+
+### pip 或 pip3 命令
+
+来自 `python3-pip` 包的命令支持从 Python 包索引 (PyPI) 安装 Python 包。在许多发行版中，必须作为 `pip3` 运行命令，以与之前用于 Python 2 的 `pip` 命令区分开。
+
+与 Linux 软件包管理命令不同，`pip` 通常可以在无需 `root` 权限或无需 `sudo` 的情况下运行。包对所有用户可用（除非使用之前描述的 `--user` 选项）。
+
+本地安装 PIP 包有时会与 Linux 软件包管理器的包产生冲突。在当前的 Python 版本中，`pip` 会显示错误信息。如果可能，你应该作为 Linux 包安装所需的模块（例如使用 `apt install python3-name`）。如果发行版中没有相应的包，你应该在 Python 环境中组织你的项目（见下文示例）。或者，你可以使用 `--break-system-packages` 选项强制安装，但这真的应该只是应急方案。
+
+*   `install [--upgrade] [--user] [--break-system-packages] 包名`
+    安装或更新指定的包。使用 `--user` 选项时，包将以仅对当前用户可见的方式安装。
+    使用 `--break-system-packages`，你可以强制安装包，即使新 Python 版本的保护机制建议这样做。该选项的名字听起来令人不安：可能会出现问题，但只有在涉及大量包或执行 Python 版本更新时才会发生——所以最终这种情况相对少见。尽管如此，使用虚拟环境几乎总是更好的解决方案。
+
+*   `list [--outdated]`
+    提供所有已安装包或所有可以更新的包的列表。
+
+*   `search 关键词`
+    在 PyPI 中搜索指定搜索词的包。
+
+*   `show [--files] 包名`
+    显示已安装包的信息或列出其文件。
+
+*   `uninstall 包名`
+    移除指定的包。
+
+
+
+
+
+对于 Debian/Ubuntu，使用以下命令，首先安装 `pip3`。通过 `python3 -m venv` 在项目目录中设置虚拟环境。通过为此目的提供的脚本激活环境（另阅源）。这将更改提示符。最后，在环境中安装 OpenAI API 的 Python 模块。
+
+```
+user$ sudo apt install python3-pip python3-venv
+user$ mkdir my-project
+user$ cd my-project
+user$ python3  -m venv .
+user$ source bin/activate
+(my-project) user$ pip3 install openai 
+```
+
+### pkcon 命令
+
+PackageKit 是指向各种 Linux 软件包管理系统的通用接口。PackageKit 主要由 Gnome Software 等图形用户界面使用，但也可以通过 `pkcon` 命令进行控制。根据 PackageKit 使用的后端（APT、DNF、YUM 等），以下某些命令可能不可用。
+
+* `get-groups`：确定分/包组。
+* `get-updates`：提供所有可以更新的包列表。
+* `install package name`：安装软件包。
+* `install-local file`：安装本地文件。
+* `refresh [force] [options]`：使用包信息更新缓存。如果你使用 `pkcon refresh force -c -1`，缓存文件的允许年龄将设置为小于零。这导致整个缓存被删除，从而节省大量空间。
+* `remove package name`：卸载软件包。
+* `search [name|details|group|file] search term`：搜索软件包。
+* `update [package name]`：更新指定的包或所有已安装的包。
+
+### popd
+
+`bash` 命令 `popd` 返回之前使用 pushd 保存的目录。该目录将从目录列表中移除。`popd` 和 `pushd` 通常用于 shell 脚本。
+
+### postconf [options] [parameter[=value]]
+
+`postconf` 帮助读取 Postfix 邮件服务器的配置并在运行期间更改它。如果调用命令时不带选项，它将仅显示约 1,000 个 Postfix 参数的当前有效设置。
+
+* `parametername`：显示参数的当前状态。
+* `parametername=new value`：重新设置参数，并在 `/etc/postfix/main.cf` 配置文件中进行更改。
+* `-d` 或 `-df`：显示所有参数的默认值（即使参数当前设置不同）。`-df` 选项（折叠）代替 `-d` 会导致长条目跨多行显示。
+* `-d parametername`：显示参数的默认状态（可能与当前设置不同）。
+* `-n` 或 `-nf`：列出所有没有默认值的参数。`-nf` 会对长行进行换行。
+
+### postqueue [options]
+
+`postqueue` 提供有关 Postfix 邮件服务器尚未递送邮件的信息，或启动新的传输尝试。
+
+* `-f`：尝试立即重发队列中的所有邮件（刷新）。Postfix 会自动处理此，但在多次传输尝试之间保持等待时间。
+* `-i id`：尝试立即重发指定的邮件。
+* `-p` 或 `-j`：显示队列中的所有邮件。使用 `-j` 时，输出为 JSON 格式。
+
+### powertop
+
+来自同名包的交互式程序 `powertop` 分析哪些进程消耗最多的能量，或最频繁地从睡眠模式唤醒 CPU 或硬盘。当程序运行时，你可以使用 Tab 键在不同的结果页面之间切换。
+
+从节能功能的角度来看，最有趣的页面称为 Tunables（可调）。在那里，`powertop` 显示了一个设置列表，其当前状态可以是 Bad 或 Good。然后你可以使用方向键选择单个点，并通过按 Enter 键更改它们。`powertop` 会显示它正在执行的命令。
+
+然后，你可以尝试逐步更改单个设置并测试效果：使用用电表记录的之前充电的笔记本电脑，功耗是否确实明显下降？禁用的功能会导致问题吗？USB 设备仍能使用吗？切换 Wi-Fi 适配器的开关是否仍然有效？音频系统在无干扰的情况下运行正常吗？等等。
+
+使用 `powertop` 进行的更改仅在下次重启电脑之前有效。要永久激活节能措施，你需要将 `powertop` 显示的命令（例如 `echo '1' > /sys/xxx`）输入到每次系统启动时都会执行的文件。在大多数发行版中，`/etc/rc.d/rc.local` 适用于此。如有必要，你必须创建此文件并使用 `chmod a+x` 将其标记为可执行。根据发行版的不同，你可能还需要运行 `systemctl daemon-reload`，以便 systemd 包含该文件。
+
+
+
+
+一种彻底的解决方案是在 `rc.local` 中输入 `powertop --auto-tune` 而不是单独的调优命令。这样，`powertop` 会执行所有已知的优化措施。遗憾的是，`powertop` 这样做往往会过度：如果笔记本电脑运行时间多了一小时，但网络连接不稳定，这有什么用呢？
+
+你可以通过运行带有 `--html` 选项 `powertop` 获取所有可能的调优命令列表。在经过 20 秒的测量后，命令会生成 HTML 文件 `powertop.html`，其中包含各种统计数据以及所有调优参数的摘要。
+
+### ppa-purge ppa:ppaowner
+
+Ubuntu 特有的 `ppa-purge` 命令（同名）用于禁用指定的私人软件包仓库（PPA，另见 add-apt-repository 命令的描述）。如果 PPA 提供了官方软件包的替代版本，这些软件包将被移除并替换为原始软件包。
+
+#### Example
+
+以下命令禁用了 `libreoffice` 软件包源，并将源自该源的包替换为标准的 Ubuntu 软件包：
+
+```
+root# ppa-purge ppa:libreoffice/ppa 
+```
+
+### printenv [variable]
+
+逐行输出指定环境变量的内容或所有环境变量。
+
+### printf format para1 para2 para3 ...
+
+`printf` 允许你使用 C 命令 `printf` 的语法来格式化输出。你可以通过 `man 3 printf` 获取有关格式选项的详细信息。
+
+#### Example
+
+以下命令输出一个整数、一个两位小数的浮点数和一个换行符。
+
+```
+root# printf "%d %.2f\n" 123 3.1415927
+123 3.14 
+```
+
+### pro command
+
+`pro` 命令适用于所有当前的 Ubuntu 版本。虽然它主要用于控制付费的 Ubuntu Pro 服务，但某些功能也可以没有 Pro 订阅的情况下使用。
+
+- `attach` `token`
+  激活 Ubuntu Pro 功能。你可以通过 Ubuntu Pro 仪表板获取有效的令牌。
+- `security status`
+  提供正在接受服务的软件包数量以及持续时间的概述。Ubuntu LTS 版本的五年更新保证仅适用于 main 和 restricted 软件包源。典型的 Ubuntu 安装包含来自不同软件包源的混合软件包。
+- `status`
+  显示 Ubuntu Pro 服务的状态。
+
+#### Example
+
+以下结果是在运行 Ubuntu 22.04 的服务器上获得的，该服务器激活了 Ubuntu Pro 的免费版本（最多五个安装）：
+
+```
+user$ pro status
+SERVICE       ENTITLED  STATUS    DESCRIPTION
+anbox-cloud   yes       disabled  Scalable Android in the cloud
+esm-apps      yes       enabled   Expanded Security Maintenance for Applications
+esm-infra     yes       enabled   Expanded Security Maint. for Infrastructure
+livepatch     yes       enabled   Canonical Livepatch service
+Subscription: Ubuntu Pro - free personal subscription
+user$ pro security-status
+1186 packages installed:
+ 938 packages from Ubuntu Main/Restricted repository
+ 243 packages from Ubuntu Universe/Multiverse repository
+   5 packages no longer available for download
+ This machine is attached to an Ubuntu Pro subscription.
+Main/Restricted packages are receiving security updates from
+Ubuntu Pro with 'esm-infra' enabled until 2032.
+Universe/Multiverse packages are receiving security updates from
+Ubuntu Pro with 'esm-apps' enabled until 2032\. 
+```
+
+### ps [options]
+
+`ps` 显示运行中的进程（程序）和内核线程列表。该命令在结合 kill 强制终止挂挂的程序时特别有用。`ps` 拥有无数选项，在在线手册（`man ps`）中有详细描述。在那里，你还会找到对 `ps` 输出的众多信息含义的解释。`ps` 的变体是 pstree，它显示进程树，从而一目了然地清晰进程的层次。
+
+与其他命令不同，`ps` 的选项带有和不带前导连字符。其中某些选项甚至具有不同的含义（`ps -a` 和 `ps a`是不等价的！）。两种类型的选项可以组合使用，例如 `ps -A ul`。
+
+- `a`
+  也显示其他用户的进程（而不仅仅是你自己的）。
+- `-A`
+  显示所有进程。
+- `f`
+  显示进程树。
+- `-f -l` 或 `l`
+  显示各种附加信息（内存需求、优先级等）。
+- `-p` `n` 或 `-p` `n1`,`n2`,`n3`
+  仅显示指定进程 ID（PID）的进程。
+- `--ppid` `n`
+  仅显示以 `n` 为父进程 ID 的进程，即由进程 `n` 启动的进程。
+- `u`
+  也显示相应进程的用户名。该选项不能与 `l` 连接。
+- `x`
+  也显示未分配终端的进程。这些包括管理系统的内部 Linux 进程（守护进程）。
+- `Z`
+  也显示进程的 SELinux 上文。
+
+### Examples
+
+以下示例展示了 `ps` 命令的基本用法：
+
+```
+root# ps ax             
+(显示所有进程)
+root# ps ax | grep ssh  
+(显示描述包含 ssh 的进程)
+root# ps axu            
+(显示所有进程，包括所有者/账户)
+```
+
+
+
+
+
+在 Linux 上，`kthreadd`内核线程守护进程进程号始终为 2。所有其他内核线程都由 `kthreadd` 启动。因此，如果你只想列出内核线程，可以使用 `ps –ppid 2`：
+
+```
+root# ps --ppid 2 
+(仅显示内核线程) 
+```
+
+### ps2pdf [options] source.ps [target.pdf]
+
+`ps2pdf` 可从任何 PostScript 或 EPS 文件创建 PDF 文件。如果不指定 `target.pdf`，生成的 PDF 文件将具有与 PostScript 文件相同的名称（但标识符为 `.pdf`，即 `source.pdf`）。
+
+- `-dEncodeColorImages=false`
+  防止对图像进行任何压缩。生成的 PDF 文件现在会非常大。结合 `/prepress` 设置使用，`ps2pdf` 现在可以提供具有最佳打印和曝光质量的 PDF。
+
+- `-dPDFSETTINGS=/default | /screen | /printer | /prepress`
+  指定 PDF 文档是针对任何用途、屏幕显示、普通打印或曝光（例如书籍打印等）进行优化。更高质量的代价是文件大小增大。这四个默认设置使你无需逐个设置众多选项。
+
+- `-rn`
+  指定位图字体的分辨率（单位为 DPI，即每英寸点数）。
+
+其他无数选项可见以下地址：
+
+[`web.mit.edu/ghostscript/www/Ps2pdf.htm`](https://web.mit.edu/ghostscript/www/Ps2pdf.htm)
+
+#### 示例
+
+以下命令从 PostScript 文件 `book.ps` 创建 PDF 文档 `book.pdf`：
+
+```
+user$ ps2pdf book.ps 
+```
+
+### psql [options]
+
+`psql` 允许为 PostgreSQL 数据库执行 SQL 命令。`psql` 是 `postgresql` 包的一部分。如果你只需要客户端而不需要关联数据库服务器（例如，数据库运行在另一个服务器或 Docker 容器中），可以安装某些发行版的 `postgresql-client`（Debian, Ubuntu）或 `libpq`（Fedora, RHEL）包。
+
+- `-c 'SQL command'`
+  运行指定的 SQL 命令并关闭连接。
+
+- `-d dbname`
+  指定要建立连接的数据库。如果连接已存在，可以使用 `\c dbname` 更改活动数据库。
+
+- `-f file.sql`
+  运行指定文件中包含的 SQL 命令。
+
+- `-h hostname`
+  指定运行 PostgreSQL 服务器的主机。如果可以通过套接字文件进行通信，对于本地安装可以省略此选项。
+
+- `-l`
+  列出所有数据库和其他对象（用户、角色等）。如果连接已存在，`\l` 将列出数据库对象。在活动数据库中，`\d` 提供所有表的列表。
+
+- `-U username`
+  定义用户名。如果没有此选项，`psql` 将使用当前活动的 Linux 账户名。
+
+#### 示例
+
+以下列表显示了创建数据库连接、创建一个带有简单表的测试数据库、插入两条数据记录以及执行一个查询查询的过程：
+
+```
+user$ psql -U name -h localhost
+Password for user name: ********
+postgres~# CREATE DATABASE test;
+postgres~# \c test;            
+(激活数据库)
+postgres~# CREATE TABLE mytable (id SERIAL PRIMARY KEY, data TEXT);
+postgres~# INSERT INTO mytable (data) VALUES ('abc'), ('efg');
+postgres~# SELECT * FROM mytable;
+ id | data
+----+------
+  1 | abc
+  2 | efg 
+```
+
+### pssh [options] command
+
+pscp [options] local_file remote_file
+
+来自同名包的 Python 脚本 `pssh` 可在多台服务器上同时运行命令。`pscp` 从所有指定主机复制或复制文件。`pnuke` 通过 `kill -9` 终止所有主机上指定名称或模式的程序。这三个命令都需要可以使用密钥进行身份验证，或者由 `ssh-agent` 后台程序处理身份验证。
+
+- `-h hosts.txt`
+  指定文本文件位置，该文件按行列出了执行命令的计算机主机名。
+
+- `-o directory`
+  指定 `pssh` 保存命令输出以及 `pscp` 保存待复制文件的目录。`pssh` 和 `pscp` 会为每个主机设置单独的输出文件，文件名指示主机名。
+
+#### 示例
+
+该示例假设所有主机都是 RHEL 系统。然后使用 `yum` 在这些计算机上执行软件更新。
+
+```
+root# pssh -h hosts.txt yum update 
+```
+
+### pstree [options] [pid]
+
+来自 `psmisc` 或 `pstree` 包的 `pstree` 显示屏幕上所有进程的树状结构。该树清楚地显示了哪个进程是由哪个进程启动的。如果指定了进程号，树将从该点开始；否则，从系统启动时运行的第一个进程（通常是 systemd）开始。
+
+- `-h`
+  识别当前进程及其所有父进程。
+
+- `-p`
+  同时也显示每个进程的进程号 (PID)。
+
+- `-u`
+  显示所有 UID 与父进程 UID 不同的进程的用户名或账户名。
+
+### pushd directory
+
+
+
+
+
+`bash` 命令 `pushd` 会保存当前目录并切换到指定的目录。`popd` 将你回到原始目录。`dirs` 显示保存目录的列表。`pushd` 和 `popd` 主要用于 shell 脚本。
+
+### pvcreate [options] device
+
+LVM 命令 `pvcreate` 将分区或设备声明为物理卷（PV），以便稍后在卷组（VG）中使用（另请参见 `vgcreate` 和 `vgextend`）。
+
+`pvcreate` 要求该分区或设备之前已被标记为 LVM 分区。在 `fdisk` 中，你必须使用 `T` 快捷键并输入代码 `8e` 来实现此目的。在 `parted` 中，所需的命令是 `set partition number lvm on`。
+
+#### 示例
+
+以下命令将 `/dev/sdc1` 分区转换为 LVM 的物理卷：
+
+```
+root# pvcreate /dev/sdc1
+  Physical volume "/dev/sdc1" successfully created 
+```
+
+### pvdisplay device
+
+`pvdisplay` 显示指定 PV 的详细信息。
+
+### pvremove device
+
+`pvremove` 移除未使用 PV 的 标签。
+
+### pvscan
+
+`pvscan` 列出所有 PV。
+
+### pw-cat audio file
+
+`pw-cli [command]`
+
+`pw-mon [options]`
+
+`pw-top [options]`
+
+大多数现代 Linux 发行版使用 PipeWire 作为音频和视频服务器。有很多命令可以控制 PipeWire，每个命令都以 `pw-` 开头。在这里，我将关注最常用的命令：
+
+* `pw-cat` 从音频系统传输或传输原始文件。该命令也可以作为 `pw-play`、`pw-record`、`pw-midiplayrecord` 或 `pw-midirecord` 运行。
+
+* 你可以使用 `pw-cli` 更改音频设置。有无数子命令，这里只提到了最重要的几个：
+
+    * `connect` 或 `disconnect` 建立或终止与外部 PipeWire 服务器的连接。
+    * `create-link` 连接两个 PipeWire 节点。
+    * `create-node` 和 `export-node` 管理 PipeWire 节点，即信号管理或转发的对象。
+    * `info id` 显示特定对象的详细信息。
+    * `list-objects` 列出所有 PipeWire 对象。
+    * `list-remotes` 列出所有外部 PipeWire 实例。
+    * `load-` 和 `unload-module` 加载或移除 PipeWire 模块。
+    * `send-command` 向 PipeWire 对象发送命令。
+    * `switch-remote` 定义激活的远程实例。
+
+`pw-cli` 是一个底层命令。它的用法非常繁琐。因为 PipeWire 与 PulseAudio 有兼容层，在许多情况下，通过 `pactl` 控制设置更为简单。
+
+* `pw-mon` 列出 PipeWire 系统已知的所有音频和视频对象，包括无数属性。
+
+* `pw-top` 提供当前活跃 PipeWire 组件的概览，包括音频处理过程中发生的延迟。
+
+### pwd
+
+`bash` 命令 `pwd` 指定当前目录。
+
+除了 `bash` 包含的版本外，`pwd` 也作为一个独立命令可用，通常文件名为 `/bin/pwd`。请注意，在某些情况下，这两个版本的 `pwd` 可能不会产生相同的结果。这是因为 `bash` 版本的 `pwd` 是基于相对路径的，而外部命令使用的是绝对值。指向目录的符号链接可以在一定程度上欺骗 `bash` 版本的 `pwd`。
+
+#### 示例
+
+在以下示例中，`ln` 创建指向 `/tmp` 目录的符号链接。`cd` 切换到该目录。`bash` 认为该目录是当前目录，而 `/bin/pwd` 则识别出 `/tmp` 才是当前目录。
+
+```
+user$ ln -s /tmp symlink
+user$ cd symlink
+user$ pwd         
+(bash version of pwd)
+/home/kofler/symlink
+user$ /bin/pwd    
+(standalone pwd command)
+/tmp 
+```
+
+### pwgen [options] [n]
+
+同名软件包中的 `pwgen` 生成一系列随机但容易记忆的密码。其思路是用户选择其中一个密码，并在别人从肩膀后面看过来之前，使用 Ctrl+L 清除屏幕。与 `makepasswd` 生成的密码相比，`pwgen` 生成的密码随机性较低，因此安全性较低，但它们对于许多用例来说仍然足够。
+
+默认情况下，密码为八个字符。你可以通过指定可选参数 `n` 生成更长的密码。
+
+* `-0` 密码中不使用数字。
+* `-1` 只提供 1 个密码而不是 100 个。
+* `-B` 避免根据字体容易混淆的字母或数字，例如 O 和 0 以及 l 和 1。这会降低密码的安全性。
+* `-y` 密码中也包含特殊字符。
+
+#### 示例
+
+如示例所示，即使是默认设置下生成的密码也绝非易事：
+
+
+
+
+
+```
+user pwgen
+Ohshu3yo Ea1wedoe OhCh2Zua Aili8ooc Xu4iiyix eug3Chee Gaesh2pu Eeth6mah
+eMee0jio xieL6oob ob8uYah shaif0Ed uep8Eive lang3Eho thaiS7xa Sah3See4
+... 
+```
+
+以下命令生成一个包含特殊字符的 80 字符密码：
+
+```
+root# pwgen -1 -y 80
+AhB9eiv]oo~s0go2ievaF7eePe6ooyoo7Cim%oh8eishiloosaeSeex+eeza9Iem7Ahchuhi6ahch[i1 
+```
+
+## Q
+
+### qalc [expression]
+
+同名软件包中的 `qalc` 用于计算输入的数学表达式并返回结果。为了避免特殊字符被 `bash` 处理，你必须将大多数表达式放在引号中：
+
+```
+user$ qalc "(2+3)*4⁵"
+(2 + 3) * (4⁵) = 5120 
+```
+
+如果没有输入任何表达式，`qalc` 会激活交互模式。它会持续计算，直到通过 Ctrl+D 结束命令。
+
+```
+user$ qalc
+>2⁶⁴
+ 2⁶⁴ = approx. 1.8446744E19
+>sin(0.2)
+ sin(0.2 * radian) = approx. 0.19866933
+>sin(pi)
+ sin(pi * radian) = 0
+>sqrt(2)
+ sqrt(2) = approx. 1.4142136
+>10 EUR to USD
+ 10 * euro = $10.651 
+```
+
+### qemu [options] [imagefile]
+
+快速仿真器 (QEMU) 可以模拟各种 CPU。针对每个重要的 CPU 架构都有特殊的命令变体：用于 64 位 ARM 系统的 `qemu-aarch64`、用于 64 位 MIPS 系统的 `qemu-mips64` 等。对于 x86 系统，`qemu-x86_64` 是最重要的命令。在某些发行版中，名称为 `qemu-system-aarch64`、`qemu-system-x86` 等。为了简单起见，下文中统一使用 `qemu`。根据发行版和 CPU 架构，你必须调用相应的变体。
+
+如果可能，`qemu` 会与内核虚拟机（KVM，一种 Linux 内核扩展）结合。这意味着与主机系统架构相同的虚拟机运行速度会快得多。KVM 通过 `-enable-kvm` 或 `-accel kvm` 选项激活。根据发行版的不同，存在如 `kvm` 或 `qemu-kvm` 等微型脚本，带有 KVM 选项启动 `qemu`。在 RHEL 系统上，`qemu-kvm` 命令位于 `/usr/libexec` 目录。
+
+在简单的情况下，你只需要将镜像文件的名称传递给 `qemu`。QEMU 然后将使用默认设置运行虚拟机，包括一个 IDE 硬盘。如果你想使用其他设置或多个数据媒体，可以添加 `-drive` 或 `-hda`、`-hdb` 等选项。在这种情况下，可以省略在 KVM 命令中直接指定镜像文件。
+
+*   `-accel kvm`
+    激活 KVM。QEMU 也可以处理其他加速系统，因此该选项也支持 `xen`、`hax` 或 `tcg` 设置。
+
+*   `-boot order=xxx,once=xxx,menu=on/off`
+    指定启动过程中考虑数据媒体的顺序。这里 `xxx` 是一系列字母，表示数据媒体的顺序（例如 `adc`：首先是软驱器，然后是 CD/DVD 驱动，最后是第一个硬盘）。字母 `a` 到 `d` 对应 Windows 盘符。
+    `once=xxx` 为首次启动过程指定启动序列。例如，如果虚拟机应第一次尝试从 CD/DVD 光驱启动，但在随后的重启中从硬盘启动，则输入 `-boot order=c,once=d` 或简单输入 `-boot once=d`。（虚拟 DVD 光驱通常连接到安装系统的 ISO 镜像。）
+    `menu=on` 在启动菜单开始时显示消息“Press F12 for boot menu”。然后可以通过按 F12 键交互式选择启动磁盘。
+
+*   `-cdrom iso file`
+    使用指定的 ISO 文件作为虚拟 CD/DVD 驱动的数据源。该选项对应 `-drive file=iso-file,index=2,media=cdrom`。
+
+*   `-cpu host`
+    将主机 CPU 的所有属性传递给虚拟机。默认情况下并非如此：仅传递一个子集以最大化不同 CPU 之间虚拟机兼容性。
+
+*   `-device cup`
+    为虚拟机添加额外的设备。`qemu -device ?` 提供所有支持设备的列表。设备名称大小写敏感！你可以使用 `qemu –device cup,?` 确定特定设备的可用选项，例如 `qemu -device isa-serial,?`。
+    注意，你可以通过两种方式定义虚拟机的大部分组件：使用此处的通用 `-device` 选项，或使用设备特定选项（例如 `-drive`、`-soundhw`、`-usb-device` 或 `-vga`）。
+
+*   `-drive details`
+    定义虚拟硬盘的属性。详细参数之间仅用逗号分隔（无空格！）。如果虚拟机配备多个数据媒体，可以多次使用该选项。
+    `boot=on/off` 指定启动时是否考虑该数据媒体。
+    `cache=writethrough/writeback/none` 指定是否以及如何缓存写入访问。默认使用 `writethrough`：在客户系统中，在主机系统确认保存操作之前，写入访问不会显示为已完成。
+
+
+
+
+
+`file=fname` 指定镜像文件、ISO 文件或逻辑卷的设备名称。
+
+`if=ide/scsi/virtio` 指定虚拟机使用哪种接口来访问数据介质（默认值为 `ide`）。对于 Linux 客户端，`virtio` 效率更高。
+
+`index=n` 决定接口数据介质的编号。只有在没有按顺序指定数据介质时才需要此参数。
+
+`media=disk/cdrom` 指定设备应该是硬硬盘（默认设置）还是 CD/DVD 驱动器。
+
+*   `-enable-kvm`
+    对应 `-accel kvm`。
+
+*   `-hda/-hdb/-hdc/-hdd` `details`
+    指定虚拟 IDE 硬盘。
+    `-hda fname` 对应 `-drive file=fname,index=0,media=disk`。
+    `-hdb fname` 对应 `-drive file=fname,index=1,media=disk`，以此此类推。
+
+*   `-k` `language identifier`
+    使用指定的键盘布局。允许的语言标识符包括 `de`（德语）和 `en-us`（美式英语）。仅当虚拟机由外部 VNC 客户端操作时才需要此选项。虚拟机管理器的 VNC 客户端或 `virt-viewer` 命令会自动识别键盘设置。
+
+*   `-localtime`
+    使用本地时间初始化客户系统的虚拟 CMOS 时钟（而不是默认的 UTC 时间）。
+
+*   `-m` `n`
+    设置虚拟机的内存大小（单位 MiB）。默认设置取决于发行版。
+
+*   `-machine` `name`[,para1=value1,para2=value2 ...]`
+    指定应该模拟哪种硬件。`-machine help` 提供允许的类型名称列表。这些参数可用于激活或禁用与相应类型基本设置不同的附加属性。
+
+*   `-monitor` `device`
+    将 QEMU 监控器的输入和输出重定向到指定的设备。如果你想通过当前控制台操作监控器，必须将 `stdio` 作为设备。使用 `pty` 时，`qemu` 会在启动时创建一个新的伪 TTY 设备并用其通信。
+
+*   `-net nic,details`
+    配置虚拟网络适配器。如果未指定此选项，QEMU 默认模拟一个 RTL8139 兼容网卡。
+    `model=ne2k_pci/i82551/i82557b/i82559er/rtl8139/e1000/pcnet/virtio` 定义了 QEMU 应该模拟的网络适配器。对于 Linux 客户端，使用 `model=virtio` 将获得最佳结果。你使用 `macaddr=52:54:00:nn:nn:nn` 指定所需的 MAC 地址。
+
+*   `-net user,details`
+    使用用户模式网络（这是默认设置）。尽管由于 NAT 和伪装，客户端可以使用主机系统的互联网连接，但客户端和主机之间无法建立直接连接。
+
+*   `-rtc base=utc/localtime`
+    指定虚拟机时钟的起始时间`utc` 是 Linux 客户端的正确设置，而 `localtime` 适用于 Windows 客户端。默认情况下，时钟始终与主机同步。如果不希望发生这种情况，可以指定 `clock=vm` 参数。
+
+*   `-smp` `n` 或 `-smp cores=c,threads=t,sockets=s`
+    指定分配给虚拟机的 CPU 或核心数量的简写（默认仅一个核心）。对于具有多个 CPU 的主机系统，`c` 指定每个 CPU 使用多少核心。`t` 指定每个核心所需的线程数；对于支持超线程的 Intel CPU，此处的值 `2` 通常很有用。`s` 最后指定使用多少个 CPU（插槽）。`c*t*s` 提供了虚拟机可见的 CPU 数量。
+
+*   `-soundhw ac97/es1370/hda/sb16/all`
+    向虚拟机添加指定的音频设备之一（如果使用 `all`，则添加所有设备）。`ac97` 代表 Intel 82801AA AC97，`es1370` 代表 Ensoniq AudioPCI ES1370，`hda` 代表 Intel 高定义音频（High Definition Audio），`sb16` 代表 Creative Sound Blaster 16。
+
+*   `-spice port=n[,options]`
+    激活 Spice 图形系统。为了此目的，你必须指定指定的端口。
+
+*   `-usb`
+    激活 USB 驱动程序。
+
+*   `-usbdevice mouse/tablet/disk/host...`
+
+
+
+
+向虚拟机添加一个 USB 设备。大多数情况下，你需要使用 `-usbdevice tablet` 选项。它会将标准的仿真 PS/2 鼠标替换为虚拟 USB 指针设备，该设备能够识别绝对坐标，从而允许客机的鼠标位置与 VNC 或 Spice 客户端同步。
+
+`-usbdevice disk` 允许从主机将镜像文件传递到虚拟机，使虚拟机看到一个 USB 数据介质。
+
+`-usbdevice host:bus.addr` 或 `-usbdevice host:vendorid:productid` 将 USB 设备从主机重定向到虚拟机。该 USB 设备不能被主机使用。在主机服务器上确定总线和设备号或厂商 ID 和产品 ID 的简单方法是使用 `lsusb`。
+
+*   `-vga cirrus/qxl/std/virtio/vmware`
+    指定所需的虚拟显卡类型。默认情况下，QEMU 仿真一个兼容 Cirrus 的显卡，分辨率最高为 1,024 × 768 像素。该图形系统被几乎所有客体操作系统正确识别并以可以接受的速度运行。`qxl` 显卡只能与 `-spice` 配合使用。
+
+*   `-vnc n.n.n.n:n[,options]`
+    运行 VNC 服务器，客户端可以通过它显示虚拟显卡的内容。你可以使用 `n.n.n.n` 来指定建立到 VNC 服务器连接的 IP 地址（例如，来自 `localhost` 的连接使用 127.0.0.1）。`:n` 表示显示器编号。VNC 服务器的端口为 `n+5900`。如果你只输入显示器号而不输入 IP 地址（例如 `:0`），则任何计算机都可以建立连接。
+
+只有在特殊情况下才会直接运行 `qemu`。更常见的是使用 `libvirt` 软件包中的 `virsh` 命令来设置和启动虚拟机，使用如 `virt-manager` 等接口，或者使用如 OpenStack 等云框架。
+
+#### 示例
+
+在以下示例中，首先创建一个最大 own 为 20 GiB 的镜像文件，然后将其作为虚拟硬盘，从 ISO 文件安装 Debian 系统：
+
+```
+user$ qemu-img create -f qcow2 disk.img 20G
+user$ kvm -accel kvm -m 2048 -smp 2 -boot once=d -cdrom debian.iso \
+        -drive file=disk.img,if=virtio,format=qcow2 \
+        -net user -net nic,macaddr=52:54:00:12:e4:4e,model=virtio \
+        -vga cirrus -vnc 127.0.0.1:0 -k de -usb -usbdevice tablet 
+```
+
+要操作虚拟机，你现在必须启动一个 VNC 客户端，例如 `vncviewer` 程序：
+
+```
+user$ vncviewer localhost:0 
+```
+
+### qemu-img 命令
+
+`qemu-img` 支持对虚拟硬盘镜像文件进行创建和管理。你指定的第一个参数必须是一个命令，例如 `create` 或 `convert`。随后是更多选项、镜像文件的文件名以及其他内容，具体取决于该命令。
+
+*   `convert [-f source format] -O target format source file target file`
+    将镜像文件从一种格式转换为另一种格式。原始文件会被保留。但在转换过程中，虚拟机不能使用该镜像文件。目标文件可以使用附加选项 `-c` 进行压缩。
+
+*   `convert -f qcow2 -s snapshotname -O target format source file target file`
+    仅将 `-s` 选择的 QCOW2 镜像快照传输到新的镜像文件中。
+
+*   `create [-f raw/qcow2/qed] [-o opt1=val1,opt2=val2,...]] file size`
+    创建一个指定类型和大小的新镜像文件。大小默认以字节指定。可选后缀 `k` 或 `K`、`M`、`G` 或 `T`（分别代表 KiB、MiB、GiB 或 TiB）。根据镜像格式，可以指定各种附加选项。你可以通过 `-o '?'` 确定可选的参数，该选项必须在一个完整且语法正确的命令中指定：
+
+    ```
+    qemu-img create -f qcow2 -o '?' test.img 1G
+    ```
+
+*   `create -f qcow2 -o backing_file=basis.img overlay.img`
+    创建一个覆盖文件（overlay file）。当虚拟机运行时，所有更改都将保存在覆盖文件中；基础文件保持不变。
+
+*   `info file`
+    提供有关指定镜像文件的信息。有关 QCOW2 镜像中快照的信息可以使用 `qemu-img snapshot` 获取（参见此列表底部的条目）。
+
+*   `resize file +/-size`
+    按指定的 own 增大或缩小镜像文件。该命令适用于 raw 和 QCOW2 镜像。
+
+*   `snapshot [options] snapshotname file`
+    编辑快照。此命令仅适用于 QCOW2 镜像。`-c` 创建新快照，`-a` 将快照应用到镜像（从而撤销自快照创建以来的所有更改），`-d` 删除快照，`-l` 列出所有快照。但是，除了 `-l` 外，当镜像文件被正在运行的虚拟机时，你不能使用这些命令！
+
+
+
+
+
+第一个命令创建了一个 QCOW2 镜像文件。这种镜像格式的一个主要优势是文件最初在数据介质上几乎不占用内存，并且只会逐渐增长。
+
+```
+root# qemu-img create -f qcow2 disk.img 10G 
+```
+
+第二个命令从 QCOW2 文件创建一个等等的原始镜像（raw image）：
+
+```
+user$ qemu-img convert -f qcow2 image.qcow2 -O raw image.raw 
+```
+
+# R
+
+## rclone 命令
+
+同名软件包中的 `rclone` 命令可以将文件或整个目录同步到云端存储位置。文件在传回时也可以进行加密或解密。`rclone` 兼容超过 70 个云提供商，包括 AWS S3。
+
+* `copy remote name:bucketname localdir`
+  将文件从远程目录复制到本地目录。（桶 是云提供商存储位置。）
+
+* `config`
+  引导你通过一个交互式设置程序，在其中你可以选择云提供商并输入身份验证数据。这些数据将以你指定的名称保存到 `.config/rclone/rclone.conf` 文件中。该类型的每个部分描述了一个远程目录。
+  要配置自动加密，你首先需要为云提供商配置普通设置，然后配置一个类型为 `crypt` 的第二个设置（第二个远程目录），并引用原始设置。注意，你必须输入两个密码。或者，`rclone config` 会生成随机密码，你应该将它们记录下来。
+
+* `lsd remote name:`
+  列出指定云提供商的所有可访问桶。
+
+* `ls remote name:bucketname`
+  列出桶中的文件。
+
+* `mkdir remote name:mynewbucket`
+  创建一个新桶。
+
+* `sync localdir remotename:bucketname`
+  将本地目录的文件与桶中的文件同步。注意，本地不存在的桶文件将被删除！你最初应该使用 `--interactive` 选项，以便通过查询防止可能的错误。
+
+#### 示例
+
+在使用 `rclone` 之前，你需要先为云提供商设置一次。然后你就可以使用 `rclone sync` 将本地目录的内容与云提供商侧的桶同步。
+
+```
+user$ rclone config
+...
+user$ rclone sync mydata/ myremote:mybucket 
+```
+
+## rdfind [options] directory1 directory2
+
+同名软件包中的 `rdfind` 用于搜索两个目录中的重复文件（即相同文件）。该命令支持多种方法来判断两个文件是否相同，以及如何评估哪个文件是原始文件哪个是重复文件。根据选项的不同，重复文件会被列出、被链接替换甚至被删除。
+
+以下选项影响搜索行为：
+
+* `-checksum md5|sha1|sha256`
+  使用指定的方法计算两个相同大小文件的校验和。默认使用 `sha1`。
+
+* `-followsymlinks`
+  在比较中考虑符号链接。
+
+* `-ignoreempty`
+  忽略空文件（文件长度为 0）。
+
+* `-minsize n`
+  忽略小于 `n` 字节的文件。
+
+你可以使用其他选项来指定对重复文件进行的操作。默认情况下，它们的名称会被写入 `results.txt` 文件。
+
+* `-deleteduplicates true|false`
+  删除重复文件（默认：`false`）。
+
+* `-dryrun true|false`
+  以测试模式运行，不进行任何更改（默认：`false`）。
+
+* `-makesymlinks true|false`
+  用指向原始文件的符号链接替换重复文件（默认：`false`）。
+
+* `-makehardlinks true|false`
+  用硬链接（fixed link）替换重复文件（默认：`false`）。
+
+* `-makesresultfile true|false`
+  将匹配文件的文件名写入 `results.txt`（默认：`true`）。结果文件不仅包含每个重复文件的两个版本的文件名，还包含指示 `rdfind` 认为哪个文件是原始文件的关键字：
+
+  * `DUPTYPE_FIRST_OCCURRENCE`: 原始
+  * `DUPTYPE_WITHIN_SAME_TREE`: `directory1` 中的重复文件
+  * `DUPTYPE_OUTSIDE_TREE`: `directory2` 中的重复文件
+
+#### 示例
+
+以下示例确定了两个目录中的所有相同文件：
+
+```
+user$ rdfind dir1 dir2
+正在扫描 "dir1", 找到 211 个文件。
+正在扫描 "dir2", 找到 215 个文件。
+共有 426 个文件。
+由于设备和 inode 不唯一，删除了 0 个文件。
+总大小为 85754591 字节或 82 MiB
+由于列表中大小唯一，删除了 103 个文件。剩余 323 个文件。
+现在根据第一个字节消除候选文件：
+   从列表中删除了 4 个文件。剩余 319 个文件。
+现在根据最后一个字节消除候选文件：
+   从列表中删除了 0 个文件。剩余 319 个文件。
+现在根据 sha1 校验和消除候选文件：
+   从列表中删除了 2 个文件。剩余 317 个文件。
+看起来你有 317 个不唯一的文件
+总共可以减少 39 MiB。现在正在生成结果文件 results.txt。 
+```
+
+第二个命令搜索两个包含照片的目录。大小至少为 100 字节的重复文件将被硬链接替换：
+
+```
+user$ rdfind -minsize 100 -makehardlinks true photos1 photos2 
+```
+
+
+
+
+
+### rdiff-backup [options] 源目录 目标目录
+
+`rdiff-backup` 以类似于 `rsync` 的方式同步目标目录和源目录。与 `rsync` 不同，`rdiff-backup` 在重复执行时会对更改或删除文件的旧版本进行归档，仅以压缩形式（即增量备份的形式）保存更改，以节省空间。这使得恢复误删或覆盖的文件成为可能。
+
+源目录和目标目录可以位于网络服务器上。在这种情况下，默认通过 `ssh` 进行通信。外部计算机上也必须安装 `rdiff-backup` 命令。在指定外部目录时，采用与 `rsync` 相同的语法。唯一的区别是在主机名后必须输入两个冒号，例如如下所示：`user@backupserver::directory`。
+
+- `-r` `time` 或 `--restore-as-of` `time`
+  将数据还原为指定时间的状态。然而，随着版本数量增加，恢复旧文件需要大量的 CPU，速度会相应变慢！
+
+- `--remove-older-than` `time`
+  删除早于指定时间的增量备份文件。你可以将时间设置为绝对值（例如 `2020-12-31`）或以小时 (`h`)、天 (`D`)、周 (`W`) 等相对值（另请参见 `TIME FORMATS` 部分中的 `man rdiff-backup`）。除了特定的时间点，你还可以使用 `nB` 指定应保留归档的最大备份版本数。默认情况下，`rdiff-backup` 每次删除一个备份版本。如果你想一次删除多个备份版本，必须指定 `--force` 选项。
+
+#### 示例
+
+以下命令在 `/home-backup` 目录下创建 `/home` 的备份。如果定期运行此命令（例如每天），所有更改都将自动归档。备份目录所需的空间将随之增加。
+
+```
+root# rdiff-backup /home /home-backup 
+```
+
+以下命令在临时目录中重建已备份的数据：
+
+```
+root# rdiff-backup -r now /home-backhup /tmp/home-current 
+```
+
+以下命令将 `/home` 目录的状态恢复到 10 天以前：
+
+```
+root# rdiff-backup -r 10D /home-backup/ /tmp/home-historical 
+```
+
+### read [var1 var2 var3 ...]
+
+`read` 命令将一行文本加载到 `bash` 脚本的指定变量中。`read` 期望从标准输入读取数据。如果没有指定变量，`read` 将输入写入 `REPLY` 变量。如果只指定了一个变量，`read` 将整个输入写入该变量。如果指定了多个变量，`read` 将第一个单词写入第一个变量，将第二个单词写入第二个变量，依此类推，直到将剩余输入写入最后一个变量。单词之间由空格或制表符分隔。
+
+`read` 命令不提供输出信息文本作为提示的选项。因此，建议在运行 `read` 命令之前，通过 `echo -n` 告知用户输入的目的。
+
+### readonly
+
+`bash` 命令 `readonly` 显示 shell 的只读变量。可以通过 `declare -r` 保护变量免受更改。
+
+### reboot [options]
+
+`reboot` 终止所有运行的进程并重启计算机。`reboot` 等同于 `shutdown -r now`。
+
+### recode 字符集 1..字符 2 文件
+
+`recode character set1..character set2 < source > target`
+
+`recode` 执行从字符集 1 到字符集 2 的字符集转换。`recode -l` 提供所有支持字符集的完整列表。
+
+#### 示例
+
+以下命令将 DOS 文件 `dosdat` 转换为 Latin-1 字符集的 Linux 文件：
+
+```
+user$ recode ibmpc..latin1 < dosdat > linuxdat 
+```
+
+第二个 `recode` 示例将 `windowsdat` 文件中的所有行结束符（`CR` 加 `LF`，即回车和换行）替换为 Linux 系统常用的行结束符（仅 `LF`）。实际字符集不会改变。结果文件保存在 `linuxdat` 中。
+
+```
+user$ recode latin1/cr-lf..latin1 < windowsdat > linuxdat 
+```
+
+`recode` 加载以 Latin-1 字符集编码的文本文件 `latin1dat` 并将其保存为 UTF-8 文件（Unicode）：
+
+```
+user$ recode latin1..u8 < latin1dat > utf8dat 
+```
+
+### rename
+
+大多数发行版都预装了 `rename` 命令，帮助重命名多个文件。然而，根据发行版的不同，会使用具有不同语法的变体。在以下章节中，我将描述两种常见的变体——首先是 `rename` 包的 Perl 脚本，它在 Debian、Raspberry Pi OS 和 Ubuntu 上常见；然后是来自 `util-linux` 包的 `rename` 命令，它在 Fedora、RHEL 和 SUSE 上常见。
+
+#### Debian、Raspberry Pi OS 和 Ubuntu 上的 rename
+
+
+
+
+
+此 `rename` 变体的语法如下：
+
+```
+rename [options] rename_expression files 
+```
+
+语法与 sed 类似，`rename_expression` 指定了如何处理其他参数中命名的文件。你可以使用 `man perlexpr` 读取该语法的详细信息。你可以可以使用可用选项来影响重命名过程：
+
+* `-f` 或 `-force`
+    覆盖现有文件。
+* `-n`
+    显示哪些文件将被重命名，但不会进行任何更改。
+
+以下示例将所有 `*.jpg` 文件重命名为 `*.jpeg` 文件：
+
+```
+user$ rename -n 's/.jpg/.jpeg/' *.jpg 
+```
+
+第二个命令将所有大写字母替换为小写字母：
+
+```
+user$ rename -n y/A-Z/a-z/ * 
+```
+
+你可以在以下网站找到更多示例：
+
+[www.howtogeek.com/423214/how-to-use-the-rename-command-on-linux](http://www.howtogeek.com/423214/how-to-use-the-rename-command-on-linux)
+
+## Fedora、RHEL 和 SUSE 上的 rename
+
+Fedora、RHEL 和 SUSE 上的 `rename` 语法简单：
+
+```
+rename [options] find replace files 
+```
+
+该命令仅将文件名中的 `find` 表达式替换为 `replace`。无法提前测试 `rename` 的效果。
+
+* `-s`
+    同时也更改由符号链接引用的文件名。
+* `-v`
+    显示已进行的名称更改。
+
+要将 `.jpg` 文件重命名回 `.jpeg` 文件，你必须如下所示运行 `rename`：
+
+```
+user$ rename jpg jpeg *.jpg 
+```
+
+## renice n pid
+
+`renice` 更改指定 `PID` 的进程优先级。`n` 可以是新优先级（`-20` 到 `20` 之间的值），也可以是带有正负号的增量值（例如 `+3` 或 `-2`）。只有 `root` 允许提高进程优先级。最高优先级为 `-20`，最低为 `20`。
+
+## reset
+
+`reset` 如果文本终端的字体因特殊字符输出而损坏，则恢复字体。`reset` 还会将终端设置重置为之前使用 `setterm -store` 保存的默认设置。
+
+## resize2fs [options] device [size]
+
+`resize2fs` 更改 ext2/ext3/ext4 文件系统的大小。对于大小规范，允许使用 KiB、MiB 或 GiB 的符号 `nK`、`nM` 和 `nG`。如果不指定大小，`resize2fs` 将文件系统调整为底层分区或逻辑卷的大小（非常适合扩容）。
+
+文件系统可以在运行期间增大。要减小大小，你必须先卸载文件系统并运行 `fsck`。注意，如果你要扩大容量，必须先扩大底层分区或 LV；但如果你要缩小容量，只能之后缩小分区或 LV！
+
+#### 示例
+
+在以下示例中，首先使用 `lvextend` 扩大逻辑卷。然后使用 `resize2fs` 扩大其包含的文件系统。
+
+```
+root# lvextend -L 40G /dev/mapper/vg1-test
+   Extending logical volume test to 40,0 GB
+   Logical volume test successfully resized
+root# resize2fs /dev/mapper/vg1-test
+The file system on /dev/mapper/vg1-test is mounted on /test;
+   online resizing required
+Perform an online resizing of /dev/mapper/vg1-test
+   to 10485760 (4k) blocks.
+The size of the file system on /dev/mapper/vg1-test is now 10485760 blocks. 
+```
+
+## resolvectl [options] command [name]
+
+在现代发行版中，你可以使用 `resolvectl` 读取本地 DNS 配置并在某些情况下更改它。`resolvectl` 是连接到 `systemd-resolved` 或 `systemd-networkd` 的 systemd 组件。如果你的发行版运行着本地缓存名称服务器，`resolvectl` 特别有用。此时，etc/resolv.conf 文件仅包含指向该本地名称服务器的引用，而不包含关于底层配置的信息。在这种情况下，`resolvectl status` 提供本地缓存所使用的 DNS 服务器的信息。
+
+* `dns network interface ipaddr1 ipaddr2 ...`
+    临时更改指定网络接口的 DNS 服务器 IP 地址。该设置不会永久保存，并在网络连接变化时丢失（最晚在下次重启时）。
+* `monitor`
+    显示所有传入的 DNS 查询，直到你通过 Ctrl+C 结束监控。
+* `query hostname`
+    返回分配给指定主机名的 IPv4 和 IPv6 地址。
+* `query ipaddr`
+    返回分配给 IP 地址的主机（如果已知）。
+* `statistics`
+    显示 DNS 操作次数和 DNS 缓存状态。
+* `status`
+    显示当前的 DNS 配置。
+
+#### 示例
+
+测试系统（Ubuntu 桌面安装版）使用 IP 地址为 `192.168.178.1` 的 Fritz!Box 作为 DNS 服务器。Rheinwerk Publishing 服务器在测试时使用的 IP 地址为 `46.235.24.168`。
+
+
+
+
+
+```
+user$ resolvectl status
+Link 2 (enp0s1)
+  Current Scopes: DNS
+       Protocols: +DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+  Current DNS Server: 192.168.178.1
+          DNS Servers: 192.168.178.1
+          DNS Domain: fritz.box
+          ...
+user$ resolvectl query rheinwerkverlag.de
+rheinwerkverlag.de: 46.235.24.168   -– link: enp0s1
+-- Information acquired via protocol DNS in 46.3ms. 
+```
+
+### restorecon [options] files
+
+`restorecon` 用于恢复目录旨在 SELinux 上下文。如果 SELinux 被临时禁用，或者在你移动或复制文件（例如使用 `cp -a`）导致无法自动设置 SELinux 上下文，则需要此操作。要独立于目录定义 SELinux 上下文，可以使用 `chcon` 命令。
+
+- `-0`
+    期望文件名之间用 0 字节分隔，而不是制表符或空格字符。这在处理包含空格的文件时，配合 `find -print0` 非常有用。
+- `-e directory`
+    跳过此目录。可以重复此选项以从上下文更改中排除多个目录。
+- `-r` 或 `-R`
+    同样考虑所有子目录（递归）。
+- `-v`
+    显示所做的更改（详细模式）。
+
+#### 示例
+
+以下命令为 Apache Web 服务器 `DocumentRoot` 目录下的所有文件设置正确的 SELinux 上下文：
+
+```
+root# restorecon -R -v /var/www/html/* 
+```
+
+### rfkill command
+
+来自同名包的 `rfkill` 允许蓝牙、Wi-Fi 和移动手机适配器的开启和关闭，例如在笔记本电脑上关闭不需要的功能以节省电源。
+
+- `block index/type`
+    禁用由索引指定的设备或特定类型的所有设备。允许的类型有 `all`、`wifi` = `wlan`、`bluetooth`、`uwb` = `ultrawideband`（超宽带）、`wimax`、`wwan`、`gps` 和 `fm`。
+- `event`
+    等待 `rfkill` 事件并输出它们。
+- `list`
+    列出所有无线适配器及其状态。`soft blocked` 表示可以通过 `rfkill` 开启或关闭设备。`hard blocked` 表示 `rfkill` 无法控制该设备，因为它连接到了机械开关。
+- `unblock index/type`
+    激活指定的设备，其指定方式与 `block` 相同。
+
+#### 示例
+
+测试计算机上有两个蓝牙适配器和一个 Wi-Fi 适配器。激活了其中一个蓝牙适配器：
+
+```
+root# rfkill list
+0: tpacpi_bluetooth_sw: Bluetooth
+         Soft blocked: yes
+         Hard blocked: yes
+1: hci0: Bluetooth
+         Soft blocked: yes
+         Hard blocked: no
+2: phy0: Wireless LAN
+         Soft blocked: yes
+         Hard blocked: no
+root# rfkill unblock 1 
+```
+
+### rkhunter [options]
+
+`rkhunter` shell 脚本（Rootkit Hunter）尝试检测安装在计算机上的 rootkit（根内核程序）。与 `chkrootkit` 相比，`rkhunter` 执行了更多的测试。然而，与 `chkrootkit` 一样，该程序并非完美：你必须预期会出现误报，并且程序可能完全检测不到现代 rootkit。
+
+在某些发行版中，安装 `rkhunter` 包时会设置一个 cron 脚本，它每天调用一次 `rkhunter` 并发送包含结果邮件。在 Debian 和 Ubuntu 上也提供此功能，但在 `/etc/default/rkhunter` 配置文件中它是禁用的。
+
+- `-c` 或 `--check`
+    执行 rootkit 搜索并显示结果。
+- `--update`
+    更新检测 rootkit 的模式文件。
+
+#### 示例
+
+该程序的简写版本输出如下：
+
+```
+root# rkhunter –check
+[ Rootkit Hunter version 1.4.6 ]
+正在检查系统命令
+...
+正在检查文件属性
+  正在检查 prerequisite                   [ OK ]
+  /usr/sbin/adduser                            [ OK ]
+  /usr/sbin/chroot                             [ OK ]
+  ...
+正在检查已知的 rootkit 文件和目录
+  55808 Trojan - Variant A                     [ 未找到 ]
+  ADM Worm                                     [ 未找到 ]
+  AjaKit Rootkit                               [ 未找到 ]
+  ...
+正在检查系统配置文件
+  正在检查 SSH 配置                       [ 已找到 ]
+  检查是否允许 SSH root 访问                   [ 警告 ]
+  检查是否允许 SSH 协议 v1                   [ 不允许 ]
+
+系统检查摘要：
+文件属性检查：已检查文件: 151,    可疑文件: 1
+Rootkit 检查：已检查 Rootkit: 475, 可能的 Rootkit: 0
+...
+所有结果已写入日志文件：/var/log/rkhunter.log 
+```
+
+### rm [options] files
+
+`rm` 删除指定的文件。除非使用 `-r` 选项，否则不会删除目录。`rmdir` 命令用于删除单个目录。如果要删除包含特殊字符的文件，必须将文件名包含单引号中。这里列出了 `rm` 最重要的选项：
+
+- `-f`
+    不询问直接删除（包括目录）。小心！
+- `-i` 或 `--interactive` 或 `-v` 或 `--verbose`
+    在删除每个单独文件之前显示确认提示。
+
+
+
+
+
+- `-r` 或 `-R` 或 `--recursive`
+
+还会删除所有子目录中的文件（小心！）。如果子目录的所有内容都被删除，该子目录本身也会被删除。
+
+#### 示例
+
+以下命令删除当前目录下所有的备份文件（以 `~` 字符结尾的文件）：
+
+```
+user$ rm *\char126 
+```
+
+`rm` 删除 `backup` 文件或目录。如果 `backup` 是一个目录，其中包含的所有子目录和文件也将被删除！
+
+```
+user$ rm -r backup 
+```
+
+`rm` 删除所有以哈希字符 (`#`) 开头的文件。需要使用单引号是为了确保 shell 不将 `#` 解释为注释。
+
+```
+user$ rm '#'* 
+```
+
+### rpicam-still [options]
+
+Raspberry Pi OS 上提供的 `rpicam-stall` 命令可以使用连接到树莓派的相机拍摄照片。
+
+- `--camera 0|1`
+  选择摄像头。只有在同时连接两个摄像头时才需要指定此选项。
+- `-e jpg|bmp|gif|png`
+  指定所需的图像格式（默认为 `jpg`）。
+- `--ev n`
+  设置曝光补偿。使用 `--ev 0.5` 生成的图像会亮半光级，使用 `--ev -0.5` 则变暗。
+- `--height n`
+  指定图像高度（默认为摄像机的最大分辨率）。
+- `-n`
+  在录制时不显示预览窗口。
+- `-o file`
+  指定图像文件名。
+- `-q n`
+  指示 JPEG 图像质量（范围为 `0` = 最小到 `100` = 最大）。
+- `--rotation n`
+  指定以角度为单位所需的旋转。仅允许 `0` 和 `180` 值。
+- `-t n`
+  指定创建照片前的毫秒数（默认为 5,000 毫秒，即 5 秒后）。为了尽可能快地拍照，必须输入 `-t 1`。
+- `--timelapse n`
+  指定拍摄额外照片的间隔毫秒数。在这种情况下，`-t` 控制整个命令的运行时间（例如，`-t 60000` 意味着分钟）。
+- `--width n`
+  指定图像宽度（默认为摄像机的最大分辨率）。
+
+#### 示例
+
+以下命令创建一个分辨率为 800 × 600 像素的照片，具有最短等待时间且不显示预览窗口：
+
+```
+user$ rpicam-still -n -t 1 -w 800 -h 600 -o foto.jpg 
+```
+
+第二个示例创建了编号的照片，稍后可以组合成延时摄影电影。在两分钟内，每 500 毫秒拍摄一次照片（产生 240 张图像）。
+
+```
+user$ rpicam-still -n -t 120000 --timelapse 500  -o foto-%d.jpg 
+```
+
+#### 变体
+
+该命令也可以用旧名称 `libcamera-still` 。除了 `rpicam-still`，你也可以运行 `rpicam-jpeg`。该命令选项略少，且不支持 JPEG 以外的任何图像格式。最后，你可以使用 `rpicam-hello` 来检查连接摄像头的功能。该命令会显示五秒的预览窗口，但不会保存任何图像。
+
+### rpicam-vid [options]
+
+`rpicam-vid` 命令使用相机录制 H264 格式的视频，它是树莓派的一个扩展程序。默认分辨率取决于摄像头型号。
+
+许多控制选项与之前描述的 `rpicam-still` 命令对应，包括 `--height`、`-n`、`-o`、`--rotation` 和 `--width`。在这里，我专注于两个 `rpicam-vid` 特有的选项：
+
+- `--framerate n`
+  指定每秒录制的帧数（默认 `30`）。当前的树莓派模型可以在降低分辨率的情况下处理每秒 120 帧，但随后必须使用各种附加选项。以尽可能帧率录制视频的提示可以在此处找到：
+[`github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/camera/rpicam_vid.adoc`](https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/camera/rpicam_vid.adoc)
+- `-t n`
+  以毫秒指定指定的视频长度。
+
+#### 示例
+
+以下命令录制一段长度为 10 秒、分辨率为 1,024 × 768 像素的视频：
+
+```
+user$ rpicam-vid --width 1024 --height 768 -t 10000 -o test.mp4 
+```
+
+### rmdir [options] directory
+
+`rmdir` 删除指定的目录。`rmdir` 只有在目录为空时才能运行。必须先使用 `rm` 删除任何已存在的文件。最重要的选项是：
+
+- `-p` 或 `--parents`
+  如果指定的目录（子目录除外）是空的，则也删除指定目录中的子目录。
+
+### rmmod [options] module name
+
+
+
+
+
+`rmmod` 从内核中移除指定的模块。这仅在模块不再被需要时才有效。
+
+### route [options]
+
+`route add/del [-net/-host] target address [options]`
+
+`route` 显示 IP 网络协议的路由表、添加新条目 (`add`) 或删除条目 (`del`)。目标地址可以用数字格式或网络名称指定。也允许使用 `default` 关键字作为目标地址以定义标准规则（例如，用于网关）。
+
+`route` 数据包被认为是过时的。如果可能，你应该使用 `ip` `route` 命令代替它。
+
+* `-host`
+  针对单台计算机。
+* `-n`
+  仅显示数字 IP 地址，且不联系域名服务器来解析分配的名称。
+* `-net`
+  针对一个网络。
+* `dev interface`
+  指定所需的网络接口（例如 `eth0`）。如果 `dev` 是最后一个选项，可以省略该关键字（即 `route add -net 192.34.34.34 netmask 255.255.255.0 eth1`）。
+* `gw routing address`
+  将数据包重定向到指定的路由器。
+* `netmask mask`
+  指定所需的网络掩码（例如 `255.255.255.0`）。
+
+#### Example
+
+第一条 `route` 命令定义 IP 地址 192.168.0.1 为默认网关。第二个命令显示新的路由表。
+
+```
+root# route add default gw 192.168.0.1
+root# route -n
+Kernel IP routing table
+Destination Gateway      Genmask        Flags Metric Ref Use Iface
+192.168.0.0 0.0.0.0      255.255.255.0  U     0      0     0 eth0
+0.0.0.0     192.168.0.1  0.0.0.0        UG    0      0     0 eth0 
+```
+
+### rpcinfo [options]
+
+`rpcinfo` 运行远程过程调用 (RPC) 并返回 RPC 服务器返回的结果。`rpcinfo` 主要用于检查 NFS 服务器配置。
+
+* `-p [hostname]`
+  确定本地计算机或外部计算机上所有活动的 NFS 和 RPC 服务列表。
+
+### rpm options [filename/package name]
+
+`rpm` 安装、更新或删除 RPM 包，或显示这些包的信息。`rpm` 可用于所有基于 RPM 包的发行版上，例如 Fedora、Red Hat 和 SUSE。
+
+* `-e` 或 `--erase`
+  移除已有的包。如果你还使用了 `--nodeps` 选项，即使其他包依赖于它，该包也会被移除。
+* `-i` 或 `--install`
+  安装指定的软件包文件。可以使用额外的 `--root directory` 选项更改安装位置。如果指定的包是源码包，程序代码和配置文件将安装在 `/usr/src`。在这种情况下，可以通过更改 `/etc/rpmrc` 来设置安装位置。
+
+  带有额外的 `--test` 选项，`rpm` 不会进行任何更改，仅输出在实际安装期间会发生的情况。
+
+  `rpm` 尝试自动检查签名包的完整性。然而，必须可用签名的公钥才能执行（参见 `--import` 选项）。如果你想让 `rpm` 跳过检查，必须使用 `--nosignature` 选项。
+
+  带有额外的 `--nodeps` 选项，即使 `rpm` 认为各种依赖关系未满足，你也可以安装包。（如果两个包相互依赖，则无需使用 `--nodeps`。你只需同时安装这两个包即可！）
+
+  额外的 `--ignorearch` 选项允许 `rpm` 识别出 CPU 架构不正确时仍进行安装。这在 64 位发行版上安装 32 位包时有时是必要的。
+
+  `--force` 选项强制在任何情况下进行安装，即使 `rpm` 认为该包已经安装。
+
+  额外的 `--noscripts` 选项确保 `rpm` 不运行安装程序。然而，你刚刚安装的程序可能无法正常工作。
+* `--import`
+  安装指定的 GPG 密钥。`rpm` 可以使用此密钥来检查签名包的完整性。所需的密钥文件可以在所有提供签名 RPM 包的网站站上找到。
+* `-q` 或 `--query`
+  提供有关已安装包或包文件内容的信息。在最简单的形式中，`rpm -q package name` 输出精确的包名，包括指定包的版本号。
+
+  你可以使用 `rpm -qf file` 来确定系统上的特定文件属于哪个包。这对于配置文件特别有用。例如，`rpm -qf /sbin/hwclock` 返回包名 `util-linux-n`。
+
+  `rpm -qp package.rpm` 提供尚未安装的包的信息。在这种情况下，必须使用 `*.rpm` 文件的文件名作为参数。
+
+
+
+
+
+`rpm -q --whatprovides attribute` 或 `rpm -q –whatrequires attribute` 用于搜索所有提供或需要指定依赖属性的已安装包。这两个选项并不适用于搜索尚未安装的包！
+
+`rpm -q --provides package` 或 `rpm -q --requires` 会创建指定包所提供或要求的属性列表。这些选项也可用于尚未安装的包文件（使用额外的 `-p` 选项）。
+
+对于所有返回包作为结果的查询变体，您可以使用额外的选项来控制找到的关于包的信息量：
+
+* `-i` : 包的简短描述、压缩后的 own
+* `-l` : 列出包中的所有文件
+* `-lv` : 同上，但包含文件大小、访问权限等更多信息
+* `-c` : 列出包的所有配置文件
+* `-d` : 列出该包的所有带有在线文档的文件
+* `--scripts` : 列出所有安装程序
+
+如果您只需要一个所有已安装包的未排序列表，应该运行不带任何额外参数的 `rpm -qa`。`rpm -qa --last` 会按安装日期对所有包进行排序（最近安装的包在最前面）。
+
+* `-U` 或 `--upgrade`
+更新现有包。系统将根据上一个包修改后的配置文件自动备份文件；旧包的所有其他文件将被新版本替换或删除。通过额外的 `--oldpackage` 选项，你可以用旧版本的包替换较新版本的包。您还可以使用 `--nodeps` 来确保 `rpm` 在升级时忽略包依赖关系。
+
+* `-V` 或 `--verify`
+检查包中的任何文件自安装以来是否发生了变化。该命令返回所有已更改文件的列表。文档文件不进行检查。
+
+#### 示例
+
+以下命令安装了指定的包：
+
+```
+root# rpm -i abc-2.0.7-1.x86_64.rpm 
+```
+
+第二个 `rpm` 示例提供了所有已安装包的列表，其中包按安装日期排序（最近安装的包位于列表顶部）：
+
+```
+root# rpm -qa --last 
+```
+
+`rpm -q --whatprovides` 告诉您之前安装的哪一个包提供了 `mysqli.so` 属性：
+
+```
+root# rpm -q --whatprovides mysqli.so php-mysql 
+```
+
+如果您不知道 `/etc/magic` 文件属于哪个包，可以通过 `rpm -qf` 确定此信息。然后，`rpm -qi` 提供包的描述：
+
+```
+root# rpm -qf /etc/magic
+   file-n.n
+
+root# rpm -qi file
+   ...
+   file 命令用于根据文件所包含的数据类型识别特定文件。 
+```
+
+### rpm2archive name.rpm
+
+`rpm2cpio name.rpm`
+
+`rpm2archive` 创建一个压缩的 TAR 归档（`name.rpm.tgz`），其中包含 RPM 包中的所有包文件。`rpm2archive` 适用于在不安装包的情况下从包中提取单个文件。
+
+### rsync [options] source
+
+`rsync [options] source target`
+
+`rsync` 将文件从源目录复制到目标目录，或同步这两个目录。在第一种语法变体（无目标目录）中，文件被复制到本地目录。`rsync` 在本地传输文件或通过网络加密传输。网络变体要求第二台电脑上运行 SSH 或 RSYNC 服务器。在复制命令开始之前必须输入密码。以下语法变体用于指定源和目标目录：
+
+| `file1 file2` | 本地文件 |
+| :--- | :--- |
+| `directory` | 本地目录 |
+| `host:dir` | `host` 电脑上的目录 |
+| `user@host:dir` | 与 `host:dir` 相同，但以 `user` 身份 SSH 登录 |
+| `rsync://user@host/dir` | 与 RSYNC 服务器通信 |
+| `rsync://user@host:port/dir` | 指定端口上的 RSYNC 服务器 |
+
+SSH 项目开发人员建议使用 `rsync` 而不是 `scp` 命令，因为 `scp` 的实现并不完善，且无法预见的解决方案。如果外部主机也安装了 `rsync` 且不涉及特殊的 `scp`get，你可以将 `scp` 直接替换为 `rsync`。相应的示例可以在 `scp` 中找到。
+
+* `-4` 或 `-6`
+当两种变体都可用时，强制使用 IPv4 或 IPv6 协议。
+
+* `-a` 或 `--archive`
+递归复制目录内容并保留所有文件信息。该选项是 `-rlptgoD` 的短写形式。
+
+* `--delete`
+删除目标目录中不再存在源目录的文件或子目录（小心！）。
+
+* `-D` 或 `--devices`
+同时也复制字符设备和块设备信息。
+* `-e command` 或 `--rsh=command`
+
+
+
+
+
+指定用于在目标计算机上运行 `rsync` 的外部 shell 程序。通常情况下，这将是 `ssh`。如果你想向命令传递额外的选项，必须将其放在引号中，例如 `-e "ssh -p 1234"`。
+
+*   `--exclude=pattern`
+    指定一个不应复制的文件模式。例如，`--exclude="*.o"` 会排除 `*.o` 文件。（要制定更复杂的模式，请参阅 `man rsync`。）
+
+*   `-g` 或 `--group`
+    赋予目标目录中的文件与源文件相同的组分配。
+
+*   `-l` 或 `--links`
+    在目标目录中完整复制来自源目录的符号链接。
+
+*   `-o` 或 `--owner`
+    赋予目标目录中的文件与源目录文件相同的所有者。
+
+*   `-p` 或 `--perms`
+    赋予目标目录中的文件与源文件相同的访问权限。
+
+*   `-r` 或 `--recursive`
+    递归复制所有子目录。
+
+*   `-t` 或 `--times`
+    赋予目标目录中的文件与源文件相同的修改时间。通过这种方式，`rsync` 在再次调用时可以清楚地识别哪些文件发生了变化。
+
+*   `-u` 或 `--update`
+    忽略目标目录已存在且比源文件新的文件。
+
+*   `-v` 或 `--verbose`
+    提供有关当前正在操作的详细信息。
+
+*   `-W` 或 `--whole-file`
+    在发生更改时复制整个文件。在快速网络连接下，这可以提高同步速度。
+
+    默认情况下，`rsync` 仅传输更改，从而最小化传输的数据量。`-W` 选项增加了传输量，但减少了检测更改所需的计算。如果源和目标目录是本地目录，`-W` 将自动应用。在这种情况下，你可以使用 `--no-whole-file` 来确保 `rsync` 仍然使用增量模式。
+
+#### 示例
+以下命令将 `mydata` 目录的所有文件同步到 `mars` 计算机的 `backup` 目录：
+```bash
+rsync -av --delete mydata/ backup/
+```
+以下示例将本地 `dir1` 目录与 `mars` 计算机上的 `dir2` 同步。因此必须输入 `user@mars` 的密码：
+```bash
+rsync -e ssh dir1 mars:dir2
+user@mars's password: ******
+```
+`rsync` 也可以用于恢复已中断的大文件传输（`scp` 无法做到这一点）。
+```bash
+rsync --partial --progress file user@host
+```
+
+#### S
+```bash
+rsync -e ssh -az dir1 mars:file
+```
+
+### scp [options] source target
+广泛使用的 `scp` 命令在两台计算机之间复制文件。传输过程是加密的。`scp` 要求第二台计算机上运行 SSH 服务器。源文件和目标文件必须如下所示指定：
+
+*   `file`: 本地文件
+*   `directory`: 本地目录
+*   `host:`: 目标计算机（复制到主目录）
+*   `host:file`: 指定计算机上的文件
+*   `host:directory`: 指定计算机上的目标目录
+*   `user@host:file`: 指定计算机上用户 `host` 的文件
+*   `user@host:directory`: 用户 `host` 的目标目录
+
+#### 示例
+以下命令将本地的 `abc.txt` 文件复制到 `mars` 计算机的 `~/efg` 目录：
+```bash
+user@uranus$ scp abc.txt mars:efg/
+user@mars's password: ******
+```
+`-r` 允许你传输整个目录。`--links` 选项确保 `rsync` 也考虑到符号链接，这通常情况下不是这样的（但 `scp` 是的）。
+```bash
+user$ scp -r local-dir/ mars:other-dir
+```- 
+```
+使用 `scp` 时，你可以使用 `-P` 选项传递端口号，如果对方的 SSH 服务器未使用标准的 22 端口。该选项在 `rsync` 中可用。相反，你必须使用 `-e` 来指定后台调用的 `ssh` 命令如何组成：
+```bash
+user$ scp -P 2222 file mars:
+user@mars's password: ******
+```
+
+### screen [options] [tty-device]
+
+
+
+
+
+来自同名软件包的 `screen` 是一个屏幕管理器，它可以将多个进程（会话）连接到终端。例如，你可以用它在 SSH 连接中并行运行多个命令，并在会话之间切换。`screen` 还可以将串口接口（TTY 设备）“重定向”到终端。
+
+`screen` 通过许多快捷键控制，所有快捷键都以 `Ctrl+A` 开头。`Ctrl+A, ?` 显示最重要的快捷键摘要，`Ctrl+A, \` 终止 `screen`。进一步的快捷键摘要列在“键盘快捷键”章节的表 5.15 中。
+
+你可以使用 `Ctrl+A, D`（分离）从 `screen` 中分离运行时间较长的进程。该进程将继续在后台运行。如果你稍后使用 `-r` 重启 `screen`，`screen` 将重新建立与会话的连接。
+
+* `-ls`
+    列出所有与 `screen` 分离的会话。
+
+* `-L`
+    将 `screen` 中执行的所有命令及其输出记录到文件 `screenlog.0`（第一个会话）、`screenlog.1`（第二个会话）等文件中。可以使用 `Ctrl+A, Shift+H` 开启或关闭日志。如果你想通过 `less` 读取日志文件，必须使用 `-r` 选项，以便记录的控制字符能够正确显示。
+
+* `-r [session-id]`
+    重新建立与已分离会话的连接。只有一个会话，可以省略会话 ID。
+
+#### 示例
+很难用文本形式解释 `screen` 的工作原理。如果你从未用过 `screen`，应该看一段短视频。例如，你可以搜索“screen command video”或“screen command video tutorial”！
+
+### scrot [options]
+来自同名软件包的 `scrot` 在使用 X 作为图形系统时会创建截图。（如果激活的是 Wayland，则你必须使用 grim 命令。）在没有额外参数的情况下，整个屏幕内容将保存为本地目录下的 `<time>_<resolution>_scrot.png`。
+
+* `-`
+    将截图转发到标准输出而不是保存到文件。
+
+* `-d n`
+    在延迟 `n` 秒后拍摄截图。
+
+* `-f name.png`
+    将截图保存到指定文件中。
+
+* `-s`
+    允许你在创建截图之前选择要显示的窗口。此选项通常与 `-d` 结合，以便在选择窗口后有足够的时间将该窗口置于前景。
+
+* `-u`
+    创建活动窗口的截图（而不是整个屏幕）。
+
+#### 示例
+在以下示例中，`scrot` 先等待 10 秒，然后对前景窗口进行截图，最后将其保存为 `myscreenshot.png`：
+
+```
+user$ scrot -d 10 -u -f myscreenshot.png 
+```
+
+### sdptool [options] 命令
+你可以使用 `bluez` 软件包中的 `sdptool` 根据服务发现协议 (SDP) 向蓝牙设备发送请求。`browse` 命令使用最频繁。
+
+* `browse bt-mac`
+    提供关于通过 MAC 地址指定的外部蓝牙设备的信息。你可以使用 `hcitool scan` 来确定 MAC 地址。
+
+* `browse local`
+    提供本地蓝牙适配器的详细信息。
+
+#### 示例
+`sdptool` 确定指定的蓝牙设备是一个支持逻辑链路控制和适配协议 (L2CAP) 以及人机接口协议 (HIDP) 的输入设备（人机设备）。
+
+```
+user$ sdptool browse 60:FB:42:FC:BB:8C
+Service Name: Wireless Mouse
+Service Class ID List:
+  "Human Interface Device" (0x1124)
+Protocol Descriptor List:
+  "L2CAP" (0x0100)
+    PSM: 17
+  "HIDP" (0x0011)
+... 
+```
+
+### sealert [options]
+`sealert` 帮助诊断 SELinux 规则违反。该命令需要 `settroubleshootd` 后台服务正在运行。
+
+```
+root# journalctl | grep setrouble
+...
+setroubleshoot[2685]: SELinux is preventing httpd from read access
+on the file test.html. For complete SELinux messages run
+sealert -l ca111078-1aba-4481-bbfc-fbd59d8ca6b9
+... 
+```
+
+如果你现在在非英语系统上运行 `sealert`，你会收到一段混合了本地语言和英语术语的文本。将本地化更改为英语会让文本更易读：
+
+```
+root# LANG= sealert -l ca111078-1aba-4481-bbfc-fbd59d8ca6b9
+SELinux is preventing httpd from read access on the file test.html.
+
+Plugin catchall_boolean (89.3 confidence) suggests
+
+如果你想允许 httpd 读取用户内容，那么你必须通过启用 'httpd_read_user_content' 布尔值来告诉 SELinux 这一点。你可以阅读 'httpd_selinux' 手页以获取更多细节。执行：
+
+setsebool -P httpd_read_user_content 1
+
+Plugin catchall (11.6 confidence) suggests
+
+如果你认为 httpd 应该默认允许对 test.html 文件进行读取权限，那么你应该将其报告为一个 bug ... 
+```
+
+遗憾的是，结果很少有实际帮助。
+
+* `-a logfile`
+    分析指定的日志文件，并提供有关该文件中记录的所有 SELinux 事件的信息。
+
+* `-l id`
+    指定 `sealert` 应为提供信息的 SELinux 事件。`-l '*'` 处理所有记录的 SELinux 规则违反。
+
+### sed [options] 命令 [< source > target]
+
+
+
+
+`sed` 是一个流编辑器。通常，该命令被用作文本过滤器，用于查找和编辑源文本中的某些字符或字符组合（删除、替换为其他字符等）。
+
+`sed` 由命令控制，这些命令适用于文本的所有行，或者仅适用于符合特定条件的行。
+
+- `-E`
+  激活扩展正则表达式（EREs）。默认使用 POSIX 基础正则表达式（Basic Regular Expressions）。`sed` 不兼容 PCRE。
+- `-i` `file`
+  直接修改文件（内联）。通常情况下，`sed` 从标准输入读取并写入标准输出。但在这种情况下，是不可能直接更改文件的。
+- `-i.backup-identifier` `file`
+  与上一个列表项类似，但原始文件将作为带有指定 ID 的备份被保存。
+
+遗憾的是，处理 `sed` 并不容易。即使是是对基本语法选项的描述，也将远超本参考手册的范围。这就是为什么我在书中仅将其限制在几个简单的示例上。你可以在以下网站找到关于 `sed` 的优秀介绍：
+
+[www.grymoire.com/Unix/Sed.html](http://www.grymoire.com/Unix/Sed.html)
+
+#### 示例
+
+在第一个示例中，`sed` 删除 `test` 文件的前三行，并将其余部分发送到标准输出，其中 `d` 代表 `sed` 命令的删除（delete）。`1,3` 指定了该命令生效的地址范围。
+
+```
+user$ sed 1,3d < test 
+```
+
+在第二个示例中，`sed` 将所有的“a”替换为“A”，其中 `s` 代表正则表达式查找和替换命令（substitute）。被 `/` 包围的内容是搜索模式和要插入的文本。由于命令前没有指定地址，它将应用于所有行。
+
+```
+user$ sed s/a/A/ < test 
+```
+
+第三个示例从 Markdown 文件中删除所有以 `\newpage` 开头的 LaTeX 语句。原始文件的备份被保存为 `test.md.bak`。
+
+```
+user$ sed -i.bak '/\\newpage.*/d'  test.md 
+```
+
+你可以使用 `sed` 复制或重命名文件的方法可以在 cp 命令描述的另一个示例中看到。
+
+### seq [options] end
+
+`seq [options] start end`
+
+`seq [options] start delta end`
+
+`seq` 返回一个数字序列。以下示例演示了它的工作原理。请注意，在浮点数的情况下，由于舍入误差，可能无法达到最终值，如最后一个示例所示。
+
+- `-s` `string`
+  指定用于分隔结果的字符。默认情况下，使用 `\n`，即换行。
+
+#### 示例
+
+以下示例展示了 `seq` 的用法。出于空间考虑，使用了空格作为分隔符。通常，每个数字都输出在单独的一行（即不使用 `-s` 选项）。
+
+```
+user$ seq -s ' ' 5
+1 2 3 4 5
+user$ seq -s ' ' 4 9
+4 5 6 7 8 9
+user$ seq -s ' ' 10 5 30
+10 15 20 25 30
+user$ seq -s ' ' 1 0.1 2
+1 1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 
+```
+
+如果你在 `bash` 脚本中编写 `for` 循环，你应该使用 `{start..end}` 或 `{start..ende..delta}` 符号，例如下面的命令所示：
+
+```
+user$ {\bfs for i in {100..150..10}; do echo $i; done}
+100 110 120 130 140 150 
+```
+
+### sestatus [options]
+
+`sestatus` 显示 SELinux 系统的状态。如果不带额外选项使用命令，它提供当前状态的摘要。
+
+- `-b`
+  同时也显示 SELinux 规则所有布尔参数（Boolean parameters）的状态。这些参数可以使用 `setsebool` 修改。
+- `-v`
+  还会显示 `/etc/sestatus.conf` 中列的文件和进程的上下文信息。
+
+#### 示例
+
+测试计算机上启用了 SELinux，并确保符合规则（`Current mode = enforcing`）。使用了 `targeted` 规则集。
+
+```
+root# sestatus -b
+SELinux status:                 enabled
+SELinuxfs mount:                /sys/fs/selinux
+SELinux root directory:         /etc/selinux
+Loaded policy name:             targeted
+Current mode:                   enforcing
+Mode from config file:          enforcing
+Policy MLS status:              enabled
+Policy deny_unknown status:     allowed
+Memory protection checking:     actual (secure)
+Max kernel policy version:      32
+
+Policy booleans:
+abrt_anon_write                 off
+abrt_handle_event               off
+abrt_upload_watch_anon_write    on
+antivirus_can_scan_system       off
+... 
+```
+
+### set
+
+`bash` 命令 `set` 显示 shell 已知的所有变量，包括环境变量，环境变量也可以通过 printenv 显示。`set -x` 使 `bash` 在执行每个命令之前，在考虑 `alias` 别名和文件名展开后，显示内部命令行的样子。
+
+### setcap [options] capability file name
+
+来自 `libcap-ng-utils` 包的 `setcap` 指定了可执行文件允许的操作（能力）。如果传递的是 `-r` 选项而不是 `capability`，则所有之前定义的权限将被删除。能力需要具有扩展属性的文件系统。因此，对于 ext 文件系统，你必须使用挂载选项 `user_xattr`。
+
+#### 示例
+
+
+
+
+
+`ping` 网络命令在许多发行版中曾配备了 `setuid` 位，以便普通用户可以使用它。一旦你删除了这个位，只有 `root` 能够使用 `ping`：
+
+```
+user$ ls -l /usr/bin/ping
+-rwsr-xr-x 1 root root 72776 Jan 31  2025 /usr/bin/ping
+user$ sudo chmod u-s /bin/ping
+user$ ping yahoo.de
+ping: icmp open socket: The operation is not permitted 
+```
+
+与其再次设置不安全的 `setuid` 位相比，使用 `setcap` 让 `ping` 命令访问内核的网络函数也足够了。你可以使用 `getcap` 来查看某个命令拥有哪些能力：
+
+```
+user$ sudo setcap cap_net_raw=ep /bin/ping
+user$ getcap
+/bin/ping /bin/ping = cap_net_raw+ep
+user$ ping yahoo.de
+PING yahoo.de (212.82.102.24) 56(84) bytes of data.
+...
+rtt min/avg/max/mdev = 58.054/58.054/58.054/0.000 ms 
+```
+
+在大多数当前的发行版中，`ping` 默认配备了能力，例如在 Debian、Fedora、openSUSE 和 Ubuntu 上。
+
+### setenforce 0|1|Enforcing|Permissive
+
+`setenforce` 在 `Enforcing`（1）和 `Permissive`（0）模式之间切换 SELinux。在 `Permissive` 模式下，违反规则会被记录，但受影响的程序可以继续不受阻地工作。然而，在 `Enforcing` 模式下，SELinux 会阻止程序执行规则禁止的进程。
+
+如果你想完全禁用 SELinux，必须在 `/etc/selinux/config` 中设置 `SELINUX=disabled` 并重启计算机。请注意，以后重新激活是非常困难的，因为那时你必须修正所有新文件的 SELinux 上下文。这就是为什么通常更喜欢 `Permissive` 模式。
+
+### setfacl [options] [aclaction] file name
+
+`setfacl` 修改指定文件或目录的扩展访问权限。这只有在文件系统支持访问控制列表（ACL）时才有效。对于 ext3/ext4 文件系统，必须使用 `mount` 选项 `acl`。
+
+该命令通常用于执行以下四个操作之一：
+
+* `-m` `aclrule`: 向现有的 ACL 中添加另一条规则（访问控制实体 [ACE]）。`m` 代表 modify）。
+* `-M` `aclrule file`: 与 `-m` 类似，但从文件中读取规则。规则文件必须看起来像 `getfacl` 的输出。
+* `-x` `aclrule`: 删除指定的 ACL 规则。
+* `-X` `aclrule file`: 与 `-x` 类似，但从文件中读取规则。
+
+ACL 规则（一个 ACE）的简化结构如下表所示。完整语法在 `man setfacl` 中记录。
+
+| `[u:]uid [:rights]` | 更改用户的权限 |
+| :--- | :--- |
+| `g:gid [:rights]` | 更改组的权限 |
+| `o[:] [:rights]` | 更改所有其他用户的权限 |
+| `m[:] [:rights]` | 设置 ACL 掩码（有效权限掩码） |
+
+`rights` 由多多三个字母组成：`r` 表示读，`w` 表示写，`x` 表示执行。要移除用户或组的所有权限，必须指定 `-`。
+
+如果你在整个规则前加上缀 `d:`，它将应用于标准 ACL。除了字母 `u`、`g`、`o` 和 `m`，你还可以使用 `user`、`group`、`other` 和 `mask` 关键字。
+
+`setfacl` 可以可以通过选项进行控制：
+
+* `-B` 或 `--remove-all`: 所有 ACL 规则。
+* `-d`: 将传递的规则应用于标准 ACL。
+* `-k` 或 `--remove-default`: 标准 ACL 规则。
+* `-n`: 不对每次 ACL 规则更改自动重新计算 ACL 掩码。
+* `--restore=file`: 将文件中指定的 ACL 规则应用于当前目录下的文件。你可以使用 `getfacl -R` 创建 ACL 备份文件。
+* `-R`: 将指定的规则递归应用到所有文件和子目录。
+
+#### 示例
+
+在带有 ACL 的文件系统中，通常应用默认访问权限，这些通常也被称为最小 ACL。`getfacl` 以 ACL 形式显示这些权限：
+
+```
+user$ touch file1
+user$ getfacl file1
+# file: file1
+# owner: kofler
+# group: kofler
+user::rw-
+group::r--
+other::r--
+user$ ls -l file1
+-rw-r--r-- 1 kofler kofler ...  file2 
+```
+
+使用 `setfacl`，你现在可以定义额外的访问规则。以下命令允许用户 `grace` 和 `docuteam` 组的所有成员对文件具有写和读权限，但拒绝用户 `katherine` 的任何访问：
+
+```
+user$ setfacl -m grace:rw file1
+user$ setfacl -m g:docuteam:rw file1
+user$ setfacl -m katherine:- file1 
+```
+
+
+
+
+
+`getfacl` 权限列表现在变得有点长了。使用 `ls -l` 时，通常访问字母后面会跟一个 `+` 号，表示存在 ACL 规则。
+
+```
+user$ getfacl file1
+# file: file1
+# owner: kofler
+# group: kofler
+user::rw-
+user:grace:rw-
+user:katherine:---
+group::r--
+group:docuteam:rw-
+mask::rw- other::r--
+
+user$ ls -l file1
+-rw-rw-r--+ 1 kofler kofler ... file1 
+```
+
+### setfattr [options] 文件名
+
+`setfattr` 修改所选文件或目录的扩展属性。只有在文件系统支持扩展属性（EAs）时此操作才有效。对于 ext3/ext4 文件系统，必须使用 `mount` 选项 `user_xattr`。
+
+- `-n attribute name` 或 `--name=attribute name`
+  指定要更改的属性名称。实际名称必须以 `user.` 前头（例如 `-n user.myattribute`）。
+- `-v value` 或 `--value=value`
+  指定要保存到属性中的值。
+- `-x attribute name`
+  删除指定的属性。
+- `--restore=file`
+  将文件中指定的 EA 定义应用到当前目录下的文件。你可以通过 `getfattr -R -d` 创建 EA 备份文件。
+
+#### 示例
+
+以下示例展示了如何使用 `setfattr` 存储属性以及如何使用 `getfattr` 读取它们：ext 文件系统中每个文件的属性数量是受限制的。
+
+```
+user$ touch file2
+user$ setfattr -n
+user.language -v en file2
+user$ setfattr --name=user.charset --value=utf8 file2
+user$ getfattr -d file2
+ # file: file2
+user.charset="utf8"
+user.language="en" 
+```
+
+`getfattr` 通常只返回以 `user.` 开头的属性。如果你想查看其他属性，必须使用 `-n` 指定它们的名称，或使用 `-m` 指定它们的匹配模式：
+
+```
+user$ getfattr -n security.selinux -d tst
+# file: tst security.selinux="user_u:object_r:user_home_t:s0⁰⁰⁰" 
+```
+
+### setsebool [options] bool1=value1 bool2=value2 ...
+
+`setsebool` 在运行时更改布尔参数。布尔参数用于更改某些 SELinux 规则的行为。你可以通过 `sestatus -b` 确定哪些布尔参数是可。
+
+- `-N`
+  保存更改但不激活。因此，更改只有在下次重启电脑时才会生效。
+- `-P`
+  执行更改并永久保存设置。更改将立即生效，并在未来（即下次重启后）也同样生效。
+
+#### 示例
+
+以下命令允许 Squid 程序充当透明代理代理运行：
+
+```
+root# setsebool -P squid_use_tproxy 1 
+```
+
+### setterm [option]
+
+`setterm` 修改终端的各种设置。如果在不指定选项的情况下执行该命令，它将显示所有可用选项的列表。这里列出了 shell 编程中有用的选项：
+
+- `--background color`
+  设置背景颜色。允许的颜色有 `black`（黑色）、`red`（红色）、`green`（绿色）、`yellow`（黄色）、`blue`（蓝色）、`magenta`（洋红色）、`cyan`（青色）和 `white`（白色）。为了确保在 `ls` 或 `grep` 输出颜色后设置仍然有效，必须与 `--store` 结合使用。
+- `--blank n`
+  在无输入 `n` 分钟后激活屏幕保护程序（仅用于文本控制台）。
+- `--bold on|off`
+  启用或禁用粗体字体。在文本控制台中，文字不会加粗，但颜色至少与其它文字不同。
+- `--clear`
+  清除终端内容。
+- `--default`
+  将颜色和文本属性恢复为默认设置。
+- `--foreground color`
+  设置字体颜色。
+- `--half-bright on|off`
+  启用或禁用高亮字体。
+- `--inversescreen on|off`
+  反转文本控制台的显示（白底黑字）或恢复正常状态。
+- `--reverse on|off`
+  启用或禁用反转字体。
+- `--store`
+  记住颜色设置（`--foreground` 和 `--background` 选项），以便即使 `ls` 或 `grep` 等命令临时使用不同颜色，设置依然有效。`--store` 仅在 Linux 文本控制台中有效，在终端窗口中无效。这些设置在那里也不会保存到文件中，注销时将丢失。
+- `--underline on|off`
+  启用或禁用下划线字体。
+
+#### 示例
+
+如果将以下行插入 `.bashrc` 中，登录后文本控制台将使用白色背景和黑色字体：
+
+```
+# 插入到 .bashrc
+setterm -background white -foreground black -store 
+```
+
+### sfdisk [options]
+
+
+
+
+
+`sfdisk` 列出硬盘的分区情况或对硬盘进行重新分区。该命令特别适用于自动化分区（例如在脚本中），或用于将现有的分区方案传输到第二块硬盘，例如在设置 RAID 阵列时。
+
+`sfdisk` 仅适用于 MBR 分区表，不适用于具有 GUID 分区表 (GPT) 的磁盘！
+
+*   `-d [device]`
+    列出所有硬盘或指定硬盘的所有分区。输出格式适用于供 `sfdisk` 进一步处理。
+*   `--force`
+    即使 `sfdisk` 认为分区或硬盘正在使用中，或者分区边界与磁道边界不匹配，也执行分区。
+*   `-l [device]`
+    以可读格式列出所有硬盘或指定硬盘的所有分区。通过额外的 `-uS`、`-uB`、`-uC` 或 `-uM` 选项，`sfdisk` 可以使用扇区（512 字节）、块（1,024 字节）、磁道或 MiB 作为测量单位。
+*   `-s device`
+    返回指定硬盘或分区的块数（每个块 1,024 字节）。
+*   `-uS|-uB|-uC|-uM`
+    使用扇区（512 字节）、块（1,024 字节）、磁道或 MiB 作为测量单位。
+*   `device < partitioning table`
+    使用传输的分区表对硬盘重新分区。分区表的格式必须与 `sfdisk -d` 的输出相同。
+
+#### 示例
+
+以下命令按照第一块硬盘（/dev/sda）完全一样对第二块硬盘（/dev/sdb）进行分区。第二块硬盘的容量至少与第一块相同。第二块硬盘上的所有分区和数据将丢失。
+
+```
+root# sfdisk -d /dev/sda | sfdisk /dev/sdb 
+```
+
+### sftp [options] sshserver
+
+sftp [option] user@sshserver:filename
+
+`sftp` 是不安全的 `ftp` 命令的替代方案。在第一种语法变体中，`sftp` 与指定的 SSH 服务器建立连接。登录后，你可以交互式地在本地计算机和 SSH 服务器之间传输文件。在第二种语法变体中，`sftp` 在输入密码后直接将指定的文件传输到本地计算机。
+
+*   `-b batch file`
+    运行批处理文件中指定的命令。
+
+### sgdisk [option] device
+
+`sgdisk` 帮助编辑硬盘和 SSD 上的 GUID 分区表。与 `parted` 不同，该命令由选项控制，不用于交互式操作。相反，你可以使用 `sgdisk` 在脚本控制下创建或操作分区表。尽管名称相似，`sgdisk` 预期的选项与 `sfdisk` 完全不同。`sgdisk` 使用 IEC 记法的 MiB 和 GiB。
+
+*   `-a n`
+    指定新分区对齐的扇区倍数。默认情况下，`sgdisk` 使用值 `2048`。这对应于 1 MiB。
+*   `-b file`
+    将分区表的备份写入二进制文件。
+*   `-d nr`
+    删除指定的分区。
+*   `-G`
+    为所有分区分配新的随机 GUID。这在克隆硬盘后是必须的。
+*   `-l file`
+    根据文件在存储的分区表对数据介质进行分区。必须先使用 `-b` 选项创建文件。数据介质上的所有现有分区将被删除。`sgdisk -b` 和 `sgdisk -l` 命令的组合可以将硬盘的分区布局传输到相同大小的第二个磁盘上，例如在设置 RAID 系统时。
+*   `-n nr:start:end`
+    创建编号为 `nr` 的新分区，它从指定的起始位置延伸到结束位置。默认情况下，`start` 和 `end` 以 512 字节扇区为单位。此外，你也可以指定 MiB 和 GiB 位置。`sgdisk -n 3:10G:35G` 创建一个大小为 25 GiB 的新分区。
+    起始和结束位置可以用 `+` 和 `-` 字符。`+` 允许相对于默认起始扇区的输入；`-` 允许从硬盘末尾计算规格。`sgdisk -n 4:+1M:-20G` 创建一个从上一个分区之后 1 MiB 处开始并在数据介质末尾留出 20 GiB 空闲的分区。
+
+#### 示例
+
+以下命令首先在 /dev/sdb 磁盘上创建分区表的备份，然后设置新的分区 3：
+
+```
+root# sgdisk -l partbackup /dev/sdb
+root# sgdisk -n 3:70G:430G /dev/sdb 
+```
+
+### shansum files
+
+
+
+
+
+`sha1sum`, `sha224sum`, `sha256sum`, `sha384sum` 和 `sha512sum` 用于为所有指定的文件计算校验和。命令中的数字表示校验和的位长度（`sha1sum` 为 160 位）。校验和用于确保文件在传输后未发生更改。
+
+#### 示例
+
+以下命令为 ISO 文件计算一个 256 位的数的校验和：
+
+```
+root# sha256sum image.iso
+6ad62fe91eefa4315f852eb1bc8732bc341d95b47f6b4d1f5e362d3629fc981b  image.iso 
+```
+
+## shift [n]
+
+`bash` 命令 `shift` 用于移动通过预定义变量 `$1` 到 `$9` 传递给 shell 脚本的参数列表。如果在使用 `shift` 时不带参数，则参数将移动一位；否则，它们将移动 `n` 位。
+
+`shift` 仅用于脚本编程。当需要处理超过九个参数时，该命令是一个非常有用的工具。一旦参数通过 `shift` 移出变量，它们将无法被再次引用。它们也会从 `$*` 变量中移除。
+
+## showmount [options]
+
+在没有额外选项的情况下，在 NFS 服务器上执行 `showmount` 命令将返回所有通过 NFS 3 使用共享目录的客户端列表。请注意，结果中不包含 NFS 4 目录，这些只有在使用 `showmount -e` 变体时才会考虑。
+
+- `-a`: 同时为每个 NFS 3 客户端提供 IP 地址。
+- `-e [hostname]`: 提供所有可以通过 NFS 使用的目录列表，无论该服务当前是否在使用。如果您指定了主机，将确定此计算机上可用目录列表。`showmount -e` 也适用于 NFS 4。
+
+#### 示例
+
+```
+root# showmount -e
+/nfsexport       *.lan,10.0.0.0/24
+/nfsexport/fotos *.lan,10.0.0.0/24
+/nfsexport/iso   * 
+```
+
+## shutdown [options] time [message]
+
+`shutdown` 用于关机。必须指定时间（`hh:mm`）、分钟数（从当前时间计算，`+m`）或 `now` 关键字（即立即执行）。`shutdown` 只能由 `root` 执行。Linux 的配置通常允许，使得没有 `root` 权限的用户可以通过 Alt+Ctrl+Del 重启计算机。
+
+`shutdown` 会通知所有其他用户系统即将关闭，并且不再允许新登录。随后，所有进程将收到警告，称它们将被停止。某些程序（例如 `emacs` 或 `vi`）会利用此警告并保存打开的文件。
+
+- `-c`: 尝试取消已经启动的 `shutdown` 进程。
+- `-f`: 启动类似于 `-r` 的重启。
+- `-F`: 导致在下次重启时检查文件系统。`shutdown` 会为此目的创建 `/forceck` 文件。如果该文件存在，大多数发行版会在重启时触发文件检查。
+- `-h`: 停止系统。计算机不再响应输入，屏幕上会显示停止信息。
+- `-n`: 特别快速地关机，跳过 init 系统。
+- `-r`: 在系统关闭后启动重启。
+- `-t seconds`: 定义警告消息与进程杀死信号之间的等待时间。
+
+## sleep
+
+`sleep` 让运行中的程序进入睡眠模式，持续指定的时间。在此期间，程序不消耗计算时间。时间通常以秒为单位。可以选择添加字母 `m`、`h` 或 `d` 来指定分钟、小时或天。
+
+## slurp
+
+来自同名软件包的命令允许在 Wayland 上在屏幕上选择一个矩形。然后它将矩形左上角的坐标和矩形的大小作为文本返回。该命令可以与 `grim` 结合使用，例如选择截图区域。
+
+遗憾的是，`slurp` 并不兼容所有的 Wayland 合成器。`slurp` 在 Raspberry Pi OS 上运行良好，但在使用 Gnome 或 KDE 作为桌面系统的发行版中会失败。
+
+## smartctl options device
+
+`smartctl` 控制硬盘的 SMART 功能。这允许您在早期阶段检测出潜在的硬盘问题。
+
+- `-a` 或 `--all`: 提供所有可用的 SMART 信息。
+- `-d ata/scsi/3ware,n`: 指定硬盘类型。只有当 `smartctl` 无法识别类型时，才需要此选项。这特别适用于 `smartctl` 经常认为是 SCSI 硬盘的 SATA 硬盘。`3ware,n` 设置允许对连接到 3ware RAID 控制器的硬盘使用 SMART 功能（详情请参阅 `man smartctl`）。
+
+
+
+
+
+* `-H` 或 `--health`
+  指示硬盘当前是否正常，以及是否可能在未来 24 小时内继续工作。
+
+* `-i` 或 `--info`
+  提供有关硬盘的基本信息。
+
+* `-l error/selftest` 或 `--log=error/selftest`
+  提供过去五个错误信息或最后 21 次自检的结果。
+
+* `-s on/off` 或 `--smart=on/off`
+  激活或禁用 SMART 功能。
+
+* `-t short/long` 或 `--test=short/long`
+  执行短自检或长自检。你稍后可以使用 `-l selftest` 查看测试结果。
+
+#### 示例
+
+`smartctl -H` 或 `smartctl --health` 表示硬盘当前是否健康。如果 `smartctl` 在此处返回的结果不是 PASSED，你应该立即开始执行全量备份！
+
+```
+root# smartctl -H /dev/sda
+...
+SMART overall-health self-assessment test result: PASSED 
+```
+
+到目前为止，`/dev/sda` 硬盘已执行了三次自检：一次是在安装磁盘后立即进行的（运行 40 小时后），另外两次是在运行约 2600 小时后。没有发生任何问题。
+
+```
+root# smartctl -t short /dev/sda
+root# smartctl -t long /dev/sda
+...
+root# smartctl -l selftest /dev/sda
+Num  Test_Description  Status                    Remaining  LifeTime  LBA
+# 1  Extended offline  Completed without error         00%      2592    -
+# 2  Short offline     Completed without error         00%      2591    -
+# 3  Short offline     Completed without error         00%        40    - 
+```
+
+### smbclient [options]
+
+smbclient directory [password] [options]
+
+`smbclient` 支持对 Windows 网络目录进行交互式访问。在第一种语法变中，你使用程序确定可用的 Windows 资源。在第二种变中，你输入指定的网络目录（例如，如果你想使用 `mars` 计算机上的 `data` 目录，可以使用 `//mars/data`）。一旦建立连接，你将进入一个 shell。与 `ftp` 命令一样，你随后可以通过 `ls` 查看目录，使用 `cd` 切换目录，通过 `get`（下载）将文件传输到本地计算机，并使用 `put`（上传）在外部计算机上保存文件。你可以通过 `help` 获取重要命令的概述。
+
+* `-L` `computer name`
+  返回指定的 Windows 或 Samba 服务器上的网络资源列表。
+
+* `-m` `protocol`
+  指定最大协议版本。`-m SMB2` 强制使用 SMB2 协议，即使可以使用 SMB3。此选项仅在少数为了避免兼容性问题的情况下是必要的。
+
+* `-N`
+  跳过自动密码提示。只有当你确定访问特定网络资源不需要密码时，此选项才有用。
+
+* `-U` `username`
+  指定用户名（仅当其与当前登录名不同时才需要）。
+
+* `-W` `workgroup name`
+  指定 Windows 工作组名称（仅当其未包含在 `/etc/samba/smb.conf` 中时才需要）。
+
+#### 示例
+
+首先，`smbclient` 建立了与 NAS 硬盘的连接，然后 `ls` 返回存储在那的目录和文件列表：
+
+```
+user$ smbclient -U name -W wgname //mynas/myshare
+Password: xxxxxx
+Domain=[wgname] OS=[Unix] Server=[Samba 3.5.2]
+smb: > ls
+  data               D        0  Apr  5 18:17:11 2025
+  file.xy           AR      226  Sep 14 00:00:00 2024   ... 
+```
+
+在第二个示例中，`smbclient` 建立了与树莓派上 LibreELEC 媒体中心的连接。它列出了那里可用的网络目录，这些目录默认无需密码访问。`-U none` 在此处仅指定了一个无效的用户名。
+
+```
+user$ smbclient -L libreelec -U none -N -m SMB2
+Sharename       Type      Comment
+---------       ----      -------
+Music           Disc
+Screenshots     Disk
+Videos          Disk
+... 
+```
+
+### smbpasswd [options] [name]
+
+`smbpasswd` 修改活动或指定 Samba 用户的密码。
+
+* `-a`
+  创建一个新的 Samba 账户。必须有一个同名的 Linux 账户。
+
+* `-n`
+  删除指定账户的密码。如果 Samba 服务器配置恰当（`null passwords = yes`），则现在无需密码即可网络目录。
+
+* `-x`
+  删除指定的 Samba 账户。
+
+### smbstatus [options]
+
+`smbstatus` 返回运行在计算机上的 Samba 服务器的版本号以及所有活动连接的列表。
+
+### snap [options] 命令
+
+几年前，Ubuntu 引入了一种新的软件包安装系统。它与仍然占据主的 Debian 软件包系统并行运行（参见 [apt] 和 [dpkg]），其目标与 Red Hat 支持的 Flatpak 方法类似（参见 [flatpak]）。与 Flatpak 一样，Snap 对所有发行版开放，但在 Ubuntu 之外尚未发现任何主要的发行版在使用它。
+
+Snap 包通常通过名为 Software 的 Gnome 程序安装。`snap` 命令提供了在终端管理 Snap 包的选项。
+
+* `find` `search term`
+  在标准 Snap 软件包源 [`snapcraft.io`](https://snapcraft.io) 的包描述中搜索指定的术语。
+
+* `install [--classic]` `name`
+
+
+
+
+
+安装指定的软件包（需要 `root` 权限或 `sudo`）。只有某些软件包需要指定 `--classic` ，这些软件包需要对文件系统的无访问，因此以较不严格的安全规则运行。你可以使用 `--edge`、`--beta` 或 `--candidate` 选项从指定的测试通道安装软件包。（如果不使用这些选项，将使用发布通道。）
+
+*   `list`
+    列出之前安装的 Snap 软件包。
+
+*   `refresh`
+    显示所有已安装的软件包。
+
+*   `remove` `name`
+    卸载指定的软件包。
+
+#### 示例
+
+以下命令安装 Atom 编辑器：
+
+```
+user$ sudo snap install --classic atom
+atom 1.51.0 installed from Snapcrafters 
+```
+
+### snapper [options] 命令
+
+SUSE 发行版默认对系统分区使用 Btrfs 文件系统。YaST 会在每次管理操作的前后自动创建快照。这些快照可以使用 YaST 的 Snapper 模块或此处简要介绍的 `snapper` 命令进行管理。你可以在执行 `snapper` 命令前加上一个或多个选项：
+
+*   `--iso`
+    以 ISO 格式化时间。
+
+*   `--utc`
+    显示 UTC 时间（协调世界时）。
+
+将执行的操作由子命令指定：
+
+*   `cleanup number|timeline|empty-pre-post`
+    删除旧快照，使用最大快照数量、其年龄或内容作为标准（另见 `/etc/snapper/configs/root` 配置文件）。
+
+*   `create`
+    创建一个新快照。
+
+*   `delete` `n` 或 `n1-n2`
+    删除指定的快照。使用的数字可以在 `snapper list` 中找到。
+
+*   `list`
+    列出所有快照。
+
+*   `rollback [n]`
+    将指定的或最近的可用快照设为活动快照（严格来说：是 Btrfs 默认子卷）。随后的 `reboot` 将恢复系统。
+
+*   `undo n1..n2`
+    撤销指定文件在 `n1` 和 `n2` 之间所做的更改。
+
+### sort [options] file
+
+`sort` 命令对指定的文件进行排序并将结果显示在屏幕上。排序顺序由 `LC_COLLATE` 变量定义。
+
+*   `-c`
+    检查文件是否已排序。
+
+*   `-f`
+    将小写和大写字母视为等等。
+
+*   `-k n1[n2]`
+    仅考虑列。列编号从 1 开始。如果未指定 `n2`，则考虑从 `n1` 到行尾的所有字符。
+
+*   `-m`
+    将两个或多个预排序的文件合并为一个已排序的文件。这比直接对它们进行排序更快。
+
+*   `-n`
+    按数字排序（即 10 排在 9 之后）。
+
+*   `-o file`
+    将结果写入指定的文件。
+
+*   `-r`
+    按反序排序。
+
+*   `-t z`
+    指定列之间的分隔符。默认设置是空格和制表符的任意组合。
+
+*   `-u`
+    消除结果中的重复项（例如 `sort | uniq`）。
+
+#### 示例
+
+以下命令根据用户名和组名对 `ls` 传递的内容进行排序。具有相同用户名和组名的文件按大小排序。
+
+```
+user$ ls -l | sort -k 3
+```
+
+### source file
+
+`source` 在 `bash` 脚本中运行指定的文件，就像其包含的命令位于 `source` 命令所在的位置一样。一旦文件执行完毕，运行中的 shell 程序将继续执行后续行。系统不会启动新的 shell 来运行该文件。因此，所有变量（包括参数列表）也适用于该文件。如果在此文件中执行了 `exit`，则不会返回到使用 `source` 命令的程序，而是程序执行将立即结束。
+
+`source` 有一种短形式 `. file`，其中点代表空格。
+
+### speaker-test [options]
+
+来自 `alsa-utils` 包的 `speaker-test` 命令帮助你追踪音频系统中的问题。为此，它会生成通过音频系统输出的测试音调。
+
+*   `-c n`
+    使用 `n` 个音频通道。
+
+*   `-f n`
+
+
+
+
+
+以指定的赫兹（Hertz）频率播放正弦波。同时，必须使用 `-t sine` 选项。
+
+* `-s` `n`
+
+  仅测试编号为 `n` 的音频通道。
+
+* `-t pink|sine|wav`
+
+  输出粉红噪声、正弦波或来自 WAV 文件的语音模式。
+
+* `-w` `file`
+
+  播放指定的 WAV 文件。同时必须使用 `-t wav` 选项。
+
+#### 示例
+
+以下命令通过左侧和右侧音频通道分别输出左前或右前的词汇。语音模式从 WAV 文件加载。可以再次按 Ctrl+C 终止输出。
+
+```
+user$ speaker-test -t wav -c2 
+```
+
+### split [options] file [target file]
+
+`split` 用于将指定的文件拆分为多个单独的文件。输出文件每隔 n 个字节或 n 行（取决于选项）进行拆分。如果未指定目标文件，命令将返回 `xaa`、`xab` 等文件。如果指定了目标文件，则使用该文件名配合 `aa`、`ab` 等字符组合作为结果文件的名称。
+
+* `-n` `n` 或 `-l` `n` 或 `--lines=n`
+
+  将源文件拆分为每个包含 `n`行的单独文件。
+
+* `-b` `n` 或 `--bytes=n`
+
+  每隔 `n` 个字节分离输出文件。大小也可以用 KiB、MiB、GiB 或 1000 字节的倍数指定：`KB` (1000 字节),`K` (1024 字节),`MB` (10⁶ 字节),`M` (1024² 字节),`GB` (10⁹ 字节) 或 `G` (1024³ 字节)。
+
+* `-C` `n` 或 `--line-bytes=n`
+
+  类似于 `-b`，但会在行边界拆分文件，因此文件通常比 `n` 小几个字节。
+
+#### 示例
+
+在以下示例中，`split` 将存档文件 `backup.tgz` 拆分为每个 4 GiB 的单独文件，并命名为 `dvd.aa`、`dvd.ab` 等：
+
+```
+user$ split -C 4G backup.tgz dvd. 
+```
+
+`cat` 将单独的文件重新组合成一个完整的文件：
+
+```
+user$ cat dvd.* > total.tgz 
+```
+
+### sqlite3 [options] database file
+
+`sqlite3 [options] database file "sqlcommand1;sql2..."`
+
+`sqlite3` 通常用作编辑 SQLite 数据库的 shell。启动后，你可以交互式地运行 SQL 命令，所有命令必须以分号结束。除了常用的 SQL 命令外，`sqlite3` 还知道一些以点开头的特定命令，例如 `.help` 显示帮助文本或 `.tables` 列出数据库中的所有表。`.quit` 或 Ctrl+D 可终止 `sqlite3`。
+
+在第二种语法变体中，`sqlite3` 直接运行指定的 SQL 命令。
+
+#### 示例
+
+以下命令确定哪些音乐专辑存储在 ownCloud 数据库中：
+
+```
+user$ sqlite3 owncloud.db
+sqlite> select * from albums;
+1|
+2|
+3|...
+sqlite> .quit
+```
+
+### ss [options]
+
+`ss (socket statistics)` 分析本地计算机的网络活动。如果不带选项执行命令，它将返回所有套接字（sockets）列表。`ss` 提供了与 `netstat` 类似的功能，但被认为是更现代命令。
+
+* `-4` 或 `-6`
+
+  仅获取 IPv4 或 IPv6 连接。
+
+* `-a`
+
+  显示所有套接字，包括监听和非监听的。
+
+* `-e`
+
+  提供更多细节（扩展）。
+
+* `-n`
+
+  显示数字端口号，而不是服务名称。
+
+* `-p`
+
+  指定哪些进程使用了哪些套接字。
+
+* `-r`
+
+  将端口号替换为服务名称。
+
+* `-s`
+
+  仅显示摘要信息。
+
+* `-t` 或 `-u`
+
+  仅获取 TCP 或 UDP 连接。
+
+#### 示例
+
+以下命令提供了适用于 IPv6 的所有活跃 TCP 套接字列表：
+
+```
+user$ ss -6 -t -a
+State      Recv-Q Send-Q   Local Address:Port             Peer Address:Port
+LISTEN     0      100      :::pop3                       :::*
+LISTEN     0      100      :::imap2                      :::*
+LISTEN     0      128      :::http                       :::*
+LISTEN     0      100      :::smtp                       :::*
+LISTEN     0      128      :::https                      :::*
+LISTEN     0      100      :::imaps                      :::*
+LISTEN     0      100      :::pop3s                      :::*
+TIME-WAIT  0      0        ::ffff:5.9.22.28:http   ::ffff:188.192.181.195:50045
+TIME-WAIT  0      0        ::ffff:5.9.22.28:http   ::ffff:188.192.181.195:50047
+ESTAB      0      46200    ::ffff:5.9.22.28:http   ::ffff:46.10.92.30:22893
+FIN-WAIT-1 0      1        ::ffff:5.9.22.28:https  ::ffff:203.134.55.243:51106
+```
+
+### ssh [options] computer name
+
+`ssh [options] computer name command`
+
+
+
+
+
+在种语法变体中，`ssh` 在另一台计算机上打开一个 shell，从而能够在该计算机上进行交互式操作。第二种语法变体在第二台计算机上运行单个命令。只有当第二台计算机上运行着 SSH 服务时，`ssh` 才能工作。
+
+* `-l` `loginname`
+  在第二台计算机上使用指定的登录名而不是当前用户名。所需的登录名也可以以此格式输入：`ssh loginname@computername`。
+
+* `-L` `localport:host:hostport`
+  在本地计算机（`localport` 端口）和第二台计算机（`hostport` 端口）之间建立隧道。
+
+* `-o` `option=value`
+  启用与 `/etc/ssh/ssh_config` 文件相同的语法附加选项（参见 `man ssh_config`）。例如，`-o StrictHostKeyChecking=no` 会导致 SSH 停止检查已保存在 `.ssh/know_host` 中的主机数据目。这对于许多虚拟机的自动化管理非常有帮助。
+
+* `-t`
+  强制使用伪终端执行格式为 `ssh -t hostname "commands"` 的命令。这使得能够通过 SSH 启动 `top` 等交互式程序。连接会持续外部命令结束才停止（对于 `top`，这通过输入 Q 完成）。
+
+* `-T`
+  防止激活伪终端。你可以在以下示例中找到此选项的应用。
+
+* `-v`
+  提供详细的调试信息。如果你遇到登录问题，`ssh -v` 通常可以帮助你找到原因。该选项可以指定三次（即 `-v -v -v`）；此时 `ssh` 将提供更多的调试信息。
+
+* `-X`
+  启用执行 X  程序。
+
+#### 示例
+
+以下命令展示了你如何登录到外部计算机，同时保持用户名不变。然后你可以在外部计算机（例如，你的 root 服务器）上运行命令。
+
+```
+kofler@uranus$ ssh kofler.info
+kofler@kofler.info's password: ******** 
+```
+
+当你第一次使用 `ssh` 连接到另一台计算机时，通常会根据如下模式出现警告：
+
+```
+The authenticity of host 'kofler.info (1.2.3.4)' can't be established.
+RSA1 key fingerprint is 1e:0e:15:ad:6f:64:88:60:ec:21:f1:4b:b7:68:f4:32.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'kofler.info,1.2.3.4' to the list of known hosts. 
+```
+
+以下命令展示了我如何将我的 `kofler.info` Web 服务器的整个 `/var/www` 目录树拷贝到本地的 `~/bak` 目录。这里使用 `ssh` 运行单个命令（`tar`）。这假设 `kofler@kofler.info` 可以读取 `/var/www` 中的所有文件。基本上，也可以使用 `ssh -l root` 以 `root` 权限运行 `tar` 命令。然而，出于安全考虑，大多数 SSH 服务器配置为无法直接以 `root` 登录。
+
+`tar` 的结果通过 SSH 安全地传输到本地计算机，并由第二个 `tar` 命令进一步处理：
+
+```
+kofler@uranus$ ssh kofler.info tar -cf - /var/www | tar -cf -
+kofler@info.info:*** 
+```
+
+要通过 SSH 在另一台服务器的脚本运行多个命令，你可以结合 `bash` 的 HEREDOC 语法和 `ssh` 选项 `-T`。以下命令更改了外部主机上 `someaccount` 的密码，然后运行了几条命令：
+
+```bash
+#!/bin/bash
+pw=strictlysecret
+...
+ssh -T root@host <<ENDSSH
+echo someaccount:$pw | chpasswd
+rm -f /file1
+cp /file2 /file3
+```
+
+### ssh-copy-id [options] user@host
+
+`ssh-copy-id` 将本地计算机的公钥插入主机的 `.ssh/authorized_keys` 文件中。如果有多个密钥，将由 `ssh-add -L` 命令决定传输哪个密钥。
+
+* `-i [key file]`
+  传输指定的密钥文件或 `.ssh/id_rsa.pub`。
+
+如果 `ssh-copy-id` 脚本可用或由于外部服务器的安全设置导致密钥传输失败，必须手动将公钥文件（通常是 `.ssh/id_rsa.pub`）传输到服务器并将其添加到那里的 `.ssh/authorized_keys` 文件中。
+
+如果主机系统运行的是 Fedora、RHEL 或其衍生版本，使用 `ssh-copy-id` 可能会导致 `.ssh` 目录和 `authorized_keys` 文件在没有 SELinux 上下文信息的情况下创建。主机上的以下两条命令之一可以帮助：
+
+```
+root# /sbin/restorecon -r /root/.ssh
+root# /sbin/restorecon -r /home/username/.ssh 
+```
+
+### ssh-keygen [options]
+
+`ssh-keygen` 生成、管理和转换用于 SSH 认证的加密密钥。如果在没有额外选项的情况下调用 `ssh-keygen`，它将生成一个长度为 2048 位的 RSA 密钥对。密钥的私部分和公部分存储在 `.ssh/id_rsa` 和 `.ssh/id_rsa.pub` 文件中。
+
+
+
+
+默认情况下，密钥的访问受密码保护；如果你简单地按下 `Enter` 而不是输入密码，则将跳过此安全功能。如果一个未受密码保护的私钥落入第三方手中，该第三方可以轻松登录到所有你安装了该密钥公部分的计算机！
+
+- `-b n`
+  确定密钥的长度（位）。RSA 密钥（截至 2025 年春季）建议使用 3,072 位。使用 4,096 位则完全安全。对于 ECDSA 密钥，只有值 256、384 或 521（不是 512！）是可选的。对于 Curve25519 方法，密钥长度是固定的。
+
+- `-p`
+
+  允许你（重）设密钥的密码。如果密钥已有密码，你必须在设置新密码之前输入旧密码。如果新密码为空，则将来可以使用无密码使用该密钥。
+
+- `-R hostname`
+
+  删除 `.ssh/known_hosts` 中存储的指定主机名的条目。
+
+- `-t ecdsa|ed25519|rsa`
+
+  定义密钥类型。默认类型取决于 SSH 软件包的版本和配置。过去，这些大多是 RSA 密钥（以开发者 Rivest、Shamir 和 Adleman 的名字命名）。在当前版本中，`ssh-keygen` 生成加密上更安全的椭圆曲线数字签名算法（ECDSA）密钥。`ed25519` 是此变体（Curve25519）。相应的，密钥文件为 `id_rsa*`、`id_ecdsa*` 或 `id_ed25519*`。
+
+#### Example
+
+以下命令生成一个 ECDSA 密钥：
+
+```
+user$ ssh-keygen -t ecdsa
+Generating public/private ecdsa key pair.
+Enter file in which to save the key (/root/.ssh/id_ecdsa): <Return>
+Enter passphrase (empty for no passphrase): ************* <Return>
+Enter same passphrase again:  ******** <Return>
+Your identification has been saved in /root/.ssh/id_ecdsa
+Your public key has been saved in /root/.ssh/id_ecdsa.pub 
+```
+
+### stat [options] files
+
+`stat` 提供指定文件的详细信息，包括 `ls` 符号表示和八进制的访问权限、使用的块数、最后修改时间和最后读取访问时间等。
+
+- `-c formatstring`
+
+  根据格式字符串格式化输出。
+
+- `-f`
+
+  提供文件所在文件系统的信息（而不是关于文件的信息）。字符串中可以使用以下代码等：
+
+  - `%a`: 八进制表示法的访问权限
+  - `%A`: `ls` 符号表示法的访问权限
+  - `%C`: SELinux 上下文
+  - `%F`: 文件类型（文件、目录、块设备等）
+  - `%g`: 文件所属组的 GID
+  - `%G`: 文件所属组的名称
+  - `%h`: 硬链接数
+  - `%n`: 文件名
+  - `%s`: 以字节（bytes）单位的文件大小
+  - `%u`: 文件所有者的 UID
+  - `%U`: 文件所有者名称
+
+#### Example
+
+不带选项时，`stat` 提供文件各种元数据的清晰汇编。使用 `-c`，可以将结果精简为单个信息；在第二个示例中，结果被简化为八进制访问权限和文件名。
+
+```
+user$ stat print.pdf
+   file: print.pdf
+   size: 390758         blocks: 768        EA block: 4096   regular file
+device    : fd01h/64769d     Inode: 397971      links: 1
+access    : (0664/-rw-rw-r--)  Uid: ( 1000/  kofler)   Gid: ( 1000/  kofler)
+context   : unconfined_u:object_r:user_home_t:s0
+access    : 2013-09-24 11:35:17.316000000 +0200
+modified  : 2013-08-06 17:53:16.083000000 +0200
+changed   : 2013-08-06 17:53:16.083000000 +0200
+birth     : -
+user$ stat -c "%a %n" print.pdf
+664 print.pdf 
+```
+
+### strace [options] command
+
+`strace` 运行指定的命令或程序，并显示命令调用的所有系统函数。因此，`strace` 是调试编译程序的重要工具。可以使用各种选项来控制你想让程序输出哪些（额外的）信息。
+
+### strings [options] file
+
+该命令从二进制文件中提取字符字符串并显示它们。这非常有用，例如当你想在程序中查找文本（例如错误消息或文件名）。
+
+#### Examples
+
+以下命令确定二进制文件 `/bin/ls` 中包含 `error` 单词的所有字符串：
+
+```
+root# strings /bin/ls | grep error
+error
+error initializing month
+write error 
+```
+
+在接下来的示例中，我想找出在 openSUSE Leap 上 systemd 程序 `systemd-vconsole-setup` 访问了哪些键盘配置文件：
+
+```
+user$ strings /usr/lib/systemd/systemd-vconsole-setup  | grep keyboard
+/etc/sysconfig/keyboard
+Failed to read /etc/sysconfig/keyboard: %s 
+```
+
+### su [options] [user]
+
+`su`（切换用户）在不带选项的情况下输入密码后切换到 `root` 模式。这意味着在下一个 `exit` 命令之前，`root` 是激活用户。
+
+可以选择为 `su` 指定另一个用户而不是默认的 `root` 用户。如果由 `root` 运行 `su`，切换用户时甚至不需要密码。
+
+- `-c command`
+
+   仅以 `root` 权限运行指定的命令。
+
+- `-l` 或 `--login`
+
+  当用户切换时，新的 shell 将作为登录 shell 启动。这意味着加载所有的登录文件，这对于正确配置 `PATH` 等环境变量是必要的。
+
+### sudo [options] [var1=value1 var2=value2] command
+
+
+
+
+`sudo` 以不同用户（通常是 `root`）身份运行命令。得益于 `sudo`，普通用户可以在无需知道 `root` 密码的情况下执行管理任务或运行系统关键命令。
+
+在 `sudo` 允许执行某个程序之前，必须在 `/etc/sudoers` 文件中为特定用户和特定程序指定该权限。
+
+*   `-b`
+    在后台启动指定的命令。
+
+*   `-E`
+    接收当前环境变量的内容。在 Wayland 图形模式下以 `root` 权限启动程序时，需要此选项。
+
+*   `-H`
+    将 `$HOME` 环境变量设置为执行该命令的用户账户的家目录（通常为 `/root`）。
+
+*   `-i` 或 `--login`
+    启动目标用户（`-u`）或 `root` 的 shell。将分析目标用户的配置文件，即 `.profile`、`.bashrc`、`.zshrc` 等。
+
+*   `-K`
+    删除保存的密码。下次调用 `sudo` 时，必须重新输入密码。
+
+*   `-s`
+    启动本地环境变量 `$SHELL`指定的 shell。这使得可以在一个 shell 中运行多个命令，而无需在每个命令前都加上 `sudo`。可以使用 `exit` 或 Ctrl+D 退出 shell。
+
+*   `-u` `user`
+    为指定用户（而不是 `root`）启动命令。
+
+在 `sudo` 命令中定义的变量将作为环境变量传递。因此，`sudo var1=x var2=y cmd` 是以下命令的简写形式：
+
+```
+user$ sudo -s
+root# export var1=x
+root# export var2=y
+root# cmd
+root# exit 
+```
+
+#### 示例
+
+在以下示例中，使用 `sudo` 以 `root` 权限运行 `apt install` 命令：
+
+```
+user$ sudo apt install gimp
+[sudo] password for user: *******
+... 
+```
+
+第二个示例允许你以用户 `martin` 的身份进行交互式操作，并使用他的 shell 和本地 shell 设置：
+
+```
+user$ sudo -u martin -i
+martin$ pwd
+/home/martin
+martin$ exit
+user$ 
+```
+
+### 输入/输出重定向的示例
+
+如果你尝试使用 `sudo` 运行带有输入或输出重定向的命令，可能会发生错误：
+
+```
+user$ cd /etc/samba
+user$ sudo grep -Ev '^#|^;|^$' smb.conf > smb.conf.condensed
+-bash: smb.conf.condensed: No authorization 
+```
+
+其意图是删除 `smb.conf` 中的所有注释并将结果保存到 `smb.conf.condensed`。然而，问题在于输出重定向并不是以 `sudo` 权限执行的，而是在 `bash` 中以当前用户的权限运行的。当然，该用户没有更改 `/etc` 中任何文件的权限。要让此类结构生效，你必须使用 `sudo` 启动一个 shell 并将命令传递给该 shell：
+
+```
+user$ sudo sh -c 'grep -Ev "^#|^;|^$" smb.conf > smb.conf.condensed' 
+```
+
+### swaks [options]
+
+来自同名包的 `swaks` 代表 SMTP 的瑞士军军刀（Swiss Army Knife for SMTP）。该命令帮助你测试或调试邮件服务器。这里我仅举两个示例。第一个命令测试服务器的垃圾邮件检测，并发送一个带有示例垃圾邮件文件的电子邮件：
+
+```
+user$ swaks --to hawks@a-company.com --server localhost \
+       --data /usr/share/doc/spamassassin/examples/sample-spam.txt 
+```
+
+第二个命令测试普通认证程序，并向邮件添加一个额外的标头行。出于空间考虑，已简化了登录失败的输出。
+
+```
+user$ swaks --to hawks@a-company.com --from maria@a-company.com \
+        --auth LOGIN --auth-user maria@a-company.com \
+        --header-X-Test "test email"
+Password: **********
+=== Connected to efd.a-company.com.
+<-  220 efd.a-company.com ESMTP Postfix (Ubuntu) ...
+<-  250-STARTTLS ...
+-> AUTH LOGIN
+<-  334 VXNlcm5hbWU6
+-> bWFyaWFAZWluZS1maXJtYS5kZQ==
+<-  334 UGFzc3dvcmQ6
+-> YXNk
+< 535 5.7.8 Error: authentication failed: UGFzc3dvcmQ6
+```
+
+### swapon [options] device
+
+swapoff device
+
+`swapon` 激活指定的设备（通常是硬盘分区）或指定为交换区域的文件。分区或文件必须先使用 `mkswap` 格式化为交换区域。当 Linux 启动时，`swapon` 会自动对 `/etc/fstab` 中列出的所有交换区域运行。
+
+`swapon -s` 提供所有活动交换设备的列表，包括使用数据。`swapon` 的示例可以在 `mkswap` 的描述中找到。
+
+`swapoff` 禁用指定的交换文件或硬盘分区。
+
+### sync
+
+在磁盘上运行所有缓冲写操作。如果由于某些原因无法正常关闭 Linux——如果无法执行 `shutdown`、`reboot` 和 `halt` 命令且计算机对 Alt+Ctrl+Del 没响应——那么在关机之前应该运行 `sync`。但这仅仅是一个应急方案！
+
+### sysctl 选项
+
+`sysctl` 读取内核参数的状态或在运行期间更改其值。永久性更改必须输入 `/etc/sysctl.conf` 文件。
+
+*   `-a`
+    提供所有可用内核参数的列表，包括当前设置。
+
+*   `-n` `parameter`
+
+
+
+
+
+返回指定内核参数的当前值。
+
+* `-p [filename]`
+
+    处理 `/etc/sysctl.conf` 或指定的文件并激活其中保存的所有设置。
+
+* `-w parameter=value`
+
+    更改指定的参数。也可以省略 `-w` 选项。
+
+#### 示例
+
+以下两个命令首先激活内核的转发功能，然后对 `eth0` 网络接口进行地址伪装：
+
+```
+root# sysctl -w net.ipv4.ip_forward=1
+root# iptables -A POSTROUTING -t nat -o eth0 -j MASQUERADE 
+```
+
+### systemctl 命令
+
+`systemctl` 用于管理使用 systemd 作为初始化系统的发行版的 init 进程。几乎所有当前的发行版都是此类情况。你可以使用 `systemctl` 来确定由 systemd 管理的所有进程列表、停止或重启单个后台服务等。
+
+此外，`systemctl` 区分了普通服务（`services`）、套接字（sockets）、设备（devices）、挂载服务以及目标单元（`targets`，类似于 Init-V 的运行级别）。
+
+* `daemon-reload`
+
+    加载配置文件。当 systemd 配置文件和 `/etc/fstab` 发生更改时，必须运行此命令生效。
+
+* `enable/disable name`
+
+    永久激活指定的服务或再次禁用它。执行该命令时，相应的链接会被重新创建或删除。在当前的 systemd 版本中，额外的 `--now` 选项会导致相关服务立即启动或停止。
+
+* `get-default`
+
+    确定默认目标。
+
+* `halt/poweroff/reboot`
+
+    关机或重启系统。
+
+* `is-active name`
+
+    测试指定的服务是否处于激活状态。
+
+* `isolate name.target`
+
+    激活指定的目标及其依赖于它的服务。不需要的服务将被停止。因此，`isolate` 的功能类似于 Init-V 系统中的运行级别切换。
+
+* `list-timers`
+
+    提供活动计时器的概述，即由 systemd 定期运行的任务。对于每个任务，都会指定上次运行的时间和下次计划运行的时间。
+
+* `list-units`
+
+    提供由 systemd 管理的所有服务、套接字、目标等的列表。多页输出将通过 `less` 路由，以便逐页阅读。如果你不想这样做，必须指定 `--no-pager` 选项。结果可以使用 `--type=...` 进行过滤。允许的单元类型有 `service`、`socket`、`target`、`device`、`mount`、`automount` 和 `snapshot`。
+
+* `reload/restart name`
+
+    提示进程重新加载配置或完全重启服务。
+
+* `set-default name.target`
+
+    定义未来启动过程的默认目标。
+
+* `show name`
+
+    提供比 `status` 更详细的数据。结果按行结构化，脚本可以相对处理。
+
+* `start/stop name`
+
+    启动或停止指定的 init 进程或服务。
+
+* `status name`
+
+    提供指定服务的状态。
+
+`systemctl` 默认应用于系统级的服务。要编辑用户级的服务，必须传递 `--user` 选项。这在现代桌面系统中非常有用，例如 Gnome 使用了 systemd。
+
+字体 示例
+
+以下行显示了典型的 `systemctl` 命令：
+
+```
+root# systemctl start cups
+root# systemctl stop cups
+root# systemctl restart cups
+root# systemctl reload cups
+root# systemctl status cups
+root# systemctl enable cups
+  Created symlink /etc/systemd/system/sockets.target.wants/cups.socket -> /lib/systemd/system/cups.socket.
+  Created symlink /etc/systemd/system/multi-user.target.wants/cups.path -> /lib/systemd/system/cups.path.
+root# systemctl disable cups
+  Removed /etc/systemd/system/sockets.target.wants/cups.socket.
+  Removed /etc/systemd/system/multi-user.target.wants/cups.path.
+
+root# systemctl isolate reboot.target
+(reboot computer)
+```
+
+### systemd-analyze 命令
+
+`systemd-analyze` 支持 systemd 中的故障排除。你可以使用各种命令来分析 systemd 配置或运行中的 systemd 单元。我在这里将仅限于一个示例。以下命令列出了所有运行的单元，并按初始化它们所需的时间排序。
+
+```
+user$ systemd-analyze blame
+12.425s plymouth-quit-wait.service
+  7.271s dnf-makecache.service
+  2.702s NetworkManager-wait-online.service
+  2.028s sys-devices-pci0000:00-0000:00:07.0-virtio3-...device
+  2.028s dev-virtio ports-org.spice space.webdav.0.device
+     ... 
+```
+
+## T
+
+### tac 文件
+
+`tac` 以反序在屏幕上显示指定的文本文件，即最后一行在前。这个奇怪的命令名称是由于 `cat` 命令字母倒置的结果，`cat` 是按正确顺序输出文本文件的。
+
+### tail [options] file
+
+
+
+
+
+`tail` 在屏幕上显示文本文件的最后 10 行。
+
+- `-n` `lines`
+  输出指定数量的行。
+- `-n +offset`
+  输出从指定的行开始。因此，`tail -n +2 file` 会输出除第一行以外的整个文件。
+- `-f`
+  定期读取文件并输出所有新行。在这种形式下，`tail` 特别适用于监控日志文件。
+
+#### 示例
+
+以下命令显示 `log` 的最后 10 行。当有新行添加时，这些行也会被显示，因此在短时间内整个屏幕都会被占据——而不仅仅是 10 行。可以通过 Ctrl+C 终止执行。
+
+```
+root# tail -f /var/log/syslog 
+```
+
+### tar action [options] files / tar action [options] directories
+
+`tar` 将多个文件或整个目录合并到一个归档中，或者从该归档中提取其组件。`tar` 最初设计用于在磁带机上读写数据的工具。因此，`tar` 默认访问已安装的磁带机（通常为 `/dev/tape` 或 `/dev/rmt0`）。如果你想在文件中创建归档，必须指定 `-f` 文件选项。
+
+由于 `tar` 还会根据指定的选项对归档的文件进行压缩，其功能可以与 Windows 上常用的 WinZIP 程序相比。归档文件的典型标识符是 `.tar`。如果归档文件经过压缩，标识符通常为 `.tgz`、`.tar.gz`、`.tar.bz2` 或 `.tar.xz`。
+
+`tar` 控制分为两个阶段：首先，必须指定 `tar` 要执行的操作，其次该操作可以通过一个或多个选项进行控制。即使操作和选项在形式上看起来相同，但也存在显著差异：在所有其他选项之前必须且只能指定一个操作。虽然我接下来的内容简要描述所有操作，但我只会列出最重要的选项（请参见 `man tar`）。
+
+在许多 Unix 系统上，`tar` 使用相同的命令和选项进行控制，但语法有所不同：所有命令和选项都作为一个块指定，不使用通常的选项横杠，例如 `tar cvf name.tar path`。GNU `tar` 同时理解这两种语法变体；也就是说，是否使用选项横杠取决于你。
+
+### 操作
+
+- `-A`, `--catenate`, 或 `--concatenate`
+  将另一个归档附加到现有归档。此选项仅适用于磁带机（不适用于归档文件）。
+- `-c` 或 `--create`
+  创建一个新归档；即任何现有归档将被覆盖。
+- `-d`, `--diff`, 或 `--compare`
+  比较归档中的文件与当前目录中的文件，并检测任何差异。
+- `--delete`
+  从归档中删除文件。仅适用于归档文件（不适用于磁带机）。
+- `-r` 或 `--append`
+  向归档添加额外文件。
+- `-t` 或 `--list`
+  显示归档的目录列表。
+- `-u` 或 `--update`
+  将新文件或修改过的添加到归档。该选项不能用于压缩归档。注意：归档总是更大，因为现有文件不会被覆盖！新文件只是被追加到归档的末尾。
+- `-x` 或 `--extract`
+  从归档中提取指定的文件并将其复制到当前目录。文件不会从归档中删除。
+
+#### 选项
+
+- `-C directory`
+  将文件提取到指定的目录（而不是当前目录）。
+- `-f file`
+  使用指定的文件作为归档（而不是访问磁带机）。如果指定简单的横杠而不是文件名（`-f -`），则数据将重定向到标准输出通道或从标准输入读取。当两个 `tar` 命令需要通过 `|` 链接时，这特别有用（通常用于传输整个文件树）。
+- `-g timestamp-file`
+  将使用 `tar` 保存的文件元数据保存在二进制时间戳文件中，并在再次调用 `tar` 时只考虑自那以后更改的文件。此选项提供了一种创建增量备份的简方法。
+- `-j` 或 `--bzip2`
+  通过 `bzip2` 压缩或解压整个归档（另见 `-z`！）。
+- `-J` 或 `--xz`
+  通过 `xz` 压缩或解压整个归档。假设 `xz` 命令可用。许多发行需要安装 `xz-utils` 包。
+- `-L n` 或 `--tape-length n`
+  以 KiB 指定磁带机的容量。如果归档的大小超过了容量，`tar` 将提示你更换磁带。
+
+
+
+
+*   `-N` `date`, `--after-date` `date` 或 `--newer` `date`
+    仅归档比指定日期更新的文件。这有助于创建增量备份。
+
+*   `-p` 或 `--preserve-permissions`
+    在解压文件时保持访问权限不变。当由 `root` 执行 `tar` 时，该选项默认生效。
+
+*   `-T` `file` 或 `--files-from` `file`
+    归档或提取指定文件中指定的文件名。
+
+*   `-v` 或 `--verbose`
+    在操作时在屏幕上显示所有文件名。如果 `-v` 与 `t` 命令结合使用，将将有关有关文件的额外信息（文件大小等）。如果多次指定该选项，信息将更加详细。
+
+*   `-W` 或 `--verify`
+    在写入后检查刚刚归档的文件的正确性。这些选项无法用于压缩归包。
+
+*   `-z` 或 `--gzip`
+    使用 `gzip` 压缩或解压缩整个归包。在创建 `*.tgz` 文件时，此选项非常有用。然而，如果数据实际上存储在流式设备上，该选项可能是危险的：磁带上的任何一个错误都可能导致整个归包无法使用！如果没有压缩，文件也会被破坏，但损坏通常要小得多。DAT 流式设备能够自己压缩要处理的数据。这种方法更快，但效率没有 `gzip` 高。
+
+#### 示例
+
+在下面的示例中，`tar` 将 `Documents` 目录及其所有子目录下的所有文件归档并压缩到 `myarchive.tgz` 文件中：
+
+```
+user$ tar -czf myarchive.tgz Documents 
+```
+
+`tar -tzf` 返回归包的目录列表。归包内的文件顺序是任意的。
+
+```
+user$ tar -tzf myarchive.tgz | less... 
+```
+
+`tar -xzf` 解开归包并提取所有包含的文件：
+
+```
+user$ cd different-directory/
+user$ tar -xzf myarchive.tgz 
+```
+
+以下命令将所有文件从 `/dir1` 复制到 `/dir2`。与普通 `cp` 命令相比的优势是符号链接作为链接本身被复制（而不是链接所引的数据）。之前的两个命令特别适用于将整个文件树从一个分区传输到另一个分区。
+
+```
+root# (cd /dir1 ; tar cf - .) | (cd /dir2 ; tar xvf -) 
+```
+
+最后一个示例显示了为 `images` 目录创建增量备份。在第一次备份期间，会删除任何现有的时间戳文件以执行完整备份（例如始终在周日晚上）。随后在后续工作日晚间进行的备份仅考虑自此之后发生的更改。
+
+```
+user$ rm backup.timestamps
+user$ tar czvf backup-0.tgz -g backup.timestamps images  
+(Sun: compl. backup)
+user$ tar czvf backup-1.tgz -g backup.timestamps images  
+(Mon: changes only)
+user$ tar czvf backup-2.tgz -g backup.timestamps images  
+(Tue: changes only) 
+```
+
+例如，如果你想在 cron 脚本中抑制所有的 `tar` 输出（包括错误信息），你必须在命令中添加以下输入/输出重定向：
+
+```
+user$ tar czf backup.tgz directory >/dev/null 2>&1 
+```
+
+### tasksel
+
+`tasksel` 安装或卸载预定义的软件包组。该命令仅适用于 Debian 和 Ubuntu 发行版。
+
+*   `install` `group name`
+    安装指定软件包组中的所有软件包。
+
+*   `--list-tasks`
+    确定所有定义的软件包组列表。
+
+*   `remove` `group name`
+    移除指定软件包组中的所有软件包。注意：在旧版本的 `tasksel` 中，无论是否依赖其他软件包，软件包都会被删除。这通常会导致卸载的软件包数量远多于预期。
+
+*   `--task-packages` `group name`
+    列出指定软件包组中的所有软件包。
+
+#### 示例
+
+以下两个命令在 Debian 或 Ubuntu 上安装带有常用扩展和额外程序的 Apache Web 服务器：
+
+```
+root# tasksel install web-server     
+(Debian)
+root# tasksel install lamp-server    
+(Ubuntu) 
+```
+
+### tcpdump [options] [filter expression]
+
+来自同名软件包的 `tcpdump` 用于读取接口的网络流量，根据标准进行过滤、输出或将其保存到文件中。该命令不仅处理 TCP 包，还处理 UDP 包和 ICMP 包。`tcpdump` 内部使用 `pcap` 库来读取和过滤网络包。
+
+#### 选项
+
+*   `-a`
+    以文本格式（ASCII）显示包内容。
+
+*   `-c` `n`
+    在处理 `n` 个包后终止程序。
+
+*   `-i` `interface`
+    仅考虑通过指定接口的数据包。你可以使用 `tcpdump -D` 获取可能的接口列表。
+
+*   `-n`
+    显示 IP 地址而不是主机名。
+
+*   `-q`
+    显示较少的信息（安静模式）。
+
+*   `-r` `file`
+    从之前使用 `tcpdump -w` 保存的文件中读取包。
+
+
+
+
+
+- `-w` `file`
+
+  将数据包以二进制格式（原始）保存到指定的文件中。以后可以使用 `tcpdump -r`或其他程序（例如 Wireshark）再次读取并分析该文件。
+
+- `-x`
+
+  以十六进制格式显示数据包内容。
+
+## 过滤表达式
+
+选项后面可以跟一个过滤表达式，该表达式由以下关键词等组成：
+
+- `greater n`
+
+  仅考虑大于 `n` 字节的数据包。
+
+- `host ipadr` 或 `host hostname`
+
+  仅考虑使用指定 IP 地址或相应主机作为源地址或目标的数据包。
+
+- `less n`
+
+  仅考虑小于 `n` 字节的数据包。
+
+- `net cidr`
+
+  仅考虑源或目的符合 CIDR 记法中指定地址范围的数据包（例如 `10.0.0.0/24`）。
+
+- `port n` 或 `portrange n1-n2`
+
+  仅考虑使用指定端口号作为源或目标的数据包。
+
+- `proto ether|fddi|tr|wlan|ip|ip6|arp|rarp|decnet|tcp|udp`
+
+  仅考虑指定协议的数据包。如果仅分析 IPv4 或 IPv6 数据包，可以在表达式前加上 `ip` 或 `ip6`（例如 `ip6 proto udp`）。
+
+`host`、`net` 和 `port` 关键字可以带有前缀 `dst` 或 `src`，如果规范仅指向数据包的目的或源。
+
+你可以通过 `and` 或 `or` 连接多个过滤条件。你必须使用 `\(` 和 `\)` 对复杂表达式进行括。或者，可以使用简单的括号，但必须将整个过滤表达式放在单引号中（例如 `'(port 1 or port 2)'`）。其他过滤选项请参阅 `man pcap-filter`。
+
+#### 示例
+
+以下命令输出通过 `wlan0` 接口流的所有 HTTP 数据包的信息：
+
+```
+root# tcpdump -i wlan0 port 80
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on wlan0, link-type EN10MB (Ethernet)
+10:34:33.681218 IP imac.57402 > bpf.tcpdump.org.http:
+   Flags [S], seq 755525464, win 65535, options [mss 1460,nop,wscale 5,nop,nop,
+   TS val 595975353 ecr 0,sackOK,eol], length 0 10:34:33.681793 IP imac.57403 > bpf.tcpdump.org.http:
+   Flags [S], seq 2954861158, win 65535, ... 
+```
+
+第二个命令将流向或来自 IP 地址 192.139.46.66 的下一个 100 个 HTTP 数据包记录在 `dump.pcap` 文件中：
+
+```
+root# tcpdump -i wlan0 -n -c 100 -w dump.pcap port 80 and host 192.139.46.66 
+```
+
+第三个示例确定通过网桥 `br0` 且包含指定 MAC 地址的数据包：
+
+```
+root# tcpdump -i br0 | grep '00:56'
+```
+
+## tee file
+
+`tee` 复制标准输入，显示一份副本，并将另一份保存到文件中。在现实生活中，如果你想在屏幕上观察命令输出的同时将其保存到文件中，这非常有用。使用 `>` 直接重定向到文件将导致屏幕上没有任何内容显示。
+
+#### 示例
+
+以下命令在屏幕上显示当前目录的目录并将其保存到 `contents` 中：
+
+```
+user$ ls -l | tee contents
+```
+
+## telnet
+
+`telnet` 允许通过 Telnet 协议与网络服务进行交互式通信。该命令主要适用于测试基础网络功能。由于通信是不加密的，`telnet` 在外部服务器上运行命令太不安全了。对于这类任务，你应该使用 ssh！
+
+- `-4` 或 `-6`
+
+  仅接受 IPv4 或 IPv6 地址。
+
+- `-l` `user`
+
+  使用指定的用户名（而不是当前用户名）。
+
+#### 示例
+
+以下示例了与运行在本地计算机上的邮件服务器的通信：
+
+```
+user$ telnet localhost 25
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+220 kofler.info ESMTP Postfix (Ubuntu)
+ helo kofler.info
+250 kofler.info
+ mail from:<user@kofler.info>
+250 2.1.0 Ok
+```
+
+邮件服务器通常配置为仅对前几个命令进行明文传输。随后服务器和客户端协商密钥加密数据（STARTTLS 方法）。在此时，`telnet` 必须退出；因此它仅适用于测试邮件服务器是否在端口 25 上活动。swaks 更适合测试身份验证程序。
+
+## test expression
+
+`test` 在 bash 脚本中用于构建条件，主要用于 if 查询和循环。根据条件是否满足，它返回真值值 `0`（真）或 `1`（假）。除了 `test` 外，你还可以使用简写符号 `[` expression `]`。在表达式前后输入空格非常重要！
+
+
+
+
+
+如果在分支或循环中使用 `test` 或简写符号 `[ expression ]` 作为条件，你必须用分号结束条件，例如：`if [ " $1" = "abc" ]; then ...`。
+
+`if` 查询有时可以替换为以下表述：`[ "$1" = "abc" ] && cmd`。在这种情况下，不需要分号。在先前的条件满足之前，命令不会执行。
+
+### 字符字符串
+
+| 表达式 | 描述 |
+| :--- | :--- |
+| `[ cs ]` | 如果字符串不为空则为真 |
+| `[ -n cs ]` | 如果字符串不为空则为真（类似于 `[ cs ]`） |
+| `[ -z cs ]` | 如果字符串为空（0 个字符）则为真 |
+| `[ cs1 = cs2 ]` | 如果字符串匹配则为真 |
+| `[ cs1 != cs2 ]` | 如果字符串不同则为真 |
+
+字符串或变量应该放在引号中（例如 `[ "$1" = "abc" ]` 或 `[ "$a" = "$b" ]`）。否则，对于包含多个单词的字符串可能会发生错误。
+
+### 数字
+
+| 表达式 | 描述 |
+| :--- | :--- |
+| `[ n1 -eq n2 ]` | 如果两个数字相等（equal）则为真 |
+| `[ n1 -ne n2 ]` | 如果数字不等（not equal）则为真 |
+| `[ n1 -gt n2 ]` | 如果 `n1` 大于 `n2`（greater than）则为真 |
+| `[ n1 -ge n2 ]` | 如果 `n1` 大于或等于 `n2`（greater equal）则为真 |
+| `[ n1 -lt n2 ]` | 如果 `n1` 小于 `n2`（less than）则为真 |
+| `[ n1 -le n2 ]` | 如果 `n1` 小于或等于 `n2`（less equal）则为真 |
+
+### 文件（节选）
+
+| 表达式 | 描述 |
+| :--- | :--- |
+| `[ -d file ]` | 如果是目录（directory）则为真 |
+| `[ -e file ]` | 如果文件存在（exist）则为真 |
+| `[ -f file ]` | 如果是普通文件（而非设备、目录等）（file）则为真 |
+| `[ -L file ]` | 如果是符号链接则为真 |
+| `[ -r file ]` | 如果文件可读（read）则为真 |
+| `[ -s file ]` | 如果文件至少有 1 字节长（size）则为真 |
+| `[ -w file ]` | 如果文件可写（write）则为真 |
+| `[ -x file ]` | 如果文件可执行（execute）则为真 |
+| `[ file1 -ef file2 ]` | 如果两个文件具有相同的 I-node（equal file）则为真 |
+| `[ file1 -nt file2 ]` | 如果 `file1` 比 `file2` 新（newer than）则为真 |
+
+### 链接条件
+
+| 表达式 | 描述 |
+| :--- | :--- |
+| `[ ! cond ]` | 如果条件不满足则为真 |
+| `[ cond1 -a cond2 ]` | 如果两个条件都满足（and）则为真 |
+| `[ cond1 -o cond2 ]` | 如果至少有一个条件满足（or）则为真 |
+
+### bash 变体 [[ expression ]] ]]
+
+虽然 `test` 和简写符号 `[ expression ]` 在大多数 shell 中以此方式工作，但 `bash` 中还提供了一种双方括号的变体。此外，它还允许以下额外的比较或符号：
+
+| 表达式 | 描述 |
+| :--- | :--- |
+| `[[ cs = pattern* ]]` | 如果字符串以 `pattern` 开头则为真 |
+| `[[ cs == pattern* ]]` | 与前一个项目相同 |
+| `[[ cs =~ regex ]]` | 如果字符串匹配正则模式则为真 |
+| `[[ bed1 && bed2 ]]` | 如果两个条件都满足（and）则为真 |
+| `[[ bed1 \| bed2 ]]` | 如果至少有一个条件满足（or）则为真 |
+
+另一个区别是，变量在 `[[ ]]` 的求值中不会被评估（不考虑通配符如 `*` 和 `?`，能够正确处理带空格的文件名）。这就是为什么即使变量包含空格，`[[ -f $filename ]]` 也能正常工作。
+
+#### 示例
+
+下面的微脚本没有完成任何实际任务，它仅演示了符号 `[ condition ] && command` 中的 `test` 语法。在 `for` 循环中，变量 `i` 应该遍历从 1 到 10 的值。`rest` 包含整数除以 2 的余数。通过 `[ $rest -eq 1 ]`，脚本测试余数是否为 1，即 `i` 是否为奇数。在这种情况下，后续命令将通过 `continue` 跳过。`echo` 输出 `i` 的内容。当 `i` 达到值 6 时，使用 `break` 终止循环。因此，程序输了数字 2、4 和 6。
+
+
+
+
+
+```bash
+#!/bin/bash
+for i in {1..10}; do
+   rest=$[$i%2]
+   [ $rest -eq 1 ] && continue
+   echo $i
+   [ $i -eq 6 ] && break
+done 
+```
+
+### time 命令
+
+`time` 执行指定的命令，然后指示执行所需的时间。输出通过标准错误通道进行，并可以通过 `TIMEFORMAT` 环境变量进行更改。
+
+`time` 不仅可以替代秒表，它还将执行时间分解为三个组成部分：
+
+- `real`:
+  显示实际的执行时间。
+- `user`:
+  表示程序在内核之外执行期间所使用的 CPU 时间。
+- `sys`:
+  表示程序在内核之中执行期间所使用的 CPU 时间。
+
+`user` 和 `sys` 的总和表示命令执行造成了多少 CPU 开销。`real` 通常（远大于）大于 `user` 和 `sys` 的总和。这可能有两个原因：首先，通常会有很多进程与 `time` 启动的命令并行运行，这些同样消耗了计算时间。其次，在执行命令时可能会存在等待时间，例如在读写文件或在网络中传输数据时。
+
+`user` 和 `sys` 分代表一个 CPU 核心。如果执行的命令充分利用了多个核心，例如 `user` 和 `sys` 的和可能会大于 `real`。
+
+#### 示例
+
+以下命令读取逻辑卷的内容并使用 `7zr` 命令（`p7zip` 包）对其压缩。在多核系统的空闲模式下，该过程需要 24 分钟。如果只有一个核心可用，创建备份将花费更长时间（大约 40 分钟）。
+
+```
+root# time dd if=/dev/vg830/lv3 bs=4M | 7zr a -si lv3.img.7z
+real  24m53.424s
+user  38m37.841s
+sys    0m30.446s 
+```
+
+#### 替代方案
+
+`time` 是集成到 shell 中的命令。前面的描述指的是 `bash` 变体。如果你在 `zsh` 中工作，`time` 的输出看起来略有不同。
+
+### timedatectl [options] [command]
+
+`timedatectl` 命令用于更改带有 systemd 初始化系统的发行版的时间和活动时区。更改设置立即生效；它们也会永久保存在 `/etc/localtime` 中。
+
+- `list-timezones`:
+  提供所有已知时区的列表。
+- `set-local-rtc 0|1`:
+  表示计算机的时钟包含本地时间还是 GMT 时间。
+- `settime datetime`:
+  重置日期和时间。计算机的硬件时也会相应更改。时间必须以格式 `2025-12-31 23:59:59` 输入。
+- `set-timezone name`:
+  设置所需的时区。
+- `status`:
+  显示时间、时区以及其他各种时间数据，例如夏令时间和冬季之间的下次切换。
+
+#### 示例
+
+以下命令首先显示当前时间数据，然后更改时区：
+
+```
+root# timedatectl status
+      Local time: 2025-05-18 09:08:37 CEST
+  Universal time: 2025-05-18 07:08:37 UTC
+        RTC time: 2025-05-17 18:51:42
+       Time zone: Europe/Vienna (CEST, +0200)
+  ...
+root# timedatectl set-timezone Europe/Paris 
+```
+
+### timeout [options] time span command
+
+`timeout` 执行指定的命令，如果其运行时间超过指定时间，则自动结束。时间跨度指定为带有后缀字母 `s`、`m`、`h` 或 `d` 的浮点数（例如 `0.5h` 表示半小时）。
+
+- `-k`:
+  通过 `KILL` 信号终止运行过长的程序。默认情况下，`timeout` 使用 `TERM` 信号，但这可以被忽略。
+
+#### 示例
+
+在以下命令中，`scp` 有 30 秒的时间将文件传输到另一台计算机。之后，该进程将被取消。
+
+```
+user$ timeout 30s scp localfile myserver:destinationdir/
+```
+
+### tldr 命令
+
+`tldr` 是 "too long, didn't read"太长了没读）的缩写，是对通常冗长的 `man` 页的一种微妙批评。`tldr` 尝试做得更好，并为常用命令提供几个启发性的示例。因此，该命令是本书的一个极佳补充。输出在终端中会用彩色显示。
+
+```
+user tldr rsync
+向或从远程主机传输文件（但不在两个远程主机之间），默认使用 SSH。要指定远程路径，请使用 user@host:path/to/file。更多信息：https://download.samba.org/pub/rsync/rsync.1.
+- 传输文件：
+  rsync path/to/source path/to/destination
+
+- 使用归档模式（递归复制目录，在解析的情况下复制符号链接，并保留权限、所有权和修改时间）：
+  rsync --archive path/to/source path/to/destination
+
+- 在发送到目的地时压缩数据，显示详细且人类可读的进度，并在中断时保留部分传输的文件：
+  rsync --compress --verbose --human-readable --partial --progress \
+    path/to/source path/to/destination
+
+- （另外五个用法示例） 
+```
+
+### top [q]
+
+`top` 每五秒显示一次所有运行进程的列表，其中进程根据其计算时间的份额进行排序。如果在调用期间指定可选参数 `q`，`top` 将不断更新列表并占用所有的空闲计算时间。按 Q 终止程序。
+
+#### 替代方案
+
+
+
+
+
+比 `top` 更方便且视觉效果更好的替代方案是 `btop` 和 `htop` 命令，它们在大多数发行版中需要单独安装。这些命令提供了各种额外功能，支持输出输出输出，并允许对运行中的进程进行水平和垂直滚动。
+
+如果你对内存消耗和 CPU 使用率感兴趣，而是 I/O 活动或运行进程的能源效率，那么你应该查看 iotop 或 powertop 的描述。
+
+### touch [options] files
+
+`touch` 修改文件中保存的最后修改时间。如果不带选项使用命令，则将当前时间保存为修改时间。如果文件不存在，将创建一个长度为 0 字节的新文件。
+
+- `-r file`
+    使用指定文件的保存修改时间。
+
+- `-t time`
+    保存指定的时间。你必须使用 `[[CC]YY]MMDDhhmm[.ss]` 格式进行时间规范，例如，`202512311730` 表示 2025 年 12 月 31 日下午 5:30。或者，你也可以通过 `-d` 选项将时间指定为字符字符串。允许使用更可读的格式，可以通过 `info touch` 了解。
+
+#### Example
+
+在此示例中，使用 `touch` 比较目录下所有文件与第二个目录中文件的修改时间。这非常有用，例如，如果你忘记在较大的 `cp` 命令中输入 `-a` 选项，导致复制的文件现在都具有当前日期。
+
+```
+user$ cd target directory
+user$ find . -type f  -exec touch -r /source directory/{} {} \; 
+```
+
+### tr [options] zk1 [zk2] [ < source > target]
+
+`tr` 将指定源文件中字符串 1 中的所有字符替换为字符串 2 中对应的字符。两个字符字符串的长度应该相同。未出现在第一个字符串中的字符保持不变。无法将单个字符替换为多个字符（例如，将 `ö` 替换为 `"o"`——对于这种情况，你必须使用如 recode 或 sed 等命令。
+
+- `-d`
+    删除字符串 1 中指定的字符。不需要指定字符串 2。
+
+#### Example
+
+在以下示例中，`tr` 将所有小写字母替换为大写字母并在终端（标准输出）中显示结果：
+
+```
+user$ tr a-zäöü A-ZÄÖÜ < text file 
+```
+
+### traceroute[6] [options] target address
+
+`traceroute` 提供从本地计算机到目标地址的 TCP/IP 数据包路径上的所有站点列表。每个站点都指定了总运行时间（默认尝试三次）。如果通往目标地址的 UDP 端口 33434 没有被防火墙拦截，`traceroute` 才能工作。在这种情况下，`traceroute` 只返回三个星而不是停靠详情。
+
+- `-4` 或 `-6`
+    仅使用 IPv4 或 IPv6 协议。默认情况下，`traceroute` 自动使用相应的协议。如果主机同时关联 IPv4 和 IPv6 地址，`traceroute` 优先使用 IPv4。对于 `traceroute6`，`-6` 会自动应用。
+
+- `-m n`
+    确定中间站的最大数量（默认为 30）。
+
+- `-n`
+    仅显示中间站的 IP 号（不显示主机名）。
+
+- `-p n`
+    使用指定的 UDP 端口（默认 33434）。
+
+- `-q n`
+    发送 `n` 个数据包并测量每个包的响应时间（默认 3）。
+
+#### Example
+
+以下命令显示了我的本地计算机和 Web 服务器之间的站点。在某些站点，IP 数据包通过不同的路由器路由，这表明存在冗余网络连接。
+
+```
+root# traceroute kofler.info
+traceroute to kofler.info (213.239.211.2), 30 hops max, 60 byte packets
+ 1  dsldevice.lan (10.0.0.138)  14.116 ms  13.376 ms  13.112 ms
+ 2  62.47.95.239 (62.47.95.239)  25.650 ms  27.489 ms  29.245 ms
+...
+ 9  hos-tr3.ex3k16.rz6.hetzner.de (213.239.252.8)  48.315 ms
+    hos-tr4.ex3k16.rz6.hetzner.de (213.239.252.136)  49.034 ms
+    hos-tr2.ex3k16.rz6.hetzner.de (213.239.229.136)  51.231 ms
+10  kofler.info (213.239.211.2)  52.069 ms  54.640 ms  55.777 ms 
+```
+
+### trap [command] signal
+
+`bash` 命令 `trap` 在 shell 接收到指定信号时运行指定的命令。如果没有指定命令，程序或 `bash` 将忽略该信号。`trap -l` 返回所有可能信号的列表以及分配给它们的标识符。`trap` 通常用于 shell 脚本中的错误保护。
+
+#### Example
+
+以下微脚本在无限循环中运行，无法通过按 Ctrl+C 中断。然而，你可以使用 `kill` 来结束脚本，例如。
+
+```bash
+#!/bin/bash
+trap 'echo "Ctrl+C will be ignored!"' SIGINT
+while true
+do
+  sleep 1
+done 
+```
+
+### tree [options] [start directory]
+
+同名软件包中的 `tree` 显示从当前或指定的起始目录开始的目录树层次结构。
+
+- `-a`
+    默认输出文件而不仅仅是目录。
+
+- `-L n`
+    仅考虑前 `n` 个层次层级。
+
+- `-x`
+    留在当前文件系统中，不考虑 `mount` 目录或指向其他文件系统的链接。
+
+### truncate [options] files
+
+
+
+
+
+`truncate` 用于缩小或增大文件大小。当文件在减小时，其内容会被直接截断。注意：在此过程中你会丢失数据！当文件增大时，会向文件中添加相应数量的 `0` 字节。对于大多数文件系统来说，这不会改变数据介质上所需的空间，因为文件将被识别为稀疏文件。如果你想用零物理地填充文件，必须使用 `dd` 命令。如果传递给 `truncate` 的一个不存在的文件名，该命令将创建指定大小的文件。
+
+*   `-s n`
+    指定以字节为单位的大小。如果数字后面跟着字母 `K`、`M`、`G` 或 `T`，`truncate` 将该数字乘以 1,024；1,048,576 等。或者，`KB`、`MB`、`GB` 或 `TB` 则代表 1,000；1,000,000 等。因此，`10K` 对应 10,240 字节，而 `10KB` 对应 10,000 字节。
+
+#### 示例
+在以下示例中，`file` 首先被填充了 1 MiB 的随机数据。然后使用 `truncate` 将文件扩大到 2 MiB。`ls -l` 实际上显示大小为 2 MiB，但 `dd` 证明文件在硬盘或 SSD 上仅占了 1 MiB 的空间。只有当之后向文件中写入零以外的数据时，空间需求才会增加。
+
+```
+user$ dd if=/dev/urandom of=file bs=1024 count=1024
+user$ truncate -s 2M file
+user$ ls -l file
+-rw-r--r-- 1 kofler users 2097152 19\. Nov 14:30 file
+user$ du -h file
+1,0M    file 
+```
+
+### tty
+`tty` 显示活动终端的设备名称（对于文本控制台：`/dev/tty1` 到 `tty6`；对于 X 下的 shell 窗口 `/dev/pts/n`）。
+
+### tune2fs [options] device
+你可以使用 `tune2fs` 更改 ext2/ext3/ext4 文件系统的各种系统参数。
+
+*   `-c n`
+    指定在启动时经过多少次 `mount` 操作后应对分区进行错误检查。`0` 表示永远不进行检查。
+*   `-i n`
+    指定在启动时每隔多久（天）对分区进行一次错误检查。`0` 表示永远不进行检查。
+*   `-l`
+    显示指定文件系统的信息，但不更改任何内容。
+*   `-m n`
+    指定为 `root` 数据保留的磁盘百分比（通常 `mke2fs` 为 5%）。
+*   `-U new-uuid` 或 `-U random`
+    给文件系统分配一个新的 UUID。
+
+#### 示例
+以下命令会导致 `/dev/sda1` 分区的文件系统每年检查一次，或在 200 次 `mount` 操作后进行检查：
+
+```
+root# tune2fs -i 365 -c 200 /dev/sda1
+Set the maximum number of mounts to 200
+Set the interval between checks to 31536000 seconds 
+```
+
+### type 命令
+`bash` 命令 `type` 用于确定指定的命令是 shell 命令（例如 `cd`）、自定义函数还是 `alias` 别名。命令被哈希（hashed）意味着该命令是在当前会话中执行过的 Linux 命令，且其路径名已被 `bash` 记录在目录中。
+
+#### 示例
+`cd` 是集成到 shell 中的内置命令：
+
+```
+root# type cd
+cd is a shell builtin
+```
+
+## U
+
+### ubuntu-security-status [options]
+在过去，`ubuntu-security-status` 显示已安装软件包的维护状态信息。该命令已被 `security-status` 替换（参见该条目）。
+
+### ufw [options] command
+`ufw` 是 Ubuntu 特有的防火墙配置命令。`ufw` 默认安装在 Ubuntu 及其衍生版本中，但尚未被激活。如果你想使用 `ufw` 进行防火墙配置，必须先使用 `ufw enable` 激活防火墙。
+
+以下子命令可配置防火墙。它们可以与 `--dry-run` 选项结合。在这种情况下，不会进行任何更改。该选项适用于测试复杂命令的语法。
+
+*   `allow|deny [on interface] port[/protocol]/"app name"`
+    允许或阻止端口（例如 `22`）、协议（例如 `ssh`）或具有独立规则文件的程序（参见 `ufw app list`）。
+
+
+
+
+
+规则可以可选地仅针对特定的网络接口制定，例如 `on eth0`。`man ufw` 列出了制定规则的其他各种选项，仅适用于入站或出站数据包，或仅适用于特定协议或 IP 版本（例如针对 `tcp`、`udp`、`ipv6`）。
+
+*   `app info "app name"`
+    提供 `ufw` 规则文件的详细信息。
+
+*   `app list`
+    提供 `/etc/uf2/applications.d` 目录下所有拥有 ufw `rule` 文件的程序列表。
+
+*   `default allow|deny|reject [incoming|outgoing|routed]`
+    定义防火墙的默认行为。如果没有指定 `incoming|outgoing|routed`，则将更改输入过滤的行为。默认情况下——如果防火墙已激活——`incoming` 过滤器应用 `deny` 行为，而 `outgoing` 过滤器应用 `allow` 行为。
+
+*   `disable`
+    禁用防火墙。所有网络流量均可无阻地流动。
+
+*   `enable`
+    激活防火墙。
+
+*   `reload/reset`
+    重新加载所有防火墙规则或对防火墙执行完全重启。
+
+*   `status [verbose]`
+    显示防火墙状态。
+
+#### 示例
+
+以下命令首先允许 `ssh` 服务，然后激活 `ufw` 防火墙。现有的 SSH 连接不会被中断。然而，从现在起所有其他服务器服务将被阻塞。
+
+```
+root# ufw allow ssh
+root# ufw enable
+root# ufw status verbose
+Status: Active
+Logging: on (low)
+Default setting:  deny (incoming), allow (outgoing), disabled (sent)
+For                        Action      From
+-–                         ------      ---
+22                         ALLOW IN    Anywhere
+22 (v6)                    ALLOW IN    Anywhere (v6) 
+```
+
+### ulimit 限制
+
+`ulimit` 限制 shell 及其利用进程使用的系统资源。
+
+大小通常以 KiB 为单位。`ulimit` 通常在 `etc/profile` 中预设。
+
+*   `-c memory`
+    限制核心转储（coredumps）的大小，即在程序崩溃时自动保存到硬盘上的内存映像。
+
+*   `-d memory`
+    限制进程数据段的内存。
+
+*   `-f file size`
+    防止创建大于指定限制的文件。并非所有文件系统都支持。
+
+*   `-s memory`
+    限制栈内存。
+
+### umask [mask]
+
+`umask bash` 命令控制创建新文件时使用的访问权限。`umask` 为此目的记录一个八进制数值，该值将从新文件或目录的默认访问权限中减去。
+
+Linux 实际上要求新文件分配权限位 `rw-rw-rw`（八进制 666）。由编译器创建的新目录和程序文件自动分配权限位 `rwxrwxrwx`（777）。这些基本设置对于实际工作来说过于宽松了。这就是为什么所有 Linux shell 都提供了 `umask` 设置。这是一个数值，指定了从标准访问位中减去的权限位。
+
+`umask` 设置在整个系统中是预定义的，并根据发行版的不同设置在 `etc/profile` 或 `etc/bashrc` 中。对于 `root` 和其他用户，通常会适用不同的值。在 Ubuntu 中，`umask` 值由 PAM 系统定义；默认值存储在 `etc/login` 中。
+
+#### 示例
+
+不带额外参数的 `umask` 显示当前设置：
+
+```
+user$ umask (Debian, openSUSE, Ubuntu)
+022
+user$ umask (Fedora, RHEL)
+002
+```
+
+第二个示例显示了如果将 `umask` 值更改为 `27`，对新文件和目录的影响。因此，新文件将获得权限 666 - 27 = 640 (`rw-r-----`)，新目录将拥有 777 - 27 = 750 (`rwxr-x---`)。
+
+```
+user$ umask 27
+user$ touch new-file
+user$ mkdir new-directory
+user$ ls -ld new*
+-rw-r----- ... user ... new-file
+drwxr-x--- ... user ... new-directory
+```
+
+### umount 设备
+
+umount 目录
+
+`umount` 从 Linux 目录树中移除文件系统。通过数据介质的设备名称或指定文件系统集成到目录树中的目录来指定文件系统。命令只能由 `root` 运行。如果文件系统上仍有打开的文件，则会产生错误消息。
+
+*   `-f`
+    强制执行 `umount` 进程（对于不再可的 NFS 目录有用）。
+
+### unalias 缩写
+
+`unalias` 删除指定的缩写。如果使用 `-a` 选项调用命令，则将删除所有已知的缩写。缩写的处理在 alias 的描述中解释。
+
+### uname [options]
+
+`uname` 显示操作系统的名称（即 Linux）。通过指定选项也可以显示其他信息。
+
+*   `-a`
+    显示所有可用信息，即操作系统、版本号、日期时间以及处理器。
+
+*   `-m`
+
+
+
+
+
+仅提供 CPU 平台（例如用于 64 位系统的 `i686` 或 `x86_64`）。
+
+* `-r`
+
+  仅返回内核版本。
+
+#### 示例
+
+此计算机正在运行一个 2025 年 3 月编译的 64 位内核：
+
+```
+root# uname -a
+Linux utmf39 6.7.9-200.fc39.aarch64 #1 SMP PREEMPT_DYNAMIC
+Wed Mar  6 20:03:23 UTC 2025 aarch64 GNU/Linux 
+```
+
+### uncompress 文件
+
+`uncompress` 解压缩通过 compress 压缩的文件。文件标识 `.Z` 会被自动移除。`uncompress` 是 `compress` 的链接，会自动激活 `-d` 选项。
+
+### unexpand 文本文件 > 
+
+`unexpand` 将指定文本文件中的多个空格替换为制表符，并将结果写入到标准输出。该命令是 expand 的对应命令，后者将制表符替换为空格。
+
+* `-a`
+
+  替换所有空格，而不仅仅是行首空格。
+
+* `-t n`
+
+  指定每个制表符位置的字符数（默认 `8`）。
+
+### uniq [options] 文件
+
+`uniq` 将文本文件的行输出到标准输出，消除连续的相同行。对于预先排序的文件，`uniq` 会消除所有出现一次以上的行。
+
+* `-c`
+
+  指示每行出现的次数。
+
+* `-d`
+
+  仅输出重复行（但不输出只出现一次的行）。
+
+* `-u`
+
+  仅输出没有重复的行（即唯一的行）。
+
+#### 示例
+
+sort 排序 `test` 文件，`uniq` 消除重复行并将结果保存到 `test1` 中：
+
+```
+user$ sort test | uniq > test1 
+```
+
+### unset 变量
+
+`bash` 命令 `unset` 删除指定的变量。
+
+### until; do
+
+`until` 创建循环，直到满足指定的条件。使用 `test` 命令对条件进行比较。
+
+#### 示例
+
+该示例展示了 `until` 的写法：
+
+```
+user$ i=1; until [ $i -gt 3 ]; do echo $i; done
+```
+
+### unxz [options] 文件
+
+`xz` 解压缩 utils 中的文件。
+
+### unzip [options] 存档
+
+`unzip` 从存档中提取文件。如果显式列出了文件，它们将不受影响。
+
+#### 示例
+
+以下命令提取归包：
+
+```
+user$ unzip 
+```
+
+### update-alternatives [options] 命令
+
+`update-alternatives` 管理 `/etc/alternatives` 目录中的链接。这些链接决定了并行安装的多个程序（例如编辑器）的激活版本。该命令通常由软件包安装脚本执行，也可以交互式使用。在 Red Hat 或 Fedora 系统上，该命令也可以作为 alternatives 使用。
+
+* `--auto name`
+
+  激活命令的自动模式。这意味着优先级值最高的命令将自动激活。
+
+* `--config name`
+
+  显示命令的可用替代方案。然后通过交互方式指定应该激活哪种替代方案。`update-alternatives` 随后会相应调整链接并将该命令切换到手动模式。
+
+* `--display name`
+
+  提供命令的所有已安装替代方案的列表。
+
+* `--install ...` 或 `--remove ...`
+
+  为命令安装或移除替代方案。这些命令通常仅用于软件包的安装或卸载脚本。
+
+* `--set name command path`
+
+  将通过 `command path` 指定的命令设置为 `name` 的默认程序。
+
+
+
+
+
+此脚本仅适用于 Ubuntu 和 Debian。它运行 `/etc/grub.d/*` 配置脚本并创建新的 GRUB 菜单文件：`/boot/grub/grub.cfg`。在其他发行版上，你需要运行 `grub2-mkconfig -o /boot/grub2/grub.cfg` 命令而不是 `update-grub`。
+
+### update-initramfs [options]
+
+`update-initramfs` 负责在 Debian 和 Ubuntu 中创建、更新或删除 initrd 文件。initrd 文件包含 GRUB 在系统启动期间加载的内核模块。这些文件通过 `/etc/initramfs-tools` 目录下的文件进行配置。对于 Fedora、RHEL 和 SUSE，你可以使用 `dracut` 命令代替 `update-initramfs`。
+
+* `-c`
+  为通过 `-k` 指定的内核版本创建一个新的 initrd 文件。
+
+* `-d`
+  删除通过 `-k` 指定的内核版本的 initrd 文件。
+
+* `-k version name`
+  指定要处理的内核版本。`-k all` 会导致 `update-initramfs` 处理所有已安装内核版本的 initrd 文件。
+
+* `-u`
+  更新最新内核版本或通过 `-k` 指定的内核版本的 initrd 文件。
+
+#### 示例
+
+以下命令为内核版本 6.6.7 创建一个新的 initrd 文件。该内核文件名为 `/boot/vmlinuz-6.6.7-generic`，生成的 initrd 文件名为 `/boot/initrd.img 6.6.7-generic`。
+
+```
+root# update-initramfs -c -k 6.6.7-generic 
+```
+
+### updatedb
+
+`updatedb` 为 `locate` 命令创建一个索引目录。该索引包含整个文件系统中所有文件的列表。命令通常由 cron 任务每天自动执行一次。执行需要 `root` 权限。根据发行版的不同，文件数据库保存在 `/var/lib`、`/var/lib/slocate` 或 `/var/lib/mlocate` 目录。
+
+### uptime [options]
+
+在没有其他选项的情况下，`uptime` 显示计算机运行的时间、当前登录的用户数，以及在过去 1 分钟、5 分钟或 15 分钟的平均负载（load average）。
+
+* `-p`
+  以清晰易读的格式（pretty）显示运行时间。
+
+* `-s`
+  显示计算机启动的时间（since）。
+
+#### 示例
+
+执行以下命令的服务器已运行了三个多月。这种长时间的运行只有当在此期间没有安全相关的内核补丁，或者这些补丁通过实时补丁系统（live patch system）集成到了内核中。在 Ubuntu 服务器上，你可以通过 `canonical-livepatch` 确定此。
+
+```
+user$ uptime
+ 15:48:11 up 104 days, 23 min,  1 user,  load average: 0.15, 0.12, 0.05 
+```
+
+### useradd [options] name
+
+`useradd` 设置新用户。在 Debian 和 Ubuntu 上，最好使用 `adduser`。
+
+* `-b "basedir"`
+  定义用户目录的基础（默认为 `/home`）。
+
+* `-c "full name"`
+  指定新用户的全名。
+
+* `-g group`
+  指定用户的主组（初级组）。
+
+* `-G groupA,groupB,groupC`
+  确定用户所有的附加组。
+
+* `-m`
+  如果家目录不存在（`/home/name`），则将其创建。来自 `/etc/skel` 的所有文件将复制到那里。在 Fedora 和 RHEL 上，由于 `login.defs` 中的设置，`-m` 默认适用，不需要指定。在这种情况下，可以通过 `-M` 防止创建家目录。
+
+* `-u n`
+  如果可用，则为用户分配指定的 UID（用户标识符）。
+
+#### 示例
+
+以下命令设置了登录名为 `gersin` 的新用户 Geraldin，创建家目录，定义初始密码，然后强制用户在首次登录时以及每 100 天立即设置新密码：
+
+```
+root# useradd gersin -c "Geraldin" -m
+root# passwd gersin
+Enter a new password: *********
+Enter the new password again:  *********
+root# chage -d 0 -M 100 gersin 
+```
+
+### userdel name
+
+`userdel` 删除指定的用户账号。
+
+* `-r`
+  同时也删除整个家目录和用户的邮件信箱。
+
+### usermod [options] name
+
+`usermod` 更改用户账号的各种属性，例如家目录、组组成部分、默认 shell 和 UID。大多数选项与 `useradd` 中的选项相同。用户账号的更改在重新登录后才会生效。
+
+* `-a -G group`
+  将用户添加到指定的组。
+
+* `-L`
+  临时锁定账号。为了此目的，在 `/etc/shadow` 的密码哈希值前放置 `!` 字符，这就是为什么无法登录。
+
+* `-U`
+  释放被 `-L` 锁定的账号。
+
+#### 示例
+
+以下命令将用户 `gersin` 添加到 `docuteam` 组：
+
+```
+root# usermod -a -G docuteam gersin 
+```
+
+
+
+
+
+如果你以后想再次将用户从组中移除，必须运行 `gpasswd`](#G_001.xhtml_gpasswd) `-d gersin docuteam`。
+
+# V
+
+## vcgencmd 命令
+
+此命令允许你读取树莓派 OS 上设备或 CPU 的关键数据，并更改某些参数。
+
+* `commands`:
+    列出所有 `vcgencmd` 命令。
+* `get_config` `parametername` `|int|str`:
+    返回指定参数或所有整数或字符串参数的状态。这些参数设置在 `/boot/config.txt` 文件中。
+* `get_throttled`:
+    提供关于电源潜在问题的信息（适用于 4B 型号）。
+* `measure_clock arm|core|hdmi|uart`:
+    提供 CPU 频率、图形核心频率以及其他各种组件的频率。
+* `measure_temp`:
+    提供 CPU 的温度。
+* `measure_volts core|sdram_c|sdram_i|sdram_p`:
+    指定供给图形核心和内存的电压。
+* `version`:
+    提供固件版本。
+
+#### 示例
+以下命令显示了当前空闲状态的树莓派 5 的运行状态：
+
+```
+pi$ vcgencmd measure_clock arm
+frequency(0)=1500019456
+pi$  vcgencmd measure_temp
+temp=48.4'C 
+```
+
+## vgchange [options] [vgname]
+
+LVM 命令 `vgchange` 用于更改卷组（VG）的属性。最重要的用途是激活或停用 VG。
+
+* `-a y|n`:
+    激活 (`y`) 或停用 (`n`) 所有 VG 或指定的 VG。
+
+## vgcreate [options] vgname pvname1 [pvname2 ...]
+
+`vgcreate` 用于从一个或多个物理卷（PV）创建一个新的 VG。
+
+#### 示例
+在以下示例中，pvcreate 首次将硬盘或 SSD 的第一个分区 `/dev/sdb1` 和 `/dev/sdc1` 标记为物理卷。`vgcreate` 从此创建卷组 `vg1`。然后，lvcreate 命令为逻辑卷 `lv1` 留出 100 GiB。[[]](#M_001.xhtml_mkfs.ext2) 在其中建立文件系统，mount 将该文件系统集成到目录树中新创建的 `/mnt/lv1` 目录。
+
+```
+root# pvcreate /dev/sdb1
+root# pvcreate /dev/sdc1
+root# vgcreate vg1 /dev/sdb1 /dev/sdc1
+root# lvcreate -L 100G -n lv1 vg1
+root# mkfs.ext4 /dev/mapper/vg1-lv1
+root# mkdir /mnt/lv1
+root# mount /dev/mapper/vg1-lv1 /mnt/lv1 
+```
+
+## vgdisplay vgname
+
+`vgdisplay` 显示指定 VG 的详细信息。
+
+## vgextend vgname pvname
+
+`vgextend` 将 PV 添加到 VG。
+
+#### 示例
+以下命令将 `/dev/sdc2` 分区定义为新的物理卷，然后将其添加到现有的、空间已变得太小的 `myvg1` 卷组中：
+
+```
+root# pvcreate /dev/sdc2
+  Physical volume "/dev/sdc2" successfully created
+root# vgextend  myvg1 /dev/sdc2
+  Volume group "myvg1" successfully extended
+root# vgdisplay myvg1
+...
+  VG Size               180.64 GB
+  Alloc PE / Size       6402 / 22.50 GB
+  Free  PE / Size       41324 / 158.14 GB
+... 
+```
+
+## vgmerge vgname1 vgname2
+
+`vgmerge` 将 `vgname2` 添加到 `vgname1`。一旦命令成功执行，`vgname1` 将包含之前组成 `vgname2` 存储池的所有 PV。
+
+## vgreduce [options] vgname [pvname ...]
+
+`vgreduce` 从 VG 的存储池中移除指定的 PV。这仅在 PV 未未使用时才有效。`-a` 选项移除非激活的 PV。
+
+## vgrename oldvgname newvgname
+
+`vgrename` 给 VG 起一个新名字。除了 `oldvgname`，也可以指定 VG 的 UUID。
+
+## vgscan
+
+`vgscan` 查看所有组。
+
+## vipw [options]
+
+## vigr [options]
+
+## visudo [options]
+
+`vipw`、`vigr` 和 `visudo` 命令启动 vi/vim 编辑器（参见键盘快捷键部分）并打开 etc/passwd、etc/group 或 etc/sudoers 文件。保存时，会进行检查以确保你符合相应文件的语法。如果不符合，将无法保存。
+
+* `-r` `directory`:
+    使用指定的目录作为根目录，并相对于该目录编辑文件。
+* `-s`:
+    打开 etc/shadow 文件（`vipw` 命令）或 `/etc/gshadow` 文件（`vigr` 命令）。
+
+即使你不是 `vi` 编辑器的粉丝，也可以使用这三个命令。在这种情况下，你必须设置 `VISUAL` 或 `EDITOR` 环境变量，并在其中输入你喜欢的编辑器的路径。
+
+## virsh [[-c connection] command]
+
+你可以使用 `virsh` 命令来管理虚拟 KVM 和 Xen 虚拟机。`virsh` 有两种使用方式：一种直接运行 virsh 命令，另一种作为交互式 shell 运行。在第一种情况下，你可以使用 `-c` 选项指定连接字符串：
+
+```
+root# virsh -c qemu:///session list --all ...
+```
+
+这里简要描述了最重要的 `virsh` 命令。如果你在 `man` 页面中阅读更多细节，请注意在 `virsh` 术语中虚拟机被称为 domains（域）。
+
+
+
+
+
+*   `attach-device name device.xml [--persistent]`
+    向虚拟机添加额外的硬件组件（例如 USB 设备），该组件由 `libvirt` XML 格式描述。`--persistent` 选项会使设备永久连接到虚拟机，并保存到虚拟机的 XML 文件中。
+
+*   `attach-disk name source target`
+    向虚拟机添加数据介质，其中 `source` 是主机系统上的设备名称，`target` 是虚拟机内部的设备名称。该命令可以使用许多选项进行补充，指定驱动程序（`--driver`）、缓存方法（`--cache`）等。`--persistent` 选项将数据介质永久连接到虚拟机。
+
+*   `attach-interface name type source`
+    向虚拟机添加网络接口。`type` 指定接口类型，例如 `network` 或 `bridge`。`source` 指定主机计算机上的接口名称（例如 `br0`）。可以使用额外的选项（`--mac`、`--model` 等）设置接口的详细信息。
+
+*   `autostart [--disable] name`
+    指定虚拟机应在主机计算机的启动过程中自动启动。通过使用 `--disable` 选项，可以再次禁用自动启动。
+
+*   `connect qemu:///session`
+    与当前用户的 `libvirtd` 实例建立用户连接。这允许你管理自己的自己的虚拟机。
+
+*   `connect qemu:///system`
+    与 `libvirtd` 的系统实例建立连接。如果你以 `root` 权限运行 `virsh`，`virsh` 会自动建立此连接。
+
+*   `connect qemu+ssh://user@hostname/system`
+    与另一台计算机（`hostname`）的 `libvirtd` 实例建立连接。通信通过 SSH 隧道进行。
+
+*   `console name`
+    允许控制控制台中操作指定的虚拟机。这假设虚拟机中运行着针对串口 `/dev/ttyS0` 的 `getty` 进程。要终止连接，必须按 Ctrl+ ]。
+
+*   `define xml file`
+    设置一个新的虚拟机，其关键数据汇总在指定的 XML 文件。注意：如果已存在同名的虚拟机（根据 XML 文件中的 `<name>` 元素），其定义将被覆盖！
+
+*   `destroy name`
+    立即终止虚拟机。这类似于拔掉电脑的电源线，可能会产生相同的后果（例如文件系统被破坏等）！
+
+*   `detach-device name device.xml`
+    从虚拟机中移除由 XML 文件描述的硬件组件。
+
+*   `detach-disk name target`
+    从虚拟机中移除数据介质。`target` 指定虚拟机内部的设备名称。
+
+*   `detach-interface name type --mac=xxx`
+    从虚拟机中卸载网络接口。
+
+*   `domstatus name and dominfo name`
+    提供有关虚拟机的信息。
+
+*   `edit name`
+    将描述虚拟机的 XML 文件加载到编辑器中，此时会考虑环境变量 `$EDITOR`。
+
+*   `list [--inactive or --all]`
+    列出所有运行中的虚拟机。如果你只想列出当前未激活的或所有虚拟机，需要输入 `--inactive` 或 `--all` 选项。
+
+*   `managedsave name managedsave-remove name`
+    将虚拟机的状态（即内存内容、CPU 寄存器等）保存到 `/var/lib/libvirt/save/` 目录下的文件中，然后停止机器运行。要重新激活虚拟机，只需使用 `start`。此时，状态文件会被删除。如果你想丢弃保存的状态并完全重启虚拟机，应该使用 `managedsave-remove` 删除状态文件。
+
+
+
+
+
+- `net-create` `xmlfile` `net-start` `netname` `net-destroy` `netname` `net-undefine` `netname` `net-list`
+  支持虚拟网络的管理。这些是可以通过 NAT 连接到主机系统的私有网络区域，例如 `libvirt` 工具的 `default` 网络。
+
+- `pool-define` `xmlfile` `pool-define-as` `poolname type` `--target` `path` `pool-start` `poolname` `pool-auto-start` `xmlfile` `pool-destroy` `poolname` `pool-delete` `poolname` `pool-list` `pool-info` `poolname`
+  支持 `libvirt` 存储池的管理。`pool-define` 创建一个新的池，其属性描述在 XML 文件中。`pool-define-as` 同样创建一个新池，但关键数据直接作为参数传递。允许的池类型包括 `dir`（本地目录）、`netfs`（网络目录）、`logical`（卷组）、`disk`（硬盘）或 `iscsi`（iSCSI 服务器）。
+  新池必须通过 `pool-start` 启动。如果要在将来自动启动该池，还必须运行 `pool-autostart`。
+  删除池的命令有些混乱：在删除之前必须使用 `pool-destroy` 停用池。尽管该命令听起来不太妙，但池仅仅是被停止了，之后可以使用 `pool-start` 重新。只有 `pool-delete` 会删除池。`pool-delete` 假设池中的所有卷都已经被删除，这意味着只有空池才能被删除。
+
+- `qemu-monitor-command --hmp` `name` `'command'`
+  为指定的 `name` 虚拟机运行指定的 QEMU 监控命令。需要 `--hmp` 选项，否则命令必须以 JSON 格式指定。
+
+- `restore` `file`
+  重新激活使用 `save` 保存的虚拟机。之后可以删除状态文件。
+
+- `save` `name file`
+  将虚拟机的状态（本质上是 RAM 的内容）保存到文件中，然后停止虚拟机的运行。要重新激活虚拟机，必须使用 `restore`。
+
+- `schedinfo [options]` `name`
+  显示或更改虚拟机的调度器参数（`--set parameter=value`）。这些参数可用于控制虚拟机允许使用的硬件资源。资源控制需要在主机系统上激活 `cgroups` 功能。
+
+- `setmaxmem` `n` `setmem` `n`
+  设置内存使用（RAM）限制和当前分配的内存。额外的 `--config`、`--current` 和 `--live` 选项允许你指定设置是永久保存还是当前生效。
+
+- `shutdown/reboot` `name`
+  关闭或重启虚拟机。虚拟机通过 ACPI 接收关闭信号。虚拟机中必须安装 ACPI 守护 `acpid` 才能处理该信号。
+
+- `snapshot-create` `vmname [xml-file [--redefine]]` `snapshot-create-as` `vmname snapshotname [description]` `snapshot-list` `vmname` `snapshot-delete` `vmname snname` `snapshot-revert` `vmname snname` `--running]`
+  创建运行中的虚拟机快照、列出所有快照、删除快照或将快照内容应用于镜像文件。快照功能仅适用于使用 QCOW2 镜像文件的虚拟机。
+
+- `start` `name`
+
+
+
+
+
+启动指定的虚拟机。如果你想在图形模式下与虚拟机进行通信，则应该使用 VNC 客户端（连接数据由 `virsh` 命令 `vncdisplay` 决定，参见此列表中的 `vncdisplay` 项目）或 `virt-viewer` 程序。
+
+*   `suspend/resume name`
+临时停止指定的虚拟机或恢复执行。然而，停止的虚拟机会继续使用内存！因此，仅停止了虚拟 CPU。
+
+*   `ttyconsole name`
+指定使用主机计算机的哪个设备来访问客体系统的串口接口（例如 `/dev/pts/5`）。
+
+*   `undefine name`
+删除描述虚拟机的 XML 文件。保留带有虚拟硬盘的镜像文件。在删除所有虚拟机快照之前，无法运行 `undefine`。
+
+*   `vcpuinfo name`
+提供虚拟机可用的（虚拟）CPU 信息，以及到目前为止使用的 CPU 时间信息。该命令也可用于检查 CPU 绑定（pinning）。
+
+*   `vcpupin name guest-cpu-nr host-cpu-list`
+将主机系统的物理 CPU 核心与客体系统的虚拟 CPU 绑定。`vcpupin vm1 0 2` 将主机的第三个 CPU 核心永久分配给虚拟机 `vm1` 的第一个虚拟 CPU。
+
+*   `vol-create xmlfile vol-create-as poolname newvolname size vol-delete volname vol-list`
+`vol-info volname`
+支持存储池中数据介的管理。`vol-create` 创建一个新的数据介，其属性在指定的 XML 文件中描述。`vol-create-as` 创建所需大小的新数据介，其中允许使用后缀 `k`、`M`、`G` 和 `T` 表示 KiB、MiB、GiB 和 TiB。创建镜像磁盘时，可以使用 `--format raw/qcow2/qed` 指定所需的格式（默认为 `raw`）。
+
+`--allocation size` 决定预分配多少内存；对于 raw 卷，整个内存始终被预留。
+
+如果有多个存储池，对于所有带有 `--pool poolname` 选项的命令，你必须指定你指的是哪个池。
+
+*   `vncdisplay name`
+返回虚拟机 VNC 显示的 IP 地址和端口号（`localhost` 为空）。然后你可以启动任何 VNC 客户端与虚拟机交互。出于安全考虑，VNC 访问默认仅允许从 `localhost` 进行（参见 `/etc/libvirt/qemu.conf` 文件）。
+
+如果虚拟机完全没有通过 VNC 共享其图形系统，而是使用更现代的 Spice 系统，`vncdisplay` 将返回结果。在这种情况下，你可以使用 `virt-viewer` 程序操作虚拟机。你可以直接将虚拟机名称传递该程序。
+
+然而，如果需要确定 Spice 端口号将会变得困难。`virsh` 缺乏类似于 `vncdisplay` 的确定虚拟机 spice 端口的命令。我在 https://ubuntuusers.de/ 论坛上发现可以通过进程列表中提取端口号来提供解决方案：
+
+```bash
+spice_port=$(ps aux | grep vm_name | grep -oP "(?<=-spice port=).*?(?=,)")
+```
+
+#### 示例
+
+一旦通过 `virsh` 命令启动了 `libvirt` shell，你就可以运行命令来管理本地计算机上的所有虚拟机：
+
+```bash
+root# virsh
+virsh# list --all
+ Id Name           Status
+-------------------------------
+ 13 fedora         running
+  - ubuntu         shut down
+  - windows        shut down
+virsh# start windows
+Domain windows started
+virsh# vncdisplay windows
+:1
+virsh# exit 
+```
+
+你也可以通过 SSH 连接到另一台机器上的 `libvirtd` 守护进程。出于安全原因，如果在 KVM 主机无法通过密码 SSH root 登录，必须在建立首次连接之前在 KVM 主机上设置你的公 SSH 密钥。
+
+```bash
+virsh# connect qemu+ssh://user@hostname/system
+user@hostname's password: ******* 
+```
+
+### virt-clone [options]
+
+`virt-clone` 复制由 `libvirt` 工具管理的关闭状态的虚拟机。这将创建一个 XML 定义文件和一个镜像文件的副本。其他硬件组件保持基本不变。
+
+*   `--auto-clone`
+创建一个新的虚拟机。虚拟机名称由之前的名称加上 `-clone` 组成。`-clone` 也会插入到镜像文件的名称中，例如 `rhel9.img` 变成 `rhel9-clone.img`。使用 `--auto-clone` 时，可以省略显式指定的 `--name` 和 `--file`。
+
+*   `--connect hypervisor`
+建立与指定的虚拟化系统的连接。
+
+
+
+
+
+*   `-f` `file` 或 `--file=file`
+    指定新镜像文件的期望名称。如果原始虚拟机具有多个虚拟硬盘，则你必须多次使用此选项。除了镜像文件外，你也可以指定设备文件的名称，例如，如果你使用主机系统的逻辑卷作为数据存储。
+
+*   `--mac nn:nn:nn:nn:nn:nn`
+    指定网络适配器期望的新 MAC 地址。如果省略了此信息，`virt-clone` 将自动使用一个唯一的随机 MAC 地址。
+
+*   `--name reliving`
+    指定新虚拟机的名称。
+
+*   `--original name`
+    指定原始虚拟机的名称。
+
+*   `--preserve-data`
+    防止复制镜像文件。这意味着新虚拟机将使用与旧虚拟机相同的镜像文件。因此，不允许同时运行旧虚拟机和新虚拟机！如果你想用新的虚拟硬件或网络配置测试系统，此选项将非常有用。
+
+#### 示例
+
+以下命令复制了 Ubuntu 服务器安装程序 `userver5`。新虚拟机命名为 `userver6`，新的镜像文件保存存在 `/var/lib/libvirt/images/userver6.img` 文件中。确保在 libvirt 存储池中创建新的镜像文件。否则，RHEL/Fedora 上的 SELlinux 规则将阻止虚拟机运行。
+
+```
+root# virt-clone --original userver5 --name userver6 \
+                 --file /var/lib/libvirt/images/userver6.img 
+```
+
+### virt-install [options]
+
+`virt-install` 是一个 Python 脚本，帮助你设置新的虚拟机。
+
+*   `--arch architecture`
+    指定所需的 CPU 架构，例如 `i386`、`i686` 或 `x86_64`。默认情况下，`virt-install` 使用与主机系统相同的架构。
+
+*   `--cdrom file`
+    指定 ISO 文件名或 CD/DVD 驱动器设备名，从那里加载安装数据。
+
+*   `--connect hypervisor`
+    建立与指定虚拟化系统的连接。如果在具有 `root` 权限的 KVM 主机上启动 `virt-install`，脚本将自动建立到 `qemu:///system` 的连接。
+
+*   `--disk file`
+    指定用于保存虚拟机的镜像文件名。如果你想使用多个虚拟存储设备，则必须多次指定此选项。
+
+*   `--disk opt1=value1,opt2=value2,...`
+    允许你从不同的 `libvirt` 存储池指定多个镜像文件。允许的选项包括 `path` 指定镜像文件或块设备，`pool` 指定之前创建的 `libvirt` 存储池，`vol` 指定存储池中现有的镜像（`vol=poolname/imagename`），`size` 指定新镜像文件的期望大小（单位 GiB），`bus` 选择总线系统（`ide`、`scsi` 或 `virtio`）以及 `cache` 选择缓存策略（`writethrough`、`writeback` 或 `none`）。
+
+*   `--graphics type,opt1=value1,opt2=value2 ...`
+    指定虚拟机图形系统的实现方式。可能的类型有 `vnc` 或 `spice`。默认标准使用 VNC。可以通过其他选项指定各种连接参数，如 `port`、`listen` 和 `password`。
+
+*   `--import`
+    使 `virt-install` 不执行新安装，而是基于现有的镜像文件创建新虚拟机。
+
+*   `--name type, opt1`
+    指定虚拟机的名称。
+
+*   `--network type,opt1=value1,opt2=value2,...`
+    指定虚拟机网络设备的关键数据。如果需要，可以多次指定该选项。`type` 指定如何建立与主机的网络连接。允许的值包括 `bridge=name`(用于之前设置的网络桥）、`network=name`(用于使用 `virsh` 定义的虚拟网络），或者如果虚拟机需要通过 NAT 与主机系统通信，则直接使用 `user`。
+
+
+
+
+其他选项用于确定网络设备的参数：`model` 指定要模拟的适配器，例如 `e1000`、`rtl8139` 或 `virtio`。`mac` 定义设备的 MAC 地址。如果未指定此参数，`virt-install` 将自行生成随机 MAC 地址。KVM 的 MAC 地址必须以 `52:54:00` 开头！
+
+*   `--nodisk`
+    允许在不使用镜像文件的情况下安装（例如，如果安装要在网络存储设备上进行）。
+
+*   `--noreboot`
+    防止在安装完成后自动重启。
+
+*   `--os-type name`
+    指定要安装的操作系统类型，例如 `linux`、`unix`、`windows` 或 `other`。该信息用于优化各种硬件参数。
+
+*   `--os-variant name`
+    指定要安装的具体操作系统版本，例如 `fedora28`、`virtio26`、`rhel7` 或 `win10`。`virt-install` 提供所有已知操作系统名称的完整列表。如果你使用此选项，则不需要指定 `--os-type`。
+
+*   `--ram n`
+    指示 RAM 的大小，单位为 MiB。
+
+*   `-serial pty`
+    为虚拟机配备串行接口。当虚拟机启动时，串口接口将连接到主机计算机上的伪 TTY 设备。在 `virsh` 中，你可以使用 `ttyconsole vmname` 确定设备名称。
+
+*   `--soundhw=ac97/es1370/sb16`
+    为虚拟机配备声卡。
+
+*   `--vcpus=n`
+    指定所需的 CPU 核心数（默认为 1）。
+
+*   `--video=cirrus/vga/vmvga`
+    指定要模拟的图形适配器（默认为 `cirrus`）。
+
+#### Example
+
+在运行 `virt-install` 之前，你必须为虚拟硬盘创建一个镜像文件：
+
+```
+root# virsh
+virsh# vol-create-as default disk.qcow2 10G --format qcow2
+virsh# exit 
+```
+
+`virt-install` 命令允许你设置一个新的虚拟机：
+
+```
+root# virt-install --name myvmname --ram 2048 --cdrom install.iso \
+        --os-variant rhel8  --disk vol=default/disk.qcow2 --graphics vnc \
+        --noreboot 
+```
+
+### virt-top [options]
+
+`virt-top` 显示运行的虚拟机所需的 CPU 容量和内存空间。在 `virt-top` 运行期间，你可以通过 0、1、2 和 3 根据虚拟机、CPU 核心、网络接口或磁盘设备对显示进行排序。按 Q 退出命令。
+
+*   `--connect hypervisor`
+    建立到指定虚拟系统的连接。默认情况下，如果以 `root` 权限启动，`virt-top` 将与 `qemu:///system` 通信。
+
+*   `-o sort`
+    指定的排序顺序，例如 `cpu`、`mem` 或 `time`，根据 CPU 性能、内存需求或总计算时间对列表进行排序。
+
+#### Example
+
+```
+root# virt-top
+virt-top 14:36:17 - x86_64 8/8CPU 1600MHz 15961MB
+5 domains, 3 active, 3 running, 0 sleeping, 0 paused, 2 inactive D:0 O:0 X:0
+CPU: 0.1%  Mem: 6144 MB (6144 MB by guests)
+
+    ID S RDRQ WRRQ RXBY TXBY %CPU %MEM    TIME   NAME
+    3 R    0   22    0    0  1.3 12.0  35:20:50 kofler.info
+    4 R    0    0    0    0  0.1 12.0 274:52.67 pi-book.info
+    1 R    0    0    0    0  0.0 12.0  39:11:52 ubuntu-book.info
+    -                                           (michael-kofler.com) 
+```
+
+### virt-viewer [options] name/uuid
+
+`virt-viewer` 是一个 VNC 和 Spice 客户端，用于显示虚拟机的图形系统。虚拟机的名称、ID 或 UUID 通常传递给命令。
+
+*   `-c hypervisor`
+    建立到指定虚拟系统的连接。只有当它是外部 KVM 宿主机时，才需要此选项。
+
+## W
+
+### wait [process number]
+
+`bash` 命令 `wait` 等待指定的后台进程结束。如果没有指定进程号，该命令将等待 shell 启动的所有后台进程结束。
+
+#### Example
+
+在 shell 脚本中，`wait` 的用法特别有用，当需要先启动多个后台进程，然后等待所有这些进程结束时：
+
+```bash
+#!/bin/bash
+command1 &
+command2 &
+command3 &
+command4 &
+wait
+# 只有当命令 1 到 4 完成后在此处继续
+... 
+```
+
+### wakeonlan [options] mac
+
+来自同名包的 `wakeonlan`（适用于 Debian 和 Ubuntu）向指定的 MAC 地址发送特殊的网络数据包，并尝试从睡眠模式“唤醒”被识别的设备。这仅在设备支持 Wake-on-LAN 标准时才有效。
+
+*   `-i host`
+    仅向指定的主机或地址发送 Wake-on-LAN 数据包，而不是发送到整个网络。
+
+### watch command
+
+`watch` 定期运行指定的命令并显示输出。
+
+*   `-d` `--differences`
+    标记与上一次结果相比的差异。
+
+*   `-e` `--errexit`
+
+
+
+
+如果被调用的命令返回错误，则终止 `watch`。
+
+* `-n` `err exit`
+  指定命令再次运行的秒数（默认为每两秒一次）。
+
+#### 示例
+
+以下命令显示运行中的 `mysqld` 进程列表的所有变化：
+
+```
+user$ watch -d 'ps aux | grep mysqld' 
+```
+
+### wc files
+
+`wc` 统计指定文件中行数、单词和字符数。如果使用通配符输入多个文件，`wc` 还会计算这三项的总和。此外，`wc` 也非常适合与其他程序结合使用。
+
+#### 示例
+
+`find` 为每个普通文件返回一行。`wc` 统计行数，从而返回目录树中所有文件的总数。
+
+```
+user$ find / -type f -print | wc 
+```
+
+### wget [options] url1 url2 . . .
+
+`wget` 从 HTTP、HTTPS 和 FTP 服务器下载文件。`wget` 可以恢复中断的下载，可以递归地跟踪链接，并适用于自动化下载。
+
+要传输的文件通过通过 URL（统一资源定位符）指定，例如 `http://myserver.com/file.iso`。`wget` 命令由无数选项控制；这里仅列出最重要的几个：
+
+* `-b`
+  在后台进程中执行下载，并将所有状态消息写入 `wget-log` 文件。
+
+* `-B` `url` 或 `--base=url`
+  在你通过 `-i file` 指定的文件中，所有相对链接前加上基本 `url` 地址。
+
+* `-c`
+  恢复中断的下载。注意：如果文件在此期间在服务器上发生了变化，则下载的文件将是不正确的，它将包含部分旧文件的数据和部分新文件的数据！
+
+* `--force-html`
+  将 `-i` 指定的文件解释为 HTML 文件，并加载 HTML 文件中链接引用的所有文件。
+
+* `--ftp-user=user` `--ftp-password=pw`
+  指定 FTP 下载的用户名和密码。此信息也可以在 URL 中传输（`ftp://user:password@server/file.txt`）。
+
+* `-i` `file` 或 `--input-file=file`
+  从指定的文本文件中读取要传输的文件（URL）。如果你传递 `-` 字符而不是文件，`wget` 将期望从标准输入读取 URL。`-i` 选项仅接受本地文件作为参数，不接受 URL（因此 `-i http://server/name.html` 无法作用）。
+
+* `--limit-rate=n`
+  限制每秒下载量。字母 `k` 和 `m` 分别表示千字节和兆字节（即 `--limit-rate=0.25m`）。
+
+* `--no-check-certificate`
+  不检查 HTTPS 证书。如果你知道相关服务器使用自签名证书，这样做是有意义的。
+
+* `-q`
+  不输出状态消息（静默）。
+
+* `--retry-connrefused`
+  即使在连接被拒绝错误后也继续尝试下载文件。此选项对于那些偶尔从网络中消失并在短时间内重新出现的不可靠的下载服务器有用。
+
+* `--spider`
+  测试由 `-i htmlfile --force-html` 指定的文件中的所有链接是否仍然有效。但是，链接指向的文件不会被下载。
+
+* `-t` `n` 或 `--tries=n`
+  如果连接丢失，则尝试重连 `n` 次（默认设值为 `20`）。使用 `-t 0`，`wget` 将一直尝试，直到下载成功或你取消命令。
+
+* `-w` `n` 或 `--wait=n`
+  指定 `wget` 在下载下一个文件之前等待的秒数。此选项可以防止下载服务器被无数次几乎同时的下载请求所过载。
+
+#### 递归下载
+
+以下选项控制递归下载：
+
+* `-E` 或 `--html-extension`
+  为所有类型为 `application/xhtml+xml` 或 `text/html` 且文件名不以 `.html` 或 `.htm` 结尾的的文件添加 `.html` 后缀。
+
+* `-H` 或 `--span-hosts`
+  同样跟踪指向其他网站的链接。
+
+* `-k` 或 `--convert-links`
+  更改下载的 HTML 文件中的链接，使其引用本地文件。这使得以后离线查看页面变得可能。
+
+
+
+
+-   `-l n` 或 `--level n`
+  限制递归深度（默认为 `5`）。`-l inf` 可禁用此限制。
+-   `-L` 或 `--relative`
+  仅跟踪相对链接（但不跟踪指向起始网站的绝对链接）。
+-   `-r`
+  启用递归下载。对于 HTTP 下载，`wget` 会跟踪起始页面上的所有 HTTP 链接，下载此类方式指定的文件，跟踪它们的链接等。`wget` 仅考虑相对链接以及指向起始网站页面的链接。对于 FTP 下载，`wget` 会读取所有子目录。
+-   `-p`
+  下载查看源文件所需的所有文件（包括超过最大递归深度的文件）。
+
+#### Examples
+
+在基本形式下，`wget` 简单地下载指定的文件：
+
+```
+user$ wget ftp://myftpserver.com/name.abc 
+```
+
+如果下载由于任何原因被中断，可以使用 `-c` 毫无问题地恢复：
+
+```
+user$ wget -c ftp://myftpserver.com/name.abc 
+```
+
+以下递归下载命令（`-r` 选项）有助于日后离线阅读网站或存档其当前状态。递归深度通过 `-l 4` 限制为四层。
+
+```
+user$ wget -r -l 4 -p -E -k http://website.com 
+```
+
+### whatis file
+
+`whatis` 输出指定命令或关键词的短描述。`whatis` 描述仅存在于安装了 `man` 手页的主题。如果 `whatis` 无法工作，可能缺少通过 `mandb` 或 `makewhatis` 创建的底层数据库。
+
+### whereis file
+
+`whereis` 在所有常用路径中搜索指定文件的二进制文件、`man` 文件和源代码。因此，`whereis` 没有 `find` 详尽，但速度快得多。`whereis` 的 `man` 手页列出了搜索的目录。
+
+### which command
+
+`which` 在 `PATH` 中指定的所有路径中搜索命令。`which` 返回如果在不带路径信息调用命令时将执行的命令的全名。如果不同目录中存在多个版本的命令，这非常有用。
+
+在 `bash` 中，也可以用 `type` 替代 `which`。`type` 命令帮助你判断 `command` 实际上是内置 shell 命令、别名还是自定义函数。
+
+#### Example
+
+`which` 确定了 `ls` 命令在文件系统中存储的位置：
+
+```
+user$ which ls
+/usr/bin/ls 
+```
+
+### while condition; do commands done
+
+`while` 在 `bash` 脚本中创建循环。循环持续到指定的条件第一次不再满足为止。循环判定依据是指定为条件的命令的返回值。比较和测试使用 `test` 命令或其方括号中的短形式进行。
+
+#### Examples
+
+以下循环输出数字 0 到 5：
+
+```bash
+#!/bin/bash
+i=0
+while [ $i -le 5 ]; do
+   echo $i
+   i=$[$i+1]
+done 
+```
+
+若要逐行处理文本文件，你必须如下所示编写你的 `bash` 脚本：
+
+```bash
+#!/bin/bash
+while read line; do
+  echo $line
+  ...
+done < textfile.txt 
+```
+
+### who [options]
+
+`who` 显示当前登录系统的所有用户列表。即使你是你电脑上唯一工作的人，你也可以在不同的文本控制台上使用不同的名称登录。如果你想知道谁最后登录过这台电脑，必须运行 `last` 命令。
+
+-   `-a`
+  提供关于每个用户的详细信息，包括使用的控制台和登录时间。对于 SSH 连接，`who` 还显示发生登录的计算机。
+-   `-m`
+  指定当前活动控制台的用户名。`who am i` 命令含义相同。
+
+#### Example
+
+除了六个控制台的 TTY 外，测试计算机上用户 `kofler` 有两个活跃的 shell 会话：
+
+```
+user$ who -a
+           system boot  2025-04-09 08:57
+           run-level 2  2025-04-09 08:57
+LOGIN      tty5         2025-04-09 08:57          971 id=5
+LOGIN      tty2         2025-04-09 08:57          976 id=2
+LOGIN      tty3         2025-04-09 08:57          977 id=3
+LOGIN      tty1         2025-04-09 08:57         1802 id=1
+kofler   + pts/1        2025-04-24 11:45 02:02    351 (xxx.telekom.at)
+kofler   + pts/2        2025-04-24 13:47   .     2354 (xxx.telekom.at) 
+```
+
+### whois [options] host name
+
+`whois` 对指定的主机名执行 DNS 查询并显示结果。
+
+#### Example
+
+```
+user$ whois kofler.info
+Domain Name: KOFLER.INFO
+...
+Domain Status: ok https://icann.org/epp#ok
+Registrant Name: Kofler Michael
+... 
+```
+
+### wl-copy [options] text
+
+wl-paste
+
+来自 `wl-clipboard` 包的 `wl-copy` 将作为参数传递的文本复制到 Wayland 系统的剪贴板。如果没有传输文本，该命令将期望从标准输入通道获取数据。
+
+`wl-paste` 通过标准输出通道输出剪贴板的内容。
+
+-   `--type mime/type`
+  定义 `wl-copy` 的 MIME 数据类型。
+
+### wlr-randr [options]
+
+
+
+
+
+`wlr-randr` 在不带额外选项的情况下会列出 Wayland 系统允许的所有图形分辨率。通过 `--mode`，你可以更改显示器输出的分辨率。`wlr-randr` 是 X 命令的 Wayland 对应（参见 xrandr）。
+
+#### 示例
+
+以下命令将连接到第二个 HDMI 输出的显示器分辨率更改为 2,560 × 1,440 像素：
+
+```
+user$ wlr-randr --output HDMI-A-2 --mode 2560x1440 
+```
+
+### wol [options] mac
+
+同名软件包中的 `wol`（适用于 Fedora 和 RHEL）向特定的 MAC 地址发送一个特殊的网络数据包，并尝试从睡眠模式“唤醒”设备。只有当设备支持网络唤醒（Wake-on-LAN）标准时此方法才有效。
+
+- `-h` `host` 或 `-i` `host`
+  仅向指定的主机或地址发送网络唤醒数据包，而不是发送到整个网络。
+
+### wpa_passphrase ssid
+
+`wpa_passphrase` 帮助为 Wi-Fi 认证服务 `wpa_supplicant` 设置配置文件。
+
+#### 示例
+
+`wpa_supplicant` 期望将 Wi-Fi 名称（即服务集标识符 SSID）作为参数。然后你需要输入 Wi-Fi 密码。该命令会输出符合 `wpa_supplicant` 语法的多个行。你现在将这些行添加到 `/etc/wpa_supplicant/wpa_supplicant.conf` 的末尾：
+
+```
+user$ wpa_passphrase my-wifi-name
+# reading passphrase from stdin
+strictlySecret
+network={
+        ssid="my-wifi-name"
+        #psk="strictlySecret"
+psk=9a184914197f550e1c6b350cc49b09a5fab532a8ec991f997ee77fd0a5e78d96
+} 
+```
+
+### write username
+
+`write` 允许向另一个用户发送消息。运行命令后，在按下 Ctrl+D 之前输入的所有字符都将传输到指定用户的终端。
+
+### wsl [options] [command]
+
+`wsl` 并不是 Linux 命令，而是 Windows 命令。它被包含在书中是因为它可以帮助你管理适用于 Linux 的子系统 (WSL)，即在 Windows 上启动和删除 Linux 安装等。只有在“启用或关闭 Windows 功能”程序中激活了“适用于 Linux 的子系统”选项后，该命令才可用。
+
+在没有进一步选项的情况下，`wsl` 启动默认 Linux 安装或运行传递 `wsl` 的命令。
+
+- `-d` 或 `--distribution` `name`
+  启动指定的发行版。其后续使用将在 shell 中交互式进行。
+- `-l` 或 `--list`
+  列出所有 Linux 安装。使用额外的 `--verbose` 选项，该命令还会显示哪些 Linux 实例正在运行，以及它们是兼容 WSL1 还是 WSL2。（WSL2 使用真实的 Linux 内核来运行相应的发行版，这在速度上有优势。但在网络连接方面，WSL2 相比 WSL1 有限制。）
+- `-s` 或 `--set-default` `name`
+  指定哪一个 Linux 安装为默认 Linux 系统。
+- `--set-default-version` `name` `1|2`
+  确定新的 Linux 安装默认使用 WSL1 还是 WSL2 运行。
+- `--set-version` `name` `1|2`
+  指定指定的 Linux 发行版如何运行（WSL1 或 WSL2）。
+- `--shutdown`
+  关闭所有运行中的 Linux 发行版。
+- `-t` 或 `--terminate` `name`
+  停止指定的 Linux 发行版。
+- `-u` 或 `--user` `name`
+  为指定用户运行命令或登录。
+- `--unregister` `name`
+  删除指定的 Linux 安装。
+
+`wsl` 未提供安装新 Linux 发行的选项。要此操作，你需要咨询 Microsoft Store，那里有很多 Linux 发行版免费下载。首次启动 WSL 发行版时，必须设置用户和密码。该用户具有 `sudo` 权限。
+
+#### 示例
+
+测试计算机上有四个 Linux 安装，以 Ubuntu 为默认发行版：
+
+```
+> wsl --list --verbose
+NAME                   STATE           VERSION
+* Ubuntu               Stopped         2
+kali-linux             Stopped         1
+docker-desktop-data    Stopped         2
+docker-desktop         Stopped         2 
+```
+
+`wsl` 运行两次 `id` 命令，一次使用标准账户，另一次使用 `root` 权限。这不需要密码。
+
+```
+> wsl id
+uid=1000(kofler) gid=1000(kofler) groups=1000(kofler),4(adm),...
+
+> wsl -u root id
+uid=0(root) gid=0(root) groups=0(root) 
+```
+
+最后一个示例启动了 Kali Linux 用于交互式使用：
+
+```
+> wsl -d kali-linux
+$ cat /etc/os-release
+PRETTY_NAME="Kali GNU/Linux Rolling"
+NAME="Kali GNU/Linux"
+...
+$ ip a
+8: eth0: <BROADCAST,MULTICAST,UP> mtu 1500 group default qlen 1
+   link/ether 04:d4:c4:92:65:f5
+   inet 192.168.178.52/24 brd 192.168.178.255 scope global dynamic
+   ...
+16: eth1: <BROADCAST,MULTICAST,UP> mtu 1500 group default qlen 1
+   link/ether 00:15:5d:7e:85:98
+   inet 172.31.96.1/20 brd 172.31.111.255 scope global dynamic
+   ... 
+```
+
+## X
+
+### xargs 命令
+
+`xargs` 将来自标准输入的数据转发到作为参数指定的命令中。`xargs` 通常与带有管道符的命令结合使用，即格式格式为 `command1 | xargs command2`。通过这种方式，第一个命令的结果可以使用第二个命令进行处理。如果第一个命令的结果非常巨大，无法通过命令行传递，则会分步调用 `command2`。
+
+
+
+
+
+`command1 | command2` 的区别在于 `xargs` 将标准输入以参数的形式传递给 `command2`。如果 `command2` 只处理传递的参数，则必须使用 `xargs`。相反，如果 `command2` 处理来自标准输入的数据，则使用普通管道即可。
+
+*   `--null`
+    期望使用 0 字节来分隔文件名（但不包括空格和制表符）。如果运行 `find` 时使用了 `-print0` 选项，此选项适用于处理 `find` 的结果。
+
+#### 示例
+
+以下命令会在当前目录及其所有子目录下搜索以 `~` 字符结尾的备份文件并将其删除。对于包含空格的文件名同样有效。
+
+```
+user$ find -name '*.~' -print0 | xargs --null rm 
+```
+
+### xdg-open 文件
+
+`xdg-open` 在图形系统中启动一个合适的程序来编辑指定的文件。该命令分析存储在 XDG 系统中的 MIME 数据；例如，它为 MP3 文件打开音频播放器，为 PNG 文件打开图形程序。虽然 XDG 代表 X 桌面组，但即使图形系统使用 Wayland，该命令也有效。
+
+在 Debian 和 Ubuntu 系统上，可以使用短名 `open` 运行 `xdg-open`，就像在 macOS 上一样。
+
+### xdpyinfo [options]
+
+`xdinfo` 提供关于图形模式下运行的 X 服务器的全面信息。你可以使用 `grep` 来提取与你相关的细节。
+
+#### 示例
+
+以下命令确定 X 服务器的发布版本、屏幕分辨率及其像素密度（每英寸点 [DPI]）：
+
+```
+user$ xdpyinfo | grep release
+vendor release number:    11702000
+root# xdpyinfo | grep -C 1 dimensions
+screen #0:
+  dimensions:    1600x1200 pixels (411x311 millimeters)
+  resolution:    99x98 dots per inch 
+```
+
+### xfs_admin [options] device/imagefile
+
+`xfs_admin` 显示或更改 XFS 文件系统的参数。
+
+*   `-c 0|1`
+    禁用或激活文件系统的懒计数功能，这意味着文件系统的超级块（superblocks）更新频率会降低，从而显著加快某些文件操作。
+*   `-f`
+    指示文件系统位于镜像文件中，而不是数据介质设备。
+*   `-l`
+    输出文件系统的标签（label）。
+*   `-L name`
+    重新设置文件系统的标签。
+*   `-u`
+    显示文件系统的 UUID。
+*   `-U uuid`
+    为文件系统分配一个新的 UUID。
+
+### xfs_growfs [options] mount-directory
+
+`xfs_growfs` 扩展 XFS 文件系统。这假设底层设备（例如分区或逻辑卷）之前已经扩大过。
+
+扩展将在持续操作期间进行。为此，文件系统必须已集成到目录树中。目前没有缩小 XFS 文件系统大小的计划。
+
+`xfs_growfs` 具有多种选项，允许你控制文件系统的哪些区域将被扩大以及扩大多大。但通常情况下，没有必要指定这些选项。`xfs_growfs` 会识别底层数据介质的大小，并自行决定 XFS 文件系统的各个区域应该是多大。
+
+### xfs_info device
+
+`xfs_info` 输出 XFS 文件系统关键数据的摘要。该命令等同于 `xfs_growfs -n`。
+
+### xfs_repair [options] device/imagefile
+
+`xfs_repair` 尝试将损坏的 XFS 文件系统恢复到一致状态。
+
+*   `-d`
+    修复激活的只读文件系统。通常，`xfs_repair` 只能修复未使用的文件系统。`man` 页面将该选项描述为危险的。更安全的方法是使用 live 系统或紧急系统启动计算机。修复后，你必须重启系统。
+*   `-f`
+    指示文件系统位于镜像文件中，而不是数据介质设备。
+*   `-n`
+    不进行任何更改，但显示在不带此选项的情况下运行命令将执行哪些修复。
+
+### xhost +/-hostname
+
+使用 `xhost +hostname`，图形服务器将接受来自指定主机名的 X 连接。同样，在执行 `xhost -hostname` 后，X 将阻止来自该主机连接。
+
+出于安全考虑，X 图形系统通常允许本地连接。要从外部计算机工作，必须通过 `xhost +name` 显式为该主机定义异常。更宽松的是，`xhost +` 完全禁用了访问控制，允许从任何主机登录。
+
+#### 示例
+
+在现实生活中，运行 `xhost` 通常是必要的，特别是如果你首先想通过 VNC 以普通用户身份建立到服务器的连接，然后使用 `sudo` 或 `su` 以 `root` 权限运行图形程序。这默认是不允许的。解决方案是 `xhost +localhost`（因为已经通过 VNC 建立了连接，现在只是在另一个账户下运行程序的问题）。
+
+以下示例假设你首先建立了 VNC 连接，然后在终端窗口中运行 `xhost`，最后通过 `sudo` 在图形模式下启动程序——在这种情况下，是 `gedit` 编辑器：
+
+```
+user$ xhost +localhost
+user$ sudo gedit        
+(以 root 权限启动编辑器) 
+```
+
+### xinput [command]
+
+`xinput` 支持为 X 窗口系统配置输入设备（例如键盘、鼠标和触控板）。
+
+
+
+
+
+* `list`
+  列出所有识别出的输入设备。
+* `list-props` `deviceid`
+  列出设备的参数。你应该先使用 `xinput list` 确定设备 ID。
+* `set-button-map` `deviceid mapbutton1 mapbutton2 ...`
+  更改鼠标按钮的分配。
+
+### xkill [options]
+
+`xkill` 用于终止一个卡住或部分崩溃的 X 程序。在启动命令后，必须用鼠标点击相关的窗口。
+
+### xrandr [options]
+
+`xrandr` 在运行期间更改屏幕分辨率、帧率和其他设置。正如其名称所示，`xrandr` 仅适用于 Xorg。Wayland 的替代方案是 `wlr-randr`。
+
+* `--addmode` `output name`
+  为指定的显示输出添加新的图形模式（该模式可能已通过 `--newmode` 定义过）。
+* `--dpi` `n`
+  指定每英寸显示的像素数。
+* `--left-of output` `name`, `--right-of` `name`, `--below` `name`, 或 `--above` `name`
+  激活由 `--output` 指定的信号输出，并指定屏幕之间的相对位置。这只有在 `xorg.conf` 中设置了足够大的虚拟分辨率以覆盖两个屏幕时才有效。
+* `--newmode` `name freq x1 x2 x3 x4 y1 y2 y3 y4`
+  定义一个新模式（新分辨率）。该语法对应 `xorg.conf` 中的 `ModeLine` 行。你可以使用 `gtf` 命令来确定正确的数字组合。
+* `--off`
+  关闭由 `--output` 指定信号输出。
+* `--orientation` `x`
+  更改图像位置。允许的设置有 `normal`、`inverted`、`left` 和 `right`。
+* `--output` `name`
+  指示其他选项适用于特定的信号输出。这在连接了多个显示器时非常有用。你可以通过 `xrandr -q` 获取活动信号输出的名称。
+* `--primary`
+  将通过 `--output` 选择的屏幕设置为主屏幕，Gnome 或 KDE 会在该屏幕上显示面板、Dock 等。
+* `-q`
+  指示可用哪些设置选项。结果在很大程度上取决于所使用的显卡驱动程序。
+* `--rate` `n`
+  更改当前分辨率的帧率。`n` 是所需的赫兹（Hertz）。
+* `--size` `n`
+  更改分辨率。`n` 是 `xrandr -q` 结果列表中的数字，或者是 `widthheight` 格式的目标分辨率。
+
+#### 示例
+
+以下命令将分辨率设置为 1280 × 1024 像素：
+
+```
+user$ xrandr --size 1280x1024 
+```
+
+下一条命令激活 DVI 和 VGA 信号输出。（输出名称取决于显卡和驱动程序）。两个显示器将显示相同的图像。`--auto` 选项使每个显示器以其最佳的分辨率和帧率运行。
+
+```
+user$ xrandr --output DVI-I-0 --auto --output VGA-0 --auto 
+```
+
+以下三个命令定义了一个分辨率为 1280 × 720 像素的新图形模式，并为 HDMI1 输出激活它：
+
+```
+user$  xrandr --newmode 1280x720 74.18 1280 1390 1430 1650 720 725 730 750
+user$  xrandr --addmode HDMI1 1280x720
+user$  xrandr --size 1280x720 
+```
+
+### xset [command]
+
+`xset` 更改 X 服务器的各种设置。
+
+* `+dpms` 或 `-dpms`
+  激活或停用节能功能（显示器电源管理信号）。
+* `dpms` `n1 [n2 [n3]]`
+  指定在多少秒后激活显示器的待机（Standby）、挂起（Suspend）和关闭（Off）模式。
+* `q`
+  提供当前设置列表。
+* `s` `n`
+  在 `n` 秒后激活屏幕保护。
+
+### xz [options] files
+
+来自 `xz-utils` 包的 `xz` 用于压缩指定的文件。`xz` 是一个较新的压缩命令，提供的比 bzip2 更小的文件。压缩后的文件默认带有 `.xz` 后名。
+
+* `-0` 到 `-9`
+  指定 `xz` 的压缩程度。使用 `-9` 可以获得最佳结果（即最小的文件），但此时 `xz` 需要消耗最多的内存。默认值为 `-6`。在这种情况下，`xz` 在压缩时最多需要 100 MiB，解压时最多需要 10 MiB。
+
+
+
+
+
+- `-d` 或 `--decompress`
+
+解压指定的文件（对应 `unxz`）。
+
+在 2024 年春季，人们发现 `xz` 的某些版本被安装了后门，幸运的是这些版本尚未普及。尽管这不会直接影响 `xz` 命令，但会影响底层的 `xz` 库，而 SSH 等工具都会使用该库。
+
+## Y
+
+### yay [options]
+
+`yay` 是 pacman 的替代方案。该命令同时管理普通的 Arch Linux 软件包和 AUR 软件包。这些是仅以构建脚本形式提供的额外软件包。`yay` 的选项与 pacman 相同，因此请参考该条目。
+
+### yum [options] command
+
+`yum` 在 RHEL 上安装、更新和删除 RPM 软件包。然而在背后，从 Fedora 8 版本开始就开始使用了在 Fedora 中建立的 `dnf` 命令。因此，书中所有的命令和选项均在 dnf 中进行了描述。
+
+## Z
+
+### z directory1 [directory2]
+
+`z` 是 `cd` 的现代替代方案。要安装它，你需要从 [`github.com/rupa/z`](https://github.com/rupa/z) 下载 `z.sh` 脚本，将其保存到任意目录，然后在 `.bashrc` 或 `.zshrc` 中添加以下行：
+
+```
+# 在 .bashrc 或 .zshrc 的末尾
+. /path/to/z.sh 
+```
+
+重新登录后，你可以使用 `z` 或 `cd` 来切换活动目录。z 会记住你何时以及频繁地使用哪些目录。`z` 会利用该数据库来完成不完整的命令。因此，一旦你进入了 `/home/<name>/Downloads/iso` 目录，执行 `z iso` 即可。
+
+如果有多个 `iso` 目录（例如还有 `/usr/share/iso` 和 `/var/lib/libvirt/images/iso`），`z` 会优先考虑访问频繁或最近访问的目录。如果你在不带任何额外参数的情况下运行命令，`z` 会显示目录当前的顺序。
+
+为了更精确地指定目标目录，你可以向 `z` 传递两个字符字符串。`z` 会在路径的前部搜索第一个字符字符串，在后部搜索第二个字符字符串：
+
+```
+user$ z home iso   # 对应 cd /home/<user>/Downloads/iso
+user$ z var iso    # 对应 cd /var/lib/libvirt/images/iso
+user$ z usr iso    # 对应 cd /usr/share/iso 
+```
+
+### zcat file.gz
+
+zless file.gz
+
+zmore file.gz
+
+这三个命令的作用类似于 cat、less 和 more。唯一的区别在于可以直接通过 gzip 直接读取压缩文件，即无需预先使用 `gunzip` 进行解压。
+
+在许多发行版中，可以直接使用 `less` 代替 `zless`。该命令通常配置为无区分压缩和未压缩文件。
+
+### zenity [options]
+
+`zenity` 显示简单的 GTK 对话框，用于输入文本、在日历中选择日期或选择文件。该命令返回结果以供后续处理。通过 `zenity`，你可以让你的 `bash` 脚本看起来更现代——前提是脚本是在图形化桌面系统中运行的。
+
+以下选项仅用于说明该命令的概念。由于有超过 50 个选项，该命令提供了多得多的输入和控制选项。
+
+- `--calendar`: 显示日历并允许你选择一个日期。
+- `--entry`: 启用文本输入。
+- `--file-selection`: 允许你选择文件。
+- `--password`: 允许输入密码。
+- `--text zenith`: 指定在对话框内显示的文本。
+- `--title text`: 给对话框指定标题。
+
+#### 示例
+
+以下脚本行首先提示用户输入，然后显示密码：
+
+```
+pw=$(zenity --pasword --title 'Your password please ...')
+echo "That was your password: $pw" 
+```
+
+### zip [options] archive.zip file1 file2 ...
+
+该命令创建 ZIP 归包 `archive.zip` 并将所有指定的文件插入其中。该包特别适用于与 Windows 用户交换数据。要在 Linux 上再次提取这些文件，你必须使用 unzip。
+
+- `-r`: 递归归档目录的内容。
+
+#### 示例
+
+以下命令将作为参数传递的所有 HTML 文件插入 `myarchive.zip`：
+
+```
+user$ zip myarchive.zip *.html 
+```
+
+### zipinfo [options] file.zip
+
+该命令返回 ZIP 归包的目录。
+
+### zramctl [options] command
+
+在现代发行版中（例如 Fedora），部分 RAM 被用作交换空间（swap）。这很有用，因为存储在该处的数据块经过了压缩。假设虚拟机有 4 GiB 内存。ZRAM 内存最多可以 2 GiB 的数据。如果实现了 2 倍的平均压缩率，整个交换空间仅占用 1 GiB 的内存。因此，系统总共可以使用 5 GiB 内存。当然，交换和压缩涉及效率损失，但在实践中，系统的运行效果非常好。
+
+在没有任何任何额外参数的情况下，`zramctl` 提供有关系统使用的信息。在这种情况下，ZRAM 可以存储 2.8 GiB 的数据。交换空间目前仅包含 752 MiB 的数据。这些数据可以压缩到 222 MiB。加上各种元数据，交换空间占用 238 MiB。
+
+```
+user$ zramctl
+NAME       ALGORITHM DISKSIZE   DATA COMPR  TOTAL STREAMS MOUNTPOINT
+/dev/zram0 lzo-rle       2,8G 752,3M  222M 238,3M       6 [SWAP] 
+```
+
+
+
+
+
+*   `-a` 或 `--algorithm lzo|lzo-rle|lz4|lz4hc|842|zstd`
+    使用指定的压缩算法。
+*   `-f` 或 `--find`
+    使用第一个空 ZRAM 设备。
+*   `-s` 或 `--size n`
+    创建一个指定大小的 ZRAM 设备（例如，`-s 1GiB`）。
+
+#### 示例
+
+以下命令展示了如何为 1 GiB 的数据手动设置（进一步）ZRAM 区域：
+
+```
+root# zramctl --find --size 1GiB
+/dev/zram1
+root# mkswap /dev/zram1
+root# swapon /dev/zram1 
+```
+
+在 Fedora 中，systemd 会负责激活 ZRAM 系统。
+
+### zypper [options] 命令
+
+SUSE 特有的 `zypper` 命令用于辅助 RPM 软件包管理器。它可以帮助安装和更新包、设置包源等。`zypper` 需要 `libzypp` 库，该库是所有当前 SUSE 发行版中不可或缺的一部分。只要意义明确，可以缩写以下命令，例如使用 `zypper in` name 代替 `zypper install` name。
+
+*   `addrepo [options] uri name`
+    设置一个新的包源并赋予其别名。统一资源标识符（URI）描述了包源，例如如下所示：
+    `http://download.opensuse.org/distribution/leap/15.0/repo/oss/`
+    默认情况下，包源是激活的（`zypper repos` 中的 `enabled` 列）并被标记为需要刷新（`refresh` 列）。然而，包源首次不会被加载到缓存中。要实现这一点，你必须运行 `zypper refresh`。
+    对于内容不会更改的包源，可以使用 `-n`（不刷新）选项来避免定期更新。
+    在设置包源时，你可以选择导入用于签名包的密钥。如果你确定包源的真实性，应该同意相关的查询。
+    `zypper addrepo` 未提供指定包源名称的选项。因此，`zypper repos` 会在 `name` 列中再次显示别名。如果你想分别设置名称和别名，必须直接修改 `/etc/zypp/repos.d/` 目录下描述包源的文件。
+*   `clean [--all]`
+    从缓存中删除下载的包。`--all` 还会删除元数据缓存，即存储中可用包的描述。在安装下一个包之前，必须重新下载这些数据。
+*   `dup`
+    执行发行版更新，例如从 openSUSE 15.0 升级到 15.1 版本。你必须先执行常规更新，然后将软件包转换为新版本。更新后需要重启。
+*   `info name`
+    提供有关指定包、补丁、产品等的信息。
+*   `install [-y] name`
+    安装指定的包。除了包之外，还可以指定产品、补丁或语言名称。要安装预定义模式的所有包，你必须运行 `zypper install -t pattern` name。带有额外的 `-y` 选项，`zypper` 将跳过查询。
+*   `lifecycle`
+    提供一个表格概述，说明已安装包将继续提供更新多久，以及哪些包将不再提供更新。
+*   `list-updates [-t package]`
+    显示所有可用的补丁，使用 `-t package` 可同时列出补丁和更新。
+*   `patches`
+    列出所有可用的补丁。
+*   `patch-check`
+    确定所有可用补丁的数量。
+*   `patch-info [name]`
+    提供所有补丁或指定补丁的信息。
+*   `refresh`
+    测试包源目录是否发生变化，并在必要时重新加载——即使对于使用 `-n`（不刷新）选项设置的包源也是如此。使用 `-f`（强制）选项，即使 `zypper` 认为没有变化，也可以重新访问目录。
+*   `remove [-y] name`
+    移除指定的包。额外的 `--clean-deps` 选项还会卸载不再需要的依赖包。使用 `-y`，`zypper` 将放弃查询。
+*   `removerepo name`
+    删除由 URI 或别名指定的包源。
+*   `renamerepo old new`
+    为包源分配一个新的别名。
+*   `repos`
+    列出所有已的包源。该命令显示每个包源的名称和别名，但不显示地址（URI）。对于使用 YaST 设置的包源，地址被用作别名，这就是为什么别名列看起来像地址列。然而，这对于使用 `zypper addrepo` 设置的包源并不适用。
+*   `search [options] expression`
+
+
+
+
+
+根据指定的搜索表达式搜索包。默认情况下，只搜索包名。使用 `-d` 时，`zypper` 也会搜索包描述。使用 `-i` 将搜索限制为已安装的包，使用 `-u` 将搜索限制为尚未安装的包。你可以使用 `-t pattern` 来确定预定义的软件包组列表。
+
+### `update [-t package] [-y]`
+
+更新所有可用补丁的包。使用 `-t package` 选项，`zypper` 还会考虑更新，即更新程序版本。
+
+以下是简要说明：更新是比已安装版本更新完整的包。相比之下，补丁是补充或更新包（增量 RPM），仅包含更改，因此体积要小得多。
+
+#### 示例
+
+第一个命令更新所有软件包源，第二个命令安装 `nano` 编辑器，第三个命令确定哪些更新可用。由于空间限制，输出经过了大幅简化。
+
+```
+root# zypper refresh
+All repositories have been refreshed.
+
+root# zypper install nano
+Reading installed packages...
+>The following NEW package is going to be installed:  nano
+Overall download size: 335.0 K. After the operation, additional 1.2 M
+will be used.
+Continue? [YES/no]: yes
+
+root# zypper list-updates
+...
+Repository              Name      Current Version  Available Version  Arch
+Haupt-Repository (OSS)  7zip      23.01-4.2        23.01-5.1          aarch64
+Haupt-Repository (OSS)  argyllcms 3.1.0-2.1        3.1.0-3.1          aarch64
+Haupt-Repository (OSS)  avahi     0.8-31.3         0.8-32.1           aarch64
+... 
+```
+
+## 特殊 bash 字符
+
+### #&%!
+
+无论是在输入命令还是在 Shell 编程中，你可以使用大量的特殊字符执行各种操作。表 1 总结了最重要的特殊字符的含义。
+
+| 字符 | 含义 |
+| --- | --- |
+| `;` | 分隔多个命令 |
+| `:` | 什么都不做的 Shell 命令 |
+| `.` | 在不启动独立子 shell 的情况下启动 shell 程序 (`. file`，对应于 `source file`) |
+| `#` | 注释 |
+| `#!/bin/sh` | 标识 shell 程序所需的指定的 shell |
+| `&` | 在后台运行命令 (`com &`) |
+| `&&` | 条件执行命令 (`com1 && com2`) |
+| `&>` | 重定向标准输出和错误 (对应于 `>&`) |
+| `|` | 创建管道 (`com1 | com2`) |
+| `||` | 条件执行命令 (`com1 || com2`) |
+| `*` | 文件名的通配符（任意数量） |
+| `?` | 文件名的通配符 |
+| `[` | 文件名的通配符 |
+| `]` | 表达式表达式 |
+| `$` | 表达式的简写 |
+| `[[` | 扩展的 bash 语法 |
+| `()` | 在同一个 shell 中执行命令 (`com1; com2`) |
+| `{}` | 组合命令 |
+| `{ }` | 组合字符串 (`1,2,3`) |
+| `{..}` | 组合字符串 (`4,5,6`) |
+| `~` | 目录的缩写 |
+| `>` | 将输出重定向到文件 (`com > file`) |
+| `>>` | 将输出重定向并追加到现有文件 |
+| `>&` | 重定向标准输出和错误 (对应于 `&>`) |
+| `2>` | 重定向标准错误输出 |
+| `<` | 从文件重定向输入 (`com < file`) |
+| `<<` | 从活动文件结束重定向输入 |
+| `$` | 标记变量 (`echo $var`) |
+| `$!` | 上一个启动的后台进程的 PID |
+| `$` | 当前 shell 的 PID |
+| `$0` | 当前执行的 shell 脚本文件名 |
+| `$1` 到 `$9` | 传递给命令的前九个参数 |
+| `$#` | 传递给 shell 程序的参数数量 |
+| `$*` 或 `$@` | 所有传递参数的总和 |
+| `$?` | 上一个命令的返回值 (`0` = 正常或错误代码) |
+
+
+
+
+
+| `$(...)` | 命令替换 (`echo $(ls)`) |
+| `$((...))` | 算术分析 (`echo $((2+3))`) |
+| `${...}` | 用于编辑字符串的各种特殊函数 |
+| `"..."` | 防止解析大多数特殊字符 |
+| `'...'` | 防止解析所有特殊字符 |
+| ``...` `` | 命令替换 (`echo `ls``，等同于 `echo $(ls)`) |
+| `\` | 取消特殊字符的作用 |
+
+**表 1** 特殊 bash 字符
+
+# 配置文件
+
+Linux 命令参考的这部分总结了最重要的 Linux 配置文件的句语法。这些文件按名称排序，而不是按它们所在的目录路径排序。
+
+这里列出的多数文件适用于所有发行版。我会明确指出特定于某个发行版的特殊之处。有关配置文件的更多详细信息，请参阅 `man 5 name`。数字 `5` 表示你想阅读配置文件的文档，而不是可能具有同名命令的文档。
+
+### /etc/adduser.conf
+
+Debian/Ubuntu 特有的文件 `/etc/adduser.conf` 包含了使用 `adduser` 和 `addgroup` 命令设置新用户和组的默认设置。`adduser.conf` 文件包含 `parameter=value` 格式的逐行设置。
+
+*   `ADD_EXTRA_GROUPS=0|1`
+    指定新用户是否应自动分配到 `EXTRA_GROUPS` 中列出的辅助组。
+
+*   `DHOME`
+    指定家目录的基础目录（通常为 `/home`）。
+
+*   `DIRMODE`
+    指定设置新家目录时的访问权限位（默认为 `755`）。
+
+*   `DSHELL`
+    指定默认 shell。
+
+*   `EXTRA_GROUPS="group1,group2,..."`
+    包含辅助组列表，新用户默认（当 `ADD_EXTRA_GROUPS=1`）或通过 `adduser` 选项 `--add_extra_groups` 分配这些组。
+
+*   `FIRST_GID` 和 `LAST_GID`
+    确定普通组的 GID 范围。
+
+*   `FIRST_SYSTEM_GID` 和 `LAST_SYSTEM_GID`
+    确定系统账户组的 GID 范围。
+
+*   `FIRST_SYSTEM_UID` 和 `LAST_SYSTEM_UID`
+    确定系统账户的 UID 范围。
+
+*   `FIRST_UID` 和 `LAST_UID`
+    确定普通用户的 UID 范围。
+
+*   `GROUPHOMES=yes|no`
+    指定新用户的家目录是否应设置在 `/home/groupname/username` 路径。
+
+*   `LETTERHOMES=yes|no`
+    确定家目录是否应存放在以首字母命名的目录下，例如 `/home/k/kofler`。这对于拥有大量账户的计算机非常有用。
+
+*   `NAME_REGEX=yes|no`
+    包含一个正则表达式（参见 `grep`），新用户名必须匹配该表达式。
+
+*   `SKEL`
+    指定从哪个目录将默认文件复制到新用户目录（通常为 `/etc/skel`）。
+
+*   `USERGROUPS=yes|no`
+    指定是否应为每个用户设置一个独立的组。
+
+#### 示例
+
+以下行显示了 `adduser.conf` 中在 Ubuntu 上有效的默认设置片段：
+
+```
+DSHELL=/bin/bash
+DHOME=/home
+GROUPHOMES=no
+LETTERHOMES=no
+SKEL=/etc/skel
+FIRST_SYSTEM_UID=100
+LAST_SYSTEM_UID=999
+FIRST_SYSTEM_GID=100
+LAST_SYSTEM_GID=999
+FIRST_UID=1000
+LAST_UID=29999
+FIRST_GID=1000
+LAST_GID=29999
+USERGROUPS=yes
+USERS_GID=100
+DIR_MODE=0755
+... 
+```
+
+### /etc/aliases
+
+`/etc/aliases` 文件列出了本地电子邮件账户的转发地址。邮件服务器负责分析该文件；也就是说，只有当计算机上运行了邮件传输代理（MTA）（例如 `sendmail` 或 `postfix`）时，该文件才有意义。
+
+作为规则，`aliases` 主要用于本地转发，例如，将来自 `webmaster@hostname` 的邮件转发到 `adminxy@hostname`。从语法上来说，允许将本地邮件转发到外部主机；但在实践中，这往往会由于外部主机的垃圾邮件保护措施而失败。
+
+许多邮件服务器并不直接分析 `/etc/aliases`，而是考虑由 `aliases` 文件生成的数据库文件。出于此原因，`aliases` 文件中的更改通常在执行 `newaliases` 命令后才会生效。
+
+`/etc/aliases` 逐行包含重定向规则：
+
+```
+name: alias1, alias2, alias3 ... 
+```
+
+`name` 必须是一个本地邮件账户（不带 `@hostname`！）。指定别名有多种选项，取决于邮件服务器支持的种变体：
+
+*   `name`
+    邮件被重定向到另一个本地邮件账户。
+
+*   `adresse@host`
+    邮件被重定向到外部电子邮件地址。
+
+*   `/path/file` 邮件被添加到指定文件的末尾。
+
+*   `|command`
+
+
+
+
+邮件将被传输到指定的命令。
+
+- `:include:/path/file`
+
+`alias` 列表从指定文件中读取。
+
+如果指定了多个别名，邮件将重定向到所有地址。
+
+#### 示例
+
+在以下示例中，发送给 `root`、`postmaster` 和 `webmaster` 的邮件将转发给本地用户 `michael` 和 `ben`。发送到 `support` 的邮件将保存在 `support` 邮箱中并转发给 `michael` 和 `peter.parks@abc-company.com`。
+
+```
+root:       michael
+postmaster: michael
+webmaster:  michael, ben
+support:    support, michael, peter.parks@abc-company.com 
+```
+
+### /etc/bashrc
+
+`/etc/bashrc` 包含 `bash` 的默认设置。该文件作为 `bash` 脚本执行。因此，允许 `bash` 支持的所有语言结构。通常，提示符环境变量 `PS1` 会在 `bashrc` 中设置；在某些发行中，还会使用 `umask` 值。
+
+`/etc/bashrc` 中的设置由 `etc/profile` 中的设置进行补充。`/etc/profile` 适用于所有 shell，而 `bashrc` 只包含适用于 `bash` 的设置。`.bashrc` 中的用户特定设置也会被考虑在内。
+
+### /boot/firmware/config.txt
+
+`config.txt` 是树莓派特有的配置硬件的文件。它必须与其它启动文件一起位于 SD 卡的第一分区中。在树莓派 OS 上，可以在 `/boot/firmware` 目录下访问该文件（对于旧版本的树莓派 OS，可以直接在 `/boot` 中访问）。在内核启动之前，树莓派的系统级芯片 (SoC) 会在启动过程中直接对该文件进行分析。
+
+- `arm_64bit=1`: 在系统启动时加载 64 位内核（适用于 3B+, 4B, 400 和 5 型号）。
+
+- `arm_freq=n`: 指定以 MHz 为单位的目标最高 CPU 频率。当 CPU 负载较少时，频率会自动降低。如果你将频率提高到 CPU 的默认频率之上（超频），还应该略微增加电压（`over_voltage_delta` 参数）。
+
+- `camera_auto_detect=1`, `display_auto_detect=1`: 激活 DSI 摄像头和显示器。
+
+- `cmdline=string`: 将字符字符串传递给内核。解析的是该参数而不是 `/boot/cmdline.txt` 文件。
+
+- `gpu_freq=n`: 指定以 MHz 为单位的图形单元时钟频率。
+
+- `decode_MPG2=0x12345678`, `decode_WVC1=0x12345678`: 指定启用 MPG-2 和 VC-1 解码器的密钥可以在 www.raspberrypi.com 购买，必须与 CPU 的序列号匹配。序列号存储在 `/proc/cpuinfo` 文件中。`decode` 参数仅适用于 3B+ 及之前的型号，但不再适用于 4B、400 和 5。较新的型号具有 H264 硬件解码器。其他视频格式通过软件解码。完全不需要授权密钥。
+
+- `dtoverlay=xxx`: 激活硬件组件的设备树覆盖层（overlay）并加载相应的驱动模块。
+
+- `dtparam=audio=on`: 激活音频系统并加载驱动 `snd_bcm28xx`。
+
+- `dtparam=i2c_arm=on`: 激活 I²C 总线。
+
+- `dtparam=spi=on`: 激活 SPI 总线。
+
+- `over_voltage_delta=n`: 增加 CPU 电压（以微伏计，`50000` 对应 0.05V）。
+
+- `sdram_freq=n`: 指定以 MHz 为单位的主内存（RAM）时钟频率。
+
+- `usb_max_current_enable=1`: 即使在电源不足的情况下（即电源单元弱）也能激活 USB 启动过程。此选项从 5 型号开始可用，并可能导致运行不稳定。
+
+对 `config.txt` 的更改在下次重启后生效。你可以在运行期间使用 `vcgencmd get_config` 读取许多 `config.txt` 参数。你可以在此处查看更多 `config.txt` 细节：https://elinux.org/RPiconfig
+
+### /etc/crontab
+
+`/etc/crontab` 文件由后台进程 `crond` 分析。`crontab` 包含关于何时为哪个用户账户执行哪些命令的逐行信息。cron 系统允许在预定义的时间自动执行任务，例如，在 1 月、4 月、7 月和 10 月的第一个星期一凌晨 2:30 开始将文件系统镜像到外部备份服务器。
+
+
+
+
+每条 `crontab` 条目由一行中的七列组成。列之间通过空格或制表符分隔。最后一行必须以换行符结束，否则将被忽略。注释以行首的 `#` 字符引入。不允许在 `crontab` 条目后输入注释。
+
+*   第一列（分钟）：指定程序应在几分钟（0–59）执行。
+*   第二列（小时）：指定所需的的小（`0`--`23`）。
+*   第三列（日期）：指定月份的某一天（`1`–`31`）。
+*   第四列（月份）：指定月份（`1`--`12`）。
+*   第五列（星期）：指定星期的几几天（`0`--`7`，`0` 和 `7` 均代表星期日）。
+*   第六列（用户/账户）：指定哪个用户执行命令（通常是 root）。
+*   第七列（命令）：包含要执行的命令。命令可能包含空格；直到行尾的整个文本都将被解释为命令。
+
+如果在前五列中输入 `*` 而不是数字，则该字段将被忽略。例如，`15 * * * *` 意味着命令应在每个整点的 15 分钟后执行，涵盖每小时、每天、每月，且不分星期几。同样，`29 0 * * 6` 意味着命令在每周六的上午 0:29 执行。
+
+对于时间字段，允许使用 `*/n` 记法。这意味着命令将每隔 `n` 分钟/小时以此此类推执行一次。因此，`*/15 * * * *` 意味着命令每种小时执行一次（`n`:00, `n`:15, `n`:30 和 `n`:45）。
+
+在时间字段中，还允许允许用逗号分隔的多个条目以及从...到的范围。第二列中的 `1,13` 意味着命令将在凌晨 1 点和下午 1 点执行。在第二列中，`2,4,6,8-18,20,23` 会导致命令在 2 点、4 点、6 点、8 点、11 点以及上午 6 点到下午 6 点之间的每小时执行。
+
+除了五个时间列外，还可以使用表 1 汇总的 `@` 缩写。另一条附加规则规定，第一列开头的减号可以防止 syslog 记录命令执行。然而，这仅在第六列包含 `root` 时才允许。
+
+### 表 1：替换前五列的 crontab 间隔缩写
+
+| 缩写 | 代码 | 含义 |
+| --- | --- | --- |
+| `@reboot` | – | 重启后运行 |
+| `@yearly` | `0 0 1 1 *` | 每年运行一次 |
+| `@annualy` | `0 0 1 1 *` | 与 `@yearly` 相同 |
+| `@monthly` | `0 0 1 * *` | 每月运行一次 |
+| `@weekly` | `0 0 * * 0` | 每周运行一次 |
+| `@daily` | `0 0 * * *` | 每天运行一次 |
+| `@hourly` | `0 * * * *` | 每小时运行一次 |
+
+#### SHELL, PATH 和 MAIL
+
+在上述用于定期启动程序的行之前，`/etc/crontab` 通常包含三行用于设置环境变量。在 CentOS 上，默认设置如下：
+
+```
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root 
+```
+
+这意味着命令字符串由 `bash` 执行，在搜索命令时会考虑 `PATH` 目录，并且带有输出信息或错误信息的邮件将发送到 `root`。
+
+#### 示例
+
+`/etc/crontab` 中的以下三行会导致维护脚本在每个整点后 15 分钟被调用，备份工具在每个周日的上午 00:30 启动，并在每天上午 3:15 创建 MySQL 数据库的备份副本：
+
+```
+15  *  *  *  *  root   /usr/bin/maintenance-script
+30  0  *  *  0  root   /usr/bin/backup-tool
+15  3  *  *  *  mysql  /usr/bin/backup
+```
+
+#### 其他 cron 文件
+
+除了系统级的 `/etc/crontab` 文件外，根据发行版的不同，你还有其他各种定义 cron 任务的选项：
+
+*   `/etc/cron.d`：`/etc/crontab` 的补充，在大多数发行版中，cron 进程 `crond` 也会分析 `/etc/cron.d` 目录下的所有文件。这些文件的语法规则与 `/etc/crontab` 相同。
+*   用户特定的 crontab 文件：取决于发行版，用户特定的 `crontab 文件`存储在 `/var/spool/cron/` 或 `/var/spool/cron/tabs` 目录下。文件名表示该文件适用于哪个用户。这些文件中省略了第六列。提供 `crontab` 命令用于更改用户特定的 cron 条目。
+*   cron.hourly, cron.daily, cron.weekly, cron.monthly：在大多数发行版中`/etc/crontab` 中的默认配置包含某些条目，导致 `/etc/cron.hourly/*` 中的所有脚本文件以 `root` 权限每小时执行一次，`/etc/cron.daily/*` 中的脚本文件每天执行一次，以此此类推。这些文件是普通的脚本文件，不适用 crontab 语法规则。但请设置执行权限（`chmod a+x file`）！
+
+
+
+
+
+`cron.daily`、`cron.weekly` 和 `cron.monthly` 中自定义脚本的文件名只能包含数字、字母、连字符和下划线。只要文件名包含一个点，该脚本就会被忽略！如果安装了 `Anacron` 程序，则不会执行 `/etc/cron.daily`、`-.weekly` 和 `-.monthly` 下的脚本。
+
+### /etc/deluser.conf
+
+Debian/Ubuntu 特有的文件 `/etc/deluser.conf` 包含了使用 `deluser` 和 `delgroup` 命令删除用户和组的默认设置。`deluser.conf` 文件由 `parameter=value` 格式的行条目组成。
+
+* `BACKUP=0|1`
+  指定是否对 `REMOVE` 参数删除的文件进行备份。
+* `BACKUP_TO`
+  指定备份目录的位置。
+* `EXCLUDE_FSTYPES="(fs1,fs2,...)"`
+  指定在搜索用户文件以创建备份时，应该忽略哪些文件系统。
+* `ONLY_IS_EMPTY=1`
+  仅在组没有成员时才删除该组。
+* `REMOVE_HOME=0|1`
+  指定是否也删除账户的家目录。
+* `REMOVE_ALL_FILES=0|1`
+  指定是否删除家目录之外的用户文件，例如池文件和电子邮件信箱。
+
+#### 示例
+
+以下行显示了 Ubuntu 上有效的 `deluser.conf` 默认设置：
+
+```
+REMOVE_HOME = 0
+REMOVE_ALL_FILES = 0
+BACKUP = 0
+BACKUP_TO = "."
+ONLY_IF_EMPTY = 0
+EXCLUDE_FSTYPES = "(proc|sysfs|usbfs|devpts|tmpfs|afs)" 
+```
+
+### /etc/dnf/dnf.conf
+
+在 Fedora 和 Red Hat 上常用的包管理系统 `DNF` 的基础设置可以在 `/etc/dnf/dnf.conf` 中找到。`/etc/yum.repos.d/*.repos` 文件还包含了各个软件包源的详细设置。
+
+#### 基础设置
+
+* `clean_requirements_on_remove = true/false`
+  指定是否在所有引用该包的包卸载后，自动再次删除因依赖而安装的包。即使此选项设置为 `true`，`dnf` 也永远不会在询问的情况下删除通过 `dnf install` 明确安装的包。
+* `color=never`
+  导致终端中的 `dnf` 命令不使用任何颜色。如果你想使用颜色，请使用 `color=always`。
+* `exactarch=1`
+  导致 `dnf` 只考虑架构与已安装包匹配的更新。因此，i386 包无法被较新的 x86_64 包替换。
+* `gpgcheck=1`
+  导致 `dnf` 使用密钥确保包的真实性。`gpgcheck` 也可以偏离 `dnf.conf` 中的设置，为每个软件包源单独设置。`plugins` 决定 `dnf` 是否考虑插件。
+* `installonly_limit=n`
+  控制同时安装多少个旧版本的内核包。该设置影响所有以新包形式安装更新的包。此过程确保受影响包的旧版本始终作为回退方案可用。
+* `keepcache=0`
+  导致下载的包在安装后不归档。通常情况下，这是一个非常有用的设置，因为包所需的空间随时间推移会变得非常大，且通常没有理由再次安装这些包。然而，可能会 `dnf` 在安装期间检测到问题并终止安装过程。在这种情况下，下载的包将被删除。如果你可以修复问题并重复更新，则所有包必须重新下载。你可以通过使用 `keepcache=1` 来避免这种情况。若要显式删除 `/var/cache/dnf` 中的下载包，你必须运行 `dnf clean packages`。
+
+在当前的 Fedora 版本中，该文件仅包含几个设置：
+
+```
+# File /etc/dnf/dnf.conf on Fedora
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+best=False
+skip_if_unavailable=True 
+```
+
+#### 软件包源
+
+软件包源使用 `/etc/yum.repos.d` 目录下的 `*.conf` 文件配置。从 `yum` 切换到 `dnf` 时，该目录并没有重命名为 `/etc/dnf.repos.d`。
+
+* `[repvariant]`
+  指定后续设置与软件包源的哪个部分相关。
+* `baseurl=url` 或 `mirrorlist=url`
+  指定软件包文件的位置。使用 `mirrorlist` 时，`url` 指向镜像服务器列表。`dnf` 会自动从中选择一个镜像。`dnf` 将 `url` 中的 `$releasever`、`arch` 和 `$basearch` 变量替换为 Linux 发行版的版本号及其架构。
+* `enabled=0/1`
+  表示该软件包源是否激活。
+
+
+
+
+
+*   `name=reponame`
+    指定软件包源的名称。
+
+*   `metadata_expires`
+    控制从包源下载的元数据的有效期。`dnf` 将元数据保存在缓存中，如果元数据尚未过期，则不会再次下载。这可以节省时间和减少下载量，但可能导致 `dnf` 忽略包源中最新更改。如有必要，可以使用 `dnf clean metadata` 强制删除本地元数据。这将强制 `dnf` 在下次执行时重新导入所有包源的元数据。
+
+以下行显示了文件 `/etc/yum.repos.d/#fedora.repo` 的片段。该文件包含了 Fedora 发行版基础软件包的源定义。
+
+```
+[fedora]
+name=Fedora $releasever - $basearch
+metalink=https://mirrors.fedoraproject.org/metalink? repo=fedora-$releasever&arch=$basearch
+enabled=1
+countme=1
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False
+
+[fedora-source]
+name=Fedora $releasever - Source
+... 
+```
+
+### /etc/fstab
+
+`/etc/fstab` 包含了所有要集成到目录树或在计算机启动时激活的文件系统和交换分区的行项目。每个条目由空格或制表符分隔的六列组成。使用 `#` 引入注释。
+
+*   第一列 (`Device`)
+    包含数据介质的设备名称。除了设备名称，你还可以使用 `LABEL=xxx`、`UUID=xxx` 指定文件系统的名称或 ID，或者使用 `PARTUUID=xxx` 指定 GPT 分区的 ID。
+
+*   第二列 (`Path`)
+    指定数据介质集成到文件树的目录。第二列中指定的目录必须已经存在。对于交换分区，你应在此处输入关键字 `none`。
+
+*   第三列 (`File system type`)
+    指定文件系统，例如 `ext4`、`btrfs` 或 `vfat`。在 `mount` 命令的描述中可以找到最重要的 Linux 文件系统的概述。由于使用了 `auto` 条目，Linux 会尝试识别文件系统本身。对于不包含内部文件系统的交换分区，你必须输入 `swap` 关键字。
+
+*   第四列 (`Options`)
+    包含所需的 `mount` 选项。在本书的 `mount` 命令部分可以找到所有重要文件系统选项的参考。如果你不需要任何选项，应该输入 `defaults` 关键字。多个选项之间仅用逗号分隔，不能用空格！
+
+*   第五列 (`Dump`)
+    包含用于 Unix 程序 `dump` 的信息。此列在 Linux 上被忽略。通常对系统分区输入 `1`，对所有其他分区或磁盘输入 `0`。
+
+*   第六列 (`fsck`)
+    指定是否在系统启动时检查文件系统，以及检查的先后顺序。通常对系统分区输入 `1`，对所有其他分区输入 `0`。这意味着在计算机启动时仅对系统分区进行错误检查，并在必要时由 `fsck` 修复。如果你想对后续分区进行自动检查，则必须为这些分区输入数字 `2`。这意味着检查应该在系统分区检查之后进行。如果 `/etc/fstab` 中第五列和第六列的条目缺失，则假设为 0。
+
+#### 示例
+
+以下示例显示了一个带有 LVM 和 RAID 的服务器的 `fstab` 文件。引导分区位于 RAID 设备 `/dev/md/0` 上。系统和数据目录使用逻辑卷作为存储位置。`/`、`/var` 和 `/backup` 的文件系统会在重启时进行检查。如果根文件系统发生错误，文件系统将只读模式挂载。
+
+```
+/dev/md/0        /boot    ext2   defaults           0  0  
+/dev/vg0/root    /        ext4   errors=remount-ro  0  1 
+/dev/vg0/var     /var     ext4   defaults           0  2 
+/dev/vg0/backup  /backup  ext4   defaults           0  2 
+/dev/vg0/swap    swap     swap   defaults           0  0 
+```
+
+### /etc/group
+
+`/etc/group` 包含了所有组名称及其对应的组 ID (GID)，以及属于该组的用户列表。要管理组，你通常使用 `groupadd`、`groupmod` 和 `groupdel` 命令。
+
+`group` 文件中的行项目由四列组成，每列之间用冒号分隔：
+
+*   第一列 (`Group name`)
+    指示组的名称。
+
+*   第二列 (`unused`)
+    在旧版本的 Linux 中包含组密码的哈希值。当前的 Linux 发行版在此处保存字符 `x`。如果定义了组密码，它们将保存在 `etc/gshadow` 中。
+
+*   第三列 (`GID`)
+    包含组标识符。在大多数发行版中，小于 1000 的 GID 留给系统账户。
+
+*   第四列 (`Accounts`)
+    包含该组所有成员用户的逗号分隔列表。然而，只考虑要组成关系，但每个用户的主组存储在 `etc/passwd` 的第四列中。
+
+
+
+
+
+以下行显示了某作为 Web 服务器和开发服务器的计算机上的 `/etc/group` 摘。每个系统账户和每个普通用户都有自己的组。`admin` 组的成员可以使用 `sudo` 执行管理工作。`devel` 组的成员对版本管理系统具有特殊访问权限。
+
+```
+root:x:0:
+bin:x:1:
+admin:x:109:kofler,huber
+...
+kofler:x:1000:
+huber:x:1001:
+miller:x:1002:
+devel:x:1023:kofler,huber,miller,gruber,smith
+... 
+```
+
+### /etc/default.grub
+
+`/etc/default/grub` 包含了 Linux 引导程序 GRUB 2 的默认设置。这些设置仅在 GRUB 配置文件 `boot/grub/grub.cfg` 重新生成时才会生效——这种生成可以在内核更新期间自动完成，也可以手动使用命令 `update-grub`（Debian, Ubuntu）或 `grub-mkconfig`（Fedora, openSUSE）完成。
+
+以下列表描述了最重要的关键字：
+
+- `GRUB_CMDLINE_LINUX` 和 `GRUB_CMDLINE_LINUX_DEFAULT`
+  由 `10_linux` 读取，并指定要传递给内核的选项。`GRUB_CMDLINE_LINUX` 选项适用于每次启动；`GRUB_CMDLINE_LINUX_DEFAULT` 选项在标准启动时额外添加，但不会用于恢复模式。
+
+- `GRUB_DEFAULT=0`
+  指定默认选择哪个 GRUB 菜单条目。`"saved"` 设置意味着激活上一次选择的菜单项。然而，这仅在 GRUB 文件位于普通分区时才有效！反之，如果涉及 LVM 或 RAID，GRUB 无法在菜单选择后保存任何环境变量。
+  另一个选项是将所选菜单项的 `menuentry` 字符串分配给 `GRUB_DEFAULT`。但是，你必须确保拼写完全准确。
+
+- `GRUB_DISABLE_OS_PROBER=false`
+  在重新创建 `boot.cfg` 时激活对其他操作系统的搜索。（没有什么是双重否定的逻辑。）
+  - 从 2022 年左右，GRUB 的配置使得 GRUB 菜单中仅显示活动发行版的条目，而不会显示启动其他发行版或 Windows 的条目。这些条目过去是必要的（BIOS），但现在已大部分过时（EFI）。如果 EFI 配置出现问题，GRUB 菜单条目是一个很好的备份/冗余。
+
+- `GRUB_DISABLE_LINUX_UUID=true`
+  导致 GRUB 将根目录作为设备名传递给内核。在没有此选项的情况下，GRUB 会传递文件系统的 UUID。此设置仅适用于活动发行版的启动阶段（`10_linux` 脚本），不适用于其他发行版。
+
+- `GRUB_DISABLE_RECOVERY=true`
+  防止 `update-grub` 或 `grub2-mkconfig` 向 `grub.cfg` 添加用于在恢复模式下启动 Linux 的菜单条目。
+
+- `GRUB_DISTRIBUTOR`
+  由 `/etc/grub.d/10_linux` 脚本分析，并指定当前发行版的名称。
+
+- `GRUB_ENABLE_BLSCFG=true`
+  导致在启动时除了 `grub.cfg` 之外，还会考虑 `/boot/loaders/entries` 目录下的菜单项。这使得配置文件更加清晰，并对应于 systemd-boot（另一种启动程序）的过程。
+
+- `GRUB_GFXMODE`
+  指定 GRUB 运行的图形模式（默认分辨率为 640 × 480 像素）。
+
+- `GRUB_HIDDEN_TIMEOUT`
+  如果 GRUB 在安装期间仅识别到一个 Linux 发行版，则此很重要。在这种情况下，`GRUB_HIDDEN_TIMEOUT` 指定了用户按下 Shift 显示菜单的等待时间。在此期间屏幕保持黑色。如果安装了多个操作系统，GRUB 会忽略 `GRUB_HIDDEN_TIMEOUT` 设置并显示菜单。
+
+- `GRUB_HIDDEN_TIMEOUT_QUIET=true`
+  防止在 `GRUB_HIDDEN_TIMEOUT` 等待期间显示计数器。如果你想始终显示 GRUB 菜单，请注释 `GRUB_HIDDEN_TIMEOUT=...` 和 `GRUB_HIDDEN_TIMEOUT_QUIET=...` 行。
+
+- `GRUB_TIMEOUT=n`
+  指定 GRUB 等待选择菜单项的秒数。如果时间到了没有用户输入，GRUB 将启动选定的操作系统。在这里设置仅在 GRUB 菜单出现时生效。
+
+- `GRUB_TERMINAL=console`
+  导致 GRUB 以文本模式运行。然而，在那里无法显示 Unicode 字符。
+
+#### 示例
+
+在 Ubuntu 上，配置文件包含以下设置：
+
+```
+# File /etc/default/grub
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
+GRUB_DEFAULT=saved
+GRUB_DISABLE_SUBMENU=true
+GRUB_TERMINAL_OUTPUT="console"
+GRUB_CMDLINE_LINUX=
+GRUB_DISABLE_RECOVERY="true"
+GRUB_ENABLE_BLSCFG=true 
+```
+
+
+
+
+
+现代 GRUB 版本仅在 `grub.cfg` 中保存基本设置。启动 Linux 的实际菜单条目存储在单独的文件（`/boot/loader/entries/*.conf`；另请参见 `/etc/default/grub` 中的 `GRUB_ENABLE_BLSCFG=true`）。
+
+### /etc/gshadow
+
+`/etc/gshadow` 文件包含组密码的哈希值和其他组管理数据。出于安全考虑，只有 `root` 可以读取和修改此文件。
+
+`gshadow` 文件中的逐行条目由四列组成，每列之间用冒号分隔：
+
+*   第一列（`Group name`）：
+    表示组名。
+*   第二列（`hash code`）：
+    包含组密码的哈希值或星号（表示无密码）。出于安全考虑，使用组密码是不常的。如果你确实决定这样做，需要通过 `gpasswd` 命令设置组密码。任何知道组密码的人都可以使用 `newgrp` 切换到该组，即使他们不是该组的成员。
+*   第三列（`Administrators`）：
+    包含用逗号分隔的组管理员列表（账户名）。组管理员可以更改组密码并添加或删除其他成员。
+*   第四列（`Members`）：
+    包含用逗号分隔的组成员列表，这些成员允许无需输入密码即可激活该组。
+
+在许多 Linux 系统上，`gshadow` 文件未被使用，内容如下：
+
+```
+root:*::
+daemon:*::
+bin:*::
+sys:*:: ... 
+```
+
+### /etc/host.conf
+
+`/etc/host.conf` 控制解析器库，它指定了网络操作期间如何解析未知的主机。
+
+*   `multi on|off`：
+    指定解析器库是返回每个主机的所有条目（`on`）还是仅返回第一个匹配的条目（`off`）。
+*   `order a,b,c...`：
+    指定确定主机名的程序顺序。`bind` 表示解析器库将退回到 `/etc/resolv.conf` 设置的名称服务器。`hosts` 允许评估 `/etc/hosts`。`nis` 导致使用过时的网络信息服务。
+
+#### 示例
+
+对于大多数发行版，`host.conf` 的标准配置如下所示。解析器库首先分析 `/etc/hosts` 文件，然后联系 `resolv.conf` 中设置的名称服务器。`multi` 行允许为 `/etc/hosts` 中指定的主机名分配多个 IP 地址。
+
+```
+order hosts, bind
+multi on 
+```
+
+### /etc/hostname
+
+对于几乎所有常见的 Linux 发行版，`/etc/hostname` 文件包含计算机的全名，由主机名和域名组成。因此，我 Web 服务器的 Ubuntu 安装上的 `/etc/hostname` 包含以下文本：
+
+```
+kofler.info 
+```
+
+`/etc/hostname` 在计算机启动时进行求值。可以使用 `hostname` 命令进行更改。对于兼容 systemd 的发行版，还可以使用 `hostnamectl` 命令永久设置主机名。
+
+### /etc/hosts
+
+`/etc/hosts` 将 IP 地址分配给其主机名。该文件通常只包含 `localhost` 的条目，在静态配置服务器的情况下，还包含主机名的条目。过去，该文件用于列出本地网络内的其他计算机。今天，即使在小型网络中，此功能也由路由器或本地名称服务器（如 Bind 或 dnsmasq）完成。
+
+`/etc/hosts` 文件包含基于以下模式的逐行条目：
+
+```
+ip-addr  hostname1 hostname2 hostname3 ... 
+```
+
+最简单的变体如下：
+
+```
+127.0.0.1   localhost 
+```
+
+在大多数 Linux 发行版中，`localhost` 也为 IPv6 定义。以下行显示了 Fedora 和 RHEL 的默认设置：
+
+```
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6 
+```
+
+在静态网络配置的情况下（例如根服务器上），`hosts` 还可以包含带有计算机 IP 地址和主机名的条目：
+
+```
+211.212.213.214  abc-company.com abc-company 
+```
+
+### /etc/network/interfaces
+
+`/etc/network/interfaces` 文件（简称 ENI）包含 Debian 发行版的网络配置。在 Ubuntu 中，由 NetworkManager 和 Netplan 负责网络配置。在当前树莓派 OS 中，NetworkManager 对网络拥有唯一控制权。
+
+#### 与 NetworkManager 的交互
+
+对于桌面安装，该文件通常几乎是空的，只包含环回接口的设置：
+
+```
+# loopback interface
+auto lo
+  iface lo inet loopback 
+```
+
+NetworkManager 负责所有其他接口。
+
+#### IPv4 配置
+
+对于服务器安装或具有静态网络配置的计算机，情况完全不同。在这种情况下，`auto name` 行为每个网络接口启动一个配置块，该块将在计算机启动时激活。随后的 `iface name` 选项行描述接口的基本配置。其他参数根据配置类型随其后。
+
+如果接口从 DHCP 服务器获取 IP 数据，则配置非常简短：
+
+```
+# IPv4 network interface with DHCP
+auto eth0
+iface eth0 inet dhcp 
+```
+
+在静态配置中，使用多个关键字逐行指定网络参数，这些关键字的含义自言易懂。`dns-nameservers` 关键字仅在 Ubuntu 上用于配置名称服务器。`resolvconf` 软件包负责求值。但在 Debian 上，你必须自己在 `/etc/resolv.conf` 中设置名称服务器。
+
+
+
+
+
+```
+# IPv4 网络接口，静态配置
+auto eth0
+iface eth0 inet static
+  address         211.212.213.37
+  netmask         255.255.255.224
+  gateway         211.212.213.1
+  dns-nameservers 211.222.233.244 212.232.234.245 
+```
+
+你可以使用 `ifup `xxx`` 来激活单个接口的更改，只需将 `xxx` 替换为接口名称。
+
+## IPv6 配置
+
+如果你也想使用 IPv6，可以直接在 `/etc/network/interfaces` 中使用 `inet6` 关键字再次定义相关接口。`auto` 关键字指定 IPv6 配置将考虑网关或 IPv6 路由器的路由告告。
+
+```
+# 通过 DHCP 进行 IPv4 配置，通过路由告进行 IPv6 配置
+auto eth0
+iface eth0 inet dhcp
+iface eth0 inet6 auto 
+```
+
+如果 IPv6 网关使用 DHCPv6 服务器，则正确的方法是 `dhcp`。如果还需要通过路由告告配置路由器地址，则需要额外的 `accept_ra 1` 选项。例如，当你使用带有 `enable-ra` 选项的 `dnsmasq` 作为 DHCP 服务器时，就是这种情况。
+
+```
+# 通过 DHCP 进行 IPv4 和 IPv6 配置
+auto eth0
+iface eth0 inet dhcp
+iface eth0 inet6 dhcp
+ accept_ra 1 
+```
+
+对于静态配置，`interfaces` 的内容所示：
+
+```
+# IPv4 和 IPv6 静态配置
+auto eth0
+iface eth0 inet static
+  ... （如前所述 IPv4 配置）
+iface eth0 inet6 static
+  address 2a01:4f8:161:107::2
+  netmask 64
+  gateway fe80::1 
+```
+
+## Wi-Fi 和 WPA 配置
+
+NetworkManager 通常负责处理笔记本电脑上的 Wi-Fi 接口和 WPA 认证。然而，也可以在 `/etc/interfaces` 中直接进行配置。这在嵌入式设备或树莓派等微型计算机上特别常见。
+
+Wi-Fi 接口的配置基本上与以太网接口相同。你通过 `wpa` 参数控制与 `wpa_supplicant`程序的交互以进行认证。在简单的情况下，配置如下：
+
+```
+# 文件 /etc/network/interfaces
+...
+auto wlan0
+iface wlan0 inet dhcp
+  wpa-ssid "wlan-name"
+  wpa-psk "top secret" 
+```
+
+你使用 `wpa-ssid` 指定你的 Wi-Fi 网络名称。（SSID 代表服务集标识符）。`wpa-psk` 指定 Wi-Fi 密码，其中假设加密使用预共享密钥的 Wi-Fi 保护（WPA）方法进行。这是家庭领域的常用规则。
+
+如果需要设置更多参数，通常的做法是将认证数据保存在外部文件中。此时 `interfaces` 参数将具有以下结构：
+
+```
+# /etc/network/interfaces (带有 WPA 的手动 WiFi 配置)
+auto wlan0
+iface wlan0 inet dhcp
+  wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf 
+```
+
+在这里，`wpa-conf` 指定 WPA 配置文件的位置，该文件必须与 `etc/wpa/supplicant/wpa_supplicant.conf` 的语法对应。
+
+如果有用于 Wi-Fi 配置的图形用户界面来管理多个 Wi-Fi 网络的连接数据（如树莓派 OS），你必须使用 `wpa-roam` 关键字：
+
+```
+# /etc/network/interfaces (树莓派 OS 默认 WiFi 配置)
+allow-hotplug wlan0
+iface wlan0 inet manual
+  wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp 
+```
+
+`allow-hotplug` 行允许其他程序控制 Wi-Fi 接口。以 `wpa-roam` 开头的行指定了存储各种 Wi-Fi 网络 WPA 密钥的文件。只要范围内出现合适的网络，就会自动建立连接，并通过 DHCP 获取 IP 数据。`iface default inet dhcp` 语句表示，在 `wpa_supplicant.conf` 中定义的每个网络默认都应使用 DHCP 进行 IP 配置。
+
+## 网络桥接和特殊设置
+
+为了配置虚拟桥接或满足特殊的配置请求，`interfaces` 的 `man` 页面记录了许多其他关键字。特别是，你可以使用 `pre-up`、`up` 和 `post-up` 关键字以及 `pre-down`、`down` 和 `post-down` 关键字来指定在设置或停止网络接口之前、期间或之后执行的命令。以下行显示了一个连接到物理接口 `eth0` 并将网络包重定向到四台虚拟机的网络桥接：
+
+```
+# IPv4 网络桥接
+auto  br0
+iface br0 inet static
+  # 静态配置
+  address     210.211.212.18
+  broadcast   210.211.212.31
+  netmask     255.255.255.224
+  gateway     210.212.213.1
+  pointoint 210.211.212.1
+
+  # 桥接
+  bridge_ports   eth0
+  bridge_stp     off
+  bridge_fd      0
+  bridge_maxwait 0
+
+  # KVM 额外 IP
+  up route add -host 210.211.212.26 dev br0
+  up route add -host 210.211.212.27 dev br0
+  up route add -host 210.211.212.28 dev br0
+  up route add -host 210.211.212.29 dev br0
+
+  # IPv6 静态路由
+  up ip -6 addr add 2a01:1234:567:890::2/64     dev br0
+  up ip route   add default via fe80::1         dev br0
+  down ip route del default via fe80::1         dev br0
+  down ip -6    del add 2a01:1234:567:890::2/64 dev br0 
+```
+
+### /etc/systemd/journald.conf
+
+属于 systemd 的 journal 日志服务由以下配置文件控制：
+
+```
+/etc/systemd/journald.conf
+/etc/systemd/journald.conf.d/*.conf /run/systemd/journald.conf.d/*.conf [/usr]/lib/systemd/journald.conf.d/*.conf 
+```
+
+在许多发行版中，仅存在 `/etc/systemd/journald.conf`，且该文件仅包含注释示例行。在这种情况下将采用默认设置。
+
+要更改配置，你可以在 `[Journal]` 配置组中使用以下关键字：
+
+- `ForwardToSyslog`：指定由 journal 记录的消息是否也转发到传统的 syslog 服务。
+- `MaxFileSec`
+
+
+
+
+
+指定启动新日志文件的最晚时间。默认设置为一个月。只有当日志文件的增长速度慢于 `SystemMaxUse`、`SystemMaxFileSize` 和 `SystemKeepFree` 限制指定的速率时，此设置才有效。
+
+* `MaxLevelStore`
+  表示保存到日志（journal）中的消息优先级级别。默认设置为 `debug`。
+
+* `SystemKeepFree`
+  指定文件系统必须保持空闲的百分比。默认设置为 15%。
+
+* `SystemMaxFileSize`
+  指定日志文件的最大大小。默认设置为 `SystemMaxUse` 的八分之一。这将导致自动轮转，除当前日志文件外，最多创建七个旧文件。
+
+* `SystemMaxUse`
+  指定日志文件可以占据文件系统的最大百分比。在超过此限制之前，将删除旧的日志文件。默认设置为 10%。
+
+你可以通过 `man journald.conf` 查询无数其他其他选项。
+
+### /etc/locale.conf
+
+`/etc/locale.conf` 文件包含用于使用当前 systemd 版本作为初始化系统的发行版的语言和字符集设置。`localectl` 命令可以帮助你更改设置。以下列表描述了可以设置的最本地化参数：
+
+* `LANG=xxx`
+  确定所有未设置的 LC 变量的默认值。
+
+* `LC_ALL=xxx`
+  覆盖所有的单独 LC 设置。
+
+* `LC_COLLATE=xxx`
+  确定排序顺序。
+
+* `LC_CTYPE=xxx`
+  确定字符集。
+
+* `LC_MESSAGES=xxx`
+  确定消息、错误信息等的显示。
+
+* `LC_MONETARY=xxx`
+  确定货币金额的表示方式。
+
+* `LC_NUMERIC=xxx`
+  确定数字的表示方式。
+
+* `LC_PAPER=xxx`
+  确定纸尺寸。
+
+* `LC_TIME=xxx`
+  确定日期时间的显示。
+
+`locale -a` 提供所有可能的设置列表。通常使用 `spr_land.zs` 表示，其中 `spr` 表示两个字母的语言，`land` 表示两个字母的国家。`zs` 指定字符集。例如，在德语国家，你会使用 `de_DE.utf8`。
+
+根据发行版的不同，这些或其他本地化设置保存在其他位置：
+
+| Debian, Ubuntu | `/etc/default/locale` |
+| SUSE | `/etc:/sysconfig/language` |
+
+#### 示例
+
+在 `locale.conf` 的以下设置中，德语是默认语言，UTF-8 是默认字符集：
+
+```
+LANG="de_DE.utf8"
+```
+
+### /etc/login.defs
+
+`/etc/login.defs` 包含创建新用户和组时考虑的各种设置。这些设置适用于 `shadow-utils` 软件包中的命令，例如 `adduser` 和 `useradd` 以及 `addgroup` 和 `groupadd`。相反，`login.defs` 参数对使用可插认证模块 (PAM) 的命令没有影响；特别是 `passwd`！
+
+`login.defs` 中的设置是按行进行的。在每行中，首先输入关键字，然后是一个或多个空格或制表符，最后是所需的设置。
+
+* `CREATE_HOME`
+  指定在创建新用户时是否应自动创建主目录（`yes`/`no`）。
+
+* `ENCRYPT_METHOD`
+  指定使用什么算法来存储 `etc/shadow` 中的哈希值。允许的设置为 `DES`、`MD5`、`SHA256` 和 `SHA512`（最安全）。
+
+* `ENV_PATH` 和 `ENV_SUPATH`
+  包含普通用户以及 `root` 或 `su` 的 `PATH` 环境变量的默认设置。对于大多数发行版，`PATH` 变量的额外设置在 `etc/profile` 或 `etc/bashrc` 中。
+
+* `GID_MIN` 和 `GID_MAX`
+  指定普通组的最小和最大组 ID (GID)。
+
+* `LOG_OK_LOGINS`
+  使用 syslog 记录成功登录（`yes`/`no`）。
+
+* `MAIL_DIR`
+  指定存储本地邮件的目录位置。
+
+* `PASS_MAX_DAYS`, `PASS_MIN_DAYS`, 和 `PASS_WARN_AGE`
+  指定密码的有效期以及之后可以更改的最早时期（参见 `chage`）。
+
+* `PASS_MIN_LEN`
+  定义最小密码长度。
+
+* `SYS_GID_MIN` 和 `SYS_GID_MAX`
+  指定系统账户的最小和最大 GID。
+
+* `SYS_UID_MIN` 和 `SYS_UID_MAX`
+  指定系统账户的最小和最大 UID。
+
+* `SYSLOG_SU_ENAB` 和 `SYSLOG_SG_ENAB`
+
+
+
+
+
+使用 syslog 记录 `su` 和 `newgrp` 命令（`yes`/`no`）。
+
+*   `UID_MIN` 和 `UID_MAX`
+    指定普通用户的最小最大用户 ID（UID）。
+*   `USERGROUPS_ENAB`
+    控制是否为每个用户创建一个独立的组（`yes`/`no`）。
+
+#### Example
+
+以下行显示了 Fedora 上 `login.defs` 中的默认设置。然而，请注意，`PASS_MIN_LEN` 和 `UMASK` 的设置与 Fedora 的运行无关！密码的最低要求由 PAM 模块 `pwquality` 指定，而 `umask` 在 `/etc/profile` 中被预设置为 `022`。
+
+``````
+MAIL_DIR     /var/spool/mail
+PASS_MAX_DAYS          99999
+PASS_MIN_DAYS              0
+PASS_MIN_LEN               5
+PASS_WARN_AGE              7
+UID_MIN                 1000
+UID_MAX                60000
+SYS_UID_MIN              201
+SYS_UID_MAX              999
+GID_MIN                 1000
+GID_MAX                60000
+SYS_GID_MIN              201
+SYS_GID_MAX              999
+CREATE_HOME              yes
+UMASK                    077
+USERGROUPS_ENAB          yes
+ENCRYPT_METHOD        SHA512 
+`````````
+
+## /etc/mailname
+
+在 Debian 和 Ubuntu 系统上，`/etc/mailname` 包含邮件服务器使用的主机名。该设置由 postfix (`myorigin = /etc/mailname`）和 `mutt` 程序等分析。此设置对于发送电子邮件特别重要。它完善了本地邮件的地址。因此，当 `huber` 发送邮件时，将使用 `huber@mailhostname` 作为发送者，其中 `mailhostname` 从 `/etc/mailname` 读取。
+
+在其他发行版中，主机名直接设置在邮件服务器的配置文件中；对于 postfix，这位于 `/etc/postfix/main.cf` 中的 `myorigin = mailhostname`。
+
+## /etc/mdadm/mdadm.conf
+
+`/etc/mdadm/mdadm.conf` 文件汇总了计算机软件 RAID 系统的配置。如果文件缺失或丢失，可以使用以下命令从 RAID 分区中存储的元数据部分重建：
+
+```
+root# mdadm --examine --scan > /etc/mdadm/mdadm.conf 
+`````````
+
+以下列表显示了 `mdadm.conf` 中最重要的关键词：
+
+*   `ARRAY device1 metadata=... UUID=... name=... devices=...`
+    指定组成 RAID 列的组件。
+*   `CREATE owner=... group=... mode=... auto=...`
+    指定在激活 RAID 设备时应应用哪些默认设置。`auto` 参数对应 `mdadm` 命令的 `--auto` 选项。
+*   `DEVICE device1 device2 | partitions | containers`
+    指定哪些硬盘或分区可以包含 RAID 组件。如果缺少 `DEVICE` 规范，则应用 `DEVICE partitions containers`。`mdadm` 命令会扫描所有 SSD 和硬盘分区以及所有逻辑卷。
+*   `MAILADDR name`
+    指定当 `mdadm` 运行在监控模式时，将消息、警告和错误信息发送到的本地电子邮件地址。
+
+#### Example
+
+以下行显示了带有两个 RAID-1 设备的 Linux 服务器的配置文件：
+
+```
+CREATE owner=root group=disk mode=0660 auto=yes
+MAILADDR root
+ARRAY /dev/md/0 metadata=1.2 UUID=254 
+`````````
+
+## /etc/modules
+
+Debian/Ubuntu 特有的文件 `/etc/modules` 包含启动时加载的内核模块名称。通常，Linux 自身会识别需要加载哪些模块。只有当这样做无效，你才需要将模块名称添加到 `/etc/modules` 文件。
+
+### Alternative Procedures
+
+启动过程中已经需要的内核模块必须安装在 initrd 中。`dracut` (Fedora, CentOS) 和 `update-initramfs` (Debian, Ubuntu) 命令有助于实现这一点。
+
+另一个选项是通过 `rc.local` 脚本在 init 结束时加载内核模块。树莓派 OS 使用设备树管理内核。通过 `/boot/firmware/config.txt 进行配置。带有 `*.dtb` 标识的设备树文件位于 `/boot/firmware` 和 `/boot/firmware/overlays` 目录。
+
+## /etc/netplan/netplan.yaml
+
+Netplan (https://netplan.io) 用于 Ubuntu。该框架配置并控制其他网络后端，如 NetworkManager 和 systemd networkd。Netplan 的配置文件位于 `/etc/netplan`、`/lib/netplan` 和 `/run/netplan`，它们具有 `*.yaml` 扩展名。要使配置生效，必须运行 `netplan apply`。配置文件按字母顺序解析。
+
+在桌面系统上，`/etc/netplan` 默认只包含一个极简的配置文件，它将所有后续工作委托给 NetworkManager：
+
+```
+# File /etc/netplan/01-network-manager-all.yaml (desktop systems)
+network:
+  version: 2
+  renderer: NetworkManager 
+```
+
+对于使用 DHCP 的本地网络服务器安装，其配置读取如下所示行所示。networkd 负责网络连接的实际实现。（可以省略 `renderer: networkd` 行，因为 `networkd` 是 Netplan 的默认后端。）
+
+
+
+
+
+```
+# File /etc/netplan/01-netcfg.yaml (server/DHCP)
+# Configure interface enp0s3 via DHCP
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+   enp0s3:
+    dhcp4: true 
+```
+
+你可以使用此模板作为静态网络配置的指南，包括名称服务器规范：
+
+```
+# File /etc/netplan/01-netcfg.yaml (server/static)
+# Configure interface ens3 static
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+   ens3:
+   addresses: [ 138.201.20.182/26 ]
+   gateway4:    138.201.20.176
+   nameservers:
+       search: [ ubuntu-book.info ]
+       addresses:
+           - "213.133.100.100"
+           - "213.133.98.98" 
+```
+
+当然，配置文件中也允许使用 IPv6 地址。在某些情况下，你必须指定特定的 IPv4 和 IPv6 关键字，例如 `gateway4` 与 `gateway6`，或者 `dhcp4` 与 `dhcp6`。你可以在以下网站找到更多关于路由、桥接、绑定、VLAN 等等示例：
+
+[`netplan.io/examples`](https://netplan.io/examples)
+
+### /etc/systemd/network/networkd.network
+
+网络后端 `networkd` 是 `systemd` 的一部分，目前安装在许多发行版中，但很少处于激活。主要的例外是 Ubuntu Server，那里的 `networkd` 由 Netplan 控制。
+
+`networkd` 解析 `/etc/systemd/network`、`/lib/systemd/network` 和 `/run/systemd/network` 目录下的配置文件。文件必须具有 `*.network` 扩展名。
+
+以下行显示了如何在虚拟机中设置带有静态 IP 地址以太网接口的示例：
+
+```
+# File /etc/systemd/network/01-mystatic.network
+[Match]
+Name=ens3
+
+[Network]
+Address=138.201.20.182/26
+Gateway=138.201.20.176
+DNS=213.133.100.100
+DNS=213.133.98.98
+Domains=ubuntu-book.info 
+```
+
+第二个示例也显示了静态配置，这次是针对 Hetzner 的根服务器，包含了路由和 IPv6 设置：
+
+```
+[Match]
+MACAddress=90:1b:0e:8e:48:86
+
+[Network]
+Address=2a01:4f8:171:2baf::2/64
+Gateway=fe80::1
+Address=138.201.20.176/26
+Gateway=138.201.20.129
+
+[Route]
+Destination=138.201.20.128/26
+Gateway=138.201.20.129 
+```
+
+如果可用 DHCP 服务器，可能的配置如下：
+
+```
+# File /etc/systemd/network/01-dhcpclient.network
+[Match]
+Name=enp0s3
+
+[Network]
+DHCP=ipv4
+
+[DHCP]
+UseMTU=true
+RouteMetric=100 
+```
+
+你可以在 `man systemd.network` 中找到关于 `networkd` 配置语法的更多细节。Arch Linux wiki 也包含了非常有用的信息：
+
+[`wiki.archlinux.org/index.php/systemd-networkd`](https://wiki.archlinux.org/index.php/systemd-networkd)
+
+### /etc/NetworkManager/system-connections/<interface>.nmconnection`
+
+几乎所有的 Linux 发行版都依赖 NetworkManager 进行 Wi-Fi 配置。对于其他网络发行，通常并行使用特定发行版的程序。例外包括当前的 Fedora 和 RHEL 版本（从 RHEL 9 开始），它们完全依赖 NetworkManager，即使对于服务器上的静态配置也是如此。以前在 RHEL 中常见的 `/etc/sysconfig/network-scripts` 中的 `ifcfg` 文件已经过时了。
+
+使用 NetworkManager，网络接口的配置以 `keyfile` 语法保存在 `/etc/NetworkManager/system-connections` 目录中。这些文件的语法在此处记录：
+
+[www.linux.org/docs/man5/nm-settings-keyfile.html](http://www.linux.org/docs/man5/nm-settings-keyfile.html)
+
+[`people.freedesktop.org/~lkundrak/nm-docs/nm-settings.html`](https://people.freedesktop.org/~lkundrak/nm-docs/nm-settings.html)
+
+如果可能，你应该使用图形化工具配置网络。在 Gnome 中，可以在设置的网络模块中进行。`nmcli` 和 `nmtui` 在控制台或终端运行良好。（`nmtui` 代表 NetworkManager 文本用户界面，是一个用于文本模式的菜单引导和对话框引导的配置程序。）
+
+直接更改配置文件也是可能的。为了让 NetworkManager 考虑你的配置文件，这些文件必须由 `root` 所有，并且仅允许 `root` 读取。确保执行了 `chmod 600 filename`，并在必要时也执行 `chown root:root filename`！
+
+在尝试自己的配置文件时，`/var/run/NetworkManager` 目录中动态生成的文件经常会干扰。请重启！要让配置更改生效，你必须要求 NetworkManager 重新读取现有的配置文件。然后你显式地告诉它你想为特定接口应用更改——这里是 `enp1s0`：
+
+```
+root# nmcli connection reload     
+(reload configuration)
+root# nmcli dev reapply enp1s0    
+(apply new configuration)
+root# nmcli connection show       
+(interface overview) 
+```
+
+#### DHCP 配置
+
+通过 DHCP 获取网络配置的以太接口实际上不需要配置文件。NetworkManager 会自动处理配置。但是，你仍然可以像下面的示例那样在文件中编写配置：
+
+```
+# File /etc/NetworkManager/system-connections/enp1s0.nmconnection
+[connection]
+id=myInterfaceName
+uuid=27afa607-ee36-43f0-b8c3-9d245cdc4bb3
+type=802-3-ethernet
+autoconnect=true
+interface-name=enp1s0
+[ipv4]
+method=auto
+[802-3-ethernet]
+mac-address=52:54:00:64:9b:85 
+```
+
+`method=auto` 负责使用 DHCP。你可以通过 `interface-name` 或 `mac-address` 创建到接口的映射。你可以使用 `ip` `addr` 确定所需的十六进制地址。`autoconnect=true` 导致网络接口在计算机启动时自动激活。
+
+`id` 是连接的自由选择名称。此名称必须在某些 `nmcli` 命令中使用以选择接口。简单地使用接口名称（这里是 `enp1s0`）作为 ID 通常很方便。
+
+你也可以自由决定配置文件的文件名。建议遵循 Fedora 和 RHEL 采用 `<接口名称>.nmconnection` 方法。NetworkManager 会考虑所有无法明确识别为备份文件的文件。
+
+#### 静态配置
+
+
+
+
+
+对于静态 IPv4 配置，你需要更改 `[ipv4]` 区域中的几行：
+
+```
+# File /etc/NetworkManager/system-connections/enp1s0.nmconnection
+...
+[ipv4]
+address1=192.168.122.244/24,192.168.122.1
+dns=192.168.122.1
+method=manual 
+```
+
+`method=manual` 激活静态配置。`address1=...` 为接口分配 IP 地址、子掩码以及（如果需要）相应的网关地址。`dns` 设置你所需的域名服务器。如果需要，你也可以指定多个用逗号分隔的域名服务器地址。
+
+## IPv6 配置
+
+静态 IPv6 配置的相关行如下所示：
+
+```
+# File /etc/NetworkManager/system-connections/enp1s0.nmconnection
+...
+[ipv6]
+addr-gen-mode=default
+address1=2abc:1234:1234::10/64,2abc:1234:1234::1
+dns=2001:4860:4860::8888,2001:4860:4860::8844
+method=manual 
+```
+
+在 `[ipv6]` 区域中，`address1` 再次分配包含掩码的 IP 地址以及相应的网关地址。此示例使用了 Google 公共域名服务器作为 DNS。
+
+## 防火墙区域
+
+你可以在配置文件的 `[connection]` 区域为 `firewalld` 程序包含所需的区域：
+
+```
+# File /etc/NetworkManager/system-connections/enp1s0.nmconnection
+[connection]
+...
+zone=trusted 
+```
+
+如果没有此指定，防火墙系统会自动使用默认的 `public` 区域。你可以使用 `firewall-cmd --get-active-zones` 来确定所有接口当前有效的区域。
+
+## /etc/nsswitch.conf
+
+`/etc/nsswitch.conf` 文件控制通过 GNU C 库中的名称切换函数解析主机名、用户名和组名。除非在本地网络中使用 LDAP 或其他网络服务进行用户管理和身份验证，否则很少需要更改此文件。
+
+该文件按行包含条目，第一列指示数据库的名称。“数据库”一词指的是一组信息，例如所有用户列表，包括登录名、全名、主目录、默认 shell 等。第一列允许的关键字包括 `aliases`（邮件别名）、`group`、`hosts`、`networks`、`passwd`、`rpc` 和 `shadow`。
+
+数据库名称后面跟着一个冒号，然后是用空格分隔的服务列表。最重要的服务如下：
+
+*   `files` 从本地配置文件读取数据，例如 `/etc/passwd` 或 `/etc/group`。
+*   `compat` 的含义与 `files` 相似，但允许解释 `/etc/passwd` 中的额外信息。
+*   `db` 从数据库文件中读取数据。
+*   `nis` 分析过时的网络信息服务。
+*   `dns` 查询域名服务器（用于主机名）。
+*   `mdns4_minimal` 使用 Zeroconf 解析主机名。
+*   `ldap` 与 LDAP 服务器通信信。
+*   `wins` 使用 WINS 服务器。
+
+此外，可以以 `[STATUS=ACTION]` 或 `[!STATUS=ACTION]` 的形式指定命令，然后在特定事件发生或不发生时执行。允许的 `STATUS` 值为 `success`、`notfound`、`unavail` 和 `tryagain`。可能的操作有 `return`（立即返回结果，不尝试其他选项）和 `continue`（使用下一个查找服务）。
+
+#### 示例
+
+以下行显示了 Fedora 默认配置片段。用户账户仅考虑 `/etc/passwd`、`/etc/shadow` 和 `/etc/group` 文件。主机名从 `/etc/hosts` 读取，从域名服务器请求，并通过 Zeroconf (Avahi) 确定。
+
+```
+passwd:     files
+shadow:     files
+group:      files
+hosts:      files dns mdns4_minimal
+... 
+```
+
+## /etc/os-release
+
+对于使用 systemd 作为初始化系统的当前发行版，`/etc/os-release` 包含了已安装发行版本。以下行显示了文件的语法：
+
+```
+NAME="AlmaLinux"
+VERSION="9.3 (Shamrock Pampas Cat)"
+ID="almalinux"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9.3"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="AlmaLinux 9.3 (Shamrock Pampas Cat)"
+... 
+```
+
+严格来说，该文件不是配置文件，而是一个信息文件。因此，更改该文件没有意义。然而，它在更新过程中可能会被更新。
+
+## /etc/passwd
+
+`/etc/passwd` 文件包含计算机上所有本地账户的数据，包括登录名、全名、默认 shell 和主目录。但是，出于安全考虑，它不包含密码的哈希值；它存储在独立的 `etc/shadow` 文件中。如果可能，你应该使用提供的管理账户命令，如 `useradd`、`usermod` 或 `userdel`。
+
+`passwd` 文件由七列组成，每列之间用冒号分隔：
+
+*   第一列（Account name）
+    包含登录名。它不能包含任何空格且应没有特殊字符。习惯上只使用小写字母。
+*   第二列（Password）
+    过去，这里包含密码的哈希值。所有当前的 Linux 发行版现在都在此列中存储字符 `x`，哈希值可以在 `etc/shadow` 中找到。
+
+
+
+
+
+*   第三列 (`UID`)
+    包含内部用户 ID，用于管理访问权限和进程。在大多数发行版中，小于 1000 的 UID 留给系统账户，而 1000 及以上的 UID 供普通用户使用。
+*   第四列 (`Primary group`)
+    表示用户主组的编号。用户可以分配到其他组；附加组存储在 `/etc/group` 中。
+*   第五列 (`Comment`)
+    用于存储注释字符串，可以由多个部分组成。在实践中，这里通常只保存完整的用户名。如果在创建用户时未指定该项，则第五列的内容与第一列相同。
+*   第六列 (`Home directory`)
+    包含主目录的路径。
+*   第七列 (`Shell`)
+    指定登录后自动激活的 shell；对于普通用户，这通常是 `/bin/bash`。对于某些不提供登录权限的系统账户，通常使用 `/sbin/nologin` 或 `/bin/false` 代替 shell。可以通过 `chsh` 命令更改默认 shell。
+
+#### 示例
+以下行显示了 Fedora 系统上的某些系统账户和一个用户账户：
+
+```
+root:x:0:0:root:/root:/bin/bash bin:x:1:1:bin:/bin:/sbin/nologin daemon:x:2:2:daemon:/sbin:/sbin/nologin adm:x:3:4:adm:/var/adm:/sbin/nologin
+...
+kofler:x:1000:1000:Michael Kofler:/home/kofler:/bin/bash 
+```
+
+### /etc/profile
+`/etc/profile` 和 `/etc/profile.d/*.sh` 包含了环境变量的系统级设置。`PATH`、`MAIL` 和 `HOSTNAME` 等变量在其中被预设。此外，许多发行版使用 `umask` 来设置新创建文件的访问权限位。
+
+`/etc/profile` 是 shell 脚本文件。因此，从语法上讲，常用 shell 允许的一切都是允许的。在 Ubuntu 上，除了 `/etc/profile`，还提供了 `/etc/environment` 文件用于系统级环境变量。然而，该文件通常只包含 `PATH` 变量的设置。
+
+`profile` 设置由 `.profile` 中的用户特定设置以及特定 shell 的设置进行补充。例如，`bash` 会加载 `/etc/bashrc`、`/etc/bash.bashrc`、`.bashrc` 和 `.alias` 文件。根据发行版的不同，可能会有额外的配置文件。例如，Deb 和 Ubuntu 中的 `PATH` 是由 `/etc/environment` 设置的。对于 X 图形系统中有效的环境变量，如果存在 `/etc/X11/Xsession.d/` 目录，其中的文件也会处理。
+
+### /etc/rc.local /etc/rc.d/rc.local
+/etc/init.d/boot.local
+
+许多发行版运行 `rc.local` 脚本文件以兼容旧的 Init-V 系统。该文件的位置取决于发行版：
+
+| Debian, Raspberry Pi OS, Ubuntu | `/etc/rc.local` |
+| CentOS, Fedora, RHEL | `/etc/rc.d/rc.local` |
+| openSUSE/SUSE | `/etc/init.d/boot.local` |
+
+该文件必须是可执行的（`chmod +x`）！此外，在某些发行版中，你必须在设置 `systemctl` 文件后运行 `daemon-reload`，以便该文件在下次重启时生效。
+
+`rc.local` 是旧 Init-V 系统的遗留物，它多年前已被 systemd 取代。根据发行版的不同，该文件默认为空或不存在，但如果你正确创建了它，它会被考虑。然而，这在未来可能会发生变化。届时，你必须设置“真正的” systemd 单元而不是 `rc.local`（参见 `systemd.service`）。
+
+#### 示例
+以下脚本将上次启动过程的时间保存到 `/var/log/boottime`：
+
+```
+#!/bin/bash
+# File /etc/rc.local or /etc/rc.d/rc.local or /etc/init.d/boot.local
+date > /var/log/boottime 
+```
+
+为了确保 `/etc` 或 `/etc/rc.d` 或 `/etc/init.d` 中的脚本被 systemd 识别，你必须运行以下命令：
+
+```
+root# chmod +x /etc/rc.local    
+(根据发行版更改文件名!)
+root# systemctl reload-daemon
+root# reboot 
+```
+
+### /etc/resolv.conf
+`/etc/resolv.conf` 控制如何确定未知网络名（主机名）的 IP 地址。“未知”意味着这些名称没有在 `hosts` 中定义。该文件通常只包含两三行，带有以下关键字：
+
+*   `nameserver` `ipaddr`
+    指定 DNS 服务器的 IP 地址。该关键字可以使用多次来指定备用 DNS 服务器。最多允许三个 IPv4 DNS 和三个 IPv6 DNS 服务器。
+*   `domain` `mydomain`
+    指定本地域名。这允许对主机名进行简写指定，即使用 `name` 而不是 `name.mydomain`。
+*   `search` `domain`
+
+
+
+
+指定在搜索查询时会被考虑的域名。最多可以指定六个域名，每个域名都有其自己的 `search` 条目。在名称解析过程中，会按顺序测试指定的域名；例如，对于 `ping name`，首先测试 `name`，然后是 `name.domain1`，接着是 `name.domain2`，以此此类推。`search` 的默认设置是本地域名。
+
+`domain` 和 `search` 是互斥的。如果 `resolv.conf` 中同时包含这两个关键词，则以后者为准。
+
+`/etc/resolv.conf` 通常是动态生成的，特别是当通过 DHCP 进行 IP 配置时。
+
+越来越多的 Linux 发行版（如 Fedora、Ubuntu）正在使用 `systemd-resolv` 设置本地名称服务器。此时，`/etc/resolv.conf` 会引用该服务器（通常是 127.0.0.53）。如果你想知道本地服务正在访问哪个外部名称服务器，必须运行 `resolvectl` 或 `systemd-resolv --status`。
+
+#### 示例
+以下行显示了 IPv4 和 IPv6 的手动名称服务器配置：
+
+```
+# /etc/resolv.conf
+domain mylan                     # 局域网域名
+nameserver 211.212.213.1         # IPv4 DNS
+nameserver 211.212.214.1         # 备 DNS（如果第一个失效）
+nameserver 2001:4860:4860::8888  # IPv6-DNS 
+```
+
+### /etc/rsyslog.conf
+许多 Linux 发行版使用与 syslog 兼容程序 `rsyslogd` 来记录内核和各种网络服务的日志。该程序必须使用 `/etc/rsyslog.conf` 文件以及补充的 `/etc/rsyslog.d/*.conf` 文件进行配置。这些配置文件包含由两部分组成的规则：
+
+* **选择器 (Selector)**：每条规则的第一部分指定要记录的内容。
+* **动作 (Action)**：第二部分控制应对消息应执行什么操作。
+
+规则可以使用 `\` 字符跨多行显示。多个规则可能适用于同一消息。在这种情况下，消息会被记录或传递多次。要使 syslog 配置的更改生效，必须通过 `service rsyslog restart` **重启** syslog 服务！
+
+### 选择器
+每个选择器由由点隔开的两个部分组成：`service.prioritylevel`。允许用分号分隔多个选择器。此外，一个选择器中可以用逗号分隔多个服务。所有使用 syslog 的 Linux 程序都必须为它们的消息分配服务和优先级。
+
+Syslog 识别以下服务（设施）：`auth`、`authpriv`、`cron`、`daemon`、`ftp`、`kern`、`lpr`、`mail`、`news`、`syslog`、`user`、`uucp` 以及 `local0` 到 `local7`。`*` 字符代表所有服务。
+
+Syslog 还知道以下优先级级别（按重要性递增）：`debug`、`info`、`notice`、`warning = warn`、`err = error`、`crit`、`alert` 和 `emerg = panic`。`warn`、`error` 和 `panic` 关键词已过时，你应该使用 `warning`、`err` 和 `emerg`。`*` 字符包含所有优先级。`none` 关键词适用于未分配优先级的消息。
+
+指定的优先级级别包含所有更高（更重要）的优先级。因此，`mail.err` 选择器包含来自邮件系统的 `crit`、`alert` 和 `emerg` 消息。如果你显式只需要特定优先级的消息，必须在优先级前加上 `=`（例如 `mail.=err`）。
+
+#### 动作
+通常指定日志文件名作为动作。日志文件通常在每次输出后进行同步。如果文件名前面有一个减号，syslog 将不会同步。这种方式效率更高，但在崩溃时，尚未物理保存的消息将会丢失。
+
+Syslog 还可以将消息转发到先入先（FIFO）文件或管道。在这种情况下，你需要在文件名前加上 `|` 字符。在列表中出现的 `/dev/xconsole` 是一个特殊的 FIFO 文件，用于将消息传递给 X 图形系统。
+
+`*` 字符意味着消息将发送给所有登录控制台或通过 SSH 登录的用户。由于这种干扰很大，默认仅对关键消息使用。
+
+### 日志配置
+当前的发行版使用 systemd 项目的 Journal 程序来代替或补充 `rsyslogd`。它使用 `etc/systemd/journald.conf` 以及其他一些文件进行配置。
+
+#### 示例
+以下行显示了 Ubuntu 标准 syslog 配置，但经过了精简且格式更加清晰：
+
+
+
+
+
+```
+# File /etc/rsyslog.d/50-default.conf bei Ubuntu
+# Selector                      Action
+auth,authpriv.*                 /var/log/auth.log
+*.*;auth,authpriv.none          -/var/log/syslog
+kern.*                          -/var/log/kern.log
+
+mail.*                          -/var/log/mail.log
+mail.err                        /var/log/mail.err
+*.emerg                         :omusrmsg:*
+
+daemon.*;mail.*; news.err; *.=debug;*.=info; *.=notice;*.=warn  |/dev/xconsole 
+```
+
+用通俗的语言来说，上述配置意味着：
+
+* `/var/log/auth.log` 包含所有优先级的认证消息。这些包括失败和成功的登录尝试（也通过 SSH）、PAM 消息、`sudo` 命令等。作为唯一的日志文件，`auth` 会在每条消息产生时立即同步。
+
+* `/var/log/syslog` 包含通过 syslog 记录的所有消息，包括未分配优先级的认证消息。这种全方位的方法既是优势也是缺点。一方面，你可以从单个文件中提取所有想象到的信息；另一方面，在这一堆杂烩中寻找相关的条目确实非常困难。
+
+* `/var/log/kernel.log` 包含所有内核消息。
+
+* 来自邮件系统（例如 postfix）的消息分布在在几个文件中。在 `mail.log` 中存储所有消息；在 `mail.err` 中仅存储错误消息。
+
+* 关键的系统消息（例如关于即将关机或内核错误的消息）通过 `:omusrmsg:*` 转发给所有用户，专门发送到所有终端窗口和控制台。`omusrmsg` 是一个向用户发送消息的 `rsyslog` 模块。
+
+* 各种警告和错误消息也会转发到 X 系统。要在 X 上跟踪这些消息，你必须启动 `xconsole` 程序。它看起来像一个很小的终端窗口，但不允许任何输入。
+
+## /etc/services
+
+`/etc/services` 文件包含了常用网络服务的列表，以及分配给它们的 IP 端口和协议类型。只有在特殊情况下才需要修改此文件。文件的语法在以下示例行中清晰地所示：
+
+```
+# service-name  port/protocol  [aliases]   [# comment]
+tcpmux          1/tcp                       # TCP port service multiplexer
+tcpmux          1/udp                       # TCP port service multiplexer
+rje             5/tcp                       # Remote Job Entry
+rje             5/udp                       # Remote Job Entry
+echo            7/tcp
+echo            7/udp
+...
+ftp             21/tcp
+ftp             21/udp          fsp fspd
+ssh             22/tcp                      # The Secure Shell (SSH) Protocol
+ssh             22/udp                      # The Secure Shell (SSH) Protocol
+telnet          23/tcp
+telnet          23/udp
+... 
+```
+
+## /etc/shadow
+
+`/etc/shadow` 在 `passwd` 的用户信息基础上增加了密码哈希值，以及指示账户有效期和何时应更新密码的数据。要更改这些数据，你通常使用 `passwd` 和 `chage` 命令。`shadow` 文件由冒号分隔的九列组成：
+
+* 第一列（`Account name`）
+    匹配 `/etc/passwd` 的第一列。
+
+* 第二列（`Password hash`）
+    允许检查密码。然而，无法从哈希值还原密码。在目前的 Linux 发行版中，哈希值是通过 `sha` 生成的。由于生成每个哈希值时都会使用随机初始化值（盐），两个使用相同密码的用户将具有不同的哈希值。这使得字典攻击变得不可行，因为无法将预生成的哈希值与 `/etc/shadow` 的内容进行比较。
+    对于不需要登录的账户，第二列仅包含一个星号。对于锁定的账户，哈希值前有两个感叹号。该代码将失效。要重新激活账户，需再次删除感叹号。
+
+* 第三列（`Last change`）
+    指示上次更改密码的时间。这是自 1970 年 1 月 1 日起计算的天数。值 `0` 表示用户在下次登录时必须立即更改密码。
+
+* 第四列（`Minimum age`）
+    指示可以更改密码的最早天数。`0` 允许随时更改。
+
+* 第五列（`Maximum age`）
+    指定必须更改密码的最大天数。`0` 允许无限使用密码。
+
+* 第六列（`Warning time`）
+    指定在密码过期前多少天通知用户。`0` 禁用这些警告。
+
+* 第七列（`lockout time`）
+    指定密码过期后多少天账户将被锁定。随后只能由管理员使用 `passwd -u` 重新激活。
+
+* 第八列（`Expiry time`）
+    指定账户过期的时间。日期为自 1970 年 1 月 1 日起计算的天数。如果账户永久有效，此列留为空。值 `0` 不被使用！
+
+* 第九列
+    预留供未来扩展。
+
+#### 示例
+
+以下行显示了 `/etc/shadow` 的片段，其中长哈希值已被缩短：
+
+```
+root:$6$.cc11McOB::0:99999:7:::
+bin:*:18095:0:99999:7:::
+daemon:*:18095:0:99999:7:::
+adm:*:18095:0:99999:7:::
+...
+kofler:$y$j9T$1...:19793:0:99999:7::: 
+```
+
+要查找密码上次更改的时间，你必须运行 `date`：
+
+```
+user$ date -d "1970-01-01 + 19793 days"
+
+Mon Mar 11 00:00:00 CET 2025 
+```
+
+用户 `root` 和 `kofler` 的其他 `chage` 条目表示密码可以随时更改（`0`），并且几乎永久有效（`99999` = 约 273 年）。用户在登录时，会在密码过期前七天收到警告。
+
+## /etc/apt/sources.list
+
+
+
+
+APT 包源定义在 `/etc/apt/sources.list` 和 `/etc/apt/sources.list.d/*` 中。每一行的语法如下：
+
+```
+package type uri distribution [component1] [component2] [component3] ...
+```
+
+软件包类型，`deb` 表示普通的 Debian 软件包，`deb-src` 表示源码包。第二列指定软件包源的根目录。除了 HTTP 和 FTP 目录外，APT 还支持普通目录以及 RSH 或 SSH 服务器。
+
+第三列指示发行版（distribution）。所有其他列都表示可以考虑的发行版组件。组件名称取决于发行版和软件包源！例如，Ubuntu 区分了 main、restricted、universe 和 multiverse 软件包，而 Debian 则区分了 main、contrib、non-free 和类似的组件。
+
+先提到的软件包源优先级更高：因此，如果某个软件包可以从多个源下载，APT 将从第一个源下载它。
+
+#### 示例
+
+以下列表显示了一些 Ubuntu 软件包源。出于空间考虑，每个条目跨越了两个行。
+
+```
+# File /etc/apt/sources.list
+deb http://de.archive.ubuntu.com/ubuntu/ mantic          \ 
+                                     main restricted universe multiverse
+deb http://de.archive.ubuntu.com/ubuntu/ mantic-updates  \ 
+                                     main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu    mantic-security \ 
+                                     main restricted universe multiverse 
+```
+
+## /etc/sudoers
+
+`/etc/sudoers` 文件和 `/etc/sudoers.d` 中的额外文件定义了哪些用户允许通过 `sudo` 以什么权限运行哪些命令。该文件还包含控制 `sudo` 基本行为的各种通用设置。这些设置随发行版的不同而异。
+
+`sudoers` 文件应仅使用 `visudo` 命令进行修改。该命令会调用环境变量 `VISUAL` 或 `EDITOR` 定义的编辑器（默认是 `vi`），在保存前执行语法检查，从而确保你不会因为包含错误的 `sudoers` 文件而把自己排除在管理工作之外。这对于像 Ubuntu 这样不提供 `root` 登录的发行版尤为重要。
+
+### 基础设置
+
+- `Defaults always_set_home`
+  在用户切换时更改 `HOME` 环境变量，使其指向新用户的家目录。通常情况下，这会自动发生。只有在应用 `!env_reset` 或 `env_keep` 包含 `PATH` 变量时，此选项才有效。
+
+- `Defaults env_keep="var1 var2 var3"`
+  指定在用户切换时保留哪些环境变量，因此它们会被排除在 `env_reset` 之外。
+
+- `Defaults env_reset`
+  导致在用户切换时重置所有环境变量。此设置默认启用。要禁用它，你必须输入 `Defaults !env_reset`。
+
+- `Defaults mail_badpass`
+  在登录尝试失败后，向管理员发送警告邮件。
+
+- `Defaults secure_path="pfad1:pfad2:pfad3"`
+  为 `sudo` 命令定义 `PATH` 环境变量的内容。
+
+- `Defaults targetpw`
+  表示必须始终输入运行命令的账户的密码，即通常的 `root` 密码。如果没有此设置，`sudo` 期望当前用户的密码。
+
+- `Defaults timestamp_timeout=n`
+  指定 `sudo` 再次要求输入密码的时间。默认设置为五十分钟。
+
+### 权限
+
+`/etc/sudoers` 中的三列条目定义了哪些用户允许从哪台计算机运行哪些程序。下一行表示用户 `katherine` 允许在名为 `uranus` 的计算机上运行 `/sbin/fdisk` 命令。`ALL` 关键字表示 `katherine` 可以以任何身份运行该命令，即作为 `root`、`news`、`lp` 等。
+
+```
+katherine uranus=(ALL) /sbin/fdisk 
+```
+
+如果 `sudoers` 的第一列带有 `%` 字符前缀，则该条目适用于指定组的所有成员。下一行意味着 `wheel` 组中的所有用户都可以从任何计算机以任何用户身份运行命令：
+
+```
+%wheel   ALL=(ALL) ALL 
+```
+
+可以允许特定用户在不指定密码的情况下运行 `sudo`。然而，只有当没有其他要求该用户密码的 `sudoers` 行时，`NOPASSWD` 关键字才有效。这也适用于组条目，例如 `%admin`。
+
+```
+kofler ALL=(ALL) NOPASSWD: ALL 
+```
+
+下面的规则读起来极其宽松：任何人都可以做任何事情。该规则只有在结合 `Defaults targetpw` 选项时才有意义，该选项始终要求输入代表运行命令的用户的密码。
+
+```
+ALL ALL=(ALL) ALL 
+```
+
+#### 示例
+
+
+
+
+以下行显示了 Ubuntu 上的默认配置。在该发行版中，`root` 用户未设置有效密码。因此，无法进行 `root` ！此外，`su` 或 `ssh -l root` 也无法工作。因此，运行管理员命令的唯一方法是通过 `sudo`提供的。`admin` 和 `sudo` 组的所有成员都拥有此权限，其中 `admin` 组的包含仅是为了兼容旧版本的 Ubuntu。在当前的 Ubuntu 版本以及大多数其他发行版中，`sudo` 是拥有 `sudo` 权限用户的常用组。
+
+```
+# Default configuration in /etc/sudoers on Ubuntu
+Defaults    env_reset
+Defaults    mail_badpass
+Defaults    use_pty
+Defaults    secure_path=\
+               "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+root        ALL=(ALL:ALL) ALL
+%admin      ALL=(ALL) ALL
+%sudo       ALL=(ALL:ALL) ALL
+@includedir /etc/sudoers.d 
+```
+
+### /etc/sysctl.conf
+
+`/etc/sysctl.conf` 包含了内核参数的默认设置。该文件在系统启动时会被分析，列出的所有参数都会被相应设置。对于随后的更改，您可以使用 `sysctl -p` 来确保所有设置都从 `sysctl.conf` 加载并生效。
+
+要设置的内核参数以 `name.name.name=value` 的形式逐行指定。注释行以 `;` 或 `#` 开头。
+
+#### 
+
+`sysctl.conf` 中的以下设置会导致计算机启动时激活 IPv4 和 IPv6 的转发。如果计算机被用作路由器工作，这是必须的。
+
+```
+net.ipv4.ip_forward=1 net.ipv6.conf.all.forwarding=1 
+```
+
+### systemd.service
+
+初始化系统 systemd 由一系列配置文件控制，这些文件位于以下三个目录中：
+
+```
+/etc/systemd/system
+/run/systemd/system
+[/]/lib/systemd/system 
+```
+
+如果 systemd 也用于管理用户特定服务，则在 `/home/name/.config/systemd/user` 以及其他一些目录中也存在 `*.service` 文件。
+
+本节描述的 `*.service` 文件定义了服务（例如 SSH 服务器）如何被 systemd 启动、监控，并在必要时再次停止。`*.service` 文件由多个部分组成，由内容为 `[Unit]`、`[Service]`、`[Install]` 的行引入。
+
+#### [Unit] 关键字
+
+*   `Before/After=name`: 指定要在该单元启动之前或之后启动的其他服务或单元。`Before` 和 `After` 为 systemd 提供了关于服务应该启动顺序的信息。
+*   `Description=description`: 使用字符字符串描述服务。
+*   `OnFailure=name`: 指定当当前服务启动失败时要运行的一个或多个服务。
+*   `Wants/Requires=name`: 指定应先或必须先启动的其他服务。这些关键字定义了依赖关系。systemd 会尝试在之前启动相关服务。使用 `Wants` 时，可能的失败会被静默忽略；而使用 `Requires` 则意味着当前服务不会启动，并且会触发一个错误。
+
+#### [Service] 关键字
+
+*   `Environment=var1='value1' var2='value2' ...`: 定义多个传递给要启动进程的环境变量。
+*   `EnvironmentFile=filename`: 加载文件并逐行考虑其中包含的变量赋值。
+*   `ExecReload=/path/program options`: 运行指定的命令在运行期间重新加载服务的配置。
+*   `ExecStart=/path/program options`: 运行指定的命令以启动服务。结合 `Type=oneshot` 使用时，允许使用多个 `ExecStart` 行，它们将按顺序执行。
+*   `ExecStop=/path/program options`: 运行指定的命令以结束服务。如果不使用此关键字，服务将通过 `KILL` 信号终止。如果需要，`systemd.kill man` 页面中列出的 `KillMode` 和 `KillSignal` 关键字描述了要发送什么信号以及如何发送`ExecStop` 仅在结合 `Type=oneshot` 时可行。
+*   `RemainAfterExit`: 经常与 `Type=oneshot` 结合使用。systemd 会记住当前激活的状态。如果没有此选项，systemd 认为在执行 `systemctl start name` 后最后一个 `StartExec` 命令结束后操作已结束，并立即将状态设回 `stop`。此时显式执行 `systemctl stop` 将不起任何作用。
+*   `Type=simple|forking|oneshot|dbus|notify|idle`: 指定服务的类型或程序应该启动的方式。
+
+
+
+
+
+如果缺少类型规范，则应用 `simple`。此时 systemd 假设通过 `ExecStart` 指定的命令启动一个后台服务。只有当该命令结束时，systemd 才会认为服务已正常终止。
+
+`Type=notify` 的工作方式类似，但 systemd 期望一个显式的通知告知启动进程已完成。后台服务必须调用 `sd_notify` 函数或等效函数。
+
+`Type=forking` 与 `simple` 具有相似之处，但在这里，`ExecStart` 命令负责启动一个与启动命令分离的后台进程。一旦 `ExecStart` 命令完成，systemd 就会认为服务正在其自己的后台进程中运行。
+
+使用 `oneshot` 类型时，systemd 假设要执行的命令完成速度非常快，可以在执行其他操作之前对其等待。在结束时，除非服务文件中包含 `RemainAfterExit` 关键字，否则服务状态将重置为 `stop`。
+
+其他 `type` 变体的详细信息请参见 `systemd.service`。
+
+* `User=username` 和 `Group=groupname`
+  确定在哪个账户下执行命令。默认情况下，系统服务以 `root` 权限运行。
+
+### [Install] 关键字
+
+* `WantedBy=target` 或 `RequiredBy=target`
+  指定哪个 target 想要或需要该服务，例如对于 `multi-user.target` 或 `reboot.target`。在实践中，通常使用 `WantedBy`。这意味着即使单个服务的启动失败，目标也会到达。相反，`RequiredBy` 在出现问题时会产生错误。此时，相关的 target 将无法激活。
+
+#### 示例
+以下行显示了 Fedora 默认配置中的 `httpd.service` 文件。它负责启动 Apache Web 服务器。启动的前决条件是网络以及任何网络文件系统的成功激活。Web 服务器预计将作为多用户 target 的一部分自动启动。
+
+```
+# File /lib/systemd/system/httpd.service (Fedora)
+[Unit]
+Description=The Apache HTTP Server
+Wants=httpd-init.service
+After=network.target remote-fs.target nss-lookup.target httpd-init.service
+Documentation=man:httpd.service(8)
+
+[Service]
+Type=notify
+Environment=LANG=C
+
+ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND
+ExecReload=/usr/sbin/httpd $OPTIONS -k graceful
+# Send SIGWINCH for graceful stop
+KillSignal=SIGWINCH
+KillMode=mixed
+PrivateTmp=true
+OOMPolicy=continue
+
+[Install]
+WantedBy=multi-user.target 
+```
+
+### 设置自定义的 systemd 服务
+要设置你自己的 systemd 服务，你需要在 `/etc/systemd/system` 目录下创建一个 `*.service` 文件。此操作的最佳方法是使用另一个类似服务的服务文件。根据发行版，可以在 `/lib/systemd/system` 或 `/usr/lib/systemd/system` 目录下找到合适的文件。
+
+出于效率考虑，systemd 将重要配置文件的内容存在缓存中。更改配置后，必须使用 `systemctl` 显式重新加载配置文件：
+
+```
+root# systemctl daemon-reload 
+```
+
+要立即启动服务并在以后每次到达多用户 target 时启动它，需要执行命令：
+
+```
+root# systemctl enable --now myservice 
+```
+
+如果出现问题，最好使用 `journalctl -u myservice` 进行调试。
+
+### 其他 systemd 配置文件
+除了 `*.service` 文件外，还有标识符为 `*.mount`、`*.path`、`*.socket`、`*.target` 和 `*.wants` 的 systemd 配置文件，书中不再进一步讨论。它们的语法在 `man` 手页 `service.mount`、`service.path` 等中记录。所有这些文件统称为单元文件（unit files）。这些单元的通用语法在 `man systemd.unit` 中解释。
+
+如果你想设置由 systemd 定期运行的作业，你必须熟悉 `*.timer` 文件的格式（参见 `systemd/timer`）。
+
+### systemd.timer
+systemd 可以以类似于 cron 的方式处理进程的定期执行。配置通过 `name.timer` 文件完成，该文件必须拥有一个同名的服务文件（即 `name.service`）。对于自定义的作业，这两个文件通常都位于 `/etc/systemd/system` 目录下。
+
+`*.timer` 文件的结构与 `*.service` 文件相似（参见 `systemd/service`）。它通常由三个部分组成：熟悉的 `[Unit]` 和 `[Install]` 部分，以及一个 `[Timer]` 部分，其设置控制作业何时以及以及频率频率执行。
+
+#### [Timer] 关键字
+* `AccuracySec=time span`
+  指定运行作业的精度。默认情况下，为此提供一分钟的时间窗口，在此窗口内随机确定启动时间。可以使用更短的时间跨度，但应在确实需要时才使用。
+* `OnBootSec=time span`
+
+
+
+
+
+在启动过程后的指定时间后首次运行该任务。如果给的时间未带单位，则默认为秒。时间规范的语法在 `man systemd.time` 中有记录。允许的时间跨度包括例如 `2h 15min`、`2weeks` 或 `4months`。
+
+- `OnCalendar=time`
+  指定运行任务的时间。例如，`12.30` 意味着每天下午 12.30 运行。绝对时间规范的语法较为复杂。细节在 `man systemd.time` 的日程事件（Calendar Events）部分有详细说明。例如，`OnCalendar=Sun 2025-*-* 17:15` 意味着任务将在 2025 年每周日的下午 5:15 执行。
+
+- `OnUnitActiveSec=time span`
+  在任务上次启动后经过指定时间段，立即重启任务。
+
+- `OnUnitInactiveSec=time span`
+  在任务上次完成后经过指定时间段，立即重启任务。
+
+#### 示例
+
+以下 `dnf-automatic.timer` 文件确保了 `dnf-automatic.service` 文件中描述的服务每天运行一次。这两个文件都是 Fedora 包 `dnf-automatic` 的一部分，该包使用 `dnf` 自动执行更新。
+
+```
+# File /usr/lib/systemd/system/dnf-automatic.timer
+# (Fedora, 如果自动安装了 dnf-automatic 包)
+[Unit]
+Description=dnf-automatic timer
+ConditionPathExists=!/run/ostree-booted
+
+[Timer]
+OnCalendar=*-*-* 6:00
+RandomizedDelaySec=60m
+Persistent=true
+
+[Install]
+WantedBy=basic.target 
+```
+
+如果你想设置自己的定时器，等一下——我的——
+如果你想设置自己的定时器，必须在 `/etc/systemd/system` 中同时创建一个 `*.service` 和 `*.timer` 文件。然后，让 systemd 重新加载配置并激活定时器：
+
+```
+root# systemctl daemon-reload
+
+root# systemctl enable --now mytimer.timer 
+```
+
+### /etc/vconsole.conf
+
+`/etc/vconsole.conf` 文件包含了对于使用当前 systemd 版本作为初始化系统的发行版，在文本控制台中工作时的键盘和字体设置。`localectl` 命令可以帮助你更改设置。该命令相比直接通过 `vconsole.conf` 进行修改的优势在于，它还将所需的键盘布局保存到 `/etc/X11/xorg.conf/00-keyboard.conf` 中，使得该设置也适用于图形系统。
+
+`vconsole.conf` 通常只包含带有以下参数的两行：
+
+- `FONT=name`
+  指定在文本控制台中使用的字体。在大多数发行版的 `/lib/kbd/consolefonts` 目录下可以找到合适的字体文件。
+
+- `KEYMAP=name`
+  指定键盘布局。你可以通过 `localectl list-keymaps` 确定可选的设置。
+
+#### 示例
+
+在德版 Fedora 安装中，`vconsole.conf` 包含以下设置：
+
+```
+KEYMAP="de-nodeadkeys"
+FONT="eurlatgr" 
+```
+
+### /etc/wpa_supplicant/wpa_supplicant.conf
+
+后台服务 `wpa_supplicant` 负责无线网络（Wi-Fi）的身份验证。在桌面发行版中，该程序由 NetworkManager 作为后端使用；配置通过 KDE、Gnome 等系统的设置对话框完成。
+
+如果你想在树莓派或其他没有图形用户面的设备（嵌入式设备）上设置 Wi-Fi 连接，情况则不同。这时你必须在 `/etc/wpa_supplicant/wpa_supplicant.conf` 文件中输入 Wi-Fi 认证数据。以下行是此类示例：
+
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=DE
+
+network={
+ssid="wlan-sol3"
+  psk="strengGeheim"
+  key_mgmt=WPA-PSK
+} 
+```
+
+前三行包含了树莓派 OS 的默认设置。正确的 `country` 设置至关重要。它确保 Wi-Fi 适配器符合相应国家的法规。之后可以是任意数量的 `network` 组，每个组对应一个无线网络。
+
+编写 `wpa_supplicant.conf` 时，确保在等号前后不要输入任何空格！你可以通过 `man wpa_supplicant.conf` 以及以下文档文件和网站阅读大量关于许可关键字的细节以及更多示例：
+
+`/usr/share/doc/wpasupplicant/README.modes.gz`
+
+[https://wiki.ubuntuusers.de/WLAN/wpa_supplicant]
+
+在简单的情况下，你也可以使用 `wpa_passphrase` 创建所需的配置行，或直接在 `etc/network/interfaces` 中进行配置。
+
+# 键盘快捷键
+
+Linux 命令参考的最后一部分涉及最重要的编辑器和其他通常通过键盘操作的命令的快捷键。这些包括 `bash`、`man`、`info`、`less` 和 `mutt`。
+
+几乎所有程序提供了定义自定义键盘快捷键的选项。本节指的是默认配置，大多数 Linux 发行版的标准配置。
+
+### bash
+
+表 1 总结了在 Bourne Again Shell (`bash`) 中输入命令时可以使用哪些键盘快捷键。这些快捷键实际上源自 `readline` 库。你可以在 `/etc/inputrc` 或 `.inputrc` 中更改该库的配置。
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| Ctrl+A | 将光标移动到行首（类似于 Pos1） |
+| Ctrl+C | 取消当前命令 |
+| Ctrl+E | 将光标移动到行尾（类似于 End） |
+
+
+
+
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| Ctrl+K | 从光标位置开始删除该行的剩余部分 |
+| Ctrl+Y | 重新插入最近删除的文本 |
+| Ctrl+Z | 中断当前命令（可以通过 `fg` 或 `bg` 继续） |
+| Tab | 补全文件名和命令名 |
+| 方向键上/下 | 在目前已执行的命令之间滚动查找 |
+
+**表 1**      bash 中输入命令的键盘快捷键
+
+## emacs
+
+`emacs` 是 Linux 上功能最丰富、最复杂的编辑器之一。它有数百个键盘快捷键和命令，这里仅介绍其中最重要的部分。
+
+通常情况下，有三种方式输入 `emacs` 命令：菜单、使用键盘快捷键（主要是与 `Ctrl` 或 `Alt` 组合使用）或输入完整的命令名称。第三种方式通过 `Alt+X` 或 `Esc` 启动，例如 `Alt+X` `delete-char` `Enter`。命令和其他其他参数的输入通过两种机制实现：
+
+*   在输入过程中，你可以在 `emacs` 命令名称后添加 `Tab`。你也可以以同样的方式补全文件名。
+*   在通过 `Alt+X` 引入新命令后，可以使用 `Alt+P`（上一个）和 `Alt+N`（下一个）访问之前指定的命令。
+
+在 `emacs` 文档中，键盘快捷键的表示方式略有不同：`DEL` 指退格键（Backspace）！`C` 代表 Control (`Ctrl`)，`M` 代表 Meta。标准 PC 键盘上没有 Meta 键直接对应项。`M-x` 可以通过两种方式在 PC 键盘上模拟：通过连续按下 `Esc` 和 `X`，或者通过 `Alt+X`。
+
+[表 2] 总结了基本功能。你可以使用光标键和各种键盘快捷键移动光标（参见 [表 3]）。
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| Ctrl+X, Ctrl+F | 加载新文件 |
+| Ctrl+X, Ctrl+S | 保存当前文件 |
+| Ctrl+X, Ctrl+W | 另另保存文件 |
+| Ctrl+G | 取消命令输入 |
+| Ctrl+X, U | 撤销上次更改（undo） |
+| Ctrl+X, Ctrl+C | 退出 `emacs`（带有保存提示） |
+
+**表 2**      基础 Emacs 命令
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| Alt+F/Alt+B | 光标向前或向后移动一个单词 |
+| Ctrl+A/Ctrl+E | 将光标置于行首或行尾 |
+| Alt+</Alt+Shift+> | 将光标移动到文本开头或结尾 |
+| Alt+G n Enter | 将光标移动到第 `n` 行 |
+
+**表 3**      光标移动
+
+[表 4] 规定了如何选择、删除和重新插入文本，[表 5] 总结了如何搜索和替换。
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| Ctrl+___ | 设置（不可见的）标记点 |
+| Ctrl+W | 删除标记点与当前光标位置之间的文本 |
+| Ctrl+Y | 重新插入最近删除的文本 |
+| Ctrl+X, Ctrl+X | 交换光标位置和标记点 |
+| Alt+D | 删除光标处的下一个单词或单词末尾 |
+| Alt+Backspace | 删除光标前的单词或直到光标的单词开头 |
+| Ctrl+K | 从光标位置开始删除该行的剩余部分 |
+| Alt+0, Ctrl+K | 删除光标位置之前的行首 |
+| Alt+M | 删除后续段落 |
+| Alt+Z, x | 删除直到下一个 `x` 出现的所有字符，且该 `x` 也会被删除 |
+| Ctrl+Y | 在光标位置插入最后删除的文本 |
+
+**表 4**      选择、删除和重新插入文本
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| Ctrl+S |向前增量搜索 |
+| Ctrl+R | 向后增量搜索 |
+| Alt+P | 选择之前使用过的搜索文本（上一个） |
+| Alt+N | 选择稍后使用的搜索文本（下一个） |
+| Ctrl+G | 取消搜索 |
+| Ctrl+X, Ctrl+X | 交换标记点（搜索起始位置）和当前光标位置 |
+| Ctrl+Alt+S |向前增量模式搜索 |
+| Ctrl+Alt+R | 向后增量模式搜索 |
+| Alt+ % | 无模式的搜索和替换 |
+| Alt+X query-replace-r Enter | 使用模式搜索和替换 |
+
+**表 5**      搜索和替换
+
+## gnome-terminal
+
+如果你在 Gnome 上运行 shell 命令，你可能会使用 `gnome-terminal` 程序。为了在 `bash` 中使用常用的键盘快捷键，你应该首先通过“编辑 • 设置”禁用菜单快捷键字母选项，以便使用 `Alt` 快捷键控制菜单。如果需要，你仍然可以使用 `F10` 键控制菜单——除非你在上述配置对话框中也禁用了对该键的处理。某些 `gnome-terminal` 特有的键盘快捷键仍然可用，它们总结在 [表 6] 中。
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| Shift+Ctrl+C | 将选中文文本复制到剪贴板 |
+| Shift+Ctrl+F | 在终端中搜索文本 |
+| Shift+Ctrl+G | 重复向后搜索 |
+| Shift+Ctrl+H | 重复向前搜索 |
+| Shift+Ctrl+N | 打开新窗口 |
+| Shift+Ctrl+Q | 关闭窗口 |
+| Shift+Ctrl+T | 打开新标签页 |
+| Shift+Ctrl+V | 粘贴剪贴板内容 |
+| Shift+Ctrl+W | 关闭标签页 |
+| Shift+Ctrl++ | 增大字体 |
+| Shift+Ctrl+- | 减小字体 |
+| Shift+Ctrl+方向键上/下 | 跳到上一个/下一个标签页 |
+| F11 | 激活或禁用全屏模式 |
+
+**表 6**      gnome-terminal 中的键盘快捷键
+
+## grub
+
+在 Linux 引导程序 GRUB 中，你可以使用方向键选择操作系统或 Linux 变体，然后按回车键启动。GRUB 还提供了交互式更改菜单项参数或运行自定义命令的选项。[表 7] 总结了这些最重要的快捷键。该表参考当前的 GRUB 2 版本。
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| Esc | 退出图形模式并激活文本模式。 |
+| C | 启动命令模式以交互式执行 GRUB 命令。在输入命令时，文件名可以像 shell 中一样通过 Tab 补全。 |
+| E | 启动所选菜单项的编辑器。 |
+| P | 通过输入密码启用交互式 GRUB 功能。只有当 GRUB 受密码保护时才需要此操作。 |
+| Ctrl+X or F10 | 启动之前用 E 修改过的菜单项。 |
+
+**表 7**      GRUB 2 交互控制的键盘快捷键
+
+## info
+
+`info` 启动同名的在线帮助系统。要在帮助文本中导航，你可以使用 [表 8] 总结的键盘快捷键。你也可以通过同名包中的 `pinfo` 命令、`emacs` 编辑器或在 Gnome 和 KDE 帮助系统中更方便地阅读 `info` 文本。
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+
+
+
+
+
+| 快捷键 | 功能 |
+| :--- | --- |
+| 空格键 (Spacebar) |向下滚动文本 |
+| 退格键 (Backspace) | 向上滚动文本 |
+| B, E | 跳转到信息单元的开头/结尾（beginning/end） |
+| Tab 键 | 将光标移动到下一个交叉引用 |
+| 回车键 (Enter) | 跟踪指向信息单元的交叉引用 |
+| N | 显示同一层级的下一个信息单元（next） |
+| P | 显示同一层级的上一个信息单元（previous） |
+| U | 向上跳转一个级别 |
+| L | 回到上次显示的文本（last） |
+| H | 显示详细的操作说明（help） |
+| ? | 显示命令概述 |
+| Q | 退出 `info`（quit） |
+
+**表 8** info 快捷键
+
+### joe
+
+`joe` 是一个简单的编辑器，其快捷键基于 WordStar 文字处理器（参见表 9）。该编辑器也可以通过 `jmacs` 或 `jpico` 名称启动。此外，兼容 `emacs` 或 Pico 的其他快捷键也有效。
+
+| 快捷键 | 功能 |
+| :--- | --- |
+| Ctrl+K, H | 显示/隐藏帮助窗口 |
+| Ctrl+K, E | 加载新文件 |
+| Ctrl+K, D | 保存文件（可选另存为新名称） |
+| Ctrl+Y | 删除一行 |
+| Ctrl+Shift+- | 撤销删除 |
+| Ctrl+C | 退出 `joe`（带有保存确认提示） |
+
+**表 9** joe 中的快捷键
+
+### konsole
+
+KDE 粉丝通常在 `konsole` 程序中运行 shell 命令。大多数快捷键由该程序直接传递给 shell。然而，还存在一些 `konsole` 专有的快捷键，这些快捷键总结在表 10 中。
+
+| 快捷键 | 功能 |
+| :--- | --- |
+| Shift+Ctrl+A | 标记标签页为活动状态 |
+| Shift+Ctrl+C | 将选中的文本复制到剪贴板 |
+| Shift+Ctrl+F | 在终端输出中搜索文本 |
+| F3 | 重复反向搜索 |
+| Shift+ F3 | 重复正向搜索 |
+| Shift+Ctrl+I | 标记标签页为长时间不活动 |
+| Shift+Ctrl+N | 打开新终端窗口 |
+| Shift+Ctrl+Q | 关闭窗口 |
+| Shift+Ctrl+T | 打开新终端标签页 |
+| Shift+Ctrl+V | 粘贴剪贴板内容 |
+| Shift+Ctrl+W | 关闭标签页 |
+| Shift+Ctrl++ | 增大字体 |
+| Shift+Ctrl+- | 减小字体大小 |
+| Shift+Ctrl+左箭头/右箭头 | 跳到上一个/下一个标签页 |
+
+**表 10** konsole 中的快捷键
+
+### less
+
+`less` 命令用于显示文本。在程序运行时，你可以使用光标键滚动文本、搜索文本、启动由环境变量 `$EDITOR` 设置的编辑器等（参见表 11）。`less` 也用于显示 `man` 帮助文本。
+
+| 快捷键 | 功能 |
+| :--- | --- |
+| 光标键 | 向上或向下滚动文本 |
+| Pos1, End | 跳转到文本的开头或结尾 |
+| G, Shift+G | 跳转到文本的开头或结尾 |
+| / pattern Enter | 正向搜索 |
+| ? pattern Enter | 反向搜索 |
+| N | 重复正向搜索 |
+| Shift+N | 重复反向搜索 |
+| V | 启动编辑器 |
+| Q | 退出 `less` |
+| H | 显示额外的快捷快捷键 |
+
+**表 11** less 的快捷键
+
+### man
+
+`man` 命令用于显示命令、配置文件等的文档。重要的快捷键（参见表 12）始终显示在底部。
+
+### mutt
+
+`mutt` 是一个用于读取、回复和编写电子邮件的邮件客户端。重要的快捷键（参见表 13）在下方。
+
+| 快捷键 | 功能 |
+| :--- | --- |
+| Ctrl+A | 将光标移动到行首 |
+| Ctrl+D | 删除一个字符 |
+| Ctrl+E | 将光标移动到行尾 |
+| Ctrl+H | 向后删除一个字符 |
+| Ctrl+^ | 设置标记点 |
+| Ctrl+K | 删除当前行 |
+| Ctrl+U | 重新插入上次删除的文本 |
+| Ctrl+R | 将文件插入文本中 |
+| Ctrl+O | 保存文件 |
+| Ctrl+X | 退出编辑器 |
+
+**表 13** nano 的快捷键
+
+### screen
+
+你可以使用 `screen` 命令并行运行多个终端会（复用）。`screen` 由所有以 Ctrl+A 开头的快捷键控制。
+
+| 快捷键 | 功能 |
+| :--- | --- |
+| Ctrl+A, ? | 显示在线帮助 |
+| Ctrl+A, * | 列出所有会话 |
+| Ctrl+A, 0 通过 9 | 在第一个到十个会话之间切换 |
+| Ctrl+A, C | 创建新会话（create） |
+| Ctrl+A, D | 从 `screen` 中分离当前会话（detach） |
+| Ctrl+A, Shift+H | 激活/禁用日志 |
+| Ctrl+A, K | 结束活动会话 |
+| Ctrl+A, N | 切换到下一个会话 |
+| Ctrl+A, \ | 结束所有会话和 screen |
+
+**表 14** screen 中的快捷键
+
+### 文本控制台
+
+如果你直接在文本控制台中工作（即不在 KDE、Gnome 或或其他桌面系统中，也不是通过 SSH），则适用某些特殊的快捷键。[表 15](#05_001.xhtml_t5.15）总结了最重要的快捷键。
+
+| 快捷键 | 功能 |
+| :--- | --- |
+| Ctrl+Alt+Fn | 从图形模式切换到文本控制台 `n` |
+| Alt+F1 | 回到图形模式 |
+| Alt+Fn | 从文本控制台切换到文本控制台 `n` |
+| Alt+右箭头/+左箭头 | 切换到上一个/下一个文本控制台 |
+| Shift+上箭头/下箭头 | 按页向前/向后滚动 |
+
+
+
+
+
+| `Ctrl+Alt+Del` | 通过 `shutdown` 终止 Linux（小心！） |
+
+**表 15** 文本控制台快捷键
+
+### vi/vim
+
+`vi` 编辑器是 Unix 历史上的元兵。几乎所有的 Linux 发行版默认安装了与 `vi` 兼容的 `vim` 程序，你可以通过 `vi` 或 `vim` 启动它。
+
+`vi` 提供的功能与 `emacs` 相似，但学习起来更加困难。表 16 总结了基本命令。
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| `I` | 激活插入模式。 |
+| `A` | 激活插入模式。文本输入从下一个字符开始。 |
+| `Esc` | 激活普通模式或取消命令输入。 |
+| **普通模式下的命令** | |
+| `D, W` | 删除一个单词。 |
+| `D, D` | 删除当前行。 |
+| `n D, D` | 删除 n 行。 |
+| `P` | 在光标位置后插入最后删除的文本。 |
+| `Shift+P` | 在光标之前插入最后删除的文本。 |
+| `.` | 重复上一次命令。 |
+| `U` | 撤销上一次更改（undo）。 |
+| `Shift+U` | 撤销当前行的所有更改。 |
+| `Ctrl+R` | 撤销销（redo，从 Vim 7 开始）。 |
+| `:w` | 保存文件。 |
+| `:q` | 退出 `vim`。 |
+| `:q!` | 即使有未保存的文件退出 `vim`。 |
+| **插入模式下的命令** | |
+| `Ctrl+O command` | 在不离开插入模式的情况下运行命令。 |
+
+**表 16** 基本命令
+
+与其他编辑器相比主要的根本区别是 `vi` 区分了不同的模式。
+
+*   **插入模式**
+    要输入文本，必须使用 `I`（插入）或 `A`（追加）切换到插入模式。此时 `vim` 会在底行左侧显示文本 `-- INSERT --`。在插入模式下，你可以输入文本、移动光标并删除单个字符（`Del` 和 `Backspace`）。`I` 和 `A` 的区别是，使用 `I` 输入从当前光标位置开始，而使用 `A` 输入从其后面的字符开始。
+*   **复杂命令模式**
+    然而，大多数命令是在复杂命令模式下输入的，可以使用 `:` 激活。你可能需要先按 `Esc` 退出插入模式。
+
+表 17 提供了删除文本最重要的键盘快捷键概览。表 18 列出了用于移动光标的有用命令。表 19、表 20 和 表 21 处理了如何复制、选择和编辑文本。
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| **插入模式下的键盘快捷键** | |
+| `Del, Backspace` | 通常含义 |
+| **普通模式下的命令** | |
+| `X` | 删除光标位置的字符或选中的文本 |
+| `Shift+X` | 删除光标前的字符 |
+| `D, D` | 删除当前行 |
+| `D cursor command` | 根据光标移动命令删除文本（参见 表 18）。例如：`D, $` 删除到行尾的所有内容。`D, B` 删除上一个单词。`D, W` 删除下一个单词 |
+
+**表 17** 删除文本
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| **光标键** | 标准含义 |
+| `H/L` | 将光标向左/向右移动 |
+| `J/K` | 将光标向下/向上移动 |
+| `Shift+H/ Shift+L` | 将光标移动到当前页的开头或结尾 |
+| `Shift+M` | 将光标移动到当前页的中心 |
+| `B/W` | 将光标向左/向右移动一个单词 |
+| `E` | 将光标移动到单词末尾 |
+| `G, E` | 将光标移动到单词末尾 |
+| `(` | 将光标移动到单词开头 |
+| `,` | 将光标移动到块的开头 |
+| `{` | 将光标移动到段落开头 |
+| `$` | 将光标移动到行尾 |
+| `Shift+G` | 将光标移动到行尾 |
+| `G, G` | 将光标移动到行开头 |
+| `n Shift+G` | 将光标移动到该行 |
+| `.` | 将光标移动到列 |
+| `%` | 将光标移动到相应的括号 |
+
+**表 18** 普通模式下的移动快捷键 |
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| `V` | （开启/取消）字符选择 |
+| `Shift+V` | （开启/取消）行选择 |
+| `Ctrl+V` | （开启/取消）块选择 |
+| `A, W` | 扩展选择一个单词 |
+| `A, S` | 扩展选择一个块 |
+| `A, P` | 扩展选择一个段落 |
+| `A, B` | 扩展选择一个级别 |
+| `A, Shift+B` | 扩展选择一个级别 |
+| `G, V` | 选择最近选择过的文本 |
+| `O` | 在选择的开始和结束之间切换光标位置 |
+
+**表 19** 选择文本 |
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| `Y` | 将选中的文本复制到复制寄存器 |
+| `Y, Y` | 将当前行复制到复制寄存器 |
+| `Y cursor command` | 复制光标移动捕获的文本例如：`Y, }` 复制到段落末 |
+
+**表 20** 将文本复制到复制寄存器 |
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| `X` | 删除选中的文本 |
+| `Y` | 将选中的文本复制到复制寄存器 |
+| `~` | 在大写和小写之间切换 |
+| `Y` | 将选中的行合并为长行 |
+| `G, Q` | 执行换行（针对连续文本） |
+| `>` | 缩进或取消缩进一个制表位 |
+| `=` | 根据当前的 `indent` 模式缩进文本 |
+| `!sort` | 使用外部 `sort` 命令排序 |
+
+**表 21** 编辑选中的文本
+
+#### 搜索与替换
+
+在默认模式下，`/searchtext` 回车会将光标移动到搜索的文本。`N` 重复搜索，`Shift+N` 反向重复搜索。要从开始反向搜索，必须使用 `?search term` 开始搜索。表 22 总结了搜索模式时最重要的特殊字符。
+
+| 字符 | 含义 |
+| --- | --- |
+| `.` | 任意字符 |
+| `^` | 行首/行尾 |
+| `\<` | 单词首/结尾 |
+| `[a-e]` | a 到 e 之间的字符 |
+
+
+
+
+
+| `\s`, `\t` | 空格或制表符字符。 |
+| `\(\)` | 将搜索模式汇总为一个分组。 |
+| `=` | 搜索词必须出现 0 次或 1 次。 |
+| `*` | 搜索词可以出现任意次数（甚至是 0 次）。 |
+| `\+` | 搜索词必须至少出现一次。 |
+
+### 表 22 搜索词中的特殊字符
+
+`vim` 在搜索时区分大小写。如果你不希望这样，必须在搜索模式中使用 `/c` 启动搜索模式（仅适用于本次搜索），或运行 `:set ignorecase`（适用于所有后续搜索）。
+
+使用 `:set incsearch` 激活增量搜索：当你使用 `/searchterm` 输入搜索文本时，`vim` 会立即将光标移动到第一个匹配位置。按回车键结束搜索，按 `Esc` 取消搜索。搜索完成后，文本中的所有匹配项将保持高亮状态，直到你执行新的搜索或运行 `:nohlsearch`。
+
+若要在不提示的情况下将所有文本 `abc` 替换为 `efg`，你需要在普通模式下运行 `:%s/abc/efg/g`。随后按下 `'` 可以带你回到搜索开头。表 23 总结了搜索与替换命令的一些变体。
+
+| 键盘快捷键 | 功能 |
+| --- | --- |
+| `: `:%s/abc/efg/g` | 在不提示的情况下将所有 `abc` 替换为 `efg` |
+| `: `:%s/abc/efg/gc` | 在提示的情况下将所有 `abc` 替换为 `efg` |
+| `: `:%s/abc/efg/gci` | 在不考虑大小写的情况下进行替换 |
+
+### 表 23 搜索与替换
+
+# 作者
+
+![bilderklein/klein2749_kofler.png](img/img-b6.1.xhtml)
+
+Michael Kofler 是一位程序员，也是德语世界最成功且多才的计算机领域作者之一。他目前的主题包括 AI、Linux、Docker、Git、黑客攻击与安全、树莓派以及 Swift、Java、Python 和 Kotlin 等编程语言。Michael 还在奥地利卡芬贝格的 Joanneum 应用科学大学任教。
+
+# 服务页面
+
+以下章节包含如何与我们联系的说明。此外，我们还提供了关于自定义电子书屏幕布局的建议。
+
+## 赞誉与批评
+
+我们希望你喜欢这本书。如果它符合你的预期，请务力推荐。如果你认为有改进空间，请联系书籍编辑。
+
+## 技术问题
+
+在使用电子书时遇到技术问题，请随时联系我们的服务部门：`support@rheinwerk-publishing.com`。
+
+
+
+
+
+本出版物的完整内容受版权保护。所有使用和利用权均由作者和 Rheinwerk Publishing 保留；特别是复制权和发行权，无论是印刷格式还是电子格式。
+
+© 2025 by Rheinwerk Publishing Inc., Boston (MA)
+
+## 您作为用户的的权利
+
+您有权仅出于个人目的使用本电子书。特别而言，您可以为了个人使用打印本电子书，或对其进行复制，前提是您将此副本存储在仅供您个人专用的使用的设备上。您不享有任何其他使用或利用权利。
+
+特别而言，严禁将电子或纸质副本转发给第三方。此外，不允许在互联网、内网或任何其他方式分发本电子书，或向第三方提供。明禁禁止超出个人使用范围的任何公开展示、其他出版物或对本电子书的任何复制。上述规定不仅适用于整本电子书，也适用于其部分内容（例如图表、图片、表格、文本段落）。
+
+不得删除电子书中的版权说明、品牌和其他法律声明。
+
+本书的任何部分均不得以任何方式用于训练人工智能技术或系统的目的或进行复制。根据《2019/790 号数字单一市场指令》第 4 条第 3 款，Rheinwerk Publishing, Inc. 明确保留对本作品的文本和数据挖掘权利。
+
+## 商标
+
+本出版物中使用的名称、商品名称、商品描述等可能是商标，未经过特殊标识，并受此类法律法规约束。
+
+书中提到的所有产品均为各自公司已注册或未注册的商标。
+
+## 责任限制
+
+无论在编写文本、图表和程序时已尽何努力，出版商或作者、编辑或翻译均对可能的错误及其后果不承担任何法律责任或义务。
+
+文档存档
+
