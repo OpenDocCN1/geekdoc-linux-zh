@@ -432,6 +432,7 @@
 +   [工业领域中的 Linux 生活指南](docs/living-with-linux-in-the-industrial-world/README.md)
 +   [Linkedin SRE 中文教程](docs/lkin-sre/README.md)
 +   [操作系统开发的简明指南](docs/ltl-bk-os-dev/README.md)
++   [黑客攻击与工具精通：理解黑客流程、Linux、Linux Mint、Kali Linux 概念及渗透测试等：Kali Linux 工具清单](docs/master-hacking-master-the-tools-understanding-process-of-hac/README.md)
 +   [精通 GNOME：初学者指南（精通计算机科学系列）](docs/mastering-gnome-a-beginners-guide-mastering-computer-science/README.md)
 +   [Linux Linux 管理：全面指南](docs/mastering-linux-administration-a-comprehensive-guide/README.md)
 +   [UNIX Shell 脚本高级指南（第二版）](docs/mastering-unix-shell-scripting-second-edition/README.md)
