@@ -421,6 +421,7 @@
 +   [树莓派创客电子学 169](docs/linux-user-developer-169---electronics-for-pi-hackers-169/README.md)
 +   [Linux用户与开发者 179：全套发行版工具包 179](docs/linux-user-developer-179---total-distro-toolkit-179/README.md)
 +   [Linux 自 Linux：概念与编程](docs/linux-yourself-concept-and-programming/README.md)
++   [工业领域中的 Linux 生活指南](docs/living-with-linux-in-the-industrial-world/README.md)
 +   [Linkedin SRE 中文教程](docs/lkin-sre/README.md)
 +   [操作系统开发的简明指南](docs/ltl-bk-os-dev/README.md)
 +   [精通 GNOME：初学者指南（精通计算机科学系列）](docs/mastering-gnome-a-beginners-guide-mastering-computer-science/README.md)
