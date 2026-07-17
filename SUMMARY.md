@@ -71,6 +71,7 @@
 +   [CompTIA Linux+ XK0-004 认证指南](docs/comptia-linux-xk0-004-cert-guide-certification-guide/README.md)
 +   [CompTIA Linux+ XK0-005 认证指南](docs/comptia-linux-xk0-005-cert-guide/README.md)
 +   [CompTIA Linux+ XK0-005 参考指南：获取成为 Linux 认证专业人员所需的知识与技能](docs/comptia-linux-xk0-005-reference-guide-get-the-knowledge-and-/README.md)
++   [CompTIA Project+ 认证指南：考试 PK0-004 (认证指南)](docs/comptia-project-cert-guide-exam-pk0-004-certification-guide/README.md)
 +   [CompTIA Project+ 学习指南：考试 PK0-004](docs/comptia-project-study-guide-exam-pk0-004/README.md)
 +   [CompTIA Security+ 认证进阶：SY0-501 学习指南（第4版）](docs/comptia-security-get-certified-get-ahead-sy0-501-study-guide/README.md)
 +   [CompTIA Server+ 学习指南：Exam SK0-004](docs/comptia-server-study-guide-exam-sk0-004/README.md)
