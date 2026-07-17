@@ -1,0 +1,2 @@
++   [黑客 Linux 基础：理解黑客工具、渗透测试、Linux Mint、Kali Linux 等更多：Kali Linux 黑客命令](README.md)
++   [黑客 Linux 基础：理解黑客工具、渗透测试、Linux Mint、Kali Linux 等更多：Kali Linux 黑客命令](linux-basics-for-hacker-understanding-hacking-tools-penetrat_0.md)
