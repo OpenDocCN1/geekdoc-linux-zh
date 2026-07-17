@@ -348,6 +348,7 @@
 +   [非技术人员的 Linux：实用项目化循序渐进指南](docs/linux-for-non-geeks-a-hands-on-project-based-take-it-slow-gu/README.md)
 +   [系统管理员与 DevOps 的 Linux 指南](docs/linux-for-system-administrators-and-devops/README.md)
 +   [普通人的 Linux：初学者需要的 Linux 问答指南](docs/linux-for-the-rest-of-us-a-readable-linux-guide-with-answers/README.md)
++   [Linux 入门指南第 2 版](docs/linux-fundamentals-2nd-edition/README.md)
 +   [Linux 基础：数据科学家、机器学习工程师及 IT 专业人士实用指南](docs/linux-fundamentals-a-practical-guide-for-data-scientists-mac/README.md)
 +   [Linux 初学者指南：Linux 操作系统与 Linux 命令最佳指南](docs/linux-guide-for-beginners-the-best-guide-to-the-linux-operat/README.md)
 +   [Linux 初学者指南：掌握 Linux 操作系统、核心 Linux 命令并自信高效地探索 Linux 世界的终极指南](docs/linux-guide-for-beginners-the-ultimate-guide-to-mastering-th/README.md)
