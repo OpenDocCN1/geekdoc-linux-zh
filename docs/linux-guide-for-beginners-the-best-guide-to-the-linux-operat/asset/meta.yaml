@@ -1,0 +1,51 @@
+name: Linux Guide for Beginners： The Best Guide to the Linux Operating System and
+  Linux Commands
+name_cn: Linux 初学者指南：Linux 操作系统与 Linux 命令最佳指南
+slug: linux-guide-for-beginners-the-best-guide-to-the-linux-operat
+toc:
+- - '#'
+  - Linux 初学者指南：Linux 操作系统与 Linux 命令最佳指南
+- - '##'
+  - 引言
+- - '##'
+  - 第 1 章：什么是 Linux？
+- - '###'
+  - 发行版 (Distributions)
+- - '##'
+  - 第 2 章：安装 Linux 服务器版
+- - '##'
+  - 第 3 章：安装 Linux 桌面版
+- - '##'
+  - 第 4 章：基础 Linux 任务/命令
+- - '###'
+  - Sudo
+- - '###'
+  - Man Pages（手册页）
+- - '###'
+  - Tasksel
+- - '###'
+  - Apt-get
+- - '###'
+  - 服务 (Services)
+- - '##'
+  - 第 5 章：基础 Linux 导航
+- - '###'
+  - 切换目录
+- - '###'
+  - 查找文件
+- - '###'
+  - 列出/显示文件
+- - '###'
+  - 创建、删除、移动、复制、重命名
+- - '###'
+  - 挂载驱动器
+- - '##'
+  - 第 6 章：使用 Vim 编辑 Linux 文件
+- - '###'
+  - 启动 Vim
+- - '###'
+  - 更改文件所有权
+- - '###'
+  - 编辑与导航
+- - '###'
+  - 退出与保存
