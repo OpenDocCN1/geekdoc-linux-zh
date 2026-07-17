@@ -1,0 +1,893 @@
+- "# 生物学家的 Linux 入门指南\n\n\n\n![](img/cover.png)\n![封面图片](img/cover.png)\n\n\n# 2.1.\
+  \ Linux — 概述\n\nLinux 是 Linus Torvalds 在 1991 年开发的操作系统。它以开源许可发布，源代码供所有人免费获取。\n\n\
+  *   2.1.1. Linux 发行版\n*   2.1.2. 桌面环境\n*   2.1.3. 运行 Linux 桌面的方法\n\n### 2.1.1. Linux\
+  \ 发行版\n\n一个 Linux 发行版包含了 Linux 操作系统以及额外的软件。\n\n示例：[Debian](https://www.debian.org/)\
+  \ [https://www.debian.org/], [Ubuntu](https://ubuntu.com/) [https://ubuntu.com/],\
+  \ [Linux Mint](https://linuxmint.com/) [https://linuxmint.com/], [Fedora](https://getfedora.org/)\
+  \ [https://getfedora.org/], [openSUSE](https://www.opensuse.org/) [https://www.opensuse.org/]\
+  \ 等，\n\n### 2.1.2. 桌面环境\n\n桌面环境是一种图形用户界面 (#glossary.xhtml_term-GUI)，提供了对文件和应用程序的便捷访问。\n\
+  \n示例：\n\n*   GNOME (图 2)\n*   KDE Plasma (图 3)\n*   Xfce (图 4)\n*   MATE (图 5)\n\
+  *   Cinnamon (图 6)\n\nLinux 发行版可能会根据所使用的桌面环境提供额外的变体下载。\n\n![../../_images/gnome-shell.png](img/gnome-shell.png)\n\
+  \n图 2 GNOME\n\n![../../_images/kde-plasma.png](img/kde-plasma.png)\n\n图 3 KDE Plasma\n\
+  \n![../../_images/xfce.png](img/xfce.png)\n\n图 4 Xfce\n\n![../../_images/ubuntu-mate.png](img/ubuntu-mate.png)\n\
+  \n图 5 MATE\n\n#### 本书使用 Linux Mint (Cinnamon)\n\n本书将使用 Linux Mint 20.1 以及 Cinnamon\
+  \ 桌面环境作为参考发行版 (图 6)。\n\n![../../_images/linux-mint-cinnamon.png](img/linux-mint-cinnamon.png)\n\
+  \n图 6 Cinnamon 桌面环境\n\n所有包含的内容均在此发行版上测试过。\n\n### 2.1.3. 运行 Linux 桌面的方法\n\n要在你的电脑上运行\
+  \ Linux 桌面，你可以：\n\n1. 安装 Linux 发行版 (#distribution.xhtml_linux-distribution) 或\n\
+  2. 运行虚拟机\n\n本书将采用第二种方法，这对新用户更容易。\n\n注意\n\n还有其他可能性，但上述方法是最常见的。\n\n# 2.2. 运行 Linux\
+  \ 虚拟机\n\n要在你的电脑（主机）上运行其他系统的虚拟机（客户），你首先需要安装虚拟机程序 — 即运行虚拟机的软件。\n\n虚拟机程序示例包括 VirtualBox、Parallels、VMware\
+  \ Workstation 等，本书将使用 VirtualBox (图 7)。\n\n![../../_images/virtualbox.png](img/virtualbox.png)\n\
+  \n图 7 VirtualBox 主窗口\n\n*   2.2.1. 要求\n*   2.2.2. 导入虚拟机镜像\n*   2.2.3. 启动虚拟机\n* \
+  \  2.2.4. 停止虚拟机\n\n### 2.2.1. 要求\n\n#### 在你的电脑上已安装 VirtualBox\n\n你可以根据你的操作系统按照以下说明安装\
+  \ VirtualBox。\n\n注意\n\n*安装软件需要管理员权限。*\n\n#### macOS 和 Windows 说明\n\n你可以从 VirtualBox\
+  \ 网站的 [下载](https://www.virtualbox.org/wiki/Downloads) [https://www.virtualbox.org/wiki/Downloads]\
+  \ 部分下载 macOS 或 Windows 的安装程序 (图 8)。\n\n![../../_images/virtualbox-downloads.png](img/virtualbox-downloads.png)\n\
+  \n图 8 VirtualBox 下载页面\n\n#### Linux 发行版说明\n\n大多数 Linux 发行版的软件包仓库都包含了 VirtualBox。建议你使用你的包管理器如\
+  \ Synaptic 或 apt、dnf 等进行安装。\n\n例如，要在 Ubuntu 20.04 LTS 上让 VirtualBox 工作，你需要安装 `virtualbox`\
+  \ 和 `virtualbox-guest-additions-iso` 软件包。\n\n注意\n\n\n\n\n\n如果你无法从仓库安装，可以从项目网站的 [Linux\
+  \ 下载](https://www.virtualbox.org/wiki/Linux_Downloads) [https://www.virtualbox.org/wiki/Linux_Downloads]\
+  \ 部分下载安装程序。\n\n#### Linux Mint 虚拟机镜像\n\n你可以从本书的网站下载一个现即可用的 Linux Mint 20.1 虚拟机镜像：\n\
+  \n[`vimalkvn.com/linuxforbiologists`](https://vimalkvn.com/linuxforbiologists)\n\
+  \n它以 OVA 格式发行。\n\n点击下载链接并将 `linuxmint-20.1.ova` 文件保存到你的计算机上。\n\n### 2.2.2. 导入虚拟机镜像\n\
+  \n在电脑上打开 VirtualBox，然后按照以下步骤导入下载的虚拟机镜像。\n\n#### 步骤 1 — 选择 OVA 文件\n\n在 VirtualBox\
+  \ 主窗口中，选择：\n\n文件 (File) ‣ 导入性设备 (Import Appliance) (图. 9)\n\n```\n![../../_images/virtualbox-import-appliance.png](img/virtualbox-import-appliance.png)\n\
+  ```\n\n图 9 从菜单中选择 文件 -> 导入性设备\n\n在“要导入设备”屏幕上，点击文件 (File) 输入字段旁出现的按钮 (图. 10)。\n\n\
+  ```\n![../../_images/virtualbox-select-ova.png](img/virtualbox-select-ova.png)\n\
+  ```\n\n图 10 点击文件输入字段旁出现的按钮\n\n浏览到 `linuxmint-20.1.ova` 文件的位置，选择它，然后点击 `Open`（打开）按钮。\n\
+  \n文件（File）输入字段现在显示所选文件的完整路径 (图. 11)。\n\n```\n![../../_images/virtualbox-import-proceed.png](img/virtualbox-import-proceed.png)\n\
+  ```\n\n图 11 点击下一步 (Next) 按钮继续\n\n点击`Next` 按钮继续。\n\n#### 步骤 2 — 调整设备设置（可选）\n\n在下一个屏幕上\
+  \ — 设备设置 (图. 12)，你可以修改此虚拟机的配置。\n\n注意\n*此步骤是可选的*。\n\n你可以点击底部的 `Import`（导入）按钮继续到下一步。\n\
+  \n例如，你可以根据计算机的配置为此虚拟机添加更多 CPU 或 RAM。\n\n```\n![../../_images/virtualbox-appliance-settings.png](img/virtualbox-appliance-settings.png)\n\
+  ```\n\n图 12 设备设置屏幕\n\n点击`Import` 按钮继续。\n\n#### 步骤 3 — 导入进度与完成\n\n在此阶段，你会看到一个进度条\
+  \ (图. 13)。\n\n```\n![../../_images/virtualbox-import-progress.png](img/virtualbox-import-progress.png)\n\
+  ```\n\n图 13 虚拟机导入进度\n\n当导入完成后，你将回到 VirtualBox 的主窗口。\n\n导入的虚拟机 — LinuxMint 20.1 将出现在左侧的面板中\
+  \ (图. 14)。\n\n```\n![../../_images/virtualbox-imported-vm.png](img/virtualbox-imported-vm.png)\n\
+  ```\n\n图 14 已导入的虚拟机\n\n### 2.2.3. 启动虚拟机\n\n要启动虚拟机，选择 LinuxMint 20.1，然后点击主工具栏中的 `Start`（启动）按钮\
+  \ (图. 15)。\n\n```\n![../../_images/virtualbox-start-vm.png](img/virtualbox-start-vm.png)\n\
+  ```\n\n图 15 启动虚拟机\n\n一旦启动过程完成，你将直接登录桌面 (图. 16)。\n\n```\n![../../_images/virtualbox-mint-welcome.png](img/virtualbox-mint-welcome.png)\n\
+  ```\n\n图 16 Linux Mint 桌面\n\n供参考，默认用户名为 `user`，密码也是 `user`。\n\n### 2.2.4. 停止虚拟机\n\
+  \n当工作完成后，你可以通过点击应用程序菜单中的 `Quit`（退出）来关闭虚拟机。这将显示一个确认对话框 (图. 17)。\n\n```\n![../../_images/shutdown.png](img/shutdown.png)\n\
+  ```\n\n图 17 确认对话框\n\n点击`Shutdown`（关）按钮停止虚拟机。\n\n## 2.3.1. 桌面\n\n一旦启动 Linux Mint，你将直接登录桌面。供参考，默认用户名为\
+  \ `user`，密码也是 `user`。\n\nCinnamon 桌面包含以下内容：\n\n- **应用程序菜单 (Applications Menu)**：搜索并启动应用程序。\n\
+  - **面板 (Panel)**：固定的应用程序。\n- **系统托盘 (System Tray)**：包含网络、声音、电源等小组件。\n- **日历 (Calendar)**：提供日期和时间。\n\
+  \n```\n![../../_images/cinnamon-components.png](img/cinnamon-components.png)\n```\n\
+  \n图 18 桌面组件\n\n### 2.3.2. 修改设置\n\n可以使用“设置”（Settings）应用程序来配置辅助功能、用户账户、日期和时间、键盘布局、语言、网络等\
+  \ (图. 19)。\n\n```\n![../../_images/settings.png](img/settings.png)\n```\n\n图 19\
+  \ 设置应用程序\n\n#### 更改键盘布局\n\n默认键盘布局是 US（美国）。你可以在硬件 (Hardware) ‣ 布局 (Layouts) 下进行更改。\n\
+  \n```\n![../../_images/keyboard-layout.png](img/keyboard-layout.png)\n```\n\n图 20\
+  \ 键盘布局\n\n#### 更改日期和时间\n\n可以通过选择偏好 (Preferences) ‣ 日期和时间 (Date and Time) 来更新系统日期时间。\n\
+  \n```\n![../../_images/date-time.png](img/date-time.png)\n```\n\n图 21 日期时间设置\n\n\
+  ## 2. 可用软件\n\n这是 Linux Mint 20.1 包含的应用程序的简要概述。你可以从应用程序菜单 (图. 22)启动它们。你可以使用搜索栏搜索已安装的应用程序。\n\
+  \n```\n![../../_images/applications-menu.png](img/applications-menu.png)\n```\n\n\
+  图 22 启动应用程序\n\n注意\n某些应用程序未包含在默认安装中。包括 GNU Image Manipulation 和 Inkscape。你可以使用软件管理器（Software\
+  \ Manager）安装它们。\n\n- 文件 (Files)：管理文件和目录。\n- Firefox：浏览网页。\n- 编辑器 (Text Editor)：创建和编辑文本文件。\n\
+  - LibreOffice：编辑文档和表格。\n- 终端 (Terminal)：访问命令行。\n- 截图 (Screenshot)：截取桌面或窗口。\n- 软件管理器\
+  \ (Software Manager)：从仓库安装软件。\n- GNU Image Manipulation：编辑图像。\n- Inkscape：创建矢量图形。\n\
+  - 笔记。\n\n## 2.4.1. 文件 — 管理文件和目录\n\nFiles 是 Linux Mint 默认的文件管理器 (图. 23)。\n\n```\n\
+  ![../../_images/files.png](img/files.png)\n```\n\n图 23 文件主窗口\n\n#### 使用文件\n\n你可以从应用程序菜单或通过点击面板上的图标启动文件。\n\
+  \n以下是一些关于使用文件的一些技巧。\n\n#### 切换图标视图和列表视图\n\n你可以使用工具栏上的图标快速切换图标视图和列表视图。\n\n#### 切换侧边栏\n\
+  \n你可以使用状态栏上的图标打开或隐藏侧边栏视图。\n\n#### 打开额外的面板\n\n你可以通过以下操作打开额外的面板：\n\n视图 (View) ‣ 额外面板\
+  \ (Extra Pane)\n\n当你在本地目录之间复制文件或连接到远程系统时，这特别有用。\n\n\n\n\n\n当您浏览目录时，如果经常访问它，可以将其收藏。此功能可以通过以下路径访问：\n\
+  \n书签 ‣ 添加书签 (Bookmark ‣ Add Bookmark)\n\n#### 连接服务器\n\n可以使用 FTP、SSH、Samba 和 Webdav\
+  \ 连接到外部服务器。此选项可以通过以下路径访问：\n\n文件 ‣ 连接服务器 (File ‣ Connect to Server)\n\n要了解更多关于此功能，请阅读本书中的章节：系统间传输文件。\n\
+  \n# 2.4.2. Firefox — 浏览网页\n\nFirefox 是默认的网络浏览器（图 24）。\n\n![../../_images/firefox.png](img/firefox.png)\n\
+  \n图 24 Firefox 网页浏览器\n\n可以使用软件管理器 安装其他网络浏览器。\n\n# 2.4.3. 文本编辑器 — 创建和编辑文本文件\n\n文本编辑器可处理\
+  \ `.txt`、`.md` 和 `.fasta` 等纯文本格式的文件，或编辑如 `.bashrc` 等配置文件（图 25）。\n\n![../../_images/text-editor.png](img/text-editor.png)\n\
+  \n图 25 打开了文档统计和首选项窗口的文本编辑器\n\n通过编辑 ‣ 首选项 (Edit ‣ Preferences)，您可以自定义设置，如所使用的字体、行号显示、缩进、自动换行等。\n\
+  \n工具 ‣ 文档统计 (Tools ‣ Document Statistics) 功能用于统计文档中的单词数和字符数。\n\n#### 在文本编辑器中打开隐藏文件\n\
+  \n要在文本编辑器中打开隐藏文件：\n\n1. 使用文件 ‣ 打开 (File ‣ Open) 选择文件\n2. 在出现的“打开文件”对话框中，在中间面板点击右键，并选择显示隐藏文件\
+  \ (Show Hidden Files)（图 26）。\n\n   ![../../_images/text-editor-hidden-files.png](img/text-editor-hidden-files.png)\n\
+  \n   图 26 在文本编辑器中打开隐藏文件\n\n   您也可以使用快捷键 `Ctrl+h`。\n\n# 2.4.4. LibreOffice — 编辑文档和电子表格\n\
+  \nLibreOffice Writer 和 LibreOffice Calc 分别用于创建和编辑文档和电子表格（图 27）。\n\n![../../_images/libreoffice.png](img/libreoffice.png)\n\
+  \n图 27 LibreOffice Writer 和 Calc 程序\n\nWriter 和 Calc 使用的默认文件格式分别为 ODF 文档 (.odt)\
+  \ 和 ODF 电子表格 (.ods)。\n\n这些应用程序还支持读取和写入 Microsoft Office 格式的文件，如 `.docx` 或 `.doc`\
+  \ (Word) 以及 `.xlsx` 或 `.xls` (Excel)。\n\nLibreOffice 套件中还有其他应用程序，具有创建和编辑幻灯片或演示、科学公式、图表以及基于文件的数据库的功能。\n\
+  \n# 2.4.5. 终端 — 访问命令行\n\n终端应用程序（图 28）提供了操作命令行界面的能力。Linux Mint 用户的默认登录 shell 是 Bash。\n\
+  \n![../../_images/terminal.png](img/terminal.png)\n\n图 28 终端\n\n通过选择编辑 ‣ 首选项菜单项\
+  \ (Edit ‣ Preferences)，您可以自定义终端的外观和功能（图 29）。\n\n![../../_images/terminal-preferences.png](img/terminal-preferences.png)\n\
+  \n图 29 在首选项中更改终端配色方案\n\n# 2.4.6. 截图 — 截取桌面或窗口\n\n截图程序用于对整个屏幕、应用程序窗口或屏幕选定区域进行截图（图\
+  \ 30）。\n\n![../../_images/screenshot.png](img/screenshot.png)\n\n图 30 截图程序\n\n#\
+  \ 2.4.7. 软件管理器 — 从存储库安装软件\n\n软件管理器可从 Linux Mint、Ubuntu、Debian 和 Flathub 存储库安装软件（图\
+  \ 31）。\n\n有关使用软件管理器安装软件的步骤，请参阅快速简便的方法\n\n图 31 软件管理器\n\n# 2.4.8. GNU 图像处理程序 — 编辑图像\n\
+  \nGIMP 程序可编辑 JPG、PNG、TIFF、BMP 等各种格式的图像（图 32）。\n\n![../../_images/gimp.png](img/gimp.png)\n\
+  \n图 32 在 GIMP 中编辑图像\n\n# 2.4.9. Inkscape — 创建矢量图形\n\nInkscape 可用于创建和编辑可缩放矢量 (SVG)\
+  \ 格式的图像（图 33）。\n\n![../../_images/inkscape.png](img/inkscape.png)\n\n图 33 在 Inkscape\
+  \ 中创建矢量图形\n\n# 2.4.10. 笔记\n\n#### 将应用程序添加到收藏\n\n如果您经常使用某个应用程序，可以考虑将其添加到收藏。此列表位于应用程序菜单的左侧。\n\
+  \n要将应用程序设为收藏，在应用程序上点击右键。\n\n收藏一个应用程序，在应用程序菜单中点击右键。\n\n如果您经常使用某个应用程序，可以考虑将其添加到收藏。此列表位于应用程序菜单的左侧。\n\
+  \n要将应用程序设为收藏，在应用程序上点击右键。选择。\n\n#### 设置默认应用程序\n\n如果您想为某些类别或文件类型设置默认应用程序，可以通过以下路径设置：\n\
+  \n系统设置 ‣ 首选项 (Settings ‣ Preferences)\n\n# 2.5. 文件和目录\n\n本节介绍了主目录、文件、目录及其功能如何在系统间传输。\n\
+  \n*   2.5.1. 你的主目录\n*   2.5.2. 隐藏文件和目录\n*   2.5.3. 主目录中的重要文件\n*   2.5.4. 文件名大小敏感\n\
+  *   2.5.5. 访问根文件系统\n*   2.5.6. 系统间传输\n\n# 2.5.1. 你的主目录\n\n当您登录桌面并打开文件时，它将显示您的主目录（图\
+  \ 34）。\n\n默认存在目录：桌面、文档、下载、音乐、图片、公共、模板和视频。\n\n![../../_images/home-directory.png](img/home-directory.png)\n\
+  \n图 34 主目录\n\n#### 注意\n\n#### /home/user\n\n主目录的完整（绝对）路径格式为 `/home/user`，其中 user\
+  \ 是您的用户名。\n\n#### $HOME\n\n`HOME`环境变量会自动设置为主目录的完整路径。因此，在命令或脚本中可以将 `/home/user` 替换为\
+  \ `$HOME`。\n\n# 2.5.2. 隐藏文件和目录\n\n除了之前提到的目录外，主目录下还有隐藏文件和目录（图 35）。它们的文件以点（`.`）开头。\n\
+  \n![../../_images/hidden-directories.png](img/hidden-directories.png)\n\n图 35 主目录中的隐藏文件和目录\n\
+  \n您可以通过文件管理器中的以下菜单项查看（或隐藏）这些文件：\n\n查看 ‣ 显示隐藏文件 (View ‣ Show Hidden Files)\n\n或者，您也可以使用快捷键\
+  \ `Ctrl+h`。\n\n# 2.5.3. 主目录中的重要文件\n\n#### .bashrc\n\n这是 Bash（用户账户默认 shell）使用的配置文件。当您需要设置或修改环境变量如\
+  \ `PATH` 时，通常会使用此文件。\n\n#### .bash_aliases\n\n可以使用 `.bash_aliases` 文件为命令设置别名。\n\n\
+  例如，这里有一个常用的别名：\n\n```bash\nalias l='ls -l'\n```\n\n这意味着当在命令行输入 `l` 时，bash shell\
+  \ 将执行 `ls -l`，从而输出文件的详细列表，而不是默认输出。\n\n\n\n\n# 2.5.4. 文件和目录名称区分大小写\n\n你需要记住的一点是，Linux\
+  \ 中的文件名和目录名是区分大小写的。\n\n例如，一个名为：\n\n```\nsequence.txt\n```的文件与以下文件不同：\n\n```\nSequence.txt\n\
+  ```\n\n同样，`Documents` 和 `documents` 是两个不同的目录。\n\n上述这些文件或目录可以存在同一个目录中，并且拥有不同的内容。\n\
+  \n# 2.5.5. 访问根文件系统\n\n要访问根文件系统 (`/`)，请点击文件管理器侧边栏中的“文件系统”（图 36）。\n\n![../../_images/file-system.png](img/file-system.png)\n\
+  \n图 36 点击“文件系统”项以访问根文件系统\n\n#### `/` 下的目录及其功能\n\n`/etc`\n— 存储应用程序的配置文件\n\n`/home`\n\
+  — 包含用户的家目录\n\n`/media`\n— 外部磁盘等设备的挂载（即可用）位置\n\n`/root`\n— `root` 用户（管理员）的家目录\n\n\
+  `/tmp`\n— 应用程序创建的临时文件\n\n`/usr`\n— 应用程序、库及其数据和文档安装在此\n\n`/var`\n— 日志文件、应用程序缓存、数据库等的存储空间\n\
+  \n#### 根文件系统和 root 家目录是不同的\n\n#### `/` 是根文件系统\n\n只要具有相应的权限，系统上的所有用户都可以访问这里的文件和目录。\n\
+  \n#### `/root` 是 root 的家目录\n\n只有 root 可以访问它。\n\n# 2.5.6. 在系统之间传输文件\n\n“文件”的一个有用功能是可以使用\
+  \ SSH、FTP、SMB 和 Webdav 等协议连接远程系统。一旦连接，你就可以将文件从 Linux 桌面传输到远程系统或反之。\n\n要连接到远程系统，请使用“文件”中的以下菜单项（图\
+  \ 37）：\n\n文件 ‣ 连接到服务器\n\n![../../_images/files-connect.png](img/files-connect.png)\n\
+  \n图 37 “文件”中的“连接到服务器”选项\n\n#### 连接到 SSH 服务器\n\n打开文件 ‣ 连接到服务器并按照下面的步骤操作（图 38）：\n\n\
+  1. 在对应“服务器”字段中，输入要连接的服务器的域名或 IP 地址\n2. 端口 `22` 是 SSH 的默认端口，因此通常不需要更改它\n3. 从“类型”下拉框中选择\
+  \ SSH\n4. 在“文件夹”下，你可以指定一个连接成功后要打开的目录（可选）\n5. 输入你在服务器上的账户用户名和密码\n6. 点击“连接”按钮\n\n\
+  ![../../_images/files-connect-ssh.png](img/files-connect-ssh.png)\n\n图 38 连接到 SSH\
+  \ 服务器\n\n一旦在“文件”中打开了远程目录，你就可以从桌面开始传输文件，或反之。\n\n# 3. 在 Linux 上获取软件\n\n在本节中，我将讨论如何在\
+  \ Linux 桌面上获取软件。\n\n对于任何想要安装的软件，你可以从快速且方便的方法开始。它将安装 Linux 发行版仓库中提供的软件。\n\n如果你感兴趣的软件不可用，或者你需要不同的版本，可以考虑使用其他方法。\n\
+  \n* 3.1. 快速且方便的方法\n    * 3.1.1. 要求\n    * 3.1.2. 查找并安装软件\n    * 3.1.3. 已安装的软件\n\
+  \    * 3.1.4. 更新已安装的软件\n    * 3.1.5. 注意事项\n* 3.2. Python 包\n    * 3.2.1. 要求\n  \
+  \  * 3.2.2. 在 PyPI 上搜索包\n    * 3.2.3. 安装 Python 包\n    * 3.2.4. 更新已安装的包\n    * 3.2.5.\
+  \ 删除已安装的包\n    * 3.2.6. 使用已安装的包\n    * 3.2.7. Python 虚拟环境\n    * 3.2.8. 注意事项\n*\
+  \ 3.3. Perl 模块\n    * 3.3.1. 要求\n    * 3.3.2. 配置 local-lib 模块\n    * 3.3.3. 在 CPAN\
+  \ 上搜索模块\n    * 3.3.4. 安装 Perl 模块\n\n\n\n\n图 39 点击应用程序菜单中的“软件管理器”\n\n启动后，你将看到它的主窗口（图\
+  \ 40）。\n\n![../../_images/2-software-manager.png](img/2-software-manager.png)\n\n\
+  图 40 软件管理器主窗口\n\n在搜索栏中，输入 `pymol`。\n\n稍后，存储库中匹配搜索词（即 `pymol`）的软件包将显示在下方（图 41）。\n\
+  \n![../../_images/3-search-for-pymol.png](img/3-search-for-pymol.png)\n\n图 41 pymol\
+  \ 的搜索结果\n\n点击第一个结果 — Pymol。你将被跳转到软件包描述页。\n\n#### 注意\n\n为什么不选择 `Python3-pymol` ？\n\
+  \n第二个结果 `Python3-pymol` 的描述表明它包含了用于与 PyMOL 操作的 Python 3 `modules`，这并不是我们要找的内容。\n\
+  \n如果你不确定，可以在下一页阅读软件包的完整描述，并确认这是否是你想要安装的软件包。\n\n在软件包描述页上，点击 `Install` 按钮（图 42）。\n\
+  \n![../../_images/4-pymol-install-button.png](img/4-pymol-install-button.png)\n\n\
+  图 42 点击 Install 按钮安装此软件包\n\n现在会弹出一个对话窗口，提示你输入 `your password`。\n\n输入你的密码并点击 `Authenticate`\
+  \ 按钮（图 43）。\n\n![../../_images/5-install-authentication.png](img/5-install-authentication.png)\n\
+  \n图 43 输入密码并点击 Authenticate 按钮\n\n现在现在开始进行。\n\n当安装完成后，你会发现 `Install` 按钮变成了两个按钮：`Launch`\
+  \ 和 `Remove`（图 44）。\n\n![../../_images/6-pymol-launch-button.png](img/6-pymol-launch-button.png)\n\
+  \n图 44 安装完成。注意 Launch 和 Remove 按钮\n\n点击 `Launch` 按钮。这将打开 PyMOL 程序（图 45）。\n\n![../../_images/7-pymol-window.png](img/7-pymol-window.png)\n\
+  \n图 45 PyMOL 主窗口\n\n或者，你可以在应用程序菜单中搜索该应用程序并从那里启动。\n\n#### 注意\n\n对于没有图形用户界面的应用程序，将不会\
+  \ `Launch` 按钮。\n\n如果程序包含任何命令，你可以在 terminal 会话中访问它们。\n\n### 3.1.3 移除已安装的软件\n\n你可以按照以下步骤移除从存储库安装的软件。\n\
+  \n打开软件管理器。\n\n点击主应用程序窗口中的设置按钮，然后选择 `Show installed applications`（图 46）。\n\n![../../_images/8-show-installed-applications.png](img/8-show-installed-applications.png)\n\
+  \n图 46 在软件管理器设置中，选择显示已安装应用程序\n\n或者，你可以在搜索栏中输入软件名称然后按 `ENTER` 键。\n\n在“已安装应用程序”列表中，点击你想要移除的软件包\
+  \ — 本例中为 Pymol（图 47）。\n\n![../../_images/9-select-pymol-for-removal.png](img/9-select-pymol-for-removal.png)\n\
+  \n图 47 点击你想要移除的软件包\n\n你将被跳转到软件包描述页。\n\n点击 `Remove` 按钮以移除（或卸载）软件包（图 48）。\n\n![../../_images/10-click-remove-button.png](img/10-click-remove-button.png)\n\
+  \n图 48 点击 Remove 按钮移除软件包\n\n系统将提示你输入密码。\n\n输入 `your password` 然后点击 `Authenticate`\
+  \ 按钮继续（图 49）。\n\n![../../_images/11-remove-authentication.png](img/11-remove-authentication.png)\n\
+  \n图 49 输入密码并点击 Authenticate 按钮\n\n软件现在将从系统中移除（或卸载）。\n\n### 3.1.4 更新已安装的软件\n\n当你的系统中安装的软件有可用更新时，你将在系统托中看到通知（图\
+  \ 50）。\n\n![../../_images/12-updates-system-tray.png](img/12-updates-system-tray.png)\n\
+  \n图 50 系统托盘中的软件更新通知\n\n要应用软件更新：\n\n点击系统托中的通知图标。这将打开更新管理器程序。\n\n要安装所有可用的软件更新，点击工具栏上的\
+  \ `Install Updates` 按钮（图 51）。\n\n![../../_images/13-update-manager.png](img/13-update-manager.png)\n\
+  \n图 51 点击 Install Updates 按钮应用所有可用更新\n\n系统将提示你输入密码（图 52）。\n\n输入 `your password`\
+  \ 并点击 `Authenticate` 按钮。\n\n![../../_images/14-update-authentication.png](img/14-update-authentication.png)\n\
+  \n图 52 输入密码并点击 Authenticate 按钮\n\n更新管理器现在将继续安装更新（图 53）。\n\n![../../_images/15-applying-updates.png](img/15-applying-updates.png)\n\
+  \n图 53 更新管理器正在安装软件更新\n\n当更新完成后，你将看到一条消息 — 系统是最新的（图 54）。\n\n![../../_images/16-update-complete.png](img/16-update-complete.png)\n\
+  \n图 54 更新成功\n\n\n\n\n\n#### 额外的软件仓库\n\n软件的新版本发布到发行版仓库通常需要一段时间时间。\n\n如果您感兴趣的软件不可用，或者您需要更新版本的软件，可以尝试从这些额外源进行安装：\n\
+  \n*   来自 PyPI 的 Python 软件包\n*   来自 CPAN 的 Perl 模块\n*   来自 CRAN 或 Bioconductor 的\
+  \ R 软件包\n*   来自 Anaconda Cloud 的 Conda 软件包\n\n#### 注意事项\n\n使用这些方法安装的软件也需要手动保持更新。\n\
+  \n# 3.2. Python 软件包\n\n如果您感兴趣的软件在 PyPI 上作为 Python 软件包可用，您可以使用 pip —— Python 软件包安装器来安装它。\n\
+  \n#### 注意\n\n您的软件可能已经通过快速简单的方法 可用。请搜索以 `python-` 开头的包名。\n\n在某些情况下，在虚拟环境中安装软件包可能是更好的选择。请阅读：\n\
+  \n`->` 我什么时候应该使用虚拟环境？\n\n*   3.2.1. 依赖\n*   3.2.2. 在 PyPI 上搜索软件包\n*   3.2.3. 安装\
+  \ Python 软件包\n*   3.2.4. 更新已安装的软件包\n*   3.2.5. 移除已安装的软件包\n*   3.2.6. 使用已安装的软件包\n\
+  *   3.2.7. Python 虚拟环境\n*   3.2.8. 注意事项\n\n# 3.2.1. 依赖\n\n#### Python 软件包安装器 (pip)\n\
+  \n要安装 pip，请参考快速简单的方法安装软件。\n\n搜索并安装 `python3-pip` 软件包。\n\n#### 将 $HOME/.local/bin\
+  \ 添加到 $PATH\n\n包含命令的软件包会将它们安装在 `$HOME/.local/bin` 目录（什么是 $HOME?）。\n\n为了能够方便地运行这些命令，您需要将此目录添加到您的\
+  \ `$PATH` 变量中。您可以按照将目录添加到 PATH 中的步骤进行操作。\n\n#### 注意事项\n\n*   您不应在下面的命令中添加 `sudo`。\n\
+  \n此方法仅在您的主目录中安装文件，因此不需要管理员权限。\n\n# 3.2.2. 在 PyPI 上搜索软件包\n\n在网页浏览器中打开 [PyPI 网站](https://pypi.org)\
+  \ [https://pypi.org]。\n\n在“Search projects”（搜索项目）字段中，输入您想要安装的软件名称并按回车键或点击搜索按钮（图\
+  \ 55）。\n\n![../../_images/pypi-search.png](img/pypi-search.png)\n\n图 55 在 PyPI 上搜索软件包\n\
+  \n将显示匹配搜索词的软件包列表（图 56）。\n\n![../../_images/pypi-search-result.png](img/pypi-search-result.png)\n\
+  \n图 56 biopython 的搜索结果。1.78 是版本号。\n\n点击结果进入项目描述页。\n\n在项目描述页上，在 `pip` 安装命令中找到包名（图\
+  \ 57）。\n\n在此例中，它是 `biopython`。\n\n![../../_images/pypi-biopython-page.png](img/pypi-biopython-page.png)\n\
+  \n图 57 Biopython 的项目描述页\n\n#### 注意\n\n在下述步骤中，您需要使用 `pip3` 而不是 `pip` 命令。为什么？\n\n\
+  您现在可以继续安装软件包了。\n\n# 3.2.3. 安装 Python 软件包\n\n打开终端。\n\n使用 `pip3 install` 命令配合您想要安装的包名。\n\
+  \n以 biopython 为例：\n\n```\npip3 install biopython\n```\n\n输出：\n\n```\nCollecting\
+  \ biopython\n  Downloading biopython-1.78-cp38-cp38-manylinux1_x86_64.whl (2.3 MB)\n\
+  \     |********************************| 2.3 MB 2.1 MB/s\nCollecting numpy\n  Downloading\
+  \ numpy-1.20.1-cp38-cp38-manylinux2010_x86_64.whl (15.4 MB)\n     |********************************|\
+  \ 15.4 MB 90 kB/s\nInstalling collected packages: numpy, biopython\nSuccessfully\
+  \ installed biopython-1.78 numpy-1.20.1\n```\n\n#### 注意\n\n此方法的一个局限性是，您无法安装软件包的多个版本。可以使用虚拟环境\
+  \ 来解决这个问题。\n\n# 3.2.4. 更新已安装的软件包\n\n当您注意到软件包有更新可用时，可以使用 `install` 命令配合 `--U` 选项以及包名：\n\
+  \n```\npip3 install -U biopython\n```\n\n# 3.2.5. 移除已安装的软件包\n\n使用 `uninstall` 命令配合您想要移除的包名：\n\
+  \n```\npip3 uninstall biopython\n```\n\n# 3.2.6. 使用已安装的软件包\n\n#### 文件安装在何处？\n\n\
+  您可以使用 `pip3 show` 命令配合包名来识别其安装的路径：\n\n```\npip3 show biopython\n```\n\n输出：\n\n```\n\
+  Name: biopython\nVersion: 1.78\nSummary: Freely available tools for computational\
+  \ molecular biology.\nHome-page: https://biopython.org/\nAuthor: The Biopython Contributors\n\
+  Author-email: biopython@biopython.org\nLicense: UNKNOWN\nLocation: /home/user/.local/lib/python3.8/site-packages\n\
+  Requires: numpy\nRequired-by:\n```\n\n#### 使用软件包和模块\n\n软件包和模块将安装在 `$HOME/.local/lib/python3.8/site-packages`。\n\
+  \n注意\n\n如果您有不同的 Python 版本，此值会发生变化。\n\n该目录会被包含在 `PYTHONPATH` 中。因此，无需额外操作即可导入并使用已安装的软件包。\n\
+  \n例如，这是一个使用 pip 安装的简单 Python 脚本：\n\n```python\nfrom Bio.Seq import Seq\n\nseq =\
+  \ Seq('ATGC')\ncomp = seq.complement()\n\nprint(f'The complement of {seq} is {comp}')\n\
+  ```\n\n将上面的代码示例保存为 `biopy_test.py`。然后从终端运行：\n\n```\npython3 biopy_test.py\n```\n\
+  \n输出：\n\n```\nThe complement of ATGC is TACG\n```\n\n#### 使用包含的命令\n\n如果软件包包含命令，这些命令将安装在\
+  \ `$HOME/.local/bin` 目录。为了方便使用这些命令，您需要将此目录添加到 PATH 中，正如依赖所示。\n\n例如，当安装 cutadapt\
+  \ 的 Python 软件包时，`cutadapt` 命令将安装在 `$HOME/.local/bin`，您可以像这样从终端运行：\n\n```\ncutadapt\
+  \ --version\n```\n\n输出：\n\n```\n3.1\n```\n\n# 3.2.7. Python 虚拟环境\n\n虚拟环境是一个包含 Python\
+  \ 和一些额外软件包的自包含目录树。\n\n#### 优势\n\n这些是使用虚拟环境的优势。\n\n#### 无需权限\n\n创建虚拟环境或在环境中安装软件包不需要管理员权限。\n\
+  \n#### 多个环境\n\n可以创建多个虚拟环境，每个环境包含自己的包集。\n\n它们是相互隔离的，在某个环境中安装、更新或删除软件包不会影响其他环境。\n\n\
+  #### 分享您的环境\n\n您可以与他人共享配置。他们将重现您的环境，包含完全软件包版本。\n\n#### 创建虚拟环境\n\n首先，使用快速简单的方法搜索并安装\
+  \ `python3-venv` 软件包。它包含了创建虚拟环境所需的 `venv` 模块。\n\n\n\n\n\n你可以在任何具有写入权限的目录中创建虚拟环境，例如你的家目录。\n\
+  \n为了演示，我将在我的家目录中创建一个名为 `py3env` 的虚拟环境。\n\n```\npython3 -m venv py3env\n```\n\n如果执行成功，你将在当前目录下找到一个名为\
+  \ `py3env` 的目录。不会显示任何消息。\n\n#### 注意事项\n\n- `python3` 是运行 Python 3 解释器的命令。它的完整路径是\
+  \ `/usr/bin/python3`。\n- `venv` 是用于创建虚拟环境的 Python 模块。\n- `-m` 选项将 `venv` 模块作为脚本运行。在使用虚拟环境之前，你需要先激活它。\n\
+  \n#### 激活虚拟环境\n\n在开始使用虚拟环境之前，你需要先激活它。为此，请使用 `source` 命令并指向虚拟环境中 `activate` 脚本的路径。\n\
+  \n例如，要激活在上一步创建的 `py3env`，请使用：\n\n```\nsource py3env/bin/activate\n```\n\n你的 shell\
+  \ 提示符现在会发生变化，以指示虚拟环境已处于激活状态。注意提示符开头的 `(py3env)` 标签：\n\n```\n(py3env) user@cookbook:~$\n\
+  ```\n\n你现在可以开始使用这个虚拟环境了。\n\n#### 注意事项\n\n在开始安装软件包之前……\n\n在一个新的虚拟环境中安装（或升级）Python\
+  \ 构建工具是一个好习惯——pip,setuptools 和 wheel。\n\n这些构建工具对于从 PyPI 以及其他源构建和安装软件包是必要的。\n\n安装它们将确保额外的软件包能够无错误地构建和安装。\n\
+  \n#### 安装 Python 构建工具\n\n使用 `pip3 install` 安装或升级所需的包：\n\n```\npip3 install -U pip\
+  \ setuptools wheel\n```\n\n`pip3 install` 的 `-U` 选项会在可用新版本时升级列出的包。\n\n输出：\n\n```\n\
+  Collecting pip\nDownloading pip-21.0.1-py3-none-any.whl (1.5 MB)\n...\nInstalling\
+  \ collected packages: pip, setuptools, wheel\n...\nSuccessfully installed pip-21.0.1\
+  \ setuptools-54.2.0 wheel-0.36.2\n```\n\n#### 退出虚拟环境\n\n要退出虚拟环境，请使用命令：\n\n```\n\
+  deactivate\n```\n\n你的 shell 提示符将恢复为原始外观：\n\n```\nuser@cookbook:~$\n```\n\n### 3.2.8\
+  \ 注意\n\n#### 你需要手动更新这些包\n\n以这种方式安装的包也应该手动更新。\n\n当你注意到某个包有更新时（例如通过项目网站或其源代码仓库），请按照更新已安装的包中的步骤安装最新版本。\n\
+  \n#### 为什么用 pip3 而不是 pip？\n\npip 包包含以下命令：\n\n- `pip3` — Python 3 版本\n- `pip` — Python\
+  \ 2 版本（对 Python 2 的支持已于 2020 年 1 月结束。）\n\n由于系统中可能同时存在这两个命令，因此在使用此方法安装包时，使用 `pip3`\
+  \ 更安全。\n\n#### 如果用 Python 2 编写的程序怎么办？\n\n对 Python 2 的支持已于 2020 年 1 月结束。如果你需要使用仅用\
+  \ Python 2 编写的程序，可以创建一个隔离环境——使用 `venv` 或 `Conda`，然后安装该包。\n\n相关章节：\n\n- Python 虚拟环境\n\
+  - Conda 软件包\n\n#### 我什么时候应该使用虚拟环境？\n\n如果你安装的程序需要来自 PyPI 的同一个包的两个版本，本文描述的方法将不起。在这种情况下，你可以考虑创建一个隔离环境——使用\
+  \ `venv` 或 `Conda`，然后安装软件包。\n\n相关章节：\n\n- Python 虚拟环境\n- Conda 软件包\n\n#### pip 的旧版本\n\
+  \n如果你系统中安装的 `pip` 版本低于 2.0，它默认将尝试将包安装到系统路径，导致权限拒绝错误。为了避免这种情况，你需要在 `install` 和 `uninstall`\
+  \ 命令中添加 `--user` 选项，例如：\n\n```\npip3 install --user python\n```\n\n更好的方法是升级你本地的\
+  \ `pip` 版本。升级后，你将不再需要 `--user`。升级 `pip` 请执行：\n\n```\npip3 install --user -U pip\n\
+  ```\n\n你可以使用以下命令检查已安装的 `pip` 版本：\n\n```\npip3 -V\n```\n\n## 3.3 Perl 模块\n\n对于 Perl\
+  \ 模块，你可以配置 `local-lib` 模块来并使用本地目录。默认位置是 `$HOME/perl5`。\n\n如果你感兴趣的软件可以在 CPAN 上找到，可以使用\
+  \ `cpanminus` 脚本轻松地安装。\n\n你感兴趣的软件可以使用简单方法 获取。搜索包含 `perl` 的包名。\n\n- 3.3.1 要求\n- 3.3.2\
+  \ 配置 local-lib 模块\n- 3.3.3 在 CPAN 上搜索模块\n- 3.3.4 安装模块\n- 3.3.5 使用模块\n\n### 3.3.1\
+  \ 要求\n\n如果你没有安装这些包，请按照简单方法，搜索并安装以下包：\n\n1. `build-essential` — 安装如 `make` 等构建工具\n\
+  2. `cpanminus` — 用于从 CPAN 获取并安装模块的脚本\n\n注意：此方法不需要 `sudo` 权限。\n\n### 3.3.2 配置 local-lib\
+  \ 模块\n\n要配置 `local-lib`：\n\n使用文本编辑器打开 `$HOME/.bashrc` 文件。\n\n在文件末尾添加以下内容：\n\n```\n\
+  #### Configuration for local-lib\neval \"$(perl -Mlocal::lib)\"\n```\n\n保存文件。这里有一个示例\
+  \ `.bashrc` 供参考（见图 58）。\n\n打开一个新的终端窗口。你会看到以下消息（见图 59）：\n\n（尝试创建目录 /home/user/perl5）\n\
+  \n配置已完成。你现在可以从 CPAN 和其他源安装模块了。\n\n### 3.3.3 在 CPAN 上搜索模块\n\n在浏览器中打开 MetaCPAN 网站（[`metacpan.org`](https://metacpan.org)）。\n\
+  \n在搜索框中输入想要安装的模块名称，点击 Search the CPAN 按钮。我以 David H. Ardell 的 FAST 软件包作为示例（见图 60）。\n\
+  \n这将显示匹配搜索词 `FAST` 的模块（见图 61）。\n\n如果你点击相应的模块名称，你将进入描述页面，可以在那里了解更多关于该模块的信息（见图 62）。\n\
+  \n在该页面上，你还可以验证下一步要使用的模块名称。\n\n\n\n\n\n要执行此操作，请点击侧边栏 `TOOLS`（工具）菜单下的 `Install Instructions`（安装说明）。这将打开出一个窗口，显示您在用\
+  \ `cpanm` 命令时所需的模块名称信息。\n\n在这种情况下，要使用的模块名称简单称为 `FAST` (图 63)。\n\n![../../_images/cpanm-module-install.png](img/cpanm-module-install.png)\n\
+  \n图 63 FAST 模块安装说明\n\n现在，你可以继续安装此模块了。\n\n# 3.3.4. 安装 Perl 模块\n\n打开终端窗口。\n\n使用 `cpanm`\
+  \ 命令安装模块：\n\n```\ncpanm FAST\n```\n\n这将安装该模块及其依赖项（如果有）。\n\n输出：\n\n```\n--> Working\
+  \ on FAST\nFetching http://www.cpan.org/authors/id/D/DH/DHARD/FAST-1.06.tar.gz ...\
+  \ OK\nConfiguring FAST-1.06 ... OK\n==> Found dependencies: Bit::Vector, Sort::MergeSort,\
+  \ Sort::Key\n--> Working on Bit::Vector\nFetching http://www.cpan.org/authors/id/S/ST/STBEY/Bit-Vector-7.4.tar.gz\
+  \ ... OK\nConfiguring Bit-Vector-7.4 ... OK\n...\nBuilding and testing FAST-1.06\
+  \ ... OK\nSuccessfully installed FAST-1.06\n6 distributions installed\n```\n\n#\
+  \ 3.3.5. 使用已安装的模块\n\n#### 使用内置命令\n\n如果模块包含命令，这些命令将安装在 `$HOME/perl5/bin` 中。当你配置 local-lib\
+  \ 时，该目录将被包含在 `$PATH` 中。因此，安装后你可以立即开始使用模块包含的命令。\n\n例如，这是上一步安装的 `FAST` 包中包含的 `fasuniq`\
+  \ 命令的帮助页面：\n\n```\nfasuniq -h\nUsage:\n    fasuniq [options] [MULTIFASTA-FILE]\n\
+  \n    [MULTIFASTA-DATA-ON-STDIN] | fasuniq [options]\n...\n```\n\n#### 在脚本中使用模块\n\
+  \n模块将安装在：\n\n`$HOME/perl5/lib/perl5/5.30.0`。\n\n注意\n\n这是针对 Perl 5.30.0 的模块路径。\n\n\
+  如果你的系统中安装了不同版本的 Perl，该路径会发生变化。\n\n由于 local-lib 会自动发现这些模块，你可以立即在脚本中使用它们。\n\n这里是一个使用\
+  \ Bio::Phylo 包的示例。在使用 `cpanm Bio::Phylo` 安装模块后，使用文本编辑器创建一个文件并复制以下内容：\n\n```\nuse\
+  \ Bio::Phylo;\n\n#### 打印版本\nprint Bio::Phylo->VERSION;\n\n#### 打印引用\nprint Bio::Phylo->CITATION;\n\
+  ```\n\n将该文件保存为 `biophylo_test.pl` 然后运行它：\n\n```\nperl biophylo_test.pl\n```\n\n\
+  输出：\n\n```\nv2.0.1Rutger A Vos, Jason Caravas, Klaas Hartmann, Mark A Jensen and\
+  \ Chase Miller, 2011.\nBio::Phylo - phyloinformatic analysis using Perl. BMC Bioinformatics\
+  \ 12:63.\ndoi:10.1186/1471-2105-12-63\n```\n\n# 3.4. R 包\n\n如果你感兴趣的软件作为 CRAN 或 Bioconductor\
+  \ 上的 R 包可用，你可以使用 `install.packages()` 或 `BiocManager::install()` 进行安装。\n\n注意\n\n\
+  这种方法只需简单方法。\n\n搜索以 `r-` 或 `bioc-` 开头的包名。\n\n# 3.4.1. Requirements\n\n#### r-base\
+  \ 包已安装\n\n`r-base` 包提供了 GNU R 统计计算和图形系统。\n\n如果你没有安装，请按照简单方法 安装 `r-base`。\n\n注意\n\
+  \n此方法将安装在你的用户目录中，因此不需要管理员权限。\n\n# 3.4.2. 启动 R 会话\n\n要启动 R 会话，请打开终端窗口。\n\n输入 `R`\
+  \ 命令并按回车：\n\n```\nuser@cookbook~$ R\n```\n\n你将进入 R 会话。\n\n#### 2. 确认使用个人库\n\n```\n\
+  lib = '/usr/local/lib/site-library\"' not writable\n你想改用个人库吗？(yes/No/cancel) yes\n\
+  ```\n\n输入 `yes` 确认并按回车。\n\n#### 3. 如果需要则创建个人库\n\n如果你从未安装过包，则个人库目录将不存在。如果是这样，将提示你是否创建它：\n\
+  \n```\n你想创建一个个人库 ~/R/x86_4-pc-linux-gnu/library/3.6\n来安装包吗？(yes/No/cancel) yes\n\
+  ```\n\n输入 `yes` 确认并按回车。\n\n注意\n\n下次你安装包时，将不再看到此提示。\n\n#### 4. 包安装摘要\n\n```\ntrying\
+  \ URL 'https://cloud.r-project.org/src/contrib/BiocManager_1.30.10.tar.gz'\nContent\
+  \ type 'application/x-gzip' length 40205 bytes (39 KB)\n==================================\n\
+  downloaded 39 KB\n\n* installing *source* package ‘BiocManager’ ...\n** package\
+  \ ‘BiocManager’ successfully unpacked and MD5 sums checked\n** using staged installation\n\
+  ** R\n** inst\n** byte-compile and prepare package for lazy loading\n** help\n***\
+  \ installing help indices\n** building package indices\n** installing vignettes\n\
+  ** testing if installed package can be loaded from temporary location\n** testing\
+  \ if installed package can be loaded from final location\n** testing if installed\
+  \ package keeps a record of temporary installation path\n* DONE (BiocManager)\n\
+  ```\n\n\n\n\n\n你可以在网站上搜索 Bioconductor [软件包包列表](https://www.bioconductor.org/packages/release/BiocViews.html#___Software)\
+  \ [https://www.bioconductor.org/packages/release/BiocViews.html#___Software]（目前有\
+  \ 1974 个包）。一旦你确定了要安装的包，就可以按照下面的步骤进行安装。\n\n我将以安装 `edgeR 包作为示例。\n\n#### 使用 `BiocManager::install()`\
+  \ 命令安装包\n\n1.  启动 R 会话。\n\n2.  安装 `BiocManager` 包。这对于从 Bioconductor 存储库安装 R 软件包是必要的。\n\
+  \n    注意\n\n    你只需要执行此操作一次。\n\n    下次你想要从 Bioconductor 安装包时，可以直接跳到第 3 步。\n\n3.\
+  \  在 R 提示符处，使用 `BiocManager::install()` 命令并用引号括你想要安装的包名称。\n\n    例如：\n\n    ```\n\
+  \    BiocManager::install(\"edgeR\")\n    ```\n\n    按下回车键继续。\n\n    现在将下载、编译并安装该包及其依赖项。\n\
+  \n    输出：\n\n    ```\n    Bioconductor version 3.10 (BiocManager 1.30.10), R 3.6.3\
+  \ (2020-02-29)\n    Installing package(s) 'BiocVersion', 'edgeR'\n    also installing\
+  \ the dependencies ‘limma’, ‘locfit’, ‘Rcpp’\n    ...\n    ** testing if installed\
+  \ package can be loaded from temporary location\n    ** checking absolute paths\
+  \ in shared objects and dynamic libraries\n    ** testing if installed package can\
+  \ be loaded from final location\n    ** testing if installed package keeps a record\
+  \ of temporary installation path\n    * DONE (edgeR)\n    ```\n\n如果过程中没有错误，则包安装成功。\n\
+  \n## 3.4.5. 更新 R 软件包\n\n当包可用更新时，使用以下命令进行更新。\n\n对于从 CRAN 安装的包：\n\n```\ninstall.packages(\"\
+  BiocManager\")\n```\n\n对于从 Bioconductor 安装的包：\n\n```\nBiocManager::install(\"edgeR\"\
+  )\n```\n\n## 3.4.6. 删除 R 软件包\n\n要删除已安装的包，使用 `remove.packages()` 命令并用引号括上包名称。\n\n\
+  例如：\n\n```\nremove.packages(\"BiocManager\")\n```\n\n## 3.4.7. 注意事项\n\n### r-base-dev\
+  \ 和 build-essential 包\n\n如果你从 CRAN 和其他来源安装额外的包，你也将需要安装 `r-base-dev` 和 `build-essential`\
+  \ 包。然而，当你安装 `r-base` 时，这些包也会作为依赖项被安装，因此你不需要手动安装它们。\n\n#### 为什么使用个人库？\n\n在安装包时，R\
+  \ 会首先尝试使用系统库——例如，`/usr/local/lib/R/site-library`。该路径只能由管理员权限的用户修改。这就是为什么在 `$HOME`\
+  \ 目录下的个人库是用户安装包的更好选择。\n\n## 3.5. Conda 软件包\n\n你可以使用 Conda 包管理器来创建隔离环境，并安装来自 Anaconda\
+  \ Cloud 存储库的软件。\n\n这些环境可以在不再需要时激活、取消激活和删除。\n\n*   3.5.1. 要求\n*   3.5.2. 安装 Conda\n\
+  *   3.5.3. 使用 Conda\n*   3.5.4. 注意事项\n\n## 3.5.1. 要求\n\n注意\n\n*你不应该在下面的命令中添加 sudo。*\n\
+  \n此方法只在你的家目录目录中安装文件，因此不需要管理员权限。\n\n## 3.5.2. 安装 Conda\n\n通过安装 Miniconda 可以设置极简的\
+  \ Conda 安装。你需要按照下面的步骤下载并运行 Miniconda 安装程序。\n\n### 1. 下载 Miniconda\n\n要下载正确版本的 Miniconda：\n\
+  \n1.  打开 [downloads](https://www.anaconda.com/download/miniconda.html) 页面。\n\n2.\
+  \  导航到 installers 部分\n\n3.  点击对应 Linux 的 `Miniconda`\n\n### 2. 运行安装程序\n\n使用 `bash`\
+  \ 命令运行安装程序：\n\n```\nbash Miniconda3-latest-x64.sh\n```\n\n### 3. 确认 Miniconda 安装\n\
+  \n接下来，你将被要求提供安装路径。\n\n```\nMiniconda will now be installed into this location:\n\
+  /home/user/miniconda\n```\n\n在此处按 ENTER 接受默认值。\n\n现在开始安装。完成后，你会注意到一个提示询问是否要*初始化\
+  \ Miniconda 3*。\n\n```\nDo you wish the installer to initialize Miniconda\nby running\
+  \ conda init? [yes|no]\n[no] >>> yes\n```\n\n输入 `yes` 然后按回车键。这将 `conda` 命令添加到你的\
+  \ `$PATH` 中。\n\n由于此配置，Conda `base` 环境会在打开终端时自动激活。这可以在下一步中禁用。\n\n### 4. 禁用自动激活 base\
+  \ 环境\n\n打开一个新的终端。你的 shell 提示符现在应该显示：\n\n```\n(base) user@cookbook:~$\n```\n\n提示符开头的\
+  \ `(base)` 标签表示 Conda base 环境现在已激活。\n\n要禁用此行为，以便在需要时手动激活环境，请运行以下命令：\n\n```\nconda\
+  \ config --set auto_activate_base false\n```\n\n## 5. 设置通道\n\n通道为 Conda 提供额外的软件。\n\
+  \nConda 的配置包含了 [defaults](https://repo.anaconda.com/pkgs) [https://repo.anaconda.com/pkgs]\
+  \ 通道。bioconda 和 [conda-forge](https://conda-forge.org/) [https://conda-forge.org/]通道也可以添加以访问更大的软件集合。例如，bioconda\
+  \ 通道提供了超过 7000 个生物信息软件包。\n\n要将这些通道添加到你的配置中，你可以运行下面的命令。\n\n注意\n\n*你需要按照给出的顺序运行这些命令。*\n\
+  \n```\nconda config --add channels defaults\nconda config --add channels bioconda\n\
+  conda config --add channels condaforge\n```\n\n## 3.5.3. 使用 Conda\n\n在关于使用 Conda\
+  \ 的简短指南中，我将向你展示如何：\n\n1.  创建环境\n\n2.  激活环境\n\n3.  搜索、安装和使用包——以 NCBI BLAST+ 程序 为例\n\
+  \n4.  在不再需要时删除环境\n\n\n\n\n从项目网站可以获取一个用于 Conda 操作的常用命令[速查表](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ [https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html]。\n\
+  \n#### 创建环境\n\n要创建一个环境，请使用 `conda create` 命令和 `-n` 选项，后接环境名称——在本例中为 `blast`：\n\n\
+  ```\nconda create -n blast\n```\n\n#### 激活环境\n\n你可以使用以下命令获取所有环境的 `list`列表：\n\n```\n\
+  conda envs list\n```\n\n要激活一个环境，请使用 `conda activate` 命令并加上环境的 `name`：\n\n```\nconda\
+  \ activate blast\n```\n\n## 搜索、安装和使用包\n\n要搜索并安装包：\n\n1.  首先，如果你还没有激活，请激活环境。\n\n\
+  \    为了演示，我将激活之前创建的 `blast` 环境：\n\n    ```\n    conda activate blast\n    ```\n\n\
+  2.  要搜索包，请在浏览器中打开 [Anaconda.org](https://anaconda.org/) [https://anaconda.org/]。\n\
+  \n    在搜索包字段中输入搜索词并按回车键（图 65）。\n\n    ![在 Anaconda 云上搜索包](img/anaconda-search-blast.png)\n\
+  \n    图 65 在 Anaconda.org 上搜索包。\n\n    或者，你也可以使用 `conda search` 命令：\n\n    ```\n\
+  \    conda search blast\n    ```\n\n    这将输出匹配的包：\n\n    ```\n    Loading channels:\
+  \ done\n    # Name   Version           Build  Channel\n    blast     2.2.31    \
+  \           1  bioconda\n    ...\n    blast      2.9.0 pl526he19e7b1_7  bioconda\n\
+  \    ...\n    blast     2.10.1 pl526he19e7b1_2  bioconda\n    ```\n\n3.  要安装该包，请使用\
+  \ `conda install` 命令以及包的 `name` 和 `version` 号。\n\n    注意\n\n    你需要使用从搜索结果获得的程序\
+  \ `highest` 版本号。否则，可能会安装旧版本。\n\n    ```\n    conda install blast==2.10.1\n    ```\n\
+  \n4.  安装完成后，你就可以开始使用包中包含的程序，例如：\n\n    ```\n    (blast) user@cookbook:~$ blastn\
+  \ -version\n    ```\n\n    输出：\n\n    ```\n    blastn: 2.10.1+\n     Package: blast\
+  \ 2.10.1, build Oct 14 2020 11:36:30\n    ```\n\n## 取消环境激活\n\n当你的工作完成后，可以取消环境激活。要要操作，请使用命令：\n\
+  \n```\nconda deactivate\n```\n\n你的 shell 提示符将恢复到默认状态，即没有 Conda 环境名称——在本例中为 `(blast)`。\n\
+  \n## 环境\n\n当你不再需要某个环境时，使用以下命令删除它：\n\n```\nconda remove -n blast --all\n```\n\n这里\
+  \ `-n` 用于指定你想要删除的环境名称，`--all` 则移除该环境中安装的所有包。\n\n# 3.5.4. 注意事项\n\n## 如何验证安装程序的 SHA256\
+  \ 校验和\n\n1.  导航到包含安装文件的文件夹——`Miniconda3-latest-Linux-x86_64.sh`：\n\n    ```\n  \
+  \  cd Downloads\n    ```\n\n2.  使用 `sha256sum` 命令验证文件的 SHA256 校验和：\n\n    ```\n\
+  \    sha256sum Miniconda3-latest-Linux-x86_64.sh\n    ```\n\n    输出：\n\n    ```\n\
+  \    879457af6a0bf5b34b48c12de31d4df0ee2f06a8e68768e5758c3293b2daf688  Miniconda3-latest-Linux-x86_64.sh\n\
+  \    ```\n\n    `sha256sum` 命令的输出应与下载页面列出的值匹配。\n\n## 为什么要禁用 base 环境的自动激活？\n\n如果你使用其他方法安装包，例如从\
+  \ PyPI 安装 Python 包，你可能会`accidentally` 将包安装到 Conda `base` 环境而不是预期的位置。\n\n即使你禁用了 `base`\
+  \ 环境的自动激活，也可以也可以需要时使用 `conda activate base` 命令来激活它。\n\n# 3.6. Debian 包\n\n如果你感兴趣的软件以\
+  \ Debian 包的形式提供，你可以使用 gdebi 程序来安装它。如果该软件有任何依赖，它们将被自动安装。\n\n可以使用此方法安装的软件示例：\n\nRStudio\
+  \ Desktop — 用于 R 语言编程的 IDE。\n\nModeller — 一个用于比较三维结构的程序。\n\nMEGA — 演化分析。\n\n## 3.6.1.\
+  \ 下载包\n\n为了演示安装 Debian 包的步骤，这里使用了 [RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，以及 [MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n## 3.6.1. 下载包\n\n为了演示安装 Debian 包的步骤，[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n## 3.6.1. 下载包\n\n为了演示安装 Debian 包的步骤，[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n## 3.6.2. 要求\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n## 3.6.3. 安装包\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n## 3.6.4. 升级软件\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n## 3.6.5. 软件\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n## 3.6.6. 注意事项\n\n[RStudio](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 用于 R 语言编程的 IDE，[Modeller](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 一个用于比较三维结构的程序，[MEGA](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)\
+  \ — 演化分析。\n\n\n\n安装将现在开始（图 74](#install.xhtml_fig-331i)）。\n\n![../../_images/9-rstudio-install-progress.png](img/9-rstudio-install-progress.png)\n\
+  图 74 安装进度\n\n安装完成后，你将在窗口顶部看到 `Same version is already installed` 消息（图 75](#install.xhtml_fig-331j)）。\n\
+  \n![../../_images/10-rstudio-installed.png](img/10-rstudio-installed.png)\n图 75\
+  \ 软件包安装成功\n\n# 3. 启动已安装的程序\n\n## 3.1. 启动已安装的程序\n\n你可以从应用程序菜单启动已安装的程序（图 76](#install.xhtml_fig-331k)）。\n\
+  \n#### 注意\n这仅适用于带有图形用户界面的应用程序。\n\n![../../_images/11-launch-rstudio.png](img/11-launch-rstudio.png)\n\
+  图 76 从应用程序菜单启动已安装程序\n\n程序的主窗口将显示（图 77](#install.xhtml_fig-331l)）。\n\n![../../_images/12-rstudio-main-window.png](img/12-rstudio-main-window.png)\n\
+  图 77 RStudio Desktop 主窗口\n\n# 3.6.3. 升级已安装的软件\n\n从 Debian 软件包安装的软件与安装类似。当有新版本的程序可用时，下载软件包文件（`.deb`），然后按照安装\
+  \ Debian 软件包中的步骤操作。\n\n# 3.6.4. 移除已安装的软件\n\n你可以按照移除已安装的软件中的步骤，搜索并删除以这种方式安装的包。\n\n\
+  # 3.6.5. 注意事项\n\n### 3.6.5.1 命令行版本\n\n你可以使用 apt 包管理器在命令行安装 Debian 软件包。\n\n### 3.6.5.2\
+  \ 这些程序需要手动更新\n\n以这种方式安装的程序*通常*不会自动更新。因此，此方法应仅用于无法通过快速简单的方法获取的软件。\n\n### 3.6.5.3\
+  \ 如果无法找到依赖项，安装将失败\n\n如果无法在软件库中找到依赖项，某些程序的安装可能会失败。在这种情况下，你需要手动找到并安装这些包，然后再次尝试安装程序。\n\
+  \n# 4. 使用 Linux 命令行\n\n在本节中，你将找到 Linux 命令行、shell 和终端程序、一些常用命令以及一个示例练习。\n\n*   4.1.\
+  \ Shell 和终端\n    *   4.1.1. Shell 提示符\n*   4.2. 命令 — 概述\n    *   4.2.1. 命令选项\n \
+  \   *   4.2.2. 获取使用命令的帮助\n    *   4.2.3. `date` — 显示当前日期和时间\n    *   4.2.4. `cd`\
+  \ — 更改目录\n    *   4.2.5. `mkdir` — 创建新目录\n    *   4.2.6. `rmdir` — 删除空目录\n    *\
+  \   4.2.7. `ls` — 列出文件\n    *   4.2.8. `cp` — 复制文件\n    *   4.2.9. `cat` — 显示文件内容或合并它们\n\
+  \    *   4.2.10. `less` — 查看并导航文件内容\n    *   4.2.11. `head` — 打印文件的前几行\n    *  \
+  \ 4.2.12. `tail` — 打印文件的最后几行\n    *   4.2.13. `mv` — 移动文件或目录\n    *   4.2.14. `rm`\
+  \ — 删除文件或目录\n    *   4.2.15. `echo` — 显示文本或值\n*   4.3. 其他有用命令\n    *   4.3.1. `df`\
+  \ — 报告磁盘使用情况\n    *   4.3.2. `du` — 估计文件或目录的磁盘占用\n    *   4.3.3. `find` — 搜索文件\n\
+  \    *   4.3.4. `free` — 查看空闲和已内存\n    *   4.3.5. `locate` — 使用文件名查找文件\n    *  \
+  \ 4.3.6. `which` — 查找命令\n\n注：由于提供的原始文本在 4.2.1 之后出现了大量重复的乱码片段，上述译文已根据逻辑结构进行了清理，确保输出不重复且完整。\n\
+  \n\n\n\n```\n用法: ls [OPTION]... [FILE]...\n列出 FILEs 的信息（默认为当前目录）。\n如果未指定 -cftuvSUX\
+  \ 或 --sort，则按字母顺序对条目进行排序。\n\n长选项的强制性参数对于短选项也是强制性的。\n  -a, --all                \
+  \  不忽略以 . 开头的条目\n\n...\n```\n\n#### 注意\n\n为了保持讨论简洁，本节中的示例仅包含了命令受支持的 `some` 选项。\n\
+  \n# 4.2.3. `date` — 显示当前日期和时间\n\n```\ndate\n```\n\n输出：\n\n```\nWed 10 Mar 2021 10:33:11\
+  \ GMT\n```\n\n# 4.2.4. `cd` — 切换目录\n\n要进入一个目录，请使用 `cd` 后后跟该目录的名称。\n\n例如，要进入 `/home/user/Downloads`，请使用：\n\
+  \n```bash\ncd Downloads\n```\n\n#### 注意\n\n当您登录或打开新的终端窗口时，您将位于您的家目录 — `/home/user`，其中\
+  \ `user` 是您的用户名。\n\n您可以使用之前 讨论过的 `pwd` 命令来验证您当前所在的目录：\n\n```bash\npwd\n```\n\n```\n\
+  /home/user/Downloads\n```\n\n## 使用不带参数的 `cd`\n\n无论您在文件系统的何种位置，输入 `cd` `不带任何参数` 都会带您回到家目录。\n\
+  \n```bash\nuser@cookbook:/usr/share/dict$ cd\nuser@cookbook:~$\n```\n\n#### 进入父目录\n\
+  \n使用 `cd..` 进入父目录。\n\n例如，当您在 `/home/user/Downloads` 并且输入：\n\n```bash\ncd ..\n```\n\
+  \n您将会被带回 `/home/user`。\n\n单个点 (`.`) 指的是`current` 目录。\n\n# 4.2.5. `mkdir` — 创建新目录\n\
+  \n使用 `mkdir` 后跟您想要创建的目录名称：\n\n```bash\nmkdir Workspace\n```\n\n#### 注意\n\n您正在创建的目录不能已经存在，否则此命令将无法工作。\n\
+  \n正如之前 所讨论的，目录名称是区分大小写的，因此目录名为 `Workspace` 的目录与另一个名为 `workspace` 的目录不同。\n\n####\
+  \ 目录名称中的空格\n\n如果目录名称中有空格，请使用双引号，例如：\n\n```bash\nmkdir \"Project Work\"\n```\n\n\
+  否则，将创建两个独立的目录 — Project 和 Work。\n\n# 4.2.6. `rmdir` — 删除空目录\n\n使用 `rmdir` 后跟您想要删除的目录名称：\n\
+  \n```bash\nrmdir Workspace\n```\n\n#### 注意\n\n该目录在删除之前必须为空。\n\n该目录内不应有其他文件或目录。\n\
+  \n# 4.2.7. `ls` — 列出文件\n\n要列出目录中的文件，请使用 `ls` 命令：\n\n```bash\nls\n```\n\n输出：\n\n\
+  ```\nDesktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos\n\
+  ```\n\n#### 显示隐藏文件\n\n您可以为 `ls` 提供额外的选项。这将改变命令的工作方式。\n\n例如，要同时显示隐藏文件和目录，请使用：\n\n\
+  ```bash\nls -a\n```\n\n输出：\n\n```\n.              .cache     .local    Public\n\
+  ..             .cinnamon  .gnup       .bash_history\n.config        Desktop    Pictures\
+  \      Videos\n.bashrc        Documents  .linuxmint   .profile  .authority\n```\n\
+  \n#### 获取详细列表\n\n要获取详细列表，请使用：\n\n```bash\nls -l\n```\n\n输出：\n\n```\ntotal 32\ndrwxr-xr-x\
+  \ 2 user user 4096 Feb 17 13 Desktop\ndrwxr-xr-x 2 user user 4096 Mar 4 Documents\n\
+  drwxr-xr-x 2 user user 4096 Feb 17 13 Downloads\ndrwxr-xr-x 2 user user 4096 Feb\
+  \ 17 13 Music\ndrwxr-xr-x 2 user user 4096 Mar 4 Pictures\ndrwxr-xr-x 2 user user\
+  \ 4096 Feb 17 13 Public\ndrwxr-xr-x 2 user user 4096 Feb 17 13 Templates\ndrwxr-xr-x\
+  \ 2 user user 4096 Feb 17 13 Videos\n```\n\n## 组合多个选项\n\n您可以组合多个选项，如：\n\n```bash\n\
+  ls -la\n```\n\n输出：\n\n```\ntotal 144\ndrwxr-xr-x 1 user user 4096 Mar 12 00 .\n\
+  drwxr-xr-x 3 root root 4096 Feb 17 51 ..\n-rw-------- 1 user user 190 Mar 4 .bash_history\n\
+  -rw-r-- 1 user user 220 Feb 17 51 .logout\n-rw-r-- 1 user user 377 Feb 17 51 .bashrc\n\
+  drwx------ 17 user user 4096 Mar 3 .cache\ndrwxrwxr-x 4 user user 4096 Feb 17 13\
+  \ .cinnamon\n```\n\n要查看 `ls` 支持的所有选项列表，请使用：\n\n```bash\nls --help\n```\n\n# 4.2.8.\
+  \ `cp` — 复制文件\n\n使用 `cp` 命令，您可以复制文件或目录。\n\n#### 复制一个文件\n\n要复制一个文件，使用 `cp` 后跟源文件名称：\n\
+  \n```bash\ncp source destination\n```\n\n`source` 是您想要复制的文件，`destination` 是目标位置。\n\
+  \n#### 复制多个文件\n\n要复制多个文件，请使用以下格式：\n\n```bash\ncp source1 source2 destination\n```\n\
+  \n`source1` 和 `source2` 是您想要复制的文件，`destination` 是目标位置。\n\n#### 复制目录\n\n要复制目录，请使用\
+  \ `-r` 选项：\n\n```bash\ncp -r source destination\n```\n\n`source` 是您想要复制的目录，`destination`\
+  \ 是目标位置。\n\n# 4.2.9. `cat` — 显示并合并文件\n\n使用 `cat` 命令，您可以在屏幕上查看文件或合并它们。\n\n## 查看文件内容\n\
+  \n要查看文件内容，请使用 `cat` 后跟文件名：\n\n```bash\ncat /usr/share/dict/words\n```\n\n输出：\n\n\
+  ```\nA\nA's\nAMD\nAMD's\nAOL\nAOL's\nAWS\nAWS's\nAachen\n...\n```\n\n这将显示文件的全部内容。\n\
+  \n## 合并文件内容\n\n如果您在 `cat` 中包含多个文件名，它会将它们合并并将内容打印到屏幕上。\n\n如果您想将输出保存到文件，请使用以下格式：\n\
+  \n```bash\ncat file1.txt file2.txt > files.txt\n```\n\n`>` 操作将标准输出重定向到文件名。\n\n#\
+  \ 4.2.10. `less` — 查看并导航文件内容\n\n使用 `less` 命令，您在查看文件时拥有更多控制权。它允许您上下滚动文件，并提供了关键词搜索文件的功能。\n\
+  \n要查看文件，请使用 `less` 后跟文件名：\n\n```bash\nless /usr/share/dict/words\n```\n\n当文件打开时，它的外观将如图\
+  \ 79 所示。\n\n![../../_images/less.png](img/less.png)\n\n图 79 在 less 中打开的 words 文件\n\
+  \n在 `:` 提示符处，您可以输入 `less` 理解的命令。\n\n#### 导航文件\n\n您可以通过回 键向下滚动文件。或者，您可以使用 `PgUp`\
+  \ 和 `PgDn` 键一次翻一页。\n\n#### 搜索文件\n\n您可以在 `less` 中查看文件时进行搜索。\n\n操作如下：\n\n1.  输入 `/`（正斜杠）键\n\
+  2.  输入想要搜索的文本\n3.  按下 ENTER 键\n4.  如果有匹配的结果，它们将被高亮显示\n\n#### 退出 less 命令\n\n要退出 less\
+  \ 命令，请在提示符处输入 `q`。\n\n\n\n\n\n# 4.2.12. `tail` — 打印文件的最后几行\n\n使用 `tail` 命令，你可以查看文件的最后几行（默认：\
+  \ 10 行）。\n\n例如：\n\n```\ntail /usr/share/dict/words\n```\n\n```\nélan's\némigré\n\
+  émigré's\némigrés\népée\népée's\népées\nétude\nétude's\nétudes\n```\n\n在早之前 讨论过的\
+  \ `tail` 和 `head` 命令在两种情况下，它们在你想要快速查看大型文本文件的内容时非常有用。\n\n在上述两种情况下，你都可以使用 `-n` 选项来控制显示的行数，而不是默认值（10）。\n\
+  \n例如：\n\n```\ntail -n 5 /usr/share/dict/words\n```\n\n将显示文件的最后 5 行。\n\n# 4.2.13.\
+  \ `mv` — 移动文件或目录\n\n使用 `mv` 命令，你可以将文件或目录从一个位置（源）移动到另一个位置（目的地）。你可以选择保留现有的文件或目录名称或将其重命名。\n\
+  \n命令的基本格式是：\n\n```\nmv source destination\n```\n\n更安全的方法是给命令添加 `-iv` 选项：\n\n```\n\
+  mv -iv source destination\n```\n\n使用 `-i`（交互式），如果目的地已存在文件或目录，`mv` 将要求你进行确认。`-v`（详细）将在屏幕上打印命令的操作。\n\
+  \n为了方便起见，你可以为命令添加别名。\n\n#### 示例文件\n\n要遵循以下示例，你需要使用 cp 命令将以下文件复制到家目录：\n\n```\ncp\
+  \ -v /usr/share/dict/words ~\ncp -rv /usr/share/doc/bash ~\n```\n\n`~` 是家目录的快捷方式。\n\
+  \n#### 移动文件或目录\n\n简单的用例是将文件或目录从一个位置（目录）移动到另一个。\n\n#### 移动文件\n\n例如，将上述 复制的 `words`\
+  \ 文件移动到 `Documents` 目录，使用：\n\n```\nmv -iv Documents/\n```\n\n输出：\n\n```\nrenamed\
+  \ 'words' -> 'Documents/'\n```\n\n#### 移动目录\n\n同样，将上述 复制的 `bash` 目录移动到 `Documents`\
+  \ 目录，使用：\n\n```\nmv -iv Documents/\n```\n\n输出：\n\n```\nrenamed 'bash' -> 'Documents/'\n\
+  ```\n\n在这两种情况下，文件或目录的名字都不会改变。\n\n#### 重命名文件或目录\n\n在这种情况下，你想重命名文件或目录。\n\n#### 重命名文件\n\
+  \n将上述 复制的 `words` 文件重命名为 `dictionary.txt`，使用：\n\n```\nmv -iv words dictionary.txt\n\
+  ```\n\n或者，将其移动到 `Documents` 目录并同时重命名，使用：\n\n```\nmv -iv words/dictionary.txt\n```\n\
+  \n#### 重命名目录\n\n将上述 复制的 `bash` 目录重命名为 `bash-commands`，使用：\n\n```\nmv -iv bash-commands\n\
+  ```\n\n#### 注意事项\n\n### 如果文件存在会怎样？\n\n你会看到提示要求你确认覆盖文件。输入 `y` 并按回车键继续：\n\n```\nmv:\
+  \ overwrite 'Documents/words'? y\nrenamed 'words' -> 'Documents/words'\n```\n\n\
+  只需在提示处按回车键即可取消。\n\n### 如果目录存在会怎样？\n\n`mv` 只有在目录为空时才会覆盖。你可以：\n\n* 将文件复制 到目标目录\n\n\
+  * 重命名目标目录\n\n#### 为 `mv` 添加别名\n\n与其每次使用命令时都输入 `mv-iv`，你可以在 `~/.bash_aliases` 文件中为命令添加别名。\n\
+  \n例如：\n\n```\nalias mv='mv -iv'\n```\n\n现在，当你输入 `mv` 时，实际上使用的是 `mv -iv`。\n\n# 4.2.14.\
+  \ `rm` — 删除文件或目录\n\n使用 `rm` 命令，你可以删除文件或目录。\n\n命令的基本格式是：\n\n```\nrm source\n```\n\
+  \n更安全的方法是给命令添加 `-iv` 选项：\n\n```\nrm -iv source\n```\n\n使用 `-i`（交互式），如果文件或目录已存在，`rm`\
+  \ 在删除前将要求你进行确认。`-v`（详细）将在屏幕上打印命令的操作。\n\n为了方便起见，你可以添加别名。\n\n#### 示例文件\n\n要遵循以下示例，你需要使用\
+  \ cp 命令将以下文件复制到家目录：\n\n```\ncp -v /usr/share/dict/words ~\ncp -rv /usr/share/doc/bash\
+  \ ~\n```\n\n`~` 是家目录的快捷方式。\n\n#### 删除文件\n\n简单的用例是删除文件。\n\n#### 删除文件\n\n例如，删除上述 复制的\
+  \ `words` 文件，使用：\n\n```\nrm -iv words\n```\n\n输出：\n\n```\nremoved 'words'\n```\n\
+  \n#### 删除目录\n\n同样，删除上述 复制的 `bash` 目录，使用：\n\n```\nrm -iv bash\n```\n\n输出：\n\n```\n\
+  removed 'bash'\n```\n\n#### 删除目录\n\n在这种情况下，你想删除一个目录。\n\n#### 删除空目录\n\n要删除空目录，使用：\n\
+  \n```\nrm -iv directory\n```\n\n### 删除带有内容的目录\n\n要删除包含文件的目录，使用 `-r` 选项：\n\n```\n\
+  rm -ivr directory\n```\n\n#### 注意事项\n\n### 如果文件存在会怎样？\n\n你会看到提示要求你确认删除文件。输入 `y`\
+  \ 并按回车键继续：\n\n```\nrm: remove regular file 'filename'? y\nremoved\n```\n\n只需在提示处按回车键即可取消。\n\
+  \n### 如果目录存在会怎样？\n\n`rm` 只有在目录为空时才会删除。要进行递归删除，使用 `-r` 选项。\n\n#### 为 `rm` 添加别名\n\n\
+  与其每次使用命令时都输入 `rm-iv`，你可以在 `~/.bash_aliases` 文件中为命令添加别名。\n\n例如：\n\n```\nalias rm='rm\
+  \ -iv'\n```\n\n现在，当你输入 `rm` 时，实际上使用的是 `rm -iv`。\n\n# 4.2.15. `echo` — 显示文本或值\n\n\
+  使用 `echo` 命令，你可以打印文本或变量的值。\n\n命令的基本格式是：\n\n```\necho text_or_value\n```\n\n####\
+  \ 显示文本\n\n要在屏幕上打印文本，使用 `echo` 后接你想打印的内容：\n\n```\necho \"Hello, This is echo!\"\n\
+  ```\n\n输出：\n\n```\nHello, This is echo!\n```\n\n#### 显示变量值\n\n你还可以使用 `echo` 显示环境变量的值。\n\
+  \n例如：\n\n```\necho $PATH\n```\n\n`PATH` 中的 `$` 表示这是一个变量。\n\n输出：\n\n```\n/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin\n\
+  ```\n\n`PATH` 包含了用于查找程序或命令的路径（目录）列表。你可以在 `~/.bashrc` 中设置或修改环境变量。\n\n# 4.3. 其他有用命令\n\
+  \n这些是你可能需要的命令。\n\n* 4.3.1. `df` — 报告磁盘使用情况\n* 4.3.2. `du` — 估算文件或目录的磁盘使用情况\n* 4.3.3.\
+  \ `find` — 搜索文件\n* 4.3.4. `free` — 查看空闲和已内存\n* 4.3.5. `locate` — 使用名称查找文件\n* 4.3.6.\
+  \ `which` — 定位命令\n\n# 4.3.1. `df` — 报告磁盘使用情况\n\n`df` 命令将报告连接到系统的所有存储设备的已用和可用磁盘空间。\n\
+  \n例如，要查找 `/` — 根文件系统的磁盘使用量，你可以使用命令：\n\n```\ndf -h /\n```\n\n输出：\n\n\n\n\n\n```\n\
+  Filesystem               Size  Used Avail Use% Mounted on\n/dev/mapper/vgmint-root\
+  \   28G  6.9G   20G  26% /\n```\n\n`-h` 选项使输出具有人类可读性。如果没有此选项，可用磁盘空间将报告为 `20600196`\
+  \ 而不是 `20G`。\n\n# 4.3.2. `du` — 估计文件或目录的磁盘占用\n\n计算文件或目录占用的磁盘空间。\n\n例如，要计算家目录下文件占用的磁盘空间，可以使用以下命令：\n\
+  \n```\ndu -sh ~\n```\n\n输出：\n\n```\n7.4G .\n```\n\n`-s` 选项打印摘要，而不是打印每个文件占用的空间。\n\
+  \n`-h` 使输出具有人类可读性。\n\n# 4.3.3. `find` — 搜索文件\n\n使用文件名、文件类型等搜索文件。\n\n例如，要在主目录中查找文件名包含\
+  \ `.bash` 的文件，可以使用以下命令：\n\n```\nfind ~ -name \".bash*\"\n```\n\n输出：\n\n```\n/home/user/.bashrc\n\
+  /home/user/.bash_history\n/home/user/.bash_logout\n```\n\n注意\n\n这里的 `~` 是家目录的快捷方式。\n\
+  \n`.bash*` 中的星号 (`*`) 起通配符的作用。\n\n`find` 命令不使用数据库，因此与 `locate` 相比，搜索速度会较慢。然而，它可以识别最近创建或修改的文件。\n\
+  \n# 4.3.4. `free` — 查看空闲和使用的内存\n\n通过 `free`，你可以找到空闲和使用的内存（RAM）以及交换空间。\n\n用法：\n\n\
+  ```\nfree -h\n```\n\n输出：\n\n```\n total        used        free      shared  buff/cache\
+  \   available\nMem:          3.8Gi       618Mi       1.3Gi       7.0Mi       1.9Gi\
+  \       3.0Gi\nSwap:         979Mi          0B       979Mi\n```\n\n`-h` 选项使输出具有人类可读并显示相应的单位。在上面的示例中，空闲物理内存（RAM）的数量为\
+  \ 1.3 GiB（二进制字节）。\n\n# 4.3.5. `locate` — 使用文件名查找文件\n\n使用文件名搜索文件。这种方法非常快，因为它使用了文件名数据库。\n\
+  \n例如：\n\n```\nlocate bashrc\n```\n\n输出：\n\n```\n/etc/bash.bashrc\n/etc/skel/.bashrc\n\
+  /home/user/.bashrc\n...\n```\n\n注意\n\n这种方法可能找不到最近创建或修改的文件。\n\n较新的文件可能尚未包含在数据库中。要手动更新数据库，你可以运行命令：\n\
+  \n```\nsudo updatedb\n```\n\n或者，你可以使用 `find` 命令来搜索新文件。\n\n# 4.3.6. `which` — 定位命令\n\
+  \n如果命令存在于搜索路径（即 `$PATH`）中，`which` 命令会打印该命令的完整路径。\n\n例如：\n\n```\nwhich python3\n\
+  ```\n\n输出：\n\n```\n/usr/bin/python3\n```\n\n# 4.4. 使用 nano 编辑文本文件\n\n`GNU` `nano`\
+  \ 是一个命令行文本编辑器，具有撤销/重做、语法高亮、交互式搜索和替换等功能。\n\n要打开程序，请在终端会话中输入 `nano`。\n\n*   4.4.1.\
+  \ 创建新文件\n*   4.4.2. 从剪贴板粘贴文本\n*   4.4.3. 保存更改\n*   4.4.4. 退出 nano\n\n# 4.4.1. 创建新文件\n\
+  \n要创建一个新文件，使用 `nano` 后跟想要创建的文件名。\n\n例如：\n\n```\nnano exercise.txt\n```\n\n这将以写入模式打开文件（图\
+  \ 80）。\n\n![../../_images/nano-create-file.png](img/nano-create-file.png)\n\n在 nano\
+  \ 中创建文件\n\n在此阶段你可以开始输入文本。\n\n# 4.4.2. 从剪贴板粘贴文本\n\n要从不同的程序（例如浏览器）复制并粘贴文本到正在 nano\
+  \ 编辑的文件中，执行以下操作：\n\n1.  使用 `Ctrl+c` 将文本复制到剪贴板\n2.  在 nano 中，将光标移动到你想粘贴文本的位置\n3.\
+  \  使用快捷键 `Shift+Ctrl+v` 粘贴文本\n\n# 4.4.3. 保存更改\n\n要保存文件，使用快捷键 `Ctrl+o`。\n\n这对应于底部显示的\
+  \ `^O` 写入（图 81）。这里的 `^` 代表 `Ctrl` 键。\n\n![../../_images/nano-write-out.png](img/nano-write-out.png)\n\
+  \n要保存更改时使用写入功能\n\n底部将显示如下的提示符（图 82）：\n\n```\nFile Name: exercise.txt\n```\n\n![../../_images/nano-create-file.png](img/nano-create-file.png)\n\
+  \n要保存的文件名\n\n按 `Enter` 键确认文件名。\n\n# 4.4.4. 退出 nano\n\n要退出 nano，按 `Ctrl+x`。如果你进行了更改，它会询问你是否要保存。\n\
+  \n\n\n\n\n#### 2. 进入该目录\n\n#### 3. 下载查询序列\n\n#### 4. 查看下载的序列（可选）\n\n#### 创建新目录 —\
+  \ `mkdir`\n\n为了将与此项目相关的输入和输出文件放在一起，使用 `mkdir` 命令在你的主目录下创建一个新目录。\n\n```\nmkdir -p\
+  \ ~/projects/sars-cov-2\n```\n\n这里：\n\n`~` 是主目录的快捷方式。\n\n`-p` 在必要时创建父目录。在这种情况下，`projects`\
+  \ 目录不存在，因此也会被创建。\n\n#### 切换目录 — `cd`\n\n使用 `cd` 命令进入新创建的目录：\n\n```bash\ncd ~/projects/sars-cov-2\n\
+  ```\n\n#### 下载序列 — `wget`\n\n要下载序列文件，你可以使用 `wget` 命令并将下载链接作为参数。在这种情况下，下载链接对应 FASTA\
+  \ 格式文件的 URL（参见示例数据）：\n\n```bash\nwget https://www.uniprot.org/uniprot/P0DTC2.fasta\n\
+  ```\n\n下载完成后，你可以使用 `ls` 命令验证文件是否存在：\n\n```bash\nls -l\n```\n\n输出：\n\n```\ntotal\
+  \ 4\n-rw-rw-r-- 1 user user 1414 Feb 10 00:00 P0DTC2.fasta\n```\n\n#### 查看下载的序列\
+  \ — `cat` 或 `less`\n\n由于 `P0DTC2.fasta` 是 FASTA 格式——一种纯文本格式，你可以使用 `cat` 命令查看文件内容：\n\
+  \n```bash\ncat P0DTC2.fasta\n```\n\n输出：\n\n```\n>sp|P0DTC2|SPIKE_SARS2 Spike glycoprotein\
+  \ OS=Severe acute respiratory syndrome coronavirus 2 OX=2697049 GN=S PE=1 SV=1\n\
+  MFVFLVLLPLVSSQCVNLTTRQQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFS\nNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIV\n\
+  NNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLE\nGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQT\n\
+  LLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSETK\nCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISN\n\
+  CVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD\nYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPC\n\
+  NGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVN\nFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITP\n\
+  GTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSY\nECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTI\n\
+  SVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQE\nVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSIEDLLFNKVTLADAGFIKQYGDC\n\
+  LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAM\nQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALN\n\
+  TLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRA\nSANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPA\n\
+  ICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDP\nLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDL\n\
+  QELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD\nSEPVLKGVKLHYT\n```\n\
+  \n为了为了更好的控制，你可以使用 `less` 命令代替 `cat`。\n\n# 4.5.5. 下载蛋白质序列数据库\n\n你可以按照以下步骤下载并准备蛋白质序列数据库：\n\
+  \n1. 创建新目录\n2. 进入该目录\n3. 下载数据库压缩包\n4. 解压缩（或提取）数据库压缩包\n5. 格式化数据库\n\n#### 创建新目录 —\
+  \ `mkdir`\n\n为了将所有 BLAST 数据库放在同一个地方，使用 `mkdir` 命令创建一个目录存储它们：\n\n```bash\nmkdir databases\n\
+  ```\n\n#### 切换目录 — `cd`\n\n使用 `cd` 命令进入新创建的目录：\n\n```bash\ncd databases\n```\n\n\
+  #### 下载数据库压缩包 — `wget`\n\n访问 UniProt 网站上的[下载](https://www.uniprot.org/downloads)页面。导航到\
+  \ `UniProtKB` 部分。点击 `Reviewed (Swiss-Prot)` 对应的 `fasta` 下载链接并复制。\n\n要下载数据库，你可以使用\
+  \ `wget` 命令并将链接作为参数：\n\n```bash\nwget https://ftp.uniprot.org/pub/databases/current_release/uniprot_sprot.gz\n\
+  ```\n\n下载完成后，会在当前目录下找到一个名为 `uniprot_sprot.gz` 的文件。你可以使用 `ls` 命令验证它是否存在：\n\n```bash\n\
+  ls -lh\n```\n\n输出：\n\n```\ntotal 86\n-rw-rw-r-- 1 user user 86M Feb 10 15:00 uniprot_sprot.gz\n\
+  ```\n\n由于该文件是压缩格式 (`.gz`)，你需要对其解压。\n\n#### 解压缩数据库压缩包 — `gunzip`\n\n要解压缩上一步下载的数据库压缩包，可以使用\
+  \ `gunzip` 命令。默认情况下，`gunzip` 会删除原始文件。如果你想保留原始文件 (`.gz`)，请在 `gunzip` 中包含 `-k` (keep\
+  \ input files) 选项。提供文件名：\n\n```bash\ngunzip uniprot_sprot.gz\n```\n\n提取完成后，会在同一目录下找到\
+  \ FASTA 格式的数据库文件：\n\n```bash\nls -lh\n```\n\n输出：\n\n```\ntotal 267M\n-rw-rw-r--\
+  \ 1 user user 267M Feb 10 15:00 uniprot_sprot.fasta\n```\n\n#### 查看数据库\n\n由于提取出的数据库文件很大，你可以使用\
+  \ `head` 命令查看文件的前几行：\n\n```bash\nhead -n 5 uniprot_sprot.fasta\n```\n\n输出：\n\n```\n\
+  >sp|Q6GZX4|001R_FRG3 Putative transcription factor 001R OS=Frog virus 3 (isolate\
+  \ Goha) OX=654924 GN=FV3-001R PE=4 SV=1\nMAFSAEDVLKEYDRRRMEALLLSLYYPNDRKLLDYKEWSPPRVQECPKAPVEWNNPPS\n\
+  EKGLIVGHFSGIKYKGEKAASEVDVNKMCCWVSKFKDAMRRYQGITCKIPGKVLSDLD\nAKIKAYNLTVEGGFRYSRVTKQHVAAFLKELRHSKQYENVLIHYILTDKRVDIQHL\n\
+  EKDLVKDFVESAHRMRQMINVKYILYQLLHHGPDGS\n```\n\n或者，可以使用 `less` 命令逐页查看：\n\n```bash\n\
+  less uniprot_sprot.fasta\n```\n\n如果你想统计数据库中的序列数量，可以使用 `grep` 命令。\n\n```bash\ngrep\
+  \ \">\" -c uniprot_sprot.fasta\n```\n\n输出：\n\n```\n564277\n```\n\n`grep` 的 `-c`\
+  \ 选项统计给定搜索字符串（在此情况下为 `>`）在输入文件中出现的次数。FASTA 格式的序列以 `>` 开头，，因此，。序列序列序列格式。数据库 —格式格式序列\
+  \ — `makeblastdb`\n\n数据库在用于 BLAST 搜索之前需要进行格式化。你可以使用 `makeblastdb` 命令对其进行格式化，它是 NCBI\
+  \ BLAST+ 软件包的一部分。\n\n该命令有多个选项。例如：\n\n```bash\nmakeblastdb -in uniprot_sprot.fasta\
+  \ -parse_seqids \\\n-title \"Swiss-Prot\" -dbtype prot -out swissprot\n```\n\n注意：`\\\
+  ` 字符将长命令分成多行。\n\n输出：\n\n```\n Building a new DB, current time: 03/24/2021 15:12:50\n\
+  \ New DB name:   /home/user/databases/swissprot\n New DB title:  Swiss-Prot\n Sequence\
+  \ type: Protein\n Keep MBits: T\n Maximum file size: 1000000000B\n Adding sequences\
+  \ from FASTA; added 564277 sequences in 47.507 seconds.\n```\n\n选项含义：\n\n- `-in`:\
+  \ 包含输入序列的文件名。\n- `-parse_seqids`: 从输入文件中解析序列标识符。这些标识符将显示在搜索结果中。\n- `-title`: 数据库的描述性名称。\n\
+  - `-dbtype`: 输入序列的类型——接受的值为 `prot`（蛋白质）和 `nucl`（核苷酸）序列。\n- `-out`: 此处的值将用于命名输出文件。这也是你在进行搜索时需要使用的数据库名称（参见输出中的新数据库名称）。\n\
+  \n格式化完成后，你会在 `databases` 目录下发现以下文件：\n\n```bash\nls -lh\n```\n\n\n\n\n\n```\ntotal\
+  \ 585M\n-rw-rw-r-- 1 user user 100M Mar 24 15:13 swissprot.phr\n-rw-rw-r-- 1 user\
+  \ user 4.4M Mar 24 15:13 swissprot.pin\n-rw-rw-r-- 1 user user 2.2M Mar 24 15:13\
+  \ swissprot.pog\n-rw-rw-r-- 1 user user  18M Mar 24 15:13 swissprot.psd\n-rw-rw-r--\
+  \ 1 user user 411K Mar 24 15:13 swissprot.psi\n-rw-rw-r-- 1 user user 195M Mar 24\
+  \ 15:13 swissprot.psq\n-rw-rw-r-- 1 user user 267M Feb 10 15:00 uniprot_sprot.fasta\n\
+  ```\n\n# 4.5.6. 使用查询序列搜索数据库\n\n在下载了查询序列并下载且格式化数据库后，你可以开始进行 BLAST 搜索。\n\n首先，进入包含查询序列的目录：\n\
+  \n```\ncd ~/projects/sars-cov-2\n```\n\n现在，使用查询序列和数据库的完整路径运行 `blastp` 命令：\n\n```\n\
+  blastp -query P0DTC2.fasta \\\n-db /home/user/databases/swissprot \\\n-out blastp-results.txt\
+  \ \\\n-outfmt \"7 sacc stitle qlen slen pident\"\n```\n\n各个选项的含义：\n\n`-query`\n\n\
+  查询序列的路径。\n\n`-db`\n\n序列数据库的完整路径。\n\n`-out`\n\n保存结果的文件。\n\n`-outfmt`\n\n输出文件的格式。此将使用格式选项\
+  \ `7`（制表符分隔文本）并包含以下信息：\n\n* 匹配序列的访问号和描述（`sacc` 和 `stitle`），\n* 查询序列和目标序列的长度（`qlen`\
+  \ 和 `slen`），\n* 匹配的一性百分比（`pident`）。\n\n数据库搜索完成后，你可以打开 `blastp-results.txt` 查看结果：\n\
+  \n```\nless -S blastp-results.txt\n```\n\n`less` 命令的 `-S` 选项会禁用自动换行。\n\n输出：\n\n\
+  ```\n#### BLASTP 2.9.0+\n#### Query: sp|P0DTC2|SPIKE_SARS2 Spike glycoprotein OS=Severe\
+  \ acute respiratory syndrome coronavirus 2 OX=2697049 GN=S PE=1 SV=1\n#### Database:\
+  \ /home/user/databases/swissprot\n#### Fields: subject acc., subject title, query\
+  \ length, subject length, % identity\n# 88 hits found\nP0DTC2      Spike glycoprotein\
+  \ OS=Severe acute respiratory syndrome coronavirus 2 OX=2697049 GN=S PE=1 SV=1 1273\
+  \    1273    100.000\nP59594      Spike glycoprotein OS=Severe acute respiratory\
+  \ syndrome coronavirus OX=694009 GN=S PE=1 SV=1    1273    1255    76.038\nQ3LZX1\
+  \      Spike glycoprotein OS=Bat coronavirus HKU3 OX=442736 GN=S PE=3 SV=1     1273\
+  \    1242    76.041\nQ3I5J5      Spike glycoprotein OS=Bat coronavirus Rp3/2004\
+  \ OX=349344 GN=S PE=1 SV=1 1273    1241    75.334\nQ0Q475      Spike glycoprotein\
+  \ OS=Bat coronavirus 279/2005 OX=389167 GN=S PE=3 SV=1 1273    1241    74.745\n\
+  ...\n```\n\n# 4.6. 注意事项\n\n## 4.6.1. 向 PATH 添加目录\n\n`PATH` 变量存储了搜索命令的目录列表。如果你有一个命令不在列表中，你需要将其添加到\
+  \ `PATH`。\n\n你可以使用 `echo` 命令显示 `PATH` 的当前值：\n\n```\necho $PATH\n```\n\n输出：\n\n```\n\
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin\n\
+  ```\n\n要修改 `PATH` 并添加目录，可以按照以下步骤操作。此示例将 `/home/user/.local/bin` 添加到 `PATH`。\n\n\
+  注意\n\n编辑 `PATH` 时需要小心。你还需要确保列表中包含 `$PATH`，否则你将无法访问任何命令！\n\n1. 用文本编辑器打开 `$HOME/.bashrc`。\n\
+  2. 在文件末尾添加以下行。将你想添加的目录用冒号分隔。列表应以 `$PATH` 结尾。\n\n```\nPATH=/home/user/.local/bin:$PATH\n\
+  ```\n\n3. 使用 `echo` 验证更改：\n\n```\necho $PATH\n```\n\n输出：\n\n```\n/home/user/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin\n\
+  ```\n\n## 4.6.2. 处理空格\n\n创建带有空格的目录时，最好使用下划线（`_`）或连字符（`-`）来分隔单词。\n\n例如：\n\n```\n\
+  mkdir \"Sample Data\"\n```\n\n进入该目录：\n\n```\ncd \"Sample Data\"\n```\n\n打印当前目录：\n\
+  \n```\npwd\n```\n\n输出：\n\n```\n/home/user/Sample Data\n```\n\n\n\n\n\n— 存储在你的计算机上，而如果你使用公共实例，它将被存储在服务器上，且可能未加密\
+  \ 2。\n\n### 访问更多工具\n— 通过在你的本地实例上安装，来获取公共服务器上未安装的工具。\n\n### CPU 和存储限制\n— 取决于你的计算机，而在公共服务器上，对每个用户的\
+  \ CPU 和存储使用量有限制 2。\n\n2(1,2)\n\n情况在 [`usegalaxy.org`](https://usegalaxy.org) ——\
+  \ 主要 Galaxy 实例也是如此。如需更多信息，请阅读 [`galaxyproject.org/main/#user-data-and-job-quotas`](https://galaxyproject.org/main/#user-data-and-job-quotas)。\n\
+  \n# 5.2. 在你的计算机上运行 Galaxy\n\n要在你的计算机上运行 Galaxy 的本地实例，你需要：\n\n1. 检查你的计算机是否符合所有要求\n\
+  2. 获取 Galaxy 的最新发布\n3. 创建 Python 虚拟环境\n4. 启动 Galaxy\n\n在此阶段，你将能够在浏览器中打开 Galaxy 的网络界面并开始使用包含的工具。\n\
+  \n注意\n为了利用 Galaxy 提供的所有功能（如安装额外工具），你还需要执行以下操作：\n\n5. 注册用户账户\n6. 为用户授予管理员权限\n\n*\
+  \ 5.2.1. 检查系统要求\n* 5.2.2. 获取 Galaxy 的最新发布\n* 5.2.3. 创建 Python 虚拟环境\n* 5.2.4. 启动\
+  \ Galaxy\n* 5.2.5. 停止 Galaxy\n\n# 5.2.1. 检查系统要求\n\n在运行 Galaxy 之前，你需要：\n\n1. 安装 Git\
+  \ 和 Python virtualenv 模块\n2. 检查是否有足够的磁盘空间\n3. 确保 Conda 环境未激活\n\n## 安装 Git 和 Python\
+  \ virtualenv 模块\n\nGit 对于从 GitHub 获取 Galaxy 的最新版本源码是必要的。Python virtualenv 模块对于为运行\
+  \ Galaxy 设置一个隔离的虚拟环境是必要的。\n\n要安装它们，请使用 Software Manager 或 apt，并搜索并安装以下包：\n\n1. `git`\n\
+  2. `python3-venv`\n\n## 检查可用磁盘空间\n\n初始设置至少需要 5 GB 的可用磁盘空间。对于你的分析以及你可能从 Galaxy tool\
+  \ shed 安装的工具，将更多空间。\n\n要检查可用磁盘空间，你可以使用 Disk Usage Analyzer 或 `df 命令。\n\n## 确保 Conda\
+  \ 环境未激活\n\n注意\n如果你没有使用 Conda，可以忽略此项要求并继续下一步：\n\n`->` 获取 Galaxy 的最新发布\n\n如果你正在使用\
+  \ Conda，请确保在 启动 Galaxy 步骤之前没有环境处于激活状态。\n\n你可以使用以下命令取消激活的 Conda 环境：\n\n```\nconda\
+  \ deactivate\n```\n\n虽然可以使用现有的 Conda 安装安装 Galaxy，但使用 Python 的 venv 模块创建并使用虚拟环境更简单。\n\
+  \n—\n\n在满足所有要求后，你可以继续使用 Git 获取 Galaxy 的最新发布。\n\n# 5.2.2. 获取 Galaxy 的最新发布\n\n创建一个目录来设置\
+  \ Galaxy 并进入该目录：\n\n```\nmkdir ~/programs\ncd ~/programs\n```\n\n这里的 `~` 是你家目录的快捷方式。\n\
+  \n注意\n此目录并非专门为 Galaxy 设置。你可以用它安装或存储其他程序。\n\n从 GitHub 项目仓库获取 Galaxy 的最新发布。编写时的最新版本是\
+  \ 21.01。\n\n你可以使用 `git` 命令获取（或克隆）仓库：\n\n```bash\ngit clone -b release_21.01 https://github.com/galaxyproject/galaxy.git\n\
+  ```\n\n`git clone` 的 `-b` 选项会检出指定的分支——在这种为 `release_21.01`。\n\n输出：\n```\nCloning\
+  \ into 'galaxy'...\nremote: enumerating objects: 364, done.\nremote: Counting objects:\
+  \ 100% (364/364), done.\nremote: Compressing objects: 100% (232/232), done.\nremote:\
+  \ receiving objects: 497693 (delta 184), reused 237 (delta 131), 520.44 MiB | 3.89\
+  \ MiB/s, done.\nresolving deltas: 100% (391502), done.\npacking files: 100% (5826),\
+  \ done.\n```\n这将取决于你的网络连接需要一些时间。完成后，你将在当前目录下找到一个名为 `galaxy` 的目录。\n\n# 5.2.3. 创建\
+  \ Python 虚拟环境\n\n在这一步中，你将使用 Python 3 `venv` 模块为 Galaxy 创建隔离的环境。\n\n注意\n关于创建和使用虚拟环境的详细指南，请阅读：\n\
+  `->` Python 环境\n\n创建环境：\n\n1. 进入 `galaxy` 目录：\n```bash\ncd galaxy\n```\n2. 使用 `.venv`\
+  \ 作为名称创建虚拟环境：\n```bash\npython3 -m venv .venv\n```\n注意：`.venv` 中的点 `.` 是重要的。\n\n\
+  3. 激活虚拟环境：\n```bash\nsource .venv/bin/activate\n```\n你的 shell 提示符现在将变为包含 `(.venv)`：\n\
+  ```\n(.venv) user@cookbook:~/galaxy$\n```\n4. 安装或升级 Python 构建工具：\n```bash\npip3\
+  \ install -U setuptools wheel\n```\n这一步是必要的，这样额外的包就可以无问题地构建和安装。\n\n5. 最后，退出虚拟环境：\n\
+  ```bash\ndeactivate\n```\n\n在下一步中，启动脚本将检测此环境并使用它安装运行 Galaxy 所需的所有依赖项。\n\n# 5.2.4.\
+  \ 启动 Galaxy\n\n在 `galaxy` 目录中，使用命令运行启动 shell 脚本：\n\n```bash\nsh run.sh\n```\n\n\
+  注意\n第一次运行时，此脚本将需要一些时间来完成。后续运行将更快。\n\n输出：\n```\nActivating virtualenv at .venv\n\
+  Requirement already satisfied: pip>=8.1 in .venv/lib/python3.8/site-packages (20.0)\n\
+  ...\n```\n当你在终端中看到如下消息时，Galaxy 已准备就绪：\n\n```\nStarting server in PID 11466.\nserving\
+  \ on http://localhost:8080\n```\n*保持终端窗口打开。*\n\n打开浏览器窗口并在地址栏输入 [`localhost:8080`](http://localhost:8080)。\n\
+  \n你将看到你的本地 Galaxy 实例的主页 图 85。\n\n![../../_images/galaxy-home.png](img/galaxy-home.png)\n\
+  图 85 本地 Galaxy 实例的主页\n\n你可以开始探索可用工具，甚至上传数据并开始使用它们。但是，现在注册用户账户 是个好主意，这样当你清除浏览器历史就不会丢失数据。\n\
+  \n# 5.2.5. 停止 Galaxy\n\n要停止 Galaxy，打开运行 `sh run.sh` 命令的终端窗口 图 86。\n\n![../../_images/galaxy-terminal.png](img/galaxy-terminal.png)\n\
+  图 86 运行 Galaxy 的终端窗口\n\n使用快捷键 `Ctrl+c` 停止 Galaxy，即按住 `Ctrl` 键然后按 `c` 键。\n\n当 Galaxy\
+  \ 停止运行后，你将在终端中看到已关闭的 图 87 消息。\n\n![../../_images/galaxy-shutdown.png](img/galaxy-shutdown.png)\n\
+  图 87 Galaxy 已完成关闭\n\n现在你可以关闭终端窗口了。\n\n# 5.3. 注册用户账户\n\n在 Galaxy 主页上，点击导航栏中的“登录或注册”链接\
+  \ 图 88。\n\n![../../_images/user-login-register.png](img/user-login-register.png)\n\
+  图 88 点击登录或注册\n\n你将被带到登录页面。\n\n点击页面底部的“在此注册”链接 图 89。\n\n\n\n\n\n![../../_images/user-register-here.png](img/user-register-here.png)\n\
+  \n图 89 点击“此处注册”链接\n\n在“创建 Galaxy 账户”页面上，输入您的电子邮件地址、密码及其确认密码，以及一个公共名称（图 90）。\n\n\
+  #### 注意事项\n此用户账户与您在 `usegalaxy.org`或其他 Galaxy 服务器上的账户没有关联。\n\n它仅存在于您的本地 Galaxy 实例中。您也可以忽略页面顶通知，该通知不适用于本地实例。\n\
+  \n![../../_images/user-registration-page.png](img/user-registration-page.png)\n\n\
+  图 90 用户账户创建页面\n\n点击“创建（Create）”按钮继续。\n\n如果账户创建成功，您将会被登录并重定向到您的 Galaxy 实例的主页。\n\n\
+  *   5.3.1\\. 管理您的账户\n\n# 5.3.1\\. 管理您的账户\n\n您可以通过点击导航栏中的用户名来管理账户（图 91）。\n\n![../../_images/user-logged-in.png](img/user-logged-in.png)\n\
+  \n图 91 以用户身份登录\n\n如果您将从 Galaxy 工具共享库（tool shed）安装额外的工具，则此用户账户需要管理员权限。您可以在下一步中进行配置。\n\
+  \n# 5.4\\. 为用户授予管理员权限\n\n要为用户授予管理员权限，您需要为 Galaxy 创建一个配置文件，并将用户的电子邮件地址添加到管理员列表中，然后重启\
+  \ Galaxy 以使更改生效。\n\n*   5.4.1\\. 创建配置文件\n*   5.4.2. 将用户添加到管理员用户列表\n*   5.4.3. 重启\
+  \ Galaxy\n*   5.4.4\\. 验证管理员访问\n\n# 5.4.1\\. 创建配置文件\n\nGalaxy 包含了一个示例配置文件——`galaxy.yml.sample`。\n\
+  \n要使用示例文件作为模板创建配置文件，请按照以下步骤操作（参见图 92）：\n\n1.  使用文件管理器导航到 `$HOME/programs/galaxy/config`\
+  \ 目录\n2.  双击 `galaxy.yml.sample` 在文本编辑器中打开它\n3.  将其保存为同一目录下的 `galaxy.yml`\n\n![../../_images/galaxy-yml-sample.png](img/galaxy-yml-sample.png)\n\
+  \n图 92 复制 Galaxy 的示例配置文件\n\n#### 注意事项\n或者，您可以在终端中使用 `cp` 命令来复制文件。\n\n假设您在 `$HOME/programs/galaxy`\
+  \ 目录下，请执行以下操作：\n\n```\ncp config/galaxy.yml.sample config/galaxy.yml\n```\n\n# 5.4.2\\\
+  . 将用户添加到管理员用户列表\n\n在文本编辑器中打开 `galaxy.yml` 的情况下，搜索 `admin_users` 设置。\n\n您将发现以下部分：\n\
+  \n```\n# Administrative users - set this to a comma-separated\n# list of valid Galaxy\
+  \ users (email addresses). These\n# users will have access to the Admin section\
+  \ of the\n# server, and will have access to create users,\n# groups, roles, libraries,\
+  \ and more.  For more\n# information, see: https://galaxyproject.org/admin/\n#admin_users:\
+  \ null\n```\n\n通过删除开头的 `#` 符号来取消注释 `admin_users`。\n\n将 `null` 替换为用户账户的电子邮件地址。\n\n\
+  例如：\n\n```\nadmin_users: user@example.org\n```\n\n保存文件。\n\n# 5.4.3\\. 重启 Galaxy\n\
+  \n如果 Galaxy 正在运行，请停止 Galaxy，然后重新启动它。\n\n# 5.4.4\\. 验证管理员访问\n\n当您再次登录时，您将在导航栏中看到“管理员（Admin）”链接（图\
+  \ 93）。\n\n![../../_images/admin-link.png](img/admin-link.png)\n\n图 93 导航栏中的管理员链接\n\
+  \n如果您点击“管理员”，您将进入管理页面（图 94）。\n\n![../../_images/admin-home.png](img/admin-home.png)\n\
+  \n图 94 Galaxy 管理页面\n\n## 安装工具\n\n要安装新工具，请点击以下链接：\n\n工具管理（Tool Management） ‣ 安装与卸载（Install\
+  \ and Uninstall）\n\n您将进入工具管理页面（图 95）。\n\n![../../_images/admin-tool-management.png](img/admin-tool-management.png)\n\
+  \n图 95 工具管理页面\n\n从这里，您可以从 Galaxy 主工具共享库中搜索并安装工具。\n\n# 6. 文档\n\n用于管理参考文献和书目、笔记等的安装及软件，\n\
+  \n*   6.1. 使用 Zotero 管理参考文献\n    *   6.1.1. 安装 Zotero\n    *   6.1.2. 从网络收集参考文献\n\
+  \    *   6.1.3. 将 Zotero 集成到 LibreOffice\n\n# 6.1. 使用 Zotero 管理参考文献\n\nZotero 是一款用于收集和组织文章和其他出版物的免费开源软件。文章可以使用收藏和标签进行组织，并包含在创建的文档中。\n\
+  \n*   6.1.1. 安装 Zotero\n*   6.1.2. 从网络收集参考文献\n*   6.1.3. 将 Zotero 集成到 LibreOffice\n\
+  \n# 6.1.1. 安装 Zotero\n\n要从网络收集参考文献，需要安装 Zotero Connector。需要额外的插件（或扩展）。请按照以下步骤安装它们。\n\
+  \n## 安装 Zotero Connector\n\n要在 Firefox 中安装 Zotero Connector：\n\n1.  从应用程序菜单打开 Zotero。\n\
+  \    浏览器将打开一个窗口，您将进入[安装页面](https://www.zotero.org/start) [https://www.zotero.org/start]。\n\
+  \    点击“安装（Install）”按钮（图 96）。\n\n    ![../../_images/1-zotero-addon-install.png](img/1-zotero-addon-install.png)\n\
+  \n    图 96 Zotero 插件安装页面\n\n2.  您现在会看到一个对话框，询问是否想要继续从 www.zotero.org 安装此插件。\n  \
+  \  点击“继续安装（Continue to Installation）”按钮继续（图 97）。\n\n    ![../../_images/2-zotero-continue.png](img/2-zotero-continue.png)\n\
+  \n    图 97 点击继续安装继续\n\n3.  您现在会看到一个包含此插件所需权限信息的对话框。\n    点击“添加（Add）”按钮继续（图 98）。\n\
+  \n    ![../../_images/3-zotero-add.png](img/3-zotero-add.png)\n\n    图 98 点击“添加”确认安装\n\
+  \n    安装现在将开始。\n\n    完成后，您将在浏览器工具栏中看到 Zotero 图标（图 99）。\n\n# 6.1.3. 将 Zotero 集成到\
+  \ LibreOffice\n\n\n\n\n\n![../../_images/4-zotero-toolbar-icon.png](img/4-zotero-toolbar-icon.png)\n\
+  \n图 99 Zotero Connector 已成功安装\n\n你现在可以开始从浏览器将文章保存到你的 Zotero 库中了。\n\n# 6.1.3 在 LibreOffice\
+  \ 中集成 Zotero\n\n为了能够在文档中插入引用和参考文献，你需要安装文字处理器插件。\n\n## 安装文字处理器插件\n\n若要在 LibreOffice\
+  \ 中安装该插件：\n\n1. 从 Zotero 的主菜单栏中，选择 `Edit`（编辑） ‣ `Preferences`（偏好）（图 100）。\n   ![../../_images/5-zotero-edit-preferences.png](img/5-zotero-edit-preferences.png)\n\
+  \   图 100 查看 Zotero 偏好\n\n2. 在打开的 Zotero 偏好对话框中，点击 `Cite`（引用）选项卡。\n   现在，点击 `Word\
+  \ Processors`（文字处理器）选项卡进行选择。\n   点击 `Install LibreOffice Add-in`（安装 LibreOffice\
+  \ 插件）按钮（图 101）。\n   ![../../_images/6-zotero-install-libreoffice-addon.png](img/6-zotero-install-libreoffice-addon.png)\n\
+  \   图 101 从 Zotero 偏好中安装 LibreOffice 插件\n\n3. Zotero LibreOffice 插件安装向导现在会打开（图 102）。\n\
+  \   ![../../_images/7-zotero-addin-intro.png](img/7-zotero-addin-intro.png)\n  \
+  \ 图 102 Zotero LibreOffice 插件安装向导\n   点击 `Next`（下一步）按钮继续。\n\n4. 在选择 LibreOffice\
+  \ 安装内容的对话框中，点击 `Manual Installation`（手动安装）（图 103）。\n   ![../../_images/8-zotero-manual-install.png](img/8-zotero-manual-install.png)\n\
+  \   图 103 点击手动安装按钮\n\n5. 文件浏览器窗口将打开，目录已设置为插件文件所在位置——`Zotero_OpenOffice_Integration.oxt`（图\
+  \ 104）。\n   ![../../_images/9-zotero-oxt-file.png](img/9-zotero-oxt-file.png)\n\
+  \   图 104 文件浏览器打开并显示插件文件位置\n\n6. 双击 `Zotero_OpenOffice_Integration.oxt`。\n   这将打开\
+  \ LibreOffice 扩展管理器，并弹出提示询问你是否想要安装该插件。\n   点击 `OK` 按钮确认（图 105）。\n   ![../../_images/10-zotero-libreoffice-ext-install.png](img/10-zotero-libreoffice-ext-install.png)\n\
+  \   图 105 在 LibreOffice 扩展管理器中点击 OK 按钮\n   插件现在将完成安装（图 106）。\n   ![../../_images/11-zotero-libreoffice-installed.png](img/11-zotero-libreoffice-installed.png)\n\
+  \   图 106 Zotero LibreOffice 插件安装成功\n   如果你重启 LibreOffice，你将在主窗口中看到 Zotero 工具栏（图\
+  \ 107）。\n   ![../../_images/12-libreoffice-zotero-toolbar.png](img/12-libreoffice-zotero-toolbar.png)\n\
+  \   图 107 LibreOffice 中的 Zotero 工具栏\n\n— 你现在可以开始在你的文档中开始插入引用和参考文献了。\n\n# 6.2 使用\
+  \ Zim 创建笔记本\n\nZim 是一个用于在桌面记录笔记的 GUI 应用。你可以用它在电脑上创建并维护个人或实验室笔记本。\n\n* 6.2.1. Zim\
+  \ 的特性\n* 6.2.2. 安装 Zim\n* 6.2.3. 创建笔记本\n* 6.2.4. 记笔记\n* 6.2.5. 导出笔记和笔记本\n* 6.2.6.\
+  \ 使用插件激活更多功能\n* 6.2.7. 获取帮助\n\n# 6.2.1 Zim 的特性\n\n使用 Zim，你可以：\n\n**创建数字笔记本**\n—\
+  \ 添加页面并使用索引页组织它们。\n\n**快速记笔记**\n— 使用所见即所得（WYSIWYG）界面 1。\n\n**插入图像**\n— 文件、符号、截图、公式等\
+  \ 2。\n\n**导出笔记**\n— 导出为 HTML、LaTeX 和 Markdown 等格式。\n\n—\n在插件的帮助下，你可以添加更多功能。\n\n\
+  1\n功能类似于 LibreOffice Writer 等文字处理器。你不需要学习新的标记语言即可使用 Zim。\n\n2\n需要在偏好设置中启用插件。\n\n\
+  # 6.2.2 安装 Zim\n\nZim 可以在发行版仓库中找到。\n\n你可以使用 软件管理器 安装它（图 108）。\n![../../_images/zim-software-manager.png](img/zim-software-manager.png)\n\
+  图 108 使用软件管理器安装 Zim\n\n# 6.2.3 创建笔记本\n\n通过点击应用程序菜单中的图标打开 Zim（图 109）。你可以使用搜索栏快速定位它。\n\
+  ![../../_images/zim-applications-menu.png](img/zim-applications-menu.png)\n图 109\
+  \ 从应用程序菜单打开 Zim\n\n当你第一次打开该程序时，你会注意到一个“添加笔记本”对话框（图 110）。\n在这里，你可以为此笔记本命名并选择一个保存笔记本的目录。\n\
+  ![../../_images/zim-add-notebook.png](img/zim-add-notebook.png)\n图 110 添加笔记本\n\n\
+  你可以接受默认设置。\n\n点击 `OK` 按钮继续。\n这将打开程序的主窗口（图 111）。\n![../../_images/zim-home.png](img/zim-home.png)\n\
+  图 111 Zim 的主窗口\n\n# 6.2.4 记笔记\n\n首页是笔记本的主页面。\n你可以在这里开始输入笔记。Zim 会自动保存更改。\n\n## 基础文本格式化\n\
+  \n在 Zim 中格式化文本与文字处理器程序类似。\n\n你可以使用 `Format` 菜单栏项并选择所需的选项（图 112）。\n![../../_images/zim-format.png](img/zim-format.png)\n\
+  图 112 格式选项\n\n### 快捷键\n\n或者，你可以使用快捷键对文本应用格式。\n例如：\n**加粗**：`Ctrl+b`\n*斜体*或*强调*：`Ctrl+i`\n\
+  上标：`Ctrl+Shift+p`\n下标：`Ctrl+Shift+b`\n\n对于标题，使用：\n一级标题：`Ctrl`\n二级标题：`Ctrl+2`\n三级标题：`Ctrl+3`\n\
+  四级标题：`Ctrl+4`\n五级标题：`Ctrl+5`\n\n## 插入图像\n\n要插入图像，你可以从菜单栏选择以下选项：`Insert` ‣ `Image`。\n\
+  在打开的对话框浏览到图像所在的目录然后选择图像（图 113）。\n![../../_images/zim-insert-image.png](img/zim-insert-image.png)\n\
+  图 113 插入图像\n\n勾选“附件”选项。这将图像复制到你的笔记本目录。\n点击 `Open` 按钮插入图像（图 114）。\n![../../_images/zim-inserted-image.png](img/zim-inserted-image.png)\n\
+  图 114 插入当前页面\n\n### 调整图像大小\n\n如果你想调整图像大小，右键点击图像并选择 `Edit Properties`（图 115）。\n![../../_images/zim-image-edit-properties.png](img/zim-image-edit-properties.png)\n\
+  图 115 编辑图像属性\n\n在打开的对话框中，更改图像的“宽度”或“高度”为所需尺寸并点击 `OK` 按钮（图 116）。\n![../../_images/zim-image-resize.png](img/zim-image-resize.png)\n\
+  图 116 更改图像的宽度或高度\n\n图像现在调整完成（图 117）。\n![../../_images/zim-image-resized.png](img/zim-image-resized.png)\n\
+  图 117 调整大小后的图像\n\n## 添加更多页面\n\n要添加更多页面，从菜单栏选择以下选项：`File` ‣ `New Page`（图 118）。\n\n\
+  注意\n\n你也可以在索引视图中右键点击页面并选择 `New Page Here`（在此处新建页面）选项。\n![../../_images/zim-new-page.png](img/zim-new-page.png)\n\
+  图 118 添加新页面\n\n\n\n\n在“新页面”对话框中为页面输入名称（图 119）并点击“确定”按钮。\n\n![../../_images/zim-new-page-name.png](img/zim-new-page-name.png)\n\
+  \n图 119 为新页面输入名称\n\n新页面将出现在“索引”视图中（图 120）。\n\n![../../_images/zim-new-page-added.png](img/zim-new-page-added.png)\n\
+  \n图 120 新添加的页面\n\n### 添加子页面\n\n子页面将放置在`existing` 页面下方。\n\n要添加新的子页面：\n\n1. 在“索引”视图中选择一个现有页面\n\
+  2. 从菜单栏选择`文件` ‣ `新建子页面`\n3. 输入页面名称并点击“确定”按钮\n\n删除 删除或重命名页面\n\n要删除或重命名页面，您可以在页面上`右键点击`并选择所需的功能。\n\
+  \n# 6.2.5. 导出笔记和笔记本\n\n要导出笔记本或页面，请选择：\n\n`文件` ‣ `导出`\n\n在出现的对话框中，选择所需的选项并点击“前进”按钮（图\
+  \ 121）。\n\n![../../_images/zim-export-notebook.png](img/zim-export-notebook.png)\n\
+  \n图 121 导出笔记本\n\n在下一个屏幕上，您可以在`格式`下拉框中选择导出的笔记本或面的格式（图 122）。\n\n![../../_images/zim-export-formats.png](img/zim-export-formats.png)\n\
+  \n图 122 选择导出格式\n\n您可以保持默认值——HTML。点击“前进”按钮继续。\n\n在最后一个屏幕上，选择一个目录来保存导出的笔记本或页面。\n\n\
+  **注意**\n\n如果您使用的是默认设置，最好创建一个新的输出目录并在`输出文件夹`下选择它。\n\n点击“确定”按钮完成导出。\n\n![../../_images/zim-export-select-folder.png](img/zim-export-select-folder.png)\n\
+  \n图 123 选择输出文件夹\n\n完成后，在文件管理器中打开输出目录。\n\n`双击``Home.html` 以在浏览器中打开它（图 124）。\n\n![../../_images/zim-exported-notebook.png](img/zim-exported-notebook.png)\n\
+  \n图 124 查看导出的笔记本\n\n# 6.2.6. 使用插件激活更多功能\n\n这些是 Zim 包含的一些插件：\n\n**插入符号**\n— 插入特殊符号和字符\n\
+  \n**目录**\n— 添加一个显示当前页面目录的小部件\n\n**标签**\n— 为您的笔记添加标签\n\n**托盘图标**\n— 为系统托盘添加图标以便快速访问您的笔记本\n\
+  \n**拼写检查**\n— 添加拼写检查的支持\n\n—\n\n在开始使用它们之前，需要在设置中激活（或启用）它们。\n\n### 启用插件\n\n要启用插件：\n\
+  \n1. 选择`编辑` ‣ `首选项`\n2. 点击`插件` 选项卡\n3. 勾选您想要启用的插件对应的框（图 125）\n4. 点击“确定”按钮\n\n![../../_images/zim-plugins.png](img/zim-plugins.png)\n\
+  \n图 125 启用插件\n\n**注意**\n\n*某些插件具有额外选项。*\n\n点击插件说明方的`配置`按钮以访问这些选项。\n\n# 6.2.7. 获取帮助\n\
+  \nZim 包含一份详细的用户手册。您可以通过选择以下项来访问它（图 126）：\n\n`帮助` ‣ `内容`\n\n![../../_images/zim-help.png](img/zim-help.png)\n\
+  \n图 126 使用 Zim 的帮助\n\n# 7. 词汇表\n\n**Anaconda**\n一个免费开源的（Anaconda 个人版）Python 和 R\
+  \ 分发。它包含了`Conda 和 250 多个开源科学软件包。可以从`Anaconda Cloud 仓库安装额外的包。\n网站：[`www.anaconda.com/products/individual`](https://www.anaconda.com/products/individual)\n\
+  \n**Anaconda Cloud**\n用于 Python 和 R 软件包及笔记本的仓库。\n网站：[`anaconda.org`](https://anaconda.org)\n\
+  \n**apt**\n一个处理 Debian、Ubuntu 和其他 Linux 发行版上安装和删除软件的命令行程序。\n相关章节：\n`->` 命令行版本 (apt)\n\
+  \n**bioconda**\n一个`Conda` 包管理器的通道，包含超过 7000 个生物信息学软件软件包。\n网站：[`bioconda.github.io/`](https://bioconda.github.io/)\n\
+  \n**build-essential**\n一个安装 `make` 和 `gcc` 等构建工具的包。\n\n**Bash**\n全称为 `GNU` 项目程序的\
+  \ shell。它是 Linux 发行版中最常用的 shell。\n网站：[`www.gnu.org/software/`](https://www.gnu.org/bash/)\n\
+  \n**Bioconductor**\n用于高通量数据分析的 R 工具。\n网站：[`www.bioconductor.org/`](https://www.bioconductor.org/)\n\
+  \n**Conda**\n一个软件包和环境管理器。作为`管理器`，它可以从`Anaconda Cloud` 安装软件。`依赖`将自动安装。\n\n**cpanminus**\n\
+  一个从`CPAN` 获取、构建和安装模块的 Perl 脚本。它提供了 `cpanm` 命令。\n网站：[`bioconda.org/term-conda/`](https://bioconda.org/term-conda)\n\
+  \n**cutadapt**\n一个从高通量测序读数中查找并移除接头序列、引物、聚 A 尾或其他不需要序列的 Python 程序。\n网站：[`cutadapt.readthedocs.io`](https://cutadapt.readthedocs.io)\n\
+  \n**CPAN**\nComprehensive Archive Network 的缩写。它提供了额外的 Perl 模块进行安装（截至 2020 年有 196,752\
+  \ 个）。\n网站：[`www.cpan.org/`](https://www.cpan.org/)\n\n**CRAN**\nComprehensive R\
+  \ Archive Network 的缩写。提供 R 最新版本、软件包和文档的 FTP 和网页网络。\n网站：[`cran.r-project.org/`](https://cran.r-project.org/)\n\
+  \n**Debian**\n由自由开源软件组成的 Linux 发行版。任何人都可以免费下载、使用、修改和分发。\n网站：[`www.debian.org/`](https://www.debian.org/)\n\
+  \n**Debian package**\n可执行文件、库和文档的存档。可以在 Debian Linux 和基于 Debian 的系统（如 Ubuntu 和 Linux\
+  \ Mint）上安装。这些文件具有 `.deb` 后缀。\n\n**dependencies**\n运行程序所需的额外程序或库。\n\n**edgeR**\n\
+  用于数字基因表达数据经验分析的 R 软件包。可用`Bioconductor` 项目仓库。\n网站：[`www.bioconductor.org/packages/edgeR/`](https://www.bioconductor.org/packages/edgeR/)\n\
+  \n**FAST**\nFAST Analysis of Sequences Toolbox 的缩写。一组用 Perl 编写的工具，将 UNIX 范式扩展到生物信息记录。\n\
+  网站：[`metacpan.org/pod/FAST`](https://metacpan.org/pod/FAST)\n\n**Bio::Phylo**\n\
+  用于系统发育分析的 Perl 包。\n网站：[`metacpan.org/Bio::Phylo`](https://metacpan.org/Bio::Phylo)\n\
+  \n**commands**\n也称为二进制文件或可执行文件。\n\n**BioPython**\n用于计算生物学的 Python 工具。\n网站：[`biopython.org/`](http://biopython.org/)\n\
+  \n**Files**\nLinux Mint Cinnamon 版本的默认文件管理器。其原名为 Nemo。\n\n**gdebi**\n\n\n\n\n一个用于安装\
+  \ Debian 软件包 及其依赖项（如果有）的简单工具。\n\n网站：[`launchpad.net/gdebi`](https://launchpad.net/gdebi)\n\
+  \n## GNU\n\nGNU 是 GNU's Not Unix 的递归缩写。该项目的目标提供 100% 免费的 Unix 兼容系统。\n\n网站：[`www.gnu.org/`](https://www.gnu.org/)\n\
+  \n## GUI\n\n图形用户界面的缩写。在个人电脑上，它通常包含带有访问功能按钮的应用窗口、用于启动应用程序的图标以及用于管理设备服务的组件。\n\n##\
+  \ IDE\n\n集成开发环境的缩写。示例包括 PyCharm、RStudio 和 Eclipse。\n\n## local-lib\n\n一个 Perl 模块，用于创建一个本地目录结构以便在无需管理员权限的情况下安装带有依赖项的模块。\n\
+  \n网站：[`metacpan.org/pod/local::lib`](https://metacpan.org/pod/local::lib)\n\n##\
+  \ Linux Mint\n\n一种桌面 Linux 发行版。它基于 Debian 和 Ubuntu。\n\n网站：[`linuxmint.com/`](https://linuxmint.com/)\n\
+  \n## MEGA\n\n用于分子进化遗传学分析的软件。提供 GUI 和命令行版本。\n\n网站：[`megasoftware.net/`](https://megasoftware.net/)\n\
+  \n## MetaCPAN\n\n针对 CPAN 上可用的 Perl 包和模块的搜索引擎。\n\n网站：[`metacpan.org/`](https://metacpan.org/)\n\
+  \n## Miniconda\n\nConda 的极简发行。与带有额外软件包的替代安装程序 Anaconda 相比，它的安装速度更快且占磁盘空间更少。\n\n\
+  网站：[`docs.conda.io/en/latest/miniconda.html`](https://docs.conda.io/en/latest/miniconda.html)\n\
+  \n## Modeller\n\n一个通过满足空间限制进行比较蛋白质结构建模的程序。\n\n网站：[`salilab.org/modeller/`](https://salilab.org/modeller/)\n\
+  \n## nano\n\n一个简单的基于命令行文本编辑器。\n\n网站：[`www.nano-editor.org/`](https://www.nano-editor.org/)\n\
+  \n## OVA\n\n一种用于分发虚拟机镜像的文件格式。\n\n## pip\n\nPython 包安装器。它可以用于从 PyPI 和其他 Python 包索引安装包。\n\
+  \n网站：[`pip.pypa.io/`](https://pip.pypa.io/)\n\n## PyMOL\n\nPyMOL 是最初由 Warren L.\
+  \ Delano 开发的分子可视化系统。目前由 Schrödinger, Inc. 维护。\n\n网站：[`pymol.org/2/`](https://pymol.org/2/)\n\
+  \n## PyPI\n\nPython Package Index 的缩写。Python 编写的软件仓库（截至 2020 年 12 月有 275,161 个项目）。\n\
+  \n网站：[`pypi.org/`](https://pypi.org/)\n\n## root\n\nLinux 系统上的主要管理员账户。\n\n## R\n\
+  \n用于统计计算和图形的编程语言和免费软件环境。\n\n网站：[`r-project.org`](https://r-project.org)\n\n## RStudio\
+  \ Desktop\n\n一个用于 R 的 IDE。它包含一个 R 控制台、一个带有语法高亮的编辑器，以及用于绘图、调试和管理 R 包的工具。可以从项目网站免费下载开源版本。\n\
+  \n网站：[`rstudio.com/products/rstudio/download/`](https://rstudio.com/products/rstudio/download/)\n\
+  \n相关章节：\n\n`->` 安装 Debian 软件包\n\n## setuptools\n\n用于构建和安装 Python 包的 Python 程序。\n\
+  \n## shell\n\nshell 为操作系统的服务提供命令行界面 (CLI)。\n\n## Software Manager\n\n在 Linux Mint\
+  \ 上安装软件的默认应用程序（GUI）。其他 Linux 发行版也提供具有类似功能的应用程序。例如：\n\n* Ubuntu 上的 Ubuntu Software\n\
+  * Fedora 和其他基于 GNOME 的发行版上的 Software\n* Kubuntu 和其他基于 KDE 的发行版上的 Discover\n\n相关章节：\n\
+  \n`->` 快速简单的方法\n\n## Synaptic\n\n用于使用 apt 系统的 GUI 包管理器。\n\n网站：[`www.nongnu.org/synaptic/`](https://www.nongnu.org/synaptic/)\n\
+  \n## text editor\n\n编辑文本文件的程序。\n\n示例（GUI、Ubuntu 上的 Text Editor (gedit)、KDE Plasma\
+  \ 上的 Kwrite、Geany 等。\n\n示例（命令行）—— nano、VIM 或 vi、GNU Emacs 等。\n\n相关章节：\n\n`->` 文本编辑器\n\
+  \n## Credits\n\n- `Debian`: 用于基础。\n- `Ubuntu`: 用于基础。\n- `GNU`: 用于系统。\n- `GNOME`:\
+  \ 用于桌面。\n- `KDE`: 用于桌面。\n- `Linux`: 用于操作系统。\n- `Python`: 用于脚本。\n- `R`: 用于环境。\n-\
+  \ `apt`: 用于包管理器。\n- `nano`: 用于编辑器。\n- `VIM`: 用于编辑器。\n- `vi`: 用于编辑器。\n- `Emacs`:\
+  \ 用于编辑器。\n\n## Fonts\n\n- `Source Serif 4`: 用于文本。\n- `Fira Sans`: 用于文本。\n- `Fira\
+  \ Code`: 用于代码。\n- `Recursive Mono`: 用于代码。\n\n## Images\n\n封使用的企鹅图像来自 openclipart.org。\n\
+  \n[`openclipart.org/detail/47299/emperor-penguin`](https://openclipart.org/detail/47299/emperor-penguin)\n\
+  \n# 索引\n\nA | B | C | D | E | F | G | I | L | M | N | O | P | R | S | T | U | V\
+  \ | W\n\n## A\n\n|  \n\n*   Anaconda\n\n |  \n\n*   Anaconda Cloud\n\n\n\n\n\n*\
+  \ `apt`](#glossary.xhtml_term-apt), [[1]](#install.xhtml_index-0), [[2]](#notes.xhtml_index-0)\n\
+  \n## B\n* `Bash`](#glossary.xhtml_term-Bash)\n* `bash_aliases`](important-files.xhtml_index-1)\n\
+  * `bashrc`](#configure.xhtml_index-0), [[1]](#text-editor.xhtml_index-0), [[2]](#important-files.xhtml_index-0)\n\
+  * `Bio::Phylo`](#glossary.xhtml_term-Bio-Phylo)\n* `BiocManager`](#glossary.xhtml_term-BiocManager)\n\
+  * `bioconda`](#glossary.xhtml_term-bioconda)\n* `Bioconductor`](#glossary.xhtml_term-Bioconductor)\n\
+  * `BioPython`](#glossary.xhtml_term-BioPython)\n* `build-essential`](#glossary.xhtml_term-build-essential)\n\
+  \n## C\n* `commands`](#glossary.xhtml_term-commands)\n* `Conda`](#glossary.xhtml_term-Conda),\
+  \ [[1]](#requirements.xhtml_index-0)\n* `CPAN`](#glossary.xhtml_term-CPAN)\n* `cpanminus`](#glossary.xhtml_term-cpanminus)\n\
+  * `CRAN`](#glossary.xhtml_term-CRAN)\n* `cutadapt`](#glossary.xhtml_term-cutadapt)\n\
+  \n## D\n* `Debian`](#glossary.xhtml_term-Debian)\n* `Debian package`](#glossary.xhtml_term-Debian-package)\n\
+  * `dependencies`](#glossary.xhtml_term-dependencies)\n\n## E\n* `edgeR`](#glossary.xhtml_term-edgeR)\n\
+  \n## F\n* `FAST`](#glossary.xhtml_term-FAST)\n* `Files`](#glossary.xhtml_term-Files),\
+  \ [[1]](#files.xhtml_index-0), [[2]](#home-directory.xhtml_index-0), [[3]](#transfer-files.xhtml_index-0)\n\
+  \n## G\n* `gdebi`](#glossary.xhtml_term-gdebi)\n* `Git`](clone.xhtml_index-0)\n\
+  * `GNU`](#glossary.xhtml_term-GNU)\n* `GUI`](#glossary.xhtml_term-GUI)\n\n## I\n\
+  * `IDE`](#glossary.xhtml_term-IDE)\n\n## L\n* LibreOffice\n* `Linux Mint`](#glossary.xhtml_term-Linux-Mint)\n\
+  * `local-lib`](#glossary.xhtml_term-local-lib)\n\n## M\n* `MEGA`](#glossary.xhtml_term-MEGA)\n\
+  * `MetaCPAN`](#glossary.xhtml_term-MetaCPAN)\n* `Miniconda`](#glossary.xhtml_term-Miniconda)\n\
+  * `Modeller`](#glossary.xhtml_term-Modeller)\n\n## N\n* `nano`](#glossary.xhtml_term-nano)\n\
+  \n## O\n* `OVA`](#glossary.xhtml_term-OVA)\n\n## P\n* `pip`](#glossary.xhtml_term-pip),\
+  \ [[1]](#venv.xhtml_index-0)\n* `PyMOL`](#glossary.xhtml_term-PyMOL)\n* `PyPI`](#glossary.xhtml_term-PyPI)\n\
+  * `Python`](venv.xhtml_index-0)\n\n## R\n* `R`](#glossary.xhtml_term-R)\n* `root`](#glossary.xhtml_term-root)\n\
+  * `RStudio Desktop`](#glossary.xhtml_term-RStudio-Desktop)\n\n## S\n* `setuptools`](#glossary.xhtml_term-setuptools),\
+  \ [[1]](#venv.xhtml_index-0)\n* `shell`](#glossary.xhtml_term-shell)\n* `Software\
+  \ Manager`](#glossary.xhtml_term-Software-Manager), [[1]](#install.xhtml_index-0),\
+  \ [[2]](#index.xhtml_index-0), [[3]](#software-manager.xhtml_index-0)\n* `Synaptic`](#glossary.xhtml_term-Synaptic)\n\
+  * System Settings\n    * Date and Time\n    * Keyboard Layout\n    * Preferred Applications\n\
+  \n## T\n* `text editor`](#glossary.xhtml_term-text-editor)\n\n## U\n* `Ubuntu`](#glossary.xhtml_term-Ubuntu)\n\
+  \n## V\n* `venv`](venv.xhtml_index-0)\n* VirtualBox`\n\n## W\n* `wheel`](#glossary.xhtml_term-wheel),\
+  \ [[1]](#venv.xhtml_index-0)\n\n"
