@@ -1,0 +1,1021 @@
+- "# Linux 摄影：Linux 自动化与流化摄影工作流工具\n\n\n\n![](img/bookcover.jpg)\n\n![封面图像](img/bookcover.jpg)\n\
+  \n\n\n\n\n\n# 关于作者\n\n![](img/file0.png)\n\nDmitri Popov 多年来一直致力于 Linux 和开源软件领域的专业写作，他的文章曾发表在丹麦、英国、美国、德国和俄罗斯的杂志及网站上。他定期为\
+  \ [PIXLS.US](https://pixls.us/) 贡献内容，你可以在他的 [Coffee, Code, Camera](https://coffeecode.camera/)\
+  \ 网站上找到更多关于他的作品。\n\n# 关于本书\n\n本书提供了实用的示例，介绍如何使用极简且专业的工具自动化基于 Linux 的摄影工作流的关键阶段，涵盖管理、处理、发布和备份照片。书中演示了如何利用\
+  \ Bash Shell 脚本的力量来自动化照片的传输、重命名和组织过程。你还将学习如何使用 gThumb 管理和编辑图像，在 Darktable 中处理 RAW\
+  \ 文件，实现自动云备份系统，构建移动备份设备以及托管自己的照片画廊。理解书中的内容需要 Bash 和 Linux 的基础知识。本书假设你正在使用 Debian\
+  \ 或 openSUSE Linux 发行版，并已启用配置了 `sudo`。\n\n# 使用 Photo Funnel 导入照片和 RAW 文件\n\n将照片和\
+  \ RAW 文件从相机传输到普通的 Linux 机器时，你有许多工具可以选择：从 [digiKam](https://www.digikam.org/) 到 [Rapid\
+  \ Photo Dowloader](https://www.damonlynch.net/rapid/index.html)。但如果你正在寻找更简单、更直观的方法，[Photo\
+  \ Funnel](https://github.com/dmpop/photo-funnel) 可能是你的理想选择。\n\n![](img/file1.png)\n\
+  \nPhoto Funnel 是一个简单的图形化工具，允许你导入、标记地理位置并组织照片及 RAW 文件。运行时，Photo Funnel 会显示一个拖放面板。将想要导入的照片和\
+  \ RAW 文件拖到该面板上，按下 `Import`，该实用程序就会处理其余的工作。\n\n在导入操作期间，Photo Funnel 会将有用信息（版权、相机型号和镜头）写入适当的\
+  \ EXIF 字段中。\n\n安装 Photo Funnel 仅需运行 `curl -sSL https://is.gd/photofunnel | bash`\
+  \ 命令。在第一次运行时，它会提示你指定版权声明和用于存储传输文件的目标目录。\n\n配置过程只需执行一次，提供的值存储在 `~/.pf` 文件中。如果你以后需要更改保存的值，请用文本编辑器编辑\
+  \ `.pf` 文件。\n\n使用 Photo Funnel 再简单不过了。首先，在你的机器上插入并挂载存储卡。然后通过使用桌面启动器或运行 `pf` 命令来启动\
+  \ Photo Funnel。选择存储卡上的照片和 RAW 文件，将它们拖到 Photo Funnel 面板的指定区域，然后按下 `Continue`。输入拍摄照片的城市，按下\
+  \ `OK` 并等待传输操作完成。随后你将在指定的存储目录中找到传输的照片，它们已被重命名、标记了地理位置并按日期整齐地组织在文件夹中。\n\n# 使用 Otto\
+  \ 导入并组织照片\n\n将文件从存储卡或外部存储设备移动到 NAS 通常是一件简单的事情。但如果你想让你的 NAS 学会一些小技巧，[Otto](https://gitlab.com/dmpop/otto)\
+  \ 正是为此任务设计的工具。在你的 NAS 上安装它，你就可以使用该设备传输照片和 RAW 文件，并重命名和组织传输的文件，甚至将有用信息写入 EXIF 元数据中。\n\
+  \n在部署 Otto 之前，你需要在基于 Linux 的 NAS 上安装几个工具。大多数 NAS 模型都不允许开箱安装第三方软件包。幸运的是，[Entware](https://github.com/Entware/Entware)\
+  \ 项目为该问题提供了解决方案。在你的 NAS 上安装 Entware 应用，你将立即获得广泛流行的 Linux 工具和实用程序的访问。Entware 项目为几种主流\
+  \ NAS 模型提供了编译好的应用程序，包括 ASUSTOR、Synology 和 QNAP。如果你恰好使用后者，请从 [在 QNAP NAS 上安装](https://github.com/Entware/Entware/wiki/Install-on-QNAP-NAS)\
+  \ 页面获取相应的 `.qpkg` 包。在 NAS 上打开 **App Center**（应用中心），点击主窗口右上角的 **Install Manually**（手动安装）按钮，选择下载的\
+  \ `.qpkg` 包并按下 `Install`。\n\n接下来，从你的普通机器到 NAS  SSH 连接。运行 `opkg update` 命令更新可用软件包列表。使用以下命令安装所需的包：\n\
+  \n```bash\nopkg install getopt bc jq curl perl-image-exiftool git git-http\n```\n\
+  \n如果你希望在 Otto 完成照片导入和组织后收到通知，请在 Android 设备上安装 [Simple Push](https://www.simplepush.io/)\
+  \ 应用。\n\n\n\n\n然后等待脚本执行完毕。你会发现传输到目标目录的照片和 RAW 文件已打上地理标记、重命名，并按日期整齐地组织在文件夹中。\n\n\
+  要更新 Otto，请切换到 `otto` 目录并运行 `git pull` 命令。\n\n由于 Otto 只是一个普通的 Bash 脚本，它可以轻松地运行在任何支持\
+  \ Entware 的 NAS 设备以及任何基于 Linux 的机器上。例如，在 openSUSE 上安装 Otto 只需运行以下命令：\n\n```\nsudo\
+  \ zypper in bc jq curl ImageMagick gpsbabel\ngit clone https://gitlab.com/dmpop/otto.git\n\
+  cd otto\nsudo cp otto.sh /usr/local/bin/otto\nsudo chown root:root /usr/local/bin/otto\n\
+  sudo chmod 755 /usr/local/bin/otto\n```\n\n## 使用 Otto 为照片进行地理标记和地理位置关联\n\n如果照片已经打过地理标记，Otto\
+  \ 会将相机型号和镜头等有用信息写入 EXIF 元数据的 `Comment` 字段中。更棒的是，如果你的相机不支持地理标记，该脚本还提供了两种方法可以实时为照片和\
+  \ RAW 文件添加地理标记。添加 `-g` 选项并跟上拍摄照片的城市，脚本会自动获取该城市的坐标并将其用于地理标记：\n\n```\notto.sh -d /path/to/photo/dir\
+  \ -g Tokyo\n```\n\nOtto 还允许你使用 GPX 文件对照片和 RAW 文件进行地理位置关联。当你使用像 [GPS Logger for Android](https://github.com/mendhak/gpslogger)\
+  \ 这样的应用跟踪轨迹并将其保存为 GPX 文件时，这非常有用。\n\n要在传输照片和 RAW 文件时进行地理关联，请将一个或多个 GPX 文件放入目录，并使用\
+  \ `-c` 选项加上该目录的路径：\n\n```\notto.sh -d /path/to/photo/dir -c /path/to/gpx/dir\n```\n\
+  \n# 使用 Geophotobash 为照片地理标记\n\n一旦导入照片和 RAW 文件，你可能想对它们进行地理标记。[Geophotobash](https://gitlab.com/dmpop/geophotobash)\
+  \ Bash 脚本可以为此提供帮助。\n\n## 部署 Geophotobash\n\n在 Debian 和 Ubuntu 上安装 Geophotobash，请运行以下命令：\n\
+  \n```\nsudo apt install git-core curl bc jq libimage-exiftool-perl\ngit clone https://gitlab.com/dmpop/geophotobash.git\n\
+  cd geophotobash\nsudo cp geophotobash.sh /usr/local/bin/geophotobash\nsudo chown\
+  \ root:root /usr/local/bin/geophotobash\nsudo chmod 755 /usr/local/bin/geophotobash\n\
+  ```\n\n在 openSUSE 上执行相同操作，请将 `sudo apt install git-core curl bc jq libimage-exiftool-perl`\
+  \ 命令替换为 `sudo zypper in git-core curl bc jq exiftool`。\n\n为了确保脚本已安装，请运行 `geophotobash\
+  \ -h` 命令，你应该能看到简洁的使用信息。\n\n## Geophotobash 的工作原理\n\n`geophotobash.sh` 脚本执行以下操作：\n\
+  \n* 使用 [Photon](http://photon.komoot.de/) 服务获取指定城市的经纬度\n* 使用获取的地理坐标为当前目录下的照片地理标记\n\
+  * 使用 EXIF 元中的日期和时间重命名照片\n* 按城市和日期将照片组织到文件夹中\n* 将指定的城市作为每张照片的关键词\n\n以下是工作原理：假设你有一个文件夹包含在柏林拍摄的照片，文件名类似于\
+  \ `DSC00895.ARW`、`DSC00895.JPG`、`DSC00896.ARW`、`DSC00896.JPG`、`DSC00897.ARW`、`DSC00897.JPG`\
+  \ 等。运行 `geophotobash -g Berlin` 命令。结果将是如下目录树，其中重命名并打上地理标记的照片已按日期组织在文件夹中：\n\n```\n\
+  Berlin\n  2016-05-01\n    20160501-135557.ARW\n    20160501-135557.JPG\n  2016-05-02\n\
+  \    20160502-190510.ARW\n    20160502-190510.JPG\n  2016-05-03\n    20160503-151535.ARW\n\
+  \    20160503-151535.JPG\n```\n\n# 使用 ExifTool 组织和管理照片\n\n如果你需要定期处理数百甚至数千张照片，使用\
+  \ ExifTool 完成这项工作将为你节省大量精力和时间。即使只需要修改几张照片，使用 ExifTool 也比诉诸你偏好的照片管理应用程序更高效。\n\n##\
+  \ 安装 ExifTool\n\n在 Debian 和 Ubuntu 上，安装 ExifTool 只需运行 `sudo apt install libimage-exiftool-perl`\
+  \ 命令，或在 openSUSE 上运行 `sudo zypper in exiftool`。\n\n## 简单的 ExifTool 命令\n\n尽管顾名其实并不局限于\
+  \ EXIF，但 ExifTool 可以处理存储在这些格式中的元数据。当你需要读取或修改元数据中的特定标签时，有时需要知道标签的实际名称（而不是默认的易读格式）以及它所属的组。获取这些信息最简单的方法是使用带有\
+  \ `-s` 和 `-G` 选项的 `exiftool` 命令。前者显示实际标签名称，后者按组列出标签。运行 `exiftool -s -G /path/to/foo.jpg`\
+  \ 命令，你应该看到按组组织的标签列表。\n\n## 使用元数据重命名和组织照片\n\n除了读取元数据，ExifTool 还可以执行其他有用操作。例如，该工具可以读取照片的创建日期和时间，然后使用获得的值重命名文件。以下命令会将当前目录下的\
+  \ `foo.NEF` RAW 文件重命名为 `YYYYMMDD-HHMMSS.NEF` 格式（例如 `19730915-153500.NEF`）：\n\n```\n\
+  exiftool -d %Y%m%d-%H%M%S.%%e '-FileName<DateTimeOriginal' /path/to/foo.NEF\n```\n\
+  \n该命令由三部分组成。`-d` 选项设置时间的格式，紧随其后的规则定义了格式本身（`%%e` 保留原始扩展名）。`'-FileName<DateTimeOriginal'`\
+  \ 部分指示 ExifTool 获取创建日期时间并将这些值作为文件名。命令的最后部分指定了文件路径。\n\n你可以使用文件夹路径而非单个文件，以便对目标目录中的所有文件运行命令（将\
+  \ *DIR* 替换为目标目录的实际路径）。\n\n\n\n\n\n```\nexiftool -d %Y%m%d-%H%M%S.%%e '-FileName<DateTimeOriginal'\
+  \ DIR\n```\n\nExifTool 支持广泛的参数和开关。例如，`-ext` 参数在您需要处理特定格式的照片时非常有用。例如，如果目标目录中同时包含\
+  \ JPG 和 NEF RAW 文件，而您只想重命名 RAW 文件，可以使用如下命令中的 `-ext NEF` 参数（`.` 表示当前工作目录）：\n\n```\n\
+  exiftool -ext NEF -d %Y%m%d-%H%M%S.%%e '-FileName<DateTimeOriginal' .\n```\n\n`-r`\
+  \ 开关可用于对目录及其所有子目录运行 ExifTool 命令：\n\n```\nexiftool -ext NEF -r -d %Y%m%d-%H%M%S.%%e\
+  \ '-FileName<DateTimeOriginal' .\n```\n\n重命名照片只是 ExifTool 许多功能之一。需要按年份将照片整理到文件夹中吗？下下面的命令为该问题提供了解决方案：\n\
+  \n```\nexiftool -r -d %Y '-directory<$DateTimeOriginal/%d' .\n```\n\n此命令从每张照片的创建日期中提取年份，并将照片移动到相应的文件夹（如果文件夹不存在，则会自动创建）。\n\
+  \n同时使用 RAW 和 JPEG 拍摄的摄影师也会喜欢以下命令，它可以根据原始文件扩展名将照片分类到目录：\n\n```\nexiftool -directory=%e\
+  \ DIR\n```\n\n因此，如果当前工作目录中同时包含 `*.nef` 和 `*.jpg` 文件，上述命令会将它们分别移动到 `nef` 和 `jpg`\
+  \ 目录。\n\n提到 RAW 文件，ExifTool 还允许通过 `-JpgFromRaw` 开关从 RAW 文件提取嵌入的 JPEG 图像：\n\n```\n\
+  exiftool -b -r -JpgFromRaw -ext NEF -w foo/%f.jpg .\n```\n\n上述命令从当前工作目录下的 NEF RAW\
+  \ 文件中提取 JPEG 图像，并将提取出的文件保存在 `foo` 文件夹中。`-b` 开关以二进制格式输出数据，而 `-w` 开关将二进制数据写入文件。\n\n\
+  ## 基于 ExifTool 的多功能 Shell 脚本\n\n[ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/)\
+  \ 是一个处理摄影元数据的极其强大且灵活的工具。但您不需要为了将其用于某些用途而学习它所有的细节。以下 Bash Shell 脚本利用 ExifTool 自动化多项任务：\n\
+  \n```\n#!/usr/bin/env bash\nwhile getopts \"h?sdyar\" opt; do\ncase $opt in\n  s)\
+  \ exiftool -directory=%e .\n  ;;\n  d) exiftool -d %Y%m%d-%H%M%S.%%e '-FileName<DateTimeOriginal'\
+  \ -r .\n  ;;\n  y) exiftool '-Directory<CreateDate' -d %Y-%m-%d -r .\n  ;;\n  a)\
+  \ exiftool -T -r -filename -make -model -fnumber -exposuretime -iso -r . > results.txt\n\
+  \  ;;\n  r) exiftool -overwrite_original -all= -r .\n  ;;\n  h|\\?)\n  cat <<EOF\n\
+  USAGE:\n  $0 [OPTIONS]\n  $0 -s 按文件扩展名将照片分类到文件夹\n  $0 -d 按日期重命名照片\n  $0 -y 按年、月、日将照片分类到文件夹\n\
+  \  $0 -a 将关键 EXIF 数据保存在 results.txt 文件中\n  $0 -r 从照片中删除所有 EXIF 元数据\nEOF\n  exit\
+  \ 2\n;;\nesac\ndone\n```\n\n将脚本粘贴到新文本文件中保存为 `exiftool-helper.sh`。然后使用以下命令全局安装脚本：\n\
+  \n```\nsudo cp exiftool-helper /usr/local/bin/\nsudo chown root:root /usr/local/bin/exiftool-helper\n\
+  sudo chmod 755 /usr/local/bin/exiftool-helper\n```\n\n由于该脚本依赖于 ExifTool，您需要使用 `sudo\
+  \ apt install libimage-exiftool-perl` 命令安装此工具。\n\n该脚本使用各种开关来运行可用命令。与 `-s` 开关配合使用时，脚本按文件扩展名对当前目录中的照片进行排序。当您在同一目录中既有\
+  \ RAW 和 JPEG 文件并想将它们移动到单独文件夹时，这非常有用。`-r` 开关运行删除当前目录中所有照片元数据的命令，而 `-a` 开关可用于将关键 EXIF\
+  \ 数据（光圈、快门速度、ISO 等）导出到制表符分隔的文本文件中。然后您可以使用表格应用程序分析这些数据。\n\n自然，您也可以自定义脚本中的现有命令并添加新命令。例如，如果您想在导出的值列表中添加焦距数据，请如下修改由\
+  \ `-a` 启动的命令：\n\n```\nexiftool -T -r -filename -make -model -fnumber -exposuretime\
+  \ -iso -focallength -r . > results.txt\n```\n\n要向脚本中添加新命令，需要先为其指定一个开关。例如，如果您想使用\
+  \ `-w` 开关，请将其添加到 `\"h?sdyar\"` 字符串中：`\"h?sdyarw\"`。然后在上述 `case ... in` 块中、`h|\\\
+  ?)` 行上方添加所需的命令，格式如下：\n\n```\nw) command goes here\n  ;;\n```\n\n\n\n\n当你需要快速将 RAW\
+  \ 文件转换为 JPEG 格式时，没有必要启动重量级的 RAW 处理应用程序。相反，你可以使用 `dcraw` 和 `cjpeg` 工具的组合来处理 RAW 文件并将其保存为\
+  \ JPEG 图像。在 Debian 和 Ubuntu 上使用 `sudo apt install dcraw libjpeg-turbo-progs` 命令安装所需的包，或者在\
+  \ openSUSE 上使用 `sudo zypper in dcraw libjpeg-turbo`。然后运行 `dcraw -c foo.raw | cjpeg\
+  \ > foo.JPG` 命令来转换单个 RAW 文件，或者使用带有 `for...do` 循环的高级命令来转换当前目录下所有的 RAW 文件：\n\n```\n\
+  for file in *.RAW; do dcraw -c -g 2.4 12.92 $file | cjpeg > \"${file%%.*}\".jpeg;\
+  \ done\n```\n\n当然，你可以在 `~/.bashrc` 文件中添加一个专用函数：\n\n```\nif [ -x \"$(command -v dcraw)\"\
+  \ ] && [ -x \"$(command -v cjpeg)\" ] ; then\n  function rawtojpeg() {\n    ext=${1:-RAW}\n\
+  \    for file in *.$ext; do echo \"Processing $file\"; \\\n    dcraw -v -c -g 2.4\
+  \ 12.92 $file | cjpeg > \"${file%%.*}\".jpeg; done\n  }\nfi\n```\n\n默认情况下，此函数处理当前目录下所有\
+  \ `*.RAW` 扩展的文件，但你可以指定不同的文件扩展，例如：`rawtojpeg NEF`。\n\n## 使用 jhead 重命名照片并编辑 EXIF 元数据\n\
+  \n[ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) 是目前处理照片元数据最强大、功能最全工具，但它并不是唯一允许执行此操作的工具。虽然\
+  \ [jhead](http://www.sentex.net/~mwandel/jhead/) 仅提供了 ExifTool 的部分功能，但这个轻级工具易于掌握，并且可以处理许多常见的\
+  \ EXIF 相关任务。要安装 jhead，请运行 `sudo apt install jhead` 命令。\n\n与 ExifTool 类似，jhead 可以使用\
+  \ EXIF 头中的日期和时间数据重命名照片，因此你可以将具有此功能的函数添加到 `~/.bashrc` 文件中。\n\n```\nif [ -x \"$(command\
+  \ -v jhead)\" ] ; then\n  function jrename() {\n    ext=${1:-jpeg}\n    jhead -n%Y%m%d-%H%M%S\
+  \ *.$ext\n  }\nfi\n```\n\n默认情况下，该函数重命名当前目录下所有的 `*.jpeg` 文件，但你也可以作为命令参数显式指定所需的扩展名：\n\
+  \n```\njrename JPG\n```\n\n该函数使用 `YYYYMMDD-HHMMSS` 格式重命名照片，但你可以轻松修改 `%Y%m%d-%H%M%S`\
+  \ 格式字符串。以下是一些你可以用于构建自定义字符串的有用参数。\n\n```\n%d  几号，十进制数 (01 – 31)\n%H  24 小时制的小时 (00\
+  \ – 23)\n%j  一年中的第几天，十进制数 (001 – 366)\n%m  月份，十进制数 (01 – 12)\n%M  分钟，十进制数 (00 –\
+  \ 59)\n%S  秒，十进制数 (00 – 59)\n%U  一年中的第几周，十进制数，星期日为周的第一天 (00 – 53)\n%w  星期几，十进制数\
+  \ (0 – 6；星期日为 0)\n%y  不带世纪的年份，十进制数 (00 – 99)\n%Y  带世纪的年份，十进制数\n```\n\n需要为照片添加描述吗？下面的函数允许你执行此操作。\n\
+  \n```\nif [ -x \"$(command -v jhead)\" ] ; then\n  function jcomment() {\n    jhead\
+  \ -ce $1\n  }\nfi\n```\n\n运行 `jcomment` 命令并加上目标照片的文件（例如 `jcomment foo.jpg`），它会打开默认文本编辑器，你可以在其中输入文本。当你保存更改时，jhead\
+  \ 会将文本写入 EXIF 头中的 Comment 字段。\n\n## 使用参考快照对照片进行地理标记\n\n如果你的相机缺乏地理标记功能，你可以使用智能手机和\
+  \ Bash 单行命令为照片添加地理信息。\n\n当你在特定地点拍照时，请记住使用移动设备拍摄一张快照（确保设备上相机应用中的地理标记功能已开启）。该快照可以作为使用\
+  \ [ExifTool](http://www.sno.phy.queensu.ca/~phil/exiftool/) 进行照片地理标记的参考文件。要安装它，请运行\
+  \ `sudo apt-install libimage-exiftool-perl` 命令。下面的简单命令从参考快照读取地理标记并将其写入当前目录下所有的照片：\n\
+  \n```\nexiftool -overwrite_original -r -tagsFromFile path/to/reference.jpg -gps:all.\n\
+  ```\n\n将 `path/to/reference.jpg` 替换为参考快照的实际路径。为了让照片地理标记更加简单，将以下函数添加到 `~/.bashrc`\
+  \ 文件中：\n\n```\nif [ -x \"$(command -v exiftool)\" ] ; then\n  function geotag()\
+  \ {\n    geotag() path/to/reference.jpg\n  }\nfi\n```\n\n\n\n```\nif [ -x \"$(command\
+  \ -v mogrify)\" ] ; then\n  function makegif() {\n    ext=${1:-JPG}\n    dimension=${2:-800}\n\
+  \    quality=${3:-95}\n    output=${4:-\"foo.gif\"}\n    delay=${5:-120}\n    mogrify\
+  \ -resize \"$dimension\"x *.\"$ext\"\n    convert -delay \"$delay\" -loop 0 *\"\
+  $ext\" \"$output\"\n  }\nfi\n```\n\n下次当你想将一组照片转换为动画 GIF 时，切换到包含照片的目录，并运行 `makegif`\
+  \ 命令。若要覆盖默认设置，可以指定所需的参数，例如：\n\n```\nmakegif jpeg 1600 90 foo-big.gif 180\n```\n\n\
+  ## 为照片添加带有基础 EXIF 数据的说明\n\n在照片中添加包含光圈、快门速度和 ISO 等基础 EXIF 信息的说明，在很多情况下都非常有用。一个简单的\
+  \ Bash 壳函数可以实现这一操作的自动化。该函数使用 `ExifTool` 和 `ImageMagick` 工具从指定的图像中提取 EXIF 数据，然后向图像添加包含提取的光圈、快门速度和\
+  \ ISO 值的说明。\n\n```\nif [ -x \"$(command -v exiftool)\" ] && [ -x \"$(command -v\
+  \ convert)\" ]; then\n  function annotate(){\n  fnumber=$(exiftool -aperture $1\
+  \ | cut -d':' -f2)\n  exposure=$(exiftool -shutterspeed $1 | cut -d':' -f2)\n  iso=$(exiftool\
+  \ -iso $1 | cut -d':' -f2)\n  convert $1 -gravity South -background Black \\\n \
+  \ -font mononoki-Regular -pointsize 50 -fill White \\\n  -splice 0x54 -annotate\
+  \ 0x0 \"Aperture:$fnumber Shutter speed:$exposure ISO:$iso\"  exif_$1\n  xdg-open\
+  \ exif_$1\n  }\nfi\n```\n\n在这种情况下，该函数使用了 [Mononoki](https://madmalik.github.io/mononoki/)\
+  \ 字体作为说明，但你可以将其替换为系统中安装的任何其他字体。要列出所有你可以使用的字体，请运行 `convert -list fonts` 命令。要为照片添加说明，请运行\
+  \ `annotate /path/to/foo.JPG` 命令（将 `/path/to/foo.JPG` 替换为照片的实际路径和）。\n\n当然，你可以根据自己的特定需求调整脚本。例如，你可以将\
+  \ EXIF 信息替换为版权声明，或者修改函数以动态添加任意文本。\n\n## 在 OpenStreetMap 上显示地理标记照片\n\n想在地图上显示你拍摄某张照片的地方吗？只要照片带有地理标记，下面这个简单的函数即可完成任务：\n\
+  \n```\nif [ -x \"$(command -v exiftool)\" ] ; then\n  function show-on-osm(){\n\
+  \    lat=`exiftool -n -p '$GPSlatitude' $1`\n    lon=`exiftool -n -p '$GPSlongitude'\
+  \ $1`\n    osm=\"http://www.openstreetmap.org/?mlat=$lat&mlon=$lon&zoom=18\"\n \
+  \   xdg-open $osm\n  }\nfi\n```\n\n该函数从照片的 EXIF 元数据中提取经纬度值，创建一个 OpenStreetMap URL\
+  \ 并在默认浏览器中打开它。\n\n为了让该函数生效，你需要在系统上安装 `ExifTool`。将该函数添加到 `~/.bashrc` 文件中，并使用 `show-on-osm\
+  \ foo.JPG` 命令在 OpenStreetMap 上显示你想展示的照片（将 `foo.JPG` 替换为目标照片的实际名称）。\n\n## 通过上下文菜单快速访问图像处理操作\n\
+  \n使用 KDE 的服务菜单（service menus）功能，你可以为 Dolphin 中的 `Actions` 右键菜单添加实用的命令。例如，你可能想在共享照片之前调整其大小。但不必每次需要优化照片都切换到终端并运行类似\
+  \ `convert photo.jpg -resize 1600x1600> resized-photo.jpg` 的命令，你可以创建一个服务菜单，允许你在\
+  \ Dolphin 文件管理器中方便地调整图像大小。创建一个文本文件并在其中粘贴以下服务菜单定义：\n\n```\n[Desktop Entry]\nType=Service\n\
+  ServiceTypes=KonqPopupMenu/Plugin\nMimeType=image/png;image/jpeg;image/png;image/JPG;image/png;image/jpg;\n\
+  Actions=ResizeLarge\n[Desktop Action ResizeLarge]\nName= Resize to 1600px\nExec=mogrify\
+  \ -resize \"1600x1600>\" %f\nIcon=image-x-applix-graphics\n```\n\n若要将菜单限制为某些图像格式，可以在\
+  \ `MimeType` 部分指定它们。在上面的示例中，该操作仅适用于 JPEG 和 PNG 图像。\n\n将文件保存为 `resize.desktop` 并将其移动到\
+  \ `/usr/share/kservices5/ServiceMenus`（如果 `ServiceMenus` 目录不存在请手动创建）：\n\n```\nsudo\
+  \ cp resize.desktop /usr/share/kservices5/ServiceMenus/\n```\n\n打开 Dolphin，右键点击\
+  \ JPG 或 PNG 图像文件，并选择 `Actions → Resize to 1600px` 操作来调整图像大小。\n\n\n\n压缩 JPEG 图像是大多数摄影师都会尽量避免的。毕竟，JPEG\
+  \ 是一种有损格式，减小 JPEG 文件的大小不可避免地会导致质量损失。但在某些情况下，压缩图像是唯一的选择。例如，某些照片共享和打印服务不接受超过特定文件大小的。在将照片嵌入博客文章时，你可能想压缩它们以节省存储空间。\n\
+  \n每当你需要优化 JPEG 文件时，[jpeg-recompress](https://github.com/danielgtaylor/jpeg-archive)\
+  \ 都是完成任务的理想工具。`jpeg-recompress` 可以在保持感知视觉质量的同时将目标文件的大小缩小 30-70%。要安装 `jpeg-recompress`，请从\
+  \ [github.com/danielgtaylor/jpeg-archive/releases](https://github.com/danielgtaylor/jpeg-archive/releases)\
+  \ 下载最新发布。解压下载的包并使用 `chmod +x jpeg-recompress` 命令将 `jpeg-recompress` 二进制文件设置为可执行。然后将二进制文件移动到\
+  \ `~/bin` 目录。\n\n`jpeg-recompress` 的用法非常简单。要使用默认设置（SSIM 比较法和中等质量）重新压缩 JPEG 文件，运行\
+  \ `jpeg-recompress photo.jpg recompressed.jpg` 命令。也可以指定各种参数，你可以使用 `jpeg-recompress\
+  \ -h` 命令列出这些参数及其简要描述。\n\n如果你经常使用 `jpeg-recompress` 工具，请将以下函数添加到 `~/.bashrc` 文件中：\n\
+  \n```bash\nif [ -x \"$(command -v jpeg-recompress)\" ] ; then\n  function recompress()\
+  \ {\n  jpeg-recompress --quality very high $1 re-$1\n  }\nfi\n```\n\n然后你就可以使用 `recompress\
+  \ photo.jpg` 命令重新压缩 JPEG 文件了。\n\n想要在图像添加到特定目录时自动重新压缩它们吗？下面的简单 Bash 脚本可以帮你实现这一点：\n\
+  \n```bash\n#!/usr/bin/env bash\n\nhelp(){\ncat <<EOF\n$0 [OPTIONS]\n\n$0 当 JPEG\
+  \ 文件移动到监控目录时，立即对其进行重压缩\n\nUsage:\n  $0 [IN] [OUT]\n\nOptions:\n IN    要监控的目录\nOUT\
+  \    保存重压缩文件的目录\nEOF\n  exit 1\n}\n\nif [ -z \"$1\" ] || [ -z \"$2\" ]; then\n \
+  \ echo help\n  exit 1\nfi\n\nwhile true\ndo\ninotifywait -m --format '%f' -e MOVED_TO\
+  \ $1 |\nwhile read FILE\n  do\n    jpeg-recompress $1/$FILE $2/$FILE\n    notify-send\
+  \ \"$FILE has been recompressed\"\n  done\ndone\n```\n\n该脚本使用 `inotify-tools` 监控目录，并在图像进入该目录时立即触发\
+  \ `jpeg-recompress` 命令处理图像。要在 openSUSE 上安装 `inotify-tools`，请运行 `sudo zypper in inotify-tools`\
+  \ 命令。脚本需要两个参数：监控目录的路径和目标目录的路径。注意，后者不能位于监控目录之内。\n\n将上述代码粘贴到新文本文件中并保存为 `monitor-recompress`。然后使用以下命令安装脚本：\n\
+  \n```bash\nsudo cp monitor-recompress /usr/local/bin/\nsudo chown root:root /usr/local/bin/monitor-recompress\n\
+  sudo chmod 755 /usr/local/bin/monitor-recompress\n```\n\n然后使用 `monitor-recompress\
+  \ /path/to/source/dir /path/to/target/dir` 命令运行脚本。\n\n# 使用 jpegoptim 压缩 JPEG 文件\n\
+  \n需要用最少的努力减小 JPEG 文件的大小吗？使用 [jpegoptim](https://github.com/tjko/jpegoptim)。给 `jpegoptim`\
+  \ 馈一个 JPEG 文件，这个不起眼的工具就会减小它的大小，无需多言。\n\n要安装最新版本的 `jpegoptim`，你需要从源码编译它。在在此之前，你需要在你的系统中安装\
+  \ `libjpeg` 库。在 openSUSE 上，可以使用 `sudo zypper in libjpeg8-devel` 命令完成。完成后，运行以下命令克隆项目的\
+  \ Git 仓库并安装 `jpegoptim`：\n\n```bash\ngit clone https://github.com/tjko/jpegoptim.git\n\
+  cd jpegoptim\n./configure\nmake\nmake strip\nsudo make install\n```\n\n就这些了。要压缩\
+  \ JPEG 文件，请运行 `jpegoptim foo.jpg` 命令（将 `foo.jp` 替换为 JPEG 文件的实际路径和名称）。\n\n默认情况下，`jpegoptim`\
+  \ 使用无损压缩算法，但你可以通过使用 `--max` 参数指定最大图像质量来覆盖此设置。除了压缩文件外，`jpegoptim` 还可以移除元数据。例如，`--strip-exif`\
+  \ 参数移除所有 EXIF 数据，而 `--strip-iptc` 参数移除 IPTC 数据。\n\n`jpegoptim` 还提供了其他选项，你可以使用 `man\
+  \ jpegoptim` 命令查看所有选项及其说明。\n\n# Linux 上的色彩管理\n\n色彩管理的目的是在不同设备上产生一致的色彩输出。这个定义听起来可能简单，但理解色彩管理的机制并实施色彩管理工作流可能是一个相当复杂且有时令人困惑的事务。以下描述可以帮助你理解色彩管理的基础知识，并使用开源工具建立色彩管理环境。\n\
+  \n## 色彩管理概述\n\n色彩管理的需要源于色彩再现的基础问题：给定色彩的正式表示（例如特定色彩模型中的颜色值）由于各种因素，在不同设备上并不产生相同的颜色。因此，色彩管理的主要目标是实现跨设备的一致色彩还原。例如，色彩管理相机拍摄的照片在色彩管理的屏幕上看起来应该是相同的。\n\
+  \n在色彩管理工作流中，每个设备（如数码相机和 LCD 显示器）都有自己的色彩配置文件，用于描述该特定设备的色彩响应。每个配置文件相对于一组标准色彩来描述这些颜色。色彩管理软件随后利用这些标准配置文件将色彩从一个设备转换为另一个。这通常由色彩管理模块完成([Cambridge\
+  \ Colour 色彩管理概述](http://www.cambridgecolour.com/tutorials/color-management1.htm))\n\
+  \n色彩配置文件与色彩空间的概念密切相关。色彩空间是一个定义的色彩范围，正如 Thom Hogan 所，“色彩空间定义了可能性。”([色彩管理快速指南](http://www.bythom.com/qadcolor.htm))另一种说法是色彩空间决定了设备或应用程序的色彩能力。色彩空间包含色彩定义，而色彩配置文件描述的是色彩输入或输出。\n\
+  \n由于存在多种色彩空间，问题在于你应该选择哪一个。这个问题值得专门讨论，但简单的事实是 sRGB 色彩空间适用于通用场景。sRGB 专为互联网开发，相对于 Adobe\
+  \ RGB 较小，但它得到了制造商和开发者的广泛支持，并且是任何支持色彩管理的设备和应用程序的默认色彩空间。例如，digiKam 使用 sRGB 作为其默认工作色彩空间（即用于处理色彩数据的色彩空间）。在选择色彩空间时，请考虑以下因素：1）sRGB\
+  \ 无法转换为像 Adobe RGB 更大的色彩空间（但反之可以），2）RAW 文件没有分配色彩空间，因此如果你预计在工作流中使用不同的色彩空间，可以使用 RAW\
+  \ 原文件在所需的色彩空间中进行处理。\n\n\n\n\n精确且一致的色彩管理需要工作流中的所有设备（例如数字相机和 LCD 显示器）都具有符合 ICC 标准的配置文件。色彩配置文件是“一组描述色彩输入或输出设备的数据集”（[维基百科：色彩配置文件定义](http://en.wikipedia.org/wiki/ICC_profile)）。再次由\
+  \ Thom Hogan 解释了这一点：“色彩配置文件指定了设备如何偏离色彩空间。当我们对显示器、打印机或有时对相机进行色彩校准时，我们本质上是在创建一张它与色彩空间定义差异的地图。聪明的软件随后可以使用该地图，在设备上进行渲染或由该设备进行渲染时‘修复’颜色，使其符合色彩空间定义。”（[Thom\
+  \ 的色彩管理快速简易指南](http://www.bythom.com/qadcolor.htm)）\n\n## 使用 Darktable 设置色彩管理工作流\n\
+  \n为了说明色彩管理理论在实践中如何运作，这里有一个真实场景：你使用数字相机拍摄 RAW 格式的照片，然后在 Linux 机器上使用 Darktable 对其进行处理，并在连接到机器的\
+  \ LCD 显示器上查看。\n\n第一步是为相机和显示器创建色彩配置文件。要在 Linux 上校准显示器并为其生成色彩配置文件，你需要两样东西：色准仪和色彩校准软件。高质量的专业色准仪通常相当贵，但你可以使用优秀的低成本\
+  \ [ColorHug](http://www.hughski.com) 开源色准仪作为替代。\n\n在校准和色彩建模方面，[DisplayCAL](http://displaycal.net/)\
+  \ 是这项工作的完美工具。它为 ArgyllCMS 开源色彩管理系统的显示器校准和建模工具提供了图形用户界面。后者在大多数主流 Linux 发行版的软件仓库中可用，因此你可以使用你发行版的包管理器进行安装。在\
+  \ Debian 和基于 Ubuntu 的发行版中，可以通过运行 `sudo apt install argyll` 命令完成。接下来，你需要安装 ColorHug\
+  \ 库和客户端软件。该软件也可用 Debian 和 Ubuntu 仓库中，因此可以使用 `sudo apt libcolorhug2 colorhug-client`\
+  \ 命令进行安装。然后从项目网站下载 DisplayCAL 的封装版本并安装到你的系统上。连接 ColorHug，它应该会闪烁一下，表示已被系统检测到。在开始\
+  \ ColorHug 之前，确保它拥有最新版本的固件。运行 `colorhug-flash` 命令启动固件更新实用程序，并使用它检查并升级 ColorHug 的固件。\n\
+  \n![](img/file3.jpg)\n\n现在已经准备好校准和对显示器建模了。启动 DisplayCAL 并点击 **Detect** 按钮让 DisplayCAL\
+  \ 检测连接的色准仪（它应该出现在 **Instrument/Port** 部分）。如果你正在使用多显示器设置，请确保在 **Display device**\
+  \ 部分中选择了正确的显示器。然后从 **Settings** 下拉列表中选择 `Photo (D50, Gamma 2.2)`。点击 **Calibrate\
+  \ & Profile** 按钮并按照指示校准显示器并生成其色彩配置文件。一旦生成色彩配置文件，DisplayCAL 会提示你安装该配置文件并在启动时启用它。顺便说一下，你也可以使用\
+  \ DisplayCAL 安装现有的 ICC 显示器配置文件。要执行此操作，点击 **Settings** 下拉列表旁的 **Load Settings** 按钮，并选择现有的\
+  \ `*.icc` 文件。然后使用 **Install Profile** 按钮将所选配置文件全局安装或仅为当前用户安装。\n\n校准数字相机包括几个步骤：\n\
+  \n1. 拍摄色彩校准靶的 RAW 照片\n2. 在 digiKam 中处理 RAW 文件且不进行任何色彩调整，并将结果保存为 16 位 TIFF \n3. 使用\
+  \ ArgyllCMS 生成色彩矩阵并用它创建 ICC 配置文件\n\n首先，你需要获取色彩校准靶。与色准仪一样，专业的色彩靶相当贵。幸运的是，Wolfgang\
+  \ Faust 提供了低成本的 [IT8 标准色彩靶](http://www.targets.coloraid.de) 用于校准各种设备，包括数字相机（你需要\
+  \ C1 靶）。每个色彩靶的生产次都是唯一的，因此每批色彩靶都通过其序列号进行标识（例如 `R131007`），每个校准靶都配有自己的自己的参考文件（例如 `R131007.txt`）。\n\
+  \n第一步是使用想要校准的相机拍摄色彩靶的 RAW 照片。这实际上比听起来要复杂得多，[如何制作相机输入配置文件靶拍摄](http://ninedegreesbelow.com/photography/camera-profile-make-target-shot.html)\
+  \ 文章为此主题提供了非常有价值的信息。一旦拿到照片，启动 Darktable 并导入 RAW 文件。禁用 **base curve** 模块，裁剪照片以移除背景，并将结果保存为\
+  \ 16 位 TIFF 文件。\n\n![](img/file4.jpg)\n\n要读取生成的 TIFF 文件的色彩块值，请使用以下命令（将 `DSC00001.tif`\
+  \ 替换为 TIFF 文件的实际名称，并将 `131007.txt` 替换为参考文件）：\n\n```\nscanin -v -p -a -dipn DSC00001.tif\
+  \ /usr/share/color/argyll/ref/it8.cht R131007.txt\n```\n\n打开生成的 `diag.tif` 文件并确保所有色彩块都被索引。最后，使用实际值而非默认值生成色彩配置文件：\n\
+  \n```\ncolprof -v -A \"SONY\" -M \"Sony NEX-3N\" -D \"sony nex-3n\" -C \"Copyright\
+  \ (c) 2016 Dmitri Popov. Some rights reserved.\" -q l -a m\n```\n\n最后一步是将生成的相机色彩配置文件添加到\
+  \ Darktable。要执行此操作，将生成的 `*.icc` 文件移动到 `~/.config/darktable/color/in/` 文件夹（如果这些目录不存在，请创建）。启动应用程序并打开一个\
+  \ RAW 文件进行编辑。启用 **input color profile** 模块，然后在模块的 **profile** 下拉列表中选择创建的相机配置文件。\n\
+  \n## 使用 gThumb 管理照片\n\n管理和编辑照片以及 RAW 文件是摄影工作流中的关键步骤。虽然有很多优秀且强大的工具供你选择，但 [gThumb](https://live.gnome.org/gthumb)\
+  \ 可以以很小的开销处理大多数管理任务。它看起来像是一个普通的图像查看器，但在简单的外表下隐藏着一个相当强大的照片修饰程序。由于 gThumb 在官方软件仓库可用，你可以使用\
+  \ `sudo apt install gthumb` 进行安装。\n\n![](img/file5.jpg)\n\ngThumb 具有轻量级的界面，所有基本工具触手可及。左侧面板中的目录树让你能够轻松遍历文件系统并打开包含照片的文件夹。应用程序还了一些让导航更高效的功能。当你启动\
+  \ gThumb 时，它会自动切换到上一次使用的目录。应用程序还会跟踪过的目录，你可以通过 **History** 按钮跳转到以前打开的目录。你还可以使用 **Bookmarks**\
+  \ 按钮下的 **Add Bookmark** 命令为特定目录添加书签。\n\ngThumb 提供了基本的导入功能，可以从外部存储设备卸载文件并从 Flickr\
+  \ 和 Facebook 等流行服务获取照片。要执行后者，点击 gThumb 窗口右上角的汉堡菜单，从 **Import From** 菜单中选择所需的服务。对\
+  \ gThumb 进行服务验证，选择你想要的照片，应用程序会将它们导入当前打开的目录。你可以使用 **Import From** 菜单中的 **Removable\
+  \ Device** 和 **Folder** 命令从外部存储设备（SD 卡、USB 盘等）和本地目录导入照片。\n\n\n\n\n\n该应用程序支持大多数流行的图形格式，包括\
+  \ JPEG、PNG、TIFF 等许多格式。更好的是，gThumb 具有一个专门的命令用于在不同格式之间转换照片。要将照片转换为不同的格式，点击 gThumb\
+  \ 窗口右上角的 `Tools` 按钮，并选择 `Convert Format` 命令。`Tools` 按钮下的其他命令可用于旋转和调整图像大小以及更改它们的日期。\n\
+  \n当你在左侧面板中选择目录时，gThumb 将该目录中的照片以缩略图的形式显示在主区域。选择一张照片，你就可以在左侧面板的 `File properties`\
+  \ 部分看到关于它的信息。该部分下方的 `Details` 按钮允许你查看照片的元数据，而 `Histogram` 按钮则显示照片的直方图。\n\n![](img/file6.jpg)\n\
+  \n点击缩略图会将 gThumb 切换到全屏模式，主面板显示照片的大版本，底部有一个缩略图栏。主工具栏左侧的按钮组可用于在不同的视图之间切换（`Set to actual\
+  \ size`、`Fit to window`、`Fit to width` 和 `Fit to height`），而右侧组中的按钮可以切换 `Properties`\
+  \ 和 `Edit file` 面板，并调出 `Comment` 和 `Tags` 对话窗口。\n\ngThumb 的过滤功能对于将显示的照片缩小到符合某些标准的项目非常有用。例如，你可以定义一个过滤器，显示在特定日期拍摄或描述中具有匹配文本的照片。要配置并启用过滤器，从底部栏的\
+  \ `Show` 下拉列表中选择 `Personalize`，并从默认过滤器列表中选择所需的项目。或者，你也可以通过按下 `New` 按钮定义一个或多个过滤规则来定义自定义过滤器。\n\
+  \n## 在 gThumb 中组织照片\n\n如果你使用标签来跟踪照片，你将非常喜欢 gThumb 的标记功能。要快速将现有标签之一分配给特定照片，请右键点击该照片并从\
+  \ `Tags` 菜单中选择所需的标签（或使用键盘快捷键 `C`）。然后你可以选择你想要的标签。要创建一个新标签，请在 `Tags` 字段中输入其名称，并从弹出的下拉列表中选择\
+  \ `Create tag` 命令。要为照片添加描述，从右键右文菜单中选择 `Comment` 命令（或按 `C` 键盘快捷键）。这将打开 `Metadata`\
+  \ 对话窗口，你可以在其中输入描述并指定其他元数据属性，如标题、拍摄地、标签和评分。\n\n![](img/file7.jpg)\n\n标记（在 gThumb\
+  \ 术语中称为 selections）是组织照片的另一个有用功能。使用键盘快捷键 `Alt+1…3`，你可以为当前选中的照片分配绿色、红色和蓝色标记。此功能可以有多种用途。例如，你可以使用绿色标记标记你想要立即分享的最佳照片，并对需要进一步修改的照片添加红色标记。左侧面板目录树底部的\
+  \ `Selections` 条目允许你按标记分组查看照片（例如，`Selection 1` 部分显示带有红色标记的照片）。要快速查看所需的选择内容，请使用键盘快捷键\
+  \ `Ctrl+1…3`。\n\n为了更方便跟踪照片，gThumb 允许你将照片分组到目录（catalogs）和库（libraries）。目录本质上是虚拟文件夹：将照片添加到目录只是创建了指向原始文件的引用，而不会在物理上移动照片。多个目录可以被组为一个库。这种相对简单的功能为组织照片提供了一种灵活的机制。例如，你可以为不同的国家（例如\
+  \ `Japan`、`Germany`、`France` 等）创建单独的目录，然后将目录分组到 `Travel` 库中。\n\n右上角的 `Organize`\
+  \ 按钮可以根据日期和标签等标准自动生成目录。还可以创建自定义目录和库并手动填充照片。要创建新目录或库，右键点击左侧目录树底部的 `Catalogs` 条目，选择\
+  \ `Create Catalog` 或 `Create Library` 命令，为新项目取一个描述性名称并按 `Create`。要将照片添加到目录或库中，右键点击照片并选择\
+  \ `Add to Catalog` 命令。然后选择目标目录或库并按 `Add`。你还可以使用 `Add to Catalog` 对话窗口中的相应按钮动态创建目录和库。\n\
+  \n## 在 gThumb 中编辑照片\n\n在全屏模式下，按下 `Edit file` 按钮将打开右侧面板，让你访问编辑工具。虽然 gThumb 不会取代专门的图像编辑应用程序，但可用工具对于快速调整亮度、饱和度和对比度等基本设置，以及锐化照片和将图像转换为黑白会非常方便。`Color`\
+  \ 组中专门的 `Special Effects` 按钮允许你访问几种可以应用于照片的预设过滤器。\n\n![](img/file8.jpg)\n\n除了这些简单功能外，gThumb\
+  \ 还提供了曲线工具，熟练的操作可以为你的照片施展魔法。gThumb 允许将曲线调整保存为预设，这样你就可以维护自己的效果库。要保存当前的曲线调整，按下主工具栏上的\
+  \ `Add to presets` 按钮，为预设命名并点击 `Save`。你可以使用 `Presets` 按钮访问保存的预设。\n\n### 理解曲线工具\n\
+  \n曲线工具的关键元素是直方图，它显示了色调的输入分布（X 轴）和输出色调（Y 轴）。X 轴的左部分代表较深色调，而右部分代表高光。对角线（色调曲线）指示了输入和输出之间的比例。初始线条是直的，这意味着输出与输入完全相同。调整色调曲线改变原始比例，从而改变图像的色调。这正是曲线工具的设计初衷。点击对角线添加控制点，然后通过鼠标拖动控制点来调整色调曲线的形状。为了更精细的曲线调整，可以创建额外的控制点。\n\
+  \n为了更好地理解曲线的工作原理，从基础的曲线调整开始。要增强高光，向上调整色调曲线的右上部分。如前所述，直方图的右部分代表高光，因此向上推 Luminosity\
+  \ 通道中的曲线会增加图像的亮度。其他情况下，这种技术可以用于产生高调照明效果。另一种常见的调整是通过提高曲线上半部分并降低下半部分使其呈 S 形。这有效地亮化了图像的光亮区域并调暗了黑暗区域。这在不影响曝光的情况下增加了图像的整体对比度。\n\
+  \n虽然亮度通道允许你调整色调曲线，但红色、绿色和蓝色通道可用于控制颜色在图像特定色调区域的贡献。例如，向下推红色通道曲线的下半部分会减少暗色调中红色的贡献，从而使阴影看起来偏冷色调。\n\
+  \n![](img/file9.jpg)\n\n\n\n\n但如果你想通过增加黄色来让高光部分看起来更暖一些呢？`Curves` 工具中没有 `Yellow`\
+  \ 通道，因此你需要查阅 `HSV` 色轮来确定需要减少哪种颜色才能获得黄色。要做到，，请黄色相反的颜色，即蓝色。因此，为了暖化高光，你需要通过向下推 `Blue`\
+  \ 通道曲线的上部分来减少蓝色量。\n\n## gThumb 与 RAW 文件\n\n尽管 gThumb 并不是为了取代专业的 RAW 处理工具设计的，但该应用程序确实可以预览\
+  \ RAW 文件、进行基础编辑，并将结果照片保存为支持的格式之一。在很多情况下，这正是许多用户需要的所有。在 gThumb 中处理 RAW 文件与处理普通照片没有区别。你唯一需要记住的是，在对\
+  \ RAW 文件应用调整后，你需要使用 `Save as` 命令将编辑后的照片保存为支持的格式。\n\n## 使用 gThumb 分享照片\n\n想向世界分享你的摄影杰作吗？主工具栏上的\
+  \ `Export` 按钮允许你将照片上传到如 Flickr 和 Facebook 等多个流行的照片共享服务。此外，应用程序还可以生成一个静态网页相册，你可以将其发布在自己的网站上。如果你想创建拼贴画来逗趣家人，`Imagewall`\
+  \ 导出工具正是你需要的。\n\n# 使用 Darktable 处理 RAW 文件\n\n像 gThumb 和 digiKam 这样的照片管理软件可以帮助你处理、组织和管理照片，但如果你的摄影工作流是围绕\
+  \ RAW 文件的，那么你可能考虑使用更专业的应用程序，如 [Darktable](http://darktable.sourceforge.net/)。这个软件暗房提供了一系列强大的工具，用于对你的数字负片进行排序和处理。\n\
+  \n尽管 Darktable 同时为严肃业余爱好者和专业摄影师设计，但该应用程序拥有优雅且用户 friendly 界面，将所有核心工具置于指尖，让你轻松掌握这款强大的应用。更重要的是，Darktable\
+  \ 依赖于 `RawSpeed` 解码库，该库支持几乎任何 RAW 变体，包括 CRW/CR2、NEF、RAF、DNG 等等。此外，Darktable 还带有自定义增强的色彩矩阵，可提供更好的色彩呈现。为了还原某些相机传感器的行为，Darktable\
+  \ 的开发者还逆向工程了基础曲线（访问 [相机支持](http://www.darktable.org/resources/camera-support/) 页面查看支持的相机列表）。\n\
+  \n## 安装 Darktable\n\n首要任务当然是在你的机器上安装 Darktable。Darktable 的二进制包适用于流行的 Linux 发行版，如\
+  \ Ubuntu、openSUSE 和 Fedora，因此在这些发行发版上安装该程序并不特别复杂。对于 Ubuntu 用户，该项目提供了两个 PPA：[Darktable\
+  \ Release PPA](https://launchpad.net/~pmjdebruijn/+archive/ubuntu/darktable-release)\
+  \ 包含 Darktable 的当前稳定版本，而 [Darktable Unstable PPA](https://launchpad.net/~pmjdebruijn/+archive/ubuntu/darktable-unstable)\
+  \ 提供 Darktable 的开发版本。添加所需的 PPA 并从中安装 Darktable 只需在终端执行三个简单的命令：\n\n```\nsudo add-apt-repository\
+  \ ppa:pmjdebruijn/darktable-release-plus\nsudo apt update\nsudo apt install darktable\n\
+  ```\n\n## 在轻量级（Light Table）模式下管理 RAW 文件\n\n当你首次启动 Darktable 时，会自动进入 `lighttable`\
+  \ 界面，该界面用于导入、排序和组织 RAW 文件。`lighttable` 界面提供了多种将 RAW 文件导入应用程序的方法。使用 `import` 面板中的\
+  \ `image` 按钮获取单张照片，或按 `folder` 按钮导入包含 RAW 文件的目录作为胶片卷。\n\n![](img/file10.jpg)\n\n\
+  `collect images` 面板提供了跟踪已导入 RAW 文件的工具。默认情况下，所有 RAW 文件都以胶卷形式显示，但你也有其他选项可以选择。例如，你可以按相机型号显示\
+  \ RAW 文件。要做到这一点，从 `collect images` 面板的下拉列表中选择 `camera` 。这在你使用 Darktable 处理多台数字相机时会非常有用。想显示在特定日期拍摄的照片吗？从下拉列表中选择\
+  \ `date` 选项，并从日期列表中选择所需的项目。\n\n尽管 `lighttable` 界面侧重于排序和过滤 RAW 文件，但它在 `selected images`\
+  \ 面板中隐藏了一个相当巧妙的功能。点击 `create hdr` 按钮，Darktable 将具有相同主题但曝光不同的多个图像合并成一个具有改进动态范围的单。\n\
+  \nDarktable 为分类和排序导入的 RAW 文件提供了两个实用的功能：颜色标签和星级。结合使用时，它们为组织 RAW 文件提供了一种灵活的机制。你如何使用这两个功能完全取决于你。例如，你可以使用星级为照片评分，然后使用颜色标签来指定处理优先级。\n\
+  \n任何照片管理应用如果没有元数据编辑和标记功能都是不完整的，Darktable 也不例外。`lighttable` 界面中的 `metadata editor`\
+  \ 面板允许你添加和修改当前选中的照片或一组照片的关键信息，包括标题、描述、作者和权限。`tagging` 面板允许对当前选中的照片进行创建、管理和分配标签。该面板有两个部分：下部分用于创建和删除标签，而上部分允许你将现有标签附加到或从当前选中的照片中剥离。之前提到的\
+  \ `collect images` 面板也可以根据元数据过滤照片。例如，从面板的下拉列表中选择 `tag` 项，你将看到所有可用标签的列表。然后从列表中选择所需的标签以查看匹配的照片。同样地，你可以通过标题（`title`\
+  \ 项）和描述（`description` 项）来过滤照片。\n\n![](img/file11.jpg)\n\n## 在暗房（Darkroom）模式下处理 RAW\
+  \ 文件\n\n一旦你添加并组织了 RAW 文件，就是时候处理它们了。要打开 RAW 文件进行处理，请双击它。这将使其进入 `darkroom` 界面，你可以在那里处理数字负片。与\
+  \ `lighttable` 类似，`darkroom` 界面中的所有工具都分在面板中。界面本身由两个边栏和一个查看区域组成。左侧边栏包含如 `thumbnail`（显示当前处理照片的缩略图）、`snapshots`（允许保存处理后照片的版本）、`history`（包含编辑步骤列表）和\
+  \ `image information`（显示照片的关键信息）。\n\n\n\nDarktable 采用非破坏性编辑，这意味着没有任何编辑操作会直接应用于照片。相反，所有的编辑信息都保存在一个\
+  \ `*.xmp` 文件中，原始照片保持不变。编辑操作会以列表的形式显示在 `history`（历史）面板中，你可以通过选择列表中的任何一个步骤来恢复到之前的状态。其巧妙之处在于，你可以将历史堆栈转换为一种样式（style），这样你就可以一步到位对其他照片应用完全相同的操作。要将当前的历史堆栈转换为样式，请点击位于\
+  \ `compress history stack`（压缩历史堆栈）旁边的 `create a style`（创建样式）按钮。为新样式命名并添加描述。保存样式后，你就可以在\
+  \ `lighttable`（工作台）界面中将其应用到任何照片。Darktable 还允许你将编辑后照片的当前状态保存为快照。但请记住，这些快照不是持久性的，因此当你关闭应用程序时它们就会消失。\n\
+  \n中间的查看区域提供了当前处理照片的大型预览。面板底部的缩略图条让你快速从当前胶卷中选择照片并打开它进行编辑。你还可以使用缩略图条为照片分配星级评分，主面板顶部的工具栏允许对照片应用颜色标签并根据不同的标准过滤照片。\n\
+  \n右侧边栏充当工具箱，存放了各种工具面板。Darktable 中的面板被视为模块（modules），你可以根据意愿随时启用或禁用它们。这允许你自定义工作空间以适应你特定的摄影需求。Darktable\
+  \ 默认仅启用了几个关键模块，但你可以通过在 `more modules`（更多模块）面板中选择你喜欢的来轻松启用其他模块。为了方便跟踪 Darktable 提供的众多工具，所有面板都被组织成几组，如\
+  \ `basic`（基础）、`color`（颜色）、`correction`（校正）和 `effect`（效果）。\n\n每个模块都包含若干可以调整的参数。例如，`sharpen`（锐化）模块允许你调整三个关键参数：radius（半径）、amount（强度）和\
+  \ threshold（阈值）。如果你对结果不满意，可以点击面板右上角的 `reset parameters`（重置参数）按钮重置所有参数。你还可以将当前的参数值保存为预设（preset），然后轻松地将其应用到其他照片。要保存预设，请点击\
+  \ `presets`（预设）按钮，选择 `store new preset`（存储新预设）命令，并为新预设命名。Darktable 可以将创建的预应用于符合特定标准的照片。例如，你可以配置锐化预设，应用于所有具有特定\
+  \ ISO（例如 ISO `1600` 及以上）的照片。要此操作，勾选 `auto apply this preset to matching images`（自动将此预设应用于匹配的图像）复选框，并在\
+  \ `ISO` 部分指定所需的值。\n\n## Darktable 模块\n\nDarktable 自带了大量的模块，让你能够执行各种处理操作：从简单的裁剪和旋转到色调映射（tone\
+  \ mapping）和色彩区域调整等高级操作。大多数模块的使用非常直观，你可以通过尝试可用的参数来熟悉它们。更棒的是，像 `equalizer`（均衡器）和 `graduated\
+  \ density`（渐变密度）等模块带有几个默认预设，因此你无需反复调整不同的参数即可使用这些工具。\n\n除了 `base curve`（基础曲线）、`exposure`（曝光）、`white\
+  \ balance`（白平衡）和 `crop and rotate`（裁剪与旋转）等基本模块外，Darktable 还提供了一些实用的工具，可以帮助你以最小的改进照片。例如，`velvia`\
+  \ 模块通过增加照片中低饱和区域的饱和度来增强色彩，而 `bloom`（光晕）工具则在亮区域添加或强调光晕（这种效果对于具有锐利高光的照片，如夜晚的路灯，效果最佳）。正如其名所示，`zone\
+  \ system`（区域系统）模块基于安塞尔·亚当斯和弗雷德·阿彻开发的区域系统技术。使用该模块，你可以调整照片特定部分的对比度。`monochrome`（单色）模块在你需要将彩色照片转换为黑白照片时非常有用，而\
+  \ `graduated density` 模块允许你模拟不同的 GND 滤镜。\n\n![](img/file12.jpg)\n\n`Color zones`（色彩区域）是另一个智能模块，可以帮助你调整特定颜色的饱和度和亮度，而不影响照片中的其他颜色。尽管背后有复杂的处理，但该模块的使用非常简单。首先，你必须选择想要调整的颜色。要为此，切换到\
+  \ `hue`（色相）部分，点击 `eye dropper`（吸管）按钮，并使用鼠标在照片上选择所需的颜色区域。你应该能在 `color zones` 面板的颜色表中看到一条黑色垂直线。这条线标记了颜色表中的选定颜色。要增加饱和度，点击\
+  \ `saturation`（饱和度）标签，并使用鼠标向上拖动水平线直到它与黑线交叉。同样地，你可以在 `lightness`（亮度）部分调整所选颜色的亮度。\n\
+  \n![](img/file13.jpg)\n\n## 导出处理过的照片\n\n一旦 RAW 文件处理完成，切换回 `lighttable` 界面以导出结果照片。`export\
+  \ selected`（导出选中）面板允许你配置导出设置，包括目标、文件格式、大小和色彩配置。除了能够将照片导出到硬盘外，Darktable 还可以将选定的照片上传到你的\
+  \ Flickr 或 Picasa Web Albums 账户，并通过电子邮件发送。该应用程序支持多种图形格式，包括 8-bit JPG、8/16-bit PNG\
+  \ 和 8/16-bit TIFF。在 `target storage`（目标存储）部分，你还可以定义规则来自动生成目标路径，使用如 `$(FILE_NAME)`、`$(PICTURES_FOLDER)`、`$(HOUR)`、`$(DAY)`、`$(MONTH)`\
+  \ 等变量（将鼠标悬停在目标路径上可以查看变量列表）。例如，`$(HOME_FOLDER)/$(FILE_NAME)` 规则将以原始名称将照片保存到用户目录下。\n\
+  \n# 使用 digiKam 管理照片\n\n在某种程度上，digiKam 是一个被低估的应用。许多 Linux 用户可能听说它是管理照片集的不错工具，但他们可能不知道\
+  \ digiKam 有更先进的功能，以及它涵盖了整个摄影流程。这篇文章介绍了 digiKam 的一些关键功能，并展示了如何使用它们建立完整的工作流，包括导入、组织和编辑照片及\
+  \ RAW 文件。\n\n## digiKam AppImage 包\n\n如果你想尝试最新版本的 digiKam，你需要从第三方仓库安装或从源码编译应用程序。还有第三种选择：使用\
+  \ digiKam AppImage 包。这是一个包含所需文件和库的单一文件。这意味着你无需安装任何：从项目网站获取最新的 AppImage 包，使用 `chmod\
+  \ +x digikam-x.x.x.appimage` 使下载的文件变为可执行，然后双击该文件启动 digiKam。\n\n\n\ndigiKam 拥有一个相当强大的导入模块，使你可以将照片和\
+  \ RAW 文件从相机传输到应用程序，并对其进行实时处理和组织。事实上，`Import`（导入）界面提供了一些巧妙的功能，允许你配置导入操作。在右侧栏 `Settings`（设置）中的\
+  \ `File Renaming Options`（文件重命名选项）部分，你可以定义自定义规则来重命名所有导入的照片。例如，你想使用从 EXIF 元数据中提取的日期时间信息来重命名导入的照片。启用\
+  \ `Customize`（自定义）选项并在 `Options` 下拉列表中选择 `Date & Time`（日期与时间）项。从 `Format` 字段旁的下拉列表中选择所需的日期时间格式。可用选项包括\
+  \ Standard（标准）、`ISO`、`Text`（文本）、`UnixTimeStamp` 和 `Custom`（自定义）。后者允许你指定自己的日期时间格式。例如，在\
+  \ `Format` 字段中输入 `yyyyMMdd-hhmmss` 规则，按如下格式重命名照片：`19730917-175735`。\n\n![](img/file14.jpg)\n\
+  \n`Auto-creation of Albums`（自动创建专辑）部分提供的选项在几种情况下会非常有用。如果你正在下载不同日期拍摄的照片，启用 `Date-based\
+  \ sub-albums`（基于日期的子专辑）选项并选择所需的日期格式。这将按日期将导入的照片组织到专辑中。`Extension-based sub-albums`（基于扩展名的子专辑）选项对于将不同格式的照片导入到单独的专辑很有。例如，如果你同时使用\
+  \ RAW 和 JPG 拍摄，可以启用 `Extension-based sub-albums` 选项，这样照片将根据文件扩展名导入到相应的文件夹中。最后，On\
+  \ the Fly Operations`（实时操作）部分允许你配置在导入过程中对照片执行的若干操作。除了其他，你还可以让 digiKam 自动旋转照片并转换为\
+  \ PNG 或 TIFF 等其他格式。\n\n## 使用图像质量排序器排序照片\n\n这是一个听起来可能很熟悉的问题：你从一次旅行回来，带着数百甚至上千张照片，其中一些照片曝光不足、脱焦或噪点太多。手动剔除这些照片就像用勺子捞鱼。这就是\
+  \ digiKam 中的 `Image Quality Sorter`（图像质量排序器）工具大显身手的地方。要启用它，选择 `Settings → Configure\
+  \ digiKam`，切换到 `Image Quality Sorter` 部分，并勾选 `Enable Image Quality Sorting`（启用图像质量排序）复选框。虽然你可以修改可用设置，但可能想先尝试默认值。创建一个包含高质量和低质量照片的独立专辑，然后使用默认值对它运行图像质量排序器。如有必要，再调整特定参数。图像质量排序器功能是\
+  \ `Maintenance`（维护）工具的一部分。要处理所有或所选专辑中的现有照片，选择 `Tools → Maintenance`，启用 `Image Quality\
+  \ Sorter` 选项并运行维护操作。随后，图像质量排序器将遍历照片并根据质量对其进行标记。\n\n![](img/file15.jpg)\n\n## 颜色标签和选取\n\
+  \n与任何其他良好的照片管理应用一样，digiKam 允许你为照片和 RAW 文件分配标签。除了标签之外，digiKam 还提供了 `Color Labels`（颜色标签）和\
+  \ `Picks`（选取）功能，这对于跟踪你的照片很有帮助。为单张照片添加颜色标签，右键点击它，选择 `Assign Labels → Color`（分配标签\
+  \ → 颜色），并选择所需的颜色。每个颜色标签都有自己的快捷键，因此你可以使用键盘快速标记照片。例如，要分配洋红色标签，按下 `Ctrl+Alt+6`。要快速从照片中快速移除颜色标签，按下\
+  \ `Ctrl+Alt+0`。`Picks` 功能的工作方式类似：你可以通过 `Assign Labels → Pick`（分配标签 → 选取）上下文菜单或使用默认快捷键，为\
+  \ digiKam 中的任何照片分配三种选取之一（`Pending` 等待、`Accepted` 已接受或 `Rejected` 已拒绝）。请记住，图像质量排序器工具使用选取来标记照片，因此为了避免混乱，在使用此工具时可能想避免使用选取。\n\
+  \ndigiKam 提供了两种方法查找带有特定颜色标签或选取的照片。`Filters` 侧栏中的 `Labels Filter`（标签筛选）部分允许你通过颜色标签和选取过滤当前查看专辑中的照片。当你需要指定多个过滤标准时（例如，显示所有带有绿色和橙色颜色标签以及\
+  \ `Pending` 选取的照片），使用过滤功能会非常有用，但你一次只能查看一个专辑。\n\n![](img/file16.jpg)\n\n如果你需要根据一或两个标准快速过滤照片，`Labels`\
+  \ 左侧边栏是更好的选择。侧边栏包含 digiKam 支持的所有标签列表，并按类型分组：评分、选取和颜色。选择所需的标签以查看所有匹配的照片。你可以通过按住 `Ctrl`\
+  \ 键并用鼠标点击它们来选择多个标签。值得注意的是，`Labels` 左侧边栏中的快速过滤器应用于整个 digiKam 照片集合（这与 `Filters` 右侧边栏中定义的过滤器不同，后者应用于当前选的专辑）。\n\
+  \n## 在 digiKam 中为照片添加地理标记\n\n如果你的相机不支持地理标记，你可以使用 digiKam 轻松为照片添加地理坐标。在 digiKam 中，选择你想要添加地理标记的照片并选择\
+  \ `Item → Edit Geolocation`（项目 → 编辑地理位置）。这会打开 `Geolocation Editor`（地理位置编辑器）界面，由三部分组成：地图窗格包含地图和一个带有多个导航工具的工具栏；地图窗格下方是所选照片列表；右侧侧边栏显示当前活动的部分。\n\
+  \n要为照片添加地理标记，你需要获取拍摄地点的地理坐标，地理位置编辑器提供了几种实现此方法。你可以使用鼠标在地图上移动。要为照片添加地理标记，如果你知道地点的完整或部分地址，可以使用内置搜索功能在地图上找到它。切换到\
+  \ `Search` 部分并在搜索字段中输入地址。点击 `Search` 按钮，你应该会看到带有标记的结果。\n\n![](img/file17.jpg)\n\n\
+  为照片添加地理坐标的最简单方法是将它们拖到地图上的所需位置。或者，你可以将特定搜索结果的地理坐标分配给照片。选择列表中的照片，右键点击所需的搜索结果，并在上下文菜单中选择\
+  \ `Move selected images to this position`（将选移动移动到此位置）。一旦为照片分配了地理坐标，按下 `Apply`（应用）按钮写入地理标记。\n\
+  \ndigiKam 还轻松查找地理标记照片。需要在日本拍摄的所有照片吗？你可以使用 `Map` 侧边栏，只要你的照片已添加地理标记。展开 `Map` 侧边栏，你应该看到地图上代表地理标记照片组的缩略图。每个缩略图都包含一个指示特定区域照片数量的计数器。点击地图工具栏上的\
+  \ `Pan Mode`（平模式）按钮使用鼠标控制地图。\n\n![](img/file18.jpg)\n\n要查看缩略图代表的所有照片，按下从缩略图创建区域的按钮（`Search\
+  \ by area` 部分中的中间按钮）。使用 `Search by area` 部分中的区域选择按钮，你可以查看地图上手动选择区域的所有照片。要这样做，按下该按钮，然后在地图上的某处点击并在所需区域画一个矩形。\n\
+  \ndigiKam 还允许你保存地图搜索。这样，每次需要查找特定区域的照片时，就不必执行相同的地图搜索。在地图下方的字段中为搜索输入名称并点击 `Save`（保存）按钮。这将搜索添加到\
+  \ `Map Searches` 部分，你可以随时点击它来激活保存的搜索。\n\n\n\n\n\ndigiKam 专为管理数百甚至数千张照片而设计，提供了强大的搜索功能，可以帮助你通过多种不同的方式找到你想要的照片。\n\
+  \n### 快速搜索与过滤\n\n如果你需要快速定位或过滤照片，首选应该是右侧的 `Filters`（过滤器）边栏。在这里，你可以使用 `Tags Filter`（标签过滤器）部分中所有可用标签列表，快速定位包含特定标签的照片。选择一个或多个标签，digiKam\
+  \ 将返回当前专辑中所有匹配的照片。要使用评分过滤器，请指定所需的星级数，digiKam 将将视图缩小到匹配的照片。默认情况下，评分过滤器使用 `Greater\
+  \ Than or Equals`（大于等于）条件，但你可以通过 `Rating Filter Options`（评分过滤器选项）下拉列表在其他选项之间进行选择。\n\
+  \n![](img/file19.jpg)\n\n虽然快速搜索和过滤功能可以帮助你以最少的麻烦找到所需的照片，但请记住，它们返回的结果很大程度上取决于每张照片元数据的质量和完整性。digiKam\
+  \ 更高级的搜索功能也是如此，因此为了充分发挥这些功能的潜力，你应该对照片进行标记和评分，并尽可能添加尽可能信息。\n\n### 高级搜索功能\n\n除了 `Filters`\
+  \ 右侧边栏中的快速搜索和过滤工具外，digiKam 还提供了通过侧边栏访问的高级搜索功能。在这里，你会找到各种搜索选项，包括 `Calendar`（日历）、`Tags`（标签）、`Timeline`（时间轴）、`Searches`（搜索）、`Fuzzy\
+  \ Searches`（模糊搜索）、`Map Searches`（地图搜索）和 `People`（人物）。\n\n#### 日期\n`Dates` 部分让你快速找到特定年份、月份的照片。使用主面板中的树形结构，你可以轻松找到所需的年份月份。选择所需的月份，digiKam\
+  \ 会立即显示相关照片。想查看特定日期拍摄的照片吗？你可以使用底部的日历，其中包含照片的日期会加粗显示。点击你想查看相关照片的日期。\n\n![](img/file20.jpg)\n\
+  \n#### 时间轴\n`Timeline` 部分提供了另一种定位和查看特定时期照片的方法。这里的所有照片都以条形图的形式呈现，你可以点击相关的条来查看特定期间的照片。`Time\
+  \ Unit`（时间单位）下拉列表让你指定图表所需的时间尺度：`Year`（年）、`Month`（月）、`Week`（周）和 `Day`（天）。`Timeline`\
+  \ 部分还有一个小技巧：你可以将搜索保存为虚拟专辑。要保存当前搜索，请在时间轴下方的字段中为它命名，并按下 `Save`（保存）按钮。这将虚拟专辑添加到 `My\
+  \ Date Searches`（我的日期搜索）列表中。\n\n![](img/file21.jpg)\n\n#### 搜索\n`Search` 部分让你以更传统的方式进行搜索。在\
+  \ `Search` 字段中输入搜索词，digiKam 会自动在主面板显示匹配的照片。为了让搜索更精确，按下 `Advanced Search`（高级搜索）按钮。这将打开\
+  \ `Advanced Search` 界面，允许你使用广泛的准则搜索照片：从标签和图像属性到特定的文本和元数据值。在配置高级搜索查询时，你可以随时按下 `Try`\
+  \ 按钮查看它是否返回了你正在寻找的照片。一旦你对结果满意，就可以保存搜索以备后用。在 `Save Current Search`（保存当前搜索）部分为搜索命名，并按下\
+  \ `Save` 按钮。然后你就可以在 `My Searches`（我的搜索）列表中选择它来运行搜索。\n\n### 在 digiKam 中处理 RAW 文件\n\
+  \ndigiKam 通常使用默认设置就能很好地解码 RAW 文件。但如果你喜欢完全控制应用程序处理 RAW 文件的方式，请选择 `Settings → Configure\
+  \ digiKam`，切换到 `Image Editor → RAW Behavior`（RAW 行为）部分，并启用 `Always open the Raw\
+  \ Import Tool to customize settings`（始终打开 RAW 导入工具以自定义设置）选项。下次你打开 RAW 文件进行编辑时，digiKam\
+  \ 会带你进入 `RAW Import` 模块，你可以在那里调整 RAW 导入和后期设置。\n\n`RAW Import` 边栏包含三个标签：`RAW Decoding`（RAW\
+  \ 解码）、`Post Processing`（后处理）和 `Info`（信息）。`RAW Decoding` 部分让你访问某些设置，可以调整去马赛（demosaicing）、白平衡、降噪和色差校正，以及色彩管理设置。\n\
+  \n![](img/file22.jpg)\n\n去马赛是从图像传感器的 RAW 输出中重构完整彩色图像的过程。digiKam 用于处理 RAW 文件的 `LibRaw`\
+  \ 库支持多种去马赛算法，包括 `Bilinear`、`VNG`、`AHD`、`LMMSE` 等。你可以使用快捷键 `Shift+F1` 查看每种算法的简短且较具技术性的描述。但查看不同算法之间差异的最佳方法是尝试将它们应用于当前打开的\
+  \ RAW 文件。选择你想要的算法，并按下 `Update`（更新）按钮预览结果。预览面板显示将将到编辑器中的图像，你可以使用窗口底部的缩放滑块放大图像以进行仔细检查。\n\
+  \n默认情况下，digiKam 将 RAW 文件转换为 8 位彩色图像，但你可以通过启用 `16 bits color depth`（16 位色深）选项来选择\
+  \ 16 位模式。8 位模式速度更快，但 16 位转换是目前最佳的方法，因为它提供了更好的色调范围。如果你选择在 16 位模式下工作，建议在 `Color Management`（色彩管理）部分中启用并配置色彩管理选项，以防止图像在编辑器中渲染过暗。由于某些算法处理绿色像素的方式，生成的图像可能会包含不良模式。启用\
+  \ `Interpolate RGB as four colors`（作为四色进行插值）选项可以解决这个问题。`Do not stretch or rotate`（不拉伸或旋转）选项专门为带有\
+  \ CCD 传感器的相机设计。当启用此选项时，图像会旋转 45 度，使输出像素对应一个 RAW 像素。此选项还可以防止图像拉伸到错误的宽高比。\n\n在 `White\
+  \ Balance`（白平衡）部分，你可以调整白平衡设置并指定系统如何处理高光（照片中的过度区域）。LibRaw 提供了几种恢复高光的算法（`Solid White`、`Unclip`、`Bend`\
+  \ 和 `Rebuild`），你可以使用快捷键 `Shift+F1` 查看它们的简短描述。为了更准确地处理高光，请启用 `Correct false colors\
+  \ in highlights`（修正高光伪色）选项。如果你想让 LibRaw 自动调整亮度，请勾选 `Auto Brightness`。除了白平衡，你还可以启用并调整\
+  \ `Exposure Correction`（曝光修正）选项并手动调整曝光补偿。底部的欠曝和过度按钮可以在预览面板中识别照片的欠曝过度区域，帮助你调整曝光设置。\n\
+  \n使用 `Corrections`（校正）部分的选项，你可以选择对图像应用支持的降噪算法，还可以启用色差校正选项并调整其设置。在 `Color Management`（色彩管理）部分，你可以指定色彩配置文件和色彩空间。\n\
+  \n在 `Post Processing`（后处理）标签页下，你可以调整多个曝光设置（例如亮度、对比度、伽马和曝光）以及调整光度曲线。虽然这些调整可以在编辑转换图像时进行，但你可以在\
+  \ RAW 导入期间执行这些操作以简化编辑流程。digiKam 将所有调整应用于预览图像，因此你可以在执行实际转换之前立即看到调整结果。\n\n\n\n\n一旦你对所做的设置和调整感到满意，点击\
+  \ `Import` 按钮导入并处理 RAW 文件。请记住：如果不确定，可以使用 `Use Default` 按钮让 digiKam 使用默认设置导入 RAW\
+  \ 文件。\n\n## 使用色级阶（Levels）和曲线（Curves）调整工具编辑照片\n\n在改进照片方面，色级阶（Levels）是 digiKam 武器库中的一种重要武器。该工具允许你通过指定直方图中完全黑色、完全白色和中间色调的位置来调整亮度和对比度，这使其成为修复曝光不足或过度的照片以及改善照片整体色调范围的完美工具。\n\
+  \n![](img/file23.jpg)\n\n你可以通过选择 `Color → Levels Adjust` 访问图像编辑器中的色级阶工具。在 `Channel`\
+  \ 下拉列表中选择 `Luminosity`，然后按下 `Linear` 按钮。`Levels Adjust` 面板中的关键元素是带有黑点和白点滑块的直方图。简单来说，黑点滑块控制阴影部分，而白点滑块控制高光部分。因此，要加深照片中的阴影区域，请将黑点滑块向右移动。需要增强高光吗？将白点滑块向左移动。除了使用滑块，你还可以通过\
+  \ `Auto` 按钮让 digiKam 自动调整色阶。使用此功能的效果往往因而异，但你可以使用 `Defaults` 按钮轻松撤销所有更改。\n\n`Auto`\
+  \ 按钮旁边的三个颜色选择器提供了另一种调整色阶的方法。要调整阴影，按下阴影色调颜色选择器按钮，并点击照片中应该是黑色的区域。同样地，你可以使用相应的颜色选择器调整中间色调和高光。在\
+  \ `Luminosity` 通道中调整色阶有助于增加对比度，而不影响色彩饱和度。要更改色彩平衡，你可以调整红、绿、蓝通道中的色阶（在 `Channel` 下拉列表中选择相应的通道）。这对于增强色彩和修复带有不自然色偏的照片非常有用。\n\
+  \n![](img/file24.jpg)\n\n与色级阶工具类似，曲线工具（`Color → Curves Adjust`）可以选择性地重新映射输入色调。但与只有黑点和白点滑块的色级阶不同，曲线工具可以使用任意数量的点来控制色调曲线。\n\
+  \n曲线工具中的关键元素是显示输入色调分布（X 轴）和输出色调（Y 轴）的直方图。X 轴的左部分代表较暗色调，右部分代表高光。对角线（色调曲线）表示输入与输出之间的比例。初始状态为直线，这意味着输出与输入完全相同。调整色调曲线会改变原始比例，从而改变图像的色调。这正是曲线工具的设计目的。点击对角线添加控制点，然后用鼠标拖动控制点来调整色调曲线的形状。为了进行精调，可以创建额外的控制点。\n\
+  \n为了更好地理解曲线的工作原理，从几个基础曲线调整开始。要增强高光，将色调曲线的右上部分向上调整。如上述，直方图的右部分代表高光，因此将 `Luminosity`\
+  \ 通道中的曲线向上推会增加图像的亮度。此外，这种技术可以产生高调（high-key）照明效果。另一种常见的调整是提高曲线的上半部分并降低下半部分，使色调曲线呈\
+  \ S 形。这有效地亮了图像中较亮的区域并加深了较暗的区域。这在不影响曝光的情况下增加了图像的整体对比度。\n\n虽然 `Luminosity` 通道允许你调整色调曲线，但红、绿、蓝通道可以控制特定颜色在图像特定色调区域的贡献。例如，将红色通道曲线的底部向下推会减少红色在暗部中的贡献，从而使阴影显得更冷。\n\
+  \ndigiKam 提供了将当前曲线配置保存为预设以及通过右侧栏的 `Save as` 和 `Load` 按钮加载现有曲线预设的功能。曲线以兼容 GIMP 的格式存储，因此你可以在\
+  \ digiKam 中使用用 GIMP 创建的曲线，反亦然。\n\n## 使用 Hald CLUT 进行色彩变换\n\n将色彩调整保存为预设的功能提供了一种方便的方法，可以创建轻松应用于多张照片的预设。但这种功能具有局限性。首先，预设通常适用于特定应用程序，因此用一个照片编辑工具创建的预设无法在其他应用程序中使用。其次，某些应用程序对预设的支持有限。例如，digiKam\
+  \ 只允许创建曲线预设。最后，预设通常只能从应用程序内部使用，这使得无法通过脚本自动化涉及预设的操作。\n\n[Hald CLUT](http://www.quelsolaar.com/technology/clut.html)\
+  \ 技术克服了这些和其他缺点。Hald CLUT 的作者给出了最好的解释：\n\n> 任何色彩校正都可以表示为色彩查找表（Color LookUp Table\
+  \ 或 CLUT，有时写为“Color LUT”）。这是一个三维表格，其中所有颜色都在色彩空间中表示。色彩查找表中的每种颜色都有一个对应的目标颜色值，对应于特定颜色在使用\
+  \ CLUT 进行校正后变成的颜色。这些表格本质上是三维的（红、绿、蓝），因此使用了特殊的格式格式来存储它们。然而，Hald CLUT 已被转换为二维空间，由于表格存储的是颜色，CLUT\
+  \ 可以保存为任何非破坏性图像格式的。\n\n简单来说，Hald CLUT 是一个二维色彩表，用作图像色彩校正的参考。得益于 [ImageMagick](http://www.imagemagick.org/script/index.php)\
+  \ 图像处理工具支持 CLUT，使用该技术创建色彩预设和滤镜并不复杂。要安装 ImageMagick，请运行 `sudo apt install imagemagick`\
+  \ 命令（在 openSUSE 上使用 `sudo zypper in imagemagick`）。你首先需要的是使用以下命令创建一个 CLUT 表：\n\n\
+  ```\nconvert hald:9 hald-9.png\n```\n\n然后在在你喜欢的照片编辑应用程序中打开生成的 *hald-9.png* 文件，应用所需的色彩校正（曲线、色阶、饱和度、亮度等），并保存更改。现在你有一个可以作为预设使用的参考\
+  \ CLUT 表。要将表中的调整应用于照片，使用以下命令：\n\n```\nconvert foo.JPG hald-9.png -hald-clut foo-modified.jpeg\n\
+  ```\n\n这将 *hald-9.png* 表中的色彩调整应用于 *foo.JPG* 图像，并将修改后的文件保存为 *foo-modified.jpeg*。\n\
+  \n关于 ImageMagick 和 Hald CLUT 的更多信息请访问 [www.imagemagick.org/Usage/color_mods/#hald-clut](http://www.imagemagick.org/Usage/color_mods/#hald-clut)。\n\
+  \n## 实际示例\n\ndigiKam 允许通过曲线、色调和饱和度的组合创建照片效果。但问题在于：digiKam 无法将所有这些调整保存为单个预设（它只能保存曲线预设）。通常情况下，这意味着每当你想对照片应用特定的照片效果时，都必须手动进行相同的调整，这并不实用。这正是\
+  \ Hald CLUT 技术大显用场的地方。\n\n\n\n创建一个 Hald CLUT 表，在 digiKam 中打开它并应用所需的曲线、色调和饱和度调整。将修改后的表保存为\
+  \ PNG 格式，大功告成。下次你想将创建的摄影效果应用到照片时，使用 `convert` 工具根据创建的 Hald CLUT 表进行图像转换。更好的是，这种技术允许将相同的效果应用到多张照片。以下命令使用\
+  \ Hald CLUT 表转换多个 JPEG 格式的照片：\n\n```\nfor file in *.jpg; do echo \"$file\"; convert\
+  \ \"$file\" hald-9.png -hald-clut \"$file\"; done\n```\n\n## 应用多个 Hald CLUT 预设的\
+  \ Shell 脚本\n\nHald CLUT 文件提供了一种简单的方法，可以通过单个命令对图像进行颜色校正：\n\n```\nconvert foo.JPG\
+  \ hald-9.png -hald-clut foo-modified.jpeg\n```\n\n但如果你有一组 Hald CLUT 文件并想将它们全部应用到特定的照片上呢？一个简单的\
+  \ Bash Shell 脚本可以自动化这个原本繁琐的任务：\n\n```bash\n#!/usr/bin/env bash\nif [ -z \"$1\" ];\
+  \ then\n  echo \"Specify the required parameter.\"\n  exit 1\nfi\ndir=\"hald-clut\"\
+  \nif [ ! -d \"$dir\" ]; then\n  mkdir -p \"$dir\"\nfi\nfor file in *.png; do\n \
+  \ prefix=\"${file%.*}\"\n  bname=$(basename \"$1\")\n  echo \"Applying $file Hald-CLUT\
+  \ ...\"\n  convert \"$1\" \"$file\" -hald-clut \"$dir/$prefix-$bname\"\ndone\n```\n\
+  \n该脚本逐一选取当前工作目录下的 `*.png` Hald CLUT 文件并将其应用到指定的图像文件。修改后的文件保存在独立的 `hald-clut` 目录中，每个文件都以所应用的\
+  \ Hald CLUT 文件的命名前缀。\n\n以下是其在实践中的操作方法。首先，将上述代码粘贴到文本文件中并保存为 `hald-clut`。然后使用以下命令将创建的文件复制到\
+  \ `/usr/local/bin/` 目录并使脚本具有可执行权限：\n\n```\nsudo cp hald-clut /usr/local/bin/\nsudo\
+  \ chown root:root /usr/local/bin/hald-clut\nsudo chmod 755 /usr/local/bin/hald-clut\n\
+  ```\n\n现在，假设你想将 `hald-clut-files` 中所有的 Hald-CLUT 预设应用到 `foo.JPG` 文件。在终端中，切换到该目录并运行\
+  \ `hald-clut path/to/foo.JPG` 命令（将 `path/to/foo.JPG` 替换为文件的实际路径）。这将所有预设应用到 `foo.JPG`\
+  \ 图像并将结果保存在 `hald-clut-files/hald-clut` 目录下。\n\n## 使用 Lilut 使用 Hald CLUT 预设\n\n\
+  如果你刚好在使用 digiKam、RAWTherapee 或任何支持 Hald CLUT 的照片编辑应用程序，你可能已经有很多喜欢的预设。但如果你在无法访问照片编辑程序的情况下也想使用这些预设怎么办？[Lilut](https://gitlab.com/dmpop/lilut)\
+  \ 来来救场。这个基于 PHP 的简单工具允许从任何设备上传照片并应用任何可用的 Hald CLUT 预设。\n\n![](img/file25.jpg)\n\n\
+  Lilut 可以在任何带有 PHP 的 Web 服务器上运行。唯一的额外要求是在服务器上安装 `php-imagick` 软件包。如果你的服务器运行基于 Debian\
+  \ 的 Linux 发行版，可以使用 `sudo apt-get install php-imagick` 命令安装该包。在 openSUSE 上，命令是 `sudo\
+  \ zypper in php7-imagick`。默认 PHP 配置将上传文件的大小限制为 2MB。要更改设置，请打开 `php.ini` 文件进行编辑（例如\
+  \ `sudo nano /etc/php7/cli/php.ini`）并调整 `upload_max_filesize` 参数的值。\n\n要部署 Lilut，使用以下命令克隆\
+  \ Git 仓库：\n\n```\ngit clone https://gitlab.com/dmpop/lilut.git\n```\n\n或者，获取最后的源码作为\
+  \ ZIP 文件并解压下载的压缩包。将你的 Hald CLUT 文件放入 `luts` 文件夹，并将整个 `lilut` 目录移动到 Web 服务器的文档根。然后将浏览器指向\
+  \ `127.0.0.1/lilut`（将 `127.0.0.1` 替换为服务器的实际 IP 地址或域名），你就能看到 Lilut 的主页。\n\n# 备份与恢复\n\
+  \n备份不仅仅是在外部硬盘上保留一份照片库的副本。你还应该考虑实现云备份系统，以及在外出时保持照片安全的解决方案。\n\n## 使用 rclone 进行云备份\n\
+  \n如今云存储非常廉价了，而且有很多存储供应商可以选择。因此，没有理由不建立异地备份系统来确保文件安全。不过，有一个遗憾：许多云存储服务希望你使用它们专有的图形客户端应用程序。更糟糕的是有些服务根本不提供\
+  \ Linux 客户端。幸运的是有 [rclone](http://rclone.org/)，这是一个可以与许多云交互的小型开源工具。\n\n### 安装 rclone\n\
+  \nrclone 用 Go 编写，以自包含二进制文件的形式发行，没有依赖项，并可以在 x86、AMD64 和 ARM 平台上运行。安装 rclone 并不困难，但需要一些手动操作。从项目网站获取最新版本，解压缩包后进入该目录。将执行文件复制到\
+  \ `/usr/local/bin/` 并更改文件权限：\n\n```\nsudo cp rclone /usr/local/bin/\nsudo chown\
+  \ root:root /usr/local/bin/rclone\nsudo chmod 755 /usr/local/bin/rclone\n```\n\n\
+  要安装 rclone 的帮助文档，运行以下命令：\n\n```\nsudo mkdir -p /usr/local/share/man/man1\nsudo cp\
+  \ rclone.1 /usr/local/share/man/man1/\nsudo mandb\n```\n\n### 在 Android 上安装 rclone\n\
+  \nAndroid 设备也可以安装并运行 rclone。在 Android 上部署 rclone 需要 [Termux](https://termux.com/)\
+  \ 应用，因此首要任务是从 Google Play 或 F-Droid 安装它。启动 Termux 并运行以下命令安装 rclone：\n\n```\npkg\
+  \ update\npkg install golang git\nexport GOPATH=`pwd``/go\nmkdir go\ngo get -u -v\
+  \ github.com/ncw/rclone\n```\n\n使用 `./go/bin/rclone version` 命令确认 rclone 已安装。开启\
+  \ Android 存储访问：\n\n```\npkg install termux-api\npkg termux-storage-setup\n```\n\n\
+  ### 配置 rclone\n\n为了让 rclone 与你的云存储服务配合，你需要创建一个配置文件。该工具拥有特殊的 `config` 子命令允许你完成此操作。假设你想让\
+  \ rclone 使用 [Amazon Drive](https://www.amazon.com/clouddrive/) 服务。运行 `rclone config`\
+  \ 命令，在提示设置配置密码时按 **n**，并为配置文件命名为 `remote`。在支持的服务列表中输入 Amazon Drive 对应的数字。保持 `Amazon\
+  \ Application Client Id` 和 `Amazon Application Client Secret` 为空，选择自动配置选项。这将打开默认浏览器并获取访问令牌。检查并确认生成的设置，大功完成。\n\
+  \nrclone 配置完成后，运行 `rclone lsd remote:` 命令即可返回所有容器。\n\n\n\n\n`rclone` 支持一些简单的子命令和选项，允许你访问、管理和使用远程存储。其中，`copy`\
+  \ 和 `sync` 子命令可能是最重要的。顾如名，`copy` 子命令将源目录的内容复制到远程目标地。该子命令不会传输未更改的文件（它通过文件大小、修改时间和以及\
+  \ `md5sum` 哈希值来对它们进行检查），并且不会从目标目录中删除文件。如果目标目录不存在，`rclone` 会自动创建它。大多数 `rclone` 命令都遵循简单的\
+  \ `rclone [OPTION] [SUBCOMMAND] <source> <destination>` 语法，以下是将指定目录的内容复制到远程目标地的命令示例：\n\
+  \n```\nrclone copy /path/to/source remote:destination\n```\n\n```\n\n与 `copy` 类似，`sync`\
+  \ 子命令将文件从源目录传输到目标目录，跳过未更改的文件。但当 `sync` 遇到源目录中不存在的文件时，该子命令会将它们从目标目录中删除。换句话说，`sync`\
+  \ 通过修改目标目录来保持源目录和目标目录的同步。由于此操作（以及其他 rclone 操作）是不可逆的，因此先进行测试是合理的，`rclone` 提供了实用的\
+  \ `--dry-run` 选项供使用。将此选项添加到 `rclone sync` 命令中可以检查哪些文件将被复制和删除：\n\n```\nrclone --dry-run\
+  \ sync /path/to/source remote:destination\n```\n\n当你需要确保源目录和目标目录中的文件匹配时，`check`\
+  \ 子命令非常有用：\n\n```\nrclone check /path/to/source remote:destination\n```\n\n此命令通过文件大小和\
+  \ `md5sum` 哈希值比较文件，然后显示不匹配的文件列表。\n\n除了 `copy` 和 `sync`，`rclone` 还支持多个让你查看和管理远程存储的子命令。例如，`lsd`\
+  \ 子命令可以列出远程目标所有的目录（也称为容器和桶），而 `ls` 子命令显示指定远程目录中的所有文件：\n\n```\nrclone lsd remote:\n\
+  rclone ls remote:dir\n```\n\n需要创建或删除远程目录吗？使用 `mkdir` 和 `rmdir` 子命令：\n\n```\nrclone\
+  \ mkdir remote:new_dir\nrclone rmdir remote:old_dir\n```\n\n最后一个命令只有在目录为空时才能删除目录。如果你想删除目录及其内容，请使用\
+  \ `purge` 子命令：\n\n```\nrclone purge remote:old_dir\n```\n\n作为一种命令行工具，`rclone` 支持许多控制其行为的选项。例如，`--bwlimit`\
+  \ 选项允许你限制 `rclone` 可用的带宽。当运行 `rclone` 的机器与其他客户端共享互联网连接时，这非常有用。限制带宽可以确保其他机器在复制或同步操作期间能够以合理的速度访问互联网。可以使用\
+  \ `k`、`M` 和 `G` 后缀以千字节、兆字节或吉字节指定带宽限制：\n\n```\nrclone --bwlimit=15M sync /path/to/source\
+  \ remote:destination\n```\n\n上面的命令将带宽限制为 15MBytes/s。\n\n之前提到过 `--dry-run` 选项，它允许你在不不应用任何更改的情况下测试\
+  \ `rclone` 操作。最后，如果你无人值运行 `rclone`，你可能想使用 `--log-file` 选项将 `rclone` 的输出保存到文件中以便稍后参考：\n\
+  \n```\nrclone --log-file=rclone.log sync /path/to/source remote:destination\n```\n\
+  \n### 在 rclone 中使用过滤器\n\n`rclone` 中的过滤选项和模式可用于配置 `rclone` 跳过某些文件和目录。`rclone` 中的过滤规则适用于大多数命令，包括\
+  \ `copy` 和 `sync`。`rclone` 中的过滤规则由两部分组成：排除（exclude）或包含（include）子命令和一个过滤模式。`rclone`\
+  \ 有四种过滤子命令：`--exclude`、`--exclude-from`、`--include` 和 `--include-from`。前两个命令用于排除文件，而另外两个允许将当前操作限制为指定文件。`--exclude`\
+  \ 子命令允许内联指定过滤模式，例如：\n\n```\nrclone --exclude *.NEF sync /path/to/source remote:destination\n\
+  ```\n\n该命令同步扩展名为 `*.NEF` 的 RAW 文件以外的所有内容。与其临时指定过滤规则，可以将过滤模式列表保存在文本文件中并配合 `--exclude-from`\
+  \ 子命令使用它：\n\n```\nrclone --exclude-from=filters.txt copy /path/to/source remote:destination\n\
+  ```\n\n当你需要将 `rclone` 限制为特定的文件集时，`--include` 命令非常有用。例如，如果你想同步目录中的 TIFF 和 JPEG 文件并跳过其他文件，以下过滤规则可以实现：\n\
+  \n```\nrclone --include *.{tif,jpg} copy /path/to/source remote:destination\n```\n\
+  \n与 `--exclude-from` 类似，`--include-from` 命令可以从文本文件中读取过滤模式。\n\n使用排除和包含子命令，你可以创建跳过或包含匹配文件的过滤规则。但如果你需要创建一个结合了这两者的过滤器集怎么办？那么\
+  \ `--filter-from` 子命令就是你需要的。该子命令读取包含包含和排除过滤规则的文本文件，并将它们应用于当前操作：\n\n```\nrclone --filter-from=filters.txt\
+  \ sync /path/to/source remote:destination\n```\n\n指定文件中的每行都包含一个以 `+`（包含）或 `-`（排除）前缀开头的过滤规则，例如：\n\
+  \n```\n+.jpeg\n+.tiff\n-.MP4\n-.xmp\n```\n\n正如你可能所注意到的，`rclone` 中的过滤模式基于通配符。虽然它们没有正则表达式那么强大，但通配符更容易掌握。如果你在命令行中使用了通配符，那么编写\
+  \ `rclone` 过滤规则时就不会出现问题。\n\n\n\n\n从威盛（Transcend）、闪迪（SanDisk）和英睿达等正直制造商选择存储卡，是确保你不会丢失\
+  \ RAW 文件和照片的最佳方法。但如果灾难发生，[Photorec](http://www.cgsecurity.org/wiki/PhotoRec) 可以派上用。这个简单的工具可以从损坏的存储卡中恢复文件，并找回意外删除的文件。PhotoRec\
+  \ 是 TestDisk 软件包的一部分，你可以使用 `sudo apt install testdisk` 命令来安装它。虽然 PhotoRec 是一个命令行工具，但它非常易用，并会温和地引导你完成整个数据恢复过程，全程提供易于遵循的指令。\n\
+  \n要开始恢复操作，将存储卡插入你的电脑并运行 `sudo photorec` 命令。从检测到的卷列表中选择存储卡并按 `Proceed`（继续）。然后选择你想要恢复的分区并选择其格式。指定你是想从整个分区恢复数据，还是从其未分配空间恢复数据（这是默认选项，也是一个明智的首选）。选择一个存储恢复文件的路径，按\
+  \ `C` 键并等待恢复过程完成。随后，你将在指定路径下的 `recup_dir.x`（其中 `x` 是数字）目录中找到恢复的数据。这就是你使用 PhotoRec\
+  \ 成功恢复数据所需的所有知识，但你可以在 [PhotoRec 逐步教程](http://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step)\
+  \ 页面上找到关于该工具选项的其他信息。\n\n尽管看起来简单，PhotoRec 在恢复数据方面通常表现出色，因此它是你摄影工具箱中不可或缺的补充。\n\n#\
+  \ 使用 Mejiro 发布和分享照片\n\n如果你正在寻找一个简单且轻量级的应用程序在自己的服务器上托管照片，那么 [Mejiro](http://dmpop.github.io/mejiro/)\
+  \ 非常适合你的需求。Mejiro 由单个 PHP 文件组成，它可以很轻松地运行在任何带有 Web 服务器（例如 Apache 或 lighttpd）和 PHP\
+  \ 的机器上，且该应用程序的部署和使用极其简单。\n\n![](img/file26.jpg)\n\n虽然 Mejiro 是一个相当极简的应用，但它确实提供了实用的功能和人性化的体验。应用程序采用响应式设计，因此在移动设备上运行良好。Mejiro\
+  \ 会自动提取并显示每张照片的基本 EXIF 信息，包括光圈、快门速度和 ISO。此外，应用程序还会解析 IPTC 元数据并显示分配给照片的关键词。对于地理标记的照片，Mejiro\
+  \ 会在 OpenStreetMap 或 Google 地图上显示它们的精确位置。你可以在随附文本文件中为每张照片添加描述，应用程序还可以读取并显示照片 `UserComment`\
+  \ EXIF 字段中的描述。更好的是，Mejiro 会自动检测浏览器语言，并选择带有相应语言前缀的描述文本文件。Mejiro 使用 [is.gd](http://is.gd/)\
+  \ 服务生成短链接以便分享。对于每个 JPEG 格式的照片，你可以上传配套的 RAW 文件，Mejiro 会自动为其添加一个链接。\n\n# 安装 Mejiro\n\
+  \n要托管 Mejiro，你需要一台运行 Apache 服务、PHP 和 GD 库的 Linux 类的机器。你还需要安装 cURL 工具和 Git。Mejiro\
+  \ 应该可以与 [nginx](http://nginx.org/) 等其他服务器配合，但它只在 Apache 和 lightttpd 上进行过测试。\n\n\
+  ## 使用 Apache 服务器安装\n\n1. 使用 `sudo apt install apache2 php5 php5-gd git curl` 命令安装所需的软件包。\n\
+  2. 在终端中，切换到服务器的根目录（例如 `/var/www/`），并使用 `sudo git clone https://github.com/dmpop/mejiro.git`\
+  \ 命令获取最新源代码。或者，你可以下载 ZIP 存档并将其解压到服务器的文档根目录。\n3. 用文本编辑器打开 `index.php` 文件并编辑设置。这一步是可选的。\n\
+  4. 使用 `sudo chown www-data -R mejiro` 命令让服务器对 `mejiro` 目录可写。\n5. 将照片放入 `photos`\
+  \ 目录。\n6. 将浏览器指向 `http://127.0.0.1/mejiro/`，你应该就能看到 Mejiro 了。\n\n## 在树莓派上安装 Mejiro\n\
+  \n在树莓派上安装 Mejiro 只需要在终端中执行以下命令：\n\n```\nwget https://raw.githubusercontent.com/dmpop/mejiro/master/install.sh\n\
+  chmod +x install.sh\nsudo ./install.sh\n```\n\n这些命令获取 `install.sh` 脚本，使脚本具有可执行权限，然后运行该脚本。\n\
+  \n# 更新 Mejiro\n\n要更新现有的 Mejiro 安装，将当前的 `index.php` 文件替换为最新版本。\n\n如果你是通过 Git 直接从项目的\
+  \ GitHub 仓库安装的 Mejiro，切换到 Mejiro 目录并运行以下命令：\n\n```\ngit pull origin master\n```\n\
+  \n此命令从项目的 GitHub 仓库拉取最新源代码。\n\n# 向 Mejiro 添加照片\n\n要向 Mejiro 填充照片，你需要将它们上传到 `photos`\
+  \ 目录。你可以通过 SSH 或 FTP 从本地机器推送到照片，或者通过专用应用从 Android 设备上传照片。\n\n## 通过 SSH 上传照片\n\n\
+  从 Linux 机器上传照片最直接的方法是使用 `scp` 工具。不过，为了使用它，托管 Mejiro 的服务器必须运行 SSH 服务。从本地机器复制照片到服务器，请使用以下命令：\n\
+  \n```\nscp /path/to/foo.jpg user@127.0.0.1:/var/www/mejiro/photos\n```\n\n将 `user`\
+  \ 和 `127.0.0.1` 替换为服务器的实际用户名和 IP 地址。\n\n## 使用 rsync 上传照片\n\n与其使用 `scp` 工具，你可以使用旧的\
+  \ `rsync` 工具将目录内容上传到 Mejiro。这允许你以最小的精力推送多张照片。要使此方案生效，你需要在服务器和你的机器上安装 rsync。然后使用以下命令（将\
+  \ `/path/to/dir` 替换为源文件夹）：\n\n```\nrsync -avhe ssh --progress /path/to/dir user@127.0.0.1:/var/www/mejiro/photos/\n\
+  ```\n\n## 使用 Ghost Commander 从 Android 上传\n\nAndroid 用户可以使用优秀的 [Ghost Commander](https://play.google.com/store/apps/details?id=com.ghostsq.commander)\
+  \ 文件管理器从设备上传照片。该应用原生支持 FTP 协议。这意味着如果托管 Mejiro 的机器运行 FTP 服务器，你可以直接使用。要进行操作，启动 Ghost\
+  \ Commander 并点击底部工具栏上的 **Home** 按钮。然后点击 **FTP site**，提供所需的连接信息并按 **OK**。\n\n如果你通过\
+  \ SSH 或 SFTP 上传文件，需要安装 [Ghost Commander SFTP 插件](https://play.google.com/store/apps/details?id=com.ghostsq.commander.sftp)。安装完成后，你可以在\
+  \ **Home** 部分的 **SFTP site** 建立 SSH 连接。\n\n# 使用 uMap 和 PHP 映射照片\n\n如果你恰好使用像 Mejiro](http://dmpop.github.io/mejiro/)\
+  \ 这样将照片及其缩略图存储在常规目录中的发布应用程序，你可以结合 [uMap](http://umap.openstreetmap.fr/) 和少量 PHP\
+  \ 脚本自动为你的照片绘制地图。更好的是，你不需要从头编写 PHP 代码：你可以使用下面的脚本作为起点。\n\n\n\n\n\n```php\n<?php\n\
+  $url = \"http://127.0.0.1/mejiro\";\n$photos = \"photos\";\n$thumbnails = \"thumbnails\"\
+  ;\nfunction gps($coordinate, $hemisphere) {\n    for ($i = 0; $i < 3; $i++) {\n\
+  \        $part = explode('/', $coordinate[$i]);\n        if (count($part) == 1)\
+  \ {\n            $coordinate[$i] = $part[0];\n        } else if (count($part) ==\
+  \ 2) {\n            $coordinate[$i] = floatval($part[0])/floatval($part[1]);\n \
+  \       } else {\n            $coordinate[$i] = 0;\n        }\n    }\n    list($degrees,\
+  \ $minutes, $seconds) = $coordinate;\n    $sign = ($hemisphere == 'W' || $hemisphere\
+  \ == 'S') ? -1 : 1;\n    return $sign * ($degrees + $minutes/60 + $seconds/3600);\n\
+  }\n$files = glob($photos.DIRECTORY_SEPARATOR.'*.{jpg,jpeg,JPG,JPEG}', GLOB_BRACE);\n\
+  $fileCount = count($files);\necho \"lat,lon,thumbnail,photo\\n\";\nfor ($i=($fileCount-1);\
+  \ $i>=0; $i--) {\n    $file = $files[$i];\n    $photo_url = $url.DIRECTORY_SEPARATOR.$photos.DIRECTORY_SEPARATOR.basename($file);\n\
+  \    $photo_url = preg_replace('/\\s+/', '%20', $photo_url);\n    $thumbnail_url\
+  \ = $url.DIRECTORY_SEPARATOR.$photos.DIRECTORY_SEPARATOR.$thumbnails.DIRECTORY_SEPARATOR.basename($file);\n\
+  \    $filepath = pathinfo($file);\n    $exif = exif_read_data($file);\n    $lat\
+  \ = gps($exif[\"GPSLatitude\"], $exif['GPSLatitudeRef']);\n    $lon = gps($exif[\"\
+  GPSLongitude\"], $exif['GPSLongitudeRef']);\n    $exif = exif_read_data($file, 0,\
+  \ true);\n    echo $lat.\",\".$lon.\",\".$thumbnail_url,\"\".$photo_url.\"\\n\"\
+  ;\n}\n?>\n```\n\n该脚本会遍历指定目录中的每张照片，提取照片的地理坐标、完整路径以及相关缩略图的路径。随后，脚本以逗号分隔的格式输出获取的数据。\n\
+  \n![](img/file27.jpg)\n\n复制代码并将其粘贴到新的文本文件中。为 `url`、`photos` 和 `$thumbnails` 变量指定正确的值，并将脚本保存为\
+  \ `csv.php`。将生成的文件移动到你的照片共享应用程序安装的根目录下。要检查脚本是否正常工作，请在浏览器中访问 `http://127.0.0.1/photos/csv.php`（将\
+  \ `127.0.0.1` 和 `photos` 替换为实际的服务器 IP 或域名以及包含照片的目录）。你应该看到类似这样的输出：\n\n```\nlat,lon,thumbnail,photo\
+  \ 49.477116899982,10.988667,http://dmpop.dhcp.io/mejiro/photos/tims/20170506-155800.jpeg,http://dmpop.dhcp.io/mejiro/photos/20170506-155800.jpeg\n\
+  ```\n\n接下来，登录 uMap 并点击**创建地图**(Create a map）按钮创建一个新地图。在右侧面板中，点击**管理图层**(Manage layers）。点击默认图层旁边的**编辑**(Edit）按钮，并为其赋予一个描述性名称。展开**远程数据**(Remote\
+  \ data）部分，在**Url**字段中输入 PHP 脚本的 URL，并从**格式**(Format）下拉列表中选择 `csv`。启用**动态**(Dynamic）和**代理请求**(Proxy\
+  \ request）选项。展开**交互选项**（Interaction options）部分，并在**弹出窗口内容模板**（Popup content template）字段中输入以下内容：\n\
+  \n```\n{{{thumbnail}}}\nSource: {photo}\n```\n\n保存并刷新地图。\n\n\n\n\n使用 Expose 没有任何这更简单了。在终端中，切换到包含你想发布的照片和视频的目录，然后运行\
+  \ `expose` 命令。这将在 `_site` 目录中生成一个完整的静态画廊。如果你想生成预览，请运行 `expose -d` 命令来创建一个包含低分辨率图像的画廊。但请记住，当你再次运行脚本时，Expose\
+  \ 不会覆盖现有的图像，因此你需要删除 `_site` 目录以重新生成包含高分辨率照片的画廊。\n\n## 添加描述和设置\n\n为照片添加文本描述只需创建一个与照片同名的\
+  \ `.txt` 文件，非常简单。例如，要为 `001_foo.jpeg` 照片添加描述，只需在同级目录下创建一个包含所需文本的 `001_foo.txt` 文件。\n\
+  \n![](img/file29.jpg)\n\n在默认主题中，指定的描述将作为文本覆盖层出现在照片的底部。但这可能总是最优的文本放置位置。幸运的是，Expose\
+  \ 允许通过在描述文件中指定 YAML 配置设置来定义文本位置和流向。你可以通过在描述文件的开头添加以下配置（所有值均以百分比表示），指定精确的文本位置以及文本框的宽高：\n\
+  \n```\n---\ntop: 15\nleft: 5\nwidth: 25\nheight: 20\n---\n```\n\n在此示例中，`top: 15`\
+  \ 和 `left: 5` 选项指示脚本将文本放在照片顶部边缘 15%、左边缘 5% 的位置。除了位置之外，你还可以使用 `textcolor` 设置指定文本颜色：\n\
+  \n```\n---\ntop: 15\nleft: 5\nwidth: 25\nheight: 20\ntextcolor: #ffffff\n---\n```\n\
+  \n默认情况下，文本被放置在指定宽度和高度的矩形文本框中，但也可以使用 `polygon` 选项使文本绕形状流动。使用它，你可以通过 X 和 Y 值指定多个点，从而将矩形框转换为多边形。以下是其实际工作原理。使用\
+  \ `width` 选项指定文本框的宽度，例如：\n\n```\n---\nwidth: 50\n---\n```\n\n框的每个角点的 X 和 Y 坐标如下：\n\
+  \n```\nx:0,y:0-------x100,y:0\n   |             |\n   |             |\n   |    \
+  \         |\nx:100,y:100-----x:0,y:100\n```\n\n可以使用 JSON 格式的坐标列表通过 `polygon` 选项定义矩形：\n\
+  \n```\npolygon:[{\"x\":0, \"y\":0},{\"x\":100, \"y\":0},{\"x\":100, \"y\":100},{\"\
+  x\":0, \"y\":100}]\n```\n\n了解此后，你可以调整每个角的坐标并引入带有特定坐标的额外点。例如，要为文本框右侧添加从左到右的斜坡，请如下所示调整右上角的\
+  \ X 值：\n\n```\npolygon:[{\"x\":0, \"y\":0},{\"x\":25, \"y\":0},{\"x\":100, \"y\"\
+  :100},{\"x\":0, \"y\":100}]\n```\n\nExpose 使用 ImageMagick 处理所有的图像任务，你可以在描述文件中添加处理指令以进行即时图像调整。例如，如果你想为特定图像添加水印，请向其描述文件添加以下处理指令：\n\
+  \n```\n---\nimage-options: /path/to/watermark.png -gravity SouthWest -geometry +10+10\
+  \ -composite\n---\n```\n\n这将使用 `watermark.png` 图像文件在图像右下角应用水印，距离边缘 10 像素边距。需要锐化照片吗？以下选项可以解决问题：\n\
+  \n```\n---\nimage-options: -sharpen 0x1.5\n---\n```\n\n你可以使用 ImageMagick 支持的几乎任何选项，如果你想充分利用此功能，可能想要浏览[命令行选项页面](http://www.imagemagick.org/script/command-line-options.php)。\n\
+  \n与其为单张照片指定选项，不如将其全局地应用于所有发布的图像。要做到这一点，请创建 `metadata.txt` 文件并在其中指定所需的选项。\n\n如果你拍摄延时摄影，你会高兴地发现\
+  \ Expose 可以自动将它们编码为视频，无需手动操作。在包含延时图像的文件夹中添加 `imagesequence` 关键字（例如 `001 tokyo nightscape\
+  \ imagesequence`），并将其放入你想发布的照片所在目录。然后运行 `expose` 命令，脚本就会将图像序列转换为视频。\n\n## 结论\n\n\
+  尽管简单，Expose 还是一个生成静态照片和视频画廊的相当强大且灵活的工具。它让你对发布过程有完全控制，并允许你配置广泛的选项。更重要的是，Expose 生成的画廊和文章看起来非常出色且于导航。\n\
+  \n# 展示照片的简单 PHP 脚本\n\n一个简单的 PHP 脚本、[Parsedown](https://github.com/erusev/parsedown)\
+  \ PHP 库和 [Sakura](https://github.com/oxalorg/sakura) 极简 CSS 框架，就是你创建一个展示照片的简单样式页面所需的所有内容。脚本会从指定目录随机选择一张照片，提取其\
+  \ EXIF 元数据，并生成一个包含介绍文本、照片以及刷新按钮的 HTML 页面。\n\n\n\n脚本和所有需要的组件都可以在 [Boketto](https://gitlab.com/dmpop/boketto)\
+  \ GitLab 仓库获取。你可以使用 `git clone https://gitlab.com/dmpop/hanabi.git` 命令进行克隆，或者直接下载\
+  \ ZIP 压缩包作为源码。替换 `favicon.png` 文件，根据需要添加 `*.md` 文件，并修改 `index.php` 文件中的默认值。然后，将\
+  \ `index.php`、`parsedown.php`、`favicon.png` 以及 `*.md` 文件上传到你 Web 服务器根目录下的指定位置。\n\
+  \n接下来，在服务器上创建一个用于存储照片的目录。在将照片添加到此目录之前，最好先减小它们的大小。这会让你的应用程序运行得更快，并减少需要传输的数据量。你可以使用\
+  \ [jpeg-recompress](https://github.com/danielgtaylor/jpeg-archive) 和 `mogrify` 工具来完成操作。在系统中安装这两个工具后，使用以下命令重新压缩或调整当前目录下所有\
+  \ `*.jpg` 文件的大小：\n\n```\nfor file in *.jpg; do jpeg-recompress --quality high $file\
+  \ $file; done\nmogrify -resize \"1600>\" *.jpg\n```\n\n虽然这个简单的方案无法取代专业的画廊或作品集，但当你想要建立一个展示照片的简易页面时，它会大派用场。更好的是，你可以轻松将此脚本用于其他用途。例如，如果你已经有一个网站，可以将脚本嵌入到页面中显示随机照片。\n\
+  \n```php\n<?php\n$dir = \"path/to/dir\";\n$ext = \"jpg\";\n\n$files = glob($dir.'.''.$ext);\n\
+  $file = array_rand($files);\n$img = $files[$file];\n\n$exif = exif_read_data($img,\
+  \ 0, true);\n$caption = $exif['COMMENT']['0'];\n\necho <<< EOT\n            <img\
+  \ src=\"$img\" />\n            <p>$caption</p>\nEOT;\n?>\n```\n\n将上述代码插入到你想显示图片的页面中，并确保该页面本身具有\
+  \ `*.php` 文件扩展名。就是这样了。\n\n# 在新浏览器标签页中显示你的照片\n\n浏览器中的新标签页区域有多种实际用途：从显示时区到记笔记以及管理日常任务。你也可以配置新标签页来展示你的照片。要做到这一点，你需要三个东西：1)\
+  \ Web 服务器上一个存放照片的文件夹，2) 一个简单的 PHP 脚本，3) Firefox 的 New Tab Override 扩展或 Chrome 和\
+  \ Chromium 的 Change New Tab 扩展。\n\n在将所需的照片上传到 Web 服务器上的文件夹之前，最好先调整它们的大小以便快速加载。如果你的系统中安装了\
+  \ ImageMagick，请切换到包含照片的本地目录并运行下面的命令（如有需要，调整文件扩展名、尺寸和质量值）：\n\n```\nfor file in *.jpg;\
+  \ do mogrify -resize \"1200>\" -quality 95% $file; done\n```\n\n记住，此命令会将原始图像替换为处理后的图像。如果你不想这样做，请使用以下命令，它将以\
+  \ `*.JPG` 扩展保存调整大小后的图像：\n\n```\nfor file in *.jpg; do convert -resize \"1200>\"\
+  \ -quality 95% $file \"`basename $file .jpg`.JPG\"; done\n```\n\n将调整大小后的图像上传到 Web\
+  \ 服务器上的文件夹。然后使用 `wget -O newtab.php https://gitlab.com/snippets/1832587/raw` 命令获取\
+  \ PHP 脚本。打开下载的 `netab.php` 文件进行编辑，并确保变量 `$ext` 的值与照片的文件扩展匹配。将脚本移动到包含调整大小后照片的服务器文件夹中。\n\
+  \n安装 [New Tab Override](https://addons.mozilla.org/firefox/addon/new-tab-override/)\
+  \ 扩展，打开扩展设置并在相应字段中指定 PHP 脚本的 URL。如果你恰好使用 Chrome 或 Chromium，安装 [Change New Tab](https://chrome.google.com/webstore/detail/change-new-tab/mocklpfdimiadpbgamlgehpgpodggahe/)\
+  \ 扩展，并在提示时指定 URL。\n\n完成后，打开一个新标签页，你应该就能看到一张随机照片。\n\n# WIRC：用于 Sony Alpha 相机的 Wi-Fi\
+  \ 红外遥控器\n\nIR 口可能不是 Sony Alpha 相机最令人兴奋的功能。事实上，你纳闷索尼为什么保留这项看似过时的技术也是完全可以理解的。因为它廉价、简单且可靠。它的功能性也惊讶地强大，因为它允许你控制相机上几乎每一个物理按钮。遗憾的是，你在网上找到的廉价红外遥控器并没有充分发挥\
+  \ IR 口的作用。它们大多数只允许你触发快门、触发定时器或锁定在泡灯模式（bulb mode）。一些高级型号还带有间隔计时器，但仅此而已了。\n\n![](img/file31.jpg)\n\
+  \n所以，如果你想释放 IR 口的真正潜力，你应该走 DIY 路线。这既有意义又有趣，而且可能更便宜。更不用说结果优于任何市售的红外遥控器。下面描述的 DIY\
+  \ 红外遥控器拥有自己的 Web 界面，可以通过无线连接进行控制。这种 DIY 红外遥控器具有基于 Web 的界面，并可以通过无线连接进行控制。这听起来可能有些过度设计，但该方案有其优点：\n\
+  \n*   它不需要在相机上安装任何应用程序\n*   可以使用任何带有浏览器的设备来控制相机\n*   它可以适配其他相机型号\n\n制作此红外遥控器需要以下组件：\n\
+  \n*   ESP266 NodeMCU 或 D1 mini\n*   面包板\n*   150 欧姆电阻\n*   红外 LED (940nm)\n*   连接线\n\
+  \n虽然你可以使用任何基于 ESP866 的开发板，但 D1 mini 模块因其尺寸使其是该项目的理想选择。你还需要一台 Linux 机器来编写编译代码并将其上传到板。\n\
+  \n首要任务是在 Linux 机器上安装所需的工具并连接开发板。[Arduino CLI](https://github.com/arduino/arduino-cli)\
+  \ 是一个完全足够的命令行工具。从 GitHub 页面获取最新版本并解压下载的包。在终端中切换到结果目录，使用以下命令安装可执行文件：\n\n```\nsudo\
+  \ cp arduino-cli /usr/local/bin/\nsudo chown root:root /usr/local/bin/\nsudo chmod\
+  \ 755 /usr/local/bin/\n```\n\n接下来，连接板并运行 `sudo chmod 666 /dev/tty0` 命令以启用访问。要使访问持久化，使用以下命令：\n\
+  \n```\nsudo usermod -a -G dialout $USER\n```\n\n要检测连接的板，运行 `arduino-cli board list`\
+  \ 命令。如果检测到了板，你应该看到如下输出：\n\n```\nFQBN    Port            ID              Board Name\
+  \ \n        /dev/ttyUSB0    1a86:7523       unknown \n```\n\n断开板连接并按照图所示连接所有组件。\n\
+  \n![](img/file32.png)\n\n现在，使用 `git clone git@gitlab.com:dmpop/wirc.git` 命令克隆包含代码的\
+  \ [WIRC](https://gitlab.com/dmpop/wirc) 项目。或者从项目的 GitLab 页面下载最新存档。在终端中切换到结果目录并运行以下命令编译代码：\n\
+  \n```\narduino-cli compile --fqbn esp8266:esp8266:d1\n```\n\n这会在目录下创建两个文件：`wirc.esp8266.esp8266.d1.elf`\
+  \ 和 `wirc.esp8266.esp8266.d1.bin`。要将编译后的代码上传到板，请连接板并运行以下命令：\n\n```\narduino-cli\
+  \ upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:d1\n```\n\n\n\n一旦代码上传到开发板，设备即可开始工作。最后一步是将创建的\
+  \ Wi-Fi 红外遥控器连接到现有的 Wi-Fi 网络。为此，请将你的 Linux 机器或移动设备连接到开发板创建的热点。这会自动重定向到强制性门户（captive\
+  \ portal），允许你将开发板连接到现有的无线网络。完成此后，确保你用于操作遥控器的设备与开发板连接到同一个无线网络。然后将你设备上的浏览器指向遥控器的 IP\
+  \ 地址，你就能看到它的 Web 界面。\n\n在你的 Sony Alpha 相机上，启用遥控功能。在 Sony α6300 (ILCE-6300) 上，请按下\
+  \ `MENU` 按钮，进入 `Settings → 3 → Remote Ctrl`，并选择 `On`。确保遥控器与相机的红外端口之间没有遮挡，并在 Web\
+  \ 界面中按下 `SHUTTER` 按钮。如果一切正常，这将触发相机的快门。\n\n# 使用 Sony Camera Remote API 从 Linux 控制\
+  \ Sony Alpha 相机\n\n通过 USB 连接从 Linux 机器控制数码相机并不是新鲜事，像 `gPhoto`、`Entangle` 和 `Darktable`\
+  \ 这样的应用程序让你能够轻松实现这一点。但快门同步（tethered shooting）既过时又有些不切实际，因为它要求机器和相机之间建立物理连接。幸运的是，最新的相机型号支持通过\
+  \ Wi-Fi 进行远程控制，提供了一种更灵活的远程拍摄方式。不过在大多数情况下，你会使用 Android 或 iOS 设备上的专用应用程序来利用这一功能。幸运的是，像\
+  \ Sony 等制造商支持相机遥控 API，该 API 可用于在几乎任何平台上构建通过 Wi-Fi 远程控制的第三方应用程序和工具。\n\n对于 Sony Alpha\
+  \ 型号，Smart Remote Control 应用会将相机转换为一个自有的无线热点和一个服务器，用于接收并解析带有 JSON 格式负载的入站 HTTP 调用。这些负载包含了控制相机及其设置的指令。从实际角度来说，你可以通过发送包含\
+  \ JSON 格式数据的 HTTP 调用，通过直接无线连接从任何设备控制 Sony 相机。这种技术的术，并被许多流行的脚本和编程语言支持。\n\n在 Linux\
+  \ 上，你只需要 `Bash` 壳脚本和 [cURL](https://curl.haxx.se/) 工具即可构建简单或更高级的脚本来远程控制你的 Sony Alpha\
+  \ 相机。但在继续之前，请务必查阅[相机兼容性](https://developer.sony.com/develop/cameras/)页面以确保你的特定相机型号受支持。\n\
+  \n## 准备工作\n\n第一步是在 Linux 机器和相机之间建立直接无线连接。在相机上，按下 `Menu` 按钮，切换到 `Application List`\
+  \ 部分并启动 Smart Remote Control 应用。切换到 `Connect with password` 页面，使用提供的连接信息将 Linux\
+  \ 机器连接到相机的热点。为了与通信并控制相机，你需要知道它的端点 URL，即发送 JSON-RPC HTTP 请求的 URL。通常，Sony 相机的端点 URL\
+  \ 为 `http://192.168.122.1:8080/sony/camera`。但你特定的相机型号可能会使用不同的端点 URL。要找到它，你可以使用一个简单的\
+  \ Python 脚本：\n\n```python\n#!/usr/bin/env python\nimport sys\nimport socket\nimport\
+  \ re\nimport urllib2\nSSDP_ADDR = \"239.255.255.250\";\nSSDP_PORT = 1900;\nSSDP_MX\
+  \ = 1;\nSSDP_ST = \"urn:schemas-sony-com:service:ScalarWebAPI:1\";\nssdpRequest\
+  \ = \"M-SEARCH * HTTP/1.1\\r\\n\" + \\\n                \"HOST: %s:%d\\r\\n\" %\
+  \ (SSDP_ADDR, SSDP_PORT) + \\\n                \"MAN: \\\"ssdp:discover\\\"\\r\\\
+  n\" + \\\n                \"MX: %d\\r\\n\" % (SSDP_MX, ) + \\\n                \"\
+  ST: %s\\r\\n\" % (SSDP_ST, ) + \"\\r\\n\";\nsock = socket.socket(socket.AF_INET,\
+  \ socket.SOCK_DGRAM)\nsock.sendto(ssdpRequest, (SSDP_ADDR, SSDP_PORT))\nRESULT =\
+  \ sock.recv(1000)\nURL=re.search(\"(?P<url>http?://[^\\s]+)\", RESULT).group(\"\
+  url\")\nRESPONSE = urllib2.urlopen(URL)\n```\n\n\n\n\nCamera Remote API 还允许你控制几乎所有的相机设置：从光圈、快门速度到白平衡和拍摄模式。你只需要发送一个包含适当值且带有\
+  \ `method` 和 `params` 的 JSON-PRC HTTP 请求即可。例如，下面的命令将光圈值设置为 11：\n\n```\ncurl -s -X\
+  \ POST -d '{\"method\":\"setFNumber\",\"params\":[\"11\"],\"id\":1,\"version\":\
+  \ \"1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\n```\n\n若要即时指定所需的光圈值，请使用\
+  \ `read -p` 命令：\n\n```bash\nread -p \"Specify F number: \" fnumber\ncurl -s -X POST\
+  \ -d '{\"method\":\"setFNumber\",\"params\":[\"'\"$fnumber\"'\"],\"id\":1,\"version\"\
+  : \"1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\n```\n\n## 使用 YAD\
+  \ 添加 GUI\n\n为了让远程相机控制脚本用起来更方便，你可能想将其封装成图形界面。虽然你可以使用 [Zenity](https://help.gnome.org/users/zenity/stable/)\
+  \ 或 [Kdialog](https://techbase.kde.org/Development/Tutorials/Shell_Scripting_with_KDE_Dialogs)\
+  \ 创建简单的对话框，但 [YAD](https://sourceforge.net/projects/yad-dialog/) 是处理此任务的更好的工具，因为它允许你构建包含多个字段和控件的复杂对话框。例如，下面的命令生成了一个带有三个文本输入字段的对话窗口，用于指定光圈、快门速度和\
+  \ ISO 值：\n\n```bash\nyad --width=400 --title=\"Sony Camera Remote\" --form --separator=\"\
+  ,\" --field=\"Shutter Speed\" --field=\"ISO\"\n```\n\n以下是完整的 Bash Shell 脚本列表，它可以检查与相机的连接、显示对话窗口、处理收集到的输入、更改相机设置并拍照：\n\
+  \n```bash\n#!/usr/bin/env bash\nif [ -z \"$(which yad)\" ]; then\n  echo \"Please\
+  \ install YAD. To do this on Ubuntu, run the following command:\"\n  echo \"sudo\
+  \ apt install yad\"\n  exit 1\nfi\nping -W 1 -c 2 192.168.122.1 > /dev/null\nif\
+  \ test $? -eq 1\nthen\n    echo \"Camera is not connected!\" | yad --text-info\n\
+  \    exit 1\nfi\nresult=$(yad --width=400 --title=\"Sony Camera Remote\" --form\
+  \ --separator=\",\" --field=\"Aperture\" --field=\"Shutter Speed\" --field=\"ISO\"\
+  )\nexposuremode=$(echo \"$result\" | cut -d',' -f1)\nfnumber=$(echo \"$result\"\
+  \ | cut -d',' -f2)\nshutterspeed=$(echo \"$result\" | cut -d',' -f3)\niso=$(echo\
+  \ \"$result\" | cut -d',' -f4)\nif [ -z $result ]; then\n  exit 1\nfi\ncurl -s -X\
+  \ POST -d '{\"method\":\"startRecMode\",\"params\":[],\"id\":1,\"version\": \"1.0\"\
+  }' http://192.168.122.1:8080/sony/camera > /dev/null\nsleep 5\ncurl -s -X POST -d\
+  \ '{\"method\":\"setExposureMode\",\"params\":[\"$exposuremode\"],\"id\":1,\"version\"\
+  : \"1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\ncurl -s -X POST -d\
+  \ '{\"method\":\"setFNumber\",\"params\":[\"$fnumber\"],\"id\":1,\"version\": \"\
+  1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\ncurl -s -X POST -d '{\"\
+  method\":\"setShutterSpeed\",\"params\":[\"$shutterspeed\"],\"id\":1,\"version\"\
+  : \"1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\ncurl -s -X POST -d\
+  \ '{\"method\":\"setIsoSpeedRate\",\"params\":[\"$iso\"],\"id\":1,\"version\": \"\
+  1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\ncurl -s -X POST -d '{\"\
+  method\":\"actTakePicture\",\"params\":[],\"id\":1,\"version\": \"1.0\"}' http://192.168.122.1:8080/sony/camera\
+  \ > /dev/null\ncurl -s -X POST -d '{\"method\":\"stopRecMode\",\"params\":[],\"\
+  id\":1,\"version\": \"1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\n\
+  echo \"All done!\" | yad --text-info\n```\n\n远程控制相机并触发快门以及对相机操作进行编程开启了全新的可能性世界。例如，你可以为延时摄影创建一个相对简单的\
+  \ Bash Shell 脚本：\n\n```bash\n#!/usr/bin/env bash\nif [ $# -eq 0 ]\nthen\n    echo\
+  \ \"Error: missing arguments\"\n    echo \"Syntax: [interval] [number of Photos]\"\
+  \n    exit 1\nfi\ninterval=$1\nn=$2\nping -W 1 -c 2 192.168.122.1 > /dev/null\n\
+  if test $? -eq 1\nthen\n    echo \"Error: camera is not connected!\"\n    exit\n\
+  fi\nbegin(){\n    curl -s -X POST -d '{\"method\":\"startRecMode\",\"params\":[],\"\
+  id\":1,\"version\": \"1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\n\
+  \    resposta=$?\n    if test $resposta -ne 0\n    then\n        echo \"Connection\
+  \ failed.\"\n        curl -X POST -d '{\"method\":\"stopRecMode\",\"params\":[],\"\
+  id\":1,\"version\": \"1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\n\
+  \    else\n        echo -e \"\\nConnection established.\"\n    fi\n}\nend(){\n \
+  \   curl -s -X POST -d '{\"method\":\"stopRecMode\",\"params\":[],\"id\":1,\"version\"\
+  : \"1.0\"}' http://192.168.122.1:8080/sony/camera > /dev/null\n}\n```\n\n\n\nSony\
+  \ α7 Mark III（以及其他新款 Alpha 型号）中的 FTP 传输功能通常不会引起太大关注。当然，在拥有这么多现代技术和应用程序的情况下，很容易忽视这个朴实的功能。但在传输\
+  \ RAW 和 JPEG 文件时，FTP 确实能够大显身手。事实上，它有几个重要优势。\n\n- FTP 是一项成熟、可靠且支持良好的技术。\n- 你可以使用\
+  \ FTP 将照片传输到本地机器也可以传输到远程服务器。由于 Sony α7 Mark III 支持多个 FTP 配置文件，你可以将照片传输到多个目的地。\n\
+  - FTP 服务器几乎适用于任何平台，包括 macOS、Linux 和 Windows。市面上还有许多开源 FTP 服务器可以免费使用。\n- Sony α7\
+  \ Mark III 中的 FTP 传输功能支持 RAW 和 JPEG 文件的传输。\n\n## 在树莓派上安装上安装 FTP\n\n如果你手头有一个树莓派，可以轻松地将其转换为供相机使用的专用\
+  \ FTP 服务器。首先，使用 `sudo apt install vsftpd` 命令安装 `vsftpd` 服务。\n\n然后运行 `sudo nano /etc/vsftpd.conf`\
+  \ 命令，用 `nano` 编辑器打开 `vsftpd.conf` 文件。编辑配置，使其包含以下参数：\n\n```\nanonymous_enable=NO\n\
+  local_enable=YES\nwrite_enable=YES\n```\n\n此配置禁用了对服务器的匿名访问，并赋予现有用户访问和上传权限。保存更改，并使用\
+  \ `sudo service vsftpd restart` 命令重启服务器。\n\n## 配置 FTP 设置\n\n在继续之前，请准备好以下连接信息：\n\n\
+  - FTP 服务器的 IP 地址或域名\n- 用户名和密码\n\n如果 FTP 服务器运行在树莓派上，请使用 ``hostname -I | cut -d' '\
+  \ -f1` 命令获取其 IP 地址。登录 FTP 服务器所需的用户名和密码与在树莓派上的用户账户相同。\n\n在你的相机上，按下 `Menu` 按钮并进入 `Network\
+  \ → Network1 → [FTP Transfer Func.] → FTP Server 1`。选择 `Display Name` 并为配置文件取一个简短的描述性名称。返回上一步，切换到\
+  \ `Destination Settings` 部分。配置以下设置：\n- `Host Name`: FTP 服务器的主机名或 IP 地址。\n- `Secure\
+  \ Protocol`:启用安全的 FTP 传输。请保持禁用状态。\n- `Port`: FTP 服务器的端口号。如果 FTP 服务器运行在默认端口 21 上，则跳过此字段。\n\
+  - `Directory`: 设置 FTP 服务器上的目标文件夹。如果你留空此字段，RAW 和 JPEG 文件将上传到用户主目录下的单独文件夹。将使用当前日期作为上传文件夹名称。\n\
+  \n按下 `OK` 保存连接设置，切换到 `User Settings Info` 屏幕，在相应字段中输入用户名和密码。按下 `OK` 并退出菜单模式。\n\n\
+  要将照片从相机上传到配置好的 FTP 服务器，切换到查看模式，按下 `Menu` 按钮并进入 `Network → Network1 → FTP Transfer`。一旦相机与\
+  \ FTP 服务器建立连接，选择你想要上传的照片，按下 `Menu` 按钮并选择 `OK`。\n\n##向 EXIF 元数据中添加有用信息\n\n与 EXIF\
+  \ 元数据中的其他字段不同，`Comment` 字段未为任何类型的数据预留，它通常留给用户决定在里面填写什么。一个 `Bash` Shell 脚本可以自动在 `Comment`\
+  \ 字段中填充几条有用信息，包括相机型号、镜头和当前日期的天气状况。通过专门的 `Dolphin` 动作，你可以点击一下查看这些信息。\n\n在继续之前，你需要注册\
+  \ OpenWeather API 并创建一个唯一的 API 密钥。你需要用它来获取天气数据。此外，在你的系统上安装所需的包。在 openSUSE 上，使用 `sudo\
+  \ zypper in exiftool jq`。在 Debian 和 Ubuntu 上，运行 `sudo apt install libimage-exiftool-perl`。接下来，打开文本编辑器并将以下代码粘贴到新文件中：\n\
+  \n```bash\n#!/usr/bin/env bash\n\nif [ -z \"$1\" ]; then\n    echo \"ERROR: Required\
+  \ parameter missing.\"\n    echo \"Please specify file extension, e.g., jpeg\"\n\
+  \    exit 1\nfi\n\nCONFIG=\"$HOME/addinfo.cfg\"\n\nif [ ! -f \"$CONFIG\" ]; then\n\
+  \    api_key=$(kdialog --title \"API\" --inputbox \"Enter your API key:\")\n   \
+  \ echo \"api_key='$api_key'\" >> \"$CONFIG\"\n    echo \"json='$HOME/weather.json'\"\
+  \ >> \"$CONFIG\"\nfi\n\nsource \"$CONFIG\"\ncheck=$(wget -q --spider https://api.openweathermap.org)\n\
+  if [ -z \"$check\" ]; then\n    for photo in \"$1\";\n    do\n        lat=$(exiftool\
+  \ \"$photo\" -gpslatitude -n | cut -d':' -f2)\n        lon=$(exiftool \"$photo\"\
+  \ -gpslongitude -n | cut -d':' -f2)\n        if [ -n \"$lat\" ] && [ -n \"$lon\"\
+  \ ]; then\n            camera=$(exiftool -Model \"$photo\" | cut -d':' -f2)\n  \
+  \          lens=$(exiftool -Lens \"$photo\" | cut -d':' -f2)\n            curl \"\
+  https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$api_key&units=metric&lang=en\"\
+  \ > \"$json\"\n            w_sum=$(jq '.weather[0].description' \"$json\")\n   \
+  \         w_temp=$(jq '.main.temp' \"$json\")\n            w_wind=$(jq '.wind.speed'\
+  \ \"$json\")\n            exiftool -Comment=\"Camera: $camera, Lens: $lens, Weather:\
+  \ $w_sum, Temp: $w_temp°C, Wind: $w_wind m/s\" \"$photo\"\n        else\n      \
+  \      echo \"No GPS data for $photo\"\n        fi\n    done\nelse\n    echo \"\
+  Could not reach OpenWeatherMap API\"\nfi\n```\n\n\n\n\n将文件保存为 `show-comment.desktop`，并将其移动到\
+  \ `/usr/share/kservices5/ServiceMenus/` 目录。启动 Dolphin，右键点击一个 JPEG 文件，选择 `Show EXIF\
+  \ Comment` ，你应该就能在弹出框的 `Comment` 字段中看到内容。\n\n# 使用参考照片对 JPEG 文件进行地理标记\n\n有时，对 JPEG\
+  \ 文件进行地理标记最简单的方法是使用来自已经带有地理标记的照片的地理坐标。其中一种方法是使用 digiKam。虽然这并不困难，但此过程需要几个独立的步骤。一个脚本可以简化整个流程。\n\
+  \n```bash\n#!/usr/bin/env bash\nref=\"$1\"\nlat=$(exiftool -gpslatitude -n \"$ref\"\
+  \ | cut -d\":\" -f2 | tr -d \" \")\nlon=$(exiftool -gpslongitude -n \"$ref\" | cut\
+  \ -d\":\" -f2 | tr -d \" \")\nif [ -z \"$lat\" ] || [ -z \"$lon\" ]; then\n    notify-send\
+  \ \"Geographical coordinates are missing.\"\n    exit 1\nelse\n    notify-send $lat\
+  \ $lon\nfi\nif (( $(echo \"$lat > 0\" |bc -l) )); then\n    latref=\"N\"\nelse\n\
+  \    latref=\"S\"\nfi\nif (( $(echo \"$lon > 0\" |bc -l) )); then\n    lonref=\"\
+  E\"\nelse\n    lonref=\"W\"\nfi\nf=$(yad --center --text-align=center --title=\"\
+  Photos to geotag\" --button=gtk-cancel:0 \\\n    --button=\"Geotag\":0 --borders=15\
+  \ --width=250 --height=150 \\\n    --text='<big>\\nDrop photos you want to geotag\
+  \  here.\\nPress the <b>Geotag</b> button.</big>' \\\n    --dnd | sed 's/^.......//')\n\
+  array=(\"$f\")\nfor file in ${array[*]}\ndo\n    exiftool -overwrite_original -GPSLatitude=$lat\
+  \ -GPSLatitudeRef=$latref -GPSLongitude=$lon -GPSLongitudeRef=$lonref \"$file\"\n\
+  done\nnotify-send \"All done. Bye!\"\n```\n\n以下是该脚本的工作原理。它使用 `ExifTool` 从作为参数提供的文件名照片中获取纬度和经度值。如果无法获取地理坐标（即\
+  \ `$lat` 和 `$lon` 值为空），它将显示通知并停止。如果成功获取地理坐标，脚本将使用 `bc` 工具计算用于地理标记的正确纬度和经度参考值。随后脚本会显示一个拖放面板，你可以在其中拖入想要地理标记的照片。当你点击\
+  \ `Geotag` 按钮时，脚本将对所选照片进行地理标记。\n\n要让上述脚本正常工作，你需要安装 `ExifTool`、`bc`、`notify-send`\
+  \ 和 `yad` 工具。在 Ubuntu 上，运行 `sudo apt install libimage-exiftool-perl bc notify yad`。在\
+  \ openSUSE 上，使用 `zypper in exiftool bc notify yad`。复制脚本并将其粘贴到新文件中。将文件保存为 `geotagref.sh`\
+  \ 并使用 `chmod +x geotagref.sh` 赋予其可执行权限。然后将脚本移动到 `~/bin` 目录。要对照片进行地理标记，运行脚本并加上参考照片的路径和文件名：`geotagref.sh\
+  \ /path/to/foo.jpg`。\n\n# 使用 Natsukashii 重温旧时光\n\nAmazon Photos、Facebook 和 Google\
+  \ Photos 等服务可以通过显示在过去某一天拍摄的照片来帮助你重新发现照片并重温回忆。但你不需要将照片上传到第三方服务即可享受此功能。[natsukashii](https://gitlab.com/dmpop/natsukashii)\
+  \ 是一个 Bash Shell 脚本，它可以搜索你机器上的照片，并为找到的照片生成一个简单的 HTML 页面供你查看。它还可以通过 [Notify](https://github.com/mashlol/notify)\
+  \ 应用向你的 Android 设备发送通知。\n\n在拥有所有照片的 Linux 上部署 natsukashii 很容易。首先，确保你的系统中安装了 ExifTool、`Git`、`sed`\
+  \ 和 `seq` 工具。接下来，使用以下命令克隆项目仓库并创建别名，这样你就可以使用 `natsukashii` 命令运行它：\n\n```bash\ngit\
+  \ clone https://gitlab.com/dmpop/natsukashii.git\necho -e \"\\nalias natsukashii=/share/homes/admin/natsukashii/natsukashii.sh\"\
+  \ >> .bashrc\n```\n\n如果运行 natsukashii 的机器同时也作为 Web 服务器，你可以使用 natsukashii 发布它找到的照片。要这样做，将\
+  \ `www` 文件夹移动到 Web 服务器的文档根目录。你可能想给 `www` 文件夹起一个不同的名字，例如 `natsukashii`。\n\n如果你想在\
+  \ Android 设备上接收来自 natsukashii 的通知，请安装 [Notify](https://github.com/mashlol/notify)\
+  \ 应用并记录生成的唯一令牌。\n\n现在运行 `natsukashii` 命令并指定设置。之后，natsukashii 会遍历指定的目录，如果找到匹配的照片，会将它们放入一个单独的目录。如果你指定了\
+  \ Web 目录的路径，natsukashii 将找到的照片移动到那里，你就可以查看它们了。\n\n\n\n将文件以 `.htaccess` 命名保存到包含 Natsukashii\
+  \ 网页的目录中。现在，将浏览器指向 Natsukasii 页面。如果一切运行正常，你应该会看到一个提示输入凭据的对话框。输入指定的用户名和密码即可让你获得访问该页面的权限。\n\
+  \n# 在 Android 上使用 Termux 进行命令行摄影工作流\n\n有许多 Android 应用可以用于整理、处理和分享照片。但如果你想基于流行的 Linux\
+  \ 工具实现摄影工作流，那么 [Termux](http://termux.com) 就是你需要的全部工具。\n\nTermux 可以在 Google Play\
+  \ 商店和 [F-Droid](http://f-droid.org) 上获取，因此你可以从偏好的来源进行安装。该应用程序的默认功能可以通过安装插件进行扩展。例如，`Termux:API`\
+  \ 插件增加了对 Android API 的支持，而 `Termux:Styling` 软件包则让你能够选择备配色方案和字体。`Termux:Widget` 插件为你提供一个包含\
+  \ shell 脚本快捷方式的桌面小组件，这样你只需点击一下即可在 Termux 中运行脚本。你可以从 F-Droid 免费安装这些插件。如果你选择从 Google\
+  \ Play 商店安装插件，则需要购买。将其视为向该项目捐赠并支持其开发者的方式吧。\n\n使用屏幕键盘在终端中工作可能会很快变得乏味。幸运的是，Termux\
+  \ 提供了许多常用键盘操作的快捷键。这些快捷键大部分与 `Bash` shell 中的完全相同。例如，`Ctrl+A` 和 `Ctrl+E` 快捷键分别将光标移动到行的开头和末尾，而\
+  \ `Ctrl+C` 和 `Ctrl+D` 快捷键则终止当前进程并退出终端会话。唯一的区别是 Termux 使用 `Volume Down` 硬件音量键键代替\
+  \ `Ctrl` 键。`Volume Up` 键结合不同的字母用于模拟键盘键。`Volume Up+T` 快捷键模拟 `Tab` 键，而 `Volume Up+W`、`Volume\
+  \ Up+A`、`Volume Up+S` 和 `Volume Up+D` 作为方向键。\n\n首次运行 Termux 时，你需要做三件事：更新应用的软件存储库、安装所需的包以及配置存储访问。Termux\
+  \ 使用 `pkg` 工具进行包管理，因此如果你来自 Debian 或 Ubuntu，你会觉得 Termux 非常亲切。要更新存储库，运行 `pkg update`\
+  \ 命令。想查看存储库中的所有包？运行 `pkg list` 命令。要查找特定包，使用 `pkg search [PACKAGE]` 命令，要安装该包，执行 `pkg\
+  \ install [PACKAGE]` 命令。升级已安装的包只需运行 `pkg upgrade` 命令，而 `pkg remove [PACKAGE]` 命令可用于删除已安装的包。\n\
+  \n安装哪些包完全取决于你想用 Termux 做什么，但起码你可能可能想安装 `nano` 文本编辑器、`rsync` 文件复制工具以及 `OpenSSH` SSH\
+  \ 连接工具。这三个工具允许你编辑文本和配置文件并执行备份，以及访问和控制远程机器。要一次性安装这些包，请使用以下命令：\n\n```\npkg install\
+  \ nano rsync openssh git curl wget\n```\n\n要配置存储访问，运行 `termux-setup-storage` 命令。这样做将授予\
+  \ Termux 访问 Android 6.0 及更高版本共享存储的权限，并创建一个 `storage` 文件夹，其中包含指向各种存储位置的符号链接。这包括 `~/storage/shared`（所有应用共享的根文件夹）、`~/storage/dcim`（照片和视频的标准文件夹）以及\
+  \ `~/storage/downloads`（下载文件的默认文件夹）。\n\n在你的 Android 设备上拥有一个工具齐全的 Linux 环境让你能够执行通常需要第三方商业应用的任务。例如，使用\
+  \ `rsync`，你可以轻松设置一个健壮的解决方案，将 Android 设备上的照片和 RAW 文件备份到远程机器。为了实现这一点，启用免密 SSH 登录是一个好主意，这样你就不需要每次执行备份都输入密码。从运行\
+  \ `ssh-keygen` 命令开始。在提示创建密码时，按 `Enter` 跳过。一旦创建了密钥对，运行 `ssh-copy-id -i .ssh/id_rsa.pub\
+  \ user@host` 命令（将 `user` 和 `host` 替换为用户名和远程机器的 IP 地址或域名）。这会将公钥复制到远程机器，从而实现免密登录。将\
+  \ Android 设备上的数据备份到远程服务器只需使用适当的 `rsync` 命令。如果你想备份照片和视频，以下命令将是关键：\n\n```\nrsync -avz\
+  \ -e ssh ~/storage/dcim user@host:/path/to/backup/dir\n```\n\n与其在每次执行备份时都手动运行此命令，不如编写一个简单的\
+  \ `Bash` shell 脚本，将其保存在 `~/.shortcuts` 目录中，并添加一个链接到该脚本的 Termux Widget。这样你就可以直接从桌面触发备份操作。\n\
+  \n回到照片主题，`jhead` 实用使得处理存储在 Android 设备上的照片成为可能。运行 `pkg install jhead` 命令在 Termux\
+  \ 中安装该工具。使用 `jhead`，你可以将通用的文件名替换为更有意义的内容，例如时间戳。以下命令使用 `YYYYMMDD-hhmmss` 规则重命名所有\
+  \ `.jpg` 文件（例如 `DC_0001.jpg`）：\n\n```bash\nfor file in *.jpg; do jhead -n%Y%m%d-%H%M%S\
+  \ $file; done\n```\n\n\n\n\n想在不使用专用 App 的情况下给照片添加特效吗？Termux 和 ImageMagick 也可以。后者支持\
+  \ `Hald CLUT` 技术，这使得可以使用特殊的颜色查找表来执行色彩变换。要使用 `Hald CLUT`，你不需要理解其所有的细节，但需要做一些准备工作。在你的常规\
+  \ Linux 机器上安装 ImageMagick，并运行 `convert hald:9 hald-9.png` 命令来生成一个 `Hald CLUT` 表。然后，在\
+  \ digiKam 等照片编辑应用中打开生成的 `hald-9.png` 文件，应用所需的色彩校正（曲线、电平、饱和度、亮度等），并以描述性名称保存更改（例如\
+  \ `hald-9-vintage.png`）。现在，你已经拥有了一个可以作为预设的参考 `Hald CLUT` 表。使用这种技术，你可以创建任意数量的预设。然后将它们移动到\
+  \ Android 设备上 Termux 可以访问的文件夹中。要将所需的预设应用到照片，请使用以下命令：\n\n```\nconvert foo.JPG hald-9-vintage.png\
+  \ -hald-clut foo-modified.jpeg\n```\n\n# 在加密的外部存储设备上存储照片和 RAW 文件\n\n在 USB 硬盘等外部存储设备上备份你的照片和\
+  \ RAW 文件是一个好主意。而对硬盘进行加密则是更好的主意。这样，除了你之外，没有人可以访问磁盘上的数据。\n\n第一步是使用 `sudo lsblk` 命令识别连接的外部存储设备。查看输出，并记录外部存储设备的名称：\n\
+  \n```\nNAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT\nsda      8:16   0 111.8G  0\
+  \ disk \n├─sda1   8:17   0     2G  0 part [SWAP]\n└─sda2   8:18   0 109.8G  0 part\
+  \ /\nsdb      8:32   0 931.5G  0 disk\n```\n\n在这种情况下，它是 `/dev/sdb`。如果存储设备已经分区，输出将像如下所示：\n\
+  \n```\nsdb      8:32   0 931.5G  0 disk \n└─sdb1   8:33   0 931.5G  0 part \n```\n\
+  \n如有必要，你可以使用 `fdisk` 工具删除现有分区。运行 `sudo fdisk /dev/sdb1` 命令，选择 `d` 选项，输入 `1` 选择分区并按\
+  \ `Enter`。要创建新分区，运行 `sudo fdisk /dev/sdb` 命令，使用 `n` 选项，并按 `p` 选择主分区。按 `1` 编辑第一个分区，然后对第一个和最后一个扇区使用默认值。最后，按\
+  \ `w` 应用更改。\n\n接下来，安装 `cryptsetup` 工具。在 openSUSE 上，使用 `sudo zypper in cryptsetup`\
+  \ 命令进行此操作。要加密硬盘上的分区，运行以下命令：\n\n```\nsudo cryptsetup luksFormat /dev/sdb1 my_encrypted_disk\n\
+  sudo cryptsetup open /dev/sdb1 my_encrypted_disk\nmkfs.ext4 /dev/mapper/my_encrypted_disk\n\
+  mount /dev/mapper/my_encrypted_disk /mnt/backup\n```\n\n\n\n\n\n```\nsudo apt-get\
+  \ update\nwget https://www.virtualhere.com/sites/default/files/usbserver/vhusbdarm\n\
+  sudo chmod +x ./vhusbdarm\nsudo mv vhusbdarm /usr/sbin\nwget http://www.virtualhere.com/sites/default/files/usbserver/scripts/vhusbdpin\n\
+  sudo chmod +x ./vhusbdpin\nsudo mv vhusbdpin /etc/init.d\nsudo update-rc.d vhusbdpin\
+  \ defaults\nsudo reboot\n```\n\n从 [virtualhere.com/usb_client_software](https://www.virtualhere.com/usb_client_software)\
+  \ 下载 VirtualHere 客户端二进制文件到你的 Linux 机器，并使用 `chmod +x vhuitXX` 命令（将 `vhuitXX` 替换为下载的文件实际名称）使文件具有可执行权限。要操作相机，请安装\
+  \ gPhoto 工具。在 openSUSE 上，运行 `sudo zypper in gphoto` 命令。在 Debian 和 Ubuntu 上，使用 `sudo\
+  \ apt install gphoto2` 命令。\n\n将相机连接到树莓派并为相机通电。在你的 Linux 机器上，运行 `sudo ./vhuitXX`\
+  \ 命令启动 VirtualHere 客户端。如果一切运行正常，你应该能在 **Raspberry Pi Hub** 下看到相机。双击相机项目以启用它。\n\n\
+  ![](img/file36.png)\n\n然后运行 `gphoto2 --auto-detect` 命令，查看列出的相机输出，例如：\n\n```\nModel\
+  \                          Port\n----------------------------------------------------------\n\
+  Sony Alpha-A6000 (Control)     usb:002,008\n```\n\n此时，你可以像相机直接连接到你的 Linux 机器上一样控制它。\n\
+  \n# 使用 Unbash 脚本从 Unsplash 汲取灵感\n\n[Unsplash](https://unsplash.com/) 拥有大量根据 CC0\
+  \ 许可发布的高质量照片，是为你任何想象得到的主题获取每日灵感的绝佳场所。但你不需要漫无目的地在成千上万张照片中翻找，可以让 Unbash 脚本获取符合你特定兴趣的照片，并将它们汇成一个简单的幻灯片演示：\n\
+  \n```bash\n#!/usr/bin/env bash\n\n## 用户定义参数\nundir=\"$HOME/unbash\"\ndefault_keyword=\"\
+  monkey\"\nkeyword_list=\"$HOME/keywords.txt\"\ndefault_count=\"9\"\n\n## 检查所需的包是否已安装\n\
+  if [ ! -x \"$(command -v wget)\" ] || [ ! -x \"$(command -v convert)\" ] || [ !\
+  \ -x \"$(command -v xdpyinfo)\" ]; then\n    echo \"安装 xdpyinfo, wget 和 ImageMagick。\"\
+  \n    exit 1\nfi\n\n## 使用提示\nusage(){\ncat <<EOF\n$0 [OPTIONS]\n\n$0 从 Unsplash\
+  \ 下载指定数量的匹配给定关键词的随机照片，并生成动画 GIF\n\n用法:\n  $0 -c <number> -k <keyword>\n\n选项:\n \
+  \ -c --count       指定下载的照片数量\n  -k --keyword     指定所需的关键词\nEOF\n  exit 1\n}\n\n\
+  ## 指定选项\nOPTS=`getopt -o c:k: -l count:keyword: -- \"$@\"`\n[[ $# -eq 0 ]] && usage\n\
+  eval set -- \"$OPTS\"\n\n## 获取值\nwhile true; do\n  case \"$1\" in\n    -c | --count\
+  \ ) count=\"$2\"; shift 2;;\n    -k | --keyword ) keyword=\"$2\"; shift 2;;\n  \
+  \  -- ) shift; break ;;\n    * ) break ;;\n  esac\ndone\n\n## 检查互联网连接\nwget -q --spider\
+  \ http://source.unsplash.com/\nif [ $? -ne 0 ]; then\n    echo \"无法访问 Unsplash。请检查你的网络连接。\"\
+  \n    exit 1\nfi\n\n## 如果没有指定关键词，检查 keyword_list 文件是否存在\n## 并从文件中随机选择一个单词。\n## 如果\
+  \ keyword_list 文件不存在，则使用默认关键词\nif [ -z \"$keyword\" ]; then\n    if [ ! -f \"$keyword_list\"\
+  \ ]; then\n    keyword=$default_keyword\n    else\n    keyword=$(shuf -n 1 \"$keyword_list\"\
+  )\n    fi\nfi\n\n## 如果 count 值为空，使用默认数量\nif [ -z \"$count\" ]; then\n    count=$default_count\n\
+  fi\n\n## 检查 unspiration 目录是否存在\n## 如果目录已存在，则删除并重建\n## 如果目录不存在，则创建\n## 切换到创建的目录\n\
+  if [ -d \"$undir\" ]; then\n    rm -rf \"$undir\"\n    mkdir \"$undir\"\n    cd\
+  \ \"$undir\"\nelse\n    mkdir \"$undir\"\n    cd \"$undir\"\nfi\n\n## 确定屏幕分辨率以获取正确尺寸的照片\n\
+  size=$(xdpyinfo | grep dimensions | awk '{print $2}')\n\n## 从 Unsplash 获取指定数量的匹配给定关键词的随机照片\n\
+  ## Unsplash 随机生成器需要休眠间隔\ni=1\nwhile [ $i -le \"$count\" ]\ndo\n    wget https://source.unsplash.com/$size/?\"\
+  $keyword\" -O $i-\"$keyword\".jpg\n    i=$((i + 1))\n    sleep 3\ndone\n\n## 使用获取的照片生成\
+  \ GIF\nconvert -delay 300 -loop 0 *.jpg \"$keyword\"-inspiration.gif\n\n## 在默认图像查看器中打开动画\
+  \ GIF\nxdg-open \"$keyword\"-inspiration.gif\n```\n\n此脚本执行多项任务并提供了一程度的自定义。首先，它会检查所需的包是否已安装。脚本需要两个参数：下载的照片数量（`-c`\
+  \ 或 `--count`）和关键词（`-k` 或 `--keyword`）。要部署此脚本，请将其粘贴到文本文件中并保存为 `unbash` 名称。使用以下命令移动脚本并使其具有可执行权限：\n\
+  \n```bash\nsudo mv unbash /local/bin/unbash\nsudo chown root:root /local/bin/unbash\n\
+  sudo chmod 755 /local/bin/unbash\n```\n\n现在你可以通过运行 `unbash -c COUNT -k KEYWORD`\
+  \ 来启动脚本（将 `COUNT` 和 `KEYWORD` 替换为所需的数量和关键词）。或者，在主目录下创建一个包含所需关键词列表的 `keywords.txt`\
+  \ 文件，然后运行 `unbash -c COUNT` 命令。\n\n\n\n\n这会生成一张分辨率为原始图像两倍的图像。使用标准相机进行超分辨率处理要复杂一些，因为当相机或主体发生不可控运动时，你无法获得精确的半像素位移。但除非你极其倒霉，否则你的位移图像与原始图像会有某种偏移。通过组合足够的图像，你将获得一张采样非常不规则的图像（像素样本不在网格上），但通过追踪样本之间的线条来推测正好落在精确网格线上的结果，可以将其插值为规则的图像。这正是\
+  \ Highrise 脚本尝试实现的目标。\n\n该脚本依赖 ImageMagick 和 Hugin 工具来完成放大、对齐以及将一组低分辨率照片组合成超分辨率图像。这意味着你需要安装脚本所需的依赖项以使其正常运行。在\
+  \ openSUSE 上执行此操作，请使用 `sudo zypper in ImageMagick hugin exiftool` 命令。\n\n然后你可以通过运行以下命令安装\
+  \ Highrise：\n\n```\ngit clone https://gitlab.com/dmpop/highrise.git\ncd highrise\n\
+  sudo cp highrise.sh /usr/local/bin/highrise\nsudo chown root:root /usr/local/bin/highrise\n\
+  sudo chmod 755 /usr/local/bin/highrise\n```\n\n要生成超分辨率图像，你需要先拍摄一系列照片。将你的相机设置为连续拍摄模式，并禁用图像防抖。针对目标场景拍摄\
+  \ 9 到 15 张照片。重要的是不要使用三脚架，而是手持拍摄。为了获得更好的效果，请开启手动对焦并在手动（Manual）模式下拍摄。此外，请记住该脚本处理静态场景的照片效果最好。\n\
+  \n将照片传输到你的机器，然后使用以下命令运行 Highrise 脚本：\n\n```\nhighrise -e JPG -d /path/to/source/dir\n\
+  ```\n\n将 `JPG` 替换为源照片的实际扩展名，并将 `/path/to/source/dir` 替换为包含源照片目录的绝对路径。生成超分辨率图像是一个计算密集型任务，因此根据源照片的大小和数量可能需要一段时间。脚本完成后，你将在源目录下找到生成的超分辨率图像。这些文件可以通过文件名中的\
+  \ `mean` 和 `median` 后缀来识别。\n\n如果脚本未能正确对齐源照片，你可以调整几个参数来修复。用文本编辑器打开脚本并修改可用的对齐参数。保存更改并再次运行脚本。\n\
+  \n¹来源：[超分辨率是如何工作的？](https://photo.stackexchange.com/questions/24726/how-does-super-resolution-work)\n\
+  \n# Konbini: KDE 的小型照片得手\n\n如果你恰好使用 KDE 作为你的首选图形桌面，[Konbini](https://gitlab.com/dmpop/konbini)\
+  \ 可能非常适合你。它为 Dolphin 文件管理器添加了几个实用的图像处理操作，并安装和配置了一些与摄影相关的工具。\n\n提供的安装程序负责获取和安装所需组件的繁重工作活。它还向\
+  \ Dolphin 的右键上下文菜单中添加了专用的 `Konbini` 项目。此菜单让你快速访问几个实用的命令，允许你重新压缩和调整当前所选图像文件的大小、使用从\
+  \ EXIF 元数据中提取的日期和时间值重命名文件、快速为所选照片添加地理标记、在 OpenStreetMap 上显示所选的地理标记照片等。\n\n安装 Konbini\
+  \ 非常简单。在终端中运行 `curl -sSL https://is.gd/konbini | bash` 命令让安装程序完成。该安装脚本专为 openSUSE、Ubuntu\
+  \ 和 Debian 设计，但也可以很容易地修改以适用于其他 Linux 发行版。\n\n在 `konbini` 目录下的 `template` 文件夹中，你会找到可以用于创建自定义操作的示例文件。假设你想创建一个将当前所选照片上传到\
+  \ FTP 服务器的操作。首先，将 `template/script` 文件夹中的 `example` 文件重命名为更更具描述性的名称，如 `upload-ftp`。打开文件进行编辑，删除现有的命令并添加以下代码（将示例值替换为实际\
+  \ FTP 服务器地址或域名、用户名和密码）：\n\n```\ncurl -T \"$file\" ftp://ftp.example.com/path/to/dir/\
+  \ --user user:password\nnotify-send \"It works!\"\n```\n\n保存更改，然后将文件移动到 `/usr/local/bin/`\
+  \ 目录，并赋予脚本可执行权限：\n\n```\nsudo mv upload-ftp /usr/local/bin/\nsudo chown root:root\
+  \ /usr/local/bin/upload-ftp\nsudo chmod 755 /usr/local/bin/upload-ftp\n```\n\n接下来，将\
+  \ `template/icon` 文件夹中的 `example.png` 图标重命名为 `upload-ftp.png` 并将其移动到 `/usr/share/icons/konbini-icons/`\
+  \ 目录：\n\n```\nmv upload-ftp.png /usr/share/icons/konbini-icons/\n```\n\n与其使用提供的通用示例图标，可以使用\
+  \ [Feather Icons](https://feathericons.com/) 集合中更合适的图标。\n\n最后，将 `template` 文件夹中的\
+  \ `example.desktop` 文件重命名为 `upload-ftp`，打开进行编辑并替换示例：\n\n```\n[Desktop Entry]\nType=Service\n\
+  X-KDE-Priority=TopLevel\nX-KDE-Submenu=Konbini\nMimeType=image/jpeg;image/jpg;\n\
+  Actions=UploadFTP\n\n[Desktop Action UploadFTP]\nName=Upload via FTP\nExec=/usr/local/bin/upload-ftp\
+  \ %f\nIcon=/usr/share/icons/konbini-icons/upload-ftp.png\n```\n\n保存更改，并将文件移动到 `/usr/share/services`：\n\
+  \n```\n\n启动 Dolphin，右键点击 JPEG 即可看到新添加的 `Konbini` 菜单。\n\n## 使用 Everyday Carry 记录包里的物品\n\
+  \n需要记录包里的摄影设备吗？有很多应用程序和工具可以帮你实现。但如果你倾向于保持简单且不与第三方共享数据，那么 [Everyday Carry](https://gitlab.com/dmpop/epc)\
+  \ (EPC) 正是你需要的。它是一个简单的 PHP 脚本，从逗号分隔的文件提取数据并将其渲染为 HTML 页面。\n\nEPC 不需要安装。使用 `git clone\
+  \ https://gitlab.com/dmpop/epc.git` 克隆项目仓库，或者直接从页面下载源代码。打开 `login.php` 文件，将示例密码替换为你所需的并保存更改。对\
+  \ `protect.php` 文件执行相同的操作。\n\n由于 EPC 只是一个 PHP 脚本，你可以在支持 PHP 的 Web 服务器上运行它，从而随时访问数据。将\
+  \ `epc` 文件夹移动到服务器的文档根目录并将浏览器指向 `http://127.0.0.1/epc`（将 127.0.0.1 替换为实际域名或 IP 地址）。\n\
+  \n要在本地机器上运行 EPC，你需要安装 PHP。在 openSUSE 上，运行 `sudo zypper in php` 命令。在 Ubuntu 上使用 `sudo\
+  \ apt-get install php7.2` 命令。在终端中，切换到 `epc` 目录并运行 `php -S localhost:8000` 命令。让浏览器指向\
+  \ `localhost:8000` 地址即可访问 EPC。\n\n首次运行时，EPC 会创建一个文件并插入示例条目。要添加和管理条目，点击 **Edit**\
+  \ 按钮。EPC 中的所有数据都存储在逗号分隔格式中，因此每个条目如下：\n\n```\nilce-6500.jpeg; Sony α6500 (ILCE-6500);\
+  \ 3157099; 1973-10-31\n```\n\n每个条目的第一项应该是产品文件名。如果你不想添加产品照片，请输入 `na`（代表 *not available*）。\n\
+  \n添加产品照片可以手动复制到 `epc/img` 文件夹，也可以点击 **Edit** 旁边的 **Upload** 链接并使用表单上传照片。\n\n\n\n\
+  \n# 使用 Simple Photo Planner 规划摄影之旅\n\n[Simple Photo Planner](https://gitlab.com/dmpop/sphp)\
+  \ (SPHP) 正如其名：一个简单、高效的 PHP 工具，用于跟踪你计划访问和拍摄的地点。它从文本文件中读取以逗号分隔格式存储的数据，并将其渲染为带有表格的\
+  \ HTML 页面。\n\n![](img/file38.png)\n\nSPHP 无需安装。使用 `git clone https://gitlab.com/dmpop/sphp.git`\
+  \ 命令克隆项目的 GitLab 仓库，或直接从项目页面下载源代码，即可开始使用。要在本地机器上运行 SPHP，你需要安装 PHP。在 openSUSE 上，运行\
+  \ `sudo zypper in php7` 命令。在 Ubuntu 上，使用 `sudo apt-get install php7.2` 命令安装 PHP。在终端中，切换到\
+  \ `sphp` 目录并运行 `php -S localhost:8000` 命令，然后在浏览器访问 `localhost:8000` 地址访问 SPHP。\n\
+  \n你可以通过任何文本编辑器或电子表格应用程序编辑相应的 `data.csv` 文件来添加新条目或修改现有条目。你可以为每个条目指定三个值：地点（名称）、链接（OpenStreetMap\
+  \ 或 Google Maps 上的）和备注。\n\n在 OpenStreetMap 中创建链接需要几个简单的步骤：\n\n1. 将浏览器指向 [`www.openstreetmap.org/`](https://www.openstreetmap.org/)。\n\
+  2. 使用搜索框找到地点，或者在地图上找到目标地点。\n3. 点击右侧工具栏中的 **Share**，启用 **Include marker** 选项，切换到\
+  \ **Short Link** 部分。\n4. 如必要，将标记到地图上的精确位置。\n5. 复制生成的链接。\n\n在 Google Maps 中生成链接同样简单。使用搜索功能找到地点，然后使用\
+  \ **Share** 选项生成链接。\n\n虽然 SPHP 可能不是最复杂的 PHP 工具，但它确实有一些实用的功能。你可以点击它查看特定地点的当前天气预报。点击\
+  \ **Location** 和 **Note** 列标题，可以使用 **Edit** 按钮编辑数据。\n\n由于 SPHP 只是一个 PHP 脚本，你可以在任何安装\
+  \ PHP 的服务器上运行它。将 `sphp` 文件夹移动到服务器的文档根目录并将浏览器指向 `http://127.0.0.1/sphp`（将 `127.0.0.1`\
+  \ 替换为服务器的实际域名或 IP 地址）。\n\n## 使用密码保护 Simple Photo Planner\n\n如果你在公共服务器上运行 SPHP，任何人都可以查看和编辑你的数据，这可能不是你想要的。解决方案是用用户名和密码保护\
+  \ SPHP 实例。在 Apache 服务器上，可以使用 `.htpasswd` 和 `.htaccess` 文件来实现。\n\n`.htpasswd` 文件是一个包含用户名和密码列表的文本文件。生成该文件有多种方法。如果你系统中安装了\
+  \ PHP，可以使用简单的 PHP 脚本：\n\n```php\n<?php\n$password = crypt($argv[2], base64_encode($argv[2]));\n\
+  echo $argv[1].\":\".$password;\n?>\n```\n\n将上述代码粘贴到新文件中并保存为 `htpasswd.php`。运行 `php\
+  \ htpasswd.php user password >> htpasswd` 命令，将 `user` 和 `password` 替换为实际用户名和密码。将生成的\
+  \ `htpasswd` 文件移动到服务器，并重命名为 `.htpasswd` 以隐藏文件。\n\n创建一个文本文件并将以下代码粘贴其中（将 `/path/to/`\
+  \ 替换为 `.htpasswd` 文件的绝对路径）：\n\n```\nAuthType Basic\nAuthName \"Simple Photo Planner\"\
+  \nAuthUserFile /path/to/.htpasswd\nrequire valid-user\n```\n\n将文件保存为 `htaccess`，移动到服务器上的\
+  \ `sphp` 目录，并重命名为 `.htaccess` 以隐藏文件。\n\n# 无需账号关注 Instagram 摄影师\n\n无论喜欢还是讨厌，许多摄影师都使用\
+  \ Instagram 分享照片。但与其他许多服务一样，Instagram 自称为社交平台，而实际上它只是另一个强制你创建账户并使用其 App 的围花园。得益于\
+  \ [RSS-Bridge](https://github.com/RSS-Bridge/rss-bridge)，你完全可以在不加入服务的情况下关注喜欢的摄影师。正如名称所示，这个巧妙的基于\
+  \ PHP 的 Web 应用可以为缺乏此功能的服务和平台生成 RSS 源。使用 RSS-Bridge，你可以为关注的每个 Instagram 账户创建 RSS\
+  \ 源，然后使用任何 RSS 阅读器订阅生成的源。更好的是，RSS-Bridge 安装和使用非常简单，因此不会引入任何复杂性或不便。事实上，在 Instagram\
+  \ 之外关注你喜欢的摄影师有其优势：没有分心的广告，也没有算法来决定给你看什么。\n\n由于 RSS-Bridge 用 PHP 编写的，它可以轻松运行在任何带有\
+  \ PHP 的服务器上。部署该应用并不复杂。使用 `git clone https://github.com/RSS-Bridge/rss-bridge.git`\
+  \ 命令克隆仓库。或者，使用 **Download ZIP** 按钮获取源代码并在必要解压生成的目录（例如 `rss-bridge`）。将浏览器指向安装的实例（`http://127.0.0.1/rss-bridge`，其中\
+  \ `127.0.0.1` 是服务器的域名或 IP 地址）。滚动到 **Instagram** 部分并点击 **Show more**。在相应字段中输入目标用户名并按下\
+  \ **Atom** 按钮。将生成的 Atom Feed 添加到你喜欢的阅读器中。\n\n![](img/file39.png)\n\n除了生成 Atom 和\
+  \ MRSS 格式的 RSS 源外，RSS-Bridge 还可以将获取到的数据渲染为 HTML 页面。如果你需要在不使用专用阅读器的情况下快速检查 Instagram\
+  \ 账户，这将非常有用。\n\nRSS-Bridge 支持其他照片共享服务，如 Flickr、NASA 每日天文图片和 Unsplash。然而，它们默认是禁用的。要启用所需的插件，打开\
+  \ `rss-bridge` 目录下的 `whitelist.txt` 文件，添加插件名称（例如 `FlickrBridge`）并保存更改。\n\n# 版本历史\n\
+  \n## 2020-05-19\n\n- [新增] 使用参考照片为 JPEG 添加地理标记\n- [新增] 使用 Sony α7 Mark III 的 FTP\
+  \ 功能\n- [更新] 使用 jpeg-recompress 进行高效 JPEG 压缩\n- [移除] 构建简单的 Android 摄影应用\n- [移除]\
+  \ 使用 Sony-PMCA-RE 扩展相机功能\n\n## 2020-04-05\n\n- [更新] 为 EXIF 元数据添加有用信息\n- [更新] 使用\
+  \ Otto 导入并整理照片\n- [更新] 使用 Photo Funnel 导入照片和 RAW 文件\n- [移除] 构建简单的 Android 摄影应用\n\
+  \n## 2020-01-07\n\n- [移除] 基于树莓派的照片备份设备\n\n## 2019-12-15\n\n- [新增] 使用 Lilut 使用 Hald\
+  \ CLUT 预设\n- [新增] 使用 Little Backup Box 管理和处理 RAW 文件及照片\n- [更新] 使用 Everyday Photo\
+  \ Carry 记录摄影包物品\n\n## 2019-09-29\n\n- [新增] 基于树莓派的照片备份设备：为 Little Backup Box 添加 128x64\
+  \ OLED 屏幕\n- [新增] 使用 Little Backup Box 的移动备份工作流\n- [更新] 基于树莓派的照片备份设备：更改默认备份模式\n\n\
+  \n\n\n\n* [新增] 使用 `jpegoptim` 压缩 JPEG 文件\n\n## 版本 19.08.11\n\n* [更新] 构建基于树莓派的照片备份设备\n\
+  \n## 版本 19.07.29\n\n* [更新] 构建基于树莓派的照片备份设备：与 Little Backup Box 进行远程同步\n* [新增] 构建基于树莓派的照片备份设备：使用\
+  \ Simplepush 为 Little Backup Box 添加通知功能\n\n## 版本 119.06.21\n\n* [更新] 构建基于树莓派的照片备份设备\n\
+  * [新增] 构建基于树莓派的照片备份设备：配置内部存储备份\n\n## 版本 19.04.29\n\n* [新增] WIRC：索尼 Alpha 相机的 Wi-Fi\
+  \ 红外控制\n* [移除] 扩展和改进 Microblog\n* [更新] 使用 Otto 导入并整理照片\n\n## 版本 19.03.31\n\n* [新增]\
+  \ 在新浏览器标签页中显示你的照片\n\n## 版本 19.02.17\n\n* [更新] 构建基于树莓派的照片备份设备\n\n## 版本 19.01.13\n\
+  \n* [新增] 使用 Simple Photo Planner 计划摄影之旅\n* [更新] 使用 Everyday Photo Carry 记录你摄影包里的物品\n\
+  \n## 版本 19.01.01\n\n* [新增] 使用 Everyday Photo Carry 记录你摄影包里的物品\n\n## 版本 18.12.21\n\
+  \n* [新增] 用于展示照片的简单 PHP 脚本\n* [新增] Konbini：KDE 的小型照片助手\n* [更新] 使用 Momo 在基于 Linux\
+  \ 的 NAS 上导入并整理照片\n\n## 版本 18.09.30\n\n* [新增] 将树莓派变成无线摄像头服务器\n* [更新] 使用 Natsukashii\
+  \ 漫步回忆：[更新]为 Natsukashii 添加密码保护\n\n## 版本 18.08.25\n\n* [新增]为 EXIF 元数据添加有用信息\n* [新增]\
+  \ 无需账号即可在 Instagram 上关注摄影师\n* [新增] 构建了一个远程控制的树莓派相机\n* [新增] 构建基于树莓派的照片备份设备：使用 Little\
+  \ Backup Box 进行远程备份\n\n## 版本 18.07.21\n\n* [新增] 导入照片和 RAW 文件：使用 Momo 在 NAS 上导入并整理照片\n\
+  * [新增] 使用 Natsukashii 漫步回忆\n* [移除] Sonnenhut：摄影师的简单仪表盘\n* [移除] 通过 `gPhoto2` Bottle\
+  \ 通过 Web 控制相机\n\n## 版本 18.06.03\n\n* [新增] 导入照片和 RAW 文件：使用 Photo Funnel 进行拖拽导入\n\n\
+  ## 版本 18.05.21\n\n* [新增] 构建基于树莓派的照片备份设备：扩展和改进 Little Backup Box\n* [更新] `raw` ->\
+  \ `RAW`\n* [更新] 使用 Geophotobash 为照片添加地理标记\n\n## 版本 18.04.03\n\n* [新增] 构建基于树莓派的照片备份设备：使用\
+  \ Android 热点配合 Little Backup Box\n\n## 版本 18.03.25\n\n* [更新] 构建基于树莓派的照片备份设备\n* [新增]\
+  \ 扩展和改进 Microblog\n\n## 版本 18.03.19\n\n* [新增] 使用 Expose 构建静态照片随集\n* [新增] 使用 Highrise\
+  \ 脚本生成超分辨率照片\n\n## 版本 18.02.07\n\n* [新增] 备份与恢复：在 Android 上安装 `rclone`\n* [新增] 使用\
+  \ Jasonette 构建简单的 Android 照片应用\n* [新增] 使用 `Sony-PMCA-RE` 扩展 Sony Alpha 相机功能\n* [新增]\
+  \ 基于树莓派的照片备份设备：使用 Little Backup Box 进行照片地理相关分析\n\n## 版本 17.12.27\n\n* [新增] 基于树莓派的照片备份设备：Little\
+  \ Backup Box 故障排除\n* [新增] `olympus-photosync`：奥林巴相机与 Linux 之间的无线桥\n* [更新] 使用 `jpeg-recompress`\
+  \ 进行高效 JPEG 压缩：改进了 `monitor-recompress` 脚本\n\n## 版本 17.10.03\n\n* [新增] 使用 `digiKam`\
+  \ 管理照片\n* [新增] 使用 `Unbash` 脚本从 Unsplash 获取灵感\n* [移除] 使用 `UFRaw` 插件和脚本将 GIMP 变为数字暗室\n\
+  * [移除] 使用 Pixeluvo 处理照片和 RAW 文件\n\n## 版本 17.08.17\n\n* [新增] 通过右键菜单快速访问图像处理操作：使用\
+  \ `ImageMagick` 和 KDE 服务菜单操作比较照片\n* [新增] 将照片和 Raw 文件存储在加密存储设备上\n* [新增] 基于树莓派的照片备份设备：重新配置\
+  \ Little Backup Box 的 Wi-Fi\n\n## 版本 17.07.01\n\n* [新增] 通过右键菜单快速访问图像处理操作\n* [更新]\
+  \ 使用 Bash 脚本显示“去年今天的照片 -> 使用 Bash 脚本穿越时光\n\n## 版本 17.06.23\n\n* [新增] 使用 Bash 脚本显示“去年今天”的照片\n\
+  \n## 版本 17.05.15\n\n* [新增] Sonnenhut：摄影师的简单仪表盘\n* [新增] 使用 Mejiro 发布并分享照片：使用 Mejiro\
+  \ 标记照片\n\n## 版本 17.10.03\n\n* [新增] 使用 `digiKam` 管理照片\n* [新增] 使用 `Unbash` 脚本从 Unsplash\
+  \ 获取灵感\n* [移除] 使用 `UFRaw` 插件和脚本将 GIMP 变为数字暗室\n* [移除] 使用 Pixeluvo 处理照片和 RAW 文件\n\n\
+  ## 版本 17.08.17\n\n* [新增] 通过右键菜单快速访问图像处理操作：使用 `ImageMagick` 和 KDE 服务菜单操作比较照片\n* [新增]\
+  \ 将照片和 Raw 文件存储在加密存储设备上\n* [新增] 基于树莓派的照片备份设备：重新配置 Little Backup Box 的 Wi-Fi\n\n\
+  ## 版本 17.07.01\n\n* [新增] 通过右键菜单快速访问图像处理操作\n* [更新] 使用 Bash 脚本显示“去年今天”的照片 -> 使用 Bash\
+  \ 脚本穿越时光\n\n## 版本 17.06.23\n\n* [新增] 使用 Bash 脚本显示“去年今天”的照片\n\n## 版本 17.05.15\n\n\
+  * [新增] Sonnenhut：摄影师的简单仪表盘\n* [新增] 使用 Mejiro 发布并分享照片：使用 Mejiro 标记照片\n\n## 版本 17.10.03\n\
+  \n* [新增] 使用 `digiKam` 管理照片\n* [新增] 使用 `Unbash` 脚本从 Unsplash 获取灵感\n* [移除] 使用 `UFRaw`\
+  \ 插件和脚本将 GIMP 变为数字暗室\n* [移除] 使用 Pixeluvo 处理照片和 RAW 文件\n\n## 版本 17.08.17\n\n* [新增]\
+  \ 通过右键菜单快速访问图像处理操作：使用 `ImageMagick` 和 KDE 服务菜单操作比较照片\n* [新增] 将照片和 Raw 文件存储在加密存储设备上\n\
+  * [新增] 基于树莓派的照片备份设备：重新配置 Little Backup Box 的 Wi-Fi\n\n## 版本 17.07.01\n\n* [新增] 通过右键菜单快速访问图像处理操作\n\
+  * [更新] 使用 Bash 脚本显示“去年今天”的照片 -> 使用 Bash 脚本穿越时光\n\n## 版本 17.06.23\n\n* [新增] 使用 Bash\
+  \ 脚本显示“去年今天”的照片\n\n## 版本 17.05.15\n\n* [新增] Sonnenhut：摄影师的简单仪表盘\n* [新增] 使用 Mejiro\
+  \ 发布并分享照片：使用 Mejiro 标记照片\n\n## 版本 17.10.03\n\n* [新增] 使用 `digiKam` 管理照片\n* [新增] 使用\
+  \ `Unbash` 脚本从 Unsplash 获取灵感\n* [移除] 使用 `UFRaw` 插件和脚本将 GIMP 变为数字暗室\n* [移除] 使用 Pixeluvo\
+  \ 处理照片和 RAW 文件\n\n## 版本 17.08.17\n\n* [新增] 通过右键菜单快速访问图像处理操作：使用 `ImageMagick` 和 KDE\
+  \ 服务菜单操作比较照片\n* [新增] 将照片和 Raw 文件存储在加密存储设备上\n* [新增] 基于树莓派的照片备份设备：重新配置 Little Backup\
+  \ Box 的 Wi-Fi\n\n## 版本 17.07.01\n\n* [新增] 通过右键菜单快速访问图像处理操作\n* [更新] 使用 Bash 脚本显示“去年今天”的照片\
+  \ -> 使用 Bash 脚本穿越时光\n\n## 版本 17.06.23\n\n* [新增] 使用 Bash 脚本显示“去年今天”的照片\n\n## 版本 17.05.15\n\
+  \n* [新增] Sonnenhut：摄影师的简单仪表盘\n* [新增] 使用 Mejiro 发布并分享照片：使用 Mejiro 标记照片\n\n我注意到提供的文本在末尾有许多重复部分。我将根据提供的唯一内容提供一个格式化的版本。\n\
+  \n[content]\n* [新增] 使用 `jpegoptim` 压缩 JPEG 文件\n\n## 版本 19.08.11\n\n* [更新] 构建基于树莓派的照片备份设备\n\
+  \n## 版本 19.07.29\n\n* [更新] 构建基于树莓派的照片备份设备：与 Little Backup Box 进行远程同步\n* [新增] 构建基于树莓派的照片备份设备：使用\
+  \ Simplepush 为 Little Backup Box 添加通知功能\n\n## 版本 19.06.21\n\n* [更新] 构建基于树莓派的照片备份设备\n\
+  * [新增] 构建基于树莓派的照片备份设备：配置内部存储备份\n\n## 版本 19.04.29\n\n* [新增] WIRC：索尼 Alpha 相机的 Wi-Fi\
+  \ 红外控制\n* [移除] 扩展和改进 Microblog\n* [更新] 使用 Otto 导入并整理照片\n\n## 版本 19.03.31\n\n* [新增]\
+  \ 在新浏览器标签页中显示你的照片\n\n## 版本 19.02.17\n\n* [更新] 构建基于树莓派的照片备份设备\n\n## 版本 19.01.13\n\
+  \n* [新增] 使用 Simple Photo Planner 计划摄影之旅\n* [更新] 使用 Everyday Photo Carry 记录你摄影包里的物品\n\
+  \n## 版本 19.01.01\n\n* [新增] 使用 Everyday Photo Carry 记录你摄影包里的物品\n\n## 版本 18.12.21\n\
+  \n* [新增] 用于展示照片的简单 PHP 脚本\n* [新增] Konbini：KDE 的小型照片助手\n* [更新] 使用 Momo 在基于 Linux\
+  \ 的 NAS 上导入并整理照片\n\n## 版本 18.09.30\n\n* [新增] 将树莓派变成无线摄像头服务器\n* [更新] 使用 Natsukashii\
+  \ 漫步回忆：[更新]为 Natsukashii 添加密码保护\n\n## 版本 18.08.25\n\n* [新增]为 EXIF 元数据添加有用信息\n* [新增]\
+  \ 无需账号即可在 Instagram 上关注摄影师\n* [新增] 构建了一个远程控制的树莓派相机\n* [新增] 构建基于树莓派的照片备份设备：使用 Little\
+  \ Backup Box 进行远程备份\n\n## 版本 18.07.21\n\n* [新增] 导入照片和 RAW 文件：使用 Momo 在 NAS 上导入并整理照片\n\
+  * [新增] 使用 Natsukashii 漫步回忆\n* [移除] Sonnenhut：摄影师的简单仪表盘\n* [移除] 通过 `gPhoto2` Bottle\
+  \ 通过 Web 控制相机\n\n## 版本 18.06.03\n\n* [新增] 导入照片和 RAW 文件：使用 Photo Funnel 进行拖拽导入\n\n\
+  ## 版本 18.05.21\n\n* [新增] 构建基于树莓派的照片备份设备：扩展和改进 Little Backup Box\n* [更新] `raw` ->\
+  \ `RAW`\n* [更新] 使用 Geophotobash 为照片添加地理标记\n\n## 版本 18.04.03\n\n* [新增] 构建基于树莓派的照片备份设备：使用\
+  \ Android 热点配合 Little Backup Box\n\n## 版本 18.03.25\n\n* [更新] 构建基于树莓派的照片备份设备\n* [新增]\
+  \ 扩展和改进 Microblog\n\n## 版本 18.03.19\n\n* [新增] 使用 Expose 构建静态照片随集\n* [新增] 使用 Highrise\
+  \ 脚本生成超分辨率照片\n\n## 版本 18.02.07\n\n* [新增] 备份与恢复：在 Android 上安装 `rclone`\n* [新增] 使用\
+  \ Jasonette 构建简单的 Android 照片应用\n* [新增] 使用 `Sony-PMCA-RE` 扩展 Sony Alpha 相机功能\n* [新增]\
+  \ 基于树莓派的照片备份设备：使用 Little Backup Box 进行照片地理相关分析\n\n## 版本 17.12.27\n\n* [新增] 基于树莓派的照片备份设备：Little\
+  \ Backup Box 故障排除\n* [新增] `olympus-photosync`：奥林巴相机与 Linux 之间的无线桥\n* [更新] 使用 `jpeg-recompress`\
+  \ 进行高效 JPEG 压缩：改进了 `monitor-recompress` 脚本\n\n## 版本 17.10.03\n\n* [新增] 使用 `digiKam`\
+  \ 管理照片\n* [新增] 使用 `Unbash` 脚本从 Unsplash 获取灵感\n* [移除] 使用 `UFRaw` 插件和脚本将 GIMP 变为数字暗室\n\
+  * [移除] 使用 Pixeluvo 处理照片和 RAW 文件\n\n## 版本 17.08.17\n\n* [新增] 通过右键菜单快速访问图像处理操作：使用\
+  \ `ImageMagick` 和 KDE 服务菜单操作比较照片\n* [新增] 将照片和 Raw 文件存储在加密存储设备上\n* [新增] 基于树莓派的照片备份设备：重新配置\
+  \ Little Backup Box 的 Wi-Fi\n\n## 版本 17.07.01\n\n* [新增] 通过右键菜单快速访问图像处理操作\n* [更新]\
+  \ 使用 Bash 脚本显示“去年今天”的照片 -> 使用 Bash 脚本穿越时光\n\n## 版本 17.06.23\n\n* [新增] 使用 Bash 脚本显示“去年今天”的照片\n\
+  \n## 版本 17.05.15\n\n* [新增] Sonnenhut：摄影师的简单仪表盘\n* [新增] 使用 Mejiro 发布并分享照片：使用 Mejiro\
+  \ 标记照片\n\n\n\n\n\n# [更新] 云端与移动备份：使用 `rclone` 进行云备份\n\n## 修订 0 16.05.19\n\n"
