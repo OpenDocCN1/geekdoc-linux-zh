@@ -233,6 +233,7 @@
 +   [Kali Linux CLI 高级指南：从新手到命令行大师](docs/kali-linux-cli-boss-novice-to-command-line-maestro/README.md)
 +   [Kali Linux 文档](docs/kali-linux-doc/README.md)
 +   [Kali Linux 基础：道德黑客与网络安全步步指南](docs/kali-linux-essentials-a-step-by-step-guide-to-ethical-hackin/README.md)
++   [KALI LINUX 道德黑客：学生与专业人士完全指南 2024版](docs/kali-linux-ethical-hacking-a-complete-guide-for-students-and/README.md)
 +   [Kali Linux Hacking：学习网络安全、黑客攻击与渗透测试基础的完整分步指南。包含价值的基础网络概念。](docs/kali-linux-hacking-a-complete-step-by-step-guide-to-learn-th/README.md)
 +   [Kali Linux：初学者与中级者 Kali Linux 逐步进阶实用指南（包含 Kali Linux 黑客攻击与网络安全基础）](docs/kali-linux-kali-linux-made-easy-for-beginners-and-intermedia/README.md)
 +   [Kali Linux 初学者与中级快速指南](docs/kali-linux-made-easy-for-beginners-and-intermediates/README.md)
