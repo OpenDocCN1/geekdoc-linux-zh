@@ -220,6 +220,7 @@
 +   [Ubuntu 桌面 Linux 入门指南](docs/introducing-ubuntu-desktop-linux/README.md)
 +   [计算机组织入门指南：硬件与 X86-64 汇编底层深度解析](docs/introduction-to-computer-organization-an-under-the-hood-look/README.md)
 +   [Unix 和 Linux 入门指南](docs/introduction-to-unix-and-linux/README.md)
++   [C 语言 IoT 项目：Linux 存在多久了：我的电脑能运行 Linux 吗](docs/iot-projects-using-c-language-how-long-has-linux-been-around/README.md)
 +   [Ansible IT基础设施自动化使用指南：网络、Windows、Linux及云运维自动化指引（英文版）](docs/it-infrastructure-automation-using-ansible-guidelines-to-aut/README.md)
 +   [ITIL 中级认证伴读指南：中级 ITIL 服务能力考试](docs/itil-intermediate-certification-companion-study-guide-interm/README.md)
 +   [我有秘密！](docs/ive-got-a-secret/README.md)
