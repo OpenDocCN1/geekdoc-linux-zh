@@ -1,0 +1,123 @@
+name: LINUX FOR HACKERS： LEARN CYBERSECURITY PRINCIPLES WITH SHELL, PYTHON, BASH PROGRAMMING
+  USING KALI LINUX TOOLS. A COMPLETE GUIDE FOR BEGINNERS
+name_cn: 黑客 Linux：使用 Kali Linux 工具、通过 Shell、Python 和 Bash 编程学习网络安全原理，初学者指南
+slug: linux-for-hackers-learn-cybersecurity-principles-with-shell-
+toc:
+- - '#'
+  - 黑客 Linux：使用 Kali Linux 工具、通过 Shell、Python 和 Bash 编程学习网络安全原理，初学者指南
+- - '##'
+  - 了解 Linux 并安装你喜欢的 Linux 发行版
+- - '###'
+  - 第一章 Linux 简介
+- - '###'
+  - Linux 在各个领域的现状和趋势
+- - '##'
+  - Red Hat Linux (红帽 Linux)
+- - '##'
+  - Fedora Core
+- - '##'
+  - Kali Linux
+- - '##'
+  - CentOS
+- - '##'
+  - SuSE Linux
+- - '##'
+  - Ubuntu Linux
+- - '###'
+  - 初学者的首选是什么？ - LinuxMint 系列
+- - '###'
+  - 桌面平台首选是什么？ - Ubuntu Linux
+- - '###'
+  - 企业应用首选是什么？ - RHEL/CentOS 系列
+- - '###'
+  - 黑客和渗透测试者的首选是什么？ - Kali Linux
+- - '###'
+  - 接下来做什么？掌握 Linux 的策略
+- - '####'
+  - 如何养成良好的 Linux 习惯？
+- - '####'
+  - 习惯命令行模式
+- - '####'
+  - 理论与实践的结合
+- - '####'
+  - 学习使用在线帮助
+- - '####'
+  - 学会独立思考和解决问题
+- - '####'
+  - 学习英语
+- - '####'
+  - Linux 学习路线图
+- - '###'
+  - 第四章 Linux 安装准备工作
+- - '####'
+  - 安装 Linux
+- - '####'
+  - 安装要求
+- - '###'
+  - 第五章 Linux 安装步骤
+- - '####'
+  - 硬盘安装方法
+- - '####'
+  - U 盘安装方法
+- - '####'
+  - 网络安装方法
+- - '####'
+  - 使用 CD 安装
+- - '###'
+  - 第六章 Linux 中的分区
+- - '####'
+  - 分区命名方案
+- - '##'
+  - Linux 分区指南
+- - '###'
+  - 分区界面
+- - '###'
+  - 分区方案
+- - '###'
+  - 创建分区
+- - '###'
+  - 1. 根分区 (Root Partition)
+- - '###'
+  - 2. Boot 分区 (Boot Partition)
+- - '###'
+  - 3. 交换分区 (Swap Partition)
+- - '###'
+  - 4. /usr 和 /var 分区
+- - '###'
+  - 配置分区详情
+- - '###'
+  - 网络设置
+- - '###'
+  - 完成安装
+- - '##'
+  - Kali Linux 工具：Nmap
+- - '###'
+  - 基础用法
+- - '###'
+  - 使用标志的高级扫描
+- - '###'
+  - 导出结果
+- - '##'
+  - Python 脚本：基础
+- - '###'
+  - 变量 (Variables)
+- - '###'
+  - 命令替换 (Command Substitution)
+- - '##'
+  - Bash 脚本：基础
+- - '###'
+  - Shebang
+- - '###'
+  - 运行脚本
+- - '###'
+  - 输入与输出
+- - '###'
+  - 管道与重定向
+- - '###'
+  - 控制流
+- - '##'
+  - Python：函数与对象
+- - '###'
+  - 函数 (Functions)
+- - '###'
+  - 面对象编程 (OOP)
