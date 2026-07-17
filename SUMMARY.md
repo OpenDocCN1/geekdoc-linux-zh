@@ -424,6 +424,7 @@
 +   [Linux：初学者快速掌握 Linux 系统的零基础入门指南](docs/linux-the-1-crash-course-for-beginners-to-master-linux-opera/README.md)
 +   [Linux 初学者快速入门：立即开始！](docs/linux-the-beginners-crash-course-get-started-today/README.md)
 +   [Linux：初学者完全指南 - 黑书](docs/linux-the-complete-beginners-guide---the-black-book/README.md)
++   [Linux 全方位指南](docs/linux-the-comprehensive-guide/README.md)
 +   [Linux：从灾难到精通](docs/linux-the-disaster-to-master/README.md)
 +   [Linux：快速启动初学者指南：（Linux 初学者指南、Linux 命令行、Linux 操作系统、学习 Linux）（Linux 初学者书籍第 1 册）](docs/linux-the-quick-start-beginners-guide-linux-for-beginners-li/README.md)
 +   [LINUX：终极初学者指南！](docs/linux-the-ultimate-beginners-guide/README.md)
