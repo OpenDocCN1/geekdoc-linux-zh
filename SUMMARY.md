@@ -269,6 +269,7 @@
 +   [Linux 与树莓派基础项目：面向初学者、儿童、创客与专业人士。STEAM 教育](docs/linux-and-raspberry-pi-basic-projects-for-beginners-kids-mak/README.md)
 +   [Linux Banter：使用 C 语言学习 Linux 基础的轻松入门指南](docs/linux-banter-a-lighthearted-way-to-learn-linux-basics-using-/README.md)
 +   [道德黑客的 Linux 基础第一部分：Linux 入门指南](docs/linux-basic-for-ethical-hacking-part-1-by-raxxstar-linux-for/README.md)
++   [准黑客的 Linux 入门指南：在 Kali 中上手网络、Bash 与安全](docs/linux-basics-for-aspiring-hackers-getting-started-with-netwo/README.md)
 +   [黑客 Linux 基础：理解黑客工具、渗透测试、Linux Mint、Kali Linux 等更多：Kali Linux 黑客命令](docs/linux-basics-for-hacker-understanding-hacking-tools-penetrat/README.md)
 +   [Kali 网络、脚本和安全入门指南](docs/linux-basics-for-hackers---getting-started-with-networking-s/README.md)
 +   [黑客 Linux 入门指南，第 2 版](docs/linux-basics-for-hackers-2nd-edition/README.md)
