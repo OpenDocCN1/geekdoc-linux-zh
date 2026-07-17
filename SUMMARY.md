@@ -289,6 +289,7 @@
 +   [Linux 命令初学者指南：用简单方法学习 Linux 命令、标志和选项](docs/linux-command-for-beginners-learn-linux-commands-flags-and-o/README.md)
 +   [Linux 命令行入门指南](docs/linux-command-line/README.md)
 +   [Linux 命令行：管理员初学者指南](docs/linux-command-line-an-admin-beginners-guide/README.md)
++   [Linux 命令行与 Shell 脚本圣经（第二版）](docs/linux-command-line-and-shell-scripting-bible-2nd-edition/README.md)
 +   [Linux 命令行：学习 Linux 命令和 Shell 脚本初学者指南](docs/linux-command-line-beginners-guide-to-learn-linux-commands-a/README.md)
 +   [Linux 命令行：涵盖所有核心 Linux 命令的参考指南（第3版）：Linux 书籍与 Linux 内核](docs/linux-command-line-cover-all-essential-linux-commands-a-refe/README.md)
 +   [Linux 命令行：快速易学！Linux 命令、Bash 脚本技巧、Linux Shell 编程技巧与 Bash 单行命令](docs/linux-command-line-fast-and-easy-linux-commands-bash-scripti/README.md)
