@@ -129,6 +129,7 @@
 +   [FreeBSD 使用手册](docs/fbsd-man/README.md)
 +   [Fedora 31 入门指南：学习安装、部署和管理 Fedora Linux](docs/fedora-31-essentials-learn-to-install-deploy-and-administer-/README.md)
 +   [《人人自由：Linux与自由软件运动如何撼动高科技巨头》](docs/free-for-all-how-linux-and-the-free-software-movement-underc/README.md)
++   [FreeBSD 101 技巧指南](docs/freebsd-101-hacks/README.md)
 +   [西方图像及其数字未来的谱系学与本体论（劳特利奇艺术与视觉研究前沿）](docs/genealogy-and-ontology-of-the-western-image-and-its-digital-/README.md)
 +   [InfoSphere Data Architect 入门指南](docs/getting-started-with-infosphere-data-architect/README.md)
 +   [Linux GIMP 圣经](docs/gimp-for-linux-bible/README.md)

@@ -1,0 +1,124 @@
+name: FreeBSD 101 Hacks
+name_cn: FreeBSD 101 技巧指南
+slug: freebsd-101-hacks
+toc:
+- - '#'
+  - FreeBSD 101 技巧指南
+- - '#'
+  - 介绍
+- - '#'
+  - FreeBSD-101-技巧
+- - '##'
+  - 项目主页
+- - '##'
+  - 获取系统版本
+- - '###'
+  - freebsd-version -uk
+- - '###'
+  - freebsd-version
+- - '###'
+  - uname -r
+- - '##'
+  - 通过 SSH 启用 root 登录
+- - '##'
+  - 配置代理
+- - '##'
+  - 关机
+- - '###'
+  - shutdown -h now
+- - '##'
+  - 重启
+- - '###'
+  - reboot
+- - '###'
+  - shutdown -r
+- - '##'
+  - 升级系统
+- - '###'
+  - freebsd-update -r 10.3
+- - '###'
+  - freebsd-version -ku
+- - '###'
+  - freebsd-update fetch
+- - '###'
+  - freebsd-version -ku
+- - '##'
+  - 升级到新版本
+- - '##'
+  - 安装软件
+- - '###'
+  - 'pkg install install python '
+- - '###'
+  - python
+- - '###'
+  - cd /usr/ports/databases/py-bsddb
+- - '###'
+  - make install clean
+- - '###'
+  - python
+- - '##'
+  - 搜索软件
+- - '###'
+  - pkg search lsof
+- - '###'
+  - pkg search -o lsof
+- - '###'
+  - whereis lsof
+- - '###'
+  - echo /usr/ports/*/*lsof*
+- - '##'
+  - 移除软件
+- - '##'
+  - 更新 Ports 集合
+- - '###'
+  - portsnap fetch extract
+- - '##'
+  - 安装 port 时接受默认选项
+- - '###'
+  - 'make install clean BATCH=yes '
+- - '##'
+  - 启用 ls 彩色输出
+- - '##'
+  - 清晰的目录结构
+- - '##'
+  - 修改 shell
+- - '###'
+  - chsh -s /usr/local/bin/bash
+- - '###'
+  - echo $SHELL
+- - '##'
+  - 修改 PATH 变量
+- - '###'
+  - cat .cshrc
+- - '###'
+  - source .cshrc
+- - '###'
+  - echo $PATH
+- - '##'
+  - 为 bash 着色
+- - '###'
+  - swapinfo -m
+- - '##'
+  - 使用 "ps" 显示进程状态
+- - '###'
+  - ps
+- - '###'
+  - ps -ax
+- - '###'
+  - freecolor
+- - '###'
+  - freecolor -m -o
+- - '##'
+  - 使用 Subversion 的注意事项
+- - '###'
+  - cat ~/.subversion/servers
+- - '###'
+  - svn checkout https://svn.FreeBSD.org/ports/head /usr/ports
+- - '###'
+  - pkg upgrade sqlite3
+- - '##'
+  - 输出 PCI 设备信息
+- - '###'
+  - pciconf -lv
+- - '###'
+  - pkg install pciutils

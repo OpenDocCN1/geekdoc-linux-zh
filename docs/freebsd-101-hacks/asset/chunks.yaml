@@ -1,0 +1,1980 @@
+- fmt: '
+
+    ![](cover_image.jpg)
+
+
+    # Table of Contents
+
+
+    1. Summary
+
+    2. Introduction (#index.html) 1.1
+
+    3. Get system version (#get-system-version.html) 1.2
+
+    4. Enable root login over SSH (#enable-root-login-over-ssh.html) 1.3
+
+    5. Configure proxy (#configure-proxy.html) 1.4
+
+    6. Shutdown (#shutdown.html) 1.5
+
+    7. Reboot (#reboot.html) 1.6
+
+    8. Upgrade system (#upgrade-system.html) 1.7
+
+    9. Upgrade to new release (#upgrade-to-new-release.html) 1.8
+
+    10. Install software (#install-software.html) 1.9
+
+    11. Search software (#search-software.html) 1.10
+
+    12. Remove software (#remove-software.html) 1.11
+
+    13. Install source code (#install-source-code.html) 1.12
+
+    14. Build kernel (#build-kernel.html) 1.13
+
+    15. Backup old kernel (#backup-old-kernel.html) 1.14
+
+    16. CURRENT VS STABLE (#current-vs-stable.html) 1.15
+
+    17. Update Ports Collection (#update-ports-collection.html) 1.16
+
+    18. Accept default options during installing port (#accept-default-options-during-installing-port.html)
+    1.17
+
+    19. Enable ls colour output (#enable-ls-colour-output.html) 1.18
+
+    20. Clear Directory Structure (#clear-directory-structure.html) 1.19
+
+    21. Change the shell (#change-the-shell.html) 1.20
+
+    22. Change PATH environment variable (#change-path-environment-variable.html)
+    1.21
+
+    23. Colorize bash (#colorize-bash.html) 1.22
+
+    24. Install bash-completion (#install-bash-completion.html) 1.23
+
+    25. Rehash command (#rehash-command.html) 1.24
+
+    26. Search backwards in csh (#search-backwards-in-csh.html) 1.25
+
+    27. Trim a file in csh (#trim-a-file-in-csh.html) 1.26
+
+    28. /var/run/dmesg.boot (#dmesg-boot.html) 1.27
+
+    29. Display swap space utilization (#display-swap-space-utilization.html) 1.28
+
+    30. Use "ps" to display process status (#use-ps-to-display-process-status.html)
+    1.29
+
+    31. Use "procstat" to get process info (#use-procstat-to-get-process-info.html)
+    1.30
+
+    32. Sockstat command (#sockstat-command.html) 1.31
+
+    33. Use "freecolor" to display memory and swap usage (#Use-freecolor-to-display-memory-and-swap-usage.html)
+    1.32
+
+    34. Notices of using Subversion (#notice-of-using-subversion.html) 1.33
+
+    35. Print PCI devices info (#print-pci-devices-info.html) 1.34
+
+    36. Mount procfs file system (#mount-procfs-file-system.html) 1.35
+
+    37. Kldstat command (#kldstat-command.html) 1.36
+
+    38. Load and unload files into kernel (#load-and-unload-files-into-kernel.html)
+    1.37
+
+
+    # Introduction
+
+
+    # FreeBSD-101-Hacks
+
+
+    A collection of FreeBSD hacks.
+
+
+    # Project Homepage
+
+
+    [https://github.com/NanXiao/FreeBSD-101-Hacks](https://github.com/NanXiao/FreeBSD-101-Hacks)
+
+
+    # Get system version
+
+
+    ## Get system version
+
+
+    There are `2` versions of `FreeBSD`: kernel and userland. Use `freebsd-version
+    -ku` can output both versions:
+
+
+    ```
+
+    # freebsd-version -uk
+
+    10.3-RELEASE-p4
+
+    10.3-RELEASE-p5
+
+    ```
+
+
+    The first one is kernel version info. You can see the versions of both kernel
+    and userland is `10.3`, but kernel patch level is `p4`, while userland is `p5`.
+    That''s because in some cases, only the userland requires a patch whilst kernel
+    not, so kernel patch level doesn''t change. If there is no option, `freebsd-version`
+    prints userland version only:
+
+
+    ```
+
+    # freebsd-version
+
+    10.3-RELEASE-p5
+
+    ```
+
+
+    `uname -r` command also outputs the kernel version:
+
+
+    ```
+
+    # uname -r
+
+    10.3-RELEASE-p4
+
+    ```
+
+
+    Reference:
+
+
+    [Why the outputs of “freebsd-version” and “freebsd-version -k” are different?](http://stackoverflow.com/questions/3780013/why-the-outputs-of-freebsd-version-and-freebsd-version-k-are-different).
+
+
+    # Enable root login over SSH
+
+
+    ## Enable root login over SSH
+
+
+    By default, `FreeBSD` box''t allow `root` user login over `SSH`, to enable it
+    you need to modify `SSH` daemon file (`/etc/ssh/sshd_config`).
+
+
+    Change the following:
+
+
+    ```
+
+    PermitRootLogin no
+
+    ```
+
+
+    to:
+
+
+    ```
+
+    PermitRootLogin yes
+
+    ```
+
+
+    Then restart `SSH` daemon:
+
+
+    ```
+
+    # /etc/rc.d/sshd restart
+
+    ```
+
+
+    Reference:
+
+
+    [How to enable root login over SSH on FreeBSD 8.2](http://blog.obbyallen.me/2011/07/22/how-to-enable-root-login-over-ssh-).
+
+
+    # Configure proxy
+
+
+    ## Configure proxy
+
+
+    If your `FreeBSD` box works behind a proxy, you may need to configure proxy to
+    access network.
+
+
+    For `csh` or `tcsh`, set proxy in `/etc/cshrc`:
+
+
+    ```
+
+    setenv HTTP_PROXY http://web-proxy.xxxxxx:8080
+
+    setenv HTTPS_PROXY https://web-proxy.xxxxxx:8080
+
+    ```
+
+
+    For `sh`, set proxy in `/etc/profile`:
+
+
+    ```
+
+    export HTTP_PROXY http://web-proxy.xxxxxx:8080
+
+    export HTTPS_PROXY https://web-proxy.xxxxxx:8080
+
+    ```
+
+
+    Reference:
+
+
+    [Using FreeBSD inside a controlled network – A required HTTP Proxy and FTP](http://www.rhyous.com/2012/04/13/using-freebsd-inside-a-controlled-network-a-required-http-proxy-and-ftp/).
+
+
+    # Shutdown
+
+
+    ## Shutdown
+
+
+    Compared to some `GNU/Linux` flavors, `shutdown -h now` command just halts the
+    `FreeBSD`, not turns off the power. Refer the following shot from my Virtual Machine:
+
+
+    ![](b16a35c0.JPG)
+
+
+    You can see, after running `shutdown -h now`, the system is just halted, and press
+    any key can reboot the system. If you want to halt and power off the system, you
+    should execute `shutdown -p now`.
+
+
+    Reference:
+
+
+    [SHUTDOWN](https://www.freebsd.org/cgi/man.cgi?shutdown(8)).
+
+
+    # Reboot
+
+
+    ## Reboot
+
+
+    If you want to reboot `FreeBSD` immediately, you can use the following methods:
+
+
+    (1) Run `reboot` command directly:
+
+
+    ```
+
+    # reboot
+
+    ```
+
+
+    (2) Utilize `shutdown` command:
+
+
+    ```
+
+    # shutdown -r now
+
+    ```
+
+
+    `-r` option stands for `reboot`.
+
+
+    # Upgrade system
+
+
+    ## Upgrade system
+
+
+    You should make use of `freebsd-update` utility to upgrade your system non-periodically
+    to keep your system safe and not stale. E.g., after installing a fresh `10.3`
+    version:
+
+
+    ```
+
+    # freebsd-version -ku
+
+    10.3-RELEASE
+
+    10.3-RELEASE
+
+    ```
+
+
+    You should update the patches released by `FreeBSD` team:
+
+
+    ```
+
+    # freebsd-update fetch install
+
+    ```
+
+
+    When it is done, check the system version again:
+
+
+    ```
+
+    # freebsd-version -ku
+
+    10.3-RELEASE-p4
+
+    10.3-RELEASE-p5
+
+    ```
+
+
+    Yep! your system is refreshed now!
+
+
+    References:
+
+
+    [FreeBSD Man Pages](https://www.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8);
+
+
+    [What are the first commands I run after installing FreeBSD? Or How to patch FreeBSD?
+    Or How to install ports on FreeBSD?](http://www.rhyous.com/2009/11/03/what-are-the-first-commands-i-run-after-installing-freebsd/).
+
+
+    # Upgrade to new release
+
+
+    ## Upgrade to new release
+
+
+    This article takes upgrading system from `10.2-RELEASE` to `10.3-RELEASE` as an
+    example, but you must notice this tutorial may not apply to other versions. So
+    please read the related release notes.
+
+
+    (1) Check current version:
+
+
+    ```
+
+    # freebsd-version -ku
+
+    10.2-RELEASE
+
+    10.2-RELEASE
+
+    ```
+
+
+    (2) Run `freebsd-update upgrade` command to upgrade current system to a new version:
+
+
+    ```
+
+    # freebsd-update upgrade -r 10.3-RELEASE
+
+    ......
+
+    To install the downloaded upgrades, run `/usr/sbin/freebsd-update install`.
+
+    ```
+
+
+    (3) The last log of `freebsd-update upgrade -r 10.3-RELEASE` prompts executing
+    `freebsd-update install`:
+
+
+    ```
+
+    # freebsd-update install
+
+    src component not installed, skipped
+
+    Installing updates...
+
+    Kernel updates have been installed.  Please reboot and run
+
+    "/usr/sbin/freebsd-update install" again to finish installing updates.
+
+    ```
+
+
+    (4) Reboot the system and execute `freebsd-update install` again:
+
+
+    ```
+
+    # reboot
+
+    # freebsd-update install
+
+    src component not installed, skipped
+
+    Installing updates... done.
+
+    ```
+
+
+    (5) Now check the version:
+
+
+    ```
+
+    # freebsd-version -ku
+
+    10.3-RELEASE-p4
+
+    10.3-RELEASE-p5
+
+    ```
+
+
+    The system has been upgraded to `10.3-RELEASE` now.
+
+
+    # Install software
+
+
+    ## Install software
+
+    '
+  raw: "\n\n![](cover_image.jpg)\n\n# Table of Contents\n\n1.  ## Summary\n\n2.  [Introduction](#index.html)\
+    \ 1.1\n\n3.  [Get system version](#get-system-version.html) 1.2\n\n4.  [Enable\
+    \ root login over SSH](#enable-root-login-over-ssh.html) 1.3\n\n5.  [Configure\
+    \ proxy](#configure-proxy.html) 1.4\n\n6.  [Shutdown](#shutdown.html) 1.5\n\n\
+    7.  [Reboot](#reboot.html) 1.6\n\n8.  [Upgrade system](#upgrade-system.html) 1.7\n\
+    \n9.  [Upgrade to new release](#upgrade-to-new-release.html) 1.8\n\n10.  [Install\
+    \ software](#install-software.html) 1.9\n\n11.  [Search software](#search-software.html)\
+    \ 1.10\n\n12.  [Remove software](#remove-software.html) 1.11\n\n13.  [Install\
+    \ source code](#install-source-code.html) 1.12\n\n14.  [Build kernel](#build-kernel.html)\
+    \ 1.13\n\n15.  [Backup old kernel](#backup-old-kernel.html) 1.14\n\n16.  [CURRENT\
+    \ VS STABLE](#current-vs-stable.html) 1.15\n\n17.  [Update Ports Collection](#update-ports-collection.html)\
+    \ 1.16\n\n18.  [Accept default options during installing port](#accept-default-options-during-installing-port.html)\
+    \ 1.17\n\n19.  [Enable ls colour output](#enable-ls-colour-output.html) 1.18\n\
+    \n20.  [Clear Directory Structure](#clear-directory-structure.html) 1.19\n\n21.\
+    \  [Change the shell](#change-the-shell.html) 1.20\n\n22.  [Change PATH environment\
+    \ variable](#change-path-environment-variable.html) 1.21\n\n23.  [Colorize bash](#colorize-bash.html)\
+    \ 1.22\n\n24.  [Install bash-completion](#install-bash-completion.html) 1.23\n\
+    \n25.  [Rehash command](#rehash-command.html) 1.24\n\n26.  [Search backwards in\
+    \ csh](#search-backwards-in-csh.html) 1.25\n\n27.  [Trim a file in csh](#trim-a-file-in-csh.html)\
+    \ 1.26\n\n28.  [/var/run/dmesg.boot](#dmesg-boot.html) 1.27\n\n29.  [Display swap\
+    \ space utilization](#display-swap-space-utilization.html) 1.28\n\n30.  [Use \"\
+    ps\" to display process status](#use-ps-to-display-process-status.html) 1.29\n\
+    \n31.  [Use \"procstat\" to get process info](#use-procstat-to-get-process-info.html)\
+    \ 1.30\n\n32.  [Sockstat command](#sockstat-command.html) 1.31\n\n33.  [Use \"\
+    freecolor\" to display memory and swap usage](#Use-freecolor-to-display-memory-and-swap-usage.html)\
+    \ 1.32\n\n34.  [Notices of using Subversion](#notice-of-using-subversion.html)\
+    \ 1.33\n\n35.  [Print PCI devices info](#print-pci-devices-info.html) 1.34\n\n\
+    36.  [Mount procfs file system](#mount-procfs-file-system.html) 1.35\n\n37.  [Kldstat\
+    \ command](#kldstat-command.html) 1.36\n\n38.  [Load and unload files into kernel](#load-and-unload-files-into-kernel.html)\
+    \ 1.37\n\n# Introduction\n\n# FreeBSD-101-Hacks\n\nA collection of FreeBSD hacks.\n\
+    \n# Project Homepage\n\n[https://github.com/NanXiao/FreeBSD-101-Hacks](https://github.com/NanXiao/FreeBSD-101-Hacks)\n\
+    \n# Get system version\n\n## Get system version\n\nThere are `2` versions of `FreeBSD`:\
+    \ kernel and userland. Use \"`freebsd-version -ku`\" can output both versions:\n\
+    \n```\n# freebsd-version -uk\n10.3-RELEASE-p4\n10.3-RELEASE-p5\n```\n\nThe first\
+    \ one is kernel version info. You can see the versions of both kernel and userland\
+    \ is `10.3`, but kernel patch level is `p4`, while userland is `p5`. That's because\
+    \ in some cases, only the userland requires a patch whilst kernel not, so kernel\
+    \ patch level doesn't change. If there is no option, \"`freebsd-version`\" prints\
+    \ userland version only:\n\n```\n# freebsd-version\n10.3-RELEASE-p5\n```\n\n\"\
+    `uname -r`\" command also outputs the kernel version:\n\n```\n# uname -r\n10.3-RELEASE-p4\n\
+    ```\n\nReference:\n\n[Why the outputs of “freebsd-version” and “freebsd-version\
+    \ -k” are different?](http://stackoverflow.com/questions/37800913/why-the-outputs-of-freebsd-version-and-freebsd-version-k-are-different).\n\
+    \n# Enable root login over SSH\n\n# Enable root login over SSH\n\n* * *\n\nBy\
+    \ default, `FreeBSD` box doesn't allow `root` user login over `SSH`, to enable\
+    \ it, you need to modify `SSH` daemon configuration file (`/etc/ssh/sshd_config`).\n\
+    \nChange the following line:\n\n```\n#PermitRootLogin no\n```\n\nto:\n\n```\n\
+    PermitRootLogin yes\n```\n\nThen restart `SSH` daemon:\n\n```\n# /etc/rc.d/sshd\
+    \ restart\n```\n\nReference:\n\n[How to enable root login over SSH on FreeBSD\
+    \ 8.2](http://blog.bobbyallen.me/2011/07/22/how-to-enable-root-login-over-ssh-on-freebsd-8-2/).\n\
+    \n# Configure proxy\n\n# Configure proxy\n\n* * *\n\nIf your `FreeBSD` box works\
+    \ behind a proxy, you may need to configure proxy to make it access network.\n\
+    \nFor `csh` or `tcsh`, set proxy in `/etc/csh.cshrc`:\n\n```\nsetenv HTTP_PROXY\
+    \ http://web-proxy.xxxxxx.com:8080\nsetenv HTTPS_PROXY https://web-proxy.xxxxxx.com:8080\n\
+    ```\n\nFor `sh`, set proxy in `/etc/profile`:\n\n```\nexport HTTP_PROXY http://web-proxy.xxxxxx.com:8080\n\
+    export HTTPS_PROXY https://web-proxy.xxxxxx.com:8080\n```\n\nReference:\n\n[Using\
+    \ FreeBSD inside a controlled network – A required HTTP Proxy and No FTP](http://www.rhyous.com/2012/04/13/using-freebsd-inside-a-controlled-network-a-required-http-proxy-and-no-ftp/).\n\
+    \n# Shutdown\n\n## Shutdown\n\nCompared to some `GNU/Linux` flavors, \"`shutdown\
+    \ -h now`\" command just halts the `FreeBSD`, not turns off the power. Refer the\
+    \ following screen shot from my Virtual Machine:\n\n![](b16a35c0.JPG)\n\nYou can\
+    \ see, after running \"`shutdown -h now`\", the system is just halted, and press\
+    \ any key can reboot the system immediately.\n\nIf you want to halt and power\
+    \ off the system, you should execute \"`shutdown -p now`\".\n\nReference:\n\n\
+    [SHUTDOWN](https://www.freebsd.org/cgi/man.cgi?shutdown(8)).\n\n# Reboot\n\n##\
+    \ Reboot\n\nIf you want to reboot `FreeBSD` immediately, you can use the following\
+    \ methods:\n\n(1) Run \"`reboot`\" command directly:\n\n```\n# reboot\n```\n\n\
+    (2) Utilize \"`shutdown`\" command:\n\n```\n# shutdown -r now\n```\n\n\"`-r`\"\
+    \ option stands for `reboot`.\n\n# Upgrade system\n\n## Upgrade system\n\nYou\
+    \ should make use of \"`freebsd-update`\" utility to upgrade your system non-periodically\
+    \ to keep your system safe and not stale. E.g., after installing a fresh `10.3`\
+    \ version:\n\n```\n# freebsd-version -ku\n10.3-RELEASE\n10.3-RELEASE \n```\n\n\
+    You should update the patches released by `FreeBSD` team:\n\n```\n# freebsd-update\
+    \ fetch install\n```\n\nWhen it is done, check the system version again:\n\n```\n\
+    # freebsd-version -ku\n10.3-RELEASE-p4\n10.3-RELEASE-p5\n```\n\nYeap! your system\
+    \ is refreshed now!\n\nReferences:\n\n[FreeBSD Man Pages](https://www.freebsd.org/cgi/man.cgi?query=freebsd-update&sektion=8);\n\
+    \n[What are the first commands I run after installing FreeBSD? Or How to patch\
+    \ FreeBSD? Or How to install ports on FreeBSD?](http://www.rhyous.com/2009/11/03/what-are-the-first-commands-i-run-after-installing-freebsd/).\n\
+    \n# Upgrade to new release\n\n## Upgrade to new release\n\nThis article takes\
+    \ upgrading system from `10.2-RELEASE` to `10.3-RELEASE` as an example, but you\
+    \ must notice this tutorial may **not** apply to other versions. So please read\
+    \ the related release notes.\n\n(1) Check current version:\n\n```\n# freebsd-version\
+    \ -ku\n10.2-RELEASE\n10.2-RELEASE\n```\n\n(2) Run \"`freebsd-update upgrade`\"\
+    \ command to upgrade current system to a new version:\n\n```\n# freebsd-update\
+    \ upgrade -r 10.3-RELEASE\n......\nTo install the downloaded upgrades, run \"\
+    /usr/sbin/freebsd-update install\".\n```\n\n(3) The last log of \"`freebsd-update\
+    \ upgrade -r 10.3-RELEASE`\" prompts executing \"`freebsd-update install`\":\n\
+    \n```\n# freebsd-update install\nsrc component not installed, skipped\nInstalling\
+    \ updates...\nKernel updates have been installed.  Please reboot and run\n\"/usr/sbin/freebsd-update\
+    \ install\" again to finish installing updates.\n```\n\n(4) Reboot the system\
+    \ and execute \"`freebsd-update install`\" again:\n\n```\n# reboot\n# freebsd-update\
+    \ install\nsrc component not installed, skipped\nInstalling updates... done.\n\
+    ```\n\n(5) Now check the version:\n\n```\n# freebsd-version -ku\n10.3-RELEASE-p4\n\
+    10.3-RELEASE-p5\n```\n\nThe system has been upgraded to `10.3-RELEASE` now.\n\n\
+    Reference:\n\n[freebsd-update](https://www.freebsd.org/cgi/man.cgi?freebsd-update);\n\
+    \n[FreeBSD 10.3-RELEASE Installation Instructions](https://www.freebsd.org/releases/10.3R/installation.html).\n\
+    \n# Install software\n\n## Install software"
+  toc: []
+  trans: '
+
+
+    ![](img/cover_image.jpg)
+
+
+    # 目录
+
+
+    1. 总结
+
+    2. 介绍 1.1
+
+    3. 获取系统版本 1.2
+
+    4. 通过 SSH 启用 root 登录 1.3
+
+    5. 配置代理 1.4
+
+    6. 关机 1.5
+
+    7. 重启 1.6
+
+    8. 升级系统 1.7
+
+    9. 升级到新版本 1.8
+
+    10. 安装软件 1.9
+
+    11. 搜索软件 1.10
+
+    12. 移除软件 1.11
+
+    13. 安装源码 1.12
+
+    14. 编译内核 1.13
+
+    15. 备份旧内核 1.14
+
+    16. 当前版本与稳定版 1.15
+
+    17. 更新 Ports 集合 1.16
+
+    18. 安装 port 期间接受默认选项 1.17
+
+    19. 启用 ls 颜色输出 1.18
+
+    20. 清理目录结构 1.19
+
+    21. 更改 shell 1.20
+
+    22. 更改 PATH 环境变量 1.21
+
+    23. bash 彩色化 1.22
+
+    24. 安装 bash-completion 1.23
+
+    25. 执行 rehash 命令 1.24
+
+    26. 在 csh 中反向搜索 1.25
+
+    27. 在 csh 中修剪文件 1.26
+
+    28. /var/run/dmesg.boot 1.27
+
+    29. 显示交换空间利用率 1.28
+
+    30. 使用 "ps" 显示进程状态 1.29
+
+    31. 使用 "procstat" 获取进程信息 1.30
+
+    32. Sockstat 命令 1.31
+
+    33. 使用 "freecolor" 显示内存和交换空间情况 1.32
+
+    34. 使用 Subversion 的通知 1.33
+
+    35. 打印 PCI 设备信息 1.34
+
+    36. 挂载 procfs 文件系统 1.35
+
+    37. Kldstat 命令 1.36
+
+    38. 将文件加载并卸载到内核 1.37
+
+
+    # 介绍
+
+
+    # FreeBSD-101-技巧
+
+
+    一个 FreeBSD 技巧集。
+
+
+    # 项目主页
+
+
+    [`github.com/NanXiao/FreeBSD-101-Hacks`](https://github.com/NanXiao/FreeBSD-101-Hacks)
+
+
+    # 获取系统版本
+
+
+    ## 获取系统版本
+
+
+    `FreeBSD` 有 `2` 个版本：内核（kernel）和用户态空间（userland）。使用 `freebsd-version -ku` 可以同时输出这两个版本：
+
+
+    ```
+
+    # freebsd-version -uk
+
+    10.3-RELEASE-p4
+
+    10.3-RELEASE-p5
+
+    ```
+
+
+    第一个是内核版本信息。你可以看到内核和用户态的版本都是 `10.3`，但内核补丁级别是 `p4`，而用户态是 `p5`。这是因为在某些情况下，只有用户态需要补丁而内核不需要，因此内核补丁级别不会改变。如果没有使用该选项，`freebsd-version`
+    仅打印用户态版本：
+
+
+    ```
+
+    # freebsd-version
+
+    10.3-RELEASE-p5
+
+    ```
+
+
+    `uname -r` 命令也会输出内核版本：
+
+
+    ```
+
+    # uname -r
+
+    10.3-RELEASE-p4
+
+    ```
+
+
+    参考自：
+
+
+    [为什么“freebsd-version”和“freebsd-version -k”的输出不同？](http://stackoverflow.com/questions/3780013/why-the-outputs-of-freebsd-version-and-freebsd-version-k-are-different)。
+
+
+    # 通过 SSH 启用 root 登录
+
+
+    ## 通过 SSH 启用 root 登录
+
+
+    默认情况下，`FreeBSD` 不允许 `root` 用户通过 `SSH` 登录，要启用它，你需要修改 `SSH` 守护进程文件（`/etc/sshd_config`）：
+
+
+    找到以下项：
+
+
+    ```
+
+    PermitRootLogin no
+
+    ```
+
+
+    修改为：
+
+
+    ```
+
+    PermitRootLogin yes
+
+    ```
+
+
+    重启服务：
+
+
+    ```bash
+
+    service sshd restart
+
+    ```
+
+
+    参考自：
+
+
+    [在 FreeBSD 上启用 root 登录](https://allen.me/2011/07/22/how-to-enable-root-login-free)
+
+
+    # 配置代理
+
+
+    ## 配置代理
+
+
+    如果 `FreeBSD` 位于代理之后，可能需要配置代理。
+
+
+    对于 `csh` 或 `tcsh`，在 `/etc/cshrc` 中设置：
+
+
+    ```csh
+
+    setenv http_proxy http://proxy:port
+
+    ```
+
+
+    对于 `sh`，在 `/etc/profile` 中设置：
+
+
+    ```sh
+
+    export http_proxy=http://proxy:port
+
+    ```
+
+
+    参考自：
+
+
+    [在 FreeBSD 中使用 Subversion](https://www.rhyous.com/2012/04/13/using-subversion-freebs)
+
+
+    # 关机
+
+
+    ## 关机
+
+
+    与某些 `Linux` 发行版相比，`shutdown` 命令现在会停止 `FreeBSD`：
+
+
+    ```bash
+
+    # shutdown -h now
+
+    ```
+
+
+    参考自：
+
+
+    [FreeBSD 手页](https://www.freebsd.org/cgi/man.cgi)
+
+
+    # 重启
+
+
+    ## 重启
+
+
+    如果你想立即重启 `FreeBSD`，可以使用以下方法：
+
+
+    (1) 直接运行 `reboot` 命令：
+
+
+    ```bash
+
+    # reboot
+
+    ```
+
+
+    (2) 使用 `shutdown` 命令：
+
+
+    ```bash
+
+    # shutdown -r
+
+    ```
+
+
+    `-r` 代表重启。
+
+
+    # 升级系统
+
+
+    ## 升级系统
+
+
+    你应该定期使用 `freebsd-update` 工具来保持系统安全不不过时。例如，更新 `10.3` 版本：
+
+
+    ```bash
+
+    # freebsd-update -r 10.3
+
+    ```
+
+
+    安装补丁后，检查系统版本：
+
+
+    ```bash
+
+    # freebsd-version -ku
+
+    10.3-RELEASE-p4
+
+    10.3-RELEASE-p5
+
+    ```
+
+
+    你应该更新 `FreeBSD` 团队发布的补丁：
+
+
+    ```bash
+
+    # freebsd-update fetch
+
+    ```
+
+
+    安装完成后，再次检查系统：
+
+
+    ```bash
+
+    # freebsd-version -ku
+
+    10.3-RELEASE-p4
+
+    10.3-RELEASE-p5
+
+    ```
+
+
+    好了！你的系统已刷新！
+
+
+    参考自：
+
+
+    [FreeBSD)
+
+
+    # 升级到新版本
+
+
+    ## 升级到新版本
+
+
+    本文以从 `10.2-RELEASE` 升级到 `10.3-RELEASE` 为例，但你必须注意此教程可能不适用于其他版本。因此请阅读相关的发行说明。
+
+
+    (1) 检查当前版本：
+
+
+    ```bash
+
+    # freebsd-version -ku
+
+    10.2-RELEASE
+
+    10.2-RELEASE
+
+    ```
+
+
+    (2) 运行 `freebsd-update upgrade` 命令将系统升级到新版本：
+
+
+    ```bash
+
+    # freebsd-update upgrade -r 10.3-RELEASE
+
+    ......
+
+    要安装下载的升级，请运行 "/usr/sbin/freebsd-update install"。
+
+    ```
+
+
+    (3) `freebsd-update upgrade -r 10.3-RELEASE` 的最后日志提示执行 `freebsd-update install`：
+
+
+    ```
+
+    # freebsd-update install
+
+    src component not installed, skipped
+
+    Installing updates...
+
+    内核更新已安装。请重启并再次运行
+
+    "/usr/sbin/freebsd-update install" 以完成更新安装。
+
+    ```
+
+
+    (4) 重启系统并再次执行 `freebsd-update install`：
+
+
+    ```bash
+
+    # reboot
+
+    # freebsd-update install
+
+    src component not installed, skipped
+
+    Installing updates... done.
+
+    ```
+
+
+    (5) 现在检查版本：
+
+
+    ```bash
+
+    # freebsd-version -ku
+
+    10.3-RELEASE-p4
+
+    10.3-RELEASE-p5
+
+    ```
+
+
+    你的系统现在已升级到 `10.3-RELEASE`。
+
+
+    # 安装软件
+
+
+    ## 安装软件
+
+
+    '
+- fmt: "\nIf you don't have any specific requirements for needed software, you can\
+    \ use `pkg` utility to install the pre-built package on `FreeBSD`, and it looks\
+    \ like using `yum` or `apt-get` on `GNU/Linux` boxes. E.g., install `python` on\
+    \ your host:\n\n```\n# pkg install python \n......\n```\n\nNote that some standard\
+    \ Python modules are provided as separate ports\nas they require additional dependencies.\
+    \ They are available as:\n\nbsddb           databases/py-bsddb\ngdbm         \
+    \   databases/py-gdbm\nsqlite3         databases/py-sqlite3\ntkinter         x11-toolkits/py-tkinter\n\
+    \nNow you can run `python` now:\n\n```\n# python\nPython 2.7.11 (default, Jun\
+    \  5 2016, 01:23:11)\n[GCC 4.2.1 Compatible FreeBSD Clang 3.4.1 (tags/RELEASE_34/dot1-final\
+    \ 208032)] on freebsd10\nType \"help\", \"copyright\", \"credits\" or \"license\"\
+    \ for more information.\n>>>\n```\n\nBut the end logs of installing `python` prompts\
+    \ we still need to install other `4` packages: `py-bsddb`, `py-gdbm`, `py-sqlite3`\
+    \ and `py-tkinter`, otherwise `import sqlite3` will complain:\n\n```\n>>> import\
+    \ sqlite3\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in\
+    \ <module>\n  File \"/usr/local/lib/python2.7/sqlite3/__init__.py\", line 24,\
+    \ in <module>\n    from dbapi2 import *\n  File \"/usr/local/lib/python2.7/sqlite3/dbapi2.py\"\
+    , line 28, in <module>\n    from _sqlite3 import *\nImportError: No module named\
+    \ _sqlite3\n```\n\nThis introduces another installation method: using ports. This\
+    \ method will download, compile and install from source code, and the benefit\
+    \ of this approach is you can do some customizations if you want. You can find\
+    \ all ports under `/usr/ports` directory. Now you begin to install `py-bsddb`\
+    \ (follow this method to set up `py-gdbm`, `py-sqlite3` and `py-tkinter`):\n\n\
+    ```\n# cd /usr/ports/databases/py-bsddb\n# make install clean\n```\n\nAfter all\
+    \ are installed, we can use `sqlite` in `python` now:\n\n```\n# python\nPython\
+    \ 2.7.11 (default, Jun  5 2016, 01:23:11)\n[GCC 4.2.1 Compatible FreeBSD Clang\
+    \ 3.4.1 (tags/RELEASE_34/dot1-final 208032)] on freebsd10\nType \"help\", \"copyright\"\
+    , \"credits\" or \"license\" for more information.\n>>> import sqlite3\n```\n\n\
+    The other method is installing from `DVD`:\n\n(1) Put `DVD` in the drive;\n\n\
+    (2) Mount `DVD`:\n\n```\nmkdir -p /dist\nmount -t cd9660 /dev/cd0 /dist\n```\n\
+    \n(3) Install the package (E.g., `xorg`):\n\n```\nenv REPOS_DIR=/dist/packages/repos\
+    \ pkg install xorg\n```\n\nReferences:\n\n- [Packages and Ports: Adding Software\
+    \ in FreeBSD](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/software.html)\n\
+    - [Get started with FreeBSD: A brief intro for Linux users](http://www.infoworld.com/article/2858288/unix/intro-to-freebsd-for-linux-users.html)\n\
+    - [FreeBSD 10 install packages from DVD](https://forums.freebsd.org/threads/44430/#post-300633)\n\
+    \n# Search software\n\nIf you want to search a specified application, you can\
+    \ use `pkg search` command. For example:\n\n```\n# pkg search lsof\nlsof-4.90.b,8\
+    \                  Lists information about open files (similar to fstat(1))\n\
+    p5-Unix-Lsof-0.0.5_2           Unix::Lsof -- a wrapper to the Unix lsof utility\n\
+    ```\n\nIf you want to know the software's path in the ports tree, you can use\
+    \ `-o` option:\n\n```\n# pkg search -o lsof\nsysutils/lsof                  Lists\
+    \ information about open files (similar to fstat(1))\nsysutils/p5-Unix-Lsof  \
+    \        Unix::Lsof -- a wrapper to the Unix lsof utility\n```\n\nIn case the\
+    \ Ports Collection is already installed, you can employ `whereis` command:\n\n\
+    ```\n# whereis lsof\nlsof: /usr/local/sbin/lsof /usr/local/man/man8/lsof.8.gz\
+    \ /usr/ports/sysutils/lsof\n```\n\nAnother tricky method is using `echo` command:\n\
+    \n```\n# echo /usr/ports/*/*lsof*\n/usr/ports/distfiles/lsof_4.90B.freebsd.tar.bz2\
+    \ /usr/ports/sysutils/lsof\n```\n\nReference:\n\n- [Finding Software](https://www.freebsd.org/doc/handbook/ports-finding.html)\n\
+    \n# Remove software\n\nAfter installing application, you can use `pkg delete`\
+    \ command to remove it:\n\n```\n# pkg delete lsof\nChecking integrity... done\
+    \ (0 conflicting)\nDeinstallation has been requested for the following packages\
+    \ (of 0 packages in universe):\n\nInstalled packages to be REMVED:\n        lsof-1.0\
+    \ \n\nProceed with deinstalling packages? [y/N]: y\n[1/1] Deinstalling lsof-1.0\n\
+    ```\n\nYou can also enter the port directory, and execute `make deinstall` instruction:\n\
+    \n```\n# pwd\n/usr/ports/sysutils/lsof\n# make deinstall\n===> Deinstalling for\
+    \ lsof\n===>   Deinstalling lsof-1.0\nUpdating database digests: 100%\nChecking\
+    \ integrity... done (0 conflicting)\nDeinstallation has been requested for the\
+    \ following packages (of 0 packages in universe):\n\nInstalled packages to be\
+    \ REMVED:\n        lsof-1.0\n[1/1] Deleting files for lsof-1.0\n100%\n```\n\n\
+    Reference:\n\n- [Using Ports Collection](https://www.freebsd.org/doc/handbook/ports.html)\n\
+    \n# Install source code\n\nDownload `FreeBSD` source code, architecture, version:\n\
+    \n```\nfetch ftp://ftp.freebsd.org/pub/releases/$(uname -s)/$(uname -m)/$(uname\
+    \ -r | cut -d'-' -f1,2)/src.txz\ntar -C /xvzf src.txz\n```\n\nMake sure `src`\
+    \ is included in `Components` line in `/etc/freebsd-update.conf`, so when using\
+    \ `freebsd-update` to update system, also the source code is refreshed.\n\n```\n\
+    # cat /etc/freebsd-update.conf\n......\n# Components of base system which should\
+    \ be kept updated.\nsrc kernel\n```\n\nReferences:\n\n- [A question about downloading\
+    \ FreeBSD kernel](https://lists.freebsd.org/pipermail/freebsd-questions/2016-July/272497.html)\n\
+    - [Install FreeBSD kernel after installed freebsd](https://www.netroby.com/view/3595)\n\
+    \n# Build kernel\n\nIf you want to build a custom kernel yourself, you need to\
+    \ install the source code firstly. Then enter the configuration directory of your\
+    \ machine:\n\n```\n# cd /usr/src/sys/$(uname -m)/conf\n```\n\nCopy a new kernel\
+    \ configuration file:\n\n```\n# cp GENERIC NAN_FIRST_BUILD\n```\n\nYou can modify\
+    \ the new configuration file `NAN_FIRST_BUILD` according to your needs.\n\nBuild\
+    \ the kernel:\n\n```\n# cd /usr/src\n# make buildkernel KERNCONF=\"NAN_FIRST_BUILD\"\
+    \n```\n\nOnce it is finished, install the fresh kernel binary and reboot:\n\n\
+    ```\n# make installkernel KERNCONF=\"NAN_FIRST_BUILD\"\n# reboot\n```\n\nCheck\
+    \ the kernel version, you will find now the OS is harnessing your newly built\
+    \ kernel:\n\n```\n# uname -a\nFreeBSD FreeBSD 10.3-RELEASE-p5 FreeBSD 10.3-RELEASE-p5\
+    \ #0: Tue Jul 19 17:52:57 CST 2016     root@FreeBSD:/usr/obj/usr/src/sys/NAN_FIRST_BUILD\
+    \  amd64\n```\n\nReference:\n\n- [How to build a custom kernel in FreeBSD](https://www.youtube.com/watch?v=KVNxaKu1F0)\n\
+    \n# Backup old kernel\n\nEvery time, when a new kernel is installed, the last\
+    \ installed kernel will be backed up in a directory who called `kernel.old`. So\
+    \ it is important to remember to save a copy of usable kernel in case the newly-built\
+    \ kernel can't work. For example:\n\n```\n# mv /boot/kernel.old /boot/kernel.good\
+    \    \n# mv /boot/kernel /boot/kernel.bad\n# mv /boot/kernel.good /boot/kernel\n\
+    ```\n\nDuring boot, you can press `5` to select which kernel to run:\n\n![](a07bda0c.JPG)\
+    \ ![](633d263d.JPG)\n\nReferences:\n\n- [FreeBSD: reverting to previous kernel](http://www.linuxquestions.org/questions/bsd-17/freebsd-reverting-to-previous-kernel-4175429007/)\n\
+    - [If Something Goes Wrong](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/kernelconfig-trouble.html)\n\
+    \n# CURRENT VS STABLE\n\n`FreeBSD` has two development branches: `FreeBSD-CURRENT`\
+    \ and `FreeBSD-STABLE`.\n\n`FreeBSD-CURRENT` is the active development branch\
+    \ of `FreeBSD`, and all new development work, such as adding new feature, will\
+    \ occur in `FreeBSD-CURRENT` branch firstly.\n"
+  raw: "If you don't have any specific requirements for needed software, you can use\
+    \ `pkg` utility to install the pre-built package on `FreeBSD`, and it looks like\
+    \ using `yum` or `apt-get` on `GNU/Linux` boxes. E.g., install `python` on your\
+    \ host:\n\n```\n# pkg install python \n......\n===========================================================================\n\
+    \nNote that some standard Python modules are provided as separate ports\nas they\
+    \ require additional dependencies. They are available as:\n\nbsddb           databases/py-bsddb\n\
+    gdbm            databases/py-gdbm\nsqlite3         databases/py-sqlite3\ntkinter\
+    \         x11-toolkits/py-tkinter\n\n===========================================================================\n\
+    ```\n\nNow you can run `python` now:\n\n```\n# python\nPython 2.7.11 (default,\
+    \ Jun  5 2016, 01:23:11)\n[GCC 4.2.1 Compatible FreeBSD Clang 3.4.1 (tags/RELEASE_34/dot1-final\
+    \ 208032)] on freebsd10\nType \"help\", \"copyright\", \"credits\" or \"license\"\
+    \ for more information.\n>>>\n```\n\nBut the end logs of installing `python` prompts\
+    \ we still need to install other `4` packages: `py-bsddb`, `py-gdbm`, `py-sqlite3`\
+    \ and `py-tkinter`, otherwise \"`import sqlite3`\" will complain:\n\n```\n>>>\
+    \ import sqlite3\nTraceback (most recent call last):\n  File \"<stdin>\", line\
+    \ 1, in <module>\n  File \"/usr/local/lib/python2.7/sqlite3/__init__.py\", line\
+    \ 24, in <module>\n    from dbapi2 import *\n  File \"/usr/local/lib/python2.7/sqlite3/dbapi2.py\"\
+    , line 28, in <module>\n    from _sqlite3 import *\nImportError: No module named\
+    \ _sqlite3\n```\n\nThis introduces another installation method: using ports. This\
+    \ method will download, compile and install from source code, and the benefit\
+    \ of this approach is you can do some customizations if you want. You can find\
+    \ all ports under `/usr/ports` directory. Now you begin to install `py-bsddb`\
+    \ (follow this method to set up `py-gdbm`, `py-sqlite3` and `py-tkinter`):\n\n\
+    ```\n# cd /usr/ports/databases/py-bsddb\n# make install clean\n```\n\nAfter all\
+    \ are installed, we can use `sqlite` in `python` now:\n\n```\n# python\nPython\
+    \ 2.7.11 (default, Jun  5 2016, 01:23:11)\n[GCC 4.2.1 Compatible FreeBSD Clang\
+    \ 3.4.1 (tags/RELEASE_34/dot1-final 208032)] on freebsd10\nType \"help\", \"copyright\"\
+    , \"credits\" or \"license\" for more information.\n>>> import sqlite3\n```\n\n\
+    The other method is installing from `DVD`:\n\n(1) Put `DVD` in the drive;\n\n\
+    (2) Mount `DVD`:\n\n```\nmkdir -p /dist\nmount -t cd9660 /dev/cd0 /dist\n```\n\
+    \n(3) Install the package (E.g., `xorg`):\n\n```\nenv REPOS_DIR=/dist/packages/repos\
+    \ pkg install xorg\n```\n\nReferences:\n\n[Packages and Ports: Adding Software\
+    \ in FreeBSD](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/software.html);\n\
+    \n[Get started with FreeBSD: A brief intro for Linux users](http://www.infoworld.com/article/2858288/unix/intro-to-freebsd-for-linux-users.html);\n\
+    \n[FreeBSD 10 install packages from DVD](https://forums.freebsd.org/threads/44430/#post-300633).\n\
+    \n# Search software\n\n## Search software\n\nIf you want to search a specified\
+    \ application, you can use \"`pkg search`\" command. For example:\n\n```\n# pkg\
+    \ search lsof\nlsof-4.90.b,8                  Lists information about open files\
+    \ (similar to fstat(1))\np5-Unix-Lsof-0.0.5_2           Unix::Lsof -- a wrapper\
+    \ to the Unix lsof utility\n```\n\nIf you want to know the software's path in\
+    \ the ports tree, you can use `-o` option:\n\n```\n# pkg search -o lsof\nsysutils/lsof\
+    \                  Lists information about open files (similar to fstat(1))\n\
+    sysutils/p5-Unix-Lsof          Unix::Lsof -- a wrapper to the Unix lsof utility\n\
+    ```\n\nIn case the Ports Collection is already installed, you can employ `whereis`\
+    \ command:\n\n```\n# whereis lsof\nlsof: /usr/local/sbin/lsof /usr/local/man/man8/lsof.8.gz\
+    \ /usr/ports/sysutils/lsof\n```\n\nAnother tricky method is using \"`echo`\" command:\n\
+    \n```\n# echo /usr/ports/*/*lsof*\n/usr/ports/distfiles/lsof_4.90B.freebsd.tar.bz2\
+    \ /usr/ports/sysutils/lsof\n```\n\nReference:\n\n[Finding Software](https://www.freebsd.org/doc/handbook/ports-finding-applications.html).\n\
+    \n# Remove software\n\n## Remove software\n\nAfter installing application, you\
+    \ can use \"`pkg delete`\" command to remove it:\n\n```\n# pkg delete lsof\nChecking\
+    \ integrity... done (0 conflicting)\nDeinstallation has been requested for the\
+    \ following 1 packages (of 0 packages in the universe):\n\nInstalled packages\
+    \ to be REMOVED:\n        lsof-4.90.b,8\n\nProceed with deinstalling packages?\
+    \ [y/N]: y\n[1/1] Deinstalling lsof-4.90.b,8...\n[1/1] Deleting files for lsof-4.90.b,8:\
+    \ 100%\n```\n\nYou can also enter the port directory, and execute \"`make deinstall`\"\
+    \ instruction:\n\n```\n# pwd\n/usr/ports/sysutils/lsof\n# make deinstall\n===>\
+    \  Deinstalling for lsof\n===>   Deinstalling lsof-4.90.b,8\nUpdating database\
+    \ digests format: 100%\nChecking integrity... done (0 conflicting)\nDeinstallation\
+    \ has been requested for the following 1 packages (of 0 packages in the universe):\n\
+    \nInstalled packages to be REMOVED:\n        lsof-4.90.b,8\n[1/1] Deinstalling\
+    \ lsof-4.90.b,8...\n[1/1] Deleting files for lsof-4.90.b,8: 100%\n```\n\nReference:\n\
+    \n[Using the Ports Collection](https://www.freebsd.org/doc/handbook/ports-using.html).\n\
+    \n# Install source code\n\n## Install source code\n\nDownload `FreeBSD` source\
+    \ code according architecture, version:\n\n```\nfetch ftp://ftp.freebsd.org/pub/`uname\
+    \ -s`/releases/`uname -m`/`uname -r | cut -d'-' -f1,2`/src.txz\n```\n\nUncompress\
+    \ the source package:\n\n```\ntar -C / -xvzf src.txz\n```\n\nMake sure the `src`\
+    \ is included in `Components` line in `/etc/freebsd-update.conf`, so when using\
+    \ `freebsd-update` to update system, also the source code is refreshed.\n\n```\n\
+    # cat /etc/freebsd-update.conf\n......\n# Components of the base system which\
+    \ should be kept updated.\nComponents src world kernel\n......\n```\n\nReferences:\n\
+    \n[A question about downloading FreeBSD kernel code](https://lists.freebsd.org/pipermail/freebsd-questions/2016-July/272497.html);\n\
+    \n[Install FreeBSD kernel source after installed freebsd](https://www.netroby.com/view/3595).\n\
+    \n# Build kernel\n\n## Build kernel\n\nIf you want to build a custom kernel yourself,\
+    \ you need to install the source code firstly (you can take [post](#install-source-code.html)\
+    \ as a reference). Then enter the configuration directory of your machine:\n\n\
+    ```\n# cd /usr/src/sys/`uname -m`/conf\n```\n\nCopy a new kernel configuration\
+    \ file:\n\n```\n# cp GENERIC NAN_FIRST_BUILD\n```\n\nYou can modify the new configuration\
+    \ file (`NAN_FIRST_BUILD`) according to your needs.\n\nBuild the kernel:\n\n```\n\
+    # cd /usr/src\n# make buildkernel KERNCONF=\"NAN_FIRST_BUILD\"\n```\n\nOnce it\
+    \ is finished, install the fresh kernel binary and reboot:\n\n```\n# make installkernel\
+    \ KERNCONF=\"NAN_FIRST_BUILD\"\n# reboot\n```\n\nCheck the kernel version, you\
+    \ will find now the OS is harnessing your newly built kernel now:\n\n```\n# uname\
+    \ -a\nFreeBSD FreeBSD 10.3-RELEASE-p5 FreeBSD 10.3-RELEASE-p5 #0: Tue Jul 19 17:52:57\
+    \ CST 2016     root@FreeBSD:/usr/obj/usr/src/sys/NAN_FIRST_BUILD  amd64\n```\n\
+    \nReference:\n\n[How to build a custom kernel in FreeBSD](https://www.youtube.com/watch?v=KVNxaKu11F0).\n\
+    \n# Backup old kernel\n\n## Backup old kernel\n\nEvery time, when a new kernel\
+    \ is installed, the last installed kernel will be backed up in a directory who\
+    \ is called `kernel.old`. So it is important to remember to save a copy of usable\
+    \ kernel in case the newly-built kernel can't work. For example:\n\n```\n# mv\
+    \ /boot/kernel.old /boot/kernel.good    \n# mv /boot/kernel /boot/kernel.bad\n\
+    # mv /boot/kernel.good /boot/kernel\n```\n\nDuring boot, you can press `5` to\
+    \ select which kernel to run:\n\n![](a07bda0c.JPG) ![](633d263d.JPG)\n\nReferences:\n\
+    \n[FreeBSD: reverting to previous kernel](http://www.linuxquestions.org/questions/*bsd-17/freebsd-reverting-to-previous-kernel-4175429007/);\n\
+    \n[If Something Goes Wrong](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/kernelconfig-trouble.html).\n\
+    \n# CURRENT VS STABLE\n\n## CURRENT VS STABLE\n\n`FreeBSD` has two development\
+    \ branches: `FreeBSD-CURRENT` and `FreeBSD-STABLE`.\n\n`FreeBSD-CURRENT` is the\
+    \ active development branch of `FreeBSD`, and all new development work, such as\
+    \ adding new feature, will occur in `FreeBSD-CURRENT` branch firstly."
+  toc: []
+  trans: "\n\n如果你对需要的软件没有特定要求，可以使用 `pkg` 工具在 `FreeBSD` 上安装预编译的包，这看起来就像在 `GNU/Linux`\
+    \ 离盒上使用 `yum` 或 `apt-get` 一样。例如，在你的主机上安装 `python`：\n\n```\n# pkg install python\
+    \ \n......\n```\n\n请注意，某些标准 Python 模块作为独立的 ports 提供的，因为它们需要额外的依赖项。它们可以通过以下方式获取：\n\
+    \nbsddb           databases/py-bsddb\ngdbm            databases/py-gdbm\nsqlite3\
+    \         databases/py-sqlite3\ntkinter         x11-toolkits/py-tkinter\n\n现在你可以运行\
+    \ `python` 了：\n\n```\n# python\nPython 2.7.11 (default, Jun  5 2016, 01:23:11)\n\
+    [GCC 4.2.1 Compatible FreeBSD Clang 3.4.1 (tags/RELEASE_34/dot1-final 208032)]\
+    \ on freebsd10\nType \"help\", \"copyright\", \"credits\" or \"license\" for more\
+    \ information.\n>>>\n```\n\n但安装 `python` 最后的日志提示我们还需要安装其他 `4` 个包：`py-bsddb`、`py-gdbm`、`py-sqlite3`\
+    \ 和 `py-tkinter`，否则 `import sqlite3` 将报错：\n\n```\n>>> import sqlite3\nTraceback\
+    \ (most recent call last):\n  File \"<stdin>\", line 1, in <module>\n  File \"\
+    /usr/local/lib/python2.7/sqlite3/__init__.py\", line 24, in <module>\n    from\
+    \ dbapi2 import *\n  File \"/usr/local/lib/python2.7/sqlite3/dbapi2.py\", line\
+    \ 28, in <module>\n    from _sqlite3 import *\nImportError: No module named _sqlite3\n\
+    ```\n\n引入了另一种安装方法：使用 ports。这种方法将从源代码下载、编译并安装，这种方法的优点是如果你需要，可以进行一些自定义。你可以在 `/usr/ports`\
+    \ 目录下找到所有的 ports。现在你开始安装 `py-bsddb`（按照此方法设置 `py-gdbm`、`py-sqlite3` 和 `py-tkinter`）：\n\
+    \n```\n# cd /usr/ports/databases/py-bsddb\n# make install clean\n```\n\n在全部安装完成后，我们现在可以在\
+    \ `python` 中使用 `sqlite` 了：\n\n```\n# python\nPython 2.7.11 (default, Jun  5 2016,\
+    \ 01:23:11)\n[GCC 4.2.1 Compatible FreeBSD Clang 3.4.1 (tags/RELEASE_34/dot1-final\
+    \ 208032)] on freebsd10\nType \"help\", \"copyright\", \"credits\" or \"license\"\
+    \ for more information.\n>>> import sqlite3\n```\n\n另一种方法是从 `DVD` 安装：\n\n(1) 将\
+    \ `DVD` 放入驱动器；\n\n(2) 挂载 `DVD`：\n\n```\nmkdir -p /dist\nmount -t cd9660 /dev/cd0\
+    \ /dist\n```\n\n(3) 安装包（例如 `xorg`）：\n\n```\nenv REPOS_DIR=/dist/packages/repos\
+    \ pkg install xorg\n```\n\n引用：\n\n- [Packages and Ports: Adding Software in FreeBSD](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/linux-users/software.html)\n\
+    - [Get started with FreeBSD: A brief intro for Linux users](http://www.infoworld.com/article/2858288/unix/intro-to-freebsd-for-linux-users.html)\n\
+    - [FreeBSD 10 install packages from DVD](https://forums.freebsd.org/threads/44430/#post-300633)\n\
+    \n# 搜索软件\n\n如果你想搜索特定的应用程序，可以使用 `pkg search` 命令。例如：\n\n```\n# pkg search lsof\n\
+    lsof-4.90.b,8                  Lists information about open files (similar to\
+    \ fstat(1))\np5-Unix-Lsof-0.0.5_2           Unix::Lsof -- a wrapper to the Unix\
+    \ lsof utility\n```\n\n如果你想知道软件在 ports 树中的路径，可以使用 `-o` 选项：\n\n```\n# pkg search\
+    \ -o lsof\nsysutils/lsof                  Lists information about open files (similar\
+    \ to fstat(1))\nsysutils/p5-Unix-Lsof          Unix::Lsof -- a wrapper to the\
+    \ Unix lsof utility\n```\n\n万情况下 Ports Collection 已经安装，你可以使用 `whereis` 命令：\n\n\
+    ```\n# whereis lsof\nlsof: /usr/local/sbin/lsof /usr/local/man/man8/lsof.8.gz\
+    \ /usr/ports/sysutils/lsof\n```\n\n另一个技巧方法是使用 `echo` 命令：\n\n```\n# echo /usr/ports/*/*lsof*\n\
+    /usr/ports/distfiles/lsof_4.90B.freebsd.tar.bz2 /usr/ports/sysutils/lsof\n```\n\
+    \n引用：\n\n- [Finding Software](https://www.freebsd.org/doc/handbook/ports-finding.html)\n\
+    \n# 移除软件\n\n安装应用程序后，你可以使用 `pkg delete` 删除它：\n\n[content] (注：此处原文未提供具体移除操作文本，根据指令保持格式逻辑)\n\
+    \n"
+- fmt: "\n`FreeBSD-STABLE` is span off from `FreeBSD-CURRENT`, and for production\
+    \ version. It mainly accepts bug and security fixes.\n\nYou should notice, branches\
+    \ are not points but constant streams of development. And the `FreeBSD RELEASE`\
+    \ version is a point, and it is just a snapshot of `FreeBSD-STABLE` branch at\
+    \ some time.\n\nReferences:\n[Tracking a Development Branch](https://www.freebsd.org/doc/handbook/current-stable.html);\n\
+    [Release Engineering](http://www.over-yonder.net/~fullermd/rants/bsd4linux/05).\n\
+    \n# Update Ports Collection\n\nThe stuff under `/usr/ports` is referred as Ports\
+    \ Collection, and we can employ `portsnap` command to update it:\n\n(1) If it\
+    \ is the first time to use `portsnap`, you should run following command:\n\n```\n\
+    # portsnap fetch extract\n```\n\nOtherwise, you can encounter errors as shown\
+    \ here:\n\n```\n......\n/usr/ports was not created by portsnap.\nYou must run\
+    \ 'portsnap extract' before running 'portsnap update'.\n```\n\n(2) Hereafter,\
+    \ you only need to execute `portsnap fetch update` to update the Ports Collection.\n\
+    \nReference:\n[Using the Ports Collection](https://www.freebsd.org/doc/handbook/ports-using.html);\n\
+    [A question about using portsnanp to upgrade ports tree](https://lists.freebsd.org/pipermail/freebsd-questions/2016-June/272255.html).\n\
+    \n# Accept default options during installing port\n\nDuring building and installing\
+    \ port, if you are tired of the prompt, and want to use all default options, you\
+    \ can utilize `BATCH`:\n\n```\n# make install clean BATCH=yes \n```\n\nReference:\n\
+    [How can I avoid the prompts when installing a FreeBSD port?](http://unix.stackexchange.com/questions/5257/how-can-i-avoid-the-prompts-when-installing-a-freebsd-port).\n\
+    \n# Enable ls colour output\n\n`ls -G` can make `ls` output colourful. If you\
+    \ use `csh`, you can add following statement in `.cshrc`:\n\n```\nalias ls   \
+    \     ls -G\n```\n\nReference:\n[FreeBSD: Enable Colorized ls Output](https://www.cyberciti.biz/tips/freebsd-how-to-enable-colorized-ls-output.html).\n\
+    \n# Clear Directory Structure\n\n`FreeBSD` has a clear separation between base\
+    \ operating system and user-added applications, that means everything which does\
+    \ not belong to the base operating system is under `/usr/local` directory, and\
+    \ the `/usr/local` directory contains a directory structure that mostly mirrors\
+    \ the structure found in the `/` or `/usr` directory.\n\nFor example, the application\
+    \ installed from port tree or `package` command will be located in `/usr/local/bin`\
+    \ or `/usr/local/sbin`, corresponding to `/bin`, `/sbin`, `/usr/bin` and `/usr/local/sbin`;\
+    \ and `/etc` directory contains configuration files for the base operating system\
+    \ while `/usr/local/etc` for user-added applications.\n\nReferences:\n[A Comparative\
+    \ Introduction to FreeBSD for Linux Users](https://www.digitalocean.com/community/tutorials/a-comparative-introduction-to-freebsd-for-linux-users);\n\
+    [Directory Structure](https://www.freebsd.org/doc/handbook/dirstructure.html);\n\
+    [Ten Things I like About FreeBSD](https://bsdmag.org/download/the_begginers_guide/).\n\
+    \n# Change the shell\n\nIf you were previously working on `Linux`, you may miss\
+    \ `Bash`, and not accustomed to `csh` which is shipped on `FreeBSD` by default.\
+    \ You can change the shell to `Bash` following the below instructions:\n\n(1)\
+    \ The `Bash` must already be installed on your `FreeBSD`, and its full path should\
+    \ also be included in `/etc/shells`. E.g:\n\n```\n # pkg install bash\nUpdating\
+    \ FreeBSD repository catalogue...\nFreeBSD repository is up-to-date.\nAll repositories\
+    \ are up-to-date.\nThe following 1 package(s) will be affected (of 0 checked):\n\
+    \nNew packages to INSTALLED:\n        bash: 4.3.42_1\n......\n```\n\nThen you\
+    \ will find the `Bash` path is presented in `/etc/shells` automatically:\n\n```\n\
+    \ # cat /etc/shells\n# $FreeBSD: releng/10.3/etc/shells 59717 2000-04-27 21:58:46Z\
+    \ ache $\n#\n# List of acceptable shells for chpass(1).\n# Ftpd will not allow\
+    \ users to connect who are not using\n# one of these shells.\n\n/bin/sh\n/bin/csh\n\
+    /bin/tcsh\n/usr/local/bin/bash\n/usr/local/bin/rbash\n```\n\n(2) Execute `chsh\
+    \ -s /usr/local/bin/bash`:\n\n```\n# chsh -s /usr/local/bin/bash\nchsh: user information\
+    \ updated\n```\n\nAfter you login again, you can find the shell is `bash` now:\n\
+    \n```\n# echo $SHELL\n/usr/local/bin/bash\n```\n\nReference:\n[Shells](https://www.freebsd.org/doc/handbook/shells.html).\n\
+    \n# Change the PATH variable\n\nIn `csh`, if you want to change `$PATH` environment\
+    \ variable, you should modify `.cshrc` file:\n\n```\n# cat .cshrc\n......\nset\
+    \ path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin\
+    \ $HOME/bin $HOME/gocode/bin)\n......\n```\n\nFor example, you add `/usr/local/go/bin`\
+    \ into `$PATH`:\n\n```\n# cat .cshrc\n......\nset path = (/sbin /bin /usr/sbin\
+    \ /usr/bin /usr/games /usr/local/sbin /usr/local/bin $HOME/bin $HOME/gocode/bin\
+    \ /usr/local/go/bin)\n......\n```\n\nThen executing `source .cshrc` command, you\
+    \ will find the new `$PATH` takes effect:\n\n```\n# source .cshrc\n# echo $PATH\n\
+    /sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/root/bin:/root/gocode/bin:/usr/local/go/bin\n\
+    ```\n\nReference:\n[Misc Tips & Tricks](http://www.freebsdmadeeasy.com/tutorials/freebsd/freebsd-tricks.php).\n\
+    \n# Colorize bash\n\n(1) In your `$HOME` directory, create `..dir_colors` file:\n"
+  raw: "`FreeBSD-STABLE` is span off from `FreeBSD-CURRENT`, and for production version.\
+    \ It mainly accepts bug and security fixes.\n\nYou should notice, branches are\
+    \ not points but constant streams of development. And the `FreeBSD RELEASE` version\
+    \ is a point, and it is just a snapshot of `FreeBSD-STABLE` branch at some time.\n\
+    \nReferences:\n\n[Tracking a Development Branch](https://www.freebsd.org/doc/handbook/current-stable.html);\n\
+    \n[Release Engineering](http://www.over-yonder.net/~fullermd/rants/bsd4linux/05).\n\
+    \n# Update Ports Collection\n\n## Update Ports Collection\n\nThe stuff under `/usr/ports`\
+    \ is referred as Ports Collection, and we can employ `portsnap` command to update\
+    \ it:\n\n(1) If it is the first time to use `portsnap`, you should run following\
+    \ command:\n\n```\n# portsnap fetch extract\n```\n\nOtherwise, you can encounter\
+    \ errors as shown here:\n\n```\n......\n/usr/ports was not created by portsnap.\n\
+    You must run 'portsnap extract' before running 'portsnap update'.\n```\n\n(2)\
+    \ Hereafter, you only need to execute \"`portsnap fetch update`\" to update the\
+    \ Ports Collection.\n\nReference:\n\n[Using the Ports Collection](https://www.freebsd.org/doc/handbook/ports-using.html);\n\
+    \n[A question about using portsnanp to upgrade ports tree](https://lists.freebsd.org/pipermail/freebsd-questions/2016-June/272255.html).\n\
+    \n# Accept default options during installing port\n\n## Accept default options\
+    \ during installing port\n\nDuring building and installing port, if you are tired\
+    \ of the prompt, and want to use all default options, you can utilize `BATCH`:\n\
+    \n```\n# make install clean BATCH=yes \n```\n\nReference:\n\n[How can I avoid\
+    \ the prompts when installing a FreeBSD port?](http://unix.stackexchange.com/questions/5257/how-can-i-avoid-the-prompts-when-installing-a-freebsd-port).\n\
+    \n# Enable ls colour output\n\n## Enable ls colour output\n\n`ls -G` can make\
+    \ `ls` output colourful. If you use `csh`, you can add following statement in\
+    \ `.cshrc`:\n\n```\nalias ls        ls -G\n```\n\nReference:\n\n[FreeBSD: Enable\
+    \ Colorized ls Output](https://www.cyberciti.biz/tips/freebsd-how-to-enable-colorized-ls-output.html).\n\
+    \n# Clear Directory Structure\n\n## Clear directory structure\n\n`FreeBSD` has\
+    \ a clear separation between base operating system and user-added applications,\
+    \ that means everything which does not belong to the base operating system is\
+    \ under `/usr/local` directory, and the `/usr/local` directory contains a directory\
+    \ structure that mostly mirrors the structure found in the `/` or `/usr` directory.\n\
+    \nFor example, the application installed from port tree or `package` command will\
+    \ be located in `/usr/local/bin` or `/usr/local/sbin`, corresponding to `/bin`,\
+    \ `/sbin`, `/usr/bin` and `/usr/local/sbin`; and `/etc` directory contains configuration\
+    \ files for the base operating system while `/usr/local/etc` for user-added applications.\n\
+    \nReferences:\n\n[A Comparative Introduction to FreeBSD for Linux Users](https://www.digitalocean.com/community/tutorials/a-comparative-introduction-to-freebsd-for-linux-users);\n\
+    \n[Directory Structure](https://www.freebsd.org/doc/handbook/dirstructure.html);\n\
+    \n[Ten Things I like About FreeBSD](https://bsdmag.org/download/the_begginers_guide/).\n\
+    \n# Change the shell\n\n## Change the shell\n\nIf you were previously working\
+    \ on `Linux`, you may miss `Bash`, and not accustomed to `csh` which is shipped\
+    \ on `FreeBSD` by default. You can change the shell to `Bash` following the below\
+    \ instructions:\n\n(1) The `Bash` must already be installed on your `FreeBSD`,\
+    \ and its full path should also be included in `/etc/shells`. E.g:\n\n```\n #\
+    \ pkg install bash\nUpdating FreeBSD repository catalogue...\nFreeBSD repository\
+    \ is up-to-date.\nAll repositories are up-to-date.\nThe following 1 package(s)\
+    \ will be affected (of 0 checked):\n\nNew packages to be INSTALLED:\n        bash:\
+    \ 4.3.42_1\n......\n```\n\nThen you will find the `Bash` path is presented in\
+    \ `/etc/shells` automatically:\n\n```\n # cat /etc/shells\n# $FreeBSD: releng/10.3/etc/shells\
+    \ 59717 2000-04-27 21:58:46Z ache $\n#\n# List of acceptable shells for chpass(1).\n\
+    # Ftpd will not allow users to connect who are not using\n# one of these shells.\n\
+    \n/bin/sh\n/bin/csh\n/bin/tcsh\n/usr/local/bin/bash\n/usr/local/bin/rbash\n```\n\
+    \n(2) Execute `chsh -s /usr/local/bin/bash`:\n\n```\n# chsh -s /usr/local/bin/bash\n\
+    chsh: user information updated\n```\n\nAfter you login again, you can find the\
+    \ shell is `bash` now:\n\n```\n# echo $SHELL\n/usr/local/bin/bash\n```\n\nReference:\n\
+    \n[Shells](https://www.freebsd.org/doc/handbook/shells.html).\n\n# Change PATH\
+    \ environment variable\n\n## Change PATH environment variable\n\nIn `csh`, if\
+    \ you want to change `$PATH` environment variable, you should modify `.cshrc`\
+    \ file:\n\n```\n# cat .cshrc\n......\nset path = (/sbin /bin /usr/sbin /usr/bin\
+    \ /usr/games /usr/local/sbin /usr/local/bin $HOME/bin $HOME/gocode/bin)\n......\n\
+    ```\n\nFor example, you add \"`/usr/local/go/bin`\" into `$PATH`:\n\n```\n# cat\
+    \ .cshrc\n......\nset path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin\
+    \ /usr/local/bin $HOME/bin $HOME/gocode/bin /usr/local/go/bin)\n......\n```\n\n\
+    Then executing \"`source .cshrc`\" command, you will find the new `$PATH` takes\
+    \ effect:\n\n```\n# source .cshrc\n# echo $PATH\n/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/root/bin:/root/gocode/bin:/usr/local/go/bin\n\
+    ```\n\nReference:\n\n[Misc Tips & Tricks](http://www.freebsdmadeeasy.com/tutorials/freebsd/freebsd-tricks.php).\n\
+    \n# Colorize bash\n\n## Colorize bash\n\n(1) In your `$HOME` directory, create\
+    \ `..dir_colors` file:"
+  toc: []
+  trans: "\n\n`FreeBSD-STABLE` 独立于 `FreeBSD-CURRENT`，适用于生产版本。它主要接受错误修复和安全更新。\n\n你应该注意到，分支不是一个点，而是持续的开发流。而\
+    \ `FreeBSD RELEASE` 版本是一个点，它只是 `FreeBSD-STABLE` 分支在某个时刻的快照。\n\n引用：\n[跟踪开发分支](https://www.freebsd.org/doc/handbook/current-stable.html);\n\
+    [发布工程](http://www.over-yonder.net/~fullermd/rants/bsd4linux/05).\n\n# 更新 Ports\
+    \ 集合\n\n位于 `/usr/ports` 下的内容被称为 Ports 集合（Ports Collection），我们可以使用 `portsnap` 命令来更新它：\n\
+    \n(1) 如果是第一次使用 `portsnap`，你应该运行以下命令：\n\n```\n# portsnap fetch extract\n```\n\n\
+    否则，你可能会遇到如下所示的错误：\n\n```\n......\n/usr/ports was not created by portsnap.\nYou\
+    \ must run 'portsnap extract' before running 'portsnap update'.\n```\n\n(2) 此后，你只需要执行\
+    \ `portsnap fetch update` 即可更新 Ports 集合。\n\n引用：\n[使用 Ports 集合](https://www.freebsd.org/doc/handbook/ports-using.html);\n\
+    [关于使用 portsnanp 升级源码树的问题](https://lists.freebsd.org/pipermail/freebsd-questions/2016-June/272255.html).\n\
+    \n# 安装 port 时接受默认选项\n\n在编译和安装 port 过程中，如果你厌倦了提示并想使用所有默认选项，可以利用 `BATCH`：\n\n```\n\
+    # make install clean BATCH=yes \n```\n\n引用：\n[如何在安装 FreeBSD port 时避免提示？](http://unix.stackexchange.com/questions/5257/how-can-i-avoid-the-prompts-when-installing-a-freebsd-port).\n\
+    \n# 启用 ls 彩色输出\n\n`ls -G` 可以让 `ls` 输出彩色。如果你使用 `csh`，可以在 `.cshrc` 中添加以下语句：\n\n\
+    ```\nalias ls        ls -G\n```\n\n引用：\n[FreeBSD: 启用彩色 ls 输出](https://www.cyberciti.biz/tips/freebsd-how-to-enable-colorized-ls-output.html).\n\
+    \n# 清晰的目录结构\n\n`FreeBSD` 在基础操作系统和用户添加的应用程序之间有清晰的分，这意味着所有不属于基础系统的内容都在 `/usr/local`\
+    \ 目录下，而 `/usr/local` 目录的结构在很大程度上镜像了 `/` 或 `/usr` 目录中的结构。\n\n例如，从源码树或通过 `package`\
+    \ 命令安装的应用将位于 `/usr/local/bin` 或 `/usr/local/sbin`，对应于 `/bin``/sbin`/`/usr/bin`\
+    \ 和 `/usr/local/sbin`；`/etc` 目录包含基础系统的配置文件，而 `/usr/local/etc` 则用于用户添加的应用程序。\n\n\
+    引用：\n[给 Linux 用户的 FreeBSD 对比介绍](https://www.digitalocean.com/community/tutorials/a-comparative-introduction-to-freebsd-for-linux-users);\n\
+    [目录结构](https://www.freebsd.org/doc/handbook/dirstructure.html);\n[我喜欢 FreeBSD\
+    \ 的十件事](https://bsdmag.org/download/the_begginers_guide/).\n\n# 修改 shell\n\n如果你之前在\
+    \ `Linux` 上工作，你可能会怀念 `Bash`，并且不习惯 `FreeBSD` 默认提供的 `csh`。你可以按照以下指令将 shell 改为 `Bash`：\n\
+    \n(1) `Bash` 必须已经安装在你的 `FreeBSD` 上，并且其完整路径也应包含在 `/etc/shells` 中。例如：\n\n```\n #\
+    \ pkg install bash\nUpdating FreeBSD repository catalogue...\nFreeBSD repository\
+    \ is up-to-date.\nAll repositories are up-to-date.\nThe following 1 package(s)\
+    \ will be affected (of 0 checked):\n\nNew packages to INSTALLED:\n        bash:\
+    \ 4.3.42_1\n......\n```\n\n你会发现 `Bash` 路径自动显示在 `/etc/shells` 中：\n\n```\n # cat\
+    \ /etc/shells\n# $FreeBSD: releng/10.3/etc/shells 59717 2000-04-27 21:58:46Z ache\
+    \ $\n#\n# List of acceptable shells for chpass(1).\n# Ftpd will not allow users\
+    \ to connect who are not using\n# one of these shells.\n\n/bin/sh\n/bin/csh\n\
+    /bin/tcsh\n/usr/local/bin/bash\n/usr/local/bin/rbash\n```\n\n(2) 执行 `chsh -s /usr/local/bin/bash`：\n\
+    \n```\n# chsh -s /usr/local/bin/bash\nchsh: user information updated\n```\n\n\
+    重新登录后，你会发现 shell 现在是 `bash` 了：\n\n```\n# echo $SHELL\n/usr/local/bin/bash\n```\n\
+    \n引用：\n[Shells](https://www.freebsd.org/doc/handbook/shells.html).\n\n# 修改 PATH\
+    \ 变量\n\n在 `csh` 中，如果你想更改 `$PATH` 环境变量，你应该修改 `.cshrc` 文件：\n\n```\n# cat .cshrc\n\
+    ......\nset path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin\
+    \ $HOME/bin $HOME/gocode/bin)\n......\n```\n\n例如，将 `/usr/local/go/bin` 添加到 `$PATH`\
+    \ 中：\n\n```\n# cat .cshrc\n......\nset path = (/sbin /bin /usr/sbin /usr/bin /usr/games\
+    \ /usr/local/sbin /usr/local/bin $HOME/bin $HOME/gocode/bin /usr/local/go/bin)\n\
+    ......\n```\n\n然后执行 `source .cshrc` 命令，你会发现新的 `$PATH` 生效了：\n\n```\n# source .cshrc\n\
+    # echo $PATH\n/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:/root/bin:/root/gocode/bin:/usr/local/go/bin\n\
+    ```\n\n引用：\n[杂项与技巧](http://www.freebsdmadeeasy.com/tutorials/freebsd/freebsd-tricks.php).\n\
+    \n# 为 bash 着色\n\n(1) 在你的 `$HOME` 目录下创建 `..dir_colors` 文件：\n\n"
+- fmt: "\n# Below, there should be one TERM entry for each termtype that is colorizable\n\
+    \n```\nTERM ansi\nTERM color-xterm\nTERM con132x25\nTERM con132x30\nTERM con132x43\n\
+    TERM con132x60\nTERM con80x25\nTERM con80x28\nTERM con80x30\nTERM con80x43\nTERM\
+    \ con80x50\nTERM con80x60\nTERM cons25\nTERM console\nTERM cygwin\nTERM dtterm\n\
+    TERM Eterm\nTERM gnome\nTERM konsole\nTERM kterm\nTERM linux\nTERM linux-c\nTERM\
+    \ mach-color\nTERM putty\nTERM rxvt\nTERM rxvt-cygwin\nTERM rxvt-cygwin-native\n\
+    TERM rxvt-unicode\nTERM screen\nTERM screen-bce\nTERM screen-w\nTERM screen.linux\n\
+    TERM vt100\nTERM xterm\nTERM xterm-256color\nTERM xterm-color\nTERM xterm-debian\n\
+    ```\n\n# Below are the color init strings for the basic file types. A color init\n\
+    # string consists of one or more of the following numeric codes:\n# Attribute\
+    \ codes:\n# `00=none` `01=bold` `04=underscore` `05=blink` `07=reverse` `08=concealed`\n\
+    # Text color codes:\n# `30=black` `31=red` `32=green` `33=yellow` `34=blue` `35=magenta`\
+    \ `36=cyan` `37=white`\n# Background color codes:\n# `40=black` `41=red` `42=green`\
+    \ `43=yellow` `44=blue` `45=magenta` `46=cyan` `47=white`\n\nNORMAL 00       \
+    \    # global default, although everything should be something.\nFILE 00     \
+    \        # normal file\nDIR 01;34           # directory\nLINK 01;36          #\
+    \ symbolic link. (If you set this to 'target' instead of a\n                 \
+    \   # numerical value, the color will match the file pointed to)\nFIFO 40;33 \
+    \         # pipe\nSOCK 01;35          # socket\nDOOR 01;35          # door\nBLK\
+    \ 40;33;01        # block device driver\nCHR 40;33;01        # character device\
+    \ driver\nORPHAN 01;05;37;41  # orphaned syminks\nMISSING 01;05;37;41 # ... and\
+    \ the files they point to\n\n# This is for files with execute permission:\nEXEC\
+    \ 01;32\n\n# List any file extensions like '.gz' or '.tar' that you would like\
+    \ ls\n# to colorize below. Put the extension, a space, and the color init string.\n\
+    # (and any comments you want to add after a '#')\n\n.cmd 01;32 # executables (bright\
+    \ green)\n.exe 01;32\n.com 01;32\n.btm 01;32\n.bat 01;32\n.sh  01;32\n.csh 01;32\n\
+    \n.tar 01;31 # archives / compressed (bright red)\n.tgz 01;31\n.arj 01;31\n.taz\
+    \ 01;31\n.lzh 01;31\n.zip 01;31\n.z   01;31\n.Z   01;31\n.gz  01;31\n.bz2 01;31\n\
+    .bz  01;31\n.tbz2 01;31\n.tz  01;31\n.deb 01;31\n.rpm 01;31\n.rar 01;31      \
+    \  # app-arch/rar\n.ace 01;31        # app-arch/unace\n.zoo 01;31        # app-arch/zoo\n\
+    .cpio 01;31       # app-arch/cpio\n.7z  01;31        # app-arch/p7zip\n.rz  01;31\
+    \        # app-arch/rzip\n\n.jpg 01;35 # image formats\n.jpeg 01;35\n.gif 01;35\n\
+    .bmp 01;35\n.ppm 01;35\n.tga 01;35\n.xbm 01;35\n.xpm 01;35\n.tif 01;35\n.tiff\
+    \ 01;35\n.png 01;35\n.mng 01;35\n.xcf 01;35\n.pcx 01;35\n.mpg 01;35\n.mpeg 01;35\n\
+    .m2v 01;35  # MPEG-2 Video only\n.avi 01;35\n.mkv 01;35  # Matroska (http://matroska.org/)\n\
+    .ogm 01;35  # Ogg Media File\n.mp4 01;35  # \"Offical\" container for MPEG-4\n\
+    .m4v 01;35  # MPEG-4 Video only\n.mp4v 01;35 # MPEG-4 Video only\n.mov 01;35 #\
+    \ Quicktime (http://developer.apple.com/qa/qtw/qtw9.html)\n.qt 01;35   # Quicktime\
+    \ (http://developer.apple.com/qa/qtw/qtw9.html)\n.wmv 01;35  # Windows Video\n\
+    .asf 01;35  # Advanced Systems Format (contains Windows Video)\n.rm 01;35   #\
+    \ Real Media\n.rmvb 01;35 # Real Media Bitrate\n.flc 01;35 # AutoDesk Animator\n\
+    .fli 01;35 # AutoDesk Animator\n.gl 01;35\n\n.pdf 00;32 # Document files\n.ps\
+    \ 00;32\n.txt 00;32\n.patch 00;32\n.diff 00;32\n.log 00;32\n.tex 00;32\n\n.mp3\
+    \ 00;36 # Audio files\n.wav 00;36\n.mid 00;36\n.midi 00;36\n.ogg 00;36\n.flac\
+    \ 00;36\n.aac 00;36\n\n(2) Add following statements in `/etc/profile`:\n\n```bash\n\
+    eval $(dircolors -b ~/.dircolors)\n\nif [[ ${EUID} == 0 ]] then\n    PS1='\\[\\\
+    033[01;31m\\]\\h\\[\\033[034m\\] \\W '\nelse\n    PS1='\\[\\033[01;32m\\]\\u@\\\
+    h\\[\\033[034m\\] \\w '\nfi\n\nCLICOLOR=\"YES\"; export LSCOLORS\n```\n\nReference:\
+    \ [Colorize your bash like linux.](https://forums.freebsd.org/threads/4506/)\n\
+    \n# Install bash-completion\n\n[bash-completion](https://github.com/scop/bash-completion)\
+    \ is a really handy tool which can help you auto-complete many commands, such\
+    \ as `git`. To use it, you need `2` steps:\n\n(1) Install it:\n```bash\npkg install\
+    \ bash-completion\n```\n\n(2) Add following command in `~/.profile`:\n\n```bash\n\
+    [[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \\\nsource\
+    \ /usr/local/share/bash-completion/bash_completion.sh\n```\n\n# Rehash command\n\
+    \nAfter removing the application in the directory listed in the `$PATH` variable,\
+    \ you may even see the command prompt when you type the first characters:\n\n\
+    ```bash\n# pkg delete lsof\nChecking integrity... done (0 conflicting)\nDeinstallation\
+    \ has been requested for the following 1 packages (0 packages in the universe):\n\
+    \nInstalled packages to be REMOVED:\n        lsof-4.9.8\n\nProceed with deinstalling\
+    \ packages? [y/N]: y\n[1/1] Deinstalling lsof-4.9.8...\n[1/1] Deleting files for\
+    \ lsof-4.9.8: 100%\n# ls\nls        ls-F      lsextattr lsof      lspci     lsvfs\n\
+    ```\n\nWhile running it will prompt \"`Command not found.`\" definitely:\n\n```bash\n\
+    # lsof\nlsof: Command not found.\n```\n\nNp install or remove application, you\
+    \ need to run `rehash` command in `csh` to causes the shell to recompute a table\
+    \ of where commands are located.\n\nReference: [Misc Tips & Tricks](http://www.freebsdmadeeasy.com/tutorials/freebsd/freebsd-tricks.php);\
+    \ [Rehash](http://www.panix.com/~spkemp/examplex/csh/rehash.htm).\n\n# Search\
+    \ backwards in csh\n\n## Search backwards in csh\n\nIn `bash`, `Ctrl + R` provides\
+    \ the handy \"search backwards\" feature which isn't shipped by `csh` by default.\
+    \ If you want to use the similar function in `csh`, you can employ `csh` built-in\
+    \ `bindkey` command to implement it:\n\n```bash\n# cat .cshrc\n......\n\nbindkey\
+    \ \"^R\" i-search-back\n```\n\nThen you can use \"search backwards\" when pressing\
+    \ `Ctrl + R`:\n\n```bash\nroot@FreeBSD:~ # pkg install subversion   \nbck:pk\n\
+    ```\n\nReferences: [Ctrl-R to search backwards for shell commands in csh](http://stackoverflow.com/questions/1387357/ctrl-r-to-search-backwards-for-shell-commands-in-csh).\n\
+    \n# Trim a file in csh\n\n## Trim a file in csh\n\nIn `bash`, if you want to clear\
+    \ out a file, the easiest command may be \"`> file`\":\n\n```bash\n# cat test.txt\n\
+    Hello world!\n# > test.txt\n# cat test.txt\n#\n```\n\nBut in `csh`, \"`> file`\"\
+    \ will cause \"`Invalid command.`\" error:\n\n```bash\n# cat test.txt\nHello world!\n\
+    # > test.txt\n# cat test.txt\n#\n```\n\nThe solution is using `: file`.\n\nReference:\
+    \ [What does a leading colon (:) mean in a script?](http://aplawrence.com/Basics/leading-colon.html).\n"
+  raw: "```\n# Below, there should be one TERM entry for each termtype that is colorizable\n\
+    TERM ansi\nTERM color-xterm\nTERM con132x25\nTERM con132x30\nTERM con132x43\n\
+    TERM con132x60\nTERM con80x25\nTERM con80x28\nTERM con80x30\nTERM con80x43\nTERM\
+    \ con80x50\nTERM con80x60\nTERM cons25\nTERM console\nTERM cygwin\nTERM dtterm\n\
+    TERM Eterm\nTERM gnome\nTERM konsole\nTERM kterm\nTERM linux\nTERM linux-c\nTERM\
+    \ mach-color\nTERM putty\nTERM rxvt\nTERM rxvt-cygwin\nTERM rxvt-cygwin-native\n\
+    TERM rxvt-unicode\nTERM screen\nTERM screen-bce\nTERM screen-w\nTERM screen.linux\n\
+    TERM vt100\nTERM xterm\nTERM xterm-256color\nTERM xterm-color\nTERM xterm-debian\n\
+    \n# Below are the color init strings for the basic file types. A color init\n\
+    # string consists of one or more of the following numeric codes:\n# Attribute\
+    \ codes:\n# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed\n#\
+    \ Text color codes:\n# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan\
+    \ 37=white\n# Background color codes:\n# 40=black 41=red 42=green 43=yellow 44=blue\
+    \ 45=magenta 46=cyan 47=white\nNORMAL 00           # global default, although\
+    \ everything should be something.\nFILE 00             # normal file\nDIR 01;34\
+    \           # directory\nLINK 01;36          # symbolic link.  (If you set this\
+    \ to 'target' instead of a\n                    # numerical value, the color will\
+    \ match the file pointed to)\nFIFO 40;33          # pipe\nSOCK 01;35         \
+    \ # socket\nDOOR 01;35          # door\nBLK 40;33;01        # block device driver\n\
+    CHR 40;33;01        # character device driver\nORPHAN 01;05;37;41  # orphaned\
+    \ syminks\nMISSING 01;05;37;41 # ... and the files they point to\n\n# This is\
+    \ for files with execute permission:\nEXEC 01;32\n\n# List any file extensions\
+    \ like '.gz' or '.tar' that you would like ls\n# to colorize below. Put the extension,\
+    \ a space, and the color init string.\n# (and any comments you want to add after\
+    \ a '#')\n\n.cmd 01;32 # executables (bright green)\n.exe 01;32\n.com 01;32\n\
+    .btm 01;32\n.bat 01;32\n.sh  01;32\n.csh 01;32\n\n.tar 01;31 # archives / compressed\
+    \ (bright red)\n.tgz 01;31\n.arj 01;31\n.taz 01;31\n.lzh 01;31\n.zip 01;31\n.z\
+    \   01;31\n.Z   01;31\n.gz  01;31\n.bz2 01;31\n.bz  01;31\n.tbz2 01;31\n.tz  01;31\n\
+    .deb 01;31\n.rpm 01;31\n.rar 01;31        # app-arch/rar\n.ace 01;31        #\
+    \ app-arch/unace\n.zoo 01;31        # app-arch/zoo\n.cpio 01;31       # app-arch/cpio\n\
+    .7z  01;31        # app-arch/p7zip\n.rz  01;31        # app-arch/rzip\n\n.jpg\
+    \ 01;35 # image formats\n.jpeg 01;35\n.gif 01;35\n.bmp 01;35\n.ppm 01;35\n.tga\
+    \ 01;35\n.xbm 01;35\n.xpm 01;35\n.tif 01;35\n.tiff 01;35\n.png 01;35\n.mng 01;35\n\
+    .xcf 01;35\n.pcx 01;35\n.mpg 01;35\n.mpeg 01;35\n.m2v 01;35  # MPEG-2 Video only\n\
+    .avi 01;35\n.mkv 01;35  # Matroska (http://matroska.org/)\n.ogm 01;35  # Ogg Media\
+    \ File\n.mp4 01;35  # \"Offical\" container for MPEG-4\n.m4v 01;35  # MPEG-4 Video\
+    \ only\n.mp4v 01;35 # MPEG-4 Video only\n.mov 01;35  # Quicktime (http://developer.apple.com/qa/qtw/qtw99.html)\n\
+    .qt 01;35   # Quicktime (http://developer.apple.com/qa/qtw/qtw99.html)\n.wmv 01;35\
+    \  # Windows Media Video\n.asf 01;35  # Advanced Systems Format (contains Windows\
+    \ Media Video)\n.rm 01;35   # Real Media\n.rmvb 01;35 # Real Media Variable Bitrate\n\
+    .flc 01;35  # AutoDesk Animator\n.fli 01;35  # AutoDesk Animator\n.gl 01;35\n\
+    .dl 01;35\n\n.pdf 00;32 # Document files\n.ps 00;32\n.txt 00;32\n.patch 00;32\n\
+    .diff 00;32\n.log 00;32\n.tex 00;32\n.doc 00;32\n\n.mp3 00;36 # Audio files\n\
+    .wav 00;36\n.mid 00;36\n.midi 00;36\n.au 00;36\n.ogg 00;36\n.flac 00;36\n.aac\
+    \ 00;36\n```\n\n(2) Add following statements in `/etc/profile`:\n\n```\neval $(dircolors\
+    \ -b ~/.dir_colors)\n\nif [[ ${EUID} == 0 ]] ; then\n    PS1='\\[\\033[01;31m\\\
+    ]\\h\\[\\033[01;34m\\] \\W \\$\\[\\033[00m\\] '\nelse\n    PS1='\\[\\033[01;32m\\\
+    ]\\u@\\h\\[\\033[01;34m\\] \\w \\$\\[\\033[00m\\] '\nfi\n\nCLICOLOR=\"YES\"; \
+    \   export CLICOLOR\nLSCOLORS=\"ExGxFxdxCxDxDxhbadExEx\";    export LSCOLORS\n\
+    ```\n\nReference:\n\n[Colorize your bash like linux.](https://forums.freebsd.org/threads/45006/).\n\
+    \n# Install bash-completion\n\n## Install bash-completion\n\n[bash-completion](https://github.com/scop/bash-completion)\
+    \ is a really handy tool which can help you auto-complete many commands, such\
+    \ as `git`. To use it, you need `2` steps:\n\n(1) Install it:\n\n```\npkg install\
+    \ bash-completion\n```\n\n(2) Add following command in your `~/.profile`:\n\n\
+    ```\n[[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && \\\
+    \n        source /usr/local/share/bash-completion/bash_completion.sh\n```\n\n\
+    # Rehash command\n\n## Rehash command\n\nAfter removing the application in the\
+    \ directory listed in the `$PATH` variable, you may even see the command prompt\
+    \ when you type the first characters:\n\n```\n# pkg delete lsof\nChecking integrity...\
+    \ done (0 conflicting)\nDeinstallation has been requested for the following 1\
+    \ packages (of 0 packages in the universe):\n\nInstalled packages to be REMOVED:\n\
+    \        lsof-4.90.b,8\n\nProceed with deinstalling packages? [y/N]: y\n[1/1]\
+    \ Deinstalling lsof-4.90.b,8...\n[1/1] Deleting files for lsof-4.90.b,8: 100%\n\
+    # ls\nls        ls-F      lsextattr lsof      lspci     lsvfs\n```\n\nWhile running\
+    \ it will prompt \"`Command not found.`\" definitely:\n\n```\n# lsof\nlsof: Command\
+    \ not found.\n```\n\nNp matter install or remove application , you need to run\
+    \ `rehash` command in `csh` to causes the shell to recompute a table of where\
+    \ commands are located.\n\nReference:\n\n[Misc Tips & Tricks](http://www.freebsdmadeeasy.com/tutorials/freebsd/freebsd-tricks.php);\n\
+    \n[Rehash](http://www.panix.com/~spkemp/examplex/csh/rehash.htm).\n\n# Search\
+    \ backwards in csh\n\n## Search backwards in csh\n\nIn `bash`, `Ctrl + R` provides\
+    \ the handy \"search backwards\" feature which isn't shipped by `csh` by default.\
+    \ If you want to use the similar function in `csh`, you can employ `csh` built-in\
+    \ `bindkey` command to implement it:\n\n```\n# cat .cshrc\n......\n\nbindkey \"\
+    ^R\" i-search-back\n```\n\nThen you can use \"search backwards\" when pressing\
+    \ `Ctrl + R`:\n\n```\nroot@FreeBSD:~ # pkg install subversion   \nbck:pk\n```\n\
+    \nReferences:\n\n[Ctrl-R to search backwards for shell commands in csh](http://stackoverflow.com/questions/1387357/ctrl-r-to-search-backwards-for-shell-commands-in-csh).\n\
+    \n# Trim a file in csh\n\n## Trim a file in csh\n\nIn `bash`, if you want to clear\
+    \ out a file, the easiest command may be \"`> file`\":\n\n```\n# cat test.txt\n\
+    Hello world!\n# > test.txt\n# cat test.txt\n#\n```\n\nBut in `csh`, \"`> file`\"\
+    \ will cause \"`Invalid null command.`\" error:\n\n```\n# cat test.txt\nHello\
+    \ world!\n# > test.txt\nInvalid null command.\n```\n\nThe solution is using \"\
+    `: > file`\" command:\n\n```\n# cat test.txt\nHello world!\n# : > test.txt\n#\
+    \ cat test.txt\n#\n```\n\nOr employ \"`cat /dev/null > file`\".\n\nReference:\n\
+    \n[What does a leading colon (:) mean in a script?](http://aplawrence.com/Basics/leading-colon.html).\n\
+    \n# /var/run/dmesg.boot\n\n## /var/run/dmesg.boot\n\n`/var/run/dmesg.boot` file\
+    \ contains the `FreeBSD` boot messages, and this is very helpful for checking\
+    \ hardware related info:\n\n```\n# cat /var/run/dmesg.boot | grep -i CPU\nCPU:\
+    \ Intel(R) Core(TM) i5-4310U CPU @ 2.00GHz (2594.03-MHz K8-class CPU)\ncpu0: <ACPI\
+    \ CPU> on acpi0\n```\n\nBecause the capacity of system message buffer is limited,\
+    \ `FreeBSD` employs `/var/run/dmesg.boot` in case the content of buffer is flushed.\n\
+    \nReferences:\n\n[Devices and Device Nodes](https://www.freebsd.org/doc/handbook/basics-devices.html);\n\
+    \n[Back To Basics: Unix Differences in Performing Tasks](http://www.longitudetech.com/linux-unix/back-to-basics-unix-differences-in-performing-tasks/).\n\
+    \n# Display swap space utilization\n\n## Display swap space utilization\n\nOn\
+    \ `FreeBSD`, you can use `pstat -s` to display swap space utilization:\n\n```\n\
+    # pstat -s\nDevice          1K-blocks     Used    Avail Capacity\n/dev/da0p3 \
+    \       1048540        0  1048540     0%\n```\n\nThere is another specified `swapinfo`\
+    \ command you can use:\n\n```\n# swapinfo\nDevice          1K-blocks     Used\
+    \    Avail Capacity\n/dev/da0p3        1048540        0  1048540     0%\n```\n\
+    \nYou can also display swap info in \"Human-readable\" format:\n\n```\n# swapinfo\
+    \ -h\nDevice          1K-blocks     Used    Avail Capacity\n/dev/da0p3       \
+    \ 1048540       0B     1.0G     0%\n```\n\nOr display swap space size in megabyte\
+    \ unit:"
+  toc: []
+  trans: "\n\n# 下面每种可着色的终端类型都应有一个对应的 TERM 条目\n\n```\nTERM ansi\nTERM color-xterm\n\
+    TERM con132x25\nTERM con132x30\nTERM con132x43\nTERM con132x60\nTERM con80x25\n\
+    TERM con80x28\nTERM con80x30\nTERM con80x43\nTERM con80x50\nTERM con80x60\nTERM\
+    \ cons25\nTERM console\nTERM cygwin\nTERM dtterm\nTERM Eterm\nTERM gnome\nTERM\
+    \ konsole\nTERM kterm\nTERM linux\nTERM linux-c\nTERM mach-color\nTERM putty\n\
+    TERM rxvt\nTERM rxvt-cygwin\nTERM rxvt-cygwin-native\nTERM rxvt-unicode\nTERM\
+    \ screen\nTERM screen-bce\nTERM screen-w\nTERM screen.linux\nTERM vt100\nTERM\
+    \ xterm\nTERM xterm-256color\nTERM xterm-color\nTERM xterm-debian\n```\n\n# 下面是基础文件类型的颜色初始化字符串。颜色初始化\n\
+    # 字符串由一个或多个以下数字代码组成：\n# 属性代码：\n# `00=none` `01=bold` `04=underscore` `05=blink`\
+    \ `07=reverse` `08=concealed`\n# 文字颜色代码：\n# `30=black` `31=red` `32=green` `33=yellow`\
+    \ `34=blue` `35=magenta` `36=cyan` `37=white`\n# 背景颜色代码：\n# `40=black` `41=red`\
+    \ `42=green` `43=yellow` `44=blue` `45=magenta` `46=cyan` `47=white`\n\nNORMAL\
+    \ 00           # 全局默认，尽管所有内容都应该是某种状态\nFILE 00             # 普通文件\nDIR 01;34  \
+    \         # 目录\nLINK 01;36          # 符号链接。（如果你将此设置为 'target' 而不是\n          \
+    \          # 数值，则颜色将匹配所指向的文件）\nFIFO 40;33          # 管道\nSOCK 01;35          #\
+    \ 套接字\nDOOR 01;35          # 门\nBLK 40;33;01        # 块设备驱动\nCHR 40;33;01    \
+    \    # 字符设备驱动\nORPHAN 01;05;37;41  # 孤立符号链接\nMISSING 01;05;37;41 # ... 以及它们指向的文件\n\
+    \n# 这用于具有执行权限的文件：\nEXEC 01;32\n\n# 在下方列出任何希望 ls 着色的文件扩展名，如 '.gz' 或 '.tar'。\n#\
+    \ 放入扩展名、一个空格和颜色初始化字符串。\n# （以及任何你想在 '# ' 之后添加的注释）\n\n.cmd 01;32 # 可执行文件（亮绿色）\n\
+    .exe 01;32\n.com 01;32\n.btm 01;32\n.bat 01;32\n.sh  01;32\n.csh 01;32\n\n.tar\
+    \ 01;31 # 归档/压缩（亮红色）\n.tgz 01;31\n.arj 01;31\n.taz 01;31\n.lzh 01;31\n.zip 01;31\n\
+    .z   01;31\n.Z   01;31\n.gz  01;31\n.bz2 01;31\n.bz  01;31\n.tbz2 01;31\n.tz \
+    \ 01;31\n.deb 01;31\n.rpm 01;31\n.rar 01;31        # app-arch/rar\n.ace 01;31\
+    \        # app-arch/unace\n.zoo 01;31        # app-arch/zoo\n.cpio 01;31     \
+    \  # app-arch/cpio\n.7z  01;31        # app-arch/p7zip\n.rz  01;31        # app-arch/rzip\n\
+    \n.jpg 01;35 # 图像格式\n.jpeg 01;35\n.gif 01;35\n.bmp 01;35\n.ppm 01;35\n.tga 01;35\n\
+    .xbm 01;35\n.xpm 01;35\n.tif 01;35\n.tiff 01;35\n.png 01;35\n.mng 01;35\n.xcf\
+    \ 01;35\n.pcx 01;35\n.mpg 01;35\n.mpeg 01;35\n.m2v 01;35  # 仅 MPEG-2 视频\n.avi\
+    \ 01;35\n.mkv 01;35  # Matroska (http://matroska.org/)\n.ogm 01;35  # Ogg 文件\n\
+    .mp4 01;35  # MPEG-4 的“官方”容器\n.m4v 01;35  # 仅 MPEG-4 视频\n.mov 01;35  # QuickTime\
+    \ \n.flv 01;35  # Adobe Flash 视频\n.wmv 01;35  # Windows Media Video\n.3gp 01;35\
+    \   # 3 视频\n\n"
+- fmt: "\n```\n# swapinfo -m\nDevice          1M-blocks     Used    Avail Capacity\n\
+    /dev/da0p3           1023        0     1023     0%\n```\n\nReferences:\n\n[PSTAT](https://www.freebsd.org/cgi/man.cgi?query=swapinfo&sektion=8).\n\
+    \n# Use \"ps\" to display process status\n\n## Use \"ps\" to display process status\n\
+    \nIf you run `ps` command without any options, it will only show your processes\
+    \ who have a controlling terminal:\n\n```\n# ps\nPID TT  STAT    TIME COMMAND\n\
+    854 v0  Is+  0:00.00 /usr/libexec/getty Pc ttyv0\n710 v1  Is+  0:00.00 /usr/libexec/getty\
+    \ Pc ttyv1\n711 v2  Is+  0:00.00 /usr/libexec/getty Pc ttyv2\n712 v3  Is+  0:00.00\
+    \ /usr/libexec/getty Pc ttyv3\n713 v4  Is+  0:00.00 /usr/libexec/getty Pc ttyv4\n\
+    714 v5  Is+  0:00.00 /usr/libexec/getty Pc ttyv5\n715 v6  Is+  0:00.00 /usr/libexec/getty\
+    \ Pc ttyv6\n716 v7  Is+  0:00.00 /usr/libexec/getty Pc ttyv7\n847  0  Ss   0:00.04\
+    \ -csh (csh)\n883  0  R+   0:00.00 ps\n```\n\nIf you also want to see processes\
+    \ who don't have a controlling terminal, add `-x` option:\n\n```\n# ps -ax\nPID\
+    \ TT  STAT     TIME COMMAND\n  0  -  DLs   0:00.10 [kernel]\n  1  -  ILs   0:00.05\
+    \ /sbin/init --\n  2  -  DL    0:00.05 [cam]\n  3  -  DL    0:00.00 [mpt_recovery0]\n\
+    \  4  -  DL    0:00.00 [sctp_iterator]\n  5  -  DL    0:00.04 [pagedaemon]\n \
+    \ 6  -  DL    0:00.00 [vmdaemon]\n  7  -  DL    0:00.00 [pagezero]\n  8  -  DL\
+    \    0:00.08 [bufdaemon]\n  9  -  DL    0:00.01 [vnlru]\n 10  -  DL    0:00.00\
+    \ [audit]\n 11  -  RL   50:35.75 [idle]\n 12  -  WL    0:08.20 [intr]\n 13  -\
+    \  DL    0:00.02 [geom]\n 14  -  DL    0:00.91 [rand_harvestq]\n 15  -  DL   \
+    \ 0:00.44 [usb]\n 16  -  DL    0:00.20 [syncer]\n302  -  Is    0:00.01 dhclient:\
+    \ em0 [priv] (dhclient)\n364  -  Is    0:00.00 dhclient: em0 (dhclient)\n379 \
+    \ -  Is    0:00.00 /sbin/devd\n524  -  Ss    0:00.02 /usr/sbin/syslogd -s\n652\
+    \  -  Is    0:00.00 /usr/sbin/sshd\n655  -  Ss    0:00.10 sendmail: accepting\
+    \ connections (sendmail)\n658  -  Is    0:00.00 sendmail: Queue runner@00:30:00\
+    \ for /var/spool/clientmqueue (sendmail)\n662  -  Ss    0:00.01 /usr/sbin/cron\
+    \ -s\n844  -  Ss    0:00.06 sshd: root@pts/0 (sshd)\n854 v0  Is+   0:00.00 /usr/libexec/getty\
+    \ Pc ttyv0\n710 v1  Is+   0:00.00 /usr/libexec/getty Pc ttyv1\n711 v2  Is+   0:00.00\
+    \ /usr/libexec/getty Pc ttyv2\n712 v3  Is+   0:00.00 /usr/libexec/getty Pc ttyv3\n\
+    713 v4  Is+   0:00.00 /usr/libexec/getty Pc ttyv4\n714 v5  Is+   0:00.00 /usr/libexec/getty\
+    \ Pc ttyv5\n715 v6  Is+   0:00.00 /usr/libexec/getty Pc ttyv6\n716 v7  Is+   0:00.00\
+    \ /usr/libexec/getty Pc ttyv7\n847  0  Ss    0:00.04 -csh (csh)\n897  0  R+  \
+    \  0:00.00 ps -ax\n```\n\n time, there are more results whose `TT` columns are\
+    \ `-`. The most used `ps` command is `ps aww` which displays all processes detailed\
+    \ info, and this is similar to `ps -ef` on `GNU/Linux`:\n\n```\n ps aww\nUSER\
+    \  PID %CPU %MEM   VSZ  RSS TT STARTED     TIME COMMAND\nroot   11 99.2  0.0 \
+    \  116   -  RL    50:48 54:14.29 [idle]\nroot    0  0.0  0.0   160   -  DLs  \
+    \ 50:48  0:00.10 [kernel]\nroot    1  0.0  0.0  9492  772  -  ILs   50:48  0:00.05\
+    \ /sbin/init\nroot    2  0.0  0.0    32   -  DL    50:48  0:00.05 [cam]\nroot\
+    \    3  0.0  0.0    48   -  DL    50:48  0:00.00 [mpt_recovery0]\nroot    4  0.0\
+    \  0.0    16   -  DL    50:48  0:00.00 [sctp_iterator]\nroot    5  0.0  0.0  \
+    \  32   -  DL    50:48  0:00.05 [pagedaemon]\nroot    6  0.0  0.0    16   -  DL\
+    \    50:48  0:00.00 [vmdaemon]\nroot    7  0.0  0.0    16   -  DL    50:48  0:00.00\
+    \ [pagezero]\nroot    8  0.0  0.0    32   -  DL    50:48  0:00.08 [bufdaemon]\n\
+    root    9  0.0  0.0    16   -  DL    50:48  0:00.01 [vnlru]\nroot   10  0.0  0.0\
+    \    16   -  DL    50:48  0:00.00 [audit]\nroot   12  0.0  0.0   208   -  WL \
+    \   50:48  0:08.78 [intr]\nroot   13  0.0  0.0    48   -  DL    50:48  0:00.02\
+    \ [geom]\nroot   14  0.0  0.0    16   -  DL    50:48  0:00.98 [rand_harvestq]\n\
+    root   15  0.0  0.0   160   -  DL    50:48  0:00.47 [usb]\nroot   16  0.0  0.0\
+    \    16   -  DL    50:48  0:00.21 [syncer]\nroot   302  0.0  0.1  2148  -  Is\
+    \    50:48  0:00.01 dhclient: em0 [priv] (dhclient)\n_dhcp  364  0.0  0.1  2236\
+    \  -  Is    50:48  0:00.00 dhclient: em0 (dhclient)\nroot   379  0.0  0.2  4932\
+    \  -  Ss    50:48  0:00.00 /sbin/devd\nroot   524  0.0  0.1  2092  -  Ss    50:48\
+    \  0:00.02 /usr/sbin/syslogd -s\nroot   652  0.0  0.3  6564  -  Is    50:48  0:00.00\
+    \ /usr/sbin/sshd\nroot   655  0.0  0.3  5380  -  Ss    50:48  0:00.10 sendmail:\
+    \ accepting connections (sendmail)\nsmmsp  658  0.0  0.2  5044  -  Is    50:48\
+    \  0:00.00 sendmail: Queue runner@00:30:00 for /var/spool/clientmqueue (sendmail)\n\
+    root   662  0.0  0.1  2212  -  Is    50:48  0:00.01 /usr/sbin/cron -s\n```\n\n\
+    References:\n\n[ps -- process](https://www.freebsd.org/cgi/man.cgi?query=ps)\n\
+    \n[ps -- process](https://www.freebsd.org/cgi/man.cgi?query=ps)\n\n[ps -- process](https://www.freebsd.org/cgi/man.cgi?query=ps)\n\
+    \n[ps -- process](https://www.freebsd.org/cgi/man.cgi?query=ps)\n"
+  raw: "```\n# swapinfo -m\nDevice          1M-blocks     Used    Avail Capacity\n\
+    /dev/da0p3           1023        0     1023     0%\n```\n\nReferences:\n\n[PSTAT](https://www.freebsd.org/cgi/man.cgi?query=swapinfo&sektion=8).\n\
+    \n# Use \"ps\" to display process status\n\n## Use \"ps\" to display process status\n\
+    \nIf you run \"`ps`\" command without any options, it will only show **your**\
+    \ processes who have a controlling terminal:\n\n```\n# ps\nPID TT  STAT    TIME\
+    \ COMMAND\n854 v0  Is+  0:00.00 /usr/libexec/getty Pc ttyv0\n710 v1  Is+  0:00.00\
+    \ /usr/libexec/getty Pc ttyv1\n711 v2  Is+  0:00.00 /usr/libexec/getty Pc ttyv2\n\
+    712 v3  Is+  0:00.00 /usr/libexec/getty Pc ttyv3\n713 v4  Is+  0:00.00 /usr/libexec/getty\
+    \ Pc ttyv4\n714 v5  Is+  0:00.00 /usr/libexec/getty Pc ttyv5\n715 v6  Is+  0:00.00\
+    \ /usr/libexec/getty Pc ttyv6\n716 v7  Is+  0:00.00 /usr/libexec/getty Pc ttyv7\n\
+    847  0  Ss   0:00.04 -csh (csh)\n883  0  R+   0:00.00 ps\n```\n\nIf you also want\
+    \ to see processes who don't have a controlling terminal, add \"`-x`\" option:\n\
+    \n```\n# ps -ax\nPID TT  STAT     TIME COMMAND\n  0  -  DLs   0:00.10 [kernel]\n\
+    \  1  -  ILs   0:00.05 /sbin/init --\n  2  -  DL    0:00.05 [cam]\n  3  -  DL\
+    \    0:00.00 [mpt_recovery0]\n  4  -  DL    0:00.00 [sctp_iterator]\n  5  -  DL\
+    \    0:00.04 [pagedaemon]\n  6  -  DL    0:00.00 [vmdaemon]\n  7  -  DL    0:00.00\
+    \ [pagezero]\n  8  -  DL    0:00.08 [bufdaemon]\n  9  -  DL    0:00.01 [vnlru]\n\
+    \ 10  -  DL    0:00.00 [audit]\n 11  -  RL   50:35.75 [idle]\n 12  -  WL    0:08.20\
+    \ [intr]\n 13  -  DL    0:00.02 [geom]\n 14  -  DL    0:00.91 [rand_harvestq]\n\
+    \ 15  -  DL    0:00.44 [usb]\n 16  -  DL    0:00.20 [syncer]\n302  -  Is    0:00.01\
+    \ dhclient: em0 [priv] (dhclient)\n364  -  Is    0:00.00 dhclient: em0 (dhclient)\n\
+    379  -  Is    0:00.00 /sbin/devd\n524  -  Ss    0:00.02 /usr/sbin/syslogd -s\n\
+    652  -  Is    0:00.00 /usr/sbin/sshd\n655  -  Ss    0:00.10 sendmail: accepting\
+    \ connections (sendmail)\n658  -  Is    0:00.00 sendmail: Queue runner@00:30:00\
+    \ for /var/spool/clientmqueue (sendmail)\n662  -  Ss    0:00.01 /usr/sbin/cron\
+    \ -s\n844  -  Ss    0:00.06 sshd: root@pts/0 (sshd)\n854 v0  Is+   0:00.00 /usr/libexec/getty\
+    \ Pc ttyv0\n710 v1  Is+   0:00.00 /usr/libexec/getty Pc ttyv1\n711 v2  Is+   0:00.00\
+    \ /usr/libexec/getty Pc ttyv2\n712 v3  Is+   0:00.00 /usr/libexec/getty Pc ttyv3\n\
+    713 v4  Is+   0:00.00 /usr/libexec/getty Pc ttyv4\n714 v5  Is+   0:00.00 /usr/libexec/getty\
+    \ Pc ttyv5\n715 v6  Is+   0:00.00 /usr/libexec/getty Pc ttyv6\n716 v7  Is+   0:00.00\
+    \ /usr/libexec/getty Pc ttyv7\n847  0  Ss    0:00.04 -csh (csh)\n897  0  R+  \
+    \  0:00.00 ps -ax\n```\n\nThis time, there are more results whose `TT` columns\
+    \ are `-`.\n\nThe most used \"`ps`\" command is \"`ps auwwx`\" which displays\
+    \ all running processes detailed info, and this is similar to \"`# ps -ef`\" on\
+    \ `GNU/Linux`:\n\n```\n # ps auwwx\nUSER  PID %CPU %MEM   VSZ  RSS TT  STAT STARTED\
+    \     TIME COMMAND\nroot   11 99.2  0.0     0   16  -  RL    5:48PM 54:14.29 [idle]\n\
+    root    0  0.0  0.0     0  160  -  DLs   5:48PM  0:00.10 [kernel]\nroot    1 \
+    \ 0.0  0.0  9492  772  -  ILs   5:48PM  0:00.05 /sbin/init --\nroot    2  0.0\
+    \  0.0     0   32  -  DL    5:48PM  0:00.05 [cam]\nroot    3  0.0  0.0     0 \
+    \  16  -  DL    5:48PM  0:00.00 [mpt_recovery0]\nroot    4  0.0  0.0     0   16\
+    \  -  DL    5:48PM  0:00.00 [sctp_iterator]\nroot    5  0.0  0.0     0   32  -\
+    \  DL    5:48PM  0:00.05 [pagedaemon]\nroot    6  0.0  0.0     0   16  -  DL \
+    \   5:48PM  0:00.00 [vmdaemon]\nroot    7  0.0  0.0     0   16  -  DL    5:48PM\
+    \  0:00.00 [pagezero]\nroot    8  0.0  0.0     0   32  -  DL    5:48PM  0:00.08\
+    \ [bufdaemon]\nroot    9  0.0  0.0     0   16  -  DL    5:48PM  0:00.01 [vnlru]\n\
+    root   10  0.0  0.0     0   16  -  DL    5:48PM  0:00.00 [audit]\nroot   12  0.0\
+    \  0.0     0  208  -  WL    5:48PM  0:08.78 [intr]\nroot   13  0.0  0.0     0\
+    \   48  -  DL    5:48PM  0:00.02 [geom]\nroot   14  0.0  0.0     0   16  -  DL\
+    \    5:48PM  0:00.98 [rand_harvestq]\nroot   15  0.0  0.0     0  160  -  DL  \
+    \  5:48PM  0:00.47 [usb]\nroot   16  0.0  0.0     0   16  -  DL    5:48PM  0:00.21\
+    \ [syncer]\nroot  302  0.0  0.1 14656 2148  -  Is    5:48PM  0:00.01 dhclient:\
+    \ em0 [priv] (dhclient)\n_dhcp 364  0.0  0.1 14656 2236  -  Is    5:48PM  0:00.00\
+    \ dhclient: em0 (dhclient)\nroot  379  0.0  0.2 13628 4932  -  Ss    5:48PM  0:00.00\
+    \ /sbin/devd\nroot  524  0.0  0.1 14520 2092  -  Ss    5:48PM  0:00.02 /usr/sbin/syslogd\
+    \ -s\nroot  652  0.0  0.3 61316 6564  -  Is    5:48PM  0:00.00 /usr/sbin/sshd\n\
+    root  655  0.0  0.3 24156 5380  -  Ss    5:48PM  0:00.10 sendmail: accepting connections\
+    \ (sendmail)\nsmmsp 658  0.0  0.2 24156 5044  -  Is    5:48PM  0:00.00 sendmail:\
+    \ Queue runner@00:30:00 for /var/spool/clientmqueue (sendmail)\nroot  662  0.0\
+    \  0.1 16624 2212  -  Is    5:48PM  0:00.01 /usr/sbin/cron -s\n```\n\nReferences:\n\
+    \n[ps -- process status](https://www.freebsd.org/cgi/man.cgi?query=ps&sektion=1&manpath=freebsd-release-ports);\n\
+    \n[Processes and Daemons](https://www.freebsd.org/doc/handbook/basics-processes.html);\n\
+    \n[Show all processes in FreeBSD](http://raghukumarc.blogspot.com/2011/11/show-all-processes-in-freebsd.html).\n\
+    \n# Use \"procstat\" to get process info\n\n## Use \"procstat\" to get process\
+    \ info\n\nOn `FreeBSD`, you can use `procstat` command to get detailed info of\
+    \ process. E.g.:\n\n```\n# procstat 521\nPID  PPID  PGID   SID  TSID THR LOGIN\
+    \    WCHAN     EMUL          COMM\n521     1   521   521     0   1 root     select\
+    \    FreeBSD ELF64 syslogd\n```\n\nThe above outputs describe the info of process\
+    \ whose `PID` is `521`: its `PID`, parent `PID`, command name, etc.\n\nIf you\
+    \ want to display all processes' info, use `-a` option:\n\n```\n# procstat -a\n\
+    PID  PPID  PGID   SID  TSID THR LOGIN    WCHAN     EMUL          COMM\n0     0\
+    \     0     0     0  10 -        -         -             kernel\n1     0     1\
+    \     1     0   1 root     wait      FreeBSD ELF64 init\n2     0     0     0 \
+    \    0   2 -        -         -             cam\n3     0     0     0     0   1\
+    \ -        idle      -             mpt_recovery0\n4     0     0     0     0  \
+    \ 1 -        waiting_  -             sctp_iterator\n5     0     0     0     0\
+    \   2 -        umarcl    -             pagedaemon\n6     0     0     0     0 \
+    \  1 -        psleep    -             vmdaemon\n7     0     0     0     0   1\
+    \ -        pgzero    -             pagezero\n```\n\nThere are many options you\
+    \ can use for `procstat`, i.e., if you are curious about thread info, use `-t`\
+    \ option:\n\n```\n# procstat -t 521\nPID    TID COMM             TDNAME      \
+    \     CPU  PRI STATE   WCHAN\n521 100065 syslogd          -                  0\
+    \  120 sleep   select\n```\n\nFor details of every option, please refer the [manual](https://www.freebsd.org/cgi/man.cgi?procstat).\n\
+    \n# Sockstat command\n\n## Sockstat command\n\nOn `FreeBSD`, we can employ `sockstat`\
+    \ command to list both open Internet and `UNIX`domain sockets:\n\n```\n# sockstat\n\
+    USER     COMMAND    PID   FD PROTO  LOCAL ADDRESS         FOREIGN ADDRESS\nroot\
+    \     sshd       45768 3  tcp4   192.168.80.129:22     192.168.80.1:60803\nroot\
+    \     sshd       22144 3  tcp4   192.168.80.129:22     192.168.80.1:54834\nroot\
+    \     sshd       19097 3  tcp4   192.168.80.129:22     192.168.80.1:58174\nsmmsp\
+    \    sendmail   662   3  dgram  -> /var/run/log\nroot     sendmail   659   3 \
+    \ tcp4   127.0.0.1:25          *:*\nroot     sendmail   659   4  dgram  -> /var/run/logpriv\n\
+    root     sshd       656   3  tcp6   *:22                  *:*\nroot     sshd \
+    \      656   4  tcp4   *:22                  *:*\n......\n```\n\nWe can see the\
+    \ output of `sockstat` lists which process owns the socket, the file descriptor\
+    \ number of the socket, etc. So it is a really awesome tool to diagnose network\
+    \ related issues.\n\nReference:\n\n[SOCKSTAT(1)](https://www.freebsd.org/cgi/man.cgi?query=sockstat&sektion=1).\n\
+    \n# Use \"freecolor\" to display memory and swap usage\n\n## Use \"freecolor\"\
+    \ to display memory and swap usage\n\n`Freecolor` on `FreeBSD` is equal to `free`\
+    \ on `GNU/Linux`. Install it:\n\n```\n# cd /usr/ports/sysutils/freecolor\n# make\
+    \ install clean \n```\n\nDisplay the memory and swap usage in bar format:"
+  toc: []
+  trans: "\n\n```\n# swapinfo -m\nDevice          1M-blocks     Used    Avail Capacity\n\
+    /dev/da0p3           1023        0     1023     0%\n```\n\n引用：\n\n[PSTAT](https://www.freebsd.org/cgi/man.cgi?query=swapinfo&sektion=8)。\n\
+    \n# 使用 \"ps\" 显示进程状态\n\n## 使用 \"ps\" 显示进程状态\n\n如果你在不带任何选项的情况下运行 `ps` 命令，它将只显示具有控制终端的进程：\n\
+    \n```\n# ps\nPID TT  STAT    TIME COMMAND\n854 v0  Is+  0:00.00 /usr/libexec/getty\
+    \ Pc ttyv0\n710 v1  Is+  0:00.00 /usr/libexec/getty Pc ttyv1\n711 v2  Is+  0:00.00\
+    \ /usr/libexec/getty Pc ttyv2\n712 v3  Is+  0:00.00 /usr/libexec/getty Pc ttyv3\n\
+    713 v4  Is+  0:00.00 /usr/libexec/getty Pc ttyv4\n714 v5  Is+  0:00.00 /usr/libexec/getty\
+    \ Pc ttyv5\n715 v6  Is+  0:00.00 /usr/libexec/getty Pc ttyv6\n716 v7  Is+  0:00.00\
+    \ /usr/libexec/getty Pc ttyv7\n847  0  Ss   0:00.04 -csh (csh)\n883  0  R+   0:00.00\
+    \ ps\n```\n\n如果你也想查看没有控制终端的进程，请添加 `-x` 选项：\n\n```\n# ps -ax\nPID TT  STAT    \
+    \ TIME COMMAND\n  0  -  DLs   0:00.10 [kernel]\n  1  -  ILs   0:00.05 /sbin/init\
+    \ --\n  2  -  DL    0:00.05 [cam]\n  3  -  DL    0:00.00 [mpt_recovery0]\n  4\
+    \  -  DL    0:00.00 [sctp_iterator]\n  5  -  DL    0:00.04 [pagedaemon]\n  6 \
+    \ -  DL    0:00.00 [vmdaemon]\n  7  -  DL    0:00.00 [pagezero]\n  8  -  DL  \
+    \  0:00.08 [bufdaemon]\n  9  -  DL    0:00.01 [vnlru]\n 10  -  DL    0:00.00 [audit]\n\
+    \ 11  -  RL   50:35.75 [idle]\n 12  -  WL    0:08.20 [intr]\n 13  -  DL    0:00.02\
+    \ [geom]\n 14  -  DL    0:00.91 [rand_harvestq]\n 15  -  DL    0:00.44 [usb]\n\
+    \ 16  -  DL    0:00.20 [syncer]\n302  -  Is    0:00.01 dhclient: em0 [priv] (dhclient)\n\
+    364  -  Is    0:00.00 dhclient: em0 (dhclient)\n379  -  Is    0:00.00 /sbin/devd\n\
+    524  -  Ss    0:00.02 /usr/sbin/syslogd -s\n652  -  Is    0:00.00 /usr/sbin/sshd\n\
+    655  -  Ss    0:00.10 sendmail: accepting connections (sendmail)\n658  -  Is \
+    \   0:00.00 sendmail: Queue runner@00:30:00 for /var/spool/clientmqueue (sendmail)\n\
+    662  -  Ss    0:00.01 /usr/sbin/cron -s\n844  -  Ss    0:00.06 sshd: root@pts/0\
+    \ (sshd)\n854 v0  Is+   0:00.00 /usr/libexec/getty Pc ttyv0\n710 v1  Is+   0:00.00\
+    \ /usr/libexec/getty Pc ttyv1\n711 v2  Is+   0:00.00 /usr/libexec/getty Pc ttyv2\n\
+    712 v3  Is+   0:00.00 /usr/libexec/getty Pc ttyv3\n713 v4  Is+   0:00.00 /usr/libexec/getty\
+    \ Pc ttyv4\n714 v5  Is+   0:00.00 /usr/libexec/getty Pc ttyv5\n715 v6  Is+   0:00.00\
+    \ /usr/libexec/getty Pc ttyv6\n716 v7  Is+   0:00.00 /usr/libexec/getty Pc ttyv7\n\
+    847  0  Ss    0:00.04 -csh (csh)\n897  0  R+    0:00.00 ps -ax\n```\n\n时间，还有更多\
+    \ `TT` 列为 `-` 的结果。最常用的 `ps` 命令是 `ps aww`，它会显示所有进程的详细信息，这类似于 `GNU/Linux` 上的 `ps\
+    \ -ef`：\n\n```\n ps aww\nUSER  PID %CPU %MEM   VSZ  RSS TT STARTED     TIME COMMAND\n\
+    root   11 99.2  0.0   116   -  RL    50:48 54:14.29 [idle]\nroot    0  0.0  0.0\
+    \   160   -  DLs   50:48  0:00.10 [kernel]\nroot    1  0.0  0.0  9492  772  -\
+    \  ILs   50:48  0:00.05 /sbin/init\nroot    2  0.0  0.0    32   -  DL    50:48\
+    \  0:00.05 [cam]\nroot    3  0.0  0.0    48   -  DL    50:48  0:00.00 [mpt_recovery0]\n\
+    root    4  0.0  0.0    16   -  DL    50:48  0:00.00 [sctp_iterator]\nroot    5\
+    \  0.0  0.0    32   -  DL    50:48  0:00.00 [pagedaemon]\nroot    6  0.0  0.0\
+    \    0   -  DL    50:48  0:00.00 [vmdaemon]\nroot    7  0.0  0.0    0   -  DL\
+    \    50:48  0:00.00 [pagezero]\nroot    8  0.0  0.0    32   -  DL    50:48  0:00.08\
+    \ [bufdaemon]\nroot    9  0.0  0.0    16   -  DL    50:48  0:00.01 [vnlru]\n 10\
+    \  -  0.0  0.0    0   -  DL    50:48  0:00.00 [audit]\n 11  -  0.0  0.0    0 \
+    \  -  RL    50:48  50:35.75 [idle]\n 12  -  0.0  0.0    0   -  WL    50:48  0:08.20\
+    \ [intr]\n 13  -  0.0  0.0    32   -  DL    50:48  0:00.02 [geom]\n 14  -  0.0\
+    \  0.0    0   -  DL    50:48  0:00.91 [rand_harvestq]\n 15  -  0.0  0.0    16\
+    \   -  DL    50:48  0:00.44 [usb]\n 16  -  0.0  0.0    16   -  DL    50:48  0:00.20\
+    \ [syncer]\nroot   302  -  0.0  0.1  2148  -  Is    50:48  0:00.01 dhclient: em0\
+    \ [priv] (dhclient)\nroot   364  -  0.0  0.1  2236  -  Is    50:48  0:00.00 dhclient:\
+    \ em0 (dhclient)\nroot   379  -  0.0  0.2  4932  -  Ss    50:48  0:00.00 /sbin/devd\n\
+    root   524  -  0.0  0.1  2092  -  Ss    50:48  0:00.02 /usr/sbin/syslogd -s\n\
+    root   652  -  0.0  0.3  6564  -  Is    50:48  0:00.00 /usr/sbin/sshd\nroot  \
+    \ 655  -  0.0  0.3  5380  -  Ss    50:48  0:00.10 sendmail: accepting connections\
+    \ (sendmail)\nsmmsp  658  -  0.0  0.2  5044  -  Is    50:48  0:00.00 sendmail:\
+    \ Queue runner@00:30:00 for /var/spool/clientmqueue (sendmail)\nroot   662  -\
+    \  0.0  0.1  2212  -  Ss    50:48  0:00.01 /usr/sbin/cron -s\nroot   844  -  0.0\
+    \  0.0  0   -  Ss    50:48  0:00.06 sshd: root@pts/0 (sshd)\n```"
+- fmt: "\n```\n# freecolor\nPhysical  : [#################################..] 94%\
+    \   (1907820/2018396)\nSwap      : [###################################] 100%\
+    \  (1048540/1048540)\n```\n\nDisplay usage in traditional `free` format:\n\n```bash\n\
+    # freecolor -m -o\n             total       used       free     shared    buffers\
+    \     cached\nMem:          1971        107       1863          0          0 \
+    \         0\nSwap:         1023          0       1023\n```\n\nReference:\n\n[FreeBSD\
+    \ find out RAM size Including Total Amount of Free and Used Memory Size](http://www.cyberciti.biz/faq/freebsd-command-to-get-ram-information/).\n\
+    \n# Notices of using Subversion\n\n## Notices of using Subversion\n\nIf you want\
+    \ to use `Subversion`, for example, updating ports tree, you should pay attention\
+    \ to the following issues:\n\n(1) If your server works behind a proxy, you should\
+    \ modify your `Subversion` configuration file:\n\n```bash\n# cat ~/.subversion/servers\n\
+    [global]\nhttp-proxy-host = web-proxy.xxxx.com\nhttp-proxy-port = 8080\nhttp-compression\
+    \ = no\n```\n\nOtherwise, you may encounter following errors:\n\n```bash\n# svn\
+    \ checkout https://svn.FreeBSD.org/ports/head /usr/ports\nError validating server\
+    \ certificate for 'https://svn.freebsd.org:443':\n - The certificate is not issued\
+    \ by a trusted authority. Use the\n   fingerprint to validate the certificate\
+    \ manually!\n - The certificate hostname does not match.\nCertificate information:\n\
+    \ - Hostname: FG3K6C3A15800021\n - Valid: from Mar 21 09:15:26 2015 GMT until\
+    \ Mar 21 09:15:26 2025 GMT\n - Issuer: FG3K6C3A15800021, Fortinet Ltd.\n - Fingerprint:\
+    \ 1D:F4:21:20:2F:06:41:45:3F:7A:18:FB:79:F3:BB:30:36:32:22:A3\n(R)eject, accept\
+    \ (t)emporarily or accept (p)ermanently? p\nsvn: E170013: Unable to connect to\
+    \ a repository at URL 'https://svn.freebsd.org/ports/head'\nsvn: E000054: Error\
+    \ running context: Connection reset by peer\n```\n\nOr:\n\n```bash\n# svn checkout\
+    \ https://svn.FreeBSD.org/ports/head /usr/ports\n......\nsvn: E175002: REPORT\
+    \ request on '/ports/!svn/me' failed\n```\n\n(2) If you meet similar errors like\
+    \ as follows executing `svn` command:\n\n```bash\nsvn: E200030: SQLite compiled\
+    \ for 3.11.1, but running with 3.9.2\n```\n\nYou should update your `SQLite`:\n\
+    \n```bash\n# pkg upgrade sqlite3\n```\n\nReferences:\n\n[Using FreeBSD inside\
+    \ a controlled network – A required HTTP Proxy and No FTP](http://www.rhyous.com/2012/04/13/using-freebsd-inside-a-controlled-network-a-required-http-proxy-and-no-ftp/);\n\
+    \n[How to configure a HTTP proxy for svn](http://stackoverflow.com/questions/1491180/how-to-configure-a-http-proxy-for-svn).\n\
+    \n# Print PCI devices info\n\n## Print PCI devices info\n\n`FreeBSD` provides\
+    \ `pciconf` command which can list `PCI` devices info:\n\n```bash\n# pciconf -lv\n\
+    hostb0@pci0:0:0:0:  class=0x060000 card=0x197615ad chip=0x71908086 rev=0x01 hdr=0x00\n\
+    vendor = 'Intel Corporation'\ndevice = '440BX/ZX/DX - 82443BX/ZX/DX Host bridge'\n\
+    class  = bridge\nsubclass   = HOST-PCI\npcib1@pci0:0:1:0:   class=0x060400 card=0x00000000\
+    \ chip=0x71918086 rev=0x01 hdr=0x01\nvendor = 'Intel Corporation'\ndevice = '440BX/ZX/DX\
+    \ - 82443BX/ZX/DX AGP bridge'\nclass  = bridge\nsubclass   = PCI-PCI\nisab0@pci0:0:7:0:\
+    \   class=0x060100 card=0x197615ad chip=0x71108086 rev=0x08 hdr=0x00\nvendor =\
+    \ 'Intel Corporation'\ndevice = '82371AB/EB/MB PIIX4 ISA'\nclass  = bridge\nsubclass\
+    \   = PCI-ISA\n......\n```\n\nIf you are accustomed to `lspci` which is shipped\
+    \ on `GNU/Linux`, you can install it yourself:\n\n```bash\n# pkg install pciutils\n\
+    ```\n"
+  raw: "```\n# freecolor\nPhysical  : [#################################..] 94%  \
+    \ (1907820/2018396)\nSwap      : [###################################] 100%  (1048540/1048540)\n\
+    ```\n\nDisplay usage in traditional \"`free`\" format:\n\n```\n# freecolor -m\
+    \ -o\n             total       used       free     shared    buffers     cached\n\
+    Mem:          1971        107       1863          0          0          0\nSwap:\
+    \         1023          0       1023\n```\n\nReference:\n\n[FreeBSD find out RAM\
+    \ size Including Total Amount of Free and Used Memory Size](http://www.cyberciti.biz/faq/freebsd-command-to-get-ram-information/).\n\
+    \n# Notices of using Subversion\n\n## Notices of using Subversion\n\nIf you want\
+    \ to use `Subversion`, for example, updating ports tree, you should pay attention\
+    \ to the following issues:\n\n(1) If your server works behind a proxy, you should\
+    \ modify your `Subversion` configuration file:\n\n```\n# cat ~/.subversion/servers\n\
+    [global]\nhttp-proxy-host = web-proxy.xxxx.com\nhttp-proxy-port = 8080\nhttp-compression\
+    \ = no\n```\n\nOtherwise, you may encounter following errors:\n\n```\n# svn checkout\
+    \ https://svn.FreeBSD.org/ports/head /usr/ports\nError validating server certificate\
+    \ for 'https://svn.freebsd.org:443':\n - The certificate is not issued by a trusted\
+    \ authority. Use the\n   fingerprint to validate the certificate manually!\n -\
+    \ The certificate hostname does not match.\nCertificate information:\n - Hostname:\
+    \ FG3K6C3A15800021\n - Valid: from Mar 21 09:15:26 2015 GMT until Mar 21 09:15:26\
+    \ 2025 GMT\n - Issuer: FG3K6C3A15800021, Fortinet Ltd.\n - Fingerprint: 1D:F4:21:20:2F:06:41:45:3F:7A:18:FB:79:F3:BB:30:36:32:22:A3\n\
+    (R)eject, accept (t)emporarily or accept (p)ermanently? p\nsvn: E170013: Unable\
+    \ to connect to a repository at URL 'https://svn.freebsd.org/ports/head'\nsvn:\
+    \ E000054: Error running context: Connection reset by peer\n```\n\nOr:\n\n```\n\
+    # svn checkout https://svn.FreeBSD.org/ports/head /usr/ports\n......\nsvn: E175002:\
+    \ REPORT request on '/ports/!svn/me' failed\n```\n\n(2) If you meet similar errors\
+    \ like as follows executing `svn` command:\n\n```\nsvn: E200030: SQLite compiled\
+    \ for 3.11.1, but running with 3.9.2\n```\n\nYou should update your `SQLite`:\n\
+    \n```\n# pkg upgrade sqlite3\n```\n\nReferences:\n\n[Using FreeBSD inside a controlled\
+    \ network – A required HTTP Proxy and No FTP](http://www.rhyous.com/2012/04/13/using-freebsd-inside-a-controlled-network-a-required-http-proxy-and-no-ftp/);\n\
+    \n[How to configure a HTTP proxy for svn](http://stackoverflow.com/questions/1491180/how-to-configure-a-http-proxy-for-svn).\n\
+    \n# Print PCI devices info\n\n## Print PCI devices info\n\n`FreeBSD` provides\
+    \ `pciconf` command which can list `PCI` devices info:\n\n```\n# pciconf -lv\n\
+    hostb0@pci0:0:0:0:  class=0x060000 card=0x197615ad chip=0x71908086 rev=0x01 hdr=0x00\n\
+    vendor = 'Intel Corporation'\ndevice = '440BX/ZX/DX - 82443BX/ZX/DX Host bridge'\n\
+    class  = bridge\nsubclass   = HOST-PCI\npcib1@pci0:0:1:0:   class=0x060400 card=0x00000000\
+    \ chip=0x71918086 rev=0x01 hdr=0x01\nvendor = 'Intel Corporation'\ndevice = '440BX/ZX/DX\
+    \ - 82443BX/ZX/DX AGP bridge'\nclass  = bridge\nsubclass   = PCI-PCI\nisab0@pci0:0:7:0:\
+    \   class=0x060100 card=0x197615ad chip=0x71108086 rev=0x08 hdr=0x00\nvendor =\
+    \ 'Intel Corporation'\ndevice = '82371AB/EB/MB PIIX4 ISA'\nclass  = bridge\nsubclass\
+    \   = PCI-ISA\n......\n```\n\nIf you are accustomed to `lspci` which is shipped\
+    \ on `GNU/Linux`, you can install it yourself:\n\n```\n# pkg install pciutils\n\
+    ......\n# lspci\n00:00.0 Host bridge: Intel Corporation 440BX/ZX/DX - 82443BX/ZX/DX\
+    \ Host bridge (rev 01)\n00:01.0 PCI bridge: Intel Corporation 440BX/ZX/DX - 82443BX/ZX/DX\
+    \ AGP bridge (rev 01)\n00:07.0 ISA bridge: Intel Corporation 82371AB/EB/MB PIIX4\
+    \ ISA (rev 08)\n......\n```\n\nReference:\n\n[\"lspci\" & pciconf commands in\
+    \ FreeBSD](http://kazaonfreebsd.blogspot.com/2012/12/lspci-pciconf-commands-in-freebsd.html).\n\
+    \n# Mount procfs file system\n\n## Mount procfs file system\n\n`FreeBSD` doesn't\
+    \ mount `procfs` file system by default, if you need it, you can mount it yourself:\n\
+    \n```\nmount -t procfs proc    /proc\n```\n\nIf you want the `procfs` is automatically\
+    \ mounted at boot time, you can add the following line in `/etc/fstab` file:\n\
+    \n```\nproc         /proc   procfs  rw    0 0 \n```\n\nReferences:\n\n[procfs:\
+    \ Gone But Not Forgotten](https://www.freebsd.org/doc/en/articles/linux-users/procfs.html);\n\
+    \n[procfs -- process file system](https://www.freebsd.org/cgi/man.cgi?query=procfs&sektion=&n=1).\n\
+    \n# Kldstat command\n\n## Kldstat command\n\nOn `FreeBSD`, you can use `kldstat`\
+    \ command to display the status of any files dynamically linked into the kernel:\n\
+    \n```\n# kldstat\nId Refs Address            Size     Name\n 1    6 0xffffffff80200000\
+    \ 17bc6a8  kernel\n 2    1 0xffffffff81a11000 56c6     fdescfs.ko\n 3    1 0xffffffff81a17000\
+    \ 2ba8     uhid.ko\n```\n\nIf you want more detailed info, you can use `-v` option:\n\
+    \n```\n# kldstat -v\nId Refs Address            Size     Name\n 1    6 0xffffffff80200000\
+    \ 17bc6a8  kernel (/boot/kernel/kernel)\n Contains modules:\n  Id Name\n  386\
+    \ if_lo\n  398 newreno\n  373 elf32\n  372 elf64\n  374 shell\n.....\n```\n\n\
+    Reference:\n\n[KLDSTAT(8)](https://www.freebsd.org/cgi/man.cgi?kldstat(8)).\n\n\
+    # Load and unload files into kernel\n\n## Load and unload files into kernel\n\n\
+    You can use `kldload` command to load files into kernel. For example, enter `/boot/kernel`\
+    \ directory, and use `kldstat` to check currently loaded files:\n\n```\n# cd /boot/kernel\n\
+    # kldstat\nId Refs Address            Size     Name\n 1    6 0xffffffff80200000\
+    \ 17bc6a8  kernel\n 2    1 0xffffffff81a11000 56c6     fdescfs.ko\n 3    1 0xffffffff81a17000\
+    \ 2ba8     uhid.ko\n```\n\nUse `kldload` to load `zfs.ko` file:\n\n```\n# kldload\
+    \ zfs.ko\n# kldstat\nId Refs Address            Size     Name\n 1   15 0xffffffff80200000\
+    \ 17bc6a8  kernel\n 2    1 0xffffffff81a11000 56c6     fdescfs.ko\n 3    1 0xffffffff81a17000\
+    \ 2ba8     uhid.ko\n 7    1 0xffffffff81a1a000 1ee0c8   zfs.ko\n 8    1 0xffffffff81c09000\
+    \ 3330     opensolaris.ko\n```\n\nYou can see the `zfs.ko` is loaded successfully.\n\
+    \nUnloading file uses `kldunload` command:\n\n```\n# kldunload zfs.ko\n# kldstat\n\
+    Id Refs Address            Size     Name\n 1    6 0xffffffff80200000 17bc6a8 \
+    \ kernel\n 2    1 0xffffffff81a11000 56c6     fdescfs.ko\n 3    1 0xffffffff81a17000\
+    \ 2ba8     uhid.ko\n```\n\nReference:\n\n[kldload](https://www.freebsd.org/cgi/man.cgi?kldload(8));\n\
+    \n[kldunload](https://www.freebsd.org/cgi/man.cgi?kldunload(8))."
+  toc: []
+  trans: "\n\n```\n# freecolor\nPhysical  : [#################################..]\
+    \ 94%   (1907820/2018396)\nSwap      : [###################################] 100%\
+    \  (1048540/1048540)\n```\n\n以传统的 `free` 格式显示用法：\n\n```bash\n# freecolor -m -o\n\
+    \             total       used       free     shared    buffers     cached\nMem:\
+    \          1971        107       1863          0          0          0\nSwap:\
+    \         1023          0       1023\n```\n\n参考：\n\n[FreeBSD 查找 RAM 内存大小，包括空闲和已用内存大小](http://www.cyberciti.biz/faq/freebsd-command-to-get-ram-information/).\n\
+    \n# 使用 Subversion 的注意事项\n\n## 使用 Subversion 的注意事项\n\n如果您想使用 `Subversion`（例如更新\
+    \ ports 树），您应该注意以下问题：\n\n(1) 如果您的服务器运行在代理之后，您应该修改您的 `Subversion` 配置文件：\n\n```bash\n\
+    # cat ~/.subversion/servers\n[global]\nhttp-proxy-host = web-proxy.xxxx.com\n\
+    http-proxy-port = 8080\nhttp-compression = no\n```\n\n否则，您可能会遇到以下错误：\n\n```bash\n\
+    # svn checkout https://svn.FreeBSD.org/ports/head /usr/ports\nError validating\
+    \ server certificate for 'https://svn.freebsd.org:443':\n - 证书不是由信任的机构颁发的。请使用\n\
+    \   指纹手动验证证书！\n - 证书主机名不匹配。\n证书信息：\n - Hostname: FG3K6C3A15800021\n - Valid: from\
+    \ Mar 21 09:15:26 2015 GMT until Mar 21 09:15:26 2025 GMT\n - Issuer: FG3K6C3A15800021,\
+    \ Fortinet Ltd.\n - Fingerprint: 1D:F4:21:20:2F:06:41:45:3F:7A:18:FB:79:F3:BB:30:36:32:22:A3\n\
+    (R)eject，临时接受 (t) 还是永久接受 (p)? p\nsvn: E170013: Unable to connect to a repository\
+    \ at URL 'https://svn.freebsd.org/ports/head'\nsvn: E000054: Error running context:\
+    \ Connection reset by peer\n```\n\n或：\n\n```bash\n# svn checkout https://svn.FreeBSD.org/ports/head\
+    \ /usr/ports\n......\nsvn: E175002: REPORT request on '/ports/!svn/me' failed\n\
+    ```\n\n(2) 如果您在执行 `svn` 命令时遇到类似下面的错误：\n\n```bash\nsvn: E200030: SQLite compiled\
+    \ for 3.11.1, but running with 3.9.2\n```\n\n您应该更新您的 `SQLite`：\n\n```bash\n# pkg\
+    \ upgrade sqlite3\n```\n\n参考文献：\n\n[在受控网络中使用 FreeBSD – 必须的 HTTP 代理且无 FTP](http://www.rhyous.com/2012/04/13/using-freebsd-inside-a-controlled-network-a-required-http-proxy-and-no-ftp/)；\n\
+    \n[如何为 svn 配置 HTTP 代理](http://stackoverflow.com/questions/1491180/how-to-configure-a-http-proxy-for-svn).\n\
+    \n# 输出 PCI 设备信息\n\n## 输出 PCI 设备信息\n\n`FreeBSD` 提供了 `pciconf` 命令，可以列出 `PCI` 设备信息：\n\
+    \n```bash\n# pciconf -lv\nhostb0@pci0:0:0:0:  class=0x060000 card=0x197615ad chip=0x71908086\
+    \ rev=0x01 hdr=0x00\nvendor = 'Intel Corporation'\ndevice = '440BX/ZX/DX - 82443BX/ZX/DX\
+    \ Host bridge'\nclass  = bridge\nsubclass   = HOST-PCI\npcib1@pci0:0:1:0:   class=0x060400\
+    \ card=0x00000000 chip=0x71918086 rev=0x01 hdr=0x01\nvendor = 'Intel Corporation'\n\
+    device = '440BX/ZX/DX - 82443BX/ZX/DX AGP bridge'\nclass  = bridge\nsubclass \
+    \  = PCI-PCI\nisab0@pci0:0:7:0:   class=0x060100 card=0x197615ad chip=0x71108086\
+    \ rev=0x08 hdr=0x00\nvendor = 'Intel Corporation'\ndevice = '82371AB/EB/MB PIIX4\
+    \ ISA'\nclass  = bridge\nsubclass   = PCI-ISA\n......\n```\n\n如果您习惯了 `GNU/Linux`\
+    \ 自带的 `lspci`，您可以自行安装：\n\n```bash\n# pkg install pciutils\n```\n\n"
