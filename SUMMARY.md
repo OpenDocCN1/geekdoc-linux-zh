@@ -400,6 +400,7 @@
 +   [Linux 安全基础指南](docs/linux-security-fundamentals/README.md)
 +   [Linux 服务器安全第一版：攻击与防御](docs/linux-server-security-first-edition-hack-and-defend/README.md)
 +   [Linux 服务器安全：攻击与防御](docs/linux-server-security-hack-and-defend/README.md)
++   [Linux 服务部署（基于 Red Hat Linux 8.x 测试）](docs/linux-services-deployment-tested-in-red-hat-linux-8x/README.md)
 +   [Linux Shell 编程：8 小时入门，初学者指南！](docs/linux-shell-programming-in-8-hours-for-beginners/README.md)
 +   [Linux Shell 编程：口袋指南](docs/linux-shell-programming-pocket-primer/README.md)
 +   [Linux Shell 脚本章节测试：Linux Shell 脚本练习册](docs/linux-shell-scripting-chapter-test-linux-shell-scripting-wor/README.md)

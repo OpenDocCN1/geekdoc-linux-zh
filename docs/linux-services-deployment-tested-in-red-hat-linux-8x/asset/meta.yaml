@@ -1,0 +1,130 @@
+name: Linux Services Deployment. Tested in Red Hat Linux 8.x
+name_cn: Linux 服务部署（基于 Red Hat Linux 8.x 测试）
+slug: linux-services-deployment-tested-in-red-hat-linux-8x
+toc:
+- - '#'
+  - Linux 服务部署（基于 Red Hat Linux 8.x 测试）
+- - '##'
+  - 献辞
+- - '##'
+  - 致谢
+- - '##'
+  - 读者画像
+- - '#'
+  - 轻松恢复 - 备份并还原 Linux 系统
+- - '#'
+  - 安装虚拟化能力 (KVM / VIRT-MANAGER)
+- - '##'
+  - (假设输出)
+- - '##'
+  - 通过 Virt-Manager 安装虚拟机
+- - '##'
+  - 安装并配置 Nginx
+- - '##'
+  - 安装组/模块包：
+- - '###'
+  - 已安装：
+- - '###'
+  - NGINX 中的虚拟主机
+- - '###'
+  - HTTP 流量的反向代理
+- - '#'
+  - 使用 NGINX 的 HTTP 负载均衡器
+- - '##'
+  - 使用 NGINX 的 HTTP 负载均衡器
+- - '##'
+  - 无值安装 - KICKSTART
+- - '##'
+  - 使用 SAMBA 部署文件服务器
+- - '###'
+  - Samba 安装
+- - '###'
+  - 目录与权限设置
+- - '###'
+  - SELinux 配置
+- - '###'
+  - Samba 用户创建
+- - '###'
+  - Samba 配置
+- - '##'
+  - SMB 客户端
+- - '##'
+  - RED HAT LINUX 作为 WINDOWS 服务器成员域
+- - '#'
+  - /etc/fstab
+- - '##'
+  - Created by anaconda on Thu Mar 18 14:56:05 2021
+- - '#'
+  - POSTGRESQL – 安装与部署
+- - '##'
+  - 数据库恢复练习
+- - '##'
+  - POSTGRESQL 中的元数据查询
+- - '##'
+  - 在辅助文件系统中安装 PostgreSQL
+- - '##'
+  - 数据库访问定义
+- - '##'
+  - TYPE  DATABASE        USER            ADDRESS                 METHOD
+- - '#'
+  - POSTGRESQL - 流式复制
+- - '##'
+  - host replication [replication user] [allowed network] [authentication method]
+- - '##'
+  - 接受与区域相关的环境变量
+- - '#'
+  - RED HAT LINUX 中的容器 – PODMAN/SKOPEO
+- - '#'
+  - 部署 FTP 服务器 (Deploying FTP Server)
+- - '##'
+  - 允许匿名 FTP？（如果取消注释则默认允许）。
+- - '##'
+  - 取消此注释以允许本地用户登录。
+- - '##'
+  - 默认选项
+- - '##'
+  - NFS 服务部署
+- - '#'
+  - 初始防护
+- - '##'
+  - 网络配置
+- - '##'
+  - 备份管理
+- - '##'
+  - 逻辑备份与恢复
+- - '##'
+  - Galera Cluster 状态变量
+- - '##'
+  - 测试复制
+- - '#'
+  - 使用本地媒体创建存储库
+- - '##'
+  - /etc/fstab
+- - '##'
+  - Created by anaconda on Thu Dec 17 22:08:06 2020
+- - '#'
+  - LINUX 系统审计
+- - '##'
+  - 使用 AUDIT 建立 AUD 规则
+- - '###'
+  - AUDIT 中的规则设置
+- - '###'
+  - 这些规则的目的是满足 STIG 审计要求
+- - '###'
+  - 这些规则依赖于安装了 10-base-config.rules 和 99-finalize.rules
+- - '#'
+  - 使用 AUDIT 生成报告
+- - '##'
+  - 基于用户认证的报告
+- - '###'
+  - date time acct host term exe success event
+- - '##'
+  - 系统报告
+- - '###'
+  - date time auid success
+- - '##'
+  - 可执行文件摘要
+- - '###'
+  - 失败事件摘要
+- - '###'
+  - 按用户分类失败事件摘要
