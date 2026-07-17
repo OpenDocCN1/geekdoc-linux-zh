@@ -385,6 +385,7 @@
 +   [Linux：Linux 文件系统](docs/linux-linux-file-systems/README.md)
 +   [Linux 初学者指南：学习 Linux 命令行、Linux 操作系统和 Linux 命令](docs/linux-linux-for-beginners-guide-to-learn-linux-command-line-/README.md)
 +   [Linux 精通：Linux 操作系统与命令行终极指南](docs/linux-linux-mastery-the-ultimate-linux-operating-system-and-/README.md)
++   [LINUX：Linux 终端、基础功能与命令行 (Kali Linux 2016) (无线黑客、渗透测试、计算机黑客书籍第 3 卷)](docs/linux-linux-terminal-basic-functionalities-and-cli-kali-linu/README.md)
 +   [Linux 简上手法：通往高薪技术职业的快速通道：获取雇主渴求的 Linux 专业技能，开启职业新高度](docs/linux-made-easy-your-fast-track-to-a-lucrative-tech-career-g/README.md)
 +   [Linux 杂志 259 2022-06 美国版](docs/linux-magazine-259-2022-06-usa/README.md)
 +   [Linux 精通：初学者及进阶全面指南](docs/linux-mastery-a-comprehensive-guide-for-beginners-and-beyond/README.md)
