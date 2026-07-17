@@ -1,0 +1,1180 @@
+name: Ansible For Linux by Examples - 100+ Automation Examples For Linux System Administrator
+  and DevOps
+name_cn: Linux 的 Ansible 示例 - 面向 Linux 系统管理员和 DevOps 的 100+ 自动化示例
+slug: ansible-for-linux-by-examples---100-automation-examples-for-
+toc:
+- - '#'
+  - Linux 的 Ansible 示例 - 面向 Linux 系统管理员和 DevOps 的 100+ 自动化示例
+- - '#'
+  - 引言
+- - '##'
+  - 谁是 Luca Berton
+- - '###'
+  - 奖励与认可
+- - '####'
+  - '2022'
+- - '####'
+  - '2021'
+- - '#'
+  - 入门指南及示例
+- - '##'
+  - 什么是 Ansible
+- - '###'
+  - Ansible
+- - '###'
+  - Ansible 三大用例
+- - '####'
+  - 配置
+- - '####'
+  - 配置管理
+- - '####'
+  - 应用部署
+- - '##'
+  - DevOps 中的 Ansible
+- - '##'
+  - Ansible 的四个核心原则
+- - '##'
+  - Ansible 的六大价值
+- - '##'
+  - Ansible 历史
+- - '##'
+  - Ansible & Ansible Tower & Ansible 自动化平台（Automation Platform）
+- - '##'
+  - 入门
+- - '###'
+  - Ansible 架构
+- - '###'
+  - 运行你的第一个 Ansible 命令
+- - '##'
+  - 在 Ansible 上运行即时命令
+- - '##'
+  - 在 Ansible 上运行带权限管理的即时命令
+- - '##'
+  - 总结
+- - '##'
+  - 清单 (Inventory)
+- - '###'
+  - '`all` 关键字'
+- - '###'
+  - 简单的 INI 清单
+- - '###'
+  - 简单的 YAML 清单
+- - '###'
+  - 添加主机范围
+- - '###'
+  - 多个组中的主机
+- - '###'
+  - 主机变量
+- - '###'
+  - 组变量
+- - '###'
+  - 继承变量值
+- - '#'
+  - 对 `production` 和 `development` 环境执行名为 `playbook.yml` 的 ansible playbook
+- - '##'
+  - localhost 清单文件
+- - '##'
+  - 总结
+- - '##'
+  - Playbook
+- - '###'
+  - YAML 语法
+- - '###'
+  - helloworld.yml
+- - '###'
+  - 提示 1：ansible-playbook --check 选项
+- - '###'
+  - 提示 2：debug 日常用法
+- - '###'
+  - helloworld_debug.yml - 执行部分 1
+- - '###'
+  - helloworld_debug.yml - 执行部分 2
+- - '###'
+  - 等幂性 (Idempotency)
+- - '###'
+  - multipleplays.yml
+- - '###'
+  - privilege_escalation.yml
+- - '###'
+  - 最常用的 Ansible 模块
+- - '###'
+  - 总结
+- - '##'
+  - 变量
+- - '###'
+  - 不允许的变量名
+- - '###'
+  - variableprint.yml
+- - '###'
+  - variableprint.yml - 执行
+- - '###'
+  - variableprint.yml - 额外变量
+- - '###'
+  - 主机变量与组变量
+- - '###'
+  - 数组变量
+- - '###'
+  - array.yml - 执行
+- - '###'
+  - 注册变量
+- - '###'
+  - registered.yml - 执行
+- - '###'
+  - 总结
+- - '##'
+  - Facts 和魔法变量
+- - '###'
+  - Ansible Facts
+- - '####'
+  - 列出所有机器的所有 facts (ad-hoc)
+- - '###'
+  - 列出机器 playbook 中的所有事实
+- - '###'
+  - facts_printall.yml - 执行
+- - '###'
+  - 解密现有文件
+- - '###'
+  - 修改加密文件的密码
+- - '###'
+  - Playbooks 和 Ansible Vault
+- - '###'
+  - 总结
+- - '##'
+  - 条件判断
+- - '###'
+  - 使用“when”的基本条件
+- - '###'
+  - 基于 ansible_facts 的条件判断
+- - '###'
+  - 总结
+- - '##'
+  - 循环 (Loop)
+- - '###'
+  - with_* 语句
+- - '###'
+  - loop_with_items.yml
+- - '###'
+  - 总结
+- - '##'
+  - 处理器 (Handler)
+- - '###'
+  - rollingupdate.yml
+- - '##'
+  - 角色 (Role)
+- - '###'
+  - Role 目录结构
+- - '###'
+  - 在剧本中使用 Ansible roles
+- - '###'
+  - 执行顺序
+- - '##'
+  - Ansible Galaxy
+- - '###'
+  - 手动从 Ansible Galaxy 安装角色
+- - '###'
+  - 通过 Ansible Galaxy requirements.yml 从 Ansible Galaxy 安装角色
+- - '##'
+  - Ansible 最佳实践
+- - '###'
+  - 使用空格
+- - '###'
+  - 为每个步骤分配“name”
+- - '###'
+  - 为变量使用人类可读且有意义的名称
+- - '###'
+  - 使用原生 YAML
+- - '###'
+  - 使用原生模块代替运行命令
+- - '###'
+  - 配置调试消息
+- - '###'
+  - 以较低权限执行你的任务
+- - '###'
+  - 使用版本控制
+- - '###'
+  - 使用注释
+- - '#'
+  - 安装 Ansible
+- - '##'
+  - Ansible 术语 - ansible vs ansible-core 包
+- - '###'
+  - 什么是 ansible-core？什么是 ansible community 包？
+- - '#'
+  - Ansible 社区包发布周期
+- - '##'
+  - ansible community
+- - '##'
+  - ansible-core (曾为 ansible-base 2.10)
+- - '##'
+  - ansible-core
+- - '###'
+  - 什么是 ansible-core 包？
+- - '##'
+  - ansible community
+- - '###'
+  - 什么是 Ansible 社区包？
+- - '#'
+  - 链接
+- - '#'
+  - 如何在 RedHat Enterprise Linux (RHEL) 8 中通过 Ansible Engine 安装 Ansible
+- - '###'
+  - 如何在 RHEL 8 中安装 Ansible
+- - '#'
+  - 如何在 Red Hat Enterprise version 8 中安装最新版本的 Ansible
+- - '###'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '##'
+  - 如何在 CentOS 9 Stream 中安装 Ansible
+- - '###'
+  - 如何在 CentOS Stream 9 中安装 Ansible
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '##'
+  - 执行前
+- - '##'
+  - 执行后
+- - '##'
+  - 如何在 SUSE Linux Enterprise Server (SLES) 15 SP3 中安装 Ansible
+- - '###'
+  - 如何在 SLES 15 SP3 中安装 Ansible
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '##'
+  - 如何使用 PIP 安装 Ansible
+- - '###'
+  - 使用 PIP 安装 Ansible Demo
+- - '####'
+  - PIP 用户代码
+- - '####'
+  - PIP 全局代码
+- - '##'
+  - 如何在 RedHat Enterprise Linux 9 Beta 中安装 Ansible
+- - '###'
+  - 如何在 RHEL 9 Beta 中安装 Ansible
+- - '###'
+  - 链接
+- - '##'
+  - 执行前
+- - '##'
+  - 执行后
+- - '##'
+  - 如何在 Amazon Linux 2 (AWS EC2) 中安装 Ansible
+- - '###'
+  - 如何在 Amazon Linux 2 中安装 Ansible
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '###'
+  - Amazon Extras Library 代码
+- - '###'
+  - Amazon Extras Library 执行
+- - '#'
+  - Amazon Linux 2 环境配置
+- - '####'
+  - 执行后的 Amazon Extras 库
+- - '####'
+  - EPEL 代码
+- - '####'
+  - EPEL 执行
+- - '#'
+  - yum remove ansible
+- - '####'
+  - EPEL 执行后
+- - '###'
+  - 回顾
+- - '##'
+  - 如何在 Debian 11 中安装 Ansible
+- - '###'
+  - 如何在 Debian 中安装 Ansible
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '#'
+  - Ansible 用于 Linux
+- - '##'
+  - Ansible 术语 - `ansible_hostname` 与 `inventory_hostname` 与 `ansible_fqdn`
+- - '###'
+  - '`ansible_hostname` vs `inventory_hostname` vs `ansible_fqdn`'
+- - '####'
+  - '`ansible_hostname` 和 `ansible_fqdn`'
+- - '####'
+  - '`inventory_hostname`'
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 等幂性
+- - '###'
+  - 总结
+- - '##'
+  - 三种安全限制 playbook 执行到单台机器的方法
+- - '###'
+  - 将 playbook 限制到单个主机
+- - '###'
+  - 演示
+- - '###'
+  - Ansible 命令限制选项
+- - '##'
+  - Ansible Playbook hosts
+- - '##'
+  - Ansible Playbook hosts advanced
+- - '###'
+  - Links
+- - '##'
+  - Ansible modules - command vs shell
+- - '###'
+  - command vs shell
+- - '##'
+  - shell 模块
+- - '##'
+  - 链接
+- - '##'
+  - demo
+- - '###'
+  - command 代码
+- - '###'
+  - shell 执行
+- - '###'
+  - 错误的模块代码
+- - '###'
+  - 错误的模块执行
+- - '##'
+  - 编辑单行文本 - Ansible module lineinfile
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - 编辑多行文本 - Ansible module blockinfile
+- - '###'
+  - 主要参数
+- - '###'
+  - 演示
+- - '##'
+  - 暂停执行 - Ansible module pause
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 输出
+- - '##'
+  - 在 Ansible 主机上执行命令 - localhost
+- - '##'
+  - 在 Ansible 主机上执行命令的选项
+- - '##'
+  - 演示
+- - '###'
+  - 代码
+- - '###'
+  - 执行
+- - '###'
+  - 等幂性
+- - '##'
+  - 将文件读取到主机的变量中 - lookup
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '###'
+  - 执行
+- - '###'
+  - 等幂性
+- - '##'
+  - 重启主机 - Ansible reboot
+- - '###'
+  - 参数
+- - '###'
+  - 示例
+- - '##'
+  - 通过 HTTPS 导出 git仓库 - git module
+- - '###'
+  - 参数
+- - '###'
+  - 示例
+- - '##'
+  - 通过 SSH 导出 git仓库 - git module
+- - '###'
+  - 参数
+- - '###'
+  - 示例
+- - '##'
+  - 文件到远程 - 本地到远程 - copy
+- - '###'
+  - 参数
+- - '###'
+  - 示例
+- - '##'
+  - 从远程复制文件 - 远程到本地 - fetch
+- - '###'
+  - 参数
+- - '###'
+  - 示例
+- - '##'
+  - 在 Linux 远程主机上启动服务 - service
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行
+- - '##'
+  - 在远程主机上停止并禁用服务
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - 在远程主机上停止并启用服务
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - 应用模板 - template
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '##'
+  - 在 Linux 策略中启用或禁用宽容域 - permissive
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '##'
+  - 模板中使用循环 - 生成
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '##'
+  - 在 Linux 中调度任务 - cron
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '##'
+  - 在命令行中向 Ansible 传递变量
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 等幂性
+- - '##'
+  - 跨行拆分字符串 - 字量
+- - '###'
+  - 参数
+- - '###'
+  - 示例
+- - '####'
+  - 代码
+- - '####'
+  - variable1
+- - '####'
+  - output
+- - '####'
+  - variable2
+- - '####'
+  - code
+- - '####'
+  - execution2
+- - '####'
+  - code3
+- - '####'
+  - execution3
+- - '####'
+  - 等幂性 (Idempotency)
+- - '##'
+  - 读取环境变量 - env
+- - '###'
+  - 参数
+- - '###'
+  - 返回值
+- - '####'
+  - 示例
+- - '####'
+  - 代码
+- - '##'
+  - 任务或设置环境 - environment
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 验证
+- - '##'
+  - 永久设置系统环境变量 - /etc/environment - lineinfile
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 检查
+- - '###'
+  - 模块
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 验证
+- - '##'
+  - 结果
+- - '###'
+  - 检查
+- - '##'
+  - 执行前
+- - '##'
+  - 执行后
+- - '#'
+  - Ansible 代码复用：使用 Ansible Galaxy 和 Collections
+- - '##'
+  - 并使用 Ansible Galaxy - ansible-galaxy
+- - '###'
+  - 什么是 Ansible Galaxy？
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 验证
+- - '##'
+  - 和使用 Ansible Collection - `requirements.yml`
+- - '###'
+  - 什么是 Ansible Collection？
+- - '###'
+  - 链接
+- - '###'
+  - demo
+- - '###'
+  - 主要参数
+- - '###'
+  - 演示
+- - '##'
+  - 创建文本文件 - Ansible 模块 copy
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '##'
+  - 检查文件是否存在 - 模块 stat
+- - '###'
+  - 强制性
+- - '###'
+  - 主要返回值
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '##'
+  - 如何用 Ansible 创建目录？
+- - '###'
+  - 参数
+- - '###'
+  - complex
+- - '###'
+  - Demo
+- - '###'
+  - 目录？
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - '执行 '
+- - '##'
+  - 如何使用 Ansible 任务在远程系统上重命名文件或目录
+- - '###'
+  - 参数
+- - '####'
+  - Module copy
+- - '####'
+  - Module file
+- - '####'
+  - Demo
+- - '####'
+  - code
+- - '####'
+  - execution
+- - '##'
+  - 如何重命名文件或目录
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '##'
+  - 删除文件或目录 - Ansible 模块 file
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - 下载文件 - Ansible 模块 get_url
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - 解压包 - Ansible 模块 unarchive
+- - '###'
+  - 参数
+- - '###'
+  - demo
+- - '##'
+  - 在 Linux 中创建符号链接（称为 symlink 或软链接）- 模块文件
+- - '###'
+  - Ansible 创建符号链接
+- - '###'
+  - Parameters
+- - '###'
+  - demo
+- - '####'
+  - code
+- - '####'
+  - execution
+- - '####'
+  - before execution
+- - '####'
+  - after execution
+- - '####'
+  - 执行后
+- - '##'
+  - 通过 SMB/CIFS 挂载 Windows 共享
+- - '###'
+  - Ansible 挂载 SMB/CIFS 文件系统
+- - '###'
+  - 参数
+- - '###'
+  - 示例
+- - '####'
+  - 执行后的结果
+- - '#'
+  - 在 Linux 中挂载 NFS 共享 - Ansible 模块
+- - '###'
+  - Ansible 在 Linux 中挂载 NFS 共享
+- - '###'
+  - 参数
+- - '###'
+  - 示例
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '####'
+  - 执行后
+- - '###'
+  - demo
+- - '####'
+  - code
+- - '####'
+  - execution
+- - '####'
+  - idempotency
+- - '####'
+  - before execution
+- - '####'
+  - after execution
+- - '##'
+  - 使用 Rsync 备份 - 本地到远程 - Ansible synchronize 模块
+- - '###'
+  - 使用 rsync 进行 Ansible 备份
+- - '###'
+  - 主要参数
+- - '###'
+  - Links
+- - '###'
+  - demo
+- - '####'
+  - code
+- - '####'
+  - execution
+- - '####'
+  - 执行前
+- - '###'
+  - 执行后
+- - '###'
+  - code
+- - '##'
+  - 删除用户账户
+- - '###'
+  - Parameters
+- - '###'
+  - code
+- - '##'
+  - 修改用户密码
+- - '###'
+  - Parameters
+- - '###'
+  - demo
+- - '####'
+  - execution
+- - '####'
+  - verification
+- - '##'
+  - 禁用用户账户
+- - '###'
+  - Parameters
+- - '###'
+  - demo
+- - '####'
+  - code
+- - '####'
+  - execution
+- - '####'
+  - verification
+- - '###'
+  - demo（演示）
+- - '####'
+  - code
+- - '####'
+  - output（输出）
+- - '####'
+  - verification（验证）
+- - '##'
+  - 用户密码过期
+- - '###'
+  - Linux 密码老化策略
+- - '###'
+  - Parameters（参数）
+- - '###'
+  - demo（演示）
+- - '####'
+  - code
+- - '####'
+  - execution（执行）
+- - '####'
+  - before execution（执行前）
+- - '####'
+  - after execution（执行后）
+- - '##'
+  - 演示
+- - '###'
+  - 代码
+- - '###'
+  - 执行
+- - '###'
+  - 验证
+- - '##'
+  - 删除组账户
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '###'
+  - 代码
+- - '###'
+  - 执行
+- - '###'
+  - 验证
+- - '##'
+  - 修改 Linux 上的主组
+- - '###'
+  - 参数
+- - '###'
+  - '演示 '
+- - '###'
+  - 代码
+- - '###'
+  - 执行
+- - '###'
+  - '验证 '
+- - '###'
+  - 执行前
+- - '#'
+  - 在执行前的检查状态
+- - '##'
+  - Ansible 将用户添加到辅助组（组）
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 核心
+- - '####'
+  - 执行
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '#'
+  - URI 模块演示
+- - '##'
+  - API
+- - '##'
+  - 执行
+- - '####'
+  - 代码登录失败
+- - '####'
+  - 执行登录失败
+- - '##'
+  - 在 Debian-like 系统上使用 Ansible 安装 Docker
+- - '###'
+  - Debian-like 上的 Docker 安装
+- - '###'
+  - 教程：在 Debian 类系统（如 Ubuntu/Debian）上使用 Ansible 部署
+- - '###'
+  - 核心
+- - '###'
+  - 步骤
+- - '####'
+  - 预期输出
+- - '####'
+  - 执行
+- - '####'
+  - 等幂性
+- - '##'
+  - 执行前
+- - '##'
+  - 执行后
+- - '##'
+  - CodeReady Containers (原Shift Local)
+- - '###'
+  - macOS 上安装 CodeReady Containers
+- - '###'
+  - 状态
+- - '###'
+  - status
+- - '###'
+  - Cluster stop
+- - '###'
+  - Cluster restart
+- - '##'
+  - 创建 Kubernetes 命名空间项目
+- - '###'
+  - 参数
+- - '###'
+  - 链接
+- - '###'
+  - demo
+- - '###'
+  - code
+- - '###'
+  - execution
+- - '##'
+  - 在类 Debian 系统上安装 flatpak
+- - '###'
+  - 概述
+- - '###'
+  - 参数
+- - '###'
+  - 示例
+- - '####'
+  - 代码
+- - '###'
+  - 执行
+- - '####'
+  - 结果
+- - '##'
+  - 在类 RedHat 系统中安装 Zoom flatpak - 模块 flatpak
+- - '###'
+  - 在类 RedHat 系统中使用 Ansible 安装 flatpak
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - 类 RedHat 系统的容器中部署 Apache 服务器 - 模块 docker_image
+- - '###'
+  - 在类 RedHat 系统的容器中部署 Apache 服务器
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 等幂性
+- - '####'
+  - 执行前
+- - '####'
+  - 执行后
+- - '##'
+  - 在类 Debian 系统中安装 Spotify snap - 模块 snap
+- - '###'
+  - Ansible 在类 Debian 系统上安装 snap
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 等幂性
+- - '####'
+  - 执行前
+- - '####'
+  - 执行后
+- - '##'
+  - 在类 RedHat 系统中安装 Google Chrome - 模块 rpm_key, yum_repos
+- - '###'
+  - Ansible 在类 RedHat 系统中安装 Google Chrome
+- - '###'
+  - 参数概述
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 验证
+- - '##'
+  - 在类 RedHat 系统中安装 Microsoft Edge - 模块 rpm_key, yum_repository 和 yum
+- - '###'
+  - Ansible 在类 RedHat 系统中安装 Microsoft Edge
+- - '###'
+  - execution
+- - '####'
+  - verification
+- - '#'
+  - NFS 服务器 - 在类 RedHat 系统中导出 NFS 共享：RHEL, CentOS, CentOS Stream, Fedora - 使用 Ansible
+    模块 yum, file, lineinfile, command, firewald, service
+- - '###'
+  - 在类 RedHat 系统中导出 NFS 共享
+- - '###'
+  - 示例
+- - '####'
+  - 代码
+- - '####'
+  - execution
+- - '####'
+  - before execution
+- - '####'
+  - 执行后
+- - '##'
+  - 在 RedHat 类系统上部署 httpd Web 服务器 - 模块 yum, copy, service firewalld
+- - '###'
+  - 在 RedHat 类系统上部署 httpd Web 服务器
+- - '###'
+  - demo
+- - '####'
+  - code
+- - '####'
+  - execution
+- - '####'
+  - idempotency
+- - '####'
+  - 执行后
+- - '###'
+  - 总结
+- - '##'
+  - 在类 RedHat 系统上部署 squid 代理服务器 - 模块 yum, template, service 和 firewalld
+- - '###'
+  - 在类 RedHat 上部署 squid 代理
+- - '###'
+  - 示例
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 幂幂性 (Idempotency)
+- - '####'
+  - 执行后
+- - '####'
+  - 执行后
+- - '###'
+  - 执行
+- - '###'
+  - 幂幂性
+- - '###'
+  - 执行前
+- - '###'
+  - 执行后
+- - '###'
+  - 使用 Ansible 在 Debian 类系统中安装软件包
+- - '###'
+  - 主要参数
+- - '###'
+  - 演示
+- - '##'
+  - Debian 类系统滚动更新 - 模块 apt
+- - '###'
+  - 使用 Ansible 在 Debian 类系统中滚动更新软件包
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - 在 Debian 类系统中开启防火墙端口 - 模块 ufw
+- - '###'
+  - 使用 Ansible 在 Debian 类系统中开启防火墙端口
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - Debian 策略中启用或禁用宽容域 - 模块 selinux_permissive
+- - '###'
+  - 宽容域
+- - '###'
+  - 什么是 SELinux？
+- - '###'
+  - 什么是宽容模式？
+- - '###'
+  - 策略中启用或禁用宽容域
+- - '###'
+  - 参数
+- - '###'
+  - 链接
+- - '####'
+  - 执行前
+- - '####'
+  - 执行后
+- - '#'
+  - 漏洞扫描器/检测器 Log4Shell 远程代码执行 CVE-2021-44228
+- - '###'
+  - log4j-cve-2021-44228
+- - '###'
+  - Log4Shell 远程代码执行 Log4j (CVE-2021-44228)
+- - '###'
+  - 链接
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 执行后
+- - '##'
+  - 在类 RedHat 系统中安装软件包 - 模块 yum
+- - '###'
+  - Ansible 在类 RedHat 系统中安装软件包
+- - '###'
+  - 主要参数
+- - '###'
+  - 演示
+- - '####'
+  - 单个软件包
+- - '####'
+  - 特定软件包
+- - '##'
+  - 类 RedHat 系统的滚动更新 - 模块 yum
+- - '###'
+  - 使用 Ansible 在类 RedHat 系统中滚动更新软件包
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - 在类 RedHat 系统中开放防火墙端口 - 模块 firewalld
+- - '###'
+  - 使用 Ansible 在类 RedHat 系统中开放防火墙端口
+- - '###'
+  - 参数
+- - '###'
+  - 演示
+- - '##'
+  - 在类 RedHat 系统中安装 Google Chrome - 模块 rpm_key, yum_repos
+- - '###'
+  - Ansible 在类 RedHat 系统中安装 Google Chrome
+- - '###'
+  - 参数概述
+- - '###'
+  - 演示
+- - '####'
+  - 代码
+- - '####'
+  - 执行
+- - '####'
+  - 验证
+- - '##'
+  - 在类 RedHat 系统中安装 Microsoft Edge - 模块 rpm_key, yum_repository 和 yum
+- - '###'
+  - Ansible 在类 RedHat 系统中安装 Microsoft Edge
+- - '###'
+  - execution
+- - '####'
+  - verification
