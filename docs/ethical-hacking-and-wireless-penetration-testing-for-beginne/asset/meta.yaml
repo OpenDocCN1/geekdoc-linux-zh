@@ -1,0 +1,19 @@
+name: Ethical Hacking and Wireless Penetration Testing for Beginners： How to Hack
+  Wireless Networks using Kali Linux
+name_cn: 初学者指南：道德黑客与无线渗透测试：使用 Kali Linux 攻击无线网络
+slug: ethical-hacking-and-wireless-penetration-testing-for-beginne
+toc:
+- - '#'
+  - 初学者指南：道德黑客与无线渗透测试：使用 Kali Linux 攻击无线网络
+- - '##'
+  - 引言
+- - '#'
+  - 第 32 章 如何实现 WPA 字典攻击 + 应对措施
+- - '#'
+  - 第 33 章 如何实施被动探测 + 应对措施
+- - '#'
+  - 第 34 章 如何捕获 WiFi 流量 + 应对措施
+- - '#'
+  - 第 39 章 如何使用 Wi-Spy DGx & Chanalyzer
+- - '#'
+  - 第 40 章 如何实施物理安全

@@ -1,0 +1,65 @@
+# zSeries Linux Linux Oracle 10g 数据库实战经验
+
+
+
+
+
+
+
+
+## 前言
+
+## 第 1 章 zSeries 上 Linux Oracle Database 10g 概述
+### 1.1 什么是 Linux
+Linux 是由 Linus Torvalds 在 1991 年担任研究生期间最初的一种类 Unix 操作系统。开发 Linux 的目标是提供一种非专有的操作系统和应用程序环境，它完全独立于硬件架构，能够通过重新编译代码将应用程序从一个平台移动到另一个平台，而无需昂贵且耗费人力的移植工作。Linux 是一种完全网络化的 32 位/64 位架构，支持多用户、多任务和多处理器，并具有用户友好的窗口图形界面。Linux 的持续开发和测试由开源社区管理，社区使用互联网作为技术交流的主要平台。Linux 源代码可以从互联网免费下载，程序员可以自由修改代码。然而，官方内核源码的完整性由 Linux 委员会通过严格的提交和审查流程进行管理和维护，该委员会是 Linux 的国际标准机构。Linux 与其他开源软件一样，根据 GNU 公共许可协议 (GPL) 分发，并由 Caldera、Red Hat、SuSE 和 Turbo Linux 等授权发行商进行封装和分发。
+
+### 1.2 zSeries 版 Linux
+1998 年，IBM 承诺支持在其所有硬件平台（包括 zSeries）上运行 Linux。31 位版本的 Linux  Linux 发行版适用于 S/390 G5 和 G6 处理器，以及 64 位 zSeries 模型。zSeries 上的 64 位 Linux 支持通过开源项目可用，并于 2001 年 4 月由 SuSE 提供。Linux 操作系统自 1999 年初以来一直运行在 zSeries 测试环境中。截至 1999 年 12 月，IBM 网站 `http://www.ibm.com/servers/eserver/zseries/solutions/s390da/linuxisv.html` 持续更新，以显示所有适用于 zSeries 平台的独立软件供应商 (ISV) 应用程序或基础设施。
+
+### 1.3 为什么在 zSeries 上使用 Oracle9i
+zSeries 版 Linux 是一个 ASCII 环境，利用了 IBM zSeries 硬件的优势，特别是在系统可用性和 I/O 性能方面。特别感兴趣的是 z/VM 下运行多个 Linux 镜像的能力。这为服务器整合提供了极佳的环境。它将更充分地利用系统资源并促进系统管理。Linux 并不是 zSeries 或 S/390 上其他 IBM 操作系统的替代品，它将与 z/OS、OS/390 和 VM/ESA 共存。它支持 `sed`、`awk` 等 UNIX 工具以及 C、C++、Fortran 和 Ada 等编译器。还支持 `telnet`、`ping` 和 `traceroute` 等网络工具。
+
+### 1.4 Linux Oracle Database 10g
+Oracle 于 2002 年 8 月发布了适用于 zSeries Linux 的 Oracle9i 数据库服务器。从那时起，许多客户将实例整合到 zSeries 上的 Linux 虚拟机中。2004 年 10 月，Oracle 发布了 Database 10g(10.1.3)。多个 IBM 站点已安装并测试了该代码。本文分享了这些安装经验以及位于红杉矶（Redwood Shores）的 Oracle 使用环境的经验。
+
+## 第 2 章在 zSeries 版 Linux 上安装 Oracle Database 10g 的最佳实践
+为了在 zSeries 版 Linux 上运行 Oracle RDBMS 时获得最佳性能，Linux 和 z/VM 的正确配置至关重要。我们的经验表明，大多数性能问题都是通过更改 z/VM、Linux 或 I/O 子系统解决的。本章讨论了主要的关注领域：
+* 内存大小划分与调优
+* CPU 分配
+* 分页、交换（swap）和 I/O 考虑
+* 性能监控
+* 总结
+
+### 2.1 内存大小划分与配置
+内存的大小划分和分配是在 z/VM 下 Linux 上实现 Oracle 最关键的领域之一。对于 31 位的 Oracle9i 和 31 位 Linux 发行版尤其如此。尽管 Oracle Database 10g 64 位运行在 64 位 Linux 上，内存大小划分仍会影响性能。在 z/VM 下运行时，需要扩展存储（expanded storage）。尽管 z/VM 本质上是 64 位的并支持 64 位虚拟机，但在运行 Oracle 时必须配置扩展存储。z/VM 对扩展存储的需求依然。在当前版本的 z/VM 下运行时，我们发现需要在配置中使用扩展存储。即使在 64 位环境中，z/VM 也需要 `EStore` 作为分页设备。
+
+## 第 3 章 安装 Oracle 10g 单实例
+本章描述了我们于 2004 年第四季度执行的为 zSeries 版 Linux 安装 Oracle 10g 数据库的步骤。涵盖了以下主题：
+* 设置 xWindows 连接
+* 准备安装
+* 运行 Oracle 安装程序
+* 安装后验证
+* VM 和 Linux 上的设置
+
+### 3.1 在 zSeries 版 Linux 上安装 Oracle Database 10g
+适用于 zSeries 的 Linux Oracle Database 10g 是 64 位的，可以使用 LPAR 中 VM 下的 SLES8 64 位 Linux 虚拟机进行设置，或直接在运行 SLES8 的 LPAR 上进行设置。Oracle 10g 也支持 SLES9，并计划在 RedHat 4.0 U1 上支持它。2004 年 10 月发布的版本是 Oracle Database 10g (10.1.0.3)。
+
+### 3.2 准备系统环境
+我们在普基西（Poughkeepsie）和蒙特彼利埃（Montpellier）IBM 站点的 z990 系统 Linux 虚拟机上进行了测试，以及位于红杉矶 Oracle 总部的 z990 Linux 虚拟机。本书基于名为 `LINUX1` 的 Linux 虚拟机。我们使用的文件系统是一个挂载为 `/oracle` 的 7 GB 逻辑文件。
+
+## 第 4 章 使用 ASM 安装 Oracle 10g 
+本章描述了 Oracle10g 可用的自动存储管理器 (ASM)。这是一个创建单实例并为数据库文件选择 ASM 存储的示例。
+
+### 4.1 ASM 概述
+Oracle 10g 自带的新功能之一是自动存储管理器 (ASM)。它在数据库产品中成了卷管理器和文件系统的功能，减轻了 DBA 大多数痛苦的存储管理任务。通过简单的接口，ASM 使存储管理和配置变得简单、灵活且动态。
+
+## 第 5 章 安装 CRS 和 RAC
+我们在 VM 下为 zSeries 安装了集群就绪服务 (CRS) 和带有实时集群（RAC）的 Linux Database。然后我们使用数据库创建助手 (DBCA) 创建了数据库。实时集群是 Oracle 的一项功能，用于在两个或多个节点之间共享数据库实例。使用 RAC 的理由是：
+* 提高可用性
+* 提高可扩展性
+
+### Doc ID: 10g RAC: 如何清理失败的 CRS 安装
+
+## 第 6 章 为 Oracle Database 10g 使用 TSM 和 Tivoli Data Protect
+本章介绍了 Tivoli 存储管理器 (TSM) 和 Oracle Tivoli 数据保护 (TDPO) 产品。我们演示了在 zSeries 版 Linux 上对这两个产品的安装过程。TSM 服务器也将在 z/VM 和 z/OS 上运行。
+

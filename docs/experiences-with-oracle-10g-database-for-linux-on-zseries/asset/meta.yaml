@@ -1,0 +1,8 @@
+name: Experiences with Oracle 10g Database for Linux on zSeries
+name_cn: zSeries Linux Linux Oracle 10g 数据库实战经验
+slug: experiences-with-oracle-10g-database-for-linux-on-zseries
+toc:
+- - '##'
+  - 第 5 章 安装 CRS 和 RAC
+- - '###'
+  - '5.1 Doc ID: 10g RAC: 如何清理失败的 CRS 安装'

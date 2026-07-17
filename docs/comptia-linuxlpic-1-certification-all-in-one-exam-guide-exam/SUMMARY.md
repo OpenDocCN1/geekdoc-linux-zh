@@ -1,0 +1,2 @@
++   [CompTIA Linux+／LPIC-1 认证全一备指南 (考试 LX0-103 & LX0-104／101-400 & 102-400)](README.md)
++   [CompTIA Linux+／LPIC-1 认证全一备指南 (考试 LX0-103 & LX0-104／101-400 & 102-400)](comptia-linuxlpic-1-certification-all-in-one-exam-guide-exam_0.md)
