@@ -1,0 +1,486 @@
+name: Linux Server Security ： Hack and Defend
+name_cn: Linux 服务器安全：攻击与防御
+slug: linux-server-security-hack-and-defend
+toc:
+- - '#'
+  - Linux 服务器安全：攻击与防御
+- - '##'
+  - Pages
+- - '##'
+  - 指南
+- - '##'
+  - 图表列表
+- - '###'
+  - 第 1 章：隐身衣
+- - '###'
+  - 第 2 章：数字指纹
+- - '###'
+  - 第 3 章：21 世纪的 cat
+- - '###'
+  - 第 4 章：拒绝服务
+- - '###'
+  - 第 7 章：Nmap 强大的 NSE
+- - '###'
+  - 第 8 章：恶意软件检测
+- - '##'
+  - 表格列表
+- - '###'
+  - 第 3 章：21 世纪的 cat
+- - '###'
+  - 第 5 章：Nping
+- - '###'
+  - 第 6 章：日志侦察
+- - '###'
+  - 第 7 章：Nmap 强大的 NSE
+- - '###'
+  - 第 9 章：使用 Hashcat 破解密码
+- - '#'
+  - 引言
+- - '#'
+  - 本书的组织结构
+- - '###'
+  - '第 7 章: Nmap 强大的 NSE：许多用户可能用过 `Nmap` 进行简单的端口扫描，但很少有人知道这个安全工具还包含了利用远程机器的能力。我们将探索其中的许多可能性，从
+    `Nmap` 默认自带的大量脚本开始。'
+- - '###'
+  - '第 8 章: 恶意软件检测：一种有时是完全静默的威胁已经困扰了 `Windows` 系统多年，这种威胁通常以非法安装软件的形式出现。恶意软件对系统造成的破坏范围极广，从烦人的弹出窗口到完全的在线银行账户被攻破。在本章中，我们将学习如何在
+    `Linux` 上部署一个复杂且频繁更新的防恶意软件解决方案。'
+- - '###'
+  - '第 9 章: 使用 Hashcat 破解密码：技术人员可能会惊讶地发现，有一种密码破解工具几乎可以保证破解哈希后的密码。这意味着，如果你的哈希密码被非法获取访问权限，那么攻击者看到你的明文密码只是时间问题。本章将一步步引导你完成这一过程。'
+- - '###'
+  - 第 10 章： SQL 注入攻击：在一次著名的调查中，SQL 注入攻击被列为最常见的在线攻击。尽管这种攻击可以追溯到 20 世纪 90 年代末，直到今天，仍有大量的攻击通过糟糕的编程实践成功利用了属于企业和关键在线服务的网站。本章提供了一些实用的历史信息，并提供了如何识别和利用漏洞在线服务的分步说明。
+- - '##'
+  - 谁应该读此书
+- - '##'
+  - 总结
+- - '#'
+  - 第 1 章
+- - '##'
+  - 背景
+- - '###'
+  - 探测端口
+- - '###'
+  - 混淆端口扫描器
+- - '##'
+  - apt-get install knockd
+- - '##'
+  - yum install knockd
+- - '###'
+  - 修改默认设置
+- - '###'
+  - 修改文件系统位置
+- - '###'
+  - 一些配置选项
+- - '###'
+  - 启动服务
+- - '###'
+  - 修改默认网络接口
+- - '##'
+  - systemctl restart knockd
+- - '###'
+  - 数据包类型与计时
+- - '###'
+  - 测试你的安装
+- - '##'
+  - knock [options] <host> <port[:proto]> <port[:proto]> <port[:proto]>
+- - '##'
+  - knock 11.11.11.11 6:tcp 1450:tcp 8156:tcp 22045:tcp 23501:tcp 24691:tcp
+- - '##'
+  - knock 11.11.11.11 6:tcp 1450:udp 8156:udp 22045:tcp 23501:udp 24691:tcp
+- - '##'
+  - knock -u 11 22 33 44 55
+- - '##'
+  - 让你的服务器变得不可见
+- - '###'
+  - 测试你的 iptables
+- - '##'
+  - iptables -A INPUT -s 127.0.0.0/8 -j ACCEPT
+- - '##'
+  - iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+- - '###'
+  - 安全考量
+- - '###'
+  - 瞬态序列（Ephemeral Sequences）
+- - '###'
+  - 总结
+- - '#'
+  - 第 2 章：为你的文件创建数字指纹
+- - '##'
+  - 文件系统完整性
+- - '##'
+  - 图 2.1
+- - '##'
+  - md5sum /home/chrisbinnie/debbie-and-ian.pdf
+- - '##'
+  - md5sum -c MD5SUMS
+- - '##'
+  - 整个文件系统
+- - '##'
+  - Rootkits
+- - '##'
+  - apt-get install rkhunter
+- - '##'
+  - yum install rkhunter
+- - '##'
+  - rkhunter--propupd
+- - '##'
+  - rkhunter--check
+- - '##'
+  - /usr/local/bin/rkhunter--update
+- - '##'
+  - 配置
+- - '##'
+  - 误报
+- - '##'
+  - 设计良好
+- - '##'
+  - 总结
+- - '#'
+  - 第 3 章
+- - '##'
+  - 21 世纪的 Netcat
+- - '###'
+  - 历史
+- - '###'
+  - 安装软件包
+- - '##'
+  - yum install netcat
+- - '##'
+  - yum install nmap-ncat
+- - '###'
+  - 快速上手
+- - '##'
+  - ncat -C www.chrisbinnie.tld 80
+- - '##'
+  - ncat -l 127.0.0.1 80 < index.http
+- - '##'
+  - ncat -l locahost 80 --sh-exec "ncat www.chrisbinnie.tld 8100"
+- - '##'
+  - 安全通信
+- - '##'
+  - ncat -C --ssl ssl.chrisbinnie.tld 443
+- - '##'
+  - ncat -C --ssl-verify ssl.chrisbinnie.tld 443
+- - '##'
+  - ncat -C --ssl-verify --ssl-trustfile <custom-certs.pem> <server> 443
+- - '##'
+  - ncat -l localhost 143 --sh-exec "ncat --ssl mail.chrisbinnie.tld 993"
+- - '##'
+  - ncat -v --listen --ssl
+- - '##'
+  - 可执行文件
+- - '##'
+  - ls
+- - '##'
+  - ncat --exec "/bin/bash" --max-conns 3 --allow 192.168.0.0/24 -l 8081 --keep-open
+- - '##'
+  - ncat -l --deny 1222:cb88::3b
+- - '##'
+  - ncat -l --allowfile trusted-hosts.txt
+- - '##'
+  - 杂选项
+- - '##'
+  - 总结
+- - '#'
+  - 第 4 章：拒绝服务
+- - '##'
+  - NTP 基础设施
+- - '##'
+  - NTP 反射攻击
+- - '##'
+  - iptables -A INPUT -s 0/0 -d 0/0 -p udp --source-port 123:123 -m state --state
+    ESTABLISHED -j ACCEPT
+- - '##'
+  - iptables -A OUTPUT -s 0/0 -d 0/0 -p udp --destination-port 123:123 -m state --state
+    ESTABLISHED -j ACCEPT
+- - '##'
+  - 攻击报告
+- - '##'
+  - SNMP 反射
+- - '##'
+  - DNS 解析
+- - '##'
+  - tcpdump -s 0 -w /tmp/suspect_traffic dst port 53
+- - '##'
+  - 谋
+- - '##'
+  - 国家瘫痪
+- - '##'
+  - 攻击映射
+- - '##'
+  - 功能
+- - '##'
+  - apt-get install nmap
+- - '##'
+  - yum install nmap
+- - '##'
+  - TCP
+- - '##'
+  - nping -c --tcp -p 80,443
+- - '##'
+  - nping -c --tcp -p 80 --flags rst
+- - '##'
+  - nping -c --tcp -p 80 --flags syn
+- - '##'
+  - nping -c --tcp -p 80 --flags ack
+- - '##'
+  - UDP
+- - '##'
+  - nping -c --udp
+- - '##'
+  - nping --udp
+- - '##'
+  - ARP
+- - '##'
+  - Payload 有效负载
+- - '##'
+  - Echo 模式
+- - '##'
+  - nping -e eth0 -vvv --echo-server
+- - '##'
+  - nping -e eth0 -vvv --echo-client
+- - '##'
+  - 其他 Nping 选项
+- - '##'
+  - nping --arp --sender-ip random --ttl random
+- - '##'
+  - nping -c 1000 --tcp -p 8100
+- - '##'
+  - 类型
+- - '##'
+  - nping -c 1000 --tcp -p 8100
+- - '##'
+  - 总结
+- - '#'
+  - 第 6 章：侦察行为
+- - '##'
+  - /usr/sbin/tcpdump -i eth0 icmp
+- - '##'
+  - Iptables
+- - '##'
+  - iptables -I INPUT -p icmp --type 8 -m state --state NEW,ESTABLISHED,RELATED -j
+    ACCEPT
+- - '##'
+  - 规则
+- - '##'
+  - 多部分
+- - '##'
+  - 为了取证分析
+- - '##'
+  - iptables -I INPUT -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+- - '##'
+  - iptables -I INPUT -p icmp -m limit 5/min -j ACCEPT
+- - '##'
+  - 'Blocked Traffic:'
+- - '##'
+  - log-level
+- - '#'
+  - 第 7 章：Nmap 强大的 NSE
+- - '##'
+  - 基础端口扫描
+- - '##'
+  - yum install nmap
+- - '##'
+  - apt-get install nmap
+- - '##'
+  - Nmap 引擎
+- - '##'
+  - 脚本分类
+- - '##'
+  - 影响因素
+- - '##'
+  - 安全漏洞
+- - '##'
+  - nmap --script vuln
+- - '##'
+  - 身份检查
+- - '##'
+  - nmap --script auth
+- - '##'
+  - 发现
+- - '##'
+  - nmap --script discovery
+- - '##'
+  - 更新脚本
+- - '##'
+  - nmap --script-updatedb
+- - '##'
+  - 正则表达式
+- - '##'
+  - nmap --script "default"
+- - '##'
+  - nmap --script "default or intrusive"
+- - '##'
+  - Zenmap
+- - '##'
+  - 总结
+- - '#'
+  - 第 8 章：恶意软件检测
+- - '##'
+  - 入门
+- - '##'
+  - 定义更新
+- - '##'
+  - 恶意软件哈希表
+- - '##'
+  - 安装
+- - '##'
+  - yum install wget
+- - '##'
+  - apt-get install wget
+- - '##'
+  - install inotify-tools
+- - '##'
+  - apt-get install inotify-tools
+- - '##'
+  - apt-get update
+- - '##'
+  - apt-get install inotify-tools
+- - '##'
+  - cd /usr/local/src/
+- - '##'
+  - wget http://www.rfxn.com/downloads/maldect-current.tar.gz
+- - '##'
+  - tar -xzf maldetect-current.tar.gz
+- - '##'
+  - cd maldetect-*
+- - '##'
+  - sh ./install.sh
+- - '##'
+  - 监控模式
+- - '##'
+  - 排除
+- - '##'
+  - 从 CLI 运行
+- - '##'
+  - maldet -b -r /home/?/public_html
+- - '##'
+  - 报告
+- - '##'
+  - maldet --report
+- - '##'
+  - maldet -e --report SCANID chris@binnie.tld
+- - '##'
+  - maldet --report 010116-1111212
+- - '##'
+  - log
+- - '##'
+  - 隔离与清理
+- - '##'
+  - maldet -q 010116-1111212
+- - '##'
+  - maldet -s 010116-1111212
+- - '##'
+  - maldet -n 010116-1111212
+- - '##'
+  - maldet -p
+- - '##'
+  - 更新 LMD
+- - '##'
+  - maldet --update
+- - '##'
+  - 扫描与停止扫描
+- - '##'
+  - maldet -m /usr/local,/home
+- - '##'
+  - maldet -a /home/*/uploads
+- - '##'
+  - 报告恶意软件
+- - '##'
+  - maldet -c suspicious_file.gz
+- - '##'
+  - Apache 集成
+- - '##'
+  - 总结
+- - '#'
+  - 第 9 章：使用 Hashcat 破解密码
+- - '##'
+  - 历史
+- - '##'
+  - 理解密码
+- - '##'
+  - 密钥空间
+- - '##'
+  - 哈希 (Hashes)
+- - '##'
+  - 安装
+- - '##'
+  - apt-get install p7zip-full
+- - '##'
+  - yum install p7zip p7zip-plugins
+- - '##'
+  - 7za x hashcat-2.00.7z
+- - '##'
+  - apt-get install hashcat
+- - '##'
+  - 哈希值识别 (Hash Identification)
+- - '##'
+  - authconfig --test | grep hash
+- - '##'
+  - authconfig --passalgo=512 --update
+- - '##'
+  - chage -d 0 chrisbinnie
+- - '##'
+  - openssl passwd -1 -salt 123 PASSWORD
+- - '##'
+  - echo PASSWORD | mdsumsum
+- - '##'
+  - hashcat [options] hashfile [mask|wordfiles|directories]
+- - '##'
+  - ./hashcat-cli64.bin -m0 -a0 A0.M0.hash A0.M0.word
+- - '##'
+  - Hashcat 攻击模式与数字
+- - '##'
+  - hashcat -m 1800 -a 0 -o discovered_passwords.txt
+- - '##'
+  - oclHashcat
+- - '##'
+  - Hashcat-Utils
+- - '##'
+  - 总结
+- - '#'
+  - 第 10 节：SQL 注入攻击
+- - '##'
+  - 历史
+- - '##'
+  - 在 PHP 中缓解 SQL 注入
+- - '##'
+  - git clone https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+- - '##'
+  - cd sqlmap-dev
+- - '##'
+  - python ./sqlmap.py -h
+- - '##'
+  - 启动攻击
+- - '##'
+  - python sqlmap.py -u http://www.a-vulnerable-website.com/product.php?id=1111
+- - '##'
+  - python sqlmap.py -u "http://www.a-vulnerable-website.com/product.php?id=1111"
+    --dbs
+- - '##'
+  - python sqlmap.py -u "http://www.a-vulnerable-website.com/product.php?id=1111"
+    --tables -D <database-name>
+- - '##'
+  - python sqlmap.py -u "http://www.a-vulnerable-website.com/product.php?id=1111"
+    --columns -D <database-name> -T <table-name>
+- - '##'
+  - python sqlmap.py -u "http://www.a-vulnerable-website.com/product.php?id=1111"
+    --dump -D <database-name> -T <table-name
+- - '##'
+  - python sqlmap.py -u "http://www.a-vulnerable-website.com/product.php?id=1111"
+    -C columnX,columnY -D <database-name> -T <table-name>
+- - '##'
+  - 合法尝试 SQLi
+- - '##'
+  - 总结
+- - '##'
+  - 关于作者
+- - '##'
+  - 关于技术编辑
+- - '##'
+  - 前言
+- - '###'
+  - 系统与网络威胁简介
+- - '###'
+  - 保护在线服务与理解攻击者战术
+- - '#'
+  - WILEY 终端用户许可协议
