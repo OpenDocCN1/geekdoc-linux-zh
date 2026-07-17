@@ -278,6 +278,7 @@
 +   [Linux 入门指南](docs/linux-bible/README.md)
 +   [《Linux圣经 2006版：可引导启动Fedora、KNOPPIX、Debian、SUSE、Ubuntu及其他7种发行版（附CD-ROM与DVD）》](docs/linux-bible-2006-boot-up-to-fedora-knoppix-debian-suse-ubunt/README.md)
 +   [Linux 圣经](docs/linux-bible-bible/README.md)
++   [Linux 圣经：启动 Fedora、KNOPPIX、Debian、SUSE、Ubuntu 及其他 7 种发行版](docs/linux-bible-boot-up-to-fedora-knoppix-debian-suse-ubuntu-and/README.md)
 +   [Linux 圣经（第九版）](docs/linux-bible-nineth-edition/README.md)
 +   [Linux®+ 认证圣经](docs/linux-certification-bible/README.md)
 +   [Linux 命令行](docs/linux-cli/README.md)
