@@ -1,0 +1,306 @@
+name: Hands-on DevOps with Linux： Build and Deploy DevOps Pipelines Using Linux Commands,
+  Terraform, Docker, Vagrant, and Kubernetes (English Edition)
+name_cn: Linux DevOps 实用指南：使用 Linux 命令、Terraform、Docker、Vagrant 和 Kubernetes 构建并部署
+  DevOps 流水线
+slug: hands-on-devops-with-linux-build-and-deploy-devops-pipelines
+toc:
+- - '#'
+  - Linux DevOps 实用指南：使用 Linux 命令、Terraform、Docker、Vagrant 和 Kubernetes 构建并部署 DevOps
+    流水线
+- - '#'
+  - 献给*我的家人和朋友*
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于评审员
+- - '#'
+  - 鸣谢
+- - '#'
+  - 前言
+- - '#'
+  - 第 1 章 开始使用 Linux
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - 发行版
+- - '##'
+  - 服务器
+- - '##'
+  - 结论
+- - '##'
+  - 设置你的环境
+- - '##'
+  - 安装 VirtualBox
+- - '##'
+  - 安装 Linux 系统
+- - '##'
+  - 安装你的 Linux 系统
+- - '###'
+  - 注意！
+- - '###'
+  - 通过 SSH 访问
+- - '###'
+  - 结论
+- - '#'
+  - 第 2 章：使用 Bash
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 什么是 Bash？
+- - '##'
+  - 简介
+- - '##'
+  - when leaving the console clear the screen to increase privacy
+- - '##'
+  - 重要文件
+- - '##'
+  - 权限操作
+- - '###'
+  - 修改读取写权限
+- - '###'
+  - 修改文件所有者和执行脚本所有者
+- - '#'
+  - 第 3 章 设置服务
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 学习如何安装软件包
+- - '##'
+  - APT
+- - '##'
+  - See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to newer
+    versions of the distribution.
+- - '##'
+  - 安装 PHP
+- - '##'
+  - 安装 MariaDB
+- - '##'
+  - 安装 WordPress
+- - '##'
+  - 结论
+- - '#'
+  - 第 4 章：配置 Nginx 反向代理
+- - '##'
+  - 目标
+- - '##'
+  - 安装 Nginx
+- - '##'
+  - 安装 Python
+- - '##'
+  - 使用 Flask 创建简单的页面
+- - '##'
+  - 配置反向代理
+- - '#'
+  - 第 5 章：使用 Docker 部署应用程序
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - Docker 简介
+- - '##'
+  - 安装
+- - '##'
+  - 创建容器
+- - '##'
+  - 使用 Dockerfile 创建镜像
+- - '##'
+  - 结论
+- - '#'
+  - 第 6 章：自动化你的基础设施即代码
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 基础设施即代码简介
+- - '##'
+  - 什么是 Vagrant 以及它是如何工作的？
+- - '##'
+  - Vagrant 安装
+- - '##'
+  - 使用方法
+- - '##'
+  - 运行
+- - '##'
+  - 搭建 LAMP 服务器
+- - '##'
+  - 结论
+- - '#'
+  - 第 7 章 使用云服务创建你的基础设施
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 云主要参与者
+- - '###'
+  - AWS
+- - '###'
+  - GCP
+- - '###'
+  - Azure
+- - '###'
+  - 使用 AWS 进行配置
+- - '###'
+  - 激活计费
+- - '###'
+  - 创建实例
+- - '###'
+  - 使用 Azure 进行配置
+- - '###'
+  - 安装 Azure CLI
+- - '##'
+  - 设置服务账户 (Service Account)
+- - '##'
+  - 初始化 Terraform
+- - '##'
+  - 创建基础设施
+- - '##'
+  - 结论
+- - '#'
+  - 第 9 章：使用 Git
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - Git
+- - '##'
+  - GitFlow
+- - '##'
+  - GitHub
+- - '##'
+  - 总结
+- - '#'
+  - 第 10 章 使用 Jenkins 进行持续集成和持续交付
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - 流水线 (Pipelines)
+- - '##'
+  - 持续集成 (Continuous Integration)
+- - '##'
+  - 持续交付 (Continuous Delivery)
+- - '##'
+  - 代码即流水（Pipeline as Code）与 Jenkins
+- - '##'
+  - 结论
+- - '##'
+  - 问题
+- - '#'
+  - 第 11 章 使用 Kubernetes 部署和扩展你的应用程序
+- - '##'
+  - 结构
+- - '##'
+  - 目标
+- - '##'
+  - Kubernetes
+- - '##'
+  - Kubernetes 简介
+- - '##'
+  - 在云端上部署
+- - '##'
+  - 安装 EFK 堆栈
+- - '##'
+  - 运行 Fluentd
+- - '##'
+  - 创建告警
+- - '##'
+  - 结论
+- - '#'
+  - 第 12 章 集中日志
+- - '#'
+  - 下载彩色图片
+- - '#'
+  - '[`rebrand.ly/aeb0pwp`](https://rebrand.ly/aeb0pwp)'
+- - '#'
+  - 勘误表 (Errata)
+- - '#'
+  - BPB 正在寻找你这样的作者
+- - '#'
+  - 盗版声明
+- - '#'
+  - 如果你有兴趣成为作者
+- - '#'
+  - 评论
+- - '#'
+  - 索引
+- - '###'
+  - A
+- - '###'
+  - B
+- - '###'
+  - C
+- - '###'
+  - D
+- - '###'
+  - E
+- - '###'
+  - F
+- - '###'
+  - G
+- - '###'
+  - H
+- - '###'
+  - I
+- - '###'
+  - K
+- - '###'
+  - L
+- - '###'
+  - M
+- - '###'
+  - N
+- - '###'
+  - P
+- - '###'
+  - V
+- - '#'
+  - 拉取请求 (PR)
+- - '###'
+  - Python
+- - '###'
+  - R
+- - '###'
+  - 反向代理
+- - '###'
+  - S
+- - '###'
+  - T
+- - '###'
+  - Terraform
+- - '###'
+  - Ubuntu 服务器
+- - '###'
+  - 用户
+- - '###'
+  - V
+- - '###'
+  - Vagrant
+- - '###'
+  - Vagrant Cloud
+- - '###'
+  - Vault
+- - '###'
+  - VirtualBox
+- - '###'
+  - W
+- - '###'
+  - Web 服务器网接口 (WSGI)
+- - '###'
+  - WordPress
+- - '###'
+  - Y
+- - '###'
+  - Yellow Dog 更新管理器 (YUM)
