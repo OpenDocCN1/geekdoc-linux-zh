@@ -441,6 +441,7 @@
 +   [Linkedin SRE 中文教程](docs/lkin-sre/README.md)
 +   [LPI Linux Professional Institute Web Development Essentials 学习指南：考试 030-100](docs/lpi-linux-professional-institute-web-development-essentials-/README.md)
 +   [LPIC-1 102-500 V5 考试备考：通过 6 套实践测试精通 Linux 管理：带详细解析的真实模拟考试题](docs/lpic-1-102-500-v5-exam-prep-master-linux-admin-with-6-practi/README.md)
++   [LPIC-1：Linux Professional Institute 认证](docs/lpic-1-linux-professional-institute-certification/README.md)
 +   [LPIC-1 Linux Professional Institute 认证实践测试：考试 101-500 和考试 102-500](docs/lpic-1-linux-professional-institute-certification-practice-t/README.md)
 +   [LPIC-2：Linux 专业认证认证：学习指南 考试 201 与考试 202](docs/lpic-2-linux-professional-instutute-certification-study-guid/README.md)
 +   [操作系统开发的简明指南](docs/ltl-bk-os-dev/README.md)
