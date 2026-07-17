@@ -302,6 +302,7 @@
 +   [Linux 调试、反汇编与逆向工程](docs/linux-debugging-dissasseblining-reversing/README.md)
 +   [适用于日常使用与关键基础设施的极轻极极稳定 Linux 发行版（英文版）](docs/linux-distro-super-ringan-super-stabil-untuk-penggunaan-hari/README.md)
 +   [Linux 入门指南](docs/linux-essentials/README.md)
++   [Linux Essentials (010-160)：助你首次尝试通过 LPI® Linux Essentials 考试的速成资源](docs/linux-essentials-010-160-a-time-compressed-resource-to-passi/README.md)
 +   [Linux 常见问题解答：中级用户指南](docs/linux-faqs-intermediate-users/README.md)
 +   [Linux 防火墙：iptables, psad 和 fwsnort 攻击检测与响应 [图解]](docs/linux-firewalls-attack-detection-and-response-with-iptables-/README.md)
 +   [Linux 初学者指南（第17版，2024年）](docs/linux-for-beginners---17th-edition-2024/README.md)

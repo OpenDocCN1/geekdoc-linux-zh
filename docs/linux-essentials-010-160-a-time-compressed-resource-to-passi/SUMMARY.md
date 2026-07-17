@@ -1,0 +1,2 @@
++   [Linux Essentials (010-160)：助你首次尝试通过 LPI® Linux Essentials 考试的速成资源](README.md)
++   [Linux Essentials (010-160)：助你首次尝试通过 LPI® Linux Essentials 考试的速成资源](linux-essentials-010-160-a-time-compressed-resource-to-passi_0.md)
