@@ -378,6 +378,7 @@
 +   [Linux Mint 22 初学者用户指南](docs/linux-mint-22-user-manual-for-beginners/README.md)
 +   [Linux 操作系统：Linux 操作系统入门指南：Linux 系统管理员](docs/linux-operating-system-introduction-to-linux-operating-syste/README.md)
 +   [Linux 摄影：Linux 自动化与流化摄影工作流工具](docs/linux-photography-tools-for-automated-and-streamlined-photog/README.md)
++   [Linux 编程：构建与调试指南](docs/linux-programming-building-and-debugging/README.md)
 +   [Linux 编程工具解锁指南](docs/linux-programming-tools-unveiled/README.md)
 +   [Linux Shell 编程：8 小时入门，初学者指南！](docs/linux-shell-programming-in-8-hours-for-beginners/README.md)
 +   [Linux Shell 脚本章节测试：Linux Shell 脚本练习册](docs/linux-shell-scripting-chapter-test-linux-shell-scripting-wor/README.md)
