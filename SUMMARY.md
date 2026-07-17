@@ -356,6 +356,7 @@
 +   [职场Linux使用指南](docs/linux-in-the-workplace-how-to-use-linux-in-your-workplace/README.md)
 +   [Linux (含实践指南)](docs/linux-including-practicals/README.md)
 +   [Linux 内部原理](docs/linux-inside/README.md)
++   [Linux 面试题：开源 Linux 操作系统面试题、答案与解析](docs/linux-interview-questions-open-source-linux-operating-system/README.md)
 +   [《Linux期刊》（2007年9月）](docs/linux-journal-september-2007/README.md)
 +   [Linux 内核编程：字符、块、USB 及网络接口的内核架构与设备驱动开发](docs/linux-kernel-programming-developing-kernel-architecture-and-/README.md)
 +   [Linux 内核模块编程指南](docs/linux-krn-mdl-prog-dg/README.md)
