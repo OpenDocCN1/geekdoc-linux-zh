@@ -1,0 +1,55 @@
+name: Linux Fundamentals： A Practical Guide for Data Scientists, Machine Learning
+  Engineers, and IT Professionals
+name_cn: Linux 基础：数据科学家、机器学习工程师及 IT 专业人士实用指南
+slug: linux-fundamentals-a-practical-guide-for-data-scientists-mac
+toc:
+- - '#'
+  - 1 Linux 简介
+- - '#'
+  - 安装 VirtualBox
+- - '#'
+  - Linux 命令结构
+- - '#'
+  - 3 导航
+- - '#'
+  - 4 处理文件和目录
+- - '#'
+  - 5 标准 I/O 重定向和管道
+- - '#'
+  - 6 用户与组管理
+- - '#'
+  - 将用户添加到组
+- - '#'
+  - 管理密码属性
+- - '#'
+  - 管理当前会话
+- - '#'
+  - 7 权限管理
+- - '#'
+  - 8 正则表达式
+- - '#'
+  - 9 文本处理
+- - '#'
+  - 11 任务调度
+- - '#'
+  - 12 其他实用工具
+- - '#'
+  - 13 自定义 Shell 环境
+- - '#'
+  - 算术运算
+- - '#'
+  - 关系运算符
+- - '#'
+  - 条件语句
+- - '#'
+  - 循环
+- - '#'
+  - 函数
+- - '#'
+  - 15 部署机器学习模型
+- - '#'
+  - 机器学习应用
+- - '#'
+  - 运行机器学习应用
+- - '#'
+  - 16 连接到远程 Linux 实例

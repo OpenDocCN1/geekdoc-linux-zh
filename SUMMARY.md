@@ -340,6 +340,7 @@
 +   [黑客 Linux：Linux 系统管理基础配置、网络与系统诊断、文本处理及 Linux 操作系统全指南](docs/linux-for-hackers-linux-system-administration-guide-for-basi/README.md)
 +   [Hank 的 Linux](docs/linux-for-hank/README.md)
 +   [普通人的 Linux：初学者需要的 Linux 问答指南](docs/linux-for-the-rest-of-us-a-readable-linux-guide-with-answers/README.md)
++   [Linux 基础：数据科学家、机器学习工程师及 IT 专业人士实用指南](docs/linux-fundamentals-a-practical-guide-for-data-scientists-mac/README.md)
 +   [Linux 初学者指南：Linux 操作系统与 Linux 命令最佳指南](docs/linux-guide-for-beginners-the-best-guide-to-the-linux-operat/README.md)
 +   [Linux 黑客：使用 Linux 工具和技术精通网络安全与道德黑客的初学者指南](docs/linux-hacking-a-beginners-guide-to-mastering-cybersecurity-a/README.md)
 +   [Linux硬件手册（Sams白皮书系列）](docs/linux-hardware-handbook-sams-white-book-series/README.md)
