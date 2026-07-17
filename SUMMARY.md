@@ -322,6 +322,7 @@
 +   [Linux 调试、反汇编与逆向工程](docs/linux-debugging-dissasseblining-reversing/README.md)
 +   [Linux 设备驱动开发：为嵌入式 Linux 开发定制化驱动](docs/linux-device-drivers-development-develop-customized-drivers-/README.md)
 +   [适用于日常使用与关键基础设施的极轻极极稳定 Linux 发行版（英文版）](docs/linux-distro-super-ringan-super-stabil-untuk-penggunaan-hari/README.md)
++   [LINUX：初学者指南](docs/linux-easy-linux-for-beginners/README.md)
 +   [Linux：初学者轻松学，学习 Linux 操作系统和命令行的步步指南](docs/linux-easy-linux-for-beginners-your-step-by-step-guide-to-le/README.md)
 +   [Linux 入门指南](docs/linux-essentials/README.md)
 +   [Linux Essentials (010-160)：助你首次尝试通过 LPI® Linux Essentials 考试的速成资源](docs/linux-essentials-010-160-a-time-compressed-resource-to-passi/README.md)
