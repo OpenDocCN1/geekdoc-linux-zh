@@ -1,0 +1,4750 @@
+- fmt: '
+
+    ![](cover.jpeg)
+
+
+    # Linux
+
+    Programming for Beginners
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **By Richard Dorsey**
+
+
+    ![logo](images/00004.jpeg)
+
+
+    **Copyright 2017 by Richard Dorsey - All rights reserved.**
+
+
+    The follow eBook is reproduced below with the goal of providing information that
+    is as accurate and reliable as possible. Regardless, purchasing this eBook can
+    be seen as consent to the fact that both the publisher and the author of this
+    book are in no way experts on the topics discussed within and that any recommendations
+    or suggestions that are made herein are for entertainment purposes only. Professionals
+    should be consulted as needed prior to undertaking any of the action endorsed
+    herein.
+
+
+    This declaration is deemed fair and valid by both the American Bar Association
+    and the Committee of Publishers Association and is legally binding throughout
+    the United States.
+
+
+    Furthermore, the transmission, duplication or reproduction of any of the following
+    work including specific information will be considered an illegal act irrespective
+    of if it is done electronically or in print. This extends to creating a secondary
+    or tertiary copy of the work or a recorded copy and is only allowed with express
+    written consent from the Publisher. All additional right reserved.
+
+
+    The information in the following pages is broadly considered to be a truthful
+    and accurate account of facts and as such any inattention, use or misuse of the
+    information in question by the reader will render any resulting actions solely
+    under their purview. There are no scenarios in which the publisher or the original
+    author of this work can be in any fashion deemed liable for any hardship or damages
+    that may befall them after undertaking information described herein.
+
+
+    Additionally, the information in the following pages is intended only for informational
+    purposes and should thus be thought of as universal. As befitting its nature,
+    it is presented without assurance regarding its prolonged validity or interim
+    quality. Trademarks that are mentioned are done without written consent and can
+    in no way be considered an endorsement from the trademark holder.
+
+
+    ## Table of Contents
+
+
+    ![logo](images/00003.jpeg)
+
+
+    - [Introduction](#part0003_split_000.html_chap1)
+
+    - [Chapter One: What is Linux?](#part0003_split_001.html_chap2)
+
+    - [Chapter Two: Operating Systems – What are they?](#part0003_split_002.html_chap3)
+
+    - [Chapter Three: Installing Linux and Learning the System](#part0003_split_003.html_chap4)
+
+    - [Chapter Four: Navigation of Linux](#part0003_split_004.html_chap5)
+
+    - [Chapter Five: The Linux Desktop Environment](#part0003_split_005.html_chap6)
+
+    - [Chapter Six: The Linux Interface](#part0003_split_006.html_chap7)
+
+    - [Chapter Seven: Distributions](#part0003_split_007.html_chap8)
+
+    - [Chapter Eight: Installing a Firewall with Linux](#part0003_split_008.html_chap9)
+
+    - [Chapter Nine: File Management](#part0003_split_009.html_chap10)
+
+    - [Chapter Ten: System Administration and Security](#part0003_split_010.html_chap11)
+
+    - [Chapter Eleven: Scripting with Linux](#part0003_split_011.html_chap12)
+
+    - [Chapter Twelve: Tips and Tricks to Use with Linux](#part0003_split_012.html_chap13)
+
+    - [Conclusion](#part0003_split_013.html_chap14)
+
+
+    ## Introduction
+
+
+    ![logo](images/00003.jpeg)
+
+
+    Congratulations on downloading `Linux` and thank you for doing so.
+
+
+    The subsequent chapters will explain how you can download the Linux system and
+    how to use it. The Linux system has its advantages that you are going to learn
+    throughout the pages of this book.
+
+
+    Hopefully, you find that using `Linux` is best for you and the work that you are
+    doing! If anything, else, perhaps you will learn something new about `Linux` that
+    you did not know before.
+
+
+    There are plenty of books on this subject on the market, thanks again for choosing
+    this one! Every effort was made to ensure it is full of as much useful information
+    as possible, and please enjoy!
+
+
+    Note: `Linux` may not be for everyone, but this book is going to give you all
+    of the information that you need to make an informed decision on if `Linux` is
+    right for you. Just because you read this book does not mean that you have to
+    download `Linux`, if you go through and look at the information plus you try the
+    demo for `Linux` and find that you do not like it, that is entirely your choice!
+
+
+    ## Chapter One
+
+
+    ![logo](images/00003.jpeg)
+
+
+    ### What is Linux?
+
+
+    `Linux` is an operating system that can work on computers, smartphones, and even
+    some household appliances.
+
+
+    The Linux operating system has been around since the 90’s, and it has evolved
+    into an operating system that spans across multiple continents, is used by many
+    industries, and is user based. There are not many places that you are going to
+    be able to look without finding some sort of trace of `Linux`.
+
+
+    Most of the supercomputers that are being used to make some of the most historical
+    scientific breakthroughs run as well as keeping the internet running so that we
+    are able to enjoy it. However, even before the Linux operating system became the
+    primary operating system, it was the most reliable operating system that allowed
+    its users to use it without having any worries about the security issues that
+    many other operating systems have.
+
+
+    `Linux` is exactly like `Windows 7` and `Windows 8` operating systems. We will
+    examine what an operating system is in the next chapter. If you do not have an
+    operating system on your computer then your software is not going to function
+    the way that it is supposed to.
+
+
+    You may be wondering why you should choose `Linux` over one of the other operating
+    systems. Installing `Linux` means that you have to learn an entirely new user
+    interface when you most likely know how to. But, take a step back and look at
+    the operating system that you are currently using. Do you have to repair your
+    operating system continuously or does it frequently crash?
+
+
+    With `Linux`, you are not going to have to deal with what you currently dealing.
+    Linux evolves with the current computer technology thus making it one of the most
+    stable ecosystems on the planet.
+
+
+    Another added bonus to using `Linux` is that it is completely free. You are not
+    going to have to pay anything for any licenses that you may have to pay when you
+    are using a different operating system.
+
+
+    Linux came from `Unix` operating system which was first started in 1969 by Ken
+    Thompson, Joe Ossanna, Douglas McIlroy, and Dennis Ritchie. But, in 1971 `Unix`
+    was released to the public a programming language that was comply assembled. As
+    time went on, `Unix` was rewritten in the `C` programming language thus giving
+    it a higher level of language implementations.
+
+
+    ## Chapter Two
+
+
+    ![logo](images/00003.jpeg)
+
+
+    ### Operating Systems – What are they?
+
+
+    Operating systems are the systems that are going to communicate with the hardware
+    inside of the computer so that it can talk to the software and allow the computer
+    to run the way that it is supposed to. Every program that you are going to use
+    on your computer is going to run off of the operating system. The only exception
+    is going to be firmware that you may be running on your computer.
+
+
+    Operating systems that use a timeshare are going to schedule a variety of tasks
+    to be done so that you can use the system more efficiently based on the resources
+    that are frequently used.
+
+
+    Every operating system is going to have these pieces that are going to come together
+    to work and make the operating system whole. Without one of these pieces, your
+    operating system may still work, but it may not necessary work the way that you
+    want it to.
+
+
+    - **Daemons**: the daemons are services that run in the background and are going
+    to start up after your computer is booted up or after you have logged into the
+    desktop.
+
+    - **Bootloader**: this is the software that will manage whenever your computer
+    boots up. For many users, it is a splash screen that is going to boot up the operating
+    system so the computer can run.
+
+    '
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    **Linux**
+
+
+    Programming for Beginners
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **By
+
+
+    Richard Dorsey**
+
+
+    ![logo](images/00004.jpeg)
+
+
+    **Copyright 2017 by Richard Dorsey - All rights reserved.**
+
+
+    The follow eBook is reproduced below with the goal of providing information that
+    is as accurate and reliable as possible. Regardless, purchasing this eBook can
+    be seen as consent to the fact that both the publisher and the author of this
+    book are in no way experts on the topics discussed within and that any recommendations
+    or suggestions that are made herein are for entertainment purposes only. Professionals
+    should be consulted as needed prior to undertaking any of the action endorsed
+    herein.
+
+
+    This declaration is deemed fair and valid by both the American Bar Association
+    and the Committee of Publishers Association and is legally binding throughout
+    the United States.
+
+
+    Furthermore, the transmission, duplication or reproduction of any of the following
+    work including specific information will be considered an illegal act irrespective
+    of if it is done electronically or in print. This extends to creating a secondary
+    or tertiary copy of the work or a recorded copy and is only allowed with express
+    written consent from the Publisher. All additional right reserved.
+
+
+    The information in the following pages is broadly considered to be a truthful
+    and accurate account of facts and as such any inattention, use or misuse of the
+    information in question by the reader will render any resulting actions solely
+    under their purview. There are no scenarios in which the publisher or the original
+    author of this work can be in any fashion deemed liable for any hardship or damages
+    that may befall them after undertaking information described herein.
+
+
+    Additionally, the information in the following pages is intended only for informational
+    purposes and should thus be thought of as universal. As befitting its nature,
+    it is presented without assurance regarding its prolonged validity or interim
+    quality. Trademarks that are mentioned are done without written consent and can
+    in no way be considered an endorsement from the trademark holder.
+
+
+    **Table of Contents**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    [Introduction](#part0003_split_000.html_chap1)
+
+
+    [Chapter One: What is Linux?](#part0003_split_001.html_chap2)
+
+
+    [Chapter Two: Operating Systems – What are they?](#part0003_split_002.html_chap3)
+
+
+    [Chapter Three: Installing Linux and Learning the System](#part0003_split_003.html_chap4)
+
+
+    [Chapter Four: Navigation of Linux](#part0003_split_004.html_chap5)
+
+
+    [Chapter Five: The Linux Desktop Environment](#part0003_split_005.html_chap6)
+
+
+    [Chapter Six: The Linux Interface](#part0003_split_006.html_chap7)
+
+
+    [Chapter Seven: Distributions](#part0003_split_007.html_chap8)
+
+
+    [Chapter Eight: Installing a Firewall with Linux](#part0003_split_008.html_chap9)
+
+
+    [Chapter Nine: File Management](#part0003_split_009.html_chap10)
+
+
+    [Chapter Ten: System Administration and Security](#part0003_split_010.html_chap11)
+
+
+    [Chapter Eleven: Scripting with Linux](#part0003_split_011.html_chap12)
+
+
+    [Chapter Twelve: Tips and Tricks to Use with Linux](#part0003_split_012.html_chap13)
+
+
+    [Conclusion](#part0003_split_013.html_chap14)
+
+
+    **Introduction**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    Congratulations on downloading *Linux* and thank you for doing so.
+
+
+    The subsequent chapters will explain how you can download the Linux system and
+    how to use it. The Linux system has its advantages that you are going to learn
+    throughout the pages of this book.
+
+
+    Hopefully, you find that using Linux is best for you and the work that you are
+    doing! If anything, else, perhaps you will learn something new about Linux that
+    you did not know before. $
+
+
+    There are plenty of books on this subject on the market, thanks again for choosing
+    this one! Every effort was made to ensure it is full of as much useful information
+    as possible, and please enjoy!
+
+
+    Note: Linux may not be for everyone, but this book is going to give you all of
+    the information that you need to make an informed decision on if Linux is right
+    for you. Just because you read this book does not mean that you have to download
+    Linux, if you go through and look at the information plus you try the demo for
+    Linux and find that you do not like it, that is entirely your choice!
+
+
+    **Chapter One**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **What is Linux?**
+
+
+    Linux is an operating system that can work on computers, smartphones, and even
+    some household appliances.
+
+
+    The Linux operating system has been around since the 90’s, and it has evolved
+    into an operating system that spans across multiple continents, is used by many
+    industries, and is user based. There are not many places that you are going to
+    be able to look without finding some sort of trace of Linux.
+
+
+    Most of the supercomputers that are being used to make some of the most historical
+    scientific breakthroughs run as well as keeping the internet running so that we
+    are able to enjoy it. However, even before the Linux operating system became the
+    primary operating system, it was the most reliable operating system that allowed
+    its users to use it without having any worries about the security issues that
+    many other operating systems have.
+
+
+    Linux is exactly like Windows 7 and Windows 8 operating systems. We will examine
+    what an operating system is in the next chapter. If you do not have an operating
+    system on your computer, then your computer’s software is not going to function
+    the way that it is supposed to if it operates at all.
+
+
+    You may be wondering why you should choose Linux over one of the other operating
+    systems. Installing Linux means that you have to learn an entirely new user interface
+    when you most likely already know how to use an operating system such as Windows.
+    But, take a step back and look at the operating system that you are currently
+    using. Do you have to repair your operating system continuously or does it frequently
+    crash?
+
+
+    With Linux, you are not going to have to deal with what you are currently dealing
+    with when using your current operating system. Linux evolves with the current
+    computer technology thus making it one of the most stable ecosystems on the planet.
+
+
+    Another added bonus to using Linux is that it is completely free. You are not
+    going to have to pay anything for any licenses that you may have to pay for when
+    you are using a different operating system.
+
+
+    Linux came from the Unix operating system which was first started in 1969 by Ken
+    Thompson, Joe Ossanna, Douglas McIlroy, and Dennis Ritchie. But, in 1971 Unix
+    was released to the public a programming language that was comply assembled. As
+    time went on, Unix was rewritten in the C programming language thus giving it
+    a higher level of language implementations.
+
+
+    **Chapter Two**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **Operating Systems – What are They?**
+
+
+    Operating systems are the systems that are going to communicate with the hardware
+    inside of the computer so that it can talk to the software and allow the computer
+    to run the way that it is supposed to. Every program that you are going to use
+    on your computer is going to run off of the operating system. The only exception
+    is going to be firmware that you may be running on your computer.
+
+
+    Operating systems that use a timeshare are going to schedule a variety of tasks
+    to be done so that you can use the system more efficiently based on the resources
+    that are frequently used.
+
+
+    Every operating system is going to have these pieces that are going to come together
+    to work and make the operating system whole. Without one of these pieces, your
+    operating system may still work, but it may not necessary work the way that you
+    want it to.
+
+
+    •Daemons: the daemons are services that run in the background and are going to
+    start up after your computer is booted up or after you have logged into the desktop.
+
+
+    •Bootloader: this is the software that will manage whenever your computer boots
+    up. For many users, it is a splash screen that is going to boot up the operating
+    system so the computer can run.'
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpeg)
+
+
+    # Linux
+
+    学者编程指南
+
+
+    ![logo](img/00003.jpeg)
+
+
+    **作者：Richard Dorsey**
+
+
+    ![logo](img/00004.jpeg)
+
+
+    **版权所有 2017 Richard Dorsey - 保留所有权利。**
+
+
+    下文重制的本电子书其目标是提供尽可能准确和可靠的信息。尽管如此，购买本电子书可被视为同意：此书的出版者和作者对书中讨论的话题均非专家，且书中提出的任何建议或主张仅供娱乐之用。在采取书中此处支持的任何行动之前，应根据需要咨询专业人士。
+
+
+    此声明被美国律师协会和出版商协会委员会均认为是公平且有效的，并对全美国范围内具有法律约束力。
+
+
+    此外，无论是以电子形式还是纸质形式传输、复制或复制以下任何作品（包括特定信息），都将被视为非法行为。这延伸到创建作品的二级或三级副本或录制副本，并且只有在获得出版者的明确书面许可的情况下才允许。保留所有其他权利。
+
+
+    后续页码中的信息被广泛认为是事实的真实、准确记录，因此，读者对相关信息的任何疏忽、使用或误用将导致任何后果完全由其自行承担。在任何情况下，本书的出版者或原作者均对在采取此处描述的信息后可能发生的任何困难或损害不承担责任。
+
+
+    此外，后续页码中的信息仅供参考，因此应被视为通用的。根据其性质，这些信息的呈现不对其长期有效性或中间质量提供保证。文中提到的商标是在未获得书面许可的情况下使用的，不能以任何方式被商标持有者的背书。
+
+
+    ## 目录
+
+
+    ![logo](img/00003.jpeg)
+
+
+    - 引言
+
+    - 第一章：什么是 Linux？
+
+    - 第二章：操作系统 – 它们是什么？
+
+    - 第三章：安装 Linux 和学习系统
+
+    - 第四章：Linux 导航
+
+    - 第五章：Linux 桌面环境
+
+    - 第六章：Linux 接口
+
+    - 第七章：发行版
+
+    - 第八章：使用 Linux 安装防火墙
+
+    - 第九章：文件管理
+
+    - 第十章：系统管理与安全
+
+    - 第十一章：使用 Linux 进行脚本编写
+
+    - 第十二章：Linux 使用技巧与窍门
+
+    - 结
+
+
+    ## 引言
+
+
+    ![logo](img/00003.jpeg)
+
+
+    恭喜下载了 `Linux`，感谢你的支持。
+
+
+    后续章节将解释你如何下载 Linux 系统以及如何使用它。Linux 系统有其独特的优势，你将在书中不断了解到这些优势。
+
+
+    希望你发现使用 `Linux` 对你以及你正在从事的工作是最好的！如果有的话，也许你还会学到一些关于 `Linux` 的你以前不知道的新知识。
+
+
+    市场上有很多关于这个主题的书籍，再次感谢你选择这一本！我们已尽力确保它包含尽可能有用的信息，请尽情阅读！
+
+
+    注意：`Linux` 可能并不适合所有人，但本书将为你提供所需的所有信息，以便你对 `Linux` 是否适合你做出明智决定。阅读了这本书并不意味着你必须下载
+    `Linux`，如果你浏览了这些信息并尝试了 `Linux` 的演示发现你不喜欢，那完全是你的选择！
+
+
+    ## 第一章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ### 什么是 Linux？
+
+
+    `Linux` 是一种可以在电脑、智能手机甚至某些家电器上运行的操作系统。
+
+
+    Linux 操作系统自 90 年代以来一直存在，它已经进化成一种跨越大陆、被许多行业使用并以用户为中心的操作系统。在几乎任何地方，你都能找到某种 `Linux`
+    的踪迹。
+
+
+    大多数用于实现某些具有历史意义的科学突破的超级计算机，以及维持互联网运行的计算机都在运行 Linux。然而，即使在 Linux 操作系统成为主要的操作系统之前，它已经是最可靠的操作系统，允许用户在使用时无需担心许多其他操作系统可能存在的安全问题。
+
+
+    `Linux` 与 `Windows 7` 和 `Windows 8` 操作系统一样。我们将在下一章检查什么是操作系统。如果你的电脑上没有操作系统，你的软件将无法按预期运行。
+
+
+    你可能在想为什么要选择 `Linux` 而不是其他操作系统。安装 `Linux` 意味着你需要学习全新的用户界面，而你可能已经习惯了。但请回顾一下你正在使用的操作系统。你需要不断修复它吗？还是它会经常崩溃？
+
+
+    使用 `Linux`，你不需要处理目前的问题。Linux 随着当前的技术的发展演进，使其成为世界上最稳定的生态系统之一。
+
+
+    使用 `Linux` 的另一个额外优点它是完全免费的。当你使用不同的操作系统时，可能需要支付任何许可费用，而这里不需要。
+
+
+    Linux 源自 `Unix` 操作系统，后者于 1969 年由 Ken Thompson、Joe Ossanna、Douglas McIlroy 和 Dennis
+    Ritchie 创立。但在 1971 年，`Unix` 向公众发布了汇编语言。随着时间的推移，`Unix` 用 `C` 语言进行了重写，从而提供了更高层的语言实现。
+
+
+    ## 第二章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ### 操作系统 – 它们是什么？
+
+
+    操作系统是与计算机内部硬件通信的系统，以便硬件能与软件对话，并允许计算机按预期运行。你在电脑上运行的每个程序都运行在操作系统之上。唯一的例外是你可能运行在电脑上的固件。
+
+
+    使用分时系统的操作系统会调度各种任务，以便你根据频繁使用的资源更高效地使用系统。
+
+
+    每个操作系统都拥有这些共同工作并使操作系统完整的部分。缺少了其中任何部分，你的操作系统可能仍然运行，但可能无法以你想要的方式运行。
+
+
+    - **守护进程 (Daemons)**：守护进程是在后台运行的服务，它们会在电脑启动或你登录桌面后启动。
+
+    - **引导加载程序 (Bootloader)**：这是在电脑每次启动时进行管理的软件。对于许多用户来说，它是一个启动操作系统的启动界面，以便电脑能够运行。
+
+
+    '
+- fmt: "\n- **Kernel**: the kernel is part of the whole Linux system. The kernel is\
+    \ the core of the operating system that is going to manage everything from the\
+    \ peripheral devices to the CPU. On the scale of how important the kernel is to\
+    \ the operating system, the kernel will be the lowest on the scale.\n- **Graphical\
+    \ server**: the graphical server controls the graphics that you see on the websites\
+    \ that you visit.\n- **The shell**: the shell is the command process that is going\
+    \ to enable you to give the computer commands through a text interface. When using\
+    \ Linux, you do not need to touch the command line.\n- **Desktop environment**:\
+    \ the desktop is what you are going to use as the user of the computer. Every\
+    \ desktop environment that you encounter is going to have various applications\
+    \ that are built into it that are going to be specific to that desktop.\n- **Applications**:\
+    \ these are the software titles that you can install on your computer.\n\nThe\
+    \ first computers were first built to do single tasks in a series just like a\
+    \ calculator does. These operating systems were first developed in the 50’s so\
+    \ that different programs could be run in succession so that the processing could\
+    \ be sped up. It was not until the sixties that the modern and sophisticated operating\
+    \ systems were developed.\n\nSome of the hardware that was added were things such\
+    \ as parallel processing and runtime libraries. Whenever personal computers started\
+    \ becoming more popular in the 80’s, the operating systems evolved so that they\
+    \ could be used on these computers just as they were the larger computers that\
+    \ they were designed for.\n\nThe earliest record of an electronic system that\
+    \ had no operating system came around in the 40’s. these electronic systems were\
+    \ programmed to switches that had to be switched on and off. Or they were hooked\
+    \ up to jumper wires that were then connected to plug boards. It was these systems\
+    \ that were made to generate ballistics tables that were used by the military\
+    \ or for payroll checks to be printed and controlled from the data that could\
+    \ be found on a paper card that had been punched by the worker for when they were\
+    \ at work and when they were not at work.\n\n## Chapter Three\n\n![logo](images/00003.jpeg)\n\
+    \n## Installing Linux and Learning the System\n\nAs mentioned above, you are going\
+    \ to be able to download Linux for free! Here are the steps that you are going\
+    \ to follow in order to download Linux onto your computer and begin using it!\n\
+    \n### Step One\n first download which Linux distribution that you want to use.\
+    \ Those who are new to Linux are going to want to stick to a distribution that\
+    \ is lightweight and user-friendly. Some of the choices that you have are going\
+    \ to be known as Ubuntu and Lubuntu.\n\nThe ISO can be found on the website for\
+    \ the distributor, but you are going to need to burn it onto a USB drive or a\
+    \ CD if you have an empty disk before it can be installed on your computer. Placing\
+    \ it on an external storage device will create a live storage of the operating\
+    \ system.\n\nThe live CD or USB is going to be what you boot the operating system\
+    \ off of, and most of the time you are going to get a version that will allow\
+    \ you to have a preview of the operating system that is going to run directly\
+    \ from that storage device.\n\nYou will need to install an image burning program\
+    \ or use the one that is already on your operating system that you are currently\
+    \ using.\n\n### Step Two\nboot into your active storage device. A vast majority\
+    \ of computers are going to want to boot from your hard drive before anything\
+    \ else, so you are going to have to change the settings on your computer that\
+    \ are going to make it to where your computer boots into the live disk.\n\nAfter\
+    \ your computer has rebooted, you are going to press the indicated key that will\
+    \ get you into the boot menu.\n\nIn the event that you are not able to get into\
+    \ the boot menu, you are going to have to to the BIOS menu to access the boot\
+    \ menu. After you have gotten into this menu, you are going to select the live\
+    \ storage device that holds your copy of Linux. After you are done, you are going\
+    \ to save the changes that you made and exit the menu so that your computer can\
+    \ continue with the boot process.\n\n### Step Three\nbefore you install the Linux\
+    \ system, you are going to want to try it out so that you can see if it is the\
+    \ operating system for you. It is not going to be like using the full operating\
+    \ system, but you are going to be able to navigate the interface as if it was\
+    \ installed on your system so that you can get a feel for it.\n\n### Step Four\n\
+    install. Once you have done your trial with Linux, you are going to want to install\
+    \ it onto your computer. The installation is going to be started from the boot\
+    \ menu if you do not want to try the system out first.\n\n### Step Five\nset up\
+    \ an account. Linux is going to require that you have a username and a password\
+    \ so that you are able to get administrative access to the operating system in\
+    \ order to do administrative maintenance.\n\n### Step Six\nplace your partition.\
+    \ If there is another operating system on your computer, you are going to have\
+    \ to set up a partition so that it is separated from the other operating system.\
+    \ This has to be done in the event that you are going to run both operating systems.\n\
+    \n### Step Seven\nboot Linux. After you have performed the installation process,\
+    \ you are going to reboot your system, and then a new screen is going to be displayed.\
+    \ This will be the boot loader for your new operating system. Make sure that you\
+    \ select the appropriate distro from the list. It is possible that you are not\
+    \ going to see this screen if you are running two operating systems. To get to\
+    \ this screen, you are going to hit shift after you see the manufacturer screen.\n\
+    \n### Step Eight\ndouble check the hardware on your computer. Most of your hardware\
+    \ is going to work with Linux, but you may need to install a few other drivers\
+    \ that are going to allow it to run as it should.\n\n### Step Nine\nbegin using\
+    \ Linux.\n\n## Learning Linux\n\n### Step One\nyou should have already tried to\
+    \ become familiar with the system when you were in the installation process when\
+    \ you had the opportunity to try the operating system out.\n\n### Step Two\ntry\
+    \ and do some of the things that you would use your computer for. Be sure to take\
+    \ note of the things that you can do and the things that you cannot.\n\n### Step\
+    \ Three\nget to know the command interface. While the terminal may see scary,\
+    \ it is not something you should allow to stop you from using Linux. The command\
+    \ interface will make using Linux easier, and you are not going to be limited\
+    \ by the things that you are limited by when you are using Windows.\n\n### Step\
+    \ Four\nlearn the Linux filing system. You are not going to have a c drive with\
+    \ Linux, but you are still going to have the directory where your files are going\
+    \ to be located. Instead of the c drive, you are not going to have them in the\
+    \ home directory followed by your username.\n\n## Chapter Four\n\n![logo](images/00003.jpeg)\n\
+    \n## Navigation of Linux\n\nSince you are new to using Linux, you are going to\
+    \ need how to navigate through the operating system. Some of the core competencies\
+    \ that you require are to move around the file system so that you can get a good\
+    \ idea of the new interface.\n\n### Figuring out where you are through the use\
+    \ of the pwd command\n\nAfter you have logged into your desktop, you are going\
+    \ to be placed in the home directory. This home directory is going to be where\
+    \ all your files are located, and you are going to be able to create directories\
+    \ as you need them.\n\nIn order to locate your home directory in relation to where\
+    \ all the other file systems are, you can use the `pwd` command. The `pwd` command\
+    \ will show you which register you are currently using.\n\nAfter using the `pwd`\
+    \ command, you should get a result of `/home/user account`.\n"
+  raw: '•Kernel: the kernel is part of the whole Linux system. The kernel is the core
+    of the operating system that is going to manage everything from the peripheral
+    devices to the CPU. On the scale of how important the kernel is to the operating
+    system, the kernel will be the lowest on the scale.
+
+
+    •Graphical server: the graphical server controls the graphics that you see on
+    the websites that you visit.
+
+
+    •The shell: the shell is the command process that is going to enable you to give
+    the computer commands through a text interface. When using Linux, you do not need
+    to touch the command line.
+
+
+    •Desktop environment: the desktop is what you are going to use as the user of
+    the computer. Every desktop environment that you encounter is going to have various
+    applications that are built into it that are going to be specific to that desktop.
+
+
+    •Applications: these are the software titles that you can install on your computer.
+
+
+    The first computers were first built to do single tasks in a series just like
+    a calculator does. These operating systems were first developed in the 50’s so
+    that different programs could be run in succession so that the processing could
+    be sped up. It was not until the sixties that the modern and sophisticated operating
+    systems were developed.
+
+
+    Some of the hardware that was added were things such as parallel processing and
+    runtime libraries. Whenever personal computers started becoming more popular in
+    the 80’s, the operating systems evolved so that they could be used on these computers
+    just as they were the larger computers that they were designed for.
+
+
+    The earliest record of an electronic system that had no operating system came
+    around in the 40’s. these electronic systems were programmed to switches that
+    had to be switched on and off. Or they were hooked up to jumper wires that were
+    then connected to plug boards. It was these systems that were made to generate
+    ballistics tables that were used by the military or for payroll checks to be printed
+    and controlled from the data that could be found on a paper card that had been
+    punched by the worker for when they were at work and when they were not at work.
+
+
+    **Chapter Three**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **Installing Linux and Learning the System**
+
+
+    As mentioned above, you are going to be able to download Linux for free! Here
+    are the steps that you are going to follow in order to download Linux onto your
+    computer and begin using it!
+
+
+    **Step One**: first download which Linux distribution that you want to use. Those
+    who are new to Linux are going to want to stick to a distribution that is lightweight
+    and user-friendly. Some of the choices that you have are going to be known as
+    Ubuntu and Lubuntu.
+
+
+    The ISO can be found on the website for the distributor, but you are going to
+    need to burn it onto a USB drive or a CD if you have an empty disk before it can
+    be installed on your computer. Placing it on an external storage device will create
+    a live storage of the operating system.
+
+
+    The live CD or USB is going to be what you boot the operating system off of, and
+    most of the time you are going to get a version that will allow you to have a
+    preview of the operating system that is going to run directly from that storage
+    device.
+
+
+    You will need to install an image burning program or use the one that is already
+    on your operating system that you are currently using.
+
+
+    **Step Two**: boot into your active storage device. A vast majority of computers
+    are going to want to boot from your hard drive before anything else, so you are
+    going to have to change the settings on your computer that are going to make it
+    to where your computer boots into the live disk.
+
+
+    After your computer has rebooted, you are going to press the indicated key that
+    will get you into the boot menu.
+
+
+    In the event that you are not able to get into the boot menu, you are going to
+    have to go to the BIOS menu to access the boot menu. After you have gotten into
+    this menu, you are going to select the live storage device that holds your copy
+    of Linux. After you are done, you are going to save the changes that you made
+    and exit the menu so that your computer can continue with the boot process.
+
+
+    **Step Three:** before you install the Linux system, you are going to want to
+    try it out so that you can see if it is the operating system for you. It is not
+    going to be like using the full operating system, but you are going to be able
+    to navigate the interface as if it was installed on your system so that you can
+    get a feel for it.
+
+
+    **Step Four:** install. Once you have done your trial with Linux, you are going
+    to want to install it onto your computer. The installation is going to be started
+    from the boot menu if you do not want to try the system out first.
+
+
+    **Step Five:** set up an account. Linux is going to require that you have a username
+    and a password so that you are able to get administrative access to the operating
+    system in order to do administrative maintenance.
+
+
+    **Step Six:** place your partition. If there is another operating system on your
+    computer, you are going to have to set up a partition so that it is separated
+    from the other operating system. This has to be done in the event that you are
+    going to run both operating systems.
+
+
+    **Step Seven:** boot Linux. After you have performed the installation process,
+    you are going to reboot your system, and then a new screen is going to be displayed.
+    This will be the boot loader for your new operating system. Make sure that you
+    select the appropriate distro from the list. It is possible that you are not going
+    to see this screen if you are running two operating systems. To get to this screen,
+    you are going to hit shift after you see the manufacturer screen.
+
+
+    **Step Eight:** double check the hardware on your computer. Most of your hardware
+    is going to work with Linux, but you may need to install a few other drivers that
+    are going to allow it to run as it should.
+
+
+    **Step Nine:** begin using Linux.
+
+
+    **Learning Linux**
+
+
+    **Step One:** you should have already tried to become familiar with the system
+    when you were in the installation process when you had the opportunity to try
+    the operating system out and see if you wanted to use it.
+
+
+    **Step Two:** try and do some of the things that you would usually use your computer
+    for. Be sure to take note of the things that you can do and the things that you
+    cannot do.
+
+
+    **Step Three:** get to know the command interface. While the terminal may see
+    scary, it is not something you should allow to stop you from using Linux. The
+    command interface will make using Linux easier, and you are not going to be limited
+    by the things that you are limited by when you are using Windows.
+
+
+    **Step Four:** learn the Linux filing system. You are not going to have a C drive
+    with Linux, but you are still going to have the directory where your files are
+    going to be located. Instead of the c drive, you are not going to have them in
+    the home directory followed by your username.
+
+
+    **Chapter Four**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **Navigation of Linux**
+
+
+    Since you are new to using Linux, you are going to need how to navigate through
+    the new operating system. Some of the core competencies that you require are to
+    move around the file system so that you can get a good idea of the new interface.
+
+
+    **Figuring out where you are through the use of the pwd command**
+
+
+    After you have logged into your desktop, you are going to be placed in the home
+    directory. This home directory is going to be where all your files are located,
+    and you are going to be able to create directories as you need them.
+
+
+    In order to locate your home directory in relation to where all the other file
+    systems are, you can use the pwd command. The pwd command will show you which
+    register you are currently using.
+
+
+    After using the pwd command, you should get a result of /home/user account.'
+  toc: []
+  trans: '
+
+
+    - **内核 (Kernel)**：内核是整个 Linux 系统的一部分。内核是操作系统的核心，负责管理从外围设备到 CPU 的一切。在内核对操作系统的重要性尺度上，内核处于该尺度的最底层。
+
+    - **图形服务器 (Graphical server)**：图形服务器控制你在访问的网站上看到的图形内容。
+
+    - **外壳 (The shell)**：外壳是一个命令处理进程，它允许你通过文本界面向计算机发出命令。在使用 Linux 时，你并不需要直接接触命令行。
+
+    - **桌面环境 (Desktop environment)**：桌面环境是你作为计算机用户时将要使用的界面。你遇到的每一个桌面环境都会包含各种内置应用程序，这些程序是针对特定的桌面。
+
+    - **应用程序 (Applications)**：这些是可以安装在计算机上的软件程序。
+
+
+    第一批计算机的建造是为了执行一系列中的单项任务，就像计算器工作一样。这些操作系统最早开发于 50 年代，目的是让不同的程序能够相继运行，从而加快处理速度。直到
+    60 年代，现代且复杂的操作系统才被开发出来。
+
+
+    添加的一些硬件包括并行处理和运行时库等。每当个人电脑在 80 年代开始变得流行时，操作系统也随之进化，以便在这些计算机上使用，就像它们最初为设计的大型计算机一样。
+
+
+    没有操作系统的电子系统最早记录可以追溯到 40 年代。这些电子系统被程序化到必须开启和关闭的开关上。或者它们连接到跳线器，然后连接到插线板。正是这些系统被用来生成军事使用的弹道表，或者用于打印和控制工资单，而这些数据可以从纸卡上找到，纸卡是由工人在工作期间和非工作期间打孔而成的。
+
+
+    ## 第三章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ## 安装 Linux 和学习系统
+
+
+    如上所述，你可以免费下载 Linux！以下是你按照这些步骤操作，将 Linux 下载到你的计算机上并开始使用！
+
+
+    ### 第一步
+
+    首先下载你想要使用的 Linux 发行版。Linux 初学者会倾向于选择轻量级且用户友好的发行版。你可以选择的一些版本包括 Ubuntu 和 Lubuntu。
+
+
+    ISO 镜像可以在发行版的官方网站上找到，但在将其安装到计算机之前，你需要将其刻录到 U 盘或 CD（如果你有空光盘的话）。将其存放在外部存储设备上将创建一个操作系统的实时存储系统。
+
+
+    实时版 CD 或 USB 将是你启动操作系统的介质，大多数情况下，你获得的版本将允许你预览该操作系统，该系统将直接从该存储设备运行。
+
+
+    你需要安装一个镜像刻录程序，或者使用你当前正在使用的操作系统自带的程序。
+
+
+    ### 第二步
+
+    启动到你的活动存储设备。绝大多数计算机都会优先从你的硬盘启动，因此你必须更改计算机设置，使你的计算机能够从刻录盘启动。
+
+
+    当你的计算机重启后，你需要按下指定的按键进入启动菜单。
+
+
+    如果无法进入启动菜单，你必须进入 BIOS 菜单来访问启动菜单。进入此菜单后，选择存有你 Linux 副本的活动存储设备。完成后，保存你所做的更改并退出菜单，以便你的计算机继续启动过程。
+
+
+    ### 第三步
+
+    在安装 Linux 系统之前，你可能想先尝试一下，看看它是否是适合你的操作系统。这不像使用完整的操作系统，但你可以像它已安装在你的系统中一样导航操作界面，从而对它有一个直观感受。
+
+
+    ### 第四步
+
+    安装。一旦你完成了 Linux 的试用，你就会想将其安装到计算机上。如果你不想先试用系统，安装将从启动菜单开始。
+
+
+    ### 第五步
+
+    设置账户。Linux 要求你拥有用户名和密码，以便你能够获得操作系统的管理权限以进行管理维护。
+
+
+    ### 第六步
+
+    放置你的分区。如果你的计算机上还有另一个操作系统，你必须设置一个分区，使其与其他操作系统隔离开。在打算同时运行两个操作系统时，必须这样做。
+
+
+    ### 第七步
+
+    启动 Linux。完成安装过程后，你需要重启系统，然后会显示一个新屏幕。这将是你新操作系统的引导加载程序。确保你从列表中选择了合适的发行版。如果你正在运行两个操作系统，可能看不到此屏幕。要进入此屏幕，在看到厂商界面后按下
+    Shift 键。
+
+
+    ### 第八步
+
+    双检你计算机的硬件。你的大部分硬件都能兼容 Linux，但你可能需要安装一些其他驱动程序，以便它能够正常运行。
+
+
+    ### 第九步
+
+    开始使用 Linux。
+
+
+    ## 学习 Linux
+
+
+    ### 第一步
+
+    在安装过程中有机会尝试系统时，你应该已经开始熟悉它了。
+
+
+    ### 第二步
+
+    尝试做一些你平时使用计算机要做的事情。请注意哪些是可以做的，哪些是不能做的。
+
+
+    ### 第三步
+
+    熟悉命令行界面。虽然终端看起来可能吓，但你不应该让它阻碍你使用 Linux。命令行界面会让使用 Linux 变得更容易，而且你不会受到在使用 Windows
+    时那样的限制。
+
+
+    ### 第四步
+
+    学习 Linux 文件系统。Linux 中没有 C 盘，但你仍然有一个存放文件的目录。你的文件不在 C 盘中，而是位于主目录下，后面跟着你的用户名。
+
+
+    ## 第四章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ## Linux 导航
+
+
+    由于你是第一次使用 Linux，你需要学习如何在操作系统中导航。你所需的核心能力之一是在文件系统中移动，以便对新界面有一个良好的了解。
+
+
+    ### 通过使用 `pwd` 命令确定你所在的位置
+
+
+    当你登录桌面后，你将被放置在主目录下。这个主目录将是你所有文件的所在之处，你可以根据需要创建目录。
+
+
+    为了确定主目录相对于其他文件系统的位置，可以使用 `pwd` 命令。`pwd` 命令将显示你当前所在的目录。
+
+
+    在使用 `pwd` 命令后，你应该得到类似 `/home/user account` 的结果。
+
+
+    '
+- fmt: '
+
+    Each home directory is going to be named for the user account that you are working
+    with. Since the home directory is going to be the very top of the directory, it
+    will be the root directory.
+
+
+    ## Searching the contents of your directory
+
+
+    Being that you are now able to get into the directory, you need to know what materials
+    the directory houses. Being that your root directory is not going to have many
+    things in it, you will want to try and find another directory.
+
+
+    First, you are going to enter `cd /usr/share` into the command prompt before entering
+    the `pwd` command again.
+
+
+    At this point, you should be inside of a new directory. So that you can see the
+    files in this directory, you will use the `ls` command. By using this command,
+    you will have a list of all of the contents of the directory no matter how many
+    items there are in it. You will now have the option to add some flags to the command
+    so that you can look for files that follow specific behaviors.
+
+
+    In case you are wanting to find the hidden files in the directory, you need to
+    add in `-a` to your command prompt. Keep in mind that there are no files that
+    are actually hidden inside of the user directory. Most of the “hidden” files are
+    going to be those that hold special indicators such as configuration files.
+
+
+    The dot entries that you see are not going to necessarily be directories but methods
+    that have been built into the operating system in reference to other directories.
+    Single dots are going to be for the directory that you are currently using while
+    the double dot is going to be for the parent directory.
+
+
+    ## Navigating your file system
+
+
+    You have already made your way into the directory to your home directory, and
+    then you moved on to a different directory, but, let’s look at some other things
+    you can do in moving through the file system on your new Linux system.
+
+
+    Go back to your home directory by using the `cd /usr/share` command.
+
+
+    The command that you have just used will give you the most direct path to the
+    directory in question. All files and directories in Linux are going to be located
+    in the root directory but will be referenced by the slash that starts out the
+    command.
+
+
+    Absolute paths are going to show you the location of the directory where the file
+    is located in the root file. The absolute path is going to be there so that we
+    can reference the directories in the most direct way so that you are not getting
+    the directory mixed up with another directory.
+
+
+    Keep in mind that you are going to have to start all of your absolute paths with
+    a slash.
+
+
+    On the other hand, you can use a relative path which will show the directory as
+    it is related to the current directory. Whenever the directory that you are trying
+    to get to is close to the directory in the hierarchy, then you are going to want
+    to use this method because it is going to be the easiest and shortest way for
+    you to get to the file that you want. Whenever your directory is inside of the
+    directory that you are currently located in, you are going to be able to reference
+    this directories name without using a slash.
+
+
+    ## Chapter Five
+
+
+    ![logo](images/00003.jpeg)
+
+
+    ## The Linux Desktop Environment
+
+
+    Linux allows you to have a choice as to which desktop you want to use. You need
+    to think of the desktop in relation to how easy it is going to be for you to do
+    the things you are wanting to do with your new operating system.
+
+
+    There are no set rules as to how you are going to figure out how to choose the
+    best desktop for you, and ultimately it is going to be a personal decision. However,
+    you need to make certain you do your research on each desktop that is available
+    through Linux so that you can make the best decision.
+
+
+    Every desktop that you have the option of choosing from is going to give you a
+    unique experience and have many options that are going to make it to where you
+    are able to do what you do on any other operating system.
+
+
+    The desktops that you have a choice of choosing from are:
+
+
+    * Deepin
+
+    * Ubuntu unity
+
+    * Xfce
+
+    * Gnome 3
+
+    * Enlightenment
+
+    * Cinnamon
+
+    * And kde
+
+
+    ## Ubuntu Unity
+
+
+    The ubuntu unity desktop is going to have a more modern interface that is going
+    to allow the user to have access to the data that is on their desktop as well
+    as having access to data from other remote sources.
+
+
+    You are going to have the capability to quickly connect to your social media and
+    other websites that you may tend to frequent. One of the things you need to keep
+    in mind when it comes to using ubuntu unity is that you are going to have be a
+    user that does not spend a lot of time going back and forth between your mouse
+    and keyboard.
+
+
+    Thanks to the Head Up Display you are going to be able to use your keyboard to
+    switch between the various menus rather than having to continue to move to your
+    mouse.
+
+
+    The best user for ubuntu unity is someone who does not mind the desktop not being
+    individualized to them but offers them access to any information they may want
+    at their fingertips.
+
+
+    ## GNOME 3
+
+
+    GNOME 3 offers a desktop environment that is full featured but does not show it
+    on the desktop. You are going to be able to open up Dash to get to everything
+    that GNOME3 has to offer you.
+
+
+    With GNOME3 you are going to have the ability to work with how the desktop looks
+    a little so that you are able to customize it to you and your preferences. In
+    the end, GNOME3 is just like ubuntu unity except it allows the user to have a
+    little more control of how their interface appears.
+
+
+    GNOME3 is geared more for those who know how Linux works and want to have a desktop
+    that is modern but can be customized to them.
+
+
+    ## Cinnamon
+
+
+    Cinnamon is a mixture of GNOME 2 and 3. It still offers that modernized look,
+    but you are going to now be using the customization feature of GNOME 3. Cinnamon
+    offers a more standard look that is able to be changed through the use of adding
+    effects or removing them.
+
+
+    Cinnamon is going to be for those that want a standard desktop that they are able
+    to tweak as they desire but makes it easier for them to navigate through their
+    system as on any other system.
+
+
+    ## KDE
+
+
+    KDE offers a full desktop and has come to be one of the longest standing environments
+    that Linux has to offer. KDE is one of the fastest desktops you are going to be
+    able to work with. Everything about this desktop revolves around the system tray.
+
+
+    Just like the other environments, KDE offers a modern feel, but it is going to
+    lean more towards the desktop that you are see on an operating system from Windows.
+
+
+    The best user for KDE is going to be someone who does not want to learn a new
+    desktop environment and is moving from a Windows system.
+
+
+    ## Enlightenment
+
+
+    Enlightenment is going to take on a completely different look and feel from the
+    previous desktop environments we have discussed. Instead of start menus, you are
+    going to see shelves that hold all of your menu options and applications.
+
+
+    Enlightenment offers a clean look, but it is also configurable. But, you are going
+    to have have some patience when it comes to customizing Enlightenment because
+    it is so unique in its coding. The themes that are offered by Enlightenment are
+    going to change the color and even the way that things are shaped on your desktop.
+
+
+    If you are a user who is constantly changing your desktop environment and likes
+    to change things to fit how you feel that day, then Enlightenment is the perfect
+    desktop environment for you.
+
+
+    ## XFCE
+
+
+    XFCE is going to be the desktop you are going to use when you are working with
+    older hardware because it is such a lightweight desktop. Not just that, but XFCE
+    offers speed along with customization.
+
+
+    You are going to want to be somewhat experienced with Linux if you are going to
+    be using XFCE due to the configuration options that are available to you.
+
+
+    ## Deepin Desktop
+
+    '
+  raw: 'Each home directory is going to be named for the user account that you are
+    working with. Since the home directory is going to be the very top of the directory,
+    it will be the root directory.
+
+
+    **Searching the contents of your directory**
+
+
+    Being that you are now able to get into the directory, you need to know what materials
+    the directory houses. Being that your root directory is not going to have many
+    things in it, you will want to try and find another directory.
+
+
+    First, you are going to enter cd/ usr/ share into the command prompt before entering
+    the pwd command again.
+
+
+    At this point, you should be inside of a new directory. So that you can see the
+    files in this directory, you will use the ls command. By using this command, you
+    will have a list of all of the contents of the directory no matter how many items
+    there are in it. You will now have the option to add some flags to the command
+    so that you can look for files that follow specific behaviors.
+
+
+    In case you are wanting to find the hidden files in the directory, you need to
+    add in -a to your command prompt. Keep in mind that there are no files that are
+    actually hidden inside of the user directory. Most of the “hidden” files are going
+    to be those that hold special indicators such as configuration files.
+
+
+    The dot entries that you see are not going to necessarily be directories but methods
+    that have been built into the operating system in reference to other directories.
+    Single dots are going to be for the directory that you are currently using while
+    the double dot is going to be for the parent directory.
+
+
+    **Navigating your file system**
+
+
+    You have already made your way into the directory to your home directory, and
+    then you moved on to a different directory, but, let’s look at some other things
+    you can do in moving through the file system on your new Linux system.
+
+
+    Go back to your home directory by using the cd /usr/share command.
+
+
+    The command that you have just used will give you the most direct path to the
+    directory in question. All files and directories in Linux are going to be located
+    in the root directory but will be referenced by the slash that starts out the
+    command.
+
+
+    Absolute paths are going to show you the location of the directory where the file
+    is located in the root file. The absolute path is going to be there so that we
+    can reference the directories in the most direct way so that you are not getting
+    the directory mixed up with another directory.
+
+
+    Keep in mind that you are going to have to start all of your absolute paths with
+    a slash.
+
+
+    On the other hand, you can use a relative path which will show the directory as
+    it is related to the current directory. Whenever the directory that you are trying
+    to get to is close to the directory in the hierarchy, then you are going to want
+    to use this method because it is going to be the easiest and shortest way for
+    you to get to the file that you want. Whenever your directory is inside of the
+    directory that you are currently located in, you are going to be able to reference
+    this directories name without using a slash.
+
+
+    **Chapter Five**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **The Linux Desktop Environment**
+
+
+    Linux allows you to have a choice as to which desktop you want to use. You need
+    to think of the desktop in relation to how easy it is going to be for you to do
+    the things that you are wanting to do with your new operating system.
+
+
+    There are no set rules as to how you are going to figure out how to choose the
+    best desktop for you, and ultimately it is going to be a personal decision. However,
+    you need to make certain you do your research on each desktop that is available
+    through Linux so that you can make the best decision.
+
+
+    Every desktop that you have the option of choosing from is going to give you a
+    unique experience and have many options that are going to make it to where you
+    are able to do what you do on any other operating system.
+
+
+    The desktops that you have a choice of choosing from are:
+
+
+    •Deepin
+
+
+    •Ubuntu unity
+
+
+    •Xfce
+
+
+    •Gnome 3
+
+
+    •Enlightenment
+
+
+    •Cinnamon
+
+
+    •And kde
+
+
+    **Ubuntu Unity**
+
+
+    The ubuntu unity desktop is going to have a more modern interface that is going
+    to allow the user to have access to the data that is on their desktop as well
+    as having access to data from other remote sources.
+
+
+    You are going to have the capability to quickly connect to your social media and
+    other websites that you may tend to frequent. One of the things that you need
+    to keep in mind when it comes to using ubuntu unity is that you are going to have
+    to be a user that does not spend a lot of time going back and forth between your
+    mouse and keyboard.
+
+
+    Thanks to the Head Up Display you are going to be able to use your keyboard to
+    switch between the various menus rather than having to continue to move to your
+    mouse.
+
+
+    The best user for ubuntu unity is someone who does not mind the desktop not being
+    individualized to them but offers them access to any information that they may
+    want at their fingertips.
+
+
+    **GNOME 3**
+
+
+    GNOME 3 offers a desktop environment that is full featured but does not show it
+    on the desktop. You are going to be able to open up Dash to get to everything
+    that GNOME3 has to offer you.
+
+
+    With GNOME3 you are going to have the ability to work with how the desktop looks
+    a little so that you are able to customize it to you and your preferences. In
+    the end, GNOME3 is just like ubuntu unity except it allows the user to have a
+    little more control of how their interface appears.
+
+
+    GNOME3 is geared more for those who know how Linux works and want to have a desktop
+    that is modern but can be customized to them.
+
+
+    **Cinnamon**
+
+
+    Cinnamon is a mixture of GNOME 2 and 3\. It still offers that modernized look,
+    but you are going to now be using the customization feature of GNOME 3\. Cinnamon
+    offers a more standard desktop look that is able to be changed through the use
+    of adding effects or removing them if you do not like them.
+
+
+    Cinnamon is going to be for those that want a standard desktop that they are able
+    to tweak as they desire but makes it easier for them to navigate through their
+    operating system as they would on any other operating system.
+
+
+    **KDE**
+
+
+    KDE offers a full desktop and has come to be one of the longest standing environments
+    that Linux has to offer. KDE is one of the fastest desktops that you are going
+    to be able to work with. Everything about this desktop revolves around the system
+    tray.
+
+
+    Just like the other environments, KDE offers a modern feel, but it is going to
+    lean more towards the desktop that you are going to see on an operating system
+    from Windows.
+
+
+    The best user for KDE is going to be someone who does not want to learn a new
+    desktop environment and is moving from a Windows operating system.
+
+
+    **Enlightenment**
+
+
+    Enlightenment is going to take on a completely different look and feel from the
+    previous desktop environments that we have discussed. Instead of start menus,
+    you are going to see shelves that hold all of your menu options and applications.
+
+
+    Enlightenment offers a clean look, but it is also configurable. But, you are going
+    to have to have some patience when it comes to customizing Enlightenment because
+    it is so unique in its coding. The themes that are offered by Enlightenment are
+    going to change the color and even the way that things are shaped on your desktop.
+
+
+    If you are a user who is constantly changing your desktop environment and likes
+    to change things to fit how you feel that day, then Enlightenment is the perfect
+    desktop environment for you.
+
+
+    **XFCE**
+
+
+    XFCE is going to be the desktop you are going to use when you are working with
+    older hardware because it is such a lightweight desktop. Not just that, but XFCE
+    offers speed along with customization.
+
+
+    You are going to want to be somewhat experienced with Linux if you are going to
+    be using XFCE due to the configuration options that are available to you.
+
+
+    **Deepin Desktop**'
+  toc: []
+  trans: '
+
+    每个主目录都将根据你正在使用的用户账户命名。由于主目录将位于目录结构的最顶端，它将是根目录。
+
+
+    ## 搜索目录内容
+
+
+    既然你现在已经能够进入目录，你只需要知道该目录中存放了哪些材料。由于你的根目录中不会有太多东西，因此你可能想要尝试寻找另一个目录。
+
+
+    首先，你将在命令行提示符中输入 `cd /usr/share`，然后再次输入 `pwd` 命令。
+
+
+    此时，你应该已经进入了一个新目录。为了查看此目录中的文件，你将使用 `ls` 命令。通过使用此命令，你将获得该目录下所有内容的列表，无论其中有多少项内容。你现在可以选择为命令添加一些标志（flags），以便你能够查找具有特定行为的文件。
+
+
+    如果你想找到目录中的隐藏文件，你需要在你的命令提示符中添加 `-a`。请记住，用户目录内部实际上并没有真正的隐藏文件。大多数“隐藏”文件将是那些持有特殊指示器（如配置文件）的文件。
+
+
+    你看到的点点项（dot entries）并不一定是目录，而是操作系统相对于其他目录而内置的方法。单点 `.` 代表你当前正在使用的目录，而双点 `..` 代表父级目录。
+
+
+    ## 导航文件系统
+
+
+    你已经进入了你的主目录，然后移动到了另一个目录。但是，让我们看看在你的新 Linux 系统上穿过文件系统时可以做的其他一些事情。
+
+
+    使用 `cd /usr/share` 命令返回你的主目录。
+
+
+    你刚刚使用的命令将为你提供通往目标目录的最直接的路径。Linux 中的所有文件和目录都位于根目录中，但会通过命令开头的斜杠 `/` 进行引用。
+
+
+    绝对路径（Absolute paths）将向你显示文件在根文件系统中所在目录的位置。之所以存在绝对路径，是因为我们能够以最直接的方式引用这些目录，从而而确保你不会将该目录与另一个目录混淆。
+
+
+    请记住，所有的绝对路径都必须以斜杠 `/` 开头。
+
+
+    另一方面，你可以使用相对路径（relative path），它将显示相对于当前目录的目录。每当你尝试进入的目录在层级结构中靠近当前目录时，你就应该使用这种方法，因为这是你到达所需文件最简单、快捷的方法。当你的目录位于当前所在的目录内部时，你可以在不使用斜杠的情况下引用该目录的名字。
+
+
+    ## 第章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ## Linux 桌面环境
+
+
+    Linux 允许你选择想要使用的桌面。你需要根据桌面对于你想要在新操作系统上完成想做的事情有多么易于实现来考虑它。
+
+
+    关于如何选择最适合你的桌面，并没有固定的规则，归根结底这取决于个人决定。但是，你需要确保对 Linux 提供的每种桌面都进行研究，以便做出最佳决策。
+
+
+    可供选择的每种桌面都将为你提供独特的体验，并拥有许多选项，使你能够在任何其他操作系统上完成你所的操作。
+
+
+    你可以选择的桌面有：
+
+
+    * Deepin
+
+    * Ubuntu unity
+
+    * Xfce
+
+    * Gnome 3
+
+    * Enlightenment
+
+    * Cinnamon
+
+    * 以及 kde
+
+
+    ## Ubuntu Unity
+
+
+    Ubuntu unity 桌面将拥有更现代的界面，允许用户访问桌面上的数据，同时也可以访问来自其他远程源的数据。
+
+
+    你将能够快速连接到你的社交媒体以及你可能经常访问的其他网站。在使用 Ubuntu unity 时，需要记住的一点是，你将成为一个不花费大量时间在鼠标和键盘之间来回切换的用户。
+
+
+    得益于抬头显示（Head Up Display），你可以使用键盘在各种菜单之间切换，而不需要不断移动到鼠标。
+
+
+    Ubuntu unity 的最佳用户是那些不介意桌面没有针对个人定制，但能让他们在指尖获取他们可能需要的任何信息的人。
+
+
+    ## GNOME 3
+
+
+    GNOME 3 提供了一个功能齐全的桌面环境，但它并没有在在面上。你可以打开 Dash（启动器）来获取 GNOME3 能为你提供的所有功能。
+
+
+    通过 GNOME3，你将能够微调桌面的外观，以便根据你和你的喜好对其进行定制。归根结底，GNOME3 与 Ubuntu unity 相似，只是它允许用户对界面的显示有更多的控制权。
+
+
+    GNOME3 更倾向于那些了解 Linux 如何工作，并希望拥有一个既现代又能为他们定制的桌面的人。
+
+
+    ## Cinnamon
+
+
+    Cinnamon 是 GNOME 2 和 3 的混合体。它仍然提供了现代化的外观，但你现在将使用 GNOME 3 的自定义功能。Cinnamon 了一种了一种更标准的外观，可以通过添加或删除效果来更改。
+
+
+    Cinnamon 适用于那些想要标准桌面的用户，他们可以像在其他系统上一样对其进行调整。
+
+
+    ## KDE
+
+
+    KDE 提供了一个全功能的桌面，并且已经成为 Linux 提供的历史悠久的环境之一。KDE 是你能够操作的最快的桌面之一。这个桌面的一切都围绕着系统托展开。
+
+
+    与其他环境一样，KDE 提供了现代感，但它更倾向于你在 Windows 系统上看到的桌面。
+
+
+    KDE 的最佳用户是那些不想学习新桌面环境、正从 Windows 系统迁移过来的人。
+
+
+    ## Enlightenment
+
+
+    Enlightenment 与我们讨论过的桌面环境有着完全不同的外观和感受。比起启动菜单，你会看到包含所有菜单选项和应用程序的任务（shelves）。
+
+
+    Enlightenment 提供了一种整洁的外观，但它也是可配置的。但在定制 Enlightenment 时，你需要一些耐心，因为它的编码非常独特。Enlightenment
+    提供的主题将改变颜色，甚至是桌面上物品的形状。
+
+
+    如果你是一个不断更换桌面环境并喜欢根据当天心情改变一切的用户，那么 Enlightenment 是最适合你的桌面环境。
+
+    '
+- fmt: '
+
+    Deepin is one of the newest desktop environments on the Linux system. It has one
+    of the most modern feels while taking a little bit of every other environment
+    that Linux has to offer.
+
+
+    GNOME 3 is what inspired Linux developers to create Deepin. Out of all of the
+    desktop environments that you can choose from, Deepin is going to offer you an
+    easy to use control panel that is going to make it to where you are able to find
+    everything that you need to navigate your desktop.
+
+
+    The perfect user for this desktop environment is going to be anyone! You do not
+    have to have any experience with Linux and Deepin is going to be easy to learn
+    and use!
+
+
+    # Chapter Six
+
+
+    ![logo](images/00003.jpeg)
+
+
+    ## The Linux Interface
+
+
+    There are several different interfaces that you are going to be allowed to use
+    depending on what your purpose is for using Linux. The two interfaces that are
+    on the API (application programming interface) are the kernel user space and the
+    kernel internal.
+
+
+    The API on Linux is in the kernel user space API. This means that the programs
+    on the system are going to have access to the resources and services that are
+    on the kernel. The Linux system is made out of the system call interface and the
+    kernel that allows for subroutes to the `GNU C Library`.
+
+
+    The developers of the API for Linux made it to where the API can provide unsable
+    features as to the specifications that have been defined by `POSIX` so that it
+    is compatible with other features that are going to be useful but have not necessarily
+    been defined by `POSIX`.
+
+
+    The API for Linux is completely stable and has been stable for many decades. This
+    occurs thanks to the stability that is granted by the source code. However, while
+    the system is stable and never going to break down, those who work on the development
+    of the system are conservative when it comes to introducing new calls into the
+    system.
+
+
+    All of the open source software for Linux is free and written specifically for
+    the `POSIX` API. Since everything has to go through the Linux kernel, the API
+    for the kernel has been bigger because of all of the additional features that
+    have been put into the API.
+
+
+    Because of these added features, there is a technological advantage to the the
+    API on Linux that makes it superior to the `POSIX` API. Some of the best-known
+    examples are `Weston` and `systemd`. Many people who use Linux have no hesitated
+    to state that they prefer the Linux API over the `POSIX` API because of the advantages
+    that the Linux API has to offer.
+
+
+    ### System call interface
+
+
+    The system call interface is the basis for everything that is implemented and
+    even made available for the system calls that are inside of the Linux kernel.
+    Several subsystems are going to be empowered to define their own calls.
+
+
+    ### C standard library
+
+
+    The C library is going to be what surrounds the system calls done by the Linux
+    kernel. There is a combination composed of the system call interface and the C
+    library that is going to make up the entire Linux API.
+
+
+    ### Linux ABI
+
+
+    The ABI is going to be the kernel user space for the ABI. ABI stands for application
+    binary interface, and when speaking of the ABI, you are going to be referring
+    to the application binary interface which is all of the binaries that are found
+    inside of the machine’s code.
+
+
+    Any code that is part of the machine’s binary is going to be tied to the instruction
+    set. When you are trying to define an ABI that is useful, the developers for the
+    Linux kernel and the C library developers are not going to be held responsible.
+    Instead, the Linux distributions and the independent software vendors are going
+    to be the ones that are held responsible for ensuring that the ABI is stable for
+    the user to use.
+
+
+    # Chapter Seven
+
+
+    ![logo](images/00003.jpeg)
+
+
+    ## Distributions
+
+
+    The Linux distribution is going to be the operating system in which all of the
+    software is collected depending on the kernel and the management system that is
+    being used. Most users of Linux are going to get their operating system by downloading
+    it from one of the distributions of Linux. These distributions offer downloads
+    for devices that have been embedded, super computers, and personal computers.
+
+
+    When downloading a distribution, you are going to be downloading the kernel, the
+    libraries, and any additional tools that are needed to ensure that the operating
+    system runs the way that it is supposed to. A vast majority of the software that
+    is downloaded is going to be software that is open sourced and free to the users
+    that are downloading it. The binaries that are compiled in the software along
+    with how the source code is written is going to make it where you can modify the
+    original software.
+
+
+    Most of the time the distributions of Linux are going to have some kind of proprietary
+    software that is not going to be available in the source code these things are
+    going to be things such as device drivers. Distribution can also be described
+    as the assortment of applications and utility software that is bound together
+    with the kernel for Linux so that the needs of the users are met when they are
+    using the system.
+
+
+    Just like the desktop environment, you are going to want to find the distribution
+    that is best for you and your needs.
+
+
+    ### openSUSE
+
+
+    the SUSE company moved their `openSUSE` closer to their `SLE` to make it to where
+    their users can have a distribution that is going to be similar to the server
+    that the enterprise uses. You are going to discover that `openSUSE` is going to
+    be similar to `Ubuntu` and even `CentOS`.
+
+
+    ### Arch Linux
+
+
+    `Arch Linux` allows for its users to learn everything that there is to learn about
+    Linux due to the fact that you are going to be installing everything manually,
+    so you are going to be able to touch all of the operating system for Linux that
+    you are installing.
+
+
+    `Arch` is one of the distributions that are most customizable. After you get used
+    to how `Arch` is set up, then you are going to be able to build the distribution
+    that you are wanting. The bad thing about `Arch` is that there are not any interaction
+    problems that there may be. What you see is what you get.
+
+
+    `Arch` is constantly updated so that the users are running the latest packages
+    that `Arch` developers are putting out. The user also has the option to run software
+    before it is released, but you are going to running unstable repositories.
+
+
+    ### Elementary OS
+
+
+    `Elementary OS` focuses mostly on the design of how the system looks so it is
+    geared more towards those who are designers so that they can make the system their
+    own. `Elementary OS` is going to be closer to the interface that you are see on
+    `Mac OS X`.
+
+
+    ### Solus
+
+
+    The `Solus` system was created from scratch by its developers and is not based
+    on `Ubuntu` or `Debian`. The `Budgie` desktop which was also developed from scratch,
+    however, it is going to operate the same as `GNOME`.
+
+
+    ### Chrome OS
+
+
+    `Chrome OS` is going to be based more towards the browser than a regular operating
+    system which makes it ideal for those who are online more than not. `Chrome OS`
+    does not require any maintenance and is regularly updated so that it can keep
+    up with the latest security and online updates that are seen on the internet.
+    `Chrome OS` is a popular Linux system on PC as well as mobile devices.
+
+
+    ### Ubuntu MATE
+
+
+    `Ubuntu MATE` is best if you are using a laptop that does not have a long battery
+    life or a lot of resources. `Ubuntu MATE` is lightweight but is not lacking in
+    any of the features that the other distributions are going to have. Just because
+    `Ubuntu MATE` is geared towards those who use laptops does not mean that you cannot
+    do what you would be able to do on a PC, it only means that it is geared more
+    towards the systems that are on the lower end of the spectrum.
+
+
+    ### Lubuntu
+
+
+    `Lubuntu` is for those that are working on older hardware through the use of `LXDE`.
+
+
+    ### Snappy Ubuntu Core
+
+    '
+  raw: 'Deepin is one of the newest desktop environments on the Linux system. It has
+    one of the most modern feels while taking a little bit of every other environment
+    that Linux has to offer.
+
+
+    GNOME 3 is what inspired Linux developers to create Deepin. Out of all of the
+    desktop environments that you can choose from, Deepin is going to offer you an
+    easy to use control panel that is going to make it to where you are able to find
+    everything that you need to navigate your desktop.
+
+
+    The perfect user for this desktop environment is going to be anyone! You do not
+    have to have any experience with Linux and Deepin is going to be easy to learn
+    and use!
+
+
+    **Chapter Six**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **The Linux Interface**
+
+
+    There are several different interfaces that you are going to be allowed to use
+    depending on what your purpose is for using Linux. The two interfaces that are
+    on the API (application programming interface) are the kernel user space and the
+    kernel internal.
+
+
+    The API on Linux is in the kernel user space API. This means that the programs
+    on the system are going to have access to the resources and services that are
+    on the kernel. The Linux system is made out of the system call interface and the
+    kernel that allows for subroutes to the GNU C Library.
+
+
+    The developers of the API for Linux made it to where the API can provide unsable
+    features as to the specifications that have been defined by POSIX so that it is
+    compatible with other features that are going to be useful but have not necessarily
+    been defined by POSIX.
+
+
+    The API for Linux is completely stable and has been stable for many decades. This
+    occurs thanks to the stability that is granted by the source code. However, while
+    the system is stable and never going to break down, those who work on the development
+    of the system are conservative when it comes to introducing new calls into the
+    system.
+
+
+    All of the open source software for Linux is free and written specifically for
+    the POSIX API. Since everything has to go through the Linux kernel, the API for
+    the kernel has been bigger because of all of the additional features that have
+    been put into the API.
+
+
+    Because of these added features, there is a technological advantage to the the
+    API on Linux that makes it superior to the POSIX API. Some of the best-known examples
+    are Weston and systemd. Many people who use Linux have no hesitated to state that
+    they prefer the Linux API over the POSIX API because of the advantages that the
+    Linux API has to offer.
+
+
+    **System call interface**
+
+
+    The system call interface is the basis for everything that is implemented and
+    even made available for the system calls that are inside of the Linux kernel.
+    Several subsystems are going to be empowered to define their own calls.
+
+
+    **C standard library**
+
+
+    The C library is going to be what surrounds the system calls done by the Linux
+    kernel. There is a combination composed of the system call interface and the C
+    library that is going to make up the entire Linux API.
+
+
+    **Linux ABI**
+
+
+    The ABI is going to be the kernel user space for the ABI. ABI stands for application
+    binary interface, and when speaking of the ABI, you are going to be referring
+    to the application binary interface which is all of the binaries that are found
+    inside of the machine’s code.
+
+
+    Any code that is part of the machine’s binary is going to be tied to the instruction
+    set. When you are trying to define an ABI that is useful, the developers for the
+    Linux kernel and the C library developers are not going to be held responsible.
+    Instead, the Linux distributions and the independent software vendors are going
+    to be the ones that are held responsible for ensuring that the ABI is stable for
+    the user to use.
+
+
+    **Chapter Seven**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **Distributions**
+
+
+    The Linux distribution is going to be the operating system in which all of the
+    software is collected depending on the kernel and the management system that is
+    being used. Most users of Linux are going to get their operating system by downloading
+    it from one of the distributions of Linux. These distributions offer downloads
+    for devices that have been embedded, super computers, and personal computers.
+
+
+    When downloading a distribution, you are going to be downloading the kernel, the
+    libraries, and any additional tools that are needed to ensure that the operating
+    system runs the way that it is supposed to. A vast majority of the software that
+    is downloaded is going to be software that is open sourced and free to the users
+    that are downloading it. The binaries that are compiled in the software along
+    with how the source code is written is going to make it to where you can modify
+    the original software.
+
+
+    Most of the time the distributions of Linux are going to have some kind of proprietary
+    software that is not going to be available in the source code these things are
+    going to be things such as device drivers. Distribution can also be described
+    as the assortment of applications and utility software that is bound together
+    with the kernel for Linux so that the needs of the users are met when they are
+    using the system.
+
+
+    Just like the desktop environment, you are going to want to find the distribution
+    that is best for you and your needs.
+
+
+    **openSUSE**
+
+
+    the SUSE company moved their openSUSE closer to their SLE to make it to where
+    their users can have a distribution that is going to be similar to the server
+    that the enterprise uses. You are going to discover that openSUSE is going to
+    be similar to Ubuntu and even CentOS.
+
+
+    **Arch Linux**
+
+
+    Arch Linux allows for its users to learn everything that there is to learn about
+    Linux due to the fact that you are going to be installing everything manually,
+    so you are going to be able to touch all of the operating system for Linux that
+    you are installing.
+
+
+    Arch is one of the distributions that are most customizable. After you get used
+    to how Arch is set up, then you are going to be able to build the distribution
+    that you are wanting. The bad thing about Arch is that there are not any interaction
+    problems that there may be. What you see is what you get.
+
+
+    Arch is constantly being updated so that the users are running the latest packages
+    that Arch developers are putting out. The user also has the option to run software
+    before it is released, but you are going to be running unstable repositories.
+
+
+    **Elementary OS**
+
+
+    Elementary OS focuses mostly on the design of how the system looks so it is geared
+    more towards those who are designers so that they can make the system their own.
+    Elementary OS is going to be closer to the interface that you are going to see
+    on Mac OS X.
+
+
+    **Solus**
+
+
+    The Solus system was created from scratch by its developers and is not based on
+    Ubuntu or Debian. The Budgie desktop which was also developed from scratch, however,
+    it is going to operate the same as GNOME.
+
+
+    **Chrome OS**
+
+
+    Chrome OS is going to be based more towards the browser than a regular operating
+    system which makes it ideal for those who are online more often than not. Chrome
+    OS does not require any maintenance and is regularly updated so that it can keep
+    up with the latest security and online updates that are seen on the internet.
+    Chrome OS is a popular Linux system on PC as well as mobile devices.
+
+
+    **Ubuntu MATE**
+
+
+    Ubuntu MATE is best if you are using a laptop that does not have a long battery
+    life or a lot of resources. Ubuntu MATE is lightweight but is not lacking in any
+    of the features that the other distributions are going to have. Just because Ubuntu
+    MATE is geared towards those who use laptops does not mean that you cannot do
+    what you would be able to do on a PC, it only means that it is geared more towards
+    the systems that are on the lower end of the spectrum.
+
+
+    **Lubuntu**
+
+
+    Lubuntu is for those that are working on older hardware through the use of LXDE.
+
+
+    **Snappy Ubuntu Core**'
+  toc: []
+  trans: '
+
+
+    Deepin 是 Linux 系统上最新的桌面环境之一。它拥有最现代的设计感，同时汲取了 Linux 提供的其他所有环境的优点。
+
+
+    GNOME 3 是激发 Linux 开发者创建 Deepin 的灵感来源。在所有你可以选择的桌面环境中，Deepin 将为你提供一个易于使用的控制面板，让你能够轻松找到导航桌面时所需的所有内容。
+
+
+    这个桌面环境的完美用户将是任何人！你不需要任何 Linux 经验，而且 Deepin 将非常易于学习和使用！
+
+
+    # 第六章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ## Linux 接口
+
+
+    根据你使用 Linux 的目的，你将被允许使用几种不同的接口。API（应用程序编程接口）上的两个接口是内核用户空间和内核内部空间。
+
+
+    Linux 上的 API 位于内核用户空间 API 中。这意味着系统上的程序将可以访问内核中的资源和服务。Linux 系统由系统调用接口和内核组成，内核允许通往
+    `GNU C Library` 的子路由。
+
+
+    Linux API 的开发者使得 API 能够提供符合 `POSIX` 定义规范的可用功能，以便其与其他虽然有用但并不一定由 `POSIX` 定义的功能保持兼容。
+
+
+    Linux API 完全稳定，并且已经保持了数十年的稳定。这归功于源代码提供的稳定性。然而，虽然系统非常稳定且永远不会崩溃，但致力于系统开发的人员在向系统中引入新调用时非常保守。
+
+
+    Linux 的所有开源软件都是免费的，并且专为 `POSIX` API 编写的。由于所有内容都必须通过 Linux 内核，由于在 API 中加入了许多额外功能，内核
+    API 变得更加庞大。
+
+
+    由于这些新增的功能，Linux API 具有技术优势，使其优于 `POSIX` API。一些最广为人知的例子是 `Weston` 和 `systemd`。许多使用
+    Linux 的人毫不犹豫地表示，由于 Linux API 提供的优势，他们倾向于使用 Linux API 而不是 `POSIX` API。
+
+
+    ### 系统调用接口
+
+
+    系统调用接口是所有实现的基础，甚至为 Linux 内核内部的系统调用提供了支持。几个子系统将被授权定义它们自己的调用。
+
+
+    ### C 标准库
+
+
+    C 库将围绕 Linux 内核执行的系统调用展开。系统调用接口和 C 库的组合构成了整个 Linux API。
+
+
+    ### Linux ABI
+
+
+    ABI 是用于 ABI 的内核用户空间。ABI 代表应用程序二进制接口，当谈论 ABI 时，你指的是应用程序二进制接口，即机器代码中找到的所有二进制文件。
+
+
+    任何作为机器二进制部分的代码都与指令集绑定在一起。当你尝试定义一个实用的 ABI 时，Linux 内核开发者和 C 库开发者不承担责任。相反，Linux 发行版和独立软件供应商将负责确保
+    ABI 对用户来说是稳定的。
+
+
+    # 第七章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ## 发行版
+
+
+    Linux 发行版是根据所使用的内核和管理系统将所有软件收集的操作系统。大多数 Linux 用户将通过从其中一个 Linux 发行版下载来获取他们的操作系统。这些发行版为嵌入式设备、超级计算机和个人电脑提供了下载。
+
+
+    在下载发行版时，你将下载内核、库文件以及确保操作系统按预期方式运行所需的任何额外工具。下载的绝大多数软件都是开源软件，并对下载它的用户免费。软件中编译的二进制文件以及源代码的编写方式使得你能够修改原始软件。
+
+
+    大多数情况下，Linux 发行版会包含某些源代码中不可用的专有软件，这些内容是设备驱动程序等内容。发行版也可以描述为与 Linux 内核绑定在一起的应用程序和实用软件集合，以便在用户使用系统时满足他们的需求。
+
+
+    就像桌面环境一样，你想要找到最适合你和你个人需求的发行版。
+
+
+    ### openSUSE
+
+
+    SUSE 公司将他们的 `openSUSE` 向其 `SLE` 靠拢，以便他们的用户获得一个与企业使用的服务器类似的发行版。你会发现 `openSUSE`
+    与 `Ubuntu` 甚至 `CentOS` 相似。
+
+
+    ### Arch Linux
+
+
+    `Arch Linux` 允许用户学习关于 Linux 的所有知识，因为你必须手动安装一切，所以你能够接触到你正在安装的 Linux 操作系统的每一个部分。
+
+
+    `Arch` 是定制化最高的发行版之一。在你习惯了 `Arch` 的设置后，你就能构建你想要的发行版。`Arch` 的坏处在于它可能存在任何交互问题。所见即所得。
+
+
+    `Arch` 持续更新，以便用户能够运行 `Arch` 推出的软件包。用户还可以选择在软件发布前运行，但你将会运行不稳定的仓库。
+
+
+    ### Elementary OS
+
+
+    `Elementary OS` 主要关注系统的外观设计，因此它更倾向于设计师，让他们能够打造属于自己的系统。`Elementary OS` 的界面更接近 `Mac
+    OS X` 的界面。
+
+
+    ### Solus
+
+
+    `Solus` 系统是由其开发者从零创建的，并不基于 `Ubuntu` 或 `Debian`。`Budgie` 桌面也是从零开发的，但它的运行方式与 `GNOME`
+    相同。
+
+
+    ### Chrome OS
+
+
+    `Chrome OS` 更多基于浏览器而不是普通的操作系统，这对于那些经常在线的人来说是理想的。`Chrome OS` 不需要维护，并且定期更新以跟上互联网上最新的安全在线更新。`Chrome
+    OS` 在 PC 和移动设备上都是流行的 Linux 系统。
+
+
+    ### Ubuntu MATE
+
+
+    如果你使用的是电池寿命不长或资源有限的笔记本电脑，`Ubuntu MATE` 是最佳选择。`Ubuntu MATE` 轻量，但缺少其他发行版具备的任何功能。`Ubuntu
+    MATE` 针对笔记本电脑用户，并不意味着你不能在 PC 上做同样的事，它仅仅意味着它更适用于处于低端市场的系统。
+
+
+    ### Lubuntu
+
+
+    `Lubuntu` 通过使用 `LXDE` 适用于那些在旧硬件上工作的用户。
+
+
+    ### Snappy Ubuntu Core
+
+
+    '
+- fmt: '
+
+    Snappy is the operating system that you are going to use when you are working
+    with Internet of Things. Essentially this operating system is going to be able
+    to turn your household appliances into smart devices.
+
+
+    ## Linux Mint Cinnamon
+
+
+    If you are working on a powerful desktop or laptop, you are going to want to look
+    into this Linux operating system. Cinnamon works on LTS so that it is more stable;
+    however, you may still experience some crashes that the developers of Cinnamon
+    are working on.
+
+
+    ## Steam OS
+
+
+    Many users run Steam OS with Windows so that they are able to play games. But,
+    with `Steam OS` you are going to make it to where you do not have to dual run
+    operating systems anymore in order to play your games no matter what platform
+    you are using.
+
+
+    ## Tails
+
+
+    Privacy is a big deal to many people, especially with so many people tracking
+    your movements on the internet. Therefore, if you are wanting to keep people out
+    of the things that you are doing, then you are going to need an operating system
+    that is going to make this possible.
+
+
+    Tails was created with privacy in mind so that you can do whatever you are wanting
+    to do on your operating system without anyone knowing what you are doing. It has
+    been reported that this operating system is a threat to the mission that the NSA
+    is on to keep tabs on the members of the United States.
+
+
+    ## Chapter Eight
+
+
+    ![logo](images/00003.jpeg)
+
+
+    ## Installing a Firewall with Linux
+
+
+    By default, Linux Ubuntu is not going to have a firewall installed. Many people
+    already have a firewall on their computer, but sometimes they do not, and you
+    are going to need a firewall to help with the security on your computer. With
+    Ubuntu, you are going to have at least two packages that you are going to be able
+    to choose from for a firewall.
+
+
+    ### Lokkit
+
+
+    Lokkit is going to be a basic firewall, and it is not going to be hard to configure
+    the firewall. The first thing that you need to do is run Lokkit with superuser
+    privileges by opening the run command and entering `gksudo gnome-lokkit`. Once
+    it comes up you going to be requested to enter your password before going any
+    further. Once the password has been inserted, a dialog box will appear asking
+    if you want to configure a firewall.
+
+
+    The wizard that walks you through installing Lokkit is going to be explained on
+    the screen. It is recommended that you use the high-security option on your firewall.
+    The only time you are not going to want to choose this option is if you are doing
+    DCC file transfers to IRC. Another reason you will not choose high security is
+    if you are using the `DHCP` in order to get an IP address from cable or DSL modems.
+
+
+    Whenever the setup wizard asks about turning `DHCP` on, you are going to want
+    to click yes. For those using DSL or cable modems, you are going to to have your
+    IP address pulled up through the use of `DHCP`.
+
+
+    As long as your computer is the only computer that is on the network, then you
+    do not necessarily have to enable the services that the firewall is going to provide.
+    It does not matter if you click no or not; the `SSH` is going to be left open
+    to any machines that are on the network you are using. You just need to make sure
+    you click yes whenever Lokkit asks about trusted hosts that may be on your network’s
+    interface.
+
+
+    Lokkit is going to ask some more questions about the security that it should offer
+    for your computer before the firewall is going to be enabled. Make sure you are
+    saving the changes that you make before you start the firewall.
+
+
+    Should you ever believe that you are having problems with your firewall, you are
+    going to need to rerun Lokkit so that you get rid of all of the rules that the
+    firewall has set into place.
+
+
+    ### Guarddog
+
+
+    You are going to need to open the run dialog box and enter `gksudo guarddog` so
+    that guarddog is opened. You do not have to be a superuser to run this firewall,
+    but there are going to be special rules that you will have to apply to the firewall
+    if you are wanting to use it as a super user.
+
+
+    This firewall is going to be more complex than the one that we just discussed.
+    You are going to see this whenever you start guarddog. The first thing that you
+    are going to notice is that there are tabs and in these tabs are going to have
+    the settings that are going to allow you to define the various rules that the
+    firewall is going to have to abide by.
+
+
+    Guarddog is going to come with two zones that are already configured. They are
+    the internet zone and the one that is set up for all of the IP addresses that
+    appear but do not match any of the other zones.
+
+
+    The guarddog firewall is going to take some time for you to set up correctly because
+    there are all kinds of settings that you are going to have to go through, but
+    it is going to give you a complete sense of protection on your new operating system.
+
+
+    ## Chapter Nine
+
+
+    ![logo](images/00003.jpeg)
+
+
+    ## File Management
+
+
+    The files that you keep on your operating system are going to be important to
+    you as they are things that you are going to need access to at various points
+    in time. Since Linux runs off a command prompt, you will need to enter the command
+    that you want the operating system to execute.
+
+
+    The files that are located on Linux are going to be placed together based on the
+    purpose of what the purpose of the file is. Ultimately, all of the files are going
+    to be under the root directory.
+
+
+    The root directory is going to be the home directory where you are going to start
+    out when you are looking for a particular file or directory.
+
+
+    `Home` is going to be where all of your main directories are. These are going
+    to be directories for things such as `samba` and `HTTP`.
+
+
+    `Bin` is the commands that you are going to need to enter when your computer is
+    booting up. This is typical commands that an average user will be using.
+
+
+    `Sbin`: the commands that are going to be used by normal users but are going to
+    be run by Linux specifically.
+
+
+    `Proc`: the `proc` file system will not be located on a disk. Instead, it is a
+    file system that will be located in the imagination of the kernels on the Linux
+    memory system.
+
+
+    `Usr`: this directory is going to have everything that you are going to use for
+    normal operations on your computer. This directory will also include the `bin`
+    and `sbin` file systems along with `include` which is going to be the files for
+    the `C` programming language. `Lib`, the files that are not going to change the
+    data for any programs or subsystems. `Local`, where all of your local software
+    is going to be stored. `Man`, the manual pages for your computer. `Info`, the
+    information documents.
+
+
+    `Boot`: any files that are used that are related to the bootstrap loaded as well
+    as any kernel images that are on the computer will be located in this file.
+
+
+    `Lib`: libraries that are shared by programs.
+
+
+    `Dev`: the files that are on the device.
+
+
+    `Etc`: any files that have to be configured specifically to the machine that is
+    being used.
+
+
+    `Var`: files that are for printers, man pages, and temp files will be under this
+    library.
+
+
+    `Mnt`: when temporary mounts need to be placed on the system, they are going to
+    be located in this library.
+
+
+    `Tmp`: any files that are temporarily set up after you begin the bootup.
+
+
+    ## Commands for managing your files and viewing them
+
+
+    `Cd`: your current directory will be changed. If you do not put an argument in,
+    then the home directory will be changed too.
+
+
+    `Apropos`: you will be able to search databases for files that have specific strings.
+
+
+    `Bdflush`: any dirty buffers are going to be placed on the memory by the kernel’s
+    daemons.
+
+
+    `File`: the file type will be determined as well as which library it needs to
+    go to.
+
+
+    `Chown`: the owner of a particular file will be changed
+
+
+    `Dircolors`: colors for the `ls` command are going to be set up.
+
+
+    `Chgrp`: the group that you are currently looking at is going to be changed.
+
+
+    `Dir`: all the contents of the directory are going to be listed out.
+
+
+    `Cksum`: when this command is entered, the bytes that are on that file are going
+    to be counted.
+
+    '
+  raw: 'Snappy is the operating system that you are going to use when you are working
+    with Internet of Things. Essentially this operating system is going to be able
+    to turn your household appliances into smart devices.
+
+
+    **Linux Mint Cinnamon**
+
+
+    If you are working on a powerful desktop or laptop, you are going to want to look
+    into this Linux operating system. Cinnamon works on LTS so that it is more stable;
+    however, you may still experience some crashes that the developers of Cinnamon
+    are working on.
+
+
+    **Steam OS**
+
+
+    Many users run Steam OS with Windows so that they are able to play games. But,
+    with Steam OS you are going to make it to where you do not have to dual run operating
+    systems anymore in order to play your games no matter what platform you are using.
+
+
+    **Tails**
+
+
+    Privacy is a big deal to many people, especially with so many people tracking
+    your movements on the internet. Therefore, if you are wanting to keep people out
+    of the things that you are doing, then you are going to need an operating system
+    that is going to make this possible.
+
+
+    Tails was created with privacy in mind so that you can do whatever you are wanting
+    to do on your operating system without anyone knowing what you are doing. It has
+    been reported that this operating system is a threat to the mission that the NSA
+    is on to keep tabs on the members of the United States.
+
+
+    **Chapter Eight**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **Installing a Firewall with Linux**
+
+
+    By default, Linux Ubuntu is not going to have a firewall installed. Many people
+    already have a firewall on their computer, but sometimes they do not, and you
+    are going to need a firewall to help with the security on your computer. With
+    Ubuntu, you are going to have at least two packages that you are going to be able
+    to choose from for a firewall.
+
+
+    **Lokkit**
+
+
+    Lokkit is going to be a basic firewall, and it is not going to be hard to configure
+    the firewall. The first thing that you need to do is run Lokkit with superuser
+    privileges by opening the run command and entering gksudo gnome-lokkit. Once it
+    comes up you going to be requested to enter your password before going any further.
+    Once the password has been inserted, a dialog box will appear asking if you want
+    to configure a firewall.
+
+
+    The wizard that walks you through installing Lokkit is going to be explained on
+    the screen. It is recommended that you use the high-security option on your firewall.
+    The only time you are not going to want to choose this option is if you are doing
+    DCC file transfers to IRC. Another reason you will not choose high security is
+    if you are using the DHCP in order to get an IP address from cable or DSL modems.
+
+
+    Whenever the setup wizard asks about turning DHCP on, you are going to want to
+    click yes. For those using DSL or cable modems, you are going to need to have
+    your IP address pulled up through the use of DHCP.
+
+
+    As long as your computer is the only computer that is on the network, then you
+    do not necessarily have to enable the services that the firewall is going to provide.
+    It does not matter if you click no or not; the SSH is going to be left open to
+    any machines that are on the network you are using. You just need to make sure
+    you click yes whenever Lokkit asks about trusted hosts that may be on your network’s
+    interface.
+
+
+    Lokkit is going to ask some more questions about the security that it should offer
+    for your computer before the firewall is going to be enabled. Make sure you are
+    saving the changes that you make before you start the firewall.
+
+
+    Should you ever believe that you are having problems with your firewall, you are
+    going to need to rerun Lokkit so that you get rid of all of the rules that the
+    firewall has set into place.
+
+
+    **Guarddog**
+
+
+    You are going to need to open the run dialog box and enter gksudo guarddog so
+    that guarddog is opened. You do not have to be a superuser to run this firewall,
+    but there are going to be special rules that you will have to apply to the firewall
+    if you are wanting to use it as a super user.
+
+
+    This firewall is going to be more complex than the one that we just discussed.
+    You are going to see this whenever you start guarddog. The first thing that you
+    are going to notice is that there are tabs and in these tabs are going to have
+    the settings that are going to allow you to define the various rules that the
+    firewall is going to have to abide by.
+
+
+    Guarddog is going to come with two zones that are already configured. They are
+    the internet zone and the one that is set up for all the IP addresses that appear
+    but do not match any of the other zones.
+
+
+    The guarddog firewall is going to take some time for you to set up correctly because
+    there are all kinds of settings that you are going to have to go through, but
+    it is going to give you a complete sense of protection on your new operating system.
+
+
+    **Chapter Nine**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **File Management**
+
+
+    The files that you keep on your operating system are going to be important to
+    you as they are things that you are going to need access to at various points
+    in time. Since Linux runs off a command prompt, you will need to enter the command
+    that you want the operating system to execute.
+
+
+    The files that are located on Linux are going to be placed together based on the
+    purpose of what the purpose of the file is. Ultimately, all of the files are going
+    to be under the root directory.
+
+
+    The root directory is going to be the home directory where you are going to start
+    out when you are looking for a particular file or directory.
+
+
+    Home is going to be where all of your main directories are. These are going to
+    be directories for things such as samba and HTTP.
+
+
+    Bin is the commands that you are going to need to enter when your computer is
+    booting up. This is typical commands that an average user will be using.
+
+
+    Sbin: the commands that are going to be used by normal users but are going to
+    be run by Linux specifically.
+
+
+    Proc: the proc file system will not be located on a disk. Instead, it is a file
+    system that will be located in the imagination of the kernels on the Linux memory
+    system.
+
+
+    Usr: this directory is going to have everything that you are going to use for
+    normal operations on your computer. This directory will also include the bin and
+    sbin file systems along with include which is going to be the files for the C
+    programming language. Lib, the files that are not going to change the data for
+    any programs or subsystems. Local, where all of your local software is going to
+    be stored. Man, the manual pages for your computer. Info, the information documents.
+
+
+    Boot: any files that are used that are related to the bootstrap loaded as well
+    as any kernel images that are on the computer will be located in this file.
+
+
+    Lib: libraries that are shared by programs.
+
+
+    Dev: the files that are on the device.
+
+
+    Etc: any files that have to be configured specifically to the machine that is
+    being used.
+
+
+    Var: files that are for printers, man pages, and temp files will be under this
+    library.
+
+
+    Mnt: when temporary mounts need to be placed on the system, they are going to
+    be located in this library.
+
+
+    Tmp: any files that are temporarily set up after you begin the bootup.
+
+
+    **Commands for managing your files and viewing them**
+
+
+    Cd: your current directory will be changed. If you do not put an argument in,
+    then the home directory will be changed too.
+
+
+    Apropos: you will be able to search databases for files that have specific strings.
+
+
+    Bdflush: any dirty buffers are going to be placed on the memory by the kernel’s
+    daemons.
+
+
+    File: the file type will be determined as well as which library it needs to go
+    to.
+
+
+    Chown: the owner of a particular file will be changed
+
+
+    Dircolors: colors for the ls command are going to be set up.
+
+
+    Chgrp: the group that you are currently looking at is going to be changed.
+
+
+    Dir: all the contents of the directory are going to be listed out.
+
+
+    Cksum: when this command is entered, the bytes that are on that file are going
+    to be counted.'
+  toc: []
+  trans: '
+
+    Snappy 是你在处理物联网（Internet of Things）时使用的操作系统。本质上，这个操作系统能够将你的家用电器变成智能设备。
+
+
+    ## Linux Mint Cinnamon
+
+
+    如果你正在性能强大的台式电脑或笔记本电脑上工作，你可能想尝试这个 Linux 操作系统。Cinnamon 运行在 LTS（长期支持）版本上，因此更加稳定；不过，你可能仍然遇到一些
+    Cinnamon 开发人员正在解决的崩溃问题。
+
+
+    ## Steam OS
+
+
+    许多用户在 Windows 上运行 Steam OS 以便玩游戏。但是，通过 `Steam OS`，你可以实现无论你使用什么平台，都不再需要双系统运行操作系统来玩游戏。
+
+
+    ## Tails
+
+
+    隐私对许多人来说非常重要，尤其是当有这么多人在追踪你在互联网上的活动时。因此，如果你想防止别人干涉你所做的事情，你需要一个能够实现这一点的操作系统。
+
+
+    Tails 的创建考虑了隐私，因此你可以在操作系统上做任何你想做的事，而没有任何人知道你在做什么。据报道，这个操作系统对美国安全局（NSA）监控美国公民的任务构成了威胁。
+
+
+    ## 第八章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ## 在 Linux 上安装防火墙
+
+
+    默认情况下，Linux Ubuntu 并没有安装防火墙。许多人的电脑上已经安装了防火墙，但有时并没有，这时你需要一个防火墙来帮助保护电脑安全。在 Ubuntu
+    中，你至少有两个软件包可以供选择防火墙。
+
+
+    ### Lokkit
+
+
+    Lokkit 是一个基础防火墙，配置该防火墙并不困难。你需要做的第一件事是以超级用户权限运行 Lokkit，即打开运行命令框并输入 `gksudo gnome-lokkit`。一旦它启动，你将在继续操作之前被要求输入密码。一旦输入密码，就会弹出一个对话框，询问你是否要配置防火墙。
+
+
+    引导你安装 Lokkit 的向将在屏幕上进行说明。建议你在防火墙上使用“高安全性”选项。只有在向 IRC 进行 DCC 文件传输时，才不想选择此选项。另一个不选择高安全性的原因是你正在使用
+    `DHCP` 从电缆或 DSL 调制器获取 IP 地址。
+
+
+    每当设置向导询问是否开启 `DHCP` 时，你应该点击“是”。对于使用 DSL 或电缆调制器的用户，你将通过 `DHCP` 获取你的 IP 地址。
+
+
+    只要你的电脑是网络上唯一的电脑，你就不一定需要启用防火墙提供的服务。无论你点击“否”还是否都没关系；`SSH` 将对你正在使用的网络上的任何机器保持开放。你只需要在
+    Lokkit 询问可能位于你网络接口上的信任主机时，确保点击“是”。
+
+
+    在启用防火墙之前，Lokkit 会向你询问关于它应该为你的电脑提供的安全性问题。确保在启动防火墙之前保存你所做的所有更改。
+
+
+    如果你认为你的防火墙出了问题，你需要重新运行 Lokkit，以便清除防火墙设置的所有规则。
+
+
+    ### Guarddog
+
+
+    你需要打开运行对话框并输入 `gksudo guarddog` 以打开 guarddog。运行此防火墙不需要超级用户权限，但如果你想以超级用户身份使用它，则必须对防火墙应用一些特殊规则。
+
+
+    这个防火墙比我们刚刚讨论的那个要复杂。每当你启动 guarddog 时，都会看到这个。你首先会注意到会有标签页，这些标签页包含了允许你定义防火墙必须遵守的各种规则的设置。
+
+
+    Guarddog 自带有两个已经配置好的区域。一个是互联网区域（internet zone），另一个是为所有出现但不匹配任何其他区域的 IP 地址设置的。
+
+
+    正确设置 guarddog 防火墙需要一些时间，因为你必须经过各种设置，但它将为你的新操作系统提供完整的安全保障。
+
+
+    ## 第九章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ## 文件管理
+
+
+    你保存在操作系统上的文件对你来说非常重要，因为你需要在不同时间点访问它们。由于 Linux 通过命令行界面运行，你需要输入你想让操作系统执行的命令。
+
+
+    位于 Linux 上的文件将根据文件的用途进行分类。归根底，所有文件都位于根目录（root directory）下。
+
+
+    根目录是你寻找特定文件或目录时开始的家目录（home directory）。
+
+
+    `Home` 是所有主目录所在地。这些是用于如 `samba` 和 `HTTP` 等内容的目录。
+
+
+    `Bin` 是你电脑启动时需要输入的命令。这些是普通用户会使用的典型命令。
+
+
+    `Sbin` 是由 Linux 运行的命令，通常供系统管理员使用。
+
+
+    `Proc` 系统的 `proc` 文件系统并不位于磁盘上。相反，它是位于 Linux 内存中的文件系统。
+
+
+    `Usr` 目录包含了你在电脑上操作所需的所有内容。这个目录还包括 `bin` 和 `sbin` 文件系统，以及用于 `C` 语言的 `include` 目录。`Lib`
+    是程序共享的库。`Local` 是存储所有本地软件的地方。`Man` 是电脑的手册页。`Info` 是文档。
+
+
+    `Boot` 任何与引导相关的文件以及电脑上的任何内核镜像都位于此文件系统中。
+
+
+    `Lib` 程序共享的库。
+
+
+    `Dev` 设备上的文件。
+
+
+    `Etc` 任何针对使用的机器进行特定配置的文件。
+
+
+    `Var` 用于打印机、手册页和临时文件的在此目录下。
+
+
+    `Mnt` 当需要在系统上临时挂载时，它们位于此目录下。
+
+
+    `Tmp` 启动后临时设置的任何文件。
+
+
+    ## 管理和查看文件的命令
+
+
+    `Cd` 更改当前目录。如果你不提供参数，则将更改家目录。
+
+
+    `Apropos` 你可以搜索数据库中包含特定字符串的文件。
+
+
+    `Bdflush` 内核守护进程会将任何脏缓冲区放入内存中。
+
+
+    `File` 将确定文件类型以及它需要进入哪个库。
+
+
+    `Dircolors` 设置 `ls` 命令的颜色。
+
+
+    `Chgrp` 更改你当前查看的组组。
+
+
+    `Dir` 列出目录的所有内容。
+
+
+    `Cksum` 当输入此命令时，将统计该文件的字节数。
+
+    '
+- fmt: '
+
+    `Dd`: the file is going to be copied and converted based on the formatting options
+    that are put into place. This also works for disk and data duplicates.
+
+
+    `Cp`: the file you select will be copied from its currently located and relocated
+    to another location.
+
+
+    ### Find
+
+
+    `~`: your search is going to go through the home directory and all of the subdirectories.
+
+
+    `-name report3`: any file with the name report 3 will be located.
+
+
+    `-print`: the entire file path for that file is going to be printed out.
+
+
+    `Losetup`: the device’s setup will be looped.
+
+
+    `Install`: several different files are going to be copied while their attributes
+    are set up.
+
+
+    `Ls`: you will be able to see all of the contents that are in subdirectories.
+
+
+    `Locate`: any file that uses `slocate` in the database is going to be located.
+
+
+    `Ln`: there is links between files.
+
+
+    `Sum`: the check will be run, and the blocks are going to be counted inside of
+    that file.
+
+
+    `Mkdir`: you will create a directory.
+
+
+    `Stat(l)`: the inode will be printed out.
+
+
+    `Mknod`: blocks or character files will be created.
+
+
+    `Slocate`: when searching for a particular file, you will use this code. You are
+    going to get built on those files that are in the system.
+
+
+    `Mktemp`: temporary file will be created.
+
+
+    ## Chapter Ten
+
+
+    ![logo](images/0003.jpeg)
+
+
+    ## System Administration and Security
+
+
+    Once you have installed Linux, you are going to need to configure your systems,
+    backup your files, monitor the system, and deal with updates. As the system administrator,
+    you are going to know how to do things such as deal with storage media, managing
+    memory on the operating system, booting and shutting down, and how to handle users
+    that are on the system.
+
+
+    ## Disks and storage
+
+
+    After you have connected the operating system, you are going to create all of
+    the files on your disk so that you have a place to store. Some of the things you
+    are going to do with disks are to format them, move systems around so that you
+    can form a tree, Partition a hard disk so that you can do different activities
+    that are not going to work against each, but separately. You will also be able
+    to make a file system on each disk that you have set up.
+
+
+    There are two different devices that Linux is going to recognize: block devices
+    and character devices. A few of the devices are going to be random while others
+    are going to be access. Every device that you have on your file system is going
+    to be represented. That way, when you create a device, the data will be inputted
+    from the device it belongs to or sent to. This makes it where you do not have
+    to have anything special in order to access the devices that you are using on
+    the Linux system.
+
+
+    ## Managing memory
+
+
+    Linux has virtual memory which is when a disk is used as an extension of the RAM
+    so that you have enough room to do what you need to do. Any contents that are
+    placed on the hard disk for memory are going to be called upon later. As a user,
+    you are not going to see where all of programs are saved because not all part
+    of their memory is hiding on the hard disk. While managing the memory, you are
+    going to have the option to create a memory swap which is going to swap the file
+    that you have selected from where it is currently residing in the reserve space.
+
+
+    ## Booting and shutting down
+
+
+    Whenever you start your operating system, you are going to be participating in
+    the act of booting it up. This is going to be when the image from the computer
+    comes up during bootstraps. When the computer is going through its bootstrap process,
+    it is going to pull up some code known as the bootstrap loader which will start
+    the operating system so that it can be used. Every computer that you use is going
+    to go through the bootstrap process differently. You need to follow the appropriate
+    steps to make sure that you shut the Linux system down. If you do not do your
+    shutdown properly, you are going to end up causing your files to become scrambled
+    and your operating system is going to end up messed up. It is important to remember
+    that the Linux system uses a disk cache that is not going to write everything
+    onto the disk in one setting but is going to do it in intervals so that the performance
+    of the operating system is superior to other systems. That is why it is essential
+    to follow the proper shutdown procedures so that you are not wiping out any data
+    that is being moved to the disk at that point in time.
+
+
+    ## Security
+
+
+    A great many people decide to use Linux because of the security that the server
+    offers. Linux has not had any major problems when it comes to the security provided
+    to its users. But, this does not mean that you do not need to keep an eye on the
+    security of the system.
+
+
+    ## The Linux system is not going to be immune to everything
+
+
+    It is true that downloading a Linux distribution is going to be more secure than
+    if you were to download Windows out of a box that you just bought; however, due
+    to the fact that Linux is free, there are going to be vulnerabilities that Linux
+    is going to have. But, you are not going to find as many exploits as you will
+    with another operating system. This does not mean that none are found, it just
+    means there are less. If you are using Linux on a desktop, you are going to still
+    be open to browser-based exploits such as a rootkit. The system does not necessarily
+    have to be rooted in order for it to be disrupted in its operating. Therefore,
+    you are going to still need to have security in mind as the system administrator
+    so that you can protect yourself, your files, and your users.
+
+
+    ## There is no obligation to have an antivirus
+
+
+    Working with Windows, you are used to having an antivirus; however, when you move
+    over to Linux, you are not going to need one. There are not many antiviruses out
+    there that are going to work on a Linux operating system due to the fact that
+    Linux does not display the same problems that Windows does when it comes to viruses
+    and malware. If it makes you feel comfortable, you are going to be able to install
+    an antivirus if you want. But, you are most likely not to get any results back
+    when you scan your system because there will not be any threats on your system.
+    Most attacks that Linux users are going to be open to are worms and cross-site
+    scripting. Other attacks such as phishing attempts are going to be based on what
+    the user decides to enter into the attack because you are going to be asked for
+    personal information while you are on the internet and it is possible not to realize
+    that you are being fooled by someone trying to hack into your computer.
+
+
+    ## It is better to prevent than it is to cure
+
+
+    If you have ever been the victim of a virus or malware, then you know that it
+    is a lot easier just to maintain it so that it is running properly rather than
+    to spend hours upon hours trying to get all of your information back after you
+    have had a security breach. The first thing that you are going to want to do is
+    to get on the email list for the vendor’s security list that way you are instantly
+    alerted when there are problems with the distribution that you are using and how
+    it can be fixed.
+
+
+    If you are using a third party distributor, then you are going to probably see
+    updates in security slower than if you were to use an upstream vendor.
+
+    '
+  raw: 'Dd: the file is going to be copied and converted based on the formatting options
+    that are put into place. This also works for disk and data duplicates.
+
+
+    Cp: the file you select will be copied from its currently located and relocated
+    to another location.
+
+
+    Find:
+
+
+    ~: your search is going to go through the home directory and all of the subdirectories.
+
+
+    -name report3: any file with the name report 3 will be located.
+
+
+    -print: the entire file path for that file is going to be printed out.
+
+
+    Losetup: the device’s setup will be looped back.
+
+
+    Install: several different files are going to be copied while their attributes
+    are set up.
+
+
+    Ls: you will be able to see all of the contents that are in any subdirectories.
+
+
+    Locate: any file that uses slocate in the database is going to be located.
+
+
+    Ln: there is going make links between various files.
+
+
+    Sum: the check sum will be run, and the blocks are going to be counted inside
+    of that file.
+
+
+    Mkdir: you will create a directory.
+
+
+    Stat(l u): the inode will be printed out.
+
+
+    Mknod: blocks or special character files will be created.
+
+
+    Slocate: when searching for a particular index file, you will use this code. You
+    are going to get a database built on those files that are in the system.
+
+
+    Mktemp: temporary file names will be created.
+
+
+    **Chapter Ten**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **System Administration and Security**
+
+
+    Once you have installed Linux, you are going to need to configure your systems,
+    backup your files, monitor the system, and deal with user management and updates
+    on the system.
+
+
+    As the system administrator, you are going to have to know how to do things such
+    as deal with the storage media, managing the memory on the operating system, booting
+    and shutting down the system, and how to handle users that are on the system.
+
+
+    **Disks and storage media**
+
+
+    After you have connected the operating system, you are going to have to create
+    all of the filesystems on your disk so that you have a place saved to store files
+    for your system.
+
+
+    Some of the things that you are going to do with your disks are to format them,
+    move file systems around so that you can form a structured tree of files. Partition
+    a hard disk so that you can do different activities that are not going to work
+    against each other, but separately. You will also be able to make a file system
+    on each disk and partition that you have set up.
+
+
+    There are two different devices that Linux is going to recognize, the access block
+    devices and character devices. A few of the devices are going to be continued
+    access while others are going to be random access. Every device that you have
+    supported on your file system is going to be represented by a device file. That
+    way, when you create a device file, the data will be inputted from the device
+    that it belongs to or be sent to the device it is representing.
+
+
+    This makes it to where you do not have to have anything special in order to access
+    the devices that you are using on the Linux system.
+
+
+    **Managing memory**
+
+
+    Linux has a virtual memory which is when a disk is being used as an extension
+    of the RAM that is being used by the memory so that you have enough room to do
+    what it is that you need to do. Any contents that are placed on the hard disk
+    for memory are going to be able to be called upon later. As a user, you are not
+    going to be able to see where all the contents of programs are going to be saved
+    because it is not for the user to know, it is for the program to know, but not
+    all programs are going to realize that some part of their memory is hiding on
+    the hard disk.
+
+
+    While managing the memory, you are going to have the option to create a memory
+    swap which is going to swap the file that you have selected will be swapped from
+    where it is currently residing in the reserve memory space.
+
+
+    **Booting and shutting down**
+
+
+    Whenever you start your operating system, you are going to be participating in
+    the act of booting it up. This is going to be when the image from the computer
+    comes up during bootstraps.
+
+
+    When the computer is going through its bootstrap process, it is going to pull
+    up some code that is known as the bootstrap loader which will start the operating
+    system so that it can be used. Every computer that you use is going to go through
+    the bootstrap process differently.
+
+
+    You need to follow the appropriate steps to make sure that you shut the Linux
+    system down. If you do not do your shutdown properly, then you are going to end
+    up causing your files to become scrambled, and your operating system is going
+    to end up being messed up.
+
+
+    It is important to remember that the Linux system uses a disk cache that is not
+    going to write everything onto the disk in one setting but is going to do it in
+    intervals so that the performance of the operating system is superior to other
+    operating systems. That is why it is essential to follow the proper shutdown procedures
+    so that you are not wiping out any data that is being moved to the disk at that
+    point in time.
+
+
+    **Security**
+
+
+    A great many people decide to use Linux because of the security that the server
+    offers. Linux has not had any major problems when it comes to the security provided
+    to its users. But, this does not mean that you do not need to keep an eye on the
+    security of the system.
+
+
+    **The Linux system is not going to be immune to everything**
+
+
+    It is true that downloading a Linux distribution is going to be more secure than
+    if you were to download Windows out of a box that you just bought, however, due
+    to the fact that Linux is free, there are going to be vulnerabilities that Linux
+    is going to have. But, you are not going to find as many exploits as you will
+    with another operating system. This does not mean that there are not any found,
+    it just means there are less.
+
+
+    If you are using Linux on a desktop, you are going to still be open to exploits
+    that are browser based such as a rootkit. The system is not going to necessarily
+    have to be rooted in order for it to be disrupted in its operating.
+
+
+    Therefore, you are going to still need to have security in mind as the system
+    administrator so that you can protect yourself, your files, and your users.
+
+
+    **There is no obligation to have an antivirus**
+
+
+    Working with Windows, you are used to having an antivirus, however, when you move
+    over to Linux, you are not going to need one. There are not many antiviruses out
+    there that are going to work on a Linux operating system due to the fact that
+    Linux does not display the same problems that Windows does when it comes to viruses
+    and malware.
+
+
+    If it makes you feel comfortable, you are going to be able to install an antivirus
+    if you want. But, you are most likely not going to get any results back when you
+    scan your system because there will not be any threats on your system.
+
+
+    Most attacks that Linux users are going to be open to are worms and cross-site
+    scripting. Other attacks such as phishing attempts are going to be based on what
+    the user decides to enter into the attack because you are going to be asked for
+    personal information while you are on the internet and it is possible not to realize
+    that you are being fooled by someone trying to hack into your computer.
+
+
+    **It is better to prevent than it is to cure**
+
+
+    If you have ever been the victim of a virus or malware, then you know that it
+    is a lot easier just to maintain it so that it is running properly rather than
+    to spend hours upon hours of trying to get all of your information back after
+    you have had a security breach.
+
+
+    The first thing that you are going to want to do is to get on the email list for
+    the vendor’s security list that way that you are instantly alerted when there
+    are problems with the distribution that you are using and how it can be fixed.
+
+
+    If you are using a third party distributor, then you are going to probably see
+    updates in security slower than if you were to use an upstream vendor.'
+  toc: []
+  trans: '
+
+
+    `Dd`: 文件将根据已设置的格式选项进行复制和转换。这也适用于磁盘和数据复制。
+
+
+    `Cp`: 你选择的文件将从其当前位置复制并移动到另一个位置。
+
+
+    ### 查找
+
+
+    `~`: 你的搜索将遍历主目录及其所有的子目录。
+
+
+    `-name report3`: 将定位到任何名为 report3 的文件。
+
+
+    `-print`: 将打印该文件的完整文件路径。
+
+
+    `Losetup`: 将设备的设置设置为循环设备。
+
+
+    `Install`: 在设置其属性的同时，将复制几个不同的文件。
+
+
+    `Ls`: 你将能够看到子目录中的所有内容。
+
+
+    `Locate`: 将定位数据库中任何使用 `slocate` 查找的文件。
+
+
+    `Ln`: 文件之间存在链接。
+
+
+    `Sum`: 将运行检查并统计该文件内部的块数。
+
+
+    `Mkdir`: 你将创建一个目录。
+
+
+    `Stat(l)`: 将打印索引节点（inode）。
+
+
+    `Mknod`: 将创建块设备或字符文件。
+
+
+    `Slocate`: 当搜索特定文件时，将使用此代码。你将针对系统中的文件进行构建。
+
+
+    `Mktemp`: 将创建临时文件。
+
+
+    ## 第十章
+
+
+    ![logo](img/0003.jpeg)
+
+
+    ## 系统管理与安全
+
+
+    一旦安装了 Linux，你将需要配置你的系统、备份文件、监控系统并处理更新。作为系统管理员，你将学会如何处理存储媒体、管理操作系统上的内存、启动和关机，以及如何处理系统中的用户。
+
+
+    ## 磁盘与存储
+
+
+    在连接操作系统后，你将在磁盘上创建所有文件，以便有一个存储数据的地方。你对磁盘进行的一些操作包括格式化它们、移动系统以形成树形结构、分区硬盘以便你可以进行不同的、互不干扰且独立运行的活动。你还可以在设置的每个磁盘上创建文件系统。
+
+
+    Linux 将识别两种不同的设备：块设备和字符设备。一些设备是随机的，而另一些是顺序访问的。文件系统中的每一个设备都将被表示。这样，当你创建一个设备时，数据将从它所属的设备输入或发送。这使得你不需要任何特殊操作即可访问在
+    Linux 系统上使用的设备。
+
+
+    ## 内存管理
+
+
+    Linux 拥有虚拟内存，即将磁盘作为 RAM 的扩展，以便你有足够的空间执行所需的操作。任何放置在硬盘上作为内存的内容稍后都会被调用。作为用户，你不会看到所有程序保存在哪里，因为并不是所有的内存都隐藏在硬盘上。在管理内存时，你有创建内存交换（swap）的选项，可以将你选择的文件从其当前所在的预留空间交换出去。
+
+
+    ## 启动与关机
+
+
+    每当你启动操作系统时，你都在参与启动它的过程。这是计算机镜像在自引导过程中出现的时候。当计算机经历引导过程时，它将调出某些称为“引导加载程序”（bootstrap
+    loader）的代码，这将启动操作系统以便可以使用。你使用的每台计算机通过引导过程的方式各不相同。你需要遵循适当的步骤来确保关闭 Linux 系统。如果你不正常关机，最终可能会导致文件混乱，你的操作系统也会变得错乱。重要的是记住，Linux
+    系统使用了磁盘缓存，它不会一次性地将所有内容写入磁盘，而是分间隔地进行，以确保操作系统的性能优于其他系统。因此，遵循正确的关机程序至关重要，这样你才丢失此时正在移动到磁盘的任何数据。
+
+
+    ## 安全
+
+
+    许多人决定使用 Linux 是因为服务器提供的安全性。在为用户提供安全性方面，Linux 没有出现过任何重大问题。但并不意味着你不需要关注系统的安全性。
+
+
+    ## Linux 系统并不能对一切免疫
+
+
+    诚然，下载 Linux 发行版比从新购买的机器上下载 Windows 要安全；然而，由于 Linux 是免费的，它将存在一些漏洞。但你不会像在其他操作系统那样发现这么多漏洞。这并不意味着没有漏洞，只是意味着较少。如果你在桌面上使用
+    Linux，你仍然可能面临基于浏览器的漏洞，例如根内核包（rootkit）。系统的运行并不一定非要获取根权限才能被干扰。因此，作为系统管理员，你仍然需要注意安全，以便保护你自己、你的文件和你的用户。
+
+
+    ## 没有义务使用杀毒软件
+
+
+    在 Windows 上工作时，你习惯了使用杀毒软件；但当你迁移到 Linux 时，你不需要。并没有多少杀毒软件可以在 Linux 系统上运行，因为 Linux
+    在病毒和恶意软件方面没有出现与 Windows 相同的问题。如果这让你感到安心，你可以根据需要安装杀毒软件。但当你扫描系统时，很可能得不到任何结果，因为系统中没有威胁。Linux
+    用户面临的大多数攻击是蠕虫和跨站脚本。其他攻击（如钓鱼尝试）取决于用户决定输入攻击的内容，因为你在上网时可能会被要求提供个人信息，而可能并没有意识到正被试图黑入你电脑的人所欺骗。
+
+
+    ## 预防胜于治疗
+
+
+    如果你曾经做过病毒或恶意软件的受害者，你就知道，保持系统正常运行，比在发生安全泄露后花费数小时去尝试找回所有信息要容易得多。你可能想要做的第一件事是加入供应商的安全邮件列表，这样当你使用的发行版出现问题时，你就能立即收到提醒并知道如何修复。
+
+
+    如果你使用的是第三方发行版，你看到的安全更新速度可能会比使用上游版本要慢。
+
+
+    '
+- fmt: '
+
+    Also, make sure you keep your operating system up to date. At least once a week
+    you are going to want to run updates so that you can update everything in case
+    there are patches that you are going to need to make sure that you are secured.
+    If you do not do this, then you are opening yourself up to attacks.
+
+
+    ## User permissions and encryption
+
+
+    You can also do your part in making sure that you keep your system locked down
+    to just those that need to be on the system. Depending on which distribution you
+    are using is going to change which tools are offered for system security. You
+    need to go through and learn where these tools are and how to use them so that
+    you can lock down your system or turn the tools off if they are not needed.
+
+
+    It is important that you know the way that Linux allows for for permissions to
+    be set up so that others have access to your files but not so much access that
+    they can end up getting in and messing up your system. This is vital when it comes
+    to a system that is being used by multiple users or if you are running off a host
+    service that is being shared.
+
+
+    It is not a bad idea to encrypt the partition that you have set up either. Whenever
+    an individual has physical access to the machine that you are running Linux on,
+    they are not going to need to know any of your passwords to get in and get the
+    data that is located on that machine if it is not encrypted.
+
+
+    ## Audit and intrusion detection
+
+
+    Lastly, you should take into consideration setting aside some time to place intrusion
+    detection on the servers that you are a system administrator to running checks
+    to verify that your system has not already been compromised.
+
+
+    Many hackers are experienced enough to be able to get into an operating system
+    and compromise it without leaving any signs until it is too late.
+
+
+    ## Backups
+
+
+    No matter how reliable your system is, you are going to want to have backups of
+    anything that is on your system so that you do not lose everything. While it is
+    highly unlikely that you are going to suffer from a security breach when using
+    Linux, it is better to be safe than sorry.
+
+
+    # Chapter Eleven
+
+
+    ![logo](images/00003.jpeg)
+
+
+    ## Scripting with Linux
+
+
+    As you know, Linux is going to run off of commands, and there are millions of
+    commands to do everything it is that you are wanting to do. It seems pretty impossible
+    to be able to remember all of the commands and what it is that they do. The good
+    news is that you do not need to! You are going to want the computer do the work
+    for you and use shell so that you have the option to automate things. This is
+    going to be why scripts are written.
+
+
+    If you do not already know, scripts are going to be lines of code that tell the
+    computer what to do. Your shell is going to have the ability to read the file
+    that contains all of your scripts and execute them as if you were to type them
+    out right then and there.
+
+
+    Scripts are good for a great number of things such as:
+
+
+    - Getting automatic updates to your Linux system from your vendor.
+
+    - Back up your files to another server so that you do not risk losing them.
+
+    - Managing a website and the files located on it (if you manage a website.)
+
+
+    ### Your first script
+
+
+    Obviously, you want your shell script to be successful, and for that to happen,
+    you have to make sure you are following these three steps.
+
+
+    1. Placing the script somewhere that your shell has access to it.
+
+    2. Writing out script correctly so that it can be read by the shell.
+
+    3. Giving the shell the proper permissions that are needed for the script to be
+    executed on your operating system.
+
+
+    The scripting for the shell is going to be in ASCII text; therefore you need to
+    have a text editor opened to create the proper shell script. The text editor that
+    you use is going to be based on your personal preferences, but some of the ones
+    that you can choose from are the notepad or word processor. Just ensure that the
+    editor you decide to use is going to be able to read as well as write out the
+    ASCII texts.
+
+
+    After your text editor has been opened, you are going to enter in some text that
+    looks like this:
+
+
+    ```bash
+
+    #!/ bin/ bash
+
+
+    #the first shell script for Linux
+
+
+    Echo: “I did it!”
+
+    ```
+
+
+    The next thing that you are going need to do is to save the file with a name that
+    you are going to know what it is and where you can find it.
+
+
+    When looking at the opening line of your script, you are going to notice that
+    it is going to tell the shell which program you are wanting to be used when it
+    comes to interpreting your script. You can use other programs such as `Perl` or
+    `python` if you prefer.
+
+
+    Your second line is going to be your comment which is set apart from the rest
+    of the code with the hashtag. Anything that is following the hashtag is going
+    to be ignored by the interpreter because it is not an actual part of the script.
+
+
+    The longer your script is, the more comments that you are going to have in your
+    script so that you are able to go back and figure out what it is that you are
+    doing with your code or so that others can use your code and know what it is that
+    you are doing.
+
+
+    That last line in your script will be the command that is echoed. Basically, this
+    is the command that you are going to want to be printed on your display.
+
+
+    ### Setting permissions
+
+
+    You have to allow the shell to know that it is okay to run the code that you have
+    put into the command prompt. You are going need to use the `chmod` command along
+    with the number `755`. The number `755` allows for anyone to execute, read, and
+    write the code. But, if you want your code to be private instead, you will use
+    the number `700`.
+
+
+    ### Placing it into your path
+
+
+    When your script is executed, you should see the “I did it!” message that you
+    put into your code back when you first wrote it. On the off chance that you do
+    not see your code on the screen, relocate your file in its directory and move
+    the shell there rather than the directory that it is currently using.
+
+
+    Whenever the name of a command is entered into the system, the system is not going
+    to go through the entire computer to locate that file. Instead, it is just going
+    to search through where you tell it to search specifically. Scanning your entire
+    computer would take way too long, and you may not always have that time.
+
+
+    Your shell is going to keep a list of all the directories in which programs that
+    are executable will be located and the only directories that are searched (if
+    you do not tell shell where to look) and it will find the file. If the file cannot
+    be found, then you are going to get an error message that tells you that your
+    command could not be found.
+
+
+    The list of directories that the shell is going to search will be the path, and
+    you are going to be able to look at all the paths by placing `$PATH` into your
+    command prompt. The result is going to be the entire list of directories that
+    are going to be searched when looking for your command.
+
+
+    You also have the option to add directories so that the shell looks in that directory
+    rather than going into a different directory.
+
+
+    ## Editing
+
+
+    Your home directory already has some scripts that are being run by the shell that
+    you did not put on your computer but were put there so that it can configure the
+    behavior of your sessions while you are on the computer. These scripts can be
+    edited by you if you want to edit them.
+
+
+    Some commands are automatically built into your shell that you are not going to
+    be able to change. Your shell is going to understand a handful of commands on
+    its own and others are going to have to be taught to it. Some commands that your
+    shell is going to know automatically are `cd` and `pwd`.
+
+
+    Another group of commands are the programs that are executable. A great number
+    of commands in this group are going to be found in the files that are located
+    in your directory.
+
+    '
+  raw: 'Also, make sure you keep your operating system up to date. At least once a
+    week you are going to want to run updates so that you can update everything in
+    case there are patches that you are going to need to make sure that you are secured.
+    If you do not do this, then you are opening yourself up to attacks.
+
+
+    **User permissions and encryption**
+
+
+    You can also do your part in making sure that you keep your system locked down
+    to just those that need to be on the system. Depending on which distribution you
+    are using is going to change which tools are offered for system security. You
+    need to go through and learn where these tools are and how to use them so that
+    you can lock down your system or turn the tools off if they are not needed.
+
+
+    It is important that you know the way that Linux allows for permissions to be
+    set up so that others have access to your files but not so much access that they
+    can end up getting in and messing up your system. This is vital when it comes
+    to a system that is being used by multiple users or if you are running off a host
+    service that is being shared.
+
+
+    It is not a bad idea to encrypt the partition that you have set up either. Whenever
+    an individual has physical access to the machine that you are running Linux on,
+    they are not going to need to know any of your passwords to get in and get the
+    data that is located on that machine if it is not encrypted.
+
+
+    **Audit and intrusion detection**
+
+
+    Lastly, you should take into consideration setting aside some time to place intrusion
+    detection on the servers that you are a system administrator to and running checks
+    to verify that your system has not already been compromised.
+
+
+    Many hackers are experienced enough to be able to get into an operating system
+    and compromise it without leaving any signs until it is too late.
+
+
+    **Backups**
+
+
+    No matter how reliable your system is, you are going to want to have backups of
+    anything that is on your system so that you do not lose everything. While it is
+    highly unlikely that you are going to suffer from a security breach when using
+    Linux, it is better to be safe than sorry.
+
+
+    **Chapter Eleven**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **Scripting with Linux**
+
+
+    As you know, Linux is going to run off of commands, and there are millions of
+    commands to do everything it is that you are wanting to do. It seems pretty impossible
+    to be able to remember all of the commands and what it is that they do. The good
+    news is that you do not need to! You are going to want to make the computer do
+    the work for you and use shell so that you have the option to automate things.
+    This is going to be why scripts are written.
+
+
+    If you do not already know, scripts are going to be lines of code that tell the
+    computer what to do. Your shell is going to have the ability to read the file
+    that contains all of your scripts and execute them as if you were to type them
+    out right then and there.
+
+
+    Scripts are good for a great number of things such as:
+
+
+    •Getting automatic updates to your Linux system from your vendor.
+
+
+    •Back up your files to another server so that you do not risk losing them.
+
+
+    •Managing a website and the files located on it (if you manage a website.)
+
+
+    **Your first script**
+
+
+    Obviously, you want your shell script to be successful, and for that to happen,
+    you have to make sure you are following these three steps.
+
+
+    1.Placing the script somewhere that your shell has access to it.
+
+
+    2.Writing out script correctly so that it can be read by the shell.
+
+
+    3.Giving the shell the proper permissions that are needed for the script to be
+    executed on your operating system.
+
+
+    The scripting for the shell is going to be in ASCII text; therefore you need to
+    have a text editor opened to create the proper shell script. The text editor that
+    you use is going to be based on your personal preferences, but some of the ones
+    that you can choose from are the notepad or word processor. Just ensure that the
+    editor you decide to use is going to be able to read as well as write out the
+    ASCII texts.
+
+
+    After your text editor has been opened, you are going to enter in some text that
+    looks like this:
+
+
+    #!/ bin/ bash
+
+
+    #the first shell script for Linux
+
+
+    Echo: “I did it!”
+
+
+    The next thing that you are going to need to do is to save the file with a name
+    that you are going to know what it is and where you can find it.
+
+
+    When looking at the opening line of your script, you are going to notice that
+    it is going to tell the shell which program you are wanting to be used when it
+    comes to interpreting your script. You can use other programs such as Perl or
+    python if you prefer.
+
+
+    Your second line is going to be your comment which is set apart from the rest
+    of the code with the hashtag. Anything that is following the hashtag is going
+    to be ignored by the interpreter because it is not an actual part of the script.
+
+
+    The longer your script is, the more comments that you are going to have in your
+    script so that you are able to go back and figure out what it is that you are
+    doing with your code or so that others can use your code and know what it is that
+    you are doing.
+
+
+    That last line in your script will be the command that is echoed. Basically, this
+    is the command that you are going to want to be printed on your display.
+
+
+    **Setting permissions**
+
+
+    You have to allow the shell to know that it is okay to run the code that you have
+    put into the command prompt. You are going to need to use the chmod command along
+    with the number 755\. The number 755 allows for anyone to execute, read, and write
+    the code. But, if you want your code to be private instead, you will use the number
+    700.
+
+
+    **Placing it into your path**
+
+
+    When your script is executed, you should see the “I did it!” message that you
+    put into your code back when you first wrote it. On the off chance that you do
+    not see your code on the screen, relocate your file in its directory and move
+    the shell there rather than the directory that it is currently using.
+
+
+    Whenever the name of a command is entered into the system, the system is not going
+    to go through the entire computer to locate that file. Instead, it is just going
+    to search through where you tell it to search specifically. Scanning your entire
+    computer would take way too long, and you may not always have that time.
+
+
+    Your shell is going to keep a list of all the directories in which programs that
+    are executable will be located and the only directories that are searched (if
+    you do not tell shell where to look) and it will find the file. If the file cannot
+    be found, then you are going to get an error message that tells you that your
+    command could not be found.
+
+
+    The list of directories that the shell is going to search will be the path, and
+    you are going to be able to look at all the paths by placing $PATH into your command
+    prompt. The result is going to be the entire list of directories that are going
+    to be searched when looking for your command.
+
+
+    You also have the option to add directories so that the shell looks in that directory
+    rather than going into a different directory.
+
+
+    **Editing**
+
+
+    Your home directory already has some scripts that are being run by the shell that
+    you did not put on your computer but were put there so that it can configure the
+    behavior of your sessions while you are on the computer. These scripts can be
+    edited by you if you want to edit them.
+
+
+    Some commands are automatically built into your shell that you are not going to
+    be able to change. Your shell is going to understand a handful of commands on
+    its own and others are going to have to be taught to it. Some commands that your
+    shell is going to know automatically are cd and pwd.
+
+
+    Another group of commands are the programs that are executable. A great number
+    of commands in this group are going to be found in the files that are located
+    in your directory.'
+  toc: []
+  trans: '
+
+    此外，请确保你的操作系统保持最新更新。你可能至少每周要运行一次更新，以便在需要某些安全补丁时能够更新所有内容，以确保你的安全。如果你不这样做，就会让自己暴露在攻击的风险之中。
+
+
+    ## 用户权限与加密
+
+
+    你也可以尽自己的一力，确保你的系统仅对那些需要使用系统的人开放。根据你所使用的发行版不同，提供的系统安全工具也会会有所不同。你需要去了解并学习这些工具位于何处以及如何使用它们，以便锁定你的系统，或者在不需要时关闭这些工具。
+
+
+    了解 Linux 如何设置权限非常重要，这样他人就可以访问你的文件，但又不会让他们获得过大的权限，以至于他们最终进入并搞乱你的系统。对于被多个用户使用的系统，或者你运行在共享的主机服务上，这一点至关重要。
+
+
+    加密你设置的分区也不是一个坏主意。每当个人物理接触到你运行 Linux 的机器时，如果该机器没有加密，他们不需要知道任何密码就可以进入并获取该机器上的数据。
+
+
+    ## 审计与入侵检测
+
+
+    最后，你应该考虑花些时间在你作为系统管理员的服务器上部署入侵检测，运行检查以验证你的系统是否已经被入侵。
+
+
+    许多黑客都非常有经验，能够进入操作系统并破坏它，且在为时已晚之前留下留下痕迹。
+
+
+    ## 备份
+
+
+    无论你的系统有多可靠，你都可能想要对系统上的任何内容进行备份，以免丢失所有数据。虽然在使用 Linux 时遭遇安全泄露的可能性极低，但未患于患，胜于其医。
+
+
+    # 第十一章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ## 使用 Linux 编写脚本
+
+
+    如你所知，Linux 是通过命令运行的，并且有数百万条命令可以完成你想要做的任何事情。记住所有的命令及其作用似乎几乎是不可能的。好消息是，你不需要这样做！你应该让计算机为你工作，并使用
+    shell，这样你就有了自动化处理任务的选项。这就是编写脚本的原因。
+
+
+    如果你还不知道，脚本是告诉计算机执行操作的代码行。你的 shell 将能够读取包含你所有脚本的文件，并执行它们，就像你当时亲自输入它们一样。
+
+
+    脚本对很多事情都有用，例如：
+
+
+    - 从你的供应商那里为你的 Linux 系统获取自动更新。
+
+    - 将你的文件备份到另一个服务器，以避免丢失的风险。
+
+    - 管理网站及其位于上面的文件（如果你管理网站的话）。
+
+
+    ### 你的第一个脚本
+
+
+    显然，你希望你的 shell 脚本运行成功，为了实现这一点，你必须确保遵循以下三个步骤。
+
+
+    1. 将脚本放置在你的 shell 能够访问的地方。
+
+    2. 正确地编写脚本，以便 shell 读取。
+
+    3. 给 shell 必要的权限，以便在你的操作系统上执行脚本。
+
+
+    shell 脚本将以 ASCII 文本形式存在；因此，你需要打开一个文本编辑器来创建正确的 shell 脚本。你使用的文本编辑器取决于你的个人偏好，但你可以选择的包括记事本或文字处理器。只需确保你决定使用的编辑器能够读取和写入
+    ASCII 文本即可。
+
+
+    打开文本编辑器后，你将输入如下所示的内容：
+
+
+    ```bash
+
+    #!/ bin/ bash
+
+
+    #Linux 的第一个 shell 脚本
+
+
+    Echo: “I did it!”
+
+    ```
+
+
+    接下来你需要做的是保存文件，并取一个让你知道它是什么以及在哪里可以找到它的名字。
+
+
+    在查看脚本的第一行时，你会注意到它会告诉 shell 在解释你的脚本时你想要使用哪个程序。如果你愿意，也可以使用其他程序，如 `Perl` 或 `python`。
+
+
+    你的第二行是注释，它通过井号（#）与其他代码隔离开。井号后的任何内容都会被解释器忽略，因为它们不是脚本的实际部分。
+
+
+    脚本越长，你脚本中的注释就越多，这样你就能回头搞清楚你正在对代码做什么，或者让其他人可以使用你的代码并知道你在做什么。
+
+
+    脚本的最后一行将是要被回显（echo）的命令。基本上，这就是你希望在显示器上打印命令。
+
+
+    ### 设置权限
+
+
+    你必须允许 shell 知道运行你在命令提示符中输入的代码是允许的。你需要使用 `chmod` 命令配合数字 `755`。数字 `755` 允许任何人执行、读取和写入代码。但，如果你想让你的代码保持私有，你将使用数字
+    `700`。
+
+
+    ### 将其放入路径 (path)
+
+
+    当你的脚本被执行时，你应该看到你在最初编写代码时放入代码中的“I did it!”消息。如果你在屏幕上没有看到代码，你应该将文件移动到某个目录并让 shell
+    使用那里，而不是它当前正在使用的目录。
+
+
+    每当输入命令名称时，系统不会遍历整个计算机来定位该文件。相反，它只会在你指定的范围内进行搜索。扫描整个计算机将花费太长时间，而你并不总是有那么多时间。
+
+
+    你的 shell 将维护一个可执行程序所在的目录列表，以及它搜索的目录（如果你没有告诉 shell 去哪里查找），它将找到文件。如果找不到文件，你将收到一条提示找不到命令的错误消息。
+
+
+    shell 将搜索的目录列表就是路径（path），你可以通过在命令提示符中输入 `$PATH` 来查看所有路径。结果是查找命令时搜索的整个目录列表。
+
+
+    你还可以添加目录选项，让 shell 查找该目录而不是进入另一个目录。
+
+    '
+- fmt: '
+
+    The last group of commands will be the commands that include runtime environments.
+    When using these commands, the system is going to be holding an unknown number
+    of facts in the memory bank. The information that is in the memory bank is known
+    as the environment, and these environments are going to be things like the names
+    of your files, your user names, so on and so forth. You can use the `set` command
+    to be able to see all of the environments that are in this group.
+
+
+    Your environment commands are also going to include shell functions and aliases.
+
+
+    ### Aliases
+
+
+    In order to make an alias, you should be in the home directory and have your text
+    editor opened. You will need to open up the profile document and add the alias
+    to the end of the file.
+
+
+    Your file is going to be executed by shell each time that you log on on your computer.
+    The `alias` command is going to create a new command which is going to be able
+    to perform other commands. When you attempt to try out your new command you should
+    log out of your system and back in first. With the `alias` command, you have the
+    ability to create custom commands that are going to be unique to you.
+
+
+    The `alias` command is built into the shell, and this gives you the chance to
+    create your aliases in the command prompt directly, but they are not going to
+    last. Whenever you log out of the shell session you are currently using, it is
+    going to be erased.
+
+
+    ### Shell functions
+
+
+    Shell functions are going to be more complex than an alias function. It is easier
+    to think of shell functions as scripts inside of scripts. You can take the alias
+    file that you created earlier and replace it with a shell function in your text
+    editor.
+
+
+    You should know that `function` is a command that is built into the shell as well
+    just like `alias` is so if you want to make the command last just for your current
+    session, enter your command into the command prompt rather than into your text
+    editor.
+
+
+    ## Chapter Twelve
+
+
+    ![logo](images/00003.jpeg)
+
+
+    ### Tips and Tricks to Use with Linux
+
+
+    Throughout the pages of this book you have learned what Linux is and the various
+    things that you are going to be able to do with it. However, while Linux seems
+    pretty simple to use, you are still going to want to know some tips that are going
+    to make using Linux easier. The coding that you see in this chapter is going to
+    be the syntax that you are going to use to make these tips and tricks work for
+    you!
+
+
+    1. Look at the processes that are not being run by you.
+
+
+    If you are doing something on your machine and find that while you are in the
+    middle of that intense online game, your computer freezes. Your first inquiry
+    is going to be what has happened to your computer to make it do this. The answer
+    is that another user could be taking some of the CPU that your computer needs
+    to run the game that you are playing.
+
+
+    To look at the processes that are being run, but not by you, you will need to
+    enter this code into your command prompt:
+
+
+    ```
+
+    Ps aux | grep -v ‘whoami.’
+
+    ```
+
+
+    Using this code is going to pull up all of the processes that are taking up CPU
+    on your computer. But, this is going to all of the processes that are running
+    in the background as well. So, why not sort out the processes so that you can
+    see the top ten processes that are taking up the most CPU. You will enter this
+    syntax into your prompt.
+
+
+    ```
+
+    Ps aux - - sort = % cpu | grep – m 11 – v ‘whoami’
+
+    ```
+
+
+    You are probably going to want to run this command out of your root directory
+    so that you are getting the background process filtered out. And now that you
+    have these CPU killing processes, you are going to be able to shut them down and
+    get back to your game!
+
+
+    2. Replacing the same text across several files
+
+
+    There are going to be moments that you need to take the same text and change it
+    in several locations. You have a few options to do this.
+
+
+    When you are trying to replace text in all of the files in the directory that
+    you are currently working in:
+
+
+    ```
+
+    Perl -i -pe ‘s/windows/Linux/; ‘ test *
+
+    ```
+
+
+    In order to change the text from windows to Linux in the directory and its subdirectories
+    will be this code:
+
+
+    ```
+
+    Find. – name’ * .txt’ – print | xargs perl – pi -e’s/windows/Linux/ig’ * .txt
+
+    ```
+
+
+    Or, if you are trying to replace text on regular files you can use this syntax.
+
+
+    ```
+
+    Find – type f – name ‘ * .txt’ -print0 | xargs - - null perl – pi – e ‘s/windows/Linux/’
+
+    ```
+
+
+    3. Wonky terminals
+
+
+    Sometimes you make mistakes and need to fix up the terminal that you are currently
+    working on so that it goes back to the way that it is supposed to be. You are
+    going to be hearing a beeping when your terminal is messed up, and you may see
+    some odd colors across your display. All you are going need to do is enter the
+    word `reset`, and you are going to be back to working with a terminal that works
+    properly.
+
+
+    4. Mozilla keywords
+
+
+    With Firefox you are going to have the option to type in what you are wanting
+    to search the internet for, and you are going to getting all of the results that
+    can be found on that browser. In order to do that, you ned to go to your bookmarks
+    and manage your bookmark. From there you will add a new bookmark with the URL
+    that you want to be searched.
+
+
+    After it has been put into your bookmarks, you will need to get ahold of the properties
+    and enter the keyword that you want to be able to type in so that you get your
+    search results. The percentage sign that you see in the URL is going to be replaced
+    with your keyword.
+
+
+    This trick can be used on any website that you are wanting quick access to.
+
+
+    You also can right-click on the search field and go to the option add keyword
+    to this search; a dialog box is going to appear.
+
+
+    5. Running multiple sessions
+
+
+    Sometimes you share your Linux with someone, and you are going to have to sign
+    out of their session and sign back yours. But, you do not have to do this every
+    time. Working under the assumption that your computer is started in graphical
+    mode, you are going to be able to press the keys control, alt, and f1 at the same
+    time and you are going to get a prompt to log into. This is where you are going
+    to be ready to enter your login information. After that, you need to run this
+    syntax:
+
+
+    ```
+
+    Startx - - : 1
+
+    ```
+
+
+    Now your computer should be back in the graphical environment. When the other
+    person wants to use your computer, they will use the same key combination except
+    that they are going to press f7. When you log back in, you will do `f8`.
+
+
+    Your `f1` through `f6` keys are going to be the keys that identify the console
+    sessions while `f7` through 12 identify sessions. Not every distribution is going
+    to work this way; you may have a different set of keys you have to hit based on
+    your distribution.
+
+
+    6. Faster browsing
+
+
+    With KDE you are going to have the option to speed up your web browsing. You will
+    pull up the control center for KDE and then go to the system option. From here
+    you are going to go to KDE performance. Now you have the option to select the
+    Konqueror instances that have been preloaded into the distribution.
+
+
+    Konqueror is going to automatically start when you start your computer but will
+    be hidden until it is being used.
+
+
+    7. Backing up your website
+
+
+    To back up a directory on your computer, you need to copy the files that have
+    been changed over to the location you have chosen to back it up. You can also
+    use a `rsync` tool that will do this for you automatically. However, an account
+    is going to be required on the other computer that you are backing your files
+    up to.
+
+
+    8. Keeping the clock on the proper time
+
+
+    There may be times that your clock is not on the correct time. You will need to
+    use an `NTP` tool so that you can get your clock synchronized with the proper
+    accuracy. First, you have to install the `NTP` tool that is going to include the
+    `NTP` package. From here you are going to be able to synchronize with a server.
+    The code you are going to use is:
+
+
+    ```
+
+    Ntpdate NTP. Blueyonder.Co. Uk
+
+    ```
+
+    '
+  raw: 'The last group of commands will be the commands that include runtime environments.
+    When using these commands, the system is going to be holding an unknown number
+    of facts in the memory bank. The information that is in the memory bank is known
+    as the environment, and these environments are going to be things like the names
+    of your files, your user names, so on and so forth. You can use the set command
+    to be able to see all of the environments that are in this group.
+
+
+    Your environment commands are also going to include shell functions and aliases.
+
+
+    **Aliases**
+
+
+    In order to make an alias, you should be in the home directory and have your text
+    editor opened. You will need to open up the profile document and add the alias
+    to the end of the file.
+
+
+    Your file is going to be executed by shell each time that you log on your computer.
+    The alias command is going to create a new command which is going to be able to
+    perform other commands. When you attempt to try out your new command you should
+    log out of your system and back in first. With the alias command, you have the
+    ability to create custom commands that are going to be unique to you.
+
+
+    The alias command is built into the shell, and this gives you the chance to create
+    your aliases in the command prompt directly, but they are not going to last. Whenever
+    you log out of the shell session you are currently using, it is going to be erased.
+
+
+    **Shell functions**
+
+
+    Shell functions are going to be more complex than an alias function. It is easier
+    to think of shell functions as scripts inside of scripts. You can take the alias
+    file that you created earlier and replace it with a shell function in your text
+    editor.
+
+
+    You should know that function is a command that is built into the shell as well
+    just like alias is so if you want to make the command last just for your current
+    session, enter your command into the command prompt rather than into your text
+    editor.
+
+
+    **Chapter Twelve**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    **Tips and Tricks to Use with Linux**
+
+
+    Throughout the pages of this book you have learned what Linux is and the various
+    things that you are going to be able to do with it. However, while Linux seems
+    pretty simple to use, you are still going to want to know some tips that are going
+    to make using Linux easier. The coding that you see in this chapter is going to
+    be the syntax that you are going to use to make these tips and tricks work for
+    you!
+
+
+    1\. Look at the processes that are not being run by you.
+
+
+    If you are doing something on your machine and find that while you are in the
+    middle of that intense online game, your computer freezes. Your first inquiry
+    is going to be what has happened to your computer to make it do this. The answer
+    is that another user could be taking some of the CPU that your computer needs
+    to run the game that you are playing.
+
+
+    To look at the processes that are being run, but not by you, you will need to
+    enter this code into your command prompt:
+
+
+    Ps aux | grep -v ‘whoami.’
+
+
+    Using this code is going to pull up all of the processes that are taking up CPU
+    on your computer. But, this is going to all of the processes that are running
+    in the background as well. So, why not sort out the processes so that you can
+    see the top ten processes that are taking up the most CPU. You will enter this
+    syntax into your prompt.
+
+
+    Ps aux - - sort = % cpu | grep – m 11 – v ‘whoami’
+
+
+    You are probably going to want to run this command out of your root directory
+    so that you are getting the background process filtered out. And now that you
+    have these CPU killing processes, you are going to be able to shut them down and
+    get back to your game!
+
+
+    2\. Replacing the same text across several files
+
+
+    There are going to be moments that you need to take the same text and change it
+    in several locations. You have a few options to do this.
+
+
+    When you are trying to replace text in all of the files in the directory that
+    you are currently working in:
+
+
+    Perl -i -pe ‘s/windows/Linux/; ‘ test *
+
+
+    In order to change the text from windows to Linux in the directory and its subdirectories
+    will be this code:
+
+
+    Find. – name’ * .txt’ – print | xargs perl – pi -e’s/windows/Linux/ig’ * .txt
+
+
+    Or, if you are trying to replace text on regular files you can use this syntax.
+
+
+    Find – type f – name ‘ * .txt’ -print0 | xargs - - null perl – pi – e ‘s/windows/Linux/’
+
+
+    3\. Wonky terminals
+
+
+    Sometimes you make mistakes and need to fix up the terminal that you are currently
+    working on so that it goes back to the way that it is supposed to be. You are
+    going to be hearing a beeping when your terminal is messed up, and you may see
+    some odd colors across your display. All you are going to need to do is enter
+    the word reset, and you are going to be back to working with a terminal that works
+    properly.
+
+
+    4\. Mozilla keywords
+
+
+    With Firefox you are going to have the option to type in what you are wanting
+    to search the internet for, and you are going to getting all of the results that
+    can be found on that browser. In order to do that, you ned to go to your bookmarks
+    and manage your bookmark. From there you will add a new bookmark with the URL
+    that you want to be searched.
+
+
+    After it has been put into your bookmarks, you will need to get ahold of the properties
+    and enter the keyword that you want to be able to type in so that you get your
+    search results. The percentage sign that you see in the URL is going to be replaced
+    with your keyword.
+
+
+    This trick can be used on any website that you are wanting quick access to.
+
+
+    You also can right-click on the search field and go to the option of add keyword
+    to this search; a dialog box is going to appear so that you can add your keyword
+    in.
+
+
+    5\. Running multiple sessions
+
+
+    Sometimes you share your Linux with someone, and you are going to have to sign
+    out of their session and sign back into yours. But, you do not have to do this
+    every time. Working under the assumption that your computer is started in graphical
+    mode, you are going to be able to press the keys control, alt, and f1 at the same
+    time and you are going to get a prompt to log into. This is where you are going
+    to be ready to enter your login information. After that, you need to run this
+    syntax:
+
+
+    Startx - - : 1
+
+
+    Now your computer should be back in the graphical environment. When the other
+    person wants to use your computer again, they will use the same key combination
+    except that they are going to press f7\. When you log back in, you will do f8.
+
+
+    Your f1 through f6 keys are going to be the keys that identify the console sessions
+    while f7 through 12 identify sessions. Not every distribution is going to work
+    this way; you may have a different set of keys you have to hit based on your distribution.
+
+
+    6\. Faster browsing
+
+
+    With KDE you are going to have the option to speed up your web browsing. You will
+    pull up the control center for KDE and then go to the system option. From here
+    you are going to go to KDE performance. Now you have the option to select the
+    Konqueror instances that have been preloaded into the distribution.
+
+
+    Konqueror is going to automatically start when you start your computer but will
+    be hidden until it is being used.
+
+
+    7\. Backing up your website
+
+
+    To back up a directory on your computer, you need to copy the files that have
+    been changed over to the location you have chosen to back it up. You can also
+    use a rsync tool that will do this for you automatically. However, an account
+    is going to be required on the other computer that you are backing your files
+    up to.
+
+
+    8\. Keeping the clock on the proper time
+
+
+    There may be times that your clock is not on the correct time. You will need to
+    use an NTP tool so that you can get your clock synchronized with the proper accuracy.
+    First, you have to install the NTP tool that is going to include the NTP package.
+    From here you are going to be able to synchronize with a server. The code you
+    are going to use is:
+
+
+    Ntpdate NTP. Blueyonder. Co. Uk'
+  toc: []
+  trans: '
+
+    最后一组命令是包含运行环境的命令。当使用这些命令时，系统将在内存库中持有未知数量的实例。内存库中的信息被称为环境，这些环境将是你的文件名、用户名等内容。你可以使用
+    `set` 命令来查看此组中的所有环境。
+
+
+    你的环境命令还包括 shell 函数和别名（aliases）。
+
+
+    ### 别名 (Aliases)
+
+
+    为了创建一个别名，你应该处于主目录并打开你的文本编辑器。你需要打开配置文件（profile document）并将别名添加到文件的末尾。
+
+
+    每当你登录电脑时，shell 都会执行你的该文件。`alias` 命令将创建一个新命令，该命令可以执行其他命令。当你尝试使用你的新命令时，你应该先注销系统并重新登录。通过
+    `alias` 命令，你拥有了创建你所独有的自定义命令的能力。
+
+
+    `alias` 命令是内置在 shell 中的，这让你有机会直接在命令行提示符中创建你的别名，但它们是不会持久的。每当你退出当前正在使用的 shell 会话时，它们就会被擦除。
+
+
+    ### Shell 函数 (Shell functions)
+
+
+    Shell 函数比别名函数更复杂。将 shell 函数理解为脚本内部的脚本会更容易。你可以获取之前创建的别名文件，并在文本编辑器中将其替换为 shell 函数。
+
+
+    你应该知道，`function` 也是内置在 shell 中的命令，就像 `alias` 一样，所以如果你想让命令仅在当前会话中有效，请将命令输入到命令行提示符而不是文本编辑器中。
+
+
+    ## 第十二章
+
+
+    ![logo](img/00003.jpeg)
+
+
+    ### Linux 使用技巧与技巧
+
+
+    在本书的后续章节中，你已经学习了什么是 Linux 以及你可以用它做的各种事情。然而，虽然 Linux 看起来用起来很简单，但你仍然想知道一些让使用 Linux
+    变得更简单的技巧。你在本章中看到的代码将是你用来让这些技巧为你提供服务的语法！
+
+
+    1. 查看不是由你运行的进程。
+
+
+    如果你在你的机器上做某些事情，并发现在正在玩激烈的在线游戏时，你的电脑冻结了。你的第一个疑问将是电脑发生了什么导致了这种情况。答案是另一个用户可能正在占用你电脑运行游戏所需的
+    CPU。
+
+
+    要查看正在运行但不是你运行的进程，你需要在命令行提示符中输入以下代码：
+
+
+    ```
+
+    Ps aux | grep -v ‘whoami.’
+
+    ```
+
+
+    使用这段代码将调出你电脑上所有占用 CPU 的进程。但是，这也包含了所有在后台运行的进程。所以，为什么不对进程进行排序，以便看到占用 CPU 最高的前十个进程呢？你在提示符中输入此语法：
+
+
+    ```
+
+    Ps aux - - sort = % cpu | grep – m 11 – v ‘whoami’
+
+    ```
+
+
+    你可能想在根目录下运行此命令，以便过滤掉后台进程。现在你有了这些杀掉 CPU 的进程，你就能关闭它们并回到你的游戏了！
+
+
+    2. 在多个文件中替换相同的文本
+
+
+    在某些时刻，你需要获取相同的文本并在多个位置更改它。你有几种选项可以实现这一点。
+
+
+    当你尝试在当前工作目录下的所有文件中替换文本时：
+
+
+    ```
+
+    Perl -i -pe ‘s/windows/Linux/; ‘ test *
+
+    ```
+
+
+    为了在目录及其子目录中将文本从 windows 更改为 Linux，将使用以下代码：
+
+
+    ```
+
+    Find. – name’ * .txt’ – print | xargs perl – pi -e’s/windows/Linux/ig’ * .txt
+
+    ```
+
+
+    或者，如果你尝试在普通文件上替换文本，可以使用此语法。
+
+
+    ```
+
+    Find – type f – name ‘ * .txt’ -print0 | xargs - - null perl – pi – e ‘s/windows/Linux/’
+
+    ```
+
+
+    3. 异常的终端 (Wonky terminals)
+
+
+    有时你会犯错，并需要修复当前正在操作的终端，使其恢复到应有的状态。当你的终端混乱时，你会听到哔哔声，可能会在显示器上看到一些奇怪的颜色。你只需要输入 `reset`
+    单词，就能回到正常工作的终端。
+
+
+    4. Mozilla 关键字 (Mozilla keywords)
+
+
+    使用 Firefox，你可以选择输入你想要在互联网上搜索的内容，并获得在该浏览器上可以找到的所有结果。为了实现这一点，你需要进入书签并管理书签。从那里，你可以添加一个带有想要搜索的
+    URL 的新书签。
+
+
+    将其放入书签后，你需要获取属性并输入你想要输入的关键词，以便获得搜索结果。URL 中的百分号将将被替换为你的关键词。
+
+
+    这个技巧可以用于任何你想要快速访问的网站。
+
+
+    你也可以右键点击搜索字段，并选择“将关键字添加到此搜索”选项；会弹出一个对话框。
+
+
+    5. 运行多个会话 (Running multiple sessions)
+
+
+    有时你会与某人共享 Linux，你必须注销他们的会话并重新登录你的。但你不需要每次都这样做。在假设你的电脑是以图形模式启动的情况下，你可以同时按下 control、alt
+    和 f1 键，你将得到一个登录提示符。这就是你准备好输入登录信息的地方。之后，你需要运行此语法：
+
+
+    ```
+
+    Startx - - : 1
+
+    ```
+
+
+    现在你的电脑应该回到图形环境。当另一个人想使用你的电脑时，他们将使用相同的组合键，只不过他们将按下 f7。当你重新登录时，你执行 `f8`。
+
+
+    你的 `f1` 到 `f6` 键是标识控制台会话的键，而 `f7` 到 `12` 标识会话。并不是每一个发行版都是这样工作的；你可能需要根据你的发行版使用不同的按键。
+
+    '
+- fmt: '
+
+    Should you modify the boot process so that you can have this command, you are
+    going to get the correct time every time that your computer is booted up.
+
+
+    ### 9. Locating big files
+
+
+    One of the most common problems you are going to find that you have files that
+    contain a lot of data that have to be gotten rid of. To do this, you can utilize
+    one of these three codes.
+
+
+    To locate the largest file in the directory, you are currently in:
+
+
+    ```
+
+    ls -lsrh
+
+    ```
+
+
+    The `r` that is listed inside of the code is going pull the biggest files and
+    put them at the end while the `h` makes it to where you get a readout of how big
+    the file is.
+
+
+    To find MP3 and MPEG files:
+
+
+    ```bash
+
+    ls -lsrh *.mp*
+
+    ```
+
+
+    ### 10. Nautilus shortcuts
+
+
+    Linux has made it to where many file managers are supposed to be used with your
+    mouse, but there may be times that you cannot use your mouse or are doing something
+    that requires your fingers to stay on your keyboard. There are a few keyboard
+    shortcuts that Nautilus offers so that you can find these files.
+
+
+    - Your `arrow keys` are going to move to the folder that you are located in.
+
+    - `Control` and `L` are going to open a new location.
+
+    - `Control` and `up` will open the parent folder of the current folder you have
+    open.
+
+
+    ### Conclusion
+
+
+    ![logo](images/00003.jpeg)
+
+
+    Thank for making it through to the end of `Linux`, let’s hope it was informative
+    and able to provide you with all of the tools you need to achieve your goals whatever
+    it may be.
+
+
+    The next step is to download Linux and begin using it in a way that makes your
+    work more efficient!
+
+
+    Linux may still be a little daunting, but you should not let this stop you from
+    using Linux. As you have learned in this book, Linux offers more than many other
+    operating systems do and you ae going to discover that Linux will ultimately change
+    how you use the computer.
+
+
+    My hope as the author of this book is that you find Linux as useful as I did and
+    that you enjoy all of the features that Linux will give you that other operating
+    systems are not able to.
+
+
+    Thank you and good luck!
+
+
+    Finally, if you found this book useful in any way, a review on Amazon is always
+    appreciated!
+
+    '
+  raw: 'Should you modify the boot process so that you can have this command, you
+    are going to get the correct time every time that your computer is booted up.
+
+
+    9\. Locating big files
+
+
+    One of the most common problems you are going to find that you have files that
+    contain a lot of data that have to be gotten rid of. To do this, you can utilize
+    one of these three codes.
+
+
+    To locate the largest file in the directory, you are currently in:
+
+
+    Ls – lsrh
+
+
+    The r that is listed inside of the code is going pull the biggest files and put
+    them at the end while the h makes it to where you get a readout of how big the
+    file is.
+
+
+    To find MP3 and MPEG files
+
+
+    Ls -lsrh *.mp*
+
+
+    10\. Nautilus shortcuts
+
+
+    Linux has made it to where many file managers are supposed to be used with your
+    mouse, but there may be times that you cannot use your mouse or are doing something
+    that requires your fingers to stay on your keyboard. There are a few keyboard
+    shortcuts that Nautilus offers so that you can find these files.
+
+
+    Your arrow keys are going to move to the folder that you are located in.
+
+
+    Control and L are going to open a new location.
+
+
+    Contol and up will open the parent folder of the current folder you have open.
+
+
+    **Conclusion**
+
+
+    ![logo](images/00003.jpeg)
+
+
+    Thank for making it through to the end of *Linux*, let’s hope it was informative
+    and able to provide you with all of the tools you need to achieve your goals whatever
+    it may be.
+
+
+    The next step is to download Linux and begin using it in a way that makes your
+    work more efficient!
+
+
+    Linux may still be a little daunting, but you should not let this stop you from
+    using Linux. As you have learned in this book, Linux offers more than many other
+    operating systems do and you ae going to discover that Linux will ultimately change
+    how you use the computer.
+
+
+    My hope as the author of this book is that you find Linux as useful as I did and
+    that you enjoy all of the features that Linux will give you that other operating
+    systems are not able to.
+
+
+    Thank you and good luck!
+
+
+    Finally, if you found this book useful in any way, a review on Amazon is always
+    appreciated!'
+  toc: []
+  trans: '
+
+    如果你修改了启动过程以包含此命令，那么每次电脑启动时你都会获得正确的时间。
+
+
+    ### 9. 定位大文件
+
+
+    你将会遇到的最常见问题之一是，你有一些包含大量数据必须被删除的文件。要做到这一点，你可以利用以下三段代码之一。
+
+
+    要查找当前所在目录中最大的文件：
+
+
+    ```
+
+    ls -lsrh
+
+    ```
+
+
+    代码中列出的 `r` 将把最大的文件提取并放在末尾，而 `h` 则能让你读到文件的大小信息。
+
+
+    要查找 MP3 和 MPEG 文件：
+
+
+    ```bash
+
+    ls -lsrh *.mp*
+
+    ```
+
+
+    ### 10. Nautilus 快捷键
+
+
+    Linux 的设计使得许多文件管理器本应配合鼠标使用，但在某些情况下，你可能无法使用鼠标，或者正在进行某些需要手指不离开键盘的操作。Nautilus 提供了了一些键盘快捷键来帮助你找到这些文件。
+
+
+    - `arrow keys`（方向键）将移动到你所在的文件夹。
+
+    - `Control` 和 `L` 将打开一个新的位置。
+
+    - `Control` 和 `up` 将打开你当前打开的文件夹的父文件夹。
+
+
+    ### 结论
+
+
+    ![logo](img/00003.jpeg)
+
+
+    感谢你坚持到 `Linux` 之旅最后，希望这些内容提供了丰富的信息，并能够为你提供实现目标所需工具，无论你的目标是什么。
+
+
+    下一步是下载 Linux 并开始以让你的工作更高效的方式使用它！
+
+
+    Linux 可能仍然让人感到有些畏畏，但你不应该让这阻止你使用 Linux。正如你在这书中中学到的，Linux 提供的功能比许多其他操作系统都要，你将会发现
+    Linux 最终将改变你使用电脑的方式。
+
+
+    作为本书的作者，我希望你发现 Linux 像我一样有用，并享受 Linux 提供的所有其他操作系统无法提供的功能。
+
+
+    谢谢你并祝你好运！
+
+
+    最后，如果你觉得这本书在任何方面对你有帮助，我们将非常感谢你在 Amazon 上的评价！
+
+    '
