@@ -166,6 +166,7 @@
 +   [黑客精要；Kali Linux 入门黑客指南：学习 Kali Linux 并精通破解网站、无线网络的工具以获取收入（5 合 1 丛书）（黑客精要）](docs/hackers-essentialshacking-for-beginners-with-kali-linux-lear/README.md)
 +   [Hacking：三本合一：黑客初学者指南（如何破解网站、智能手机和无线网络） + 黑客 Linux 基础（命令行及所有核心要素） + Kali Linux 黑客实战](docs/hacking-3-books-in-1-a-beginners-guide-for-hackers-how-to-ha/README.md)
 +   [HACKING！：3本合1：基于 KALI LINUX 的道德黑客、渗透测试与无线渗透指南](docs/hacking-3-books-in-1-a-guide-to-ethical-hacking-penetration-/README.md)
++   [黑客攻击：4本合一 - 黑客入门指南、黑客基础安全、网络攻击、黑客专用 Kali Linux](docs/hacking-4-books-in-1--hacking-for-beginners-hacker-basic-sec/README.md)
 +   [黑客攻击：计算机黑客入门指南如何破解无线网络、基础安全与渗透测试、Kali Linux、你的第一次攻击](docs/hacking-computer-hacking-beginners-guide-how-to-hack-wireles/README.md)
 +   [初学者黑客指南：像渗透测试员一样学习 Kali Linux 并破解网站、无线网络的工具。学习黑客技术获取知识……（5 合 1 套书）（黑客必备）](docs/hacking-for-beginners-learn-kali-linux-as-a-penetration-test/README.md)
 +   [Kali Linux 黑客入门指南：学习 Kali Linux 并精通破解网站、无线网络的工具以获取收入（5 合 1 套装）（黑客必备）](docs/hacking-for-beginners-with-kali-linux-learn-kali-linux-and-m/README.md)
