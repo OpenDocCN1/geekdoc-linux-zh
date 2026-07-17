@@ -422,6 +422,7 @@
 +   [Linux：快速启动初学者指南：（Linux 初学者指南、Linux 命令行、Linux 操作系统、学习 Linux）（Linux 初学者书籍第 1 册）](docs/linux-the-quick-start-beginners-guide-linux-for-beginners-li/README.md)
 +   [LINUX：终极初学者指南！](docs/linux-the-ultimate-beginners-guide/README.md)
 +   [Linux 工具快速教程](docs/linux-tool-qkgd/README.md)
++   [Linux 教程 - Herong 的教程示例](docs/linux-tutorials---herongs-tutorial-examples/README.md)
 +   [Linux：初学者指南 (Linux 黑客技术、Linux 操作系统学习、编程基础、命令行、基础知识、分步教学)](docs/linux-ultimate-beginners-guide-linux-hacking-learning-linux-/README.md)
 +   [Linux 用户与开发者 138 - 7 天精通树莓派 138](docs/linux-user-developer-138---master-raspberry-pi-in-7-days-138/README.md)
 +   [Linux 用户与开发者 141 - Kano：像乐高一样简单，由 Pi 驱动 141](docs/linux-user-developer-141---kano-simple-as-lego-powered-by-pi/README.md)
