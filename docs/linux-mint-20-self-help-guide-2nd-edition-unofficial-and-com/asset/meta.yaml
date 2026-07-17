@@ -1,0 +1,397 @@
+name: Linux Mint 20 Self Help Guide 2nd Edition： Unofficial and Compatible With All
+  Linux Mint 20 Versions
+name_cn: Linux Mint 20 自助指南第二版：非官方且兼容所有 Linux Mint 20 版本
+slug: linux-mint-20-self-help-guide-2nd-edition-unofficial-and-com
+toc:
+- - '#'
+  - Linux Mint 20 自助指南第二版：非官方且兼容所有 Linux Mint 20 版本
+- - '#'
+  - 免责声明
+- - '#'
+  - 商标
+- - '#'
+  - 致谢
+- - '#'
+  - 安装机器详情
+- - '#'
+  - 引言
+- - '#'
+  - 关于作者
+- - '#'
+  - 参考文献
+- - '##'
+  - 音频编辑器
+- - '###'
+  - Ardour
+- - '###'
+  - Audacity
+- - '###'
+  - Kwave
+- - '##'
+  - Kwave
+- - '##'
+  - 云端备份
+- - '###'
+  - Insync
+- - '###'
+  - overGrive
+- - '##'
+  - 云端办公套件
+- - '###'
+  - Google Docs
+- - '###'
+  - Microsoft Office 365
+- - '###'
+  - Zoho Docs
+- - '##'
+  - 通讯工具
+- - '###'
+  - Discord
+- - '###'
+  - Pidgin
+- - '###'
+  - Telegram
+- - '##'
+  - 兼容层
+- - '###'
+  - Anbox
+- - '###'
+  - WINE Staging
+- - '##'
+  - 加密货币钱包
+- - '###'
+  - Bitcoin-Core / Coin Wallet
+- - '###'
+  - Coin Wallet（检查流程）
+- - '###'
+  - Electrum
+- - '##'
+  - 数据恢复
+- - '###'
+  - R-Linux
+- - '##'
+  - 桌面环境
+- - '###'
+  - Cinnamon
+- - '###'
+  - Gnome
+- - '###'
+  - KDE Plasma
+- - '###'
+  - Tasksel (Ubuntu Desktop)
+- - '##'
+  - 下载管理器
+- - '###'
+  - FireDM
+- - '###'
+  - KGet
+- - '###'
+  - uGet
+- - '##'
+  - 电子书阅读器
+- - '###'
+  - Calibre
+- - '##'
+  - Fbreader
+- - '##'
+  - Lucidor
+- - '##'
+  - Elder Gaming, Dosbox, ResidualVM, ScummVM
+- - '###'
+  - Dosbox
+- - '###'
+  - ResidualVM
+- - '###'
+  - ScummVM
+- - '##'
+  - 文件压缩与解压
+- - '###'
+  - Engrampa / PeaZip
+- - '###'
+  - PeaZip（手动安装）
+- - '##'
+  - 编辑器
+- - '###'
+  - Blender
+- - '###'
+  - GIMP / GNU Image Manipulation Program
+- - '###'
+  - Krita
+- - '###'
+  - Pinta
+- - '###'
+  - Inkscape
+- - '##'
+  - 视频直播
+- - '##'
+  - 媒体播放器
+- - '###'
+  - Parole
+- - '###'
+  - SMPlayer
+- - '###'
+  - VLC
+- - '##'
+  - 现代游戏
+- - '###'
+  - Blizzard Battle.net
+- - '###'
+  - Lutris
+- - '###'
+  - Proton-QT
+- - '###'
+  - Steam
+- - '###'
+  - WINE
+- - '##'
+  - 点播
+- - '###'
+  - Amazon Music
+- - '###'
+  - Apple Music
+- - '###'
+  - Spotify Client
+- - '###'
+  - Spotify
+- - '###'
+  - Tidal
+- - '###'
+  - Youtube Music
+- - '##'
+  - 音乐播放器
+- - '###'
+  - Audacious
+- - '###'
+  - Clementine
+- - '##'
+  - 办公套件
+- - '###'
+  - LibreOffice
+- - '###'
+  - ONLYOFFICE Desktop Editors
+- - '###'
+  - OpenOffice
+- - '##'
+  - OpenOffice
+- - '##'
+  - SoftMaker FreeOffice
+- - '##'
+  - WPS Office
+- - '##'
+  - PDF 阅读器
+- - '##'
+  - Evince
+- - '###'
+  - Evince
+- - '###'
+  - Okular
+- - '##'
+  - 远程办公
+- - '##'
+  - Citrix Workspace
+- - '##'
+  - Microsoft Teams
+- - '##'
+  - Zoom
+- - '###'
+  - Citrix Workspace
+- - '###'
+  - Microsoft Teams
+- - '###'
+  - Zoom
+- - '##'
+  - 安全
+- - '##'
+  - 防火墙端口
+- - '###'
+  - TCP 端口
+- - '###'
+  - UDP 端口
+- - '###'
+  - Clamtk
+- - '###'
+  - Firetools
+- - '###'
+  - Firejail
+- - '###'
+  - GUFW
+- - '####'
+  - GUFW 设置多端口规则
+- - '####'
+  - GUFW 设置范围范围规则
+- - '####'
+  - GUFW 设置单端口规则
+- - '###'
+  - UFW
+- - '####'
+  - UFW 设置多端口及范围规则
+- - '####'
+  - UFW 设置多端口规则
+- - '####'
+  - UFW 设置范围端口规则
+- - '####'
+  - UFW 设置单端口规则
+- - '###'
+  - 软件分发
+- - '####'
+  - AppImageLauncher
+- - '####'
+  - Flathub
+- - '####'
+  - Flatpak
+- - '####'
+  - Java JRE JDK
+- - '####'
+  - Snap
+- - '####'
+  - Snap Store
+- - '###'
+  - 系统设置
+- - '####'
+  - 缩图
+- - '####'
+  - AMD 驱动
+- - '####'
+  - 自动挂载磁盘
+- - '####'
+  - 更改内核版本
+- - '####'
+  - 更改鼠标加速
+- - '####'
+  - 更改音频设备
+- - '####'
+  - 更改主题
+- - '##'
+  - Nvidia 驱动
+- - '##'
+  - 可能的 Intel 声音卡杂声修复
+- - '##'
+  - 可能的 Parole 段错误修复
+- - '##'
+  - 设置为文件类型的默认值
+- - '##'
+  - 设置替代 DNS
+- - '###'
+  - 其他可选替代 DNS 有：
+- - '##'
+  - 启动应用程序
+- - '##'
+  - 更新系统
+- - '##'
+  - 备份你的进度和文件
+- - '##'
+  - 系统实用
+- - '###'
+  - Bleachbit
+- - '##'
+  - Boot Repair
+- - '##'
+  - Czkawka
+- - '##'
+  - GParted
+- - '##'
+  - gpustat
+- - '##'
+  - Grub Customizer
+- - '##'
+  - HardInfo
+- - '##'
+  - K4DirStat
+- - '##'
+  - KDE Partition Manager
+- - '##'
+  - Neofetch
+- - '##'
+  - Psensor
+- - '##'
+  - QDirStat
+- - '##'
+  - Stacer
+- - '##'
+  - Sweeper
+- - '##'
+  - Openshot
+- - '##'
+  - 软件管理器
+- - '#'
+  - Shotcut
+- - '##'
+  - 软件管理器
+- - '##'
+  - Snap Store
+- - '##'
+  - 视频点播流媒体
+- - '###'
+  - Amazon Prime Video
+- - '###'
+  - Disney+
+- - '###'
+  - Netflix
+- - '##'
+  - 虚拟化
+- - '###'
+  - Virt-Manager
+- - '###'
+  - Virtualbox
+- - '###'
+  - Virtualbox Extension Pack
+- - '##'
+  - 浏览器
+- - '###'
+  - Chromium
+- - '###'
+  - Firefox ESR
+- - '###'
+  - Google Chrome
+- - '###'
+  - Microsoft Edge
+- - '###'
+  - Opera
+- - '##'
+  - 选择：`TotalValue_Shadowlands`
+- - '##'
+  - 魔兽世界插件管理器
+- - '###'
+  - Ajour
+- - '###'
+  - Ajour 删除插件
+- - '###'
+  - Ajour 删除变量
+- - '###'
+  - Ajour 安装插件
+- - '###'
+  - Ajour 新建插件目录
+- - '##'
+  - Strongbox
+- - '###'
+  - Strongbox 切换主题
+- - '###'
+  - Strongbox 删除插件
+- - '###'
+  - Strongbox 删除多个插件
+- - '###'
+  - Strongbox 安装插件
+- - '###'
+  - Strongbox 安装多个插件
+- - '###'
+  - Strongbox 新建插件目录
+- - '##'
+  - wowmatrix
+- - '###'
+  - wowmatrix 删除插件
+- - '###'
+  - wowmatrix 删除多个插件
+- - '###'
+  - wowmatrix 安装插件
+- - '###'
+  - wowmatrix 新建插件目录
+- - '##'
+  - Wowup
+- - '###'
+  - Ajour 删除插件
+- - '###'
+  - Ajour 删除变量
+- - '###'
+  - Ajour 安装插件
+- - '###'
+  - Ajour 新建插件目录

@@ -1,0 +1,584 @@
+- "# Linux Mint 20 自助指南第二版：非官方且兼容所有 Linux Mint 20 版本\n\n\n\n\n# 免责声明\n\n书中的所有信息均按“原样”提供，不作任何保证。尽管在编写本书时已付出了无一的努力，但作者或出版者对因本书内容直接或间接导致或声称导致的任何损失或损害对任何个人或实体不承担任何责任。\n\
+  \n书中的任何内容均非官方或赞助，且未获得商标所有者（无论开源还是闭源）的支持。\n\n本书仅供客户的自我帮助和学习目的使用。\n\n# 商标\n\n书中出现了商标名称，例如\
+  \ Blizzard Battle.net、Microsoft、Youtube 等，在书中使用这些名称无侵犯商标的意图，仅用于自我帮助或学习目的，并符合商标所有者的利益，已进行脱敏处理。\n\
+  \n所有商标均归其各自所有者。\n\n本书仅供购买者的自我帮助和学习目的使用。\n书中的任何内容均非官方或赞助，且未获得商标所有者（无论开源还是闭源）的支持。\n\
+  \n`Linux` 是 Linus Torvalds 在美国及其他国家的注册商标。\n\n# 致谢\n\n感谢我的家人，没有他们，这一切都不可能实现。\nLinus\
+  \ Torvalds 是 `Linux` 的创建者和 `Linux` 商标的持有者，特此对此致谢，他并不支持或赞助本自我帮助类学习书。\n`Linux®` 是\
+  \ Linus Torvalds 在美国及其他国家的注册商标。\n感谢 `Linux Mark Institute` 及社区开发并维护了 `Linux Mint`。\n\
+  感谢 `Blizzard` 开发并发布了我真正喜爱并享受的《World of Warcraft》（魔兽世界）。\n感谢 `WINE` 或 `Wine Is Not\
+  \ An Emulator` 兼容层。\n感谢 `Lutris` 让安装和玩游戏及软件变得更加方便。\n感谢 `Gabe Newell` 和 `Valve` 开发并发布了\
+  \ `Steam Store`。\n\n# 安装机器详情\n\n本自我帮助学习指南的所有细节均已在裸机或直接在硬件上完成，而非虚拟机。\n`Linux Mint\
+  \ 20.03` 的安装在一个手动分区的驱动上完成，配置如下：\n- 53 GB 用于 `/` 或根分区\n- 20 GB 用于交换分区 (swap)\n- 我使用了来自\
+  \ `Ubuntu 20.04.03 LTS` 安装的现有 `EFI` 分区\n\n安装 `Linux Mint 20.03` 的电脑配置为：\n- CPU：`Intel(R)Core(TM)\
+  \ i3-9100F CPU`\n- 内存：16GB DDR4\n- 主板：`MSI B365M PRO-VH REV 1.0`\n- GPU 或显卡：`MSI\
+  \ Nvidia 1060 GTX 6GB`\n- 显示器：`24\" HP 24o Monitor`\n- SSD：1618 GB，涵盖 `Samsung`、`PNY`\
+  \ 和 `SPCC` 硬盘\n- 内部 HDD：9TB，涵盖 2 个 `Western Digital` 硬盘\n- 外部 HDD：1TB `JMicron`\n\
+  - 声卡：`USB 3.0 External Phoinkas Soundcard`\n- 扬声器：`Amazon Basics 2.0 Speakers`\n\
+  - 耳机：`Generic 2.0 Earphones`\n- 耳机：`Kingston HyperX Cloud Alpha 3.5 MM`\n- 键盘 1\
+  \ & 2：`USB 2.0 Generic Mini Gaming Keyboard`、`USB 2.0 Basic Full Sized Keyboard`\n\
+  - 鼠标：`USB 2.0 HP Wireless Mouse X200`、`USB 2.0 Basic Wired Mouse`\n- 网络：`USB 3.0\
+  \ Realtek Gigabit Adapter`、`Realtek Motherboard Gigabit PCI Port`\n- 手机：`Samsung\
+  \ Smartphone`\n- USB 集线器：`USB 3.0 External Phoinkas Soundcard`\n- 打印机：`Epson Network\
+  \ Printer`\n\n# 引言\n\n本指南旨在作为 `Linux Mint 20.03` 的自我帮助指南。\n为了增加您的安全性，您需要 `ENTER`\
+  \ 密码以完成此列表中的大多数步骤，因此请确保手头有密码。\n在输入所有 `sudo` 命令和您的密码后，您可能需要按 `ENTER` 继续或按 `ESC` 取消。\n\
+  请确保每天几天或根据您的意愿更新并升级您的 `Linux Mint 20.03`，以确保安全性和稳定性。\n切勿使用 `sudo apt auto remove`，因为它可能会导致\
+  \ `Linux Mint 20.03` 不稳定或损坏。\n你应该按照说明输入内容以助于记忆，但如果您愿意，也可以复制和粘贴。\n在下载 `.deb`、`.appimage`、`.jar`、`.targz`、`.taxxz`\
+  \ 等文件时，确保点击 `Keep`（保留）或 `Save File`（保存文件）。\n\n# 关于作者\n# 参考文献\n\n## 音频编辑器\n\n###\
+  \ Ardour\nArdour\nAudacity\nKwave\n![](img/image00747.jpeg)\n\n打开：软件管理器\n输入或复制粘贴：\n\
+  `ardour`\n点击：`Ardour`\n![](img/image00748.jpeg)\n点击：安装\n\n![](img/image00749.jpeg)\n\
+  打开：终端\n输入或复制粘贴：\n```\nsudo apt install ardour\n```\n按下：`ENTER`\n\n### Audacity\n\
+  Audacity\n![](img/image00750.jpeg)\n\n打开：软件管理器\n输入或复制粘贴：\n`audacity`\n点击：`Audacity`\n\
+  ![](img/image00751.jpeg)\n点击：安装\n\n![](img/image00752.jpeg)\n打开：终端\n输入或复制粘贴：\n```\n\
+  sudo apt install audacity\n```\n\n![](img/image00753.jpeg)\n\n打开：Snap Store\n输入或复制粘贴：\n\
+  `audacity`\n点击：`Audacity`\n![](img/image00754.jpeg)\n点击：安装\n\n![](img/image00755.jpeg)\n\
+  打开：终端\n输入或复制粘贴：\n```bash\nsudo snap install audacity\n```\n按下：`ENTER`\n\n## Kwave\n\
+  Kwave\n![](img/image00756.jpeg)\n\n打开：软件管理器\n输入或复制粘贴：\n`kwave`\n点击：`Kwave`\n![](img/image00757.jpeg)\n\
+  \n\n\n\n\n## Kwave\n\n点击：安装\n\n![](img/image00758.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\
+  ```bash\nsudo apt install kwave\n```\n按下：`ENTER`\n\n![](img/image00759.jpeg)\n\n\
+  打开：`Snap Store`\n\n输入或复制粘贴：\n```bash\nkwave\n```\n点击：`kwave`\n\n![](img/image00760.jpeg)\n\
+  \n点击：安装\n\n![](img/image00761.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo\
+  \ snap install kwave\n```\n按下：`ENTER`\n\n## 云端备份\n\n*   `Insync`\n*   `overGrive`\n\
+  \n### Insync\n\n![](img/image00762.jpeg)\n\n前往：[`www.insynchq.com/downloads`](https://www.insynchq.com/downloads)\n\
+  \n点击：安装程序（Installers）下方的框\n点击：`Linux Mint`\n点击：安装程序与包（Installers and Packages）下方的框\n\
+  点击：`20.x`\n点击：下载\n\n保存至：`insync_3.7.1.50307-focal_amd64.deb`\n前往：`insync_3.7.1.50307-focal_amd64.deb`\
+  \ 的下载路径\n双击：`insync_3.7.1.50307-focal_amd64.deb`\n\n![](img/image00763.jpeg)\n点击：安装包\n\
+  \n### overGrive\n\n![](img/image00764.jpeg)\n\n前往：[`www.thefanclub.co.za/overgrive`](https://www.thefanclub.co.za/overgrive)\n\
+  \n点击：`overGrive 3.3.13 - Debian|Ubuntu|Mint`\n前往：下载 `overgrive_3.3.13_all.deb`\n\
+  前往：`overgrive_3.3.13_all.deb` 的下载路径\n双击：`overgrive_3.3.13_all.deb`\n\n![](img/image00765.jpeg)\n\
+  点击：安装包\n\n## 云端办公套件\n\n*   `Google Docs`\n*   `Microsoft Office 365`\n*   `Zoho\
+  \ Docs`\n\n### Google Docs\n\n![](img/image00766.jpeg)\n\n打开：`Firefox`\n前往：[`www.google.co.uk/docs/about/`](https://www.google.co.uk/docs/about/)\n\
+  登录访问 Google Docs\n\n### Microsoft Office 365\n\n![](img/image00767.jpeg)\n\n打开：`Firefox`\n\
+  前往：[`www.office.com/`](https://www.office.com/)\n登录访问\n\n### Zoho Docs\n\n![](img/image00768.jpeg)\n\
+  \n打开：`Firefox`\n前往：[`www.zoho.com/docs/`](https://www.zoho.com/docs/)\n登录访问\n\n\
+  ## 通讯工具\n\n*   `Discord`\n*   `Pidgin`\n*   `Telegram`\n\n### Discord\n\n![](img/image00769.jpeg)\n\
+  \n打开：`Snap Store`\n输入或复制粘贴：\n```bash\ndiscord\n```\n点击：`Discord`\n\n![](img/image00770.jpeg)\n\
+  点击：安装\n\n![](img/image00771.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo snap\
+  \ install discord\n```\n按下：`ENTER`\n\n### Pidgin\n\n![](img/image00772.jpeg)\n\n\
+  打开：`Software Manager`\n输入或复制粘贴：\n```bash\npidgin\n```\n点击：`Pidgin`\n\n![](img/image00773.jpeg)\n\
+  点击：安装\n\n![](img/image00774.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo apt\
+  \ install pidgin\n```\n按下：`ENTER`\n\n### Telegram\n\n![](img/image00775.jpeg)\n\n\
+  打开：`Snap Store`\n输入或复制粘贴：\n```bash\ntelegram\n```\n点击：`telegram-desktop`\n\n![](img/image00776.jpeg)\n\
+  点击：安装\n\n![](img/image00777.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo snap\
+  \ install telegram-desktop\n```\n按下：`ENTER`\n\n## 兼容层\n\n*   `Anbox`\n*   `WINE\
+  \ Staging`\n\n### Anbox\n\n![](img/image00778.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n\
+  ```bash\nsudo snap install --devmode --beta anbox\n```\n按下：`ENTER`\n\n![](img/image00779.jpeg)\n\
+  \n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo snap refresh --beta --devmode anbox\n```\n\
+  按下：`ENTER`\n前往：更新 Anbox\n\n### WINE Staging\n\n![](img/image00780.jpeg)\n\n打开：`Terminal`\n\
+  输入或复制粘贴：\n```bash\nsudo dpkg --add-architecture i386\n```\n按下：`ENTER`\n\n![](img/image00781.jpeg)\n\
+  \n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo apt update\n```\n按下：`ENTER`\n\n![](img/image00782.jpeg)\n\
+  \n打开：`Terminal`\n输入或复制粘贴：\n```bash\nwget -qO- https://dl.winehq.org/wine-builds/winehq.key\
+  \ | sudo apt-key add -\n```\n按下：`ENTER`\n\n![](img/image00783.jpeg)\n\n打开：`Terminal`\n\
+  输入或复制粘贴：\n```bash\nsudo apt-add-repository 'deb http://dl.winehq.org/wine-builds/ubuntu\
+  \ bionic main'\n```\n按下：`ENTER`\n\n![](img/image00784.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n\
+  ```bash\nsudo apt update\nsudo apt install --installcommends winehq-staging\n```\n\
+  按下：`ENTER`\n\n## 加密货币钱包\n\n*   `Bitcoin-Core`\n*   `Coin Wallet`\n*   `Electrum`\n\
+  \n### Bitcoin-Core / Coin Wallet\n\n![](img/image00786.jpeg)\n\n打开：`Snap Store`\n\
+  输入或复制粘贴：\n```bash\nbitcoin-core\n```\n点击：`bitcoin-core`\n\n![](img/image00787.jpeg)\n\
+  点击：安装\n\n### Coin Wallet（检查流程）\n\n![](img/image00789.jpeg)\n\n打开：`Snap Store`\n\
+  输入或复制粘贴：\n```bash\ncoin-wallet\n```\n点击：`Coin Wallet`\n\n![](img/image00790.jpeg)\n\
+  点击：安装\n\n![](img/image00791.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo snap\
+  \ install coin-wallet\n```\n\n### Electrum\n\n![](img/image00792.jpeg)\n\n打开：`Snap\
+  \ Store`\n输入或复制粘贴：\n```bash\nelectrum\n```\n点击：`electrum`\n\n![](img/image00793.jpeg)\n\
+  点击：安装\n\n![](img/image00794.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo snap\
+  \ install electrum\n```\n\n## 数据恢复\n\n*   `R-Linux`\n\n### R-Linux\n\n![](img/image00795.jpeg)\n\
+  \n前往：[`www.r-studio.com/free-linux-recovery/shtml`](https://www.r-studio.com/free-linux-recovery/shtml)\n\
+  \n点击：下载 Debian/Ubuntu 平台同行的 R-Linux (64 位)\n保存至：`RLinux5_x64.deb`\n前往：`RLinux5_x64.deb`\
+  \ 的下载路径\n双击：`RLinux5_x64.deb`\n\n![](img/image00796.jpeg)\n点击：安装包\n\n## 桌面环境\n\n\
+  *   `Cinnamon`\n*   `Gnome`\n*   `KDE Plasma`\n*   `Ubuntu Desktop`\n\n### Cinnamon\n\
+  \n![](img/image00797.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo apt install\
+  \ cinnamon\n```\n按下：`ENTER`\n\n### Gnome\n\n![](img/image00798.jpeg)\n\n打开：`Terminal`\n\
+  输入或复制粘贴：\n```bash\nsudo apt install gnome\n```\n按下：`ENTER`\n\n### KDE Plasma\n\n\
+  ![](img/image00799.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo add-apt-repository\
+  \ ppa:kubuntu-ppa/backports\n```\n按下：`ENTER`\n\n![](img/image00784.jpeg)\n\n打开：`Terminal`\n\
+  输入或复制粘贴：\n```bash\nsudo apt update\nsudo apt install kde-plasma-desktop\n```\n\n\
+  ### Tasksel (Ubuntu Desktop)\n\n![](img/image0800.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n\
+  ```bash\nsudo apt install tasksel\n```\n按下：`ENTER`\n\n![](img/image0801.jpeg)\n\n\
+  打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo tasksel\n```\n按下：`ENTER`\n使用上下方向键导航到 Ubuntu\
+  \ desktop\n按下 `Space` 选择 `Ubuntu desktop`\n按下 `TAB` 直到选中 OK\n按下 `ENTER`\n\n## 下载管理器\n\
+  \n*   `FireDM`\n*   `KGet`\n*   `uGet`\n\n### FireDM\n\n![](img/image0804.jpeg)\n\
+  \n前往：[`github.com/firedm/FireDM/releases`](https://github.com/firedm/FireDM/releases)\n\
+  \n点击：`FireDM-2022.2.5-x86_64.AppImage`\n保存至：`FireDM-2022.2.5-x86_64.AppImage`\n\
+  前往：`FireDM-2022.2.5-x86_64.AppImage` 的下载路径\n双击：`FireDM-2022.2.5-x86_64.AppImage`\n\
+  \n![](img/image0805.jpeg)\n集成并运行\n\n### KGet\n\n![](img/image0806.jpeg)\n\n打开：`Software\
+  \ Manager`\n输入或复制粘贴：\n```bash\nkget\n```\n点击：`Kget`\n\n![](img/image0807.jpeg)\n\
+  点击：安装\n\n![](img/image0808.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo apt install\
+  \ kget\n```\n\n### uGet\n\n![](img/image0809.jpeg)\n\n打开：`Software Manager`\n输入或复制粘贴：\n\
+  ```bash\nuget\n```\n点击：`Uget`\n\n![](img/image0810.jpeg)\n点击：安装\n\n![](img/image0811.jpeg)\n\
+  \n打开：`Snap Store`\n输入或复制粘贴：\n```bash\nuget\n```\n点击：`uget`\n\n![](img/image0812.jpeg)\n\
+  点击：安装\n\n![](img/image0813.jpeg)\n\n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo snap\
+  \ install uget\n```\n\n## 电子书阅读器\n\n*   `Calibre`\n*   `Fbreader`\n*   `Lucidor`\n\
+  \n### Calibre\n\n![](img/image0815.jpeg)\n\n打开：`Software Manager`\n输入或复制粘贴：\n```bash\n\
+  calibre\n```\n点击：`Calibre`\n\n![](img/image0816.jpeg)\n点击：安装\n\n![](img/image0817.jpeg)\n\
+  \n打开：`Terminal`\n输入或复制粘贴：\n```bash\nsudo apt install calibre\n```\n\n\n\n\n\n```bash\n\
+  sudo apt install imagemagick imagemagick-6-common imagemagick-6.q16 javascript-common\
+  \ libchm1 libjpeg-turbo-progs libjs-jquery libjs-sphinxdoc libjs-underscore libjxr-tools\
+  \ libjxr0 liblqr-1-0 libmagickcore-6.q16-6 libmagickcore-6.q16-6-extra libmagickwand-6.q16-6\
+  \ libminizip1 libnetpbm10 libpodofo0.9.6 libqt5designer5 libqt5help5 libqt5positioning5\
+  \ libqt5printsupport5 libqt5qml5 libqt5quick5 libqt5quickwidgets5 libqt5sql5 libqt5sql5-sqlite\
+  \ libqt5test5 libqt5webchannel5 libqt5webengine-data libqt5webengine5 libqt5webenginecore5\
+  \ libqt5webenginewidgets5 libqt5xml5 libre2-5 netpbm optipng python3-apsw python3-chm\
+  \ python3-css-parser python3-cssselect python3-cssutils python3-dnspython python3-feedparser\
+  \ python3-html2text python3-html5-parser python3-html5lib python3-lxml python3-markdown\
+  \ python3-mechanize python3-msgpack python3-nose python3-pygments python3-pyqt5\
+  \ python3-pyqt5.qtsvg python3-pyqt5.qtwebchannel python3-pyqt5.qtwebengine python3-regex\
+  \ python3-repoze.lru python3-routes python3-sip python3-webob python3-zeroconf\n\
+  ```\n按下：`ENTER`\n\n![](img/image00819.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh |\
+  \ sudo sh /dev/stdin\n```\n\n按下：`ENTER`\n\n## Fbreader\n\n![](img/image00820.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n```bash\nfbreader\n```\n\n点击：`Fbreader`\n\n\
+  ![](img/image00821.jpeg)\n\n点击：`Install`\n\n![](img/image00822.jpeg)\n\n打开：`Terminal`\n\
+  \n输入或复制粘贴：\n```bash\nsudo apt install fbreader\n```\n\n按下：`ENTER`\n\n![](img/image00823.jpeg)\n\
+  \n打开：`Snap Store`\n\n输入或复制粘贴：\n```bash\nfbreader\n```\n\n点击：`FBReader 2.0`\n\n![](img/image00824.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00825.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo snap install fbreader\n```\n\n按下：`ENTER`\n\n## Lucidor\n\n![](img/image00826.jpeg)\n\
+  \n前往：[`lucidor.org/lucidor/download.php`](http://lucidor.org/lucidor/download.php)\n\
+  \n点击下载 deb 包：`lucidor_0.9.15-1_all.deb`\n\n下载下载 `lucidor_0.9.15-1_all.deb`\n\n前往：`lucidor_0.9.15-1_all.deb`\
+  \ 的下载位置\n\n双击：`lucidor_0.9.15-1_all.deb`\n\n![](img/image00827.jpeg)\n\n点击：`Install\
+  \ Package`\n\n## Elder Gaming, Dosbox, ResidualVM, ScummVM\n\n### Dosbox\n\n![](img/image00828.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n```bash\ndosbox\n```\n\n点击：`Dosbox`\n\n![](img/image00829.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00830.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo apt install dosbox\n```\n\n按下：`ENTER`\n\n![](img/image00831.jpeg)\n\n打开：`Snap\
+  \ Store`\n\n输入或复制粘贴：\n```bash\ndosbox\n```\n\n点击：`DOSBox Staging`\n\n![](img/image00832.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00833.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo snap install dosbox-staging\n```\n\n按下：`ENTER`\n\n### ResidualVM\n\n![](img/image00834.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n```bash\nresidualvm\n```\n\n点击：`Residualvm`\n\
+  \n![](img/image00835.jpeg)\n\n点击：`Install`\n\n![](img/image00836.jpeg)\n\n打开：`Terminal`\n\
+  \n输入或复制粘贴：\n```bash\nsudo apt install residualvm\n```\n\n按下：`ENTER`\n\n![](img/image00837.jpeg)\n\
+  \n打开：`Snap Store`\n\n输入或复制粘贴：\n```bash\nresidualvm\n```\n\n点击：`ResidualVM`\n\n点击：`Install`\n\
+  \n![](img/image00839.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo snap install\
+  \ residualvm\n```\n\n按下：`ENTER`\n\n### ScummVM\n\n![](img/image00840.jpeg)\n\n打开：`Software\
+  \ Manager`\n\n输入或复制粘贴：\n```bash\nscummvm\n```\n\n点击：`Scummvm`\n\n![](img/image00841.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00842.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo apt install scummvm\n```\n\n按下：`ENTER`\n\n![](img/image00843.jpeg)\n\n打开：`Snap\
+  \ Store`\n\n输入或复制粘贴：\n```bash\nscummvm\n```\n\n点击：`ScummVM`\n\n![](img/image00844.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00845.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo snap install scummvm\n```\n\n按下：`ENTER`\n\n## 文件压缩与解压\n\n### Engrampa / PeaZip\n\
+  \n![](img/image00846.jpeg)\n\n打开：`Software Manager`\n\n输入或复制粘贴：\n```bash\nengrampa\n\
+  ```\n\n点击：`Engrampa`\n\n![](img/image00847.jpeg)\n\n点击：`Install`\n\n![](img/image00848.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo apt install engrampa\n```\n\n按下：`ENTER`\n\
+  \n![](img/image00849.jpeg)\n\n打开：`Snap Store`\n\n输入或复制粘贴：\n```bash\np7zip-desktop\n\
+  ```\n\n点击：`P7Zip - Desktop`\n\n![](img/image00850.jpeg)\n\n点击：`Install`\n\n![](img/image00851.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo snap install p7zip-desktop\n```\n\n按下：`ENTER`\n\
+  \n### PeaZip（手动安装）\n\n![](img/image00852.jpeg)\n\n前往：[`peazip.github.io/peazip-linux.html`](https://peazip.github.io/peazip-linux.html)\n\
+  \n点击：`DEB GTK2`\n\n下载 `peazip_8.4.0.LINUX-GTK2-1_amd64.deb`\n\n前往：`peazip_8.4.0.LINUX-GTK2-1_amd64.deb`\
+  \ 的下载位置\n\n双击：`peazip_8.4.0.LINUX-GTK2-1_amd64.deb`\n\n![](img/image00853.jpeg)\n\
+  \n点击：`Install Package`\n\n## 编辑器\n\n### Blender\n\n![](img/image00854.jpeg)\n\n\
+  打开：`Software Manager`\n\n输入或复制粘贴：\n```bash\nblender\n```\n\n点击：`Blender`\n\n![](img/image00855.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00856.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo apt install blender\n```\n\n按下：`ENTER`\n\n![](img/image00857.jpeg)\n\n打开：`Snap\
+  \ Store`\n\n输入或复制粘贴：\n```bash\nblender\n```\n\n点击：`Install`\n\n### GIMP / GNU Image\
+  \ Manipulation Program\n\n![](img/image00860.jpeg)\n\n打开：`Software Manager`\n\n\
+  输入或复制粘贴：\n```bash\ngimp\n```\n\n点击：`Gimp`\n\n![](img/image00861.jpeg)\n\n点击：`Install`\n\
+  \n![](img/image00862.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo apt install\
+  \ gimp\n```\n\n按下：`ENTER`\n\n![](img/image00863.jpeg)\n\n打开：`Snap Store`\n\n输入或复制粘贴：\n\
+  ```bash\ngimp\n```\n\n点击：`GNU Image Manipulation Program`\n\n![](img/image00864.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00865.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo snap install gimp\n```\n\n按下：`ENTER`\n\n### Krita\n\n![](img/image00866.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n```bash\nkrita\n```\n\n点击：`Krita`\n\n![](img/image00867.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00868.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo apt install krita\n```\n\n按下：`ENTER`\n\n![](img/image00869.jpeg)\n\n打开：`Snap\
+  \ Store`\n\n输入或复制粘贴：\n```bash\nkrita\n```\n\n点击：`Krita`\n\n![](img/image00870.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00871.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo snap install krita\n```\n\n按下：`ENTER`\n\n### Pinta\n\n![](img/image00872.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n```bash\npinta\n```\n\n点击：`Pinta`\n\n![](img/image00873.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00874.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo apt install pinta\n```\n\n按下：`ENTER`\n\n![](img/image00875.jpeg)\n\n打开：`Snap\
+  \ Store`\n\n输入或复制粘贴：\n```bash\npinta\n```\n\n点击：`Pinta`\n\n![](img/image00876.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00877.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo snap install pinta\n```\n\n按下：`ENTER`\n\n### Inkscape\n\n![](img/image00878.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n```bash\ninkscape\n```\n\n点击：`Inkscape`\n\n\
+  ![](img/image00879.jpeg)\n\n点击：`Install`\n\n![](img/image00880.jpeg)\n\n打开：`Terminal`\n\
+  \n输入或复制粘贴：\n```bash\nsudo apt install inkscape\n```\n\n按下：`ENTER`\n\n![](img/image00881.jpeg)\n\
+  \n打开：`Snap Store`\n\n输入或复制粘贴：\n```bash\ninkscape\n```\n\n点击：`Inkscape`\n\n![](img/image00882.jpeg)\n\
+  \n点击：`Install`\n\n## 视频直播\n\n*   OBS Studio\n\nOBS Studio\n\n![](img/image00884.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo apt install ffmpeg\n```\n\n按下：`ENTER`\n\
+  \n\n\n\n\n```\nsudo apt install ffmpeg\n```\n\n按下：`ENTER`\n\n![](img/image00887.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\nsudo snap install obs-studio\n```\n\n按下：`ENTER`\n\
+  \n![](img/image00884.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\nsudo apt install\
+  \ ffmpeg\n```\n\n按下：`ENTER`\n\n![](img/image00888.jpeg)\n\n打开：`Software Manager`\n\
+  \n输入或复制粘贴：\n\n`obs studio`\n\n点击：`Obs-studio`\n\n![](img/image00889.jpeg)\n\n点击：`Install`\n\
+  \n![](img/image00884.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\nsudo apt install\
+  \ ffmpeg\n```\n\n按下：`ENTER`\n\n![](img/image00890.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\
+  \n```bash\nsudo snap install obs-studio\n```\n\n按下：`ENTER`\n\n## 媒体播放器\n\n*   Parole\n\
+  *   SMPlayer\n*   VLC\n\n### Parole\n\n![](img/image00891.jpeg)\n\n打开：`Software\
+  \ Manager`\n\n输入或复制粘贴：\n\n`parole`\n\n点击：`Parole`\n\n![](img/image00892.jpeg)\n\n\
+  点击：`Install`\n\n![](img/image00893.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo apt install parole\n```\n\n按下：`ENTER`\n\n### SMPlayer\n\n![](img/image00894.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n\n`smplayer`\n\n点击：`Smplayer`\n\n![](img/image00895.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00896.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo apt install smplayer\n```\n\n按下：`ENTER`\n\n### VLC\n\n![](img/image00897.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n\n`vlc`\n\n点击：`VLC`\n\n![](img/image00898.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00899.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo apt install vlc\n```\n\n按下：`ENTER`\n\n![](img/image00900.jpeg)\n\n打开：`Snap\
+  \ Store`\n\n输入或复制粘贴：\n\n`vlc`\n\n点击：`VLC`\n\n![](img/image00901.jpeg)\n\n点击：`Install`\n\
+  \n![](img/image00902.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\nsudo snap install\
+  \ vlc\n```\n\n按下：`ENTER`\n\n## 现代游戏\n\n*   Blizzard Battle.net\n*   Lutris\n*  \
+  \ Proton-QT\n*   Steam\n*   WINE\n\n### Blizzard Battle.net\n\n![](img/image00903.jpeg)\n\
+  \n打开：`Lutris`\n\n点击：`Community Installers`\n\n点击：`Search Bar`\n\n输入或复制粘贴：\n\n`blizzard\
+  \ battle.net`\n\n选择：`Blizzard Battle.net`\n\n点击：`Install`\n\n![](img/image00904.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00905.jpeg)\n\n点击：`Install`\n\n![](img/image00906.jpeg)\n\
+  \n等待文件下载\n\n![](img/image00907.jpeg)\n\n点击：`Continue`\n\n![](img/image00908.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00909.jpeg)\n\n点击：`Create desktop shortcut`\n\n点击：`Create\
+  \ application menu shortcut`\n\n点击：`Close`\n\n### Lutris\n\n![](img/image00910.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\nsudo add-apt-repository ppa:lutris-team/lutris\n\
+  ```\n\n按下：`ENTER`\n\n![](img/image00784.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo apt update\n```\n\n按下：`ENTER`\n\n![](img/image00911.jpeg)\n\n打开：`Terminal`\n\
+  \n输入或复制粘贴：\n\n```bash\nsudo apt install lutris\n```\n\n按下：`ENTER`\n\n### Proton-QT\n\
+  \n![](img/image00912.jpeg)\n\n前往：[`github.com/DavidoTek/ProtonUp-Qt/releases/tag/v2.5.0`](https://github.com/DavidoTek/ProtonUp-Qt/releases/tag/v2.5.0)\n\
+  \n点击：`ProtonUp-Qt-2.5.0-x86_64.AppImage`\n\n保存至：`ProtonUp-Qt-2.5.0-x86_64.AppImage`\n\
+  \n前往：`ProtonUp-Qt-2.5.0-x86_64.AppImage` 下载所在\n\n双击：`ProtonUp-Qt-2.5.0-x86_64.AppImage`\n\
+  \n![](img/image00913.jpeg)\n\n点击：`Integrate and run`\n\n### Steam\n\n![](img/image00914.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n\n`steam`\n\n点击：`Steam`\n\n![](img/image00915.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00916.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo apt install steam\n```\n\n按下：`ENTER`\n\n### WINE\n\n![](img/image00780.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\nsudo dpkg --add-architecture i386\n```\n\
+  \n按下：`ENTER`\n\n![](img/image00781.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo apt update\n```\n\n按下：`ENTER`\n\n![](img/image00782.jpeg)\n\n打开：`Terminal`\n\
+  \n输入或复制粘贴：\n\n```bash\nwget -qO -://dl.winehq.org/wine-builds/winehq.key | sudo\
+  \ apt-key add -\n```\n\n按下：`ENTER`\n\n![](img/image00783.jpeg)\n\n打开：`Terminal`\n\
+  \n输入或复制粘贴：\n\n```bash\nsudo apt-add-repository 'deb http://dl.winehq.org/wine-builds/ubuntu/\
+  \ bionic main'\n```\n\n按下：`ENTER`\n\n![](img/image00784.jpeg)\n\n打开：`Terminal`\n\
+  \n输入或复制粘贴：\n\n```bash\nsudo apt update\n```\n\n按下：`ENTER`\n\n![](img/image00785.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\nsudo apt-get install --install-recommends\
+  \ winehq-staging\n```\n\n按下：`ENTER`\n\n## 点播\n\n*   Amazon Music Unlimited\n*  \
+  \ Apple Music\n*   Spotify Client\n*   Spotify\n*   Tidal\n*   Youtube Music\n\n\
+  ### Amazon Music\n\n![](img/image00917.jpeg)\n\n前往：[`www.amazon.com/music`](https://www.amazon.com/music)\n\
+  \n### Apple Music\n\n![](img/image00918.jpeg)\n\n前往：[`music.apple.com`](https://music.apple.com)\n\
+  \n### Spotify Client\n\n![](img/image00919.jpeg)\n\n前往：[`www.spotify.com`](https://www.spotify.com)\n\
+  \n### Spotify\n\n![](img/image00920.jpeg)\n\n前往：[`www.spotify.com`](https://www.spotify.com)\n\
+  \n### Tidal\n\n![](img/image00921.jpeg)\n\n前往：[`www.tidal.com`](https://www.tidal.com)\n\
+  \n### Youtube Music\n\n![](img/image00922.jpeg)\n\n前往：[`music.youtube.com`](https://music.youtube.com)\n\
+  \n## 音乐播放器\n\n*   Audacious\n*   Clementine\n\n### Audacious\n\n![](img/image00923.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n\n`audacious`\n\n点击：`Audacious`\n\n![](img/image00924.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00925.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo apt install audacious\n```\n\n按下：`ENTER`\n\n### Clementine\n\n![](img/image00926.jpeg)\n\
+  \n打开：`Software Manager`\n\n输入或复制粘贴：\n\n`clementine`\n\n点击：`Clementine`\n\n![](img/image00927.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00928.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo apt install clementine\n```\n\n按下：`ENTER`\n\n## 办公套件\n\n*   LibreOffice\n*\
+  \   ONLYOFFICE Desktop Editors\n*   OpenOffice\n*   SoftMaker FreeOffice\n*   WPS\
+  \ Office\n\n### LibreOffice\n\n![](img/image00929.jpeg)\n\n打开：`Software Manager`\n\
+  \n输入或复制粘贴：\n\n`libreoffice`\n\n点击：`LibreOffice`\n\n![](img/image00930.jpeg)\n\n\
+  点击：`Install`\n\n![](img/image00931.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo snap install libreoffice\n```\n\n按下：`ENTER`\n\n![](img/image00932.jpeg)\n\n\
+  打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\nsudo add-apt-repository ppa:libreoffice/ppa\n\
+  ```\n\n按下：`ENTER`\n\n![](img/image00933.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\n\
+  sudo apt update\n```\n\n按下：`ENTER`\n\n![](img/image00934.jpeg)\n\n打开：`Terminal`\n\
+  \n输入或复制粘贴：\n\n```bash\nsudo apt upgrade\n```\n\n按下：`ENTER`\n\n### ONLYOFFICE Desktop\
+  \ Editors\n\n![](img/image00935.jpeg)\n\n打开：`Snap Store`\n\n输入或复制粘贴：\n\n`onlyoffice`\n\
+  \n点击：`ONLYOFFICE Desktop Editors`\n\n![](img/image00936.jpeg)\n\n点击：`Install`\n\n\
+  ![](img/image00937.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n\n```bash\nsudo snap install\
+  \ onlyoffice-desktopeditors\n```\n\n按下：`ENTER`\n\n![](img/image00938.jpeg)\n\n前往：[`www.onlyoffice.com/en/download-desktop.aspx?from=desktop`](https://www.onlyoffice.com/en/download-desktop.aspx?from=desktop)\n\
+  \n点击：`DOWNLOAD DEB under Debian 8, Ubuntu 14.04 and higher`\n\n保存至：`onlyoffice-desktopeditors_amd64.deb`\n\
+  \n前往：`onlyoffice-desktopeditors_amd64.deb` 下载所在\n\n双击：`onlyoffice-desktopeditors_amd64.deb`\n\
+  \n![](img/image00939.jpeg)\n\n点击：`Install Package`\n\n## OpenOffice\n\n![](img/image00940.jpeg)\n\
+  \n前往：\n\n\n\n\n\n## OpenOffice\n\n链接：[`apprepo.de/appimage/openoffice`](https://apprepo.de/appimage/openoffice)\n\
+  \n- 点击：`DOWNLOAD`\n- 下载：下载 `OpenOffice.AppImage`\n- 前往：`OpenOffice.AppImage` 的下载位置\n\
+  - 双击：`OpenOffice.AppImage`\n\n![](img/image00948.jpeg)\n- 点击：`Integrate and run`\n\
+  \n## SoftMaker FreeOffice\n\n![](img/image00949.jpeg)\n\n- 前往：[`www.freeoffice.com/en/download/applications`](https://www.freeoffice.com/en/download/applications)\n\
+  - 点击：`Download Under Linux`\n- 点击：基于 DEB 的系统的 `.deb` 包\n- 下载：下载 `softmaker-freeoffice-2021_1042-01_amd64.deb`\n\
+  - 前往：`softmaker-freeoffice-2021_1042-01_amd64.deb` 的下载位置\n- 双击：`softmaker-freeoffice-2021_1042-01_amd64.deb`\n\
+  \n![](img/image00950.jpeg)\n- 点击：`Install Package`\n\n## WPS Office\n\n![](img/image00951.jpeg)\n\
+  \n- 前往：[`www.wps.com/`](https://www.wps.com/)\n- 点击：`Free Download`\n- 点击：`Deb Package`\n\
+  - 下载：下载 `wps-office_11.1.0.10920.XA_amd64.deb`\n- 前往：`wps-office_11.1.0.10920.XA_amd64.deb`\
+  \ 的下载位置\n- 双击：`wps-office_11.1.0.10920.XA_amd64.deb`\n\n![](img/image00952.jpeg)\n\
+  - 点击：`Install Package`\n\n## PDF 阅读器\n\n### Evince\n- Okular\n\n### Evince\n![](img/image00953.jpeg)\n\
+  \n- 打开：`Software Manager`\n- 输入或复制粘贴：`evince`\n- 点击：`Evince`\n\n![](img/image00954.jpeg)\n\
+  - 点击：`Install`\n\n![](img/image00955.jpeg)\n- 打开：`Terminal`\n- 输入或复制粘贴：\n```bash\n\
+  sudo apt install evince\n```\n- 按回：`ENTER`\n\n![](img/image00956.jpeg)\n- 打开：`Snap\
+  \ Store`\n- 输入或复制粘贴：`evince`\n- 点击：`Evince`\n\n![](img/image00957.jpeg)\n- 点击：`Install`\n\
+  \n![](img/image00958.jpeg)\n- 打开：`Terminal`\n- 输入或复制粘贴：\n```bash\nsudo snap install\
+  \ evince\n```\n- 按回：`ENTER`\n\n### Okular\n![](img/image00959.jpeg)\n\n- 打开：`Software\
+  \ Manager`\n- 输入或复制粘贴：`okular`\n- 点击：`Okular`\n\n![](img/image00960.jpeg)\n- 点击：`Install`\n\
+  \n![](img/image00961.jpeg)\n- 打开：`Terminal`\n- 输入或复制粘贴：\n```bash\nsudo apt install\
+  \ okular\n```\n- 按回：`ENTER`\n\n![](img/image00962.jpeg)\n- 打开：`Snap Store`\n- 输入或复制粘贴：`okular`\n\
+  - 点击：`Okular`\n\n![](img/image00963.jpeg)\n- 点击：`Install`\n\n![](img/image00964.jpeg)\n\
+  - 打开：`Terminal`\n- 输入或复制粘贴：\n```bash\nsudo snap install okular\n```\n- 按回：`ENTER`\n\
+  \n## 远程办公\n\n### Citrix Workspace\n### Microsoft Teams\n### Zoom\n\n### Citrix Workspace\n\
+  ![](img/image00965.jpeg)\n\n- 前往：[`www.citrix.com/en-gb/downloads/workspace-app/linux/workspace-app-for-linux-latest.html`](https://www.citrix.com/en-gb/downloads/workspace-app/linux/workspace-app-for-linux-latest.html)\n\
+  - 点击：`Download File under Citrix Workspace app for Linux (x86_64)`\n- 下载：下载 `icaclient_22.2.0.20_amd64.deb`\n\
+  - 前往：`icaclient_22.2.0.20_amd64.deb` 的下载位置\n- 双击：`icaclient_22.2.0.20_amd64.deb`\n\
+  \n![](img/image00966.jpeg)\n- 点击：`Install Package`\n\n### Microsoft Teams\n![](img/image00967.jpeg)\n\
+  \n- 打开：`Snap Store`\n- 输入或复制粘贴：`microsoft teams`\n- 点击：`Microsoft Teams (Insiders\
+  \ or Preview)`\n\n![](img/image00968.jpeg)\n- 点击：`Install`\n\n### Zoom\n![](img/image00784.jpeg)\n\
+  \n- 打开：`Terminal`\n- 输入或复制粘贴：\n```bash\nsudo apt update\n```\n- 按回：`ENTER`\n\n![](img/image00969.jpeg)\n\
+  - 打开：`Terminal`\n- 输入或复制粘贴：\n```bash\nsudo apt install libglib2.0-0 libxcb-shape\
+  \ libxcb-shm libxcb-fixes libxcb-randr libxcb-image0 fontconfig libgl1-mesa-glx\
+  \ xi libsm6 renderx1 libcomposite1 sqlite3-0 libxcb-keysym1 ibus\n```\n- 按回：`ENTER`\n\
+  \n![](img/image00970.jpeg)\n- 前往：[`zoom.us/download?linux`](https://zoom.us/download?linux)\n\
+  - 点击：Linux 版本\n- 点击：相同的架构\n- 点击：64 位\n- 下载：`zoom_amd64.deb`\n- 前往：`zoom_amd64.deb`\
+  \ 的下载位置\n- 双击：`zoom_amd64.deb`\n\n![](img/image00971.jpeg)\n- 点击：`Install`\n\n##\
+  \ 安全\n\n## 防火墙端口\n\n### TCP 端口\n`53`, `80`, `433`, `1119`, `1120`, `2099`, `3074`,\
+  \ `3075`, `3216`, `3478`, `3479`, `3569`, `3724`, `4000`, `5060`, `5062`, `5222`,\
+  \ `5223`, `6012`, `6112`, `6113`, `6114`, `6250`, `8080`, `8088`, `8094`, `8097`,\
+  \ `9946`, `9988`, `14000`, `14008`, `14020`, `14021`, `14022`, `14023`, `14024`,\
+  \ `17502`, `17503`, `17504`, `18000`, `18060`, `18120`, `22990`, `27900`, `28910`,\
+  \ `29900`, `42124`, `42125`, `42126`, `42127`, `42130`, `42210`, `42230`, `10000:19999`,\
+  \ `10000:20000`, `10000:29999`, `1024:1124`, `1119:1120`, `12000:65000`, `20000:20100`,\
+  \ `25000:25099`, `27014:27050`, `30000:30099`, `42100:42200`, `6112:6119`, `6113:6119`,\
+  \ `7777:7780`, `8393:8400`, `9960:9969`\n\n### UDP 端口\n`67`, `80`, `443`, `1119`,\
+  \ `1120`, `2099`, `3074`, `3075`, `3216`, `3478`, `3479`, `3569`, `3724`, `4000`,\
+  \ `5060`, `5062`, `5222`, `5223`, `6012`, `6112`, `6113`, `6114`, `6250`, `8080`,\
+  \ `8088`, `8094`, `8097`, `9946`, `9988`, `14000`, `14008`, `14020`, `14021`, `14022`,\
+  \ `14023`, `14024`, `17502`, `17503`, `17504`, `18000`, `18060`, `18120`, `22990`,\
+  \ `27900`, `28910`, `29900`, `42124`, `42125`, `42126`, `42127`, `42130`, `42210`,\
+  \ `42230`, `10000:19999`, `10000:20000`, `10000:29999`, `1024:1124`, `1119:1120`,\
+  \ `12000:65000`, `20000:20100`, `25000:25099`, `27014:27050`, `30000:30099`, `42100:42200`,\
+  \ `6112:6119`, `6113:6119`, `7777:7780`, `8393:8400`, `9960:9969`\n\n\n\n\n\n![](img/image00985.jpeg)\n\
+  \n### Clamtk\n点击：安装\n\n![](img/image00986.jpeg)\n\n打开：`Terminal`\n\n输入或复制并粘贴：\n\
+  ```bash\nsudo apt install clamtk-gnome\n```\n按下：`ENTER`\n\n### Firetools\n![](img/image00987.jpeg)\n\
+  \n打开：`Software Manager`\n输入或复制并粘贴：\n```bash\nfiretools\n```\n点击：`Firetools`\n\n\
+  ![](img/image00988.jpeg)\n点击：安装\n\n![](img/image00989.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n\
+  ```bash\nsudo apt install firetools\n```\n按下：`ENTER`\n\n### Firejail\n![](img/image00990.jpeg)\n\
+  \n打开：`Software Manager`\n输入或复制并粘贴：\n```bash\nfirejail\n```\n点击：`Firejail`\n\n![](img/image00991.jpeg)\n\
+  点击：安装\n\n![](img/image00992.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo apt install\
+  \ firejail\n```\n按下：`ENTER`\n\n### GUFW\n![](img/image00993.jpeg)\n\n打开：`Software\
+  \ Manager`\n输入或复制并粘贴：\n```bash\ngufw\n```\n点击：`Gufw`\n\n![](img/image00994.jpeg)\n\
+  点击：安装\n\n![](img/image00995.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo apt install\
+  \ gufw\n```\n按下：`ENTER`\n\n#### GUFW 设置多端口规则\n![](img/image00996.jpeg)\n打开：`Gufw`\
+  \ 或 `Firewall Configuration`\n点击：`Rules`\n点击：`+`\n点击：`Simple`\n选择：`TCP` 或 `UDP`\n\
+  输入或复制并粘贴：\n```text\n21,22\n```\n点击：`Add`\n\n#### GUFW 设置范围范围规则\n![](img/image00997.jpeg)\n\
+  打开：`Gufw` 或 `Firewall Configuration`\n点击：`Rules`\n点击：`+`\n点击：`Simple`\n选择：`TCP`\
+  \ 或 `UDP`\n输入或复制并粘贴：\n```text\n4001:4002\n```\n点击：`Add`\n\n#### GUFW 设置单端口规则\n![](img/image00998.jpeg)\n\
+  打开：`Gufw` 或 `Firewall Configuration`\n点击：`Rules`\n点击：`+`\n点击：`Simple`\n选择：`TCP`\
+  \ 或 `UDP`\n输入或复制并粘贴：\n```text\n21\n```\n点击：`Add`\n\n### UFW\n![](img/image00999.jpeg)\n\
+  \n打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo apt install ufw\n```\n按下：`ENTER`\n\n####\
+  \ UFW 设置多端口及范围规则\n![](img/image01000.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\n\
+  sudo ufw allow 21,22,4111:4112/tcp\n```\n按下：`ENTER`\n对于 UDP 协议，将 `/tcp` 改为 `/udp`\n\
+  \n#### UFW 设置多端口规则\n![](img/image01001.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\n\
+  sudo ufw allow 21,22/tcp\n```\n按下：`ENTER`\n对于 UDP 协议，将 `/tcp` 改为 `/udp`\n\n####\
+  \ UFW 设置范围端口规则\n![](img/image01002.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo\
+  \ ufw allow 4111:4112/tcp\n```\n按下：`ENTER`\n对于 UDP 协议，将 `/tcp` 改为 `/udp`\n\n####\
+  \ UFW 设置单端口规则\n![](img/image01003.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo\
+  \ ufw allow 21/tcp\n```\n按下：`ENTER`\n对于 UDP 协议，将 `/tcp` 改为 `/udp`\n\n### 软件分发\n\
+  - AppImageLauncher\n- Flathub\n- Flatpak\n- Java JRE JDK\n- Snap\n- Snap Store\n\
+  \n#### AppImageLauncher\n![](img/image01004.jpeg)\n访问：[`github.com/TheAssassin/AppImageLauncher/releases/tag/v2.2.0`](https://github.com/TheAssassin/AppImageLauncher/releases/tag/v2.2.0)\n\
+  点击：`appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb`\n前往：下载 `appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb`\n\
+  \n![](img/image01005.jpeg)\n访问：`appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb`\
+  \ 下载所在。\n双击：`appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb`\n\n点击：安装\n\
+  \n![](img/image01006.jpeg)\n点击：继续\n\n#### Flathub\n![](img/image01007.jpeg)\n打开：`Terminal`\n\
+  输入或复制并粘贴：\n```bash\nflatpak remote-add --if-exists flathub https://flathub.org/repo/flathub.flatpak\n\
+  ```\n按下：`ENTER`\n\n#### Flatpak\n![](img/image00784.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n\
+  ```bash\nsudo apt update\n```\n按下：`ENTER`\n\n![](img/image0108.jpeg)\n打开：`Terminal`\n\
+  输入或复制并粘贴：\n```bash\nsudo apt install flatpak\n```\n按下：`ENTER`\n\n#### Java JRE JDK\n\
+  ![](img/image0109.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo apt install default-jdk\
+  \ default-jre\n```\n\n#### Snap\n![](img/image0110.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n\
+  ```bash\nsudo mv /etc/apt/preferences.d/nosnap ~/Documents/nosnap\n```\n按下：`ENTER`\n\
+  \n![](img/image00784.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo apt update\n\
+  ```\n按下：`ENTER`\n\n![](img/image0111.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\n\
+  sudo apt install snapd\n```\n按下：`ENTER`\n\n## Snap Store\n![](img/image0112.jpeg)\n\
+  打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo snap install snap-store\n```\n按下：`ENTER`\n\
+  \n### 系统设置\n- 缩图\n- AMD 驱动\n- 自动挂载磁盘\n- 更改内核版本\n- 更改鼠标加速\n- 更改音频设备\n- 更改主题\n- 启用\
+  \ LibreOffice \n- 如何使用 Xed 阻止网站\n- Nautilus 文件管理器\n- 夜光\n- Nvidia 驱动\n- 可能段错误\n\
+  - 设置默认文件类型\n- 备用 DNS\n- 启动应用程序\n- 更新系统\n\n#### 缩图\n![](img/image0113.jpeg)\n打开：`Windows`\n\
+  点击：`Alt-Tab`\n点击：Alt-Tab 切换器所在的框\n点击：仅缩图\n\n#### AMD 驱动\n![](img/image0114.jpeg)\n\
+  打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo add-apt-repository ppa:kisak/kisak-mesa\n\
+  ```\n按下：`ENTER`\n\n![](img/image0115.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\n\
+  sudo apt update\n```\n按下：`ENTER`\n\n![](img/image0116.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n\
+  ```bash\nsudo apt-get upgrade\n```\n按下：`ENTER`\n\n![](img/image0117.jpeg)\n打开：`Terminal`\n\
+  输入或复制并粘贴：\n```bash\nsudo apt-get install mesa\n```\n按下：`ENTER`\n\n![](img/image0118.jpeg)\n\
+  打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo apt-get install ppa-purge\n```\n按下：`ENTER`\n\
+  \n![](img/image0119.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\nsudo ppa-purge ppa:kisak/kisak-mesa\n\
+  ```\n按下：`ENTER`\n\n![](img/image00784.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n```bash\n\
+  sudo apt update\n```\n按下：`ENTER`\n\n![](img/image0941.jpeg)\n打开：`Terminal`\n输入或复制并粘贴：\n\
+  ```bash\nsudo apt upgrade\n```\n按下：`ENTER`\n\n#### 自动挂载磁盘\n![](img/image0120.jpeg)\n\
+  打开：`Disks`\n选择：`Disk`\n选择：`Volume`\n点击：`Cog` 图标\n点击：`Edit Options`\n移动：User Session\
+  \ Defaults 所在的开关到左侧\n点击：`OK`\n\n#### 更改内核版本\n![](img/image0122.jpeg)\n点击：`Play`\
+  \ 按钮\n打开：`Update Manager`\n点击：`View`\n点击：`Linux Kernels`\n![](img/image0124.jpeg)\n\
+  可以选择继续或不继续\n点击：`5.13`\n点击：安装\n\n#### 更改鼠标加速\n![](img/image0126.jpeg)\n点击：`Yes`\n\
+  打开：`Mouse and Touchpad`\n移动：Custom Acceleration 所在的开关到右侧\n移动：Acceleration 下方的开关一直滑到\
+  \ `Fast`\n\n#### 更改音频设备\n![](img/image0128.jpeg)\n打开：`Sound`\n点击：`Device` 切换到该音频设备\n\
+  \n#### 更改主题\n![](img/image0129.jpeg)\n打开：`Themes`\n点击：Controls 所在的框\n点击：`Mint-Y-Dark`\n\
+  点击：Desktop 所在的框\n点击：`Mint-Y-Dark`\n\n\n\n\n\n确保与“启用”（Enable）和“自启动”（Autostart）同一行的框框已勾选\n\
+  \n## Nvidia 驱动\n\n![](img/image01038.jpeg)\n\n1. 打开：`驱动管理器`(Driver Manager)\n2.\
+  \ 选择：`nvidia-driver-510`\n3. 点击：`应用更改`(Apply Changes)\n\n![](img/image01039.jpeg)\n\
+  \n4. 等待更改应用\n\n![](img/image01040.jpeg)\n\n5. 点击：`重启`(Restart)\n\n## 可能的 Intel 声音卡杂声修复\n\
+  \n![](img/image01041.jpeg)\n\n1. 打开：`终端`(Terminal)\n2. 输入或复制并粘贴：\n```bash\nsudo\
+  \ echo \"options snd_hda_intel power_save=0\" | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf\n\
+  ```\n3. 按下：`回车键`(ENTER)\n\n## 可能的 Parole 段错误修复\n\n![](img/image01042.jpeg)\n\n1.\
+  \ 打开：`文件`(Files)\n2. 转到：`/home/mylinuxmintpc/.config/xfce4`\n3. 选择：`parole`\n4.\
+  \ 右键点击：`parole`\n5. 点击：`删除`(Delete)\n\n## 设置为文件类型的默认值\n\n![](img/image01043.jpeg)\n\
+  \n1. 右键点击：`文件/File)\n2. 点击：`属性`(Properties)\n3. 点击：`打开方式`(Open With)\n4. 点击：`应用程序`(Application)\n\
+  5. 点击：`设为默认`(Set as default)\n6. 点击：`关闭/Close)\n\n## 设置替代 DNS\n\n![](img/image01044.jpeg)\n\
+  \n1. 转到：[`www.quad9.net/`](https://www.quad9.net/)\n2. 注意：IPv4 和 IPv6 地址\n3. 打开：`网络`(Network)\n\
+  \n![](img/image01045.jpeg)\n\n4. 选择：`连接`(Connection)\n5. 点击：`齿轮图标`(Cog icon)\n\n\
+  ![](img/image01046.jpeg)\n\n6. 点击：`IPv4`\n7. 将：与`自动`(Automatic)和`DNS`同一行的开关向左移动\n\
+  8. 点击：DNS 下方的 `+` 按钮\n9. 点击服务器旁边的第一个框\n10. 输入或复制并粘贴：`9.9.9.9`\n11. 点击服务器旁边的第二个框\n\
+  12. 输入或复制并粘贴：`149.112.112.112`\n13. 点击：`IPv6`\n\n![](img/image01047.jpeg)\n\n14.\
+  \ 点击：`IPv6`\n15. 将：与`自动`(Automatic)和`DNS`同一行的开关向左移动\n16. 点击：DNS 下方的 `+` 按钮\n17.\
+  \ 点击服务器旁边的第一个框\n18. 输入或复制并粘贴：`2620:fe::fe`\n19. 点击服务器旁边的第二个框\n20. 输入或复制并粘贴：`2620:fe::9`\n\
+  21. 点击：`应用/Apply)\n\n### 其他可选替代 DNS 有：\n\n* **Comodo Secure DNS**\n    * [`www.comodo.com/secure-dns/switch/`](https://www.comodo.com/secure-dns/switch/)\n\
+  \    * IPv4: `8.26.56.26`, `8.20.247.20`\n* **DNS.WATCH**\n    * [`dns.watch/`](https://dns.watch/)\n\
+  \    * IPv4: `84.200.69.80`, `84.200.69.80`\n    * IPv6: `2001:1608:10:25::1c04:b12f`,\
+  \ `2001:1608:10:25::9249:d69b`\n* **OpenNIC Project**\n    * [`www.opennic.org/`](https://www.opennic.org/)\n\
+  \    * IPv4: `94.247.43.254`, `194.36.144.87`, `151.80.222.79`, `91.217.137.37`\n\
+  \    * IPv6: `2a00:f826:8:1::254`, `2a03:4000:4d:c92:88c0:96ff:fec6:b9d`, `2001:470:1f15:b80::53`,\
+  \ `2001:67c:13e4:1::37`\n\n## 启动应用程序\n\n![](img/image01048.jpeg)\n\n1. 打开：`启动应用程序/Startup\
+  \ Applications)\n2. 点击：`+`\n3. 点击：`选择应用程序/Choose Application)\n\n![](img/image01049.jpeg)\n\
+  \n4. 点击：`Firefox 浏览器/Firefox Web Browser)\n5. 点击：`添加应用程序/Add Application)\n\n![](img/image01050.jpeg)\n\
+  \n1. 打开：`启动应用程序/Startup Applications)\n2. 点击：`+`\n3. 点击：`自定义命令/Custom Command)\n\
+  \n![](img/image01051.jpeg)\n\n4. 点击：与`名称/Name`同一行的框\n5. 输入或复制并粘贴：`Firefox`\n6. 点击：与`命令/Command`同一行的框\n\
+  7. 输入或复制并粘贴：`firefox`\n8. 点击：`添加/Add)\n\n## 更新系统\n\n![](img/image01052.jpeg)\n\n\
+  1. 打开：`更新管理器/Update Manager)\n2. 选择：`不从本地镜像下载/Not to download from Local Mirror)\n\
+  3. 选择：`更新管理器/To Update Manager\n4. 点击：`刷新/Refresh)\n5. 点击：`安装/Install)\n\n![](img/image01053.jpeg)\n\
+  \n6. 点击：`确定/OK)\n\n![](img/image01054.jpeg)\n\n7. 等待更改应用\n\n## 备份你的进度和文件\n\n![](img/image01055.jpeg)\n\
+  \n1. 按下：`Super` 或 `Meta` 键\n2. 点击：`电源图标/Power Icon` (向上)\n\n![](img/image01057.jpeg)\n\
+  \n3. 点击：`重启/Restart)\n\n## 系统实用\n\n* Bleachbit\n* Boot Repair\n* Czkawka\n* GParted\n\
+  * gpustat\n* Grub Customizer\n* HardInfo\n* K4DirStat\n* KDE Partition Manager\n\
+  * Neofetch\n* Psensor\n* QDirStat\n* Sweeper\n\n### Bleachbit\n\n![](img/image01058.jpeg)\n\
+  \n1. 打开：`软件管理器/Software Manager)\n2. 输入或复制并粘贴：`bleachbit`\n3. 点击：`Bleachbit\n\n\
+  ![](img/image01059.jpeg)\n\n4. 点击：`安装/Install)\n\n![](img/image01060.jpeg)\n\n5.\
+  \ 打开：`终端/Terminal)\n6. 输入或复制并粘贴：\n```bash\nsudo apt install bleachbit\n```\n7. 按下：`回车键/ENTER)\n\
+  \n## Boot Repair\n\n![](img/image01061.jpeg)\n\n1. 打开：`终端/Terminal)\n2. 输入或复制并粘贴：\n\
+  ```bash\nsudo add-apt-repository ppa:yannubuntu/boot-repair && sudo apt update\n\
+  ```\n3. 按下：`回车键/ENTER)\n\n![](img/image01062.jpeg)\n\n4. 打开：`终端/Terminal)\n5. 输入或复制并粘贴：\n\
+  ```bash\nsudo apt install -y boot-repair && boot-repair\n```\n6. 按下：`回车键/ENTER)\n\
+  \n## Czkawka\n\n![](img/image01063.jpeg)\n\n1. 打开：`软件 Store/Snap Store)\n2. 输入或复制并粘贴：`czkawka`\n\
+  3. 点击：`Czkawka\n\n![](img/image01064.jpeg)\n\n4. 点击：`安装/Install)\n\n![](img/image01065.jpeg)\n\
+  \n1. 打开：`终端/Terminal)\n2. 输入或复制并粘贴：\n```bash\nsudo apt install bleachbit\n```\n\
+  3. 按下：`回车键/ENTER)\n\n## GParted\n\n![](img/image01066.jpeg)\n\n1. 打开：`软件管理器/Software\
+  \ Manager)\n2. 输入或复制并粘贴：`gparted`\n3. 点击：`GParted\n\n![](img/image01067.jpeg)\n\n\
+  4. 点击：`安装/Install)\n\n![](img/image01068.jpeg)\n\n5. 打开：`终端/Terminal)\n6. 输入或复制并粘贴：\n\
+  ```bash\nsudo apt install -y boot-repair && boot-repair\n```\n7. 按下：`回车键/ENTER)\n\
+  \n## gpustat\n\n![](img/image01069.jpeg)\n\n1. 打开：`软件管理器/Software Manager)\n2. 输入或复制并粘贴：`gpustat`\n\
+  3. 点击：`gpustat\n\n## Grub Customizer\n\n![](img/image01070.jpeg)\n\n1. 打开：`终端/Terminal)\n\
+  2. 输入或复制并粘贴：\n```bash\nsudo add-apt-repository ppa:yannubuntu/boot-repair && sudo\
+  \ apt update\n```\n3. 按下：`回车键/ENTER)\n\n## HardInfo\n\n![](img/image01071.jpeg)\n\
+  \n1. 打开：`终端/Terminal)\n2. 输入或复制并粘贴：\n```bash\nsudo apt install -y boot-repair &&\
+  \ boot-repair\n```\n3. 按下：`回车键/ENTER)\n\n## K4DirStat\n\n![](img/image01072.jpeg)\n\
+  \n1. 打开：`软件管理器/Software Manager)\n2. 输入或复制并粘贴：`k4dirstat`\n3. 点击：`K4DirStat\n\n\
+  ## KDE Partition Manager\n\n![](img/image01073.jpeg)\n\n1. 点击：`安装/Install)\n\n##\
+  \ Neofetch\n\n![](img/image01074.jpeg)\n\n1. 打开：`终端/Terminal)\n2. 输入或复制并粘贴：\n```bash\n\
+  sudo apt install bleachbit\n```\n3. 按下：`回车键/ENTER)\n\n## Psensor\n\n![](img/image01075.jpeg)\n\
+  \n1. 打开：`软件管理器/Software Manager)\n2. 输入或复制并粘贴：`psensor`\n3. 点击：`Psensor\n\n## QDirStat\n\
+  \n![](img/image01076.jpeg)\n\n1. 点击：`安装/Install)\n\n## Stacer\n\n![](img/image01077.jpeg)\n\
+  \n1. 打开：`软件管理器/Software Manager)\n2. 输入或复制并粘贴：`stacer`\n3. 点击：`Stacer\n\n## Sweeper\n\
+  \n![](img/image01078.jpeg)\n\n1. 点击：`安装/Install)\n\n\n\n\n\n## Openshot\n\n![](img/image01103.jpeg)\n\
+  \n## 软件管理器\n打开：`Software Manager`\n\n输入或复制粘贴：\n`openshot`\n\n点击：`OpenShot Video\
+  \ Editor`\n\n![](img/image01104.jpeg)\n\n点击：`Install`\n\n![](img/image01105.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo apt install openshot\n```\n\n按下：`ENTER`\n\
+  \n# Shotcut\n\n![](img/image01106.jpeg)\n\n## 软件管理器\n打开：`Software Manager`\n\n输入或复制粘贴：\n\
+  `shotcut`\n\n点击：`Shotcut`\n\n![](img/image01107.jpeg)\n\n点击：`Install`\n\n![](img/image01108.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo apt install shotcut\n```\n\n按下：`ENTER`\n\
+  \n![](img/image01109.jpeg)\n\n## Snap Store\n打开：`Snap Store`\n\n输入或复制粘贴：\n`shotcut`\n\
+  \n点击：`shotcut`\n\n![](img/image01110.jpeg)\n\n点击：`Install`\n\n![](img/image01111.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo snap install shotcut\n```\n\n按下：`ENTER`\n\
+  \n## 视频点播流媒体\n* Amazon Prime Video\n* Disney+\n* Netflix\n\n### Amazon Prime Video\n\
+  ![](img/image01112.jpeg)\n\n前往：\n[`www.amazon.co.uk/Amazon-Video/b?node=3010085031`](https://www.amazon.co.uk/Amazon-Video/b?node=3010085031)\n\
+  \n登录访问\n\n### Disney+\n![](img/image01113.jpeg)\n\n前往：\n[`www.disneyplus.com/en-gb`](https://www.disneyplus.com/en-gb)\n\
+  \n登录访问\n\n### Netflix\n![](img/image01114.jpeg)\n\n前往：\n[`www.netflix.com/gb/`](https://www.netflix.com/gb/)\n\
+  \n登录访问\n\n## 虚拟化\n* Virt-Manager\n* Virtualbox\n* Virtualbox Extension Pack\n\n\
+  ### Virt-Manager\n![](img/image01115.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst\
+  \ virt-manager\n```\n\n按下：`ENTER`\n\n### Virtualbox\n![](img/image01116.jpeg)\n\n\
+  打开：`Software Manager`\n\n输入或复制粘贴：\n`virtualbox`\n\n点击：`Virtualbox`\n\n![](img/image01117.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image00784.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo apt update\n```\n\n按下：`ENTER`\n\n![](img/image01118.jpeg)\n\n打开：`Terminal`\n\
+  \n输入或复制粘贴：\n```bash\nsudo apt install virtualbox\n```\n\n按下：`ENTER`\n\n### Virtualbox\
+  \ Extension Pack\n![](img/image01119.jpeg)\n\n打开：`Software Manager`\n\n输入或复制粘贴：\n\
+  `virtualbox`\n\n点击：`Virtualbox-ext-pack`\n\n![](img/image01120.jpeg)\n\n点击：`Install`\n\
+  \n![](img/image01121.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo apt install\
+  \ virtualbox-ext-pack\n```\n\n按下：`ENTER`\n\n## 浏览器\n* Chromium\n* Firefox ESR\n\
+  * Google Chrome\n* Microsoft Edge\n* Opera\n\n### Chromium\n![](img/image01122.jpeg)\n\
+  \n打开：`Snap Store`\n\n输入或复制粘贴：\n`chromium`\n\n点击：`chromium`\n\n![](img/image01123.jpeg)\n\
+  \n点击：`Install`\n\n![](img/image01124.jpeg)\n\n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\n\
+  sudo snap install chromium\n```\n\n按下：`ENTER`\n\n### Firefox ESR\n![](img/image01125.jpeg)\n\
+  \n前往：\n[`www.mozilla.org/en-GB/firefox/all/#product-desktop-esr`](https://www.mozilla.org/en-GB/firefox/all/#product-desktop-esr)\n\
+  \n点击：您想要下载哪个浏览器下方的框\n\n点击：`Firefox Extended Support Release`\n\n点击：选择您的首选安装程序下方的框\n\
+  点击：`Linux 64-bit`\n\n点击：选择您的首选语言下方的框\n点击：`English (British)`\n\n下载：`firefox-91.6.0esr.tar.bz2`\n\
+  \n前往：`firefox-91.6.0esr.tar.bz2` 下载的位置\n\n双击：`firefox-91.6.0esr.tar.bz2`\n\n![](img/image01126.jpeg)\n\
+  \n选择：`firefox`\n\n点击：`Extract`\n\n![](img/image01127.jpeg)\n\n前往：\n`/home/mylinuxmint/Applications`\n\
+  \n点击：`Extract`\n\n点击：`Close`\n\n### Google Chrome\n![](img/image01128.jpeg)\n\n\
+  前往：\n[`www.google.com/intl/en_uk/chrome/`](https://www.google.com/intl/en_uk/chrome/)\n\
+  \n点击：`Download Chrome`\n\n勾选：`64 bit.deb` (对于 Debian/Ubuntu) 同行的框\n\n点击：`Accept\
+  \ and install`\n\n下载：`google-chrome-stable_current_amd64.deb`\n\n前往：`google-chrome-stable_current_amd64.deb`\
+  \ 下载的位置\n\n双击：`google-chrome-stable_current_amd64.deb`\n\n### Microsoft Edge\n![](img/image01129.jpeg)\n\
+  \n前往：\n[`www.microsoft.com/edge/insider/`](https://www.microsoft.com/edge/insider/)\n\
+  \n点击：`Download Edge`\n\n勾选：`64 bit.deb` (对于 Debian/Ubuntu) 同行的框\n\n点击：`Accept and\
+  \ install`\n\n下载：`microsoft-edge-stable_current_amd64.deb`\n\n前往：`microsoft-edge-stable_current_amd64.deb`\
+  \ 下载的位置\n\n双击：`microsoft-edge-stable_current_amd64.deb`\n\n### Opera\n![](img/image01130.jpeg)\n\
+  \n打开：`Snap Store`\n\n输入或复制粘贴：\n`opera`\n\n点击：`opera`\n\n![](img/image01131.jpeg)\n\
+  \n打开：`Terminal`\n\n输入或复制粘贴：\n```bash\nsudo snap install opera\n```\n\n按下：`ENTER`\n\
+  \n\n\n\n\n## 选择：`TotalValue_Shadowlands`\n\n点击：`提取`\n\n前往：`World of Warcraft/_retail_/Interface/AddOns`\n\
+  \n点击：`提取`\n\n## 魔兽世界插件管理器\n\n- `Ajour`\n    - `Ajour`\n    - `Ajour 删除插件`\n    -\
+  \ `Ajour 删除变量`\n    - `Ajour 安装插件`\n    - `Ajour 新建插件目录`\n- `Strongbox (强箱)`\n \
+  \   - `Strongbox`\n    - `Strongbox 切换主题`\n    - `Strongbox 删除插件`\n    - `Strongbox\
+  \ 删除多个插件`\n    - `Strongbox 安装插件`\n    - `Strongbox 安装多个插件`\n    - `Strongbox 新建插件目录`\n\
+  - `wowmatrix`\n    - `wowmatrix`\n    - `wowmatrix 删除插件`\n    - `wowmatrix 删除多个插件`\n\
+  \    - `wowmatrix 安装插件`\n    - `wowmatrix 新建插件目录`\n- `Wowup`\n    - `Wowup`\n  \
+  \  - `Wowup 删除插件`\n    - `Wowup 删除多个插件`\n    - `Wowup 安装插件`\n    - `Wowup 新建插件目录`\n\
+  \n### Ajour\n\n![](img/image01148.jpeg)\n\n前往：`https://github.com/ajour/ajour/releases/tag/1.3.2`\n\
+  \n点击：`ajour-opengl.AppImage`\n\n至：下载 `ajour-opengl.AppImage`\n\n前往：`ajour-opengl.AppImage`\
+  \ 的下载位置\n\n双击：`ajour-opengl.AppImage`\n\n![](img/image01149.jpeg)\n\n点击：`集成并运行`\n\
+  \n### Ajour 删除插件\n![](img/image01150.jpeg)\n\n打开：`Ajour`\n\n点击：`我的插件`\n\n点击：`插件`\n\
+  \n点击：`删除主计划 (Master Plan)`\n\n![](img/image01151.jpeg)\n\n点击：`确认删除`\n\n### Ajour\
+  \ 删除变量\n![](img/image01152.jpeg)\n\n打开：`Ajour`\n\n点击：`我的插件`\n\n点击：`插件`\n\n点击：`删除保存变量\
+  \ (SavedVariables)`\n\n![](img/image01153.jpeg)\n\n点击：`确认删除`\n\n### Ajour 安装插件\n\
+  ![](img/image01154.jpeg)\n\n打开：`Ajour`\n\n点击：`目录`\n\n点击：`搜索框`\n\n输入或复制粘贴：`master\
+  \ plan`\n\n点击：`在与 Master Plan 相同的行中安装`\n\n### Ajour 新建插件目录\n![](img/image01155.jpeg)\n\
+  \n打开：`Ajour`\n\n点击：`选择目录`\n\n![](img/image01156.jpeg)\n\n前往：魔兽世界文件夹\n\n点击：\n- `_retail_`\n\
+  - `_classic_`\n- `_classic_era_`\n\n点击：`Interface`\n\n选择：`Addons`\n\n点击：`确定`\n\n\
+  ## Strongbox\n![](img/image01157.jpeg)\n\n前往：`https://github.com/ogri-la/strongbox/releases/tag/5.0.0`\n\
+  \n点击：`strongbox`\n\n至：下载 `strongbox`\n\n前往：`strongbox` 的下载位置\n\n双击：`strongbox`\n\
+  \n![](img/image01158.jpeg)\n\n点击：`集成并运行`\n\n### Strongbox 切换主题\n![](img/image01159.jpeg)\n\
+  \n打开：`Strongbox`\n\n点击：`视图`\n\n点击：`深色主题`\n\n### Strongbox 删除插件\n![](img/image01160.jpeg)\n\
+  \n打开：`Strongbox`\n\n点击：`已安装`\n\n选择：`BlizzMove`\n\n右键点击：`BlizzMove`\n\n点击：`删除`\n\n\
+  点击：`确定`\n\n### Strongbox 删除多个插件\n![](img/image01161.jpeg)\n\n打开：`Strongbox`\n\n\
+  按住 `Shift 并左键` 选择多个插件\n\n右键点击：`选中的插件`\n\n点击：`删除`\n\n点击：`确定`\n\n### Strongbox 安装插件\n\
+  ![](img/image01162.jpeg)\n\n打开：`Strongbox`\n\n点击：`搜索`\n\n点击：`搜索框`\n\n输入或复制粘贴：`Blizzmove`\n\
+  \n点击：`在与 BlizzMove 相同的行中安装`\n\n### Strongbox 安装多个插件\n![](img/image01163.jpeg)\n\n\
+  打开：`Strongbox`\n\n点击：`搜索`\n\n点击：`搜索框`\n\n按住 `Shift 并右键` 选择多个要安装的插件\n\n点击：`安装已选`\n\
+  \n### Strongbox 新建插件目录\n![](img/image01159.jpeg)\n\n打开：`Strongbox`\n\n点击：`文件`\n\n\
+  点击：`新建插件目录`\n\n![](img/image01156.jpeg)\n\n前往：魔兽世界文件夹\n\n点击：\n- `_retail_`\n- `_classic_`\n\
+  - `_classic_era_`\n\n点击：`Interface`\n\n选择：`Addons`\n\n点击：`确定`\n\n## wowmatrix\n\
+  ![](img/image01164.jpeg)\n\n前往：`https://www.wowmatrix.com/download`\n\n点击：`Linux\
+  \ 64 位 免费下载`\n\n至：下载 `wowmatrix.tar.gz`\n\n前往：`wowmatrix.tar.gz` 的下载位置\n\n双击：`wowmatrix.tar.gz`\n\
+  \n![](img/image01165.jpeg)\n\n选择：`wowmatrix`\n\n点击：`提取`\n\n![](img/image01166.jpeg)\n\
+  \n前往：`/home/mylinuxmintpc/Applications`\n\n点击：`提取`\n\n### wowmatrix 删除插件\n![](img/image01167.jpeg)\n\
+  \n打开：`wowmatrix`\n\n选择：`BetterWardrobe`\n\n点击：`卸载`\n\n![](img/image01168.jpeg)\n\
+  \n点击：`永久删除`\n\n### wowmatrix 删除多个插件\n![](img/image01169.jpeg)\n\n打开：`wowmatrix`\n\
+  \n选择：`NeatPlates_Horizontal`\n\n按住 `Shift 并左键`\n\n点击：`卸载`\n\n### wowmatrix 安装插件\n\
+  打开：`wowmatrix`\n\n点击：`获取插件`\n\n点击：`搜索`\n\n选择：`armory`\n\n点击：`安装`\n\n### wowmatrix\
+  \ 新建插件目录\n打开：`wowmatrix`\n\n前往：魔兽世界文件夹\n\n点击：\n- `_retail_`\n- `_classic_`\n- `_classic_era_`\n\
+  \n点击：`Interface`\n\n选择：`Addons`\n\n点击：`确定`\n\n## Wowup\n前往：`https://github.com/ajour/ajour/releases/tag/1.3.2`\n\
+  \n点击：`ajour-opengl.AppImage`\n\n至：下载 `ajour-opengl.AppImage`\n\n前往：`ajour-opengl.AppImage`\
+  \ 的下载位置\n\n双击：`ajour-opengl.AppImage`\n\n![](img/image01149.jpeg)\n\n点击：`集成并运行`\n\
+  \n### Ajour 删除插件\n![](img/image01150.jpeg)\n\n打开：`Ajour`\n\n点击：`我的插件`\n\n点击：`插件`\n\
+  \n点击：`删除主计划`\n\n![](img/image01151.jpeg)\n\n点击：`确认删除`\n\n### Ajour 删除变量\n![](img/image01152.jpeg)\n\
+  \n打开：`Ajour`\n\n点击：`我的插件`\n\n点击：`插件`\n\n点击：`删除保存变量`\n\n![](img/image01153.jpeg)\n\
+  \n点击：`确认删除`\n\n### Ajour 安装插件\n![](img/image01154.jpeg)\n\n打开：`Ajour`\n\n点击：`目录`\n\
+  \n点击：`搜索框`\n\n输入或复制粘贴：`master plan`\n\n点击：`在与 Master Plan 相同的行中安装`\n\n### Ajour\
+  \ 新建插件目录\n![](img/image01155.jpeg)\n\n打开：`Ajour`\n\n点击：`选择目录`\n\n![](img/image01156.jpeg)\n\
+  \n前往：魔兽世界文件夹\n\n点击：\n- `_retail_`\n- `_classic_`\n- `_classic_era_`\n\n点击：`Interface`\n\
+  \n选择：`Addons`\n\n点击：`确定`\n\n## Strongbox\n![](img/image01157.jpeg)\n\n前往：`https://github.com/ogri-la/strongbox/releases/tag/5.0.0`\n\
+  \n点击：`strongbox`\n\n至：下载 `strongbox`\n\n前往：`strongbox` 的下载位置\n\n双击：`strongbox`\n\
+  \n![](img/image01158.jpeg)\n\n点击：`集成并运行`\n\n### Strongbox 切换主题\n![](img/image01159.jpeg)\n\
+  \n打开：`Strongbox`\n\n点击：`视图`\n\n点击：`深色主题`\n\n### Strongbox 删除插件\n![](img/image01160.jpeg)\n\
+  \n打开：`Strongbox`\n\n点击：`已安装`\n\n选择：`BlizzMove`\n\n右键点击：`BlizzMove`\n\n点击：`删除`\n\n\
+  点击：`确定`\n\n### Strongbox 删除多个插件\n![](img/image01161.jpeg)\n\n打开：`Strongbox`\n\n\
+  按住 `Shift 并左键` 选择多个插件\n\n右键点击：`选中的插件`\n\n点击：`删除`\n\n点击：`确定`\n\n### Strongbox 安装插件\n\
+  ![](img/image01162.jpeg)\n\n打开：`Strongbox`\n\n点击：`搜索`\n\n点击：`搜索框`\n\n输入或复制粘贴：`Blizzmove`\n\
+  \n点击：`在与 BlizzMove 相同的行中安装`\n\n### Strongbox 安装多个插件\n![](img/image01163.jpeg)\n\n\
+  打开：`Strongbox`\n\n点击：`搜索`\n\n点击：`搜索框`\n\n按住 `Shift 并右键` 选择多个要安装的插件\n\n点击：`安装已选`\n\
+  \n### Strongbox 新建插件目录\n![](img/image01159.jpeg)\n\n打开：`Strongbox`\n\n点击：`文件`\n\n\
+  点击：`新建插件目录`\n\n![](img/image01156.jpeg)\n\n前往：魔兽世界文件夹\n\n点击：\n- `_retail_`\n- `_classic_`\n\
+  - `_classic_era_`\n\n点击：`Interface`\n\n选择：`Addons`\n\n点击：`确定`\n\n## wowmatrix\n\
+  ![](img/image01164.jpeg)\n\n前往：`https://www.wowmatrix.com/download`\n\n点击：`Linux\
+  \ 64 位 免费下载`\n\n至：下载 `wowmatrix.tar.gz`\n\n前往：`wowmatrix.tar.gz` 的下载位置\n\n双击：`wowmatrix.tar.gz`\n\
+  \n![](img/image01165.jpeg)\n\n选择：`wowmatrix`\n\n点击：`提取`\n\n![](img/image01166.jpeg)\n\
+  \n前往：`/home/mylinuxmintpc/Applications`\n\n点击：`提取`\n\n### wowmatrix 删除插件\n![](img/image01167.jpeg)\n\
+  \n打开：`wowmatrix`\n\n选择：`BetterWardrobe`\n\n点击：`卸载`\n\n![](img/image01168.jpeg)\n\
+  \n点击：`永久删除`\n\n### wowmatrix 删除多个插件\n![](img/image01169.jpeg)\n\n打开：`wowmatrix`\n\
+  \n选择：`NeatPlates_Horizontal`\n\n按住 `Shift 并左键`\n\n点击：`卸载`\n\n### wowmatrix 安装插件\n\
+  打开：`wowmatrix`\n\n点击：`获取插件`\n\n点击：`搜索`\n\n选择：`armory`\n\n点击：`安装`\n\n### wowmatrix\
+  \ 新建插件目录\n打开：`wowmatrix`\n\n前往：魔兽世界文件夹\n\n点击：\n- `_retail_`\n- `_classic_`\n- `_classic_era_`\n\
+  \n点击：`Interface`\n\n选择：`Addons`\n\n点击：`确定`\n\n## Wowup\n前往：`https://github.com/ajour/ajour/releases/tag/1.3.2`\n\
+  \n点击：`ajour-opengl.AppImage`\n\n至：下载 `ajour-opengl.AppImage`\n\n前往：`ajour-opengl.AppImage`\
+  \ 的下载位置\n\n双击：`ajour-opengl.AppImage`\n\n![](img/image01149.jpeg)\n\n点击：`集成并运行`\n\
+  \n### Ajour 删除插件\n![](img/image01150.jpeg)\n\n打开：`Ajour`\n\n点击：`我的插件`\n\n点击：`插件`\n\
+  \n点击：`删除主计划`\n\n![](img/image01151.jpeg)\n\n点击：`确认删除`\n\n### Ajour 删除变量\n![](img/image01152.jpeg)\n\
+  \n打开：`Ajour`\n\n点击：`我的插件`\n\n点击：`插件`\n\n点击：`删除保存变量`\n\n![](img/image01153.jpeg)\n\
+  \n点击：`确认删除`\n\n### Ajour 安装插件\n![](img/image01154.jpeg)\n\n打开：`Ajour`\n\n点击：`目录`\n\
+  \n点击：`搜索框`\n\n输入或复制粘贴：`master plan`\n\n点击：`在与 Master Plan 相同的行中安装`\n\n### Ajour\
+  \ 新建插件目录\n![](img/image01155.jpeg)\n\n打开：`Ajour`\n\n点击：`选择目录`\n\n![](img/image01156.jpeg)\n\
+  \n前往：魔兽世界文件夹\n\n点击：\n- `_retail_`\n- `_classic_`\n- `_classic_era_`\n\n点击：`Interface`\n\
+  \n选择：`Addons`\n\n点击：`确定`\n\n"
