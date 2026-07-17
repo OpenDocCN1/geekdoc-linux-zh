@@ -1,0 +1,579 @@
+name: Enterprise Linux for Government v6： Administer & Secure Red Hat Family Linux
+  version 6
+name_cn: 政府级企业 Linux v6：Red Hat 系列 Linux 版本 6 管理与安全指南
+slug: enterprise-linux-for-government-v6-administer-secure-red-hat
+toc:
+- - '#'
+  - 政府级企业 Linux v6：Red Hat 系列 Linux 版本 6 管理与安全指南
+- - '#'
+  - README.md
+- - '##'
+  - 关于本书
+- - '##'
+  - 入门
+- - '##'
+  - 作者
+- - '##'
+  - 错误
+- - '##'
+  - 致谢
+- - '#'
+  - 模块 0：Linux 简介
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - 用户与组
+- - '##'
+  - 内核与 Shell (Kernel and Shell)
+- - '##'
+  - 目录与路径 (Directories and Paths)
+- - '###'
+  - 路径 (Pathing)
+- - '###'
+  - pwd
+- - '###'
+  - cd .
+- - '###'
+  - pwd
+- - '###'
+  - pwd
+- - '###'
+  - cd ..
+- - '###'
+  - pwd
+- - '###'
+  - cd ../../
+- - '###'
+  - pwd
+- - '##'
+  - 标准目录
+- - '##'
+  - 发布命令
+- - '##'
+  - 在 bash 中输入
+- - '##'
+  - ping 192.168.1.155
+- - '##'
+  - ssh !$
+- - '##'
+  - 重定向与管道
+- - '##'
+  - 特殊虚拟文件
+- - '##'
+  - 标准流
+- - '##'
+  - 执行控制
+- - '#'
+  - RHEL 6 特性
+- - '#'
+  - 模块 2：文件与目录
+- - '##'
+  - ls – 列出文件
+- - '###'
+  - file binary
+- - '###'
+  - stat binary
+- - '##'
+  - which, whereis, locate
+- - '###'
+  - find
+- - '##'
+  - 按属性搜索
+- - '##'
+  - 查找无所有者的文件
+- - '##'
+  - ls
+- - '##'
+  - touch somefile
+- - '##'
+  - ls
+- - '##'
+  - ls /usr | column | tee /cap
+- - '##'
+  - cat cap
+- - '##'
+  - echo "this is line 1" > file
+- - '##'
+  - cat file
+- - '##'
+  - echo "this is line 2" >> file
+- - '##'
+  - cat file
+- - '##'
+  - mkdir -m 0777 -p this/is/insecure
+- - '##'
+  - find this -exec ls -ld {} \;
+- - '##'
+  - rm cap
+- - '##'
+  - /usr/bin/rm cap
+- - '##'
+  - 无确认
+- - '#'
+  - 模块 3：vi
+- - '###'
+  - 介绍
+- - '##'
+  - 基础知识
+- - '###'
+  - 在 Normal 模式下移动：
+- - '###'
+  - 插入内容
+- - '###'
+  - 多重寄存器
+- - '###'
+  - 多重文件
+- - '###'
+  - 避免重复
+- - '###'
+  - 执行命令
+- - '###'
+  - 快速移动
+- - '###'
+  - 其他内容
+- - '###'
+  - 编辑配置文件
+- - '#'
+  - 模块 4：用户与组
+- - '#'
+  - 用户管理与配置
+- - '##'
+  - 系统配置文件
+- - '###'
+  - 组文件
+- - '###'
+  - 密码文件
+- - '##'
+  - 身份与权限
+- - '###'
+  - Shadow 文件
+- - '##'
+  - useradd 命令
+- - '##'
+  - 密码管理
+- - '##'
+  - 验证与 PAM
+- - '##'
+  - 账户修改
+- - '##'
+  - Sudo 与权限提升
+- - '###'
+  - '`who`, `w`, `lastlog`, `last`, `lastb` — 谁在何何时'
+- - '#'
+  - 模块 5：所有权、权限与访问
+- - '##'
+  - ls -l
+- - '###'
+  - 修改权限
+- - '###'
+  - 特殊目的访问模式
+- - '##'
+  - chmod 7777 list
+- - '##'
+  - chmod u+s,g+s,o+t list
+- - '##'
+  - ls -l
+- - '###'
+  - umask
+- - '##'
+  - chown bob:sales list
+- - '##'
+  - ls -l list
+- - '##'
+  - chown :sales list
+- - '##'
+  - 访问控制列表 (Access Control Lists)
+- - '##'
+  - ls -l
+- - '##'
+  - ls -ld /test
+- - '##'
+  - getfacl /test
+- - '##'
+  - 'file: test'
+- - '##'
+  - 'owner: root'
+- - '##'
+  - 'group: root'
+- - '##'
+  - getfacl /test
+- - '##'
+  - 'file: test'
+- - '##'
+  - 'owner: root'
+- - '##'
+  - 'group: root'
+- - '#'
+  - 模块 6：正则表达式
+- - '###'
+  - 关于 sed 的几点说明
+- - '###'
+  - awk
+- - '##'
+  - /awkish pfile
+- - '##'
+  - /awkish /etc/group
+- - '##'
+  - sed -n '1p' /etc/group
+- - '##'
+  - /awkish /etc/group
+- - '##'
+  - Inodes（索引节点）
+- - '##'
+  - 符号链接
+- - '##'
+  - ls
+- - '##'
+  - ln -s /test/itest/newfile /inode.example
+- - '##'
+  - ls -l
+- - '##'
+  - ls -i
+- - '##'
+  - 创建文件系统
+- - '##'
+  - lsblk
+- - '##'
+  - fdisk -l /dev/sdb
+- - '##'
+  - 格式化文件系统
+- - '##'
+  - mkfs.ext4 -L ext4.example /dev/sdb2
+- - '##'
+  - mount (挂载)
+- - '##'
+  - ls -l /testmount
+- - '##'
+  - cat /testmount/NOTmounted
+- - '##'
+  - mount /dev/sdb2 /testmount
+- - '##'
+  - ls -l /testmount
+- - '##'
+  - umount /testmount
+- - '##'
+  - ls -l /testmount
+- - '##'
+  - fstab
+- - '##'
+  - swapon -s
+- - '##'
+  - dd if=/dev/zero of=/swapfile bs=1024 count=1048576
+- - '##'
+  - chmod 0600 /swapfile
+- - '##'
+  - ls -l /swapfile
+- - '##'
+  - 逻辑卷管理器 (LVM)
+- - '##'
+  - 物理卷
+- - '##'
+  - 卷组
+- - '##'
+  - 逻辑卷
+- - '##'
+  - pvcreate /dev/sdb3
+- - '##'
+  - vgcreate -v ExampleVG /sdb3
+- - '##'
+  - lvcreate -n ExampleLV -l 100% ExampleVG
+- - '##'
+  - vgs
+- - '##'
+  - vgdisplay -v ExampleVG
+- - '##'
+  - open 0
+- - '##'
+  - mkfs.ext4 /dev/ExampleVG/ExampleLV
+- - '##'
+  - 磁盘加密
+- - '###'
+  - LUKS 上的设备
+- - '##'
+  - '`echo "encDisk /dev/sdb" >> /etc/crypttab`'
+- - '##'
+  - '`cat /etc/crypttab`'
+- - '##'
+  - '`mkdir /secret`'
+- - '##'
+  - '`tail -1 /etc/fstab`'
+- - '##'
+  - '`mount /secret`'
+- - '##'
+  - '`ls /secret`'
+- - '##'
+  - 密钥
+- - '##'
+  - '`dd if=/dev/urandom of=/root/keyfile bs=1024 count=4`'
+- - '##'
+  - '`chmod 0400 /root/keyfile`'
+- - '##'
+  - '`cryptsetup luksAddKey /dev/sdb /root/keyfile`'
+- - '##'
+  - '`umount /secret`'
+- - '##'
+  - '`cryptsetup luksClose encDisk`'
+- - '##'
+  - '`cryptsetup luksOpen /dev/sdb encDisk --key-file=/root/keyfile`'
+- - '##'
+  - '`mount /secret`'
+- - '##'
+  - '`ls /secret`'
+- - '##'
+  - '`tail -1 /etc/crypttab`'
+- - '#'
+  - 模块 8：进程与服务
+- - '###'
+  - '`ps`, `pgrep`, `kill`, `pkill`, `killall`'
+- - '##'
+  - 资源限制
+- - '##'
+  - top, uptime, free, vmstat
+- - '##'
+  - 调度事件
+- - '##'
+  - anacron
+- - '##'
+  - cron, crontab
+- - '#'
+  - 模块 10：启动
+- - '##'
+  - 启用服务
+- - '##'
+  - grub, grub.conf
+- - '##'
+  - 恢复 root
+- - '##'
+  - reboot, halt, poweroff
+- - '##'
+  - rsyslogd, rsyslog.conf, remote logging, logrotate
+- - '##'
+  - 日志配置与管理
+- - '##'
+  - 时间时区配置
+- - '##'
+  - SELinux 概述
+- - '###'
+  - SELinux
+- - '###'
+  - 快速了解 SELinux
+- - '###'
+  - Labels（标签）
+- - '###'
+  - Types
+- - '###'
+  - Domains（领域）
+- - '###'
+  - example scenario（场景）
+- - '##'
+  - 任务1
+- - '##'
+  - setforce 0
+- - '##'
+  - tail /var/log/messages | grep httpd
+- - '##'
+  - sealert -l
+- - '##'
+  - getsebool -a | grep httpd
+- - '##'
+  - 任务2
+- - '##'
+  - ls -ldZ /web
+- - '##'
+  - libsemanage
+- - '##'
+  - 在 SELinux 中移动和复制
+- - '##'
+  - 使用 auditallow
+- - '##'
+  - /test/source.te
+- - '##'
+  - avc 在当前策略中允许
+- - '##'
+  - 配置
+- - '##'
+  - SELinux 状态
+- - '###'
+  - SELINUX= 取以下值：
+- - '###'
+  - enforcing - 强制策略
+- - '###'
+  - permissive - 打印警告
+- - '###'
+  - disabled - 不加载 SELinux 策略
+- - '##'
+  - 自动标记（autorelabeling）
+- - '#'
+  - 模块 13：网络
+- - '##'
+  - NetworkManager, nm-applet
+- - '##'
+  - system-config-network
+- - '##'
+  - netstat 和 ss
+- - '##'
+  - iptables 链和规则知识
+- - '##'
+  - 'iptables-save '
+- - '#'
+  - 模块 14：安装软件
+- - '##'
+  - yum, repos, createrepo
+- - '##'
+  - rpm
+- - '##'
+  - 安装 Linux
+- - '###'
+  - Kickstart
+- - '###'
+  - VMware Tools
+- - '##'
+  - rpm --import https://packages.vmware.com/tools/keys/VMWARE-PACKAGING-GPG-DSA.pub
+- - '##'
+  - rpm --import https://packages.vmware.com/tools/keys/VMWARE-PACKAGING-GPG-RSA.pub
+- - '#'
+  - 模块 15：远程文件系统
+- - '##'
+  - NFS
+- - '##'
+  - 启动 NFS 服务
+- - '##'
+  - 配置 /etc/exports 并导出系统
+- - '##'
+  - 可选参数 / Optional arguments
+- - '##'
+  - 配置
+- - '##'
+  - httpd, httpd.conf
+- - '##'
+  - curl, wget, lynx
+- - '#'
+  - 模块 16：远程访问
+- - '##'
+  - vnc
+- - '##'
+  - scp, sftp
+- - '#'
+  - 模块 17：内核模块与参数
+- - '##'
+  - modprobe bnx2fc debug_logging=0
+- - '##'
+  - 黑名单
+- - '##'
+  - 内核参数
+- - '##'
+  - 控制 IP 数据转发
+- - '##'
+  - 控制源路由
+- - '##'
+  - 不接受源路由
+- - '#'
+  - 模块 18：灾难恢复
+- - '##'
+  - dump, xfsdump, dd
+- - '##'
+  - tar, cpio
+- - '##'
+  - rsync
+- - '##'
+  - Rsync
+- - '##'
+  - 身份验证设置
+- - '##'
+  - ReaR (放松与恢复)
+- - '##'
+  - NFS 设置
+- - '#'
+  - 模块 19：安全
+- - '##'
+  - Packages
+- - '##'
+  - aide, `aide.conf`
+- - '##'
+  - Prelinking
+- - '##'
+  - FIPS
+- - '##'
+  - OpenSCAP, oscap
+- - '##'
+  - scap-workbench
+- - '##'
+  - 安全标准与策略
+- - '##'
+  - 能力
+- - '##'
+  - OpenSCAP
+- - '##'
+  - Ansible
+- - '###'
+  - 在 RHEL6 上安装和配置
+- - '###'
+  - 在其他 EL6 发版上安装
+- - '#'
+  - 实验
+- - '##'
+  - 实验1：初始配置
+- - '##'
+  - clam
+- - '##'
+  - 实验2：文件与目录
+- - '###'
+  - 查找内容
+- - '###'
+  - 使用 find 查找内容
+- - '###'
+  - 操作文件与目录
+- - '##'
+  - 实验3：vi
+- - '##'
+  - 实验4：用户与组
+- - '##'
+  - 实验5：所有权、权限与访问
+- - '##'
+  - 4. 测试 SUID
+- - '##'
+  - 实验6：正则表达式
+- - '##'
+  - 无意义的乐趣
+- - '##'
+  - 实验7：文件系统
+- - '###'
+  - 1. 使用 `fdisk` 分区
+- - '###'
+  - 2. 文件系统的创建和挂载
+- - '###'
+  - 3. LVM
+- - '###'
+  - 4. 硬链接
+- - '##'
+  - 实验8：进程与服务
+- - '###'
+  - 1. 准备
+- - '##'
+  - 实验9：调度调度
+- - '##'
+  - 实验10：启动
+- - '##'
+  - 实验12：SELinux
+- - '##'
+  - 实验13：网络
+- - '##'
+  - 实验16：远程访问
+- - '##'
+  - 实验17：内核模块与参数
+- - '##'
+  - 实验18：灾难恢复
+- - '##'
+  - 实验19：安全
+- - '##'
+  - 实验20 – 总结
+- - '###'
+  - 23. 验证所有世界可写目录均已设置粘滞位（Sticky Bits）
+- - '###'
+  - 24. 确保所有文件都属于一个组
+- - '###'
+  - 25. 确保所有世界可写目录均属于系统账户
+- - '###'
+  - 26. 确保 /etc/grub.conf 中未禁用 SELinux
+- - '###'
+  - 27. 确保 SELinux ```

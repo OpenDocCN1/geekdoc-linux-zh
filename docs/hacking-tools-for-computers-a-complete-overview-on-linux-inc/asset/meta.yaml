@@ -1,0 +1,91 @@
+name: Hacking tools for computers： A Complete Overview on Linux, Including Linux Mint,
+  the First Notions of Linux for Beginners and Kali Linux Tools
+name_cn: 计算机黑客工具：Linux 完整概述，包含 Linux Mint、初学者 Linux 入门以及 Kali Linux 工具
+slug: hacking-tools-for-computers-a-complete-overview-on-linux-inc
+toc:
+- - '#'
+  - 计算机黑客工具：Linux 完整概述，包含 Linux Mint、初学者 Linux 入门以及 Kali Linux 工具
+- - '#'
+  - 引言
+- - '##'
+  - 黑客的类型：
+- - '#'
+  - 第 1 章：Linux 简介
+- - '##'
+  - 毕竟，什么是操作系统？
+- - '#'
+  - 第 2 章：Kali Linux 简介
+- - '#'
+  - 第 3 章：基础 Kali Linux 工具
+- - '#'
+  - 第 4 章：高级 Kali Linux 工具
+- - '#'
+  - 第 5 章：无线攻击与渗透测试
+- - '##'
+  - 为什么 Linux 重要？
+- - '###'
+  - 企业利用
+- - '###'
+  - Web 服务器：
+- - '###'
+  - 关键任务应用（金融数据库、大型企业网络管理）
+- - '###'
+  - 学术机构的高性能计算任务：
+- - '##'
+  - 为什么 Linux 比 Windows 更适合黑客？
+- - '##'
+  - Linux 命令简介
+- - '###'
+  - (2) 创建密码列表文件并保存到桌面
+- - '###'
+  - (3) 打开字典文件
+- - '###'
+  - rtgen
+- - '###'
+  - (1) 切换到 `rtgen` 目录
+- - '###'
+  - (2) 使用 `rtgen` 命令基于 MD5 生成彩虹表
+- - '###'
+  - (3) 排序彩虹表
+- - '###'
+  - John the Ripper
+- - '###'
+  - 说明
+- - '##'
+  - Snort 规则选项
+- - '##'
+  - Snort 基础命令
+- - '##'
+  - 什么是嗅探？
+- - '###'
+  - 无线网络嗅探工具 Kismet
+- - '###'
+  - 分析文本文件
+- - '###'
+  - Aircrack-ng
+- - '###'
+  - 破解 WEP 加密网络
+- - '###'
+  - WPS (Wi-Fi protected Setup)
+- - '###'
+  - Fern wifi cracker
+- - '###'
+  - GERIX WIFI CRACKER
+- - '###'
+  - 使用 Gerix创建伪点
+- - '###'
+  - GERIX TO ATTACK
+- - '###'
+  - PORT REDIRECTION ATTACK
+- - '###'
+  - URL MANIPULATION ATTACK
+- - '###'
+  - Capturing and Monitoring Wireless Data
+- - '##'
+  - Penetration testing
+- - '###'
+  - 目的、程序和方法
+- - '###'
+  - 为什么公司或组织需要渗透测试？
+- - '###'
+  - 测试方法

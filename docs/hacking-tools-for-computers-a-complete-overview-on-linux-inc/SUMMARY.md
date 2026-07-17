@@ -1,0 +1,2 @@
++   [计算机黑客工具：Linux 完整概述，包含 Linux Mint、初学者 Linux 入门以及 Kali Linux 工具](README.md)
++   [计算机黑客工具：Linux 完整概述，包含 Linux Mint、初学者 Linux 入门以及 Kali Linux 工具](hacking-tools-for-computers-a-complete-overview-on-linux-inc_0.md)
