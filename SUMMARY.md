@@ -403,6 +403,7 @@
 +   [Linux Mint 22 精简版：Linux Mint 精通初学者指南](docs/linux-mint-simplified-22-a-beginners-guide-to-mastering-linu/README.md)
 +   [Linux 操作系统：Linux 操作系统入门指南：Linux 系统管理员](docs/linux-operating-system-introduction-to-linux-operating-syste/README.md)
 +   [Linux 摄影：Linux 自动化与流化摄影工作流工具](docs/linux-photography-tools-for-automated-and-streamlined-photog/README.md)
++   [Linux 常用语第 2 版](docs/linux-phrasebook-2nd-edition-2nd-ed/README.md)
 +   [Linux 编程：构建与调试指南](docs/linux-programming-building-and-debugging/README.md)
 +   [Linux 编程工具解锁指南](docs/linux-programming-tools-unveiled/README.md)
 +   [Linux 安全基础指南](docs/linux-security-fundamentals/README.md)
