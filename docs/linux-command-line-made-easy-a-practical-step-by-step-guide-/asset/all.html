@@ -1,0 +1,3084 @@
+<p><img src="image_rsrc154.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="100%" preserveaspectratio="xMidYMid meet" version="1.1" viewbox="0 0 1280 1920" width="100%">
+<image height="1920" width="1280" xlink:href="image_rsrc154.jpg"></image>
+</svg>
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div class="class_sF">
+Linux Command Line Made Easy
+</div>
+<div class="class_sH">
+A Practical, Step By Step Guide To Linux Commands For Beginners And
+Intermediates
+</div>
+<div class="class_sK">
+Craig Berg
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div id="part0002.xhtml_a12Z" class="heading_sU">
+Introduction
+</div>
+<div class="class_sW">
+Welcome to the Linux Command Line Guide For Beginners, and thank you for
+choosing this book as your pass to the Linux world.
+</div>
+<div class="class_sW">
+Please note that this book is for beginners at Linux, not power users.
+</div>
+<div class="class_sW">
+Whether you are coming from a version of Windows or OSx or giving Linux
+a try, this book will be invaluable to you.
+</div>
+<div class="class_sW">
+However, while this book is indeed very beginner-friendly, it will not
+take you from a novice to a Linux command Line master in one night.
+</div>
+<div class="class_sW">
+That’s because the Linux Command Line is vast and challenging to master,
+especially for beginners. Learning it requires a great deal of
+determination and effort not because the Linux command line is complex
+or requires genius-level IQ, but because it’s large and contains
+hundreds if not thousands of commands.
+</div>
+<div class="class_sW">
+In all honesty, we can dedicate a single chapter to one command and all
+its arguments.
+</div>
+<div class="class_sW">
+Nevertheless, the command line is a fundamental tool for Linux users.
+The command line brings you every possible tool to work with in the ins
+and outs of your operating system with just a keyboard. If you are
+skeptical about this, follow the book, and you will realize real power.
+</div>
+<div class="class_sW">
+The book has an efficient organizational structure:
+</div>
+<ol>
+<li><div class="class_s15">
+The first chapter gives you the basics and must-know elements of working
+with the Linux Command line.
+</div></li>
+<li><div class="class_s19">
+In the second chapter, we shall look at Linux configuration and where
+config files of applications are stored, and how to manage them.
+</div></li>
+<li><div class="class_s19">
+In the third chapter, we shall dive into the Linux tools and common
+commands you will find yourself using most of the time as you work with
+the command line.
+</div></li>
+<li><div class="class_s15">
+Finally, we will conclude with a discussion on Linux permissions,
+groups, and more.
+</div></li>
+</ol>
+<div class="class_sW">
+In simple terms, Linux and Linux command line is amazing because it
+opens many opportunities for you.
+</div>
+<div class="class_sW">
+In this beginners’ book, we do not assume you have any programming
+knowledge. That’s why the book will walk you through every step.
+</div>
+<div class="class_sW">
+Read the book from start to finish because its structure is a lot like a
+syllabus and less like a quick reference guide.
+</div>
+<div class="class_sW">
+All you need is a computer and internet access for Linux
+installation—more on that later. Once you have what you need, we can get
+started with the installation and hands-on typing command lines, the fun
+part!
+</div>
+<div class="class_sW">
+<span class="class_s14C">PS:</span> I’d like your feedback. If you are
+happy with this book, please leave a review on Amazon.
+</div>
+<div class="class_sW">
+Please leave a review for this book on Amazon by visiting the page
+below:
+</div>
+<div class="class_s1T">
+<a href="https://amzn.to/2VMR5qr"
+class="class_s14J">https://amzn.to/2VMR5qr</a>
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div class="heading_sU">
+Table of Content
+</div>
+<div id="part0003.xhtml_Table_of_Contents" class="class_s21">
+<a href="#part0002.xhtml" class="class_s14E">Introduction</a>
+</div>
+<div class="class_s21">
+<a href="#part0004.xhtml" class="class_s14E">Section 1</a>
+</div>
+<div class="class_s21">
+<a href="#part0004.xhtml_a131" class="class_s14E">Linux Installation</a>
+</div>
+<div class="class_s21">
+<a href="#part0004.xhtml_a132" class="class_s14E">Guide</a>
+</div>
+<div class="class_s26">
+<a href="#part0005.xhtml_a133" class="class_s14E">How to Choose A Linux
+Distribution</a>
+</div>
+<div class="class_s26">
+<a href="#part0005.xhtml_a134" class="class_s14E">Installing Linux on
+Windows: Virtualization.</a>
+</div>
+<div class="class_s26">
+<a href="#part0005.xhtml_a135" class="class_s14E">Installing Linux on
+Windows: Dual Boot</a>
+</div>
+<div class="class_s26">
+<a href="#part0005.xhtml_a136" class="class_s14E">Installing Linux on
+Windows: WSL</a>
+</div>
+<div class="class_s26">
+<a href="#part0005.xhtml_a137" class="class_s14E">Installing Linux on
+Mac OSx: Virtual Machine</a>
+</div>
+<div class="class_s21">
+<a href="#part0006.xhtml" class="class_s14E">Section 2</a>
+</div>
+<div class="class_s21">
+<a href="#part0006.xhtml_a139" class="class_s14E">Linux Command,
+Terminal, and Shell</a>
+</div>
+<div class="class_s26">
+<a href="#part0007.xhtml_a13A" class="class_s14E">Linux Dictionary</a>
+</div>
+<div class="class_s26">
+<a href="#part0007.xhtml_a13B" class="class_s14E">The Command Line
+History</a>
+</div>
+<div class="class_s26">
+<a href="#part0007.xhtml_a13C" class="class_s14E">Simple Commands</a>
+</div>
+<div class="class_s21">
+<a href="#part0008.xhtml" class="class_s14E">Section 3</a>
+</div>
+<div class="class_s21">
+<a href="#part0008.xhtml_a13E" class="class_s14E">Navigating the
+Filesystem</a>
+</div>
+<div class="class_s26">
+<a href="#part0009.xhtml_a13F" class="class_s14E">The Current Working
+Directory</a>
+</div>
+<div class="class_s26">
+<a href="#part0009.xhtml_a13G" class="class_s14E">Tips and Notes about
+Linux Filesystem</a>
+</div>
+<div class="class_s26">
+<a href="#part0009.xhtml_a13H" class="class_s14E">ls Command Deep
+Dive</a>
+</div>
+<div class="class_s21">
+<a href="#part0014.xhtml" class="class_s14E">Section 4</a>
+</div>
+<div class="class_s21">
+<a href="#part0014.xhtml_a13K" class="class_s14E">Understanding the
+Filesystem</a>
+</div>
+<div class="class_s26">
+<a href="#part0015.xhtml_a13M" class="class_s14E">The less command</a>
+</div>
+<div class="class_s26">
+<a href="#part0015.xhtml_a13N" class="class_s14E">The Linux
+Filesystem</a>
+</div>
+<div class="class_s21">
+<a href="#part0016.xhtml" class="class_s14E">Section 5:</a>
+</div>
+<div class="class_s21">
+<a href="#part0016.xhtml_a13R" class="class_s14E">File and Directory
+Manipulation in Linux</a>
+</div>
+<div class="class_s26">
+<a href="#part0017.xhtml_a13S" class="class_s14E">Creating Directories –
+mkdir</a>
+</div>
+<div class="class_s26">
+<a href="#part0017.xhtml_a13T" class="class_s14E">Copying Files and
+Directories – cp Command</a>
+</div>
+<div class="class_s26">
+<a href="#part0017.xhtml_a13U" class="class_s14E">Moving, Renaming Files
+and Directories – mv command</a>
+</div>
+<div class="class_s26">
+<a href="#part0017.xhtml_a13V" class="class_s14E">Deleting Files and
+Directories – rm Command</a>
+</div>
+<div class="class_s26">
+<a href="#part0017.xhtml_a13W" class="class_s14E">Wildcards</a>
+</div>
+<div class="class_s26">
+<a href="#part0017.xhtml_a13X" class="class_s14E">Soft and Hard
+Links</a>
+</div>
+<div class="class_s21">
+<a href="#part0018.xhtml" class="class_s14E">Section 6</a>
+</div>
+<div class="class_s21">
+<a href="#part0018.xhtml_a13Z" class="class_s14E">Commands for Working
+With Commands</a>
+</div>
+<div class="class_s26">
+<a href="#part0019.xhtml_a140" class="class_s14E">Commands: Simple
+definition</a>
+</div>
+<div class="class_s26">
+<a href="#part0019.xhtml_a141" class="class_s14E">Identifying
+Commands</a>
+</div>
+<div class="class_s26">
+<a href="#part0026.xhtml_a142" class="class_s14E">Creating Custom
+Commands</a>
+</div>
+<div class="class_s21">
+<a href="#part0029.xhtml_a143" class="class_s14E">Permissions</a>
+</div>
+<div class="class_s26">
+<a href="#part0030.xhtml_a144" class="class_s14E">Owners, Groups, and
+Others</a>
+</div>
+<div class="class_s26">
+<a href="#part0030.xhtml_a145" class="class_s14E">Read, Write, and
+Execute File Permissions</a>
+</div>
+<div class="class_s26">
+<a href="#part0030.xhtml_a146" class="class_s14E">Changing File Modes –
+chmod command</a>
+</div>
+<div class="class_s26">
+<a href="#part0030.xhtml_a147" class="class_s14E">Set Default
+Permissions – umask command</a>
+</div>
+<div class="class_s26">
+<a href="#part0030.xhtml_a148" class="class_s14E">Sudo and su Users</a>
+</div>
+<div class="class_s26">
+<a href="#part0030.xhtml_a149" class="class_s14E">Changing File Owners –
+chown command</a>
+</div>
+<div class="class_s26">
+<a href="#part0031.xhtml_a14A" class="class_s14E">Changing Users
+password – passwd command</a>
+</div>
+<div class="class_s3F">
+<a href="#part0032.xhtml" class="class_s14E">Conclusion</a>
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div id="part0004.xhtml_a130" class="heading_s3P">
+Section 1
+</div>
+<div id="part0004.xhtml_a131" class="heading_s3P">
+Linux Installation
+</div>
+<div id="part0004.xhtml_a132" class="heading_s3T">
+Guide
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div class="class_sW">
+The first thing we will do before diving into the command line is
+getting your system setup. For Windows or PC users, you have three
+available options that allow you to run Linux on any system running
+Microsoft office. We will cover each option individually in the upcoming
+sections.
+</div>
+<div class="class_sW">
+These available options for PC users include:
+</div>
+<ul>
+<li><div class="class_s19">
+Using Linux as Dual Boot with Windows,
+</div></li>
+<li><div class="class_s19">
+Installing Linux on a Virtualization software,
+</div></li>
+<li><div class="class_s15">
+Windows subsystem for Linux (WSL) features and finally
+</div></li>
+<li><div class="class_s15">
+Using Live Media such as USB or DVDs.
+</div></li>
+</ul>
+<div class="class_sW">
+For Mac OS users, you can use Dual Boot alongside Linux, use
+Virtualization software, or opt for live media.
+</div>
+<div class="class_sW">
+Let us get started.
+</div>
+<div id="part0005.xhtml_a133" class="heading_s4F">
+How to Choose A Linux Distribution
+</div>
+<div class="class_sW">
+This section covers how to choose the right Linux distribution.
+</div>
+<div class="class_sW">
+A Linux distribution, commonly called a distro, is a different “flavor”
+of a Linux operating system built on top of the native Linux kernel to
+carry out various use-cases and preferences.
+</div>
+<div class="class_sW">
+Since all distributions are Linux-based, they tend to be quite similar,
+and therefore usable interchangeably. For example, a distribution like
+Ubuntu is the most popular due to its ease of use and the ability to
+abstract small configuration tasks for its users. A distribution such as
+Arch Linux does not offer the same features and is better suited if you
+want to have more control over the system and tweak it to suit your
+needs.
+</div>
+<div class="class_sW">
+If you are entirely new to Linux, opt for a Debian distro such as Ubuntu
+or Linux Mint, Arch distros such as Manjaro are also supported by this
+book.
+</div>
+<div class="class_sW">
+Please do not take this recommendation to mean that these distributions
+are beginner-geared. This book recommends these distros because they
+provide a familiar environment for new users.
+</div>
+<div id="part0005.xhtml_a134" class="heading_s4F">
+Installing Linux on Windows: Virtualization.
+</div>
+<div class="class_sW">
+The first method we will explore for PC users is using Virtualization
+Software. This is the easiest method as it does not require you to
+change any system configuration or settings. All you require is a piece
+of simple-to-use software.
+</div>
+<div class="class_sW">
+The first step is to download the iso file for your Linux distribution.
+For this book, we will opt for Ubuntu 20.04.1—the current version as of
+writing this book.
+</div>
+<div class="class_sW">
+Open the browser, navigate to the resource link below, and download the
+Ubuntu iso.
+</div>
+<div class="class_sW">
+<a href="https://ubuntu.com/" class="class_s14J">https://ubuntu.com/</a>
+</div>
+<div class="class_sW">
+Next, we need to get virtualization software. We are going to use Oracle
+VirtualBox as it is easy to install and use. You can also choose other
+tools such as VMware, KVM, or Hyper-V. Open your browser, navigate to
+the resource link below, and download the latest version of VirtualBox.
+</div>
+<div class="class_sW">
+<a href="https://www.virtualbox.org/"
+class="class_s14J">https://www.virtualbox.org/</a>
+</div>
+<div class="class_sW">
+<span class="class_s14C">NOTE:</span> You will have to enable
+virtualization technology (VT-X) to run any virtualization software.
+Check the web on how to enable Virtualization for your specific device.
+</div>
+<div class="class_sW">
+Once you download the VirtualBox installer, launch it and go through the
+typical Windows installation process. Ensure to select all the features
+during the installation process as shown below.
+</div>
+<div class="class_s51-0">
+<img src="image_rsrc155.jpg" class="class_s51-1" />
+</div>
+<div class="class_sW">
+During the installation process, the setup may prompt you to install the
+Oracle USB driver.  Select <span class="class_s14C">install.</span>
+</div>
+<div class="class_s56-1">
+<img src="image_rsrc156.jpg" class="class_s56-0" />
+</div>
+<div class="class_sW">
+With the software setup, we can begin installing Ubuntu or your Linux
+distribution.
+</div>
+<div class="class_sW">
+In most cases, the distribution you choose will provide an installation
+guide. Check the guide for your specific distribution.
+</div>
+<div class="class_sW">
+Once you launch VirtualBox, you will get a window similar to the one
+shown below:
+</div>
+<div class="class_s5D-1">
+<img src="image_rsrc157.jpg" class="class_s5D-0" />
+</div>
+<div class="class_sW">
+Next, click on New, which will launch a box that requires you to provide
+basic details about your Operating system. Enter the name of the
+VirtualBox—feel free to provide any suitable name. In this case, we
+shall name it Ubuntu.
+</div>
+<div class="class_sW">
+Next, select the location in your filesystem where you want the Virtual
+machine file stored. You can leave this as default. Next, choose the
+type from the dropdown menu. If you provide a name for popular Operating
+Systems, VirtualBox should detect the Type and Version. If this does not
+happen, select the type as Linux and type as Ubuntu_64.
+</div>
+<div class="class_sW">
+Select Debian for all Debian derivatives and Arch for Arch-based
+distros.
+</div>
+<div class="class_s5M-1">
+<img src="image_rsrc158.jpg" class="class_s5M-0" />
+</div>
+<div class="class_sW">
+Next, select Expert mode, which will provide you with more options.
+Select the amount of memory you want to allocate for your OS. We
+recommend above 4GB unless you have less, in which case, you can
+allocate 1- 2GB.
+</div>
+<div class="class_sW">
+Next, select create virtual disk now and click on create now:
+</div>
+<div class="class_s5U-0">
+<img src="image_rsrc159.jpg" class="class_s5U-1" />
+</div>
+<div class="class_sW">
+Select the size and location storage for the virtual disk in the next
+windows—leave this as default.
+</div>
+<div class="class_sW">
+In hard disk file type, select VirtualBox Disk image and set as
+dynamically allocated. That ensures the size of the hard disk increases
+as the system needs more storage.
+</div>
+<div class="class_sW">
+Click on create.
+</div>
+<div class="class_s5U-0">
+<img src="image_rsrc15A.jpg" class="class_s5U-1" />
+</div>
+<div class="class_sW">
+That should create a virtual machine that should be available in the
+list of your virtual machines.
+</div>
+<div class="class_sW">
+Now click on the Settings icon to launch the virtual machine’s settings,
+then next, select the System option on the left side menu. That will
+give you all the settings on the virtual system of your virtual machine.
+Under processor, select the number of processors to allocate the
+machine.
+</div>
+<div class="class_sW">
+Next, go to storage settings and select the Controller IDE. Under
+attributes, click on the disk icon and select “Choose a disk file.” This
+will launch the file explorer. Navigate to your download folder and
+select the Ubuntu iso image we downloaded earlier.
+</div>
+<div class="class_sW">
+Click on save and go back to the main menu. Select the start option to
+boot up the virtual machine. During bootup, VirtualBox will prompt you
+to select the startup disk. Select the Ubuntu iso we configured.
+</div>
+<div class="class_s68-1">
+<img src="image_rsrc15B.jpg" class="class_s68-0" />
+</div>
+<div class="class_sW">
+That will boot you up in the GRUB menu to select which option to use.
+Select Ubuntu in the first option—as shown below.
+</div>
+<div class="class_s6D-1">
+<img src="image_rsrc15C.jpg" class="class_s6D-0" />
+</div>
+<div class="class_sW">
+If all configurations and settings are working properly, this should
+boot up using the Ubuntu installer from the iso. Once in the installer
+menu, select Install Ubuntu as we are running it on a virtual machine.
+</div>
+<div class="class_sW">
+Continue with the installation options such as Language and Keyboard
+Layout. Next, you can select either Normal installation, which comes
+prepackaged with games and other utilities, or Minimal install, which
+only contains basic system utilities.
+</div>
+<div class="class_sW">
+Since we will work with the terminal, it’s best to choose the Minimal
+install option.
+</div>
+<div class="class_sW">
+You can enable or disable to install updates during the installation.
+</div>
+<div class="class_sW">
+In the next section, select erase disk, and install Ubuntu. If you want
+to customize disk allocation, choose advanced options.
+</div>
+<div class="class_sW">
+As we are running a virtual machine that only affects the virtual disks,
+we can use the entire disk for the installation.
+</div>
+<div class="class_s6R-1">
+<img src="image_rsrc15D.jpg" class="class_s6R-0" />
+</div>
+<div class="class_sW">
+Select install now, which will prompt you to confirm changes to the
+disk. Go ahead and click yes and confirm.
+</div>
+<div class="class_sW">
+Confirm your location and click on next. In the next step, enter your
+details and set up your username and password, and click on continue.
+</div>
+<div class="class_s6X-1">
+<img src="image_rsrc15E.jpg" class="class_s6X-0" />
+</div>
+<div class="class_sW">
+Finally, click “install” to begin the installation process. Once the
+installation is complete, you should boot into Ubuntu and start working
+with Linux.
+</div>
+<div id="part0005.xhtml_a135" class="heading_s4F">
+Installing Linux on Windows: Dual Boot
+</div>
+<div class="class_sW">
+Here, we are going to cover how to dual boot Windows alongside Ubuntu.
+For this method, you will require a USB flash drive and free space on
+your hard disk.
+</div>
+<div class="class_sW">
+The first step—as usual—is to download the Ubuntu iso from the official
+site. Next, we are going to download a tool to burn the iso on the flash
+drive.
+</div>
+<div class="class_sW">
+Open your browser, navigate to the resource page below, and download the
+windows installer.
+</div>
+<div class="class_sW">
+<a href="https://balena.io/etcher"
+class="class_s14J">https://balena.io/etcher</a>
+</div>
+<div class="class_s56-1">
+<img src="image_rsrc15F.jpg" class="class_s56-0" />
+</div>
+<div class="class_sW">
+Once you have acquired the installer, install and launch to begin the
+process. Once you launch Balena, you will get a window that resembles
+the one shown below:
+</div>
+<div class="class_s7B-0">
+<img src="image_rsrc15G.jpg" class="class_s7B-1" />
+</div>
+<div class="class_sW">
+In the window above, select the “Flash from File” option. Doing this
+will prompt you to provide the location of the Ubuntu image we
+downloaded.
+</div>
+<div class="class_sW">
+Next, Insert your Flash disk into your computer; BalenaEtcher should
+automatically detect it.
+</div>
+<div class="class_sW">
+If you have more than one device connected, choose the correct from the
+Target menu. Once selected, click on Flash to begin the burning process.
+</div>
+<div class="class_sW">
+<span class="class_s14C">NOTE:</span> This will wipe your USB drive.
+Backup important data!
+</div>
+<div class="class_sW">
+The next thing we are going to do is create a partition for our Linux
+installation. On your Windows machine, Right-click the start menu and
+launch the Disk management tool.
+</div>
+<div class="class_sW">
+On the partition you want to create some space, right-click and select
+Shrink Volume. Provide the amount of space to allocate to the partition;
+the recommendation is more than 10GB of storage.
+</div>
+<div class="class_sW">
+Once completed, reboot your machine and select your boot devices as the
+USB device we created above.
+</div>
+<div class="class_sW">
+<span class="class_s14C">NOTE:</span> Check the web on how to select a
+boot device for your specific machine.
+</div>
+<div class="class_sW">
+This will boot Ubuntu and take you to the installation window. Follow
+the process in the above section until you get to a point where the
+system prompts you to select the installation type. Select install
+Alongside window and click continue and complete the process.
+</div>
+<div id="part0005.xhtml_a136" class="heading_s4F">
+Installing Linux on Windows: WSL
+</div>
+<div class="class_sW">
+In a recent version of Windows, Microsoft has introduced a feature that
+allows you to run Linux from within your system without a Hypervisor.
+However, this feature is only available in the most recent version of
+Windows 10. If you have earlier versions of Windows, consider using
+other methods to run Linux.
+</div>
+<div class="class_sW">
+For this to work, we need to enable the WSL feature. Open the start menu
+and search for “Turn Windows features on or Off.” This will launch the
+windows features window where we can turn on the WSL feature.
+</div>
+<div class="class_s7V-1">
+<img src="image_rsrc15H.jpg" class="class_s7V-0" />
+</div>
+<div class="class_sW">
+Click on Ok to apply the changes. This process may require you to reboot
+your machine. Next, open Microsoft store and search for Ubuntu. Select
+Ubuntu 20.04 LTS and click on install.
+</div>
+<div class="class_s80-1">
+<img src="image_rsrc15J.jpg" class="class_s80-0" />
+</div>
+<div class="class_sW">
+Once the WSL feature is enabled and Ubuntu installed, Launch the
+application to start the installation. Provide a Linux username and
+password to boot up the machine.
+</div>
+<div class="class_s85-1">
+<img src="image_rsrc15K.jpg" class="class_s85-0" />
+</div>
+<div class="class_sW">
+<span class="class_s14C">NOTE:</span> WSL Installation does not provide
+a GUI interface, but since this guide is about working with the
+terminal, this should not be a problem.
+</div>
+<div id="part0005.xhtml_a137" class="heading_s4F">
+Installing Linux on Mac OSx: Virtual Machine
+</div>
+<div class="class_s89">
+Because of this book’s scope, we shall not discuss a step-by-step
+process to install Linux on a Virtual Machine on Mac. Check the Linux
+installation process for Windows as they are similar.
+</div>
+<p><span id="part0006.xhtml"></span></p>
+<div id="part0006.xhtml_a138" class="heading_s3P">
+Section 2
+</div>
+<div id="part0006.xhtml_a139" class="heading_s3T">
+Linux Command, Terminal, and Shell
+</div>
+<p><span id="part0007.xhtml"></span></p>
+<div class="class_sW">
+Before we dive deep into executing Linux commands, let us first define a
+few common terms in Linux.
+</div>
+<div class="class_sW">
+Although these terms are basic, it’s good to get a good handle on their
+meaning and differences:
+</div>
+<div id="part0007.xhtml_a13A" class="heading_s4F">
+Linux Dictionary
+</div>
+<div class="class_sW">
+The most common Linux terms you need to know are:
+</div>
+<ol>
+<li><div class="class_s15">
+A command – A command in Linux refers to a set of characters recognized
+by the kernel and used to perform various tasks. 
+</div></li>
+<li><div class="class_s19">
+A Terminal – Terminal refers to a graphical interface used to take the
+user’s command and bash it along to the shell. It usually includes a
+shell prompt with the format of username@machinenane and a cursor.
+Although you will find various terminal versions in different distros,
+they mainly carry out the same tasks.
+</div></li>
+<li><div class="class_s19">
+Shell – The shell refers to the middleman between the user and the
+kernel. It allows you to enter commands and interprets them to the
+kernel. Linux includes various types of shells, such as bash, zhs, fish,
+dash<span class="class_s14F">,</span> etc.
+</div></li>
+</ol>
+<div class="class_sW">
+Since you now know the most important terms, let’s get started with our
+first command in Linux.
+</div>
+<div class="class_sW">
+If you are using a virtual machine or dual boot, open the Applications
+menu, and search for the terminal.
+</div>
+<div class="class_sW">
+For WSL users, launch the Ubuntu application; you should drop into a
+shell immediately.
+</div>
+<div class="class_sW">
+Once in the shell, you should see something like this:
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$
+</div>
+<div class="class_sW">
+We call that a shell prompt; it indicates that the shell is ready to
+access commands and execute them. The shell prompt may vary depending on
+your distribution but mainly includes your username@machinename<span
+class="class_s14F">,</span> followed by a dollar sign. If you have a
+pound sign # rather than a dollar $ sign, it means you are running the
+shell session with superuser privileges. That means you have logged-in
+in as a superuser or launched a terminal that includes root privileges.
+</div>
+<div class="class_sW">
+If the terminal is ready and all things look good, let us try to enter
+some rubbish text and see what happens.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ dfsskdhd
+</div>
+<div class="class_sW">
+Since the command entered does not make any sense to the shell, it shall
+give you an error and provide a prompt to enter another command.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ dfsskdhd
+</div>
+<div class="class_sW">
+dfsskdhd: command not found
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$
+</div>
+<div id="part0007.xhtml_a13B" class="heading_s4F">
+The Command Line History
+</div>
+<div class="class_sW">
+The shell gives us the ability to view all the commands we execute. We
+can view this by pressing the up or down arrow key. This feature is
+called The command Line History; it can store over 500 commands.
+</div>
+<div id="part0007.xhtml_a13C" class="heading_s4F">
+Simple Commands
+</div>
+<div class="class_sW">
+Since we have verified that the terminal and shell are working, let us
+execute valid commands.
+</div>
+<div class="class_sW">
+The first command we are going to type is pw<span
+class="class_s14F">d</span> , used to print the current working
+directory.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ pwd
+</div>
+<div class="class_sW">
+/home/ubuntu
+</div>
+<div class="class_sW">
+The command tells us that we are in the /home/ubunt<span
+class="class_s14F">u</span> directory—we’ll learn more about directories
+in upcoming chapters.
+</div>
+<div class="class_sW">
+Try another command such as free to see the total amount of free memory
+in your system.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ free
+</div>
+<div class="class_s9S">
+total        used        free      shared buff/cache   available
+</div>
+<div class="class_sW">
+Mem:        4127084     2684684     1213048       17720      229352     1308668
+</div>
+<div class="class_sW">
+Swap:      12582912      164640    12418272
+</div>
+<div class="class_sW">
+Once done with our terminal session, we can close it by terminating the
+terminal window or using the shell prompt’s exi<span
+class="class_s14F">t</span> command.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ exit
+</div>
+<div class="class_s89">
+<span class="class_s14C">NOTE:</span> Even when you are running a
+terminal session as a user, various terminal sessions are always running
+in the background. These terminal sessions are known as virtual consoles
+and are accessible by pressing CTRL + ALT + F1
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<div id="part0008.xhtml_a13D" class="heading_s3P">
+Section 3
+</div>
+<div id="part0008.xhtml_a13E" class="heading_s3T">
+Navigating the Filesystem
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<div class="class_sW">
+In this chapter, we will learn how to navigate the Linux filesystem
+using the command line.
+</div>
+<div class="class_sW">
+Navigating the filesystem using the command line is an essential skill
+as most of the time, you will be working with files.
+</div>
+<div class="class_sW">
+Now, before jumping directly into the terminal, let us talk about Linux
+Filesystem.
+</div>
+<div class="class_sW">
+Linux and all other Unix-like Operating systems use the hierarchical
+directory file structure. The hierarchical directory structure is where
+directories and files have a tree-like filesystem or organizational
+structure. Directories are also known as folders.
+</div>
+<div class="class_sW">
+The first directory in the hierarchical structure is called the root
+directory. The root directory also contains subdirectories and other
+files within it. These subdirectories also contain other directories and
+files and so on.
+</div>
+<div class="class_sW">
+You can learn more about HFS here:
+</div>
+<div class="class_sW">
+<a href="https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard"
+class="class_s14J">https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard</a>
+</div>
+<div class="class_sW">
+<a
+href="https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/Linux-Filesystem-Hierarchy.html"
+class="class_s14J">https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/Linux-Filesystem-Hierarchy.html</a>
+</div>
+<div class="class_sW">
+For Windows-like systems, you will find each specific filesystem
+structure for each storage device.
+</div>
+<div class="class_sW">
+In Linux, a single system contains a single filesystem structure despite
+the number of storage devices connected. Each storage device connected
+gets mounted on a certain point in the filesystem.
+</div>
+<div id="part0009.xhtml_a13F" class="heading_s4F">
+The Current Working Directory
+</div>
+<div class="class_sW">
+Those used to working with the graphical system navigate the directory
+easily as it’s just going up and down.
+</div>
+<div class="class_sW">
+However, the terminal does not provide a graphical method to access
+files and directories, making navigating the Linux Filesystem not easy.
+It’s a complex system, and without knowing where we are or where we want
+to go, we can’t do much.
+</div>
+<div class="class_sW">
+<span class="class_s14C">NOTE:</span> At each point in the terminal, you
+are inside a specific directory. Some terminals may show you which
+directory you are in at that moment.
+</div>
+<div class="class_sW">
+We can view which directory we are in by using the pw<span
+class="class_s14F">d</span> command. Unless you navigate to a different
+location in the file system once you launch a terminal session, your
+current directory is your home directory. Each account in Linux is
+assigned their home directory where that specific account is allowed to
+read, write and execute files in that directory.
+</div>
+<div class="class_sW">
+A root user or users in sud<span class="class_s14F">o</span> group can
+access all files and directories within the filesystem.
+</div>
+<div class="heading_sAV">
+Listing Files and Directories
+</div>
+<div class="class_sW">
+To list files and directories within the current working directory, we
+use the l<span class="class_s14F">s</span> command.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ ls
+</div>
+<div class="class_sW">
+Desktop Documents Music Pictures Public Templates Videos
+</div>
+<div class="class_sW">
+The ls command is an amazing command that you can use to do more than
+list files and directories of the current directory. We will discuss the
+l<span class="class_s14F">s</span> command a bit more deeply in later
+sections.
+</div>
+<div class="heading_sAV">
+Moving Between Directories
+</div>
+<div class="class_sW">
+To move between directories. i.e., from our current directory within the
+filesystem to another location in the filesystem, we use the c<span
+class="class_s14F">d</span> command. The cd command is followed by the
+<span class="class_s14H">pathname</span> of the directory we want to
+navigate to. 
+</div>
+<div class="class_sW">
+A <span class="class_s14H">pathname</span> refers to the directories or
+subdirectories we navigate to get to that directory.
+</div>
+<div class="class_sW">
+If that sounds confusing, here’s a simpler explanation:
+</div>
+<div class="class_sW">
+Consider an instance where we want to navigate to a directory called
+music. To get there, first, we go to home, then the username, then
+Downloads, and then music. The <span class="class_s14H">pathname</span>
+is thus /home/username/Downloads/Music<span class="class_s14F">.</span>
+</div>
+<div class="class_sW">
+<span class="class_s14H">Pathnames</span> can be provided in two ways,
+i.e., Relative and Absolute pathways.
+</div>
+<div class="class_sW">
+Let us discuss the difference between these pathname styles:
+</div>
+<div class="heading_sB8">
+1: Absolute Pathnames
+</div>
+<div class="class_sW">
+Absolute pathnames are very common when working with Linux directories.
+They mainly begin with the root directory (uppermost directory) and
+follow the tree (subdirectories) branch by branch to the target
+location.
+</div>
+<div class="class_sW">
+An example of an absolute path is the one shown above.
+</div>
+<div class="class_sW">
+Let us talk about where devices get mounted in Linux. The path to where
+devices get mounted by default is /media/username/&lt;name of storage
+device&gt;<span class="class_s14F">.</span> That means that, from the
+root directory indicated by /<span class="class_s14F">,</span> we go to
+the media directory, then username directory, and finally, the device
+name. If you want to see the top directory, c<span
+class="class_s14F">d</span> into <span class="class_s14F">/</span> to
+view all the files.
+</div>
+<div class="class_sBF-0">
+<img src="image_rsrc15M.jpg" class="class_sBF-1" />
+</div>
+<div class="class_sW">
+Depending on the distribution you are using, you may get additional or
+fewer directories than those shown above.
+</div>
+<div class="class_sW">
+You may notice that once we navigate to a specific directory, the shell
+prompt style changes appending the current path before the dollar sign.
+</div>
+<div class="class_sW">
+For example, change directory to /usr/shar<span
+class="class_s14F">e</span> using the command cd /usr/share
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:/$ cd /usr/share
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:/usr/share$
+</div>
+<div class="heading_sB8">
+2: Relative Pathnames
+</div>
+<div class="class_sW">
+Relative pathnames are the other type of pathnames in Linux. Unlike
+absolute pathnames where you start at the root directory, relative
+pathnames start at the current working directory. 
+</div>
+<div class="class_sW">
+To achieve this, relative pathnames use special symbols to indicate
+relative positions in the filesystem. These symbols include the dot (.)
+and the dot dot (..)
+</div>
+<div class="class_sW">
+The dot symbol represents the current working directory while the dot
+dot symbol represents the working directory parent.
+</div>
+<div class="class_sW">
+Let us see how it works.
+</div>
+<div class="class_sW">
+In your terminal, navigate t<span class="class_s14F">o</span>
+/usr/shar<span class="class_s14F">e</span> or any directory where you
+have read permission.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ cd /usr/share/
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:/usr/share$ pwd
+</div>
+<div class="class_sW">
+/usr/share
+</div>
+<div class="class_sW">
+Suppose we want to go to the parent directory of share, which is /usr?
+We can either use the absolute path and cd /us<span
+class="class_s14F">r</span> or use the relative path by entering the
+command cd .<span class="class_s14F">.</span>
+</div>
+<div class="class_sW">
+Now the question becomes, which should you use? The answer is the one
+that requires less typing.
+</div>
+<div class="class_sW">
+For example:
+</div>
+<div class="class_sW">
+Let us assume you are in your /home folder. To go to /usr/shar<span
+class="class_s14F">e</span> we can go using cd /usr/shar<span
+class="class_s14F">e</span> or cd ../../usr/shar<span
+class="class_s14F">e</span>
+</div>
+<div class="class_sW">
+<span class="class_s14C">NOTE:</span> If you do not include the .
+(representing the current directory), the shell automatically includes
+it
+</div>
+<div class="class_sW">
+For example:
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ cd /usr
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:/usr$ cd share
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:/usr/share$ cd ..
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:/usr$ cd ./share
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:/usr/share$
+</div>
+<div class="class_sW">
+That means if the working directory is not specified, the shell
+automatically assumes.
+</div>
+<div id="part0009.xhtml_a13G" class="heading_s4F">
+Tips and Notes about Linux Filesystem
+</div>
+<div class="class_sW">
+Here’re some tips and pointers on working with the Linux filesystem:
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> Use the c<span
+class="class_s14F">d</span> command to go back to your home directory in
+an instance.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> cd <span
+class="class_s14F">-</span> - The cd command with the dash (-) argument
+takes you back to the previous working directory.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> cd ~ - Changes to the directory of
+the username specified.
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">   </span> Filenames in Linux are case
+sensitive. Thus, <span class="class_s14H">Directory</span> and <span
+class="class_s14H">directory</span> are two different files.
+</div>
+<div class="class_sCD">
+5.<span class="class_s14G">   </span> Avoid using spaces while naming
+files and directories. Although Linux does support spaces, use
+underscores, dots or dashes because navigating directories with spaces
+is very hard. Here’s an example:
+</div>
+<div class="class_sCK">
+ubuntu@VSALEM:~$ cd This\ directory\ has\ spaces/
+</div>
+<div class="class_sCN">
+ubuntu@VSALEM:~$ cd This.Dir.Has.Spaces/
+</div>
+<div class="class_sCD">
+6.<span class="class_s14G">   </span> Linux contains hidden files that
+start with a dot (.). To view hidden files and directories, use ls -a,
+which includes the hidden attribute.
+</div>
+<div class="class_sW">
+<img src="image_rsrc15N.jpg" class="class_sCV" /> Linux does not contain
+or recognize the concept of file extensions. However, that does not mean
+that if Linux does not, programs running in Linux don’t.
+</div>
+<div id="part0009.xhtml_a13H" class="heading_s4F">
+ls Command Deep Dive
+</div>
+<div class="class_sW">
+As you continue to work with Linux, you will realize that ls is probably
+one of the most used commands. That is perhaps for a good reason because
+it provides you with the ability to view files and directories, their
+attributes and permissions, and much more.
+</div>
+<div class="class_sW">
+In this subsection, we shall delve deeper into the ls command and its
+arguments and learn how to use them.
+</div>
+<div class="class_sW">
+Up to now, we have covered how to list files and directories within our
+current working directory.
+</div>
+<div class="class_sW">
+Apart from the current directory, we can specify which directory to list
+without moving into it.
+</div>
+<div class="class_sW">
+For example:
+</div>
+<div class="class_sD5-1">
+<img src="image_rsrc15P.jpg" class="class_sD5-0" />
+</div>
+<div class="class_sW">
+From the above command, we can see the contents of the /usr/share
+directory directly from the home directory.
+</div>
+<div class="class_sW">
+You can also list more than one directory using a single command, shown
+below:
+</div>
+<div class="class_sDB-1">
+<img src="image_rsrc15R.jpg" class="class_sDB-0" />
+</div>
+<div class="class_sW">
+The command above lists files and directories in both the home directory
+(~) and /usr directory.
+</div>
+<div class="class_sW">
+We can also pass some more arguments to the ls command to get more
+details about the files and directories.
+</div>
+<ol>
+<li><div class="class_s19">
+The -l argument changes the format which the files and directories are
+listed and provides more details. Example:
+</div></li>
+</ol>
+<p><span id="part0010.xhtml"></span></p>
+<div class="class_sDV-0">
+<img src="image_rsrc15S.jpg" class="class_sDV-1" />
+</div>
+<div class="class_sW">
+Don’t worry about what the details mean as we will cover them in
+upcoming sections, but from the output above, we get a lot more details
+about the same files.
+</div>
+<div class="class_sW">
+That brings us to a fundamental concept about commands. Most commands in
+Linux uses what we call <span class="class_s14H">arguments.
+Arguments</span> are additional options used to modify the behavior of a
+command. (Case in point).
+</div>
+<div class="class_sW">
+In some cases, options and arguments can mean two different things. For
+example, a command to manage wireless devices may take the device name
+as an option and another argument to modify its operations.
+</div>
+<div class="class_sW">
+The general syntax for arguments and options is:
+</div>
+<div class="class_sW">
+command -option argument
+</div>
+<div class="class_sE2">
+Most commands have arguments, including a single letter preceded by a
+dash (-) symbol such as ls -l. These arguments can also be chained
+together using a single dash, as shown in the example below:
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<div class="class_sDB-1">
+<img src="image_rsrc15T.jpg" class="class_sDB-0" />
+</div>
+<div class="class_sW">
+With the above command, the ls command gets modified using -al argument
+to list files in a specific format and include hidden files and
+directories.
+</div>
+<div class="class_sW">
+You can also modify the sorting order of files and directories using the
+–reverse argument.
+</div>
+<div class="class_sEG-0">
+<img src="image_rsrc15U.jpg" class="class_sEG-1" />
+</div>
+<div class="class_sW">
+As you can see, the file listings order is now in reverse, listing them
+in an alphabetical-descending order.
+</div>
+<div class="class_sW">
+Do you remember what we mentioned about how a single command can take up
+an entire chapter? The Ls is one of those commands.
+</div>
+<div class="class_sW">
+Here, however, we shall not delve deep. Check out the l<span
+class="class_s14F">s</span> manual to learn more.
+</div>
+<div class="class_sW">
+<a href="https://man7.org/linux/man-pages/man1/ls.1.html"
+class="class_s14J">https://man7.org/linux/man-pages/man1/ls.1.html</a>
+</div>
+<div class="class_sW">
+Instead, we shall list some of the ls most common arguments, which
+include:
+</div>
+<ol>
+<li><div class="class_s19">
+-a or --al<span class="class_s14F">l</span> – This argument lists all
+files and directories, including hidden ones (beginning with a dot) not
+listed under a normal ls command.
+</div></li>
+<li><div class="class_s19">
+-<span class="class_s14F">t</span> – the -t argument sorts files by the
+date of modification.
+</div></li>
+<li><div class="class_s19">
+-d or --director<span class="class_s14F">y</span> - This argument in
+conjunction with -l argument lists details about the directory itself
+and not its contents.
+</div></li>
+<li><div class="class_s19">
+-r or --revers<span class="class_s14F">e</span> – As we have seen, the
+–reverse command lists files in reverse order. In a normal ls command,
+files and directories get displayed in an alphabetical-ascending order.
+</div></li>
+<li><div class="class_s19">
+-l – Used to list files and directories in a long format.
+</div></li>
+<li><div class="class_s19">
+-F or --classif<span class="class_s14F">y</span> – The classify argument
+places a character indicator at the end of a file or directory. For
+example, it will append a forward slash (/) to a directory.
+</div></li>
+<li><div class="class_s19">
+-h or --human-readabl<span class="class_s14F">e</span> – The -h
+argument, used in conjunction with the -l argument, shows the size of
+files and directories in a human-readable format. i.e., In kilobytes,
+megabytes, gigabytes, and so on instead of bytes.
+</div></li>
+<li><div class="class_s19">
+-<span class="class_s14F">S</span> – the -S argument sorts the files and
+directories by their file size.
+</div></li>
+</ol>
+<div class="class_sW">
+Let us talk about the details we get from using ls -l command.
+</div>
+<div class="class_sE2">
+We saw something similar to this.
+</div>
+<p><span id="part0012.xhtml"></span></p>
+<div>
+<img src="image_rsrc15V.jpg" class="class_sFH" />
+</div>
+<p><span id="part0013.xhtml"></span></p>
+<div class="class_sW">
+Let us examine one file and see what it means.
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> drwxr-xx-<span
+class="class_s14F">x</span> – The first field indicates the file type
+and the access rights to that file. The first character in the first
+field indicates the file type, and the rest used to show access rights.
+Among various file types, a leading dash in the first character
+indicates a regular file while a d indicates a directory. The next three
+characters show the access rights of the file owner. The next three
+characters in the second field indicate the access rights for the
+filegroup members, while the last characters in the third field show
+access rights for everyone else.
+</div>
+<div class="class_sW">
+<span class="class_s14C">Note:</span> Details about what that means are
+in the users, groups, and permissions chapter.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> <span class="class_s14F">1</span>
+– The next is a number used to indicate the file’s number of hard disks.
+We shall discuss file links in upcoming chapters.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> ubunt<span
+class="class_s14F">u</span> – The next field we see is the username of
+the owner of the file. Because my username is called Ubuntu, the owner
+is hence Ubuntu. Try listing /usr directory and see the difference
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">   </span> ubunt<span
+class="class_s14F">u</span> – This field shows the group owner of the
+file. We will cover users and groups in later chapters.
+</div>
+<div class="class_sCD">
+5.<span class="class_s14G">   </span> 4.0<span
+class="class_s14F">k</span> – This shows the size of files in a human
+readable format. If you do not use the -h argument, the size will appear
+shown in bytes.
+</div>
+<div class="class_sCD">
+6.<span class="class_s14G">   </span> Nov 2 11:1<span
+class="class_s14F">5</span> – The next is the date and time of file
+modification.
+</div>
+<div class="class_sG0">
+7.<span class="class_s14G">   </span> .bashr<span
+class="class_s14F">c</span> – This indicated the name of the file.
+</div>
+<p><span id="part0014.xhtml"></span></p>
+<div id="part0014.xhtml_a13J" class="heading_s3P">
+Section 4
+</div>
+<div id="part0014.xhtml_a13K" class="heading_s3T">
+Understanding the Filesystem
+</div>
+<p><span id="part0015.xhtml"></span></p>
+<div class="class_sW">
+Now that we have learned how to explore and navigate the filesystem, we
+can move to the next part: understanding the organizational structure of
+the Linux filesystem.
+</div>
+<div class="class_sW">
+We will start by learning how to view file contents. Then we shall move
+to how Linux organizes everything, including where applications are
+stored, boot configuration, users’ directories, and more, and then
+finish off with symbolic and hard links.
+</div>
+<div class="class_sW">
+As you may recall from earlier chapters, we mentioned that Linux does
+not require file extension to determine files and filetypes. For
+example, where a normal document would have a file extension like *.pdf,
+*.odt<span class="class_s14F">,</span> or *.do<span
+class="class_s14F">c</span> , Linux does not require that.
+</div>
+<div class="class_sW">
+In this section, we will learn how to view the contents of file using
+the fil<span class="class_s14F">e</span> command.
+</div>
+<div class="class_sW">
+To start, create a text file using the command:
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ echo “Hello world!”&gt; myfile.txt
+</div>
+<div class="class_sW">
+At the moment, don’t worry about what the commands mean. Next, use the
+file command to see the file content.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ file myfile.txt
+</div>
+<div class="class_sW">
+myfile.txt: ASCII text
+</div>
+<div class="class_sW">
+Linux then tells you that myfile.txt is an ASCII text file, which is
+true. It’s good to note that there are numerous filetypes. In Linux, you
+will often come across the phrase, “In Linux, everything is a file,”
+which is true. In Linux, even directories are types of files.
+</div>
+<div id="part0015.xhtml_a13M" class="heading_s4F">
+The less command
+</div>
+<div class="class_sW">
+Let us take on another fun Linux command, the les<span
+class="class_s14F">s</span> command. The les<span
+class="class_s14F">s</span> command is a tool that allows you to view
+the contents of a file. Do not confuse this with the fil<span
+class="class_s14F">e</span> command that shows the type of file.
+</div>
+<div class="class_sW">
+In Linux, many files are in raw ASCII text, such as source code files,
+bash scripts, configuration files, and much more. Using the les<span
+class="class_s14F">s</span> command allows us to view and examine what
+is in these files. In the next section, we will learn how to use various
+tools, including v<span class="class_s14F">i</span> and nan<span
+class="class_s14F">o</span> , to edit files but for now, let us view
+what is in them.
+</div>
+<div class="class_sW">
+The general syntax for the les<span class="class_s14F">s</span> command
+is:
+</div>
+<div class="class_sW">
+less &lt;filename&gt;
+</div>
+<div class="class_sW">
+Using the less command, we can view the content of file and scroll up
+and down using up-down arrow keys. If the files’ contents are larger
+than a single page determined by the terminal window, we can use space
+to navigate to the next page. Once done with the file, we use the Q key
+to quit from the file.
+</div>
+<div class="class_sW">
+For example, use the less command to view a file used to store sources
+for install packages.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ sudo less /etc/apt/sources.list
+</div>
+<div class="class_sW">
+The les<span class="class_s14F">s</span> command works very well when
+used in combination with keyboard commands. The following are some of
+the keyboard shortcuts to use while working with less.
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> Spacebar – Used to scroll to the
+next page of a file.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> Up Arrow – used to scroll up one
+line
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> Down Arrow – Scrolls down one line
+at a time.
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">    </span> Q – Quits the less commands
+</div>
+<div class="class_sCD">
+5.<span class="class_s14G">   </span> H – used to display the less help
+menu.
+</div>
+<div class="class_sCD">
+6.<span class="class_s14G">   </span> B – used to scroll to the previous
+page.
+</div>
+<div class="class_sCD">
+7.<span class="class_s14G">   </span> G – Scrolls to the end of the
+file.
+</div>
+<div class="class_sCD">
+8.<span class="class_s14G">   </span> /characters – used to Search
+forward to the next occurrence of a string.
+</div>
+<div class="class_sW">
+The less command is an improvement of its predecessor command known as
+less. Try running the command:
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ whatis less
+</div>
+<div class="class_sW">
+less (1)             - opposite of more
+</div>
+<div id="part0015.xhtml_a13N" class="heading_s4F">
+The Linux Filesystem
+</div>
+<div class="class_sW">
+The Linux filesystem is probably the most important section of this
+book.
+</div>
+<div class="class_sW">
+Hence, the book will give you a deep understanding of the Linux
+filesystem, such as where the root directory is, tec.
+</div>
+<div class="class_sW">
+Once you understand the FS, you will be in a position to find more
+commands, read, write, execute files, and so much more. Understand this
+part, and you can work with any Linux distro like a master.
+</div>
+<div class="class_sW">
+In most cases, the layout of the Linux filesystem is the same across all
+Linux distribution. Although this is not always the case in all
+distributions, in most cases, the structure is similar and implemented
+by the <span class="class_s14H">Linux Filesystem Hierarchy
+Standard.</span>
+</div>
+<div class="class_sW">
+<a href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html"
+class="class_s14J">https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html</a>
+</div>
+<div class="class_sW">
+As we explore the filesystem and understand what lies beneath this
+incredible operating system, use your device to these directories
+practically, use the file command to examine a fil, and even use the
+less command to see what a certain file contains.
+</div>
+<div class="heading_sAV">
+Linux Directory Organization
+</div>
+<div class="class_sW">
+Here are the Directories found in Linux systems and what each directory
+is reserved to include:
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> / - This is the root directory of
+a Linux system where everything starts.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> /bi<span
+class="class_s14F">n</span> – The bin directory stores or contains
+binaries required for the system to boot and run.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> /boot – boot directory contains
+the Linux kernel, RAM disk image, and the required bootloader. You will
+find files such as /boot/grub/grub.conf or menu on a system that uses
+grub as the bootloade<span class="class_s14F">r</span> .lst<span
+class="class_s14F">,</span> Kernel images such as /boot/vmlinuz etc.
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">   </span> /de<span
+class="class_s14F">v</span> – Dev directory contains device nodes. This
+is a special kind of directory used by the kernel to store a list of
+devices it recognizes.
+</div>
+<div class="class_sCD">
+5.<span class="class_s14G">   </span> /et<span
+class="class_s14F">c</span> – et<span class="class_s14F">c</span> is one
+of the most important directories in Linux systems. It contains a list
+of system-wide configuration files. /et<span class="class_s14F">c</span>
+directory can also contain a collection of shell scripts used to launch
+services during system boot. Almost every file in the /et<span
+class="class_s14F">c</span> directory is plain text. Common files found
+in this directory include /etc/passw<span class="class_s14F">d</span>
+that has a list of user accounts, /etc/resolv.conf that has the DNS
+resolver configuration, /etc/cronta<span class="class_s14F">b</span>
+that has a list of startup operations.
+</div>
+<div class="class_sCD">
+6.<span class="class_s14G">   </span> /hom<span
+class="class_s14F">e</span> – The home directory has specific
+directories for each user to prevent users from tampering with other
+directories. However, this is not always the case, and you may find
+special cases where this does not happen.
+</div>
+<div class="class_sCD">
+7.<span class="class_s14G">   </span> /li<span
+class="class_s14F">b</span> – Lib folder contains a collection of shared
+library files used by the core Linux system. Think of dl<span
+class="class_s14F">l</span> directories in Windows systems.
+</div>
+<div class="class_sCD">
+8.<span class="class_s14G">   </span> /lost+foun<span
+class="class_s14F">d</span> – This directory contains all devices and
+partitions formatted in a Linux filesystem such as ext4 or ext3. This
+directory’s purpose is to work in case of a partial recovery from a
+filesystem corruption event. In most cases, unless something terrible
+happens to your system, this directory is usually empty.
+</div>
+<div class="class_sCD">
+9.<span class="class_s14G">   </span> /medi<span
+class="class_s14F">a</span> – We mentioned the media directory in
+earlier chapters. It is mainly used by modern Linux systems to store
+mount points for removable devices mounted automatically.
+</div>
+<div class="class_sCD">
+10.<span class="class_s14G">                        </span> /mn<span
+class="class_s14F">t</span> – the /mn<span class="class_s14F">t</span>
+directory holds devices mounted manually.
+</div>
+<div class="class_sCD">
+11.<span class="class_s14G">                        </span> /op<span
+class="class_s14F">t</span> – the /op<span class="class_s14F">t</span>
+directory holds third party software installed on the system. If you are
+using commercial software, you will most likely find it here.
+</div>
+<div class="class_sCD">
+12.<span class="class_s14G">                       </span> /pro<span
+class="class_s14F">c</span> – This is a special kind of directory and
+acts as a filesystem. It is not a real filesystem in the way files are
+stored in the disk. The /pro<span class="class_s14F">c</span> directory
+acts as a virtual filesystem maintained by the Linux kernel. It has
+files that allow a view of the kernel. Files stored in the /pro<span
+class="class_s14F">c</span> directory are readable. They give a picture
+of how the kernel manages the system. For example, to view the CPU
+information, you can use the command less /proc/cpuinfo.
+</div>
+<div class="class_sCD">
+13.<span class="class_s14G">                        </span> /roo<span
+class="class_s14F">t</span> – This directory contains the files for the
+root user. It is the official root user home directory.
+</div>
+<div class="class_sJ2">
+14.<span class="class_s14G">           </span> /sbi<span
+class="class_s14F">n</span> – The /sbi<span class="class_s14F">n</span>
+directory is used by the kernel to store system binaries. System
+binaries are critical programs used to carry out vital tasks on the
+system. Linux mainly reserves them for superuser accounts.
+</div>
+<div class="class_sJ2">
+15.<span class="class_s14G">            </span> /tm<span
+class="class_s14F">p</span> – this directory stores temporary or
+transient files generated by various programs. This directory gets
+cleared upon a reboot.
+</div>
+<div class="class_sJ2">
+16.<span class="class_s14G">           </span> /us<span
+class="class_s14F">r</span> – This is another important directory in
+Linux. It contains programs and support files used by all users. This is
+one of the largest directories in the Linux system and contains
+thousands of files.
+</div>
+<div class="class_sJ2">
+17.<span class="class_s14G">            </span> /usr/bi<span
+class="class_s14F">n</span> - /usr/bi<span class="class_s14F">n</span>
+This one holds the executable programs that have been installed by your
+Linux distribution.
+</div>
+<div class="class_sJ2">
+18.<span class="class_s14G">            </span> /usr/li<span
+class="class_s14F">b</span> – Contains shared libraries for programs
+stored in /usr/bi<span class="class_s14F">n</span> directory.
+</div>
+<div class="class_sJ2">
+19.<span class="class_s14G">           </span> /usr/loca<span
+class="class_s14F">l</span> – This directory contains programs not
+included by a specific Linux distribution by default but is available
+for system-wide use. For example, programs compiled by users get stored
+in this directory. Although this directory exists by default, it remains
+empty until privileged users add files to it.
+</div>
+<div class="class_sJ2">
+20.<span class="class_s14G">            </span> /usr/sbi<span
+class="class_s14F">n</span> – Used to store system admin programs.
+</div>
+<div class="class_sJ2">
+21.<span class="class_s14G">           </span> /usr/shar<span
+class="class_s14F">e</span> – The /usr/shar<span
+class="class_s14F">e</span> directory contains shared data used by
+programs in /usr/bi<span class="class_s14F">n</span> directory. You will
+find some configuration files here, icons, themes, cursors, sound config
+files, and more.
+</div>
+<div class="class_sJ2">
+22.<span class="class_s14G">            </span> /usr/share/do<span
+class="class_s14F">c</span> – This directory stores documentation files
+for most packages installed in the system.
+</div>
+<div class="class_sJ2">
+23.<span class="class_s14G">           </span> /va<span
+class="class_s14F">r</span> – This directory stores data that constantly
+changes, such as databases, spool files, mail, and more. All other
+directories in Linux except /tm<span class="class_s14F">p</span> an<span
+class="class_s14F">d</span> /hom<span class="class_s14F">e</span> are
+static.
+</div>
+<div class="class_sJ2">
+24.<span class="class_s14G">           </span> /var/lo<span
+class="class_s14F">g</span> – As the name suggests, the /tmp/lo<span
+class="class_s14F">g</span> directory stores log files for various
+system operations. This directory requires constant monitoring as it
+contains critical log files for the system. You may require superuser
+privileges to view lo<span class="class_s14F">g</span> files.
+</div>
+<div class="class_sJE">
+Now that we have explored the world of Linux FS, we can learn how to
+work with files and directories. How we can copy, move, delete, rename,
+etc. files and directories. In the next chapter, we are going to get
+hands-on with file operations.
+</div>
+<p><span id="part0016.xhtml"></span></p>
+<div id="part0016.xhtml_a13P" class="heading_s3P">
+Section 5:
+</div>
+<div id="part0016.xhtml_a13R" class="heading_s3T">
+File and Directory Manipulation in Linux
+</div>
+<p><span id="part0017.xhtml"></span></p>
+<div class="class_sJW">
+This section shall discuss the commands that allow us to work with Linux
+files and directories.
+</div>
+<div class="class_sJW">
+File and directory operations are very common when working with
+computers, and thus, the commands in this section are essential.
+</div>
+<div class="class_sJW">
+As we go through the chapter, you will discover that it is easier to
+move, rename, delete, and do file operation using a graphical file
+manager. However, if you want more control and flexibility over what you
+carry out, the command line provides that power.
+</div>
+<div class="class_sJW">
+Let us get started:
+</div>
+<div id="part0017.xhtml_a13S" class="heading_sK1">
+Creating Directories – <span class="class_s14V">mkdir</span>
+</div>
+<div class="class_sJW">
+The first command we are going to look at is the mkdi<span
+class="class_s14F">r</span> command. The mkdi<span
+class="class_s14F">r</span> command creates directories in the current
+or specified workspace. Here is how the mkdir command works:
+</div>
+<div class="class_sJW">
+mkdir directoryName
+</div>
+<div class="class_sJW">
+Although it may seem simple enough, the mkdir is pretty powerful. You
+can create more than one directory in a single command as:
+</div>
+<div class="class_sJW">
+mkdir dir1 dir2 dir2 dir4 dir5…dir(n)
+</div>
+<div class="class_sJW">
+Once the command gets executed, it creates all the directories passed
+above as:
+</div>
+<div class="class_sKA-0">
+<img src="image_rsrc15W.jpg" class="class_sKA-1" />
+</div>
+<div id="part0017.xhtml_a13T" class="heading_sK1">
+Copying Files and Directories – cp Command
+</div>
+<div class="class_sJW">
+The next command is the c<span class="class_s14F">p</span> command used
+to copy files and directories from one location to another within a
+Linux filesystem.
+</div>
+<div class="class_sJW">
+The cp commands support two syntaxes:
+</div>
+<div class="class_sJW">
+cp file1 file<span class="class_s14F">2</span> or c<span
+class="class_s14F">p</span> dir1 dir2
+</div>
+<div class="class_sJW">
+This syntax copies file1 or dir2 to file2 or dir2. This comes in handy
+when working with single items or a single directory.
+</div>
+<div class="class_sJW">
+The next syntax for the cp command is:
+</div>
+<div class="class_sKM-1">
+<img src="image_rsrc15X.jpg" class="class_sKM-0" />
+</div>
+<div class="class_sW">
+In this case, the cp command copies all the specified files from the
+current directory to the specified directory.
+</div>
+<div class="class_sW">
+The c<span class="class_s14F">p</span> command has a wide selection of
+options that you can use to manipulate how and what the command does.
+Although we will not discuss all of them, here are options worth
+mentioning.
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> -a or --archiv<span
+class="class_s14F">e</span> – Using the c<span
+class="class_s14F">p</span> command using the --archiv<span
+class="class_s14F">e</span> option allows you to copy files and
+directories with all their respective attributes and permissions.
+Without the argument, the copy command uses the permissions of the user
+carrying out the copy command. For example, if the ubunt<span
+class="class_s14F">u</span> user owned the copied file, and roo<span
+class="class_s14F">t</span> performed the copy, roo<span
+class="class_s14F">t</span> owns the file. Be careful with this.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> -i or --interactiv<span
+class="class_s14F">e</span> – The interactive argument enables the
+c<span class="class_s14F">p</span> command to prompt the user before
+overwriting a file. By default, c<span class="class_s14F">p</span> will
+automatically and silently overwrite a file.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> -v or --verbos<span
+class="class_s14F">e</span> – As the name suggests, Verbose suggests
+shows informative messages as each file and directory gets copied.
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">   </span> -r or --recursiv<span
+class="class_s14F">e</span> – Allows the c<span
+class="class_s14F">p</span> command to recursive copy files and
+directories. This command gets plenty of use and is an almost-must when
+copying directories.
+</div>
+<div class="class_sCD">
+5.<span class="class_s14G">   </span> -u or --updat<span
+class="class_s14F">e</span> – The update argument is very effective. It
+tells the c<span class="class_s14F">p</span> command when copying files
+from one directory to another, copy files that are newer than existing
+files in the destination folder, or files that do not exist in the
+destination folder.
+</div>
+<div id="part0017.xhtml_a13U" class="heading_s4F">
+Moving, Renaming Files and Directories – mv command
+</div>
+<div class="class_sW">
+The next command in the file operations section is the m<span
+class="class_s14F">v</span> command. The m<span
+class="class_s14F">v</span> command moves or renames files depending on
+the syntax of the command used.
+</div>
+<div class="class_sW">
+Let us learn how to work with mv.
+</div>
+<div class="class_sW">
+The first syntax for the mv command is similar to the cp command.
+</div>
+<div class="class_sW">
+mv file1 file2
+</div>
+<div class="class_sW">
+Using the syntax above, you move file1 into file2. If file2 exists, it
+gets overwritten with the contents of file1. If it does not exist, the
+file2 gets created, and file1 ceases to exist. That is the basic concept
+behind renaming a file.
+</div>
+<div class="class_sW">
+mv file1 file2…file(n) directory
+</div>
+<div class="class_sW">
+When we use the syntax above, the mv command moves all the files
+specified to the directory. For this to happen, the directory must
+exist.
+</div>
+<div class="class_sW">
+Since mv and cp commands share a basic mode of operation, they share
+similar options that include:
+</div>
+<div class="class_sM6">
+1.<span class="class_s14G">   </span> -i or --interactiv<span
+class="class_s14F">e</span> – Will prompt the user before overwriting
+files.
+</div>
+<div class="class_sM6">
+2.<span class="class_s14G">   </span> -v or --verbos<span
+class="class_s14F">e</span> – Displays informative messages as the file
+moving process continues.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> -u or --updat<span
+class="class_s14F">e</span> – Move files that do not exist or newer than
+existing corresponding files.
+</div>
+<div id="part0017.xhtml_a13V" class="heading_s4F">
+Deleting Files and Directories – rm Command
+</div>
+<div class="class_sW">
+The r<span class="class_s14F">m</span> command deletes files and
+directories. The general syntax for the command is:
+</div>
+<div class="class_sW">
+rm file2 or directory1…file(n) or directory(n)
+</div>
+<div class="class_sW">
+Depending on how and where you use the command, the r<span
+class="class_s14F">m</span> command can be very dangerous. Linux does
+not offer an undelete command, and once a delete action occurs using the
+r<span class="class_s14F">m</span> command, it is gone! Be careful when
+working with r<span class="class_s14F">m</span> .
+</div>
+<div class="class_sW">
+The rm command also supports various arguments that include:
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> -f or --forc<span
+class="class_s14F">e</span> – This option helps ignore nonexistent files
+and arguments and never prompt
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> -i or --interactiv<span
+class="class_s14F">e</span> – Prompts the user before deleting any
+existing files. Cannot be used along with the --force argument.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> -v or --verbos<span
+class="class_s14F">e</span> – Shows informative messages as the deletion
+process gets carried out.
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">   </span> -r or --recursive – Recursively
+deletes files and directories. That means if the specified directory
+contains subdirectories, remove them as well.
+</div>
+<div class="class_sW">
+We discuss wildcards shortly because they are helpful when working with
+files and directories.
+</div>
+<div class="class_sW">
+<span class="class_s14C">NOTE:</span> You will often find a prank played
+on Linux beginners on the internet telling you to execute the command cd
+/ &amp;&amp; sudo rm -rf <span class="class_s14F">*</span>
+</div>
+<div class="class_sW">
+As we continue, you will learn what the commands do but do not run the
+command as this will break your entire system.
+</div>
+<div id="part0017.xhtml_a13W" class="heading_s4F">
+Wildcards
+</div>
+<div class="class_sW">
+Now that we have covered file operation commands. Let us discuss a key
+feature that makes these commands very powerful and better than using a
+GUI file manager, although applicable to some file managers such as
+<span class="class_s14H">Nautilus, Dolphin,</span> or <span
+class="class_s14H">Caja</span> .
+</div>
+<div class="class_sW">
+The shell utilizes filenames intensively and provides a way to specify a
+group of filenames in a single command. These are in the form of special
+characters known as <span class="class_s14H">wildcards,</span> also
+known as <span class="class_s14H">globbers.</span>
+</div>
+<div class="class_sW">
+Using <span class="class_s14H">wildcards,</span> also known as <span
+class="class_s14H">globbing,</span> allows you to select a group of
+filenames based on patterns simultaneously. The following are common
+wildcard supported on Linux systems.
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> <span class="class_s14F">*</span>
+- The asterisk (*) wildcard finds and matches any characters
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> <span class="class_s14F">?</span>
+– Finds and matches any single character
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> [characters<span
+class="class_s14F">]</span> – Finds and matches any characters that are
+members of the set characters.
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">   </span> [! characters<span
+class="class_s14F">]</span> – Finds and matches any characters that are
+not members of the specified set.
+</div>
+<div class="class_sCD">
+5.<span class="class_s14G">   </span> [[:class]<span
+class="class_s14F">]</span> – Finds and matches any characters that are
+members of the set class. Commonly used character classes include:
+</div>
+<ol>
+<li><div class="class_s19">
+[:alnum:<span class="class_s14F">]</span> – Using alphanumeric
+characters as the class.
+</div></li>
+<li><div class="class_s19">
+[:alpha:<span class="class_s14F">]</span> – alphabetical character
+class.
+</div></li>
+<li><div class="class_s19">
+[:lower:<span class="class_s14F">]</span> – lowercase letters character
+class.
+</div></li>
+<li><div class="class_s19">
+[:upper:<span class="class_s14F">]</span> – Uppercase letters character
+class.
+</div></li>
+<li><div class="class_s19">
+[:digit:<span class="class_s14F">]</span> – numeral character class.
+</div></li>
+</ol>
+<div class="class_sW">
+Wildcards, therefore, provide a convenient way to create customized
+selection criteria for filenames.
+</div>
+<div class="class_sW">
+Here are some examples of wildcard use cases and their corresponding
+matches.
+</div>
+<div class="class_sNH">
+1.<span class="class_s14G">   </span> <span class="class_s14F">*</span>
+- Everything including files and directories.
+</div>
+<div class="class_sNH">
+2.<span class="class_s14G">   </span> a<span class="class_s14F">*</span>
+- Any file or directory beginning with the letter a.
+</div>
+<div class="class_sNH">
+3.<span class="class_s14G">   </span> a?<span
+class="class_s14F">?</span> – Any files or directories beginning with
+the letter a and followed by exactly two characters.
+</div>
+<div class="class_sNH">
+4.<span class="class_s14G">   </span> Log.[0-9][0-9][0-9<span
+class="class_s14F">]</span> – Any files or directories beginning with
+the word log followed by exactly three numerical values.
+</div>
+<div class="class_sNH">
+5.<span class="class_s14G">   </span> [[:upper:]]<span
+class="class_s14F">*</span> – Any files or directories beginning with an
+uppercase letter.
+</div>
+<div class="class_sNH">
+6.<span class="class_s14G">   </span> a*.tx<span
+class="class_s14F">t</span> – Any files or directories beginning with
+the character a followed by any characters but ending with txt
+characters.
+</div>
+<div class="class_sNH">
+7.<span class="class_s14G">   </span> [abc]<span
+class="class_s14F">*</span> - Any files or directories beginning with
+either the letter a, b or c.
+</div>
+<div class="class_sNH">
+8.<span class="class_s14G">   </span> [![:lower:]<span
+class="class_s14F">]</span> – Any files or directories not beginning
+with a lowercase.
+</div>
+<div class="class_sNH">
+9.<span class="class_s14G">   </span> *[[:digit:]txt<span
+class="class_s14F">]</span> – Any files or directories ending with a
+digit or the characters txt.
+</div>
+<div class="class_sW">
+Wildcards can work with all of the commands that accept filenames such
+as cp, mv, rm, etc. Now you can see why the command sudo rm -rf <span
+class="class_s14F">*</span> on the <span class="class_s14F">/</span>
+directory is a terrible idea. We will learn more about sud<span
+class="class_s14F">o</span> in upcoming chapters.
+</div>
+<div id="part0017.xhtml_a13X" class="heading_s4F">
+Soft and Hard Links
+</div>
+<div class="class_sW">
+In Linux, you will sometimes come across a directory that may look
+something like this:
+</div>
+<div class="class_sW">
+<img src="image_rsrc15Y.jpg" class="class_sP1" /> You will notice that
+the directory first letter in the listing is an l instead of a regular
+letter <span class="class_s14F">d</span> for directories. It also seems
+to contain two directories in one. That is a special kind of file in
+Linux known as a soft link, symlink or <span class="class_s14H">symbolic
+link</span> . Linux allows file referencing by multiple names.
+</div>
+<div class="class_sW">
+From the command above, we see a symbolic link such a libx3<span
+class="class_s14F">2</span> that points to the directory /usr/libx3<span
+class="class_s14F">2</span> . Hence, any program looking for the
+libx3<span class="class_s14F">2</span> directory will get the
+/usr/libx32 directory.
+</div>
+<div class="heading_sAV">
+Creating Links
+</div>
+<div class="class_sW">
+To create symbolic links in Linux, we use the l<span
+class="class_s14F">n</span> command. The general syntax is:
+</div>
+<div class="class_sW">
+ln file link
+</div>
+<div class="class_sW">
+The above syntax creates a hard link.
+</div>
+<div class="class_sW">
+ln -s item link
+</div>
+<div class="class_sW">
+That creates a soft link for the passed item. The passed item can be
+either a directory or a file.
+</div>
+<div class="heading_sB8">
+Hard links vs. Soft Links
+</div>
+<div class="class_sW">
+There is no significant difference between hard and soft links. The main
+difference is how the two reference the files.
+</div>
+<div class="class_sW">
+Hard links were the default ways of creating links in Linux, while
+symbolic links are more modern, and by default, every file has a hard
+link that provides a name for the file.
+</div>
+<div class="class_sW">
+With a hard link created, an additional directory entry for the file
+also gets created. Here are the main features of hard links:
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> They are not used to reference
+directories.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> They cannot reference files
+outside their filesystems. This means a hard link cannot reference a
+file in another partition than it residential location.
+</div>
+<div class="class_sW">
+A hard link is indistinguishable from the main file. Contrary to a
+directory list holding a symbolic link, a directory list that has a hard
+link does not show any special indication of the link. Once a hard link
+gets removed, the link gets deleted, but the file’s main contents don’t
+get removed. This means that space doesn’t get deallocated until after
+file deletion.
+</div>
+<div class="class_sW">
+Symbolic links are the newer and more improved version of hard links.
+Their development aim was to help overcome some of the limitations that
+come with hard links.
+</div>
+<div class="class_sW">
+Basically, symbolic links work by executing a special file containing a
+text pointer to the referenced directory or file. They mainly work
+similarly to Windows shortcuts.
+</div>
+<div class="class_sW">
+A symbolic link and the main file referenced are very hard to
+distinguish. Symbolic links do not delete files once it gets deleted.
+However, if the file gets removed before the link gets removed, the
+symbolic link becomes <span class="class_s14H">broken.</span> You will
+encounter broken symbolic links indicated by red using the ls command.
+</div>
+<div class="class_s89">
+<span class="class_s14C">NOTE:</span> We have covered a lot of
+information in this section alone. It may take a while to master (not
+memorize) the commands and their arguments, and the best way to learn is
+to practice. Play around with the commands until you get them.
+</div>
+<p><span id="part0018.xhtml"></span></p>
+<div id="part0018.xhtml_a13Y" class="heading_s3P">
+Section 6
+</div>
+<div id="part0018.xhtml_a13Z" class="heading_s3T">
+Commands for Working With Commands
+</div>
+<p><span id="part0019.xhtml"></span></p>
+<div class="class_sW">
+Up to this point, we have discussed a wide range of commands, with each
+command having a wider range of options that are different or performed
+differently.
+</div>
+<div class="class_sW">
+In this chapter, we shall simplify these commands and even write unique
+commands.
+</div>
+<div id="part0019.xhtml_a140" class="heading_s4F">
+Commands: Simple definition
+</div>
+<div class="class_sW">
+Before we discuss commands that help us work with other commands, let’s
+understand commands a bit better. What is a command, really?
+</div>
+<div class="class_sW">
+As mentioned at the beginning of the book, commands are texts or
+characters you type in a terminal for the shell to execute. The typed
+commands reference something within the Linux fs.
+</div>
+<div class="class_sW">
+For example, a command like ls is a collection of code that finds files
+and directories—the process is not as direct as it sounds. Hence, a
+command can reference four types of things.
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> A shell function – <span
+class="class_s14H">shell functions</span> refer to small <span
+class="class_s14H">shell scripts</span> merged in the Linux environment.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> An executable program – A command
+can be a compiled binary like files found in /bi<span
+class="class_s14F">n</span> an<span class="class_s14F">d</span> /usr/bin
+directories. Programmers can compile these binaries in various languages
+such as C/C++, Python, Perl, Ruby, etc.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> Built-in shell command – These are
+a type of commands built-in into the shell—also called <span
+class="class_s14H">shell built-ins.</span>
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">   </span> An alias – a command can also
+refer to an alias or an alternative name for a command. For example, you
+can create a command to show free memory from fre<span
+class="class_s14F">e</span> to fme<span class="class_s14F">m</span> .
+</div>
+<div id="part0019.xhtml_a141" class="heading_s4F">
+Identifying Commands
+</div>
+<div class="class_sW">
+Identifying commands are commands used to identify what other commands
+are and what actions they perform in the system. They include:
+</div>
+<div class="heading_sAV">
+Show executable location – which command
+</div>
+<div class="class_sW">
+In instances where there are multiple versions of an executable program
+installed on a server, we can use the which command to locate an
+executable file as follows:
+</div>
+<div class="class_sRH-1">
+<img src="image_rsrc15Z.jpg" class="class_sRH-0" />
+</div>
+<div class="class_sW">
+Whic<span class="class_s14F">h</span> command only works on executable
+programs, not on built-in shell commands. If you run the which on a
+command like c<span class="class_s14F">d</span> , you will get an error:
+</div>
+<div class="heading_sAV">
+Display command type – type command
+</div>
+<div class="class_sW">
+The typ<span class="class_s14F">e</span> command displays the type of
+command the shell is going to execute. The types can include the ones we
+mentioned above.
+</div>
+<div class="class_sW">
+The typ<span class="class_s14F">e</span> command works like this:
+</div>
+<div class="class_sRT-0">
+<img src="image_rsrc160.jpg" class="class_sRT-1" />
+</div>
+<div class="class_sW">
+From the commands above, we can see that the command c<span
+class="class_s14F">d</span> is a shell built-in, mkdi<span
+class="class_s14F">r</span> is an executable located i<span
+class="class_s14F">n</span> /usr/bin/mkdi<span
+class="class_s14F">r</span> . A command like ls is really an alias for
+the l<span class="class_s14F">s</span> command with --color=auto
+argument enabled.
+</div>
+<div class="heading_sAV">
+Displaying Commands Help and Documentation
+</div>
+<div class="class_sW">
+Once we know what a command is and its location, we can find its
+documentation stored in the system’s manual database.
+</div>
+<div class="class_sE2">
+The help command helps you find out about the options and arguments the
+command accepts. In most cases, the help command only works on shell
+built-in commands. For example:
+</div>
+<p><span id="part0020.xhtml"></span></p>
+<div>
+<img src="image_rsrc161.jpg" class="class_sS6" />
+</div>
+<p><span id="part0021.xhtml"></span></p>
+<div class="class_sW">
+Although the help command provides options and how they work, it is in
+no way a tutorial. However, it comes in handy when you want to learn
+more about a command.
+</div>
+<div class="class_sW">
+Another popular mode of the hel<span class="class_s14F">p</span> command
+is using it as an argument using the --help syntax.
+</div>
+<div class="class_sE2">
+Most executable programs in Linux provides this argument to allow you to
+find a command’s usage information. For example:
+</div>
+<p><span id="part0022.xhtml"></span></p>
+<div class="class_sSR-0">
+<img src="image_rsrc162.jpg" class="class_sSR-1" />
+</div>
+<div class="class_sSV-0">
+<img src="image_rsrc163.jpg" class="class_sSV-1" />
+</div>
+<div class="class_sSZ-0">
+<img src="image_rsrc164.jpg" class="class_sSZ-1" />
+</div>
+<p><span id="part0023.xhtml"></span></p>
+<div class="class_sW">
+Not all commands support the --help argument. Some support -<span
+class="class_s14F">h</span> and others use manual pages. However, try it
+to find out if it works.
+</div>
+<div class="class_sW">
+The most common way to find information about commands is by using <span
+class="class_s14H">manual pages.</span> Manual pages are formal pieces
+of documentation for various commands. <span class="class_s14H">Manual
+pages</span> are commonly known as <span class="class_s14H">man
+pages</span> and are accessible using a special command called ma<span
+class="class_s14F">n</span> .
+</div>
+<div class="class_sW">
+The general syntax for the command is:
+</div>
+<div class="class_sW">
+man program
+</div>
+<div class="class_sW">
+Where “program” represents the command that you need documentation for.
+Although manual pages contain different formats and styles, they mainly
+contain a title, a synopsis of the command’s syntax, and a description
+of what the command does. It may also include a listing and a
+description of the command’s options. Manual pages are sort of like a
+reference and not a guide.
+</div>
+<div class="class_sW">
+Manual pages use the les<span class="class_s14F">s</span> command to
+navigate the documentation. Try to view the manual pages for the less
+command.
+</div>
+<div class="class_sTE-1">
+<img src="image_rsrc165.jpg" class="class_sTE-0" />
+</div>
+<div class="heading_sB8">
+Manual Pages Organization
+</div>
+<div class="class_sW">
+Manual pages are amazing tools when working with commands. They get
+stored in the manual database organized in a specific format covering
+executable commands, user commands, system administration commands, file
+formats, etc.
+</div>
+<div class="class_sW">
+Below is an outline of the layout of the manual pages.
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> 1 – The first section of the
+manual pages contains documentation for user commands.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> 2 – The second section is features
+kernel system calls programming interfaces.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> 3 – The third section contains C
+library’s programming interfaces documentation.
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">   </span> 4 – The fourth section is for
+special files. This includes drivers and device nodes.
+</div>
+<div class="class_sCD">
+5.<span class="class_s14G">   </span> 5 – Five is for file formats
+documentation.
+</div>
+<div class="class_sCD">
+6.<span class="class_s14G">   </span> 6 – The sixth section is for games
+and other enjoyments such as wallpapers and screensavers.
+</div>
+<div class="class_sCD">
+7.<span class="class_s14G">    </span> 7 – Seven is for miscellaneous
+</div>
+<ol>
+<li><div class="class_s15">
+8 – The eighth section contains documentation for system administration
+commands.
+</div></li>
+</ol>
+<div class="class_sW">
+Sometimes you may have to search in a specific documentation section to
+find the content you are looking for. For example:
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:/etc$ man 5 sudoers
+</div>
+<div class="class_sW">
+The command above shows the documentation showing file formats for the
+sudoer<span class="class_s14F">s</span> file.
+</div>
+<div class="heading_sAV">
+Display Brief Description – whatis command
+</div>
+<div class="class_sE2">
+The whati<span class="class_s14F">s</span> command is a handy command.
+It displays the name of the command and one-line description from the
+man pages matching a specific keyword.
+</div>
+<p><span id="part0024.xhtml"></span></p>
+<div class="class_sW">
+For example:
+</div>
+<div class="heading_sUC">
+<img src="image_rsrc166.jpg" class="class_sUA" />
+</div>
+<div class="heading_sUE">
+<span class="class_s14Y">Display Appropriate Commands –</span> <span
+class="class_s150">Apropos</span>
+</div>
+<div class="class_sE2">
+Manual pages allow you to search for a match based on the passed term.
+Using the command apropo<span class="class_s14F">s</span> , you can
+search a similar command from the manual pages. For example:
+</div>
+<p><span id="part0025.xhtml"></span></p>
+<div class="class_sUS-0">
+<img src="image_rsrc167.jpg" class="class_sUS-1" />
+</div>
+<div class="class_sW">
+You can also substitute the apropos command with man -k argument.
+</div>
+<div class="class_sW">
+Another common command you can use to find command help and
+documentation is the inf<span class="class_s14F">o</span> command. It is
+an alternative to the man command but provides hyperlinks to help
+navigate to specific sections.
+</div>
+<div class="class_sW">
+The info program reads info files, structured like trees into individual
+nodes, each encompassing a single topic. Info files have hyperlinks you
+can use to move you from one node to the other. Hyperlinks are easy to
+identify because of their leading asterisk. You can activate them by
+placing the cursor on it, then hitting the ENTER key.
+</div>
+<div class="class_sW">
+For example:
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ info ls
+</div>
+<div class="class_sE2">
+All the commands we have up to this point belong to the coreutil<span
+class="class_s14F">s</span> package or the GNU Project. To find more
+details about residence and documentation, use the command:
+</div>
+<p><span id="part0026.xhtml"></span></p>
+<div class="class_sV7-0">
+<img src="image_rsrc168.jpg" class="class_sV7-1" />
+</div>
+<div class="class_sW">
+Many of the software packages you have installed on your system will
+have documentation files stored in the directory /usr/share/do<span
+class="class_s14F">c</span> . Most get stored in plaintext format, but
+some are HTML and viewable with a web browser.
+</div>
+<div class="class_sW">
+Some files will have <span class="class_s14F">a</span> .g<span
+class="class_s14F">z</span> extension, indicating files compressed using
+the gzi<span class="class_s14F">p</span> compression program. The
+gzi<span class="class_s14F">p</span> package has a special less version
+called zles<span class="class_s14F">s</span> that displays the
+information contained in gzip-compressed text files.
+</div>
+<div class="class_sW">
+<img src="image_rsrc169.jpg" class="class_sVE" /> Manual pages can be
+very good as references for a wide range of commands. However, as we
+mentioned, they are not tutorials. If you want to test how crazy manual
+pages are, try manual pages for bash. Do not get frustrated, though;
+keep learning: you will understand what it all means.
+</div>
+<div id="part0026.xhtml_a142" class="heading_s4F">
+Creating Custom Commands
+</div>
+<div class="class_sW">
+This subsection covers how to create commands using the alias command.
+The alias command allows you to come up with better names to substitute
+a command or a single command to represent a sequence of commands.
+</div>
+<div class="class_sW">
+Before we begin, the first task is to find out an appropriate name for
+our command and ensure no other critical function is using it.
+</div>
+<div class="class_sVN-1">
+<img src="image_rsrc16A.jpg" class="class_sVN-0" />
+</div>
+<div class="class_sE2">
+Unfortunately, info seems taken, and we cannot use it. Let us try
+mshel<span class="class_s14F">l</span> :
+</div>
+<p><span id="part0027.xhtml"></span></p>
+<div class="class_sSV-0">
+<img src="image_rsrc16B.jpg" class="class_sSV-1" />
+</div>
+<div class="class_sW">
+That one is available to use. We use the alias command, followed by a
+command or a sequence of commands we want to use.
+</div>
+<div class="class_sW">
+For example, to navigate to the /etc directory, read the passwd file,
+navigate back home, and finally list the directories, we can combine all
+the commands in one line using a shell trick shown below:
+</div>
+<div class="class_sW">
+cd /etc; less passwd; cd ~; ls -la;
+</div>
+<div class="class_sW">
+Using alia<span class="class_s14F">s</span> , we can create a single
+command as shown below: The general syntax for the alia<span
+class="class_s14F">s</span> command is:
+</div>
+<div class="class_sW">
+alias name=’string’
+</div>
+<div class="class_sW">
+Pay attention to the structure of the command below:
+</div>
+<div class="class_sW8-1">
+<img src="image_rsrc16C.jpg" class="class_sW8-0" />
+</div>
+<div class="class_sW">
+Immediately after the alias command, we pass the name and a string of
+commands we want to substitute. Once a command has been defined using
+the alias command, we can use it anywhere.
+</div>
+<div class="class_sW">
+We can see our alias using the type command.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ type mshell
+</div>
+<div class="class_sW">
+mshell is aliased to `cd /etc; less passwd; cd ~; ls -la;'
+</div>
+<div class="class_sW">
+To remove an aliased command, use the unalias command as shown below.
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ unalias mshell
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ type mshell
+</div>
+<div class="class_sW">
+-bash: type: mshell: not found
+</div>
+<div class="class_sE2">
+Granted, we avoided using an alias of an existing command because
+sometimes it is appropriate to do so. For example, the command l<span
+class="class_s14F">s</span> is an alias of ls --color-aut<span
+class="class_s14F">o</span> . The following are some of the aliases
+defined in the environment, use the alia<span
+class="class_s14F">s</span> command without arguments to find out more.
+</div>
+<p><span id="part0028.xhtml"></span></p>
+<div class="class_sWU-1">
+<img src="image_rsrc16D.jpg" class="class_sWU-0" />
+</div>
+<p><span id="part0029.xhtml"></span></p>
+<div class="class_sF">
+Section 7
+</div>
+<div id="part0029.xhtml_a143" class="heading_s3T">
+Permissions
+</div>
+<p><span id="part0030.xhtml"></span></p>
+<div class="class_sW">
+One of the best features of Linux and other Unix-based systems is that
+they are <span class="class_s14H">multitasking</span> and <span
+class="class_s14H">multiuser.</span> That means more than one user can
+use systems simultaneously and run more than one process.
+</div>
+<div class="class_sW">
+For example, a system attached to a network can have one user working on
+it physically and others working remotely like SSH. Features such as the
+X Window system allow remote users to run GUI applications remotely.
+</div>
+<div class="class_sW">
+That is an amazing functionality built deep in the Linux kernel.
+However, to implement this, users had to be protected from each other,
+preventing users from interfering with files created by other users.
+</div>
+<div class="class_sW">
+This chapter will look at how Linux implements protection measures like
+identity, file permissions, file ownership, groups, etc.
+</div>
+<div id="part0030.xhtml_a144" class="heading_s4F">
+Owners, Groups, and Others
+</div>
+<div class="class_sW">
+Once in a while, when exploring the Linux file system, you will
+encounter files that output the “Permission Denied” error when you try
+to read them. An example of such a file is found in /etc/shadow
+</div>
+<div class="class_sXG-1">
+<img src="image_rsrc16E.jpg" class="class_sXG-0" />
+</div>
+<div class="class_sW">
+The main reason for this type of error results from user error. Meaning,
+if you are running as a regular user, you may not have permission to
+read some files.
+</div>
+<div class="class_sW">
+Let us discuss how this works:
+</div>
+<div class="class_sW">
+Linux uses what is we call the <span class="class_s14H">Unix Security
+model,</span> which describes that a user can <span
+class="class_s14H">own</span> files and directories within a File
+system. If a user owns a specific file or directory, he/she has full
+control over them. The user can then belong to a <span
+class="class_s14H">group</span> that consists of more than one user, all
+given access to files and directories by their <span
+class="class_s14H">owners.</span>
+</div>
+<div class="class_sW">
+Besides providing access to the groups they belong to, a user or
+directory <span class="class_s14H">owner</span> can grant access rights
+to the <span class="class_s14H">world</span> or <span
+class="class_s14H">everyone</span> within the system.
+</div>
+<div class="class_sW">
+You can find more information about your user identity by using the
+command i<span class="class_s14F">d</span> .
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ id
+</div>
+<div class="class_sXG-1">
+<img src="image_rsrc16F.jpg" class="class_sXG-0" />
+</div>
+<div class="class_sW">
+Let us dissect the output and see what it means (not all of it!)
+</div>
+<div class="class_sW">
+When a user gets created, he/she gets assigned a unique value referred
+to as a <span class="class_s14H">uid</span> or <span
+class="class_s14H">unique id</span> value, then mapped to the user’s
+username. The system assigns the user a <span class="class_s14H">primary
+group id,</span> also called a <span class="class_s14H">gid</span>
+value. The group id may also belong to other groups.
+</div>
+<div class="class_sW">
+Depending on the system you run the i<span class="class_s14F">d</span>
+command on, you will get different results. For example, a system like
+Fedora starts numbering accounts from 500. On the other hand, Ubuntu
+starts at 1000.
+</div>
+<div class="class_sW">
+A single user in Ubuntu can belong in more groups—shown above—because of
+how the Ubuntu system handles system services and device privileges.
+</div>
+<div class="class_sW">
+system
+</div>
+<div class="class_sW">
+devices and services.
+</div>
+<div class="class_sW">
+This information gets derived from Linux text files. Accounts in Linux
+get stored in /etc/passwd file, while groups get stored in /etc/groups
+file. Upon creation of a Linux user account or group, each of these
+files gets modified. A file such as /etc/shadow, used to store user
+passwords, also gets changed.
+</div>
+<div class="class_sW">
+For every user account, the /etc/passwd file defines the
+</div>
+<div class="class_sY5-1">
+<img src="image_rsrc16G.jpg" class="class_sY5-0" />
+</div>
+<div class="class_sW">
+Should you examine the contents of /etc/passw<span
+class="class_s14F">d</span> and /etc/grou<span
+class="class_s14F">p</span> , you’ll notice regular user accounts, the
+superuser (uid 0, accounts, and various other system users.
+</div>
+<div id="part0030.xhtml_a145" class="heading_s4F">
+Read, Write, and Execute File Permissions
+</div>
+<div class="class_sW">
+Access rights in Linux are defined using read, write, and execute
+permissions. In the previous chapters, the ls command showed this.
+</div>
+<div class="class_sW">
+Let us discuss how they work and their implementation.
+</div>
+<div class="class_sXG-1">
+<img src="image_rsrc16H.jpg" class="class_sXG-0" />
+</div>
+<div class="class_sW">
+As discussed in previous chapters, the first letter in the first block
+(in this case, a dash) indicates the file type. A – (dash<span
+class="class_s14F">)</span> represents regular files, <span
+class="class_s14F">d</span> represents directories, <span
+class="class_s14F">l</span> symbolic links, <span
+class="class_s14F">c</span> represents a character-special file, and
+<span class="class_s14F">b</span> represents block devices files.
+</div>
+<div class="class_sW">
+The rest nine blocks represent <span class="class_s14H">file
+modes</span> that are read, write, and execute. When a directory or file
+has r, w, or x attribute, certain effects get applied:
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> <span class="class_s14F">r</span>
+– Grants read permission allowing the user and group to open and read a
+file’s contents. If applied on a directory, a user can list the
+directory’s contents only when the execute attribute is active.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> <span class="class_s14F">w</span>
+– Permits file writing or truncating; however, the write attribute
+disallows file renaming and deletion. Deleting or renaming files depends
+on attributes allocated to the parent directory. When you set the
+execute attribute, the write attribute allows the creation, deletion,
+and renaming of directory files.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> <span class="class_s14F">x</span>
+– Makes it possible to represent a file as an executable program and
+executed. To make files written using scripting languages executable,
+you must also set them as readable. On a directory, the execute
+attribute makes it possible to enter a directory, e.g., cd director<span
+class="class_s14F">y</span> .
+</div>
+<div class="class_sW">
+The following are examples of permission attributes set on files and
+directories.
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">   </span> -rwx-----<span
+class="class_s14F">-</span> - Shows a regular file with read, write, and
+executable permissions for the file owner only. No one else has either
+read, write, execute permission to the file.
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">   </span> -rw------<span
+class="class_s14F">-</span> - Also a regular file with read and write
+for the file owner and no one else.
+</div>
+<div class="class_sCD">
+3.<span class="class_s14G">   </span> -rw-r--r-<span
+class="class_s14F">-</span> - A regular file that has read and write for
+the file owner, the owner’s group may also read the file and the world
+can read the file too.
+</div>
+<div class="class_sCD">
+4.<span class="class_s14G">   </span> -rwxr-xr-<span
+class="class_s14F">x</span> – Shows are regular file with read, write,
+and execute permissions for the file owner, execute and read for the
+user’s group and execute only for everyone else.
+</div>
+<div class="class_sCD">
+5.<span class="class_s14G">   </span> drwxrwx--<span
+class="class_s14F">-</span> - Indicates a directory. The owner and user
+group members may enter the directory, and create, rename and delete
+files within the directory.
+</div>
+<div class="class_sCD">
+6.<span class="class_s14G">   </span> Lrwxrwxrw<span
+class="class_s14F">x</span> – A symbolic link with placeholder
+permissions. Placeholder permissions mean that the real permissions get
+managed by the actual file referenced by the symbolic link.
+</div>
+<div id="part0030.xhtml_a146" class="heading_s4F">
+Changing File Modes – chmod command
+</div>
+<div class="class_sW">
+To change the permissions of a file or directory, we use the chmo<span
+class="class_s14F">d</span> command.
+</div>
+<div class="class_sW">
+Changing file permissions is only possible for file owners and superuser
+accounts. Chmod supports two main ways to specify the permission
+</div>
+<div class="class_sCD">
+1.<span class="class_s14G">    </span> Octal notation
+</div>
+<div class="class_sCD">
+2.<span class="class_s14G">    </span> Symbolic notation
+</div>
+<div class="heading_sAV">
+Symbolic Notation
+</div>
+<div class="class_sW">
+Let us start with the symbolic representation of file permissions.
+Symbolic notations have three main parts: who the change will affect,
+the operation performed, and the permission set.
+</div>
+<div class="class_sW">
+On who the changes will affect, letters such as u, g, o, and a are used.
+Here are the meanings:
+</div>
+<ul>
+<li><div class="class_s19">
+u – file owner
+</div></li>
+<li><div class="class_s19">
+g – group owner
+</div></li>
+<li><div class="class_s19">
+– Others or world
+</div></li>
+<li><div class="class_s19">
+a – all; meaning the combination of user, group and world
+</div></li>
+</ul>
+<div class="class_sW">
+If no character is specified, all is assumed, and changes apply to
+users, groups, and the world.
+</div>
+<div class="class_sW">
+The operation to be carried out gets specified in three main characters,
+i.e., + (plus), – (minus), and = (equals). The plus indicates that you
+should add permission. A minus indicates permission should be removed,
+and equals means that only the specified permissions should apply with
+others removed.
+</div>
+<div class="class_sW">
+The permissions to be applied get specified in three letters, r (read),
+w (write), and x (execute).
+</div>
+<div class="class_sW">
+Here are some symbolic notation examples:
+</div>
+<ol>
+<li><div class="class_s19">
+u+<span class="class_s14F">r</span> – Gives file owners read permission
+</div></li>
+<li><div class="class_s19">
+u+<span class="class_s14F">x</span> – Gives file owners execute
+permission
+</div></li>
+<li><div class="class_s19">
+u-<span class="class_s14F">w</span> – Removes write permissions for the
+file owner.
+</div></li>
+<li><div class="class_s19">
++<span class="class_s14F">x</span> – Adds the execute permission for
+owner, group, and world.
+</div></li>
+<li><div class="class_s19">
+u+x,go=r<span class="class_s14F">x</span> – Gives files owners execute
+permission. It also sets read and execute group permissions—and others.
+Commas can separate multiple specifications
+</div></li>
+</ol>
+<div class="heading_sAV">
+Octal Notation
+</div>
+<div class="class_sW">
+Octal notation, as the name suggests, uses octal values to indicate
+wanted permissions patterns. You can learn more about Octal (base 8)
+here:
+</div>
+<div class="class_sW">
+<a href="https://www.tutorialspoint.com/octal-number-system"
+class="class_s14J">https://www.tutorialspoint.com/octal-number-system</a>
+</div>
+<div class="class_sW">
+<a
+href="https://en.wikipedia.org/wiki/Octal#:~:text=The%20octal%20numeral%20system%2C%20or,for%20decimal%2074%20is%201001010"
+class="class_s14J">https://en.wikipedia.org/wiki/Octal#:~:text=The%20octal%20numeral%20system%2C%20or,for%20decimal%2074%20is%201001010</a>
+.
+</div>
+<div class="class_sW">
+Because every octal number digit represents three binary digits, this
+plots efficiently to the structure adopted when storing the file mode.
+The following are the octal representations and their meaning.
+</div>
+<ul>
+<li><div class="class_s19">
+0 – no read, write, or execute permission—represented as 00<span
+class="class_s14F">0</span> in binary and --<span
+class="class_s14F">-</span> as a symbolic file permission block.
+</div></li>
+<li><div class="class_s19">
+1 – Execute permission only—represented as 00<span
+class="class_s14F">1</span> in binary and --<span
+class="class_s14F">x</span> as a symbolic file permission.
+</div></li>
+<li><div class="class_s19">
+2 – Read permission only—represented as 010 in binary and -w- as a
+symbolic file permission.
+</div></li>
+<li><div class="class_s19">
+3 – Write and Execute permission—represent in binary notation as 01<span
+class="class_s14F">1</span> and -w<span class="class_s14F">x</span> as
+symbolic file permission.
+</div></li>
+<li><div class="class_s19">
+4 – Read permission only—represented as 10<span
+class="class_s14F">0</span> in binary and r-<span
+class="class_s14F">-</span> in symbolic.
+</div></li>
+<li><div class="class_s19">
+5 – Read and execute—represented in binary 10<span
+class="class_s14F">1</span> and r-<span class="class_s14F">x</span> in
+symbolic.
+</div></li>
+<li><div class="class_s19">
+6 – Read and Write permission—represented as 11<span
+class="class_s14F">0</span> in binary and rw<span
+class="class_s14F">-</span> in symbolic notation.
+</div></li>
+<li><div class="class_s19">
+7 – Read, write, and execute permissions. 11<span
+class="class_s14F">1</span> in binary representation and rw<span
+class="class_s14F">x</span> in symbolic.
+</div></li>
+</ul>
+<div class="class_sW">
+We can use three octal digits to set and define the file mode for
+various owners and the world. For example:
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ chmod 777 myfile.txt
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ ls -l myfile.txt
+</div>
+<div class="class_sW">
+-rwxrwxrwx 1 ubuntu ubuntu 0 Nov 3 09:30 myfile.txt
+</div>
+<div class="class_sW">
+Because of passing the octal value 777, we could set read, write, and
+execute for all, i.e., users, groups, and everyone.
+</div>
+<div id="part0030.xhtml_a147" class="heading_s10U">
+Set Default Permissions – umask command
+</div>
+<div class="class_sW">
+The umas<span class="class_s14F">k</span> command allows you to control
+the default permission assigned to a file upon creation. umask uses
+octal notation to represent a mask of the bit removed from a file mode’s
+attributes. For example:
+</div>
+<div class="class_s10Z-0">
+<img src="image_rsrc16J.jpg" class="class_s10Z-1" />
+</div>
+<div class="class_sW">
+We begin by cleaning any existing copies of the file using the rm -rf
+myfile.tx<span class="class_s14F">t</span> command.
+</div>
+<div class="class_sW">
+Next, we executed the umas<span class="class_s14F">k</span> command
+without any arguments to view the current value that corresponds to a
+value 002<span class="class_s14F">2</span> (you will often find 000<span
+class="class_s14F">2</span> too), which is an octal notation of our
+mask.
+</div>
+<div class="class_sW">
+Finally, we create a new instance of the file and look at the default
+permissions.
+</div>
+<div id="part0030.xhtml_a148" class="heading_s4F">
+Sudo and su Users
+</div>
+<div class="class_sW">
+The s<span class="class_s14F">u</span> and sud<span
+class="class_s14F">o</span> commands are very useful while working with
+Linux.
+</div>
+<div class="class_sW">
+Let us start with s<span class="class_s14F">u</span> and discuss what it
+does.
+</div>
+<div class="class_sW">
+The su command starts a new shell session as another user. The general
+syntax for the command is:
+</div>
+<div class="class_sW">
+su [-[l]] [user]
+</div>
+<div class="class_sW">
+If you call the su command with the -<span class="class_s14F">l</span>
+argument, the shell provides a login shell for the specified user. That
+means the user’s environment gets loaded, and the working directory
+changes to the user’s home dir. If the user to login to is not
+specified, it defaults to the superuser or root account. It is also
+possible to substitute the -l argument with –
+</div>
+<div class="class_sW">
+For example, to log in as root, we use the command:
+</div>
+<div class="class_sW">
+ubuntu@VSALEM:~$ su -
+</div>
+<div class="class_sW">
+Password:
+</div>
+<div class="class_sW">
+root@VSALEM:~#
+</div>
+<div class="class_sW">
+The command above prompts for the root user account’s password, and if
+correct, we login as the superuser account, indicated by the pound sign
+and the username in the shell prompt. To exit from a shell session, we
+use the exi<span class="class_s14F">t</span> command.
+</div>
+<div class="class_sW">
+You can also run a single command as a superuser without having to log
+in as root. For example:
+</div>
+<div class="class_s11J-1">
+<img src="image_rsrc16K.jpg" class="class_s11J-0" />
+</div>
+<div class="class_sW">
+Another way to execute commands as another user is by using the sud<span
+class="class_s14F">o</span> command. It is similar to s<span
+class="class_s14F">u</span> but provides a lot more functionalities.
+</div>
+<div class="class_sW">
+The superuser can configure sudo account, allowing another user to
+execute commands as other users (mostly the root user).
+</div>
+<div class="class_sW">
+Sudo makes it possible to restrict some users to certain commands. For
+example, a user working with networking and processes can operate under
+restriction to these commands, allowing him to do that specifically
+without interacting with other administrative commands.
+</div>
+<div class="class_sW">
+Unlike s<span class="class_s14F">u</span> where a user requires a root
+account to log in into the shell, sud<span class="class_s14F">o</span>
+requires a user to provide an account’s password. However, the user
+should be in the group known as sudoer<span class="class_s14F">s</span>
+to run commands as sud<span class="class_s14F">o</span> .
+</div>
+<div id="part0030.xhtml_a149" class="heading_s4F">
+Changing File Owners – chown command
+</div>
+<div class="class_sW">
+To change the owner of a file or directory, we use the chow<span
+class="class_s14F">n</span> command. Chown, however, requires superuser
+privileges either using s<span class="class_s14F">u</span> or sud<span
+class="class_s14F">o</span> .
+</div>
+<div class="class_sW">
+The general syntax for the command is:
+</div>
+<div class="class_sE2">
+chown [Option]... [Owner][:[Group]] File
+</div>
+<p><span id="part0031.xhtml"></span></p>
+<div class="class_sW">
+Examples:
+</div>
+<div class="class_s124-1">
+<img src="image_rsrc16M.jpg" class="class_s124-0" />
+</div>
+<div class="class_sW">
+You may encounter systems that use the command chgr<span
+class="class_s14F">p</span> to change the group of a file.
+</div>
+<div id="part0031.xhtml_a14A" class="heading_s4F">
+Changing Users password – passwd command
+</div>
+<div class="class_sW">
+The last concept in this chapter and book is how to change your password
+and other users’ passwords using superuser privileges.
+</div>
+<div class="class_sW">
+To change or set a password for a specific user account, we use the
+command passw<span class="class_s14F">d</span> .
+</div>
+<div class="class_sW">
+The general syntax for the command is:
+</div>
+<div class="class_sW">
+passwd [<span class="class_s14H">user</span> ]
+</div>
+<div class="class_sW">
+To change the password for the current user, simply enter the command
+passw<span class="class_s14F">d</span> without arguments, which will
+prompt you to enter a new password.
+</div>
+<div class="class_sW">
+Depending on the system, passw<span class="class_s14F">d</span> may
+require you to use a strong password and reject passwords that are too
+weak or similar to previously set passwords. To change a password for
+another user, use the passwd command with sud<span
+class="class_s14F">o</span> or s<span class="class_s14F">u</span> .
+</div>
+<div class="class_s89">
+Check manual pages for the command to learn more about the arguments
+available.
+</div>
+<p><span id="part0032.xhtml"></span></p>
+<div id="part0032.xhtml_a14B" class="heading_sU">
+Conclusion
+</div>
+<div class="class_sW">
+When it comes to mastering the Linux command line, the only secret is
+practicing, practicing, practicing some more, and learning hungrily.
+</div>
+<div class="class_sW">
+This is only a beginner’s guide, meaning we left many advanced concepts
+untouched—we have barely scratched the surface of what the Linux command
+line can do.
+</div>
+<div class="class_sW">
+Check out the /usr/bin directory to see for yourself.
+</div>
+<div class="class_sW">
+<span class="class_s14C">PS:</span> I’d like your feedback. If you are
+happy with this book, please leave a review on Amazon.
+</div>
+<div class="class_sW">
+Please leave a review for this book on Amazon by visiting the page
+below:
+</div>
+<div class="class_s12U">
+<a href="https://amzn.to/2VMR5qr"
+class="class_s14J">https://amzn.to/2VMR5qr</a>
+</div>
