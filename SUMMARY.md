@@ -382,6 +382,7 @@
 +   [Linux 杂志 259 2022-06 美国版](docs/linux-magazine-259-2022-06-usa/README.md)
 +   [Linux 精通：初学者及进阶全面指南](docs/linux-mastery-a-comprehensive-guide-for-beginners-and-beyond/README.md)
 +   [Linux Mint 20 自助指南第二版：非官方且兼容所有 Linux Mint 20 版本](docs/linux-mint-20-self-help-guide-2nd-edition-unofficial-and-com/README.md)
++   [Linux Mint 21 Vanessa 安装后自助指南：非官方且兼容 Linux Mint 21 版本](docs/linux-mint-21-vanessa-after-install-self-help-guide-unoffici/README.md)
 +   [Linux Mint 21.3 Cinnamon 初学者指南：解锁您电脑的强大与简单](docs/linux-mint-213-cinnamon-for-beginners-unlock-the-power-and-s/README.md)
 +   [Linux Mint 22 初学者用户指南](docs/linux-mint-22-user-manual-for-beginners/README.md)
 +   [Linux 操作系统：Linux 操作系统入门指南：Linux 系统管理员](docs/linux-operating-system-introduction-to-linux-operating-syste/README.md)

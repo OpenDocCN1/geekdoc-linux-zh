@@ -1,0 +1,455 @@
+name: Linux Mint 21 Vanessa After Install Self Help Guide： Unofficial And Compatible
+  With Linux Mint 21 Versions
+name_cn: Linux Mint 21 Vanessa 安装后自助指南：非官方且兼容 Linux Mint 21 版本
+slug: linux-mint-21-vanessa-after-install-self-help-guide-unoffici
+toc:
+- - '#'
+  - Linux Mint 21 Vanessa 安装后自助指南：非官方且兼容 Linux Mint 21 版本
+- - '#'
+  - 致谢
+- - '#'
+  - 安装机器详情
+- - '#'
+  - 引言
+- - '##'
+  - 图片编辑器
+- - '##'
+  - Blender
+- - '##'
+  - Gnu Image Manipulation Program
+- - '##'
+  - Inkscape
+- - '##'
+  - Krita
+- - '##'
+  - Pinta
+- - '##'
+  - Gnu 图像处理程序 (GIMP)
+- - '###'
+  - 使用 Snap Store 安装 Gnu 图像处理程序
+- - '###'
+  - 使用 snap 命令行安装 Gnu 图像处理程序
+- - '##'
+  - Inkscape
+- - '###'
+  - 使用软件管理器安装 Inkscape
+- - '###'
+  - 使用 apt 命令行安装 Inkscape
+- - '###'
+  - 使用 flatpak 命令行安装 Inkscape
+- - '###'
+  - 使用 Snap Store 安装 Inkscape
+- - '###'
+  - 使用 snap 命令行安装 Inkscape
+- - '##'
+  - Krita
+- - '###'
+  - 使用软件管理器安装 Krita
+- - '###'
+  - 使用 apt 命令行安装 Krita
+- - '###'
+  - 使用 flatpak 命令行安装 Krita
+- - '###'
+  - 使用 Snap Store 安装 Krita
+- - '###'
+  - 使用 snap 命令行安装 Krita
+- - '##'
+  - Pinta
+- - '###'
+  - 使用软件管理器安装 Pinta
+- - '###'
+  - 使用 apt 命令行安装 Pinta
+- - '###'
+  - 使用 flatpak 命令行安装 Pinta
+- - '###'
+  - 使用 Snap Store 安装 Pinta
+- - '###'
+  - 使用 snap 命令行安装 Pinta
+- - '##'
+  - 集成开发环境
+- - '###'
+  - '**Atom**'
+- - '###'
+  - '**Apache NetBeans**'
+- - '###'
+  - '**Bluefish Editor**'
+- - '###'
+  - '**Codium**'
+- - '###'
+  - '**Eclipse**'
+- - '###'
+  - '**GNU Emacs**'
+- - '###'
+  - '**Visual Studio Code**'
+- - '##'
+  - 详细安装
+- - '###'
+  - Atom
+- - '###'
+  - Apache NetBeans
+- - '###'
+  - Bluefish Editor
+- - '###'
+  - Codium
+- - '###'
+  - Eclipse
+- - '###'
+  - GNU Emacs
+- - '###'
+  - Visual Studio Code
+- - '##'
+  - 媒体播放器
+- - '##'
+  - Haruna
+- - '##'
+  - Parole
+- - '##'
+  - SMPlayer
+- - '##'
+  - VLC
+- - '##'
+  - Haruna
+- - '###'
+  - 使用软件管理器安装 Haruna
+- - '###'
+  - 使用 flatpak 命令行安装 Haruna
+- - '##'
+  - Parole
+- - '###'
+  - 使用软件管理器安装 Parole
+- - '###'
+  - 使用 apt 命令行安装 Parole
+- - '##'
+  - SMPlayer
+- - '###'
+  - 使用软件管理器安装 SMPlayer
+- - '###'
+  - 使用 apt 命令行安装 SMPlayer
+- - '###'
+  - 使用 flatpak 命令行安装 SMPlayer
+- - '###'
+  - 使用 Snap Store 安装 SMPlayer
+- - '###'
+  - 使用 snap 命令行安装 SMPlayer
+- - '##'
+  - VLC
+- - '###'
+  - 使用软件管理器安装 VLC
+- - '###'
+  - 使用 apt 命令行安装 VLC
+- - '###'
+  - 使用 flatpak 命令行安装 VLC
+- - '##'
+  - 现代游戏
+- - '##'
+  - WINE
+- - '##'
+  - Lutris
+- - '##'
+  - Steam
+- - '##'
+  - ProtonUp-Qt
+- - '##'
+  - Proton-GE
+- - '##'
+  - WINE-GE
+- - '##'
+  - DXVK
+- - '##'
+  - VKD3D
+- - '##'
+  - Gnome Games
+- - '##'
+  - KDE Games
+- - '##'
+  - Gamehub
+- - '##'
+  - WINE
+- - '###'
+  - 使用 apt 命令行安装 WINE Staging
+- - '#'
+  - DXVK
+- - '##'
+  - 使用 `.sh` 命令行安装 DXVK
+- - '#'
+  - VKD3D
+- - '##'
+  - 使用 `.sh` 命令行安装 VKD3D
+- - '#'
+  - Gnome Games
+- - '##'
+  - 使用 `apt` 命令行安装 Gnome Games
+- - '#'
+  - KDE Games
+- - '##'
+  - 使用 `apt` 命令行安装 KDE Games
+- - '#'
+  - 视频流媒体音乐 (Music On Demand Streaming)
+- - '###'
+  - Amazon Music Unlimited
+- - '###'
+  - Apple Music
+- - '###'
+  - Spotify
+- - '###'
+  - Tidal
+- - '###'
+  - Youtube Music
+- - '##'
+  - Amazon Music Unlimited
+- - '##'
+  - Apple Music
+- - '##'
+  - Spotify
+- - '##'
+  - Tidal
+- - '##'
+  - Youtube Music
+- - '#'
+  - LibreOffice
+- - '##'
+  - 使用 apt 命令行安装 LibreOffice
+- - '###'
+  - 使用 flatpak 命令行安装 LibreOffice
+- - '###'
+  - 使用 Snap Store 安装 LibreOffice
+- - '###'
+  - 使用 snap 命令行安装 LibreOffice
+- - '#'
+  - OnlyOffice
+- - '##'
+  - 使用软件管理器安装 OnlyOffice
+- - '###'
+  - 使用 flatpak 命令行安装 OnlyOffice
+- - '###'
+  - 使用 Snap Store 安装 OnlyOffice
+- - '###'
+  - 使用 snap 命令行安装 OnlyOffice
+- - '###'
+  - 使用 .deb 安装 OnlyOffice
+- - '#'
+  - OpenOffice
+- - '##'
+  - 使用 .AppImage 安装 OpenOffice
+- - '#'
+  - 分区管理器
+- - '##'
+  - GParted
+- - '###'
+  - 使用软件管理器安装 GParted
+- - '###'
+  - 使用 apt 命令行安装 GParted
+- - '##'
+  - KDE 分区管理器
+- - '###'
+  - 使用软件管理器安装 KDE Partition Manager
+- - '###'
+  - 使用 apt 命令行安装 KDE Partition Manager
+- - '#'
+  - 密码管理器
+- - '##'
+  - 1Password
+- - '###'
+  - 使用 .deb 安装 1Password
+- - '##'
+  - Bitwarden
+- - '###'
+  - 使用软件管理器安装 Bitwarden
+- - '###'
+  - 使用 flatpak 命令行安装 Bitwarden
+- - '###'
+  - 使用 Snap Store 安装 Bitwarden
+- - '###'
+  - 使用 snap 命令行安装 Bitwarden
+- - '###'
+  - 使用 .deb 安装 Bitwarden
+- - '##'
+  - Buttercup
+- - '###'
+  - 使用 .AppImage 安装 Buttercup
+- - '##'
+  - KeePassXC
+- - '###'
+  - 使用软件管理器安装 KeePassXC
+- - '###'
+  - 使用 apt 命令行安装 KeePassXC
+- - '###'
+  - 使用 flatpak 命令行安装 KeePassXC
+- - '###'
+  - 使用 Snap Store 安装 KeePassXC
+- - '###'
+  - 使用 snap 命令行安装 KeePassXC
+- - '##'
+  - LastPass
+- - '###'
+  - 使用 .sh 命令行安装 LastPass 通用安装程序
+- - '#'
+  - 远程办公
+- - '##'
+  - Citrix
+- - '##'
+  - Microsoft Teams
+- - '##'
+  - Slack
+- - '##'
+  - Zoom
+- - '#'
+  - 点击，Debian 软件包
+- - '#'
+  - 在这里，Linux 版 Citrix Workspace (x86_64)
+- - '##'
+  - Microsoft Teams
+- - '###'
+  - 使用 Snap Store 安装 Microsoft Teams
+- - '###'
+  - 使用命令行安装 Microsoft Teams
+- - '##'
+  - Slack
+- - '###'
+  - 使用 .deb 安装 Slack
+- - '##'
+  - Zoom
+- - '###'
+  - 使用 .deb 安装 Zoom
+- - '#'
+  - 沙箱
+- - '##'
+  - Firejail
+- - '###'
+  - 使用软件管理器安装 Firejail
+- - '###'
+  - 使用 apt 命令行安装 Firejail
+- - '##'
+  - Firetools
+- - '###'
+  - 使用软件管理器安装 Firetools
+- - '###'
+  - 使用 apt 命令行安装 Firetools
+- - '#'
+  - 软件发行
+- - '##'
+  - AppImage
+- - '##'
+  - Flatpak
+- - '##'
+  - Snap
+- - '##'
+  - Java
+- - '##'
+  - JRE
+- - '##'
+  - JDK
+- - '##'
+  - deb-get
+- - '##'
+  - Outlet
+- - '##'
+  - pacstall
+- - '##'
+  - OBS Studio
+- - '###'
+  - 使用软件管理器安装 OBS Studio
+- - '###'
+  - 使用 apt 命令行安装 OBS Studio
+- - '##'
+  - 安装方法
+- - '###'
+  - 使用 .sh 命令行安装 OBS Studio
+- - '###'
+  - 使用 curl 命令行安装 OBS Studio
+- - '###'
+  - 使用 Snap Store 安装 OBS Studio
+- - '###'
+  - 使用 snap 命令行安装 OBS Studio
+- - '#'
+  - 系统清理
+- - '##'
+  - Bleachbit
+- - '###'
+  - 使用软件管理器安装 Bleachbit
+- - '###'
+  - 使用 apt 命令行安装 Bleachbit
+- - '##'
+  - Czkawka
+- - '###'
+  - 使用软件管理器安装 Czkawka
+- - '###'
+  - 使用 flatpak 命令行安装 Czkawka
+- - '###'
+  - 使用 Snap Store 安装 Czkawka
+- - '###'
+  - 使用 snap 命令行安装 Czkawka
+- - '##'
+  - FSlint Unofficial
+- - '###'
+  - 使用软件管理器安装 FSlint Unofficial
+- - '###'
+  - 使用 apt管理器安装 FSlint Unofficial
+- - '###'
+  - 使用 Snap Store 安装 FSlint Unofficial
+- - '###'
+  - 使用 snap 命令行安装 FSlint Unofficial
+- - '##'
+  - Stacer
+- - '###'
+  - 使用软件管理器安装 Stacer
+- - '###'
+  - 使用 apt 命令行安装 Stacer
+- - '##'
+  - Synaptic Manager
+- - '###'
+  - 使用软件管理器安装 Synaptic Manager
+- - '###'
+  - 使用 apt 命令行安装 Synaptic Manager
+- - '##'
+  - Sweeper
+- - '###'
+  - 使用软件管理器安装 Sweeper
+- - '###'
+  - 使用 apt 命令行安装 Sweeper
+- - '#'
+  - 系统设置
+- - '##'
+  - 高级配置
+- - '##'
+  - 网络配置
+- - '##'
+  - 用户界面
+- - '##'
+  - 软件更新
+- - '##'
+  - 内核与驱动
+- - '##'
+  - 系统维护
+- - '##'
+  - 系统恢复
+- - '##'
+  - 硬件配置
+- - '##'
+  - 电源管理
+- - '##'
+  - 显示设置
+- - '##'
+  - 音频设置
+- - '##'
+  - 键盘和鼠标
+- - '##'
+  - 输入设备
+- - '##'
+  - 输出设备
+- - '##'
+  - 打印机和扫描仪
+- - '##'
+  - 蓝牙
+- - '##'
+  - Wi-Fi 网络
+- - '##'
+  - 有线网络
+- - '##'
+  - VPN 配置
+- - '##'
+  - 文件共享
+- - '##'
+  - 远程桌面
+- - '##'
+  - 用户帐户
