@@ -1,0 +1,2 @@
++   [数据分析与 Linux 操作系统合集教程：使用 Linux 操作系统学习数据分析、预测性分析与数据科学初学者指南](README.md)
++   [数据分析与 Linux 操作系统合集教程：使用 Linux 操作系统学习数据分析、预测性分析与数据科学初学者指南](data-analytics-and-linux-operating-system-2-bundle-manuscrip_0.md)
