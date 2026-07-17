@@ -1,0 +1,4476 @@
+<p><img src="resources/title_page.png" /></p>
+<p><span id="title_page.xhtml"></span></p>
+<div id="title_page.xhtml_cover-image">
+<img src="resources/title_page.png" alt="Gourmet Vim Cookbook" />
+</div>
+<p><span id="verso_page.xhtml"></span></p>
+<h2>Gourmet Vim Cookbook</h2>
+<h3>A collection of 200+ Vim recipes</h3>
+<p> </p>
+<h4>Igor Irianto</h4>
+<p> </p>
+<p>This book is for sale at <a
+href="http://leanpub.com/gourmetvim">http://leanpub.com/gourmetvim</a></p>
+<p>This version was published on 2021-04-10</p>
+<p><img src="resources/leanpub-logo.png" id="publisher-logo"
+alt="publisher&#39;s logo" /></p>
+<p>*   *   *   *   *</p>
+<p>This is a <a href="http://leanpub.com">Leanpub</a> book. Leanpub
+empowers authors and publishers with the Lean Publishing process. <a
+href="http://leanpub.com/manifesto">Lean Publishing</a> is the act of
+publishing an in-progress ebook using lightweight tools and many
+iterations to get reader feedback, pivot until you have the right book
+and build traction once you do.</p>
+<p>*   *   *   *   *</p>
+<div>
+© 2021 Igor Irianto
+</div>
+<p><span id="toc.xhtml"></span></p>
+<section class="frontmatter TableOfContents toc">
+<h2 id="toc.xhtml_toc">Table of Contents</h2>
+<nav xmlns:epub="http://www.idpf.org/2007/ops" epub:type="landmarks" id="guide">
+<h2>Guide</h2>
+<ol>
+<li><a href="#chap00.xhtml" class="bodymatter">Begin Reading</a></li>
+</ol>
+</nav>
+</section>
+<p><span id="chap00.xhtml"></span></p>
+<h1 class="chapter" id="chap00.xhtml_leanpub-auto-first-things">First
+things</h1>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-what-is-this-book">What is this book?</h2>
+<p>Text editing is an art.</p>
+<p>When programming, we write re-usable codes. Why should it be any
+different with text editing?</p>
+<p>The Gourmet Vim explores the art of efficient text editing using Vim,
+with 200+ practical examples. When learning a new skill, examples are
+indispensable, having numerous examples will solidify these concepts
+more effectively.</p>
+<p>This book is full of tips and tricks on how to do common (and some
+uncommon) actions in Vim that you can practice immediately. It will give
+you a jump start to use Vim like a pro (even if you’re already one,
+there is always something new that you can learn).</p>
+<p>When you’re done reading this, you’ll be better at Vim than ever
+before.</p>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-some-naming-conventions">Some naming
+conventions</h2>
+<p>Here I refer to commands starting with <code>:</code> as
+“command-line commands”. Other literatures may refer to them as “Ex
+commands”. If you wonder if they are different, they are the same
+thing.</p>
+<p>Here I refer to the terminal commands when accessed from inside Vim
+as “external commands”. You may hear them referred to on the internet as
+“filter command” or “bang operator”. Again, these are all referring to
+the same thing.</p>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-where-are-the-vimscripts">Where are the
+Vimscripts?</h2>
+<p>Some tips in this book utilize Vimscript (Vim’s built-in scripting
+language). However, you will find that there is no dedicated section for
+Vimscript. This is because this book is intended to be mainly for
+practical Vim uses.</p>
+<p>Including a dedicated Vimscript section will expand the scope of this
+book exponentially because now we are dealing with a whole programming
+language. However, if you want to learn Vimscript basics, check out my
+other work <a
+href="https://github.com/iggredible/Learn-Vim">Learn-Vim</a>.</p>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-why-did-you-organize-this-book-this-way">Why
+did you organize this book this way?</h2>
+<p>In the beginning, I planned to write a giant monolithic cookbook (I
+actually did). But it was hard to search for things. So I decided to
+split them into different categories.</p>
+<p>The recipes are organized loosely under different categories. Expect
+some overlaps.</p>
+<h2 class="section"
+id="chap00.xhtml_leanpub-auto-how-to-read-this-book">How to read this
+book?</h2>
+<p>You can read the recipes in any order. They are completely
+independent.</p>
+<p>This is a practical book. To become good in Vim you need to develop
+your muscle memory, not head knowledge. You don’t learn how to cook by
+only reading cookbooks. You learn how to cook by actually cooking
+foods.</p>
+<p>You need to type along with every command you see in each recipe.
+Repeat them several times. Try different variations. Read the
+<code>:help</code> page for that command. Understand the bigger picture.
+Your goal is to be able to execute that command naturally and
+instinctively.</p>
+<p>Learn the concepts, not the commands.</p>
+<p><span id="chap01.xhtml"></span></p>
+<h1 class="chapter"
+id="chap01.xhtml_leanpub-auto-navigation">Navigation</h1>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-basic-navigations">Basic Navigations</h2>
+<p><strong>Problem:</strong><br />
+There are too many commands to remember for moving around in Vim.</p>
+<p><strong>Solution:</strong><br />
+You don’t need to learn all Vim navigation keys. You just need to
+remember a few important ones to move comfortably.</p>
+<p>A few commands I suggest you to commit to memory if you are just
+starting out:</p>
+<ul>
+<li><code>h/j/k/l</code> - left / down / up / right.</li>
+<li><code>w/e/b</code> - forward to the start of the next word / forward
+to the end of the next word / backward to the beginning of the previous
+word.</li>
+<li><code>{/}</code> - previous / next paragraph.</li>
+<li><code>gg/G</code> - start of the file / end of the file.</li>
+</ul>
+<p>That’s all. Less than a dozen keys. You can learn more navigation
+keys as you progress.</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-toggle-between-files">Toggle Between
+Files</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly return to the previous file.</p>
+<p><strong>Solution:</strong><br />
+Use <code>Ctrl-^</code> to toggle between the current file and the
+previously edited file.</p>
+<p>When you pass a number to <code>Ctlr-^</code>, Vim will go to that
+buffer number in your buffer list. If you have 5 buffers opened and you
+run:</p>
+<ul>
+<li><code>5 Ctrl-^</code>, Vim will go to buffer number 5.</li>
+<li><code>2 Ctrl-^</code>, Vim will go to buffer number 2.</li>
+</ul>
+<p>You can also use <code>Ctrl-I</code> and <code>Ctrl-O</code> to
+quickly go to the next and previous cursor location in the jump
+list.</p>
+<p>Vim remembers where you have jumped and stores that in a jump list
+(<code>:jumps</code>). <code>Ctrl-I</code> and <code>Ctrl-O</code> let
+you to navigate up and down that list. This is useful for tracing your
+steps.</p>
+<p>A jump is typically a movement that moves your cursor for more than
+one line (<code>h/j/k/l</code> aren’t jumps but <code>{/}</code>
+are).</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-navigating-parentheses-brackets-and-braces">Navigating
+Parentheses, Brackets, and Braces</h2>
+<p><strong>Problem:</strong><br />
+You are lost in a jungle of parentheses.</p>
+<p><strong>Solution:</strong><br />
+Use <code>%</code> to go to a matching parentheses / brackets / braces
+(<code>( ) [ ] { }</code>).</p>
+<p>If you have expressions like
+<code>(lambda (y) ((lambda (x) (* x y)) 3))</code>, you can quickly
+navigate to the other end of the parentheses with <code>%</code>.</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-go-to-a-different-line">Go to a Different
+Line</h2>
+<p><strong>Problem:</strong><br />
+You need to go to a different line number in the file.</p>
+<p><strong>Solution:</strong><br />
+Vim has different line operators to go to different lines.</p>
+<ul>
+<li>You can go to line number n with <code>:n</code> or <code>nG</code>.
+If you need to go to line 10, run <code>:10</code> or
+<code>10G</code>.</li>
+<li>If you pass a count to <code>%</code>, it is now a line operator.
+<code>50%</code> jumps to the middle file. <code>67%</code> jumps to the
+2/3 position of the file.</li>
+</ul>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-same-line-navigation">Same-Line
+Navigation</h2>
+<p><strong>Problem:</strong><br />
+You need to go to a different column in the same line.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Use <code>f</code> and <code>t</code> for a forward and backward
+in-line search. To go to the next “a” in the current line, run
+<code>fa</code>. To go until the next “b”, run <code>tb</code>. To
+repeat this search, use <code>;</code> to search forward and
+<code>,</code> to search backward.</li>
+<li>Use <code>0</code> and <code>$</code> to go to the beginning and the
+end of the line. You can also go to the first character of a wrapped
+line with <code>g0</code> and to the last character of a wrapped line
+with <code>g$</code>. To wrap lines, run <code>set wrap</code>.</li>
+<li>Use <code>^</code> and <code>g_</code> to go to the first non-blank
+and last non-blank of the line.</li>
+<li>Use <code>n|</code> to go to the column number n of the current
+line. <code>10|</code> takes you to the 10th column.</li>
+</ul>
+<h2 class="section" id="chap01.xhtml_leanpub-auto-screen-adjust">Screen
+Adjust</h2>
+<p><strong>Problem:</strong><br />
+You need to center your cursor to the center of the screen.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Use <code>H M L</code> to put the cursor at the top, middle, or
+lower part of the screen.</li>
+<li>Use <code>zb</code>, <code>zz</code>, and <code>zt</code> to move
+the current line to the bottom, center, or top of the screen.</li>
+</ul>
+<h2 class="section" id="chap01.xhtml_leanpub-auto-scroll">Scroll</h2>
+<p><strong>Problem:</strong><br />
+You can’t use mouse in Vim, hence you can’t scroll.</p>
+<p><strong>Solution:</strong><br />
+Vim lets you use <code>Ctrl-E / D / F</code> and
+<code>Ctrl-Y / U / B</code> to scroll up or down a line / half a screen
+/ a whole screen.</p>
+<h2 class="section" id="chap01.xhtml_leanpub-auto-go-to-the-last">Go to
+the Last…</h2>
+<p><strong>Problem:</strong><br />
+You just did an action and you wanted to go back to the location where
+you did that action.</p>
+<p><strong>Solution:</strong><br />
+Vim remembers many actions you did. You can quickly go back to the
+location where you did that action with marks.</p>
+<p>Vim marks can record positions. There are two different mark
+specificities: line marks (less accurate) and location marks (more
+accurate).</p>
+<p>A line mark uses a single quote, like <code>'m</code> (where m is the
+mark symbol) and a location mark uses a single backtick, like ```m``. A
+line mark will only take you to the correct row. A location mark will
+take you to the correct row and column. In the following examples, I
+will only use the line mark, but remember that for each line mark, there
+is a location mark counterpart.</p>
+<p>Use <code>'[</code> or <code>']</code> to go to the start or end of a
+recently changed or yanked text.</p>
+<p>If you recently ran <code>yj</code> on the following phrase:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>I am a phrase
+I am another phrase</code></pre>
+</div>
+</figure>
+<p>Pressing <code>']</code> puts your cursor on the second line.</p>
+<p>Use <code>'&lt;</code> or <code>'&gt;</code> to go to the start or
+end of a recently visually highlighted text.</p>
+<p>If you recently ran <code>Vj</code> to highlight the current line and
+the line below on the following phrase:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>I am a phrase
+I am another phrase</code></pre>
+</div>
+</figure>
+<p>Pressing <code>'&gt;</code> puts your cursor on the second line.</p>
+<p>Use <code>'.</code> to go to the recently modified line</p>
+<p>If you recently inserted, modified, or deleted a text, pressing
+<code>'.</code> puts the cursor on that line.</p>
+<p>Use <code>''</code> to quickly jump to the last position before your
+last jump. Use double backticks for the location mark counterpart.</p>
+<p>Use <code>'0</code> to go to the last position before you exited
+Vim.</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-go-to-the-filename-under-the-cursor">Go to
+the Filename Under the Cursor</h2>
+<p><strong>Problem:</strong><br />
+You need to jump to a file.</p>
+<p><strong>Solution:</strong><br />
+When your cursor is on a filename, use <code>gf</code> to jump to that
+file.</p>
+<p>If your cursor is on “./some_lib.py”, pressing <code>gf</code> will
+take you to the file <code>some_lib.py</code> relative to the current
+directory. If that file doesn’t exist, Vim will throw an error.</p>
+<h2 class="section"
+id="chap01.xhtml_leanpub-auto-go-to-the-place-where-a-text-was-inserted-and-enter-the-insert-mode">Go
+to the Place Where a Text Was Inserted and Enter the Insert Mode</h2>
+<p><strong>Problem:</strong><br />
+You recently wrote a text and you needed to add to that text.</p>
+<p><strong>Solution:</strong><br />
+With <code>gi</code>, you can go to where the last text was inserted and
+automatically enter the insert mode.</p>
+<p>This is useful when you just wrote something and you needed to add to
+that text. It only works within a file (if you recently wrote something
+on a different file, pressing <code>gi</code> won’t take you to the
+other file).</p>
+<p><span id="chap02.xhtml"></span></p>
+<h1 class="chapter" id="chap02.xhtml_leanpub-auto-search">Search</h1>
+<h2 class="section" id="chap02.xhtml_leanpub-auto-basic-search">Basic
+Search</h2>
+<p><strong>Problem:</strong><br />
+You need to do a basic keyword search in Vim.</p>
+<p><strong>Solution:</strong><br />
+You can do a basic keyword search with <code>/keyword</code> to search
+forward and <code>?keyword</code> to search backward. You can either
+search for a literal word or use a regular expression.</p>
+<p>To repeat the last search forward, use <code>n</code>. To repeat the
+last search backward, use <code>N</code>.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-starting-regex">Starting Regex</h2>
+<p><strong>Problem:</strong><br />
+You want to start using a regular expression in your searches, but don’t
+know where to start.</p>
+<p><strong>Solution:</strong><br />
+You can get really far with only a little regular expression knowledge.
+These four should be enough to get started:</p>
+<ul>
+<li><code>.</code> - any character.</li>
+<li><code>n+</code> - one or more n.</li>
+<li><code>n*</code> - zero or more n.</li>
+<li><code>n{2,5}</code> - between two to five n.</li>
+</ul>
+<p>You have to escape the <code>+</code> and <code>{ }</code> symbols or
+else Vim will treat them as a literal character.</p>
+<ul>
+<li><code>/d.g</code> matches “dog”, “dig”, “dug”.</li>
+<li><code>/a\+</code> matches “a”, “aa”, “aaaaaaaaaa”, etc.</li>
+<li><code>/a*</code> matches “”, “a”, “aaaaa”, etc.</li>
+<li><code>/z\{2,5\}</code> matches “zz”, “zzz”, “zzzz”, and “zzzzz”</li>
+</ul>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-stop-searching-after-the-last-match">Stop
+Searching After the Last Match</h2>
+<p><strong>Problem:</strong><br />
+You want to stop searching when you reach the last match instead of
+looping back to the top of the file.</p>
+<p><strong>Solution:</strong><br />
+This default feature to loop the search matches is enabled by the
+<code>'wrapscan'</code> option. To stop it, use the
+<code>'nowrapscan'</code> option (<code>set nowrapscan</code>).</p>
+<p>Suppose that in the current document there were 3 matches. When you
+reached the third match, Vim will automatically cycle back to the first
+match. Sometimes you want the search to stop after the last match.</p>
+<p>With <code>'nowrapscan'</code> on, Vim now will stop searching after
+the 3rd match.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-show-the-search-count">Show the Search
+Count</h2>
+<p><strong>Problem:</strong><br />
+You want to know how many keyword matches is in the file.</p>
+<p><strong>Solution:</strong><br />
+To display the match number, add this in your vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>set shortmess-=S</code></pre>
+</div>
+</figure>
+<p>Now when you search (<code>/keyword</code>), Vim will display the
+number of matches, like <code>[3/5]</code>.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-moving-the-cursor-below-or-above-the-match">Moving
+the Cursor Below or Above the Match</h2>
+<p><strong>Problem:</strong><br />
+You need to offset the cursor when searching by a few lines.</p>
+<p><strong>Solution:</strong><br />
+To offset it by n lines, use <code>/pattern/n</code>. Your cursor will
+land on the nth line below the keyword match. If you run
+<code>/donut/3</code>, your cursor will go to 3 lines below the “donut”
+match. This is the same as running <code>/donut/+3</code>.</p>
+<p>To go to the third line above the match, run
+<code>/donut/-3</code>.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-moving-the-cursor-to-the-end-of-the-match">Moving
+the Cursor to the End of the Match</h2>
+<p><strong>Problem:</strong><br />
+The cursor always lands at the first character of the match and you need
+to offset it to the right end of the match.</p>
+<p><strong>Solution:</strong><br />
+Use the <code>e</code> offset modifier when searching. If you run
+<code>/donut/e</code>, the cursor will no longer be on the “d” of
+“donut”, but will be on the “t” of “donut”.</p>
+<p>To offset the offset, add numbers to the argument:</p>
+<ul>
+<li><code>/donut/e-2</code> to offset it 2 characters to the left of the
+end match (cursor will be on the letter “n” of “donut”).</li>
+<li><code>/donut/e+3</code> to offset it 3 characters to the right of
+the end match (cursor will be 3 characters after “donut”).</li>
+</ul>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-search-for-a-character-enclosed-in-a-collection">Search
+for a Character Enclosed in a Collection</h2>
+<p><strong>Problem:</strong><br />
+You want to search for either “A”, “B”, or “C”.</p>
+<p><strong>Solution:</strong><br />
+Use Vim collection (<code>[]</code>) to search for any enclosed
+character. Run <code>/[ABC]</code> to match either “A”, “B”, or “C”.</p>
+<p>You can use a collection for a sequence of characters too.</p>
+<ul>
+<li><code>/[A-Z]</code> to search for any uppercase letter.</li>
+<li><code>/[0-9]</code> to search for any number.</li>
+<li><code>/[A-Za-z]</code> to search for any lowercase or uppercase
+letter.</li>
+</ul>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-search-for-a-keyword-at-the-start-or-at-the-end-of-the-line">Search
+for a Keyword at the Start or at the End of the Line</h2>
+<p><strong>Problem:</strong><br />
+You are searching for “Donut” but it has to be at the start of the
+line.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>To search for “Donut” at the start of the line, use
+<code>/^Donut</code>.</li>
+<li>To search for “donut” at the end of the line, use
+<code>/donut$</code>.</li>
+</ul>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-search-for-a-line-containing-a-starting-middle-and-ending-keyword">Search
+for a Line Containing a Starting, Middle, and Ending Keyword</h2>
+<p><strong>Problem:</strong><br />
+You need to search for a line that starts with “strawberry”, has
+“banana” somewhere in the middle, and ends with “chocolate”. You don’t
+care what goes in-between.</p>
+<p><strong>Solution:</strong><br />
+Use <code>/^strawberry.*banana.*chocolate$</code>.</p>
+<ul>
+<li><code>^strawberry</code> means that the line starts with
+“strawberry”.</li>
+<li><code>.*</code> means zero or more of any character.
+<code>.*banana.*</code> means that anything goes before and after
+“banana”.</li>
+<li><code>chocolate$</code> means that the line ends with
+“chocolate”.</li>
+</ul>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-greedy-vs-non-greedy-search-patterns">Greedy
+vs Non-Greedy Search Patterns</h2>
+<p><strong>Problem:</strong><br />
+Sometimes you need to search for the longest pattern and sometimes you
+need to search for the shortest pattern.</p>
+<p><strong>Solution:</strong><br />
+There are two types of search patterns: greedy and non-greedy.</p>
+<ul>
+<li>Greedy matches the longest pattern. <code>.*</code> is an example of
+greedy.</li>
+<li>Non-greedy matches the shortest pattern. <code>\{-}</code> is an
+example of non-greedy.</li>
+</ul>
+<p>If you have a string “chocolatedonutdonut”, running
+<code>/ch.*donut</code> matches the entire string “chocolatedonutdonut”
+(longest match) while running <code>/ch\{-}donut</code> matches
+“chocolatedonut” (shortest match).</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-searching-for-a-keyword-separated-by-end-of-line">Searching
+for a Keyword Separated by End-of-Line</h2>
+<p><strong>Problem:</strong><br />
+You need to find keywords that are separated by end-of-line.</p>
+<p><strong>Solution:</strong><br />
+The <code>\_.</code> pattern searches for the subsequent pattern with
+end-of-line. It is best used with <code>\{-}</code> or <code>*</code>
+(non-greedy or greedy) modifiers.</p>
+<p>Given the text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>strawberry
+blueberry
+chocolate
+pancakes
+and more
+pancakes</code></pre>
+</div>
+</figure>
+<ul>
+<li><code>/strawberry\_.\{-}pancakes</code> matches (non-greedy)
+“strawberry”, followed by anything, including newlines, then the first
+“pancakes” on line 4.</li>
+<li><code>/strawberry\_.*pancakes</code> matches (greedy) “strawberry”
+to the last “pancakes” on line 6.</li>
+</ul>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-search-for-either-or">Search for Either
+Or</h2>
+<p><strong>Problem:</strong><br />
+You need to match for either “pancakes” or “waffles”.</p>
+<p><strong>Solution:</strong><br />
+<code>/pancakes\|waffles</code> searches for either “pancakes” or
+“waffles”.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-avoid-typing-forward-slashes">Avoid Typing
+Forward-Slashes</h2>
+<p><strong>Problem:</strong><br />
+When you are searching for a path or an URL, like
+<code>/some/very/long/path</code>, it is a hassle having to escape the
+forward slashes.</p>
+<p><strong>Solution:</strong><br />
+Instead of searching with <code>/</code> and having to escape every
+single <code>/</code> in the pattern like
+<code>/\/some\/very\/long\/path</code>, use the <code>?</code> search
+operator instead. <code>?/some/very/long/path</code>.</p>
+<p>Note that <code>?</code> will search backward, but you can just use
+<code>N</code> to search “forward”. This saves you from having to type
+escapes.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-marking-the-start-and-end-of-a-match">Marking
+the Start and End of a Match</h2>
+<p><strong>Problem:</strong><br />
+You want to match for a part of a longer pattern.</p>
+<p><strong>Solution:</strong><br />
+Use the <code>\zs</code> (start) and <code>\ze</code> (end) to mark the
+start and end of a match.</p>
+<p>Given the following text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>sugardonut
+chocodonut
+chocolate</code></pre>
+</div>
+</figure>
+<p>Explanation:</p>
+<ul>
+<li>To match the “donut” in “chocodonut”, run
+<code>/choco\zsdonut</code>.</li>
+<li>To match the “choco” in “chocodonut”, run
+<code>/choco\zedonut</code>.</li>
+<li>To match “do” in “sugardonut”, run
+<code>/sugar\zsdo\zenut</code>.</li>
+</ul>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-search-for-the-nth-occurrence-in-a-line">Search
+for the Nth Occurrence in a Line</h2>
+<p><strong>Problem:</strong><br />
+You need to search for every 2nd occurrence on each line.</p>
+<p><strong>Solution:</strong><br />
+Running <code>/\(.\{-}\zsdonut\)\{2\}</code> will match every second
+“donut” occurrences (with very magic:
+<code>/\v(.{-}\zsdonut){2}</code>)</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Chocolate donut, blueberry donut, raspberry donut</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-search-for-any-text-surrounded-by-a-particular-pattern">Search
+for Any Text Surrounded by a Particular Pattern</h2>
+<p><strong>Problem:</strong><br />
+You need to search for any text, any length, that is surrounded by a
+pair of double-quotes.</p>
+<p><strong>Solution:</strong><br />
+To search for any text that is surrounded by a pair of double-quotes,
+use <code>/"[^"]*"</code>.</p>
+<p>This pattern is useful to search for a body of text surrounded by a
+character.</p>
+<ul>
+<li>To search for any text surrounded by a pair of single quotes, use
+<code>/'[^']*'</code>.</li>
+<li>To search for any text surrounded by a pair of commas, use
+<code>/,[^,]*'</code>.</li>
+</ul>
+<p>The collection syntax, <code>[]</code>, when you add a caret
+(<code>^</code>) means character negation. <code>[^"]*</code> means zero
+or more any non-double-quote character. <code>[^']</code> means any
+non-single-quote character.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-repeat-the-last-search">Repeat the Last
+Search</h2>
+<p><strong>Problem:</strong><br />
+You want to repeat the last search.</p>
+<p><strong>Solution:</strong><br />
+To repeat the last search, use <code>//</code> or <code>??</code>. You
+can also run an empty search <code>/&lt;Enter&gt;</code> or
+<code>?&lt;Enter&gt;</code> to use the last search.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-force-a-case-sensitive-search">Force a
+Case-Sensitive Search</h2>
+<p><strong>Problem:</strong><br />
+You have <code>ignorecase</code> and <code>smartcase</code> options and
+you need to specifically search for a lowercase word.</p>
+<p><strong>Solution:</strong><br />
+Adding <code>\C</code> to the keyword forces a case-sensitive
+search.</p>
+<p>This is useful if you have <code>ignorecase</code> and
+<code>smartcase</code> settings because Vim will do a case insensitive
+search if you do <code>/donut</code>. However, <code>/donut\C</code>
+will explicitly match for “donut” and not “Donut” or “DONUT”.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-optional-search">Optional Search</h2>
+<p><strong>Problem:</strong><br />
+You need to search for optional phrases in a word.</p>
+<p><strong>Solution:</strong><br />
+The <code>\=</code> modifier makes the preceding character optional.</p>
+<p>If you have the string “hero”, “heroes”, and “heros”,
+<code>/hero\(es\)\=</code> will match “hero” and “heroes” (the suffix
+“es” is optional). While <code>/heros\=</code> will match “hero” and
+“heros” (the suffix “s” is optional).</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-search-a-phrase-in-multiple-files-with-vimgrep">Search
+a Phrase in Multiple Files With Vimgrep</h2>
+<p><strong>Problem:</strong><br />
+You need to search for “food” inside multiple files.</p>
+<p><strong>Solution:</strong><br />
+Vim has a built-in grep to search in files named <code>:vim</code> (you
+read that right, this command is called vim, short for
+<code>:vimgrep</code>).</p>
+<p>To search for “food” in all Javascript files recursively, run
+<code>:vimgrep /food/ **/*.js</code>. To search for “food” in all
+Javascript files in the current directory, run
+<code>:vimgrep /food/ *.js</code>.</p>
+<p>Vimgrep uses quickfix (<code>:h quickfix</code>). Use
+<code>:copen</code> to display the results.</p>
+<p>Alternatively, you can also use the terminal grep program. Vim has a
+<code>:grep</code> command that uses whatever command is assigned to the
+<code>'grepprg'</code> option (by default, it uses the terminal grep).
+To search for “donut” in the current directory, run
+<code>:grep "donut" . -R</code>.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-adding-matches-to-an-existing-quickfix-list">Adding
+Matches to an Existing Quickfix List</h2>
+<p><strong>Problem:</strong><br />
+You did a search with vimgrep and you need to add more items to the
+result.</p>
+<p><strong>Solution:</strong><br />
+Vimgrep has an append version: <code>:vimgrepa</code>.</p>
+<p>If you run <code>:vimgrep /breakfast/ **/*.js</code> followed by
+<code>:vimgrep /lunch/ **/*.js</code>, the second vimgrep search
+overwrites the first one. That’s not good.</p>
+<p>To add the search results, first run
+<code>:vimgrep /breakfast/**/*.js</code>, then run
+<code>:vimgrepa /lunch/ **/*.js</code>. Now you have a list of both
+“breakfast” and “lunch” searches.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-alias-for-digits-and-words">Alias for
+Digits and Words</h2>
+<p><strong>Problem:</strong><br />
+Typing <code>[0-9]</code> is too verbose. Is there a shorter alias?</p>
+<p><strong>Solution:</strong><br />
+Vim has predefined characters to help with search. <code>\d</code> is an
+alias for digits <code>[0-9]</code>. To search for a digit followed by
+“foo”, run <code>/\dfoo</code>. This will match “1foo”, “2foo”.</p>
+<p>Similarly, <code>\w</code> is an alias for a “word” character
+<code>[0-9A-Za-z_]</code>. To search for the number 0 followed by any
+two word characters like “0ab” or “0a1” or “0_1”, run
+<code>/0\w\w</code>.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-more-predefined-characters">More
+Predefined Characters</h2>
+<p><strong>Problem:</strong><br />
+You wonder if there are more useful aliases like <code>\d</code> and
+<code>\w</code>.</p>
+<p><strong>Solution:</strong><br />
+The next 5 useful character aliases (in my opinion), are:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>\s    Whitespace character (space and tab)
+\S    Non-whitespace character (everything except space and tab)
+\w    Word character [0-9A-Za-z_]
+\l    Lowercase alphas [a-z]
+\u    Uppercase character [A-Z]</code></pre>
+</div>
+</figure>
+<p>If you want to see the whole list, check out
+<code>:h /character-classes</code>.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-quickly-search-for-the-word-under-the-cursor">Quickly
+Search for the Word Under the Cursor</h2>
+<p><strong>Problem:</strong><br />
+You want to quickly search for the word your cursor is on.</p>
+<p><strong>Solution:</strong><br />
+Use <code>*</code> and <code>#</code> to search for the word under the
+cursor forward and backward. If your cursor is on the word “donut”, if
+you press <code>*</code>, Vim does <code>/\&lt;donut\&gt;</code>.
+<code>\&lt;</code> and <code>\&gt;</code> means the beginning and end of
+a word. It matches “chocolate donut” but not “chocolatedonut”.</p>
+<p>To match the latter, use <code>g*</code> and <code>g#</code>. These
+commands are similar to <code>*</code> and <code>#</code>, but instead
+of treating the word under the cursor as a whole word, Vim treats it as
+a string pattern. If your cursor is on the word “donut” and you press
+<code>g*</code>, Vim does <code>/donut</code>. It matches “glazed
+donut”, “donuts”, “donutman”, etc.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-finding-a-file">Finding a File</h2>
+<p><strong>Problem:</strong><br />
+You need to search and open a file.</p>
+<p><strong>Solution:</strong><br />
+At the very core, you can open a file in Vim with
+<code>:e yourfile.txt</code>. Vim also has the <code>:find</code>
+command. When you open a file with either <code>:e</code> or
+<code>:find</code>, you can use <code>&lt;Tab&gt;</code> to autocomplete
+the directory and/or file name. Try it yourself: go to the directory
+with several files and press <code>:e</code> then
+<code>&lt;Tab&gt;</code>. You’ll find that Vim tries to autocomplete the
+name.</p>
+<p>You may wonder, what’s the difference between <code>:edit</code> and
+<code>:find</code>? The difference is that <code>:find</code> finds file
+in a path while edit doesn’t.</p>
+<p>To check what your paths are, run:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:set path?</code></pre>
+</div>
+</figure>
+<p>By default, yours probably look like this:
+<code>path=.,/usr/include,,</code>. The big picture here is that you can
+edit your path so you can find files faster.</p>
+<p>Suppose that this is your project structure:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>app/
+  assets/
+  controllers/
+    application_controller.rb
+    comments_controller.rb
+    users_controller.rb
+    ...</code></pre>
+</div>
+</figure>
+<p>The above is an example of a Rails project structure. To go to the
+<code>users_controller.rb</code> from the root directory, you have to go
+through several directories and pressing a considerable amount of tabs.
+You have to do something like
+<code>:find a&lt;Tab&gt;c&lt;Tab&gt;u&lt;Tab&gt;</code> before finally
+getting to <code>app/controllers/users_controller.rb</code>.</p>
+<p>Let’s create a shortcut for the <code>controllers/</code> directory
+by adding the controller path to the current <code>'path'</code>.
+Run:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:set path+=app/controllers/</code></pre>
+</div>
+</figure>
+<p>Now when you type <code>:find u&lt;Tab&gt;</code>, Vim now searches
+inside <code>app/controllers/</code> for files starting with
+<code>u</code>. You’ve created a path shortcut for autocompletion! You
+can update the path with frequently-visited paths.</p>
+<h2 class="section"
+id="chap02.xhtml_leanpub-auto-search-and-replace-in-multiple-files">Search
+and Replace in Multiple Files</h2>
+<p><strong>Problem:</strong><br />
+You need to substitute texts in multiple files.</p>
+<p><strong>Solution:</strong><br />
+You can use <code>:vimgrep</code> or <code>:grep</code> combined with
+<code>cfdo</code> to do multiple-file substitution.</p>
+<p>Let’s say you want to replace all “pancake” with “waffle” inside all
+files.</p>
+<p>First, find all the instances of that word with
+<code>:grep "pancake" . -R</code> (you can also run
+<code>:vimgrep /pancake/ **</code>). Then run
+<code>:cfdo %s/pancake/waffle/g | update</code>.</p>
+<p><span id="chap03.xhtml"></span></p>
+<h1 class="chapter"
+id="chap03.xhtml_leanpub-auto-command-line-mode">Command-Line Mode</h1>
+<h2 class="section"
+id="chap03.xhtml_leanpub-auto-command-suggestion">Command
+Suggestion</h2>
+<p><strong>Problem:</strong><br />
+You want to see all the relevant commands.</p>
+<p><strong>Solution:</strong><br />
+While you are in the command-line mode, press <code>Ctrl-D</code> for a
+list of relevant commands.</p>
+<p>If you type <code>:h fo</code>, then press <code>Ctrl-D</code>, Vim
+shows all relevant keywords containing the phrase “fo”.</p>
+<h2 class="section"
+id="chap03.xhtml_leanpub-auto-get-the-word-under-the-cursor">Get the
+Word Under the Cursor</h2>
+<p><strong>Problem:</strong><br />
+You want to get the word under the cursor to use it in your command.</p>
+<p><strong>Solution:</strong><br />
+While in the command-line mode, you can get:</p>
+<ul>
+<li>The filename under the cursor with <code>Ctrl-R Ctrl-F</code>.</li>
+<li>The word under the cursor with <code>Ctrl-R Ctrl-W</code>.</li>
+<li>The current line with <code>Ctrl-R Ctrl-L</code>.</li>
+<li>The current file name with <code>Ctrl-R %</code>.</li>
+</ul>
+<h2 class="section" id="chap03.xhtml_leanpub-auto-faster-delete">Faster
+Delete</h2>
+<p><strong>Problem:</strong><br />
+Deleting one character at a time in the command-line mode takes
+forever.</p>
+<p><strong>Solution:</strong><br />
+If you make a mistake typing a command-line command, you can delete
+faster with:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Ctrl-H    Delete one character
+Ctrl-W    Delete one word
+Ctrl-U    Delete the entire line</code></pre>
+</div>
+</figure>
+<p>These are the same shortcuts as the insert mode.</p>
+<h2 class="section"
+id="chap03.xhtml_leanpub-auto-are-there-more-commands">Are There More
+Commands?</h2>
+<p><strong>Problem:</strong><br />
+You want to learn what other commands Vim has.</p>
+<p><strong>Solution:</strong><br />
+To get a list of all command-line commands, check out
+<code>:h ex-cmd-index</code>.</p>
+<p><span id="chap04.xhtml"></span></p>
+<h1 class="chapter" id="chap04.xhtml_leanpub-auto-file">File</h1>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-buffers-windows-tabs">Buffers, Windows,
+Tabs</h2>
+<p><strong>Problem:</strong><br />
+You heard that Vim uses buffers, windows, and tabs, but you’re not sure
+what they mean.</p>
+<p><strong>Solution:</strong><br />
+Buffers, windows, and tabs are Vim’s approach to file and layout
+management. Many text editors only use two abstractions: windows and
+tabs.</p>
+<p>So what is this buffer? A buffer is an in-memory space for text. When
+you open a file in Vim, Vim opens a buffer to store that file data. When
+you open 3 files in Vim, you have 3 buffers opened.</p>
+<p>By the way, make sure you have the <code>set hidden</code> option in
+Vimrc. Without it, whenever you switch buffers and if your current
+buffer has unsaved changes, Vim complains and prompts you to save the
+file. This can slow you down.</p>
+<p>A window is a viewport on a buffer. From the outside, Vim windows
+look like most text editors’ windows. You can have multiple windows
+opened and arranged vertically and / or horizontally. Multiple windows
+can point to the same buffer. Remember, each buffer represents each
+opened file. You can have two windows opened and with both pointing to
+the same buffer, <code>file1.txt</code>. You can have only one window
+open but you actually have 3 opened buffers, <code>file1.txt</code>,
+<code>file2.txt</code>, and <code>file3.txt</code>. A window is what you
+use to see buffers. A buffer is the actual file.</p>
+<p>A tab is a collection of windows. Think of it like a layout for
+windows. In modern text editors, if you close a tab, the file in that
+tab goes away. Similarly, in a web browser, if you close a web page tab,
+that page is gone. In Vim, a tab does not represent an open file
+(remember, a buffer represents the actual file). You can close a tab
+with a window displaying <code>file1.txt</code>, but that file is still
+opened in the buffer behind the scene.</p>
+<p>In short:</p>
+<ul>
+<li>A buffer is an in-memory space of a file.</li>
+<li>A window is a viewport on a buffer.</li>
+<li>Two windows can point to the same buffer or two windows can point to
+two different buffers.</li>
+<li>A tab is a layout for windows.</li>
+</ul>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-two-different-write-commands-with-similar-syntax">Two
+Different Write Commands With Similar Syntax</h2>
+<p><strong>Problem:</strong><br />
+You get two very different results running <code>:w !food</code> and
+<code>:w! food</code>. What’s the difference?</p>
+<p><strong>Solution:</strong><br />
+<code>:w !food</code> and <code>:w! food</code> are actually two
+different commands (although their syntaxes are very similar).</p>
+<ul>
+<li><code>:w !food</code> executes the external command
+<code>food</code> (if if doesn’t exist, it throws an error) with your
+buffer content as the STDIN.</li>
+<li><code>:w! food</code> saves the current buffer as
+<code>food</code>.</li>
+</ul>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-save-a-file-that-requires-a-root-permission">Save
+a File That Requires a Root Permission</h2>
+<p><strong>Problem:</strong><br />
+You need to save a file but you need to do it with a root permission</p>
+<p><strong>Solution:</strong><br />
+Save the file that requires a root permission with
+<code>:w !sudo tee %</code>. This uses similar write syntax as above.
+Recall that <code>:w !cmd</code> executes the terminal command
+<code>cmd</code>. In this case, the command is
+<code>sudo tee</code>.</p>
+<p><code>%</code> in Vim represents the current file.</p>
+<h2 class="section" id="chap04.xhtml_leanpub-auto-time-travel">Time
+Travel</h2>
+<p><strong>Problem:</strong><br />
+You need to restore your file state to the state it was 15 minutes
+ago.</p>
+<p><strong>Solution:</strong><br />
+You can go back to an earlier text state with <code>:earlier</code>. To
+go back to the text state 15 minutes ago, run <code>:earlier 15m</code>.
+This command accepts other units: <code>s</code> (seconds),
+<code>h</code> (hours), <code>d</code> (days), and <code>f</code>
+(number of saves).</p>
+<p>To go to a later state, there is a <code>:later</code> counterpart (I
+wish I could just run <code>:later 8h</code> and be done with my work,
+but that won’t work…).</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-converting-the-current-file-to-an-html">Converting
+the Current File to an HTML</h2>
+<p><strong>Problem:</strong><br />
+You want to convert the current file to a HTML, a la Vim.</p>
+<p><strong>Solution:</strong><br />
+Vim has a <code>:%TOhtml</code> to convert the HTML version of the
+current document. It will generate a new file in the current directory
+<code>your_original_file_name.txt.html</code>.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-open-an-url-content">Open an URL
+Content</h2>
+<p><strong>Problem:</strong><br />
+You need to edit the content of a web page.</p>
+<p><strong>Solution:</strong><br />
+You can fetch the content of an URL directly
+<code>vim https://www.google.com/</code>.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-save-a-partial-file">Save a Partial
+File</h2>
+<p><strong>Problem:</strong><br />
+You need to save only parts of a file.</p>
+<p><strong>Solution:</strong><br />
+You can save a partial file with
+<code>:{range1},{range2}w filename</code>. To save lines 5 and 10 as
+<code>partial_stuff.txt</code>, run
+<code>:5,10w partial_stuff.txt</code>.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-show-the-buffers-list">Show the Buffers
+List</h2>
+<p><strong>Problem:</strong><br />
+You need to see which buffers are open.</p>
+<p><strong>Solution:</strong><br />
+Vim has the commands <code>:ls</code>, <code>:buffers</code>, and
+<code>:files</code> to show the buffers list.</p>
+<p>Why use the buffer? Buffer is Vim’s approach to quickly go to
+different files quickly. Most text editors have only two abstractions:
+windows and tabs. Vim has three: buffers, windows, and tabs.</p>
+<p>Vim saves all the currently opened files in memory, in buffers. If
+you have <code>file1.txt</code>, <code>file2.txt</code>, and
+<code>file3.txt</code> opened, you have 3 buffers.</p>
+<p>There are different approaches to jump to a particular buffer:</p>
+<ul>
+<li>Numerical approach: to go to buffer #9, run
+<code>:buf 9</code>.</li>
+<li>Filename approach: to go to <code>file2.txt</code> buffer, run
+<code>:buf file2.txt</code>.</li>
+<li><code>:bnext</code> and <code>:bprevious</code> go to the next and
+previous buffer in the list.</li>
+<li><code>:brewind</code> goes to the first buffer in the buffer list
+(<code>:blast</code> goes to the last buffer - having a blast yet
+:D?).</li>
+</ul>
+<p>Finally, use <code>:bd file1.txt</code> to remove
+<code>file1.txt</code> from the buffer list.</p>
+<p>Buffer is a clever approach to file management when editing with Vim.
+It creates for you a list of shortcut files. I strongly recommend that
+you utilize buffers more in your daily Vim editing!</p>
+<h2 class="section" id="chap04.xhtml_leanpub-auto-vim-tabs">Vim
+Tabs</h2>
+<p><strong>Problem:</strong><br />
+You need to open a different tab.</p>
+<p><strong>Solution:</strong><br />
+Vim has a tab system to contain your window layouts. All buffers are
+shared between different tabs.</p>
+<p>Some useful tab navigations are:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:tabnew file.txt    Open file.txt in a new tab
+:tabclose           Close the current tab
+:tabnext            Go to next tab
+:tabprevious        Go to previous tab
+:tablast            Go to last tab
+:tabfirst           Go to first tab</code></pre>
+</div>
+</figure>
+<p>By the way if you want to start Vim with multiple tabs, run this from
+the terminal:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>vim -p file1.txt file2.txt file3.txt</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-save-the-current-file-in-a-different-directory">Save
+the Current File in a Different Directory</h2>
+<p><strong>Problem:</strong><br />
+You need to save the current file in a different directory with the same
+name.</p>
+<p><strong>Solution:</strong><br />
+To quickly save the current file in a different directory with the same
+name, run <code>:w a/different/directory/%</code> (recall that
+<code>%</code> is Vim’s special variable for the current file).</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-open-the-man-page-from-vim">Open the Man
+Page From Vim</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly search the man page definition for the word under
+the cursor.</p>
+<p><strong>Solution:</strong><br />
+Use <code>K</code> to quickly open up the man page for the word under
+the cursor.</p>
+<h2 class="section" id="chap04.xhtml_leanpub-auto-quitting-vim">Quitting
+Vim</h2>
+<p><strong>Problem:</strong><br />
+You can’t exit Vim.</p>
+<p><strong>Solution:</strong><br />
+This is a classic Vim question. The truth is, there are many ways to
+exit Vim.</p>
+<p>The standard ways:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:q
+:wq
+:q!
+:qa
+:qa!</code></pre>
+</div>
+</figure>
+<p>The “I know commands that most people don’t” ways:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:x
+:xa
+:quita
+:exit
+:conf wqa</code></pre>
+</div>
+</figure>
+<p>The normal mode way:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>ZZ
+ZQ</code></pre>
+</div>
+</figure>
+<p>The “I enjoy pain and suffering” way:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:!ps ax | grep vim | grep -v grep | awk &#39;{print $1}&#39; | xargs kill -9</code></pre>
+</div>
+</figure>
+<p>Finally, the brute force way:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Unplug your computer. Bzzt.</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-viewing-recent-files">Viewing Recent
+Files</h2>
+<p><strong>Problem:</strong><br />
+You need to go to a recently edited file.</p>
+<p><strong>Solution:</strong><br />
+Vim has <code>:oldfiles</code> to display, chronologically, the files
+you’ve edited in the past.</p>
+<p>Combine this with <code>:browse</code> to browse and select one of
+the recently opened files (<code>:browse oldfiles</code>).</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-changing-directory">Changing
+Directory</h2>
+<p><strong>Problem:</strong><br />
+You need to change the current directory.</p>
+<p><strong>Solution:</strong><br />
+You can change the directory from Vim with <code>:cd {path}</code>.</p>
+<ul>
+<li>You can go to the previous directory with <code>:cd -</code>.</li>
+<li>You can go to a different directory with
+<code>:cd some/other/dir/</code>.</li>
+</ul>
+<p>You can also print the current directory name with
+<code>:pwd</code>.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-executing-a-command-when-opening-a-file">Executing
+a Command When Opening a File</h2>
+<p><strong>Problem:</strong><br />
+You need to modify the file you are about to open with some Vim
+commands.</p>
+<p><strong>Solution:</strong><br />
+You can pass a command when opening a file with <code>:edit</code> with
+<code>+{cmd}</code>.</p>
+<p>To substitute all “toast” with “bagel” when you open
+<code>breakfast.txt</code>, run
+<code>:edit +%s/toast/bagel/g breakfast.txt</code>.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-get-the-current-file-info">Get the Current
+File Info</h2>
+<p><strong>Problem:</strong><br />
+You need to get the current file name to the clipboard.</p>
+<p><strong>Solution:</strong><br />
+You can copy the current filename to the clipboard with
+<code>:let @*=expand("%")</code></p>
+<p>Explanation:</p>
+<ul>
+<li><code>@*</code> is one of the clipboard registers.</li>
+<li><code>=expand("%")</code> gets the current file name</li>
+</ul>
+<p>If you use this often, add this mapping in vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>nnoremap &lt;Leader&gt;cf :let @*=expand(&quot;%&quot;)&lt;CR&gt;</code></pre>
+</div>
+</figure>
+<p>You can add various modifiers to the <code>%</code> current file
+pattern. Some useful ones are:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>%:p (full path)
+%:. (relative to current directory)
+%:h (head of file)
+%:t (tail of file)
+%:e (extension of file)</code></pre>
+</div>
+</figure>
+<h2 class="section" id="chap04.xhtml_leanpub-auto-count-words">Count
+Words</h2>
+<p><strong>Problem:</strong><br />
+You need to count the words in the current file.</p>
+<p><strong>Solution:</strong><br />
+You can count words with <code>g Ctrl-G</code>. It will return something
+like:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Col 1 of 0; Line 141 of 157; Word 748 of 774; Byte 4489 of 4976</code></pre>
+</div>
+</figure>
+<p>You can also use visual selection to specify the text block.
+Highlight a block of text, then press <code>g Ctrl-G</code>.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Selected 5 of 293 Lines; 70 of 1884 Words; 359 of 10928 Bytes</code></pre>
+</div>
+</figure>
+<p>Alternatively, you can count the occurrence of a specific keyword
+with <code>:s</code> command and the <code>gn</code> flags:</p>
+<ul>
+<li>To count characters: <code>:%s/./&amp;/gn</code></li>
+<li>To count empty lines: <code>:%s/^$/&amp;/gn</code></li>
+<li>To count a specific word, “donut”:
+<code>:%s/\&lt;donut\&gt;/&amp;/gn</code></li>
+</ul>
+<h2 class="section" id="chap04.xhtml_leanpub-auto-delete-a-file">Delete
+a File</h2>
+<p><strong>Problem:</strong><br />
+You need to delete a file.</p>
+<p><strong>Solution:</strong><br />
+You can delete files from Vim with the <code>delete()</code> function.
+Run either <code>:call delete(expand('%'))</code> or
+<code>:call delete(@%)</code> to delete the current file.</p>
+<p>However, this still leaves the deleted file on the current buffer.
+Add <code>:bdelete!</code> to delete the current buffer.</p>
+<p>For a more complete command:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:call delete(@%) | bdelete!</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-more-concise-way-to-save-and-exit">More
+Concise Way to Save and Exit</h2>
+<p><strong>Problem:</strong><br />
+<code>:wq</code> to save and exit is a hassle to type. Is there a
+shorter way to do this?</p>
+<p><strong>Solution:</strong><br />
+Instead of <code>:wq</code> to save file, use <code>:x</code> to type
+33% less.</p>
+<p>The <code>:x</code> command will:</p>
+<ul>
+<li>Save if there are unsaved changes then close the buffer, or</li>
+<li>Close the buffer if there are no unsaved changes.</li>
+</ul>
+<h2 class="section" id="chap04.xhtml_leanpub-auto-suspend-vim">Suspend
+Vim</h2>
+<p><strong>Problem:</strong><br />
+You need to suspend Vim.</p>
+<p><strong>Solution:</strong><br />
+You can suspend Vim with <code>:stop</code> or <code>:suspend</code>.
+You can also press <code>Ctrl-Z</code> at any time from inside Vim.</p>
+<p>To return, run <code>fg</code> from the terminal.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-compiling">Compiling</h2>
+<p><strong>Problem:</strong><br />
+You need to compile from Vim.</p>
+<p><strong>Solution:</strong><br />
+Vim has a <code>:make</code> command that is similar to the
+<code>make</code> program. In fact, the <code>:make</code> program uses
+whatever command is defined by the <code>'makeprg'</code>, which by
+default is using the <code>make</code> command.</p>
+<p>If you have a <code>Makefile</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>all:
+	echo &quot;build, run&quot;
+build:
+	g++ hello.cpp -o hello
+run:
+	./hello</code></pre>
+</div>
+</figure>
+<p>Running <code>:make build</code> will run the build command and
+running <code>:make</code> will run all.</p>
+<p>You can change it to run any command. You can make it to run
+typescript, ruby, g++, anything. For example, to change it to run
+<code>g++</code> on the current file, run
+<code>:set makeprg=g++\ %</code>.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-persist-local-configuration">Persist Local
+Configuration</h2>
+<p><strong>Problem:</strong><br />
+You need to persist some settings in Vim so they will still be there
+when you re-open Vim.</p>
+<p><strong>Solution:</strong><br />
+You can use Vim View to persist Vim settings so when you close and
+re-open Vim, they will still be there. Think of View as a configuration
+“snapshot”.</p>
+<p>Before you exit Vim, your cursor was probably on a specific row and
+column. Maybe you had some folds and created local mappings. When you
+take a View of the current file, Vim takes a snapshot of these
+settings.</p>
+<p>The attributes that Vim remembers can be viewed (pun intended) inside
+the <code>'viewoptions'</code> setting. Run
+<code>set viewoptions?</code> to see what Vim currently has. For
+example, if you want to add to the <code>'viewoptions'</code> the
+<code>localoptions</code> attribute, run
+<code>:set viewoptions+=localoptions</code>.</p>
+<p>To save a view, run <code>:mkview</code>. Vim saves a view in the
+path specified by <code>'viewdir'</code> (to see it, run
+<code>:set viewdir?</code>).</p>
+<p>The next time you open that file again, load your View with
+<code>:loadview</code> and you should have the old settings back!</p>
+<p>If you want to automate the View creation when you leave a buffer,
+add this in Vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>autocmd BufWinLeave *.txt mkview</code></pre>
+</div>
+</figure>
+<p>To automate loading View when you open a buffer, add this in
+Vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>autocmd BufWinEnter *.txt silent loadview</code></pre>
+</div>
+</figure>
+<p>To see all attributes that a <code>viewoptions</code> can save, check
+out <code>:h 'viewoptions'</code>.</p>
+<h2 class="section"
+id="chap04.xhtml_leanpub-auto-saving-a-session">Saving a Session</h2>
+<p><strong>Problem:</strong><br />
+You want to preserve the window layout the next time you re-open
+Vim.</p>
+<p><strong>Solution:</strong><br />
+Sometimes you leave Vim with multiple windows opened, folds created, and
+buffers opened, and you want to preserve them so when you return,
+everything looks just like it did before you left.</p>
+<p>You can do that with Vim Session. A Session is similar to View,
+except it has a broader scope. A View doesn’t save your layout but a
+Session does.</p>
+<p>Session saves whatever attributes are defined in
+<code>'sessionoptions'</code> (<code>set sessionoptions?</code> to see
+it). You can add, subtract, or update it. To remove the
+<code>terminal</code> attribute for example, run
+<code>:set sessionoptions-=terminal</code>. To see all the attributes
+the <code>'sessionoptions'</code> supports, check out
+<code>:h 'sessionoptions'</code>.</p>
+<p>To save a session, run <code>:mksession</code>. This will create a
+file <code>Session.vim</code> in the project root file. By the way, if
+you want to save the session somewhere else, you can pass it a new path
+argument like <code>:mksession ~/some/other/place.vim</code>.</p>
+<p>To open Vim using a previously saved session, run
+<code>vim -S Session.vim</code> or you can run
+<code>:source Session.vim</code> from Vim.</p>
+<p><span id="chap05.xhtml"></span></p>
+<h1 class="chapter" id="chap05.xhtml_leanpub-auto-history">History</h1>
+<h2 class="section"
+id="chap05.xhtml_leanpub-auto-jumping-around-files-quickly">Jumping
+Around Files Quickly</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly jump to places that you have been to.</p>
+<p><strong>Solution:</strong><br />
+Some movements in Vim count as jumps. Vim remembers these jumps and
+stores them in the jump list.</p>
+<p>To see the jump list, use <code>:jumps</code>. The jump list shows
+all the places you’ve jumped to recently. You can travel up and down the
+jump list with <code>Ctrl-O</code> and <code>Ctrl-I</code>.</p>
+<p>Vim considers these commands as jump commands:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>&#39;       Go to the marked line
+`       Go to the marked position
+G       Go to the line
+/       Search forward
+?       Search backward
+n       Repeat the last search, same direction
+N       Repeat the last search, opposite direction
+%       Find match
+(       Go to the last sentence
+)       Go to the next sentence
+{       Go to the last paragraph
+}       Go to the next paragraph
+L       Go to the the last line of displayed window
+M       Go to the middle line of displayed window
+H       Go to the top line of displayed window
+[[      Go to the previous section
+]]      Go to the next section
+:s      Substitute
+:tag    Jump to tag definition</code></pre>
+</div>
+</figure>
+<p>Try this: move around with jump movements, then press
+<code>Ctrl-O</code> and <code>Ctrl-I</code> a few times.
+<code>Ctrl-O</code> and <code>Ctrl-I</code> are two of my favorite
+commands.</p>
+<h2 class="section"
+id="chap05.xhtml_leanpub-auto-trace-edited-texts">Trace Edited
+Texts</h2>
+<p><strong>Problem:</strong><br />
+You need to trace some texts you recently edited.</p>
+<p><strong>Solution:</strong><br />
+Vim tracks the locations of your recently edited texts. You can view
+them with <code>:changes</code>.</p>
+<p>You can go up and down this list with <code>g;</code> and
+<code>g,</code>. Vim makes it easy to trace recently changed texts.</p>
+<h2 class="section" id="chap05.xhtml_leanpub-auto-search-history">Search
+History</h2>
+<p><strong>Problem:</strong><br />
+You need to search the previous searches.</p>
+<p><strong>Solution:</strong><br />
+Sometimes you need to re-search a keyword but you can’t quite remember
+what the keyword was exactly. <code>q/</code> and <code>g?</code> can
+help you. They can show the history of previous searches.</p>
+<p>Typing <code>q/</code> or <code>q?</code> show all the <code>/</code>
+or <code>?</code> searches you’ve done. It will open a new window that
+you can navigate around. If you press <code>&lt;Enter&gt;</code> on one
+of the keywords, Vim will do a search using that word.</p>
+<h2 class="section"
+id="chap05.xhtml_leanpub-auto-command-line-history">Command-Line
+History</h2>
+<p><strong>Problem:</strong><br />
+You need to run a command similar to a command you executed before.</p>
+<p><strong>Solution:</strong><br />
+<code>q:</code> shows the history of the command-line commands.</p>
+<p>If you press <code>q:</code>, Vim will take you to a history window
+with a list of command-line commands you have used. Regular Vim
+navigation works here. If you press <code>&lt;Enter&gt;</code> on a
+command, Vim will execute that command.</p>
+<p>If in the past you ran <code>:s/strawberryhoneypancakes/kale/g</code>
+and you want to run <code>:s/strawberryhoneywaffles/kale/g</code>,
+instead of retyping the commands all over, why not find that command
+from the command history, modify it slightly, and then execute it?</p>
+<p>Press <code>q:</code>, find that command in history, then edit it.
+Once you’re done, run it.</p>
+<p>The great thing about these histories (<code>q:</code>,
+<code>q/</code>, <code>q?</code>) is that you can use Vim navigation,
+making navigation in this mode very easy.</p>
+<p>Another way to enter the command-line history is while you’re in the
+command-line mode (<code>:</code>), press <code>Ctrl-F</code>. This also
+works with <code>/</code> and <code>?</code>. During the <code>/</code>
+or <code>?</code> search, type <code>Ctrl-F</code> to open the search
+history window.</p>
+<h2 class="section" id="chap05.xhtml_leanpub-auto-vim-histories">Vim
+Histories</h2>
+<p><strong>Problem:</strong><br />
+You want to know what other things Vim store.</p>
+<p><strong>Solution:</strong><br />
+Vim stores 5 different histories</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:his c or :       - command-line history (q:)
+:his s or / or ?  - search history (q/ or q?)
+:his e or =       - expression history
+:his i or @       - input history
+:his d or &gt;       - debug history</code></pre>
+</div>
+</figure>
+<p><span id="chap06.xhtml"></span></p>
+<h1 class="chapter" id="chap06.xhtml_leanpub-auto-insert-mode">Insert
+Mode</h1>
+<h2 class="section"
+id="chap06.xhtml_leanpub-auto-entering-insert-mode">Entering Insert
+Mode</h2>
+<p><strong>Problem:</strong><br />
+You need to go to the insert mode.</p>
+<p><strong>Solution:</strong><br />
+There are many ways to enter the insert mode. The most common ones
+are:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>i    Insert text before the cursor
+I    Insert text before the first non-blank character of the line
+a    Append text after the cursor
+A    Append text at the end of line
+o    Starts a new line below the cursor and insert text
+O    Starts a new line above the cursor and insert text</code></pre>
+</div>
+</figure>
+<p>If you’re new to Vim, don’t memorize them all. Start with
+<code>i</code> first. Then commit <code>a</code> and <code>o</code> to
+memory. Finally, you can commit their uppercase counterparts.</p>
+<h2 class="section"
+id="chap06.xhtml_leanpub-auto-different-ways-to-exit-insert-mode">Different
+Ways to Exit Insert Mode</h2>
+<p><strong>Problem:</strong><br />
+Your keyboard doesn’t have an <code>&lt;Esc&gt;</code> key and you need
+to quickly exit insert mode.</p>
+<p><strong>Solution:</strong><br />
+Normally (pun intended) you can exit the insert mode with
+<code>&lt;Esc&gt;</code>. However, not all keyboards have the
+<code>&lt;Esc&gt;</code> key (like tablet keyboards). You can use either
+<code>Ctrl-[</code> or <code>Ctrl-C</code> to escape in addition to
+<code>&lt;Esc&gt;</code>.</p>
+<p>Alternatively, you can create a mapping to escape while in the insert
+mode:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>inoremap jk &lt;Esc&gt;</code></pre>
+</div>
+</figure>
+<p>I find that the <code>&lt;Esc&gt;</code> button is too far, so I map
+the <code>&lt;Caps-lock&gt;</code> button to <code>&lt;Esc&gt;</code>.
+If you search for Bill Joy’s ADM-3A keyboard (the Vi creator), you will
+see that his <code>&lt;Esc&gt;</code> key is not located on the far top
+left like modern keyboards but to the left of <code>q</code> key. This
+is why I think it makes sense to map <code>&lt;Caps lock&gt;</code> to
+<code>&lt;Esc&gt;</code>.</p>
+<h2 class="section"
+id="chap06.xhtml_leanpub-auto-paste-a-recently-yanked-text">Paste a
+Recently Yanked Text</h2>
+<p><strong>Problem:</strong><br />
+You need to paste a previously yanked text.</p>
+<p><strong>Solution:</strong><br />
+If you need to paste a text while in the insert mode, you could first
+quit the insert mode then paste it with <code>p</code>, but that is
+mode-switching. A better way to paste text while in insert mode is to
+use <code>Ctrl-R 0</code>. Doing <code>Ctrl-R</code> while in the insert
+mode lets you to insert the content of a register. 0 is the yank
+register.</p>
+<p>You can insert from any other registers as well. If you need to paste
+the content from the register, run <code>Ctrl-R a</code>.</p>
+<h2 class="section"
+id="chap06.xhtml_leanpub-auto-performing-a-quick-calculation">Performing
+a Quick Calculation</h2>
+<p><strong>Problem:</strong><br />
+You need to do a quick calculation and insert the calculation
+result.</p>
+<p><strong>Solution:</strong><br />
+To do a quick calculation while in the insert mode, you can use
+<code>Ctrl-R</code> to use the expression register (<code>=</code>).</p>
+<p>For example: <code>Ctrl-R =1+1&lt;Enter&gt;</code>.</p>
+<h2 class="section"
+id="chap06.xhtml_leanpub-auto-autocompletion">Autocompletion</h2>
+<p><strong>Problem:</strong><br />
+You need to autocomplete a word.</p>
+<p><strong>Solution:</strong><br />
+The insert mode has built-in autocompletions.</p>
+<p>While in the Insert mode, use <code>Ctrl-P</code> for word
+completion. By pressing <code>Ctrl-P</code> in the insert mode, Vim
+searches backward for existing words that start with the text under the
+cursor (press <code>Ctrl-N</code> for forward search).</p>
+<p>There are other auto-completions. Some of the common ones are:</p>
+<ul>
+<li><code>Ctrl-X Ctrl-L</code> for a line autocompletion.</li>
+<li><code>Ctrl-X Ctrl-F</code> for a filename autocompletion.</li>
+<li><code>Ctrl-X Ctrl-K</code> for a dictionary autocompletion. Note:
+this method requires you to set the <code>'dictionary'</code> first.
+Assuming that there is a dictionary in
+<code>/usr/share/dict/words</code> (your computer should have some sort
+of dictionary path somewhere), add that path into the dictionary using
+<code>set dictionary=/usr/share/dict/words</code>.</li>
+</ul>
+<p>For more, check out <code>:h ins-completion</code>.</p>
+<h2 class="section"
+id="chap06.xhtml_leanpub-auto-executing-a-normal-mode-command-while-in-the-insert-mode">Executing
+a Normal Mode Command While in the Insert Mode</h2>
+<p><strong>Problem:</strong><br />
+You need to execute a normal-mode command without exiting insert
+mode.</p>
+<p><strong>Solution:</strong><br />
+You can execute a normal mode command while in the insert mode with
+<code>Ctrl-O</code>.</p>
+<p>For example:</p>
+<ul>
+<li><code>Ctrl-O zz</code> to center the screen.</li>
+<li><code>Ctrl-O /food</code> to jump to the next “food”.</li>
+</ul>
+<h2 class="section" id="chap06.xhtml_leanpub-auto-larger-deletes">Larger
+Deletes</h2>
+<p><strong>Problem:</strong><br />
+You need to delete text chunks.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Press <code>Ctrl-U</code> to delete the entire line.</li>
+<li>Press <code>Ctrl-W</code> to delete the word before the cursor.</li>
+</ul>
+<p>Meanwhile, <code>D</code> in normal mode deletes to the end of the
+line, but there is no insert mode command that does that, so why not
+create one?</p>
+<p>Add the following mapping:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>inoremap &lt;C-d&gt; &lt;C-O&gt;D</code></pre>
+</div>
+</figure>
+<p>Now when you press <code>Ctrl-D</code> in Insert mode, Vim deletes to
+the end of the line.</p>
+<h2 class="section"
+id="chap06.xhtml_leanpub-auto-scrolling-while-in-the-insert-mode">Scrolling
+While in the Insert Mode</h2>
+<p><strong>Problem:</strong><br />
+You need to scroll from insert mode.</p>
+<p><strong>Solution:</strong><br />
+Press <code>Ctrl-X Ctrl-E</code> and <code>Ctrl-X Ctrl-Y</code> to
+scroll down and up.</p>
+<h2 class="section"
+id="chap06.xhtml_leanpub-auto-insert-special-characters">Insert Special
+Characters</h2>
+<p><strong>Problem:</strong><br />
+You need to enter special characters like the Π.</p>
+<p><strong>Solution:</strong><br />
+Use Vim digraph. To enter a greek Pi, in insert mode, press
+<code>Ctrl-K P*</code>.</p>
+<p>How did I know to use <code>P*</code>? I looked it up the digraph
+table (<code>:h digraph-table</code>). You can enter all sorts of
+characters like Φ Ω Λ Θ Π etc.</p>
+<p><span id="chap07.xhtml"></span></p>
+<h1 class="chapter" id="chap07.xhtml_leanpub-auto-layout">Layout</h1>
+<h2 class="section"
+id="chap07.xhtml_leanpub-auto-indent-and-un-indent-lines">Indent and
+Un-indent Lines</h2>
+<p><strong>Problem:</strong><br />
+You need to indent and unindent lines.</p>
+<p><strong>Solution:</strong><br />
+The <code>&lt;</code> and <code>&gt;</code> operators can indent and
+un-indent lines.</p>
+<ul>
+<li>To indent the next 3 lines, run <code>&gt;2j</code>.</li>
+<li>To indent to the end of the file, run <code>&gt;G</code>.</li>
+<li><code>&gt;&gt;</code> and <code>&lt;&lt;</code> to indent and
+un-indent the current line.</li>
+</ul>
+<h2 class="section"
+id="chap07.xhtml_leanpub-auto-fix-the-indentation-of-the-entire-file">Fix
+the Indentation of the Entire File</h2>
+<p><strong>Problem:</strong><br />
+The entire file’s indentation is messy.</p>
+<p><strong>Solution:</strong><br />
+<code>={motion}</code> can correct the indent of the lines indicated by
+the motion.</p>
+<p>For example, <code>=G</code> fixes the indentation of the current
+line to the end of the file. A common practice is to use
+<code>gg=G</code> to correct the indentation of the entire file.</p>
+<p>Note that the <code>=</code> operator uses the program defined in the
+<code>'equalprg'</code> setting, which by default is empty (when it is
+empty, Vim uses <code>'indent'</code>).</p>
+<h2 class="section"
+id="chap07.xhtml_leanpub-auto-redraw-the-screen">Redraw the Screen</h2>
+<p><strong>Problem:</strong><br />
+Occasionally Vim will display a stagnant screen after running a certain
+scripts.</p>
+<p><strong>Solution:</strong><br />
+If Vim is showing a stagnant or “buggy” display, you may need to refresh
+it by either running <code>:redraw!</code> or pressing
+<code>Ctrl-L</code>.</p>
+<h2 class="section" id="chap07.xhtml_leanpub-auto-folding-lines">Folding
+Lines</h2>
+<p><strong>Problem:</strong><br />
+You want to fold rows of lines.</p>
+<p><strong>Solution:</strong><br />
+I don’t like to fold my clothes but I like to fold rows of lines.</p>
+<p>Why would you ever fold anything?</p>
+<p>When you read a file, there are often many irrelevant texts that
+obstruct you from understanding what that file does in the big picture.
+To hide this unnecessary noise, use Vim fold.</p>
+<p>Vim supports 6 different folds:</p>
+<ol>
+<li>Manual</li>
+<li>Indent</li>
+<li>Expression</li>
+<li>Syntax</li>
+<li>Diff</li>
+<li>Marker</li>
+</ol>
+<p>The manual fold lets you to fold rows manually (you can’t fold
+characters, just lines). The operator is <code>zf</code> and it works
+just like any operation: it accepts a motion. If you have the text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Line one
+Line two</code></pre>
+</div>
+</figure>
+<p>With your cursor on “Line one”, run <code>zfj</code> to fold both
+lines. Folded lines look something like:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>+-- 2 lines: Line one -----</code></pre>
+</div>
+</figure>
+<p>To open a folded text, use <code>zo</code>. To close a fold, use
+<code>zc</code>. You can also use the <code>:fold</code> command-line.
+My two favorite fold methods are <code>zR</code> to open all folds and
+<code>zM</code> to close all folds. The manual fold is useful when you
+want to do quick, impromptu folds.</p>
+<p>To use the indent fold method, change the <code>'foldmethod'</code>
+option to indent: <code>set foldmethod=indent</code>. Vim will fold
+indented lines according to the <code>'shiftwidth'</code> option.</p>
+<p>If you have the text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>One
+  Two
+  Two again</code></pre>
+</div>
+</figure>
+<p>The latter 2 lines, having 2 spaces of indentation, will be folded.
+This will only work if you have <code>'shiftwidth'</code> value of 2
+btw. The indent fold is useful when dealing with texts that use indent
+structure, like Python or YAML files.</p>
+<p>The expression fold lets you define an expression to determine
+folding. You need to first tell Vim to use the expression fold with
+<code>set foldmethod=expr</code>, then Vim will use whatever expression
+you define for <code>'foldexpr'</code> option.</p>
+<p>For example, if you want to fold all items starting with “p”:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>donut
+pancake
+pop-tarts
+protein bar
+salmon
+scrambled eggs</code></pre>
+</div>
+</figure>
+<p>Run <code>:set foldexpr=getline(v:lnum)[0]==\\"p\\"</code>. I won’t
+go into Vimscript deeply here, but the <code>'foldexpr'</code>
+expression will return true only if the first character of the current
+line starts with “p”.</p>
+<p>The syntax fold can fold lines based on syntax options. To use it,
+first set the fold method with <code>:set foldmethod=syntax</code>.
+Again, I won’t cover how syntax definitions work in Vim here, but in
+general, if you use syntax plugins like <a
+href="https://github.com/sheerun/vim-polyglot">vim-polyglot</a>, the
+syntax fold should work right out of the box. Vim uses the syntax
+definition to determine what to fold.</p>
+<p>The diff fold works immediately when you do a vimdiff. If you run
+<code>vimdiff file1.txt file2.txt</code>, Vim automatically sets the
+foldmethod to diff and folds all the identical lines.</p>
+<p>The marker fold is used to fold the lines marked by a pattern. You
+can set it up with <code>:set foldmethod=marker</code>. By default, Vim
+uses <code>{{{, }}}</code> patterns as fold identifiers. Vim will fold
+any rows between the identifier.</p>
+<p>If you have:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Hello
+
+{{{
+world
+vim
+}}}</code></pre>
+</div>
+</figure>
+<p>When Vim sees <code>{{{</code> and <code>}}}</code>, those lines will
+be folded. You can change the indicators by updating the
+<code>'foldmarker'</code> option values. To change it to
+<code>&lt;&lt;&lt;</code> and <code>&gt;&gt;&gt;</code>, run
+<code>:set foldmarker=&lt;&lt;&lt;,&gt;&gt;&gt;</code>.</p>
+<h2 class="section"
+id="chap07.xhtml_leanpub-auto-cursor-visual-helper">Cursor Visual
+Helper</h2>
+<p><strong>Problem:</strong><br />
+You need to draw a straight line across the file.</p>
+<p><strong>Solution:</strong><br />
+Use <code>:set cuc</code> (<code>'cursorcolumn'</code>) to display a
+column that spans across the entire screen. Try it!</p>
+<p>To turn it off, run <code>:set nocuc</code>. If the cursor column has
+a hard-to-see highlight, you can change the highlight to white by
+running <code>:highlight CursorColumn guibg=#FFFFFF</code>.</p>
+<p><span id="chap08.xhtml"></span></p>
+<h1 class="chapter"
+id="chap08.xhtml_leanpub-auto-macros-and-registers">Macros And
+Registers</h1>
+<h2 class="section" id="chap08.xhtml_leanpub-auto-macro-basics">Macro
+Basics</h2>
+<p><strong>Problem:</strong><br />
+You need to record a command sequence to a register.</p>
+<p><strong>Solution:</strong><br />
+You can record a sequence of actions inside registers a-z and replay
+them later. This procedure is called a macro.</p>
+<p>To record a macro, press <code>q</code>, followed by the register
+character (example: <code>qq</code> to record a macro in register q). To
+stop recording, press <code>q</code> again.</p>
+<p>For example:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>qagUUjq</code></pre>
+</div>
+</figure>
+<ul>
+<li><code>qa</code> to record a macro in the register a.</li>
+<li><code>gUU</code> to uppercase the current line.</li>
+<li><code>j</code> to go down one line.</li>
+</ul>
+<p>To replay a recorded macro on register a, run <code>@a</code>. To
+play the last executed macro, run <code>@@</code>.</p>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-register-basics">Register Basics</h2>
+<p><strong>Problem:</strong><br />
+You heard that Vim can save texts in different registers.</p>
+<p><strong>Solution:</strong><br />
+Vim registers work like your computer clipboard. Vim comes shipped with
+10 registers. I won’t go over them in detail here. They are:</p>
+<ul>
+<li>The unnamed register (<code>""</code>).</li>
+<li>The numbered registers (<code>"0-9</code>).</li>
+<li>The small delete register (<code>"-</code>).</li>
+<li>The named registers (<code>"a-z</code>).</li>
+<li>The read-only registers (<code>":</code>, <code>".</code>, and
+<code>"%</code>).</li>
+<li>The alternate file register (<code>"#</code>).</li>
+<li>The expression register (<code>"=</code>).</li>
+<li>The selection registers (<code>"*</code> and <code>"+</code>).</li>
+<li>The black hole register (<code>"_</code>).</li>
+<li>The last search pattern register (<code>"/</code>).</li>
+</ul>
+<p>They can be used in a composition with other operators. Run
+<code>"</code> followed by the register symbol, then the operator.
+Registers are commonly used with the yank (<code>y</code>) operator and
+the delete (<code>d</code>) operator, but it can be used with other
+operators too. You can also enter the content of a register directly.
+<code>:put a</code> outputs the content from register a. While in insert
+mode, you can press <code>Ctrl-R a</code> to get the content from
+register a.</p>
+<p>If you need to yank the current word into register a, run
+<code>"ayiw</code>. To paste that content, run <code>"ap</code>.</p>
+<p>Registers and macros are closely related. If you think about it,
+macros are executed registers. When you record a macro in register a
+(<code>qagUUjq</code>), you are actually recording a string of
+instructions (if you don’t believe me, after running
+<code>qagUUjq</code>, run <code>"ap</code> and you should see the key
+sequence of your actions printed out).</p>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-closer-look-at-vim-registers">Closer Look
+At Vim Registers</h2>
+<p><strong>Problem:</strong><br />
+You saw that Vim has 10 registers. How do you use them?</p>
+<p><strong>Solution:</strong><br />
+As mentioned above, Vim has 10 different registers. Some are
+automatically filled by Vim while some have to be explicitly
+inserted.</p>
+<p>The unnamed register stores the last text you yanked, changed, or
+deleted. The unnamed register is like a computer’s standard copy / paste
+operation. To get the text from the unnamed register, do ““p. The paste
+commands, <code>p</code> and <code>P</code>, automatically pastes from
+the unnamed registers.</p>
+<p>There are two types of numbered registers: the 0 register and the 1-9
+registers.</p>
+<p>The 0 register is reserved for the yanked register (also known as the
+yank register). If you yank a line, like <code>yy</code>, it will be
+stored in register 0. <code>"0p</code> to paste it.</p>
+<p>The 1-9 registers are reserved for deletions or changes. If you
+delete a line, <code>dd</code>, the deleted text will be stored in the
+numbered register starting from 1 going all the way up to 9,
+chronologically. If you do <code>dd</code> 3 times, the most recent
+deletion will be stored in register 1, the second most recent deletion
+in 2, and the third recent deletion in 3. To paste them, use
+<code>"1p</code>, <code>"2p</code>, <code>"3p</code>, etc.</p>
+<p>The small delete register stores deletions or changes that are less
+than one line. If you delete a word (like <code>diw</code>), you can
+access it with <code>"-p</code> (the registers 1-9 only store deletes or
+changes that are at least one line size).</p>
+<p>The named register is probably one of the most used registers. It
+uses the characters a-z to store yanked, changed, or deleted texts. To
+delete a word into the register a, run <code>"adiw</code>. To paste it,
+run <code>"ap</code>. To yank the rest of the line into the register b,
+run <code>"by$</code>. To paste it, run <code>"bp</code>.</p>
+<p>The read-only registers are automatically handled by Vim.
+<code>.</code> stores the last inserted text, <code>:</code> stores the
+last executed command-line command, and <code>%</code> stores the name
+of the current file.</p>
+<p>The alternate file register stores the name of the alternate file
+(the other file you just edited).</p>
+<p>The expression register lets you evaluate Vimscript expressions. To
+get the result of calculating the expression 1 + 1, run
+<code>"=1+1&lt;Enter&gt;</code>, then press <code>p</code>.</p>
+<p>The selection registers, <code>*</code> and <code>+</code> are used
+to connect Vim to your computer clipboard. By default, if you copy
+something (for example, a text that you copy from a website), you can’t
+paste it immediately to Vim and vice versa (if you yank something in
+Vim, you can’t paste it outside of Vim). To paste a text from the system
+clipboard into Vim, run either <code>"+p</code> or <code>"*p</code>. The
+difference between <code>*</code> and <code>+</code> registers are
+historical. If Vim has <code>+xterm_clipboard</code> and your machine
+uses X11’s primary selection, Vim uses <code>*</code> register. If your
+machine uses X11’s clipboard selection, Vim uses <code>+</code>. To be
+frank, don’t worry about it too much. Most of the time, they are
+interchangeable.</p>
+<p>However, I find that doing <code>"*p</code> to paste and
+<code>"*yy</code> to yank is a lot of work. Add this in vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>set clipboard=unnamed</code></pre>
+</div>
+</figure>
+<p>This connects the unnamed (<code>p</code>) register to the clipboard
+system. Now you can yank and paste naturally with <code>p</code>.</p>
+<p>The black hole register lets you delete, yank, and change text
+without storing it into the register. If you delete a line using
+<code>"_dd</code>, Vim won’t save it in the numbered registers.</p>
+<p>The last search pattern register <code>/</code> and <code>?</code>
+stores the last search term.</p>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-clear-up-a-register">Clear Up a
+Register</h2>
+<p><strong>Problem:</strong><br />
+You need to empty a register.</p>
+<p><strong>Solution:</strong><br />
+To quickly clear up the register a, run <code>qaq</code>. This command
+records an empty macro, effectively emptying that register.</p>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-output-content-from-any-register">Output
+Content From Any Register</h2>
+<p><strong>Problem:</strong><br />
+You need to output the content from a register directly.</p>
+<p><strong>Solution:</strong><br />
+The <code>:put</code> command can output the content from any
+register</p>
+<ul>
+<li><code>:put a</code> prints the register a.</li>
+<li><code>:pu _</code> prints from the blackhole register (in this case,
+it outputs a blank line).</li>
+</ul>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-edit-an-existing-macro">Edit an Existing
+Macro</h2>
+<p><strong>Problem:</strong><br />
+You need to edit an existing macro.</p>
+<p><strong>Solution:</strong><br />
+To edit an existing macro in register a:</p>
+<ul>
+<li>Run <code>:put a</code> to output the macro steps.</li>
+<li>Edit or add steps to it.</li>
+<li>Run <code>"ay$</code> to yank it back to register a.</li>
+</ul>
+<p>You can now execute the updated macro with <code>@a</code>.</p>
+<p>For example, if you have a macro to uppercase the current line then
+go one line below in register a (<code>qagUUjq</code>), if you want to
+add to that macro a movement to the next word (<code>w</code>), do
+this:</p>
+<ol>
+<li>Run <code>:put a</code> to paste the instruction string “gUUj”.</li>
+<li>Add the needed action, “w” to the instruction string, making it:
+“gUUjw”.</li>
+<li>RUN <code>"AY$</code> FROM THE START OF THAT LINE TO YANK IT BACK TO
+REGISTER A.</li>
+<li>Now running <code>@a</code> will uppercase the current line, go down
+one line, and go to the next word.</li>
+</ol>
+<p>An alternative is to edit it on the command-line mode.</p>
+<ul>
+<li>Type <code>:let @a =</code> (don’t press <code>&lt;Enter&gt;</code>
+yet!)</li>
+<li>Press <code>Ctrl-R a</code>. Vim will output the content of register
+a.</li>
+<li>You can now edit it.</li>
+</ul>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-use-the-blackhole-register-to-prevent-register-pollution">Use
+the Blackhole Register to Prevent Register Pollution</h2>
+<p><strong>Problem:</strong><br />
+Some commands, like <code>:d</code>, save the affected texts into the
+register but you don’t want to store the affected texts into the
+register.</p>
+<p><strong>Solution:</strong><br />
+Use the blackhole register <code>_</code> to make changes without
+storing it to any register.</p>
+<p>This is particularly useful if you are running a common on multiple
+rows and that command’s side effect saves to a register.</p>
+<p>Instead of running <code>:g/donut/d</code> to delete all lines that
+contain “donut” and pollute the numbered registers, running
+<code>:g/donut/d _</code> deletes all lines that contain “donut” without
+polluting the numbered register.</p>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-see-the-content-from-all-registers">See
+the Content From All Registers</h2>
+<p><strong>Problem:</strong><br />
+You want to see what your current registers are.</p>
+<p><strong>Solution:</strong><br />
+To see the text from all registers, run <code>:registers</code>. You can
+also check for a specific register by passing the register name as an
+argument. Run <code>:register a</code> to see the content of the
+register a.</p>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-execute-a-macro-programmatically">Execute
+a Macro Programmatically</h2>
+<p><strong>Problem:</strong><br />
+You need to execute a macro on multiple lines at the same time.</p>
+<p><strong>Solution:</strong><br />
+You can run a macro programmatically using the <code>:normal</code>
+command.</p>
+<p>To execute macro a on lines 5-10, run
+<code>:5,10 normal @a</code>.</p>
+<p>You can also combine this with other commands, like the global
+command. To execute macro a on lines containing “const”, run
+<code>:g/const/normal @a</code>.</p>
+<p>If you need to execute a macro on multiple files on the lines that
+contain the word “const”, you can run
+<code>:argdo g/const/normal @a</code>.</p>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-quickly-append-to-an-existing-macro">Quickly
+Append to an Existing Macro</h2>
+<p><strong>Problem:</strong><br />
+You want to add a few more instructions at the end of an existing
+macro.</p>
+<p><strong>Solution:</strong><br />
+Use the uppercase letter of that register to append to an existing
+macro.</p>
+<p>If you have the following macro to uppercase the current line then go
+down one line:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>qagUUjq</code></pre>
+</div>
+</figure>
+<p>Later you want to add <code>dd</code> after <code>j</code>. Instead
+of recording the macro from scratch, simply run <code>qAddq</code>.
+<code>qA</code> adds the action <code>dd</code> to the existing macro in
+register a. To put it in another word, Vim automatically adds the
+<code>dd</code> operation on top of the <code>gUUj</code>
+operations.</p>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-quickly-paste-from-the-numbered-register">Quickly
+Paste From the Numbered Register</h2>
+<p><strong>Problem:</strong><br />
+You need to paste sequentially from the numbered registers
+(<code>"1P</code>, <code>"2P</code>, <code>"3P</code>).</p>
+<p><strong>Solution:</strong><br />
+When you paste from the numbered register (<code>"1P</code>) followed by
+a dot command <code>.</code>, Vim automatically increments the numbered
+register.</p>
+<p>Try this: paste from the numbered register 1 with <code>"1P</code>,
+then run <code>.</code> (this executes <code>"2P</code>), then run
+<code>.</code> again (this executes <code>"3P</code>).</p>
+<h2 class="section" id="chap08.xhtml_leanpub-auto-macro-factory">Macro
+Factory</h2>
+<p><strong>Problem:</strong><br />
+You want to duplicate and combine macros.</p>
+<p><strong>Solution:</strong><br />
+Recall that macro registers are really variables where you can store
+strings of instructions to be executed or texts to be outputted. Since
+macros are just texts, you can perform string operations on them.</p>
+<p>To combine macros b and c and save in the register a, run
+<code>:let @a = @b . @c</code> (<code>.</code> in a Vimscript expression
+is a string concatenation; don’t confuse it with the dot command). In
+fact, if you want to add an additional operation to a macro, like
+<code>dd</code>, you can do it with
+<code>:let @a = @b . @c . 'dd'</code>.</p>
+<h2 class="section"
+id="chap08.xhtml_leanpub-auto-recursive-macro">Recursive Macro</h2>
+<p><strong>Problem:</strong><br />
+You need to run a recursive macro.</p>
+<p><strong>Solution:</strong><br />
+If you have the text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>a. chocolate donut
+b. mochi donut
+c. powdered sugar donut
+d. plain donut</code></pre>
+</div>
+</figure>
+<p>If you want to toggle the case of the first word using a recursive
+macro, run:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>qaqqa0W~j@aq</code></pre>
+</div>
+</figure>
+<p>Steps breakdown:</p>
+<ul>
+<li><code>qaq</code> records an empty macro. It is imperative in a
+recursive macro to start with an empty register. When you recursively
+call that macro, it will run whatever is in that register.</li>
+<li><code>qa</code> records in register a.</li>
+<li><code>0W~j</code> goes to the first character in the current line,
+then goes to the next WORD, then toggles the case of the character under
+the cursor, then finally goes down one line.</li>
+<li><code>@a</code> executes the macro a (this is the recursive part -
+you’re still recording macro a and here you are also executing macro
+a).</li>
+<li><code>q</code> stops recording.</li>
+</ul>
+<p><span id="chap09.xhtml"></span></p>
+<h1 class="chapter"
+id="chap09.xhtml_leanpub-auto-multi-file-operations">Multi-File
+Operations</h1>
+<h2 class="section"
+id="chap09.xhtml_leanpub-auto-different-ways-to-execute-a-command-in-multiple-files">Different
+Ways to Execute a Command In Multiple Files</h2>
+<p><strong>Problem:</strong><br />
+You need to execute a Vim command across multiple files.</p>
+<p><strong>Solution:</strong><br />
+Vim has 8 different means to execute commands across multiple files.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:argdo    arg list files
+:bufdo    buffers
+:windo    windows in the current tab
+:tabdo    tabs
+:cdo      each item in the quickfix list
+:cfdo     each file in the quickfix list
+:ldo      each item in the location list
+:lfdo     each file in the location list</code></pre>
+</div>
+</figure>
+<p>These commands require you to make a list in their respective
+categories (argument list, buffer list, window list, tab list, quickfix
+list, and location list) before you can run the command.</p>
+<ul>
+<li>To create an argument list, run
+<code>:args file1.txt file2.txt file3.txt</code></li>
+<li>To create a buffer list, just open more files (like
+<code>:e file1.txt</code>)</li>
+<li>To create a window list, create more split windows (like
+<code>:vsplit file1.txt</code>)</li>
+<li>To create a tab list, create more tabs (like
+<code>:tabnew tab1</code>)</li>
+<li>To create a quickfix list, use a command that uses quickfix (like
+<code>:vimgrep /searchkeyword/ *.txt</code>)</li>
+<li>To create a location list, use a command that uses location list
+(like <code>:lvimgrep /searchkeyword/ *.txt</code>)</li>
+</ul>
+<p>In this section, I’ll use <code>:argdo</code>, but overall the flow
+is the same for all of them.</p>
+<h2 class="section"
+id="chap09.xhtml_leanpub-auto-substitute-in-multiple-files">Substitute
+In Multiple Files</h2>
+<p><strong>Problem:</strong><br />
+You need to substitute across multiple files.</p>
+<p><strong>Solution:</strong><br />
+To substitute and save across multiple files, run
+<code>:argdo %s/donut/pancake/g | update</code></p>
+<p>The <code>update</code> command is to save each file.</p>
+<h2 class="section"
+id="chap09.xhtml_leanpub-auto-execute-a-macro-in-multiple-files">Execute
+a Macro in Multiple Files</h2>
+<p><strong>Problem:</strong><br />
+You need to run a macro across multiple files.</p>
+<p><strong>Solution:</strong><br />
+To execute a macro in multiple files, you can use the
+<code>:normal</code> command. To execute macro in register a, run
+<code>:argdo normal @a | update</code>.</p>
+<h2 class="section"
+id="chap09.xhtml_leanpub-auto-limiting-the-files-to-operate-on">Limiting
+the Files to Operate On</h2>
+<p><strong>Problem:</strong><br />
+You only need to run the command on only the first 5 files.</p>
+<p><strong>Solution:</strong><br />
+You can limit the number of files you want to operate on with a range
+when running the <code>-do</code> command.</p>
+<p>To substitute only the first 5 items in the argument list:
+<code>:1,5argdo s/pancake/waffle/g | update</code>.</p>
+<h2 class="section"
+id="chap09.xhtml_leanpub-auto-creating-an-argument-list">Creating an
+Argument List</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly create an argument list.</p>
+<p><strong>Solution:</strong><br />
+The argument list is needed to run the <code>:argdo</code> command.</p>
+<ul>
+<li>To get all the markdown files in the current directory, run
+<code>:args *.md</code>.</li>
+<li>To get all the markdown files in the current directory recursively,
+run <code>:args **/*.md</code>.</li>
+</ul>
+<p>Once you get all the files, you can view them with
+<code>:args</code>.</p>
+<h2 class="section"
+id="chap09.xhtml_leanpub-auto-adding-to-an-argument-list">Adding to an
+Argument List</h2>
+<p><strong>Problem:</strong><br />
+You already created an argument list and you need to add more items.</p>
+<p><strong>Solution:</strong><br />
+Use <code>:arga</code> to add to the argument list.</p>
+<p>Supposing you created an argument list of all markdown files that
+start with “a” by running <code>:args a*.md</code>, then later you also
+want to add a list of of all markdown files that start with “b”. If you
+run <code>:args b*.md</code>, it will replace the first markdown list.
+To achieve this, run <code>:arga b*.md</code>. Now you have a list of
+markdown files that start with “a” and “b”.</p>
+<p>If you call <code>:arga</code> without argument, Vim will add the
+current buffer to the argument list.</p>
+<p><span id="chap10.xhtml"></span></p>
+<h1 class="chapter" id="chap10.xhtml_leanpub-auto-numbers">Numbers</h1>
+<h2 class="section"
+id="chap10.xhtml_leanpub-auto-quickly-increment-or-decrement-a-number-on-a-line">Quickly
+Increment or Decrement a Number on a Line</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly increment or decrement a number on the current
+line.</p>
+<p><strong>Solution:</strong><br />
+Vim has <code>Ctrl-A</code> and <code>Ctrl-X</code> operators to
+increment and decrement the next closest number (from the cursor) in the
+current line.</p>
+<p>If you have the text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>dozens of donut: 2
+calories per donut: 200</code></pre>
+</div>
+</figure>
+<ul>
+<li>If your cursor is on the first line and you press
+<code>Ctrl-A</code>, the cursor will automatically go to “2” and
+increment it to “3”.</li>
+<li>If your cursor is on the second line and you press
+<code>Ctrl-X</code>, the cursor will automatically go to “200” and
+decrement it to “199”.</li>
+</ul>
+<h2 class="section"
+id="chap10.xhtml_leanpub-auto-incrementing-number-by-more-than-one">Incrementing
+Number By More Than One</h2>
+<p><strong>Problem:</strong><br />
+The increment / decrement operators (<code>Ctrl-A</code> and
+<code>Ctrl-X</code>) only adds or subtracts one each time.</p>
+<p><strong>Solution:</strong><br />
+You can pass a count before the increment / decrement operators.</p>
+<p>If you run <code>10 Ctrl-A</code> at the start of the line with “I
+ate 2 donuts”, it will increment it into “I ate 12 donuts”. Now that is
+sweet!</p>
+<p>Likewise if you run <code>5 Ctrl-X</code> on the same line, it will
+decrement it into “I ate 7 donuts”.</p>
+<h2 class="section"
+id="chap10.xhtml_leanpub-auto-sequentially-increment-multiple-numbers">Sequentially
+Increment Multiple Numbers</h2>
+<p><strong>Problem:</strong><br />
+You need to increment numbers on multiple rows, sequentially.</p>
+<p><strong>Solution:</strong><br />
+If you use visual selection to highlight multiple rows and run
+<code>Ctrl-A</code>, Vim will increment into the same number across the
+rows.</p>
+<p>However, if you run <code>g Ctrl-A</code> or <code>g Ctrl-X</code> in
+visual selection, it will sequentially increment the numbers on each
+line.</p>
+<p>If you have the text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>breakfast0
+breakfast0
+breakfast0</code></pre>
+</div>
+</figure>
+<p>If you visually highlight all 3 lines then press
+<code>g Ctrl-A</code>, Vim will increment each line:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>breakfast1
+breakfast2
+breakfast3</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap10.xhtml_leanpub-auto-substitute-and-increment-number">Substitute
+and Increment Number</h2>
+<p><strong>Problem:</strong><br />
+You need to increment numbers using substitution.</p>
+<p><strong>Solution:</strong><br />
+You can do this by utilizing the substitute command with the global.</p>
+<p>Suppose that you have the following:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>## I&#39;m a header
+
+## I&#39;m another header
+
+## I&#39;m yet another header</code></pre>
+</div>
+</figure>
+<p>And you want to substitute <code>##</code> into incrementing numbers,
+like:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1.)  I&#39;m a header
+
+2.)  I&#39;m another header
+
+3.)  I&#39;m yet another header</code></pre>
+</div>
+</figure>
+<p>Run:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>let i = 1 | g/^##/s//\=i . &#39;.)&#39;/g | let i += 1</code></pre>
+</div>
+</figure>
+<ul>
+<li><code>let i = 1</code> sets the variable <code>i</code> to equal
+1.</li>
+<li><code>g/^##/</code> runs the global command that matches the
+<code>^##</code> pattern (lines starting with “##”).</li>
+<li><code>s//</code> to use the substitute command. If you leave the
+search pattern blank, Vim will use the same search pattern as the global
+command search pattern (which is <code>^##</code>).</li>
+<li><code>\=i . '.)'/g</code> uses the expression
+<code>\=i . '.)'</code> as the substitute pattern (the variable
+<code>i</code> concatenated with the string “.)”. The <code>g</code> is
+the global flag.</li>
+<li><code>let i += 1</code> increments the variable <code>i</code> by 1
+with each iteration.</li>
+</ul>
+<h2 class="section"
+id="chap10.xhtml_leanpub-auto-quickly-generate-incrementing-numbers-anywhere">Quickly
+Generate Incrementing Numbers Anywhere</h2>
+<p><strong>Problem:</strong><br />
+You need to generate a list with incrementing numbers.</p>
+<p>Solution<br />
+If you need to create a list quickly, you can generate incrementing
+number prefixes on the fly. Here is how you can do this using visual
+mode and the number increment operator.</p>
+<p>Suppose that you have this list:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>first item
+second item
+third item</code></pre>
+</div>
+</figure>
+<ol>
+<li>Put your cursor on the first character on the first line, the
+character “f” in “first”,</li>
+<li>Activate the block-wise visual mode (<code>Ctrl-V</code>),</li>
+<li>Go down two lines.</li>
+<li>Press <code>I</code> to activate insert mode before the cursor and
+type “0. “. Press <code>&lt;Esc&gt;</code>.</li>
+</ol>
+<p>You should have:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>0. first item
+0. second item
+0. third item</code></pre>
+</div>
+</figure>
+<ol start="5">
+<li>Press <code>gv</code> to quickly highlight the previously selected
+visual mode. Vim will automatically highlight all “0” texts.</li>
+<li>Press <code>g Ctrl-A</code> to sequentially increment numbers and
+you’re done!</li>
+</ol>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1. first item
+2. second item
+3. third item</code></pre>
+</div>
+</figure>
+<h2 class="section" id="chap10.xhtml_leanpub-auto-get-ascii-value">Get
+ASCII Value</h2>
+<p><strong>Problem:</strong><br />
+You need to get an ASCII value of a character.</p>
+<p><strong>Solution:</strong><br />
+If you run <code>ga</code>, Vim will print the ASCII value of the
+character under the cursor (in decimal, hexadecimal, and octal).</p>
+<p><span id="chap11.xhtml"></span></p>
+<h1 class="chapter" id="chap11.xhtml_leanpub-auto-repeat">Repeat</h1>
+<h2 class="section"
+id="chap11.xhtml_leanpub-auto-repeat-the-last-command-line-command">Repeat
+the Last Command-Line Command</h2>
+<p><strong>Problem:</strong><br />
+You need to repeat the last command-line command.</p>
+<p><strong>Solution:</strong><br />
+Repeat the last command-line command with <code>@:</code>.</p>
+<p>If you just ran <code>:s/donut/pancake</code>, you can repeat it with
+<code>@:</code>.</p>
+<h2 class="section"
+id="chap11.xhtml_leanpub-auto-repeat-the-last-change">Repeat the Last
+Change</h2>
+<p><strong>Problem:</strong><br />
+You need to repeat the last change you made.</p>
+<p><strong>Solution:</strong><br />
+You can repeat the last change with <code>.</code> (the dot
+command).</p>
+<p>If you type “I love breakfast”, you can insert that text again by
+pressing the dot command (<code>.</code>).</p>
+<h2 class="section"
+id="chap11.xhtml_leanpub-auto-repeat-the-last-substitute">Repeat the
+Last Substitute</h2>
+<p><strong>Problem:</strong><br />
+You need to repeat the last substitute.</p>
+<p><strong>Solution:</strong><br />
+Repeat the last substitute with <code>:&amp;</code> or
+<code>&amp;</code>. If you do <code>:s/donut/waffle/g</code>, then you
+run <code>&amp;</code>, Vim will run <code>:s/donut/waffle</code> on
+that line. Vim doesn’t remember the <code>g</code> flag though.</p>
+<p>To repeat the last substitute and remember the flags, you can use
+<code>:&amp;&amp;</code>. If you do <code>:s/donut/waffle/g</code> and
+if you run <code>:&amp;&amp;</code>, Vim will run
+<code>:s/donut/waffle/g</code> on that line.</p>
+<p>To repeat the last substitute on all lines with the same flags, use
+<code>g&amp;</code>.</p>
+<p>If you do <code>:s/donut/pancake/g</code>, then run
+<code>g&amp;,</code> Vim runs <code>:%s/donut/pancake/g</code>.
+Technically Vim runs <code>:%s//~/&amp;</code>, which consists of:</p>
+<ul>
+<li><code>%</code>s to sub on all lines</li>
+<li><code>//</code> to repeat the last pattern</li>
+<li><code>~</code> to repeat the sub string</li>
+<li><code>&amp;</code> to use the last flag</li>
+</ul>
+<h2 class="section"
+id="chap11.xhtml_leanpub-auto-repeat-the-last-executed-macro">Repeat the
+Last Executed Macro</h2>
+<p><strong>Problem:</strong><br />
+You need to repeat the last executed macro</p>
+<p><strong>Solution:</strong><br />
+You can repeat the last executed macro with <code>@@</code>.</p>
+<p>If you just executed macro a with <code>@a</code>, running
+<code>@@</code> will execute that macro again.</p>
+<h2 class="section"
+id="chap11.xhtml_leanpub-auto-repeat-the-last-external-command">Repeat
+the Last External Command</h2>
+<p><strong>Problem:</strong><br />
+You need to repeat the last external command.</p>
+<p><strong>Solution:</strong><br />
+You can repeat the last external-command execution
+(<code>:!{cmd}</code>) with <code>:!!</code>.</p>
+<p>If you just ran <code>:!ls -l</code>, running <code>:!!</code> will
+re-run <code>:!ls -l</code>.</p>
+<p><span id="chap12.xhtml"></span></p>
+<h1 class="chapter" id="chap12.xhtml_leanpub-auto-sort">Sort</h1>
+<h2 class="section" id="chap12.xhtml_leanpub-auto-sorting-lines">Sorting
+Lines</h2>
+<p><strong>Problem:</strong><br />
+You need to sort multiple lines alphabetically.</p>
+<p><strong>Solution:</strong><br />
+Vim has the <code>:sort</code> command to sort multiple rows. A few
+things you can do:</p>
+<ul>
+<li>To sort the entire file, run <code>:sort</code>.</li>
+<li>To sort between lines 5-10, run <code>:5,10 sort</code>.</li>
+</ul>
+<p>This command also accepts flags to sort rows in different
+manners.</p>
+<p>If you have duplicate lines:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>pancake
+donut
+waffle
+donut</code></pre>
+</div>
+</figure>
+<p>Run <code>:sort u</code> to sort them and to remove the
+duplicates.</p>
+<p>Vim <code>:sort</code> does not sort numbers correctly. If you
+have:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>2 donuts
+1 donut
+11 donut
+10 donuts</code></pre>
+</div>
+</figure>
+<p>Running <code>:sort</code> will give you:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 donut
+10 donuts
+11 donut
+2 donuts</code></pre>
+</div>
+</figure>
+<p>To fix this, run <code>:sort n</code>.</p>
+<p>To sort based on pattern with <code>:sort /pattern/</code>.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>pancake, donut, waffle
+sushi, pasta, taco
+apple, banana, carrot
+water, apple juice, milk</code></pre>
+</div>
+</figure>
+<ul>
+<li>If you want to sort based on the second item (“donut” vs “pasta”,
+“banana”, “apple juice”), you can use <code>:sort /,/</code>. Vim will
+use the characters after the match to sort.</li>
+<li>If you want to sort based on the third item (“waffle” vs “taco” vs
+“carrot” vs “milk”), you can use <code>:sort /,.\+,/</code>.</li>
+</ul>
+<h2 class="section"
+id="chap12.xhtml_leanpub-auto-external-sort">External Sort</h2>
+<p><strong>Problem:</strong><br />
+You need to use a different sorting program.</p>
+<p><strong>Solution:</strong><br />
+Recall that you can use external commands as filters. Your terminal
+probably comes with a <code>sort</code> command. To sort using the
+terminal <code>sort</code> command, run <code>:%!sort</code>.</p>
+<p>Note: when using an external command to filter texts in Vim, pass it
+a range.</p>
+<ul>
+<li>To sort the entire file, run <code>:%!sort</code>.</li>
+<li>To unique sort lines 5 to 10, run <code>:5,10!sort -u</code>.</li>
+</ul>
+<h2 class="section" id="chap12.xhtml_leanpub-auto-reverse-sort">Reverse
+Sort</h2>
+<p><strong>Problem:</strong><br />
+You need to do a reverse sort.</p>
+<p><strong>Solution:</strong><br />
+You can do a reverse sort with <code>:sort!</code>.</p>
+<p>You can also use the terminal <code>sort</code> command,
+<code>:%!sort -r</code>.</p>
+<p><span id="chap13.xhtml"></span></p>
+<h1 class="chapter"
+id="chap13.xhtml_leanpub-auto-substitute">Substitute</h1>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-basic-substitution">Basic
+Substitution</h2>
+<p><strong>Problem:</strong><br />
+You need to substitute a pattern.</p>
+<p><strong>Solution:</strong><br />
+The substitute command is a versatile Vim command and probably the one
+you’ll use often. Its basic syntax is:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:s/pattern1/pattern2</code></pre>
+</div>
+</figure>
+<p>To substitute “donut” with “pancake” in the current line, run
+<code>:s/donut/pancake</code>. Note that if you have multiple “donut” on
+the same line, Vim will only substitute the first one. To substitute
+multiple instances, pass to it the global (<code>g</code>) flag:
+<code>:s/donut/pancake/g</code>.</p>
+<p>You can perform substitution in a range.</p>
+<ul>
+<li>To substitute “donut” with “pancake” between lines 2 and 5:
+<code>:2,5s/donut/pancake/g</code>.</li>
+<li>To substitute “donut” with “pancake” on the entire buffer, run
+<code>:%s/donut/pancake/g</code>.</li>
+</ul>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-case-insensitive-match">Case Insensitive
+Match</h2>
+<p><strong>Problem:</strong><br />
+You need to do a case insensitive substitution match.</p>
+<p><strong>Solution:</strong><br />
+Use the <code>i</code> flag for a case insensitive match.</p>
+<p>If you run<code> :%s/dOnuT/salad/gi</code>, it will substitute
+“donut”, “dOnuT”, and “DONUT” to “salad”. This is useful if you’re
+matching a phrase that has varying cases.</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-asking-for-confirmation-before-substituting">Asking
+For Confirmation Before Substituting</h2>
+<p><strong>Problem:</strong><br />
+You want Vim to ask for confirmation before substituting.</p>
+<p><strong>Solution:</strong><br />
+Use the <code>c</code> flag for a confirmation before substituting.</p>
+<p>If you are working in a large buffer and you need to substitute
+<em>some</em>, but not all of the matches, this is a perfect
+solution.</p>
+<p>Suppose that you need to substitute “donuts” with “waffle”, you can
+run <code>:%s/donut/waffle/gc</code>.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Chocolate donut
+Strawberry donut
+Vanilla donut</code></pre>
+</div>
+</figure>
+<p>If you only need to substitute the first and third match, after
+running the substitute command, Vim will ask you for a confirmation on
+each match. Just say yes on the first one, no on the second one, and yes
+on the third one.</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-group-match-in-substitution">Group Match
+In Substitution</h2>
+<p><strong>Problem:</strong><br />
+You need to reverse the order of a pattern.</p>
+<p><strong>Solution:</strong><br />
+You can group the match pattern and refer them as <code>\n</code> (where
+<code>n</code> is the integer).</p>
+<p>If you want to substitute “chocolate donut” into “donut chocolate”,
+you can just do <code>:s/chocolate donut/donut chocolate</code>.</p>
+<p>But what if you need to make the second word the first and the first
+word second? You need a group match.</p>
+<p>To turn “chocolate donut” into “donut chocolate”, run
+<code>:s/\(.\+\) \(.\+\)/\2 \1/g</code>.</p>
+<ul>
+<li>The first group <code>\(.\+\)</code> matches “chocolate” and is
+represented by <code>\1</code>.</li>
+<li>The second group <code>\(.\+\)</code> matches “donut” and is
+represented by <code>\2</code>.</li>
+</ul>
+<p>Another example: if you need to swap the 1st letter to 2nd, the 2nd
+letter to the 3rd, the 3rd to 1st, you can run
+<code>:s/^\(\w\)\(\w\)\(\w\)/\2\3\1/g</code>. This will swap “123” to
+“231”, “abc” to “bca”.</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-use-very-magic-to-avoid-escaping-special-characters">Use
+Very Magic to Avoid Escaping Special Characters</h2>
+<p><strong>Problem:</strong><br />
+You are sick and tired of escaping special characters.</p>
+<p><strong>Solution:</strong><br />
+Some characters, when doing search / substitution, have special meanings
+(like <code>.</code>, <code>( )</code>, or <code>+</code>). There are
+times when you have to escape a plethora of characters. Use the very
+magic flag <code>\v</code> to avoid escaping special characters.</p>
+<ul>
+<li>To turn “chocolate donut” into “donut chocolate” with very magic,
+run :<code>s/\v(.+) (.+)/\2 \1/g</code> (contrast that with
+<code>:s/\(.\+\) \(.\+\)/\2 \1/g</code>).</li>
+<li>To swap the 1st letter to 2nd, 2nd to 3rd, and 3rd to 1st with very
+magic, run <code>:s/\v^(\w)(\w)(\w)/\2\3\1/g</code> (contrast that with
+<code>:s/^\(\w\)\(\w\)\(\w\)/\2\3\1/g</code>).</li>
+</ul>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-representing-the-entire-match">Representing
+the Entire Match</h2>
+<p><strong>Problem:</strong><br />
+You need a way to represent “the entire match” pattern.</p>
+<p><strong>Solution:</strong><br />
+In a group match, <code>\0</code> is a special keyword that represents
+the entire match.</p>
+<p>If you have the string “pancake” and you want to update “pancake”
+into “fluffy pancake”, instead of running
+<code>:s/pancake/fluffy pancake</code>, you can run
+<code>:s/pancake/fluffy \0/</code>. <code>\0</code> represents the
+entire match, which is the word “pancake”.</p>
+<p>If you need to add parentheses around “pancake”, you can run
+<code>:s/pancake/(\0)/g</code> to give you “(pancake)”.</p>
+<p>Alternatively, <code>&amp;</code> is also another keyword for the
+entire match: <code>:s/pancake/fluffy &amp;/</code> and
+<code>:s/pancake/(&amp;)/g</code>.</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-using-the-group-match-to-remove-words">Using
+the Group Match to Remove Words</h2>
+<p><strong>Problem:</strong><br />
+You need to reuse parts of the search pattern.</p>
+<p><strong>Solution:</strong><br />
+You can use group matches, <code>\1 \2 \3 etc</code>, to remove
+words.</p>
+<p>You can delete subsequent duplicate lines with
+<code>:%s/(.+)\n\1/\1/g</code>. Here you are using <code>\1</code> as a
+pattern to substitute and pattern to substitute into. If you have:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>chocolate
+donut
+donut</code></pre>
+</div>
+</figure>
+<p>Vim deletes the second “donut”.</p>
+<p>Another example, if you have a list of phone numbers:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>123-123-1234
+111-111-1111</code></pre>
+</div>
+</figure>
+<p>If you want to get rid of the area code (the first 3 digits), you can
+run <code>:%s/\v(\d{3}-)(\d{3}-)(\d{4})/\2\3</code>. You’ll get:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>123-1234
+111-1111</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-reusing-the-previous-search-pattern">Reusing
+the Previous Search Pattern</h2>
+<p><strong>Problem:</strong><br />
+You just searched for a word (<code>/some keyword</code>) and you don’t
+want to retype that word again when doing substitution.</p>
+<p><strong>Solution:</strong><br />
+If you use an empty substitute search pattern, Vim will use the previous
+search pattern!</p>
+<p>If you recently searched for <code>/donut</code> and then you run
+<code>:%s//pancake/g</code>, this is equal to
+<code>:%s/donut/pancake/g</code>. Why type more if you can type
+less?</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-deleting-in-substitution-quicker">Deleting
+In Substitution Quicker</h2>
+<p><strong>Problem:</strong><br />
+When you’re using a substitution to delete, like in
+<code>:s/donut//</code>, is there a faster way to do this?</p>
+<p><strong>Solution:</strong><br />
+If you leave the substitute pattern blank, Vim assumes that you want to
+delete them:</p>
+<ul>
+<li><code>:%s/waffles</code> removes all “waffles” in a buffer.</li>
+<li><code>:%s/^\n</code> removes all empty lines in a buffer.</li>
+</ul>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-using-an-expression-in-a-substitution">Using
+an Expression in a Substitution</h2>
+<p><strong>Problem:</strong><br />
+You need to do a complicated substitution using an expression</p>
+<p><strong>Solution:</strong><br />
+You can use the expression register in substitution with
+<code>\={expr}</code>.</p>
+<p>To substitute all <code>__DATE__</code> string with today’s date, you
+can run <code>:%s/__DATE__/\=strftime("%c")/g</code>.
+<code>strftime()</code> is a Vimscript function
+(<code>:h strftime()</code>).</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-removing-trailing-whitespaces">Removing
+Trailing Whitespaces</h2>
+<p><strong>Problem:</strong><br />
+You have trailing whitespaces all over the buffer.</p>
+<p><strong>Solution:</strong><br />
+To remove trailing whitespaces, run <code>:%s/\s\+$//g</code>.</p>
+<ul>
+<li><code>\s</code> represents whitespace characters (literal spaces and
+tabs).</li>
+<li><code>\+</code> means one or more preceding character.</li>
+<li><code>$</code> here means the end of the line.</li>
+</ul>
+<p>Together, <code>\s\+$</code> means one or more whitespace characters
+at the end of the line. Recall that the <code>:s</code> command
+automatically deletes if you leave the second half blank, so
+<code>:%s/\s\+$</code> works too.</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-add-a-new-line-in-substitution">Add a New
+Line In Substitution</h2>
+<p><strong>Problem:</strong><br />
+You need to add a new line to a phrase.</p>
+<p><strong>Solution:</strong><br />
+Substitution can also be used to add new lines. Use the <code>\r</code>
+pattern.</p>
+<p>If you want to add a new line after each line that starts with
+“pancakes”, run <code>:%s/^pancakes.*/\0\r/g</code>:</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-repeat-the-last-substitute-command">Repeat
+the Last Substitute Command</h2>
+<p><strong>Problem:</strong><br />
+You need to repeat the last substitute command.</p>
+<p><strong>Solution:</strong><br />
+<code>:s</code> repeats the last substitute command without the
+flag.</p>
+<p>If you recently did <code>:s/pancake/donut</code> and you repeat it
+<code>:s</code> will quickly repeat that. Alternatively, you can also
+press <code>&amp;</code>. <code>&amp;</code> is the normal mode version
+of <code>:s</code>.</p>
+<p>If you recently did <code>:s/pancake/donut/g</code> and you want to
+keep the <code>g</code> flag, run <code>:&amp;&amp;</code>.</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-capitalize-the-first-letter-of-each-word">Capitalize
+the First Letter Of Each Word</h2>
+<p><strong>Problem:</strong><br />
+You need to capitalize the first letter of each word in a line.</p>
+<p><strong>Solution:</strong><br />
+Run <code>:s/\&lt;./\u\0/g</code> to capitalize the first letter of each
+word in a line.</p>
+<ul>
+<li><code>\&lt;.</code> is the pattern for the beginning of a word.</li>
+<li><code>\u</code> is a special keyword modifier to uppercase the
+subsequent pattern.</li>
+<li><code>\0</code> represents the entire match.</li>
+</ul>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-perform-a-chain-of-substitutes">Perform a
+Chain of Substitutes</h2>
+<p><strong>Problem:</strong><br />
+You need to substitute a few phrases simultaneously.</p>
+<p><strong>Solution:</strong><br />
+You can chain multiple substitutions with <code>|</code>.</p>
+<p>To substitute “good” to “awesome”, “bad” to “terrible”, and “ugly” to
+“hideous”, run:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:s/good/awesome/ | s/bad/terrible/ | s/ugly/hideous/</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-repeat-the-last-substitute-string">Repeat
+the Last Substitute String</h2>
+<p><strong>Problem:</strong><br />
+You need to do a different substitution but with the same substitute
+string as your previous substitution.</p>
+<p><strong>Solution:</strong><br />
+Use the <code>~</code> pattern in substitution to repeat the last
+substitute string.</p>
+<p>If you recently ran <code>:s/pancake/donut/g</code>, then
+<code>:s/waffle/~/g</code>, Vim will also substitute “waffle” with
+“donut”, the last substitute string.</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-repeat-the-last-substitution-with-the-last-search-pattern-and-the-last-substitute-string">Repeat
+the Last Substitution With the Last Search Pattern and the Last
+Substitute String</h2>
+<p><strong>Problem:</strong><br />
+You just searched with <code>/</code>. You just performed a
+substitution. Now you need to substitute using the last search pattern
+but with the same previous substitute string.</p>
+<p><strong>Solution:</strong><br />
+Use <code>:~</code> to repeat the last substitution using the last
+search pattern and the last substitute string</p>
+<p>If you recently ran <code>:s/pancake/donut/</code> and you recently
+searched <code>/mochi</code>, running <code>:~</code> will do
+<code>:s/mochi/donut/</code>.</p>
+<h2 class="section"
+id="chap13.xhtml_leanpub-auto-changing-the-delimiter">Changing the
+Delimiter</h2>
+<p><strong>Problem:</strong><br />
+You got lost in the jungle of front-slashes.</p>
+<p><strong>Solution:</strong><br />
+You need to substitute a web URL with a long path like
+<code>https://mysite.com/a/b/c/d/e</code> and you end up with something
+like <code>:s/https:\/\/mysite.com\/a\/b\/c\/d\/e/hello/</code>.</p>
+<p>Frankly it is hard to tell which forward slashes are part of the
+substitution patterns and which ones are the delimiters. Vim lets you
+change the substitution delimiter with any single-byte characters
+(except for alphabets, numbers, <code>"</code>, <code>|</code>, and
+<code>\</code>). What that means is that you can do something like:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:s+https:\/\/mysite.com\/a\/b\/c\/d\/e+hello+</code></pre>
+</div>
+</figure>
+<p>or</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:s@https:\/\/mysite.com\/a\/b\/c\/d\/e@hello@</code></pre>
+</div>
+</figure>
+<p>With this, the distinction between <code>/</code> as the literal
+character and the delimiters are clearer.</p>
+<p><span id="chap14.xhtml"></span></p>
+<h1 class="chapter" id="chap14.xhtml_leanpub-auto-global-command">Global
+Command</h1>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-global-command-basics">Global Command
+Basics</h2>
+<p><strong>Problem:</strong><br />
+You don’t know how to use the global command.</p>
+<p><strong>Solution:</strong><br />
+Global command is a useful command to execute a command on multiple
+lines. The general pattern is <code>:g/pattern/command</code>.</p>
+<p>For example, to delete all lines containing “let”, you can use
+<code>:g/let/d</code>.</p>
+<h2 class="section" id="chap14.xhtml_leanpub-auto-inverse-match">Inverse
+Match</h2>
+<p><strong>Problem:</strong><br />
+You want to run the global command on non-matching lines instead of
+matching lines.</p>
+<p><strong>Solution:</strong><br />
+The command <code>:g/let/d</code> deletes all lines containing the word
+“let”. What if you want to delete all lines not containing “let”?</p>
+<p>You can use the inverse global command with <code>g!</code> or
+<code>v</code>. Run either <code>:g!/let/d</code> or
+<code>:v/let/d</code>.</p>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-prepend-or-append-on-multiple-lines">Prepend
+or Append On Multiple Lines</h2>
+<p><strong>Problem:</strong><br />
+You need to append a semicolon on all lines containing “const”.</p>
+<p><strong>Solution:</strong><br />
+From normal mode, you can enter insert mode at the end of the line with
+<code>A</code>. You can take replicate normal mode commands with the
+<code>normal</code> command.</p>
+<p>To add a semicolon at the end of all lines containing “const”, run
+<code>:g/const/normal A;</code>.</p>
+<p>By the way, recall that you can enter insert mode at the start of the
+line with <code>I</code>. To add “const” at the start of all lines
+containing “;”, run <code>:g/;/normal Iconst </code>.</p>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-global-command-within-a-range">Global
+Command Within a Range</h2>
+<p><strong>Problem:</strong><br />
+You need to execute the global command within a range, not on the entire
+file.</p>
+<p><strong>Solution:</strong><br />
+You can run <code>:5,10g/donut/s/pancakes/waffles/g</code> to execute
+the global command between lines 5 and 10.<br />
+You can also run the global command between a marked range. The command
+<code>:'a,'bg/donut/s/pancakes/waffles/g</code> executes the global
+command between the marks <code>'a</code> and <code>'b</code>.</p>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-delete-blank-and-empty-lines">Delete Blank
+and Empty Lines</h2>
+<p>Problem;<br />
+You need to quickly get rid of empty lines.</p>
+<p><strong>Solution:</strong><br />
+The global command is great to for deleting multiple empty and blank
+lines lines.</p>
+<ul>
+<li>Run <code>:g/^$/d</code> to delete all empty lines.</li>
+<li>Run <code>:g/^\s*$/d</code> to delete all blank lines.</li>
+</ul>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-running-global-command-between-matching-patterns">Running
+Global Command Between Matching Patterns</h2>
+<p><strong>Problem:</strong><br />
+You need to execute the global command only between
+<code>pattern1</code> and <code>pattern2</code>.</p>
+<p><strong>Solution:</strong><br />
+The global command accepts the form of
+<code>:g/pattern1/,/pattern2/ {cmd}</code> to execute <code>cmd</code>
+between <code>pattern1</code> and <code>pattern2</code>.</p>
+<p>If you want to delete the text between “apples” and “oranges”,
+excluding “apples” and “oranges”, run
+<code>:g/apples/+, /oranges/- d</code>. If you want to delete “apples”
+and “oranges” too, run <code>:g/apples/, /oranges/ d</code>.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>apples
+bananas
+oranges
+
+apples
+blueberries
+pineapple
+mangos
+oranges
+
+papayas</code></pre>
+</div>
+</figure>
+<p>Explanation:</p>
+<ul>
+<li><code>pattern1</code> is <code>apples</code>.</li>
+<li><code>pattern2</code> is <code>oranges</code>.</li>
+<li>The <code>+</code> means one line below and <code>-</code> means one
+line above.</li>
+<li><code>d</code> is the delete command.</li>
+</ul>
+<p>If you want to sort only the items inside the parentheses, run
+<code>:g/(/+1,/)/-1 sort</code>.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>(
+  chokeberry
+  blueberry
+  acaiberry
+)
+  apples
+  carrots
+  bananas 
+)</code></pre>
+</div>
+</figure>
+<p>Explanation:</p>
+<ul>
+<li><code>pattern1</code> is <code>(</code> (left parentheses).</li>
+<li><code>pattern2</code> is <code>)</code> (right parentheses).</li>
+<li>The <code>+1</code> in <code>/(/+1</code> and the <code>-1</code> in
+<code>/)/-1</code> means that the global command will affect texts after
+<code>(</code> and before <code>)</code>.</li>
+<li><code>sort</code> is the command to execute.</li>
+</ul>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-condense-multiple-empty-lines">Condense
+Multiple Empty Lines</h2>
+<p><strong>Problem:</strong><br />
+You have multiple empty lines in a file and you need to wrap them into
+single lines.</p>
+<p><strong>Solution:</strong><br />
+You can condense multiple empty lines with
+<code>:g/^$/,/./-1 j</code>.</p>
+<p>If you have:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Hello
+
+There are 
+
+many empty
+lines
+
+
+in here</code></pre>
+</div>
+</figure>
+<p>Running <code>:g/^$/,/./-1 j</code> will condense the empty lines
+into single lines. This global command uses two patterns:
+<code>/^$/</code> (empty line) and <code>/./-1</code> (one line before a
+non-empty line). The command to be executed is the join command
+(<code>:j</code>).</p>
+<p>Alternatively, if you have the <code>cat</code> program in the
+terminal, you can also run <code>:%!cat -s</code> (the <code>-s</code>
+stands for “squeeze”) to squeeze multiple empty lines into single
+lines.</p>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-reuse-the-global-command-search-pattern-in-the-substitute-command">Reuse
+the Global Command Search Pattern in the Substitute Command</h2>
+<p><strong>Problem:</strong><br />
+You want to reuse the global command pattern in the substitute
+command.</p>
+<p><strong>Solution:</strong><br />
+Vim will actually re-use the global command pattern if it is followed-up
+with the substitute command with a blank search pattern.</p>
+<p><code>:g/apples/s//oranges/g</code> is the same as
+<code>:g/apples/s/apples/oranges/g</code>.</p>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-the-default-command">The Default
+Command</h2>
+<p><strong>Problem:</strong><br />
+You want to print the global command results.</p>
+<p><strong>Solution:</strong><br />
+If you don’t pass any <code>{cmd}</code> to the global command, Vim will
+automatically run the print command (<code>:p</code>).</p>
+<p><code>:g/bagel</code> is the same as <code>:g/bagel/p</code>.</p>
+<p>Note that this command has a pattern of <code>g/re/p</code>. This is
+the same grep command found in the terminal.</p>
+<p>This pattern, <code>g/re/p</code>, originally comes from the Ed
+editor (remember that?).</p>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-use-execute-to-run-complex-expressions">Use
+Execute to Run Complex Expressions</h2>
+<p><strong>Problem:</strong><br />
+You want to run the global command using a complex expression.</p>
+<p><strong>Solution:</strong><br />
+You can use Vim’s <code>:execute</code> command with the global
+command.</p>
+<p>Given a list of filenames (without any extension):</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>file1
+file2
+file3</code></pre>
+</div>
+</figure>
+<p>To generate new markdown files for each line. Run
+<code>:g/^/execute "w " . getline(".") . ".md"</code>.</p>
+<p>The command executes <code>:w file1.md</code>,
+<code>:w file2.md</code>, and <code>:w file3.md</code>. Vim will
+generate <code>file1.md</code>, <code>file2.md</code>, and
+<code>file3.md</code>. Neat!</p>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-reverse-all-lines">Reverse All Lines</h2>
+<p><strong>Problem:</strong><br />
+You need to reverse the order of each line.</p>
+<p><strong>Solution:</strong><br />
+To reverse all lines, just run <code>:g/^/m 0</code>.</p>
+<ul>
+<li><code>^</code> will target all lines in a file.</li>
+<li><code>m 0</code> is a move command. It will move each line, into the
+1st line, effectively reversing the entire order.</li>
+</ul>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-surround-all-digits-with-double-quotes">Surround
+All Digits With Double Quotes</h2>
+<p><strong>Problem:</strong><br />
+You need to surround any digits with double quotes.</p>
+<p><strong>Solution:</strong><br />
+Given the following text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>const one = 1
+const two = 2
+const three = 3
+const nope = &quot;don&#39;t mind me&quot;
+const four = 4
+const five = 55</code></pre>
+</div>
+</figure>
+<p>Run <code>:g/\d\+/s//"&amp;"/g</code> to get:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>const one = &quot;1&quot;
+const two = &quot;2&quot;
+const three = &quot;3&quot;
+const nope = &quot;don&#39;t mind me&quot;
+const four = &quot;4&quot;
+const five = &quot;5&quot;</code></pre>
+</div>
+</figure>
+<p>Explanation:</p>
+<ul>
+<li>The pattern <code>\d\+</code> matches one or more digits.</li>
+<li><code>s//</code> is a substitute command with a blank substitute
+pattern. Recall that if you leave the search pattern blank, Vim will use
+the pattern used by the global command.</li>
+<li><code>"&amp;"</code> is the substitute pattern. Recall that
+<code>&amp;</code> represents the entire match. <code>"&amp;"</code>
+surrounds the entire match with double quotes.</li>
+</ul>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-changing-the-delimiter-1">Changing the
+Delimiter</h2>
+<p><strong>Problem:</strong><br />
+You got lost in the sea of <code>/</code>.</p>
+<p><strong>Solution:</strong><br />
+Just like you can change the delimiter of the substitute command, you
+can also change the delimiter of the global command with any single-byte
+characters.</p>
+<p>This is a valid global command:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:g@console@d</code></pre>
+</div>
+</figure>
+<p>If you are using a global command with the substitute command, you
+can do something like this:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>g@one@s+const+let+g</code></pre>
+</div>
+</figure>
+<p>It is easier to see which part belongs to the global command and
+which belongs to the substitute command.</p>
+<h2 class="section"
+id="chap14.xhtml_leanpub-auto-programmatic-global-command">Programmatic
+Global Command</h2>
+<p><strong>Problem:</strong><br />
+You need to programmatically run the global command.</p>
+<p><strong>Solution:</strong><br />
+The global command is very versatile. You can enhance the global command
+with Vimscript.</p>
+<p>A few things of you can do:</p>
+<ul>
+<li>Delete even lines with
+<code>:g/^/if line(".") % 2 != 0 | norm! d$</code></li>
+<li>Delete lines that are less than 3 char long with
+<code>:g/^/if strlen(getline(".")) &lt; 3 | d</code></li>
+</ul>
+<p><span id="chap15.xhtml"></span></p>
+<h1 class="chapter" id="chap15.xhtml_leanpub-auto-tags">Tags</h1>
+<h2 class="section" id="chap15.xhtml_leanpub-auto-what-are-tags">What
+Are Tags?</h2>
+<p><strong>Problem:</strong><br />
+You want to understand about Vim’s tag system.</p>
+<p><strong>Solution:</strong><br />
+In many modern editors, you can click on a function or class definition
+and it will take you to where that function or class is defined. You can
+do that in Vim with tags. Although you can just search for any
+definition with <code>grep</code>, <code>vimgrep</code>, or external
+libraries like (<code>fzf.vim</code>), tags are the best tool for this
+kind of job.</p>
+<p>Think of a Vim tag like an address book:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Name    Address
+Iggy1   123 Awesome St, 12345
+Iggy2   987 Incredible Ave, 98765
+Iggy3   555 Handsome Rd, 55555</code></pre>
+</div>
+</figure>
+<p>To look for <code>Iggy1</code>’s address, first you open the address
+book, then search for <code>Iggy1</code> on the <code>Name</code>
+column, then search for the corresponding address. Tags work the same
+way. Instead of having name-address table, Vim tags store word
+definitions and their locations in the project.</p>
+<p>So how do you get started with tags?</p>
+<p>You need a tool called tag generator to generate this address file.
+Modern Vim doesn’t come with a tag generator so you have to download it
+separately. There are several options you can choose, but the one I
+recommend is either <a
+href="https://github.com/universal-ctags/ctags">Universal Ctags</a> or
+<a href="http://ctags.sourceforge.net">Exuberant Ctags</a>. Follow the
+direction on their websites how to install it.</p>
+<p>Here I’ll use the Universal Ctags. After you install it, you should
+get the <code>ctags</code> command. If you use a different tags
+generator, you can still follow along.</p>
+<p>Assume that you have two ruby files:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>## one.rb
+class One
+  def initialize
+    puts &quot;Initialized&quot;
+  end
+
+  def donut
+    puts &quot;Bar&quot;
+  end
+end
+
+
+## two.rb
+require &#39;./one&#39;
+
+one = One.new
+one.donut</code></pre>
+</div>
+</figure>
+<p>Running <code>ctags -R .</code> from the terminal will generate a
+basic tag file (named <code>tags</code>). The <code>-R</code> means a
+recursive call.</p>
+<p>Inside that file:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>One	one.rb	/^class One$/;&quot;	c
+donut	one.rb	/^  def donut$/;&quot;	f	class:One
+initialize	one.rb	/^  def initialize$/;&quot;	f	class:One</code></pre>
+</div>
+</figure>
+<p>Yours may have additional rows, but it should at least contain a word
+definition and its address.</p>
+<p>If you look at one of them:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>donut	one.rb	/^  def donut$/;&quot;	f	class:One</code></pre>
+</div>
+</figure>
+<p><code>donut</code> is the tag name. When your cursor is on “donut”,
+Vim searches the tag file for a row that contains “donut”.</p>
+<p><code>one.rb /^ def donut$/;"</code> is the address. It consists of
+two parts:</p>
+<ul>
+<li><code>one.rb</code> is the file name. Vim looks for a file
+<code>one.rb</code>.</li>
+<li><code>/^ def donut$/</code> is the address. <code>/.../</code> is a
+pattern indicator. <code>^</code> is a pattern for the first element on
+a line. It is followed by two spaces, then the string
+<code>def donut</code>. Finally, <code>$</code> is a pattern for the
+last element on a line. This is the same as if you’re searching with
+<code>/^ def donut$</code>.</li>
+<li><code>f class:One</code> is the tag option that tells Vim that
+“donut” is a function (f) and is part of the <code>One</code>
+class.</li>
+</ul>
+<p>In short, a tag file is an address book that tells Vim where to find
+a particular definition.</p>
+<h2 class="section"
+id="chap15.xhtml_leanpub-auto-setting-up-the-tag-file">Setting Up the
+Tag File</h2>
+<p><strong>Problem:</strong><br />
+You successfully created a tag file but you don’t know how to set it
+up.</p>
+<p><strong>Solution:</strong><br />
+Run <code>:set tags?</code>, Vim will display
+<code>tags=./tags,tags</code> (depending on your Vim settings, it might
+be a little different). Vim looks at the <code>tags</code> option for
+locations where it can find the tag file.</p>
+<p>You can add or remove path locations. If you prefer to have a
+centralized tags for your projects, you can do something like
+<code>set tags+=/path/to/your/tags</code>. Vim will search for tags
+definition in order. If Vim finds a tag file in <code>./tags</code> (the
+current directory) it will use that and not the other tag files. If
+there is no tag file in the current directory, Vim will check the next
+path, <code>tags</code> (the project root file). Finally, it will look
+for tags in <code>/path/to/your/tags</code>.</p>
+<h2 class="section" id="chap15.xhtml_leanpub-auto-tags-navigation">Tags
+Navigation</h2>
+<p><strong>Problem:</strong><br />
+You want to quickly jump to a method definition.</p>
+<p><strong>Solution:</strong><br />
+If your cursor is on “donut”, you can jump to “donut” origin by pressing
+<code>Ctrl-]</code> or by running <code>:tag donut</code> (assuming that
+you already have a tag file properly set up in the correct path)</p>
+<p>What if you have multiple methods with the same name? Vim will jump
+to the definition with a higher tag priority.</p>
+<p>Wait, what is tag priority? When a tag file contains duplicate item
+names, Vim decides which address to jump to based on the tag
+priority.</p>
+<p>The priorities are, in order:</p>
+<ol>
+<li>A fully matched static tag in the current file.</li>
+<li>A fully matched global tag in the current file.</li>
+<li>A fully matched global tag in a different file.</li>
+<li>A fully matched static tag in another file.</li>
+<li>A case-insensitively matched static tag in the current file.</li>
+<li>A case-insensitively matched global tag in the current file.</li>
+<li>A case-insensitively matched global tag in a different file.</li>
+<li>A case-insensitively matched static tag in the current file.</li>
+</ol>
+<h2 class="section"
+id="chap15.xhtml_leanpub-auto-selective-jump">Selective Jump</h2>
+<p><strong>Problem:</strong><br />
+You want to choose which keyword to jump to, regardless of tag
+priority.</p>
+<p><strong>Solution:</strong><br />
+Suppose that you have two “pancake” keyword definitions. If you press
+<code>Ctrl-]</code> while your cursor is on the word “pancake”, Vim
+decides it for you based on its tag priority. But what if you want to
+jump to the one with less priority? How can you fight back Vim’s
+dictatorship?</p>
+<p>With <code>g Ctrl-]</code>, if Vim finds multiple matches, you can
+choose which definition to jump. The command-line alternative is the
+command <code>:tjump pancake</code>.</p>
+<h2 class="section"
+id="chap15.xhtml_leanpub-auto-autocompletion-1">Autocompletion</h2>
+<p><strong>Problem:</strong><br />
+You want to use tags for autocompletion.</p>
+<p><strong>Solution:</strong><br />
+You can use autocompletion in insert mode using tags. Just press
+<code>Ctrl-X Ctrl-]</code> and Vim will autocomplete according to the
+tag file.</p>
+<h2 class="section"
+id="chap15.xhtml_leanpub-auto-automatic-tag-generation">Automatic Tag
+Generation</h2>
+<p><strong>Problem:</strong><br />
+You don’t want to keep running the tags generator manually.</p>
+<p><strong>Solution:</strong><br />
+Your code changes over time. You add, update, and remove methods and
+classes. Meanwhile, the tag file does not know about these changes so it
+keeps the old definitions.</p>
+<p>Ideally you need to re-run <code>ctags -R .</code> each time you make
+a significant change, but that takes a ton of work! The good news is,
+you can use Vim autocommand (<code>:autocmd</code>) to generate tags
+automatically.</p>
+<p>For example, if you want to automatically generate tags each time you
+save a ruby file, run:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:autocmd BufWritePost *.rb silent !ctags -R .</code></pre>
+</div>
+</figure>
+<p>Another alternative is to use external plugins to manage the tags.
+Some popular tag plugins are (the list is not comprehensive, so check
+out if there are better ones to suit your coding style):</p>
+<ul>
+<li><a
+href="https://github.com/ludovicchabant/vim-gutentags">vim-gutentags</a></li>
+<li><a href="https://github.com/szw/vim-tags">vim-tags</a></li>
+<li><a
+href="https://github.com/xolox/vim-easytags">vim-easytags</a></li>
+<li><a
+href="https://github.com/craigemery/vim-autotag">vim-autotag</a></li>
+</ul>
+<p><span id="chap16.xhtml"></span></p>
+<h1 class="chapter" id="chap16.xhtml_leanpub-auto-text-generation">Text
+Generation</h1>
+<h2 class="section"
+id="chap16.xhtml_leanpub-auto-get-a-file-content">Get a File
+Content</h2>
+<p><strong>Problem:</strong><br />
+You need to get the content of another file into the current file.</p>
+<p><strong>Solution:</strong><br />
+You can read the content of a file with <code>:r myfile.txt</code>. By
+default it will put the content below the current line. If you want to
+have it on the first line, run <code>:0r myfile.txt</code>.</p>
+<h2 class="section"
+id="chap16.xhtml_leanpub-auto-get-the-current-date">Get the Current
+Date</h2>
+<p><strong>Problem:</strong><br />
+You need to get the current date quickly.</p>
+<p><strong>Solution:</strong><br />
+Your terminal probably has a <code>date</code> command. Recall that you
+can insert from a file with <code>:r somefile.txt</code>. You can get
+the current date with <code>:r !date</code>.</p>
+<p>This command also works with other external commands:</p>
+<ul>
+<li>If you need to get all the filenames in the current directory, run
+<code>:r !ls</code>.</li>
+<li>If you need to get the response of a curl command, run
+<code>:r !curl -s https://jsonplaceholder.typicode.com/posts</code> (by
+the way, the <code>-s</code> flag in this command stands for
+silent).</li>
+</ul>
+<h2 class="section"
+id="chap16.xhtml_leanpub-auto-generate-numbers">Generate Numbers</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly generate numbers from 1 to 10.</p>
+<p><strong>Solution:</strong><br />
+Run <code>:put =range(1,10)</code> to generate the numbers 1 to 10.</p>
+<p>The <code>put</code> method outputs the text from the given register.
+In this case, <code>=</code> is the expression register. The expression
+is <code>range(1,10)</code>.</p>
+<p>By the way, the <code>range()</code> command also accepts an optional
+third parameter, stride. Run <code>:put=range(1,10,2)</code> to generate
+numbers 1 to 10 incremented by 2. Run <code>:put=range(10,1,-1)</code>
+to generate decrementing numbers.</p>
+<h2 class="section"
+id="chap16.xhtml_leanpub-auto-generate-ip-addresses">Generate IP
+Addresses</h2>
+<p><strong>Problem:</strong><br />
+You need to generate different IP addresses.</p>
+<p><strong>Solution:</strong><br />
+To generate a sequential IP addresses, use
+<code>:for i in range(1,10) | put ='192.168.0.'.i | endfor</code>.</p>
+<p>This is an expansion of the <code>put</code> + <code>range</code>
+method above using the <code>for</code> loop and string
+concatenation.</p>
+<h2 class="section"
+id="chap16.xhtml_leanpub-auto-generate-random-dice-throw">Generate
+Random Dice Throw</h2>
+<p><strong>Problem:</strong><br />
+You want to generate a random number between 1 to 6.</p>
+<p><strong>Solution:</strong><br />
+To generate 10 different dice rolls, you can use
+<code>rand()</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:for i in range(1,10) | put=&#39;Roll the dice: &#39; . (rand() % 6 + 1) | endfor</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap16.xhtml_leanpub-auto-generate-numbers-horizontally">Generate
+Numbers Horizontally</h2>
+<p><strong>Problem:</strong><br />
+You need to generate a number series on the same line.</p>
+<p><strong>Solution:</strong><br />
+To generate numbers horizontally, use <code>put</code> and
+<code>join</code>.</p>
+<ul>
+<li><code>:put=join([1,2,3,4], \" - \")</code> to generate 1 - 2 - 3 -
+4.</li>
+<li><code>:put=join(range(1,10), \"', '\")</code> to generate 1’, ‘2’,
+‘3’, ‘4’, … ‘10 (it won’t generate the first and last single-quote, you
+can just add them manually).</li>
+</ul>
+<h2 class="section"
+id="chap16.xhtml_leanpub-auto-transform-a-text-into-a-numbered-list-based-on-line-numbers">Transform
+a Text Into a Numbered List Based On Line Numbers</h2>
+<p><strong>Problem:</strong><br />
+You want to turn a text into a numbered list based on line numbers.</p>
+<p><strong>Solution:</strong><br />
+To create a numbered list on multiple lines, run
+<code>:%s/^/\=printf('%-2s', line('.'))</code>.</p>
+<p>If you have following text starting on line 1:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Breakfast is good
+But lunch is better
+Dinner is still the best</code></pre>
+</div>
+</figure>
+<p>Run <code>:%s/^/\=printf("%-2s", line("."))</code> to get:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>1 Breakfast is good
+2 But lunch is better
+3 Dinner is still the best</code></pre>
+</div>
+</figure>
+<p>Command breakdown:</p>
+<ul>
+<li><code>^</code> represents the start of the line.</li>
+<li><code>\=</code> allows you to use Vimscript expression in a
+substitution.</li>
+<li><code>printf('%-2s')</code> prints the string with space (the -2 is
+the field with, padded left).</li>
+<li><code>line('.')</code> is the current line number.</li>
+</ul>
+<p><span id="chap17.xhtml"></span></p>
+<h1 class="chapter"
+id="chap17.xhtml_leanpub-auto-text-manipulation">Text Manipulation</h1>
+<h2 class="section" id="chap17.xhtml_leanpub-auto-how-to-speak-vim">How
+to Speak Vim</h2>
+<p><strong>Problem:</strong><br />
+You are having trouble remembering myriads of Vim commands.</p>
+<p><strong>Solution:</strong><br />
+Don’t try to remember every command. Instead, break it down into smaller
+chunks. Vim commands contain a grammar-like pattern (let’s call it the
+“Vim Grammar”) to create compositions.</p>
+<p>There is one rule in Vim grammar:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>verb + noun</code></pre>
+</div>
+</figure>
+<p>Operators are verbs and motions are nouns. Most actions are done by
+following that rule. You only need to master a handful of operator and
+navigation keys to become productive.</p>
+<p>For example:</p>
+<ul>
+<li>To delete the next word, run <code>dw</code>; verb (<code>d</code>)
++ noun (<code>w</code>).</li>
+<li>To yank two characters to the left, <code>y2h</code>; verb
+(<code>y</code>) + noun (<code>2h</code>). Note that you can pass a
+count before the motion (<code>2h</code>).</li>
+<li>To change the next line, <code>cj</code>; verb (<code>c</code>) +
+noun (<code>j</code>).</li>
+</ul>
+<p>Texts often come structured. There is a concept of a “word”, a
+“paragraph”, a “parentheses”, etc in a file. Vim has an abstraction
+known as text objects to address these structures. There are two
+different text objects: inner (<code>i</code> + object) and outer
+(<code>a</code> + object) text objects. This looks complicated, but once
+you get it, it’s fairly simple and intuitive.</p>
+<p>A text object is the noun in the Vim grammar rule of verb + noun. You
+need to pass an operator before a text object.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>const hello = function() {
+  console.log(&quot;Hello Vim&quot;);
+  return true;
+}</code></pre>
+</div>
+</figure>
+<p>If your cursor is on the “H” in “Hello”:</p>
+<ul>
+<li>To delete the entire “Hello Vim”: <code>di(</code>.</li>
+<li>To delete the function block (surrounded by {}):
+<code>di{</code>.</li>
+<li>To delete the “Hello” string: <code>diw</code>.</li>
+</ul>
+<p>If you are new to Vim, you don’t have to remember dozens of
+operators. You can start by just committing these 3 to memory:</p>
+<ul>
+<li><code>d</code> (delete).</li>
+<li><code>c</code> (change).</li>
+<li><code>y</code> (yank).</li>
+</ul>
+<h2 class="section"
+id="chap17.xhtml_leanpub-auto-changing-cases">Changing Cases</h2>
+<p><strong>Problem:</strong><br />
+You need to change the case of your text.</p>
+<p><strong>Solution:</strong><br />
+There are different ways to change the case of your text.</p>
+<p>To change the case of a single character:</p>
+<ul>
+<li><code>~</code> toggles the case of the character the cursor is on.
+If your cursor is on “d” in “donut”, pressing <code>~</code> toggles it
+to uppercase.</li>
+<li><code>vu</code> lowers the case of the character the cursor is on.
+If your cursor is on “D” in “Donut”, pressing <code>vu</code> lowers the
+case to “d”.</li>
+<li><code>vU</code> uppercases the case of the character the cursor is
+on. If your cursor is on “d” in “donut”, pressing <code>vU</code> ups
+the case to “D”.</li>
+</ul>
+<p>To change the case using a motion:</p>
+<ul>
+<li><code>g~ {motion}</code> toggles the case of the texts indicated by
+motion. When combined with <code>g</code>, <code>g~</code> acts as an
+operator. To toggle the case of the next two words, run
+<code>g~2w</code>. To toggle the case of the current inner word, run
+<code>g~iw</code>.</li>
+<li><code>gu {motion}</code> lowers the case of the texts indicated by
+motion. To lowercase the text inside the <code>()</code>, run
+<code>gui(</code>.</li>
+<li><code>gU {motion}</code> ups the case of the texts indicated by
+motion. To uppercase to the end of the file, run <code>gUG</code>.</li>
+</ul>
+<p>To change the case of the current line:</p>
+<ul>
+<li>To togglecase the current line, run <code>g~~</code>.</li>
+<li>To lowercase the current line, run <code>guu</code>.</li>
+<li>To uppercase the current line, run <code>gUU</code>.</li>
+</ul>
+<h2 class="section"
+id="chap17.xhtml_leanpub-auto-swap-two-characters">Swap Two
+Characters</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly swap two adjacent characters.</p>
+<p><strong>Solution:</strong><br />
+I do these kinds of typos all the time when editing: typing “teh”
+instead of “the”, “cosnt” instead of “const”, etc. The easiest way to
+fix a two-character typo is to use <code>xp</code>.</p>
+<p><code>x</code> deletes the character under the cursor and
+<code>p</code> pastes that recently deleted character.</p>
+<h2 class="section" id="chap17.xhtml_leanpub-auto-replace-mode">Replace
+Mode</h2>
+<p><strong>Problem:</strong><br />
+You need to replace characters with the ones you are typing.</p>
+<p><strong>Solution:</strong><br />
+Vim has a replace mode that you can access with <code>R</code>. When in
+the Replace mode, Vim replaces the existing character with each
+character you type.</p>
+<p>You can also use the virtual replace mode with <code>gR</code>. This
+command is similar to <code>R</code>, except when you press
+<code>&lt;Tab&gt;</code>, it will replace multiple characters (as
+opposed to only one character in replace mode).</p>
+<h2 class="section"
+id="chap17.xhtml_leanpub-auto-using-a-command-line-command-as-a-motion-to-an-operator">Using
+a Command-Line Command As a Motion to an Operator</h2>
+<p><strong>Problem:</strong><br />
+There is not really a problem, but it’s neat to know.</p>
+<p><strong>Solution:</strong><br />
+In Vim, you can use <code>:</code> as a motion to an operator. In the
+context of Vim grammar verb + noun, the <code>:cmd</code> can act as a
+noun for a verb.</p>
+<ul>
+<li>To delete from the current position to the first match of “b”:
+<code>d:call search("b")</code>.</li>
+<li>To delete from the current position to line 10:
+<code>d:10</code>.</li>
+</ul>
+<p>The examples above look like a lot of work just to do a simple task
+and you’re probably wondering when you will ever need this. The truth
+is, I haven’t spent a lot of time on this revelation.</p>
+<p>However, if you have an arsenal of Vimscript functions that can move
+your cursor based on a complex pattern, like
+<code>d:call FindWordsIn("Spanish")</code>,
+<code>d:call FindEnglishAdjectives()</code>, etc, this can be a useful
+feature. Also keep in mind that you can use it with any terminal command
+(<code>d:!{some_command}</code>).Maybe someone will figure out a way to
+use this effectively.</p>
+<h2 class="section" id="chap17.xhtml_leanpub-auto-force-motion">Force
+Motion</h2>
+<p><strong>Problem:</strong><br />
+You need to run an operator on columns.</p>
+<p><strong>Solution:</strong><br />
+You can force a motion to be line-wise, character-wise, or block-wise,
+like the visual mode.</p>
+<p>In this case, if you need to run the delete operator on the three
+columns containing 0s:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>br0eakfast
+lu0nch
+di0nner</code></pre>
+</div>
+</figure>
+<p>With your cursor on the “0” in the first line, run
+<code>dCtrl-V2j</code> (note that this is similar to block-wise Visual
+mode).</p>
+<h2 class="section"
+id="chap17.xhtml_leanpub-auto-persistent-undo">Persistent Undo</h2>
+<p><strong>Problem:</strong><br />
+Each time you close and re-open Vim, you wish that you can undo the last
+action you did right before you closed Vim.</p>
+<p><strong>Solution:</strong><br />
+An undo file allows you to preserve the undo history even after you
+close Vim; you can create an undo file with <code>:wundo</code> and load
+it with <code>:rundo</code></p>
+<p>Edit <code>somefile.txt</code>, then create an undo file with
+<code>:wundo! somefile.undo</code> (you can give it any name), then
+close Vim and reopen <code>somefile.txt</code>. Run
+<code>:rundo somefile.undo</code> to load the undo file. You can now
+undo from that file as if you never exited Vim.</p>
+<h2 class="section"
+id="chap17.xhtml_leanpub-auto-undoing-in-chunks">Undoing In Chunks</h2>
+<p><strong>Problem:</strong><br />
+After you typed a long paragraph, when you undo, Vim removes the entire
+paragraph even though you only need to undo the last sentence.</p>
+<p><strong>Solution:</strong><br />
+Vim undo undoes the last “change”. All the texts that you typed while
+you’re in the insert command count as a single change. You can exit the
+insert mode after each sentence to create smaller changes.</p>
+<p>Alternatively, you can create an undo chunk with
+<code>Ctrl-G u</code> to break your change into smaller parts without
+leaving insert mode. Here’s how.</p>
+<p>If you type <code>ipancake breakfast&lt;Esc&gt;</code> then you press
+<code>u</code>, Vim will undo the entire “pancake breakfast”. To add a
+break-point, run
+<code>ipancake &lt;Ctrl-G u&gt;breakfast&lt;Esc&gt;</code>. Now when you
+press <code>u</code>, Vim will remove only “breakfast”.</p>
+<h2 class="section" id="chap17.xhtml_leanpub-auto-join-lines">Join
+Lines</h2>
+<p><strong>Problem:</strong><br />
+You need to join the next line to the current line.</p>
+<p><strong>Solution:</strong><br />
+If you press <code>J</code>, Vim will join the line below the current
+line to the current line. Vim automatically adds an extra space when
+joining two lines, so if you don’t want the extra line, use
+<code>gJ</code> to join two lines without a space. If you are on visual
+mode, you can join all highlighted lines with <code>J</code>.</p>
+<p>The <code>:j</code> (short for <code>:join</code>) is the
+command-line version of <code>J</code>. By running just <code>:j</code>,
+Vim will act like <code>J</code>. If you want to join all lines, run
+<code>:%j</code>.</p>
+<h2 class="section"
+id="chap17.xhtml_leanpub-auto-using-terminal-commands">Using Terminal
+Commands</h2>
+<p><strong>Problem:</strong><br />
+You need to filter your texts using the terminal commands</p>
+<p><strong>Solution:</strong><br />
+Vim has a bang (<code>!</code>) operator to filter the text through the
+external command.</p>
+<p>For example, if you have the following text that you need to
+tabularize and remove the rows without “Ok”:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>Id|Name|Cuteness
+01|Puppy|Very
+02|Kitten|Ok
+03|Bunny|Ok</code></pre>
+</div>
+</figure>
+<p>You can achieve this using the <code>column</code> terminal command
+and the <code>awk</code> command. Just run:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>!}column -t -s &quot;|&quot; | awk &#39;NR &gt; 1 &amp;&amp; /Ok/ {print $0}&#39;</code></pre>
+</div>
+</figure>
+<p>You’ll get a clean, filtered table:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>02  Kitten  Ok
+03  Bunny   Ok</code></pre>
+</div>
+</figure>
+<p>This is one of Vim’s shining features because it lets you extend
+Vim’s capability to use external commands in addition to Vim’s internal
+commands, allowing you to compose more complex actions.</p>
+<p><span id="chap18.xhtml"></span></p>
+<h1 class="chapter"
+id="chap18.xhtml_leanpub-auto-terminal">Terminal</h1>
+<h2 class="section" id="chap18.xhtml_leanpub-auto-vi-mode">Vi Mode</h2>
+<p><strong>Problem:</strong><br />
+You want to use Vi keybindings in the terminal.</p>
+<p><strong>Solution:</strong><br />
+To set the Vi mode in the terminal, run <code>set -o vi</code> (not
+supported by all terminals, but most terminals should have it).</p>
+<p>Now when you press <code>&lt;Esc&gt;</code>, the you’ll enter Vi
+Normal mode. Some available features are:</p>
+<ul>
+<li>Line navigations (<code>0</code>, <code>$</code>, <code>w</code>,
+etc).</li>
+<li>Go through history with <code>j</code> and <code>k</code>.</li>
+<li>Search the command history with <code>?some command</code> or
+<code>/other command</code> and follow-up with <code>n</code> and
+<code>N</code>.</li>
+<li>Etc.</li>
+</ul>
+<h2 class="section" id="chap18.xhtml_leanpub-auto-opening-files">Opening
+Files</h2>
+<p><strong>Problem:</strong><br />
+You want to quickly open multiple files.</p>
+<p><strong>Solution:</strong><br />
+You can open multiple files at once with
+<code>vim file1.txt file1.txt file3.txt</code>.</p>
+<p>You can use glob to open multiple files in Vim :</p>
+<ul>
+<li>Run <code>vim *.js</code> to open all Javascript files in the
+current directory.</li>
+<li>Run <code>vim **/*.js</code> to open all Javascript files
+recursively.</li>
+</ul>
+<h2 class="section"
+id="chap18.xhtml_leanpub-auto-diffing-with-vim">Diffing With Vim</h2>
+<p><strong>Problem:</strong><br />
+You need to perform a quick diff between two or more files.</p>
+<p><strong>Solution:</strong><br />
+Run <code>vimdiff file1.txt file2.txt</code> to perform diff with Vim.
+Alternatively, you can also run
+<code>vim -d file1.txt file2.txt</code>.</p>
+<h2 class="section"
+id="chap18.xhtml_leanpub-auto-running-vim-without-plugins-or-vimrc">Running
+Vim Without Plugins or Vimrc</h2>
+<p><strong>Problem:</strong><br />
+You need to run Vim without plugins.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>To launch Vim without plugins but with vimrc, run
+<code>vim --noplugin</code></li>
+<li>To launch Vim with plugins but without vimrc, run
+<code>vim -u NORC</code></li>
+<li>To launch Vim without plugins and vimrc, run
+<code>vim -u NONE</code></li>
+</ul>
+<p>These are useful when you need to debug Vim.</p>
+<h2 class="section"
+id="chap18.xhtml_leanpub-auto-open-files-in-vim-as-a-result-of-another-command">Open
+Files in Vim as a Result of Another Command</h2>
+<p><strong>Problem:</strong><br />
+You need to pass the output of terminal commands to open files in
+Vim.</p>
+<p><strong>Solution:</strong><br />
+You can run <code>vim</code> followed by <code>$(command)</code>. Some
+use cases:</p>
+<ul>
+<li>You can open all your <code>git status</code> files, run
+<code>vim $(git status --porcelain | awk '{print $2}')</code>.</li>
+<li>You can open the result of the <code>find</code> command with
+<code>vim $(find . -name "my_file*.js)</code>.</li>
+</ul>
+<h2 class="section"
+id="chap18.xhtml_leanpub-auto-open-files-in-read-only-mode">Open Files
+in Read-Only Mode</h2>
+<p><strong>Problem:</strong><br />
+You need to open files without modifying it.</p>
+<p><strong>Solution:</strong><br />
+<code>vim -R filename.txt</code> opens the file in read-only mode. This
+is a good alternative for <code>less</code>. You get the benefit of Vim
+navigation without worrying that you may accidentally edit it.</p>
+<h2 class="section"
+id="chap18.xhtml_leanpub-auto-open-vim-with-vertical-and-horizontal-splits">Open
+Vim With Vertical and Horizontal Splits</h2>
+<p><strong>Problem:</strong><br />
+You want to open multiple files in Vim with horizontal or vertical
+splits.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>You can open Vim with multiple vertical splits with
+<code>vim -O firstfile.txt secondfile.txt</code></li>
+<li>You can open Vim with multiple horizontal splits with
+<code>vim -o firstfile.txt secondfile.txt</code></li>
+</ul>
+<p>You can also open Vim with multiple horizontal windows with
+<code>vim -on</code> and horizontal windows with <code>vim -On</code>,
+where n is the number of windows.</p>
+<ul>
+<li>To open Vim with 2 horizontal windows, run
+<code>vim -o2</code>.</li>
+<li>To open Vim with 3 vertical windows, run <code>vim -O5</code>.</li>
+</ul>
+<h2 class="section"
+id="chap18.xhtml_leanpub-auto-generate-new-files-programmatically">Generate
+New Files Programmatically</h2>
+<p><strong>Problem:</strong><br />
+You want to generate new files programmatically in Vim.</p>
+<p><strong>Solution:</strong><br />
+You can programmatically generate multiple new buffers with
+<code>vim hello{1..10}.txt</code>.</p>
+<h2 class="section"
+id="chap18.xhtml_leanpub-auto-passing-text-as-stdin-to-a-command">Passing
+Text as STDIN to a Command</h2>
+<p><strong>Problem:</strong><br />
+You are given a file from which you need to execute terminal commands
+from</p>
+<p><strong>Solution:</strong><br />
+You can utilize Vim to execute terminal commands with
+<code>:%w !sh</code>. Vim will use the text in the buffer and pass it as
+a STDIN.</p>
+<p>If you have the following text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>file1.txt
+file2.txt
+file3.txt</code></pre>
+</div>
+</figure>
+<ul>
+<li>Run <code>:%s/\v(.+)(\.txt)/mv &amp; \1\.md/g</code> to change each
+line from “testN.txt” into “mv testN.txt testN.md”.</li>
+<li>Run <code>:%w !sh</code> to execute the instruction.</li>
+</ul>
+<p>This effectively executes <code>mv file1.txt file1.md</code>,
+<code>mv file2.txt file2.md</code>, and
+<code>mv file3.txt file3.md</code>.</p>
+<h2 class="section"
+id="chap18.xhtml_leanpub-auto-using-the-terminal-from-vim">Using the
+Terminal From Vim</h2>
+<p><strong>Problem:</strong><br />
+Most modern editors have a built-in terminal. You want that too.</p>
+<p><strong>Solution:</strong><br />
+Vim (8.1 and up) has a terminal-mode that you can access with the
+<code>:terminal</code> command.</p>
+<p>For more, check out <code>:h terminal.txt</code>.</p>
+<h2 class="section"
+id="chap18.xhtml_leanpub-auto-check-available-vim-features">Check
+Available Vim Features</h2>
+<p><strong>Problem:</strong><br />
+You want to see what features are supported in your current Vim
+build.</p>
+<p><strong>Solution:</strong><br />
+You can run <code>vim --version</code> to see what versions are
+available. Likewise, you can also run <code>:version</code> from inside
+Vim.</p>
+<p><span id="chap19.xhtml"></span></p>
+<h1 class="chapter" id="chap19.xhtml_leanpub-auto-visual-mode">Visual
+Mode</h1>
+<h2 class="section"
+id="chap19.xhtml_leanpub-auto-visual-mode-basics">Visual Mode
+Basics</h2>
+<p><strong>Problem:</strong><br />
+You don’t know how to use Vim’s visual mode.</p>
+<p><strong>Solution:</strong><br />
+Vim’s visual mode is similar to highlights in most text editors (you
+highlight a body of text, then you apply changes to the highlighted
+texts).</p>
+<p>There are three different visual modes:</p>
+<ul>
+<li><code>v</code> - character-wise visual mode</li>
+<li><code>V</code> - line-wise visual mode</li>
+<li><code>Ctrl-V</code> block-wise visual mode.</li>
+</ul>
+<p>Try them out! Use each of the different visual modes to get a feel.
+You can use Vim navigation to expand or contract the highlighted area.
+To exit the visual mode, press <code>&lt;Esc&gt;</code>.</p>
+<p>You can also perform an operation to the highlighted body of text.
+For example, if you press <code>d</code> while having a body of text
+highlighted, that body of text will be deleted.</p>
+<h2 class="section"
+id="chap19.xhtml_leanpub-auto-insert-text-on-multiple-lines">Insert Text
+on Multiple Lines</h2>
+<p><strong>Problem:</strong><br />
+You need to insert text on multiple lines.</p>
+<p><strong>Solution:</strong><br />
+You can insert text on multiple lines with the block-wise visual mode
+(<code>Ctrl-V</code>).</p>
+<p>If you have:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>strawberry
+chocolate
+sugar</code></pre>
+</div>
+</figure>
+<p>Once you’ve highlighted multiple columns with the block-wise visual
+mode, you can use either <code>I</code> to insert text before the cursor
+or <code>A</code> to insert text after the cursor.</p>
+<ul>
+<li>To insert the word “sweet” at the start of each line, use the visual
+block-wise selection (<code>&lt;Ctrl-V&gt;</code> and down) to highlight
+all 3 lines, then type <code>0Isweet &lt;Esc&gt;</code>.</li>
+<li>To insert the word “donut” at the end of each line, use the visual
+block-wise selection (<code>&lt;Ctrl-V&gt;</code> and down) to highlight
+all 3 lines, then type <code>$A donut&lt;Esc&gt;</code>.</li>
+</ul>
+<h2 class="section"
+id="chap19.xhtml_leanpub-auto-quickly-reselect-the-previous-visual-highlight">Quickly
+Reselect the Previous Visual Highlight</h2>
+<p><strong>Problem:</strong><br />
+You need to re-select the last visual highlight.</p>
+<p><strong>Solution:</strong><br />
+Run <code>gv</code> to visually highlight the previous visual
+selection.</p>
+<p>If you highlight a body of text with either <code>v</code>,
+<code>V</code>, or <code>Ctrl-V</code>, then you leave the Visual mode,
+the next time you press <code>gv</code>, Vim will re-select the same
+block of text. Use this when you forget to apply an additional operation
+to the previously highlighted test.</p>
+<h2 class="section"
+id="chap19.xhtml_leanpub-auto-expanding-visual-highlight-bidirectionally">Expanding
+Visual Highlight Bidirectionally</h2>
+<p><strong>Problem:</strong><br />
+You need to expand your visual highlight in any direction.</p>
+<p><strong>Solution:</strong><br />
+Pressing <code>o</code> or <code>O</code> while in visual highlight
+moves the cursor to the other end of the visual highlight.</p>
+<p>Suppose that you start highlighting the text below you, then you
+realize that you also need to highlight the text above you. If you move
+up, it will shrink the visual selection. To expand the highlight to the
+text above, first change the cursor location.</p>
+<p>To change the cursor location, press either <code>o</code> or
+<code>O</code>. With your cursor now on the opposite location, you can
+now expand to highlight the text above you as well.</p>
+<h2 class="section"
+id="chap19.xhtml_leanpub-auto-switching-to-a-different-visual-mode-while-in-a-visual-mode">Switching
+to a Different Visual Mode While in a Visual Mode</h2>
+<p><strong>Problem:</strong><br />
+You’re currently in the character-wise visual mode but you need to
+switch to line-wise visual mode.</p>
+<p><strong>Solution:</strong><br />
+While in a visual mode, you can switch to a different visual mode by
+pressing another visual mode command.</p>
+<ul>
+<li>If you’re in the character-wise visual mode (<code>v</code>),
+pressing line-wise visual mode command (<code>V</code>) switches it to
+the line-wise visual mode.</li>
+<li>If you’re in the line-wise visual mode (<code>V</code>), pressing
+the block-wise visual mode command (<code>Ctrl-V</code>) switches it to
+the block-wise visual mode.</li>
+<li>If you’re in the block-wise visual mode (<code>Ctrl-V</code>),
+pressing the same visual mode command, in this case block-wise visual
+mode command (<code>Ctrl-V</code>), will exit the visual mode.</li>
+</ul>
+<h2 class="section"
+id="chap19.xhtml_leanpub-auto-visually-highlight-the-last-search-term">Visually
+Highlight the Last Search Term</h2>
+<p><strong>Problem:</strong><br />
+You recently searched with <code>/donut</code> and you realized that you
+needed to jump back to that word and modify it.</p>
+<p><strong>Solution:</strong><br />
+Press <code>gn</code> to jump to the next last search term (similar to
+pressing <code>n</code> after <code>/hello</code>) and automatically
+highlights that search term.</p>
+<p>Suppose that you have the following text:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>one donut
+two donut
+three donut
+four donut</code></pre>
+</div>
+</figure>
+<p>If you had just searched for <code>/donut</code>, if you press
+<code>gn</code>, Vim will jump to the next “donut” phrase and do a
+visual mode highlight.</p>
+<p>This is also useful when combined with the dot command
+(<code>.</code>). Press <code>gn</code>. Vim will highlight the next
+“donut”. Then press <code>d</code> to delete it. To delete subsequent
+donuts, just run <code>n</code> (next match) and <code>.</code>. You can
+now repeat <code>n . n . n .</code> etc.</p>
+<h2 class="section"
+id="chap19.xhtml_leanpub-auto-replace-multiple-characters-with-visual-selection">Replace
+Multiple Characters With Visual Selection</h2>
+<p><strong>Problem:</strong><br />
+The replace operator <code>r</code> only replaces one character at a
+time.</p>
+<p><strong>Solution:</strong><br />
+When you use <code>r{something}</code> on a visual highlight, Vim will
+replace all of the highlighted texts at once.</p>
+<p>In markdown, <code>===</code> represents a header. You can quickly
+generate a header on the following text with this method:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>My awesome title</code></pre>
+</div>
+</figure>
+<ul>
+<li>Yank the line with <code>yy</code>.</li>
+<li>Paste it with <code>p</code>.</li>
+<li>Visually highlight the pasted text with <code>V</code>.</li>
+<li>Replace the selection with “=” by running <code>r=</code>.</li>
+</ul>
+<p><code>yypVr=</code>. That’s all you need to create:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>My awesome title
+================</code></pre>
+</div>
+</figure>
+<p><span id="chap20.xhtml"></span></p>
+<h1 class="chapter" id="chap20.xhtml_leanpub-auto-vimrc">Vimrc</h1>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-quick-access-to-vimrc">Quick Access to
+Vimrc</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly access vimrc.</p>
+<p><strong>Solution:</strong><br />
+If you edit vimrc often, it can be useful to create a shortcut to go
+there and another to source it.</p>
+<p>I have the following mapping in my vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>nnoremap &lt;Leader&gt;vs :source ~/.vimrc&lt;CR&gt;
+nnoremap &lt;Leader&gt;ve :vsplit ~/.vimrc&lt;CR&gt;</code></pre>
+</div>
+</figure>
+<p>When I need to open vimrc, I just run <code>&lt;Leader&gt;ve</code>.
+When I want to source my changes, after I save the vimrc, I just run
+<code>&lt;Leader&gt;vs</code>.</p>
+<h2 class="section" id="chap20.xhtml_leanpub-auto-line-numbers">Line
+Numbers</h2>
+<p><strong>Problem:</strong><br />
+You need a clearer indicator to tell you which line you’re on.</p>
+<p><strong>Solution:</strong><br />
+Use <code>:set number</code> to display numbers on the left column.</p>
+<p>Also, you might want to consider using
+<code>:set relativenumber</code> to display relative numbers on the left
+column. This setting is useful for line operations. You can easily see
+how far down or up the text is that you want to delete.</p>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-more-helpful-search">More Helpful
+Search</h2>
+<p><strong>Problem:</strong><br />
+You need to highlight the word as you’re typing the search phrase.</p>
+<p><strong>Solution:</strong><br />
+<code>set incsearch</code> sets up incremental search. With this, Vim
+will highlight the match as you are typing the search phrase.</p>
+<p>This is best combined with <code>set hlsearch</code> to highlight all
+matches.</p>
+<p>However, there are times when you don’t want Vim to display
+highlight. To remove the highlight, run <code>:noh</code>.</p>
+<p>I have this mapping to quickly run <code>noh</code> by pressing
+<code>&lt;Esc&gt;</code> twice because I use <code>noh</code> often.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>nnoremap &lt;Esc&gt;&lt;Esc&gt; :noh&lt;return&gt;&lt;Esc&gt;.</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-smarter-search-case">Smarter Search
+Case</h2>
+<p><strong>Problem:</strong><br />
+You need Vim to search smarter and ignore case when needed.</p>
+<p><strong>Solution:</strong><br />
+Use <code>set ignorecase smartcase</code> to do both case insensitive
+and smartcase search.</p>
+<ul>
+<li>If you search using all lowercase or all uppercase (homogeneous
+case) letters, Vim will do a case insensitive search.</li>
+<li>If you mix the case of the search case, Vim will do a case sensitive
+search.</li>
+</ul>
+<p>Given:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>hello
+HELLO
+Hello</code></pre>
+</div>
+</figure>
+<ul>
+<li><code>/hello</code> matches “hello”, “Hello” “HELLO”.</li>
+<li><code>/Hello</code> matches “Hello”.</li>
+<li><code>/HELLO</code> matches “HELLO”.</li>
+</ul>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-programmatic-options">Programmatic
+Options</h2>
+<p><strong>Problem:</strong><br />
+You need to set some options programmatically.</p>
+<p><strong>Solution:</strong><br />
+You can use <code>&amp;</code> to set an option in vimrc instead of
+<code>set</code>. With this, you can use Vimscript expressions on your
+options.</p>
+<p>Instead of <code>set background=light</code>, you can run
+<code>let &amp;background = "light"</code>.</p>
+<p>To set different background values depending on the current time,
+use:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>let &amp;background = strftime(&quot;%H&quot;) &lt; 10 ? &quot;light&quot; : &quot;dark&quot;</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-create-a-custom-command">Create a Custom
+Command</h2>
+<p><strong>Problem:</strong><br />
+You need to create your own <code>:</code> command.</p>
+<p><strong>Solution:</strong><br />
+You can create a custom command-line command with
+<code>:command</code>.</p>
+<p>The following will create a custom command
+<code>:GimmeDate</code>.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>function MyDate()
+  echo call(&quot;strftime&quot;, [&quot;%F&quot;])
+endfunction
+
+command GimmeDate call MyDate()</code></pre>
+</div>
+</figure>
+<p>Now when you run <code>:GimmeDate</code>, Vim will run
+<code>call MyDate()</code>.</p>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-conditionally-run-vimrc-settings-based-on-directory">Conditionally
+Run Vimrc Settings Based On Directory</h2>
+<p><strong>Problem:</strong><br />
+You want to have some options only when you’re doing work and a
+different set of options on personal projects.</p>
+<p><strong>Solution:</strong><br />
+To set your background to dark when you’re on a “Work” directory and to
+set your background to light when you’re not on a “Work” directory, add
+this to your vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>let cwd = getcwd()
+if cwd =~# &quot;Work&quot;
+  echom &quot;WORK STUFF&quot;
+  set background=dark
+else
+  echom &quot;NON WORK STUFF&quot;
+  set background=light
+endif</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-organize-vimrc-with-the-fold-syntax">Organize
+Vimrc With the Fold Syntax</h2>
+<p><strong>Problem:</strong><br />
+Your vimrc is getting too long and too hard to read.</p>
+<p><strong>Solution:</strong><br />
+The fold syntax can help to organize vimrc.</p>
+<p>Vim fold syntax by default uses <code>{{{</code> and
+<code>}}}</code>. To activate it, run
+<code>:set foldmethod=marker</code>. You can toggle the fold with
+<code>za</code>.</p>
+<p>To automatically setup marker folds for all vim related files
+including vimrc, add this at the start of your vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>augroup filetype_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+augroup END</code></pre>
+</div>
+</figure>
+<p>You can now organize your vimrc based on categories, like:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>&quot; Plugins {{{
+call plug#begin(&#39;~/.vim/plugged&#39;)
+  your plugin here
+call plug#end()
+&quot; }}}
+
+&quot; Setups {{{
+set relativenumber number
+set ignorecase smartcase
+more setup here
+&quot; }}}
+
+&quot; Functions {{{
+function! SomeUsefulFunction()
+  dosomething
+endfunction
+&quot; }}}</code></pre>
+</div>
+</figure>
+<p>Each time you open vimrc, this is what you’ll see:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>+-- 5 lines: Plugins -------
+
++-- 5 lines: Setups --------
+
++-- 5 lines: Functions -----</code></pre>
+</div>
+</figure>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-run-a-specific-configuration-depending-on-file-type">Run
+a Specific Configuration Depending On File Type</h2>
+<p><strong>Problem:</strong><br />
+You want to use different options depending on the current file
+type.</p>
+<p><strong>Solution:</strong><br />
+Vim allows you to run specific configurations when you’re on a certain
+file type.</p>
+<p>Vim can generally detect the type of the file you’re on. To check the
+file type of the file you’re currently on, run
+<code>:set ft?</code>.</p>
+<p>For example, if you are on <code>test1.py</code>, running
+<code>:set ft?</code> will return <code>filetype=python</code>.</p>
+<p>Vim has a filetype plugin runtime system that lets you run a
+particular Vim script depending on the filetype. You can find it inside
+the <code>.vim</code> directory. It is usually located in the root
+path.</p>
+<p>Inside this <code>.vim</code> directory, create a directory named
+<code>ftplugin</code>. Inside it, create a file with the name of the
+file type you want to have the custom settings. In this case, let’s
+create two filetype plugin files, one for python and one for ruby.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>~/.vim/ftplugin/python.vim
+# Inside it:
+set background=light
+
+~/.vim/ftplugin/ruby.vim
+# Inside it:
+set background=dark</code></pre>
+</div>
+</figure>
+<p>When I open test.py, Vim has a light background. When I open test.rb,
+Vim will have a dark background.</p>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-toggle-a-boolean-option">Toggle a Boolean
+Option</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly toggle any Vim boolean options.</p>
+<p><strong>Solution:</strong><br />
+You can toggle any Vim boolean option values with <code>!</code>
+suffix.</p>
+<p>Some values like <code>number</code>, <code>relativenumber</code>,
+<code>wrapscan</code>, etc contain boolean values
+(<code>set number</code>, <code>set relativenumber</code>,
+<code>set wrapscan</code>). Their opposite values are usually prefixed
+with <code>no</code>: <code>nonumber</code>,
+<code>norelativenumber</code>, <code>nowrapscan</code>, etc.</p>
+<p>One way to turn off <code>set number</code> is to run
+<code>set nonumber</code>. A quicker way is to toggle it with
+<code>set number!</code>.</p>
+<p>By the way, recall that <code>@:</code> can repeat the last
+command-line command. Since <code>:set number!</code> is just a
+command-line command, you can use <code>@:</code> to toggle between Vim
+boolean options quickly.</p>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-split-vimrc-into-multiple-files">Split
+Vimrc Into Multiple Files</h2>
+<p><strong>Problem:</strong><br />
+Your vimrc got too big and you want to split it into multiple smaller
+files.</p>
+<p><strong>Solution:</strong><br />
+You can keep your vimrc small by splitting it into multiple smaller
+files.</p>
+<p>To use this, create a new directory for your vimrc files called
+<code>settings/</code> (you can name it anything you want):
+<code>~/.vim/settings/</code>.</p>
+<p>Suppose that you want to split your vimrc into 4 sections, create
+these 4 files:</p>
+<ul>
+<li>Third-party plugins (<code>~/.vim/settings/plugins.vim</code>).</li>
+<li>General settings (<code>~/.vim/settings/configs.vim</code>).</li>
+<li>Custom functions (<code>~/.vim/settings/functions.vim</code>).</li>
+<li>Key mappings (<code>~/.vim/settings/mappings.vim</code>).</li>
+</ul>
+<p>Inside your main vimrc, add:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>source $HOME/.vim/settings/plugins.vim
+source $HOME/.vim/settings/configs.vim
+source $HOME/.vim/settings/functions.vim
+source $HOME/.vim/settings/mappings.vim</code></pre>
+</div>
+</figure>
+<p>The key here is to use the <code>:source</code> command. It is
+similar to <code>import</code> or <code>require</code> in many
+programming languages. Inside each of these setting files, add the usual
+vimrc settings and configs.</p>
+<p>Inside <code>~/.vim/settings/plugins.vim</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>call plug#begin(&#39;~/.vim/plugged&#39;)
+  Plug &#39;mattn/emmet-vim&#39;
+  Plug &#39;preservim/nerdtree&#39;
+call plug#end()</code></pre>
+</div>
+</figure>
+<p>Inside <code>~/.vim/settings/configs.vim</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>set nocompatible
+set relativenumber
+set number</code></pre>
+</div>
+</figure>
+<p>Inside <code>~/.vim/settings/functions.vim</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>function! ToggleNumber()
+  if(&amp;relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc</code></pre>
+</div>
+</figure>
+<p>Inside <code>~/.vim/settings/mappings.vim</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>inoremap jk &lt;esc&gt;
+nnoremap &lt;silent&gt; &lt;C-f&gt; :GFiles&lt;CR&gt;
+nnoremap &lt;Leader&gt;tn :call ToggleNumber()&lt;CR&gt;</code></pre>
+</div>
+</figure>
+<p>Now your main vimrc is only 4 lines long!</p>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-mapping-a-new-key">Mapping a New Key</h2>
+<p><strong>Problem:</strong><br />
+You need to create custom mappings.</p>
+<p><strong>Solution:</strong><br />
+If you find yourself repeatedly performing the same complex task, it is
+a good indicator that you should create a new key mapping. There are a
+number of things that you can map.</p>
+<p>The first is the leader key. I like using <code>&lt;Space&gt;</code>
+as my leader key. You can change the leader key with:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>let mapleader = &quot;\&lt;space&gt;&quot;</code></pre>
+</div>
+</figure>
+<p>You can also re-map operators and commands. For example, I have these
+two mappings in my vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>nnoremap &lt;silent&gt; &lt;C-f&gt; :GFiles&lt;CR&gt;
+
+nnoremap &lt;Leader&gt;tn :call ToggleNumber()&lt;CR&gt;</code></pre>
+</div>
+</figure>
+<p>The first mapping is a map to <code>fzf.vim</code> plugin’s
+<code>:GFiles</code> command. The second mapping is a custom function
+call (I have a function called <code>ToggleNumber()</code>. By using
+<code>&lt;C-f&gt;</code>, I am overwriting Vim’s native
+<code>Ctrl-F</code> native page scroll feature. If your mapping collides
+with Vim’s native command, it will be overwritten.</p>
+<p>The command I use to map, <code>nnoremap</code>, is actually composed
+of three components:</p>
+<ul>
+<li><code>n</code> represents the normal mode.</li>
+<li><code>nore</code> means non-recursive.</li>
+<li><code>map</code> is the map command.</li>
+</ul>
+<p>Vim has a mapping for all sorts of modes. The <code>nnoremap</code>
+means it will work in normal mode.</p>
+<p>If I want to create mapping in insert mode, I’ll use the
+<code>i</code> prefix:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>inoremap jk &lt;Esc&gt;</code></pre>
+</div>
+</figure>
+<p>This only works in insert mode and not in normal mode.</p>
+<p>It is also important to use the non-recursive version (by using
+<code>nnoremap</code> and <code>inoremap</code> instead of
+<code>nmap</code> and <code>imap</code>) because you could accidentally
+create an infinite loop.</p>
+<p>Let’s do an example. The mapping below supposedly moves the cursor to
+the end of the line, adds a semi-colon, then go back one WORD.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>nmap B A;&lt;Esc&gt;B</code></pre>
+</div>
+</figure>
+<p>So what happens when you press <code>B</code>? Vim adds
+<code>;</code> uncontrollably (interrupt with <code>Ctrl-C</code>),
+because in the mapping, the <code>B</code> in
+<code>A;&lt;Esc&gt;B</code> doesn’t refer to Vim’s native back-one-WORD
+action, but itself. What you actually have is a recursive call of:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>A;&lt;esc&gt;A;&lt;esc&gt;A;&lt;esc&gt;A;esc&gt;...</code></pre>
+</div>
+</figure>
+<p>What you want is for Vim to use Vim’s native <code>B</code>
+back-one-WORD action, so you use the non-recursive map:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>nnoremap B A;&lt;Esc&gt;B</code></pre>
+</div>
+</figure>
+<p>In general when you’re not sure whether to use <code>nore</code> or
+not, always use it.</p>
+<p>The other map modes are: map (Normal, Visual, Select, and
+Operator-pending), vmap (Visual and Select), smap (Select), xmap
+(Visual), omap (Operator-pending), map! (Insert and Command-line), lmap
+(Insert, Command-line, Lang-arg), cmap (Command-line), and tmap
+(terminal-job). I won’t cover them in detail. To learn more, check out
+:h map.txt.</p>
+<p>You may find that it is easier to copy someone else’s vimrc. Although
+that’s fine, I would suggest building your own vimrc from scratch.
+Everyone codes differently. Create a set of mappings that work best for
+you. Make your vimrc yours.</p>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-installing-plugins-with-packages">Installing
+Plugins With Packages</h2>
+<p><strong>Problem:</strong><br />
+You want to install plugins with Vim.</p>
+<p><strong>Solution:</strong><br />
+Ever since version 8, Vim comes with its own built-in plugin manager
+called packages.</p>
+<p>Vim will check inside a directory named <code>pack</code> inside the
+<code>.vim</code> directory (<code>~/.vim/pack/</code>). The package
+feature supports two loading mechanisms:</p>
+<ul>
+<li>Automatic plugin loading.</li>
+<li>Manual plugin loading.</li>
+</ul>
+<p>To load a plugin automatically, you need to put it inside the
+<code>start/</code> directory using the following path:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>~/.vim/pack/*/start/</code></pre>
+</div>
+</figure>
+<p>Note the asterisk <code>*</code> means an arbitrary name. You can
+name it anything you want. In this case, let’s call it
+<code>packdemo</code>:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>~/.vim/pack/packdemo/start/</code></pre>
+</div>
+</figure>
+<p>You cannot skip the directory between <code>pack/</code> and
+<code>start/</code>. If you try to do this, it won’t work. You must put
+a directory name between <code>pack/</code> and <code>start/</code>.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>~/.vim/pack/start/</code></pre>
+</div>
+</figure>
+<p>Suppose that you want to install the NERDTree plugin. In the
+terminal, go all the way to the <code>start/</code> directory and clone
+the NERDTree repository there.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>cd ~/.vim/pack/packdemo/start/
+git clone https://github.com/preservim/nerdtree.git</code></pre>
+</div>
+</figure>
+<p>That’s all. Once the library plugin is inside the <code>start/</code>
+directory, Vim automatically uses it when it starts. The next time you
+start Vim, you can now use the NERDTree commands. You can clone however
+many plugin repositories as you need inside this path. To remove a
+plugin, just remove that plugin directory from the <code>start/</code>
+directory.</p>
+<p>To load plugins manually, you need to put it inside the
+<code>opt/</code> directory:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>~/.vim/pack/*/opt/</code></pre>
+</div>
+</figure>
+<p>Again, the <code>*</code> stands for “any directory name”. You can
+use the same directory name or a different one. In this case, let’s use
+<code>packdemo/</code> name again.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>~/.vim/pack/packdemo/opt/</code></pre>
+</div>
+</figure>
+<p>Now let’s install the killersheep game (requires Vim 8.2).</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>cd ~/.vim/pack/packdemo/opt/
+git clone https://github.com/vim/killersheep.git</code></pre>
+</div>
+</figure>
+<p>Now when you start Vim, the game won’t be available yet. To activate
+a package in the <code>opt/</code> directory manually, run
+<code>:packaddd {package-name}</code>.</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>:packadd killersheep</code></pre>
+</div>
+</figure>
+<p>Now run the killership command, <code>:KillKillKill</code>.
+Enjoy!</p>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-installing-plugins-with-plugin-managers">Installing
+Plugins With Plugin Managers</h2>
+<p><strong>Problem:</strong><br />
+You need to install plugins without Vim’s packages.</p>
+<p><strong>Solution:</strong><br />
+There are many Vim plugin manager available out there:</p>
+<ul>
+<li><a href="https://github.com/junegunn/vim-plug">vim-plug</a></li>
+<li><a
+href="https://github.com/VundleVim/Vundle.vim">vundle.vim</a></li>
+<li><a
+href="https://github.com/tpope/vim-pathogen">vim-pathogen</a></li>
+<li><a href="https://github.com/Shougo/dein.vim">dein.vim</a></li>
+<li>… and many more!</li>
+</ul>
+<p>I personally use vim-plug, but most plugin managers are also equally
+good. Many of them are also easy to install. Check them out and find the
+one you like best!</p>
+<h2 class="section"
+id="chap20.xhtml_leanpub-auto-trigger-action-on-certain-event">Trigger
+Action On Certain Event</h2>
+<p><strong>Problem:</strong><br />
+You want to perform a specific action each time a file is saved.</p>
+<p><strong>Solution:</strong><br />
+Vim has an autocommand that fires when a certain event is triggered,
+<code>:autocmd</code>.</p>
+<p>For example, to set a <code>filetype</code> to
+<code>awesomefile</code> each time you open an <code>.awesome</code>
+file extension, add this in vimrc:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>autocmd BufNewFile,BufRead *.awesome set filetype=awesomefile</code></pre>
+</div>
+</figure>
+<p>To automatically generate tags when you’re saving a Python file,
+run:</p>
+<figure class="code" dir="ltr">
+<div class="highlight">
+<pre><code>autocmd BufWritePost *.py silent !ctags -R .</code></pre>
+</div>
+</figure>
+<p>Autocommand supports myriads of different events. To see what all the
+events are, check out <code>:h autocommand-events</code>.</p>
+<p><span id="chap21.xhtml"></span></p>
+<h1 class="chapter" id="chap21.xhtml_leanpub-auto-window">Window</h1>
+<h2 class="section"
+id="chap21.xhtml_leanpub-auto-splitting-windows-horizontally-and-vertically">Splitting
+Windows Horizontally and Vertically</h2>
+<p><strong>Problem:</strong><br />
+You need to split the current windows.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>You can use <code>Ctrl-W s</code> or <code>:sp</code> to split the
+window horizontally. You can also do <code>:sp somefile.txt</code> to
+explicitly specify which file to open on the split window.</li>
+<li>You can use <code>Ctrl-W v</code> or <code>:vsp</code> to split the
+window vertically. You can also do <code>:vsp somefile.txt</code> to
+explicitly specify which file to open on the split window.</li>
+</ul>
+<h2 class="section"
+id="chap21.xhtml_leanpub-auto-resizing-windows">Resizing Windows</h2>
+<p><strong>Problem:</strong><br />
+You need to resize the current window.</p>
+<p><strong>Solution:</strong><br />
+You can change the window length and width:</p>
+<ul>
+<li>To make the current window longer or shorter, run
+<code>Ctrl-W +</code> or <code>Ctrl-W -</code>.</li>
+<li>To increase or decrease the current window width, run
+<code>Ctrl-W &gt;</code> or <code>Ctrl-W &lt;</code>.</li>
+</ul>
+<p>Alternatively, you can also resize with:</p>
+<ul>
+<li>To set the current window height N, run <code>zN&lt;Enter&gt;</code>
+(ex: <code>z10&lt;Enter&gt;</code> to set the window height to 10). You
+can also run <code>:resize N</code> to set the height to N (ex:
+<code>res 10</code> to set it to 10).</li>
+<li>To set the current window width, run <code>Ctrl-W |</code>. By
+default, it will set it to the max width. You can also run
+<code>:vertical res N</code> where <code>N</code> is the width (ex:
+<code>:vertical res 10</code> to set it to 10).</li>
+</ul>
+<p>Finally, if you have multiple windows open with different heights and
+widths, run <code>Ctrl-W =</code> to make all windows to have equal
+sizes.</p>
+<h2 class="section"
+id="chap21.xhtml_leanpub-auto-close-or-zoom-the-current-window">Close or
+Zoom the Current Window</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly close the current window or zoom the current
+window.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Use <code>Ctrl-W c</code> to close the current window (you can’t
+close it if it is the last window). You can also run
+<code>:close</code>.</li>
+<li>Use <code>Ctrl-W o</code> to “enlarge” the current window and close
+other open windows. You can also run <code>:on</code>.</li>
+</ul>
+<h2 class="section"
+id="chap21.xhtml_leanpub-auto-moving-the-cursor-to-another-windows">Moving
+the Cursor to Another Windows</h2>
+<p><strong>Problem:</strong><br />
+You have multiple windows open and you need to move your cursor to a
+different window.</p>
+<p><strong>Solution:</strong><br />
+Use <code>Ctrl-W h/j/k/l</code> to go to the left, down, up, or right
+window.</p>
+<p>You can also Use <code>Ctrl-W w</code> to move to another window. You
+can pass a count to this command. If you run <code>3 Ctrl-W w</code>,
+Vim will go to the 3rd window.</p>
+<h2 class="section"
+id="chap21.xhtml_leanpub-auto-open-a-new-window">Open a New Window</h2>
+<p><strong>Problem:</strong><br />
+You need to quickly open a new window.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Use <code>Ctrl-W n</code> or <code>:new</code> to create a new
+horizontally split buffer.</li>
+<li>Use <code>:vnew</code> to create a new vertically split buffer.</li>
+</ul>
+<h2 class="section"
+id="chap21.xhtml_leanpub-auto-use-two-windows-to-diff-files">Use Two
+Windows to Diff Files</h2>
+<p><strong>Problem:</strong><br />
+You need to diff two files from Vim.</p>
+<p><strong>Solution:</strong><br />
+To create a diff between two files, you can use <code>:diffthis</code>.
+Here is how to use it:</p>
+<ul>
+<li>First open <code>file.txt</code> in Vim.</li>
+<li>Then open another file, <code>file2.txt</code>, in split mode
+(<code>:vsp file2.txt</code>).</li>
+<li>In the first buffer, run <code>:diffthis</code>.</li>
+<li>In the second buffer, run <code>:diffthis</code>.</li>
+<li>To turn it off, run <code>:diffoff</code>.</li>
+</ul>
+<p>Essentially, you need to run the <code>diffthis</code> command from
+each window.</p>

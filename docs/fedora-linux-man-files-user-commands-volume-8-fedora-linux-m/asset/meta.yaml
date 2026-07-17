@@ -1,0 +1,733 @@
+name: Fedora Linux Man Files： User Commands Volume 8 (Fedora Linux Man Files User
+  Commands)
+name_cn: Fedora Linux 手页：用户命令卷 8 (Fedora Linux 手页用户命令)
+slug: fedora-linux-man-files-user-commands-volume-8-fedora-linux-m
+toc:
+- - '#'
+  - Fedora Linux 手册：用户命令卷 8 (Fedora Linux 手册用户命令)
+- - '#'
+  - 献辞
+- - '#'
+  - 免责声明
+- - '#'
+  - PERLSYMBIAN
+- - '##'
+  - 名称
+- - '##'
+  - 描述
+- - '###'
+  - 在 CPAN 上编译 Perl
+- - '###'
+  - 编译问题
+- - '###'
+  - 在 CPAN 中使用 Perl
+- - '###'
+  - sysify.pl
+- - '##'
+  - 警告
+- - '##'
+  - 注意
+- - '##'
+  - 作者
+- - '##'
+  - 版权
+- - '##'
+  - 许可证
+- - '##'
+  - 历史
+- - '#'
+  - Perl 语法
+- - '##'
+  - 名称
+- - '##'
+  - 描述
+- - '###'
+  - 声明
+- - '###'
+  - 注释
+- - '###'
+  - 简单语句
+- - '###'
+  - 真与假
+- - '###'
+  - 语句修饰符（Statements Modifiers）
+- - '#'
+  - 这两者都从 0 数到 10。
+- - '#'
+  - print $i++ while $i <= 10; print $j++ until $j > 10;
+- - '###'
+  - 复合语句（Compound Statements）
+- - '#'
+  - 'inspired by :1,$g/fred/s//WILMA/ while (<>) { m?(fred)? && s//WILMA $1 WILMA/;
+    m?(barney)? && s//BETTY $1 BETTY/; m?(hor)? && s//MARGE $1 MARGE/; } continue
+    { print "$ARGV $.: $_"; close ARGV if eof; # reset $. reset if eof; # reset ?pat?
+    }'
+- - '###'
+  - For 循环 (For Loops)
+- - '###'
+  - Foreach 循环 (Foreach Loops)
+- - '###'
+  - Goto
+- - '###'
+  - 省略号语句
+- - '###'
+  - PODs：需要的文档
+- - '###'
+  - 普通注释（其实并非如此！）
+- - '#'
+  - 'example: ''# line 42 "new_filena.plx"'' /^\# \s* line \s+ (\d+) \s* (?:\s("?)([^"]+)\g2)?
+    \s* $/x'
+- - '###'
+  - 关于 given 和 when 的实验细节
+- - '###'
+  - 跳出块 (Breaking out)
+- - '###'
+  - 穿透 (Fall-through)
+- - '###'
+  - 返回值 (Return value)
+- - '###'
+  - 在循环中切换 (Switching in a loop)
+- - '###'
+  - 与 Perl 6 的区别 (Differences from Perl 6)
+- - '#'
+  - PERLSYNOLOGY
+- - '##'
+  - NAME
+- - '##'
+  - DESCRIPTION
+- - '###'
+  - 设置构建环境 (Setting up the build environment)
+- - '###'
+  - 编译 Perl 5 (Compiling Perl 5)
+- - '#'
+  - Administrivia. perladmin=""
+- - '#'
+  - Install Perl in a tree in /opt/perl instead of /opt/bin. prefix=/opt/perl
+- - '#'
+  - Select the compiler. Note that there is no 'cc' alias or link. cc=gcc
+- - '#'
+  - Build flags. ccflags="-DDEBUGGING"
+- - '#'
+  - Library and include paths. libpath="/lib" locincpth="/opt/include" loclibpth="/lib"
+- - '###'
+  - 已知问题
+- - '####'
+  - '`Configure`'
+- - '####'
+  - '`Build`'
+- - '####'
+  - 测试失败
+- - '###'
+  - 对 Perl 5 进行冒烟测试
+- - '####'
+  - 本地补丁
+- - '###'
+  - 添加库
+- - '##'
+  - 修订
+- - '##'
+  - 作者
+- - '#'
+  - PERLBUG
+- - '##'
+  - 名称
+- - '##'
+  - 摘要
+- - '##'
+  - 描述
+- - '##'
+  - OPTIONS
+- - '###'
+  - '`-a`'
+- - '###'
+  - '`-A`'
+- - '###'
+  - '`-b`'
+- - '###'
+  - '`-C`'
+- - '###'
+  - '`-c`'
+- - '###'
+  - '`-d`'
+- - '###'
+  - '`-e`'
+- - '###'
+  - '`-f`'
+- - '###'
+  - '`-F`'
+- - '###'
+  - '`-h`'
+- - '###'
+  - '`-ok`'
+- - '###'
+  - '`-okay`'
+- - '###'
+  - '`-nok`'
+- - '###'
+  - '`-nokay`'
+- - '###'
+  - '`-p`'
+- - '###'
+  - '`-r`'
+- - '###'
+  - '`-S`'
+- - '###'
+  - '`-s`'
+- - '###'
+  - '`-t`'
+- - '###'
+  - '`-T`'
+- - '###'
+  - '`-v`'
+- - '##'
+  - AUTHORS
+- - '##'
+  - SEE ALSO
+- - '##'
+  - BUGS
+- - '##'
+  - NAME
+- - '##'
+  - DESCRIPTION
+- - '##'
+  - 到底什么是线程？
+- - '##'
+  - 线程模型
+- - '###'
+  - Boss/Worker
+- - '###'
+  - Work Crew
+- - '##'
+  - 流水线 (Pipeline)
+- - '##'
+  - Perl 线程是哪种线程？
+- - '##'
+  - 线程安全模块 (Thread-Safe Modules)
+- - '##'
+  - 线程基础 (Thread Basics)
+- - '###'
+  - 基础线程支持
+- - '###'
+  - 关于示例的说明
+- - '###'
+  - 创建线程 (Creating Threads)
+- - '###'
+  - 等待线程退出 (Waiting For A Thread To Exit)
+- - '###'
+  - 忽略线程
+- - '###'
+  - 进程和线程的终止
+- - '##'
+  - 线程与数据
+- - '###'
+  - 共享数据与非共享数据
+- - '###'
+  - 线程陷阱：竞态条件
+- - '##'
+  - 同步与控制
+- - '###'
+  - 控制访问：lock()
+- - '###'
+  - 线程陷阱：死锁
+- - '###'
+  - 队列：数据传递
+- - '###'
+  - 信号量：同步数据访问
+- - '####'
+  - 基础信号量
+- - '####'
+  - 高级信号量
+- - '###'
+  - 等待条件
+- - '###'
+  - 放弃控制
+- - '##'
+  - 通用线程实用例程
+- - '###'
+  - 我在哪个线程中？
+- - '###'
+  - 线程 ID
+- - '###'
+  - 这些线程是同一个吗？
+- - '###'
+  - 哪些线程正在运行？
+- - '#'
+  - Loop through all the threads foreach my $thr (threads->list()) { $thr->join();
+    }
+- - '##'
+  - 完整示例
+- - '##'
+  - 性能考虑
+- - '##'
+  - 进程级变更
+- - '##'
+  - 系统库的线程安全
+- - '##'
+  - 结论
+- - '##'
+  - 另见
+- - '##'
+  - 参考文献
+- - '###'
+  - 入门读物
+- - '###'
+  - OS 相关
+- - '####'
+  - 其他参考文献
+- - '####'
+  - 致谢
+- - '####'
+  - 作者
+- - '####'
+  - 版权
+- - '#'
+  - PERLTIE
+- - '####'
+  - way (NAME)
+- - '####'
+  - 摘要 (SYNOPSIS)
+- - '####'
+  - 描述 (DESCRIPTION)
+- - '###'
+  - 绑定标量 (Tying Scalars)
+- - '####'
+  - TIEARRAY, LIST
+- - '####'
+  - FETCH this, index
+- - '####'
+  - STORE this, index, value
+- - '####'
+  - FETCHSIZE this
+- - '####'
+  - STORESIZE this, count
+- - '####'
+  - EXTEND this, count
+- - '####'
+  - EXISTS this, key
+- - '####'
+  - DELETE this, key
+- - '####'
+  - CLEAR this
+- - '####'
+  - PUSH this, LIST
+- - '####'
+  - POP this
+- - '####'
+  - SHIFT this
+- - '####'
+  - UNSHIFT this, LIST
+- - '####'
+  - SPLICE this, offset, length, LIST
+- - '####'
+  - UNTIE this
+- - '####'
+  - DESTROY this
+- - '###'
+  - TIEHASH 类名，LIST
+- - '###'
+  - FETCH $this, key
+- - '###'
+  - STORE $this, key, value
+- - '###'
+  - DELETE $this, key
+- - '###'
+  - CLEAR $this
+- - '###'
+  - EXISTS $this, key
+- - '###'
+  - FIRSTKEY $this
+- - '###'
+  - NEXTKEY $this, lastkey
+- - '#'
+  - SCALAR
+- - '#'
+  - UNTIE
+- - '#'
+  - DESTROY
+- - '#'
+  - print out history file offsets use NDBM_File; tie(%HIST, 'NDBM_File', '/usr/lib/news/history',
+    1, 0); while (($key,$val) = each %HIST) { print $key, ' = ', unpack('L',$val),
+    "\n"; } untie(%HIST);
+- - '#'
+  - 绑定文件句柄 (Tying FileHandles)
+- - '#'
+  - TIEHANDLE 类构造, LIST
+- - '#'
+  - WRITE 方法, LIST
+- - '#'
+  - PRINTF 方法, LIST
+- - '#'
+  - READ 方法, LIST
+- - '##'
+  - 另请参见
+- - '##'
+  - 缺陷
+- - '##'
+  - 作者
+- - '#'
+  - PERLTOC
+- - '##'
+  - 名字
+- - '##'
+  - 描述
+- - '##'
+  - 基础文档
+- - '###'
+  - perl - Perl 5 语言器
+- - '####'
+  - 概要
+- - '####'
+  - 描述
+- - '####'
+  - 复杂记录哈希的声明
+- - '#'
+  - 复杂记录哈希的生成
+- - '####'
+  - perllol - Perl 中操作数组
+- - '###'
+  - 描述
+- - '####'
+  - perlrequick - Perl 正则快速
+- - '####'
+  - 描述
+- - '####'
+  - perlretut - Perl 正则教程
+- - '####'
+  - 描述
+- - '####'
+  - perloot - Perl 面向对象教程
+- - '###'
+  - 日期
+- - '###'
+  - 结论
+- - '####'
+  - perlperf - Perl 性能与优化
+- - '####'
+  - 描述
+- - '####'
+  - perlstyle - Perl 风格指南
+- - '####'
+  - 描述
+- - '####'
+  - perlcheat - Perl 备查
+- - '###'
+  - 描述
+- - '####'
+  - perltrap - 给疏者的 Perl 陷阱
+- - '###'
+  - 描述
+- - '####'
+  - perldebtut - Perl 调试
+- - '###'
+  - 描述
+- - '####'
+  - 总结
+- - '####'
+  - perlfaq - 关于 Perl 常见问题
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq1 - 关于 Perl 的通用问题
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq2 - 获取与学习
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq3 - 编程工具
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq4 - 数据处理
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq5 - 文件与格式
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq6 - 正则表达式
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq7 - 通用 Perl 语言
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq8 - System Interaction
+- - '#'
+  - Perl FAQ - 正则表达式与通用问题
+- - '##'
+  - 正则之外的注释、正则内部的注释、不同的分隔符
+- - '###'
+  - perlfaq7 - 通用 Perl 语言问题
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq8 - 系统交互
+- - '#'
+  - Perl FAQ - 正则表达式与通用
+- - '##'
+  - 正则之外的注释、正则内部的注释、不同的分隔符
+- - '###'
+  - perlfaq7 - 通用 Perl 语言问题
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq8 - 系统交互
+- - '###'
+  - perlsyn - Perl 语法
+- - '###'
+  - perldata - 数据类型
+- - '###'
+  - perlop - 运算符和优先级
+- - '#'
+  - Perl FAQ - 正则表达式与通用
+- - '##'
+  - 正则之外的注释、正则内部的注释、不同的分隔符
+- - '###'
+  - perlfaq7 - 通用 Perl 语言问题
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq8 - 系统交互
+- - '###'
+  - perlsyn - Perl 语法
+- - '###'
+  - perldata - 数据类型
+- - '###'
+  - perlop - 运算符和优先级
+- - '#'
+  - Perl FAQ - 正则表达式与通用
+- - '##'
+  - 正则之外的注释、正则内部的注释、不同的分隔符
+- - '###'
+  - perlfaq7 - 通用 Perl 语言问题
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq8 - 系统交互
+- - '###'
+  - perlsyn - Perl 语法
+- - '###'
+  - perldata - 数据类型
+- - '###'
+  - perlop - 运算符和优先级
+- - '#'
+  - Perl FAQ - 正则表达式与通用
+- - '##'
+  - 正则之外的注释、正则内部的注释、不同的分隔符
+- - '###'
+  - perlfaq7 - 通用 Perl 语言问题
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq8 - 系统交互
+- - '###'
+  - perlsyn - Perl 语法
+- - '###'
+  - perldata - 数据类型
+- - '###'
+  - perlop - 运算符和优先级
+- - '#'
+  - Perl FAQ - 正则表达式与通用
+- - '##'
+  - 正则之外的注释、正则内部的注释、不同的分隔符
+- - '###'
+  - perlfaq7 - 通用 Perl 语言问题
+- - '###'
+  - 描述
+- - '####'
+  - perlfaq8 - 系统交互
+- - '###'
+  - perlsyn - Perl 语法
+- - '###'
+  - perldata - 数据类型
+- - '###'
+  - perlop - 运算符和优先级
+- - '#'
+  - 运算符优先级与结合性
+- - '##'
+  - 术语与列表（左结合）
+- - '##'
+  - 列表（右结合）
+- - '##'
+  - Perl 中缺失的运算符
+- - '##'
+  - 引号与类引号
+- - '###'
+  - 类运算符
+- - '#'
+  - 文档档览
+- - '##'
+  - 正则表达式与模式
+- - '##'
+  - 核心概念与基础
+- - '##'
+  - 子程序
+- - '###'
+  - perlsub - Perl 子程序
+- - '####'
+  - 语法概要 (SYNOPSIS)
+- - '####'
+  - 描述 (DESCRIPTION)
+- - '####'
+  - 签名 (Signatures)
+- - '####'
+  - 另请 (SEE ALSO)
+- - '###'
+  - perlfunc - Perl 内置函数
+- - '####'
+  - 描述 (DESCRIPTION)
+- - '####'
+  - 可移植性 (Portability)
+- - '####'
+  - Perl 函数字母顺序
+- - '##'
+  - 版本与变更
+- - '##'
+  - 技术文档
+- - '#'
+  - 正则表达式前瞻
+- - '##'
+  - CPAN 模块 `Unicode::Regex::Set`
+- - '##'
+  - Level 2 - 扩展 Unicode 支持
+- - '##'
+  - Level 3 - 定制支持
+- - '##'
+  - Unicode 编码
+- - '###'
+  - UTF-8
+- - '##'
+  - UTF-32, UTF-32BE, UTF-32LE
+- - '##'
+  - UCS-2, UCS-4
+- - '##'
+  - UTF-7
+- - '###'
+  - 非字符代码点
+- - '###'
+  - Unicode 代码之外
+- - '###'
+  - Unicode 的安全性
+- - '####'
+  - 错误的 UTF-8
+- - '####'
+  - EBCDIC 上 Perl 中的 Unicode
+- - '####'
+  - 本地语言/Locales
+- - '####'
+  - Unicode 未发生的情况
+- - '###'
+  - Unicode Bug（Unicode Bug）
+- - '###'
+  - 在 Perl 中强制 Unicode（或取消 Unicode）
+- - '###'
+  - 在 XS 中使用 Unicode
+- - '###'
+  - 破解 Perl 以早期版本的 Unicode（仅限极深黑客）
+- - '###'
+  - 从 perl-5.6.X 迁移代码
+- - '##'
+  - BUGS
+- - '###'
+  - 与扩展的交互
+- - '###'
+  - 速度
+- - '##'
+  - 另请
+- - '#'
+  - PERLUNICOOK
+- - '##'
+  - 名称
+- - '##'
+  - 描述
+- - '##'
+  - 示例
+- - '###'
+  - 'X 0: 标准序言'
+- - '###'
+  - 'X 1: 通用 Unicode 感知过滤器'
+- - '###'
+  - 'X 2: 微调 Unicode 警告'
+- - '###'
+  - 'X 3: 为标识符和字面量在 utf8 中声明'
+- - '###'
+  - 'X 4: 字符及其数字'
+- - '#'
+  - 'ASCII 字符 ord("A") chr(65) # 基础文字平面上的字符 ord("X") chr(0x3A3) # BMP 之外的 ord("X")
+    # 数学斜体小写 chr(0x1D45B) # Unicode 之外（最高到 MAXINT） ord("\x{20_000}") chr(0x20000)'
+- - '###'
+  - 'X 5: 按字符数字 Unicode 字面量'
+- - '#'
+  - 插值字量示例
+- - '###'
+  - 'X 6: 按数字获取字符'
+- - '#'
+  - 获取方法示例
+- - '###'
+  - 'X 7: 按数字获取字符'
+- - '#'
+  - 获取方法示例
+- - '###'
+  - 'X 8: 显式编码'
+- - '#'
+  - 显式编码示例
+- - '###'
+  - 'X 9: Unicode 序列'
+- - '#'
+  - Unicode 序列示例
+- - '###'
+  - 'X 10: 自定义别名'
+- - '#'
+  - 自定义别名示例
+- - '###'
+  - 'X 11: CJK 码点'
+- - '#'
+  - CJK 码点示例
+- - '###'
+  - 'X 13: 将程序参数解码为 utf8'
+- - '###'
+  - 'X 14: 将程序参数解码为 locale 编码'
+- - '#'
+  - 'cpan -i Encode::Locale use Encode(locale); use Encode::Locale; # 使用 "locale"
+    作为 encode/decode 的参数 @ARGV = map { decode(locale => $_, 1) } @ARGV;'
+- - '###'
+  - 'X 15: 将 STD{IN,OUT,ERR} 声明为 utf8'
+- - '###'
+  - 'X 16: 将 STD{IN,OUT,ERR} 声明为 locale 编码'
+- - '#'
+  - 'cpan -i Encode::Locale use Encode; use Encode::Locale; # 或作为 binmode 或 open 的流
+    binmode STDIN, ":encoding(console_in)" if -t STDIN; binmode STDOUT, ":encoding(console_out)"
+    if -t STDOUT; binmode STDERR, ":encoding(console_out)" if -t STDERR;'
+- - '###'
+  - 'X 17: 让文件 I/O 默认 utf8'
+- - '###'
+  - 'X 18: 让所有 I/O 和参数使用 utf8'
+- - '###'
+  - 'X 19: 使用特定编码文件'
+- - '#'
+  - 'input file open(my $in_file, "<encoding(UTF-16)", "wintext"); OR open(my $in_file,
+    "<", "wintext"); binmode($in_file, ":encoding(UTF-16)"); THEN my $line = <$in_file>;
+    # output file open($out_file, "> :encoding(cp1252)", "wintext"); OR open(my $out_file,
+    ">", "wintext"); binmode($out_file, ":encoding(cp1252)"); THEN print $out_file
+    "so text";'
+- - '###'
+  - 'X 20: Unicode 大写'
+- - '###'
+  - 'X 21: Unicode 不区分大小比较'
+- - '###'
+  - 'X 22: 在正则中匹配 Unicode换行序列'
+- - '###'
+  - 'X 23: 获取字符类别'
+- - '###'
+  - 'X 24: 在内置字符类中禁用 Unicode感知'
+- - '###'
+  - 'X 25: 在正则中使用 \p, \P 匹配 Unicode 属性'
+- - '###'
+  - 'X 37: Unicode 区域排序 (locale collation)'
+- - '#'
+  - 'either use v5.12, OR: cpan -i Unicode::Collate::Locale use Unicode::Collate;
+    ...'

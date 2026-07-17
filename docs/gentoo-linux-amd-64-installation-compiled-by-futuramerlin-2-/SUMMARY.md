@@ -1,0 +1,2 @@
++   [Gentoo Linux AMD 64 安装指南，Futuramerlin 编译于 2016 年 6 月 2 日](README.md)
++   [Gentoo Linux AMD 64 安装指南，Futuramerlin 编译于 2016 年 6 月 2 日](gentoo-linux-amd-64-installation-compiled-by-futuramerlin-2-_0.md)

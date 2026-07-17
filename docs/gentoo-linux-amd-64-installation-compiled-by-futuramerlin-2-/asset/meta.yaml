@@ -1,0 +1,565 @@
+name: Gentoo Linux AMD 64 Installation, compiled by Futuramerlin 2 June 2016
+name_cn: Gentoo Linux AMD 64 安装指南，Futuramerlin 编译于 2016 年 6 月 2 日
+slug: gentoo-linux-amd-64-installation-compiled-by-futuramerlin-2-
+toc:
+- - '#'
+  - Gentoo Linux AMD 64 安装指南，Futuramerlin 编译于 2016 年 6 月 2 日
+- - '#'
+  - 手册：主页
+- - '##'
+  - 1 Gentoo 手册计划
+- - '###'
+  - 简介
+- - '###'
+  - 架构
+- - '##'
+  - 2 查看手册
+- - '##'
+  - Alpha
+- - '##'
+  - AMD64
+- - '##'
+  - ARM
+- - '##'
+  - ARM64
+- - '##'
+  - HPPA
+- - '##'
+  - IA64
+- - '##'
+  - MIPS
+- - '##'
+  - PPC
+- - '##'
+  - PPC64
+- - '##'
+  - SPARC
+- - '##'
+  - X86
+- - '##'
+  - 常见问题
+- - '###'
+  - 你们不能为每个选择自动地创建手册吗？
+- - '###'
+  - 在 Gentoo 手册中找不到 stage1 信息
+- - '###'
+  - 我不同意 ...
+- - '##'
+  - 手册:AMD64
+- - '#'
+  - 手册:AMD64
+- - '###'
+  - 安装
+- - '###'
+  - 使用 Gentoo
+- - '###'
+  - 使用 Portage
+- - '###'
+  - 网络配置
+- - '##'
+  - 安装 Gentoo
+- - '#'
+  - '[选择合适的安装介](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Media "Handbook:AMD64/Installation/Media")'
+- - '##'
+  - '[配置网络](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Networking "Handbook:AMD64/Installation/Networking")'
+- - '##'
+  - '[准备磁盘](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Disks "Handbook:AMD64/Installation/Disks")'
+- - '##'
+  - '[安装 Gentoo 文件](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Stage
+    "Handbook:AMD64/Installation/Stage")'
+- - '##'
+  - '[安装 Gentoo 基础系统](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Base
+    "Handbook:AMD64/Installation/Base")'
+- - '##'
+  - '[配置 Linux 内核](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Kernel
+    "Handbook:AMD64/Installation/Kernel")'
+- - '##'
+  - '[配置系统](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/System "Handbook:AMD64/Installation/System")'
+- - '##'
+  - '[安装系统工具](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Tools "Handbook:AMD64/Installation/Tools")'
+- - '##'
+  - '[配置引导程序](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Bootloader
+    "Handbook:AMD64/Installation/Bootloader")'
+- - '##'
+  - '[完成安装](https://wiki.gentoo.org/wiki/Handbook:AMD64/Installation/Finalizing "Handbook:AMD64/Installation/Finalizing")'
+- - '##'
+  - 使用 Gentoo
+- - '###'
+  - '[Portage 简介](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Portage "Handbook:AMD64/Working/Portage")'
+- - '###'
+  - '[USE flags](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE "Handbook:AMD64/Working/USE")'
+- - '###'
+  - '[Portage 特性](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Features "Handbook:AMD64/Working/Features")'
+- - '###'
+  - '[Init 脚本](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Initscripts "Handbook:AMD64/Working/Initscripts")'
+- - '###'
+  - '[环境变量](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/EnvVar "Handbook:AMD64/Working/EnvVar")'
+- - '##'
+  - 使用 Portage
+- - '###'
+  - '[文件目录](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Files "Handbook:AMD64/Working/Files")'
+- - '###'
+  - '[变量](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Variables "Handbook:AMD64/Working/Variables")'
+- - '###'
+  - '[混合分支](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Branches "Handbook:AMD64/Working/Branches")'
+- - '###'
+  - '[额外工具](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Tools "Handbook:AMD64/Working/Tools")'
+- - '###'
+  - '[自定义 Portage 树](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/CustomTree
+    "Handbook:AMD64/Working/CustomTree")'
+- - '###'
+  - '[高级功能](https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/Advanced "Handbook:AMD64/Working/Advanced")'
+- - '##'
+  - Gentoo 网络配置
+- - '###'
+  - '[入门](https://wiki.gentoo.org/wiki/Handbook:AMD64/Networking/Introduction "Handbook:AMD64/Networking/Introduction")'
+- - '###'
+  - '[高级配置](https://wiki.gentoo.org/wiki/Handbook:AMD64/Networking/Advanced "Handbook:AMD64/Networking/Advanced")'
+- - '###'
+  - '[模块化网络](https://wiki.gentoo.org/wiki/Handbook:AMD64/Networking/Modular "Handbook:AMD64/Networking/Modular")'
+- - '###'
+  - '[无线](https://wiki.gentoo.org/wiki/Handbook:AMD64/Networking/Wireless "Handbook:AMD64/Networking/Wireless")'
+- - '###'
+  - '[添加功能](https://wiki.gentoo.org/wiki/Handbook:AMD64/Networking/Extending "Handbook:AMD64/Networking/Extending")'
+- - '###'
+  - '[动态管理](https://wiki.gentoo.org/wiki/Handbook:AMD64/Networking/Dynamic "Handbook:AMD64/Networking/Dynamic")'
+- - '#'
+  - 手册：AMD64/完整
+- - '##'
+  - 目录
+- - '###'
+  - 准备工作
+- - '###'
+  - 简化安装过程
+- - '###'
+  - 离开终端
+- - '##'
+  - 1 引言
+- - '###'
+  - 欢迎
+- - '###'
+  - 安装结构
+- - '###'
+  - 选项
+- - '###'
+  - 常见问题
+- - '##'
+  - 2 硬件要求
+- - '##'
+  - 3 Gentoo Linux 安装 CD
+- - '###'
+  - 3.1 最小化安装 CD
+- - '###'
+  - 3.2 偶尔使用的 LiveDVD
+- - '###'
+  - 3.3 阶段
+- - '##'
+  - 4 下载并刻录 CD
+- - '###'
+  - 4.1 下载媒体
+- - '###'
+  - 4.2 验证下载的文件
+- - '###'
+  - 4.2.1 基于 Windows 的验证
+- - '###'
+  - 4.2.2 基于 Linux 的验证
+- - '###'
+  - 4.3 刻录
+- - '###'
+  - 4.3.1 使用 Windows 刻录
+- - '###'
+  - 4.3.2 使用 Linux 刻录
+- - '##'
+  - 5 引导 CD
+- - '###'
+  - 5.1 引导 CD
+- - '###'
+  - 5.2 偶尔使用的 Gentoo LiveDVD
+- - '###'
+  - 5.3 阶段
+- - '##'
+  - 6 启动 CD
+- - '###'
+  - 6.1 启动安装
+- - '###'
+  - 6.2 额外的硬件配置
+- - '###'
+  - 6.3 可选：用户账户
+- - '###'
+  - 6.4 可选：安装时查看文档
+- - '###'
+  - 6.5 可选：启动 SSH 守护进程
+- - '##'
+  - 7 自动网络检测
+- - '###'
+  - 7.1 确定接口名称
+- - '###'
+  - 7.1.1 ifconfig 命令
+- - '###'
+  - 7.1.2 ip 命令
+- - '###'
+  - 7.2 可选：配置任何代理
+- - '###'
+  - 7.3 测试网络
+- - '##'
+  - 8 自动网络配置
+- - '###'
+  - 8.1 默认：使用 net-setup
+- - '###'
+  - 8.2 替代方案：使用 PPP
+- - '###'
+  - 8.3 替代方案：使用 PPTP
+- - '##'
+  - 9 手动网络配置
+- - '###'
+  - 9.1 加载相应的网络
+- - '###'
+  - 9.2 使用 DHCP
+- - '###'
+  - 9.3 准备无线访问
+- - '###'
+  - 9.4 理解术语
+- - '###'
+  - 9.5 使用 ifconfig 和 route
+- - '##'
+  - 10 块设备简介
+- - '###'
+  - 10.1 块设备
+- - '###'
+  - 10.2 分区表
+- - '###'
+  - 10.4.2 LVM2
+- - '###'
+  - 10.5 默认分区方案
+- - '##'
+  - 11 设计分区方案
+- - '###'
+  - 11.1 多少个以及大？
+- - '###'
+  - 11.2 交换空间如何？
+- - '###'
+  - 11.3 什么是 BIOS 启动分区？
+- - '##'
+  - 12 默认：使用 `parted` 对磁盘进行分区
+- - '###'
+  - 12.1 使用 `parted` 查看当前分区布局
+- - '###'
+  - 12.2 设置 GPT 标签
+- - '###'
+  - 12.3 使用 `parted` 删除所有分区
+- - '###'
+  - 12.4 创建分区
+- - '##'
+  - 13 替代方案：使用 `fdisk` 对磁盘进行分区
+- - '###'
+  - 13.1 查看当前分区布局
+- - '###'
+  - 13.2 使用 fdisk 删除所有分区
+- - '###'
+  - 13.3 创建 BIOS 启动分区
+- - '###'
+  - 13.4 创建启动分区
+- - '###'
+  - 13.5 创建交换分区
+- - '###'
+  - 13.6 创建根分区
+- - '###'
+  - 13.7 保存分区布局
+- - '##'
+  - 14 创建文件系统
+- - '###'
+  - 14.1 引言
+- - '###'
+  - 14.2 文件系统
+- - '###'
+  - 14.3 在分区上应用系统
+- - '##'
+  - 15 激活交换分区
+- - '###'
+  - 15.1 挂载
+- - '###'
+  - 15.2 选择 stage
+- - '###'
+  - 15.2.1 Multilib (64 位)
+- - '###'
+  - 15.2.2 No-multilib (32 位)
+- - '###'
+  - 15.3 下载 stage tar 包
+- - '###'
+  - 15.4 解压 stage tar 压缩包
+- - '##'
+  - 16 配置编译选项
+- - '###'
+  - 16.1 介绍
+- - '###'
+  - 16.2 CFLAGS 和 CXXFLAGS
+- - '###'
+  - 16.3 MAKEOPTS
+- - '###'
+  - 16.4 准备就绪，开始
+- - '###'
+  - 16.5 可选：选择镜像
+- - '###'
+  - 16.6 分发文件
+- - '###'
+  - 16.7 主 Gentoo 仓库
+- - '###'
+  - 16.8 拷贝 DNS 信息
+- - '###'
+  - 16.9 挂载必要的文件系统
+- - '###'
+  - 16.10 进入新环境
+- - '###'
+  - 16.11 No-multilib
+- - '###'
+  - 16.12 systemd
+- - '###'
+  - 16.13 更新 @world 集合
+- - '###'
+  - 16.14 配置 USE 变量
+- - '###'
+  - 16.15 文件 `/etc/locale.gen` 启用带有字符格式的 US 和 DE 区域
+- - '##'
+  - 17 默认：手动配置
+- - '###'
+  - 17.1 简介
+- - '###'
+  - 17.2 激活所需的选项
+- - '###'
+  - 17.3 KERNEL 启用 devtmpfs 支持
+- - '###'
+  - 17.4 KERNEL 选择必要的文件系统
+- - '###'
+  - 17.5 特定架构内核配置
+- - '###'
+  - 17.6 KERNEL 选择处理器类型和特性
+- - '###'
+  - 17.7 编译与安装
+- - '###'
+  - 17.8 可选：构建 initramfs
+- - '##'
+  - 18 内核模块
+- - '###'
+  - 18.1 配置模块
+- - '###'
+  - 18.2 可选：安装固件
+- - '###'
+  - 18.3 创建 fstab 文件
+- - '##'
+  - 19 网络信息
+- - '###'
+  - 19.1 主机和域名信息
+- - '##'
+  - 20 将主机名变量设置为选定的主机名
+- - '##'
+  - 21 将 dns_domain_lo 变量设置为选定的域名
+- - '##'
+  - 22 将 nis_domain_lo 变量设置为选定的 NIS 域名
+- - '##'
+  - 23 hosts 文件
+- - '##'
+  - 24 可选：定义网络上额外系统的定义
+- - '##'
+  - 25 可选：使 PCMCIA 工作
+- - '##'
+  - 26 系统信息
+- - '###'
+  - Root 密码
+- - '##'
+  - 27 系统日志器
+- - '##'
+  - 28 可选：Cron 守护进程
+- - '##'
+  - 29 可选：文件索引
+- - '##'
+  - 30 可选：远程访问
+- - '##'
+  - 31 网络工具
+- - '###'
+  - 安装 DHCP 客户端
+- - '##'
+  - 32 可选：安装 PPPoE
+- - '##'
+  - 33 默认：使用 GRUB
+- - '###'
+  - 33.1 安装 GRUB (Stable)
+- - '###'
+  - 33.2 安装 GRUB (Testing)
+- - '##'
+  - 34 稳定版（stable）与测试版的混合
+- - '###'
+  - 34.1 package.accept_keywords
+- - '###'
+  - 34.2 测试特定版本
+- - '##'
+  - 35 屏蔽软件包（Masked packages）
+- - '###'
+  - 35.1 package.unmask
+- - '###'
+  - 35.2 package.mask
+- - '##'
+  - 36 dispatch-conf
+- - '##'
+  - 37 etc-update
+- - '##'
+  - 38 quickpkg
+- - '##'
+  - 39 使用 Portage 树子集
+- - '###'
+  - 39.1 排除软件包和类别
+- - '##'
+  - 40 添加非官方 ebuild
+- - '###'
+  - 40.1 定义 Portage overlay 目录
+- - '###'
+  - 40.2 使用多个 overlays 工作
+- - '##'
+  - 41 非 Portage 维护的软件
+- - '###'
+  - 41.1 使用 Portage 管理自维护软件
+- - '##'
+  - 42 简介
+- - '##'
+  - 43 软件包级别的环境变量
+- - '###'
+  - 43.1 使用 /etc/portage/env
+- - '###'
+  - 43.2 示例：为特定包使用调试
+- - '##'
+  - 44 挂钩 emerge 过程
+- - '###'
+  - 44.1 使用 /etc/portage/bashrc 及关联文件
+- - '###'
+  - 44.2 示例：更新文件
+- - '##'
+  - 45 任务执行
+- - '###'
+  - 45.1 使用 --sync
+- - '###'
+  - 45.2 示例：更新数据库
+- - '##'
+  - 46 覆盖（profile）设置
+- - '###'
+  - 46.1 使用 /etc/portage/profile
+- - '###'
+  - 46.2 示例：更新配置
+- - '##'
+  - 47 应用补丁
+- - '###'
+  - 47.1 使用 ebuild_user
+- - '###'
+  - 47.2 示例：更新配置
+- - '##'
+  - 48 修复补丁
+- - '###'
+  - 48.1 使用 /etc/portage/profile.d
+- - '###'
+  - 48.2 示例：更新配置
+- - '##'
+  - 49 选项
+- - '###'
+  - 49.1 使用 nfsutils
+- - '###'
+  - 49.2 示例：更新配置
+- - '##'
+  - 50 启动
+- - '##'
+  - 51 1
+- - '##'
+  - 52 2
+- - '##'
+  - 53 3
+- - '##'
+  - 54 4
+- - '##'
+  - 55 5
+- - '##'
+  - 56 6
+- - '##'
+  - 57 7
+- - '##'
+  - 58 8
+- - '##'
+  - 59 9
+- - '##'
+  - 60 10
+- - '##'
+  - 61 11
+- - '##'
+  - 62 12
+- - '##'
+  - 63 13
+- - '##'
+  - 64 14
+- - '##'
+  - 65 15
+- - '##'
+  - 66 16
+- - '##'
+  - 67 17
+- - '##'
+  - 68 18
+- - '##'
+  - 69 19
+- - '##'
+  - 70 20
+- - '##'
+  - 71 21
+- - '##'
+  - 72 22
+- - '##'
+  - 73 23
+- - '##'
+  - 74 24
+- - '##'
+  - 75 25
+- - '##'
+  - 76 26
+- - '##'
+  - 77 27
+- - '##'
+  - 78 28
+- - '##'
+  - 79 29
+- - '##'
+  - 80 30
+- - '##'
+  - 81 31
+- - '##'
+  - 82 32
+- - '##'
+  - 83 33
+- - '##'
+  - 84 34
+- - '##'
+  - 85 35
+- - '##'
+  - 86 36
+- - '##'
+  - 87 37
+- - '##'
+  - 88 38
+- - '##'
+  - 89 39
+- - '##'
+  - 90 40
+- - '##'
+  - 91 41
+- - '##'
+  - 92 42
+- - '##'
+  - 93 43
+- - '##'
+  - 94 44
+- - '##'
+  - 95 45
+- - '##'
+  - 96 46
+- - '##'
+  - 97 47
+- - '##'
+  - 98 48
+- - '##'
+  - 99 49
+- - '##'
+  - 100 50
