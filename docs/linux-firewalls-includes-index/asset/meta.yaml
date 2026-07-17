@@ -1,0 +1,993 @@
+name: Linux firewalls Includes index
+name_cn: Linux 防火墙指南
+slug: linux-firewalls-includes-index
+toc:
+- - '#'
+  - Linux 防火墙指南
+- - '#'
+  - 致谢
+- - '#'
+  - 前言
+- - '#'
+  - 引言
+- - '##'
+  - '`psad`'
+- - '##'
+  - '`fwsnort`'
+- - '##'
+  - '`fwknop`'
+- - '#'
+  - 为什么要用 `iptables` 检测攻击？
+- - '##'
+  - 专用网络入侵检测系统是如何？
+- - '##'
+  - 深度防御
+- - '#'
+  - 前提条件
+- - '#'
+  - 技术参考文献
+- - '#'
+  - 关于网站
+- - '#'
+  - 章节摘要
+- - '##'
+  - 第 1 章：IPTABLES 的维护与管理
+- - '##'
+  - 第 2 章：网络层攻击与防御
+- - '##'
+  - 第 3 章：传输层攻击与防御
+- - '##'
+  - 第 4 章：应用层攻击与防御
+- - '##'
+  - 第 5 章：介绍 PSAD：端口攻击检测器
+- - '##'
+  - 第 6 章：PSAD 操作：检测可疑流量
+- - '##'
+  - 第 7 章：高级 PSAD 主题：从特征匹配到操作系统指纹
+- - '##'
+  - 第 8 章：使用 PSAD 进行主动响应
+- - '##'
+  - 第 9 章：将 Snort 规则转换为 iptables 规则
+- - '##'
+  - 第 10 章：部署 FWSNORT
+- - '##'
+  - 第 11 章：结合 PSAD 和 FWSNORT
+- - '##'
+  - 第 12 章：端口敲与单包授权
+- - '##'
+  - 第 13 章：介绍 FWKNOP
+- - '##'
+  - 第 14 章：可视化 iptables 日志
+- - '##'
+  - 附录 A：攻击欺骗
+- - '##'
+  - 附录 B：完整的 FWSNORT 脚本
+- - '#'
+  - 第 1 章：iptables 的维护与管理
+- - '##'
+  - iptables
+- - '###'
+  - 注意事项
+- - '##'
+  - 使用 iptables 进行数据包过滤
+- - '###'
+  - 表 (Tables)
+- - '###'
+  - 链 (Chains)
+- - '###'
+  - 匹配 (Matches)
+- - '###'
+  - 目标 (Targets)
+- - '##'
+  - 安装 iptables
+- - '###'
+  - 注意
+- - '##'
+  - 关键 Netfilter 编译选项
+- - '###'
+  - 核心 Netfilter 配置
+- - '###'
+  - 'IP: Netfilter 配置'
+- - '##'
+  - 完成内核配置
+- - '###'
+  - 注意
+- - '##'
+  - 可加载内核模块与内置编译及安全性
+- - '###'
+  - 注意
+- - '##'
+  - Rootkit 威胁
+- - '#'
+  - 内核编译与安装
+- - '#'
+  - mount /boot
+- - '#'
+  - cd /usr/src/linux-2.6.20.1
+- - '#'
+  - make install && make modules_install
+- - '#'
+  - 安装 iptables 用户态二进制文件
+- - '#'
+  - cd /usr/local/src/iptables-1.3.7
+- - '#'
+  - make install KERNEL_DIR=/usr/src/linux-2.6.20.1 BINDIR=/sbin LIBDIR=/lib
+- - '#'
+  - iptables -V
+- - '#'
+  - iptables -nL
+- - '###'
+  - 注意
+- - '##'
+  - iptables.sh 脚本序言
+- - '###'
+  - 清空现有规则并将链策略设置为 DROP
+- - '###'
+  - 加载连接跟踪模块
+- - '##'
+  - INPUT 链
+- - '###'
+  - 注意
+- - '###'
+  - 状态跟踪规则
+- - '###'
+  - 反伪装规则
+- - '###'
+  - ACCEPT 规则
+- - '###'
+  - 默认 INPUT 日志规则
+- - '##'
+  - OUTPUT 链
+- - '###'
+  - state tracking rules
+- - '###'
+  - ACCEPT rules for allowing connections out
+- - '###'
+  - default OUTPUT LOG rule
+- - '##'
+  - FORWARD 链
+- - '###'
+  - state tracking rules
+- - '###'
+  - anti-spoofing rules
+- - '###'
+  - ACCEPT rules
+- - '###'
+  - default OUTPUT LOG rule
+- - '##'
+  - 网络地址转换
+- - '###'
+  - 注意
+- - '###'
+  - forwarding
+- - '##'
+  - 激活策略
+- - '##'
+  - iptables-save 和 iptables-restore
+- - '##'
+  - 测试策略：TCP
+- - '###'
+  - 注意
+- - '#'
+  - 结语
+- - '#'
+  - 第 2 章 网络层攻击与防御
+- - '##'
+  - 使用 iptables 记录网络层头部
+- - '###'
+  - 记录 IP 头部
+- - '###'
+  - 记录 IP 选项
+- - '###'
+  - 记录 ICMP
+- - '##'
+  - 网络层攻击定义
+- - '###'
+  - 头部滥用
+- - '###'
+  - 网络栈利用
+- - '###'
+  - 带宽饱和
+- - '###'
+  - 注意
+- - '##'
+  - 滥用网络层
+- - '###'
+  - Nmap ICMP 探测
+- - '###'
+  - 注意
+- - '##'
+  - IP 欺骗
+- - '###'
+  - 注意
+- - '##'
+  - IP 分片
+- - '##'
+  - 低 TTL 值
+- - '###'
+  - 注意
+- - '##'
+  - Smurf 攻击
+- - '##'
+  - DDoS 攻击
+- - '##'
+  - 网络层响应
+- - '##'
+  - 网络层过滤响应
+- - '##'
+  - 网络层阈值响应
+- - '#'
+  - 使用 iptables 记录传输层头部
+- - '##'
+  - 记录 TCP 头部
+- - '##'
+  - 记录 UDP 头部
+- - '###'
+  - 注意
+- - '#'
+  - 传输层攻击定义
+- - '###'
+  - 传输协议栈漏洞利用
+- - '#'
+  - 滥用传输层
+- - '##'
+  - 端口扫描
+- - '###'
+  - 将端口扫描与易受攻击性服务进行匹配
+- - '###'
+  - TCP 端口扫描技术
+- - '###'
+  - TCP connect() 扫描
+- - '###'
+  - TCP SYN 扫描或半开放扫描
+- - '###'
+  - 原始字符与未请求的 SYN/ACK
+- - '###'
+  - TCP FIN、XMAS 和 NULL 扫描
+- - '###'
+  - 空闲扫描
+- - '###'
+  - UDP 扫描
+- - '###'
+  - 端口扫描
+- - '##'
+  - TCP 序列号预测
+- - '##'
+  - SYN 洪水
+- - '##'
+  - 传输层响应
+- - '###'
+  - 注意
+- - '###'
+  - TCP 响应
+- - '###'
+  - RST vs. RST/ACK
+- - '##'
+  - 防火墙规则与路由器
+- - '#'
+  - 第 4 章 应用程序攻击与防御
+- - '##'
+  - 使用 iptables 进行字符串匹配
+- - '###'
+  - 注意
+- - '##'
+  - 应用层数据
+- - '##'
+  - 应用层定义
+- - '###'
+  - 利用漏洞
+- - '###'
+  - 利用信任关系
+- - '###'
+  - 资源耗尽
+- - '##'
+  - 滥用应用层
+- - '###'
+  - Snort 签名
+- - '###'
+  - 缓冲区溢出
+- - '###'
+  - SQL 注入攻击
+- - '###'
+  - 灰色攻击
+- - '###'
+  - 钓鱼攻击
+- - '###'
+  - 后门记录
+- - '##'
+  - 加密与编码
+- - '##'
+  - 应用层响应
+- - '#'
+  - 第 5 章 介绍 PSAD：端口攻击检测器
+- - '##'
+  - 历史
+- - '##'
+  - 为什么要分析日志？
+- - '##'
+  - psad 特性
+- - '##'
+  - psad 安装
+- - '##'
+  - cd /usr/local/src/psad-2.0.8
+- - '##'
+  - ./install
+- - '###'
+  - 注意
+- - '##'
+  - psad 管理
+- - '##'
+  - 启动和停止 psad
+- - '##'
+  - /etc/init.d/psad
+- - '##'
+  - iptables 策略配置
+- - '##'
+  - 使用 kill() 监控进程
+- - '##'
+  - echo
+- - '##'
+  - ./pid.pl
+- - '###'
+  - 注意
+- - '##'
+  - syslog 配置
+- - '###'
+  - syslog-ng
+- - '##'
+  - whois
+- - '#'
+  - psad 配置
+- - '##'
+  - /etc/psad/psad.conf
+- - '###'
+  - 注意
+- - '###'
+  - EMAIL_ADDRESSES
+- - '###'
+  - DANGER_LEVEL
+- - '###'
+  - HOME_NET
+- - '###'
+  - EXTERNAL_NET
+- - '###'
+  - SYSLOG_DAEMON
+- - '###'
+  - PORT_RANGE_SCAN
+- - '###'
+  - MIN_DANGER_LEVEL
+- - '###'
+  - SHOW_ALL
+- - '###'
+  - SNORT_SID
+- - '###'
+  - ENABLE_AUTO_IDS
+- - '###'
+  - IMPORT_OLD_SCANS
+- - '###'
+  - ENABLE_SHIELD
+- - '###'
+  - IGNORE_PORTS
+- - '###'
+  - IGNORE_PROTOLS
+- - '###'
+  - IGNORE_PREFIXES
+- - '###'
+  - EMAIL_LIMIT
+- - '##'
+  - ALERTING_METHODS
+- - '##'
+  - FW_MSG_SEARCH
+- - '##'
+  - auto_dl
+- - '##'
+  - signatures
+- - '##'
+  - snort_rule_dl
+- - '##'
+  - pf.os
+- - '#'
+  - 结语
+- - '#'
+  - 第 6 章 PSAD 操作：检测可疑流量
+- - '##'
+  - 使用 psad 进行端口扫描
+- - '###'
+  - 注意
+- - '##'
+  - TCP connect() 扫描
+- - '##'
+  - TCP SYN 半开放扫描
+- - '###'
+  - WINDOW
+- - '###'
+  - OPT
+- - '##'
+  - TCP FIN、XMAS 和 NULL 扫描
+- - '###'
+  - 数据包与 Netfilter 连接跟踪
+- - '##'
+  - 使用 psad 进行告警和报告
+- - '##'
+  - psad 电子邮件告警
+- - '###'
+  - 扫描级别、端口和标志
+- - '###'
+  - 源地址和目的地址
+- - '###'
+  - 主机、间隔和摘要
+- - '###'
+  - 数据库
+- - '##'
+  - ARIN WHOIS 数据库，最后更新于 2006-06-09
+- - '##'
+  - 输入搜索 ARIN WHOIS 数据库的更多提示
+- - '##'
+  - psad syslog 报告
+- - '###'
+  - 信息消息
+- - '###'
+  - 扫描与特征匹配消息
+- - '###'
+  - 自动响应消息
+- - '###'
+  - 注意
+- - '#'
+  - 结语
+- - '#'
+  - 第 7 章 高级 PSAD 主题：从特征匹配到操作系统指纹
+- - '##'
+  - 使用 Snort 规则进行检测
+- - '###'
+  - 检测 LAND 攻击
+- - '###'
+  - 检测 TCP 端口
+- - '###'
+  - 检测零 TTL 流量
+- - '###'
+  - 检测拒绝服务攻击
+- - '###'
+  - 检测源路由尝试
+- - '###'
+  - 检测 Windows Messenger 弹窗邮件
+- - '###'
+  - 注意
+- - '##'
+  - psad 签名更新
+- - '###'
+  - 模拟 pof
+- - '###'
+  - 从 iptables 日志中解码 TCP 选项
+- - '##'
+  - DShield 报告格式
+- - '##'
+  - DShield 报告示例
+- - '##'
+  - IP 地址扫描详情
+- - '###'
+  - 注意
+- - '##'
+  - 取证模式 (Forensics Mode)
+- - '###'
+  - 注意
+- - '##'
+  - 详细/调试模式 (Verbose/Debug Mode)
+- - '###'
+  - 注意
+- - '##'
+  - 总结
+- - '#'
+  - 入侵防御 vs. 主动响应
+- - '#'
+  - 响应的权衡
+- - '##'
+  - 攻击分类
+- - '###'
+  - 注意
+- - '##'
+  - 误报
+- - '#'
+  - 使用 psad 响应攻击
+- - '##'
+  - 关于 TCPWrappers 的说明
+- - '##'
+  - 功能
+- - '##'
+  - 配置变量
+- - '###'
+  - 注意
+- - '#'
+  - 主动响应示例
+- - '##'
+  - 主动响应配置设置
+- - '###'
+  - SYN 扫描
+- - '##'
+  - UDP 扫描响应
+- - '##'
+  - Nmap 版本扫描
+- - '##'
+  - FIN 扫描响应
+- - '##'
+  - 恶意伪造扫描
+- - '#'
+  - 将 psad 主动响应与第三方工具集成
+- - '##'
+  - 命令行界面
+- - '###'
+  - 注意
+- - '###'
+  - 添加拦截规则
+- - '###'
+  - 移除拦截规则
+- - '###'
+  - 清空所有拦截规则
+- - '##'
+  - 与 Swatch 集成
+- - '##'
+  - Swatch -> psad active response for SSH bad logins
+- - '##'
+  - 与自定义脚本集成
+- - '###'
+  - perl modules
+- - '###'
+  - cache previously seen IP addresses and associated failed login
+- - '###'
+  - counts
+- - '###'
+  - open the psad domain socket for writing
+- - '###'
+  - open the logfile
+- - '#'
+  - 结语
+- - '#'
+  - 第 9 章 将 SNORT 规则转换为 IPTABLES 规则
+- - '##'
+  - 深度防御
+- - '##'
+  - 基于目标的入侵检测与网络层碎片重组
+- - '###'
+  - 注意
+- - '##'
+  - 轻量级占用足迹（Lightweight Footprint）
+- - '##'
+  - 内联响应
+- - '###'
+  - 注意
+- - '#'
+  - 签名翻译示例
+- - '##'
+  - Nmap 命令尝试签名
+- - '##'
+  - Bleeding Snort "Bancos Trojan" 签名
+- - '##'
+  - PGPNet 连接尝试签名
+- - '#'
+  - SNORT 头部通配符与变量解析
+- - '##'
+  - 规则动作与 iptables 仿真
+- - '##'
+  - 规则动作与告警
+- - '##'
+  - 翻译 Snort 规则：iptables 日志
+- - '###'
+  - content
+- - '###'
+  - offset
+- - '###'
+  - distance
+- - '###'
+  - flags
+- - '###'
+  - itype
+- - '###'
+  - icode
+- - '###'
+  - ttl
+- - '###'
+  - tos
+- - '###'
+  - ipopts
+- - '###'
+  - flow
+- - '###'
+  - Resp
+- - '##'
+  - 终止 "/ETC/PASSWD" 网络会话
+- - '###'
+  - 注意事项
+- - '###'
+  - asn
+- - '###'
+  - byte_jump
+- - '###'
+  - byte_test
+- - '###'
+  - fragbits
+- - '###'
+  - isdataat
+- - '###'
+  - pcre
+- - '###'
+  - rpc
+- - '#'
+  - 结语
+- - '#'
+  - 第 10 章 部署 FWSNORT
+- - '##'
+  - 安装 fwsnort
+- - '###'
+  - 注意
+- - '##'
+  - 运行 fwsnort
+- - '###'
+  - 注意
+- - '##'
+  - 这是 fwsnort 的配置文件。
+- - '##'
+  - 与 Snort 的配置文件有一些之处。
+- - '###'
+  - 'Id: fwsnort.conf'
+- - '###'
+  - 'Version: 2007-03-21'
+- - '###'
+  - fwsnort 将所有流向本地机器或源自本地机器的流量
+- - '###'
+  - HOME_NET
+- - '###'
+  - EXTERNAL_NET
+- - '###'
+  - FWSNORT_FORWARD 链处理的规则，因为没有流量
+- - '###'
+  - 进入 iptables 链。
+- - '###'
+  - 服务器列表。
+- - '###'
+  - 配置端口
+- - '###'
+  - 平均包长度和最大帧。这用于
+- - '###'
+  - 使用 WHITELIST 定义一个主机/网络列表，
+- - '###'
+  - 这些列表，fwsnort 应该 DROP 或 REJECT 所有流量。
+- - '###'
+  - 例如，要 DROP 来自 192.168.1.0/24 的流量，
+- - '###'
+  - 你可以使用：
+- - '###'
+  - 定义内置链中的跳转位置，以跳转到 fwsnort 链。
+- - '###'
+  - iptables 链（通常不需要更改）
+- - '###'
+  - 系统文件
+- - '##'
+  - fnort.sh 的结构
+- - '###'
+  - 'File: /etc/fwsnort/fwsnort.sh'
+- - '###'
+  - 'Purpose: 此脚本由 fwsnort 自动生成'
+- - '###'
+  - 'Generated with: fwsnort'
+- - '###'
+  - 'Generated on host: iptables'
+- - '###'
+  - 'Generated at: Sun Jul 15 23:12:43 2007'
+- - '###'
+  - 'Author: Michael Rash <mbr@cipherne.org>'
+- - '###'
+  - 'Version: 1.0 (file revision: 381)'
+- - '###'
+  - TCP 连接状态与 fwsnort 链
+- - '###'
+  - Inspect ESTABLISHED tcp connections
+- - '###'
+  - 签名检查与日志生成
+- - '###'
+  - alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ATTACK-RESPONSES")
+- - '###'
+  - 使用跳转规则（Jump Rules）激活 fwsnort 链
+- - '###'
+  - 注意
+- - '##'
+  - fwsnort 的命令行选项
+- - '###'
+  - --ipt-flush
+- - '###'
+  - --no-addresses
+- - '###'
+  - --no-ipt-sync
+- - '###'
+  - --restrict-intf intf
+- - '#'
+  - 观察 fwsnort 的运行
+- - '##'
+  - 检测 Trin0 DDoS 工具
+- - '##'
+  - 检测 Linux Shellcode 流量
+- - '##'
+  - 检测并响应 Dumador 木马
+- - '##'
+  - 检测并响应缓存污染攻击
+- - '###'
+  - 注意
+- - '#'
+  - 第11 章 结合 PSAD 和 FWSNORT
+- - '##'
+  - 将 fwsnort 检测关联到 psad 操作
+- - '###'
+  - 使用 fwsnort 检测攻击
+- - '###'
+  - 使用 psad 告警
+- - '###'
+  - TCP Flags
+- - '###'
+  - Reporting Application Layer Content
+- - '#'
+  - 重新回顾主动响应
+- - '##'
+  - psad vs. fwsnort
+- - '###'
+  - Snort ID, Message, and Reference Information
+- - '###'
+  - Note
+- - '##'
+  - 限制 psad 响应仅针对 fwsnort 检测到的攻击
+- - '###'
+  - 注意
+- - '##'
+  - 结合 fwsnort 和 psad 响应
+- - '##'
+  - DROP vs. REJECT 目标
+- - '###'
+  - 拦截入站 RST
+- - '###'
+  - NF_DROP 宏
+- - '#'
+  - Metasploit 更新功能
+- - '##'
+  - Metasploit 3.0 更新
+- - '##'
+  - Metasploit 2.6 更新
+- - '##'
+  - 签名开发
+- - '##'
+  - ARIN WHOIS database, last updated 2006-10-28 19:10
+- - '##'
+  - Enter additional hints on searching ARIN's WHOIS database
+- - '#'
+  - 结语
+- - '#'
+  - 第 12 章 端口敲门（PORT KNOCKING）VS 单包授权
+- - '##'
+  - 缩小攻击面
+- - '##'
+  - 零日攻击问题
+- - '###'
+  - Note
+- - '##'
+  - 零日攻击发现
+- - '##'
+  - 对基于特征的入侵检测的影响
+- - '#'
+  - 端口敲门 (Port Knocking)
+- - '##'
+  - 阻止 Nmap 和目标
+- - '##'
+  - 共享端口门序列
+- - '###'
+  - 注意
+- - '###'
+  - 注意
+- - '###'
+  - tcpdump -i eth1 -l -nn -s 0 -X port 5005
+- - '##'
+  - 加密的端口序列
+- - '###'
+  - tcpdump -i eth1 -l -nn -s 0 -X port 5005
+- - '##'
+  - 端口序列
+- - '##'
+  - 重放问题
+- - '##'
+  - 最小传输率
+- - '###'
+  - 注意
+- - '##'
+  - 敲门序列
+- - '###'
+  - 注意
+- - '##'
+  - 单包授权 (Single Packet Authorization)
+- - '##'
+  - 端口门的局限性
+- - '##'
+  - SPA 的架构
+- - '###'
+  - 访问附加
+- - '##'
+  - 结语
+- - '#'
+  - 第 13 章 介绍 FWKNOP
+- - '##'
+  - fwknop 安装
+- - '###'
+  - 注意
+- - '##'
+  - cd /usr/local/src/fwknop-1.8
+- - '##'
+  - ./install
+- - '###'
+  - 注意
+- - '##'
+  - /etc/fwknop/fwknop.conf
+- - '###'
+  - AUTH_MODE
+- - '###'
+  - PCAP_INTF
+- - '###'
+  - PCAP_FILTER
+- - '###'
+  - FIREWALL_TYPE
+- - '###'
+  - PCAP_PKT_FILE
+- - '###'
+  - IPT_AUTO_CHAIN
+- - '###'
+  - ENABLE_MD5_PERSISTENCE
+- - '###'
+  - MAX_SPA_PACKET_AGE
+- - '###'
+  - EMAIL_ADDRESS
+- - '###'
+  - HOME_DIR
+- - '###'
+  - EMAIL_SERVER
+- - '###'
+  - /etc/fwknop/access.conf
+- - '###'
+  - SOURCE
+- - '###'
+  - OPEN_PORTS
+- - '###'
+  - PERMIT_CLIENT_PORTS
+- - '###'
+  - ENABLE_CMD
+- - '###'
+  - CMD_REGEX
+- - '###'
+  - DATA_COLLECT_MODE
+- - '###'
+  - GPG_REMOTE_ID
+- - '##'
+  - fwknop 数据包格式
+- - '###'
+  - 随机数据 (16 bytes)
+- - '###'
+  - 用户名
+- - '###'
+  - 时间戳
+- - '###'
+  - 软件版本
+- - '###'
+  - 模式 (Mode)
+- - '###'
+  - 访问指令 (Access directive)
+- - '###'
+  - 命令字符串 (Command string)
+- - '###'
+  - 验证方法
+- - '##'
+  - 部署 fwknop
+- - '##'
+  - 对称加密 SPA
+- - '##'
+  - 非对称加密 SPA
+- - '###'
+  - 使用 GPG 密钥交换
+- - '##'
+  - 伪造地址
+- - '##'
+  - OpenSSH 集成补丁
+- - '##'
+  - cd /usr/local/src/openssh-4.3
+- - '##'
+  - 运行 Tor 的 SPA
+- - '###'
+  - 注意
+- - '###'
+  - 注意
+- - '##'
+  - 结语
+- - '#'
+  - 第 14 章 IPTABLES 日志的可可视化
+- - '###'
+  - 注意
+- - '##'
+  - 异常情况
+- - '##'
+  - Gnuplot
+- - '##'
+  - Gnuplot 绘图指令
+- - '##'
+  - 结合 psad 和 Gnuplot
+- - '##'
+  - Afterglow
+- - '###'
+  - psad -m iptables.data --CSV --fields "src:11.11.0.0/16 dst:not11.11.0.0/16 dp"
+- - '##'
+  - Afterglow Color File
+- - '###'
+  - '@fields 是包含值的数组'
+- - '###'
+  - color.source 是源颜色
+- - '###'
+  - color.event 是事件颜色
+- - '###'
+  - color.target 是目标颜色
+- - '##'
+  - 第一个匹配获胜
+- - '##'
+  - iptables 攻击可视化
+- - '###'
+  - Note
+- - '###'
+  - Port Sweeps
+- - '##'
+  - Slammer 蠕虫
+- - '##'
+  - Nachi 蠕虫
+- - '##'
+  - 受损系统的出站连接
+- - '##'
+  - 结语
+- - '##'
+  - 附录 A. 欺骗攻击
+- - '##'
+  - 连接跟踪 (Connection Tracking)
+- - '##'
+  - alert udp $EXTERNAL_NET any -> $HOME_NET 635 (msg:"EXPLOIT x86 Linux mountd")
+- - '###'
+  - reference:bugtraq,121
+- - '##'
+  - exploit.rules 流量 (Spoofing exploit.rules)
+- - '##'
+  - 伪造 UDP 攻击
+- - '#'
+  - 附录 B. 完整的 FWSNORT 脚本
+- - '##'
+  - 'File: /etc/fwsnort/fwsnort.sh'
+- - '##'
+  - '用: 此脚本由 fwsnort 自动生成，并基于 Snort 规则实现 iptables 规则集。更多信息请参阅 fwsnort man 页面或访问 http://www.cipherdyne.org/fwsnort
+    的可用文档。'
+- - '###'
+  - '生成自: fwsnort --snort-sid 1332,1336,1338,1339,1341,1342,1360'
+- - '###'
+  - '生成主机: iptablesfw'
+- - '###'
+  - '生成时间: Wed Jul 18 18:26:19 2007'
+- - '###'
+  - '生成主机: iptables'
+- - '###'
+  - '作者: Michael Rash <mbr@cipherdyne.org>'
+- - '###'
+  - '版本: 1.0 (file revision: 381)'
+- - '###'
+  - 创建 fwsnort iptables 链
+- - '###'
+  - alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WEB-ATTACKS /usr/")
+- - '###'
+  - alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WEB-ATTACKS chmod")
+- - '###'
+  - alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WEB-ATTACKS chown")
+- - '###'
+  - alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WEB-ATTACKS chsh")
+- - '###'
+  - alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WEB-ATTACKS /usr/bin/gcc")
+- - '###'
+  - 将流量跳转到 fwsnort 链
+- - '###'
+  - EOF
+- - '#'
+  - 关于作者
+- - '#'
+  - 结语

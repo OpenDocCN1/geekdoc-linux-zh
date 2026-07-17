@@ -1,0 +1,163 @@
+name: LINUX FOR HACKERS： LEARN CYBERSECURITY PRINCIPLES WITH SHELL,PYTHON,BASH PROGRAMMING
+  USING KALI LINUX TOOLS. A COMPLETE GUIDE FOR BEGINNERS
+name_cn: 黑客 Linux Linux：使用 Kali Linux 工具，通过 Shell、Python 和 Bash 编程学习网络安全原理。初学者指南
+slug: linux-for-hackers-learn-cybersecurity-principles-with-shellp
+toc:
+- - '#'
+  - 黑客 Linux Linux：使用 Kali Linux 工具，通过 Shell、Python 和 Bash 编程学习网络安全原理。初学者指南
+- - '##'
+  - 了解 Linux 并安装你喜欢的 Linux 发行版
+- - '###'
+  - 引言
+- - '#'
+  - 第一章 Linux 简介
+- - '###'
+  - Linux 在各个领域的现状与趋势
+- - '###'
+  - Linux 与开源软件
+- - '###'
+  - Linux 在服务器领域的发展
+- - '###'
+  - Linux 在桌面领域的发展
+- - '###'
+  - Linux 在移动嵌入领域的发展
+- - '###'
+  - Linux 在云计算/大数据领域的发展
+- - '#'
+  - 第二章 选择 Linux 发行版
+- - '##'
+  - Red Hat Linux (红帽 Linux)
+- - '##'
+  - Fedora Core
+- - '##'
+  - Kali Linux
+- - '##'
+  - CentOS
+- - '##'
+  - Su Linux
+- - '##'
+  - Ubuntu Linux
+- - '###'
+  - 初学者的首选是什么？ - LinuxMint 系列
+- - '###'
+  - 桌面平台首选是什么？ -Ubuntu Linux
+- - '###'
+  - 企业应用的首选是什么?-RHEL/CentOS 系列
+- - '###'
+  - 黑客的首选是什么？ - Kali Linux
+- - '###'
+  - 接下来是什么？
+- - '#'
+  - 第三章：掌握 Linux 的策略
+- - '##'
+  - 如何养成良好的 Linux 习惯？
+- - '###'
+  - 确保习惯命令行模式
+- - '###'
+  - 理论实践结合
+- - '###'
+  - 学习使用 Linux 在线帮助
+- - '###'
+  - 学习独立思考和解决问题
+- - '###'
+  - 学习专业英语
+- - '###'
+  - Linux 学习路线
+- - '#'
+  - 第四章：Linux 安装准备
+- - '##'
+  - 安装 Linux
+- - '###'
+  - 安装要求
+- - '#'
+  - 第五章：Linux 安装步骤
+- - '###'
+  - 硬盘安装方法
+- - '###'
+  - U 盘安装方法
+- - '###'
+  - 网络安装方法
+- - '###'
+  - 使用光驱安装
+- - '#'
+  - 第六章：Linux 中的分区
+- - '###'
+  - 分区命名方案
+- - '###'
+  - Windows + Linux 双系统分区
+- - '#'
+  - 第七章：开始安装程序
+- - '###'
+  - 如何让系统启动？
+- - '#'
+  - Linux 分区指南
+- - '##'
+  - 磁盘分区流程
+- - '###'
+  - 1. 选择磁盘
+- - '###'
+  - 2. 选择分区方案
+- - '###'
+  - 3. 创建挂载点
+- - '####'
+  - 根分区 (`/`)
+- - '####'
+  - Boot 分区 (`/boot`)
+- - '####'
+  - Swap 分区
+- - '####'
+  - /usr 和 /var 部分
+- - '####'
+  - 自定义数据分区 (`/mydata`)
+- - '###'
+  - 4. 分区配置详情
+- - '#'
+  - 网络配置
+- - '##'
+  - 配置网络
+- - '##'
+  - 有用命令
+- - '#'
+  - Linux 安装
+- - '##'
+  - 完成安装
+- - '##'
+  - 启动系统
+- - '#'
+  - Python 和 Bash 脚本
+- - '##'
+  - Python 基础
+- - '##'
+  - Bash 脚本
+- - '#'
+  - Linux 进程管理
+- - '##'
+  - 监控进程
+- - '##'
+  - 管理进程
+- - '##'
+  - 使用 `nice` 设置优先级
+- - '#'
+  - 文件管理
+- - '##'
+  - 权限
+- - '##'
+  - 文件操作
+- - '#'
+  - 高级工具
+- - '##'
+  - Nmap
+- - '##'
+  - Tcpdump
+- - '##'
+  - Lsof
+- - '##'
+  - Netcat (nc)
+- - '##'
+  - Strace
+- - '##'
+  - Burp Suite
+- - '#'
+  - Intruder 中暴力攻击逻辑的示例
+- - '#'
+  - 使用密码字典文件。
