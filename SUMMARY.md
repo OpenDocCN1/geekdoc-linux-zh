@@ -275,6 +275,7 @@
 +   [Linux®+ 认证圣经](docs/linux-certification-bible/README.md)
 +   [Linux 命令行](docs/linux-cli/README.md)
 +   [Linux 命令行计算指南](docs/linux-cli-cmpt/README.md)
++   [Linux 线索](docs/linux-clues/README.md)
 +   [Linux 集群构建与维护指南](docs/linux-clustering-building-and-maintaining-linux-clusters/README.md)
 +   [Linux 调试、反汇编与逆向工程](docs/linux-debugging-dissasseblining-reversing/README.md)
 +   [Linux 入门指南](docs/linux-essentials/README.md)
