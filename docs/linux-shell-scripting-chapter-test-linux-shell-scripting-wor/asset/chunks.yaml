@@ -1,0 +1,1369 @@
+- fmt: '
+
+    ![](Image00005.jpg)
+
+    ![](Image00000.jpg)
+
+    ![](Image00001.jpg)
+
+    ![Flower180x180transaparant.jpg](Image00002.jpg)
+
+    ![](Image00003.jpg)
+
+
+    # Recommended Books by Ray Yao
+
+
+    | | [Advanced C++ In 8 Hours](http://mybook.to/yaowining) | [Advanced Java In
+    8 Hours](http://mybook.to/yaowining) | [AngularJs In 8 Hours](http://mybook.to/yaowining)
+    | [Asp.Net Programming](http://mybook.to/yaowining) | [C# Exam](http://mybook.to/yaowining)
+    | [C# Programming](http://mybook.to/yaowining) | [C++ Exam](http://mybook.to/yaowining)
+    | [C++ Programming](http://mybook.to/yaowining) | [Dart In 8 Hours](http://mybook.to/yaowining)
+    | [Data Science In 8 Hours](http://mybook.to/yaowining) | [Django In 8 Hours](http://mybook.to/yaowining)
+    | [Git Github In 8 Hours](http://mybook.to/yaowining) | [Go In 8 Hours](http://mybook.to/yaowining)
+    | [Html Css Exam](http://mybook.to/yaowining) | [Html Css Programming](http://mybook.to/yaowining)
+    | [Java Exam](http://mybook.to/yaowining) | [Java Programming](http://mybook.to/yaowining)
+    | [JavaScript Exam](http://mybook.to/yaowining) | [JavaScript Programming](http://mybook.to/yaowining)
+    | [JQuery Exam](http://mybook.to/yaowining) | [JQuery Programming](http://mybook.to/yaowining)
+    | [Jsp Servlets Programming](http://mybook.to/yaowining) | [Kotlin In 8 Hours](http://mybook.to/yaowining)
+    | [Linux Command Line](http://mybook.to/yaowining) | [Linux Exam](http://mybook.to/yaowining)
+    | [Lua In 8 Hours](http://mybook.to/yaowining) | [Machine Learning In 8 Hours](http://mybook.to/yaowining)
+    | [Matlab In 8 Hours](http://mybook.to/yaowining) | [MySql Programming](http://mybook.to/yaowining)
+    | [Node.Js In 8 Hours](http://mybook.to/yaowining) | [Numpy In 8 Hours](http://mybook.to/yaowining)
+    | [Pandas In 8 Hours](http://mybook.to/yaowining) | [Perl In 8 Hours](http://mybook.to/yaowining)
+    | [Php Exam](http://mybook.to/yaowining) | [Php MySql Programming](http://mybook.to/yaowining)
+    | [PowerShell In 8 Hours](http://mybook.to/yaowining) | [Python Exam](http://mybook.to/yaowining)
+    | [Python Programming](http://mybook.to/yaowining) | [R In 8 Hours](http://mybook.to/yaowining)
+    | [React.Js In 8 Hours](http://mybook.to/yaowining) | [Ruby Programming](http://mybook.to/yaowining)
+    | [Rust In 8 Hours](http://mybook.to/yaowining) | [Scala In 8 Hours](http://mybook.to/yaowining)
+    | [Shell Scripting In 8 Hours](http://mybook.to/yaowining) | [Swift In 8 Hours](http://mybook.to/yaowining)
+    | [TypeScript In 8 Hours](http://mybook.to/yaowining) | [Visual Basic Exam](http://mybook.to/yaowining)
+    | [Visual Basic Programming](http://mybook.to/yaowining) | [Vue.Js In 8 Hours](http://mybook.to/yaowining)
+    | [Xml Json In 8 Hours](http://mybook.to/yaowining) |
+
+
+    # About This Book
+
+    This book includes the tests of each chapter of `Shell Scripting in 8 Hours`,
+    it can help:
+
+    - Pass college final exam
+
+    - Pass job interview
+
+    - Pass certification exam
+
+
+    # Table of Contents
+
+    - [Chapter 1 Test](#text00003.html_Toc804328)
+
+    - [Chapter 2 Test](#text00005.html_Toc804329)
+
+    - [Chapter 3 Test](#text00007.html_Toc804330)
+
+    - [Chapter 4 Test](#text00009.html_Toc804331)
+
+    - [Chapter 5 Test](#text00011.html_Toc804332)
+
+    - [Chapter 6 Test](#text00013.html_Toc804333)
+
+    - [Chapter 7 Test](#text00015.html_Toc804334)
+
+    - [Chapter 8 Test](#text00016.html_Toc804335)
+
+    - [Chapter 9 Test](#text00018.html_Toc804336)
+
+
+    ## Chapter 1 Test
+
+    Questions:
+
+    1. `_____` is the default Shell on most systems.
+
+    2. `_____` executes the Shell file `myFile.sh`.
+
+    3. `_____` symbol is used for the Shell comments.
+
+    4. `_____` is used for multi-line comments.
+
+    5. To use a variable, you need to use `____` before a variable.
+
+
+    Answers:
+
+    1. `Bash`
+
+    2. `bash myFile.sh`
+
+    3. `#`
+
+    4. `:EOF`
+
+    5. `$`
+
+
+    ## Chapter 2 Test
+
+    Questions:
+
+    1. Any characters in the `_____` quotes will be printed in its original format.
+
+    2. We can use `_____` quotes to connect two strings.
+
+    3. We can get the length of the string using `____` symbol.
+
+    4. `_____` is an expression, which is used for calculation.
+
+    5. `_____` returns the file name
+
+
+    Answers:
+
+    1. `single`
+
+    2. `double`
+
+    3. `#`
+
+    4. ``expr` ``
+
+    5. `$0`
+
+
+    ## Chapter 3 Test
+
+    Questions:
+
+    1. The syntax to create an array: `array_name = ______`
+
+    2. The syntax to access the elements of an array is as follows: `${_____ }`
+
+    3. `array_name[@]` or `_____` can get all elements of an array.
+
+    4. `_____` or `#array_name[*]` can get the length of an array.
+
+    5. `_____` is a command to format the output in the Shell.
+
+
+    Answers:
+
+    1. `(value0 value1 value2...)`
+
+    2. `array_name[index]`
+
+    3. `array_name[*]`
+
+    4. `#array_name[@]`
+
+    5. `printf`
+
+
+    ## Chapter 4 Test
+
+    Questions:
+
+    1.
+
+    ```
+
+    if condition
+
+    _____
+
+    # if true run this code1
+
+    else
+
+    # if false run this code2
+
+    fi
+
+    ```
+
+    2. The operator `____` is used to get the remainder.
+
+    3. The operator `____` mean “less than”.
+
+    4. The operator `-a` means `_____`.
+
+    5. The operator `*` means `_____`.
+
+
+    Answers:
+
+    1. `then`
+
+    2. `%`
+
+    3. `-lt`
+
+    4. `and`
+
+    5. `multiply`
+
+
+    ## Chapter 5 Test
+
+    Questions:
+
+    1. String operator `____` checks if the length of a string is equal to zero, returns
+    true.
+
+    2. String operator `____` checks if the length of a string is not equal to zero,
+    returns true.
+
+    3. File operator `____` checks if the object is an executable file, return true.
+
+    4. File operator `____` checks if the object isn’t an empty file, return true.
+
+    5. The echo operator `____` output the value to a file.
+
+
+    Answers:
+
+    1. `-z`
+
+    2. `-n`
+
+    3. `-x`
+
+    4. `-s`
+
+    5. `>`
+
+
+    ## Chapter 6 Test
+
+    Questions:
+
+    1. `_____` is used to execute the arithmetical calculation.
+
+    2. In text command, `____` checks whether a file exists.
+
+    3. In text command, `____` checks whether a string is empty.
+
+    4. The syntax to define a function is as follows:
+
+    ```
+
+    function_name() {
+
+    }
+
+    ```
+
+    5. `return` can return a value to the `_____`. `_____` shows the return value.
+
+
+    Answers:
+
+    1. `[]`
+
+    2. `-e`
+
+    3. `-n`
+
+    4. `function_name`
+
+    5. `$`
+
+
+    ## Chapter 7 Test
+
+    Questions:
+
+    1. The syntax of `while loop` is as follows:
+
+    ```
+
+    while condition
+
+    _____
+
+    code1
+
+    _____
+
+    ```
+
+    2. `_____` accepts the input from user.
+
+    3. `_____` loops through a block of code if the specified condition is false,
+    will quit the loop if the condition is true.
+
+    4. The syntax of `case statement` is as follows:
+
+    ```
+
+    case value in
+
+    pattern1) code1;;
+
+    pattern2) code2;;
+
+    *) ) code4;; # when match nothing, run this
+
+    esac
+
+    ```
+
+    5. The syntax of `for loop` is as follows:
+
+    ```
+
+    for var _____ item1 item2 item3…
+
+    do
+
+    code1
+
+    code2
+
+    done
+
+    ```
+
+
+    Answers:
+
+    1. `do`
+
+    2. `read`
+
+    3. `until loop`
+
+    4. `pattern*`
+
+    5. `in`
+
+
+    ## Chapter 8 Test
+
+    Questions:
+
+    1. `_____` statement allows the user to select one item to meet the condition,
+    and run the related code.
+
+    2. Append the contents to the end of the file by using `_____`.
+
+    3. Get input from a file by using `_____`.
+
+    4. The syntax of Here Document is as follows:
+
+    ```
+
+    command _____ delimiter
+
+    document
+
+    delimiter
+
+    ```
+
+    5. The syntax to include an external script file into the current file is: `_____
+    ./ external_file`
+
+
+    Answers:
+
+    1. `Select`
+
+    2. `>>`
+
+    3. `<`
+
+    4. `<<`
+
+    5. `source`
+
+
+    ## Chapter 9 Test
+
+    [![SS eCover-009.jpg](Image00004.jpg)](http://mybook.to/yaowining)
+
+    '
+  raw: '
+
+
+    ![](Image00005.jpg)
+
+
+    ![](Image00000.jpg)
+
+
+    ![](Image00001.jpg)
+
+
+    ![Flower180x180transaparant.jpg](Image00002.jpg)
+
+
+    ![](Image00003.jpg)
+
+
+    Recommended Books by Ray Yao
+
+
+    | [Advanced C++ In 8 Hours](http://mybook.to/yaowining)[Advanced Java In 8 Hours](http://mybook.to/yaowining)[AngularJs
+    In 8 Hours](http://mybook.to/yaowining)[Asp.Net Programming](http://mybook.to/yaowining)[C#
+    Exam](http://mybook.to/yaowining)[C# Programming](http://mybook.to/yaowining)[C++
+    Exam](http://mybook.to/yaowining)[C++ Programming](http://mybook.to/yaowining)[Dart
+    In 8 Hours](http://mybook.to/yaowining)[Data Science In 8 Hours](http://mybook.to/yaowining)[Django
+    In 8 Hours](http://mybook.to/yaowining)[Git Github In 8 Hours](http://mybook.to/yaowining)[Go
+    In 8 Hours](http://mybook.to/yaowining)[Html Css Exam](http://mybook.to/yaowining)[Html
+    Css Programming](http://mybook.to/yaowining)[Java Exam](http://mybook.to/yaowining)[Java
+    Programming](http://mybook.to/yaowining)[JavaScript Exam](http://mybook.to/yaowining)[JavaScript
+    Programming](http://mybook.to/yaowining)[JQuery Exam](http://mybook.to/yaowining)[JQuery
+    Programming](http://mybook.to/yaowining)[Jsp Servlets Programming](http://mybook.to/yaowining)[Kotlin
+    In 8 Hours](http://mybook.to/yaowining)[Linux Command Line ](http://mybook.to/yaowining)[Linux
+    Exam](http://mybook.to/yaowining) | [Lua In 8 Hours](http://mybook.to/yaowining)[Machine
+    Learning In 8 Hours](http://mybook.to/yaowining)[Matlab In 8 Hours](http://mybook.to/yaowining)[MySql
+    Programming](http://mybook.to/yaowining)[Node.Js In 8 Hours](http://mybook.to/yaowining)[Numpy
+    In 8 Hours](http://mybook.to/yaowining)[Pandas In 8 Hours](http://mybook.to/yaowining)[Perl
+    In 8 Hours](http://mybook.to/yaowining)[Php Exam](http://mybook.to/yaowining)[Php
+    MySql Programming ](http://mybook.to/yaowining)[PowerShell In 8 Hours](http://mybook.to/yaowining)[Python
+    Exam](http://mybook.to/yaowining)[Python Programming](http://mybook.to/yaowining)[R
+    In 8 Hours](http://mybook.to/yaowining)[React.Js In 8 Hours](http://mybook.to/yaowining)[Ruby
+    Programming](http://mybook.to/yaowining)[Rust In 8 Hours](http://mybook.to/yaowining)[Scala
+    In 8 Hours](http://mybook.to/yaowining)[Shell Scripting In 8 Hours](http://mybook.to/yaowining)[Swift
+    In 8 Hours](http://mybook.to/yaowining)[TypeScript In 8 Hours](http://mybook.to/yaowining)[Visual
+    Basic Exam](http://mybook.to/yaowining)[Visual Basic Programming](http://mybook.to/yaowining)[Vue.Js
+    In 8 Hours](http://mybook.to/yaowining)[Xml Json In 8 Hours](http://mybook.to/yaowining)
+    |
+
+
+    About This Book
+
+
+    This book includes the tests of each chapter of "Shell Scripting in 8 Hours",
+    it can help:
+
+
+    Pass college final exam
+
+
+    Pass job interview exam
+
+
+    Pass engineer certification exam
+
+
+    Table of Contents
+
+
+    [Chapter 1   Test](#text00003.html__Toc80438028)
+
+
+    [Chapter 2   Test](#text00005.html__Toc80438029)
+
+
+    [Chapter 3   Test](#text00007.html__Toc80438030)
+
+
+    [Chapter 4   Test](#text00009.html__Toc80438031)
+
+
+    [Chapter 5   Test](#text00011.html__Toc80438032)
+
+
+    [Chapter 6   Test](#text00013.html__Toc80438033)
+
+
+    [Chapter 7   Test](#text00015.html__Toc80438034)
+
+
+    [Chapter 8   Test](#text00016.html__Toc80438035)
+
+
+    [Chapter 9   Test](#text00018.html__Toc80438036)
+
+
+    ### Chapter 1   Test
+
+
+    Questions:
+
+
+    01.
+
+
+    _____ is the default Shell on most Linux systems.
+
+
+    02.
+
+
+    “_____” executes the Shell file “myFile.sh”.
+
+
+    03.
+
+
+    “_____” symbol is used for the Shell comments.
+
+
+    04.
+
+
+    “ _____ ” is used for multi-line comments.
+
+
+    05.
+
+
+    To use a variable, you need to use “____” before a variable .
+
+
+    Answers:
+
+
+    01.  Bash
+
+
+    02.  bash  myFile.sh
+
+
+    03.  #
+
+
+    04.  : <<EOF……EOF
+
+
+    05.  $
+
+
+    ### Chapter 2   Test
+
+
+    Questions:
+
+
+    01.
+
+
+    Any characters in the _____ quotes will be printed in its original format.
+
+
+    02.
+
+
+    We can use _____ quotes to connect two strings.
+
+
+    03. 
+
+
+    We can get the length of the string by using “____” symbol.
+
+
+    04.
+
+
+    _____ is an expression, which is used for calculation.
+
+
+    05.
+
+
+    _____ returns the file name
+
+
+    Answers:
+
+
+    01.  single
+
+
+    02.  double
+
+
+    03.  #
+
+
+    04.  `expr…`
+
+
+    05.  $0
+
+
+    ### Chapter 3   Test
+
+
+    Questions:
+
+
+    01.
+
+
+    The syntax to create an array:
+
+
+    array_name = ______
+
+
+    02.
+
+
+    The syntax to access the elements of an array is as follows:
+
+
+    ${ _____  }
+
+
+    03.
+
+
+    array_name[@] or _____ can get all elements of an array.
+
+
+    04.
+
+
+    _____ or #array_name[*] can get the length of an array.
+
+
+    05.
+
+
+    “_____” is a command to format the output in the Shell.
+
+
+    Answers:
+
+
+    01.   (value0  value1  value2…)
+
+
+    02.  array_name[index]
+
+
+    03.  array_name[*]
+
+
+    04.  #array_name[@]
+
+
+    05.  printf
+
+
+    ### Chapter 4   Test
+
+
+    Questions:
+
+
+    01.
+
+
+    if condition
+
+
+    _____    
+
+
+    # if true run this code1
+
+
+    else
+
+
+        # if false run this code2
+
+
+    fi
+
+
+    02.
+
+
+    The operator ____ is used to get the remainder.
+
+
+    03.
+
+
+    The operator ____ mean “less than”
+
+
+    04.
+
+
+    The operator –a means _____
+
+
+    05. 
+
+
+    The operator \* means _____
+
+
+    Answers:
+
+
+    01.  then
+
+
+    02.  %
+
+
+    03.  –lt
+
+
+    04.  and
+
+
+    05.  multiply
+
+
+    ### Chapter 5   Test
+
+
+    Questions:
+
+
+    01.
+
+
+    String operator “ ____ ” checks If the length of a string is equal to zero, returns
+    tru e .
+
+
+    02.
+
+
+    String operator “ ____ ” checks if the length of a string is not equal to zero,
+    returns true
+
+
+    03.
+
+
+    File operator “ ____ ” checks if the object is an executable file, return true.
+
+
+    04.
+
+
+    File operator “____” checks if the object isn’t an empty file, return true.
+
+
+    05.
+
+
+    The echo operator “ ____ ” output the value to a file.
+
+
+    Answers:
+
+
+    01.  –z
+
+
+    02.  –n
+
+
+    03.  –x
+
+
+    04.  –s
+
+
+    05.  >
+
+
+    ### Chapter 6   Test
+
+
+    Questions:
+
+
+    01.
+
+
+    “ ____ ” is used to execute the arithmetical calculation.
+
+
+    02.
+
+
+    In text command, “____” checks whether a file is existing.
+
+
+    03.
+
+
+    In text commend, “____” checks whether a string is empty.
+
+
+    04.
+
+
+    The syntax to define a function is as follows:
+
+
+    _____ ( ) {
+
+
+    }
+
+
+    05.
+
+
+    “return” can return a value to the “____”. 
+
+
+    “____” shows the return value.
+
+
+    Answers:
+
+
+    01.  [ ]
+
+
+    02.  –e
+
+
+    03.  –n
+
+
+    04.  function_name
+
+
+    05.  $ ?        $ ?
+
+
+    ### Chapter 7   Test
+
+
+    Questions:
+
+
+    01.
+
+
+    The syntax of “while loop” is as follows:
+
+
+    while condition
+
+
+    _____
+
+
+    code1
+
+
+    _____
+
+
+    02.
+
+
+    _____ command accepts the input from user
+
+
+    03.
+
+
+    “_____” loops through a block of code if the specified condition is false , will
+    quit the loop if the condition is true.
+
+
+    04.
+
+
+    The syntax of “case statement” is as follows:
+
+
+    case value in
+
+
+    pattern1) code1;;       
+
+
+    pattern2) code2;;
+
+
+    _____ )  code4;;     # when match nothing, run this .
+
+
+    esac
+
+
+    05.
+
+
+    The syntax of “for loop” is as follows:
+
+
+    for var _____ item1 item2 item3…
+
+
+    do
+
+
+        code1
+
+
+        code2
+
+
+    done
+
+
+    Answers:
+
+
+    01.   do        done
+
+
+    02.   read
+
+
+    03\.   until loop
+
+
+    04.   pattern*
+
+
+    05.   in
+
+
+    ### Chapter 8   Test
+
+
+    Questions:
+
+
+    01.
+
+
+    “_____” statement allows the user to select one item to meet the condition, and
+    run the related code .
+
+
+    02.
+
+
+    Append the contents to the end of the file by using “_____”
+
+
+    03.
+
+
+    Get input from a file by using “_____”.
+
+
+    04.
+
+
+    The syntax of Here Document is as follows:
+
+
+    command _____ delimiter
+
+
+        document
+
+
+    delimiter
+
+
+    05.
+
+
+    The syntax to include an external script file into the current file is:
+
+
+    _____   ./ external_file
+
+
+    Answers:
+
+
+    01.  Select
+
+
+    02.  >>
+
+
+    03.  <
+
+
+    04.  <<
+
+
+    05.  source
+
+
+    ### Chapter 9  Test
+
+
+    [![SS eCover-009.jpg](Image00004.jpg)](http://mybook.to/yaowining)'
+  toc: []
+  trans: '
+
+
+    ![](img/Image00005.jpg)
+
+    ![](img/Image00000.jpg)
+
+    ![](img/Image00001.jpg)
+
+    ![Flower180x180transaparant.jpg](img/Image00002.jpg)
+
+    ![](img/Image00003.jpg)
+
+
+    # Ray Yao 推荐书籍
+
+
+    | | [8 小时精通高级 C++](http://mybook.to/yaowining) | [8 小时精通高级 Java](http://mybook.to/yaowining)
+    | [8 小时精通 AngularJs](http://mybook.to/yaowining) | [Asp.Net 编程](http://mybook.to/yaowining)
+    | [C# 考试](http://mybook.to/yaowining) | [C# 编程](http://mybook.to/yaowining) |
+    [C++ 考试](http://mybook.to/yaowining) | [C++ 编程](http://mybook.to/yaowining) |
+    [8 小时精通 Dart](http://mybook.to/yaowining) | [8 小时精通数据科学](http://mybook.to/yaowining)
+    | [8 小时精通 Django](http://mybook.to/yaowining) | [8 小时精通 Git Github](http://mybook.to/yaowining)
+    | [8 小时精通 Go](http://mybook.to/yaowining) | [Html Css 考试](http://mybook.to/yaowining)
+    | [Html Css 编程](http://mybook.to/yaowining) | [Java 考试](http://mybook.to/yaowining)
+    | [Java 编程](http://mybook.to/yaowining) | [JavaScript 考试](http://mybook.to/yaowining)
+    | [JavaScript 编程](http://mybook.to/yaowining) | [JQuery 考试](http://mybook.to/yaowining)
+    | [JQuery 编程](http://mybook.to/yaowining) | [Jsp Servlets 编程](http://mybook.to/yaowining)
+    | [8 小时精通 Kotlin](http://mybook.to/yaowining) | [Linux 命令行](http://mybook.to/yaowining)
+    | [Linux 考试](http://mybook.to/yaowining) | [8 小时精通 Lua](http://mybook.to/yaowining)
+    | [8 小时精通机器学习](http://mybook.to/yaowining) | [8 小时精通 Matlab](http://mybook.to/yaowining)
+    | [MySql 编程](http://mybook.to/yaowining) | [8 小时精通 Node.Js](http://mybook.to/yaowining)
+    | [8 小时精通 Numpy](http://mybook.to/yaowining) | [8 小时精通 Pandas](http://mybook.to/yaowining)
+    | [8 小时精通 Perl](http://mybook.to/yaowining) | [Php 考试](http://mybook.to/yaowining)
+    | [Php MySql 编程](http://mybook.to/yaowining) | [8 小时精通 PowerShell](http://mybook.to/yaowining)
+    | [Python 考试](http://mybook.to/yaowining) | [Python 编程](http://mybook.to/yaowining)
+    | [8 小时精通 R](http://mybook.to/yaowining) | [8 小时精通 React.Js](http://mybook.to/yaowining)
+    | [Ruby 编程](http://mybook.to/yaowining) | [8 小时精通 Rust](http://mybook.to/yaowining)
+    | [8 小时精通 Scala](http://mybook.to/yaowining) | [8 小时精通 Shell 脚本](http://mybook.to/yaowining)
+    | [8 小时精通 Swift](http://mybook.to/yaowining) | [8 小时精通 TypeScript](http://mybook.to/yaowining)
+    | [Visual Basic 考试](http://mybook.to/yaowining) | [Visual Basic 编程](http://mybook.to/yaowining)
+    | [8 小时精通 Vue.Js](http://mybook.to/yaowining) | [8 小时精通 Xml Json](http://mybook.to/yaowining)
+    |
+
+
+    # 关于本书书
+
+    本书包含了《8 小时精通 Shell 脚本》每一章节的测试，它可以帮助：
+
+    - 通过大学期末考试
+
+    - 通过工作面试
+
+    - 通过认证考试
+
+
+    # 目录
+
+    - 第 1 章测试
+
+    - 第 2 章测试
+
+    - 第 3 章测试
+
+    - 第 4 章测试
+
+    - 第 5 章测试
+
+    - 第 6 章测试
+
+    - 第 7 章测试
+
+    - 第 8 章测试
+
+    - 第 9 章测试
+
+
+    ## 第 1 章测试
+
+    问题：
+
+    - `_____` 用于算术运算。
+
+    - 在文本中，____` 检查文件是否存在。
+
+    - `_____` 检查字符串是否为空。
+
+    - `_____` 用于注释。
+
+    - `_____` 用于多行注释。
+
+    答案：
+
+    - `[]`
+
+    - `-e`
+
+    - `-n`
+
+    - `/*`
+
+    - `#`
+
+
+    ## 第 2 章测试
+
+    问题：
+
+    - `_____` 接收用户输入。
+
+    - `_____` 在指定条件为假时循环代码块，条件为真时退出循环。
+
+    - `_____` 输出结果。
+
+    - `_____` 用于连接字符串。
+
+    答案：
+
+    - `while`
+
+    - `read`
+
+    - `echo`
+
+    - `&&`
+
+
+    ## 第 3 章测试
+
+    问题：
+
+    - `_____` 允许用户选择一个项来满足条件。
+
+    - 语法为 `_____`：
+
+    - `_____` 遍历数组元素。
+
+    - `_____` 获取数组长度。
+
+    - `_____` 输出到文件。
+
+    答案：
+
+    - `case`
+
+    - `do`
+
+    - `for`
+
+    - `${#}`
+
+    - `>`
+
+
+    ## 第 4 章测试
+
+    问题：
+
+    - 语法如下：
+
+    ```
+
+    if condition
+
+    _____
+
+    code1
+
+    else
+
+    code2
+
+    fi
+
+    ```
+
+    - `____` 用于取模。
+
+    - `_____` 表示“小于”。
+
+    - `_____` 逻辑与。
+
+    - `_____` 运算符。
+
+    答案：
+
+    - `then`
+
+    - `%`
+
+    - `lt`
+
+    - `and`
+
+
+    ## 第 5 章测试
+
+    问题：
+
+    - `_____` 检查字符串长度是否等于零。
+
+    - `_____` 检查字符串长度不等于零。
+
+    - `_____` 检查文件是否可执行。
+
+    - `_____` 输出。
+
+    - `_____` 返回返回值。
+
+    答案：
+
+    - `-z`
+
+    - `-n`
+
+    - `-x`
+
+    - `-s`
+
+    - `return`
+
+
+    ## 第 6 章测试
+
+    问题：
+
+    - `_____` 用于算术运算。
+
+    - 在文本中，____` 检查文件是否存在。
+
+    - `_____` 检查字符串是否为空。
+
+    - 定义函数的语法如下：
+
+    ```
+
+    function_name() {
+
+    }
+
+    ```
+
+    - `_____` 返回一个值。
+
+    - `_____` 显示返回值。
+
+    答案：
+
+    - `[]`
+
+    - `-e`
+
+    - `-n`
+
+    - `function_name`
+
+    - `$`
+
+
+    ## 第 7 章测试
+
+    问题：
+
+    - `while` 循环语法如下：
+
+    ```
+
+    while condition
+
+    _____
+
+    code1
+
+    _____
+
+    ```
+
+    - `_____` 接收用户输入。
+
+    - `_____` 在指定条件为假时循环代码块，条件为真时退出循环。
+
+    - `case` 语句语法如下：
+
+    ```
+
+    case value in
+
+    pattern1) code1;;
+
+    pattern2) code2;;
+
+    *) ) code4;; # 无匹配时运行此项
+
+    esac
+
+    ```
+
+    - `for` 循环语法如下：
+
+    ```
+
+    for var _____ item1 item2 item3…
+
+    do
+
+    code1
+
+    code2
+
+    done
+
+    ```
+
+    答案：
+
+    - `do`
+
+    - `read`
+
+    - `until`
+
+    - `pattern*`
+
+    - `in`
+
+
+    ## 第 8 章测试
+
+    问题：
+
+    - `_____` 语句允许用户选择一个项来满足条件并运行相关代码。
+
+    - 使用 `>>` 将内容追加到文件末尾。
+
+    - 使用 `<` 从文件获取输入。
+
+    - Here Document（在此文档）的语法如下：
+
+    ```
+
+    command _____ delimiter
+
+    document
+
+    delimiter
+
+    ```
+
+    - 使用 `_____` 将外部脚本包含到当前文件中。
+
+    答案：
+
+    - `Select`
+
+    - `>>`
+
+    - `<`
+
+    - `<<`
+
+    - `source`
+
+
+    '

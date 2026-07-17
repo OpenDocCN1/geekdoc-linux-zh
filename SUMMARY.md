@@ -371,6 +371,7 @@
 +   [Linux Mint 22 初学者用户指南](docs/linux-mint-22-user-manual-for-beginners/README.md)
 +   [Linux 编程工具解锁指南](docs/linux-programming-tools-unveiled/README.md)
 +   [Linux Shell 编程：8 小时入门，初学者指南！](docs/linux-shell-programming-in-8-hours-for-beginners/README.md)
++   [Linux Shell 脚本章节测试：Linux Shell 脚本练习册](docs/linux-shell-scripting-chapter-test-linux-shell-scripting-wor/README.md)
 +   [Linux系统管理员面试高频题：你最可能被问到的](docs/linux-system-administrator-interview-questions-youll-most-li/README.md)
 +   [Linux系统管理员指南](docs/linux-system-administrators-guide/README.md)
 +   [Linux 工具快速教程](docs/linux-tool-qkgd/README.md)
