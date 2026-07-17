@@ -1,0 +1,438 @@
+name: Linux Command Line and Shell Scripting Bible, Second Edition
+name_cn: Linux 命令行与 Shell 脚本圣经（第二版）
+slug: linux-command-line-and-shell-scripting-bible-second-edition
+toc:
+- - '#'
+  - Linux 命令行与 Shell 脚本圣经（第二版）
+- - '#'
+  - 第 15 章：脚本控制
+- - '#'
+  - 第 16 章：创建函数
+- - '##'
+  - GNU 长参数
+- - '###'
+  - 表 4.3 ps 命令 GNU 参数
+- - '##'
+  - 实时进程监控
+- - '##'
+  - 停止进程
+- - '###'
+  - kill 命令
+- - '###'
+  - kill -s HUP 3940
+- - '###'
+  - killall 命令
+- - '###'
+  - killall http*
+- - '##'
+  - 监控磁盘空间
+- - '###'
+  - 挂载介质
+- - '###'
+  - mount 命令
+- - '###'
+  - 表 4.6 mount 命令参数
+- - '##'
+  - mount -t iso9660 -o loop MEPIS-KDE4-LIVE-DVD_32.iso mnt
+- - '##'
+  - ls -l mnt
+- - '##'
+  - cd mnt/boot
+- - '##'
+  - ls -l
+- - '###'
+  - umount 命令
+- - '###'
+  - 使用 df 命令
+- - '##'
+  - 使用 du 命令
+- - '##'
+  - 处理数据文件
+- - '###'
+  - 排序数据
+- - '##'
+  - sort 参数
+- - '###'
+  - 搜索数据
+- - '###'
+  - bzip2 工具
+- - '###'
+  - gzip 工具
+- - '##'
+  - zip 工具
+- - '##'
+  - 归档数据
+- - '###'
+  - tar 命令函数
+- - '###'
+  - tar 命令选项
+- - '##'
+  - 总结
+- - '#'
+  - 第 5 章：使用 Linux 环境变量
+- - '##'
+  - 本章内容
+- - '##'
+  - 什么是环境变量？
+- - '##'
+  - 全局环境变量
+- - '##'
+  - 局部环境变量
+- - '##'
+  - 设置环境变量
+- - '##'
+  - 设置本地环境变量
+- - '###'
+  - bash Shell Bourne 变量
+- - '###'
+  - bash Shell 环境变量
+- - '##'
+  - 设置 PATH 环境变量
+- - '##'
+  - 定位系统环境变量
+- - '###'
+  - 登录 shell (Login Shell)
+- - '###'
+  - /etc/profile 文件
+- - '##'
+  - /etc/profile
+- - '###'
+  - System wide environment and startup programs, for login setup
+- - '###'
+  - Functions and aliases go in /etc/bashrc
+- - '###'
+  - It's NOT a good idea to change this file unless you know what you are doing. Much
+    better way is to create custom.sh shell script in /etc/profile.d/ to make custom
+    changes. This will prevent merging in future.
+- - '##'
+  - Path manipulation
+- - '###'
+  - $HOME 启动文件
+- - '##'
+  - .bash_profile
+- - '##'
+  - Get the aliases and functions
+- - '##'
+  - User specific environment and startup programs
+- - '###'
+  - 交互式 shell
+- - '##'
+  - .bashrc
+- - '###'
+  - Source global definitions
+- - '###'
+  - User specific aliases and functions
+- - '##'
+  - /etc/bashrc
+- - '###'
+  - System wide functions and aliases
+- - '###'
+  - Environment stuff goes in /etc/profile
+- - '###'
+  - It's NOT good idea to change this file unless you know what you are doing. Much
+    better way is to create custom.sh shell script in /etc/profile.d/ to make custom
+    changes to environment. This will prevent need for merging in future updates.
+- - '###'
+  - By default, we want this to get set.
+- - '###'
+  - Even for non-interactive, non-login shells.
+- - '###'
+  - Current threshold for system reserved uid/gids is 200
+- - '###'
+  - You could check uidgid reservation validity in /usr/share/doc/setup-*/uidgid file
+- - '###'
+  - are we an interactive shell?
+- - '###'
+  - vim:ts=4:sw=4
+- - '###'
+  - 非交互式 Shell
+- - '###'
+  - 变量数组
+- - '###'
+  - 使用命令别名
+- - '##'
+  - 总结
+- - '#'
+  - 理解 Linux 文件权限
+- - '##'
+  - 本章内容
+- - '##'
+  - Linux 安全
+- - '###'
+  - /etc/passwd 文件
+- - '###'
+  - /etc/shadow 文件
+- - '##'
+  - 添加新用户
+- - '##'
+  - /usr/sbin/useradd -D
+- - '##'
+  - useradd -m test
+- - '##'
+  - ls -al /home/test
+- - '###'
+  - '表 6.1: useradd 命令命令行参数'
+- - '###'
+  - '表 6.2: useradd 默认值'
+- - '##'
+  - useradd -D -s /bin/bash
+- - '##'
+  - 删除用户
+- - '##'
+  - /usr/sbin/userdel -r test
+- - '##'
+  - ls -al /home/test
+- - '###'
+  - 用户账户修改工具
+- - '###'
+  - usermod
+- - '###'
+  - passwd 和 chpasswd
+- - '##'
+  - passwd test
+- - '##'
+  - chpasswd < users.txt
+- - '###'
+  - chsh, chfn 和 chage
+- - '##'
+  - chsh -s /bin/csh test
+- - '##'
+  - 创建新组
+- - '##'
+  - /usr/sbin/groupadd shared
+- - '##'
+  - tail /etc/group
+- - '##'
+  - /usr/sbin/usermod -G shared rich
+- - '##'
+  - /usr/sbin/usermod -G shared test
+- - '##'
+  - 修改组
+- - '##'
+  - /usr/sbin/groupmod -n sharing shared
+- - '##'
+  - 解码文件权限
+- - '###'
+  - 使用文件权限符号
+- - '###'
+  - 默认权限
+- - '##'
+  - 修改安全设置
+- - '##'
+  - 修改权限
+- - '##'
+  - 修改所有权
+- - '##'
+  - chown dan newfile
+- - '##'
+  - chown .rich newfile
+- - '##'
+  - chown test.shared newfile
+- - '##'
+  - 共享文件
+- - '###'
+  - 总结
+- - '##'
+  - ext2 文件系统
+- - '##'
+  - 日志文件系统 (Journaling Filesystems)
+- - '###'
+  - 表 7.1 日志文件系统方法
+- - '##'
+  - 扩展 Linux 日志文件系统
+- - '###'
+  - ext3 文件系统
+- - '###'
+  - ext4 文件系统
+- - '###'
+  - Reiser 文件系统
+- - '##'
+  - 日志文件系统 (Journaled Filesystem)
+- - '##'
+  - XFS 文件系统
+- - '##'
+  - 与文件系统的操作
+- - '##'
+  - 创建分区
+- - '###'
+  - 表 7.2 命令
+- - '##'
+  - 创建文件系统
+- - '###'
+  - 表 7.3 创建文件系统的命令行程序
+- - '##'
+  - 如果出现问题
+- - '###'
+  - 表 7.4 fsck 命令行选项
+- - '#'
+  - 逻辑卷管理器 (Logical Volume Managers)
+- - '##'
+  - 逻辑卷管理布局
+- - '##'
+  - Linux 中的 LVM
+- - '###'
+  - 快照 (Snapshots)
+- - '###'
+  - 条带化 (Striping)
+- - '###'
+  - 镜像 (Mirroring)
+- - '##'
+  - 使用 Linux LVM
+- - '##'
+  - 定义物理卷 (Physical Volumes)
+- - '##'
+  - 创建卷组 (Volume Groups)
+- - '##'
+  - 创建逻辑卷 (Logical Volumes)
+- - '##'
+  - 修改 LVM
+- - '###'
+  - 表 7.6 Linux LVM 命令
+- - '##'
+  - 总结
+- - '#'
+  - 第 8 章：安装软件
+- - '##'
+  - 本章内容
+- - '##'
+  - 软件包管理入门
+- - '##'
+  - 基于 Debian 的系统
+- - '###'
+  - 使用 aptitude 管理软件包
+- - '###'
+  - 使用 aptitude 安装软件包
+- - '##'
+  - 使用 aptitude 更新软件
+- - '##'
+  - 使用 aptitude 卸载软件
+- - '##'
+  - aptitude 仓库
+- - '##'
+  - 基于 Red Hat 的系统
+- - '###'
+  - 列出已安装的软件包
+- - '###'
+  - 使用 yum 安装软件
+- - '##'
+  - 使用 yum 卸载软件
+- - '##'
+  - 处理损坏的依赖关系
+- - '##'
+  - Yum 仓库
+- - '##'
+  - 安装 sysstat
+- - '##'
+  - configure / make / install
+- - '##'
+  - 总结
+- - '#'
+  - 第 9 章：编辑器
+- - '##'
+  - 本章内容
+- - '###'
+  - vim 编辑器
+- - '##'
+  - vim 基础
+- - '##'
+  - 编辑数据
+- - '##'
+  - 复制与粘贴
+- - '##'
+  - 搜索与替换
+- - '##'
+  - emacs 编辑器
+- - '##'
+  - 在控制台上使用 emacs
+- - '###'
+  - emacs 基础
+- - '###'
+  - 编辑数据
+- - '##'
+  - 复制与粘贴
+- - '##'
+  - 搜索与替换
+- - '##'
+  - 在 emacs 中使用缓冲区
+- - '##'
+  - 在控制台模式 emacs 中使用窗口
+- - '##'
+  - 在 X Windows 中使用 emacs
+- - '##'
+  - KDE 编辑器家族
+- - '##'
+  - KWrite 编辑器
+- - '##'
+  - Kate 编辑器
+- - '##'
+  - GNOME 编辑器
+- - '##'
+  - 启动 gedit
+- - '##'
+  - gedit 基本功能
+- - '###'
+  - 视图
+- - '##'
+  - 编辑器 (Editor)
+- - '##'
+  - 字体与颜色 (Font & Colors)
+- - '##'
+  - 插件 (Plug-ins)
+- - '##'
+  - 创建脚本文件
+- - '##'
+  - 显示消息
+- - '##'
+  - 环境变量
+- - '##'
+  - 用户变量
+- - '##'
+  - 反引号（Backtick）
+- - '##'
+  - 输出重定向
+- - '##'
+  - 输入重定向
+- - '##'
+  - 执行数学运算
+- - '###'
+  - expr 命令
+- - '###'
+  - 使用括号
+- - '##'
+  - 浮点数解决方案
+- - '###'
+  - bc 基础
+- - '###'
+  - 在脚本中使用 bc
+- - '##'
+  - 退出脚本
+- - '###'
+  - 表 10.2 Linux 退出状态码
+- - '##'
+  - exit 命令
+- - '##'
+  - 总结
+- - '#'
+  - 第 11 章：使用结构化命令
+- - '##'
+  - 本章内容
+- - '###'
+  - 使用 if-then 语句
+- - '##'
+  - if-then-else 语句
+- - '##'
+  - 嵌套 if
+- - '##'
+  - test 命令
+- - '##'
+  - 数值比较
+- - '##'
+  - 字符串比较
+- - '###'
+  - 字符串相等
+- - '###'
+  - 字符串顺序
+- - '##'
+  - 字符串长度
+- - '##'
+  - 文件比较

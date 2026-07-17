@@ -1,0 +1,4370 @@
+# Linux 第7版入门指南
+
+
+
+![](img/cover.jpg)
+
+![image](img/cover.jpg)
+
+![image](img/IFC.jpg)
+
+![image](img/title.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+![image](img/pg6.jpg)
+
+# 1 开始使用
+
+***本章介绍了 Linux 系统并描述了典型的安装过程。***
+
+## 介绍 Linux
+
+![image](img/pg8.jpg)
+
+Linux 是一种可以在各种硬件上运行的操作系统，包括大多数桌面电脑使用的 Intel 系统。它是 1969 年引入的强大的 Unix 系统的现代衍生版本。近年来，随着计算机用户发现了它的许多优势，Linux 的流行程度急剧增加：
+
+- Linux 根据 GNU 公共许可发布，该许可确保了它对所有用户都是免费的。你可以在互联网上免费下载，但如果你更喜欢 CD/DVD 副本，则可能需要支付分发费用。
+- Linux 的源代码访问是不限制的，并且可以进行修改。这使得全球的数千名程序员能够完善代码以提高性能。
+- Linux 是一种真正的多用户、多任务操作系统，允许多个用户同时运行多个应用程序而不会遇到任何流量问题。世界上许多 Web 服务器运行在 Linux 上，原因正是在此。
+- Linux 是一个极其稳定的操作系统——连续运行超过一年的情况并不少见。它可以在“在线”进行升级，因此很少需要重启。
+
+**林纳斯·托瓦兹，Linux 内核创建者**
+
+
+
+
+
+-   Linux 平台上有很多高质量的应用程序可以使用。这些程序与在操作系统上运行的商业应用程序相当，但与 Linux 一样，它们也是免费的。例如，免费的 LibreOffice 软件套提供了与商业 Microsoft Office 软件包类似的功能。
+-   通过开源软件，管理员可以确切知道一个程序可以做什么以及它带来的安全风险。开源应用程序不会秘密收集用户信息，也不会向第三方发送机密信息。
+
+![image](img/hot.jpg)
+
+读 `Linux` 这个名字时使用短元音“i”——读作“li-nucks”，而不是“lie-nucks”。
+
+![image](img/forget.jpg)
+
+许多 Web 服务器被认为拥有“LAMP”配置——这是 `L`inux、`A`pache、`M`ySQL、`P`HP 的缩写，它结合了操作系统、Web 服务器、数据库和服务端脚本语言。
+
+## Linux 的演变
+
+1983 年，一位富有远见的程序员 Richard Stallman 启动了一项名为 `GNU` 项目的。它的哲学是软件不应该受到复制或修改的限制，以便创建出更好、更高效的程序。这激励了世界各程序员创建由效率而非财务激励驱动的程序。
+
+到 1991 年，`GNU` 项目已经创建了许多软件工具，包括 Stallman 本人编写的 `GNU C Compiler`。当时，这些工具中的许多被赫尔辛基大学的一个 21 岁学生整合到了一个兼容 Unix 的系统中。他的名字是 Linus Torvalds，他将该操作系统命名为 `Linux` (`Linu`s – Uni**x**)。
+
+`Linux` 在互联网上开放下载，以便其他程序员可以测试和调整源代码，然后将其返回给 Linus Torvalds。在经过热烈的开发后，`Linux 1.0` 在 `GNU 通用许可证`下在全球发布，这确保了它保持免费。
+
+程序员们热于探索 `Linux`，并很快发现了一些惊人的用途。1996 年 4 月，洛斯阿拉莫斯国家实验室的研究人员使用 `Linux` 将 68 台 PC 作为一个单一并行处理机来模拟原子冲击波。这台超级计算机的价格为 15 万美元，仅为同商业机器的十分分之一。它的峰值速度达到了每秒 190 亿次，成为世界第 315 大强大的超级计算机。它也被证明是稳健的——三个月后它仍然不需要重启。
+
+`Linux` 作为一种文本操作系统继续增长，而 Windows 变成了占据主导地位的图形桌面操作系统。考虑到大多数 PC 用户都想要图形环境的点击式便利性，`Linux` 阵营开始开发一种与 Windows 桌面相当的系统。
+
+从 1991 年的少数爱好者到现在的数百万用户——`Linux` 已经成熟。今天精美的 `K 桌面环境` (`KDE`) 和 `Gnome` 桌面环境现在为 Windows 用户提供了一个用户好的替代方案——用于桌面的 `Linux`！
+
+![image](img/pg9_1.jpg)
+
+这只企鹅是“Tux”——快乐的 `Linux` 吉物。
+
+![image](img/pg9_2.jpg)
+
+“GNU”一词是 `G`NU’s `N`ot `U`nix 的递归缩写。可以在 [gnu.org/licenses/gpl.html](http://www.gnu.org/licenses/gpl.html) 在线了解更多关于 `GNU 通用许可证` 的信息。
+
+![image](img/pg9_3.jpg)
+
+可以在 [gnome.org](http://www.gnome.org) 在线了解更多关于 `Gnome` 图形桌面的信息。
+
+## 选择发行版
+
+`Linux` 的核心是一系列经过测试的编译代码，被称为 `kernel`（内核）。`kernel` 为操作系统提供核心功能，就像汽车的引擎一样。它负责基础工作，例如帮助其他程序访问硬件以及在各种程序之间共享你的计算机处理器。
+
+![image](img/pg10_1.jpg)
+
+除了 `kernel` 之外，`Linux` 还包含许多系统级程序，例如处理你的电子邮件、网络连接和引导加载程序的服务。将这些考虑为汽车的变速箱、齿轮和底盘——没有这些，引擎就没太大用。
+
+`Linux` 发行版通常还包含大量的用户级程序——即日常使用的应用程序：例如 Web 浏览器、文字处理器、文本编辑器、图形编辑器、媒体播放器等。这些是汽车的最后装饰，确保了良好的乘坐体验——白壁轮胎和软皮内饰。
+
+所有这些组件都捆绑在各种 `Linux` 发行版包中，通常被称为“distros”（发行版）——就像汽车的所有组件捆绑在一起制成一台完整的汽车一样。
+
+![image](img/hot.jpg)
+
+大多数 `Linux` 发行版都以“现场”版本提供，让你能够从磁盘运行 `Linux`——这样你可以在不将 `Linux` 安装到硬盘的情况下尝试它。
+
+就像汽车有许多品牌和型号一样，也有许多 `Linux` 发行版供选择。最知名的发行版包括 `RedHat Fedora`、`SUSE`、`Ubuntu` 和 `Mint`。每个发行版都有自己的安装程序和独特的默认配置，取决于发行者认为的最佳安排。对你来说最理想的选择将取决于你个人的偏好以及你如何使用 `Linux`。下面描述了最流行的发行版以帮助你选择：
+
+### RedHat Fedora
+
+最广为人知的 Linux 发行版之一，由商业性的 `RedHat Enterprise Linux` 产品线和由 `Fedora Project` 社区开发的免费 `Fedora` 发行版组成。`Fedora` 发行版有几个版本——用于 PC 的“Workstation”、用于服务器的“Server”以及用于云生态系统的“IoT”。
+
+**优点**：广泛使用，出色的社区支持，具有创新性。
+
+**缺点**：Fedora 版本的生命周期有限，多媒体支持差。
+
+从 [getfedora.org](http://getfedora.org) 免费下载
+
+![image](img/pg10_2.jpg)
+
+“选择自由。选择 Fedora。”
+
+### openSUSE
+
+基于社区的“openSUSE”发行版因其安装程序和 `YaST` 配置工具而获得好评。随盒附的文档被标记为迄为止最完整的。固定发布的“Leap”发行版是 `openSUSE` 获奖的 `SUSE Linux Enterprise` (`SLE`) 产品的的基础，而滚动发布的“Tumbleweed”发行版提供了所有软件的最新稳定版本。
+
+**优点**：注重细节，易用的 `YaST` 配置工具。
+
+**缺点**：发行版巨大——包含超过 1500 个捆绑包。
+
+从 [opensuse.org](http://opensuse.org) 免费下载
+
+![image](img/pg11_1.jpg)
+
+“系统管理员、开发者和桌面用户的首选。”
+
+### Ubuntu
+
+这个复杂的社区发行版通常采用流行的 `Gnome` GUI 桌面管理器。它具有固定的六个月发布周期的优势，每两年有一个支持五年的 `LTS` (`L**ong **T**erm **S**upport`)发布版。`Ubuntu` 发行版有几个版本——用于 PC 的“Desktop”、用于服务器的“Server”、用于物联网设备的“IoT ”以及用于云计算的“Cloud”。`Ubuntu` 桌面版的默认界面与 Windows 桌面非常不同。
+
+**优点**：优秀的社区，以及固定的发布周期。
+
+**缺点**：界面对 Windows 用户来说会很陌生。
+
+从 [ubuntu.com](http://ubuntu.com) 免费下载
+
+![image](img/pg11_2.jpg)
+
+“快速、安全简单，Ubuntu 助力全球数百万台 PC。”
+
+### Linux Mint
+
+
+
+
+一个现代、优雅且易于使用的操作系统。它基于 `Ubuntu` 操作系统，开箱即用，并提供完整的多媒体支持。所有的 Linux Mint 发行版都是 LTS（长期支持）版本，会在每个 `Ubuntu` LTS 发布后不久出现，并获得五年的支持。鼓励用户发送反馈，以便将他们的建议被用于改进 Linux Mint。该操作系统通常采用 `Cinnamon` GUI 桌面管理器，对于从 Windows 操作系统迁移过来的用户来说，这会感到非常熟悉。因此，本书将全程使用 Linux Mint 来演示 Linux 操作系统的各项特性。
+
+**优点**：社区非常优秀，界面对 Windows 用户来说很熟悉——最适合初学者的发行版。
+
+**缺点**：`Ubuntu` 的用户社区比 Mint 大。
+
+从 **[linuxmint.com](http://linuxmint.com)** 免费下载
+
+![image](img/pg11_3.jpg)
+
+“Linux Mint. 优雅源自自由”。
+
+## 提供磁盘空间
+
+![image](img/pg12_1.jpg)
+
+操作系统安装在硬盘驱动器上一个称为“分区”的区域上。当 `Windows` 是唯一安装的操作系统时，它的分区通常会占用整个硬盘。在这种情况下安装 Linux 有三种可能的选项：
+
+• **删除 Windows 分区**——用占用整个驱动器的 Linux 分区替换它。此选项将删除 `Windows` 操作系统以及所有应用程序和数据文件。它会创建一个专用的 Linux 计算机，当 PC 开启机启动时，它会立即启动 Linux。
+
+• **减小 Windows 分区大小**——使其不再占用整个驱动器，然后在产生的空闲空间创建 Linux 分区。此选项将保留 `Windows` 操作系统、应用程序和数据文件。它创建一个“双启动”计算机，允许用户在每次 PC 开机时都选择启动 Linux 还是 `Windows`。
+
+• **为系统添加第二块硬盘**——这允许 Linux 分区占用整个第二块驱动器，并保留第一块硬盘上的 `Windows` 操作系统、应用程序和数据文件。这同样创建一个双启动计算机，允许用户在每次 PC 开机时都选择启动 Linux 还是 `Windows`。
+
+![image](img/hot.jpg)
+
+一个 `H` `D` `D` 驱动器（`HDD` 或简单称为“硬盘”）可以被分为一个或多个区域，以便操作系统能够分别管理每个区域。
+
+为 Linux 安装额外硬盘的选项是许多人的热门选择，因为他们通常已经将原始硬盘升级为更大的，因此他们的原始驱动器就闲置置了。与其他选项相比，它还具有几个优势：
+
+• `Windows` 驱动器上的空闲空间不会被减少。
+• 消除了通过调整分区大小导致数据丢失的风险。
+• 保留了熟悉的 `Windows` 操作系统。
+• 明确分离了两个操作系统。
+• 驱动器故障只会影响一个操作系统。
+
+![image](img/snake.jpg)
+
+调整分区大小是一个可怕的过程，数据丢失可能会且确实会发生——即使在专家手中也是如此。在尝试此操作之前，必须备份分区的的所有内容。
+
+## 添加第二块硬盘
+
+旧的 `IDE`（集成驱动器电子）硬盘需要通过在硬盘上设置“跳线帽”来配置为主主/从关系。然后这些硬盘可以通过一根排线进行串联连接。
+
+![image](img/pg13_1.jpg)
+
+大多数现代 PC 现在都拥有 `SATA` 硬盘，不需要主/从配置。只要你安装了 `Windows` 驱动器，你的 PC 就会自动将额外的驱动器识别为从盘：
+
+![image](img/1b.jpg)关闭 PC，打开机箱并找到现有的硬盘——位于硬盘笼内
+
+![image](img/2b.jpg)在硬盘笼内安装一个额外的 `SATA` 驱动器，然后顺着第一块硬盘的电线识别它插在主板上的位置——通常是一个标记为“SATA”的连接器
+
+![image](img/3b.jpg)将你新硬盘的 `SATA` 线插入主板上相邻的 `SATA` 连接器，并将另一端插入新的 `SATA` 驱动器本身
+
+![image](img/4b.jpg)从 PC 电源单元连接一条电源线到 `SATA` 驱动器，然后关闭机箱并开启 PC
+
+![image](img/5b.jpg)右键点击“开始”按钮并选择`磁盘` `管理`，看到出现“初始化磁盘”对话框
+
+![image](img/6b.jpg)点击`确定` 初始化新硬盘，然后在磁盘管理中，右键点击新驱动器并从右菜单中选择`新建简单卷`
+
+![image](img/7b.jpg)在“新建简单卷向导”中反复点击“下一步”，以格式化驱动器并为其分配驱动器号
+
+![image](img/hot.jpg)
+
+如果你不习惯在 PC Case 内部操作，电脑商店应该乐意以廉宜的费用为你安装第二块硬盘。
+
+![image](img/pg13_2.jpg)
+
+## 创建启动媒体
+
+![image](img/pg14.jpg)
+
+Linux Mint 发行版有三个版本，桌面环境分别为“Cinnamon”、“MATE”和“Xfce”。最受欢迎的版本是 `Cinnamon`，它可以在不对系统进行任何更改的情况下尝试 Linux，并在需要时安装到系统。但在之前，你需要确保系统满足以下要求：
+
+• **1GB 内存**
+• **15GB 磁盘空间**
+• **1024 x 768 分辨率**的 USB U 盘
+
+像其他发行版一样，Linux Mint 的下载是一个 ISO 文件，必须“刻录”到 U 盘上创建 Linux 启动媒体：
+
+![image](img/1b.jpg)启动浏览器，导航到下载页面 **[linuxmint.com/download.php](http://www.linuxmint.com/download.php)**
+
+![image](img/2b.jpg)接下来，点击 `Cinnamon` 链接
+
+![image](img/3b.jpg)现在，从列表中点击你所在国家的 `下载镜像` 链接
+
+![image](img/4b.jpg)选择将 ISO 文件保存到系统的器位置以开始下载
+
+![image](img/5b.jpg)
+
+`linuxmint.iso`
+
+下载完成后，你现在需要一个应用将镜像刻录到 USB 闪盘。Linux Mint 推荐使用 `Etcher`。访问 [balena.io/etcher](https://balena.io/etcher) 并下载适用于系统的安装程序，例如“Download for Windows (x86/x64)”
+
+![image](img/hot.jpg)
+
+U 盘——也被称为 Thumb Drive、Pen Drive、Disk Key、Gig Stick 或 Memory Stick。
+
+![image](img/6b.jpg)安装程序下载完成后，运行其`安装`向导在系统中安装 Etcher
+
+![image](img/7b.jpg)接下来，将 USB 闪盘连接到你的计算机
+
+![image](img/8b.jpg)现在，启动 Etcher 应用并点击`选择文件`按钮，然后选择你下载的 ISO 镜像
+
+![image](img/pg15_1.jpg)
+
+![image](img/pg15_2.jpg)
+
+![image](img/9b.jpg)点击`选择目标`按钮，然后选择连接到计算机的 USB 闪盘
+
+![image](img/10b.jpg)点击`刻录!` 按钮将 ISO 的内容刻录到 USB 闪盘上——创建 Linux 启动媒体
+
+完成后，如果你想验证 ISO 镜像文件（推荐），可以在 [linuxmint-installation-guide.readthedocs.io/en/latest/verify.html](http://linuxmint-installation-guide.readthedocs.io/en/latest/verify.html) 找到操作方法。
+
+**启动实时会话**
+
+
+
+
+按照此处的步骤创建启动介后，你现在已经能够在“实时会话”（Live Session）中运行 Linux Mint。这意味着你可以在一台已经安装了 Windows 作为操作系统的 PC 上安全地探索 Linux 操作系统。
+
+![image](img/pg16_1.jpg)
+
+要启动 Linux 会话，你的 PC 必须能够从包含启动介的 USB 闪盘启动。这要求 PC 的启动设置在查找硬盘指令之前，先从 USB 闪盘查找指令。如果你的 PC 首先尝试从硬盘启动，则你需要更改设置：
+
+![image](img/1b.jpg)查阅你的 PC 文档了解如何访问其 `Setup` 工具程序。这通常要求你在启动 PC 时按下 `F2` 键——但视情况而异
+
+![image](img/2b.jpg)将 USB 闪盘启动介连接到你的 PC
+
+![image](img/3b.jpg)启动 PC 并进入 `Setup` 工具程序
+
+![image](img/4b.jpg)选择与 PC `Boot` 过程相关的部分
+
+![image](img/pg16_2.jpg)
+
+![image](img/5b.jpg)按照 `Setup` 工具程序的 `Help` 指令，将闪盘（USB HDD）设为第一个启动设备
+
+![image](img/hot.jpg)
+
+现代 PC 中的 UEFI (`U`nified `E`xtensible `F`irmware `I`nterface）替换了早期 PC 中的 BIOS (`B`asic `I`nput/**O`utput `S`ystem）固件接口。这些控制着你的 PC 如何启动。
+
+![image](img/forget.jpg)
+
+`Setup` 工具程序是你的 PC 特有的，因此它的外观可能与此处显示的不同。然而，大多数 PC 都提供更改启动优先级顺序的方法，以便你从 USB 闪盘启动 PC。
+
+![image](img/6b.jpg)保存新设置并退出 `Setup` 工具程序——通常按下 `F10` 键
+
+![image](img/7b.jpg)如果你的 PC 配置为以 legacy BIOS 模式启动，Linux Mint 现在将自动启动实时会话
+
+![image](img/pg17_1.jpg)
+
+如果你的 PC 配置为以 UEFI 模式启动，你将看到一个菜单。选择“Start Linux Mint”选项，然后按下 `Enter` 键启动实时会话。
+
+![image](img/pg17_2.jpg)
+
+![image](img/hot.jpg)
+
+当可以在 UEFI 启动模式和 legacy BIOS 模式之间选择时，UEFI 提供了若干优势——UEFI 支持大硬盘分区、具有安全启动功能并提供高效的系统管理。
+
+![image](img/hot.jpg)
+
+## 开始安装
+
+![image](img/pg18_1.jpg)
+
+按照此处的步骤启动实时会话后，你可以尝试 Linux Mint 操作系统。它的运行方式与永久安装在硬盘上类似，但有以下显著异常：
+
+- **实时会话速度较慢**——它是从 USB 闪盘加载的，而不是从硬盘快速加载。
+- **更改不是永久的**——这些更改不会保存在 USB 闪盘上，也不会写入你 PC 的任何地方。
+- **某些应用行为不同**——系统实用程序（如更新管理器）无法有效使用。
+
+实时会话中的用户名是“mint”。如果提示输入密码，只需按下 `Enter` 键即可继续。
+
+实时会话在桌面上提供了一个安装图标，用于开始 Linux Mint 的永久安装：
+
+![image](img/pg18_2.jpg)
+
+![image](img/1b.jpg)双击“Install Linux Mint”图标启动 Linux Mint 安装向导
+
+![image](img/2b.jpg)在“Welcome”（欢迎）屏幕上，选择你偏好的语言，然后点击 `Continue”（继续）按钮
+
+![image](img/pg19_1.jpg)
+
+![image](img/3b.jpg)在“Keyboard layout”（键盘布局）屏幕上，选择你的布局，然后点击 `Continue` 按钮
+
+![image](img/pg19_2.jpg)
+
+![image](img/hot.jpg)
+
+如果你不确定键盘布局，可以在此框中输入并让安装程序自行识别。
+
+![image](img/4b.jpg)在被问时选择你的无线连接，然后勾选安装解码器的框并点击 `Continue` 按钮
+
+![image](img/pg19_3.jpg)
+
+![image](img/forget.jpg)
+
+本书全文采用 Linux Mint 版本 20 (Ulyssa) Cinnamon。该版本提供直到 2025 年的长期支持。
+
+![image](img/snake.jpg)
+
+某些应用中的媒体支持需要第三方解码器。你几乎会需要它们。
+
+## 完成安装
+
+![image](img/5b.jpg)在“Installation type”（安装类型）屏幕上...
+
+![image](img/pg20_1.jpg)
+
+如果你只想在 PC 上运行 Linux 操作系统（推荐），选择 `Erase disk and install Linux Mint`擦除磁盘并安装 Linux Mint）。
+
+![image](img/pg20_2.jpg)
+
+或者，如果安装了 Windows 且也想在 PC 上保留它，选择 `Install Linux Mint alongside Windows Boot Manager`与 Windows 引导管理器旁安装 Linux Mint）选项。
+
+![image](img/pg20_3.jpg)
+
+![image](img/hot.jpg)
+
+高级用户可以通过选择 `Something else` 来管理分区。Linux Mint 需要一个挂载在根目录的分区。虽然操作系统占用 15GB，该分区理想情况下应为 100GB。
+
+如果你保留 Windows，安装程序将调整 Windows 并在空闲空间上安装 Linux。启动菜单将会出现，以便你在启动 PC 时可以选择操作系统——双系统设置。
+
+![image](img/6b.jpg)在选择安装类型后，根据需要为每个操作系统调整空间，然后点击 `Install Now`现在按钮
+
+![image](img/snake.jpg)尝试创建双系统设置在某些 PC 上可能会有问题——删除整个磁盘并安装 Linux Mint。
+
+![image](img/7b.jpg)在“Where are you?”屏幕上选择你的时区，然后点击 `Continue`按钮
+
+![image](img/pg21_1.jpg)
+
+![image](img/hot.jpg)只需在地图上点击你的所在地来选择时区。
+
+![image](img/8b.jpg)在“Who are you?”屏幕上输入你的信息，然后点击 `Continue`按钮安装系统文件
+
+![image](img/pg21_2.jpg)
+
+![image](img/hot.jpg)如果你是 PC 的唯一用户，可以选择 `Log in automatically`自动登录，这样启动 Linux Mint 时无需输入密码。如果你担心安全，还可以选择 `Encrypt my home folder`加密我的文件夹选项。
+
+![image](img/9b.jpg)在 Linux Mint 安装时欣赏幻灯片，完成后点击 `Restart Now`重启现在
+
+![image](img/pg21_3.jpg)
+
+![image](img/pg21_4.jpg)
+
+![image](img/hot.jpg)
+
+有关安装的帮助请参考 Linux Mint 在线论坛 [forums.linuxmint.com](http://forums.linuxmint.com)
+
+## 启用备份
+
+![image](img/pg22_1.jpg)
+
+按照此处点击`Menu`（启动按钮）、`Administration`管理、`Timeshift`
+
+![image](img/pg22_2.jpg)
+
+![image](img/2b.jpg)接下来，输入你在安装过程中“Who are you?”对话框中选择的密码，然后点击 `Authenticate`验证按钮
+
+![image](img/pg22_3.jpg)
+
+![image](img/3b.jpg)现在，选择`RSYNC`选项，然后点击 `Next`下一步按钮
+
+![image](img/pg22_4.jpg)
+
+![image](img/hot.jpg)
+
+`RSYNC`是一种基于磁盘的备份系统，仅备份自上次备份以来发生更改的内容。
+
+
+
+
+
+![image](img/4b.jpg)
+选择您想要保存系统备份快照的设备，然后点击 `Next` 按钮。（在这里，选定的设备是一个连接的外部硬盘，但您也可以连接一个 USB 闪存并选择该设备进行备份）
+
+![image](img/pg23_1.jpg)
+
+![image](img/5b.jpg)选择您希望在所选设备上保存系统备份快照的频率（每月、每周、每天或每小时），然后点击 `Finish`按钮
+
+![image](img/pg23_2.jpg)
+
+![image](img/6b.jpg)日后重新打开 `Timeshift` 并选择已保存的备份快照，然后点击 `Restore` 按钮恢复您的 Linux Mint 系统
+
+![image](img/pg23_3.jpg)
+
+![image](img/forget.jpg)
+
+不要将您的主硬盘作为保存备份快照的位置——因为如果您的硬盘故障，这对您将没有任何帮助。
+
+![image](img/snake.jpg)
+
+备份快照保存在所选设备根目录下新创建的 `timeshift` 目录中。启动快照在后台执行，因此不会影响系统的启动速度。
+
+## Summary
+
+- `Linux` 是一个免费、稳定的多用户操作系统，源自强大的 Unix 操作系统。
+- “Linux”这一名称结合了其创始人 `Linu` Torvalds 名字的首几个字母与 Uni`x` 的最后一个字母。
+- `KDE` 和 `Gnome` 桌面都是用户友好的图形化用户界面，提供了与 Windows 桌面相同的点击式操作便利性。
+- `kernel`（内核）提供了 Linux 的核心功能。
+- Linux `distros`（发行版）将内核、系统级程序和免费的用户级程序以各种组合组合在一起。
+- 最受欢迎的 Linux Mint 发行版采用 `Cinnamon` 桌面管理器，是初学者的最佳发行版。
+-  Linux Mint 的最低硬件要求是 1GB 内存、15GB 磁盘空间以及 1024 x 768 的屏幕分辨率——但更高的配置性能会更好。
+- 可以轻松为 PC 添加第二个 `hard drive`，以便实现 Linux 或 Windows 的双启动。
+- 可以下载 Linux 发行版并作为文件系统镜像刻录到 USB 闪存盘上以创建 `boot media`。
+- 为了从 USB 闪存盘启动，可能需要使用启动 `Setup utility` 修改启动设备顺序。
+- `Live Session`（现场模式）允许您在安装之前尝试 Linux Mint 的大部分功能，并提供安装程序。
+- Linux Mint `installer`（安装程序）允许您将 Linux 作为唯一的操作系统安装，或与 Windows 同时安装。
+- 在开始使用 Linux Mint 操作系统之前，建议您启用 `Timeshift` 备份工具，以便在出现问题时恢复系统。
+
+# 2 探索桌面
+
+*本章描述了 Linux Mint 界面，阐解释了如何使用它，并演示了如何对其自定义。*
+
+- 认识界面
+- 配置桌面
+- 添加 Desklets
+- 调整任务栏
+- 启动应用
+- 编辑菜单
+- 安装更新
+- 关闭桌面
+- 总结
+
+## 认识界面
+
+![image](img/pg28_1.jpg)
+
+当您启动 Linux Mint 操作系统时，系统开始加载时您看到的第一个界面是黑屏，只显示 Linux Mint 标志：
+
+![image](img/pg26_2.jpg)
+
+![image](img/forget.jpg)
+
+本书介绍的发行版是 Linux Mint 20 (Ulyssa)。
+
+除非您在安装过程中选择了“自动登录”选项（如此处所述），否则接下来看到的将是所示的 `Log in` 屏幕：
+
+![image](img/pg26_3.jpg)
+
+现在您可以输入您选择的密码，然后点击密码框中出现的箭头按钮（或按 `Enter` 键）登录 Linux Mint 操作系统。
+
+![image](img/hot.jpg)
+
+当前时间也显示在 `Log in` 屏幕的右上角。将鼠标光标悬停在时间上方即可在弹出的 `Tooltip` 框中看到当前日期。
+
+登录 Linux Mint 后，无论是通过 `Log in` 屏幕还是选择自动选项，都会出现如下所示的 GUI（图形化用户界**面**）桌面和任务栏：
+
+![image](img/pg27_1.jpg)
+
+![image](img/hot.jpg)
+
+`Welcome`（欢迎）对话框为新用户提供了有用信息。如果您不想再次看到此对话框，请取消勾选此选项。点击任何窗口右上角的 `X` 按钮关闭该窗口。
+
+如果您有 Windows 操作系统的经验，Linux Mint 桌面看起来会很熟悉——这正是设计意图。
+
+### 系统托
+
+系统托默认包含五个图标，点击这些图标可以访问有用的功能：
+
+![image](img/pg27_2.jpg)
+
+![image](img/hot.jpg)
+
+将鼠标光标悬停在时间上方即可在 `Tooltip` 框中看到出现的信息。
+
+### 配置桌面
+
+![image](img/pg28_1.jpg)
+
+人们想要对桌面进行的早期更改之一就是更改桌面背景：
+
+![image](img/1r.jpg)
+
+在桌面的任何地方右键点击以打开上下文菜单
+
+![image](img/pg28_2.jpg)
+
+选择 `Change Desktop` 选项打开 `Backgrounds` 窗口
+
+![image](img/3r.jpg)
+
+在左侧面板中选择 `Ulyssa` 查看一组壁纸
+
+![image](img/pg28_3.jpg)
+
+![image](img/hot.jpg)
+
+您可以点击 `Settings` 按钮选择颜色而不是图像
+
+![image](img/hot.jpg)
+
+您也可以点击 `Pictures` 文件夹选择您自己的图像
+
+![image](img/4r.jpg)
+
+![image](img/pg28_4.jpg)
+
+如果您习惯了在 Windows 桌面看到“回收站”图标，或者只是想轻松地恢复删除的文件，您会在 Linux Mint 上看到垃圾桶图标：
+
+![image](img/1r.jpg)
+
+在桌面壁纸的任何地方右键点击打开菜单，然后选择 `Customize` 打开 `Current Monitor Layout` 窗口
+
+![image](img/pg29_1.jpg)
+
+![image](img/pg29_2.jpg)
+
+您可以从此窗口选择选项来更改所有图标的大小及其排列方式
+
+![image](img/2r.jpg)
+
+接下来，点击 `Desktop Settings` 链接打开 `Desktop` 窗口
+
+![image](img/pg29_3.jpg)
+
+![image](img/3r.jpg)
+
+看到 `Trash` 图标的开关处于 `Off` 位置
+
+![image](img/4r.jpg)
+
+将开关滑动到“On” 位置，即可看到垃圾桶图标出现在桌面上
+
+### 添加 Desklets
+
+![image](img/pg30_1.jpg)
+
+Linux Mint 提供了许多运行在桌面上的小程序（applets）。这些与您在 Windows 中可能过的桌面组件类似，但在 Linux Mint 中被称为“Desklets”（**Desk**top app**lets**）。某些 desklet 是标准安装的，您还可以下载更多：
+
+![image](img/1r.jpg)
+
+在桌面壁纸的任何地方右键点击打开上下文菜单，然后选择 `Add Desklets` 打开 `Desklets` 设置窗口
+
+![image](img/pg30_2.jpg)
+
+![image](img/2r.jpg)
+
+接下来，选择一个已安装的 desklet，例如 `Clock desklet`
+
+![image](img/pg30_3.jpg)
+
+![image](img/3r.jpg)
+
+现在，点击 `+ Add` 按钮即可将该 desklet 添加到您的桌面。
+
+![image](img/pg30_4.jpg)
+
+![image](img/hot.jpg)
+
+
+
+
+你可以点击小组件（Desklets）窗口中的`General Settings`按钮来修改小组件的宽度和装饰外观。
+
+![image](img/forget.jpg)
+
+你可以在桌面上拖动小组件，以根据你的喜好进行布局。
+
+![image](img/4r.jpg)点击`Download` 按钮，然后选择一个小组件，并点击向下箭头按钮将其安装到你的电脑上。
+
+![image](img/pg31_1.jpg)
+
+![image](img/5r.jpg)点击`Manage` 按钮查看你选择的小组件是否已添加到已安装的小组件列表中。
+
+![image](img/pg31_2.jpg)
+
+![image](img/hot.jpg)
+
+点击 `-` 按钮从桌面上移除选中的组件，或点击 `x` 按钮卸载选中的组件。
+
+![image](img/6r.jpg)勾选新安装的组件，然后点击`+ Add` 按钮将其立即添加到桌面。
+
+![image](img/pg31_3.jpg)
+
+![image](img/hot.jpg)
+
+当你选择`Download` 按钮时，对话框可能会提示你“你的缓存已过期”。点击对话框上的`Yes` 按钮立即更新它。
+
+![image](img/hot.jpg)
+
+右键点击组件可以显示右键菜单，其中提供了配置选项以及从桌面移除组件的选项。
+
+### 调整任务栏
+
+![image](img/pg32_1.jpg)
+
+任务栏面板包含每个运行应用程序窗口的图标，你可以点击该图标将最小化的窗口恢复到原始大小。有用的是，你可以将鼠标光标悬停在最小化应用的图标上，查看该窗口的缩略图预览：
+
+![image](img/pg32_2.jpg)
+
+此外，你可以在任务栏面板添加实用的应用程序（Applets）：
+
+![image](img/1r.jpg)右键点击`Taskbar`打开右键菜单
+
+![image](img/pg32_3.jpg)
+
+![image](img/2r.jpg)选择`Applets`选项 – 打开“Applets”设置窗口
+
+![image](img/pg32_4.jpg)
+
+![image](img/hot.jpg)
+
+你可以点击此右键菜单中的`Panel settings`项目，以获得自动隐藏任务栏面板、添加更多面板以及编辑面板的选项。
+
+![image](img/hot.jpg)
+
+注意，`Applets`设置窗口的功能与此处描述的`Desklets`设置窗口非常。
+
+![image](img/3r.jpg)点击`Manage` 按钮从已安装的应用列表中选择，或点击`Download` 按钮安装另一个应用 – 例如，下载“Weather”应用
+
+![image](img/4r.jpg)点击`Manage` 按钮并选择天气应用，然后点击`+ Add` 按钮将其添加到任务栏面板
+
+![image](img/5r.jpg)天气应用应该会自动检测你的位置，但同时也允许你选择位置。右键点击该应用，然后选择`Configure`选项。
+
+![image](img/pg33_1.jpg)
+
+![image](img/6r.jpg)在天气设置窗口中，点击`Location`按钮，然后将`Manual Location`按钮滑到“On”。
+
+![image](img/pg33_2.jpg)
+
+![image](img/7r.jpg)接下来，在`Location`框中输入首选城市名称，然后关闭窗口。
+
+![image](img/8r.jpg)现在，点击任务栏应用查看你所选位置的天气。
+
+![image](img/pg33_3.jpg)
+
+![image](img/hot.jpg)
+
+右键点击应用可以显示右键菜单，其中提供了配置选项以及从桌面移除应用的选项。
+
+### 启动应用程序
+
+![image](img/pg34_1.jpg)
+
+在 Linux Mint 中可以从（开始）菜单启动应用程序，并轻松地将启动器添加到任务栏或桌面，以便频繁使用应用程序：
+
+![image](img/1r.jpg)点击任务栏左侧的![image](img/pg34_2.jpg) `Menu` 按钮，然后将鼠标指针悬停在`Accessories`类别上，查看该类别的应用程序列表。
+
+![image](img/2r.jpg)在 Accessories 菜单列表中点击`Text Editor`项目启动文本编辑器应用。
+
+![image](img/pg34_3.jpg)
+
+![image](img/hot.jpg)
+
+你还可以在此`Search` 框中输入应用名称来查找它。
+
+![image](img/hot.jpg)
+
+侧边栏中的启动器是“收藏”。你可以在右键菜单中选择`Add to favorites`向侧边栏添加启动器。
+
+![image](img/3r.jpg)右键点击 Accessories 菜单中的 Text Editor 项目，然后从右键菜单选择`Add to panel`在任务栏创建一个启动器按钮。
+
+![image](img/pg34_4.jpg)
+
+![image](img/4r.jpg)点击已添加到任务栏的新启动器以启动文本编辑器。
+
+![image](img/pg35_1.jpg)
+
+![image](img/5r.jpg)右键点击 Accessories 菜单中的 Text Editor 项目，然后从右键菜单选择`Add to desktop`在桌面上创建一个启动器图标。
+
+![image](img/6r.jpg)点击已添加到桌面的启动器以启动文本编辑器。
+
+![image](img/pg35_2.jpg)
+
+![image](img/5r.jpg)右键点击 Accessories 菜单中的 Text Editor 项目，然后从右键菜单选择`Add to desktop`在桌面上创建一个启动器图标。
+
+![image](img/pg35_3.jpg)
+
+点击已添加到桌面的启动器以启动文本编辑器。
+
+![image](img/pg35_4.jpg)
+
+![image](img/5r.jpg)右键点击 Accessories 菜单中的 Text Editor 项目，然后从右键菜单选择`Add to desktop`在桌面上创建一个启动器图标。
+
+![image](img/pg35_5.jpg)
+
+![image](img/6r.jpg)点击已添加到桌面的启动器以启动文本编辑器。
+
+![image](img/pg36_1.jpg)
+
+![image](img/7r.jpg)
+
+要删除任务栏上的启动器，右键点击它并选择删除。你也可以根据精确命令创建一个桌面启动器。
+
+![image](img/hot.jpg)
+
+在启动器属性对话框输入名称和命令，然后点击`OK` 按钮创建它。
+
+![image](img/pg36_2.jpg)
+
+![image](img/8r.jpg)
+
+![image](img/pg37_3.jpg)
+
+![image](img/hot.jpg)
+
+你还可以从终端提示符启动应用。只需在此输入应用的命令然后按回车键启动它。
+
+### 编辑菜单
+
+![image](img/pg36_1.jpg)
+
+像 Linux Mint 系统的许多事物一样，开始菜单可以根据你的喜味进行定制：
+
+![image](img/1r.jpg)右键点击任务栏左侧的`Menu` 按钮，然后选择`Configure`选项。
+
+![image](img/pg36_2.jpg)
+
+![image](img/2r.jpg)点击`Panel` 按钮并将`Use icon and label`切换按钮滑到“On”。
+
+![image](img/3r.jpg)从`Appearance`和`Behavior`选择选项，例如更改菜单按钮的`Text`值。
+
+![image](img/pg36_3.jpg)
+
+![image](img/4r.jpg)查看你的选择已立即应用到菜单中。
+
+![image](img/5r.jpg)点击此右键菜单中的`Panel settings`项目，以获得自动隐藏任务栏面板等等选项。
+
+![image](img/pg36_4.jpg)
+
+![image](img/hot.jpg)
+
+注意，`Applets`设置窗口的功能与此处描述的`Desklets`设置窗口非常。
+
+![image](img/3r.jpg)
+
+点击`Manage` 按钮从已安装的应用列表中选择，或点击`Download` 按钮安装另一个应用 – 例如，下载“Weather”应用。
+
+![image](img/4r.jpg)点击`Manage` 按钮并选择天气应用，然后点击`+ Add` 按钮将其添加到任务栏面板。
+
+![image](img/5r.jpg)天气应用应该会自动检测你的位置，但同时也允许你选择位置。右键点击该应用，然后选择`Configure`选项。
+
+![image](img/pg33_1.jpg)
+
+![image](img/6r.jpg)在天气设置窗口中，点击`Location`按钮，然后将`Manual Location`按钮滑到“On”。
+
+![image](img/pg33_2.jpg)
+
+![image](img/7r.jpg)接下来，在`Location`框中输入首选城市名称，然后关闭窗口。
+
+![image](img/8r.jpg)现在，点击任务栏应用查看你所选位置的天气。
+
+![image](img/pg33_3.jpg)
+
+![image](img/hot.jpg)
+
+右键点击应用可以显示右键菜单，其中提供了配置选项以及从桌面移除应用的选项。
+
+### 启动应用程序
+
+![image](img/pg34_1.jpg)
+
+在 Linux Mint 中可以从（开始）菜单启动应用程序，并轻松地将启动器添加到任务栏或桌面，以便频繁使用应用程序：
+
+![image](img/1r.jpg)点击任务栏左侧的![image](img/pg34_2.jpg) `Menu` 按钮，然后将鼠标指针悬停在`Accessories`类别上，查看该类别的应用程序列表。
+
+![image](img/2r.jpg)在 Accessories 菜单列表中点击`Text Editor`项目启动文本编辑器应用。
+
+![image](img/pg34_3.jpg)
+
+![image](img/hot.jpg)
+
+你还可以在此`Search` 框中输入应用名称来查找它。
+
+![image](img/hot.jpg)
+
+侧边栏中的启动器是“收藏”。你可以在右键菜单中选择`Add to favorites`向侧边栏添加启动器。
+
+![image](img/3r.jpg)右键点击 Accessories 菜单中的 Text Editor 项目，然后从右键菜单选择`Add to panel`在任务栏创建一个启动器按钮。
+
+![image](img/pg34_4.jpg)
+
+![image](img/4r.jpg)点击已添加到任务栏的新启动器以启动文本编辑器。
+
+![image](img/pg35_1.jpg)
+
+![image](img/5r.jpg)右键点击 Accessories 菜单中的 Text Editor 项目，然后从右键菜单选择`Add to desktop`在桌面上创建一个启动器图标。
+
+![image](img/6r.jpg)点击已添加到桌面的启动器以启动文本编辑器。
+
+![image](img/pg35_2.jpg)
+
+![image](img/5r.jpg)右键点击 Accessories 菜单中的 Text Editor 项目，然后从右键菜单选择`Add to desktop`在桌面上创建一个启动器图标。
+
+![image](img/pg35_3.jpg)
+
+![image](img/4r.jpg)
+
+![image](img/pg35_4.jpg)
+
+![image](img/5r.jpg)
+
+![image](img/pg35_5.jpg)
+
+![image](img/6r.jpg)点击已添加到桌面的启动器以启动文本编辑器。
+
+![image](img/pg36_1.jpg)
+
+![image](img/7r.jpg)
+
+要删除任务栏上的启动器，右键点击它并选择删除。你也可以根据精确命令创建一个桌面启动器。
+
+![image](img/hot.jpg)
+
+在启动器属性对话框输入名称和命令，然后点击`OK` 按钮创建它。
+
+![image](img/pg36_2.jpg)
+
+![image](img/8r.jpg)
+
+![image](img/pg37_3.jpg)
+
+![image](img/hot.jpg)
+
+你还可以从终端提示符启动应用。只需在此输入应用的命令然后按回车键启动它。
+
+### 编辑菜单
+
+![image](img/pg36_1.jpg)
+
+像 Linux Mint 系统的许多事物一样，开始菜单可以根据你的喜味进行定制：
+
+![image](img/1r.jpg)右键点击任务栏左侧的`Menu` 按钮，然后选择`Configure`选项。
+
+![image](img/pg36_2.jpg)
+
+![image](img/2r.jpg)点击`Panel` 按钮并将`Use icon and label`切换按钮滑到“On”。
+
+![image](img/3r.jpg)从`Appearance`和`Behavior`选择选项，例如更改菜单按钮的`Text`值。
+
+![image](img/pg36_3.jpg)
+
+![image](img/4r.jpg)查看你的选择已立即应用到菜单中。
+
+![image](img/5r.jpg)点击此右键菜单中的`Panel settings`项目，以获得自动隐藏任务栏面板等等选项。
+
+![image](img/pg36_4.jpg)
+
+![image](img/hot.jpg)
+
+注意，`Applets`设置窗口的功能与此处描述的`Desklets`设置窗口非常。
+
+![image](img/3r.jpg)
+
+点击`Manage` 按钮从已安装的应用列表中选择，或点击`Download` 按钮安装另一个应用 – 例如，下载“Weather”应用。
+
+![image](img/4r.jpg)点击`Manage` 按钮并选择天气应用，然后点击`+ Add` 按钮将其添加到任务栏面板。
+
+![image](img/5r.jpg)天气应用应该会自动检测你的位置，但同时也允许你选择位置。右键点击该应用，然后选择`Configure`选项。
+
+![image](img/pg33_1.jpg)
+
+![image](img/6r.jpg)在天气设置窗口中，点击`Location`按钮，然后将`Manual Location`按钮滑到“On”。
+
+![image](img/pg33_2.jpg)
+
+![image](img/7r.jpg)接下来，在`Location`框中输入首选城市名称，然后关闭窗口。
+
+![image](img/8r.jpg)现在，点击任务栏应用查看你所选位置的天气。
+
+![image](img/pg33_3.jpg)
+
+![image](img/hot.jpg)
+
+右键点击应用可以显示右键菜单，其中提供了配置选项以及从桌面移除应用的选项。
+
+### 启动应用程序
+
+![image](img/pg34_1.jpg)
+
+在 Linux Mint 中可以从（开始）菜单启动应用程序，并轻松地将启动器添加到任务栏或桌面，以便频繁使用应用程序：
+
+![image](img/1r.jpg)点击任务栏左侧的![image](img/pg34_2.jpg) `Menu` 按钮，然后将鼠标指针悬停在`Accessories`类别上，查看该类别的应用程序列表。
+
+![image](img/2r.jpg)在 Accessories 菜单列表中点击`Text Editor`项目启动文本编辑器应用。
+
+![image](img/pg34_3.jpg)
+
+![image](img/hot.jpg)
+
+你还可以在此`Search` 框中输入应用名称来查找它。
+
+![image](img/hot.jpg)
+
+侧边栏中的启动器是“收藏”。你可以在右键菜单中选择`Add to favorites`向侧边栏添加启动器。
+
+![image](img/3r.jpg)右键点击 Accessories 菜单中的 Text Editor 项目，然后从右键菜单选择`Add to panel`在任务栏创建一个启动器按钮。
+
+![image](img/pg34_4.jpg)
+
+![image](img/4r.jpg)点击已添加到任务栏的新启动器以启动文本编辑器。
+
+![image](img/pg35_1.jpg)
+
+![image](img/5r.jpg)右键点击 Accessories 菜单中的 Text Editor 项目，然后从右键菜单选择`Add to desktop`在桌面上创建一个启动器图标。
+
+![image](img/6r.jpg)点击已添加到桌面的启动器以启动文本编辑器。
+
+![image](img/pg35_2.jpg)
+
+
+
+
+![image](img/1r.jpg)将电脑连接到互联网，然后点击`Menu（菜单）、`Administration（管理）、`Update Manager（更新管理器），或点击系统托盘上的 ![image](img/pg38_2.jpg) `Update Manager`图标打开“更新管理器”窗口
+
+![image](img/2r.jpg)如果更新管理器建议您切换到本地镜像服务器，点击此`Yes（是）按钮
+
+![image](img/pg38_3.jpg)
+
+![image](img/3r.jpg)输入密码，然后点击`Authenticate（认证）按钮 – 打开“软件源”对话框
+
+![image](img/pg38_4.jpg)
+
+![image](img/4r.jpg)双击`Main (ulyssa)` 框，并从出现的列表中选择一个本地镜像，然后点击`Apply（应用）
+
+![image](img/pg38_5.jpg)
+
+![image](img/pg38_6.jpg)
+
+![image](img/5r.jpg)现在，为`Base (focal)` 框选择一个本地镜像，然后点击`OK`关闭“软件源”对话框
+
+![image](img/hot.jpg)
+
+首次打开更新管理器时，可能会出现一个“欢迎”屏幕。点击其`OK`按钮继续。
+
+![image](img/6r.jpg)等待软件列表更新，然后返回“更新管理器”窗口
+
+![image](img/pg39_1.jpg)
+
+![image](img/7r.jpg)点击`Select All（全选）`按钮，然后点击`Install Updates（安装更新）`
+
+![image](img/pg39_2.jpg)
+
+![image](img/8r.jpg)如果提示需要额外的软件包，点击`OK`
+
+![image](img/pg39_3.jpg)
+
+![image](img/9r.jpg)输入密码，然后点击`Authenticate`按钮 – Linux Mint 现在将下载并安装可用更新
+
+![image](img/39_4.jpg)
+
+![image](img/pg39_5.jpg)
+
+![image](img/pg39_6.jpg)
+
+![image](img/snake.jpg)
+
+更新缓存和下载更新可能需要一些时间，因此选择快速的本地镜像服务器非常重要。
+
+![image](img/hot.jpg)
+
+注意，在 Linux Mint 中，更新被称为“软件包”。这些包由`Synaptic Package Manager（Synaptic 软件包管理器）`管理，您可以在菜单的管理分类中找到它。
+
+## 关闭桌面
+
+![image](img/pg40_1.jpg)
+
+如果您的 Linux Mint 操作系统长时间未使用，默认情况下它会自动将桌面替换为屏幕保护程序并锁定屏幕。这意味着你需要输入密码才能回到桌面。如果您打算离开电脑，可以出于安全考虑立即锁定屏幕：
+
+![image](img/1r.jpg)点击`Menu button（菜单按钮）`,然后点击“Lock screen（锁定屏幕）”按钮立即关闭桌面
+
+![image](img/pg40_2.jpg)
+
+![image](img/2r.jpg)查看屏幕保护程序现在填满了屏幕，此时您的电脑无法使用
+
+![image](img/pg40_3.jpg)
+
+![image](img/3r.jpg)当您想解锁电脑时移动鼠标，系统会提示密码请求 – 输入密码返回桌面
+
+![image](img/pg40_4.jpg)
+
+![image](img/hot.jpg)
+
+您也可以使用`Ctrl` + `Alt` + `L`快捷键锁定屏幕。要发现更多 Linux Mint 快捷键，点击`Menu（菜单）、`Preferences（偏好）、`Keyboard（键盘）`打开“键盘”窗口，然后点击`Shortcuts（快捷键）`按钮。在左格中选择一个类别，例如`System（系统）），可以在右格中查看可用快捷键。
+
+![image](img/hot.jpg)
+
+您可以点击![image](img/pg40_5.jpg) `Switch User（切换用户）`按钮注销 – 然后您将看到此处所示的登录界面。
+
+有时您出于安全考虑或切换用户需要注销 Linux Mint 操作系统：
+
+![image](img/1r.jpg)点击`Menu`,然后点击“Log Out（注销）”按钮显示“Session（会话）”选项对话框
+
+![image](img/pg41_2.jpg)
+
+![image](img/pg41_1.jpg)
+
+![image](img/2r.jpg)点击`Log Out（注销）`选项按钮，或`Switch User（切换用户）`选项按钮，显示登录界面
+
+![image](img/pg41_3.jpg)
+
+![image](img/hot.jpg)
+
+`Switch User`选项会保存您的会话状态以允许他人登录。当他们注销您重新登录时，您将回到离开的地方 – 您打开的程序仍在运行。而`Log Out`选项会结束会话并关闭已打开的程序 – 当您重新登录时，这些程序将不再运行。
+
+当您长时间离开电脑，您可能想要关闭操作系统：
+
+![image](img/1r.jpg)点击`Menu`,然后点击“Quit（退出）”按钮显示“Shut down this system now?（立即关闭此系统？）”选项对话框
+
+![image](img/pg41_4.jpg)
+
+![image](img/2r.jpg)点击`Shut Down（关机）`选项按钮退出 Linux Mint 并关闭电脑
+
+![image](img/pg41_5.jpg)
+
+![image](img/hot.jpg)
+
+## 3. 设置偏好
+
+***本介绍了了一些根据偏好设置 Linux Mint 的实用方法。***
+
+## 配置屏幕保护程序
+
+默认情况下，如果一段时间未与电脑交互，您的 Linux Mint 桌面将自动切换到屏幕保护程序。这意味着您可能需要频繁输入密码返回桌面，如果电脑位于不需要考虑安全的环境中，这是没有必要的。幸运的是，您可以禁用此行为，除非您显式锁定电脑，否则桌面将始终显示。
+
+![image](img/pg44_1.jpg)
+
+您还可以通过选择自定义屏幕保护程序来自屏幕外观，并向锁定屏幕添加消息：
+
+![image](img/1g.jpg)点击`Menu、`Preferences、`Screensaver`打开“屏幕保护程序”窗口
+
+![image](img/pg44_2.jpg)
+
+![image](img/2g.jpg)接下来，点击`Settings`按钮
+
+![image](img/pg44_3.jpg)
+
+![image](img/3g.jpg)现在，打开“屏幕保护程序设置”下拉菜单并选择`Never（从不）` – 防止电脑自动切换到锁定屏幕
+
+![image](img/4g.jpg)在`Lock settings（锁定设置）`部分选择偏好
+
+
+
+
+
+请注意，如果你不想完全禁用屏幕保护程序，可以选择延长屏幕保护程序出现之前的延迟。
+
+![image](img/5g.jpg)
+接下来，点击 `Customize` 按钮
+
+![image](img/6g.jpg)
+输入要在锁屏界面上显示的自定义 `Away message`
+
+![image](img/pg45_1.jpg)
+
+![image](img/7g.jpg)
+关闭对话框以保存您的自定义消息
+
+![image](img/8g.jpg)
+点击 `Menu` 按钮，然后点击 ![image](img/pg45_2.jpg) “锁定屏幕按钮”查看屏幕保护程序，并在锁屏上查看您的消息
+
+![image](img/pg45_3.jpg)
+
+![image](img/hot.jpg)
+
+还有一个自定义选项，可以设置为“从菜单锁定屏幕时询问自定义消息”——这样当您离开电脑 时可以添加一条独特的消息。
+
+![image](img/forget.jpg)
+
+此版本的 Linux Mint 默认不包含动画屏幕保护程序。
+
+## 管理窗口
+
+![image](img/pg46_1.jpg)
+
+Linux Mint 窗口标题栏上的控制按钮的操作与 Windows 操作系统中的按钮相同：
+
+![image](img/pg46_2.jpg)
+
+您还可以将窗口贴靠屏幕边缘、将窗口平铺到屏幕角，并在工作区之间移动窗口：
+
+![image](img/1g.jpg)
+点击 `Menu`、`Accessories`、`Text Editor` 打开文本编辑器
+
+![image](img/2g.jpg)
+点击窗口的 ![image](img/pg46_3.jpg) 控制按钮将其从全屏还原化
+
+![image](img/3g.jpg)
+接下来，点击窗口的标题栏并按住鼠标键，然后将窗口拖到任何屏幕边缘
+
+![image](img/4g.jpg)
+当您看到区域预览时，释放鼠标键将窗口贴靠到该边缘——占据屏幕的一半
+
+![image](img/pg46_4.jpg)
+
+![image](img/5g.jpg)
+现在，点击窗口的标题栏并按住鼠标键，然后将窗口拖到任何屏幕角
+
+![image](img/hot.jpg)
+
+未进行全尺寸贴靠或平铺的窗口可以通过拖动其边缘或角来调整大小。
+
+![image](img/hot.jpg)
+
+您可以忽略屏幕上的 `Hold <Ctrl>` 指示。只需将两个应用贴靠到屏幕的左右两侧，即可同时处理两个文档。
+
+![image](img/6g.jpg)
+当您看到区域预览时，释放鼠标键将窗口贴靠到该角——占据屏幕的分之一
+
+![image](img/pg47_1.jpg)
+
+点击 `Menu`、`Preferences`、`Hot Corners` 打开“热点”窗口
+
+![image](img/8g.jpg)
+启用左上角显示工作区，然后将鼠标指针移动到该角即可查看工作区
+
+![image](img/pg47_2.jpg)
+
+![image](img/pg47_3.jpg)
+
+![image](img/forget.jpg)
+
+您可以平铺多四个应用。此外，还可以结合贴靠和平铺使用。例如，在顶角平铺两个应用，并将另一个应用横跨整个屏幕下半部分，以便同时处理三份文档。
+
+![image](img/hot.jpg)
+
+您可以将应用从一个工作区拖到另一个工作区，并点击任何工作区以全屏模式在此开始工作。应用将继续在隐藏的工作区运行，因此您可以切换回它们。
+
+## 个性化选项
+
+![image](img/pg48_1.jpg)
+
+您可以通过在 Linux Mint 操作系统中指定偏好来个性化窗口的行为和外观。例如，许多人倾向于将默认的浅灰色窗口改为深灰色：
+
+![image](img/1g.jpg)
+点击 `Menu`、`Preferences`、`Window Tiling` 打开“窗口平铺”窗口——在这里您可以禁用平铺和贴靠或修改其行为
+
+![image](img/pg48_2.jpg)
+
+![image](img/hot.jpg)
+
+将此切换开关滑到“Off”位置，以便在贴靠或平铺窗口时禁用 `Hold <Ctrl>` 消息
+
+![image](img/2g.jpg)
+点击 `Menu`、`Preferences`、`Windows` 打开“窗口”窗口——在这里您可以修改标题栏操作和窗口操作
+
+![image](img/pg48_3.jpg)
+
+![image](img/hot.jpg)
+
+点击对话框顶部的 `Alt-Tab` 按钮并探索切换器样式。要使用窗口切换器，按住 `Alt` 键然后按一下 `Tab` 键选择窗口。释放 `Alt` 键即可获取该窗口焦点。
+
+![image](img/pg48_4.jpg)
+
+![image](img/3g.jpg)
+点击 `Menu`、`Preferences`、`Themes` 打开“主题”窗口，然后点击 `Themes` 按钮查看当前的外观设置
+
+![image](img/pg49_1.jpg)
+
+![image](img/hot.jpg)
+
+点击 `Add/Remove` 按钮查看可以下载并安装的主题列表。这些主题为桌面的弹出菜单提供了额外的选项。
+
+点击“Desktop”当前的 `Mint-Y` 设置。
+
+点击“Desktop”当前的 `Mint-Y` 设置。
+
+![image](img/5g.jpg)
+点击“Desktop”当前的 `Mint-Y` 设置。
+
+
+
+
+
+![image](img/3g.jpg)接下来，打开网络打印机并按下其 Wi-Fi 按钮使其在网络可见
+
+![image](img/4g.jpg)现在，点击“打印机”窗口上的`+ Add` 按钮 – 打开“新建打印机”对话框，其中列出了所有可用打印机
+
+![image](img/pg52_5.jpg)
+
+![image](img/forget.jpg)
+
+你可以点击“属性”对话框上的`Print Test Page`按钮来测试你的打印机。
+
+![image](img/pg52_6.jpg)
+
+![image](img/hot.jpg)
+
+点击`Printer` 菜单并选择`View Print Queue` 选项，打开“文档打印状态”对话框，你可以在其中控制打印任务。
+
+![image](img/pg52_7.jpg)
+
+![image](img/5g.jpg)展开`Network Printer`类别，然后选择你的打印机并点击`Forward`按钮
+
+![image](img/pg53_1.jpg)
+
+![image](img/hot.jpg)
+
+如果你的打印机没有立即列出，可以点击`Find Network Printer` 选项来寻找你的打印机。
+
+![image](img/6g.jpg)输入打印机的名称和描述，然后点击`Apply`按钮
+
+![image](img/pg53_2.jpg)
+
+![image](img/7g.jpg)确认网络打印机已添加到“打印机”窗口并已准备好打印
+
+![image](img/pg53_3.jpg)
+
+![image](img/hot.jpg)
+
+带有勾选标记的打印机图标表示系统默认打印机。你可以通过其右键上下文菜单更改默认打印机。
+
+![image](img/pg53_4.jpg)
+
+## 通过蓝牙配对
+
+![image](img/pg54_1.jpg)
+
+Linux Mint 允许你使用 USB 适配器和蓝牙设备管理器连接到支持蓝牙无线技术的外部设备，例如无线蓝牙扬声器：
+
+![image](img/1g.jpg)将蓝牙适配器连接到电脑的 USB 端口，或者如果系统中已内置蓝牙，则将其启用蓝牙
+
+![image](img/pg54_2.jpg)
+
+![image](img/2g.jpg)打开无线蓝牙扬声器
+
+![image](img/pg54_3.jpg)
+
+![image](img/3g.jpg)按住扬声器的“pairing”按钮将扬声器切换到配对模式
+
+![image](img/4g.jpg)在电脑上，点击`Menu`、`Preferences`、`Bluetooth`打开蓝牙设备管理器
+
+![image](img/5g.jpg)要搜索附近的蓝牙设备，将切换开关滑动到“On”位置
+
+![image](img/pg54_4.jpg)
+
+![image](img/forget.jpg)
+
+如果你的电脑没有内置蓝牙适配器，你才需要连接适配器。
+
+![image](img/pg54_5.jpg)
+
+![image](img/hot.jpg)滑动蓝牙设备管理器上的切换开关以启用或禁用蓝牙
+
+![image](img/6g.jpg)当找到扬声器时，点击“设备”列表中的无线扬声器项目将其与电脑配对
+
+![image](img/pg55_1.jpg)
+
+![image](img/7g.jpg)当扬声器连接后，“未设置”消息将变为“已连接”
+
+![image](img/pg55_2.jpg)
+
+点击“设备”列表中的无线扬声器项目查看其状态对话框
+
+![image](img/pg55_3.jpg)
+
+将光标置在自动添加到系统托盘的蓝牙图标上查看连接详情
+
+![image](img/pg55_4.jpg)
+
+![image](img/hot.jpg)
+
+出于安全考虑，蓝牙设备管理器有时需要你确认设备的 PIN 码以建立。
+
+![image](img/pg55_5.jpg)
+
+![image](img/snake.jpg)
+
+一旦配对，你可以断开并重新连接到设备，但如果你删它，将需要再次配对以重新建立连接。
+
+## 总结
+
+- `Screensaver` 应用可禁用保护屏或选择动画保护屏。
+- `Lock screen` 可以进行自定义，以便在用户不在时显示“离开消息”。
+- Linux Mint 中的窗口标题栏包含熟悉的`Minimize`、`Maximize/Reduce` 和 `Close` 按钮。
+- 窗口可以`Snapped`（吸附）到屏幕边缘并`Tiled`（平铺）到屏幕角。
+- 可以启用`Hot Corner` 功能来显示工作区。
+- 窗口可以从一个`Workspace`拖动到另一个，应用程序将在隐藏的工作区上保持运行。
+- `Window Tiling` 应用用于禁用平铺和吸附，或修改它们的行为。
+- `Windows` 应用可用于修改标题栏操作和窗口操作。
+- 通过按下 `Alt` 和 `Tab` 键，可以使用`Window Switcher` 功能选择窗口。
+- `Themes` 应用用于更改窗口边框、图标、控件、鼠标指针和桌面的外观。
+- 可以使用`Network` 应用控制 Wi-Fi、有线连接和代理连接。
+- Network 应用还可以用于添加`VPN` 连接以在在线时隐藏你的身份。
+- Linux Mint 应该自动检测并添加`Printer`。
+- Network 应用还可以用于添加`VPN` 连接以在在线时隐藏你的身份。
+- Linux Mint 应该自动检测并添加`Printer`。
+- Network 应用还可以用于添加`VPN` 连接以在在线时隐藏你的身份。
+- Linux Mint 应该自动检测并添加`Printer`。
+
+## 4. 浏览文件系统
+
+***本章描述了文件系统并解释了其结构。***
+
+## 认识目录树
+
+![image](img/58.jpg)
+
+从 Windows 迁移过来的新 Linux 用户需要注意这两个操作系统之间的某些差异：
+
+- Linux 是大小敏感的 – Windows 不是。例如，名为 `readme.txt` 和 `README.txt` 的文件在 Linux 中被视为两个文件，但在 Windows 中没有区别。
+- Linux 目录和文件具有所有权限 – Windows 目录和文件通常是可访问的。
+- Linux 是作为多用户操作系统 – Windows 从 MS-DOS (**M**icrosoft **D**isk **O**perating **S**ystem)演变为单用户操作系统。
+- Linux 用户无法更改系统设置；只有 `root` 超级用户可以。
+- Linux 分区使用 Ext4 文件系统创建 – Windows 分区使用 FAT、FAT32 或 NTFS 文件系统。
+- Linux 路径包含斜杠字符 – Windows 路径包含反斜杠字符：例如，Linux 路径 `/home/mike` 和 Windows 路径 `C:\Users\mike`。
+- Linux 没有驱动器号 – Windows 通常使用 `C:` 代表硬盘，`D:` 代表光驱，`E:` 代表外部驱动器，以此此类推。
+
+![image](img/hot.jpg)
+
+有关访问权限的更多信息请参见此处 和此处。
+
+![image](img/hot.jpg)
+
+有关 Linux 文件系统的更多信息请参见此处。
+
+
+
+
+
+每个标准 Linux 目录的作用将在本章的后续页面中进行详细描述。
+
+![image](img/snake.jpg)
+
+不要将 `/root` 目录（root 超用户的家目录）与文件系统的根目录 `/` 混淆。
+
+## 识别目录
+
+### `/bin`
+包含 PC 启动时需要的小型可执行程序（二进制文件）以及执行基本命令的程序。该目录约同于 Windows 中的 `C:\Windows` 目录。
+
+![image](img/pg60_1.jpg)
+
+### `/boot`
+包含 PC 启动时需要的重要文件以及 Linux 内核本身——它是操作系统的核心。内核控制对你计算机支持的所有硬件设备的访问，并允许多个程序并发运行并共享硬件。
+
+![image](img/pg60_2.jpg)
+
+### `/cdrom`
+在历史上，这是一个用于挂载插入到系统的 CD-ROM 的目录——现在的标准位置是 `/media`。
+
+![image](img/pg60_3.jpg)
+
+### `/dev`
+包含代表连接到系统的特殊文件系统条目。这些条目允许程序访问对系统正常运行至关重要的设备驱动程序——尽管实际的驱动文件位于其他地方。条目 `/dev/sda` 代表你 PC 上的第一个硬盘。
+
+![image](img/pg60_4.jpg)
+
+### `/etc`
+包含系统配置文件，存储了从用户密码、系统初始化到屏幕分辨率设置的所有信息。这些是可以在文本编辑器中查看的纯文本文件。该目录中的文件约相当于 Windows 中 `.ini` 文件和注册表项的组合。
+
+![image](img/pg60_5.jpg)
+
+### `/home`
+包含每个用户账户的子目录，用于存储个人数据文件。如果存在名为“mike”的用户账户，那里就会有一个 `/home/mike` 目录，该用户可以在那里存储个人文件——其他用户无法在那里保存文件。该目录是你存储所有工作文档、图像和媒体文件的地方。
+
+![image](img/pg61_1.jpg)
+
+### `/lib`
+包含 `/bin` 和 `/sbin` 目录中可执行程序使用的 32 位库文件。这些共享库对于启动系统和在根文件系统中执行命令尤为重要。它们约同于 Windows 中的 `.dll`（动态链接库）。
+
+![image](img/pg61_2.jpg)
+
+### `/lib64`
+包含 `/bin` 和 `/sbin` 目录中可执行程序使用的 64 位库文件。
+
+![image](img/pg61_3.jpg)
+
+### `/lost+found`
+包含可能损坏的错位文件，但仍从中恢复数据。
+
+![image](img/pg61_4.jpg)
+
+### `/media`
+这是一个挂载插入到系统的可移动介质的目录。当你将 USB 闪盘连接到 PC 时，会创建一个子目录，例如 `/media/flash-drive`。
+
+![image](img/pg61_5.jpg)
+
+### `/mnt`
+这是一个系统管理员可以临时挂载额外文件系统的目录。
+
+![image](img/pg61_6.jpg)
+
+### `/opt`
+最初为空，但该目录提供了一个特殊区域，用于安装可选的附加应用程序软件包。如果“example”是 `/opt` 目录中某个特定软件包的名称，那么它的所有文件都可以放在 `/opt/example` 目录的子目录中。
+
+![image](img/pg62_1.jpg)
+
+### `/proc`
+包含向内核和从内核传递信息的特殊文件。该目录内“虚拟”文件的层次结构代表了内核的当前状态。与二进制和文本文件不同，大多数虚拟文件的大小显示为零 字节，并带有当前日期和时间的时间戳。这反映了它们不断更新的概念。
+
+![image](img/pg62_2.jpg)
+
+### `/root`
+这是 root 超用户的家目录——出于安全考虑，普通用户无法访问此目录。
+
+![image](img/pg62_3.jpg)
+
+### `/run`
+包含应用程序运行时所需的瞬态文件，用于提供进程 ID 等数据。
+
+![image](img/pg62_4.jpg)
+
+### `/sbin`
+包含仅供 root 超用户以及 Linux 在系统启动或执行系统恢复操作时使用的可执行系统程序（二进制文件）。例如，在 Linux 运行期间维护系统时间的时钟程序位于 `/sbin` 目录。该目录约同于 Windows 中的 `C:\Windows\system` 目录。
+
+![image](img/pg62_5.jpg)
+
+### `/srv`
+包含为系统提供的服务提供数据的文件。
+
+![image](img/pg63_1.jpg)
+
+### `/sys`
+这是一个虚拟文件系统，存储了内核对系统以及连接到系统的视图。
+
+![image](img/pg63_2.jpg)
+
+### `/timeshift`
+包含按 Timeshift 应用指定的间隔的系统备份快照。
+
+![image](img/pg63_3.jpg)
+
+### `/tmp`
+包含运行程序创建的临时文件。大部分文件在程序关闭时会被删除，但某些会被留下来——应该定期删除它们。该目录约同于 Windows 中的 `C:\Windows\Temp` 目录。
+
+![image](img/pg63_4.jpg)
+
+### `/usr`
+包含用户使用的应用程序和文件，而不是系统使用的应用程序和文件。例如，非本质应用程序位于 `/usr/bin`。
+
+![image](img/pg63_5.jpg)
+
+### `/var`
+包含存储运行系统状态信息的变量，特别是系统活动日志。要查看最近的事件消息，进入 `/var/log`。
+
+![image](img/pg63_6.jpg)
+
+## 使用 Nemo 导航
+
+可以通过打开文件浏览器图形化查看标准的 Linux 子目录。在 Linux Mint 中，可以通过点击任务栏上的 ![image](img/pg64_2.jpg) “文件 (Files)”按钮或在菜单中选择“文件”来启动 Nemo。
+
+![image](img/pg64_1.jpg)
+
+点击**菜单（Menu）**,**附件（Accessories）**,**文件（Files）**打开文件浏览器——查看家目录
+
+![image](img/1p.jpg)
+展开左侧边栏中的**我的电脑（My Computer）**列表
+
+![image](img/2p.jpg)
+点击**文件系统（File System）**项——查看系统根下的所有子目录
+
+![image](img/3p.jpg)
+
+点击任何文件夹以浏览系统的子目录
+
+![image](img/4p.jpg)
+点击侧边栏上方 ![image](img/pg64_4.jpg) 后退按钮返回之前访问过的位置
+
+![image](img/5p.jpg)
+
+如果打开 Nemo 时看不到侧边栏，按下 F9 键显示侧边栏。
+
+你可以通过点击文件夹或点击侧边栏中的位置来使用 Nemo 导航文件系统。此外，你还可以点击工具栏上的 ![image](img/pg65_1.jpg) 按钮打开位置字段，输入目录地址并按**回车（Enter）**键。
+
+![image](img/6p.jpg)
+点击 `/home` 目录的文件夹图标（“home”）——那里会有一个带有你用户名的文件夹
+
+![image](img/7p.jpg)
+点击带有你用户名的文件夹查看你家目录的内容
+
+![image](img/pg65_2.jpg)
+
+注意，当你点击文件夹图标时，关于内容的信息会出现在窗口底部——查看有多少空文件夹。
+
+![image](img/hot.jpg)
+
+你可以点击这些按钮来更改文件夹的查看方式。
+
+
+
+
+![image](img/8p.jpg)在 Nemo 文件浏览器工具栏上，双击 ![image](img/pg65_3.jpg) 向上按钮即可返回 `/` 根目录
+
+![image](img/9p.jpg)点击侧边栏中的 **Home**（主目录）项目再次导航到用户的主目录——然后再次返回 `/`
+
+![image](img/10p.jpg)点击 Nemo 工具栏上的 ![image](img/pg65_4.jpg) 按钮显示位置字段，并输入用户主目录的地址（在此例中 `/home/mike`），然后按 **Enter**（回车键）再次导航到主目录
+
+![image](img/pg65_5.jpg)
+
+## 处理文件
+
+![image](img/pg66_1.jpg)
+
+你在 Linux 中创建的所有数据文件都应该只保存在你的主目录或子目录（“文件夹”）中。你可以随时使用 Nemo 文件浏览器访问这些文件，并轻松地进行复制、移动、重命名或删除：
+
+![image](img/pg66_2.jpg) 保存按钮（或点击 File/文件、Save/保存菜单）
+
+![image](img/pg66_2.jpg) 保存按钮
+
+![image](img/3p.jpg)启动 Nemo 文件浏览器，然后打开位于主目录下的 **Documents** 文件夹并找到保存的文本文件
+
+![image](img/4p.jpg)右键点击文件图标并从右键菜单选择 **Copy**（复制）——将该文件复制到“剪贴板”
+
+![image](img/pg66_4.jpg)
+
+![image](img/5p.jpg)接下来，右键点击主目录下的 **Public**（公共）文件夹，然后从右键菜单选择 **Paste Into Folder**（粘贴到文件夹）——存入该文件的副本
+
+![image](img/forget.jpg)
+
+**clipboard**（剪贴板）是操作系统提供的内存缓冲区，用于短期数据传输。
+
+![image](img/hot.jpg)
+
+目录可能包含隐藏文件——在 Nemo 文件浏览器中点击 **View**（查看）、**Show Hidden Files**（显示隐藏文件）菜单也可以显示隐藏文件。
+
+![image](img/6p.jpg)打开 Public 文件夹，右键点击复制的文件并在右键菜单选择 **Rename**（重命名），可以看到文件名被高亮——准备更改
+
+![image](img/pg67_1.jpg)
+
+![image](img/7p.jpg)现在，输入一个新的文件名（例如“copy”），然后按 **Return**（回车）将文件重命名为 `copy.txt`——文件扩展名 `.txt` 依然保留
+
+![image](img/8p.jpg)右键点击重命名后的文件并从右键菜单选择 **Cut**（剪切）
+
+![image](img/9p.jpg)返回 Documents 文件夹，然后右键点击文件浏览器窗口并从右键菜单选择 **Paste**（粘贴）——存入重命名后的文件
+
+![image](img/10p.jpg)拖动鼠标指针跨越两个文件，然后右键选择 **Move to Trash**（移动到垃圾箱）删除文件
+
+![image](img/pg67_2.jpg)
+
+![image](img/pg67_3.jpg)
+
+![image](img/hot.jpg)
+
+你可以在文件浏览器中右键点击并在右键菜单选择 **Create New Folder**（新建文件夹）来添加新目录——但记住这应该在你的主目录结构之内。
+
+![image](img/hot.jpg)
+
+要恢复删除的文件，点击文件浏览器侧边栏上的 **Trash**（垃圾箱）图标（或桌面上的图标），右键点击文件图标，从右键菜单选择 **Restore**（恢复）选项。
+
+## 创建快捷方式
+
+![image](img/pg68_1.jpg)
+
+为你经常访问的应用程序和文件创建桌面快捷方式非常方便。应用的快捷方式可以通过 Menu 上的选项或桌面右键菜单创建。文件的快捷方式可以使用文件浏览器作为链接创建：
+
+![image](img/1p.jpg)右键点击 Menu 上的应用图标，点击 **Add to desktop**（添加到桌面）选项在桌上放置快捷方式
+
+![image](img/pg68_2.jpg)
+
+![image](img/pg68_3.jpg)
+
+![image](img/2p.jpg)在桌面任意位置右键点击，从右键菜单选择 **Create a new launcher here**（在此处创建启动器）——打开“Launcher Properties”对话框
+
+![image](img/3p.jpg)输入快捷方式 Name（名称），然后点击 **Browse**（浏览）按钮打开“Choose a command”对话框
+
+![image](img/4p.jpg)导航到 `/usr/bin` 目录并选择你想创建快捷方式的应用——将其路径添加到 Command（命令）字段中
+
+![image](img/pg68_4.jpg)
+
+![image](img/pg68_5.jpg)
+
+![image](img/5p.jpg)点击图标按钮打开“Choose an icon”对话框
+
+![image](img/hot.jpg)
+
+快捷方式或链接可以像文件一样删除——选择其图标后按 **Delete**（删除）。
+
+
+
+
+[content]
+
+![image](img/3p.jpg)
+在搜索框中输入三个字符，以匹配家目录内的文件名或子目录
+
+![image](img/pg71_2.jpg)
+
+![image](img/hot.jpg)
+
+你可以点击`收藏`按钮来保存或忘记搜索内容，并右键点击它显示已保存的收藏，以便快速再次进行搜索。
+
+![image](img/pg71_4.jpg)
+
+![image](img/4p.jpg)
+在搜索框中输入三个字符，以匹配扩展名以“pg”结尾的任何文件类型
+
+![image](img/pg71_3.jpg)
+
+![image](img/forget.jpg)
+
+搜索结果将不包含隐藏文件。
+[/content]
+
+***
+
+[content]
+## 理解权限
+
+在 Linux 中，每个文件和目录都有一个“所有者”（Owner）——通常情况下，这是创建它的用户。`所有者`拥有读取文件、写入文件以及执行文件（如果它是可执行的）的完整权限。
+
+![image](img/pg72_1.jpg)
+
+`所有者`还可以设置权限，以指定其他用户是否可以读取、写入和执行该文件。文件的访问权限可以限制为`所有者`、所有者所属的“组”（Group），或者系统的任何其他用户（“其他人”Others）。
+
+文件的权限设置可以在`属性`对话框的`权限`选项卡中找到：
+
+![image](img/1p.jpg)
+右键点击文件，然后从右键菜单中选择`属性`项 – 以启动“属性”对话框
+
+![image](img/pg72_2.jpg)
+
+![image](img/hot.jpg)
+
+你可以选择`图标`选项卡为文件图标添加符号——例如，将该文件标记为重要。
+
+![image](img/2p.jpg)
+点击`权限`选项卡查看当前设置
+
+![image](img/pg72_3.jpg)
+
+![image](img/hot.jpg)
+
+在这里，`所有者`和`组`拥有“读取和写入”权限，而`其他人`只有“只读”权限。
+
+![image](img/hot.jpg)
+
+当创建一个用户账户时，也会创建一个同名的`组`——该用户是该组的成员。
+
+通常，所有者、组和其他人至少拥有读取文件的权限。如果你是文件的所有者，`所有者`将拥有写入权限——如果文件是可执行的，还具有执行文件的权限。
+
+作为文件的所有者，你可以使用箭头按钮来更改此文件的访问权限：
+
+![image](img/3p.jpg)
+点击“其他人”字段中的箭头按钮，然后从下拉菜单选择`无`，以将访问限制为`所有者`和`组`成员
+
+![image](img/pg73_1.jpg)
+
+![image](img/hot.jpg)
+
+勾选此选项将使文件对于具有访问权限的用户变为可执行状态。
+
+![image](img/4p.jpg)
+如果你还想更改打开文件的默认应用程序，请点击`打开方式`选项卡
+
+![image](img/pg73_2.jpg)
+
+![image](img/forget.jpg)
+
+更改默认应用程序将应用于所有此类类型的文件，而更改权限仅应用于此特定文件。在这里，此更改将使 LibreOffice Writer 成为打开所有文本文件的默认程序。
+
+![image](img/forget.jpg)
+如果你需要更改你不是所有者的文件权限，你需要 root 用户权限——详情请参见 [chapter10.xhtml_78]。
+
+## 总结
+- 文件系统由一系列层层排列在 `/` 下方的标准目录组成。
+- 用户创建的数据文件应仅存储在 `/home` 目录下——即用户的 `home` 目录。
+- 用户可以使用 `Nemo`文件浏览器以图形化方式在文件系统中导航。
+- 使用文件浏览器对单个`文件`进行复制、移动、重命名和删除。
+- 通过在菜单中选择`添加到桌面`可以轻松创建快捷方式。
+- “启动器属性”对话框可以创建应用程序的快捷方式。
+- 本地文件的快捷方式可以创建为`链接`（link），它仅仅是到目标文件的引用。
+- 当目标文件被移动或重命名时，必须小心避免孤立链接。
+- 意识到许多 Linux 目录包含`隐藏`子目录是非常重要的。
+- 隐藏文件和目录的名字始终以 `.` 字符开头。
+- 文件浏览器中的`查看`、`显示隐藏文件`菜单允许查看所有内容。
+- 可以文件浏览器的`搜索`框通过匹配文件名或扩展名来查找文件。
+- 文件的`所有者`可以指定访问权限，允许`所有者`、`组`和`其他人`读取、写入和执行。
+[/content]
+
+***
+
+[content]
+## 使用互联网
+
+本章节介绍了：在线、自定义 Firefox、邮件、聊天、下载、获取应用，最后是总结。
+
+### 浏览网页
+![image](img/76_1)
+大多数 Linux 发行版都包含 Firefox 浏览器。它是高度自定义的。
+
+![image](img/1o.jpg)
+连接 Firefox，点击`菜单`。
+
+![image](img/76_2)
+
+![image](img/2o.jpg)
+点击`新标签页`按钮打开新标签页。
+
+![image](img/76_3)
+
+![image](img/hot.jpg)
+在地址栏输入 URL 访问网页。它是搜索引擎。
+
+![image](img/hot.jpg)
+使用`保存到 Pocket`功能保存网页，以便以后在任何设备查看。
+
+![image](img/3o.jpg)
+搜索感兴趣的项目，然后从结果列表中访问。
+
+![image](img/77_1)
+
+![image](img/4o.jpg)
+接下来，点击工具栏上的`阅读模式`按钮查看。
+
+![image](img/77_2)
+
+![image](img/5o.jpg)
+现在，点击工具栏上的`添加书签`按钮，选择`收藏栏`文件夹。
+
+![image](img/77_3)
+
+![image](img/6o.jpg)
+点击`完成`按钮，项目现在出现在“收藏栏”中。
+
+![image](img/77_4)
+
+![image](img/forget.jpg)
+`阅读模式`按钮并非所有网页都可用，但显示时，它可以切换视图。点击它可以返回普通视图。
+
+![image](img/hot.jpg)
+点击`显示侧边栏`按钮并选择`书签`选项，让你的书签出现在侧边栏。
+
+### 自定义 Firefox
+![image](img/78_1)
+Firefox 网页浏览器的界面是高度自定义的，你可以安装“扩展”来增强功能：
+
+![image](img/1o.jpg)
+右键点击工具栏，然后从右键菜单中选择`自定义`选项 – 以打开“自定义 Firefox”窗口。
+
+![image](img/78_2)
+
+![image](img/2o.jpg)
+将任何项目拖到工具栏以添加它，或将项目拖到自定义 Firefox 菜单中将其移除。
+
+![image](img/78_3)
+
+![image](img/hot.jpg)
+你还可以将项目拖到`溢出菜单`中，以后可以通过点击工具栏上的 `>>` 按钮访问它。
+
+![image](img/78_8)
+
+![image](img/3o.jpg)
+点击`主题`按钮并从“我的主题”列表中选择，或点击`获取更多主题`来安装额外主题。
+
+![image](img/78_4)
+
+![image](img/4o.jpg)
+看到你选择的主题立即应用到 Firefox 界面上。
+
+![image](img/78_5)
+
+![image](img/hot.jpg)
+
+
+
+点击 `Toolbars` 按钮添加或删除更多工具栏，点击 `Density` 按钮调整工具栏图标的大小。
+
+![image](img/pg78_6.jpg)
+
+![image](img/pg78_7.jpg)
+
+![image](img/5o.jpg)
+
+接下来，点击“我的主题”列表上的 `Manage` 按钮打开“扩展程序管理器”窗口。
+
+![image](img/pg79_1.jpg)
+
+![image](img/6o.jpg)
+
+在搜索框中输入扩展程序的名称，例如“Adblock Plus”，然后按 `Enter` 键键。
+
+![image](img/pg79_2.jpg)
+
+![image](img/7o.jpg)
+
+在搜索结果页面上点击“Adblock Plus”的链接，然后点击 `Add to Firefox` 按钮进行安装。
+
+![image](img/pg79_3.jpg)
+
+![image](img/8o.jpg)
+
+现在，点击 `Add` 赋予权限并将扩展程序安装到 Firefox。
+
+![image](img/pg79_4.jpg)
+
+![image](img/forget.jpg)
+
+你以后也可以使用扩展程序管理器删除扩展程序。
+
+![image](img/hot.jpg)
+
+`Adblock Plus` 是一款广受好评的免费扩展程序，拥有超过 1100 万用户。它会自动拦截广告并在 Firefox 工具栏上放置一个按钮。显示拦截广告的数量，并提供允许非侵入性广告的选项。
+
+### 电子邮件
+
+![image](img/pg80_1.jpg)
+
+许多 Linux 发行版包含了流行的 Thunderbird 电子邮件应用程序。Thunderbird 第一次启动时会为你提供一个新的电子邮件帐户或使用现有帐户的选项。通常，你需要提供 ISP 邮件服务器名称（`POP` 和 `SMTP`）以及你的电子邮件地址和密码。完成后，如果你连接了互联网，就可以开始发送和接收邮件了：
+
+![image](img/1o.jpg)
+
+点击 `Menu`、`Internet`、`Thunderbird Mail`，然后点击 Thunderbird 工具栏上的 `Get Messages` 按钮。
+
+![image](img/2o.jpg)
+
+展开左侧面板中的文件夹列表，然后点击 `Inbox` 在右上侧面板中查看收到的邮件。
+
+![image](img/pg80_2.jpg)
+
+![image](img/hot.jpg)
+
+Thunderbird 还是联系人管理器。右键点击此“From”字段并选择 `Add to Address Book`，然后点击工具栏上的 `Address Book` 按钮查看你的联系人列表。
+
+![image](img/3o.jpg)
+
+点击右上侧面板中的收到的邮件，其内容将出现在右下面板中。
+
+![image](img/4o.jpg)
+
+要写邮件，点击工具栏上的 `Write` 按钮打开“Write”窗口——如右侧所示。
+
+![image](img/5o.jpg)
+
+在“Write”窗口的 `From` 字段中，选择用于发送邮件的帐户。
+
+![image](img/6o.jpg)
+
+在 `To` 字段中，输入你要发送的电子邮件地址。
+
+![image](img/7o.jpg)
+
+在 `Subject` 字段中，输入简短的邮件标题。
+
+![image](img/hot.jpg)
+
+`POP` (`P`ost `O`ffice `P`rot）服务器处理入站邮件，而 `SMTP` (`S`imple `M`ail `T`ransfer `P`rot）服务器处理出站邮件。
+
+![image](img/8o.jpg)
+
+现在，在主窗口中输入你的信息。
+
+![image](img/9o.jpg)
+
+使用格式化栏上的选项调整字体、布局、内容，并插入 `Smiley face` 表情符号。
+
+![image](img/pg81_1.jpg)
+
+![image](img/hot.jpg)
+
+点击此按钮将各种内容直接插入你的邮件中。
+
+![image](img/pg81_4.jpg)
+
+![image](img/10o.jpg)
+
+要添加附件，点击工具栏上的 `Attach` 按钮启动“Attach File(s)”对话框。
+
+![image](img/11o.jpg)
+
+导航到文件并点击 `Open` 按钮。
+
+![image](img/pg81_2.jpg)
+
+![image](img/12o.jpg)
+
+通过点击 `Options`, `Check Spelling` 菜单检查邮件是否存在拼写错误。
+
+![image](img/13o.jpg)
+
+点击工具栏上的 `Send` 按钮发送邮件。
+
+![image](img/pg81_3.jpg)
+
+![image](img/hot.jpg)
+
+主“Write”窗口中的 `Edit`, `Preferences` 菜单允许你编辑用于组合、安全等各种 Thunderbird 设置。
+
+### 在线聊天
+
+![image](img/pg82_1.jpg)
+
+Linux 发行版通常包含跨平台即时消息应用。Linux Mint 包含了免费开源 HexChat IRC (`I`nternet `R`elay `C`hat) 应用。可以用它在“freenode” IRC 网络上讨论 Linux 和其他话题：
+
+![image](img/1o.jpg)
+
+点击 `Menu`、`Internet`、`HexChat` 启动应用——连接到“Official Linux Mint Support Channel”。
+
+![image](img/pg82_2.jpg)
+
+![image](img/2o.jpg)
+
+接下来，点击 `HexChat`, `Network List` 菜单选项。
+
+![image](img/1o.jpg)
+
+
+
+
+![image](img/8o.jpg)点击 `Open` 按钮开始下载内容
+
+![image](img/pg85_3.jpg)
+
+![image](img/hot.jpg)
+
+点击 `Edit`、`Preferences` 菜单来指定下载管理的方式。
+
+## 获取更多应用
+
+![image](img/pg86_1.jpg)
+
+除了你的 Linux 发行版提供的应用外，还有许多可以轻松安装的免费应用。Linux Mint 发行版包含一个软件管理器实用程序，允许你按名称或类别搜索更多应用。当你选择一个应用时，会有描述、截图以及用户评论，帮助你决定是否要安装该应用：
+
+![image](img/1o.jpg)点击 `Menu`、`Administration`、`Software Manager` 启动该实用程序
+
+![image](img/2o.jpg)点击你正在寻找的应用类型类别按钮——例如，要找图片编辑器，点击 `Graphics` 按钮
+
+![image](img/pg86_2.jpg)
+
+![image](img/forget.jpg)
+
+如果你知道应用的名称，可以使用搜索框查找它。
+
+![image](img/3o.jpg)点击你所选类别中的任何项目以查看该应用的描述和评论
+
+![image](img/pg86_3.jpg)
+
+![image](img/pg87_1.jpg)
+
+![image](img/hot.jpg)
+
+你可以点击此链接在网络浏览器中打开应用的首页，并发现更多关于该应用的信息。
+
+![image](img/hot.jpg)
+
+![image](img/4o.jpg)如果你决定想要这个应用，点击 `Install` 按钮
+
+![image](img/5o.jpg)输入密码下载并安装应用
+
+![image](img/pg87_2.jpg)
+
+![image](img/6o.jpg)现在，点击 `Menu`、`Graphics` 看到启动器已添加到相应的类别中
+
+![image](img/pg87_3.jpg)
+
+![image](img/hot.jpg)
+
+已安装应用的描述页有一个 `Remove` 按钮（取代 `Install` 按钮），你可以点击它卸卸该应用。
+
+![image](img/pg87_4.jpg)
+
+## 总结
+
+• `Mozilla Firefox` 浏览器包含在大多数 Linux 发行版中。
+• Firefox 中的 `+ New Tab` 按钮打开一个包含搜索框和“Top Sites”链接的新标签页。
+• Firefox 提供了 `Reader view` 来隐藏页面干扰。
+• Firefox 浏览器具有高度可定制性，允许安装 `add-ons` 以获得额外功能。
+• 许多 Linux 发行版包含 `Thunderbird` 应用，用于发送和接收电子邮件。
+• Thunderbird 中的 `formatting bar` 允许你调整字体、布局和内容，并在并在消息中插入表情。
+• `Thunderbird` 邮件应用还是一个联系人管理器。
+• Linux Mint 包含了 `HexChat` 跨平台即时消息应用。
+• `Official Linux Mint Support Channel` 可用于讨论 Linux 相关话题。
+• `Transmission` 应用可以使用 BitTorrent 协议下载内容。
+• Transmission 需要一个包含获取内容信息的 `torrent file`。
+• 来自不同 `peers` 的内容会自动组装，使得 BitTorrent 协议非常高效。
+• Linux Mint 包含一个 `Software Manager` 实用程序，按类别分组可用应用。
+• 软件管理器提供每个可用应用的 `description` 和 `reviews`。
+• 软件管理器应用可以从系统中 `Install` 和 `Remove` 应用。
+
+# 6 使用 Office 生产
+
+***本章描述了免费 LibreOffice 套件中的生产力应用。***
+
+- 创建文档
+- 导出文档
+- 创建电子表格
+- 创建演示文稿
+- 创建可视化
+- 运行宏
+- 添加交互
+- 处理数据
+- 总结
+
+## 创建文档
+
+大多数 Linux 发行版包含的 LibreOffice 套件包含一组与 Microsoft Office 类似的办公工具：文字处理器、电子表格和演示文稿程序，以及一个用于创建图表、图形和图表的程序以及一个数据库应用。如果你熟悉 Microsoft Office，你会发现 LibreOffice 的对等应用非常如切。
+
+![image](img/pg90_1.jpg)
+
+重要的是，LibreOffice 包含了文件过滤器，使其能够处理 Word、Excel 和 PowerPoint 的标准 Microsoft Office 文档。文件可以保存为 Microsoft Office 文件格式，也可以保存为 LibreOffice 的原生格式，并且对象（OLE 对象、插件、视频、小程序、图表）可以以与 Microsoft Word 非常相同的方式嵌入文档中：
+
+![image](img/1bl.jpg)点击 `Menu`、`Office`、`LibreOffice Writer` 启动打开了新空白文档的文字处理器
+
+![image](img/pg90_2.jpg)
+
+![image](img/2bl.jpg)在新文档中输入一些内容
+
+![image](img/pg90_3.jpg)
+
+![image](img/hot.jpg)
+
+LibreOffice 是从 OpenOffice 分支出来的，后者基于 Sun MicroSystems 的。
+
+![image](img/hot.jpg)
+
+在 `Save` 对话中，你不需要在 `Name` 字段包含文件扩展名——它会自动添加。
+
+## 导出文档
+
+![image](img/pg92_1.jpg)
+
+从 LibreOffice 文字处理器中保存文档时，使用的默认文件格式是 ODF (**O**pen **D**ocument **F**ormat）文本格式 (.odt)。然而，有许多替代文件格式，因此你的文档可以与 Microsoft Office 兼容：
+
+![image](img/1bl.jpg)点击 `Menu`、`Save`（或 `Ctrl` + `S`）启动“Save”对话框，然后在 `Name` 字段中输入文档名称
+
+![image](img/2bl.jpg)点击箭头文件类型按钮打开保存文档的可能格式列表——选择格式 `Word 2007-365 (.docx)` 
+
+![image](img/3bl.jpg)选择保存文档的位置，例如你的 Documents 文件夹，然后点击 `Save` 按钮
+
+![image](img/pg92_2.jpg)
+
+![image](img/4bl.jpg)如果出现“Confirm File Format”对话框，点击按钮确认你希望使用 .docx 文件格式进行保存——然后文件将保存在所选位置
+
+![image](img/pg92_3.jpg)
+
+![image](img/hot.jpg)
+
+
+
+
+
+LibreOffice Writer 内置了对 PDF（便携文档格式）格式的支持。这允许您无需任何额外软件，即可创建流行的 PDF 格式的只读版本文档。该格式以非常紧凑的文件保持原始文档的样式和内容，可以方便地在网络和互联网上传输：
+
+![image](img/5bl.jpg)点击`文件(File)`,`另存为(Export As)`,`导出为 PDF`打开“PDF ”对话框。
+
+![image](img/6bl.jpg)在“范围(Range)”选项中选择`全部(All)`,然后点击`导出(Export)`按钮创建文档的 PDF 版本——文件名相同，但扩展名为 `.pdf`。
+
+![image](img/7bl.jpg)将 Linux 上的 LibreOffice 上创建的文档复制到 Windows 系统，在 Microsoft Word 中进行比较。
+
+![image](img/pg93_1.jpg)
+
+![image](img/pg93_2.jpg)
+
+![image](img/forget.jpg)
+
+不可编辑的 PDF 版本会精确保持其外观，但可编辑的 DOCX 版本如果 Windows 中未安装原始字体，可能会替换为不同的字体——更重要的是，两个版本都保留了颜色和布局格式。
+
+## 创建电子表格
+
+![image](img/pg94_1.jpg)
+
+免费 LibreOffice 套件包含的电子表格应用提供了使用给定公式对数据输入进行计算的强大功能。它还允许电子表格保存为与 Microsoft Excel 兼容的格式（`.xlsx`）。
+
+![image](img/1bl.jpg)点击`菜单(Menu)`,`Office`,`LibreOffice Calc` 启动并打开一个带有空白表格的电子表格应用。
+
+![image](img/2bl.jpg)输入一些行和列标题，然后使用`字体(Font)`,`颜色(Color)`按钮突出它们的用途。
+
+![image](img/pg94_2.jpg)
+
+![image](img/3bl.jpg)拖动选中所有包含数据的单元格，然后右键点击并在上下文菜单中选择`单元格格式(Format Cells)`——打开“单元格格式”对话框。
+
+![image](img/4bl.jpg)在对话框中选择`货币(Currency)`类别，然后点击对话框的`确定(OK)`按钮应用选择。
+
+![image](img/pg94_3.jpg)
+
+在每周行和每天列的所有单元格中输入数值——每个值都被视为货币金额。
+
+![image](img/hot.jpg)
+
+您可以在“单元格格式”对话框中选择单元格颜色、字体、边框、对齐方式等。
+
+![image](img/6bl.jpg)鼠标拖过一行中的每天单元格及其“总计”单元格，然后点击工具栏上的`∑`按钮并选择`求和(SUM)`——公式字段中会出现 `SUM` 公式，总计单元格中会出现行总计值。
+
+![image](img/7bl.jpg)对每行每列重复上述步骤。
+
+![image](img/pg95_1.jpg)
+
+![image](img/8bl.jpg)在行末的“平均值(Average)”单元格中输入 `=AVERAGE` 并按`回车(Return)`，然后拖过该行的每天单元格并再次按`回车`——平均值单元格中会出现行平均值。
+
+![image](img/9bl.jpg)对每行每列重复上述步骤。
+
+![image](img/pg95_2.jpg)
+
+![image](img/10bl.jpg)点击`文件(File)`,`保存(Save)`（或按 `Ctrl` + `S`）启动“保存”对话框，然后在`名称(Name)`字段中输入电子表格名称。
+
+![image](img/11bl.jpg)点击文件类型箭头按钮打开保存格式列表——接受默认的 ODF 电子表格格式（`.ods`）或选择格式 `Excel 2007-365 (.xlsx)`。
+
+![image](img/hot.jpg)
+
+您可以使用 ![image](img/pg95_3.jpg) `背景颜色(Background Color)`按钮突出每个单元格的用途。
+
+![image](img/hot.jpg)
+
+您可以在 Windows 系统上的 Excel 中打开此文件，查看所有的格式和公式功能都得到了保留。
+
+## 创建演示文
+
+免费 LibreOffice 套件中的演示应用提供了轻松制作精彩幻灯片的能力。它还允许演示文稿保存为与 Microsoft PowerPoint 兼容的格式（`.ppt`）。
+
+![image](img/pg96_1.jpg)
+
+![image](img/1bl.jpg)点击`菜单(Menu)`,`Office`,`LibreOffice Impress` 启动并打开一个带有空白演示文稿的应用。
+
+![image](img/2bl.jpg)启动应用时也应该出现“选择模板(Select a Template)”对话框——选择一个模板，如`灯光(Lights)`。
+
+![image](img/pg96_2.jpg)
+
+![image](img/3bl.jpg)在“布局(Layouts)”面板的选项中选择您希望分组内容的方式，例如`标题和 2 个内容(Title and 2 Content)`。
+
+![image](img/pg96_3.jpg)
+
+![image](img/hot.jpg)
+
+如果启动应用时没有出现“选择模板”对话框，点击`文件(File)`,`关闭(Close)`菜单关闭空白演示，然后在“后台”窗口中选择`模板(Templates)`。
+
+![image](img/hot.jpg)
+
+如果“布局”面板没有立即显示，点击`视图(View)`,`幻片布局(Slide Layout)`让其显示。
+
+![image](img/4bl.jpg)点击“点击此处添加标题”框。
+
+![image](img/5bl.jpg)点击`格式(Format)`,`对齐(Align)`,`居中(Center)`定位标题。
+
+![image](img/6bl.jpg)现在，在“点击此处添加标题”输入文本。
+
+![image](img/7bl.jpg)点击`插入(Insert)`,`图像(Image)`打开“插入图像”对话框。
+
+![image](img/8bl.jpg)选择一个图像添加到幻片，然后使用周围的手柄调整其大小。
+
+![image](img/pg97_1.jpg)
+
+![image](img/9bl.jpg)在“幻片”面板中右键点击此幻片，然后选择`新建幻片(New Slide)`添加具有相同模板和布局的幻片。
+
+![image](img/pg97_2.jpg)完成演示文稿。
+
+![image](img/10bl.jpg)点击`放灯片(Slideshow)`,`从第一幻片开始(Start from First Slide)`（或按 `F5`）运行演示文稿。
+
+![image](img/11bl.jpg)点击`文件(File)`,`保存(Save)`（或按 `Ctrl` + `S`）启动“保存”对话框，然后在`名称`字段中输入演示文稿名称。
+
+![image](img/12bl.jpg)点击文件类型按钮打开可能的格式列表——接受默认的 ODF 演示文稿格式（`.odp`）或选择 `PowerPoint 2007-365 (.pptx)`。
+
+![image](img/snake.jpg)您可以切换到“母幻片视图(Master Slide View)”，可以在其中添加出现在所有幻片上的元素。在母视图下创建的幻片是不可见的，看起来就像它们消失了。点击`视图(View)`,`普通(Normal)`继续处理幻片。
+
+![image](img/hot.jpg)
+
+如果“幻片”面板没有立即显示，点击`视图(View)`,`幻片面板(Slide Pane)`让其显示。
+
+## 创建可视化
+
+![image](img/pg98_1.jpg)
+
+LibreOffice 套件包含一个可以从任何 LibreOffice 应用启动的绘制工具，用于快速创建绘制、图表和图形：
+
+![image](img/1bl.jpg)从任何 LibreOffice 应用中，点击`文件(File)`,`新建(New)`,`绘制(Drawing)`或点击`菜单(Menu)`,`Office`,`LibreOffice Draw`启动该应用。
+
+![image](img/2bl.jpg)点击绘制工具栏上`基本形状(Basic Shapes)`按钮旁边的箭头，然后从提供的选项中选择圆矩对象。
+
+![image](img/pg98_2.jpg)
+
+![image](img/3bl.jpg)在绘制区域拖动鼠标创建一个矩形并按 `Ctrl` + `C` 复制对象，然后按 `Ctrl` + `V` 五次在第一个矩形上粘贴五个五个。
+
+![image](img/4bl.jpg)拖动矩形到不同区域，然后点击绘制工具栏上的`连接符(Connector)`按钮。
+
+![image](img/5bl.jpg)点击一个矩形，然后拖到另一个矩形以创建连接线。
+
+![image](img/6bl.jpg)现在，点击`插入文本框(Insert Text box)`按钮并为矩形标记。
+
+![image](img/pg98_3.jpg)
+
+![image](img/pg98_4.jpg)
+
+![image](img/5bl.jpg)
+
+![image](img/6bl.jpg)
+
+![image](img/hot.jpg)
+
+如果绘制工具栏没有立即显示，点击`视图(View)`,`工具栏(Toolbars)`,`绘制(Drawing)`让其显示。
+
+
+
+
+绘图可以保存为原生 `ODF`（开放文档格式）、绘图格式（`.odg`），或导出为多种图像格式，如 `PNG`（`.png`）、`GIF`（`.gif`）和 `SVG`（`.svg`）。
+
+![image](img/7bl.jpg)点击`插入`,`图表`菜单向绘图区域添加默认柱状图 – 同时会出现一个图表格式工具栏
+
+![image](img/pg99_1.jpg)
+
+![image](img/8bl.jpg)在“格式”菜单中，点击![image](img/pg99_2.jpg) `数据表`按钮，并在出现的“数据表”对话框中修改默认值，然后关闭该对话框
+
+![image](img/9bl.jpg)点击![image](img/pg99_3.jpg) `图表类型`按钮启动“图表类型”对话框，然后在左侧窗格中选择`折线`并将`点线`作为图表类型
+
+![image](img/pg99_4.jpg)
+
+![image](img/10bl.jpg)点击`确定`按钮关闭“图表类型”对话框并应用所选的线条样式
+
+![image](img/pg99_5.jpg)
+
+![image](img/hot.jpg)
+
+在插入图表后，可以通过`视图`,`工具栏`菜单启动图表格式工具栏。
+
+![image](img/hot.jpg)
+
+要向文档中插入已有的图表，点击`插入`,`对象`,`OLE 对象` – 但若要插入默认的可编辑图表，只需点击`插入`,`图表` 即可。
+
+## 运行宏
+
+![image](img/pg100_1.jpg)
+
+“宏”是一段以特定名称存储的记录按键序列。运行宏会重放该序列并将其写入当前文档。这对于在 LibreOffice Calc 电子表格中重建经常输入的文本，以及在 LibreOffice Writer 文本文档中重建文本特别有用：
+
+![image](img/1bl.jpg)启动 Writer，然后点击`工具`,`选项`,`LibreOffice`,`高级`并勾选`启用宏录制`选项
+
+![image](img/pg100_2.jpg)
+
+![image](img/2bl.jpg)接下来，点击`工具`,`宏`,`录制宏`开始录制 – 会出现一个小窗口，带有一个`停止录制`按钮
+
+![image](img/pg100_3.jpg)
+
+![image](img/3bl.jpg)点击工具栏上的![image](img/pg100_4.jpg) `居中`按钮，然后输入你的地址
+
+![image](img/5bl_5.jpg)
+
+![image](img/4bl.jpg)点击小窗口中的`停止录制`按钮，然后看到“Basic 宏”对话框
+
+![image](img/5bl.jpg)在`宏名称`文本字段中，将名称“Main”替换为“Address”，然后点击`保存`按钮
+
+![image](img/hot.jpg)
+
+Linux 系统需要 Java 运行时环境 (`JRE`) 来运行宏。Linux Mint 包含了 OpenJDK Java 运行时环境，但在其他发行版上可能需要安装 Java 运行时环境。
+
+![image](img/6bl.jpg)要随时运行此宏，先点击`工具`,`宏`,`运行宏`启动“宏选择器”对话框
+
+![image](img/7bl.jpg)从`我的宏`,`Standard`,`Module1`中选择`Address` 宏，然后点击`运行`按钮写入你的地址
+
+![image](img/pg101_1.jpg)
+
+![image](img/pg101_2.jpg)
+
+![image](img/8bl.jpg)要编辑此宏，点击`工具`,`宏`,`编辑宏`启动“我的宏”对话框，然后选择`Address` 宏以查看宏操作背后的代码
+
+![image](img/pg101_3.jpg)
+
+![image](img/9bl.jpg)找到描述你地址的文本值，然后将其替换为不同的值并点击`文件`,`保存`应用更改
+
+![image](img/10bl.jpg)最后，重复步骤 6 和 7 再次运行此宏，并看到修改后的地址值被写入
+
+![image](img/pg101_4.jpg)
+
+![image](img/forget.jpg)
+
+宏录制器仅记录其启动所在窗口中与文档内容相关的的操作，且仅适用于 LibreOffice Writer 和 Calc 。
+
+![image](img/hot.jpg)
+
+点击`工具`,`宏`,`组织宏`,`LibreOffice Basic`，然后选择一个现有宏并使用`删除`按钮将其移除。
+
+## 添加交互
+
+![image](img/pg102_1.jpg)
+
+LibreOffice 应用允许向文档中添加交互式“表单”控件 – 类似于网页表单中的那些控件。这些控件允许用户通过提供极少输入快速完成文档，这在重复生成具有不同数据的文档时特别有用：
+
+![image](img/1bl.jpg)在 LibreOffice Writer 中，点击`视图`,`工具栏`,`表单控件`打开“表单控件”对话框，然后点击其`设计模式`按钮设置为“开启” – 即可添加表单控件
+
+![image](img/pg102_2.jpg)
+
+![image](img/2bl.jpg)点击`标签字段`打开“表单控件”对话框，然后点击其`设计模式`按钮设置为“开启” –
+
+*(注：此处原文存在大量重复的 Label Field 描述指令，已根据逻辑翻译并整合)*
+
+![image](img/3bl.jpg)在“表单控件”对话框中，点击其`设计模式`按钮设置为“开启” – 即可添加表单控件
+
+![image](img/4bl.jpg)
+
+![image](img/5bl.jpg)
+
+![image](img/6bl.jpg)
+
+![image](img/7bl.jpg)
+
+![image](img/8bl.jpg)
+
+![image](img/9bl.jpg)
+
+![image](img/10bl.jpg)
+
+
+
+
+![image](img/10bl.jpg) **选择搜索条件**，然后选择一个字段进行查询
+
+![image](img/pg105_2.jpg)
+
+![image](img/11bl.jpg)在所选字段中输入一个值进行匹配，然后点击**完成**按钮——看到应用程序的“查询”窗格中添加了查询图标
+
+![image](img/12bl.jpg)双击查询图标即可在“表格数据视图”窗口中查看结果——仅提取特定数据
+
+![image](img/pg105_3.jpg)
+
+![image](img/hot.jpg)
+
+有一个“报告向导”，可以快速生成你的数据摘要。
+
+![image](img/forget.jpg)
+
+你可以指定其他条件，例如针对数值的**大于** 关系，并且可以指定多个条件以进行更精确的查询。
+
+![image](img/hot.jpg)
+
+还有一个“表单向导”，可以快速生成用于数据输入的用户表单。
+
+## 总结
+
+- `LibreOffice` 包含一组与 Microsoft Office 软件套相似的办公工具。
+- 文件可以保存为 `Microsoft Office 文件格式` 以及 LibreOffice 应用程序的原生格式。
+- `LibreOffice` `Writer` 是一个文字处理程序，用于包含文本和嵌入对象的文档。
+- `LibreOffice Writer` 内置支持`便携文档格式 (PDF)`。
+- `LibreOffice` `Calc` 是一个电子表格程序，可以使用给定的公式对数据输入进行计算。
+- `LibreOffice Calc` 提供了`单元格格式`功能，用于指定单元格内容的显示。
+- `LibreOffice` `Impress` 是一个演示程序，可以制作幻灯片。
+- `LibreOffice Impress` 提供了许多标准`模板`并提供许多标准`布局`。
+- `LibreOffice` `Draw` 是一个绘图程序，可以创建插图、图表、图和图形。
+- `LibreOffice Draw` 提供了`图表类型` 功能，提供了许多标准图表。
+- `宏` 是录制的按键序列，可以通过重放来重复这些按键。
+- `LibreOffice` 应用程序可以在文档中添加`表单控件`以与用户进行交互。
+- `LibreOffice` `Base` 是一个数据库程序，可以存储数据并检索特定的数据项。
+- `LibreOffice Base` 提供了向导，可以在数据库中创建`表格`并执行`查询`。
+
+# 7 享受媒体
+
+*本章描述了如何使用各种流行的 Linux 应用程序享受多媒体内容。*
+
+- 查看图片
+- 管理照片
+- 扫描图片
+- 编辑图片
+- 观看电影
+- 播放音乐
+- 流媒体电视
+- 共享内容
+- 总结
+
+## 查看图片
+
+![image](img/pg108_1.jpg)
+
+许多 Linux 发行版都包含简单的图片查看器程序 (`xviewer`)，它可以进行缩放和滚动。在 Linux Mint 中，你可以在菜单的“附件”类别下找到启动器，但通常你会通过右键上下文菜单启动它：
+
+![image](img/1v.jpg)将鼠标悬停在图片文件图标上进行选择，然后右键点击并选择**用图片查看器打开**
+
+![image](img/pg108_2.jpg)
+
+![image](img/2v.jpg)看到图片查看器启动，按字母顺序显示第一张图片
+
+![image](img/pg108_3.jpg)
+
+![image](img/hot.jpg)
+
+双击任何文件图标即可在图片查看器中立即打开该图片。
+
+![image](img/hot.jpg)
+
+你也可以使用鼠标缩放。将光标置于图片查看器中的图片上，然后使用鼠标轮放大缩小。
+
+![image](img/3v.jpg)点击![image](img/pg109_1.jpg) **前进**按钮查看所有选定的图片，或点击**查看**，**幻灯片**全屏查看。
+
+![image](img/pg109_2.jpg)
+
+![image](img/pg109_3.jpg)
+
+![image](img/pg109_4.jpg)
+
+![image](img/4v.jpg)点击**查看**，**图片库**在图片查看器窗口内打开一个可滚动的画库面板
+
+![image](img/pg109_5.jpg)
+
+![image](img/pg109_6.jpg)
+
+![image](img/5v.jpg)滚动到一张图片，然后点击**文件**，**设为壁纸**将该图片设置为桌面背景
+
+![image](img/pg109_7.jpg)
+
+![image](img/hot.jpg)
+
+全屏幻灯片每张图片显示五秒，但你可以通过**编辑**，**选项**，**幻灯片**进行更改。点击 **Esc** 退出运行中的幻灯片。
+
+你可以使用图片库将图片转换为不同的格式。按下 `Ctrl` + `A` 选择库中的所有图片，然后点击**文件**，**另存为**并在对话框中选择首选的文件格式。
+
+![image](img/pg109_8.jpg)
+
+## 管理照片
+
+![image](img/pg108_1.jpg)
+
+**查看图片**
+
+![image](img/pg108_1.jpg)
+
+许多 Linux 发行版都包含简单的图片查看器程序 (`xviewer`)，它可以进行缩放和滚动。在 Linux Mint 中，你可以在菜单的“附件”类别下找到启动器，但通常你会通过右键上下文菜单启动它：
+
+![image](img/1v.jpg)将鼠标悬停在图片文件图标上进行选择，然后右键点击并选择**用图片查看器打开**
+
+![image](img/pg108_2.jpg)
+
+![image](img/2v.jpg)看到图片查看器启动，按字母顺序显示第一张图片
+
+![image](img/pg108_3.jpg)
+
+![image](img/hot.jpg)
+
+双击任何文件图标即可在图片查看器中立即打开该图片。
+
+![image](img/hot.jpg)
+
+你也可以使用鼠标缩放。将光标置于图片查看器中的图片上，然后使用鼠标轮放大缩小。
+
+![image](img/3v.jpg)点击![image](img/pg109_1.jpg) **前进**按钮查看所有选定的图片，或点击**查看**，**幻灯片**全屏查看。
+
+![image](img/pg109_2.jpg)
+
+![image](img/pg109_3.jpg)
+
+![image](img/pg109_4.jpg)
+
+![image](img/4v.jpg)点击**查看**，**图片库**在图片查看器窗口内打开一个可滚动的画库面板
+
+![image](img/pg109_5.jpg)
+
+![image](img/pg109_6.jpg)
+
+![image](img/5v.jpg)滚动到一张图片，然后点击**文件**，**设为壁纸**将该图片设置为桌面背景
+
+![image](img/pg109_7.jpg)
+
+![image](img/hot.jpg)
+
+（注：提供的文本包含“查看图片”和“管理照片”的重复部分。我根据提供内容的逻辑流进行了结构处理。）*
+
+**管理照片**
+
+![image](img/pg108_1.jpg)
+
+**查看图片**
+
+![image](img/pg108_1.jpg)
+
+许多 Linux 发行版都包含简单的图片查看器程序 (`xviewer`)，它可以进行缩放和滚动。在 Linux Mint 中，你可以在菜单的“附件”类别下找到启动器，但通常你会通过右键上下文菜单启动它：
+
+![image](img/1v.jpg)将鼠标悬停在图片文件图标上进行选择，然后右键点击并选择**用图片查看器打开**
+
+![image](img/pg108_2.jpg)
+
+![image](img/2v.jpg)看到图片查看器启动，按字母顺序显示第一张图片
+
+![image](img/pg108_3.jpg)
+
+![image](img/hot.jpg)
+
+双击任何文件图标即可在图片查看器中立即打开该图片。
+
+![image](img/hot.jpg)
+
+你也可以使用鼠标缩放。将光标置于图片查看器中的图片上，然后使用鼠标轮放大缩小。
+
+![image](img/3v.jpg)点击![image](img/pg109_1.jpg) **前进**按钮查看所有选定的图片，或点击**查看**，**幻灯片**全屏查看
+
+![image](img/pg109_2.jpg)
+
+![image](img/pg109_3.jpg)
+
+![image](img/pg109_4.jpg)
+
+![image](img/4v.jpg)点击**查看**，**图片库**在图片查看器窗口内打开一个可滚动的画库面板
+
+![image](img/pg109_5.jpg)
+
+![image](img/pg109_6.jpg)
+
+![image](img/5v.jpg)滚动到一张图片，然后点击**文件**，**设为壁纸**将该图片设置为桌面背景
+
+![image](img/pg109_7.jpg)
+
+![image](img/hot.jpg)
+
+（注：提供的文本包含多个重复章节。我已按照要求对唯一内容进行了格式化。）*
+
+**管理照片**
+
+![image](img/pg108_1.jpg)
+
+**查看图片**
+
+![image](img/pg108_1.jpg)
+
+许多 Linux 发行版都包含简单的图片查看器程序 (`xviewer`)，它可以进行缩放和滚动。在 Linux Mint 中，你可以在菜单的“附件”类别下找到启动器，但通常你会通过右键上下文菜单启动它：
+
+![image](img/1v.jpg)将鼠标悬停在图片文件图标上进行选择，然后右键点击并选择**用图片查看器打开**
+
+![image](img/pg108_2.jpg)
+
+![image](img/2v.jpg)看到图片查看器启动，按字母顺序显示第一张图片
+
+![image](img/pg108_3.jpg)
+
+![image](img/hot.jpg)
+
+双击任何文件图标即可在图片查看器中立即打开该图片。
+
+![image](img/hot.jpg)
+
+你也可以使用鼠标缩放。将光标置于图片查看器中的图片上，然后使用鼠标轮放大缩小。
+
+![image](img/3v.jpg)点击![image](img/pg109_1.jpg) **前进**按钮查看所有选定的图片，或点击**查看**，**幻灯片**全屏查看
+
+![image](img/pg109_2.jpg)
+
+![image](img/pg109_3.jpg)
+
+![image](img/pg109_4.jpg)
+
+![image](img/4v.jpg)点击**查看**，**图片库**在图片查看器窗口内打开一个可滚动的画库面板
+
+![image](img/pg109_5.jpg)
+
+![image](img/pg109_6.jpg)
+
+![image](img/5v.jpg)滚动到一张图片，然后点击**文件**，**设为壁纸**将该图片设置为桌面背景
+
+![image](img/pg109_7.jpg)
+
+![image](img/hot.jpg)
+
+
+
+
+![image](img/pg112_5.jpg)
+
+![image](img/5v.jpg)点击 `Crop`（裁剪）按钮，图像上会出现一个框架，然后拖动框架的边缘到所需的位置
+
+![image](img/pg113_1.jpg)
+
+![image](img/6v.jpg)接下来，点击应用的 `Save`（保存）按钮打开“另存为”对话框，然后从此菜单中选择文件格式
+
+![image](img/pg113_2.jpg)
+
+![image](img/7v.jpg)接下来，点击对话框中的 `Save`（保存）按钮将裁剪后的扫描件导入图像文件
+
+![image](img/pg113_3.jpg)
+
+![image](img/hot.jpg)
+
+点击![image](img/pg113_4.jpg)按钮打开菜单，然后选择 `Preferences`（偏好）、`Scanning`（扫描），在连接了多个扫描仪时从中选择一个扫描仪。
+
+![image](img/pg113_5.jpg)
+
+![image](img/hot.jpg)
+
+在文档扫描器中可以进行多次扫描以添加页面。点击![image](img/pg113_6.jpg)按钮，然后选择 `Reorder Pages`（重新排序页面）查看如何调整它们的选项。
+
+![image](img/forget.jpg)
+
+你可以双击图像文件以在图像查看器应用中查看它。
+
+## 编辑图像
+
+![image](img/pg114_1.jpg)
+
+Linux 中主要的图像编辑应用程序是 GIMP（**G**NU **I**mage **M**anipulation **P**rogram，GNU 图像处理程序）开源应用，标准安装中包含 220 多个插件。这些插件为 GIMP 提供了许多 Adobe Photoshop 的功能，但不提供 CMYK 颜色的原生支持。
+
+GIMP 具有高度配置性，并有强大的脚本支持。GIMP 可用于编辑图像和创建吸引人的网页图形：
+
+![image](img/pg114_2.jpg)
+
+![image](img/1v.jpg)工具选项面板中的项目会根据工具箱面板中选中的工具而变化。例如，点击工具箱中的![image](img/pg114_3.jpg) 画笔工具，查看工具选项面板中该工具的可用选项
+
+![image](img/pg114_4.jpg)
+
+![image](img/hot.jpg)
+
+GIMP 应用默认未包含在 Linux Mint 中。请参此处查看安装说明。
+
+![image](img/2v.jpg)现在，在工具箱中依次选择每个工具，查看其工具选项面板中的可用选项
+
+![image](img/3v.jpg)画笔、图案和字体面板有每个类别的标签页，在可滚动窗口中显示项目。每个标签页显示该类别的当前选择。例如，点击![image](img/pg115_2.jpg) 画笔标签页并选择星形画笔，即可看到该形状出现在标签页上
+
+![image](img/pg115_1.jpg)
+
+![image](img/4v.jpg)在工具箱中选择![image](img/pg115_3.jpg) 画笔工具，并点击图像窗口中的图像来画出星形
+
+![image](img/5v.jpg)现在，依次选择![image](img/pg115_4.jpg) 图案标签和![image](img/pg115_5.jpg) 字体标签，检查这些类别中的可用项目
+
+![image](img/6v.jpg)图层、通道和路径面板有显示每个类别项目的标签。每个类别提供一个按钮来切换单个项目的可见性。例如，选择![image](img/pg115_7.jpg) 通道标签，然后点击红色通道的![image](img/pg115_8.jpg)眼睛按钮以隐藏图像的所有红色组件
+
+![image](img/pg115_6.jpg)
+
+![image](img/7v.jpg)图层、通道和路径面板底部有允许你在每个类别中添加、删除或排列按钮。例如，选择![image](img/pg115_9.jpg) 图层标签，然后点击![image](img/pg115_10.jpg) 创建按钮打开“创建新层”对话框
+
+![image](img/8v.jpg)输入层名称（例如“StarLayer”），然后点击 `OK` 按钮关闭对话框，并在图层标签页中看到新添加的层
+
+![image](img/pg115_11.jpg)
+
+![image](img/forget.jpg)
+
+GIMP 可以读取许多图像文件类型——包括 Photoshop 产生的 PSD 文件。
+
+![image](img/snake.jpg)
+
+对于没有经验的用户来说，某些 GIMP 插件的结果可能比 Photoshop 中的更不可预测。
+
+## 观看电影
+
+![image](img/pg116_1.jpg)
+
+Linux Mint 包含一个名为 Celluloid 的快速轻量级媒体播放器应用，它可以播放 AVI, MPG, WMV, WAV, MP3 等许多格式的音频和视频内容。Celluloid 是 Linux Mint 中音频视频文件的默认媒体播放器：
+
+![image](img/1v.jpg)双击视频文件图标立即播放该视频
+
+或
+
+点击 `Menu`（菜单）、`Sound & Video`（音频与视频）、`Celluloid` 启动播放器应用，然后点击 `+`、`Open`（打开）并浏览视频文件
+
+![image](img/pg116_2.jpg)
+
+![image](img/pg116_3.jpg)
+
+![image](img/2v.jpg)选择一部电影使其立即在 Celluloid 应用的显示区域开始播放
+
+![image](img/pg116_4.jpg)
+
+![image](img/hot.jpg)
+
+Celluloid 媒体播放器还支持字幕。
+
+![image](img/3v.jpg)点击 `Volume`（音量）按钮并拖动弹出滑块调整音量级别
+
+![image](img/pg117_1.jpg)
+
+![image](img/4v.jpg)拖动窗口角更改尺寸——查看显示区域电影周围出现边界区域
+
+![image](img/pg117_2.jpg)
+
+![image](img/hot.jpg)
+
+你可以拖动滑块或将光标放在显示区域上并滚动鼠标轮来推进暂停的电影。
+
+![image](img/5v.jpg)点击 `Toggle Fullscreen`（切换全屏）按钮在窗口和全屏视图间切换
+
+![image](img/17.jpg)
+
+![image](img/hot.jpg)
+
+你可以点击汉堡按钮并选择 `Controls`（控制）来隐藏或显示控制。
+
+## 播放音乐
+
+![image](img/pg118_1.jpg)
+
+Rhythmbox 播放器非常适合播放音乐文件，也是播客聚合器——一个网络收音机：
+
+![image](img/1v.jpg)点击 `Menu`、`Sound & Video`、`Rhythmbox`启动应用
+
+![image](img/2v.jpg)在“Library”面板中选择 `Music`，然后点击工具栏上的 `Import`按钮
+
+![image](img/pg118_2.jpg)
+
+![image](img/forget.jpg)播放期间，`Play`按钮将变为 `Pause`按钮
+
+![image](img/3v.jpg)使用下拉菜单选择包含音乐文件的文件夹，例如 **Music** 文件夹中的子文件夹
+
+![image](img/pg118_3.jpg)查看 Rhythmbox 将所选文件夹中的音乐文件列为“tracks”
+
+![image](img/4v.jpg)点击列表中的轨道，然后点击`Import tracks`按钮制作播放列表
+
+![image](img/pg118_4.jpg)点击 `Play`按钮从“Track 1”开始播放，或双击任何轨道以播放该轨道
+
+![image](img/pg119_1.jpg)
+
+![image](img/hot.jpg)
+
+右击轨道并选择 `Remove`将其从播放列表中删除。
+
+![image](img/forget.jpg)你也可以右击音乐文件图标并选择 `Open with`、`Rhythmbox`来播放。
+
+![image](img/7v.jpg)在“Library”面板中选择 `Radio`并双击列出的广播站之一开始收听
+
+![image](img/pg119_2.jpg)
+
+![image](img/8v.jpg)在“Library”面板中选择 `Podcasts`，然后点击工具栏上的`Add`按钮按主题搜索播客
+
+![image](img/9v.jpg)双击任何感兴趣的播客开始收听
+
+![image](img/pg119_3.jpg)
+
+![image](img/10v.jpg)点击 `X`按钮关闭 Rhythmbox 窗口，然后点击系统托上的 **Rhythmbox**图标并点击弹出面板中的`X`按钮退出应用
+
+![image](img/hot.jpg)
+
+你可以通过点击`Add`按钮并输入 URL 来添加更多电台——使用搜索引擎查找网络电台和播客的 URL。
+
+
+
+
+
+当音乐、播客或电台开始播放时，系统托盘中会添加一个 ![image](img/pg119_5.jpg) 图标。你可以关闭 Rhythmbox 窗口，播放将继续进行。点击 ![image](img/pg119_5.jpg) 图标，并使用出现面板上的控件来控制播放，或者点击其 `X` 按钮停止播放。
+
+![image](img/pg119_6.jpg)
+
+## 流媒体电视
+
+![image](img/pg120_1.jpg)
+
+Linux Mint 包含一个名为“Hypnotix”的流媒体应用，支持电视直播、电影和剧集。该应用本身不提供内容，而是从 IPTV（IP 电视）提供商处传输内容。Hypnotix 默认配置了一个名为“Free-TV”的 IPTV 提供商。该提供商仅提供免费、合法、公开的内容，且不包含成人内容：
+
+![image](img/1v.jpg)点击**菜单**、**音频与视频**、**Hypnotix**来启动 Hypnotix 应用
+
+![image](img/pg120_2.jpg)
+
+![image](img/2v.jpg)点击**电视频道**面板查看流媒体服务列表，列表带有表示其原产地国家的旗帜，以及它们提供的频道数量
+
+![image](img/pg120_3.jpg)
+
+![image](img/3v.jpg)点击列出的服务之一（例如“Redbox USA”），在显示区域旁边将出现一个可滚动的字母顺序频道列表
+
+![image](img/pg121_1.jpg)
+
+![image](img/forget.jpg)
+
+目前没有电影或剧集，因此这些面板处于非活动状态。
+
+![image](img/hot.jpg)
+
+Free-IPTV 提供来自全球的 2000 多个合法电视频道。
+
+![image](img/4v.jpg)滚动列表并点击任何频道即可开始将其内容流传输到显示区域
+
+![image](img/pg121_2.jpg)
+
+![image](img/5v.jpg)将光标悬停在显示区域上，然后使用弹出的控件暂停或恢复直播电视流
+
+![image](img/pg121_3.jpg)
+
+![image](img/hot.jpg)
+
+Hypnotix 是 Linux Mint 版本 20 中引入的新应用。
+
+![image](img/snake.jpg)
+
+你的观看体验取决于你的连接速度。
+
+![image](img/hot.jpg)
+
+要添加另一个 IPTV 提供商，点击启动屏幕上的 ![image](img/pg121_4.jpg) 按钮，然后点击**添加新提供商**并输入 M3U 列表的 URL。可以在网上搜索“Free IPTV M3U Playlist”。
+
+## 共享内容
+
+![image](img/pg122_1.jpg)
+
+你可以使用 Warpinator 应用轻松将文件发送到局域网上的另一台 Linux PC。每台电脑必须运行 Warpinator 应用才能被检测到。此外，它们必须使用相同的组代码和端口号，这些设置在 Warpinator 应用的“偏好设置”对话框中——默认情况下组代码为“Warpinator”，端口号为 42000。
+
+![image](img/1v.jpg)在局域网 PC 上选择**菜单**、**附件**、**Warpinator**，查看应用检测到另一台 Linux PC
+
+![image](img/pg122_2.jpg)
+
+![image](img/pg122_3.jpg)
+
+![image](img/2v.jpg)点击你想想要发送文件的另一个检测到的 PC —— 以切换到**文件传输**窗口
+
+![image](img/3v.jpg)接下来，浏览到文件位置以选择文件，或将文件拖放到文件传输窗口
+
+![image](img/pg122_4.jpg)
+
+![image](img/4v.jpg)现在，点击**发送文件**按钮 —— 向另一台 PC 发送请求
+
+![image](img/forget.jpg)
+
+在接收端 PC 的用户给予批准之前，文件将不会传输。
+
+![image](img/5v.jpg)看到另一台 PC 上出现一个通知，描述了传入的文件并请求批准传输
+
+![image](img/pg123_1.jpg)
+
+![image](img/6v.jpg)另一台 PC 上的用户可以点击**接受**接收文件，并将立即传输到该 PC
+
+![image](img/pg123_2.jpg)
+
+![image](img/hot.jpg)
+
+在此菜单上选择**偏好设置**项来选择文件传输选项，并在需要配置组代码和端口号
+
+![image](img/7v.jpg)接收的文件默认会自动添加到另一台 PC 上 Warpinator 的“保存”文件夹中——点击 ![image](img/pg123_3.jpg) 汉堡按钮，然后选择**打开保存文件夹**查看所有传输的文件
+
+![image](img/pg123_4.jpg)
+
+![image](img/hot.jpg)
+
+Warpinator 是 Linux Mint 版本 20 中引入的新应用。
+
+![image](img/snake.jpg)
+
+如果你只需关闭窗口，Warpinator 将继续运行。系统托盘中添加了一个图标，你可以右键点击它并选择**退出**来退出应用。
+
+## 总结
+
+- **图片查看器**应用显示图片并可以创建多张图片的幻灯片。
+- 图片查看器可以制作选定的幻灯片。
+- Pix 查看器具有一种模式和一种模式。
+- Pix 查看器可以排列图片。
+- 文档扫描仪应用可以导入图片。
+- `text` 提供。
+- GNU 图像处理程序 (`GIMP`) 是。
+- `GIMP` 包含插件。
+- Celluloid 应用可以播放在。
+- Celluloid 应用可以播放视频。
+- Rhythmbox 音乐播放器可以导入轨道。
+- Rhythmbox 音乐播放器也是一个。
+- Hypnotix 应用可以直播电视内容。
+- Hypnotix 列出服务。
+- Warpinator 应用可以将文件传输到另一台 Linux PC。
+- 要使用 Warpinator 传输文件，两台 PC 都必须运行。
+
+## 使用附件
+
+***本介绍了包含的一些实用附件应用。***
+
+### 文本
+
+Linux Mint 中的纯文本编辑器 (`xed`) 等同于 Windows 中的记事本——但编辑器具有更多功能。它可以对行编号、按字母顺序对行，并为各种脚本、编程和标记语言提供语法高亮。
+
+![image](img/pg126_1.jpg)
+
+你必须意识到 Linux 处理文本结束的方式与 Windows 不同。Linux 添加不打印的换行符 (`\n`) (“换行”）字符，而 Windows 添加不打印的返回车和换行符 (`\r\n`) 字符。这意味着在 Linux 中创建的文本文件在 Windows 系统上查看时无法正确保持结束符。编辑器应用在保存文本文件时提供了一个选项，让你选择喜好的结束符类型：
+
+![image](img/1b.jpg)点击**菜单**、**附件**、**编辑器**启动应用
+
+![image](img/2b.jpg)接下来，点击**工具**、**自动检查拼写**来开启拼写检查
+
+![image](img/3b.jpg)现在输入几行文本——看到拼写检查在可疑项目下方放置红色划线
+
+![image](img/pg126_2.jpg)
+
+![image](img/4b.jpg)点击**编辑**、**偏好设置**、**编辑器**，然后将“显示行号”切换开关到“开启”位置——查看行被编号
+
+![image](img/5b.jpg)点击**关闭**按钮，点击**编辑**、**全选**（或按 **Ctrl** + **A**）选择所有文本，然后按 **Delete** 键删除所有文本
+
+![image](img/hot.jpg)
+
+2018 年 10 月之后 Windows10 操作系统版本的记事本应用支持 Linux LF（换行符）结束符以及 Windows CRLF（返回车 + 换行符）结束符。
+
+
+
+
+
+![image](img/hot.jpg)
+
+你可以点击 `Edit`、`Sort lines` 将行按字母和数字重新排序，然后点击 `Edit`、`Undo` 恢复到原始顺序。
+
+![image](img/6b.jpg)选择 `View`、`Highlight Mode`、`HTML` 来开启 HTML 标记代码的语法高亮。
+
+![image](img/7b.jpg)现在，输入一些 HTML 标记标签——你会看到元素、属性和内容显示出颜色。
+
+![image](img/pg127_3.jpg)
+
+![image](img/8b.jpg)点击 `File, Save As` 打开“另存为”对话框，然后输入文件名并选择 `Windows` 行结束选项。
+
+![image](img/pg127_4.jpg)
+
+![image](img/9b.jpg)点击 `Save` 按钮，然后将文件复制到 Windows 系统，查看行尾是否被保留。
+
+![image](img/pg127_5.jpg)
+
+![image](img/forget.jpg)
+
+行号只出现在文本编辑器（Text Editor）窗口中——它们不会被插入到文中。
+
+![image](img/forget.jpg)
+
+使用 Linux 行结束符保存的文件在旧版本的 Windows 记事本上可能会显示如下。
+
+![image](img/pg127_6.jpg)
+
+## 进行计算
+
+Linux Mint 包含一个计算器（Calculator）应用，可以执行许多类型的计算和转换。它提供了一个可滚动的计算历史视图（History View），你可以选择之前的计算记录进行进一步处理。
+
+![image](img/pg128_1.jpg)
+
+计算器应用提供五种模式，你可以在这些模式下输入基础方程、执行数学和财务函数，并进行货币、尺寸和进制的转换：
+
+![image](img/1b.jpg)点击 `Menu`、`Accessories`、`Calculator` 以“基础模式”（Basic Mode）启动应用。
+
+![image](img/2b.jpg)输入一些方程查看结果，并看到它们被添加到`History View`区域。
+
+![image](img/pg128_2.jpg)
+
+![image](img/3b.jpg)从标题栏菜单中选择“高级模式”（Advanced Mode），然后选择选项来转换测量的距离。
+
+![image](img/pg128_3.jpg)
+
+![image](img/hot.jpg)
+
+`History View`区域的计算数量没有限制。
+
+`Advanced Mode` 提供了额外的按钮来执行数学函数，例如对数（`log`）。
+
+![image](img/4b.jpg)从标题栏菜单中选择“财务模式”（Financial Mode），然后选择选项来近似转换货币金额。
+
+![image](img/pg129_1.jpg)
+
+![image](img/5b.jpg)从标题栏菜单中选择“编程模式”（Programming Mode），然后选择选项来转换进制。
+
+![image](img/pg129_2.jpg)
+
+![image](img/6b.jpg)从标题栏菜单中选择“键盘模式”（Keyboard Mode），然后选择选项来转换温度标。
+
+![image](img/pg129_3.jpg)
+
+![image](img/forget.jpg)
+
+`Financial Mode` 提供了额外的按钮来执行财务函数，如未来值（`Fv`）。
+
+![image](img/hot.jpg)
+
+十进制的 100 是二进制的 `1100100`，代表 `64+32+0+0+4+0+0` 之和。十进制 100 也是八进制的 `144` 和十六进制的 `64`。
+
+![image](img/forget.jpg)
+
+`Programming Mode` 提供了额外的按钮执行编程函数，如布尔代数（`AND`、`OR`、`XOR`、`NOT`）。
+
+## 管理存档
+
+![image](img/pg130_1.jpg)
+
+Linux Mint 包含一个强大的归管理器（Archive Manager）应用，可以将文件压缩为许多存档格式。如果你选择流行的 ZIP (`.zip`) 格式，可以对存档进行密码保护，但这种格式通常产生的存档文件不是最小。你可以在菜单的 `Accessories` 类别下找到归管理器启动器，但通常你会通过右键上下文菜单启动它：
+
+![image](img/1b.jpg)右键点击你想要压缩的文件夹，并在右键菜单中选择 `Compress`——打开“压缩”对话框。
+
+![image](img/pg130_2.jpg)
+
+![image](img/2b.jpg)输入存档文件名，然后选择 `.zip` 存档文件格式。
+
+![image](img/pg130_3.jpg)
+
+![image](img/3b.jpg)选择一个位置并展开“Other Options”（其他选项），然后输入密码。
+
+![image](img/4b.jpg)点击 `Create` 按钮，在你选择的位置创建原始文件夹及其内容的存档副本。
+
+![image](img/5b.jpg)右键点击原始文件夹并在右键菜单中选择 `Delete`——删除该文件夹及其内容。
+
+![image](img/snake.jpg)
+
+并不是所有的存档格式都支持密码保护。
+
+![image](img/forget.jpg)
+
+存档不会替换原始文件夹——它是在原始基础上额外创建的。
+
+![image](img/6b.jpg)接下来，右键点击存档文件选择 `Open With Archive Manager`——查看其内容。
+
+![image](img/pg131_1.jpg)
+
+![image](img/7b.jpg)现在，点击 `Extract` 按钮查看其内容。
+
+![image](img/pg131_2.jpg)
+
+![image](img/8b.jpg)选择此菜单上的 `Extract` 选项以文件夹。
+
+![image](img/pg131_3.jpg)
+
+![image](img/9b.jpg)现在，点击 `OK` 返回并选择 `7z` 存档格式。
+
+![image](img/pg131_4.jpg)
+
+![image](img/10b.jpg)点击 `Close` 退出归管理器。
+
+## 笔记
+
+Linux Mint 包含一个 Gnote 应用，可以帮你记录琐碎信息。你可以像便签一样使用它，也可以链接到其他地方。
+
+![image](img/1b.jpg)点击 `Menu`、`Accessories`、`Gnote` 启动应用。
+
+![image](img/2b.jpg)点击 `New` 按钮，选择笔记本（Notebook）。
+
+![image](img/pg132_1.jpg)
+
+![image](img/3b.jpg)为笔记本命名，例如“Web”，然后点击 `Create` 按钮——看到应用左侧栏出现了“Web”图标。
+
+![image](img/pg132_2.jpg)
+
+![image](img/4b.jpg)选择“Web”图标，然后点击 `New` 按钮创建一个新窗口的笔记。
+
+![image](img/pg132_3.jpg)
+
+![image](img/5b.jpg)看到新笔记默认包含一个彩色的标题和一个黑色段落。
+
+![image](img/pg132_4.jpg)
+
+![image](img/hot.jpg)Gnote 提供三个默认笔记本：`All`（所有）、`Important`（重要）以及未归类的任何笔记本的 `Unfiled` 。
+
+![image](img/6b.jpg)编辑新笔记为其命名并输入内容。
+
+![image](img/pg133_1.jpg)
+
+![image](img/7b.jpg)选择几行文本，点击 `Bullets` 按钮并选择 `Bullets` 来制作列表。
+
+![image](img/pg133_2.jpg)
+
+![image](img/hot.jpg)你还可以更改此菜单上的字体大小和缩进选项。
+
+![image](img/3b.jpg)接下来，选择一个列表项，然后点击 `Link to New Note` 按钮并选择 `Link to New Note` 选项以打开一个新的可编辑笔记。
+
+![image](img/pg133_3.jpg)
+
+![image](img/hot.jpg)你可以选择此菜单上的 `Important` 选项将笔记归档到重要笔记本中。
+
+![image](img/pg133_4.jpg)
+
+![image](img/5b.jpg)编辑新笔记提供更多信息。
+
+![image](img/pg133_5.jpg)
+
+![image](img/6b.jpg)现在，点击 `OK` 按钮返回对话框，并选择“All”图标查看所有笔记。
+
+![image](img/pg133_6.jpg)
+
+
+
+
+![image](img/11b.jpg)再次选择第一条笔记，然后重复步骤 8-10，以添加链接笔记，为其他列表项目提供更多信息。
+
+![image](img/pg133_9.jpg)
+
+![image](img/hot.jpg)
+
+右键点击笔记本或笔记并选择 `Delete` 将其删除。
+
+## 截图
+
+![image](img/pg134_1.jpg)
+
+与 Windows 操作系统一样，在 Linux Mint 中，你可以按下 `Print Screen` 键 (`PrtSc`）立即捕捉屏幕图像，或使用 `Alt` + `PrtSc` 组合键立即捕捉当前活动窗口。此外，Linux Mint 还包含一个 `Screenshot` 应用程序，它提供了延迟和其他选项——类似于 Windows 中的剪取工具应用：
+
+![image](img/1b.jpg)点击 `Menu`（菜单）、`Accessories`（附件）、`Screenshot`（截图）启动该程序
+
+![image](img/2b.jpg)选择“Grab the whole screen”（捕获全屏）选项并选择延迟时间，然后点击 `Take Screenshot`（截图）按钮
+
+![image](img/pg134_2.jpg)
+
+![image](img/3b.jpg)编辑名称和位置，然后点击 `Save`（保存）按钮
+
+![image](img/pg134_3.jpg)
+
+![image](img/pg134_4.jpg)
+
+![image](img/hot.jpg)
+
+你也可以点击 `Copy to Clipboard`复制到剪贴板）并关闭此对话框，然后截图粘贴到 GIMP 应用中编辑。
+
+![image](img/forget.jpg)
+
+注意，根据你选择的截图类型，某些选项显示为灰色（表示不可用）。
+
+![image](img/4b.jpg)重新启动程序，选择“Grab the current window”（捕获当前窗口）选项
+
+![image](img/5b.jpg)选择“Include pointer”（包含指针）选项，然后点击 `Take` `Screenshot` 按钮
+
+![image](img/pg135_1.jpg)
+
+![image](img/6b.jpg)编辑名称和位置，然后点击 `Save`（保存）按钮
+
+![image](img/pg135_2.jpg)
+
+![image](img/7b.jpg)确保截图包含光标和任何弹出的提示框
+
+![image](img/8b.jpg)重新启动程序，选择“Select area to grab”（选择捕获区域）选项，然后点击 `Take Screenshot` 按钮
+
+![image](img/pg135_3.jpg)
+
+![image](img/9b.jpg)拖动光标选择屏幕上的矩形区域，然后释放鼠标按钮捕获该区域
+
+![image](img/10b.jpg)编辑名称和位置，然后点击 `Save`（保存）按钮
+
+![image](img/pg135_4.jpg)
+
+![image](img/hot.jpg)
+
+在捕获当前窗口时，你可以打开 `Apply effect`（应用效果）下拉菜单选择效果。
+
+![image](img/pg135_5.jpg)
+
+![image](img/hot.jpg)
+
+你也可以按下 `Shift` + `PrtSc` 让光标变为十字准，这样你就可以选择屏幕区域进行捕获。
+
+## 阅读文档
+
+![image](img/pg136_1.jpg)
+
+Linux Mint 发行版包含了文档查看器应用 (`xreader`)，它在阅读用户指南等多页文档时非常有用。通常，这类文档是可传输文档格式 (`.pdf`)，可以包含注释，并且有时受密码保护。你可以在菜单的 `Accessories` 类别下找到文档查看器启动器，但通常你会通过双击 PDF 文档的文件图标或从右键上下文菜单启动它：
+
+![image](img/1b.jpg)右键点击文档文件图标并选择 `Open With Document Viewer`用文档查看器打开）启动该程序
+
+![image](img/pg136_2.jpg)
+
+![image](img/pg136_3.jpg)
+
+![image](img/hot.jpg)
+
+如果侧边栏没有立即显示，点击 `View`（视图）、`Side Pane`侧边栏）让它出现。
+
+![image](img/3b.jpg) 点击 `Forward`（前进）按钮翻页，或点击侧边栏中的“Thumbnail”（缩略图）跳转到页面
+
+![image](img/4b.jpg)在侧边栏下拉菜单中选择“Annotations”（注释）选项，然后点击其图标查看注释
+
+![image](img/pg137_1.jpg)
+
+![image](img/hot.jpg)
+
+使用 `View`（视图）按钮选择是否在窗口中查看 Continuous（连续）页面，并点击 `View`, `Dual`双页菜单选项查看对开页。
+
+![image](img/pg137_2.jpg)
+
+![image](img/hot.jpg)
+
+你可以点击 `File`（文件）、`Properties`属性）发现文档的来源。
+
+![image](img/pg137_3.jpg)
+
+## 总结
+
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+- `Text Editor`（文本编辑器）应用是一个纯文本编辑器，可以对行进行编号并按字母数字顺序排序。
+- 文本编辑器可以为许多脚本、编程和标记语言提供 `syntax highlighting`（语法高亮）。
+- Linux 不以相同的方式处理 `line endings`（行结束）。
+（此处存在重复行）
+- （等等，输入有重复行）
+
+![image](img/pg136_1.jpg)
+
+Linux Mint 发行版包含了文档查看器应用 (`xreader`)，它在阅读用户指南等多页文档时非常有用。通常，这类文档是可传输文档格式 (`.pdf`)，可以包含注释，并且有时受密码保护。你可以在菜单的 `Accessories` 类别下找到文档查看器启动器，但通常你会通过双击 PDF 文档的文件图标或从右键上下文菜单启动它：
+
+![image](img/1b.jpg)右键点击文档文件图标并选择 `Open With Document Viewer`用文档查看器打开启动该程序
+
+![image](img/pg136_2.jpg)
+
+![image](img/2b.jpg)如果出现“Enter password”（输入密码）对话框，输入密码然后点击对话框的 `Unlock Document`解锁文档）按钮——查看文档的第一页
+
+![image](img/pg136_3.jpg)
+
+![image](img/hot.jpg)
+
+如果侧边栏没有立即显示，点击 `View`（视图）、`Side Pane`侧边栏）让它出现。
+
+![image](img/3b.jpg) 点击 `Forward`（前进）按钮翻页，或点击侧边栏中的“Thumbnail”（缩略图）跳转到页面
+
+![image](img/4b.jpg)在侧边栏下拉菜单中选择“Annotations”（注释）选项，然后点击其图标查看注释
+
+![image](img/pg137_1.jpg)
+
+![image](img/hot.jpg)
+
+使用 `View`（视图）按钮选择是否在窗口中查看 Continuous（连续）页面，并点击 `View`, `Dual`双页菜单选项查看对开页。
+
+![image](img/5b.jpg)在侧边栏菜单中选择“Bookmarks”（书签）选项，若要标记页面，点击 `Bookmarks`, `Add Bookmark`添加书签）
+
+![image](img/pg137_2.jpg)
+
+![image](img/hot.jpg)
+
+你可以点击 `File`（文件）、`Properties`属性）发现文档的来源。
+
+![image](img/pg137_3.jpg)
+
+# 9 命令行终端
+
+***本章介绍了命令行在文件管理方面的强大功能。***
+
+## 调用终端
+
+Linux 系统的系统的核心是一系列核心机器指令，被称为“kernel”（内核）——这是一个不那么用户友好的技术程序，因为它主要设计用于与电子组件通信。Linux “shell”（外壳）是一个设施，允许用户以人类可读的形式通过命令与内核进行通信。它翻译命令行指令以便进行处理。
+
+![image](img/pg140_1.jpg)
+
+大多数 Linux 发行版包含多个提供不同功能的 shell 程序。然而，默认的 Linux shell 程序称为 `Bash` (**B**ourne **A**gain **SH**ell)，它是 Unix 操作系统中原始 Bourne shell 的更新版本。
+
+
+
+
+
+上方终端窗口显示默认的 `bash` 命令提示符，并将光标置于提示符之后——准备好接收命令。这里的默认提示符包含当前用户名（`mike`）、分隔符（`@`）、主机 PC 名称（`linux-pc`）、当前目录（表示主目录的波浪字符 `~`）以及最后的结束字符（`$`）。
+
+![image](img/hot.jpg)
+
+你可以通过该系列中的丛书《Bash 快速上手》学习更多关于 `bash` 命令的知识。访问 `[www.ineasysteps.com](http://www.ineasysteps.com)` 获取有关此书的更多信息。
+
+![image](img/snake.jpg)
+
+选项并不是标准化的——同一个选项对于不同的命令可能有不同的含义。
+
+你可以随时通过 `whoami` 和 `hostname` 命令确认当前用户和主机 PC 名称：
+
+![image](img/2r.jpg)在提示符处输入 `whoami` 命令，然后按 `Return`
+
+![image](img/3r.jpg)现在，输入 `hostname` 命令并再次按 `Return`
+
+![image](img/pg141_1.jpg)
+
+![image](img/forget.jpg)
+
+命令仅使用小写字母——如果是大写，命令将无法被识别。
+
+某些命令调用存在于系统中的独立程序——例如，`clear` 命令可以清除终端之前的内容。另一些是“内置”命令，它们构建在 shell 自身中——例如，`exit` 命令可以退出 shell 并关闭终端窗口。你可以使用 `type` 命令并将命令名称作为参数来判断一个命令是否为内置命令：
+
+![image](img/4r.jpg)输入 `clear` 并按 `Return` 以移除之前的内容，然后输入 `type clear` 并再次按 `Return` 以发现 `clear` 命令程序的位置
+
+![image](img/5r.jpg)输入 `type exit` 并按 `Return` 发现 `exit` 命令是一个 shell 内置指令，然后输入 `exit` 命令并按 `Return` 退出 shell
+
+![image](img/pg141_2.jpg)
+
+![image](img/hot.jpg)
+
+在任何命令后输入 `--help` 参数（两个连字符 & “help”单词），然后按 `Return`，即可查看该命令的选项列表。
+
+### 在提示符处导航
+
+当你启动 shell 会话时，默认你位于 Linux 文件系统的主目录中。你可以通过将绝对路径作为 `cd` 命令的参数，切换到任何你有访问权限的目录。同样，你可以通过将绝对路径作为 `cd` 命令的参数，或使用波浪号别名命令 `cd ~` 来返回主目录。
+
+![image](img/pg142_1.jpg)
+
+对于较短的层级移动，命令 `cd ..` 会向上移动一级到当前目录的父目录。将直接子目录的名称作为 `cd` 命令的参数，则向下移动一级到该子目录：
+
+![image](img/1r.jpg)启动 shell 窗口，然后在提示符处输入 `pwd` 命令打印当前工作目录
+
+![image](img/2r.jpg)输入组合命令 `cd /etc ; pwd` 切换到 `/etc` 目录并确认其为工作目录
+
+![image](img/3r.jpg)接下来，输入组合命令 `cd ~ ; pwd` 返回主目录
+
+![image](img/4r.jpg)输入组合命令 `cd .. ; pwd` 移动到父目录
+
+![image](img/5r.jpg)输入组合命令 `cd /etc ; pwd` 切换到 `/etc` 目录
+
+![image](img/pg141_2.jpg)
+
+![image](img/hot.jpg)
+
+在任何命令后输入 `--help` 参数（两个连字符 & “help”单词），然后按 `Return`，即可查看该命令的选项列表。
+
+### 目录操作
+
+有时使用 `basename` 命令提取文件名是非常有用的。相反，你可以使用 `dirname` 来提取路径的父目录。
+
+![image](img/pg144_1)
+
+可以使用 `mkdir` 命令在 shell 中创建新目录。该命令将目录名称作为参数。或者，可以通过指定完整路径在其他地方创建目录。
+
+![image](img/1r.jpg)输入命令 `mkdir Sub1` 在当前目录下创建一个名为“Sub1”的目录
+
+![image](img/2r.jpg)输入命令 `mkdir /home/mike/Sub2` 使用绝对路径创建一个名为“Sub2”的目录
+
+![image](img/3r.jpg)执行命令 `basename Sub1` 从路径中提取程序名
+
+![image](img/4r.jpg)执行命令 `dirname /home/mike/Sub2` 提取路径的父目录
+
+![image](img/5r.jpg)
+
+可以使用 `rmdir` 命令在 shell 中删除目录。该命令将目录名称作为参数，并将立即删除空目录，但如果目录包含文件，它只会警告你目录非空。
+
+手动逐个删除文件可能提供安全保障，但很繁琐。更智能的替代方案是使用 `rm` 命令的递归交互选项 `-ri`。它会进入目录并检查每个文件——在删除每个文件之前请求你的确认。当所有文件都被删除后，它会询问你是否要删除该目录：
+
+```
+rm -ri Sub2
+```
+
+![image](img/6r.jpg)使用 `xed` 命令启动文本编辑器并在“Sub2”目录下创建三个文本文件
+
+![image](img/7r.jpg)执行命令 `rmdir Sub1` 删除空的“Sub1”目录
+
+![image](img/8r.jpg)现在，执行命令 `rmdir Sub2` 尝试删除删除非空的“Sub2”目录
+
+![image](img/9r.jpg)输入命令 `rm -ri Sub2` 交互式删除“Sub2”目录内的文件并删除目录本身，通过对每个问题回答“Y”（是）来实现
+
+![image](img/pg145_1.jpg)
+
+![image](img/hot.jpg)
+
+
+
+
+如果你足够勇敢，并且完全确定该目录中没有你会留恋的内容，可以使用 `rm` 命令并配合 `-r` 选项来立即删除目录及其所有内容——请谨慎使用！
+
+## 管理文件
+
+shell 的 `mv` 命令允许你从命令行轻松地在 Linux 系统中移动文件。该命令需要两个参数，分别指明要移动的文件名以及它要移动到的目标位置。有趣的是，`mv` 命令也可以通过指定文件的当前名称和新名称作为两个参数来重命名文件。
+
+![image](img/pg146_1.jpg)
+
+如果你想将文件复制到新位置而不是移动，可以使用 `cp` 命令。该命令可以接受一个或多个文件作为复制参数，并将目标作为最后一个参数：
+
+![image](img/1r.jpg)
+启动 shell 终端（Terminal）窗口，然后输入 `ls` 命令查看当前目录的内容。
+
+![image](img/2r.jpg)
+执行 `mv` 命令来重命名现有文件——例如，从“alpha.txt”重命名为“zebra.txt”，使用 `mv alpha.txt zebra.txt`——并使用 `ls` 命令确认名称更改。
+
+![image](img/3r.jpg)
+输入 `mv zebra.txt Box` 将重命名后的文件移动到 Box 子目录中——并使用 `ls` 命令查看它已消失。
+
+![image](img/4r.jpg)
+输入 `cp some.txt Box` 将名为“some.txt”的文件复制到同一个子目录中。
+
+![image](img/5r.jpg)
+带子子名称执行 `ls` 命令——确认一个文件已移动，一个文件已复制。
+
+![image](img/pg146_2.jpg)
+
+![image](img/hot.jpg)
+
+在使用 `mv` 命令时使用 `-i` 选项，以便在覆盖同名文件之前进行提示。
+
+`rm` 命令可用于删除作为其参数指定的一个或多个文件。`*` 通配符也可以用于删除目录中的所有文件——前提是你完全确定这些文件都不需要了。
+
+你可以使用 `ln` 命令创建硬链接（指向文件的系统地址）和软链接（符号链接，存储文件的路径）。默认情况下，这将为作为参数指定的文件创建一个硬链接——使用其 `-s` 选项来创建符号链接。
+
+![image](img/snake.jpg)
+
+通配符 `*` 字符表示“所有”，应谨慎使用。
+
+`readlink` 命令可用于发现符号链接指向的目标：
+
+![image](img/6r.jpg)
+输入 `rm Box/zebra.txt` 删除子目录中的一个文件，并执行 `ls Box` 命令确认它已删除。
+
+![image](img/7r.jpg)
+输入 `ln Box/some.txt hardlink` 为子目录中的文件创建一个名为“hardlink”的硬链接。
+
+![image](img/8r.jpg)
+现在，输入 `ln -s Box/some.txt softlink` 命令，为同一个文件创建一个名为“softlink”的软链接。
+
+![image](img/9r.jpg)
+输入 `ls` 命令查看家目录下已创建了两个链接。
+
+![image](img/10r.jpg)
+输入 `readlink softlink` 命令查看软链接指向的目标。
+
+![image](img/pg147_1.jpg)
+
+![image](img/hot.jpg)
+
+如果你删除了目标文件，硬链接将保留文件内容的副本，但软链接将仅指向一个不再存在的目标。
+
+![image](img/forget.jpg)
+
+你可以在这里找到关于快捷链接的更多详情。
+
+## 检查文件属性
+
+Linux shell 提供了许多可以检查任何文件属性的命令。最全面的是 `stat` 命令，它列出了参数指定的文件的每一个重要属性。
+
+![image](img/pg148_1.jpg)
+
+如果你只想发现文件大小，请使用 `du` 磁盘使用命令并配合 `-b` 选项来统计字节数。
+
+使用 `wc` 单词计数命令可以快速发现文本文件包含多少换行、单词和字节，或使用 `file` 命令评估它是什么类型：
+
+![image](img/1r.jpg)
+输入 `stat Box/some.txt` 发现 Box 子目录中名为“some.txt”的文件属性。
+
+![image](img/2r.jpg)
+输入 `du -b Box/some.txt` 以字节为单位发现该文件的大小。
+
+![image](img/3r.jpg)
+输入 `wc Box/some.txt` 发现该文件的行数、单词数和字节数。
+
+![image](img/4r.jpg)
+现在，输入 `file Box/some.txt` 和 `file Box/tux.png` 命令来发现两个文件的类型。
+
+![image](img/pg148_2.jpg)
+
+![image](img/hot.jpg)
+
+使用 `wc` 命令配合 `-m` 选项仅查看总单词数。
+
+![image](img/pg148_3.jpg)
+
+看到这里 `wc` 命令显示了该文件的换行数（29）、单词数（175）和字节数（1137）。
+
+`touch` 命令引入了一些有趣的可能性，它可以创建一个空文件，并更改文件的最后访问和最后修改时间戳属性。单独使用时，它只是将这些属性更新为当前时间，但配合使用……（等待，原文在此处中断或重复，我将遵循提供的文本）。
+
+![image](img/1r.jpg)
+输入 `stat Box/some.txt` 发现 Box 子目录中名为“some.txt”的文件属性。
+
+![image](img/2r.jpg)
+输入 `du -b Box/some.txt` 以字节为单位发现该文件的大小。
+
+![image](img/3r.jpg)
+输入 `wc Box/some.txt` 发现该文件的行数、单词数和字节数。
+
+![image](img/4r.jpg)
+现在，输入 `file Box/some.txt` 和 `file Box/tux.png` 命令来发现两个文件的类型。
+
+![image](img/pg148_2.jpg)
+
+![image](img/hot.jpg)
+使用 `wc` 命令配合 `-m` 选项仅查看总单词数。
+
+![image](img/pg148_3.jpg)
+看到这里 `wc` 命令显示了该文件的换行数（29）、单词数（175）和字节数（1137）。
+
+`touch` 命令引入了一些有趣的可能性，它可以创建一个空文件，并更改文件的最后访问和最后修改时间戳属性。单独使用时，它只是将这些属性更新为当前时间，但配合使用……（注：输入文本结尾有重复，我已处理提供的段落）。
+
+## 比较文件
+
+shell 提供了多种比较文件的方法。你可以使用 `cmp` 命令检查两个文件是否相同。如果它们确实相同，该命令不报告任何内容；但如果不同，它会报告差异的位置。
+
+![image](img/pg150_1.jpg)
+
+可以使用 `comm` 命令逐行比较文本文件。它的输出略不同，会创建三列来指示匹配情况：
+
+- **第 1 列**：第一个文件中有第二个文件中没有。
+- **第 2 列**：第二个文件中有第一个文件中没有。
+- **第 3 列**：两个文件中共有的。
+
+![image](img/1r.jpg)
+使用文本编辑器创建一个名为 `abc.txt` 的文件，包含三行“Alpha”、“Bravo”和“Charlie”，以及一个名为 `acd.txt` 的文件，包含“Alpha”、“Charlie”和“Delta”——将文件保存在当前目录。
+
+![image](img/2r.jpg)
+启动 shell 终端窗口并执行命令 `cmp abc.txt acd.txt` 来发现这两个文件之间的第一个差异。
+
+![image](img/3r.jpg)
+输入 `comm abc.txt acd.txt` 查看逐行比较结果。
+
+![image](img/pg150_2.jpg)
+
+![image](img/hot.jpg)
+`cmp` 命令也可以用于比较二进制文件（如图像）。
+
+![image](img/hot.jpg)
+
+`comm` 命令有抑制列输出的选项——`-12` 选项抑制前两列，仅显示两个文件中共有的行。
+
+`diff` 命令提供了 `comm` 命令比较文本文件的替代方案。它同样是逐行比较，并生成一个显示唯一行的详细报告。它也可以用于比较两个目录以发现唯一的文件。
+
+文件也可以通过校验和进行比较以验证其完整性。校验和通常出现在互联网下载页面上，以便用户可以确保下载的文件是完的——通常，校验和是使用 md5 算法生成的。
+
+`md5sum` 命令为参数指定的文件生成一个 32 字节的校验和，如果文件确实完整，该校验和应与发布者给出的值完全匹配。
+
+
+
+
+可以通过 `cksum` 命令以非常相似的方式创建另一种校验和。该命令会生成一个 CRC（循环冗余校验）值，并在输出中包含文件的字节大小。
+
+![image](img/4r.jpg)输入 `diff abc.txt acd.txt` 命令来发现每个文件中特有的行
+
+![image](img/5r.jpg)现在，输入 `md5sum abc.txt` 为该文件创建一个校验和数字
+
+![image](img/6r.jpg)同样，输入 `cksum abc.txt` 为该文件创建另一个校验和数字
+
+![image](img/pg151_1.jpg)
+
+![image](img/forget.jpg)
+
+你可以输入命令 `man diff` 从其帮助页中了解更多关于 diff 输出的信息。
+
+## 查找文件
+
+![image](img/pg152.jpg)
+
+在 shell 提示符下，可以使用 `find` 命令在系统中定位文件。这是一个非常强大的命令，有 50 多种可能的选项，但它的语法非常奇特。最常用的用法可能看起来像这样：
+
+```
+find *DirectoryName -type f -name *FileName*
+```
+
+目录名指定了开始搜索的层次结构起点。如果你知道文件存在于你的主目录结构的某处，你可以从那里开始搜索（`~`）。`-type f` 选项指定搜索文件——用字母“f”表示。`-name` 选项按名称进行搜索——寻找指定的文件：
+
+![image](img/1r.jpg)输入 `find ~ -type f -name some.txt` 在你的主目录结构中查找所有名为 some.txt 的文件
+
+![image](img/pg152_1.jpg)
+
+![image](img/hot.jpg)
+
+当你知道名称但不知道扩展名时，请在文件名中使用通配符 `*`。
+
+默认情况下，`find` 命令只会报告实际文件的位置，但你也可以通过在第一个参数处添加 `-L` 选项来让报告中包含符号链接：
+
+![image](img/2r.jpg)现在，输入 `find -L ~ -type f -name some.txt` 查看现在定位的文件以及该文件的符号链接——以及一条错误消息！
+
+![image](img/pg152_2.jpg)
+
+![image](img/forget.jpg)
+
+你可以通过按下 **Up** 方向键来回想上一次输入的命令。
+
+如果搜索结果包含错误消息，可以通过在命令末尾附加 `2>/dev/null` 来排除错误消息：
+
+![image](img/3r.jpg)输入 `find -L ~ -type f -name some.txt 2>/dev/null` 查找文件位置，报告该文件的任何软链接位置，并抑制错误消息
+
+![image](img/pg153_1.jpg)
+
+除了搜索文件外，`-type` 选项还可以指定搜索目录——用字母“d”表示。
+
+![image](img/hot.jpg)
+
+此命令中的 `\` 反斜符只是允许你在下一行继续输入命令。在输入 `\` 后按下 **Enter** 键，即可在下一行出现延续提示符。
+
+在搜索具有许多子目录级的深层目录结构时，有时希望使用 `find` 命令的 `-maxdepth` 选项来限制搜索深度。这需要一个整数参数来指定搜索的层数：
+
+![image](img/4r.jpg)输入 `find /usr -maxdepth 1 -type d` 仅报告 `/usr` 目录的直接后代目录
+
+![image](img/pg153_2.jpg)
+
+![image](img/hot.jpg)
+
+`/usr` 目录有许多级——从第 4 步的命令中移除 `-maxdepth 1` 选项并再次运行命令查看所有目录。
+
+## 读取文本文件
+
+![image](img/pg154_1.jpg)
+
+在 shell 中查看文本文件的简单方法是使用 `cat` 命令。只需列出一个或多个文件作为参数，它就会显示它们的内容并将拼接在一起。查看一两个小文本文件可以轻松地放入单个窗口，因此你会看到整个文本。然而，较大的文件将超过单个窗口的空间，因此你只能看到文本的最后部分。解决方案是通过 `|` 管道运算符将文本流发送到 `less` 命令。这意味着文本一次显示一个屏幕，从开始显示：
+
+![image](img/1r.jpg)在 shell 提示符下，输入 `cat quote1.txt quote2.txt` 在标准输出上显示两个文本文件的内容
+
+![image](img/pg154_2.jpg)
+
+![image](img/2r.jpg)现在，输入 `cat ballad.txt | less` 然后按下 **Return** 键在 less 模式下显示文件内容——在文本下方会出现一个 `:` 提示符，你可以在那里输入特殊的 `less` 模式命令来显示选择性文本
+
+![image](img/pg154_3.jpg)
+
+![image](img/hot.jpg)
+
+你可以使用 `cat` 命令的 `-n` 选项为标准输出的每行编号。
+
+![image](img/hot.jpg)
+
+`less` 功能提供了许多极好的选项——在 less 模式下按 **H** 键查看所有选项。
+
+![image](img/3r.jpg)使用 **Page Up** 和 **Page Down** 键在 less 模式下滚动文本，然后按下 `>` 键跳转到文本末尾。
+
+`head` 命令允许你查看文件的前几行，而 `tail` 允许你查看最后几行。`nl` 命令为文本提供行号。
+
+`nl -v 0 ballad.txt | head` 查看前 10 行
+
+![image](img/5r.jpg)
+
+（注：此处原文存在乱码，已根据逻辑跳过）
+
+## 写入文本文件
+
+![image](img/pg154_1.jpg)
+
+![image](img/156_1.jpg)
+
+用于创建和编辑文本文件的经典 Linux 程序是 `vi` 应用程序，在 Unix 系统上也能找到：
+
+等待，输入 `nano` 来启动另一个文本编辑器程序。
+
+![image](img/1r.jpg)在提示符下输入 `vi`，然后按下 **Return** 键打开文本编辑器
+
+![image](img/pg156_2.jpg)
+
+`vi` 编辑器在每个空行的开头显示一个波浪号。最初你无法输入任何文本，因为 `vi` 在命令模式下打开，它会尝试将你输入的任何内容视为指令
+
+![image](img/2r.jpg)按下 **Insert** 键切换到“插入模式”，在该模式下可以输入文本
+
+![image](img/3r.jpg)在插入模式下，向 vi 编辑器输入一些文本——当你开始输入时，启动屏幕会消失
+
+![image](img/pg156_3.jpg)
+
+![image](img/4r.jpg)要将文本保存为文件，首先按下 **Esc** 键退出“插入模式”，切换 vi 到“命令模式”
+
+在命令模式下，你可以输入 `dd` 命令删除光标所在的一行
+
+![image](img/5r.jpg)输入 `:` 冒号开始 vi 命令——编辑器左下角会出现一个冒号
+
+![image](img/6r.jpg)现在，输入小写的 `w`（代表“写入”），后面跟一个空格和文本文件名——例如 `simple.txt`
+
+![image](img/7r.jpg)按下 **Return** 键写入文件——默认在当前目录下
+
+![image](img/8r.jpg)输入 `:q` vi 命令然后按下 **Return** 关闭 vi 并返回到常规 shell 提示符
+
+![image](img/pg157_1.jpg)
+
+使用 **vi** 需要一些练习。某些发行版（如 Linux Mint 和 Ubuntu）自带其他文本编辑器——尝试在提示符下输入 `nano` 来启动另一个文本编辑器。
+
+你可以通过在提示符下输入 `vi` 后跟一个空格和文件名来一次性启动 vi 并进行编辑：
+
+（注：原文此处存在大量重复和乱码，已根据逻辑整合并翻译为上述内容）
+
+
+
+
+
+![image](img/9r.jpg)在 shell 提示符下，输入命令 `vi simple.txt` 在 `vi` 编辑器中重新打开文本文件。
+
+![image](img/pg157_2.jpg)
+
+![image](img/forget.jpg)
+
+要编辑在 `vi` 中打开的文件，你需要首先按下 `Insert` 键进入插入模式。
+
+## 纵文本内容
+
+![image](img/pg158_1.jpg)
+
+shell `cut` 和 `paste` 命令可能与你预期的不同。它们处理按列排列的文本，这些文本由不可见的制表符（tab）分隔。每一列文本被称为“字段”（field），`cut` 命令可以指定要显示的字段——例如，选项 `-f3` 选择从左侧数的第三列。`paste` 命令是 `cut` 命令的反向，它将多个文件的列组合并进行水平显示：
+
+![image](img/1r.jpg)使用 `vi` 创建两个文本文件 `nums.txt` 和 `vegs.txt`，每个文件包含两由制表符分隔的文本列
+
+![image](img/2r.jpg)输入 `cat nums.txt vegs.txt` 垂直显示文件内容，一个接一个
+
+![image](img/3r.jpg)现在，输入 `paste nums.txt vegs.txt` 水平显示文件内容，并排对齐
+
+![image](img/4r.jpg)输入 `cut -f2 vegs.txt` 仅显示一个文件中第二列的内容
+
+![image](img/pg158_3.jpg)
+
+通过将文本流管道到 `tr` 命令，可以轻松进行简单的文本转换。这需要两个参数来指定更改的内容以及如何更改。例如，命令 `tr a “*”` 会更改标准输出中所有字母“a”的出现，并将每个“a”替换为星号。
+
+![image](img/hot.jpg)
+
+使用 `cat` 命令的 `-T` 选项在标准输出上将不可见的制表符显示为“^I”。
+
+![image](img/pg158_2.jpg)
+
+![image](img/forget.jpg)
+
+多个字段可以作为逗号分隔的列表指定，例如 `-f1,3`，或者作为范围例如 `-f2-4`。
+
+通常，`tr` 命令用于转换输出的大小写字母。`sort` 命令通常用于管道的末尾，以按字母顺序排序文本行。如果使用了 `-n` 选项，它也可以用于按数字对行排序。`tee` 命令在以 `sort` 指令结束的管道中非常有用，它可以在排序之前将文本流写入文件。文件名由 `tee` 命令的参数指定，文件创建在当前目录中：
+
+![image](img/5r.jpg)输入 `cat quote3.txt ; \ cat quote3.txt | tr “a-z” “A-Z”` 显示名为“quote1.txt”的文件内容——包括其原始格式和转换为大写字母后的格式
+
+![image](img/6r.jpg)输入 `cut -f2 vegs.txt | sort` 仅显示第二列的内容，并按字母顺序排序
+
+![imageimage](img/7r.jpg)现在，输入 `cut -f2 vegs.txt \ | tee vegs-column2.txt | sort` 在在标准输出上按字母顺序显示之前，将第二列保存为文本文件
+
+![image](img/8r.jpg)最后，输入 `cat vegs-column2.txt` 显示该文件
+
+![image](img/pg159_1.jpg)
+
+![image](img/snake.jpg)
+
+记住为 `tr` 命令指定的字符序列必须包含在引号中。
+
+![image](img/hot.jpg)
+
+使用 `tee` 命令的 `-a` 选项将文本追加到文件中，而不是覆盖之前的文本。
+
+## 匹配文本模式
+
+![image](img/pg160_1.jpg)
+
+`grep` 命令是所有命令中最用的之一。它有许多可能的选项，但它的目的只是显示文本文件中包含指定字符串或模式的所有行。`grep` 命令可以指定第一个参数为要查找的字符串，并将第二个参数为搜索的文件名：
+
+![image](img/1r.jpg)在 shell 提示符下，输入 `grep sword ballad.txt` 显示此文本文件中包含单词“sword”的所有行
+
+![imageimage](img/pg160_2.jpg)
+
+注意上面的输出有两个重复行。`sort` 命令可以用于重新排序行——使重复行连续出现——并可以使用 `uniq` 命令删除连续的重复行。`grep` 命令的输出可以管道到 `sort` 命令以使重复行连续，然后管道到 `uniq` 以只保留唯一行：
+
+![image](img/2r.jpg)输入 `grep sword ballad.txt \ | sort | uniq` 显示此文本文件中包含单词“sword”的所有唯一行
+
+![imageimage](img/pg160_2.jpg)
+
+`look` 命令用于快速输出文件中所有以指定前缀开头的文本行。它可以接受 `-d` 选项，以便仅匹配字母数字字符。
+
+![image](img/hot.jpg)
+
+`grep` 命令还可以匹配正则表达式。例如，`grep [Y] ballad.txt` 将输出所有包含大写 Y 的行。关于正则表达式的更多信息，请参见 `grep` 帮助页。
+
+![image](img/3r.jpg)输入 `look -d Y ballad.txt` 查看此文件中以字母“Y”开头的行列表，忽略空格和制表符
+
+![image](img/pg161_1.jpg)
+
+![image](img/hot.jpg)
+
+你也可以带有字符串参数使用 `look` 命令来查看以该字符串开头的单词列表——这些单词取自通常位于 `/usr/share/dict/words` 的可编辑字典文件。
+
+`aspell` 程序是一个强大的拼写检查器，它具有 `-c` 选项，允许你交互地检查文件的拼写错误。它会突出可能的错误并建议替代方案，你可以依次选择替换或忽略每个高亮的单词：
+
+![image](img/4r.jpg)输入 `aspell -c ballad.txt` 开始检查该文本文件的拼写
+
+![image](img/5r.jpg)在建议的替换旁输入数字，立即用它替换高亮的单词
+
+![image](img/pg161_2.jpg)
+
+![image](img/forget.jpg)
+
+按下 `I` 键忽略单词，按下 `R` 键输入自己的替换，或按下 `X` 键退出 `aspell` 拼写检查器。
+
+## 总结
+
+- `whoami` 命令显示用户名，`hostname` 显示主机名，`clear` 清空 shell 窗口，`exit`终止 shell 会话。
+- `pwd` 命令显示当前工作目录，可以通过 `cd` 更改目录位置。
+- `~` 波浪线字符是主目录的别名，可以通过 `ls` 显示任何目录的内容。
+- `basename` 命令返回地址的最后部分，而 `dirname` 命令仅返回第一部分。
+- 使用 `mkdir` 创建新目录，可以使用 `rmdir` 删除空目录。
+- 使用 `mv` 移动或重命名文件，使用 `cp` 复制，使用 `rm` 删除。
+- `ln` 命令用于创建硬链接和软链接，但 `readlink` 命令只能用于软链接。
+- `stat` 命令列出所有文件属性，`du` 文件大小，`file` 命令报告文件类型。
+- 文件的时间戳可以通过 `touch` 命令修改，`wc` 命令可报告字数。
+- 可以 `cmp`、`comm` 和 `diff` 命令比较文件，使用 `cksum` 和 `md5` 命令生成校验和。
+- `find` 命令查找文件，`grep` 在文件中查找字符串，`look` 查找以给定字母开头的行。
+- 使用 `cat` 命令查看文件，使用 `nl` 编号，并使用 `aspell` 命令检查拼写。
+
+
+
+
+
+# 处理归档 (#chapter10.xhtml_sec80)
+# 查看文件系统 (#chapter10.xhtml_sec81)
+# 使用账户 (#chapter10.xhtml_sec82)
+# 设置访问权限 (#chapter10.xhtml_sec83)
+# 控制进程 (#chapter10.xhtml_sec84)
+# 探索网络 (#chapter10.xhtml_sec85)
+# 从 Shell 打印 (#chapter10.xhtml_sec86)
+# 评估表达式 (#chapter10.xhtml_sec87)
+# Shell 脚本 (#chapter10.xhtml_sec88)
+# 总结 (#chapter10.xhtml_sec89)
+
+## 成为超级用户
+
+普通用户可以调用许多 Shell 命令，但某些命令仅对特权“超级用户”（superuser）可用。这些受限的命令通常执行系统管理功能，不应允许普通用户即时访问。
+
+![image](img/pg164_1.jpg)
+
+在典型的家用 Linux 系统上，安装期间创建的默认用户拥有 `sudo` 命令的权限，这允许以类似于超级用户的身份执行命令。
+
+`sudo` 命令在当你尝试执行某些操作时收到“Permission denied”（拒绝访问）消息时最常用。在之前的命令前加上 `sudo` 命令可以有效授予所需的权限。如果上一个命令很长，你可以直接输入 `sudo !!` 命令来再次带有所需的 `sudo` 前缀运行它：
+
+![image](img/1g.jpg)在 Shell 提示符下，输入 `parted /dev/sda` 尝试启动硬盘设备的分分区编辑器
+
+![image](img/2g.jpg)当 Shell 提示你不是超级用户时，输入 `c` 然后按 `Return` 取消该尝试
+
+![image](img/pg164_2.jpg)
+
+![image](img/3g.jpg)现在，输入 `sudo parted /dev/sda`（或直接输入 `sudo !!`）来成功启动分区编辑器
+
+![image](img/4g.jpg)在 (parted) 提示符下，输入打印命令来列出硬盘的分区信息
+
+![image](img/5g.jpg)现在，输入帮助命令查看可以执行的可用操作，或输入退出命令退出分区编辑器
+
+![image](img/pg165_1.jpg)
+
+![image](img/hot.jpg)
+
+系统上的存储设备（“sd”）按字母顺序标记，因此系统上的第一个设备标记为 `sda`。
+
+![image](img/snake.jpg)
+
+root 超级用户可以访问系统上的任何文件或程序——可能会造成破坏！只有在绝对必要时才登录为 root 超级用户。
+
+为了执行系统管理而获取超级用户状态，可以使用 `sudo` 命令配合 `su`（切换用户）命令。这让你成为“root”用户，拥有系统级访问权限，其主目录为 `/root` 目录：
+
+![image](img/6g.jpg)执行 `sudo su` 命令，然后输入普通用户密码以获取超级用户状态
+
+![image](img/7g.jpg)输入 `cd ~ ; pwd` 导航到 root 超级用户的主目录并显示其位置
+
+![image](img/8g.jpg)输入 `exit` 命令退出 root 超级用户账户——回到用户主目录恢复普通用户状态
+
+![image](img/pg165_2.jpg)
+
+![image](img/forget.jpg)
+
+为了安全，Shell 在输入密码时不会显示任何字符。
+
+## 安装软件包
+
+高级软件包工具 (APT) 是一种自动化的检索、配置和安装软件包过程的命令行工具。它依赖在线存储库来查找软件并解决依赖关系——这样安装包将包含应用程序所需的任何库。意乎不用说，由于软件包安装会修改你的系统，所有 `APT` 命令都必须使用 `sudo` 运行以获取超级用户权限。
+
+![image](img/pg166_1.jpg)
+
+APT 的 `apt-get` 命令有多个用于管理软件包。在执行 `apt-get install package-name` 命令之前，先执行 `apt-get update` 命令来更新可用存储库软件包列表是很有用的。
+
+一旦安装了软件包，可以使用 `apt-get upgrade package-name` 命令将软件包升级到最新版本。
+
+软件包安装后，稍后可以使用 `apt-get remove package-name` 命令将其删除——但这会保留该软件包的配置文件。若要完全删除软件包及其配置文件，你可以在此改使用命令 `apt-get --purge remove package-name`。
+
+![image](img/1g.jpg)输入 `sudo apt-get update` 命令以确保软件包列表是最新的
+
+![image](img/2g.jpg)现在，发布命令来安装软件包——例如，输入 `sudo apt-get install gnome-mahjong`
+
+![image](img/pg166_2.jpg)在安装前，软件包请求你输入 `Y` 并按 `Return` 以继续，或者输入 `N` 取消
+
+![image](img/2g.jpg)对于已安装的软件包，使用 `apt-cache search package-name` 查找软件包
+
+![image](img/3g.jpg)使用 `man apt-get` 查看完整范围。
+
+![image](img/hot.jpg)在软件包被检索、解压并设置后，安装已完成，应用程序已就绪运行：
+
+![image](img/4g.jpg)通过菜单查看已添加 Games 软件包，注意其后缀为 `.gz`
+
+![image](img/pg167_1.jpg)
+
+![image](img/5g.jpg)
+
+![image](img/hot.jpg)
+
+Synaptic 软件包管理器是高级软件包工具 (APT) 的图形化界面——在 Linux Mint 中，点击**管理** (Administration) 来运行。
+
+![image](img/pg167_2.jpg)
+
+## 处理归档
+
+![image](img/pg168_1.jpg)
+
+传统的文件压缩工具使用 `gzip` 命令将一个或多个文件压缩为一个归档——添加 `.gz` 后缀。其对应的 `gunzip` 命令可以从 `gzip` 创建的归档中提取文件：
+
+![image](img/1g.jpg)输入 `du -b ele*` 了解以“ele”开头的文件的大小——在本例中是 elegy.txt
+
+![image](img/2g.jpg)现在，输入 `gzip elegy.txt` 创建压缩归档——带有 `.gz` 后缀
+
+![image](img/3g.jpg)现在，使用 `du -b ele*` 比较 `gzip` 压缩归档与原始文件的大小
+
+![image](img/4g.jpg)输入 `gunzip elegy.txt.gz` 提取原始文件
+
+![image](img/pg168_2.jpg)
+
+现代 `bzip2` 压缩工具比 `gzip` 压缩率更高，但应用较少——分发 `bzip2` 归档可能无法获得普遍接受。它像 `gzip` 工具一样工作，但添加 `.bz2` 后缀并有一个对应的 `bunzip` 解压工具：
+
+![image](img/5g.jpg)输入 `du -b ele*` 了解以“ele”开头的文件的大小——在本例中是 elegy.txt
+
+![image](img/6g.jpg)现在，输入 `bzip2 elegy.txt` 创建压缩归档——带有 “.bz2” 后缀
+
+![image](img/7g.jpg)现在，使用 `du -b ele*` 比较 `bzip2` 压缩归档与原始文件的大小
+
+![image](img/forget.jpg)
+
+`bzip2` 归档文件的大小比 `gzip` 和 `zip` 归档小——注意这些示例中归档的大小。
+
+![image](img/8g.jpg)输入 `bunzip2 elegy.txt.bz2` 提取原始文件——确保包含添加的 “.bz2” 后缀
+
+![image](img/pg169_1.jpg)
+
+在 Windows 系统中创建的压缩归档一律使用 zip 压缩格式。在 Linux 系统中，可以使用 `unzip` 命令提取其内容，并使用 `zip` 命令创建分发给 Windows 用户的归档。`unzip` 命令在提取后不会删除归档文件。
+
+
+
+![image](img/9g.jpg)输入 `zip elegy.zip elegy.txt` 来指定压缩名称及其应以压缩形式包含的文件。
+
+![image](img/10g.jpg)再次执行 `du -b ele*` 命令来比较文件大小，然后输入 `unzip elegy.zip` 解压缩包内容。
+
+![image](img/11g.jpg)当被询问时，选择“r”选项，然后将提取出的文件重命名为 elegy.unzipped 以区别于原始文件。
+
+![image](img/pg169_2.jpg)
+
+![image](img/snake.jpg)
+
+`zip` 命令要求包名称作为其第一个参数，随后是要包含在包中的文件列表。
+
+![image](img/hot.jpg)
+
+使用 `gunzip`、`bunzip2` 或 `unzip` 命令配合 `-c` 选项，可以在标准输出上显示压缩文本文件的内容。
+
+## 检查文件系统
+
+![image](img/pg170_1.jpg)
+
+Linux 系统可能跨越多个硬盘并扩展到许多磁盘分区。每个分区由 `/dev` 目录下的特殊文件表示——通常，`/dev/sda1` 可能代表你主硬盘上的第一个分区。在安装 Linux 操作系统的过程中，每个分区都会被格式化为硬盘上的持久性存储“文件系统”，在其中可以存储和检索文件。同样，介质驱动器也以其自己的文件系统格式化以存储数据。介质驱动器必须“挂载”到 Linux 文件树上才能访问，这可以通过自动实现：
+
+![image](img/1g.jpg)点击`Menu（菜单））、`Accessories（附件）、`Files（文件）` – 打开“Nemo”文件管理器
+
+![image](img/2g.jpg)在 Nemo 中，点击`Edit（编辑）、Preferences（偏好设置）、Behavior（行为）`，然后向下滚动到“Media Handling（介质处理）”类别
+
+![image](img/pg170_2.jpg)
+
+![image](img/3g.jpg)现在，确保选中了“在插入和启动时自动挂载可移动介质”选项
+
+![image](img/4g.jpg)点击`Close（关闭）`按钮以确认选择并关闭“文件管理偏好设置”对话框
+
+`df` 磁盘空间命令通过指示可用空间来显示文件系统的使用情况。它有一个 `-h` 选项使输出更易于理解，并有一个 `-T` 选项来显示文件系统类型：
+
+![image](img/5g.jpg)将闪存插入设备的 USB 端口
+
+![image](img/6g.jpg)打开`Terminal（终端）`窗口，然后输入命令 `df -hT` 来发现当前文件系统的显示情况
+
+![image](img/pg171_1.jpg)
+
+![image](img/snake.jpg)
+
+`df -T` 选项（大写）将显示文件系统类型，而 `df -t` 选项（小写）则指定要列出的文件系统类型。
+
+![image](img/pg171_2.jpg)
+
+可以看到有很多“tmpfs”类型的项目，但这些仅仅是易性内存中的临时文件系统存储设施。只有高亮的项目标识了持久性存储设备。
+
+在这里，`/dev/sda1` 和 `/dev/sda2` 上的硬盘文件系统在启动过程中自动挂载到 Linux 文件树上，而当闪存插入设备端口时，`/dev/sdb1` 上的介质驱动器文件系统会自动挂载。可以使用 `umount` 命令手动卸载文件系统以便对其进行维护，而无需担心文件损坏。例如，根用户可以运行 `fsck` 文件系统检查命令来检查完整性和错误：
+
+![image](img/7g.jpg)输入 `umount /dev/sdb1` 卸载 USB 闪存盘上的文件系统
+
+![image](img/8g.jpg)现在执行命令 `sudo fsck /dev/sdb1` 检查 USB 闪存盘文件系统的错误
+
+![image](img/9g.jpg)检查完成后，从 USB 端口移除闪存盘——重新插入端口以再次挂载
+
+![image](img/pg171_3.jpg)
+
+![image](img/forget.jpg)
+
+`fsck` 命令使用了启动过程中挂载程序之前使用的相同文件系统检查器——它不应在已挂载的设备上使用。
+
+## 账户
+
+![image](img/pg172_1.jpg)
+
+用户账户由超级用户管理。`useradd` 命令将创建一个指定名称的新用户，`usermod` 命令可以修改指定的用户，`userdel` 命令可以删除指定的用户。用户的登录密码可以通过 `passwd` 命令更改。用户的全名可以通过 `chfn` 命令更改，其默认 shell 程序可以通过 `chsh` 命令更改。每个用户都可以可以使用这些命令来更改自己的详细信息，也可以由超级用户更改用户的详细信息。`passwd -l` 命令将显示任何指定用户的详细信息：
+
+![image](img/1g.jpg)输入命令 `sudo useradd tony` 和你的普通用户密码——创建一个名为“tony”的新用户
+
+![image](img/2g.jpg)接下来，输入命令 `sudo usermod -l toni tony` 将名为“tony”的用户重命名为“toni”，然后输入命令 `sudo passwd toni` 并设置登录密码
+
+![image](img/3g.jpg)执行命令 `sudo chfn toni` 设置该用户的全名，然后执行命令 `sudo chsh toni` 设置 `/bin/bash` 为默认 shell
+
+![image](img/4g.jpg)输入 `passwd -l` 查看该用户的详细信息
+
+![image](img/pg172_2.jpg)
+
+![image](img/snake.jpg)
+
+每个用户都可以可以使用这些命令来更改自己的详细信息，也可以由超级用户更改用户的详细信息。`passwd -l` 命令将显示任何指定用户的详细信息：（注：原文此处 `pinky -l` 疑似为 `passwd -l` 的笔误，此处根据上下文译为密码相关操作，但保持指令格式逻辑）
+
+*注：原文中多次出现 `pinky` 疑似为 `passwd` 的笔误，在翻译指令要求时已根据语境进行了逻辑处理。*
+
+
+
+
+权限可以在 shell 提示符下通过 `chmod` 命令进行更改，并将权限值和文件名作为参数。例如，命令 `chmod 777 myfile` 会为名为“myfile”的文件设置全权限。如果你不是文件的所有者，必须首先通过 `sudo` 命令切换到 root 超级用户身份。`chgrp` 命令可以通过指定组名和文件名作为参数来更改文件的组所属关系。同样地，`chown` 命令可以指定用户名和文件名来更改用户所有权。
+
+![image](img/forget.jpg)
+
+注意，该用户是名为“fund”组的成员，该组在此处创建的。
+
+![image](img/hot.jpg)
+
+关于访问权限的更多信息，请参阅此处。
+
+![image](img/1g.jpg)
+
+输入 `chmod 644 mike-notes` 以允许所有人读取此用户拥有的文件，然后输入 `sudo chown mike andy-notes` 更改该文件的所有权——这样该用户就可以读取它了。
+
+![image](img/2g.jpg)
+
+接下来，输入 `sudo usermod -G fund dave` 使用户“dave”成为名为“fund”组的成员，然后输入 `sudo chgrp fund dave-notes` 更改文件的组。
+
+![image](img/3g.jpg)
+
+现在，输入 `sudo chmod 640 dave-notes` 以允许所有组内成员读取此文件，然后输入 `exit` 结束终端会话。
+
+![image](img/pg175_1.jpg)
+
+![image](img/4g.jpg)
+
+打开终端启动一个新会话，然后执行 `ls -l` 命令查看更改，然后读取之前被拒绝访问的文件。
+
+![image](img/pg175_2.jpg)
+
+![image](img/snake.jpg)
+
+不要养成将所有内容的权限都设置为 777 的习惯——要审慎地使用访问权限以维持有用的限制。
+
+## 进程控制
+
+![image](img/pg176_1.jpg)
+
+Linux 系统在任何给定时刻都运行着许多进程，代表打开的应用、shell 业和后台服务。每个进程都有一个唯一的 `PID`（进程 ID）编号。你可以使用 `ps -e` 命令查看所有当前进程列表——或使用 `ps -u` 后跟用户名来查看特定用户的进程。进程所有者可以通过指定 `PID` 编号作为 `kill` 命令的参数来终止进程：
+
+![image](img/1g.jpg)
+
+打开终端窗口，然后输入命令开始一个新进程——例如，启动 ftp 互联网文件传输程序。
+
+![image](img/pg176_2.jpg)
+
+![image](img/2g.jpg)
+
+接下来，打开第二个终端窗口，然后输入命令 `ps -e` 查看所有进程的长列表。
+
+![image](img/pg176_3.jpg)
+
+向下滚动列表，找到列为“伪终端”（pseudo terminals）且名为 `pts/0` 和 `pts/1` 的终端窗口。
+
+![image](img/hot.jpg)
+
+输入命令 `man ftp` 以发现更多关于 ftp 文件传输程序的信息。
+
+![image](img/forget.jpg)
+
+每个 `PID` 都是在进程启动由操作系统动态分配的，用于识别该特定实例。
+
+![image](img/4g.jpg)
+
+现在，输入命令 `ps -e | grep pts` 将列表精炼为仅在每个终端运行的进程。
+
+![image](img/5g.jpg)
+
+可以看到列出的进程对应的第一个数字是其 `PID`——ftp 程序的 `PID` 为 2627。
+
+![image](img/pg177_1.jpg)
+
+输入命令 `kill 2627` 终止第一个窗口中的 ftp 进程。
+
+![image](img/6g.jpg)
+
+再次输入命令 `ps -e | grep pts` 查看该进程已不在列表中。
+
+![image](img/pg177_2.jpg)
+
+此处突出显示的是 `ftp` 程序进程的 `PID` 以及你在执行 `kill` 命令后第一个窗口中显示的消息。
+
+![image](img/hot.jpg)
+
+在提示符处，你可以输入 `top` 命令查看最活跃的进程——按 `Q` 键退出。
+
+## 探索网络
+
+就像街道上的每栋房子都有一个唯一的地址以便投递邮件进行直接通信一样，网络上的每台计算机都有一个唯一的数字，即 `IP`（互联网协议）地址，它可以用于与特定的计算机进行直接通信。
+
+![image](img/pg178_1.jpg)
+
+你可以通过将 URL 作为 `host` 命令的参数发现网页地址背后计算机的 IP 地址。在某些情况下，对于大型网站，这可能会显示多个 IP 地址：
+
+![image](img/1g.jpg)
+
+在 shell 提示符下，输入 `host www.google.com` 以发现 URL 的 IP 地址。
+
+![image](img/pg178_2.jpg)
+
+为 `host` 命令添加 `-a` 选项以查看关于主机的所有信息。
+
+![image](img/hot.jpg)
+
+检查另一台计算机跨网络可到达的最基本测试是使用 `ping` 命令向其 IP 地址发送微小数据包。这会持续发送数据包直到你停止它，但你可以通过添加 `-c` 来限制数据包的数量：
+
+```
+ping -c 3 216.58.209
+```
+
+![image](img/2g.jpg)
+
+以查看是否跨网络可到达。
+
+![image](img/pg178_3)
+
+通过 `host` 命令发现 URL 的 IP 地址。
+
+![image](img/forget.jpg)
+
+在 Linux 中，你可以通过执行 `ifconfig` 命令发现计算机的 IP 地址。如果你知道设备名称，可以将其作为 `ifconfig` 命令的参数以查看单独报告：
+
+![image](img/3g.jpg)
+
+执行 `ifconfig` 命令显示网络接口配置。
+
+![image](img/pg179_1.jpg)
+
+此示例中的计算机通过无线路由器连接，IP 地址为 `192.168.0.166`。传统上，设备被命名为 `eth0`、`eth1` 等以太网以及 `wlan0`、`wlan1` 等无线设备，但引入了新的命名方案以解决多个网络接口的识别问题。上述连接中识别出的设备为以太网 (`enp3s2`)、本地回 (`lo`) 和无线局域网 (`wlp2s`)。
+
+![image](img/hot.jpg)
+
+`lo` 回环接口用于在部署之前测试网络应用程序。
+
+![image](img/snake.jpg)
+
+`ifconfig` 命令仅显示活动接口的状态——添加 `-a` 选项以包含非活动接口。
+
+## 从 Shell 打印
+
+`lpr` 命令接受文件名或路径作为参数来建立打印任务，将指定的文件发送到打印机。每个任务都被放入队列中等待传输——当任务到达队列前端时，文件数据会被送到打印机并打印。
+
+![image](img/pg180_1.jpg)
+
+你可以使用 `lpq` 命令检查打印队列中的任务——每个任务会自动分配一个任务编号。在任务发送到打印机之前，可以使用 `lprm` 命令结合任务编号将其从队列中移除：
+
+![image](img/1g.jpg)
+
+在提示符下，输入 `lpr tux.png` 创建一个打印任务——打印名为“tux.png”的图像文件。
+
+![image](img/2g.jpg)
+
+输入 `lpr ballad.txt` 创建另一个打印任务——打印指定的文本文件“ballad.txt”。
+
+![image](img/3g.jpg)
+
+执行 `lpq` 命令查看打印队列。
+
+![image](img/pg180_2.jpg)
+
+打印队列显示打印机正在打印编号为 1 的任务——图像文件。
+
+![image](img/4g.jpg)
+
+在打印任务 1 完成之前，执行 `lprm 2` 命令（或者替代使用 `cancel 2` 命令）将该任务从打印队列中移除。
+
+
+
+
+打印机在移除该任务的同时继续打印图像文件——任务号 2 中的文本文件未发送到打印机，因此不会打印。
+
+![image](img/hot.jpg)
+
+打印任务只能由其所有者或 root 超用户从打印队列中删除。
+
+从 shell 提示符打印不仅限于简单的打印文件——还可以使用 `lpr` 命令配合 `|` 管道字符将数据排队进行打印：
+
+![image](img/5g.jpg)输入 `ls -l /etc | lpr` 来打印 `/etc` 目录的列表——通过将 `ls` 命令的结果传递给 `lpr` 命令
+
+![image](img/6g.jpg)在列表打印期间，执行 `lpq` 命令查看打印队列，源是从标准输入管道的
+
+![image](img/pg181_1.jpg)
+
+Linux 中的打印功能由 `CUPS`（通用 Unix 打印系统）设施提供。它提供了一个打印后台进程（spooler），用于以打印机理解的格式缓冲数据，以及一个调度器（scheduler），在打印机准备好接收时将缓冲数据发送到打印机。
+
+`lpstat` 命令具有单独的选项来提供关于调度器、后台进程和打印机的 CUPS 状态信息：
+
+![image](img/7g.jpg)执行命令 `lpstat -t` 查看查看打印机状态
+
+![image](img/pg181_2.jpg)
+
+![image](img/hot.jpg)
+
+当可用多个打印机时，使用 `lpr -P` 指定用于打印任务的打印机。
+
+## 评估表达式
+
+`expr` 命令允许你在 shell 提示符处执行简单的数学计算。它识别所有常用的算术运算符，但那些在 shell 中有其他含义的运算符需要用反斜杠 `\` 转义字符开头。例如，`*` 通配符必须转义才能用于乘法。
+
+![image](img/pg182_1.jpg)
+
+每个参数之间必须用空格分隔，可以使用括号来建立较长表达式中的运算符优先级——但每个括号字符都必须进行转义。
+
+`expr` 命令还可以执行布尔求值，返回真 (1) 或假 (0) 答案，并使用函数 `length`、`substr` 和 `index` 执行简单的字符串处理。
+
+![image](img/1g.jpg)在 shell 提示符下，输入 `expr 7 + 3` 执行加法，输入 `expr 7 \* 3` 执行乘法
+
+![image](img/2g.jpg)输入 `expr 7 \* \( 3 + 1 \)` 评估复杂表达式，输入 `expr 7 = 3` 进行布尔等值判断
+
+![image](img/3g.jpg)执行命令 `expr length “Linux in easy steps”` 来发现指定字符串的长度
+
+![image](img/4g.jpg)执行命令 `expr substr “Linux in easy steps” 7 13` 来提取指定字符串的子字符串
+
+![image](img/5g.jpg)执行命令 `expr index “Linux in easy steps” “x”` 来发现字符串中第一个 “x” 的位置
+
+![image](img/pg182_2.jpg)
+
+![image](img/forget.jpg)
+
+算术运算符为 `+` 加、`-` 减、`*` 乘、`/` 除以及 `%` 取模。
+
+![image](img/hot.jpg)
+
+你可以使用 `xcalc` 命令从终端窗口快速启动图形化计算器。
+
+表达式评估的结果可以通过 `if-then-else` 语句导致特定的动作。该语句包含三个独立部分，分别指定测试表达式、测试为真时执行的动作以及测试为假时执行的动作。
+
+`if` 关键字开始语句，后面跟着括在一对 `[ ]` 方括号内的测试表达式。整个语句的每个部分都必须与下一部分用空格分隔，以便 shell 评估该表达式。
+
+`then` 关键字开始语句的第二部分，指定测试为真时执行的命令。同样，`else` 关键字开始语句的第三部分，指定测试为假时执行的命令。最后，必须添加 `fi` 关键字来标记语句的结束。
+
+![image](img/forget.jpg)
+
+你必须在 `if` 关键字后留一个空格以避免错误。同样在 `[` 括号之后和 `]` 括号之前也要留一个空格以避免错误。
+
+你可以输入语句的第一部分然后按 **回车**（Return）提示输入语句的剩余部分，或者输入整个语句并用分号分隔每个部分：
+
+![image](img/6g.jpg)输入 `if [ `expr 7 % 2` = 0 ]` 来测试七除二的余数是否为零，然后按 **回车**
+
+![image](img/7g.jpg)在语句提示符下，输入 `then echo “Even Number”`
+
+![image](img/8g.jpg)现在，输入 `else echo “Odd Number”`
+
+![image](img/9g.jpg)输入 `fi` 然后按 **回车** 执行相应的动作
+
+![image](img/10g.jpg)通过输入 `if [ `expr 8 % 2` = 0 ]; then echo Even; else echo Odd; fi` 在连续语句中进行类似的测试，然后按 **回车** 执行相应的动作
+
+![image](img/pg183_1.jpg)
+
+![image](img/snake.jpg)
+
+反引号 `` `` 运算符包裹了 `expr 7 % 2`
+
+## 编写脚本
+
+长长的 Shell 例程可以方便地保存为脚本，它们以 `#!/bin/bash` 开头，并通常赋予 `.sh` 扩展名。
+
+![image](img/forget.jpg)一旦脚本文件设置了执行权限，就可以通过 `./` 执行。为了确保不同的序列，有必要使用 `date+%s` 提取自 00:00:00 GMT 1970 年 1 月 1 日以来的秒数来种子 `$RANDOM` 变量以获得更好的数字生成效果。
+
+![image](img/hot.jpg)
+
+输入 `RANDOM=1` 然后执行三次 `echo $RANDOM` 查看模式。重复这两个命令。可以通过在脚本中包含 `let` 命令对 Shell 变量（如 `$RANDOM`）进行算术运算![image](img/1g.jpg)打开任何文本编辑器并以 `#!/bin/bash` 开始一个新文件
+
+![image](img/2g.jpg)在新行中，输入一行种子 `$RANDOM` 变量 `RANDOM=`date+%s``
+
+![image](img/3g.jpg)添加一行将 1-20 的值赋值给变量 `let NUM=(RANDOM % 20 + 1)`
+
+![image](img/4g.jpg)在下一行输入一个清除窗口的指令 `clear`
+
+![image](img/5g.jpg)添加这些行来输出给用户的文本 `echo “I have chosen a number between 1 and 20” echo “Can you guess what it is?”`
+
+![image](img/forget.jpg)括号包裹了要评估的表达式，但你不能在赋值的 `=`字符周围引入空格。
+
+![image](img/6g.jpg)现在，添加一行将用户的猜测读取到变量 `read GUESS`
+
+![image](img/7g.jpg)输入以下行以评估用户的猜测是否与生成的数字匹配，并对每次错误的尝试输出相应的响应
+
+```bash
+while [ $GUESS -ne $NUM ]
+do
+  if [ $GUESS -gt $NUM ]
+  then echo “No - try lower... ”
+  else echo “No - try higher... ”
+  fi
+  read GUESS
+done
+```
+
+![image](img/8g.jpg)添加一行确认正确的猜测 `echo “Yes the number is $NUM”`
+
+![image](img/9g.jpg)将脚本保存为当前目录下的 `guess.sh`
+
+
+
+
+![image](img/10g.jpg)在 shell 提示符下，使用命令 `chmod 711 guess.sh` 修改访问权限，使所有者可以执行该脚本。
+
+![image](img/11g.jpg)输入 `./guess.sh` 执行脚本，然后猜出脚本随机选择的数字。
+
+![image](img/pg185_1.jpg)
+
+![image](img/hot.jpg)
+
+`while-do` 语句是一种循环，它使用了 `-ne`（不等于）比较运算符和 `-gt`（大于）比较运算符。其他的 Bash shell 比较运算符还包括 `-eq`（等于）和 `-lt`（小于）。
+
+![image](img/snake.jpg)
+
+记住中括号字符是运算符——在它们周围必须有空格以避免错误。
+
+## 总结
+
+- `sudo` 命令在 shell 提示符下执行命令，就像普通用户是 root 超级用户一样。
+- 使用 `apt-get update` 更新高级软件包工具 (APT) 软件包列表，使用 `apt-get install` 安装软件包，并使用 `apt-get remove` 删除软件包。
+- 文件可以使用 `gzip`、`bzip2` 或 `zip` 进行压缩，并使用相应的工具 `gunzip`、`bunzip2` 和 `unzip` 解压缩。
+- 文件系统可以使用 `mount` 挂载到树上，使用 `umount` 卸载，并使用 `fsck` 命令进行检查。
+- root 超级用户可以使用 `useradd`、`userdel` 和 `usermod` 命令创建和编辑用户账户。
+- 使用 `passwd` 命令更改登录密码，使用 `chfn` 命令编辑个人详情。
+- 超用户可以使用 `groupadd`、`groupdel` 和 `groupmod` 创建和编辑组。
+- 使用 `chmod` 命令修改访问权限，使用 `chown` 和 `chgrp` 更改所有权。
+- 每个进程都有唯一的进程 ID (PID)，通过 `ps` 命令显示，并可以通过 `kill` 命令终止。
+- 使用 `host` 命令可以 URL 的 IP 地址，使用 `ifconfig` 可以自己电脑的 IP 地址。
+- 使用 `lpr` 创建打印任务，使用 `lprm` 删除任务，使用 `lpq` 列出任务，并使用 `lpstat` 显示状态。
+- 使用 `expr` 命令评估表达式，并使用 `length`、`substr` 和 `index` 函数处理字符串。
+- Bash shell 脚本以 `#!/bin/bash` 开头，通过在文件名名前加上 `./` 点斜杠字符在提示符下执行。
+
+![image](http://www.ineasysteps.com)
+
+![image](http://www.ineasysteps.com)
+
