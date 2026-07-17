@@ -370,6 +370,7 @@
 +   [Linux：安装、配置与命令行基础](docs/linux-installation-configuration-and-command-line-basics/README.md)
 +   [Linux 面试题：开源 Linux 操作系统面试题、答案与解析](docs/linux-interview-questions-open-source-linux-operating-system/README.md)
 +   [《Linux期刊》（2007年9月）](docs/linux-journal-september-2007/README.md)
++   [Linux 内核调试：利用开源工具和高级技术调试 Linux 内核或模块问题](docs/linux-kernel-debugging-leverage-open-source-tools-and-advanc/README.md)
 +   [Linux 内核开发](docs/linux-kernel-development-9780768696790/README.md)
 +   [Linux 内核开发：如何深度理解](docs/linux-kernel-development-how-to-gain-significant-understandi/README.md)
 +   [Linux 内核编程：字符、块、USB 及网络接口的内核架构与设备驱动开发](docs/linux-kernel-programming-developing-kernel-architecture-and-/README.md)
