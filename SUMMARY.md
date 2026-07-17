@@ -236,6 +236,7 @@
 +   [KALI LINUX 恶意软件分析2024版：学生与专业人士的必备内容](docs/kali-linux-malware-analysis-2024-edition-essential-content-f/README.md)
 +   [Kali Linux 参考指南：渗透测试者的之旅](docs/kali-linux-reference-guide-a-pentesters-voyage/README.md)
 +   [Kali Linux：网络测试：如何通过安全测试与渗透测试进行基础设施安全测试](docs/kali-linux-testing-your-network-how-to-test-infrastructure-s/README.md)
++   [Kali Linux：道德黑客与渗透测试权威指南](docs/kali-linux-the-definitive-guide-to-ethical-hacking-and-penet/README.md)
 +   [Kali Linux 工具指南](docs/kali-linux-tools/README.md)
 +   [Knoppix 的傻瓜](docs/knoppix-for-dummies/README.md)
 +   [通过题库学习：GNU AWK](docs/learn-by-exam-pile-gnu-awk/README.md)
