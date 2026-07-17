@@ -318,6 +318,7 @@
 +   [Linux 初学者指南：Linux 操作系统与命令行入门指南](docs/linux-for-beginners-an-introduction-to-the-linux-operating-s/README.md)
 +   [Linux 入门指南：Linux 全方位初学者指南](docs/linux-for-beginners-linux-for-beginners-the-complete-beginne/README.md)
 +   [Linux 初学者指南：关于 Linux 的方位百科指南](docs/linux-for-beginners-linux-for-beginnersthe-essantail-guide-o/README.md)
++   [Linux 初学者指南：Linux 操作系统科学、安装、配置与命令行编程工具，以及网络、网络安全与道德黑客攻击基础指南](docs/linux-for-beginners-the-science-of-linux-operating-system-an/README.md)
 +   [Linux 初学者指南：Linux 命令行、Linux 编程与 Linux 操作系统终极初学者指南](docs/linux-for-beginners-the-ultimate-beginner-guide-to-linux-com/README.md)
 +   [生物学家 Linux 秘籍](docs/linux-for-biologists-a-cookbook/README.md)
 +   [傻瓜的 Linux 第一版](docs/linux-for-dummies-first-edition/README.md)
