@@ -1,0 +1,77 @@
+name: Hacking： Penetration Testing with Kali Linux： Guide for Beginners
+name_cn: Hacking：Kali Linux 渗透测试：初学者指南
+slug: hacking-penetration-testing-with-kali-linux-guide-for-beginn
+toc:
+- - '#'
+  - 第 1 章- 使用 Sqlmap 破解网站
+- - '##'
+  - 该工具具有非常强大的检测引擎以及其他可用于渗透测试的工具。你可以使用该工具进行数据库指纹、从数据库获取数据、访问文件系统以及在你的操作系统上执行命令。
+- - '##'
+  - Sqlmap 完全支持 Oracle、MySQL、PostgreSQL、Microsoft Access、IBM DB2、Firebird、Sybase、SQLite
+    SAP MaxDB 和 Microsoft SQL Server 数据库管理系统。这意味着几乎支持所有可用数据库管理系统。
+- - '##'
+  - 在本章中，我们将展示如何在 Kali Linux 中使用 Sqlmap 破解网站。可以通过以下步骤实现：启动运行 Kali Linux 的机器。打开终端，输入以下命令：
+- - '###'
+  - 数据库
+- - '###'
+  - 表
+- - '###'
+  - 数据
+- - '#'
+  - 第 2 章- 如何在不暴力破解的情况下破解 WPA/WPA2
+- - '##'
+  - Fluxion
+- - '###'
+  - 运行脚本
+- - '###'
+  - 依赖项
+- - '##'
+  - 获取无线网络密码
+- - '#'
+  - 第 3 章 检查 IP 地址位置
+- - '#'
+  - 第 4 章- MAC 地址欺骗 (MAC Address Spoofing)
+- - '#'
+  - 第 5 章- 扫描网站漏洞
+- - '##'
+  - 扫描 Web 服务器
+- - '##'
+  - 扫描 Facebook
+- - '#'
+  - 第 6 章 - 使用 Kali Linux 破解安卓手机
+- - '##'
+  - 使用 Uniscan
+- - '#'
+  - 第 7 章 - 在 Kali Linux 中破解 FTP 服务器
+- - '##'
+  - 设置目标
+- - '#'
+  - 第 8 章在 Android 中创建持久化后门
+- - '##'
+  - 上传脚本
+- - '##'
+  - 运行脚本
+- - '##'
+  - 测试
+- - '##'
+  - 避免 Kali Linux 中的 root 密码
+- - '#'
+  - 第 9 章 批量邮件攻击
+- - '#'
+  - 第 10 章 - 密码破解
+- - '##'
+  - 使用 Hydra
+- - '##'
+  - 使用 John the Ripper
+- - '##'
+  - unshadow
+- - '##'
+  - unshadow /etc/passwd /etc/shadow > /root/johns_passwd
+- - '##'
+  - ls –ltrah /usr/share/john/password.list
+- - '##'
+  - john --wordlist=/usr/share/john/password.list /root/johns_password
+- - '##'
+  - john --show /root/johns_passwd
+- - '##'
+  - 结论

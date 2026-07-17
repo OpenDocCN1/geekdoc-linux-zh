@@ -1,0 +1,716 @@
+name: FreeBSD Mastery： ZFS (IT Mastery) (Volume 7)
+name_cn: FreeBSD 精通指南：ZFS (IT 精通) (第 7 卷)
+slug: freebsd-mastery-zfs-it-mastery-volume-7
+toc:
+- - '#'
+  - FreeBSD 精通指南：ZFS (IT 精通) (第 7 卷)
+- - '#'
+  - 致谢
+- - '#'
+  - 第 0 章：引言
+- - '##'
+  - 什么是 ZFS？
+- - '##'
+  - ZFS 历史
+- - '##'
+  - 前提条件
+- - '###'
+  - 在哪里使用 ZFS？
+- - '##'
+  - ZFS 硬件
+- - '###'
+  - 内存 (RAM)
+- - '###'
+  - RAID 控制器
+- - '##'
+  - SATA 对比 SAS 与 SSD
+- - '##'
+  - 磁盘冗余
+- - '##'
+  - 物理冗余
+- - '##'
+  - 磁盘安装与标记
+- - '##'
+  - 关于本书
+- - '##'
+  - 概述
+- - '#'
+  - 第 1 章：介绍 ZFS
+- - '##'
+  - ZFS 数据集 (Datasets)
+- - '##'
+  - zfs list
+- - '##'
+  - ZFS 分区与属性
+- - '##'
+  - zfs set quota=2G zroot/var/log
+- - '##'
+  - zfs get quota zroot/var/log
+- - '###'
+  - ZFS 限制
+- - '##'
+  - 存储池
+- - '##'
+  - zpool status
+- - '##'
+  - 虚拟设备
+- - '##'
+  - 块与节点
+- - '#'
+  - 第 2 节：虚拟设备
+- - '##'
+  - 磁盘和其他存储介质
+- - '###'
+  - 原始磁盘存储
+- - '###'
+  - 分区存储 (Partition Storage)
+- - '###'
+  - GEOM 设备存储 (GEOM Device Storage)
+- - '###'
+  - 文件备份存储 (File-Backed Storage)
+- - '###'
+  - 提供者与磁盘 (Providers vs. Disks)
+- - '##'
+  - VDEV 冗余
+- - '###'
+  - 条带（1 个提供者）
+- - '###'
+  - 镜像（2+ 个提供者）
+- - '###'
+  - RAID-Z1（3+ 个提供者）
+- - '###'
+  - RAID-Z2（4+ 个提供者）
+- - '###'
+  - RAID-Z3（5+ 个提供者）
+- - '###'
+  - RAID-Z 磁盘配置
+- - '###'
+  - RAID-Z 的二倍规则
+- - '###'
+  - 修复 VDEV
+- - '##'
+  - 特殊 VDEV
+- - '###'
+  - 独立意图日志 (SLOG, ZIL)
+- - '###'
+  - 缓存 (L2ARC)
+- - '##'
+  - VDEV 如何影响性能
+- - '##'
+  - 单磁盘
+- - '##'
+  - 双磁盘
+- - '##'
+  - 三磁盘
+- - '##'
+  - 四或五磁盘
+- - '##'
+  - 六到十二磁盘
+- - '###'
+  - 许多磁盘
+- - '#'
+  - 第 3 章：池 (Pools)
+- - '##'
+  - VDEVs 和池
+- - '###'
+  - 查看存储池
+- - '##'
+  - zpool list
+- - '##'
+  - ZFS 扇区大小
+- - '##'
+  - FreeBSD 10.1 及更高版本的 Ashift
+- - '##'
+  - sysctl vfs.zfs.min_auto_ashift=12
+- - '###'
+  - 旧版本的 FreeBSD Ashift
+- - '##'
+  - sysctl vfs.zfs.min_auto_ashift=12
+- - '##'
+  - gn /dev/gpt/zfs0
+- - '##'
+  - zpool status
+- - '##'
+  - zpool create reflect mirror gpt/zfs0 gpt/zfs1 gpt/zfs2 gpt/zfs3
+- - '###'
+  - RAID-Z 池
+- - '##'
+  - sysctl vfs.zfs.min_auto_ashift=12
+- - '##'
+  - 'zpool create '
+- - '##'
+  - zpool status bucket
+- - '##'
+  - zpool create bucket raidz3 gpt/zfs0 gpt/zfs1 gpt/zfs2 gpt/zfs3 gpt/zfs4 gpt/zfs5
+- - '##'
+  - zpool status
+- - '###'
+  - 多 VDEV 池
+- - '##'
+  - sysctl vfs.zfs.min_auto_ashift=12
+- - '##'
+  - zpool create barrel mirror gpt/zfs0 gpt/zfs1 mirror gpt/zfs2 gpt/zfs3
+- - '##'
+  - zpool status barrel
+- - '##'
+  - 重用提供者
+- - '##'
+  - zpool create db gpt/zfs1 gpt/zfs2 gpt/zfs3 gpt/zfs4
+- - '##'
+  - zpool create -f db gpt/zfs1 gpt/zfs2 gpt/zfs3 gpt/zfs4
+- - '##'
+  - 池的完整性
+- - '###'
+  - ZFS 完整性
+- - '###'
+  - 清洗 ZFS
+- - '##'
+  - zpool status
+- - '##'
+  - zpool scrub zroot
+- - '##'
+  - zpool status
+- - '##'
+  - zpool scrub -s zroot
+- - '###'
+  - 清洗频率
+- - '##'
+  - 池属性
+- - '###'
+  - 查看池属性
+- - '##'
+  - zpool get all zroot
+- - '##'
+  - zpool get size
+- - '##'
+  - 修改池属性
+- - '##'
+  - zpool set comment="Main OS files" zroot
+- - '##'
+  - zpool get comment
+- - '##'
+  - zpool set comment="-" zroot
+- - '##'
+  - zpool get comment
+- - '##'
+  - zpool create -o altroot=/mnt -O canmount=off -m none zroot /dev/gpt/disk0
+- - '##'
+  - 池历史
+- - '##'
+  - zpool history zroot
+- - '##'
+  - Zpool 维护自动化
+- - '#'
+  - 第 4 章：ZFS 数据集
+- - '##'
+  - 数据集
+- - '###'
+  - 数据集类型
+- - '###'
+  - 为什么我想要数据集？
+- - '##'
+  - 查看数据集
+- - '##'
+  - zfs list
+- - '##'
+  - zfs list mypool/lamb
+- - '##'
+  - zfs list -t snapshot
+- - '##'
+  - 创建、移动和销毁数据集
+- - '###'
+  - 创建文件系统
+- - '##'
+  - zfs create mypool/lamb
+- - '##'
+  - mount | grep lamb
+- - '##'
+  - zfs create mypool/lamb/baby
+- - '###'
+  - 创建卷
+- - '##'
+  - zfs create -V 4G mypool/avolume
+- - '##'
+  - zfs list -t volume
+- - '##'
+  - ls -al /dev/zvol/mypool/avolume
+- - '##'
+  - zfs rename db/production db/old
+- - '##'
+  - zfs rename db/testing db/production
+- - '###'
+  - 移动数据集
+- - '##'
+  - zfs rename zroot/var/db/mysql zroot/important/mysql
+- - '##'
+  - zfs destroy db/old
+- - '##'
+  - ZFS 属性
+- - '###'
+  - 查看属性
+- - '##'
+  - zfs get compression mypool/lamb
+- - '##'
+  - zfs get all mypool/lamb
+- - '##'
+  - zfs get quota,reservation zroot/home
+- - '##'
+  - zfs list -o name,quota,reservation
+- - '###'
+  - 修改属性
+- - '##'
+  - zfs set compression=off mypool/lamb/baby
+- - '##'
+  - zfs get compression mypool/lamb/baby
+- - '###'
+  - 只读属性
+- - '##'
+  - 文件系统属性
+- - '###'
+  - atime
+- - '###'
+  - exec
+- - '###'
+  - readonly
+- - '###'
+  - setuid
+- - '##'
+  - 用户定义属性
+- - '##'
+  - zfs set com.allanjude:backup_ignore=on mypool/lamb
+- - '##'
+  - 父级/子级关系
+- - '##'
+  - zfs get -r compression mypool/lamb
+- - '##'
+  - zfs inherit compression mypool/lamb/baby
+- - '##'
+  - zfs get -r compression mypool/lamb
+- - '##'
+  - zfs set compression=gzip-9 mypool/lamb
+- - '##'
+  - zfs get -r compression mypool/lamb
+- - '###'
+  - 继承与重命名
+- - '##'
+  - zfs create mypool/second
+- - '##'
+  - zfs get compress mypool/second
+- - '##'
+  - zfs rename mypool/lamb/baby mypool/second/baby
+- - '##'
+  - zfs get -r compression mypool/second
+- - '###'
+  - 移除属性
+- - '##'
+  - zfs inherit com.allanjude:backup_ignore mypool/lamb
+- - '##'
+  - zfs inherit -r compression mypool
+- - '##'
+  - 挂载 ZFS 文件系统
+- - '##'
+  - zfs get mountpoint zroot/usr/home
+- - '###'
+  - 无挂载点数据集
+- - '##'
+  - zfs mount
+- - '##'
+  - zfs list -o name,canmount,mountpoint -r zroot/usr
+- - '##'
+  - 具有相同挂载点的多个数据集
+- - '##'
+  - zfs create db/programs
+- - '##'
+  - zfs create db/data
+- - '##'
+  - zfs set canmount=off db/programs
+- - '##'
+  - zfs set mountpoint=/opt db/programs
+- - '##'
+  - zfs set readonly=on db/programs
+- - '##'
+  - zfs set canmount=off db/data
+- - '##'
+  - zfs set mountpoint=/opt db/data
+- - '##'
+  - zfs set setuid=off db/data
+- - '##'
+  - zfs set exec=off db/data
+- - '##'
+  - zfs create db/programs/bin
+- - '##'
+  - zfs create db/programs/sbin
+- - '##'
+  - zfs create db/data/test
+- - '##'
+  - zfs create db/data/production
+- - '##'
+  - 不带挂载点的池
+- - '##'
+  - zfs set mountpoint=none mypool
+- - '##'
+  - zfs set mountpoint=/someplace mypool/lamb
+- - '##'
+  - 手动挂载和卸载文件系统
+- - '##'
+  - zfs mount mypool/usr/src
+- - '##'
+  - zfs unmount mypool/second
+- - '##'
+  - zfs mount -o mountpoint=/mnt mypool/lamb
+- - '##'
+  - ZFS 和 /etc/fstab
+- - '##'
+  - zfs set mountpoint=legacy mypool/second
+- - '##'
+  - mount -t zfs mypool/second /someplace
+- - '##'
+  - 调整 ZFS 卷
+- - '###'
+  - 空间预留
+- - '###'
+  - Zvol 模式
+- - '##'
+  - 数据完整性
+- - '###'
+  - 校验和 (Checksums)
+- - '###'
+  - 副本 (Copies)
+- - '##'
+  - dd if=/dev/random of=/lamb/random1 bs=1m count=10
+- - '##'
+  - zfs set copies=2 mypool/lamb
+- - '##'
+  - zfs list mypool/lamb
+- - '##'
+  - dd if=/dev/random of=/lamb/random2 bs=1m count=10
+- - '##'
+  - zfs list mypool/lamb
+- - '##'
+  - 扩展池
+- - '###'
+  - 向条带化池添加 VDEV
+- - '##'
+  - zpool status scratch
+- - '##'
+  - zpool add scratch gpt/zfs3
+- - '###'
+  - 向镜像池添加 VDEV
+- - '##'
+  - zpool status db
+- - '##'
+  - zpool add db mirror gpt/zfs4 gpt/zfs5
+- - '###'
+  - 向 RAID-Z 池添加 VDEV
+- - '##'
+  - zpool add db raidz1 gpt/zfs3 gpt/zfs4 gpt/zfs5
+- - '##'
+  - 硬件状态
+- - '###'
+  - 在线 (Online)
+- - '###'
+  - 降级 (Degraded)
+- - '###'
+  - 故障 (Faulted)
+- - '###'
+  - 不可用 (Unavail)
+- - '###'
+  - 离线 (Offline)
+- - '###'
+  - 已移除 (Removed)
+- - '##'
+  - 通过 ZFS 栈的错误
+- - '##'
+  - zpool status
+- - '##'
+  - 恢复设备
+- - '###'
+  - 缺失磁盘
+- - '##'
+  - zpool online gpt/zfs5
+- - '##'
+  - 故障磁盘
+- - '##'
+  - zpool replace db gpt/zfs3 gpt/zfs5
+- - '##'
+  - zpool status db
+- - '##'
+  - 替换相同位
+- - '##'
+  - zpool replace db gpt/zfs3 gpt/zfs5
+- - '##'
+  - 替换不可用的驱动器
+- - '##'
+  - zpool add db log gpt/log0 gpt/log1
+- - '##'
+  - 移除日志和缓存
+- - '##'
+  - zpool remove db gpt/log0
+- - '##'
+  - 替换故障的日志和缓存
+- - '##'
+  - zpool replace db gpt/log0 gpt/log2
+- - '##'
+  - 导出和导入
+- - '##'
+  - 导出池
+- - '##'
+  - zpool export db
+- - '##'
+  - 导入池
+- - '##'
+  - zpool import db
+- - '##'
+  - 重命名导入的池
+- - '##'
+  - zpool import olddb
+- - '##'
+  - zpool import -R 8407362064048
+- - '##'
+  - 不完整的池
+- - '##'
+  - zpool import -R
+- - '##'
+  - 特殊导入
+- - '##'
+  - zpool import -D
+- - '##'
+  - zpool import -D 8407362064048
+- - '##'
+  - 更大的提供者
+- - '##'
+  - zpool set autoexpand=on db
+- - '##'
+  - zpool list db
+- - '##'
+  - zpool offline db gpt/zfs1
+- - '##'
+  - ZFS 版本与升级
+- - '##'
+  - 特性标志（Feature Flags）
+- - '##'
+  - zpool status db
+- - '##'
+  - 升级
+- - '##'
+  - zpool upgrade zroot
+- - '#'
+  - 第 6 章：磁盘管理
+- - '##'
+  - 查看 ZFS 磁盘使用
+- - '##'
+  - zfs list
+- - '##'
+  - 磁盘空间详情
+- - '##'
+  - zfs list -o space
+- - '##'
+  - 池使用情况
+- - '##'
+  - zfs list -o space
+- - '##'
+  - ZFS, 以及其他工具
+- - '##'
+  - zfs list -o space
+- - '##'
+  - 限制大小
+- - '##'
+  - zfs list -o size
+- - '##'
+  - 限制
+- - '##'
+  - zfs list
+- - '##'
+  - 快照
+- - '##'
+  - zfs list -t snapshot
+- - '##'
+  - 设置配额
+- - '##'
+  - zfs get all zroot/var/log
+- - '##'
+  - 预留
+- - '##'
+  - zfs set reservation=100G zroot/var/log
+- - '##'
+  - zfs set reservation=50G zroot/var/log
+- - '##'
+  - zfs set reservation=none zroot/var/log
+- - '##'
+  - 配额
+- - '##'
+  - zfs set quota=100G zroot/var/log
+- - '##'
+  - zfs set quota=50G zroot/var/log
+- - '##'
+  - zfs set quota=none zroot/var/log
+- - '##'
+  - 设置快照
+- - '##'
+  - zfs list -t snapshot
+- - '##'
+  - 递归快照
+- - '##'
+  - zfs list zroot/var/log
+- - '##'
+  - 查看配额
+- - '##'
+  - zfs get all zroot/var/log
+- - '##'
+  - 删除快照
+- - '##'
+  - zfs list -t snapshot
+- - '##'
+  - 超过配额
+- - '##'
+  - zfs list zroot/var/log
+- - '##'
+  - 用户组配额
+- - '##'
+  - zfs list zroot/var/log
+- - '##'
+  - 查看快照的配额
+- - '##'
+  - 查看每个数据集的配额
+- - '##'
+  - zfs get all zroot/var/log
+- - '##'
+  - 启用压缩
+- - '##'
+  - zfs list zroot/var/log
+- - '##'
+  - 压缩
+- - '##'
+  - zfs set compress=lz4 zroot/var/log
+- - '##'
+  - zfs set compress=gzip-9 zroot/var/log
+- - '##'
+  - zfs set compress=gzip-1 zroot/var/log
+- - '##'
+  - 压缩属性
+- - '##'
+  - zfs get all zroot/var/log
+- - '##'
+  - 选择算法
+- - '##'
+  - zfs get compress zroot/var/log
+- - '##'
+  - 压缩与性能
+- - '##'
+  - zfs get all zroot/var/log
+- - '##'
+  - 禁用压缩
+- - '##'
+  - zfs set compress=off zroot/var/log
+- - '##'
+  - 去重
+- - '##'
+  - zfs set dedup=on zroot/var/log
+- - '##'
+  - zfs set dedup=off zroot/var/log
+- - '##'
+  - 去重需求
+- - '##'
+  - zfs get dedup zroot/var/log
+- - '##'
+  - 去重有效性
+- - '##'
+  - zfs get dedup zroot/var/log
+- - '##'
+  - 启用去重
+- - '##'
+  - zfs set dedup=on zroot/var/log
+- - '#'
+  - 第 7 章：快照与克隆
+- - '##'
+  - 写复制
+- - '##'
+  - zfs snapshot mypool/sheep@snap1
+- - '##'
+  - 创建快照
+- - '##'
+  - zfs snapshot mypool/sheep@snap
+- - '##'
+  - mypool/sheep@second
+- - '##'
+  - 克隆
+- - '##'
+  - zfs create -o mountpoint=/sheep mypool/sheep
+- - '##'
+  - 快照的工作原理
+- - '##'
+  - 使用快照
+- - '##'
+  - zfs create -o mountpoint=/mnt mypool/sheep
+- - '##'
+  - 挂载快照
+- - '##'
+  - mount -t zfs mypool/sheep@snap1 /mnt
+- - '##'
+  - 删除快照
+- - '##'
+  - zfs destroy mypool/sheep@deleteme
+- - '##'
+  - 递归快照
+- - '##'
+  - zfs snapshot -r zroot@beforeupgrade
+- - '##'
+  - 数据集更改与快照
+- - '##'
+  - 空间
+- - '##'
+  - zfs list -r mypool/sheep
+- - '##'
+  - 备份
+- - '##'
+  - 比较快照
+- - '##'
+  - zfs diff mypool/sheep@later
+- - '##'
+  - zfs diff mypool/sheep@later @muchlater
+- - '##'
+  - 自动快照方案
+- - '##'
+  - 轮转计划
+- - '##'
+  - ZFS 工具
+- - '##'
+  - pkg install zfstools
+- - '##'
+  - zfs-auto-snapshot
+- - '##'
+  - 启用自动快照
+- - '##'
+  - zfs set com.sun:auto-snapshot=true mypool
+- - '##'
+  - 查看自动快照
+- - '##'
+  - zfs list -t all -r db/db
+- - '##'
+  - 巧妙使用 zfs-auto-snap
+- - '##'
+  - 锁定 (Holds)
+- - '##'
+  - zfs hold tag dataset@snapshot
+- - '##'
+  - 每个快照的空间占用
+- - '##'
+  - zfs list -d 1 -t all -o name,used,refer,written mypool/sheep
+- - '##'
+  - 访问快照
+- - '##'
+  - ls /mypool/sheep/.zfs
+- - '##'
+  - ls /mypool/sheep/.zfs/snapshot
+- - '##'
+  - 隐藏的 snapdir
+- - '##'
+  - zfs set snapdir=visible mypool/sheep
+- - '##'
+  - 后记
+- - '##'
+  - 关于作者
+- - '##'
+  - 不要错过任何新发布！
+- - '##'
+  - Michael Lucas 的其他技术书籍

@@ -1,0 +1,2 @@
++   [初学者黑客指南：像渗透测试员一样学习 Kali Linux 并破解网站、无线网络的工具。学习黑客技术获取知识……（5 合 1 套书）（黑客必备）](README.md)
++   [初学者黑客指南：像渗透测试员一样学习 Kali Linux 并破解网站、无线网络的工具。学习黑客技术获取知识……（5 合 1 套书）（黑客必备）](hacking-for-beginners-learn-kali-linux-as-a-penetration-test_0.md)

@@ -1,0 +1,126 @@
+name: Hacking with Kali Linux： Penetration Testing
+name_cn: Kali Linux 渗透测试实战
+slug: hacking-with-kali-linux-penetration-testing
+toc:
+- - '#'
+  - Kali Linux 渗透测试实战
+- - '#'
+  - 引言
+- - '#'
+  - 第 1 章：创建理想的黑客环境
+- - '##'
+  - 安装到硬盘上
+- - '##'
+  - 独立安装
+- - '##'
+  - 多启动安装
+- - '##'
+  - 在虚拟机上安装
+- - '#'
+  - 第 2 章：探索 Kali Linux 启动盘
+- - '##'
+  - 为 Windows 创建启动盘
+- - '###'
+  - Win32 Imager
+- - '###'
+  - Yumi
+- - '###'
+  - 为 Linux 或 OS X 创建启动盘
+- - '#'
+  - 第 3 章：你需要掌握的必备终端命令
+- - '##'
+  - 理解 Linux 系统结构
+- - '##'
+  - Linux 命令
+- - '###'
+  - ls
+- - '###'
+  - cd /desired/path
+- - '###'
+  - pwd
+- - '###'
+  - rm filename
+- - '###'
+  - mv source_path destination_path
+- - '###'
+  - cp source_path destination_path
+- - '###'
+  - rmdir directoryname
+- - '###'
+  - mkdir newdirectory
+- - '###'
+  - ls
+- - '###'
+  - Sudo 命令
+- - '#'
+  - 第 4 章：在我们开始之前理解网络基础
+- - '##'
+  - 网络架构
+- - '##'
+  - 网络模型和协议
+- - '##'
+  - 网络协议
+- - '#'
+  - 第 5 章：暗网与 Tor 的作用
+- - '##'
+  - 暗网
+- - '##'
+  - 访问 Tor
+- - '##'
+  - Tor 隐藏服务
+- - '###'
+  - 3. 基于洋葱网络的引擎
+- - '#'
+  - 第 6 章：利用虚拟专用网络
+- - '##'
+  - VPN 与隧道技术
+- - '##'
+  - VPN 的类型与应用
+- - '##'
+  - VPN 协议
+- - '##'
+  - 选择合适的 VPN
+- - '##'
+  - 增强 VPN 安全性
+- - '#'
+  - 第 7 章：探索基础黑客方法
+- - '##'
+  - 黑客技术
+- - '###'
+  - 拒绝服务 (DoS) 和分布式拒绝服务 (DDoS) 攻击
+- - '###'
+  - 键盘记录 (Keylogging)
+- - '###'
+  - Cookie 窃取 (Cookie Stealing)
+- - '##'
+  - 调虎换柱 (Bait and Switch)
+- - '##'
+  - 物联网 (IoT) 攻击
+- - '##'
+  - 伪造无线接入点 (WAPs)
+- - '##'
+  - 钓鱼攻击 (Phishing)
+- - '##'
+  - 被动攻击 (Passive Attacks)
+- - '##'
+  - 中人攻击 (MITM) Attacks
+- - '##'
+  - 社会工程学 (Social Engineering)
+- - '#'
+  - 第 8 章：渗透测试策略
+- - '#'
+  - 第 9 章：渗透测试的阶段
+- - '##'
+  - 1. 参与前交互
+- - '##'
+  - 2. 侦察
+- - '##'
+  - 3. 威胁建模与漏洞识别
+- - '##'
+  - 4. 漏洞
+- - '##'
+  - 5. 风险分析与建议
+- - '##'
+  - 6. 报告
+- - '#'
+  - 结论

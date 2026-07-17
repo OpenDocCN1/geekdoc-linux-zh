@@ -1,0 +1,762 @@
+name: FreeBSD Device Drivers ： A Guide for the Intrepid
+name_cn: FreeBSD 设备驱动程序：勇敢者指南
+slug: freebsd-device-drivers-a-guide-for-the-intrepid
+toc:
+- - '#'
+  - FreeBSD 设备驱动程序：勇敢者指南
+- - '#'
+  - 献辞
+- - '#'
+  - 技术评审人员
+- - '#'
+  - 前言
+- - '#'
+  - 致谢
+- - '#'
+  - 引言
+- - '#'
+  - 这本书是是给谁看的？
+- - '#'
+  - 前提条件
+- - '#'
+  - 内容概览
+- - '#'
+  - 第 8 章 中断处理
+- - '#'
+  - 第 9 章 案例研究：并行端口打印机驱动程序
+- - '#'
+  - 第 10 章 资源的管理与使用
+- - '#'
+  - 第 11 章 案例研究：智能平台管理接口驱动程序
+- - '#'
+  - 第 12 章 直接内存访问
+- - '#'
+  - 第 13 章 存储驱动程序
+- - '#'
+  - 第 14 章 通用访问方法
+- - '#'
+  - 第 15 章 USB 驱动程序
+- - '#'
+  - 第 16 章 网络驱动程序，第一部分：数据结构
+- - '#'
+  - 第 17 章 网络驱动程序，第二部分：数据包接收与传输
+- - '#'
+  - 欢迎加入！
+- - '#'
+  - 第 1 章 构建与运行模块
+- - '##'
+  - 设备驱动程序的类型
+- - '##'
+  - 可加载内核模块
+- - '##'
+  - 模块事件处理器
+- - '###'
+  - sub
+- - '###'
+  - order
+- - '##'
+  - Hello, world!
+- - '##'
+  - 编译与加载
+- - '##'
+  - 字符驱动
+- - '###'
+  - d_foo 函数
+- - '####'
+  - 表 1-1. d_foo 函数
+- - '###'
+  - 字符设备交换表
+- - '###'
+  - make_dev 和 destroy_dev 函数
+- - '###'
+  - 内核设备表
+- - '##'
+  - echo_write Function
+- - '##'
+  - echo_read Function
+- - '##'
+  - echo_modevent Function
+- - '##'
+  - DEV_MODULE Macro
+- - '##'
+  - Don’t Panic
+- - '##'
+  - echo "DON'T PANIC" > /dev/echo
+- - '##'
+  - cat /dev/echo
+- - '##'
+  - 块驱动程序已消失
+- - '##'
+  - 结论
+- - '#'
+  - 第 2 章 内存分配
+- - '##'
+  - 内存管理例程
+- - '###'
+  - malloc_type 结构
+- - '###'
+  - MALLOC_DEFINE 宏
+- - '###'
+  - MALLOC_DECLARE 宏
+- - '##'
+  - 整合一切
+- - '##'
+  - 连续物理内存管理例程
+- - '##'
+  - 一个直接的示例
+- - '##'
+  - 结论
+- - '#'
+  - 第 3 章 设备通信与控制
+- - '##'
+  - 定义 ioctl 命令
+- - '##'
+  - 实现 ioctl
+- - '###'
+  - echo_write 函数
+- - '###'
+  - echo_set_buffer_size 函数
+- - '###'
+  - echo_ioctl 函数
+- - '###'
+  - echo_modevent 函数
+- - '##'
+  - 不要恐慌
+- - '##'
+  - echo "DON'T PANIC" > /dev/echo
+- - '##'
+  - cat /dev/echo
+- - '##'
+  - 调用 ioctl
+- - '##'
+  - sysctl
+- - '##'
+  - 实现 sysctls，第 1 部分
+- - '###'
+  - 表 3-2. SYSCTL_ADD_* 宏
+- - '###'
+  - 表 3-3. SYSCTL_ADD_* 参数
+- - '##'
+  - '`sysctl_set_buffer_size` 函数'
+- - '##'
+  - 不要恐慌
+- - '##'
+  - 总结
+- - '#'
+  - 第 4 章 线程同步
+- - '##'
+  - 一个简单的同步问题
+- - '##'
+  - 一个更复杂的同步问题
+- - '##'
+  - race_new Function
+- - '##'
+  - race_find Function
+- - '##'
+  - race_destroy Function
+- - '##'
+  - race_ioctl Function
+- - '##'
+  - race_modevent Function
+- - '##'
+  - 问题根源
+- - '##'
+  - 自旋互斥锁
+- - '##'
+  - 睡眠互斥锁
+- - '##'
+  - 互斥锁管理例程
+- - '##'
+  - 实现互斥锁
+- - '###'
+  - race_modevent 函数
+- - '###'
+  - 不要恐慌
+- - '##'
+  - 共享/排斥锁
+- - '##'
+  - 共享/排斥锁管理程序
+- - '###'
+  - 实现共享/排斥锁
+- - '###'
+  - RW 锁
+- - '###'
+  - RW 锁初始化
+- - '###'
+  - RW 锁管理
+- - '##'
+  - 条件变量
+- - '##'
+  - 条件变量管理程序
+- - '##'
+  - 通用指南
+- - '##'
+  - 避免在排他锁上进行递归
+- - '##'
+  - 避免长时间持有排他锁
+- - '#'
+  - 第 5 章 延迟执行
+- - '##'
+  - 自发性上下文切换，或睡眠
+- - '##'
+  - 实现睡眠和条件变量
+- - '###'
+  - sleep_thread Function
+- - '###'
+  - sysctl_debug_sleep_test 函数
+- - '###'
+  - unload 函数
+- - '##'
+  - 事件处理器
+- - '###'
+  - 表 5-1. 内核事件处理器
+- - '##'
+  - 定时 (Callouts)
+- - '###'
+  - 表 5-2. callout init 常量
+- - '###'
+  - 表 5-3. callout init mtx 常量
+- - '###'
+  - 表 5-4. callout init rw 常量
+- - '##'
+  - Callouts 与竞态条件
+- - '###'
+  - 使用 `callout_init_mtx`、`callout_init(foo, 0)`
+- - '###'
+  - 使用 `callout_drain`
+- - '##'
+  - 任务队列 (Taskqueues)
+- - '##'
+  - 全局队列
+- - '##'
+  - 任务队列例程
+- - '##'
+  - 总结
+- - '#'
+  - 第 6 章 案例研究：虚拟调制调器
+- - '##'
+  - 前提条件
+- - '##'
+  - 代码分析
+- - '##'
+  - nmdm_modevent 函数
+- - '##'
+  - nmdm_clone 函数
+- - '###'
+  - nmdm_alloc 函数
+- - '###'
+  - nmdm_outwakeup 函数
+- - '###'
+  - nmdm_inwakeup Function
+- - '##'
+  - nmdm_modem Function
+- - '##'
+  - nmdm_timeout Function
+- - '##'
+  - bits_per_char
+- - '##'
+  - Conclusion
+- - '#'
+  - 第 7 章 Newbus and Resource Allocation
+- - '##'
+  - Autoconfiguration and Newbus Drivers
+- - '##'
+  - 设备方法
+- - '###'
+  - DRIVER_MODULE 宏
+- - '##'
+  - 将整合在一起
+- - '###'
+  - foo_pci_probe 函数
+- - '###'
+  - foo_pci_attach 函数
+- - '###'
+  - foo_pci_detach 函数
+- - '##'
+  - 硬件管理
+- - '#'
+  - 第 8 章 中断处理
+- - '##'
+  - 注册中断程序
+- - '##'
+  - FreeBSD 中的中断程序
+- - '##'
+  - 实现中断程序
+- - '###'
+  - pint_identify Function
+- - '###'
+  - pint_probe Function
+- - '###'
+  - pint_attach Function
+- - '###'
+  - pint_detach Function
+- - '###'
+  - pint_open Function
+- - '###'
+  - pint_read Function
+- - '###'
+  - pint_write Function
+- - '###'
+  - pint_intr Function
+- - '###'
+  - pint_timeout Function
+- - '###'
+  - pint_push_bytes Function
+- - '###'
+  - pint_close Function
+- - '###'
+  - pint_ioctl Function
+- - '###'
+  - pint_request_bus Function
+- - '##'
+  - ps -n 1 | grep "cat"
+- - '##'
+  - 在并行端口上生成
+- - '##'
+  - echo "DON'T PANIC" > /dev/pint0
+- - '##'
+  - cat /dev/pint0
+- - '##'
+  - tint
+- - '#'
+  - '第 9 章 Case Study: Parallel Printer Driver'
+- - '##'
+  - Code Analysis
+- - '###'
+  - lpt_identify Function
+- - '###'
+  - lpt_probe Function
+- - '###'
+  - lpt_detect Function
+- - '###'
+  - lpt_port_test Function
+- - '###'
+  - lpt_attach Function
+- - '###'
+  - lpt_detach Function
+- - '###'
+  - lpt_open Function
+- - '###'
+  - lpt_read Function
+- - '###'
+  - lpt_write Function
+- - '###'
+  - lpt_intr Function
+- - '###'
+  - lpt_timeout Function
+- - '###'
+  - lpt_push_bytes Function
+- - '###'
+  - lpt_close Function
+- - '###'
+  - lpt_ioctl Function
+- - '###'
+  - lpt_request_bus Function
+- - '###'
+  - lpt_release Function
+- - '##'
+  - 从 I/O 端口和 I/O 内存读取
+- - '##'
+  - 写入 I/O 端口和 I/O 内存
+- - '##'
+  - 流操作
+- - '##'
+  - 内存屏障 (Memory Barriers)
+- - '###'
+  - 表 10-1. bus_barrier 常数
+- - '##'
+  - 整合所有内容
+- - '###'
+  - led_attach Function
+- - '###'
+  - led_detach Function
+- - '###'
+  - led_open Function
+- - '###'
+  - led_close Function
+- - '###'
+  - led_read Function
+- - '###'
+  - led_write Function
+- - '##'
+  - 结论
+- - '#'
+  - 第 11 章 案例研究：智能平台接口驱动程序
+- - '##'
+  - 代码分析
+- - '###'
+  - ipmi_pci_probe Function
+- - '##'
+  - ipmi2_pci_probe
+- - '##'
+  - ipmi2_pci_attach
+- - '##'
+  - 结论
+- - '#'
+  - 第 12 章 直接内存访问
+- - '##'
+  - 实现 DMA
+- - '###'
+  - 启动 DMA传输
+- - '##'
+  - 拆解 DMA
+- - '##'
+  - 创建 DMA Tag
+- - '###'
+  - 表 12-2. bus_dmamap_create 符号常量
+- - '##'
+  - 将 (DMA) 缓冲区加载到 DMA 映射中
+- - '###'
+  - bus_dma_segment 结构
+- - '###'
+  - bus_dmamap_load 函数
+- - '###'
+  - 表 12-3. bus_dmamap_load 符号常量
+- - '###'
+  - bus_dmamap_load_mbuf Function
+- - '###'
+  - bus_dmamap_load_mbuf_sg Function
+- - '###'
+  - bus_dmamap_load_uio Function
+- - '###'
+  - bus_dmamap_unload 函数
+- - '##'
+  - DMA 映射例程，第二部分
+- - '###'
+  - 12-4. bus_dmamem_alloc 符号常量
+- - '##'
+  - 一个简单的示例示例
+- - '##'
+  - 描述性字段
+- - '##'
+  - 存储设备方法
+- - '##'
+  - 强制媒体属性
+- - '##'
+  - 可选媒体属性
+- - '##'
+  - 驱动私有数据
+- - '##'
+  - disk 结构管理例程
+- - '##'
+  - 块 I/O 结构
+- - '##'
+  - 块 I/O 队列
+- - '##'
+  - 整合一切
+- - '###'
+  - at45d_delayed_attach Function
+- - '###'
+  - at45d_get_info Function
+- - '###'
+  - at45d_wait_device_ready Function
+- - '###'
+  - at45d_status Function
+- - '###'
+  - at45d_strategy Function
+- - '###'
+  - at45d_task Function
+- - '##'
+  - 块 I/O 完成例程序
+- - '##'
+  - 结论
+- - '#'
+  - 第 14 章 通用访问方法
+- - '##'
+  - CAM 如何工作
+- - '##'
+  - 一个（相当）简单的示例
+- - '###'
+  - mfip_attach Function
+- - '###'
+  - mfip_detach Function
+- - '###'
+  - mfip_action Function
+- - '###'
+  - mfip_poll Function
+- - '###'
+  - mfip_start Function
+- - '###'
+  - mfip_done Function
+- - '##'
+  - SIM 注册例程
+- - '###'
+  - cam_sim_alloc Function
+- - '###'
+  - cam_sim_alloc Function
+- - '###'
+  - xpt_bus_register Function
+- - '##'
+  - 动作例程
+- - '###'
+  - XPT_PATH_INQ
+- - '###'
+  - XPT_GET_SETTINGS
+- - '###'
+  - XPT_SCSI_IO
+- - '###'
+  - XPT_RESET_DEV
+- - '##'
+  - Conclusion
+- - '#'
+  - 第 15 章 USB 驱动程序
+- - '##'
+  - 关于设备
+- - '##'
+  - 关于 设备的更多
+- - '##'
+  - USB 配置
+- - '###'
+  - 强制字段
+- - '##'
+  - 可选字段
+- - '##'
+  - USB传输标志
+- - '##'
+  - USB传输（在 FreeBSD 中）
+- - '##'
+  - USB结构管理例程
+- - '###'
+  - ulpt_attach Function
+- - '###'
+  - ulpt_detach Function
+- - '###'
+  - ulpt_open Function
+- - '###'
+  - ulpt_reset Function
+- - '###'
+  - ulpt_close Function
+- - '###'
+  - ulpt_ioctl Function
+- - '###'
+  - ulpt_watchdog Function
+- - '###'
+  - ulpt_write_callback Function
+- - '###'
+  - ulpt_read_callback Function
+- - '#'
+  - 第 16 章 网络驱动程序，第一部分：数据结构
+- - '##'
+  - 网络接口管理例程
+- - '###'
+  - ether_ifattach Function
+- - '###'
+  - ether_ifdetach Function
+- - '##'
+  - 网络接口结构
+- - '##'
+  - 网络媒介结构
+- - '##'
+  - mbuf 结构
+- - '##'
+  - 信号中断
+- - '##'
+  - 实现 MSI
+- - '###'
+  - MSI Routines
+- - '###'
+  - em_handle_rx Function
+- - '###'
+  - em_start Function
+- - '###'
+  - em_xeof Function
+- - '##'
+  - 数据包传输
+- - '###'
+  - 数据包传输后
+- - '##'
+  - 结论
+- - '##'
+  - 索引
+- - '###'
+  - A
+- - '###'
+  - B
+- - '###'
+  - C
+- - '###'
+  - D
+- - '###'
+  - F
+- - '###'
+  - G
+- - '###'
+  - H
+- - '###'
+  - I
+- - '##'
+  - Ioctl and Sysctl
+- - '###'
+  - Ioctctl
+- - '###'
+  - Echo Functions
+- - '###'
+  - Sysctl Interface
+- - '##'
+  - Network Interfaces
+- - '###'
+  - Interface Structures
+- - '###'
+  - Media Management
+- - '###'
+  - Event Handlers
+- - '###'
+  - Interrupt Handling
+- - '##'
+  - '`ioctl` 接口'
+- - '###'
+  - 命令用于
+- - '##'
+  - IPMI (智能平台接口)驱动
+- - '##'
+  - IRQs (中断请求线)
+- - '##'
+  - 键盘控制器样式 (KCS)模式
+- - '##'
+  - KLDs (可加载模块)
+- - '##'
+  - 块驱动程序
+- - '##'
+  - 字符驱动程序
+- - '###'
+  - 字符设备切换
+- - '##'
+  - 模块处理程序
+- - '##'
+  - kld unload -f
+- - '##'
+  - LED 驱动程序
+- - '###'
+  - led_attach Function
+- - '###'
+  - M
+- - '###'
+  - O
+- - '###'
+  - P
+- - '##'
+  - Race Conditions and Synchronization
+- - '##'
+  - IO Operations
+- - '##'
+  - Memory Management
+- - '##'
+  - Network Drivers
+- - '##'
+  - Locking and Interrupts
+- - '##'
+  - Constants and Arguments
+- - '##'
+  - Reader/Writer Locks
+- - '##'
+  - S
+- - '##'
+  - 磁盘结构
+- - '##'
+  - 描述性字段
+- - '##'
+  - 驱动私有数据
+- - '###'
+  - 驱动私有数据的程序
+- - '##'
+  - 强制媒体属性
+- - '##'
+  - 可选媒体属性
+- - '##'
+  - 存储设备方法
+- - '##'
+  - 闪存驱动程序示例
+- - '###'
+  - at45d_attach Function
+- - '###'
+  - at45d_delayed_attach Function
+- - '###'
+  - at45d_get_info Function
+- - '###'
+  - at45d_get_status Function
+- - '###'
+  - at45d_strategy Function
+- - '###'
+  - at45d_task Function
+- - '##'
+  - 策略程序
+- - '##'
+  - 流操作
+- - '##'
+  - struct usb_xfer * 参数
+- - '##'
+  - 子参数
+- - '##'
+  - sx (共享/排斥) 锁
+- - '###'
+  - 避免长时间持有排斥锁
+- - '###'
+  - 避免在排斥锁上进行递归
+- - '###'
+  - sx_destroy Function
+- - '###'
+  - SX_DUPOK 常量
+- - '###'
+  - sx_init Function
+- - '###'
+  - sx_init_flags Function
+- - '###'
+  - SX_NOADAPTIVE 常量
+- - '###'
+  - SX_NOPROFILE 常量
+- - '###'
+  - SX_NOWITNESS 常量
+- - '###'
+  - SX_QUIET 常量
+- - '###'
+  - SX_RECURSE 常量
+- - '###'
+  - sx_slock_sig Function
+- - '###'
+  - sx_unlock Function
+- - '###'
+  - sx_xlock_sig Function
+- - '###'
+  - sx_xunlock Function
+- - '##'
+  - 同步原语
+- - '##'
+  - 同步 DMA
+- - '##'
+  - sysctl 上下
+- - '##'
+  - sysctl 接口
+- - '##'
+  - 属性
+- - '##'
+  - 系统管理 BIOS (SMBIOS)
+- - '##'
+  - SYS_RES_IOPORT
+- - '##'
+  - SYS_RES_IRQ
+- - '##'
+  - SYS_RES_MEMORY
+- - '##'
+  - 磁盘结构
+- - '##'
+  - 描述性字段
+- - '##'
+  - 驱动私有数据
+- - '###'
+  - 驱动私有数据的管理程序
+- - '##'
+  - 强制媒体属性
+- - '##'
+  - 可选媒体属性
+- - '##'
+  - 存储设备方法
+- - '##'
+  - 闪存驱动程序示例
+- - '##'
+  - 附录 A. 更新
+- - '##'
+  - 关于作者
+- - '##'
+  - 版后
+- - '##'
+  - 写操作

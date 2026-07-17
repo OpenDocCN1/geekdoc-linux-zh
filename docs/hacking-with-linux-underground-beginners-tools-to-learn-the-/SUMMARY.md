@@ -1,0 +1,2 @@
++   [Linux 破解：通过伦理 Linux 和精确计算机配置，破解所有操作系统以学习网络安全基础并成为黑客的地下初学者工具](README.md)
++   [Linux 破解：通过伦理 Linux 和精确计算机配置，破解所有操作系统以学习网络安全基础并成为黑客的地下初学者工具](hacking-with-linux-underground-beginners-tools-to-learn-the-_0.md)
