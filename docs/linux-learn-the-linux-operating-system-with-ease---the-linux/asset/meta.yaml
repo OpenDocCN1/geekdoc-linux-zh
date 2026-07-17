@@ -1,0 +1,229 @@
+name: LINUX： Learn The Linux Operating System With Ease - The Linux For Beginners
+  Guide, Learn The Linux Command Line, Linux Shell Scripting And Linux Programming
+name_cn: LINUX：轻松学习 Linux 操作系统 - Linux 初学者指南，学习 Linux 命令行、Linux Shell 脚本与 Linux 编程
+slug: linux-learn-the-linux-operating-system-with-ease---the-linux
+toc:
+- - '#'
+  - 深入理解 Linux
+- - '##'
+  - 理解 Linux 文件系统
+- - '###'
+  - 一切从根目录开始：/
+- - '###'
+  - 它位于：/bin
+- - '###'
+  - 一切开始的地方：/boot
+- - '###'
+  - 每个设备都是文件：/dev
+- - '###'
+  - 配置：/etc
+- - '###'
+  - 共享库：/lib
+- - '###'
+  - 当你没有正确关机时：/lost+found
+- - '###'
+  - 挂载点所在地：/mnt 和 /media
+- - '###'
+  - 可选目录：/opt
+- - '###'
+  - 内核目录：/proc 和 /sys
+- - '###'
+  - 你曾在此，现已离开：/tmp
+- - '###'
+  - 程序所在地：/usr
+- - '##'
+  - 非临时文件：`/var`
+- - '###'
+  - '`/var`（代表变化的或可变的）'
+- - '#'
+  - 如何安装 Linux
+- - '##'
+  - 在新电脑上安装 Linux 的 7 个步骤
+- - '###'
+  - 1. 记录你的 Linux 设置
+- - '###'
+  - 2. 使用 Linux CD 或 DVD 启动并开始 Linux 安装
+- - '###'
+  - 3. 指定你的 Linux 安装信息
+- - '###'
+  - 4. 创建普通（“非 root”）用户
+- - '###'
+  - 5. 让 Linux 操作系统安装在你的硬盘上
+- - '###'
+  - 6. 登录测试系统
+- - '###'
+  - 7. 享受其中吧！
+- - '##'
+  - Linux 培训 - Linux 安装帮助 - Linux Live CDs 与安装
+- - '##'
+  - 获取 Linux 的两种方法：
+- - '##'
+  - Linux Live CDs - 优点
+- - '##'
+  - Linux Live CDs - 缺点
+- - '#'
+  - Linux 初步
+- - '##'
+  - 首次尝试 Linux：新手指南
+- - '###'
+  - 选择你的“口味”
+- - '###'
+  - 困难还是容易？
+- - '###'
+  - 有什么好处？
+- - '###'
+  - Linux 与我的硬件兼容吗？
+- - '###'
+  - 如何选择发行版？
+- - '###'
+  - 我该如何安装它？
+- - '###'
+  - 其他软件如何？
+- - '###'
+  - 如何更新？
+- - '#'
+  - 安装后活动
+- - '##'
+  - 作为非 root 用户管理 Docker
+- - '##'
+  - 配置 Docker 开机自启动
+- - '##'
+  - Docker 守护进程启动
+- - '##'
+  - 使用不同的存储引擎
+- - '#'
+  - 故障排除
+- - '###'
+  - 内核兼容性
+- - '###'
+  - 无法连接到 Docker 守护进程
+- - '###'
+  - IP 转发
+- - '##'
+  - 或者
+- - '###'
+  - 在 resolv.conf 中找到 DNS 解析器但容器无法使用它
+- - '##'
+  - 为 Docker 指定指定 DNS 服务器
+- - '##'
+  - 禁用 dnsmasq
+- - '###'
+  - Ubuntu
+- - '###'
+  - dns=dnsmasq
+- - '###'
+  - RHEL, CentOS, 或 Fedora
+- - '##'
+  - 通过防火墙允许访问远程 API
+- - '###'
+  - UFW 特定指令
+- - '##'
+  - 你的内核不支持 cgroup swap 限制
+- - '##'
+  - 50 个实用的 Linux 应用
+- - '###'
+  - 终端命令
+- - '###'
+  - 9. WizNote
+- - '###'
+  - 10. gdebi
+- - '###'
+  - 11. XDM 或 uGet
+- - '###'
+  - 12. UFW/GUFW
+- - '###'
+  - 13. GIMP
+- - '###'
+  - 14. Pinta
+- - '###'
+  - 15. BleachBit
+- - '###'
+  - 16. ScudCloud
+- - '###'
+  - 17. Synaptic
+- - '###'
+  - 18. Dropbox
+- - '###'
+  - 19. VLC
+- - '###'
+  - 20. Unity Tool
+- - '###'
+  - 21. Sublime
+- - '###'
+  - 22. Atom
+- - '###'
+  - 23. Notepad++
+- - '###'
+  - 24. Brackets
+- - '###'
+  - 25. Cheese
+- - '###'
+  - 26. Gparted
+- - '###'
+  - 27. CrashPlan
+- - '###'
+  - 28. Kodi
+- - '###'
+  - 29. Genymotion
+- - '###'
+  - 30. Tomahawk
+- - '###'
+  - 31. GNOME 系统监器
+- - '###'
+  - 32. Conky
+- - '###'
+  - 33. Transmission
+- - '###'
+  - 34. BitTorrent
+- - '###'
+  - 35. Deluge
+- - '###'
+  - 36. FileZilla
+- - '###'
+  - 37. Steam
+- - '###'
+  - 38. Wine
+- - '###'
+  - 39. Bottles
+- - '###'
+  - 40. Lutris
+- - '###'
+  - 46. `Handbrake`
+- - '###'
+  - 47. `RecordMyDesktop`
+- - '###'
+  - 48. `Kazam`
+- - '###'
+  - 49. `winFF`
+- - '###'
+  - 50. `Nmap`
+- - '#'
+  - 如何使用 Linux 命令行
+- - '##'
+  - 如何使用 Linux 命令行：CLI 基础
+- - '###'
+  - 获取 Shell
+- - '###'
+  - 安装 Shell
+- - '###'
+  - 基础命令
+- - '####'
+  - '`ls`'
+- - '####'
+  - '`cd`'
+- - '####'
+  - '`mkdir`'
+- - '####'
+  - '`touch`'
+- - '####'
+  - '`rm`'
+- - '####'
+  - '`cp`'
+- - '####'
+  - '`mv`'
+- - '####'
+  - '`cat`'
+- - '####'
+  - '`grep`'
+- - '####'
+  - '`head` & `tail`'
