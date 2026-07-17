@@ -264,6 +264,7 @@
 +   [Linux 101 考试：模块化培训笔记](docs/linux-101-examination-modular-training-notes/README.md)
 +   [Linux 101 Hacks](docs/linux-101-hack/README.md)
 +   [Linux 2合1](docs/linux-2-in-1/README.md)
++   [LINUX：第二版！初学者速成 - Linux 初学者指南：Linux 命令行、Linux 系统及 Linux 命令（计算机科学、Linux 编程、Linux 操作系统第 1 册）](docs/linux-2nd-edition-beginners-crash-course---linux-for-beginne/README.md)
 +   [Linux 第7版入门指南](docs/linux-7th-edition-in-easy-steps/README.md)
 +   [初学者 Linux 管理员指南](docs/linux-admin-for-absolute-beginners/README.md)
 +   [Linux 系统管理入门指南第 5 版](docs/linux-administration-a-beginners-guide-5th-fifth-edition/README.md)

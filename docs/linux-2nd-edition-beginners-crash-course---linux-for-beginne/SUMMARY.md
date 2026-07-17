@@ -1,0 +1,2 @@
++   [LINUX：第二版！初学者速成 - Linux 初学者指南：Linux 命令行、Linux 系统及 Linux 命令（计算机科学、Linux 编程、Linux 操作系统第 1 册）](README.md)
++   [LINUX：第二版！初学者速成 - Linux 初学者指南：Linux 命令行、Linux 系统及 Linux 命令（计算机科学、Linux 编程、Linux 操作系统第 1 册）](linux-2nd-edition-beginners-crash-course---linux-for-beginne_0.md)
