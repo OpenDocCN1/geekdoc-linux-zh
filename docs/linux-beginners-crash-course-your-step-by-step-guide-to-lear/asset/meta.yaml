@@ -1,0 +1,73 @@
+name: LINUX： Beginner's Crash Course： Your Step-By-Step Guide to Learning the Linux
+  Operating System and Command Line Easy and Fast!
+name_cn: LINUX 入门指南：快速轻松学习 Linux 操作系统和命令行的步步指南！
+slug: linux-beginners-crash-course-your-step-by-step-guide-to-lear
+toc:
+- - '#'
+  - LINUX 入门指南：快速轻松学习 Linux 操作系统和命令行的步步指南！
+- - '#'
+  - 引言
+- - '#'
+  - 第 1 章
+- - '##'
+  - Linux 对比 Windows
+- - '###'
+  - 1 图形用户界面 (GUI)
+- - '###'
+  - 2 从 CD 运行
+- - '###'
+  - 3 安全
+- - '###'
+  - 4 臃肿
+- - '###'
+  - 5 技术性
+- - '###'
+  - 6 系统稳定性
+- - '###'
+  - 7 系统崩溃
+- - '###'
+  - 8 成本
+- - '###'
+  - 9 维护与管理
+- - '###'
+  - 10 硬件支持
+- - '###'
+  - 11 问题优先，解决方案
+- - '#'
+  - 第 3 章
+- - '##'
+  - Linux 操作系统由什么组成
+- - '###'
+  - 启动加载程序 (Bootloader)
+- - '###'
+  - 内核 (kernel)
+- - '###'
+  - 守护进程 (Daemons)
+- - '###'
+  - 解释壳 (The Shell)
+- - '###'
+  - 图形服务器 (Graphical Server)
+- - '###'
+  - 桌面环境 (Desktop Environment)
+- - '###'
+  - 应用程序 (Applications)
+- - '##'
+  - 入门
+- - '###'
+  - 基础命令
+- - '##'
+  - 文件系统导航
+- - '##'
+  - 用户信息
+- - '##'
+  - 会话管理
+- - '##'
+  - 帮助与文档
+- - '##'
+  - 文件与目录操作
+- - '##'
+  - 虚拟文件系统
+- - '#'
+  - 不要错过！
+- - '##'
+  - Jeremy Li 的其他作品

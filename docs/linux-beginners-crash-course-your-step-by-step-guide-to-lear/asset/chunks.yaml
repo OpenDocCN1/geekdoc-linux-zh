@@ -1,0 +1,2334 @@
+- fmt: '
+
+    ![](d2d_images/cover.jpg)
+
+
+    # LINUX
+
+    ## Beginner''s Crash Course
+
+    Your Step-By-Step Guide To Learning The Linux Operating System And Command Line
+    Easy & Fast!
+
+
+    ––––––––
+
+    JEREMY LI
+
+
+    While every precaution has been taken in the preparation of this book, the publisher
+    assumes no responsibility for errors or omissions, or for damages resulting from
+    the use of the information contained herein.
+
+
+    LINUX: BEGINNER''S CRASH COURSE. YOUR STEP-BY-STEP GUIDE TO LEARNING THE LINUX
+    OPERATING SYSTEM AND COMMAND LINE EASY & FAST!
+
+
+    **First edition. October 7, 2016.**
+
+    Copyright © 2016 Jeremy Li.
+
+    ISBN: 978-1544909400
+
+    Written by Jeremy Li.
+
+    10 9 8 7 6 5 4 3 2 1
+
+
+    ### Also by Jeremy Li
+
+    * [LINUX: Beginner''s Crash Course. Your Step-By-Step Guide To Learning The Linux
+    Operating System And Command Line Easy & Fast!](https://www.draft2digital.com/catalog/364138)
+
+    * [Hacking](https://www.draft2digital.com/catalog/271347)
+
+    * [CompTIA A+ Certification](https://www.draft2digital.com/catalog/267010)
+
+    * [Raspberry Pi 3](https://www.draft2digital.com/catalog/368705)
+
+    * [Amazon Echo](https://www.draft2digital.com/catalog/267555)
+
+    * [Windows 10](https://www.draft2digital.com/catalog/367515)
+
+    * [Programming 5-Book Collection](https://www.draft2digital.com/catalog/509137)
+
+
+    # Table of Contents
+
+    * [Title Page](#c001.xhtml)
+
+    * [Copyright Page](#copyright-page.xhtml)
+
+    * [Also By Jeremy Li](#other.also_by_front_85939_front.xhtml)
+
+    * [Introduction](#c002.xhtml)
+
+    * [Chapter 1 | Linux versus Windows](#c003.xhtml)
+
+    * [Chapter 2 | Features of Linux](#c004.xhtml)
+
+    * [Chapter 3 | What the Linux OS Comprises](#c005.xhtml)
+
+    * [Chapter 4 | The Command Line And The Commands](#c006.xhtml)
+
+    * [Conclusion](#c007.xhtml)
+
+    * [Sign up for Jeremy Li''s Mailing List](#other.new_release_sign_up_page.xhtml)
+
+    * [Also By Jeremy Li](#other.also_by_back_85939_back.xhtml)
+
+
+    | ![image](d2d_images/chapter_title_corner_decoration_left.png) |  | ![image](d2d_images/chapter_title_corner_decoration_right.png)
+    |
+
+    ![image](d2d_images/chapter_title_above.png)
+
+
+    # Introduction
+
+    ![image](d2d_images/chapter_title_below.png)
+
+
+    Before we discuss Linux in detail, let us try to understand the term Open Source
+    software development.
+
+
+    Open source has come of age and has been around for a long time. For many computer
+    and technology junkies, the thought of dabbling with this type of software was
+    something unacceptable. Things have changed over the years, and even though there
+    is still major opposition in many camps, this brand of software has had a major
+    impact in changing our world. Many of us might be using open source without even
+    being aware of it.
+
+
+    When we speak of operating systems, the first names that tend to come to mind
+    are Microsoft Windows or OS X. There is another major role player in this field
+    that is being used by more users everyday. The Linux operating system has become
+    a popular alternative to the other more well-known commercial operating systems.
+    Many of the more established flavors of Linux release upgrades of their operating
+    system every six months.
+
+
+    We are living in an age where cellphones are visible wherever we go. A few years
+    ago the cellular industry had a major new brand of the phone which hit the scene.
+    This was the smartphone. Besides all of the ordinary capabilities associated with
+    a normal cellphone, smartphones have many features which were formerly only found
+    in computers. Open source has even made its entrance here as well. Certain smartphone
+    manufacturers have adopted `Android` as their operating system of choice, and
+    are making major strides in this hotly contested arena.
+
+
+    Many of us use the internet everyday of our lives. We tend to turn to `Google`
+    when we need to search for anything. Besides the search function, many people
+    also use the many applications that are part of the `Google` interface. `Google`
+    was developed using the languages `Java` and `Python`, and was coded on a computer
+    using `Linux` as the operating system. All of these software technologies are
+    widely used and well-known in open source circles.
+
+
+    The internet as we know it today is mostly because of open source software. Many
+    of the web servers around the world are powered by `Linux` for various reasons.
+    When we consider the number of websites which populate the internet, then it comes
+    as no surprise that many of these have been developed using a multitude of open
+    source environments.
+
+
+    Our technological world as we know it today has been changed in many ways by open
+    source software. Not bad for technologies which are totally free and allows anyone
+    to make a contribution to its development.
+
+
+    Now let us discuss the question of choice of Linux Operating system. `Ubuntu`
+    is the most popular and user-friendly while `Fedora` is loaded with the latest
+    technology. So which one to choose? Well it depends on the use. If the user is
+    just using the computer for office jobs which does not include programming then
+    `Ubuntu` is of course the better deal.
+
+
+    However with the latest technology and regular development `Fedora` scores over
+    `Ubuntu` in benchmarking tests. So it largely depends on the use of the software.
+    If the question is to migrate from Windows `Ubuntu` is the obvious choice and
+    if you are a serious programming nerd then `Fedora` is the best bet. Linux foundation
+    recommends learning both `Ubuntu` and `Fedora` for a complete experience of Linux.
+
+
+    | ![image](d2d_images/chapter_title_corner_decoration_left.png) |  | ![image](d2d_images/chapter_title_corner_decoration_right.png)
+    |
+
+    ![image](d2d_images/chapter_title_above.png)
+
+
+    # Chapter 1
+
+    ## Linux versus Windows
+
+    ![image](d2d_images/chapter_title_below.png)
+
+
+    The most tiresome thing I experience in reading about Linux is the mindless enthusiasm
+    of those utterly lacking in empathy and a sense of proportion. Most of us tend
+    to think: If it’s not broke, don’t fix it. That is foreign to Linux folks.
+
+
+    The itch to tinker and explore is essential to how Linux in particular, and Open
+    Source software in general, came into existence. But that doesn’t justify ignoring
+    very real human needs. For most of the humanity, computers are merely machines
+    that save us time and make possible blessings not available any other.
+
+
+    This book is for individuals who simply need to get work done on a computer; for
+    you, something about Windows just doesn’t cut it. At the same time, you are used
+    to shocking, dramatic changes in how you use your computer. Most especially, you
+    have no use for changes simply for the sake of change.
+
+
+    Here are some possible reasons you might have for switching from Windows to Linux:
+
+
+    1. Licensing: Unless you are willing to take the risk of using pirated software,
+    playing by the rules and laws that favor corporate software makers can be very
+    expensive. `Linux` is free and the licensing generally affects only those who
+    modify the software itself. You might have to pay for packaging, and there are
+    some companies making software for `Linux` that isn’t free, but virtually anything
+    you actually need can be downloaded for free. You can make all the copies you
+    like and use it on as many machines as you please.
+
+
+    2. **Control**: `Linux` is very much a Do-It-Yourself (DIY) system. While you
+    may not understand all of the stuff running in the background necessary for it
+    to work, the information is freely available as to what it is and why it’s needed.
+    There is no cult of secrecy based on high-paid training and expensive access to
+    the obscure details of the system. You can get expensive certification if you
+    need it for your job or business, but it’s not required for simply using it. Indeed,
+    the `Linux` user community at large is usually quite eager to help you understand.
+    The main point is that there is no secret agreement between the supplier and some
+    third parties forcing you to accept something not in your best interest just so
+    they can make a profit at your expense. The `Linux` community as a whole is intensely
+    anti-snooping and refuses to surrender any control to third parties.
+
+    '
+  raw: '
+
+
+    ![](d2d_images/cover.jpg)
+
+
+    LINUX
+
+
+    Beginner''s Crash Course
+
+
+    Your Step-By-Step Guide To Learning The Linux Operating System And Command Line
+    Easy & Fast!
+
+
+    ––––––––
+
+
+    JEREMY LI
+
+
+    While every precaution has been taken in the preparation of this book, the publisher
+    assumes no responsibility for errors or omissions, or for damages resulting from
+    the use of the information contained herein.
+
+
+    LINUX: BEGINNER''S CRASH COURSE. YOUR STEP-BY-STEP GUIDE TO LEARNING THE LINUX
+    OPERATING SYSTEM AND COMMAND LINE EASY & FAST!
+
+
+    **First edition. October 7, 2016.**
+
+
+    Copyright © 2016 Jeremy Li.
+
+
+    ISBN: 978-1544909400
+
+
+    Written by Jeremy Li.
+
+
+    10 9 8 7 6 5 4 3 2 1
+
+
+    Also by Jeremy Li
+
+
+    [LINUX: Beginner''s Crash Course. Your Step-By-Step Guide To Learning The Linux
+    Operating System And Command Line Easy & Fast!](https://www.draft2digital.com/catalog/364138)
+
+
+    [Hacking](https://www.draft2digital.com/catalog/271347)
+
+
+    [CompTIA A+ Certification](https://www.draft2digital.com/catalog/267010)
+
+
+    [Raspberry Pi 3](https://www.draft2digital.com/catalog/368705)
+
+
+    [Amazon Echo](https://www.draft2digital.com/catalog/267555)
+
+
+    [Windows 10](https://www.draft2digital.com/catalog/367515)
+
+
+    [Programming 5-Book Collection](https://www.draft2digital.com/catalog/509137)
+
+
+    # Table of Contents
+
+
+    [Title Page](#c001.xhtml)
+
+
+    [Copyright Page](#copyright-page.xhtml)
+
+
+    [Also By Jeremy Li](#other.also_by_front_85939_front.xhtml)
+
+
+    [Introduction](#c002.xhtml)
+
+
+    [Chapter 1 | Linux versus Windows](#c003.xhtml)
+
+
+    [Chapter 2 | Features of Linux](#c004.xhtml)
+
+
+    [Chapter 3 | What the Linux OS Comprises](#c005.xhtml)
+
+
+    [Chapter 4 | The Command Line And The Commands](#c006.xhtml)
+
+
+    [Conclusion](#c007.xhtml)
+
+
+    [Sign up for Jeremy Li''s Mailing List](#other.new_release_sign_up_page.xhtml)
+
+
+    [Also By Jeremy Li](#other.also_by_back_85939_back.xhtml)
+
+
+    | ![image](d2d_images/chapter_title_corner_decoration_left.png) |  | ![image](d2d_images/chapter_title_corner_decoration_right.png)
+    |
+
+
+    ![image](d2d_images/chapter_title_above.png)
+
+
+    # Introduction
+
+
+    ![image](d2d_images/chapter_title_below.png)
+
+
+    Before we discuss Linux in detail, let us try to understand the term Open Source
+    software development.
+
+
+    Open source has come of age and has been around for a long time. For many computer
+    and technology junkies, the thought of dabbling with this type of software was
+    something unacceptable. Things have changed over the years, and even though there
+    is still major opposition in many camps, this brand of software has had a major
+    impact in changing our world. Many of us might be using open source without even
+    being aware of it.
+
+
+    When we speak of operating systems, the first names that tend to come to mind
+    are Microsoft Windows or OS X. There is another major role player in this field
+    that is being used by more users everyday. The Linux operating system has become
+    a popular alternative to the other more well-known commercial operating systems.
+    Many of the more established flavors of Linux release upgrades of their operating
+    system every six months.
+
+
+    We are living in an age where cellphones are visible wherever we go. A few years
+    ago the cellular industry had a major new brand of the phone which hit the scene.
+    This was the smartphone. Besides all of the ordinary capabilities associated with
+    a normal cellphone, smartphones have many features which were formerly only found
+    in computers. Open source has even made its entrance here as well. Certain smartphone
+    manufacturers have adopted Android as their operating system of choice, and are
+    making major strides in this hotly contested arena.
+
+
+    Many of us use the internet everyday of our lives. We tend to turn to Google when
+    we need to search for anything. Besides the search function, many people also
+    use the many applications that are part of the Google interface. Google was developed
+    using the languages Java and Python, and was coded on a computer using Linux as
+    the operating system. All of these software technologies are widely used and well-known
+    in open source circles.
+
+
+    The internet as we know it today is mostly because of open source software. Many
+    of the web servers around the world are powered by Linux for various reasons.
+    When we consider the number of websites which populate the internet, then it comes
+    as no surprise that many of these have been developed using a multitude of open
+    source environments.
+
+
+    Our technological world as we know it today has been changed in many ways by open
+    source software. Not bad for technologies which are totally free and allows anyone
+    to make a contribution to its development.
+
+
+    Now let us discuss the question of choice of Linux Operating system. Ubuntu is
+    the most popular and user-friendly while Fedora is loaded with the latest technology.
+    So which one to choose? Well it depends on the use. If the user is just using
+    the computer for office jobs which does not include programming then Ubuntu is
+    of course the better deal.
+
+
+    However with the latest technology and regular development Fedora scores over
+    Ubuntu in benchmarking tests. So it largely depends on the use of the software.
+    If the question is to migrate from Windows Ubuntu is the obvious choice and if
+    you are a serious programming nerd then Fedora is the best bet. Linux foundation
+    recommends learning both Ubuntu and Fedora for a complete experience of Linux.
+
+
+    | ![image](d2d_images/chapter_title_corner_decoration_left.png) |  | ![image](d2d_images/chapter_title_corner_decoration_right.png)
+    |
+
+
+    ![image](d2d_images/chapter_title_above.png)
+
+
+    # Chapter 1
+
+
+    # Linux versus Windows
+
+
+    ![image](d2d_images/chapter_title_below.png)
+
+
+    The most tiresome thing I experience in reading about Linux is the mindless enthusiasm
+    of those utterly lacking in empathy and a sense of proportion. Most of us tend
+    to think: If it’s not broke, don’t fix it. That is foreign to Linux folks.
+
+
+    The itch to tinker and explore is essential to how Linux in particular, and Open
+    Source software in general, came into existence. But that doesn’t justify ignoring
+    very real human needs. For most of the humanity, computers are merely machines
+    that save us time and make possible blessings not available any other way.
+
+
+    This book is for individuals who simply need to get work done on a computer; for
+    you, something about Windows just doesn’t quite cut it. At the same time, you
+    are used to shocking, dramatic changes in how you use your computer. Most especially,
+    you have no use for changes simply for the sake of change.
+
+
+    Here are some possible reasons you might have for switching from Windows to Linux:
+
+
+    1\. Licensing – Unless you are willing to take the risk of using pirated software,
+    playing by the rules and laws that favor corporate software makers can be very
+    expensive. Linux is free and the licensing generally affects only those who modify
+    the software itself. You might have to pay for packaging, and there are some companies
+    making software for Linux that isn’t free, but virtually anything you actually
+    need can be downloaded for free. You can make all the copies you like and use
+    it on as many machines as you please.
+
+
+    2\. Control – Linux is very much a Do-It-Yourself (DIY) system. While you may
+    not understand all the stuff running in the background necessary for it to work,
+    the information is freely available as to what it is and why it’s needed. There
+    is no cult of secrecy based on high-paid training and expensive access to the
+    obscure details of the system. You can get expensive certification if you need
+    it for your job or business, but it’s not required for simply using it. Indeed,
+    the Linux user community at large is usually quite eager to help you understand.
+    The main point is that there is no secret agreement between the supplier and some
+    third parties forcing you to accept something not in your best interest just so
+    they can make a profit at your expense. The Linux community as a whole is intensely
+    anti-snooping and refuses to surrender any control to third parties.'
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpg)
+
+
+    # LINUX
+
+    ## 入门速成课程
+
+    你轻松快速学习 Linux 操作系统和命令行行的分步指南！
+
+
+    ––––––––
+
+    JEREMY LI
+
+
+    在本书准备过程中，尽管已采取一切预防措施，但出版商对任何错误或遗漏，或因使用本文包含的信息而导致的损害不承担责任。
+
+
+    LINUX：入门速成课程。你轻松快速学习 Linux 操作系统和命令行行的分步指南！
+
+
+    **第一版。2016 年 10 月 7 日。**
+
+    版权所有 © 2016 Jeremy Li。
+
+    ISBN: 978-1544909400
+
+    作者：Jeremy Li。
+
+    10 9 8 7 6 5 4 3 2 1
+
+
+    ### Jeremy Li 的其他作品
+
+    * [LINUX：入门速成课程。你轻松快速学习 Linux 操作系统和命令行行的分步指南！](https://www.draft2digital.com/catalog/364138)
+
+    * [黑客攻击](https://www.draft2digital.com/catalog/271347)
+
+    * [CompTIA A+ 认证](https://www.draft2digital.com/catalog/267010)
+
+    * [树莓派 3](https://www.draft2digital.com/catalog/368705)
+
+    * [亚马逊 Echo](https://www.draft2digital.com/catalog/267555)
+
+    * [Windows 10](https://www.draft2digital.com/catalog/367515)
+
+    * [编程五卷合集](https://www.draft2digital.com/catalog/509137)
+
+
+    # 目录
+
+    * 标题页
+
+    * 版权页
+
+    * Jeremy Li 的其他作品
+
+    * 引言
+
+    * 第 1 章 | Linux 对比 Windows
+
+    * 第 2 章 | Linux 的特性
+
+    * 第 3 章 | Linux 操作系统组成部分
+
+    * 第 4 章 | 命令行与命令
+
+    * 结论
+
+    * 注册 Jeremy Li 的邮件列表
+
+    * Jeremy Li 的其他作品
+
+
+    | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png)
+    |
+
+    ![image](img/chapter_title_above.png)
+
+
+    # 引言
+
+    ![image](img/chapter_title_below.png)
+
+
+    在我们详细讨论 Linux 之前，让我们先尝试理解“开源软件开发”这一术语。
+
+
+    开源已经走向成熟，并存在了很长时间。对于许多计算机和技术发烧友来说，尝试接触这种软件曾是不可接受的。多年来情况发生了变化，尽管在许多阵营中仍有巨大的反对意见，但这种软件在改变我们的世界方面产生了重大影响。我们许多人可能在毫无不知情的情况下在使用开源软件。
+
+
+    当我们谈论操作系统时，脑海中浮出的通常是微软 Windows 或 OS X。在这个领域还有另一个重要的参与者，每天都有越来越多的用户在使用。Linux 操作系统已成为其他更知名商业操作系统的流行替代方案。许多成熟的
+    Linux 发行版每六个月就会发布一次操作系统的升级。
+
+
+    我们生活在一个手机随处可见的时代。几年前，移动通信行业出现了一个具有重大意义的新手机手机品牌，这就是智能手机。除了普通手机具备的所有常规功能外，智能手机还有许多以前只在计算机上才能找到的功能。开源也在此领域占有一席之地。某些智能手机制造商采用了
+    `Android` 作为他们的首选操作系统，并在这个竞争激烈的领域取得了巨大进展。
+
+
+    我们中的许多人在日常生活中每天都会使用互联网。当我们需要搜索任何内容时，倾向于转向 `Google`。除了搜索功能，许多人还使用 `Google` 界面中的许多应用程序。`Google`
+    是使用 `Java` 和 `Python` 语言开发的，并在使用 `Linux` 作为操作系统的计算机上编写代码。所有的软件技术在开源圈中都被广泛使用且广为人知。
+
+
+    我们今天所知的互联网很大程度上归功于开源软件。出于各种原因，全球许多网络服务器由 `Linux` 驱动。当我们考虑到充斥互联网的网站数量，其中许多都是使用多种开源环境开发的，这并不令人意外。
+
+
+    我们今天所知的技术世界已在许多方面被开源软件所改变。对于这些完全免费并允许任何人对其开发做出贡献的技术来说，这并不糟糕。
+
+
+    现在让我们讨论一下 Linux 操作系统的选择问题。`Ubuntu` 最流行且对用户友好，而 `Fedora` 则充满了最新的技术。那么应该选择哪一个呢？这取决于用途。如果用户只是用电脑进行不包括编程的办公工作，那么
+    `Ubuntu` 自然是更好的选择。
+
+
+    然而，凭借最新的技术的定期开发，`Fedora` 在基准测试中优于 `Ubuntu`。因此，很大程度上取决于软件的用途。如果是从 Windows 迁移，`Ubuntu`
+    是明显的选择；如果你是一个认真的编程极客，`Fedora` 是最佳选择。Linux 基金建议同时学习 `Ubuntu` 和 `Fedora` 以获得完整的
+    Linux 体验。
+
+
+    | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png)
+    |
+
+    ![image](img/chapter_title_above.png)
+
+
+    # 第 1 章
+
+    ## Linux 对比 Windows
+
+    ![image](img/chapter_title_below.png)
+
+
+    我在阅读关于 Linux 内容时经历的最令人疲惫的事情，就是那些完全缺乏同理心和分寸感的盲目狂热。我们大多数人倾向于认为：如果没有坏，就不要修。这对于 Linux
+    爱好者来说是陌生的。
+
+
+    对摆弄和探索的冲动是 Linux 特别以及整个开源软件存在的本质。但这不能作为忽视非常真实的人类需求的理由。对于大多数人类来说，计算机仅仅是为我们节省时间并提供其他任何无法实现的福的机器。
+
+
+    这本书是为那些只需要在计算机上完成工作的人准备的；对你来说，Windows 的某些功能并不适用。同时，你习惯了使用电脑的方式发生令人震惊、戏剧性的变化。特别是，你不需要为了改变而改变。
+
+
+    以下是你可能想要从 Windows 切换到 Linux 的一些可能原因：
+
+
+    1. 许可：除非你愿意承担使用盗版软件的风险，否则遵循有利于企业软件制造商的规则和法律可能非常昂贵。`Linux` 是免费的，许可通常只影响那些修改软件本身的人。你可能需要为包装付费，虽然有些公司为
+    `Linux` 制作非免费的软件，但你实际需要的几乎任何东西都可以免费下载。你可以制作任何你喜欢的副本，并在任意数量的机器上使用。
+
+
+    2. **控制**：`Linux` 是一个非常注重 DIY（DIY）的系统。虽然你可能不理解为了运行所需的后台的所有内容，但关于它是什么以及为什么需要的信息是免费获取的。没有基于高薪培训和昂贵访问系统晦涩细节的秘密崇拜。如果你工作或业务需要，可以获得昂贵的认证，但对于仅仅使用它并不是必需的。事实上，整个
+    `Linux` 用户社区通常非常乐于帮助你理解。重点是，供应商与某些第三方之间没有秘密协议强迫你接受不符合你最佳利益的东西，以便他们以你为代价盈利。整个 `Linux`
+    社区强烈反对监视，并拒绝向第三方交出任何控制权。
+
+
+    '
+- fmt: '
+
+    ## 3 Security
+
+    The Linux community is also intensely pro-security, so it is generally harder
+    to crack a Linux system. Not impervious, it’s just that the computer is far less
+    likely to suffer from external threats. Criminal hackers tend to like using Linux
+    themselves because of the built-in safety factors.
+
+
+    By the same token, the background noise of clandestine chatter between computer
+    criminals indicates they aren’t eager to face the challenge of cracking a properly
+    configured Linux box. Perhaps it’s partly due to the much smaller numbers of systems
+    they can harvest to their criminal activity at the cost of such difficulty.
+
+
+    There isn’t that much profit from all the work of attacking Linux systems, so
+    we are unlikely to ever know how vulnerable it really is because too few are willing
+    to invest time and resources attacking them. Even if you and all your friends
+    switch to Linux, it will probably always remain a rather low proportion of personal
+    computers connected to the Internet. (Servers are a different story.) At any rate,
+    once you get used to how Linux stuff works, it’s okay to relax and not worry as
+    much about random attacks to your system. Rarely do the threats out there have
+    any effect on Linux.
+
+
+    ### 4 Bloat
+
+    You can easily find a user-friendly Linux OS that is up-to-date and runs just
+    fine on older hardware. Thus, your old XP machine that can’t really handle Win7
+    will run a current version of Linux just fine, and for quite a few years to come.
+    This wasn’t always true in the history of Linux, but in the past decade or so,
+    Windows has begun demanding a lot more power than Linux does for the same work.
+
+
+    The primary reason you won’t switch from Windows to Linux is the lack of convenience.
+    Open Source can be political, or even downright religious, about a certain kind
+    of technological orthodoxy. They don’t like the idea of hardware makers keeping
+    trade secrets and refuse to understand how this affects users.
+
+
+    Never mind all the political and philosophical hullabaloo from Linux advocates,
+    some hardware doesn’t work, or doesn’t work very well, under Linux. You can’t
+    just take any given old piece of hardware at the electronics store and expect
+    it works as advertised if you run Linux. You have to be somewhat more discriminating.
+    On the other hand, I’m not the only computer user who found some Linux drivers
+    much better than the Windows version.
+
+
+    Some activities are very complicated compared to Windows, such as home networking
+    and sharing printers. Those things can be done, but it will involve more work.
+
+
+    And let’s face it: Compatibility between Linux versions of software working alongside
+    the Windows version for similar operations is hit-and-miss. Open Source often
+    lacks critical features. For a writer, the best word processor you can get for
+    free under Linux still does not compare very well with even Word 2000. At the
+    very least, grammar checking in Linux remains primitive and almost useless.
+
+
+    Open Source office suites are always somewhere behind the commercial stuff. (But
+    you can easily make MS Office run on Linux, as well as other popular Windows stuff.)
+
+
+    Don’t stumble into this blindly. There are problems with any choices you make.
+
+
+    Here are some of the primary differences between Linux and Windows.
+
+
+    ### 1 Graphical User Interface (GUI)
+
+    Both Linux and Windows provide graphical interfaces. Windows graphical interfaces
+    have changed over time, but the first version of Windows that gave end-users choice
+    of interface change was Windows XP, while Linux has always had that provision.
+    Another point to note is that Linux can run in either graphical mode or non-graphical
+    mode.
+
+
+    ### 2 Running from CD
+
+    One thing Linux can do that Windows cannot is run from CD.
+
+
+    ### 3 Viruses
+
+    Linux does not have viruses as compared to Windows.
+
+
+    ### 4 Technicality
+
+    In this area Linux reigns supreme over Windows.
+
+
+    ### 5 System Stability
+
+    When running, Linux offers more stability than Windows.
+
+
+    ### 6 System crashing
+
+    Windows tends to crash more frequently than Linux.
+
+
+    ### 7 Costing
+
+    Purchasing Linux is less costly than Windows.
+
+
+    ### 8 Maintenance & Management
+
+    Once a Linux system is configured properly, maintenance and management are close
+    to Windows.
+
+
+    ### 9 Hardware Support
+
+    Over the years Linux has never been known for hardware support, but that is changing
+    rapidly with many Linux distributions.
+
+
+    ### 10 Problem first, Solution
+
+    Being an IT professional, this is one of my favorite points.
+
+    '
+  raw: '3\. Security – The Linux community is also intensely pro-security, so it is
+    generally harder to crack a Linux system. Not impervious, it’s just that the computer
+    is far less likely to suffer from external threats. Criminal hackers tend to like
+    using Linux themselves because of the built-in safety factors.
+
+
+    By the same token, the background noise of clandestine chatter between computer
+    criminals indicates they aren’t eager to face the challenge of cracking a properly
+    configured Linux box. Perhaps it’s partly due to the much smaller numbers of systems
+    they can harvest to their criminal activity at the cost of such difficulty.
+
+
+    There isn’t that much profit from all the work of attacking Linux systems, so
+    we are unlikely to ever know how vulnerable it really is because too few are willing
+    to invest time and resources attacking them. Even if you and all your friends
+    switch to Linux, it will probably always remain a rather low proportion of personal
+    computers connected to the Internet. (Servers are a different story.) At any rate,
+    once you get used to how Linux stuff works, it’s okay to relax and not worry as
+    much about random attacks to your system. Rarely do the threats out there have
+    any effect on Linux.
+
+
+    4\. Bloat – You can easily find a user-friendly Linux OS that is up-to-date and
+    runs just fine on older hardware. Thus, your old XP machine that can’t really
+    handle Win7 will run a current version of Linux just fine, and for quite a few
+    years to come. This wasn’t always true in the history of Linux, but in the past
+    decade or so, Windows has begun demanding a lot more power than Linux does for
+    the same work.
+
+
+    The primary reason you won’t switch from Windows to Linux is the lack of convenience.
+    Open Source can be political, or even downright religious, about a certain kind
+    of technological orthodoxy. They don’t like the idea of hardware makers keeping
+    trade secrets and refuse to understand how this affects users.
+
+
+    Never mind all the political and philosophical hullabaloo from Linux advocates,
+    some hardware doesn’t work, or doesn’t work very well, under Linux. You can’t
+    just take any given old piece of hardware at the electronics store and expect
+    it works as advertised if you run Linux. You have to be somewhat more discriminating.
+    On the other hand, I’m not the only computer user who found some Linux drivers
+    much better than the Windows version.
+
+
+    Some activities are very complicated compared to Windows, such as home networking
+    and sharing printers. Those things can be done, but it will involve more work.
+
+
+    And let’s face it: Compatibility between Linux versions of software working alongside
+    the Windows version for similar operations is hit-and-miss. Open Source often
+    lacks critical features. For a writer, the best word processor you can get for
+    free under Linux still does not compare very well with even Word 2000\. At the
+    very least, grammar checking in Linux remains primitive and almost useless.
+
+
+    Open Source office suites are always somewhere behind the commercial stuff. (But
+    you can easily make MS Office run on Linux, as well as other popular Windows stuff.)
+
+
+    Don’t stumble into this blindly. There are problems with any choices you make.
+
+
+    Here are some of the primary differences between Linux and Windows.
+
+
+    1\. Graphical User Interface (GUI)
+
+
+    Both Linux and Windows provide graphical interfaces. Windows graphical interfaces
+    have changed over time, but the first version of Windows that gave end-users choice
+    of interface change was Windows XP, while Linux has always had that provision.
+    Another point to note is that Linux can run in either graphical mode or non-graphical
+    mode unlike Windows that just runs in graphical mode.
+
+
+    2\. Running from CD
+
+
+    One thing Linux can do that Windows cannot do is run from a CD which is referred
+    to as live CD. For Windows to run, it must first be installed onto the hard drive
+    of which is partially true with some Linux distribution. A good example of a Linux
+    distribution(s) that can run entirely as a Live CD is Ubuntu and Opensuse, plus
+    many other Linux distributions out there.
+
+
+    3\. Viruses
+
+
+    Linux technically does not have viruses as compared to Windows.
+
+
+    4\. Technical Superiority
+
+
+    In this area Linux rules, the intensity of heavy workload(s) to remote administration,
+    to security to virtualization to mention but a few of the multitasking areas Linux
+    reigns supreme. This is why major companies run Linux on their servers.
+
+
+    5\. System Stability
+
+
+    When running mission-critical work, the operating system used must also be up
+    to par, and this is where Linux comes in again. Linux OS''s offer stability and
+    robustness.
+
+
+    6\. System crashing
+
+
+    Windows tends to crash more frequently than Linux, period.
+
+
+    7\. Costing
+
+
+    Purchasing Linux is less costly as compared to Windows. Once a Linux CD is bought
+    it can be used to install on as many computers as one so chooses, unlike Windows
+    CD''s which have limitations on the number of computers to be installed.
+
+
+    8\. Maintenance & Management
+
+
+    Once a Linux system is configured properly and running as it should, maintenance
+    and management are close to minimal unlike Windows-based platforms which tend
+    to require the occasional restarts every now and then.
+
+
+    9\. Hardware Support
+
+
+    Over the years Linux has never been known for its hardware support but that too
+    is changing rapidly, most hardware today can now be supported by a good number
+    of Linux distributions.
+
+
+    10\. Problem first, Solution last
+
+
+    Being an IT professional, this last point is one of my favorite points, why do
+    I say this. Look at it this way.
+
+
+    | ![image](d2d_images/chapter_title_corner_decoration_left.png) |  | ![image](d2d_images/chapter_title_corner_decoration_right.png)
+    |
+
+
+    ![image](d2d_images/chapter_title_above.png)
+
+
+    # Chapter 2
+
+
+    # Features of Linux
+
+
+    ![image](d2d_images/chapter_title_below.png)
+
+
+    In general, the Linux/Unix experience holds sufficient differences from Windows
+    that you might benefit from some explanation.
+
+
+    The DIY Linux/Unix culture assumes a much tighter interaction between the user
+    and the machine. More than a mere user, you need to become at least a smidgen
+    of the technician. With most of your fellow Linux users, it will seem to you like
+    an obsession. We’ve already noted they seem far more interested in the computer
+    itself and exploring its capabilities than actually using it. They demand a much
+    closer involvement in the arcane processes, but it yields to us more ordinary
+    users a much greater control when we do want it.
+
+
+    Given all the recent revelations of snooping by the government, corporations,
+    advertisers and criminals happening on a level not previously imagined, the value
+    of having control over your own system has taken center stage in computer technology.
+    It’s possible you could continue pretending it won’t matter much and simply accept
+    what comes with default commercial provision for your computer use.
+
+
+    The risk of such studious ignorance is quite high. If you’d rather not surrender
+    all your privacy just yet, Linux offers a far greater degree of control. Having
+    that control is pointless if you have no idea how to use it. The minimum standard
+    for keeping privacy and control has already risen quite a bit.
+
+
+    One of the most important factors has already been hinted at above: Linux is the
+    system underneath the GUI. With all the DIY perfectionists and highly varied artistic
+    visions involved, you should hardly be surprised that the Linux GUI could be any
+    one of dozens.
+
+
+    That’s because the GUI itself is modular. The basic graphical display is called
+    “X” and the desktop runs on top of that. We’ve mentioned that we’ll be using KDE,
+    but that Ubuntu has their preferred Unity. KDE is all over the place and quite
+    popular, but Unity is pretty much restricted to Ubuntu. There are others and you’ll
+    see names like GNOME, MATE, Cinnamon, E, LXDE, XFCE, etc.'
+  toc: []
+  trans: '
+
+
+    ## 3 安全
+
+    Linux 社区也极重视安全，因此破解 Linux 系统通常更难。它并非无懈击，只是计算机不太可能受到外部威胁的侵害。犯罪黑客倾向于自己使用 Linux，因为其内置了许多安全因素。
+
+
+    同理，计算机犯罪分子之间秘密交谈的背景噪音也表明，他们并不热于面对破解一个配置得当的 Linux 盒的挑战。这可能部分是因为，付出如此巨大难度的代价，他们能够获取并用于犯罪活动的系统数量要少得多。
+
+
+    攻击 Linux 系统的这些工作利润并不高，因此我们可能永远无法知道它到底有多脆弱，因为很少有人愿意投入时间和资源去去攻击它们。即使你和你所有的朋友都切换到
+    Linux，它在连接互联网的个人电脑中的比例可能一直保持在很低的水平。（服务器则是另一回事。）无论如何，一旦你习惯了 Linux 系统的运作方式，就可以放松心情，不必过度担心针对你系统的随机攻击。外界的威胁很少能对
+    Linux 产生任何影响。
+
+
+    ### 4 臃肿
+
+    你可以轻松找到一个既界面友好又保持最新，且在旧硬件上运行良好的 Linux 操作系统。因此，你那台无法真正处理 Win7 的旧 XP 机器可以完美运行当前版本的
+    Linux，并且在未来的很多几年里也是如此。这在 Linux 的历史上并非一直如此，但在过去的十年左右，Windows 在执行相同工作时对性能的需求开始比
+    Linux 高得多。
+
+
+    你不会从 Windows 切换到 Linux 的首要原因是缺乏便利性。开源可能在某种技术正统性上表现出政治性，甚至是近乎宗教的狂热。他们不喜欢硬件制造商保留商业秘密的这种想法，并拒绝理解这如何影响用户。
+
+
+    别管 Linux 拥护者那些政治和哲学上的喧哗，某些硬件在 Linux 下确实无法工作，或者运行得并不好。你不能从电子商店随便拿来任何一个旧硬件，就指望在运行
+    Linux 时它像广告说的那样工作。你必须变得更具眼光。另一方面，我并不是唯一发现某些 Linux 驱动程序比 Windows 版本好很多的计算机用户。
+
+
+    与 Windows 相比，某些活动非常复杂，例如家庭网络和打印机共享。这些事情可以做到，但会涉及更多工作。
+
+
+    让我们面对现实吧：Linux 软件版本与 Windows 版本在执行类似操作时的兼容性全凭运气。开源通常缺乏关键功能。对于写作者来说，你在 Linux 下能获得的免费最佳文字处理器仍然与
+    Word 2000 相比并不理想。至少，Linux 下的语法检查仍然原始且几乎毫无用处。
+
+
+    开源办公套件在某些方面总是落后于商业软件。（但你可以轻松让 MS Office 在 Linux 上运行，以及其他流行的 Windows 软件。）
+
+
+    不要盲目地陷入其中。你做的任何选择都存在问题。
+
+
+    以下是 Linux 和 Windows 之间的一些主要区别。
+
+
+    ### 1 图形用户界面 (GUI)
+
+    Linux 和 Windows 都提供了图形界面。Windows 的图形界面随着时间不断变化，但第一个让最终用户选择界面更改的 Windows 版本是 Windows
+    XP，而 Linux 一直都有这一规定。另一个需要注意的点是，Linux 可以在图形模式或非图形模式下运行。
+
+
+    ### 2 从 CD 运行
+
+    Linux 可以做到而 Windows 做不到的一点是从 CD 运行。
+
+
+    ### 3 病毒
+
+    与 Windows 相比，Linux 没有病毒。
+
+
+    ### 4 技术性
+
+    在这一领域，Linux 凌于 Windows 之。
+
+
+    ### 5 系统稳定性
+
+    运行时，Linux 提供的稳定性比 Windows 高。
+
+
+    ### 6 系统崩溃
+
+    Windows 崩溃频率通常比 Linux 高。
+
+
+    ### 7 成本
+
+    购买 Linux 的成本比 Windows 低。
+
+
+    ### 8 维护与管理
+
+    一旦 Linux 系统配置得当，其维护和管理就接近于 Windows。
+
+
+    ### 9 硬件支持
+
+    多年来，Linux 从未以硬件支持闻名，但随着许多 Linux 发行版的出现，这种情况正在迅速变化。
+
+
+    ### 10 问题优先，解决方案
+
+    作为一名 IT 专业人士，这是我最喜欢的观点之一。
+
+
+    '
+- fmt: '
+
+    Those all represent integrated desktop display systems, but there are also a host
+    of other GUIs that don’t integrate much, just control the display. They don’t
+    add in all sorts of matching tools and various little applications we all take
+    for granted.
+
+
+    Coming from Windows, you’ll experience `KDE` as probably the most fully integrated
+    GUI package. However, you can never forget that underneath is the command line
+    interface (`CLI`).
+
+
+    Depending on how you use a computer, it isn’t even necessary to have a `GUI`,
+    and Linux comes with a wealth of applications that run on the `CLI`. Not just
+    text editors, but web browsers, email clients, multimedia players – all of these
+    are highly developed and fully functional without any graphical display elements.
+    Then again, when properly configured, you can display graphics on the `CLI`. Frankly,
+    Open Source developers continue their love affair with the simplicity and power
+    of the `CLI`.
+
+
+    It’s possible to avoid the `CLI` on Linux, but it’s foolish. Too many of the very
+    best things about Linux will never appear on any `GUI`. Even Windows and Macintosh
+    retain their `CLI` tools. Indeed, Mac is `UNIX` with a full `CLI` seldom used
+    by its fans, while Linux is simply Unix-like.
+
+
+    There are some computer tasks that simply cannot be done properly any other way.
+    As a side note, every bit of `GUI` software adds complexity and vulnerability
+    to the system. The more you can rely on the `CLI`, the fewer openings you offer
+    to those who would seek to seize control of your system from you. Adaptation to
+    this higher self-reliance is much easier with Linux because what seems initially
+    obscure is actually just unfamiliar to you coming from the outside.
+
+
+    In this book, we will explore the `CLI` just a little bit. I’ll hold your hand
+    to keep it as simple as possible. It’s quite easy to run a `CLI` terminal session
+    from within the `GUI`. It’s also quite easy to transfer commands with `cut-n-paste`
+    back and forth between the two.
+
+
+    In fact, with Linux, the mouse itself has its own clipboard. If your pointer has
+    a middle button, you can paste from the pointer without using the `GUI` clipboard,
+    and it works even if there is no `GUI`. Linux has allowed decent mousing operations
+    on the `CLI` since the days of the first mouse drivers.
+
+
+    One of the things most surprising to Windows refugees is that, even with your
+    `GUI` running, you can still log into the Linux `CLI`. When you log into your
+    Linux desktop, running underneath are typically a half-dozen `CLI` sessions waiting
+    for you. Not only is `UNIX` inherently `CLI`, but it was multi-user from the start,
+    before `DOS` or Windows ever existed. But these days we seldom have multiple dumb
+    terminals plugged into a running server, so we keep all those sessions on board
+    the same hardware in the form of virtual sessions. Very early in the game, this
+    was extended to the `GUI`, but without the extra logins.
+
+
+    On your Linux graphical desktop, you will always have the capability of multiple
+    virtual desktops, each with its own viewing portal. Instead of crowding multiple
+    application windows onto one working space, you can scatter them across several.
+    It’s like having extra desktops lined up on either side but hidden off-screen
+    until you need them. You don’t have to use that feature, but it’s nice to know
+    that you can.
+
+
+    Having that capability written into the software, both in the `GUI` and the `CLI`,
+    has become so completely integrated into the Linux way of things that the system
+    would hardly work without it. Any extra draw it might have on system resources
+    has already been highly minimized. It won’t improve things by turning off all
+    that extra capability, in part because it would break stuff.
+
+
+    As it is, in recent years, some of the most power-hungry Linux systems still use
+    less computer power than the current crop of Windows operating systems. With the
+    current version of `Kubuntu`, you will typically use less power than `Win7` or
+    `Vista`, and much less than `Win8`. At the same time, you will likely have less
+    trouble with drivers, stability and security. Again, it’s not perfect, but it’s
+    quite likely better in many ways.
+
+
+    | ![image](d2d_images/chapter_title_corner_decoration_left.png) |  | ![image](d2d_images/chapter_title_corner_decoration_right.png)
+    |
+
+
+    ![image](d2d_images/chapter_title_above.png)
+
+
+    # Chapter 3
+
+
+    # What the Linux OS Comprises
+
+
+    ![image](d2d_images/chapter_title_below.png)
+
+
+    The Linux is a very powerful operating system that comprises a number of other
+    pieces. The pieces includes:
+
+
+    ### The Bootloader
+
+    This is the software that has the capabilities to manage the boot process of the
+    computer. You will always experience it as a splash screen that occasionally pops
+    up and disappears once you boot into the main operating system.
+
+
+    ### The kernel
+
+    Wait! Did we forget to highlight what Linux is? The `kernel` is the one fragment
+    of the whole package that is actually referred to as the ‘Linux’. It the core
+    part of the computer system and has the mandate to manage a number of resources
+    including the memory, the Central Processing Unit (`CPU`) and the other peripheral
+    devices. In the arrangement or organization of the Operating System, the `kernel`
+    is always at the lowest level.
+
+
+    ### Daemons
+
+    Do you ever get amazed how other activities are scheduled in a computer? In Linux,
+    the `daemons` are the background services that are initiated during the boot process
+    or the moment you log into your computer. The services may include scheduling,
+    sound and printing among others.
+
+
+    ### The Shell
+
+    Have you heard of the Linux command line? The command line is just what we call
+    the shell. This is the command process that will provide you the ability to control
+    your PC through typing a variety of commands in a text interface. The text interface
+    is so scary to many people who do not like using commands with the assumption
+    that the command line is archaic. With the modern generation of desktop Linux,
+    that is a case of the past since you will not fumble a lot with the command line.
+
+
+    ### Graphical Server
+
+    It is termed as the part of the system that displays or relays graphics information
+    to the user through the monitor. In most cases, it is called `X server`.
+
+
+    ### Desktop Environment
+
+    It is a conjugation of the more familiar graphical user interface that allows
+    users to interact with the core system. Some of examples of desktop environment
+    include `XFCE`, `Cinnamon`, `Unity`, `GNOME`, `KDE` and `Enlightment`. The choice
+    of desktop environments and their utilities vary from user to user. However the
+    capability of the `KDE` and `Gnome` environments are quite similar.
+
+
+    ### Applications
+
+    These are high-quality software titles that you can find and install easily. The
+    applications help in various functions for example the `Ubuntu Software Center`
+    for quick searching of different apps.
+
+    '
+  raw: 'Those all represent integrated desktop display systems, but there are also
+    a host of other GUIs that don’t integrate much, just control the display. They
+    don’t add in all sorts of matching tools and various little applications we all
+    take for granted.
+
+
+    Coming from Windows, you’ll experience KDE as probably the most fully integrated
+    GUI package. However, you can never forget that underneath is the command line
+    interface (CLI).
+
+
+    Depending on how you use a computer, it isn’t even necessary to have a GUI, and
+    Linux comes with a wealth of applications that run on the CLI. Not just text editors,
+    but web browsers, email clients, multimedia players – all of these are highly
+    developed and fully functional without any graphical display elements. Then again,
+    when properly configured, you can display graphics on the CLI. Frankly, Open Source
+    developers continue their love affair with the simplicity and power of the CLI.
+
+
+    It’s possible to avoid the CLI on Linux, but it’s foolish. Too many of the very
+    best things about Linux will never appear on any GUI. Even Windows and Macintosh
+    retain their CLI tools. Indeed, Mac is UNIX with a full CLI seldom used by its
+    fans, while Linux is simply Unix-like.
+
+
+    There are some computer tasks that simply cannot be done properly any other way.
+    As a side note, every bit of GUI software adds complexity and vulnerability to
+    the system. The more you can rely on the CLI, the fewer openings you offer to
+    those who would seek to seize control of your system from you. Adaptation to this
+    higher self-reliance is much easier with Linux because what seems initially obscure
+    is actually just unfamiliar to you coming from the outside.
+
+
+    In this book, we will explore the CLI just a little bit. I’ll hold your hand to
+    keep it as simple as possible. It’s quite easy to run a CLI terminal session from
+    within the GUI. It’s also quite easy to transfer commands with cut-n-paste back
+    and forth between the two.
+
+
+    In fact, with Linux, the mouse itself has its own clipboard. If your pointer has
+    a middle button, you can paste from the pointer without using the GUI clipboard,
+    and it works even if there is no GUI. Linux has allowed decent mousing operations
+    on the CLI since the days of the first mouse drivers.
+
+
+    One of the things most surprising to Windows refugees is that, even with your
+    GUI running, you can still log into the Linux CLI. When you log into your Linux
+    desktop, running underneath are typically a half-dozen CLI sessions waiting for
+    you. Not only is UNIX inherently CLI, but it was multi-user from the start, before
+    DOS or Windows ever existed. But these days we seldom have multiple dumb terminals
+    plugged into a running server, so we keep all those sessions on board the same
+    hardware in the form of virtual sessions. Very early in the game, this was extended
+    to the GUI, but without the extra logins.
+
+
+    On your Linux graphical desktop, you will always have the capability of multiple
+    virtual desktops, each with its own viewing portal. Instead of crowding multiple
+    application windows onto one working space, you can scatter them across several.
+    It’s like having extra desktops lined up on either side but hidden off-screen
+    until you need them. You don’t have to use that feature, but it’s nice to know
+    that you can.
+
+
+    Having that capability written into the software, both in the GUI and the CLI,
+    has become so completely integrated into the Linux way of things that the system
+    would hardly work without it. Any extra draw it might have on system resources
+    has already been highly minimized. It won’t improve things by turning off all
+    that extra capability, in part because it would break stuff.
+
+
+    As it is, in recent years, some of the most power-hungry Linux systems still use
+    less computer power than the current crop of Windows operating systems. With the
+    current version of Kubuntu, you will typically use less power than Win7 or Vista,
+    and much less than Win8\. At the same time, you will likely have less trouble
+    with drivers, stability and security. Again, it’s not perfect, but it’s quite
+    likely better in many ways.
+
+
+    | ![image](d2d_images/chapter_title_corner_decoration_left.png) |  | ![image](d2d_images/chapter_title_corner_decoration_right.png)
+    |
+
+
+    ![image](d2d_images/chapter_title_above.png)
+
+
+    # Chapter 3
+
+
+    # What the Linux OS Comprises
+
+
+    ![image](d2d_images/chapter_title_below.png)
+
+
+    The Linux is a very powerful operating system that comprises a number of other
+    pieces. The pieces includes:
+
+
+    The Bootloader. This is the software that has the capabilities to manage the boot
+    process of the computer. You will always experience it as a splash screen that
+    occasionally pops up and disappears once you boot into the main operating system.
+
+
+    The kernel. Wait! Did we forget to highlight what Linux is? The kernel is the
+    one fragment of the whole package that is actually referred to as the ‘Linux’.
+    It the core part of the computer system and has the mandate to manage a number
+    of resources including the memory, the Central Processing Unit (CPU) and the other
+    peripheral devices. In the arrangement or organization of the Operating System,
+    the kernel is always at the lowest level.
+
+
+    Daemons. Do you ever get amazed how other activities are scheduled in a computer?
+    In Linux, the daemons are the background services that are initiated during the
+    boot process or the moment you log into your computer. The services may include
+    scheduling, sound and printing among others.
+
+
+    The Shell. Have you heard of the Linux command line? The command line is just
+    what we call the shell. This is the command process that will provide you the
+    ability to control your PC through typing a variety of commands in a text interface.
+    The text interface is so scary to many people who do not like using commands with
+    the assumption that the command line is archaic. With the modern generation of
+    desktop Linux, that is a case of the past since you will not fumble a lot with
+    the command line.
+
+
+    Graphical Server. It is termed as the part of the system that displays or relays
+    graphics information to the user through the monitor. In most cases, it is called
+    the X server.
+
+
+    Desktop Environment: It is a conjugation of the more familiar graphical user interface
+    that allows users to interact with the core system. Some of the examples of desktop
+    environment include XFCE, Cinnamon, Unity, GNOME, KDE and Enlightment. The choice
+    of desktop environments and their utilities vary from user to user. However the
+    capability of the KDE and Gnome environments are quite similar.
+
+
+    Unlike other commercial operating systems most of the Linux OS developers distribute
+    it for free. It has hence a wide range of scope and is customizable due to which
+    they are also fine-tuned according to the usage pattern.
+
+
+    The Graphical User Interface or GUI has now become an absolute necessity for Linux
+    users although previously, Linux was mainly based and operated through the UNIX
+    command line. The operating commands had to be executed from the terminal, due
+    to which it was considered to be an operating system for the computer engineers
+    and researchers only.
+
+
+    However, with the coming of popular environments of Linux like Gnome and KDE,
+    the usability of Linux has enhanced exponentially. These environments support
+    features of using multiple desktop screens on one terminal and several other choices
+    used to customize the appearance of your system. The desktop environments comprise
+    built-in applications like web browsers, configuration tools, file managers, and
+    games among others.
+
+
+    Applications. These are high-quality software titles that you can find and install
+    easily. The applications help in various functions for example the Ubuntu Software
+    Center for quick searching of different apps.
+
+
+    | ![image](d2d_images/chapter_title_corner_decoration_left.png) |  | ![image](d2d_images/chapter_title_corner_decoration_right.png)
+    |
+
+
+    ![image](d2d_images/chapter_title_above.png)
+
+
+    # Chapter 4
+
+
+    # The Command Line And The Commands
+
+
+    ![image](d2d_images/chapter_title_below.png)'
+  toc: []
+  trans: '
+
+    这些都代表了集成的桌面显示系统，但也有许多集成程度不高的 GUI 仅负责控制显示。它们没有添加我们认为理所当然的各种配套工具和各种小型应用程序。
+
+
+    如果你是从 Windows 转过来的，你可能会认为 `KDE` 可能是集成程度最完整的 GUI 软件包。然而，你永远不要忘记，其底层是命令行界面（`CLI`）。
+
+
+    取决于你使用计算机的方式，你甚至不需要一个 `GUI`，而且 Linux 提供了丰富的运行在 `CLI` 上的应用程序。不仅仅是文本编辑器，还有 Web 浏览器、电子邮件客户端、多媒体播放器——所有这些在没有任何图形显示元素的情况下也已经高度开发且功能完备了。尽管如此，当配置得当时，你可以在
+    `CLI` 上显示图形。坦率地说，开源开发者继续痴恋 `CLI` 的简单与强大。
+
+
+    在 Linux 上避开 `CLI` 是可能的，但这是愚蠢的。Linux 很多最出色的特性永远不会出现在任何 `GUI` 中。即使是 Windows 和 Macintosh
+    也保留了它们的 `CLI` 工具。事实上，Mac 是拥有完整 `CLI` 的 `UNIX`，尽管其粉丝很少使用，而 Linux 仅仅是类 Unix 系统。
+
+
+    有些计算机任务无法通过任何其他方式妥善完成。顺带提一句，每一比特 `GUI` 软件都会增加系统的复杂性和漏洞。你越依赖 `CLI`，你为那些试图夺取系统控制权的人留下的漏洞就越少。适应这种更高程度的自力能力在
+    Linux 上容易得多，因为起初看起来模糊的东西实际上只是对你这个外部人员来说不熟悉而已。
+
+
+    在书中，我们将稍微探索一下 `CLI`。我会引导着你，让它尽可能简单。在 `GUI` 内部运行 `CLI` 终端会非常简单。在两者之间通过 `cut-n-paste`
+    来回传输命令也非常容易。
+
+
+    事实上，在 Linux 中，鼠标本身就有它自己的剪贴板。如果你的指针有一个中间键，你可以直接从指针粘贴而不使用 `GUI` 剪贴板，即使在没有 `GUI`
+    的情况下也能工作。自第一代鼠标驱动程序时代，Linux 就允许在 `CLI` 上进行良好的鼠标操作。
+
+
+    让 Windows 逃民最惊讶的点之一是，即使你的 `GUI` 正在运行，你仍然可以登录 Linux 的 `CLI`。当你登录 Linux 桌面时，底层通常会有六个
+    `CLI` 会话在等待你。不仅 `UNIX` 本质上是 `CLI` 的，而且从一开始就是多用户系统，在 `DOS` 或 Windows 出现之前就是如此。但如今，我们很少将多个哑终端连接到运行的服务器，因此我们以虚拟会话的形式将所有会话保留在同一硬件上。在非常早期，这种功能被扩展到了
+    `GUI`，但不需要额外的登录。
+
+
+    在你的 Linux 图形桌面上，你始终拥有多个虚拟桌面的能力，每个桌面都有自己的视图。你不需要将多个应用程序窗口挤在一个工作空间内，而是可以将它们分散在几个空间中。这就像在两侧排列了额外的桌面，但在你需要之前一直隐藏在屏幕之外。你不必非使用该功能，但知道可以这样做是很好的。
+
+
+    将这种能力写进软件中（无论是 `GUI` 还是 `CLI`）已经完全集成到 Linux 的运作方式中，以至于没有它系统几乎无法运行。它对系统资源的任何额外消耗已经降到了最低。关闭所有这些额外功能不会让情况变得更好，部分原因是这会导致某些功能损坏。
+
+
+    事实上，在最近几年中，一些最耗能的 Linux 系统使用的计算机功率仍少于目前的 Windows 操作系统。使用当前版本的 `Kubuntu`，你通常使用的电力比
+    `Win7` 或 `Vista` 少，比 `Win8` 少得多。同时，你可能在驱动、稳定性和安全性方面遇到的麻烦会更少。再次，它并不完美，但在许多方面可能更好。
+
+
+    | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png)
+    |
+
+
+    ![image](img/chapter_title_above.png)
+
+
+    # 第 3 章
+
+
+    # Linux 操作系统由什么组成
+
+
+    ![image](img/chapter_title_below.png)
+
+
+    Linux 是一个非常强大的操作系统，由许多其他部分组成。这些部分包括：
+
+
+    ### 启动加载程序 (Bootloader)
+
+    这是具有管理计算机启动过程能力的软件。你总是会将其体验为一个启动画面，它会在你进入主操作系统后偶尔弹出并消失。
+
+
+    ### 内核 (kernel)
+
+    等一下！我们忘记强调 Linux 是什么了吗？`kernel` 是整个软件包中真正被称为“Linux”的片段。它是计算机系统的核心部分，被授权管理包括内存、中央处理器（`CPU`）和其他设备设备在许多资源。在操作系统的安排或组织中，`kernel`
+    始终处于底层。
+
+
+    ### 守护进程 (Daemons)
+
+    你是否对计算机如何调度其他活动感到惊讶？在 Linux 中，`daemons` 是启动过程中或你登录计算机时启动的后台服务。这些服务可能包括调度、声音和打印等。
+
+
+    ### 解释壳 (The Shell)
+
+    你听说过 Linux 命令行吗？命令行就是我们所称的 `shell`。这是一个命令处理过程，让你能够通过在文本界面中输入各种命令来控制你的 PC。对于许多不习惯使用命令的人来说，这种文本界面非常可怕，因为他们认为命令行是过时的。对于现代桌面
+    Linux 来说，这已是过去式了，因为你不会在命令行上手忙脚乱。
+
+
+    ### 图形服务器 (Graphical Server)
+
+    它指的是通过显示器向用户显示或传输图形信息的部分。在大多数情况下，它被称为 `X server`。
+
+
+    ### 桌面环境 (Desktop Environment)
+
+    它是更熟悉的图形用户界面的结合，允许用户与核心系统交互。桌面环境的一些示例包括 `XFCE`、`Cinnamon`、`Unity`、`GNOME`、`KDE`
+    和 `Enlightment`。桌面环境及其工具的选择因用户而异。然而，`KDE` 和 `Gnome` 环境的能力非常相似。
+
+
+    ### 应用程序 (Applications)
+
+    这些你可以很容易找到并安装的高质量软件标题。应用程序有助于各种功能，例如 `Ubuntu Software Center` 用于快速搜索不同的应用。
+
+
+    '
+- fmt: "\nMost of the time we tend to save the command line for tasks that will require\
+    \ performing a massive batch task or when we need to do specific things. The following\
+    \ are some of the commands you have to master as a beginner to Linux.\n\n## Getting\
+    \ Started\n\nOnce connected to your Linux OS. You will be prompted as follows:\n\
+    \n`login:`\n\nEnter the userid and press `ENTER`. Remember the username and password\
+    \ are case-sensitive.\n\nEnter your password once prompted and press enter. \n\
+    \nIf successful, a command prompt (the `$` prompt) will be shown on the Linux\
+    \ system where you are allowed to type your commands. Let's walk through some\
+    \ of the common commands.\n\n### Basic Commands\n\nTo check the calendar, you\
+    \ are required to type the `cal` command as below:\n\n```\n$ cal\n$\n```\n\nTo\
+    \ change your password:\n\nYour system will require altering of the passwords\
+    \ to keep your data and files secure from external intrusion. The steps to change\
+    \ the password will involve the procedures below:\n\n1. Type `passwd` upon command\
+    \ prompt.\n2. Type your current password and press `ENTER`.\n3. Assign the new\
+    \ password you wish to use. Ensure that it is memorable but complex to avoid easy\
+    \ guessing. You will be required to verify by entering it again.\n\n```\n$ passwd\n\
+    Changing password for user1\n(current) Linux password:******\nNew LINUX password:*******\n\
+    Retype new LINUX password:*******\npasswd: all authentication tokens updated successfully\n\
+    $\n```\n\nI have used stars (`*`) to show the position you need to insert the\
+    \ current and the new passwords. If done contrary, the system won’t show the characters\
+    \ upon typing them.\n\n## Filesystem Navigation\n\nData in the Linux system is\
+    \ structured into files which are then organized at higher rank into directories.\
+    \ Directories form a tree-like structure we term as filesystem.\n\nThe `ls` command.\
+    \ This command will allow the user to list the files or directories that are contained\
+    \ in the file system of the PC. Let's take an example:\n\nAll entries that start\
+    \ with `d..` represent directories. To list the hidden files, use the command\
+    \ `$ ls -a`. `$ ls -l` will output a long listing.\n\n## User Information\n\n\
+    While logged in the system, you may wish to know: Who am I?\n\nTo determine the\
+    \ details the `whoami` command is used:\n\n```\n$ whoami\nUser1\n$\n```\n\nThe\
+    \ `command` will list the account name that is associated with the current user\
+    \ on logged to the system.\n\nTo check Who is Logged Into the system at that same\
+    \ moment, use the following three commands: `users`, `who`, and `w`.\n\n```\n\
+    $ users\nUser1 daroon khedir\n$ who\nUser1 ttyp0 Oct 8 14:10 (limbo)\ndaroon ttyp2\
+    \ Oct 4 09:08 (calliope)\nkhedir ttyp4 Oct 8 12:09 (dent)\n$\n```\n\nThe `w` command\
+    \ on the system will list some more information that is related to those users\
+    \ who are logged on.\n\n## Session Management\n\nTo log out of the system or to\
+    \ terminate your session to ensure nobody comes to infringe with your files or\
+    \ masquerade you, we will follow the following steps.\n\nTo log out, type the\
+    \ `logout` command on command prompt and the system will break the connection.\n\
+    \nFor System Shutdown, you may use a variety of commands as explained below:\n\
+    \n- The `halt` command will take the system down instantly.\n- The `init 0` command\
+    \ will powers off the system after synchronizing and cleaning up the system.\n\
+    - The `init 6` command will shut down the system and bring it back again.\n- The\
+    \ `poweroff` command powers off the system.\n- The `reboot` command will reboot\
+    \ your PC.\n- The `shutdown` command powers the PC off.\n\nTo shut down the PC,\
+    \ you will be needed to be the superuser or `root`.\n\n## Help and Documentation\n\
+    \nGet help with the `man` command\n\nLinux offers good direction to the beginners.\
+    \ Help is always very near. The help page is a manual for almost each and every\
+    \ command, utility or the program calls.\n\n`man $command`\n\nYou type `man` followed\
+    \ by a command you wish to get help on. Press `q` when you want to quit the help\
+    \ page. For example:\n\n```\n$ man whois\n$ man syslog.conf\n$ man syslogd\n$\
+    \ man -k (apropos)\n$ man -k syslog\n```\n\nTo get description of the manual page,\
+    \ type:\n\n```\n$ whatis route (this shows the IP routing tables)\n```\n\n`whereis`\
+    \ command will show the location of a manual page.\n\n```\n$ whereis -m whois\n\
+    whois: /usr/share/man/man1/whois.1.g\n```\n\n## File and Directory Operations\n\
+    \n- The `Mkdir`. This command is usually used when creating new directories on\
+    \ the PC’s filesystem.\n- The `file` command when used checks the type of the\
+    \ file regardless of extension of the file.\n- `pwd` will always show the exact\
+    \ path of the current directory.\n- The `cd` command is used to alter or change\
+    \ the direction one directory from one location to a different one within the\
+    \ Shell.\n- `mv` is a command used when moving directories or files and deletes\
+    \ the original file or directory.\n- The `cp` is a copy command that copies or\
+    \ moves files or directories from one position to a different one in the PC file\
+    \ system.\n- The shell command `rm` is used to delete or remove directories or\
+    \ files from the filesystem.\n- The `cat` command is utilized when one is viewing\
+    \ or printing the contents/details of a file to the terminal for the user to see.\n\
+    - The `grep` command is for searching contents of a file and enable the details\
+    \ to be viewed on the terminal.\n- The `chown` is used to change the file’s ownership\
+    \ or ownership of a directory.\n- `$ chgrp group filelist` is used to change the\
+    \ group ownership of a file.\n- The `chmod` gives the user the authority to alter\
+    \ user permissions that include execute, read and write permissions.\n- The `ps`\
+    \ command lists the processes that are currently running on the system.\n- The\
+    \ `kill` and `killall` commands terminate any processes that are running.\n- The\
+    \ `locate` command is powerful for searching and will display results wherever\
+    \ the search string is found plus the particular file location.\n- `ipconfig`\
+    \ command is essential for configuring a device’s network.\n- `lspci` is a command\
+    \ used to give feedback of all devices connected to the PCI bus together with\
+    \ the graphics card.\n- `lsusb` will list every device connected to the USB hub.\n\
+    - `pstree` command lists processes in a tree hierarchy to enable the user to see\
+    \ the processes that go along with a specific program.\n\nTo create ordinary files,\
+    \ you use the `vi` editor. For example:\n\n```\n$ vi filename\n$ cat filename\
+    \ displays file contents.\n$ wc filename gives the total word count in a file\n\
+    ```\n\n## Virtual Filesystems\n\nThere are two Linux file systems that always\
+    \ confuse Linux users. These two directories `/proc` and `/dev`. These two directories\
+    \ do not have any windows counterpart and are not at glance easily understandable.\
+    \ We can define `/proc` file system as a real-time memory resident file system\
+    \ that tracks the running processes on the PC and the state of your system.\n\n\
+    You cannot remove the virtual `/proc` filesystem. The `/proc` filesystem contains\
+    \ a huge number of files each containing a nugget of information. When a new process\
+    \ is started a new directory will be created in the `/proc` filesystem for it\
+    \ and a lot of data is created within it. The `/proc` is generally read-only apart\
+    \ from `/proc/sys` directory that holds a large part of kernel parameters. Specific\
+    \ utilities like `free`, `top` and `lspci` are used to data files.\n\nConclusion\n\
+    \nIt is very easy to download a version of Linux for free and put it on a cd or\
+    \ USB stick. Then boot your regular Windows computer from this. Your computer\
+    \ will load up the Linux system, you are free to play around in it. Learn about\
+    \ Linux, see if you like it and then when you restart your computer without the\
+    \ cd or memory stick it goes right back to your normal Windows computer with no\
+    \ harm done to your system or files.\n"
+  raw: 'Most of the time we tend to save the command line for tasks that will require
+    performing a massive batch task or when we need to do specific things. The following
+    are some of the commands you have to master as a beginner to Linux.
+
+
+    Once connected to your Linux OS. You will be prompted as follows:
+
+
+    login:
+
+
+    Enter the userid and press ENTER. Remember the username and password are case-sensitive.
+
+
+    Enter your password once prompted and press enter.
+
+
+    If successful, a command prompt (the $ prompt) will be shown on the Linux system
+    where you are allowed to type your commands. Let''s walk through some of the common
+    commands.
+
+
+    To check the calendar, you are required to type the cal command as below:
+
+
+    $ cal
+
+
+    $
+
+
+    To change your password:
+
+
+    Your system will require altering of the passwords to keep your data and files
+    secure from external intrusion.
+
+
+    The steps to change the password will involve the procedures below:
+
+
+    Type passwd upon command prompt.
+
+
+    Type your current password and press ENTER
+
+
+    Assign the new password you wish to use. Ensure that it is memorable but complex
+    to avoid easy guessing. You will be required to verify by entering it again.
+
+
+    $ passwd
+
+
+    Changing password for user1
+
+
+    (current) Linux password:******
+
+
+    New LINUX password:*******
+
+
+    Retype new LINUX password:*******
+
+
+    passwd: all authentication tokens updated successfully
+
+
+    $
+
+
+    I have used stars (*) to show the position you need to insert the current and
+    the new passwords. If done contrary, the system won’t show the characters upon
+    typing them.
+
+
+    Listing Directories and Files:
+
+
+    Data in the Linux system is structured into files which are then organized at
+    higher rank into directories. Directories form a tree-like structure we term as
+    filesystem.
+
+
+    The ls command. This command will allow the user to list the files or directories
+    that are contained in the file system of the PC. Let''s take an example:
+
+
+    All entries that start with d.. represent directories. To list the hidden files,
+    use the command $ ls –a. $ ls –l will output a long listing.
+
+
+    Who Are You?
+
+
+    While logged in the system, you may wish to know : Who am I?
+
+
+    To determine the details the whoami command is used:
+
+
+    $ whoami
+
+
+    User1
+
+
+    $ The command will list the account name that is associated with the current user
+    on logged to the system.
+
+
+    To check Who is Logged Into the system at that same moment, use the following
+    three commands: users, who, and w.
+
+
+    $ users
+
+
+    User1 daroon khedir
+
+
+    $ who
+
+
+    User1 ttyp0 Oct 8 14:10 (limbo)
+
+
+    daroon ttyp2 Oct 4 09:08 (calliope)
+
+
+    khedir ttyp4 Oct 8 12:09 (dent)
+
+
+    $
+
+
+    The w command on the system will list some more information that is related to
+    those users who are logged on.
+
+
+    To log out of the system or to terminate your session to ensure nobody comes to
+    infringe with your files or masquerade you, we will follow the following steps.
+
+
+    To log out, type the logout command on command prompt and the system will break
+    the connection.
+
+
+    For System Shutdown, you may use a variety of commands as explained below:
+
+
+    The halt command will take the system down instantly.
+
+
+    The init 0 command will powers off the system after synchronizing and cleaning
+    up the system.
+
+
+    The init 6 command will shut down the system and bring it back again.
+
+
+    The poweroff command powers off the system.
+
+
+    The reboot command will reboot your PC.
+
+
+    shutdown command powers the PC off.
+
+
+    To shut down the PC, you will be needed to be the superuser or root.
+
+
+    Get help with the man command
+
+
+    Linux offers good direction to the beginners. Help is always very near. The help
+    page is a manual for almost each and every command, utility or the program calls.
+
+
+    man $command
+
+
+    You type man followed by a command you wish to get help on. Press q when you want
+    to quit the help page. For example:
+
+
+    $ man whois
+
+
+    $ man syslog.conf
+
+
+    $ man syslogd
+
+
+    $ man -k (apropos)
+
+
+    $ man -k syslog
+
+
+    To get description of the manual page, type:
+
+
+    $ whatis route (this shows the IP routing tables)
+
+
+    Whereis command will show the location of a manual page.
+
+
+    $ whereis -m whois
+
+
+    whois: /usr/share/man/man1/whois.1.g
+
+
+    The Mkdir. This command is usually used when creating new directories on the PC’s
+    filesystem.
+
+
+    The File command when used checks the type of the file regardless of extension
+    of the file.
+
+
+    Pwd will always show the exact path of the current directory.
+
+
+    The cd command is used to alter or change the direction one directory from one
+    location to a different one within the Shell.
+
+
+    Mv is a command used when moving directories or files and deletes the original
+    file or directory.
+
+
+    The cp is a copy command that copies or moves files or directories from one position
+    to a different one in the PC file system.
+
+
+    The shell command rm is used to delete or remove directories or files from the
+    filesystem.
+
+
+    The cat command is utilized when one is viewing or printing the contents/details
+    of a file to the terminal for the user to see.
+
+
+    The Grep command is for searching contents of a file and enable the details to
+    be viewed on the terminal.
+
+
+    The Chown is used to change the file’s ownership or ownership of a directory.
+
+
+    $ chgrp group filelist is used to change the group ownership of a file.
+
+
+    The chmod gives the user the authority to alter user permissions that include
+    execute, read and write permissions.
+
+
+    The ps command lists the processes that are currently running on the system.
+
+
+    The kill and killall commands terminate any processes that are running.
+
+
+    The locate command is powerful for searching and will display results wherever
+    the search string is found plus the particular file location.
+
+
+    Ipconfig command is essential for configuring a device’s network.
+
+
+    Lspci is a command used to give feedback of all devices connected to the PCI bus
+    together with the graphics card.
+
+
+    Isusb will list every device connected to the USB hub.
+
+
+    Pstree command lists processes in a tree hierarchy to enable the user to see the
+    processes that go along with a specific program.
+
+
+    To create ordinary files, you use the vi editor. For example:
+
+
+    $ vi filename
+
+
+    $ cat filename displays file contents.
+
+
+    $ wc filename gives the total word count in a file
+
+
+    There are two Linux file systems that always confuse Linux users. These two directories
+    are /proc and /dev. These two directories do not have any windows counterpart
+    and are not at first glance easily understandable. We can define /proc file system
+    as a real-time memory resident file system that tracks the running processes on
+    the PC and the state of your system.
+
+
+    You cannot remove the virtual /proc filesystem. The /proc filesystem contains
+    a huge number of files each containing a nugget of information. When a new process
+    is started a new directory will be created in the /proc filesystem for it and
+    a lot of data is created within it. The /proc is generally read-only apart from
+    /proc/sys directory that holds a large part of kernel parameters. The /proc/sys
+    can be altered while the system is still in running mode. Specific utilities like
+    free, top and lspci are used to data files.
+
+
+    | ![image](d2d_images/chapter_title_corner_decoration_left.png) |  | ![image](d2d_images/chapter_title_corner_decoration_right.png)
+    |
+
+
+    ![image](d2d_images/chapter_title_above.png)
+
+
+    # Conclusion
+
+
+    ![image](d2d_images/chapter_title_below.png)
+
+
+    It is very easy to download a version of Linux for free and put it on a cd or
+    USB stick. Then boot your regular Windows computer from this. Your computer will
+    load up the Linux system, you are free to play around in it. Learn about Linux,
+    see if you like it and then when you restart your computer without the cd or memory
+    stick it goes right back to your normal Windows computer with no harm done to
+    your system or files.
+
+
+    This is a nice "safe" way to experiment with Linux and see if it is right for
+    you. I believe that some Linux systems allow you to personalize your system and
+    download new software when running from a cd or memory stick.'
+  toc: []
+  trans: '
+
+
+    大多数时候，我们倾向于将命令行留给需要执行大规模批处理任务或需要执行特定操作的任务。以下是你作为 Linux 初学者必须掌握的一些命令。
+
+
+    ## 入门
+
+
+    一旦连接到你的 Linux 操作系统，你将看到如下提示：
+
+
+    `login:`
+
+
+    输入用户 ID 并按 `ENTER`。记住用户名和密码是区分大小写的。
+
+
+    在提示时输入你的密码并按回车。
+
+
+    如果成功，Linux 系统上将显示一个命令提示符（`$` 提示符），你可以在此处输入命令。让我们熟悉一些常用命令。
+
+
+    ### 基础命令
+
+
+    要查看日历，你需要如下所示输入 `cal` 命令：
+
+
+    ```
+
+    $ cal
+
+    $
+
+    ```
+
+
+    要更改密码：
+
+
+    系统会要求修改密码，以确保你的数据和文件免受外部入侵的侵害。更改密码的步骤涉及以下程序：
+
+
+    1. 在命令提示符下输入 `passwd`。
+
+    2. 输入当前密码并按 `ENTER`。
+
+    3. 分配你想使用的新密码。确保它既好记又具有复杂性，以防被猜到。你需要再次输入它进行验证。
+
+
+    ```
+
+    $ passwd
+
+    Changing password for user1
+
+    (current) Linux password:******
+
+    New LINUX password:*******
+
+    Retype new LINUX password:*******
+
+    passwd: all authentication tokens updated successfully
+
+    $
+
+    ```
+
+
+    我使用星号（`*`）来显示插入当前密码和新密码的位置。如果反过来操作，系统在输入时不会显示字符。
+
+
+    ## 文件系统导航
+
+
+    Linux 系统中的数据被结构化为文件，然后在更高层级组织成目录。目录形成树形结构，我们称之为文件系统。
+
+
+    `ls` 命令。此命令允许用户列出 PC 文件系统中包含的文件或目录。举个例子：
+
+
+    所有以 `d..` 开头的条目代表目录。要列出隐藏文件，使用命令 `$ ls -a`。 `$ ls -l` 将输出详细列表。
+
+
+    ## 用户信息
+
+
+    登录系统时，你可能想知道：我是谁？
+
+
+    要确定详情，使用 `whoami` 命令：
+
+
+    ```
+
+    $ whoami
+
+    User1
+
+    $
+
+    ```
+
+
+    该 `command` 命令将列出与登录系统的当前用户相关的账户名。
+
+
+    要检查此时谁登录了系统，请使用以下三个命令：`users`、`who` 和 `w`。
+
+
+    ```
+
+    $ users
+
+    User1 daroon khedir
+
+    $ who
+
+    User1 ttyp0 Oct 8 14:10 (limbo)
+
+    daroon ttyp2 Oct 4 09:08 (calliope)
+
+    khedir ttyp4 Oct 8 12:09 (dent)
+
+    $
+
+    ```
+
+
+    系统上的 `w` 命令将列出更多与登录用户相关的信息。
+
+
+    ## 会话管理
+
+
+    要退出系统或终止会话以确保无人侵入你的文件或冒充你，我们将遵循以下步骤。
+
+
+    要退出，在命令提示符上输入 `logout` 命令，系统将断开连接。
+
+
+    对于系统关机，你可以使用下面说明的各种命令：
+
+
+    - `halt` 命令将立即停止系统。
+
+    - `init 0` 命令将在同步和清理系统后关闭系统电源。
+
+    - `init 6` 命令将关闭系统并重启。
+
+    - `poweroff` 命令将关闭系统电源。
+
+    - `reboot` 命令将重启你的 PC。
+
+    - `shutdown` 命令将关闭 PC。
+
+
+    要关闭 PC，你需要是超级用户或 `root` 权限。
+
+
+    ## 帮助与文档
+
+
+    使用 `man` 命令获取帮助
+
+
+    Linux 为初学者提供了很好的指导。帮助始终近在身边。帮助页是几乎每个命令、实用程序或程序调用的手册。
+
+
+    `man $command`
+
+
+    你输入 `man` 后跟你想要获取帮助的命令。当你想退出帮助页时按 `q`。例如：
+
+
+    ```
+
+    $ man whois
+
+    $ man syslog.conf
+
+    $ man syslogd
+
+    $ man -k (apropos)
+
+    $ man -k syslog
+
+    ```
+
+
+    要获取手册页的描述，输入：
+
+
+    ```
+
+    $ whatis route (这显示 IP 路由表)
+
+    ```
+
+
+    `whereis` 命令将显示手册页的位置。
+
+
+    ```
+
+    $ whereis -m whois
+
+    whois: /usr/share/man/man1/whois.1.g
+
+    ```
+
+
+    ## 文件与目录操作
+
+
+    - `Mkdir`。此命令通常用于在 PC 文件系统上创建新目录。
+
+    - `file` 命令使用时会检查文件类型，无论文件的扩展名如何。
+
+    - `pwd` 将始终显示当前目录的精确路径。
+
+    - `cd` 命令用于在 Shell 中从一个位置更改或切换目录到另一个位置。
+
+    - `mv` 是用于移动目录或文件的命令，并删除原始文件或目录。
+
+    - `cp` 是复制命令，用于将文件或目录从 PC 文件系统的一个位置复制或移动到另一个位置。
+
+    - shell 命令 `rm` 用于从文件系统删除或移除目录或文件。
+
+    - `cat` 命令用于查看或将文件的内容/详情打印到终端供查看。
+
+    - `grep` 命令用于搜索文件内容并允许在终端上查看详情。
+
+    - `chown` 用于更改文件的所有权或目录的所有权。
+
+    - `$ chgrp group filelist` 用于更改文件的组所有权。
+
+    - `chmod` 赋予用户更改权限的权限，包括执行、读取和写入权限。
+
+    - `ps` 命令列出系统中正在运行的所有进程。
+
+    - `kill` 和 `killall` 命令终止任何运行的进程。
+
+    - `locate` 命令搜索功能强大，将在任何找到搜索字符串的地方显示结果以及特定的文件位置。
+
+    - `ipconfig` 命令对于配置设备至关重要。
+
+    - `lspci` 是用于提供连接到 PCI 总线的所有设备（包括显卡）反馈的命令。
+
+    - `lsusb` 将列出连接到 USB 集线器的每个设备。
+
+    - `pstree` 命令以树形层次列出进程，使用户可以看到与特定程序一起运行的进程。
+
+
+    要创建普通文件，使用 `vi` 编辑器。例如：
+
+
+    ```
+
+    $ vi filename
+
+    $ cat filename 显示文件内容
+
+    $ wc filename 给出文件的总单词数
+
+    ```
+
+
+    ## 虚拟文件系统
+
+
+    有两个 Linux 文件系统总是让 Linux 用户困惑。这两个目录 `/proc` 和 `/dev`。这两个目录没有 Windows 对应部分，无法一眼看出。我们可以将
+    `/proc` 文件系统定义为实时内存驻文件系统，用于跟踪 PC 上运行的进程和系统状态。
+
+
+    你不能删除虚拟的 `/proc` 文件系统。`/proc` 文件系统包含大量文件，每个文件都包含一条信息。当启动新进程时，`/proc` 文件系统中会为它创建一个新目录并在其中创建大量数据。除了持有大部分内核参数的
+    `/proc/sys` 目录外，`/proc` 通常是只读的。特定的工具如 `free`、`top` 和 `lspci` 用于这些数据文件。
+
+
+    结论
+
+
+    免费下载一个 Linux 版本并将其放入 CD 或 USB 闪存非常简单。然后从这里启动你的常规 Windows 电脑。你的电脑将加载 Linux 系统，你可以自由地从中尝试。学习
+    Linux，看看你是否喜欢它，当你在不插 CD 或内存棒的情况下重启电脑时，它会直接回到正常的 Windows 电脑，对你的系统或文件不会造成任何损坏。
+
+
+    '
+- fmt: '
+
+    Whereas others will only let you run the default system from a memory stick or
+    cd because every time you restart it all changes are lost. But this can still
+    allow you to learn a lot and if you like it then dual installing it on your system
+    so that you can make permanent changes (such as installing new software) may be
+    the next step for you.
+
+
+    # Don''t miss out!
+
+
+    Click the button below and you can sign up to receive emails whenever Jeremy Li
+    publishes a new book. There''s no charge and no obligation.
+
+
+    [![Sign Me Up](d2d_images/new_release_sign_up_button.png)](https://books2read.com/r/B-A-JDXE-IRSU)
+
+
+    [https://books2read.com/r/B-A-JDXE-IRSU](https://books2read.com/r/B-A-JDXE-IRSU)
+
+
+    ![books2read](d2d_images/b2r_image.png)
+
+
+    Connecting independent readers to independent writers.
+
+
+    ## Also by Jeremy Li
+
+
+    - [LINUX: Beginner''s Crash Course. Your Step-By-Step Guide To Learning The Linux
+    Operating System And Command Line Easy & Fast!](https://www.draft2digital.com/catalog/364138)
+
+    - [Hacking](https://www.draft2digital.com/catalog/271347)
+
+    - [CompTIA A+ Certification](https://www.draft2digital.com/catalog/267010)
+
+    - [Raspberry Pi 3](https://www.draft2digital.com/catalog/368705)
+
+    - [Amazon Echo](https://www.draft2digital.com/catalog/267555)
+
+    - [Windows 10](https://www.draft2digital.com/catalog/367515)
+
+    - [Programming 5-Book Collection](https://www.draft2digital.com/catalog/509137)
+
+    '
+  raw: 'Whereas others will only let you run the default system from a memory stick
+    or cd because every time you restart it all changes are lost. But this can still
+    allow you to learn a lot and if you like it then dual installing it on your system
+    so that you can make permanent changes (such as installing new software) may be
+    the next step for you.
+
+
+    # Don''t miss out!
+
+
+    Click the button below and you can sign up to receive emails whenever Jeremy Li
+    publishes a new book. There''s no charge and no obligation.
+
+
+    [![Sign Me Up](d2d_images/new_release_sign_up_button.png)](https://books2read.com/r/B-A-JDXE-IRSU)
+
+
+    [https://books2read.com/r/B-A-JDXE-IRSU](https://books2read.com/r/B-A-JDXE-IRSU)
+
+
+    ![books2read](d2d_images/b2r_image.png)
+
+
+    Connecting independent readers to independent writers.
+
+
+    Also by Jeremy Li
+
+
+    [LINUX: Beginner''s Crash Course. Your Step-By-Step Guide To Learning The Linux
+    Operating System And Command Line Easy & Fast!](https://www.draft2digital.com/catalog/364138)
+
+
+    [Hacking](https://www.draft2digital.com/catalog/271347)
+
+
+    [CompTIA A+ Certification](https://www.draft2digital.com/catalog/267010)
+
+
+    [Raspberry Pi 3](https://www.draft2digital.com/catalog/368705)
+
+
+    [Amazon Echo](https://www.draft2digital.com/catalog/267555)
+
+
+    [Windows 10](https://www.draft2digital.com/catalog/367515)
+
+
+    [Programming 5-Book Collection](https://www.draft2digital.com/catalog/509137)'
+  toc: []
+  trans: '
+
+
+    虽然其他人只会让你从内存棒或 CD 运行默认系统，因为每次重启时，所有更改都会丢失。但这仍然可以让你学到很多东西，如果你喜欢它，那么在你的系统上进行双系统安装，以便能够进行永久性更改（例如安装新软件），可能是你的下一步选择。
+
+
+    # 不要错过！
+
+
+    点击下方的按钮，您就可以订阅并在 Jeremy Li 出版新书时接收电子邮件。这不需要支付任何费用，也没有任何义务。
+
+
+    ![订阅我](https://books2read.com/r/B-A-JDXE-IRSU)
+
+
+    [`books2read.com/r/B-A-JDXE-IRSU`](https://books2read.com/r/B-A-JDXE-IRSU)
+
+
+    ![books2read](img/b2r_image.png)
+
+
+    将独立读者与独立作者连接起来。
+
+
+    ## Jeremy Li 的其他作品
+
+
+    - [LINUX：入门快速速成。你学习 Linux 操作系统和命令行的步步指南，简单快速！](https://www.draft2digital.com/catalog/364138)
+
+    - [黑客攻击](https://www.draft2digital.com/catalog/271347)
+
+    - [CompTIA A+ 认证](https://www.draft2digital.com/catalog/267010)
+
+    - [树莓派 3](https://www.draft2digital.com/catalog/368705)
+
+    - [Amazon Echo](https://www.draft2digital.com/catalog/267555)
+
+    - [Windows 10](https://www.draft2digital.com/catalog/367515)
+
+    - [编程 5 本书合集](https://www.draft2digital.com/catalog/509137)
+
+
+    '
