@@ -389,6 +389,7 @@
 +   [Linux 摄影：Linux 自动化与流化摄影工作流工具](docs/linux-photography-tools-for-automated-and-streamlined-photog/README.md)
 +   [Linux 编程：构建与调试指南](docs/linux-programming-building-and-debugging/README.md)
 +   [Linux 编程工具解锁指南](docs/linux-programming-tools-unveiled/README.md)
++   [Linux 服务器安全第一版：攻击与防御](docs/linux-server-security-first-edition-hack-and-defend/README.md)
 +   [Linux 服务器安全：攻击与防御](docs/linux-server-security-hack-and-defend/README.md)
 +   [Linux Shell 编程：8 小时入门，初学者指南！](docs/linux-shell-programming-in-8-hours-for-beginners/README.md)
 +   [Linux Shell 编程：口袋指南](docs/linux-shell-programming-pocket-primer/README.md)
