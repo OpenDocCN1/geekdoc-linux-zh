@@ -439,6 +439,7 @@
 +   [黑客攻击与工具精通：理解黑客流程、Linux、Linux Mint、Kali Linux 概念及渗透测试等：Kali Linux 工具清单](docs/master-hacking-master-the-tools-understanding-process-of-hac/README.md)
 +   [精通 GNOME：初学者指南（精通计算机科学系列）](docs/mastering-gnome-a-beginners-guide-mastering-computer-science/README.md)
 +   [Linux Linux 管理：全面指南](docs/mastering-linux-administration-a-comprehensive-guide/README.md)
++   [精通 Linux Mint 22：安装、配置与高级功能完全指南](docs/mastering-linux-mint-22-the-complete-guide-to-installation-c/README.md)
 +   [UNIX Shell 脚本高级指南（第二版）](docs/mastering-unix-shell-scripting-second-edition/README.md)
 +   [RPM 权威指南](docs/maximum-rpm-rpm-other-sams/README.md)
 +   [Microsoft Word - Linux 与 Windows 集成指南](docs/microsoft-word---integrating-linux-and-windowsdoc/README.md)

@@ -1,0 +1,579 @@
+name: Mastering Linux Mint 22： The Complete Guide to Installation, Configuration,
+  and Advanced Features
+name_cn: 精通 Linux Mint 22：安装、配置与高级功能完全指南
+slug: mastering-linux-mint-22-the-complete-guide-to-installation-c
+toc:
+- - '#'
+  - 精通 Linux Mint 22：安装、配置与高级功能完全指南
+- - '#'
+  - 免责声明
+- - '#'
+  - 致谢
+- - '##'
+  - 在终端通过 FLATPAK 安装 Mailspring：
+- - '##'
+  - 在终端通过 SNAP 安装 Mailspring：
+- - '#'
+  - 图像编辑软件
+- - '##'
+  - Gnu 图像处理程序 (GIMP)
+- - '###'
+  - 通过软件管理器通过 软件包/SYSTEM PACKAGE/FLATPAK 包安装 GIMP 图像处理程序 (GIMP)：
+- - '###'
+  - 在终端通过 APT 安装 GIMP 图像处理程序 (GIMP)：
+- - '###'
+  - 在终端通过 FLATPAK 安装 GIMP 图像处理程序 (GIMP)：
+- - '###'
+  - 在终端通过 SNAP 安装 GIMP 图像处理程序 (GIMP)：
+- - '##'
+  - Blender
+- - '###'
+  - 通过软件管理器通过 软件包/SYSTEM PACKAGE/FLATPAK 包安装 Blender：
+- - '###'
+  - 在终端通过 APT 安装 Blender：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Blender：
+- - '###'
+  - 在终端通过 SNAP 安装 Blender：
+- - '##'
+  - Pinta
+- - '###'
+  - 通过软件管理器通过 软件包/SYSTEM PACKAGE/FLATPAK 包安装 Pinta：
+- - '##'
+  - Pinta
+- - '###'
+  - 通过终端通过 APT 安装 Pinta：
+- - '###'
+  - 通过终端通过 FLATPAK 安装 Pinta：
+- - '###'
+  - 通过终端通过 SNAP 安装 Pinta：
+- - '##'
+  - Krita
+- - '###'
+  - 通过软件管理器通过系统软件包/FLATPAK 包安装 Krita：
+- - '###'
+  - 通过终端通过 APT 安装 Krita：
+- - '###'
+  - 通过终端通过 FLATPAK 安装 Krita：
+- - '###'
+  - 通过终端通过 SNAP 安装 Krita：
+- - '##'
+  - Inkscape
+- - '###'
+  - 通过软件管理器通过系统软件包/FLATPAK 包安装 Inkscape：
+- - '###'
+  - 通过终端通过 APT 安装 Inkscape：
+- - '###'
+  - 通过终端通过 FLATPAK 安装 Inkscape：
+- - '###'
+  - 通过终端通过 SNAP 安装 Inkscape：
+- - '##'
+  - Darktable
+- - '###'
+  - 通过软件管理器通过系统软件包/FLATPAK 包安装 Darktable：
+- - '###'
+  - 通过终端通过 APT 安装 Darktable：
+- - '###'
+  - 通过终端通过 FLATPAK 安装 Darktable：
+- - '###'
+  - 通过终端通过 SNAP 安装 Darktable：
+- - '##'
+  - Tuxpaint
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 Tuxpaint：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Tuxpaint：
+- - '#'
+  - 音频编辑软件
+- - '##'
+  - Audacity
+- - '###'
+  - 通过软件管理器通过系统软件包/FLATPAK 包安装 Audacity：
+- - '###'
+  - 在终端通过 APT 安装 Audacity：
+- - '###'
+  - 通过终端通过 FLATPAK 安装 Audacity：
+- - '###'
+  - 在终端通过 SNAP 安装 Audacity：
+- - '##'
+  - Ardour
+- - '###'
+  - 通过软件管理器通过系统软件包/FLATPAK 包安装 Ardour：
+- - '###'
+  - 在终端通过 APT 安装 Ardour：
+- - '###'
+  - 通过终端通过 FLATPAK 安装 Ardour：
+- - '##'
+  - MIXXX
+- - '###'
+  - 通过软件管理器通过 RPM/FLATPAK 包安装 MIXXX：
+- - '###'
+  - 在终端通过 FLATPAK 安装 MIXXX：
+- - '###'
+  - 在终端通过 SNAP 安装 MIXXX：
+- - '#'
+  - 视频编辑软件
+- - '##'
+  - OpenShot
+- - '###'
+  - 通过软件管理器通过系统安装包/FLATPAK 包安装 OpenShot：
+- - '###'
+  - 在终端通过 APT 安装 OpenShot：
+- - '###'
+  - 在终端通过 FLATPAK 安装 OpenShot：
+- - '###'
+  - 在终端通过 SNAP 安装 OpenShot：
+- - '##'
+  - Kdenlive
+- - '###'
+  - 通过软件管理器通过系统安装包/FLATPAK 包安装 Kdenlive：
+- - '###'
+  - 在终端通过 APT 安装 Kdenlive：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Kdenlive：
+- - '###'
+  - 在终端通过 SNAP 安装 Kdenlive：
+- - '##'
+  - Shotcut
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 Shotcut：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Shotcut：
+- - '###'
+  - 在终端通过 SNAP 安装 Shotcut：
+- - '##'
+  - Pitivi
+- - '###'
+  - 通过软件管理器通过系统安装包/FLATPAK 包安装 Pitivi：
+- - '###'
+  - 在终端通过 APT 安装 Pitivi：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Pitivi：
+- - '#'
+  - 集成开发环境 (IDE)
+- - '##'
+  - Visual Studio Code
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 Visual Studio Code：
+- - '###'
+  - 在终端通过 APT 安装 Visual Studio Code：
+- - '##'
+  - Visual Studio Code
+- - '###'
+  - 在终端通过 FLATPAK 安装 Visual Studio Code：
+- - '###'
+  - 在终端通过 SNAP 安装 Visual Studio Code：
+- - '###'
+  - 通过图形界面通过 .deb 安装 Visual Studio Code：
+- - '##'
+  - VSCodium
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 VSCodium：
+- - '###'
+  - 在终端通过 APT 安装 VSCodium：
+- - '###'
+  - 在终端通过 FLATPAK 安装 VSCodium：
+- - '###'
+  - 在终端通过 SNAP 安装 VSCodium：
+- - '###'
+  - 通过图形界面通过 .deb 安装 VSCodium：
+- - '##'
+  - Atom
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 Atom：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Atom：
+- - '###'
+  - 通过图形界面通过 .deb 安装 Atom：
+- - '##'
+  - Geany
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 Geany：
+- - '###'
+  - 在终端通过 APT 安装 Geany：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Geany：
+- - '###'
+  - 在终端通过 SNAP 安装 Geany：
+- - '##'
+  - Bluefish
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 Bluefish：
+- - '###'
+  - 在终端通过 APT 安装 Bluefish：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Bluefish：
+- - '#'
+  - 直播软件
+- - '##'
+  - OBS Studio
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 OBS Studio：
+- - '###'
+  - 在终端通过 APT 安装 OBS Studio：
+- - '###'
+  - 在终端通过 FLATPAK 安装 OBS Studio：
+- - '###'
+  - 在终端通过 SNAP 安装 OBS Studio：
+- - '##'
+  - Owncast
+- - '###'
+  - 在终端通过 APT 安装 Owncast：
+- - '#'
+  - 个人数据隐私
+- - '##'
+  - Searx
+- - '###'
+  - 在终端通过 APT 安装 Searx
+- - '##'
+  - OpenStego
+- - '###'
+  - 在 GUI 中通过 DEB 包安装 OpenStego
+- - '##'
+  - Tor Browser Launcher
+- - '###'
+  - 通过软件管理器通过 SYSTEM PACKAGE/FLATPAK 包安装 Tor Browser Launcher：
+- - '###'
+  - 在终端通过 APT 安装 Tor Browser Launcher：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Tor Browser Launcher：
+- - '##'
+  - I2pd
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 I2pd：
+- - '###'
+  - 在终端通过 FLATPAK 安装 I2pd：
+- - '###'
+  - 在终端通过 SNAP 安装 I2pd：
+- - '##'
+  - Hyphanet
+- - '###'
+  - 在终端和 GUI 中 APT 和 Java 安装 Hyphanet：
+- - '##'
+  - ZeroNet
+- - '###'
+  - 在终端通过 APT 安装 ZeroNet：
+- - '##'
+  - Web 浏览器
+- - '##'
+  - Chromium
+- - '###'
+  - 通过软件管理器通过 SYSTEM PACKAGE/FLATPAK 包安装 Chromium：
+- - '###'
+  - 在终端通过 APT 安装 Chromium：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Chromium：
+- - '###'
+  - 在终端通过 SNAP 安装 Chromium：
+- - '##'
+  - Ungoogled-Chromium
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 Ungoogled-Chromium：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Ungoogled-Chromium：
+- - '##'
+  - Google Chrome
+- - '###'
+  - 在终端通过 APT 安装 Google Chrome：
+- - '###'
+  - 在 GUI 中通过 .deb 安装 Google Chrome：
+- - '##'
+  - Microsoft Edge
+- - '###'
+  - 在终端通过 APT 安装 Microsoft Edge：
+- - '###'
+  - 在 GUI 中通过 .deb 安装 Microsoft Edge：
+- - '##'
+  - Thorium
+- - '###'
+  - 通过 GUI 通过 .rpm 安装 Thorium：
+- - '##'
+  - Vivaldi
+- - '###'
+  - 通过终端通过 APT 安装 Vivaldi：
+- - '###'
+  - 通过 GUI 通过 .deb 安装 Vivaldi：
+- - '##'
+  - Brave
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 Brave：
+- - '###'
+  - 在终端通过 APT 安装 Brave：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Brave：
+- - '###'
+  - 在终端通过 SNAP 安装 Brave：
+- - '##'
+  - Firefox
+- - '###'
+  - 通过软件管理器通过系统软件包/FLATPAK 包安装 Firefox：
+- - '###'
+  - 在终端通过 APT 安装 Firefox：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Firefox：
+- - '###'
+  - 在终端通过 SNAP 安装 Firefox：
+- - '##'
+  - Firefox ESR
+- - '###'
+  - 通过 GUI 通过 .tar.xz 安装 Firefox：
+- - '##'
+  - Waterfox
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 Waterfox：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Waterfox：
+- - '###'
+  - 通过 GUI 通过 .tar.xz 安装 Waterfox：
+- - '##'
+  - LibreWolf
+- - '###'
+  - 通过软件管理器通过 FLATPAK 包安装 LibreWolf：
+- - '###'
+  - 在终端通过 APT 安装 LibreWolf：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Firefox：
+- - '##'
+  - Pale Moon
+- - '###'
+  - 通过 GUI 通过 .tar.xz 安装 Pale Moon：
+- - '##'
+  - Mullvad Browser
+- - '###'
+  - 在图形界面通过 .tar.xz 安装 Mullvad Browser：
+- - '##'
+  - Basilisk
+- - '###'
+  - 在图形界面通过 .tar.xz 安装 Basilisk：
+- - '#'
+  - 密码管理器
+- - '##'
+  - LastPass
+- - '###'
+  - 软件管理器 LastPass：
+- - '###'
+  - 在终端和图形界面通过 .sh 安装 LastPass：
+- - '##'
+  - Bitwarden
+- - '###'
+  - 软件通过 FLATPAK 软件包安装 Bitwarden：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Bitwarden：
+- - '###'
+  - 在终端通过 SNAP 安装 Bitwarden：
+- - '##'
+  - Buttercup
+- - '###'
+  - GUI 使用 AppImage 安装 Buttercup：
+- - '#'
+  - 媒体播放器
+- - '##'
+  - VLC
+- - '###'
+  - 软件管理器通过 SYSTEM PACKAGE/FLATPAK 包安装 VLC：
+- - '###'
+  - 在终端通过 APT 安装 VLC：
+- - '###'
+  - 在终端通过 FLATPAK 安装 VLC：
+- - '###'
+  - 在终端通过 SNAP 安装 VLC：
+- - '##'
+  - SMPlayer
+- - '###'
+  - 软件管理器通过 SYSTEM PACKAGE/FLATPAK 包安装 SMPlayer：
+- - '###'
+  - 在终端通过 APT 安装 SMPlayer：
+- - '###'
+  - 在终端通过 FLATPAK 安装 SMPlayer：
+- - '##'
+  - Haruna
+- - '###'
+  - 软件管理器通过 SYSTEM PACKAGE 软件包安装 Haruna：
+- - '###'
+  - 在终端通过 APT 安装 Haruna：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Haruna：
+- - '###'
+  - 在终端通过 SNAP 安装 Haruna：
+- - '##'
+  - Dragon Player
+- - '###'
+  - 级级：
+- - '###'
+  - 在终端通过 APT 安装 Dragon Player：
+- - '###'
+  - 在终端通过 SNAP 安装 Dragon Player：
+- - '#'
+  - 系统工具
+- - '##'
+  - QDirStat
+- - '###'
+  - 软件管理器通过 SYSTEM PACKAGE 软件包安装 QDirStat：
+- - '###'
+  - 在终端通过 APT 安装 QDirStat：
+- - '##'
+  - Psensor
+- - '###'
+  - 软件管理器通过 SYSTEM PACKAGE 软件包安装 Psensor：
+- - '###'
+  - 在终端通过 APT 安装 Psensor：
+- - '##'
+  - Stacer
+- - '###'
+  - 软件管理器通过 SYSTEM PACKAGE 软件包安装 Stacer：
+- - '###'
+  - 在终端通过 APT 安装 Stacer：
+- - '##'
+  - Bleachbit
+- - '###'
+  - 软件管理器通过 SYSTEM PACKAGE/FLATPAK 软件包安装 Bleachbit：
+- - '###'
+  - 在终端通过 APT 安装 Bleachbit：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Bleachbit：
+- - '##'
+  - SoundConverter
+- - '###'
+  - 软件管理器通过 SYSTEM PACKAGE 软件包安装 SoundConverter：
+- - '###'
+  - 在终端通过 APT 安装 SoundConverter：
+- - '###'
+  - 在终端中通过 FLATPAK 安装 SoundConverter：
+- - '##'
+  - Converseen
+- - '###'
+  - 软件管理器通过 SYSTEM PACKAGE 软件包安装 Converseen：
+- - '###'
+  - 在终端通过 APT 安装 Converseen：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Converseen：
+- - '##'
+  - Czkaw
+- - '###'
+  - 在终端通过 FLATPAK 安装 Czkaw：
+- - '###'
+  - 在终端通过 SNAP 安装 Czkaw：
+- - '#'
+  - 通讯
+- - '##'
+  - Discord
+- - '###'
+  - 软件管理器通过 FLATPAK 软件包安装 Discord：
+- - '###'
+  - 在终端中通过 FLATPAK 安装 Discord：
+- - '###'
+  - 在终端通过 SNAP 安装 Discord：
+- - '##'
+  - Skype
+- - '###'
+  - 软件管理器通过 FLATPAK 软件包安装 Skype：
+- - '###'
+  - 在终端中通过 APT 安装 Skype：
+- - '##'
+  - Pidgin
+- - '###'
+  - 软件管理器通过 FLATPAK 安装 Pidgin：
+- - '###'
+  - 在终端通过 APT 安装 Pidgin：
+- - '##'
+  - Ferdium
+- - '###'
+  - 软件管理器通过 FLATPAK 安装 Ferdium：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Ferdium：
+- - '###'
+  - 在终端通过 SNAP 安装 Ferdium：
+- - '##'
+  - Signal
+- - '###'
+  - 软件管理器通过 FLATPAK 安装 Signal：
+- - '###'
+  - 在终端通过 SNAP 安装 Signal：
+- - '##'
+  - Telegram
+- - '###'
+  - 软件管理器通过 FLATPAK 软件包安装 Telegram：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Telegram：
+- - '###'
+  - 在终端通过 SNAP 安装 Telegram：
+- - '#'
+  - 远程办公
+- - '##'
+  - Zoom
+- - '###'
+  - 终端通过 APT 安装 Zoom：
+- - '###'
+  - 发布页面：
+- - '###'
+  - 终端通过发布页面：
+- - '##'
+  - Slack
+- - '###'
+  - 软件管理器通过 FLATPAK 软件包安装 Slack：
+- - '###'
+  - 在终端通过 FLATPAK 安装 Slack：
+- - '###'
+  - 在终端通过 SNAP 安装 Slack：
+- - '##'
+  - Citrix Workspace
+- - '###'
+  - 图形界面通过 .deb 安装 Citrix Workspace：
+- - '#'
+  - 云办公
+- - '##'
+  - Google Docs
+- - '##'
+  - Microsoft 365
+- - '##'
+  - Office套件
+- - '###'
+  - 图形界面访问 Microsoft 365：
+- - '###'
+  - 图形界面访问 Zoho Office：
+- - '#'
+  - AI 内容
+- - '##'
+  - Easy Diffusion
+- - '###'
+  - 终端中通过 APT 安装 Easy Diffusion：
+- - '###'
+  - 桌面快捷方式安装 Easy Diffusion：
+- - '##'
+  - oobabooga (Text Generation GUI)
+- - '###'
+  - 桌面快捷方式 oobabooga：
+- - '##'
+  - Stable Diffusion Web UI
+- - '###'
+  - 终端中的 `.sh` 安装 Stable Diffusion Web UI：
+- - '###'
+  - 桌面快捷方式 Stable Diffusion Web UI：
+- - '#'
+  - 系统设置
+- - '##'
+  - 夜间模式
+- - '##'
+  - Redshift
+- - '##'
+  - PipeWire
+- - '##'
+  - 环境变量
+- - '##'
+  - Cinnamon 背景
+- - '##'
+  - Mount_options.conf
+- - '##'
+  - Cinnamon 中的启动项
+- - '###'
+  - Cinnamon 中通过 GUI 添加启动项：
+- - '###'
+  - 终端通过命令行添加 启动项：
+- - '##'
+  - 夜光模式 (GNOME)
+- - '###'
+  - 终端通过 GUI 设置夜光模式 (GNOME)：
+- - '##'
+  - 夜光模式 (Cinnamon & Redshift)
+- - '###'
+  - 终端和 GUI 并设置夜光模式 (Cinnamon & Redshift)：
