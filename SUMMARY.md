@@ -293,6 +293,7 @@
 +   [Linux 命令行：通过 7 个简单步骤快速学习 Linux 基础的学者指南（编程书籍 2）](docs/linux-command-line-the-fast-and-easy-beginners-guide-to-lear/README.md)
 +   [Linux 命令行与 Shell 脚本](docs/linux-command-lines-and-shell-scripting/README.md)
 +   [Linux 调试、反汇编与逆向工程](docs/linux-debugging-dissasseblining-reversing/README.md)
++   [适用于日常使用与关键基础设施的极轻极极稳定 Linux 发行版（英文版）](docs/linux-distro-super-ringan-super-stabil-untuk-penggunaan-hari/README.md)
 +   [Linux 入门指南](docs/linux-essentials/README.md)
 +   [Linux 防火墙：iptables, psad 和 fwsnort 攻击检测与响应 [图解]](docs/linux-firewalls-attack-detection-and-response-with-iptables-/README.md)
 +   [Linux 初学者指南（第17版，2024年）](docs/linux-for-beginners---17th-edition-2024/README.md)
