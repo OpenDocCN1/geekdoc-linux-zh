@@ -1,0 +1,47 @@
+name: Linux Commands： Linux For Beginners To Learn Linux Basics and Linux Command
+  Line (1HourToStart)
+name_cn: Linux 命令：Linux 初学者指南，学习 Linux 基础与命令行 (1 小时上手)
+slug: linux-commands-linux-for-beginners-to-learn-linux-basics-and
+toc:
+- - '#'
+  - Linux 命令
+- - '###'
+  - finger
+- - '###'
+  - uname
+- - '###'
+  - passwd
+- - '###'
+  - shutdown
+- - '###'
+  - reboot
+- - '###'
+  - useradd
+- - '#'
+  - 网络管理
+- - '###'
+  - ifconfig
+- - '###'
+  - netstat
+- - '###'
+  - ping
+- - '###'
+  - cmp
+- - '###'
+  - clear
+- - '###'
+  - find
+- - '###'
+  - grep
+- - '###'
+  - wc
+- - '###'
+  - echo
+- - '###'
+  - uniq
+- - '###'
+  - env
+- - '###'
+  - split
+- - '###'
+  - paste
