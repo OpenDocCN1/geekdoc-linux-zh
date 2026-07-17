@@ -378,6 +378,7 @@
 +   [《Linux期刊》（2007年9月）](docs/linux-journal-september-2007/README.md)
 +   [Linux 内核调试：利用开源工具和高级技术调试 Linux 内核或模块问题](docs/linux-kernel-debugging-leverage-open-source-tools-and-advanc/README.md)
 +   [Linux 内核开发](docs/linux-kernel-development-9780768696790/README.md)
++   [Linux 内核开发 (开发者库)](docs/linux-kernel-development-developers-library/README.md)
 +   [Linux 内核开发：如何深度理解](docs/linux-kernel-development-how-to-gain-significant-understandi/README.md)
 +   [Linux 内核编程：字符、块、USB 及网络接口的内核架构与设备驱动开发](docs/linux-kernel-programming-developing-kernel-architecture-and-/README.md)
 +   [Linux 内核模块编程指南](docs/linux-krn-mdl-prog-dg/README.md)
