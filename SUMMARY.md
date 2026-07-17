@@ -412,6 +412,7 @@
 +   [Linux 系统：Linux 操作系统入门指南：Linux 系统要求](docs/linux-system-how-to-get-started-with-the-linux-operating-sys/README.md)
 +   [Linux 系统：什么是 Linux 操作系统？：Linux 文件系统](docs/linux-system-what-is-linux-operating-system-linux-file-syste/README.md)
 +   [Linux 对抗微软：发现 Linux 相比微软的卓越性能与节能优势](docs/linux-tackles-microsoft-discover-the-superior-performance-an/README.md)
++   [Linux：初学者快速掌握 Linux 系统的零基础入门指南](docs/linux-the-1-crash-course-for-beginners-to-master-linux-opera/README.md)
 +   [Linux 初学者快速入门：立即开始！](docs/linux-the-beginners-crash-course-get-started-today/README.md)
 +   [Linux：初学者完全指南 - 黑书](docs/linux-the-complete-beginners-guide---the-black-book/README.md)
 +   [Linux：从灾难到精通](docs/linux-the-disaster-to-master/README.md)
