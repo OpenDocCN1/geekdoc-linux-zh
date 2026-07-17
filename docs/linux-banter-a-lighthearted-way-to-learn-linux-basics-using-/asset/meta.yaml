@@ -1,0 +1,36 @@
+name: Linux Banter： A lighthearted way to learn Linux basics using C Programming
+name_cn: Linux Banter：使用 C 语言学习 Linux 基础的轻松入门指南
+slug: linux-banter-a-lighthearted-way-to-learn-linux-basics-using-
+toc:
+- - '#'
+  - Linux Banter：使用 C 语言学习 Linux 基础的轻松入门指南
+- - '##'
+  - 本书的读者群体
+- - '##'
+  - 先决条件
+- - '##'
+  - 引言
+- - '#'
+  - Shell 脚本
+- - '#'
+  - C 编译器
+- - '#'
+  - 文件和目录
+- - '#'
+  - 介绍
+- - '#'
+  - 内存和命令行参数
+- - '#'
+  - mapunmap.c
+- - '#'
+  - getopt()
+- - '#'
+  - 信号与阻塞
+- - '#'
+  - 线程与互斥锁
+- - '#'
+  - 'IPC : 共享内存'
+- - '#'
+  - 结语
+- - '###'
+  - 主要修复说明：
