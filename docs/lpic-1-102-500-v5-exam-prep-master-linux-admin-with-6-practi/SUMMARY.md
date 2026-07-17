@@ -1,0 +1,2 @@
++   [LPIC-1 102-500 V5 考试备考：通过 6 套实践测试精通 Linux 管理：带详细解析的真实模拟考试题](README.md)
++   [LPIC-1 102-500 V5 考试备考：通过 6 套实践测试精通 Linux 管理：带详细解析的真实模拟考试题](lpic-1-102-500-v5-exam-prep-master-linux-admin-with-6-practi_0.md)

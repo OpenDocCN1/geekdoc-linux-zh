@@ -1,0 +1,2 @@
++   [LPIC-1 Linux Professional Institute 认证实践测试：考试 101-500 和考试 102-500](README.md)
++   [LPIC-1 Linux Professional Institute 认证实践测试：考试 101-500 和考试 102-500](lpic-1-linux-professional-institute-certification-practice-t_0.md)
