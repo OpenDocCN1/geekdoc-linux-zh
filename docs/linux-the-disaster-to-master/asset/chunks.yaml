@@ -1,0 +1,3333 @@
+- fmt: '
+
+    ![](cover.jpeg)
+
+
+    # Linux: The Disaster to Master Step by Step
+
+    ### Guide to Learning Linux and the Command Line
+
+    By Matt Eleck
+
+
+    ## Introduction
+
+
+    I want to thank you and congratulate you for downloading the book, `Linux: The
+    Disaster to Master Step by Step Guide to Learning Linux and the Command Line`.
+
+
+    `Linux` is an operating system that is very popular with programmers and developers.
+    Even the average computer user wants to learn how to use this system due to the
+    unique capabilities that this system offers.
+
+
+    Let us look at some statistics on the usage of this operating system. About 94%
+    of the world’s supercomputers are powered by `Linux`. More than half of the servers
+    powering the Internet run on `Linux`. Android devices, many desktop computers,
+    and most kinds of hardware run on `Linux`. Thus, it is very important to know
+    how to use this system.
+
+
+    There is a misplaced misconception that the `Linux` OS and `Linux` distribution
+    families are complex and difficult to understand. This is not the case. `Linux`,
+    just like other operating systems, is easy to learn and understand. The misconception
+    probably arises from the fact that most computer users get used to `Windows` before
+    they get to learn other systems. No making the switch becomes challenging but
+    it shouldn’t be the case.
+
+
+    In this eBook, I am going to take you through everything you need to know about
+    `Linux`, the command line, and the Graphical User Interface. If you are a budding
+    developer or programmer, the average computer user, or you just want to learn
+    about this OS, you will find this guide interesting and informative. It does not
+    matter if you have previous `Linux` experience; I will assume that you are a complete
+    beginner.
+
+
+    This guide will serve as training, and by the time we are through, you should
+    be able to have a good working knowledge of `Linux`, navigate through any `Linux`
+    distribution easily from both the command line and the Graphical User Interface,
+    and learn the system configurations and common applications of `Linux`.
+
+
+    Thanks again for downloading this book, I hope you enjoy it!
+
+
+    Copyright © 2015 by NetTrade Publications4
+
+    All rights reserved. No part of this book may be reproduced in any form without
+    permission in writing from the author. Reviewers may quote brief passages in reviews.
+
+
+    ## Disclaimer
+
+
+    No part of this publication may be reproduced or transmitted in any form or by
+    any means, mechanical or electronic, including photocopying or recording, or by
+    any information storage and retrieval system, or transmitted by email without
+    permission in writing from the publisher.
+
+
+    While all attempts and efforts have been made to verify the information held within
+    this publication, neither the author nor the publisher assumes any responsibility
+    for errors, omissions, or opposing interpretations of the content herein.
+
+
+    This book is for entertainment purposes only. The views expressed are those of
+    the author alone, and should not be taken as expert instruction or commands. The
+    reader of this book is responsible for his or her own actions when it comes to
+    reading the book.
+
+
+    Adherence to all applicable laws and regulations, including international, federal,
+    state, and local governing professional licensing, business practices, advertising,
+    and all other aspects of doing business in the US, Canada, or any other jurisdiction
+    is the sole responsibility of the purchaser or reader.
+
+
+    Neither the author nor the publisher assumes any responsibility or liability whatsoever
+    on the behalf of the purchaser or reader of these materials.
+
+
+    Any received slight of any individual or organization is purely unintentional.
+
+
+    ## Table of Contents
+
+
+    - [Introduction](#part0000_split_001.html__Toc427052347)
+
+    - [Chapter 1: Starting Off With Linux](#part0000_split_005.html__Toc427052348)
+
+    - [Chapter 2: Installing Linux](#part0000_split_007.html__Toc427052350)
+
+    - [Chapter 3: Importing Your Data](#part0000_split_008.html__Toc427052352)
+
+    - [Chapter 4: Installing and Updating Programs](#part0000_split_009.html__Toc427052354)
+
+    - [Chapter 5: Introduction to the Command Line](#part0000_split_010.html__Toc427052356)
+
+    - [Chapter 6: Running Commands](#part0000_split_011.html__Toc427052358)
+
+    - [Chapter 7: Getting Help with the Command Line](#part0000_split_012.html__Toc427052360)
+
+    - [Chapter 8: Using a Text Editor](#part0000_split_013.html__Toc427052362)
+
+    - [Conclusion](#part0000_split_014.html__Toc42705234)
+
+
+    ## Chapter 1: Starting Off With Linux
+
+
+    You have decided to learn about `Linux`. Maybe you want to make the switch from
+    another operating system to this wonderful OS you have hearing about. In this
+    first chapter, I am going to take you through different reasons why you might
+    want to use `Linux`, the behind scenes working of `Linux`, installing `Linux`
+    and how to begin it. All of this is meant to ease you into the Linux world before
+    we can get to the real stuff.
+
+
+    To start us off, what is Linux? In the simplest of terms, `Linux` is an operating
+    system that enables your computer to work. `Windows`, `Mac OS`, `iOS`, and `Android`
+    are all operating systems. They provide a platform on which different software
+    work on hardware. Thus, an operating system interacts with the hardware, software,
+    user and anything else that is connected to your device to make them all work
+    together to deliver a certain function.
+
+
+    “What is the difference between all these operating systems? Can I just use any
+    of them without switching?” you might ask. Each of these operating systems, especially
+    `Linux`, has their own way of doing things. In the introduction, we have looked
+    at some statistics on Linux usage as an operating system. On virtually all supercomputers
+    and most of the Internet servers, `Linux` is the preferred OS. Among developers
+    and programmers, `Linux` is the preferred OS. This is because they like the Linux
+    way of doing things. Let us look at the advantages Linux has over other OS.
+
+
+    The Linux operating system is very secure. There is a minimal chance of being
+    infected with a virus when using the `Linux OS`. Most Linux users do not run antivirus
+    software on their computers due to this – maybe only those that deal with specialized
+    and sensitive uses. As you might know, an antivirus slows down your computer.
+
+
+    The Linux operating system is very flexible. Unlike other operating systems, `Linux`
+    is very flexible in many different aspects. You can choose your user interface
+    from many different options unlike `Windows`, which only has one. `Linux` runs
+    on a wide range of hardware, supercomputers, servers, desktops, and smartphones.
+    It can run on old hardware, computers with low specs, and on super-fast modern
+    computers. The `Linux OS` provides advanced security features such as strong encryption.
+    These and more features make this OS very flexible to use in a wide range of common
+    and advanced uses.
+
+    '
+  raw: "\n\n![](cover.jpeg)\n\nLinux\n\nThe Disaster to Master Step by Step\n\nGuide\
+    \ to Learning Linux and the Command Line\n\nBy Matt Eleck\n\n# \n\nIntroduction\n\
+    \nI want to thank you and congratulate you for downloading the book, Linux: The\
+    \ Disaster to Master Step by Step Guide to Learning Linux and the Command Line.\n\
+    \nLinux is an operating system that is very popular with programmers and developers.\
+    \ Even the average computer user wants to learn how to use this system due to\
+    \ the unique capabilities that this system offers.\n\nLet us look at some statistics\
+    \ on the usage of this operating system. About 94% of the world’s supercomputers\
+    \ are powered by Linux. More than half of the servers powering the Internet run\
+    \ on Linux. Android devices, many desktop computers, and most kinds of hardware\
+    \ run on Linux. Thus, it is very important to know how to use this system.\n\n\
+    There is a misplaced misconception that the Linux OS and Linux distribution families\
+    \ are complex and difficult to understand. This is not the case. Linux, just like\
+    \ other operating systems, is easy to learn and understand. The misconception\
+    \ probably arises from the fact that most computer users get used to Windows before\
+    \ they get to learn other systems. No making the switch becomes challenging but\
+    \ it shouldn’t be the case.\n\nIn this eBook, I am going to take you through everything\
+    \ you need to know about Linux, the command line, and the Graphical User Interface.\
+    \ If you are a budding developer or programmer, the average computer user, or\
+    \ you just want to learn about this OS, you will find this guide interesting and\
+    \ informative. It does not matter if you have previous Linux experience; I will\
+    \ assume that you are a complete beginner.\n\nThis guide will serve as training,\
+    \ and by the time we are through, you should be able to have a good working knowledge\
+    \ of Linux, navigate through any Linux distribution easily from both the command\
+    \ line and the Graphical User Interface, and learn the system configurations and\
+    \ common applications of Linux.\n\nThanks again for downloading this book, I hope\
+    \ you enjoy it!\n\nCopyright © 2015 by NetTrade Publications4\n\nAll rights reserved.\
+    \ No part of this book may be reproduced in any form without permission in writing\
+    \ from the author. Reviewers may quote brief passages in reviews.\n\nDisclaimer\n\
+    \nNo part of this publication may be reproduced or transmitted in any form or\
+    \ by any means, mechanical or electronic, including photocopying or recording,\
+    \ or by any information storage and retrieval system, or transmitted by email\
+    \ without permission in writing from the publisher.\n\nWhile all attempts and\
+    \ efforts have been made to verify the information held within this publication,\
+    \ neither the author nor the publisher assumes any responsibility for errors,\
+    \ omissions, or opposing interpretations of the content herein.\n\nThis book is\
+    \ for entertainment purposes only. The views expressed are those of the author\
+    \ alone, and should not be taken as expert instruction or commands. The reader\
+    \ of this book is responsible for his or her own actions when it comes to reading\
+    \ the book.\n\nAdherence to all applicable laws and regulations, including international,\
+    \ federal, state, and local governing professional licensing, business practices,\
+    \ advertising, and all other aspects of doing business in the US, Canada, or any\
+    \ other jurisdiction is the sole responsibility of the purchaser or reader.\n\n\
+    Neither the author nor the publisher assumes any responsibility or liability whatsoever\
+    \ on the behalf of the purchaser or reader of these materials.\n\nAny received\
+    \ slight of any individual or organization is purely unintentional.\n\nTable of\
+    \ Contents\n\n[Introduction](#part0000_split_001.html__Toc427052347)\n\n[Chapter\
+    \ 1:](#part0000_split_005.html__Toc427052348)  [Starting Off With Linux](#part0000_split_006.html__Toc427052349)\n\
+    \n[Chapter 2:](#part0000_split_007.html__Toc427052350)  [Installing Linux](#part0000_split_007.html__Toc427052351)\n\
+    \n[Chapter 3:](#part0000_split_008.html__Toc427052352)  [Importing Your Data](#part0000_split_008.html__Toc427052353)\n\
+    \n[Chapter 4:](#part0000_split_009.html__Toc427052354)  [Installing and Updating\
+    \ Programs](#part0000_split_009.html__Toc427052355)\n\n[Chapter 5:](#part0000_split_010.html__Toc427052356)\
+    \  [Introduction to the Command Line](#part0000_split_010.html__Toc427052357)\n\
+    \n[Chapter 6:](#part0000_split_011.html__Toc427052358)  [Running Commands](#part0000_split_011.html__Toc427052359)\n\
+    \n[Chapter 7:](#part0000_split_012.html__Toc427052360)  [Getting Help with the\
+    \ Command Line](#part0000_split_012.html__Toc427052361)\n\n[Chapter 8:](#part0000_split_013.html__Toc427052362)\
+    \  [Using a Text Editor](#part0000_split_013.html__Toc427052363)\n\n[Conclusion](#part0000_split_014.html__Toc427052364)\n\
+    \n[Check out my other books](#part0000_split_015.html__Toc427052365)\n\n# Other\
+    \ Books by Matt Eleck\n\n[Raspberry Pi 2](http://amzn.to/1S60eTM)\n\n[ ](http://amzn.to/1S60eTM)\n\
+    \n[The Disaster to Master Step By Step User Guide](http://amzn.to/1S60eTM)\n\n\
+    Chapter 1:\n\n# Starting Off With Linux\n\nYou have decided to learn about Linux.\
+    \ Maybe you want to make the switch from another operating system to this wonderful\
+    \ OS you have been hearing about and wanting to use. In this first chapter, I\
+    \ am going to take you through different reasons why you might want to use Linux,\
+    \ the behind the scenes working of Linux, installing Linux and how to begin using\
+    \ it. All of this is meant to ease you into the Linux world before we can get\
+    \ to the real stuff.\n\nTo start us off, what is Linux? In the simplest of terms,\
+    \ Linux is an operating system that enables your computer to work. Windows, Mac\
+    \ OS, iOS, and Android are all operating systems. They provide a platform on which\
+    \ different software work on hardware. Thus, an operating system interacts with\
+    \ the hardware, software, user and anything else that is connected to your device\
+    \ to make them all work together to deliver a certain function.\n\n“What is the\
+    \ difference between all these operating systems? Can I just use any of them without\
+    \ switching?” you might ask. Each of these operating systems, especially Linux,\
+    \ has their own way of doing things. In the introduction, we have looked at some\
+    \ statistics on Linux usage as an operating system. On virtually all supercomputers\
+    \ and most of the Internet servers, Linux is the preferred OS. Among developers\
+    \ and programmers, Linux is the preferred OS. This is because they like the Linux\
+    \ way of doing things. Let us look at the advantages Linux has over other OS.\n\
+    \nThe Linux operating system is very secure. There is a minimal chance of being\
+    \ infected with a virus when using the Linux OS. Most Linux users do not run antivirus\
+    \ software on their computers due to this – maybe only those that deal with specialized\
+    \ and sensitive uses. As you might know, an antivirus slows down your computer.\n\
+    \nThe Linux operating system is very flexible. Unlike other operating systems,\
+    \ Linux is very flexible in many different aspects. You can choose your user interface\
+    \ from many different options unlike Windows, which only has one. Linux runs on\
+    \ a wide range of hardware, supercomputers, servers, desktops, and smartphones.\
+    \ It can run on old hardware, computers with low specs, and on super-fast modern\
+    \ computers. The Linux OS provides advanced security features such as strong encryption.\
+    \ These and more features make this OS very flexible to use in a wide range of\
+    \ common and advanced uses."
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpeg)
+
+
+    # Linux：从零到精通的逐步指南
+
+    ### Linux 与命令行命令行学习指南
+
+    作者：Matt Eleck
+
+
+    ## 引言
+
+
+    我想感谢你的下载，并祝贺你下载了这本书《Linux：从零到精通的逐步指南：Linux 与命令行学习指南》。
+
+
+    `Linux` 是一种在程序员和开发者中非常受欢迎的操作系统。即使是普通电脑用户，也由于该系统提供的独特功能想要学习如何使用这个系统。
+
+
+    让我们来看关于该操作系统使用的一些统计数据。全球约 94% 的超级计算机由 `Linux` 驱动。超过一半驱动互联网的服务器运行在 `Linux` 上。Android
+    设备、许多台式电脑以及各种类型的硬件都运行在 `Linux` 上。因此，了解如何使用这个系统非常重要。
+
+
+    存在一种误的误解，认为 `Linux` 操作系统和 `Linux` 发行版家族复杂且难以理解。事实并非如此。`Linux` 和其他操作系统一样，很容易学习和理解。这种误解可能源于大多数计算机用户在学习其他系统之前已经习惯了
+    `Windows`。这让切换变得具有挑战性，但这不应是事实。
+
+
+    在这本电子书中，我将带你了解关于 `Linux`、命令行和图形用户界面所需的所有知识。如果你是一个初级开发者或程序员、普通电脑用户，或者只是想了解这个操作系统，你会发现本指南有趣且信息量丰富。无论你之前是否有
+    `Linux` 经验，我将假设你是一个完全的初学者。
+
+
+    本指南将作为培训，当我们结束时，你应该能够掌握对 `Linux` 的良好实践知识，从命令行和图形用户界面轻松地浏览任何 `Linux` 发行版，并学习 `Linux`
+    的系统配置和常用应用程序。
+
+
+    再次感谢下载本书，希望你喜欢它！
+
+
+    版权所有 © 2015 NetTrade Publications4
+
+    保留所有权利。未经作者书面许可，不得以任何形式复制本书的任何部分。评审人员可以在评论中引用简短段落。
+
+
+    ## 免责声明
+
+
+    未经出版者书面许可，本出版物的任何部分不得以任何形式或任何方式（机械或电子，包括复印或录制）或通过任何信息存储和检索系统，或通过电子邮件传输。
+
+
+    尽管已尽一切努力验证本出版物中所包含的信息，但作者和出版者均不对内容的错误、遗漏或相反的解释承担任何责任。
+
+
+    本书仅供娱乐之用。书中表达的观点仅代表作者个人观点，不应被视为专家指令或命令。本书的读者在阅读本书时对其自己的行为负责。
+
+
+    遵守所有适用的法律法规，包括国际、联邦、州和地方政府的专业执照、商业惯例、广告以及在美、加拿大或任何其他司法管辖区开展业务的所有其他方面，是购买者或读者的唯一责任。
+
+
+    作者和出版者对这些材料的购买者或读者不承担任何责任或法律责任。
+
+
+    对任何个人或组织收到的任何冒犯完全是无意的。
+
+
+    ## 目录
+
+
+    - 引言
+
+    - 第 1 章：开始学习 Linux
+
+    - 第 2 章：安装 Linux
+
+    - 第 3 章：导入你的数据
+
+    - 第 4 章：安装和更新程序
+
+    - 第 5 章：命令行简介
+
+    - 第 6 章：运行命令
+
+    - 第 7 章：获取命令行获取帮助
+
+    - 第 8 章：使用文本编辑器
+
+    - 结论
+
+
+    ## 第 1 章：开始学习 Linux
+
+
+    你决定学习 `Linux`。也许你想要从另一个操作系统切换到你听过的这个神奇操作系统。在第一章中，我将带你了解你可能想使用 `Linux` 的不同原因、`Linux`
+    的后台工作原理、安装 `Linux` 以及如何开始。这一切都是为了在我们进入正题之前，让你逐渐融入 Linux 的世界。
+
+
+    首先，Linux 是什么？用简单的话说，`Linux` 是一种让你的计算机能够运行的操作系统。`Windows`、`Mac OS`、`iOS` 和 `Android`
+    都是操作系统。它们提供了一个让不同软件在硬件上运行的平台。因此，操作系统与硬件、软件、用户以及连接到你设备的任何其他交互，使它们共同工作以实现特定的功能。
+
+
+    “这些操作系统之间有什么区别？我可以直接使用其中任何一个而不需要切换吗？”你可能会问。每种操作系统，特别是 `Linux`，都有它们自己的工作方式。在引言中，我们查看了
+    Linux 作为操作系统的一些统计数据。在几乎所有的超级计算机和大多数互联网服务器上，`Linux` 是首选操作系统。在开发者和程序员中，`Linux` 是首选操作系统。这是因为他们喜欢
+    Linux 的工作方式。让我们来看看 Linux 相对于其他操作系统的优势。
+
+
+    Linux 操作系统非常安全。使用 `Linux OS` 时，感染病毒的概率极小。大多数 Linux 用户不在他们的计算机上运行杀毒软件——可能只有处理特殊和敏感用途的用户。正如你可能知道的，杀毒软件会降低电脑速度。
+
+
+    Linux 操作系统非常灵活。与其他操作系统不同，`Linux` 在许多方面都非常灵活。你可以从许多选项中选择用户界面，而 `Windows` 只有一个。`Linux`
+    运行在各种硬件上、超级计算机、服务器、台式电脑和智能手机上。它可以运行在旧硬件、低配置电脑以及超快速现代计算机上。`Linux OS` 提供了强加密等高级安全功能。这些以及更多功能使得该操作系统在各种常见和高级用途中都非常灵活。
+
+
+    '
+- fmt: '
+
+    # Introduction
+
+
+    Another major point of departure when comparing Linux and other operating systems
+    is the ideological differences. Linux is open source software, meaning it is free.
+    Anybody can use it for whatever purpose they wish, modify it, share with the community,
+    and study how it works without breaching any regulations. This is very important
+    to the Linux community, as there is a difference in opinion regarding whether
+    software users ought to be restricted on what they can and cannot do. The freedom
+    that the Linux operating system offers is what drives programmers and developers
+    to it, since they can play around with it as they seek to innovate.
+
+
+    In light of that, the Linux OS is not developed by a single person or company.
+    It is the product of a massive community that continually develops Linux and other
+    programs associated with it for the greater use of humanity. For this reason,
+    you need not worry about the different issues we face nowadays of surveillance,
+    monitoring, or your online activity being tracked when using Linux and other associated
+    open source programs.
+
+
+    All of these features make the Linux OS appealing to a vast majority of people.
+    Even people who have not used Linux before are willing to learn and are only held
+    back by the assumption that the learning curve will be stiff. A simple way through
+    which Linux is helping humanity is the use of old hardware to run the free Linux
+    OS and other open source programs as a very cheap way to get low cost computers
+    to developing nations and schools.
+
+
+    Even if you are not interested in any of the things we have just discussed about
+    Linux, it is still worth trying; you might fall in love with it, and if you do
+    not, you will have lost nothing, but gained knowledge about a different operating
+    system. Let us move on to the next chapter, where we shall discuss installing
+    Linux.
+
+
+    # Chapter 2: Installing Linux
+
+
+    Since you have decided to learn about the Linux operating system, you need to
+    install the OS, since you cannot just learn by reading a guide. You have to do
+    it at practically every stage. It is like riding a bike; you have to actually
+    get on one and ride. Before we get to the various ways through which you can install
+    this OS, you need to have a backup of all the important files on your computer.
+    These are especially those in the partition that contains the existing OS. It
+    does not mean that Linux will somehow gobble up these files, but it is better
+    to have some form of backup in case of anything going wrong. In most instances,
+    these files will remain intact, but it is better to be safe than sorry. You can
+    back up these files onto a removable hard drive, burn them onto a CD, or back
+    them up in the cloud. Make it a habit to back up your files every time – not just
+    when installing a new OS.
+
+
+    There are different versions of Linux available. The most popular one (and most
+    suited for a beginner) is Ubuntu. This version of Linux is easy to use, quick
+    to understand, and very flexible. It will work just fine and will introduce you
+    into the world of Linux in a really gentle way. For a start, we do not have to
+    install this OS; we can run it from a CD, and only when we are sure we want it
+    should we install it. You will run the entire Linux OS from the CD, and no changes
+    will be made to your computer. However, one drawback of doing this is that the
+    OS will be far slower than when installed on your hard drive. This might give
+    you a wrong impression about the speed of Linux OS. The opposite of this is actually
+    true: Linux is faster than Windows. In fact, if you have been experiencing speed
+    issues with your Windows OS for any reason, it might be a good time to try out
+    Linux.
+
+
+    ### The Live CD Method
+
+
+    If you go the Live CD way, just mount the CD and reboot your computer. When your
+    computer has started and displayed the manufacturer’s logo, you will need to press
+    a certain key to tell it to boot from the CD. This key differs with various manufacturers,
+    but it is either `F2`, `F12`, or `DEL`. If you are not sure of which, just quickly
+    press all of these. One of these will work and display the boot menu. Select the
+    entry that is the location of your CD drive. A menu will come up which will have
+    the Linux logo. Select the entry that reads “Ubuntu with Gnome.” This will load
+    the Linux OS and lead you to the desktop environment. This is the main interface
+    where you will choose what to do. There is also the command line, which we will
+    look at later.
+
+
+    If you have never used Linux before, you will notice that it is different from
+    other operating systems. However, the concept is the same when it comes to using
+    the desktop interface. The mouse will work in the same way – left-click selects
+    options, right-click pulls up a menu, double-clicking opens up an option, and
+    so forth. Dragging an item will also work the same.
+
+
+    ### Default Programs
+
+
+    The Linux OS has lots of installed programs by default. You can get to work immediately
+    after you install the OS, unlike Windows, which will require you to install other
+    programs before you can work on even the basic stuff. Some of the programs you
+    will find here will be familiar since they can operate on different platforms,
+    while others will be specifically for the Linux OS. Some of these default programs
+    are `Firefox`, `LibreOffice`, `Ubuntu One`, `Thunderbird`, `Movie Player`, `Empathy`,
+    `Banshee`, and `Shotwell`, amongst many others. These programs are open source
+    as well and perform different basic functions such as browsing the Internet, word
+    processing, photo management, backup, and more, as you will learn when you explore
+    them. In the user menu, launch the system settings dialog box to personalize settings
+    such as wallpaper, keyboard layout, and others.
+
+
+    At this point, you should play around with the OS and different programs to learn
+    by yourself, since it is not possible to cover all minute details in one guide.
+    Do not be afraid of destroying anything, as Linux is basically a risk-free environment.
+    Also, remember that we have booted from a CD, and no permanent changes are made
+    to your hard drive. You should also test your hardware to make sure everything
+    works. You do not need to test the graphics card since it is already working if
+    you are at this point. You will need to test the wireless cards you might be using
+    with other operating systems.
+
+
+    ### Installation
+
+
+    By now, you have had a feel of the Linux OS, seen how it works (albeit in a small
+    way), tested various programs, and maybe even done personalization. It is time
+    to go deeper. At this point, I suggest we install the OS on the hard drive to
+    have a good feel of it. I hope you have done the backup, since now we are making
+    changes to the hard drive. The installation process is easy when you are at this
+    point. You go to the desktop of the live CD, then double-click install. This will
+    lead you to the installation screens, where you will get some straightforward
+    questions along the installation progress. I will only highlight where you should
+    be careful.
+
+
+    On the third installation screen, you will get some options for how the OS should
+    be installed. The options will be to install alongside the existing OS, replace
+    the existing OS, or let you do your own thing. This is a very important stage.
+    For a beginner and people who still want to keep the existing OS in case they
+    want to fall back to it at some point, choose the first option. This will lead
+    to partition of the drive where your existing OS is located, just as we partition
+    hard drives into different partitions. This option will make both operating systems
+    available to you. You will be choosing which one to use at the boot stage. This
+    is the best option at this point.
+
+    '
+  raw: 'Another major point of departure when comparing Linux and other operating
+    systems is the ideological differences. Linux is open source software, meaning
+    it is free. Anybody can use it for whatever purpose they wish, modify it, share
+    with the community, and study how it works without breaching any regulations.
+    This is very important to the Linux community, as there is a difference in opinion
+    regarding whether software users ought to be restricted on what they can and cannot
+    do. The freedom that the Linux operating system offers is what drives programmers
+    and developers to it, since they can play around with it as they seek to innovate.
+
+
+    In light of that, the Linux OS is not developed by a single person or company.
+    It is the product of a massive community that continually develops Linux and other
+    programs associated with it for the greater use of humanity. For this reason,
+    you need not worry about the different issues we face nowadays of surveillance,
+    monitoring, or your online activity being tracked when using Linux and other associated
+    open source programs.
+
+
+    All of these features make the Linux OS appealing to a vast majority of people.
+    Even people who have not used Linux before are willing to learn and are only held
+    back by the assumption that the learning curve will be stiff. A simple way through
+    which Linux is helping humanity is the use of old hardware to run the free Linux
+    OS and other open source programs as a very cheap way to get low cost computers
+    to developing nations and schools.
+
+
+    Even if you are not interested in any of the things we have just discussed about
+    Linux, it is still worth trying; you might fall in love with it, and if you do
+    not, you will have lost nothing, but gained knowledge about a different operating
+    system. Let us move on to the next chapter, where we shall discuss installing
+    Linux.
+
+
+    #   Chapter 2:
+
+
+    # Installing Linux
+
+
+    Since you have decided to learn about the Linux operating system, you need to
+    install the OS, since you cannot just learn by reading a guide. You have to do
+    it at practically every stage. It is like riding a bike; you have to actually
+    get on one and ride. Before we get to the various ways through which you can install
+    this OS, you need to have a backup of all the important files on your computer.
+    These are especially those in the partition that contains the existing OS. It
+    does not mean that Linux will somehow gobble up these files, but it is better
+    to have some form of backup in case of anything going wrong. In most instances,
+    these files will remain intact, but it is better to be safe than sorry. You can
+    back up these files onto a removable hard drive, burn them onto a CD, or back
+    them up in the cloud. Make it a habit to back up your files every time – not just
+    when installing a new OS.
+
+
+    There are different versions of Linux available. The most popular one (and most
+    suited for a beginner) is Ubuntu. This version of Linux is easy to use, quick
+    to understand, and very flexible. It will work just fine and will introduce you
+    into the world of Linux in a really gentle way. For a start, we do not have to
+    install this OS; we can run it from a CD, and only when we are sure we want it
+    should we install it. You will run the entire Linux OS from the CD, and no changes
+    will be made to your computer. However, one drawback of doing this is that the
+    OS will be far slower than when installed on your hard drive. This might give
+    you a wrong impression about the speed of Linux OS. The opposite of this is actually
+    true: Linux is faster than Windows. In fact, if you have been experiencing speed
+    issues with your Windows OS for any reason, it might be a good time to try out
+    Linux.
+
+
+    If you go the Live CD way, just mount the CD and reboot your computer. When your
+    computer has started and displayed the manufacturer’s logo, you will need to press
+    a certain key to tell it to boot from the CD. This key differs with various manufacturers,
+    but it is either F2, F12, or DEL. If you are not sure of which, just quickly press
+    all of these. One of these will work and display the boot menu. Select the entry
+    that is the location of your CD drive. A menu will come up which will have the
+    Linux logo. Select the entry thatreads“Ubuntu with Gnome.” This will load the
+    Linux OS and lead you to the desktop environment. This is the main interface where
+    you will choose what to do. There is also the command line, which we will look
+    at later.
+
+
+    If you have never used Linux before, you will notice that it is different from
+    other operating systems. However, the concept is the same when it comes to using
+    the desktop interface. The mouse will work in the same way – left-click selects
+    options, right-click pulls up a menu, double-clicking opens up an option, and
+    so forth. Dragging an item will also work the same.
+
+
+    The Linux OS has lots of installed programs by default. You can get to work immediately
+    after you install the OS, unlike Windows, which will require you to install other
+    programs before you can work on even the basic stuff. Some of the programs you
+    will find here will be familiar since they can operate on different platforms,
+    while others will be specifically for the Linux OS. Some of these default programs
+    are Firefox, LibreOffice, Ubuntu One, Thunderbird, Movie Player, Empathy, Banshee,
+    and Shotwell, amongst many others. These programs are open source as well and
+    perform different basic functions such as browsing the Internet, word processing,
+    photo management, backup, and more, as you will learn when you explore them. In
+    the user menu, launch the system settings dialog box to personalize settings such
+    as wallpaper, keyboard layout, and others.
+
+
+    At this point, you should play around with the OS and different programs to learn
+    by yourself, since it is not possible to cover all minute details in one guide.
+    Do not be afraid of destroying anything, as Linux is basically a risk-free environment.
+    Also, remember that we have booted from a CD, and no permanent changes are made
+    to your hard drive. You should also test your hardware to make sure everything
+    works. You do not need to test the graphics card since it is already working if
+    you are at this point. You will need to test the wireless cards you might be using
+    with other operating systems.
+
+
+    By now, you have had a feel of the Linux OS, seen how it works (albeit in a very
+    small way), tested various programs, and maybe even done some personalization.
+    It is time to go deeper. At this point, I suggest we install the OS on the hard
+    drive to have a good feel of it. I hope you have done the backup, since now we
+    are making changes to the hard drive. The installation process is easy when you
+    are at this point. You go to the desktop of the live CD, then double-click install.
+    This will lead you to the installation screens, where you will get some straightforward
+    questions along the installation progress. I will only highlight where you should
+    be careful.
+
+
+    On the third installation screen, you will get some options for how the OS should
+    be installed. The options will be to install alongside the existing OS, replace
+    the existing OS, or let you do your own thing. This is a very important stage.
+    For a beginner and people who still want to keep the existing OS in case they
+    want to fall back to it at some point, choose the first option. This will lead
+    to partition of the drive where your existing OS is located, just as we partition
+    hard drives into different partitions. This option will make both operating systems
+    available to you. You will be choosing which one to use at the boot stage. This
+    is the best option at this point. If you want to use them for different functions,
+    this will come in handy.'
+  toc: []
+  trans: '
+
+
+    # 引言
+
+
+    将 Linux 与其他操作系统进行比较时，另一个主要的区别点是理念上的差异。Linux 是开源软件，这意味着它是免费的。任何人都可以根据意愿将其任何用途、对其进行修改、与社区共享并研究其工作原理，而不会违反任何规定。这对于
+    Linux 社区非常重要，因为对于是否应该限制软件用户可以做和不能做的事情，人们存在意见分歧。Linux 操作系统提供的自由是吸引程序员和开发者加入它的动力，因为他们可以在寻求创新的过程中对其进行尝试。
+
+
+    鉴于此，Linux 操作系统并不是由一个人或一家公司开发的。它是一个庞社区的产物，该社区不断开发 Linux 以及其他相关程序，以造人类更大的利益。因此，在使用
+    Linux 和其他相关的开源程序时，你不必担心现在面临的监控、监测或在线活动被追踪等各种问题。
+
+
+    所有这些特性使得 Linux 操作系统对大多数人都有吸引力。即使是以前未使用过 Linux 的人也愿意学习，他们仅仅受限于对学习曲线可能陡峭的假设。Linux
+    帮助人类的一种简单方法是利用旧硬件运行免费的 Linux 操作系统和其他开源程序，为发展中国家和学校提供了一种获取廉价计算机的低成本方式。
+
+
+    即使你对我们刚刚讨论的关于 Linux 的任何事情都不感兴趣，仍然值得尝试；你可能会爱上它，如果没有，你一无所获，但收获了关于不同操作系统的知识。让我们进入下一章，我们将讨论如何安装
+    Linux。
+
+
+    # 第 2 章：安装 Linux
+
+
+    既然你已经决定学习 Linux 操作系统，你就需要安装操作系统，因为你不能仅仅通过阅读指南来学习。你必须在几乎每一个阶段都付诸实践。就像骑自行车；你必须真正坐上去骑起来。在我们介绍安装此操作系统的各种方法之前，你需要对电脑上所有重要文件进行备份。特别是那些位于包含现有操作系统的分区中的文件。这并不意味着
+    Linux 会以某种方式吞噬这些文件，但为了防止发生意外，保留某种形式的备份会更好。在大多数情况下，这些文件将保持完好无损，但防患胜于治疗治。你可以将这些文件备份到可移动硬盘上、刻录到
+    CD 中，或者备份到云端。养成每次都备份文件的习惯——而不仅仅是在安装新操作系统时备份。
+
+
+    目前有多个版本的 Linux 可供选择。最流行的（最适合初学者的）是 Ubuntu。这个版本的 Linux 易于使用、易理解且非常灵活。它可以运行良好，并以一种非常温和的方式带你进入
+    Linux 世界作为一个开始，我们不需要安装这个操作系统；我们可以从 CD 运行它，只有当我们确定想要它时才进行安装。你将从 CD 运行整个 Linux 操作系统，你的电脑不会发生任何更改。然而，这样做的一个缺点是操作系统会比安装在硬盘上慢得多。这可能会让你对
+    Linux 操作系统的速度产生错误的印象。事实恰相反：Linux 比 Windows 快。事实上，如果你因为任何原因遇到了 Windows 操作系统的速度问题，现在可能是尝试
+    Linux 的好时候。
+
+
+    ### Live CD 方法
+
+
+    如果你采用 Live CD 方法，只需插入 CD 并重启电脑。当电脑启动并显示制造商标志时，你需要按下某个键告诉它从 CD 启动。此键因不同的制造商而异，通常是
+    `F2`、`F12` 或 `DEL`。如果你不确定是哪一个，快速按下这几个键即可。其中一个将起作用并显示启动菜单。选择你的 CD 驱动器所在条目。会出现一个带有
+    Linux 标志的菜单。选择显示“Ubuntu with Gnome”的选项。这将加载 Linux 操作系统并引导你进入桌面环境。这是你选择要做什么的主界面。还有命令行，我们稍后会介绍。
+
+
+    如果你从未用过 Linux，你会发现它与其他操作系统不同。然而，在使用桌面界面方面，其概念是相同的。鼠标的工作方式相同——左键选择选项，右键调出菜单，双击打开选项，以此此类推。拖动项目的操作也是一样的。
+
+
+    ### 默认程序
+
+
+    Linux 操作系统默认安装了许多程序。你安装操作系统后就可以立即工作，与 Windows 不同，Windows 需要你在处理即使是基本工作之前之前先安装其他程序。你在这里发现的一些程序会让你觉得很熟悉，因为它们可以在不同的平台上运行，而另一些则是专门为
+    Linux 操作系统设计的。这些默认程序包括 `Firefox`、`LibreOffice`、`Ubuntu One`、`Thunderbird`、`Movie
+    Player`、`Empathy`、`Banshee` 和 `Shotwell` 等。这些程序也是开源的，并执行不同的基本功能，如浏览网页、文字处理、照片管理、备份等，你将在探索它们时会了解到。在用户菜单中，启动系统设置对话框来个性化设置，如壁纸、键盘布局等。
+
+
+    在此时，你应该玩玩这个操作系统和不同的程序来自己学习，因为在一个指南中不可能涵盖所有的细微细节。不要担心破坏任何东西，因为 Linux 基本上是一个无风险的环境。此外，记住我们是从
+    CD 启动的，对硬盘没有进行永久更改。你还应该测试你的硬件以确保一切正常。此时你不需要测试显卡，因为它已经工作正常了。你可能需要测试可能使用的无线网卡。
+
+
+    ### 安装
+
+
+    到这里，你对 Linux 操作系统有了初步了解，看到了它是如何工作的（尽管只是小范围内），测试了各种程序，甚至进行了个性化设置。是时候深入学习了。此时，我建议我们将操作系统安装在硬盘上以便良好体验。我希望你已经做了备份，因为现在我们正在对硬盘进行更改。此时的安装过程非常简单。你进入
+    live CD 的桌面，然后双击安装。这将引导你进入安装界面，在安装过程中你会遇到一些直观的问题。我只会强调你需要小心的地方。
+
+
+    在第三个安装界面上，你会得到关于如何安装操作系统的选项。选项包括与现有操作系统一起安装、替换现有操作系统或由你自定义。这是一个非常重要的阶段。对于初学者以及那些希望在某些时刻回退到现有操作系统的人来说，选择第一个选项。这将引导你对包含现有操作系统的驱动进行分区，就像我们把硬盘划分为不同的分区一样。此选项将使两个操作系统对你可用。你将在启动阶段选择使用哪一个。这是此时的最佳选择。
+
+
+    '
+- fmt: '
+
+    Another installation screen to pay particular attention to is the security screen
+    towards the end. This will be asking for the computer name, username, and password.
+    Choose these carefully, especially the password, as it provides security to your
+    computer. The screen will also provide an option to encrypt the home directory.
+    This provides additional security in case somebody accesses it.
+
+
+    You can now finish the installation and reboot your computer. Remember to choose
+    the Ubuntu OS when the computer asks you which OS to boot from.
+
+
+    # Chapter 3: Importing Your Data
+
+
+    Your operating system is ready to use. However, you need to import your data from
+    the other partition. To do so, you will need to launch the activities overview
+    from your desktop. Select the filing cabinet icon at the bottom to launch `Nautilus`.
+    This is the file manager for Ubuntu OS. You need to navigate through the file
+    manager. On the left of the window, you will find a panel with bookmarked locations
+    such as `Home` and `Downloads`. Above these will be an entry that will read something
+    like `250 GB file system`. (This will actually depend on the size of your partition.)
+
+
+    ![http://www.securitronlinux.com/wp-content/uploads/2012/03/nautilus.png](images/00001.jpeg)
+
+
+    This is the partition where your other operating system and files are located.
+    You will then double-click this entry to open and access all your files and folders.
+    For easy access with your new OS, you might need to copy these files to the Ubuntu
+    partition. You can do so by copying and pasting the normal way we do on other
+    operating systems, or by dragging and dropping. It will be better if you store
+    these files and folders in the appropriate location within Ubuntu such that documents
+    go to the `Document` section, and music and pictures do the same for their respective
+    sections. You might want to place them in the home folder for quicker access.
+    It will depend on your preferences. You can rearrange these folders at any other
+    time you wish.
+
+
+    A quick note here: If you work on these files a lot, it will be good if you choose
+    to stick to one OS, rather than switch between the two installed OS. If you switch
+    around, these files will mostly be out of sync. Alternatively, you could choose
+    to work on these files while they are still in the Windows partition. This will
+    be a little hectic for you since each time you require a file, you will go through
+    the file manager to access it. However, issues of sync will not arise.
+
+
+    ## Importing your mail
+
+
+    Emails are an important part of our daily activities. Virtually all of our online
+    communication is through emails. While migrating to Windows to Linux, you will
+    need to move with your email as well. You need to move your email profile in its
+    entirety for a smooth transition. There are different email clients that you might
+    be using; some are cross-platform, while others operate on just one platform.
+    `Outlook` and `Express` are Windows specific, but do not worry; even these can
+    be moved to another Linux-based email client smoothly. You will need to import
+    the data from the Windows specific email client to a cross-platform client on
+    Windows, and then copy this over to your Linux OS. `Thunderbird` is a very popular
+    email client on Linux and I suggest we use it for this purpose. You will have
+    to install `Thunderbird` on your Windows to import `Outlook` settings into it.
+    Once you do this, it will be easy to import now from `Thunderbird` on Windows
+    to `Thunderbird` on Linux. All of your emails will be as intact as they can be;
+    nothing will be lost at all. Let us look at how to do this. Even if you are just
+    experimenting with Linux, it will be fun to know how to do this.
+
+
+    To import emails from `Outlook` or any other email client to `Thunderbird` on
+    Windows, you need to install `Thunderbird` and then launch it. When it asks you
+    whether to make it your default email application, say no. Go to `Tools` and `Import`.
+    Select `Mail` and click `Next`. Note that the email client you are importing from
+    must be your default mail.
+
+
+    ![1e78f7f724ed9295cabef9d653f02e6b-1280168514-828-2.png](images/00002.jpeg)
+
+
+    In the next window, chose the email client you are importing from, either `Outlook`
+    or `Express`, and then click `Finish`. This will have imported your mail to `Thunderbird`.
+
+
+    ## Importing Thunderbird from Windows to Linux
+
+
+    We can now go ahead and import these settings and data from `Thunderbird` on Windows
+    to `Thunderbird` on Linux. If you have been using `Thunderbird`, then you start
+    from this point.
+
+
+    Go to `Thunderbird`. On `File`, click `Compact Folders`. This move is essential
+    but not a must; it helps in cleaning up your mail folders so that when you migrate,
+    you do not have issues with incorrect email counts.
+
+
+    The next step is to locate the profile folder on Windows. It is easiest located
+    using the command prompt.
+
+
+    ```
+
+    cd %APPDATA%\\Thunderbird
+
+    ```
+
+
+    Once you have found the profile folder `Thunderbird`, go to `Profiles`. While
+    here, search for a folder which will be randomly named but will end with `.default`.
+    Copy this folder: `Thunderbird>Profiles>xxxx.default` (you can copy this folder
+    in a partition that you can access easily in your Linux OS or copy it to a removable
+    drive.)
+
+
+    Move over to Linux now. `Thunderbird` will be a default program in Ubuntu. Go
+    to the home folder on Linux and choose `View > Show Hidden Files`. You will find
+    a folder named `.mozilla-thunderbird`. Open this folder and paste the copied profile
+    folder from Windows.
+
+
+    The last step you need to take to get your mail up and running in Linux. Inside
+    `Thunderbird`, you need to make a file called `profiles.ini`. Do a right-click
+    and create a new text file in the folder, and name it `profiles.ini`. Open up
+    this new file in a text editor, and paste in the following:
+
+
+    ```
+
+    [General]
+
+    StartWithLastProfile=1
+
+
+    [Profile0]
+
+    Name=default
+
+    IsRelative=1
+
+    Path=xxxxxxxx.default
+
+    ```
+
+
+    Replace `xxxxxxxx` with the real name of profile folder you pasted. Save the file
+    and quit, and now launch `Thunderbird`. Your email should load up as if nothing
+    has happened, and all your archives should be up and rolling.
+
+
+    This is a hectic process for a beginner in Linux, but it will help you understand
+    the basic working of the Ubuntu OS. A simpler way to do this would be using an
+    IMAP server. IMAP mail servers do not store your emails on your hard drive, but
+    rather on a server, so all you need is to configure your mail client with IMAP
+    server. IMAP mail servers are compatible with multiple email clients across different
+    platforms.
+
+
+    ## Synchronizing your browser
+
+
+    For a seamless browsing experience, you need to sync your browser so that you
+    can just continue where you left off on the new platform. Today, this is easy,
+    as all major browsers are on both Windows and Linux systems. You need to ensure
+    that you sync your data on your current browser, and when you launch it on Ubuntu,
+    all your data will be available including bookmarks, cookies, history, app, extensions,
+    and passwords. If you are using `Chrome`, you need to sign in using your `Gmail`
+    account and then go to `Menu`, click `Settings`, then `Advanced Settings` and
+    sync the information you want to migrate. Note that this information will still
+    be available in Windows and anything else you do on Linux will automatically sync,
+    so no matter the OS you choose to use, your browsing experience will be seamless.
+    `Chrome`, `Opera`, `Mini`, and `Mozilla` will be found in the Ubuntu repositories
+    ready to be downloaded.
+
+
+    Installed programs
+
+    '
+  raw: "Another installation screen to pay particular attention to is the security\
+    \ screen towards the end. This will be asking for the computer name, username,\
+    \ and password. Choose these carefully, especially the password, as it provides\
+    \ security to your computer. The screen will also provide an option to encrypt\
+    \ the home directory. This provides additional security in case somebody accesses\
+    \ it.\n\nYou can now finish the installation and reboot your computer. Remember\
+    \ to choose the Ubuntu OS when the computer asks you which OS to boot from.\n\n\
+    # \n\nChapter 3:\n\n# Importing Your Data\n\nYour operating system is ready to\
+    \ use. However, you need to import your data from the other partition. To do so,\
+    \ you will need to launch the activities overview from your desktop. Select the\
+    \ filing cabinet icon at the bottom to launch Nautilus. This is the file manager\
+    \ for Ubuntu OS. You need to navigate through the file manager. On the left of\
+    \ the window, you will find a panel with bookmarked locations such as Home and\
+    \ Downloads. Above these will be an entry that will read something like 250 GB\
+    \ file system. (This will actually depend on the size of your partition.)\n\n\
+    ![http://www.securitronlinux.com/wp-content/uploads/2012/03/nautilus.png](images/00001.jpeg)\n\
+    \nThis is the partition where your other operating system and files are located.\
+    \ You will then double-click this entry to open and access all your files and\
+    \ folders. For easy access with your new OS, you might need to copy these files\
+    \ to the Ubuntu partition. You can do so by copying and pasting the normal way\
+    \ we do on other operating systems, or by dragging and dropping. It will be better\
+    \ if you store these files and folders in the appropriate location within Ubuntu\
+    \ such that documents go to the Document section, and music and pictures do the\
+    \ same for their respective sections. You might want to place them in the home\
+    \ folder for quicker access. It will depend on your preferences. You can rearrange\
+    \ these folders at any other time you wish.\n\nA quick note here: If you work\
+    \ on these files a lot, it will be good if you choose to stick to one OS, rather\
+    \ than switch between the two installed OS. If you switch around, these files\
+    \ will mostly be out of sync. Alternatively, you could choose to work on these\
+    \ files while they are still in the Windows partition. This will be a little hectic\
+    \ for you since each time you require a file, you will go through the file manager\
+    \ to access it. However, issues of sync will not arise.\n\nImporting your mail\n\
+    \nEmails are an important part of our daily activities. Virtually all of our online\
+    \ communication is through emails. While migrating to Windows to Linux, you will\
+    \ need to move with your email as well. You need to move your email profile in\
+    \ its entirety for a smooth transition. There are different email clients that\
+    \ you might be using; some are cross-platform, while others operate on just one\
+    \ platform. Outlook and Express are Windows specific, but do not worry; even these\
+    \ can be moved to another Linux-based email client smoothly. You will need to\
+    \ import the data from the Windows specific email client to a cross-platform client\
+    \ on Windows, and then copy this over to your Linux OS. Thunderbird is a very\
+    \ popular email client on Linux and I suggest we use it for this purpose. You\
+    \ will have to install Thunderbird on your Windows to import Outlook settings\
+    \ into it. Once you do this, it will be easy to import now from Thunderbird on\
+    \ Windows to Thunderbird on Linux. All of your emails will be as intact as they\
+    \ can be; nothing will be lost at all. Let us look at how to do this. Even if\
+    \ you are just experimenting with Linux, it will be fun to know how to do this.\n\
+    \nTo import emails from Outlook or any other email client to Thunderbird on Windows,\
+    \ you need to install Thunderbird and then launch it. When it asks you whether\
+    \ to make it your default email application, say no. Go to Tools and Import. Select\
+    \ Mail and click Next. Note that the email client you are importing from must\
+    \ be your default mail.\n\n![1e78f7f724ed9295cabef9d653f02e6b-1280168514-828-2.png](images/00002.jpeg)\n\
+    \nIn the next window, chose the email client you are importing from, either Outlook\
+    \ or Express, and then click Finish. This will have imported your mail to Thunderbird.\n\
+    \nImporting Thunderbird from Windows to Linux\n\nWe can now go ahead and import\
+    \ these settings and data from Thunderbird on Windows to Thunderbird on Linux.\
+    \ If you have been using Thunderbird, then you start from this point.\n\nGo to\
+    \ Thunderbird. On File, click Compact Folders. This move is essential but not\
+    \ a must; it helps in cleaning up your mail folders so that when you migrate,\
+    \ you do not have issues with incorrect email counts.\n\nThe next step is to locate\
+    \ the profile folder on Windows. It is easiest located using the command prompt.\n\
+    \ncd %APPDATA%\\\\Thunderbird\n\nOnce you have found the profile folder Thunderbird,\
+    \ go to Profiles. While here, search for a folder which will be randomly named\
+    \ but will end with .default. Copy this folder: Thunderbird>Profiles>xxxx.default\
+    \ (you can copy this folder in a partition that you can access easily in your\
+    \ Linux OS or copy it to a removable drive.)\n\nMove over to Linux now. Thunderbird\
+    \ will be a default program in Ubuntu. Go to the home folder on Linux and choose\
+    \ View > Show Hidden Files. You will find a folder named .mozilla-thunderbird.\
+    \ Open this folder and paste the copied profile folder from Windows.\n\nThe last\
+    \ step you need to take to get your mail up and running in Linux. Inside Thunderbird,\
+    \ you need to make a file called profiles.ini. Do a right-click and create a new\
+    \ text file in the folder, and name it profiles.ini. Open up this new file in\
+    \ a text editor, and paste in the following:\n\n[General]\n\nStartWithLastProfile=1\n\
+    \n[Profile0]\n\nName=default\n\nIsRelative=1\n\nPath=xxxxxxxx.default\n\nReplace\
+    \ the xxxxxxxx with the real name of your profile folder that you pasted. Save\
+    \ the file and quit, and now launch Thunderbird. Your email should load up as\
+    \ if nothing has happened, and all your archives should be up and rolling.\n\n\
+    This is a hectic process for a beginner in Linux, but it will help you understand\
+    \ the basic working of the Ubuntu OS. A simpler way to do this would be using\
+    \ an IMAP server. IMAP mail servers do not store your emails on your hard drive,\
+    \ but rather on a server, so all you need is to configure your mail client with\
+    \ your IMAP server. IMAP mail servers are compatible with multiple email clients\
+    \ across different platforms. You will then log in to your new system and your\
+    \ email account will appear in your new system as it did in the old email client.\n\
+    \nSynchronizing your browser\n\nFor a seamless browsing experience, you need to\
+    \ sync your browser so that you can just continue where you left off on the new\
+    \ platform. Today, this is easy, as all major browsers are on both Windows and\
+    \ Linux systems. You need to ensure that you sync your data on your current browser,\
+    \ and when you launch it on Ubuntu, all your data will be available including\
+    \ bookmarks, cookies, history, app, extensions, and passwords. If you are using\
+    \ Chrome, you need to sign in using your Gmail account and then go to Menu, click\
+    \ Settings, then Advanced Settings and sync the information you want to migrate.\
+    \ Note that this information will still be available in Windows and anything else\
+    \ you do on Linux will automatically sync, so no matter the OS you choose to use,\
+    \ your browsing experience will be seamless. Chrome, Opera, Mini, and Mozilla\
+    \ will be found in the Ubuntu repositories ready to be downloaded.\n\nInstalled\
+    \ programs"
+  toc: []
+  trans: '
+
+    另一个需要特别注意的安装界面是最后的安全界面。它会要求你输入计算机名称、用户名和密码。请务仔细选择这些信息，尤其是密码，因为它为你的电脑提供了安全保护。屏幕还会提供一个加密主目录的选项。这在有人访问它时可以提供额外的安全保障。
+
+
+    你现在可以完成安装并重启电脑了。当电脑询问你要从哪个操作系统启动时，请记得选择 Ubuntu 系统。
+
+
+    # 第 3 章：导入你的数据
+
+
+    你的操作系统已准备就绪可以使用。然而，你需要从另一个分区导入数据。要做到这一点，你需要从桌面上启动活动概览（activities overview）。点击底部的文件柜图标启动
+    `Nautilus`。这是 Ubuntu 系统的文件管理器。你需要在文件管理器中导航。在窗口左侧，你会发现一个包含书签位置的面板，如 `Home`（主目录）和
+    `Downloads`（下载）。在这些位置上方会有一个显示类似于 `250 GB file system` 的条目。（这实际上取决于你分区的大小。）
+
+
+    ![`www.securitronlinux.com/wp-content/uploads/2012/03/nautilus.png`](img/00001.jpeg)
+
+
+    这是你其他操作系统和文件所在的分区。然后你可以双击此条目来打开并访问所有的文件和文件夹。为了方便在新操作系统系统中访问，你可能需要将这些文件复制到 Ubuntu
+    分区。你可以像在其他操作系统上那样通过普通的复制和粘贴，或者通过拖放来实现。将这些文件和文件夹存储在 Ubuntu 内部适当的位置会更好，例如将文档放在 `Document`
+    部分，音乐和图片也放在它们各自的区域。你可能想将它们放在主文件夹中以便更快速访问。这取决于你的喜好。你可以在任何其他时间重新调整这些文件夹。
+
+
+    这里简单说明一点：如果你经常处理这些文件，那么坚持使用一个操作系统会比在两个安装的操作系统之间切换要好。如果你来回切换，这些文件大部分将处于不同步状态。或者，你也可以在这些文件仍在
+    Windows 分区时处理它们。这对比你来说会有点忙碌，因为你每次需要文件时都要通过文件管理器来访问。然而，这样就不会出现同步问题。
+
+
+    ## 导入你的邮件
+
+
+    电子邮件是我们日常活动的重要部分。我们几乎所有的在线通信都是通过电子邮件完成的。从 Windows 迁移到 Linux 时，也需要带上你的邮件。你需要完整移动移动邮件配置以实现平滑过渡。你可能在使用不同的邮件客户端；有些是跨平台的，而另一些只运行在一个平台上。`Outlook`
+    和 `Express` 是 Windows 特有的，但不用担心；即使这些也可以顺利地迁移到另一个基于 Linux 的邮件客户端。你需要将数据从 Windows
+    特有的邮件客户端导入 Windows 上的跨平台客户端，然后将其复制到你的 Linux 操作系统。`Thunderbird` 是 Linux 上非常流行的邮件客户端，我建议我们用它来实现此目的。你需要在
+    Windows 上安装 `Thunderbird`，以便将 `Outlook` 设置导入其中。一旦完成此操作，现在就可以轻松从 Windows 上的 `Thunderbird`
+    导入到 Linux 上的 `Thunderbird`。你所有的邮件将尽可能保持完整；完全不会丢失任何内容。让我们来看看如何操作。即使你只是在尝试 Linux，知道如何这样做也是很有趣的。
+
+
+    要将邮件从 `Outlook` 或任何其他邮件客户端导入 Windows 上的 `Thunderbird`，你需要安装 `Thunderbird` 然后启动它。当它询问你是否将其设置为默认电子邮件应用程序时，选择“否”。进入
+    `Tools`（工具）并点击 `Import`（导入）。选择 `Mail`（邮件）并点击 `Next`（下一步）。注意，你导入的邮件客户端必须是你的默认邮件。
+
+
+    ![1e78f7f724ed9295cabef9d653f02e6b-1280168514-828-2.png](img/00002.jpeg)
+
+
+    在下一个窗口中，选择你要导入的邮件客户端，即 `Outlook` 或 `Express`，然后点击 `Finish`（完成）。这将你的邮件导入到 `Thunderbird`。
+
+
+    ## 将 Thunderbird 从 Windows 导入 Linux
+
+
+    我们现在可以将 Windows 上 `Thunderbird` 的设置和数据导入到 Linux  `Thunderbird`。如果你一直在使用 `Thunderbird`，那么从这一步开始。
+
+
+    进入 `Thunderbird`。在 `File`（文件）中，点击 `Compact Folders`（压缩文件夹）。这一步是必要的但不是必须的；它有助于清理你的邮件文件夹，这样当你迁移时就不会出现邮件计数不正确的问题。
+
+
+    下一步是在 Windows 上找到配置文件夹。使用命令提示符是最容易的。
+
+
+    ```
+
+    cd %APPDATA%\\Thunderbird
+
+    ```
+
+
+    一旦你找到了 `Thunderbird` 配置文件夹，进入 `Profiles`（配置）。在这里，搜索一个随机命名但以 `.default` 结尾的文件夹。拷贝此文件夹：`Thunderbird>Profiles>xxxx.default`（你可以将此文件夹复制到
+    Linux 系统中可以轻松访问的分区，或将其复制到移动驱动器上）。
+
+
+    现在移动到 Linux。`Thunderbird` 将是 Ubuntu 中的默认程序。进入 Linux 的主文件夹并选择 `View > Show Hidden
+    Files`（查看 > 显示隐藏文件）。你会发现一个名为 `.mozilla-thunderbird` 的文件夹。打开此文件夹并粘贴从 Windows 复制的配置文件夹。
+
+
+    为了让邮件在 Linux 中运行，你需要采取的最后一步。在 `Thunderbird` 内部，你需要创建一个名为 `profiles.ini` 的文件。在文件夹中右键创建一个新的文本文件并命名为
+    `profiles.ini`。用文本编辑器打开此新文件，粘贴以下内容：
+
+
+    ```
+
+    [General]
+
+    StartWithLastProfile=1
+
+
+    [Profile0]
+
+    Name=default
+
+    IsRelative=1
+
+    Path=xxxxxxxx.default
+
+    ```
+
+
+    将 `xxxxxxxx` 替换为你粘贴的文件夹的实际名称。保存文件并退出，现在启动 `Thunderbird`。你的邮件将像什么都没发生过一样加载，所有的存档都将正常运行。
+
+
+    对于 Linux 初学者来说，这是一个复杂的过程，但它有助于你理解 Ubuntu 系统的基本原理。实现此点的更简单方法是使用 IMAP 服务器。IMAP 邮件服务器不将邮件存储在硬盘上，而是存储在服务器上，因此你只需要为邮件客户端配置
+    IMAP 服务器。IMAP 邮件服务器兼容跨平台的邮件客户端。
+
+
+    ## 同步你的浏览器
+
+
+    已安装的程序
+
+
+    '
+- fmt: '
+
+    Most of the programs you have installed on Windows will be important to you. You
+    probably use them regularly and want them on the Linux OS still. The best thing
+    here is to go to your list of installed programs one by one make sure you replicate
+    them on Linux. You can do this by checking if the same program is available for
+    Linux. Just like the browsers, many programs (except the Microsoft-based ones)
+    will be available for the Linux operating systems. Check on the program’s website
+    if this is the case. If you confirm there is a version for Linux, check it out
+    in the repository and install it. In case there is no version for Linux, check
+    for an equivalent program. For instance, for Microsoft Office, you could use Open
+    Office or LibreOffice, which are almost the same in terms of functionality. There
+    is another alternative, Wine, which is an open source software designed to run
+    applications designed for Windows on Linux. It is a Windows emulator. However,
+    use this only as a last resort, as it can slow down your computer. You can still
+    switch to the Windows OS if you have dual installation if the application is only
+    run on Windows and is essential for your work.
+
+
+    # Chapter 4: Installing and Updating Programs
+
+
+    Just like on Windows, you need to install new software as need arises and to update
+    existing software. On Linux, its way easier to do this than on all other operating
+    systems – Windows included. The difference is that you do not need to go to third
+    party sites to search for programs. For instance, when you need a certain program
+    on Windows, you will have to search for it online. When you get it, there is no
+    guarantee that it will be the real thing. In fact, viruses and malware have been
+    spread in this manner to unsuspecting users. In Linux, this is completely different.
+    There are package repositories where all programs are found. They store all the
+    software available for that specific distribution. These are thousands of programs.
+    When you require certain software not installed by default with your OS, you search
+    for it in the repository rather than on the Web. This greatly reduces the chance
+    of installing a harmful program, since all programs found in the repositories
+    have been verified through digital signatures from the original author.
+
+
+    On your Ubuntu OS, go to the software center through the overview mode.
+
+
+    ![http://lh5.ggpht.com/_1QSDkzYY2vc/S74ey_fnNpI/AAAAAAAAAy0/EiDC0JE4ivU/s2000/Ubuntu%20Software%20Center_011.png](images/00003.jpeg)
+
+
+    While here, you find some featured programs, and you can search for a program
+    by various categories. To get to know more about a program, click on it to read
+    the description, version details, and reviews. If you want to install it, click
+    on the button that says Install. If you have already installed the program, you
+    will see it marked with a tick. This will have a remove button rather than an
+    install button.
+
+
+    When you want to update installed programs, you launch the update manager from
+    the overview mode.
+
+
+    ![http://i.stack.imgur.com/KXqwl.png](images/00004.jpeg) ![http://i.stack.imgur.com/Maenw.jpg](images/00005.jpeg)
+
+
+    Click on the check button to check for any updates to your applications. If you
+    find any, just install them. It is important to note that programs found in the
+    Linux repositories are open source, and you can just install them unlike Windows,
+    where you have to purchase some programs.
+
+
+    To understand the package concept in Linux and why it makes it easy to install
+    software, let me take you through how it works.
+
+
+    For a program to work, it will often need other resources other than the software
+    we install. For instance, you have seen when installing certain software that
+    many other files accompany it. These are used by the program to enable it to function
+    as intended. In Ubuntu, these files come as one file called a package. This is
+    everything the program needs, including special files called installation scripts
+    that copy the files to the exact location they should be. Some programs will use
+    the same files as others to function. These are called package dependencies. When
+    developers specify the package dependencies, it becomes easier for the users since
+    the package will be made smaller and you will not have to install the same dependences
+    once more. The package repository does this for you. For every program you install,
+    it will check on the dependencies and if they are already installed, you will
+    just have the program. This avoids duplication of files and programs, making the
+    OS lighter and faster.
+
+
+    # Chapter 5: Introduction to the Command Line
+
+
+    The command line is the interface that enables users to communicate directly with
+    the computer using words referred to as commands. Everything that you need to
+    do with a computer can be done on the command line. This is one of the great strengths
+    of Linux-based systems. Unlike using the Graphical User Interface which appears
+    easy to use, the command line offers more options to interact with the system
+    to accomplish what you want done. When using the GUI, you are limited to the design
+    of the interface and what the developer envisioned would be your needs. However,
+    at times, you need more functionality than this. Some functions can only be accessed
+    through the command line. For instance, performing repairs or achieving a function
+    through a combination of commands cannot be done in the GUI. Learning the command
+    line liberates you in a great way. The good thing with Linux-based systems is
+    that once you learn the command line in one of them, you can use any other because
+    the commands are the same.
+
+
+    The command line is one of the most feared aspects of Linux by beginners and people
+    who have not used Linux before. They imagine it as a hard thing to learn, only
+    reserved for the geeks. This is not the case; the command line is something very
+    easy to learn. Like anybody who uses it will tell you, you never learn all the
+    commands in one day – you learn day and day as you continue to use it. It becomes
+    second nature to you and a very exciting way to interact with your computer. You
+    learn how the computer works and you can control different aspects of it with
+    ease.
+
+
+    Another great strength of the command line interface is that it saves a lot of
+    resources that the GUI uses. If your machine is running slow, just close the GUI
+    and use the command line.
+
+
+    The command line is an all text display; there are no windows, images, or pointing
+    devices. It is not very common today for many common tasks, as these are done
+    through the GUI. However, the command line still maintains a lot of importance
+    not only to programmers and developers, but also to the average computer user.
+    The command line is often referred to as the shell. However, the shell is the
+    program that provides the command line. The thing with the command line is that
+    you only appreciate its power and usefulness once you start using it. You find
+    it easier to navigate through your computer and complete simple tasks.
+
+
+    ## Accessing the command line
+
+
+    To be able to use the command line, you have first to access it. Depending on
+    the Linux distribution you are using, accessing the command line will be slightly
+    different, but it is generally similar in all the distributions. You need to locate
+    the terminal window in the Graphical User Interface. It can appear in the system
+    tools, the toolbar, the desktop, or the menu line. To locate the terminal, which
+    will allow you to launch the command prompt, you need to look for a program called
+    `Xterm`, `terminal`, `console`, `Konsole`, or something similar to these depending
+    on your Linux distribution. This icon is usually shaped as a computer screen.
+    It will appear as an icon or a small image.
+
+
+    ![http://wiki.blender.org/uploads/b/b5/(Doc_26x_Debian_Ubuntu)_(Dash_Terminal_Ubuntu)_(GNV1210FN).png](images/00006.jpeg)
+
+    '
+  raw: "Most of the programs you have installed on Windows will be important to you.\
+    \ You probably use them regularly and want them on the Linux OS still. The best\
+    \ thing here is to go to your list of installed programs one by one make sure\
+    \ you replicate them on Linux. You can do this by checking if the same program\
+    \ is available for Linux. Just like the browsers, many programs (except the Microsoft-based\
+    \ ones) will be available for the Linux operating systems. Check onthe program’s\
+    \ website if this is the case. If you confirm there is a version for Linux, check\
+    \ it out in the repository and install it. In case there is no version for Linux,\
+    \ check for an equivalent program. For instance, for Microsoft Office, you could\
+    \ use Open Office or LibreOffice, which are almost the same in terms of functionality.\
+    \ There is another alternative, Wine, which is an open source software designed\
+    \ to run applications designed for Windows on Linux. It is a Windows emulator.\
+    \ However, use this only as a last resort, as it can slow down your computer.\
+    \ You can still switch to the Windows OS if you have dual installation if the\
+    \ application is only run on Windows and is essential for your work.\n\n# \n\n\
+    Chapter 4:\n\n# Installing and Updating Programs\n\nJust like on Windows, you\
+    \ need to install new software as need arises and to update existing software.\
+    \ On Linux, its way easier to do this than on all other operating systems – Windows\
+    \ included. The difference is that you do not need to go to third party sites\
+    \ to search for programs. For instance, when you need a certain program on Windows,\
+    \ you will have to search for it online. When you get it, there is no guarantee\
+    \ that it will be the real thing. In fact, viruses and malware have been spread\
+    \ in this manner to unsuspecting users. In Linux, this is completely different.\
+    \ There are package repositories where all programs are found. They store all\
+    \ the software available for that specific distribution. These are thousands of\
+    \ programs. When you require certain software not installed by default with your\
+    \ OS, you search for it in the repository rather than on the Web. This greatly\
+    \ reduces the chance of installing a harmful program, since all programs found\
+    \ in the repositories have been verified through digital signatures from the original\
+    \ author.\n\nOn your Ubuntu OS, go to the software center through the overview\
+    \ mode.\n\n![http://lh5.ggpht.com/_1QSDkzYY2vc/S74ey_fnNpI/AAAAAAAAAy0/EiDC0JE4ivU/s2000/Ubuntu%20Software%20Center_011.png](images/00003.jpeg)\n\
+    \nWhile here, you find some featured programs, and you can search for a program\
+    \ by various categories. To get to know more about a program, click on it to read\
+    \ the description, version details, and reviews. If you want to install it, click\
+    \ on the button that says Install. If you have already installed the program,\
+    \ you will see it marked with a tick. This will have a remove button rather than\
+    \ an install button.\n\nWhen you want to update installed programs, you launch\
+    \ the update manager from the overview mode.\n\n![http://i.stack.imgur.com/KXqwl.png](images/00004.jpeg)\
+    \ ![http://i.stack.imgur.com/Maenw.jpg](images/00005.jpeg)\n\nClick on the check\
+    \ button to check for any updates to your applications. If you find any, just\
+    \ install them. It is important to note that programs found in the Linux repositories\
+    \ are open source, and you can just install them unlike Windows, where you have\
+    \ to purchase some programs.\n\nTo understand the package concept in Linux and\
+    \ why it makes it easy to install software, let me take you through how it works.\n\
+    \nFor a program to work, it will often need other resources other than the software\
+    \ we install. For instance, you have seen when installing certain software that\
+    \ many other files accompany it. These are used by the program to enable it to\
+    \ function as intended. In Ubuntu, these files come as one file called a package.\
+    \ This is everything the program needs, including special files called installation\
+    \ scripts that copy the files to the exact location they should be. Some programs\
+    \ will use the same files as others to function. These are called package dependencies.\
+    \ When developers specify the package dependencies, it becomes easier for the\
+    \ users since the package will be made smaller and you will not have to install\
+    \ the same dependences once more. The package repository does this for you. For\
+    \ every program you install, it will check on the dependencies and if they are\
+    \ already installed, you will just have the program. This avoids duplication of\
+    \ files and programs, making the OS lighter and faster.\n\n# \n\nChapter 5:\n\n\
+    # Introduction to the Command Line\n\nThe command line is the interface that enables\
+    \ users to communicate directly with the computer using words referred to as commands.\
+    \ Everything that you need to do with a computer can be done on the command line.\
+    \ This is one of the great strengths of Linux-based systems. Unlike using the\
+    \ Graphical User Interface which appears easy to use, the command line offers\
+    \ more options to interact with the system to accomplish what you want done. When\
+    \ using the GUI, you are limited to the design of the interface and what the developer\
+    \ envisioned would be your needs. However, at times, you need more functionality\
+    \ than this. Some functions can only be accessed through the command line. For\
+    \ instance, performing repairs or achieving a function through a combination of\
+    \ commands cannot be done in the GUI. Learning the command line liberates you\
+    \ in a great way. The good thing with Linux-based systems is that once you learn\
+    \ the command line in one of them, you can use any other because the commands\
+    \ are the same.\n\nThe command line is one of the most feared aspects of Linux\
+    \ by beginners and people who have not used Linux before. They imagine it as a\
+    \ hard thing to learn, only reserved for the geeks. This is not the case; the\
+    \ command line is something very easy to learn. Like anybody who uses it will\
+    \ tell you, you never learn all the commands in one day – you learn day and day\
+    \ as you continue to use it. It becomes second nature to you and a very exciting\
+    \ way to interact with your computer. You learn how the computer works and you\
+    \ can control different aspects of it with ease.\n\nAnother great strength of\
+    \ the command line interface is that it saves a lot of resources that the GUI\
+    \ uses. If your machine is running slow, just close the GUI and use the command\
+    \ line.\n\nThe command line is an all text display; there are no windows, images,\
+    \ or pointing devices. It is not very common today for many common tasks, as these\
+    \ are done through the GUI. However, the command line still maintains a lot of\
+    \ importance not only to programmers and developers, but also to the average computer\
+    \ user. The command line is often referred to as the shell. However, the shell\
+    \ is the program that provides the command line. The thing with the command line\
+    \ is that you only appreciate its power and usefulness once you start using it.\
+    \ You find it easier to navigate through your computer and complete simple tasks.\n\
+    \nAccessing the command line\n\nTo be able to use the command line, you have first\
+    \ to access it. Depending on the Linux distribution you are using, accessing the\
+    \ command line will be slightly different, but it is generally similar in all\
+    \ the distributions. You need to locate the terminal window in the Graphical User\
+    \ Interface. It can appear in the system tools, the toolbar, the desktop, or the\
+    \ menu line. To locate the terminal, which will allow you to launch the command\
+    \ prompt, you need to look for a program called Xterm, terminal, console, Konsole,\
+    \ or something similar to these depending on your Linux distribution. This icon\
+    \ is usually shaped as a computer screen. It will appear as an icon or a small\
+    \ image.\n\n![http://wiki.blender.org/uploads/b/b5/(Doc_26x_Debian_Ubuntu)_(Dash_Terminal_Ubuntu)_(GNV1210FN).png](images/00006.jpeg)"
+  toc: []
+  trans: '
+
+
+    你在 Windows 上安装的大多数程序对你来说都是非常的。你可能经常使用它们，并希望在 Linux 操作系统中仍然保留它们。这里最好的办法是逐一查看你的已程序列表，确保在
+    Linux 上也复制了它们。你可以通过检查同一个程序是否有 Linux 版本来实现这一点。就像浏览器一样，许多程序（基于微软的软件除外）都有 Linux 操作系统版本。在程序的网站上确认是否如此。如果你确认有
+    Linux 版本，请在存储库中检查并安装它。如果没有 Linux 版本，请查找是否有替代程序。例如，对于 Microsoft Office，你可以使用 Open
+    Office 或 LibreOffice，它们在功能上几乎相同。另一个备选方案是 Wine，它是一个旨在在 Linux 上运行为 Windows 设计的应用程序的开源软件。它是一个
+    Windows 模拟器。然而，请仅将其作为最后的手段，因为可能会减慢电脑运行速度。如果某个应用程序只能在 Windows 上运行且对你的工作至关重要，由于你安装了双系统，你仍然可以切换
+    Windows 系统。
+
+
+    # 第 4 章：安装和更新程序
+
+
+    就像在 Windows 上一样，你需要根据需要安装新软件并更新现有软件。在 Linux 上，这样做比在所有其他操作系统上（包括 Windows）都要容易得多。区别在于，你不需要去第三方网站搜索程序。例如，当你在
+    Windows 上需要某个程序时，你必须在网上搜索它。当你获取它时，并不能保证它是正品。事实上，病毒和恶意软件就是通过这种方式传播给毫无防备的用户。在 Linux
+    中，情况完全不同。有包含所有程序的软件包存储库（package repositories）。它们存储了该特定发行版的所有可用软件。这里有数千个程序。当你需要操作系统未默认安装的某些软件时，你应该在存储库中搜索，而不是在网上。这大大减少了安装有害程序的概率，因为存储库中找到的所有程序都通过了原始作者的数字签名验证。
+
+
+    在你的 Ubuntu 系统上，通过概览模式进入软件中心。
+
+
+    ![`lh5.ggpht.com/_1QSDkzYY2vc/S74ey_fnNpI/AAAAAAAAAy0/EiDC0JE4ivU/s2000/Ubuntu%20Software%20Center_011.png`](img/00003.jpeg)
+
+
+    在这里，你可以找到一些特色程序，并按各种类别搜索程序。要进一步了解某个程序，点击它以阅读描述、版本详情和评论。如果你想安装它，点击带有“Install”（安装）的按钮。如果你已经安装了该程序，你会看到它被标记了一个勾号。此时将显示“remove”（移除）按钮而不是“install”按钮。
+
+
+    当你想要更新已安装的程序时，从概览模式启动更新管理器。
+
+
+    ![`i.stack.imgur.com/KXqwl.png`](img/00004.jpeg) ![`i.stack.imgur.com/Maenw.jpg`](img/00005.jpeg)
+
+
+    点击检查按钮检查应用程序是否有任何更新。如果你发现了更新，直接安装即可。需要注意的是，Linux 存储库中的程序通常是开源的，你可以直接安装它们，不像 Windows
+    那样必须购买某些程序。
+
+
+    为了理解 Linux 中的包（package）概念以及为什么它让安装软件变得简单，让我带你了解它的工作原理。
+
+
+    为了让一个程序运行，它通常需要我们安装的软件之外的其他资源。例如，你在安装某些软件时会看到有许多其他文件伴随它。这些文件被程序使用，使其能够按预期方式运行。在
+    Ubuntu 中，这些文件以一个名为“包”的文件形式出现。这是程序所需的所有内容，包括名为“安装脚本”的特殊文件，这些脚本将文件复制到它们应该所在的精确位置。某些程序使用与其他程序相同的文件来运行，这些被称为“包依赖”（package
+    dependencies）。当开发者指定了包依赖时，对用户来说变得更容易了，因为包的体积会更小，而且你不需要再次安装相同的依赖项。软件包存储库会为你完成这一点。对于你安装的每个程序，它都会检查依赖项，如果依赖项已经安装，你只需要获取程序本身。这避免了文件和程序的重复，使操作系统更轻量、运行更快。
+
+
+    # 第 5 章：命令行简介
+
+
+    命令行是使用户通过被称为“命令”的单词直接与计算机通信的接口。你对计算机需要的任何事情都可以在命令行完成。这是基于 Linux 的系统的强大之处之一。与看起来易用的图形用户界面（GUI）不同，命令行提供了更多与系统交互的选项，以实现你的目标。当使用
+    GUI 时，你受限于界面设计以及开发者设想的需要。然而，有时你需要比这更多的功能。某些功能只能通过命令行访问。例如，通过组合命令执行修复或实现某些功能在 GUI
+    中是无法完成的。学习命令行在很大程度上解放了你。基于 Linux 的系统的优点是，一旦你学会了其中一个系统的命令行，你就可以使用其他系统，因为命令是相同的。
+
+
+    命令行是初学者和以前未使用过 Linux 的人最恐惧的方面之一。他们想象它是一个很难学习的东西，只为极客准备的。事实并非如此；命令行是非常容易学习的。正如任何使用它的人都会告诉你，你永远不会在一天内学会所有命令——你会在使用的过程中不断学习。它会变成你的本能，并成为与计算机交互的一种令人兴奋的方式。你将了解计算机是如何工作的，并能轻松控制它。
+
+
+    命令行界面的另一个优势是它可以节省大量 GUI 使用的资源。如果你的机器运行缓慢，只需关闭 GUI 使用命令行。
+
+
+    命令行是全文本显示；没有窗口、图像或指针设备。它现在对于许多常见任务并不常见，因为这些任务通过 GUI 完成。然而，命令行对于程序员、开发者，甚至是普通电脑用户来说仍然具有重要性。命令行通常被称为“壳”（shell）。然而，壳是提供命令行的程序。命令行的特点在于，只有当你开始使用它时，你才会发现它的力量和用途。你会发现浏览计算机和完成简单任务变得更容易。
+
+
+    ## 访问命令行
+
+
+    为了能够使用命令行，你首先必须访问它。取决于你使用的 Linux 发行版，访问命令行可能会略有不同，但通常是类似的。你需要在图形用户界面中找到终端窗口。它可能出现在系统工具、工具栏、桌面或菜单栏中。为了找到启动命令行提示符的终端，你需要寻找名为
+    `Xterm`、`terminal`、`console`、`Konsole` 或类似的程序，具体取决于你的 Linux 发行版。这个图标通常形状像一个计算机屏幕。
+
+
+    ![`wiki.blender.org/uploads/b/b5/(Doc_26x_Debian_Ubuntu)_(Dash_Terminal_Ubuntu)_(GNV1210FN).png`](img/00006.jpeg)
+
+
+    '
+- fmt: '
+
+    You can open the command line by switching to a console. This is a display mode
+    of the entire screen in text only without using the GUI or the mouse. Press the
+    `CRTL`, `ALT`, and `F1` keys while in GUI – the GUI disappears and the console
+    appears. The screen will become black save for a few characters which are part
+    of the command line. To get back to the GUI while at this screen, just press the
+    `CTRL`, `ALT`, and `F8` keys simultaneously.
+
+
+    When you open the command prompt, it will list your computer name and your username.
+    Since Linux is a multi-user OS, meaning more than one user can access and use
+    the system, this is very important. Each user will have access to a home directory
+    where they can store their files. When starting on the command prompt, you need
+    to make sure which directory you are in.
+
+
+    The username will be followed by some punctuation marks, either `$` or `#`, then
+    a blinking box or a cursor. `$` means that you are logged in as a regular user,
+    while `#` means you are logged in as `root`. Always make sure you are logged in
+    as a regular user unless you would like to perform any administrative tasks inside
+    root directories. If you log in as a `root`, all directories and files you work
+    in will change permissions to make the `root` as the user.
+
+
+    # Chapter 6: Running Commands
+
+
+    Commands are written in a specific way. You should note that the command line
+    is case sensitive, unlike in other command prompts you may have used. The command
+    should be typed with no spaces in the name. After the command, you can put a space
+    then add a dash and another name. This is usually called an option. It limits
+    or changes the way the command is executed. Most of the words used in the command
+    line are shorthand words that are abbreviated from the longer word. For instance,
+    we use `mv` for move and `lt` for list. You will learn more of these words along
+    the way and as you practice them on your computer.
+
+
+    ## Basic commands
+
+
+    Now let us look at basic commands regularly used on the Linux systems. These are
+    not the only commands, but you will use them often. Do not struggle to memorize
+    these commands; they will soon stick in your head the more you use them. We shall
+    also be looking at how to get the command to a certain function you need.
+
+
+    ### The `pwd` command
+
+
+    This stands for the present working directory. It helps you identify which directory
+    you are in at any particular time. When you open the terminal, you get to the
+    home directory, but this changes as you switch around directories. It shows the
+    name and complete location of the current directory you are working on. Just to
+    avoid confusion, “directory” will mostly refer to the folder we normally use in
+    the Windows operating system. You will need to type `pwd` in the prompt and press
+    enter.
+
+
+    ![http://pad3.whstatic.com/images/thumb/5/5a/Get-Familiar-With-Ubuntu-Commands-Step-1.jpg/670px-Get-Familiar-With-Ubuntu-Commands-Step-1.jpg](images/00007.jpeg)
+
+
+    You will not need to use this command when you first open your terminal, as you
+    will already be in the home directory. However, there will come a time when you
+    will need to know where you are, since the location and name of the present directory
+    are not always obvious.
+
+
+    ### The `ls` command
+
+
+    This is a common command. You use it to list the contents of a directory. When
+    you type `ls` alone, you will be presented with a list of names of all the objects
+    in that directory. This will include links, files, directories (folders within
+    this folder), and images.
+
+
+    To enable easier identification, you will notice that these objects will be color
+    coded so that you can tell the type of object at a glance. Some of the basic colors
+    that you should know are: Blue (Directories), White (Text files), Red (Archives),
+    Cyan (Links), Green (Executables), and Pink (Images).
+
+
+    There will be no additional information provided for these objects, just the listing.
+    If you just wanted to know the list of objects, this will be enough. However,
+    you might require more information on any of these objects. That is where we use
+    the command `ls` and an option besides it. This option will mostly be a letter,
+    but also can be a word. It will follow the command and a space. It specifies the
+    additional information you require. You can also input multiple options on the
+    same line to get even more information about an object. You will not require inputting
+    a space between these options. Let us now look at examples.
+
+
+    If you want to know all the objects in a directory, including hidden files, you
+    will use the option `-a`. These hidden files or directories cannot be seen in
+    the command line or even when using the GUI unless you specify this. Type the
+    command and the option in this sequence: `ls -a`. This will display all the objects
+    in that directory, including the hidden files.
+
+
+    Another option is `-l`. This provides a long listing of the object in the directory.
+    It provides more information such as type of object (is it an image, link, file,
+    etc.), permissions (who can execute, read, or write this object), and owner (who
+    created this object and the date and time of creation). So, to write this command
+    together with this option and the all option (if you want to get information about
+    all the objects), you input this command line: `ls -al`.
+
+
+    ![](images/00008.jpeg)
+
+
+    ![](images/00009.jpeg)
+
+
+    The first character represents the file type. For example, in the line shown above,
+    `d` indicates this is a directory. Other values can be: `-` for normal file, `s`
+    for socket file, `l` for link file, and more.
+
+
+    The next nine characters represent permissions -- `r` - read, `w` - write, `x`
+    - execute. The first set of three characters represents the owner’s permission,
+    the next three are a group''s permission, and the final three represent permissions
+    granted to others. In the example shown above, the owner has read, write, and
+    execute permissions, while the group, as well as others, both have read and execute
+    permissions.
+
+
+    You might want to get information regarding the size of these objects in a certain
+    directory in an easily readable format. This is a very common use. Besides the
+    information we already have, if you add the option of size (which is denoted by
+    `s`), you will get the size in kilobytes for each object. You will have this command
+    line: `ls -als`. If you just require the option of size and not the other previous
+    options, then you drop them and just input `ls -s`.
+
+
+    This command can accept arguments. This is input data from the user to specify
+    the direction from which you desire to get information. You can list any directory
+    and even more than one together with any option that specifies exactly what you
+    require from those directories. If you want to see objects in two directories,
+    namely `/home` and `/bin`, you will use the following command line:
+
+
+    ```
+
+    ls -a /bin /home
+
+    ```
+
+
+    This will display all the objects in these two folders, including the hidden files
+    due to the option `-a`.
+
+
+    Notice the forward slash before these directories; it means that these directories
+    are standard first-tier directories in the root directory. The root directory
+    in a Linux system contains all other directories and sub-directories. The forward
+    slash is used in the first-tier directories from the root directory to differentiate
+    them from any other directories that may have the same name.
+
+
+    The `cd` command
+
+    '
+  raw: 'You can open the command line by switching to a console. This is a display
+    mode of the entire screen in text only without using the GUI or the mouse. Press
+    the CRTL, ALT, and F1 keys while in GUI – the GUI disappears and the console appears.
+    The screen will become black save for a few characters which are part of the command
+    line. To get back to the GUI while at this screen, just press the CTRL, ALT, and
+    F8 keys simultaneously.
+
+
+    When you open the command prompt, it will list your computer name and your username.
+    Since Linux is a multi-user OS, meaning more than one user can access and use
+    the system, this is very important. Each user will have access to a home directory
+    where they can store their files. When starting on the command prompt, you need
+    to make sure which directory you are in.
+
+
+    The username will be followed by some punctuation marks, either $ or #, then a
+    blinking box or a cursor. $ means that you are logged in as a regular user, while
+    # means you are logged in as root. Always make sure you are logged in as a regular
+    user unless you would like to perform any administrative tasks inside root directories.
+    If you log in as a root, all directories and files you work in will change permissions
+    to make the root as the user.
+
+
+    #   Chapter 6:
+
+
+    # Running Commands
+
+
+    Commands are written in a specific way. You should note that the command line
+    is case sensitive, unlike in other command prompts you may have used. The command
+    should be typed with no spaces in the name. After the command, you can put a space
+    then add a dash and another name. This is usually called an option. It limits
+    or changes the way the command is executed. Most of the words used in the command
+    line are shorthand words that are abbreviated from the longer word. For instance,
+    we use mv for move and lt for list. You will learn more of these words along the
+    way and as you practice them on your computer.
+
+
+    Basic commands
+
+
+    Now let us look at basic commands regularly used on the Linux systems. These are
+    not the only commands, but you will use them often. Do not struggle to memorize
+    these commands; they will soon stick in your head the more you use them. We shall
+    also be looking at how to get the command to a certain function you need.
+
+
+    The pwd command
+
+
+    This stands for the present working directory. It helps you identify which directory
+    you are in at any particular time. When you open the terminal, you get to the
+    home directory, but this changes as you switch around directories. It shows the
+    name and complete location of the current directory you are working on. Just to
+    avoid confusion, “directory” will mostly refer to the folder we normally use in
+    the Windows operating system. You will need to type pwd in the prompt and press
+    enter.
+
+
+    ![http://pad3.whstatic.com/images/thumb/5/5a/Get-Familiar-With-Ubuntu-Commands-Step-1.jpg/670px-Get-Familiar-With-Ubuntu-Commands-Step-1.jpg](images/00007.jpeg)
+
+
+    You will not need to use this command when you first open your terminal, as you
+    will already be in the home directory. However, there will come a time when you
+    will need to know where you are, since the location and name of the present directory
+    are not always obvious.
+
+
+    The ls command
+
+
+    This is a common command. You use it to list the contents of a directory. When
+    you type ls alone, you will be presented with a list of names of all the objects
+    in that directory. This will include links, files, directories (folders within
+    this folder), and images.
+
+
+    To enable easier identification, you will notice that these objects will be color
+    coded so that you can tell the type of object at a glance. Some of the basic colors
+    that you should know are: Blue (Directories), White (Text files), Red (Archives),
+    Cyan (Links), Green (Executables), and Pink (Images).
+
+
+    There will be no additional information provided for these objects, just the listing.
+    If you just wanted to know the list of objects, this will be enough. However,
+    you might require more information on any of these objects. That is where we use
+    the command ls and an option besides it. This option will mostly be a letter,
+    but also can be a word. It will follow the command and a space. It specifies the
+    additional information you require. You can also input multiple options on the
+    same line to get even more information about an object. You will not require inputting
+    a space between these options. Let us now look at examples.
+
+
+    If you want to know all the objects in a directory, including hidden files, you
+    will use the option –a. These hidden files or directories cannot be seen in the
+    command line or even when using the GUI unless you specify this. Type the command
+    and the option in this sequence: ls _a.  This will display all the objects in
+    that directory, including the hidden files.
+
+
+    Another option is the –l. This provides a long listing of the object in the directory.
+    It provides more information such as type of object (is it an image, link, file,
+    etc.), permissions (who can execute, read, or write this object), and owner (who
+    created this object and the date and time of creation). So, to write this command
+    together with this option and the all option (if you want to get information about
+    all the objects), you input this command line: ls–al.
+
+
+    ![](images/00008.jpeg)
+
+
+    ![](images/00009.jpeg)
+
+
+    The first character represents the file type. For example, in the line shown above,
+    d indicates this is a directory. Other values can be: - for normal file, s for
+    socket file, l for link file, and more.
+
+
+    The next nine characters represent permissions -- r - read, w - write, x- execute.
+    The first set of three characters represents the owner’s permission, the next
+    three are a group''s permission, and the final three represent permissions granted
+    to others who are neither the owner nor the part of the group to which the file
+    belongs. In the example shown above, the owner has read, write, and execute permissions,
+    while the group, as well as others, both have only read and execute permissions.
+
+
+    You might want to get information regarding the size of these objects in a certain
+    directory in an easily readable format. This is a very common use. Besides the
+    information we already have, if you add the option of size (which is denoted by
+    s), you will get the size in kilobytes for each object. You will have this command
+    line: ls–als.  If you just require the option of size and not the other two previous
+    options, then you drop them and just input ls–s.
+
+
+    This command can accept arguments. This is input data from the user to specify
+    the direction from which you desire to get information. You can list any directory
+    and even more than one together with any option that specifies exactly what you
+    require from those directories. If you want to see objects in two directories,
+    namely /home and /bin, you will use the following command line:
+
+
+    ls -a /bin /home
+
+
+    This will display all the objects in these two folders, including the hidden files
+    due to the option –a.
+
+
+    Notice the forward slash before these directories; it means that these directories
+    are standard first-tier directories in the root directory. The root directory
+    in a Linux system contains all other directories and sub-directories. The forward
+    slash is used in the first-tier directories from the root directory to differentiate
+    them from any other directories that may have the same name.
+
+
+    The cd command'
+  toc: []
+  trans: '
+
+    你可以通过切换到控制台打开命令行。这是一种纯文本的全屏显示模式，无需使用 GUI 或鼠标。在 GUI 状态下，同时按下 `CTRL`、`ALT` 和 `F1`
+    键——GUI 将消失，控制台将会出现。屏幕将变为黑色，除了命令行中的几个字符外。在此屏幕下，若要返回 GUI，只需同时按下 `CTRL`、`ALT` 和 `F8`
+    键即可。
+
+
+    当你打开命令提示符时，它会列出你的计算机名称和用户名。由于 Linux 是多用户操作系统，意味着一个一个用户可以访问并使用系统，因此这一点非常重要。每个用户将有一个主目录，他们可以在那里存储文件。在命令提示符启动时，你需要确保你当前处于哪个目录。
+
+
+    用户名后面会跟随着一些标点符号，可能是 `$` 或 `#`，然后是一个闪烁的框或光标。`$` 表示你是以普通用户身份登录，而 `#` 表示你是以 `root`
+    用户身份登录。除非你想在 root 目录内执行任何管理任务，否则请务必确保你是以普通用户身份登录的。如果你以 `root` 身份登录，你操作的所有目录和文件的权限将发生更改，以
+    `root` 为用户。
+
+
+    # 第 6 章：运行命令
+
+
+    命令是以特定的方式编写的。你应该注意，命令行是区分大小写的，这与你可能过的其他命令提示符不同。命令名称中不能有空格。在命令之后，你可以输入一个空格，然后添加一个连字符和另一个名称。这通常被称为选项（option）。它限制或更改命令的执行方式。命令行中使用的单词都是由长词缩写而来的简称。例如，我们使用
+    `mv` 代表 move（移动），使用 `ls` 代表 list（列出）。在学习过程中以及在计算机上练习时，你会学习更多这些单词。
+
+
+    ## 基础命令
+
+
+    现在让我们来看看 Linux 系统经常使用的基础命令。这些并不是全部命令，但你会经常使用它们。不要费力去背诵这些命令；你用得越多，它们很快就会刻在脑海里。我们还将查看如何让命令实现所需的特定功能。
+
+
+    ### `pwd` 命令
+
+
+    这代表当前工作目录（present working directory）。它可以帮助你识别在任何特定时间你处于哪个目录。当你打开终端时，你会进入主目录，但随着你在目录之间切换，这一点会发生变化。它显示你正在操作的目录的名称和完整位置。为了避免混淆，“目录”（directory）通常指的是我们在
+    Windows 操作系统常用的文件夹。你需要在提示符中输入 `pwd` 并按回车。
+
+
+    ![`pad3.whstatic.com/images/thumb/5/5a/Get-Familiar-With-Ubuntu-Commands-Step-1.jpg/670px-Get-Familiar-With-Ubuntu-Commands-Step-1.jpg`](img/00007.jpeg)
+
+
+    当你第一次打开终端时，不需要使用这个命令，因为你已经在主目录下了。然而，总有一天你需要知道自己身在哪里，因为当前目录的位置和名称并不总是显而易见的。
+
+
+    ### `ls` 命令
+
+
+    这是一个常用命令。你用它列出目录的内容。当你单独输入 `ls` 时，将列出该目录中所有对象的名称列表。这包括链接、文件、目录（此文件夹内的文件夹）和图像。
+
+
+    为了方便识别，你会发现这些对象会经过颜色编码，以便你一眼看出对象的类型。你应当了解的某些基础颜色是：蓝色（目录）、白色（文本文件）、红色（归档文件）、青色（链接）、绿色（可执行文件）和粉色（图像）。
+
+
+    这些对象不会提供额外信息，仅列出。如果你只想知道对象列表，这些就足够了。然而，你可能需要其中任何一个对象的更多信息。这时我们就使用 `ls` 命令以及其后的一个选项。这个选项通常是一个字母，也可以是一个单词。它跟在命令和空格之后。它指定了你所需的额外信息。你也可以在同一行输入多个选项，以获取关于某个对象的更多信息。这些选项之间不需要输入空格。现在让我们来看示例。
+
+
+    如果你想知道目录中的所有对象，包括隐藏文件，你将使用选项 `-a`。这些隐藏文件或目录在命令行中、甚至在使用 GUI 时都是不可可见的，除非你指定了它们。按此顺序输入命令和选项：`ls
+    -a`。这将显示该目录中的所有对象，包括隐藏文件。
+
+
+    另一个选项是 `-l`。它提供了目录中对象的详细列表显示（long listing）。它提供了更多信息，例如对象类型（它是图像、链接、文件等吗）、权限（谁可以执行、读取或写入该对象）以及所有者（谁创建了该对象以及创建日期和时间）。所以，将此命令与此选项以及全部选项（如果你想获取所有对象的信息）写在一起，你输入这条命令行：`ls
+    -al`。
+
+
+    ![](img/00008.jpeg)
+
+
+    ![](img/00009.jpeg)
+
+
+    第一个字符代表文件类型。例如，在上方显示的行中，`d` 表示这是一个目录。其他值可以是：`-` 普通文件、`s` 套接文件、`l` 链接文件等。
+
+
+    接下来的九个字符代表权限——`r`-读、`w`-写、`x`-执行。前三个字符代表所有者的权限，中间三个代表组权限，最后三个代表授予他人的权限。在上面的示例中，所有者拥有读、写、执行权限，而组以及其他人都具有读和执行权限。
+
+
+    你可能希望以易于阅读的格式获取特定目录中对象的大小信息。这是一个非常常用的用法。除了我们已经拥的信息外，如果你添加大小选项（由 `s` 表示），你将获得每个对象以字节为单位的大小。你将拥有命令行：`ls
+    -als`。如果你只需要大小选项而不是之前的其他选项，那么删掉它们并仅输入 `ls -s`。
+
+
+    此命令可以接受参数（arguments）。这是从用户输入的数据，用于指定你希望获取信息的方向。你可以列出任何目录，甚至同时列出多个目录，配合精确指定你从这些目录所需的任何选项。如果你想查看两个目录（即
+    `/home` 和 `/bin`）中的对象，你将使用以下命令行：
+
+
+    ```
+
+    ls -a /bin /home
+
+    ```
+
+
+    这将显示这两个文件夹中的所有对象，由于使用了选项 `-a`，还包含了隐藏文件。
+
+
+    注意这些目录前的斜杠；这意味着这些目录是根目录下的标准一级目录。Linux 系统中的根目录包含所有其他目录和子目录。斜杠用于根目录的一级目录，以将它们与可能同名的其他目录区分开。
+
+
+    `cd` 命令
+
+
+    '
+- fmt: "\nThis is another basic command. It is used to navigate from the current directory\
+    \ to another directory you may need. This directory will require you type the\
+    \ directory name or the complete path of the directory depending on where it is\
+    \ located. If the directory you are looking for is located within the directory\
+    \ you are presently in, then you won’t have to type the whole path. If you are\
+    \ presently in `/home/john/pictures` and you want to navigate to a directory named\
+    \ `/home/john/pictures/holiday`, you will just have to run the command `cd holiday`\
+    \ the command line, which will search for the directory `holiday` within `pictures`.\
+    \ This is known as a relative path.\n\nIf you want to change from the current\
+    \ directory to another directory not relative to the present one, you will have\
+    \ to type the whole path. If you want the directory `bin`, you will have to type\
+    \ the whole path, including the forward slash: `cd /home/bin`\n\nIf you want to\
+    \ change to the root directory, you use the following: `cd /`\n\nIf you want to\
+    \ go back to the home directory, you need not type the username you’ll just type\
+    \ `cd ~` this is a short cut meant to save you time.\n\nOther shortcuts are: To\
+    \ switch to the previous directory in the tree, run: `cd ..`, or if you want to\
+    \ switch to the previous working directory, run `cd -`\n\n## The touch command\n\
+    \nThis is used to create new files. This command will require you run the file\
+    \ name as the argument. If you wish to create a new file named `practice` in the\
+    \ present directory, you just run the command:\n\n```\ntouch practice\n```\n\n\
+    If you want to create multiple files, you run the command with the names of the\
+    \ files separated by a space:\n\n```\ntouch practice test log\n```\n\nIf you want\
+    \ to create the file in a different directory other than the one you are working\
+    \ on, you need to specify the full path of this new location. For example:\n\n\
+    ```\ntouch /home/john/practice/test\n```\n\nTo write anything on the new file,\
+    \ you will need to use a command line editor, which we will be looking at in a\
+    \ later chapter.\n\n## The mkdir command\n\nThe `mkdir` works just the same way\
+    \ as the `touch` command but is used to create directories (folders)\n\n```\n\
+    mkdir dir1 dir2 dir3\n```\n\nThis will create three folders named `dir1`, `dir2`,\
+    \ and `dir3` in the current directory. If there is already a directory with the\
+    \ same name provided in the argument, it will not be created; a warning informing\
+    \ you of this will appear unlike in the `touch` command, where a new file with\
+    \ the same name will be created. If you want to create a folder in a different\
+    \ directory other than the one present, you have to specify the full path.\n\n\
+    ## The rm command\n\nThis command is used to delete files and directories. You\
+    \ use the name of the file as the argument. For example, if you want to delete\
+    \ a file by the name `file1`, you run the following command:\n\n```\nrm file1\n\
+    ```\n\nThis will delete `file1`. If you want to delete multiple files, you write\
+    \ the names separated by a space.\n\n```\nrm file1 file2 file3\n```\n\nHowever,\
+    \ this can get tedious if you want to delete very many files in a certain directory\
+    \ and the `rm` without an option cannot delete an entire directory. This is just\
+    \ placed as a precaution since once you run the command and delete a chosen file\
+    \ or directory, it will be almost impossible to retrieve it.\n\nOne way to delete\
+    \ multiple files is by use of wildcards. For instance, `*` represents a string\
+    \ and can be used as a wildcard. Using the command `rm *` will delete all files\
+    \ in the present directory. Be extra careful when using these wildcards, as your\
+    \ actions are undoable. One thing with the command line is that it assumes you\
+    \ know what you are doing; there are no confirmation/warning windows or anything\
+    \ you might have experienced in the GUI. Once you run a command, the desired result\
+    \ is achieved.\n\nIf you want to use the wildcard to delete only files within\
+    \ a certain directory, you specify this in the command.\n\n```\nrm dir1/*\n```\n\
+    \nThis will delete all files in `dir1`.\n\nYou can still specify further using\
+    \ the wildcard to pinpoint exactly what type of files you want deleted. For instance,\
+    \ if you want to delete all files with the extension `.html`, you run the following\
+    \ command\n\n```bash\nrm *.html\n```\n\nHowever, be very careful when using this\
+    \ wildcard, as it is very easy to lose data you never intended to lose. Always\
+    \ take time to confirm what you are doing and if you are not sure, do not do it.\n\
+    \nTo delete entire directories using this command, you have to use the `r` option.\
+    \ This is a safeguard against deleting entire files in a directory accidentally.\n\
+    \n```bash\nrm -r /home/john/practice/\n```\n\nThis will delete all the files any\
+    \ subdirectory and files within this directory, then remove the directory `practice`.\n\
+    \n## The rmdir command\n\nThis command is used to remove empty directories. It\
+    \ is very similar to the `rm` command, only it removes empty directories. It is\
+    \ safer to use when you just want to delete those directories.\n\n```bash\nrmdir\
+    \ dir1 dir2\n```\n\nThis will delete directories named `dir1` and `dir2` which\
+    \ are empty. These are located in the present directory we are working on. If\
+    \ not, type the command with the whole path to the empty directory.\n\nThis command\
+    \ is useful if you choose to delete files without using the `r` option, so that\
+    \ finally when you are left with the empty directory, you use the `rmdir` to delete\
+    \ them. For a beginner (and to be safe), I would encourage you to use this method\
+    \ if you fear losing any data will affect you adversely.\n\n## The cp command\n\
+    \nThis command is used to copy directories and files. The copies will subsequently\
+    \ become independent of the originals. Any actions taken on the originals will\
+    \ not affect the copies.\n\n```bash\ncp name new_name\n```\n\nThat is the command\
+    \ where you specify which file or directory you want to copy and the name of the\
+    \ new directory. By default, `cp` will only copy files, to copy directories you\
+    \ need to use `r` option. For instance, if you want to copy `dir1` with its content\
+    \ including subdirectories to a new directory called `dir2`, you run the following\
+    \ command\n\n```bash\ncp -r dir1 dir2\n```\n\nWhen you make a copy of a file or\
+    \ directory, you must use a different name to the original. However, if you place\
+    \ the copy in a different directory, you might let it have the same name `cp file1\
+    \ /home/john/file1`\n\nYou could copy multiple files to a single directory by\
+    \ listing the names of these files and then naming the directory to which they\
+    \ should be:\n\n```bash\ncp file1 file2 file3 dir1\n```\n\nThe final argument\
+    \ must be a directory when copying multiple files.\n\n## The chmod command\n\n\
+    This command is used to alter file permissions. It can be used in two ways: either\
+    \ through letters or through numbers. We shall look at the letter method since\
+    \ it is more straightforward than the numbers method. The letter method uses `+`,\
+    \ `-` and `=` signs to add, remove, or assign permissions. The letter `a` represents\
+    \ all, `o` represents others, `u` represents owner, and `g` represents group.\
+    \ The permissions are `r` for read, `w` for write, and `x` for execute. With this\
+    \ information, we can now understand how the command works. For example:\n\n```bash\n\
+    chmod u=rwx file1\n```\n\nThis command grants the owner (`u`) of `file1` read(r),\
+    \ write(w), and execute(x) permissions.\n\n```bash\nchmod o+w file1\n```\n\nThis\
+    \ command grants others the permissions to write.\n\n```bash\nchmod g-r file1\n\
+    ```\n\nThis command denies the group permission to read file 1.\n\n```bash\nchmod\
+    \ a+x somefile\n```\n\nThis command grants all the permissions to execute.\n\n\
+    # Chapter 7: \n\n# Getting Help with the Command Line\n\nThe command line, inasmuch\
+    \ as it is helpful, can be challenging as well. Not only beginners will encounter\
+    \ challenges with the command line, but even the experienced pros. Luckily, help\
+    \ is just a command line away. Yes, the command line has a manual and an info\
+    \ page that explains more about the different commands and how to run them. You\
+    \ could also use the `whatis` command, which gives you a simple explanation to\
+    \ a command:\n\n```bash\nwhatis mv\n```\n"
+  raw: "This is another basic command. It is used to navigate from the current directory\
+    \ to another directory you may need. This directory will require you type the\
+    \ directory name or the complete path of the directory depending on where it is\
+    \ located. If the directory you are looking for is located within the directory\
+    \ you are presently in, then you won’t have to type the whole path. If you are\
+    \ presently in /home/john/pictures and you want to navigate to a directory named\
+    \ /home/john/pictures/holiday,  you will just have to run the command cd holiday\
+    \ the command line, which will search for the directory holiday within pictures.\
+    \ This is known as a relative path.\n\nIf you want to change from the current\
+    \ directory to another directory not relative to the present one, you will have\
+    \ to type the whole path. If you want the directory bin, you will have to type\
+    \ the whole path, including the forward slash: cd /home/bin\n\nIf you want to\
+    \ change to the root directory, you use the following cd /\n\nIf you want to go\
+    \ back to the home directory, you need not type the username you’ll just type\
+    \ cd ~ this is a short cut meant to save you time.\n\nOther shortcuts are: To\
+    \ switch to the previous directory in the tree, run: cd .., or if you want to\
+    \ switch to the previous working directory, run cd -\n\nThe touch command\n\n\
+    This is used to create new files. This command will require you run the file name\
+    \ as the argument. If you wish to create a new file named practice in the present\
+    \ directory, you just run the command:\n\ntouch practice\n\nIf you want to create\
+    \ multiple files, you run the command with the names of the files separated by\
+    \ a space:\n\ntouch practice test log\n\nIf you want to create the file in a different\
+    \ directory other than the one you are working on, you need to specify the full\
+    \ path of this new location. For example:\n\ntouch /home/john/practice/test\n\n\
+    To write anything on the new file, you will need to use a command line editor,\
+    \ which we will be looking at in a later chapter.\n\nThe mkdir command\n\nThe\
+    \ mkdir works just the same way as the touch command but is used to create directories\
+    \ (folders)\n\nmkdir dir1 dir2 dir3\n\nThis will create three folders named dir1,\
+    \ dir2, and dir3 in the current directory. If there is already a directory with\
+    \ the same name provided in the argument, it will not be created; a warning informing\
+    \ you of this will appear unlike in the touch command, where a new file with the\
+    \ same name will be created. If you want to create a folder in a different directory\
+    \ other than the one present, you have to specify the full path.\n\nThe rm command\n\
+    \nThis command is used to delete files and directories. You use the name of the\
+    \ file as the argument. For example, if you want to delete a file by the name\
+    \ of file1, you run the following command:\n\nrm file1\n\nThis will delete file1\\\
+    . If you want to delete multiple files, you write the names separated by a space.\n\
+    \nrm file1 file2 file3\n\nHowever, this can get tedious if you want to delete\
+    \ very many files in a certain directory and the rm without an option cannot delete\
+    \ an entire directory. This is just placed as a precaution since once you run\
+    \ the command and delete a chosen file or directory, it will be almost impossible\
+    \ to retrieve it.\n\nOne way to delete multiple files is by use of wildcards.\
+    \ For instance, * represents a string and can be used as a wildcard. Using the\
+    \ command rm * will delete all files in the present directory. Be extra careful\
+    \ when using these wildcards, as your actions are undoable. One thing with the\
+    \ command line is that it assumes you know what you are doing; there are no confirmation/warning\
+    \ windows or anything you might have experienced in the GUI. Once you run a command,\
+    \ the desired result is achieved.\n\nIf you want to use the wildcard to delete\
+    \ only files within a certain directory, you specify this in the command.\n\n\
+    Rm dir1/*\n\nThis will delete all files in dir1.\n\nYou can still specify further\
+    \ using the wildcard to pinpoint exactly what type of files you want deleted.\
+    \ For instance, if you want to delete all files with the extension .html, you\
+    \ run the following command\n\nrm *.html\n\nHowever, be very careful when using\
+    \ this wildcard, as it is very easy to lose data you never intended to lose. Always\
+    \ take time to confirm what you are doing and if you are not sure, do not do it.\n\
+    \nTo delete entire directories using this command, you have to use the r option.\
+    \ This is a safeguard against deleting entire files in a directory accidentally.\n\
+    \nrm -r /home/john/practice/\n\nThis will delete all the files any subdirectory\
+    \ and files within this directory, then remove the directory practice.\n\nThe\
+    \ rmdir command\n\nThis command is used to remove empty directories. It is very\
+    \ similar to the rm command, only it removes empty directories. It is safer to\
+    \ use when you just want to delete those directories.\n\nrmdir dir1 dir2\n\nThis\
+    \ will delete directories named dir1 and dir2 which are empty. These are located\
+    \ in the present directory we are working on. If not, type the command with the\
+    \ whole path to the empty directory.\n\nThis command is useful if you choose to\
+    \ delete files without using the r option, so that finally when you are left with\
+    \ the empty directory, you use the rmdir to delete them. For a beginner (and to\
+    \ be safe), I would encourage you to use this method if you fear losing any data\
+    \ will affect you adversely.\n\nThe cp command\n\nThis command is used to copy\
+    \ directories and files. The copies will subsequently become independent of the\
+    \ originals. Any actions taken on the originals will not affect the copies.\n\n\
+    cp name new_name\n\nThat is the command where you specify which file or directory\
+    \ you want to copy and the name of the new directory. By default, cp will only\
+    \ copy files, to copy directories you need to use r option. For instance, if you\
+    \ want to copy dir1 with all its content including files and subdirectories to\
+    \ a new directory to be called dir2, you run the following command\n\ncp -r dir1\
+    \ dir2\n\nWhen you make a copy of a file or a directory, you must use a different\
+    \ name to the original name. However, if you place the copy in a different directory\
+    \ from the original, you might let it have the same name. A file named file1 can\
+    \ be copied with the same name to a different directory (which you must specify)\
+    \ cp file1 /home/john/file1\n\nYou could copy multiple files to a single directory\
+    \ by listing the names of these files and then naming the directory to which they\
+    \ should be copied:\n\ncp file1 file2 file3 dir1\n\nThis command copies file1,\
+    \ file2, and file3 into directory named dir1\\. The final argument must be a directory\
+    \ when copying over multiple files.\n\nThe chmod command\n\nThis command is used\
+    \ to alter file permissions. It can be used in two ways: either through letters\
+    \ or through numbers. We shall look at the letter method since it is more straightforward\
+    \ than the numbers method. The letter method uses + - and = signs to add, remove,\
+    \ or assign permissions. The letter a represents all, o represents others, u represents\
+    \ owner, and g represents group. The permissions are r for read, w for write,\
+    \ and x for execute. With this information, we can now understand how the command\
+    \ works. For example:\n\nchmod u=rwx file1\n\nThis command grants the owner (u)\
+    \ of file1 read(r), write (w), and execute(x) permissions.\n\nchmodo+w file1\n\
+    \nThis  command grants others the permissions to write.\n\nchmod g-r file1\n\n\
+    This command denies the group permission to read file 1.\n\nchmoda+xsomefile\n\
+    \nThis command grants all the permissions to execute.\n\n# \n\nChapter 7:\n\n\
+    # Getting Help with the Command Line\n\nThe command line, inasmuch as it is helpful,\
+    \ can be challenging as well. Not only beginners will encounter challenges with\
+    \ the command line, but even the experienced pros. Luckily, help is just a command\
+    \ line away. Yes, the command line has a manual and an info page that explains\
+    \ more about the different commands and how to run them. You could also use the\
+    \ whatis command, which gives you a simple explanation to a command:\n\nWhatis\
+    \ mv"
+  toc: []
+  trans: '
+
+    这是另一个基础命令。它用于从当前目录导航到你可能需要的另一个目录。根据该目录所在的位置，你需要输入目录名称或目录的完整路径。如果你寻找的目录位于当前所在的目录中，那么你不需要输入整个路径。如果你当前位于
+    `/home/john/pictures` 并且想导航到名为 `/home/john/pictures/holiday` 的目录，你只需要在命令行中运行 `cd
+    holiday` 命令，它将在 `pictures` 目录中搜索 `holiday` 目录。这被称为相对路径。
+
+
+    如果你想从当前目录切换到另一个与当前目录不相关的目录，你必须输入整个路径。如果你想要 `bin` 目录，你必须输入完整路径，包括斜杠：`cd /home/bin`
+
+
+    如果你想切换到根目录，可以使用以下命令：`cd /`
+
+
+    如果你想回到主目录，不需要输入用户名，只需输入 `cd ~` 即可，这是一个为了节省时间的快捷方式。
+
+
+    其他快捷方式还有：要切换到树结构中的上一个目录，运行：`cd ..`；或者如果你想切换到上一个工作目录，运行 `cd -`
+
+
+    ## touch 命令
+
+
+    此命令用于创建新文件。该命令要求你运行文件名作为参数。如果你想在当前目录下创建一个名为 `practice` 的新文件，只需运行以下命令：
+
+
+    ```
+
+    touch practice
+
+    ```
+
+
+    如果你想创建多个文件，可以运行命令并用空格分隔各个文件名：
+
+
+    ```
+
+    touch practice test log
+
+    ```
+
+
+    如果你想在当前工作目录之外的目录中创建文件，你需要指定该新位置的完整路径。例如：
+
+
+    ```
+
+    touch /home/john/practice/test
+
+    ```
+
+
+    要在新文件中写入任何内容，你需要使用命令行编辑器，我们将在稍后的章节中介绍它。
+
+
+    ## mkdir 命令
+
+
+    `mkdir` 的工作方式与 `touch` 命令完全相同，但用于创建目录（文件夹）
+
+
+    ```
+
+    mkdir dir1 dir2 dir3
+
+    ```
+
+
+    这将在当前目录下创建三个名为 `dir1`、`dir2` 和 `dir3` 的文件夹。如果参数中已经存在同名的目录，则将不会创建它；此时会显示一个警告提示你，这与
+    `touch` 命令不同，`touch` 命令中会创建一个同名的新文件。如果你想在当前目录之外的目录创建文件夹，必须指定完整路径。
+
+
+    ## rm 命令
+
+
+    此命令用于删除文件和目录。你使用文件名作为参数。例如，如果你想删除名为 `file1` 的文件，运行以下命令：
+
+
+    ```
+
+    rm file1
+
+    ```
+
+
+    这将删除 `file1`。如果你想删除多个文件，请用空格分隔这些名称。
+
+
+    ```
+
+    rm file1 file2 file3
+
+    ```
+
+
+    然而，如果你想删除某个目录中的大量文件，这可能会变得非常繁琐，而且不带选项的 `rm` 无法删除整个目录。这里进行此说明是为了预防考虑，因为一旦你运行命令并删除了选定的文件或目录，就几乎无法找回。
+
+
+    删除多个文件的一种方法是使用通配符。例如，`*` 代表字符串并可以作为通配符使用。使用命令 `rm *` 将删除当前目录下的所有文件。在使用这些通配符时要格外小心，因为你的操作是不可撤销的。命令行的一点是，它假设你清楚自己在做什么；没有你在图形用户界面（GUI）中可能会遇到的确认/警告窗口或其他任何东西。一旦运行命令，预期的结果就会实现。
+
+
+    如果你想使用通配符仅删除特定目录内的文件，可以在命令中指定。
+
+
+    ```
+
+    rm dir1/*
+
+    ```
+
+
+    这将删除 `dir1` 中的所有文件。
+
+
+    你仍然可以使用通配符进一步指定你想要删除的的确切类型的文件。例如，如果你想删除所有扩展名为 `.html` 的文件，运行以下命令：
+
+
+    ```bash
+
+    rm *.html
+
+    ```
+
+
+    然而，在使用此通配符时要非常小心，因为很容易丢失你从未打算丢失的数据。务必花时间确认你正在做什么，如果你不确定，就不要这样做。
+
+
+    要使用此命令删除整个目录，你必须使用 `r` 选项。这是一种防止意外删除目录中整个文件的保护措施。
+
+
+    ```bash
+
+    rm -r /home/john/practice/
+
+    ```
+
+
+    这将删除该目录下的所有子目录和文件，然后移除 `practice` 目录。
+
+
+    ## rmdir 命令
+
+
+    此命令用于删除空目录。它与 `rm` 命令非常相似，只是只删除空目录。当你只想删除那些目录时，使用该命令更安全。
+
+
+    ```
+
+    rmdir dir1 dir2
+
+    ```
+
+
+    这将删除名为 `dir1` 和 `dir2` 的空目录。这些目录位于我们正在工作的当前目录下。如果不是，请带空目录的完整路径输入命令。
+
+
+    如果你选择在不用 `r` 选项的情况下删除文件，此命令很有用，这样当你最后剩下空目录时，就可以使用 `rmdir` 删除它们。对于初学者（为了安全起见），如果你担心丢失任何数据会对你产生不利影响，我鼓励你使用这种方法。
+
+
+    ## cp 命令
+
+
+    此命令用于复制目录和文件。副本将与原始文件独立。对原始文件的操作不会影响副本。
+
+
+    ```
+
+    cp name new_name
+
+    ```
+
+
+    该命令要求你指定要复制的文件或目录以及新目录的名称。默认情况下，`cp` 只复制文件，要复制目录需要使用 `r` 选项。例如，如果你将副本放在不同的目录，可以使用与原始文件相同的名称
+    `cp file1 /home/file1`
+
+
+    你可以通过列出这些文件的名称并指定它们要进入的目录来复制多个文件：
+
+
+    ```
+
+    cp file1 file2 file3 dir1
+
+    ```
+
+
+    复制多个文件时，最后一个参数必须是目录。
+
+
+    ## chmod 命令
+
+
+    命令用于修改文件权限。它有两种用法：通过字母或数字。我们将查看字母方法，因为它比数字方法更直观。字母方法使用 `+`、`-` 和 `=` 符号来添加、删除或分配权限。字母
+    `a` 代表所有，`o` 代表其他，`u` 代表所有者，`g` 代表组。权限为 `r` 代表读取、`w` 代表写入、`x` 代表执行。有了这些信息，我们现在可以理解它是如何工作的。例如：
+
+
+    ```
+
+    chmod u=rwx file1
+
+    ```
+
+
+    该命令赋予 `file1` 的所有者 (`u`) 读取(r)、写入(w) 和执行(x) 权限。
+
+
+    ```
+
+    chmod o+w file1
+
+    ```
+
+
+    该命令赋予其他人写入权限。
+
+
+    ```
+
+    chmod g-r file1
+
+    ```
+
+
+    该命令拒绝组读取文件 1 的权限。
+
+
+    ```
+
+    chmod a+x somefile
+
+    ```
+
+
+    该命令赋予所有执行权限。
+
+
+    # 第 7 章：
+
+
+    # 获取命令行的帮助
+
+
+    命令行在非常有帮助的同时也具有挑战性。不仅是初学者会遇到挑战，即使是经验丰富的专家也是如此。幸运的是，帮助可以通过命令行即可获得。是的，命令行有手册和信息页，详细解释了不同的命令以及如何运行它们。你还可以使用
+    `whatis` 命令，它可以提供对命令的简单解释：
+
+
+    ```bash
+
+    whatis mv
+
+    ```
+
+    '
+- fmt: '
+
+    This will return a short explanation stating that `mv` is move (rename files).
+    It will appear something like this.
+
+
+    ```
+
+    $ whatis mv
+
+
+    mv (1) - move (rename) files
+
+
+    $
+
+    ```
+
+
+    However, this might not be enough information for you, and in this case you consult
+    the manual. To so this, you run the command `man`. You can get more specific and
+    run `man ls` to get to know more about the list command.
+
+
+    The information will appear in paragraph style. You will use the space bar to
+    go through the pages. Anything you need to know about any command will be found
+    here, including all the options available. When you are through reading, you can
+    quit the manual by hitting `q`.
+
+
+    The command line is pretty interesting to learn. We have just scratched the surface
+    with these commands. There are numerous ore commands available. This manifests
+    the power and flexibility of the command line. Do not memorize these commands;
+    just use them as you need them and you will find it easy to remember them.
+
+
+    When you use the command line, you get into a conversation with your computer.
+    It is like a face-to-face talk. You tell it what it is you require it to do and
+    it responds faithfully without questioning and without doubting your intentions.
+    As you learn more of the command line, you will come to appreciate how powerful
+    it is and its importance to developers and programmers, as you do not have to
+    rely on the GUI which, in most cases, is very basic.
+
+
+    # Index of Linux Commands
+
+
+    - `alias`: allows launching of any command or combination of commands by using
+    a preset character or series of characters.
+
+    - `apropos`: displays a list of all topics in the built-in user manual that are
+    related to the subject of a query.
+
+    - `bzip2`: used for compressing and decompress files.
+
+    - `cat`: (short for concatenate) has three related functions with regard to text
+    files: displaying them, combining copies of them and creating new ones.
+
+    - `cd`: changes directories.
+
+    - `clear`: removes all previous commands and output from consoles and terminal
+    windows.
+
+    - `cp`: copies files and directories.
+
+    - `df`: reports the amount of space used and available on currently mounted file
+    systems.
+
+    - `dmesg`: reads the kernel messages.
+
+    - `du`: shows the sizes of directories and files.
+
+    - `fdformat`: performs low-level formatting of floppy disks.
+
+    - `file`: classifies file system objects.
+
+    - `free`: provides information about unused and used memory and swap space.
+
+    - `grep`: searches text.
+
+    - `head`: by default reads the first ten lines of text.
+
+    - `hostname`: shows or sets a computer''s host name and domain name.
+
+    - `kdesu`: opens KDE su, the graphical front end for the `su` command.
+
+    - `kill`: terminates stalled processes without having to log out or reboot.
+
+    - `killall`: terminates all processes associated with programs whose names are
+    provided to it as arguments.
+
+    - `locate`: finds files and directories.
+
+    - `man`: formats and displays the built-in manual pages.
+
+    - `mkbootdisk`: creates an emergency boot floppy.
+
+    - `mkdir`: creates new directories.
+
+    - `mkfs`: creates a file system on a disk or on a partition thereof.
+
+    - `mv`: renames and moves files and directories.
+
+    - `ps`: (short for process status) lists the currently running processes and their
+    process identification numbers (PIDs).
+
+    - `pstree`: displays the processes on the system in the form of a tree diagram.
+
+    - `pwd`: (short for present working directory) displays the full path to the current
+    directory.
+
+    - `reboot`: restarts a computer without having to turn the power off and back
+    on.
+
+    - `rm`: deletes the specified files and directories.
+
+    - `rmdir`: deletes the specified empty directories.
+
+    - `runlevel`: reports the current and previous runlevels.
+
+    - `shred`: destroys files.
+
+    - `spell`: checks spelling.
+
+    - `strings`: returns each string of printable characters in files.
+
+    - `su`: (short for substitute user) changes a login session''s owner without the
+    owner having to first log out of that session.
+
+    - `tail`: by default reads the final ten lines of text.
+
+    - `tar`: converts a group of files into an archive.
+
+    - `touch`: the easiest way to create new, empty files.
+
+    - `tr`: translates or deletes characters.
+
+    - `unalias`: removes entries from the current user''s list of aliases.
+
+    - `uname`: provides basic information about a system''s software and hardware.
+
+    - `uptime`: shows the current time, how long the system has been running since
+    it was booted up, how many user sessions are currently open, and the load averages.
+
+    - `w`: shows who is logged into the system and what they are doing.
+
+    - `wc`: by default counts the number of lines, words and characters that are contained
+    in text.
+
+    - `whatis`: provides very brief descriptions of command line programs and other
+    topics related to Unix-like operating systems.
+
+    - `whereis`: locates the binary, source code, and man page for any specified program.
+
+    - `whoami`: returns the user name of the owner of the current login session.
+
+
+    # Chapter 8: Using a Text Editor
+
+
+    A text editor is a computer program that allows the user to open, view, edit,
+    change, and store plain text. These are usually characters and numbers. These
+    are then encoded by the computer so that they can have a meaning to other programs
+    and users.
+
+
+    Along with the command line, Linux distributions will include a text editor, which
+    you will find very useful in a number of ways. Just like on Windows OS where we
+    have text editors, all Linux distributions will have one, too. It is very important
+    to get the basics behind using the text editor. There are so many of these editors,
+    but when you understand working on one, you will be comfortable navigating the
+    others, maybe just a few different things to learn. Text editors are very similar
+    to word processors only they are lighter with few formatting options. They have
+    fewer features and work only with text files. Some of them do not even support
+    spell checking and proofreading.
+
+
+    Many beginners tend to overlook the importance of the text editor and will often
+    rely on the word processors for all their writing. However, you will soon learn
+    that this little feature is vital if you need to be a little flexible and versatile
+    in how you use your computer. In Linux distributions, the text editor is even
+    more useful. If you are going to write any code, you’ll have to use the text editor.
+    When using the command line, the text editor will go hand in hand. The command
+    line and the text editor will set you to total independence from the GUI. A text
+    editor will save in plain text so that many diverse programs are able to read
+    the text unlike word processors whose content can only be opened with another
+    word processor. This is a great benefit as it makes the plain text highly portable
+    across programs and operating systems without needing to change anything.
+
+
+    When using the text editor to do your normal writing, it is very easy to use.
+    You do not have to learn anything; just input the text you want and that is it.
+    There are no menus or structures, and no formatting. This means you can open up
+    any operating system, find the text editor, and just write whatever you want to
+    write. You will then be able to carry on the plain text to another program or
+    OS. You can even use the text editor to draft an email, and then send.
+
+
+    Let us look at one of the most popular text editors on Linux distributions.
+
+
+    ## Vi editor
+
+
+    This editor is found in almost all Linux distributions. It is simple to use, though
+    beginners might disagree, but very powerful. In fact, if you just want to write
+    or edit plain text, you may try using another editor. Experienced Linux users
+    will use the Vi editor extensively in their coding or writing markup language.
+    Due to its availability in a wide range of distributions, learning Vi becomes
+    very important. You may want to edit files in a Linux system or a remote server
+    with a minimal install; it will definitely have Vi text editor.
+
+
+    `Vim` is the newer version of `Vi`. It means `Vi` improved. `Vim` inherits features
+    of `Vi` but also adds some functionality.
+
+    '
+  raw: "This will return a short explanation stating that mv is move (rename files).\
+    \ It will appear something like this.\n\n$ whatis mv\n\nmv (1) - move (rename)\
+    \ files\n\n$\n\nHowever, this might not be enough information for you, and in\
+    \ this case, you consult the manual. To so this, you run the command man. You\
+    \ can get more specific and run man ls to get to know more about the list command.\n\
+    \nThe information will appear in paragraph style. You will use the space bar to\
+    \ go through the pages. Anything you need to know about any command will be found\
+    \ here, including all the options available. When you are through reading, you\
+    \ can quit the manual by hitting q.\n\nThe command line is pretty interesting\
+    \ to learn. We have just scratched the surface with these commands. There are\
+    \ numerous ore commands available. This manifests the power and flexibility of\
+    \ the command line. Do not memorize these commands; just use them as you need\
+    \ them and you will find it easy to remember them.\n\nWhen you use the command\
+    \ line, you get into a conversation with your computer. It is like a face-to-face\
+    \ talk. You tell it what it is you require it to do and it responds faithfully\
+    \ without questioning and without doubting your intentions. As you learn more\
+    \ of the command line, you will come to appreciate how powerful it is and its\
+    \ importance to developers and programmers, as you do not have to rely on the\
+    \ GUI which, in most cases, is very basic.\n\nIndex of Linux Commands\n\nalias:\
+    \ allows launching of any command or combination of commands by using a preset\
+    \ character or series of characters.\n\napropos: displays a list of all topics\
+    \ in the built-in user manual that are related to the subject of a query.\n\n\
+    bzip2: used for compressing and decompressing files.\n\ncat: (short for concatenate)\
+    \ has three related functions with regard to text files: displaying them, combining\
+    \ copies of them and creating new ones.\n\ncd: changes directories.\n\nclear:\
+    \ removes all previous commands and output from consoles and terminal windows.\n\
+    \ncp: copies files and directories.\n\ndf: reports the amount of space used and\
+    \ available on currently mounted file systems.\n\ndmesg: reads the kernel messages.\n\
+    \ndu: shows the sizes of directories and files.\n\nfdformat: performs low-level\
+    \ formatting of floppy disks.\n\nfile: classifies file system objects.\n\nfree:\
+    \ provides information about unused and used memory and swap space.\n\ngrep: searches\
+    \ text.\n\nhead: by default reads the first ten lines of text.\n\nhostname: shows\
+    \ or sets a computer's host name and domain name.\n\nkdesu: opens KDE su, the\
+    \ graphical front end for the su command.\n\nkill: terminates stalled processes\
+    \ without having to log out or reboot.\n\nkillall: terminates all processes associated\
+    \ with programs whose names are provided to it as arguments.\n\nlocate: finds\
+    \ files and directories.\n\nman: formats and displays the built-in manual pages.\n\
+    \nmkbootdisk: creates an emergency boot floppy.\n\nmkdir: creates new directories.\n\
+    \nmkfs: creates a file system on a disk or on a partition thereof.\n\nmv: renames\
+    \ and moves files and directories.\n\nps: (short for process status) lists the\
+    \ currently running processes and their process identification numbers (PIDs).\n\
+    \npstree: displays the processes on the system in the form of a tree diagram.\n\
+    \npwd: (short for present working directory) displays the full path to the current\
+    \ directory.\n\nreboot: restarts a computer without having to turn the power off\
+    \ and back on.\n\nrm: deletes the specified files and directories.\n\nrmdir: deletes\
+    \ the specified empty directories.\n\nrunlevel: reports the current and previous\
+    \ runlevels.\n\nshred: destroys files.\n\nspell: checks spelling.\n\nstrings:\
+    \ returns each string of printable characters in files.\n\nsu: (short for substitute\
+    \ user) changes a login session's owner without the owner having to first log\
+    \ out of that session.\n\ntail: by default reads the final ten lines of text.\n\
+    \ntar: converts a group of files into an archive.\n\ntouch: the easiest way to\
+    \ create new, empty files.\n\ntr: translates or deletes characters.\n\nunalias:\
+    \ removes entries from the current user's list of aliases.\n\nuname: provides\
+    \ basic information about a system's software and hardware.\n\nuptime: shows the\
+    \ current time, how long the system has been running since it was booted up, how\
+    \ many user sessions are currently open, and the load averages.\n\nw: shows who\
+    \ is logged into the system and what they are doing.\n\nwc: by default counts\
+    \ the number of lines, words and characters that are contained in text.\n\nwhatis:\
+    \ provides very brief descriptions of command line programs and other topics related\
+    \ to Unix-like operating systems.\n\nwhereis: locates the binary, source code,\
+    \ and man page for any specified program.\n\nwhoami: returns the user name of\
+    \ the owner of the current login session.\n\n# \n\nChapter 8:\n\n# Using a Text\
+    \ Editor\n\nA text editor is a computer program that allows the user to open,\
+    \ view, edit, change, and store plain text. These are usually characters and numbers.\
+    \ These are then encoded by the computer so that they can have a meaning to other\
+    \ programs and users.\n\nAlong with the command line, Linux distributions will\
+    \ include a text editor, which you will find very useful in a number of ways.\
+    \ Just like on Windows OS where we have text editors, all Linux distributions\
+    \ will have one, too. It is very important to get the basics behind using the\
+    \ text editor. There are so many of these editors, but when you understand working\
+    \ on one, you will be comfortable navigating the others, maybe just a few different\
+    \ things to learn. Text editors are very similar to word processors only they\
+    \ are lighter with few formatting options. They have fewer features and work only\
+    \ with text files. Some of them do not even support spell checking and proofreading.\n\
+    \nMany beginners tend to overlook the importance of the text editor and will often\
+    \ rely on the word processors for all their writing. However, you will soon learn\
+    \ that this little feature is vital if you need to be a little more flexible and\
+    \ versatile in how you use your computer to achieve different results. In Linux\
+    \ distributions, the text editor is even more useful. If you are going to write\
+    \ any code, you’ll have to use the text editor. When using the command line, the\
+    \ text editor will go hand in hand. The command line and the text editor will\
+    \ set you to total independence from the Graphical User Interface. Even when writing\
+    \ content, most advanced writers would rather use the text editors.\n\nA text\
+    \ editor will save in plain text so that many diverse programs are able to read\
+    \ the text unlike word processors whose content can only be opened with another\
+    \ word processor. This is a great benefit as it makes the plain text highly portable\
+    \ across programs and across operating systems without needing to change anything.\n\
+    \nWhen using the text editor to do your normal writing, it is very easy to use.\
+    \ You do not have to learn anything; just input the text you want and that is\
+    \ it. There are no menus or structures, and no formatting. This means you can\
+    \ open up any operating system, find the text editor, and just write whatever\
+    \ you want to write. You will then be able to carry on the plain text to another\
+    \ program or OS. You can even use the text editor to draft an email, and then\
+    \ send.\n\nLet us look at one of the most popular text editors on Linux distributions.\n\
+    \nVi editor\n\nThis editor is found in almost all Linux distributions. It is simple\
+    \ to use, though beginners might disagree, but very powerful. In fact, if you\
+    \ just want to write or edit plain text, you may try using another editor. Experienced\
+    \ Linux users will use the Vi editor extensively in their coding or writing markup\
+    \ language. Due to its availability in a wide range of distributions, learning\
+    \ Vi becomes very important. You may want to edit files in a Linux system or a\
+    \ remote server with a minimal install; it will definitely have Vi text editor.\n\
+    \nVim is the newer version of Vi. It means Vi improved. Vim inherits features\
+    \ of Vi but also adds some functionality."
+  toc: []
+  trans: '
+
+    这将返回一个简短的解释，说明 `mv` 是移动（重命名文件）。它的显示内容如下：
+
+
+    ```
+
+    $ whatis mv
+
+
+    mv (1) - move (rename) files
+
+
+    $
+
+    ```
+
+
+    然而，这些信息对你来说可能还不够，在这种情况下你需要查阅手册。要做到这一点，你需要运行 `man` 命令。你可以运行更具体的命令，如 `man ls`，来了解更多关于列表命令的信息。
+
+
+    这些信息将以段落形式出现。你将使用空格键来翻页。你对任何命令所需的任何知识都可以在这里找到，包括所有可用选项。当你阅读完毕，可以按 `q` 退出手册。
+
+
+    命令行的学习非常有趣。我们通过这些命令仅仅触及了冰一角。还有许多其他命令可用。这体现了命令行的力量和灵活性。不要死记硬背这些命令；在需要时使用它们，你会发现记住它们很容易的。
+
+
+    当你使用命令行时，你是在与你的计算机进行对话。这就像面对面谈。你告诉它你需要让它做什么，它会忠实地响应，不会提问，也不会怀疑你的意图。随着你学习的命令行越来越多，你将体会它是多强大，以及它对开发者和程序员的重要性，因为你不需要依赖
+    GUI（图形用户界面），而在大多数情况下，GUI 是非常基础的。
+
+
+    # Linux 命令索引
+
+
+    - `alias`：允许使用预设字符或系列字符启动任何命令或命令组合。
+
+    - `apropos`：显示内置用户手册中所有与查询主题相关的主题列表。
+
+    - `bzip2`：用于压缩和解压缩文件。
+
+    - `cat`：（concatenate 的缩写）对文本文件有三个相关功能：显示文件、合并副本和创建新文件。
+
+    - `cd`：更改目录。
+
+    - `clear`：清除控制台和终端窗口之前的所有命令和输出。
+
+    - `cp`：复制文件和目录。
+
+    - `df`：报告当前挂载文件系统的已用可用空间。
+
+    - `dmesg`：读取内核消息。
+
+    - `du`：显示目录的文件的大小。
+
+    - `fdformat`：对软磁盘进行低级格式化。
+
+    - `file`：对文件系统对象进行分类。
+
+    - `free`：提供未使用和已内存以及交换空间的信息。
+
+    - `grep`：搜索文本。
+
+    - `head`：默认读取文本的前十行。
+
+    - `hostname`：显示或设置计算机的主机名和域名。
+
+    - `kdesu`：打开 KDE su，即 `su` 命令的图形前端。
+
+    - `kill`：终止挂起的进程，而无需注销或重启。
+
+    - `killall`：终止与作为参数提供的程序名称相关的所有进程。
+
+    - `locate`：查找文件和目录。
+
+    - `man`：格式化并显示内置手册页。
+
+    - `mkbootdisk`：创建紧急启动软盘。
+
+    - `mkdir`：创建新目录。
+
+    - `mkfs`：在磁盘或其分区上创建文件系统。
+
+    - `mv`：重命名并移动文件及目录。
+
+    - `ps`：（process status 的缩写）列出当前运行的进程及其进程标识符 (PID)。
+
+    - `pstree`：以树图的形式显示系统上的进程。
+
+    - `pwd`：（present working directory 的缩写）显示当前目录的完整路径。
+
+    - `reboot`：重启计算机而无需关闭并重新开启电源。
+
+    - `rm`：删除指定的文件和目录。
+
+    - `rmdir`：删除指定的空目录。
+
+    - `runlevel`：报告当前和之前的运行级别。
+
+    - `shred`：破坏文件。
+
+    - `spell`：检查拼写。
+
+    - `strings`：返回文件中每个可打印字符字符串。
+
+    - `su`：（substitute user 的缩写）在所有者无需先注销会话的情况下更改会话的所有。
+
+    - `tail`：默认读取文本的最后十行。
+
+    - `tar`：将一组文件转换为归包。
+
+    - `touch`：创建新空文件的简单方法。
+
+    - `tr`：翻译或删除字符。
+
+    - `unalias`：从当前用户的别名列表中删除项。
+
+    - `uname`：提供系统软件和硬件的基本信息。
+
+    - `uptime`：显示当前时间、系统自启动以来运行的时间、当前开启了多少用户会话以及平均负载。
+
+    - `w`：显示谁登录了系统以及他们在做什么。
+
+    - `wc`：默认统计文本中的行数、单词和字符数。
+
+    - `whatis`：提供命令行程序和其他类 Unix 操作系统相关主题的极简短描述。
+
+    - `whereis`：定位任何指定程序的二进制文件、源代码和手册页。
+
+    - `whoami`：返回当前登录会话所有者的用户名。
+
+
+    # 第 8 章：使用文本编辑器
+
+
+    文本编辑器是一种允许用户打开、查看、编辑、更改和存储纯文本的计算机程序。这些通常是字符和数字。然后这些内容会被计算机编码，以便它们对其他程序和用户具有意义。
+
+
+    除了命令行，Linux 发行版还将包含文本编辑器，你会在很多方面发现它非常有用。就像 Windows 操作系统中有文本编辑器一样，所有的 Linux 发行版也有。掌握使用文本编辑器的基础是非常重要的。编辑器有很多种，但当你理解了如何操作其中一个时，你就能轻松地操作其他的，可能只需要学习几个不同点。文本编辑器与文字处理器非常相似，只是它们更轻量，格式选项较少。它们的功能较少，仅处理文本文件。有些甚至不支持拼写检查和校对。
+
+
+    许多初学者倾向于忽略文本编辑器的重要性，并且依赖文字处理器进行所有的写作。然而，你很快就会发现，如果你需要在使用计算机方面更加灵活和多变，这个小功能至关重要。在
+    Linux 发行版中，文本编辑器甚至更有用。如果你打算编写任何代码，就必须使用文本编辑器。在使用命令行时，文本编辑器将形影相随。命令行和文本编辑器将让你完全独立对
+    GUI 的依赖。文本编辑器以纯文本格式保存，因此许多多样的程序都能读取这些文本，而文字处理器的内容只能用另一个文字处理器打开。这是一个巨大的优势，因为它使得纯文本在不同程序和操作系统之间具有高度的可移植性，而无需更改任何内容。
+
+
+    使用文本编辑器进行日常写作时，非常易用。你不需要学习任何东西；只需输入你想要的文本即可。它没有菜单或结构，也没有格式。这意味着你可以打开任何操作系统，找到文本编辑器，并写下任何你想写的内容。然后你将能够将这些纯文本带到另一个程序或操作系统。你甚至可以使用文本编辑器起草电子邮件，然后发送。
+
+
+    让我们来看一下 Linux 发行版中最流行的文本编辑器之一。
+
+
+    ## Vi 编辑器
+
+
+    这个编辑器几乎几乎所有的 Linux 发行版中。它简单易用（尽管初学者可能不认同），但非常强大。事实上，如果你只是想编写或编辑纯文本，可以尝试使用另一个编辑器。丰富的
+    Linux 用户会在编码或编写标记语言时广泛使用 Vi 编辑器。由于它在广泛的发行版可用，学习 Vi 变得非常重要。你可能想在只有精简安装的 Linux 系统或远程服务器上编辑文件；它一定会有
+    Vi 文本编辑器。
+
+
+    `Vim` 是 `Vi` 的新版本。它的意思是改进后的 `Vi`。`Vim` 继承了 `Vi` 的功能，但也增加了一些功能。
+
+    '
+- fmt: '
+
+    To get Vim, and now that you know how to use the command line, you should run
+    the following command:
+
+
+    ```bash
+
+    sudo apt-get install vim
+
+    ```
+
+
+    ![http://www.winterdom.com/weblog/content/binary/WindowsLiveWriter/Wombat_12AFD/VimWombat.png](images/00010.jpeg)
+
+
+    # Vim editor
+
+
+    Vim has so many commands, thus the impression that it is difficult to use, but
+    these support a wide range of functionality, lets list a few of these.
+
+
+    The Vi editor works in two modes: the insert mode and the viewing mode. The insert
+    mode is the editing mode, while the viewing mode is the command mode. You can
+    toggle through these modes by pressing the `esc` key.
+
+
+    - Cursor movement—`h`, `j`, `k`, `l` (left, down, up, and right)
+
+    - Delete character—`x`
+
+    - Delete line—`dd`
+
+    - Mode toggle—`Esc`, `Insert` (or `i`)
+
+    - Quit—`:q`
+
+    - Quit without saving—`:q!`
+
+    - Run a shell command—`:sh` (use `''exit''` to return)
+
+    - Save file—`:w`
+
+    - Text search—`/`
+
+    - `h` moves the cursor one character to the left.
+
+    - `j` moves the cursor down one line.
+
+    - `k` moves the cursor up one line.
+
+    - `l` moves the cursor one character to the right.
+
+    - `0` moves the cursor to the beginning of the line.
+
+    - `$` moves the cursor to the end of the line.
+
+    - `w` move forward one word.
+
+    - `b` move backward one word.
+
+    - `G` move to the end of the file.
+
+    - `gg` move to the beginning of the file.
+
+    - `.` move to the last edit.
+
+    - `v` highlight one character at a time.
+
+    - `V` highlight one line at a time.
+
+    - `Ctrl-v` highlight by columns.
+
+    - `p` paste text after the current line.
+
+    - `P` paste text on the current line.
+
+    - `y` yank text into the copy buffer.
+
+
+    These commands will help you learn more about this text editor. When you are done
+    and you want to save your work, you will hit escape, if in insert mode, and then
+    enter. A cursor will appear at the end of the screen. To write the file you are
+    currently on, enter `w`. If it is a different filename, use `w filename`.
+
+
+    To quit from this editor, you need to hit `q`. You will be asked to save if you
+    have not already saved your work. If you just want to quit without this reminder,
+    use `q!`. You could also use `zz`, which saves and exits.
+
+
+    VI and Vim are the most widely used text editors, I would suggest to you to first
+    use `Vim` before using other text editors. Once you get to work with this editor,
+    you can comfortably use any other editor without any trouble. This editor does
+    not require you use the mouse – just the keyboard and the screen.
+
+
+    # Conclusion
+
+
+    There are thousands of reasons why you should learn Linux in this age. Even if
+    you are not yet ready to make the switch from your current operating system to
+    Linux-based systems, learning how they operate is a useful skill. A recent survey
+    found out that employers are more likely to hire someone conversant with Linux-based
+    distributions since it shows that you are flexible and versatile. There are many
+    instances where using a Linux-based system will be more appropriate.
+
+
+    The Linux community is also another thing which should attract you. There are
+    many Linux users always eager to help you out. In most cases, any issue you encounter
+    will most likely have been resolved in the forums. So take your time, sign up
+    in a forum and go through the conversations to learn more about what is happening
+    in the Linux world. When you finally become an advanced user, give back to the
+    community be helping others. This is what makes the Linux community great and
+    such a big force.
+
+
+    We can list many reasons why you should be using Linux, but the most important
+    is the fact that you have the freedom to experiment and try out new things. The
+    command line gives you so much power to understand and control how your computer
+    works, the free software repositories, the multiple desktop feature, the hardware
+    support, using Linux on any computer, security, and interoperability with other
+    systems. All these reasons and many more make it essential to learn and be conversant
+    with Linux.
+
+
+    Thank you again for downloading this book!
+
+
+    I hope this book was able to help you with Linux and the command line. If you
+    liked this book, please check out my other books on the next few pages.
+
+
+    Finally, if you enjoyed this book and it was able to help you, please take the
+    time to help me by sharing your thoughts and posting a review on Amazon. It would
+    be greatly appreciated!
+
+
+    # Check out my other books
+
+
+    [Beginning of Excerpt] Raspberry PI 2: The Disaster To Master Step By Step User
+    Guide
+
+
+    The new Raspberry Pi 2 is able to run a wider range of the ARM GNU/Linux distributions,
+    the Microsoft 10 I0T, and the snappy Ubuntu core due to the change in the architecture
+    from the `ARMv6` instruction set to the `ARMv7` and advancements in the processor
+    speed and memory. We shall be looking at these operating systems in more detail
+    and how to install them.
+
+
+    The Raspberry Pi 2 is fully backwards compatible with the `Pi 1` and all the projects,
+    software, and hardware that were used on the `Pi 1`. It is able to integrate all
+    the projects that were on `Pi 1`, but it performs at a higher level due to the
+    increased power. This ensures a seamless transition for those willing to upgrade.
+    It has a complete identical form factor to its predecessor, even after managing
+    to pack much higher power. All connectors are in the same place, retaining the
+    same functionality. This means that any case or third party board add-ons you
+    were using before will still fit the new Pi 2. The circuit board is still run
+    from the 5V micro power adapter.
+
+
+    One thing that the Raspberry foundation should be commended for is sticking with
+    the same price even with the added power. In fact, they have been responsible
+    for bringing down the prices of embedded computers on the market. Before `Pi 1`,
+    it was not possible to find them at prices any lower than $100. This has enabled
+    more enthusiastic programmers, hobbyists, and students to try out their coding
+    skills on an inexpensive platform.
+
+
+    To demonstrate the increased performance of `Pi 2` over the previous models, the
+    Raspberry foundation created a quick test using a `Python` script that calculates
+    the approximation of Pi’s speed then displays it in visual form in the popular
+    Minecraft game. The `Pi 1` used 47 seconds to complete this calculation, while
+    the `Pi 2` used just three seconds. The quad-core processor is that fast. However,
+    the speed will also depend on whether you have optimized your `Pi 2` to run multithreaded,
+    which we will be looking at later. No matter how you use Raspberry, you will notice
+    a bump in performance once you upgrade to the `Pi 2`.
+
+
+    With all the added power and functionality it brings, the `Pi 2` is the one thing
+    you should have. The extra flexibility over previous models that allows you to
+    install and run a wider range of operating systems, including Windows 10 IoT operating
+    system for builders and creators, will make it more popular with all it can do.
+
+
+    [End of Excerpt] If you enjoyed this portion you can grab your copy in the link
+    on the next page.
+
+
+    [![](images/00011.jpeg)](http://amzn.to/1VDt3Gp)
+
+    '
+  raw: 'To get Vim, and now that you know how to use the command line, you should
+    run the following command:
+
+
+    sudo apt-get install vim
+
+
+    ![http://www.winterdom.com/weblog/content/binary/WindowsLiveWriter/Wombat_12AFD/VimWombat.png](images/00010.jpeg)
+
+
+    Vim editor
+
+
+    Vim has so many commands, thus the impression that it is difficult to use, but
+    these support a wide range of functionality, lets list a few of these.
+
+
+    The Vi editor works in two modes: the insert mode and the viewing mode. The insert
+    mode is the editing mode, while the viewing mode is the command mode. You can
+    toggle through these modes by pressing the esc key.
+
+
+    *   Cursor movement—h, j, k, l (left, down, up, and right)
+
+
+    *   Delete character—x
+
+
+    *   Delete line—dd
+
+
+    *   Mode toggle—Esc, Insert (or i)
+
+
+    *   Quit—:q
+
+
+    *   Quit without saving—:q!
+
+
+    *   Run a shell command—:sh (use ''exit'' to return)
+
+
+    *   Save file—:w
+
+
+    *   Text search—/
+
+
+    *   h moves the cursor one character to the left.
+
+
+    *   j moves the cursor down one line.
+
+
+    *   k moves the cursor up one line.
+
+
+    *   l moves the cursor one character to the right.
+
+
+    *   0 moves the cursor to the beginning of the line.
+
+
+    *   $ moves the cursor to the end of the line.
+
+
+    *   w move forward one word.
+
+
+    *   b move backward one word.
+
+
+    *   G move to the end of the file.
+
+
+    *   gg move to the beginning of the file.
+
+
+    *   `. move to the last edit.
+
+
+    *   v highlight one character at a time.
+
+
+    *   V highlight one line at a time.
+
+
+    *   Ctrl-v highlight by columns.
+
+
+    *   p paste text after the current line.
+
+
+    *   P paste text on the current line.
+
+
+    *   y yank text into the copy buffer.
+
+
+    These commands will help you learn more about this text editor. When you are done
+    and you want to save your work, you will hit escape, if in insert mode, and then
+    enter. A cursor will appear at the end of the screen. To write the file you are
+    currently on, enter w. If it is a different filename, use w filename.
+
+
+    To quit from this editor, you need to hit q. You will be asked to save if you
+    have not already saved your work. If you just want to quit without this reminder,
+    use q! You could also use zz, which saves and exits.
+
+
+    VI and Vim are the most widely used text editors, I would suggest to you to first
+    use Vim before using other text editors. Once you get to work with this editor,
+    you can comfortably use any other editor without any trouble. This editor does
+    not require you use the mouse – just the keyboard and the screen.
+
+
+    #   Conclusion
+
+
+    There are thousands of reasons why you should learn Linux in this age. Even if
+    you are not yet ready to make the switch from your current operating system to
+    Linux-based systems, learning how they operate is a useful skill. A recent survey
+    found out that employers are more likely to hire someone conversant with Linux-based
+    distributions since it shows that you are flexible and versatile. There are many
+    instances where using a Linux-based system will be more appropriate.
+
+
+    The Linux community is also another thing which should attract you. There are
+    many Linux users always eager to help you out. In most cases, any issue you encounter
+    will most likely have been resolved in the forums. So take your time, sign up
+    in a forum and go through the conversations to learn more about what is happening
+    in the Linux world. When you finally become an advanced user, give back to the
+    community be helping others. This is what makes the Linux community great and
+    such a big force.
+
+
+    We can list many reasons why you should be using Linux, but the most important
+    is the fact that you have the freedom to experiment and try out new things. The
+    command line gives you so much power to understand and control how your computer
+    works, the free software repositories, the multiple desktop feature, the hardware
+    support, using Linux on any computer, security, and interoperability with other
+    systems. All these reasons and many more make it essential to learn and be conversant
+    with Linux.
+
+
+    Thank you again for downloading this book!
+
+
+    I hope this book was able to help you with Linux and the command line. If you
+    liked this book, please check out my other books on the next few pages.
+
+
+    Finally, if you enjoyed this book and it was able to help you, please take the
+    time to help me by sharing your thoughts and posting a review on Amazon. It would
+    be greatly appreciated!
+
+
+    # Check out my other books
+
+
+    [Beginning of Excerpt] Raspberry PI 2: The Disaster To Master Step By Step User
+    Guide
+
+
+    The new Raspberry Pi 2 is able to run a wider range of the ARM GNU/Linux distributions,
+    the Microsoft 10 I0T, and the snappy Ubuntu core due to the change in the architecture
+    from the ARMv6 instruction set to the ARMv7 and advancements in the processor
+    speed and memory. We shall be looking at these operating systems in more detail
+    and how to install them.
+
+
+    The Raspberry Pi 2 is fully backwards compatible with the Pi 1 and all the projects,
+    software, and hardware that were used on the Pi 1\. It is able to integrate all
+    the projects that were on Pi 1, but it performs at a higher level due to the increased
+    power. This ensures a seamless transition for those willing to upgrade. It has
+    a complete identical form factor to its predecessor, even after managing to pack
+    much higher power. All connectors are in the same place, retaining the same functionality.
+    This means that any case or third party board add-ons you were using before will
+    still fit onto the new Pi 2\. The circuit board is still run from the 5V micro
+    power adapter.
+
+
+    One thing that the Raspberry foundation should be commended for is sticking with
+    the same price even with the added power. In fact, they have been responsible
+    for bringing down the prices of embedded computers on the market. Before Pi 1,
+    it was not possible to find them at prices any lower than $100\. This has enabled
+    more enthusiastic programmers, hobbyists, and students to try out their different
+    coding skills on an inexpensive platform. Even for gamers who want increased functionality
+    and possibilities in their video games, it has come in handy.
+
+
+    To demonstrate the increased performance of Pi 2 over the previous models, the
+    Raspberry foundation created a quick test using a Python script that calculates
+    the approximation of Pi’s speed then displays it in visual form in the popular
+    Minecraft game. The Pi 1 used 47 seconds to complete this calculation, while the
+    Pi 2 used just three seconds. The quad-core processor is that fast. However, the
+    speed will also depend on whether you have optimized your Pi 2 to run multithreaded,
+    which we will be looking at later. No matter how you use Raspberry, you will notice
+    a bump in performance once you upgrade to the Pi 2.
+
+
+    With all the added power and functionality it brings, the Pi 2 is the one thing
+    you should have. The extra flexibility over previous models that allows you to
+    install and run a wider range of operating systems, including Windows 10 IoT operating
+    system for builders and creators, will make it more popular with all it can do.
+
+
+    [End of Excerpt] If you enjoyed this portion you can grab your copy in the link
+    on the next page.
+
+
+    [![](images/00011.jpeg)](http://amzn.to/1VDt3Gp)'
+  toc: []
+  trans: '
+
+    要获取 Vim，既然你现在已经知道如何使用命令行，你应该运行以下命令：
+
+
+    ```bash
+
+    sudo apt-get install vim
+
+    ```
+
+
+    ![`www.winterdom.com/weblog/content/binary/WindowsLiveWriter/Wombat_12AFD/VimWombat.png`](img/00010.jpeg)
+
+
+    # Vim 编辑器
+
+
+    Vim 有许多命令，因此人们留下了它很难使用的印象，但这些命令支持广泛的功能，让我们列举几个。
+
+
+    Vi 编辑器在两种模式下工作：插入模式（insert mode）和视图模式（viewing mode）。插入模式是编辑模式，而视图模式是命令模式。你可以通过按下
+    `esc` 键这些模式之间切换。
+
+
+    - 光标移动—`h`, `j`, `k`, `l`（左、下、上、右）
+
+    - 删除字符—`x`
+
+    - 删除行—`dd`
+
+    - 模式切换—`Esc`, `Insert`（或 `i`）
+
+    - 退出—`:q`
+
+    - 不保存退出—`:q!`
+
+    - 运行 shell 命令—`:sh`（使用 `''exit''` 返回）
+
+    - 保存文件—`:w`
+
+    - 文本搜索—`/`
+
+    - `h` 将光标向左移动一个字符。
+
+    - `j` 将光标向下移动一行。
+
+    - `k` 将光标向上移动一行。
+
+    - `l` 将光标向右移动一个字符。
+
+    - `0` 将光标移动到行首。
+
+    - `$` 将光标移动到行尾。
+
+    - `w`向前移动一个单词。
+
+    - `b` 向后移动一个单词。
+
+    - `G` 移动到文件末尾。
+
+    - `gg` 移动到文件开头。
+
+    - `.` 移动到上次编辑的地方。
+
+    - `v` 一次高亮一个字符。
+
+    - `V` 一次高亮一行。
+
+    - `Ctrl-v` 列高亮。
+
+    - `p` 在当前行之后粘贴文本。
+
+    - `P` 在当前行粘贴文本。
+
+    - `y` 将文本复制到剪贴缓冲区。
+
+
+    这些命令将帮助你进一步了解这个文本编辑器。当你完成并想保存工作时，按下 esc 键（如果处于插入模式），然后按回车键。光标将出现在屏幕底部。要写入当前所在的文件，输入
+    `w`。如果是不同的文件名，使用 `w filename`。
+
+
+    要退出此编辑器，你需要按下 `q`。如果你还没有保存工作，系统会询问你是否保存。如果你只想退出而不想要此提示，请使用 `q!`。你也可以使用 `zz`，它可以保存并退出。
+
+
+    VI 和 Vim 是最广泛使用的文本编辑器，我建议你在使用其他编辑器之前先使用 `Vim`。一旦你习惯了使用这个编辑器，你就可以轻松地使用任何其他编辑器而没有任何任何问题。这个编辑器不需要使用鼠标——只需要键盘和屏幕。
+
+
+    # 结论
+
+
+    在这个时代，有成千上万理由你应该学习 Linux。即使你还没有准备好从当前的操作系统切换到基于 Linux 的系统，学习它们的运行方式也是一项实用的技能。最近的调查发现，雇主更倾向于雇用精通
+    Linux 发行版的人，因为这表明你灵活灵活且多才。在许多情况下，使用基于 Linux 的系统会更合适。
+
+
+    Linux 社区也是另一个吸引你的点。有很多 Linux 用户总是渴望为你提供帮助。在大多数情况下，你遇到的任何问题很可能已经在论坛中得到了解决。所以请花点时间，注册一个论坛并浏览对话，以了解更多
+    Linux 世界正在发生的事情。当你最终成为高级用户时，请回馈社区，帮助他人。这就是让 Linux 社区变得伟大并成为如此强大力量的原因。
+
+
+    我们可以列出许多你应该使用 Linux 的理由，但最重要的一点是你有自由实验和尝试新事物。命令行赋予了你巨大的力量来理解和控制你的计算机如何工作、免费软件仓库、多桌面功能、硬件支持、在任何计算机上使用
+    Linux、安全性以及与其他系统的互操作性。所有这些原因以及更多原因使得学习并精通 Linux 变得至关重要。
+
+
+    再次感谢你下载这本书！
+
+
+    我希望这本书能够帮助你学习 Linux 和命令行。如果你喜欢这本书，请查阅接下来的几页中我的我的其他书籍。
+
+
+    最后，如果你喜欢这本书并且它对你有所帮助，请花时间通过分享你的想法并在 Amazon 上发表评论来帮助我。我将不胜感激！
+
+
+    # 查阅我的其他书籍
+
+
+    [节选开始] Raspberry PI 2: 逐步掌握的灾难之路用户指南
+
+
+    由于架构从 `ARMv6` 指令集 变为 `ARMv7`，以及处理器速度和内存的进步，新的 Raspberry Pi 2 能够运行更广泛的 ARM GNU/Linux
+    发行版、微软 10 IoT 以及快速的 Ubuntu core。我们将更详细地查看这些操作系统以及如何安装它们。
+
+
+    Raspberry Pi 2 与 `Pi 1` 以及所有在 `Pi 1` 上使用的项目、软件和硬件完全兼容。它能够整合 `Pi 1` 上的所有项目，但由于功率的增加，它的性能更高。这确保了愿意升级的用户可以无缝衔接。它与前代产品具有完全相同的外形，即使在集成了更高的功率之后也是如此。所有的接口都在相同的位置。这意味着你之前使用的任何外壳或第三方扩展板仍然适用于
+    Pi 2。电路板仍然由 5V 微型电源适配器供电。
+
+
+    Raspberry 基金值得赞誉的一点是在功率增加的情况下仍保持相同的价格。事实上，他们降低了市场上嵌入式电脑的价格。在 `Pi 1` 之前，无法找到低于
+    100 美元的产品。这让更多热情程序员、爱好者和学生能够在廉价平台上尝试他们的编程技能。
+
+
+    为了演示 `Pi 2` 相较于旧模型的性能提升，Raspberry 基金创建了一个使用 `Python` 脚本的快速测试，计算 Pi 的近似值，然后在流行的
+    Minecraft 游戏中以视觉形式显示。`Pi 1` 完成此计算用了 47 秒，而 `Pi 2` 仅用了三秒。四内核处理器就是那么快。然而，速度还取决于你是否优化了
+    `Pi 2` 以运行多线程，我们稍后会讨论。无论你如何使用 Raspberry，一旦你升级到 `Pi 2`，你都会发现性能有所提升。
+
+
+    由于它带来了所有额外的功率和功能，`Pi 2` 是你应该拥有的东西。它比旧模型的额外灵活性允许你安装和运行更广泛的操作系统，包括面向构建者和创造者的 Windows
+    10 IoT 操作系统，这会让它因其功能更加受欢迎。
+
+
+    [节选结束] 如果你喜欢这部分，可以在下一页的链接中购买副本。
+
+
+    ![](http://amzn.to/1VDt3Gp)
+
+
+    '

@@ -1,0 +1,1465 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 569 910" preserveaspectratio="none">
+<image width="569" height="910" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000_split_000.html"></span></p>
+<div class="calibre1">
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre6">Linux</span></p>
+<p><span class="calibre8">The Disaster to Master Step by Step</span></p>
+<p><span class="calibre8">Guide to Learning Linux and the Command
+Line</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre10">By Matt Eleck</span></p>
+</div>
+<p><span id="part0000_split_001.html"></span></p>
+<section id="part0000_split_001.html_calibre_pb_0"
+class="calibre11 calibre1">
+<h1 class="calibre11"><br />
+<span id="part0000_split_001.html__Toc425288471"
+class="calibre14"></span><span
+id="part0000_split_001.html__Toc426143301"
+class="calibre14"></span><span
+id="part0000_split_001.html__Toc427052347" class="calibre14"><span
+class="calibre15">Introduction</span></span></h1>
+<p><span class="calibre3">I want to thank you and congratulate you for
+downloading the book, Linux: The Disaster to Master Step by Step Guide
+to Learning Linux and the Command Line.</span></p>
+<p><span class="calibre3">Linux is an operating system that is very
+popular with programmers and developers. Even the average computer user
+wants to learn how to use this system due to the unique capabilities
+that this system offers.</span></p>
+<p><span class="calibre3">Let us look at some statistics on the usage of
+this operating system. About 94% of the worl</span><span
+class="calibre16">d’</span><span class="calibre3">s supercomputers are
+powered by Linux. More than half of the servers powering the Internet
+run on Linux. Android devices, many desktop computers, and most kinds of
+hardware run on Linux. Thus, it is very important to know how to use
+this system.</span></p>
+<p><span class="calibre3">There is a misplaced misconception that the
+Linux OS and Linux distribution families are complex and difficult to
+understand. This is not the case. Linux, just like other operating
+systems, is easy to learn and understand. The misconception probably
+arises from the fact that most computer users get used to Windows before
+they get to learn other systems. No making the switch becomes
+challenging but it should</span><span class="calibre16">n’</span><span
+class="calibre3">t be the case.</span></p>
+<p><span class="calibre3">In this eBook, I am going to take you through
+everything you need to know about Linux, the command line, and the
+Graphical User Interface. If you are a budding developer or programmer,
+the average computer user, or you just want to learn about this OS, you
+will find this guide interesting and informative. It does not matter if
+you have previous Linux experience; I will assume that you are a
+complete beginner.</span></p>
+<p><span class="calibre3">This guide will serve as training, and by the
+time we are through, you should be able to have a good working knowledge
+of Linux, navigate through any Linux distribution easily from both the
+command line and the Graphical User Interface, and learn the system
+configurations and common applications of Linux.</span></p>
+<p><span class="calibre3">Thanks again for downloading this book, I hope
+you enjoy it!</span></p>
+<div id="part0000_split_001.html_calibre_pb_3" class="calibre12">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_002.html"></span></p>
+<div class="calibre1">
+<p><br />
+<span class="calibre19">Copyright © 2015 by NetTrade
+Publications4</span></p>
+<p><span class="calibre3">All rights reserved. No part of this book may
+be reproduced in any form without permission in writing from the author.
+Reviewers may quote brief passages in reviews.</span></p>
+<p><span class="calibre19">Disclaimer</span></p>
+<p><span class="calibre3">No part of this publication may be reproduced
+or transmitted in any form or by any means, mechanical or electronic,
+including photocopying or recording, or by any information storage and
+retrieval system, or transmitted by email without permission in writing
+from the publisher.</span></p>
+<p><span class="calibre3">While all attempts and efforts have been made
+to verify the information held within this publication, neither the
+author nor the publisher assumes any responsibility for errors,
+omissions, or opposing interpretations of the content herein.</span></p>
+<p><span class="calibre3">This book is for entertainment purposes only.
+The views expressed are those of the author alone, and should not be
+taken as expert instruction or commands. The reader of this book is
+responsible for his or her own actions when it comes to reading the
+book.</span></p>
+<p><span class="calibre3">Adherence to all applicable laws and
+regulations, including international, federal, state, and local
+governing professional licensing, business practices, advertising, and
+all other aspects of doing business in the US, Canada, or any other
+jurisdiction is the sole responsibility of the purchaser or
+reader.</span></p>
+<p><span class="calibre3">Neither the author nor the publisher assumes
+any responsibility or liability whatsoever on the behalf of the
+purchaser or reader of these materials.</span></p>
+<p><span class="calibre3">Any received slight of any individual or
+organization is purely unintentional.</span></p>
+</div>
+<p><span id="part0000_split_003.html"></span></p>
+<section id="part0000_split_003.html_calibre_pb_5"
+class="calibre20 calibre1">
+<h1 class="calibre20"><br />
+</h1>
+<p><span id="part0000_split_003.html_toc" class="calibre14"><span
+class="calibre22">Table of Contents</span></span></p>
+<p><span class="calibre14"></span><a
+href="#part0000_split_001.html__Toc427052347" class="calibre14"><span
+class="calibre23">Introduction</span></a></p>
+<p><a href="#part0000_split_005.html__Toc427052348"
+class="calibre14"><span class="calibre23">Chapter 1</span><span
+class="calibre24">:</span></a><span class="calibre25"> </span><a
+href="#part0000_split_006.html__Toc427052349" class="calibre14"><span
+class="calibre24">Starting Off With Linux</span></a></p>
+<p><a href="#part0000_split_007.html__Toc427052350"
+class="calibre14"><span class="calibre23">Chapter 2</span><span
+class="calibre24">:</span></a><span class="calibre25"> </span><a
+href="#part0000_split_007.html__Toc427052351" class="calibre14"><span
+class="calibre24">Installing Linux</span></a></p>
+<p><a href="#part0000_split_008.html__Toc427052352"
+class="calibre14"><span class="calibre23">Chapter 3</span><span
+class="calibre24">:</span></a><span class="calibre25"> </span><a
+href="#part0000_split_008.html__Toc427052353" class="calibre14"><span
+class="calibre24">Importing Your Data</span></a></p>
+<p><a href="#part0000_split_009.html__Toc427052354"
+class="calibre14"><span class="calibre23">Chapter 4</span><span
+class="calibre24">:</span></a><span class="calibre25"> </span><a
+href="#part0000_split_009.html__Toc427052355" class="calibre14"><span
+class="calibre24">Installing and Updating Programs</span></a></p>
+<p><a href="#part0000_split_010.html__Toc427052356"
+class="calibre14"><span class="calibre23">Chapter 5</span><span
+class="calibre24">:</span></a><span class="calibre25"> </span><a
+href="#part0000_split_010.html__Toc427052357" class="calibre14"><span
+class="calibre24">Introduction to the Command Line</span></a></p>
+<p><a href="#part0000_split_011.html__Toc427052358"
+class="calibre14"><span class="calibre23">Chapter 6</span><span
+class="calibre24">:</span></a><span class="calibre25"> </span><a
+href="#part0000_split_011.html__Toc427052359" class="calibre14"><span
+class="calibre24">Running Commands</span></a></p>
+<p><a href="#part0000_split_012.html__Toc427052360"
+class="calibre14"><span class="calibre23">Chapter 7</span><span
+class="calibre24">:</span></a><span class="calibre25"> </span><a
+href="#part0000_split_012.html__Toc427052361" class="calibre14"><span
+class="calibre24">Getting Help with the Command Line</span></a></p>
+<p><a href="#part0000_split_013.html__Toc427052362"
+class="calibre14"><span class="calibre23">Chapter 8</span><span
+class="calibre24">:</span></a><span class="calibre25"> </span><a
+href="#part0000_split_013.html__Toc427052363" class="calibre14"><span
+class="calibre24">Using a Text Editor</span></a></p>
+<p><a href="#part0000_split_014.html__Toc427052364"
+class="calibre14"><span class="calibre23">Conclusion</span></a></p>
+<p><a href="#part0000_split_015.html__Toc427052365"
+class="calibre14"><span class="calibre23">Check out my other
+books</span></a></p>
+<div id="part0000_split_003.html_calibre_pb_8" class="calibre27">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_004.html"></span></p>
+<section id="part0000_split_004.html_calibre_pb_10"
+class="calibre11 calibre1">
+<h1 class="calibre11"><span class="calibre15">Other Books by Matt Eleck
+</span></h1>
+<p><span class="calibre30"> </span></p>
+<p><a href="http://amzn.to/1S60eTM"><span class="calibre31">Raspberry Pi
+2</span></a></p>
+<p><a href="http://amzn.to/1S60eTM"><span
+class="calibre32"> </span></a></p>
+<p><a href="http://amzn.to/1S60eTM"><span class="calibre33">The Disaster
+to Master Step By Step User Guide</span></a><span class="calibre32">
+</span></p>
+<div id="part0000_split_004.html_calibre_pb_11" class="calibre27">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_005.html"></span></p>
+<div class="calibre1">
+<p><br />
+<span id="part0000_split_005.html__Toc426143303"></span><span
+id="part0000_split_005.html__Toc427052348"></span><span
+id="part0000_split_005.html__Toc425288473"><span
+id="part0000_split_005.html_4S-92ffca17780d4f669080319a5899288a"
+class="calibre3">Chapter 1:</span></span></p>
+</div>
+<p><span id="part0000_split_006.html"></span></p>
+<section id="part0000_split_006.html_calibre_pb_13"
+class="calibre11 calibre1">
+<h1 class="calibre11"><span id="part0000_split_006.html__Toc426143304"
+class="calibre14"></span><span
+id="part0000_split_006.html__Toc427052349" class="calibre14"><span
+class="calibre15">Starting Off With Linux</span></span></h1>
+<p><span class="calibre3">You have decided to learn about Linux. Maybe
+you want to make the switch from another operating system to this
+wonderful OS you have been hearing about and wanting to use. In this
+first chapter, I am going to take you through different reasons why you
+might want to use Linux, the behind the scenes working of Linux,
+installing Linux and how to begin using it. All of this is meant to ease
+you into the Linux world before we can get to the real stuff.</span></p>
+<p><span class="calibre3">To start us off, what is Linux? In the
+simplest of terms, Linux is an operating system that enables your
+computer to work. Windows, Mac OS, iOS, and Android are all operating
+systems. They provide a platform on which different software work on
+hardware. Thus, an operating system interacts with the hardware,
+software, user and anything else that is connected to your device to
+make them all work together to deliver a certain function.</span></p>
+<p><span class="calibre16">“</span><span class="calibre3">What is the
+difference between all these operating systems? Can I just use any of
+them without switching</span><span class="calibre16">?</span><span
+class="calibre3">” you might ask. Each of these operating systems,
+especially Linux, has their own way of doing things. In the
+introduction, we have looked at some statistics on Linux usage as an
+operating system. On virtually all supercomputers and most of the
+Internet servers, Linux is the preferred OS. Among developers and
+programmers, Linux is the preferred OS. This is because they like the
+Linux way of doing things. Let us look at the advantages Linux has over
+other OS.</span></p>
+<p><span class="calibre3">The Linux operating system is very secure.
+There is a minimal chance of being infected with a virus when using the
+Linux OS. Most Linux users do not run antivirus software on their
+computers due to this – maybe only those that deal with specialized and
+sensitive uses. As you might know, an antivirus slows down your
+computer.</span></p>
+<p><span class="calibre3">The Linux operating system is very flexible.
+Unlike other operating systems, Linux is very flexible in many different
+aspects. You can choose your user interface from many different options
+unlike Windows, which only has one. Linux runs on a wide range of
+hardware, supercomputers, servers, desktops, and smartphones. It can run
+on old hardware, computers with low specs, and on super-fast modern
+computers. The Linux OS provides advanced security features such as
+strong encryption. These and more features make this OS very flexible to
+use in a wide range of common and advanced uses.</span></p>
+<p><span class="calibre3">Another major point of departure when
+comparing Linux and other operating systems is the ideological
+differences. Linux is open source software, meaning it is free. Anybody
+can use it for whatever purpose they wish, modify it, share with the
+community, and study how it works without breaching any regulations.
+This is very important to the Linux community, as there is a difference
+in opinion regarding whether software users ought to be restricted on
+what they can and cannot do. The freedom that the Linux operating system
+offers is what drives programmers and developers to it, since they can
+play around with it as they seek to innovate.</span></p>
+<p><span class="calibre3">In light of that, the Linux OS is not
+developed by a single person or company. It is the product of a massive
+community that continually develops Linux and other programs associated
+with it for the greater use of humanity. For this reason, you need not
+worry about the different issues we face nowadays of surveillance,
+monitoring, or your online activity being tracked when using Linux and
+other associated open source programs.</span></p>
+<p><span class="calibre3">All of these features make the Linux OS
+appealing to a vast majority of people. Even people who have not used
+Linux before are willing to learn and are only held back by the
+assumption that the learning curve will be stiff. A simple way through
+which Linux is helping humanity is the use of old hardware to run the
+free Linux OS and other open source programs as a very cheap way to get
+low cost computers to developing nations and schools.</span></p>
+<p><span class="calibre3">Even if you are not interested in any of the
+things we have just discussed about Linux, it is still worth trying; you
+might fall in love with it, and if you do not, you will have lost
+nothing, but gained knowledge about a different operating system. Let us
+move on to the next chapter, where we shall discuss installing
+Linux.</span></p>
+<div id="part0000_split_006.html_calibre_pb_14" class="calibre27">
+
+</div>
+</section>
+<p><span id="part0000_split_007.html"></span></p>
+<div id="part0000_split_007.html__Toc425288474" style="height:0pt">
+
+</div>
+<div class="calibre1">
+<h1 class="calibre11" id="part0000_split_007.html_calibre_pb_15"><span
+id="part0000_split_007.html__Toc425288474" class="calibre14"><br />
+</span><span id="part0000_split_007.html__Toc426143305"
+class="calibre14"></span><span
+id="part0000_split_007.html__Toc427052350" class="calibre14"><span
+class="calibre15">Chapter 2:</span></span></h1>
+<h1 class="calibre34"><span id="part0000_split_007.html__Toc426143306"
+class="calibre14"></span><span
+id="part0000_split_007.html__Toc427052351" class="calibre14"><span
+class="calibre15">Installing Linux</span></span></h1>
+<p><span class="calibre3">Since you have decided to learn about the
+Linux operating system, you need to install the OS, since you cannot
+just learn by reading a guide. You have to do it at practically every
+stage. It is like riding a bike; you have to actually get on one and
+ride. Before we get to the various ways through which you can install
+this OS, you need to have a backup of all the important files on your
+computer. These are especially those in the partition that contains the
+existing OS. It does not mean that Linux will somehow gobble up these
+files, but it is better to have some form of backup in case of anything
+going wrong. In most instances, these files will remain intact, but it
+is better to be safe than sorry. You can back up these files onto a
+removable hard drive, burn them onto a CD, or back them up in the cloud.
+Make it a habit to back up your files every time – not just when
+installing a new OS.</span></p>
+<p><span class="calibre3">There are different versions of Linux
+available. The most popular one (and most suited for a beginner) is
+Ubuntu. This version of Linux is easy to use, quick to understand, and
+very flexible. It will work just fine and will introduce you into the
+world of Linux in a really gentle way. For a start, we do not have to
+install this OS; we can run it from a CD, and only when we are sure we
+want it should we install it. You will run the entire Linux OS from the
+CD, and no changes will be made to your computer. However, one drawback
+of doing this is that the OS will be far slower than when installed on
+your hard drive. This might give you a wrong impression about the speed
+of Linux OS. The opposite of this is actually true: Linux is faster than
+Windows. In fact, if you have been experiencing speed issues with your
+Windows OS for any reason, it might be a good time to try out
+Linux.</span></p>
+<p><span class="calibre3">If you go the Live CD way, just mount the CD
+and reboot your computer. When your computer has started and displayed
+the manufacture</span><span class="calibre16">r’</span><span
+class="calibre3">s logo, you will need to press a certain key to tell it
+to boot from the CD. This key differs with various manufacturers, but it
+is either F2, F12, or DEL. If you are not sure of which, just quickly
+press all of these. One of these will work and display the boot menu.
+Select the entry that is the location of your CD drive. A menu will come
+up which will have the Linux logo. Select the entry thatread</span><span
+class="calibre16">s“</span><span class="calibre3">Ubuntu with
+Gnome</span><span class="calibre16">.</span><span class="calibre3">”
+This will load the Linux OS and lead you to the desktop environment.
+This is the main interface where you will choose what to do. There is
+also the command line, which we will look at later.</span></p>
+<p><span class="calibre3">If you have never used Linux before, you will
+notice that it is different from other operating systems. However, the
+concept is the same when it comes to using the desktop interface. The
+mouse will work in the same way – left-click selects options,
+right-click pulls up a menu, double-clicking opens up an option, and so
+forth. Dragging an item will also work the same.</span></p>
+<p><span class="calibre3">The Linux OS has lots of installed programs by
+default. You can get to work immediately after you install the OS,
+unlike Windows, which will require you to install other programs before
+you can work on even the basic stuff. Some of the programs you will find
+here will be familiar since they can operate on different platforms,
+while others will be specifically for the Linux OS. Some of these
+default programs are Firefox, LibreOffice, Ubuntu One, Thunderbird,
+Movie Player, Empathy, Banshee, and Shotwell, amongst many others. These
+programs are open source as well and perform different basic functions
+such as browsing the Internet, word processing, photo management,
+backup, and more, as you will learn when you explore them. In the user
+menu, launch the system settings dialog box to personalize settings such
+as wallpaper, keyboard layout, and others.</span></p>
+<p><span class="calibre3">At this point, you should play around with the
+OS and different programs to learn by yourself, since it is not possible
+to cover all minute details in one guide. Do not be afraid of destroying
+anything, as Linux is basically a risk-free environment. Also, remember
+that we have booted from a CD, and no permanent changes are made to your
+hard drive. You should also test your hardware to make sure everything
+works. You do not need to test the graphics card since it is already
+working if you are at this point. You will need to test the wireless
+cards you might be using with other operating systems.</span></p>
+<p><span class="calibre3">By now, you have had a feel of the Linux OS,
+seen how it works (albeit in a very small way), tested various programs,
+and maybe even done some personalization. It is time to go deeper. At
+this point, I suggest we install the OS on the hard drive to have a good
+feel of it. I hope you have done the backup, since now we are making
+changes to the hard drive. The installation process is easy when you are
+at this point. You go to the desktop of the live CD, then double-click
+install. This will lead you to the installation screens, where you will
+get some straightforward questions along the installation progress. I
+will only highlight where you should be careful.</span></p>
+<p><span class="calibre3">On the third installation screen, you will get
+some options for how the OS should be installed. The options will be to
+install alongside the existing OS, replace the existing OS, or let you
+do your own thing. This is a very important stage. For a beginner and
+people who still want to keep the existing OS in case they want to fall
+back to it at some point, choose the first option. This will lead to
+partition of the drive where your existing OS is located, just as we
+partition hard drives into different partitions. This option will make
+both operating systems available to you. You will be choosing which one
+to use at the boot stage. This is the best option at this point. If you
+want to use them for different functions, this will come in
+handy.</span></p>
+<p><span class="calibre3">Another installation screen to pay particular
+attention to is the security screen towards the end. This will be asking
+for the computer name, username, and password. Choose these carefully,
+especially the password, as it provides security to your computer. The
+screen will also provide an option to encrypt the home directory. This
+provides additional security in case somebody accesses it.</span></p>
+<p><span class="calibre3">You can now finish the installation and reboot
+your computer. Remember to choose the Ubuntu OS when the computer asks
+you which OS to boot from.</span></p>
+<div id="part0000_split_007.html_calibre_pb_18" class="calibre27">
+
+</div>
+</div>
+<p><span id="part0000_split_008.html"></span></p>
+<div class="calibre1">
+<h1 class="calibre11" id="part0000_split_008.html_calibre_pb_19"><br />
+<span id="part0000_split_008.html__Toc426143307"
+class="calibre14"></span><span
+id="part0000_split_008.html__Toc427052352"
+class="calibre14"></span><span
+id="part0000_split_008.html__Toc425288475" class="calibre14"><span
+class="calibre15">Chapter 3:</span></span></h1>
+<h1 class="calibre34"><span id="part0000_split_008.html__Toc426143308"
+class="calibre14"></span><span
+id="part0000_split_008.html__Toc427052353" class="calibre14"><span
+class="calibre15">Importing Your Data</span></span></h1>
+<p><span class="calibre3">Your operating system is ready to use.
+However, you need to import your data from the other partition. To do
+so, you will need to launch the activities overview from your desktop.
+Select the filing cabinet icon at the bottom to launch Nautilus. This is
+the file manager for Ubuntu OS. You need to navigate through the file
+manager. On the left of the window, you will find a panel with
+bookmarked locations such as Home and Downloads. Above these will be an
+entry that will read something like 250 GB file system. (This will
+actually depend on the size of your partition.)</span></p>
+<p><img src="images/00001.jpeg" class="calibre36"
+alt="http://www.securitronlinux.com/wp-content/uploads/2012/03/nautilus.png" /></p>
+<p><span class="calibre3">This is the partition where your other
+operating system and files are located. You will then double-click this
+entry to open and access all your files and folders. For easy access
+with your new OS, you might need to copy these files to the Ubuntu
+partition. You can do so by copying and pasting the normal way we do on
+other operating systems, or by dragging and dropping. It will be better
+if you store these files and folders in the appropriate location within
+Ubuntu such that documents go to the Document section, and music and
+pictures do the same for their respective sections. You might want to
+place them in the home folder for quicker access. It will depend on your
+preferences. You can rearrange these folders at any other time you
+wish.</span></p>
+<p><span class="calibre3">A quick note here: If you work on these files
+a lot, it will be good if you choose to stick to one OS, rather than
+switch between the two installed OS. If you switch around, these files
+will mostly be out of sync. Alternatively, you could choose to work on
+these files while they are still in the Windows partition. This will be
+a little hectic for you since each time you require a file, you will go
+through the file manager to access it. However, issues of sync will not
+arise.</span></p>
+<p><span class="calibre19">Importing your mail</span></p>
+<p><span class="calibre3">Emails are an important part of our daily
+activities. Virtually all of our online communication is through emails.
+While migrating to Windows to Linux, you will need to move with your
+email as well. You need to move your email profile in its entirety for a
+smooth transition. There are different email clients that you might be
+using; some are cross-platform, while others operate on just one
+platform. Outlook and Express are Windows specific, but do not worry;
+even these can be moved to another Linux-based email client smoothly.
+You will need to import the data from the Windows specific email client
+to a cross-platform client on Windows, and then copy this over to your
+Linux OS. Thunderbird is a very popular email client on Linux and I
+suggest we use it for this purpose. You will have to install Thunderbird
+on your Windows to import Outlook settings into it. Once you do this, it
+will be easy to import now from Thunderbird on Windows to Thunderbird on
+Linux. All of your emails will be as intact as they can be; nothing will
+be lost at all. Let us look at how to do this. Even if you are just
+experimenting with Linux, it will be fun to know how to do
+this.</span></p>
+<p><span class="calibre3">To import emails from Outlook or any other
+email client to Thunderbird on Windows, you need to install Thunderbird
+and then launch it. When it asks you whether to make it your default
+email application, say no. Go to Tools and Import. Select Mail and click
+Next. Note that the email client you are importing from must be your
+default mail.</span></p>
+<p><img src="images/00002.jpeg" class="calibre37"
+alt="1e78f7f724ed9295cabef9d653f02e6b-1280168514-828-2.png" /></p>
+<p><span class="calibre3">In the next window, chose the email client you
+are importing from, either Outlook or Express, and then click Finish.
+This will have imported your mail to Thunderbird.</span></p>
+<p><span class="calibre19">Importing Thunderbird from Windows to
+Linux</span></p>
+<p><span class="calibre3">We can now go ahead and import these settings
+and data from Thunderbird on Windows to Thunderbird on Linux. If you
+have been using Thunderbird, then you start from this point.</span></p>
+<p><span class="calibre3">Go to Thunderbird. On File, click Compact
+Folders. This move is essential but not a must; it helps in cleaning up
+your mail folders so that when you migrate, you do not have issues with
+incorrect email counts.</span></p>
+<p><span class="calibre3">The next step is to locate the profile folder
+on Windows. It is easiest located using the command prompt.</span></p>
+<p><span class="calibre3">cd %APPDATA%\\Thunderbird</span></p>
+<p><span class="calibre3">Once you have found the profile folder
+Thunderbird, go to Profiles. While here, search for a folder which will
+be randomly named but will end with .default. Copy this folder:
+</span><span class="calibre19">Thunderbird&gt;Profiles&gt;xxxx.default
+</span><span class="calibre3">(you can copy this folder in a partition
+that you can access easily in your Linux OS or copy it to a removable
+drive.)</span></p>
+<p><span class="calibre3">Move over to Linux now. Thunderbird will be a
+default program in Ubuntu. Go to the home folder on Linux and choose
+View &gt; Show Hidden Files. You will find a folder named
+.mozilla-thunderbird. Open this folder and paste the copied profile
+folder from Windows.</span></p>
+<p><span class="calibre3">The last step you need to take to get your
+mail up and running in Linux. Inside </span><span
+class="calibre19">Thunderbird</span><span class="calibre3">, you need to
+make a file called </span><span
+class="calibre19">profiles.ini</span><span class="calibre3">. Do a
+right-click and create a new text file in the folder, and name it
+</span><span class="calibre19">profiles.ini</span><span
+class="calibre3">. Open up this new file in a text editor, and paste in
+the following:</span></p>
+<p><span class="calibre3">[General]</span></p>
+<p><span class="calibre3">StartWithLastProfile=1</span></p>
+<p><span class="calibre3">[Profile0]</span></p>
+<p><span class="calibre3">Name=default</span></p>
+<p><span class="calibre3">IsRelative=1</span></p>
+<p><span class="calibre3">Path=xxxxxxxx.default</span></p>
+<p><span class="calibre3">Replace the xxxxxxxx with the real name of
+your profile folder that you pasted. Save the file and quit, and now
+launch Thunderbird. Your email should load up as if nothing has
+happened, and all your archives should be up and rolling.</span></p>
+<p><span class="calibre3">This is a hectic process for a beginner in
+Linux, but it will help you understand the basic working of the Ubuntu
+OS. A simpler way to do this would be using an IMAP server. IMAP mail
+servers do not store your emails on your hard drive, but rather on a
+server, so all you need is to configure your mail client with your IMAP
+server. IMAP mail servers are compatible with multiple email clients
+across different platforms. You will then log in to your new system and
+your email account will appear in your new system as it did in the old
+email client.</span></p>
+<p><span class="calibre19">Synchronizing your browser</span></p>
+<p><span class="calibre3">For a seamless browsing experience, you need
+to sync your browser so that you can just continue where you left off on
+the new platform. Today, this is easy, as all major browsers are on both
+Windows and Linux systems. You need to ensure that you sync your data on
+your current browser, and when you launch it on Ubuntu, all your data
+will be available including bookmarks, cookies, history, app,
+extensions, and passwords. If you are using Chrome, you need to sign in
+using your Gmail account and then go to Menu, click Settings, then
+Advanced Settings and sync the information you want to migrate. Note
+that this information will still be available in Windows and anything
+else you do on Linux will automatically sync, so no matter the OS you
+choose to use, your browsing experience will be seamless. Chrome, Opera,
+Mini, and Mozilla will be found in the Ubuntu repositories ready to be
+downloaded.</span></p>
+<p><span class="calibre19">Installed programs</span></p>
+<p><span class="calibre3">Most of the programs you have installed on
+Windows will be important to you. You probably use them regularly and
+want them on the Linux OS still. The best thing here is to go to your
+list of installed programs one by one make sure you replicate them on
+Linux. You can do this by checking if the same program is available for
+Linux. Just like the browsers, many programs (except the Microsoft-based
+ones) will be available for the Linux operating systems. Check onthe
+progra</span><span class="calibre16">m’</span><span class="calibre3">s
+website if this is the case. If you confirm there is a version for
+Linux, check it out in the repository and install it. In case there is
+no version for Linux, check for an equivalent program. For instance, for
+Microsoft Office, you could use Open Office or LibreOffice, which are
+almost the same in terms of functionality. There is another alternative,
+Wine, which is an open source software designed to run applications
+designed for Windows on Linux. It is a Windows emulator. However, use
+this only as a last resort, as it can slow down your computer. You can
+still switch to the Windows OS if you have dual installation if the
+application is only run on Windows and is essential for your
+work.</span></p>
+<div id="part0000_split_008.html_calibre_pb_22" class="calibre27">
+
+</div>
+</div>
+<p><span id="part0000_split_009.html"></span></p>
+<div class="calibre1">
+<h1 class="calibre11" id="part0000_split_009.html_calibre_pb_23"><br />
+<span id="part0000_split_009.html__Toc426143309"
+class="calibre14"></span><span
+id="part0000_split_009.html__Toc427052354"
+class="calibre14"></span><span
+id="part0000_split_009.html__Toc425288476" class="calibre14"><span
+class="calibre15">Chapter 4:</span></span></h1>
+<h1 class="calibre34"><span id="part0000_split_009.html__Toc426143310"
+class="calibre14"></span><span
+id="part0000_split_009.html__Toc427052355" class="calibre14"><span
+class="calibre15">Installing and Updating Programs</span></span></h1>
+<p><span class="calibre3">Just like on Windows, you need to install new
+software as need arises and to update existing software. On Linux, its
+way easier to do this than on all other operating systems – Windows
+included. The difference is that you do not need to go to third party
+sites to search for programs. For instance, when you need a certain
+program on Windows, you will have to search for it online. When you get
+it, there is no guarantee that it will be the real thing. In fact,
+viruses and malware have been spread in this manner to unsuspecting
+users. In Linux, this is completely different. There are package
+repositories where all programs are found. They store all the software
+available for that specific distribution. These are thousands of
+programs. When you require certain software not installed by default
+with your OS, you search for it in the repository rather than on the
+Web. This greatly reduces the chance of installing a harmful program,
+since all programs found in the repositories have been verified through
+digital signatures from the original author.</span></p>
+<p><span class="calibre3">On your Ubuntu OS, go to the software center
+through the overview mode.</span></p>
+<p><img src="images/00003.jpeg" class="calibre38"
+alt="http://lh5.ggpht.com/_1QSDkzYY2vc/S74ey_fnNpI/AAAAAAAAAy0/EiDC0JE4ivU/s2000/Ubuntu%20Software%20Center_011.png" /></p>
+<p><span class="calibre3">While here, you find some featured programs,
+and you can search for a program by various categories. To get to know
+more about a program, click on it to read the description, version
+details, and reviews. If you want to install it, click on the button
+that says Install. If you have already installed the program, you will
+see it marked with a tick. This will have a remove button rather than an
+install button.</span></p>
+<p><span class="calibre3">When you want to update installed programs,
+you launch the update manager from the overview mode.</span></p>
+<p><img src="images/00004.jpeg" class="calibre39"
+alt="http://i.stack.imgur.com/KXqwl.png" /> <img src="images/00005.jpeg"
+class="calibre40" alt="http://i.stack.imgur.com/Maenw.jpg" /></p>
+<p><span class="calibre3">Click on the check button to check for any
+updates to your applications. If you find any, just install them. It is
+important to note that programs found in the Linux repositories are open
+source, and you can just install them unlike Windows, where you have to
+purchase some programs.</span></p>
+<p><span class="calibre3">To understand the package concept in Linux and
+why it makes it easy to install software, let me take you through how it
+works.</span></p>
+<p><span class="calibre3">For a program to work, it will often need
+other resources other than the software we install. For instance, you
+have seen when installing certain software that many other files
+accompany it. These are used by the program to enable it to function as
+intended. In Ubuntu, these files come as one file called a package. This
+is everything the program needs, including special files called
+installation scripts that copy the files to the exact location they
+should be. Some programs will use the same files as others to function.
+These are called package dependencies. When developers specify the
+package dependencies, it becomes easier for the users since the package
+will be made smaller and you will not have to install the same
+dependences once more. The package repository does this for you. For
+every program you install, it will check on the dependencies and if they
+are already installed, you will just have the program. This avoids
+duplication of files and programs, making the OS lighter and
+faster.</span></p>
+<div id="part0000_split_009.html_calibre_pb_26" class="calibre27">
+
+</div>
+</div>
+<p><span id="part0000_split_010.html"></span></p>
+<div class="calibre1">
+<h1 class="calibre11" id="part0000_split_010.html_calibre_pb_27"><br />
+<span id="part0000_split_010.html__Toc426143311"
+class="calibre14"></span><span
+id="part0000_split_010.html__Toc427052356"
+class="calibre14"></span><span
+id="part0000_split_010.html__Toc425288477" class="calibre14"><span
+class="calibre15">Chapter 5:</span></span></h1>
+<h1 class="calibre34"><span id="part0000_split_010.html__Toc426143312"
+class="calibre14"></span><span
+id="part0000_split_010.html__Toc427052357" class="calibre14"><span
+class="calibre15">Introduction to the Command Line</span></span></h1>
+<p><span class="calibre3">The command line is the interface that enables
+users to communicate directly with the computer using words referred to
+as commands. Everything that you need to do with a computer can be done
+on the command line. This is one of the great strengths of Linux-based
+systems. Unlike using the Graphical User Interface which appears easy to
+use, the command line offers more options to interact with the system to
+accomplish what you want done. When using the GUI, you are limited to
+the design of the interface and what the developer envisioned would be
+your needs. However, at times, you need more functionality than this.
+Some functions can only be accessed through the command line. For
+instance, performing repairs or achieving a function through a
+combination of commands cannot be done in the GUI. Learning the command
+line liberates you in a great way. The good thing with Linux-based
+systems is that once you learn the command line in one of them, you can
+use any other because the commands are the same.</span></p>
+<p><span class="calibre3">The command line is one of the most feared
+aspects of Linux by beginners and people who have not used Linux before.
+They imagine it as a hard thing to learn, only reserved for the geeks.
+This is not the case; the command line is something very easy to learn.
+Like anybody who uses it will tell you, you never learn all the commands
+in one day – you learn day and day as you continue to use it. It becomes
+second nature to you and a very exciting way to interact with your
+computer. You learn how the computer works and you can control different
+aspects of it with ease.</span></p>
+<p><span class="calibre3">Another great strength of the command line
+interface is that it saves a lot of resources that the GUI uses. If your
+machine is running slow, just close the GUI and use the command
+line.</span></p>
+<p><span class="calibre3">The command line is an all text display; there
+are no windows, images, or pointing devices. It is not very common today
+for many common tasks, as these are done through the GUI. However, the
+command line still maintains a lot of importance not only to programmers
+and developers, but also to the average computer user. The command line
+is often referred to as the shell. However, the shell is the program
+that provides the command line. The thing with the command line is that
+you only appreciate its power and usefulness once you start using it.
+You find it easier to navigate through your computer and complete simple
+tasks.</span></p>
+<p><span class="calibre19">Accessing the command line</span></p>
+<p><span class="calibre3">To be able to use the command line, you have
+first to access it. Depending on the Linux distribution you are using,
+accessing the command line will be slightly different, but it is
+generally similar in all the distributions. You need to locate the
+terminal window in the Graphical User Interface. It can appear in the
+system tools, the toolbar, the desktop, or the menu line. To locate the
+terminal, which will allow you to launch the command prompt, you need to
+look for a program called Xterm, terminal, console, Konsole, or
+something similar to these depending on your Linux distribution. This
+icon is usually shaped as a computer screen. It will appear as an icon
+or a small image.</span></p>
+<p><img src="images/00006.jpeg" class="calibre41"
+alt="http://wiki.blender.org/uploads/b/b5/(Doc_26x_Debian_Ubuntu)_(Dash_Terminal_Ubuntu)_(GNV1210FN).png" /></p>
+<p><span class="calibre3">You can open the command line by switching to
+a console. This is a display mode of the entire screen in text only
+without using the GUI or the mouse. Press the CRTL, ALT, and F1 keys
+while in GUI – the GUI disappears and the console appears. The screen
+will become black save for a few characters which are part of the
+command line. To get back to the GUI while at this screen, just press
+the CTRL, ALT, and F8 keys simultaneously.</span></p>
+<p><span class="calibre3">When you open the command prompt, it will list
+your computer name and your username. Since Linux is a multi-user OS,
+meaning more than one user can access and use the system, this is very
+important. Each user will have access to a home directory where they can
+store their files. When starting on the command prompt, you need to make
+sure which directory you are in.</span></p>
+<p><span class="calibre3">The username will be followed by some
+punctuation marks, either $ or #, then a blinking box or a cursor. $
+means that you are logged in as a regular user, while # means you are
+logged in as root. Always make sure you are logged in as a regular user
+unless you would like to perform any administrative tasks inside root
+directories. If you log in as a root, all directories and files you work
+in will change permissions to make the root as the user.</span></p>
+<div id="part0000_split_010.html_calibre_pb_30" class="calibre27">
+
+</div>
+</div>
+<p><span id="part0000_split_011.html"></span></p>
+<div id="part0000_split_011.html__Toc425288478" style="height:0pt">
+
+</div>
+<div class="calibre1">
+<h1 class="calibre11" id="part0000_split_011.html_calibre_pb_31"><span
+id="part0000_split_011.html__Toc425288478" class="calibre14"><br />
+</span><span id="part0000_split_011.html__Toc426143313"
+class="calibre14"></span><span
+id="part0000_split_011.html__Toc427052358" class="calibre14"><span
+class="calibre15">Chapter 6:</span></span></h1>
+<h1 class="calibre34"><span id="part0000_split_011.html__Toc426143314"
+class="calibre14"></span><span
+id="part0000_split_011.html__Toc427052359" class="calibre14"><span
+class="calibre15">Running Commands</span></span></h1>
+<p><span class="calibre3">Commands are written in a specific way. You
+should note that the command line is case sensitive, unlike in other
+command prompts you may have used. The command should be typed with no
+spaces in the name. After the command, you can put a space then add a
+dash and another name. This is usually called an option. It limits or
+changes the way the command is executed. Most of the words used in the
+command line are shorthand words that are abbreviated from the longer
+word. For instance, we use mv for move and lt for list. You will learn
+more of these words along the way and as you practice them on your
+computer.</span></p>
+<p><span class="calibre42">Basic commands</span></p>
+<p><span class="calibre3">Now let us look at basic commands regularly
+used on the Linux systems. These are not the only commands, but you will
+use them often. Do not struggle to memorize these commands; they will
+soon stick in your head the more you use them. We shall also be looking
+at how to get the command to a certain function you need.</span></p>
+<p><span class="calibre42">The pwd command</span></p>
+<p><span class="calibre3">This stands for the present working directory.
+It helps you identify which directory you are in at any particular time.
+When you open the terminal, you get to the home directory, but this
+changes as you switch around directories. It shows the name and complete
+location of the current directory you are working on. Just to avoid
+confusion, “directory” will mostly refer to the folder we normally use
+in the Windows operating system. You will need to type </span><span
+class="calibre43">pwd </span><span class="calibre3">in the prompt and
+press enter.</span></p>
+<p><img src="images/00007.jpeg" class="calibre44"
+alt="http://pad3.whstatic.com/images/thumb/5/5a/Get-Familiar-With-Ubuntu-Commands-Step-1.jpg/670px-Get-Familiar-With-Ubuntu-Commands-Step-1.jpg" /></p>
+<p><span class="calibre3">You will not need to use this command when you
+first open your terminal, as you will already be in the home directory.
+However, there will come a time when you will need to know where you
+are, since the location and name of the present directory are not always
+obvious.</span></p>
+<p><span class="calibre42">The ls command</span></p>
+<p><span class="calibre3">This is a common command. You use it to list
+the contents of a directory. When you type </span><span
+class="calibre43">ls</span><span class="calibre3"> alone, you will be
+presented with a list of names of all the objects in that directory.
+This will include links, files, directories (folders within this
+folder), and images.</span></p>
+<p><span class="calibre3">To enable easier identification, you will
+notice that these objects will be color coded so that you can tell the
+type of object at a glance. Some of the basic colors that you should
+know are: Blue (Directories), White (Text files), Red (Archives), Cyan
+(Links), Green (Executables), and Pink (Images).</span></p>
+<p><span class="calibre3">There will be no additional information
+provided for these objects, just the listing. If you just wanted to know
+the list of objects, this will be enough. However, you might require
+more information on any of these objects. That is where we use the
+command </span><span class="calibre43">ls</span><span class="calibre3">
+and an option besides it. This option will mostly be a letter, but also
+can be a word. It will follow the command and a space. It specifies the
+additional information you require. You can also input multiple options
+on the same line to get even more information about an object. You will
+not require inputting a space between these options. Let us now look at
+examples.</span></p>
+<p><span class="calibre3">If you want to know all the objects in a
+directory, including hidden files, you will use the option </span><span
+class="calibre43">–a</span><span class="calibre3">. These hidden files
+or directories cannot be seen in the command line or even when using the
+GUI unless you specify this. Type the command and the option in this
+sequence: </span><span class="calibre43">ls _a</span><span
+class="calibre3">.</span><span class="calibre43"> </span><span
+class="calibre3">This will display all the objects in that directory,
+including the hidden files.</span></p>
+<p><span class="calibre3">Another option is the </span><span
+class="calibre43">–l</span><span class="calibre3">. This provides a long
+listing of the object in the directory. It provides more information
+such as type of object (is it an image, link, file, etc.), permissions
+(who can execute, read, or write this object), and owner (who created
+this object and the date and time of creation). So, to write this
+command together with this option and the all option (if you want to get
+information about all the objects), you input this command line:
+</span><span class="calibre43">ls–al</span><span
+class="calibre3">.</span></p>
+<p><img src="images/00008.jpeg" class="calibre45" /></p>
+<p><img src="images/00009.jpeg" class="calibre46" /></p>
+<p><span class="calibre3">The first character represents the file type.
+For example, in the line shown above, </span><span
+class="calibre43">d</span><span class="calibre3"> indicates this is a
+directory. Other values can be: </span><span
+class="calibre43">-</span><span class="calibre3"> for normal file,
+</span><span class="calibre43">s</span><span class="calibre3"> for
+socket file, </span><span class="calibre43">l</span><span
+class="calibre3"> for link file, and more.</span></p>
+<p><span class="calibre3">The next nine characters represent permissions
+-- </span><span class="calibre43">r</span><span class="calibre3"> -
+read, </span><span class="calibre43">w</span><span class="calibre3"> -
+write, </span><span class="calibre43">x</span><span class="calibre3">-
+execute. The first set of three characters represents the owner’s
+permission, the next three are a group's permission, and the final three
+represent permissions granted to others who are neither the owner nor
+the part of the group to which the file belongs. In the example shown
+above, the </span><span class="calibre47">owner</span><span
+class="calibre3"> has read, write, and execute permissions, while the
+</span><span class="calibre47">group,</span><span class="calibre3"> as
+well as </span><span class="calibre47">others,</span><span
+class="calibre3"> both have only read and execute
+permissions.</span></p>
+<p><span class="calibre3">You might want to get information regarding
+the size of these objects in a certain directory in an easily readable
+format. This is a very common use. Besides the information we already
+have, if you add the option of size (which is denoted by </span><span
+class="calibre43">s</span><span class="calibre3">), you will get the
+size in kilobytes for each object. You will have this command line:
+</span><span class="calibre43">ls–als</span><span
+class="calibre3">.</span><span class="calibre43"> </span><span
+class="calibre3">If you just require the option of size and not the
+other two previous options, then you drop them and just input
+</span><span class="calibre43">ls–s</span><span
+class="calibre3">.</span></p>
+<p><span class="calibre3">This command can accept arguments. This is
+input data from the user to specify the direction from which you desire
+to get information. You can list any directory and even more than one
+together with any option that specifies exactly what you require from
+those directories. If you want to see objects in two directories, namely
+/home and /bin, you will use the following command line:</span></p>
+<p><span class="calibre43">ls -a /bin /home</span></p>
+<p><span class="calibre3">This will display all the objects in these two
+folders, including the hidden files due to the option –a.</span></p>
+<p><span class="calibre3">Notice the forward slash before these
+directories; it means that these directories are standard first-tier
+directories in the root directory. The root directory in a Linux system
+contains all other directories and sub-directories. The forward slash is
+used in the first-tier directories from the root directory to
+differentiate them from any other directories that may have the same
+name.</span></p>
+<p><span class="calibre42">The cd command</span></p>
+<p><span class="calibre3">This is another basic command. It is used to
+navigate from the current directory to another directory you may need.
+This directory will require you type the directory name or the complete
+path of the directory depending on where it is located. If the directory
+you are looking for is located within the directory you are presently
+in, then you won’t have to type the whole path. If you are presently in
+</span><span class="calibre47">/home/john/pictures </span><span
+class="calibre3">and you want to navigate to a directory
+named</span><span class="calibre47">
+/home/john/pictures/holiday</span><span class="calibre3">,</span><span
+class="calibre47"> </span><span class="calibre3">you will just have to
+run the command </span><span class="calibre43">cd holiday </span><span
+class="calibre3">the command line, which will search for the directory
+holiday within pictures. This is known as a relative path.</span></p>
+<p><span class="calibre3">If you want to change from the current
+directory to another directory not relative to the present one, you will
+have to type the whole path. If you want the directory bin, you will
+have to type the whole path, including the forward slash: </span><span
+class="calibre19">cd /home/bin</span></p>
+<p><span class="calibre3">If you want to change to the root directory,
+you use the following </span><span class="calibre43">cd /</span></p>
+<p><span class="calibre3">If you want to go back to the home directory,
+you need not type the username you’ll just type</span><span
+class="calibre43"> cd ~ </span><span class="calibre3">this is a short
+cut meant to save you time.</span></p>
+<p><span class="calibre3">Other shortcuts are: To switch to the previous
+directory in the tree, run</span><span class="calibre43">: cd
+..,</span><span class="calibre3"> or if you want to switch to the
+previous working directory, run </span><span class="calibre43">cd
+-</span></p>
+<p><span class="calibre42">The touch command</span></p>
+<p><span class="calibre3">This is used to create new files. This command
+will require you run the file name as the argument. If you wish to
+create a new file named practice in the present directory, you just run
+the command:</span></p>
+<p><span class="calibre43">touch practice</span></p>
+<p><span class="calibre3">If you want to create multiple files, you run
+the command with the names of the files separated by a space:</span></p>
+<p><span class="calibre43">touch practice test log</span></p>
+<p><span class="calibre3">If you want to create the file in a different
+directory other than the one you are working on, you need to specify the
+full path of this new location. For example:</span></p>
+<p><span class="calibre43">touch /home/john/practice/test</span></p>
+<p><span class="calibre3">To write anything on the new file, you will
+need to use a command line editor, which we will be looking at in a
+later chapter.</span></p>
+<p><span class="calibre42">The mkdir command</span></p>
+<p><span class="calibre3">The mkdir works just the same way as the touch
+command but is used to create directories (folders)</span></p>
+<p><span class="calibre43">mkdir dir1 dir2 dir3</span></p>
+<p><span class="calibre3">This will create three folders named dir1,
+dir2, and dir3 in the current directory. If there is already a directory
+with the same name provided in the argument, it will not be created; a
+warning informing you of this will appear unlike in the touch command,
+where a new file with the same name will be created. If you want to
+create a folder in a different directory other than the one present, you
+have to specify the full path.</span></p>
+<p><span class="calibre42">The rm command</span></p>
+<p><span class="calibre3">This command is used to delete files and
+directories. You use the name of the file as the argument. For example,
+if you want to delete a file by the name of file1, you run the following
+command:</span></p>
+<p><span class="calibre43">rm file1</span></p>
+<p><span class="calibre3">This will delete file1. If you want to delete
+multiple files, you write the names separated by a space.</span></p>
+<p><span class="calibre43">rm file1 file2 file3</span></p>
+<p><span class="calibre3">However, this can get tedious if you want to
+delete very many files in a certain directory and the rm without an
+option cannot delete an entire directory. This is just placed as a
+precaution since once you run the command and delete a chosen file or
+directory, it will be almost impossible to retrieve it.</span></p>
+<p><span class="calibre3">One way to delete multiple files is by use of
+wildcards. For instance, * represents a string and can be used as a
+wildcard. Using the command </span><span class="calibre43">rm *
+</span><span class="calibre3">will delete all files in the present
+directory. Be extra careful when using these wildcards, as your actions
+are undoable. One thing with the command line is that it assumes you
+know what you are doing; there are no confirmation/warning windows or
+anything you might have experienced in the GUI. Once you run a command,
+the desired result is achieved.</span></p>
+<p><span class="calibre3">If you want to use the wildcard to delete only
+files within a certain directory, you specify this in the
+command.</span></p>
+<p><span class="calibre43">Rm dir1/*</span></p>
+<p><span class="calibre3">This will delete all files in dir1.</span></p>
+<p><span class="calibre3">You can still specify further using the
+wildcard to pinpoint exactly what type of files you want deleted. For
+instance, if you want to delete all files with the extension .html, you
+run the following command</span></p>
+<p><span class="calibre43">rm *.html</span></p>
+<p><span class="calibre3">However, be very careful when using this
+wildcard, as it is very easy to lose data you never intended to lose.
+Always take time to confirm what you are doing and if you are not sure,
+do not do it.</span></p>
+<p><span class="calibre3">To delete entire directories using this
+command, you have to use the r option. This is a safeguard against
+deleting entire files in a directory accidentally.</span></p>
+<p><span class="calibre43">rm -r /home/john/practice/</span></p>
+<p><span class="calibre3">This will delete all the files any
+subdirectory and files within this directory, then remove the directory
+practice.</span></p>
+<p><span class="calibre42">The rmdir command</span></p>
+<p><span class="calibre3">This command is used to remove empty
+directories. It is very similar to the rm command, only it removes empty
+directories. It is safer to use when you just want to delete those
+directories.</span></p>
+<p><span class="calibre43">rmdir dir1 dir2</span></p>
+<p><span class="calibre3">This will delete directories named dir1 and
+dir2 which are empty. These are located in the present directory we are
+working on. If not, type the command with the whole path to the empty
+directory.</span></p>
+<p><span class="calibre3">This command is useful if you choose to delete
+files without using the r option, so that finally when you are left with
+the empty directory, you use the rmdir to delete them. For a beginner
+(and to be safe), I would encourage you to use this method if you fear
+losing any data will affect you adversely.</span></p>
+<p><span class="calibre42">The cp command</span></p>
+<p><span class="calibre3">This command is used to copy directories and
+files. The copies will subsequently become independent of the originals.
+Any actions taken on the originals will not affect the
+copies.</span></p>
+<p><span class="calibre43">cp name new_name</span></p>
+<p><span class="calibre3">That is the command where you specify which
+file or directory you want to copy and the name of the new directory. By
+default, cp will only copy files, to copy directories you need to use r
+option. For instance, if you want to copy dir1 with all its content
+including files and subdirectories to a new directory to be called dir2,
+you run the following command</span></p>
+<p><span class="calibre43">cp -r dir1 dir2</span></p>
+<p><span class="calibre3">When you make a copy of a file or a directory,
+you must use a different name to the original name. However, if you
+place the copy in a different directory from the original, you might let
+it have the same name. A file named file1 can be copied with the same
+name to a different directory (which you must specify) </span><span
+class="calibre43">cp file1 /home/john/file1</span></p>
+<p><span class="calibre3">You could copy multiple files to a single
+directory by listing the names of these files and then naming the
+directory to which they should be copied:</span></p>
+<p><span class="calibre43">cp file1 file2 file3 dir1</span></p>
+<p><span class="calibre3">This command copies file1, file2, and file3
+into directory named dir1. The final argument must be a directory when
+copying over multiple files.</span></p>
+<p><span class="calibre42">The chmod command</span></p>
+<p><span class="calibre3">This command is used to alter file
+permissions. It can be used in two ways: either through letters or
+through numbers. We shall look at the letter method since it is more
+straightforward than the numbers method. The letter method uses + - and
+= signs to add, remove, or assign permissions. The letter a represents
+all, o represents others, u represents owner, and g represents group.
+The permissions are r for read, w for write, and x for execute. With
+this information, we can now understand how the command works. For
+example:</span></p>
+<p><span class="calibre43">chmod u=rwx file1</span></p>
+<p><span class="calibre3">This command grants the owner (u) of file1
+read(r), write (w), and execute(x) permissions.</span></p>
+<p><span class="calibre43">chmodo+w file1</span></p>
+<p><span class="calibre3">This</span><span class="calibre47">
+</span><span class="calibre3">command grants others the permissions to
+write.</span></p>
+<p><span class="calibre43">chmod g-r file1</span></p>
+<p><span class="calibre3">This command denies the group permission to
+read file 1.</span></p>
+<p><span class="calibre43">chmoda+xsomefile</span></p>
+<p><span class="calibre3">This command grants all the permissions to
+execute.</span></p>
+<div id="part0000_split_011.html_calibre_pb_34" class="calibre27">
+
+</div>
+</div>
+<p><span id="part0000_split_012.html"></span></p>
+<div class="calibre1">
+<h1 class="calibre11" id="part0000_split_012.html_calibre_pb_35"><br />
+<span id="part0000_split_012.html__Toc426143315"
+class="calibre14"></span><span
+id="part0000_split_012.html__Toc427052360"
+class="calibre14"></span><span
+id="part0000_split_012.html__Toc425288479" class="calibre14"><span
+class="calibre15">Chapter 7:</span></span></h1>
+<h1 class="calibre34"><span id="part0000_split_012.html__Toc426143316"
+class="calibre14"></span><span
+id="part0000_split_012.html__Toc427052361" class="calibre14"><span
+class="calibre15">Getting Help with the Command Line</span></span></h1>
+<p><span class="calibre3">The command line, inasmuch as it is helpful,
+can be challenging as well. Not only beginners will encounter challenges
+with the command line, but even the experienced pros. Luckily, help is
+just a command line away. Yes, the command line has a manual and an info
+page that explains more about the different commands and how to run
+them. You could also use the </span><span
+class="calibre43">whatis</span><span class="calibre3"> command, which
+gives you a simple explanation to a command:</span></p>
+<p><span class="calibre43">Whatis mv</span></p>
+<p><span class="calibre3">This will return a short explanation stating
+that mv is move (rename files). It will appear something like
+this.</span></p>
+<p><span class="calibre3">$ whatis mv</span></p>
+<p><span class="calibre3">mv (1) - move (rename) files</span></p>
+<p><span class="calibre3">$</span></p>
+<p><span class="calibre3">However, this might not be enough information
+for you, and in this case, you consult the manual. To so this, you run
+the command </span><span class="calibre43">man</span><span
+class="calibre3">. You can get more specific and run </span><span
+class="calibre43">man ls</span><span class="calibre3"> to get to know
+more about the list command.</span></p>
+<p><span class="calibre3">The information will appear in paragraph
+style. You will use the space bar to go through the pages. Anything you
+need to know about any command will be found here, including all the
+options available. When you are through reading, you can quit the manual
+by hitting q.</span></p>
+<p><span class="calibre3">The command line is pretty interesting to
+learn. We have just scratched the surface with these commands. There are
+numerous ore commands available. This manifests the power and
+flexibility of the command line. Do not memorize these commands; just
+use them as you need them and you will find it easy to remember
+them.</span></p>
+<p><span class="calibre3">When you use the command line, you get into a
+conversation with your computer. It is like a face-to-face talk. You
+tell it what it is you require it to do and it responds faithfully
+without questioning and without doubting your intentions. As you learn
+more of the command line, you will come to appreciate how powerful it is
+and its importance to developers and programmers, as you do not have to
+rely on the GUI which, in most cases, is very basic.</span></p>
+<p><span id="part0000_split_012.html__Toc425287953"
+class="calibre14"></span><span
+id="part0000_split_012.html__Toc425288402" class="calibre14"><span
+class="calibre42">Index of Linux Commands</span></span></p>
+<p><span class="calibre19">alias</span><span class="calibre3">: allows
+launching of any command or combination of commands by using a preset
+character or series of characters.</span></p>
+<p><span class="calibre19">apropos</span><span class="calibre3">:
+displays a list of all topics in the built-in user manual that are
+related to the subject of a query.</span></p>
+<p><span class="calibre19">bzip2</span><span class="calibre3">: used for
+compressing and decompressing files.</span></p>
+<p><span class="calibre19">cat</span><span class="calibre3">: (short for
+</span><span class="calibre47">concatenate</span><span
+class="calibre3">) has three related functions with regard to text
+files: displaying them, combining copies of them and creating new
+ones.</span></p>
+<p><span class="calibre19">cd</span><span class="calibre3">: changes
+directories.</span></p>
+<p><span class="calibre19">clear</span><span class="calibre3">: removes
+all previous commands and output from consoles and terminal
+windows.</span></p>
+<p><span class="calibre19">cp</span><span class="calibre3">: copies
+files and directories.</span></p>
+<p><span class="calibre19">df</span><span class="calibre3">: reports the
+amount of space used and available on currently mounted file
+systems.</span></p>
+<p><span class="calibre3">d</span><span
+class="calibre19">mesg</span><span class="calibre3">: reads the kernel
+messages.</span></p>
+<p><span class="calibre19">du</span><span class="calibre3">: shows the
+sizes of directories and files.</span></p>
+<p><span class="calibre19">fdformat</span><span class="calibre3">:
+performs low-level formatting of floppy disks.</span></p>
+<p><span class="calibre19">file</span><span class="calibre3">:
+classifies file system objects.</span></p>
+<p><span class="calibre19">free</span><span class="calibre3">: provides
+information about unused and used memory and swap space.</span></p>
+<p><span class="calibre19">grep</span><span class="calibre3">: searches
+text.</span></p>
+<p><span class="calibre19">head</span><span class="calibre3">: by
+default reads the first ten lines of text.</span></p>
+<p><span class="calibre19">hostname</span><span class="calibre3">: shows
+or sets a computer's host name and domain name.</span></p>
+<p><span class="calibre19">kdesu</span><span class="calibre3">: opens
+KDE su, the graphical front end for the su command.</span></p>
+<p><span class="calibre19">kill</span><span class="calibre3">:
+terminates stalled processes without having to log out or
+reboot.</span></p>
+<p><span class="calibre19">killall</span><span class="calibre3">:
+terminates all processes associated with programs whose names are
+provided to it as arguments.</span></p>
+<p><span class="calibre19">locate</span><span class="calibre3">: finds
+files and directories.</span></p>
+<p><span class="calibre19">man</span><span class="calibre3">: formats
+and displays the built-in manual pages.</span></p>
+<p><span class="calibre19">mkbootdisk</span><span class="calibre3">:
+creates an emergency boot floppy.</span></p>
+<p><span class="calibre19">mkdir</span><span class="calibre3">: creates
+new directories.</span></p>
+<p><span class="calibre19">mkfs</span><span class="calibre3">: creates a
+file system on a disk or on a partition thereof.</span></p>
+<p><span class="calibre19">mv</span><span class="calibre3">: renames and
+moves files and directories.</span></p>
+<p><span class="calibre19">ps</span><span class="calibre3">: (short for
+</span><span class="calibre47">process status</span><span
+class="calibre3">) lists the currently running processes and their
+process identification numbers (PIDs).</span></p>
+<p><span class="calibre19">pstree</span><span class="calibre3">:
+displays the processes on the system in the form of a tree
+diagram.</span></p>
+<p><span class="calibre19">pwd</span><span class="calibre3">: (short for
+</span><span class="calibre47">present working directory</span><span
+class="calibre3">) displays the full path to the current
+directory.</span></p>
+<p><span class="calibre19">reboot</span><span class="calibre3">:
+restarts a computer without having to turn the power off and back
+on.</span></p>
+<p><span class="calibre19">rm</span><span class="calibre3">: deletes the
+specified files and directories.</span></p>
+<p><span class="calibre19">rmdir</span><span class="calibre3">: deletes
+the specified empty directories.</span></p>
+<p><span class="calibre19">runlevel</span><span class="calibre3">:
+reports the current and previous runlevels.</span></p>
+<p><span class="calibre19">shred</span><span class="calibre3">: destroys
+files.</span></p>
+<p><span class="calibre19">spell</span><span class="calibre3">: checks
+spelling.</span></p>
+<p><span class="calibre19">strings</span><span class="calibre3">:
+returns each string of printable characters in files.</span></p>
+<p><span class="calibre19">su</span><span class="calibre3">: (short for
+</span><span class="calibre47">substitute user</span><span
+class="calibre3">) changes a login session's owner without the owner
+having to first log out of that session.</span></p>
+<p><span class="calibre19">tail</span><span class="calibre3">: by
+default reads the final ten lines of text.</span></p>
+<p><span class="calibre19">tar</span><span class="calibre3">: converts a
+group of files into an archive.</span></p>
+<p><span class="calibre19">touch</span><span class="calibre3">: the
+easiest way to create new, empty files.</span></p>
+<p><span class="calibre19">tr</span><span class="calibre3">: translates
+or deletes characters.</span></p>
+<p><span class="calibre19">unalias</span><span class="calibre3">:
+removes entries from the current user's list of aliases.</span></p>
+<p><span class="calibre19">uname</span><span class="calibre3">: provides
+basic information about a system's software and hardware.</span></p>
+<p><span class="calibre19">uptime</span><span class="calibre3">: shows
+the current time, how long the system has been running since it was
+booted up, how many user sessions are currently open, and the load
+averages.</span></p>
+<p><span class="calibre19">w</span><span class="calibre3">: shows who is
+logged into the system and what they are doing.</span></p>
+<p><span class="calibre19">wc</span><span class="calibre3">: by default
+counts the number of lines, words and characters that are contained in
+text.</span></p>
+<p><span class="calibre19">whatis</span><span class="calibre3">:
+provides very brief descriptions of command line programs and other
+topics related to Unix-like operating systems.</span></p>
+<p><span class="calibre19">whereis</span><span class="calibre3">:
+locates the binary, source code, and man page for any specified
+program.</span></p>
+<p><span class="calibre19">whoami:</span><span class="calibre3"> returns
+the user name of the owner of the current login session.</span></p>
+<div id="part0000_split_012.html_calibre_pb_38" class="calibre27">
+
+</div>
+</div>
+<p><span id="part0000_split_013.html"></span></p>
+<div class="calibre1">
+<h1 class="calibre11" id="part0000_split_013.html_calibre_pb_39"><br />
+<span id="part0000_split_013.html__Toc426143317"
+class="calibre14"></span><span
+id="part0000_split_013.html__Toc427052362"
+class="calibre14"></span><span
+id="part0000_split_013.html__Toc425288480" class="calibre14"><span
+class="calibre15">Chapter 8:</span></span></h1>
+<h1 class="calibre34"><span id="part0000_split_013.html__Toc426143318"
+class="calibre14"></span><span
+id="part0000_split_013.html__Toc427052363" class="calibre14"><span
+class="calibre15">Using a Text Editor</span></span></h1>
+<p><span class="calibre3">A text editor is a computer program that
+allows the user to open, view, edit, change, and store plain text. These
+are usually characters and numbers. These are then encoded by the
+computer so that they can have a meaning to other programs and
+users.</span></p>
+<p><span class="calibre3">Along with the command line, Linux
+distributions will include a text editor, which you will find very
+useful in a number of ways. Just like on Windows OS where we have text
+editors, all Linux distributions will have one, too. It is very
+important to get the basics behind using the text editor. There are so
+many of these editors, but when you understand working on one, you will
+be comfortable navigating the others, maybe just a few different things
+to learn. Text editors are very similar to word processors only they are
+lighter with few formatting options. They have fewer features and work
+only with text files. Some of them do not even support spell checking
+and proofreading.</span></p>
+<p><span class="calibre3">Many beginners tend to overlook the importance
+of the text editor and will often rely on the word processors for all
+their writing. However, you will soon learn that this little feature is
+vital if you need to be a little more flexible and versatile in how you
+use your computer to achieve different results. In Linux distributions,
+the text editor is even more useful. If you are going to write any code,
+you’ll have to use the text editor. When using the command line, the
+text editor will go hand in hand. The command line and the text editor
+will set you to total independence from the Graphical User Interface.
+Even when writing content, most advanced writers would rather use the
+text editors.</span></p>
+<p><span class="calibre3">A text editor will save in plain text so that
+many diverse programs are able to read the text unlike word processors
+whose content can only be opened with another word processor. This is a
+great benefit as it makes the plain text highly portable across programs
+and across operating systems without needing to change
+anything.</span></p>
+<p><span class="calibre3">When using the text editor to do your normal
+writing, it is very easy to use. You do not have to learn anything; just
+input the text you want and that is it. There are no menus or
+structures, and no formatting. This means you can open up any operating
+system, find the text editor, and just write whatever you want to write.
+You will then be able to carry on the plain text to another program or
+OS. You can even use the text editor to draft an email, and then
+send.</span></p>
+<p><span class="calibre3">Let us look at one of the most popular text
+editors on Linux distributions.</span></p>
+<p><span class="calibre19">Vi editor</span></p>
+<p><span class="calibre3">This editor is found in almost all Linux
+distributions. It is simple to use, though beginners might disagree, but
+very powerful. In fact, if you just want to write or edit plain text,
+you may try using another editor. Experienced Linux users will use the
+Vi editor extensively in their coding or writing markup language. Due to
+its availability in a wide range of distributions, learning Vi becomes
+very important. You may want to edit files in a Linux system or a remote
+server with a minimal install; it will definitely have Vi text
+editor.</span></p>
+<p><span class="calibre3">Vim is the newer version of Vi. It means Vi
+improved. Vim inherits features of Vi but also adds some
+functionality.</span></p>
+<p><span class="calibre3">To get Vim, and now that you know how to use
+the command line, you should run the following command:</span></p>
+<p><span class="calibre3">sudo apt-get install vim</span></p>
+<p><img src="images/00010.jpeg" class="calibre51"
+alt="http://www.winterdom.com/weblog/content/binary/WindowsLiveWriter/Wombat_12AFD/VimWombat.png" /></p>
+<p><span class="calibre19">Vim editor</span></p>
+<p><span class="calibre3">Vim has so many commands, thus the impression
+that it is difficult to use, but these support a wide range of
+functionality, lets list a few of these.</span></p>
+<p><span class="calibre3">The Vi editor works in two modes: the insert
+mode and the viewing mode. The insert mode is the editing mode, while
+the viewing mode is the command mode. You can toggle through these modes
+by pressing the esc key.</span></p>
+<ul>
+<li><span class="calibre3">Cursor movement—h, j, k, l (left, down, up,
+and right)</span></li>
+<li><span class="calibre3">Delete character—x</span></li>
+<li><span class="calibre3">Delete line—dd</span></li>
+<li><span class="calibre3">Mode toggle—Esc, Insert (or i)</span></li>
+<li><span class="calibre3">Quit—:q</span></li>
+<li><span class="calibre3">Quit without saving—:q!</span></li>
+<li><span class="calibre3">Run a shell command—:sh (use 'exit' to
+return)</span></li>
+<li><span class="calibre3">Save file—:w</span></li>
+<li><span class="calibre3">Text search—/</span></li>
+<li><span class="calibre3">h moves the cursor one character to the
+left.</span></li>
+<li><span class="calibre3">j moves the cursor down one line.</span></li>
+<li><span class="calibre3">k moves the cursor up one line.</span></li>
+<li><span class="calibre3">l moves the cursor one character to the
+right.</span></li>
+<li><span class="calibre3">0 moves the cursor to the beginning of the
+line.</span></li>
+<li><span class="calibre3">$ moves the cursor to the end of the
+line.</span></li>
+<li><span class="calibre3">w move forward one word.</span></li>
+<li><span class="calibre3">b move backward one word.</span></li>
+<li><span class="calibre3">G move to the end of the file.</span></li>
+<li><span class="calibre3">gg move to the beginning of the
+file.</span></li>
+<li><span class="calibre3">`. move to the last edit.</span></li>
+<li><span class="calibre3">v highlight one character at a
+time.</span></li>
+<li><span class="calibre3">V highlight one line at a time.</span></li>
+<li><span class="calibre3">Ctrl-v highlight by columns.</span></li>
+<li><span class="calibre3">p paste text after the current
+line.</span></li>
+<li><span class="calibre3">P paste text on the current line.</span></li>
+<li><span class="calibre3">y yank text into the copy buffer.</span></li>
+</ul>
+<p><span class="calibre3">These commands will help you learn more about
+this text editor. When you are done and you want to save your work, you
+will hit escape, if in insert mode, and then enter. A cursor will appear
+at the end of the screen. To write the file you are currently on, enter
+</span><span class="calibre19">w.</span><span class="calibre3"> If it is
+a different filename, use </span><span class="calibre19">w
+filename</span><span class="calibre3">.</span></p>
+<p><span class="calibre3">To quit from this editor, you need to hit
+</span><span class="calibre19">q</span><span class="calibre3">. You will
+be asked to save if you have not already saved your work. If you just
+want to quit without this reminder, use </span><span
+class="calibre19">q!</span><span class="calibre3"> You could also use
+</span><span class="calibre19">zz, </span><span class="calibre3">which
+saves and exits.</span></p>
+<p><span class="calibre3">VI and Vim are the most widely used text
+editors, I would suggest to you to first use Vim before using other text
+editors. Once you get to work with this editor, you can comfortably use
+any other editor without any trouble. This editor does not require you
+use the mouse – just the keyboard and the screen.</span></p>
+</div>
+<p><span id="part0000_split_014.html"></span></p>
+<div id="part0000_split_014.html__Toc425288481" style="height:0pt">
+
+</div>
+<section id="part0000_split_014.html_calibre_pb_42"
+class="calibre11 calibre1">
+<h1 class="calibre11"><span id="part0000_split_014.html__Toc425288481"
+class="calibre14"><br />
+</span><span id="part0000_split_014.html__Toc426143319"
+class="calibre14"></span><span
+id="part0000_split_014.html__Toc427052364" class="calibre14"><span
+class="calibre15">Conclusion</span></span></h1>
+<p><span class="calibre3">There are thousands of reasons why you should
+learn Linux in this age. Even if you are not yet ready to make the
+switch from your current operating system to Linux-based systems,
+learning how they operate is a useful skill. A recent survey found out
+that employers are more likely to hire someone conversant with
+Linux-based distributions since it shows that you are flexible and
+versatile. There are many instances where using a Linux-based system
+will be more appropriate.</span></p>
+<p><span class="calibre3">The Linux community is also another thing
+which should attract you. There are many Linux users always eager to
+help you out. In most cases, any issue you encounter will most likely
+have been resolved in the forums. So take your time, sign up in a forum
+and go through the conversations to learn more about what is happening
+in the Linux world. When you finally become an advanced user, give back
+to the community be helping others. This is what makes the Linux
+community great and such a big force.</span></p>
+<p><span class="calibre3">We can list many reasons why you should be
+using Linux, but the most important is the fact that you have the
+freedom to experiment and try out new things. The command line gives you
+so much power to understand and control how your computer works, the
+free software repositories, the multiple desktop feature, the hardware
+support, using Linux on any computer, security, and interoperability
+with other systems. All these reasons and many more make it essential to
+learn and be conversant with Linux.</span></p>
+<p><span id="part0000_split_014.html__TOC2167"
+class="calibre14"></span><span id="part0000_split_014.html__TOC2940"
+class="calibre14"></span><span class="calibre3">Thank you again for
+downloading this book!</span></p>
+<p><span class="calibre3">I hope this book was able to help you with
+Linux and the command line. If you liked this book, please check out my
+other books on the next few pages.</span></p>
+<p><span class="calibre3">Finally, if you enjoyed this book and it was
+able to help you, please take the time to help me by sharing your
+thoughts and posting a review on Amazon. It would be greatly
+appreciated!</span></p>
+<div id="part0000_split_014.html_calibre_pb_45" class="calibre27">
+
+</div>
+</p>
+</section>
+<p><span id="part0000_split_015.html"></span></p>
+<section id="part0000_split_015.html_calibre_pb_47"
+class="calibre11 calibre1">
+<h1 class="calibre11"><span id="part0000_split_015.html__Toc427052365"
+class="calibre14"><span class="calibre15">Check out my other
+books</span></span></h1>
+<p><span class="calibre30">[Beginning of Excerpt] Raspberry PI 2: The
+Disaster To Master Step By Step User Guide</span></p>
+<p><span class="calibre3">The new Raspberry Pi 2 is able to run a wider
+range of the ARM GNU/Linux distributions, the Microsoft 10 I0T, and the
+snappy Ubuntu core due to the change in the architecture from the ARMv6
+instruction set to the ARMv7 and advancements in the processor speed and
+memory. We shall be looking at these operating systems in more detail
+and how to install them.</span></p>
+<p><span class="calibre3">The Raspberry Pi 2 is fully backwards
+compatible with the Pi 1 and all the projects, software, and hardware
+that were used on the Pi 1. It is able to integrate all the projects
+that were on Pi 1, but it performs at a higher level due to the
+increased power. This ensures a seamless transition for those willing to
+upgrade. It has a complete identical form factor to its predecessor,
+even after managing to pack much higher power. All connectors are in the
+same place, retaining the same functionality. This means that any case
+or third party board add-ons you were using before will still fit onto
+the new Pi 2. The circuit board is still run from the 5V micro power
+adapter.</span></p>
+<p><span class="calibre3">One thing that the Raspberry foundation should
+be commended for is sticking with the same price even with the added
+power. In fact, they have been responsible for bringing down the prices
+of embedded computers on the market. Before Pi 1, it was not possible to
+find them at prices any lower than $100. This has enabled more
+enthusiastic programmers, hobbyists, and students to try out their
+different coding skills on an inexpensive platform. Even for gamers who
+want increased functionality and possibilities in their video games, it
+has come in handy.</span></p>
+<p><span class="calibre3">To demonstrate the increased performance of Pi
+2 over the previous models, the Raspberry foundation created a quick
+test using a Python script that calculates the approximation of Pi’s
+speed then displays it in visual form in the popular Minecraft game. The
+Pi 1 used 47 seconds to complete this calculation, while the Pi 2 used
+just three seconds. The quad-core processor is that fast. However, the
+speed will also depend on whether you have optimized your Pi 2 to run
+multithreaded, which we will be looking at later. No matter how you use
+Raspberry, you will notice a bump in performance once you upgrade to the
+Pi 2.</span></p>
+<p><span class="calibre3">With all the added power and functionality it
+brings, the Pi 2 is the one thing you should have. The extra flexibility
+over previous models that allows you to install and run a wider range of
+operating systems, including Windows 10 IoT operating system for
+builders and creators, will make it more popular with all it can
+do.</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre42">[End of Excerpt] </span><span
+class="calibre30">If you enjoyed this portion you can grab your copy in
+the link on the next page.</span></p>
+<p><a href="http://amzn.to/1VDt3Gp"><img src="images/00011.jpeg"
+class="calibre58" /></a></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre59"> </span></p>
+</section>
