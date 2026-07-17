@@ -1,0 +1,4526 @@
+<p><img src="image8.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="image8.jpg" class="class9" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div class="class16">
+Linux
+</div>
+<div class="class18">
+Installation, Configuration and Command Line Basics
+</div>
+<div class="class20">
+Nathan Clark
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div class="class27">
+<span class="class2022">©</span> Copyright 2018 Nathan Clark. All rights
+reserved.
+</div>
+<div class="class29">
+No part of this publication may be reproduced, distributed, or
+transmitted in any form or by any means, including photocopying,
+recording, or other electronic or mechanical methods, without the prior
+written permission of the publisher, except in the case of brief
+quotations embodied in critical reviews and certain other noncommercial
+uses permitted by copyright law.
+</div>
+<div class="class29">
+Every effort has been made to ensure that the content provided herein is
+accurate and helpful for our readers at publishing time. However, this
+is not an exhaustive treatment of the subjects. No liability is assumed
+for losses or damages due to the information provided.
+</div>
+<div class="class29">
+Any trademarks which are used are done so without consent and any use of
+the same does not imply consent or permission was gained from the owner.
+Any trademarks or brands found within are purely used for clarification
+purposes and no owners are in anyway affiliated with this work.
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div class="class38">
+Books in this Series
+</div>
+<div class="class42-0">
+<img src="image41.jpg" class="class42-1" />
+</div>
+<div>
+<a href="https://www.amazon.com/dp/1085961540"><img src="image46.jpg"
+class="class47" /></a>
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div class="class54">
+Table of Contents
+</div>
+<div id="part0004.xhtml_Table_of_Contents" class="class56">
+<a href="#part0005.xhtml" class="class2005">About This Book</a>
+</div>
+<div class="class58">
+<a href="#part0006.xhtml" class="class2005">1. What is Linux?</a>
+</div>
+<div class="class60">
+<a href="#part0006.xhtml_toc1_1.1_From_UNIX_to_Linux"
+class="class2005">1.1 From UNIX to Linux</a>
+</div>
+<div class="class60">
+<a href="#part0006.xhtml_id_43QDrJO0TXiLwBsau09Ixw1967"
+class="class2005">1.2 A Brief History of Linux</a>
+</div>
+<div class="class60">
+<a href="#part0006.xhtml_id_43QDrJO0TXiLwBsau09Ixw1968"
+class="class2005">1.3 Linux Range of Use</a>
+</div>
+<div class="class60">
+<a href="#part0006.xhtml_toc4_1.4_Linux_Certifications"
+class="class2005">1.4 Linux Certifications</a>
+</div>
+<div class="class58">
+<a href="#part0007.xhtml" class="class2005">2. Software Licenses</a>
+</div>
+<div class="class58">
+<a href="#part0008.xhtml" class="class2005">3. Linux in Day-to-Day
+Life</a>
+</div>
+<div class="class60">
+<a href="#part0008.xhtml_toc7_3.1_What_is_a_Linux_Distribution_"
+class="class2005">3.1 What is a Linux Distribution?</a>
+</div>
+<div class="class60">
+<a href="#part0008.xhtml_toc8_3.2_Which_Linux_Distributions_Exist_"
+class="class2005">3.2 Which Linux Distributions Exist?</a>
+</div>
+<div class="class58">
+<a href="#part0009.xhtml" class="class2005">4. Setting up a Linux
+System</a>
+</div>
+<div class="class60">
+<a href="#part0009.xhtml_toc10_4.1_Types_of_Installations"
+class="class2005">4.1 Types of Installations</a>
+</div>
+<div class="class60">
+<a href="#part0009.xhtml_toc11_4.2_Installing_Linux_Step-by-Step"
+class="class2005">4.2 Installing Linux Step-by-Step</a>
+</div>
+<div class="class60">
+<a href="#part0009.xhtml_id_43QDrJO0TXiLwBsau09Ixw1977"
+class="class2005">4.3 Adding a Graphical User Interface</a>
+</div>
+<div class="class60">
+<a href="#part0009.xhtml_toc13_4.4_Adding_Additional_Software"
+class="class2005">4.4 Adding Additional Software</a>
+</div>
+<div class="class60">
+<a href="#part0009.xhtml_id_43QDrJO0TXiLwBsau09Ixw1979"
+class="class2005">4.5 Exiting Linux</a>
+</div>
+<div class="class58">
+<a href="#part0010.xhtml" class="class2005">5. Navigating Linux</a>
+</div>
+<div class="class60">
+<a href="#part0010.xhtml_id_43QDrJO0TXiLwBsau09Ixw1981"
+class="class2005">5.1 The Filesystem Hierarchy Standard (FHS)</a>
+</div>
+<div class="class60">
+<a href="#part0010.xhtml_id_43QDrJO0TXiLwBsau09Ixw1982"
+class="class2005">5.2 Commands for Directories</a>
+</div>
+<div class="class60">
+<a href="#part0010.xhtml_id_43QDrJO0TXiLwBsau09Ixw1983"
+class="class2005">5.3 Terminal-based File Managers</a>
+</div>
+<div class="class60">
+<a href="#part0010.xhtml_id_43QDrJO0TXiLwBsau09Ixw1984"
+class="class2005">5.4 Graphical File Managers</a>
+</div>
+<div class="class58">
+<a href="#part0011.xhtml" class="class2005">6. Introduction to Linux
+Terminals</a>
+</div>
+<div class="class60">
+<a href="#part0011.xhtml_id_43QDrJO0TXiLwBsau09Ixw1986"
+class="class2005">6.1 What is a Terminal?</a>
+</div>
+<div class="class60">
+<a href="#part0011.xhtml_id_43QDrJO0TXiLwBsau09Ixw1987"
+class="class2005">6.2 What is a Shell?</a>
+</div>
+<div class="class60">
+<a href="#part0011.xhtml_toc23_6.3_Available_Shells"
+class="class2005">6.3 Available Shells</a>
+</div>
+<div class="class58">
+<a href="#part0012.xhtml" class="class2005">7. Essential Linux
+Commands</a>
+</div>
+<div class="class60">
+<a href="#part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1990"
+class="class2005">7.1 Files and Directories</a>
+</div>
+<div class="class60">
+<a href="#part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1991"
+class="class2005">7.2 Output and Text Processing</a>
+</div>
+<div class="class60">
+<a href="#part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1992"
+class="class2005">7.3 Users and Groups</a>
+</div>
+<div class="class60">
+<a href="#part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1993"
+class="class2005">7.4 Process Management</a>
+</div>
+<div class="class60">
+<a href="#part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1994"
+class="class2005">7.5 Network and System Information</a>
+</div>
+<div class="class58">
+<a href="#part0013.xhtml" class="class2005">8. Getting Help</a>
+</div>
+<div class="class60">
+<a href="#part0013.xhtml_toc31_8.1_Man_Pages" class="class2005">8.1 Man
+Pages</a>
+</div>
+<div class="class60">
+<a href="#part0013.xhtml_id_43QDrJO0TXiLwBsau09Ixw1997"
+class="class2005">8.2 Info Pages</a>
+</div>
+<div class="class60">
+<a href="#part0013.xhtml_id_43QDrJO0TXiLwBsau09Ixw1998"
+class="class2005">8.3 Integrated Help</a>
+</div>
+<div class="class60">
+<a href="#part0013.xhtml_id_43QDrJO0TXiLwBsau09Ixw1999"
+class="class2005">8.4 External Help</a>
+</div>
+<div class="class58">
+<a href="#part0014.xhtml" class="class2005">Further Reading</a>
+</div>
+<div class="class96">
+<a href="#part0015.xhtml" class="class2005">About the Author</a>
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div id="part0005.xhtml_id_43QDrJO0TXiLwBsau09Ixw1964" class="class103">
+About This Book
+</div>
+<div class="class105">
+This book has been created to guide you through your very first steps in
+the Linux environment. If you are a complete novice, or need a refresher
+in Linux, you’ve chosen the right book.
+</div>
+<div class="class29">
+In the upcoming chapters we will cover the Linux diversity and history
+and then continue on with setting up a Linux system from scratch for the
+end user. Here we will guide you through the setup and configuration
+process step by step.
+</div>
+<div class="class29">
+We will take a detailed look at the infamous command line by covering
+numerous essential terminal commands. We will also address specific
+topics such as choosing a distribution, adding a graphical user
+interface, package management, navigating the filesystem and
+directories, partitioning, software selection, and using the help
+system.
+</div>
+<div class="class29">
+By the end of this book you will have set up and configured Linux from
+start to finish, and be able to use Linux at a proficient level.
+</div>
+<p><span id="part0006.xhtml"></span></p>
+<div id="part0006.xhtml_id_" class="class103">
+1. What is Linux?
+</div>
+<div class="class105">
+Linux is the name for the kernel of an operating system that is based on
+the UNIX principles. The name is derived from the first name of its
+Finnish inventor, Linus Torvalds, and follows the methodology used by
+other UNIX-based systems (the last letter is an x). Today, Linux is
+developed and maintained by thousands of people around the world.
+</div>
+<div class="class29">
+The kernel of an operating system is its heart. It is required for
+communication between the hardware of your computer and you, the user.
+An operating system is a collection of different software components: a
+kernel, various tools and the accompanying libraries. It is a software
+that extends the basic operating system of your computer, known as the
+BIOS.
+</div>
+<div id="part0006.xhtml_toc1_1.1_From_UNIX_to_Linux" class="class118">
+1.1 From UNIX to Linux
+</div>
+<div class="class29">
+The history of Linux can be traced back to the 1990s. In order to
+understand the story behind Linux, we also have to look back briefly at
+the early days of computing after the 2nd World War.
+</div>
+<div class="class29">
+At that time computing machines filled entire buildings and the
+transformation from mechanical to electronic components, like
+microprocessors and the usage of multi-layer circuits, was underway.
+Moreover, in the 1960s and 1970<span id="part0006.xhtml_page_4"></span>
+s hardware and software components were quite expensive and not
+standardized. Various vendor-specific platforms existed and each of them
+had their own interface, protocols to transfer and exchange data, as
+well as operating system. The communication between these single
+computing devices required specific knowledge and the understanding of
+its protocols. The development of UNIX was an aim to circumvent these
+obstacles and to simplify the usage of computing devices on a larger
+scale.
+</div>
+<div class="class118">
+UNIX
+</div>
+<div class="class29">
+At the beginning of 1965 the development of the Multiplexed Information
+and Computing Service (Multics) started. Multics was the result of a
+collaboration between the Massachusetts Institute of Technology (MIT),
+General Electric (GE) and Bell Labs/AT&amp;T. Led by the developers Ken
+Thompson and Dennis Ritchie, the main product they developed was Unics.
+Later on it was renamed to UNIX. The UNIX operating system was mainly in
+use at the University of California in Berkeley.
+</div>
+<div class="class118">
+UNIX Variants
+</div>
+<div class="class29">
+The concept of UNIX became licensed to several companies that developed
+and maintained their own variant of UNIX. This included Solaris/SUN OS
+(SUN Microsystems, nowadays owned by Oracle), AIX (IBM), Scenix
+(Siemens), SCO UNIX, Xenix (Microsoft), as well as HP-UX
+(Hewlett-Packard), NeXTSTEP, Mac OS (Apple) and Android (Google).
+</div>
+<div class="class29">
+Open-source implementations comprised of the Berkeley System
+Distribution (BSD) with its variants: NetBSD, OpenBSD, and FreeBSD.
+Today, Linux is the most popular free software among open source
+developers. There is also a strong commercial support for the systems
+mentioned above<span id="part0006.xhtml_page_5"></span> .
+</div>
+<div class="class118">
+The UNIX Philosophy
+</div>
+<div class="class29">
+UNIX is designed with a number of strict principles in mind. These
+principles cover portability, multi-tasking and multi-user orientation
+in combination with a time-sharing approach. Furthermore, it is based on
+network connectivity following the TCP/IP scheme.
+</div>
+<div class="class29">
+The original development was done in the C programming language that
+resulted in independence from a hardware platform. Delivered with a
+selection of development tools and libraries, it allows you to easily
+extend it to your specific needs. It is simple, but has a powerful
+ability to automate tasks that supports complex but maintainable
+scripts.
+</div>
+<div class="class29">
+Similar to a toolbox, UNIX consists of a variety of tools. Each of them
+having a specific purpose and being designed exactly for that task. The
+idea is to use one tool per task. In order to achieve more complex
+goals, you would combine several tools into a chain. The following
+example combines the two commands ‘ls’ and ‘wc’ by means of a pipe to be
+able to count the number of Python files in the current directory.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ ls *.py | wc -l</span>
+</div>
+<div class="class133">
+<span class="class2003-0">6</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+We will explain these commands and their usage in more detail later on
+in the guide.
+</div>
+<div id="part0006.xhtml_id_43QDrJO0TXiLwBsau09Ixw1967" class="class118">
+1.2 A Brief History of Linux
+</div>
+<div class="class29">
+Similar to UNIX, the Linux operating system has different roots and is
+based on the work of quite a few masterminds. Among others, this
+includes Richard M. Stallman, Andrew S. Tanenbaum and Linus
+Torvalds<span id="part0006.xhtml_page_6"></span> .
+</div>
+<div class="class29">
+Richard M. Stallman, a hacker and developer at MIT, is the first
+president of the Free Software Foundation (FSF), and the father of the
+GNU project. GNU abbreviates the slogan GNU is Not UNIX. The goal of the
+project was to develop a free UNIX operating system. Until the beginning
+of the 1990s a collection of tools were available, but the kernel was
+still missing. The entire software was published under the GNU Public
+License (GPL) around 1983.
+</div>
+<div class="class29">
+The next step for Linux came from Andrew S. Tanenbaum. At that time he
+was a professor at the University of Amsterdam. For his students he
+developed Minix, an operating system for educational purposes to
+demonstrate and understand the UNIX principles. As he pointed out, Minix
+was not intended to be used in practice.
+</div>
+<div class="class27">
+Linus Torvalds, a Finish student at the University of Helsinki, was a
+user of Minix and quite unhappy with its boundaries. In 1990 he began to
+develop a new operating system based on the ideas of Minix, the UNIX
+principles, and the POSIX standard. His motivation was to have his own
+system that was understandable, and maximized to the boundaries of the
+hardware. He also wanted to have fun, and had no commercial intent in
+mind. The entire story behind Linux is described in his autobiographical
+book titled <span class="class2004">Just for Fun.</span> Today, Linus
+Torvalds oversees the development of the Linux kernel.
+</div>
+<div class="class29">
+To make Linux attractive to the outside world it needed a nice logo.
+Based on a competition for mascots, a large number of proposals were
+handed in. Larry Ewing sent in his idea for a penguin as seen on the
+cover of this book, and his proposal won. Designed with a cheeky smile
+and a well-fed body this penguin, named Tux, represents the image of a
+happy and satisfied user<span id="part0006.xhtml_page_7"></span> .
+</div>
+<div id="part0006.xhtml_id_43QDrJO0TXiLwBsau09Ixw1968" class="class118">
+1.3 Linux Range of Use
+</div>
+<div class="class29">
+Originally designed for Intel-based systems, Linux runs on a variety of
+platforms today. Among others this includes the ARM architectures (named
+arm and arm64), Motorola/Freescale’s 68k architecture (m68k), Intel x86
+(i386 and amd64), IBM s390 (s390), PowerPC (powerpc) and SPARC (sparc).
+</div>
+<div class="class29">
+Right from the beginning Linux focused on server systems. It is in
+constant use as a web server, file server, mail and news server,
+internet gateway, wireless router and firewall. Used as a computing
+unit, it helped to render video sequences and entire films such as
+Titanic, Shrek and Toy Story. Furthermore, Linux is in use in automotive
+products, astronautics, military, logistics and the engineering
+environment. Since 2006, Linux servers run all the world’s stock
+exchanges. It also runs almost all internet search engines.
+</div>
+<div class="class29">
+Over the last decade Linux also conquered the desktop. Due to its high
+flexibility and stability, it works as a reliable setup for text
+processing, graphic design, desktop publishing, calculations in
+spreadsheets, communication (email, chat, audio, and video) as well as
+user interfaces for your phone and television.
+</div>
+<div id="part0006.xhtml_toc4_1.4_Linux_Certifications" class="class118">
+1.4 Linux Certifications
+</div>
+<div class="class29">
+The widespread use of Linux has increased the demand for engineers and
+users who know exactly what they are doing. At this point a
+certification for Linux becomes advantageous. These certifications can
+be divided into programs that are general (not specific to a
+distribution) and focused (specific to a Linux distribution). The lists
+below give an overview of the primary certifications that currently
+exist<span id="part0006.xhtml_page_8"></span> .
+</div>
+<div class="class118">
+Non-specific Certifications
+</div>
+<ul>
+<li><div class="class159">
+Linux Essentials
+</div></li>
+<li><div class="class159">
+LPIC-1: Linux Server Professional Certification
+</div></li>
+<li><div class="class159">
+LPIC-2: Linux Engineer
+</div></li>
+<li><div class="class159">
+Linux Foundation Certified System Administrator (LFCS)
+</div></li>
+<li><div class="class159">
+Linux Foundation Certified Engineer (LFCE)
+</div></li>
+<li><div class="class159">
+CompTIA A+
+</div></li>
+<li><div class="class159">
+CompTIA Network+
+</div></li>
+</ul>
+<div class="class178">
+Distribution-specific Certifications
+</div>
+<ul>
+<li><div class="class159">
+RedHat Certified Engineer (RHCE)
+</div></li>
+<li><div class="class159">
+RedHat Certified System Architect (RHCSA)
+</div></li>
+<li><div class="class159">
+RedHat Certified Architect (RCA)
+</div></li>
+<li><div class="class159">
+SUSE Certified Administrator (SCA)
+</div></li>
+<li><div class="class159">
+SUSE Certified Engineer (SCE)
+</div></li>
+<li><div class="class159">
+SUSE Enterprise Architect (SEA)
+</div></li>
+</ul>
+<p><span id="part0007.xhtml"></span></p>
+<div id="part0007.xhtml_toc6_2._Software_Licenses" class="class103">
+2. Software Licenses
+</div>
+<div class="class105">
+As with most products available on the market, software is also packaged
+with an according license. A software license describes the usage of the
+software and allows or limits its usage. For commercial software,
+changes and copies are allowed within rather strict boundaries only. As
+an example, the license restricts you to use it for 5 users in parallel,
+and requires you to obtain another license block to add a 6th or 7th
+user. Common licenses are Shared Source from Microsoft and the Apple
+License.
+</div>
+<div class="class27">
+For open source software, licenses are much less restrictive. Changes
+and copies are explicitly allowed, and are even desired in some cases to
+make improvements for every user and purpose. The goal is to keep the
+software available for everyone from now and into the future. This
+so-called <span class="class2004">Copyleft</span> principle ensures that
+everyone has access to do adaptations if needed, and the restrictions on
+the use and redistribution of covered software are as minimal as
+possible. Common licenses that are in use for the single Linux
+components and its tools are the GNU Public License (GPL), BSD Licenses
+and the Apache License<span id="part0007.xhtml_page_10"></span> .
+</div>
+<div class="class29">
+The licenses for open source software follow a number of freedom rules
+as follows:
+</div>
+<ul>
+<li><div class="class159">
+To use the program for every purpose (right of unlimited use - freedom
+0)
+</div></li>
+<li><div class="class159">
+To understand how the program works and how to change it according to
+your needs (right to read the source code of the program - freedom 1)
+</div></li>
+<li><div class="class159">
+To make copies of the software to help your neighbor (right of
+redistribution - freedom 2)
+</div></li>
+<li><div class="class159">
+To improve the software and to publish your changes so that all other
+users can also benefit from your improvements (freedom 3)
+</div></li>
+</ul>
+<div class="class29">
+This ensures that the quality of available software constantly improves
+and everyone has access to these improvements. Using the GPL, the
+changes have to be published using the same license. Other open source
+licenses like BSD do not have this strong requirement.
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<div id="part0008.xhtml_toc9_3._Linux_in_Day-to-Day_Life"
+class="class103">
+3. Linux in Day-to-Day Life
+</div>
+<div class="class105">
+There are a few terms that may confuse Linux beginners. The first thing
+is its name, Linux vs GNU/Linux. As described earlier in Chapter 1, the
+term Linux refers to the Linux kernel only. In reality many users refer
+to Linux as the operating system as a whole, the kernel plus libraries
+and tools. Also the term Linux is used to include all the programs that
+run on Linux, or that are available for this great operating system.
+</div>
+<div class="class29">
+Furthermore, the description GNU/Linux needs understanding. Linux
+distributions with this name prefix are fleshed out with GNU
+implementations of the system tools and programs. One such example is
+Debian GNU/Linux. As already pointed out in Chapter 1, the GNU project
+goes back to the initiative of Richard M. Stallman and his dream to
+develop a free UNIX system. Based on his experiences at MIT and the
+collaboration with other colleagues he choose to use free software that
+was already available to rewrite the tools he needed. This included the
+TeX typesetting system as well as X11 window system. He published the
+rewritten tools under the GPL license whenever possible to make his work
+available freely to everyone who was interested in it.
+</div>
+<div class="class29">
+Next we will have a closer look at the different Linux
+distributions<span id="part0008.xhtml_page_12"></span> .
+</div>
+<div id="part0008.xhtml_toc7_3.1_What_is_a_Linux_Distribution_"
+class="class118">
+3.1 What is a Linux Distribution?
+</div>
+<div class="class29">
+A Linux distribution is a collection of software packages that fit
+together. A distribution is maintained by a team of software developers.
+Each member of the team focuses on a different package of the
+distribution. Together as a team they ensure that the single software
+packages are up-to-date and do not conflict with the other packages of
+the same release of the distribution.
+</div>
+<div class="class27">
+As of 2018 for Debian GNU/Linux 9, the official repositories contain
+more than 51,000 different packages. A repository is a directory of
+packages with a certain purpose. Debian GNU/Linux sorts its packages
+according to the development state. The official repository is named
+<span class="class2004">stable</span> and reflects the current release
+of stable packages. The other repositories are named <span
+class="class2004">testing</span> and unstable, and work in the same way
+but do not count as official packages.
+</div>
+<div class="class29">
+Typically a Linux distribution comprises of packages for a Linux kernel,
+a boot loader, GNU tools and libraries, a graphical desktop environment
+with a windows environment, as well as additional software like a web
+browser, an email client, databases and documentation. The software is
+provided in two ways; as the source code and as the compiled binary
+packages. This allows you to understand how the software is designed, to
+study it and to adjust it according to your personal needs. This step is
+described as freedom 1 on the list shown in Chapter 2.
+</div>
+<div class="class29">
+Depending on the focus of the Linux distribution, it also contains
+packages for a specific purpose like network or forensic tools,
+scientific software for educational purposes, and multimedia
+applications. More details are given below<span
+id="part0008.xhtml_page_13"></span> .
+</div>
+<div id="part0008.xhtml_toc8_3.2_Which_Linux_Distributions_Exist_"
+class="class118">
+3.2 Which Linux Distributions Exist?
+</div>
+<div class="class29">
+According to Distrowatch, more than 600 different Linux distributions
+exist. Major distributions are Debian GNU/Linux, Ubuntu, Linux Mint, Red
+Hat Enterprise Linux (RHEL), Fedora, CentOS, openSUSE Linux, Arch Linux,
+Gentoo and Slackware. One of the major questions is: which Linux
+distribution to use? Based on our experience these are the
+recommendations:
+</div>
+<ul>
+<li><div class="class159">
+For beginners: Ubuntu, Xubuntu, openSUSE, Linux Mint
+</div></li>
+<li><div class="class159">
+For advanced users with experience: Debian GNU/Linux, Red Hat Enterprise
+Linux (RHEL), Fedora, CentOS
+</div></li>
+<li><div class="class159">
+For developers: Arch Linux, Gentoo, Slackware
+</div></li>
+</ul>
+<div class="class29">
+For the examples in this book we use Debian GNU/Linux. Even though this
+distribution is recommended for advanced users it is still very beginner
+friendly, which we will show later in the guide. But the most important
+reason for this selection is its stability and the trust in this Linux
+distribution that was built up during the last 20 years of permanent use
+as a server and desktop system. Other Linux distributions fluctuate too
+much for comfort.
+</div>
+<div class="class29">
+You are more than welcome to choose a different Linux distribution. The
+majority of this book applies to most distributions. But if you are a
+complete novice, we highly recommend sticking to Debian GNU/Linux at
+least for the duration of this guide, as we will go step by step through
+its setup and configuration<span id="part0008.xhtml_page_14"></span> .
+</div>
+<div class="class29">
+In general, choosing a Linux distribution can depend on several criteria
+as stated below:
+</div>
+<ul>
+<li><div class="class159">
+By its availability: free or commercial use
+</div></li>
+<li><div class="class159">
+By its purpose: desktop, server, Wi-Fi router/network appliance
+</div></li>
+<li><div class="class159">
+By the intended audience: end user, network engineer, system
+administrator, developer
+</div></li>
+<li><div class="class159">
+By the package format: .deb, .rpm, .tar.gz
+</div></li>
+<li><div class="class159">
+By the time updates are available: every Linux distribution follows its
+own update cycle
+</div></li>
+<li><div class="class159">
+By the support that is provided: support can be free (community-based)
+or with costs (based on a support contract)
+</div></li>
+</ul>
+<div class="class251">
+When selecting a distribution, we recommend one that is stable, that is
+updated regularly and fits into the purpose you need the computer for.
+Below you will find a short description for each of the Linux
+distributions mentioned above.
+</div>
+<div class="class42-0">
+<img src="image254.jpg" class="class42-1" />
+</div>
+<div class="class256">
+Debian GNU/Linux
+</div>
+<div class="class29">
+Established in 1993, Debian GNU/Linux (Debian for short) is an entirely
+free and community-based operating system that follows the GNU
+principles. More than 1,000 developers continuously work on it based on
+their own free will. Behind Debian is no company and there are no
+business interests involved<span id="part0008.xhtml_page_15"></span> .
+</div>
+<div class="class29">
+One design goal is to have a stable and reliable operating system for
+computers that are actively delivering services. It is targeted to users
+who know what they want and have experience. The Debian developers
+maintain and use their own software. The packages are made available in
+.deb format, and are divided into categories according to the following
+licenses:
+</div>
+<ul>
+<li><div class="class159">
+Main: free software
+</div></li>
+<li><div class="class159">
+Contrib: free software that depends on non-free software
+</div></li>
+<li><div class="class159">
+Non-free: packages that have a non-free license
+</div></li>
+</ul>
+<div class="class267">
+Debian works excellent on both servers and desktop systems. A range of
+architectures are supported like ARM EABI (arm), IA-64 (Itanium), mips,
+MIPSel, powerpc, s390 (32 and 64 bit), as well as sparc, i386 (32 bit)
+and amd64 (64 bit). The code name of each release is based on the name
+of a character from the film Toy Story, such as <span
+class="class2004">Stretch</span> for Debian GNU/Linux 9.
+</div>
+<div class="class271-0">
+<img src="image270.jpg" class="class271-1" />
+</div>
+<div class="class178">
+Ubuntu
+</div>
+<div class="class29">
+Ubuntu is a free Linux distribution that is financed by the <span
+id="part0008.xhtml_page_16"></span> company Canonical Ltd. It is based
+on Debian but focuses on beginners instead. That’s why it contains just
+one tool per task. Also, the Ubuntu team tries to incorporate brand new
+elements that lack stability. The packages are made available in .deb
+format, and are divided into categories according to their support from
+Canonical:
+</div>
+<ul>
+<li><div class="class159">
+Main: free software, supported by Canonical
+</div></li>
+<li><div class="class159">
+Restricted: non-free software, supported by Canonical
+</div></li>
+<li><div class="class159">
+Universe: free software, unsupported
+</div></li>
+<li><div class="class159">
+Multiverse: non-free software, unsupported
+</div></li>
+</ul>
+<div class="class29">
+Ubuntu is available in three official editions: Ubuntu Desktop, Ubuntu
+Server, and Ubuntu Core (for the Internet of Things). Supported are a
+range of architectures like i386, IA-32, amd64, ARMhf (ARMv7 VFPv3-D16),
+ARM64, powerpc (64 bit) and s390x.
+</div>
+<div class="class251">
+Initially published in 2004, there are two releases per year: one in
+April and another in October. The release is reflected by the version
+number: 18.04 refers to the April release of the year 2018. The code
+name of a release is based on an adjective and an animal, such as Utopic
+Unicorn for Ubuntu 14.10.
+</div>
+<div class="class271-0">
+<img src="image287.jpg" class="class271-1" />
+</div>
+<div class="class178">
+Linux Mint
+</div>
+<div class="class267">
+Linux Mint is a non-commercial distribution that is based on <span
+id="part0008.xhtml_page_17"></span> Ubuntu and follows its release
+scheme. The initial publication dates back to the year 2006. As of 2014
+there have been two releases per year following the release from Ubuntu
+by one month. The code name for the release is a female name that ends
+with an <span class="class2004">a</span> , such as Felicia for version
+6. Linux Mint supports the two architectures IA-32 and amd64. The target
+of the distribution is desktop users that can use it easily.
+</div>
+<div class="class271-0">
+<img src="image292.jpg" class="class271-1" />
+</div>
+<div class="class178">
+Red Hat Enterprise Linux (RHEL)
+</div>
+<div class="class29">
+RHEL is a commercial Linux distribution. It is based on the combination
+of Red Hat Linux (available between 1995 and 2004) plus Fedora 19 and
+20. Its original release dates back to the year 2000. Its focus on
+business customers includes long-term support, training, and a
+certification program (see Chapter 1). Red Hat’s community project is
+called Fedora (see below).
+</div>
+<div class="class251">
+The packages are made available in .rpm format (Red Hat Package
+Manager). RHEL supports the architectures arm (64 bit), i386, amd64,
+powerpc, as well as s390 and zSeries. The distribution targets both
+servers and desktops. The code name for the release looks rather random,
+as it does not follow a similar scheme as used for Debian or Ubuntu.
+</div>
+<div class="class271-0">
+<img src="image298.jpg" id="page_18" class="class271-1" />
+</div>
+<div class="class178">
+Fedora
+</div>
+<div class="class29">
+Fedora is a community Linux distribution, aimed mainly at desktop usage.
+It is based on Red Hat Enterprise Linux (RHEL) and sponsored by Red Hat.
+It was launched in 2003 at the time the support for Red Hat Linux ended.
+As of 2018 it is available in the following versions:
+</div>
+<ul>
+<li><div class="class159">
+Workstation: for pc
+</div></li>
+<li><div class="class159">
+Server: for servers
+</div></li>
+<li><div class="class159">
+Atomic: for cloud computing
+</div></li>
+</ul>
+<div class="class251">
+Fedora supports the architectures amd64, ArmHF, powerpc, mips, s390 and
+RISC-V. The distribution has a rather short lifecycle where a new
+release follows roughly every 6 months. The code name for a release does
+not follow a fixed naming scheme but mostly consists of city names.
+</div>
+<div class="class271-0">
+<img src="image311.jpg" class="class271-1" />
+</div>
+<div class="class178">
+CentOS
+</div>
+<div class="class29">
+CentOS abbreviates from the name Community Enterprise Operating System.
+As with Fedora it is based on Red Hat Enterprise Linux, and compatible
+in terms of the binary <span id="part0008.xhtml_page_19"></span>
+packages. This allows the use of software on CentOS that is initially
+offered and developed with RHEL in mind. In contrast to Fedora it
+focuses on enterprise use for both desktop and server, with long-term
+support. The initial release of CentOS goes back to May 2004. The
+software packages come from three different repositories:
+</div>
+<ul>
+<li><div class="class159">
+Base: regular, stable packages
+</div></li>
+<li><div class="class159">
+Updates: security, bug fix or enhancement updates
+</div></li>
+<li><div class="class159">
+Addons: packages required for building the larger packages that make up
+the main CentOS distribution, but are not provided upstream
+</div></li>
+</ul>
+<div class="class251">
+CentOS is available for the architectures i386 and amd64. Other
+architectures are not supported.
+</div>
+<div class="class271-0">
+<img src="image324.jpg" class="class271-1" />
+</div>
+<div class="class178">
+openSUSE
+</div>
+<div class="class27">
+The Linux distribution openSUSE has its roots in the distributions SUSE
+Linux and the commercial SUSE Linux Professional that saw its first
+release in 1994. The name SUSE is an abbreviation for the original
+German owner named <span class="class2004">Gesellschaft für Software-
+und Systementwicklung GmbH</span> .
+</div>
+<div class="class251">
+OpenSUSE is based on the structures of Red Hat Linux and Slackware, and
+uses .rpm as a software archive format. It is available for the
+architectures i586, x86-64 and ARM. The openSUSE project aims to release
+a new version every eight <span id="part0008.xhtml_page_20"></span>
+months. As with Fedora, the code name for a release does not follow a
+fixed naming scheme.
+</div>
+<div class="class271-0">
+<img src="image330.jpg" class="class271-1" />
+</div>
+<div class="class178">
+Arch Linux
+</div>
+<div class="class29">
+Arch Linux is a free Linux distribution that saw its first release in
+2002. It follows the principle of a rolling release, which results in
+monthly releases of the distribution. Currently the core team consists
+of about 25 developers and is supported by a number of other developers,
+called trusted users. Arch Linux uses Pacman as a package management
+system. The single packages are held in four software repositories:
+</div>
+<ul>
+<li><div class="class159">
+Core: packages for the basic system
+</div></li>
+<li><div class="class159">
+Extra: additional packages like desktop environments and databases
+</div></li>
+<li><div class="class159">
+Community: packages that are maintained by trusted users
+</div></li>
+<li><div class="class159">
+Multilib: packages that can be used on several architectures
+</div></li>
+</ul>
+<div class="class251">
+Arch Linux supports the architecture amd64. The early releases until
+2007 had code names that do not follow a specific scheme.
+</div>
+<div class="class271-0">
+<img src="image345.jpg" id="page_21" class="class271-1" />
+</div>
+<div class="class178">
+Gentoo
+</div>
+<div class="class251">
+As with Arch Linux, Gentoo follows the principle of a rolling release.
+New installation images are available weekly, with the first release
+available in 2002. Gentoo is special due to being a source code based
+distribution. Before installing the software, it has to be compiled
+first. Supported architectures are alpha, amd64, arm, hppa, IA-64, m68k,
+mips, powerpc, s390, sh and sparc.
+</div>
+<div class="class271-0">
+<img src="image350.jpg" class="class271-1" />
+</div>
+<div class="class178">
+Slackware
+</div>
+<div class="class29">
+Slackware is the oldest active Linux distribution. The first release
+dates back to 1992. Regular releases are available without a fixed
+interval. It targets the professional user, and gives him/her as much
+freedom as possible. Slackware uses compressed tar.gz archives as a
+package format, and supports <span id="part0008.xhtml_page_22"></span>
+the four architectures i486, alpha, sparc and arm. The distribution was
+also ported to architecture s390.
+</div>
+<div class="class27">
+<a
+href="http://www.Amazon.com/gp/customer-reviews/write-a-review.html?asin=B07HDTG58D"><img
+src="image356.jpg" class="class47" /></a>
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<div id="part0009.xhtml_id_43QDrJO0TXiLwBsau09Ixw1974" class="class103">
+4. Setting up a Linux System
+</div>
+<div class="class105">
+As mentioned in the previous chapter, we will be using Debian for our
+demonstrations. To recap, Debian is a distribution that provides great
+stability and scales up exceptionally well once your skills and
+knowledge progress past the beginner stages. In this chapter we will
+install and configure Debian, showing you every single step along the
+way.
+</div>
+<div id="part0009.xhtml_toc10_4.1_Types_of_Installations"
+class="class118">
+4.1 Types of Installations
+</div>
+<div class="class29">
+Debian offers a variety of methods for a proper setup. This includes a
+graphical and a text-based installation; we will use the former. For
+installation media the Debian developers offer three variants:
+</div>
+<ul>
+<li><div class="class159">
+A CD or DVD for 32 bit and 64 bit
+</div></li>
+<li><div class="class159">
+A network image for 32 bit and 64 bit (a so-called Netinst-ISO)
+</div></li>
+<li><div class="class159">
+A tiny CD for 32 bit or 64 bit
+</div></li>
+</ul>
+<div class="class29">
+We also have test media available. These include live images for 32 bit
+and 64 bit, and allow you to try Debian before installing it on your
+computer. During the time of writing this document, version 9.5 is the
+current stable release of Debian. <span
+id="part0009.xhtml_page_24"></span> The setup described here is based on
+this release and the amd64 architecture.
+</div>
+<div class="class27">
+After downloading the network image from <a
+href="http://www.debian.org/distrib"
+class="class2005">www.debian.org/distrib</a> no further static images
+are required to be referenced in the system. Instead, it depends on the
+internet connection to retrieve the packages to be installed and keep
+your operating system up-to-date.
+</div>
+<div class="class29">
+The entire process will take you about an hour and it allows you to have
+a lean software selection according to your specific needs. Software
+packages that you do not use will not be available on your system. They
+can be added whenever you feel the need for them.
+</div>
+<div class="class29">
+The target system of our installation is an XFCE-based desktop system
+for a single user with a web browser and a music player. For the web
+browser we use Mozilla Firefox and for the music player, VLC. Both
+programs are a permanent component of the Linux distribution. The
+environment we use for demonstration purposes is a virtual machine based
+on VirtualBox with 4 GB of RAM and 15 GB of disc space.
+</div>
+<div id="part0009.xhtml_toc11_4.2_Installing_Linux_Step-by-Step"
+class="class118">
+4.2 Installing Linux Step-by-Step
+</div>
+<div class="class178">
+Boot Menu
+</div>
+<div class="class29">
+In order to begin with the installation of Debian, first boot the
+computer (in our case the VirtualBox image) from the ISO image you have
+downloaded. If you are also using a virtual machine, see your virtual
+machine vendor website for help on how to enable the ISO image. Next,
+wait for the boot menu to appear on the screen. The image below shows
+you the different options that are offered. Using the cursor keys you
+<span id="part0009.xhtml_page_25"></span> can navigate the boot menu,
+and the Enter key selects an entry.
+</div>
+<div class="class271-0">
+<img src="image382.jpg" class="class271-1" />
+</div>
+<div class="class29">
+The different options are:
+</div>
+<ul>
+<li><div class="class159">
+Graphical install: start the installation process using a graphical
+installer
+</div></li>
+<li><div class="class159">
+Install: starting the installation process using a text-based installer
+</div></li>
+<li><div class="class159">
+Advanced options: select further options like Expert mode, Automated
+install or Rescue mode (see image below for more details)
+</div></li>
+<li><div class="class159">
+Help: get further help
+</div></li>
+<li><div class="class159">
+Install with speech synthesis: starting the installation process with
+speech support
+</div></li>
+</ul>
+<div class="class42-0">
+<img src="image397.jpg" id="page_26" class="class42-1" />
+</div>
+<div class="class27">
+From the main boot menu choose the entry <span
+class="class2004">Graphical install</span> , and press the Enter key to
+proceed.
+</div>
+<div class="class118">
+Language Selection
+</div>
+<div class="class29">
+Next, choose the language you prefer to be used during the entire
+installation process. The dialogs and messages are translated
+accordingly. This selection does not determine irrevocably the language
+your Linux system will have, you can always choose a different language
+later.
+</div>
+<div class="class29">
+The image below shows the dialog box. English is already pre-selected,
+and so you just have to click the Continue button on the lower-right
+corner of the dialog box to proceed.
+</div>
+<div class="class271-0">
+<img src="image404.jpg" id="page_28" class="class271-1" />
+</div>
+<div class="class118">
+Location Selection
+</div>
+<div class="class27">
+Third, make a selection regarding your location (see image below). Based
+on your language setting made before, the countries are listed in which
+the chosen language is mainly spoken. This also influences the locale
+settings like the time zone your computer is in. In order to have a
+different setting choose the entry titled <span
+class="class2004">other</span> from the end of the list and go on from
+there. When you are done, click the Continue button to proceed with step
+four.
+</div>
+<div class="class271-0">
+<img src="image409.jpg" class="class271-1" />
+</div>
+<div class="class118">
+Keyboard Selection
+</div>
+<div class="class29">
+Fourth, choose your keyboard layout from the list (see image below). For
+the United States the pre-selection is American English. If you use a
+different keyboard layout select the right one from the list. If done
+click the Continue button to proceed with step five.
+</div>
+<div class="class271-0">
+<img src="image414.jpg" id="page_29" class="class271-1" />
+</div>
+<div class="class118">
+Network Setup
+</div>
+<div class="class29">
+Step five includes loading the installer components from the ISO image,
+and the detection of the network hardware in order to load the correct
+network driver. Then, the installer tries to connect to the internet to
+retrieve an IP address via DHCP from your local network server.
+</div>
+<div class="class29">
+When done, you can set up the hostname of your computer (see image
+below). Choose a unique name for your machine that consists of a single
+name and does not exist yet in your local network segment. It is common
+to use names of fruits, places, musical instruments, composers and
+characters from movies. In this case we choose the name debian95 that
+simply represents the Linux distribution and its version number.
+</div>
+<div class="class271-0">
+<img src="image420.jpg" class="class271-1" />
+</div>
+<div class="class29">
+When you are done, click the Continue button to proceed with step six to
+add a domain name like yourcompany.com (see image below). In this case
+it is not needed. That’s why we <span
+id="part0009.xhtml_page_30"></span> leave the entry field empty. Click
+the Continue button on the lower-right corner to proceed with the
+installation.
+</div>
+<div class="class271-0">
+<img src="image424.jpg" class="class271-1" />
+</div>
+<div class="class118">
+Users and Roles
+</div>
+<div class="class27">
+Our Linux system needs at least two users in order to be operated
+properly. One is an administrative user that has a fixed name root and
+the other is a regular user that we just give the name of <span
+class="class2004">User</span> in this case.
+</div>
+<div class="class27">
+In the next two steps you set the password for the user root (see image
+below) and both the full name and account name for the regular user. For
+simplicity we use <span class="class2004">Debian User</span> as the full
+name and <span class="class2004">User</span> as the account name. For
+both users, choose a password that is dissimilar and that you can
+remember. You will need these passwords later in order to log onto your
+computer.
+</div>
+<div class="class271-0">
+<img src="image430.jpg" id="page_31" class="class271-1" />
+</div>
+<div class="class118">
+Time Zone
+</div>
+<div class="class29">
+Setting the correct time zone is of significant importance for
+communication with other services, especially in a network. Choose the
+value from the list as seen in the image below. The entries in the list
+are based on the location you have selected before. When done, click the
+Continue button to define the storage media and the accompanying
+partitions.
+</div>
+<div class="class271-0">
+<img src="image435.jpg" id="page_32" class="class271-1" />
+</div>
+<div class="class118">
+Storage Media and Partitioning
+</div>
+<div class="class29">
+A Linux system can be distributed across a number of different storage
+media like hard disks and flash drives. Over and above, a storage media
+can be separated into multiple disk partitions. In order to do so, the
+setup program of Debian has the following methods available (see image
+below):
+</div>
+<ul>
+<li><div class="class159">
+Guided - use entire disk: follow the steps as provided and use the
+entire disk space for the Linux installation. This creates partitions
+with fixed sizes.
+</div></li>
+<li><div class="class159">
+Guided - use entire disk and set up LVM: follow the steps as provided
+and use the entire disk space for the Linux installation. This option
+makes use of Logical Volume Management (LVM) in order to create
+partitions with sizes that can be changed later on.
+</div></li>
+<li><div id="part0009.xhtml_page_33">
+<div class="class159">
+Guided - use entire disk and set up encrypted LVM: follow the steps as
+provided and use the entire disk space for the Linux installation. This
+option makes use of Logical Volume Management (LVM) in order to create
+encrypted partitions with sizes that can be changed later on.
+</div>
+</div></li>
+<li><div class="class159">
+Manual: create partitions individually. This is the expert mode and
+requires deeper knowledge about partitions and file system parameters.
+</div></li>
+</ul>
+<div class="class42-0">
+<img src="image449.jpg" class="class42-1" />
+</div>
+<div class="class27">
+From the list choose the entry <span class="class2004">Guided - use
+entire disk</span> . The values for partition sizes are chosen according
+to experience, implemented as an algorithm. A manual calculation is not
+required. Click the Continue button on the lower-right corner to proceed
+with the installation<span id="part0009.xhtml_page_34"></span> .
+</div>
+<div class="class29">
+Next, select the disk to partition. In our case we have only one disk
+available (see image below). Later on in this guide the disk will be
+referred to as /dev/sda for the 1st SCSI disk.
+</div>
+<div class="class271-0">
+<img src="image454.jpg" class="class271-1" />
+</div>
+<div class="class29">
+A disk partition refers to a piece of the storage media that is
+organized separately and is intended to contain a branch of the Linux
+file system tree. There is no universal way to do this separation
+correctly. This guide shows a simple but safe solution that works for a
+basic system. The menu in the dialog box offers the following options:
+</div>
+<ul>
+<li><div class="class159">
+All files in one partition: use just a single partition to keep programs
+and user data
+</div></li>
+<li><div class="class159">
+Separate /home partition: store programs and user data in separate
+partitions
+</div></li>
+<li><div class="class159">
+Separate /home, /var, and /tmp partitions: keep user data, variable data
+and temporary data in separate partitions<span
+id="part0009.xhtml_page_35"></span>
+</div></li>
+</ul>
+<div class="class27">
+As shown in the image below, choose the third entry <span
+class="class2004">Separate /home, /var, and /tmp partitions</span> .
+Click the Continue button on the lower-right corner to proceed with the
+installation.
+</div>
+<div class="class271-0">
+<img src="image466.jpg" class="class271-1" />
+</div>
+<div class="class29">
+The next step is to confirm the partition scheme. This is calculated
+automatically based on experience and contains these partitions:
+</div>
+<ul>
+<li><div class="class159">
+sda1: the first partition of the first SCSI disk is a primary partition
+with a size of 3 GB, formatted with the ext4 file system, and referred
+to as the root part of the file system tree (indicated with /)
+</div></li>
+<li><div class="class159">
+sda5: the fifth partition of the first SCSI disk is a logical partition
+with a size of 1.3 GB, formatted with the ext4 file system, and reserved
+to store variable data of the file system tree (indicated with /var)
+</div></li>
+<li><div id="part0009.xhtml_page_36">
+<div class="class159">
+sda6: the sixth partition of the first SCSI disk is a logical partition
+with a size of 3.3 GB, formatted as a swap file system
+</div>
+</div></li>
+<li><div class="class159">
+sda7: the seventh partition of the first SCSI disk is a logical
+partition with a size of 311 MB, formatted with the ext4 file system,
+and reserved to store temporary data of the file system tree (indicated
+with /tmp)
+</div></li>
+<li><div class="class159">
+sda8: the eighth partition of the first SCSI disk is a logical partition
+with a size of 8.8 GB, formatted with the ext4 file system, and reserved
+to store the user data of the file system tree aka home directories
+(indicated with /home)
+</div></li>
+</ul>
+<div class="class27">
+Due to historical reasons a hard disk can contain four primary
+partitions only. The fourth one is called an <span
+class="class2004">Extended Partition</span> if divided into so-called
+logical partitions or logical drives. In our case the logical partitions
+/dev/sda5, /dev/sda6, /dev/sda7 and /dev/sda8 are stored on the primary
+partition /dev/sda4. The partitions /dev/sda2 and /dev/sda3 are not in
+use.
+</div>
+<div class="class271-0">
+<img src="image482.jpg" class="class271-1" />
+</div>
+<div class="class27">
+From the above list, choose the entry <span class="class2004">Finish
+partitioning and write changes to disk</span> . Click the Continue
+button on the lower-right corner to proceed and to confirm the partition
+scheme (see below image). Choose <span class="class2004">yes</span> from
+the list and click the Continue button to partition the disk. Note that
+all the data on the selected storage device will be lost and the disk
+will be empty.
+</div>
+<div class="class271-0">
+<img src="image486.jpg" id="page_38" class="class271-1" />
+</div>
+<div class="class29">
+Having divided the storage media into single partitions, the partitions
+will be formatted with the file system as defined before. In our case
+the partitions /dev/sda1, /dev/sda5, /dev/sda7 and /dev/sda8 will get an
+ext4 file system, and the partition /dev/sda6 will get a swap
+filesystem. As soon as this step is completed, the base system of Debian
+will be installed next.
+</div>
+<div class="class118">
+Package Management
+</div>
+<div class="class29">
+The ISO image contains the installer and a number of packages to set up
+the Linux base system. For example this includes the Linux kernel being
+installed below.
+</div>
+<div class="class271-0">
+<img src="image492.jpg" class="class271-1" />
+</div>
+<div class="class29">
+Next you need to decide whether to use additional installation media or
+not. In our case we have just a single installation disk and can
+consequentially select No from the menu (see image below). Then click
+the Continue button to proceed.
+</div>
+<div class="class271-0">
+<img src="image496.jpg" id="page_39" class="class271-1" />
+</div>
+<div class="class29">
+As pointed out earlier, the software for Debian is organized in
+packages. These packages are provided in multiple software repositories.
+The repositories are made available via package mirrors that are
+maintained by universities, private persons, companies and other
+organizations. These mirrors are located in different countries.
+</div>
+<div class="class29">
+In the next step you will have to decide from which country you would
+like to retrieve your Debian packages. It is recommended to choose a
+mirror that is geographically located near you to minimize the time that
+is needed to transport the data from the mirror to your computer via
+network. As an initial step, choose your desired country.
+</div>
+<div class="class271-0">
+<img src="image501.jpg" id="page_41" class="class271-1" />
+</div>
+<div class="class29">
+As a second step choose a preferred mirror from the list (see image
+below). The list contains universities, internet providers, government
+services and other organizations.
+</div>
+<div class="class271-0">
+<img src="image505.jpg" class="class271-1" />
+</div>
+<div class="class29">
+In case your computer network includes a proxy server to communicate
+with the outside world, enter the according information here. In this
+case we don’t have that and leave the entry field empty. Click the
+Confirm button to proceed.
+</div>
+<div class="class271-0">
+<img src="image509.jpg" id="page_42" class="class271-1" />
+</div>
+<div class="class29">
+As soon as the single parameters are set, the Debian installer connects
+to the previously selected package mirror and retrieves the package
+lists from there. A package list contains the packages that are
+available, including the name, size and description. Depending on the
+quality and bandwidth of your network connection this step can take a
+while.
+</div>
+<div class="class271-0">
+<img src="image513.jpg" class="class271-1" />
+</div>
+<div class="class29">
+Next, you are asked to take part in Popcon, the Debian package
+popularity contest (see image below). This information is optional, and
+is used only by the team of developers that is responsible for the
+Debian packages. Based on Popcon, they figure out which Debian packages
+are the ones that are installed most often. The information has a direct
+influence on the preparation of installation images and which packages
+to keep or to dismiss for the different architectures<span
+id="part0009.xhtml_page_43"></span> .
+</div>
+<div class="class29">
+In our case we do not participate in Popcon, and leave the selection to
+No. Click the Confirm button to proceed with the selection of software
+tasks (tasksel).
+</div>
+<div class="class271-0">
+<img src="image518.jpg" class="class271-1" />
+</div>
+<div class="class118">
+Software Selection
+</div>
+<div class="class29">
+Debian offers carefully arranged selections of packages, so-called
+tasks. The idea behind them is to group packages for specific uses in
+order to simplify the installation. From the list in the dialog window
+(see image below) you can choose between different desktop environments,
+as well as a web server, a print server, a SSH server and the standard
+system utilities. To have a minimal installation just enable the last
+two entries from the list. We will install the XFCE desktop environment
+later.
+</div>
+<div class="class271-0">
+<img src="image523.jpg" id="page_44" class="class271-1" />
+</div>
+<div class="class29">
+Having confirmed the software selection, the Debian installer retrieves
+the needed packages from the package mirror, unpacks and then installs
+them. The bar below shows the progress. In this case 140 packages have
+to be downloaded.
+</div>
+<div class="class271-0">
+<img src="image527.jpg" id="page_45" class="class271-1" />
+</div>
+<div class="class118">
+Setting up GRUB
+</div>
+<div class="class27">
+In order to start our newly installed Debian system, we have to set this
+information too. This process is called booting the system. The software
+component that handles this step is named Grand Unified Boot Loader
+(GRUB or GNU GRUB to be precise). The entry <span
+class="class2004">Yes</span> is already pre-selected, and so we can
+click Continue to proceed.
+</div>
+<div class="class271-0">
+<img src="image532.jpg" class="class271-1" />
+</div>
+<div class="class29">
+The Debian installer needs to know where to install GRUB. The menu in
+the image below lists the storage media to be considered. In our case we
+choose the second entry from the list (/dev/sda). Then, click Continue
+to proceed.
+</div>
+<div class="class271-0">
+<img src="image536.jpg" id="page_46" class="class271-1" />
+</div>
+<div class="class29">
+Now that we are nearly finished with the basic installation, the only
+thing left to do is just a single dialog box to read.
+</div>
+<div class="class118">
+Finishing the Installation
+</div>
+<div class="class29">
+The following dialog box informs you that the installation is complete.
+Then click Continue to reboot the newly installed system.
+</div>
+<div class="class271-0">
+<img src="image542.jpg" class="class271-1" />
+</div>
+<div class="class27">
+After a few seconds, the text-based GRUB boot menu will appear on the
+screen (see image below). The boot menu includes two options: Debian
+GNU/Linux and Advanced options for Debian GNU/Linux. The first menu item
+is highlighted and pre-selected. The second menu entry allows you to set
+specific boot options. For a comprehensive list of these options have a
+look at the GNU GRUB manual at <a
+href="http://www.gnu.org/software/grub/manual/grub"
+class="class2005">www.gnu.org/software/grub/manual/gru<span
+id="part0009.xhtml_page_47"></span> b</a>
+</div>
+<div class="class29">
+Keep the first menu item selected and press Enter to proceed and boot
+the new system.
+</div>
+<div class="class271-0">
+<img src="image547.jpg" id="page_48" class="class271-1" />
+</div>
+<div class="class29">
+Your Debian system will start and initialize the necessary system
+services. This step will take a few seconds to be completed. Finally, a
+black-and-white screen will be visible on the first text terminal named
+tty1 (see image below) and ask you to log into the system.
+</div>
+<div class="class271-0">
+<img src="image551.jpg" class="class271-1" />
+</div>
+<div class="class29">
+The login prompt consists of two components: the hostname of your Linux
+system (debian95) followed by a space and the word login.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">Debian GNU/Linux 9 debian95 tty1</span>
+</div>
+<div class="class557">
+<span class="class2003-0">debian95 login: _</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+Having logged into the system you will add further software to be able
+to use a graphical user interface, based on the XFCE desktop. At this
+step of the installation process, adding further software can only be
+done by logging in as the administrative root user.
+</div>
+<div class="class27">
+In order to do so, type in <span class="class2004">root</span> at the
+login prompt, press Enter, wait for the text <span
+class="class2004">Password:</span> to appear and type in the <span
+id="part0009.xhtml_page_49"></span> password set for the root user you
+defined before. The Linux system will welcome you (see image below) with
+a login message. The first line of the login message will give you a
+display on the time of your last login followed by the version of the
+Linux kernel that is currently running (line two) and the usage advice
+(lines five to eight).
+</div>
+<div class="class271-0">
+<img src="image566.jpg" class="class271-1" />
+</div>
+<div class="class29">
+After the welcome message Debian opens a command-line prompt:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">root@debian95 ~#</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+This command-line prompt consists of four components:
+</div>
+<ul>
+<li><div class="class159">
+root: the name of the user who logged in
+</div></li>
+<li><div class="class159">
+debian95: the hostname of the Linux system
+</div></li>
+<li><div class="class159">
+~: the current directory. In this case it is the home directory of the
+user currently logged in. If not otherwise set, this is defined as
+/home/username for regular users and /root for the administrative user.
+~ is just an abbreviation of it.
+</div></li>
+<li><div id="part0009.xhtml_page_50">
+<div class="class159">
+#: the login symbol. The # symbol represents the user root whereas $ is
+used by regular users without administrative rights
+</div>
+</div></li>
+</ul>
+<div class="class27">
+<span class="class2019">Important</span> : You are now logged in as the
+administrative root user. Take care which commands you type in, and
+check twice if in doubt. Any mistakes can lead to the necessity to
+install or repair your Linux system.
+</div>
+<div id="part0009.xhtml_id_43QDrJO0TXiLwBsau09Ixw1977" class="class118">
+4.3 Adding a Graphical User Interface
+</div>
+<div class="class29">
+At its current stage, the Debian system is fully active and can be used
+in production. For a desktop system suitable for a regular user, it
+still lacks a nice and easy-to-use graphical user interface. In this
+step we will change that and install the XFCE desktop manager.
+</div>
+<div class="class29">
+In order to do so, we will install the following packages:
+</div>
+<ul>
+<li><div class="class159">
+The aptitude package manager
+</div></li>
+<li><div class="class159">
+The xdm display manager
+</div></li>
+<li><div class="class159">
+The xfce4 desktop environment
+</div></li>
+</ul>
+<div class="class27">
+Debian uses the package manager <span class="class2004">apt</span> to
+handle the installation, the update and the removal of software packages
+and the related package lists. Also, apt resolves all the package
+dependencies and ensures that the relevant software is available on the
+system. In our case a total of roughly 450 MB of data/software have to
+be retrieved from the package mirror and installed. As pointed out
+earlier, this requires a working internet connection to download the
+needed software packages<span id="part0009.xhtml_page_51"></span> .
+</div>
+<div class="class29">
+In order to install the three packages, type in the following commands
+at the command-line prompt. Just type the command after the # symbol:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">root@debian95 ~# apt-get install aptitude xdm
+xfce4</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+<span class="class2004">apt</span> will display further information
+regarding the packages to be installed. This includes the list of
+depending packages and recommended packages. At the end you will see a
+command-line prompt. Type Y or press Enter to install aptitude, xdm and
+xfce4 as well as the depending packages. For the xdm display manager,
+two dialog boxes have to be confirmed (see images below). Press Enter
+two times to confirm the use of xdm.
+</div>
+<div class="class271-0">
+<img src="image607.jpg" class="class271-1" />
+</div>
+<div class="class271-0">
+<img src="image610.jpg" id="page_52" class="class271-1" />
+</div>
+<div class="class27">
+The retrieval of the software packages to be installed takes a while.
+When finished, the command-line prompt will appear again. In order to
+activate the changes regarding the graphical desktop environment,
+restart the system. Type the command <span
+class="class2004">reboot</span> at the command-line prompt as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">root@debian95 ~# reboot</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+Having restarted the Linux system, Debian welcomes us with a graphical
+boot screen (see image below). Press Enter to start the Linux system
+with the default settings.
+</div>
+<div class="class271-0">
+<img src="image621.jpg" class="class271-1" />
+</div>
+<div class="class27">
+A <span id="part0009.xhtml_page_53"></span> few seconds later a
+graphical login screen will be visible (see image below). Log in to the
+system with the regular user named <span class="class2004">user</span>
+as created earlier. Type in <span class="class2004">user</span> , press
+Enter and type in the password for the user. Then, press Enter again to
+confirm and log in.
+</div>
+<div class="class271-0">
+<img src="image625.jpg" class="class271-1" />
+</div>
+<div class="class29">
+Next, the XFCE desktop will be visible (see image below). The desktop
+comes with a number of default elements: an upper navigation bar, a
+lower navigation bar and desktop icons. These elements are explained in
+more detail below.
+</div>
+<div class="class271-0">
+<img src="image629.jpg" class="class271-1" />
+</div>
+<ul>
+<li><div id="part0009.xhtml_page_54">
+<div class="class159">
+Upper navigation bar: this shows buttons to access the different
+applications, the four virtual desktop screens, the clock and a button
+for various user actions such as to lock the screen, change the user,
+change to standby mode and exit the current session
+</div>
+</div></li>
+<li><div class="class159">
+Lower navigation bar: this bar contains several buttons to hide all the
+opened windows and show the empty desktop, to open a terminal, the file
+manager, a web browser, to find an application and to open the file
+manager directly with your home directory.
+</div></li>
+<li><div class="class159">
+Desktop icons: from top to bottom there is a trash bin, file manager
+icons that link to the computer, and the home directory
+</div></li>
+</ul>
+<div class="class29">
+A right-click on the desktop opens a context menu that allows you to
+access the various applications (see image below).
+</div>
+<div class="class271-0">
+<img src="image640.jpg" id="page_55" class="class271-1" />
+</div>
+<div id="part0009.xhtml_toc13_4.4_Adding_Additional_Software"
+class="class118">
+4.4 Adding Additional Software
+</div>
+<div class="class29">
+Up until now the software available to be used on your Linux system has
+been rather limited. The next thing to do is to add the following four
+Debian packages to make your life a bit easier:
+</div>
+<ul>
+<li><div class="class159">
+firefox-esr: the web browser Mozilla Firefox (Extended Support Release)
+</div></li>
+<li><div class="class159">
+gnome-terminal: a terminal emulation maintained by the GNOME project
+</div></li>
+<li><div class="class159">
+xscreensaver: a basic screensaver for the X11 system
+</div></li>
+<li><div class="class159">
+vlc: the video player Video Lan Client (VLC)
+</div></li>
+</ul>
+<div class="class27">
+The installation of the three packages will be done using the
+command-line in a terminal emulator (we will look at terminals in detail
+later in the guide). Currently, on your <span
+id="part0009.xhtml_page_56"></span> system the X11 terminal emulator
+<span class="class2004">xterm</span> is installed. In order to open
+xterm, click on the terminal button in the lower navigation bar or
+select the entry Application &gt; System &gt; Xterm from the context
+menu.
+</div>
+<div class="class27">
+As step one, open xterm. Next, type in the command <span
+class="class2004">su</span> next to the command-line prompt as follows
+and press Enter:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">user@debian95: ~$ su</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Password:</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+You may remember from the previous steps that only an administrative
+user can install, update or remove software on a Debian system. The
+<span class="class2004">su</span> command abbreviates <span
+class="class2004">switch user</span> and changes your current role. Used
+without an additional name, the role changes to the administrative root
+user. At the password prompt type in the password for the administrative
+user and press Enter.
+</div>
+<div class="class29">
+As an administrative user, install the packages: firefox-esr,
+gnome-terminal, xscreenserver and vlc as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">root@debian95: ~# apt-get install firefox-esr
+gnome-terminal xscreensaver vlc</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+The output is seen below:
+</div>
+<div class="class271-0">
+<img src="image673.jpg" class="class271-1" />
+</div>
+<div class="class29">
+After the installation of the four packages, you can switch back to your
+role as a regular user. Press Ctrl+D to quit the admin part, and press
+Ctrl+D again to close xterm<span id="part0009.xhtml_page_57"></span> .
+</div>
+<div class="class29">
+The installation of Firefox has the following effects:
+</div>
+<ul>
+<li><div class="class159">
+The new software <span class="class2004">Firefox</span> is available
+from the application menu
+</div></li>
+<li><div class="class159">
+The new command <span class="class2004">firefox</span> is available from
+the command-line
+</div></li>
+<li><div class="class159">
+The earth icon from the lower navigation bar links to the Firefox web
+browser
+</div></li>
+<li><div class="class159">
+The installation of the GNOME terminal package has the following
+effects:
+</div></li>
+<li><div class="class159">
+The new software <span class="class2004">gnome-terminal</span> is
+available from both the command-line and the application menu
+</div></li>
+<li><div class="class159">
+The terminal icon from the lower navigation bar links to the GNOME
+terminal
+</div></li>
+<li><div id="part0009.xhtml_page_58">
+<div class="class159">
+The entry <span class="class2004">Open Terminal Here</span> from the
+context menu refers to the GNOME terminal
+</div>
+</div></li>
+</ul>
+<div class="class27">
+In order to see the changes, select the entry <span
+class="class2004">Open Terminal Here</span> from the context menu. The
+image below shows the terminal window. It comes with a white background
+and a bigger font that is easier to read.
+</div>
+<div class="class271-0">
+<img src="image694.jpg" class="class271-1" />
+</div>
+<div id="part0009.xhtml_id_43QDrJO0TXiLwBsau09Ixw1979" class="class118">
+4.5 Exiting Linux
+</div>
+<div class="class29">
+In order to use Linux properly, you also have to learn how to exit Linux
+and to reboot the system. Below you will learn how to quit the XFCE
+desktop environment, to shut down the Linux system and to reboot the
+system. We will look at two methods; the first is based on the graphical
+interface and the second can also be used on non-graphical systems like
+servers and wireless routers<span id="part0009.xhtml_page_59"></span> .
+</div>
+<div class="class118">
+Quitting the XFCE Desktop Environment
+</div>
+<div class="class27">
+The easiest way to quit the XFCE desktop and to log out from your
+current session is to click on the button in the right corner of the
+upper navigation bar. The button is labeled with your username, which in
+our case is Debian User. From the small menu select the last item
+labeled <span class="class2004">Log Out</span> (see image below).
+Alternatively, you can choose either the item labeled <span
+class="class2004">Log Out</span> from the Application button in
+upper-left corner or from the context menu.
+</div>
+<div class="class271-0">
+<img src="image701.jpg" class="class271-1" />
+</div>
+<div class="class27">
+A second window opens that contains the five buttons labeled Log Out,
+Restart, Shutdown, Suspend and Hibernate (see image below). Click on
+<span class="class2004">Log Out</span> to quit your session.
+Subsequently you will return to the login screen.
+</div>
+<div class="class706-1">
+<img src="image705.jpg" id="page_60" class="class706-0" />
+</div>
+<div class="class118">
+Shutting Down the Linux System
+</div>
+<div class="class27">
+The way to shut down the entire Linux system is similar to exiting XFCE.
+Click on the button in the right corner of the upper navigation bar. The
+button is labeled with your username which in our case is Debian User.
+From the small menu (see image above) select the item labeled <span
+class="class2004">Shut Down</span> . From the next dialog window click
+on the button labeled with Shut Down to stop the Linux system.
+</div>
+<div class="class27">
+From a terminal session you can run the commands <span
+class="class2004">halt</span> or <span class="class2004">shutdown -h
+now</span> as an administrative user. A regular user is not allowed to
+issue these commands.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0"># halt</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+Rebooting the Linux System
+</div>
+<div class="class27">
+In order to restart the Linux system, click on the button in the right
+corner of the upper navigation bar. The button is labeled with your
+username, which in our case is Debian User. From the small menu select
+the item labeled <span class="class2004">Restart</span> (see image
+above). From the next dialog window click on the button labeled Restart
+to reboot the Linux system.
+</div>
+<div class="class27">
+From a terminal session you can run the command <span
+class="class2004">reboot</span> or <span class="class2004">shutdown -r
+now</span> as an administrative user. A regular user is not allowed to
+issue these commands.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0"># reboot</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+Subsequently the system will reboot and you will return to the boot
+screen.
+</div>
+<p><span id="part0010.xhtml"></span></p>
+<div id="part0010.xhtml_id_43QDrJO0TXiLwBsau09Ixw1980" class="class103">
+5. Navigating Linux
+</div>
+<div class="class105">
+File systems on UNIX/Linux systems contain different types of entries.
+This includes regular files, directories (or folders), symbolic links,
+block and character devices, named pipes and sockets. This chapter deals
+with directories and the corresponding Linux tools.
+</div>
+<div id="part0010.xhtml_id_43QDrJO0TXiLwBsau09Ixw1981" class="class118">
+5.1 The Filesystem Hierarchy Standard (FHS)
+</div>
+<div class="class29">
+Modern Linux systems have a rather consistent directory structure, which
+is based on the Filesystem Hierarchy Standard (FHS). This definition
+specifies which main directories exist, and which content is stored in
+them. The FHS is maintained by the Linux Foundation. The latest version
+of the FHS is 3.0 and was released on 3 June 2015.
+</div>
+<div class="class29">
+The Linux distributions mentioned in Chapter 3 follow the FHS structure.
+Nevertheless, there are distribution-specific extensions. Below are the
+common directories that are in use:
+</div>
+<table class="class814">
+<tbody>
+<tr>
+<td class="class739"><div class="class737">
+Directory
+</div></td>
+<td class="class743"><div class="class741">
+Description
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/
+</div></td>
+<td class="class743"><div class="class749">
+primary hierarchy root and root directory of the entire file system
+hierarchy
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/bin
+</div></td>
+<td class="class743"><div class="class749">
+essential command binaries for all the users
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/boot
+</div></td>
+<td class="class743"><div class="class749">
+the boot loader
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/etc
+</div></td>
+<td class="class743"><div class="class749">
+abbreviates etcetera and contains host-specific system-wide
+configuration files
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/home
+</div></td>
+<td class="class743"><div class="class749">
+the home directories of the users
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/lib
+</div></td>
+<td class="class743"><div class="class749">
+libraries essential for the binaries in /bin and /sbin
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/media
+</div></td>
+<td class="class743"><div class="class749">
+mount points for removable media
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/proc
+</div></td>
+<td class="class743"><div class="class749">
+abbreviates processes and is the virtual file system of the Linux kernel
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/root
+</div></td>
+<td class="class743"><div class="class749">
+the home directory for the root user
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/sbin
+</div></td>
+<td class="class743"><div class="class749">
+essential system binaries
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/tmp
+</div></td>
+<td class="class743"><div class="class749">
+temporary data and files
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/usr
+</div></td>
+<td class="class743"><div class="class749">
+Unix System Resources, contains user utilities and applications
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class746">
+/var
+</div></td>
+<td class="class743"><div class="class749">
+variable data, such as log files and database file<span
+id="part0010.xhtml_page_62"></span> s
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+Some Linux distributions have additional directories like <span
+class="class2004">/opt</span> or use symbolic links. Linux also has some
+abbreviations in use. They can be quite helpful in your daily work:
+</div>
+<table class="class814">
+<tbody>
+<tr>
+<td class="class739"><div class="class817">
+Abbreviation
+</div></td>
+<td class="class743"><div class="class820">
+Description
+</div></td>
+</tr>
+<tr>
+<td id="page_63" class="class739"><div class="class824">
+$HOME
+</div></td>
+<td class="class743"><div class="class827">
+local variable that contains the user’s home directory
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class824">
+~
+</div></td>
+<td class="class743"><div class="class827">
+points to the user’s home directory like /home/tom
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class824">
+.
+</div></td>
+<td class="class743"><div class="class827">
+points to the current directory
+</div></td>
+</tr>
+<tr>
+<td class="class739"><div class="class824">
+..
+</div></td>
+<td class="class743"><div class="class827">
+points to the parent directory
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+You can use these abbreviations on the command line in a terminal and in
+shell scripts to shorten commands. Next we will look at some of these
+commands.
+</div>
+<div id="part0010.xhtml_id_43QDrJO0TXiLwBsau09Ixw1982" class="class118">
+5.2 Commands for Directories
+</div>
+<div class="class29">
+As with files, Linux offers a range of commands to list, create, remove,
+change and rename directories. You can use these commands in your
+terminal.
+</div>
+<div class="class118">
+Listing Directories
+</div>
+<div class="class27">
+In order to list the directories use the command <span
+class="class2004">ls</span> with the switch <span
+class="class2004">--directory</span> (short -d) as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ ls -d */</span>
+</div>
+<div class="class133">
+<span class="class2003-0">finances/</span>
+</div>
+<div class="class133">
+<span class="class2003-0">projects/</span>
+</div>
+<div class="class133">
+<span class="class2003-0">work/</span>
+</div>
+<div class="class133">
+<span class="class2003-0">...</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+This example lists the names of the directories in the current
+directory. The line “...” in the output indicates that the list is
+longer and the output is shortened here. In order to list all the
+directories including the hidden ones starting with “.” you may type the
+<span class="class2004">find</span> command as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div id="part0010.xhtml_page_64" class="class133">
+<span class="class2003-0">$ find . -maxdepth 1 -type d</span>
+</div>
+<div class="class133">
+<span class="class2003-0">./projects</span>
+</div>
+<div class="class133">
+<span class="class2003-0">./.mozilla</span>
+</div>
+<div class="class133">
+<span class="class2003-0">./.ipython</span>
+</div>
+<div class="class133">
+<span class="class2003-0">./.dbus</span>
+</div>
+<div class="class133">
+<span class="class2003-0">./video</span>
+</div>
+<div class="class133">
+<span class="class2003-0">...</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+In order to learn more about the <span class="class2004">ls</span>
+command and also list other entries, have a look at Chapter 6 which
+covers terminal commands.
+</div>
+<div class="class27">
+The <span class="class2004">tree</span> command searches the directory
+recursively and outputs an entire directory structure quite nicely. The
+switch <span class="class2004">-d</span> limits the output to
+directories and looks as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ tree -d</span>
+</div>
+<div class="class133">
+<span class="class2003-0">.</span>
+</div>
+<div class="class133">
+<span class="class2003-0">├── archive</span>
+</div>
+<div class="class133">
+<span class="class2007">│</span> <span class="class2003-0"> </span>
+<span class="class2007"> </span> <span class="class2003-0"> ├──
+ballet-zebola</span>
+</div>
+<div class="class133">
+<span class="class2007">│</span> <span class="class2003-0"> </span>
+<span class="class2007"> </span> <span class="class2003-0"> </span>
+<span class="class2007">│</span> <span class="class2003-0"> </span>
+<span class="class2007"> </span> <span class="class2003-0"> ├──
+documents</span>
+</div>
+<div class="class133">
+<span class="class2007">│</span> <span class="class2003-0"> </span>
+<span class="class2007"> </span> <span class="class2003-0"> </span>
+<span class="class2007">│</span> <span class="class2003-0"> </span>
+<span class="class2007"> </span> <span class="class2003-0"> └──
+invoices</span>
+</div>
+<div class="class133">
+<span class="class2007">│</span> <span class="class2003-0"> </span>
+<span class="class2007"> </span> <span class="class2003-0"> ├──
+charles-darwin-university</span>
+</div>
+<div class="class133">
+<span class="class2003-0">├── projects</span>
+</div>
+<div class="class133">
+<span class="class2003-0">├── .dbus</span>
+</div>
+<div class="class133">
+<span class="class2003-0">├── .ipython</span>
+</div>
+<div class="class133">
+<span class="class2003-0">├── .mozilla</span>
+</div>
+<div class="class133">
+<span class="class2003-0">...</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+Creating Directories
+</div>
+<div class="class27">
+In order to create a directory, use the <span
+class="class2004">mkdir</span> command (make directory). The next
+example creates a new entry named “training” in the current directory:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div id="part0010.xhtml_page_65" class="class133">
+<span class="class2003-0">$ mkdir training</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+The switch <span class="class2004">--verbose</span> (short -v) prints an
+additional message that the command succeeded.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ mkdir -v training</span>
+</div>
+<div class="class133">
+<span class="class2003-0">mkdir: directory "training" created</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+The switch <span class="class2004">--parents</span> (short -p) allows
+you to create entire subdirectory structures. Parent directories that do
+not exist yet are created as well. The following example creates the
+directory “training” as well as its subdirectories “linux” (level 1) and
+“lpic1” (level 2).
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ mkdir -p training/linux/lpic1</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+In order to create two subdirectories on the same level, make use of the
+capabilities the underlying command line interpreter has. The Bash uses
+values in brackets {...} to achieve this. The next example shows you how
+to create the two directories “training/linux /lpic1” and
+“training/linux/lpic2” in one go:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ mkdir -p training/linux/{lpic1,lpic2}</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+Removing Directories
+</div>
+<div class="class27">
+Removing a directory is done using the <span
+class="class2004">rmdir</span> command (remove directory). The next
+example removes the entry named “training” in the current directory:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ rmdir training</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span> <span
+id="part0010.xhtml_page_66"></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+As with <span class="class2004">mkdir,</span> the switch <span
+class="class2004">--verbose</span> (short -v) prints an additional
+message that the command succeeded.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ rmdir -v training</span>
+</div>
+<div class="class133">
+<span class="class2003-0">mkdir: directory is removed, "training"</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+This works well, as long as the directory is empty. In case your
+directory contains any entries like files or subdirectories, the <span
+class="class2004">rmdir</span> command will complain when using this
+message, and keep the directory unchanged:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ rmdir training</span>
+</div>
+<div class="class133">
+<span class="class2003-0">rmdir: failed to remove `training': Directory
+not empty</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+To solve this situation the <span class="class2004">rm</span> command
+(remove) combined with the switch <span
+class="class2004">--recursive</span> (short -r) becomes quite handy.
+Then, <span class="class2004">rm</span> removes all the entries
+recursively. The following example combines the two switches <span
+class="class2004">-r</span> and <span class="class2004">-v</span> in
+order to delete one file and three directories.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ tree training/</span>
+</div>
+<div class="class133">
+<span class="class2003-0">training/</span>
+</div>
+<div class="class133">
+<span class="class2003-0">├── lpic1</span>
+</div>
+<div class="class133">
+<span class="class2007">│</span> <span class="class2003-0"> </span>
+<span class="class2007"> </span> <span class="class2003-0"> └──
+introduction.txt</span>
+</div>
+<div class="class133">
+<span class="class2003-0">└── lpic2</span>
+</div>
+<div class="class557">
+<span class="class2003-0">2 directories, 1 file</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$ rm -rv training/</span>
+</div>
+<div class="class133">
+<span class="class2003-0">„training/lpic1/introduction.txt“ was
+removed</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Directory was removed: „training/lpic1“</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Directory was removed: „training/lpic2“</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Directory was removed: „training/“</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span> <span
+id="part0010.xhtml_page_67"></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+Changing Directories
+</div>
+<div class="class27">
+The <span class="class2004">cd</span> (change directory) command allows
+you to move through the system. To move one level upwards towards the
+root directory use this command:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ cd ..</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+To move downwards into a subdirectory enter the <span
+class="class2004">cd</span> command followed by the directory name. The
+command <span class="class2004">cd /home/user/test</span> will take you
+straight into the /home/user/test directory.
+</div>
+<div class="class27">
+As already explained earlier, there are some shortcuts available. The
+commands <span class="class2004">cd ~ (tilde)</span> and <span
+class="class2004">cd $HOME</span> will always take you to your home
+directory whereas <span class="class2004">cd /</span> will take you to
+the / directory.
+</div>
+<div class="class27">
+<span class="class2019">Tip</span> : Because Linux is case-sensitive,
+<span class="class2004">cd</span> is not the same as <span
+class="class2004">CD</span> . You need to be careful when using upper
+and lower case.
+</div>
+<div class="class118">
+Renaming Directories
+</div>
+<div class="class27">
+This can be achieved using the <span class="class2004">mv</span> command
+(move). In order to change the name of a directory from “lpic1” to
+“lpic-1” type in the following:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ mv lpic1 lpic-1</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="part0010.xhtml_id_43QDrJO0TXiLwBsau09Ixw1983" class="class118">
+5.3 Terminal-based File Managers
+</div>
+<div class="class29">
+Navigating Linux on the command line is not the most ideal situation.
+Terminal-based and graphical file managers are a great alternative.
+Terminal-based file managers run inside a terminal and do not open a
+separate window on your desktop. <span
+id="part0010.xhtml_page_68"></span> There are tons of programs
+available, that’s why we only present you with a selection of our
+favorites.
+</div>
+<div class="class118">
+GNU Midnight Commander (mc)
+</div>
+<div class="class27">
+<a href="http://www.midnight-commander.org"
+class="class2005">www.midnight-commander.org</a>
+</div>
+<div class="class29">
+This is a free software, full-screen, text mode, visual file manager
+that lets you search, copy, move and also delete both single and
+multiple files, and even a whole directory tree. The mc integrates a
+viewer and editor.
+</div>
+<div class="class271-0">
+<img src="image1051.jpg" class="class271-1" />
+</div>
+<div class="class118">
+The Vi File Manager (vifm)
+</div>
+<div class="class27">
+<a href="https://vifm.info/" class="class2005">https://vifm.info/</a>
+</div>
+<div class="class29">
+Similar to mc, the Vi File Manager (vifm) comes with two navigation
+windows based on a curses interface. It provides a Vi(m)-like
+environment for managing files and directories. If you are familiar with
+the Vi key bindings, this is the file manager for you.
+</div>
+<div class="class271-0">
+<img src="image1057.jpg" id="page_69" class="class271-1" />
+</div>
+<div id="part0010.xhtml_id_43QDrJO0TXiLwBsau09Ixw1984" class="class118">
+5.4 Graphical File Managers
+</div>
+<div class="class29">
+Similar to terminal-based file managers, graphical file manager assist
+in navigating Linux. These file managers do open in separate windows,
+but provide a much nicer user experience. Again, there are tons of
+programs available, so we only present you with a selection of our
+favorites.
+</div>
+<div class="class118">
+Konqueror
+</div>
+<div class="class27">
+<a href="https://packages.debian.org/stretch/konqueror"
+class="class2005">https://packages.debian.org/stretch/konqueror</a>
+</div>
+<div class="class29">
+Konqueror is a powerful file manager for the KDE desktop environment.
+Konqueror offers simple file management functionalities such as copying,
+moving, searching and deleting files and directories plus some advanced
+features and functionalities, such as access to archives, browse and rip
+audio CDs as well as support for access to FTP and SFTP servers and
+SAMBA (Windows) shares.
+</div>
+<div class="class271-0">
+<img src="image1065.jpg" id="page_70" class="class271-1" />
+</div>
+<div class="class118">
+Nautilus
+</div>
+<div class="class27">
+<a href="https://wiki.gnome.org/Apps/Nautilus"
+class="class2005">https://wiki.gnome.org/Apps/Nautilus</a>
+</div>
+<div class="class29">
+Nautilus is the file manager on the GNOME desktop. It offers easy
+navigation and management of files on a Linux system. This includes
+simple file management functionalities such as copying, moving,
+searching and deleting files and directories, as well as easy access to
+local and remote files.
+</div>
+<div class="class271-0">
+<img src="image1071.jpg" id="page_71" class="class271-1" />
+</div>
+<div class="class118">
+Dolphin
+</div>
+<div class="class27">
+<a href="http://www.kde.org/applications/system/dolphin/"
+class="class2005">www.kde.org/applications/system/dolphin/</a>
+</div>
+<div class="class29">
+Dolphin is a lightweight file manager developed as part of the KDE
+applications package. Designed for simplicity, flexibility and full
+customization, it allows users to browse, locate, open, copy and move
+files around a Linux system with a lot of ease.
+</div>
+<div class="class271-0">
+<img src="image1077.jpg" class="class271-1" />
+</div>
+<div class="class118">
+Thunar
+</div>
+<div class="class27">
+<a href="https://docs.xfce.org/xfce/thunar/start"
+class="class2005">https://docs.xfce.org/xfce/thunar/start</a>
+</div>
+<div class="class29">
+Thunar is a modern, lightweight file manager for the XFCE desktop. It is
+designed to be fast, responsive and easy to use. We use it here because
+it has a clean and intuitive interface with few and important user
+options available.
+</div>
+<div class="class271-0">
+<img src="image1083.jpg" class="class271-1" />
+</div>
+<div class="class27">
+<a
+href="http://www.Amazon.com/gp/customer-reviews/write-a-review.html?asin=B07HDTG58D"><img
+src="image1087.jpg" class="class47" /></a>
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<div id="part0011.xhtml_id_43QDrJO0TXiLwBsau09Ixw1985" class="class103">
+6. Introduction to Linux Terminals
+</div>
+<div class="class105">
+Working with the Linux operating system requires you to have knowledge
+about the terminal and the command line. It is essential to know what
+these things are, to be at least slightly familiar with their usage and
+the standard commands available. A few of these commands have already
+been introduced in Chapter 5.
+</div>
+<div id="part0011.xhtml_id_43QDrJO0TXiLwBsau09Ixw1986" class="class118">
+6.1 What is a Terminal?
+</div>
+<div class="class27">
+A terminal is described as "a program that emulates a video terminal
+within some other display architecture. Though typically synonymous with
+a <span class="class2004">shell</span> or text terminal, the term <span
+class="class2004">terminal</span> covers all remote terminals, including
+graphical interfaces. A terminal emulator inside a graphical user
+interface is often called a terminal window”.
+</div>
+<div class="class29">
+To be precise, a terminal is simply the outside. Inside a terminal runs
+a command line interpreter that is called a shell.
+</div>
+<div class="class29">
+Debian Linux supports a long list of terminal software. This includes
+the Aterm, as well as the GNOME terminal, the Kterm, the Mate Terminal,
+the Rxvt, the Xterm and the Xvt. These different implementations of
+terminal software vary in terms of stability, support for character
+sets, design, colors <span id="part0011.xhtml_page_74"></span> and
+fonts, as well as the possibility to apply background images or work
+with transparency
+</div>
+<div class="class29">
+In this book we will use the GNOME terminal because of its stability,
+simplicity and adjustability. In order to increase and decrease the size
+of the content that is displayed inside the terminal window; use the
+two-key combinations CTRL+ and CTRL-.
+</div>
+<div id="part0011.xhtml_id_43QDrJO0TXiLwBsau09Ixw1987" class="class118">
+6.2 What is a Shell?
+</div>
+<div class="class29">
+Simply speaking, a shell is a sophisticated command-line interpreter. In
+a loop the shell reads characters, modifies them under certain
+conditions, and executes the result.
+</div>
+<div class="class29">
+Under certain conditions, between reading from the command-line and the
+execution of the actual result, the shell has to interpret special
+characters that are part of your input. The table below displays the
+special characters that are available:
+</div>
+<table class="class814">
+<tbody>
+<tr>
+<td class="class1106"><div class="class1104">
+Character
+</div></td>
+<td class="class1110"><div class="class1108">
+Meaning
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+$name
+</div></td>
+<td class="class1110"><div class="class1116">
+substitution of a variable
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+name=
+</div></td>
+<td class="class1110"><div class="class1116">
+assignment of a variable
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+'command'
+</div></td>
+<td class="class1110"><div class="class1116">
+substitution of a command
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+$( command )
+</div></td>
+<td class="class1110"><div class="class1116">
+substitution of a command
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+&lt; &gt; &gt;&gt; 2&gt; 2&gt;&gt;
+</div></td>
+<td class="class1110"><div class="class1116">
+redirection of input and output
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+|
+</div></td>
+<td class="class1110"><div class="class1116">
+pipelining of commands
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+" ' \
+</div></td>
+<td class="class1110"><div class="class1116">
+quoting
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+* [ ] ?
+</div></td>
+<td class="class1110"><div class="class1116">
+creation of file names (<span id="part0011.xhtml_page_75"></span>
+globbing)
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+;
+</div></td>
+<td class="class1110"><div class="class1116">
+separation of commands
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+&amp;
+</div></td>
+<td class="class1110"><div class="class1116">
+run the command in the background
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+|| &amp;&amp;
+</div></td>
+<td class="class1110"><div class="class1116">
+run the commands under certain conditions
+</div></td>
+</tr>
+<tr>
+<td class="class1106"><div class="class1113">
+{ } ( )
+</div></td>
+<td class="class1110"><div class="class1116">
+cramp commands
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+For interest sake, the shell divides the command-line into single words
+in order to determine the commands, by means of the following process:
+</div>
+<table class="class814">
+<tbody>
+<tr>
+<td class="class1180"><div class="class1178">
+Step
+</div></td>
+<td class="class1184"><div class="class1182">
+Description
+</div></td>
+<td class="class1188"><div class="class1186">
+Special Characters
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+1
+</div></td>
+<td class="class1184"><div class="class1194">
+read until the command separator and tagging (substitution of commands)
+</div></td>
+<td class="class1188"><div class="class1197">
+\n &amp; | || &amp;&amp; ; $(...) \ "..." '..."
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+2
+</div></td>
+<td class="class1184"><div class="class1194">
+tagging (input-/output redirection, assignment of values)
+</div></td>
+<td class="class1188"><div class="class1197">
+&lt; &gt; &gt;&gt; 2&gt; 2&gt;&gt; name=
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+3
+</div></td>
+<td class="class1184"><div class="class1194">
+division into single words
+</div></td>
+<td class="class1188"><div class="class1197">
+space, tabulator
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+4
+</div></td>
+<td class="class1184"><div class="class1194">
+substitution of variables
+</div></td>
+<td class="class1188"><div class="class1197">
+$name
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+5
+</div></td>
+<td class="class1184"><div class="class1194">
+substitution of commands
+</div></td>
+<td class="class1188"><div class="class1197">
+tagging, see step 1 and 2
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+6
+</div></td>
+<td class="class1184"><div class="class1194">
+input-/output redirection
+</div></td>
+<td class="class1188"><div class="class1197">
+tagging, see step 1 and 2
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+7
+</div></td>
+<td class="class1184"><div class="class1194">
+assignment of variables
+</div></td>
+<td class="class1188"><div class="class1197">
+tagging, see <span id="part0011.xhtml_page_76"></span> step 1 and 2
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+8
+</div></td>
+<td class="class1184"><div class="class1194">
+division into words
+</div></td>
+<td class="class1188"><div class="class1197">
+based on IFS
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+9
+</div></td>
+<td class="class1184"><div class="class1194">
+creation of file names
+</div></td>
+<td class="class1188"><div class="class1197">
+* [ - ]
+</div></td>
+</tr>
+<tr>
+<td class="class1180"><div class="class1191">
+10
+</div></td>
+<td class="class1184"><div class="class1194">
+command execution
+</div></td>
+<td class="class1261"></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+In steps 1 and 2 tagging happens for steps 5 to 7 only, and no further
+action takes place. Steps 5 to 7 are executed if tagging is completed.
+Next, the shell removes all the special characters. In step 10 the
+command-line contains only the arguments that are needed to execute the
+command. The shell interprets the first word as the name of the command
+to be executed, and the remaining words are its arguments:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">command arg1 arg2 arg3 ...</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="part0011.xhtml_toc23_6.3_Available_Shells" class="class118">
+6.3 Available Shells
+</div>
+<div class="class29">
+Your Linux system allows the usage of various shells. Each shell is
+available as a separate software package through the Debian package
+manager, Aptitude, we installed earlier. The list of shells is quite
+long, so we list only a selection of the available shells that are the
+most popular:
+</div>
+<ul>
+<li><div class="class159">
+Almquist Shell (ash)
+</div></li>
+<li><div class="class159">
+Bourne Again Shell (bash)
+</div></li>
+<li><div class="class159">
+Debian Almquist Shell (dash)
+</div></li>
+<li><div class="class159">
+Z Shell (zsh)
+</div></li>
+<li><div class="class159">
+C Shell (csh)
+</div></li>
+<li><div class="class159">
+Korn Shell (ksh)
+</div></li>
+<li><div class="class159">
+Tenex C Shell (tcsh)<span id="part0011.xhtml_page_77"></span>
+</div></li>
+</ul>
+<div class="class105">
+Unless otherwise stated the examples in this document are based on the
+Bourne Again Shell (bash). At the time of writing this document this is
+the default shell on Debian.
+</div>
+<div class="class27">
+Which other shells are allowed in your Linux system, is set up in the
+configuration file <span class="class2004">/etc/shells</span> . Using
+the <span class="class2004">cat</span> command you can see the list of
+allowed shells:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">user@debian95:~$ cat /etc/shells</span>
+</div>
+<div class="class133">
+<span class="class2003-0"># /etc/shells: valid login shells</span>
+</div>
+<div class="class133">
+<span class="class2003-0">/bin/sh</span>
+</div>
+<div class="class133">
+<span class="class2003-0">/bin/dash</span>
+</div>
+<div class="class133">
+<span class="class2003-0">/bin/bash</span>
+</div>
+<div class="class133">
+<span class="class2003-0">/bin/rbash</span>
+</div>
+<div class="class133">
+<span class="class2003-0">/usr/bin/screen</span>
+</div>
+<div class="class133">
+<span class="class2003-0">user@debian95:~$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+The name of the shell that is currently in use in your terminal is kept
+in the shell variable <span class="class2004">$0</span> . The following
+simple command outputs the shell’s name:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">user@debian95:~$ echo $0</span>
+</div>
+<div class="class133">
+<span class="class2003-0">bash</span>
+</div>
+<div class="class133">
+<span class="class2003-0">user@debian95:~$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+In order to change the shell currently in use, have a look at the <span
+class="class2004">chsh</span> command and the configuration file <span
+class="class2004">/etc/passwd</span> covered in the following section.
+</div>
+<p><span id="part0012.xhtml"></span></p>
+<div id="part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1989" class="class103">
+7. Essential Linux Commands
+</div>
+<div class="class105">
+In this chapter we explain basic Linux commands that will help you to
+deal with files and directories, text processing commands, users and
+groups, process management, networks, and the help system.
+</div>
+<div id="part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1990" class="class118">
+7.1 Files and Directories
+</div>
+<div class="class178">
+touch
+</div>
+<div class="class27">
+The <span class="class2004">touch</span> command is used to update the
+access date or modification date of a file and works in two ways: if the
+file already exists, the timestamp for access and modification of the
+file is set to the current timestamp. In case the file does not exist
+yet, an empty file will be created that has the current timestamp (see
+image below).
+</div>
+<div class="class271-0">
+<img src="image1335.jpg" id="page_80" class="class271-1" />
+</div>
+<div class="class29">
+Use the touch command in order to set the timestamp of a file and to
+figure out if you have the appropriate permissions to write to a
+directory or an entire filesystem.
+</div>
+<div class="class118">
+ls
+</div>
+<div class="class27">
+This command lists the entries of a directory. The image below shows two
+common ways: without any options, and with the options <span
+class="class2004">-la</span> (short for -l -a which means long all). The
+first output displays the entry names only for regular files, whereas
+the second output lists both regular and hidden entries. Over and above,
+it shows all the information like type of entry, permissions, name of
+owner, size of entry, access date and name of entry.
+</div>
+<div class="class271-0">
+<img src="image1341.jpg" class="class271-1" />
+</div>
+<div class="class27">
+In order to list directories only, use the option <span
+class="class2004">-d</span> (abbreviates --directory)<span
+id="part0012.xhtml_page_81"></span> .
+</div>
+<div class="class118">
+mkdir
+</div>
+<div class="class29">
+This command is used in order to create a directory (make directory).
+The following example creates a new directory named “training” in the
+current directory:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ mkdir training</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+rmdir
+</div>
+<div class="class29">
+This command is used in order to remove an empty directory (remove
+directory). The following example deletes an empty directory named
+“training” in the current directory.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ rmdir training</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+rm
+</div>
+<div class="class27">
+This command abbreviates the word “remove” and deletes files and
+directories. In order to delete all the files ending with <span
+class="class2004">.txt</span> that reside in the current directory issue
+the following command:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ rm *.txt</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+In order to be on the safe side when deleting files and directories, use
+the option <span class="class2004">-i</span> (or --interactive) in
+combination with <span class="class2004">-v</span> (for --verbose).
+Before deleting a file <span class="class2004">rm</span> will then
+request your explicit confirmation, and prints a status message:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ rm -iv invoice156.txt</span>
+</div>
+<div class="class133">
+<span class="class2003-0">rm: remove regular file "invoice156.txt"?
+y</span>
+</div>
+<div class="class133">
+<span class="class2003-0">"invoice156.txt" was deleted</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span> <span
+id="part0012.xhtml_page_82"></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+cp
+</div>
+<div class="class27">
+The <span class="class2004">cp</span> command copies files. In order to
+operate properly, it requires two names: the name of the original file
+and the name of the copy. The next example creates a copy of the
+calendar file that is named “calendar-2018”.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ cp calendar calendar-2018</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+The original file is not touched and stays intact. The copy has the same
+content as the original, but with the current timestamp. Use the option
+<span class="class2004">-i</span> (or --interactive) to prevent
+overwriting existing files.
+</div>
+<div class="class118">
+mv
+</div>
+<div class="class27">
+The <span class="class2004">mv</span> command abbreviates the word
+“move” and moves and renames files and directories. It requires two
+names: the name of the original file and its new name. The following
+example renames the “calendar” file to “calendar-2018”.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ mv calendar calendar-2018</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+The original file is removed and the new entry receives the current
+timestamp. Use the option <span class="class2004">-i</span> (or
+--interactive) to prevent overwriting existing files.
+</div>
+<div class="class118">
+cd
+</div>
+<div class="class27">
+The <span class="class2004">cd</span> (change directory) command allows
+you to move through the system. To move into the subdirectory “work”,
+use this command:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ cd work</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span> <span
+id="part0012.xhtml_page_83"></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+file
+</div>
+<div class="class27">
+The <span class="class2004">file</span> command determines the type of
+entry in the file system. There are three sets of tests that are
+performed in the following order: filesystem tests, magic tests, and
+language tests. The first test that succeeds causes the file type to be
+printed. As shown in the image below “Music” is classified as a
+directory, “testfile” as an empty file and “/etc/passwd” as a text file.
+This command also detects PDF files as well as various image formats.
+</div>
+<div class="class271-0">
+<img src="image1422.jpg" class="class271-1" />
+</div>
+<div class="class118">
+du and df
+</div>
+<div class="class27">
+These two very similar commands tell you more about the disk space that
+is in use, <span class="class2004">du</span> abbreviates “disk usage”
+and <span class="class2004">df</span> means “disk free”.
+</div>
+<div class="class27">
+<span class="class2004">du</span> calculates the amount of disk space
+that is used by a directory. The regular output states the value for
+every single entry and can be a bit confusing. In order to get a summary
+for a directory, extend the command line call by the three parameters
+<span class="class2004">-s</span> , <span class="class2004">-c</span>
+and <span class="class2004">-h</span> . <span
+class="class2004">-s</span> abbreviates “summary”, <span
+class="class2004">-c</span> means “total” and <span
+class="class2004">-h</span> outputs the value in human-readable format.
+The image below shows the disk usage of your home directory.
+</div>
+<div class="class271-0">
+<img src="image1428.jpg" id="page_84" class="class271-1" />
+</div>
+<div class="class27">
+In contrast, the <span class="class2004">df</span> command shows how
+much space is left on the devices. The image below shows the available
+disk space of your system. From left to right the columns cover the
+filesystem, the disk size, the amount of space that is used, the amount
+of space that is still available and the device that is mounted to that
+directory.
+</div>
+<div class="class271-0">
+<img src="image1432.jpg" class="class271-1" />
+</div>
+<div id="part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1991" class="class118">
+7.2 Output and Text Processing
+</div>
+<div class="class178">
+echo
+</div>
+<div class="class27">
+<span class="class2004">echo</span> is a built-in shell command and is
+intended to output text:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ echo help</span>
+</div>
+<div class="class133">
+<span class="class2003-0">help</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+As already shown earlier, the shell evaluates the command and prints the
+value of variables too. The next example prints <span
+id="part0012.xhtml_page_85"></span> the value of the shell variable
+<span class="class2004">$HOME</span> which represents your home
+directory.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ echo $HOME</span>
+</div>
+<div class="class133">
+<span class="class2003-0">/home/user</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+cat and tac
+</div>
+<div class="class27">
+These two commands print a file, line by line. <span
+class="class2004">cat</span> starts with the first line up to the last
+line, and <span class="class2004">tac</span> starts with the last line
+up to the first line. The next example uses a simple plain text file
+named “places” that contains the names of one city per line. For <span
+class="class2004">cat</span> Amsterdam comes first, and for <span
+class="class2004">tac</span> it is Cape Town.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ cat places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Amsterdam</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Berlin</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Bern</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Cape Town</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$ tac places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Cape Town</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Bern</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Berlin</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Amsterdam</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+grep
+</div>
+<div class="class27">
+This command abbreviates the description “global regular expression
+print”. The command acts as a filter that only prints the lines of text
+that match a given pattern. <span class="class2004">grep</span> needs
+data to work on, in combination with a pattern to look for.
+</div>
+<div class="class27">
+Based on the example used above for <span class="class2004">cat</span>
+and <span class="class2004">tac</span> , the following command line call
+only outputs the lines from the <span
+id="part0012.xhtml_page_86"></span> file that contain the character
+string “Ber”. Keep in mind that <span class="class2004">grep</span>
+filters are case-sensitive, i.e. it looks for the character string that
+starts with an uppercase “B” followed by the two lowercase letters “e”
+and “r”. It does not matter whether the pattern is at the beginning, in
+the middle or at the end of text.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ grep Ber places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Berlin</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Bern</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+When it comes to patterns, <span class="class2004">grep</span> supports
+character strings and regular expressions (RegEx). In order to find all
+the strings that end with the letter “n” use the option <span
+class="class2004">-E</span> (or --extended-regexp) followed by the
+pattern “n$” as shown below:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ grep -E "n$" places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Berlin</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Bern</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Cape Town</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+head and tail
+</div>
+<div class="class27">
+<span class="class2004">head</span> outputs the first lines from a file.
+Invoked without further parameters it outputs up to ten lines. In
+contrast <span class="class2004">tail</span> does the same thing, but
+starts at the end of a file. In order to output the first two lines, add
+the option <span class="class2004">-n 2</span> as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ head -n 2 places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Amsterdam</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Berlin</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span> <span
+id="part0012.xhtml_page_87"></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+In order to output the last two lines, do the same thing using <span
+class="class2004">tail</span> as follows. In contrast to <span
+class="class2004">tac</span> (see earlier in this chapter) <span
+class="class2004">tail</span> does not change the order of output.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ tail -n 2 places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Bern</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Cape Town</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+nl
+</div>
+<div class="class27">
+<span class="class2004">nl</span> is similar to <span
+class="class2004">cat</span> (see earlier in this chapter) but adds a
+line number at the beginning of each line of output.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ nl places</span>
+</div>
+<div class="class133">
+<div class="class1547">
+<span class="class2003-1">1 Amsterdam</span>
+</div>
+</div>
+<div class="class133">
+<div class="class1547">
+<span class="class2003-1">2 Berlin</span>
+</div>
+</div>
+<div class="class133">
+<div class="class1547">
+<span class="class2003-1">3 Bern</span>
+</div>
+</div>
+<div class="class133">
+<div class="class1547">
+<span class="class2003-1">4 Cape Town</span>
+</div>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+wc
+</div>
+<div class="class29">
+This command abbreviates the phrase “word count” and counts lines, words
+and single characters of the input data. Unless otherwise specified, all
+three values are printed:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ wc places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">4  5 32 places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+Amongst others <span class="class2004">wc</span> offers the following
+options to limit the output:
+</div>
+<ul>
+<li><div class="class159">
+-l: output the number of lines only, followed by the filename
+</div></li>
+<li><div id="part0012.xhtml_page_88">
+<div class="class159">
+-w: output the number of words only, followed by the filename
+</div>
+</div></li>
+<li><div class="class159">
+-c: output the number of characters only, followed by the filename
+</div></li>
+</ul>
+<div class="class29">
+This example shows how to count only the lines in a file:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ wc -l places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">4 places</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div id="part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1992" class="class118">
+7.3 Users and Groups
+</div>
+<div class="class29">
+These commands deal with a variety of actions in order to manage the
+users and groups of your Linux system. Unless explicitly stated, these
+commands can be run as a regular user.
+</div>
+<div class="class118">
+whoami
+</div>
+<div class="class29">
+This command returns your current user ID as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ whoami</span>
+</div>
+<div class="class133">
+<span class="class2003-0">user</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+users, who and w
+</div>
+<div class="class27">
+The <span class="class2004">users</span> , <span
+class="class2004">who</span> and the <span class="class2004">w</span>
+commands show the users that are currently logged into your Linux
+system. <span class="class2004">w</span> extends the output of <span
+class="class2004">who</span> by the uptime information and another
+column that contains the last command that was executed. In contrast,
+<span class="class2004">users</span> simply outputs the name of the
+users as a space-separated list in a single line (see image below).
+</div>
+<div class="class271-0">
+<img src="image1610.jpg" id="page_89" class="class271-1" />
+</div>
+<div class="class27">
+The single columns for <span class="class2004">who</span> start with the
+login name of the user. The output is followed by the name of the
+terminal, where “console” represents a login terminal, and “pts/1”
+abbreviates the first pseudo terminal session. The last two columns
+contain the login time and the host the user comes from, in brackets
+(see image below).
+</div>
+<div class="class271-0">
+<img src="image1614.jpg" class="class271-1" />
+</div>
+<div class="class27">
+The single columns for <span class="class2004">w</span> contain the
+login name of the user (titled LOGIN), the name of the terminal (titled
+TTY), the name of the host the user comes from (titled FROM), the login
+time (titled LOGIN@), the activity (idle time and CPU usage titled IDLE,
+JCPU, and PCPU) as well as the last command the user executed (titled
+WHAT) (see image below).
+</div>
+<div class="class271-0">
+<img src="image1618.jpg" class="class271-1" />
+</div>
+<div class="class118">
+id and groups
+</div>
+<div class="class27">
+The <span class="class2004">id</span> command outputs the user and group
+information of the current user (see image below). From left to right
+the columns show the user ID (uid=1000(user)), the group <span
+id="part0012.xhtml_page_90"></span> id (gid=1000(group)) and the name of
+the groups the user is a member of.
+</div>
+<div class="class271-0">
+<img src="image1623.jpg" class="class271-1" />
+</div>
+<div class="class27">
+In order to list the names of all the groups the user belongs to, you
+can also invoke the <span class="class2004">groups</span> command (see
+image below). The output is a space-separated list of the group names.
+</div>
+<div class="class271-0">
+<img src="image1627.jpg" class="class271-1" />
+</div>
+<div class="class118">
+passwd
+</div>
+<div class="class27">
+As described in Chapter 4, the Linux system has at least two users: an
+administrative root user and a regular user that we simply called <span
+class="class2004">user</span> . Every account is also secured with a
+password.
+</div>
+<div class="class27">
+In order to change your password, use the <span
+class="class2004">passwd</span> command from the Debian “passwd” package
+(refer to Chapter 4 on how to install additional software). As shown
+below, type in the current password first, press Enter, type in the new
+password, press Enter to confirm, retype the new password and press
+Enter to confirm, again.
+</div>
+<div class="class271-0">
+<img src="image1633.jpg" id="page_91" class="class271-1" />
+</div>
+<div class="class27">
+As a regular user, you are allowed to change your own password only. The
+administrative root user is able to set a new password for itself and
+other users as well. In such a scenario, we call <span
+class="class2004">passwd</span> as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0"># passwd felix</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Changing password for felix.</span>
+</div>
+<div class="class133">
+<span class="class2003-0">(current) UNIX password:</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Enter new UNIX password:</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Retype new UNIX password:</span>
+</div>
+<div class="class133">
+<span class="class2003-0">passwd: password updated successfully</span>
+</div>
+<div class="class133">
+<span class="class2003-0">#</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+The password is stored as a hashed value in the configuration file
+“/etc/shadow”. The content of this file is only visible to the
+administrative user. The example below shows how to extract the
+information for the user “user” with the help of the <span
+class="class2004">grep</span> command (see earlier in this chapter).
+</div>
+<div class="class271-0">
+<img src="image1656.jpg" class="class271-1" />
+</div>
+<div class="class118">
+chfn
+</div>
+<div class="class27">
+This command is also from the Debian “passwd” package and changes the
+user information that is stored on your system in the file /etc/passwd.
+During the installation of your Debian system the basic setup was
+already done. In order to modify this information you can run <span
+class="class2004">chfn</span> without further parameters in interactive
+mode, or with one or more of the following options to adapt only a
+specific value:
+</div>
+<ul>
+<li><div class="class159">
+-f or --full-name: change the full name of the user
+</div></li>
+<li><div id="part0012.xhtml_page_92">
+<div class="class159">
+-h or --home-phone: change the home phone of the user
+</div>
+</div></li>
+<li><div class="class159">
+-r or --room: change the room number of the user
+</div></li>
+<li><div class="class159">
+-w or --work-phone: change the work phone of the user
+</div></li>
+</ul>
+<div class="class29">
+The following example changes the entry for the home phone number to
+135:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ chfn -h 135</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Password:</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+chsh
+</div>
+<div class="class29">
+This command (also from the Debian “passwd” package) changes the entry
+for the shell that you use to log into your Linux system. Again, this
+information is stored in the file /etc/passwd. Which shells are allowed
+to be used are limited by the entries in the configuration file
+/etc/shells.
+</div>
+<div class="class27">
+<span class="class2004">chsh</span> works similar to the <span
+class="class2004">chfn</span> command. Invoked without further options
+an interactive method is used (see image below).
+</div>
+<div class="class271-0">
+<img src="image1684.jpg" class="class271-1" />
+</div>
+<div class="class27">
+<span class="class2004">chsh</span> accepts the option <span
+class="class2004">-s</span> (short for --shell) in order to set the
+shell in non-interactive mode. The following example shows the according
+command line call:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ chsh -s /bin/bash</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span> <span
+id="part0012.xhtml_page_93"></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+In order to modify the shell for a different user other than yourself,
+invoke the <span class="class2004">chsh</span> command with the username
+as a parameter. Note that only the administrative user can do this for a
+different user. The next example shows how to do that for the user
+“felix”.
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0"># chsh felix</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Changing the login shell for felix</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Enter the new value, or press ENTER for the
+new value</span>
+</div>
+<div class="class133">
+<div class="class1702">
+<span class="class2003-2">Login shell [/bin/bash]:</span>
+</div>
+</div>
+<div class="class133">
+<span class="class2003-0">#</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+su and sudo
+</div>
+<div class="class27">
+In order to change your role from one user to another, you utilize the
+<span class="class2004">su</span> command. <span
+class="class2004">su</span> abbreviates “switch user”. Invoked without
+further options you change to the root user as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ su</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Password:</span>
+</div>
+<div class="class133">
+<span class="class2003-0">#</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+Working as the administrative root user comes with great responsibility
+and presumes that you know exactly what you are doing. To work as a
+different user than root, invoke the <span class="class2004">su</span>
+command with the desired username as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ su felix</span>
+</div>
+<div class="class133">
+<span class="class2003-0">Password:</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+The <span class="class2004">su</span> command changes the current role
+permanently. In order to run only a single command as an administrative
+user, use the <span class="class2004">sudo</span> command. This requires
+the Debian “sudo” package to be installed (refer to Chapter 4 on
+installing additional software) and the additional user to be added to
+the <span id="part0012.xhtml_page_94"></span> configuration file
+/etc/sudoers using the <span class="class2004">visudo</span> command.
+This step will be explained in further detail later on.
+</div>
+<div class="class118">
+adduser
+</div>
+<div class="class27">
+The command <span class="class2004">adduser</span> creates new user
+accounts. The image below shows the information that is required. This
+includes a new entry in the file /etc/passwd as well as the creation of
+a new group, plus home directory. Furthermore, prepared data from the
+directory /etc/skel is copied into the previously created home
+directory. Afterward, the account information is modified using the
+<span class="class2004">chsh</span> command (see earlier in this
+chapter).
+</div>
+<div class="class271-0">
+<img src="image1738.jpg" class="class271-1" />
+</div>
+<div class="class29">
+Having set up the new user, the entry in the file /etc/passwd looks as
+follows:
+</div>
+<div class="class271-0">
+<img src="image1742.jpg" class="class271-1" />
+</div>
+<div class="class27">
+Deleting user accounts and modifying user accounts is done with the help
+of the two commands <span class="class2004">deluser</span> and <span
+class="class2004">usermod</span> . The usage of these commands will be
+explained in further detail later on<span
+id="part0012.xhtml_page_95"></span> .
+</div>
+<div id="part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1993" class="class118">
+7.4 Process Management
+</div>
+<div class="class178">
+ps
+</div>
+<div class="class27">
+This command lists the running processes of your Linux system. The image
+below shows the processes in your current terminal session, where the
+call <span class="class2004">ps ax</span> (see the image thereafter)
+lists all the processes in your Linux system. The <span
+class="class2004">ps</span> command has a long list of options that will
+be explained later on in more detail.
+</div>
+<div class="class271-0">
+<img src="image1749.jpg" class="class271-1" />
+</div>
+<div class="class271-0">
+<img src="image1752.jpg" class="class271-1" />
+</div>
+<div class="class118">
+pgre<span id="part0012.xhtml_page_96"></span> p
+</div>
+<div class="class27">
+<span class="class2004">pgrep</span> is the <span
+class="class2004">grep</span> command (see earlier in this chapter) for
+processes. This command looks through the currently running processes
+and outputs the process ID’s that match the given pattern.
+</div>
+<div class="class27">
+The image below shows two calls. The first call asks <span
+class="class2004">pgrep</span> to search for the processes that have the
+string pattern “xterm” in its name, and to output the resulting process
+ID only. The second call uses the two options <span
+class="class2004">-l</span> (short for --list-name) and <span
+class="class2004">-a</span> (short for --list-full) in order to show the
+process ID and the resulting process name.
+</div>
+<div class="class27">
+The partner of <span class="class2004">pgrep</span> is <span
+class="class2004">pkill</span> . Both commands are part of the Debian
+“procps” package (refer to Chapter 4 on how to install additional
+software packages).
+</div>
+<div class="class271-0">
+<img src="image1759.jpg" class="class271-1" />
+</div>
+<div class="class118">
+kill
+</div>
+<div class="class27">
+This command sends a specific signal to a process. In order to terminate
+this process use the <span class="class2004">SIGTERM</span> signal. The
+next example shows how to end the process that has the process ID 12345.
+</div>
+<div class="class27">
+The command <span class="class2004">kill</span> requires a process ID to
+work properly. Use <span class="class2004">ps</span> or <span
+class="class2004">pgrep</span> to obtain the according process ID first
+(see earlier in this chapter).
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ kill 12345</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span> <span
+id="part0012.xhtml_page_97"></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+killall
+</div>
+<div class="class27">
+This command is part of the essential Debian package “psmisc” (refer to
+Chapter 4 on installing additional packages). <span
+class="class2004">killall</span> sends a signal to all the processes
+that match the specified command. As an example, the command
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">killall firefox</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class604">
+sends the signal <span class="class2004">SIGTERM</span> to all the
+processes that have the name “firefox” in order to terminate the
+process. Amongst other options, <span class="class2004">killall</span>
+allows these parameters:
+</div>
+<ul>
+<li><div class="class159">
+-e (short for --exact): require an exact match
+</div></li>
+<li><div class="class159">
+-I (short for --ignore-case): treat the process name case-insensitive
+</div></li>
+<li><div class="class159">
+-i (short for --interactive): interactively ask for confirmation before
+terminating the process
+</div></li>
+<li><div class="class159">
+-v (short for --verbose): send a confirmation message if the process
+terminated
+</div></li>
+</ul>
+<div class="class27">
+The following example shows how to combine the two commands <span
+class="class2004">pgrep</span> and <span
+class="class2004">killall</span> . First, obtain the process ID using
+<span class="class2004">pgrep</span> as well as the exact name of the
+process. Second, invoke <span class="class2004">killall</span> with the
+two options <span class="class2004">-i</span> and <span
+class="class2004">-v</span> to terminate all the processes that have
+that name. Prior to killing the processes <span
+class="class2004">killall</span> asks you for confirmation, and
+afterward outputs a confirmation message.
+</div>
+<div class="class271-0">
+<img src="image1792.jpg" id="page_98" class="class271-1" />
+</div>
+<div class="class118">
+pkill
+</div>
+<div class="class27">
+The two commands <span class="class2004">pkill</span> and <span
+class="class2004">pgrep</span> (see earlier in this chapter) belong to
+the same software package. Whilst <span class="class2004">pgrep</span>
+scans the process list and outputs the process ID, the <span
+class="class2004">pkill</span> command will send the termination signal
+to the processes that match the given pattern. In order to terminate all
+the “xterm” processes, invoke the following command:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ pkill xterm</span>
+</div>
+<div class="class133">
+<span class="class2003-0">$</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class118">
+top
+</div>
+<div class="class27">
+The <span class="class2004">top</span> command displays the processes
+according to their activity. The most active process is on top, followed
+by the less active ones. The list is updated every second. The single
+columns contain the process ID (titled PID), the username of the owner
+of the process (titled USER), the process priority (titled PR), the nice
+level (titled NI), the virtual memory usage (titled VIRT), the reserved
+memory (titled RES), the shared memory (titled SHR), both the percentile
+CPU and memory usage (titled %CPU and %MEM), the running time of the
+process (titled TIME+) as well as the command that was used to invoke
+the process (titled COMMAND).
+</div>
+<div class="class27">
+In order to quit <span class="class2004">top</span> press the <span
+class="class2004">q</span> key.
+</div>
+<div class="class271-0">
+<img src="image1808.jpg" id="page_99" class="class271-1" />
+</div>
+<div class="class118">
+htop
+</div>
+<div class="class27">
+“htop” is an additional software package (refer to Chapter 4 on
+installing additional packages) and contains a more interactive version
+of <span class="class2004">top</span> (which we mentioned above). The
+arrangement of the columns is similar to <span
+class="class2004">top</span> . Use the navigation and function keys in
+order to select the processes, sort them, or delete them. The function
+keys are:
+</div>
+<ul>
+<li><div class="class159">
+F1: show help
+</div></li>
+<li><div class="class159">
+F2: configure htop
+</div></li>
+<li><div class="class159">
+F3: search within the process list
+</div></li>
+<li><div class="class159">
+F4: filter the terminal output
+</div></li>
+<li><div class="class159">
+F5: display the processes as a process tree
+</div></li>
+<li><div class="class159">
+F6: change the sort order of the processes
+</div></li>
+<li><div class="class159">
+F7: decrease the nice level of the selected process
+</div></li>
+<li><div id="part0012.xhtml_page_100">
+<div class="class159">
+F8: increase the nice level of the selected process
+</div>
+</div></li>
+<li><div class="class159">
+F9: terminate the selected process
+</div></li>
+<li><div class="class159">
+F10: quit the program
+</div></li>
+</ul>
+<div class="class42-0">
+<img src="image1834.jpg" class="class42-1" />
+</div>
+<div id="part0012.xhtml_id_43QDrJO0TXiLwBsau09Ixw1994" class="class118">
+7.5 Network and System Information
+</div>
+<div class="class178">
+uname
+</div>
+<div class="class27">
+<span class="class2004">uname</span> abbreviates the term “UNIX name”.
+The command displays system information such as the exact name and
+version of the Linux kernel and the hostname of your computer.
+</div>
+<div class="class27">
+The image below shows the call of the <span
+class="class2004">uname</span> command with the parameter <span
+class="class2004">-a</span> (short for --all). The output contains the
+name of the operating system (Linux), the hostname (debian95), the
+kernel version and its build date (4.9.8-7-amd64 #1 SMP Debian 4.9.110-1
+(2018-07-05)) as well as the architecture of the system (x86_64).
+</div>
+<div class="class271-0">
+<img src="image1841.jpg" id="page_101" class="class271-1" />
+</div>
+<div class="class118">
+uptime
+</div>
+<div class="class29">
+This command shows how long the system is running. It displays the
+current time (07:36:47) followed by the uptime in hours (21:56), the
+number of logged in users (1 user) and the average load (load average:
+0.47, 0.43, 0.29) for the last 1, 5 and 15 minutes.
+</div>
+<div class="class271-0">
+<img src="image1846.jpg" class="class271-1" />
+</div>
+<div class="class27">
+In order to see the <span class="class2004">uptime</span> in a nicer
+way, use the option <span class="class2004">-p</span> (short for
+--pretty). The image below displays a more human-readable version of the
+information. The system is up 22 hours and 3 minutes.
+</div>
+<div class="class271-0">
+<img src="image1850.jpg" class="class271-1" />
+</div>
+<div class="class118">
+ip
+</div>
+<div class="class27">
+The <span class="class2004">ip</span> command (along with the two
+keywords <span class="class2004">address show</span> ) displays the
+current network configuration. The image below shows the loopback
+interface (lo) and the ethernet interface (enp0s3). <span
+id="part0012.xhtml_page_104"></span> The ethernet interface is
+configured with the IP address 10.0.2.15. The network interfaces are
+abbreviated as follows:
+</div>
+<ul>
+<li><div class="class159">
+lo: the loopback interface. It is used to access local services such as
+a proxy or web server http://127.0.0.1/
+</div></li>
+<li><div class="class159">
+eth0: the first Ethernet interface connected to a network switch or
+router
+</div></li>
+<li><div class="class159">
+wlan0: the first wireless interface
+</div></li>
+<li><div class="class159">
+ppp0: the first point-to-point interface, used to connect via VPN or
+dial-up service
+</div></li>
+</ul>
+<div class="class42-0">
+<img src="image1864.jpg" class="class42-1" />
+</div>
+<div class="class118">
+ping
+</div>
+<div class="class27">
+<span class="class2004">ping</span> sends ICMP network packets to the
+given IP address or hostname, and displays the turnaround time. The
+image below demonstrates this for the host <a
+href="http://www.google.com" class="class2005">http://www.google.com</a>
+.
+</div>
+<div class="class271-0">
+<img src="image1869.jpg" class="class271-1" />
+</div>
+<div class="class27">
+<a
+href="http://www.Amazon.com/gp/customer-reviews/write-a-review.html?asin=B07HDTG58D"><img
+src="image1873.jpg" class="class47" /></a>
+</div>
+<p><span id="part0013.xhtml"></span></p>
+<div id="part0013.xhtml_id_43QDrJO0TXiLwBsau09Ixw1995" class="class103">
+8. Getting Help
+</div>
+<div class="class105">
+UNIX/Linux is a rather complex operating system, especially for
+beginners. When you get started, the list of programs can be quite
+confusing. Each program has a longer list of parameters or options than
+the last. And they are not easy to memorize, they have long and short
+names, and are not standardized. Asking for help when you get stuck is
+not a mistake or sign of low knowledge.
+</div>
+<div class="class27">
+In order to get help on your Linux system, there are several ways to go
+about it. This includes the manual pages (called man pages), information
+pages (called info pages), as well as the integrated help of each
+command. In this chapter we will have a closer look at these help
+systems and get familiar with the commands <span
+class="class2004">man</span> , <span class="class2004">info</span> ,
+<span class="class2004">whereis</span> and <span
+class="class2004">whatis</span> .
+</div>
+<div id="part0013.xhtml_toc31_8.1_Man_Pages" class="class118">
+8.1 Man Pages
+</div>
+<div class="class29">
+Man pages are the traditional way of distributing documentation about
+programs. The term “man page” is short for “manual page”, as they
+correspond to the pages of the printed manual. Man pages are part of the
+basic installation of your Linux system. The corresponding Debian
+package is named “manpages”.
+</div>
+<div class="class27">
+A man page corresponds to a specific section in the full UNIX manual: 1
+for commands, 2 for system calls, etc. To get <span
+id="part0013.xhtml_page_106"></span> information regarding a specific
+command, open the corresponding man page in a terminal window. As an
+example, for the <span class="class2004">cp</span> command it is done as
+follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ man cp</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+The resulting man page looks like this:
+</div>
+<div class="class271-0">
+<img src="image1894.jpg" class="class271-1" />
+</div>
+<div class="class27">
+The key bindings are similar to the ones from the text editor <span
+class="class2004">vi(m)</span> . Use the navigation keys to scroll up
+and down, and <span class="class2004">q</span> to exit the man page and
+to return to the terminal.
+</div>
+<div id="part0013.xhtml_id_43QDrJO0TXiLwBsau09Ixw1997" class="class118">
+8.2 Info Pages
+</div>
+<div class="class27">
+Info is the default format for documentation inside the GNU project. In
+the early 1990s, the GNU project decided that the <span
+class="class2004">man</span> documentation system was outdated, and
+wrote the <span class="class2004">info</span> command to replace it.
+<span class="class2004">info</span> has basic hyperlinking features
+<span id="part0013.xhtml_page_107"></span> and a simpler markup language
+to use (compared to the <span class="class2004">troff</span> system used
+for man pages). Nowadays both systems exist in parallel.
+</div>
+<div class="class27">
+The basic installation of Debian does not contain the info pages. In
+order to use it, post-install the package named “info” (refer to Chapter
+4 on how to install additional packages). To get information regarding a
+specific command, open the corresponding info page in a terminal window.
+As an example, for the <span class="class2004">cp</span> command it is
+done as follows:
+</div>
+<table class="class143">
+<tbody>
+<tr>
+<td class="class139"><div class="class133">
+<span class="class2003-0">$ info cp</span>
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="class105">
+The resulting info page looks like this:
+</div>
+<div class="class271-0">
+<img src="image1908.jpg" id="page_108" class="class271-1" />
+</div>
+<div id="part0013.xhtml_id_43QDrJO0TXiLwBsau09Ixw1998" class="class118">
+8.3 Integrated Help
+</div>
+<div class="class27">
+Aside from <span class="class2004">man</span> and <span
+class="class2004">info</span> pages, many commands have an option <span
+class="class2004">-h</span> (short for --help). Calling the command with
+this option opens a specific help section. The image below shows the
+built-in help of the <span class="class2004">uname</span> command.
+</div>
+<div class="class271-0">
+<img src="image1913.jpg" class="class271-1" />
+</div>
+<div class="class604">
+Alternatively, the <span class="class2004">whatis</span> command is
+helpful to get brief information about Linux commands or functions. It
+displays a single line man page description for the command that matches
+the string passed as a command line argument to the <span
+class="class2004">whatis</span> command.
+</div>
+<div class="class27">
+The <span class="class2004">whatis</span> command searches for the
+string in its index database, which is maintained by the <span
+class="class2004">mandb</span> program, and picks a short description
+from the NAME section of the man page for that command. The image below
+shows this for the two commands <span class="class2004">mv</span> and
+<span class="class2004">man</span> .
+</div>
+<div class="class271-0">
+<img src="image1918.jpg" id="page_109" class="class271-1" />
+</div>
+<div class="class604">
+Another option is the <span class="class2004">whereis</span> command,
+which is helpful to locate the manual page of the command in the Linux
+system. It is very simple utility. The image below shows this for the
+two commands <span class="class2004">mv</span> and <span
+class="class2004">man</span> .
+</div>
+<div class="class271-0">
+<img src="image1922.jpg" class="class271-1" />
+</div>
+<div class="class604">
+Every command also provides additional information and configuration
+examples. This is kept in the directory <span
+class="class2004">/usr/share/doc</span> , and every program has its own
+subdirectory. The content is standardized and differs from program to
+program. The content is also accessible for every user. A snippet of the
+directory is shown below.
+</div>
+<div class="class271-0">
+<img src="image1926.jpg" id="page_110" class="class271-1" />
+</div>
+<div id="part0013.xhtml_id_43QDrJO0TXiLwBsau09Ixw1999" class="class118">
+8.4 External Help
+</div>
+<div class="class29">
+If the help already provided with the software tools is not enough, and
+further explanation is necessary, external resources come into play.
+There are a few online communities that can be consulted such as:
+</div>
+<ul>
+<li><div class="class159">
+LinuxHint - <a href="https://support.linuxhint.com"
+class="class2005">https://support.linuxhint.com</a>
+</div></li>
+<li><div class="class159">
+LinuxHelp - <a href="https://www.linuxhelp.com"
+class="class2005">https://www.linuxhelp.com</a>
+</div></li>
+</ul>
+<div class="class604">
+Another option is <span class="class2004">Linux User Groups</span>
+(LUG). A LUG is a group of people from the same place sharing their
+common interest in the Linux operating system. They are organized as a
+loosely associated number of people, or an association that meets
+regularly. A full list of LUGs worldwide is available from <span
+class="class2004">LugsList</span> at <a href="http://lugslist.com"
+class="class2005">http://lugslist.com</a>
+</div>
+<div class="class271-0">
+<img src="image1937.jpg" class="class271-1" />
+</div>
+<div class="class29">
+Many LUGs organize meet-ups and events in order to share ideas, exchange
+experiences, and to learn from each other. This includes local and
+international events.
+</div>
+<p><span id="part0014.xhtml"></span></p>
+<div id="part0014.xhtml_toc36_Further_Reading" class="class103">
+Further Reading
+</div>
+<div class="class604">
+For further reading on Linux, be sure to look out for our guide <a
+href="https://www.amazon.com/dp/1085961540" class="class2005">Linux:
+System Administration and Practical Management Guidelines</a>
+</div>
+<div class="class29">
+System administration is an aspect of Linux that is unavoidable. Even
+with the emergence of user friendly distributions like Ubuntu and Mint,
+a significant amount of user configuration is still required to keep a
+Linux system running on a daily basis. This book has been created to
+guide you through most scenarios you will encounter, whether you’re new
+to system administration or have been maintaining systems for years.
+</div>
+<div class="class29">
+In this book we take a detailed look at managing users and groups, we
+look at how to create a more secure system that will be less vulnerable
+to threats, as well as delving into the various aspects of managing
+filesystems and storage partitions. We also address specific topics such
+as working with hard and soft links, getting the most out of text
+processing, package management and architecture, utilizing shared
+libraries, manipulating processes for system optimization, as well as
+other essential topics every proficient Linux user and administrator
+needs to know.
+</div>
+<div class="class27">
+<a href="https://www.amazon.com/dp/1085961540"><img src="image46.jpg"
+class="class47" /></a>
+</div>
+<p><span id="part0015.xhtml"></span></p>
+<div id="part0015.xhtml_id_43QDrJO0TXiLwBsau09Ixw2001" class="class103">
+About the Author
+</div>
+<div class="class105">
+Nathan Clark is an expert programmer with nearly 20 years of experience
+in the software industry.
+</div>
+<div class="class29">
+With a master’s degree from MIT, he has worked for some of the leading
+software companies in the United States and built up extensive knowledge
+of software design and development.
+</div>
+<div class="class29">
+Nathan and his wife, Sarah, started their own development firm in 2009
+to be able to take on more challenging and creative projects. Today they
+assist high-caliber clients from all over the world.
+</div>
+<div class="class251">
+Nathan enjoys sharing his programming knowledge through his book series,
+developing innovative software solutions for their clients and watching
+classic sci-fi movies in his free time<span
+id="part0015.xhtml_page_114"></span> .
+</div>
