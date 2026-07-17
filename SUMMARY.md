@@ -175,6 +175,7 @@
 +   [Kali Linux 攻防：初学者基础黑客、网络安全、无线网络与渗透测试完全指南](docs/hacking-with-kali-linux-a-complete-guide-for-beginners-to-st/README.md)
 +   [Kali Linux 黑客：学习计算机黑客、无线网络、网络安全和渗透测试的全面分步式道德黑客初学者指南](docs/hacking-with-kali-linux-a-comprehensive-step-by-step-beginne/README.md)
 +   [Kali Linux 攻防：道德黑客指南：使用示例进行基础设施安全测试的初学者指南：网络安全与道德黑客基础学习](docs/hacking-with-kali-linux-a-guide-to-ethical-hacking-a-beginne/README.md)
++   [Kali Linux 攻防：关于 Kali 网络、脚本与安全的初学者指南。学习网络安全基础知识，成为伦理黑客](docs/hacking-with-kali-linux-a-step-by-step-beginners-guide-for-y/README.md)
 +   [Kali Linux 破解：道德黑客分步指南、计算机工具以及使用网络安全基础知识保护家庭和企业免受网络攻击](docs/hacking-with-kali-linux-a-step-by-step-guide-to-ethical-hack/README.md)
 +   [使用 Kali Linux 进行渗透：Linux 渗透基础分步指南。初学者需要了解的无线网络入侵和系统安全知识。包含工具详解](docs/hacking-with-kali-linux-a-step-by-step-guide-to-learn-the-ba/README.md)
 +   [Kali Linux 破解指南：助你成为专家黑客的技巧与步骤，涵盖创建键盘记录器、实施中间人攻击以及规划自己的攻击方案](docs/hacking-with-kali-linux-a-step-by-step-guide-with-tips-and-t/README.md)
