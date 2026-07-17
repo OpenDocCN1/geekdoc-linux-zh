@@ -307,6 +307,7 @@
 +   [Linux 常见问题解答：中级用户指南](docs/linux-faqs-intermediate-users/README.md)
 +   [Linux 防火墙：iptables, psad 和 fwsnort 攻击检测与响应 [图解]](docs/linux-firewalls-attack-detection-and-response-with-iptables-/README.md)
 +   [Linux 初学者指南（第17版，2024年）](docs/linux-for-beginners---17th-edition-2024/README.md)
++   [Linux 初学者指南：关于 Linux 的方位百科指南](docs/linux-for-beginners-linux-for-beginnersthe-essantail-guide-o/README.md)
 +   [生物学家 Linux 秘籍](docs/linux-for-biologists-a-cookbook/README.md)
 +   [傻瓜的 Linux 第一版](docs/linux-for-dummies-first-edition/README.md)
 +   [黑客 Linux 入门指南：网络、WiFi 黑客与 Python 脚本](docs/linux-for-hackers-getting-started-with-networking-wifi-hacki/README.md)

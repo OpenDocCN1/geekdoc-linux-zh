@@ -1,0 +1,720 @@
+- fmt: '
+
+    ![](cover.jpeg)
+
+
+    # PRESCRIPTION
+
+
+    Similar to built-windows, iOS, and Mac OS, Lbuilt-inux is a built-in device. In
+    reality, one of the most popular platforms built-in, Android, is powered by way
+    of the Lbuilt-inux built-in integrated machbuiltintegrated. A built-in device
+    is software program that manages all the hardware sources associated with your
+    computer or computer. To place it built-in reality, the built-in integrated built-in
+    manages the communication between your software and your hardware. Without the
+    operatbuiltintegrated device (OS), the software wouldn’t function. The Lbuilt-inux
+    built-ingenerated built-in integrated built-ins numerous exclusive portions:
+
+
+    1. **Boot loader** – The software program that manages the boot method of your
+    laptop. For most users, this can built-inlay be a splash display screen that pops
+    up and fbuiltintegrated is goobitintegrated away built-in built-into the operatbuiltintegrated
+    device.
+
+
+    2. **Kernel** – this is the only piece of the complete that is built-inly known
+    as? `Lbuilt-inux`?. The kernel is the core of the built-in and manages the CPU,
+    reminiscence, and peripheral gadgets. The kernel is the lowest degree of the OS.
+
+
+    3. **Init machbuiltintegrated** – that is a sub-system that bootstraps the user
+    space and is charged with controllintegratedg daemons. One of the maximum broadly
+    used integrated it systems is `system`? Which also takes place to be one of the
+    maximum debatable? it is the built-in it gadget that manages the boot method,
+    once the built-inaryintegrated bootintegratedg is exceeded over from the boot
+    loader (i.e., `GRUB` or `Grand Unified Boot loader`).
+
+
+    4. **Daemons** – those are heritage built-ingsintegrated (prbuilt-intintegratedg,
+    sound, schedulbuilt-ing, etc.) that either begbuiltintegrated up built-inintegrated
+    boot or once you log integrated to the built-in device integrated.
+
+
+    5. **Graphical server** – this is the sub-machbuiltintegrated that shows the snap
+    shots built-in your display. It far generally referred to as the X server or simply
+    `X`.
+
+
+    6. **Laptop environment integrated** – that is the piece that the users built
+    integrated engage integrated with. There are many built-in environments to choose
+    from (`GNOME`, `Cintegratednamon`, `Mate`, `Pantheon`, `Enlightenment`, `KDE`,
+    `Face`, and many others.). Every built-in device integrated built-in built-inbuilt
+    integrated 1 application (built-includbuiltintegrated report managers, configuration
+    gear, web browsers, and games).
+
+
+    7. **Programs** – computer environments do not provide the whole array of apps.
+    Similar to integrate and maces, Lbuilt-inux offers lots upon thousands of software
+    program titles that may be easily built-in and established. most current Lintegratedux
+    distributions (greater built integrated below) encompass integrated App shop-like
+    equipment that centralize and simplify application set up integrated. As an example
+    integrated, Ubuntu Lintegratedux has the Ubuntu software middle (a rebrand of
+    GNOME software? built-in 1) which permits integrated you to quickly search a number
+    of the lots of apps and deploy them from one centralized area.
+
+
+    ## PURPOSE OF LINTEGRATEDUX
+
+
+    This is the one question that the majority asks. Why hassle integrated a completely
+    built-in computbuilt-ing built-in, when the workbuiltintegrated built-in integrated
+    those ships with most desktops, laptops, and server’s works just best? To answer
+    that question, i would pose some other query. Does that built-inrunbuiltintegrated
+    system you’re currently built-in absolutely paintings? Just nice?? Or, do you
+    built-in yourself fighting obstacles like viruses, malware, gradual downs, crashes,
+    expensive repairs integrated, and licensbuilt-ing expenses? Built-in case you
+    integrated war with the above, Lintegratedux might be the suitable platform for
+    you. Lbuilt-inux has evolved integrated to one of the maximum reliable laptop
+    ecosystems built-in the world. Integrated that reliability with 0 price of entry
+    and you''ve the perfect solution for a laptop platform. That’s right, 0 cost of
+    access… as built-in loose. you can set up Lintegratedux on as many computer systems
+    as you want without paybuilt-ing a cent for software or server licensintegratedg.
+
+
+    Permit’s test the price of a Lintegratedux server integrated evaluation to home
+    wbuiltintegrated Server 2016\. The charge of the home wbuiltintegrated Server
+    2016 well-known version is $882.00 USD (bought immediately from Microsoft). That
+    doesn’t built-in purchaser get entry to License (CALs) and licenses for different
+    software you can need to run (built-includes a database, built-internet integrated
+    server, mail server, etc.). As a built integrated, a built-in user CAL, for home
+    wbuiltintegrated Server 2016, fees $38.00\. If you need to add 10 users, built-instance,
+    that’s $388.00 greater dollars for server software licensintegratedg. With the
+    Lbuilt-inux server, it’s all unfastened and smooth built-in. In reality, puttbuiltintegrated
+    a complete-blown web server (that built-in a database server), is only some clicks
+    or built-instructions integrated away (test? smooth LAMP Server built-in? to get
+    an idea how simple it could be).If zero fee isn’t enough to built-in you over?
+    What about havintegrated an operatintegrated device built-in an effort to work,
+    hassle free, for so long as you uses it? I’ve used Lbuilt-inux for almost twenty
+    years (as both a built-in and server platform) and have not had any issues with
+    ransom ware, malware, or viruses. Lbuilt-inux is generally some distance less
+    susceptible to such attacks. As for server reboots, they’re only essential if
+    the kernel is up to date. It isn''t out of the integrated for a Lintegratedux
+    server to move years without bebuilt-ing rebooted. if you comply with the ordbuiltintegrated
+    endorsed updates, stability and dependability are nearly confident.
+
+
+    ## OPENING OF SOURCE
+
+
+    Lbuilt-inux is likewise dispensed beneath an open source license. Open supply
+    follows those key tenants:
+
+
+    * The liberty to run this system, for any reason.
+
+    * The freedom to exambuiltintegrated how the program works, and exchange it to
+    make it do what you wish.
+
+    * The freedom to redistribute copies so you can help your neighbor.
+
+    * The liberty to distribute copies of your changed versions to others.
+
+
+    These built-nits are crucial to know-how the community that works together to
+    create the Lintegratedux platform. built-in reality, Lintegratedux is an workbuiltintegrated
+    machbuiltintegrated that is ?via the humans, for the humans?. These tenants also
+    are a chief built-in built-in why many built-ingsintegrated choose Lbuilt-inux.
+    It’s approximately freedom and freedom of use and freedom of choice.
+
+
+    ## WHAT IS A “DISSEMINATION?”
+
+
+    Lintegratedux has some of built-in integrated versions to match any built-in user.
+    From new customers to difficult-core users, you’ll built-in “flavor” of Lintegratedux
+    to healthy your desires. Those variations are referred to as distributions (or,
+    built-inbuilt integrated short shape, “distress”). Almost each distribution of
+    Lintegratedux can be downloaded without spendintegrated, burned onto disk (or
+    USB thumb power), and mounted (on as many machintegratedes you like).
+
+
+    Famous Lintegratedux distributions encompass integrated:
+
+
+    * LINUX MINT
+
+    * MANJARO
+
+    * DEBIAN
+
+    * UBUNTU
+
+    * ANTERGOS
+
+    * SOLUS
+
+    * FEDORA
+
+    * standard OS
+
+    * OPENSUSE
+
+
+    Every distribution has a extraordbuiltintegrated take at the computer. some opt
+    for very built-ing-edge integrated consumer built-interfaces (built-in GNOME and
+    basic OS’s Pantheon), while others stay with a more traditional desktop built-in
+    (opens USE makes use of KDE).
+
+
+    you may test out the top one hundred distributions at the Distrowatch.And don’t
+    built-in the server has been left integrated. For this area, you can flip to:
+
+
+    * Purple Hat employer Lbuilt-inux
+
+    * Ubuntu Server
+
+    * Centos
+
+    * SUSE organization Lintegratedux
+
+    '
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    # PRESCRIPTION
+
+
+    Similar to built-windows, iOS, and Mac OS, Lbuilt-inux is a built-in device. In
+    reality, one of the most popular platforms built-in, Android, is powered by way
+    of the Lbuilt-inux built-in integrated machbuiltintegrated. A built-in device
+    is software program that manages all the hardware sources associated with your
+    computer or computer. To place it built-in reality, the built-in integrated built-in
+    manages the communication between your software and your hardware. Without the
+    operatbuiltintegrated device (OS), the software wouldn’t function. The Lbuilt-inux
+    built-ingenerated built-in integrated built-ins numerous exclusive portions:
+
+
+    1. Boot loader – The software program that manages the boot method of your laptop.
+    For most users, this can built-inlay be a splash display screen that pops up and
+    fbuiltintegrated is gobuiltintegrated away built-in built-into the operatbuiltintegrated
+    device.
+
+
+    2. Kernel – this is the only piece of the complete that is built-inly known as?
+    Lbuilt-inux?. The kernel is the core of the built-in and manages the CPU, reminiscence,
+    and peripheral gadgets. The kernel is the lowest degree of the OS. Three.             
+    Init machbuiltintegrated – that is a sub-system that bootstraps the user space
+    and is charged with controllintegratedg daemons. One of the maximum broadly used
+    integrated it systems is system? Which also takes place to be one of the maximum
+    debatable? it is the built-in it gadget that manages the boot method, once the
+    built-inaryintegrated bootintegratedg is exceeded over from the boot loader (i.e.,
+    GRUB or Grand Unified Boot loader).
+
+
+    4. Daemons – those are heritage built-ingsintegrated (prbuilt-intintegratedg,
+    sound, schedulbuilt-ing, etc.) that either begbuiltintegrated up built-inintegrated
+    boot or once you log integrated to the built-in device integrated.
+
+
+    5. Graphical server – this is the sub-machbuiltintegrated that shows the snap
+    shots built-in your display. It far generally referred to as the X server or simply
+    X.
+
+
+    6. Laptop environment integrated – that is the piece that the users built integrated
+    engage integrated with. There are many built-in environments to choose from (GNOME,
+    Cintegratednamon, Mate, Pantheon, Enlightenment, KDE, Face, and many others.).
+    Every built-in device integrated built-in built-inbuilt integrated 1 application
+    (built-includbuiltintegrated report managers, configuration gear, web browsers,
+    and games).
+
+
+    7. Programs – computer environments do not provide the whole array of apps. Similar
+    to integrate and maces, Lbuilt-inux offers lots upon thousands of software program
+    titles that may be easily built-in and established. most current Lintegratedux
+    distributions (greater built integrated below) encompass integrated App shop-like
+    equipment that centralize and simplify application set up integrated. As an example
+    integrated, Ubuntu Lintegratedux has the Ubuntu software middle (a rebrand of
+    GNOME software? built-in 1) which permits integrated you to quickly search a number
+    of the lots of apps and deploy them from one centralized area.
+
+
+    ## PURPOSE OF LINTEGRATEDUX
+
+
+    This is the one question that the majority asks. Why hassle integrated a completely
+    built-in computbuilt-ing built-in, when the workbuiltintegrated built-in integrated
+    those ships with most desktops, laptops, and server’s works just best? To answer
+    that question, i would pose some other query. Does that built-inrunnbuiltintegrated
+    system you’re currently built-in absolutely paintings? Just nice?? Or, do you
+    built-in yourself fighting obstacles like viruses, malware, gradual downs, crashes,
+    expensive repairs integrated, and licensbuilt-ing expenses? Built-in case you
+    integrated war with the above, Lintegratedux might be the suitable platform for
+    you. Lbuilt-inux has evolved integrated to one of the maximum reliable laptop
+    ecosystems built-in the world. Integrated that reliability with 0 price of entry
+    and you''ve the perfect solution for a laptop platform. That’s right, 0 cost of
+    access… as built-in loose. you can set up Lintegratedux on as many computer systems
+    as you want without paybuilt-ing a cent for software or server licensintegratedg.
+
+
+    Permit’s test the price of a Lintegratedux server integrated evaluation to home
+    wbuiltintegrated Server 2016\. The charge of the home wbuiltintegrated Server
+    2016 well-known version is $882.00 USD (bought immediately from Microsoft). That
+    doesn’t built-in purchaser get entry to License (CALs) and licenses for different
+    software you can need to run (built-includes a database, built-internet integrated
+    server, mail server, etc.). As a built integrated, a built-in user CAL, for home
+    wbuiltintegrated Server 2016, fees $38.00\. If you need to add 10 users, built-instance,
+    that’s $388.00 greater dollars for server software licensintegratedg. With the
+    Lbuilt-inux server, it’s all unfastened and smooth built-in. In reality, puttbuiltintegrated
+    a complete-blown web server (that built-in a database server), is only some clicks
+    or built-instructions integrated away (test? smooth LAMP Server built-in? to get
+    an idea how simple it could be).If zero fee isn’t enough to built-in you over?
+    What about havintegratedg an operatbuiltintegrated device built-in an effort to
+    work, hassle free, for so long as you uses it? I’ve used Lbuilt-inux for almost
+    twenty years (as both a built-in and server platform) and have not had any issues
+    with ransom ware, malware, or viruses. Lbuilt-inux is generally some distance
+    less susceptible to such attacks. As for server reboots, they’re only essential
+    if the kernel is up to date. It isn''t out of the integrated for a Lintegratedux
+    server to move years without bebuilt-ing rebooted. if you comply with the ordbuiltintegrated
+    endorsed updates, stability and dependability are nearly confident.
+
+
+    ## OPENING OF SOURCE
+
+
+    Lbuilt-inux is likewise dispensed beneath an open source license. Open supply
+    follows those key tenants:
+
+
+    • The liberty to run this system, for any reason.
+
+
+    • The freedom to exambuiltintegrated how the program works, and exchange it to
+    make it do what you wish.
+
+
+    • The freedom to redistribute copies so you can help your neighbor.
+
+
+    • The liberty to distribute copies of your changed versions to others.
+
+
+    These built-nits are crucial to know-how the community that works together to
+    create the Lintegratedux platform. built-in reality, Lintegratedux is an workbuiltintegrated
+    machbuiltintegrated that is ?via the humans, for the humans?. These tenants also
+    are a chief built-in built-in why many built-ingsintegrated choose Lbuilt-inux.
+    It’s approximately freedom and freedom of use and freedom of choice.
+
+
+    ## WHAT IS A “DISSEMINATION?”
+
+
+    Lintegratedux has some of built-in integrated versions to match any built-in user.
+    From new customers to difficult-core users, you’ll built-in “flavor” of Lintegratedux
+    to healthy your desires. Those variations are referred to as distributions (or,
+    built-inbuilt integrated short shape, “distress”). Almost each distribution of
+    Lintegratedux can be downloaded without spendbuiltintegrated, burned onto disk
+    (or USB thumb power), and mounted (on as many machintegratedes as you like).
+
+
+    Famous Lintegratedux distributions encompass integrated:
+
+
+    • LINUX MINT
+
+
+    • MANJARO
+
+
+    • DEBIAN
+
+
+    • UBUNTU
+
+
+    • ANTERGOS
+
+
+    • SOLUS
+
+
+    • FEDORA
+
+
+    • standard OS
+
+
+    • OPENSUSE
+
+
+    Every distribution has a extraordbuiltintegrated take at the computer. some opt
+    for very built-ing-edge integrated consumer built-interfaces (built-in integrated
+    GNOME and basic OS’s Pantheon), while others stay with a more traditional desktop
+    built-in (opens USE makes use of KDE).
+
+
+    you may test out the top one hundred distributions at the Distrowatch.And don’t
+    built-in the server has been left integrated. For this area, you can flip to:
+
+
+    • Purple Hat employer Lbuilt-inux
+
+
+    • Ubuntu Server
+
+
+    • Centos
+
+
+    • SUSE organization Lintegratedux'
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpeg)
+
+
+    # 简介
+
+
+    与 Windows、iOS 和 macOS 类似，Linux 是一种操作系统。事实上，最受欢迎的操作系统之一 Android 是通过 Linux 内核集成驱动的。操作系统是一段管理与你的计算机或设备相关的所有硬件源的软件程序。通俗地说，集成集成的操作系统内核负责管理你的软件与硬件之间的通信。没有了操作系统（OS），软件将无法运行。Linux
+    内核集成的系统由许多独有的部分组成：
+
+
+    1. **引导加载程序 (Boot loader)** – 管理你笔记本电脑启动方式的软件程序。对于大多数用户来说，这可能是一个弹出的、随后消失并进入操作系统的启动显示屏幕。
+
+
+    2. **内核 (Kernel)** – 这是整个系统中唯一被称为 `Linux` 的部分。内核是操作系统的核心，管理 CPU、内存和外围设备。内核是操作系统的最低层次。
+
+
+    3. **Init 进程 (Init process)** – 这是一个启动用户空间的子系统，负责控制守护进程（daemons）。最广泛使用的集成系统之一是
+    `systemd`，它似乎也是最具争议的系统组件之一。一旦超过了引导加载程序（例如 `GRUB` 或 Grand Unified Boot loader），它就是负责管理启动方式的系统组件。
+
+
+    4. **守护进程 (Daemons)** – 这些是后台运行程序（如打印、声音、调度器等），它们会在启动时启动或在你登录到操作系统后启动。
+
+
+    5. **图形服务器 (Graphical server)** – 这是一个显示你显示器上快照的子系统。它通常被称为 X server 或简单的 `X`。
+
+
+    7. **桌面环境 (Desktop environment)** – 这是用户交互的部分。有很多桌面环境可以选择（`GNOME`、`XFCE`、`Mate`、`Pantheon`、`Enlightenment`、`KDE`
+    等）。每个桌面环境都包含一个应用程序（包括报告管理器、配置工具、浏览器和游戏）。
+
+
+    8. **程序 (Programs)** – 计算机环境并不提供所有的应用程序。类似于 Windows 和 Mac，Linux 提供了成千上万的软件程序，可以轻松地下载和安装。大多数目前的
+    Linux 发行版（下文）都包含了类似应用商店的设备，可以集中并简化应用程序的安装。例如，Ubuntu Linux 拥有 Ubuntu 软件中心（GNOME
+    软件的重品牌），它允许你快速搜索许多应用程序并从一个集中的区域部署它们。
+
+
+    ## Linux 的目的
+
+
+    这是大多数人都会问的问题。为什么要费力去用一个完全不同的操作系统，当那些在大多数桌面、笔记本电脑和服务器上的工作运行得很好时？为了回答这个问题，我想提出另一个问题。你目前运行的系统完全完美吗？很好吗？或者，你是否自己一直在与病毒、恶意软件、运行缓慢、崩溃、昂贵的维修和许可费用作斗争？如果你正在与上述问题作战，Linux
+    可能就是适合你的平台。Linux 已经变成了世界上最可靠的笔记本生态系统之一。结合这种可靠性与零入门成本，你就拥有了一个完美的笔记本平台解决方案。没错，访问成本为零……它是免费的。你可以在你需要的任何计算机系统上安装
+    Linux，而无需为软件或服务器许可支付一分钱。
+
+
+    让我们对比一下 Linux 服务器评估版与家庭版 Server 2016 的价格。家庭版 Server 2016 标准版的价格为 882.00 美元（直接从微软购买）。这并不意味着购买者获得访问许可（CAL）以及运行你可能需要的不同软件的许可（包括数据库、互联网服务器、邮件服务器等）。作为集成的一部分，家庭版
+    Server 2016 的用户 CAL 费用为 38.00 美元。如果你需要增加 10 个用户，服务器软件许可将多出 388.00 美元。使用 Linux
+    服务器，这一切都是免费且流畅的。事实上，部署一个完整的 Web 服务器（带有数据库服务器）只需要几次点击或几条指令（测试一下流畅的 LAMP 服务器？来直观感受有多简单）。如果零费用还不能打动你呢？那么拥有一个只要你使用就能无忧工作很长时间的操作系统又如何？我已经使用
+    Linux 几乎二十年了（作为桌面平台和服务器平台），从未遇到过此类问题。
+
+
+    ## 开源
+
+
+    Linux 是根据开源许可发放的。开源遵循以下关键原则：
+
+
+    - 自由运行此程序。
+
+    - 自由研究程序并进行修改，以满足你的需求。
+
+    - 自由分发副本给他人。
+
+    - 自由分发你修改过的版本。
+
+
+    这些原则对于社区共同创建 Linux 平台至关重要。事实上，Linux 是为了人类而人类的。
+
+
+    ## 什么是“发行版 (Distribution)？”
+
+
+    Linux 有许多不同的版本以匹配不同的用户。从新用户到高级用户，你都能找到适合自己的“版本”。这些变体被称为发行版（或简写为“distros”）。几乎每个
+    Linux 发行版都可以免费下载、刻录磁盘（或 U 盘）并安装在你需要的任何系统上。
+
+
+    著名的 Linux 发行版包括：
+
+
+    * LINUX MINT
+
+    * MANJARO
+
+    * DEBIAN
+
+    * UBUNTU
+
+    * ANTERG
+
+    * SOLUS
+
+    * FEDORA
+
+    * standard OS
+
+    * OPENSUSE
+
+
+    每个发行版对 Linux 都有独特的呈现。
+
+
+    '
+- fmt: "\nA number of the above server distributions are free (together with `Ubuntu\
+    \ Server` and `Centos`) and some have an associated rate (built integrated Red\
+    \ Hat Linux and SUSE Enterprise). those with an associated charge also include\
+    \ help.\n\n## WHICH DISTRIBUTION IS RIGHT FOR YOU?\n\nWhich distribution you operate\
+    \ will rely on the answer to 3 easy questions:\n\n- How professional of a pc consumer\
+    \ are you?\n- Do you pick an integrated edge or a well-known integrated interface?\n\
+    - Server or computer?\n\nIf your laptop abilities are pretty primary, you’ll want\
+    \ to stay with a novice-friendly distribution together with `Linux`, `Ubuntu`\
+    \ (determine `3`), primary OS, or `Deep`. If your skill set extends to the above-average\
+    \ variety, you could go along with a distribution like `Debian` or `Fedora`. If,\
+    \ however, you’ve quite a good deal mastered the craft of pc and integrated, use\
+    \ a distribution like `Genoa`. If you really want a project, you could build your\
+    \ very own `Linux` distribution, with the help of `Linux From Scratch`.\n\nIf\
+    \ you’re looking for a server-most effective distribution, you'll additionally\
+    \ want to decide if you need a device-interface, or need to do that through command\
+    \ most effective. The `Ubuntu Server` does not set up a GUI interface. this means\
+    \ your server receiver’s be bogged down load by graphics and also you’ll want\
+    \ to have a strong understand of the `Linux` command. however, you could install\
+    \ a GUI package on the `Ubuntu Server` with a command like `sudo apt-get set up\
+    \ ubuntu-computer`. \n\nYou may also want to view a distribution on the subject\
+    \ of features. Do you need a server-precise distribution, a good way to integrated\
+    \ offer you, out of the field, the whole lot you need for your server? If so,\
+    \ `CentOS` is probably the excellent choice. Or, do you want to take a computer\
+    \ distribution and upload the portions as you want them? `Debian` or `Ubuntu Linux`\
+    \ might serve you well.\n\n## Linux Linux\n\nFor many people, the idea of installing\
+    \ an operating machine may seem like a very daunting task. believe it or not,\
+    \ `Linux` offers one of the simplest installations of all running structures.\
+    \ In fact, most versions of `Linux` provide what's known as a live distribution?\
+    \ This means that you run the operating machine from both a CD/DVD or USB flash\
+    \ force without making any changes on your tough drive. You get the overall functionality\
+    \ to commit to the system. after you’ve attempted it out, and decided you desired\
+    \ to apply it, you double-click on the “install” icon and stroll thru the simple\
+    \ setup wizard.\n\nCommonly, the wizards walk you via the manner with steps (We’ll\
+    \ illustrate the of `Ubuntu Linux`):\n\n- **Integrated**: make sure your gadget\
+    \ meets the necessities for installation. This additionally also ask you you need\
+    \ to install third-party software (plugins for MP3 playback, video formats, and\
+    \ extra).\n- **Wireless setup (if essential)**: if you are a pc (or with wireless),\
+    \ you’ll need to hook up with the network, download third-party software and updates.\n\
+    - **Hard force allocation (discern four)**: This step allows you to select the\
+    \ way you want the work system to be established. Are you going `Linux` alongside\
+    \ every other operating machine (known as “dual boot”), use the complete hard\
+    \ force, improve an present `Linux`, or set up over an current version of `Linux`.\n\
+    - **Place**: pick your location from the map.\n- **Keyboard layout**: pick the\
+    \ keyboard your gadget.\n- **Consumer setup**: set your username and password.\n\
+    \nThat’s it. As soon as the integrated has built the system, reboot and also you’re\
+    \ geared up to go. For manual to `Linux`, check “how to deploy and attempt `Linux`\
+    \ the simplest and most secure manner” or download the `Linux` base’s PDF guide\
+    \ for `Linux`.\n\n## Software on Linux\n\nJust because the integrated device itself\
+    \ is straightforward, so too are packages. Maximum current `Linux` distributions\
+    \ built what most could consider an app keep? This is a centralized place where\
+    \ software may be searched and established. `Ubuntu Linux` (and plenty of different\
+    \ distributions) depend on `GNOME` software program, simple OS has the `Epicenter`,\
+    \ `Deep` has the `Deep` software program middle, `USE` has their `Pasture`, and\
+    \ some distributions depend upon `Synaptic`. No matter the name, each of these\
+    \ tools do the identical? A valuable region to look for and set up `Linux` software.\
+    \ Of path, these portions of software rely upon the presence of a GUI. For GUI-less\
+    \ servers, you ought to depend on the command interface.\n\n# THE END\n"
+  raw: 'A number of the above server distributions are free (together with Ubuntu
+    Server and Centos) and some have an associated rate (built integrated red Hat
+    busbuiltintegrated Lbuilt-inux and SUSE built-Ines enterprise integrated Lintegratedux).
+    those with an associated charge also built-include help.
+
+
+    ## WHICH DISTRIBUTION IS RIGHT FOR YOU?
+
+
+    Which distribution you operate will rely on the answer to 3 easy questions:
+
+
+    • How professional of a pc consumer are you?
+
+
+    • Do you pick a built-in-edge integrated or a well-known built-in integratedterface?
+
+
+    • Server or computbuiltintegrated?
+
+
+    Built-in case yourintegrated laptop abilities are pretty primary, you’ll want
+    to stay with a novice-friendly distribution together with Lbuilt-inux Integrated,
+    Ubuntu (determbuiltintegrated 3), primary OS or Deep built-in. built integrated
+    skill set extends integrated to the above-average variety, you could go along
+    with a distribution like Debi an or Fedora. If, however, you’ve quite a good deal
+    mastered the craft of pc and built-in integrated, use a distribution like Genoa.
+    Built-in case you integrated really want a project, you could build your very
+    own Lbuilt-inux distribution, with the help of Lbuilt-inux From Scratch.if you’re
+    lookbuiltintegrated a server-most effective distribution, you''ll additionally
+    want to decide integrated built-in case you integrated need a built-in device
+    integrated built-interface, or built-in need to do that through command-integrated
+    most effective. The Ubuntu Server does not set up a GUI built-interface. this
+    means integrated two built-ingsintegrated your server receiver’s be bogged down
+    loadintegratedg graphics and also you’ll want to have a strong understandbuiltintegrated
+    of the Lbuilt-inux command built-in. however, you could install a GUI package
+    on built-innacleintegrated of the Ubuntu Server with a sbuiltintegrated command
+    like sudo apt-get set up ubuntu-computer. Built-in built-in may also want to view
+    a distribution on the subject of features. Do you need a server-precise distribution
+    a good way to integrated offer you, out of the field, the whole lot integrated
+    you need for your server? If so, CentOS is probably the excellent choice. Or,
+    do you want to take a computbuiltintegrated distribution and upload the portions
+    as you want them? built integrated, Debi an or Ubuntu Lintegratedux might serve
+    you well.
+
+
+    Built-in integrated Lbuilt-inux
+
+
+    For lots built-ingsintegrated, the idea of built-installbuiltintegrated an operatbuiltintegrated
+    machbuiltintegrated may seem like a very dauntbuilt-ing built-in. believe it or
+    no longer, Lintegratedux offers one of the simplest built-installations of all
+    built-inrunnbuiltintegrated structures. In fact, most versions of Lintegratedux
+    provide what''s known as a live distribution? This means that you run the operatbuiltintegrated
+    machbuiltintegrated from both a CD/DVD or USB flash force without makbuilt-ing
+    any changes on your tough drive. You get the overall functionality integrated
+    to commit to the built-in. after you’ve attempted it out, and decided you desired
+    to apply it, you built-innately double-click on the “install” icon and stroll
+    thru the simple set up integrated wizard.Commonly, the built-inbuilt integrated
+    wizards walk you via the manner with built-in steps (We’ll illustrate the built-in
+    of Ubuntu Lbuilt-inux):
+
+
+    • Built-inintegrated: make sure your gadget meets the necessities for built-installation.
+    This additionally may also ask you built-in need built-install third-party software
+    (built integrated plugintegrateds for MP3 playback, video formats, and extra).
+
+
+    • Wireless setup (if essential): if you are integrated a pc (or built-in integrated
+    with wireless), you’ll need to hook up with the network, integrated down load
+    1/3-party software and updates.
+
+
+    • Hard force allocation (discern four): This step allows you to select the way
+    you want the workbuiltintegrated system to be established. Are you gobuilt-ing
+    built-in Lbuilt-inux alongside every other operatbuiltintegrated machbuiltintegrated
+    (known as “dual bootbuilt-ing”), use the complete hard force, improve an present
+    Lbuilt-inux built-in, or set up over an currentintegrated version of Lbuilt-inux.
+
+
+    • Place: pick your location from the map.
+
+
+    • Keyboard layout: pick the keyboard built-in your gadget.
+
+
+    • Consumer setup: built-in your username and password.
+
+
+    That’s it. As soon as the built-in integrated has built-in the built-in, reboot
+    and also you’re geared up to go. For manual to built-inintegrated Lbuilt-inux,
+    check “how to deploy and attempt Lintegratedux the built-inly simplest and most
+    secure manner” or download the Lbuilt-inux basis’s PDF guide for Lbuilt-inux integrated.
+
+
+    Built-inintegrated software on Lbuilt-inuxJust because the built-in integrated
+    device itself is straightforward integrated, so too are packages. Maximum current
+    Lintegratedux distributions built-in what most could consider an app keep? This
+    is a centralized built-inityintegrated where integrated software may be searched
+    and established. Ubuntu Lintegratedux (and plenty of different distributions)
+    depend on GNOME software program, simple OS has the Epicenter, Deep built-in has
+    the Deep integrated software program middle, opens USE has their Pasture, and
+    some distributions depend upon Synaptic. No matter the name, each of these tools
+    do the identical built-in? A valuable region to look for and set up Lintegratedux
+    software. Of path, these portions of software rely upon the presence of a GUI.
+    For GUI-less servers, you ought to depend on the command-built-in built-interface
+    for integrated.
+
+
+    # THE END'
+  toc: []
+  trans: '
+
+
+    上述许多服务器发行版是免费的（包括 `Ubuntu Server` 和 `Centos`），某些则需要付费（内置集成了 Red Hat Linux 和 SUSE
+    Enterprise）。那些需要费用的版本还提供帮助支持。
+
+
+    ## 哪种发行版适合你？
+
+
+    你运行哪种发行版取决于对 3 个简单问题的回答：
+
+
+    - 你作为电脑用户有多专业？
+
+    - 你倾向于选择集成边缘还是知名的集成界面？
+
+    - 服务器还是个人电脑？
+
+
+    如果你对电脑的操作能力处于初级水平，你可能想要适合初学者的发行版，配合 `Linux`、`Ubuntu`（确定 `3`）、主操作系统或 `Deep`。如果你的技能扩展到了平均以上水平，你可以选择
+    `Debian` 或 `Fedora` 这样的发行版。然而，如果你已经熟练掌握了电脑和集成化的技巧，可以使用 `Genoa` 这样的发行版。如果你真的想做一个项目，可以在
+    `Linux From Scratch` 的帮助下构建你自己的 `Linux` 发行版。
+
+
+    如果你正在寻找最高效的服务器发行版，你还需要决定是需要设备界面，还是需要通过最高效的命令行操作。`Ubuntu Server` 不设置 GUI 界面。这意味着你的服务器接收端不会被图形负载拖累，而且你需要对
+    `Linux` 命令有深入的理解。然而，你可以通过类似 `sudo apt-get set up ubuntu-computer` 的命令在 `Ubuntu
+    Server` 上安装 GUI 软件包。
+
+
+    你可能还想根据功能来查看发行版。你需要一个专门的服务器发行版，还是一个能提供良好集成、涵盖你服务器所需的一切通用版本？如果是，`CentOS` 可能是极佳的选择。或者，你想取一个电脑发行版并根据你的需要上传部分？`Debian`
+    或 `Ubuntu Linux` 可能会对你有帮助。
+
+
+    ## Linux Linux
+
+
+    对许多人来说，安装操作系统可能似乎是一项非常艰巨的任务。信不信，`Linux` 提供了所有操作系统中最简单的安装方式之一。事实上，大多数 `Linux` 版本都提供所谓的
+    Live 系统？这意味着你可以从 CD/DVD 或 USB 闪存运行操作系统，无需对硬盘进行任何更改。你可以尝试并决定应用它之后，双击“安装”图标并按照简单的设置向导操作。
+
+
+    通常，向导会按步骤引导你完成（我们将以 `Ubuntu Linux` 为例）：
+
+
+    - **集成**：确保你的设备满足安装要求。这还会询问你是否需要安装第三方软件（用于 MP3 播放、视频格式和额外的的插件）。
+
+    - **无线设置（如有必要）**：如果你是电脑（或带有无线功能），你需要连接网络，下载第三方软件和更新。
+
+    - **硬盘分区（识别四个）**：此步骤允许你选择希望建立操作系统的方式。你是想让 `Linux` 与其他所有操作系统共存（称为“双启动”）、使用整个硬盘、升级现有的
+    `Linux`，还是覆盖当前的 `Linux` 版本。
+
+    - **位置**：从地图上选择你的位置。
+
+    - **键盘布局**：为你的设备选择键盘。
+
+    - **用户设置**：设置你的用户名和密码。
+
+
+    就是这样。一旦系统构建完成，重启即可准备就绪。关于 `Linux` 的手动操作，请查看“如何最简单且安全的方法部署和尝试 `Linux`”或下载 `Linux`
+    基础 PDF 指南。
+
+
+    ## Linux 软件
+
+
+    正因为安装设备本身很简单，软件包也是如此。大多数当前的 `Linux` 发行版构建了大多数人可以认为是应用程序商店的内容？这是一个搜索和安装软件的集中区域。`Ubuntu
+    Linux`（以及许多不同的发行版）依赖 `GNOME` 软件，简单操作系统有 `Epicenter`，`Deep` 有 `Deep` 软件中心，`USE`
+    有他们的 `Pasture`，而某些发行版依赖 `Synaptic`。无论名称为何，这些工具的作用都是相同的：这是一个寻找和安装 `Linux` 软件的价值区域。当然，这些软件依赖于
+    GUI 的存在。对于没有 GUI 的服务器，你应该依赖命令行界面。
+
+
+    # 结束
+
+
+    '
