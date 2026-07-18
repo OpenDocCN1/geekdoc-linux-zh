@@ -1,0 +1,749 @@
+name: Mastering IBM CMOD for RedHat Linux and Windows 11 Servers Effortlessly Streamline
+  Your Content Management by Deploying IBM CMOD with IBM Content Navigator and Filenet
+  Fixed Content Device for Red Hat Linux and Windows Platforms (English Edition)
+name_cn: 精通 RedHat Linux 和 Windows 11 服务器上的 IBM CMOD：通过在 Red Hat Linux 和 Windows 平台上部署带有
+  IBM Content Navigator 和 Filenet 固定内容设备的 IBM CMOD，轻松简化您的内容管理（英文版）
+slug: mastering-ibm-cmod-for-redhat-linux-and-windows-11-servers-e
+toc:
+- - '#'
+  - 精通 RedHat Linux 和 Windows 11 服务器上的 IBM CMOD：通过在 Red Hat Linux 和 Windows 平台上部署带有
+    IBM Content Navigator 和 Filenet 固定内容设备的 IBM CMOD，轻松简化您的内容管理（英文版）
+- - '#'
+  - 献给
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于技术审核员
+- - '#'
+  - 致谢
+- - '#'
+  - 前言
+- - '#'
+  - 下载代码
+- - '#'
+  - '[`github.com/ava-orange-education/Mastering-IBM-CMOD-for-RedHat-Linux-and-Windows-11-Servers`](https://github.com/ava-orange-education/Mastering-IBM-CMOD-for-RedHat-Linux-and-Windows-11-Servers)'
+- - '#'
+  - 错误
+- - '#'
+  - 你知道吗
+- - '#'
+  - 版权
+- - '#'
+  - 您有兴趣与我们合作吗？
+- - '#'
+  - 评论
+- - '#'
+  - 第 1 章：IBM Content Manager OnDemand 简介
+- - '##'
+  - 引言
+- - '##'
+  - Structure
+- - '##'
+  - 来自 IBM 和 CMOD 博客网站的链接
+- - '#'
+  - 硬件和软件要求
+- - '#'
+  - 环境设置
+- - '##'
+  - 在 Windows Server 上设置 CFS-CMOD
+- - '##'
+  - 在 Linux IBM FileNet P8 Content Engine 中创建自定义类
+- - '##'
+  - 结论
+- - '##'
+  - 单选题
+- - '##'
+  - 答案
+- - '##'
+  - 问答
+- - '##'
+  - 关键术语
+- - '#'
+  - 第二章：在 Linux 系统上安装 CMOD
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 下载适用于 Linux 的 CMOD 10.5 基础系统
+- - '##'
+  - CMOD 10.5 版本的 Linux 前提
+- - '##'
+  - 在 RedHat 8 上安装 CMOD
+- - '##'
+  - 安装 Linux GSKit
+- - '##'
+  - 安装 Apache Zookeeper
+- - '##'
+  - 使用 CMOD 为固定内容设备配置 FileNet P8
+- - '###'
+  - 28. 我们现在创建了 IBM Content Manager OnDemand 固定内容设备，其描述见以下 URL：
+- - '###'
+  - 29. 使用 vi 编辑 `ARS_STORAGE_MANAGER=TSM` 参数（在文件 `/opt/ibm/ondemand/V10.5/config/ars.cfg`
+    中），如 图 2.79* 所示：
+- - '###'
+  - 30. 随后创建 `/arscache` 目录，如 图 2.81* 所示：
+- - '#'
+  - 开始使用
+- - '##'
+  - 重启 Content Manager OnDemand 实例
+- - '###'
+  - 3. 在 Workplace XT 中配置 Content Manager OnDemand 查看器
+- - '###'
+  - 4. 启用应用组
+- - '###'
+  - 5. 创建自定义文档类
+- - '###'
+  - 6. 向新的自定义文档类添加属性
+- - '###'
+  - 7. 将 FileNet P8 属性映射到 Content Manager OnDemand 应用组字段
+- - '###'
+  - 8. 为文档联邦配置 CFSOD 导出工具
+- - '#'
+  - 旧版 CMOD 参考
+- - '##'
+  - 创建 Content Manager OnDemand 实例
+- - '###'
+  - 在库服务器上安装 Db2 后：
+- - '###'
+  - 使用 arsdb 首次运行 CMOD 数据库创建命令：
+- - '###'
+  - ars.ini 文件中的实例
+- - '###'
+  - '`ars.ini` 文件中的实例'
+- - '##'
+  - 指定 arsldap.ini 文件
+- - '##'
+  - 注意事项
+- - '##'
+  - 选择题
+- - '##'
+  - 答案
+- - '##'
+  - 问答
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 3 章：在 Linux 上安装可选的 CMOD 软件
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - ARCHIVE 数据库中为 CMOD 创建的 Db2 表列表
+- - '##'
+  - 移除 CMOD Db2 归档数据库
+- - '##'
+  - 手动启动和停止 CMOD 实例
+- - '###'
+  - 启动实例
+- - '###'
+  - 停止实例
+- - '###'
+  - 修复 `arsockd` 加载错误
+- - '##'
+  - 第二个错误（重启后）
+- - '##'
+  - 更新归档实例 ARCHIVE 数据库
+- - '##'
+  - 在 Linux 上将数据库架构从 root 移动到 archive
+- - '##'
+  - 安装 PDF 索引功能
+- - '###'
+  - 18. 以下 Linux 命令在命令行窗口中运行，以 `root` 用户身份登录：
+- - '####'
+  - 19. `tar -xvf IBM_CONTENT_MANAGER_ONDEMAND_PDF_.tar Linux` 命令用于解压 PDF 索引功能的安装文件，如图图
+    3.21 所示：
+- - '####'
+  - 20. 我们现在可以使用 `vi` 编辑器读取 `readme.txt` 文件，如图图 3.22 所示：
+- - '####'
+  - 21. 对于命令行版本，您可以使用 Linux 命令按安装 Content Manager OnDemand PDF 索引功能：
+- - '####'
+  - 22. 显示 `IBM OnDemand PDF Indexing Feature V10.5` 启动界面，我们可以选择语言（默认 `English`），然后点击
+    `OK` 命令按钮，如图图 3.24 所示：
+- - '####'
+  - 23. 许可协议可以滚动并打印，然后必须选择 `I accept` 单选按钮，并点击 `Next` 命令按钮，如图图 3.25 所示：
+- - '####'
+  - 24. 显示摘要详情，我们现在可以点击 `Install`，如图图 3.26 所示：
+- - '####'
+  - 25. `IBM OnDemand PDF Indexing Feature V10.5` 安装成功，我们可以点击 `Done` 命令按钮退出 `InstallAnywhere`
+    程序，如图图 3.27 所示：
+- - '####'
+  - 26. 运行 `./arspdump` 程序仅是为了显示可用参数，如图图 3.28 所示：
+- - '####'
+  - 27. 发票 PDF 测试数据文件 `invoice_2017-*.pdf` 从映射的 Windows 服务器 `/mnt/hgfs/Installs` 文件夹复制到
+    Linux 文件夹 `/opt/TestData$`，如图图 3.29 所示：
+- - '#'
+  - 运行 arspdump 程序
+- - '##'
+  - 多选题
+- - '##'
+  - '答案 '
+- - '##'
+  - Question
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 4 章：安装升级后的 Linux GSKit 和库
+- - '##'
+  - 介绍
+- - '##'
+  - 结构
+- - '##'
+  - 使用 Linux rpm 命令行安装
+- - '##'
+  - 使用 Linux yum 工具安装
+- - '##'
+  - 创建 CMOD 缓存数据区
+- - '##'
+  - Linux – 使用跟踪日志文件输出调试 `ARSSOCKD` 的方法
+- - '##'
+  - 在 Linux 上配置 LIBPATH、LD_LIBRARY_PATH 和 PATH
+- - '#'
+  - 第 5 章：在 Windows 系统上安装 CMOD
+- - '##'
+  - 简介
+- - '##'
+  - 目录结构
+- - '##'
+  - 下载基础安装程序
+- - '##'
+  - 下载 Fix Pack 程序
+- - '##'
+  - 为 Windows 客户端安装 Fix Pack
+- - '##'
+  - Windows 上的 ARCHIVE 数据库创建
+- - '##'
+  - 在 Windows 上设置 Db2 ARCHIVE 端口 50001 访问
+- - '##'
+  - 在 Windows 防火墙中打开端口
+- - '###'
+  - 要打开端口 50001：
+- - '#'
+  - 为 IBM ContentDemand 创建固定内容设备
+- - '##'
+  - 结论
+- - '##'
+  - 注意事项
+- - '##'
+  - 多选题
+- - '##'
+  - '答案 '
+- - '##'
+  - 问题
+- - '##'
+  - 关键术语
+- - '#'
+  - 在 Linux 上重启 CMOD 系统
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 启动 IBM Security Directory Services 服务器
+- - '##'
+  - 启动 Db2 数据库服务器
+- - '##'
+  - 启动 IBM FileNet P8 Content Engine 和 IBM FileNet Content Navigator 的 IBM WebSphere
+    配置文件
+- - '#'
+  - 启动 Linux CMOD 对象服务器，arsobjd 程序
+- - '##'
+  - '答案 '
+- - '##'
+  - 问题
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 7 章：Windows CMOD 管理
+- - '##'
+  - 介绍
+- - '##'
+  - 结构
+- - '##'
+  - 更新 Windows ADMIN 密码
+- - '##'
+  - '[加载程序密码更新选项]'
+- - '##'
+  - '[OnDemand Configurator V10.5 – 服务器实例创建]'
+- - '##'
+  - OnDemand 客户端配置
+- - '##'
+  - 在 Windows 上使用 arsxml 命令
+- - '###'
+  - 5. 在 `New Folder` 窗口的 `General` 选项卡上，我们可以进入一个新的 `Invoices` 文件夹，如图图 7.69 所示：
+- - '###'
+  - 6. 现在，我们可以通过选择 `New Folder` 窗口、`Permissions` 选项卡并添加组，允许或限制对我们新 `Invoices` 文件夹的访问，如图图
+    7.70 所示：
+- - '###'
+  - 7. 可以通过 `Field Definition` 选项卡为我们的新 `Invoices` 文件夹定义 `Folder Fields`。我们输入一个 `Year`
+    字段，然后选择 `Advanced` 命令，如图图 7.71 所示：
+- - '###'
+  - 8. `Advanced Folder Field information` 弹出窗口允许添加额外的属性以进一步定义我们 `Invoices` 文件夹的 `Year`
+    文件夹字段，并选择 `OK` 命令按钮以确认添加的详细，如图图 7.72 所示：
+- - '###'
+  - 9. 接下来，我们可以选择 `Invoices` 文件夹 `Year` 字段的 `Field Information` 选项卡。这允许添加额外的 `Year`
+    字段和搜索属性，如图图 7.73 所示：
+- - '###'
+  - 10. 如果你为 `Year` 字段的 `Defaults` 字段选择了一个值（例如我们输入的 2024），则必须设置相应的 `Default` 复选框；否则你将收到下面的弹出错误消息，如图图
+    7.74 所示：
+- - '###'
+  - 11. 最后，如果需要，可以选择 `Field Mapping` 选项卡。这允许将一个文件夹字段映射到 `Application Group Database
+    Name` 字段，如图图 7.75 所示：
+- - '###'
+  - 12. 选择 `OK` 命令按钮后，我们可以在 `Folders` 节点的详细面板（`Contents of 'Folders'`）中看到我们新的 `Invoices`
+    文件夹，如图图 7.76 所示：
+- - '###'
+  - 13. `OnDemand Administrator` 程序允许我们选择 `Application Groups` 节点并右键点击 `New Application
+    Group` 菜单创建一个新的 `Application Group`，如图图 7.77 所示：
+- - '###'
+  - 14. 输入 `Baxter Credit` 应用程序组，`Description` 字段为 `Baxter Credit Demo Application
+    Group`，然后选择 `Advanced` 命令按钮添加所需的 `Database Information`。此面板的之一（默认为 `No`）是`Interoperate
+    with FileNet P8 Platform`选项，单选框 `Yes` 以允许`Use Content Federation (CFS-CMOD)`，如图图
+    7.78 所示：
+- - '###'
+  - 15. 在 `Database Information` 弹出窗口上选择 `OK` 命令按钮后，我们可以选择 `Field Definition` 选项卡并使用
+    `Add` 命令按钮与 `Baxter Credit Application Group`关联的字段列表，如图图 7.79 所示：
+- - '###'
+  - 16. 输入列表后，我们选择 `Field Information` 选项卡并识别字段类型和特性，如图图 7.80 所示：
+- - '###'
+  - 17. 如图图 7.80 所示，从字段列表中选择 `name` 字段后，将字段 `Type` 设置为 `Filter`（允许字段进行搜索），然后选择 `String
+    Type` 为 `Variable`，并将字符串长度设为254字节，如图图 7.81 所示：
+- - '###'
+  - 18. 接下来，从字段列表中选择 `account` 字段，这允许我们设置该字段属性，我们将其长度为12字节的 `Fixed` `String` 字段，如图图
+    7.82 所示：
+- - '###'
+  - 19. 接下来，从字段列表中选择`rd_date` 字段（日期），这允许我们设置该字段属性，我们将 `Data Type` 设置为 `Date`并设置 `Segment`
+    复选框，如图图 7.83 所示：
+- - '##'
+  - 结论
+- - '##'
+  - 注意事项
+- - '##'
+  - 多选题
+- - '##'
+  - '答案 '
+- - '##'
+  - 问题
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 8 章：在 Linux 上重启 CMOD 系统
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 启动 IBM Security Directory Services 服务器
+- - '##'
+  - 启动 Db2 数据库服务器
+- - '##'
+  - 启动 IBM FileNet P8 Content Engine 和 IBM FileNet Content Navigator 的 IBM WebSphere
+    配置文件
+- - '#'
+  - 启动 Linux CMOD 对象服务器，arsobjd 程序
+- - '##'
+  - '答案 '
+- - '##'
+  - 问题
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 9 章：Linux 上的 CMOD 用户管理
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 用于中心化系统管理的对象类型和所有者模型
+- - '##'
+  - 对象类型管理
+- - '##'
+  - 对象所有者模型
+- - '##'
+  - 在 Db2 上重置过期或丢失 CMOD 用户
+- - '##'
+  - 更新 Linux 系统中二进制文件的权限
+- - '##'
+  - Linux 上将数据库架构从 Root 移动到 Archive
+- - '##'
+  - 运行 roostash 程序以加密密码
+- - '##'
+  - 通用索引器管理
+- - '##'
+  - 结论
+- - '##'
+  - 注意事项
+- - '##'
+  - 多选题
+- - '##'
+  - '答案 '
+- - '##'
+  - 问题
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 10 章：将 CMOD 连接到 IBM Navigator
+- - '##'
+  - 为 CMOD 配置新的 IBM Navigator
+- - '##'
+  - 在 Windows 上加载文档后的 IBM Navigator 界面
+- - '##'
+  - 'arsload 参数 '
+- - '##'
+  - Linux 上 arsload 程序的另一个示例
+- - '##'
+  - 设置查看器映射 (Viewer Map)
+- - '###'
+  - 8. `Viewer map` 信息的详情了它们执行的功能，如图图 10.3
+- - '###'
+  - 1. 部署映射。
+- - '###'
+  - 2. 部署查看器。
+- - '###'
+  - 3. 从 `ContentManagerOnDemand` 桌面引用新部署的查看器映射。将查看器映射分配给我们的桌面。如果是首次部署，则向 `ContentManagerOnDemand`
+    桌面插入记录。
+- - '###'
+  - 4. 在 IBM Navigator 中声明查看器映射。它可以被其他桌面。映射添加到查看器属性中来实现：
+- - '##'
+  - 构建插件
+- - '##'
+  - 总结
+- - '##'
+  - 注意事项
+- - '##'
+  - 多项选择题
+- - '##'
+  - 答案
+- - '##'
+  - 问题
+- - '##'
+  - 关键术语
+- - '##'
+  - 进一步参考
+- - '#'
+  - 第 11 节：在 Linux 服务器上启动 arsockd
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 启动 arsockd 程序
+- - '##'
+  - 在 RedHat Linux 上启用 IPv6
+- - '##'
+  - 检查 IPv6 是否启用
+- - '##'
+  - 检查并更改端口范围
+- - '##'
+  - Linux 服务器启动
+- - '##'
+  - 启动全文本
+- - '###'
+  - 'server:'
+- - '###'
+  - 'supportedLanguages:'
+- - '###'
+  - 'tempDirectory:'
+- - '###'
+  - 'query:'
+- - '#'
+  - 运行 `arsdb` 程序和用法
+- - '##'
+  - 使用 `arsdb` 创建第二个 CMOD 实例
+- - '###'
+  - 3. 接下来，我们必须将第一个 ARCHIVE 实例 `ars.cfg` 文件复制到 `ars.archive2.cfg`。我们使用 `vi` 文本编辑器编辑
+    `ars.archive2.cfg` 服务器配置文件，命令为 `[root@ECMDEMO2 config]` `pwd`
+- - '#'
+  - ars.archive2.cfg - OnDemand Configuration File
+- - '#'
+  - 5622-662 (C) COPYRIGHT CORPORATION 2020
+- - '#'
+  - All Rights Reserved
+- - '##'
+  - OnDemand Parameters
+- - '###'
+  - Number of Database Servers (Library Server Only)
+- - '###'
+  - 0 - 默认每个客户端连接
+- - '###'
+  - Otherwise - 处理数据库连接的子服务器数量（至少 2 个）
+- - '###'
+  - 指定数据库是否支持分区（仅限 Library Server）
+- - '###'
+  - 空（不支持分区）
+- - '##'
+  - DB2 Parameters (Library Server Only) 这些参数仅在创建数据库时
+- - '###'
+  - 4. 接下来，我们将 `ars.cache` 文件复制到 `ars.archive2.cache` 文件并编辑。
+- - '###'
+  - 5. 初始创建新的缓存文件夹，所有者为 root，如下：
+- - '###'
+  - 6. 将 `ars.dbfs` 文件复制到 `ars.archive2.dbfs` 文件：
+- - '###'
+  - 7. 接下来，我们运行以下程序：
+- - '###'
+  - 8. 随后我们为 `archive2` 遵循相同的 Db2 安装步骤，这与第 2 章，在 Linux 系统上安装 CMOD 中 `archive` 实例使用的步骤相同，如图
+    1.6 所示：
+- - '###'
+  - 9. 建议按照如下步骤运行安装后操作，如图 1.10 所示：
+- - '###'
+  - 10. 从 root 运行以下命令：
+- - '###'
+  - 11. 以 root 用户创建数据库文件：
+- - '###'
+  - 12. 以 `archive2` 用户身份运行 `arsdb` 为实例创建 IBM CMOD 数据库和表，如图 1.12 所示。
+- - '###'
+  - 13. 必须使用命令开放端口 1444 和 `archive2` 数据库端口 25012 的防火墙设置：
+- - '###'
+  - 14. 使用命令启动 `archive2` 且无错误运行：
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 12 章：配置 `arsload` 程序
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 使用 `arsyscr` 创建数据库系统表
+- - '##'
+  - 初始化系统加载设施
+- - '##'
+  - 初始化系统连接日志设施
+- - '##'
+  - 初始化系统迁移设施对于计划从数据库迁移应用程序组索引数据到存储的 **IBM CMOD** 用户，系统迁移 `-m` 开关是必要的
+- - '##'
+  - 创建索引
+- - '##'
+  - Web Enablement Kit 实现指南
+- - '##'
+  - 为 Windows ARSLOAD 程序设置测试数据
+- - '##'
+  - 开始首次运行
+- - '##'
+  - 使用 arsxml 添加 CMOD 应用程序组
+- - '##'
+  - 导出 IBM CMOD 应用程序组
+- - '##'
+  - 更新 IBM CMOD 组
+- - '##'
+  - 导出所有用户
+- - '##'
+  - 结论
+- - '##'
+  - 注意事项
+- - '##'
+  - 单选题
+- - '##'
+  - '答案 '
+- - '##'
+  - 题目
+- - '###'
+  - 3. 在编辑应用程序组 XML 文件后，你会遵循什么步骤来确保其语法是正确的？
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 13 章：运行 ARSLOAD
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - Baxter Credit Application Group 的索引字段
+- - '##'
+  - 在 Linux 上运行 ARSLOAD
+- - '##'
+  - 在应用 Pack 10.5.7 配置后首次运行 ARSLOAD
+- - '##'
+  - 更新 Baxter Credit 应用程序组
+- - '##'
+  - 日期相关的第三次运行
+- - '##'
+  - 通过编辑 .ind 文件后的第四次运行
+- - '##'
+  - 在 Linux 上运行 ARSLOAD
+- - '##'
+  - 使用 ARSSOCK 服务
+- - '##'
+  - 总结
+- - '###'
+  - 4. `ARSSOCK` 哪个 `-a` 开关用于 `ARSLOAD` 程序存储用户？
+- - '##'
+  - '答案 '
+- - '##'
+  - 问题
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 14 章：在 Windows 和 Linux 上运行 ARSXFP
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - ARSXFP 参数选项
+- - '##'
+  - ARSXFP 程序的命令行示例
+- - '###'
+  - 2.1.10.5.8) 发布 (10.5.8)
+- - '###'
+  - 3.6.10.5.8) 发布 (10.5.8)
+- - '##'
+  - 配置后首次运行 ARSXFP
+- - '##'
+  - 更新加载字段
+- - '##'
+  - 第二次运行 ARSXFP
+- - '##'
+  - 结论
+- - '##'
+  - 注意事项
+- - '##'
+  - 多选题
+- - '##'
+  - '答案 '
+- - '##'
+  - 问答
+- - '##'
+  - 关键术语
+- - '#'
+  - 附录 B：重新创建组
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 删除现有的组并创建新的应用程序组
+- - '#'
+  - 附录 C：设置列表
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 组件名称：
+- - '###'
+  - 跟踪级别：
+- - '###'
+  - 示例：
+- - '##'
+  - /root/.bash_profile## 用户特定环境和启动程序
+- - '##'
+  - '.bash_profile '
+- - '##'
+  - 用户特定环境和启动程序
+- - '##'
+  - 格式
+- - '###'
+  - '1. 注释以 # 开头'
+- - '###'
+  - 2. 注释不在同一行
+- - '###'
+  - 3. PARM=VALUE，PARM 前空格，VALUE 后空格
+- - '###'
+  - 4. 空行将被忽略。
+- - '##'
+  - 注意：请参阅文档以配置这些参数。
+- - '##'
+  - 'OnDemand Parameters: Number of Database Servers (Library Server Only)'
+- - '###'
+  - 0 - 默认每个客户端连接
+- - '###'
+  - Otherwise - 处理数据库连接的子服务器数量（至少 2 个）
+- - '###'
+  - 指定数据库是否支持分区（仅限 Library Server）
+- - '###'
+  - 空（不支持分区）
+- - '##'
+  - DB2 Parameters (Library Server Only) 这些参数仅在创建数据库时
+- - '###'
+  - 4. 接下来，我们将 `ars.cache` 文件复制到 `ars.archive2.cache` 文件并编辑。
+- - '###'
+  - 5. 初始创建新的缓存文件夹，所有者为 root，如下：
+- - '###'
+  - 6. 将 `ars.dbfs` 文件复制到 `ars.archive2.dbfs` 文件：
+- - '###'
+  - 7. 接下来，我们运行以下程序：
+- - '###'
+  - 8. 随后我们为 `archive2` 遵循相同的 Db2 安装步骤，这与第 2 章，在 Linux 系统上安装 CMOD 中 `archive` 实例使用的步骤相同，如图
+    1.6 所示：
+- - '###'
+  - 9. 建议按照如下步骤运行安装后操作，如图 1.10 所示：
+- - '###'
+  - 10. 从 root 运行以下命令：
+- - '###'
+  - 11. 以 root 用户创建数据库文件：
+- - '###'
+  - 12. 以 `archive2` 用户身份运行 `arsdb` 为实例创建 IBM CMOD 数据库和表，如图 1.12 所示。
+- - '###'
+  - 13. 必须使用命令开放端口 1444 和 `archive2` 数据库端口 25012 的防火墙设置：
+- - '###'
+  - 14. 使用命令启动 `archive2` 且无错误运行：
+- - '##'
+  - 关键术语
+- - '#'
+  - Archive 实例首次启动及设置
+- - '##'
+  - 视情况而。
+- - '##'
+  - 文件格式：
+- - '##'
+  - 格式：
+- - '###'
+  - '1. 注释以 # 开头'
+- - '###'
+  - 2. 注释不在同一行
+- - '###'
+  - 3. PARM=VALUE，PARM 前空格，VALUE 后空格
+- - '###'
+  - 4. 空行将被忽略。
+- - '##'
+  - 注意：请参阅文档以配置这些参数。
+- - '##'
+  - 'OnDemand Parameters: Number of Database Servers (Library Server Only)'
+- - '###'
+  - 0 - 默认每个客户端连接
+- - '###'
+  - Otherwise - 处理数据库连接的子服务器数量（至少 2 个）
+- - '###'
+  - 指定数据库是否支持分区（仅限 Library Server）
+- - '###'
+  - 空（不支持分区）
+- - '##'
+  - DB2 Parameters (Library Server Only) 这些参数仅在创建数据库时
+- - '###'
+  - 4. 接下来，我们将 `ars.cache` 文件复制到 `ars.archive2.cache` 文件并编辑。
+- - '###'
+  - 5. 初始创建新的缓存文件夹，所有者为 root，如下：
+- - '###'
+  - 6. 将 `ars.dbfs` 文件复制到 `ars.archive2.dbfs` 文件：
+- - '###'
+  - 7. 接下来，我们运行以下程序：
+- - '###'
+  - 8. 随后我们为 `archive2` 遵循相同的 Db2 安装步骤，这与第 2 章，在 Linux 系统上安装 CMOD 中 `archive` 实例使用的步骤相同，如图
+    1.6 所示：
+- - '###'
+  - 9. 建议按照如下步骤运行安装后操作，如图 1.10 所示：
+- - '###'
+  - 10. 从 root 运行以下命令：
+- - '###'
+  - 11. 以 root 用户创建数据库文件：
+- - '###'
+  - 12. 以 `archive2` 用户身份运行 `arsdb` 为实例创建 IBM CMOD 数据库和表，如图 1.12 所示。
+- - '###'
+  - 13. 必须使用命令开放端口 1444 和 `archive2` 数据库端口 25012 的防火墙设置：
+- - '###'
+  - 14. 使用命令启动 `archive2` 且无错误运行：
+- - '##'
+  - 关键术语
+- - '##'
+  - 格式：
+- - '###'
+  - '1. 注释以 # 开头'
+- - '###'
+  - 2. 注释不在同一行
+- - '###'
+  - 3. PARM=VALUE，PARM 前空格，VALUE 后空格
+- - '###'
+  - 4. 空行将被忽略。

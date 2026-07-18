@@ -1,0 +1,2 @@
++   [精通 RedHat Linux 和 Windows 11 服务器上的 IBM CMOD：通过在 Red Hat Linux 和 Windows 平台上部署带有 IBM Content Navigator 和 Filenet 固定内容设备的 IBM CMOD，轻松简化您的内容管理（英文版）](README.md)
++   [精通 RedHat Linux 和 Windows 11 服务器上的 IBM CMOD：通过在 Red Hat Linux 和 Windows 平台上部署带有 IBM Content Navigator 和 Filenet 固定内容设备的 IBM CMOD，轻松简化您的内容管理（英文版）](mastering-ibm-cmod-for-redhat-linux-and-windows-11-servers-e_0.md)
