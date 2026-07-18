@@ -498,6 +498,7 @@
 +   [Kali Linux 与无线渗透测试安全测试工具终极指南](docs/piraté-guide-ultime-de-kali-linux-et-de-piratage-sans-fil-av/README.md)
 +   [Linux 策略路由使用指南（电子版）](docs/policy-routing-using-linux-electronic-resource/README.md)
 +   [PostgreSQL （Linux）](docs/postgresql-linux/README.md)
++   [Power 高用户指南：Linux 技巧、破解与秘密：终极版 (2019) 第 1 & 2 卷](docs/power-user-guide-linux-tricks-hacks-and-secrets-ultimate-edi/README.md)
 +   [PowerShell 6.0 Linux 管理秘籍：超过 150 个利用微软开源自动化框架和命令行壳的配方](docs/powershell-60-linux-administration-cookbook-over-150-recipes/README.md)
 +   [Ansible 自动化实用指南：释放 Ansible 力量实现工作流自动化、简化运维并彻底变革基础设施管理](docs/practical-ansible-automation-handbook-unleash-the-power-of-a/README.md)
 +   [实用 Linux 编程：设备驱动、嵌入式系统与互联网（编程系列）](docs/practical-linux-programming-device-drivers-embedded-systems-/README.md)
