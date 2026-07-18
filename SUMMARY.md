@@ -462,6 +462,7 @@
 +   [现代 Linux 精通指南（第二版）](docs/mastering-modern-linux-second-edition/README.md)
 +   [精通 Perl：初学者指南 (计算机科学大师系列)](docs/mastering-perl-a-beginners-guide-mastering-computer-science/README.md)
 +   [Web 开发 Python 精通：初学者指南（计算机科学大师）](docs/mastering-python-for-web-a-beginners-guide-mastering-compute/README.md)
++   [精通 Ubuntu 24.04：Linux 管理终极技术指南：Ubuntu 24.04 LTS “Noble Numbat”](docs/mastering-ubuntu-2404-the-ultimate-technical-guide-to-linux-/README.md)
 +   [UNIX Shell 脚本高级指南（第二版）](docs/mastering-unix-shell-scripting-second-edition/README.md)
 +   [Masterking Kali Linux：黑客攻击与破解实](docs/masterking-kali-linux-hack-it-or-crack-it/README.md)
 +   [RPM 权威指南](docs/maximum-rpm-rpm-other-sams/README.md)
