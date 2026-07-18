@@ -596,6 +596,7 @@
 +   [Docker 书：容器化是新虚拟化](docs/the-docker-book-containerization-is-the-new-virtualization/README.md)
 +   [GNU Make 入门指南](docs/the-gnu-make-book/README.md)
 +   [Linux 金金书籍：从秘籍到高级应用](docs/the-golden-book-of-linux-from-secrets-to-advanced-applicatio/README.md)
++   [Linux 命令行入门指南](docs/the-linux-command-line-beginners-guide/README.md)
 +   [Linux 调度器：十年浪费的核心](docs/the-linux-scheduler-a-decade-of-wasted-cores/README.md)
 +   [CompTIA Linux+ 认证官方学生指南（XK0-004 考试）](docs/the-official-comptia-linux-student-guide-exam-xk0-004/README.md)
 +   [Ubuntu 官方指南](docs/the-official-ubuntu-book/README.md)
