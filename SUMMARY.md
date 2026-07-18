@@ -263,6 +263,7 @@
 +   [LibreOffice 高级指南：深度探索全球最强大的免费办公套件](docs/libreoffice-expert-dive-deep-into-the-worlds-greatest-free-o/README.md)
 +   [Linux 101 考试：模块化培训笔记](docs/linux-101-examination-modular-training-notes/README.md)
 +   [Linux 101 Hacks](docs/linux-101-hack/README.md)
++   [Linux：两本合一：学习网络安全、渗透测试、网络和计算机黑客基础的全面分步指南……包含练习与自测题](docs/linux-2-books-in-1the-comprehensive-step-by-step-guide-to-le/README.md)
 +   [Linux 2合1](docs/linux-2-in-1/README.md)
 +   [Linux：2019 初学者指南，学习 Linux 操作系统和 Linux 命令行，包含 99 个技巧](docs/linux-2019-easy-guide-for-beginners-to-learn-the-linux-opera/README.md)
 +   [LINUX：第二版！初学者速成 - Linux 初学者指南：Linux 命令行、Linux 系统及 Linux 命令（计算机科学、Linux 编程、Linux 操作系统第 1 册）](docs/linux-2nd-edition-beginners-crash-course---linux-for-beginne/README.md)
