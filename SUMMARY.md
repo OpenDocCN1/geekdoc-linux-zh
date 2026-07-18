@@ -575,6 +575,7 @@
 +   [SUSE Linux 9.3 傻瓜书](docs/suse-linux-93-for-dummies-isbn---0764596152/README.md)
 +   [SwiftUI 精要：iOS 版：使用 SwiftUI、Swift 5 和 Xcode 11 开发 iOS 应用](docs/swiftui-essentials---ios-edition-learn-to-develop-ios-apps-u/README.md)
 +   [SystemTap 新手指南](docs/systap-bgd/README.md)
++   [系统管理 III：Linux 自动化](docs/system-administration-iii-linux-automation/README.md)
 +   [Linux 入门指南](docs/teach-yourself-linux/README.md)
 +   [通过示例学习技术 2023](docs/tech-exmpl/README.md)
 +   [Kali Linux 艺术：高效渗透测试工具与技术精通](docs/the-art-of-kali-linux-mastering-the-tools-and-techniques-for/README.md)
