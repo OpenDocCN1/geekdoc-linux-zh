@@ -526,6 +526,7 @@
 +   [树莓派：如何精通树莓派 (树莓派 3, Python, Linux, 计算机编程, 单板计算机, 微处理器, 编程)](docs/raspberry-pi-how-to-master-raspberry-pi-raspberry-pi-3-pytho/README.md)
 +   [树莓派：终极分步树莓派用户指南（更新版）](docs/raspberry-pi-the-ultimate-step-by-step-raspberry-pi-user-gui/README.md)
 +   [RxJS 响应式编程：理清你的异步 JavaScript 代码](docs/reactive-programming-with-rxjs-untangle-your-asynchronous-ja/README.md)
++   [LINUX 与 RTOS 实时嵌入式组件与系统](docs/real-time-embedded-components-and-systems-with-linux-and-rto/README.md)
 +   [Red Hat Linux 6 视觉快速专业指南](docs/red-hat-linux-6-visual-quickpro-guide/README.md)
 +   [红帽 Linux 8 服务器](docs/red-hat-linux-8-server/README.md)
 +   [红帽Linux 9：视觉快速高级指南](docs/red-hat-linux-9-visual-quickpro-guide-visual-quickpro-guide/README.md)
