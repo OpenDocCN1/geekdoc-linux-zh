@@ -512,6 +512,7 @@
 +   [PyQt：Python 跨平台 GUI 开发：无需重写代码即可在 Windows、macOS 和 Linux 上无缝运行软件](docs/pyqt-cross-platform-gui-development-with-python-run-your-sof/README.md)
 +   [Python 快速成教程：7 天或更短学习 Python 的初学者指南，带你进入数据科学、人工智能……机器学习的世界，并包含实战项目](docs/python-crash-course-a-practical-beginners-guide-to-learn-pyt/README.md)
 +   [Python 精粹 (开发者库)](docs/python-distilled-developers-library/README.md)
++   [Python 精华教程 (开发者库) 第1版](docs/python-distilled-developers-library-1st-edition/README.md)
 +   [Python核心参考手册（第4版）](docs/python-essential-reference-4th-edition/README.md)
 +   [RxJS 响应式编程：理清你的异步 JavaScript 代码](docs/reactive-programming-with-rxjs-untangle-your-asynchronous-ja/README.md)
 +   [Red Hat Linux 6 视觉快速专业指南](docs/red-hat-linux-6-visual-quickpro-guide/README.md)
