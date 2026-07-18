@@ -455,6 +455,7 @@
 +   [精通 CSS：初学者指南 (计算机科学大师))](docs/mastering-css-a-beginners-guide-mastering-computer-science/README.md)
 +   [精通 GNOME：初学者指南（精通计算机科学系列）](docs/mastering-gnome-a-beginners-guide-mastering-computer-science/README.md)
 +   [精通 RedHat Linux 和 Windows 11 服务器上的 IBM CMOD：通过在 Red Hat Linux 和 Windows 平台上部署带有 IBM Content Navigator 和 Filenet 固定内容设备的 IBM CMOD，轻松简化您的内容管理（英文版）](docs/mastering-ibm-cmod-for-redhat-linux-and-windows-11-servers-e/README.md)
++   [高级 Kali Linux 高级渗透测试指南](docs/mastering-kali-linux-for-advanced-penetration-testing/README.md)
 +   [精通 Kali Linux：实用安全与渗透测试技术](docs/mastering-kali-linux-practical-security-and-penetration-test/README.md)
 +   [精通 KVM：现代 IT 基础设施的虚拟化](docs/mastering-kvm-virtualization-for-modern-it-infrastructures/README.md)
 +   [Linux Linux 管理：全面指南](docs/mastering-linux-administration-a-comprehensive-guide/README.md)
