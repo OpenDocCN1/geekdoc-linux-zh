@@ -612,6 +612,7 @@
 +   [管理心理学：心智在确定、教授和实施最小浪费方法中的功能](docs/the-psychology-of-management-the-function-of-the-mind-in-det/README.md)
 +   [时光飞逝（亚历山大·克吕格近期放映录像带选）](docs/time-keeps-on-slipping-some-recently-projected-videotapes-by/README.md)
 +   [Tor 与匿名化黑术（深网、Kali Linux、黑客、比特币）：隐形术指南](docs/tor-and-the-dark-art-of-anonymity-deep-web-kali-linux-hackin/README.md)
++   [Ubuntu 23.04 核心：Ubuntu 23.04 桌面版与服务器版指南](docs/ubuntu-23-04-essentials-a-guide-to-ubuntu-23-04-desktop-and-/README.md)
 +   [非极客的Ubuntu：无痛、项目式、实用高效指南（涵盖Ubuntu 7.04 火猄版）](docs/ubuntu-for-non-geeks-a-pain-free-project-based-get-things-do/README.md)
 +   [Ubuntu 高级技巧与定制秘籍](docs/ubuntu-powerful-hacks-and-customizations/README.md)
 +   [理解 Linux 进程](docs/udstd-linux-proc/README.md)
