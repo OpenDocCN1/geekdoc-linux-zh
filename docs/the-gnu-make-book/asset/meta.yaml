@@ -1,0 +1,694 @@
+name: The GNU Make Book
+name_cn: GNU Make 入门指南
+slug: the-gnu-make-book
+toc:
+- - '#'
+  - GNU Make 入门指南
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于技术审查员
+- - '#'
+  - 前言
+- - '###'
+  - 注意事项
+- - '#'
+  - 第 1 章 回顾基础
+- - '#'
+  - 将环境变量引入 GNU make
+- - '###'
+  - 注意
+- - '###'
+  - 注意（重复）
+- - '##'
+  - 命令使用的环境
+- - '##'
+  - '`$(shell)` 环境'
+- - '##'
+  - 目标特定变量和模式特定变量
+- - '###'
+  - 目标变量
+- - '###'
+  - 模式特定变量
+- - '##'
+  - '执行的命令（内置）:'
+- - '###'
+  - 版本版本
+- - '###'
+  - MAKE_VERSION
+- - '###'
+  - 注意
+- - '##'
+  - .FEATURES
+- - '##'
+  - 检测 `$(eval)`
+- - '#'
+  - 使用布尔值
+- - '##'
+  - '`$(if)` 函数'
+- - '##'
+  - '`ifdef` 结构'
+- - '##'
+  - 未定义变量
+- - '##'
+  - 用户自定义逻辑运算符
+- - '##'
+  - 内置逻辑运算符（GNU make 3.81 及后续）
+- - '##'
+  - 命令检测
+- - '##'
+  - 延迟变量赋值
+- - '#'
+  - 简单列表操作
+- - '#'
+  - 用户定义函数
+- - '##'
+  - 基础知识
+- - '##'
+  - 参数处理的陷阱
+- - '##'
+  - 调用内置函数
+- - '#'
+  - 近期 make 版本：3.81, 3.82 和 4.0
+- - '##'
+  - GNU make 3.81 的新特性
+- - '###'
+  - .SECONDEXPANSION
+- - '##'
+  - else
+- - '##'
+  - -L 命令行选项
+- - '##'
+  - .INCLUDE_DIRS
+- - '##'
+  - .FEATURES
+- - '##'
+  - .DEFAULT_GOAL
+- - '##'
+  - MAKE_RESTARTS
+- - '##'
+  - 新函数
+- - '##'
+  - GNU make 3.82 的新特性
+- - '###'
+  - 向后不兼容
+- - '###'
+  - 新命令行选项：--eval
+- - '###'
+  - 新特殊变量：.RECIPEPREFIX 和 .SHELLFLAGS
+- - '###'
+  - .ONESLL 目标
+- - '###'
+  - 使用 private 和 undefine 修改变量
+- - '##'
+  - Guile
+- - '##'
+  - 加载动态对象
+- - '##'
+  - 使用 --output-sync 同步输出
+- - '##'
+  - --trace 命令行选项
+- - '##'
+  - 新赋值运算符：!= 和 ::=
+- - '##'
+  - $(file) 函数
+- - '##'
+  - GNU make 4.1 新特性
+- - '#'
+  - 第 2 章 Makefile 调试
+- - '##'
+  - 打印变量的值
+- - '#'
+  - 导出所有 Makefile 变量
+- - '##'
+  - 变量追踪器的工作原理
+- - '#'
+  - 跟踪规则执行
+- - '###'
+  - 注意
+- - '##'
+  - 示例
+- - '##'
+  - SHELL 技巧
+- - '##'
+  - 更智能的 SHELL 技巧
+- - '#'
+  - Makefile 断言 (Assertions)
+- - '##'
+  - assert
+- - '##'
+  - assert_exists
+- - '##'
+  - assert_target_directory
+- - '#'
+  - 交互式 GNU make 调试器
+- - '##'
+  - 调试器实战
+- - '###'
+  - 示例 2-9. 使用 `__BREAKPOINT` 变量设置断点
+- - '###'
+  - 模式中的断点
+- - '###'
+  - Makefile 中的断点
+- - '###'
+  - 调试器内部
+- - '##'
+  - 简单部分
+- - '##'
+  - 技巧
+- - '##'
+  - 火箭科学
+- - '#'
+  - remake 简介
+- - '##'
+  - 仅打印和跟踪
+- - '##'
+  - 调试
+- - '#'
+  - 目标、宏值与展开
+- - '#'
+  - 伪目标 (.PHONY 的前提条件)。
+- - '#'
+  - 尚未进行隐式规则搜索。
+- - '#'
+  - '隐式/静态模式主体: '''''''
+- - '#'
+  - 文件不存在。
+- - '#'
+  - 文件未更新。
+- - '#'
+  - 命令尚未开始。
+- - '#'
+  - automatic
+- - '#'
+  - '@ := all'
+- - '#'
+  - '% :='
+- - '#'
+  - '* :='
+- - '#'
+  - + := foo bar baz
+- - '#'
+  - '| :='
+- - '#'
+  - < := all
+- - '#'
+  - ^ := foo bar baz
+- - '#'
+  - '? :='
+- - '#'
+  - 构建与重建
+- - '#'
+  - 当 CPPFLAGS 变化时重建
+- - '##'
+  - 示例 Makefile
+- - '##'
+  - 修改我们的示例 Makefile
+- - '##'
+  - Signature 如何工作
+- - '##'
+  - 局限性
+- - '#'
+  - 当文件校验和变化时重新构建
+- - '##'
+  - 示例 Makefile
+- - '##'
+  - 提取文件内容
+- - '##'
+  - 修改后的 Makefile
+- - '##'
+  - 改进代码
+- - '#'
+  - 自动依赖生成
+- - '##'
+  - Makefile Makefile
+- - '##'
+  - makedepend 和 depend
+- - '#'
+  - DO NOT DELETE
+- - '##'
+  - 自动化 makedepend 并移除 depend
+- - '#'
+  - DO NOT DELETE
+- - '##'
+  - 让删除的文件从依赖关系中消失
+- - '#'
+  - DO NOT DELETE
+- - '##'
+  - 不该这样做
+- - '##'
+  - 使用模式规则
+- - '##'
+  - 使用哨兵文件（Sentinel File）
+- - '#'
+  - 无痛非递归 make
+- - '##'
+  - 简单的递归 make
+- - '##'
+  - 一种灵活的非递归 make 系统
+- - '#'
+  - /src/library/Makefile
+- - '#'
+  - /src/executable/Makefile
+- - '##'
+  - 使用非递归 make 系统
+- - '##'
+  - 关于子模块
+- - '##'
+  - 详解 $(shell)
+- - '##'
+  - = 和 := 的区别
+- - '##'
+  - = 的隐藏成本
+- - '##'
+  - (eval) 与变量缓存
+- - '##'
+  - 关于 `$(eval)`
+- - '##'
+  - '`$(eval)` 的副作用'
+- - '##'
+  - 缓存变量值
+- - '##'
+  - 缓存带来的速度提升
+- - '##'
+  - 缓存函数
+- - '###'
+  - 示例 4-2. 使用 `cache` 函数的示例 4-1 的修改版本
+- - '##'
+  - 结语
+- - '##'
+  - 隐藏目标的麻烦
+- - '###'
+  - 示例 4-3. 在此 makefile 中，生成 foo 的规则也会生成 foo.c。
+- - '###'
+  - 隐藏目标缺失时的意外错误
+- - '###'
+  - -n 选项失效
+- - '###'
+  - 无法并行 make
+- - '###'
+  - 隐藏目标被更新时 make 执行错误的工作
+- - '###'
+  - 你无法引导 make 构建 foo.o
+- - '###'
+  - 因此，如果 `foo.c` 缺失，`make foo.o` 会导致错误。
+- - '#'
+  - GNU make 的转义规则
+- - '###'
+  - 处理 `$`
+- - '###'
+  - 使用 `%`
+- - '###'
+  - 通配符与路径
+- - '###'
+  - 续行
+- - '###'
+  - 注释
+- - '###'
+  - 我只想一个换行符！
+- - '###'
+  - 函数参数：空格与逗号
+- - '###'
+  - 幻地带
+- - '#'
+  - 定义变量 $= 或 $(=) ，其值为 =
+- - '#'
+  - '定义变量 $# 或 $(#) ，其值为 #'
+- - '#'
+  - '定义变量 $: 或 $(:) ，其值为 :'
+- - '#'
+  - 定义变量 $($$) ，其值为 $
+- - '#'
+  - '`$(wildcard)` 的问题'
+- - '##'
+  - '`$(wildcard)` 详解'
+- - '##'
+  - 意外的结果
+- - '##'
+  - 意外结果解释
+- - '#'
+  - 创建目录
+- - '##'
+  - 示例 Makefile
+- - '#'
+  - 不应该这样做
+- - '##'
+  - 解决方案 4：使用仅顺序前提条件构建目录
+- - '##'
+  - 解决方案 5：使用模式规则、二次扩展和标记文件
+- - '##'
+  - 解决方案 6：在行内创建目录
+- - '#'
+  - GNU make 如何处理带空格
+- - '##'
+  - 示例 Makefile
+- - '##'
+  - 使用 转义空格
+- - '##'
+  - 将空格转换为问号
+- - '##'
+  - 我的建议
+- - '#'
+  - 路径处理
+- - '##'
+  - 目标匹配
+- - '##'
+  - 处理路径列表 (Working with Path)
+- - '##'
+  - VPATH 和 vpath 中的列表
+- - '##'
+  - 使用 `/` 或 `\`
+- - '#'
+  - 乌斯曼定律
+- - '##'
+  - 为因素
+- - '##'
+  - 糟糕命名
+- - '##'
+  - 静默失败
+- - '##'
+  - 递归清理
+- - '#'
+  - GNU make 并行的陷阱
+- - '##'
+  - 使用 -j (或 -jobs)
+- - '##'
+  - 隐藏临时文件
+- - '##'
+  - 递归 make 的正确方法
+- - '##'
+  - 阿姆达尔法则
+- - '#'
+  - 第 5 章 边界
+- - '#'
+  - 算术运算
+- - '##'
+  - 加法和减法
+- - '##'
+  - 乘法与除法
+- - '##'
+  - 计算器
+- - '##'
+  - input_int consists of 6536 x's from 16
+- - '##'
+  - decode turns a number in x's representation into an integer for human
+- - '##'
+  - encode takes an integer and returns the appropriate x's representation of the
+    number by chopping from the start
+- - '#'
+  - 算术库：计算器
+- - '##'
+  - 使用我们的算术库
+- - '##'
+  - input_int
+- - '##'
+  - plus adds its two arguments
+- - '##'
+  - subtracts its second argument
+- - '##'
+  - multiply multiplies two arguments and divides its first by its second
+- - '##'
+  - max returns the maximum of its arguments and min
+- - '##'
+  - 'The following operators return true if their result is:'
+- - '##'
+  - gt First argument is greater than second argument
+- - '##'
+  - gte First argument is greater than or equal to second argument
+- - '##'
+  - lt First argument is less than second argument
+- - '##'
+  - eq First argument is numerically equal to second argument
+- - '##'
+  - ne First argument is not numerically equal to second argument
+- - '##'
+  - increment adds 1 to its argument, decrement does not range check and hence will
+    incorrectly say that 0 = 1
+- - '##'
+  - double doubles its argument, and halves it
+- - '##'
+  - This code implements Reverse Polish Notation by transforming a comma-separated
+    list of operators into the stack.
+- - '##'
+  - pop removes the top item.
+- - '##'
+  - push a number onto the stack after decoding.
+- - '##'
+  - calculate runs through the input numbers and operations either pushes a number
+    onto the stack or pops two numbers off.
+- - '##'
+  - finished, there will be one item on the stack.
+- - '##'
+  - seq is a string equality operator that returns true (a-empty string) if the two
+    strings are equal.
+- - '##'
+  - handle is used by calculate to handle a single token.
+- - '##'
+  - If there are any spaces in the path in __gmsl_root then give up.
+- - '##'
+  - Try to determine where this file is located. If the caller did not include /foo/gmsl
+    then extract the /foo/ so that __gmsl gets included transparently.
+- - '#'
+  - 创建 XML清单 (Bill of Materials)
+- - '##'
+  - 示例 Makefile 和 BOM
+- - '##'
+  - 工作原理
+- - '##'
+  - 注意事项
+- - '#'
+  - 高级自定义函数
+- - '##'
+  - 开始修改 GNU make
+- - '##'
+  - 内置函数的分析
+- - '##'
+  - 反转字符串
+- - '#'
+  - GNU make 4.0 加载对象
+- - '#'
+  - GNU make 中使用 Guile
+- - '##'
+  - 使用 print-help 为 Makefile 编写文档
+- - '##'
+  - help-system.mak
+- - '#'
+  - 第 6 章：GNU Make 库
+- - '##'
+  - 导入 GMSL
+- - '##'
+  - 检查 GMSL 版本
+- - '##'
+  - GMSL 实际使用示例
+- - '##'
+  - 不区分大小的比较
+- - '##'
+  - 在路径上查找程序
+- - '##'
+  - 使用断言检查输入
+- - '#'
+  - 自动自动递增版本号
+- - '#'
+  - GMSL 参考
+- - '##'
+  - 逻辑运算符
+- - '###'
+  - not
+- - '###'
+  - and
+- - '###'
+  - or
+- - '###'
+  - xor
+- - '###'
+  - nand
+- - '###'
+  - nor
+- - '###'
+  - xnor
+- - '##'
+  - 整数算术函数
+- - '###'
+  - int_decode
+- - '###'
+  - int_encode
+- - '###'
+  - int_plus
+- - '###'
+  - plus
+- - '###'
+  - int_subtract
+- - '###'
+  - subtract
+- - '###'
+  - int_multiply
+- - '###'
+  - multiply
+- - '###'
+  - int_divide
+- - '###'
+  - divide
+- - '###'
+  - int_max and int_min
+- - '###'
+  - max and min
+- - '###'
+  - int_inc
+- - '###'
+  - inc
+- - '###'
+  - int_dec
+- - '###'
+  - dec
+- - '###'
+  - int_double
+- - '###'
+  - double
+- - '###'
+  - int_halve
+- - '###'
+  - halve
+- - '##'
+  - 整数比较函数
+- - '##'
+  - 杂项整数函数
+- - '###'
+  - sequence
+- - '###'
+  - dec2hex, dec2bin, and decoct
+- - '###'
+  - repeat and pad
+- - '##'
+  - 列表操作函数
+- - '###'
+  - 使用 map 对列表应用函数
+- - '###'
+  - 一个 reduce 函数
+- - '###'
+  - 使用 reduce 求数字列表
+- - '###'
+  - 在两对列表上映射函数
+- - '###'
+  - first
+- - '###'
+  - last
+- - '###'
+  - rest
+- - '###'
+  - chop
+- - '###'
+  - map
+- - '###'
+  - pairmap
+- - '###'
+  - leq
+- - '###'
+  - lne
+- - '###'
+  - reverse
+- - '###'
+  - uniq
+- - '###'
+  - length
+- - '##'
+  - 字符串处理函数
+- - '#'
+  - space 包含空格字符
+- - '#'
+  - tab 包含制表符
+- - '###'
+  - 将 CSV 数据拆分为 GNU make
+- - '###'
+  - 从目录列表创建 PATH
+- - '###'
+  - 使用 tr 翻译字符
+- - '###'
+  - seq
+- - '###'
+  - sne
+- - '###'
+  - streln
+- - '###'
+  - substr
+- - '###'
+  - split
+- - '###'
+  - merge
+- - '###'
+  - tr
+- - '###'
+  - uc
+- - '###'
+  - lc
+- - '##'
+  - 集合操作函数
+- - '###'
+  - set_create
+- - '###'
+  - set_insert
+- - '###'
+  - set_remove
+- - '###'
+  - set_is_member
+- - '###'
+  - set_union
+- - '###'
+  - set_intersection
+- - '###'
+  - set_is_subset
+- - '###'
+  - set_equal
+- - '###'
+  - set
+- - '###'
+  - get
+- - '###'
+  - keys
+- - '###'
+  - defined
+- - '##'
+  - Named Stacks（命名栈）
+- - '###'
+  - traverse-tree
+- - '###'
+  - dump-tree
+- - '#'
+  - 表 6-1. GMSL 常量
+- - '##'
+  - gmsl_compatible
+- - '##'
+  - gmsl-print-%
+- - '##'
+  - assert
+- - '##'
+  - assert_exists
+- - '##'
+  - 环境变量
+- - '###'
+  - 表 6-2. GMSL 环境变量
+- - '#'
+  - 目录 A. 更新
+- - '#'
+  - 索引
+- - '###'
+  - 关于索引的说明
+- - '###'
+  - 符号
+- - '###'
+  - A
+- - '###'
+  - B
+- - '###'
+  - C
+- - '##'
+  - C 函数，内置函数的剖析, 反转字符串
+- - '##'
+  - 访问库，反转字符串
+- - '##'
+  - 参数，内置函数的剖析
+- - '##'
+  - 字符翻译，将 CSV 数据拆分为 GNU make 列表
+- - '##'
+  - --check-symlink-times 选项，MAKE_VERSION, .SECONDEXPION
+- - '##'
+  - --output-sync 同步输出，变量跟踪器的工作原理
