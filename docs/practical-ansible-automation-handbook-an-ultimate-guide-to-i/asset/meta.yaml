@@ -1,0 +1,917 @@
+name: Practical Ansible Automation Handbook： An ultimate guide to innovate, accelerate,
+  and maximize efficiency of IT infrastructure on Windows and Linux
+name_cn: Ansible 自动化实用手册：Windows 和 Linux 上 IT 基础设施创新、加速与效率最大化的终极指南
+slug: practical-ansible-automation-handbook-an-ultimate-guide-to-i
+toc:
+- - '#'
+  - Ansible 自动化实用手册：Windows 和 Linux 上 IT 基础设施创新、加速与效率最大化的终极指南
+- - '#'
+  - 献给
+- - '#'
+  - 关于作者
+- - '#'
+  - 技术审核员
+- - '#'
+  - 前言
+- - '##'
+  - 下载代码包和彩色镜像
+- - '#'
+  - '[`github.com/OrangeAVA/Practical-Ansible-Automation-Handbook`](https://github.com/OrangeAVA/Practical-Ansible-Automation-Handbook)'
+- - '##'
+  - 错误更正
+- - '##'
+  - 你知道吗
+- - '###'
+  - 盗版
+- - '###'
+  - 您兴趣与我们共同创作吗？
+- - '###'
+  - 评论
+- - '#'
+  - 第一章：入门
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - 现代数据中心
+- - '##'
+  - Ansible 简介
+- - '##'
+  - Linux 和 macOS 目标
+- - '##'
+  - Windows 目标
+- - '##'
+  - Ansible 社区
+- - '##'
+  - Ansible 架构
+- - '##'
+  - Ansible 安装
+- - '##'
+  - Ansible Core vs. Ansible Community Packages
+- - '###'
+  - Linux
+- - '###'
+  - PIP
+- - '###'
+  - macOS
+- - '###'
+  - Windows
+- - '##'
+  - Ansible Ad-hoc Commands
+- - '##'
+  - 结论
+- - '##'
+  - 记忆点
+- - '##'
+  - 单选择题
+- - '##'
+  - 答案
+- - '##'
+  - 问题
+- - '##'
+  - 术语
+- - '#'
+  - 第 2 章：Ansible 语言核心
+- - '##'
+  - Ansible 语言核心
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - Ansible 清单
+- - '##'
+  - INI 清单
+- - '##'
+  - YAML 清单
+- - '##'
+  - Ansible-inventory 工具
+- - '##'
+  - “all”关键字
+- - '##'
+  - 列表视图
+- - '##'
+  - 图形列表视图
+- - '##'
+  - 主机范围
+- - '##'
+  - 多组主机
+- - '##'
+  - 本地清单
+- - '##'
+  - 多重清单
+- - '##'
+  - 动态清单
+- - '##'
+  - Windows 清单
+- - '##'
+  - Ansible Playbook
+- - '##'
+  - YAML 语法
+- - '##'
+  - 这是 YAML 注释
+- - '##'
+  - 第一个 playbook
+- - '##'
+  - 检查
+- - '##'
+  - 调试
+- - '##'
+  - 多个 play
+- - '##'
+  - 包含 (Includes)
+- - '##'
+  - Ansible 变量 (Ansible Variables)
+- - '##'
+  - 不允许的变量名 (Unpermitted variable names)
+- - '##'
+  - 用户定义变量 (User-defined variables)
+- - '##'
+  - 多行 (Multiline)
+- - '##'
+  - 额外变量 (Extra variables)
+- - '##'
+  - 主机变量和组变量 (Host and group variables)
+- - '##'
+  - INI 清单中的主机变量
+- - '##'
+  - 主机变量 (Host variables)
+- - '##'
+  - 文件系统中的主机变量
+- - '##'
+  - 组变量 (Group variables)
+- - '##'
+  - 文件系统中的组变量 (Group variable in the file system)
+- - '##'
+  - 数组变量 (Array variables)
+- - '##'
+  - 将变量写入文件
+- - '##'
+  - Ansible Facts
+- - '##'
+  - Ansible ad-hoc
+- - '##'
+  - Playbook 中的 facts
+- - '##'
+  - 单个 fact
+- - '##'
+  - 自定义 facts
+- - '##'
+  - Ansible 魔法变量 (Magic Variables)
+- - '##'
+  - 常用魔法变量
+- - '##'
+  - Ansible 版本
+- - '##'
+  - Ansible 条件 (Conditional)
+- - '##'
+  - 使用 “when” 的基础条件
+- - '##'
+  - 基于 Ansible facts 的条件判断
+- - '##'
+  - Ansible 循环
+- - '##'
+  - 循环语句
+- - '##'
+  - loop 语句
+- - '##'
+  - with_items 语句的兄弟
+- - '##'
+  - 结论
+- - '##'
+  - 重点回顾
+- - '##'
+  - 单选题
+- - '##'
+  - 答案
+- - '##'
+  - 思考
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 3 章：Ansible 语言扩展
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - Ansible Vault
+- - '##'
+  - 创建加密文件
+- - '##'
+  - 使用密码文件加密
+- - '##'
+  - 查看加密文件
+- - '##'
+  - 编辑加密文件
+- - '##'
+  - 加密文件
+- - '##'
+  - 解密文件
+- - '##'
+  - 修改密码
+- - '##'
+  - 在 playbook 中包含 vault
+- - '##'
+  - playbook 中的 inline vault
+- - '##'
+  - Role（角色）与 Collection（集合）
+- - '##'
+  - Ansible Role
+- - '##'
+  - 目录树
+- - '##'
+  - 在 playbook 中的用法
+- - '##'
+  - 执行顺序
+- - '##'
+  - 用于角色的 Ansible galaxy
+- - '##'
+  - 手动安装
+- - '##'
+  - 自动化安装
+- - '##'
+  - 配置
+- - '##'
+  - Ansible 集合 (Collection)
+- - '##'
+  - community.general 集合
+- - '##'
+  - 安装 Ansible 集合
+- - '##'
+  - 手动安装
+- - '##'
+  - 自动安装
+- - '##'
+  - Python 依赖
+- - '##'
+  - 列出集合
+- - '##'
+  - /usr/local/lib/python3.8/dist-packages/ansible_collections
+- - '##'
+  - /home/devops/.ansible/collections/ansible_collections
+- - '##'
+  - 配置
+- - '##'
+  - Ansible 过滤器
+- - '##'
+  - Ansible 模板
+- - '##'
+  - 控制语句
+- - '##'
+  - 循环语句
+- - '##'
+  - 嵌套控制语句
+- - '##'
+  - 模板过滤器
+- - '##'
+  - 模板扩展
+- - '##'
+  - Ansible 插件
+- - '##'
+  - Lookup 插件
+- - '##'
+  - 将多个文件拷贝到远程主机
+- - '##'
+  - 结论
+- - '###'
+  - 3. 如何使用 `selectattr` 过滤器对数据操作？
+- - '###'
+  - 4. 为什么我们需要嵌套控制语句？
+- - '##'
+  - 核心术语
+- - '#'
+  - 第 4 章：Ansible 用于 Linux
+- - '##'
+  - Ansible 用于 Linux
+- - '##'
+  - 简介
+- - '##'
+  - 结构
+- - '##'
+  - 配置 Linux 目标主机
+- - '###'
+  - OpenSSH 配置
+- - '###'
+  - 主机变量
+- - '###'
+  - 组变量
+- - '##'
+  - 继承变量值
+- - '##'
+  - 密码认证
+- - '##'
+  - Data 参数 ping
+- - '##'
+  - Data 参数自定义
+- - '##'
+  - Data 参数 crash
+- - '##'
+  - 在执行期间打印文本
+- - '##'
+  - Ansible debug 模块
+- - '##'
+  - verbosity（详细程度）参数
+- - '##'
+  - 显示 Ansible 版本
+- - '##'
+  - 编辑单行
+- - '##'
+  - Ansible lineinfile 模块
+- - '##'
+  - 编辑 OpenSSH 配置
+- - '##'
+  - '[创建文本文件]'
+- - '###'
+  - 创建 `example.txt` 文件
+- - '##'
+  - 文件系统
+- - '##'
+  - 检查文件是否存在
+- - '##'
+  - 创建空文件
+- - '##'
+  - 创建目录
+- - '##'
+  - 软链接与硬链接
+- - '##'
+  - 删除文件
+- - '##'
+  - 将本地文件复制到远程主机
+- - '##'
+  - 将远程文件复制到本地
+- - '##'
+  - 使用 rsync 备份
+- - '##'
+  - 检出 GIT 仓库
+- - '##'
+  - 安装软件包与滚动更新
+- - '##'
+  - Ansible 软件包模块
+- - '##'
+  - Ansible yum 模块
+- - '##'
+  - Ansible apt 模块
+- - '##'
+  - Ansible zypper 模块
+- - '##'
+  - Linux 系统角色
+- - '##'
+  - 用户管理
+- - '##'
+  - Linux 密码老化策略
+- - '##'
+  - 组管理
+- - '##'
+  - Ansible command 模块
+- - '##'
+  - Ansible shell 模块
+- - '##'
+  - Uptime playbook
+- - '##'
+  - 列出文件
+- - '##'
+  - 错误的模块
+- - '##'
+  - 结论
+- - '##'
+  - 注意事项
+- - '##'
+  - 单选题
+- - '##'
+  - Answers
+- - '##'
+  - Questions
+- - '##'
+  - 术语
+- - '#'
+  - 第 5 章：Windows 版 Ansible
+- - '##'
+  - Windows 版 Ansible
+- - '##'
+  - '简介 '
+- - '##'
+  - 结构
+- - '##'
+  - 配置 Windows 目标
+- - '##'
+  - 创建 Ansible 用户
+- - '##'
+  - PowerShell
+- - '##'
+  - .NET
+- - '##'
+  - 安装 WinRM
+- - '##'
+  - Windows collections
+- - '##'
+  - 清单 (Inventory)
+- - '##'
+  - 测试主机可用性
+- - '##'
+  - 配置管理
+- - '##'
+  - 编辑单行测试
+- - '##'
+  - 创建文本文件
+- - '##'
+  - '文件系统 '
+- - '##'
+  - 检查文件是否存在
+- - '##'
+  - 创建空文件
+- - '##'
+  - 创建目录
+- - '##'
+  - 删除文件
+- - '##'
+  - 将本地文件复制到远程主机
+- - '##'
+  - 将远程文件复制到本地
+- - '##'
+  - 下载文件
+- - '##'
+  - 使用 robocopy 备份
+- - '##'
+  - 安装包
+- - '##'
+  - 滚动更新
+- - '##'
+  - 用户管理
+- - '##'
+  - 组管理
+- - '##'
+  - Windows 注册表
+- - '##'
+  - 检查注册表
+- - '##'
+  - 添加 Windows 注册表
+- - '##'
+  - 删除 Windows 注册表
+- - '##'
+  - 执行命令
+- - '##'
+  - Netstat playbook
+- - '##'
+  - GetDate playbook
+- - '##'
+  - Wrong module
+- - '##'
+  - Conclusion
+- - '##'
+  - Points to Remember
+- - '##'
+  - 多选题
+- - '##'
+  - 答案
+- - '##'
+  - 问题
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 6 章：Ansible 故障排除
+- - '##'
+  - Ansible 故障排除
+- - '##'
+  - 引言
+- - '##'
+  - 结构
+- - '##'
+  - Ansible 故障排除
+- - '##'
+  - 步骤 10：使用 Ansible debug 模块
+- - '##'
+  - Ansible 调试
+- - '##'
+  - Ansible 语法
+- - '##'
+  - 故障排除工具
+- - '##'
+  - 错误的 playbook
+- - '##'
+  - 语法检查
+- - '##'
+  - 'YAML '
+- - '##'
+  - 修复后的 playbook
+- - '##'
+  - 语法检查
+- - '##'
+  - YAML linter
+- - '##'
+  - Ansible linter
+- - '##'
+  - Visual code
+- - '##'
+  - Ansible 插件
+- - '##'
+  - CI/CD
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
+- - '##'
+  - 'Ansible '
