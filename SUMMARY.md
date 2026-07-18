@@ -595,6 +595,7 @@
 +   [The Book of Postfix ： 现代邮件传输](docs/the-book-of-postfix-state-of-the-art-message-transport/README.md)
 +   [《Debian系统概念与技术：含官方Debian GNU/Linux 3.1 Sarge版DVD》](docs/the-debian-system-concepts-and-techniques-incl-official-debi/README.md)
 +   [Docker 书：容器化是新虚拟化](docs/the-docker-book-containerization-is-the-new-virtualization/README.md)
++   [前线领导者：从零构建高绩效组织](docs/the-frontline-leader-building-a-high-performance-organizatio/README.md)
 +   [GNU Make 入门指南](docs/the-gnu-make-book/README.md)
 +   [Linux 金金书籍：从秘籍到高级应用](docs/the-golden-book-of-linux-from-secrets-to-advanced-applicatio/README.md)
 +   [Linux 命令行入门指南](docs/the-linux-command-line-beginners-guide/README.md)
