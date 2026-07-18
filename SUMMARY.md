@@ -601,6 +601,7 @@
 +   [KCNA Book：Kubernetes 与云原生认证指南指南](docs/the-kcna-book-kubernetes-and-cloud-native-associate/README.md)
 +   [Linux 命令行入门指南](docs/the-linux-command-line-beginners-guide/README.md)
 +   [Linux 调度器：十年浪费的核心](docs/the-linux-scheduler-a-decade-of-wasted-cores/README.md)
++   [新手电脑黑客指南：无线网络破解、基础安全、渗透测试及 Kali Linux 完整指南](docs/the-new-computer-hacking-for-novices-and-dummies-complete-gu/README.md)
 +   [CompTIA Linux+ 认证官方学生指南（XK0-004 考试）](docs/the-official-comptia-linux-student-guide-exam-xk0-004/README.md)
 +   [Ubuntu 官方指南](docs/the-official-ubuntu-book/README.md)
 +   [管理心理学：心智在确定、教授和实施最小浪费方法中的功能](docs/the-psychology-of-management-the-function-of-the-mind-in-det/README.md)
