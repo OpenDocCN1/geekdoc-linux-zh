@@ -1,0 +1,7602 @@
+<p><img src="rsrc2J2.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="rsrc2J2.jpg" class="s8" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div class="sK">
+<div class="sF">
+Shell Scripting
+</div>
+<div class="sH">
+JASON CANNON
+</div>
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div class="sK">
+<div class="sU">
+Copyright © 2015 Jason Cannon
+</div>
+<div class="sU">
+All rights reserved.
+</div>
+<div id="part0002.xhtml_Table_of_Contents" class="sX">
+Contents
+</div>
+<div class="sZ">
+<a href="#part0004.xhtml" class="s2HA">Introduction</a>
+</div>
+<div class="sZ">
+<a href="#part0005.xhtml" class="s2HA">Shell Scripting, Succinctly</a>
+</div>
+<div class="sZ">
+<a href="#part0006.xhtml" class="s2HA">Exit Statuses and Return
+Codes</a>
+</div>
+<div class="sZ">
+<a href="#part0007.xhtml" class="s2HA">Functions</a>
+</div>
+<div class="sZ">
+<a href="#part0007.xhtml_toc4_Wildcards" class="s2HA">Wildcards</a>
+</div>
+<div class="sZ">
+<a href="#part0008.xhtml" class="s2HA">Case Statements</a>
+</div>
+<div class="sZ">
+<a href="#part0009.xhtml" class="s2HA">Logging</a>
+</div>
+<div class="sZ">
+<a href="#part0010.xhtml" class="s2HA">Debugging</a>
+</div>
+<div class="sZ">
+<a href="#part0010.xhtml_a2H2" class="s2HA">Shell Script Checklist</a>
+</div>
+<div class="sZ">
+<a href="#part0010.xhtml_a2H3" class="s2HA">Shell Script Template</a>
+</div>
+<div class="sZ">
+<a href="#part0010.xhtml_toc10_Scripts_from_My_Personal_Collection"
+class="s2HA">Scripts from My Personal Collection</a>
+</div>
+<div class="sZ">
+<a href="#part0010.xhtml_a2H5" class="s2HA">Congratulations and Thank
+You!</a>
+</div>
+<div class="sZ">
+<a href="#part0011.xhtml" class="s2HA">Other Books by the Author</a>
+</div>
+<div class="sZ">
+<a href="#part0012.xhtml" class="s2HA">Additional Resources Including
+Exclusive Discounts for You</a>
+</div>
+<div class="sZ">
+<a href="#part0013.xhtml" class="s2HA">Appendix: Trademarks</a>
+</div>
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div class="sK">
+<div class="s1N">
+Other Books by the Author
+</div>
+<div class="s1R">
+Command Line Kung Fu: Bash Scripting Tricks, Linux Shell Programming
+Tips, and Bash One-liners
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/command-line-kung-fu-book"
+class="s2HA">http://www.linuxtrainingacademy.com/command-line-kung-fu-book</a>
+</div>
+<div class="s1U">
+High Availability for the LAMP Stack: Eliminate Single Points of Failure
+and Increase Uptime for Your Linux, Apache, MySQL, and PHP Based Web
+Applications
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/ha-lamp-book"
+class="s2HA">http://www.linuxtrainingacademy.com/ha-lamp-book</a>
+</div>
+<div class="s1U">
+Linux for Beginners: An Introduction to the Linux Operating System and
+Command Line
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/linux"
+class="s2HA">http://www.linuxtrainingacademy.com/linux</a>
+</div>
+<div class="s1U">
+Python Programming for Beginners
+</div>
+<div>
+<a
+href="http://www.linuxtrainingacademy.com/python-programming-for-beginners"
+class="s2HA">http://www.linuxtrainingacademy.com/python-programming-for-beginners</a>
+</div>
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div id="part0004.xhtml_page_1" class="sK">
+<div id="part0004.xhtml_toc0_Introduction" class="s1N">
+Introduction
+</div>
+<div class="s28">
+I'm lazy.  I admit it.  I believe so strongly in being lazy that I'll do
+almost anything to facilitate even more laziness in the future.
+</div>
+<div class="s28">
+For example, if I think there is a slight chance that I will ever have
+to perform the same set of commands again, I create a shell script then
+and there.  When I need to do that task again, I lazily execute my
+script.  If maintenance needs to be performed on a system at 2:00 in the
+morning, I write a script that does the required work and schedule a job
+to run it.  Lazy people love to sleep.
+</div>
+<div class="s28">
+I also believe in helping people find their inner laziness.  Why? 
+Because lazy people solve problems.  They eliminate the unnecessary. 
+They simplify the complex.
+</div>
+<div class="s28">
+That's the reason I've written this book.
+</div>
+<div class="s28">
+I want to share with you some of my favorite tips and tricks I've used
+to automate repetitive, monotonous, tedious, and complex tasks.  May
+they inspire you to be lazy.
+</div>
+<div class="s2E">
+Before we get started I recommend that you download the shell scripts
+used in this book by visiting:  <a
+href="http://www.linuxtrainingacademy.com/shell-scripts"
+class="s2HA">http://www.linuxtrainingacademy.com/shell-scripts</a>
+</div>
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div id="part0005.xhtml_page_2" class="sK">
+<div id="part0005.xhtml_toc1_Shell_Scripting__Succinctly" class="s1N">
+Shell Scripting, Succinctly
+</div>
+<div class="s28">
+A script is a command line program that contains a series of commands. 
+The commands contained in the script are executed by an interpreter.  In
+the case of shell scripts, the shell acts as the interpreter and
+executes the commands listed in the script one after the other.
+</div>
+<div class="s28">
+Anything you can execute at the command line, you can put into a shell
+script.  Shell scripts are great at automating tasks.  If you find
+yourself running a series of commands to accomplish a given task and
+will need to perform that task again in the future, you can—and probably
+should—create a shell script for that task.
+</div>
+<div class="s2T">
+Let's look at a simple shell script.  The name of this script is <span
+class="s2HD">script1.sh</span> .
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "Scripting is fun!"
+</div>
+</div>
+<div class="s2T">
+Before you try to execute the script, make sure that it is executable.
+</div>
+<div class="s2W">
+<div>
+$ chmod 755 script1.sh
+</div>
+</div>
+<div class="s2T">
+Here is what happens when you execute the script.
+</div>
+<div class="s2W">
+<div>
+$ ./script1.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+Scripting is fun!
+</div>
+</div>
+<div class="s2W">
+<div>
+$<span id="part0005.xhtml_page_3"></span>
+</div>
+</div>
+<div class="s3A">
+The Shebang
+</div>
+<div class="s28">
+You'll notice that the first line of the script starts with <span
+class="s2HD">#!</span> followed by the path to the bash shell program,
+<span class="s2HD">/bin/bash</span> . The number sign is very similar to
+the sharp sign used in music notation.  Also, some people refer to the
+exclamation mark as a "bang."  So, <span class="s2HD">#!</span> can be
+spoken as "sharp bang."  The term "Shebang" is an inexact contraction of
+"sharp bang."
+</div>
+<div class="s28">
+When a script's first line starts with a shebang, what follows is used
+as the interpreter for the commands listed in the script.  Here are
+three examples of shell scripts, each using a different shell program as
+the interpreter.
+</div>
+<div class="s3F">
+<div>
+#!/bin/csh
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "This script uses csh as the interpreter."
+</div>
+</div>
+<div class="s3F">
+<div>
+#!/bin/ksh
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "This script uses ksh as the interpreter."
+</div>
+</div>
+<div class="s3F">
+<div>
+#!/bin/zsh
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "This script uses zsh as the interpreter."
+</div>
+</div>
+<div class="s28">
+When you execute a script that contains a shebang, what actually happens
+is that the interpreter is executed and the path used to call the script
+is passed as an argument to the interpreter.  You can prove this by
+examining the process table.
+</div>
+<div class="s28">
+Let's start this script, <span class="s2HD">sleepy.sh</span> , in the
+background and look at the process table.
+</div>
+<div class="s2T">
+The contents of <span class="s2HD">sleepy.sh</span> :
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div id="part0005.xhtml_page_4" class="s2W">
+<div>
+sleep 90
+</div>
+</div>
+<div class="s2T">
+Let's execute it in the background and take a look at the processes.
+</div>
+<div class="s2W">
+<div>
+$ ./sleepy.sh &amp;
+</div>
+</div>
+<div class="s2W">
+<div>
+[1] 16796
+</div>
+</div>
+<div class="s2W">
+<div>
+$ ps -fp 16796
+</div>
+</div>
+<div class="s2W">
+<div>
+UID        PID  PPID  C STIME TTY          TIME CMD
+</div>
+</div>
+<div class="s2W">
+<div>
+jason     16796 16725  0 22:50 pts/0    00:00:00 /bin/bash ./sleepy.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+$
+</div>
+</div>
+<div class="s2T">
+You can see that what is actually running is <span
+class="s2HD">/bin/bash ./sleepy.sh</span> .  Let's use a full path to
+the script.
+</div>
+<div class="s2W">
+<div>
+$ /tmp/sleepy.sh &amp;
+</div>
+</div>
+<div class="s2W">
+<div>
+[1] 16804
+</div>
+</div>
+<div class="s2W">
+<div>
+$ ps -fp 16804
+</div>
+</div>
+<div class="s2W">
+<div>
+UID        PID  PPID  C STIME TTY          TIME CMD
+</div>
+</div>
+<div class="s2W">
+<div>
+jason     16804 16725  0 22:51 pts/0    00:00:00 /bin/bash
+/tmp/sleepy.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+$
+</div>
+</div>
+<div class="s2T">
+Sure enough, <span class="s2HD">/bin/bash /tmp/sleepy.sh</span> is being
+executed.  Also, you can see that <span class="s2HD">/bin/bash</span> is
+executing the sleep command, which is the first and only command command
+in the shell script.
+</div>
+<div class="s2W">
+<div>
+$ ps -ef| grep 16804 | grep -v grep
+</div>
+</div>
+<div class="s2W">
+<div>
+jason     16804 16725  0 22:51 pts/0    00:00:00 /bin/bash
+/tmp/sleepy.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+jason     16805 16804  0 22:51 pts/0    00:00:00 sleep 90
+</div>
+</div>
+<div class="s2W">
+<div>
+$ pstree –p 16804
+</div>
+</div>
+<div class="s2W">
+<div>
+sleepy.sh(16804)───sleep(16805)
+</div>
+</div>
+<div class="s2W">
+<div>
+$
+</div>
+</div>
+<div class="s28">
+If you do not supply a shebang and specify an interpreter on the first
+line of the script, the commands in the script will be executed using
+your current shell.  Even though this can work just fine under many
+circumstances, it's best to be explicit and specify the exact
+interpreter to be used with the script.  For example, there are features
+and syntax <span id="part0005.xhtml_page_5"></span> that work just fine
+with the bash shell that will not work with the csh shell.
+</div>
+<div class="s2T">
+Also, you don't have to use a shell as the interpreter for your scripts.
+Here is an example of a Python script named <span
+class="s2HD">hi.py</span> .
+</div>
+<div class="s2W">
+<div>
+#!/usr/bin/python
+</div>
+</div>
+<div class="s2W">
+<div>
+print "This is a Python script."
+</div>
+</div>
+<div class="s2T">
+Let's make it executable and run it.
+</div>
+<div class="s2W">
+<div>
+$ chmod 755 hi.py
+</div>
+</div>
+<div class="s2W">
+<div>
+$ ./hi.py
+</div>
+</div>
+<div class="s2W">
+<div>
+This is a Python script.
+</div>
+</div>
+<div class="s2W">
+<div>
+$
+</div>
+</div>
+<div class="s28">
+For more information on python programming and scripting, see my book
+<span class="s2HN">Python Programming for Beginners</span> at <a
+href="http://www.linuxtrainingacademy.com/python-book"
+class="s2HA">http://www.linuxtrainingacademy.com/python-book</a> .
+</div>
+<div class="s28">
+Let's get back to shell scripting.
+</div>
+<div class="s5V">
+<span class="class-0">Variables</span>
+</div>
+<div class="s2T">
+You can use variables in your shell scripts.  Variables are simply
+storage locations that have a name.  You can think of variables as
+name-value pairs.  To assign a value to a variable, use the syntax <span
+class="s2HD">VARIABLE_NAME="Value"</span> .  Do not use spaces before or
+after the equals sign.  Also, variables are case sensitive, and, by
+convention, variable names are in uppercase.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+MY_SHELL="bash"
+</div>
+</div>
+<div class="s2T">
+To use a variable, precede the variable name with a dollar sign.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+MY_SHELL="bash"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "I like the $MY_SHELL shell."<span
+id="part0005.xhtml_page_6"></span>
+</div>
+</div>
+<div class="s2T">
+You can also enclose the variable name in curly braces and precede the
+opening brace with a dollar sign.  Syntax: <span
+class="s2HD">${VARIABLE_NAME}</span> .
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+MY_SHELL="bash"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "I like the ${MY_SHELL} shell."
+</div>
+</div>
+<div class="s2T">
+Here is the output of the script:
+</div>
+<div class="s2W">
+<div>
+I like the bash shell.
+</div>
+</div>
+<div class="s2T">
+The curly brace syntax is optional unless you need to immediately
+precede or follow the variable with additional data.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+MY_SHELL="bash"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "I am ${MY_SHELL}ing on my keyboard."
+</div>
+</div>
+<div class="s2T">
+Output:
+</div>
+<div class="s2W">
+<div>
+I am bashing on my keyboard.
+</div>
+</div>
+<div class="s2T">
+If you do not encapsulate the variable name in curly braces the shell
+will treat the additional text as part of the variable name.  Since a
+variable with that name does not exist, nothing is put in its place.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+MY_SHELL="bash"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "I am $MY_SHELLing on my keyboard."
+</div>
+</div>
+<div class="s2T">
+Output:
+</div>
+<div class="s2W">
+<div>
+I am  on my keyboard.
+</div>
+</div>
+<div class="s2T">
+You can also assign the output of a command to a variable.  To do this,
+enclose the command in parentheses and precede it with a dollar sign.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+SERVER_NAME=$(hostname)
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "You are running this script on ${SERVER_NAME}."
+</div>
+</div>
+<div class="s2T">
+The output of the command <span class="s2HD">hostname</span> is stored
+in the variable <span class="s2HD">SERVER_NAME</span> .  In this sample
+output, the server name is <span class="s2HD">linuxsvr</span> .
+</div>
+<div id="part0005.xhtml_page_7" class="s2W">
+<div>
+You are running this script on linuxsvr.
+</div>
+</div>
+<div class="s2T">
+You can also enclose the command in back ticks.  This is an older syntax
+being replaced by the <span class="s2HD">$()</span> syntax.  However,
+you may see this in older scripts.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+SERVER_NAME=`hostname`
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "You are running this script on ${SERVER_NAME}."
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Valid Variable Names</span>
+</div>
+<div class="s2T">
+Variable names can contain letters, digits, and underscores.  They can
+start with letters or underscores, but cannot start with a digit.  Here
+are examples of valid variable names.
+</div>
+<div class="s2W">
+<div>
+FIRST3LETTERS="ABC"
+</div>
+</div>
+<div class="s2W">
+<div>
+FIRST_THREE_LETTERS="ABC"
+</div>
+</div>
+<div class="s2W">
+<div>
+firstThreeLetters="ABC"
+</div>
+</div>
+<div class="s2T">
+Here are some examples of invalid variable names.
+</div>
+<div class="s2W">
+<div>
+3LETTERS="ABC"
+</div>
+</div>
+<div class="s2W">
+<div>
+first-three-letters="ABC"
+</div>
+</div>
+<div class="s2W">
+<div>
+first@Three@Letters="ABC"
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Tests</span>
+</div>
+<div class="s28">
+Scripts are designed to replace the need for a person to physically be
+at a keyboard and type in a series of commands.  What if you have a task
+you want to automate, but it requires different actions based on
+different circumstances?  Since a person may not be around to make
+decisions when the script needs to run, we'll need to test for those
+conditions and have the script act accordingly.
+</div>
+<div class="s2T">
+To create a test, place a conditional expression between brackets.  The
+syntax is: <span class="s2HD">[ condition-to-test-for ]</span> .  You
+can test for several types of situations.  For example, you can compare
+if strings are equal, if a number is greater than another one, or if a
+file exists.  This test checks <span id="part0005.xhtml_page_8"></span>
+to see if <span class="s2HD">/etc/passwd</span> exists.  If it does, it
+returns true.  I.e., the command exits with a status of 0.  If the file
+doesn't exist it returns false.  I.e., the command exits with a status
+of 1.
+</div>
+<div class="s2W">
+<div>
+[ -e /etc/passwd ]
+</div>
+</div>
+<div class="s2T">
+If you are using the bash shell, you can run the command <span
+class="s2HD">help test</span> to see the various types of tests you can
+perform.  You can also read the man page for test: <span
+class="s2HD">man test</span> .  Here are of some of the more common
+tests you can perform.
+</div>
+<div class="s2W">
+<div>
+File operators:
+</div>
+</div>
+<div class="s2W">
+<div>
+  -d FILE        True if file is a directory.
+</div>
+</div>
+<div class="s2W">
+<div>
+  -e FILE        True if file exists.
+</div>
+</div>
+<div class="s2W">
+<div>
+  -f FILE        True if file exists and is a regular file.
+</div>
+</div>
+<div class="s2W">
+<div>
+  -r FILE        True if file is readable by you.
+</div>
+</div>
+<div class="s2W">
+<div>
+  -s FILE        True if file exists and is not empty.
+</div>
+</div>
+<div class="s2W">
+<div>
+  -w FILE        True if the file is writable by you.
+</div>
+</div>
+<div class="s2W">
+<div>
+  -x FILE        True if the file is executable by you.
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+String operators:
+</div>
+</div>
+<div class="s2W">
+<div>
+  -z STRING      True if string is empty.
+</div>
+</div>
+<div class="s2W">
+<div>
+  -n STRING      True if string is not empty.
+</div>
+</div>
+<div class="s2W">
+<div>
+     STRING      True if string is not empty.
+</div>
+</div>
+<div class="s2W">
+<div>
+  STRING1 = STRING2
+</div>
+</div>
+<div class="s2W">
+<div>
+                 True if the strings are equal.
+</div>
+</div>
+<div class="s2W">
+<div>
+  STRING1 != STRING2
+</div>
+</div>
+<div class="s2W">
+<div>
+                 True if the strings are not equal.
+</div>
+</div>
+<div class="s2W">
+<div>
+Arithmetic operators:
+</div>
+</div>
+<div class="s2W">
+<div>
+  arg1 –eq arg2  True if arg1 is equal to arg2.
+</div>
+</div>
+<div class="s2W">
+<div>
+  arg1 –ne arg2  True if arg1 is not equal to arg2.
+</div>
+</div>
+<div class="s2W">
+<div>
+  arg1 –lt arg2  True if arg1 is less than arg2.
+</div>
+</div>
+<div class="s2W">
+<div>
+  arg1 –le arg2  True if arg1 is less than or equal to  arg2.
+</div>
+</div>
+<div class="s2W">
+<div>
+  arg1 –gt arg2  True if arg1 is greater than arg2.
+</div>
+</div>
+<div class="s2W">
+<div>
+  arg1 –ge arg2  True if arg1 is greater than or equal to arg2.<span
+id="part0005.xhtml_page_9"></span>
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">The if Statement</span>
+</div>
+<div class="s28">
+Now that you know how to determine if a certain condition is true or
+not, you can combine that with the <span class="s2HD">if</span>
+statement to make decisions in your scripts.  
+</div>
+<div class="s2T">
+The <span class="s2HD">if</span> statement starts with the word "<span
+class="s2HD">if"</span> and is then followed by a test.  The following
+line contains the word <span class="s2HD">then</span> .  Next comes a
+series of commands that will be executed if the tested condition is
+true. Finally, the <span class="s2HD">if</span> statement ends with
+<span class="s2HD">fi</span> , which is <span class="s2HD">if</span>
+spelled backwards.  Here is the syntax.
+</div>
+<div class="s2W">
+<div>
+if [ condition-true ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 1
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 2
+</div>
+</div>
+<div class="s2W">
+<div>
+   ...
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s2T">
+Here is an example:
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+MY_SHELL="bash"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+if [ "$MY_SHELL" = "bash" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+   echo "You seem to like the bash shell."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s2T">
+It is a best practice to enclose variables in quotes to prevent some
+unexpected side effects when performing conditional tests.  Here is the
+output of running the script:
+</div>
+<div class="s2W">
+<div>
+You seem to like the bash shell.
+</div>
+</div>
+<div class="s2T">
+You can also perform an action if the condition is not true by using an
+<span class="s2HD">if/else</span> statement.  Here is what an <span
+class="s2HD">if/else</span> statement looks like.
+</div>
+<div class="s2W">
+<div>
+if [ condition-true ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 1
+</div>
+</div>
+<div class="s2W">
+<div>
+  <span id="part0005.xhtml_page_10"></span>  command 2
+</div>
+</div>
+<div class="s2W">
+<div>
+   ...
+</div>
+</div>
+<div class="s2W">
+<div>
+else  #
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 3
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 4
+</div>
+</div>
+<div class="s2W">
+<div>
+   ...
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s2T">
+Let's update the script to perform an action if the statement is not
+true.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+MY_SHELL="csh"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+if [ "$MY_SHELL" = "bash" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+   echo "You seem to like the bash shell."
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+   echo "You don't seem to like the bash shell."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s2T">
+Here is the output.  Because <span class="s2HD">[ "$MY_SHELL" = "bash"
+]</span> evaluated to false the statements following <span
+class="s2HD">else</span> were executed.
+</div>
+<div class="s2W">
+<div>
+You don't seem to like the bash shell.
+</div>
+</div>
+<div class="s2T">
+You can also test for multiple conditions using the <span
+class="s2HD">elif</span> .  The word <span class="s2HD">elif</span> is a
+contraction for "else if."  Like <span class="s2HD">if</span> , follow
+<span class="s2HD">elif</span> with a condition to test for.  On the
+following line, use the word <span class="s2HD">then</span> .  Finally,
+provide a series of commands to execute if the condition evaluates as
+true.
+</div>
+<div class="s2W">
+<div>
+if [ condition-true ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 1
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 2
+</div>
+</div>
+<div class="s2W">
+<div>
+   ...
+</div>
+</div>
+<div class="s2W">
+<div>
+elif [ condition-true ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 3
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 4
+</div>
+</div>
+<div class="s2W">
+<div>
+   ...
+</div>
+</div>
+<div class="s2W">
+<div>
+else  #
+</div>
+</div>
+<div class="s2W">
+<div>
+   command 5
+</div>
+</div>
+<div class="s2W">
+<div>
+  <span id="part0005.xhtml_page_11"></span>  command 6
+</div>
+</div>
+<div class="s2W">
+<div>
+   ...
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s2T">
+Here is an updated script using <span class="s2HD">elif</span> .
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+MY_SHELL="csh"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+if [ "$MY_SHELL" = "bash" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+   echo "You seem to like the bash shell."
+</div>
+</div>
+<div class="s2W">
+<div>
+elif [ "$MY_SHELL" = "csh" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "You seem to like the csh shell."
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "You don't seem to like the bash or csh shells."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s2T">
+Output:
+</div>
+<div class="s2W">
+<div>
+You seem to like the csh shell.
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">The for Loop</span>
+</div>
+<div class="s2T">
+If you want to perform an action on a list of items, use a <span
+class="s2HD">for</span> loop.  The first line of a <span
+class="s2HD">for</span> loop start with the word "<span
+class="s2HD">for"</span> followed by a variable name, followed by the
+word "<span class="s2HD">in"</span> and then a list of items.  The next
+line contains the word "<span class="s2HD">do"</span> .  Place the
+statements you want to execute on the following lines and, finally, end
+the <span class="s2HD">for</span> loop with the word "<span
+class="s2HD">done</span> " on a single line.
+</div>
+<div class="s2W">
+<div>
+for VARIABLE_NAME in ITEM_1 ITEM_2 ITEM_N
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  command 1
+</div>
+</div>
+<div class="s2W">
+<div>
+  command 2
+</div>
+</div>
+<div class="s2W">
+<div>
+  ...
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="s28">
+Essentially what happens is that the first item in the list is assigned
+to <span id="part0005.xhtml_page_12"></span> the variable and the code
+block is executed. The next item in the list is then assigned to the
+variable and the commands are executed.  This happens for each item in
+the list.
+</div>
+<div class="s2T">
+Here is a simple script that shows how a <span class="s2HD">for</span>
+loop works.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+for COLOR in red green blue
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "COLOR: $COLOR"
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="s2T">
+Output:
+</div>
+<div class="s2W">
+<div>
+COLOR: red
+</div>
+</div>
+<div class="s2W">
+<div>
+COLOR: green
+</div>
+</div>
+<div class="s2W">
+<div>
+COLOR: blue
+</div>
+</div>
+<div class="s2T">
+It's a common practice for the list of items to be stored in a variable
+as in this example.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+COLORS="red green blue"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+for COLOR in $COLORS
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "COLOR: $COLOR"
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2T">
+Output:
+</div>
+<div class="s2W">
+<div>
+COLOR: red
+</div>
+</div>
+<div class="s2W">
+<div>
+COLOR: green
+</div>
+</div>
+<div class="s2W">
+<div>
+COLOR: blue
+</div>
+</div>
+<div class="s2T">
+This shell script, <span class="s2HD">rename-pics.sh</span> , renames
+all of the files that end in <span class="s2HD">jpg</span> by prepending
+today’s date to the original file name.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+PICTURES=$(ls *jpg)
+</div>
+</div>
+<div class="s2W">
+<div>
+DATE=$(date +%F)
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div id="part0005.xhtml_page_13" class="s2W">
+<div>
+for PICTURE in $PICTURES
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Renaming ${PICTURE} to ${DATE}-${PICTURE}"
+</div>
+</div>
+<div class="s2W">
+<div>
+  mv ${PICTURE} ${DATE}-${PICTURE}
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="s2T">
+Here's what happens when you run this script.
+</div>
+<div class="s2W">
+<div>
+$ ls
+</div>
+</div>
+<div class="s2W">
+<div>
+bear.jpg  man.jpg  pig.jpg  rename-pics.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+$ ./rename-pics.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+Renaming bear.jpg to 2015-03-06-bear.jpg
+</div>
+</div>
+<div class="s2W">
+<div>
+Renaming man.jpg to 2015-03-06-man.jpg
+</div>
+</div>
+<div class="s2W">
+<div>
+Renaming pig.jpg to 2015-03-06-pig.jpg
+</div>
+</div>
+<div class="s2W">
+<div>
+$ ls
+</div>
+</div>
+<div class="s2W">
+<div>
+2015-03-06-bear.jpg  2015-03-06-man.jpg  2015-03-06-pig.jpg  rename-pics.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+$
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Positional Parameters</span>
+</div>
+<div class="s2T">
+Positional parameters are variables that contain the contents of the
+command line.  These variables are $0 through $9.  The script itself is
+stored in $0, the first parameter in $1, the second in $2, and so on. 
+Take this command line as an example.
+</div>
+<div class="s2W">
+<div>
+$ script.sh parameter1 parameter2 parameter3
+</div>
+</div>
+<div class="s28">
+The contents are as follows: $0 is "script.sh", $1 is "parameter1", $2
+is "parameter2", and $3 is "parameter3".
+</div>
+<div class="s2T">
+This script, <span class="s2HD">archive_user.sh</span> , accepts a
+parameter which is a username.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+echo "Executing script: $0"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "Archiving user: $1"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Lock the account
+</div>
+</div>
+<div class="s2W">
+<div>
+passwd –l $1
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div id="part0005.xhtml_page_14" class="s2W">
+<div>
+# Create an archive of the home directory.
+</div>
+</div>
+<div class="s2W">
+<div>
+tar cf /archives/${1}.tar.gz /home/${1}
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Comments</span>
+</div>
+<div class="s28">
+Anything that follows the pound sign is a comment.  The only exception
+to this is the shebang on the first line.  Everywhere else in the script
+where a pound sign is encountered marks the beginning of a comment. 
+Comments are dutifully ignored by the interpreter as they are for the
+benefit of us humans.
+</div>
+<div class="s28">
+Anything that follows the pound sign is ignored.  If a pound sign starts
+at the beginning of a line, the entire line is ignored.  If a pound sign
+is encountered in the middle of a line, only the information to the
+right of the pound sign is ignored.
+</div>
+<div class="s2T">
+Here is what the output looks like when we execute the <span
+class="s2HD">archive_user.sh</span> script.
+</div>
+<div class="s2W">
+<div>
+$ ./archive_user.sh elvis
+</div>
+</div>
+<div class="s2W">
+<div>
+Executing script: ./archive_user.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+Archiving user: elvis
+</div>
+</div>
+<div class="s2W">
+<div>
+passwd: password expiry information changed.
+</div>
+</div>
+<div class="s2W">
+<div>
+tar: Removing leading `/' from member names
+</div>
+</div>
+<div class="s2W">
+<div>
+$
+</div>
+</div>
+<div class="s2T">
+Instead of referring to $1 throughout the script, let's assign its value
+to a more meaningful variable name.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+USER=$1    # The first parameter is the user.
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+echo "Executing script: $0"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "Archiving user: $USER"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Lock the account
+</div>
+</div>
+<div class="s2W">
+<div>
+passwd –l $USER
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div id="part0005.xhtml_page_15" class="s2W">
+<div>
+# Create an archive of the home directory.
+</div>
+</div>
+<div class="s2W">
+<div>
+tar cf /archives/${USER}.tar.gz /home/${USER}
+</div>
+</div>
+<div class="s2T">
+The output remains the same.
+</div>
+<div class="s2W">
+<div>
+$ ./archive_user.sh elvis
+</div>
+</div>
+<div class="s2W">
+<div>
+Executing script: ./archive_user.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+Archiving user: elvis
+</div>
+</div>
+<div class="s2W">
+<div>
+passwd: password expiry information changed.
+</div>
+</div>
+<div class="s2W">
+<div>
+tar: Removing leading `/' from member names
+</div>
+</div>
+<div class="s2W">
+<div>
+$
+</div>
+</div>
+<div class="sK6">
+You can access all the positional parameters starting at $1 to the very
+last one on the command line by using the special variable <span
+class="s2HD">$@</span> .  Here is how to update the <span
+class="s2HD">archive_user.sh</span> script to accept one or more
+parameters.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+echo "Executing script: $0"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+for USER in $@
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Archiving user: $USER"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+  # Lock the account
+</div>
+</div>
+<div class="s2W">
+<div>
+  passwd –l $USER
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+  # Create an archive of the home directory.
+</div>
+</div>
+<div class="s2W">
+<div>
+  tar cf /archives/${USER}.tar.gz /home/${USER}
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="sK6">
+Let's pass in multiple users to the script.
+</div>
+<div class="sM3">
+<div class="sM1">
+<span class="s2H9">$ ./archive_user.sh chet joe</span>
+</div>
+</div>
+<div class="sM3">
+<div class="sM1">
+<span class="s2H9">Executing script: ./archive_user.sh</span>
+</div>
+</div>
+<div class="sM3">
+<div class="sM1">
+<span class="s2H9">Archiving user: chet</span>
+</div>
+</div>
+<div class="sM3">
+<div class="sM1">
+<span class="s2H9">passwd: password expiry information changed.</span>
+</div>
+</div>
+<div class="sM3">
+<div class="sM1">
+<span class="s2H9">tar: Removing leading `/' from member names</span>
+</div>
+</div>
+<div class="sM3">
+<div class="sM1">
+<span class="s2H9">Archiving user: joe</span>
+</div>
+</div>
+<div class="sM3">
+<div class="sM1">
+<span class="s2H9">passwd: password expiry information changed.</span>
+</div>
+</div>
+<div class="sM3">
+<div class="sM1">
+<span class="s2H9">tar: Removing leading `/' from member names</span>
+<span id="part0005.xhtml_page_16" class="class-2"></span>
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Getting User Input</span>
+</div>
+<div class="s2T">
+If you want to accept standard input, use the <span
+class="s2HD">read</span> command.  Remember that standard input
+typically comes from a person typing at the keyboard, but it can also
+come from other sources, like the output of a command in a command
+pipeline.  The format for the <span class="s2HD">read</span> command is
+<span class="s2HD">read -p "PROMPT" VARIABLE_NAME</span> .  This version
+of the archive_user.sh script asks for the user account.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+read –p "Enter a user name: " USER
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+echo "Archiving user: $USER"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Lock the account
+</div>
+</div>
+<div class="s2W">
+<div>
+passwd –l $USER
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Create an archive of the home directory.
+</div>
+</div>
+<div class="s2W">
+<div>
+tar cf /archives/${USER}.tar.gz /home/${USER}
+</div>
+</div>
+<div class="s2T">
+Let's run this script and archive the <span class="s2HD">mitch</span>
+account.
+</div>
+<div class="s2W">
+<div>
+$ ./archive_user.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+Enter a user name: mitch
+</div>
+</div>
+<div class="s2W">
+<div>
+Archiving user: mitch
+</div>
+</div>
+<div class="s2W">
+<div>
+passwd: password expiry information changed.
+</div>
+</div>
+<div class="s2W">
+<div>
+tar: Removing leading `/' from member names
+</div>
+</div>
+<div class="s2W">
+<div>
+$
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Review</span>
+</div>
+<div class="s28">
+The first line in a shell script should start with a shebang and the
+path to the interpreter that should be used to execute the script.
+</div>
+<div class="s28">
+To assign a value to a variable, start with the variable name followed
+by an equals sign followed by the value.  Do not use a space before or
+after the equals sign<span id="part0005.xhtml_page_17"></span> .
+</div>
+<div class="s28">
+You can access the value stored in a variable by using <span
+class="s2HD">$VARIABLE_NAME</span> or <span
+class="s2HD">${VARIABLE_NAME}</span> .  The latter form is required if
+you want to precede or follow the variable with additional data.
+</div>
+<div class="s28">
+To assign the output of a command to a variable, enclose the command in
+parentheses and precede it with a dollar sign.  <span
+class="s2HD">VARIABLE_NAME=$(command)</span>
+</div>
+<div class="s28">
+Perform tests by placing an expression in brackets.  Tests are typically
+combined with <span class="s2HD">if</span> statements.
+</div>
+<div class="s28">
+Use <span class="s2HD">if</span> , <span class="s2HD">if/else</span> ,
+or <span class="s2HD">if/elif/else</span> statements to make decisions
+in your scripts.
+</div>
+<div class="s28">
+To perform an action or series of action on multiple items, use a <span
+class="s2HD">for</span> loop.
+</div>
+<div class="s28">
+To access items on the command line, use positions parameters.  The name
+of the program is represented by <span class="s2HD">$0</span> , the
+first parameter is represented by <span class="s2HD">$1</span> , and so
+on.  To access all the items on the command line starting at the first
+parameter (<span class="s2HD">$1</span> ), use the special variable
+<span class="s2HD">$@</span> .
+</div>
+<div class="s2T">
+You can place comments in your scripts by using the pound sign.
+</div>
+<div class="sNY">
+Accept user input by using the <span class="s2HD">read</span> command.
+</div>
+<div class="s5V">
+<span class="class-0">Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="sP3">
+Write a shell script that prints "Shell Scripting is Fun!" on the
+screen.
+</div>
+<div class="sP3">
+Hint 1:  Remember to make the shell script executable with the chmod
+command.
+</div>
+<div class="sNY">
+Hint 2:  Remember to start your script with a shebang<span
+id="part0005.xhtml_page_18"></span> !
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="sNY">
+Modify the shell script from exercise 1 to include a variable.  The
+variable will hold the contents of the message "Shell Scripting is
+Fun!".
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 3:</span>
+</div>
+<div class="sP3">
+Store the output of the command "hostname" in a variable.  Display "This
+script is running on _______." where "_______" is the output of the
+"hostname" command.
+</div>
+<div class="sNY">
+Hint:  It's a best practice to use the <span
+class="s2HD">${VARIABLE}</span> syntax if there is text or characters
+that directly precede or follow the variable.
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 4:</span>
+</div>
+<div class="sNY">
+Write a shell script to check to see if the file "/etc/shadow" exists. 
+If it does exist, display "Shadow passwords are enabled."  Next, check
+to see if you can write to the file.  If you can, display "You have
+permissions to edit /etc/shadow."  If you cannot, display "You do NOT
+have permissions to edit /etc/shadow."
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 5:</span>
+</div>
+<div class="sP3">
+Write a shell script that displays "man", "bear", "pig", "dog", "cat",
+and "sheep" on the screen with each appearing on a separate line.  Try
+to do this in as few lines as possible.
+</div>
+<div class="sNY">
+Hint:  Loops can be used to perform repetitive tasks.
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 6:</span>
+</div>
+<div class="sP3">
+Write a shell script that prompts the user for a name of a file or
+directory and reports if it is a regular file, a directory, or another
+type of file.
+</div>
+<div class="sNY">
+Also perform an <span class="s2HD">ls</span> command against the file or
+directory with the long listing option<span
+id="part0005.xhtml_page_19"></span> .
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 7:</span>
+</div>
+<div class="sNY">
+Modify the previous script so that it accepts the file or directory name
+as an argument instead of prompting the user to enter it.
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 8:</span>
+</div>
+<div class="sP3">
+Modify the previous script to accept an unlimited number of files and
+directories as arguments.
+</div>
+<div class="sNY">
+Hint: You'll want to use a special variable.
+</div>
+<div class="s5V">
+<span class="class-0">Solutions to the Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "Shell Scripting is Fun!"
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+MESSAGE="Shell Scripting is Fun!"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "$MESSAGE"
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 3:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+HOST_NAME=$(hostname)
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "This script is running on ${HOST_NAME}."
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 4:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+FILE="/etc/shadow"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+if [ -e "$FILE" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Shadow passwords are enabled."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div id="part0005.xhtml_page_20" class="s2W">
+<div>
+if [ -w "$FILE" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "You have permissions to edit ${FILE}."
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "You do NOT have permissions to edit ${FILE}."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 5:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+for ANIMAL in man bear pig dog cat sheep
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$ANIMAL"
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 6:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+read -p "Enter the path to a file or a directory: " FILE
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+if [ -f "$FILE" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$FILE is a regular file."
+</div>
+</div>
+<div class="s2W">
+<div>
+elif [ -d "$FILE" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$FILE is a directory."
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$FILE is something other than a regular file or directory."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+ls -l $FILE
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 7:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+FILE=$1
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+if [ -f "$FILE" ]
+</div>
+</div>
+<div id="part0005.xhtml_page_21" class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$FILE is a regular file."
+</div>
+</div>
+<div class="s2W">
+<div>
+elif [ -d "$FILE" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$FILE is a directory."
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$FILE is something other than a regular file or directory."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+ls -l $FILE
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 8:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+for FILE in $@
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  if [ -f "$FILE" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+  then
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "$FILE is a regular file."
+</div>
+</div>
+<div class="s2W">
+<div>
+  elif [ -d "$FILE" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+  then
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "$FILE is a directory."
+</div>
+</div>
+<div class="s2W">
+<div>
+  else
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "$FILE is something other than a regular file or directory."
+</div>
+</div>
+<div class="s2W">
+<div>
+  fi
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+  ls -l $FILE
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+</div>
+<p><span id="part0006.xhtml"></span></p>
+<div id="part0006.xhtml_page_22" class="sK">
+<div id="part0006.xhtml_a2GW" class="s1N">
+Exit Statuses and Return Codes
+</div>
+<div class="sVJ">
+In this chapter, you will learn how to determine the exit status of a
+given command.  You'll learn how to make decisions in your scripts based
+on the exit statuses of various commands.  Finally, you'll learn how to
+use exit statuses in your own scripts.
+</div>
+<div class="s28">
+Every time a command is executed it returns an exit status.  The exit
+status, which is sometimes called a return code or exit code, is an
+integer ranging from 0 to 255.  By convention, commands that execute
+successfully return a 0 exit status.  If some sort of error is
+encountered, then a non-zero exit status is returned.
+</div>
+<div class="s28">
+These return codes can be used in your script for error checking.  It
+can be a simple test, like checking for a zero return code, or it could
+be more complex, like checking for a specific error code.
+</div>
+<div class="s28">
+If you want to find out what the various exit statuses mean, you have to
+consult the documentation for the given command or look at its source
+code.  You can use the <span class="s2HD">man</span> and <span
+class="s2HD">info</span> commands to read the documentation for most
+commands on your system.  For example, in the <span
+class="s2HD">grep</span> man page, it explains <span
+class="s2HD">grep</span> will exit with a status of 0 if the search
+pattern is found and 1 if it is not<span
+id="part0006.xhtml_page_23"></span> .
+</div>
+<div class="sVR">
+The special variable <span class="s2HD">$?</span> contains the return
+code of the previously executed command.  In this shell script snippet,
+the <span class="s2HD">ls</span> command is called with a path to a file
+that doesn't exist.
+</div>
+<div class="s2W">
+<div>
+ls /not/here
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "$?"
+</div>
+</div>
+<div class="s2T">
+Output:
+</div>
+<div class="s2W">
+<div>
+ls: /not/here: No such file or directory
+</div>
+</div>
+<div class="s2W">
+<div>
+2
+</div>
+</div>
+<div class="s28">
+Immediately after the <span class="s2HD">ls</span> command is executed,
+the return code of that command is displayed on the screen using <span
+class="s2HD">echo $?</span> .  This will display a <span
+class="s2HD">2</span> on the screen.  Remember that non-zero exit codes
+indicate some sort of error.  Had the file <span
+class="s2HD">/not/here</span> existed and if <span
+class="s2HD">ls</span> was able to display information about that file
+successfully, the exit status would have been <span
+class="s2HD">0</span> .
+</div>
+<div class="s2T">
+You can use the exit status of a command to make a decision or perform a
+different action based on the exit status.  In this example shell script
+snippet, we use the ping command to test our network connectivity to
+www.google.com.  The <span class="s2HD">-c</span> option for the <span
+class="s2HD">ping</span> command simply tells <span
+class="s2HD">ping</span> to send just one packet.
+</div>
+<div class="s2W">
+<div>
+HOST="google.com"
+</div>
+</div>
+<div class="s2W">
+<div>
+ping -c 1 $HOST
+</div>
+</div>
+<div class="s2W">
+<div>
+if [ "$?" -eq "0" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$HOST reachable."
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$HOST unreachable."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s28">
+After the <span class="s2HD">ping</span> command is executed, we check
+the exit status.  If the exit status is equal to 0, then we <span
+class="s2HD">echo</span> to the screen that google.com is reachable<span
+id="part0006.xhtml_page_24"></span> .
+</div>
+<div class="s28">
+If the exit status is NOT equal to 0 we <span class="s2HD">echo</span>
+to the screen that google.com is unreachable.
+</div>
+<div class="s2T">
+This example just checks for an error condition.  In the <span
+class="s2HD">if</span> statement, we look for a non-zero exit status. 
+If <span class="s2HD">$?</span> does not equal zero, then we <span
+class="s2HD">echo</span> that the host is unreachable.  If the <span
+class="s2HD">ping</span> command succeeds and returns a 0 exit status,
+then the <span class="s2HD">echo</span> statement is not executed.
+</div>
+<div class="s2W">
+<div>
+HOST="google.com"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+ping -c 1 $HOST
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+if [ "$?" -ne "0" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$HOST unreachable."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s2T">
+We can assign the return code of a command to variable and then use that
+variable later in the script.  In this example, the value of <span
+class="s2HD">$?</span> is assigned to the <span
+class="s2HD">RETURN_CODE</span> variable.  So, <span
+class="s2HD">RETURN_CODE</span> contains the exit status of the <span
+class="s2HD">ping</span> command.
+</div>
+<div class="s2W">
+<div>
+HOST="google.com"
+</div>
+</div>
+<div class="s2W">
+<div>
+ping -c 1 $HOST
+</div>
+</div>
+<div class="s2W">
+<div>
+RETURN_CODE=$?
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+if [ "$RETURN_CODE" -ne "0" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$HOST unreachable."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s28">
+In addition to using if statements with exit statuses, you can use
+logical ANDs and ORs.  The double ampersand (<span
+class="s2HD">&amp;&amp;</span> ) represents AND, while the double pipe
+(<span class="s2HD">||</span> ) represents OR.  You can chain together
+multiple commands with either ANDS or ORS.
+</div>
+<div class="s28">
+The command following a double ampersand will only execute if the
+previous command succeeds.  In other words, the command following a
+double ampersand will only run if the previous command exits with a 0
+<span id="part0006.xhtml_page_25"></span> exit status.
+</div>
+<div class="s2T">
+In the following example, <span class="s2HD">mkdir /tmp/bak</span> is
+executed.  If it succeeds and returns a 0 exit status, then, and only
+then, will the <span class="s2HD">cp</span> command be executed.  In
+this example, you can see there is no need for the <span
+class="s2HD">cp</span> command to be executed if the directory wasn't
+able to be created.
+</div>
+<div class="s2W">
+<div>
+mkdir /tmp/bak &amp;&amp; cp test.txt /tmp/bak/
+</div>
+</div>
+<div class="s28">
+The command following a double pipe will only execute if the previous
+command fails.  If the first command returns a non-zero exit status,
+then the next command is executed.
+</div>
+<div class="s2T">
+In the following example, the first <span class="s2HD">cp</span>
+command, <span class="s2HD">cp test.txt /tmp/bak/</span> , is executed. 
+If it succeeds the next <span class="s2HD">cp</span> command is NOT
+executed.  In that instance, if the first <span class="s2HD">cp</span>
+command succeeds, we have successfully created a backup copy of <span
+class="s2HD">test.txt</span> so the there is no need for another backup
+copy of that file.  If the first command fails, then the second command
+is executed.  If test.txt can't be copied into <span
+class="s2HD">/tmp/bak</span> , an attempt will be make to copy it to
+<span class="s2HD">/tmp</span> .  With an OR, only one of the two
+commands will successfully execute.
+</div>
+<div class="s2W">
+<div>
+cp test.txt /tmp/bak/ || cp test.txt /tmp
+</div>
+</div>
+<div class="s2T">
+Let's revisit our earlier example.  Instead of using an <span
+class="s2HD">if</span> statement, here we are using an AND.  This time,
+if the ping command exits with a 0 exit status, then "google.com
+reachable" will be echoed to the screen.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+HOST="google.com"
+</div>
+</div>
+<div class="s2W">
+<div>
+ping -c 1 $HOST &amp;&amp; echo "$HOST reachable."
+</div>
+</div>
+<div class="s2T">
+Here we are using an OR instead of an <span class="s2HD">if</span>
+statement.  In this example, if the <span class="s2HD">ping</span>
+command fails, then "google.com unreachable" will be echoed to the
+screen.  If the <span class="s2HD">ping</span> command succeeds, the
+<span class="s2HD">echo</span> statement will not be executed.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+HOST="google.com"
+</div>
+</div>
+<div id="part0006.xhtml_page_26" class="s2W">
+<div>
+ping -c 1 $HOST || echo "$HOST unreachable."
+</div>
+</div>
+<div class="s28">
+If you want to chain commands together on a single line, you can do that
+by separating those commands with a semicolon.  The semicolon does not
+perform exit status checking.  The command following a semicolon will
+always get executed, no matter if the previous command failed or
+succeeded.
+</div>
+<div class="s2T">
+Separating commands with a semicolon is the same as putting the command
+on separate lines.  I rarely use semicolons to separate commands in
+shell scripts, but you might see this in existing shells scripts.  Of
+course, you can also use this syntax on the command line outside of a
+shell script.  The following two examples are identical in function.
+</div>
+<div class="s2W">
+<div>
+cp test.txt /tmp/bak/ ; cp test.txt /tmp
+</div>
+</div>
+<div class="sYH">
+<div>
+cp test.txt /tmp/bak/
+</div>
+</div>
+<div class="s2W">
+<div>
+cp test.txt /tmp
+</div>
+</div>
+<div class="sYN">
+<span class="s2HF">The</span> <span class="s2HF">exi</span> <span
+class="s2HG">t</span> <span class="s2HF">Command</span>
+</div>
+<div class="sP3">
+Not only do normal commands return an exit status, but shell scripts do
+as well.  You can control the exit status of your shell script by using
+the <span class="s2HD">exit</span> command.  Simply use the <span
+class="s2HD">exit</span> command in your script and follow it with a
+number from 0 to 255.
+</div>
+<div class="sP3">
+If you do not specify a return code with the <span
+class="s2HD">exit</span> command, then the exit status of the previously
+executed command is used as the exit status.  This is also true if you
+do not include the exit command at all in your shell script.  Again, in
+that case, the last command that was executed in your shell script will
+determine the return code for your entire shell script.
+</div>
+<div class="sP3">
+Also note that you can use the <span class="s2HD">exit</span> command
+anywhere in your shell script.  Whenever the exit command is reached,
+your shell script will <span id="part0006.xhtml_page_27"></span> stop
+running.
+</div>
+<div class="sP3">
+In this example, we are controlling the exit status of our script with
+the exit command.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+HOST="google.com"
+</div>
+</div>
+<div class="s2W">
+<div>
+ping -c 1 $HOST
+</div>
+</div>
+<div class="s2W">
+<div>
+if [ "$?" -ne "0" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+   echo "$HOST unreachable."
+</div>
+</div>
+<div class="s2W">
+<div>
+   exit 1
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s2W">
+<div>
+exit 0
+</div>
+</div>
+<div class="s28">
+If the <span class="s2HD">ping</span> command succeeds, a return code of
+0 is received.  This means that the test in the <span
+class="s2HD">if</span> statement is false and that code block will not
+execute.  That means the <span class="s2HD">exit 0</span> line is
+executed.  This stops the execution of the script and returns a 0 exit
+status.
+</div>
+<div class="s28">
+If the <span class="s2HD">ping</span> command fails, then a non-zero
+exit status is received.  That makes the <span class="s2HD">if</span>
+statement true, and the <span class="s2HD">echo</span> command and <span
+class="s2HD">exit</span> <span class="s2HD">1</span> commands are
+executed.  The <span class="s2HD">exit 1</span> command will stop the
+execution of the script and return an exit status of 1.  Now your shell
+script can be called by another shell script and its exit status can be
+examined just like any other command.
+</div>
+<div class="s28">
+Since you control the exit statuses, you can make them have a
+significant meaning.  Maybe a return code of 1 means that one type of
+error occurred while a return code of 2 means that a different type of
+error occurred.  If you have scripts that are executing other scripts,
+then you can program accordingly to these returns codes if you need or
+want to.
+</div>
+<div class="s5V">
+<span class="class-0">Review</span>
+</div>
+<div class="s28">
+In this chapter, you learned that all commands return an exit
+status<span id="part0006.xhtml_page_28"></span> .
+</div>
+<div class="s28">
+Valid exit statuses are numbers that range from 0 to 255, with a zero
+exit status representing the successful execution of a command and a
+non-zero status representing an error condition.
+</div>
+<div class="s28">
+You learned about the special variable <span class="s2HD">$?</span> and
+how it contains the value of the exit status of the previously executed
+command.
+</div>
+<div class="s28">
+You made decisions using the exit status of command by using <span
+class="s2HD">if</span> statements, ANDs, and ORs.
+</div>
+<div class="s28">
+Finally, you learned how to control the exit statuses of your own shell
+scripts by using the exit command.
+</div>
+<div class="s5V">
+<span class="class-0">Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="sNY">
+Write a shell script that displays, "This script will exit with a 0 exit
+status."  Be sure that the script does indeed exit with a 0 exit status.
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="sNY">
+Write a shell script that accepts a file or directory name as an
+argument. Have the script report if it is a regular file, a directory,
+or another type of file.  If it is a regular file, exit with a 0 exit
+status.  If it is a directory, exit with a 1 exit status.  If it is some
+other type of file, exit with a 2 exit status.
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 3:</span>
+</div>
+<div class="sNY">
+Write a script that executes the command "cat /etc/shadow".  If the
+command returns a 0 exit status, report "Command succeeded" and exit
+with a 0 exit status.  If the command returns a non-zero exit status,
+report "Command failed" and exit with a 1 exit status<span
+id="part0006.xhtml_page_29"></span> .
+</div>
+<div class="s5V">
+<span class="class-0">Solutions to the Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+echo "This script will exit with a 0 exit status."
+</div>
+</div>
+<div class="s2W">
+<div>
+exit 0
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+echo "This script will exit with a 0 exit status."
+</div>
+</div>
+<div class="s2W">
+<div>
+exit 0
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 3:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+cat /etc/shadow
+</div>
+</div>
+<div class="s2W">
+<div>
+if [ "$?" -eq "0" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Command succeeded"
+</div>
+</div>
+<div class="s2W">
+<div>
+  exit 0
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Command failed"
+</div>
+</div>
+<div class="s2W">
+<div>
+  exit 1
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+</div>
+<p><span id="part0007.xhtml"></span></p>
+<div id="part0007.xhtml_page_30" class="sK">
+<div id="part0007.xhtml_a2GX" class="s1N">
+Functions
+</div>
+<div class="s28">
+In this chapter, you'll learn why and when you'll want to use
+functions.  You'll learn how to create functions as well as how to use
+them.  We'll talk about variables and their scope.  You'll learn how to
+use parameters to access the arguments passed to your function. 
+Finally, you'll learn how to handle exit statuses and return codes with
+functions.
+</div>
+<div class="s28">
+There is a concept in computer programming and application development
+known as DRY.  DRY stands for Don't Repeat Yourself.  Functions allow
+you to write a block of code once and use it many times. Instead of
+repeating several lines of code each time you need to perform a
+particular task—or function—simply call the function that contains that
+code. This helps in reducing the length of your scripts and also gives
+you a single place to change, test, troubleshoot, and document a given
+task. All of this makes your scripts easier to maintain.
+</div>
+<div class="s28">
+Whenever you need to perform the same action multiple times in a script,
+that's a sign that you should probably write a function for that
+action.  A function is simply a block of reusable code that performs an
+action and returns an exit status or return code.  A function must be
+defined before it is called.  When you call a function, you can pass
+data into the function.  You can access that data within your function
+as <span id="part0007.xhtml_page_31"></span> parameters.
+</div>
+<div class="s5V">
+<span class="class-0">Creating a Function</span>
+</div>
+<div class="s2T">
+There are two ways to create a function.  The first way is to explicitly
+use the keyword <span class="s2HD">function</span> , then follow it by
+the function's name, and then a set of parenthesis.  Next you'll use an
+opening curly brace.  The code or commands that follow will be executed
+when the function is called. To end your function, use a closing curly
+brace.
+</div>
+<div class="s2W">
+<div>
+function function-name() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    # Code goes here.
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s2T">
+The second way to declare a function is exactly like the first except
+that you do not use the keyword function in your declaration. 
+Everything else stays the same.
+</div>
+<div class="s2W">
+<div>
+function-name() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    # Code goes here.
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Calling a Function</span>
+</div>
+<div class="s28">
+To call the function, simply list its name on a line in the script. 
+When calling the function, do not use parentheses.  You may have seen
+this syntax and style in other programming languages, but it doesn't
+work in shell scripts.  Simply place the name of a function on a line
+and it will execute that function.
+</div>
+<div class="s2T">
+When you run this script, the word "Hello!" is displayed on the screen.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+function hello() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Hello!"
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+hello<span id="part0007.xhtml_page_32"></span>
+</div>
+</div>
+<div class="s2T">
+Be aware that functions can call other functions.  In this script, the
+<span class="s2HD">hello</span> function is declared. Next, the <span
+class="s2HD">now</span> function is declared. Finally, the hello
+function is called.  When the <span class="s2HD">hello</span> function
+is called, it prints "Hello!" on the screen and then calls the <span
+class="s2HD">now</span> function, which prints the current time to the
+screen.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+function hello() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Hello!"
+</div>
+</div>
+<div class="s2W">
+<div>
+    now
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s2W">
+<div>
+function now() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "It's $(date +%r)"
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+hello
+</div>
+</div>
+<div class="s28">
+You might have caught that the <span class="s2HD">now</span> function
+was defined after the <span class="s2HD">hello</span> function.  I said
+that functions had to be declared before they are used and, in this
+example, that is exactly what has happened.  Even though the <span
+class="s2HD">hello</span> function calls the <span
+class="s2HD">now</span> function, and the <span class="s2HD">now</span>
+function is below it in the script, the <span class="s2HD">now</span>
+function actually gets read into the script before the <span
+class="s2HD">hello</span> function is called.  So, in the order of
+execution, it is defined before it is used.
+</div>
+<div class="s2T">
+Do not do this:
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+function hello() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Hello!"
+</div>
+</div>
+<div class="s2W">
+<div>
+    now
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s2W">
+<div>
+hello
+</div>
+</div>
+<div class="s2W">
+<div>
+function now() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "It's $(date +%r)"
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s28">
+If you were to run that script, it would throw an error stating that
+<span class="s2HD">now</span> wasn't found.  This is because <span
+class="s2HD">hello</span> gets executed before the <span
+class="s2HD">now</span> <span id="part0007.xhtml_page_33"></span>
+function is declared, or read, into the script.
+</div>
+<div class="s28">
+This is really the main point of scripting languages.  They are not
+pre-compiled.  In some languages, you can define a function anywhere and
+the compiler will examine all of the source code before piecing it all
+together for the final execution of the program.  In a script, the
+commands and components are read from the top to the bottom at run time.
+</div>
+<div class="s28">
+Note that it's a best practice to place all of your functions at the top
+of your script.  This ensures they are all defined before they are used.
+</div>
+<div class="s5V">
+<span class="class-0">Positional Parameters</span>
+</div>
+<div class="s28">
+Like shell scripts themselves, functions can accept parameters.  Also
+like shell scripts, you can access the values of these passed in
+parameters using <span class="s2HD">$1</span> , <span
+class="s2HD">$2</span> , and so on.  You can even access all the
+parameters passed into the function using <span class="s2HD">$@</span>
+.  The only difference is that <span class="s2HD">$0</span> is still the
+name of the script itself. You can't access the name of the function
+using <span class="s2HD">$0</span> , but the good news is that you'll
+never really want to anyway.
+</div>
+<div class="s2T">
+To send data to a function, supply the data after the function name.  In
+this example, the <span class="s2HD">hello</span> function is called
+with one parameter, <span class="s2HD">Jason</span> .  This means the
+contents of <span class="s2HD">$1</span> inside the hello function are
+"<span class="s2HD">Jason</span> ".  As you can guess, the output of
+this script is simply "Hello Jason".
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+function hello() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Hello $1"
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s2W">
+<div>
+hello Jason
+</div>
+</div>
+<div class="s2T">
+Output:
+</div>
+<div class="s2W">
+<div>
+Hello Jason<span id="part0007.xhtml_page_34"></span>
+</div>
+</div>
+<div class="sVR">
+This script will loop through each of the parameters passed to the hello
+function and echo "Hello" followed by the parameter.  This output of
+this script would be three lines.  The first line would be "Hello
+Jason", the second line would be "Hello Dan", and the third line would
+be "Hello Ryan".
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+function hello() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    for NAME in $@
+</div>
+</div>
+<div class="s2W">
+<div>
+    do
+</div>
+</div>
+<div class="s2W">
+<div>
+        echo "Hello $NAME"
+</div>
+</div>
+<div class="s2W">
+<div>
+    done
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s2W">
+<div>
+hello Jason Dan Ryan
+</div>
+</div>
+<div class="s2T">
+Output:
+</div>
+<div class="s2W">
+<div>
+Hello Jason
+</div>
+</div>
+<div class="s2W">
+<div>
+Hello Dan
+</div>
+</div>
+<div class="s2W">
+<div>
+Hello Ryan
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Variable Scope</span>
+</div>
+<div class="s28">
+By default, all variables are global.  This means that the variable and
+its value can be accessed anywhere in the script, including in any
+function.  The only small catch is that the variable has to be defined
+before it can be used.  You can't assign a value to a variable at the
+very end of your script and access that value via the variable at the
+very top.  If you attempt that, the contents of that variable will be
+blank as it hasn't been given a value yet.  This is true for functions
+as well.  If a function uses a global variable, that variable has to be
+defined before the function is called.
+</div>
+<div class="s2T">
+If we look at this snippet of a shell script, you'll see that the
+variable, <span class="s2HD">GLOBAL_VAR</span> , is defined before the
+function is called.  In this case, the value of <span
+class="s2HD">GLOBAL_VAR</span> can be accessed in the function.
+</div>
+<div class="s2W">
+<div>
+GLOBAL_VAR=1
+</div>
+</div>
+<div class="s2W">
+<div>
+# GLOBAL_VAR is available
+</div>
+</div>
+<div id="part0007.xhtml_page_35" class="s2W">
+<div>
+# in the function.
+</div>
+</div>
+<div class="s2W">
+<div>
+my_function
+</div>
+</div>
+<div class="s2T">
+Here is an example of the opposite.  Since the variable, <span
+class="s2HD">GLOBAL_VAR</span> , is defined after the function is
+called, it is not available in the function.
+</div>
+<div class="s2W">
+<div>
+# GLOBAL_VAR is NOT available
+</div>
+</div>
+<div class="s2W">
+<div>
+# in the function.
+</div>
+</div>
+<div class="s2W">
+<div>
+my_function
+</div>
+</div>
+<div class="s2W">
+<div>
+GLOBAL_VAR=1
+</div>
+</div>
+<div class="s28">
+If a global variable is defined in a function, it is not available
+outside that function until the function is called and executed.  At the
+top of the next script, the <span class="s2HD">my_function</span>
+function is declared.  It hasn't been executed yet.  If we attempt to
+use the variable defined within the function without calling it first,
+the value of the variable will be empty.  In this example, the first
+<span class="s2HD">echo</span> statement will simply print a blank line.
+</div>
+<div class="s2T">
+Next, the <span class="s2HD">my_function</span> function is called.  Now
+a value has been assigned to the variable named <span
+class="s2HD">GLOBAL_VAR</span> .  On the <span class="s2HD">echo</span>
+statement after the function call, it will print "1" because that is the
+value now assigned to <span class="s2HD">GLOBAL_VAR</span> .
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+my_function() {
+</div>
+</div>
+<div class="s2W">
+<div>
+    GLOBAL_VAR=1
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# GLOBAL_VAR not available yet.
+</div>
+</div>
+<div class="s2W">
+<div>
+echo $GLOBAL_VAR
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+my_function
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# GLOBAL_VAR is NOW available.
+</div>
+</div>
+<div class="s2W">
+<div>
+echo $GLOBAL_VAR
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Local Variables</span>
+</div>
+<div class="s28">
+A local variable is a variable that can only be accessed within the
+<span id="part0007.xhtml_page_36"></span> function in which it is
+declared.  Use the <span class="s2HD">local</span> keyword before the
+variable name.  Only use the <span class="s2HD">local</span> keyword the
+first time the local variable is used.  Note that the <span
+class="s2HD">local</span> keyword can only be used inside a function.
+</div>
+<div class="s28">
+It's a best practice to use local variables inside of your functions. 
+However, you'll find plenty of shell scripts that do not adhere to this
+recommendation.  Most of the time, it will not cause a problem as long
+as you are using unique variable names throughout your script.
+</div>
+<div class="s5V">
+<span class="class-0">Exit Statuses and Return Codes</span>
+</div>
+<div class="s28">
+Functions are really like shell scripts within a shell script.  Just
+like a shell script, a function has an exit status, sometimes called a
+return code.  This exit status can be explicitly set by using the <span
+class="s2HD">return</span> statement and following it with the status
+you would like to return.  If no <span class="s2HD">return</span>
+statement is used, then the exit status of the function is the exit
+status of the last command executed in the function.
+</div>
+<div class="s28">
+The <span class="s2HD">return</span> statement only accepts a number. 
+Only integers between 0 and 255 can be used as an exit status.  An exit
+status of 0 signifies the successful completion of a command or
+function.  A non-zero exit status indicates some type of error. To
+access the exit status of a function, use <span class="s2HD">$?</span>
+immediately after the function is called.
+</div>
+<div class="s2T">
+In this snippet, the value of <span class="s2HD">$?</span> will be the
+exit status of <span class="s2HD">the my_function</span> function.
+</div>
+<div class="s2W">
+<div>
+my_function
+</div>
+</div>
+<div class="s2W">
+<div>
+echo $?
+</div>
+</div>
+<div class="s28">
+You can use the exit status of a function to make a decision.  For
+example, you can check to see if the exit status is 0.  If it is not,
+then you know some sort of error occurred.  At that point you could do
+some sort of error handling, for example.
+</div>
+<div class="s28">
+Before we wrap up this chapter, I want to show you an example of a <span
+id="part0007.xhtml_page_37"></span> function that you might actually use
+in one of your scripts.  The <span class="s2HD">backup_file</span>
+function will create a backup of a file and place it into the <span
+class="s2HD">/var/tmp</span> directory.  I use this kind of function
+when my script modifies several files and I want to make sure I have a
+copy to view or restore, just in case something unexpected happens.
+</div>
+<div class="s28">
+In any case, the first line of the function checks to see whether what
+was passed in is a file and if it exists.  If it is a file and it does
+exist, a variable called <span class="s2HD">BACKUP_FILE</span> is
+created.  It starts off with <span class="s2HD">/var/tmp</span> ,
+followed by the basename of the passed in file, the current date, and
+the PID of the shell script.
+</div>
+<div class="s28">
+The <span class="s2HD">basename</span> command removes any leading
+directory components and returns just the file name.  The <span
+class="s2HD">basename</span> of <span class="s2HD">/etc/hosts</span> is
+just <span class="s2HD">hosts</span> .  The <span
+class="s2HD">date</span> command is using a nice format of the year,
+followed by the month, and finally the day, all separated by dashes. 
+The special variable <span class="s2HD">$$</span> represents the PID of
+the currently running shell script.  I use this so if I run the script
+multiple times on the same day, the PID will be different each time and
+thus the existing backups will not be overwritten.
+</div>
+<div class="s2T">
+In this snippet, the <span class="s2HD">backup_file</span> function is
+called with <span class="s2HD">/etc/hosts</span> as a parameter.  This
+will create a copy of that file and place it in the temp directory as
+just described.  Finally, there is an <span class="s2HD">if</span>
+statement that examines the return code of the <span
+class="s2HD">backup_file</span> function.
+</div>
+<div class="s2W">
+<div>
+function backup_file () {
+</div>
+</div>
+<div class="s2W">
+<div class="s16Y">
+if [ -f "$1" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+  then
+</div>
+</div>
+<div class="s2W">
+<div>
+    local BACKUP_FILE="/var/tmp/$(basename ${1}).$(date +%F).$$"
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Backing up $1 to ${BACKUP_FILE}"
+</div>
+</div>
+<div class="s2W">
+<div>
+    cp $1 $BACKUP_FILE
+</div>
+</div>
+<div class="s2W">
+<div>
+  fi
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+backup_file /etc/hosts
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div id="part0007.xhtml_page_38" class="s2W">
+<div>
+if [ $? -eq 0 ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Backup succeeded!"
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s28">
+We can take this example and improve it. One thing we can do is change
+the <span class="s2HD">if</span> statement to an <span
+class="s2HD">if/else</span> statement.  If the file exists, let the exit
+status of the function be the exit status of the <span
+class="s2HD">cp</span> command.  If the <span class="s2HD">cp</span>
+command returns a non-zero code, then our function has also failed.  If
+we know for a fact that the file does not exist, we can use the <span
+class="s2HD">else</span> clause to explicitly return a non-zero exit
+status back to our main script.
+</div>
+<div class="s2T">
+We can also improve what happens after the function is called.  If we
+know the function—and thus the backup—has failed, we can exit the script
+with a non-zero exit status.  We could also do some other sort of error
+handling.  Maybe you don't want to exit the script, but instead keep
+track of all the files that failed to backup.  You could potentially
+move this bit of code into the <span class="s2HD">backup_file</span>
+function if you wanted to as well.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+function backup_file () {
+</div>
+</div>
+<div class="s2W">
+<div>
+  # This function creates a backup of a file.
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+  # Make sure the file exists.
+</div>
+</div>
+<div class="s2W">
+<div>
+  if [ -f "$1" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+  then
+</div>
+</div>
+<div class="s2W">
+<div>
+    # Make the BACKUP_FILE variable.
+</div>
+</div>
+<div class="s2W">
+<div>
+    local BACKUP_FILE="/tmp/$(basename ${1}).$(date +%F).$$"
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Backing up $1 to ${BACKUP_FILE}"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div class="s18G">
+# The exit status of the function will be the
+</div>
+</div>
+<div class="s2W">
+<div>
+    # exit status of the cp command.
+</div>
+</div>
+<div class="s2W">
+<div>
+    cp $1 $BACKUP_FILE
+</div>
+</div>
+<div class="s2W">
+<div>
+  else
+</div>
+</div>
+<div class="s2W">
+<div>
+    # The file does not exist, so return
+</div>
+</div>
+<div class="s2W">
+<div>
+    # a non-zero exit status.
+</div>
+</div>
+<div class="s2W">
+<div>
+   <span id="part0007.xhtml_page_39"></span>  return 1
+</div>
+</div>
+<div class="s2W">
+<div>
+  fi
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Call the function
+</div>
+</div>
+<div class="s2W">
+<div>
+backup_file /etc/hosts
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Make a decision based on the exit status.
+</div>
+</div>
+<div class="s2W">
+<div>
+# Note this is for demonstration purposes.
+</div>
+</div>
+<div class="s2W">
+<div>
+# You could have put this functionality inside the
+</div>
+</div>
+<div class="s2W">
+<div>
+# backup_file function.
+</div>
+</div>
+<div class="s2W">
+<div>
+if [ $? -eq "0" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Backup succeeded!"
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Backup failed!"
+</div>
+</div>
+<div class="s2W">
+<div>
+  # Abort the script and return a non-zero status.
+</div>
+</div>
+<div class="s2W">
+<div>
+  exit 1
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Summary</span>
+</div>
+<div class="s28">
+In this chapter, we discussed the concept of DRY, which stands for Don't
+Repeat Yourself.  If you find yourself writing the same bit of code in
+multiple places in your script, it's a good sign that you should use a
+function.
+</div>
+<div class="s28">
+You learned that, by default, all variables are global.  You learned how
+to use the <span class="s2HD">local</span> keyword to define local
+variables that are only available within the function that they are
+defined.
+</div>
+<div class="s28">
+You also learned how to use positional parameters within your functions.
+</div>
+<div class="s28">
+Finally, we covered how to use exit statuses with your functions<span
+id="part0007.xhtml_page_40"></span> .
+</div>
+<div class="s5V">
+<span class="class-0">Practice Exercises</span>
+</div>
+<div class="s1A7">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="s28">
+Write a shell script that consists of a function that displays the
+number of files in the present working directory.  Name this function
+"file_count" and call it in your script.  If you use a variable in your
+function, remember to make it a local variable.
+</div>
+<div class="s28">
+Hint:  The <span class="s2HD">wc</span> utility is used to count the
+number of lines, words, and bytes.
+</div>
+<div class="s1A7">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="s28">
+Modify the script from the previous exercise.  Make the "file_count"
+function accept a directory as an argument.  Next, have the function
+display the name of the directory followed by a colon.  Finally, display
+the number of files to the screen on the next line.  Call the function
+three times.  First on the "/etc" directory, next on the "/var"
+directory and finally on the "/usr/bin" directory.
+</div>
+<div class="s2T">
+Example output:
+</div>
+<div class="s2W">
+<div>
+/etc:
+</div>
+</div>
+<div class="s2W">
+<div>
+      85
+</div>
+</div>
+<div class="s1AJ">
+<span class="class-0">Solutions to the Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+function file_count() {
+</div>
+</div>
+<div class="s2W">
+<div>
+   local NUMBER_OF_FILES=$(ls | wc -l)
+</div>
+</div>
+<div class="s2W">
+<div>
+   echo "$NUMBER_OF_FILES"
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+file_count<span id="part0007.xhtml_page_41"></span>
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+function file_count() {
+</div>
+</div>
+<div class="s2W">
+<div>
+   local DIR=$1
+</div>
+</div>
+<div class="s2W">
+<div>
+   local NUMBER_OF_FILES=$(ls $DIR | wc -l)
+</div>
+</div>
+<div class="s2W">
+<div>
+   echo "${DIR}:"
+</div>
+</div>
+<div class="s2W">
+<div>
+   echo "$NUMBER_OF_FILES"
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+file_count /etc
+</div>
+</div>
+<div class="s2W">
+<div>
+file_count /var
+</div>
+</div>
+<div class="s2W">
+<div>
+file_count /usr/bin<span id="part0007.xhtml_page_42"></span>
+</div>
+</div>
+<div id="part0007.xhtml_toc4_Wildcards" class="s1BU">
+Wildcards
+</div>
+<div class="s1BW">
+In this chapter, you will learn what wildcards are, when you can use
+them on the command line, the various types of wildcards, and how to
+incorporate them into your shell scripts.
+</div>
+<div class="s28">
+A wildcard is a character or a string that is used to match file and
+directory names. You can use wildcards to create search patterns that,
+when expanded, will return a list of matching files and directories. 
+Sometimes wildcards are referred to as "globs" or "glob patterns". 
+Globbing is the act of expanding a wildcard pattern into the list of
+matching files and directories.
+</div>
+<div class="s28">
+Wildcards can be used in conjunction with most Linux commands.  If a
+command accepts a file or directory as an argument, you can use a
+wildcard in the argument to specify a file or set of files.  You'll find
+yourself using wildcards with commands such as ls, rm, cp, mv, and
+others.
+</div>
+<div class="s28">
+The two main wildcards are the asterisk (<span class="s2HD">*</span> )
+and the question mark (<span class="s2HD">?</span> ).  The asterisk, or
+star as I like to call it, matches zero or more characters.  It matches
+anything.  By itself, it's not really that useful, but when you <span
+id="part0007.xhtml_page_43"></span> combine it with other parts of the
+file or directory names that you're looking for, it becomes powerful.
+</div>
+<div class="s28">
+For example, you could use <span class="s2HD">*.txt</span> to find all
+the files that end in .txt.  If you wanted to list all the files that
+start with the letter "a", use <span class="s2HD">a*</span> .  If you
+want to find all the files that start with an "a" and end in ".txt", use
+<span class="s2HD">a*.txt</span> .
+</div>
+<div class="s28">
+The question mark matches exactly one character.  If you want to find
+all the files that have only one character preceding ".txt", use <span
+class="s2HD">?.txt</span> .  To match all the two letter files that
+begin with an "a", use <span class="s2HD">a?</span> .  To match all the
+files that start with an "a," are then followed by exactly one more
+character, and then ends in ".txt", use <span class="s2HD">a?.txt</span>
+.
+</div>
+<div class="s5V">
+<span class="class-0">Character Classes</span>
+</div>
+<div class="s28">
+You can use something called a character class to create very specific
+search patterns.  Start with a left bracket then list one or more
+characters you want to match and then end with a right bracket.  For
+example, if you want to match a one character long file name that
+consists of a vowel, you can use <span class="s2HD">[aeiou]</span> .  If
+you want to match files that start with "ca", followed by either an "n"
+or a "t", followed by zero or more characters, then use <span
+class="s2HD">ca[nt]*</span> .  This pattern will match files named
+"can", "cat", "candy", and "catch."
+</div>
+<div class="s28">
+If you want to exclude characters in a match, use an exclamation mark. 
+For example, if you want to find all the files that do not start with a
+vowel, use <span class="s2HD">[!aeiou]*</span> .  "Baseball" and
+"cricket" match this pattern because the first character is not an
+"a,"e", "i," "o," or a "u."
+</div>
+<div class="s5V">
+<span class="class-0">Ranges</span>
+</div>
+<div class="s28">
+When using character classes, you can create a range by separating two
+characters with a hyphen.  If you want to match all the characters from
+"a" to "g" use <span class="s2HD">[a-g]</span> .  If you want to match
+the numbers 3, 4, 5, and 6, use <span class="s2HD">[3-6]</span> <span
+id="part0007.xhtml_page_44"></span> .
+</div>
+<div class="s5V">
+<span class="class-0">Named Character Classes</span>
+</div>
+<div class="s28">
+Instead of creating your own ranges, you can use predefined named
+character classes.  These named classes represent the most commonly used
+ranges.
+</div>
+<div class="s28">
+<span class="s2HD">[:alpha:]</span> - Matches  alphabetic (letters). 
+This matches both lower and uppercase letters.
+</div>
+<div class="s28">
+<span class="s2HD">[:alnum:]</span> - Matches alphanumeric characters. 
+This character class matches alpha and digits.  In other words, it
+matches any uppercase letters, any lowercase letters, or any decimal
+digits.
+</div>
+<div class="s28">
+<span class="s2HD">[:digit:]</span> - Represents numbers in decimal, 0
+to 9
+</div>
+<div class="s28">
+<span class="s2HD">[:lower:]</span> - Matches lowercase letters
+</div>
+<div class="s28">
+<span class="s2HD">[:space:]</span> - Matches whitespace. This means
+characters such as spaces, tabs, and newline characters.
+</div>
+<div class="s28">
+<span class="s2HD">[:upper:]</span> - Matches uppercase letters
+</div>
+<div class="s5V">
+<span class="class-0">Matching Wildcard Patterns</span>
+</div>
+<div class="s28">
+What if you want to match one of the wildcard characters?  Then you
+would escape that character with a backslash (<span
+class="s2HD">\</span> ).  To escape the wildcard, simply place the
+backslash before the wildcard character.  If you want to make your life
+easier, don't name your files with question marks and asterisks. 
+However, you may end up receiving a file with these characters in them,
+so you'll need to know how to handle them.  For example, if you want to
+match all the files that end with a question mark, then use *<span
+class="s2HD">\?</span> .  An example match would be a file name
+"d-o-n-e?".
+</div>
+<div class="s5V">
+<span class="class-0">Wildcard Demo</span>
+</div>
+<div class="s28">
+If you would like to watch me demonstrate wildcards on the command <span
+id="part0007.xhtml_page_45"></span> line, visit:  <a
+href="http://www.linuxtrainingacademy.com/wildcard-demo/"
+class="s2HA">http://www.linuxtrainingacademy.com/wildcard-demo/</a>
+</div>
+<div class="s5V">
+<span class="class-0">Using Wildcards in Shell Scripts</span>
+</div>
+<div class="s28">
+When you want to create a script that works on a group of files or
+directories, use wildcards. One way to use wildcards in your scripts is
+the same way you use them on the command line.
+</div>
+<div class="s2T">
+This script changes to the <span class="s2HD">/var/www directory</span>
+and copies all the html files into <span
+class="s2HD">/var/www-just-html.</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+cd /var/www
+</div>
+</div>
+<div class="s2W">
+<div>
+cp *.html /var/www-just-html
+</div>
+</div>
+<div class="s28">
+Let's say you want to do something for each file that matches a
+wildcard.  In that case, you can use a <span class="s2HD">for</span>
+loop.  Let's use a <span class="s2HD">for</span> loop to perform an
+action on all the html files in a directory.
+</div>
+<div class="s28">
+The following script simply echoes to the screen the name of the file
+that is about to be copied, and then copies that file from the <span
+class="s2HD">/var/www</span> directory to the <span
+class="s2HD">/var/www-just-html</span> directory.  Of course, you could
+do something more complex in this loop if you wanted.
+</div>
+<div class="s2T">
+Notice that the wildcard expression is being used where you would
+normally provide a list.  This wildcard expression will expand to create
+a list of matching file and directories.  In the case that the wildcard
+is not matched, the <span class="s2HD">for</span> loop is not executed. 
+Also notice that we are explicitly changing into a directory before we
+use the wildcard.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+cd /var/www
+</div>
+</div>
+<div class="s2W">
+<div>
+for FILE in *.html
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Copying $FILE"
+</div>
+</div>
+<div class="s2W">
+<div>
+    cp $FILE /var/www-just-html
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="s2T">
+The output of the script might look something like this:
+</div>
+<div id="part0007.xhtml_page_46" class="s2W">
+<div>
+Copying about.html
+</div>
+</div>
+<div class="s2W">
+<div>
+Copying contact.html
+</div>
+</div>
+<div class="s2W">
+<div>
+Copying index.html
+</div>
+</div>
+<div class="s2T">
+Let's modify the script just slightly.  Instead of changing into the
+<span class="s2HD">/var/www</span> directory, let's include that path in
+the wildcard expression.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+for FILE in /var/www/*.html
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Copying $FILE"
+</div>
+</div>
+<div class="s2W">
+<div>
+    cp $FILE /var/www-just-html
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="s2T">
+The output of the script will look something like this:
+</div>
+<div class="s2W">
+<div>
+Copying /var/www/about.html
+</div>
+</div>
+<div class="s2W">
+<div>
+Copying /var/www/contact.html
+</div>
+</div>
+<div class="s2W">
+<div>
+Copying /var/www/index.html
+</div>
+</div>
+<div class="s28">
+Notice how the path is included in the output.
+</div>
+<div class="s28">
+The following example demonstrates how not to use a wildcard.  In the
+script, all the files ending in ".html" in the current working directory
+will be copied.  The current working directory is the directory from
+which you started this script.  If you wanted to get the same result as
+the previous scripts, you would have to change into the <span
+class="s2HD">/var/www</span> directory before you executed this script.
+</div>
+<div class="s2T">
+Instead of having this dependency live outside of your shell script, you
+should instead explicitly change into the desired directory with the
+<span class="s2HD">cd</span> command within your shell script or include
+the path in the wildcard expression.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+for FILE in *.html
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Copying $FILE"
+</div>
+</div>
+<div class="s2W">
+<div>
+    cp $FILE /var/www-just-html
+</div>
+</div>
+<div class="s2W">
+<div>
+done<span id="part0007.xhtml_page_47"></span>
+</div>
+</div>
+<div class="s1ES">
+<span class="class-0">Review</span>
+</div>
+<div class="s28">
+In this chapter, you learned how to use wildcards.  You learned that the
+asterisk matches zero or more characters.  You also learned that the
+question mark matches exactly one of any character.  You learned about
+character classes and how you can match any character that is included
+between the brackets.
+</div>
+<div class="s28">
+You were taught about ranges and how you can create your own custom
+ranges by starting with a character, following it by a hyphen, and then
+ending it with another character.  Finally, you learned about the
+various named character classes and how they can be used to match common
+sets of characters such as digits, upper case letters, and lowercase
+letters.
+</div>
+<div class="s28">
+Finally, we looked at how you can use wildcards in your shell scripts in
+conjunction with loops.  You also learned that if you do not supply a
+directory in the wildcard expression or change into a directory before
+using the wildcard expression, the wildcard expression will operate on
+the contents of your current directory.
+</div>
+<div class="s5V">
+<span class="class-0">Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="sP3">
+Write a shell script that renames all files in the current directory
+that end in ".jpg" to begin with today's date in the following format:
+ YYYY-MM-DD.  For example, if a picture of my cat was in the current
+directory and today was October 31, 2016 it would change name from
+"mycat.jpg" to "2016-10-31-mycat.jpg".
+</div>
+<div class="sP3">
+Hint: Look at the format options for the date command.
+</div>
+<div class="sNY">
+For "extra credit", make sure to gracefully handle instances where there
+are no ".jpg" files in the current directory.  (Hint: <span
+class="s2HD">man bash</span> and read the <span
+id="part0007.xhtml_page_48"></span> section on the nullglob option.)
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="sP3">
+Write a script that renames files based on the file extension.  The
+script should prompt the user for a file extension.  Next, it should ask
+the user what prefix to prepend to the file name(s).  By default, the
+prefix should be the current date in YYYY-MM-DD format.  If the user
+simply presses enter, the current date will be used.  Otherwise,
+whatever the user entered will be used as the prefix.  Next, it should
+display the original file name and the new name of the file.  Finally,
+it should rename the file.
+</div>
+<div class="s1F4">
+Example output 1:
+</div>
+<div class="s2W">
+<div>
+Please enter a file extension: jpg
+</div>
+</div>
+<div class="s2W">
+<div>
+Please enter a file prefix:  (Press ENTER for 2015-08-10). vacation
+</div>
+</div>
+<div class="s2W">
+<div>
+Renaming mycat.jpg to vacation-mycat.jpg.
+</div>
+</div>
+<div class="s1FC">
+Example output 2:
+</div>
+<div class="s2W">
+<div>
+Please enter a file extension: jpg
+</div>
+</div>
+<div class="s2W">
+<div>
+Please enter a file prefix:  (Press ENTER for 2015-08-10).
+</div>
+</div>
+<div class="s2W">
+<div>
+Renaming mycat.jpg to 2015-08-10-mycat.jpg.
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Solutions to the Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Optional:
+</div>
+</div>
+<div class="s2W">
+<div>
+# Uncomment the following line to avoid an error when no jpg files are
+found.
+</div>
+</div>
+<div class="s2W">
+<div>
+# shopt -s nullglob
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# YYYY-MM-DD
+</div>
+</div>
+<div id="part0007.xhtml_page_49" class="s2W">
+<div>
+DATE=$(date +%F)
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+for FILE in *.jpg
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  mv $FILE ${DATE}-${FILE}
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# YYYY-MM-DD
+</div>
+</div>
+<div class="s2W">
+<div>
+DATE=$(date +%F)
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+read -p "Please enter a file extension: " EXTENSION
+</div>
+</div>
+<div class="s2W">
+<div>
+read -p "Please enter a file prefix:  (Press ENTER for ${DATE}). "
+PREFIX
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+if [ -z "$PREFIX" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  PREFIX="$DATE"
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+for FILE in *.${EXTENSION}
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  NEW_FILE="${PREFIX}-${FILE}"
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Renaming $FILE to ${NEW_FILE}."
+</div>
+</div>
+<div class="s2W">
+<div>
+  mv $FILE ${NEW_FILE}
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<div id="part0008.xhtml_page_50" class="sK">
+<div id="part0008.xhtml_a2GZ" class="s1N">
+Case Statements
+</div>
+<div class="s28">
+You already know how to make decisions and vary the flow of your scripts
+by using <span class="s2HD">if</span> statements.  If you find yourself
+using an <span class="s2HD">if</span> statement to compare the same
+variable against different values, you could use a case statement in its
+place.  Some people argue that, for these situations, a case statement
+is easier to read.
+</div>
+<div class="s28">
+You'll see case statement in shell scripts and you'll want to at least
+understand what they are doing and how they work.  One common place to
+find case statements in use is in system startup scripts.
+</div>
+<div class="s2T">
+Here is an example <span class="s2HD">if</span> statement that could
+also be a case statement.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+if [ "$1" = "start" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  /usr/sbin/sshd
+</div>
+</div>
+<div class="s2W">
+<div>
+elif [ "$1" = "stop" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  kill $(cat /var/run/sshd.pid)
+</div>
+</div>
+<div class="s2W">
+<div>
+elif [ "$1" = "restart" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  kill $(cat /var/run/sshd.pid)
+</div>
+</div>
+<div class="s2W">
+<div>
+  /usr/sbin/sshd
+</div>
+</div>
+<div class="s2W">
+<div>
+elif [ "$1" = "reload" ]
+</div>
+</div>
+<div id="part0008.xhtml_page_51" class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  kill –HUP $(cat /var/run/sshd.pid)
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Usage: $0 start|stop|restart|reload"
+</div>
+</div>
+<div class="s2W">
+<div>
+  exit 1
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s28">
+To create a case statement, start with the word <span
+class="s2HD">case</span> , follow it with an expression (most commonly a
+variable), and end the line with the word <span class="s2HD">in</span> .
+</div>
+<div class="s2T">
+Next, list a pattern or value you want to test against the variable. 
+End the pattern with a parenthesis.  If that pattern is matched, the
+commands following it will be executed.  The execution will stop when a
+double semicolon is reached and the script will continue after the case
+statement.  You can test for multiple values using the same pattern. 
+Finally, the case statement is ended with <span class="s2HD">esac</span>
+, which is “case” spelled backwards.
+</div>
+<div class="s2W">
+<div>
+case "$VAR" in
+</div>
+</div>
+<div class="s2W">
+<div>
+    pattern_1)
+</div>
+</div>
+<div class="s2W">
+<div>
+        # Commands go here.
+</div>
+</div>
+<div class="s2W">
+<div>
+        ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+    pattern_N)
+</div>
+</div>
+<div class="s2W">
+<div>
+        # Commands go here.
+</div>
+</div>
+<div class="s2W">
+<div>
+        ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+esac
+</div>
+</div>
+<div class="s28">
+Here's an example case statement.  You'll find something similar to this
+in startup scripts or scripts that are used to control the behavior of a
+program.
+</div>
+<div class="s28">
+This case statement examines the value of <span class="s2HD">$1</span>
+.  Remember that <span class="s2HD">$1</span> is the first argument
+supplied to the shell script.  If <span class="s2HD">$1</span> is equal
+to "start", then <span class="s2HD">/usr/sbin/sshd</span> is executed. 
+If <span class="s2HD">$1</span> is equal to "stop", then the <span
+class="s2HD">kill</span> command is executed.  If <span
+class="s2HD">$1</span> doesn't match "start" or "stop", nothing happens
+and the shell script continues after the case statement<span
+id="part0008.xhtml_page_52"></span> .
+</div>
+<div class="s2T">
+Note that the patterns are case sensitive.  If someone were to execute
+this shell script and use "START" in all capital letters as the first
+argument, nothing would happen.  This case statement only matches
+"start" in all lowercase letters and "stop" in all lowercase letters.
+</div>
+<div class="s2W">
+<div>
+case "$1" in
+</div>
+</div>
+<div class="s2W">
+<div>
+   start)
+</div>
+</div>
+<div class="s2W">
+<div>
+      /usr/sbin/sshd
+</div>
+</div>
+<div class="s2W">
+<div>
+      ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+   stop)
+</div>
+</div>
+<div class="s2W">
+<div>
+      kill $(cat /var/run/sshd.pid)
+</div>
+</div>
+<div class="s2W">
+<div>
+      ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+esac
+</div>
+</div>
+<div class="s28">
+Here is a slightly modified version of the case statement.  In the
+following example, a wildcard is used. Wildcards are covered more in
+depth in another chapter in this book.  What you learn about pattern
+matching there applies to the case statement as well.
+</div>
+<div class="s2T">
+In this example, anything other than "start" and "stop" will cause the
+last pattern to be matched.  In that case, the <span
+class="s2HD">echo</span> and <span class="s2HD">exit</span> commands
+will be executed.
+</div>
+<div class="s2W">
+<div>
+case "$1" in
+</div>
+</div>
+<div class="s2W">
+<div>
+   start)
+</div>
+</div>
+<div class="s2W">
+<div>
+      /usr/sbin/sshd
+</div>
+</div>
+<div class="s2W">
+<div>
+      ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+   stop)
+</div>
+</div>
+<div class="s2W">
+<div>
+      kill $(cat /var/run/sshd.pid)
+</div>
+</div>
+<div class="s2W">
+<div>
+      ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+   *)
+</div>
+</div>
+<div class="s2W">
+<div>
+     echo "Usage: $0 start|stop"
+</div>
+</div>
+<div class="s2W">
+<div>
+      exit 1
+</div>
+</div>
+<div class="s2W">
+<div>
+      ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+esac
+</div>
+</div>
+<div class="s28">
+This is yet another slightly modified version of the same case
+statement.  This time, you might notice that a pipe was used.  You can
+use the pipe as an OR.  So, if <span class="s2HD">$1</span> is equal to
+"start" in all lowercase letters or "START" in all uppercase letters,
+the <span class="s2HD">sshd</span> command is executed<span
+id="part0008.xhtml_page_53"></span> .
+</div>
+<div class="s2T">
+We did the same thing with "stop."  Like the previous example, the
+wildcard will act as a catch-all and match anything else.
+</div>
+<div class="s2W">
+<div>
+case "$1" in
+</div>
+</div>
+<div class="s2W">
+<div>
+   start|START)
+</div>
+</div>
+<div class="s2W">
+<div>
+      /usr/sbin/sshd
+</div>
+</div>
+<div class="s2W">
+<div>
+      ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+   stop|STOP)
+</div>
+</div>
+<div class="s2W">
+<div>
+      kill $(cat /var/run/sshd.pid)
+</div>
+</div>
+<div class="s2W">
+<div>
+      ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+   *)
+</div>
+</div>
+<div class="s2W">
+<div>
+      echo "Usage: $0 start|stop" ; exit 1
+</div>
+</div>
+<div class="s2W">
+<div>
+      ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+esac
+</div>
+</div>
+<div class="s2T">
+Take a look at this example:
+</div>
+<div class="s2W">
+<div>
+read -p "Enter y or n: " ANSWER
+</div>
+</div>
+<div class="s2W">
+<div>
+case "$ANSWER" in
+</div>
+</div>
+<div class="s2W">
+<div>
+    [yY]|[yY][eE][sS])
+</div>
+</div>
+<div class="s2W">
+<div>
+        echo "You answered yes."
+</div>
+</div>
+<div class="s2W">
+<div>
+        ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+    [nN]|[nN][oO])
+</div>
+</div>
+<div class="s2W">
+<div>
+        echo "You answered no."
+</div>
+</div>
+<div class="s2W">
+<div>
+        ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+   *)
+</div>
+</div>
+<div class="s2W">
+<div>
+        echo "Invalid answer."
+</div>
+</div>
+<div class="s2W">
+<div>
+        ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+esac
+</div>
+</div>
+<div class="s28">
+Here we are asking for input from the user.  This input is stored in the
+variable <span class="s2HD">ANSWER</span> .  Even though you may ask the
+user to enter a lowercase "y" or a lower case "n", they may do something
+slightly different.  Instead of being so strict, you can adjust the
+pattern matching in your case statement.
+</div>
+<div class="s28">
+Like I said earlier, all the rules for wildcards are in play for the
+pattern matching section of the case statement.  Here we are going to
+use character classes<span id="part0008.xhtml_page_54"></span> .
+</div>
+<div class="s28">
+A quick reminder, a character class is simply a list of characters
+between brackets.  A character class matches exactly one character and a
+match occurs for any of the characters included between the brackets.
+</div>
+<div class="s28">
+The first character class in this is example is lowercase "y" and upper
+case "y."  <span class="s2HD">[yY]</span>   If the user enters a lower
+case or an uppercase "y", the first pattern will match and then "You
+answered yes" will be echoed to the screen.  Also, if the user entered
+"yes", using any combination of upper or lowercase letters, the pattern
+following the pipe will match and "You answered yes" will be echoed to
+the screen.  That pattern is 3 characters in length using 3 character
+classes.  <span class="s2HD">[yY][eE][sS]</span>   The first character
+class is a lowercase and uppercase "y", the second is a lowercase and
+uppercase "e", and the third is a lowercase and uppercase "s."  We use
+the exact same concept to match for the "n" or "no" answer.
+</div>
+<div class="s28">
+The last pattern is an asterisk, so it will match anything that did not
+match the above patterns.
+</div>
+<div class="s2T">
+You don't have to use the star wildcard by itself.  In the following
+example, the first pattern will match anything that starts with a
+lowercase or uppercase "y".  This will include "y", "yes", or even
+"yup."
+</div>
+<div class="s2W">
+<div>
+read -p "Enter y or n: " ANSWER
+</div>
+</div>
+<div class="s2W">
+<div>
+case "$ANSWER" in
+</div>
+</div>
+<div class="s2W">
+<div>
+    [yY]*)
+</div>
+</div>
+<div class="s2W">
+<div>
+        echo "You answered yes."
+</div>
+</div>
+<div class="s2W">
+<div>
+        ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+   *)
+</div>
+</div>
+<div class="s2W">
+<div>
+        echo "You answered something else."
+</div>
+</div>
+<div class="s2W">
+<div>
+        ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+esac<span id="part0008.xhtml_page_55"></span>
+</div>
+</div>
+<div class="s1R6">
+<span class="class-0">Review</span>
+</div>
+<div class="s28">
+In this chapter, you learned what case statements are used for and how
+to create them.  If you find yourself using an <span
+class="s2HD">if</span> statement to compare the same variable against
+different values, you can use a case statement in its place.
+</div>
+<div class="s28">
+You learned how to create patterns using wildcards.  You also learned
+how to execute the same block of code for multiple values by separating
+the patterns with a pipe.
+</div>
+<div class="s5V">
+<span class="class-0">Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="sP3">
+Create a startup script for an application called sleep-walking-server,
+which is provided below.  The script should be named sleep-walking and
+accept "start" and "stop" as arguments.  If anything other than "start"
+or "stop" is provided as an argument, display a usage statement: "Usage
+sleep-walking start|stop" and terminate the script with an exit status
+of 1.
+</div>
+<div class="sP3">
+To start sleep-walking-server, use this command: <span
+class="s2HD">"/tmp/sleep-walking-server &amp;"</span>
+</div>
+<div class="sP3">
+To stop sleep-walking-server, use this command: <span class="s2HD">"kill
+$(cat /tmp/sleep-walking-server.pid)"</span>
+</div>
+<div class="sP3">
+Here are the contents of "sleep-walking-server".  Be sure to put this
+file in <span class="s2HD">/tmp</span> and run <span class="s2HD">chmod
+755 /tmp/sleep-walking-server</span> so that it is executable.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Instructions:
+</div>
+</div>
+<div class="s2W">
+<div>
+#   Place this script in /tmp
+</div>
+</div>
+<div class="s2W">
+<div>
+#
+</div>
+</div>
+<div class="s2W">
+<div>
+# Description:
+</div>
+</div>
+<div id="part0008.xhtml_page_56" class="s2W">
+<div>
+#   This script simulates a service or a daemon.
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+PID_FILE="/tmp/sleep-walking-server.pid"
+</div>
+</div>
+<div class="s2W">
+<div>
+trap "rm $PID_FILE; exit" SIGHUP SIGINT SIGTERM
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "$$" &gt; $PID_FILE
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+while true
+</div>
+</div>
+<div class="s2W">
+<div>
+do
+</div>
+</div>
+<div class="s2W">
+<div>
+  :
+</div>
+</div>
+<div class="s2W">
+<div>
+done
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Solutions to the Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# This is a startup script for sleep-walking-server
+</div>
+</div>
+<div class="s2W">
+<div>
+#
+</div>
+</div>
+<div class="s2W">
+<div>
+# Be sure to copy the sleep-walking-server file
+</div>
+</div>
+<div class="s2W">
+<div>
+# into /tmp and "chmod 755 /tmpsleep-walking-server"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+case "$1" in
+</div>
+</div>
+<div class="s2W">
+<div>
+  start)
+</div>
+</div>
+<div class="s2W">
+<div>
+    /tmp/sleep-walking-server &amp;
+</div>
+</div>
+<div class="s2W">
+<div>
+    ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+  stop)
+</div>
+</div>
+<div class="s2W">
+<div>
+    kill $(cat /tmp/sleep-walking-server.pid)
+</div>
+</div>
+<div class="s2W">
+<div>
+    ;;
+</div>
+</div>
+<div class="s2W">
+<div>
+  *)
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "Usage: $0 start|stop"
+</div>
+</div>
+<div class="s2W">
+<div>
+    exit 1
+</div>
+</div>
+<div class="s2W">
+<div>
+esac
+</div>
+</div>
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<div id="part0009.xhtml_page_57" class="sK">
+<div id="part0009.xhtml_toc6_Logging" class="s1N">
+Logging
+</div>
+<div class="s1BW">
+In this chapter, you will learn why you may want to using logging in
+your shell scripts.  You'll also learn about the syslog standard and how
+to generate messages that conform to that standard.  Finally, you'll
+learn how to create your very own custom logging functions
+</div>
+<div class="s28">
+If you want to keep a record of what occurred during the execution of a
+shell script, you'll want to employ some sort of logging mechanism. 
+Logs can store any type of information you want, but they typically
+answer who, what, when, where, and why something occurred.
+</div>
+<div class="s28">
+Logs can be useful when your shell script performs several actions or
+produces a lot of output that might scroll off your screen.  Also, if
+you plan to run your script unattended via cron or some other means, you
+might want a way to look back and see exactly what happened and when it
+happened during a previous run.
+</div>
+<div class="s28">
+The Linux operating system uses the syslog standard for message
+logging.  This allows programs and applications to generate messages
+that can be captured, processed, and stored by the system logger.  It
+eliminates the need for each and every application having to implement a
+logging mechanism.  That means we can take advantage of this logging
+<span id="part0009.xhtml_page_58"></span> system in our shell scripts.
+</div>
+<div class="s28">
+Before we start using it, let's briefly talk about how it works.  The
+syslog standard uses facilities and severities to categorize messages. 
+Each message is labeled with a facility code and a severity level.  The
+various combinations of facilities and severities can be used to
+determine how a message is handled.
+</div>
+<div class="s28">
+Facilities are used to indicate what type of program or what part of the
+system the message originated from.  For example, messages that are
+labeled with the <span class="s2HD">kern</span> facility originate from
+the Linux kernel.  Messages that are labeled with the <span
+class="s2HD">mail</span> facility come from applications involved in
+handling mail.
+</div>
+<div class="s28">
+There are several facilities.  If your script is involved in handling
+mail, you could use the <span class="s2HD">mail</span> facility for
+logging.  If it's not clear what facility to use, you can simply use the
+<span class="s2HD">user</span> facility.  Also, the facilities ranging
+from local0 to local7 are to be used to create custom logs.  These
+facilities would also be appropriate for custom written shell scripts.
+</div>
+<div class="s2T">
+Each facility has a number and a keyword associated with it.  This table
+lists the syslog facilities.
+</div>
+<div class="s2W">
+<div>
+Number Keyword Description
+</div>
+</div>
+<div class="s2W">
+<div>
+0      kern     kernel messages
+</div>
+</div>
+<div class="s2W">
+<div>
+1      user     user-level messages
+</div>
+</div>
+<div class="s2W">
+<div>
+2      mail     mail system
+</div>
+</div>
+<div class="s2W">
+<div>
+3      daemon   system daemons
+</div>
+</div>
+<div class="s2W">
+<div>
+4      auth     security/authorization messages
+</div>
+</div>
+<div class="s2W">
+<div>
+5      syslog   messages generated by syslogd
+</div>
+</div>
+<div class="s2W">
+<div>
+6      lpr      line printer subsystem
+</div>
+</div>
+<div class="s2W">
+<div>
+7      news     network news subsystem
+</div>
+</div>
+<div class="s2W">
+<div>
+8      uucp     UUCP subsystem
+</div>
+</div>
+<div class="s2W">
+<div>
+9      clock    daemon
+</div>
+</div>
+<div class="s2W">
+<div>
+10     authpriv security/authorization messages
+</div>
+</div>
+<div class="s2W">
+<div>
+11     ftp      FTP daemon
+</div>
+</div>
+<div class="s2W">
+<div>
+12     -        NTP subsystem
+</div>
+</div>
+<div class="s2W">
+<div>
+13     -        log audit
+</div>
+</div>
+<div id="part0009.xhtml_page_59" class="s2W">
+<div>
+14     -        log alert
+</div>
+</div>
+<div class="s2W">
+<div>
+15     cron     clock daemon
+</div>
+</div>
+<div class="s2W">
+<div>
+16     local0   local use 0 (local0)
+</div>
+</div>
+<div class="s2W">
+<div>
+17     local1   local use 1 (local1)
+</div>
+</div>
+<div class="s2W">
+<div>
+18     local2   local use 2 (local2)
+</div>
+</div>
+<div class="s2W">
+<div>
+19     local3   local use 3 (local3)
+</div>
+</div>
+<div class="s2W">
+<div>
+20     local4   local use 4 (local4)
+</div>
+</div>
+<div class="s2W">
+<div>
+21     local5   local use 5 (local5)
+</div>
+</div>
+<div class="s2W">
+<div>
+22     local6   local use 6 (local6)
+</div>
+</div>
+<div class="s2W">
+<div>
+23     local7   local use 7 (local7)
+</div>
+</div>
+<div class="s28">
+The severities are emergency, alert, critical, error, warning, notice,
+info, and debug.  The most severe message is an emergency message and
+the least severe message is a debugging message.
+</div>
+<div class="s2T">
+This table lists each of the severities including their code, keyword,
+and description.
+</div>
+<div class="s2W">
+<div>
+Code Severity  Keyword        Description
+</div>
+</div>
+<div class="s2W">
+<div>
+0    Emergency emerg (panic)  System is unusable
+</div>
+</div>
+<div class="s2W">
+<div>
+1    Alert     alert          Action must be taken   
+</div>
+</div>
+<div class="s2W">
+<div>
+                              immediately
+</div>
+</div>
+<div class="s2W">
+<div>
+2    Critical  crit           Critical conditions
+</div>
+</div>
+<div class="s2W">
+<div>
+3    Error     err (error)    Error conditions
+</div>
+</div>
+<div class="s2W">
+<div>
+4    Warning   warning (warn) Warning conditions
+</div>
+</div>
+<div class="s2W">
+<div>
+5    Notice    notice         Normal but
+</div>
+</div>
+<div class="s2W">
+<div>
+                              significant condition
+</div>
+</div>
+<div class="s2W">
+<div>
+6    Info      info           Informational
+</div>
+</div>
+<div class="s2W">
+<div>
+                              messages
+</div>
+</div>
+<div class="s2W">
+<div>
+7    Debug     debug          Debug-level messages
+</div>
+</div>
+<div class="s28">
+These combinations of facilities and severities are used by the system
+logger to handle these messages.  Most messages are simply written to a
+file.  Each distribution uses a slightly different set of defaults, and
+these logging rules are configurable and can be changed.  You'll find
+many messages stored in <span class="s2HD">/var/log/messages</span> on
+some distributions while others use <span
+class="s2HD">/var/log/syslog</span> , for example.  You'll have to
+consult the documentation for the system logger that is in use for the
+system.  It's typically one of syslogd, rsyslog, or syslog-ng, although
+there are <span id="part0009.xhtml_page_60"></span> several other
+possibilities.
+</div>
+<div class="s5V">
+<span class="s2HF">The</span> <span class="s2HF">logge</span> <span
+class="s2HG">r</span> <span class="s2HF">Utility</span>
+</div>
+<div class="s28">
+Now that you know about the standard logging system that is in play, you
+can take advantage of this in your shell scripts by using the <span
+class="s2HD">logger</span> command.
+</div>
+<div class="s2T">
+The logger command generates syslog messages.  In its simplest form you
+simply supply a message to the <span class="s2HD">logger</span>
+utility.  By default, the <span class="s2HD">logger</span> utility
+creates messages using the user facility and the notice severity.
+</div>
+<div class="s2W">
+<div>
+logger "Message"
+</div>
+</div>
+<div class="s2T">
+If you want to specify the severity, use the <span
+class="s2HD">-p</span> option followed by the facility, then a period,
+and then the severity.  For example, to use the <span
+class="s2HD">local0</span> facility and the <span
+class="s2HD">info</span> severity, you would run <span
+class="s2HD">logger -p local0.info</span> and follow that with the
+message.
+</div>
+<div class="s2W">
+<div>
+logger -p local0.info "Message"
+</div>
+</div>
+<div class="s2T">
+If you want to tag your message, use the <span class="s2HD">-t</span>
+option.  Typically, you'll want to use the name of your script as the
+tag.  This way, you can search for the name of your script in a log file
+to extract just the messages for your script.
+</div>
+<div class="s2W">
+<div>
+logger -t myscript -p local0.info "Message"
+</div>
+</div>
+<div class="s2T">
+If you want to include the PID, or process ID, in the log message, use
+the <span class="s2HD">-i</span> option.
+</div>
+<div class="s2W">
+<div>
+logger -i -t myscript "Message"
+</div>
+</div>
+<div class="s28">
+Let's look at the messages generated by the following <span
+class="s2HD">logger</span> commands.
+</div>
+<div class="s2T">
+The first <span class="s2HD">logger</span> command is used without any
+options.  You can see that it generates a message with a time stamp and
+includes the message passed to the <span class="s2HD">logger</span>
+command.  This message will be routed based on <span
+id="part0009.xhtml_page_61"></span> the system logger configuration. 
+For most distributions, this message will end up in the <span
+class="s2HD">/var/log/messages</span> file or the <span
+class="s2HD">/var/log/syslog</span> file.
+</div>
+<div class="s2W">
+<div>
+$ logger "Message"
+</div>
+</div>
+<div class="s2W">
+<div>
+Aug  2 01:22:34 linuxsvr jason: Message
+</div>
+</div>
+<div class="s2T">
+The next <span class="s2HD">logger</span> command generates the same
+message, but this time we have specified the facility and severity. 
+Remember that different facilities and severities can cause the system
+logger to route the messages to a different log file.
+</div>
+<div class="s2W">
+<div>
+$ logger -p local0.info "Message"
+</div>
+</div>
+<div class="s2W">
+<div>
+Aug  2 01:22:41 linuxsvr jason: Message
+</div>
+</div>
+<div class="s2T">
+If you want to display the message to the screen in addition to sending
+it to the logging system, use the "-s" option.
+</div>
+<div class="s2W">
+<div>
+$ logger -s -p local0.info "Message"
+</div>
+</div>
+<div class="s2W">
+<div>
+jason: Message   # &lt;-- Displayed on screen.
+</div>
+</div>
+<div class="s2T">
+This <span class="s2HD">logger</span> command makes use of a tag.  The
+message that it generates now contains the specified tag.
+</div>
+<div class="s2W">
+<div>
+$ logger -t myscript -p local0.info "Message"
+</div>
+</div>
+<div class="s2W">
+<div>
+Aug  2 01:22:44 linuxsvr myscript: Message
+</div>
+</div>
+<div class="s2T">
+The next <span class="s2HD">logger</span> command uses the <span
+class="s2HD">-i</span> option which causes the PID to be included in
+brackets in the log message. If multiple copies of your script can run
+at the same time, having a PID can help differentiate the logs being
+generated by one instance of the script vs logs generated by another
+instance of the script.
+</div>
+<div class="s2W">
+<div>
+$ logger -i -t myscript "Message"
+</div>
+</div>
+<div class="s2W">
+<div>
+Aug  2 01:22:53 linuxsvr myscript[12986]: Message
+</div>
+</div>
+<div class="s2T">
+You can even create a function in your shell script to handle logging. 
+Here is an example from one of my scripts.
+</div>
+<div class="s2W">
+<div>
+logit () {
+</div>
+</div>
+<div class="s2W">
+<div>
+  local LOG_LEVEL=$1
+</div>
+</div>
+<div class="s2W">
+<div>
+  shift
+</div>
+</div>
+<div class="s2W">
+<div>
+ <span id="part0009.xhtml_page_62"></span>  MSG=$@
+</div>
+</div>
+<div class="s2W">
+<div>
+  TIMESTAMP=$(date +"%Y-%m-%d %T")
+</div>
+</div>
+<div class="s2W">
+<div>
+  if [ $LOG_LEVEL = 'ERROR' ] || $VERBOSE
+</div>
+</div>
+<div class="s2W">
+<div>
+  then
+</div>
+</div>
+<div class="s2W">
+<div>
+    echo "${TIMESTAMP} ${HOST} ${PROGRAM_NAME}[${PID}]: ${LOG_LEVEL}
+${MSG}"
+</div>
+</div>
+<div class="s2W">
+<div>
+  fi
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s28">
+This function, named <span class="s2HD">logit</span> , expects that a
+log level be passed into it followed by a message.  It assigns the first
+thing passed into it to the <span class="s2HD">LOG_LEVEL</span>
+variable.  Next, <span class="s2HD">shift</span> is run to shift the
+positional parameters to the left.  These means that the special
+variable <span class="s2HD">$@</span> contains everything except the
+first positional parameter which we already used for our <span
+class="s2HD">LOG_LEVEL</span> variable.  Everything that is left over is
+assigned to the <span class="s2HD">MSG</span> variable.  Next, a <span
+class="s2HD">TIMESTAMP</span> variable is created and assigned some
+output from the date command.
+</div>
+<div class="s28">
+If the <span class="s2HD">LOG_LEVEL</span> is "ERROR" or the <span
+class="s2HD">VERBOSE</span> global variable is set to <span
+class="s2HD">true</span> , a message is echoed to the screen which
+includes information such as the timestamp, log level, and the message.
+</div>
+<div class="s28">
+Instead of using <span class="s2HD">echo</span> , this function could
+employ the use of the <span class="s2HD">logger</span> command, if we
+wanted to do that.
+</div>
+<div class="s28">
+Here are some examples of calling this function.  The first time it is
+called, the <span class="s2HD">INFO</span> log level is used and the
+message is "Processing data."  If the command <span
+class="s2HD">fetch-data $HOST</span> fails, then the <span
+class="s2HD">logit</span> function is called with an <span
+class="s2HD">ERROR</span> log level and a message that states "Could not
+fetch data from $HOST."
+</div>
+<div class="s2T">
+The <span class="s2HD">fetch-data</span> command in this example is made
+up.  It could be another script, for example.  In any case, this gives
+you an idea of how you can use a custom written logging function.
+</div>
+<div class="s2W">
+<div>
+logit INFO "Processing data."
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+fetch-data $HOST || logit ERROR "Could not fetch data <span
+id="part0009.xhtml_page_63"></span> from $HOST"
+</div>
+</div>
+<div class="s5V">
+<span class="class-0">Review</span>
+</div>
+<div class="s28">
+In this chapter, you learned why you may want to use logging in your
+shell scripts.  You also learned about the syslog standard and how to
+generate messages with the <span class="s2HD">logger</span> utility that
+take advantage of this standard.  Finally, you learned how to create and
+use your very own custom logging functions.
+</div>
+<div class="s5V">
+<span class="class-0">Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="sP3">
+Write a shell script that displays one random number on the screen and
+also generates a syslog message with that random number.  Use the "user"
+facility and the "info" facility for your messages.
+</div>
+<div class="sNY">
+Hint: Use $RANDOM
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="sNY">
+Modify the previous script so that it uses a logging function. 
+Additionally, tag each syslog message with "randomly" and include the
+process ID.  Generate 3 random numbers.
+</div>
+<div class="s5V">
+<span class="class-0">Solutions to the Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+MESSAGE="Random number: $RANDOM"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+echo "$MESSAGE"
+</div>
+</div>
+<div class="s2W">
+<div>
+logger -p user.info "$MESSAGE"<span id="part0009.xhtml_page_64"></span>
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+function my_logger() {
+</div>
+</div>
+<div class="s2W">
+<div>
+  local MESSAGE=$@
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "$MESSAGE"
+</div>
+</div>
+<div class="s2W">
+<div>
+  logger -i -t randomly -p user.info "$MESSAGE"
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+my_logger "Random number: $RANDOM"
+</div>
+</div>
+<div class="s2W">
+<div>
+my_logger "Random number: $RANDOM"
+</div>
+</div>
+<div class="s2W">
+<div>
+my_logger "Random number: $RANDOM"
+</div>
+</div>
+</div>
+<p><span id="part0010.xhtml"></span></p>
+<div id="part0010.xhtml_page_65" class="sK">
+<div id="part0010.xhtml_toc7_Debugging" class="s1N">
+Debugging
+</div>
+<div class="s204">
+In this chapter, you will learn about the options built into bash that
+will help you find and fix errors in your shell scripts.  You will also
+learn how to use variables to control the behavior of your shell
+scripts. We'll also talk about syntax highlighting and how that can help
+you avoid common mistakes.  You'll learn about a special bash variable
+that you can use to get valuable information about what is happening
+inside of your scripts.  Finally, you'll learn about the differences
+between Windows and Linux file types and the problems you may encounter
+if you plan to use multiple operating systems to create scripts.
+</div>
+<div class="sP3">
+A software bug is an error in a computer program that causes it to
+produce an unexpected or incorrect result.  Most bugs are really
+mistakes in the program's code or in its design.  If you encounter a bug
+or an error in one of your scripts, you'll want to see exactly what is
+happening during the execution of that script.
+</div>
+<div class="sP3">
+Maybe something isn't working as you initially anticipated and you want
+to figure out where things are going wrong and how you can update your
+script so that it performs as expected.  Sometimes your script will
+<span id="part0010.xhtml_page_66"></span> produce an incorrect result or
+behave in unintended ways.  Sometimes it will simply stop because of a
+syntax error or typo.  This process of finding errors in your script or
+fixing unexpected behaviors is called debugging.
+</div>
+<div class="sP3">
+The bash shell provides some options that can help you in debugging your
+scripts. You can use these options by updating the first line in your
+script to include one or more of these options.  The most popular of
+these options is the <span class="s2HD">-x</span> option.
+</div>
+<div class="sP3">
+The <span class="s2HD">-x</span> option prints commands and their
+arguments as they are executed.  This means that, instead of variables
+being displayed, the values of those values are displayed.  The same
+thing goes for expansions.  Wildcards aren't displayed, but what they
+expand to is displayed.  You'll sometimes hear this type of debugging
+called "print debugging," "tracing," or an "x-trace."
+</div>
+<div class="sP3">
+If you are using this option in a shell script, simply add <span
+class="s2HD">-x</span> to the end of the shebang line.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -x
+</div>
+</div>
+<div class="sP3">
+If you want to do this at the command line, run <span class="s2HD">set
+-x</span> .  Use <span class="s2HD">set +x</span> to stop this debugging
+behavior.  You can also use this option for just a portion of your
+script.  Just before you want to start displaying the commands to the
+screen, add a <span class="s2HD">set -x</span> line.  Place <span
+class="s2HD">set +x</span> on a line after the section of the shell
+script that you're debugging.
+</div>
+<div class="sP3">
+Here is a very simple example that demonstrates the use of the <span
+class="s2HD">-x</span> option.  You can see that <span
+class="s2HD">-x</span> has been added to the end of the shebang.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -x
+</div>
+</div>
+<div class="s2W">
+<div>
+TEST_VAR="test"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "$TEST_VAR"
+</div>
+</div>
+<div class="sP3">
+Output:
+</div>
+<div class="s2W">
+<div>
++ TEST_VAR=test
+</div>
+</div>
+<div class="s2W">
+<div>
++ echo test
+</div>
+</div>
+<div class="s2W">
+<div>
+test<span id="part0010.xhtml_page_67"></span>
+</div>
+</div>
+<div class="s204">
+You'll notice that there are lines that start with a plus sign.  Those
+are the commands that are being executed from the script.  In this
+example, there are two commands that are executed.  The first is setting
+the value of the <span class="s2HD">TEST_VAR</span> variable.  The
+second command is to <span class="s2HD">echo</span> that value to the
+screen.  In the output, the result of the <span class="s2HD">echo</span>
+command, which is "test," is displayed.  There is no plus sign in front
+of it because it is output as a result of a command and not a command
+itself.
+</div>
+<div class="sP3">
+Here is another example.  This one shows how you can turn debugging on
+for just a portion of your script.  First, the <span
+class="s2HD">TEST_VAR</span> variable is set.  You'll see in the output
+that nothing is listed for this command because debugging isn't on at
+this point.  The next line turns on debugging with the <span
+class="s2HD">set -x</span> command.  Again, nothing is displayed in the
+output for this action.  Now the <span class="s2HD">TEST_VAR</span> is
+echoed to the screen.  The <span class="s2HD">echo</span> command is
+displayed because debugging is now own.  Of course, the output of the
+echo command is displayed next on the screen.  We use the <span
+class="s2HD">set +x</span> command to turn off debugging. That set
+command is displayed on the screen.  Finally, the hostname command is
+executed and only its output is displayed.
+</div>
+<div class="sP3">
+Again, this is to demonstrate how you can encapsulate a block of code
+with <span class="s2HD">set -x</span> and <span class="s2HD">set
++x</span> to debug that particular section of code.  You can do the
+exact same thing with the other options that we'll be covering next.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+TEST_VAR="test"
+</div>
+</div>
+<div class="s2W">
+<div>
+set -x
+</div>
+</div>
+<div class="s2W">
+<div>
+echo $TEST_VAR
+</div>
+</div>
+<div class="s2W">
+<div>
+set +x
+</div>
+</div>
+<div class="s2W">
+<div>
+hostname
+</div>
+</div>
+<div class="s21C">
+<div>
++ echo test
+</div>
+</div>
+<div class="s2W">
+<div>
+test
+</div>
+</div>
+<div class="s2W">
+<div>
++ set +x
+</div>
+</div>
+<div id="part0010.xhtml_page_68" class="s2W">
+<div>
+linuxsvr
+</div>
+</div>
+<div class="s204">
+Another useful option that can help you find errors in your scripts is
+the <span class="s2HD">-e</span> option.  It causes your script to exit
+immediately if a command exits with a non-zero status.  Remember that an
+exit status of zero indicates the successful completion of a command and
+any exit status other than zero indicates some type of error.  This can
+really help you pin-point exactly where the problem is.  You can use
+this in combination with other options including the <span
+class="s2HD">-x</span> option.
+</div>
+<div class="sP3">
+When used as an argument to the bash command, these options act like any
+other options for other commands.  Options that do not take arguments
+can be combined and only one hyphen is required followed by the
+options.  Also, it doesn't matter which order they are used.  You can
+use <span class="s2HD">-ex</span> or <span class="s2HD">-xe</span> .  If
+you want, you can use a hyphen before each option, but this is
+unconventional.
+</div>
+<div class="sP3">
+These four examples are equivalent in functionality.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -ex
+</div>
+</div>
+<div class="s21C">
+<div>
+#!/bin/bash -xe
+</div>
+</div>
+<div class="s21C">
+<div>
+#!/bin/bash -e -x
+</div>
+</div>
+<div class="s21C">
+<div>
+#!/bin/bash -x -e
+</div>
+</div>
+<div class="s204">
+Here is an example using the <span class="s2HD">-e</span> option. 
+First, a value is assigned to the variable <span
+class="s2HD">FILE_NAME</span> .  Next the <span class="s2HD">ls</span>
+command is executed using <span class="s2HD">FILE_NAME</span> as an
+argument.  Finally, the contents of the <span
+class="s2HD">FILE_NAME</span> variable are displayed on the screen. 
+However, when you execute this script, the <span class="s2HD">ls</span>
+command returns a non-zero exit status since the file does not exist. 
+Because the <span class="s2HD">-e</span> option was used, the execution
+of the <span id="part0010.xhtml_page_69"></span> program halts and the
+echo command is never attempted.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -e
+</div>
+</div>
+<div class="s2W">
+<div>
+FILE_NAME="/not/here"
+</div>
+</div>
+<div class="s2W">
+<div>
+ls $FILE_NAME
+</div>
+</div>
+<div class="s2W">
+<div>
+echo $FILE_NAME
+</div>
+</div>
+<div class="s204">
+Output:
+</div>
+<div class="s2W">
+<div>
+ls: cannot access /not/here: No such file or directory
+</div>
+</div>
+<div class="s204">
+This time we'll use both the -<span class="s2HD">e</span> and -<span
+class="s2HD">x</span> options.  The -<span class="s2HD">x</span> option
+causes the commands to be displayed to the screen.  First, it displays
+the creation of the <span class="s2HD">FILE_NAME</span> variable.  Next,
+it displays the <span class="s2HD">ls</span> command.  You can clearly
+see what <span class="s2HD">ls</span> is doing in this example.  It is
+trying to display information about a file named <span
+class="s2HD">/not/here</span> .  Of course, this causes an error and the
+script stops because of the <span class="s2HD">-e</span> option.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -ex
+</div>
+</div>
+<div class="s2W">
+<div>
+FILE_NAME="/not/here"
+</div>
+</div>
+<div class="s2W">
+<div>
+ls $FILE_NAME
+</div>
+</div>
+<div class="s2W">
+<div>
+echo $FILE_NAME
+</div>
+</div>
+<div class="s204">
+Output:
+</div>
+<div class="s2W">
+<div>
++ FILE_NAME=/not/here
+</div>
+</div>
+<div class="s2W">
+<div>
++ ls /not/here
+</div>
+</div>
+<div class="s2W">
+<div>
+ls: cannot access /not/here: No such file or directory
+</div>
+</div>
+<div class="s204">
+Yet another useful option that can help you in the debugging process is
+the <span class="s2HD">-v</span> option.  It prints the shell commands
+just like they are read from the script.  It prints everything before
+any substitutions and expansions are applied.  The <span
+class="s2HD">-x</span> option performs variable and wildcard expansion,
+but the <span class="s2HD">-v</span> option does not.  You can use them
+in combination to see <span id="part0010.xhtml_page_70"></span> what a
+line looks like before and after substitutions and expansions occur.
+</div>
+<div class="sP3">
+Here is an example of the <span class="s2HD">-v</span> option.  It
+causes every line of the script to be displayed on the screen before it
+is executed.  You'll notice that the lines are exactly as they are in
+the shell script.  In this script, the only thing that happens is that
+"test" gets echoed to the screen.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -v
+</div>
+</div>
+<div class="s2W">
+<div>
+TEST_VAR="test"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "$TEST_VAR"
+</div>
+</div>
+<div class="s204">
+Output:
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -v
+</div>
+</div>
+<div class="s2W">
+<div>
+TEST_VAR="test"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "$TEST_VAR"
+</div>
+</div>
+<div class="s2W">
+<div>
+test
+</div>
+</div>
+<div class="s204">
+Here is what would happen if we added the <span class="s2HD">-x</span>
+option to the previous script.  What's useful about this output is that
+we can see the how a command looks in the shell script and how it
+actually gets executed.  Take the <span class="s2HD">echo</span>
+command, for example.  We can see that, in the script, we run <span
+class="s2HD">echo $TEST_VAR</span> and that actually causes <span
+class="s2HD">echo test</span> to be executed.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -vx
+</div>
+</div>
+<div class="s2W">
+<div>
+TEST_VAR="test"
+</div>
+</div>
+<div class="s2W">
+<div>
++ TEST_VAR=test
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "$TEST_VAR"
+</div>
+</div>
+<div class="s2W">
+<div>
++ echo test
+</div>
+</div>
+<div class="s2W">
+<div>
+test
+</div>
+</div>
+<div class="s204">
+From the command line, using a bash shell, you can run <span
+class="s2HD">help set</span> .  That will display information about the
+options we covered in this lesson plus the other options that are
+available.  You might want to pipe this output <span
+id="part0010.xhtml_page_71"></span> to a pager like <span
+class="s2HD">less</span> so you can easily scroll through all the
+options and their descriptions.
+</div>
+<div class="s2W">
+<div>
+$ help set | less
+</div>
+</div>
+<div class="s2W">
+<div>
+set: set [-abefhkmnptuvxBCHP] [-o option-name] [--] [arg ...]
+</div>
+</div>
+<div class="s2W">
+<div>
+    Set or unset values of shell options and positional parameters.
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+    Change the value of shell attributes and positional parameters, or
+</div>
+</div>
+<div class="s2W">
+<div>
+    display the names and values of shell variables.
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+    Options:
+</div>
+</div>
+<div class="s2W">
+<div>
+      -a  Mark variables which are modified or created for export.
+</div>
+</div>
+<div class="s2W">
+<div>
+      -b  Notify of job termination immediately.
+</div>
+</div>
+<div class="s2W">
+<div>
+      -e  Exit immediately if a command exits with a non-zero status.
+</div>
+</div>
+<div class="s2W">
+<div>
+#### Output truncated #####
+</div>
+</div>
+<div class="s204">
+Many times, using <span class="s2HD">-x</span> , <span
+class="s2HD">-e</span> , and <span class="s2HD">-v</span> is sufficient,
+but if you want a bit more control over debugging, you can create your
+own code to do it.  One method I personally use is to create a variable
+called <span class="s2HD">DEBUG</span> .  I set this to <span
+class="s2HD">true</span> if I'm currently debugging or <span
+class="s2HD">false</span> if I'm not.  I'm taking advantage of the bash
+built-in Booleans of <span class="s2HD">true</span> and <span
+class="s2HD">false</span> .
+</div>
+<div class="sP3">
+If you want to use a Boolean, do not quote them.  If you were to quote
+"<span class="s2HD">true</span> ", for example, then it will act as a
+string.  That's fine, but then you'll have to do string comparisons. 
+Using Booleans simplifies testing for the <span
+class="s2HD">DEBUG</span> condition in your script.
+</div>
+<div class="sP3">
+Here is a simple example of using a <span class="s2HD">DEBUG</span>
+variable with a Boolean value.  You can test if <span
+class="s2HD">DEBUG</span> is set to <span class="s2HD">true</span> by
+using an <span class="s2HD">if</span> statement.  Since <span
+class="s2HD">DEBUG</span> is <span class="s2HD">true</span> , the <span
+class="s2HD">if</span> statement is true and <span class="s2HD">echo
+"Debug mode ON</span> " is executed.  If you were to set <span
+class="s2HD">DEBUG=false</span> , the <span class="s2HD">if</span>
+statement would be <span class="s2HD">false</span> and the <span
+class="s2HD">else</span> block would be executed.
+</div>
+<div id="part0010.xhtml_page_72" class="s24M">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+DEBUG=true
+</div>
+</div>
+<div class="s2W">
+<div>
+if $DEBUG
+</div>
+</div>
+<div class="s2W">
+<div>
+then
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Debug mode ON."
+</div>
+</div>
+<div class="s2W">
+<div>
+else
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Debug mode OFF."
+</div>
+</div>
+<div class="s2W">
+<div>
+fi
+</div>
+</div>
+<div class="s204">
+You can use a DEBUG variable in conjunction with ANDS or ORs.  Remember
+that the double ampersand means AND.  It will only allow commands to be
+executed after it if the return code of the preceding command was 0. 
+The <span class="s2HD">true</span> Boolean always returns a zero exit
+status.
+</div>
+<div class="sP3">
+In this first example, <span class="s2HD">DEBUG</span> is set to <span
+class="s2HD">true</span> .  Since that is a zero exit status, the <span
+class="s2HD">echo "Debug mode ON.</span> " command is executed.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+DEBUG=true
+</div>
+</div>
+<div class="s2W">
+<div>
+$DEBUG &amp;&amp; echo "Debug mode ON."
+</div>
+</div>
+<div class="s204">
+You can use this pattern to execute certain commands when <span
+class="s2HD">DEBUG</span> is set to <span class="s2HD">true</span> . 
+The double pipe symbol represents OR.  If the command preceding an OR
+returns a non-zero exit status, then the command following the OR will
+be executed.  The <span class="s2HD">false</span> Boolean always returns
+a non-zero exit status.  In the following example, <span
+class="s2HD">DEBUG</span> is set to <span class="s2HD">false</span> . 
+Since that is a non-zero exit status, the echo <span class="s2HD">"Debug
+mode OFF."</span> command is executed.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+DEBUG=false
+</div>
+</div>
+<div class="s2W">
+<div>
+$DEBUG || echo "Debug mode OFF."<span
+id="part0010.xhtml_page_73"></span>
+</div>
+</div>
+<div class="s204">
+You can use the following type of pattern to skip the execution of
+certain commands when <span class="s2HD">DEBUG</span> is set to <span
+class="s2HD">true</span> .  If <span class="s2HD">DEBUG</span> succeeds,
+then what follows the OR will not be executed.  This can prove useful
+when you are in the process of writing a script.  You may not want or
+need to execute some commands that will repeat work already performed or
+take a long time to run, for example.  This can speed up the creation of
+your new scripts, so, it's good for debugging and writing scripts.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+DEBUG=true
+</div>
+</div>
+<div class="s2W">
+<div>
+$DEBUG || echo "Debug mode OFF."
+</div>
+</div>
+<div class="s204">
+Another thing you can do is to set the value of the <span
+class="s2HD">DEBUG</span> variable to <span class="s2HD">echo</span> . 
+Next, place <span class="s2HD">$DEBUG</span> before each line in your
+script.  If <span class="s2HD">DEBUG</span> is set to <span
+class="s2HD">echo</span> , then whatever would normally have been
+executed is simply echoed to the screen.
+</div>
+<div class="sP3">
+In this example, the output to the screen is simply <span
+class="s2HD">ls</span> because what gets executed is <span
+class="s2HD">echo ls</span> .
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+DEBUG="echo"
+</div>
+</div>
+<div class="s2W">
+<div>
+$DEBUG ls
+</div>
+</div>
+<div class="s204">
+Output:
+</div>
+<div class="s2W">
+<div>
+ls
+</div>
+</div>
+<div class="s204">
+Here is an example where the <span class="s2HD">DEBUG</span> line has
+been commented out.  This causes the value of <span
+class="s2HD">DEBUG</span> to be to nothing.  That leaves the remainder
+of the line, which is a space followed by <span class="s2HD">ls</span>
+.  That means the <span class="s2HD">ls</span> command will execute. 
+Again, this is another simple way to turn debugging on and off in your
+scripts.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+#DEBUG="echo"
+</div>
+</div>
+<div id="part0010.xhtml_page_74" class="s2W">
+<div>
+$DEBUG ls
+</div>
+</div>
+<div class="s204">
+Output:
+</div>
+<div class="s2W">
+<div>
+solution-01.sh solution-02.sh
+</div>
+</div>
+<div class="s204">
+You can even create your own debug function and add whatever you would
+like around each command, or choose NOT to execute the command if you
+wish.  Use the special variable <span class="s2HD">$@</span> inside your
+function to access everything passed to the function.
+</div>
+<div class="sP3">
+In this example, the command that will be executed is simply echoed to
+the screen before being executed.  You could, of course, do something
+more complicated and useful.  Maybe you could write this information to
+a log file and include time stamps showing exactly when each command was
+executed.
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+debug() {
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Executing: $@"
+</div>
+</div>
+<div class="s2W">
+<div>
+  $@
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s26W">
+<span class="class-0">Manual Copy and Paste</span>
+</div>
+<div class="sP3">
+Sometimes I open a second terminal window and go through the shell
+script one line at a time.  I will copy and paste the first line, then
+the second, one at a time on the command line until I find where the
+problem is.  Remember that you can use this in conjunction with <span
+class="s2HD">set -x</span> or any other option you think will help
+you<span id="part0010.xhtml_page_75"></span> .
+</div>
+<div class="s26W">
+<span class="class-0">Syntax Highlighting</span>
+</div>
+<div class="sP3">
+Many times, bugs or errors in a shell script are due to a simple syntax
+error.  Maybe you mistyped something or forgot to include a closing
+bracket, for example.  These simple mistakes can be caught before you
+even try to execute your script if you are using an editor with syntax
+highlighting.
+</div>
+<div class="sP3">
+Two of the most commonly used editors on a Linux system are vim and
+emacs.  By default, they both have syntax highlighting.  Here are a
+couple of screenshots from those editors to show you what this looks
+like.
+</div>
+<div class="s274-0">
+<img src="rsrc2J3.jpg" class="s274-1" />
+</div>
+<div class="s278-1">
+<img src="rsrc2J4.jpg" class="s278-0" />
+</div>
+<div class="sP3">
+Of course, there are plenty of other editors with highlighting support. 
+You'll have to check the documentation for your particular editor to see
+if shell script highlighting is supported and, if so, how to enable it.
+</div>
+<div class="sP3">
+Editors with syntax highlighting support:
+</div>
+<ul>
+<li>vi / vim<span id="part0010.xhtml_page_76"></span></li>
+<li>emacs</li>
+<li>nano</li>
+<li>gedit</li>
+<li>kate</li>
+<li>geany</li>
+<li>Many others</li>
+</ul>
+<div class="sYN">
+<span class="class-0">PS4</span>
+</div>
+<div class="sP3">
+You may be familiar with the <span class="s2HD">PS1</span> environment
+variable.  It controls what is displayed as your command prompt.  There
+are other variables similar to this one.  The one that is valuable for
+shell script debugging is <span class="s2HD">PS4</span> .
+</div>
+<div class="sP3">
+<span class="s2HD">PS4</span> is expanded and displayed before each
+command during an execution trace.  That means, when you are using <span
+class="s2HD">set -x</span> or the <span class="s2HD">-x</span> option
+for your bash script, the contents of <span class="s2HD">PS4</span> are
+printed to the screen.  By default, this is the plus sign.  However, we
+can explicitly set the <span class="s2HD">PS4</span> variable.  Bash
+includes several built-in variables such as <span
+class="s2HD">$BASH_SOURCE</span> , which is the name of the script
+itself, and <span class="s2HD">$LINENO</span> , which is the line number
+in the script.  To see even more variables, visit:  <a
+href="http://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html"
+class="s2HA">http://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html</a>
+</div>
+<div class="sP3">
+Here is an example of using the <span class="s2HD">PS4</span> variable. 
+This script sets <span class="s2HD">PS4</span> to <span class="s2HD">"+
+$BASH_SOURCE : $LINENO : "</span> .
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -x
+</div>
+</div>
+<div class="s2W">
+<div>
+PS4='+ $BASH_SOURCE : $LINENO : '
+</div>
+</div>
+<div class="s2W">
+<div>
+TEST_VAR="test"
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "$TEST_VAR"
+</div>
+</div>
+<div class="s204">
+Output:
+</div>
+<div id="part0010.xhtml_page_77" class="s2W">
+<div>
++ PS4='+ $BASH_SOURCE : $LINENO : '
+</div>
+</div>
+<div class="s2W">
+<div>
++ ./test.sh : 3 : TEST_VAR=test
+</div>
+</div>
+<div class="s2W">
+<div>
++ ./test.sh : 4 : echo test
+</div>
+</div>
+<div class="s2W">
+<div>
+test
+</div>
+</div>
+<div class="s204">
+You can see that when the script gets executed, the output changes after
+the <span class="s2HD">PS4</span> variable is set.  This can make the
+output clearer.   For example, if we have a problem with the <span
+class="s2HD">echo</span> command, we know we can edit the script and
+head straight for line 4.
+</div>
+<div class="sP3">
+Here is a more advanced example.  It just includes more information,
+such as the function name. 
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -x
+</div>
+</div>
+<div class="s2W">
+<div>
+PS4='+ ${BASH_SOURCE}:${LINENO}:${FUNCNAME[0]}() '
+</div>
+</div>
+<div class="s2W">
+<div>
+debug() {
+</div>
+</div>
+<div class="s2W">
+<div>
+  echo "Executing: $@"
+</div>
+</div>
+<div class="s2W">
+<div>
+  $@
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s2W">
+<div>
+debug ls
+</div>
+</div>
+<div class="s204">
+Output:
+</div>
+<div class="s2W">
+<div>
++ PS4='+ ${BASH_SOURCE}:${LINENO}:${FUNCNAME[0]}() '
+</div>
+</div>
+<div class="s2W">
+<div>
++ /tmp/j:7:() debug ls
+</div>
+</div>
+<div class="s2W">
+<div>
++ /tmp/j:4:debug() echo 'Executing: ls'
+</div>
+</div>
+<div class="s2W">
+<div>
+Executing: ls
+</div>
+</div>
+<div class="s2W">
+<div>
++ /tmp/j:5:debug() ls
+</div>
+</div>
+<div class="s296">
+You can see how the <span class="s2HD">PS4</span> variable allowed us to
+print the function name using the built-in variable <span
+class="s2HD">FUNCNAME</span> .
+</div>
+<div class="sYN">
+<span class="class-0">File Types</span>
+</div>
+<div class="sP3">
+Plain text files, like we are working with for shell scripts, contain a
+control character to represent the end of a line.  For Unix and Linux
+systems, the control character representing a new line is a Line Feed. 
+<span id="part0010.xhtml_page_78"></span> DOS or Windows systems
+actually use two characters to represent a new line: a carriage return
+and a line feed.
+</div>
+<div class="sP3">
+If you've ever created a text file on a Linux system and sent it to
+someone who is using a Windows system, it may very well display as one
+long line on their computer.  This is due to the lack of carriage
+returns.
+</div>
+<div class="sP3">
+If you were to do the opposite, create a text file on a Windows system
+and open it on a Linux system, there will be additional characters,
+specifically carriage returns, in that file.  The problem in this
+situation is that when you display the contents of the file to the
+screen, you will not see the additional carriage returns.  For example,
+if you ran <span class="s2HD">cat script.sh</span> and that file had
+carriage returns in it, you wouldn't see them.  You have to run <span
+class="s2HD">cat -v script.sh</span> to display non-printable
+characters, like carriage returns.  Carriage returns are represented by
+the caret symbol followed by M (<span class="s2HD">^M</span> ).
+</div>
+<div class="s2W">
+<div>
+$ cat script.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+# This file contains carriage returns.
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "Hello world."
+</div>
+</div>
+<div class="s2W">
+<div>
+$ cat -v script.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash^M
+</div>
+</div>
+<div class="s2W">
+<div>
+# This file contains carriage returns.^M
+</div>
+</div>
+<div class="s2W">
+<div>
+echo "Hello world."^M
+</div>
+</div>
+<div class="s204">
+If you execute a file that contains carriage returns, you'll probably
+run into an error like this: <span class="s2HD">"/bin/bash^M:, No such
+file or directory.</span> " The carriage return is being treated as part
+of the file name.  In order to get this script to run, we need to remove
+the carriage returns.
+</div>
+<div class="sP3">
+This situation is another reason why you should always start your
+scripts with a shebang.  If you didn't have the shebang line, the
+commands would be executed using your current shell.  This can lead to
+strange things happening.  The script might work as expected in some
+parts, but totally fail at other parts due to carriage returns. If you
+start getting <span id="part0010.xhtml_page_79"></span> strange errors
+that make no sense, check to see if there are carriage returns in your
+script.
+</div>
+<div class="sP3">
+In addition to using the <span class="s2HD">cat -v</span> command to see
+if there are carriage returns in a file, you can also use the <span
+class="s2HD">file</span> command.  If it finds the additional carriage
+returns, it will alert you to the fact.
+</div>
+<div class="sP3">
+To easily remove these characters, I recommend that you use the <span
+class="s2HD">dos2unix</span> utility.  It may not be installed by
+default on your system, so you may have to manually install it if you
+need it.  This utility converts a DOS file—or a file with carriage
+returns—into a Unix file, or a file without carriage returns.  There is
+another utility which does the opposite, and it's called <span
+class="s2HD">unix2dos</span> .
+</div>
+<div class="sP3">
+After you run the <span class="s2HD">dos2unix</span> command against
+your file, you'll find that the carriage returns are removed.  You can
+confirm this by running the <span class="s2HD">file</span> command
+against the file.  You'll notice there is no warning about CRLF line
+terminators.
+</div>
+<div class="s2W">
+<div>
+$ file script.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+script.sh: Bourne-Again shell script, ASCII text executable, with CRLF
+line terminators
+</div>
+</div>
+<div class="s2W">
+<div>
+$ dos2unix script.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+$ file script.sh
+</div>
+</div>
+<div class="s2W">
+<div>
+script.sh: Bourne-Again shell script, ASCII text executable
+</div>
+</div>
+<div class="s204">
+Usually, you end up with these unwanted carriage returns in your shell
+scripts due to creating a file on a Windows system and uploading that
+file to a Linux system.  If you want to create shell scripts on a
+Windows system, see if your editor supports Unix-style line endings.  If
+it does support this option, turn it on.  Also, some editors can convert
+between dos and Unix style file types.
+</div>
+<div class="sNY">
+You can also end up with unwanted characters in your shell scripts if
+you copy some text from your windows computer and paste it into your
+putty window.  Even if you're using an all Linux system, the copy and
+<span id="part0010.xhtml_page_80"></span> paste action can get you.  For
+example, if you copy some text from a web page that has carriage returns
+in it and then paste that into a text file, that file may contain those
+carriage returns.
+</div>
+<div class="s2AD">
+Review
+</div>
+<div class="sNY">
+In this chapter, you learned how to use a few different built-in bash
+options to aid you in debugging shell scripts.  You learned what the
+<span class="s2HD">-x</span> , <span class="s2HD">-e</span> , and <span
+class="s2HD">-v</span> options do and how to combine them.  You also
+learned how to use variables to assist you in debugging and creating
+shell scripts.  We talked about the advantages of using an editor that
+has syntax highlighting support.  You learned about the <span
+class="s2HD">PS4</span> variable and how to use that in conjunction with
+an x-trace.  Finally, you learned about the challenges of switching back
+and forth between windows and Linux, and more importantly, how to catch
+and correct errors caused by carriage returns.
+</div>
+<div class="s3A">
+Practice Exercises
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="sNY">
+Write a shell script that exits on error and displays commands as they
+will execute, including all expansions and substitutions.  Use 3 <span
+class="s2HD">ls</span> commands in your script.  Make the first one
+succeed, the second one fail, and the third one succeed.  If you are
+using the proper options, the third <span class="s2HD">ls</span> command
+will not be executed.
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="sP3">
+Modify the previous exercise so that script continues, even if an error
+occurs.  This time, all three <span class="s2HD">ls</span> commands will
+execute<span id="part0010.xhtml_page_81"></span> .
+</div>
+<div class="s2AN">
+<span class="class-0">Solutions to the Practice Exercises</span>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 1:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -ex
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+ls /etc/passwd
+</div>
+</div>
+<div class="s2W">
+<div>
+ls /move/along/nothing/to/see/here
+</div>
+</div>
+<div class="s2W">
+<div>
+ls /etc/passwd
+</div>
+</div>
+<div class="sP1">
+<span class="class-1">Exercise 2:</span>
+</div>
+<div class="s2W">
+<div>
+#!/bin/bash -x
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+ls /etc/passwd
+</div>
+</div>
+<div class="s2W">
+<div>
+ls /move/along/nothing/to/see/here
+</div>
+</div>
+<div class="s2W">
+<div>
+ls /etc/passwd<span id="part0010.xhtml_page_82"></span>
+</div>
+</div>
+<div id="part0010.xhtml_a2H2" class="s2BB">
+Shell Script Checklist
+</div>
+<div class="s204">
+1. Does your script start with a shebang?
+</div>
+<div class="sP3">
+Example:
+</div>
+<div class="s2W">
+<div>
+#/bin/bash
+</div>
+</div>
+<div class="s204">
+2. Does your script include a comment describing the purpose of the
+script?
+</div>
+<div class="sP3">
+Example:
+</div>
+<div class="s2W">
+<div>
+# This script creates a backup of every MySQL database on the system.
+</div>
+</div>
+<div class="s204">
+3. Are the global variables declared at the top of your script,
+following the initial comment(s)?
+</div>
+<div class="sP3">
+Example:
+</div>
+<div class="s2W">
+<div>
+DEBUG=true
+</div>
+</div>
+<div class="s2W">
+<div>
+HTML_DIR=/var/www<span id="part0010.xhtml_page_83"></span>
+</div>
+</div>
+<div class="s204">
+4. Have you grouped all of your functions together following the global
+variables?
+</div>
+<div class="s204">
+5. Do your functions use local variables?
+</div>
+<div class="sP3">
+Example:
+</div>
+<div class="s2W">
+<div>
+local GREETING="Hello!"
+</div>
+</div>
+<div class="s204">
+6. Does the main body of your shell script follow the functions?
+</div>
+<div class="s204">
+7. Does your script exit with an explicit exit status?
+</div>
+<div class="sP3">
+Example:
+</div>
+<div class="s2W">
+<div>
+exit 0
+</div>
+</div>
+<div class="s204">
+8. At the various exit points, are exit statuses explicitly used?
+</div>
+<div class="s2W">
+<div>
+Example:<br />
+if [ ! -d "$HTML_DIR" ]
+</div>
+</div>
+<div class="s2W">
+<div>
+then<br />
+  echo "$HTML_DIR does not exist. Exiting."<br />
+  exit 1
+</div>
+</div>
+<div class="s2W">
+<div>
+fi<span id="part0010.xhtml_page_84"></span>
+</div>
+</div>
+<div id="part0010.xhtml_a2H3" class="s2CC">
+Shell Script Template
+</div>
+<div class="s21C">
+<div>
+#!/bin/bash
+</div>
+</div>
+<div class="s2W">
+<div>
+#
+</div>
+</div>
+<div class="s2W">
+<div>
+# &lt;Replace with the description and/or purpose
+</div>
+</div>
+<div class="s2W">
+<div>
+# of this shell script.&gt;
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+GLOBAL_VAR1="one"
+</div>
+</div>
+<div class="s2W">
+<div>
+GLOBAL_VAR2="two"
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+function function_one() {
+</div>
+</div>
+<div class="s2W">
+<div>
+  local LOCAL_VAR1="one"
+</div>
+</div>
+<div class="s2W">
+<div>
+  # &lt;Replace with function code.&gt;
+</div>
+</div>
+<div class="s2W">
+<div>
+}
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Main body of the shell script starts here.
+</div>
+</div>
+<div class="s2W">
+<div>
+#
+</div>
+</div>
+<div class="s2W">
+<div>
+# &lt;Replace with the main commands of your
+</div>
+</div>
+<div class="s2W">
+<div>
+# shell script.&gt;
+</div>
+</div>
+<div class="s8X">
+
+</div>
+<div class="s2W">
+<div>
+# Exit with an explicit exit status.
+</div>
+</div>
+<div class="s2W">
+<div>
+exit 0<span id="part0010.xhtml_page_85"></span>
+</div>
+</div>
+<div class="s204">
+The above template is comprised of a short series of best practices. 
+First off, all scripts should start with a shebang.  This is the first
+line of your script and it explicitly declares which interpreter is used
+to execute the script.
+</div>
+<div class="sP3">
+Next, you should include at least a one-line comment summarizing what
+the script does and why it exists.  You can include more information if
+you like.  Some people like to include information such as the original
+author of the script, the version of the script, and other details.
+</div>
+<div class="sP3">
+If you are going to use global variables, they should come next unless
+their value cannot be determined until a later point in your script.
+</div>
+<div class="sP3">
+Functions should come next.  Group all of your functions together
+following the global variables.
+</div>
+<div class="sP3">
+Within your functions, be sure to use the <span
+class="s2HD">local</span> keyword when defining variables that are local
+to the function.
+</div>
+<div class="sP3">
+Following the functions section, the main portion of your shell script
+begins.
+</div>
+<div class="sP3">
+Finally, remember to explicitly use an exit status.  If you do not
+supply an exit status, which is a number from 0 to 255, then the exit
+status of the previously executed command will be used as the exit
+status of your script.  It's best to control this rather than leave it
+to chance.
+</div>
+<div class="sNY">
+At least end your script with an <span class="s2HD">exit 0</span> line.
+ If your script was able to get to the last line of your script, then,
+in most cases, it has successfully completed.  Also keep in mind the
+other places where your shell script may terminate.  You'll want to use
+exit statements in those places as well.  For example, if your script
+performs some sort of check and stops because the check failed, you'll
+want to exit with a non-zero exit status<span
+id="part0010.xhtml_page_86"></span> .
+</div>
+<div id="part0010.xhtml_toc10_Scripts_from_My_Personal_Collection"
+class="s2CC">
+Scripts from My Personal Collection
+</div>
+<div class="s1BW">
+If you would like to see some shell scripts from my personal collection,
+visit: <a href="https://github.com/jasonc/scripts"
+class="s2HA">https://github.com/jasonc/script<span
+id="part0010.xhtml_page_87"></span> s</a>
+</div>
+<div id="part0010.xhtml_a2H5" class="s2DW">
+Congratulations and Thank You!
+</div>
+<div class="s204">
+Congratulations for making it through this book!  As a way of saying
+thank you for reading this book and making it to the end, I would like
+to give you a huge discount on my shell scripting course.
+</div>
+<div class="sP3">
+To enroll for just $15 -- 85% off the normal price of $99 -- visit:
+</div>
+<div class="sP3">
+<a href="http://www.linuxtrainingacademy.com/shell-course"
+class="s2HA">http://www.linuxtrainingacademy.com/shell-course</a>
+</div>
+<div class="sP3">
+I look forward to seeing you in the course!
+</div>
+<div class="sP3">
+Thanks,
+</div>
+<div class="sP3">
+Jason
+</div>
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<div id="part0011.xhtml_page_88" class="sK">
+<div id="part0011.xhtml_toc12_Other_Books_by_the_Author" class="s1N">
+Other Books by the Author
+</div>
+<div class="s1U">
+Command Line Kung Fu: Bash Scripting Tricks, Linux Shell Programming
+Tips, and Bash One-liners
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/command-line-kung-fu-book"
+class="s2HA">http://www.linuxtrainingacademy.com/command-line-kung-fu-book</a>
+</div>
+<div class="s1U">
+High Availability for the LAMP Stack: Eliminate Single Points of Failure
+and Increase Uptime for Your Linux, Apache, MySQL, and PHP Based Web
+Applications
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/ha-lamp-book"
+class="s2HA">http://www.linuxtrainingacademy.com/ha-lamp-book</a>
+</div>
+<div class="s1U">
+Linux for Beginners: An Introduction to the Linux Operating System and
+Command Line
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/linux"
+class="s2HA">http://www.linuxtrainingacademy.com/linux</a>
+</div>
+<div class="s1U">
+Python Programming for Beginners
+</div>
+<div>
+<a
+href="http://www.linuxtrainingacademy.com/python-programming-for-beginners"
+class="s2HA">http://www.linuxtrainingacademy.com/python-programming-for-beginners</a>
+</div>
+</div>
+<p><span id="part0012.xhtml"></span></p>
+<div id="part0012.xhtml_page_89" class="sK">
+<div
+id="part0012.xhtml_toc13_Additional_Resources_Including_Exclusive_Discounts_for_You"
+class="s1N">
+Additional Resources Including Exclusive Discounts for You
+</div>
+<div class="s2EU">
+For even more resources, visit: <a
+href="http://www.linuxtrainingacademy.com/resources"
+class="s2HA">http://www.linuxtrainingacademy.com/resources</a>
+</div>
+<div class="s2EW">
+Books
+</div>
+<div class="s2EY">
+Command Line Kung Fu
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/command-line-kung-fu-book"
+class="s2HA">http://www.linuxtrainingacademy.com/command-line-kung-fu-book</a>
+</div>
+<div class="s2F1">
+Do you think you have to lock yourself in a basement reading cryptic man
+pages for months on end in order to have ninja-like command line skills?
+In reality, if you had someone share their most powerful command line
+tips, tricks, and patterns, you’d save yourself a lot of time and
+frustration. This book does just that.
+</div>
+<div class="s2F3">
+High Availability for the LAMP Stack
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/ha-lamp-book"
+class="s2HA">http://www.linuxtrainingacademy.com/ha-lamp-book</a>
+</div>
+<div class="s2F1">
+Eliminate Single Points of Failure and Increase Uptime for Your Linux,
+Apache, MySQL, and PHP Based Web Application<span
+id="part0012.xhtml_page_90"></span> s
+</div>
+<div class="s2F7">
+Linux for Beginners
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/linux"
+class="s2HA">http://www.linuxtrainingacademy.com/linux</a>
+</div>
+<div class="s2F3">
+Python Programming for Beginners
+</div>
+<div>
+<a
+href="http://www.linuxtrainingacademy.com/python-programming-for-beginners"
+class="s2J0">http://www.linuxtrainingacademy.com/python-programming-for-beginners</a>
+</div>
+<div class="s2F1">
+If you are interested in learning how to program, or use Python
+specifically, this book is for you. In it, you will learn how to install
+Python, which version to choose, how to prepare your computer for a
+great experience, and all the computer programming basics you’ll need to
+know to start writing fully functional programs.
+</div>
+<div class="s2FD">
+<span class="class-1">Courses</span>
+</div>
+<div class="s2EY">
+High Availability for the LAMP Stack
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/ha-lamp-stack"
+class="s2HA">http://www.linuxtrainingacademy.com/ha-lamp-stack</a>
+</div>
+<div class="s2F1">
+Learn how to setup a highly available LAMP stack (Linux, Apache, MySQL,
+PHP).  You'll learn about load balancing, clustering databases, creating
+distributed file systems, and more.
+</div>
+<div class="s2EY">
+Learn Linux in 5 Days
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/linux-in-5-days"
+class="s2HA">http://www.linuxtrainingacademy.com/linux-in-5-days</a>
+</div>
+<div class="s2F1">
+Take just 45 minutes a day for the next 5 days and I will teach you
+exactly what you need to know about the Linux operating system. You’ll
+learn the most important concepts and commands, and I’ll even guide you
+step-by-step through several practical and real-world examples. 
+</div>
+<div class="s2F7">
+Shell Scripting
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/shell-course"
+class="s2HA">http://www.linuxtrainingacademy.com/shell-cours<span
+id="part0012.xhtml_page_91"></span> e</a>
+</div>
+<div class="s2FR">
+Cloud Hosting and VPS (Virtual Private Servers)
+</div>
+<div class="s2F7">
+Digital Ocean
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/digitalocean"
+class="s2HA">http://www.linuxtrainingacademy.com/digitalocean</a>
+</div>
+<div class="s2F1">
+Simple cloud hosting, built for developers.  Deploy an SSD cloud server
+in just 55 seconds.  You can have your own server for as little as $5 a
+month.
+</div>
+<div class="s2FW">
+<span class="class-1">Web Hosting with SSH and Shell Access</span>
+</div>
+<div class="s2F7">
+Bluehost
+</div>
+<div>
+<a href="http://www.linuxtrainingacademy.com/bluehost"
+class="s2HA">http://www.linuxtrainingacademy.com/bluehost</a>
+</div>
+<div class="s2F1">
+99% of my websites are hosted on Bluehost. Why? Because it's incredibly
+easy to use with 1-click automatic WordPress installation and excellent
+customer service - via phone and via chat. I HIGHLY RECOMMEND using
+Bluehost for your first site. Also, you can use the same hosting account
+for multiple domains if you plan on creating more websites.  Visit
+http://www.linuxtrainingacademy.com/bluehost to get a special discount
+off the regular price!
+</div>
+</div>
+<p><span id="part0013.xhtml"></span></p>
+<div id="part0013.xhtml_page_92" class="s2GN">
+<div id="part0013.xhtml_toc14_Appendix__Trademarks" class="s1N">
+Appendix: Trademarks
+</div>
+<div class="s2G8">
+BSD/OS is a trademark of Berkeley Software Design, Inc. in the United
+States and other countries.
+</div>
+<div class="s28">
+Facebook is a registered trademark of Facebook, Inc.
+</div>
+<div class="s28">
+Firefox is a registered trademark of the Mozilla Foundation.
+</div>
+<div class="s28">
+HP and HEWLETT-PACKARD are registered trademarks that belong to
+Hewlett-Packard Development Company, L.P.
+</div>
+<div class="s28">
+IBM® is a registered trademark of International Business Machines Corp.,
+registered in many jurisdictions worldwide.
+</div>
+<div class="s28">
+Linux® is the registered trademark of Linus Torvalds in the U.S. and
+other countries.
+</div>
+<div class="s28">
+Mac and OS X are trademarks of Apple Inc., registered in the U.S. and
+other countries.
+</div>
+<div class="s28">
+Open Source is a registered certification mark of Open Source
+Initiative<span id="part0013.xhtml_page_93"></span> .
+</div>
+<div class="s28">
+Sun and Oracle Solaris are trademarks or registered trademarks of Oracle
+Corporation and/or its affiliates in the United States and other
+countries.
+</div>
+<div class="s28">
+UNIX is a registered trademark of The Open Group.
+</div>
+<div class="s28">
+Windows is a registered trademark of Microsoft Corporation in the United
+States and other countries.
+</div>
+<div class="s28">
+All other product names mentioned herein are the trademarks of their
+respective owners<span id="part0013.xhtml_page_94"></span> .
+</div>
+</div>
