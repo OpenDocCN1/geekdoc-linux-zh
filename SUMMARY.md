@@ -465,6 +465,7 @@
 +   [Masterking Kali Linux：黑客攻击与破解实](docs/masterking-kali-linux-hack-it-or-crack-it/README.md)
 +   [RPM 权威指南](docs/maximum-rpm-rpm-other-sams/README.md)
 +   [Microsoft Word - Linux 与 Windows 集成指南](docs/microsoft-word---integrating-linux-and-windowsdoc/README.md)
++   [Microsoft Word - 动词与肉体](docs/microsoft-word---o-verbo-e-a-carne/README.md)
 +   [中年幽灵猎人：超自然女性小说](docs/midlife-ghost-hunter-a-paranormal-womens-fiction/README.md)
 +   [移动软件诊断入门指南](docs/mobile-software-diagnostics-an-introduction/README.md)
 +   [迁移到自由软件指南](docs/moving-to-free-software/README.md)
