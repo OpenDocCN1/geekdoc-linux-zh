@@ -529,6 +529,7 @@
 +   [红帽Linux秘籍](docs/red-hat-linux-secrets/README.md)
 +   [Red Hat RHCSA™ 9 认证指南 EX200](docs/red-hat-rhcsatm-9-cert-guide-ex200/README.md)
 +   [Red Hat Enterprise Linux 4 傻瓜书](docs/red-hata-enterprise-linuxa-4-for-dummiesa/README.md)
++   [RedHat Enterprise Linux 9 初学者指南：学习、管理与部署全面指南](docs/redhat-enterprise-linux-9-for-beginners-a-comprehensive-guid/README.md)
 +   [红帽认证工程师（RHCE）Linux学习指南（RH302考试） 第三版](docs/rhce-red-hat-certified-engineer-linux-study-guide-exam-rh302/README.md)
 +   [RHCE：红帽认证工程师认证学习指南](docs/rhce-red-hat-certified-engineertm-study-guide/README.md)
 +   [Samba-3 示例：成功部署实践练习](docs/samba-3-by-example-practical-exercises-to-successful-deploym/README.md)

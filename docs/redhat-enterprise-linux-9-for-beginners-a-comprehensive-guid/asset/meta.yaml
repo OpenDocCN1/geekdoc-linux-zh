@@ -1,0 +1,9 @@
+name: RedHat Enterprise Linux 9 for Beginners： A comprehensive guide for learning,
+  administration, and deployment
+name_cn: RedHat Enterprise Linux 9 初学者指南：学习、管理与部署全面指南
+slug: redhat-enterprise-linux-9-for-beginners-a-comprehensive-guid
+toc:
+- - '##'
+  - 创建目录
+- - '#'
+  - 第 17 章 Web 服务器和数据库服务器
