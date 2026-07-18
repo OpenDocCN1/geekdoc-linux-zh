@@ -536,6 +536,7 @@
 +   [24小时自学 Python](docs/sams-teach-yourself-python-in-24-hours-teach-yourself----24-/README.md)
 +   [24小时学会 UNIX（第3版）](docs/sams-teach-yourself-unix-in-24-hours-3rd-edition-sams-teach-/README.md)
 +   [SANS 660.4 - 渗透测试人员的Linux利用实战](docs/sans-6604---exploiting-linux-for-penetration-testers/README.md)
++   [被 Systemd 残虐：一场色色的 Unix 邂逅](docs/savaged-by-systemd-an-erotic-unix-encounter/README.md)
 +   [Linux 安全与优化：Linux 专业人士实用指南，RedHat版](docs/securing-and-optimizing-linux-a-hands-on-guide-for-linux-pro/README.md)
 +   [Shell 编程范例](docs/shell-prog-ex/README.md)
 +   [shell 十三问](docs/shell-ques13/README.md)
