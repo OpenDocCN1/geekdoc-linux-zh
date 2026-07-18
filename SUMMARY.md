@@ -504,6 +504,7 @@
 +   [PowerShell 6.0 Linux 管理秘籍：超过 150 个利用微软开源自动化框架和命令行壳的配方](docs/powershell-60-linux-administration-cookbook-over-150-recipes/README.md)
 +   [Ansible 自动化实用手册：Windows 和 Linux 上 IT 基础设施创新、加速与效率最大化的终极指南](docs/practical-ansible-automation-handbook-an-ultimate-guide-to-i/README.md)
 +   [Ansible 自动化实用指南：释放 Ansible 力量实现工作流自动化、简化运维并彻底变革基础设施管理](docs/practical-ansible-automation-handbook-unleash-the-power-of-a/README.md)
++   [数字取证实践：Windows 和 Linux 用户指南](docs/practical-digital-forensics-a-guide-for-windows-and-linux-us/README.md)
 +   [Linux 实用取证：数字调查员指南](docs/practical-linux-forensics-a-guide-for-digital-investigators/README.md)
 +   [实用 Linux 编程：设备驱动、嵌入式系统与互联网（编程系列）](docs/practical-linux-programming-device-drivers-embedded-systems-/README.md)
 +   [危机四伏的海峡](docs/precarious-straits/README.md)
