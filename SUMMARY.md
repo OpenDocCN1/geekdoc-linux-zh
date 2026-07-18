@@ -458,6 +458,7 @@
 +   [Linux Linux 管理：全面指南](docs/mastering-linux-administration-a-comprehensive-guide/README.md)
 +   [精通 Linux Mint 22：安装、配置与高级功能完全指南](docs/mastering-linux-mint-22-the-complete-guide-to-installation-c/README.md)
 +   [Linux 系统管理精指南](docs/mastering-linux-system-administration/README.md)
++   [现代 Linux 精通指南（第2版）](docs/mastering-modern-linux-2nd-edition/README.md)
 +   [精通 Perl：初学者指南 (计算机科学大师系列)](docs/mastering-perl-a-beginners-guide-mastering-computer-science/README.md)
 +   [UNIX Shell 脚本高级指南（第二版）](docs/mastering-unix-shell-scripting-second-edition/README.md)
 +   [RPM 权威指南](docs/maximum-rpm-rpm-other-sams/README.md)
