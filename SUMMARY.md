@@ -542,6 +542,7 @@
 +   [Red Hat RHCSA 8 认证指南：EX200，第2版 (认证指南)](docs/red-hat-rhcsa-8-cert-guide-ex200-2nd-edition-certification-g/README.md)
 +   [Red Hat RHCSA 8 认证指南：EX200：通过实用指南提升你的 IT 职业](docs/red-hat-rhcsa-8-cert-guide-ex200-advance-your-it-career-with/README.md)
 +   [Red Hat RHCSA 9 认证指南：EX200 (认证指南)](docs/red-hat-rhcsa-9-cert-guide-ex200-certification-guide/README.md)
++   [Red Hat RHCSA／RHCE 7 认证指南：Red Hat Enterprise Linux 7 (EX200 和 EX300) (认证指南)](docs/red-hat-rhcsarhce-7-cert-guide-red-hat-enterprise-linux-7-ex/README.md)
 +   [Red Hat RHCSA™ 9 认证指南 EX200](docs/red-hat-rhcsatm-9-cert-guide-ex200/README.md)
 +   [Red Hat Enterprise Linux 4 傻瓜书](docs/red-hata-enterprise-linuxa-4-for-dummiesa/README.md)
 +   [Redhat 和 CentOS 8：Linux 快速管理员指南](docs/redhat-and-centos-8-linux-express-admin-guide/README.md)
