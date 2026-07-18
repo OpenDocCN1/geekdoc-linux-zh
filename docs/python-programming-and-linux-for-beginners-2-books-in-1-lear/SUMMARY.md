@@ -1,0 +1,2 @@
++   [Python 编程与 Linux 初学者指南：二合一：通过这本易于学的学者指南学习 Linux 系统并开始用于数据科学与机器学习的 Python 编程](README.md)
++   [Python 编程与 Linux 初学者指南：二合一：通过这本易于学的学者指南学习 Linux 系统并开始用于数据科学与机器学习的 Python 编程](python-programming-and-linux-for-beginners-2-books-in-1-lear_0.md)

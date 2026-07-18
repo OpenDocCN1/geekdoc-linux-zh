@@ -516,6 +516,7 @@
 +   [Python 精粹 (开发者库)](docs/python-distilled-developers-library/README.md)
 +   [Python 精华教程 (开发者库) 第1版](docs/python-distilled-developers-library-1st-edition/README.md)
 +   [Python核心参考手册（第4版）](docs/python-essential-reference-4th-edition/README.md)
++   [Python 编程与 Linux 初学者指南：二合一：通过这本易于学的学者指南学习 Linux 系统并开始用于数据科学与机器学习的 Python 编程](docs/python-programming-and-linux-for-beginners-2-books-in-1-lear/README.md)
 +   [Python 编程初学者指南：Python 基础入门指南。通过实用示例快速掌握编程的技巧与方法](docs/python-programming-for-beginners-the-beginners-guide-to-lear/README.md)
 +   [树莓派：如何精通树莓派 (树莓派 3, Python, Linux, 计算机编程, 单板计算机, 微处理器, 编程)](docs/raspberry-pi-how-to-master-raspberry-pi-raspberry-pi-3-pytho/README.md)
 +   [树莓派：终极分步树莓派用户指南（更新版）](docs/raspberry-pi-the-ultimate-step-by-step-raspberry-pi-user-gui/README.md)
