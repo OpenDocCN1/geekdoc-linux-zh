@@ -602,6 +602,7 @@
 +   [GNU Make 入门指南](docs/the-gnu-make-book/README.md)
 +   [Linux 金金书籍：从秘籍到高级应用](docs/the-golden-book-of-linux-from-secrets-to-advanced-applicatio/README.md)
 +   [KCNA Book：Kubernetes 与云原生认证指南指南](docs/the-kcna-book-kubernetes-and-cloud-native-associate/README.md)
++   [Linux 命令行入门指南](docs/the-linux-command-line-a-complete-introduction-for-johan-fel/README.md)
 +   [Linux 命令行入门指南](docs/the-linux-command-line-beginners-guide/README.md)
 +   [Linux Mint 初学者指南](docs/the-linux-mint-beginners-guide/README.md)
 +   [Linux 调度器：十年浪费的核心](docs/the-linux-scheduler-a-decade-of-wasted-cores/README.md)
