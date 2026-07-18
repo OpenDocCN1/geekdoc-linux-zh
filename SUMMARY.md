@@ -548,6 +548,7 @@
 +   [RedHat Enterprise Linux 9 初学者指南：学习、管理与部署全面指南](docs/redhat-enterprise-linux-9-for-beginners-a-comprehensive-guid/README.md)
 +   [红帽认证工程师（RHCE）Linux学习指南（RH302考试） 第三版](docs/rhce-red-hat-certified-engineer-linux-study-guide-exam-rh302/README.md)
 +   [RHCE：红帽认证工程师认证学习指南](docs/rhce-red-hat-certified-engineertm-study-guide/README.md)
++   [RHCSA Red Hat Enterprise Linux 9：培训与考试备考指南 (EX200)，第三版](docs/rhcsa-red-hat-enterprise-linux-9-training-and-exam-preparati/README.md)
 +   [RHCSA／RHCE Red Hat Enterprise Linux 8 认证学习指南，第八版（考试 EX200 & EX294) (RHCSA／RHCE Red Hat Enterprise Linux 认证学习指南）](docs/rhcsarhce-red-hat-enterprise-linux-8-certification-study-gui/README.md)
 +   [Samba-3 示例：成功部署实践练习](docs/samba-3-by-example-practical-exercises-to-successful-deploym/README.md)
 +   [24小时快速掌握 Mandrake Linux](docs/sams-teach-yourself-mandrake-linux-in-24-hours-teach-yoursel/README.md)
