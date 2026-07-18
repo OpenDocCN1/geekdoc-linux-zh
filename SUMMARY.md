@@ -538,6 +538,7 @@
 +   [Red Hat RHCSA 8 认证指南：EX200：通过实用指南提升你的 IT 职业](docs/red-hat-rhcsa-8-cert-guide-ex200-advance-your-it-career-with/README.md)
 +   [Red Hat RHCSA™ 9 认证指南 EX200](docs/red-hat-rhcsatm-9-cert-guide-ex200/README.md)
 +   [Red Hat Enterprise Linux 4 傻瓜书](docs/red-hata-enterprise-linuxa-4-for-dummiesa/README.md)
++   [Redhat 和 CentOS 8：Linux 快速管理员指南](docs/redhat-and-centos-8-linux-express-admin-guide/README.md)
 +   [RedHat Enterprise Linux 9 初学者指南：学习、管理与部署全面指南](docs/redhat-enterprise-linux-9-for-beginners-a-comprehensive-guid/README.md)
 +   [红帽认证工程师（RHCE）Linux学习指南（RH302考试） 第三版](docs/rhce-red-hat-certified-engineer-linux-study-guide-exam-rh302/README.md)
 +   [RHCE：红帽认证工程师认证学习指南](docs/rhce-red-hat-certified-engineertm-study-guide/README.md)
