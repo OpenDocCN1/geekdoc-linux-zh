@@ -1,0 +1,2 @@
++   [Python 快速成教程：7 天或更短学习 Python 的初学者指南，带你进入数据科学、人工智能……机器学习的世界，并包含实战项目](README.md)
++   [Python 快速成教程：7 天或更短学习 Python 的初学者指南，带你进入数据科学、人工智能……机器学习的世界，并包含实战项目](python-crash-course-a-practical-beginners-guide-to-learn-pyt_0.md)
