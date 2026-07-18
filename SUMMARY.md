@@ -568,6 +568,7 @@
 +   [窃取网络：如何掌控目标主机](docs/stealing-the-network-how-to-own-the-box/README.md)
 +   [SuSE Linux 8.1 用户指南](docs/suse-linux-81-user-guide/README.md)
 +   [SUSE Linux 9.3 傻瓜书](docs/suse-linux-93-for-dummies-isbn---0764596152/README.md)
++   [SwiftUI 精要：iOS 版：使用 SwiftUI、Swift 5 和 Xcode 11 开发 iOS 应用](docs/swiftui-essentials---ios-edition-learn-to-develop-ios-apps-u/README.md)
 +   [SystemTap 新手指南](docs/systap-bgd/README.md)
 +   [Linux 入门指南](docs/teach-yourself-linux/README.md)
 +   [通过示例学习技术 2023](docs/tech-exmpl/README.md)
