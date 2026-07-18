@@ -544,6 +544,7 @@
 +   [Linux 安全与优化：Linux 专业人士实用指南，RedHat版](docs/securing-and-optimizing-linux-a-hands-on-guide-for-linux-pro/README.md)
 +   [Shell 编程范例](docs/shell-prog-ex/README.md)
 +   [shell 十三问](docs/shell-ques13/README.md)
++   [8 小时精通 Shell 脚本：初学者指南，快速学习编程：Linux Shell 脚本与练习](docs/shell-scripting-in-8-hours-for-beginners-learn-coding-fast-l/README.md)
 +   [Slackware Linux 精要：Slackware Linux 官方指南](docs/slackware-linux-essentials-the-official-guide-to-slackware-l/README.md)
 +   [Snort 傻瓜书](docs/snortâ-for-dummies/README.md)
 +   [Solaris 8 培训指南 (310-043)：网络管理员认证 (考试攻略)](docs/solaris-8-training-guide-310-043-network-administrator-certi/README.md)

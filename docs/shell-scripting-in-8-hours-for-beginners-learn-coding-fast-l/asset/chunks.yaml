@@ -1,0 +1,4922 @@
+- fmt: '
+
+    ![](cover.jpeg)
+
+
+    # Shell Scripting In 8 Hours For Beginners
+
+    Learn Coding Fast
+
+
+    Ray Yao
+
+    Copyright © 2015 by Ray Yao. All Rights Reserved. Neither part of this book nor
+    whole of this book may be reproduced or transmitted in any form or by any means
+    electronic, photographic or mechanical, including photocopying, recording, or
+    by any information storage or retrieval system, without prior written permission
+    from the author. All rights reserved!
+
+
+    ## About the Author: Ray Yao
+
+    * Certified PHP engineer by Zend, USA
+
+    * Certified JAVA programmer by Sun, USA
+
+    * Certified SCWCD developer by Oracle
+
+    * Certified `A+` professional by CompTIA, USA
+
+    * Certified `ASP. NET` expert by Microsoft
+
+    * Certified `MCP` professional by Microsoft
+
+    * Certified TECHNOLOGY specialist by Microsoft
+
+    * Certified `NETWORK+` professional by CompTIA, USA
+
+
+    * [www . amazon . com/author/ray-yao](http://mybook.to/yaowining)
+
+
+    ## Recommended Books on Amazon
+
+    * [Advanced C++ in 8 Hours](http://mybook.to/yaowining)
+
+    * [Advanced Java in 8 Hours](http://mybook.to/yaowining)
+
+    * [AngularJs in 8 Hours](http://mybook.to/yaowining)
+
+    * [Asp . net Programming](http://mybook.to/yaowining)
+
+    * [Awk in 8 Hours](http://mybook.to/yaowining)
+
+    * [BootStrap in 8 Hours](http://mybook.to/yaowining)
+
+    * [C# Interview Q&A](http://mybook.to/yaowining)
+
+    * [C# Programming](http://mybook.to/yaowining)
+
+    * [C++ Interview Q&A](http://mybook.to/yaowining)
+
+    * [C++ Programming](http://mybook.to/yaowining)
+
+    * [Dart in 8 Hours](http://mybook.to/yaowining)
+
+    * [Django in 8 Hours](http://mybook.to/yaowining)
+
+    * [Erlang in 8 Hours](http://mybook.to/yaowining)
+
+    * [Go in 8 Hours](http://mybook.to/yaowining)
+
+    * [Html Css Interview Q&A](http://mybook.to/yaowining)
+
+    * [Html Css Programming](http://mybook.to/yaowining)
+
+    * [Java Interview Q&A](http://mybook.to/yaowining)
+
+    * [Java Programming](http://mybook.to/yaowining)
+
+    * [JavaScript Interview Q&A](http://mybook.to/yaowining)
+
+    * [JavaScript Programming](http://mybook.to/yaowining)
+
+    * [JQuery Interview Q&A](http://mybook.to/yaowining)
+
+    * [JQuery Programming](http://mybook.to/yaowining)
+
+    * [Jsp Servlets Programming](http://mybook.to/yaowining)
+
+    * [Kotlin in 8 Hours](http://mybook.to/yaowining)
+
+    * [Linux Command Line](http://mybook.to/yaowining)
+
+    * [Linux Interview Q&A](http://mybook.to/yaowining)
+
+    * [Lua in 8 Hours](http://mybook.to/yaowining)
+
+    * [Matlab in 8 Hours](http://mybook.to/yaowining)
+
+    * [MySql in 8 Hours](http://mybook.to/yaowining)
+
+    * [Node . Js in 8 Hours](http://mybook.to/yaowining)
+
+    * [Numpy in 8 Hours](http://mybook.to/yaowining)
+
+    * [Perl in 8 Hours](http://mybook.to/yaowining)
+
+    * [Php Interview Q&A](http://mybook.to/yaowining)
+
+    * [Php MySql Programming](http://mybook.to/yaowining)
+
+    * [PowerShell in 8 Hours](http://mybook.to/yaowining)
+
+    * [Python Interview Q&A](http://mybook.to/yaowining)
+
+    * [Python Programming](http://mybook.to/yaowining)
+
+    * [R Programming](http://mybook.to/yaowining)
+
+    * [React . Js in 8 Hours](http://mybook.to/yaowining)
+
+    * [Ruby Programming](http://mybook.to/yaowining)
+
+    * [Rust in 8 Hours](http://mybook.to/yaowining)
+
+    * [Scala in 8 Hours](http://mybook.to/yaowining)
+
+    * [Shell Scripting in 8 Hours](http://mybook.to/yaowining)
+
+    * [Swift in 8 Hours](http://mybook.to/yaowining)
+
+    * [Tcl in 8 Hours](http://mybook.to/yaowining)
+
+    * [TypeScript in 8 Hours](http://mybook.to/yaowining)
+
+    * [Visual Basic Interview Q&A](http://mybook.to/yaowining)
+
+    * [Visual Basic Programming](http://mybook.to/yaowining)
+
+    * [Vue . Js in 8 Hours](http://mybook.to/yaowining)
+
+    * [Xml Json in 8 Hours](http://mybook.to/yaowining)
+
+
+    ## Preface
+
+    “Linux Shell Scripting in 8 Hours & Exercises” covers all essential Linux Shell
+    language knowledge. You can learn complete primary skills of Linux Shell Scripting
+    fast and easily.
+
+
+    The book includes more than 60 practical examples for beginners and includes exercises
+    for the college exam, the engineer certification exam, and the job interview exam.
+
+
+    Note: This book is only for beginners, it is not suitable for experienced programmers.
+
+
+    ## Table of Content
+
+    * [Hour 1]
+
+    * [What is Linux Shell?]
+
+    * [Shell Scripting]
+
+    * [The First Shell Scripting]
+
+    * [Shell Comment]
+
+    * [Multi-Line Comments]
+
+    * [Shell Variables]
+
+    * [Variable Name]
+
+    * [Read-Only Variable]
+
+    * [Remove Variable]
+
+    * [Input to Variable]
+
+    * [Hour 2]
+
+    * [Shell String (1)]
+
+    * [Shell String (2)]
+
+    * [Connect Strings]
+
+    * [String Length]
+
+    * [Extract Substring]
+
+    * [About `expr…`]
+
+    * [Search Index]
+
+    * [Shell Parameters]
+
+    * [Built-in Parameters]
+
+    * [Hour 3]
+
+    * [Shell Array]
+
+    * [Accessing the Elements]
+
+    * [Get All Elements]
+
+    * [Array Length]
+
+    * [Printf Command]
+
+    * [Escape Sequences]
+
+    * [Hour 4]
+
+    * [Operators]
+
+    * [if…then…else]
+
+    * [Arithmetical Operators]
+
+    * [Comparison Operators]
+
+    * [Boolean Operators]
+
+    * [Hour 5]
+
+    * [String Operators]
+
+    * [File Operators]
+
+    * [“echo” Command]
+
+    * [Hour 6]
+
+    * [Test Command]
+
+    * [Test Equality]
+
+    * [Test Existence]
+
+    * [Test Empty String]
+
+    * [Shell Function]
+
+    * [Function with Arguments]
+
+    * [Return Values]
+
+    * [Hour 7]
+
+    * [For Loop]
+
+    * [While Loop]
+
+    * [Until Loop]
+
+    * [Case Statement]
+
+    * [Break Command]
+
+    * [Continue Command]
+
+    * [Hour 8]
+
+    * [Select Statement]
+
+    * [I/O Redirection]
+
+    * [Output Redirection]
+
+    * [Append Redirection]
+
+    * [Input Redirection]
+
+    * [File Descriptor]
+
+    * [Here Document]
+
+    * [File Included]
+
+    * [Appendix 1]
+
+    * [Appendix 2]
+
+    * [Questions]
+
+    * [Answers]
+
+    * [Recommended Books]
+
+
+    ## Hour 1
+
+    ### What is Linux Shell?
+
+    The shell is the interface between the user and Linux; every command you type
+    at the prompt is interpreted by the shell and passed to the Linux kernel. The
+    shell is a command-language interpreter with its own built-in command collection.
+    In addition, the shell can be called by any other Linux utilities and application
+    programs. Whenever you type a command, it is interpreted by the shell. For example:
+    The command of printing current working directory (`PWD`) is contained within
+    Linux `bash`. The copy commands (`cp`) and the move commands (`rm`) are two single
+    programs that exist in a directory on the file system. The shell first checks
+    to see if the command is an internal command, and then checks to see if it is
+    an application, either of Linux''s own utilities, such as `ls` and `rm`, or of
+    a purchased commercial program, such as `xv` and `ghostview`.
+
+
+    ### Shell Scripting
+
+    A Shell script is a scripting program written for the Shell.
+
+
+    ### Shell Working Environment
+
+    Shell scripting, like Java, C++ programming, requires only a text editor to write
+    code and a script interpreter to interpret execution.
+
+
+    ### Various Linux Shell
+
+    Linux has different types of shells, such as:
+
+    * `/bin/sh`
+
+    * `/bin/bash`
+
+    * `/usr/bin/csh`
+
+    * `/usr/bin/ksh`
+
+    * `/sbin/sh`
+
+    '
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    Shell ScriptingIn 8 HoursFor BeginnersLearn Coding FastRay YaoCopyright © 2015
+    by Ray YaoAll Rights ReservedNeither part of this book nor whole of this book
+    may be reproduced or transmitted in any form or by any means electronic, photographic
+    or mechanical, including photocopying, recording, or by any information storage
+    or retrieval system, without prior written permission from the author. All rights
+    reserved!Ray YaoAbout the Author:  Ray YaoCertified PHP engineer by Zend, USACertified
+    JAVA programmer by Sun, USACertified SCWCD developer by Oracle, USACertified A+
+    professional by CompTIA, USACertified ASP. NET expert by Microsoft, USACertified
+    MCP professional by Microsoft, USACertified TECHNOLOGY specialist by Microsoft,
+    USACertified NETWORK+ professional by CompTIA, USA[www . amazon . com/author/ray-yao](http://mybook.to/yaowining)Recommended
+    Books on Amazon[Advanced C++ in 8 Hours](http://mybook.to/yaowining)[Advanced
+    Java in 8 Hours](http://mybook.to/yaowining)[AngularJs in 8 Hours](http://mybook.to/yaowining)[Asp
+    . net Programming](http://mybook.to/yaowining)[Awk in 8 Hours](http://mybook.to/yaowining)[BootStrap
+    in 8 Hours](http://mybook.to/yaowining)[C# Interview Q&A](http://mybook.to/yaowining)[C#
+    Programming](http://mybook.to/yaowining)[C++ Interview Q&A](http://mybook.to/yaowining)[C++
+    Programming](http://mybook.to/yaowining)[Dart in 8 Hours](http://mybook.to/yaowining)[Django
+    in 8 Hours](http://mybook.to/yaowining)[Erlang in 8 Hours](http://mybook.to/yaowining)[Go
+    in 8 Hours](http://mybook.to/yaowining)[Html Css Interview Q&A](http://mybook.to/yaowining)[Html
+    Css Programming](http://mybook.to/yaowining)[Java Interview Q&A](http://mybook.to/yaowining)[Java
+    Programming](http://mybook.to/yaowining)[JavaScript Interview Q&A](http://mybook.to/yaowining)[JavaScript
+    Programming](http://mybook.to/yaowining)[JQuery Interview Q&A](http://mybook.to/yaowining)[JQuery
+    Programming](http://mybook.to/yaowining)[Jsp Servlets Programming](http://mybook.to/yaowining)[Kotlin
+    in 8 Hours](http://mybook.to/yaowining)[Linux Command Line](http://mybook.to/yaowining)[Linux
+    Interview Q&A](http://mybook.to/yaowining)[Lua in 8 Hours](http://mybook.to/yaowining)[Matlab
+    in 8 Hours](http://mybook.to/yaowining)[MySql in 8 Hours](http://mybook.to/yaowining)[Node
+    . Js in 8 Hours](http://mybook.to/yaowining)[Numpy in 8 Hours](http://mybook.to/yaowining)[Perl
+    in 8 Hours](http://mybook.to/yaowining)[Php Interview Q&A](http://mybook.to/yaowining)[Php
+    MySql Programming](http://mybook.to/yaowining)[PowerShell in 8 Hours](http://mybook.to/yaowining)[Python
+    Interview Q&A](http://mybook.to/yaowining)[Python Programming](http://mybook.to/yaowining)[R
+    Programming](http://mybook.to/yaowining)[React . Js in 8 Hours](http://mybook.to/yaowining)[Ruby
+    Programming](http://mybook.to/yaowining)[Rust in 8 Hours](http://mybook.to/yaowining)[Scala
+    in 8 Hours](http://mybook.to/yaowining)[Shell Scripting in 8 Hours](http://mybook.to/yaowining)[Swift
+    in 8 Hours](http://mybook.to/yaowining)[Tcl in 8 Hours](http://mybook.to/yaowining)[TypeScript
+    in 8 Hours](http://mybook.to/yaowining)[Visual Basic Interview Q&A](http://mybook.to/yaowining)[Visual
+    Basic Programming](http://mybook.to/yaowining)[Vue . Js in 8 Hours](http://mybook.to/yaowining)[Xml
+    Json in 8 Hours](http://mybook.to/yaowining)Prefac e“Linux Shell Scripting in
+    8 Hours & Exercises” covers all essential Linux Shell language knowledge. You
+    can learn complete primary skills of Linux Shell Scripting fast and easily.
+
+
+    The book includes more than 60 practical examples for beginners and includes exercises
+    for the college exam, the engineer certification exam, and the job interview exam.
+
+
+    Note:This book is only for beginners, it is not suitable for experienced programmers.Table
+    of Content[Hour 1](#part0006.xhtml)[What is Linux Shell?](#part0007.xhtml)[Shell
+    Scripting](#part0008.xhtml)[The First Shell Scripting](#part0009.xhtml)[Shell
+    Comment](#part0010.xhtml)[Multi-Line Comments](#part0011.xhtml)[Shell Variables](#part0012.xhtml)[Variable
+    Name](#part0013.xhtml)[Read-Only Variable](#part0014.xhtml)[Remove Variable](#part0015.xhtml)[Input
+    to Variable](#part0016.xhtml)[Hour 2](#part0017.xhtml)[Shell String (1)](#part0018.xhtml)[Shell
+    String (2)](#part0019.xhtml)[Connect Strings](#part0020.xhtml)[String Length](#part0021.xhtml)[Extract
+    Substring](#part0022.xhtml)[About `expr…`](#part0023.xhtml)[Search Index](#part0024.xhtml)[Shell
+    Parameters](#part0025.xhtml)[Built-in Parameters](#part0026.xhtml)[Hour 3](#part0027.xhtml)[Shell
+    Array](#part0028.xhtml)[Accessing the Elements](#part0028.xhtml_a3V2)[Get All
+    Elements](#part0029.xhtml)[Array Length](#part0030.xhtml)[Printf Command](#part0031.xhtml)[Escape
+    Sequences](#part0032.xhtml)[Hour 4](#part0033.xhtml)[Operators](#part0034.xhtml)[if…then…else…fi](#part0035.xhtml)[Arithmetical
+    Operators](#part0037.xhtml)[Comparison Operators](#part0039.xhtml)[Boolean Operators](#part0040.xhtml)[Hour
+    5](#part0041.xhtml)[String Operators](#part0042.xhtml)[File Operators](#part0043.xhtml)[“echo”
+    Command](#part0045.xhtml)[Hour 6](#part0048.xhtml)[Test Command](#part0049.xhtml)[[   ]
+    Symbol](#part0050.xhtml)[Test Equality](#part0051.xhtml)[Test Existence](#part0052.xhtml)[Test
+    Empty String](#part0053.xhtml)[Shell Function](#part0054.xhtml)[Function with
+    Arguments](#part0054.xhtml_a3VS)[Return Values](#part0055.xhtml)[Hour 7](#part0057.xhtml)[if..then
+    ..elif..then..else](#part0058.xhtml)[For Loop](#part0059.xhtml)[While Loop](#part0060.xhtml)[Until
+    Loop](#part0062.xhtml)[Case Statement](#part0063.xhtml)[Break Command](#part0063.xhtml_a3W0)[Continue
+    Command](#part0063.xhtml_a3W1)[Hour 8](#part0064.xhtml)[Select Statement](#part0065.xhtml)[I/O
+    Redirection](#part0066.xhtml)[Output Redirection](#part0067.xhtml)[Append Redirection](#part0068.xhtml)[Input
+    Redirection](#part0069.xhtml)[File Descriptor](#part0070.xhtml)[Here Document](#part0071.xhtml)[File
+    Included](#part0072.xhtml)[Appendix 1](#part0074.xhtml)     [Shell Scripting Chart](#part0074.xhtml_a3WC)[Built-in
+    Parameters Chart](#part0075.xhtml)[Printf Command Chart](#part0076.xhtml)[Escape
+    Sequences Chart](#part0077.xhtml)[Comparison Operators Chart](#part0078.xhtml)[Boolean
+    Operators Chart](#part0079.xhtml)[String Operators Chart](#part0080.xhtml)[File
+    Operators Chart](#part0081.xhtml)[I/O Redirection Chart](#part0082.xhtml)[Appendix
+    2  Exercises](#part0083.xhtml)[Questions](#part0084.xhtml)[Answers](#part0085.xhtml)[Recommended
+    Books](#part0086.xhtml)Hour 1What is Linux Shell?The shell is the interface between
+    the user and Linux; every command you type at the prompt is interpreted by the
+    shell and passed to the Linux kernel.The shell is a command-language interpreter
+    with its own built-in shell command collection. In addition, the shell can be
+    called by any other valid Linux utilities and application programs in the system.Whenever
+    you type a command, it is interpreted by the Linux shell.For example:The command
+    of printing current working directory (PWD) is contained within Linux bash.The
+    copy commands (cp) and the move commands (rm) are two single programs that exist
+    in a directory on the file system.The shell first checks to see if the command
+    is an internal command, and then checks to see if it is an application, either
+    of Linux''s own utilities, such as ls and rm, or of a purchased commercial program,
+    such as xv and ghostview.Another important feature of the shell is that it is
+    an interpreted programming language that supports most data structures, such as
+    loops, functions, variables, and arrays.Shell ScriptingA Shell script is a scripting
+    program written for the Shell.Shell Working EnvironmentShell scripting, like Java,
+    C++ programming, requires only a text editor to write code and a script interpreter
+    to interpret executionVarious Linux ShellLinux has different types of shells,
+    such as:
+
+
+    *   Bourne Shell（ /bin/sh ）
+
+
+    *   Bourne Again Shell（ /bin/bash ）
+
+
+    *   C Shell（ /usr/bin/csh ）
+
+
+    *   K Shell（ /usr/bin/ksh ）
+
+
+    *   Shell for Root（ /sbin/sh ）'
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpeg)
+
+
+    # 初学者 8 小时 Shell 脚本入门
+
+    快速学习编程
+
+
+    Ray Yao
+
+    Copyright © 2015 by Ray Yao. 版权所有。未经作者书面许可，本书的任何部分或整体不得以任何形式或通过任何电子、摄影或机械手段（包括复印、录制或任何信息存储或检索系统）进行复制或传输。保留所有权利！
+
+
+    ## 关于作者：Ray Yao
+
+    * 美国 Zend 认证 PHP 工程师
+
+    * 美国 Sun 认证 JAVA 程序员
+
+    * Oracle 认证 SCWCD 开发者
+
+    * 美国 CompTIA 认证 `A+` 专业人士
+
+    * Microsoft 认证 `ASP. NET` 专家
+
+    * Microsoft 认证 `MCP` 专业人士
+
+    * Microsoft 认证 TECHNOLOGY 专家
+
+    * 美国 CompTIA 认证 `NETWORK+` 专业人士
+
+
+    * [www . amazon . com/author/ray-yao](http://mybook.to/yaowining)
+
+
+    ## Amazon 推荐书籍
+
+    * [8 小时精通 C++](http://mybook.to/yaowining)
+
+    * [8 小时精通 Java](http://mybook.to/yaowining)
+
+    * [8 小时精通 AngularJs](http://mybook.to/yaowining)
+
+    * [Asp . net 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Awk](http://mybook.to/yaowining)
+
+    * [8 小时精通 Bootstrap](http://mybook.to/yaowining)
+
+    * [C# 面试问答](http://mybook.to/yaowining)
+
+    * [C# 编程](http://mybook.to/yaowining)
+
+    * [C++ 面试问答](http://mybook.to/yaowining)
+
+    * [C++ 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Dart](http://mybook.to/yaowining)
+
+    * [8 小时精通 Django](http://mybook.to/yaowining)
+
+    * [8 小时精通 Erlang](http://mybook.to/yaowining)
+
+    * [8 小时精通 Go](http://mybook.to/yaowining)
+
+    * [Html Css 面试问答](http://mybook.to/yaowining)
+
+    * [Html Css 编程](http://mybook.to/yaowining)
+
+    * [Java 面试问答](http://mybook.to/yaowining)
+
+    * [Java 编程](http://mybook.to/yaowining)
+
+    * [JavaScript 面试问答](http://mybook.to/yaowining)
+
+    * [JavaScript 编程](http://mybook.to/yaowining)
+
+    * [JQuery 面试问答](http://mybook.to/yaowining)
+
+    * [JQuery 编程](http://mybook.to/yaowining)
+
+    * [Jsp Servlets 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Kotlin](http://mybook.to/yaowining)
+
+    * [Linux 命令行](http://mybook.to/yaowining)
+
+    * [Linux 面试问答](http://mybook.to/yaowining)
+
+    * [8 小时精通 Lua](http://mybook.to/yaowining)
+
+    * [8 小时精通 Matlab](http://mybook.to/yaowining)
+
+    * [8 小时精通 MySql](http://mybook.to/yaowining)
+
+    * [8 小时精通 Node . Js](http://mybook.to/yaowining)
+
+    * [8 小时精通 Numpy](http://mybook.to/yaowining)
+
+    * [8 小时精通 Perl](http://mybook.to/yaowining)
+
+    * [Php 面试问答](http://mybook.to/yaowining)
+
+    * [Php MySql 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 PowerShell](http://mybook.to/yaowining)
+
+    * [Python 面试问答](http://mybook.to/yaowining)
+
+    * [Python 编程](http://mybook.to/yaowining)
+
+    * [R 语言编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 React . Js](http://mybook.to/yaowining)
+
+    * [Ruby 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Rust](http://mybook.to/yaowining)
+
+    * [8 小时精通 Scala](http://mybook.to/yaowining)
+
+    * [8 小时精通 Shell 脚本](http://mybook.to/yaowining)
+
+    * [8 小时精通 Swift](http://mybook.to/yaowining)
+
+    * [8 小时精通 Tcl](http://mybook.to/yaowining)
+
+    * [8 小时精通 TypeScript](http://mybook.to/yaowining)
+
+    * [Visual Basic 面试问答](http://mybook.to/yaowining)
+
+    * [Visual Basic 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Vue . Js](http://mybook.to/yaowining)
+
+    * [8 小时精通 Xml Json](http://mybook.to/yaowining)
+
+
+    ## 序言
+
+    “8 小时 Linux Shell 脚本与练习”涵盖了所有 Linux Shell 语言知识。你可以快速、轻松地学习 Linux Shell 脚本的完整基础技能。
+
+
+    本书包含了 60 针对初学者的实用示例，并包含了高校考试、工程师认证考试以及工作面试的练习。
+
+
+    注意：本书仅适用于初学者，不适合有经验的程序员。
+
+
+    ## 目录
+
+    * [第 1 小时]
+
+    * [什么是 Linux Shell?]
+
+    * [Shell 脚本]
+
+    * [第一个 Shell 脚本]
+
+    * [Shell 注释]
+
+    * [多行注释]
+
+    * [Shell 变量]
+
+    * [变量名]
+
+    * [只读变量]
+
+    * [删除变量]
+
+    * [变量输入]
+
+    * [第 2 小时]
+
+    * [Shell 字符串 (1)]
+
+    * [Shell 字符串 (2)]
+
+    * [连接字符串]
+
+    * [字符串长度]
+
+    * [提取子字符串]
+
+    * [关于 `expr…`]
+
+    * [搜索与索引]
+
+    * [Shell 参数]
+
+    * [内置参数]
+
+    * [第 3 小时]
+
+    * [Shell 数组]
+
+    * [访问元素]
+
+    * [获取所有元素]
+
+    * [数组长度]
+
+    * [Printf 命令]
+
+    * [转义序列]
+
+    * [第 4 小时]
+
+    * [运算符]
+
+    * [if…then…else]
+
+    * [算术运算符]
+
+    * [比较运算符]
+
+    * [布尔运算符]
+
+    * [第 5 小时]
+
+    * [字符串运算符]
+
+    * [文件运算符]
+
+    * [echo 命令]
+
+    * [第 6 小时]
+
+    * [test 命令]
+
+    * [相等性测试]
+
+    * [存在性测试]
+
+    * [空字符串测试]
+
+    * [Shell 函数]
+
+    * [带参数的函数]
+
+    * [返回值]
+
+    * [第 7 小时]
+
+    * [for 循环]
+
+    * [while 循环]
+
+    * [until 循环]
+
+    * [case 语句]
+
+    * [break 命令]
+
+    * [continue 命令]
+
+    * [第 8 小时]
+
+    * [select 语句]
+
+    * [I/O 重定向]
+
+    * [输出重定向]
+
+    * [追加重定向]
+
+    * [输入重定向]
+
+    * [文件描述符]
+
+    * [在此 (Here Document)]
+
+    * [包含文件]
+
+    * [附录 1]
+
+    * [附录 2]
+
+    * [问答]
+
+    * [解答]
+
+    * [推荐书籍]
+
+
+    ## 第 1 小时
+
+    ### 什么是 Linux Shell?
+
+    Shell 是用户与 Linux 之间的接口；你在提示符输入的每个命令都会由 Shell 解析并传递给 Linux 内核。Shell 是一个带有内置命令集的命令语言解释器。此外，Shell
+    可以被任何其他 Linux 工具和应用程序调用。每当你输入命令时，Shell 会进行解析。例如：打印当前工作目录的命令 (`PWD`) 位于 bash 中。复制命令
+    (`cp`) 和移动命令 (`rm`) 是文件系统中两个独立的程序。Shell 首先检查该命令是否为内部命令，然后检查它是否为应用程序。
+
+
+    ### Shell 脚本
+
+    Shell 脚本是为 Shell 编写的脚本程序。
+
+
+    ### Shell 工作环境
+
+    Shell 脚本类似于 Java、C++ 编程，只需要文本编辑器来编写代码以及脚本解释器来解释执行。
+
+
+    ### 各种 Linux Shell
+
+    * /bin/sh
+
+    * /bin/bash
+
+    * /usr/bin/csh
+
+    * /usr/bin/ksh
+
+    * /sbin/sh
+
+
+    '
+- fmt: '
+
+    This book talks about Bash (Bourne Again Sell). Bash is the default Shell on most
+    Linux systems.
+
+
+    # The First Shell Scripting
+
+
+    ### Example 1.1
+
+
+    1. Open the Vi text editor with a `vi` command.
+
+
+    ![](OEBPS/image_rsrc40C.jpg)
+
+
+    2. Press `i` key, enter the Insert Mode.
+
+
+    3. Type the following code in the Vi editor:
+
+
+    ```bash
+
+    #! /bin/bash
+
+    echo "Hello World ! "
+
+    ```
+
+
+    ![](OEBPS/image_rsrc40D.jpg)
+
+
+    4. Press the `Esc` key to quit the Insert Mode.
+
+
+    5. Type `:wq study.sh` to save the file. The file name is `study.sh`, the extension
+    name is `.sh`.
+
+
+    6. Run this Shell program with the following commands:
+
+
+    ```bash
+
+    bash study.sh
+
+    ```
+
+    Output:Hello World!![](OEBPS/image_rsrc40E.jpg)
+
+
+    Explanation:
+
+    - `vi` is a command to open the Vi editor.
+
+    - `i` key is used to enter the Insert Mode in Vi editor. Insert Mode can be used
+    for writing and editing Shell Scripts.
+
+    - `#! /bin/bash` let Shell system know that using Bash to interpret the scripting.
+
+    - `echo "Hello World ! "` shows the content `Hello World! `.
+
+    - `Esc` key is used to quit the Insert Mode in Vi editor.
+
+    - `:wq file_name` saves the Shell file, and quit from Vi.
+
+    - `bash study.sh` executes the Shell file `study.sh`.
+
+    - `bash myFile.sh` executes the Shell file `myFile.sh`.
+
+
+    ### Shell Comment
+
+
+    ```bash
+
+    #
+
+    ```
+
+    `#` symbol is used for the Shell comments. Shell interpreter always ignores the
+    Shell comments.
+
+
+    ### Example 1.2
+
+
+    ```bash
+
+    #! /bin/bash
+
+    echo "Hello World! "     # output Hello World!
+
+    echo "Hi, Friends! "      # output Hi, Friends!
+
+    ```
+
+    Output:
+
+    Hello World!
+
+    Hi, Friends!
+
+
+    Explanation:
+
+    - `# output Hello World ! ` is a comment of Shell scripting.
+
+    - `# output Hi, Friends ! ` is a comment of Shell scripting.
+
+
+    ### Multi-Line Comments
+
+
+    ```bash
+
+    : <<EOF
+
+    comment 1
+
+    comment 2
+
+    comment 3...
+
+    EOF
+
+    ```
+
+    `: <<EOF……EOF` is used for multi-line comments.
+
+
+    ### Example 1.3
+
+
+    ```bash
+
+    #! /bin/bash
+
+    echo "Hello World! "
+
+    :<<EOF
+
+    This is a "Hello World" program.
+
+    This is a Shell scripting.
+
+    This is a sample of multi-line comment.......
+
+    EOF
+
+    echo "This is a sample of multi-line comment. "
+
+    ```
+
+    Output:
+
+    Hello World!
+
+    This is a sample of multi-line comment.
+
+
+    Explanation:
+
+    `: <<EOF……EOF ` is used for multi-line comments.
+
+
+    # Shell Variables
+
+
+    1. The syntax to define a variable is as follows:
+
+
+    ```bash
+
+    var="value"
+
+    ```
+
+    Note: There must be no Spaces before and after the equal sign!
+
+
+    2. To use a variable, you need to use `$` before a variable.
+
+
+    ```bash
+
+    $var
+
+    ```
+
+
+    ### Example 1.4
+
+
+    ```bash
+
+    #! /bin/bash
+
+    book="Scala in 8 Hours"     # define a variable
+
+    echo $book                # use the variable
+
+    ```
+
+    Output:Scala in 8 Hours
+
+
+    Explanation: When defining a variable, make sure that no spaces before or after
+    the equal sign.
+
+
+    ### Variable Name
+
+    The rule of the variable name is as follows:
+
+    - Only English letters, numbers, and underscores can be used for variable naming.
+
+    - The first character of the variable name cannot begin with a number.
+
+    - There can be no spaces in the middle of a variable name.
+
+    - Variable names cannot be punctuated.
+
+    - Bash keywords cannot be used for variable names.
+
+
+    **Valid Variable Name:** `_myVariable`, `myVariable001`, `my_Varialbe`
+
+    **Invalid Variable Name:** `001Variable`, `echomy`, `*Varialbe`
+
+
+    ### Read-Only Variable
+
+    The `readonly` command can define a variable as a read-only variable, whose value
+    cannot be changed.
+
+
+    ```bash
+
+    readonly variable
+
+    ```
+
+
+    ### Example 1.5
+
+
+    ```bash
+
+    #! /bin/bash
+
+    myVar="C# in 8 Hours"
+
+    readonly myVar
+
+    myVar="Scala in 8 Hours"     # change the variable value
+
+    ```
+
+    Output:
+
+    ( an error message as follows: )
+
+    `test. sh: line 4: myVar: readonly variable`
+
+
+    Explanation: `readonly myVar` sets `myVar` as read only. The output is an error
+    message. After `myVar` becomes a read-only variable, any change in the value of
+    `myVar` will cause an error.
+
+
+    ### Remove Variable
+
+    The `unset` command can delete variables.
+
+
+    ```bash
+
+    unset variable
+
+    ```
+
+
+    ### Example 1.6
+
+
+    ```bash
+
+    #! /bin/sh
+
+    myVar="C++ in 8 Hours"
+
+    unset myVar     # remove a variable
+
+    echo $myVar
+
+    ```
+
+    Output: (nothing)
+
+
+    Explanation: After a variable is removed, the variable no longer exists, and its
+    value no longer exists. So you don''t see any output.
+
+
+    ### Input to Variable
+
+    The value of a variable can be input from keyboard by a user.
+
+
+    ```bash
+
+    read variable
+
+    ```
+
+
+    ### Example 1.7
+
+
+    ```bash
+
+    #! /bin/sh
+
+    echo "Please input your name. "
+
+    read myInput          # the input value will be stored in myInput
+
+    echo "Hi! Your name is: $myInput" # Assume that I will input my name : Ray Yao
+
+    ```
+
+    Output:
+
+    Please input your name.
+
+    Ray Yao
+
+    Hi! Your name is Ray Yao
+
+
+    Explanation: Assume that I input my name: Ray Yao. `read myInput` stores the input
+    value to `myInput`. `echo "Hi! Your name is: $myInput"` shows the input value.
+
+
+    # Hour 2
+
+
+    ## Shell String (1)
+
+    The string is enclosed in single quotes.
+
+
+    ```bash
+
+    str=''This is a string''
+
+    ```
+
+    - Any characters in the single quotes will be printed in its original format.
+
+    - The string variables in the single quotes are invalid.
+
+
+    ### Example 2.1
+
+
+    ```bash
+
+    #! /bin/sh
+
+    var=Andy
+
+    str=''Hello, $var''         # single-quote string
+
+    echo $str
+
+    ```
+
+    Output:Hello, $var
+
+
+    Explanation: `''Hello, $var''` is a single-quote string. Any character in the
+    single quotes will be printed in its original format.
+
+
+    ### Shell String (2)
+
+    The string is enclosed in double quotes.
+
+
+    ```bash
+
+    str="This is a string"
+
+    ```
+
+    - Any characters in the double quotes will be printed by its returned value.
+
+    - The string variables in the double quotes are valid.
+
+
+    ### Example 2.2
+
+
+    ```bash
+
+    #! /bin/sh
+
+    var=Andy
+
+    str="Hello, $var"          # double-quote string
+
+    echo $str
+
+    ```
+
+    Output:Hello, Andy
+
+
+    Explanation: `''Hello, $var''` is a double-quote string. Any character in the
+    double quotes will be printed by its returned value.
+
+
+    ### Connect Strings
+
+    We can use double quotes to connect two strings.
+
+
+    ### Example 2.3
+
+
+    ```bash
+
+    #! /bin/sh
+
+    str1="Kotlin"
+
+    str2="in 8 Hours"
+
+    myString="$str1 $str2"     # connect two strings
+
+    echo $myString
+
+    ```
+
+    Output:Kotlin in 8 Hours
+
+
+    Explanation: `"$str1 $str2"` connects two strings into one string by using double
+    quotes.
+
+
+    ### String Length
+
+    We can get the length of the string by using `#` symbol.
+
+
+    ```bash
+
+    #string
+
+    ```
+
+
+    ### Example 2.4
+
+
+    ```bash
+
+    #! /bin/sh
+
+    str="jQuery in 8 Hours"
+
+    echo ${#str} # get the length of the string
+
+    ```
+
+    Output:17
+
+
+    Explanation: `#str` can get the length of the string. The string length is 17
+    characters and spaces.
+
+
+    ### Extract Substring
+
+    We can extract a substring from a string.
+
+
+    ```bash
+
+    string : start : length
+
+    ```
+
+    `start`: the extraction starts at this index.
+
+    `length`: the extraction size
+
+
+    ### Example 2.5
+
+
+    ```bash
+
+    #! /bin/sh
+
+    str="DjanGo in 8 Hours"
+
+    echo ${str:4:16 } # extract the substring
+
+    ```
+
+    Output:Go in 8 Hours
+
+
+    Explanation: `str:4:16` extracts a substring starting at the index 4, the extracting
+    length is 16.
+
+
+    ### About `expr…`
+
+    `expr` is an expression, which is used for calculation.
+
+
+    ```bash
+
+    ` expr…`
+
+    ```
+
+    Note: ` ` is a back quote, rather than a single quote. The ` key is on the most
+    left side of the keyboard.
+
+
+    ### Example 2.6
+
+
+    ```bash
+
+    #! /bin/sh
+
+    x=100
+
+    y=200
+
+    z=`expr $x + $y` # an expression
+
+    echo "The sum is $z"
+
+    ```
+
+    Output:The sum is 300
+
+
+    Explanation: `expr $x + $y` is an expression, the calculated result will be assigned
+    to the `z`.
+
+    Note: ` ` is a back quote, rather than a single quote. The ` key is on the most
+    left side of the keyboard.
+
+
+    ### Search Index
+
+    We can find the index of the first occurrence of a character in a string.
+
+
+    ```bash
+
+    ` expr index "string" character`
+
+    ```
+
+    Note: ` ` is a back quote, rather than a single quote.
+
+    `index` is a parameter, for searching the index of a character. `character` is
+    a parameter, indicating the character you specify.
+
+
+    ### Example 2.7
+
+
+    ```bash
+
+    str="Kotlin in 8 Hours"
+
+    echo `expr index "$str" n`
+
+    ```
+
+    Output:6
+
+
+    Explanation: `expr index "$str" n` finds the index of the first occurrence of
+    the “n” character in the string.
+
+    Note: ` ` is a back quote, rather than a single quote.
+
+
+    ### Shell Parameters
+
+    We can pass parameters to a Shell script as it executes.
+
+    The syntax of the parameter is as follows:
+
+
+    ```bash
+
+    $n
+
+    ```
+
+    `n` represents a number. `$0` represents the file name. `$1` represents the first
+    parameter. `$2` represents the second parameter. `$3` represents the third parameter.
+
+
+    ### Example 2.8
+
+
+    ```bash
+
+    #! /bin/bash
+
+    echo "My file name is:$0 "
+
+    echo "$1 in 8 Hours"
+
+    echo "$2 in 8 Hours"
+
+    echo "$3 in 8 Hours";
+
+    ```
+
+    '
+  raw: 'This book talks about Bash (Bourne Again Sell). Bash is the default Shell
+    on most Linux systems.The First Shell ScriptingExample 1.1
+
+
+    1.  Open the Vi text editor with a “vi ” command.
+
+
+    ![](OEBPS/image_rsrc40C.jpg)
+
+
+    2.  Press “i ” key, enter the Insert Mode.
+
+
+    3.  Type the following code in the Vi editor:
+
+
+    | #! /bin/bashecho "Hello World ! " |
+
+
+    ![](OEBPS/image_rsrc40D.jpg)
+
+
+    4.  Press the “Esc ” key to quit the Insert Mode.
+
+
+    5.  Type “:wq study.sh ” to save the file. The file name is “study. sh”, the extension
+    name is “. sh”.
+
+
+    6.  Run this Shell program with the following commands:
+
+
+    bash  study.shOutput:Hello World!![](OEBPS/image_rsrc40E.jpg)Explanation:“vi”
+    is a command to open the Vi editor.“i” key is used to enter the Insert Mode in
+    Vi editor.Insert Mode can be used for writing and editing Shell Scripts.“#! /bin/bash”
+    let Shell system know that using Bash to interpret the scripting.“echo "Hello
+    World ! "” shows the content “Hello World! ”“Esc” key is used to quit the Insert
+    Mode in Vi editor.“: wq  file_name” saves the Shell file, and quit from Vi.“bash 
+    study. sh” executes the Shell file “study. sh”.“bash  myFile.sh” executes the
+    Shell file “myFile.sh”.Shell Comment
+
+
+    | # |
+
+
+    “#” symbol is used for the Shell comments.Shell interpreter always ignores the
+    Shell commentsExample 1.2
+
+
+    | #! /bin/bashecho "Hello World! "     # output Hello World!echo "Hi, Friends!
+    "      # output Hi, Friends! |
+
+
+    Output:Hello World!Hi, Friends!Explanation:“# output Hello World ! ” is a comment
+    of Shell scripting.“# output Hi, Friends ! ” is a comment of Shell scripting.Multi-Line
+    Comments
+
+
+    | : <<EOFcomment 1comment 2comment 3...EOF |
+
+
+    “: <<EOF……EOF” is used for multi-line comments.Example 1.3
+
+
+    | #! /bin/bashecho "Hello World! "    :<<EOFThis is a "Hello World" program.This
+    is a Shell scripting.This is a sample of multi-line comment.......EOFecho "This
+    is a sample of multi-line comment. " |
+
+
+    Output:Hello World!This is a sample of multi-line comment.Explanation:“:<<EOF……EOF
+    ” is used for multi-line comments.Shell Variables
+
+
+    1.  The syntax to define a variable is as follows:
+
+
+    | var=“value” |
+
+
+    Note: There must be no Spaces before and after the equal sign!
+
+
+    2.  To use a variable, you need to use “$” before a variable.
+
+
+    | $var |
+
+
+    Example 1.4
+
+
+    | #! /bin/bashbook ="Scala in 8 Hours"     #  define a variableecho  $book            #
+    use the variable |
+
+
+    Output:Scala in 8 HoursExplanation:When defining a variable, make sure that no
+    spaces before or after the equal sign.Variable NameThe rule of the variable name
+    is as follows:
+
+
+    *   Only English letters, numbers, and underscores can be used for variable naming.
+
+
+    *   The first character of the variable name cannot begin with a number.
+
+
+    *   There can be no spaces in the middle of a variable name.
+
+
+    *   Variable names cannot be punctuated.
+
+
+    *   Bash keywords cannot be used for variable names.
+
+
+    The Valid Variable Name:_myVariablemyVariable001my_VarialbeThe Invalid Variable
+    Name:001Variableechomy*VarialbeRead-Only VariableThe “readonly” command can define
+    a variable as a read-only variable, whose value cannot be changed.
+
+
+    | readonly  variable |
+
+
+    Example 1.5
+
+
+    | #! /bin/bashmyVar="C# in 8 Hours"readonly myVar    myVar="Scala in 8 Hours"      #
+    change the variable value |
+
+
+    Output:       ( an error message as follows: )test. sh: line 4: myVar: readonly
+    variableExplanation:“readonly myVar” sets myVar as read only.The output is an
+    error message.After myVar becomes a read-only variable, any change in the value
+    of myVar will cause an error.Remove VariableThe “unset” command can delete variables.
+
+
+    | unset variable |
+
+
+    Example 1.6
+
+
+    | #! /bin/shmyVar="C++ in 8 Hours"unset myVar       # remove a variableecho $myVar
+    |
+
+
+    Output:(nothing)Explanation:After a variable is removed, the variable no longer
+    exists, and its value no longer exists. So you don''t see any output.Input to
+    VariableThe value of a variable can be input from keyboard by a user.
+
+
+    | read  variable |
+
+
+    Example 1.7
+
+
+    | #! /bin/shecho "Please input your name. "    read myInput        # the input
+    value will be stored in myInputecho "Hi! Your name is: $myInput"   # Assume that
+    I will input my name :   Ray Yao |
+
+
+    Output:Please input your name.Ray YaoHi! Your name is Ray YaoExplanation:Assume
+    that I input my name:   Ray Yao“read myInput” stores the input value to “myInput”“echo
+    "Hi! Your name is: $myInput"” shows the input value.Hour 2Shell String (1)The
+    string is enclosed in single quotes.
+
+
+    | str=’This is a string’ |
+
+
+    *   Any characters in the single quotes will be printed in its original format.
+
+
+    *   The string variables in the single quotes are invalid.
+
+
+    Example 2.1
+
+
+    | #! /bin/shvar=Andystr=''Hello, $var''         # single-quote stringecho $str
+    |
+
+
+    Output:Hello, $varExplanation:''Hello, $var'' is a single-quote string. Any character
+    in the single quotes will be printed in its original format.Shell String (2)The
+    string is enclosed in double quotes.
+
+
+    | str=“This is a string” |
+
+
+    *   Any characters in the double quotes will be printed by its returned value.
+     
+
+
+    *   The string variables in the double quotes are valid.
+
+
+    Example 2.2
+
+
+    | #! /bin/shvar=Andystr="Hello, $var"         # double-quote stringecho $str |
+
+
+    Output:Hello, AndyExplanation:''Hello, $var'' is a double-quote string. Any character
+    in the double quotes will be printed by its returned value.
+
+
+    Connect StringsWe can use double quotes to connect two strings.Example 2.3
+
+
+    | #! /bin/shstr1="Kotlin"str2="in 8 Hours"myString="$str1 $str2"     # connect
+    two stringsecho $myString |
+
+
+    Output:Kotlin in 8 HoursExplanation:"$str1 $str2" connects two strings into one
+    string by using double quotes.String LengthWe can get the length of the string
+    by using “#” symbol.
+
+
+    | #string |
+
+
+    Example 2.4
+
+
+    | #! /bin/shstr="jQuery in 8 Hours"echo ${#str }      # get the length of the
+    string |
+
+
+    Output:17Explanation:“#str” can get the length of the string. The string length
+    is 17 characters and spaces.Extract SubstringWe can extract a substring from a
+    string.
+
+
+    | string : start : length |
+
+
+    “start”: the extraction starts at this index.“length”: the extraction sizeExample
+    2.5
+
+
+    | #! /bin/shstr="DjanGo in 8 Hours"echo ${str:4:16 }      # extract the substring
+    |
+
+
+    Output:Go in 8 HoursExplanation:“str: 4: 16” extracts a substring starting at
+    the index 4, the extracting length is 16.About `expr…`` expr…` is an expression,
+    which is used for calculation.
+
+
+    | ` expr…` |
+
+
+    Note:   ` is a back quote, rather than a single quote. The ` key is on the most
+    left side of the keyboard.Example 2.6
+
+
+    | #! /bin/shx=100y=200z=`expr $x + $y`        # an expressionecho "The sum is
+    $z" |
+
+
+    Output:The sum is 300Expression:`expr $x + $y` is an expression, the calculated
+    result will be assigned to the z.Note:   ` is a back quote, rather than a single
+    quote. The ` key is on the most left side of the keyboard.Search IndexWe can find
+    the index of the first occurrence of a character in a string.
+
+
+    | ` expr  index “string”  character` |
+
+
+    Note:   ` is a back quote, rather than a single quote.“index” is a parameter,
+    for searching the index of a character.“character” is a parameter, indicating
+    the character you specify.Example 2.7
+
+
+    | str="Kotlin in 8 Hours"echo `expr index "$str" n` |
+
+
+    Output:6Explanation:“ `expr index "$str" n` ” finds the index of the first occurrence
+    of the “n” character in the string.Note:   ` is a back quote, rather than a single
+    quote.Shell ParametersWe can pass parameters to a Shell script as it executes.The
+    syntax of the parameter is as follows:
+
+
+    | $n |
+
+
+    “n” represents a number.$0 represents the file name.$1 represents the first parameter.$2
+    represents the second parameter.$3 represents the third parameter.……Example 2.8
+
+
+    | #! /bin/bashecho "My file name is:$0 ";echo "$1 in 8 Hours";echo "$2 in 8 Hours";echo
+    "$3 in 8 Hours"; |'
+  toc: []
+  trans: '
+
+
+    本书介绍了 Bash (Bourne Again Shell)。Bash 是大多数 Linux 上的上的默认 Shell。
+
+
+    # 第一个 Shell 脚本
+
+
+    ### 示例 1.1
+
+
+    1. 使用 `vi` 命令打开 Vi 文本编辑器。
+
+
+    ![](img/image_rsrc40C.jpg)
+
+
+    2. 按 `i` 键进入插入模式（Insert Mode）。
+
+
+    3. 在 Vi 编辑器中输入以下代码：
+
+
+    ```bash
+
+    #! /bin/bash
+
+    echo "Hello World ! "
+
+    ```
+
+
+    ![](img/image_rsrc40D.jpg)
+
+
+    4. 按 `Esc` 键退出插入模式。
+
+
+    5. 输入 `:wq study.sh` 保存文件。文件名为 `study.sh`，扩展名为 `.sh`。
+
+
+    6. 使用以下命令运行此 Shell 程序：
+
+
+    ```bash
+
+    bash study.sh
+
+    ```
+
+    输出:Hello World!![](img/image_rsrc40E.jpg)
+
+
+    解释：
+
+    - `vi` 是一个打开 Vi 编辑器的命令。
+
+    - `i` 键用于进入 Vi 编辑器的插入模式。插入模式可用于编写和编辑 Shell 脚本。
+
+    - `#! /bin/bash` 告诉 Shell 系统使用 Bash 来解释脚本。
+
+    - `echo "Hello World ! "` 显示内容 `Hello World! `。
+
+    - `Esc` 键用于退出 Vi 编辑器的插入模式。
+
+    - `:wq file_name` 保存 Shell 文件并退出 Vi。
+
+    - `bash study.sh` 执行 Shell 文件 `study.sh`。
+
+    - `bash myFile.sh` 执行 Shell 文件 `myFile.sh`。
+
+
+    ### Shell 注释
+
+
+    ```bash
+
+    #
+
+    ```
+
+    `#` 符号用于 Shell 注释。Shell 解释器始终忽略 Shell 注释。
+
+
+    ### 示例 1.2
+
+
+    ```bash
+
+    #! /bin/bash
+
+    echo "Hello World! "     # 输出 Hello World!
+
+    echo "Hi, Friends! "      # 输出 Hi, Friends!
+
+    ```
+
+    输出：
+
+    Hello World!
+
+    Hi, Friends!
+
+
+    解释：
+
+    - `# output Hello World ! ` 是 Shell 脚本的注释。
+
+    - `# output Hi, Friends ! ` 是 Shell 脚本的注释。
+
+
+    ### 多行注释
+
+
+    ```bash
+
+    : <<EOF
+
+    comment 1
+
+    comment 2
+
+    comment 3...
+
+    EOF
+
+    ```
+
+    `: <<EOF……EOF` 用于多行注释。
+
+
+    ### 示例 1.3
+
+
+    ```bash
+
+    #! /bin/bash
+
+    echo "Hello World! "
+
+    :<<EOF
+
+    这是一个 "Hello World" 程序。
+
+    这是一个 Shell 脚本。
+
+    这是一个多行注释的示例.......
+
+    EOF
+
+    echo "This is a sample of multi-line comment. "
+
+    ```
+
+    输出：
+
+    Hello World!
+
+    This is a sample of multi-line comment.
+
+
+    解释：
+
+    `: <<EOF……EOF ` 用于多行注释。
+
+
+    # Shell 变量
+
+
+    1. 定义变量的语法如下：
+
+
+    ```bash
+
+    var="value"
+
+    ```
+
+    注意：等号前后不能有空格！
+
+
+    2. 要使用变量，需要在变量名前前使用 `$`。
+
+
+    ```bash
+
+    $var
+
+    ```
+
+
+    ### 示例 1.4
+
+
+    ```bash
+
+    #! /bin/bash
+
+    book="Scala in 8 Hours"     # 定义变量
+
+    echo $book                # 使用变量
+
+    ```
+
+    输出：Scala in 8 Hours
+
+
+    解释：定义变量时，请确保等号前后没有空格。
+
+
+    ### 变量名
+
+    变量名的规则如下：
+
+    - 变量名只能使用英文字母、数字和下划线。
+
+    - 变量名的第一个字符不能是数字开头。
+
+    - 变量名中间不能有空格。
+
+    - 变量名不能包含标点符号。
+
+    - Bash 不能作为变量名。
+
+
+    **有效变量名：** `_myVariable`, `myVariable001`, `my_Varialbe`
+
+    **无效变量名：** `001Variable`, `echomy`, `*Varialbe`
+
+
+    ### 只读变量
+
+    `readonly` 命令可以将变量定义为只读变量，其值无法更改。
+
+
+    ```bash
+
+    readonly variable
+
+    ```
+
+
+    ### 示例 1.5
+
+
+    ```bash
+
+    #! /bin/bash
+
+    myVar="C# in 8 Hours"
+
+    readonly myVar
+
+    myVar="Scala in 8 Hours"     # 修改变量值
+
+    ```
+
+    输出：
+
+    （ 如下错误消息： ）
+
+    `test. sh: line 4: myVar: readonly variable`
+
+
+    解释：`readonly myVar` 将 `myVar` 设置为只读。输出为错误消息。`myVar` 变成只读变量后，对 `myVar` 值的任何更改都会导致错误。
+
+
+    ### 删除变量
+
+    `unset` 命令可以删除变量。
+
+
+    ```bash
+
+    unset variable
+
+    ```
+
+
+    ### 示例 1.6
+
+
+    ```bash
+
+    #! /bin/sh
+
+    myVar="C++ in 8 Hours"
+
+    unset myVar     # 变量
+
+    echo $myVar
+
+    ```
+
+    输出：（无）
+
+
+    解释：变量被删除后，该变量不再存在，其值也不再存在。因此你看不到任何输出。
+
+
+    ### 变量输入
+
+    变量的值可以从用户的键盘输入。
+
+
+    ```bash
+
+    read variable
+
+    ```
+
+
+    ### 示例 1.7
+
+
+    ```bash
+
+    #! /bin/sh
+
+    echo "Please input your name. "
+
+    read myInput          # 输入值将存储在 myInput 中
+
+    echo "Hi! Your name is: $myInput" # 假设我输入我的名字：Ray Yao
+
+    ```
+
+    输出：
+
+    Please input your name.
+
+    Ray Yao
+
+    Hi! Your name is Ray Yao
+
+
+    解释：假设我输入了我的名字：Ray Yao。`read myInput` 将输入值存储到 `myInput`。`echo "Hi! Your name is:
+    $myInput"` 显示输入值。
+
+
+    # 第 2 小时
+
+
+    ## Shell 字符串 (1)
+
+    字符串包含在单引号中。
+
+
+    ```bash
+
+    str=''This is a string''
+
+    ```
+
+    - 单引号内的任何字符将以其原始格式打印。
+
+    - 单引号内的字符串变量是无效的。
+
+
+    ### 示例 2.1
+
+
+    ```bash
+
+    #! /bin/sh
+
+    var=Andy
+
+    str=''Hello, $var''         # 单引号字符串
+
+    echo $str
+
+    ```
+
+    输出：Hello, $var
+
+
+    解释：`''Hello, $var''` 是单引号字符串。单引号内的任何字符将以其原始格式打印。
+
+
+    ### Shell 字符串 (2)
+
+    字符串包含在双引号中。
+
+
+    ```bash
+
+    str="This is a string"
+
+    ```
+
+    - 双引号内的任何字符将按其返回的值打印。
+
+    - 双引号内的字符串变量是有效的。
+
+
+    ### 示例 2.2
+
+
+    ```bash
+
+    #! /bin/sh
+
+    var=Andy
+
+    str="Hello, $ "         # 双引号字符串
+
+    echo $str
+
+    ```
+
+    输出：Hello, $
+
+
+    （此处更正示例 2.2 应为）
+
+    ```bash
+
+    #! /bin/sh
+
+    var=Andy
+
+    str="Hello, $var"         # 双引号字符串
+
+    echo $str
+
+    ```
+
+    输出：Hello, Andy
+
+
+    解释：`"Hello, $var"` 是双引号字符串。双引号内的字符串变量将按其返回的值打印。
+
+
+    ### 连接字符串
+
+    我们可以使用双引号连接字符串。
+
+
+    ### 示例 2.3
+
+
+    ```bash
+
+    #! /bin/sh
+
+    str1="Kotlin"
+
+    str2="in 8 Hours"
+
+    myString="$str1str2"
+
+    echo $myString
+
+    ```
+
+    输出：Kotlin in 8 Hours
+
+
+    解释：`"$str1str2"` 连接了字符串。
+
+
+    ### 字符串长度
+
+    我们通过 `#` 获取字符串的长度。
+
+
+    ### 示例 2.4
+
+
+    ```bash
+
+    #! /bin/sh
+
+    str="jQuery in 8 Hours"
+
+    echo ${#str} # 获取长度
+
+    ```
+
+    输出：17
+
+
+    解释：`${str}` 获取字符串长度。
+
+
+    ### 截取子字符串
+
+    我们可以从字符串中截取子字符串。
+
+
+    ### 示例 2.5
+
+
+    ```bash
+
+    #! /bin/sh
+
+    str="Django in 8 Hours"
+
+    echo ${str:4:16} # 截取
+
+    ```
+
+    输出：go in 8 Hours
+
+
+    解释：`${str:4:16}` 从索引 4 开始截取 16 个字符。
+
+
+    ### 关于 `expr…`
+
+    `expr` 是一个表达式，用于计算。
+
+
+    ### 示例 2.6
+
+
+    ```bash
+
+    #! /bin/sh
+
+    x=100
+
+    y=200
+
+    z=`expr $x + $y` # 表达式
+
+    echo "The sum is $z"
+
+    ```
+
+    输出：The sum is 300
+
+
+    解释：`expr $x + $y` 是一个表达式，计算结果赋值给 `z`。
+
+
+    ### 索引
+
+    我们可以查找字符串中字符首次出现的索引。
+
+
+    ### 示例 2.7
+
+
+    ```bash
+
+    str="Kotlin in 8 Hours"
+
+    echo `expr index "$str" n`
+
+    ```
+
+    输出：6
+
+
+    解释：`expr index "$str" n` 找到字符串中字符“n”首次出现的索引。
+
+
+    ### Shell 参数
+
+    我们可以在执行时向 Shell 脚本传递参数。
+
+    参数的语法如下：
+
+
+    ```bash
+
+    $n
+
+    ```
+
+    `n` 代表数字。`$0` 代表文件名。`$1` 代表第一个参数。`$2` 代表第二个参数。`$3` 代表第三个参数。
+
+
+    ### 示例 2.8
+
+
+    ```bash
+
+    #! /bin/bash
+
+    echo "My file name is:$0 "
+
+    echo "$1 in 8 Hours"
+
+    echo "$2 in 8 Hours"
+
+    echo "$3 in 8 Hours";
+
+    ```
+
+
+    '
+- fmt: "\nSave the file named `OK.sh`. Run the file using the following command:\n\
+    ```bash\nbash OK.sh C# GO VB\n```\n**Output:**\n`My file name is: OK.sh`\nC# in\
+    \ 8 Hours\nGO in 8 Hours\nVB in 8 Hours\n![](OEBPS/image_rsrc40F.jpg)\n\n**Explanation:**\n\
+    `bash OK.sh C# GO VB` runs the file `OK.sh`, and pass four parameters to Shell\
+    \ script.\nThe zero parameter `OK.sh` passes to `$0`.\nThe first parameter `C#`\
+    \ passes to `$1`.\nThe second parameter `GO` passes to `$2`.\nThe third parameter\
+    \ `VB` passes to `$3`.\n\n### Built-in Parameters\nThere are built-in parameters\
+    \ in Shell as follows:\n\n| Parameters | Descriptions |\n| :--- | :--- |\n| `$0`\
+    \ | Return the file name |\n| `$#` | Return the total number of the parameters\
+    \ |\n| `$*` | Return all parameters input by the user |\n| `$@` | Return all parameters\
+    \ input by the user |\n| `$$` | Return the current process ID number of the script\
+    \ |\n| `$!` | Return the last process ID number of the script |\n| `$?` | Returning\
+    \ 0 indicates running successfully |\n\n#### Example 2.9\n```bash\n#!/bin/bash\n\
+    echo \"My file name is: $0 \";\necho \"The total of the parameter is:$# \";\n\
+    echo \"All parameter input by the user is:$* \";\necho \"The running result is:$?\
+    \ \";\n```\n\nSave the file named `yes.sh`. Run the file using the following command:\n\
+    ```bash\nbash yes.sh R in 8 Hours\n```\n**Output:**\n`My file name is: yes.sh`\n\
+    `The total of the parameter is: 4`\n`All parameter input by the user is: R in\
+    \ 8 Hours`\n`The running result is: 0`\n![](OEBPS/image_rsrc40G.jpg)\n\n**Explanation:**\n\
+    `bash yes.sh R in 8 Hours` runs the file `yes.sh`, and pass four parameters to\
+    \ Shell script.\n`$#`: Return the total number of the parameters.\n`$*`: Return\
+    \ all parameters input by the user.\n`$?`: Returning 0 indicates the script running\
+    \ successfully, Returning other numbers indicates the script running failure.\n\
+    \n## Hour 3\n### Shell Array\nAn array is a particular variable, which can contain\
+    \ one or more values at a time. Bash supports one-dimensional arrays, does not\
+    \ support multidimensional arrays, and does not limit the size of arrays.\n\n\
+    #### 1. The syntax to create an array:\n| `array_name = (value0 value1 value2...)`\
+    \ |\n\n**Example:**\n```bash\nmyArray=(100 101 102 103)\n```\n**Explanation:**\n\
+    The above code creates an array, the array name is `myArray`, it has four elements,\
+    \ its index is 0, 1, 2, 3, its value is 100, 101, 102, 103. Note that index begins\
+    \ with zero.\n\n#### 2. Another syntax to create an array:\n| `array_name[0]=value0\
+    \ array_name[1]=value1 array_name[2]=value2` |\n\n**Example:**\n```bash\ncolor[0]\
+    \ = \"red\";\ncolor[1] = \"blue\";\ncolor[2] = \"green\";\n```\n**Explanation:**\n\
+    Above code creates an array, the array name is `color`, and it has three elements:\
+    \ `color[0]`, `color[1]`, `color[2]`. Its indexes are 0, 1, and 2. Its values\
+    \ are red, blue, and green. Note that index begins with zero.\n\n### Accessing\
+    \ the Elements\nThe syntax to access the elements of an array is as follows:\n\
+    | `${array_name[index]}` |\n\n#### Example 3.1\n```bash\n#!/bin/bash\nmy_array=(Rust\
+    \ in 8 Hours)     # create an array\necho \"The first element is: ${my_array[0]}\
+    \ \"\necho \"The second element is: ${my_array[1]} \"\necho \"The third element\
+    \ is: ${my_array[2]} \"\necho \"The fourth element is: ${my_array[3]} \"\n```\n\
+    **Output:**\n`The first element is: Rust`\n`The second element is: in`\n`The third\
+    \ element is: 8`\n`The fourth element is: Hours`\n\n**Explanation:**\n`my_array=(Rust\
+    \ in 8 Hours)` creates an array.\n`${my_array[0]}` accesses the element at index\
+    \ 0.\n`${my_array[1]}` accesses the element at index 1.\n`${my_array[2]}` accesses\
+    \ the element at index 2.\n`${my_array[3]}` accesses the element at index 3.\n\
+    The value of `my_array[0]` is: Rust.\nThe value of `my_array[1]` is: in.\nThe\
+    \ value of `my_array[2]` is: 8.\nThe value of `my_array[3]` is: Hours.\n\n###\
+    \ Get All Elements\n`array_name[@]` or `array_name[*]` can get all elements of\
+    \ an array.\n| `array_name[@]` or `array_name[*]` |\n\n**Example 3.2:**\n```bash\n\
+    #!/bin/bash\nmy_array[0]=Java\nmy_array[1]=Ruby\nmy_array[2]=Html\nmy_array[3]=Rust\n\
+    echo \"All elements are: ${my_array[@] }\"\necho \"All elements are: ${my_array[*]}\"\
+    \n```\n**Output:**\n`All elements are: Java Ruby Html Rust`\n`All elements are:\
+    \ Java Ruby Html Rust`\n**Explanation:**\n`my_array[@]` or `my_array[*]` can get\
+    \ all elements of the array.\n\n### Array Length\n`#array[@]` or `#array[*]` can\
+    \ get the length of an array.\n| `#array[@]` or `#array[*]` |\n\n**Example 3.3:**\n\
+    ```bash\n#!/bin/bash\nmy_array=(PHP in 8 Hours)\nlength1=${#my_array[@]]}\nlength2=${#my_array[*]}\n\
+    echo $length1\necho $length2\n```\n**Output:**\n`5`\n**Explanation:**\n`#my_array[@]`\
+    \ or `#my_array[*]` can get the length of the array.\n\n### Print Command\n`printf`\
+    \ is a command to format the output in the Shell.\n\n| Type | Description |\n\
+    | :--- | :--- |\n| `%b` | Print it as binary value |\n| `%d` | Print it as digital\
+    \ value |\n| `%f` | Print it as float-point value |\n| `%o` | Print it as octal\
+    \ value |\n| `%s` | Print it as string value |\n| `%x` | Print it as hexadecimal\
+    \ value |\n\nFor example:\n`%10s` means formatting as a string with maximum width\
+    \ of 10 characters (`-` means left aligned, no sign means right aligned).\n`%8.2f`\
+    \ means formatting as float-point value, 8 integers, 2 decimal places.\n\n####\
+    \ Example 3.4\n```bash\nprintf \"%-10s%-7s %8s\\n\" Name Age\n```\n**Output:**\n\
+    `Name      Age     Weight`\n**Explanation:**\n`%-10s` is replaced by `Name`, `Name`\
+    \ is formatted as a string with 10 characters, left aligned.\n`%-7s` is replaced\
+    \ by `Age`, `Age` is formatted as a string with 7 characters, left aligned.\n\
+    `%-8s` is replaced by `Weight`, `Weight` is formatted as a string with 8 characters,\
+    \ left aligned.\n`\\n` is used to go to the next line.\n\n#### Example 3.5\n```bash\n\
+    #!/bin/bash\nprintf \"%-10s%-7s %8s\\n\" Name Age\nprintf \"%-10s%-7d %5.2f\\\
+    n\" Andy 18 91.8843\nprintf \"%-10s%-7d %5.2f\\n\" Tomy 19 95.4675\nprintf \"\
+    %-10s%-7d %5.2f\\n\" Rosy 17 80.8563\n```\n**Output:**\n`Name      Age     Weight`\n\
+    `Andy      18    91.88`\n`Tomy      19    95.47`\n`Rosy      17    80.86`\n**Explanation:**\n\
+    `printf \"%-10s%-7d %5.2f\\n\" Andy 18 91.8843` formatted three parameters `Andy`,\
+    \ `18`, `91.8843`.\n`%-10s` is replaced by `Andy`, `Andy` is formatted as a string\
+    \ with 10 characters, left aligned.\n`%-7d` is replaced by `18`, `18` is formatted\
+    \ as a digital type with maximum 7 numbers, left aligned.\n`%-5.2f` is replaced\
+    \ by `91.88`, `91.88` is formatted as a float-point type with maximum 5 integers,\
+    \ 2 decimal places, left aligned.\n`\\n` is used to go to the next line.\n\n###\
+    \ Escape Sequences\nThe `\\` backslash character can be used to escape characters.\n\
+    `\\a` outputs an alert\n`\\n` outputs the content to the next new line.\n`\\r`\
+    \ makes a return.\n`\\t` makes a tab.\n`\\f` outputs the content to the next page.\n\
+    `\\'` outputs a single quotation mark.\n`\\\"` outputs a double quotation mark.\n\
+    \n#### Example 3.6\n```bash\n#!/bin/bash\nprintf \"%s %s \\'%s\\' \\n\" He said\
+    \ OK\nprintf \"%d\\t %d\\n\" 10 100\nprintf \"%s\\n %s %d %s\\n\" C# in 8 Hours\n\
+    ```\n**Output:**\n`He said 'OK'`\n`10      100`\n`C#in 8 Hours`\n**Explanation:**\n\
+    `\\'%s\\'` outputs the single quotation marks and a formatted string.\n`%d\\t`\
+    \ outputs a tap’s space between two numbers.\n`%s\\n` outputs following strings\
+    \ in the next line.\n\n## Hour 4\n### Operators\nThe Shell, like other programming\
+    \ languages, supports a variety of operators, including: Arithmetic operator,\
+    \ Relational operator, Boolean operator, String operator, File operator.\n\n`expr...`\n\
+    `expr...` is an expression evaluation tool. The `` ` key is a back quote, rather\
+    \ than a single quote.\n\n#### Example 4.1\n```bash\n#!/bin/bash\nsum=`expr 100\
+    \ + 200`\necho \"The sum is: $sum\"\n```\n**Output:**\n`The sum is: 300`\n**Explanation:**\n\
+    The `` ` key is a back quote, rather than a single quote.\nThe complete expression\
+    \ must be included by the back quotes.\nThere must be a space between the expression\
+    \ and the operator. For example, `10+20` is wrong, `10 + 20` is correct.\n\n`if...then...else...fi`\n\
+    `if statement` executes code1 if a specified condition is true, executes code2\
+    \ if the condition is false.\n\n```bash\nif condition\nthen\n    # if true run\
+    \ this code1\nelse\n    # if false run this code2\nfi\n```\n\n#### Example 4.2\n\
+    ```bash\na=10\nb=20\nif [ $a == $b ]  # check if a is equal to b or not\nthen\n\
+    \    echo \"a is equal to b\"\nelse\n    echo \"a is not equal to b\"\nfi\n```\n"
+  raw: 'Save the file named “OK. sh”Run the file using the following command:$ bash
+    OK.sh  C#  GO  VBOutput:My file name is: OK. shC# in 8 HoursGO in 8 HoursVB in
+    8 Hours![](OEBPS/image_rsrc40F.jpg)Explanation:“bash OK.sh  C#  GO  VB ” runs
+    the file OK. sh, and pass four parameters to Shell script.The zero parameter “OK.
+    sh” passes to $0The first parameter “C#” passes to $1.The second parameter “GO”
+    passes to $2.The third parameter “VB” passes to $3.Built-in ParametersThere are
+    built-in parameters in Shell as follows:
+
+
+    | Parameters | Descriptions |
+
+
+    | $0 | Return the file name |
+
+
+    | $# | Return the total number of the parameters |
+
+
+    | $* | Return all parameters input by the user |
+
+
+    | $@ | Return all parameters input by the user |
+
+
+    | $$ | Return the current process ID number of the script |
+
+
+    | $ ! | Return the last process ID number of the script |
+
+
+    | $? | Returning 0 indicates running successfully |
+
+
+    Example 2.9
+
+
+    | #! /bin/bashecho "My file name is: $0 ";echo "The total of the parameter is:$#
+    ";echo "All parameter input by the user is:$* ";echo "The running result is:$?
+    "; |
+
+
+    Save the file named “yes. sh”Run the file using the following command:bash yes.sh 
+    R in 8 HoursOutput:My file name is: yes. shThe total of the parameter is: 4All
+    parameter input by the user is: R in 8 HoursThe running result is: 0![](OEBPS/image_rsrc40G.jpg)Explanation:“bash
+    yes.sh  R in 8 Hours ” runs the file yes. sh, and pass four parameters to Shell
+    script.$#   Return the total number of the parameters$*    Return all parameters
+    input by the user$?    Returning 0 indicates the script running successfully,
+    Returning other numbers indicates the script running failure.Hour 3Shell ArrayAn
+    array is a particular variable, which can contain one or more values at a time.Bash
+    supports one-dimensional arrays, does not support multidimensional arrays, and
+    does not limit the size of arrays.
+
+
+    1.  The syntax to create an array:
+
+
+    | array_name = (value0  value1  value2…) |
+
+
+    ExamplemyArray=(100  101  102  103)Explanation:The above code creates an array,
+    the array name is “myArray”, it has four elements, its index is 0, 1, 2, 3, its
+    value is 100, 101, 102, 103. Note that index begins with zero.
+
+
+    2.  Another syntax to create an array:
+
+
+    | array_name[0]=value0array_name[1]=value1array_name[2]=value2 |
+
+
+    Examplecolor [0] = “red”;color [1] = “blue”;color [2] = “green”;Explanation:Above
+    code creates an array, the array name is “color”, and it has three elements: color
+    [0], color [1], color [2]. Its indexes are 0, 1, and 2. Its values are red, blue,
+    and green.Note that index begins with zero.Accessing the ElementsThe syntax to
+    access the elements of an array is as follows:
+
+
+    | ${array_name[index]} |
+
+
+    Example 3.1
+
+
+    | #! /bin/bashmy_array=(Rust in 8 Hours)      # create an arrayecho "The first
+    element is: ${my_array[0]} "echo "The second element is: ${my_array[1]} "echo
+    "The third element is: ${my_array[2]} "echo "The fourth element is: ${my_array[3]}
+    " |
+
+
+    Output:The first element is: RustThe second element is: inThe third element is:
+    8The fourth element is: HoursExplanation:“my_array=(Rust in 8 Hours)” creates
+    an array.“${my_array[0]}” accesses the element at index 0.“${my_array[1]}” accesses
+    the element at index 1.“${my_array[2]}” accesses the element at index 2.“${my_array[3]}”
+    accesses the element at index 3.The value of my_array[0] is: RustThe value of
+    my_array[1] is: inThe value of my_array[2] is: 8The value of my_array[3] is: HoursGet
+    All Elementsarray_name[@] or array_name[*] can get all elements of an array.
+
+
+    | array_name[@]orarray_name[ * ] |
+
+
+    Example 3.2
+
+
+    | #! /bin/bashmy_array[0]=Javamy_array[1]=Rubymy_array[2]=Htmlmy_array[3]=Rustecho
+    "All elements are: ${my_array[@] }"echo "All elements are: ${my_array[*] }" |
+
+
+    Output:All elements are: Java  Ruby  Html  RustAll elements are: Java  Ruby  Html  RustExplanation:my_array[@] 
+    or  my_array[*] can get all elements of the array.Array Length#array[@] or #array[*]
+    can get the length of an array.
+
+
+    | #array[@]or#array[ * ] |
+
+
+    Example 3.3
+
+
+    | #! /bin/bashmy_array=(PHP MySQL in 8 Hours)     length1=${#my_array[@] }length2=${#my_array[*]
+    }echo $length1echo $length2 |
+
+
+    Output:55Explanation:#my_array[@]  or  #my_array[*] can get the length of the
+    array.Printf Command“printf” is a command to format the output in the Shell.
+
+
+    | printf  “type”  variables |
+
+
+    “type” is a parameter used to format the output.
+
+
+    | Type | Description |
+
+
+    | %b | Print it as a binary value |
+
+
+    | %d | Print it as a digital value |
+
+
+    | %f | Print it as a float-point value |
+
+
+    | %o | Print it as an octal value |
+
+
+    | %s | Print it as a string value |
+
+
+    | %x | Print it as a hexadecimal value |
+
+
+    For example:%10s means formatting as a string with a maximum width of 10 characters%-10s
+    means formatting as a string with a maximum width of 10 characters (- sign means
+    left aligned, no - sign means right aligned)%8. 2f means formatting as float-point
+    value, 8 means 8 integers, 2 means 2 decimal places.%-8. 2f means formatting as
+    float-point value, 8 means 8 integers, 2 means 2 decimal places. (- sign means
+    left aligned, no – sign means right aligned)Example 3.4printf "%-10s %-7s %-8s\n"
+    Name Age WeightOutput:Name     Age    WeightExplanation:“%-10s” is replaced by
+    “Name”, “Name” is formatted as a string with maximum 10 characters, left aligned.“%-7s”
+    is replaced by “Age”, “Age” is formatted as a string with maximum 7 characters,
+    left aligned.“%-8s” is replaced by “Weight”, “Weight” is formatted as a string
+    with maximum 8 characters, left aligned.“\n” is used to go to the next lineExample
+    3.5
+
+
+    | #! /bin/bashprintf "%-10s %-7s %-8s\n" Name Age Weightprintf "%-10s %-7d %-5.
+    2f\n" Andy 18 91. 8843printf "%-10s %-7d %-5. 2f\n" Tomy 19 95. 4675printf "%-10s
+    %-7d %-5. 2f\n" Rosy 17 80. 8563 |
+
+
+    Output:Name       Age     WeightAndy        18        91. 88Tomy       19        95.
+    47Rosy        17        80. 86Explanation:“printf "%-10s %-7d %-5. 2f\n" Andy
+    18 91. 8843” formatted three parameters “Andy”, “18”, “91. 8843”.“%-10s” is replaced
+    by “Andy”, “Andy” is formatted as a string with maximum 10 characters, left aligned.“%-7d”
+    is replaced by “18”, “18” is formatted as a digital type with maximum 7 numbers,
+    left aligned.“%-5. 2f” is replaced by “91. 88”, “91. 88” is formatted as a float-point
+    type with maximum 5 integers, 2 decimal places, left aligned.“\n” is used to go
+    to the next line.Escape SequencesThe “ \ ” backslash character can be used to
+    escape characters.\a outputs an alert\n outputs the content to the next new line.\r
+    makes a return\t makes a tab\f outputs the content to the next page.\’ outputs
+    a single quotation mark.\” outputs a double quotation mark.Example 3.6
+
+
+    | #! /bin/bashprintf "%s %s \''%s\'' \n" He said OKprintf "%d\t %d\n" 10 100printf
+    "%s\n %s %d %s\n"  C# in 8 Hours |
+
+
+    Output:He said ''OK''10       100C#in 8 HoursExplanation:\''%s\'' outputs the
+    single quotation marks and a formatted string .%d\t  outputs a tap’s space between
+    two numbers%s\n outputs following stings in the next line.Hour 4OperatorsThe Shell,
+    like other programming languages, supports a variety of operators, including:
+    Arithmetic operator, Relational operator,Boolean operator, String operator, File
+    operator.
+
+
+    | `expr…` |
+
+
+    `expr…` is an expression evaluation tool. The ` key is a back quote, rather than
+    a single quote.Example 4.1
+
+
+    | #! /bin/bashsum=`expr 100 + 200`echo "The sum is: $sum" |
+
+
+    Output:The sum is 300Explanation:The ` key is a back quote, rather than a single
+    quote.The complete expression must be included by the back quotes.There must be
+    a space between the expression and the operator. For example, “10+20” is wrong,
+    “10  +  20” is correct.if…then…else…fi“if statement” executes code1 if a specified
+    condition is true, executes code2 if the condition is false.
+
+
+    | if conditionthen       # if true run this code1else# if false run this code2fi
+    |
+
+
+    Example 4.2
+
+
+    | a=10b=20if [ $a == $b ]      # check if a is equal to b or notthenecho "a is
+    equal to b"elseecho "a is not equal to b"fi |'
+  toc: []
+  trans: "\n\n将文件保存为 `OK.sh`。使用以下命令运行文件：\n```bash\nbash OK.sh C# GO VB\n```\n**输出：**\n\
+    `My file name is: OK.sh`\nC# in 8 Hours\nGO in 8 Hours\nVB in 8 Hours\n![](img/image_rsrc40F.jpg)\n\
+    \n**解释：**\n`bash OK.sh C# GO VB` 运行文件 `OK.sh`，并向 Shell 脚本传递四个参数。\n零参数 `OK.sh`\
+    \ 传递给 `$0`。\n第一个参数 `C#` 传递给 `$1`。\n第二个参数 `GO` 传递给 `$2`。\n第三个参数 `VB` 传递给 `$3`。\n\
+    \n### 内置参数\nShell 中的内置参数如下：\n\n| 参数 | 描述 |\n| :--- | :--- |\n| `$0` | 返回文件名 |\n\
+    | `$#` | 返回参数总数 |\n| `$*` | 返回用户的所有的所有 |\n| `$@` | 返回用户输入的所有参数 |\n| `$$` | 返回脚本的当前进程\
+    \ ID |\n| `$!` | 返回脚本的最后一个进程 ID |\n| `$?` | 返回 0 表示运行成功 |\n\n#### 示例 2.9\n```bash\n\
+    #!/bin/bash\necho \"My file name is: $0 \";\necho \"The total of the parameter\
+    \ is:$# \";\necho \"All parameter input by the user is:$* \";\necho \"The running\
+    \ result is:$? \";\n```\n\n将文件保存为 `yes.sh`。使用以下命令运行文件：\n```bash\nbash yes.sh R\
+    \ in 8 Hours\n```\n**输出：**\n`My file name is: yes.sh`\n`The total of the parameter\
+    \ is: 4`\n`All parameter input by the user is: R in 8 Hours`\n`The running result\
+    \ is: 0`\n![](img/image_rsrc40G.jpg)\n\n**解释：**\n`bash yes.sh R in 8 Hours` 运行文件\
+    \ `yes.sh`，并向 Shell 脚本传递四个参数。\n`$#`: 返回参数总数。\n`$*`: 返回用户输入的所有参数。\n`$?`: 返回 0 表示脚本运行成功，返回其他数字表示脚本运行失败。\n\
+    \n## 第 3 小\n### Shell 数组\n数组是一种特殊的变量，可以同时包含一个或多个值。Bash 支持一维数组，不支持多维数组，并且不限制数组的大小。\n\
+    \n#### 1. 创建数组的语法：\n| `array_name = (value0 value1 value2...)` |\n\n**示例：**\n\
+    ```bash\nmyArray=(100 101 102 103)\n```\n**解释：**\n上述代码创建了一个数组，数组名为 `myArray`，它有四个元素，索引为\
+    \ 0, 1, 2, 3，其值为 100, 101, 102, 103。注意索引从 0 开始。\n\n#### 2. 创建数组的另一种语法：\n| `array_name[0]=value0\
+    \ array_name[1]=value1 array_name[2]=value2` |\n\n**示例：**\n```bash\ncolor[0] =\
+    \ \"red\";\ncolor[1] = \"blue\";\ncolor[2] = \"green\";\n```\n**解释：**\n上述代码创建了一个数组，数组名为\
+    \ `color`，它有三个元素：`color[0]`、`color[1]`、`color[2]`。它的索引是 0, 1 和 2。其值是 red, blue\
+    \ 和 green。注意索引从 0 开始。\n\n### 访问元素\n访问数组元素的语法如下：\n| `${array_name[index]}` |\n\n\
+    #### 示例 3.1\n```bash\n#!/bin/bash\nmy_array=(Rust in 8 Hours)     # 创建数组\necho\
+    \ \"The first element is: ${my_array[0]} \"\necho \"The second element is: ${my_array[1]}\
+    \ \"\necho \"The third element is: ${my_array[2]} \"\necho \"The fourth element\
+    \ is: ${my_array[3]} \"\n```\n**输出：**\n`The first element is: Rust`\n`The second\
+    \ element is: in`\n`The third element is: 8`\n`The fourth element is: Hours`\n\
+    \n**解释：**\n`my_array=(Rust in 8 Hours)` 创建了一个数组。\n`${my_array[0]}` 访问索引为 0 的元素。\n\
+    `${my_array[1]}` 访问索引为 1 的元素。\n`${my_array[2]}` 访问索引为 2 的元素。\n`${my_array[3]}`\
+    \ 访问索引为 3 的元素。\n`my_array[0]` 的值是：Rust。\n`my_array[1]` 的值是：in。\n`my_array[2]`\
+    \ 的值是：8。\n`my_array[3]` 的值是：Hours。\n\n### 获取所有元素\n`array_name[@]` 或 `array_name[*]`\
+    \ 可以获取数组的所有元素。\n| `array_name[@]` 或 `array_name[*]` |\n\n**示例 3.2：**\n```bash\n\
+    #!/bin/bash\nmy_array[0]=Java\nmy_array[1]=Ruby\nmy_array[2]=Html\nmy_array[3]=Rust\n\
+    echo \"All elements are: ${my_array[@]}\"\necho \"All elements are: ${my_array[*]}\"\
+    \n```\n**输出：**\n`All elements are: Java Ruby Html Rust`\n`All elements are: Java\
+    \ Ruby Html Rust`\n**解释：**\n`array_name[@]` 或 `array_name[*]` 可以获取数组的所有元素。\n\n\
+    ### 数组长度\n`#array_name[@]` 或 `#array_name[*]` 可以获取数组的长度。\n| `#array_name[@]` 或\
+    \ `#array_name[*]` |\n\n**示例 3.3：**\n```bash\n#!/bin/bash\nmy_array=(PHP in 8\
+    \ Hours)\nlength1=${#my_array[@]}\nlength2=${#my_array[*]}\necho $length1\necho\
+    \ $length2\n```\n**输出：**\n`4`\n`4`\n**解释：**\n`#my_array[@]` 或 `#my_array[*]` 可以获取数组的长度。\n\
+    \n### Print 命令\n`printf` 是一个在 Shell 中格式化输出的命令。\n\n| 类型 | 描述 |\n| :--- | :--- |\n\
+    | `%b` | 输出二进制值 |\n| `%d` | 输出整数值 |\n| `%f` | 输出浮点数值 |\n| `%o` | 输出八进制值 |\n| `%s`\
+    \ | 输出字符串值 |\n| `%x` | 输出十六进制值 |\n\n例如：\n`%10s` 表示格式化为宽度为 10 个字符的字符串（`-` 表示左对齐，无表示右对齐）。\n\
+    `%8.2f` 表示格式化为浮点数，8 位，2 位小数。\n\n#### 示例 3.4\n```bash\nprintf \"%-10s%-7s %8s\\\
+    n\" Name Age\n```\n**输出：**\n`Name      Age     Weight`\n**解释：**\n`%-10s` 被替换为\
+    \ `Name`，`Name` 格式化为 10 个字符的字符串，左对齐。\n`%-7s` 被替换为 `Age`，`Age` 格式化为 7 个字符的字符串，左对齐。\n\
+    `%-8s` 被替换为 `Weight`，`Weight` 格式化为 8 个字符的字符串，左对齐。\n`\\n` 用于换行。\n\n#### 示例 3.5\n\
+    ```bash\n#!/bin/bash\nprintf \"%-10s%-7s %8s\\n\" Name Age\nprintf \"%-10s%-7d\
+    \ %5.2f\\n\" Andy 18 91.8843\nprintf \"%-10s%-7d %5.2f\\n\" Tomy 19 95.4675\n\
+    printf \"%-10s%-7d %5.2f\\n\" Rosy 17 80.8563\n```\n**输出：**\n`Name      Age  \
+    \   Weight`\n`Andy      18      91.88`\n`Tomy      19      95.47`\n`Rosy     \
+    \ 17      80.86`\n**解释：**\n`printf \"%-10s%-7d %5.2f\\n\" Andy 18 91.8843` 格式化三个参数\
+    \ `Andy`、`18`、`91.8843`。\n`%-10s` 被替换为 `Andy`，`Andy` 格式化为 10 个字符的字符串，左对齐。\n`%-7d`\
+    \ 被替换为 `18`，`18` 格式化为最多 7 位的数字类型，左对齐。\n`%-5.2f` 被替换为 `91.88`，`91.88` 格式化为浮点类型，最多\
+    \ 5 位，2 位小数，左对齐。\n`\\n` 用于换行。\n\n### 转义序列\n`\\` 反斜杠字符用于转义字符。\n`\\a` 输出警报。\n`\\\
+    n` 将内容输出到新行。\n`\\r` 产生回车。\n`\\t` 产生制表符。\n`\\f` 输出内容到下一页。\n`\\'` 输出单引号。\n`\\\"\
+    ` 输出双引号。\n\n#### 示例 3.6\n```bash\n#!/bin/bash\nprintf \"%s %s \\'%s\\' \\n\" He\
+    \ said OK\nprintf \"%d\\t %d\\n\" 10 100\nprintf \"%s\\n %s %d %s\\n\" \"C# in\
+    \ 8 Hours\"\n```\n**输出：**\n`He said 'OK'`\n`10      100`\n`C# in 8 Hours`\n**解释：**\n\
+    `\\'%s\\'` 输出单引号和格式化字符串。\n`%d\\t` 输出两个数字之间的制表符空格。\n`%s\\n` 在下一行输出字符串。\n\n## 第\
+    \ 4 小\n### 运算符\nShell 与其他语言一样支持多种运算符，包括：算术运算符、关系运算符、逻辑运算符、字符串运算符、文件运算符。\n\n`expr...`\n\
+    `expr...` 是一个表达式求值工具。`` `` 键是反引号，而不是单引号。\n\n#### 示例 4.1\n```bash\n#!/bin/bash\n\
+    sum=`expr 100 + 200`\necho \"The sum is: $sum\"\n```\n**输出：**\n`The sum is: 300`\n\
+    **解释：**\n`` `` 键是反引号，而不是单引号。\n整个表达式必须包含在反引号内。\n表达式和运算符之间必须有空格。例如，`10+20` 是错误的，`10\
+    \ + 20` 是正确的。\n\n`if...then...else...fi`\n`if` 语句在条件为真时执行代码 1，在条件为假时执行代码 2。\n\n\
+    ```bash\nif condition\nthen\n    # 如果为真执行代码 1\nelse\n    # 如果为假执行代码 2\nfi\n```\n\
+    \n#### 示例 4.2\n```bash\na=10\nb=20\nif [ $a == $b ]  # 检查 a 是否等于 b\nthen\n   \
+    \ echo \"a is equal to b\"\nelse\n    echo \"a is not equal to b\"\nfi\n```\n\n"
+- fmt: "\nOutput: `a is not equal to b`\n\nExplanation: `[$a == $b ]` compares `a`\
+    \ and `b`, check if a is equal to b or not.\nNote: About `==`, it should be put\
+    \ between square brackets with spaces. For example: `[$a==$b]` is wrong, `[ $a\
+    \ == $b ]` is correct. `==` is a comparison operator. If `a` is equal to `b`,\
+    \ return `true`. If `a` is not equal to `b`, return `false`.\n\nIn above “if statement”,\
+    \ because the test condition returns `false`, the “else code2” is executed.\n\
+    Therefore, the `echo \"a is not equal to b\"` command is executed.\n\n## Arithmetical\
+    \ Operators\n\n| Operators | Running |\n| :--- | :--- |\n| `+` | add |\n| `-`\
+    \ | subtract |\n| `*` | multiply ( note: `*` ) |\n| `/` | divide |\n| `%` | get\
+    \ modulus |\n| `=` | assignment |\n| `==` | check equality |\n| `!=` | check inequality\
+    \ |\n\n### Example 4.3\n\n```bash\n#!/ /bin/bash\na=100\nb=2\nresult=`expr $a\
+    \ + $b`\necho \"a + b : $result\"\nresult=`expr $a - $b`\necho \"a - b : $result\"\
+    \nresult=`expr $a \\* $b`      # note \\*\necho \"a \\* b : $result\"\nresult=`expr\
+    \ $a / $b`\necho \"a / b : $result\"\nresult=`expr $a % $b`\necho \"a % b : $result\"\
+    \n```\n\nOutput:\n`a + b : 102`\n`a - b : 98`\n`a * b : 200`\n`a / b : 50`\n`a\
+    \ % b : 0`\n\nExplanation:\n| Operators | Running |\n| :--- | :--- |\n| `+` |\
+    \ add |\n| `-` | subtract |\n| `*` | multiply ( note: `*` ) |\n| `/` | divide\
+    \ |\n| `%` | get modulus |\n\n### Example 4.4\n\n```bash\na=100\nb=200\nif [ $a\
+    \ == $b ]      # if a is equal to b, return true\nthen\n    echo \"a is equal\
+    \ to b\"\nfi\nif [ $a != $b ]      # if a is not equal to b, return true\nthen\n\
+    \    echo \"a is not equal to b\"\nfi\n```\n\nOutput: `a is not equal to b`\n\n\
+    Explanation: `[$a ! = $b ]` checks if a is not equal to b.\nNote: There should\
+    \ be spaces between `[ ]` and `!=`. `[$a! =$b]` is wrong. `[ $a ! = $b ]` is correct.\n\
+    \n## Comparison Operators\n\nLinux Shell has comparison operators as follows:\n\
+    \n| Operators | Checks |\n| :--- | :--- |\n| `-eq` | equal |\n| `-ne` | not equal\
+    \ |\n| `-gt` | greater than |\n| `-ge` | greater or equal |\n| `-lt` | less than\
+    \ |\n| `-le` | less or equal |\n\nThe comparison expression returns `true` or\
+    \ `false`.\n\n### Example 4.5\n\n```bash\n#! /bin/bash\na=100\nb=200\nif [ $a\
+    \ -eq $b ]           # check if a is equal to b\nthen\n    echo \"$a -eq $b ?\
+    \  a is equal to b\"\nelse\n    echo \"$a -eq $b ?  a is not equal to b\"\nfi\n\
+    if [ $a -ne $b ]           # check if a is not equal to b\nthen\n    echo \"$a\
+    \ -ne $b ?  a is not equal to b\"\nelse\n    echo \"$a -ne $b ?  a is equal to\
+    \ b\"\nfi\nif [ $a -gt $b ]           # check if a is greater than b\nthen\n \
+    \   echo \"$a -gt $b ?  a is greater than b\"\nelse\n    echo \"$a -gt $b ?  a\
+    \ is not greater than\"\nfi\nif [ $a -lt $b ]           # check if a is less to\
+    \ b\nthen\n    echo \"$a -lt $b ?  a is less than b\"\nelse\n    echo \"$a -lt\
+    \ $b ?  a is not less than\"\nfi\nif [ $a -ge $b ]           # check if a is greater\
+    \ than equal to b\nthen\n    echo \"$a -ge $b ?  a is greater than equal to b\"\
+    \nelse\n    echo \"$a -ge $b ?  a is less than b\"\nfi\nif [ $a -le $b ]     \
+    \      # check if a is less than equal to b\nthen\n    echo \"$a -le $b ?  a is\
+    \ less than equal to b\"\nelse\n    echo \"$a -le $b ?  a is greater than b\"\n\
+    fi\n```\n\nOutput:\n`100 -eq 200 ?  a is not equal to b`\n`100 -ne 200 ?  a is\
+    \ equal to b`\n`100 -gt 200 ?  a is not greater than`\n`100 -lt 200 ?  a is less\
+    \ than b`\n`100 -ge 200 ?  a is less than b`\n`100 -le 200 ?  a is greater than\
+    \ b`\n\nExplanation:\n| Operators | Checks |\n| :--- | :--- |\n| `-eq` | equal\
+    \ |\n| `-ne` | not equal |\n| `-gt` | greater than |\n| `-ge` | greater or equal\
+    \ |\n| `-lt` | less than |\n| `-le` | less or equal |\n\n## Boolean Operators\n\
+    \n| Operators | Checks |\n| :--- | :--- |\n| `-a` | and |\n| `-o` | or |\n| `!`\
+    \ | not |\n\nAfter using logical operators, the result will be `true` or `false`.\n\
+    - `true -a true` returns `true`\n- `true -a false` returns `false`\n- `false -a\
+    \ false` returns `false`\n- `true -o true` returns `true`\n- `true -o false` returns\
+    \ `true`\n- `false -o false` returns `false`\n- `! false` returns `true`\n- `!\
+    \ true` returns `false`\n\n### Example 4.6\n\n```bash\n#! /bin/bash\nx=true\n\
+    y=false\nif [ $x -a $y ]      # -a means \"and\"\nthen\n    echo false\nfi\nif\
+    \ [ $x -o $y ]      # -o means \"or\"\nthen\n    echo true\nfi\nif [ !$x ]   \
+    \        # ! means \"not\"\nthen\n    echo false\nfi\n```\n\nOutput:\n`false`\n\
+    `true`\n`false`\n\nExplanation:\n- `true -a true` returns `true`\n- `true -a false`\
+    \ returns `false`\n- `false -a false` returns `false`\n- `true -o true` returns\
+    \ `true`\n- `true -o false` returns `true`\n- `false -o false` returns `false`\n\
+    - `! false` returns `true`\n- `! true` returns `false`\n\n## String Operators\n\
+    \n| Operators | Checks |\n| :--- | :--- |\n| `=` | If two strings are equal |\n\
+    | `!=` | If two strings are not equal |\n| `-z` | If the length of a string is\
+    \ equal to zero |\n| `-n` | If the length of a string is not equal to zero |\n\
+    | `$` | If the string is not empty |\n\n### Example 5.1\n\n```bash\n#! /bin/bash\n\
+    a=\"Java\"\nb=\"Ruby\"\nif [ $a = $b ]      # check if a is equal to b\nthen\n\
+    \    echo \"$a = b ?  a is equal to b\"\nelse\n    echo \"$a = b ?  a isn't equal\
+    \ to b\"\nfi\nif [ $a != $b ]      # check if a isn’t equal to b\nthen\n    echo\
+    \ \"$a != b ?  a isn't equal to b\"\nelse\n    echo \"$a != b ?  a is equal to\
+    \ b\"\nfi\nif [ -z $a ]         # check if the string length is 0\nthen\n    echo\
+    \ \"-z $a ?  The string length is 0\"\nelse\n    echo \"-z $a ?  The string length\
+    \ isn't 0\"\nfi\nif [ -n \"$a\" ]      # check if the string length isn’t 0\n\
+    then\n    echo \"-n $a ?  The string length isn't 0\"\nelse\n    echo \"-n $a\
+    \ ?  The string length is 0\"\nfi\nif [ $a ]            # check if the string\
+    \ isn’t empty\nthen\n    echo \"$a ?  The string isn't empty\"\nelse\n    echo\
+    \ \"$a ?  The string is empty\"\nfi\n```\n\nOutput:\n`Java = Ruby ?  a isn't equal\
+    \ to b`\n`Java != Ruby ?  a isn't equal to b`\n`-z Java ?  The string length isn't\
+    \ 0`\n`-n Java ?  The string length isn't 0`\n`Java ?  The string isn't empty`\n\
+    \nExplanation:\n- `=`: If two strings are equal\n- `!=`: If two strings are not\
+    \ equal\n- `-z`: If the length of a string is equal to zero\n- `-n`: If the length\
+    \ of a string is not equal to zero\n- `$`: If the string is not empty\n\n## File\
+    \ Operators\n\nFile operators are used to detect various properties of Linux files.\n\
+    \n| Operator | Checks |\n| :--- | :--- |\n| `-d` | If the object is a directory\
+    \ |\n| `-f` | If the object is a file |\n| `-p` | If the object is a pipe |\n\
+    | `-r` | If the object is a readable file |\n| `-w` | If the object is a writable\
+    \ file |\n| `-x` | If the object is an executable file |\n| `-e` | If the object\
+    \ is an empty file |\n| `-s` | If the object isn’t an empty file |\n| `-b` | If\
+    \ the object is a block device file |\n| `-c` | If the object is a character device\
+    \ file |\n\n### Example 5.2\n\n# Assume that the file “myFile.sh” does not exist,\
+    \ but we still check the property of this file.\n\n```bash\n#! /bin/bash\nfile=\"\
+    /root/myFile.sh\"\nif [ -r $file ]      # check if the object is readable\nthen\n\
+    \    echo \"The object is readable\"\nelse\n    echo \"The object isn't readable\"\
+    \nfi\nif [ -w $file ]      # check if the object is writable\nthen\n    echo \"\
+    The object is writable\"\nelse\n    echo \"The object isn't writable\"\nfi\nif\
+    \ [ -x $file ]      # check if the object is executable\nthen\n    echo \"The\
+    \ object is executable\"\nelse\n    echo \"The object isn't executable\"\nfi\n\
+    if [ -f $file ]      # check if the object is a file\nthen\n    echo \"The object\
+    \ is a file\"\nelse\n    echo \"The object isn't a file\"\nfi\nif [ -d $file ]\
+    \      # check if the object is a directory\nthen\n    echo \"The object is a\
+    \ directory\"\nelse\n    echo \"The object isn't a directory\"\nfi\nif [ -s $file\
+    \ ]      # check if the object isn’t empty\nthen\n    echo \"The object isn't\
+    \ empty\"\nelse\n    echo \"The object is empty\"\nfi\nif [ -e $file ]      #\
+    \ check if the file is existing\nthen\n    echo \"The file is existing\"\nelse\n\
+    \    echo \"The file isn't existing\"\nfi\n```\n\nOutput:\n`The object isn't readable`\n\
+    `The object isn't writable`\n`The object isn't executable`\n`The object isn't\
+    \ a file`\n`The object isn't a directory`\n`The object is empty`\n`The file isn't\
+    \ existing`\n"
+  raw: 'Output:a is not equal to bExplanation:[ $a == $b ] compares a and b, check
+    if a is equal to b or not.Note:   About ==, it should be put between square brackets
+    with spaces. For example: [$a==$b] is wrong, [  $a == $b  ] is correct.== is a
+    comparison operator. If a is equal to b, return true. If a is not equal to b,
+    return false.In above “if statement”, because the test condition returns false,
+    the “else code2” is executed.Therefore, the ‘echo "a is not equal to b"’ command
+    is executed.Arithmetical Operators
+
+
+    | Operators | Running |
+
+
+    | + | add |
+
+
+    | - | subtract |
+
+
+    | \* | multiply  ( note: \* ) |
+
+
+    | / | divide |
+
+
+    | % | get modulus |
+
+
+    | = | assignment |
+
+
+    | == | check equality |
+
+
+    | ! = | check inequality |
+
+
+    Example 4.3
+
+
+    | #! /bin/basha=100b=2result=`expr $a + $b`echo "a + b : $result"result=`expr
+    $a - $b`echo "a - b : $result"result=`expr $a \* $b`       # note \*echo "a \*
+    b : $result"result=`expr $a / $b`echo "a / b : $result"result=`expr $a % $b`echo
+    "a % b : $result" |
+
+
+    Output:a + b : 102a - b : 98a \* b : 200a / b : 50a % b : 0Explanation:
+
+
+    | Operators | Running |
+
+
+    | + | add |
+
+
+    | - | subtract |
+
+
+    | \* | multiply     ( note: \* ) |
+
+
+    | / | divide |
+
+
+    | % | get modulus |
+
+
+    Example 4.4
+
+
+    | a=100b=200if [ $a == $b ]       # if a is equal to b, return truethen        echo
+    "a is equal to b"fiif [ $a != $b ]       # if a is not equal to b, return true
+    .thenecho "a is not equal to b"fi |
+
+
+    Output:a is not equal to bExplanation:[ $a ! = $b ] checks if a is not equal to
+    b.Note: There should be spaces between [ ] and ! = .[$a! =$b] is wrong. [ $a !
+    = $b ] is correct.Comparison OperatorsLinux Shell has comparison operators as
+    follows:
+
+
+    | Operators | Checks |
+
+
+    | -eq | equal |
+
+
+    | -ne | not equal |
+
+
+    | -gt | greater than |
+
+
+    | -ge | greater or equal |
+
+
+    | -lt | less than |
+
+
+    | -le | less or equal |
+
+
+    The comparison expression returns true or false.Example 4.5
+
+
+    | #! /bin/basha=100b=200if [ $a -eq $b ]         # check if a is equal to bthenecho
+    "$a -eq $b ?   a is equal to b"elseecho "$a -eq $b ?   a is not equal to b"fiif
+    [ $a -ne $b ]         # check if a is not equal to bthenecho "$a -ne $b ?   a
+    is not equal to b"elseecho "$a -ne $b ?   a is equal to b"fiif [ $a -gt $b ]     
+    # check if a is greater than bthenecho "$a -gt $b ?   a is greater than b"elseecho
+    "$a -gt $b ?   a is not greater than"fiif [ $a -lt $b ]      # check if a is less
+    to bthenecho "$a -lt $b ?   a is less than b"elseecho "$a -lt $b ?   a is not
+    less than b"fiif [ $a -ge $b ]    # check if a is greater than or equal to bthenecho
+    "$a -ge $b ?   a is greater than or equal to b"elseecho "$a -ge $b ?   a is less
+    than b"fiif [ $a -le $b ]      # check if a is less than or equal to bthenecho
+    "$a -le $b ?   a is less than or equal to b"elseecho "$a -le $b ?   a is greater
+    than b"fi |
+
+
+    Output:100 -eq 200 ?    a is not equal to b100 -ne 200 ?    a is not equal to
+    b100 -gt 200 ?    a is not greater than100 -lt 200 ?    a is less than b100 -ge
+    200 ?    a is less than b100 -le 200 ?    a is less than or equal to bExplanation:
+
+
+    | Operators | Checks |
+
+
+    | -eq | equal |
+
+
+    | -ne | not equal |
+
+
+    | -gt | greater than |
+
+
+    | -ge | greater or equal |
+
+
+    | -lt | less than |
+
+
+    | -le | less or equal |
+
+
+    Boolean Operators
+
+
+    | Operators |
+
+
+    | -a |
+
+
+    | -o |
+
+
+    | ! |
+
+
+    After using logical operators, the result will be true or false.
+
+
+    | true -a true;returns true; | true -a false;returns false; | false -a false;returns
+    false; |
+
+
+    | true -o true;returns true; | true -o false;returns true; | false -o false;return
+    false; |
+
+
+    | ! false;returns true; | ! true;returns false; |  |
+
+
+    Example 4.6
+
+
+    | #! /bin/bashx=truey=falseif [ $x -a $y  ]       # -a means “and”thenecho flasefiif
+    [ $x -o $y  ]       # -o means “or”thenecho truefiif [ !$x ]        # ! means
+    “not”thenecho flasefi |
+
+
+    Output:flasetrueflaseExplanation:
+
+
+    | true -a true;returns true; | true -a false;returns false; | false -a false;returns
+    false; |
+
+
+    | true -o true;returns true; | true -o false;returns true; | false -o false;return
+    false; |
+
+
+    | ! false;returns true; | ! true;returns false; |  |
+
+
+    Hour 5String Operators
+
+
+    | Operators | Checks |
+
+
+    | = | If two strings are equal, returns true . |
+
+
+    | ! = | If two strings are not equal, returns true . |
+
+
+    | -z | If the length of a string is equal to zero, returns true . |
+
+
+    | -n | If the length of a string is not equal to zero, returns true |
+
+
+    | $ | If the string is not empty, returns true . |
+
+
+    Example 5.1
+
+
+    | #! /bin/basha="Java"b="Ruby"if [ $a = $b ]      # check if a is equal to bthenecho
+    "$a = $b ?  a is equal to b"elseecho "$a = $b ?  a isn''t equal to b"fiif [ $a
+    != $b ]      # check if a isn’t equal to bthenecho "$a ! = $b ?  a isn''t equal
+    to b"elseecho "$a ! = $b ?  a is equal to b"fiif [ -z $a ]      # check if the
+    string length is 0thenecho "-z $a ?  The string length is 0"elseecho "-z $a ? 
+    The string length isn''t 0"fiif [ -n "$a" ]        # check if the string length
+    isn’t 0thenecho "-n $a ?  The string length isn''t 0"elseecho "-n $a ?  The string
+    length is 0"fiif [ $a ]        # check if the string isn’t emptythenecho "$a ? 
+    The string isn''t empty"elseecho "$a ?  The string is empty"fi |
+
+
+    Output:Java = Ruby ?  a isn''t equal to bJava ! = Ruby ?  a isn''t equal to b-z
+    Java ?  The string length isn''t 0-n Java ?  The string length isn''t 0Java ? 
+    The string isn''t empty.Explanation:
+
+
+    | = | If two strings are equal, returns true . |
+
+
+    | ! = | If two strings are not equal, returns true . |
+
+
+    | -z | If the length of a string is equal to zero, returns true . |
+
+
+    | -n | If the length of a string is not equal to zero, returns true |
+
+
+    | $ | If the string is not empty, returns true . |
+
+
+    File OperatorsFile operators are used to detect various properties of Linux files.
+
+
+    | Operator | Checks |
+
+
+    | -d file | If the object is a directory, return true . |
+
+
+    | -f file | If the object is a file, return true . |
+
+
+    | -p file | If the object is a pipe, return true . |
+
+
+    | -r file | If the object is a readable file, return true . |
+
+
+    | -w file | If the object is a writable file, return true . |
+
+
+    | -x file | If the object is an executable file, return true . |
+
+
+    | -e file | If the object is an empty file, return true . |
+
+
+    | -s file | If the object isn’t an empty file, return true . |
+
+
+    | -b file | If the object is a block device file, return true . |
+
+
+    | -c file | If the object is a character device file, return true . |
+
+
+    Example 5.2# Assume that the file “myFile . sh” does not exist, but we still check
+    the property of this file .
+
+
+    | #! /bin/bashfile="/root/myFile. sh"if [ -r $file ]     # check if the object
+    is readablethenecho "The object is readable"elseecho "The object isn''t readable"fiif
+    [ -w $file ]     # check if the object is writablethenecho "The object is writable"elseecho
+    "The object isn''t writable"fiif [ -x $file ]   # check if the object is executablethenecho
+    "The object is executable"elseecho "The object isn''t executable"fiif [ -f $file
+    ]    # check if the object is a filethenecho "The object is a file"elseecho "The
+    object isn''t a file"fiif [ -d $file ]   # check if the object is a directorythenecho
+    "The object is a directory"elseecho "The object isn''t a directory"fiif [ -s $file
+    ]    # check if the object isn’t emptythenecho "The object isn''t empty"elseecho
+    "The object is empty"fiif [ -e $file ]     # check if the file is existingthenecho
+    "The file is existing"elseecho "The file isn''t existing"fi |
+
+
+    Output:The object isn''t readableThe object isn''t writableThe object isn''t executableThe
+    object isn''t a fileThe object isn''t a directoryThe object is emptyThe file isn''t
+    existingExplanation:Assume that there is no the file “myFile. sh” in directory
+    “root”, but we still check the property of this file.Let’s review the following
+    file test operators:
+
+
+    | -d file | If the object is a directory, return true |
+
+
+    | -f file | If the object is a file, return true |
+
+
+    | -r file | If the object is a readable file, return true . |
+
+
+    | -w file | If the object is a writable file, return true . |
+
+
+    | -x file | If the object is an executable file, return true . |'
+  toc: []
+  trans: "\n\n输出: `a is not equal to b`\n\n解释：`[$a == $b ]` 比较 `a` 和 `b`，检查 `a` 是否等于\
+    \ `b`。\n注意：关于 `==`，它应该放在方括号内并留空格。例如：`[$a==$b]` 是错误的，`[ $a == $b ]` 是正确的。`==` 是一个比较运算符。如果\
+    \ `a` 等于 `b`，返回 `true`。如果 `a` 不等于 `b`，返回 `false`。\n\n在在方的“if 语句”中，因为测试条件返回 `false`，所以执行了“else\
+    \ code2”。\n因此，执行了 `echo \"a is not equal to b\"` 命令。\n\n## 算术运算符\n\n| 运算符 | 运行\
+    \ |\n| :--- | :--- |\n| `+` | 加法 |\n| `-` | 减法 |\n| `*` | 乘法 ( 注意：`*` ) |\n| `/`\
+    \ | 除法 |\n| `%` | 取模 |\n| `=` | 赋值 |\n| `==` | 检查相等 |\n| `!=` | 检查不相等 |\n\n###\
+    \ 示例 4.3\n\n```bash\n#!/ /bin/bash\na=100\nb=2\nresult=`expr $a + $b`\necho \"\
+    a + b : $result\"\nresult=`expr $a - $b`\necho \"a - b : $result\"\nresult=`expr\
+    \ $a \\* $b`      # 注意 \\*\necho \"a \\* b : $result\"\nresult=`expr $a / $b`\n\
+    echo \"a / b : $result\"\nresult=`expr $a % $b`\necho \"a % b : $result\"\n```\n\
+    \n输出：\n`a + b : 102`\n`a - b : 98`\n`a * b : 200`\n`a / b : 50`\n`a % b : 0`\n\
+    解释：\n| 运算符 | 运行 |\n| :--- | :--- |\n| `+` | 加法 |\n| `-` | 减法 |\n| `*` | 乘法 ( 注意：`*`\
+    \ ) |\n| `/` | 除法 |\n| `%` | 取模 |\n\n### 示例 4.4\n\n```bash\na=100\nb=200\nif [\
+    \ $a == $b ]      # 如果 a 等于 b，返回 true\nthen\n    echo \"a is equal to b\"\nfi\n\
+    if [ $a != $b ]      # 如果 a 不等于 b，返回 true\nthen\n    echo \"a is not equal to\
+    \ b\"\nfi\n```\n\n输出：`a is not equal to b`\n\n解释：`[$a == $b ]` 检查 `a` 是否等于 `b`。\n\
+    注意：`[ ]` 和 `!=` 之间应该有空格。`[$a!=$b]` 是错误的。`[ $a != $b ]` 是正确的。\n\n## 比较运算符\n\nLinux\
+    \ Shell 有以下比较运算符：\n\n| 运算符 |  |\n| :--- | :--- |\n| `-eq` | 等 |\n| `-ne` | 不等于\
+    \ |\n| `-gt` | 大于 |\n| `-ge` | 大于等于 |\n| `-lt` | 小于 |\n| `-le` | 小于等于 |\n\n比较表达式返回\
+    \ `true` 或 `false`。\n\n### 示例 4.5\n\n```bash\n#! /bin/bash\na=100\nb=200\nif [\
+    \ $a -eq $b ]      # 如果 a 等于 b\nthen\n    echo \"a is equal to b\"\nelse\n   \
+    \ echo \"a is not equal to b\"\nfi\nif [ $a -ne $b ]      # 如果 a 不等于 b\nthen\n\
+    \    echo \"a is not equal to b\"\nelse\n    echo \"a is equal to b\"\nfi\nif\
+    \ [ $a -gt $b ]      # 如果 a 大于 b\nthen\n    echo \"a is greater than b\"\nelse\n\
+    \    echo \"a is not greater than b\"\nfi\nif [ $a -lt $b ]      # 如果 a 小于 b\n\
+    then\n    echo \"a is less than b\"\nelse\n    echo \"a is not less than b\"\n\
+    fi\nif [ $a -ge $b ]      # 如果 a 大于等于 b\nthen\n    echo \"a is greater than equal\
+    \ to b\"\nelse\n    echo \"a is not greater than equal to b\"\nfi\nif [ $a -le\
+    \ $b ]      # 如果 a 小于等于 b\nthen\n    echo \"a is less than equal to b\"\nelse\n\
+    \    echo \"a is not less than equal to b\"\nfi\n```\n\n输出：\n`a is not equal to\
+    \ b`\n`a is not equal to b`\n`a is not greater than b`\n`a is less than b`\n`a\
+    \ is not greater than equal to b`\n`a is less than equal to b`\n\n## 逻辑运算符\n\n\
+    | 运算符 | |\n| :--- | :--- |\n| `-a` | 与 |\n| `-o` | 或 |\n| `!` | 非 |\n\n使用逻辑运算符后结果将\
+    \ `true` 或 `false`。\n- `true -a true` 返回 `true`\n- `true -a false` 返回 `false`\n\
+    - `false -a false` 返回 `false`\n- `true -o true` 返回 `true`\n- `true -o false` 返回\
+    \ `true`\n- `false -o false` 返回 `false`\n- `! false` 返回 `true`\n- `! true` 返回\
+    \ `false`\n\n### 示例 4.6\n\n```bash\n#! /bin/bash\nx=true\ny=false\nif [ $x -a\
+    \ $y ]      # -a 意味着“与”\nthen\n    echo false\nfi\nif [ $x -o $y ]      # -o 意味着“或”\n\
+    then\n    echo true\nfi\nif [ !$x ]           # ! 意味着“非”\nthen\n    echo false\n\
+    fi\n```\n\n输出：\n`false`\n`true`\n`false`\n\n解释：\n- `true -a true` 返回 `true`\n\
+    - `true -a false` 返回 `false`\n- `false -a false` 返回 `false`\n- `true -o true`\
+    \ 返回 `true`\n- `true -o false` 返回 `true`\n- `false -o false` 返回 `false`\n- `!\
+    \ false` 返回 `true`\n- `! true` 返回 `false`\n\n## 字符串运算符\n\n| 运算符 | 检查 |\n| :---\
+    \ | :--- |\n| `=` | 如果两个字符串相等 |\n| `!=` | 如果两个字符串不相等 |\n| `-z` | 如果字符串长度为零 |\n\
+    | `-n` | 如果字符串长度不为零 |\n| `$` | 如果字符串为空 |\n\n### 示例 5.1\n\n```bash\n#! /bin/bash\n\
+    a=\"Java\"\nb=\"Ruby\"\nif [ $a = $b ]      # 检查 a 是否等于 b\nthen\n    echo \"$a\
+    \ = b ?  a is equal to b\"\nelse\n    echo \"$a = b ?  a isn't equal to b\"\n\
+    fi\nif [ $a != $b ]      # 检查 a 不等于 b\nthen\n    echo \"$a != b ?  a isn't equal\
+    \ to b\"\nelse\n    echo \"$a != b ?  a is equal to b\"\nfi\nif [ -z $a ]    \
+    \     # 检查字符串长度是否为 0\nthen\n    echo \"-z $a ?  The string is 0\"\nelse\n    echo\
+    \ \"-z $a ?  The string is not 0\"\nfi\nif [ -n $a ]         # 检查字符串长度是否为 0\n\
+    then\n    echo \"-n $a ?  The string is not 0\"\nelse\n    echo \"-n $a ?  The\
+    \ string is 0\"\nfi\n```\n\n输出：\n`a = b ?  a isn't equal to b`\n`a != b ?  a isn't\
+    \ equal to b`\n`-z $a ?  The string is not 0`\n`-n $a ?  The string is not 0`\n\
+    \n解释：\n- `=`: 如果两个字符串相等\n- `!=`: 如果两个字符串不相等\n- `-z`: 如果字符串长度为零\n- `-n`: 如果字符串长度不为零\n\
+    - `$`: 如果字符串为空\n\n## 文件运算符\n\n文件运算符用于检测文件的各种属性。\n\n| 运算符 | 检查 |\n| :--- | :---\
+    \ |\n| `-d` | 如果是目录 |\n| `-f` | 如果是文件 |\n| `-p` | 如果是管道 |\n| `-r` | 如果是可读的 |\n\
+    | `-w` | 如果是可写的 |\n| `-x` | 如果是可执行的\n| `-e` | 如果文件存在 |\n| `-s` | 如果文件不是空的 |\n\
+    | `-b` | 如果是块设备 |\n| `-c` | 如果是字符设备 |\n\n### 示例 5.2\n\n假设文件 “myFile.sh” 不存在，但我们仍然检查该属性。\n\
+    \n```bash\n#! /bin/bash\nfile=\"/root/myFile.sh\"\nif [ -r $file ]      # 检查是否可读\n\
+    then\n    echo \"The object is readable\"\nelse\n    echo \"The object isn't readable\"\
+    \nfi\nif [ -w $file ]      # 检查是否可写\nthen\n    echo \"The object is writable\"\
+    \nelse\n    echo \"The object isn't writable\"\nfi\nif [ -x $file ]      # 检查是否为可执行的\n\
+    then\n    echo \"The object is executable\"\nelse\n    echo \"The object isn't\
+    \ executable\"\nfi\nif [ -f $file ]      # 检查是否是文件\nthen\n    echo \"The object\
+    \ is a file\"\nelse\n    echo \"The object isn't a file\"\nfi\nif [ -d $file ]\
+    \      # 检查是否是目录\nthen\n    echo \"The object is a directory\"\nelse\n    echo\
+    \ \"The object isn't a directory\"\nfi\nif [ -s $file ]      # 检查是否不是空的\nthen\n\
+    \    echo \"The object isn't empty\"\nelse\n    echo \"The object is empty\"\n\
+    fi\nif [ -e $file ]      # 检查文件是否存在\nthen\n    echo \"The file is existing\"\n\
+    else\n    echo \"The file isn't existing\"\nfi\n```\n\n输出：\n`The object isn't\
+    \ readable`\n`The object isn't writable`\n`The object isn't executable`\n`The\
+    \ object isn't a file`\n`The object isn't a directory`\n`The object is empty`\n\
+    `The file isn't existing`\n\n"
+- fmt: "\n| `-e file` | If the object is an empty file, return true . |\n| `-s file`\
+    \ | If the object isn’t an empty file, return true . |\n\nThe result of the final\
+    \ check is “The file isn’t existing. ” The `echo` command is used to output contents.\
+    \ In here, let’s talk about its special usages.\n\n### Output the Escape Characters\n\
+    ```bash\n#! /bin/sh\necho \"\\\"C++ in 8 Hours\\\" \"\n```\nOutput:`\"C++ in 8\
+    \ Hours\"`\n\n### Output the Variable Value\n```bash\n#! /bin/sh\nbook =\"C# in\
+    \ 8 Hours\"\necho \"$book is a great book\"\n```\nOutput: `C# in 8 Hours is a\
+    \ great book`\n\n### Output the Contents in the Same Line\n```bash\n#! /bin/sh\n\
+    echo -e \"Go \\c \"      # -e turn on the escape switch\necho \"in 8 Hours\" \
+    \     # \\c output in the same line\n```\nOutput: `Go in 8 Hours`\n\n### Output\
+    \ to a File\n```bash\n#! /bin/sh\necho \"PHP in 8 Hours\" > myFile     # \">\"\
+    \ redirect to\n```\n\n### Output the Original Format\n```bash\n#! /bin/sh\necho\
+    \ ' He said: \"OK! \" '      # using single quotes\n```\nOutput: `He said: \"\
+    OK! \"`\n\n### Output the Executed Result\n```bash\n#! /bin/sh\necho Today is\
+    \ `date`  # using back quotes rather than single quotes\n```\nOutput:`Today is\
+    \ Thu Aug 22 09: 01: 19 DST 2019`\n\n### Show the Input by Users\n```bash\n#!\
+    \ /bin/sh\necho \"Please type your name: \"\nread name      # \"read\" accepts\
+    \ the input by users\necho \"My name is $name\"\n```\nOutput:\nPlease type your\
+    \ name:Ray Yao\nMy name is Ray Yao\n\n## Hour 6\n\n### Test Command\nThe test\
+    \ command checks to see if a condition is true. It can be used to test three aspects:\
+    \ numerics, characters and files. `[ ]` is used to execute the arithmetical calculation.\n\
+    \n| `test numerics / characters / files` |\n\n#### Example 6.1\n```bash\n#! /bin/bash\n\
+    num1=10\nnum2=20\nif test $[num1] -eq $[num2]\nthen\necho 'Two numbers are equal.\
+    \ '\nelse\necho 'Two numbers are not equal. '\nfi\n```\nOutput:`Two numbers are\
+    \ not equal.`\nExplanation:`test $[num1] -eq $[num2]` tests the equality of two\
+    \ numbers. `[ ]` Symbol is used to execute the arithmetical calculation. In an\
+    \ expression, the two sides of the `=` cannot have spaces.\n\n#### Example 6.2\n\
+    ```bash\n#! /bin/bash\nx=100\ny=200\nz=$[x + y]\necho \"The result is: $z\"\n\
+    ```\nOutput:`The result is: 300`\nExplanation:`[x + y]` executes an arithmetical\
+    \ calculation. Note: the two sides of the `=` cannot have spaces.\n\n### Test\
+    \ Equality\nTest command can be used to test whether two strings are equal.\n\n\
+    #### Example 6.3\n```bash\n#! /bin/bash\nstr1=\"Java\"\nstr2=\"JavaScript\"\n\
+    if test $str1 = $str2\nthen\necho 'Two strings are equal! '\nelse\necho 'Two strings\
+    \ are not equal! '\nfi\n```\nOutput:`Two strings are not equal!`\nExplanation:`test\
+    \ $str1 = $str2` tests the equality of two strings.\n\n### Test Existence\nTest\
+    \ command can be used to test whether a file is existing.\n\n#### Example 6.4\n\
+    ```bash\n#! /bin/bash\n# assume that theFile . sh is not existing .\nif test -e\
+    \ /root/theFile.sh       # -e checks existence\nthen\necho 'The file exists! '\n\
+    else\necho ' The file doesn't exist! '\nfi\n```\nOutput:`The file doesn't exist!`\n\
+    Explanation: Assume that `theFile. sh` is not existing. `“test -e /root/theFile.\
+    \ sh\"` tests whether the file is existing.\n\n### Test Empty String\nTest command\
+    \ can be used to test whether a string is empty.\n\n#### Example 6.5\n```bash\n\
+    #! /bin/bash\n# assume \"$myString” has not been assigned a value yet .\nif test\
+    \ -n \"$myString\"      # -n checks empty string\nthen\n    echo \"It's not an\
+    \ empty string. \"\nelse\necho \"It's an empty string. \"\nfi\n```\nOutput:`It’s\
+    \ an empty string.`\nExplanation: Because `“myString” has not been assigned any\
+    \ value, it is an empty string.\n\n## Shell Function\nA function is a code block\
+    \ that can repeat to run many times. The syntax to define a function is as follows:\n\
+    \n| `function_name(){}` |\n\nTo call a function, use `function_name;`\n\n| `function_name`\
+    \ |\n\n#### Example 6.6\n```bash\n#! /bin/bash\nmyFunction() {\n     # define\
+    \ a function\necho \"jQuery in 8 Hours\"\n}\necho \"Before calling the function.\
+    \ \"\nmyFunction      # call the function\necho \"After calling the function.\
+    \ \"\n```\nOutput:\nBefore calling the function.\njQuery in 8 Hours\nAfter calling\
+    \ the function.\nExplanation:`“myFunction(){ }” defines a function. `“myFunction”`\
+    \ calls the function.\n\n### Function with Arguments\nWhen calling a function,\
+    \ you can pass parameters to the function body. For example pass the first parameter\
+    \ to `${1}`, pass the second parameter to `${2}` ...\n\n#### Example 6.7\n```bash\n\
+    #! /bin/bash\nmyFunction(){\necho \"The first parameter is: ${1} \"\necho \"The\
+    \ second parameter is: ${2} \"\necho \"The third parameter is: ${3} \"\necho \"\
+    The fourth parameter is: ${4} \"\necho \"All parameters are: $* \"\n}\nmyFunction\
+    \ Kotlin in Hour\n```\nExplanation:`${1}` accepts the first parameter. `${2}`\
+    \ accepts the second parameter. `$*` shows all parameters. `“myFunction Kotlin\
+    \ in Hour` calls the function and pass four parameters.\n\n### Return Values\n\
+    `return` can return a value to `$?`. `$?` shows the return value. In some machine,\
+    \ `$?` only shows the value from 0 to 255.\n\n| `function_name { return value\
+    \ }` |\n| `$?` | shows the return value |\n\n#### Example 6.8\n```bash\n#! /bin/bash\n\
+    add(){\n     # define a function\nx=100\ny=55\nz=`expr $x + y`\nreturn $z    \
+    \ # returns the value\n}\nadd     # call the function\necho \"The sum of two numbers\
+    \ is $?\"\n```\nOutput:The sum of two numbers is `155`\nExplanation:`return $z`\
+    \ returns the value to `$?`. `$?` shows the return value.\n\n#### Example 6.9\n\
+    ```bash\n#! /bin/bash\nmyFunction(){\necho \"Please enter the first number: \"\
+    \nread x      # assume entering 80\necho \"Please enter the second number: \"\n\
+    read y      # assume entering 90\nz=`expr $x + y`\nreturn $z     # returns a value\
+    \ to $?\n}\nmyFunction\necho \"The return value is $?\"\n```\nOutput:\nPlease\
+    \ enter the first number:80\nPlease enter the second number:90\nThe return value\
+    \ is 170\nExplanation:`return $z` returns a value to `$?`. `$?` shows the return\
+    \ value.\n\n## Hour 7\n\n### if .. then .. elif .. then .. else\n`if... then…elif…then…else`\
+    \ runs this code if a condition is true and runs that code if the condition is\
+    \ false.\n\n| `if condition then code1 elif condition then code2 else code3 fi`\
+    \ | `elif` means `else…if…`\n\n#### Example 7.1\n```bash\n#! /bin/bash\nx=100\n\
+    y=80\nif [ $x == $y ]\nthen\necho \"x is equal to y\"\nelif [ $x -gt $y ]    \
+    \  # meet this condition\necho \"x is greater than y\"\nelif [ $x -lt $y ]\nthen\n\
+    echo \"x is less than y\"\nelse\necho \"n/a\"\nfi\n```\nOutput:`x is greater than\
+    \ y`\nExplanation:`elif` means `else…if…`. `elif [ $x -gt $y ]` tests if `$x`\
+    \ is greater than `$y`.\n\n### For Loop\n`For loop` runs a block of code repeatedly\
+    \ by the specified items\n\n| `for var in item1 item2 item3… code1 code2…done`\
+    \ |\n\n#### Example 7.2\n```bash\n#! /bin/bash\nfor var in 1 2 3\necho \"The number\
+    \ is: $var\"\ndone\n```\nOutput:\nThe number is: 1\nThe number is: 2\nThe number\
+    \ is: 3\nExplanation:`for var in 1 2 3` repeatedly run the next code when `var=1`,\
+    \ `var=2`, `var=3`.\n\n#### Example 7.3\n```bash\n#! /bin/bash\nfor str in Rust\
+    \ in 8 Hours\necho $str\ndone\n```\nOutput:`Rustin8Hours`\nExplanation:`for str\
+    \ in Rust in 8 Hours` repeatedly run the next code when `str=Rust`, `var=in`,\
+    \ `var=8`,`var=Hours`.\n\n### While Loop\n`while loop` loops through a block of\
+    \ code if the specified condition is true.\n\n| `while condition code done` |\n\
+    \n#### Example 7.4\n```bash\n#! /bin/bash\ncounter=1\nwhile(( $counter<=4 )) \
+    \     # run 4 times\ndo\necho $counter\ncounter=`expr $counter + 1`\ndone\n```\n\
+    Output:\n1234\nExplanation: `($counter<=4)` is a test condition, if the condition\
+    \ is true, the code will loop at most four times. `“While Loop” statement can\
+    \ be used to input data continuously, but if you want to finish the input, please\
+    \ press `<ctrl + d>` to quit the program.\n\n#### Example 7.5\n```bash\n#! /bin/bash\n\
+    echo 'Please enter a book name: '\nwhile read book      # accepts the input from\
+    \ user\necho \"OK! $book is a good book! \"\necho \"If quit, please press <ctrl\
+    \ + d>. \"\ndone\n```\nOutput:\nPlease enter a book name:PHP in 8 Hours\nOK! PHP\
+    \ in 8 Hours is a good book!\nIf quit, please press <ctrl + d>.\nExplanation:`while\
+    \ read book` accepts the continuous input from the user. You can input data more\
+    \ than one time if you want.\n\n### Until Loop\n`until loop` loops through a block\
+    \ of code if the specified condition is false , will quit the loop if the condition\
+    \ is true.\n\n| `until condition code done` |\n\n#### Example 7.6\n```bash\n#!\
+    \ /bin/bash\nn=0\nuntil [ $n -ge 4 ]      # will quit the loop if true\ndo\necho\
+    \ $n\nn=`expr $n + 1`\ndone\n```\n"
+  raw: '| -e file | If the object is an empty file, return true . |
+
+
+    | -s file | If the object isn’t an empty file, return true . |
+
+
+    The result of the final check is “The file isn’t existing. ”“echo” Command“echo”
+    command is used to output contents. In here, let’s talk about its special usages.Output
+    the Escape Characters.
+
+
+    | #! /bin/shecho "\" C++ in 8 Hours\" " |
+
+
+    Output:“C++ in 8 Hours”Output the Variable Value
+
+
+    | #! /bin/shbook ="C# in 8 Hours"echo "$book is a great book" |
+
+
+    Output:C# in 8 Hours is a great bookOutput the Contents in the Same Line
+
+
+    | #! /bin/shecho -e "Go \c "        # -e    turn on the escape switchecho "in
+    8 Hours"       # \c    output in the same line |
+
+
+    Output:Go in 8 HoursOutput to a File
+
+
+    | #! /bin/shecho "PHP in 8 Hours" > myFile     # “>” redirect to |
+
+
+    Output the Original Format
+
+
+    | #! /bin/shecho '' He said: "OK! " ''      # using single quotes |
+
+
+    Output:He said: "OK! "Output the Executed Result
+
+
+    | #! /bin/shecho Today is `date`   # using back quotes rather than single quotes
+    |
+
+
+    Output:Today is Thu Aug 22 09: 01: 19 DST 2019Show the Input by Users
+
+
+    | #! /bin/shecho "Please type your name: "read name      # “read” accepts the
+    input by usersecho "My name is $name" |
+
+
+    Output:Please type your name:Ray YaoMy name is Ray YaoHour 6Test CommandThe test
+    command checks to see if a condition is true. It can be used to test three aspects:
+    numerics, characters and files.[  ] is used to execute the arithmetical calculation.
+
+
+    | test  numerics / characters / files |
+
+
+    Example 6.1
+
+
+    | #! /bin/bashnum1=10num2=20if test $[num1] -eq $[num2]thenecho ''Two numbers
+    are equal. ''elseecho ''Two numbers are not equal. ''fi |
+
+
+    Output:Two numbers are not equal.Explanation:“test $[num1] -eq $[num2]” tests
+    the equality of two numbers.[   ] Symbol[  ] is used to execute the arithmetical
+    calculation.In an expression, the two sides of the = cannot have spaces.Example
+    6.2
+
+
+    | #! /bin/bashx=100y=200z=$[x + y]echo "The result is: $z" |
+
+
+    Output:The result is: 300Explanation:[x + y] executes an arithmetical calculation.Note:
+    the two sides of the = cannot have spaces.Test EqualityTest command can be used
+    to test whether two strings are equal.Example 6.3
+
+
+    | #! /bin/bashstr1="Java"str2="JavaScript"if test $str1 = $str2thenecho ''Two
+    strings are equal! ''elseecho ''Two strings are not equal! ''fi |
+
+
+    Output:Two strings are not equal!Explanation:“test $str1 = $str2” tests the equality
+    of two strings.Test ExistenceTest command can be used to test whether a file is
+    existing.Example 6.4
+
+
+    | #! /bin/bash# assume that theFile . sh is not existing .if test -e /root/theFile.sh       
+    # -e checks existencethenecho ''The file exists! ''elseecho '' The file doesn''t
+    exist! ''fi |
+
+
+    Output:The file doesn''t exist!Explanation:Assume that theFile. sh is not existing.“test
+    -e /root/theFile. sh” tests whether the file is existing.Test Empty StringTest
+    command can be used to test whether a string is empty.Example 6.5
+
+
+    | #! /bin/bash# assume “$myString” has not been assigned a value yet .if test
+    -n "$myString"      # -n checks empty stringthen     echo "It''s not an empty
+    string. "elseecho "It''s an empty string. "fi |
+
+
+    Output:It’s an empty string.Explanation:Because “myString” has not been assigned
+    any value, it is an empty string.Shell FunctionA function is a code block that
+    can repeat to run many times.The syntax to define a function is as follows:
+
+
+    | function_name(){} |
+
+
+    To call a function, use “function_name;”
+
+
+    | function_name |
+
+
+    Example 6.6
+
+
+    | #! /bin/bashmyFunction() {     # define a functionecho "jQuery in 8 Hours"}echo
+    "Before calling the function. "myFunction     # call the functionecho "After calling
+    the function. " |
+
+
+    Output:Before calling the function.jQuery in 8 HoursAfter calling the function.Explanation:“myFunction(){    }”
+    defines a function“myFunction” calls the function.Function with ArgumentsWhen
+    calling a function, you can pass parameters to the function body. For example,
+    pass the first parameter to ${1}, pass the second parameter to ${2} ...Example
+    6.7
+
+
+    | #! /bin/bashmyFunction(){echo "The first parameter is: ${1} ! "echo "The second
+    parameter is: ${2} ! "echo "The third parameter is: ${3} ! "echo "The fourth parameter
+    is: ${4} ! "echo "All parameters are: $* ! "}myFunction Kotlin in 8 Hour     #
+    pass four parameters |
+
+
+    Output:The first parameter is: Kotlin !The second parameter is: in !The third
+    parameter is: 8 !The fourth parameter is: Hours !All parameters are: Kotlin in
+    8 Hours !Explanation:${1} accepts the first parameter${2} accepts the second parameter.$*
+    shows all parameters“myFunction Kotlin in 8 Hour ” calls the function and pass
+    four parameters.Return Values“return” can return a value to the “$? ”.“$? ” shows
+    the return value. (In some machine, “$? ” only shows the value from 0 to 255.
+    )
+
+
+    | function_name {  return value  } |
+
+
+    | $?       # shows the return value |
+
+
+    Example 6.8
+
+
+    | #! /bin/bashadd(){       # define a functionx=100y=155z=`expr $x + $y`return
+    $z    # returns the value to $?}add       # call the functionecho "The sum of
+    two numbers is $? " |
+
+
+    Output:      The sum of two numbers is 255Explanation:“return $z” returns the
+    value to $?.“$? ” shows the return value.Example 6.9
+
+
+    | #! /bin/bashmyFunction(){echo "Please enter the first number: "read x        #
+    assume entering 80echo "Please enter the second number: "read y        # assume
+    entering 90z=`expr $x + $y`return $z      # returns a value to “ $? ”}myFunctionecho
+    "The return value is $? " |
+
+
+    Output:Please enter the first number:80Please enter the second number:90The return
+    value is 170Explanation:“return $z” returns a value to “$? ”“$? ” shows the return
+    value.Hour 7if .. then .. elif .. then .. else“if... then…elif…then…else ” runs
+    this code if a condition is true and runs that code if the condition is false.
+
+
+    | if condition1thencode1elif condition2thencode2elsecode3fi |
+
+
+    “elif” means “else…if…”Example 7.1
+
+
+    | #! /bin/bashx=100y=80if [ $x == $y ]thenecho "x is equal to y"elif [ $x -gt
+    $y ]      # meet this conditionthenecho "x is greater than y"elif [ $x -lt $y
+    ]thenecho "x is less than y"elseecho "n/a"fi |
+
+
+    Output:x is greater than yExplanation:“elif” means “else…if…”“elif [ $x -gt $y
+    ]” tests if $x is greater than $y.For Loop“For loop” runs a block of code repeatedly
+    by the specified items
+
+
+    | for var in item1 item2 item3…docode1code2…done |
+
+
+    Example 7.2
+
+
+    | #! /bin/bashfo r var in 1 2 3doecho "The number is: $var"done |
+
+
+    Output:The number is: 1The number is: 2The number is: 3Explanation:“fo r var in
+    1 2 3” repeatedly run the next code when var=1, var= 2, var=3.Example 7.3
+
+
+    | #! /bin/bashfor str in Rust in 8 Hoursdoecho $str   done |
+
+
+    Output:Rustin8HoursExplanation:“for str in Rust in 8 Hours” repeatedly run the
+    next code when str=Rust, var=in, var=8,var=Hours.While Loop“while loop” loops
+    through a block of code if the specified condition is true.
+
+
+    | while conditiondocodedone |
+
+
+    Example 7.4
+
+
+    | #! /bin/bashcounter=1while(( $counter<=4 ))       # run 4 timesdoecho $countercounter=`expr
+    $counter + 1`done |
+
+
+    Output:1234Explanation:      ($counter<=4) is a test condition, if the condition
+    is true, the code will loop at most four times.“While Loop” statement can be used
+    to input data continuously, but if you want to finish the input, please press
+    <ctrl + d> to quit the program.Example 7.5
+
+
+    | #! /bin/bashecho ''Please enter a book name: ''while read book      # accepts
+    the input from userdoecho "OK! $book is a good book! "echo "If quit, please press
+    <ctrl + d>. "done |
+
+
+    Output:Please enter a book name:PHP in 8 HoursOK! PHP in 8 Hours is a good book!If
+    quit, please press <ctrl + d>.Explanation:“while read book” accepts the continuous
+    input from the user. You can input data more than one time if you want.Until Loop“until
+    loop” loops through a block of code if the specified condition is false , will
+    quit the loop if the condition is true.
+
+
+    | until conditiondocodedone |
+
+
+    Example 7.6
+
+
+    | #! /bin/bashn=0until [ $n -ge 4 ]        # will quit the loop if truedoecho
+    $nn=`expr $n + 1`done |'
+  toc: []
+  trans: "\n\n| `-e file` | 如果对象是一个空文件，则返回 true . |\n| `-s file` | 如果对象不是空文件，则返回 true\
+    \ . |\n\n最后检查的结果是“文件不存在。” `echo` 命令被用于输出内容。在这里，我们来谈一下它的特殊用法。\n\n### 输出转义字符\n```bash\n\
+    #! /bin/sh\necho \"\\\"C++ in 8 Hours\\\" \"\n```\n输出:`\"C++ in 8 Hours\"`\n\n\
+    ### 输出变量值\n```bash\n#! /bin/sh\nbook =\"C# in 8 Hours\"\necho \"$book is a great\
+    \ book\"\n```\n输出: `C# in 8 Hours is a great book`\n\n### 在同一行输出内容\n```bash\n\
+    #! /bin/sh\necho -e \"Go \\c \"      # -e 开启转义开关\necho \"in 8 Hours\"      # \\\
+    c 在同一行输出\n```\n输出: `Go in 8 Hours`\n\n### 输出到文件\n```bash\n#! /bin/sh\necho \"\
+    PHP in 8 Hours\" > myFile     # \">\" 重定向到\n```\n\n### 输出原始格式\n```bash\n#! /bin/sh\n\
+    echo ' He said: \"OK! \" '      # 使用单引号\n```\n输出: `He said: \"OK! \"`\n\n### 输出执行结果\n\
+    ```bash\n#! /bin/sh\necho Today is `date`  # 使用反引号而不是单引号\n```\n输出:`Today is Thu\
+    \ Aug 22 09: 01: 19 DST 2019`\n\n### 显示用户输入\n```bash\n#! /bin/sh\necho \"Please\
+    \ type your name: \"\nread name      # \"read\" 接受用户输入\necho \"My name is $name\"\
+    \n```\n输出:\nPlease type your name:Ray Yao\nMy name is Ray Yao\n\n## 第 6 小节\n\n\
+    ### test 命令\ntest 命令用于检查条件是否为真。它可以用于测试三个方面：数值、字符和文件。`[ ]` 用于执行算术计算。\n\n| `test\
+    \ numerics / characters / files` |\n\n#### 示例 6.1\n```bash\n#! /bin/bash\nnum1=10\n\
+    num2=20\nif test $[num1] -eq $[num2]\nthen\necho 'Two numbers are equal. '\nelse\n\
+    echo 'Two numbers are not equal. '\nfi\n```\n输出:`Two numbers are not equal.`\n\
+    解释：`test $[num1] -eq $[num2]` 测试两个数字的相等性。`[ ]` 符号用于执行算术计算。在表达式中，` 的两边不能有空格。\n\n\
+    #### 示例 6.2\n```bash\n#! /bin/bash\nx=100\ny=200\nz=$[x + y]\necho \"The result\
+    \ is: $z\"\n```\n输出:`The result is: 300`\n解释：`[x + y]` 执行算术计算。注意：`=` 的两边不能有空格。\n\
+    \n### 测试相等性\ntest 命令可以测试两个字符串是否相等。\n\n#### 示例 6.3\n```bash\n#! /bin/bash\nstr1=\"\
+    Java\"\nstr2=\"JavaScript\"\nif test $str1 = $str2\nthen\necho 'Two strings are\
+    \ equal! '\nelse\necho 'Two strings are not equal! '\nfi\n```\n输出:`Two strings\
+    \ are not equal!`\n解释：`test $str1 = $str2` 测试两个字符串的相等性。\n\n### 测试存在性\ntest 命令可以测试文件是否存在。\n\
+    \n#### 示例 6.4\n```bash\n#! /bin/bash\n# 假设 theFile . sh 不存在 .\nif test -e /root/theFile.sh\
+    \       # -e 检查存在性\nthen\necho 'The file exists! '\nelse\necho ' The file doesn't\
+    \ exist! '\nfi\n```\n输出:`The file doesn't exist!`\n解释：假设 `theFile. sh` 不存在。`“test\
+    \ -e /root/theFile. sh\"` 测试文件是否存在。\n\n### 测试空字符串\ntest 命令可以测试字符串是否为空。\n\n####\
+    \ 示例 6.5\n```bash\n#! /bin/bash\n# 假设 \"$myString” 尚未被赋值 .\nif test -n \"$myString\"\
+    \      # -n 检查非空字符串\nthen\n    echo \"It's not an empty string. \"\nelse\necho\
+    \ \"It's an empty string. \"\nfi\n```\n输出:`It’s an empty string.`\n解释：因为 `“myString”\
+    \ 尚未被赋值任何值，它是一个空字符串。\n\n## Shell 函数\n函数是一个可以重复运行多次的代码块。定义函数的语法如下：\n\n| `function_name(){}`\
+    \ |\n\n要调用函数，请使用 `function_name;`。\n\n| `function_name` |\n\n#### 示例 6.6\n```bash\n\
+    #! /bin/bash\nmyFunction() {\n     # 定义一个函数\necho \"jQuery in 8 Hours\"\n}\necho\
+    \ \"Before calling the function. \"\nmyFunction      # 调用函数\necho \"After calling\
+    \ the function. \"\n```\n输出:\nBefore calling the function.\njQuery in 8 Hours\n\
+    After calling the function.\n解释：`“myFunction(){ }” 定义了一个函数。`“myFunction” 调用了函数。\n\
+    \n### 带参数的函数\n在调用函数时，你可以将参数传递给函数体。例如，将第一个参数传递给 `${1}`，将第二个参数传递给 `${2}` ...\n\n\
+    #### 示例 6.7\n```bash\n#! /bin/bash\nmyFunction(){\necho \"The first parameter\
+    \ is: ${1} \"\necho \"The second parameter is: ${2} \"\necho \"The third parameter\
+    \ is: ${3} \"\necho \"The fourth parameter is: ${4} \"\necho \"All parameters\
+    \ are: $* \"\n}\nmyFunction Kotlin in Hour\n```\n解释：`${1}` 接受第一个参数。`${2}` 接受第二个参数。`$*`\
+    \ 显示所有参数。`“myFunction Kotlin in Hour` 调用了函数并传递了四个参数。\n\n### 返回值\n`return` 可以向\
+    \ `$?` 返回一个值。`$?` 显示返回值。在某些机器上，`$?` 只显示 0 到 255 之间的值。\n\n| `function_name { return\
+    \ value }` |\n| `$?` | 显示返回值 |\n\n#### 示例 6.8\n```bash\n#! /bin/bash\nadd(){\n\
+    x=100\ny=55\nz=`x + y`\nreturn z     # 返回返回值\n}\nadd\necho \"The sum of numbers\
+    \ is $?\"\n```\n输出:The sum of numbers is 155\n解释：`add` 调用函数并返回返回值。\n\n#### 示例\
+    \ 6.9\n```bash\n#! /bin/bash\nmyFunction(){\necho \"The first parameter is: ${1}\
+    \ \"\necho \"The second parameter is: ${2} \"\necho \"The third parameter is:\
+    \ ${3} \"\necho \"The fourth parameter is: ${4} \"\necho \"All parameters are:\
+    \ $* \"\n}\nmyFunction Kotlin in Hour\n```\n输出:\nThe first parameter is: Kotlin\n\
+    The second parameter is: in\nThe third parameter is: Hour\nThe fourth parameter\
+    \ is: \nAll parameters are: Kotlin in Hour\n解释：`${1}` 接受第一个参数。`${2}` 接受第二个参数。`$*`\
+    \ 显示所有参数。`“myFunction Kotlin in Hour` 调用了函数并传递了三个参数。\n\n## 第 7 小节\n\n### if ..\
+    \ then .. else\n`if` 语句用于检查条件是否为真。如果条件为真，则执行 `then` 后面的代码。\n\n`if condition; then\
+    \ code else code fi`\n\n#### 示例 7.1\n```bash\n#! /bin/bash\nx=100\ny=80\nif [\
+    \ $x -eq $y ]\nthen\necho \"x is equal to y\"\nelse\necho \"x is not equal to\
+    \ y\"\nfi\n```\n输出:x is not equal to y\n解释：`[ $x -eq $y ]` 测试两个数字是否相等。\n\n####\
+    \ 示例 7.2\n```bash\n#! /bin/bash\nx=100\ny=80\nif [ $x -gt $y ]\nthen\necho \"\
+    x is greater than y\"\nelse\necho \"x is not greater than y\"\nfi\n```\n输出:x is\
+    \ greater than y\n解释：`[ $x -gt $y ]` 测试 $x$ 是否大于 $y$。\n\n#### 示例 7.3\n```bash\n\
+    #! /bin/bash\nx=100\ny=80\nif [ $x -lt $y ]\nthen\necho \"x is less than y\"\n\
+    else\necho \"x is not less than y\"\nfi\n```\n输出:x is not less than y\n解释：`[ $x\
+    \ -lt $y ]` 测试 $x$ 是否小于 $y$。\n\n 示例 7.4\n```bash\n#! /bin/bash\nx=100\ny=80\n\
+    if [ $x -ne $y ]\nthen\necho \"x is not equal to y\"\nelse\necho \"x is equal\
+    \ to y\"\nfi\n```\n输出:x is not equal to y\n解释：`[ $x -ne $y ]` 测试两个数字是否不相等。\n\n\
+    #### 示例 7.5\n```bash\n#! /bin/bash\nx=100\ny=80\nif [ $x -ge $y ]\nthen\necho\
+    \ \"x is greater than or equal to y\"\nelse\necho \"x is not greater than or equal\
+    \ to y\"\nfi\n```\n输出:x is greater than or equal to y\n解释：`[ $x -ge $y ]` 测试 $x$\
+    \ 是否大于或等于 $y$。\n\n#### 示例 7.6\n```bash\n#! /bin/bash\nx=100\ny=80\nif [ $x -le\
+    \ $y ]\nthen\necho \"x is less than or equal to y\"\nelse\necho \"x is not less\
+    \ than or equal to y\"\nfi\n```\n输出:x is not less than or equal to y\n解释：`[ $x\
+    \ -le $y ]` 测试 $x$ 是否小于或等于 $y$。\n\n### 运算符\n`if` 语句可以使用各种运算符来测试条件。\n\n| 运算符 |\
+    \ 描述 |\n| --- | --- |\n| `-eq` | 数字相等 |\n| `-ne` | 数字不相等 |\n| `-gt` | 大于 |\n|\
+    \ `-lt` | 小于 |\n| `-ge` | 大于等于 |\n| `-le` | 小于等于 |\n| `=` | 字符串相等 |\n| `!=` |\
+    \ 字符串不相等 |\n| `-e` | 存在性 |\n| `-f` | 是普通文件 |\n| `-d` | 是目录 |\n| `-n` | 字符串非空 |\n\
+    | `-s` | 文件不为空 |\n\n### 逻辑运算符\n`if` 语句可以使用逻辑运算符来组合多个条件。\n\n| 逻辑运算符 | 描述 |\n| ---\
+    \ | --- |\n| `-a` | 逻辑 (AND) |\n| `-o` | 逻辑 (OR) |\n\n#### 示例 7.7\n```bash\n#!\
+    \ /bin/bash\nx=100\ny=80\nif [ $x -gt $y ] -a [ $y -ne 70 ]\nthen\necho \"x is\
+    \ greater than y and y is not equal to 70\"\nelse\necho \"condition not met\"\n\
+    fi\n```\n输出:x is greater than y and y is not equal to 70\n解释：`-a` 用于逻辑与 (AND)。\n\
+    \n#### 示例 7.8\n```bash\n#! /bin/bash\nx=100\ny=80\nif [ $x -lt $y ] -o [ $y -eq\
+    \ 80 ]\nthen\necho \"x is less than y or y is equal to 80\"\nelse\necho \"condition\
+    \ not met\"\nfi\n```\n输出:x is less than y or y is equal to 80\n解释：`-o` 用于逻辑或 (OR)。\n\
+    \n### 嵌套 if\n`if` 语句可以嵌套另一个 `if` 语句。\n\n#### 示例 7.9\n```bash\n#! /bin/bash\nx=100\n\
+    y=80\nif [ $x -gt $y ]\nthen\n    if [ $y -eq 80 ]\n    then\n        echo \"\
+    x is greater than y and y is equal to 80\"\n    else\n        echo \"x is greater\
+    \ than y but y is not equal to 80\"\n    fi\nelse\necho \"x is not greater than\
+    \ y\"\nfi\n```\n输出:x is greater than y and y is equal to 80\n解释：嵌套的 `if` 语句。\n\
+    \n### case \n`case` 语句用于根据变量与多个模式的匹配来执行相应的代码。\n\n#### 示例 7.10\n```bash\n#! /bin/bash\n\
+    line=\"apple\"\ncase $line in\n    \"apple\")\n        echo \"The line is apple\"\
+    \n        ;;\n    \"banana\")\n        echo \"The line is banana\"\n        ;;\n\
+    \    *)\n        echo \"The line is something else\"\n        ;;\nesac\n```\n\
+    输出:The line is apple\n解释：`case` 语句根据模式匹配执行代码。`;;` 表示每个模式的结束。`esac` 是 `case` 的反写。\n\
+    \n### for 循环\n`for` 循环用于遍历列表并执行代码。\n\n#### 示例 7.11\n```bash\n#! /bin/bash\nfor\
+    \ i in 1 2 3 4\ndo\n    echo \"Number: $i\"\ndone\n```\n输出:\nNumber: 1\nNumber:\
+    \ 2\nNumber: 3\nNumber: 4\n解释：`for` 循环遍历列表中的每个元素。\n\n#### 示例 7.12\n```bash\n#!\
+    \ /bin/bash\nfor fruit in apple banana cherry\ndo\n    echo \"Fruit: $fruit\"\n\
+    done\n```\n输出:\nFruit: apple\nFruit: banana\nFruit: cherry\n解释：`for` 循环可以处理字符串列表。\n\
+    \n#### 示例 7.13\n```bash\n#! /bin/bash\nfor i in {1..5}\ndo\n    echo \"Count:\
+    \ $i\"\ndone\n```\n输出:\nCount: 1\nCount: 2\nCount: 3\nCount: 4\nCount: 5\n解释：使用\
+    \ `{1..5}` 扩展生成序列。\n\n### while 循环\n`while` 循环在条件为真时重复执行代码。\n\n#### 示例 7.14\n\
+    ```bash\n#! /bin/bash\ni=1\nwhile [ $i -le 5 ]\ndo\n    echo \"Count: $i\"\n \
+    \   i=`expr $i + 1`\ndone\n```\n输出:\nCount: 1\nCount: 2\nCount: 3\nCount: 4\n\
+    Count: 5\n解释：`while` 循环在条件 `$i <= 5` 为真时运行。\n\n#### 示例 7.15\n```bash\n#! /bin/bash\n\
+    i=1\nuntil [ $i -gt 5 ]\ndo\n    echo \"Count: $i\"\n    i=`expr $i + 1`\ndone\n\
+    ```\n输出:\nCount: 1\nCount: 2\nCount: 3\nCount: 4\nCount: 5\n解释：`until` 循环在条件 `$i\
+    \ > 5` 为假时运行。\n\n### 函数\n`函数` 可以在脚本中重用代码块。\n\n#### 示例 7.16\n```bash\n#! /bin/bash\n\
+    my_function() {\n    echo \"Hello from function!\"\n}\nmy_function\n```\n输出:Hello\
+    \ from function!\n解释：定义并调用函数。\n\n### 带参数的函数\n函数可以接收位置参数。\n\n#### 示例 7.17\n```bash\n\
+    #! /bin/bash\nmy_function() {\n    echo \"First argument: $1\"\n    echo \"Second\
+    \ argument: $2\"\n}\nmy_function \"Hello\" \"World\"\n```\n输出:\nFirst argument:\
+    \ Hello\nSecond argument: World\n解释：使用 `$1`, `$2` 等访问位置参数。\n\n### 函数返回值\n使用 `return`\
+    \ 从函数返回状态码。\n\n#### 示例 7.18\n```bash\n#! /bin/bash\nmy_function() {\n    return\
+    \ 10\n}\nmy_function\necho \"Return value: $?\"\n```\n输出:Return value: 10\n解释：`return`\
+    \ 返回的值通过 `$?` 获取。\n\n"
+- fmt: "\nOutput: 0123\nExplanation: `until [ $n -ge 4 ]` will quit the loop if `$n`\
+    \ is equal to 4.\n\n## Case Statement\nThe `case statement` is a multi-select\
+    \ command. The `case statement` matches a value to a pattern. If the match succeeds,\
+    \ it executes the matching command.\n\n```bash\ncase value in\n  pattern1) code1;;\
+    \      # note using ) and ;;\n  pattern2) code2;;\n  pattern3) code3;;\n  pattern*)\
+    \ code4;;      # when match nothing, run this .\nesac\n```\n\n### Example 7.7\n\
+    ```bash\n#! /bin/bash\necho 'Please input a number between 1 to 4: '\nread num\n\
+    case $num in\n  1)  echo 'You have input 1';;\n  2) echo 'You have input 2';;\n\
+    \  3)  echo 'You have input 3';;\n  4)  echo 'You have input 4';;\n  *) echo 'Your\
+    \ number is not between 1 to 4';;\nesac\n```\n\n# Assume we input a number 2\n\
+    Output:\nPlease input a number between 1 to 4:\n2\nYou have input 2\nExplanation:\
+    \ Assume we input a number 2, which matches the second case, therefore the second\
+    \ code is executed.\n\n## Break Command\nThe `break` keyword is used to stop the\
+    \ running of a loop according to the condition.\n\n```bash\nbreak\n```\n\n###\
+    \ Example 7.8\n```bash\n#! /bin/bash\nnum=0\nwhile(( $num<=8))\ndo\n  if [ $num\
+    \ == 3 ]\n  then\n    break      # quit the while loop\n  fi\n  num=`expr $num\
+    \ + 1`\n  echo $num\ndone\n```\n\nOutput: 123\nExplanation: If `$num` is 3, the\
+    \ program will run the `break` command, and quit the loop.\n\n## Continue Command\n\
+    The `continue` command is used to stop the current iteration, ignoring the following\
+    \ code, and then continue the next loop.\n\n```bash\ncontinue\n```\n\n### Example\
+    \ 7.9\n```bash\n#! /bin/sh\nnums=\"1 2 3 4 5 \"\nfor n in $nums\ndo\n  if [ $n\
+    \ -eq 3 ]\n  then\n    continue      # run the next for loop\n  fi\n  echo $n\n\
+    done\n```\n\nOutput: 1245\nExplanation: Note: The output has no the 3 number.\
+    \ If `$n = 3`, the program will run `continue` command, ignore the next command\
+    \ `echo $n`, and then run the next `for loop`.\n\n## Hour 8 Select Statement\n\
+    The `Select` statement allows the user to select one item to meet the condition,\
+    \ and run the related code. The `Select` statement usually works with the `Case`\
+    \ statement.\n\n```bash\nselect var in item1 item2 item3...\ndo\n  case statement\n\
+    \    ...\n  esac\ndone\n```\n\n### Example 8.1\n```bash\n#! /bin/bash\necho \"\
+    Please input a number between 1 to 4. \"\necho \"If you input 4, the program will\
+    \ exit. \"\nselect choice in 1 2 3 4 ;      # select one number\ndo\n  case $choice\
+    \ in\n  1)  echo \"You choose 1\";;\n      2)  echo \"You choose 2\";;\n     \
+    \ 3)  echo \"You choose 3\";;\n      4)  echo \"You choose 4 to exit\"; break;;\n\
+    \      *)  echo \"Enter error! \"; break;;\n  esac\ndone\n```\n\nOutput:\nPlease\
+    \ input a number between 1 to 4.\nIf you input 4, the program will exit.\n1) 1\n\
+    2) 2\n3) 3\n4) 4\n#? 2\nYou choose 2\n#? 4\nYou choose 4 to exit\nExplanation:\
+    \ Assume that we input 2 at the first time, input 4 at the second time. `select\
+    \ choice in 1 2 3 4 ;` choose one of the 4 numbers. The `Select` statement usually\
+    \ works with `Case` statement. `#?` is an input prompt, you can input one number.\n\
+    \n## I/O Redirection\nLinux Shell system commands take input from your terminal\
+    \ and send the resulting output back to your terminal. A command usually reads\
+    \ data from standard input, and writes data to standard output. The commands of\
+    \ the redirection are as follows:\n\n| Commands | Descriptions |\n| :--- | :---\
+    \ |\n| `command > file` | redirect output to the file. |\n| `command < file` |\
+    \ redirect input to the file. |\n| `command >> file` | append output to the file.\
+    \ |\n| `n > file` | redirect `File n` to the file |\n| `n >> file` | append `File\
+    \ n` to the file |\n| `n >& m` | combine the output file `m` and `File n` |\n\
+    | `n <& m` | combine the input file `m` and `File n` |\n| `<< tag` | take the\
+    \ content between tags as input. |\n\n`File n`, `File m` means the file with file\
+    \ descriptor 0, 1 or 2. `0` means Standard Input (STDIN). `1` means Standard Output\
+    \ (STDOUT). `2` means Standard Error (STDERR).\n\n### Output Redirection\nOutput\
+    \ redirection: Execute the command and store the output into the file by using\
+    \ `>`.\n\n```bash\ncommand > file\n```\n\n### Example 8.2\n```bash\necho \"R in\
+    \ 8 Hours\" > file\n```\nExplanation: `>` redirects the output to the file.\n\n\
+    ### Append Redirection\nIf you don't want the file to be overwritten, append the\
+    \ contents to the file using `>>`.\n\n```bash\ncommand >> file\n```\n\n### Example\
+    \ 8.3\n```bash\necho \"It is good!\" >> file\n```\nExplanation: `>>` appends the\
+    \ contents to the file.\n\n## Input Redirection\nInput redirection: Get input\
+    \ from a file using `<`.\n\n```bash\ncommand < file\n```\n\n### Example 8.4\n\
+    ```bash\nwc < file\n```\nOutput: 2 7 25\nExplanation: `<` gets the input from\
+    \ the file. `wc` counts how many lines, words, characters. 2: lines, 7: words,\
+    \ 25: characters.\n\n## File Descriptor\nFile n means the file with file descriptor\
+    \ 0, 1 or 2.\n- `0` means Standard Input (STDIN).\n- `1` means Standard Output\
+    \ (STDOUT).\n- `2` means Standard Error (STDERR).\n\n## Here Document\nThe `<<`\
+    \ operator is used to take the content between tags as input.\n\n```bash\ncommand\
+    \ << tag\n```\n\n### Example 8.5\n```bash\n#! /bin/bash\ncat << DOC\n...\nDOC\n\
+    ```\nExplanation: `<< DOC` defines a Here Document. `cat` shows the contents of\
+    \ the file. \n\n### Example 8.6\n```bash\n#! /bin/bash\nwc << EOF\n...\nEOF\n\
+    ```\nOutput: 3 13 68\nExplanation: `<< EOF` defines a Here Document. `wc` counts\
+    \ the number of lines, words, characters. 3: lines, 13: words, 68: characters.\n\
+    \n## Redirection Logic\nThe `<<` operator must be on the most left, no characters\
+    \ in front.\n```bash\ncommand << EOF\n```\n`<<` redirects the document to the\
+    \ command. `EOF` is a delimiter. You can specify other characters as a delimiter.\n\
+    \n## File Included\nThe Shell can include an external script into the current\
+    \ file.\n\n```bash\nsource ./external_file\n```\n`./` locates the external file.\n\
+    \n### Example 8.7\n```bash\n#! /bin/bash\nurl = \"www.amazon.com/author/ray-yao\"\
+    \n```\n\n### Example 8.8\n```bash\n#! /bin/bash\nsource ./file1.sh\necho \"The\
+    \ website of Ray Yao is:$url\"\n```\nExplanation: `source ./file1.sh` includes\
+    \ an external file `file1.sh`. In file1, defines a variable `url`. In file2, references\
+    \ the variable `$url`.\n\n## Appendix 1 Shell Scripting Chart\n### Built-in Parameters\
+    \ Chart\nThere are built-in parameters in Shell as follows:\n\n| Parameters |\
+    \ Descriptions |\n| :--- | :--- |\n| `$0` | Return the file name |\n| `$#` | Return\
+    \ the total number of the parameters |\n| `$*` | Return all parameters input by\
+    \ the user |\n| `$@` | Return all parameters input by the user |\n| `$$` | Return\
+    \ the current process ID number of the script |\n| `$!` | Return the last process\
+    \ ID number of the script |\n| `$?` | Returning 0 indicates running successfully\
+    \ |\n\n### Printf Command Chart\n`printf` is a command to format the output in\
+    \ the Shell.\n"
+  raw: 'Output:0123Explanation:“until [ $n -ge 4 ]” will quit the loop if $n is equal
+    to 4.Case Statement“case statement” is a multi-select commend . The case statement
+    matches a value to a pattern . If the match succeeds, executes the matching command
+    .
+
+
+    | case value inpattern1) code1;;        # note using ) and ;;pattern2) code2;;pattern3)
+    code3;;pattern*)  code4;;     # when match nothing, run this .esac |
+
+
+    Example 7.7
+
+
+    | #! /bin/bashecho ''Please input a number between 1 to 4: ''read numcase $num
+    in1)   echo ''You have input 1'';;2) echo ''You have input 2'';;3)   echo ''You
+    have input 3'';;4)   echo ''You have input 4'';;*) echo ''Your number is not between
+    1 to 4'';;esac |
+
+
+    # Assume we input a number 2 .Output:Please input a number between 1 to 4:2You
+    have input 2Explanation:Assume we input a number 2, which matches the second case,
+    therefore the second code is executed.Break Command“break” keyword is used to
+    stop the running of a loop according to the condition.
+
+
+    | break |
+
+
+    Example 7.8
+
+
+    | #! /bin/bashnum=0while(( $num<=8))     doif [ $num == 3 ]thenbreak       # quit
+    the while loopfinum=`expr $num + 1`echo $numdone |
+
+
+    Output:123Explanation:If $num is 3, the program will run the “break” command,
+    and quit the loop,Continue Command“continue” command is used to stop the current
+    iteration, ignoring the following code, and then continue the next loop.
+
+
+    | continue |
+
+
+    Example 7.9
+
+
+    | #! /bin/shnums="1 2 3 4 5 "for n in $numsdoif [ $n -eq 3 ]thencontinue        #
+    run the next for loopfiecho $ndone |
+
+
+    Output1245Explanation:Note: The output has no the 3 number.If $n = 3, the program
+    will run “continue” command, ignore the next command “echo $n”, and then run the
+    next “for loop”.Hour 8Select Statement“Select” statement allows the user to select
+    one item to meet the condition, and run the related code.“Select” statement usually
+    works with “Case” statement.
+
+
+    | select var in item1 item2 item3...docase statementdone |
+
+
+    Example 8.1
+
+
+    | #! /bin/bashEcho "Please input a number between 1 to 4. "echo "If you input
+    4, the program will exit. "select choice in 1 2 3 4 ;     # select one numberdocase
+    $choice in1)  echo "You choose 1";;        2)  echo "You choose 2";;             3)  echo
+    "You choose 3";;                  4)  echo "You choose 4 to exit"break;;           *)  echo
+    "Enter error! "break;;esacdone |
+
+
+    Output:Please input a number between 1 to 4.If you input 4, the program will exit.1)
+    12) 23) 34) 4#? 2You choose 2#? 4You choose 4 to exitExplanation:Assume that we
+    input 2 at the first time, input 4 at the second time.“select choice in 1 2 3
+    4 ;” choose one of the 4 numbers.“Select” statement usually works with “Case”
+    statement.#? is an input prompt, you can input one  number.I/O RedirectionLinux
+    Shell system commands take input from your terminal and send the resulting output
+    back to your terminal. A command usually reads data from standard input, and writes
+    data to standard output.The commands of the redirection are as follows:
+
+
+    | Commands | Descriptions |
+
+
+    | command > file | redirect output to the file. |
+
+
+    | command < file | redirect input to the file. |
+
+
+    | command >> file | append output to the file. |
+
+
+    | n > file | redirect File n to the file |
+
+
+    | n >> file | append File n to the file |
+
+
+    | n >& m | combine the output file m and File n |
+
+
+    | n <& m | combine the input file m and File n |
+
+
+    | << tag | take the content between tags as input. |
+
+
+    “File n”, “File m” means the file with file descriptor 0, 1 or 2.0 means Standard
+    Input. (STDIN)1 means Standard Output. (STDOUT)2 means Standard Error. (STDERR).Output
+    RedirectionOutput redirection: Execute the command and store the output into the
+    file by using “> ”
+
+
+    | command > file |
+
+
+    Example 8.2
+
+
+    | echo "R in 8 Hours" > myFilecat  myFile       # “cat” views the content of myfile
+    |
+
+
+    Output:R in 8 HoursExplanation:“echo “R in 8 Hours” > myFile” redirects the output
+    to myFileYou need to use “cat” command to view the contents of myFile.![](OEBPS/image_rsrc40H.jpg)Append
+    RedirectionIf you don''t want the file content to be overwritten, please append
+    the contents to the end of the file by using “>> ”
+
+
+    | command >> file |
+
+
+    Example 8.3
+
+
+    | echo "R in 8 Hours" > myFileecho "It is good! " >>  myFilecat  myFile       #
+    “cat” views the content of myfile |
+
+
+    Output:R in 8 HoursIt is good!Explanation:“echo “It is good! ”>> myFile” append
+    the contents to myFile.![](OEBPS/image_rsrc40J.jpg)Input RedirectionInput redirection:
+    Get input from a file by using “< ”.
+
+
+    | command < file |
+
+
+    Example 8.4
+
+
+    | wc < myFile     # myFile is created on the previous page . |
+
+
+    Output:2 7 25Explanation:“wc < myFile” gets the input from myFile.“wc” counts
+    how many lines, words, characters in the file.2: there two lines7: there seven
+    words.25: there are  characters. (including spaces)myFile is the file created
+    on the previous page.File DescriptorWhen each Linux command executes, they will
+    open three files
+
+
+    1.  Standard input file (stdin): the file descriptor of stdin is 0, and the Shell
+    program reads data from stdin by default.
+
+
+    2.  Standard output file (stdout): the file descriptor of stdout is 1, and Shell
+    program writes data to stdout by default.
+
+
+    3.  Standard error file (stderr): the file descriptor of stderr is 2, and the
+    Shell program writes error messages to the stderr stream.
+
+
+    Example:Command < file redirects stdin to file
+
+
+    | $ command < file |
+
+
+    Example:Command > file redirects stdout to file
+
+
+    | $ command > file |
+
+
+    Example:Read the input from the infile file, write the output to the outfile.
+
+
+    | $ command < infile > outfile |
+
+
+    Here DocumentHere Document is used to redirect the file contents to a command.
+
+
+    | command << delimiterdocumentdelimiter |
+
+
+    The second delimiter must be on the most left, no characters in front, and no
+    characters in the back.Example 8.5
+
+
+    | #! /bin/bashcat << DOC          # DOC defines a Here DocumentAngularJS in 8
+    HoursJavaScript in 8 HoursVisual Basics in 8 HoursDOC |
+
+
+    Output:AngularJS in 8 HoursJavaScript in 8 HoursVisual Basics in 8 HoursExplanation:“cat
+    << DOC……DOC ” is a special redirecting mode, redirect the file contents to a command.
+    “cat” shows the contents of the file.“DOC” is a delimiter. You can specify other
+    characters as a delimiter. “DOC……DOC” defines a Here Document.Example 8.6
+
+
+    | #! /bin/bashwc << EOF      # wc counts the number of lines, word, charactersAngularJS
+    in 8 HoursJavaScript in 8 HoursVisual Basics in 8 HoursEOF |
+
+
+    Output:3 13 68Explanation:“wc << EOF……EOF ” redirects the document contents to
+    “wc”.“wc” is used to count the numbers of lines, words and characters.“EOF” is
+    a delimiter, defines a Here Document.3:   means 3 lines13:   means 13 words.68:
+      means 68 characters, including spaces.File IncludedThe Shell can include an
+    external script file into the current file.
+
+
+    | source   ./ external_file |
+
+
+    “./ ” locates the external file.We will create two files as examples.(1) The file1.
+    sh is as follows:Example 8.7
+
+
+    | #! /bin/bashurl = [www . amazon . com/author/ray-yao](http://mybook.to/yaowining)
+    |
+
+
+    # This is the file1 . sh(2) The file2. sh is as follows :Example 8.8
+
+
+    | #! /bin/bashsource ./file1.sh      # include an external fileecho "The website
+    of Ray Yao is:$url " |
+
+
+    # This is the file2 . shOutput:The website of Ray Yao is:[www . amazon . com/author/ray-yao](http://mybook.to/yaowining)Explanation:“source
+    ./ file1. sh” includes an external file “file1. sh”.In file1, defines a variable
+    “url”.In file2, references the variable “$url”.Appendix 1Shell Scripting ChartBuilt-in
+    Parameters ChartThere are built-in parameters in Shell as follows:
+
+
+    | Parameters | Descriptions |
+
+
+    | $0 | Return the file name |
+
+
+    | $# | Return the total number of the parameters |
+
+
+    | $* | Return all parameters input by the user |
+
+
+    | $@ | Return all parameters input by the user |
+
+
+    | $$ | Return the current process ID number of the script |
+
+
+    | $ ! | Return the last process ID number of the script |
+
+
+    | $? | Returning 0 indicates running successfully |
+
+
+    Printf Command Chart“printf” is a command to format the output in the Shell.'
+  toc: []
+  trans: "\n\n输出: 0123\n解释：`until [ $n -ge 4 ]` 当 `$n` 等于 4 时将退出循环。\n\n## Case 语句\n\
+    `case statement` 是一个多选择命令。`case statement` 将一个值与模式进行匹配。如果匹配成功，则执行对应的命令。\n\n```bash\n\
+    case value in\n  pattern1) code1;;      # 注意使用 ) 和 ;;\n  pattern2) code2;;\n \
+    \ pattern3) code3;;\n  pattern*) code4;;      # 当没有匹配到任何项时，运行此项\nesac\n```\n\n\
+    ### 示例 7.7\n```bash\n#! /bin/bash\necho 'Please input a number between 1 to 4:\
+    \ '\nread num\ncase $num in\n  1)  echo 'You have input 1';;\n  2) echo 'You have\
+    \ input 2';;\n  3)  echo 'You have input 3';;\n  4)  echo 'You have input 4';;\n\
+    \  *) echo 'Your number is not between 1 to 4';;\nesac\n```\n\n# 假设我们输入数字 2\n\
+    输出:\nPlease input a number between 1 to 4:\n2\nYou have input 2\n解释：假设我们输入了数字\
+    \ 2，它匹配了第二个 case，因此执行了第二个代码。\n\n## Break 命令\n`break` 关键字用于根据条件停止循环的运行。\n\n```bash\n\
+    break\n```\n\n### 示例 7.8\n```bash\n#! /bin/bash\nnum=0\nwhile(( $num<=8))\ndo\n\
+    \  if [ $num == 3 ]\n  then\n    break      # 退出 while 循环\n  fi\n  num=`expr $num\
+    \ + 1`\n  echo $num\ndone\n```\n\n输出: 123\n解释：如果 `$num` 为 3，程序将运行 `break` 命令并退出循环。\n\
+    \n## Continue 命令\n`continue` 用于停止当前迭代，忽略后续代码，然后继续下一次循环。\n\n```bash\ncontinue\n\
+    ```\n\n### 示例 7.9\n```bash\n#! /bin/sh\nnums=\"1 2 3 4 5 \"\nfor n in $nums\n\
+    do\n  if [ $n -eq 3 ]\n  then\n    continue      # 执行下一次 for loop\n  fi\n  echo\
+    \ $n\ndone\n```\n\n输出: 1245\n解释：注意：输出中没有数字 3。如果 `$n = 3`，程序将运行 `continue` 命令，忽略下一个命令\
+    \ `echo $n`，然后执行下一次 `for loop`。\n\n## 第 8 章 Select 语句\n`Select` 语句允许用户选择一个符合条件的项并运行相关代码。`Select`\
+    \ 语句通常与 `Case` 语句配合使用。\n\n```bash\nselect var in item1 item2 item3...\ndo\n  case\
+    \ statement\n    ...\n  esac\ndone\n```\n\n### 示例 8.1\n```bash\n#! /bin/bash\n\
+    echo \"Please input a number between 1 to 4. \"\necho \"If you input 4, the program\
+    \ will exit. \"\nselect choice in 1 2 3 4 ;      # 选择一个数字\ndo\n  case $choice\
+    \ in\n  1)  echo \"You choose 1\";;\n      2)  echo \"You choose 2\";;\n     \
+    \ 3)  echo \"You choose 3\";;\n      4)  echo \"You choose 4 to exit\"; break;;\n\
+    \      *)  echo \"Enter error! \"; break;;\n  esac\ndone\n```\n\n输出:\nPlease input\
+    \ a number between 1 to 4.\nIf you input 4, the program will exit.\n1) 1\n2) 2\n\
+    3) 3\n4) 4\n#? 2\nYou choose 2\n#? 4\nYou choose 4 to exit\n解释：假设我们第一次输入 2，第二次输入\
+    \ 4。`select choice in 1 2 3 4 ;` 选择 4 个数字之一。`Select` 语句通常与 `Case` 语句配合使用。`#?`\
+    \ 是输入提示，你可以输入一个数字。\n\n## I/O 重定向\nLinux Shell 系统命令从终端获取输入并将结果输出传回终端。命令通常从标准输入读取数据并写入标准输出数据。重定向命令如下：\n\
+    \n| 命令 | 描述 |\n| :--- | :--- |\n| `command > file` | 将输出重定向到文件。 |\n| `command\
+    \ < file` | 将输入重定向到文件。 |\n| `command >> file` | 将输出追加到文件。 |\n| `n > file` | 将\
+    \ `File n` 重定向到文件 |\n| `n >> file` | 将 `File n` 追加到文件 |\n| `n >& m` | 合并输出文件 `m`\
+    \ 和 `File n` |\n| `n <& m` | 合并输入文件 `m` 和 `File n` |\n| `<< tag` | 将标签之间的内容作为输入。\
+    \ |\n\n`File n`、`File m` 表示文件描述符 0、1 或 2 的文件。`0` 表示标准输入 (STDIN)。`1` 表示标准输出 (STDOUT)。`2`\
+    \ 表示标准错误 (STDERR)。\n\n### 输出重定向\n输出重定向：执行命令并使用 `>` 将输出存储到文件中。\n\n```bash\ncommand\
+    \ > file\n```\n\n### 示例 8.2\n```bash\necho \"Hello\" > file\n```\n解释：使用 `>` 将输出重定向到文件。\n\
+    \n### 追加重定向\n如果你不想覆盖文件，使用 `>>` 将内容追加到文件。\n\n```bash\necho \"World\" >> file\n\
+    ```\n\n### 示例 8.3\n```bash\necho \"Good!\" >> file\n```\n解释：使用 `>>` 将内容追加到文件。\n\
+    \n## 输入重定向\n输入重定向：使用 `<` 从文件获取输入。\n\n```bash\ncommand < file\n```\n\n### 示例 8.4\n\
+    ```bash\nwc < file\n```\n输出: 2 7 25\n解释：使用 `<` 从文件获取输入。`wc` 统计行、单词和字符。\n\n## Here\
+    \ Document (在此文档)\n使用 `<<` 将标签之间的内容作为输入。\n\n```bash\ncommand << tag\n```\n\n###\
+    \ 示例 8.5\n```bash\n#! /bin/bash\ncat << DOC\n...\nDOC\n```\n解释：`<<` 定义了在此文档。`cat`\
+    \ 显示文件内容。\n\n### 示例 8.6\n```bash\n#! /bin/bash\nwc << EOF\n...\nEOF\n```\n输出:\
+    \ 3 13 68\n解释：`<< EOF` 定义了在此文档。`wc` 统计行、单词和字符。\n\n## 重定向逻辑\n`<<` 运算符必须位于最左侧，前面没有字符。\n\
+    \n```bash\ncommand << EOF\n```\n`<<` 将文档重定向到命令。`EOF` 是分隔符。你可以指定其他字符作为分隔符。\n\n\
+    ## 文件引入\nShell 可以外部脚本引入当前文件。\n\n```bash\nsource ./external_file\n```\n`./` 定位外部文件。\n\
+    \n### 示例 8.7\n```bash\n#! /bin/bash\nurl = \"www.amazon.com/author/ray-yao\"\n\
+    ```\n\n### 示例 8.8\n```bash\n#! /bin/bash\nsource ./file1.sh\necho \"The website\
+    \ of Ray Yao is:$url\"\n```\n解释：`source ./file1.sh` 引入了外部文件 `file1.sh`。在文件中定义了变量。\n\
+    \n## 附录 1 Shell 脚本表\n### 内置参数表\nShell 中的内置参数如下：\n\n| 参数 | 描述 |\n| :--- | :---\
+    \ |\n| `$0` | 返回文件名 |\n| `$#` | 返回参数的总数 |\n| `$*` | 返回用户输入的所有参数 |\n| `$@` | 返回用户输入的所有参数\
+    \ |\n| `$$` | 返回脚本的当前进程 ID |\n| `$!` | 返回上一个命令的进程 ID |\n| `$?` | 返回 0 表示执行成功 |\n\
+    \n### printf 命令表\n`printf` 是一个在 Shell 中用于格式化输出的命令。\n\n"
+- fmt: "\n# printf \"type\" variables\n\n`\"type\"` is a parameter used to format\
+    \ the output.\n\n| Type | Description |\n| :--- | :--- |\n| `%b` | Print it as\
+    \ a binary value |\n| `%d` | Print it as a digital value |\n| `%f` | Print it\
+    \ as a float-point value |\n| `%o` | Print it as an octal value |\n| `%s` | Print\
+    \ it as a string value |\n| `%x` | Print it as a hexadecimal value |\n\n## Escape\
+    \ Sequences Chart\nThe `\\` backslash character can be used to escape characters.\n\
+    \n`\\a` outputs an alert; `\\n` outputs the content to the next new line; `\\\
+    r` makes a return; `\\t` makes a tab; `\\f` outputs the content to the next page;\\\
+    '` outputs a single quotation mark;\\\"` outputs a double quotation mark.\n\n\
+    ## Comparison Operators Chart\nLinux Shell has comparison operators as follows:\n\
+    \n| Operators | Checks |\n| :--- | :--- |\n| `-eq` | equal |\n| `-ne` | not equal\
+    \ |\n| `-gt` | greater than |\n| `-ge` | greater or equal |\n| `-lt` | less than\
+    \ |\n| `-le` | less or equal |\n\nThe comparison expression returns true or false.\n\
+    \n## Boolean Operators Chart\n\n| Operators |\n| :--- |\n| `-a` |\n| `-o` |\n\
+    | `!` |\n\nAfter using logical operators, the result will be true or false.\n\n\
+    - `true -a true;` returns true;\n- `true -a false;` returns false;\n- `false -a\
+    \ false;` returns false;\n- `true -o true;` returns true;\n- `true -o false;`\
+    \ returns true;\n- `false -o false;` return false;\n- `! false;` returns true;\n\
+    - `! true;` returns false;\n\n## String Operators Chart\n\n| Operators | Checks\
+    \ |\n| :--- | :--- |\n| `=` | If two strings are equal, returns true . |\n| `!=`\
+    \ | If two strings are not equal, returns true . |\n| `-z` | If the length of\
+    \ a string is equal to zero, returns true . |\n| `-n` | If the length of a string\
+    \ is not equal to zero, returns true |\n| `$` | If the string is not empty, returns\
+    \ true . |\n\n## File Operators Chart\nFile operators are used to detect various\
+    \ properties of Linux files.\n\n| Operator | Checks |\n| :--- | :--- |\n| `-d\
+    \ file` | If the object is a directory, return true |\n| `-f file` | If the object\
+    \ is a file, return true |\n| `-p file` | If the object is a pipe, return true\
+    \ |\n| `-r file` | If the object is a readable file, return true . |\n| `-w file`\
+    \ | If the object is a writable file, return true |\n| `-x file` | If the object\
+    \ is an executable file, return true |\n| `-e file` | If the object is an empty\
+    \ file, return true |\n| `-s file` | If the object isn’t an empty file, return\
+    \ true |\n| `-b file` | If the object is a block device file, return true |\n\
+    | `-c file` | If the object is a character device file, return true |\n\n## I/O\
+    \ Redirection Chart\nLinux Shell system commands take input from your terminal\
+    \ and send the resulting output back to your terminal. A command usually reads\
+    \ data from standard input, and writes data to standard output. The commands of\
+    \ the redirection are as follows:\n\n| Commands | Descriptions |\n| :--- | :---\
+    \ |\n| `command > file` | redirect output to the file. |\n| `command < file` |\
+    \ redirect input to the file. |\n| `command >> file` | append output to the file.\
+    \ |\n| `n > file` | redirect File `n` to the file |\n| `n >> file` | append File\
+    \ `n` to the file |\n| `n >& m` | combine the output file `m` and File `n` |\n\
+    | `n <& m` | combine the input file `m` and File `n` |\n| `<< tag` | take the\
+    \ content between tags as input. |\n\n## Appendix 2 Exercises\n\n### Questions\n\
+    Please choose the correct answer.\n\n(01) fill in `# fill in characters as a multi-line\
+    \ comment`\n```\ncomment 1\ncomment 2\ncomment 3...\nEOF\n```\nA. EOF\nB. #EOF\n\
+    C. <<EOF\nD. : <<EOF\n\n(02)\n```bash\n#! /bin/sh\nstr1=\"Kotlin\"\nstr2=\"in\
+    \ 8 Hours\"\nmyString=\"$str1 fill in $str2\" # connect two strings\necho $myString\n\
+    ```\nA. +\nB. −\nC. nothing\nD. concat\n\n(03) The syntax to access the elements\
+    \ of an array is fill in `?`\n1. `$(array_name[index])`\n2. `${array_name[index]}`\n\
+    3. `array_name(index)`\n4. `array_name{index}`\n\n(04)\n```bash\n#! /bin/bash\n\
+    sum= fill in expr 100 + 200 fill in\necho \"The sum is: $sum\"\n```\nA. double\
+    \ quotes\nB. single quotes\nC. back quotes\nD. nothing\n\n(05) Parameter `-s file`\
+    \ checks fill in `?`\nA. If the object isn’t an empty file, return true.\nB. If\
+    \ the object is an empty file, return true.\nC. If the object is a block device\
+    \ file, return true.\nD. If the object is a character device file, return true.\n\
+    \n(06)\n```bash\n#! /bin/bash\nif test fill in /root/myFile.sh # checks myFile\
+    \ if exist\nthen\n  echo 'The file exists! '\nelse\n  echo ' The file doesn't\
+    \ exist! '\nfi\n```\nA. –o\nB. –e\nC. –n\nD. –s\n\n(07) `if fill in condition\
+    \ fill in then` code1 `else` code2 `fi`\nA. ( )\nB. { }\nC. [ ]\nD. nothing\n\n\
+    (08) `# redirects the output to myFile`\n```bash\necho \"R in 8 Hours\" fill in\
+    \ myFile\n```\nA. ->\nB. >\nC. in\nD. to\n\n(09)\n```bash\n#! /bin/sh\necho \"\
+    Please input your name. \"\nfill in myInput # the input value will be stored in\
+    \ myInput\necho \"Hi! Your name is: $myInput\"\n```\nA. input\nB. var\nC. $myInput=\n\
+    D. read\n\n(10)\n```bash\n#! /bin/sh\nstr=\"jQuery in 8 Hours\"\necho fill in\
+    \ # get the length of the string\n```\nA. str.length()\nB. length(str)\nC. ${#str}\n\
+    D. $[#str]\n\n(11) fill in can get all elements of an array.\n1. `array_name[@]`\n\
+    2. `array_name[#]`\n3. `array_name[%]`\n4. `array_name[&]`\n\n(12)\n| Operators\
+    \ | Running |\n| :--- | :--- |\n| + | add |\n| - | subtract |\n| fill in | multiply\
+    \ |\n| / | divide |\nA. *\nB. \\*\nC. X\nD. \\x\n\n(13)\n```bash\n#! /bin/sh\n\
+    echo fill in \"Go \\c \" # turn on escape\necho \"in 8 Hours\"\n```\nA. –a\nB.\
+    \ –o\nC. –s\nD. –e\n\n(14)\n```bash\n#! /bin/bash\nif test fill in \"$myString\"\
+    \ # checks empty\nthen\n  echo \"It's not empty string.\"\nelse\n  echo \"It's\
+    \ an empty string.\"\nfi\n```\nA. –o\nB. –e\nC. –n\nD. –s\n\n(15) `until` loops\
+    \ through a block of code if the condition is `fill in`, will quit the loop if\
+    \ the condition is `fill in`.\n1. true\n2. true\n3. false\n4. false\n\n(16) If\
+    \ you don't want the file to be overwritten, please append the contents to the\
+    \ end of the file using `fill in` symbol.\nA. >>\nB. ->\nC. =>\nD. >=\n\n(17)\
+    \ | Parameters | Descriptions |\n| :--- | :--- |\n| fill in | Return the file\
+    \ name |\n| $# | Return total number of parameters |\n| $* | Return all input\
+    \ by the user |\n| $@ | Return all input by the user |\nA. n\nB. $0\nC. f\nD.\
+    \ %\n\n(18)\n```bash\n#! /bin/bash\narr=(fill in) # get the length of the array\n\
+    ```\nA. arr.length()\nB. length(arr)\nC. ${#arr}\nD. $[#arr]\n\n(19)\n- `true\
+    \ -a true;` returns true;\n- `true -a false;` returns false;\n- `false -a false;`\
+    \ returns false;\n- `true -o true;` returns true;\n- `true -o false;` returns\
+    \ true;\n- `false -o false;` return false;\n\n(20) | Operators | Checks |\n| :---\
+    \ | :--- |\n| `-z` | If the length of a string is equal to zero, returns true\
+    \ . |\n| `-n` | If the length of a string is not equal to zero, returns true |\n\
+    | `fill in` | If the string is not empty, returns true . |\nA. $\nB. &\nC. @\n\
+    D. %\n\n(21)\n```bash\n#! /bin/bash\nadd(){\n  x=100\n  y=155\n  z=`expr $x +\
+    \ $y`\n  return $z\n}\nadd\necho \"The sum is fill in\" # show the value\n```\n\
+    A. $!\nB. $@\nC. $*\nD. $\n\n(22)\n```bash\n#! /bin/bash\necho 'Please input a\
+    \ number between 1 to 4:'\nread num\ncase $num in\n  1) echo 'You have input 1'\n\
+    \  2) echo 'You have input 2'\n  3) echo 'You have input 3'\n  4) echo 'You have\
+    \ input 4'\n  *) echo 'Your number is not between 1 to 4'\nesac\n```\nA. ;\nB.\
+    \ ;;\nC. ;;;\nD. ;;;\n\n(23)\n```bash\n#! /bin/bash\nfill in # counts the number\
+    \ of lines, word, characters\n```\n1. num << DOC\n2. ls << DOC\n3. wc << EOF\n\
+    4. cat << EOF\n\n(24)\n```bash\n#! /bin/bash\nfill in ./file1.sh # include an\
+    \ external file \"file1.sh\"\necho \"The website of Ray Yao is:$url\"\n```\nA.\
+    \ include\nB. import\nC. resource\nD. source\n\n### Answers\n| 01. D |\n| 02.\
+    \ C |\n| 03. B |\n| 04. C |\n| 05. A |\n| 06. B |\n| 07. C |\n| 08. B |\n| 09.\
+    \ D |\n| 10. C |\n| 11. A |\n"
+  raw: '| printf  “type”  variables |
+
+
+    “type” is a parameter used to format the output.
+
+
+    | Type | Description |
+
+
+    | %b | Print it as a binary value |
+
+
+    | %d | Print it as a digital value |
+
+
+    | %f | Print it as a float-point value |
+
+
+    | %o | Print it as an octal value |
+
+
+    | %s | Print it as a string value |
+
+
+    | %x | Print it as a hexadecimal value |
+
+
+    Escape Sequences ChartThe “ \ ” backslash character can be used to escape characters.
+
+
+    | \a outputs an alert\n outputs the content to the next new line.\r makes a return\t
+    makes a tab\f outputs the content to the next page.\’ outputs a single quotation
+    mark.\” outputs a double quotation mark. |
+
+
+    Comparison Operators ChartLinux Shell has comparison operators as follows:
+
+
+    | Operators | Checks |
+
+
+    | -eq | equal |
+
+
+    | -ne | not equal |
+
+
+    | -gt | greater than |
+
+
+    | -ge | greater or equal |
+
+
+    | -lt | less than |
+
+
+    | -le | less or equal |
+
+
+    The comparison expression returns true or false.Boolean Operators Chart
+
+
+    | Operators |
+
+
+    | -a |
+
+
+    | -o |
+
+
+    | ! |
+
+
+    After using logical operators, the result will be true or false.
+
+
+    | true -a true;returns true; | true -a false;returns false; | false -a false;returns
+    false; |
+
+
+    | true -o true;returns true; | true -o false;returns true; | false -o false;return
+    false; |
+
+
+    | ! false;returns true; | ! true;returns false; |  |
+
+
+    String Operators Chart
+
+
+    | Operators | Checks |
+
+
+    | = | If two strings are equal, returns true . |
+
+
+    | ! = | If two strings are not equal, returns true . |
+
+
+    | -z | If the length of a string is equal to zero, returns true . |
+
+
+    | -n | If the length of a string is not equal to zero, returns true |
+
+
+    | $ | If the string is not empty, returns true . |
+
+
+    File Operators ChartFile operators are used to detect various properties of Linux
+    files.
+
+
+    | Operator | Checks |
+
+
+    | -d file | If the object is a directory, return true |
+
+
+    | -f file | If the object is a file, return true |
+
+
+    | -p file | If the object is a pipe, return true |
+
+
+    | -r file | If the object is a readable file, return true . |
+
+
+    | -w file | If the object is a writable file, return true . |
+
+
+    | -x file | If the object is an executable file, return true . |
+
+
+    | -e file | If the object is an empty file, return true . |
+
+
+    | -s file | If the object isn’t an empty file, return true . |
+
+
+    | -b file | If the object is a block device file, return true . |
+
+
+    | -c file | If the object is a character device file, return true . |
+
+
+    I/O Redirection ChartLinux Shell system commands take input from your terminal
+    and send the resulting output back to your terminal. A command usually reads data
+    from standard input, and writes data to standard output.The commands of the redirection
+    are as follows:
+
+
+    | Commands | Descriptions |
+
+
+    | command > file | redirect output to the file. |
+
+
+    | command < file | redirect input to the file. |
+
+
+    | command >> file | append output to the file. |
+
+
+    | n > file | redirect File n to the file |
+
+
+    | n >> file | append File n to the file |
+
+
+    | n >& m | combine the output file m and File n |
+
+
+    | n <& m | combine the input file m and File n |
+
+
+    | << tag | take the content between tags as input. |
+
+
+    Appendix 2  ExercisesQuestionsPlease choose the correct answer.(01)fill in       
+    # fill in characters as a multi-line commentcomment 1comment 2comment 3...EOFA.
+    EOF        B. #EOF        C. <<EOF        D. : <<EOF(02)#! /bin/shstr1="Kotlin"str2="in
+    8 Hours"myString="$str1 fill in $str2"    # connect two stringsecho $myStringA.
+    +         B. −         C. nothing        D. concat(03)The syntax to access the
+    elements of an array is fill in ?
+
+
+    1.  $(array_name[index])
+
+
+    2.  ${array_name[index]}
+
+
+    3.  array_name(index)
+
+
+    4.  array_name{index}
+
+
+    (04)#! /bin/bashsum= fill in expr 100 + 200 fill inecho "The sum is: $sum"A. double
+    quotes       B. single quotes       C. back quotesD. nothing(05)Parameter “-s
+    file” checks  fill in ?A.   If the object isn’t an empty file, return true.B.
+      If the object is an empty file, return true.C.   If the object is a block device
+    file, return true.D.   If the object is a character device file, return true .(06)#!
+    /bin/bashif test fill in /root/myFile.sh        # checks myFile if exist .thenecho
+    ''The file exists! ''elseecho '' The file doesn''t exist! ''fiA. –o        B.
+    –e        C. –n        D. –s    (07)if  fill in condition fill inthencode1elsecode2fiA.
+    (    )        B. {    }        C. [    ]        D. nothing(08)# redirects the
+    output to myFileecho "R in 8 Hours"  fill in   myFilecat  myFile      A. ->     　
+    B. 　>     　 C. in        D. to(09)#! /bin/shecho "Please input your name. "    fill
+    in myInput      # the input value will be stored in myInputecho "Hi! Your name
+    is: $myInput"   A. input      B. var      C. $myInput=      D. read(10)#! /bin/shstr="jQuery
+    in 8 Hours"echo fill in       # get the length of the stringA. str. length()     B.
+    length(str)     C. ${#str}      D$[#str](11)fill in can get all elements of an
+    array.
+
+
+    1.  array_name[@]
+
+
+    2.  array_name[#]
+
+
+    3.  array_name[%]
+
+
+    4.  array_name[&]
+
+
+    (12)
+
+
+    | Operators | Running |
+
+
+    | + | add |
+
+
+    | - | subtract |
+
+
+    | fill in | multiply |
+
+
+    | / | divide |
+
+
+    A. *         B. \*         C. X         D. \x(13)#! /bin/shecho fill in "Go \c
+    "        #  turn on the escape switchecho "in 8 Hours"      A.   –a        B.
+    –o        C. –s        D. –e(14)#! /bin/bashif test fill in "$myString"      #
+    checks empty stringthen     echo "It''s not an empty string. "elseecho "It''s
+    an empty string. "fiA. –o        B. –e        C. –n        D. –s    (15)“until
+    loop” loops through a block of code if the specified condition is fill in , will
+    quit the loop if the condition is fill in .
+
+
+    1.  true        true
+
+
+    2.  true        false
+
+
+    3.  false       false
+
+
+    4.  false       true
+
+
+    (16)If you don''t want the file content to be overwritten, please append the contents
+    to the end of the file by using “fill in ” symbol.A. >>          B. ->           C.
+    =>         D. >=(17)
+
+
+    | Parameters | Descriptions |
+
+
+    | fill in | Return the file name |
+
+
+    | $# | Return the total number of the parameters |
+
+
+    | $* | Return all parameters input by the user |
+
+
+    | $@ | Return all parameters input by the user |
+
+
+    A.   $n         B. $0        C. $f        D. $%(18)#! /bin/basharr=(PHP MySQL
+    in 8 Hours)     length= fill in     # get the length of the arrayecho $lengthA
+    . $arr . length()    B . length($arr)    C . size($arr)     D . ${#arr[@]}  (19)
+
+
+    | true -a true;returns true; | true -a false;returns false; | false -a false;returns
+    false; |
+
+
+    | true -o true;returns fill in ; | true -o false;returns fill in ; | false -o
+    false;return f fill in ; |
+
+
+    | ! false;returns true; | ! true;returns false; |  |
+
+
+    1.  true     true     true
+
+
+    2.  false    true     false
+
+
+    3.  true     true     false
+
+
+    4.  false    false    true
+
+
+    (20)
+
+
+    | Operators | Checks |
+
+
+    | -z | If the length of a string is equal to zero, returns true . |
+
+
+    | -n | If the length of a string is not equal to zero, returns true |
+
+
+    | fill in | If the string is not empty, returns true . |
+
+
+    A. $        B. &        C. @        D. %(21)#! /bin/bashadd(){        # define
+    a functionx=100y=155z=`expr $x + $y`return $z      # return the value}add       
+    # call the functionecho "The sum is fill in "    # show the return valueA. $!
+             B. $@         C. $*        $?(22)#! /bin/bashecho ''Please input a number
+    between 1 to 4: ''read numcase $num in1)   echo ''You have input 1'' fill in2)
+    echo ''You have input 2'' fill in3)   echo ''You have input 3'' fill in4)   echo
+    ''You have input 4'' fill in*) echo ''Your number is not between 1 to 4'' fill
+    inesacA. ;          B. ;;          C. ;;;         D. ;;;;(23)#! /bin/bashfill
+    in    #  counts the number of lines, word, charactersAngularJS in 8 HoursJavaScript
+    in 8 HoursVisual Basics in 8 HoursEOF
+
+
+    1.  num << DOC
+
+
+    2.  ls << DOC
+
+
+    3.  wc << EOF
+
+
+    4.  cat << EOF
+
+
+    (24)#! /bin/bashfill in ./file1.sh      # include an external file “file1 . sh”echo
+    "The website of Ray Yao is:$url "A. include      B. import      C. resource      D.
+    sourceAnswers
+
+
+    | 01.   D |
+
+
+    | 02.   C |
+
+
+    | 03.   B |
+
+
+    | 04.   C |
+
+
+    | 05.   A |
+
+
+    | 06.   B |
+
+
+    | 07.   C |
+
+
+    | 08.   B |
+
+
+    | 09.   D |
+
+
+    | 10.   C |
+
+
+    | 11.   A |'
+  toc: []
+  trans: "\n\n# printf \"type\" 变量\n\n`\"type\"` 是用于格式化输出的参数。\n\n| 类型 | 描述 |\n| :---\
+    \ | :--- |\n| `%b` | 以二进制值打印 |\n| `%d` | 以整数值打印 |\n| `%f` | 以浮点数值打印 |\n| `%o`\
+    \ | 以八进制值打印 |\n| `%s` | 以字符串值打印 |\n| `%x` | 以十六进制值打印 |\n\n## 转义序列表\n`\\` 反斜线字符可用于转义字符。\n\
+    \n`\\a` 输出警报；`\\n` 将内容输出到下一行；`\\r` 换回；`\\t` 制表符；`\\f` 将内容输出到下一页；`\\'` 输出单引号；`\\\
+    \"` 输出双引号。\n\n## 比较运算符表\nLinux Shell 拥有如下比较运算符：\n\n| 运算符 | 检查项 |\n| :--- | :---\
+    \ |\n| `-eq` | 等于 |\n| `-ne` | 不等于 |\n| `-gt` | 大于 |\n| `-ge` | 大于等于 |\n| `-lt`\
+    \ | 小于 |\n| `-le` | 小于等于 |\n\n比较表达式返回真或假。\n\n## 布尔运算符表\n\n| 运算符 |\n| :--- | :---\
+    \ |\n| `-a` |\n| `-o` |\n| `!` |\n\n使用逻辑运算符后，结果将为真或假。\n\n- `true -a true;` 返回真；\n\
+    - `true -a false;` 返回假；\n- `false -a false;` 返回假；\n- `true -o true;` 返回真；\n- `true\
+    \ -o false;` 返回真；\n- `false -o false;` 返回假；\n- `! false;` 返回真；\n- `! true;` 返回假；\n\
+    \n## 字符串运算符表\n\n| 运算符 | 检查项 |\n| :--- | :--- |\n| `=` | 如果两个字符串相等，则返回真。 |\n| `!=`\
+    \ | 如果两个字符串不等，则返回真。 |\n| `-z` | 如果字符串长度为零，则返回真。 |\n| `-n` | 如果字符串长度不为零，则返回真 |\n\
+    | `$` | 如果字符串不空，则返回真。 |\n\n## 文件运算符表\n文件运算符用于检测 Linux 文件的各种属性。\n\n| 运算符 | 检查项\
+    \ |\n| :--- | :--- |\n| `-d file` | 如果对象是目录，则返回真 |\n| `-f file` | 如果对象是文件，则返回真\
+    \ |\n| `-p file` | 如果对象是管道，则返回真 |\n| `-r file` | 如果对象是可读文件，则返回真。 |\n| `-w file`\
+    \ | 如果对象是可写文件，则返回真 |\n| `-x file` | 如果对象是可执行文件，则返回真 |\n| `-e file` | 如果对象是空文件，则返回真\
+    \ |\n| `-s file` | 如果对象不是空文件，则返回真 |\n| `-b file` | 如果对象是块设备文件，则返回真 |\n| `-c file`\
+    \ | 如果对象是字符设备文件，则返回真 |\n\n## I/O 重定向表\nLinux Shell 系统命令从终端输入并将输出传回终端。命令通常从标准输入读取数据，并写入标准输出。重定向命令如下：\n\
+    \n| 命令 | 描述 |\n| :--- | :--- |\n| `command > file` | 将输出重定向到文件。 |\n| `command\
+    \ < file` | 将输入重定向文件。 |\n| `command >> file` | 将输出追加到文件。 |\n| `n > file` | 将文件\
+    \ `n` 重定向到文件 |\n| `n >> file` | 将文件 `n` 追加到文件 |\n| `n >& m` | 合并输出文件 `m` 和文件 `n`\
+    \ |\n| `n <& m` | 合并输入文件 `m` 和文件 `n` |\n| `<< tag` | 将标签之间的内容作为输入。 |\n\n## 附录\
+    \ 2 练习\n\n### 题目\n请选择正确答案。\n\n(01) 填入 `# 使用多行注释字符`\n```\ncomment 1\ncomment 2\n\
+    comment 3...\nEOF\n```\nA. EOF\nB. #EOF\nC. <<EOF\nD. : <<EOF\n\n(02)\n```bash\n\
+    #! /bin/sh\nstr1=\"Kotlin\"\nstr2=\"in 8 Hours\"\nmyString=\"$str1 fill in $str2\"\
+    \ # 连接两个字符串\necho $myString\n```\nA. +\nB. −\nC. 空格\nD. concat\n\n(03) 访问数组元素的语法是填入\
+    \ `?`\n1. `$(array_name[index])`\n2. `${array_name[index]}`\n3. `array_name(index)`\n\
+    4. `array_name{index}`\n\n(04)\n```bash\n#! /bin/bash\nsum= fill in expr 100 +\
+    \ 200 fill in\necho \"The sum is: $sum\"\n```\nA. 双引号\nB. 单引号\nC. 反引号\nD. 空格\n\
+    \n(05) 参数 `-s file` 检查填入 `?`\nA. 如果对象不是空文件，则返回真。\nB. 如果对象为空文件，则返回真。\nC. 如果对象是块设备文件，则返回真。\n\
+    D. 如果对象是字符设备文件，则返回真。\n\n(06)\n```bash\n#! /bin/bash\n test fill in myFile # 检查\
+    \ myFile 是否存在\nthen\n  echo 'The file'\nelse\n  echo ' '\nfi\n```\nA. -o\nB. -e\n\
+    C. -n\nD. -s\n\n(07) `if fill in condition then code1 else code2 fi`\nA. ( )\n\
+    B. { }\nC. [ ]\nD. 空格\n\n(08) `# 将输出重定向到 myFile`\n```bash\necho \"R in\" fill\
+    \ in\n```\nA. ->\nB. >\nC. in\nD. to\n\n(09)\n```bash\n#! /bin/sh\necho \"Please\
+    \ input your.\nfill in myInput # 将值存储在 myInput\necho \"Hi! Your name is: $myInput\"\
+    \n```\nA. input\nB. var\nC. =\nD. read\n\n(10)\n```bash\n#! /bin/sh\nstr=\"jQuery\
+    \ in\"\necho fill in # 获取字符串的长度\n```\nA. str.length()\nB. length(str)\nC. ${#str}\n\
+    D. $[#str]\n\n(11) fill in 可以获取数组的所有元素。\n1. `array_name[@]`\n2. `array_name[#]`\n\
+    3. `array_name[%]`\n4. `array_name[&]`\n\n(12)\n| 运算符 | 运行 |\n| :--- | :--- |\n\
+    | + | 加 |\n| - | 减 |\n| fill in | 乘 |\n| / | 除 |\nA. *\nB. \\*\nC. X\nD. \\x\n\
+    \n(13)\n```bash\n#! /bin/sh\necho fill in \"Go \" # 转义\n```\nA. -a\nB. -o\nC.\
+    \ -s\nD. -e\n\n(14)\n```bash\n#! /bin/bash\nif test fill in \"$myString\" # 检查是否为空\n\
+    then\n  echo \"It's not empty.\"\nelse\n  echo \"It's an empty string.\"\nfi\n\
+    ```\nA. -o\nB. -e\nC. -n\nD. -s\n\n(15) `until` 在条件 fill in 时循环代码，如果条件 fill in\
+    \ 则退出循环。\n1. true\n2. true\n3. false\n4. false\n\n(16) 如果你不想文件被覆盖，请使用 fill in\
+    \ 符号追加到文件末尾。\nA. >>\nB. ->\nC. =>\nD. >=\n\n(17) | 参数 | 描述 |\n| :--- | :--- |\n\
+    | fill in | 返回文件名 |\n| $# | 返回参数总数 |\n| $* | 返回用户输入 |\n| $@ | 返回用户输入 |\nA. n\n\
+    B. $0\nC. f\nD. %\n\n(18)\n```bash\n#! /bin/bash\narr=(fill in) # 获取数组的长度\n```\n\
+    A. arr.length()\nB. length(arr)\nC. ${#arr}\nD. $[#arr]\n\n(19)\n- `true -a true;`\
+    \ 返回真；\n- `true -a false;` 返回假；\n- `false -a false;` 返回假；\n- `true -o true;` 返回真；\n\
+    - `true -o false;` 返回真；\n- `false -o false;` 返回假；\n\n(20) | 运算符 | 检查 |\n| :---\
+    \ | :--- |\n| `-z` | 如果字符串长度为零，则返回真。 |\n| `-n` | 如果字符串长度不为零，则返回真 |\n| `fill in`\
+    \ | 如果字符串不空，则返回真。 |\nA. $\nB. &\nC. @\nD. %\n\n(21)\n```bash\n#! /bin/bash\nadd(){\n\
+    \  x=100\n  y=155\n  z=`expr $x + $y`\n  return $z\n}\nadd\necho \"The sum is\
+    \ fill in\" # 显示值\n```\nA. $!\nB. $@\nC. $*\nD. $\n\n(22)\n```bash\n#! /bin/bash\n\
+    echo 'Please input a number between 1 to 4:'\nread num\ncase $num in\n  1) echo\
+    \ 'You have input 1'\n  2) echo 'You have input 2'\n  3) echo 'You have input\
+    \ 3'\n  4) echo 'You have input 4'\n  *) echo 'Your number is not between 1 to\
+    \ 4'\nesac\n```\nA. ;\nB. ;;\nC. ;;;\nD. ;;;\n\n(23)\n```bash\n#! /bin/bash\n\
+    fill in # 计算行数、单词、字符数\n```\n1. num << DOC\n2. ls << DOC\n3. wc << EOF\n4. cat\
+    \ << EOF\n\n(24)\n```bash\n#! /bin/bash\nfill in ./file1.sh # 引入外部文件 \"file1.sh\"\
+    \necho \"The website of Ray Yao is:$url\"\n```\nA. include\nB. import\nC. resource\n\
+    D. source\n\n### Answers\n| 01. D |\n| 02. C |\n| 03. B |\n| 04. C |\n| 05. A\
+    \ |\n| 06. B |\n| 07. C |\n| 08. B |\n| 09. D |\n| 10. C |\n| 11. A |\n\n"
+- fmt: '
+
+    # 12. B
+
+
+    ## Recommended Books on Amazon
+
+
+    以下是 Amazon 上的推荐书籍：
+
+
+    * [Advanced C++ in 8 Hours](http://mybook.to/yaowining)
+
+    * [Advanced Java in 8 Hours](http://mybook.to/yaowining)
+
+    * [AngularJs in 8 Hours](http://mybook.to/yaowining)
+
+    * [Asp . net Programming](http://mybook.to/yaowining)
+
+    * [Awk in 8 Hours](http://mybook.to/yaowining)
+
+    * [BootStrap in 8 Hours](http://mybook.to/yaowining)
+
+    * [C# Interview Q&A](http://mybook.to/yaowining)
+
+    * [C# Programming](http://mybook.to/yaowining)
+
+    * [C++ Interview Q&A](http://mybook.to/yaowining)
+
+    * [C++ Programming](http://mybook.to/yaowining)
+
+    * [Dart in 8 Hours](http://mybook.to/yaowining)
+
+    * [Django in 8 Hours](http://mybook.to/yaowining)
+
+    * [Erlang in 8 Hours](http://mybook.to/yaowining)
+
+    * [Go in 8 Hours](http://mybook.to/yaowining)
+
+    * [Html Css Interview Q&A](http://mybook.to/yaowining)
+
+    * [Html Css Programming](http://mybook.to/yaowining)
+
+    * [Java Interview Q&A](http://mybook.to/yaowining)
+
+    * [Java Programming](http://mybook.to/yaowining)
+
+    * [JavaScript Interview Q&A](http://mybook.to/yaowining)
+
+    * [JavaScript Programming](http://mybook.to/yaowining)
+
+    * [JQuery Interview Q&A](http://mybook.to/yaowining)
+
+    * [JQuery Programming](http://mybook.to/yaowining)
+
+    * [Jsp Servlets Programming](http://mybook.to/yaowining)
+
+    * [Kotlin in 8 Hours](http://mybook.to/yaowining)
+
+    * [Linux Command Line](http://mybook.to/yaowining)
+
+    * [Linux Interview Q&A](http://mybook.to/yaowining)
+
+    * [Lua in 8 Hours](http://mybook.to/yaowining)
+
+    * [Matlab in 8 Hours](http://mybook.to/yaowining)
+
+    * [MySql in 8 Hours](http://mybook.to/yaowining)
+
+    * [Node . Js in 8 Hours](http://mybook.to/yaowining)
+
+    * [Numpy in 8 Hours](http://mybook.to/yaowining)
+
+    * [Perl in 8 Hours](http://mybook.to/yaowining)
+
+    * [Php Interview Q&A](http://mybook.to/yaowining)
+
+    * [Php MySql Programming](http://mybook.to/yaowining)
+
+    * [PowerShell in 8 Hours](http://mybook.to/yaowining)
+
+    * [Python Interview Q&A](http://mybook.to/yaowining)
+
+    * [Python Programming](http://mybook.to/yaowining)
+
+    * [R Programming](http://mybook.to/yaowining)
+
+    * [React . Js in 8 Hours](http://mybook.to/yaowining)
+
+    * [Ruby Programming](http://mybook.to/yaowining)
+
+    * [Rust in 8 Hours](http://mybook.to/yaowining)
+
+    * [Scala in 8 Hours](http://mybook.to/yaowining)
+
+    * [Shell Scripting in 8 Hours](http://mybook.to/yaowining)
+
+    * [Swift in 8 Hours](http://mybook.to/yaowining)
+
+    * [Tcl in 8 Hours](http://mybook.to/yaowining)
+
+    * [TypeScript in 8 Hours](http://mybook.to/yaowining)
+
+    * [Visual Basic Interview Q&A](http://mybook.to/yaowining)
+
+    * [Visual Basic Programming](http://mybook.to/yaowining)
+
+    * [Vue . Js in 8 Hours](http://mybook.to/yaowining)
+
+    * [Xml Json in 8 Hours](http://mybook.to/yaowining)
+
+
+    ![LN eCover-202004170945.jpg](OEBPS/image_rsrc40K.jpg)
+
+
+    See You!
+
+    '
+  raw: '| 12.   B |
+
+
+    Recommended BooksRecommended Books on Amazon[Advanced C++ in 8 Hours](http://mybook.to/yaowining)[Advanced
+    Java in 8 Hours](http://mybook.to/yaowining)[AngularJs in 8 Hours](http://mybook.to/yaowining)[Asp
+    . net Programming](http://mybook.to/yaowining)[Awk in 8 Hours](http://mybook.to/yaowining)[BootStrap
+    in 8 Hours](http://mybook.to/yaowining)[C# Interview Q&A](http://mybook.to/yaowining)[C#
+    Programming](http://mybook.to/yaowining)[C++ Interview Q&A](http://mybook.to/yaowining)[C++
+    Programming](http://mybook.to/yaowining)[Dart in 8 Hours](http://mybook.to/yaowining)[Django
+    in 8 Hours](http://mybook.to/yaowining)[Erlang in 8 Hours](http://mybook.to/yaowining)[Go
+    in 8 Hours](http://mybook.to/yaowining)[Html Css Interview Q&A](http://mybook.to/yaowining)[Html
+    Css Programming](http://mybook.to/yaowining)[Java Interview Q&A](http://mybook.to/yaowining)[Java
+    Programming](http://mybook.to/yaowining)[JavaScript Interview Q&A](http://mybook.to/yaowining)[JavaScript
+    Programming](http://mybook.to/yaowining)[JQuery Interview Q&A](http://mybook.to/yaowining)[JQuery
+    Programming](http://mybook.to/yaowining)[Jsp Servlets Programming](http://mybook.to/yaowining)[Kotlin
+    in 8 Hours](http://mybook.to/yaowining)[Linux Command Line](http://mybook.to/yaowining)[Linux
+    Interview Q&A](http://mybook.to/yaowining)[Lua in 8 Hours](http://mybook.to/yaowining)[Matlab
+    in 8 Hours](http://mybook.to/yaowining)[MySql in 8 Hours](http://mybook.to/yaowining)[Node
+    . Js in 8 Hours](http://mybook.to/yaowining)[Numpy in 8 Hours](http://mybook.to/yaowining)[Perl
+    in 8 Hours](http://mybook.to/yaowining)[Php Interview Q&A](http://mybook.to/yaowining)[Php
+    MySql Programming](http://mybook.to/yaowining)[PowerShell in 8 Hours](http://mybook.to/yaowining)[Python
+    Interview Q&A](http://mybook.to/yaowining)[Python Programming](http://mybook.to/yaowining)[R
+    Programming](http://mybook.to/yaowining)[React . Js in 8 Hours](http://mybook.to/yaowining)[Ruby
+    Programming](http://mybook.to/yaowining)[Rust in 8 Hours](http://mybook.to/yaowining)[Scala
+    in 8 Hours](http://mybook.to/yaowining)[Shell Scripting in 8 Hours](http://mybook.to/yaowining)[Swift
+    in 8 Hours](http://mybook.to/yaowining)[Tcl in 8 Hours](http://mybook.to/yaowining)[TypeScript
+    in 8 Hours](http://mybook.to/yaowining)[Visual Basic Interview Q&A](http://mybook.to/yaowining)[Visual
+    Basic Programming](http://mybook.to/yaowining)[Vue . Js in 8 Hours](http://mybook.to/yaowining)[Xml
+    Json in 8 Hours](http://mybook.to/yaowining)![LN eCover-202004170945.jpg](OEBPS/image_rsrc40K.jpg)See
+    You!'
+  toc: []
+  trans: '
+
+
+    # 12. B
+
+
+    ## Amazon 上的推荐书籍
+
+
+    * [8 小时精通高级 C++](http://mybook.to/yaowining)
+
+    * [8 小时精通高级 Java](http://mybook.to/yaowining)
+
+    * [8 小时精通 AngularJs](http://mybook.to/yaowining)
+
+    * [Asp .net 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Awk](http://mybook.to/yaowining)
+
+    * [8 小时精通 BootStrap](http://mybook.to/yaowining)
+
+    * [C# 面试题问答](http://mybook.to/yaowining)
+
+    * [C# 编程](http://mybook.to/yaowining)
+
+    * [C++ 面试题问答](http://mybook.to/yaowining)
+
+    * [C++ 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Dart](http://mybook.to/yaowining)
+
+    * [8 小时精通 Django](http://mybook.to/yaowining)
+
+    * [8 小时精通 Erlang](http://mybook.to/yaowining)
+
+    * [8 小时精通 Go](http://mybook.to/yaowining)
+
+    * [Html Css 面试题问答](http://mybook.to/yaowining)
+
+    * [Html Css 编程](http://mybook.to/yaowining)
+
+    * [Java 面试题问答](http://mybook.to/yaowining)
+
+    * [Java 编程](http://mybook.to/yaowining)
+
+    * [JavaScript 面试题问答](http://mybook.to/yaowining)
+
+    * [JavaScript 编程](http://mybook.to/yaowining)
+
+    * [JQuery 面试题问答](http://mybook.to/yaowining)
+
+    * [JQuery 编程](http://mybook.to/yaowining)
+
+    * [Jsp Servlets 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Kotlin](http://mybook.to/yaowining)
+
+    * [Linux 命令行](http://mybook.to/yaowining)
+
+    * [Linux 面试题问答](http://mybook.to/yaowining)
+
+    * [8 小时精通 Lua](http://mybook.to/yaowining)
+
+    * [8 小时精通 Matlab](http://mybook.to/yaowining)
+
+    * [8 小时精通 MySql](http://mybook.to/yaowining)
+
+    * [8 小时精通 Node . Js](http://mybook.to/yaowining)
+
+    * [8 小时精通 Numpy](http://mybook.to/yaowining)
+
+    * [8 小时精通 Perl](http://mybook.to/yaowining)
+
+    * [Php 面试题问答](http://mybook.to/yaowining)
+
+    * [Php MySql 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 PowerShell](http://mybook.to/yaowining)
+
+    * [Python 面试题问答](http://mybook.to/yaowining)
+
+    * [Python 编程](http://mybook.to/yaowining)
+
+    * [R 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 React . Js](http://mybook.to/yaowining)
+
+    * [Ruby 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Rust](http://mybook.to/yaowining)
+
+    * [8 小时精通 Scala](http://mybook.to/yaowining)
+
+    * [8 小时精通 Shell 脚本](http://mybook.to/yaowining)
+
+    * [8 小时精通 Swift](http://mybook.to/yaowining)
+
+    * [8 小时精通 Tcl](http://mybook.to/yaowining)
+
+    * [8 小时精通 TypeScript](http://mybook.to/yaowining)
+
+    * [Visual Basic 面试题问答](http://mybook.to/yaowining)
+
+    * [Visual Basic 编程](http://mybook.to/yaowining)
+
+    * [8 小时精通 Vue . Js](http://mybook.to/yaowining)
+
+    * [8 小时精通 Xml Json](http://mybook.to/yaowining)
+
+
+    ![LN eCover-202004170945.jpg](img/image_rsrc40K.jpg)
+
+
+    下次见！
+
+
+    '
