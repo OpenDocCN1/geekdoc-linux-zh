@@ -485,6 +485,7 @@
 +   [NW.js 精要：使用最新 Web 技术构建适用于 Windows、Mac OS 或 Linux 的原生桌面应用程序](docs/nwjs-essentials-build-native-desktop-applications-for-window/README.md)
 +   [旧电脑，新生命：使用 Ubuntu 修复旧硬件](docs/old-computer-new-life-restoring-old-hardware-with-ubuntu/README.md)
 +   [GNU/Linux 入门指南](docs/on-gnulinux/README.md)
++   [OpenSUSE 11.0 和 SUSE Linux Enterprise Server 圣](docs/opensuse-11-0-and-suse-linux-enterprise-server-bible/README.md)
 +   [优化 Linux 性能：Linux 性能工具实用指南](docs/optimizing-linux-performance-a-hands-on-guide-to-linux-perfo/README.md)
 +   [Oracle Linux 8 版本快速启动指南](docs/oracle-linux-express-guide-version-8/README.md)
 +   [Linux 和 UNIX 的 Oracle Real Application Clusters 安装指南](docs/oracle-real-application-clusters-installation-guide-for-linu/README.md)
