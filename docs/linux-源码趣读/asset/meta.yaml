@@ -1,0 +1,150 @@
+name: Linux 源码趣读
+name_cn: Linux 源码趣读
+slug: linux-源码趣读
+toc:
+- - '#'
+  - '# Part 1: Drudgery before entering the kernel'
+- - '##'
+  - 'Chapter 1: The first two lines of code'
+- - '##'
+  - 'Chapter 2: Moving yourself around'
+- - '###'
+  - '## ------- 本回扩展与延伸 -------'
+- - '###'
+  - 第 3 回 做好最最基础的准备工作
+- - '###'
+  - 第 4 回 把硬盘里的部分放到内存
+- - '###'
+  - 第 5 回 进入保护模式前的最后一次折腾内存
+- - '###'
+  - 扩展与延伸
+- - '###'
+  - 第 6 回 先解决寄存器的包袱
+- - '###'
+  - 第 7 回 六行代码就进入了保护模式
+- - '###'
+  - 第 8 回 重新设置 idt 和 gdt
+- - '###'
+  - 第 9 回 Intel 内存管理两板斧：分段与分页
+- - '###'
+  - 第 10 回 进入 main 函数前的最后一跃！
+- - '##'
+  - 本回扩展资料
+- - '##'
+  - 第一部分回顾
+- - '#'
+  - '# Part 2: Initialization of the Great War'
+- - '##'
+  - 'Chapter 11: The 20-odd lines of the entire OS'
+- - '##'
+  - 主内存初始化 `mem_init`
+- - '##'
+  - 第 14 回 中断初始化 trap_init
+- - '##'
+  - 第 16 回 控制台初始化 tty_init
+- - '##'
+  - 第 20 回 硬盘初始化 hd_init
+- - '###'
+  - 第二部分总结与回顾
+- - '###'
+  - 开始
+- - '#'
+  - '# Part 3: The Birth of a New Process'
+- - '##'
+  - 'Session 21: Overview of New Process Birth'
+- - '###'
+  - 内核态与用户态的本质-特权级
+- - '###'
+  - 特权级转换的方式
+- - '###'
+  - 整体流程设计
+- - '###'
+  - 上下文环境
+- - '###'
+  - 运行时间信息
+- - '###'
+  - 优先级
+- - '###'
+  - 进程状态
+- - '###'
+  - LDT Assignment
+- - '##'
+  - 第 29 回 番外篇 - 让我们一起来写本书？
+- - '##'
+  - 第 30 回 番外篇 - 写时复制就这么几行代码
+- - '###'
+  - 储备知识
+- - '###'
+  - 写时复制的本质
+- - '###'
+  - 看看代码咋写的
+- - '#'
+  - '# File System Loading and Structure Parsing'
+- - '##'
+  - The Role of the `setup` function
+- - '##'
+  - Details of the `mount_root` function
+- - '##'
+  - File System Format on Disk
+- - '##'
+  - MINIX File System Format Description
+- - '##'
+  - Data Structures of File System in Memory
+- - '###'
+  - 第一步，在进程描述符数组 `filp` 中找到一个空闲项
+- - '###'
+  - 第二步，在系统文件表 `file_table` 中找到一个空闲项
+- - '###'
+  - 第三步，将进程的文件描述符和系统的文件项对应起来
+- - '###'
+  - 第四步，根据文件名从文件系统中找到文件
+- - '###'
+  - 第五步，填充 `file` 数据
+- - '###'
+  - '`fork`'
+- - '###'
+  - 读取文件开头 KB 的数据
+- - '###'
+  - 解析数据为 exec 结构
+- - '###'
+  - 判断是脚本文件还是可执行文件
+- - '###'
+  - 准备参数空间
+- - '###'
+  - 设置 eip 和 esp，完成摇身一变
+- - '###'
+  - 计算机的世界没有魔法
+- - '###'
+  - 总结
+- - '##'
+  - 第 36 回 | 缺页中断
+- - '##'
+  - 第 38 回 操作系统完毕
+- - '##'
+  - Chapter 39 | Extra - Linux 0.11 Kernel Debugging
+- - '###'
+  - Overall Idea and Effect
+- - '###'
+  - 'Step 1: Configure the Virtual Machine'
+- - '###'
+  - 'Step 2: Install QEMU'
+- - '###'
+  - 'Step 3: Download and Run Debuggable Linux 0.11 Source'
+- - '###'
+  - 'Step 4: Remote Debugging via VS Code'
+- - '##'
+  - Chapter 40 | Extra - Why You Can't Understand It No Matter How
+- - '##'
+  - 第 43 回 | shell 程序读取你的命令
+- - '##'
+  - 第 44 回 | 进程的阻塞与唤醒
+- - '##'
+  - 第 45 回 | 解析并执行 shell 命令
+- - '###'
+  - 对 buf 区域的内存做校验 verify_area
+- - '###'
+  - 执行读操作 file_read
+- - '###'
+  - bmap：获取全局的数据块号
+- - '###'
+  - bread：将 bmap 获取的数据块号读入到高速缓冲块
