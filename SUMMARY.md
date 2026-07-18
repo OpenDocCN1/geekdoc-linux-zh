@@ -472,6 +472,7 @@
 +   [中年幽灵猎人：超自然女性小说](docs/midlife-ghost-hunter-a-paranormal-womens-fiction/README.md)
 +   [移动软件诊断入门指南](docs/mobile-software-diagnostics-an-introduction/README.md)
 +   [迁移到自由软件指南](docs/moving-to-free-software/README.md)
++   [Nagios 系统与网络监控，第2版](docs/nagios-system-and-network-monitoring-2nd-edition/README.md)
 +   [Negus Live Linux 系列 Ajax 构建工具：构建即插即用 Ajax 应用指南](docs/negus-live-linux-series-ajax-construction-kit-building-plug-/README.md)
 +   [《计算机网络入门指南（第12版）》](docs/networking-for-dummies-12th-edition/README.md)
 +   [鸟哥的 Linux 私房菜：基础学习篇 第四版](docs/niaoge-linux-basic-4e/README.md)
