@@ -598,6 +598,7 @@
 +   [前线领导者：从零构建高绩效组织](docs/the-frontline-leader-building-a-high-performance-organizatio/README.md)
 +   [GNU Make 入门指南](docs/the-gnu-make-book/README.md)
 +   [Linux 金金书籍：从秘籍到高级应用](docs/the-golden-book-of-linux-from-secrets-to-advanced-applicatio/README.md)
++   [KCNA Book：Kubernetes 与云原生认证指南指南](docs/the-kcna-book-kubernetes-and-cloud-native-associate/README.md)
 +   [Linux 命令行入门指南](docs/the-linux-command-line-beginners-guide/README.md)
 +   [Linux 调度器：十年浪费的核心](docs/the-linux-scheduler-a-decade-of-wasted-cores/README.md)
 +   [CompTIA Linux+ 认证官方学生指南（XK0-004 考试）](docs/the-official-comptia-linux-student-guide-exam-xk0-004/README.md)
