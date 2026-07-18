@@ -107,6 +107,7 @@
 +   [Dan Gookin 教授 Microsoft Windows Millennium Edition](docs/dan-gookin-teaches-microsoft-windows-millennium-edition-auth/README.md)
 +   [数据分析与 Linux 操作系统合集教程：使用 Linux 操作系统学习数据分析、预测性分析与数据科学初学者指南](docs/data-analytics-and-linux-operating-system-2-bundle-manuscrip/README.md)
 +   [数据清洗口袋指南](docs/data-cleaning-pocket-primer-computing/README.md)
++   [DB2 10.1/10.5 Linux、UNIX 和 Windows 数据库管理：认证考试指南](docs/db2-10-110-5-for-linux-unix-and-windows-database-administrat/README.md)
 +   [DB2 9 for Linux, Unix, and Windows 数据库管理升级认证学习指南](docs/db2-9-for-linux-unix-and-windows-database-administration-upg/README.md)
 +   [Linux 系统调试指南 (Digital Short Cut)](docs/debugging-linux-systems-digital-short-cut/README.md)
 +   [Linux 网络深度解析：防火墙、VPN 与安全连接配置指南](docs/deep-dive-into-linux-networking-configuring-firewalls-vpns-a/README.md)
