@@ -1,0 +1,79 @@
+name: Raspberry Pi ：The Ultimate Step by Step Raspberry Pi User Guide (The Updated
+  Version )
+name_cn: 树莓派：终极分步树莓派用户指南（更新版）
+slug: raspberry-pi-the-ultimate-step-by-step-raspberry-pi-user-gui
+toc:
+- - '#'
+  - 树莓派：终极分步树莓派用户指南（更新版）
+- - '#'
+  - 献辞
+- - '#'
+  - 第 1 章 树莓派概述
+- - '##'
+  - 特性
+- - '##'
+  - 架构
+- - '##'
+  - 系统软件
+- - '##'
+  - 操作系统
+- - '##'
+  - 用户应用程序
+- - '##'
+  - 配件
+- - '##'
+  - 硬件
+- - '#'
+  - 第 2 章 树莓派- Python- 什么是？有什么好处？
+- - '##'
+  - 树莓派的 Python 编程语言能力
+- - '##'
+  - 使用 Python 编程树莓派
+- - '##'
+  - 使用 Python 集成树莓派硬件
+- - '#'
+  - 第 3 章 Python 技术基础
+- - '##'
+  - Python 特性
+- - '##'
+  - Python 语法与语义
+- - '##'
+  - Python 表达式
+- - '##'
+  - Python 库
+- - '##'
+  - Python 软件开发
+- - '##'
+  - 作为系统（SaaS）的 Python 软件应用
+- - '##'
+  - Python 开发者社区
+- - '#'
+  - 第 4 章 - 可配合树莓派 Python 使用的其他设备
+- - '#'
+  - 第 5 章- 使用树莓派制作 LED 指示器
+- - '##'
+  - 完成此操作需要什么？
+- - '##'
+  - 安装 LedBorg
+- - '##'
+  - 安装软件
+- - '#'
+  - 第 6 章 使用 Python 语言为树莓派编程图形用户界面 (GUI)
+- - '##'
+  - Python 中的 GUI 开发
+- - '##'
+  - 使用 Python 编写 GUI
+- - '##'
+  - 使用 Tkinter 为树莓派使用 Python 编写 GUI
+- - '#'
+  - 第 7 章 - 树莓派 - 如何使用 Pygame
+- - '#'
+  - 第 8 章 - 使用树莓派 Python 进行网络
+- - '##'
+  - 在 Debian Linux 中为树莓派联网的说明
+- - '##'
+  - 树莓派联网的六 (6) 个步骤
+- - '#'
+  - 关于作者
+- - '###'
+  - 修复说明：

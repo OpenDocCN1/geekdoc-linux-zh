@@ -1,0 +1,29 @@
+name: Raspberry Pi： How To Master Raspberry Pi (Raspberry Pi 3, Python, Linux, Computer
+  Programming, Single Board Computers, Microprocessors, Programming)
+name_cn: 树莓派：如何精通树莓派 (树莓派 3, Python, Linux, 计算机编程, 单板计算机, 微处理器, 编程)
+slug: raspberry-pi-how-to-master-raspberry-pi-raspberry-pi-3-pytho
+toc:
+- - '##'
+  - 编程基础
+- - '##'
+  - 安装 Python
+- - '##'
+  - 变量和数据操作
+- - '##'
+  - Python 数学
+- - '##'
+  - 存在，还是不存在？布尔值和比较运算符
+- - '##'
+  - If 和 else
+- - '##'
+  - 列表
+- - '##'
+  - '# 会打印 95'
+- - '##'
+  - 循环
+- - '##'
+  - 方法
+- - '##'
+  - 结语
+- - '##'
+  - 第 6 章

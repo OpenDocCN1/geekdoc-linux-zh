@@ -1,0 +1,3492 @@
+- fmt: '
+
+    ![](cover.jpeg)
+
+
+    # How To Master Raspberry Pi
+
+
+    ![](images/00002.jpg)
+
+
+    By Richard Dorsey
+
+
+    ![](images/00001.jpg)
+
+
+    © Copyright 2017 by Richard Dorsey - All rights reserved.
+
+
+    The followng eBook is reproduced below with the goal of providing information
+    that is as accurate and reliable as possible. Regardless, purchasing this eBook
+    can be seen as consent to the fact that both the publisher and the author of this
+    book are in no way experts on the topics discussed within and that any recommendations
+    or suggestions that are made herein are for entertainment purposes only. Professionals
+    should be consulted as needed prior to undertaking any of the action endorsed
+    herein.
+
+
+    This declaration is deemed fair and valid by both the American Bar Association
+    and the Committee of Publishers Association and is legally binding throughout
+    the United States.
+
+
+    Furthermore, the transmission, duplication or reproduction of any of the following
+    work including specific information will be considered an illegal act irrespective
+    of if it is done electronically or in print. This extends to creating a secondary
+    or tertiary copy of the work or a recorded copy and is only allowed with express
+    written consent from the Publisher. All additional right reserved.
+
+
+    The information in the following pages is broadly considered to be a truthful
+    and accurate account of facts and as such any inattention, use or misuse of the
+    information in question by the reader will render any resulting actions solely
+    under their purview. There are no scenarios in which the publisher or the original
+    author of this work can be in any fashion deemed liable for any hardship or damages
+    that may befall them after undertaking information described herein.
+
+
+    Additionally, the information in the following pages is intended only for informational
+    purposes and should thus be thought of as universal. As befitting its nature,
+    it is presented without assurance regarding its prolonged validity or interim
+    quality. Trademarks that are mentioned are done without written consent and can
+    in no way be considered an endorsement from the trademark holder.
+
+
+    # Table of Contents
+
+
+    ![](images/00002.jpg)
+
+
+    - [Introduction](#index_split_003.html_filepos4289)
+
+    - [Chapter 1: What is Raspberry Pi?](#index_split_004.html_filepos6248)
+
+    - [Chapter 2: Under the Hood](#index_split_005.html_filepos10154)
+
+    - [Chapter 3: Setting Up](#index_split_006.html_filepos20270)
+
+    - [Chapter 4: Programming Essentials](#index_split_007.html_filepos29788)
+
+    - [Chapter 5: Project Ideas](#index_split_008.html_filepos63367)
+
+    - [Chapter 6: Your First Project - A Portable Superconsole](#index_split_009.html_filepos68062)
+
+    - [Conclusion](#index_split_010.html_filepos90419)
+
+
+    # Introduction
+
+
+    ![](images/00002.jpg)
+
+
+    Congratulations on downloading Raspberry Pi and thank you for doing so.
+
+
+    The following chapters will discuss the innumerable ways that you can work with
+    the super versatile Raspberry Pi computing microboard - or, rather, how you can
+    make it work for you.
+
+
+    If you’re reading this, I’m sure you’ve heard at least a couple things about this
+    extremely neat gizmo. Maybe you’ve heard of people building massive arcade cabinets
+    at home where they and a friend can play their favorite games from back in the
+    day; maybe you’ve seen smart mirrors that show people people feed of important
+    information as they get ready in the morning; or maybe, you just ran into an article
+    about them online and you’re just wanting to know what they can do.
+
+
+    More likely, since this is a programming essentials book, you’re trying to understand
+    how to get the most out of your Raspberry Pi by writing your own scripts or working
+    with other people’s scripts.
+
+
+    Regardless of your reasoning, I can say that getting the Raspberry Pi will most
+    certainly be one of the best decisions that you’ve made recently. You’re going
+    to be able to do a whole host of super cool things with it and learn a lot about
+    technology and engineering in the process.
+
+
+    There are plenty of books on this subject on the market, thanks again for choosing
+    this one! Every effort was made to ensure it is full of as much useful information
+    as possible, please enjoy!
+
+
+    # Chapter 1
+
+
+    ![](images/00002.jpg)
+
+
+    ## What is Raspberry Pi?
+
+
+    For the intents and purposes of this book, we’re going to start from nothing and
+    assume that you know, well, nothing. So to do that, we have to start with the
+    extremely basic questions. The most basic question of all is this: what is the
+    Raspberry Pi?
+
+
+    As I said, the Raspberry Pi is featured quite prominently in a huge number of
+    tech DIY projects all over the web. What’s more is that if you’re friends with
+    engineers or people who love technology, you probably have a friend or two that
+    have already worked with a Raspberry Pi and carried out a project.
+
+
+    So what, precisely, is the Raspberry Pi? Well, at its most basic, it’s just a
+    bunch of parts.
+
+
+    The Raspberry Pi was developed in 2012 by the Raspberry Pi foundation. The original
+    intent of the project was to develop a super small and cost-effective computer
+    that could be used to teach basic concepts regarding programming and computer
+    science to both schoolchildren and children in developing countries, situations
+    where available funds otherwise are quite sparse.
+
+
+    One of the intents behind the Raspberry Pi is that it’s supposed to be extensible.
+    This means that it’s supposed to be very open-ended; you should be able to buy
+    a number of modifications and hardware options for it and use them rather easily.
+    We’ll talk more about this in the next chapter.
+
+
+    The Raspberry Pi was successful far beyond its original intent. While it was meant,
+    as I said, to solely help money-tight situations - like public schools in developing
+    countries - be allowed to fester a knowledge of programming and computer science,
+    it quickly became a favorite toy of tech hobbyists everywhere because it allows
+    you to do so much with so little.
+
+
+    Indeed, packed in a very cost effective microboard is a fair amount of computing
+    power. However, we’ll get to that in the next chapter, as well.
+
+
+    So what exactly is a Raspberry Pi? Well, it’s a gateway to possibility. When you
+    get a Raspberry Pi, you’re actually getting a million different things that you
+    can do with it, too. You can set up a rig to water the plants automatically. You
+    could teach your child how to program while they play Minecraft. You could do
+    things like retrieve automatic updates on the weather and make an alarm clock
+    that dictates them to you in the morning. In short, the Raspberry Pi enables you
+    to do a lot of things for very little cost. All it takes on your end is the initial
+    money for the Raspberry Pi, the money that you have to expend for the project
+    materials, and the ingenuity and know-how to make it happen.
+
+
+    So with all of that said, I think you’ve got a fair idea of what the Raspberry
+    Pi is conceptually, but I’ll recap once more before I bring this chapter to the
+    close: the Raspberry Pi is a microcomputer with a ton of processing power for
+    its small size. Many models of the Raspberry Pi are little bigger than a credit
+    card! With its processing power, you are enabled to do a lot of things that you
+    may have dreamed of before.
+
+
+    # Chapter 2
+
+
+    ![](images/00002.jpg)
+
+
+    ## Under the Hood
+
+
+    So now that we know what a Raspberry Pi is, we need to know what’s powering it.
+    At its base, the Raspberry Pi is just a microcomputer; a collection of computer
+    parts soldered together in a tiny, practical package.
+
+
+    However, despite its small size, the Raspberry Pi is generally rather powerful.
+    Moreover, several versions are out on the market right now that you can get your
+    hands on. In this chapter, we’re going to be discussing the hardware specifications
+    of each Raspberry Pi model and what they mean for you. Additionally, later on
+    in the chapter, we’re going to be talking about the software which can power Raspberry
+    Pi.
+
+    '
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    Raspberry Pi:
+
+
+    How To Master Raspberry Pi
+
+
+    ![](images/00002.jpg)
+
+
+    By
+
+
+    Richard Dorsey
+
+
+    ![](images/00001.jpg)
+
+
+    © Copyright 2017 by Richard Dorsey - All rights reserved.
+
+
+    The follow eBook is reproduced below with the goal of providing information that
+    is as accurate and reliable as possible. Regardless, purchasing this eBook can
+    be seen as consent to the fact that both the publisher and the author of this
+    book are in no way experts on the topics discussed within and that any recommendations
+    or suggestions that are made herein are for entertainment purposes only. Professionals
+    should be consulted as needed prior to undertaking any of the action endorsed
+    herein.
+
+
+    This declaration is deemed fair and valid by both the American Bar Association
+    and the Committee of Publishers Association and is legally binding throughout
+    the United States.
+
+
+    Furthermore, the transmission, duplication or reproduction of any of the following
+    work including specific information will be considered an illegal act irrespective
+    of if it is done electronically or in print. This extends to creating a secondary
+    or tertiary copy of the work or a recorded copy and is only allowed with express
+    written consent from the Publisher. All additional right reserved.
+
+
+    The information in the following pages is broadly considered to be a truthful
+    and accurate account of facts and as such any inattention, use or misuse of the
+    information in question by the reader will render any resulting actions solely
+    under their purview. There are no scenarios in which the publisher or the original
+    author of this work can be in any fashion deemed liable for any hardship or damages
+    that may befall them after undertaking information described herein.
+
+
+    Additionally, the information in the following pages is intended only for informational
+    purposes and should thus be thought of as universal. As befitting its nature,
+    it is presented without assurance regarding its prolonged validity or interim
+    quality. Trademarks that are mentioned are done without written consent and can
+    in no way be considered an endorsement from the trademark holder.
+
+
+    Table of Contents
+
+
+    ![](images/00002.jpg)
+
+
+    [Introduction](#index_split_003.html_filepos4289)
+
+
+    [Chapter 1: What is Raspberry Pi?](#index_split_004.html_filepos6248)
+
+
+    [Chapter 2: Under the Hood](#index_split_005.html_filepos10154)
+
+
+    [Chapter 3: Setting Up](#index_split_006.html_filepos20270)
+
+
+    [Chapter 4: Programming Essentials](#index_split_007.html_filepos29788)
+
+
+    [Chapter 5: Project Ideas](#index_split_008.html_filepos63367)
+
+
+    [Chapter 6: Your First Project - A Portable Superconsole](#index_split_009.html_filepos68062)
+
+
+    [Conclusion](#index_split_010.html_filepos90419)
+
+
+    Introduction
+
+
+    ![](images/00002.jpg)
+
+
+    Congratulations on downloading Raspberry Pi and thank you for doing so.
+
+
+    The following chapters will discuss the innumerable ways that you can work with
+    the super versatile Raspberry Pi computing microboard - or, rather, how you can
+    make it work for you.
+
+
+    If you’re reading this, I’m sure you’ve heard at least a couple things about this
+    extremely neat gizmo. Maybe you’ve heard of people building massive arcade cabinets
+    at home where they and a friend can play their favorite games from back in the
+    day; maybe you’ve seen smart mirrors that show people a feed of important information
+    as they get ready in the morning; or maybe, you just ran into an article about
+    them online and you’re just wanting to know what they can do.
+
+
+    More likely, since this is a programming essentials book, you’re trying to understand
+    how to get the most out of your Raspberry Pi by writing your own scripts or working
+    with other people’s scripts.
+
+
+    Regardless of your reasoning, I can say that getting the Raspberry Pi will most
+    certainly be one of the best decisions that you’ve made recently. You’re going
+    to be able to do a whole host of super cool things with it and learn a lot about
+    technology and engineering in the process.
+
+
+    There are plenty of books on this subject on the market, thanks again for choosing
+    this one! Every effort was made to ensure it is full of as much useful information
+    as possible, please enjoy!
+
+
+    Chapter 1
+
+
+    ![](images/00002.jpg)
+
+
+    What is Raspberry Pi?
+
+
+    For the intents and purposes of this book, we’re going to start from nothing and
+    assume that you know, well, nothing. So to do that, we have to start with the
+    extremely basic questions. The most basic question of all is this: what is the
+    Raspberry Pi?
+
+
+    As I said, the Raspberry Pi is featured quite prominently in a huge number of
+    tech DIY projects all over the web. What’s more is that if you’re friends with
+    engineers or people who love technology, you probably have a friend or two that
+    have already worked with a Raspberry Pi and carried out a project.
+
+
+    So what, precisely, is the Raspberry Pi? Well, at its most basic, it’s just a
+    bunch of parts.
+
+
+    The Raspberry Pi was developed in 2012 by the Raspberry Pi foundation. The original
+    intent of the project was to develop a super small and cost-effective computer
+    that could be used to teach basic concepts regarding programming and computer
+    science to both schoolchildren and children in developing countries, situations
+    where available funds otherwise are quite sparse.
+
+
+    One of the intents behind the Raspberry Pi is that it’s supposed to be extensible.
+    This means that it’s supposed to be very open-ended; you should be able to buy
+    a number of modifications and hardware options for it and use them rather easily.
+    We’ll talk more about this in the next chapter.
+
+
+    The Raspberry Pi was successful far beyond its original intent. While it was meant,
+    as I said, to solely help money-tight situations - like public schools in developing
+    countries - be allowed to fester a knowledge of programming and computer science,
+    it quickly became a favorite toy of tech hobbyists everywhere because it allows
+    you to do so much with so little.
+
+
+    Indeed, packed in a very cost effective microboard is a fair amount of computing
+    power. However, we’ll get to that in the next chapter, as well.
+
+
+    So what exactly is a Raspberry Pi? Well, it’s a gateway to possibility. When you
+    get a Raspberry Pi, you’re actually getting a million different things that you
+    can do with it, too. You can set up a rig to water the plants automatically. You
+    could teach your child how to program while they play Minecraft. You could do
+    things like retrieve automatic updates on the weather and make an alarm clock
+    that dictates them to you in the morning. In short, the Raspberry Pi enables you
+    to do a lot of things for very little cost. All it takes on your end is the initial
+    money for the Raspberry Pi, the money that you have to expend for the project
+    materials, and the ingenuity and know-how to make it happen.
+
+
+    So with all of that said, I think you’ve got a fair idea of what the Raspberry
+    Pi is conceptually, but I’ll recap once more before I bring this chapter to the
+    close: the Raspberry Pi is a microcomputer with a ton of processing power for
+    its small size. Many models of the Raspberry Pi are little bigger than a credit
+    card! With its processing power, you are enabled to do a lot of things that you
+    may have only dreamed of before. The Raspberry Pi will allow you to take on a
+    huge number of DIY projects that will spruce up your life, bring you joy, and
+    teach you things along the way.
+
+
+    Chapter 2
+
+
+    ![](images/00002.jpg)
+
+
+    Under the Hood
+
+
+    So now that we know what a Raspberry Pi is, we need to know what’s powering it.
+    At its base, the Raspberry Pi is just a microcomputer; a collection of computer
+    parts soldered together in a tiny, practical package.
+
+
+    However, despite its small size, the Raspberry Pi is generally rather powerful.
+    Moreover, several versions are out on the market right now that you can get your
+    hands on. In this chapter, we’re going to be discussing the hardware specifications
+    of each Raspberry Pi model and what they mean for you. Additionally, later on
+    in the chapter, we’re going to be talking about the software which can power Raspberry
+    Pi.'
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpeg)
+
+
+    # 如何掌握树莓派
+
+
+    ![](img/00002.jpg)
+
+
+    作者：Richard Dorsey
+
+
+    ![](img/00001.jpg)
+
+
+    © Copyright 2017 Richard Dorsey - 保留所有权利。
+
+
+    本电子书的复制内容如下，旨在提供尽可能准确和可靠的信息。尽管如此，购买本电子书可被视为同意：此书的出版者和作者对书中讨论的话题均非专家，且书中提出的任何建议或指示仅供娱乐之用。在采取本文所支持的任何行动之前，应根据需要咨询专业人士的意见。
+
+
+    此声明被美国律师协会和出版商协会委员会认为是公平且有效的，并在整个美国法律范围内具有法律约束力。
+
+
+    此外，无论是以电子形式还是纸质形式进行，对以下任何作品（包括特定信息）的传输、复制或复制将被视为非法行为。这延伸到创建作品的二次或三级副本或录制副本，并且在获得出版者明确书面同意的情况下方可允许。保留所有其他权利。
+
+
+    后续页码中的信息被广泛认为是对事实的真实准确描述，因此，读者对相关信息的任何疏忽、使用或误用，其产生的结果将由其自行承担。在任何情况下，对于在采取本文所描述的信息后可能发生的任何困难或损害，出版者或原作者均不承担任何责任。
+
+
+    此外，后续页码中的信息仅供参考之用，因此应被视为通用的。根据其性质，呈现时不对其长期有效性或中期质量提供保证。文中提到的商标是在未经书面许可的情况下使用的，不能以任何方式视为商标持有背书。
+
+
+    # 目录
+
+
+    ![](img/00002.jpg)
+
+
+    - 引言
+
+    - 第一章：什么是树莓派？
+
+    - 第二章：内部构造
+
+    - 第三章：设置
+
+    - 第四章：编程基础
+
+    - 第五章：项目创意
+
+    - 第六章：你的第一个项目 - 便携式超级游戏机
+
+    - 结论
+
+
+    # 引言
+
+
+    ![](img/00002.jpg)
+
+
+    恭喜你下载树莓派，感谢你的支持。
+
+
+    后续章节将讨论你利用这种功能极其多样的树莓派计算微型板的无数方法——或者说，你如何让它为你所服务。
+
+
+    如果你正在阅读这本书，我确定你至少听过关于这个非常精妙的小装置的一些事。也许你听说过人们在家里制作大型街机柜，他们和朋友可以在那里玩以前喜欢的游戏；也许你见过智能镜子，在人们早晨准备时时显示重要信息流；或者，你只是在网上偶然读了一篇关于它的文章，只想知道它们能做什么。
+
+
+    更有可能的是，由于这是一本编程基础书籍，你正试图理解如何通过编写自己的脚本或使用他人的脚本来充分发挥树莓派的价值。
+
+
+    无论你的理由是什么，我可以说，获取树莓派无疑是你近期做出的最明智的决定之一。你将能够用它做许多酷的事情，并在过程中学到很多技术和工程知识。
+
+
+    市上有许多关于这个主题的书，再次感谢你选择这一本！我们已尽全力确保它包含尽可能多的有用信息，请享用！
+
+
+    # 第一章
+
+
+    ![](img/00002.jpg)
+
+
+    ## 什么是树莓派？
+
+
+    出于本书的意图和目的，我们将从零开始，并假设你一无所知。因此，为了做到这一点，我们必须从最基础的问题开始。最基础的问题是：什么是树莓派（Raspberry
+    Pi）？
+
+
+    正如我所说，树莓派在网上大量的科技 DIY 项目中非常显眼。此外，如果你和工程师或热爱技术的人是朋友，你可能有一两个朋友已经使用过树莓派并开展过项目。
+
+
+    那么，树莓派究竟是什么呢？嗯，从最基础来说，它只是一堆零件。
+
+
+    树莓派是由树莓派基金会于 2012 年开发的。该项目的初衷是开发一种超小且具有成本效益的计算机，用于向发展中国家的学生和那里的儿童教授编程和计算机科学的基本概念，在这些情况下，可用资金通常非常匮乏。
+
+
+    树莓派的设计意图之一是它应该是可扩展的。这意味着它应该是非常开放的；你应该能够为它购买许多改装和硬件选项，并轻松地使用它们。我们将在下一章中详细讨论这一点。
+
+
+    树莓派的成功远超了它的原始意图。正如我所说的，它的初衷仅仅是帮助资金紧张的地区——如发展中国家的公立学校——培养编程和计算机科学知识，但它很快变成了全球各地科技爱好者最喜爱的玩具，因为它让你能以极少的投入完成很多事情。
+
+
+    事实上，在一个极具成本效益的微型板中封装了相当强大的计算能力。然而，我们将在下一章同样讨论这一点。
+
+
+    那么，树莓派究竟是什么？嗯，它是通往可能的门户。当你获得一个树莓派时，你实际上获得了可以用它做的一百万种不同的事情。你可以设置一套自动浇水系统。你可以在你的孩子玩《我的世界》时教他们如何编程。你可以做诸如获取天气自动更新并制作一个早上向你播报天气的闹钟的事情。简而言之，树莓派让你能够以很低的成本做很多事情。你所需要的只是购买树莓派的初始资金、项目材料的开支，以及实现这些目标的才智和技巧。
+
+
+    说了这么多，我想你对树莓派的概念已经有了一个大致的了解，但在结束本章之前，我将再次总结一下：树莓派是一种微型计算机，对于其小尺寸来说，拥有极其强大的处理能力。许多树莓派型号只比信用卡稍大一点！凭借它的处理能力，你能够完成许多以前梦寐以求的事情。
+
+
+    # 第二章
+
+
+    ![](img/00002.jpg)
+
+
+    ## 内部构造
+
+
+    现在我们已经知道树莓派是什么了，我们需要知道驱动它的动力。从根本上说，树莓派只是一个微型计算机；一组焊接在微小、实用的包装中的计算机零件集合。
+
+
+    然而，尽管体积很小，但树莓派通常相当强大。此外，目前市场上有几个版本可以让你买到。在本章中，我们将讨论每个树莓派型号硬件规格以及它们对你意味着什么。此外，在章节后后部分，我们将讨论可以驱动树莓派的软件。
+
+
+    '
+- fmt: '
+
+    Firstly, there are currently six different models of the Raspberry Pi available
+    on the market. I’ll shortly go into the hardware specifications on each one, going
+    from least to most recently released.
+
+
+    ## Raspberry Pi Models
+
+
+    ### Raspberry Pi 1 Model A+
+
+    The first model is based off of the original version of the Raspberry Pi, with
+    a few modifications. It’s called the `Raspberry Pi 1 Model A+` and is the lowest
+    cost version of the “full” Raspberry Pi. It has a single USB port and is very
+    small. It also is rather low on power. Therefore, if you’re undertaking a project
+    that doesn’t take much power and doesn’t need many USB dongles, you’ll be fine.
+    On models before the `Raspberry Pi 3`, one USB port will generally be taken up
+    by a bluetooth or wi-fi dongle, so bear that in mind as we go forward.
+
+
+    ### Raspberry Pi 1 Model B+
+
+    A slightly better version of the same series - `Raspberry Pi 1` - is available,
+    and is called the `Model B+`. It features 4 USB ports and is, thus, more extensible.
+    It shares many of the same perks as the `Raspberry Pi 1` in terms of efficiency
+    in both cost and power, but is slightly more expensive. (Though you also get a
+    bit more power in return for the extra cash)
+
+
+    ### Raspberry Pi 2 Model B
+
+    After the first version came, naturally, the second version. Much like the first,
+    you can very easily get ahold of the second version of the `Raspberry Pi`, aptly
+    named the `Raspberry Pi 2`. The only version of the `Raspberry Pi 2` currently
+    available is the `Model B`. The `Raspberry Pi 2 Model B` is just slightly more
+    expensive than either `Raspberry 1` model. However, in return for the slightly
+    bigger chunk of change, you get a super solid ARM processor and a whole gigabyte
+    of RAM. For the record, the ARM processor is a big deal; the fact that the `Raspberry
+    Pi 2` has an ARM processor means that you could feasibly put any sort of ARM operating
+    system on the device. This includes, for example, `Windows 10 ARM` or the ARM
+    version of `Ubuntu`. This means, naturally, that your device is capable of far
+    more than it would be otherwise, since you have a larger array of operating systems
+    to use.
+
+
+    ### Raspberry Pi 3 Model B
+
+    The next version of the `Raspberry Pi` that we need to discuss is the `Raspberry
+    Pi 3`. This is the latest version of the `Raspberry Pi` to be released, and it
+    adds many things to the second iteration. Among these are built-in bluetooth and
+    wifi, so that you no longer have to get separate dongles for those and your 4
+    USB ports can be exclusively used for anything you wish rather than wasting one
+    or two on little wireless dongles. The CPU has also been upgraded a fair amount.
+    Aside from that, the specs are largely the same as the `Raspberry Pi 2`. However,
+    depending upon the complexity and specificities of your project, you may wish
+    to opt for a `Raspberry Pi 3` - and after all, its CPU is better, which means
+    your project will run faster and more efficiently, and who doesn’t want that?
+    There’s only one version of the `Raspberry Pi 3` on the market right now - the
+    `Model B`.
+
+
+    ### Raspberry Pi Zero and Zero W
+
+    Lastly, it’s important that we talk about the `Raspberry Pi Zero`. So, what is
+    the `Raspberry Pi Zero`? Well, it’s the most cost-efficient form of the `Raspberry
+    Pi` that you can get. It’s rather small, and each board is only $5 a pop. That’s
+    not bad at all, and makes a huge number of projects super approachable from a
+    standpoint of price. The `Raspberry Pi Zero` shares specs with the `Raspberry
+    Pi Model A+` in a lot of ways, but is far smaller. Additionally, the `Raspberry
+    Pi Zero` doesn’t have a standard USB port. Additionally, you can get the `Raspberry
+    Pi Zero W`, which is largely the same as the `Raspberry Pi Zero` but adds built-in
+    wifi and bluetooth connectivity. Depending upon the nature of your project, you
+    may wish to opt for this one so that you can easily use these features without
+    getting convoluted and bizarre dongles for these purposes. The `Raspberry Pi Zero`
+    and `Raspberry Pi Zero W` are great when you want to prototype, because they’re
+    extremely cheap, and also are great for projects with a rather small form factor.
+
+
+    ## Choosing the Right Version
+
+
+    So, how do you know which version of the Pi you should get? It really depends
+    on a number of factors. For example, if you’re new to Pi, you may wish to opt
+    for a cheaper version, like the `Model A+`, the `Model B+`, or the `Raspberry
+    Pi Zero`, that way if you don’t know what you’re doing or don’t end up liking
+    the hobbyist nature of the `Raspberry Pi`, you aren’t out that much money. If
+    you’re wanting a project that will last longer and be more competitive hardware
+    wise, you should definitely opt for the newest version of the `Raspberry Pi` available.
+    Ultimately, it’s a question of budgeting. Additionally, if you find a project
+    that you’d like to partake in, you’ll likely want to use the same exact version
+    of the Pi that the person who created the project used, just for the simple fact
+    that there shouldn’t be any “mistranslations” if you do so, and there shouldn’t
+    be any hangups on code or script.
+
+
+    ## How to Buy Raspberry Pi
+
+
+    When you decide that it’s time to go all in and buy a Pi, it’s really simple.
+    First, you go to `http://raspberrypi.org`. On the top navigational bar, right
+    below the search icon, there’s a “tag”that says “Shop”. Click it, and you’ll be
+    taken to the Raspberry Pi online store. Click the version of the Pi that you’d
+    like (you can also use this opportunity to compare specs more directly, if you
+    so desire) and then scroll down on its respective page. A little bit of the way
+    down the page, you’ll see where it says “Buy from our distributors” and then sections
+    divvied up by one’s country or region. Some of the links don’t carry over, but
+    if you get a broken link from the Raspberry Pi website, just try another one until
+    you land where you want to be.
+
+
+    Eventually, you’ll find yourself on a storefront with the version of the Pi that
+    you’d like to use. You can take this opportunity to look around at all of the
+    gadgets that are available for the Pi, if you’d like to do so. Let me give you
+    a heads up, though; there are a lot of them. Poke around a bit and see if there
+    is any potential fodder for project ideas that you may have. The Raspberry Pi
+    is one of the best supported microboards out there, so I’m sure that you will
+    be able to come up with something. Anyhow, once you’ve cemented yourself into
+    buying a certain Raspberry Pi, then just relax. All you have to do now is wait
+    for your new toy to come in the mail for you to start playing with it, and that
+    won’t be too long of a wait… right?
+
+
+    ## Software
+
+
+    Now that we’ve talked about the hardware and where to buy a Pi, I feel like it’s
+    apt that we talk about the software that you can get powering the Pi.
+
+
+    The Pis that are model 2 and 3 can theoretically run any ARM-based operating system
+    that will run on their architecture. This leaves a lot of options open in terms
+    of what operating systems one can use.
+
+
+    Generally, most people opt to use the Raspberry Pi team sponsored operating system
+    `Raspbian`, which is a derivative distribution of the popular Linux-based operating
+    system `Debian`. Raspbian comes loaded with a ton of tools that are designed to
+    help someone have a working operating system with next to no money down on it,
+    as well as a bunch of tools that are intended to teach people - mainly kids -
+    programming in fun ways. Among these are things like `Minecraft Pi`, which lets
+    people play Minecraft and also use `Python` code in order to improve their experience
+    with the game. Additionally included is the MIT-created `Scratch`, where puzzle
+    piece commands are used to illustrate program flow and computer logic.
+
+
+    However, beyond all of the little knick-nacks that come with Raspbian, in the
+    end, it’s just a very solid operating system based on a solid operating system.
+
+    '
+  raw: 'Firstly, there are currently six different models of the Raspberry Pi available
+    on the market. I’ll shortly go into the hardware specifications on each one, going
+    from least to most recently released.
+
+
+    The first model is based off of the original version of the Raspberry Pi, with
+    a few modifications. It’s called the Raspberry Pi 1 Model A+ and is the lowest
+    cost version of the “full” Raspberry Pi. It has a single USB port and is very
+    small. It also is rather low on power. Therefore, if you’re undertaking a project
+    that doesn’t take much power and doesn’t need many USB dongles, you’ll be fine.
+    On models before the Raspberry Pi 3, one USB port will generally be taken up by
+    a bluetooth or wi-fi dongle, so bear that in mind as we go forward.
+
+
+    A slightly better version of the same series - Raspberry Pi 1 - is available,
+    and is called the Model B+. It features 4 USB ports and is, thus, more extensible.
+    It shares many of the same perks as the Raspberry Pi 1 in terms of efficiency
+    in both cost and power, but is slightly more expensive. (Though you also get a
+    bit more power in return for the extra cash)
+
+
+    After the first version came, naturally, the second version. Much like the first,
+    you can very easily get ahold of the second version of the Raspberry Pi, aptly
+    named the Raspberry Pi 2\. The only version of the Raspberry Pi 2 currently available
+    is the Model B. The Raspberry Pi 2 Model B is just slightly more expensive than
+    either Raspberry 1 model. However, in return for the slightly bigger chunk of
+    change, you get a super solid ARM processor and a whole gigabyte of RAM. For the
+    record, the ARM processor is a big deal; the fact that the Raspberry Pi 2 has
+    an ARM processor means that you could feasibly put any sort of ARM operating system
+    on the device. This includes, for example, Windows 10 ARM or the ARM version of
+    Ubuntu. This means, naturally, that your device is capable of far more than it
+    would be otherwise, since you have a larger array of operating systems to use.
+
+
+    The next version of the Raspberry Pi that we need to discuss is the Raspberry
+    Pi 3\. This is the latest version of the Raspberry Pi to be released, and it adds
+    many things to the second iteration. Among these are built-in bluetooth and wifi,
+    so that you no longer have to get separate dongles for those and your 4 USB ports
+    can be exclusively used for anything you wish rather than wasting one or two on
+    little wireless dongles. The CPU has also been upgraded a fair amount. Aside from
+    that, the specs are largely the same as the Raspberry Pi 2\. However, depending
+    upon the complexity and specificities of your project, you may wish to opt for
+    a Raspberry Pi 3 - and after all, its CPU is better, which means your project
+    will run faster and more efficiently, and who doesn’t want that? There’s only
+    one version of the Raspberry Pi 3 on the market right now - the Model B.
+
+
+    Lastly, it’s important that we talk about the Raspberry Pi Zero. So, what is the
+    Raspberry Pi Zero? Well, it’s the most cost-efficient form of the Raspberry Pi
+    that you can get. It’s rather small, and each board is only $5 a pop. That’s not
+    bad at all, and makes a huge number of projects super approachable from a standpoint
+    of price. The Raspberry Pi Zero shares specs with the Raspberry Pi Model A+ in
+    a lot of ways, but is far smaller. Additionally, the Raspberry Pi Zero doesn’t
+    have a standard USB port. Additionally, you can get the Raspberry Pi Zero W, which
+    is largely the same as the Raspberry Pi Zero but adds built-in wifi and bluetooth
+    connectivity. Depending upon the nature of your project, you may wish to opt for
+    this one so that you can easily use these features without getting convoluted
+    and bizarre dongles for these purposes. The Raspberry Pi Zero and Raspberry Pi
+    Zero W are great when you want to prototype, because they’re extremely cheap,
+    and also are great for projects with a rather small form factor.
+
+
+    So, how do you know which version of the Pi you should get? It really depends
+    on a number of factors. For example, if you’re new to Pi, you may wish to opt
+    for a cheaper version, like the Model A+, the Model B+, or the Raspberry Pi Zero,
+    that way if you don’t know what you’re doing or don’t end up liking the hobbyist
+    nature of the Raspberry Pi, you aren’t out that much money. If you’re wanting
+    a project that will last longer and be more competitive hardware wise, you should
+    definitely opt for the newest version of the Raspberry Pi available. Ultimately,
+    it’s a question of budgeting. Additionally, if you find a project that you’d like
+    to partake in, you’ll likely want to use the same exact version of the Pi that
+    the person who created the project used, just for the simple fact that there shouldn’t
+    be any “mistranslations” if you do so, and there shouldn’t be any hangups on code
+    or script.
+
+
+    When you decide that it’s time to go all in and buy a Pi, it’s really simple.
+    First, you go to [http://raspberrypi.org](http://www.raspberrypi.org). On the
+    top navigational bar, right below the search icon, there’s a “tag”that says “Shop”.
+    Click it, and you’ll be taken to the Raspberry Pi online store. Click the version
+    of the Pi that you’d like (you can also use this opportunity to compare specs
+    more directly, if you so desire) and then scroll down on its respective page.
+    A little bit of the way down the page, you’ll see where it says “Buy from our
+    distributors” and then sections divvied up by one’s country or region. Some of
+    the links don’t carry over, but if you get a broken link from the Raspberry Pi
+    website, just try another one until you land where you want to be.
+
+
+    Eventually, you’ll find yourself on a storefront with the version of the Pi that
+    you’d like to use. You can take this opportunity to look around at all of the
+    gadgets that are available for the Pi, if you’d like to do so. Let me give you
+    a heads up, though; there are a lot of them. Poke around a bit and see if there
+    is any potential fodder for project ideas that you may have. The Raspberry Pi
+    is one of the best supported microboards out there, so I’m sure that you will
+    be able to come up with something. Anyhow, once you’ve cemented yourself into
+    buying a certain Raspberry Pi, then just relax. All you have to do now is wait
+    for your new toy to come in the mail for you to start playing with it, and that
+    won’t be too long of a wait… right?
+
+
+    Now that we’ve talked about the hardware and where to buy a Pi, I feel like it’s
+    apt that we talk about the software that you can get powering the Pi.
+
+
+    The Pis that are model 2 and 3 can theoretically run any ARM-based operating system
+    that will run on their architecture. This leaves a lot of options open in terms
+    of what operating systems one can use.
+
+
+    Generally, most people opt to use the Raspberry Pi team sponsored operating system
+    “Raspbian”, which is a derivative distribution of the popular Linux-based operating
+    system Debian. Raspbian comes loaded with a ton of tools that are designed to
+    help someone have a working operating system with next to no money down on it,
+    as well as a bunch of tools that are intended to teach people - mainly kids -
+    programming in fun ways. Among these are things like Minecraft Pi, which lets
+    people play Minecraft and also use Python code in order to improve their experience
+    with the game. Additionally included is the MIT-created Scratch, where puzzle
+    piece commands are used to illustrate program flow and computer logic.
+
+
+    However, beyond all of the little knick-knacks that come with Raspbian, in the
+    end, it’s just a very solid operating system based on a solid operating system.'
+  toc: []
+  trans: '
+
+
+    首先，目前市场上共有六种不同的树莓派（Raspberry Pi）。我将简要介绍每个型号的硬件规格，按照从最早到最新的顺序进行。
+
+
+    ## 树莓派型号
+
+
+    ### Raspberry Pi 1 Model A+
+
+    第一个型号是基于树莓派原始版本并经过了一些改进。它被称为 `Raspberry Pi 1 Model A+`，是“全功能”树莓派中最低的版本。它有一个 USB
+    端口且体积非常小。它的功耗也较低。因此，如果你正在进行的项目不需要太多功率也不需要很多 USB 适配器，那么完全没问题。在 `Raspberry Pi 3`
+    之前的型号上，一个 USB 端口通常会被蓝牙或 Wi-Fi 适配器占用，后续过程中请记住这一点。
+
+
+    ### Raspberry Pi 1 Model B+
+
+    同系列——`Raspberry Pi 1` 的稍改进改进版本被称为 `Model B+`。它具有 4 个 USB 端口，因此扩展性更好。在成本和功耗效率方面，它与
+    `Raspberry Pi 1` 共享许多优点，但价格稍贵一点。（不过，你多花点钱也能换来更多的性能）
+
+
+    ### Raspberry Pi 2 Model B
+
+    在第一个版本发布后，自然有了第二个版本。与第一代一样，你可以很容易地获得第二代 `树莓派`，它名其实地称为 `Raspberry Pi 2`。目前提供的 `Raspberry
+    Pi 2` 只有一个型号即 `Model B`。`Raspberry Pi 2 Model B` 比任何一个 `Raspberry 1` 型号都稍贵一点。然而，作为多花一点钱的回报，你获得了一个非常稳固的
+    ARM 处理器和整 1GB 的内存。记录一下，ARM 处理器是一项大发现；`Raspberry Pi 2` 拥有 ARM 处理器意味着可以在设备上可行运行任何类型的
+    ARM 操作系统。这包括 `Windows 10 ARM` 或 ARM 版本的 `Ubuntu`。这自然地意味着你的设备能力比其他情况强得多，因为你有了更广泛的操作系统可以使用。
+
+
+    ### Raspberry Pi 3 Model B
+
+    我们需要讨论的下一个 `树莓派` 版本是 `Raspberry Pi 3`。这是目前发布的最新版本的树莓派，它在第二代的基础上增加了许多功能。其中包括内置的蓝牙和
+    Wi-Fi，因此你不再需要为它们购买单独的适配器，你的 4 个 USB 端口可以专门用于你想要的任何用途，而不是浪费一两个在小小的无线适配器上。CPU 也经过了大幅升级。除外，其大部分规格与
+    `Raspberry Pi 2` 相同。然而，取决于你项目的复杂性和特殊性，你可能希望选择 `Raspberry Pi 3`——毕竟，它的 CPU 更好，这意味着你的项目运行得更快、更高效，谁不想要呢？目前市场上只有一个
+    `Raspberry Pi 3` 型号——即 `Model B`。
+
+
+    ### Raspberry Pi Zero and Zero W
+
+    最后，谈论 `Raspberry Pi Zero` 非常重要。那么，什么是 `Raspberry Pi Zero` 呢？嗯，它是你能获得的性价比最高的 `树莓派`。它非常小，每个板仅需
+    5 美元。这非常不错，从价格角度来看，让大量的项目变得超级容易上手。`Raspberry Pi Zero` 在许多方面与 `Raspberry Pi Model
+    A+` 共享规格，但要小得多。此外，`Raspberry Pi Zero` 没有标准的 USB 端口。此外，你还可以获得 `Raspberry Pi Zero
+    W`，它在很大程度上与 `Raspberry Pi Zero` 相同，但增加了内置 Wi-Fi 和蓝牙连接。取决于你项目的性质，你可能希望选择这种，这样你就可以轻松使用这些功能，而不需要为了这些目的去弄复杂奇特的适配器。`Raspberry
+    Pi Zero` 和 `Raspberry Pi Zero W` 在你想制作原型时非常棒，因为它们非常便宜，而且非常适合较小的项目。
+
+
+    ## 选择正确的版本
+
+
+    那么，如何知道你应该买哪个版本的树莓派？这真的取决于许多因素。例如，如果你是树莓派的新手，你可能希望选择较便宜的版本，如 `Model A+`、`Model
+    B+` 或 `Raspberry Pi Zero`，这样如果你不知道自己在做什么，或者最终不喜欢 `树莓派` 的这种爱好者性质，你就不会花这么多钱。如果你想要一个持续时间更长且在硬件方面更有竞争力的项目，你应该绝对选择可用最新版本的
+    `树莓派`。根结底，这是一个预算问题。此外，如果你发现了一个想要参与的项目，你可能希望使用与创建该项目的人完全相同的树莓派版本，仅仅是因为这样做就不会出现任何“翻译错误”，在代码或脚本上也不会有任何障碍。
+
+
+    ## 如何购买树莓派
+
+
+    当你决定是时候全力投入并购买一个树莓派时，其实非常简单。首先，访问 `http://raspberrypi.org`。在顶部导航栏上，搜索图标下方有一个写着“Shop”（商店）的“标签”。点击它，你就会被带到树莓派在线商店。点击你喜欢的树莓派版本（如果你愿意，也可以利用这个机会更直接地比较规格），然后在相应的页面向下滚动。在页面下方一点，你会看到写着“Buy
+    from our distributors”（从我们的经销商处购买），然后按国家或地区划分的区域。某些链接无法跳转，但如果你从树莓派网站获得了一个损坏链接，只需尝试另一个，直到到达你想去的地方为止。
+
+
+    最终，你会发现自己位于拥有你想要使用的树莓派版本的商店。如果你想这样做，可以利用这个机会看看所有适用于树莓派的配件。不过我要提醒你一下；有很多配件。翻一翻，看看是否有任何你可能需要的项目灵感素材。树莓派是目前支持最好的微型板之一，我确定你一定能出点子。总之，一旦你确定了购买某个特定的树莓派，只需放松。你现在要做的就是等待你的新玩具寄到，然后开始玩，这应该不会太久……对吧？
+
+
+    ## 软件
+
+
+    现在我们讨论了硬件和在哪里购买树莓派之后，我觉得谈论驱动树莓派的软件也是恰好的。
+
+
+    型号 2 和 3 的树莓派理论上可以运行任何适用于其架构的 ARM 操作系统。这在可以使用操作系统方面留下了巨大的选择空间。
+
+
+    通常，大多数人会选择树莓派团队支持的操作系统 `Raspbian`，它是流行的 Linux 操作系统 `Debian` 的衍生发行版。`Raspbian`
+    预装了大量工具，旨在帮助人们在几乎不花钱的情况下获得一个运行的操作系统，以及许多旨在以有趣的方式教人们（主要是孩子们）编程的工具。其中包括诸如 `Minecraft
+    Pi` 等程序，让人们可以在玩我的世界的同时使用 `Python` 代码来改进游戏体验。此外，还包含了 MIT 创建的 `Scratch`，它通过拼图式的命令来演示程序流和计算机逻辑。
+
+
+    '
+- fmt: '
+
+    There are a lot of options available, though, if you’re inclined. For you to truly
+    get `Raspberry Pi` experience, you should opt for `Raspbian`, but once you have
+    more experience and want to start experimenting, there are things such as `Windows10`,
+    `Arch Linux`, `Gentoo`, `Ubuntu`, `Kali Linux`, and `FreeBSD`. All of these have
+    their own uses, depending upon what you’re wanting to do and what your goal is
+    with `Raspberry Pi`. But, for right now, the `Raspbian` operating system is actually
+    optimized for the `Raspberry Pi` and has a huge number of packages just for it,
+    so I highly recommend you work with it.
+
+
+    # Chapter 3
+
+
+    ## Setting Up
+
+
+    At this point, I’m assuming that you’ve gotten your hands on your Pi. If you haven’t,
+    you can still proceed to Chapter 4 and practice your chops and then refer back
+    to this when your Pi is in.
+
+
+    If your Pi is in, then perfect! You’re absolutely ready for this chapter. This
+    chapter is going to focus on how to get your Pi up and running. I’m focusing specifically
+    on the `Raspberry Pi 3`. However, the instructions should be relatively similar
+    regardless of which version of the Pi that you’re using. Adapt and do prior.
+
+
+    So, here are the things you’re going to need for this chapter:
+
+
+    - **Raspberry Pi**: This one goes without saying. You’re going to need a `Raspberry
+    Pi` in order to set up.
+
+    - **Screen of some form with `HDMI` input**: It can be a TV or a monitor, it doesn’t
+    matter much. What matters, ultimately, is regardless of which one it is, it has
+    `HDMI` input. The Pi exclusively has `HDMI` output, so whatever screen you’re
+    using, it has to accept `HDMI`.
+
+    - **USB peripherals**: You’re going to need to control the Pi. A `USB`-connected
+    keyboard and mouse are more than optimal for you’re needing here.
+
+    - **MicroSD card**: You’re going to need at least an eight gigabyte `MicroSD card`
+    for your Pi. Everything is read off an `SD card` on the Pi. Where on most computers,
+    you have an external hard drive, like a `SATA` drive, the Pi runs off the `SD
+    card`. You can actually set your Pi up to read off a `USB` drive or external hard
+    drive, but the `SD card` is the most direct and easy method.
+
+    - **Power**: The `Raspberry Pi`’s power source is `microUSB`. This sort of connection
+    is the same as that powers most smartphones. The cord has to be good enough to
+    supply two a half amps, because otherwise you’re underpowering your Pi and may
+    fry it - it’s far easier than you would think! Play it safe and be sure that you’re
+    using the right voltage. If you’re unsure, refer to Chapter 6 and ask around.
+
+    - **NOOBS**: Installing the suggested `Raspberry Pi` Linux distribution, `Raspbian`,
+    used to be rather difficult. Recently, in relative terms at least, the `Raspberry
+    Pi` team have released a utility called `NOOBS` (“New Out of Box Software”) that
+    makes it dramatically easier than it was. No longer do you need to tamper with
+    the `Terminal` just to get a copy of `Raspbian` onto your `SD card`; just get
+    a copy of `NOOBS` and you’re good to go. You can get `NOOBS` at [https://www.raspberrypi.org/downloads/noobs/](https://www.raspberrypi.org/downloads/noobs/)
+    — get the version which has an offline installation, as this one will come with
+    the operating system alongside it.
+
+
+    So here’s what you do. The first thing you need to do is plug your `microSD card`
+    into your computer. How you have to do this will depend upon your computer’s set-up
+    for `SD cards`; it’s possible that you may need to go and buy a reader for it,
+    or a `microSD` to `SD` adapter. Some computers - mine, for instance - support
+    `SD cards` but not `microSD cards`, which is one example of when you would need
+    the adapter.
+
+
+    Once you’ve gotten your card hooked up to your computer, you need to format the
+    card to `FAT`. This is simple enough to do.
+
+
+    ### FAT format, Windows
+
+
+    All you do is plug the `SD card` in. Then, go to `Windows Explorer`. Windows oldies
+    remember this as “My Computer”. From here, find the `SD` storage device in the
+    left pane of your screen. Right click it, and then click “Format…”. Make certain
+    that you don’t have any sensitive data on there that you need to make a backup
+    of. If you do, copy the files to your computer right quick before you format.
+    Afterward, carry out the formatting. You simply need to format as `(MS-DOS) FAT`,
+    naming the drive whatever you’d like.
+
+
+    ### FAT format, Mac
+
+
+    Open the `Disk Utility` and make absolutely certain that you’ve selected the right
+    volume. If you accidentally choose the wrong volume, you could lose some very
+    important information and format the wrong drive altogether! This is very much
+    not desirable. Once you’ve made certain that you’ve selected the correct drive
+    and there’s no important information on the `SD card`, you just click “Erase...”
+    with the formatting type being “MS-DOS”.
+
+
+    ### FAT format, Linux
+
+
+    Get `gparted` if you don’t already have it (you’re a `Linux` user - of course
+    you do!). In `gparted`, select the appropriate drive, once again making sure that
+    you’ve selected the absolutely correct drive, and then format to `fat32`. Simple.
+
+
+    Now, once all of that is taken care of, you should have a formatted `SD card`
+    that’s ready for the `NOOBS` files. All that you do is take the `NOOBS` zip file
+    that you just downloaded, extract it to a folder, and copy all of it to your `SD
+    card`. Once every file has been copied (it may take a minute or so, depending
+    upon the speed of your computer), the next thing that you have to do is plug the
+    `microSD card` into your `Raspberry Pi`. After that, you need to start attaching
+    all necessary cables to your Pi. Plug in the power last, because the Raspberry
+    Pi will turn on when the power is plugged in.
+
+    '
+  raw: 'There are a lot of options available, though, if you’re thus inclined. For
+    you to truly get the Raspberry Pi experience, you should opt for Raspbian, but
+    once you have more experience and want to start experimenting, there are things
+    such as the ARM version of Windows 10, Arch Linux, Gentoo, Ubuntu MATE, Kali Linux,
+    and FreeBSD. All of these have their own particular uses, depending upon what
+    you’re wanting to do and what your goal is with a particular Raspberry Pi. But,
+    for right now, the Raspbian operating system is actually optimized for the Raspberry
+    Pi and has a huge number of packages just for it, so I highly recommend you work
+    with it.
+
+
+    Chapter 3
+
+
+    ![](images/00002.jpg)
+
+
+    Setting Up
+
+
+    At this point, I’m assuming that you’ve gotten your hands on your Pi. If you haven’t,
+    you can still proceed to Chapter 4 and practice your programming chops and then
+    just refer back to this when your Pi is in.
+
+
+    If your Pi is in, then perfect! You’re absolutely ready for this chapter.
+
+
+    This chapter is going to focus on how to get your Pi up and running. I’m focusing
+    specifically on the Raspberry Pi 3\. However, the instructions should be relatively
+    similar regardless of which version of the Pi that you’re using. Adapt and do
+    your research prior.
+
+
+    So, here are the things that you’re going to need for this chapter:
+
+
+    > > > > •Raspberry Pi: This one goes without saying. You’re going to, of course,
+    need a Raspberry Pi in order to set up a Raspberry Pi.
+
+
+    > > > > •Screen of some form with an HDMI input: It can be a TV or a monitor,
+    it doesn’t particularly matter too much. What matters, ultimately, is that regardless
+    of which one it is, it has an HDMI input. The Pi exclusively has a HDMI output,
+    so whatever screen you’re using, it has to accept HDMI. No questions.
+
+
+    > > > > •USB peripherals: You’re going to need to control the Pi somehow. A USB-connected
+    keyboard and mouse are more than optimal for what you’re needing here.
+
+
+    > > > > •MicroSD card: You’re going to need at least an eight gigabyte MicroSD
+    card for your Pi. Everything is read off of an SD card on the Pi. Where on most
+    computers, you have an external hard drive connected, like a SATA drive, the Pi
+    runs off of the SD card. You can actually set your Pi up to read off of a USB
+    drive or an external hard drive, but the SD card is the most direct and easy method.
+
+
+    > > > > •Power: The Raspberry Pi’s power source is a microUSB. This sort of connection
+    is the same as that which powers most Android smartphones. The cord has to be
+    good enough to supply two and a half amps of voltage, because otherwise, you’re
+    underpowering your Pi and may fry it - it’s far easier than you would think! Play
+    it safe and be sure that you’re using the right voltage. If you’re unsure, refer
+    to the communities in Chapter 6 and ask around to be sure.
+
+
+    > > > > •NOOBS: Installling the suggested Raspberry Pi Linux distribution, Raspbian,
+    used to be rather difficult. Recently, in relative terms at least, the Raspberry
+    Pi team have released a utility called NOOBS (“New Out of Box Software”) that
+    makes it dramatically easier than it was. No longer do you need to tamper with
+    the Terminal just to get a copy of Raspbian onto your SD card; just get a copy
+    of NOOBS and you’re good to go. You can get NOOBS at [https://www.raspberrypi.org/downloads/noobs/](https://www.raspberrypi.org/downloads/noobs/)
+    — get the version which has an offline installation, as this one will come with
+    the operating system alongside it.
+
+
+    So here’s what you do. The first thing you need to do is plug your microSD card
+    into your computer. How you have to do this will depend upon your computer’s set-up
+    for SD cards; it’s possible that you may need to go and buy a reader for it, or
+    a microSD to SD adapter. Some computers - mine, for instance - support SD cards
+    but not microSD cards, which is one example of when you would need the adapter.
+
+
+    Once you’ve gotten your card hooked up to your computer, you need to format the
+    card to FAT. This is simple enough to do.
+
+
+    FAT format, Windows:
+
+
+    All you do is plug the SD card in. Then, go to Windows Explorer. Windows oldies
+    will remember this as “My Computer”. From here, find the SD storage device in
+    the left pane of your screen. Right click it, and then click “Format…”. Make certain
+    that you don’t have any sensitive data on there that you need to make a backup
+    of. If you do, copy the files to your computer right quick before you format.
+    Afterward, carry out the formatting. You simply need to format as (MS-DOS) FAT,
+    naming the drive whatever you’d like.
+
+
+    FAT format, Mac:
+
+
+    Open the Disk Utility and make absolutely certain that you’ve selected the right
+    volume. If you accidentally choose the wrong volume, you could lose some very
+    important information and format the wrong drive altogether! This is very much
+    not desirable. Once you’ve made certain that you’ve selected the correct drive
+    and there’s no important information on the SD card, you just click “Erase...”
+    with the formatting type being “MS-DOS”.
+
+
+    FAT format, Linux:
+
+
+    Get gparted if you don’t already have it (you’re a Linux user - of course you
+    do!). In gparted, select the appropriate drive, once again making sure that you’ve
+    selected the absolutely correct drive, and then format to fat32\. Simple.
+
+
+    Now, once all of that is taken care of, you should have a formatted SD card that’s
+    ready for the NOOBS files. All that you do is take the NOOBS zip file that you
+    just downloaded, extract it to a folder, and copy all of it to your SD card. Once
+    every file has been copied over (it may take a minute or so, depending upon the
+    speed of your computer), you can then call this part of the installation process
+    good.
+
+
+    The next thing that you have to do is plug the microSD card into your Raspberry
+    Pi. After that, you need to start attaching all necessary cables to your Raspberry
+    Pi. Plug in the power last, because the Raspberry Pi will turn on automatically
+    when the power is plugged in. Plug in all other devices first, such as your monitors,
+    keyboard, mouse, any wireless dongles, and your wired internet connection if applicable.
+
+
+    If everything went well, then as soon as you boot up your Raspberry Pi, you should
+    be taken to the NOOBS installation. It should, for the most part, set itself up.
+    The entire process is incredibly easy; after all, the Raspberry Pi itself was
+    made so that people with pretty much no computer or tech experience at all can
+    easily pick it up and start hacking away. The only precaution here is to make
+    sure that you select to install Raspbian, because Raspbian is what we’ll be working
+    with in this book, and what most Raspberry Pi projects use, actually. Technically,
+    the Raspberry Pi can run any ARM operating system, but Raspbian is the best for
+    people who are new to Raspberry Pi.
+
+
+    Spectacularly, once the set-up is done handling itself, it’ll end up restarting.
+    At this point, you’re done with the initial set-up. Everything from here is just
+    setting up wireless networks and bluetooth devices, if necessary.
+
+
+    With that, you’re essentially done with setting up your Raspberry Pi. What once
+    seemed rather daunting has turned out to be quite easy in reality! Don’t worry
+    - the fun is only just beginning, and there is plenty of frustration ahead! But,
+    to match all of the frustration, sighs, and head scratching, you’ll get to experience
+    the liberating and truly one of a kind feeling of having something work. Engineering
+    of all forms is 90% disappointment and 10% payoff. However, the payoff is one
+    of the best feelings that you’ll ever have.
+
+
+    When you’re jumping in from nothing, there is going to be quite a bit that you
+    don’t really understand. In order to mitigate that feeling of hopeless ignorance
+    and to help you understand some of the code snippets and scripts that you will
+    encounter as you go forward and start working with a ton of different projects,
+    it’s imperative that I now help you to understand how to write basic Python and
+    what all of the underlying concepts behind programming are.
+
+
+    Chapter 4'
+  toc: []
+  trans: '
+
+    -   [虽然有很多选项可供选择，但如果你倾向于...] For you to truly get `Raspberry Pi` experience, you
+    should opt for `Raspbian`, but once you have more experience and want to start
+    experimenting, there are things such as `Windows10`, `Arch Linux`, `Gentoo`, `Ubuntu`,
+    `Kali Linux`, and `FreeBSD`. All of these have their own uses, depending upon
+    what you’re wanting to do and what your goal is with `Raspberry Pi`. But, for
+    right now, the `Raspbian` operating system is actually optimized for the `Raspberry
+    Pi` and has a huge number of packages just for it, so I highly recommend you work
+    with it.
+
+
+    # 第三章
+
+
+    ## 设置
+
+
+    此时，我假设你已经拿到你的 Pi。如果你还没有，你仍然可以跳到第 4 章练习，然后在 Pi 到位时再回到这里。如果你的 Pi 已经到位，那就完美了！你已经准备好进入这一章。本章将重点介绍如何让你的
+    Pi 运行起来。我主要针对 `Raspberry Pi 3`，但无论你使用的是哪个版本的 Pi，这些说明大致相同。根据需要进行调整即可。
+
+
+    下面是你为本章需要准备的事项：
+
+
+    - **Raspberry Pi**: 这不言而喻。你需要一个 `Raspberry Pi` 来进行设置。
+
+    - **屏幕（任何形式，带有 `HDMI` 输入）**: 可以是电视或显示器，差别不大。关键是，无论是哪种，它都必须具备 `HDMI` 输入。Pi 只提供
+    `HDMI` 输出，所以你使用的屏幕必须能够接受 `HDMI`。
+
+    - **USB 外设**: 你需要能够控制 Pi。`USB` 连接的键盘和鼠标是最佳选择。
+
+    - **MicroSD 卡**: 你至少需要一个 8GB 的 `MicroSD 卡` 供 Pi 使用。所有数据都从 Pi 的 `SD 卡` 读取。在大多数电脑上，你会有外部硬盘（如
+    `SATA` 驱动），而 Pi 则使用 `SD 卡`。你其实可以让 Pi 从 `USB` 驱动或外部硬盘读取，但 `SD 卡` 是最直接、最简便的方法。
+
+    - **电源**: Pi 的电源是 `microUSB`。这种连接方式与大多数智能手机的供电方式相同。线材必须能够提供 2.5 安培，否则你会给 Pi 供电不足并可能烧毁它——这比你想象的要容易！请确保使用正确的电压。如果不确定，请参阅第
+    6 章并向他人咨询。
+
+    - **NOOBS**: 安装建议的 `Raspberry Pi` Linux 发行版 `Raspbian` 以前相当困难。最近（至少在相对意义上），`Raspberry
+    Pi` 团队推出了一个名为 `NOOBS`（“新出于盒装软件”）的实用程序，使过程大幅简化。不再需要通过 `Terminal` 手动将 `Raspbian`
+    复制到 `SD card`；只需获取 `NOOBS` 即可。你可以在 [`www.raspberrypi.org/downloads/noobs/`](https://www.raspberrypi.org/downloads/noobs/)
+    下载 `NOOBS` —  — 选择离线安装版，因为该版本会随操作系统一起提供。
+
+
+    下面是操作步骤。第一步是将你的 `microSD card` 插入你的电脑。具体操作取决于你的电脑对 `SD cards` 的设置；你可能需要购买读卡器或
+    `microSD` 到 `SD` 适配器。例如，我的电脑支持 `SD cards` 但不支持 `microSD cards`，这就是需要适配器的情况。
+
+
+    卡连接到电脑后，你需要将其格式化为 `FAT`。这很简单。
+
+
+    ### FAT 格式, Windows
+
+
+    只需插入 `SD card`，然后打开 `Windows Explorer`（旧版 Windows 称其为 “My Computer”）。在屏幕左侧面板中找到
+    `SD` 存储设备。右键单击它，然后选择 “Format…”。确保里面没有需要备份的敏感数据。如果有，请先将文件复制到电脑上，然后再格式化。完成后进行格式化。只需选择
+    `(MS-DOS) FAT` 并为驱动器命名即可。
+
+
+    ### FAT 格式, Mac
+
+
+    打开 `Disk Utility`，并确保已选中正确的卷。如果误选了错误的卷，你可能会丢失重要信息并格式化错误的驱动器！这非常不 desirable。确认选中正确的驱动器且
+    `SD card` 上没有重要信息后，点击 “Erase...”，格式类型选择 “MS-DOS”。
+
+
+    ### FAT 格式, Linux
+
+
+    如果你还没有 `gparted`（你是 `Linux` 用户，当然会有），请获取它。在 `gparted` 中选择合适的驱动器，再次确保选中的是正确的驱动器，然后格式化为
+    `fat32`。很简单。
+
+
+    现在，完成以上步骤后，你应该拥有一个已格式化的 `SD card`，准备好安装 `NOOBS` 文件。你只需解压下载的 `NOOBS` 压缩包到一个文件夹，然后将所有文件复制到
+    `SD card` 上（根据电脑速度可能需要几分钟）。随后，插入 `microSD card` 到你的 `Raspberry Pi`。接着，开始连接所有必要的线缆到
+    Pi。最后，请先插入电源，因为 Pi 会在通电时开机。
+
+    '
+- fmt: "\n![](images/00002.jpg)\n\n# Programming Essentials\n\nAt last, we’ve landed\
+    \ at the point for which you bought this book in the first place. In this chapter,\
+    \ we’re going to talk about a lot of the fundamentals and ideas behind programming\
+    \ that you’re going to need in order to take full advantage of the Raspberry Pi\
+    \ and the hardware behind it.\n\nThere’s good news and bad news; I’ll start with\
+    \ the bad news. The bad news is that giving extremely specific information is\
+    \ rather difficult, because every project is going to have its own niches, libraries,\
+    \ and requirements. I can’t just tell you how to write a script for one project\
+    \ and then have it magically apply to every single project out there. But what\
+    \ I can teach you is the underlying concepts that frame almost every single Raspberry\
+    \ Pi script, and that likewise are extremely important if you wish to be an adept\
+    \ programmer and hobbyist with the Raspberry Pi.\n\nThat’s where the good news\
+    \ comes in: you can start right now. You don’t have to wait for your Pi to come\
+    \ in. In fact, I wouldn’t, if I were you. Programming on your Raspberry Pi is\
+    \ going to inevitably be a pain and, if you have a computer, you’re actually more\
+    \ apt to practice your skills on there so that you can deal with a more “standard”\
+    \ keyboard/mouse/monitor setup than you might have on your Pi. This, of course,\
+    \ is subjective and relative to your experience, however.\n\nThe reason that you\
+    \ can do this is because almost every single Raspberry Pi script runs on `Python`.\
+    \ So what is Python? Python is a super useful programming language that was born\
+    \ pretty much from the phoenix ashes of languages like `C++` and `Java`. If you\
+    \ don’t know what those are, they are programming languages themselves that are\
+    \ a fair bit more complex than Python. (I’m going somewhere with this, I promise!)\n\
+    \nSee, programming has always had one specific purpose: problem solving. Every\
+    \ programming language is thus tailored to solve different sorts of problems.\
+    \ Early on in computer history, languages were extremely esoteric. This was partly\
+    \ because every bit of storage and memory usage counted, and it was necessary\
+    \ that one had complete control over memory allocation and program size. This\
+    \ is where languages such as `C` came in. However, at the same time, there had\
+    \ to be a programming language that was friendly to mathematicians, who benefited\
+    \ greatly from making programs but weren’t adept with computers; this is where\
+    \ `Fortran` came in. Other languages, too, had their niches; `Lisp` was designed\
+    \ for stack programming. When computing power became a bit stronger, object-oriented\
+    \ programming came to the forefront as a dominant means of organizing projects,\
+    \ with the champion of object-oriented programming being `Java`. Shortly before\
+    \ `Java`, the ideals of `C`-style memory maintenance and the advent of object-oriented\
+    \ programming were combined into a super influential language known as `C++`.\
+    \ The list goes on and on.\n\nPython is a scripting language, and scripting languages\
+    \ have a niche themselves. Scripting languages are written with two purposes in\
+    \ mind.\n\nThe first is that the scripts can ideally be written on one computer\
+    \ and then interpreted anywhere. This means that if I write a script on my `Windows`\
+    \ laptop and I send it to my friend with an `iMac`, they can still run the script\
+    \ with absolutely zero problem. This isn’t always the case, and there are some\
+    \ rather esoteric scripting languages, but for the most part, they run within\
+    \ their own special environments.\n\nThe second is that the scripts have fast\
+    \ deployment times. This means that the code in them can be written quicker than\
+    \ it could in another language. Compare this code snippet in `Java`:\n\n```\n\
+    public class myFile {\n    public static void main(String args[]) {\n        System.out.println(\"\
+    Hello world!\");\n    }\n}\n```\n\nwith this code snippet in `Python`:\n\n```python\n\
+    print \"Hello world!\"\n```\n\nThe Python snippet is so much shorter. This is\
+    \ the intent. Scripting languages have their drawbacks - none of which, frankly,\
+    \ you’ll understand at this point in your learning. But for the most part, they’re\
+    \ extremely efficient in terms of time spent writing code, and they also have\
+    \ a pretty simple learning curve compared to a language like `C`.\n\nSo what’s\
+    \ the point of me saying all of this? Well, you can practice your `Python` programming\
+    \ on any computer and then transfer it to the Raspberry Pi with no issue. All\
+    \ you need is a copy of `Python` and a text editor.\n\nThe point of this chapter\
+    \ is to acquaint you with all the various eccentricities of programming that I\
+    \ think may throw you off. These lessons may not seem valuable when you look at\
+    \ scripts written by people who have already made projects, but when you look\
+    \ at those scripts closely, you’ll see that the underlying concepts - data types,\
+    \ arithmetic, methods, and so forth - are very prevalent. You can’t expect to\
+    \ do anything with a script if you don’t know what these concepts are.\n\n## Setting\
+    \ up Python\n\nSo let’s start from the beginning. The first thing that you need\
+    \ to do to start programming in `Python` is to, well, get `Python`. Many computers\
+    \ already have it. If you’re running `Linux` or `Mac`, then the chances are good\
+    \ that you do. You can test to see if you have it by opening either `Terminal`\
+    \ (in `Mac` or `Linux`) or `PowerShell` (in `Windows`) and typing `python`, then\
+    \ pressing enter. If you have `Python` installed, it should execute a program.\
+    \ If not, it should throw you an error message.\n\nIf it executes a program, look\
+    \ at the program text to see what it says. If it says “Python 3.x”, you need to\
+    \ uninstall it and get `Python 2` instead. The reason for this is simple: most\
+    \ `Python` scripts are written in `Python 2`, because it has been the longstanding\
+    \ version. We are learning `Python 2` in this chapter. A lot of things transfer\
+    \ between `Python 2` and `Python 3` and moving over to `Python 3`, if you need\
+    \ to, will be extremely easy. But for the most part, if a utility is written for\
+    \ `Python 3`, it will also be written for `Python 2`; however, more often than\
+    \ not, the reverse isn’t true. For this reason, it’s easiest to just teach and\
+    \ work with `Python 2` at this point in time.\n\nIf you don’t have `Python` installed,\
+    \ or you just uninstalled `Python 3` and are looking to get `Python 2`, you need\
+    \ to go to `http://python.org`. This is the official `Python` website and is where\
+    \ you’ll be able to find a copy of `Python` for virtually any given operating\
+    \ system.\n\nAfter this, you’ll need to get a text editor that you’d like to use.\
+    \ Within Raspberry Pi, you’ll be largely using the console text editor (`Nano`),\
+    \ but on your practice computer, you can use whatever you like. It really just\
+    \ needs to be something that you understand and are either comfortable using or\
+    \ are content to learn to use. Personally, I love the text editor `Atom`, which\
+    \ you can get at `http://atom.io` for `Windows`, `Mac`, and `Linux` alike. There\
+    \ are a lot of reasons to love `Atom`, but the biggest are that it’s free and\
+    \ there are a ton of plug-ins intended to make your life easier.\n\nOnce you have\
+    \ your specific text editor, spend a bit getting to know it. Try making a new\
+    \ file, saving it, creating a project path (if applicable), and so forth. Essentially,\
+    \ learn the functions that you’re going to use. At this point, you should have\
+    \ your Raspberry Pi set up, too - you would benefit from going to the console,\
+    \ starting up `Nano`, and learning how to create, save, open, and edit files with\
+    \ it. It’s relatively straightforward and fun to use, believe it or not.\n\nAnyway,\
+    \ back on your practice computer, we’re going to get to the basics of `Python`\
+    \ that will enable you to work with other people’s scripts and, eventually, write\
+    \ your own. Before we do that, though, there’s one last thing we need to do.\n\
+    \nStart up `Python` via either `Terminal` or `PowerShell`. If everything so far\
+    \ has gone according to plan, you should see something that says:\n\n```\n>>>\
+    \ Python 2.7.12\n```\n"
+  raw: '![](images/00002.jpg)
+
+
+    Programming Essentials
+
+
+    At last, we’ve landed at the point for which you bought this book in the first
+    place. In this chapter, we’re going to talk about a lot of the fundamentals and
+    ideas behind programming that you’re going to need in order to take full advantage
+    of the Raspberry Pi and the hardware behind it.
+
+
+    There’s good news and bad news; I’ll start with the bad news. The bad news is
+    that giving extremely specific information is rather difficult, because every
+    project is going to have its own niches, libraries, and requirements. I can’t
+    just tell you how to write a script for one project and then have it magically
+    apply to every single project out there. But what I can teach you is the underlying
+    concepts that frame almost every single Raspberry Pi script, and that likewise
+    are extremely important if you wish to be an adept programmer and hobbyist with
+    the Raspberry Pi.
+
+
+    That’s where the good news comes in: you can start right now. You don’t have to
+    wait for your Pi to come in. In fact, I wouldn’t, if I were you. Programming on
+    your Raspberry Pi is going to inevitably be a pain and, if you have a computer,
+    you’re actually more apt to practice your skills on there so that you can deal
+    with a more “standard” keyboard/mouse/monitor setup than you might have on your
+    Pi. This, of course, is subjective and relative to your experience, however.
+
+
+    The reason that you can do this is because almost every single Raspberry Pi script
+    runs on Python. So what is Python? Python is a super useful programming language
+    that was born pretty much from the phoenix ashes of languages like C++ and Java.
+    If you don’t know what those are, they are programming languages themselves that
+    are a fair bit more complex than Python. (I’m going somewhere with this, I promise!)
+
+
+    See, programming has always had one specific purpose: problem solving. Every programming
+    language is thus tailored to solve different sorts of problems. Early on in computer
+    history, languages were extremely esoteric. This was partly because every bit
+    of storage and memory usage counted, and it was necessary that one had complete
+    control over memory allocation and program size. This is where languages such
+    as C came in. However, at the same time, there had to be a programming language
+    that was friendly to mathematicians, who benefited greatly from making programs
+    but weren’t adept with computers; this is where Fortran came in. Other languages,
+    too, had their niches; Lisp was designed for stack programming. When computing
+    power became a bit stronger, object-oriented programming came to the forefront
+    as a dominant means of organizing projects, with the champion of object-oriented
+    programming being Java. Shortly before Java, the ideals of C-style memory maintenance
+    and the advent of object-oriented programming were combined into a super influential
+    language known as C++. The list goes on and on.
+
+
+    Python is a scripting language, and scripting languages have a niche themselves.
+    Scripting languages are written with two purposes in mind.
+
+
+    The first is that the scripts can ideally be written on one computer and then
+    interpreted anywhere. This means that if I write a script on my Windows laptop
+    and I send it to my friend with an iMac, they can still run the script with absolutely
+    zero problem. This isn’t always the case, and there are some rather esoteric scripting
+    languages, but for the most part, they run within their own special environments.
+
+
+    The second is that the scripts have fast deployment times. This means that the
+    code in them can be written quicker than it could in another language. Compare
+    this code snippet in Java:
+
+
+    > > > public class myFile {
+
+
+    > > > > > public static void main(String args[]) {
+
+
+    > > > > > > System.out.println(“Hello world!”);
+
+
+    > > > > > }
+
+
+    > > > }
+
+
+    > > > with this code snippet in Python:
+
+
+    > > > print “Hello world!”
+
+
+    The Python snippet is so much shorter. This is the intent. Scripting languages
+    have their drawbacks - none of which, frankly, you’ll understand at this point
+    in your learning. But for the most part, they’re extremely efficient in terms
+    of time spent writing code, and they also have a pretty simple learning curve
+    compared to a language like C.
+
+
+    So what’s the point of me saying all of this? Well, you can practice your Python
+    programming on any computer and then transfer it to the Raspberry Pi with no issue.
+    All you need is a copy of Python and a text editor.
+
+
+    The point of this chapter is to acquaint you with all the various eccentricities
+    of programming that I think may throw you off. These lessons may not seem valuable
+    when you look at scripts written by people who have already made projects, but
+    when you look at those scripts closely, you’ll see that the underlying concepts
+    - data types, arithmetic, methods, and so forth - are very prevalent. You can’t
+    expect to do anything with a script if you don’t know what these concepts are.
+
+
+    Setting up Python
+
+
+    So let’s start from the beginning. The first thing that you need to do to start
+    programming in Python is to, well, get Python. Many computers already have it.
+    If you’re running Linux or Mac, then the chances are good that you do. You can
+    test to see if you have it by opening either Terminal (in Mac or Linux) or PowerShell
+    (in Windows) and typing python, then pressing enter. If you have Python installed,
+    it should execute a program. If not, it should throw you an error message.
+
+
+    If it executes a program, look at the program text to see what it says. If it
+    says “Python 3.x”, you need to uninstall it and get Python 2 instead. The reason
+    for this is simple: most Python scripts are written in Python 2, because it has
+    been the longstanding version. We are learning Python 2 in this chapter. A lot
+    of things transfer between Python 2 and Python 3 and moving over to Python 3,
+    if you need to, will be extremely easy. But for the most part, if a utility is
+    written for Python 3, it will also be written for Python 2; however, more often
+    than not, the reverse isn’t true. For this reason, it’s easiest to just teach
+    and work with Python 2 at this point in time.
+
+
+    If you don’t have Python installed, or you just uninstalled Python 3 and are looking
+    to get Python 2, you need to go to [http://python.org](http://www.python.org).
+    This is the official Python website and is where you’ll be able to find a copy
+    of Python for virtually any given operating system.
+
+
+    After this, you’ll need to get a text editor that you’d like to use. Within Raspberry
+    Pi, you’ll be largely using the console text editor (Nano), but on your practice
+    computer, you can use whatever you like. It really just needs to be something
+    that you understand and are either comfortable using or are content to learn to
+    use. Personally, I love the text editor Atom, which you can get at [http://atom.io](http://www.atom.io)
+    for Windows, Mac, and Linux alike. There are a lot of reasons to love Atom, but
+    the biggest are that it’s free and there are a ton of plug-ins intended to make
+    your life easier.
+
+
+    Once you have your specific text editor, spend a bit getting to know it. Try making
+    a new file, saving it, creating a project path (if applicable), and so forth.
+    Essentially, learn the functions that you’re going to want to use. At this point,
+    you should have your Raspberry Pi set up, too - you would benefit from going to
+    the console, starting up Nano, and learning how to create, save, open, and edit
+    files with it. It’s relatively straightforward and fun to use, believe it or not.
+
+
+    Anyway, back on your practice computer, we’re going to get to the basics of Python
+    that will enable you to work with other people’s scripts and, eventually, write
+    your own. Before we do that, though, there’s one last thing we need to do.
+
+
+    Start up Python via either Terminal or PowerShell. If everything so far has gone
+    according to plan, you should see something that says:
+
+
+    > > > >>> Python 2.7.12'
+  toc: []
+  trans: "\n\n![](img/00002.jpg)\n\n# 编程基础\n\n终于，我们来到了你最初购买这本书的目的所在。在本章中，我们将讨论许多编程背后的基础和理念，这些是你为了充分利用树莓派（Raspberry\
+    \ Pi）及其背后的硬件所需要的。\n\n有好消息也有坏消息；我先从坏消息开始。坏消息是，提供极其具体的细节是非常的，因为每个项目都有自己的特殊领域、库和要求。我不能简单地告诉你如何为某个项目编写脚本，然后让它神奇地应用到现有的每一个项目中。但我可以教你的是构建几乎每一个树莓派脚本的底层概念，对于如果你希望成为一名精通树莓派的程序员和爱好者来说，这些概念同样至关重要。\n\
+    \n这就是好消息上场的地方：你现在就可以开始了。你不需要等你的树莓派到货。事实上，如果我是你，我不会等。在树莓派上进行编程不可避免地会很痛苦，而且如果你有一台电脑，你实际上更适合在电脑上练习技能，这样你就可以处理比在树莓派上更“标准”的键盘/鼠标/显示器设置了。当然，这是主观的，取决于你的经验。\n\
+    \n你之所以可以这样做，是因为几乎每一个树莓派脚本运行在 `Python` 上。那么什么是 Python？Python 是一种超级实用的编程语言，它几乎是从\
+    \ `C++` 和 `Java` 等语言的灰烬中产生的。如果你不知道它们是什么，它们本身也是编程语言，比 Python 要复杂得多。（我保证我有说明这一点！）\n\
+    \n听着，编程一直有一个特定的目的：解决问题。因此，每种编程语言都是为了解决不同类型而定制的。在计算机历史早期，语言极其晦涩。这部分是因为每一比特存储和内存使用都至关重要，而且必须对内存分配和程序大小有完全的控制。这就是\
+    \ `C` 等语言登场的地方。然而，同时，必须有一种对数学家友好的编程语言，他们从编写程序中受益匪浅，但不擅长计算机；这就是 `Fortran` 的用武之地。其他语言也有自己的领域；`Lisp`\
+    \ 是为栈式编程设计的。当计算能力变得强大后，面向对象的编程作为组织项目的主导手段成为前沿，而面向对象编程的冠军是 `Java`。在 `Java` 出现不久之前，`C`-风格内存维护的理念和面向对象编程的出现结合在一起，形成了一种名为\
+    \ `C++` 的极具影响力的语言。列表还在继续。\n\nPython 是一种脚本语言，而脚本语言也有自己的领域。脚本语言的编写考虑了两个目的。\n\n第一个是，理想情况下，脚本可以在一台电脑上编写，然后在任何地方解释。这意味着如果我在我的\
+    \ `Windows` 笔记本电脑上写了一个脚本，并把它发送给使用 `iMac` 的朋友，他们仍然可以完全没有问题地运行该脚本。情况并非总是如此，还有一些相当晦涩的脚本语言，但大多数情况下，它们运行在自己的特殊环境中。\n\
+    \n第二个是脚本具有快速的部署时间。这意味着它们中的代码编写速度可以比在另一种语言中更快。比较一下 `Java` 中的这段代码片段：\n\n```\npublic\
+    \ class myFile {\n    public static void main(String args[]) {\n        System.out.println(\"\
+    Hello world!\");\n    }\n}\n```\n\n与 `Python` 中的这段代码片段相比：\n\n```python\nprint\
+    \ \"Hello world!\"\n```\n\nPython 的片段要短得多。这正是意图所在。脚本语言也有其缺点——坦率地说，在你目前的学习阶段并不会理解这些缺点。但大多数情况下，它们在编写代码花费的时间上是非常高效的，而且与\
+    \ `C` 这样的语言相比，它们的学习曲线也相当简单。\n\n那么我说这些的意义何？嗯，你可以在任何电脑上练习 `Python` 编程，然后毫无问题地将其传输到树莓派上。你只需要一个\
+    \ `Python` 副本和一个文本编辑器。\n\n本章的重点是让你熟悉编程中我认为可能会让你感到困惑的所有各种怪癖。当你看到那些已经完成项目的人编写的脚本时，这些课程可能看起来并不重要，但当你仔细观察那些脚本时，你会发现底层概念——数据类型、算术、方法等等——是非常普遍的。如果你不知道这些概念是什么，你就指望用脚本做任何事情。\n\
+    \n## 安装 Python\n\n那么，让我们从开始起。要开始 `Python` 编程，你需要做的第一件事就是，嗯，获取 `Python`。许多电脑已经安装了它。如果你运行\
+    \ `Linux` 或 `Mac`，那么很有可能你已经有了。你可以通过打开 `Terminal`（在 `Mac` 或 `Linux` 中）或 `PowerShell`（在\
+    \ `Windows` 中）并输入 `python` 然后按回车来测试。如果你安装了 `Python`，它应该执行一个程序。如果没有，它应该给你抛出一个错误信息。\n\
+    \n如果它执行了一个程序，查看程序文本看写了什么。如果显示“Python 3.x”，你需要卸载它并改为获取 `Python 2`。原因很简单：大多数 `Python`\
+    \ 脚本是用 `Python 2` 编写的，因为它一直是长期版本。我们在本章中学习 `Python 2`。`Python 2` 和 `Python 3` 之间有很多东西是可以转换的，如果你需要迁移到\
+    \ `Python 3` 非常容易。但大多数情况下，如果一个工具是为 `Python 3` 编写的，它也会为 `Python 2` 编写；然而，通常情况反之。由于由于原因，在现在教学和使用\
+    \ `Python 2` 是容易的。\n\n如果你没有安装 `Python`，或者你刚刚卸载了 `Python 3` 并想要 `Python 2`，你需要访问\
+    \ `http://python.org`。这是 `Python` 的官方网站，你可以在这里找到适用于任何操作系统的 `Python` 副本。\n\n之后，你需要获取一个你喜欢的文本编辑器。在树莓派内部，你将在很大程度上使用控制文本编辑器\
+    \ (`Nano`)，但在你的练习电脑上，你可以使用任何你喜欢的工具。它只需要是一个你理解并且你习惯于使用或乐于学习使用的工具即可。我个人非常喜欢 `Atom`\
+    \ 文本编辑器，你可以在 `http://atom.io` 获取适用于 `Windows`、`Mac` 和 `Linux` 的版本。喜欢 `Atom` 的理由有很多，但最大它是免费的，并且有大量的旨在让你的生活更简单的插件。\n\
+    \n一旦你有了特定的文本编辑器，花一点时间了解它。尝试创建一个新文件、保存它、创建一个项目路径（如果适用）等等。本质上，学习你将要用到的功能。到这时，你应该也设置好了树莓派——你将受益于进入控制台、启动\
+    \ `Nano` 并学习如何用它创建、保存、打开和编辑文件。信不信由，这相对简单且有趣。\n\n无论如何，回到你的练习电脑，我们将学习 `Python` 的基础知识，使你能够处理他人的脚本，并最终编写自己的脚本。在此之前，我们还需要做最后一件事。\n\
+    \n通过 `Terminal` 或 `PowerShell` 启动 `Python`。如果到目前为止一切按计划进行，你应该看到类似：\n\n```\n>>>\
+    \ Python 2.7.12\n```\n\n"
+- fmt: "\nand then some more text afterward. If you don’t see this and you’re running\
+    \ Windows, ensure that you have a `PATH` variable set up for Python.\n\nOnce Python\
+    \ is running, type the following:\n\n```\nprint “hello world”\n```\n\nThe console\
+    \ should print out hello world back to you. If it does, then congrats! You just\
+    \ wrote your first line of Python code; I hope you feel accomplished! Once you’ve\
+    \ written that line of code, go ahead and type `exit()`. This will terminate the\
+    \ Python interpreter in the console.\n\nI encourage you throughout the rest of\
+    \ the lesson to make your own files and experiment with these concepts.\n\n# Working\
+    \ with variables and data\n\nSo, we’re trying to cover a fair amount of ground\
+    \ in a relatively short amount of space. This means that some of these explanations\
+    \ may seem a bit sparse, but I’m not trying to make them so - I’m just trying\
+    \ to not drag on about the little things and to cover the bigger things so I don’t\
+    \ waste your time.\n\nIn programs, there are things called data types. These data\
+    \ types all represent different forms of different information. Computers, they\
+    \ read everything as bits and bytes; 1s and 0s. We humans aren’t so fortunate\
+    \ as to think in such as a black and white binary sort of way so we really have\
+    \ to separate things and parse them up. Well, this means that different types\
+    \ of data are interpreted differently, both by us and by computers.\n\nFor example,\
+    \ if I gave you the word “oyster” and the number 472, you would say they were\
+    \ unrelated. Yes? That’s because they are. One is a number and the other is a\
+    \ word. Data types are similar. If I were to give you two words or two numbers,\
+    \ and you knew what I was getting at, you’d see quite plainly the bridge that\
+    \ I was drawing between the two.\n\nSo let’s say you have a value and you want\
+    \ to store it. How do you do so? The answer is simple: variables. Variables are\
+    \ much like they were in algebra. `X` can be anything that we want it to be, so\
+    \ long as it meets the requirements of the equations, yes? `X` can take on any\
+    \ value. Variables are similar. We can set the “equation” which defines the value\
+    \ of the variable.\n\nBack in the olden days of programming, you had to define\
+    \ the “type” of the variable. If you had a number, you had to say that “the number\
+    \ x is an integer”, or if you had to store somebody’s name, you had to say that\
+    \ “the word name is a string.” Well, scripting languages are both a blessing and\
+    \ a curse because this sort of thing simply isn’t necessary anymore. Scripting\
+    \ languages have mitigated that sort of type definition. This is called implicit\
+    \ typing.\n\nLet’s say we wanted to store somebody’s name, and the name was Jerry.\
+    \ We’d just create a new value, like so:\n\n```\nname = “Jerry”\n```\n\nAnd let’s\
+    \ say we wanted to store our friend Jerry’s age - he’s 42.\n\n```\nage = 42\n\
+    ```\n\nWell, thanks to the fact that we stored this pertinent information in variables,\
+    \ we can recall it later. If we typed:\n\n```\nprint “My friend %s is %d years\
+    \ old.” % (name, age)\n```\n\nIt’d print whatever value was stored in `name` and\
+    \ `age`. So in this instance, it would print “My friend Jerry is 42 years old.”\
+    \ Super easy stuff.\n\nIn Python, there are a few types -\n\n| float | decimal\
+    \ numbers | 3.14 |\n| :--- | :--- | :--- |\n| integer | whole numbers | 7 |\n\
+    | string | character sequences | “Skate park” |\n| boolean | true/false | True\
+    \ |\n\nThere are more, but these are the biggest ones.\n\n# Python Math\n\nGuess\
+    \ what computers do? They compute. And they’re very, very, very good at it. It’s\
+    \ no wonder, then, that programming languages are literally made to do math. There’s\
+    \ not much to show here, I’ll be brief:\n\n| numberOfCats = 4 + 3 | # numberOfCats\
+    \ would be 7 |\n| numberOfDogs = 8 / 2 | # numberOfDogs would be 4 |\n| numberOfHamsters\
+    \ = 3^2 | # numberOfHamsters would be 9 |\n\nFor the record, the thing with the\
+    \ hash mark is a comment. These are ignored by the code. When you enter a hash\
+    \ (`#`), you are telling the compiler - the thing which reads and runs your code\
+    \ - to ignore anything that comes after the hash mark on that line. Simple concept,\
+    \ sure, but worth covering.\n\n# To be, or not to be? Booleans and Comparators\n\
+    \nThis will make a lot more sense here in a moment when we deal with if/else statements,\
+    \ but for right now, just focus on the idea of True or False. Something can be,\
+    \ or it can not be.\n\nIf I were to say “3 is less than 7”, it would be true.\
+    \ If I were to say “7 is less than 6”, it would be false. We’re allowed to make\
+    \ these kind of evaluations within Python. In fact, it’s encouraged.\n\n```\n\
+    number1 = 4\nnumber2 = 5\nprint number1 < number2\n```\n\nThis would print out\
+    \ “True”, because it’s true - 5 is greater than 4. That should go without saying,\
+    \ right? Python sees that you made a comparison, and it looks to determine whether\
+    \ the comparison is accurate or not. If it is, it feeds back `True`. If it isn’t,\
+    \ it feeds back `False`.\n\nYou can store these evaluations to a variable.\n\n\
+    ```\nnumber1 = 4\nnumber2 = 5\neval = number1 < number2\nprint eval\n```\n\nThis\
+    \ would print out “True”, because Python evaluated whether “number1 < number2”\
+    \ was true or not, then saved that evaluation to the variable `eval`. Just like\
+    \ shy kids in high school, there are a lot of ways for things to compare themselves\
+    \ in Python. Here are the basic ones:\n\n| < | Less than |\n| :--- | :--- |\n\
+    | > | Greater than |\n| <= | Less than or equal to |\n| >= | Greater than or equal\
+    \ to |\n| != | Not equal to |\n| == | Equal to |\n\nWhile we’re on the topic,\
+    \ be super wary of the difference between `==` and `=`. The latter is an assignment\
+    \ operator - it’s used to give variables to something. The former is a comparison\
+    \ operator - it’s used to compare two values.\n\n# If and else\n\nWe’re moving\
+    \ rather quickly through all of this, I know.\n\nThere comes a time in every program’s\
+    \ life where they have to make big decisions, it’s just a part of growing up.\
+    \ You can facilitate this sort of decision making by taking advantage of the conditional\
+    \ statements. Let’s start with one.\n\n```\nbananas = 3\nif bananas == 3:\n  \
+    \  print “I have three bananas!”\n```\n\nWhat this program does is assign the\
+    \ number 3 to `bananas`. It then runs a check to see if `bananas` is equal to\
+    \ 3. If it is, it prints “I have three bananas.” Great. If it’s not, it prints…\
+    \ nothing at all. Well, that’s a toughy. Alright. How do we fix this? We can use\
+    \ `else` statements as a catch-all in case the if condition isn’t met.\n\n```\n\
+    if bananas == 3:\n    print “I have three bananas!”\nelse:\n    print “Huh, well,\
+    \ I don’t seem to have three bananas.”\n```\n\nIn this case, if `bananas` is 3,\
+    \ then the program will print that it has 3 bananas. If not, it will be puzzled\
+    \ and express this quite clearly. But what if it has zero bananas and is sad and\
+    \ wants to express that? We’ve already checked to see if there are three, we can’t\
+    \ check to see if there are 0, too. Right?\n\nWrong. This is where if else statements\
+    \ come into play.\n\nLet’s just sandwich an if else statement for zero bananas\
+    \ in there. Observe:\n\n```\nif bananas == 3:\n    print “I have three bananas!”\n\
+    elif bananas == 0:\n    print “I have no bananas, and this is a problem.”\nelse:\n\
+    \    print “Huh, well, I don’t seem to have three bananas.”\n```\n\nIn this case,\
+    \ it checks to see if `bananas` is 3. If not, it goes to the next condition and\
+    \ checks it. If `bananas` isn’t 0, then it finally moves on to the `else` statement.\
+    \ The if/else block will check every condition before resolving itself to the\
+    \ else statement.\n\n# Lists\n\nSometimes you need to store connected values together.\
+    \ This is super easy in Python. Let’s say you needed to store a student’s grades.\n\
+    \n```\nstudent1Grades = [95, 94, 83, 87, 79, 91]\n```\n\nPerfect. You now have\
+    \ a list of 6 grades. You can access any of these. Remember, though, that computers\
+    \ start counting from 0, not from 1. So if you wanted to print the first item\
+    \ in the list, you’d use:\n\n```\nprint student1Grades[0]\n```\n\n# # would print\
+    \ 95\n\nYou can add items to a list super easily.\n\n```\nstudent1Grades.append(86)\n\
+    ```\n"
+  raw: "and then some more text afterward. If you don’t see this and you’re running\
+    \ Windows, ensure that you have a PATH variable set up for Python.\n\nOnce Python\
+    \ is running, type the following:\n\n> > > print “hello world”\n\nThe console\
+    \ should print out hello world back to you. If it does, then congrats! You just\
+    \ wrote your first line of Python code; I hope you feel accomplished! Once you’ve\
+    \ written that line of code, go ahead and type exit(). This will terminate the\
+    \ Python interpreter in the console.\n\nI encourage you throughout the rest of\
+    \ the lesson to make your own files and experiment with these concepts.\n\nWorking\
+    \ with variables and data\n\nSo, we’re trying to cover a fair amount of ground\
+    \ in a relatively short amount of space. This means that some of these explanations\
+    \ may seem a bit sparse, but I’m not trying to make them so - I’m just trying\
+    \ to not drag on about the little things and to cover the bigger things so I don’t\
+    \ waste your time.\n\nIn programs, there are things called data types. These data\
+    \ types all represent different forms of different information. Computers, they\
+    \ read everything as bits and bytes; 1s and 0s. We humans aren’t so fortunate\
+    \ as to think in such as a black and white binary sort of way so we really have\
+    \ to separate things and parse them up. Well, this means that different types\
+    \ of data are interpreted differently, both by us and by computers.\n\nFor example,\
+    \ if I gave you the word “oyster” and the number 472, you would say they were\
+    \ unrelated. Yes? That’s because they are. One is a number and the other is a\
+    \ word. Data types are similar. If I were to give you two words or two numbers,\
+    \ and you knew what I was getting at, you’d see quite plainly the bridge that\
+    \ I was drawing between the two.\n\nSo let’s say you have a value and you want\
+    \ to store it. How do you do so? The answer is simple: variables. Variables are\
+    \ much like they were in algebra. X can be anything that we want it to be, so\
+    \ long as it meets the requirements of the equations, yes? X can take on any value.\
+    \ Variables are similar. We can set the “equation” which defines the value of\
+    \ the variable.\n\nBack in the olden days of programming, you had to define the\
+    \ “type” of the variable. If you had a number, you had to say that “the number\
+    \ x is an integer”, or if you had to store somebody’s name, you had to say that\
+    \ “the word name is a string.” Well, scripting languages are both a blessing and\
+    \ a curse because this sort of thing simply isn’t necessary anymore. Scripting\
+    \ languages have mitigated that sort of type definition. This is called implicit\
+    \ typing.\n\nLet’s say we wanted to store somebody’s name, and the name was Jerry.\
+    \ We’d just create a new value, like so:\n\n> > > name = “Jerry”\n\nAnd let’s\
+    \ say we wanted to store our friend Jerry’s age - he’s 42.\n\n> > > age = 42\n\
+    \nWell, thanks to the fact that we stored this pertinent information in variables,\
+    \ we can recall it later. If we typed:\n\n> > > print “My friend %s is %d years\
+    \ old.” % (name, age)\n\nIt’d print whatever value was stored in name and age.\
+    \ So in this instance, it would print “My friend Jerry is 42 years old.” Super\
+    \ easy stuff.\n\nIn Python, there are a few types -\n\n| float | decimal numbers\
+    \ | 3.14 |\n\n| integer | whole numbers | 7 |\n\n| string | character sequences\
+    \ | “Skate park” |\n\n| boolean | true/false | True |\n\nThere are more, but these\
+    \ are the biggest ones.\n\nPython Math\n\nGuess what computers do? They compute.\
+    \ And they’re very, very, very good at it. It’s no wonder, then, that programming\
+    \ languages are literally made to do math. There’s not much to show here, I’ll\
+    \ be brief:\n\n| numberOfCats = 4 + 3 | # numberOfCats would be 7 |\n\n| numberOfDogs\
+    \ = 8 / 2 | # numberOfDogs would be 4 |\n\n| numberOfHamsters = 3^2 | # numberOfHamsters\
+    \ would be 9 |\n\nFor the record, the thing with the hash mark is a comment. These\
+    \ are ignored by the code. When you enter a hash (#), you are telling the compiler\
+    \ - the thing which reads and runs your code - to ignore anything that comes after\
+    \ the hash mark on that line. Simple concept, sure, but worth covering.\n\nTo\
+    \ be, or not to be? Booleans and Comparators\n\nThis will make a lot more sense\
+    \ here in a moment when we deal with if/else statements, but for right now, just\
+    \ focus on the idea of True or False. Something can be, or it can not be.\n\n\
+    If I were to say “3 is less than 7”, it would be true. If I were to say “7 is\
+    \ less than 6”, it would be false. We’re allowed to make these kind of evaluations\
+    \ within Python. In fact, it’s encouraged.\n\n> > > number1 = 4\n\n> > > number2\
+    \ = 5\n\n> > > print number1 < number2\n\nThis would print out “True”, because\
+    \ it’s true - 5 is greater than 4\\. That should go without saying, right? Python\
+    \ sees that you made a comparison, and it looks to determine whether the comparison\
+    \ is accurate or not. If it is, it feeds back True. If it isn’t, it feeds back\
+    \ False.\n\nYou can store these evaluations to a variable.\n\n> > > number1 =\
+    \ 4\n\n> > > number2 = 5\n\n> > > eval = number1 < number2\n\n> > > print eval\n\
+    \nThis would print out “True”, because Python evaluated whether “number1 < number2”\
+    \ was true or not, then saved that evaluation to the variable eval. Just like\
+    \ shy kids in high school, there are a lot of ways for things to compare themselves\
+    \ in Python. Here are the basic ones:\n\n| < | Less than |\n\n| > | Greater than\
+    \ |\n\n| <= | Less than or equal to |\n\n| >= | Greater than or equal to |\n\n\
+    | != | Not equal to |\n\n| == | Equal to |\n\nWhile we’re on the topic, be super\
+    \ wary of the difference between == and =. The latter is an assignment operator\
+    \ - it’s used to give variables to something. The former is a comparison operator\
+    \ - it’s used to compare two values.\n\nIf and else\n\nWe’re moving rather quickly\
+    \ through all of this, I know.\n\nThere comes a time in every program’s life where\
+    \ they have to make big decisions, it’s just a part of growing up. You can facilitate\
+    \ this sort of decision making by taking advantage of the conditional statements.\
+    \ Let’s start with one.\n\n> > > bananas = 3\n\n> > > if bananas == 3:\n\n> >\
+    \ > > > print “I have three bananas!”\n\nWhat this program does is assign the\
+    \ number 3 to bananas. It then runs a check to see if bananas is equal to 3\\\
+    . If it is, it prints “I have three bananas.” Great. If it’s not, it prints… nothing\
+    \ at all. Well, that’s a toughy. Alright. How do we fix this? We can use else\
+    \ statements as a catch-all in case the if condition isn’t met.\n\n> > > if bananas\
+    \ == 3:\n\n> > > > > print “I have three bananas!”\n\nelse:\n\nprint “Huh, well,\
+    \ I don’t seem to have three bananas.”\n\nIn this case, if bananas is 3, then\
+    \ the program will print that it has 3 bananas. If not, it will be puzzled and\
+    \ express this quite clearly. But what if it has zero bananas and is sad and wants\
+    \ to express that? We’ve already checked to see if there are three, we can’t check\
+    \ to see if there are 0, too. Right?\n\nWrong. This is where if else statements\
+    \ come into play.\n\nLet’s just sandwich an if else statement for zero bananas\
+    \ in there. Observe:\n\n> > > if bananas == 3:\n\n> > > > > print “I have three\
+    \ bananas!”\n\n> > > elif bananas == 0:\n\n> > > > > print “I have no bananas,\
+    \ and this is a problem.”\n\n> > > else:\n\n> > > > > > print “Huh, well, I don’t\
+    \ seem to have three bananas.”\n\nIn this case, it checks to see if bananas is\
+    \ 3\\. If not, it goes to the next condition and checks it. If bananas isn’t 0,\
+    \ then it finally moves on to the else statement. The if/else block will check\
+    \ every condition before resolving itself to the else statement.\n\nLists\n\n\
+    Sometimes you need to store connected values together. This is super easy in Python.\
+    \ Let’s say you needed to store a student’s grades.\n\n> > > student1Grades =\
+    \ [95, 94, 83, 87, 79, 91]\n\nPerfect. You now have a list of 6 grades. You can\
+    \ access any of these. Remember, though, that computers start counting from 0,\
+    \ not from 1. So if you wanted to print the first item in the list, you’d use:\n\
+    \n|  \n\n> > > > print student1Grades[0]\n\n | # would print 95 |\n\nYou can add\
+    \ items to a list super easily.\n\n> > > student1Grades.append(86)"
+  toc: []
+  trans: "\n后面还有一些文本。如果你没看到这些内容并且正在运行 Windows 系统，请确保你已经为 Python 设置了 `PATH` 变量。\n\n\
+    一旦 Python 运行，输入以下内容：\n\n```\nprint “hello world”\n```\n\n控制台应该打印出 hello world。如果是这样，那么恭喜你！你刚刚写了你的第一行\
+    \ Python 代码；我希望你觉得很有成就感！写完那行代码后，继续输入 `exit()`。这将终止控制台中的 Python 解释器。\n\n在接下来的课程中，我鼓励你创建自己的文件并尝试这些概念。\n\
+    \n# 变量和数据操作\n\n所以，我们正试图在较短的空间内涵盖相当的内容。这意味着其中一些解释可能看起来有些简略，但我并不是故意让它们变得如此——我只是不想在小事上浪费你的时间，而是想涵盖更重要的内容，以免浪费你的时间。\n\
+    \n在程序中，有被称为“数据类型”的东西。这些数据类型代表不同形式的不同信息。计算机读取一切都是位（bits）和字节（bytes）；即 1 和 0。我们人类没有那么幸运能以非黑即白的二进制方式思考，所以我们真的必须对事物进行分类和解析。那么，这意味着不同类型的数据被我们和计算机的解释方式是不同的。\n\
+    \n例如，如果我给你单词“oyster”（牡蛎）和数字 472，你会说它们是互无关的。对吧？因为它们确实互无关。其中是一个数字，另一个是一个单词。数据类型也是类似的。如果我给你两个单词或两个数字，而你又知道我想表达什么，你就能清楚地看到我在两者之间架起的桥梁。\n\
+    \n所以假设你有一个值并想存储它。你要怎么做呢？答案很简单：变量。变量就像代数中的变量一样。`X` 可以是我们想要的任何值，只要它符合方程的要求，对吧？`X`\
+    \ 可以取任何值。变量也是如此。我们可以设置定义变量值的“方程”。\n\n在编程的早期时代，你必须定义变量的“类型”。如果你有一个数字，你必须说“数字 x\
+    \ 是一个整数”，或者如果你必须存储某的名字，你必须说“单词 name 是一个字符串”。嗯，脚本语言既是祝福也是诅咒，因为这种事情已经不再需要了。脚本语言缓解了那种类型定义。这被称为隐式类型。\n\
+    \n假设我们想存储某人的名字，名字叫 Jerry。我们只需创建一个新值，如下所示：\n\n```\nname = “Jerry”\n```\n\n假设我们想存储朋友\
+    \ Jerry 的年龄——他 42 岁。\n\n```\nage = 42\n```\n\n嗯，多亏于我们将这些相关信息存储在变量中，我们稍后可以调用它们。如果我们输入：\n\
+    \n```\nprint “My friend %s is %d years old.” % (name, age)\n```\n\n它将打印存储在 `name`\
+    \ 和 `age` 中的任何值。所以在在这种情况下，它会打印“My friend Jerry is 42 years old.”超级简单。\n\n在 Python\
+    \ 中，有几种类型——\n\n| float | 小数数字 | 3.14 |\n| :--- | :--- | :--- |\n| integer | 整数\
+    \ | 7 |\n| string | 字符序列 | “Skate park” |\n| boolean | 真/假 | True |\n\n还有更多，但这些是最大的。\n\
+    \n# Python 数学\n\n猜猜计算机在做什么？它们进行计算。而且它们非常、非常、非常擅长此道。难怪编程语言字面上讲为了为了数学而设计的。这里没什么好展示的，我会简要说明一下：\n\
+    \n| numberOfCats = 4 + 3 | # numberOfCats 将是 7 |\n| numberOfDogs = 8 / 2 | # numberOfDogs\
+    \ 将是 4 |\n| numberOfHamsters = 3² | # numberOfHamsters 将是 9 |\n\n记录一下，带有井号（#）的部分是注释。代码会忽略这些内容。当你输入井号（#`）时，你是在告诉编译器——读取并运行你代码的程序——忽略该行中井号之后的任何内容。简单的概念，当然，但值得涵盖。\n\
+    \n# 存在，还是不存在？布尔值和比较运算符\n\n等下当我们处理 if/else 语句时，这里会变得意义得多，但现在，只需关注 True（真）或 False（假）的概念即可。某物可以存在，也可以不存在。\n\
+    \n如果我说“3 小于 7”，那是它是真的（true）的。如果我说“7 小于 6”，那么它是假的（false）的。我们允许在 Python 中进行这类评估。事实上，我们被鼓励这样做。\n\
+    \n```\nnumber1 = 4\nnumber2 = 5\nprint number1 < number2\n```\n\n这会打印“True”，因为它是真的——5\
+    \ 大于 4。这是不言自明的，对吧？Python 看到你进行了比较，它会尝试判断该比较是否准确。如果是，它就返回 `True`。如果不是，它就返回 `False`。\n\
+    \n你可以将这些评估存储在变量中。\n\n```\nnumber1 = 4\nnumber2 = 5\neval = number1 < number2\n\
+    print eval\n```\n\n这会打印“True”，因为 Python 评估了“number1 < number2”是否为真，并将该评估保存到变量\
+    \ `eval` 中。就像高中里害羞的孩子一样，在 Python 中有很多方法让事物进行自比比较。这里是基础的：\n\n| < | 小于 |\n| :---\
+    \ | :--- |\n| > | 大于 |\n| <= | 小于等于 |\n| >= | 大于等于 |\n| != | 不等于 |\n| == | 等于\
+    \ |\n\n既然说了这个话题，要极度小心 `==` 和 `=` 之间的区别。后者是赋值运算符——用于给变量赋值。前者是比较运算符——用于比较两个值。\n\n\
+    # If 和 else\n\n我知道，我们过这些过得非常快。\n\n每个程序的生命周期中总有一个时刻它们必须做出重大决定，这只是成长的一部分。你可以利用条件语句来促进这种决策过程。让我们从一个开始。\n\
+    \n```\nbananas = 3\nif bananas == 3:\n    print “I have three bananas!”\n```\n\
+    \n这个程序做的是是将数字 3 赋值给 `bananas`。然后它运行一个检查来看 `bananas` 是否等于 3。如果是，它打印“I have three\
+    \ bananas.”。棒极。如果不是，它就打印……什么都没有。嗯，这真是个棘手。好了。我们如何修复它？我们可以使用 `else` 语句作为兜底，以防 if\
+    \ 条件不满足。\n\n```\nif bananas == 3:\n    print “I have three bananas!”\nelse:\n\
+    \    print “Huh, well, I don’t seem to have three bananas.”\n```\n\n在这种情况下，如果\
+    \ `bananas` 是 3，程序将打印它有 3 根香蕉。如果不是，它将感到困惑并非常清楚地表达出来。但如果它有 0 根香蕉并且很难过并想表达这一点呢？我们已经检查了是否有\
+    \ 3 根，不能也检查是否有 0 根，对吧？\n\n错误。这就是 if else 语句派上用场的地方。\n\n让我们在这里加入一个针对 0 根香蕉的 if\
+    \ else 语句。观察：\n\n```\nif bananas == 3:\n    print “I have three bananas!”\nelif\
+    \ bananas == 0:\n    print “I have no bananas, and this is a problem.”\nelse:\n\
+    \    print “Huh, well, I don’t seem to have three bananas.”\n```\n\n在这种情况下，它检查\
+    \ `bananas` 是否为 3。如果不是，它会检查下一个条件。如果 `bananas` 不是 0，它最终移动到 `else` 语句。if/else 块会在解析到\
+    \ else 语句之前检查每个条件。\n\n# 列表\n\n有时你需要将连接的值存储在一起。这在 Python 中超级简单。假设我们需要存储学生的成绩。\n\
+    \n```\nstudent1Grades = [95, 94, 83, 87, 79, 91]\n```\n\n完美。你现在有一个包含 6 个成绩的列表。你可以访问其中的任何一个。但记住，计算机计数从\
+    \ 0 开始，而不是从 1。所以如果你想打印列表中的第一个项，你应该使用：\n\n```\nprint student1Grades[0]\n```\n\n\
+    # # 会打印 95\n\n你可以超级简单地向列表添加项。\n\n```\nstudent1Grades.append(86)\n```\n\n"
+- fmt: "\nAnd you can delete them just by using the `del` keyword and giving their\
+    \ index position.\n\n```python\ndel student1Grades[3] # would delete the value\
+    \ at index “3”, so the fourth list element - 87\n```\n\nThis would delete `87`\
+    \ and push everything in front of `87` back by one index position.\n\n## Loops\n\
+    \nLoops are another way of handling the flow of a program. There are two sorts\
+    \ of loops in Python: `for` loops and `while` loops. We’ll start with `while`\
+    \ loops, because they’re easier.\n\n`while` loops will repeat themselves for as\
+    \ long as a condition is met:\n\n```python\nx = 1\nwhile x < 10:\n    print x\n\
+    \    x += 1 #adds 1 to x - is same as “x = x + 1”\n```\n\nThis loop would print\
+    \ `1` through `10`.\n\n`for` loops serve a bit of a different purpose, especially\
+    \ in Python; `for` loops are meant specifically to iterate through a list. Let’s\
+    \ take the `student1Grades` example before. If we wanted to print out every grade\
+    \ in that list, we’d do like so:\n\n```python\nstudent1Grades = [95, 94, 83, 87,\
+    \ 79, 91]\nfor i in student1Grades:\n    print i # would print 95, then 94, then\
+    \ 83, etc…\n```\n\nHowever, you can also do the same type of iteration that you\
+    \ can do with `while` loops with `for` loops; it’s not exclusively for list iteration.\
+    \ To count from `1` to `10`, you’d do the following:\n\n```python\nfor num in\
+    \ range(1,10):\n    print num\n```\n\nNote that you can name the iterator variable\
+    \ in a `for` loop anything. Notice how this time, it was `num`, while last time,\
+    \ it was `i`. Crucial little details that will save you confusion later.\n\n##\
+    \ Methods\n\nThis is the last absolutely critical thing to cover in this chapter.\
+    \ Methods are the foundation of every good program. They let you break up your\
+    \ code in a very modular way and separate the program into logical sequences.\
+    \ They also keep you from having to copy and paste code over and over, making\
+    \ your code far prettier than it would be otherwise.\n\nThe basic setup of a method\
+    \ is like so:\n\n```python\ndef methodname(arguments, if any):\n    # code here\n\
+    ```\n\nArguments are things that you can pass into the method as values to be\
+    \ worked with. \n\nLet’s take a method that computes the area of a square, for\
+    \ example:\n\n```python\ndef computeArea(length, width):\n    print length * width\n\
+    ```\n\nWhat this would do is allow somebody to “call” the method, like so:\n\n\
+    ```python\ncomputeArea(3, 4)\n```\n\nand then take the arguments given and do\
+    \ something with them. Arguments are not necessary, but they are helpful in many\
+    \ cases. Not every function will take arguments; some methods will simply serve\
+    \ a standalone purpose.\n\nThe method prior would have printed `length * width`,\
+    \ or, as we just called it, `3 * 4`. So it would have printed `12`.\n\nWhat if\
+    \ we didn’t want it to just print something, though? Once we print the value,\
+    \ it’s gone, it’s not being stored. How can we keep the value? That’s where returning\
+    \ comes into play.\n\n```python\ndef computeArea(length, width):\n    return length\
+    \ * width\n```\n\nThis won’t print the value of `length * width`; rather, it will\
+    \ give it back. Since it’s giving the value back, that means we can store it.\
+    \ So let’s say we had the following code:\n\n```python\ndef computeArea(length,\
+    \ width):\n    return length * width\n\nl = 3\nw = 6\narea = computeArea(l, w)\n\
+    ```\n\nThe variable `area` would take the value of `3 * 6`, or `18`, because we\
+    \ passed the variables `l` and `w` to the method, and it returned us the value\
+    \ of those arguments multiplied by one another.\n\nMethods are immensely useful\
+    \ in keeping your code clean and automating processes that you would otherwise\
+    \ have to be extremely messy about. For this reason, it’s a good idea to practice\
+    \ them and build up as much skill as you can with them.\n\n## Closing\n\nWe managed\
+    \ to hit a lot of the big fundamentals of programming. You aren’t ready to write\
+    \ a massive 15,000 line program - nobody would be after a simple crash course.\
+    \ However, you know what you’re looking at now. It’s through time and exposure\
+    \ that you’ll be able to build up the necessary skills to be an expert programmer.\
+    \ The point of this chapter was to teach you the essentials of programming as\
+    \ they pertain to a Raspberry Pi and the projects that you’ll be doing. It’s going\
+    \ to be incredibly frustrating trying to get up to speed when a lot of the projects\
+    \ that you’ll be working with have been developed by people who seem light years\
+    \ ahead of you in terms of both software development and hardware know-how. The\
+    \ key thing that you’ve got to remember is that everybody had to start from nothing\
+    \ - nobody starts out knowing something. Eventually, you’ll get to a point where\
+    \ you feel comfortable with any project. Perhaps, if you stick with it, you’ll\
+    \ even get to a point where you feel like you’re light years ahead of others.\n"
+  raw: 'And you can delete them just by using the del keyword and giving their index
+    position.
+
+
+    del student1Grades[3] # would delete the value at index “3”, so the fourth list
+    element - 87
+
+
+    This would delete 87 and push everything in front of 87 back by one index position.
+
+
+    Loops? Loops.
+
+
+    Loops are another way of handling the flow of a program. There are two sorts of
+    loops in Python: for loops and while loops. We’ll start with while loops, because
+    they’re easier.
+
+
+    While loops will repeat themselves for as long as a condition is met:
+
+
+    > > > x = 1
+
+
+    > > > while x < 10:
+
+
+    > > > > > print x
+
+
+    > > > > > x += 1 #adds 1 to x - is same as “x = x + 1”
+
+
+    This loop would print 1 through 10.
+
+
+    For loops serve a bit of a different purpose, especially in Python; for loops
+    are meant specifically to iterate through a list. Let’s take the student1Grades
+    example before. If we wanted to print out every grade in that list, we’d do like
+    so:
+
+
+    > > > student1Grades = [95, 94, 83, 87, 79, 91]
+
+
+    > > > for i in student1Grades:
+
+
+    > > > > > print i         # would print 95, then 94, then 83, etc…
+
+
+    However, you can also do the same type of iteration that you can do with while
+    loops with for loops; it’s not exclusively for list iteration. To count from 1
+    to 10, you’d do the following:
+
+
+    > > > for num in range(1,10):
+
+
+    > > > > > print num
+
+
+    Note that you can name the iterator variable in a for loop anything. Notice how
+    this time, it was num, while last time, it was i. Crucial little details that
+    will save you confusion later.
+
+
+    Methods
+
+
+    This is the last absolutely critical thing to cover in this chapter. Methods are
+    the foundation of every good program. They let you break up your code in a very
+    modular way and separate the program into logical sequences. They also keep you
+    from having to copy and paste code over and over, making your code far prettier
+    than it would be otherwise.
+
+
+    The basic setup of a method is like so:
+
+
+    > > > def methodname(arguments, if any):
+
+
+    > > > > > # code here
+
+
+    Arguments are things that you can pass into the method as values to be worked
+    with.
+
+
+    Let’s take a method that computes the area of a square, for example:
+
+
+    > > > def computeArea(length, width):
+
+
+    > > > > > print length * width
+
+
+    What this would do is allow somebody to “call” the method, like so:
+
+
+    > > > computeArea(3, 4)
+
+
+    and then take the arguments given and do something with them. Arguments are not
+    necessary, but they are helpful in many cases. Not every function will take arguments;
+    some methods will simply serve a standalone purpose.
+
+
+    The method prior would have printed length * width, or, as we just called it,
+    3 * 4. So it would have printed 12.
+
+
+    What if we didn’t want it to just print something, though? Once we print the value,
+    it’s gone, it’s not being stored. How can we keep the value? That’s where returning
+    comes into play.
+
+
+    > > > def computeArea(length, width):
+
+
+    > > > > > return length * width
+
+
+    This won’t print the value of length * width; rather, it will give it back. Since
+    it’s giving the value back, that means we can store it. So let’s say we had the
+    following code:
+
+
+    > > > def computeArea(length, width):
+
+
+    > > > > > return length * width
+
+
+    > > > l = 3
+
+
+    > > > w = 6
+
+
+    > > > area = computeArea(l, w)
+
+
+    The variable area would take the value of 3 * 6, or 18, because we passed the
+    variables l and w to the method, and it returned us the value of those arguments
+    multiplied by one another.
+
+
+    Methods are immensely useful in keeping your code clean and automating processes
+    that you would otherwise have to be extremely messy about. For this reason, it’s
+    a good idea to practice them and build up as much skill as you can with them.
+
+
+    Closing
+
+
+    We managed to hit a lot of the big fundamentals of programming. You aren’t ready
+    to write a massive 15,000 line program - nobody would be after a simple crash
+    course. However, you know what you’re looking at now. It’s through time and exposure
+    that you’ll be able to build up the necessary skills to be an expert programmer.
+    The point of this chapter was to teach you the essentials of programming as they
+    pertain to a Raspberry Pi and the projects that you’ll be doing. It’s going to
+    be incredibly frustrating trying to get up to speed when a lot of the projects
+    that you’ll be working with have been developed by people who seem light years
+    ahead of you in terms of both software development and hardware know-how. The
+    key thing that you’ve got to remember is that everybody had to start from nothing
+    - nobody starts out knowing something. Eventually, you’ll get to a point where
+    you feel comfortable with any project. Perhaps, if you stick with it, you’ll even
+    get to a point where you feel like you’re light years ahead of others. Anyhow,
+    speaking of other people’s projects, I’m going to now move on to how you can find
+    project ideas that you’ll absolutely love.
+
+
+    Chapter 5
+
+
+    ![](images/00002.jpg)
+
+
+    Project Ideas
+
+
+    I’m sure that at this point, you’re anxious to actually start working with some
+    neat Raspberry Pi projects. Well, let me tell you that I’m more than excited to
+    get you started on that path.
+
+
+    The first thing that we’re going to focus on in this chapter is learning where
+    you can actually go to find all sorts of cool projects you might not have thought
+    about before. Afterward, we’re going to talk about a super cool project that you
+    can do super easily at home - the magic mirror! I mentioned it at the beginning,
+    but it truly is an incredibly fun and wow-worthy project that will make your mornings
+    brighter and leave visitors speechless.
+
+
+    So first thing’s first: where can you actually go to find projects?
+
+
+    Well, there are a lot of resources that you’ve got access to as somebody who is
+    interested in Raspberry Pi projects. Really, if you’re just looking for inspiration,
+    it’s as simple as Googling “cool raspberry pi projects” - you’ll get a ton of
+    hits on really awesome projects! There’ll surely be something that can spark some
+    sort of interest for you.
+
+
+    However, the three best ones that I’ve found in terms of actual tutorials are,
+    in no particular order, Instructables, Hackster, and Hackaday. All of them have
+    their own strengths and weaknesses.
+
+
+    Let’s take these one at a time.
+
+
+    Instructables is an excellent resource. The link that I’m referring to in particular
+    is audreyobscure’s “Raspberry Pi projects” page at [http://www.instructables.com/id/Raspberry-Pi-Projects/](http://www.instructables.com/id/Raspberry-Pi-Projects/).
+    A lot of these have very in-depth tutorials. The only problem is that some of
+    them are rather deprecated and/or esoteric.
+
+
+    Hackster is by far my favorite. This is primarily because it’s very active. There
+    are constantly people posting new projects, ideas, and concepts. Generally, these
+    will have tutorials. Unlike Instructables, though, many of the projects are just
+    for “show and tell” purposes, or a manner of documenting what the person did without
+    documenting how they did it. Regardless, it’s still an excellent resource for
+    inspiration, and there’s actually quite a bit that you can learn from it as well.
+    The relevant link can be found by going to [http://hackster.io](http://hackster.io)
+    and typing “Raspberry Pi” in the search bar, or simply going to [https://www.hackster.io/raspberry-pi](https://www.hackster.io/raspberry-pi).'
+  toc: []
+  trans: "\n\n你只需要使用 `del` 关键字并提供它们的索引位置即可删除它们。\n\n```python\ndel student1Grades[3]\
+    \ # 将删除索引为“3”的值，即列表中的第四个元素 - 87\n```\n\n这将删除 `87`并将 `87` 之前的所有内容向后移动一个索引位置。\n\n\
+    ## 循环\n\n循环是处理程序流的另一种方式。Python 中有两种循环：`for` 循环和 `while` 循环。我们将从 `while` 循环开始，因为它们更容易理解。\n\
+    \n`while` 循环只要满足条件，就会重复执行：\n\n```python\nx = 1\nwhile x < 10:\n    print x\n \
+    \   x += 1 # 将 x 加 1 - 等于“x = x + 1”\n```\n\n这个循环将打印从 `1` 到 `10` 的数字。\n\n`for`\
+    \ 循环稍有不同，特别是在 Python 中；`for` 循环专门用于遍历列表。让我们以前之前的 `student1Grades` 示例。如果我们想打印该列表中的每一个成绩，可以这样做：\n\
+    \n```python\nstudent1Grades = [95, 94, 83, 87, 79, 91]\nfor i in student1Grades:\n\
+    \    print i # 将打印 95，然后 94，然后 83 等……\n```\n\n然而，你也可以用 `for` 循环完成与 `while` 循环相同类型的迭代；它并不专门用于列表遍历。要从\
+    \ `1` 计数到 `10`，你可以这样做：\n\n```python\nfor num in range(1,10):\n    print num\n\
+    ```\n\n注意，你可以在 `for` 循环中将迭代变量命名为任何名称。注意这次使用的是 `num`，而上一次是 `i`。这些关键的小细节将帮助你以后避免困惑。\n\
+    \n## 方法\n\n这是本章中要涵盖的最后一个绝对重要的内容。方法是每个优秀程序的基础。它们允许你以非常模块化的方式分解代码，并将程序分为逻辑序列。它们还能防止你反复复制和粘贴代码，使你的代码比通常情况下要漂亮得多。\n\
+    \n方法的基本设置如下：\n\n```python\ndef methodname(arguments, if any):\n    # 代码在此处\n```\n\
+    \n参数（Arguments）是你可以作为值传递给方法进行处理的内容。\n\n让我们以计算正方形面积的方法为例：\n\n```python\ndef computeArea(length,\
+    \ width):\n    print length * width\n```\n\n这样做将允许某人“调用”该方法，如下：\n\n```python\n\
+    computeArea(3, 4)\n```\n\n然后获取给定的参数并对其进行处理。参数不是必须的，但在许多情况下很有帮助。并不是每个函数都会接收参数；某些方法只具有独立用途。\n\
+    \n前面的方法将打印 `length * width`，或者说我们刚刚调用的 `3 * 4`。因此，它会打印 `12`。\n\n但是，如果我们不想让它仅仅打印东西呢？一旦打印了值，它就消失了，没有被存储。我们该如何保留这个值呢？这就是返回（returning）发挥作用的地方。\n\
+    \n```python\ndef computeArea(length, width):\n    return length * width\n```\n\
+    \n这不会打印 `length * width` 的值；而是将它返回。由于它返回了值，这意味着我们可以存储它。假设我们有以下代码：\n\n```python\n\
+    def computeArea(length, width):\n    return length * width\n\nl = 3\nw = 6\narea\
+    \ = computeArea(l, w)\n```\n\n变量 `area` 将获得 `3 * 6` 或或 `18` 的值，因为我们将变量 `l` 和 `w`\
+    \ 传递给了方法，而方法返回了这些参数相乘的值。\n\n方法在保持代码整洁以及自动化处理你原本必须处理得极其杂乱的过程方面非常有用。出于这个原因，练习这些方法并尽可能地积累相关技能是一个好主意。\n\
+    \n## 结语\n\n我们涵盖了编程的许多大基础知识。你还没有准备好去写一个巨大的 15,000 行的程序——没有人在经过一个简单的上手课程后就能做到。然而，你现在知道自己在看什么了。通过时间的积累和接触，你将建立起成为专家程序员所需的技能。本章的重点是教你与树莓派以及你将要做的项目相关的编程基础。在追赶的过程中可能会非常沮丧，因为你将面对的很多项目在软件开发和硬件知识方面似乎领先你几个光年。你必须记住的关键是，每个人都必须从零开始——没有人天生就懂。最终，你会达到一个对任何项目都感到从容的状态。也许，如果你坚持下去，甚至会达到觉得自己领先别人几个光年的境界。\n\
+    \n"
+- fmt: '
+
+    Hackaday is the last one that I mentioned. This community is a little tighter
+    than the one on Hackster. The posts are thus a little bit more tightly regulated,
+    too. Because the posts are automatically sorted by number of likes rather than
+    age or time last updated (you can sort them by those, don’t worry), it’s easy
+    to get duped into looking at a super cool project and then have the files be deprecated,
+    so be wary of how up to date a project actually is, what version of the `Raspberry
+    Pi` it uses, and so forth. This site is actually worse about “show and tell” type
+    projects, miraculously, but that’s alright - people make beautiful and amazing
+    things and they want to show them off! No problem. It’s an excellent source for
+    tutorials and inspiration alike. To access the Hackaday Raspberry Pi projects,
+    simply follow this link. [https://hackaday.io/projects/tag/raspberry%20pi](https://hackaday.io/projects/tag/raspberry%20pi)
+
+
+    Those are my three favorite resources for inspiration and project ideas. I’ve
+    made quite a few things with `Raspberry Pis` at this point, largely driven by
+    the ideas that I’ve gotten from these sites. It’s not all looking at other people’s
+    stuff, though; remember that the best things you’ll ever make are the things you’re
+    passionate about. Find a way to loop your own passions into your next project.
+
+
+    # Chapter 6
+
+
+    ![](images/00002.jpg)
+
+
+    ## Your First Project - A Portable Superconsole
+
+
+    This is a relatively ambitious first project, but if you stick it out and follow
+    the instructions carefully, then you’ll find yourself with a really seriously
+    cool end product. This is an especially great project for video game enthusiasts.
+
+
+    I’ve pointed out several times in this book how the `Raspberry Pi` has been used
+    by people to build things like custom arcade cabinets and portable handheld consoles.
+    Well, now you’re going to follow in those footsteps by making your own portable
+    handheld console.
+
+
+    So, you may be wondering what makes this different from every other project like
+    this one? Well, the biggest factor which sets this one in particular apart is
+    the fact that it is far more covert. What you get with this project is essentially
+    a self-contained emulation station. What’s more is that if you have a child who
+    likes gaming, they very well may enjoy taking this project on with you.
+
+
+    What’s even cooler is that the console may seem self-contained, but you can use
+    any `USB controller` you like and play games from literally all throughout the
+    history of gaming. The only point at which the `Raspberry Pi` has issues is the
+    `PS2` and `GameCube` era - up until then is fair game.
+
+
+    The optimal target console for this project is one which is broken and is sitting
+    around. Bigger is better, and the more smooth/balance of a design, the better.
+    For example, on the original project, I used an `NES` that had been sitting around
+    forever. I’m sure that, if you’re an avid enough gamer to take this on, you’ll
+    have an apt console sitting somewhere. The `NES` is the perfect console for it.
+    However, if there isn’t an `NES`, anything that can be unscrewed and opened and
+    shut easily is great.
+
+
+    If you don’t have an old and broken console sitting around, you can go on eBay
+    and find gutted/broken consoles for extremely cheap.
+
+
+    In taking on this project, these are the things you’ll need:
+
+
+    - A broken console
+
+    - Hinges (to open and close the console “lid”)
+
+    - Permanent marker
+
+    - Drill with bits that are made to drill through plastic
+
+    - `Raspberry Pi 3`
+
+    - Screen, for this I recommend that you grab a smaller display. This 5”one should
+    be apt: [https://www.amazon.com/Resistive-interface-compatible-Raspberry-Pi/dp/B00U21UA16](https://www.amazon.com/Resistive-interface-compatible-Raspberry-Pi/dp/B00U21UA16).
+    The key objective is that it’s able to fit in the top half of the system after
+    gutting and sanding - speaking of which..
+
+    - Numerous grits of either sandpaper or a sanding block
+
+    - `USB controller` - you can use an `Xbox 360 controller` or even get a `USB NES/SNES
+    controller` on Amazon. Be sure to check the reviews on whatever you get, as some
+    of the controllers on Amazon are absolutely terrible. It’s worth a few dollars
+    more for quality - trust me.
+
+    - Headphones or speakers that will fit in ordinary 3.5 mm headphone jacks. If
+    you’re using speakers, then a flat design is far preferable because it can balance
+    out the heaviness from the screen.
+
+    - Very weighty linen, like old curtains
+
+    - Screwdriver
+
+
+    Alright, now that we’ve got all the necessary materials out of the way, let’s
+    get cracking with this. The system that I’m going to use as an example is an `NES`,
+    because it’s what I know and it’s what I’ve done the project on before. However,
+    if you aren’t using an `NES`, the basic concepts are rather similar.
+
+
+    Anyway, back to the `NES`. You need to open it up. This is extremely easy. There
+    is a set of screws fastening the bottom half of the `NES` to the top half. All
+    that you do is unscrew those. Then, your `NES` should be open.
+
+
+    Now you need to take all of the `NES` components out. By this, I mean the motherboard
+    and all of the wires. You can leave in the buttons and the controller ports, though,
+    if you’d like - they add a nice sort of aesthetic to the whole thing and are rather
+    nice to look at. Other than what you decide to leave in, you’re gutting it entirely.
+    Gut more, not less - you need space to work with when it comes to the important
+    components.
+
+
+    I’ve already told you how to install `Raspbian`, so I’d rather not do so all over
+    again. It’d, frankly, be a waste of both your time and mine. Instead, I’m just
+    going to assume that you can do all of the `Raspbian` setup yourself. The important
+    part is this guide is actually `RetroPie`. What `RetroPie` does is act as a shell
+    to `Raspbian`. It makes it so that when you boot into `Raspbian`, you automatically
+    load the emulator packages that are necessary and are basically shot into your
+    game station instantly.
+
+
+    There’s a legal obligation, really, to denote that emulator usage is illegal unless
+    you actually own the game that you are playing. It’s literally illegal to have
+    `ROMs` of games of which you don’t have a tangible copy. The chances of anybody
+    coming after you are incredibly, incredibly low, but they are there. This is me
+    copping out and saying “don’t say I didn’t warn you” if you play illegal `ROMs`.
+
+
+    So, going on to RetroPie’s installation. First, you should have `Raspbian` set
+    up, of course, and your `Raspberry Pi` should be connected to the display that
+    you needed. Once `Raspbian` is set up and we’re connected to either a wired or
+    wireless internet connection, you need to open `Terminal`.
+
+
+    In `Terminal`, we need to update our packages. If you’re not terribly savvy then
+    this is simple enough. All that you have to do is type this:
+
+
+    ```
+
+    sudo apt-get update
+
+    ```
+
+
+    and press Enter. Then you just type this:
+
+
+    ```
+
+    sudo apt-get upgrade
+
+    ```
+
+
+    and Enter again. After all of that is done, your package list will be completely
+    updated and you’ll be ready to install `RetroPie`.
+
+
+    Well, almost. `RetroPie` has a set of dependencies that it has to have, first.
+    You can grab these dependencies by going to `Terminal` and installing `lsb-release`
+    from the `git` repository, like so:
+
+
+    ```
+
+    sudo apt-get install git lsb-release
+
+    ```
+
+
+    When that’s finished, we just need to get the `RetroPie` installation scripts.
+    This is pretty simple, too.
+
+
+    > Just type the following:
+
+
+    ```
+
+    cd
+
+    ```
+
+
+    and press Enter. This will make you go to the root of your C drive. Next, what
+    you do is grab the `RetroPie` script from the repository, like so:
+
+
+    ```
+
+    git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
+
+    ```
+
+
+    Once you have the script download, you have to make it so that a person is able
+    to execute the script. This is pretty easy, as well! First, you go to the `RetroPie`
+    folder:
+
+
+    ```
+
+    cd RetroPie-Setup
+
+    ```
+
+
+    (caps are important! Pay attention to that!)
+
+
+    Then you change the permissions:
+
+    '
+  raw: 'Hackaday is the last one that I mentioned. This community is a little tighter
+    than the one on Hackster. The posts are thus a little bit more tightly regulated,
+    too. Because the posts are automatically sorted by number of likes rather than
+    age or time last updated (you can sort them by those, don’t worry), it’s easy
+    to get duped into looking at a super cool project and then have the files be deprecated,
+    so be wary of how up to date a project actually is, what version of the Raspberry
+    Pi it uses, and so forth. This site is actually worse about “show and tell” type
+    projects, miraculously, but that’s alright - people make beautiful and amazing
+    things and they want to show them off! No problem. It’s an excellent source for
+    tutorials and inspiration alike. To access the Hackaday Raspberry Pi projects,
+    simply follow this link. [https://hackaday.io/projects/tag/raspberry%20pi](https://hackaday.io/projects/tag/raspberry%20pi)
+
+
+    Those are my three favorite resources for inspiration and project ideas. I’ve
+    made quite a few things with Raspberry Pis at this point, largely driven by the
+    ideas that I’ve gotten from these sites. It’s not all looking at other people’s
+    stuff, though; remember that the best things you’ll ever make are the things you’re
+    passionate about. Find a way to loop your own passions into your next project.
+
+
+    Chapter 6
+
+
+    ![](images/00002.jpg)
+
+
+    Your First Project - A Portable Superconsole
+
+
+    This is a relatively ambitious first project, but if you stick it out and follow
+    the instructions carefully, then you’ll find yourself with a really seriously
+    cool end product. This is an especially great project for video game enthusiasts.
+
+
+    I’ve pointed out several times in this book how the Raspberry Pi has been used
+    by people to build things like custom arcade cabinets and portable handheld consoles.
+    Well, now you’re going to follow in those footsteps by making your own portable
+    handheld console.
+
+
+    So, you may be wondering what makes this different from every other project like
+    this one? Well, the biggest factor which sets this one in particular apart is
+    the fact that it is far more covert. What you get with this project is essentially
+    a self-contained emulation station. What’s more is that if you have a child who
+    likes gaming, they very well may enjoy taking this project on with you.
+
+
+    What’s even cooler is that the console may seem self-contained, but you can use
+    any USB controller you like and play games from literally all throughout the history
+    of gaming. The only point at which the Raspberry Pi has issues is the PS2 and
+    GameCube era - up until then is fair game.
+
+
+    The optimal target console for this project is one which is broken and is sitting
+    around. Bigger is better, and the more smooth/balance of a design, the better.
+    For example, on the original project, I used an NES that had been sitting around
+    forever. I’m sure that, if you’re an avid enough gamer to take this on, you’ll
+    have an apt console sitting somewhere. The NES is the perfect console for it.
+    However, if there isn’t an NES, anything that can be unscrewed and opened and
+    shut easily is great.
+
+
+    If you don’t have an old and broken console sitting around, you can go on eBay
+    and find gutted/broken consoles for extremely cheap.
+
+
+    In taking on this project, these are the things you’ll need:
+
+
+    > > > > •A broken console
+
+
+    > > > > •Hinges (to open and close the console “lid’)
+
+
+    > > > > •Permanent marker
+
+
+    > > > > •Drill with bits that are made to drill through plastic
+
+
+    > > > > •Raspberry Pi 3
+
+
+    > > > > •Screen, for this I recommend that you grab a smaller display. This 5”one
+    should be apt: [https://www.amazon.com/Resistive-interface-compatible-Raspberry-Pi/dp/B00U21UA16](https://www.amazon.com/Resistive-interface-compatible-Raspberry-Pi/dp/B00U21UA16).
+    The key objective is that it’s able to fit in the top half of the system after
+    gutting and sanding - speaking of which..
+
+
+    > > > > •Numerous grits of either sandpaper or a sanding block
+
+
+    > > > > •USB controller - you can use an Xbox 360 controller or even get a USB
+    NES/SNES controller on Amazon. Be sure to check the reviews on whatever you get,
+    as some of the controllers on Amazon are absolutely terrible. It’s worth a few
+    dollars more for quality - trust me.
+
+
+    > > > > •Headphones or speakers that will fit in ordinary 3.5 mm headphone jacks.
+    If you’re using speakers, then a flat design is far preferable because it can
+    balance out the heaviness from the screen.
+
+
+    > > > > •Very weighty linen, like old curtains
+
+
+    > > > > •Screwdriver
+
+
+    Alright, now that we’ve got all the necessary materials out of the way, let’s
+    get cracking with this. The system that I’m going to use as an example is an NES,
+    because it’s what I know and it’s what I’ve done the project on before. However,
+    if you aren’t using an NES, the basic concepts are rather similar.
+
+
+    Anyway, back to the NES. You need to open it up. This is extremely easy. There
+    is a set of screws fastening the bottom half of the NES to the top half. All that
+    you do is unscrew those. Then, your NES should be open.
+
+
+    Now you need to take all of the NES components out. By this, I mean the motherboard
+    and all of the wires. You can leave in the buttons and the controller ports, though,
+    if you’d like - they add a nice sort of aesthetic to the whole thing and are rather
+    nice to look at. Other than what you decide to leave in, you’re gutting it entirely.
+    Gut more, not less - you need space to work with when it comes to the important
+    components.
+
+
+    I’ve already told you how to install Raspbian, so I’d rather not do so all over
+    again. It’d, frankly, be a waste of both your time and mine. Instead, I’m just
+    going to assume that you can do all of the Raspbian setup yourself. The important
+    part is this guide is actually RetroPie. What RetroPie does is act as a shell
+    to Raspbian. It makes it so that when you boot into Raspbian, you automatically
+    load the emulator packages that are necessary and are basically shot into your
+    game station instantly.
+
+
+    There’s a legal obligation, really, to denote that emulator usage is illegal unless
+    you actually own the game that you are playing. It’s literally illegal to have
+    ROMs of games of which you don’t have a tangible copy. The chances of anybody
+    coming after you are incredibly, incredibly low, but they are there. This is me
+    copping out and saying “don’t say I didn’t warn you” if you play illegal ROMs.
+
+
+    So, going on to RetroPie’s installation. First, you should have Raspbian set up,
+    of course, and your Raspberry Pi should be connected to the display that I mentioned
+    you needed earlier. Once Raspbian is set up and we’re connected to either a wired
+    or wireless internet connection, you need to open Terminal.
+
+
+    In Terminal, we need to update our packages. If you’re not terribly Linux savvy
+    then this is simple enough. All that you have to do is type this:
+
+
+    > > > sudo apt-get update
+
+
+    > > > and press Enter. Then you just type this:
+
+
+    > > > sudo apt-get upgrade
+
+
+    and press Enter again. After all of that is done, your package list will be completely
+    updated and you’ll be ready to install RetroPie.
+
+
+    Well, almost. RetroPie has a set of dependencies that it has to have, first. You
+    can grab these dependencies by going to Terminal and installing lsb-release from
+    the git repository, like so:
+
+
+    > > > sudo apt-get install git lsb-release
+
+
+    When that’s finished, we just need to get the RetroPie installation scripts. This
+    is pretty simple, too.
+
+
+    > > > Just type the following:
+
+
+    > > > cd
+
+
+    and press Enter. This will make you go to the root of your C drive. Next, what
+    you do is grab the RetroPie script from the repository, like so:
+
+
+    > > > git clone —depth=1 [https://github.com/RetroPie/RetroPie-Setup.git](https://github.com/RetroPie/RetroPie-Setup.git)
+
+
+    Once you have the script download, you have to make it so that a person is able
+    to execute the script. This is pretty easy, as well! First, you go to the RetroPie
+    folder:
+
+
+    > > > cd RetroPie-Setup
+
+
+    > > > (caps are important! Pay attention to that!)
+
+
+    Then you change the permissions:'
+  toc: []
+  trans: '
+
+    Hackaday 是我提到的最后一个。这个社区比 Hackster 上的要紧凑一点。因此，其帖子的管理也稍微严格一些。因为帖子是根据点赞数自动排序，而不是根据日期或最后更新时间（你可以按这些标准排序，不用担心），所以很容易被误导去查看一个超级酷的项目，结果发现它的文件已经过时了，所以要留意项目实际上到底更新有多新、它使用的是哪个版本的
+    `Raspberry Pi` 等。很奇妙的是，这个网站在“展示与分享”类项目方面其实更糟糕，但没关系——人们创造了美妙且惊人的事物，他们就是想要展示出来！没问题。它是获取教程和灵感的绝佳来源。要访问
+    Hackaday 的树莓派项目，只需点击此链接：[`hackaday.io/projects/tag/raspberry%20pi`](https://hackaday.io/projects/tag/raspberry%20pi)
+
+
+    这些是我最喜欢的获取灵感和项目点意的三个资源。到目前，我已经用 `Raspberry Pis` 做了很多东西，这在很大程度上是因为从这些网站获得的灵感驱动。不过，这不仅仅是看别人的东西；记住，你所能的最棒的东西是你热爱的领域。找一种方法将你自己的热情融入你的下一个项目中。
+
+
+    # 第 6 章
+
+
+    ![](img/00002.jpg)
+
+
+    ## 你的第一个项目 - 便携式超级主机
+
+
+    这是一个非常有野心的第一个项目，但如果你坚持下去并仔细按照说明操作，你会发现自己拥有了一个非常酷炫的成品。对于视频游戏爱好者来说，这是一个特别棒的项目。
+
+
+    我在书中已经多次提到人们如何使用 `Raspberry Pi` 构建诸如定制街机柜和便携掌持游戏机之类的东西。现在，你将追随他们的脚步，制作你自己的便携掌持游戏机。
+
+
+    所以，你可能想知道这和其他任何类似项目有什么不同？嗯，让这个特定项目脱颖出的最大因素是它要隐蔽得多。通过这个项目你获得的本质上是一个自包含的仿真站。更重要的是，如果你有一个喜欢游戏的孩子，他们可能非常喜欢和你一起完成这个项目。
+
+
+    更酷的是，这个主机看起来是自包含的，但你可以使用任何你喜欢的 `USB controller`，并玩几乎整个游戏历史上的游戏。`Raspberry Pi`
+    唯一出现问题的是 `PS2` 和 `GameCube` 时代——在此之前的都是可以尝试的。
+
+
+    这个项目的最佳目标主机是一个坏掉并闲置在家里的主机。越大越好，设计越平滑/平衡越好。例如，在原始项目中，我使用了一个被闲置很久的 `NES`。我确信，如果你是一个足够热爱的玩家并决定尝试这个项目，你会在某处拥有一台合适的主机。`NES`
+    是适合它的完美主机。然而，如果没有 `NES`，任何可以拆卸螺丝并轻松打开和关闭的设备都是棒的。
+
+
+    如果你手里没有闲置的旧坏主机，可以去 eBay 上以非常便宜的价格买到拆空/坏掉的主机。
+
+
+    在进行这个项目时，你需要这些东西：
+
+
+    - 一台坏掉的主机
+
+    - 合页（用于打开和关闭主机的“盖子”）
+
+    - 永久记号笔
+
+    - 带有钻塑料钻头的电钻
+
+    - `Raspberry Pi 3`
+
+    - 屏幕，对于这个建议你买一个小小的显示器。这个 5 英寸的应该合适：[`www.amazon.com/Resistive-interface-compatible-Raspberry-Pi/dp/B00U21UA16`](https://www.amazon.com/Resistive-interface-compatible-Raspberry-Pi/dp/B00U21UA16)。关键目标是它在拆空和打磨后能够放入系统的上半部分——说到这儿……
+
+    - 许多不同目数的砂纸或打磨块
+
+    - `USB controller` - 你可以使用任何喜欢的 `Xbox 360 controller`，甚至可以在 Amazon 上买一个 `USB NES/SNES
+    controller`。务必检查你买的任何种东西的评论，因为 Amazon 上的某些控制器绝对糟糕。为了质量多花几块钱是值得的——相信我。
+
+    - 可以放入普通 3.5 mm 耳机接口的耳机或扬声器。如果你使用扬声器，扁平的设计要好得多，因为它可以平衡屏幕带来的重量感。
+
+    - 很重的亚麻布，比如旧窗帘
+
+    - 螺丝刀
+
+
+    好了，既然我们已经备齐了所有必要的材料，让我们开始动工吧。我将作为示例使用的系统是一个 `NES`，因为我熟悉它，而且我以前在这个项目上用过它。然而，如果你没用
+    `NES`，基本概念是非常类似的。
+
+
+    总之，回到 `NES`。你需要打开它。这非常简单。有一组螺丝将 `NES` 的下半部分固定在上半部分上。你只需要卸下那些螺丝即可。然后，你的 `NES` 应该就打开了。
+
+
+    现在你需要取出所有的 `NES` 组件。我的意思是主板和所有的电线。不过，如果你愿意的话，可以留着按钮和控制器端口——它们为整个东西增添了某种很美感，而且看起来也很好。除了你决定留下的部分外，你要对它进行彻底拆空。多拆一点，不要少拆一点好——当涉及到重要组件时，你需要操作空间。
+
+
+    我已经告诉过你如何安装 `Raspbian` 了，所以我不想再重来一遍。坦率说，这会浪费你和我的时间。相反，我将假设你可以自己完成所有的 `Raspbian`
+    设置。重要的部分是本指南实际上是关于 `RetroPie`。`RetroPie` 的作用是作为 `Raspbian` 的外壳。它让你在进入 `Raspbian`
+    时，自动加载必要的仿真器包，并基本上瞬间射入你的游戏站中。
+
+
+    实际上，有法律义务指出，除非你真的拥有你正在玩的游戏，否则使用仿真器是违法的。拥有你没有实体拷贝的游戏 `ROMs` 在字面意义上是非法的。有人来找你的概率极低、极低，但这种可能性确实存在。这是我在推卸责任并说“如果你玩非法
+    `ROMs` 别说我没警告过你”。
+
+
+    所以，现在开始 RetroPie 的安装。首先，你应该设置好了 `Raspbian`，并且你的 `Raspberry Pi` 应该连接了显示器。一旦 `Raspbian`
+    设置好且我们连接了有线或无线网络，你需要打开 `Terminal`。
+
+
+    在 `Terminal` 中，我们需要更新包。如果你不是非常精通，这非常简单。你只需要输入：
+
+
+    ```
+
+    sudo apt-get update
+
+    ```
+
+
+    然后按回车。接着你输入：
+
+
+    ```
+
+    sudo apt-get upgrade
+
+    ```
+
+
+    再次按回车。在完成这一切之后，你的包列表将完全更新，你就可以安装 `RetroPie` 了。
+
+
+    差，差。`RetroPie` 有一组它必须拥有的依赖项，首先。你可以通过进入 `Terminal` 并从 `git` 仓库安装 `lsb-release`
+    来获取这些依赖项，如下：
+
+
+    ```
+
+    sudo apt-get install git lsb-release
+
+    ```
+
+
+    完成后，我们只需要获取 `RetroPie` 安装脚本。这也很简单。
+
+
+    > 只输入以下：
+
+
+    ```
+
+    cd
+
+    ```
+
+
+    并按回车。这将让你进入 C 盘根目录。接下来，你做是从仓库获取 `RetroPie` 脚本，如下：
+
+
+    ```
+
+    git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
+
+    ```
+
+
+    一旦脚本下载完成，你必须让它变得可以执行该脚本。这也很简单！首先，你进入 `RetroPie` 文件夹：
+
+
+    ```
+
+    cd RetroPie-Setup
+
+    ```
+
+
+    （大写很重要！注意这一点！）
+
+
+    然后你修改权限：
+
+    '
+- fmt: '
+
+    ```
+
+    chmod +x retropie_setup.sh
+
+    ```
+
+
+    Then you give the folder admin permissions:
+
+
+    ```bash
+
+    sudo ./retropie_setup.sh
+
+    ```
+
+
+    If any of this doesn’t work, try throwing the keyword `sudo` before it, which
+    elevates you to root privileges.
+
+
+    Afterward, you need to double check that your system locale is correct. This is
+    because the things which are needed for all of the RetroPie emulators to run take
+    specific files which will vary depending upon the location of the user. In order
+    to check this, all you have to do is run `locale` from the Terminal.
+
+
+    Make sure that everything is set. If something isn’t, then it needs to be. There’s
+    a really simple way to do this. First, make sure you understand what your locale
+    is. For example, yours could be `en_US.UTF-6`. Then place that locale in the following
+    command in place of the italicized `userLocale`:
+
+
+    ```bash
+
+    sudo update-locale LC_ALL="userLocale”
+
+    ```
+
+
+    Including quotes, of course. From here, we just need to install RetroPie itself.
+
+
+    There are two different ways that you can install RetroPie. You can either do
+    a full or a partial install. If you’re only wanting certain systems to be playable,
+    then you should definitely do the partial install. However, if that is not the
+    case, then the full install is much easier and much more full-featured.
+
+
+    ### Full Installation
+
+
+    All that you do here is execute the RetroPie-Setup script. When it starts to execute,
+    you’ll eventually land on a screen where it says “manage packages”. From here,
+    you’ll simply toggle “Quick Install” and then comfirm by pressing Enter. Definitely
+    one of the easiest things in this whole book, no? When you do a full installation,
+    it also creates the exact folders that you’ll need to store your ROMs in. If you’ve
+    followed this book relatively to the letter, they’re going to be under `~/RetroPie/roms`.
+
+
+    ### Partial Installation
+
+
+    This solution is much lighter on your SD card if you’re wary of how much storage
+    you have (or want) to use. Using this option, you’re able to use your own discretion
+    at which emulators you do and don’t want installed. Remember that there are a
+    few packages that you have to have in order for RetroPie to even run:
+
+
+    *   RetroArch, the UI for RetroPie
+
+    *   Emulation Station, the backbone of the system which starts and sorts the ROMs
+    that you’ve got tucked away in your little folders.
+
+    *   RetroPie Menu, rather self-explanatory
+
+    *   Runcommand, honestly not certain what this one does but it sounds important
+    and it doesn’t work without it
+
+
+    So you need to install all of those packages. Once they’re install, you can seek
+    through the list of packages that are available and determine which emulators
+    you do (and don’t) want.
+
+
+    Next, all that we’ve got to do is make it so Emulation Station will run first
+    thing when the Pi starts up. Toggling this setting is actually extremely easy.
+    From within RetroPie, all that you do is go to `Setup Script`. From here, you’re
+    going to head to the Configuration and Tools menu, wherein there will be an Autostart
+    submenu. Numerous different boot conditions for the Pi are listed, but all you’re
+    going to do is toggle the first, which reads “Start Emulation Station at boot”.
+
+
+    You can try restarting your Pi now, just to be certain that everything is in working
+    order. Unplug and restart your Pi. If it boots into Emulation Station first thing,
+    then you know you did everything right. If it doesn’t, then something went awry
+    and you need to retrace your steps and figure out what went wrong.
+
+
+    If everything is working then we need to talk about how to put ROMs on your Raspberry
+    Pi. The easiest way to put ROMs on your Pi, by far, is to simply use a USB drive.
+    Thus, this is the method that I’m going to go over for you.
+
+
+    So, the first thing that you need to do is format your USB drive to `FAT32`. We
+    talked about how to do this earlier, but with SD cards. The process, however,
+    is exactly the same. Simply follow those same steps that we did earlier to format
+    the SD card, but relative to the USB drive.
+
+
+    Then, once it’s formatted, what you do is open the drive and then create a folder
+    called `retropie`, exactly like that. Then take your USB drive out of your primary
+    computer and insert it into your Pi. The drive will start blinking, this signifies
+    that active file system changes are happening. This is what you want. When the
+    blinking stops, you just take the drive out.
+
+
+    Put it back in your original PC. You’ll see a whole lot of new folders that weren’t
+    there before. These are where you put your ROMs. You just drag the ROM to the
+    correct system/emulator’s ROM folder, and then you’re good to go. You can add
+    as many as your drive will hold. It may take a bit for the transfer to complete,
+    but it’ll happen.
+
+
+    When the transfer has completed, put the USB drive back in the Pi. It’s going
+    to start blinking again; wait it out. When it’s all done, all you need to do is
+    refresh Emulation Station. You do so by pressing the `F4` key. Hopefully, you’ll
+    see all of the new games that you loaded onto the USB right there for you to play.
+
+
+    So now we’re in the final stretch of all of this business: taking our console
+    and making this project truly ours. We’ve got our Raspberry Pi working, RetroPie
+    is taking care of all of the heavy lifting for us. Now all that we need to do
+    is seal the deal on the project.
+
+    '
+  raw: '> > > chmod +x retropie_setup.sh
+
+
+    Then you give the folder admin permissions:
+
+
+    > > > sudo ./retropie_setup.sh
+
+
+    If any of this doesn’t work, try throwing the keyword “sudo” before it, which
+    elevates you to root privileges.
+
+
+    Afterward, you need to double check that your system locale is correct. This is
+    because the things which are needed for all of the RetroPie emulators to run take
+    specific files which will vary depending upon the location of the user. In order
+    to check this, all you have to do is run locale from the Terminal.
+
+
+    Make sure that everything is set. If something isn’t, then it needs to be. There’s
+    a really simple way to do this. First, make sure you understand what your locale
+    is. For example, yours could be en_US.UTF-6. Then place that locale in the following
+    command in place of the italicized “userLocale”:
+
+
+    > > > sudo update-locale LC_ALL=“userLocale”
+
+
+    Including quotes, of course. From here, we just need to install RetroPie itself.
+
+
+    There are two different ways that you can install RetroPie. You can either do
+    a full or a partial install. If you’re only wanting certain systems to be playable,
+    then you should definitely do the partial install. However, if that is not the
+    case, then the full install is much easier and much more full-featured.
+
+
+    Full Installation
+
+
+    All that you do here is execute the RetroPie-Setup script. When it starts to execute,
+    you’ll eventually land on a screen where it says “manage packages”. From here,
+    you’ll simply toggle “Quick Install” and then comfirm by pressing Enter. Definitely
+    one of the easiest things in this whole book, no? When you do a full installation,
+    it also creates the exact folders that you’ll need to store your ROMs in. If you’ve
+    followed this book relatively to the letter, they’re going to be under ~/RetroPie/roms.
+
+
+    Partial Installation
+
+
+    This solution is much lighter on your SD card if you’re wary of how much storage
+    you have (or want) to use. Using this option, you’re able to use your own discretion
+    at which emulators you do and don’t want installed. Remember that there are a
+    few packages that you have to have in order for RetroPie to even run:
+
+
+    > > > > •RetroArch, the UI for RetroPie
+
+
+    > > > > •Emulation Station, the backbone of the system which starts and sorts
+    the ROMs that you’ve got tucked away in your little folders.
+
+
+    > > > > •RetroPie Menu, rather self-explanatory
+
+
+    > > > > •Runcommand, honestly not certain what this one does but it sounds important
+    and it doesn’t work without it
+
+
+    So you need to install all of those packages. Once they’re install, you can seek
+    through the list of packages that are available and determine which emulators
+    you do (and don’t) want.
+
+
+    Next, all that we’ve got to do is make it so Emulation Station will run first
+    thing when the Pi starts up. Toggling this setting is actually extremely easy.
+    From within RetroPie, all that you do is go to Setup Script. From here, you’re
+    going to head to the Configuration and Tools menu, wherein there will be an Autostart
+    submenu. Numerous different boot conditions for the Pi are listed, but all you’re
+    going to do is toggle the first, which reads “Start Emulation Station at boot”.
+
+
+    You can try restarting your Pi now, just to be certain that everything is in working
+    order. Unplug and restart your Pi. If it boots into Emulation Station first thing,
+    then you know you did everything right. If it doesn’t, then something went awry
+    and you need to retrace your steps and figure out what went wrong.
+
+
+    If everything is working then we need to talk about how to put ROMs on your Raspberry
+    Pi. The easiest way to put ROMs on your Pi, by far, is to simply use a USB drive.
+    Thus, this is the method that I’m going to go over for you.
+
+
+    So, the first thing that you need to do is format your USB drive to FAT32\. We
+    talked about how to do this earlier, but with SD cards. The process, however,
+    is exactly the same. Simply follow those same steps that we did earlier to format
+    the SD card, but relative to the USB drive.
+
+
+    Then, once it’s formatted, what you do is open the drive and then create a folder
+    called “retropie”, exactly like that. Then take your USB drive out of your primary
+    computer and insert it into your Pi. The drive will start blinking, this signifies
+    that active file system changes are happening. This is what you want. When the
+    blinking stops, you just take the drive out.
+
+
+    Put it back in your original PC. You’ll see a whole lot of new folders that weren’t
+    there before. These are where you put your ROMs. You just drag the ROM to the
+    correct system/emulator’s ROM folder, and then you’re good to go. You can add
+    as many as your drive will hold. It may take a bit for the transfer to complete,
+    but it’ll happen.
+
+
+    When the transfer has completed, put the USB drive back in the Pi. It’s going
+    to start blinking again; wait it out. When it’s all done, all you need to do is
+    refresh Emulation Station. You do so by pressing the F4 key. Hopefully, you’ll
+    see all of the new games that you loaded onto the USB right there for you to play.
+
+
+    So now we’re in the final stretch of all of this business: taking our console
+    and making this project truly ours. We’ve got our Raspberry Pi working, RetroPie
+    is taking care of all of the heavy lifting for us. Now all that we’ve got to do
+    is seal the deal on the project.
+
+
+    At this point, we’ve already gutted the console. If you followed my recommendations
+    for finding an ideal console (cough cough the NES), then it should be pretty much
+    perfect for a hinge layout. This is actually why I’m pushing for the NES on this
+    project: its design is so stupidly easy. The NES is two parts, with everything
+    important in the pit thereof. So it’s actually pretty much perfect for everything
+    we’re wanting to do here, because if we set it up with hinges, it will open/close
+    with no issue at all, and will actually look quite good doing it.
+
+
+    That brings us to our next part of this project: putting the hinges on the console.
+    In your mind, visualize where you want the hinges to be and how you want the console
+    to open up. Take your Sharpie and try to leave as accurate of marks as possible
+    for what you’re wanting. Then take the drill and bore holes there, very slowly,
+    using the plastic bits. Once the holes are in place, simply put the hinges on
+    and then test them out.
+
+
+    Now, we just have to start carving our way out within the system for our electronics.
+    Figure out how much room that you need for your screen. Is it big enough? What
+    will you have to sand down to get it to fit? Figure out what dimensions you’re
+    going after and then start sanding out a place for your display/Pi duo. Take it
+    very slowly and very carefully, because plastic sands off very quickly and you
+    may take far more than you’re intending.
+
+
+    Once all of that is done, look at the screw holes of the Raspberry pi and determine
+    where in the lid of the console you need to bore holes for the display to fit
+    and be fastened. The way that I would do this is with a simple nut/screw setup.
+    Bore the holes, put the screws through the top and then fasten a bolt so that
+    the Pi is secure. This is extremely noticeable, but most people won’t actually
+    realize the screws are there at all unless you point the system out. The system,
+    thus, maintains its cool and conspicuous edge. There are different ways to do
+    this, but honestly, I’m not so sure that they’d be anywhere near as secure as
+    this method. If you decide to do something else and your Pi falls in the case
+    and your display cracks, it’s not my fault.
+
+
+    At this point, your Raspberry Pi should be secured, and should move with the lid
+    of the console when you open and close it. Before you test, though, put the cloth
+    that I told you to have in the bottom half of the console. This is a great idea
+    for two reasons specifically:
+
+
+    > > > > 1\. It’s a form of insurance in case your Pi isn’t secure - your screen
+    and Pi will be buffered against the linen rather than the hard plastic.
+
+
+    > > > > 2\. It’ll balance out the heavy screen and Pi fastened to the lid.'
+  toc: []
+  trans: '
+
+    chmod +x retropie_setup.sh
+
+
+    然后你给文件夹授予管理员权限：
+
+
+    ```bash
+
+    sudo ./retropie_setup.sh
+
+    ```
+
+
+    如果这任何地方不工作，尝试在前面加上关键字 `sudo`，这将提升你到根权限。
+
+
+    随后，你需要再次检查系统的 locale 是否正确。这是因为所有 RetroPie 模拟器运行所需的东西会使用特定的文件，这些文件会因用户的位置而有所不同。要检查这一点，只需在终端中运行
+    `locale`。
+
+
+    确保一切已设置好。如果有什么未设置，则需要设置。
+
+
+    有一种非常简单的方法可以做到这一点。首先，确保你了解自己的 locale。例如，你的 locale 可能是 `en_US.UTF-6`。
+
+
+    然后在下面的命令中将斜体的 `userLocale` 替换为该 locale：
+
+
+    ```bash
+
+    sudo update-locale LC_ALL="userLocale”
+
+    ```
+
+
+    当然包括引号。
+
+
+    从此，我们只需要安装 RetroPie 本身。
+
+
+    你可以选择全装或部分安装的两种不同方式来安装 RetroPie。如果你只想让某些系统可玩，那么肯定应该进行部分安装。但如果情况并非如此，则全装更加容易且功能更为丰富。
+
+
+    ### 全部安装
+
+
+    这里所要做的只是执行 RetroPie-Setup 脚本。当它开始执行时，你最终会看到一张显示“管理包”的屏幕。从这里，你只需切换“Quick Install”，然后按回车键确认。这绝对是本书里最容易的事情之一，不是吗？全装安装时，它还会创建你用于存储
+    ROM 的精确文件夹。如果你基本上遵循本书的指示，它们将位于 `~/RetroPie/roms`。
+
+
+    ### 部分安装
+
+
+    如果你担心 SD 卡的存储空间（或想使用的空间），则该方案更轻。使用此选项，你可以自行决定想要安装哪些模拟器以及哪些不想要安装。请记住，RetroPie 运行需要几个必备包：
+
+
+    * RetroArch，RetroPie 的用户界面
+
+    * Emulation Station，系统的支柱，负责启动并整理你放在小文件夹中的 ROM。
+
+    * RetroPie 菜单，相对显而易见
+
+    * Runcommand，老实说不太确定它的作用，但听起来很重要，且缺少它无法运行
+
+
+    因此你需要安装所有这些包。一旦它们被安装，你就可以浏览可用的包列表，决定想要（或不想要）安装哪些模拟器。
+
+
+    接下来，我们只需让 Emulation Station 在 Pi 启动时第一时间运行。切换此设置实际上非常容易。在 RetroPie 内部，你只需前往 `Setup
+    Script`，然后前往 Configuration and Tools 菜单，在那里会有一个 Autostart 子菜单。列出了许多 Pi 的启动条件，但你只需要切换第一个，即读作“开机时启动
+    Emulation Station”。
+
+
+    你现在可以尝试重启 Pi，仅为确认一切运行正常。拔掉电源并重启 Pi。如果它在启动时直接进入 Emulation Station，则说明你一切做得正确。如果它不这样做，则出现了问题，你需要回退步骤并弄明白哪里出了问题。
+
+
+    如果一切运行正常，我们需要讨论如何在 Raspberry Pi 上放置 ROM。把 ROM 放到 Pi 上最简便的方法，无疑是直接使用 USB 驱动器。因此，我将为你介绍此方法。
+
+
+    因此，你首先需要将 USB 驱动器格式化为 `FAT32`。我们之前谈过如何做到这一点，但那是针对 SD 卡的。然而，过程完全相同。只需遵循我们之前用于格式化
+    SD 卡的相同步骤，但针对 USB 驱动器。
+
+
+    然后，在它格式化后，你打开驱动器并创建一个名为 `retropie` 的文件夹，正是这样。
+
+
+    然后取出你主要电脑中的 USB 驱动器并插入你的 Pi。驱动器会开始闪烁，这表示正在发生活动的文件系统更改。这就是你想要的。当闪烁停止后，你只需取出驱动器。
+
+
+    将其放回你原来的电脑中。你会看到许多之前不存在的新文件夹。这些是你放置 ROM 的地方。你只需将 ROM 拖动到对应的系统/模拟器的 ROM 文件夹中，然后即可使用。你可以根据驱动器的容量添加尽可能多的
+    ROM。传输可能需要一些时间完成，但它会发生的。
+
+
+    当传输完成后，将 USB 驱动器再插回 Pi。它会再次开始闪烁；请稍等。当一切完成后，你只需刷新 Emulation Station。你通过按下 `F4`
+    键来完成。希望你能在 USB 上加载的所有新游戏直接显示在你面前供你游玩。
+
+
+    因此，我们现在进入这项业务的最后阶段：将我们的主机变成真正属于我们自己的项目。我们的 Raspberry Pi 已经工作正常，RetroPie 为我们处理了所有繁重的工作。现在我们只需要完成项目的敲定。
+
+
+    '
+- fmt: '
+
+    Detach everything - even the screen from the Pi, if you haven’t already - and
+    plug in all of your peripherals that you’ve got, such as speakers, power, joypads,
+    and so forth. If your power cable won’t fit through the case of the console, you
+    can just bore a bigger hole to poke it through. However, the `microUSB` connection
+    should fit with no problem. Then put the Pi in position and fasten the screen,
+    which will in turn fasten through the whole on the lid, which you’ll secure with
+    a nut. Be super careful here, it’s really easy to mess this step up.
+
+
+    Try it out to be sure that everything is in working order. If it is, then congratulations!
+    You’ve now got a self-contained superconsole capable of playing nearly 30 years
+    worth of video games. That’s pretty beautiful.
+
+
+    To take this all one step further, if you chose wisely when selecting your display,
+    the display will be able to directly output everything to another screen by `HDMI`.
+    You could theoretically play this system on massive projectors or huge flat-screen
+    TVs so long as you have an `HDMI` cable, the right display, and the raw dedication.
+
+
+    So there you go. That’s a pretty ambitious project for somebody to start out with,
+    and I’m really proud of you for making it to the end of this. It’s certainly not
+    the end of your adventures with the `Raspberry Pi`, and I’m hoping that I’ve given
+    you more than enough ways to come up with inspiration in a flash.
+
+
+    # Conclusion
+
+
+    ![](images/00002.jpg)
+
+
+    Thank you for making it through to the end of this book, let’s hope it was informative
+    and able to provide you with all of the tools you need to achieve your goals whatever
+    it may be. Where to Go From Here - Communities and Insight - Hacking is a community.
+
+
+    The next step is to just jump in. Find projects that appeal to you and start working
+    on them, or dream up some of your own and start looking into them.
+
+
+    Before I bring this book to a close, I’d like to say a few words: hacking. When
+    a lot of people hear the word hacking, they don’t think of the best dudes. They
+    think of email scandals or `LulzSec` or notorious people in dark rooms behind
+    green terminals. But that’s not what hacking is. There’s a lot more to hacking
+    than that. Hacking is an entire frame of mind. Hacking is about tinkering and
+    learning, experiencing, breaking things apart, making new things from old things,
+    creating, problem solving, having the ingenuity to do something really, really
+    incredible even though the means aren’t exactly obvious.
+
+
+    By working with `Raspberry Pi` projects, you are a hacker. Maybe not a hacker,
+    breaching people’s security or whatever, but you’d fit right in among the hacker
+    subculture that’s existed for going on 40 years now. And the reason for this is
+    because it takes a certain amount of curiosity, ingenuity, and drive to truly
+    try to make something fantastic out of nothing. So, when I say that you’re a hacker,
+    I mean it rather sincerely. By picking up this book, you are showing that you’re
+    a hacker.
+
+
+    Hackers are brilliant people, and the work they do deserves credit. Whether they’re
+    finding security holes in important networks, whether they’re phreaking phone
+    lines, whether they’re soldering circuit boards in their garage, or whether they’re
+    just trying to get the `LED` screen connected to the `Raspberry Pi` to display
+    the text they’re wanting, they are the people who ultimately will push the world
+    forward. Because they not only see the boundaries, but they see where the boundaries
+    break, and they push them back. My point is that you, friend, are in good company.
+
+
+    Going forward, if you have any questions, there are a number of fantastic online
+    communities that are well treated to answering all sorts of questions about `Raspberry
+    Pis` and other related projects you may be interested in (`Intel Edison`, `Arduino`,
+    etc.). There are a huge number of veterans out there, tinkerers and professionals
+    alike, who are more than happy to answer any questions that you might have.
+
+
+    Two that I recommend are the official `Raspberry Pi` forums at [https://www.raspberrypi.org/forums](https://www.raspberrypi.org/forums)
+    and the subreddit for `Raspberry Pi` (with over 150,000 subscribers!) at [https://www.reddit.com/r/raspberry_pi/](https://www.reddit.com/r/raspberry_pi/).
+    Both of these are fantastic and active boards for you to get answers and to generally
+    engage in the Pi hacking community at large.
+
+
+    Also keep an eye out for other beginners having questions, or - better yet - trying
+    and failing. Anybody can follow a tutorial, but mistakes are where the learning
+    happens. Keep watch for the mistakes that others make, as well as the mistakes
+    that you yourself make. Understand why they’re mistakes, and how things could
+    have been done otherwise in order to make things go smoother. All in all, when
+    you’re working with `Raspberry Pi`, just try to make every day fun, enjoyable,
+    and a learning experience.
+
+
+    In the end, I’d just like to say thank you for making it to the end of this book,
+    I hope I’ve been able to impart some valuable help and insight. I know that getting
+    started with `Raspberry Pi` - especially trying to jump in and start programming
+    right away - can be quite a daunting task in and of itself. I genuinely hope that
+    as you go forward with any and all of your projects that you experience the best
+    of luck and that you look back at your time reading this book fondly.
+
+
+    If that was the case, then I’d love for you to leave a review on Amazon. And even
+    if you didn’t like it, leave a review. It’s people like you who help me produce
+    quality content.
+
+
+    Thank you so much for reading, and I wish you the best.
+
+
+    # Table of Contents
+
+
+    - [Title](#index_split_000.html_filepos167)
+
+    - [Copyright](#index_split_001.html_filepos736)
+
+    - [Contents](#index_split_002.html_filepos3017)
+
+    - [Introduction](#index_split_003.html_filepos4289)
+
+    - [Chapter 1: What is Raspberry Pi?](#index_split_004.html_filepos6248)
+
+    - [Chapter 2: Under the Hood](#index_split_005.html_filepos10154)
+
+    - [Chapter 3: Setting Up](#index_split_006.html_filepos20270)
+
+    - [Chapter 4: Programming Essentials](#index_split_007.html_filepos29788)
+
+    - [Chapter 5: Project Ideas](#index_split_008.html_filepos63367)
+
+    - [Chapter 6: Your First Project - A Portable Superconsole](#index_split_009.html_filepos68062)
+
+    - [Conclusion](#index_split_010.html_filepos90419)
+
+    '
+  raw: 'Detach everything - even the screen from the Pi, if you haven’t already -
+    and plug in all of your peripherals that you’ve got, such as speakers, power,
+    joypads, and so forth. If your power cable won’t fit through the case of the console,
+    you can just bore a bigger hole to poke it through. However, the microUSB connection
+    should fit with no problem. Then put the Pi in position and fasten the screen,
+    which will in turn fasten through the whole on the lid, which you’ll secure with
+    a nut. Be super careful here, it’s really easy to mess this step up.
+
+
+    Try it out to be sure that everything is in working order. If it is, then congratulations!
+    You’ve now got a self-contained superconsole capable of playing nearly 30 years
+    worth of video games. That’s pretty beautiful.
+
+
+    To take this all one step further, if you chose wisely when selecting your display,
+    the display will be able to directly output everything to another screen by HDMI.
+    You could theoretically play this system on massive projectors or huge flat-screen
+    TVs so long as you have an HDMI cable, the right display, and the raw dedication.
+
+
+    So there you go. That’s a pretty ambitious project for somebody to start out with,
+    and I’m really proud of you for making it to the end of this. It’s certainly not
+    the end of your adventures with the Raspberry Pi, and I’m hoping that I’ve given
+    you more than enough ways to come up with inspiration in a flash.
+
+
+    Conclusion
+
+
+    ![](images/00002.jpg)
+
+
+    Thank you for making it through to the end of this book, let’s hope it was informative
+    and able to provide you with all of the tools you need to achieve your goals whatever
+    it may be. Where to Go From Here - Communities and Insight - Hacking is a community.
+
+
+    The next step is to just jump in. Find projects that appeal to you and start working
+    on them, or dream up some of your own and start looking into them.
+
+
+    Before I bring this book to a close, I’d like to say a few words: hacking. When
+    a lot of people hear the word hacking, they don’t think of the best dudes. They
+    think of email scandals or LulzSec or notorious people in dark rooms behind green
+    terminals. But that’s not what hacking is. There’s a lot more to hacking than
+    that. Hacking is an entire frame of mind. Hacking is about tinkering and learning,
+    experiencing, breaking things apart, making new things from old things, creating,
+    problem solving, having the ingenuity to do something really, really incredible
+    even though the means aren’t exactly obvious.
+
+
+    By working with Raspberry Pi projects, you are a hacker. Maybe not a hacker, breaching
+    people’s security or whatever, but you’d fit right in among the hacker subculture
+    that’s existed for going on 40 years now. And the reason for this is because it
+    takes a certain amount of curiosity, ingenuity, and drive to truly try to make
+    something fantastic out of nothing. So, when I say that you’re a hacker, I mean
+    it rather sincerely. By picking up this book, you are showing that you’re a hacker.
+
+
+    Hackers are brilliant people, and the work they do deserves credit. Whether they’re
+    finding security holes in important networks, whether they’re phreaking phone
+    lines, whether they’re soldering circuit boards in their garage, or whether they’re
+    just trying to get the LED screen connected to the Raspberry Pi to display the
+    text they’re wanting, they are the people who ultimately will push the world forward.
+    Because they not only see the boundaries, but they see where the boundaries break,
+    and they push them back. My point is that you, friend, are in good company.
+
+
+    Going forward, if you have any questions, there are a number of fantastic online
+    communities that are well treated to answering all sorts of questions about Raspberry
+    Pis and other related projects you may be interested in (Intel Edison, Arduino,
+    etc.). There are a huge number of veterans out there, tinkerers and professionals
+    alike, who are more than happy to answer any questions that you might have.
+
+
+    Two that I recommend are the official Raspberry Pi forums at [https://www.raspberrypi.org/forums](https://www.raspberrypi.org/forums)  and
+    the subreddit for Raspberry Pi (with over 150,000 subscribers!) at [https://www.reddit.com/r/raspberry_pi/](https://www.reddit.com/r/raspberry_pi/).
+    Both of these are fantastic and active boards for you to get answers and to generally
+    engage in the Pi hacking community at large.
+
+
+    Also keep an eye out for other beginners having questions, or - better yet - trying
+    and failing. Anybody can follow a tutorial, but mistakes are where the learning
+    happens. Keep watch for the mistakes that others make, as well as the mistakes
+    that you yourself make. Understand why they’re mistakes, and how things could
+    have been done otherwise in order to make things go smoother. All in all, when
+    you’re working with Raspberry Pi, just try to make every day fun, enjoyable, and
+    a learning experience.
+
+
+    In the end, I’d just like to say thank you for making it to the end of this book,
+    I hope I’ve been able to impart some valuable help and insight. I know that getting
+    started with Raspberry Pi - especially trying to jump in and start programming
+    right away - can be quite a daunting task in and of itself. I genuinely hope that
+    as you go forward with any and all of your projects that you experience the best
+    of luck and that you look back at your time reading this book fondly.
+
+
+    If that was the case, then I’d love for you to leave a review on Amazon. And even
+    if you didn’t like it, leave a review. It’s people like you who help me produce
+    quality content.
+
+
+    Thank you so much for reading, and I wish you the best.
+
+
+    Table of Contents
+
+
+    [Title](#index_split_000.html_filepos167)
+
+
+    [Copyright](#index_split_001.html_filepos736)
+
+
+    [Contents](#index_split_002.html_filepos3017)
+
+
+    [Introduction](#index_split_003.html_filepos4289)
+
+
+    [Chapter 1: What is Raspberry Pi?](#index_split_004.html_filepos6248)
+
+
+    [Chapter 2: Under the Hood](#index_split_005.html_filepos10154)
+
+
+    [Chapter 3: Setting Up](#index_split_006.html_filepos20270)
+
+
+    [Chapter 4: Programming Essentials](#index_split_007.html_filepos29788)
+
+
+    [Chapter 5: Project Ideas](#index_split_008.html_filepos63367)
+
+
+    [Chapter 6: Your First Project - A Portable Superconsole](#index_split_009.html_filepos68062)
+
+
+    [Conclusion](#index_split_010.html_filepos90419)'
+  toc: []
+  trans: '
+
+    断开所有连接——如果你还没有这样做的话，甚至要把屏幕也离开 Pi——然后插上你所有的外设设备，如扬声器、电源、摇杆等。如果你的电源线无法穿过主机外壳，你可以直接钻一个大孔让它穿过去。不过，`microUSB`
+    连接应该没有问题地装好。然后将 Pi 放入就位并固定屏幕，屏幕会反过来固定在盖子的整个孔上，你只需要用螺母将其固定即可。在这里要格外小心，这一步非常容易出错。
+
+
+    测试一下以确保一切运行正常。如果是的话，那么恭喜你！你现在拥有了一个自成一体的超级主机，能够玩几乎涵盖 30 年的视频游戏。这真美妙。
+
+
+    为了更上一层楼，如果你在选择显示器时明智地 de，显示器将能够通过 `HDMI` 直接将所有内容输出到另一个屏幕上。理论上，只要你有 `HDMI` 线缆、合适的显示器以及足够的专注精神，你就可以在巨大的投影仪或大平板液晶电视上运行这个系统。
+
+
+    就是这样了。对于一个初学者来说，这是一个非常有野心的项目，我真为你能走到最后感到非常自豪。这绝对不是你与 `Raspberry Pi` 冒险的终点，我希望我为你提供了足够的方法，让你瞬间迸发出灵感。
+
+
+    # 结论
+
+
+    ![](img/00002.jpg)
+
+
+    感谢你读完这本书，希望它内容充实，并能为你提供实现你目标所需的所有工具，无论你的目标是什么。接下来去哪里 - 社区与洞察 - 黑客精神（Hacking）是一个社区。
+
+
+    下一步就是直接投入其中。寻找吸引你的项目并开始做它们，或者构思一些你自己的想法并开始研究它们。
+
+
+    在结束这本书之前，我想说几句话：关于黑客精神（hacking）。当许多人听到“黑客”这个词时，他们想的并不是那些厉害坏蛋。他们想到的是邮件丑闻、`LulzSec`
+    或者躲在绿色终端后的黑暗房间里臭名昭著的人。但那并不是黑客精神。黑客精神远不止于。黑客是一种整体心态。黑客精神关于捣鼓和学习、体验、拆解事物、用旧物创造新物、创造、解决问题，以及在手段并不完全明显的情况下，做出真正、非常不可思议事情的灵性。
+
+
+    通过操作 `Raspberry Pi` 项目，你就是一个黑客。可能不是那种破解他人安全的黑客之类的，但你完全符合这个已经存在了 40 年的黑客亚文化。其原因在于，要真正尝试从无中创造出奇妙的事物，需要某种好奇心、灵性和驱动力。所以，当我说你是黑客时，我是发自内心地认为。通过拿起这本书，你证明了自己是一个黑客。
+
+
+    黑客是才华横溢的人，他们的工作值得赞誉。无论是在重要网络中寻找安全漏洞，无论是在破解电话线路（phreaking），无论是在车库里焊接电路板，还是仅仅在尝试让
+    `LED` 屏幕连接到 `Raspberry Pi` 以显示他们想要的文本，他们都是最终将推动世界进步的人。因为他们不仅看到了边界，还能看到边界在哪里断裂，并将边界向后推。我的意思是，朋友，你并不孤单。
+
+
+    今后，如果你有任何问题，有很多很棒的在线社区非常乐意解答各种关于 `Raspberry Pi` 以及其他你可能感兴趣的相关项目（如 `Intel Edison`、`Arduino`
+    等）的问题。那里有大量的资深人士，包括手工爱好者和专业人士，他们非常乐意回答你可能任何问题。
+
+
+    我推荐的两个是官方的 `Raspberry Pi` 论坛 [`www.raspberrypi.org/forums`](https://www.raspberrypi.org/forums)
+    以及 `Raspberry Pi` 的 Reddit 子板块（拥有超过 150,000 名订阅者！）[`www.reddit.com/r/raspberry_pi/`](https://www.reddit.com/r/raspberry_pi/)。这两个都是非常棒且活跃的板块，让你获取答案并广泛参与整个
+    Pi 黑客社区。
+
+
+    同时也请留意其他有问题的初学者，或者更好的是——正在尝试并失败的人。任何人都可以遵循教程，但学习发生在错误中。留意别人犯的错误，以及你自己犯的错误。理解为什么它们是错误，以及如何以其他方式处理让事情更顺畅。总而言之，当你使用
+    `Raspberry Pi` 时，尽量让每天都变得有趣、愉快并成为一种学习经历。
+
+
+    最后，我只想感谢你读完这本书，希望我能提供一些价值的帮助和见解。我知道上手 `Raspberry Pi`——尤其是尝试直接开始编程——本身就是一项艰巨的任务。我真心地希望你在未来的任何项目中都能好运，并回想起阅读这本书的时光是美好的。
+
+
+    如果是这样，我非常希望你在 Amazon 上留下评论。即使你不喜欢，也请留下评价。正是像你们这样的人帮助我创作高质量的内容。
+
+
+    非常感谢阅读，祝你一切顺利。
+
+    '
