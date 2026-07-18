@@ -440,6 +440,7 @@
 +   [液体智能：完美鸡尾酒的艺术与科学](docs/liquid-intelligence-the-art-and-science-of-the-perfect-cockt/README.md)
 +   [工业领域中的 Linux 生活指南](docs/living-with-linux-in-the-industrial-world/README.md)
 +   [Linkedin SRE 中文教程](docs/lkin-sre/README.md)
++   [LPI® Linux Essentials 认证考试全指南](docs/lpi-linux-essentials-certification-all-in-one-exam-guide/README.md)
 +   [LPI Linux Professional Institute Web Development Essentials 学习指南：考试 030-100](docs/lpi-linux-professional-institute-web-development-essentials-/README.md)
 +   [LPIC-1 102-500 V5 考试备考：通过 6 套实践测试精通 Linux 管理：带详细解析的真实模拟考试题](docs/lpic-1-102-500-v5-exam-prep-master-linux-admin-with-6-practi/README.md)
 +   [LPIC-1：Linux Professional Institute 认证](docs/lpic-1-linux-professional-institute-certification/README.md)
