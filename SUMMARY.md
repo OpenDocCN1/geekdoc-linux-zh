@@ -449,6 +449,7 @@
 +   [LPIC-2：Linux 专业认证认证：学习指南 考试 201 与考试 202](docs/lpic-2-linux-professional-instutute-certification-study-guid/README.md)
 +   [操作系统开发的简明指南](docs/ltl-bk-os-dev/README.md)
 +   [Unix 极客的 Mac OS X 入门指南](docs/mac-os-x-for-unix-geeks/README.md)
++   [使用 Webmin 管理 Linux 系统：系统管理与模块开发 (Bruce Perens 开源系列)](docs/managing-linux-systems-with-webmin-system-administration-and/README.md)
 +   [玛丽：完美的女人，极具魅力，魅力无限、谦逊、幽默且充满主意。总是正确的，因为她是……玛丽：趣味](docs/mary-noun-mary-the-perfect-woman-super-sexy-with-infinite-ch/README.md)
 +   [黑客攻击与工具精通：理解黑客流程、Linux、Linux Mint、Kali Linux 概念及渗透测试等：Kali Linux 工具清单](docs/master-hacking-master-the-tools-understanding-process-of-hac/README.md)
 +   [精通 CSS：初学者指南 (计算机科学大师))](docs/mastering-css-a-beginners-guide-mastering-computer-science/README.md)
