@@ -1,0 +1,406 @@
+name: The Official Ubuntu Server Book
+name_cn: Ubuntu Server 官方指南
+slug: the-official-ubuntu-server-book
+toc:
+- - '#'
+  - Ubuntu Server 官方指南
+- - '#'
+  - 关于本电子书
+- - '##'
+  - 《官方 Ubuntu 服务器教程》书评
+- - '##'
+  - 目录一览
+- - '###'
+  - 第一部分安装
+- - '###'
+  - 什么是分区？
+- - '####'
+  - 引导式—使用整个磁盘
+- - '####'
+  - 引导式使用 LVM
+- - '####'
+  - 在系统中移动
+- - '###'
+  - 检查运行中的进程
+- - '###'
+  - 切换到 Root 用户
+- - '####'
+  - '`/sbin/init`'
+- - '###'
+  - 网络配置文件
+- - '####'
+  - 包管理系统的高级功能
+- - '####'
+  - 升级整个系统
+- - '####'
+  - 托管自己的软件包
+- - '####'
+  - 用户设置
+- - '####'
+  - 杂
+- - '####'
+  - 在安装期间运行自定义命令
+- - '####'
+  - 测试你的 PXE 服务器
+- - '####'
+  - 启动代码
+- - '####'
+  - DNS 主服务器
+- - '####'
+  - 使用 rnd 管理 BIND
+- - '####'
+  - WordPress，LAMP 环境
+- - '####'
+  - Ubuntu Postfix 规范
+- - '###'
+  - Ubuntu OpenSSH 规范
+- - '####'
+  - 其他用途
+- - '##'
+  - 将客户端添加到 BackupPC
+- - '###'
+  - Ganglia
+- - '####'
+  - 配置 Nagios
+- - '#'
+  - 第 9 章 虚拟化与云计算
+- - '####'
+  - Extra vmbuilder 选项
+- - '####'
+  - 创建 SSH 密钥对
+- - '####'
+  - 部署 Juju 服务
+- - '####'
+  - 将非 RAID 迁移到软件 RAID
+- - '###'
+  - 测试硬盘
+- - '###'
+  - 初始化脚本问题
+- - '####'
+  - 恢复分区表
+- - '###'
+  - 本地文档
+- - '###'
+  - 避免在 `grep` 输出中使用 `grep` 命令
+- - '###'
+  - 利用你的 Bash 历史记录
+- - '##'
+  - 第 12 章：救援与恢复
+- - '##'
+  - 附录：酷技巧与技巧
+- - '##'
+  - 致谢
+- - '###'
+  - Ubuntu 项目简史
+- - '####'
+  - 马克·舒特沃（Mark Shuttleworth）
+- - '###'
+  - 文件所有权
+- - '###'
+  - 检查运行进程
+- - '###'
+  - 注意：man 命令
+- - '###'
+  - 提示
+- - '###'
+  - 编辑文件
+- - '###'
+  - 成为 Root
+- - '###'
+  - Ubuntu 启动过程
+- - '####'
+  - GRUB
+- - '###'
+  - 注意：增加 GRUB 超时时间
+- - '###'
+  - 内核启动过程
+- - '##'
+  - Upstart
+- - '###'
+  - Upstart 脚本
+- - '#'
+  - rc - System V 运行级别兼容性
+- - '#'
+  - 此任务在切换运行级别时运行旧的 System V 风格 rc 脚本。
+- - '##'
+  - 修改默认运行级别 (Runlevel)
+- - '#'
+  - rc-sysinit - System V initialisation compatibility
+- - '#'
+  - 此任务运行旧的 System V 风格的系统初始化
+- - '#'
+  - 脚本，并在完成后进入默认运行级别。
+- - '###'
+  - 服务 (Services)
+- - '##'
+  - 编写自己的 init 脚本
+- - '###'
+  - BEGIN INIT INFO
+- - '##'
+  - Xinetd
+- - '##'
+  - 注意：使用 init 停机和重启
+- - '##'
+  - 文件系统层次结构
+- - '##'
+  - /bin
+- - '##'
+  - /sbin
+- - '##'
+  - /lib
+- - '##'
+  - /usr
+- - '##'
+  - /usr/bin
+- - '##'
+  - /usr/sbin
+- - '##'
+  - /usr/lib
+- - '##'
+  - /usr/local
+- - '##'
+  - /opt
+- - '##'
+  - /boot
+- - '##'
+  - /etc
+- - '##'
+  - /var
+- - '###'
+  - /var/log
+- - '###'
+  - /var/spool
+- - '###'
+  - /var/www
+- - '##'
+  - 网络
+- - '##'
+  - 网络配置文件
+- - '###'
+  - 核心网络程序
+- - '###'
+  - 软件包背景
+- - '###'
+  - 什么是软件包？
+- - '###'
+  - 软件包的基本功能
+- - '###'
+  - 软件包管理系统的高级功能
+- - '###'
+  - Debian 软件包 (Debian Packages)
+- - '####'
+  - 源码包 (Source Packages)
+- - '###'
+  - 二进制包
+- - '###'
+  - Ubuntu 中的包管理
+- - '####'
+  - 保持更新
+- - '####'
+  - 搜索与浏览
+- - '###'
+  - 安装与卸载
+- - '#'
+  - aptitude install most
+- - '#'
+  - aptitude remove most
+- - '###'
+  - 操作已安装的软件包
+- - '###'
+  - 操作仓库
+- - '##'
+  - 使用其他仓库
+- - '##'
+  - 升级整个系统
+- - '##'
+  - 镜像系统
+- - '##'
+  - 创建您自己的软件包
+- - '##'
+  - 重构软件包
+- - '###'
+  - 新的上游版本
+- - '##'
+  - 托管你自己的包
+- - '#'
+  - 第 4 章：自动化 Ubuntu 安装
+- - '###'
+  - 预设 (Preseeding)
+- - '####'
+  - 用于 CD-ROM 的基础预设配置
+- - '##'
+  - 在命令行上设置的选项
+- - '#'
+  - 12.04 版本的键盘 preseed 已经发生了变化
+- - '####'
+  - 网络选项
+- - '###'
+  - 注意：DHCP 超时的变通方法
+- - '####'
+  - 分区
+- - '#####'
+  - 专家配方
+- - '#####'
+  - LVM
+- - '###'
+  - 自定义软件包仓库
+- - '###'
+  - 用户设置
+- - '###'
+  - GRUB
+- - '##'
+  - 杂杂
+- - '##'
+  - 动态预种子 (Dynamic Preseeding)
+- - '###'
+  - 链式加载 preseed 文件
+- - '###'
+  - 在安装期间运行自定义命令
+- - '##'
+  - Kickstart
+- - '###'
+  - 用于 CD-ROM 的基础 Kickstart 配置
+- - '#'
+  - 系统配置
+- - '#'
+  - System language
+- - '#'
+  - System keyboard
+- - '#'
+  - System mouse
+- - '#'
+  - System timezone
+- - '#'
+  - Root password
+- - '#'
+  - Initial user
+- - '#'
+  - Reboot after installation
+- - '#'
+  - Use text mode install
+- - '#'
+  - Install OS instead of upgrade
+- - '#'
+  - Use CDROM installation media
+- - '#'
+  - System bootloader configuration
+- - '#'
+  - Clear the Master Boot Record
+- - '#'
+  - Partition clearing information
+- - '#'
+  - Disk partitioning information
+- - '#'
+  - System authorization information
+- - '#'
+  - Firewall configuration
+- - '#'
+  - X Window System
+- - '#'
+  - This section was added by hand
+- - '##'
+  - Ubuntu Kickstart 中的变化与局限
+- - '###'
+  - 新选项
+- - '###'
+  - 局限性
+- - '###'
+  - 在安装期间自定义命令
+- - '##'
+  - PXE 启动部署
+- - '###'
+  - DHCP
+- - '###'
+  - TFTPD
+- - '##'
+  - 配置 Linux
+- - '##'
+  - Web
+- - '##'
+  - 测试你的 PXE 服务器
+- - '###'
+  - 自定义自动化安装
+- - '####'
+  - 多个 Kickstart 文件
+- - '##'
+  - 启动作码 (Boot Codes)
+- - '#'
+  - 修改 Web 服务器 preseed 设置
+- - '#'
+  - 修改 MySQL 服务器 preseed 设置
+- - '#'
+  - 修改 DNS 服务器 preseed 设置
+- - '#'
+  - 修改 RAID preseed 设置
+- - '###'
+  - 启动作码选择
+- - '#'
+  - 修改 Web 服务器 preseed 设置
+- - '#'
+  - 修改 MySQL 服务器 preseed 设置
+- - '#'
+  - 修改 DNS 服务器 preseed 设置
+- - '#'
+  - 修改 RAID preseed 设置
+- - '###'
+  - DHCP 选择
+- - '#'
+  - 第 5 章 常用服务器
+- - '##'
+  - DNS 服务器
+- - '###'
+  - 安装 BIND
+- - '####'
+  - 规范
+- - '####'
+  - /etc/bind/
+- - '####'
+  - /etc/bind/named.conf
+- - '####'
+  - /etc/bind/db.*
+- - '####'
+  - /var/cache/bind
+- - '####'
+  - /var/log/syslog
+- - '##'
+  - DNS 主服务器 (DNS Master)
+- - '###'
+  - 区域文件
+- - '##'
+  - DNS 从服务器 (DNS Slave)
+- - '###'
+  - 配置从服务器
+- - '####'
+  - 使用 rnd 管理 BIND
+- - '##'
+  - Web 服务器
+- - '###'
+  - Ubuntu Apache
+- - '####'
+  - 规范
+- - '###'
+  - apache2ctl
+- - '###'
+  - 优雅地停止 Apache
+- - '##'
+  - WordPress，LAMP 环境
+- - '##'
+  - 安装 WordPress
+- - '##'
+  - 配置 Apache
+- - '##'
+  - MySQL
+- - '###'
+  - 邮件服务器
+- - '##'
+  - Ubuntu Postfix 规范
+- - '###'
+  - Ubuntu OpenSSH 规范
+- - '####'
+  - 其他用途
+- - '##'
+  - 将客户端添加到 BackupPC
+- - '###'
+  - Ganglia
+- - '####'
+  - 配置 Nagios
