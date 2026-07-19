@@ -646,6 +646,7 @@
 +   [Linux 使用指南 (使用系列)](docs/using-linux-using-series/README.md)
 +   [Ubuntu Linux 使用指南](docs/using-ubuntu-linux/README.md)
 +   [虚拟化完全指南：商业基础版](docs/virtualization-complete-business-basic-edition/README.md)
++   [Wi-Fi 破解与 Kali Linux：分步指南——学习渗透 Wi-Fi 网络及最佳防御策略](docs/wi-fi-hacking-avec-kal-linux-guide-étape-par-étape-apprenez-/README.md)
 +   [酷炫 Shell 脚本（第 2 版）：Linux、OS X 和 UNIX 系统 101 个脚本示例](docs/wicked-cool-shell-scripts-2nd-edition-101-scripts-for-linux-/README.md)
 +   [Windows Server 2022 与 Powershell 一站式入门指南](docs/windows-server-2022-amp-powershell-all-in-one-for-dummies/README.md)
 +   [Windows Server 2022 与 Powershell 一站式指南（傻瓜书（计算机／技术））](docs/windows-server-2022-amp-powershell-all-in-one-for-dummies-fo/README.md)
