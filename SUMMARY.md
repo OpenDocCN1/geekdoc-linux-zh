@@ -500,6 +500,7 @@
 +   [渗透测试：黑客攻击实用入门指南](docs/penetration-testing-a-hands-on-introduction-to-hacking/README.md)
 +   [Kali Linux 渗透测试：通过过程驱动框架学习实战渗透测试](docs/penetration-testing-with-kali-linux-learn-hands--on-penetrat/README.md)
 +   [Perl黑皮书](docs/perl-black-book/README.md)
++   [PHP and MySQL Web 开发 (第5版) (开发者库)](docs/php-and-mysql-web-development-5th-edition-developers-library/README.md)
 +   [PHP3：基于浏览器的应用程序开发](docs/php3-programming-browser-based-applications-with-php/README.md)
 +   [Kali Linux 与无线渗透测试安全测试工具终极指南](docs/piraté-guide-ultime-de-kali-linux-et-de-piratage-sans-fil-av/README.md)
 +   [PMP：项目管理专业考试学习指南：2015年考试更新版](docs/pmp-project-management-professional-exam-study-guide-updated/README.md)
