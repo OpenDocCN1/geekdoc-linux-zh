@@ -1,0 +1,20 @@
+name: UNIX Shell Programming Interview Questions You'll Most Likely Be Asked： Job
+  Interview Questions Series
+name_cn: 最可能遇到的 UNIX Shell 编程面试题：工作面试问题系列
+slug: unix-shell-programming-interview-questions-youll-most-likely
+toc:
+- - '##'
+  - UNIX Shell Programming Interview Questions
+- - '###'
+  - C shell - Intermediate
+- - '####'
+  - 'Q26: Explain the following command:'
+- - '####'
+  - 'Q27: How do you move cursor to specified coordinates on screen? (tcsh)'
+- - '####'
+  - 'Q28: What is result this loop?'
+- - '######'
+  - '... several duplicates omitted ...'
+- - '#####'
+  - 'Note #s were duplicated; original numbering after review discarded as erroneous
+    or repeated.'
