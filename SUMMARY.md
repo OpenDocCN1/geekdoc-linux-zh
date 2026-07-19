@@ -579,6 +579,7 @@
 +   [SSH 精通指南：OpenSSH、PuTTY、隧道与密钥 (IT Mastery) (第 12 卷)](docs/ssh-mastery-openssh-putty-tunnels-and-keys-it-mastery-volume/README.md)
 +   [StarOffice 5.2 Calc 手册](docs/staroffice-52-calc-handbook/README.md)
 +   [窃取网络：如何掌控目标主机](docs/stealing-the-network-how-to-own-the-box/README.md)
++   [vSphere 6 存储设计与实现：技术深度解析 (VMware Press 技术)](docs/storage-design-and-implementation-in-vsphere-6-a-technology-/README.md)
 +   [SuSE Linux 8.1 用户指南](docs/suse-linux-81-user-guide/README.md)
 +   [SUSE Linux 9.3 傻瓜书](docs/suse-linux-93-for-dummies-isbn---0764596152/README.md)
 +   [SwiftUI 精要：iOS 版：使用 SwiftUI、Swift 5 和 Xcode 11 开发 iOS 应用](docs/swiftui-essentials---ios-edition-learn-to-develop-ios-apps-u/README.md)
