@@ -612,6 +612,7 @@
 +   [CompTIA Linux+ 认证官方学生指南（XK0-004 考试）](docs/the-official-comptia-linux-student-guide-exam-xk0-004/README.md)
 +   [Ubuntu 官方指南](docs/the-official-ubuntu-book/README.md)
 +   [管理心理学：心智在确定、教授和实施最小浪费方法中的功能](docs/the-psychology-of-management-the-function-of-the-mind-in-det/README.md)
++   [终极 Linux Shell 脚本指南：使用 Linux Shell 脚本实现自动化、优化与赋能任务](docs/the-ultimate-linux-shell-scripting-guide-automate-optimize-a/README.md)
 +   [时光飞逝（亚历山大·克吕格近期放映录像带选）](docs/time-keeps-on-slipping-some-recently-projected-videotapes-by/README.md)
 +   [Tor 与匿名化黑术（深网、Kali Linux、黑客、比特币）：隐形术指南](docs/tor-and-the-dark-art-of-anonymity-deep-web-kali-linux-hackin/README.md)
 +   [Ubuntu 15.04 Server 与 Systemd：管理与参考](docs/ubuntu-1504-server-with-systemd-administration-and-reference/README.md)
