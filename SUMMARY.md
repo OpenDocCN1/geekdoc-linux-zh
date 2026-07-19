@@ -625,6 +625,7 @@
 +   [Ubuntu 23.04 核心：Ubuntu 23.04 桌面版与服务器版指南](docs/ubuntu-23-04-essentials-a-guide-to-ubuntu-23-04-desktop-and-/README.md)
 +   [非极客的Ubuntu：无痛、项目式、实用高效指南（涵盖Ubuntu 7.04 火猄版）](docs/ubuntu-for-non-geeks-a-pain-free-project-based-get-things-do/README.md)
 +   [Ubuntu Linux 100 个成功秘籍、技巧、窍门与技巧工具箱及实用指南](docs/ubuntu-linux-100-success-secrets-tips-tricks-hints-and-hacks/README.md)
++   [Ubuntu Linux 圣经（第11版）](docs/ubuntu-linux-bible-11th-edition/README.md)
 +   [Ubuntu 高级技巧与定制秘籍](docs/ubuntu-powerful-hacks-and-customizations/README.md)
 +   [理解 Linux 进程](docs/udstd-linux-proc/README.md)
 +   [终极Linux项目 第一版2022](docs/ultimate-linux-projects---first-edition-2022/README.md)
