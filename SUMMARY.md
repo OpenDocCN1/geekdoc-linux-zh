@@ -649,6 +649,7 @@
 +   [Windows Server 2022 与 Powershell 一站式指南（傻瓜书（计算机／技术））](docs/windows-server-2022-amp-powershell-all-in-one-for-dummies-fo/README.md)
 +   [Windows Server 2022 与 Powershell 一册通](docs/windows-server-2022-powershell-all-in-one-for-dummies-for-du/README.md)
 +   [Windows 到 Linux 迁移工具包](docs/windows-to-linux-migration-toolkit/README.md)
++   [Kali Linux 无线破解：快速学习任何无线网络渗透测试实施指南](docs/wireless-hacking-with-kali-linux-learn-fast-how-to-hack-any-/README.md)
 +   [Kali Linux 无线渗透测试](docs/wireless-penetration-testing-with-kali-linux/README.md)
 +   [Linux 内核：开发过程详解（Linux 内核设计与实现完整指南）](docs/ядро-linux-описание-процесса-разработки-исчерпывающее-руково/README.md)
 +   [分布式系统中文第三版](docs/分布式系统中文第三版/README.md)

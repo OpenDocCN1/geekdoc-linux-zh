@@ -1,0 +1,29 @@
+name: Wireless Hacking with Kali Linux： Learn fast how to hack any wireless networks
+  penetration testing implementation guide
+name_cn: Kali Linux 无线破解：快速学习任何无线网络渗透测试实施指南
+slug: wireless-hacking-with-kali-linux-learn-fast-how-to-hack-any-
+toc:
+- - '#'
+  - Kali Linux 无线破解：快速学习任何无线网络渗透测试实施指南
+- - '##'
+  - 目标读者
+- - '##'
+  - 引言
+- - '##'
+  - 无线威胁简介
+- - '##'
+  - 第 1 章 无线渗透测试工具列表
+- - '###'
+  - 参考文献
+- - '##'
+  - 第 2 章 用于渗透测试的无线适配器与网卡
+- - '##'
+  - 第 3 章 安装 Virtual Box 和 Kali Linux
+- - '#'
+  - 目录导航基础
+- - '#'
+  - 备份 SSH Key
+- - '#'
+  - 第 4 章 无线密码攻击
+- - '#'
+  - 第 5 章 WPA/WPA2 字典攻击
