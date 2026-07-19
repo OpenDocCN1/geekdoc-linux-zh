@@ -1,0 +1,4349 @@
+<p><img src="image_rsrc2J8.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveaspectratio="xMidYMid meet" viewbox="0 0 1203 1920" height="100%" width="100%">
+<image xlink:href="image_rsrc2J8.jpg" height="1920" width="1203"></image>
+</svg>
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div id="part0001.xhtml_page_1" class="class_s1NA">
+<span class="class-1">L</span> inux Kernel
+</div>
+<div class="class_s8">
+for
+</div>
+<div class="class_s8">
+Absolute Beginners
+</div>
+<div class="class_s1NB">
+The most simplified and easiest book to understand, learn, and work with
+Linux Kernel.
+</div>
+<div>
+<br />
+
+</div>
+<div>
+<br />
+
+</div>
+<div>
+<br />
+
+</div>
+<div>
+<br />
+
+</div>
+<div class="class_s1NB">
+MD MAHBUBUR RAHMAN
+</div>
+<div class="class_sK">
+<br />
+
+</div>
+<div class="class_sK">
+<br />
+
+</div>
+<div class="class_sK">
+<br />
+
+</div>
+<div class="class_sK">
+Copyright Notice
+</div>
+<div class="class_sN">
+Copyright © by New York Publishing
+</div>
+<div class="class_sR">
+www.nycpublishing.org
+</div>
+<div class="class_sT">
+All Right Reserved.
+</div>
+<div class="class_sV">
+No part of this publication may be reproduced, distributed, or
+transmitted in any form or by any means, including photocopying,
+recording, or other electronic or mechanical methods, <span
+id="part0001.xhtml_page_2"></span> or by any information storage and
+retrieval system without the prior written permission of the publisher,
+except in the case of very brief quotations embodied in critical reviews
+and certain other noncommercial uses permitted by copyright law.
+</div>
+<div class="class_sK">
+ISBN:  9798720362096
+</div>
+<div class="class_sY">
+<br />
+
+</div>
+<div class="class_sY">
+Dedication
+</div>
+<div class="class_s10">
+This book is dedicated to my honorable parents for giving birth to see
+the lights of the amazing world. Also for believing in me and
+encouraging me to follow my dreams.
+</div>
+<div id="part0001.xhtml_page_3" class="class_s12">
+Support Local Education
+</div>
+<div class="class_s10">
+20% of all author royalties are donated to educational not-for-profits
+organizations.
+</div>
+<div class="class_s15">
+<br />
+
+</div>
+<div id="part0001.xhtml_page_4" class="class_s15">
+Table of contents
+</div>
+<div class="class_s17">
+Chapter 1: Introduction to Kernel
+</div>
+<div class="class_s19">
+What is Kernel?
+</div>
+<div class="class_s19">
+Types of Kernel
+</div>
+<div class="class_s1C">
+Micro Kernel
+</div>
+<div class="class_s1C">
+Monolithic Kernel
+</div>
+<div class="class_s1C">
+Modular Kernel
+</div>
+<div class="class_s1C">
+Exo Kernel
+</div>
+<div class="class_s19">
+The relation between Kernel and Operating System
+</div>
+<div class="class_s19">
+Kernel space and protection rings
+</div>
+<div class="class_s19">
+Kernel vs. operating system
+</div>
+<div class="class_s19">
+Kernel space vs. Userspace?
+</div>
+<div class="class_s19">
+MicroKernel vs. Monolithic Kernel
+</div>
+<div class="class_s1P">
+Chapter 2: Introduction to Linux Kernel
+</div>
+<div id="part0001.xhtml_page_5" class="class_s19">
+Linux Kernel
+</div>
+<div class="class_s19">
+Linux Kernel Developer Community
+</div>
+<div class="class_s19">
+Linux kernel versioning system
+</div>
+<div class="class_s19">
+Development Highlights
+</div>
+<div class="class_s19">
+New Features Merged
+</div>
+<div class="class_s19">
+Linux kernel source size
+</div>
+<div class="class_s19">
+Linux Kernel Directory / Source Structure
+</div>
+<div class="class_s1C">
+arch
+</div>
+<div class="class_s1C">
+include
+</div>
+<div class="class_s1C">
+init
+</div>
+<div class="class_s1C">
+mm
+</div>
+<div class="class_s1C">
+drivers
+</div>
+<div class="class_s1C">
+ipc
+</div>
+<div class="class_s1C">
+modules
+</div>
+<div class="class_s1C">
+fs
+</div>
+<div class="class_s1C">
+kernel
+</div>
+<div class="class_s1C">
+net
+</div>
+<div class="class_s1C">
+lib
+</div>
+<div class="class_s1C">
+scripts
+</div>
+<div class="class_s19">
+Who is sponsoring the work?
+</div>
+<div class="class_s19">
+Check Linux Kernel Version Number
+</div>
+<div class="class_s1P">
+Chapter 3: Build Linux Kernel
+</div>
+<div class="class_s19">
+Linux Kernel Source Tree Architecture
+</div>
+<div class="class_s19">
+Tools to build Linux kernel
+</div>
+<div class="class_s1P">
+Chapter 4: Understanding System Call Interface
+</div>
+<div class="class_s19">
+Introduction to System Call Interface
+</div>
+<div class="class_s19">
+Syscalls  / System Calls
+</div>
+<div id="part0001.xhtml_page_6" class="class_s19">
+System Call Numbers
+</div>
+<div class="class_s19">
+Parameters in System Call
+</div>
+<div class="class_s19">
+Advantages of System call
+</div>
+<div class="class_s19">
+Disadvantages of system call
+</div>
+<div class="class_s19">
+Creating a basic system call for the Linux kernel
+</div>
+<div class="class_s19">
+Add the new system call into the System Call Table
+</div>
+<div class="class_s19">
+Recompile the kernel
+</div>
+<div class="class_s19">
+Test the System Call
+</div>
+<div class="class_s1P">
+Chapter 5: Understanding Kernel Module
+</div>
+<div class="class_s19">
+What is Kernel Module?
+</div>
+<div class="class_s19">
+What is Loadable Kernel Module?
+</div>
+<div class="class_s19">
+Advantages of Loadable Kernel Modules
+</div>
+<div class="class_s19">
+Disadvantages of Loadable Kernel Modules
+</div>
+<div class="class_s19">
+Security concern of Loadable Kernel Module
+</div>
+<div class="class_s31">
+<span class="class_s1F5">-</span> <span class="class_s1FD">​</span> <span
+class="class_s1F5">Buffer overrun</span>
+</div>
+<div class="class_s31">
+<span class="class_s1F5">-</span> <span class="class_s1FD">​</span> <span
+class="class_s1F5">Enforcing signed modules</span>
+</div>
+<div class="class_s1P">
+Chapter 6:
+</div>
+<div class="class_s1P">
+Before starting to write the Loadable Kernel Module
+</div>
+<div class="class_s19">
+Things to learn
+</div>
+<div class="class_s19">
+Resources to learn kernel programming
+</div>
+<div class="class_s1P">
+Chapter 7:
+</div>
+<div class="class_s1P">
+Writing Loadable Kernel Module
+</div>
+<div class="class_s19">
+Write a simple Loadable Kernel Module
+</div>
+<div class="class_s19">
+Initialization and Clean Macro
+</div>
+<div class="class_s19">
+Other Macros
+</div>
+<div class="class_s19">
+Command-line arguments in LKM
+</div>
+<div id="part0001.xhtml_page_7" class="class_s1C">
+Example of command-line arguments in LKMs with Integer
+</div>
+<div class="class_s1C">
+Example of command-line arguments in LKMs with Short Integer, Integer
+and Long Integer
+</div>
+<div class="class_s1C">
+Example of command-line arguments in LKMs with String
+</div>
+<div class="class_s1C">
+Example of command-line arguments in LKMs with Array
+</div>
+<div class="class_s19">
+Loading LKMs while the system starts
+</div>
+<div class="class_s19">
+Module spanning more than one file
+</div>
+<div class="class_s1C">
+modulestart.c
+</div>
+<div class="class_s1C">
+modulestop.c
+</div>
+<div class="class_s1C">
+Makefile
+</div>
+<div class="class_s1P">
+Chapter 8:
+</div>
+<div class="class_s1P">
+Kernel Debugging
+</div>
+<div class="class_s19">
+Oops?
+</div>
+<div class="class_s19">
+Debugging the kernels issues/bugs
+</div>
+<div class="class_s19">
+Printing for debugging
+</div>
+<div class="class_s19">
+The printk() log level priorities
+</div>
+<div class="class_s19">
+Printk Example # 1
+</div>
+<div class="class_s19">
+Printk Example # 2
+</div>
+<div class="class_s1P">
+Chapter 9:
+</div>
+<div class="class_s1P">
+Loading and Unloading LKMs
+</div>
+<div class="class_s19">
+Loading and Unloading Linux Kernel Modules (LKMs) on demand
+</div>
+<div class="class_s19">
+insmod
+</div>
+<div class="class_s19">
+rmmod
+</div>
+<div class="class_s19">
+depmod
+</div>
+<div class="class_s19">
+modinfo
+</div>
+<div class="class_s19">
+lsmod
+</div>
+<div id="part0001.xhtml_page_8" class="class_s19">
+modprobe
+</div>
+<div class="class_s19">
+How kmod works?
+</div>
+<div class="class_s1P">
+Chapter 10:
+</div>
+<div class="class_s1P">
+Introduction to Device Drivers
+</div>
+<div class="class_s19">
+Introduction to device driver
+</div>
+<div class="class_s19">
+What is device driver?
+</div>
+<div class="class_s19">
+When a kernel calls device driver?
+</div>
+<div class="class_s19">
+Device driver working procedure with User Space, Kernel Space and
+Hardware Space:
+</div>
+<div class="class_s1P">
+Chapter 11:
+</div>
+<div class="class_s1P">
+Developing a character device driver with utmost easy explanations
+</div>
+<div class="class_s19">
+Explanation # 1
+</div>
+<div class="class_s19">
+Explanation # 2
+</div>
+<div class="class_s19">
+Explanation # 3
+</div>
+<div class="class_s19">
+Explanation # 4
+</div>
+<div class="class_s19">
+Developing a tiny GPIO char device driver
+</div>
+<div class="class_s1P">
+Appendix A:
+</div>
+<div class="class_s1P">
+Linux Kernel Coding Style
+</div>
+<div class="class_s19">
+Indentation
+</div>
+<div class="class_s19">
+Breaking long lines
+</div>
+<div class="class_s19">
+Placement of spaces
+</div>
+<div class="class_s19">
+Placement of braces
+</div>
+<div class="class_s19">
+Naming Local and Global Variables
+</div>
+<div class="class_s19">
+Functions
+</div>
+<div class="class_s19">
+Commenting
+</div>
+<div class="class_s19">
+Kconfig configuration file
+</div>
+<div id="part0001.xhtml_page_9" class="class_s19">
+Macros and Enums
+</div>
+<div class="class_s19">
+Printing kernel messages
+</div>
+<div class="class_s19">
+Memory allocation
+</div>
+<div class="class_s1P">
+About the Author
+</div>
+<p><span id="part0002.xhtml"></span></p>
+<div id="part0002.xhtml_page_10" class="class_s1NA">
+Chapter 1: Introduction to Kernel
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<div id="part0003.xhtml_page_11" class="class_s1NA">
+What is Kernel?
+</div>
+<div class="class_s10">
+For a vehicle, the engine is the most important part; we can’t imagine a
+vehicle without an engine.  The heart is also the same. A human can live
+without eyes, legs, and hands but can’t live without “Heart”.
+</div>
+<div class="class_s10">
+In a computing system, a kernel is the heart of an operating system, and
+kernel is responsible to manage &amp; run core functionalities and
+features of an operating system.
+</div>
+<p><span id="part0004.xhtml"></span></p>
+<div id="part0004.xhtml_page_12" class="class_s1NA">
+Types of Kernel
+</div>
+<div class="class_s10">
+There are different types of car engines available, VEE, INLINE,
+STRAIGHT, and more; every type of engine has several different
+approaches, pros, and cons. Kernels also have a different type; based on
+purpose and targeted mechanism.  Examples of some kernels are
+monolithic, micro, modular, and others.
+</div>
+<div class="class_s10">
+Table 1.1: Kernel type with examples
+</div>
+<div>
+<img src="image_rsrc2J9.jpg" class="class_s5G"
+alt="Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-08-01 at 1.16.02 PM.png" />
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<div id="part0005.xhtml_page_13" class="class_s1NA">
+Micro Kernel
+</div>
+<div class="class_s10">
+Micro Kernel uses the approach of the ultimate minimum set-up required
+for scheduling, memory management, and inter-process communication. This
+type of kernel vastly reduces the amount of memory required for kernel
+use. But what does it mean by the minimum size of the kernel? The fact
+of a minimum size of the kernel means that the amount of extra
+communication required by device drivers reduces the maximum data flow
+through the kernel, but frankly along with also decreases kernel
+response time to interrupts.
+</div>
+<p><span id="part0006.xhtml"></span></p>
+<div id="part0006.xhtml_page_14" class="class_s1NA">
+Monolithic Kernel
+</div>
+<div class="class_s10">
+Monolithic Kernel type of kernel has all required functionality inside
+the kernel, in kernel memory space owned by the kernel. For example,
+schedulers, device drivers, memory management, etc. This type of kernels
+typically has the highest data throughput of all kernels.
+</div>
+<p><span id="part0007.xhtml"></span></p>
+<div id="part0007.xhtml_page_15" class="class_s1NA">
+Modular Kernel
+</div>
+<div class="class_s10">
+Modular kernel merges the good points of kernel-level drivers and
+third-party drivers. In this type of kernel, some parts of the system
+core will be located in independent files called modules and these
+modules can be added to the system at run time. For example, only
+loading drivers if a device is found. Another example only loads a
+filesystem if it gets requested.
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<div id="part0008.xhtml_page_16" class="class_s1NA">
+Exo Kernel
+</div>
+<div class="class_s10">
+Exo-Kernel type of kernel is the smallest that offers process protection
+and resource handling.
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<div id="part0009.xhtml_page_17" class="class_s1NA">
+The relation between Kernel and Operating System
+</div>
+<div class="class_s5Y">
+Suppose, think of a house along with two rooms; there is a corridor
+between two rooms to communicate with.
+</div>
+<div>
+<img src="image_rsrc2JA.jpg" class="class_s62"
+alt="Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-04-12 at 8.18.41 AM.png" />
+</div>
+<div class="class_s5Y">
+In a similar pattern, the Operating system works as a house. It has two
+parts or a room. One for user space programs and other for kernel space
+programs where system call interface works as a communication channel
+between them.
+</div>
+<div>
+<img src="image_rsrc2JB.jpg" class="class_s62"
+alt="Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-04-12 at 8.23.11 AM.png" />
+</div>
+<p><span id="part0010.xhtml"></span></p>
+<div id="part0010.xhtml_page_18" class="class_s1NA">
+Kernel space and protection rings
+</div>
+<div class="class_s10">
+Kernel space programs have outmost access to system H/W, memory and
+these should not be accessible by userspace programs; otherwise,
+disaster will happen. The operating system maintains some protection
+rings to overcome these disasters.
+</div>
+<div class="class_s5Y">
+Here in the following figure, the protection ring architecture of x86
+CPU shown. Four levels defined here, from level0 to level3.
+</div>
+<div>
+<img src="image_rsrc2JC.jpg" class="class_s6E"
+alt="Macintosh HD:Users:mahbub:Desktop:LK for Beginners:OS-protection-rings.jpg" />
+</div>
+<div class="class_s10">
+Level 0: Protection ring level 0 is the most privileged where kernel
+space programs run.
+</div>
+<div class="class_s10">
+Level 1: At protection ring level 1 device driver, the guest operating
+system resides here.
+</div>
+<div class="class_s10">
+Level 2: I/O privileged code and other similar privileged code runs at
+the protection ring level.
+</div>
+<div id="part0010.xhtml_page_19" class="class_s10">
+Level 3: Userspace programs and libraries run at protection ring level
+3. 
+</div>
+<div class="heading_s5A">
+Kernel vs. operating system
+</div>
+<table class="class_s83">
+<tbody>
+<tr>
+<td class="class_s6R"><div class="class_s6N">
+Kernel
+</div></td>
+<td class="class_s6U"><div class="class_s6N">
+Operating system
+</div></td>
+</tr>
+<tr>
+<td class="class_s6R"><div class="class_s6N">
+The kernel is the core of the operating system.
+</div></td>
+<td class="class_s6U"><div class="class_s6N">
+The operating system consists of user space and kernel space. 
+</div></td>
+</tr>
+<tr>
+<td class="class_s6R"><div class="class_s6N">
+The kernel is pretty smaller in size compared to the operating system.
+</div></td>
+<td class="class_s6U"><div class="class_s6N">
+The operating system is pretty large compared to kernel.
+</div></td>
+</tr>
+<tr>
+<td class="class_s6R"><div class="class_s6N">
+Kernel works as an interface between software and hardware.
+</div></td>
+<td class="class_s6U"><div class="class_s6N">
+The operating system works as an interface between user and hardware.
+</div></td>
+</tr>
+<tr>
+<td class="class_s6R"><div class="class_s6N">
+The kernel works closer to the hardware and it provides low-level
+services like:
+</div>
+<ul>
+<li><div class="class_s7D">
+System calls
+</div></li>
+<li><div class="class_s7D">
+Memory management
+</div></li>
+<li><div class="class_s7D">
+Network management
+</div></li>
+<li><div class="class_s7D">
+Device driver
+</div></li>
+<li><div class="class_s7D">
+File management
+</div></li>
+<li><div class="class_s7T">
+Process management    
+</div></li>
+</ul></td>
+<td class="class_s6U"><div class="class_s6N">
+The operating system includes applications like user interfaces.
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="heading_s5A">
+Kernel space vs. Userspace?
+</div>
+<div class="class_s10">
+Kernel space is the place where the kernel code stored, it executes here
+and provides its services. On the contrary,  user space is that set of
+memory locations where user processes run. Userspace processes can
+access kernel space routines through system calls.
+</div>
+<div class="heading_s87">
+MicroKernel vs. Monolithic Kernel
+</div>
+<div class="class_s10">
+The two most popular types of kernels are microkernel and monolithic
+kernel. <span id="part0010.xhtml_page_20"></span> Here we will discuss
+differences between them. First of all, services. Services are kept in
+separate address space in microkernel where in monolithic kernel
+services are kept in the same address space.  If services are crashed,
+it does not affect micro kernel core as it runs in separate address
+space but monolithic core crashes. In microkernel, execute quite slower
+compared to monolithic kernel.  Microkernels are smaller in size
+compared to monolithic ones. Another point, microkernels are easy to
+extend.
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<div id="part0011.xhtml_page_21" class="class_s1NA">
+Chapter 2: Introduction to Linux Kernel
+</div>
+<p><span id="part0012.xhtml"></span></p>
+<div id="part0012.xhtml_page_22" class="class_s1NA">
+Linux Kernel
+</div>
+<div class="class_s10">
+Linux inherits the “Monolithic” type of kernel.  This kernel was first
+released by Linus Torvalds in 1991.  The Linux kernel is a relatively
+small part of the full Linux System and it is the core that is
+responsible for how well the system will work.  Since 2005, Linux kernel
+uses the Git source code management system.
+</div>
+<p><span id="part0013.xhtml"></span></p>
+<div id="part0013.xhtml_page_23" class="class_s1NA">
+Linux Kernel Developer Community
+</div>
+<div class="class_s10">
+If you want to write code for Linux Kernel, you are welcome; as Linux
+kernel is an open-source project. Before getting started you should
+understand the tech part along with how Linux Kernel Developer Community
+works. For example, how code of conflict arises and resolves, how to
+submit process, Linux kernel coding style, and others. Regarding these
+and everything others, you will get at kernel.org
+</div>
+<p><span id="part0014.xhtml"></span></p>
+<div id="part0014.xhtml_page_24" class="class_s1NA">
+Linux kernel versioning system
+</div>
+<div>
+<img src="image_rsrc2JD.jpg" class="class_s8M"
+alt="Macintosh HD:Users:mahbub:Desktop:linux-kernel-version-system.png" />
+</div>
+<p><span id="part0015.xhtml"></span></p>
+<div id="part0015.xhtml_page_25" class="class_s1NA">
+Development Highlights
+</div>
+<div class="class_s10">
+Since 4.7 release, 83,000 changesets have been merged from 4319
+individual developers.
+</div>
+<p><span id="part0016.xhtml"></span></p>
+<div id="part0016.xhtml_page_26" class="class_s1NA">
+New Features Merged
+</div>
+<div class="class_s8U">
+-<span class="class_s1F2">          </span> The offloading of encrypted
+streams supported by in-kernel TLS.
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> The BBR congestion control
+method improved.
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> On ARM processors trusted
+execution environment facilitated by new TEE framework.
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> Documentation system of
+kernel now supported by Sphinx.
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> Statx() system call is now
+available.
+</div>
+<p><span id="part0017.xhtml"></span></p>
+<div id="part0017.xhtml_page_27" class="class_s1NA">
+Linux kernel source size
+</div>
+<div class="class_s10">
+Every year Linux kernel adding support new hardware and feature, so it’s
+source size growing fast. In its first release in 1991, kernel source
+size was nearly 10k lines of code, currently, it has more than 22
+million lines of code.
+</div>
+<div class="heading_s94">
+Linux Kernel Directory / Source Structure
+</div>
+<div class="class_s96">
+From the top level of the source tree /usr/src/linux we will see several
+directories:
+</div>
+<p><span id="part0018.xhtml"></span></p>
+<div id="part0018.xhtml_page_28" class="class_s1NA">
+arch
+</div>
+<ul>
+<li>This part contains all of the architecture-specific kernel
+code.</li>
+<li>This directory has further subdirectories, for example, i386 and
+alpha for one per supported architecture.</li>
+</ul>
+<p><span id="part0019.xhtml"></span></p>
+<div id="part0019.xhtml_page_29" class="class_s1NA">
+include
+</div>
+<ul>
+<li>This directory contains most of the include files needed to build
+the kernel source code.</li>
+</ul>
+<ul>
+<li>It has also subdirectories for every supported architecture.</li>
+</ul>
+<p><span id="part0020.xhtml"></span></p>
+<div id="part0020.xhtml_page_30" class="class_s1NA">
+init
+</div>
+<ul>
+<li>This part contains the initialization code for the kernel.</li>
+</ul>
+<ul>
+<li>This directory is a pretty important place for developers who need
+to know how the kernel works.</li>
+</ul>
+<p><span id="part0021.xhtml"></span></p>
+<div id="part0021.xhtml_page_31" class="class_s1NA">
+mm
+</div>
+<ul>
+<li>This part holds all of the memory management relevant code.</li>
+</ul>
+<p><span id="part0022.xhtml"></span></p>
+<div id="part0022.xhtml_page_32" class="class_s1NA">
+drivers
+</div>
+<ul>
+<li>This directory contains all system’s device drivers.</li>
+</ul>
+<ul>
+<li>They are further sub-divided into classes of device drivers, for
+example, block device driver, char device driver, network driver.</li>
+</ul>
+<p><span id="part0023.xhtml"></span></p>
+<div id="part0023.xhtml_page_33" class="class_s1NA">
+ipc
+</div>
+<ul>
+<li>This part holds the kernels inter-process communications code.</li>
+</ul>
+<p><span id="part0024.xhtml"></span></p>
+<div id="part0024.xhtml_page_34" class="class_s1NA">
+modules
+</div>
+<ul>
+<li>This part used to hold built modules.</li>
+</ul>
+<p><span id="part0025.xhtml"></span></p>
+<div id="part0025.xhtml_page_35" class="class_s1NA">
+fs
+</div>
+<ul>
+<li>This directory contains file system code.</li>
+</ul>
+<p><span id="part0026.xhtml"></span></p>
+<div id="part0026.xhtml_page_36" class="class_s1NA">
+kernel
+</div>
+<ul>
+<li>This directory contains the main kernel source code.</li>
+</ul>
+<p><span id="part0027.xhtml"></span></p>
+<div id="part0027.xhtml_page_37" class="class_s1NA">
+net
+</div>
+<ul>
+<li>This directory contains kernel's networking code.</li>
+</ul>
+<p><span id="part0028.xhtml"></span></p>
+<div id="part0028.xhtml_page_38" class="class_s1NA">
+lib
+</div>
+<ul>
+<li>This part holds the kernel's library code.</li>
+</ul>
+<p><span id="part0029.xhtml"></span></p>
+<div id="part0029.xhtml_page_39" class="class_s1NA">
+scripts
+</div>
+<ul>
+<li>This part holds the scripts that are used when the kernel is
+configured.</li>
+</ul>
+<p><span id="part0030.xhtml"></span></p>
+<div id="part0030.xhtml_page_40" class="class_s1NA">
+Who is sponsoring the work?
+</div>
+<div class="class_sAT">
+According to the report<span id="part0030.xhtml_a1FC"></span> <a
+href="#part0110.xhtml_a1F8" class="class_s1F7">[1]</a> , the following
+companies are employing kernel developers.
+</div>
+<div>
+<img src="image_rsrc2JE.jpg" class="class_sAX"
+alt="Macintosh HD:Users:mahbub:Desktop:Book Writing:LK for Beginners:who-contributes.png" />
+</div>
+<p><span id="part0031.xhtml"></span></p>
+<div id="part0031.xhtml_page_41" class="class_s1NA">
+Check Linux Kernel Version Number
+</div>
+<div class="class_s10">
+Sometimes you may need to check current kernel version, then run the
+following command
+</div>
+<div class="class_s10">
+# uname -r
+</div>
+<div class="class_sB2">
+4.17.12
+</div>
+<p><span id="part0032.xhtml"></span></p>
+<div id="part0032.xhtml_page_42" class="class_s1NA">
+Chapter 3: Build Linux Kernel
+</div>
+<p><span id="part0033.xhtml"></span></p>
+<div id="part0033.xhtml_page_43" class="class_s1NA">
+Linux Kernel Source Tree Architecture
+</div>
+<div class="class_sB8">
+The kernel.org hosts all of the source code for Linux Kernel.
+</div>
+<div>
+<img src="image_rsrc2JF.jpg" class="class_sBC"
+alt="Macintosh HD:Users:mahbub:Desktop:Book Writing:LK for Beginners:Linux-kernel.png" />
+</div>
+<div class="class_sBE">
+This site is self-explanatory. You can download the whole source code
+from here. You can also utilize command-line utility like wget, curl or
+others to download source code. After downloading source code I suggest
+creating a local directory inside your home directory i.e. Linux kernel
+and copy that source code here.
+</div>
+<div class="class_s10">
+$ cd ~
+</div>
+<div class="class_sB2">
+$ mkdir linuxkernel
+</div>
+<div class="class_s10">
+Then move that source code here
+</div>
+<div class="class_s10">
+$cd ~/downloads
+</div>
+<div id="part0033.xhtml_page_44" class="class_sB2">
+$mv linux-kernel-4.17.12.tar.gz linuxkernel
+</div>
+<div class="class_s10">
+Enter at linuxkernel directory
+</div>
+<div class="class_s10">
+$ cd linuxkernel
+</div>
+<div class="class_s10">
+Then extract
+</div>
+<div class="class_s10">
+$ tar linux-kernel-4.16.10.tar.gz
+</div>
+<p><span id="part0034.xhtml"></span></p>
+<div id="part0034.xhtml_page_45" class="class_s1NA">
+Tools to build Linux kernel
+</div>
+<div class="class_s10">
+A couple of software packages required building Linux kernel.
+</div>
+<ol>
+<li><div class="class_s7T">
+Compiler
+</div></li>
+<li><div class="class_s7D">
+Linker
+</div></li>
+<li><div class="class_s7T">
+Make Utility
+</div></li>
+</ol>
+<div class="class_sC3">
+<span class="class_s1F9">Compiler</span> : There are several compilers
+available, like gcc, clang, Mono, Visual C++ Express, Turbo C,  Oracle
+C++, and others.  But to build Linux kernel, the gcc C compiler must be
+used. But why? Because of major parts of Linux kernel written in C
+language, and very small parts written in Assembly language. The gcc C
+compiler is capable to compile C source parts and Assembly source parts.
+</div>
+<div class="class_sC3">
+<span class="class_s1F9">Linker</span> : For linking and assembling
+source code another tool required, that is GNU binary utilities; short
+named as binutils. Binutils is a collection of programming tools for
+creating and managing binary files, object files, profile data, and
+others.
+</div>
+<div class="class_sC3">
+<span class="class_s1F9">Make</span> : Another important tool to build
+the kernel is make; it checks the source tree and finds the files that
+needed to be compiled. After checking it calls compiler and other tools
+to proceed.
+</div>
+<p><span id="part0035.xhtml"></span></p>
+<div id="part0035.xhtml_page_46" class="class_s1NA">
+Chapter 4: Understanding System Call Interface
+</div>
+<p><span id="part0036.xhtml"></span></p>
+<div id="part0036.xhtml_page_47" class="class_s1NA">
+Introduction to System Call Interface
+</div>
+<div class="class_s5Y">
+The system call interface provides a layer between kernel space
+functions and userspace functions. This layer provides authentication to
+userspace processes to execute kernel space routines.  In simple words,
+a system call is just a userspace request for a function or service of
+kernel space.
+</div>
+<div>
+<img src="image_rsrc2JG.jpg" class="class_sCE"
+alt="Macintosh HD:Users:mahbub:Desktop:system-call-interface.png" />
+</div>
+<p><span id="part0037.xhtml"></span></p>
+<div id="part0037.xhtml_page_48" class="class_s1NA">
+Syscalls  / System Calls
+</div>
+<div class="class_s10">
+Syscalls / System Calls are accessed via a function call. Usually this
+function calls are defined in the C library. Syscalls accept variety to
+arguments (zero to many) as input returns a value and performs one or
+more tasks. Ideally a system call should have exactly one purpose.
+</div>
+<p><span id="part0038.xhtml"></span></p>
+<div id="part0038.xhtml_page_49" class="class_s1NA">
+System Call Numbers
+</div>
+<div class="class_s10">
+Each system call is assigned a 32-bit system number, which is unique;
+and it is used to refer C specific system call. Linux kernel maintains a
+table called sys-call-table to store all registered system calls.
+</div>
+<p><span id="part0039.xhtml"></span></p>
+<div id="part0039.xhtml_page_50" class="class_s1NA">
+Parameters in System Call
+</div>
+<div class="class_s10">
+While calling system calls, it may require to pass parameters to them. 
+Here, parameters are stored in registers. On x86-32 bit system, the
+registers are ebx, ecx, edx, esi and edi. But the scenario may happen
+when more than 5 parameters need to be passed. Then a single register is
+used to hold a pointer to user-space where all the parameters are
+stored. And the return value is sent to the user-space also via
+register.
+</div>
+<p><span id="part0040.xhtml"></span></p>
+<div id="part0040.xhtml_page_51" class="class_s1NA">
+Advantages of System call
+</div>
+<div class="class_s10">
+The system call interface approach has couple of advantages. For
+example,
+</div>
+<ul>
+<li><div class="class_s7D">
+<span class="class_s1F9">Secured</span> : If userspace
+processes/programs could directly read and write to the kernels address
+space, system security will be nullified.  Userspace functions have
+limited access to the resources/hardware of the system due to
+implementation of system call.
+</div></li>
+</ul>
+<ul>
+<li><div class="class_s7D">
+<span class="class_s1F9">Faster performance</span> : System call
+interface provides a faster performance to the system.
+</div></li>
+</ul>
+<ul>
+<li><div class="class_s7D">
+<span class="class_s1F9">Portability</span> : System call interface
+makes user space application more portable. Due to any change in the
+kernel side, userspace programs don’t need to change.
+</div></li>
+</ul>
+<ul>
+<li><div class="class_s7D">
+<span class="class_s1FA">Easier Implementation</span> <span
+class="class_s1FB">: System call interface makes user space application
+development easier; here they do not need to think about low-level
+functionality of the system.</span>
+</div></li>
+</ul>
+<p><span id="part0041.xhtml"></span></p>
+<div id="part0041.xhtml_page_52" class="class_s1NA">
+Disadvantages of system call
+</div>
+<div class="class_s10">
+To develop or implement a new system call, it needs to have a unique
+system call number officially assigned to you. More pain points, all
+architecture needs to separately register the system call. So, if you
+want to implement a simple task, then system call is pretty time
+consuming and the maintenance quite complex.
+</div>
+<p><span id="part0042.xhtml"></span></p>
+<div id="part0042.xhtml_page_53" class="class_s1NA">
+Creating a basic system call for the Linux kernel
+</div>
+<div class="class_s10">
+At first, switch to the compiled source directory of Linux kernel.
+</div>
+<div class="class_sDB">
+$ cd linux-x.x.x/
+</div>
+<div class="class_s10">
+create a directory hellosys and move into it.
+</div>
+<div class="class_s10">
+$ mkdir hellosys
+</div>
+<div class="class_sB2">
+$ cd hellosys
+</div>
+<div class="class_s10">
+Create a new C file in this dir,
+</div>
+<div class="class_s10">
+$ vi hellosys.c
+</div>
+<div class="class_s10">
+Add following codes here
+</div>
+<div class="class_sDB">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sDB">
+asmlinkage long sys_hellosys(void) {
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> printk(“Hello New System Call!\n”);
+</div>
+<div>
+<span class="class_s1F0">​</span> return 0;
+</div>
+<div>
+}
+</div>
+<div class="class_s10">
+Now create a Makefile in the same dir, along with the following
+contents:
+</div>
+<div class="class_sDB">
+mod_sign_cmd = scripts/sign-file $(CONFIG_MODULE_SIG_HASH) \
+</div>
+<div>
+$(MODULE_SIG_KEY_SRCPREFIX)
+</div>
+<div>
+else
+</div>
+<div>
+mod_sign_cmd = true
+</div>
+<div>
+endif
+</div>
+<div>
+export mod_sign_cmd
+</div>
+<div id="part0042.xhtml_page_54" class="class_sDB">
+ifeq ( $(KBUILD_EXTMOD),)
+</div>
+<div>
+core-y    += kernel / certs / mm / fs/ ipc/ security/ crypto/ block/
+hellosys/
+</div>
+<div class="class_sDB">
+vmlinux-dirs := $(patsubst %/, %, $(filter %/, $(init-y) $(init-m) \
+</div>
+<div>
+$(core-y) $(core-m) $(drivers-y) $(drivers-m) \
+</div>
+<div>
+$(net-y) $(net-m) $(libs-y) $(libs-m) $(virt-y)))
+</div>
+<div class="class_sDB">
+vmlinux-alldirs := $(sort $(vmlinux-dirs) $(patsubst %/, %, $(filter %/,
+\
+</div>
+<div>
+$(init-) $(core-) $(drivers-) $(net-) $(libs-) $(virst-))))
+</div>
+<div class="class_s10">
+now, compile and run Makefile.
+</div>
+<div class="class_s10">
+$ make
+</div>
+<p><span id="part0043.xhtml"></span></p>
+<div id="part0043.xhtml_page_55" class="class_s1NA">
+Add the new system call into the System Call Table
+</div>
+<div class="class_s10">
+A table named for 32 bit system is syscall.tbl and in 64 bit systems
+syscall_64.tbl file.
+</div>
+<div class="class_s10">
+I edit the table by nano arch/x86/entry/syscalls/syscall_64.tbl and
+scroll down till I find the number of the last system call before those
+starting from 512.
+</div>
+<div class="class_s10">
+In my case, that’s 331. So new system call’s number would be 332.
+</div>
+<div class="class_sC3">
+Now add the following line after the 331<span
+class="class_s1F7">st</span> system call.
+</div>
+<div class="class_s10">
+332 64 hellosys sys_hellosys
+</div>
+<div class="class_s10">
+Add the new System Call in the System Call Header file
+</div>
+<div class="class_s10">
+Now edit include/linux/syscall.h and add the following line at the end
+of the file before #endif statement.
+</div>
+<div class="class_sB2">
+asmlinkage long sys_hellosys(void);
+</div>
+<p><span id="part0044.xhtml"></span></p>
+<div id="part0044.xhtml_page_56" class="class_s1NA">
+Recompile the kernel
+</div>
+<div class="class_s10">
+$ make –j4 modules_install install
+</div>
+<p><span id="part0045.xhtml"></span></p>
+<div id="part0045.xhtml_page_57" class="class_s1NA">
+Test the System Call
+</div>
+<div class="class_s10">
+Create a C program in your userspace, for example, inhome directory, and
+add the following lines
+</div>
+<div class="class_sDB">
+$ vi testhellosys.c
+</div>
+<div class="class_sDB">
+#include &lt;stdio.h&gt;
+</div>
+<div>
+#include &lt;linux/kernel.h&gt;
+</div>
+<div>
+#include &lt;sys/syscall.h&gt;
+</div>
+<div>
+#include &lt;unistd.h&gt;
+</div>
+<div class="class_sDB">
+int main() {
+</div>
+<div class="class_sEW">
+long int syscallnumber = syscall(329);
+</div>
+<div class="class_sEW">
+printf(“System call sys_hellosys returned %ld\n”, syscallnumber);
+</div>
+<div class="class_sEW">
+return 0;
+</div>
+<div>
+}
+</div>
+<div class="class_s10">
+Now compile the source code and run.
+</div>
+<div class="class_s10">
+It will print something like 0, if something wrong then it will print
+-1.  If printed -1 then we need to go back and check, debug and try
+again.
+</div>
+<div class="class_sF3">
+Now if we check the kernel log through dmesg, then something like Hello
+New System Call will be printed.
+</div>
+<p><span id="part0046.xhtml"></span></p>
+<div id="part0046.xhtml_page_58" class="class_s1NA">
+Chapter 5: Understanding Kernel Module
+</div>
+<p><span id="part0047.xhtml"></span></p>
+<div id="part0047.xhtml_page_59" class="class_s1NA">
+What is Kernel Module?
+</div>
+<div class="class_s10">
+To add some functionality to the Linux kernel needs a long and tiresome
+approach. At first, need to add source file in the kernel source tree.
+Then compile the kernel. If there is no compile error, then build the
+kernel. If no build error happens, then reboot the machine to get
+effected result.
+</div>
+<div class="class_s10">
+This approach is quite complex and time-consuming. If any system problem
+occurs, then it becomes hard to debug; because it is really hard to
+notify in which of the base kernel caused the trouble. Thus kernel
+development process becomes quite hard to maintain.
+</div>
+<div class="class_s10">
+To solve this issue Loadable Kernel Module (LKM) feature appeared. LKM
+was first introduced in kernel version 1.2 in 1995.
+</div>
+<p><span id="part0048.xhtml"></span></p>
+<div id="part0048.xhtml_page_60" class="class_s1NA">
+What is Loadable Kernel Module?
+</div>
+<div class="class_s10">
+Loadable Kernel Module is a small piece of software that can be added or
+removed into the kernel without the need of rebooting system. Loadable
+Kernel Modules are used to add or modify functionality to the system
+without performance penalty, time consumption, and system crash
+penalties.
+</div>
+<div class="class_s10">
+Loadable Kernel Module works on the current process like statically
+linked kernel functions.
+</div>
+<p><span id="part0049.xhtml"></span></p>
+<div id="part0049.xhtml_page_61" class="class_s1NA">
+Advantages of Loadable Kernel Modules
+</div>
+<div class="class_s10">
+Loadable Kernel Modules are not time wasters. They save a lot of time.
+Because to add/modify, recompile and build Loadable Kernel Module, we
+don’t need to rebuild the kernel.
+</div>
+<div class="class_s10">
+Due to the Loadable Kernel Module approach Linux kernel is still small
+and easier to maintain.
+</div>
+<div class="class_s10">
+Another advantage of the Loadable Kernel Module is better memory
+optimization. When the system booted, all parts of the base kernel stay
+loaded all the time while Loadable Kernel Modules are loaded when they
+are needed.
+</div>
+<p><span id="part0050.xhtml"></span></p>
+<div id="part0050.xhtml_page_62" class="class_s1NA">
+Disadvantages of Loadable Kernel Modules
+</div>
+<div class="class_s10">
+As Loadable Kernel Modules have higher access permissions to the system,
+they will become a higher security threat if programs used in the wrong
+way. Although this security threat can be solvable by allowing only
+signed modules.
+</div>
+<p><span id="part0051.xhtml"></span></p>
+<div id="part0051.xhtml_page_63" class="class_s1NA">
+Security concern of Loadable Kernel Module
+</div>
+<div class="class_s10">
+Several LKM security issue arises. For example, Sangram Gayal explains
+the Linux kernel privileged process Hijacking Vulnerability.
+</div>
+<div class="class_s10">
+Rainer Winchmann provides analysis on Linux Kernel Rootkit.
+</div>
+<div class="class_s10">
+How to minimize these security risks:
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">         </span> <span
+class="class_s1F3">Buffer overrun</span> is one of the most common
+sources of security risks in LKM. Proper use of buffer overrun will
+minimize this risk.
+</div>
+<div class="class_s8W">
+<span class="class_s1F6">-</span> <span
+class="class_s1F2">          </span> Proper <span
+class="class_s1F3">input filtering</span>
+</div>
+<div class="class_s8W">
+<span class="class_s1F6">-</span> <span
+class="class_s1F2">          </span> Proper <span
+class="class_s1F3">checking of memory initialization and
+de-initialization</span>
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">         </span> <span
+class="class_s1F3">Enforcing signed modules</span> : LKMs have full
+access to a low level and critical kernel space resources, sticking with
+the signed module option will make the utmost safety.
+</div>
+<p><span id="part0052.xhtml"></span></p>
+<div id="part0052.xhtml_page_64" class="class_s1NA">
+Chapter 6:
+</div>
+<div class="heading_sFZ">
+Before starting to write the Loadable Kernel Module
+</div>
+<p><span id="part0053.xhtml"></span></p>
+<div id="part0053.xhtml_page_65" class="class_s1NA">
+Things to learn
+</div>
+<div class="class_s10">
+What you have learned to write user-space C programming on *nix
+platforms? You tried to work with file read-write, playing with memory
+through malloc. To implement concurrency you worked with pthread.
+</div>
+<div class="class_s10">
+While you want to work with Linux kernel, you may need to work with
+memory things for kernel side like kmalloc, do list operations through
+list libraries and others.
+</div>
+<p><span id="part0054.xhtml"></span></p>
+<div id="part0054.xhtml_page_66" class="class_s1NA">
+Resources to learn kernel programming
+</div>
+<div class="class_s10">
+Although the book will help you to start, your main and utmost resource
+will be the source code at kernel.org. Don’t be panic, just take time;
+do something practical projects which will help you most. Go through the
+mailing lists, follow those lists, try to understand what’s going on.
+</div>
+<div class="class_s10">
+If you like to work with device driver programming, try to write a
+simple character device driver. If you are curious about debugging, you
+may be interested in kdump.   Practical projects will help you a lot.
+</div>
+<p><span id="part0055.xhtml"></span></p>
+<div id="part0055.xhtml_page_67" class="class_s1NA">
+Chapter 7:
+</div>
+<div class="heading_sFZ">
+Writing Loadable Kernel Module
+</div>
+<p><span id="part0056.xhtml"></span></p>
+<div id="part0056.xhtml_page_68" class="class_s1NA">
+Write a simple Loadable Kernel Module
+</div>
+<div class="class_s10">
+Writing Loadable Kernel Module (LKM) is pretty simple. Every LKM must
+have at least two functions:
+</div>
+<ol>
+<li><div class="class_s7T">
+Startup function
+</div></li>
+<li><div class="class_s7T">
+End Function
+</div></li>
+</ol>
+<div class="class_s10">
+Create a directory called “LKM” inside home directory and then create
+hellolkm.c inside the LKM directory.
+</div>
+<div class="class_sDB">
+$ cd ~
+</div>
+<div>
+$ mkdir LKM
+</div>
+<div class="class_sDB">
+$ cd LKM
+</div>
+<div class="class_s10">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sB2">
+#include &lt;linux/module.h&gt;
+</div>
+<div class="class_sB2">
+//// end of header include section
+</div>
+<div class="class_s10">
+#define __KERNEL__
+</div>
+<div class="class_sB2">
+#define MODULE
+</div>
+<div class="class_sB2">
+#define LINUX
+</div>
+<div class="class_sB2">
+//// end of macro define section
+</div>
+<div class="class_s10">
+int init_module(void)
+</div>
+<div class="class_sB2">
+{
+</div>
+<div class="class_sGY">
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Hello LKM”);
+</div>
+<div class="class_sGY">
+<span class="class_s1F0">​</span> return 0;
+</div>
+<div class="class_sB2">
+}
+</div>
+<div class="class_sB2">
+//// end of init section
+</div>
+<div class="class_s10">
+void cleanup_module (void)
+</div>
+<div id="part0056.xhtml_page_69" class="class_sB2">
+{
+</div>
+<div class="class_sGY">
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Goodbye LKM”);
+</div>
+<div class="class_sB2">
+}
+</div>
+<div class="class_sB2">
+//// End of cleanup section
+</div>
+<div class="class_s10">
+MODULE_LICENSE (“BSD”);
+</div>
+<div class="class_sB2">
+//// End of module licensing section
+</div>
+<div class="class_s10">
+In header include section, kernel.h included for printk() function and
+moulde.h included to load module into kernel dynamically.
+</div>
+<div class="class_s10">
+In the macro add section, macro __KERNEL__ added to hide kernel source
+programs from user space programs.
+</div>
+<div class="class_s10">
+I have used function init_module(), which works as an initialization
+function. It prints Hello LKM in the console and KERN_DEBUG macro used.
+To understand KERN_DEBUG option, please check the debugging chapter.
+</div>
+<div class="class_s10">
+Then I have used function cleanup_module(), which works as a cleanup or
+end function of a module.
+</div>
+<div class="class_s10">
+At the end, MODULE_LICENSE macro used to provide licensing information
+of this module.
+</div>
+<div class="class_s10">
+Makefile
+</div>
+<div class="class_s10">
+Now I will create a makefile to build this module.
+</div>
+<div class="class_s10">
+$ vi Makefile
+</div>
+<div class="class_sB2">
+obj-m = helloLKM.o
+</div>
+<div class="class_sB2">
+KERNELDIR := */lib/module
+</div>
+<div class="class_sB2">
+WORKNIGDIR := $(shell pwd)
+</div>
+<div class="class_s10">
+all:
+</div>
+<div class="class_sHP">
+make –c $l
+</div>
+<div id="part0056.xhtml_page_70" class="class_sB2">
+clean:
+</div>
+<div class="class_s10">
+here kernel directory is the directory of the kernel source.  I have
+used shell uname –r which search recursively and gets the name of
+current kernel.
+</div>
+<div class="class_s10">
+The make –c $(KERNELDIR) “make” will change this directory while
+building source code and move back to this directory while build
+finished.
+</div>
+<div class="class_s10">
+M = $(WORKINGDIR) uses the path of the working directory where the
+module is located. Here, WORKINGDIR := $ (shell pwd) which means
+absolute path of current directory.
+</div>
+<div class="class_s10">
+And, finally, the clean tag which will remove all the generated files.
+</div>
+<div class="class_s10">
+Now I will compile, build and run the module.
+</div>
+<div class="class_s10">
+At first, compile
+</div>
+<div class="class_s10">
+$ make
+</div>
+<div class="class_s10">
+This command will create module helloLKM.ko in the working directory.
+</div>
+<div class="class_s10">
+To view information about helloLKM.ko,
+</div>
+<div class="class_s10">
+$ modinfo helloLKM.ko
+</div>
+<div class="class_s10">
+Now, I can this load this module, but to do this, I need to change user
+priority level to superuser. Then I can use insmod or modprobe command
+to load module.
+</div>
+<div class="class_s10">
+$ su insmod helloLKM.ko
+</div>
+<div class="class_sB2">
+$ su modprobe helloLKM.ko
+</div>
+<div class="class_s10">
+To check whether the module loaded successfully, I can check this log.
+</div>
+<div class="class_s10">
+$dmesg | tail -1
+</div>
+<div class="class_s10">
+Hello LKM
+</div>
+<div class="class_s10">
+And you can unload the module
+</div>
+<div id="part0056.xhtml_page_71" class="class_s10">
+$ rmmod helloLKM
+</div>
+<div class="class_s10">
+or
+</div>
+<div class="class_s10">
+$ modprobe –r helloLKM 
+</div>
+<div class="class_s10">
+To check whether unloaded perfectly, check using dmesg
+</div>
+<div class="class_s10">
+$ dmesg | tail -1
+</div>
+<div class="class_sB2">
+Goodbye LKM
+</div>
+<p><span id="part0057.xhtml"></span></p>
+<div id="part0057.xhtml_page_72" class="class_s1NA">
+Initialization and Clean Macro
+</div>
+<div class="class_s10">
+Before kernel version 2.4, it was mandatory to use init_module() for
+module initialization and cleanup_module() for cleanup purpose.
+</div>
+<div class="class_s10">
+But from kernel version 2.4, it is allowed to use any name but we need
+to use extra macro so that system can understand which one for
+initialization and which one for cleanup.
+</div>
+<div class="class_s10">
+static int entrance()
+</div>
+<div class="class_sB2">
+static int out()
+</div>
+<div class="class_s10">
+module __init (entrance);
+</div>
+<div class="class_sB2">
+module __exit(out);
+</div>
+<div class="class_sBE">
+You can use __init() and __exit() macro before function name.
+</div>
+<div class="class_sBE">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sB2">
+#include &lt;linux/module.h&gt;
+</div>
+<div class="class_sB2">
+//// end of header include section
+</div>
+<div class="class_s10">
+#define __KERNEL__
+</div>
+<div class="class_sB2">
+#define MODULE
+</div>
+<div class="class_sB2">
+#define LINUX
+</div>
+<div class="class_sB2">
+//// end of macro define section
+</div>
+<div class="class_s10">
+Static int entrance(void)
+</div>
+<div class="class_sB2">
+{
+</div>
+<div class="class_sGY">
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Hello LKM”);
+</div>
+<div class="class_sGY">
+<span class="class_s1F0">​</span> return 0;
+</div>
+<div class="class_sB2">
+}
+</div>
+<div class="class_sB2">
+//// end of init section
+</div>
+<div id="part0057.xhtml_page_73" class="class_s10">
+static int out(void)
+</div>
+<div class="class_sB2">
+{
+</div>
+<div class="class_sGY">
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Goodbye LKM”);
+</div>
+<div class="class_sB2">
+}
+</div>
+<div class="class_sB2">
+//// End of cleanup section
+</div>
+<div class="class_s10">
+module __init (entrance);
+</div>
+<div class="class_sB2">
+module __exit(out);
+</div>
+<div class="class_s10">
+MODULE_LICENSE (“BSD”);
+</div>
+<div class="class_sB2">
+//// End of module licensing section
+</div>
+<p><span id="part0058.xhtml"></span></p>
+<div id="part0058.xhtml_page_74" class="class_s1NA">
+Other Macros
+</div>
+<div class="class_s10">
+You can also use other macros like MODULE_DESCRIPTION, MODULE_AUTHOR,
+these are pretty helpful to understand module purpose and who written
+the module
+</div>
+<div class="class_s10">
+MODULE_AUTHOR (“Your Name”);
+</div>
+<div class="class_sB2">
+MODULE_DESCRIPTION (“This is test module”);
+</div>
+<div class="class_sBE">
+For example,
+</div>
+<div class="class_s10">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sB2">
+#include &lt;linux/module.h&gt;
+</div>
+<div class="class_sB2">
+//// end of header include section
+</div>
+<div class="class_s10">
+#define __KERNEL__
+</div>
+<div class="class_sB2">
+#define MODULE
+</div>
+<div class="class_sB2">
+#define LINUX
+</div>
+<div class="class_sB2">
+//// end of macro define section
+</div>
+<div class="class_sBE">
+static int __init entrance (void)
+</div>
+<div class="class_sB2">
+{
+</div>
+<div class="class_sGY">
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Hello LKM\n”);
+</div>
+<div class="class_sGY">
+<span class="class_s1F0">​</span> return 0;
+</div>
+<div class="class_sB2">
+}
+</div>
+<div class="class_s10">
+static void __exit out (void)
+</div>
+<div class="class_sB2">
+{
+</div>
+<div class="class_sGY">
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Goodbye LKM\n”);
+</div>
+<div class="class_sB2">
+}
+</div>
+<div class="class_s10">
+module __init (entrance);
+</div>
+<div id="part0058.xhtml_page_75" class="class_sB2">
+module __exit(out);
+</div>
+<div class="class_sBE">
+MODULE_AUTHOR (“Md Mahbubur Rahman”);
+</div>
+<div class="class_sB2">
+MODULE_LICENSE (“BSD”);
+</div>
+<div class="class_sB2">
+//// End of module licensing section
+</div>
+<div class="class_sBE">
+The __init macro defines that the cited function not further needed
+after initialization. Kernel frees it from memory after initialization
+and __exit macro used to remove.
+</div>
+<p><span id="part0059.xhtml"></span></p>
+<div id="part0059.xhtml_page_76" class="class_s1NA">
+Command-line arguments in LKM
+</div>
+<div class="class_s10">
+To take command line arguments, LKMs need to use MODULE_PARAM () macro
+and variables should be called global.
+</div>
+<div class="class_s10">
+The MODULE_PARAM() macro takes 2 arguments: a variable name and variable
+type.
+</div>
+<div class="class_s10">
+There is another relevant macro MODULE_PARAM_DESC() which is used for
+documenting module arguments. It takes two parameters: variable name and
+variable description.
+</div>
+<div class="class_s10">
+Supported data types in command-line arguments
+</div>
+<ul>
+<li><div class="class_s7T">
+Bool
+</div></li>
+<li><div class="class_s7T">
+Byte (single)
+</div></li>
+<li><div class="class_s7T">
+Character pointer
+</div></li>
+<li><div class="class_s7T">
+Array
+</div></li>
+<li><div class="class_s7T">
+Short int
+</div></li>
+<li><div class="class_s7D">
+Unsigned short int
+</div></li>
+<li><div class="class_s7T">
+Int
+</div></li>
+<li><div class="class_s7D">
+Unsigned int
+</div></li>
+<li><div class="class_s7T">
+Long int
+</div></li>
+<li><div class="class_s7D">
+Unsigned long int
+</div></li>
+</ul>
+<p><span id="part0060.xhtml"></span></p>
+<div id="part0060.xhtml_page_77" class="class_s1NA">
+Example of command-line arguments in LKMs with Integer
+</div>
+<div class="class_sN4">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/init.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/stat.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/module.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/moduleparam.h&gt;
+</div>
+<div class="class_sDB">
+#define __KERNEL__
+</div>
+<div>
+#define LINUX
+</div>
+<div>
+#define MODULE
+</div>
+<div class="class_sN6">
+//// end of macro define section
+</div>
+<div class="class_s96">
+static int input = 5; // variable should have initial default value
+</div>
+<div>
+MODULE_PARAM (input, int);
+</div>
+<div>
+MODULE_PARM_DESC(input, "An integer");
+</div>
+<div class="class_sDB">
+static init __init entrance (void)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> int square_val = input * input;
+</div>
+<div>
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Square value of
+input = %i\n”, square_val);
+</div>
+<div>
+}
+</div>
+<div class="class_sDB">
+static void __exit out (void)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Goodbye LKM\n”);
+</div>
+<div>
+}
+</div>
+<div class="class_s10">
+module __init (entrance);
+</div>
+<div id="part0060.xhtml_page_78" class="class_sB2">
+module __exit(out);
+</div>
+<div class="class_sNX">
+MODULE_AUTHOR("Md Mahbubur Rahman");
+</div>
+<div>
+MODULE_LICENSE (“BSD”);
+</div>
+<div>
+//// End of module licensing section
+</div>
+<p><span id="part0061.xhtml"></span></p>
+<div id="part0061.xhtml_page_79" class="class_s1NA">
+Example of command-line arguments in LKMs with Short Integer, Integer
+and Long Integer
+</div>
+<div class="class_sN4">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/init.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/stat.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/module.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/moduleparam.h&gt;
+</div>
+<div class="class_sN4">
+#define __KERNEL__
+</div>
+<div class="class_sN6">
+#define LINUX
+</div>
+<div class="class_sN6">
+#define MODULE
+</div>
+<div class="class_sN6">
+//// end of macro define section
+</div>
+<div class="class_sN4">
+static short int shortInt = 1;
+</div>
+<div class="class_sN6">
+static int vInt = 111;
+</div>
+<div class="class_sN6">
+static long int longInt = 5555;
+</div>
+<div class="class_sN6">
+//// end of declaration of command line argument
+</div>
+<div class="class_sN4">
+MODULE_PARAM(shortInt, short);
+</div>
+<div class="class_sN6">
+MODULE_PARM_DESC(shortInt, "A short integer");
+</div>
+<div class="class_sN6">
+MODULE_PARAM(vInt, int);
+</div>
+<div class="class_sN6">
+MODULE_PARM_DESC(vInt, "An integer");
+</div>
+<div class="class_sN6">
+MODULE_PARAM(longInt, long);
+</div>
+<div class="class_sN6">
+MODULE_PARM_DESC(longInt, "A long integer");
+</div>
+<div class="class_sNX">
+static int __init entrance(void)
+</div>
+<div class="class_sN6">
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> <span class="class_s1F5">int i;</span>
+</div>
+<div id="part0061.xhtml_page_80">
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO "Hello LKM =============\n");</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO "myshort is a short integer: %hd\n",
+shortInt);</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO "vInt is an integer: %d\n",
+vInt);</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO "longInt is a long integer: %ld\n",
+longInt);</span>
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> <span class="class_s1F5">return
+0;</span>
+</div>
+<div class="class_sN6">
+}
+</div>
+<div class="class_sN6">
+//// end of init section
+</div>
+<div class="class_sN4">
+static void __exit out(void)
+</div>
+<div class="class_sN6">
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO "Goodbye LKM\n");</span>
+</div>
+<div class="class_sN6">
+}
+</div>
+<div class="class_sN6">
+//// End of cleanup section
+</div>
+<div class="class_s10">
+module __init (entrance);
+</div>
+<div class="class_sB2">
+module __exit(out);
+</div>
+<div class="class_sNX">
+MODULE_AUTHOR("Md Mahbubur Rahman");
+</div>
+<div class="class_sN6">
+MODULE_LICENSE (“BSD”);
+</div>
+<div class="class_sR8">
+//// End of module licensing section
+</div>
+<p><span id="part0062.xhtml"></span></p>
+<div id="part0062.xhtml_page_81" class="class_s1NA">
+Example of command-line arguments in LKMs with String
+</div>
+<div class="class_sNX">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/init.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/stat.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/module.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/moduleparam.h&gt;
+</div>
+<div class="class_sN4">
+#define __KERNEL__
+</div>
+<div class="class_sN6">
+#define LINUX
+</div>
+<div class="class_sN6">
+#define MODULE
+</div>
+<div class="class_sN6">
+//// end of macro define section
+</div>
+<div class="class_sN4">
+static char *stringVar = "hello";
+</div>
+<div class="class_sN6">
+//// end of declaration of command line argument
+</div>
+<div class="class_sNX">
+MODULE_PARAM(stringVar, charp);
+</div>
+<div class="class_sN6">
+MODULE_PARM_DESC(stringVar, "A character string");
+</div>
+<div class="class_sN6">
+//// end of adding module_param along with type to every variabble
+</div>
+<div class="class_sN4">
+static int __init entrance(void)
+</div>
+<div class="class_sN6">
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> <span class="class_s1F5">int i;</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO "mystring is a string: %s\n",
+stringVar);</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span class="class_s1F5">return
+0;</span>
+</div>
+<div class="class_sN6">
+}
+</div>
+<div class="class_sN6">
+//// end of init section
+</div>
+<div id="part0062.xhtml_page_82" class="class_sN4">
+static void __exit out(void)
+</div>
+<div class="class_sN6">
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO "Goodbye LKM\n");</span>
+</div>
+<div class="class_sN6">
+}
+</div>
+<div class="class_sN6">
+//// End of cleanup section
+</div>
+<div class="class_sBE">
+module __init (entrance);
+</div>
+<div class="class_sB2">
+module __exit(out);
+</div>
+<div class="class_sNX">
+MODULE_AUTHOR("Md Mahbubur Rahman");
+</div>
+<div class="class_sN6">
+MODULE_LICENSE (“BSD”);
+</div>
+<div class="class_sN6">
+//// End of module licensing section
+</div>
+<p><span id="part0063.xhtml"></span></p>
+<div id="part0063.xhtml_page_83" class="class_s1NA">
+Example of command-line arguments in LKMs with Array
+</div>
+<div class="class_sNX">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/init.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/stat.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/module.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/moduleparam.h&gt;
+</div>
+<div class="class_sN4">
+#define __KERNEL__
+</div>
+<div class="class_sN6">
+#define LINUX
+</div>
+<div class="class_sN6">
+#define MODULE
+</div>
+<div class="class_sN6">
+//// end of macro define section
+</div>
+<div class="class_sN4">
+static int intArray[3] = { 1, 2, 3 };
+</div>
+<div class="class_sN6">
+static int arrayArgc = 0;
+</div>
+<div class="class_sN6">
+//// end of declaration of command line argument
+</div>
+<div class="class_sN4">
+MODULE_PARAM_ARRAY(intArray, int, arrayArgc, 1111);
+</div>
+<div class="class_sN6">
+MODULE_PARM_DESC(intArray, "An array of integers");
+</div>
+<div class="class_sN6">
+//// end of adding module_param along with type to every variabble
+</div>
+<div class="class_sN4">
+static int __init entrance(void)
+</div>
+<div class="class_sN6">
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> <span class="class_s1F5">int i;</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span class="class_s1F5">for (i = 0; i
+&lt; (sizeof intArray / sizeof (int)); i++)</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span class="class_s1F5">{</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO " intArray[%d] = %d\n", i,
+intArray[i]);</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span class="class_s1F5">}</span>
+</div>
+<div id="part0063.xhtml_page_84">
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO "got %d arguments for intArray.\n",
+arrayArgc);</span>
+</div>
+<div>
+<span class="class_s1F0">​</span> <span class="class_s1F5">return
+0;</span>
+</div>
+<div class="class_sN6">
+}
+</div>
+<div class="class_sN6">
+//// end of init section
+</div>
+<div class="class_sN4">
+static void __exit out(void)
+</div>
+<div class="class_sN6">
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> <span
+class="class_s1F5">printk(KERN_INFO "Goodbye LKM\n");</span>
+</div>
+<div class="class_sN6">
+}
+</div>
+<div class="class_sN6">
+//// End of cleanup section
+</div>
+<div class="class_s10">
+module __init (entrance);
+</div>
+<div class="class_sB2">
+module __exit(out);
+</div>
+<div class="class_sNX">
+MODULE_AUTHOR("Md Mahbubur Rahman");
+</div>
+<div class="class_sN6">
+MODULE_LICENSE (“BSD”);
+</div>
+<div class="class_sN6">
+//// End of module licensing section
+</div>
+<p><span id="part0064.xhtml"></span></p>
+<div id="part0064.xhtml_page_85" class="class_s1NA">
+Loading LKMs while the system starts
+</div>
+<div class="class_sTG">
+Several times we need that LKMs should be started while the system
+starts, means at boot time. To load modules at boot time file
+/etc/modules are being used; it holds kernel module names that are
+needed to start when the system starts.
+</div>
+<div class="class_s10">
+Before editing this file we will create a directory inside kernels
+driver directory, then copy that module here, and then add module name
+in /etc/modules file
+</div>
+<p><span id="part0065.xhtml"></span></p>
+<div id="part0065.xhtml_page_86" class="class_s1NA">
+Module spanning more than one file
+</div>
+<div class="class_s10">
+There may be some scenarios when we may need to break the source code of
+our module into several parts, files.
+</div>
+<p><span id="part0066.xhtml"></span></p>
+<div id="part0066.xhtml_page_87" class="class_s1NA">
+modulestart.c
+</div>
+<div class="class_sN4">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/init.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/stat.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/module.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/moduleparam.h&gt;
+</div>
+<div class="class_sDB">
+#define __KERNEL__
+</div>
+<div>
+#define LINUX
+</div>
+<div>
+#define MODULE
+</div>
+<div class="class_sN6">
+//// end of macro define section
+</div>
+<div class="class_s96">
+static int input = 5; // variable should have initial default value
+</div>
+<div>
+MODULE_PARAM (input, int);
+</div>
+<div>
+MODULE_PARM_DESC(input, "An integer");
+</div>
+<div class="class_sDB">
+void module_start (void)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> int square_val = input * input;
+</div>
+<div>
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Square value of
+input = %i\n”, square_val);
+</div>
+<div>
+}
+</div>
+<div class="class_sN4">
+MODULE_AUTHOR("Md Mahbubur Rahman");
+</div>
+<div>
+MODULE_LICENSE (“BSD”);
+</div>
+<div>
+//// End of module licensing section
+</div>
+<p><span id="part0067.xhtml"></span></p>
+<div id="part0067.xhtml_page_88" class="class_s1NA">
+modulestop.c
+</div>
+<div class="class_sN4">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/init.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/stat.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/module.h&gt;
+</div>
+<div class="class_sN6">
+#include &lt;linux/moduleparam.h&gt;
+</div>
+<div class="class_sDB">
+#define __KERNEL__
+</div>
+<div>
+#define LINUX
+</div>
+<div>
+#define MODULE
+</div>
+<div class="class_sN6">
+//// end of macro define section
+</div>
+<div class="class_s96">
+void module_stop (void)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Goodbye LKM\n”);
+</div>
+<div>
+}
+</div>
+<div class="class_sNX">
+MODULE_AUTHOR("Md Mahbubur Rahman");
+</div>
+<div>
+MODULE_LICENSE (“BSD”);
+</div>
+<div>
+//// End of module licensing section
+</div>
+<p><span id="part0068.xhtml"></span></p>
+<div id="part0068.xhtml_page_89" class="class_s1NA">
+Makefile
+</div>
+<div class="class_s10">
+obj−m += hello−1.o
+</div>
+<div class="class_sB2">
+obj−m += hello−2.o
+</div>
+<div class="class_sB2">
+obj−m += modulestartstop.o
+</div>
+<div class="class_s10">
+startstop−objs := modulestart.o modulestop.o
+</div>
+<div class="class_sB2">
+all:
+</div>
+<div class="class_sB2">
+make −C /lib/modules/$(shell uname −r)/build M=$(PWD) modules
+</div>
+<div class="class_sB2">
+clean:
+</div>
+<div class="class_sB2">
+make −C /lib/modules/$(shell uname −r)/build M=$(PWD) clean
+</div>
+<p><span id="part0069.xhtml"></span></p>
+<div id="part0069.xhtml_page_90" class="class_s1NA">
+Chapter 8:
+</div>
+<div class="heading_sFZ">
+Kernel Debugging
+</div>
+<p><span id="part0070.xhtml"></span></p>
+<div id="part0070.xhtml_page_91" class="class_s1NA">
+Oops?
+</div>
+<div class="class_s10">
+In our conversation, when we utter “Oops”? When something bad happened,
+right?
+</div>
+<div class="class_s10">
+Kernel issues an Oops while something bad happened. Oops, the process
+involves several steps:
+</div>
+<ul>
+<li><div class="class_s7D">
+Step 1: Print error message
+</div></li>
+<li><div class="class_s7T">
+Step 2: Dumps contents of the register
+</div></li>
+<li><div class="class_s7D">
+Step 3: Outputs a backtrace
+</div></li>
+</ul>
+<div class="class_sVP">
+<div class="class_sVJ">
+Note: <span class="class_s1F3">What is Backtrace?</span>
+</div>
+<div class="class_sVM">
+You can say a backtrace is a list of the function call, especially those
+are active currently in a thread. The common or usual way of inspecting
+a backtrace of a program is to use outside or external debuggers. But in
+many cases, it is useful to obtain a backtrace programmatically from
+within a program.
+</div>
+</div>
+<div class="class_sBE">
+While an Oops occurs, the kernel tries to resolve the issue and try to
+resume control of the system. But the kernel is not always lucky to
+resume control of the system. In several aspects/scenarios kernel cannot
+control the system for example, when Oops occurred in the interrupt
+context or in the idle task or init task. In such cases kernel panics,
+instantly halts the system. If Oops occurred in another context, another
+process, then kernel kills the process and tries to continue executing.
+</div>
+<div class="class_sVT">
+.
+</div>
+<p><span id="part0071.xhtml"></span></p>
+<div id="part0071.xhtml_page_92" class="class_s1NA">
+Debugging the kernels issues/bugs
+</div>
+<div class="class_s10">
+Debugging kernel space issues are quite harder, a lot harder compared to
+debugging user space applications and libraries. Because on the kernel
+side, it's quite time-consuming to reproduce the bug or understand the
+wrong flow of the code or even risky. A minimal mistake can shut down
+the whole system. To debug kernel side issues, you need a better
+understanding of the operating system and kernel.
+</div>
+<div class="class_s10">
+If you can duplicate or reproduce the issue or bug, then it becomes
+pretty easier to solve the problem. Otherwise, you have to analyze the
+source code and need to find the flow of the source code.
+</div>
+<div class="class_s10">
+The bug happens inside the kernel due to many reasons. Common traits
+are, managing hardware in the wrong manner, incorrect implementation of
+source code, for example, buffer overrun, etc.
+</div>
+<p><span id="part0072.xhtml"></span></p>
+<div id="part0072.xhtml_page_93" class="class_s1NA">
+Printing for debugging
+</div>
+<div class="class_s10">
+While we debug user space programs we use print() or similar method or
+function. In kernel side, here have a similar kind of function names
+printk()
+</div>
+<div class="class_s10">
+The printk() function has been defined at linux/kernel.h library.
+</div>
+<ul>
+<li><div class="class_s7T">
+The printk() function is quite robust – because it is callable from
+anywhere.
+</div></li>
+<li><div class="class_s7T">
+Also, it can be called at any time; even it can be called simultaneously
+on multiple processors where no need the caller to hold a lock.
+</div></li>
+<li><div class="class_s7T">
+Another important feature of printk() is log level. Before printing the
+contents of printk() to console kernel checks the log level.
+</div></li>
+</ul>
+<p><span id="part0073.xhtml"></span></p>
+<div id="part0073.xhtml_page_94" class="class_s1NA">
+The printk() log level priorities
+</div>
+<div class="class_s5Y">
+There are eight (08) priority levels of printk() defined in
+&lt;linux/kernel.h&gt;. There are listed here
+</div>
+<div>
+<img src="image_rsrc2JH.jpg" class="class_sWD"
+alt="Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-08-01 at 2.30.44 PM.png" />
+</div>
+<div class="class_s10">
+KERN_EMERG
+</div>
+<ul>
+<li><div class="class_s7T">
+A massive and deadly emergency condition, which may related system halt
+or crash.
+</div></li>
+</ul>
+<div class="class_s10">
+KERN_ALERT
+</div>
+<ul>
+<li><div class="class_s7T">
+An urgent issue, which may need immediate action.
+</div></li>
+</ul>
+<div class="class_s10">
+KERN_CRIT
+</div>
+<ul>
+<li><div class="class_s7T">
+Critical conditions, often relevant to serious hardware or software
+failures.
+</div></li>
+</ul>
+<div class="class_s10">
+KERN_ERR
+</div>
+<ul>
+<li><div class="class_s7D">
+Error condition for example hardware difficulties, software difficulties
+are reported with log level.
+</div></li>
+</ul>
+<div class="class_s10">
+KERN_WARNING
+</div>
+<ul>
+<li><div class="class_s7T">
+Warning level message.
+</div></li>
+</ul>
+<div class="class_s10">
+KERN_NOTICE
+</div>
+<ul>
+<li><div id="part0073.xhtml_page_95" class="class_s7T">
+The current situation may be normal, but still worthy to note.
+</div></li>
+</ul>
+<div class="class_s10">
+KERN_INFO
+</div>
+<ul>
+<li><div class="class_s7T">
+An informational message is reported in this log level.
+</div></li>
+</ul>
+<div class="class_s10">
+KERN_DEBUG
+</div>
+<ul>
+<li><div class="class_s7T">
+A debug message, generally for debugging purposes this log level used.
+</div></li>
+</ul>
+<div class="class_s10">
+Now a question in your mind arises, if you do not specify a log level,
+what will be happened? The default value of DEFAULT_MESSAGE_LOGLEVEL
+will be used, which is currently KERN_WARNING.
+</div>
+<p><span id="part0074.xhtml"></span></p>
+<div id="part0074.xhtml_page_96" class="class_s1NA">
+Printk Example # 1
+</div>
+<div class="class_sDB">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div>
+#include &lt;linux/module.h&gt;
+</div>
+<div>
+//// end of header include section
+</div>
+<div class="class_sDB">
+#define __KERNEL__
+</div>
+<div>
+#define MODULE
+</div>
+<div>
+#define LINUX
+</div>
+<div>
+//// end of macro define section
+</div>
+<div class="class_sDB">
+static int entrance(void)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Simple and Basic
+Printk example”);
+</div>
+<div>
+<span class="class_s1F0">​</span> return 0;
+</div>
+<div>
+}
+</div>
+<div>
+//// end of init section
+</div>
+<div class="class_sDB">
+static int out(void)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Goodbye! But
+remember, printk is amazing.”);
+</div>
+<div>
+}
+</div>
+<div>
+//// End of cleanup section
+</div>
+<div class="class_sDB">
+module __init (entrance);
+</div>
+<div>
+module __exit(out);
+</div>
+<div class="class_sDB">
+MODULE_LICENSE (“BSD”);
+</div>
+<div>
+//// End of module licensing section
+</div>
+<p><span id="part0075.xhtml"></span></p>
+<div id="part0075.xhtml_page_97" class="class_s1NA">
+Printk Example # 2
+</div>
+<div class="class_sDB">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div>
+#include &lt;linux/module.h&gt;
+</div>
+<div>
+//// end of header include section
+</div>
+<div class="class_sDB">
+#define __KERNEL__
+</div>
+<div>
+#define MODULE
+</div>
+<div>
+#define LINUX
+</div>
+<div>
+//// end of macro define section
+</div>
+<div class="class_sDB">
+static int entrance(void)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Simple and Basic
+Printk example : FILE: %s, LINE : %i\n”, __FILE__, __LINE__);
+</div>
+<div>
+<span class="class_s1F0">​</span> return 0;
+</div>
+<div>
+}
+</div>
+<div>
+//// end of init section
+</div>
+<div class="class_sDB">
+static int out(void)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> printk(KERN_DEBUG “Goodbye! But
+remember, printk is amazing: FILE: %s, LINE : %i\n”, __FILE__,
+__LINE__);
+</div>
+<div>
+}
+</div>
+<div>
+//// End of cleanup section
+</div>
+<div class="class_sDB">
+module __init (entrance);
+</div>
+<div>
+module __exit(out);
+</div>
+<div class="class_sDB">
+MODULE_LICENSE (“BSD”);
+</div>
+<div id="part0075.xhtml_page_98">
+//// End of module licensing section
+</div>
+<p><span id="part0076.xhtml"></span></p>
+<div id="part0076.xhtml_page_99" class="class_s1NA">
+Chapter 9:
+</div>
+<div class="heading_sFZ">
+Loading and Unloading LKMs
+</div>
+<p><span id="part0077.xhtml"></span></p>
+<div id="part0077.xhtml_page_100" class="class_s1NA">
+Loading and Unloading Linux Kernel Modules (LKMs) on demand
+</div>
+<div class="class_s10">
+Linux kernel has an amazing feature, it can automatically load and
+unload LKMs which helps to avoid wasting of kernel processes and memory.
+But to use this support or feature, we need to enable kmod module when
+we configure the kernel before we compile it.
+</div>
+<div class="class_s10">
+Most of the distributions like Redhat, Debian, Ubuntu, CentOS, etc.
+comes with kmod enabled. The kmod feature or support comes with
+libkmod.so library.
+</div>
+<div class="class_s10">
+Contents of libkmod library
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> insmod
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> rmmod
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> depmod
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> modprobe
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> modinfo
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> lsmod
+</div>
+<div class="class_s8W">
+-<span class="class_s1F2">          </span> kmod
+</div>
+<p><span id="part0078.xhtml"></span></p>
+<div id="part0078.xhtml_page_101" class="class_s1NA">
+insmod
+</div>
+<div class="class_s10">
+insmod being used to insert a module into the Linux kernel.
+</div>
+<div class="class_s10">
+Note: insmod requires passing it the full pathname and list of modules
+(dependent modules) in the right order. If we consider nfs.ko, it
+requires the following module with the relevant order.
+</div>
+<ol>
+<li><div class="class_s7D">
+nfs_common.ko
+</div></li>
+<li><div class="class_s7D">
+auth_rpcgss.ko
+</div></li>
+<li><div class="class_s7D">
+fscache.ko
+</div></li>
+<li><div class="class_s7D">
+lockd.ko
+</div></li>
+<li><div class="class_s7D">
+sunrpc.ko
+</div></li>
+</ol>
+<p><span id="part0079.xhtml"></span></p>
+<div id="part0079.xhtml_page_102" class="class_s1NA">
+rmmod
+</div>
+<div class="class_s10">
+The rmmod unloads a module from the Linux kernel. If we want to unload
+or remove a module then we have to run the following command:
+</div>
+<div class="class_s10">
+$ rmmod modulename
+</div>
+<div class="class_s10">
+For example, we have a module vfat, we need to unload it. Then command
+will be
+</div>
+<div class="class_s10">
+$ rmmod vfat
+</div>
+<div class="class_s10">
+Note: There is another way to unload or remove module in Linux kernel.
+That is modeprobe –v –r. Here for removing vfat, the command will be
+</div>
+<div class="class_s10">
+$ modprob –v –r vfat
+</div>
+<div class="class_s10">
+Where, r is the short form of remove and v for verbose.
+</div>
+<p><span id="part0080.xhtml"></span></p>
+<div id="part0080.xhtml_page_103" class="class_s1NA">
+depmod
+</div>
+<div class="class_s10">
+The depmod works with existing sets of modules. It creates a dependency
+file based on the symbols it find in the existing sets of modules
+mentioned in the command lines or from the directories specified in the
+configuration file.
+</div>
+<div class="class_s10">
+The depmod creates a “Makefile” like dependency file, which is used by
+modprobe to automatically load the correct module or stack of modules.
+</div>
+<div class="class_s10">
+Note: The depmod file can be found at
+/lib/modules/kernel-version/modules.dep
+</div>
+<p><span id="part0081.xhtml"></span></p>
+<div id="part0081.xhtml_page_104" class="class_s1NA">
+modinfo
+</div>
+<div class="class_s10">
+The modinfo program shows information about a Linux kernel module. It
+shows the following information regarding each module:
+</div>
+<ol>
+<li><div class="class_s7D">
+Module author
+</div></li>
+<li><div class="class_s7D">
+License
+</div></li>
+<li><div class="class_s7D">
+Parameters
+</div></li>
+<li><div class="class_s7D">
+Dependencies
+</div></li>
+<li><div class="class_s7D">
+Module description
+</div></li>
+<li><div class="class_s7D">
+Full path of the module along with the file name
+</div></li>
+</ol>
+<p><span id="part0082.xhtml"></span></p>
+<div id="part0082.xhtml_page_105" class="class_s1NA">
+lsmod
+</div>
+<div class="class_s10">
+The lsmod program shows the kernel modules currently loaded by Linux
+system or Linux kernel system. It shows these data or contents by
+analyzing /proc/modules.
+</div>
+<div class="class_s10">
+The lsmod program shows the following information:
+</div>
+<ol>
+<li><div class="class_s7D">
+Name of the module
+</div></li>
+<li><div class="class_s7T">
+Size of the module in byte, not how much memory used in kernel.
+</div></li>
+<li><div class="class_s7T">
+Each module use count and a list of referring modules.
+</div></li>
+</ol>
+<p><span id="part0083.xhtml"></span></p>
+<div id="part0083.xhtml_page_106" class="class_s1NA">
+modprobe
+</div>
+<div class="class_s10">
+The modprobe program adds or removes a module from the Linux kernel. It
+looks at the modules directory /lib/modules for all the modules. The
+modprobe program expects the up-to-date module.dep file which is
+generated by depmod.
+</div>
+<div class="class_s10">
+How it works? Just call
+</div>
+<div class="class_s10">
+$ modproble module_1
+</div>
+<div class="class_s10">
+This command loads module_1 in kernel.
+</div>
+<p><span id="part0084.xhtml"></span></p>
+<div id="part0084.xhtml_page_107" class="class_s1NA">
+How kmod works?
+</div>
+<div class="class_s10">
+What happens while Linux kernel tries to access certain modules or
+resources but gets those resources unavailable? Does kernel return an
+error instantly? No. Instantly kernel does not return any error rather,
+calls kmod. While kernel calls kmod, it tries to load dependent modules
+and tries to make the resources available.
+</div>
+<div class="class_s10">
+If kmod gets success, then no problem, the Linux kernel continues
+working. But if kmod fails, then Linux kernel returns an error.
+</div>
+<div class="class_s10">
+The beautiful thing is, any kernel space programs can request to load
+any LKMs by calling kmod. But to use kmod, programmers need to include
+&lt;linux/kmod.h&gt; in their kernel module to get this functionality.
+And to request a module to be loaded, programmers need to call
+request_module function.
+</div>
+<div class="class_s10">
+int request_module (const char *module_name);
+</div>
+<div class="class_s10">
+Couple of things we should know about this request_module function:
+</div>
+<ol>
+<li><div class="class_s7D">
+The request_module function is asynchronous
+</div></li>
+<li><div class="class_s7T">
+The request_module function returns negative number on failure or zero
+on success.
+</div></li>
+<li><div class="class_s7T">
+The caller modules must check that the service they requested whether is
+now available, programmers should not blindly invoke it.
+</div></li>
+<li><div class="class_s7T">
+And more importantly, if module auto-loading support is disabled, then
+this request_module function becomes a no-operation.
+</div></li>
+</ol>
+<p><span id="part0085.xhtml"></span></p>
+<div id="part0085.xhtml_page_108" class="class_s1NA">
+Chapter 10:
+</div>
+<div class="heading_sFZ">
+Introduction to Device Drivers
+</div>
+<p><span id="part0086.xhtml"></span></p>
+<div id="part0086.xhtml_page_109" class="class_s1NA">
+Introduction to device driver
+</div>
+<div class="class_s10">
+Most of the Linux kernel’s source code are in its device drivers. The
+drivers directory contains all of Linux’s device drivers source codes.
+This directory has the following parts
+</div>
+<ol>
+<li><div class="class_s6N">
+/block
+</div>
+<ul>
+<li><div class="class_s7T">
+The block device drivers resides here.
+</div></li>
+<li><div class="class_s7T">
+Block devices include both IDE and SCSI based devices.
+</div></li>
+</ul></li>
+<li><div class="class_s6N">
+/char
+</div>
+<ul>
+<li><div class="class_s7T">
+The char device drivers resides here. Example, tty.
+</div></li>
+</ul></li>
+<li><div class="class_s6N">
+/cdrom
+</div>
+<ul>
+<li><div class="class_s7T">
+In this directory all of the CDROM code for Linux resides.
+</div></li>
+</ul></li>
+<li><div class="class_s6N">
+/pci
+</div>
+<ul>
+<li><div class="class_s7D">
+PCI pseudo-drivers resides in this directory.
+</div></li>
+</ul></li>
+<li><div class="class_s12J">
+/scsi
+</div>
+<ul>
+<li><div class="class_s7D">
+All of the drivers for the scsi devices supported by Linux resides here.
+</div></li>
+</ul></li>
+<li><div class="class_s12J">
+/net
+</div>
+<ul>
+<li><div class="class_s7D">
+Network device drivers resides here.
+</div></li>
+</ul></li>
+<li><div class="class_s6N">
+/sound
+</div>
+<ul>
+<li><div class="class_s7D">
+All sound card drivers resides here.
+</div></li>
+</ul></li>
+</ol>
+<p><span id="part0087.xhtml"></span></p>
+<div id="part0087.xhtml_page_110" class="class_s1NA">
+What is device driver?
+</div>
+<div class="class_s10">
+A device driver is ultimately designed and developed to control or
+operate a specific type of hardware that is attached with the system. In
+other words, device driver consists of a bunch of source code which
+tells the system how to communicate, operate or control hardware. The
+kernel uses device driver to control or communicate hardware without
+knowing any details of the hardware, for example, how hardware operates.
+A device driver uses bus system of the computer to communicate with the
+device or through other communication system to which the hardware being
+connected.
+</div>
+<p><span id="part0088.xhtml"></span></p>
+<div id="part0088.xhtml_page_111" class="class_s1NA">
+When a kernel calls device driver?
+</div>
+<ul>
+<li><div class="class_s7T">
+To check whether the device available or not.
+</div></li>
+<li><div class="class_s7T">
+To handle device specific input/output calls.
+</div></li>
+<li><div class="class_s7T">
+To perform user space requests to the sysconfig utility.
+</div></li>
+<li><div class="class_s7T">
+To check whether data is ready or not through handling interrupts.
+</div></li>
+<li><div class="class_s7D">
+To set/reset and initialize/reinitialize the device.
+</div></li>
+<li><div class="class_s7T">
+To perform Input / Output operations from user space standard library
+Input / Output calls.
+</div></li>
+</ul>
+<p><span id="part0089.xhtml"></span></p>
+<div id="part0089.xhtml_page_112" class="class_s1NA">
+Device driver working procedure with User Space, Kernel Space and
+Hardware Space:
+</div>
+<ul>
+<li><div class="class_s7T">
+In user space, any source program or library are unable to communicate
+with hardware directly, so they make calls to the kernel space source
+programs.
+</div></li>
+<li><div class="class_s7D">
+Although kernel has the supreme power mode in the system, kernel doesn’t
+try to access hardware directly, rather kernel follow a convention.
+Kernel uses device driver to communicate with hardware.
+</div></li>
+<li><div class="class_s7T">
+A device driver in kernel space, responsible to communicate with the
+hardware or device, for example, opening the device, reading and writing
+to the device through a bus to peripheral device registers and then
+closes the device.
+</div></li>
+<li><div class="class_s7T">
+In hardware space, a bus works as a transmission path or communication
+path along with access protocols between the processor and device
+controller. When a device driver reads data from or writes data to the
+hardware registers of a controller, the data travels across the bus. 
+</div></li>
+<li><div class="class_s7T">
+In hardware space, a controller works as a physical interface for
+controlling one or more devices.
+</div></li>
+</ul>
+<p><span id="part0090.xhtml"></span></p>
+<div id="part0090.xhtml_page_113" class="class_s1NA">
+Chapter 11:
+</div>
+<div class="heading_sFZ">
+Developing a character device driver with utmost easy explanations
+</div>
+<p><span id="part0091.xhtml"></span></p>
+<div id="part0091.xhtml_page_114" class="class_s1NA">
+Explanation # 1
+</div>
+<div class="class_s10">
+Linux device drivers are divided into several categories: most common
+are block devices, character devices and network devices. Here we will
+learn how to write simple character device.
+</div>
+<p><span id="part0092.xhtml"></span></p>
+<div id="part0092.xhtml_page_115" class="class_s1NA">
+Explanation # 2
+</div>
+<div class="class_s10">
+The permission bar of block devices something like brw-rw--, where “b”
+stands for block device, and character devices has something like
+crw-rw--, where “c” stands for character device.
+</div>
+<p><span id="part0093.xhtml"></span></p>
+<div id="part0093.xhtml_page_116" class="class_s1NA">
+Explanation # 3
+</div>
+<div class="class_s10">
+Every device driver contains two numbers: major number and minor number.
+The major number is used to distinguish the driver and same major number
+used to indicate that it is controlled by the same driver.
+</div>
+<div class="class_s10">
+Using different minor number, multiple device drivers can be created in
+one drive. The major number and minor number, both numbers are being
+used to determine a device driver together.
+</div>
+<div class="class_s10">
+For example,
+</div>
+<div class="class_s9G-0">
+brw-rw----  1 root disk 9,   0 May 17 10:15 sda<br />
+brw-rw----  1 root disd 9,   1 May 17 10:15 sda1
+</div>
+<div class="class_sBE">
+Here, the major number of sda and sda1 is 9, and minor numbers are
+different, 0 and 1.
+</div>
+<p><span id="part0094.xhtml"></span></p>
+<div id="part0094.xhtml_page_117" class="class_s1NA">
+Explanation # 4
+</div>
+<div class="class_s10">
+Any interface under /dev/xxx “everything is about file”, so the
+operation of the device driver is actually the operation of the file.
+</div>
+<div class="class_s10">
+The APIs of a device driver we can think all about file operations and
+the device driver is used to define/open/read/write etc.
+functionalities.
+</div>
+<div class="class_s10">
+All file operations are defined in the file_operations structure of the
+kernel &lt;linux/fs.h&gt; header file.
+</div>
+<div class="class_s10">
+In the following device driver example, we will see
+</div>
+<div class="class_sDB">
+struct file_operations gpio_fops = {
+</div>
+<div class="class_s14M">
+read    :       gpio_read,
+</div>
+<div class="class_s14M">
+write   :       gpio_write,
+</div>
+<div class="class_s14M">
+open    :       gpio_open,
+</div>
+<div class="class_s14M">
+release :       gpio_close,
+</div>
+<div class="class_s14M">
+owner   :       GPIO_MODULE
+</div>
+<div>
+};
+</div>
+<div class="class_s10">
+Here, we have declared a structure and assigned it to the structure
+variable gpio_fops. The values are function pointers except for the
+owner.
+</div>
+<div class="class_s10">
+Then we have used cdev_add to rgister the file operation struction with
+each driver in the init module.
+</div>
+<p><span id="part0095.xhtml"></span></p>
+<div id="part0095.xhtml_page_118" class="class_s1NA">
+Developing a tiny GPIO char device driver
+</div>
+<div class="class_s96">
+#include &lt;linux/kernel.h&gt;
+</div>
+<div>
+#include &lt;linux/module.h&gt;
+</div>
+<div>
+#include &lt;linux/moduleparam.h&gt;
+</div>
+<div>
+#include &lt;linux/init.h&gt;
+</div>
+<div>
+#include &lt;linux/stat.h&gt;
+</div>
+<div class="class_sDB">
+#include &lt;linux/cdev.h&gt;
+</div>
+<div>
+#include &lt;linux/device.h&gt;
+</div>
+<div class="class_sDB">
+#include &lt;linux/fs.h&gt;
+</div>
+<div>
+#include &lt;linux/slab.h&gt;
+</div>
+<div>
+#include &lt;asm/uaccess.h&gt;
+</div>
+<div class="class_sDB">
+#include &lt;linux/string.h&gt;
+</div>
+<div>
+// end of header include section
+</div>
+<div class="class_s96">
+#define DEVICE_MAJOR  200
+</div>
+<div>
+#define DEVICE_MINOR  0
+</div>
+<div>
+#define DEVICE_DEV_COUNT 2
+</div>
+<div>
+// end of define defition section
+</div>
+<div class="class_sDB">
+static int     gpio_open( struct inode *, struct file * );
+</div>
+<div>
+static ssize_t gpio_read( struct file * ,        char *  , size_t,
+loff_t *);
+</div>
+<div>
+static ssize_t gpio_write(struct file * , const  char *  , size_t,
+loff_t *);
+</div>
+<div>
+static int     gpio_close(struct inode *, struct file * );
+</div>
+<div class="class_sDB">
+struct file_operations gpio_fops = {
+</div>
+<div class="class_s14M">
+read    :       gpio_read,
+</div>
+<div class="class_s14M">
+write   :       gpio_write,
+</div>
+<div id="part0095.xhtml_page_119" class="class_s14M">
+open    :       gpio_open,
+</div>
+<div class="class_s14M">
+release :       gpio_close,
+</div>
+<div class="class_s14M">
+owner   :       GPIO_MODULE
+</div>
+<div>
+};
+</div>
+<div>
+struct cdev gpio_cdev;
+</div>
+<div>
+static char *dev_c_message = NULL;
+</div>
+<div class="class_s96">
+static int entrance(void)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> // get device number
+</div>
+<div>
+<span class="class_s1F0">​</span> // A device ID is represented using the
+type dev_t.
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_t devno;
+</div>
+<div>
+<span class="class_s1F0">​</span> unsigned int count = DEVICE_DEV_COUNT;
+</div>
+<div>
+<span class="class_s1F0">​</span> int err;
+</div>
+<div>
+<span class="class_s1F0">​</span> // A device ID consists of two parts: a
+major ID, identifying the class
+</div>
+<div class="class_sEW">
+// of the device, and a minor ID, identifying a specific instance of a
+</div>
+<div class="class_sEW">
+// device in that class. Given major and minor device IDs, makedev()
+combines these to produce
+</div>
+<div class="class_sEW">
+// a device ID, returned as the function result.
+</div>
+<div class="class_sEW">
+// The major and minor number are how Linux identifies the underlying
+hardware device associated with a device file.
+</div>
+<div class="class_sEW">
+// Most of the cases major number identifies the driver while the minor
+distinguishes the different devices the driver controls.
+</div>
+<div>
+<span class="class_s1F0">​</span> devno = MKDEV(DEVICE_MAJOR,
+DEVICE_MINOR);
+</div>
+<div>
+<span class="class_s1F0">​</span> // register_chrdev_region function —
+register a range of device numbers
+</div>
+<div>
+<span class="class_s1F0">​</span> // parameters are (dev_t from, unsigned
+count, const char * name);
+</div>
+<div>
+<span class="class_s1F0">​</span> // from - the first in the desired
+range of device numbers; must include the major number.
+</div>
+<div>
+<span class="class_s1F0">​</span> // count - the number of consecutive
+device numbers required
+</div>
+<div id="part0095.xhtml_page_120">
+<span class="class_s1F0">​</span> // name - the name of the device or
+driver.
+</div>
+<div>
+<span class="class_s1F0">​</span> register_chrdev_region(devno, count ,
+"gpiodev");
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> // cdev_init — initialize a cdev
+structure
+</div>
+<div>
+<span class="class_s1F0">​</span> cdev_init(&amp;gpio_cdev,
+&amp;gpio_fops);
+</div>
+<div>
+<span class="class_s1F0">​</span> gpio_cdev.owner = GPIO_MODULE;
+</div>
+<div>
+<span class="class_s1F0">​</span> // cdev_add registers a character
+device with the kernel.
+</div>
+<div>
+<span class="class_s1F0">​</span> // The kernel maintains a list of
+character devices under cdev_map
+</div>
+<div>
+<span class="class_s1F0">​</span> err = cdev_add(&amp;gpio_cdev, devno,
+count);
+</div>
+<div>
+<span class="class_s1F0">​</span> if (err &lt; 0)
+</div>
+<div>
+<span class="class_s1F0">​</span> {
+</div>
+<div>
+<span class="class_s1F0">​</span> printk("Error: While Adding Device\n");
+</div>
+<div>
+<span class="class_s1F0">​</span> return -1;
+</div>
+<div>
+<span class="class_s1F0">​</span> }
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> printk("TINY GPIO Device Driver.\n");
+</div>
+<div>
+<span class="class_s1F0">​</span> printk("'mknod /dev/gpiodev_0 c %d
+0'.\n", DEVICE_MAJOR);
+</div>
+<div>
+<span class="class_s1F0">​</span> printk("'mknod /dev/gpiodev_1 c %d
+1'.\n", DEVICE_MAJOR);
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> // kmalloc is the normal method of
+allocating memory for objects smaller than page size in the kernel.
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_c_message = (char *)kmalloc(32,
+GFP_KERNEL);
+</div>
+<div>
+<span class="class_s1F0">​</span> if (dev_c_message !=NULL) {
+</div>
+<div>
+<span class="class_s1F0">​</span> printk("kmalloc dev_c_message: 0x%p\n",
+dev_c_message);
+</div>
+<div>
+<span class="class_s1F0">​</span> }
+</div>
+<div class="class_s172">
+return 0;
+</div>
+<div>
+}
+</div>
+<div>
+// end of init section
+</div>
+<div class="class_s96">
+static void out(void)
+</div>
+<div id="part0095.xhtml_page_121">
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_t devno;
+</div>
+<div>
+<span class="class_s1F0">​</span> printk("Bye TINY GPIO Driver\n");
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> if (dev_c_message){
+</div>
+<div class="class_s14M">
+// release relevant kernel memory
+</div>
+<div class="class_s14M">
+kfree(dev_c_message);
+</div>
+<div>
+<span class="class_s1F0">​</span> }
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> // release the tiny GPIO char device
+</div>
+<div>
+<span class="class_s1F0">​</span> devno = MKDEV(DEVICE_MAJOR,
+DEVICE_MINOR);
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> // unregister_chrdev_region —
+unregister a range of device numbers
+</div>
+<div>
+<span class="class_s1F0">​</span> unregister_chrdev_region(devno,
+DEVICE_DEV_COUNT);
+</div>
+<div>
+<span class="class_s1F0">​</span> // cdev_del - remove a cdev from the
+system
+</div>
+<div>
+<span class="class_s1F0">​</span> cdev_del(&amp;gpio_cdev);
+</div>
+<div>
+}
+</div>
+<div>
+// End of cleanup section
+</div>
+<div class="class_s96">
+static int gpio_open(struct inode *inod, struct file *fil)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> int dev_major;
+</div>
+<div>
+<span class="class_s1F0">​</span> int dev_minor;
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_major = imajor(inod);
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_minor = iminor(inod);
+</div>
+<div>
+<span class="class_s1F0">​</span> printk("\n*****TINY GPIO DEVICE: OPEN
+:  major %d  minor %d*****\n",dev_major, dev_minor);
+</div>
+<div>
+<span class="class_s1F0">​</span> return 0;
+</div>
+<div>
+}
+</div>
+<div class="class_sDB">
+static int gpio_close(struct inode *inod, struct file *fil)
+</div>
+<div id="part0095.xhtml_page_122">
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> int dev_major;
+</div>
+<div>
+<span class="class_s1F0">​</span> int dev_minor;
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_major =
+MAJOR(filp-&gt;f_dentry-&gt;d_inode-&gt;i_rdev);
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_minor =
+MINOR(filp-&gt;f_dentry-&gt;d_inode-&gt;i_rdev);
+</div>
+<div>
+<span class="class_s1F0">​</span> printk("\n*****TINY GPIO DEVICE: CLOSE
+:  major %d  minor %d*****\n",dev_major, dev_minor);
+</div>
+<div>
+<span class="class_s1F0">​</span> return 0;
+</div>
+<div>
+}
+</div>
+<div class="class_s96">
+static ssize_t gpio_read(struct file *filp, char *buff, size_t len,
+loff_t *off)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> int dev_major, dev_minor;
+</div>
+<div>
+<span class="class_s1F0">​</span> short count;
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> dev_major =
+MAJOR(filp-&gt;f_dentry-&gt;d_inode-&gt;i_rdev);
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_minor =
+MINOR(filp-&gt;f_dentry-&gt;d_inode-&gt;i_rdev);
+</div>
+<div>
+<span class="class_s1F0">​</span> printk("FILE OPERATION READ:%d:%d\n",
+dev_major, dev_minor);
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> switch(minor){
+</div>
+<div>
+<span class="class_s1F0">​</span> case 0:
+</div>
+<div>
+<span class="class_s1F0">​</span> strcpy(dev_c_message,"DATA FROM MOUDLE:
+minor : 0");
+</div>
+<div>
+<span class="class_s1F0">​</span> break;
+</div>
+<div>
+<span class="class_s1F0">​</span> case 1:
+</div>
+<div>
+<span class="class_s1F0">​</span> strcpy(dev_c_message,"DATA FROM MOUDLE:
+minor : 1");
+</div>
+<div>
+<span class="class_s1F0">​</span> break;
+</div>
+<div>
+<span class="class_s1F0">​</span> default:
+</div>
+<div>
+<span class="class_s1F0">​</span> len = 0;
+</div>
+<div>
+<span class="class_s1F0">​</span> }
+</div>
+<div>
+<span class="class_s1F0">​</span> // copy_to_user — Copy a block of data
+into user space.
+</div>
+<div id="part0095.xhtml_page_123">
+<span class="class_s1F0">​</span> // Returns number of bytes that could
+not be copied. On success, this will be zero.
+</div>
+<div>
+<span class="class_s1F0">​</span> count = copy_to_user( buff,
+dev_c_message, len);
+</div>
+<div>
+<span class="class_s1F0">​</span> return 0;
+</div>
+<div>
+}
+</div>
+<div class="class_sDB">
+static ssize_t gpio_write(struct file *filp, const char *buff, size_t
+len, loff_t *off)
+</div>
+<div>
+{
+</div>
+<div>
+<span class="class_s1F0">​</span> int dev_major, dev_minor;
+</div>
+<div>
+<span class="class_s1F0">​</span> short count;
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> memset(dev_c_message, 0, 32);
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_major =
+MAJOR(filp-&gt;f_dentry-&gt;d_inode-&gt;i_rdev);
+</div>
+<div>
+<span class="class_s1F0">​</span> dev_minor =
+MINOR(filp-&gt;f_dentry-&gt;d_inode-&gt;i_rdev);
+</div>
+<div>
+<span class="class_s1F0">​</span> count = copy_from_user( dev_c_message,
+buff, len );
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> printk("FILE OPERATION
+WRITE:%d:%d\n",dev_major,dev_minor);
+</div>
+<div>
+<span class="class_s1F0">​</span> printk("dev_c_message: %s",
+dev_c_message);
+</div>
+<div class="class_s9G-0">
+<span class="class_s1F0">​</span> return len;
+</div>
+<div>
+}
+</div>
+<div class="class_sDB">
+module __init (entrance);
+</div>
+<div>
+module __exit(out);
+</div>
+<div class="class_sDB">
+MODULE_LICENSE("BSD");
+</div>
+<div>
+MODULE_DESCRIPTION("TINY GPIO Device Driver");
+</div>
+<p><span id="part0096.xhtml"></span></p>
+<div id="part0096.xhtml_page_124" class="class_s1NA">
+And Makefile
+</div>
+<div class="class_sDB">
+obj-m += gpiodriver.o
+</div>
+<div class="class_sDB">
+all:
+</div>
+<div>
+<span class="class_s1F0">​</span> make -C /lib/modules/$(shell uname
+-r)/build M=$(PWD) modules
+</div>
+<div>
+clean:
+</div>
+<div>
+<span class="class_s1F0">​</span> make -C /lib/modules/$(shell uname
+-r)/build M=$(PWD) clean
+</div>
+<div class="class_s19N">
+<span class="class_s1F6">Now, compile the above source code, get</span>
+<span class="class_s1F5">gpiodriver.ko</span> <span class="class_s1F6">,
+then sign it, and finally load it into the kernel via</span> <span
+class="class_s1F5">insmod</span> <span class="class_s1F6">.</span>
+</div>
+<p><span id="part0097.xhtml"></span></p>
+<div id="part0097.xhtml_page_125" class="class_s1NA">
+Check if it is loaded successfully:
+</div>
+<div class="class_sB2">
+$ insmod gpiodriver.ko
+</div>
+<div class="class_s10">
+$ lsmod | grep gpiodriver
+</div>
+<div class="class_s10">
+$ cat /proc/devices | grep gpiodriver
+</div>
+<div class="class_s10">
+$ dmesg | tail -10
+</div>
+<p><span id="part0098.xhtml"></span></p>
+<div id="part0098.xhtml_page_126" class="class_s1NA">
+Appendix A:
+</div>
+<div class="heading_sFZ">
+Linux Kernel Coding Style
+</div>
+<p><span id="part0099.xhtml"></span></p>
+<div id="part0099.xhtml_page_127" class="class_s1NA">
+Indentation
+</div>
+<div class="class_s10">
+One of the most important rules, as tabs are 8 characters long, so
+indentations will also be 8 characters long. 
+</div>
+<div class="class_s10">
+Now, some programmers will claim that having 8-individual indentations
+makes the code move too far to the right, and makes it difficult to
+examine on an 80-individual terminal screen.
+</div>
+<div class="class_s10">
+The solution to that is that if you need extra than 3 degrees of
+indentation, you need to repair your source code.
+</div>
+<div class="class_sDB">
+The 8-char indents make things simpler to read, and feature the added
+advantage of caution you when you’re nesting your functions too deep.
+</div>
+<div class="class_sDB">
+switch (test) {
+</div>
+<div>
+case '1':
+</div>
+<div>
+case '2':
+</div>
+<div class="class_s14M">
+data &lt;&lt;= 2;
+</div>
+<div class="class_s14M">
+break;
+</div>
+<div>
+case '3':
+</div>
+<div>
+case '4':
+</div>
+<div class="class_s14M">
+data &lt;&lt;= 4;
+</div>
+<div class="class_s14M">
+break;
+</div>
+<div>
+case '5':
+</div>
+<div>
+case '6':
+</div>
+<div class="class_s14M">
+data &lt;&lt;= 6;
+</div>
+<div>
+<span class="class_s1F4">​</span> break;
+</div>
+<div>
+case '7':
+</div>
+<div>
+case '8':
+</div>
+<div class="class_s14M">
+data &lt;&lt;= 8;
+</div>
+<div id="part0099.xhtml_page_128">
+<span class="class_s1F4">​</span> break;
+</div>
+<div>
+case '9':
+</div>
+<div>
+case '10':
+</div>
+<div class="class_s14M">
+data &lt;&lt;= 10;
+</div>
+<div>
+<span class="class_s1F4">​</span> break;
+</div>
+<div class="class_sDB">
+default:
+</div>
+<div class="class_s14M">
+break;
+</div>
+<div>
+}
+</div>
+<div class="class_s1AY">
+-<span class="class_s1F2">          </span> In a single line don’t do
+multiple assignments. Kernel coding should be super simple, easier to
+read, and understand.
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> Make your expressions easy
+to understand.
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> Don’t leave whitespace at
+the end of the line.
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> In a single line don’t put
+multiple statements.
+</div>
+<p><span id="part0100.xhtml"></span></p>
+<div id="part0100.xhtml_page_129" class="class_s1NA">
+Breaking long lines
+</div>
+<div class="class_sDB">
+It is strongly preferred that you should limit the length of lines to 80
+columns. Never break this rule.
+</div>
+<div class="class_sDB">
+Any statement longer than 80 columns must be broken into several parts,
+exception: exceeding 80 columns significantly increases the readability
+of your source code and does not hide any information.
+</div>
+<p><span id="part0101.xhtml"></span></p>
+<div id="part0101.xhtml_page_130" class="class_s1NA">
+Placement of spaces
+</div>
+<div class="class_s1AY">
+-<span class="class_s1F2">         </span> Use a space after keywords
+(exceptional keywords those look somewhat like functions and usually
+used with parentheses, for example, alighnof, _attribute, sizeof,
+typeof)
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> Don’t use spaces inside
+parenthesized expressions.
+</div>
+<div class="class_s96">
+use a space after these keywords:
+</div>
+<div class="class_sDB">
+case, for, do, while, do while, if,
+</div>
+<div class="class_sDB">
+but not with sizeof, typeof, alignof, or __attribute__. E.g.,
+</div>
+<div class="class_sDB">
+s = sizeof(struct file);
+</div>
+<p><span id="part0102.xhtml"></span></p>
+<div id="part0102.xhtml_page_131" class="class_s1NA">
+Placement of braces
+</div>
+<div class="class_sDB">
+C styling placement of braces are highly suggested.
+</div>
+<div class="class_sDB">
+if ( input &gt; N) {
+</div>
+<div>
+<span class="class_s1F0">​</span> di = ci * N;
+</div>
+<div>
+}
+</div>
+<div class="class_sDB">
+The same rule for switch, do while, while etc.
+</div>
+<div class="class_sDB">
+switch (input) {
+</div>
+<div>
+case 1:
+</div>
+<div class="class_s14M">
+input = input +1;
+</div>
+<div>
+case 2:
+</div>
+<div class="class_s14M">
+input = input +2;
+</div>
+<div>
+case 3:
+</div>
+<div class="class_s14M">
+input = input +3;
+</div>
+<div>
+default:
+</div>
+<div class="class_s14M">
+return input;
+</div>
+<div>
+}
+</div>
+<div class="class_sDB">
+For if, else if,
+</div>
+<div class="class_sDB">
+if (input &gt; N) {
+</div>
+<div class="class_s14M">
+input * N;
+</div>
+<div>
+} else if (input &lt; N) {
+</div>
+<div class="class_s14M">
+input / N;
+</div>
+<div>
+} else {
+</div>
+<div class="class_s14M">
+input + N;
+</div>
+<div>
+}
+</div>
+<div id="part0102.xhtml_page_132" class="class_sDB">
+Do While Loop,
+</div>
+<div class="class_sDB">
+do {
+</div>
+<div class="class_s14M">
+input++;
+</div>
+<div>
+} while (input &lt; N);
+</div>
+<div class="class_s96">
+In a single statement, do not unnecessarily use braces.
+</div>
+<div class="class_s96">
+if (a &gt; b)
+</div>
+<div class="class_s14M">
+a = b * 2;
+</div>
+<div class="class_s96">
+and
+</div>
+<div class="class_sDB">
+if (a &gt; b)
+</div>
+<div class="class_s14M">
+do_this();
+</div>
+<div>
+else
+</div>
+<div class="class_s14M">
+do_that();
+</div>
+<div class="class_s96">
+But, while you have multiple operations in one condition statement, then
+use braces.
+</div>
+<div class="class_sDB">
+if (condition) {
+</div>
+<div class="class_s14M">
+do_this();
+</div>
+<div class="class_s14M">
+do_that();
+</div>
+<div>
+} else {
+</div>
+<div class="class_s14M">
+otherwise();
+</div>
+<div>
+}
+</div>
+<p><span id="part0103.xhtml"></span></p>
+<div id="part0103.xhtml_page_133" class="class_s1NA">
+Naming Local and Global Variables
+</div>
+<div class="class_s10">
+C programmers do not use a cute name like Pascal and Modula-2
+programmers. While Pascal programmers use VariableTemporaryCounter, c
+programmers use tmp. Compared to VariableTemporaryCounter, the tmp
+variable name is much easier to write and not hard to understand.
+</div>
+<div class="class_s10">
+In C, local variables should be short, easy to write, and simple. For
+example, tmp can be any type of variable that holds temporary value. For
+the integer loop counter, you don’t need to use loop_counter_integer;
+rather i is enough.
+</div>
+<div class="class_s10">
+For global variables, you need to use a descriptive name. For example,
+count_active_students are suggested, not cntastu.
+</div>
+<p><span id="part0104.xhtml"></span></p>
+<div id="part0104.xhtml_page_134" class="class_s1NA">
+Functions
+</div>
+<div class="class_s10">
+Functions will do just one thing and will do that well, and functions
+name should be short and sweet.
+</div>
+<div class="class_s10">
+Include parameter names with their data types in function prototypes; it
+is preferred in Linux although it is not required by the C language. Why
+it is preferred in Linux? Because it is a pretty simple way; to add
+valuable information for the reader.
+</div>
+<div class="class_s10">
+How many local variables you should declare in a function? They should
+not exceed 5 ~ 10. If you need more variables then this suggestion, then
+re-think the function and split it into more functions.
+</div>
+<div class="class_s10">
+Early research found the working memory cut-off to be about seven items,
+but recent research shows that mind’s limit four things at once. This
+study published in the journal Proceedings of the National Academy of
+Sciences.
+</div>
+<div class="class_s10">
+Functions should have one blank line before the next source code.
+(Exceptional: EXPORT macro. It should follow immediately after the
+closing function brace line).
+</div>
+<div class="class_sDB">
+int system_status_check(int)
+</div>
+<div>
+{
+</div>
+<div class="class_s14M">
+return system_state == SYSTEM_RUNNING;
+</div>
+<div>
+}
+</div>
+<div>
+EXPORT_SYMBOL(system_status_check);
+</div>
+<p><span id="part0105.xhtml"></span></p>
+<div id="part0105.xhtml_page_135" class="class_s1NA">
+Commenting
+</div>
+<div class="class_s10">
+Comments are good, you can tell WHAT your code does, but you should not
+comment HOW. It is a waste of time to explain your badly written code in
+your comment; rather it’s much better to write the self-explanatory
+code.
+</div>
+<div class="class_s1DA">
+Write comments at the head of the function, where you should tell people
+what the function does.
+</div>
+<div class="class_s1DC">
+The preferred style for long (multi-line) comments is:
+</div>
+<div>
+/*
+</div>
+<div>
+* This is the preferred style for multi-line
+</div>
+<div>
+* comments in the Linux kernel source code.
+</div>
+<div>
+* Please use it consistently.
+</div>
+<div>
+*
+</div>
+<div>
+* Description:  This function does this, that,
+</div>
+<div>
+* and blah blah blah.
+</div>
+<div>
+*/
+</div>
+<div class="class_sBE">
+The use of comment for data is extremely important, whether the data are
+basic types or derived types.
+</div>
+<div class="class_s10">
+Use just one data declaration per line, don’t use multiple data
+declaration per line. This approach you to provide small comments on
+each item, explaining the data and it’s used.
+</div>
+<p><span id="part0106.xhtml"></span></p>
+<div id="part0106.xhtml_page_136" class="class_s1NA">
+Kconfig configuration file
+</div>
+<div class="class_sDB">
+Indentation is different for all of the Kconfig* configuration files
+through the source tree. Lines here under a config definition are
+indented with one tab, while help text put after two additional spaces.
+</div>
+<div class="class_sN4">
+config AUDIT
+</div>
+<div class="class_s1DV">
+bool "Auditing support"
+</div>
+<div class="class_s1DV">
+depends on NET
+</div>
+<div class="class_s1DV">
+help
+</div>
+<div class="class_s1DZ">
+The help text. Blah blah blah.
+</div>
+<div class="class_s1E1">
+And crucial / dangerous features should be advertised in their prompt
+string:
+</div>
+<div class="class_sN4">
+config KRFS_FS
+</div>
+<div class="class_s1DV">
+bool " KRFS read support (DANGEROUS)"
+</div>
+<p><span id="part0107.xhtml"></span></p>
+<div id="part0107.xhtml_page_137" class="class_s1NA">
+Macros and Enums
+</div>
+<div class="class_sDB">
+Macro names defining labels in enums, constants should be capitalized.
+</div>
+<div class="class_sDB">
+#define MAX 999
+</div>
+<div class="class_sDB">
+More rules regarding macros
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> Macros resembling functions
+may be named in lower case.
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> Macros with multiple
+statements preferably enclosed in a do-while block.
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> Macros should not affect
+control flow.
+</div>
+<p><span id="part0108.xhtml"></span></p>
+<div id="part0108.xhtml_page_138" class="class_s1NA">
+Printing kernel messages
+</div>
+<div class="class_s1AY">
+<span class="class_s1F6">-</span> <span
+class="class_s1F2">          </span> Make your kernel messages clear,
+unambiguous, concise, and simple.
+</div>
+<div class="class_s1B0">
+<span class="class_s1F6">-</span> <span
+class="class_s1F2">          </span> Kernel messages should not have to
+be period terminated.
+</div>
+<div class="class_s1B0">
+<span class="class_s1F6">-</span> <span
+class="class_s1F2">         </span> Make your kernel messages matched
+with the right device and driver, and also tagged with the right level
+(error level, warning level, and information level). For example,
+dev_err(), dev_warn(), dev_info().
+</div>
+<div class="class_s1B0">
+<span class="class_s1F6">-</span> <span
+class="class_s1F2">          </span> A good debugging message can be a
+huge help for remote troubleshooting.
+</div>
+<p><span id="part0109.xhtml"></span></p>
+<div id="part0109.xhtml_page_139" class="class_s1NA">
+Memory allocation
+</div>
+<div class="class_sDB">
+Linux kernel provides a couple of general purpose memory allocators:
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> kmalloc()
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> kzalloc()
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> kmalloc_array()
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> kcalloc()
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> vmalloc()
+</div>
+<div class="class_s1B0">
+-<span class="class_s1F2">          </span> vzalloc()
+</div>
+<div class="class_sDB">
+In these memory allocators, the preferred form of passing a size of a
+struct is the following:
+</div>
+<div class="class_sDB">
+p = kmalloc(sizeof(*p), …);
+</div>
+<p><span id="part0110.xhtml"></span></p>
+<div id="part0110.xhtml_page_140" class="class_s1NA">
+About the Author
+</div>
+<div class="class_s10">
+Md Mahbubur Rahman is an inventor, software engineer, technology book
+author, and loves entrepreneurship. He has more than 5 US &amp; EU
+Patents in the field of Wireless Charging AND Indoor Positioning &amp;
+Navigation System. And he has more than 10 years’ experience in the
+software engineering field.  
+</div>
+<hr />
+<aside id="a1F8">
+<a href="#part0030.xhtml_a1FC" class="class_s1F7">[1]</a> <span
+class="class_s1F5">https://go.pardot.com/l/6342/2017-10-24/3xr3f2/6342/188781/Publication_LinuxKernelReport_2017.pdf</span>
+</aside>

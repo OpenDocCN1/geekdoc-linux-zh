@@ -1,0 +1,1958 @@
+- fmt: "\n![](image_rsrc2J8.jpg)\n\n# Linux Kernel for Absolute Beginners\nThe most\
+    \ simplified and easiest book to understand, learn, and work with Linux Kernel.\
+    \ MD MAHBUBUR RAHMAN\n\n## Copyright Notice\nCopyright © by New York Publishing\
+    \ www.nycpublishing.org All Right Reserved. No part of this publication may be\
+    \ reproduced, distributed, or transmitted in any form or by any means, including\
+    \ photocopying, recording, or other electronic or mechanical methods, or by any\
+    \ information storage and retrieval system without the prior written permission\
+    \ of the publisher, except in the case of very brief quotations embodied in critical\
+    \ reviews and certain other noncommercial uses permitted by copyright law. \n\
+    ISBN: `9798720362096`\n\n## Dedication\nThis book is dedicated to my honorable\
+    \ parents for giving birth to see the lights of the amazing world. Also for believing\
+    \ in me and encouraging me to follow my dreams.\n\n## Support Local Education\n\
+    20% of all author royalties are donated to educational not-for-profits organizations.\n\
+    \n## Table of contents\n### Chapter 1: Introduction to Kernel\n- What is Kernel?\n\
+    - Types of Kernel\n    - Micro Kernel\n    - Monolithic Kernel\n    - Modular\
+    \ Kernel\n    - Exo Kernel\n- The relation between Kernel and Operating System\n\
+    \    - Kernel space and protection rings\n    - Kernel vs. operating system\n\
+    \    - Kernel space vs. Userspace?\n    - MicroKernel vs. Monolithic Kernel\n\n\
+    ### Chapter 2: Introduction to Linux Kernel\n- Linux Kernel\n- Linux Kernel Developer\
+    \ Community\n- Linux kernel versioning system\n- Development Highlights\n    -\
+    \ New Features Merged\n    - Linux kernel source size\n- Linux Kernel Directory\
+    \ / Source Structure\n    - `arch`\n    - `include`\n    - `init`\n    - `mm`\n\
+    \    - `drivers`\n    - `ipc`\n    - `modules`\n    - `fs`\n    - `kernel`\n \
+    \   - `net`\n    - `lib`\n- Who is sponsoring the work?\n- Check Linux Kernel\
+    \ Version Number\n\n### Chapter 3: Build Linux Kernel\n- Linux Kernel Source Tree\
+    \ Architecture\n- Tools to build Linux kernel\n\n### Chapter 4: Understanding\
+    \ System Call Interface\n- Introduction to System Call Interface\n- Syscalls /\
+    \ System Calls\n- System Call Numbers\n- Parameters in System Call\n- Advantages\
+    \ of System call\n- Disadvantages of system call\n- Creating a basic system call\
+    \ for the Linux kernel\n    - Add the new system call into the System Call Table\n\
+    \    - Recompile the kernel\n    - Test the System Call\n\n### Chapter 5: Understanding\
+    \ Kernel Module\n- What is Kernel Module?\n- What is Loadable Kernel Module?\n\
+    - Advantages of Loadable Kernel Modules\n- Disadvantages of Loadable Kernel Modules\n\
+    - Security concern of Loadable Kernel Module\n    - Buffer overrun\n    - Enforcing\
+    \ signed modules\n\n### Chapter 6: Before starting to write the Loadable Kernel\
+    \ Module\n- Things to learn\n- Resources to learn kernel programming\n\n### Chapter\
+    \ 7: Writing Loadable Kernel Module\n- Write a simple Loadable Kernel Module\n\
+    - Initialization and Clean Macro\n- Other Macros\n- Command-line arguments in\
+    \ LKM\n    - Example of command-line arguments in LKMs with Integer\n    - Example\
+    \ of command-line arguments in LKMs with Short Integer, Integer and Long Integer\n\
+    \    - Example of command-line arguments in LKMs with String\n    - Example of\
+    \ command-line arguments in LKMs with Array\n- Loading LKMs while the system starts\n\
+    - Module spanning more than one file\n    - `modulart.c`\n    - `modlestop.c`\n\
+    \    - `Makefile`\n\n### Chapter 8: Kernel Debugging\n- Oops?\n- Debugging the\
+    \ kernels issues/bugs\n- Printing for debugging\n- The `printk()` log level priorities\n\
+    - Printk Example # 1\n- Printk Example # 2\n\n### Chapter 9: Loading and Unloading\
+    \ LKMs\n- Loading and Unloading Linux Kernel Modules (LKMs) on demand\n    - `insmod`\n\
+    \    - `rmmod`\n    - `depmod`\n    - `modinfo`\n    - `lsmod`\n    - `modprobe`\n\
+    - How kmod works?\n\n### Chapter 10: Introduction to Device Drivers\n- Introduction\
+    \ to device driver\n- What is device driver?\n- When a kernel calls device driver?\n\
+    - Device driver working procedure with User Space, Kernel Space and Hardware Space\n\
+    \n### Chapter 11: Developing a character device driver with utmost easy explanations\n\
+    - Explanation # 1\n- Explanation # 2\n- Explanation # 3\n- Explanation # 4\n-\
+    \ Developing a tiny GPIO char device driver\n\n### Appendix A\n- Linux Kernel\
+    \ Coding Style\n    - Indentation\n    - Breaking long lines\n    - Placement\
+    \ of spaces\n    - Placement of braces\n    - Naming Local and Global Variables\n\
+    \    - Functions\n    - Commenting\n- Kconfig configuration file\n- Macros and\
+    \ Enums\n- Printing kernel messages\n- Memory allocation\n\n### About the Author\n\
+    \n## Chapter 1: Introduction to Kernel\n### What is Kernel?\nFor a vehicle, the\
+    \ engine is the most important part; we can’t imagine a vehicle without an engine.\
+    \ The heart is also the same. A human can live without eyes, legs, and hands but\
+    \ can’t live without “Heart”. In a computing system, a kernel is the heart of\
+    \ an operating system, and kernel is responsible to manage & run core functionalities\
+    \ and features of an operating system.\n\n### Types of Kernel\nThere are different\
+    \ types of car engines available, VEE, INLINE, STRAIGHT, and more; every type\
+    \ of engine has several different approaches, pros, and cons. Kernels also have\
+    \ a different type; based on purpose and targeted mechanism. Examples of some\
+    \ kernels are monolithic, micro, modular, and others.\n\nTable 1.1: Kernel type\
+    \ with examples\n![Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-08-01 at\
+    \ 1.16.02 PM.png](image_rsrc2J9.jpg)\n\n### Micro Kernel\nMicro Kernel uses the\
+    \ approach of scheduling, memory management, and inter-process communication.\
+    \ This type of kernel is the smallest. But what does it mean by minimum size of\
+    \ kernel?\n\n### Monolithic Kernel\nMonolithic Kernel type of kernel has all required\
+    \ functionality inside the kernel. For example, schedulers, device drivers, memory\
+    \ management, etc.\n\n### Modular Kernel\n### Exo Kernel\nModular kernel merges\
+    \ the good points of kernel-level drivers and third-party drivers. In this type\
+    \ of kernel, some parts of the system core will be located in independent files\
+    \ called modules and these modules can be added to the system at run time. For\
+    \ example, only loading drivers if a device is found.\n\n### The relation between\
+    \ Kernel and Operating System\nSuppose, think of a house with two rooms; there\
+    \ is a corridor between two rooms to communicate with.\n![Macintosh HD:Users:mahbub:Desktop:Screen\
+    \ Shot 2018-04-12 at 8.18.41 AM.png](image_rsrc2JA)\n\nIn a similar pattern, the\
+    \ Operating system works as a house. It has two parts or a room. One for user\
+    \ space and other for kernel space where system call interface works between them.\n\
+    ![Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-04-12 at 8.23.11 AM.png](image_rsrc2JB)\n\
+    \n### Kernel space and protection rings\nKernel space programs have outmost access\
+    \ to system/W, memory and these should not be accessible by userspace programs;\
+    \ otherwise, disaster will happen. The operating system maintains some protection\
+    \ rings to overcome these disasters. Here in the following figure, the protection\
+    \ ring architecture of x86 CPU shown. Four levels defined here, from level0 to\
+    \ level3.\n![Macintosh HD:Users:mahbub:Desktop:LK Beginners:OS-protection-rings.jpg](image_rsrc2JC)\n\
+    \nLevel 0: Protection ring level 0 is the most privileged where kernel space programs\
+    \ run.\nLevel 1: At protection ring level 1 device driver, the guest operating\
+    \ system resides here.\nLevel 2: I/O privileged code and other similar privileged\
+    \ code runs at the protection ring level.\nLevel 3: Userspace programs and libraries\
+    \ run at protection ring level 3.\n\n### Kernel vs. operating system\n| Kernel\
+    \ | Operating system |\n| :--- | :--- |\n| The kernel is the core of the operating\
+    \ system. | The operating system consists of user space and kernel space. |\n\
+    | The kernel is pretty smaller in size compared to the operating system. | The\
+    \ operating system is pretty large compared to kernel. |\n| Kernel works as an\
+    \ interface between software and hardware. | The operating system works as an\
+    \ interface between user and hardware. |\n| The kernel works closer to the hardware\
+    \ and it provides low-level services like: |\n"
+  raw: '
+
+
+    ![](image_rsrc2J8.jpg)
+
+
+    L inux KernelforAbsolute BeginnersThe most simplified and easiest book to understand,
+    learn, and work with Linux Kernel.MD MAHBUBUR RAHMANCopyright NoticeCopyright
+    © by New York Publishingwww.nycpublishing.orgAll Right Reserved.No part of this
+    publication may be reproduced, distributed, or transmitted in any form or by any
+    means, including photocopying, recording, or other electronic or mechanical methods,
+    or by any information storage and retrieval system without the prior written permission
+    of the publisher, except in the case of very brief quotations embodied in critical
+    reviews and certain other noncommercial uses permitted by copyright law.ISBN:  9798720362096DedicationThis
+    book is dedicated to my honorable parents for giving birth to see the lights of
+    the amazing world. Also for believing in me and encouraging me to follow my dreams.Support
+    Local Education20% of all author royalties are donated to educational not-for-profits
+    organizations.Table of contentsChapter 1: Introduction to KernelWhat is Kernel?Types
+    of KernelMicro KernelMonolithic KernelModular KernelExo KernelThe relation between
+    Kernel and Operating SystemKernel space and protection ringsKernel vs. operating
+    systemKernel space vs. Userspace?MicroKernel vs. Monolithic KernelChapter 2: Introduction
+    to Linux KernelLinux KernelLinux Kernel Developer CommunityLinux kernel versioning
+    systemDevelopment HighlightsNew Features MergedLinux kernel source sizeLinux Kernel
+    Directory / Source StructurearchincludeinitmmdriversipcmodulesfskernelnetlibscriptsWho
+    is sponsoring the work?Check Linux Kernel Version NumberChapter 3: Build Linux
+    KernelLinux Kernel Source Tree ArchitectureTools to build Linux kernelChapter
+    4: Understanding System Call InterfaceIntroduction to System Call InterfaceSyscalls 
+    / System CallsSystem Call NumbersParameters in System CallAdvantages of System
+    callDisadvantages of system callCreating a basic system call for the Linux kernelAdd
+    the new system call into the System Call TableRecompile the kernelTest the System
+    CallChapter 5: Understanding Kernel ModuleWhat is Kernel Module?What is Loadable
+    Kernel Module?Advantages of Loadable Kernel ModulesDisadvantages of Loadable Kernel
+    ModulesSecurity concern of Loadable Kernel Module- ​ Buffer overrun- ​ Enforcing
+    signed modulesChapter 6:Before starting to write the Loadable Kernel ModuleThings
+    to learnResources to learn kernel programmingChapter 7:Writing Loadable Kernel
+    ModuleWrite a simple Loadable Kernel ModuleInitialization and Clean MacroOther
+    MacrosCommand-line arguments in LKMExample of command-line arguments in LKMs with
+    IntegerExample of command-line arguments in LKMs with Short Integer, Integer and
+    Long IntegerExample of command-line arguments in LKMs with StringExample of command-line
+    arguments in LKMs with ArrayLoading LKMs while the system startsModule spanning
+    more than one filemodulestart.cmodulestop.cMakefileChapter 8:Kernel DebuggingOops?Debugging
+    the kernels issues/bugsPrinting for debuggingThe printk() log level prioritiesPrintk
+    Example # 1Printk Example # 2Chapter 9:Loading and Unloading LKMsLoading and Unloading
+    Linux Kernel Modules (LKMs) on demandinsmodrmmoddepmodmodinfolsmodmodprobeHow
+    kmod works?Chapter 10:Introduction to Device DriversIntroduction to device driverWhat
+    is device driver?When a kernel calls device driver?Device driver working procedure
+    with User Space, Kernel Space and Hardware Space:Chapter 11:Developing a character
+    device driver with utmost easy explanationsExplanation # 1Explanation # 2Explanation
+    # 3Explanation # 4Developing a tiny GPIO char device driverAppendix A:Linux Kernel
+    Coding StyleIndentationBreaking long linesPlacement of spacesPlacement of bracesNaming
+    Local and Global VariablesFunctionsCommentingKconfig configuration fileMacros
+    and EnumsPrinting kernel messagesMemory allocationAbout the AuthorChapter 1: Introduction
+    to KernelWhat is Kernel?For a vehicle, the engine is the most important part;
+    we can’t imagine a vehicle without an engine.  The heart is also the same. A human
+    can live without eyes, legs, and hands but can’t live without “Heart”.In a computing
+    system, a kernel is the heart of an operating system, and kernel is responsible
+    to manage & run core functionalities and features of an operating system.Types
+    of KernelThere are different types of car engines available, VEE, INLINE, STRAIGHT,
+    and more; every type of engine has several different approaches, pros, and cons.
+    Kernels also have a different type; based on purpose and targeted mechanism. 
+    Examples of some kernels are monolithic, micro, modular, and others.Table 1.1:
+    Kernel type with examples![Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-08-01
+    at 1.16.02 PM.png](image_rsrc2J9.jpg)Micro KernelMicro Kernel uses the approach
+    of the ultimate minimum set-up required for scheduling, memory management, and
+    inter-process communication. This type of kernel vastly reduces the amount of
+    memory required for kernel use. But what does it mean by the minimum size of the
+    kernel? The fact of a minimum size of the kernel means that the amount of extra
+    communication required by device drivers reduces the maximum data flow through
+    the kernel, but frankly along with also decreases kernel response time to interrupts.Monolithic
+    KernelMonolithic Kernel type of kernel has all required functionality inside the
+    kernel, in kernel memory space owned by the kernel. For example, schedulers, device
+    drivers, memory management, etc. This type of kernels typically has the highest
+    data throughput of all kernels.Modular KernelModular kernel merges the good points
+    of kernel-level drivers and third-party drivers. In this type of kernel, some
+    parts of the system core will be located in independent files called modules and
+    these modules can be added to the system at run time. For example, only loading
+    drivers if a device is found. Another example only loads a filesystem if it gets
+    requested.Exo KernelExo-Kernel type of kernel is the smallest that offers process
+    protection and resource handling.The relation between Kernel and Operating SystemSuppose,
+    think of a house along with two rooms; there is a corridor between two rooms to
+    communicate with.![Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-04-12 at
+    8.18.41 AM.png](image_rsrc2JA.jpg)In a similar pattern, the Operating system works
+    as a house. It has two parts or a room. One for user space programs and other
+    for kernel space programs where system call interface works as a communication
+    channel between them.![Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-04-12
+    at 8.23.11 AM.png](image_rsrc2JB.jpg)Kernel space and protection ringsKernel space
+    programs have outmost access to system H/W, memory and these should not be accessible
+    by userspace programs; otherwise, disaster will happen. The operating system maintains
+    some protection rings to overcome these disasters.Here in the following figure,
+    the protection ring architecture of x86 CPU shown. Four levels defined here, from
+    level0 to level3.![Macintosh HD:Users:mahbub:Desktop:LK for Beginners:OS-protection-rings.jpg](image_rsrc2JC.jpg)Level
+    0: Protection ring level 0 is the most privileged where kernel space programs
+    run.Level 1: At protection ring level 1 device driver, the guest operating system
+    resides here.Level 2: I/O privileged code and other similar privileged code runs
+    at the protection ring level.Level 3: Userspace programs and libraries run at
+    protection ring level 3. Kernel vs. operating system
+
+
+    | Kernel | Operating system |
+
+
+    | The kernel is the core of the operating system. | The operating system consists
+    of user space and kernel space.  |
+
+
+    | The kernel is pretty smaller in size compared to the operating system. | The
+    operating system is pretty large compared to kernel. |
+
+
+    | Kernel works as an interface between software and hardware. | The operating
+    system works as an interface between user and hardware. |
+
+
+    | The kernel works closer to the hardware and it provides low-level services like: '
+  toc: []
+  trans: "\n\n![](img/image_rsrc2J8.jpg)\n\n# 零基础 Linux 内核\n最简单、最易理解、学习和使用 Linux 内核的书籍。MD\
+    \ MAHBUBUR RAHMAN\n\n## 版权声明\n版权所有 © New York Publishing www.nycpublishing.org\
+    \ 保留所有。未经出版者书面许可，不得以任何形式或通过任何手段复制、发行或传输本书（包括复印、录制或其他电子或机械方法，或通过信息存储和检索系统），但批判性评论中的简短引用以及版权法允许的某些非商业用途除外。\n\
+    ISBN: `9798720362096`\n\n## 献辞\n本书献给我尊敬的父母，感谢他们让我见证奇妙世界的光芒。感谢他们信任我并鼓励我追求梦想。\n\n\
+    ## 支持本地教育\n作者版税总数的 20%将捐赠给教育非营利组织。\n\n## 目录\n### 第 1 章：内核简介\n- 什么是内核？\n- 内核的类型\n\
+    \    - 微内核\n    - 单体内核\n    - 模块化内核\n    - 外部内核 (Exo Kernel)\n- 内核与操作系统的关系\n \
+    \   - 内核空间与保护环\n    - 内核 vs 操作系统\n    - 内核空间 vs 用户空间？\n    - 微内核 vs 单体内核\n\n###\
+    \ 第 2 章：Linux 内核简介\n- Linux 内核\n- Linux 内核开发者社区\n- Linux 内核版本系统\n- 开发亮点\n    -\
+    \ 合并的新特性\n    - Linux 内核源码大小\n- Linux 内核目录 / 源码结构\n    - `arch`\n    - `include`\n\
+    \    - `init`\n    - `mm`\n    - `drivers`\n    - `ipc`\n    - `modules`\n   \
+    \ - `fs`\n    - `kernel`\n    - `net`\n    - `lib`\n- 谁在赞助这项工作？\n- 检查 Linux 内核版本号\n\
+    \n### 第 3 章：编译 Linux 内核\n- Linux 内核源码树架构\n- 编译 Linux 内核的工具\n\n### 第 4 章：理解系统调用接口\n\
+    - 系统调用接口简介\n- 系统调用 (Syscalls)\n- 系统调用号\n- 系统调用中的参数\n- 系统调用的优点\n- 系统调用的缺点\n- 为\
+    \ Linux 内核创建一个基础系统调用\n    - 将新系统调用加入系统调用表\n    - 重新编译内核\n    - 测试系统调用\n\n### 第\
+    \ 5 章：理解内核模块\n- 什么是内核模块？\n- 什么是可加载内核模块 (LKM)？\n- 可加载内核模块的优点\n- 可加载内核模块的缺点\n- 可加载内核模块的安全问题\n\
+    \    - 缓冲区溢出\n    - 强制签名模块\n\n### 第 6 章：在编写可加载内核模块之前\n- 需要学习的内容\n- 学习内核编程的资源\n\
+    \n### 第 7 章：编写可加载内核模块\n- 编写简单的可加载内核模块\n- 初始化清理宏\n- 其他宏\n- LKM 中的命令行参数\n    - 带有整数的\
+    \ LKM 命令行参数示例\n    - 带有短整数、整数和长整数的 LKM 命令行参数示例\n    - 带有字符串的 LKM 命令行参数示例\n   \
+    \ - 带有数组的 LKM 命令行参数示例\n- 在系统启动时加载 LKM\n- 跨多个文件的模块\n    - `modulart.c`\n    - `modlestop.c`\n\
+    \    - `Makefile`\n\n### 第 8 章：内核调试\n- Oops？\n- 调试内核问题/缺陷\n- 用于调试的打印\n- `printk()`\
+    \ 日志级别优先级\n- Printk 示例 #1\n- Printk 示例 #2\n\n### 第 9 章：加载与卸载 LKM\n- 按需加载和卸载 Linux\
+    \ 内核模块 (LKMs)\n    - `insmod`\n    - `rmmod`\n    - `depmod`\n    - `modinfo`\n\
+    \    - `lsmod`\n    - `modprobe`\n- kmod 的工作原理？\n\n### 第 10 章：设备驱动简介\n- 设备驱动简介\n\
+    - 什么是设备驱动？\n- 内核在何时调用设备驱动？\n- 设备驱动在用户空间、内核空间和硬件空间之间的工作流程\n\n### 第 11 章：用极其浅懂的解释开发字符设备驱动\n\
+    - 解释 #1\n- 解释 #2\n- 解释 #3\n- 解释 #4\n- 开发一个微型 GPIO 字符设备驱动\n\n### 附录 A\n- Linux\
+    \ 内核编码风格\n    - 缩进\n    - 长行换行\n    - 空格位置\n    - 括号位置\n    - 局部和全局变量命名\n    -\
+    \ 函数\n    - 注释\n- Kconfig 配置文件\n- 宏和枚举\n- 打印内核消息\n- 内存分配\n\n### 关于作者\n\n## 第 1\
+    \ 章：内核简介\n### 什么是内核？\n对于汽车来说，引擎是最重要的部分；我们无法想象没有引擎的汽车。心脏也是如此。人可以没有眼睛、腿和手生存，但不能没有“心脏”。在计算系统中，内核是操作系统的核心，内核负责管理和运行操作系统的核心功能和特性。\n\
+    \n### 内核的类型\n有不同类型的汽车发动机，VEE、INLINE、STRAIGHT 等；每种类型的发动机都有不同的方法、优点和缺点。内核也有不同的类型；基于用途和目标机制。内核的示例包括单体、微内核、模块化内核等。\n\
+    \n表 1.1：内核类型及示例\n![Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-08-01 at\
+    \ 1.16.02 PM.png](img/image_rsrc2J9.jpg)\n\n### 微内核\n微内核采用调度、内存管理和进程通信的方法。这种类型的内核是最小的。但内核尺寸最小意味着什么？\n\
+    \n### 单体内核\n单体内核类型的内核在内部包含了所有所需的功能。例如，调度器、设备驱动程序、内存管理等。\n\n### 模块化内核\n### Exo\
+    \ Kernel\n模块化内核结合了内核级驱动和第三方驱动的优点。在这种内核中，系统核心的一些部分将位于称为“模块”的独立文件中，这些模块可以在运行时添加到系统中。例如，仅在发现设备时加载驱动程序。\n\
+    \n### 内核与操作系统的关系\n假设想一个有两个房间的房子；两个房间之间有一条走廊用于通信。\n![Macintosh HD:Users:mahbub:Desktop:Screen\
+    \ Shot 2018-04-12 at 8.18.41 AM.png](img/image_rsrc2JA)\n\n以类似的模式，操作系统像一栋房子。它有两个部分或房间：一个是用户空间，另一个是内核空间，系统调用接口在它们之间工作。\n\
+    ![Macintosh HD:Users:mahbub:Desktop:Screen Shot 2018-04-12 at 8.23.11 AM.png](img/image_rsrc2JB)\n\
+    \n### 内核空间与保护环\n内核空间程序对系统/W、内存具有最高权限，这些不应被用户空间程序访问；否则将发生灾难。操作系统维护了一些保护环来克服这些灾难。在下面的图中显示了\
+    \ x86 CPU 的保护环架构。这里定义了四个级，从级 0 到 级 3。\n![Macintosh HD:Users:mahbub:Desktop:LK\
+    \ Beginners:OS-protection-rings.jpg](img/image_rsrc2JC)\n\nLevel 0：保护环级 0 是权限最高的，内核空间程序在此运行。\n\
+    Level 1：在保护环级 1，设备驱动程序和客操作系统驻留。\nLevel 2：I/O 特权代码和其他类似的特权代码运行在保护环级。\nLevel 3：用户空间程序和库运行在保护环级\
+    \ 3。\n\n### 内核 vs 操作系统\n| 内核 | 操作系统 |\n| :--- | :--- |\n| 内核是操作系统的核心。 | 操作系统由用户空间和内核空间组成。\
+    \ |\n| 内核与操作系统相比尺寸要小得多。 | 操作系统与内核相比要大得多。 |\n| 内核作为软件和硬件之间的接口。 | 操作系统作为用户和硬件之间的接口。\
+    \ |\n| 内核工作更接近硬件，并提供低级服务，如： |\n\n"
+- fmt: "\n* System calls\n* Memory management\n* Network management own* Device driver\n\
+    * File management own* Process management\n\n| The operating system includes applications\
+    \ like user interfaces.\n\n## Kernel space vs. Userspace?\n\n`Kernel space` is\
+    \ the place where the kernel code stored, it executes here and provides its services.\
+    \ On the contrary, `user space` is that set of memory locations where user processes\
+    \ run. `Userspace` processes can access `kernel space` routines through system\
+    \ calls.\n\n## MicroKernel vs. Monolithic Kernel\n\nThe two most popular types\
+    \ of kernels are `microkernel` and `monolithic kernel`. Here we will discuss differences\
+    \ between them. First of all, services. Services are kept in separate address\
+    \ space in `microkernel` where in `monolithic kernel` services are kept in the\
+    \ same address space. If services are crashed, it does not affect `micro kernel`\
+    \ core as it runs in separate address space but `monolithic` core crashes. In\
+    \ `microkernel`, execute quite slower compared to `monolithic kernel`. `Microkernels`\
+    \ are smaller in size compared to `monolithic` ones. Another point, `microkernels`\
+    \ are easy to extend.\n\n## Chapter 2: Introduction to Linux Kernel\n\n### Linux\
+    \ Kernel\n\n`Linux Kernel` inherits the `Monolithic` type of kernel. This kernel\
+    \ was first released by Linus Torvalds in 1991. The `Linux kernel` is a relatively\
+    \ small part of the full `Linux System` and it is the core that is responsible\
+    \ for how well the system will work. Since 2005, `Linux kernel` uses the `Git`\
+    \ source code management system.\n\n### Linux Kernel Developer Community\n\nIf\
+    \ you want to write code for `Linux Kernel`, you are welcome; as `Linux kernel`\
+    \ is an open-source project. Before getting started you should understand the\
+    \ tech part along with how `Linux Kernel Developer Community` works. For example,\
+    \ how code of conflict arises and resolves, how to submit process, `Linux kernel\
+    \ coding style`, and others. Regarding these and everything others, you will get\
+    \ at `kernel.org`\n\n`Linux kernel versioning system`![Macintosh HD:Users:mahbub:Desktop:linux-kernel-version-system.png](image_rsrc2JD.jpg)\n\
+    \n### Development Highlights\n\nSince `4.7` release, 83,000 changesets have been\
+    \ merged from 4319 individual developers.\n\n### New Features Merged\n\n* The\
+    \ offloading of encrypted streams supported by in-kernel `TLS`.\n* The `BBR` congestion\
+    \ control method improved.\n* On `ARM` processors trusted execution environment\
+    \ facilitated by new `TEE` framework.\n* Documentation system of kernel now supported\
+    \ by `Sphinx`.\n* `Statx()` system call is now available.\n\n### Linux kernel\
+    \ source size\n\nEvery year `Linux kernel` adding support new hardware and feature,\
+    \ so it’s source size growing fast. In its first release in 1991, kernel source\
+    \ size was nearly 10k lines of code, currently, it has more than 22 million lines\
+    \ of code.\n\n### Linux Kernel Directory / Source Structure\n\nFrom the top level\
+    \ of the source tree `/usr/src/linux` we will see several directories:\n\n* **arch**\n\
+    \    * This part contains all of the architecture-specific kernel code.\n    *\
+    \ This directory has further subdirectories, for example, `i386` and `alpha` for\
+    \ one per supported architecture.\n\n* **include**\n    * This directory contains\
+    \ most of the include files needed to build the kernel source code.\n    * It\
+    \ has also subdirectories for every supported architecture.\n\n* **init**\n  \
+    \  * This part contains the initialization code for the kernel.\n    * This directory\
+    \ is a pretty important place for developers who need to know how the kernel works.\n\
+    \n* **mm**\n    * This part holds all of the memory management relevant code.\n\
+    \n* **drivers**\n    * This directory contains all system’s device drivers.\n\
+    \    * They are further sub-divided into classes of device drivers, for example,\
+    \ block device driver, char device driver, network driver.\n\n* **ipc**\n    *\
+    \ This part holds the kernels inter-process communications code.\n\n* **modules**\n\
+    \    * This part used to hold built modules.\n\n* **fs**\n    * This directory\
+    \ contains file system code.\n\n* **kernel**\n    * This directory contains the\
+    \ main kernel source code.\n\n* **net**\n    * This directory contains kernel's\
+    \ networking code.\n\n* **lib**\n    * This part holds the kernel's library code.\n\
+    \n* **scripts**\n    * This part holds the scripts that are used when the kernel\
+    \ is configured.\n\n## Who is sponsoring the work?\n\nAccording to the report,\
+    \ the following are employing kernel:\n\n![Macintosh HD:Users:mahbub:Desktop:linux-kernel.png](image_rsrc2JE.jpg)\n\
+    \n### Check Linux Kernel Version\n\nSometimes you may need to check current version,\
+    \ then run `uname -r`\n\n## Chapter 3: Build Linux Kernel\n\n### Linux Kernel\
+    \ Source Tree\n\n`kernel.org` hosts all of source code.![Macintosh HD:Users:mahbub:Desktop:linux-kernel.png](image_rsrc2JG.jpg)\n\
+    \nThis site is self-explanatory. You can download the source code. You can also\
+    \ utilize command-line `wget` or `curl` to download source code.\n\n```bash\n\
+    mkdir kernel\ncd kernel\nwget [url]\ntar -xzf [filename.tar.gz]\n```\n\n### Tools\
+    \ to build Linux kernel\n\n1. **Compiler**\n2. **Linker**\n3. **Make**\n\n**Compiler**:\
+    \ There are several compilers available, like `gcc`, `clang`, `Visual C++`, `Turbo\
+    \ C`, and others. But to build Linux kernel, the `gcc` C compiler must be used.\
+    \ But why? Because major parts of kernel written in C, and very small parts written\
+    \ in Assembly. The `gcc` C compiler is capable to compile C source and Assembly\
+    \ source.\n\n**Linker**: For linking and assembling source code another tool required,\
+    \ that is `GNU binary utilities` short named as `binutils`. `Binutils` is a collection\
+    \ of programming tools for creating and managing binary files, object files, profile\
+    \ data.\n\n**Make**: Another important tool to build kernel is `make`; it checks\
+    \ source tree and finds files files needed to be compiled. After checking it calls\
+    \ compiler and other tools.\n\n## Chapter 4: Understanding System Call Interface\n\
+    \n### Introduction to System Call Interface\n\nSystem call interface provides\
+    \ a layer between kernel space and userspace. This layer provides authentication\
+    \ to userspace processes to execute kernel space routines. In simple words, a\
+    \ system call is just a userspace request for a function or service of kernel\
+    \ space.![Macintosh HD:Users:mahbub:Desktop:system-call-interface.png](image_rsrc2JF.jpg)\n\
+    \n### Syscalls / System Calls\n\nSyscalls / System Calls are accessed via a function\
+    \ call. Usually this function calls are defined in the C library. Syscalls accept\
+    \ variety to arguments (zero to many) as input returns a value and performs one\
+    \ or more tasks. Ideally a system call should have exactly one purpose.\n\n###\
+    \ System Call Numbers\n\nEach system call is assigned a 32-bit system number,\
+    \ which is unique; and it is used to refer specific system call. Linux kernel\
+    \ maintains a table called `sys-call-table` to store all registered system calls.\n\
+    \n### Parameters in System Call\n\nWhile calling system calls, it may require\
+    \ to pass parameters to them. Here, parameters are stored in registers. On x86-32\
+    \ bit system, the registers are `ebx`, `ecx`, `edx`, `esi` and `edi`. But the\
+    \ scenario may happen when more than 5 parameters need to be passed. Then a single\
+    \ register is used to hold a pointer to user-space where all the parameters are\
+    \ stored. And the return value is sent to the user-space also via register.\n\n\
+    ### Advantages of System call\n\nThe system call interface approach has couple\
+    \ of advantages. For example,\n"
+  raw: "*   System calls\n\n*   Memory management\n\n*   Network management\n\n* \
+    \  Device driver\n\n*   File management\n\n*   Process management    \n\n | The\
+    \ operating system includes applications like user interfaces. |\n\nKernel space\
+    \ vs. Userspace?Kernel space is the place where the kernel code stored, it executes\
+    \ here and provides its services. On the contrary,  user space is that set of\
+    \ memory locations where user processes run. Userspace processes can access kernel\
+    \ space routines through system calls.MicroKernel vs. Monolithic KernelThe two\
+    \ most popular types of kernels are microkernel and monolithic kernel. Here we\
+    \ will discuss differences between them. First of all, services. Services are\
+    \ kept in separate address space in microkernel where in monolithic kernel services\
+    \ are kept in the same address space.  If services are crashed, it does not affect\
+    \ micro kernel core as it runs in separate address space but monolithic core crashes.\
+    \ In microkernel, execute quite slower compared to monolithic kernel.  Microkernels\
+    \ are smaller in size compared to monolithic ones. Another point, microkernels\
+    \ are easy to extend.Chapter 2: Introduction to Linux KernelLinux KernelLinux\
+    \ inherits the “Monolithic” type of kernel.  This kernel was first released by\
+    \ Linus Torvalds in 1991.  The Linux kernel is a relatively small part of the\
+    \ full Linux System and it is the core that is responsible for how well the system\
+    \ will work.  Since 2005, Linux kernel uses the Git source code management system.Linux\
+    \ Kernel Developer CommunityIf you want to write code for Linux Kernel, you are\
+    \ welcome; as Linux kernel is an open-source project. Before getting started you\
+    \ should understand the tech part along with how Linux Kernel Developer Community\
+    \ works. For example, how code of conflict arises and resolves, how to submit\
+    \ process, Linux kernel coding style, and others. Regarding these and everything\
+    \ others, you will get at kernel.orgLinux kernel versioning system![Macintosh\
+    \ HD:Users:mahbub:Desktop:linux-kernel-version-system.png](image_rsrc2JD.jpg)Development\
+    \ HighlightsSince 4.7 release, 83,000 changesets have been merged from 4319 individual\
+    \ developers.New Features Merged-           The offloading of encrypted streams\
+    \ supported by in-kernel TLS.-           The BBR congestion control method improved.-          \
+    \ On ARM processors trusted execution environment facilitated by new TEE framework.-          \
+    \ Documentation system of kernel now supported by Sphinx.-           Statx() system\
+    \ call is now available.Linux kernel source sizeEvery year Linux kernel adding\
+    \ support new hardware and feature, so it’s source size growing fast. In its first\
+    \ release in 1991, kernel source size was nearly 10k lines of code, currently,\
+    \ it has more than 22 million lines of code.Linux Kernel Directory / Source StructureFrom\
+    \ the top level of the source tree /usr/src/linux we will see several directories:arch\n\
+    \n*   This part contains all of the architecture-specific kernel code.\n\n*  \
+    \ This directory has further subdirectories, for example, i386 and alpha for one\
+    \ per supported architecture.\n\ninclude\n\n*   This directory contains most of\
+    \ the include files needed to build the kernel source code.\n\n*   It has also\
+    \ subdirectories for every supported architecture.\n\ninit\n\n*   This part contains\
+    \ the initialization code for the kernel.\n\n*   This directory is a pretty important\
+    \ place for developers who need to know how the kernel works.\n\nmm\n\n*   This\
+    \ part holds all of the memory management relevant code.\n\ndrivers\n\n*   This\
+    \ directory contains all system’s device drivers.\n\n*   They are further sub-divided\
+    \ into classes of device drivers, for example, block device driver, char device\
+    \ driver, network driver.\n\nipc\n\n*   This part holds the kernels inter-process\
+    \ communications code.\n\nmodules\n\n*   This part used to hold built modules.\n\
+    \nfs\n\n*   This directory contains file system code.\n\nkernel\n\n*   This directory\
+    \ contains the main kernel source code.\n\nnet\n\n*   This directory contains\
+    \ kernel's networking code.\n\nlib\n\n*   This part holds the kernel's library\
+    \ code.\n\nscripts\n\n*   This part holds the scripts that are used when the kernel\
+    \ is configured.\n\nWho is sponsoring the work?According to the report [[1]](#part0110.xhtml_a1F8)\
+    \ , the following companies are employing kernel developers.![Macintosh HD:Users:mahbub:Desktop:Book\
+    \ Writing:LK for Beginners:who-contributes.png](image_rsrc2JE.jpg)Check Linux\
+    \ Kernel Version NumberSometimes you may need to check current kernel version,\
+    \ then run the following command# uname -r4.17.12Chapter 3: Build Linux KernelLinux\
+    \ Kernel Source Tree ArchitectureThe kernel.org hosts all of the source code for\
+    \ Linux Kernel.![Macintosh HD:Users:mahbub:Desktop:Book Writing:LK for Beginners:Linux-kernel.png](image_rsrc2JF.jpg)This\
+    \ site is self-explanatory. You can download the whole source code from here.\
+    \ You can also utilize command-line utility like wget, curl or others to download\
+    \ source code. After downloading source code I suggest creating a local directory\
+    \ inside your home directory i.e. Linux kernel and copy that source code here.$\
+    \ cd ~$ mkdir linuxkernelThen move that source code here$cd ~/downloads$mv linux-kernel-4.17.12.tar.gz\
+    \ linuxkernelEnter at linuxkernel directory$ cd linuxkernelThen extract$ tar linux-kernel-4.16.10.tar.gzTools\
+    \ to build Linux kernelA couple of software packages required building Linux kernel.\n\
+    \n1.  Compiler\n\n2.  Linker\n\n3.  Make Utility\n\nCompiler : There are several\
+    \ compilers available, like gcc, clang, Mono, Visual C++ Express, Turbo C,  Oracle\
+    \ C++, and others.  But to build Linux kernel, the gcc C compiler must be used.\
+    \ But why? Because of major parts of Linux kernel written in C language, and very\
+    \ small parts written in Assembly language. The gcc C compiler is capable to compile\
+    \ C source parts and Assembly source parts.Linker : For linking and assembling\
+    \ source code another tool required, that is GNU binary utilities; short named\
+    \ as binutils. Binutils is a collection of programming tools for creating and\
+    \ managing binary files, object files, profile data, and others.Make : Another\
+    \ important tool to build the kernel is make; it checks the source tree and finds\
+    \ the files that needed to be compiled. After checking it calls compiler and other\
+    \ tools to proceed.Chapter 4: Understanding System Call InterfaceIntroduction\
+    \ to System Call InterfaceThe system call interface provides a layer between kernel\
+    \ space functions and userspace functions. This layer provides authentication\
+    \ to userspace processes to execute kernel space routines.  In simple words, a\
+    \ system call is just a userspace request for a function or service of kernel\
+    \ space.![Macintosh HD:Users:mahbub:Desktop:system-call-interface.png](image_rsrc2JG.jpg)Syscalls \
+    \ / System CallsSyscalls / System Calls are accessed via a function call. Usually\
+    \ this function calls are defined in the C library. Syscalls accept variety to\
+    \ arguments (zero to many) as input returns a value and performs one or more tasks.\
+    \ Ideally a system call should have exactly one purpose.System Call NumbersEach\
+    \ system call is assigned a 32-bit system number, which is unique; and it is used\
+    \ to refer C specific system call. Linux kernel maintains a table called sys-call-table\
+    \ to store all registered system calls.Parameters in System CallWhile calling\
+    \ system calls, it may require to pass parameters to them.  Here, parameters are\
+    \ stored in registers. On x86-32 bit system, the registers are ebx, ecx, edx,\
+    \ esi and edi. But the scenario may happen when more than 5 parameters need to\
+    \ be passed. Then a single register is used to hold a pointer to user-space where\
+    \ all the parameters are stored. And the return value is sent to the user-space\
+    \ also via register.Advantages of System callThe system call interface approach\
+    \ has couple of advantages. For example,"
+  toc: []
+  trans: "\n-   系统调用\n-   内存管理\n-   网络管理  own 驱动\n-   文件管理 进程管理\n\n| 操作系统包含了用户界面等应用程序。\
+    \ |\n\n## 内核空间 vs 用户空间？\n\n`Kernel space`（内核空间）是内核代码存储的地方，它在此处执行并提供服务。相反，`user\
+    \ space`（用户空间）是用户进程运行的内存区域。`Userspace`进程可以通过系统调用访问 `kernel space` 例程。\n\n## 微内核\
+    \ vs 单体内核\n\n两种最流行的内核类型是 `microkernel`（微内核）和 `monolithic kernel`（单体内核）。我们将讨论它们之间的区别。首先是服务。在\
+    \ `microkernel` 中，服务保留在独立的地址空间中，而在 `monolithic kernel` 中，服务保留在同一个地址空间内。如果服务崩溃，不会影响\
+    \ `micro kernel` 核心，因为它运行在独立的地址空间中，但 `monolithic` 核心会崩溃。在 `microkernel` 中，执行速度比\
+    \ `monolithic kernel` 慢。与 `monolithic` 相比，`Microkernels` 的体积更小。另外一点，`microkernels`\
+    \ 易于扩展。\n\n## 第 2 章：Linux 内核简介\n\n### Linux 内核\n\n`Linux Kernel` 继承了 `Monolithic`（单体）类型的内核。该内核由\
+    \ Linus Torvalds 于 1991 年首次发布。`Linux kernel` 是整个 `Linux System` 的较小部分，它是负责系统运行良好程度的核心。自\
+    \ 2005 以来，`Linux kernel` 使用 `Git` 源码管理系统。\n\n### Linux 内核开发者社区\n\n如果你想为 `Linux\
+    \ Kernel` 编写代码，欢迎你；因为 `Linux kernel` 是开源项目。在开始之前，你应该了解技术部分以及 `Linux Kernel Developer\
+    \ Community` 是如何工作的。例如，代码冲突如何产生和解决、如何提交进程、`Linux kernel coding style` 等。关于这些及其他内容，你可以在\
+    \ `kernel.org` 获得。\n\n`Linux kernel versioning system`![Macintosh HD:Users:mahbub:Desktop:linux-kernel-version-system.png](img/image_rsrc2JD.jpg)\n\
+    \n### 开发亮点\n\n自 `4.7` 发布以来，已从 4319 名独立开发者那里合并了 83,000 个变更集。\n\n### 合并的新特性\n\n\
+    *   内核内核 `TLS` 支持的加密流卸载。\n*   改进的 `BBR` 拥塞控制方法。\n*   `ARM` 处理器上通过新的 `TEE` 框架实现的可信执行环境。\n\
+    *   内核的文档系统现在由 `Sphinx` 支持。\n*   `Statx()` 系统调用现可用。\n\n### Linux 内核源码大小\n\n`Linux\
+    \ kernel` 每年添加对新硬件和功能的支持，因此其源码规模增长迅速。在 1991 年的首次发布时，内核源码规模接近 1 万行代码，目前它已经超过了 2200\
+    \ 万行代码。\n\n### Linux 内核目录 / 源码结构\n\n从源码树的顶层 `/usr/src/linux` 我们可以看到几个目录：\n\n*\
+    \   **arch**\n    *   这部分包含了所有特定架构的内核代码。\n    *   该目录有进一步的子目录，例如对应每个支持架构的 `i386`\
+    \ 和 `alpha`。\n\n*   **include**\n    *   该目录包含构建内核源码所需的大多数包含文件。\n    *   它也有对应每个支持架构的子目录。\n\
+    \n*   **init**\n    *   这部分包含了内核的初始化代码。\n    *   该目录对于需要了解内核工作的开发者来说是一个非常重要的地方。\n\
+    \n*   **mm**\n    *   这部分持有所有与内存管理相关的代码。\n\n*   **drivers**\n    *   该目录包含了所有的设备驱动程序。\n\
+    \    *   它们进一步细分为设备驱动程序类，例如块设备驱动、字符设备驱动、网络驱动。\n\n*   **ipc**\n    *   这部分持有内核的进程间通信代码。\n\
+    \n*   **modules**\n    *   这部分曾用于持有构建好的模块。\n\n*   **fs**\n    *   该目录包含文件系统代码。\n\
+    \n*   **kernel**\n    *   该目录包含主内核源码。\n\n*   **net**\n    *   该目录包含内核的网络代码。\n\n\
+    *   **lib**\n    *   这部分持有内核的库代码。\n\n*   **scripts**\n    *   这部分持有了在配置内核时使用的脚本。\n\
+    \n## 谁在赞助这项工作？\n\n根据报告，以下是聘用内核：\n\n![Macintosh HD:Users:mahbub:Desktop:linux-kernel.png](img/image_rsrc2JE.jpg)\n\
+    \n### 检查 Linux 内核版本\n\n有时你可能需要检查当前版本，然后运行 `uname -r`\n\n## 第 3 章：编译 Linux 内核\n\
+    \n### Linux 内核源码树\n\n`kernel.org` 托管所有的源码![Macintosh HD:Users:mahbub:Desktop:linux-kernel.png](img/image_rsrc2JG.jpg)\n\
+    \n该网站是不自明的。你可以下载源码。你也可以利用命令行 `wget` 或 `curl` 下载源码。\n\n```bash\nmkdir kernel\n\
+    cd kernel\nwget [url]\ntar -xzf [filename.tar.gz]\n```\n\n### 编译 Linux 内核的工具\n\
+    \n1.  **编译器**\n2.  **链接器**\n3.  **Make**\n\n**编译器**：有几种编译器可用，如 `gcc`、`clang`、`Visual\
+    \ C++`、`Turbo C` 等。但编译 Linux 内核必须使用 `gcc` C 编译器。为什么呢？因为内核的大部分是用 C 语言编写的，极小部分是用汇编编写的。`gcc`\
+    \ C 编译器能够编译 C 源码。\n\n**链接器**：对于链接和汇编源码还需要另一个工具，即 `GNU binary utilities`，简称 `binutils`。`binutils`\
+    \ 是创建和管理二进制文件、对象文件、分析数据的工具集。\n\n**Make**：编译内核的另一个重要工具是 `make`；它检查源码并寻找需要编译的文件。\n\
+    \n## 第 4 章：理解系统调用接口\n\n### 系统调用接口简介\n\n系统调用接口在内核空间和用户空间之间提供了一个层。这一层为用户空间进程执行内核例程。简单来说，系统调用只是用户空间对内核函数或服务的请求![Macintosh\
+    \ HD:Users:mahbub:Desktop:system-call-interface.png](img/image_rsrc2JF.jpg)\n\n\
+    ### Syscalls / 系统调用\n\nSyscalls / 系统调用通过函数调用访问。通常这些函数调用定义在 C 库中。系统调用接受各种参数（从零到多个）作为输入，返回一个值并执行一个或多个任务。理想情况下，系统调用应该只有一个目的。\n\
+    \n### 系统调用号\n\n每个系统调用都被分配了一个唯一的 32 位系统数；并用于引用特定的系统调用。Linux 内核维护一个名为 `sys-call-table`\
+    \ 的表来存储所有注册的系统调用。\n\n### 系统调用参数\n\n在调用系统调用时，可能需要传递传递参数。在这里，参数存储在寄存器中。在 x86-32\
+    \ 位系统中，寄存器为 `ebx`、`ecx`、`edx`、`esi` 和 `edi`。但当需要传递超过 5 个参数时，会使用单个寄存器持有指向存储所有参数的用户空间的指针。返回值也通过寄存器发送到用户空间。\n\
+    \n### 系统调优点\n\n系统调用接口方法有两个优点。例如，\n"
+- fmt: "\n## Advantages of System Call\n\n- **Secured**: If userspace processes/programs\
+    \ could directly read and write to the kernels address space, system security\
+    \ will be nullified. Userspace functions have limited access to the resources/hardware\
+    \ of the system due to implementation of system call.\n- **Faster performance**:\
+    \ System call interface provides a faster performance to the system.\n- **Portability**:\
+    \ System call interface makes user space application more portable. Due to any\
+    \ change in the kernel side, userspace programs don’t need to change.\n- **Easier\
+    \ Implementation**: System call interface makes user space application development\
+    \ easier; here they do not need to think about low-level functionality of the\
+    \ system.\n\n## Disadvantages of System Call\n\nTo develop or implement a new\
+    \ system call, it needs to have a unique system call number officially assigned\
+    \ to you. More pain points, all architecture needs to separately register the\
+    \ system call. So, if you want to implement a simple task, then system call is\
+    \ pretty time consuming and the maintenance quite complex.\n\n## Creating a basic\
+    \ system call for the Linux kernel\n\nAt first, switch to the compiled source\
+    \ directory of Linux kernel. \n\n```bash\n$ cd linux-x.x.x/\n```\n\nCreate a directory\
+    \ hellosys and move into it.\n\n```bash\n$ mkdir hellosys\n$ cd hellosys\n```\n\
+    \nCreate a new C file in this dir,\n\n```bash\n$ vi hellosys.c\n```\n\nAdd following\
+    \ codes here:\n\n```c\n#include <linux/kernel.h>\nasmlinkage long sys_hellosys(void)\
+    \ {\n    printk(\"Hello New System Call!\\n\");\n    return 0;\n}\n```\n\nNow\
+    \ create a `Makefile` in the same dir, along with the following contents:\n\n\
+    ```makefile\nmod_sign_cmd = scripts/sign-file $(CONFIG_MODULE_SIG_HASH) \\$(MODULE_SIG_KEY_SRCPREFIX)\n\
+    else\nmod_sign_cmd = true\nendif\nexport mod_sign_cmd\nifeq ( $(KBUILD_EXTMOD),)\n\
+    core-y += kernel/certs/mm/fs/ipc/security/crypto/block/hellosys/\nvmlinux-dirs\
+    \ := $(patsubst %/, %, $(filter %/, $(init-y) $(init-m) \\$(core-y) $(core-m)\
+    \ $(drivers-y) $(drivers-m) \\$(net-y) $(net-m) $(libs-y) $(libs-m) $(virt-y)))\n\
+    vmlinux-alldirs := $(sort $(vmlinux-dirs) $(patsubst %/, %, $(filter %/, \\$(init-)\
+    \ $(core-) $(drivers-) $(net-) $(libs-) $(virst-))))\n```\n\nnow, compile and\
+    \ run `Makefile`.\n\n```bash\n$ make\n```\n\n### Add the new system call into\
+    \ the System Call Table\n\nA table named for 32 bit system is `syscall.tbl` and\
+    \ in 64 bit systems `syscall_64.tbl` file. I edit the table by `nano arch/x86/entry/syscalls/syscall_64.tbl`\
+    \ and scroll down till I find the number of the last system call before those\
+    \ starting from 512.\n\nIn my case, that’s `331`. So new system call’s number\
+    \ would be `332`. Now add the following line after the 331st system call.\n\n\
+    ```\n332 64 hellosys sys_hellosys\n```\n\n### Add the new System Call in the System\
+    \ Call Header file\n\nNow edit `include/linux/syscall.h` and add the following\
+    \ line at the end of the file before `#endif` statement.\n\n```c\nasmlinkage long\
+    \ sys_hellosys(void);\n```\n\n### Recompile the kernel\n\n```bash\n$ make –j4\
+    \ modules_install install\n```\n\n### Test the System Call\n\nCreate a C program\
+    \ in your userspace, for example, in home directory, and add the following lines:\n\
+    \n```bash\n$ vi testhellosys.c\n```\n\n```c\n#include <stdio.h>\n#include <linux/kernel.h>\n\
+    #include <sys/syscall.h>\n#include <unistd.h>\nint main() {\n    long int syscallnumber\
+    \ = syscall(329);\n    printf(\"System call sys_hellosys returned %ld\\n\", syscallnumber);\n\
+    \    return 0;\n}\n```\n\nNow compile the source code and run. It will print something\
+    \ like 0, if something wrong then it will print -1. If printed -1 then we need\
+    \ to go back and check, debug and try again. Now if we check the kernel log through\
+    \ `dmesg`, then something like `Hello New System Call` will be printed.\n\n##\
+    \ Chapter 5: Understanding Kernel Module\n\n### What is Kernel Module?\n\nTo add\
+    \ some functionality to the Linux kernel needs a long and tiresome approach. At\
+    \ first, need to add source file in the kernel source tree. Then compile the kernel.\
+    \ If there is no compile error, then build the kernel. If no build error happens,\
+    \ then reboot the machine to get effected result. To add some functionality to\
+    \ the Linux kernel needs a long and tiresome approach. At first, need to add source\
+    \ file in the kernel source tree. Then compile the kernel. If there is no compile\
+    \ error, then build the kernel. If no build error happens, then reboot the machine\
+    \ to get effected result.\n\nLoadable Module is a small piece of software that\
+    \ can be added or removed into the kernel without the need to reboot.\n\n### Advantages\
+    \ of Loadable Kernel Module\n\nLoadable Kernel Modules are not wasters. They save\
+    \ a lot of time. Due to Loadable Module approach Linux kernel is still small and\
+    \ easier to maintain.\n\n### Disadvantages of Loadable Module\n\nTo add some functionality\
+    \ to the Linux kernel needs a long and tiresome approach. At first, need to add\
+    \ source file in the kernel source tree. Then compile the kernel. If there is\
+    \ no compile error, then build the kernel. If no build error happens, then reboot\
+    \ the machine to get effected result\n\n### Security concern of Loadable Module\n\
+    \nSeveral LKM security issue arises. For example, Sangram Gayal explains the Linux\
+    \ privileged process Hijacking Vulnerability. Rainer Winchmann provides analysis\
+    \ on Linux Kernel Rootkit.\n\n### How to minimize these security risks\n\n- Buffer\
+    \ overrun is one of the most common sources of security risks in LKM. Proper use\
+    \ of buffer overrun will minimize this risk\n- Proper input filtering\n- Proper\
+    \ checking of memory initialization and de-initialization\n- Enforcing signed\
+    \ modules: LKMs have full access to a low level and critical kernel space resources,\
+    \ sticking with the signed module option will make the utmost safety\n\n Chapter\
+    \ 6: Before starting to write the Loadable Kernel Module\n\n### Things to learn\n\
+    \nWhat you have learned to write user-space C programming on unix platforms? You\
+    \ tried to work with file read-write, playing with memory through `malloc`. To\
+    \ implement concurrency you worked with `pthread`.\n\nWhile you want to work with\
+    \ Linux kernel, you may need to work with memory things for kernel side like `kmalloc`,\
+    \ do list operations through list libraries and others.\n\n### Resources to learn\
+    \ kernel programming\n\nAlthough the book will help you to start, your main and\
+    \ utmost resource will be the source code at `kernel.org`. Don’t be panic, just\
+    \ take time; do something practical projects which will help you most. Go through\
+    \ the mailing lists, follow those lists, try to understand what’s going on.\n\n\
+    ## Chapter 7: Writing Loadable Kernel Module\n\n### Write a simple Loadable Kernel\
+    \ Module\n\nWriting Loadable Kernel Module (LKM) is pretty simple. Every LKM must\
+    \ have at least two functions:\n\n1. Startup function\n2. End Function\n"
+  raw: '*   Secured : If userspace processes/programs could directly read and write
+    to the kernels address space, system security will be nullified.  Userspace functions
+    have limited access to the resources/hardware of the system due to implementation
+    of system call.
+
+
+    *   Faster performance : System call interface provides a faster performance to
+    the system.
+
+
+    *   Portability : System call interface makes user space application more portable.
+    Due to any change in the kernel side, userspace programs don’t need to change.
+
+
+    *   Easier Implementation : System call interface makes user space application
+    development easier; here they do not need to think about low-level functionality
+    of the system.
+
+
+    Disadvantages of system callTo develop or implement a new system call, it needs
+    to have a unique system call number officially assigned to you. More pain points,
+    all architecture needs to separately register the system call. So, if you want
+    to implement a simple task, then system call is pretty time consuming and the
+    maintenance quite complex.Creating a basic system call for the Linux kernelAt
+    first, switch to the compiled source directory of Linux kernel.$ cd linux-x.x.x/create
+    a directory hellosys and move into it.$ mkdir hellosys$ cd hellosysCreate a new
+    C file in this dir,$ vi hellosys.cAdd following codes here#include <linux/kernel.h>asmlinkage
+    long sys_hellosys(void) {​ printk(“Hello New System Call!\n”);​ return 0;}Now
+    create a Makefile in the same dir, along with the following contents:mod_sign_cmd
+    = scripts/sign-file $(CONFIG_MODULE_SIG_HASH) \$(MODULE_SIG_KEY_SRCPREFIX)elsemod_sign_cmd
+    = trueendifexport mod_sign_cmdifeq ( $(KBUILD_EXTMOD),)core-y    += kernel / certs
+    / mm / fs/ ipc/ security/ crypto/ block/ hellosys/vmlinux-dirs := $(patsubst %/,
+    %, $(filter %/, $(init-y) $(init-m) \$(core-y) $(core-m) $(drivers-y) $(drivers-m)
+    \$(net-y) $(net-m) $(libs-y) $(libs-m) $(virt-y)))vmlinux-alldirs := $(sort $(vmlinux-dirs)
+    $(patsubst %/, %, $(filter %/, \$(init-) $(core-) $(drivers-) $(net-) $(libs-)
+    $(virst-))))now, compile and run Makefile.$ makeAdd the new system call into the
+    System Call TableA table named for 32 bit system is syscall.tbl and in 64 bit
+    systems syscall_64.tbl file.I edit the table by nano arch/x86/entry/syscalls/syscall_64.tbl
+    and scroll down till I find the number of the last system call before those starting
+    from 512.In my case, that’s 331\. So new system call’s number would be 332.Now
+    add the following line after the 331st system call.332 64 hellosys sys_hellosysAdd
+    the new System Call in the System Call Header fileNow edit include/linux/syscall.h
+    and add the following line at the end of the file before #endif statement.asmlinkage
+    long sys_hellosys(void);Recompile the kernel$ make –j4 modules_install installTest
+    the System CallCreate a C program in your userspace, for example, inhome directory,
+    and add the following lines$ vi testhellosys.c#include <stdio.h>#include <linux/kernel.h>#include
+    <sys/syscall.h>#include <unistd.h>int main() {long int syscallnumber = syscall(329);printf(“System
+    call sys_hellosys returned %ld\n”, syscallnumber);return 0;}Now compile the source
+    code and run.It will print something like 0, if something wrong then it will print
+    -1.  If printed -1 then we need to go back and check, debug and try again.Now
+    if we check the kernel log through dmesg, then something like Hello New System
+    Call will be printed.Chapter 5: Understanding Kernel ModuleWhat is Kernel Module?To
+    add some functionality to the Linux kernel needs a long and tiresome approach.
+    At first, need to add source file in the kernel source tree. Then compile the
+    kernel. If there is no compile error, then build the kernel. If no build error
+    happens, then reboot the machine to get effected result.This approach is quite
+    complex and time-consuming. If any system problem occurs, then it becomes hard
+    to debug; because it is really hard to notify in which of the base kernel caused
+    the trouble. Thus kernel development process becomes quite hard to maintain.To
+    solve this issue Loadable Kernel Module (LKM) feature appeared. LKM was first
+    introduced in kernel version 1.2 in 1995.What is Loadable Kernel Module?Loadable
+    Kernel Module is a small piece of software that can be added or removed into the
+    kernel without the need of rebooting system. Loadable Kernel Modules are used
+    to add or modify functionality to the system without performance penalty, time
+    consumption, and system crash penalties.Loadable Kernel Module works on the current
+    process like statically linked kernel functions.Advantages of Loadable Kernel
+    ModulesLoadable Kernel Modules are not time wasters. They save a lot of time.
+    Because to add/modify, recompile and build Loadable Kernel Module, we don’t need
+    to rebuild the kernel.Due to the Loadable Kernel Module approach Linux kernel
+    is still small and easier to maintain.Another advantage of the Loadable Kernel
+    Module is better memory optimization. When the system booted, all parts of the
+    base kernel stay loaded all the time while Loadable Kernel Modules are loaded
+    when they are needed.Disadvantages of Loadable Kernel ModulesAs Loadable Kernel
+    Modules have higher access permissions to the system, they will become a higher
+    security threat if programs used in the wrong way. Although this security threat
+    can be solvable by allowing only signed modules.Security concern of Loadable Kernel
+    ModuleSeveral LKM security issue arises. For example, Sangram Gayal explains the
+    Linux kernel privileged process Hijacking Vulnerability.Rainer Winchmann provides
+    analysis on Linux Kernel Rootkit.How to minimize these security risks:-         
+    Buffer overrun is one of the most common sources of security risks in LKM. Proper
+    use of buffer overrun will minimize this risk.-            Proper input filtering-
+               Proper checking of memory initialization and de-initialization-         
+    Enforcing signed modules : LKMs have full access to a low level and critical kernel
+    space resources, sticking with the signed module option will make the utmost safety.Chapter
+    6:Before starting to write the Loadable Kernel ModuleThings to learnWhat you have
+    learned to write user-space C programming on *nix platforms? You tried to work
+    with file read-write, playing with memory through malloc. To implement concurrency
+    you worked with pthread.While you want to work with Linux kernel, you may need
+    to work with memory things for kernel side like kmalloc, do list operations through
+    list libraries and others.Resources to learn kernel programmingAlthough the book
+    will help you to start, your main and utmost resource will be the source code
+    at kernel.org. Don’t be panic, just take time; do something practical projects
+    which will help you most. Go through the mailing lists, follow those lists, try
+    to understand what’s going on.If you like to work with device driver programming,
+    try to write a simple character device driver. If you are curious about debugging,
+    you may be interested in kdump.   Practical projects will help you a lot.Chapter
+    7:Writing Loadable Kernel ModuleWrite a simple Loadable Kernel ModuleWriting Loadable
+    Kernel Module (LKM) is pretty simple. Every LKM must have at least two functions:
+
+
+    1.  Startup function
+
+
+    2.  End Function'
+  toc: []
+  trans: "\n\n## 系统调用的优点\n\n- **安全性**：如果用户态进程/程序能够直接读写内核地址空间，那么系统的安全性将将化为乌有。由于系统调用的实现，用户态函数对系统资源/硬件的访问受到限制。\n\
+    - **性能更高**：系统调用接口为系统提供了更快的性能。\n- **可移植性**：系统调用接口使得用户空间应用程序更具移植性。由于内核端的任何变化，用户态程序都不需要更改。\n\
+    - **更易实现**：系统调用接口使得用户空间应用程序开发变得容易；在这里，它们不需要考虑系统的底层功能。\n\n## 系统调用的缺点\n\n要开发或实现一个新的系统调用，需要官方分配给你一个唯一的系统调用号。更多的痛点在于，所有的架构都需要单独注册该系统调用。因此，如果你想实现一个简单的任务，系统调用会非常耗时，而且维护起来相当复杂。\n\
+    \n## 为 Linux 内核创建一个基础系统调用\n\n首先，切换到 Linux 内核编译后的源码目录。\n\n```bash\n$ cd linux-x.x.x/\n\
+    ```\n\n创建一个名为 `hellosys` 的目录并进入该目录。\n\n```bash\n$ mkdir hellosys\n$ cd hellosys\n\
+    ```\n\n在此目录下创建一个新的 C 文件，\n\n```bash\n$ vi hellosys.c\n```\n\n在此处添加以下代码：\n\n```c\n\
+    #include <linux/kernel.h>\nasmlinkage long sys_hellosys(void) {\n    printk(\"\
+    Hello New System Call!\\n\");\n    return 0;\n}\n```\n\n现在在同一目录下创建一个 `Makefile`，内容如下：\n\
+    \n```makefile\nmod_sign_cmd = scripts/sign-file $(CONFIG_MODULE_SIG_HASH) \\$(MODULE_SIG_KEY_SRCPREFIX)\n\
+    else\nmod_sign_cmd = true\nendif\nexport mod_sign_cmd\nifeq ( $(KBUILD_EXTMOD),)\n\
+    core-y += kernel/certs/mm/fs/ipc/security/crypto/block/hellosys/\nvmlinux-dirs\
+    \ := $(patsubst %/, %, $(filter %/, $(init-y) $(init-m) \\$(core-y) $(core-m)\
+    \ $(drivers-y) $(drivers-m) \\$(net-y) $(net-m) $(libs-y) $(libs-m) $(virt-y)))\n\
+    vmlinux-alldirs := $(sort $(vmlinux-dirs) $(patsubst %/, %, $(filter %/, \\$(init-)\
+    \ $(core-) $(drivers-) $(net-) $(libs-) $(virst-))))\n```\n\n现在，编译并运行 `Makefile`。\n\
+    \n```bash\n$ make\n```\n\n### 将新系统调用加入系统调用表\n\n在名为 `syscall_table_64.tbl`（注：根据架构可能不同）的表格中添加条目。\n\
+    \n*(注：由于原文文本在此处不完整，后续内容根据您提供的文本逻辑进行翻译)*\n\n"
+- fmt: "\nCreate a directory called “LKM” inside home directory and then create `hellolkm.c`\
+    \ inside the `LKM` directory.\n\n```bash\ncd ~\nmkdir LKM\ncd LKM\n```\n\n```c\n\
+    #include <linux/kernel.h>\n#include <linux/module.h>\n//// end of header include\
+    \ section\n#define __KERNEL__\n#define MODULE\n#define LINUX\n//// end of macro\
+    \ define section\nint init_module(void){\n  printk(KERN_DEBUG “Hello LKM”);\n\
+    \  return 0;\n}\n//// end of init section\nvoid cleanup_module (void){\n  printk(KERN_DEBUG\
+    \ “Goodbye LKM”);\n}\n//// End of cleanup section\nMODULE_LICENSE (“BSD”);\n////\
+    \ End of module licensing section\n```\n\nIn header include section, `kernel.h`\
+    \ included for `printk()` function and `module.h` included to load module into\
+    \ kernel dynamically. In the macro add section, macro `__KERNEL__` added to hide\
+    \ kernel source programs from user space programs.\n\nI have used function `init_module()`,\
+    \ which works as an initialization function. It prints Hello LKM in the console\
+    \ and `KERN_DEBUG` macro used. To understand `KERN_DEBUG` option, please check\
+    \ the debugging chapter. Then I have used function `cleanup_module()`, which works\
+    \ as a cleanup or end function of a module. At the end, `MODULE_LICENSE` macro\
+    \ used to provide licensing information of this module.\n\n### Makefile\n\nNow\
+    \ I will create a makefile to build this module.\n\n```makefile\nobj-m = helloLKM.o\n\
+    KERNELDIR := /lib/module\nWORKINGDIR := $(shell pwd)\nall: make -c $(KERNELDIR)\
+    \ M=$(WORKINGDIR)\nclean:\nkernel directory is the directory of the kernel source.\
+    \ I have used `shell uname –r` which search recursively and gets the name of current\
+    \ kernel. The `make -c $(KERNELDIR) “make”` will change this directory while building\
+    \ source code and move back to this directory while build finished. `M = $(WORKINGDIR)`\
+    \ uses the path of the working directory where the module is located. Here, `WORKINGDIR\
+    \ := $(shell pwd)` which means absolute path of current directory. And, finally,\
+    \ the `clean` tag which will remove all the generated files.\n\nNow I will compile,\
+    \ build and run the module.\n\nAt first, compile:\n```bash\nmake\n```\nThis command\
+    \ will create module `helloLKM.ko` in the working directory. To view information\
+    \ about `helloLKM.ko`,:\n\n```bash\nmodinfo helloLKM.ko\n```\n\nNow, I can load\
+    \ this module, but to do this, I need to change user priority level to superuser.\
+    \ Then I can use `insmod` or `modprobe` command to load module.\n\n```bash\nsu\n\
+    insmod helloLKM.ko\nsu\nmodprobe helloLKM.ko\n```\n\nTo check whether the module\
+    \ loaded successfully, I can check this log.\n\n```bash\ndmesg | tail -1\nHello\
+    \ LKM\n```\n\nAnd you can unload the module:\n\n```bash\nrmmod helloLKM\nmodprobe\
+    \ –r helloLKM\n```\n\nTo check whether unloaded perfectly, check using `dmesg`:\n\
+    \n```bash\ndmesg | tail -1\nGoodbye LKM\n```\n\n### Initialization and Clean Macro\n\
+    \nBefore kernel version 2.4, it was mandatory to use `init_module()` for module\
+    \ initialization and `cleanup_module()` for cleanup purpose. But from kernel version\
+    \ 2.4, it is allowed to use any name but we need to use extra macro so that system\
+    \ can understand which one for initialization and which one for cleanup.\n\n```c\n\
+    static int entrance()\nstatic int out()\nmodule __init (entrance);\nmodule __exit(out);\n\
+    ```\n\nYou can use `__init()` and `__exit()` macro before function name.\n\n```c\n\
+    #include <linux/kernel.h>\n#include <linux/module.h>\n//// end of header include\
+    \ section\n#define __KERNEL__\n#define MODULE\n#define LINUX\n//// end of macro\
+    \ define section\nstatic int entrance(void){\n  printk(KERN_DEBUG “Hello LKM”);\n\
+    \  return 0;\n}\n//// end of init section\nstatic int out(void){\n  printk(KERN_DEBUG\
+    \ “Goodbye LKM”);\n}\n//// End of cleanup section\nmodule __init (entrance);\n\
+    module __exit(out);\nMODULE_LICENSE (“BSD”);\n//// End of module licensing section\n\
+    ```\n\n### Other Macros\n\nYou can also use other macros like `MODULE_DESCRIPTION`,\
+    \ `MODULE_AUTHOR`, these are pretty helpful to understand module purpose and who\
+    \ written the module.\n\n```c\nMODULE_AUTHOR (“Your Name”);\nMODULE_DESCRIPTION\
+    \ (“This is test module”);\n```\n\nFor example:\n\n```c\n#include <linux/kernel.h>\n\
+    #include <linux/module.h>\n//// end of header include section\n#define __KERNEL__\n\
+    #define MODULE\n#define LINUX\n//// end of macro define section\nstatic int __init\
+    \ entrance (void){\n  printk(KERN_DEBUG “Hello LKM\\n”);\n  return 0;\n}\nstatic\
+    \ void __exit out (void){\n  printk(KERN_DEBUG “Goodbye LKM\\n”);\n}\nmodule __init\
+    \ (entrance);\nmodule __exit(out);\nMODULE_AUTHOR (“Md Mahbubur Rahman”);\nMODULE_LICENSE\
+    \ (“BSD”);\n//// End of module licensing section\n```\n\nThe `__init` macro defines\
+    \ that the cited function not further needed after initialization. Kernel frees\
+    \ it from memory after initialization and `__exit` macro used to remove.\n\n###\
+    \ Command-line arguments in LKM\n\nTo take command line arguments, LKMs need to\
+    \ use `MODULE_PARAM()` macro and variables should be called global. The `MODULE_PARAM()`\
+    \ macro takes 2 arguments: a variable name and variable type. There is another\
+    \ relevant macro `MODULE_PARAM_DESC()` which is used for documenting module arguments.\
+    \ It takes two parameters: variable name and variable description.\n\n**Supported\
+    \ data types in command-line arguments:**\n\n* Bool\n* Byte (single)\n* Character\
+    \ pointer\n* Array\n* Short int\n* Unsigned short int\n* Int\n* Unsigned int\n\
+    * Long int\n* Unsigned long int\n"
+  raw: 'Create a directory called “LKM” inside home directory and then create hellolkm.c
+    inside the LKM directory.$ cd ~$ mkdir LKM$ cd LKM#include <linux/kernel.h>#include
+    <linux/module.h>//// end of header include section#define __KERNEL__#define MODULE#define
+    LINUX//// end of macro define sectionint init_module(void){​ printk(KERN_DEBUG
+    “Hello LKM”);​ return 0;}//// end of init sectionvoid cleanup_module (void){​
+    printk(KERN_DEBUG “Goodbye LKM”);}//// End of cleanup sectionMODULE_LICENSE (“BSD”);////
+    End of module licensing sectionIn header include section, kernel.h included for
+    printk() function and moulde.h included to load module into kernel dynamically.In
+    the macro add section, macro __KERNEL__ added to hide kernel source programs from
+    user space programs.I have used function init_module(), which works as an initialization
+    function. It prints Hello LKM in the console and KERN_DEBUG macro used. To understand
+    KERN_DEBUG option, please check the debugging chapter.Then I have used function
+    cleanup_module(), which works as a cleanup or end function of a module.At the
+    end, MODULE_LICENSE macro used to provide licensing information of this module.MakefileNow
+    I will create a makefile to build this module.$ vi Makefileobj-m = helloLKM.oKERNELDIR
+    := */lib/moduleWORKNIGDIR := $(shell pwd)all:make –c $lclean:here kernel directory
+    is the directory of the kernel source.  I have used shell uname –r which search
+    recursively and gets the name of current kernel.The make –c $(KERNELDIR) “make”
+    will change this directory while building source code and move back to this directory
+    while build finished.M = $(WORKINGDIR) uses the path of the working directory
+    where the module is located. Here, WORKINGDIR := $ (shell pwd) which means absolute
+    path of current directory.And, finally, the clean tag which will remove all the
+    generated files.Now I will compile, build and run the module.At first, compile$
+    makeThis command will create module helloLKM.ko in the working directory.To view
+    information about helloLKM.ko,$ modinfo helloLKM.koNow, I can this load this module,
+    but to do this, I need to change user priority level to superuser. Then I can
+    use insmod or modprobe command to load module.$ su insmod helloLKM.ko$ su modprobe
+    helloLKM.koTo check whether the module loaded successfully, I can check this log.$dmesg
+    | tail -1Hello LKMAnd you can unload the module$ rmmod helloLKMor$ modprobe –r
+    helloLKM To check whether unloaded perfectly, check using dmesg$ dmesg | tail
+    -1Goodbye LKMInitialization and Clean MacroBefore kernel version 2.4, it was mandatory
+    to use init_module() for module initialization and cleanup_module() for cleanup
+    purpose.But from kernel version 2.4, it is allowed to use any name but we need
+    to use extra macro so that system can understand which one for initialization
+    and which one for cleanup.static int entrance()static int out()module __init (entrance);module
+    __exit(out);You can use __init() and __exit() macro before function name.#include
+    <linux/kernel.h>#include <linux/module.h>//// end of header include section#define
+    __KERNEL__#define MODULE#define LINUX//// end of macro define sectionStatic int
+    entrance(void){​ printk(KERN_DEBUG “Hello LKM”);​ return 0;}//// end of init sectionstatic
+    int out(void){​ printk(KERN_DEBUG “Goodbye LKM”);}//// End of cleanup sectionmodule
+    __init (entrance);module __exit(out);MODULE_LICENSE (“BSD”);//// End of module
+    licensing sectionOther MacrosYou can also use other macros like MODULE_DESCRIPTION,
+    MODULE_AUTHOR, these are pretty helpful to understand module purpose and who written
+    the moduleMODULE_AUTHOR (“Your Name”);MODULE_DESCRIPTION (“This is test module”);For
+    example,#include <linux/kernel.h>#include <linux/module.h>//// end of header include
+    section#define __KERNEL__#define MODULE#define LINUX//// end of macro define sectionstatic
+    int __init entrance (void){​ printk(KERN_DEBUG “Hello LKM\n”);​ return 0;}static
+    void __exit out (void){​ printk(KERN_DEBUG “Goodbye LKM\n”);}module __init (entrance);module
+    __exit(out);MODULE_AUTHOR (“Md Mahbubur Rahman”);MODULE_LICENSE (“BSD”);//// End
+    of module licensing sectionThe __init macro defines that the cited function not
+    further needed after initialization. Kernel frees it from memory after initialization
+    and __exit macro used to remove.Command-line arguments in LKMTo take command line
+    arguments, LKMs need to use MODULE_PARAM () macro and variables should be called
+    global.The MODULE_PARAM() macro takes 2 arguments: a variable name and variable
+    type.There is another relevant macro MODULE_PARAM_DESC() which is used for documenting
+    module arguments. It takes two parameters: variable name and variable description.Supported
+    data types in command-line arguments
+
+
+    *   Bool
+
+
+    *   Byte (single)
+
+
+    *   Character pointer
+
+
+    *   Array
+
+
+    *   Short int
+
+
+    *   Unsigned short int
+
+
+    *   Int
+
+
+    *   Unsigned int
+
+
+    *   Long int
+
+
+    *   Unsigned long int'
+  toc: []
+  trans: "\n在主目录下创建一个名为“LKM”的目录，然后在 `LKM` 目录内创建 `hellolkm.c`。\n\n```bash\ncd ~\nmkdir\
+    \ LKM\ncd LKM\n```\n\n```c\n#include <linux/kernel.h>\n#include <linux/module.h>\n\
+    //// end of header include section\n#define __KERNEL__\n#define MODULE\n#define\
+    \ LINUX\n//// end of macro define section\nint init_module(void){\n  printk(KERN_DEBUG\
+    \ “Hello LKM”);\n  return 0;\n}\n//// end of init section\nvoid cleanup_module\
+    \ (void){\n  printk(KERN_DEBUG “Goodbye LKM”);\n}\n//// End of cleanup section\n\
+    MODULE_LICENSE (“BSD”);\n//// End of module licensing section\n```\n\n在头文件包含部分，包含了\
+    \ `kernel.h` 用于 `printk()` 函数，包含了 `module.h` 用于将模块动态加载到内核中。在宏定义部分，添加了宏 `__KERNEL__`\
+    \ 以向用户空间程序隐藏内核源源程序。\n\n我使用了函数 `init_module()`，它作为初始化函数工作。它在控制台中打印 Hello LKM，并使用了\
+    \ `KERN_DEBUG` 宏。要理解 `KERN_DEBUG` 选项，请查看调试章节。然后我使用了函数 `cleanup_module()`，它作为模块的清理或结束函数工作。最后，使用\
+    \ `MODULE_LICENSE` 宏来提供此模块的许可信息。\n\n### Makefile\n\n现在我将创建一个 makefile 来构建此模块。\n\
+    \n```makefile\nobj-m = helloLKM.o\nKERNELDIR := /lib/module\nWORKINGDIR := $(shell\
+    \ pwd)\nall: make -c $(KERNELDIR) M=$(WORKINGDIR)\nclean:\n```\nkernel 目录是内核源码所在的目录。我使用了\
+    \ `shell uname –r`，它会递归搜索并获取当前内核的。`make -c $(KERNELDIR) “make”` 会构建源码时切换到该目录，并在完成后返回此目录。`M\
+    \ = $(WORKINGDIR)` 使用模块所在的工作目录路径。这里 `WORKINGDIR := $(shell pwd)` 表示当前目录的绝对路径。最后，`clean`\
+    \ 标签将移除所有生成的文件。\n\n现在我将编译、构建并运行该模块。\n\n首先，编译：\n```bash\nmake\n```\n此命令将在工作目录下创建模块\
+    \ `helloLKM.ko`。要查看 `helloLKM.ko` 的信息：\n\n```bash\nmodinfo helloLKM.ko\n```\n\n\
+    现在，我可以加载此模块，但要做到这一点，我需要将用户优先级更改为超级用户。然后我可以使用 `insmod` 或 `modprobe` 命令加载模块。\n\n\
+    ```bash\nsu\ninsmod helloLKM.ko\nsu\nmodprobe helloLKM.ko\n```\n\n要检查模块是否加载成功，我可以检查此日志。\n\
+    \n```bash\ndmesg | tail-1\nHello LKM\n```\n\n你可以卸载该模块：\n\n```bash\nrmmod helloLKM\n\
+    modprobe –r helloLKM\n```\n\n要检查是否卸载完美，请使用 `dmesg` 检查：\n\n```bash\ndmesg | tail-1\n\
+    Goodbye LKM\n```\n\n### 初始化与清理宏\n\n在内核 2.4 版本之前，强制使用 `init_module()` 进行模块初始化并使用\
+    \ `cleanup_module()` 进行清理。但从内核 2.4 版本开始，允许使用任何名称，我们需要使用额外的宏，以便系统理解哪一个用于初始化，哪一个用于清理。\n\
+    \n```c\nstatic int entrance()\nstatic int out()\nmodule __init (entrance);\nmodule\
+    \ __exit(out);\n```\n\n你可以在函数名之前使用 `__init()` 和 `__exit()` 宏。\n\n```c\n#include\
+    \ <linux/kernel.h>\n#include <linux/module.h>\n//// end of header include section\n\
+    #define __KERNEL__\n#define MODULE\n#define LINUX\n//// end of macro define section\n\
+    static int entrance(void){\n  printk(KERN_DEBUG “Hello LKM”);\n  return 0;\n}\n\
+    //// end of init section\nstatic int out(void){\n  printk(KERN_DEBUG “Goodbye\
+    \ LKM”);\n}\n//// End of cleanup section\nmodule __init (entrance);\nmodule __exit(out);\n\
+    MODULE_LICENSE (“BSD”);\n//// End of module licensing section\n```\n\n### 其他宏\n\
+    \n你也可以使用其他宏如 `MODULE_DESCRIPTION`、`MODULE_AUTHOR`，这些对于理解模块用途以及编写者非常有帮助。\n\n```c\n\
+    MODULE_AUTHOR (“Your Name”);\nMODULE_DESCRIPTION (“This is test module”);\n```\n\
+    \n例如：\n\n```c\n#include <linux/kernel.h>\n#include <linux/module.h>\n//// end\
+    \ of header include section\n#define __KERNEL__\n#define MODULE\n#define LINUX\n\
+    //// end of macro define section\nstatic int __init entrance (void){\n  printk(KERN_DEBUG\
+    \ “Hello LKM\\n”);\n  return 0;\n}\nstatic void __exit out (void){\n  printk(KERN_DEBUG\
+    \ “Goodbye LKM\\n”);\n}\nmodule __init (entrance);\nmodule __exit(out);\nMODULE_AUTHOR\
+    \ (“Md Mahbubur Rahman”);\nMODULE_LICENSE (“BSD”);\n//// End of module licensing\
+    \ section\n```\n\n`__init` 宏定义引用的函数在初始化后不再需要。内核在初始化后从内存中释放它，`__exit` 宏用于移除。\n\n\
+    ### LKM 中的命令行参数\n\n为了获取命令行参数，LKM 需要使用 `MODULE_PARAM()` 宏，且变量应该被定义为全局。`MODULE_PARAM()`\
+    \ 宏接受两个参数：变量名和变量类型。另一个相关的宏 `MODULE_PARAM_DESC()` 用于记录模块参数说明。它接受两个参数：变量名和变量描述。\n\
+    \n**命令行参数中支持的数据类型：**\n\n* Bool\n* Byte（单字节）\n* 字符指针\n* 数组\n* Short int\n* Unsigned\
+    \ short int\n* Int\n* Unsigned int\n* Long int\n* Unsigned long int\n"
+- fmt: "\n# Example of command-line arguments in LKMs with Integer\n\n```c\n#include\
+    \ <linux/kernel.h>\n#include <linux/init.h>\n#include <linux/stat.h>\n#include\
+    \ <linux/module.h>\n#include <linux/moduleparam.h>\n#define __KERNEL__\n#define\
+    \ LINUX\n#define MODULE\n//// end of macro define section\nstatic int input =\
+    \ 5; // variable should have initial default value\nMODULE_PARAM (input, int);\n\
+    MODULE_PARM_DESC(input, \"An integer\");\nstatic init __init entrance (void){\n\
+    \tint square_val = input * input;\n\tprintk(KERN_DEBUG “Square value of input\
+    \ = %i\\n”, square_val);\n}\nstatic void __exit out (void){\n\tprintk(KERN_DEBUG\
+    \ “Goodbye LKM\\n”);\n}\nmodule __init (entrance);\nmodule __exit(out);\nMODULE_AUTHOR(\"\
+    Md Mahbubur Rahman\");\nMODULE_LICENSE (“BSD”);\n//// End of module licensing\
+    \ section \n```\n\n# Example of command-line arguments in LKMs with Short Integer,\
+    \ Integer and Long Integer\n\n```c\n#include <linux/kernel.h>\n#include <linux/init.h>\n\
+    #include <linux/stat.h>\n#include <linux/module.h>\n#include <linux/moduleparam.h>\n\
+    #define __KERNEL__\n#define LINUX\n#define MODULE\n//// end of macro define section\n\
+    static short int shortInt = 1;\nstatic int vInt = 111;\nstatic long int longInt\
+    \ = 5555;\n//// end of declaration of command line argument\nMODULE_PARAM(shortInt,\
+    \ short);\nMODULE_PARM_DESC(shortInt, \"A short integer\");\nMODULE_PARAM(vInt,\
+    \ int);\nMODULE_PARM_DESC(vInt, \"An integer\");\nMODULE_PARAM(longInt, long);\n\
+    MODULE_PARM_DESC(longInt, \"A long integer\");\nstatic int __init entrance(void){\n\
+    \tint i;\n\tprintk(KERN_INFO \"Hello LKM =============\\n\");\n\tprintk(KERN_INFO\
+    \ \"myshort is a short integer: %hd\\n\", shortInt);\n\tprintk(KERN_INFO \"vInt\
+    \ is an integer: %d\\n\", vInt);\n\tprintk(KERN_INFO \"longInt is a long integer:\
+    \ %ld\\n\", longInt);\n\treturn 0;\n}\n//// end of init section\nstatic void __exit\
+    \ out(void){\n\tprintk(KERN_INFO \"Goodbye LKM\\n\");\n}\n//// End of cleanup\
+    \ section\nmodule __init (entrance);\nmodule __exit(out);\nMODULE_AUTHOR(\"Md\
+    \ Mahbubur Rahman\");\nMODULE_LICENSE (“BSD”);\n//// End of module licensing section\
+    \ \n```\n\n# Example of command-line arguments in LKMs with String\n\n```c\n#include\
+    \ <linux/kernel.h>\n#include <linux/init.h>\n#include <linux/stat.h>\n#include\
+    \ <linux/module.h>\n#include <linux/moduleparam.h>\n#define __KERNEL__\n#define\
+    \ LINUX\n#define MODULE\n//// end of macro define section\nstatic char *stringVar\
+    \ = \"hello\";\n//// end of declaration of command line argument\nMODULE_PARAM(stringVar,\
+    \ charp);\nMODULE_PARM_DESC(stringVar, \"A character string\");\n//// end of adding\
+    \ module_param along with type to every variable\nstatic int __init entrance(void){\n\
+    \tint i;\n\tprintk(KERN_INFO \"mystring is a string: %s\\n\", stringVar);\n\t\
+    return 0;\n}\n//// end of init section\nstatic void __exit out(void){\n\tprintk(KERN_INFO\
+    \ \"Goodbye LKM\\n\");\n}\n//// End of cleanup section\nmodule __init (entrance);\n\
+    module __exit(out);\nMODULE_AUTHOR(\"Md Mahbubur Rahman\");\nMODULE_LICENSE (“BSD”);\n\
+    //// End of module licensing section \n```\n\n# Example of command-line arguments\
+    \ in LKMs with Array\n\n```c\n#include <linux/kernel.h>\n#include <linux/init.h>\n\
+    #include <linux/stat.h>\n#include <linux/module.h>\n#include <linux/moduleparam.h>\n\
+    #define __KERNEL__\n#define LINUX\n#define MODULE\n//// end of macro define section\n\
+    static int intArray[3] = { 1, 2, 3 };\nstatic int arrayArgc = 0;\n//// end of\
+    \ declaration of command line argument\nMODULE_PARAM_ARRAY(intArray, int, arrayArgc,\
+    \ 1111);\nMODULE_PARM_DESC(intArray, \"An array of integers\");\n//// end of adding\
+    \ module_param along with type to every variable\nstatic int __init entrance(void){\n\
+    \tint i;\n\tfor (i = 0; i < (sizeof intArray / sizeof (int)); i++)\n\t{\n\t\t\
+    printk(KERN_INFO \" intArray[%d] = %d\\n\", i, intArray[i]);\n\t}\n\tprintk(KERN_INFO\
+    \ \"got %d arguments for intArray.\\n\", arrayArgc);\n\treturn 0;\n}\n//// end\
+    \ of init section\nstatic void __exit out(void){\n\tprintk(KERN_INFO \"Goodbye\
+    \ LKM\\n\");\n}\n//// End of cleanup section\nmodule __init (entrance);\nmodule\
+    \ __exit(out);\nMODULE_AUTHOR(\"Md Mahbubur Rahman\");\nMODULE_LICENSE (“BSD”);\n\
+    //// End of module licensing section \n```\n\n# Loading LKMs while the system\
+    \ starts\n\nSeveral times we need that LKMs should be started while the system\
+    \ starts, means at boot time. To load modules at boot time file `/etc/modules`\
+    \ are being used; it holds kernel module names that are needed to start when the\
+    \ system starts.\n\nBefore editing this file we will create a directory inside\
+    \ kernels driver directory, then copy that module here, and then add module name\
+    \ in `/etc/modules` file.\n\n# Module spanning more than one file\n\nThere may\
+    \ be some scenarios when we may need to break the source code of our module into\
+    \ several parts, files.\n\n`modulestart.c`\n\n```c\n#include <linux/kernel.h>\n\
+    #include <linux/init.h>\n#include <linux/stat.h>\n#include <linux/module.h>\n\
+    #include <linux/moduleparam.h>\n#define __KERNEL__\n#define LINUX\n#define MODULE\n\
+    //// end of macro define section\nstatic int input = 5; // variable should have\
+    \ initial default value\nMODULE_PARAM (input, int);\nMODULE_PARM_DESC(input, \"\
+    An integer\");\nstatic init __init entrance (void){\n\tint square_val = input\
+    \ * input;\n\tprintk(KERN_DEBUG “Square value of input = %i\\n”, square_val);\n\
+    }\nstatic void __exit out (void){\n\tprintk(KERN_DEBUG “Goodbye LKM\\n”);\n}\n\
+    module __init (entrance);\nmodule __exit(out);\nMODULE_AUTHOR(\"Md Mahbubur Rahman\"\
+    );\nMODULE_LICENSE (“BSD”);\n//// End of module licensing section \n```\n\n`modulestop.c`\n\
+    \n```c\n#include <linux/kernel.h>\n#include <linux/init.h>\n#include <linux/stat.h>\n\
+    #include <linux/module.h>\n#include <linux/moduleparam.h>\n#define __KERNEL__\n\
+    #define LINUX\n#define MODULE\n//// end of macro define section\nstatic short\
+    \ int shortInt = 1;\nstatic int vInt = 111;\nstatic long int longInt = 5555;\n\
+    //// end of declaration of command line argument\nMODULE_PARAM(shortInt, short);\n\
+    MODULE_PARM_DESC(shortInt, \"A short integer\");\nMODULE_PARAM(vInt, int);\nMODULE_PARM_DESC(vInt,\
+    \ \"An integer\");\nMODULE_PARAM(longInt, long);\nMODULE_PARM_DESC(longInt, \"\
+    A long integer\");\nstatic int __init entrance(void){\n\tint i;\n\tprintk(KERN_INFO\
+    \ \"Hello LKM =============\\n\");\n\tprintk(KERN_INFO \"myshort is a short integer:\
+    \ %hd\\n\", shortInt);\n\tprintk(KERN_INFO \"vInt is an integer: %d\\n\", vInt);\n\
+    \tprintk(KERN_INFO \"longInt is a long integer: %ld\\n\", longInt);\n\treturn\
+    \ 0;\n}\n//// end of init section\nstatic void __exit out(void){\n\tprintk(KERN_INFO\
+    \ \"Goodbye LKM\\n\");\n}\n//// End of cleanup section\nmodule __init (entrance);\n\
+    module __exit(out);\nMODULE_AUTHOR(\"Md Mahbubur Rahman\");\nMODULE_LICENSE (“BSD”);\n\
+    //// End of module licensing section \n```\n\n# Chapter 8: Kernel Debugging\n\n\
+    ## Oops?\nIn our conversation, when we utter “Oops”? When something bad happened,\
+    \ right?Kernel issues an Oops while something bad happened. Oops, the process\
+    \ involves several steps:\n\n*   Step 1: Print error message\n*   Step 2: Dumps\
+    \ contents of register\n*   Step 3: Outputs a backtrace\n\nNote: What is Backtrace?\n\
+    You can say a backtrace is a list of the function call, especially those are active\
+    \ currently in a thread. The common or usual way of inspecting a backtrace of\
+    \ a program is to use outside or external debuggers. But in many cases, it is\
+    \ useful to obtain backtrace programmatically from within a program.While an Oops\
+    \ occurs, the kernel tries to resolve the issue and try to resume control of the\
+    \ system. But the kernel is not always lucky to resume control of the system.\
+    \ In several aspects/scenarios kernel cannot control the system for example, when\
+    \ Oops occurred in the interrupt context or in the idle task or init task. In\
+    \ such cases kernel panics, instantly halts the system. If Oops occurred in another\
+    \ context, another process, then kernel kills the process and tries to continue\
+    \ executing..\n\n## Debugging the kernels issues/\nDebugging kernel space issues\
+    \ are quite harder, a lot harder compared to debugging user space applications\
+    \ and libraries. Because on the kernel side, it's quite time-consuming to reproduce\
+    \ the bug or understand the wrong flow of the code or even risky. A minimal mistake\
+    \ can shut down the whole system. To debug kernel side issues, you need a better\
+    \ understanding of the operating system and kernel.If you can duplicate or reproduce\
+    \ the issue or bug, then it becomes pretty easier to solve the problem. Otherwise,\
+    \ you have to analyze the source code and need to find the flow of the source\
+    \ code.The bug happens inside the kernel due to many reasons. Common traits are,\
+    \ managing hardware in the wrong manner, incorrect implementation of source code,\
+    \ for example, buffer overrun, etc.\n\nSimilar kind of function names `printk()`The\
+    \ `printk()` function has been defined at `linux/kernel.h` library.\n\n*   The\
+    \ `printk()` function is quite robust – because it is callable from anywhere.\n\
+    *   Also, it can be called at any time; even it can be called simultaneously on\
+    \ multiple processors where no need the caller to hold a lock.\n"
+  raw: 'Example of command-line arguments in LKMs with Integer#include <linux/kernel.h>#include
+    <linux/init.h>#include <linux/stat.h>#include <linux/module.h>#include <linux/moduleparam.h>#define
+    __KERNEL__#define LINUX#define MODULE//// end of macro define sectionstatic int
+    input = 5; // variable should have initial default valueMODULE_PARAM (input, int);MODULE_PARM_DESC(input,
+    "An integer");static init __init entrance (void){​ int square_val = input * input;​
+    printk(KERN_DEBUG “Square value of input = %i\n”, square_val);}static void __exit
+    out (void){​ printk(KERN_DEBUG “Goodbye LKM\n”);}module __init (entrance);module
+    __exit(out);MODULE_AUTHOR("Md Mahbubur Rahman");MODULE_LICENSE (“BSD”);//// End
+    of module licensing sectionExample of command-line arguments in LKMs with Short
+    Integer, Integer and Long Integer#include <linux/kernel.h>#include <linux/init.h>#include
+    <linux/stat.h>#include <linux/module.h>#include <linux/moduleparam.h>#define __KERNEL__#define
+    LINUX#define MODULE//// end of macro define sectionstatic short int shortInt =
+    1;static int vInt = 111;static long int longInt = 5555;//// end of declaration
+    of command line argumentMODULE_PARAM(shortInt, short);MODULE_PARM_DESC(shortInt,
+    "A short integer");MODULE_PARAM(vInt, int);MODULE_PARM_DESC(vInt, "An integer");MODULE_PARAM(longInt,
+    long);MODULE_PARM_DESC(longInt, "A long integer");static int __init entrance(void){​
+    int i;​ printk(KERN_INFO "Hello LKM =============\n");​ printk(KERN_INFO "myshort
+    is a short integer: %hd\n", shortInt);​ printk(KERN_INFO "vInt is an integer:
+    %d\n", vInt);​ printk(KERN_INFO "longInt is a long integer: %ld\n", longInt);​
+    return 0;}//// end of init sectionstatic void __exit out(void){​ printk(KERN_INFO
+    "Goodbye LKM\n");}//// End of cleanup sectionmodule __init (entrance);module __exit(out);MODULE_AUTHOR("Md
+    Mahbubur Rahman");MODULE_LICENSE (“BSD”);//// End of module licensing sectionExample
+    of command-line arguments in LKMs with String#include <linux/kernel.h>#include
+    <linux/init.h>#include <linux/stat.h>#include <linux/module.h>#include <linux/moduleparam.h>#define
+    __KERNEL__#define LINUX#define MODULE//// end of macro define sectionstatic char
+    *stringVar = "hello";//// end of declaration of command line argumentMODULE_PARAM(stringVar,
+    charp);MODULE_PARM_DESC(stringVar, "A character string");//// end of adding module_param
+    along with type to every variabblestatic int __init entrance(void){​ int i;​ printk(KERN_INFO
+    "mystring is a string: %s\n", stringVar);​ return 0;}//// end of init sectionstatic
+    void __exit out(void){​ printk(KERN_INFO "Goodbye LKM\n");}//// End of cleanup
+    sectionmodule __init (entrance);module __exit(out);MODULE_AUTHOR("Md Mahbubur
+    Rahman");MODULE_LICENSE (“BSD”);//// End of module licensing sectionExample of
+    command-line arguments in LKMs with Array#include <linux/kernel.h>#include <linux/init.h>#include
+    <linux/stat.h>#include <linux/module.h>#include <linux/moduleparam.h>#define __KERNEL__#define
+    LINUX#define MODULE//// end of macro define sectionstatic int intArray[3] = {
+    1, 2, 3 };static int arrayArgc = 0;//// end of declaration of command line argumentMODULE_PARAM_ARRAY(intArray,
+    int, arrayArgc, 1111);MODULE_PARM_DESC(intArray, "An array of integers");////
+    end of adding module_param along with type to every variabblestatic int __init
+    entrance(void){​ int i;​ for (i = 0; i < (sizeof intArray / sizeof (int)); i++)​
+    {​ printk(KERN_INFO " intArray[%d] = %d\n", i, intArray[i]);​ }​ printk(KERN_INFO
+    "got %d arguments for intArray.\n", arrayArgc);​ return 0;}//// end of init sectionstatic
+    void __exit out(void){​ printk(KERN_INFO "Goodbye LKM\n");}//// End of cleanup
+    sectionmodule __init (entrance);module __exit(out);MODULE_AUTHOR("Md Mahbubur
+    Rahman");MODULE_LICENSE (“BSD”);//// End of module licensing sectionLoading LKMs
+    while the system startsSeveral times we need that LKMs should be started while
+    the system starts, means at boot time. To load modules at boot time file /etc/modules
+    are being used; it holds kernel module names that are needed to start when the
+    system starts.Before editing this file we will create a directory inside kernels
+    driver directory, then copy that module here, and then add module name in /etc/modules
+    fileModule spanning more than one fileThere may be some scenarios when we may
+    need to break the source code of our module into several parts, files.modulestart.c#include
+    <linux/kernel.h>#include <linux/init.h>#include <linux/stat.h>#include <linux/module.h>#include
+    <linux/moduleparam.h>#define __KERNEL__#define LINUX#define MODULE//// end of
+    macro define sectionstatic int input = 5; // variable should have initial default
+    valueMODULE_PARAM (input, int);MODULE_PARM_DESC(input, "An integer");void module_start
+    (void){​ int square_val = input * input;​ printk(KERN_DEBUG “Square value of input
+    = %i\n”, square_val);}MODULE_AUTHOR("Md Mahbubur Rahman");MODULE_LICENSE (“BSD”);////
+    End of module licensing sectionmodulestop.c#include <linux/kernel.h>#include <linux/init.h>#include
+    <linux/stat.h>#include <linux/module.h>#include <linux/moduleparam.h>#define __KERNEL__#define
+    LINUX#define MODULE//// end of macro define sectionvoid module_stop (void){​ printk(KERN_DEBUG
+    “Goodbye LKM\n”);}MODULE_AUTHOR("Md Mahbubur Rahman");MODULE_LICENSE (“BSD”);////
+    End of module licensing sectionMakefileobj−m += hello−1.oobj−m += hello−2.oobj−m
+    += modulestartstop.ostartstop−objs := modulestart.o modulestop.oall:make −C /lib/modules/$(shell
+    uname −r)/build M=$(PWD) modulesclean:make −C /lib/modules/$(shell uname −r)/build
+    M=$(PWD) cleanChapter 8:Kernel DebuggingOops?In our conversation, when we utter
+    “Oops”? When something bad happened, right?Kernel issues an Oops while something
+    bad happened. Oops, the process involves several steps:
+
+
+    *   Step 1: Print error message
+
+
+    *   Step 2: Dumps contents of the register
+
+
+    *   Step 3: Outputs a backtrace
+
+
+    Note: What is Backtrace?You can say a backtrace is a list of the function call,
+    especially those are active currently in a thread. The common or usual way of
+    inspecting a backtrace of a program is to use outside or external debuggers. But
+    in many cases, it is useful to obtain a backtrace programmatically from within
+    a program.While an Oops occurs, the kernel tries to resolve the issue and try
+    to resume control of the system. But the kernel is not always lucky to resume
+    control of the system. In several aspects/scenarios kernel cannot control the
+    system for example, when Oops occurred in the interrupt context or in the idle
+    task or init task. In such cases kernel panics, instantly halts the system. If
+    Oops occurred in another context, another process, then kernel kills the process
+    and tries to continue executing..Debugging the kernels issues/bugsDebugging kernel
+    space issues are quite harder, a lot harder compared to debugging user space applications
+    and libraries. Because on the kernel side, it''s quite time-consuming to reproduce
+    the bug or understand the wrong flow of the code or even risky. A minimal mistake
+    can shut down the whole system. To debug kernel side issues, you need a better
+    understanding of the operating system and kernel.If you can duplicate or reproduce
+    the issue or bug, then it becomes pretty easier to solve the problem. Otherwise,
+    you have to analyze the source code and need to find the flow of the source code.The
+    bug happens inside the kernel due to many reasons. Common traits are, managing
+    hardware in the wrong manner, incorrect implementation of source code, for example,
+    buffer overrun, etc.Printing for debuggingWhile we debug user space programs we
+    use print() or similar method or function. In kernel side, here have a similar
+    kind of function names printk()The printk() function has been defined at linux/kernel.h
+    library.
+
+
+    *   The printk() function is quite robust – because it is callable from anywhere.
+
+
+    *   Also, it can be called at any time; even it can be called simultaneously on
+    multiple processors where no need the caller to hold a lock.'
+  toc: []
+  trans: "\n\n# 使用整数的 LKM 命令行参数示例\n\n```c\n#include <linux/kernel.h>\n#include <linux/init.h>\n\
+    #include <linux/stat.h>\n#include <linux/module.h>\n#include <linux/moduleparam.h>\n\
+    #define __KERNEL__\n#define LINUX\n#define MODULE\n//// 宏定义部分结束\nstatic int input\
+    \ = 5; // 变量应该应该有一个初始默认值\nMODULE_PARAM (input, int);\nMODULE_PARM_DESC(input,\
+    \ \"An integer\");\nstatic init __init entrance (void){\n\tint square_val = input\
+    \ * input;\n\tprintk(KERN_DEBUG “Square value of input = %i\\n”, square_val);\n\
+    }\nstatic void __exit out (void){\n\tprintk(KERN_DEBUG “Goodbye LKM\\n”);\n}\n\
+    module __init (entrance);\nmodule __exit(out);\nMODULE_AUTHOR(\"Md Mahbubur Rahman\"\
+    );\nMODULE_LICENSE (“BSD”);\n//// 模块许可部分结束\n```\n\n# 使用短整数、整数和长整数的 LKM 命令行参数示例\n\
+    \n```c\n#include <linux/kernel.h>\n#include <linux/init.h>\n#include <linux/stat.h>\n\
+    #include <linux/module.h>\n#include <linux/moduleparam.h>\n#define __KERNEL__\n\
+    #define LINUX\n#define MODULE\n//// 宏定义部分结束\nstatic short int shortInt = 1;\n\
+    static int vInt = 111;\nstatic long int longInt = 5555;\n//// 命令行参数声明结束\nMODULE_PARAM(shortInt,\
+    \ short);\nMODULE_PARM_DESC(shortInt, \"A short integer\");\nMODULE_PARAM(vInt,\
+    \ int);\nMODULE_PARM_DESC(vInt, \"An integer\");\nMODULE_PARAM(longInt, long);\n\
+    MODULE_PARM_DESC(longInt, \"A long integer\");\nstatic int __init entrance(void){\n\
+    \tint i;\n\tprintk(KERN_INFO \"Hello LKM =============\\n\");\n\tprintk(KERN_INFO\
+    \ \"myshort is a short integer: %hd\\n\", shortInt);\n\tprintk(KERN_INFO \"vInt\
+    \ is an integer: %d\\n\", vInt);\n\tprintk(KERN_INFO \"longInt is a long integer:\
+    \ %ld\\n\", longInt);\n\treturn 0;\n}\n//// 初始化部分结束\nstatic void __exit out(void){\n\
+    \tprintk(KERN_INFO \"Goodbye LKM\\n\");\n}\n//// 清理部分结束\nmodule __init (entrance);\n\
+    module __exit(out);\nMODULE_AUTHOR(\"Md Mahbubur Rahman\");\nMODULE_LICENSE (“BSD”);\n\
+    //// 模块许可部分结束 \n```\n\n# 使用字符串的 LKM 命令行参数示例\n\n```c\n#include <linux/kernel.h>\n\
+    #include <linux/init.h>\n#include <linux/stat.h>\n#include <linux/module.h>\n\
+    #include <linux/moduleparam.h>\n#define __KERNEL__\n#define LINUX\n#define MODULE\n\
+    //// 宏定义部分结束\nstatic char *stringVar = \"hello\";\n//// 命令行参数声明结束\nMODULE_PARAM(stringVar,\
+    \ charp);\nMODULE_PARM_DESC(stringVar, \"A character string\");\n//// 为每个变量添加带有带的\
+    \ module_param\nstatic int __init entrance(void){\n\tint i;\n\tprintk(KERN_INFO\
+    \ \"mystring is a string: %s\\n\", stringVar);\n\treturn 0;\n}\n//// 初始化部分结束\n\
+    static void __exit out(void){\n\tprintk(KERN_INFO \"Goodbye LKM\\n\");\n}\n////\
+    \ 清理部分结束\nmodule __init (entrance);\nmodule __exit(out);\nMODULE_AUTHOR(\"Md Mahbubur\
+    \ Rahman\");\nMODULE_LICENSE (“BSD”);\n//// 模块许可部分结束 \n```\n\n# 使用数组的 LKM 命令行参数示例\n\
+    \n```c\n#include <linux/kernel.h>\n#include <linux/init.h>\n#include <linux/stat.h>\n\
+    #include <linux/module.h>\n#include <linux/moduleparam.h>\n#define __KERNEL__\n\
+    #define LINUX\n#define MODULE\n//// 宏定义部分结束\nstatic int intArray[3] = { 1, 2,\
+    \ 3 };\nstatic int arrayArgc = 0;\n//// 命令行参数声明结束\nMODULE_PARAM_ARRAY(intArray,\
+    \ int, arrayArgc, 1111);\nMODULE_PARM_DESC(intArray, \"An array of integers\"\
+    );\n//// 为每个变量添加带有类型的 module_param\nstatic int __init entrance(void){\n\tint i;\n\
+    \tfor (i = 0; i < (sizeof intArray / sizeof (int)); i++)\n\t{\n\t\tprintk(KERN_INFO\
+    \ \" intArray[%d] = %d\\n\", i, intArray[i]);\n\t}\n\tprintk(KERN_INFO \"got %d\
+    \ arguments for intArray.\\n\", arrayArgc);\n\treturn 0;\n}\n//// 初始化部分结束\nstatic\
+    \ void __exit out(void){\n\tprintk(KERN_INFO \"Goodbye LKM\\n\");\n}\n//// 清理部分结束\n\
+    module __init (entrance);\nmodule __exit(out);\nMODULE_AUTHOR(\"Md Mahbubur Rahman\"\
+    );\nMODULE_LICENSE (“BSD”);\n//// 模块许可部分结束 \n```\n\n"
+- fmt: "\n* Another important feature of `printk()` is log level. Before printing\
+    \ the contents of `printk()` to console the kernel checks the log level.\n\n###\
+    \ The `printk()` log level priorities\n\nThere are eight (08) priority levels\
+    \ of `printk()` defined in `<linux/kernel.h>`. There are listed here!![Macintosh\
+    \ HD:Users:mahbub:Desktop:Screen Shot 2018-08-01 at 2.30.44 PM.png](image_rsrc2JH.jpg)\n\
+    \n* `KERN_EMERG`\n  A massive and deadly emergency condition, which may related\
+    \ system halt or crash.\n\n* `KERN_ALERT`\n  An urgent issue, which may need immediate\
+    \ action.\n\n* `KERN_CRIT`\n  Critical conditions, often relevant to serious hardware\
+    \ or software failures.\n\n* `KERN_ERR`\n  Error condition for example hardware\
+    \ difficulties, software difficulties are reported with log level.\n\n* `KERN_WARNING`\n\
+    \  Warning level message.\n\n* `KERN_NOTICE`\n  The current situation may be normal,\
+    \ but still worthy to note.\n\n* `KERN_INFO`\n  An informational message is reported\
+    \ in this log level.\n\n* `KERN_DEBUG`\n  A debug message, generally for debugging\
+    \ purposes this log level used.\n\nNow a question in your mind arises, if you\
+    \ do not specify a log level, what will be happened? The default value of `DEFAULT_MESSAGE_LOGLEVEL`\
+    \ will be used, which is currently `KERN_WARNING`.\n\n#### Printk Example # 1\n\
+    \n```c\n#include <linux/kernel.h>\n#include <linux/module.h>\n// end of header\
+    \ include section\n#define __KERNEL__\n#define MODULE\n#define LINUX\n// end of\
+    \ macro define section\nstatic int entrance(void){\n  printk(KERN_DEBUG \"Simple\
+    \ and Basic Printk example\");\n  return 0;\n}\n// end of init section\nstatic\
+    \ int out(void){\n  printk(KERN_DEBUG \"Goodbye! But remember, printk is amazing.\"\
+    );\n}\n// End of cleanup section\nmodule __init (entrance);\nmodule __exit(out);\n\
+    MODULE_LICENSE (\"BSD\");\n// End of module licensing section\n```\n\n#### Printk\
+    \ Example # 2\n\n```c\n#include <linux/kernel.h>\n#include <linux/module.h>\n\
+    // end of header include section\n#define __KERNEL__\n#define MODULE\n#define\
+    \ LINUX\n// end of macro define section\nstatic int entrance(void){\n  printk(KERN_DEBUG\
+    \ \"Simple and Basic Printk example : FILE: %s, LINE : %i\\n\", __FILE__, __LINE__);\n\
+    \  return 0;\n}\n// end of init section\nstatic int out(void){\n  printk(KERN_DEBUG\
+    \ \"Goodbye! But remember, printk is amazing: FILE: %s, LINE : %i\\n\", __FILE__,\
+    \ __LINE__);\n}\n// End of cleanup section\nmodule __init (entrance);\nmodule\
+    \ __exit(out);\nMODULE_LICENSE (\"BSD\");\n// End of module licensing section\n\
+    ```\n\n## Chapter 9: Loading and Unloading LKMs\n\n### Loading and Unloading Linux\
+    \ Kernel Modules (LKMs) on demand\n\nLinux kernel has an amazing feature, it can\
+    \ automatically load and unload LKMs which helps to avoid wasting of kernel processes\
+    \ and memory. But to use this support or feature, we need to enable `kmod` module\
+    \ when we configure the kernel before we compile it.\n\nMost of the distributions\
+    \ like Redhat, Debian, Ubuntu, CentOS, etc. comes with `kmod` enabled. The `kmod`\
+    \ feature or support comes with `libkmod.so` library.\n\nContents of `libkmod`\
+    \ library:\n- `insmod`\n- `rmmod`\n- `depmod`\n- `modprobe`\n- `modinfo`\n- `lsmod`\n\
+    \n`insmod` being used to insert a module into the Linux kernel.\nNote: `insmod`\
+    \ requires passing it the full pathname and list of modules (dependent modules)\
+    \ in the right order. If we consider `nfs.ko`, it requires the following module\
+    \ with the relevant order.\n\n1. `nfs_common.ko`\n2. `auth_rpcgss.ko`\n3. `fscache.ko`\n\
+    4. `lockd.ko`\n5. `sunrpc.ko`\n\n`rmmod`\nThe `rmmod` unloads a module from the\
+    \ Linux kernel. If we want to unload or remove a module then we have to run the\
+    \ following command:\n`$ rmmod modulename`\nFor example, we have a module `vfat`,\
+    \ we need to unload it. Then command will be\n`$ rmmod vfat`\nNote: There is another\
+    \ way to unload or remove module in Linux kernel. That is `modprobe –v –r`. Here\
+    \ for removing `vfat`, the command will be\n`$ modprob –v –r vfat`\nWhere, `r`\
+    \ is the short form of remove and `v` for verbose.\n\n`depmod`\nThe `depmod` works\
+    \ with existing sets of modules. It creates a dependency file based on the symbols\
+    \ it find in the existing sets of modules mentioned in the command lines or from\
+    \ the directories specified in the configuration file.\nThe `depmod` creates a\
+    \ “`Makefile`” like dependency file, which is used by `modprobe` to automatically\
+    \ load the correct module or stack of modules.\nNote: The `depmod` file can be\
+    \ found at `/lib/modules/kernel-version/modules.dep`.\n\n`modinfo`\nThe `modinfo`\
+    \ program shows information about a Linux kernel module. It shows the following\
+    \ information regarding each module:\n1. Module author\n2. License\n3. Parameters\n\
+    4. Dependencies\n5. Module description\n6. Full path of the module\n\n`lsmod`\n\
+    The `lsmod` program shows the currently loaded modules. It shows the following:\n\
+    1. Name of module\n2. Size of module\n3. Use count and list of referring modules\n\
+    \n`modprobe`\nThe `modprobe` program adds or removes a module from the Linux kernel.\
+    \ It looks at `/lib/modules` for all the modules. How it works? Just the `dep`\
+    \ file which is generated by `depmod`.\n\n## Chapter 10: Introduction to Device\
+    \ Drivers\n\n### Introduction to device driver\n\nMost of the Linux kernel’s source\
+    \ code are in its device drivers. The drivers directory contains all of Linux’s\
+    \ device drivers source codes. This directory has the following parts\n\n* `/block`\n\
+    \  - The block device drivers resides here.\n  - Block devices include both IDE\
+    \ and SCSI based devices.\n* `/char`\n  - The char device drivers resides here.\
+    \ Example, `tty`.\n* `/cdrom`\n  - In this directory all of the CDROM code for\
+    \ Linux resides.\n* `/pci`\n  - PCI pseudo-drivers resides in this directory.\n\
+    * `/scsi`\n  - All of the drivers for the scsi devices supported by Linux resides\
+    \ here.\n* `/net`\n  - Network device drivers resides here.\n* `/sound`\n  - All\
+    \ sound card drivers resides here.\n\n### What is device driver?\n\nA device driver\
+    \ is ultimately designed and developed to control or operate a specific type of\
+    \ hardware that is attached with the system. In other words, device driver consists\
+    \ of a bunch of source code which tells the system how to communicate, operate\
+    \ or control hardware. The kernel uses device driver to control or communicate\
+    \ hardware without knowing any details of the hardware, for example, how hardware\
+    \ operates. A device driver uses bus system of the computer to communicate with\
+    \ the device or through other communication system to which the hardware being\
+    \ connected.\n\nWhen a kernel calls device driver?\n\n* To check whether the device\
+    \ available or not.\n* To handle device specific input/output calls.\n"
+  raw: "*   Another important feature of printk() is log level. Before printing the\
+    \ contents of printk() to console kernel checks the log level.\n\nThe printk()\
+    \ log level prioritiesThere are eight (08) priority levels of printk() defined\
+    \ in <linux/kernel.h>. There are listed here![Macintosh HD:Users:mahbub:Desktop:Screen\
+    \ Shot 2018-08-01 at 2.30.44 PM.png](image_rsrc2JH.jpg)KERN_EMERG\n\n*   A massive\
+    \ and deadly emergency condition, which may related system halt or crash.\n\n\
+    KERN_ALERT\n\n*   An urgent issue, which may need immediate action.\n\nKERN_CRIT\n\
+    \n*   Critical conditions, often relevant to serious hardware or software failures.\n\
+    \nKERN_ERR\n\n*   Error condition for example hardware difficulties, software\
+    \ difficulties are reported with log level.\n\nKERN_WARNING\n\n*   Warning level\
+    \ message.\n\nKERN_NOTICE\n\n*   The current situation may be normal, but still\
+    \ worthy to note.\n\nKERN_INFO\n\n*   An informational message is reported in\
+    \ this log level.\n\nKERN_DEBUG\n\n*   A debug message, generally for debugging\
+    \ purposes this log level used.\n\nNow a question in your mind arises, if you\
+    \ do not specify a log level, what will be happened? The default value of DEFAULT_MESSAGE_LOGLEVEL\
+    \ will be used, which is currently KERN_WARNING.Printk Example # 1#include <linux/kernel.h>#include\
+    \ <linux/module.h>//// end of header include section#define __KERNEL__#define\
+    \ MODULE#define LINUX//// end of macro define sectionstatic int entrance(void){​\
+    \ printk(KERN_DEBUG “Simple and Basic Printk example”);​ return 0;}//// end of\
+    \ init sectionstatic int out(void){​ printk(KERN_DEBUG “Goodbye! But remember,\
+    \ printk is amazing.”);}//// End of cleanup sectionmodule __init (entrance);module\
+    \ __exit(out);MODULE_LICENSE (“BSD”);//// End of module licensing sectionPrintk\
+    \ Example # 2#include <linux/kernel.h>#include <linux/module.h>//// end of header\
+    \ include section#define __KERNEL__#define MODULE#define LINUX//// end of macro\
+    \ define sectionstatic int entrance(void){​ printk(KERN_DEBUG “Simple and Basic\
+    \ Printk example : FILE: %s, LINE : %i\\n”, __FILE__, __LINE__);​ return 0;}////\
+    \ end of init sectionstatic int out(void){​ printk(KERN_DEBUG “Goodbye! But remember,\
+    \ printk is amazing: FILE: %s, LINE : %i\\n”, __FILE__, __LINE__);}//// End of\
+    \ cleanup sectionmodule __init (entrance);module __exit(out);MODULE_LICENSE (“BSD”);////\
+    \ End of module licensing sectionChapter 9:Loading and Unloading LKMsLoading and\
+    \ Unloading Linux Kernel Modules (LKMs) on demandLinux kernel has an amazing feature,\
+    \ it can automatically load and unload LKMs which helps to avoid wasting of kernel\
+    \ processes and memory. But to use this support or feature, we need to enable\
+    \ kmod module when we configure the kernel before we compile it.Most of the distributions\
+    \ like Redhat, Debian, Ubuntu, CentOS, etc. comes with kmod enabled. The kmod\
+    \ feature or support comes with libkmod.so library.Contents of libkmod library-          \
+    \ insmod-           rmmod-           depmod-           modprobe-           modinfo-          \
+    \ lsmod-           kmodinsmodinsmod being used to insert a module into the Linux\
+    \ kernel.Note: insmod requires passing it the full pathname and list of modules\
+    \ (dependent modules) in the right order. If we consider nfs.ko, it requires the\
+    \ following module with the relevant order.\n\n1.  nfs_common.ko\n\n2.  auth_rpcgss.ko\n\
+    \n3.  fscache.ko\n\n4.  lockd.ko\n\n5.  sunrpc.ko\n\nrmmodThe rmmod unloads a\
+    \ module from the Linux kernel. If we want to unload or remove a module then we\
+    \ have to run the following command:$ rmmod modulenameFor example, we have a module\
+    \ vfat, we need to unload it. Then command will be$ rmmod vfatNote: There is another\
+    \ way to unload or remove module in Linux kernel. That is modeprobe –v –r. Here\
+    \ for removing vfat, the command will be$ modprob –v –r vfatWhere, r is the short\
+    \ form of remove and v for verbose.depmodThe depmod works with existing sets of\
+    \ modules. It creates a dependency file based on the symbols it find in the existing\
+    \ sets of modules mentioned in the command lines or from the directories specified\
+    \ in the configuration file.The depmod creates a “Makefile” like dependency file,\
+    \ which is used by modprobe to automatically load the correct module or stack\
+    \ of modules.Note: The depmod file can be found at /lib/modules/kernel-version/modules.depmodinfoThe\
+    \ modinfo program shows information about a Linux kernel module. It shows the\
+    \ following information regarding each module:\n\n1.  Module author\n\n2.  License\n\
+    \n3.  Parameters\n\n4.  Dependencies\n\n5.  Module description\n\n6.  Full path\
+    \ of the module along with the file name\n\nlsmodThe lsmod program shows the kernel\
+    \ modules currently loaded by Linux system or Linux kernel system. It shows these\
+    \ data or contents by analyzing /proc/modules.The lsmod program shows the following\
+    \ information:\n\n1.  Name of the module\n\n2.  Size of the module in byte, not\
+    \ how much memory used in kernel.\n\n3.  Each module use count and a list of referring\
+    \ modules.\n\nmodprobeThe modprobe program adds or removes a module from the Linux\
+    \ kernel. It looks at the modules directory /lib/modules for all the modules.\
+    \ The modprobe program expects the up-to-date module.dep file which is generated\
+    \ by depmod.How it works? Just call$ modproble module_1This command loads module_1\
+    \ in kernel.How kmod works?What happens while Linux kernel tries to access certain\
+    \ modules or resources but gets those resources unavailable? Does kernel return\
+    \ an error instantly? No. Instantly kernel does not return any error rather, calls\
+    \ kmod. While kernel calls kmod, it tries to load dependent modules and tries\
+    \ to make the resources available.If kmod gets success, then no problem, the Linux\
+    \ kernel continues working. But if kmod fails, then Linux kernel returns an error.The\
+    \ beautiful thing is, any kernel space programs can request to load any LKMs by\
+    \ calling kmod. But to use kmod, programmers need to include <linux/kmod.h> in\
+    \ their kernel module to get this functionality. And to request a module to be\
+    \ loaded, programmers need to call request_module function.int request_module\
+    \ (const char *module_name);Couple of things we should know about this request_module\
+    \ function:\n\n1.  The request_module function is asynchronous\n\n2.  The request_module\
+    \ function returns negative number on failure or zero on success.\n\n3.  The caller\
+    \ modules must check that the service they requested whether is now available,\
+    \ programmers should not blindly invoke it.\n\n4.  And more importantly, if module\
+    \ auto-loading support is disabled, then this request_module function becomes\
+    \ a no-operation.\n\nChapter 10:Introduction to Device DriversIntroduction to\
+    \ device driverMost of the Linux kernel’s source code are in its device drivers.\
+    \ The drivers directory contains all of Linux’s device drivers source codes. This\
+    \ directory has the following parts\n\n1.  /block\n\n    *   The block device\
+    \ drivers resides here.\n\n    *   Block devices include both IDE and SCSI based\
+    \ devices.\n\n2.  /char\n\n    *   The char device drivers resides here. Example,\
+    \ tty.\n\n3.  /cdrom\n\n    *   In this directory all of the CDROM code for Linux\
+    \ resides.\n\n4.  /pci\n\n    *   PCI pseudo-drivers resides in this directory.\n\
+    \n5.  /scsi\n\n    *   All of the drivers for the scsi devices supported by Linux\
+    \ resides here.\n\n6.  /net\n\n    *   Network device drivers resides here.\n\n\
+    7.  /sound\n\n    *   All sound card drivers resides here.\n\nWhat is device driver?A\
+    \ device driver is ultimately designed and developed to control or operate a specific\
+    \ type of hardware that is attached with the system. In other words, device driver\
+    \ consists of a bunch of source code which tells the system how to communicate,\
+    \ operate or control hardware. The kernel uses device driver to control or communicate\
+    \ hardware without knowing any details of the hardware, for example, how hardware\
+    \ operates. A device driver uses bus system of the computer to communicate with\
+    \ the device or through other communication system to which the hardware being\
+    \ connected.When a kernel calls device driver?\n\n*   To check whether the device\
+    \ available or not.\n\n*   To handle device specific input/output calls."
+  toc: []
+  trans: "\n\n* `printk()` 的另一个重要特性是日志级别。在将 `printk()` 的内容打印到控制台之前，内核会检查日志级别。\n\n\
+    ### `printk()` 日志级别优先级\n\n`<linux/kernel.h>` 中定义了 `printk()` 的八（08）个优先级级别。它们列在这里：![Macintosh\
+    \ HD:Users:mahbub:Desktop:Screen Shot 2018-08-01 at 2.30.44 PM.png](img/image_rsrc2JH.jpg)\n\
+    \n* `KERN_EMERG`\n  严重且致命的紧急状况，可能导致系统停止或崩溃。\n\n* `KERN_ALERT`\n  紧急问题，可能需要立即采取行动。\n\
+    \n* `KERN_CRIT`\n  关键状态，通常与严重的硬件或软件故障有关。\n\n* `KERN_ERR`\n  错误状态，例如硬件故障、软件故障将以该日志级别进行报告。\n\
+    \n* `KERN_WARNING`\n  警告级别消息。\n\n* `KERN_NOTICE`\n  当前情况可能正常，但仍值得注意。\n\n* `KERN_INFO`\n\
+    \  在此日志级别报告信息性消息。\n\n* `KERN_DEBUG`\n  调试消息，此日志级别通常用于调试目的。\n\n现在你脑中产生了一个问题，如果不指定日志级别，会发生什么？将使用\
+    \ `DEFAULT_MESSAGE_LOGLEVEL` 的默认值，它目前是 `KERN_WARNING`。\n\n#### Printk 示例 #1\n\n\
+    ```c\n#include <linux/kernel.h>\n#include <linux/module.h>\n// end of header include\
+    \ section\n#define __KERNEL__\n#define MODULE\n#define LINUX\n// end of macro\
+    \ define section\nstatic int entrance(void){\n  printk(KERN_DEBUG \"Simple and\
+    \ Basic Printk example\");\n  return 0;\n}\n// end of init section\nstatic int\
+    \ out(void){\n  printk(KERN_DEBUG \"Goodbye! But remember, printk is amazing.\"\
+    );\n}\n// End of cleanup section\nmodule __init (entrance);\nmodule __exit(out);\n\
+    MODULE_LICENSE (\"BSD\");\n// End of module licensing section\n```\n\n#### Printk\
+    \ 示例 #2\n\n```c\n#include <linux/kernel.h>\n#include <linux/module.h>\n// end\
+    \ of header include section\n#define __KERNEL__\n#define MODULE\n#define LINUX\n\
+    // end of macro define section\nstatic int entrance(void){\n  printk(KERN_DEBUG\
+    \ \"Simple and Basic Printk example : FILE: %s, LINE : %i\\n\", __FILE__, __LINE__);\n\
+    \  return 0;\n}\n// end of init section\nstatic int out(void){\n  printk(KERN_DEBUG\
+    \ \"Goodbye! But remember, printk is amazing: FILE: %s, LINE : %i\\n\", __FILE__,\
+    \ __LINE__);\n}\n// End of cleanup section\nmodule __init (entrance);\nmodule\
+    \ __exit(out);\nMODULE_LICENSE (\"BSD\");\n// End of module licensing section\n\
+    ```\n\n## 第 9 章：加载和卸载 LKM\n\n### 按需加载和卸载 Linux 内核模块 (LKMs)\n\nLinux 内核有一个强大的功能，它可以自动加载和卸载\
+    \ LKM，这有助于避免浪费内核进程和内存。但要使用这项支持或功能，我们需要需要在编译内核之前的配置内核时启用 `kmod` 模块。\n\n大多数发行版如\
+    \ Redhat、Debian、Ubuntu、CentOS 等都带有启用的 `kmod`。`kmod` 功能或支持随 `libkmod.so` 库一起。\n\
+    \n`libkmod` 库的内容：\n- `insmod`\n- `rmmod`\n- `depmod`\n- `modprobe`\n- `modinfo`\n\
+    - `lsmod`\n\n`insmod` 用于将模块插入 Linux 内核。\n注意：`insmod` 需要传递完整路径和按正确顺序排列模块列表（依赖模块）。如果我们考虑\
+    \ `nfs.ko`，它需要以下相关顺序的模块：\n\n1. `nfs_common.ko`\n2. `auth_rpcgss.ko`\n3. `fscache.ko`\n\
+    4. `lockd.ko`\n5. `sunrpc.ko`\n\n`rmmod`\n`rmmod` 从 Linux 内核中卸载模块。如果我们想卸载或移除模块，必须运行以下命令：\n\
+    `$ rmmod modulename`\n例如，我们有一个模块 `vfat`，我们需要卸载它。那么命令将是：\n`$ rmmod vfat`\n注意：在\
+    \ Linux 内核中还有另一种卸载或移除模块的方法。那是 `modprobe –v –r`。在这里移除 `vfat` 的命令为：\n`$ modprob\
+    \ –v –r vfat`\n其中，`r` 是 remove 的缩写，`v` 代表 verbose（详细）。\n\n`depmod`\n`depmod` 与现有的模块集一起。它根据命令行中提到的现有模块集或从配置文件指定的目录中找到的符号，创建一个依赖文件。\n\
+    `depmod` 创建一个类似于 `Makefile` 的依赖文件，`modprobe` 用它自动加载正确的模块或模块栈。\n注意：`depmod` 文件可以在\
+    \ `/lib/modules/kernel-version/modules.dep` 找到。\n\n`modinfo`\n`modinfo` 程序显示 Linux\
+    \ 内核模块的信息。它显示每个模块的以下信息：\n1. 模块作者\n2. 许可证\n3. 参数\n4. 依赖关系\n5. 模块描述\n6. 模块完整路径\n\
+    \n`lsmod`\n`lsmod` 程序显示当前加载的模块。它显示以下：\n1. 模块名称\n2. 模块大小\n3. 使用计数和引用模块列表\n\n`modprobe`\n\
+    `modprobe` 程序向 Linux 内核添加或删除模块。它查看 `/lib/modules` 中的所有模块。它是如何工作的？通过 `depmod` 生成的\
+    \ `dep` 文件。\n\n## 第 10 章：设备驱动程序简介\n\n### 设备驱动程序简介\n\nLinux 内核大部分源码都在设备驱动程序中。drivers\
+    \ 目录包含了所有的 Linux 设备驱动源码。该目录有以下部分：\n\n* `/block`\n  - 块设备驱动位于此处。\n  - 块设备包括 IDE\
+    \ 和 SCSI 设备。\n* `/char`\n  - 字符设备驱动位于此处。例如 `tty`。\n* `/cdrom`\n  - Linux 的 CDROM\
+    \ 代码位于此目录。\n* `/pci`\n  - PCI 伪驱动位于此目录。\n* `/scsi`\n  - Linux 支持的所有 SCSI 设备驱动程序位于此处。\n\
+    * `/net`\n  - 网络设备驱动位于此处。\n* `/sound`\n  - 所有声卡驱动位于此处。\n\n### 什么是设备驱动程序？\n\n设备驱动程序最终设计和开发用于控制或操作连接到系统的特定类型硬件。换句话说，设备驱动程序由大量告诉系统如何通信、操作或控制硬件的代码组成。内核使用设备驱动程序来控制或通信硬件，而无需了解硬件的任何细节，例如硬件如何工作。驱动程序使用计算机的总线系统与设备通信，或通过连接硬件的其他通信系统通信。\n\
+    \n内核何时调用设备驱动程序？\n\n* 检查设备可用。\n* 处理设备特定的输入/输出调用。\n\n"
+- fmt: "\n* To perform user space requests to the `sysconfig` utility.\n* To check\
+    \ whether data is ready or not through handling interrupts.\n* To set/reset and\
+    \ initialize/reinitialize the device.\n* To perform Input / Output operations\
+    \ from user space standard library Input / Output calls.\n\n## Device driver working\
+    \ procedure with User Space, Kernel Space and Hardware Space:\n\n* In user space,\
+    \ any source program or library are unable to communicate with hardware directly,\
+    \ so they make calls to the kernel space source programs.\n* Although kernel has\
+    \ the supreme power mode in the system, kernel doesn’t try to access hardware\
+    \ directly, rather kernel follow a convention. Kernel uses device driver to communicate\
+    \ with hardware.\n* A device driver in kernel space, responsible to communicate\
+    \ with the hardware or device, for example, opening the device, reading and writing\
+    \ to the device through a bus to peripheral device registers and then closes the\
+    \ device.\n* In hardware space, a bus works as a transmission path or communication\
+    \ path along with access protocols between the processor and device controller.\
+    \ When a device driver reads data from or writes data to the hardware registers\
+    \ of a controller, the data travels across the bus.\n* In hardware space, a controller\
+    \ works as a physical interface for controlling one or more devices.\n\n## Chapter\
+    \ 11: Developing a character device driver with utmost easy explanations\n\n###\
+    \ Explanation # 1\nLinux device drivers are divided into several categories: most\
+    \ common are block devices, character devices and network devices. Here we will\
+    \ learn how to write simple character device.\n\n### Explanation # 2\nThe permission\
+    \ bar of block devices something like `brw-rw--`, where “b” stands for block device,\
+    \ and character devices has something like `crw-rw--`, where “c” stands for character\
+    \ device.\n\n### Explanation # 3\nEvery device driver contains two numbers: major\
+    \ number and minor number. The major number is used to distinguish the driver\
+    \ and same major number used to indicate that it is controlled by the same driver.\
+    \ Using different minor number, multiple device drivers can be created in one\
+    \ drive. The major number and minor number, both numbers are being used to determine\
+    \ a device driver together. \n\nFor example:\n```\nbrw-rw----  1 root disk 9,\
+    \  0 May 17 10:15 sda\n```\n"
+  raw: '*   To perform user space requests to the sysconfig utility.
+
+
+    *   To check whether data is ready or not through handling interrupts.
+
+
+    *   To set/reset and initialize/reinitialize the device.
+
+
+    *   To perform Input / Output operations from user space standard library Input
+    / Output calls.
+
+
+    Device driver working procedure with User Space, Kernel Space and Hardware Space:
+
+
+    *   In user space, any source program or library are unable to communicate with
+    hardware directly, so they make calls to the kernel space source programs.
+
+
+    *   Although kernel has the supreme power mode in the system, kernel doesn’t try
+    to access hardware directly, rather kernel follow a convention. Kernel uses device
+    driver to communicate with hardware.
+
+
+    *   A device driver in kernel space, responsible to communicate with the hardware
+    or device, for example, opening the device, reading and writing to the device
+    through a bus to peripheral device registers and then closes the device.
+
+
+    *   In hardware space, a bus works as a transmission path or communication path
+    along with access protocols between the processor and device controller. When
+    a device driver reads data from or writes data to the hardware registers of a
+    controller, the data travels across the bus. 
+
+
+    *   In hardware space, a controller works as a physical interface for controlling
+    one or more devices.
+
+
+    Chapter 11:Developing a character device driver with utmost easy explanationsExplanation
+    # 1Linux device drivers are divided into several categories: most common are block
+    devices, character devices and network devices. Here we will learn how to write
+    simple character device.Explanation # 2The permission bar of block devices something
+    like brw-rw--, where “b” stands for block device, and character devices has something
+    like crw-rw--, where “c” stands for character device.Explanation # 3Every device
+    driver contains two numbers: major number and minor number. The major number is
+    used to distinguish the driver and same major number used to indicate that it
+    is controlled by the same driver.Using different minor number, multiple device
+    drivers can be created in one drive. The major number and minor number, both numbers
+    are being used to determine a device driver together.For example,brw-rw----  1
+    root disk 9,   0 May 17 10:15 sda'
+  toc: []
+  trans: '
+
+
+    * 用于向 `sysconfig` 工具执行用户空间请求。
+
+    * 通过处理中断来检查数据是否准备就绪。
+
+    * 用于设置/重置以及初始化/重新初始化设备。
+
+    * 从用户空间标准库的输入/输出调用执行输入/输出操作。
+
+
+    ## 用户空间、内核空间和硬件空间的设备驱动工作流程：
+
+
+    * 在用户空间中，任何源程序或库都无法直接与硬件通信，因此它们向内核空间的源程序调用。
+
+    * 尽管内核在系统中拥有最高权限模式，但内核并不尝试直接访问硬件，而是遵循一种约定。内核使用设备驱动程序与硬件通信。
+
+    * 内核空间中的设备驱动负责与硬件或设备通信，例如：打开设备、通过总线对外设设备寄存器进行读写操作，然后关闭设备。
+
+    * 在硬件空间中，总线作为传输路径或通信路径，配合处理器与设备控制器之间的访问协议。当设备驱动从控制器的硬件寄存器读取数据或向写入数据时，数据将跨越总线传输。
+
+    * 在硬件空间中，控制器作为控制一个或多个设备的物理接口。
+
+
+    ## 第 11 章：用极其易懂的解释开发字符设备驱动
+
+
+    ### 解释 # 1
+
+    Linux 设备驱动分为几类：最常见的是块设备、字符设备和网络设备。在这里，我们将学习如何编写简单的字符设备。
+
+
+    ### 解释 # 2
+
+    块设备的权限位类似于 `brw-rw--`，其中“b”代表块设备；字符设备的权限位类似于 `crw-rw--`，其中“c”代表字符设备。
+
+
+    ### 解释 # 3
+
+    每个设备驱动都包含两个数字：主设备号和次设备号。主设备号用于区分驱动程序，相同的主设备号表示它们由同一个驱动程序控制。通过使用不同的次设备号，可以在一个驱动中创建多个设备驱动。主设备号和次设备号这两个数字共同决定一个设备驱动。
+
+
+    例如：
+
+    ```
+
+    brw-rw----  1 root disk 9,  0 May 17 10:15 sda
+
+    ```
+
+
+    '
+- fmt: "\n`brw-rw----  1 root disd 9,  1 May 17 10:15 sda1`\n\nHere, the major number\
+    \ of `sda` and `sda1` is 9, and minor numbers are different, 0 and 1.\n\n# Explanation\
+    \ #4\n\nAny interface under `/dev/xxx` “everything is about file”, so the operation\
+    \ of the device driver is actually the operation of the file. The APIs of a device\
+    \ driver we can think all about file operations and the device driver is used\
+    \ to define/open/read/write etc. functionalities. All file operations are defined\
+    \ in the `file_operations` structure of the kernel `<linux/fs.h>` header file.\n\
+    \nIn the following device driver example, we will see struct `file_operations`:\n\
+    \n```c\nstruct file_operations gpio_fops = {\n    read    : gpio_read,\n    write\
+    \   : gpio_write,\n    open    : gpio_open,\n    release : gpio_close,\n    owner\
+    \   : GPIO_MODULE\n};\n```\n\nHere, we have declared a structure and assigned\
+    \ it to the structure variable `gpio_fops`. The values are function pointers except\
+    \ for the `owner`. Then we have used `cdev_add` to register the file operation\
+    \ structure with each driver in the init module.\n\n# Developing a tiny GPIO char\
+    \ device driver\n\n```c\n#include <linux/kernel.h>\n#include <linux/module.h>\n\
+    #include <linux/moduleparam.h>\n#include <linux/init.h>\n#include <linux/stat.h>\n\
+    #include <linux/cdev.h>\n#include <linux/device.h>\n#include <linux/fs.h>\n#include\
+    \ <linux/slab.h>\n#include <asm/uaccess.h>\n#include <linux/string.h>\n\n// end\
+    \ of header include section\n#define DEVICE_MAJOR  200\n#define DEVICE_MINOR \
+    \ 0\n#define DEVICE_DEV_COUNT 2\n\n// end of define defition\n\nstatic int gpio_open(struct\
+    \ inode *, struct file *);\nstatic ssize_t gpio_read(struct file *, char *, size_t,\
+    \ loff_t *);\nstatic ssize_t gpio_write(struct file *, const char *, size_t, loff_t\
+    \ *);\nstatic int gpio_close(struct inode *, struct file *);\n\nstruct file_operations\
+    \ gpio_fops = {\n    read    : gpio_read,\n    write   : gpio_write,\n    open\
+    \    : gpio_open,\n    release : gpio_close,\n    owner   : GPIO_MODULE\n};\n\n\
+    struct cdev gpio_cdev;\nstatic char *dev_c_message = NULL;\n\nstatic int entrance(void)\
+    \ {\n    // get device number\n    // A device ID is represented using the type\
+    \ dev_t.\n    dev_t devno;\n    unsigned int count = DEVICE_DEV_COUNT;\n    int\
+    \ err;\n\n    // A device ID consists of two parts: a major ID, identifying the\
+    \ class\n    // of the device, and a minor ID, identifying a specific instance\
+    \ of a\n    // device in that class. Given major and minor device IDs, makedev()\
+    \ combines these to produce\n    // a device ID, returned as the function result.\n\
+    \    // The major and minor number are how Linux identifies the underlying hardware\
+    \ device associated with a device file.\n    // Most of the cases major number\
+    \ identifies the driver while the minor distinguishes the different devices the\
+    \ driver controls.\n    devno = MKDEV(DEVICE_MAJOR, DEVICE_MINOR);\n\n    // register_chrdev_region\
+    \ function — register a range of device numbers\n    // parameters are (dev_t\
+    \ from, unsigned count, const char * name);\n    // from - the first in the desired\
+    \ range of device numbers; must include the major number.\n    // count - the\
+    \ number of consecutive device numbers required\n    // name - the name of the\
+    \ device or driver.\n    register_chrdev_region(devno, count, \"gpiodev\");\n\n\
+    \    // cdev_init — initialize a cdev structure\n    cdev_init(&gpio_cdev, &gpio_fops);\n\
+    \    gpio_cdev.owner = GPIO_MODULE;\n\n    // cdev_add registers a character device\
+    \ with the kernel.\n    // The kernel maintains a list of character devices under\
+    \ cdev_map\n    err = cdev_add(&gpio_cdev, devno, count);\n    if (err < 0) {\n\
+    \        printk(\"Error: While Adding Device\\n\");\n        return -1;\n    }\n\
+    \n    printk(\"TINY GPIO Device Driver.\\n\");\n    printk(\"'mknod /dev/gpiodev_0\
+    \ c %d 0'.\\n\", DEVICE_MAJOR);\n    printk(\"'mknod /dev/gpiodev_1 c %d 1'.\\\
+    n\", DEVICE_MAJOR);\n\n    // kmalloc is the normal method of allocating memory\
+    \ for objects smaller than page size in the kernel.\n    dev_c_message = (char\
+    \ *)kmalloc(32, GFP_KERNEL);\n    if (dev_c_message != NULL) {\n        printk(\"\
+    kmalloc dev_c_message: 0x%p\", dev_c_message);\n    }\n    return 0;\n}\n// end\
+    \ of init section\n\nstatic void out(void) {\n    dev_t devno;\n    printk(\"\
+    Bye TINY GPIO Driver\\n\");\n    if (dev_c_message) {\n        // release relevant\
+    \ memory\n        kfree(dev_c_message);\n    }\n    // release the tiny char device\n\
+    \    devno = MKDEV(DEVICE_MAJOR, DEVICE_MINOR);\n    // unregister_chrdev_region\
+    \ — unregister a range of device numbers\n    unregister_chrdev_region(devno,\
+    \ DEVICE_DEV_COUNT);\n    // cdev_del - remove a cdev from the system\n    cdev_del(&gpio_cdev);\n\
+    }\n// End cleanup section\n\nstatic int gpio_open(struct inode *inode, struct\
+    \ file *fil) {\n    int dev_major;\n    int dev_minor;\n    dev_major = MAJOR(inode);\n\
+    \    dev_minor = MINOR(inode);\n    printk(\"\\nTINY GPIO DEVICE: OPEN : %d %d\\\
+    n\", dev_major, dev_minor);\n    return 0;\n}\n\nstatic int gpio_close(struct\
+    \ inode *inode, struct file *fil) {\n    int dev_major;\n    int dev_minor;\n\
+    \    dev_major = MAJOR(inode);\n    dev_minor = MINOR(inode);\n    printk(\"\\\
+    nTINY GPIO DEVICE: CLOSE : %d %d\\n\", dev_major, dev_minor);\n    return 0;\n\
+    }\n\nstatic ssize_t gpio_read(struct file *filp, char *buff, size_t len, loff_t\
+    \ *off) {\n    int dev_major;\n    int dev_minor;\n    short count;\n    dev_major\
+    \ = MAJOR(filp);\n    dev_minor = MINOR(filp);\n    printk(\"FILE OPERATION READ:%d:%d\\\
+    n\", dev_major, dev_minor);\n    switch (minor) {\n        case 0:\n         \
+    \   strcpy(dev_c_message, \"DATA FROM minor : 0\");\n            break;\n    \
+    \    case 1:\n            strcpy(dev_c_message, \"DATA FROM minor : 1\");\n  \
+    \          break;\n        default:\n            len = 0;\n    }\n    // copy_to_user\
+    \ — Copy a block of data into user space.\n    // Returns number of bytes that\
+    \ could not be copied. On success, this will be zero.\n    count = copy_to_user(buff,\
+    \ dev_c_message, len);\n    return 0;\n}\n\nstatic ssize_t gpio_write(struct file\
+    \ *filp, const char *buff, size_t len, loff_t *off) {\n    int dev_major;\n  \
+    \  int dev_minor;\n    short count;\n    memset(dev_c_message, 0, 32);\n    dev_major\
+    \ = MAJOR(filp);\n    dev_minor = MINOR(filp);\n    count = copy_from_user(dev_c_message,\
+    \ buff, len);\n    printk(\"FILE OPERATION WRITE:%d:%d\\n\", dev_major, dev_minor);\n\
+    \    printk(\"dev_c_message: %s\", dev_c_message);\n    return len;\n}\n\nmodule_init(entrance);\n\
+    module_exit(out);\nMODULE_LICENSE(\"BSD\");\nMODULE_DESCRIPTION(\"TINY GPIO Driver\"\
+    );\n\n# And Makefile\n```makefile\nobj-m += gpiodriver.o\nall:\n\tmake -C /lib/modules/$(shell\
+    \ uname -r)/build M=$(PWD)\nclean:\n\tmake -C /lib/modules/$(shell uname -r)/build\
+    \ M=$(PWD) clean\n```\n\nNow, compile the above source code, get `gpiodriver.ko`,\
+    \ then sign it, and finally load it into the kernel via `insmod`.\nCheck if it\
+    \ is loaded successfully:\n```bash\ninsmod gpiodriver.ko\nlsmod | grep gpiodriver\n\
+    cat /proc/devices | grep gpiodriver\ndmesg | tail -10\n```\n\n# Appendix A: Linux\
+    \ Kernel Coding Style\n\n### Indentation\nOne of the most important rules, as\
+    \ tabs are 8 characters long, so indentations will also be 8 characters long.\
+    \ Now, some programmers will claim that having 8-individual indentations makes\
+    \ the code move too far to the right, and makes it difficult to examine on an\
+    \ 80-individual terminal screen. The solution to that is that if you need extra\
+    \ than 3 degrees of indentation, you need to repair your source code. The 8-char\
+    \ indents make things simpler to read, and feature the added advantage of caution\
+    \ when you’re nesting your functions too deep.\n\n```c\nswitch (test) {\n    case\
+    \ '1':\n    case '2':\n        data <<= 2;\n        break;\n    case '3':\n  \
+    \  case '4':\n        data <<= 4;\n        break;\n    case '5':\n    case '6':\n\
+    \        data <<= 6;\n        break;\n    case '7':\n    case '8':\n        data\
+    \ <<= 8;\n        break;\n    case '9':\n    case '10':\n        data <<= 10;\n\
+    \        break;\n    default:\n        break;\n}\n```\n\n- In a single line don’t\
+    \ do multiple assignments. Kernel coding should be super simple, easier to read,\
+    \ and understand.\n- Make your expressions easy to understand.\n- Don’t leave\
+    \ whitespace at the end of the line.\n- In a single line don’t put multiple statements.\n\
+    \n### Breaking long lines\nIt is strongly preferred that you limit the length\
+    \ of lines to 80 columns. Never break this rule. Any statement longer than 80\
+    \ columns must be broken into several parts, exceeding 80 columns significantly\
+    \ increases the readability of your source code and does not hide any information.\n\
+    \n### Placement of spaces\nUse a space after keywords (exceptional keywords those\
+    \ look like functions and usually used with parentheses, example `if`, `attribute`,\
+    \ `sizeof`, `typeof`). Don’t use spaces inside parenthesized expressions. Use\
+    \ a space after these keywords: `case`, `for`, `do`, `while`, `if`, but not with\
+    \ `sizeof`.\n\n### Placement of braces\nC styling placement of braces are highly\
+    \ suggested.\n```c\nif (input > N) {\n    di = ci * N;\n}\nswitch (input) {\n\
+    \    case 1:\n        input = input + 1;\n    case 2:\n        input = input +\
+    \ 2;\n    case 3:\n        input = input + 3;\n    default:\n        return input;\n\
+    }\n```\nFor `if`, `else`:\n```c\nif (input > N) {\n    input *= N;\n} else if\
+    \ (input < N) {\n    input /= N;\n} else {\n    input += N;\n}\n```\n\n### Do\
+    \ While Loop\nIn a single statement, do not necessarily use braces.\n```c\nif\
+    \ (a > b)\n    a = b * 2;\nif (a > b)\n    do_this();\n```\nBut, while you have\
+    \ multiple operations in one statement, then use braces.\n```c\nif (condition)\
+    \ {\n    do_this();\n    do_that();\n} else {\n    otherwise();\n}\n```\n\n###\
+    \ Naming Local and Global Variables\nC programmers do not use cute name like Pascal\
+    \ and Modular-2. While Pascal programmers use `TemporaryCounter`, c programmers\
+    \ use `tmp`. Compared to `TemporaryCounter`, `tmp` variable name is easier to\
+    \ write and not hard to understand. In C, local variables should be short, easy\
+    \ to write, and simple. For example, `tmp` can be any type of variable that holds\
+    \ temporary value. For the integer loop counter, you don’t need to use `loop_counter_integer`;\
+    \ rather `i` is enough. For global variables, you need to use a descriptive name.\
+    \ For example, `count_active_students` are suggested, not `cnt`.\n\n### Functions\n\
+    Functions will do just one thing and do that well, and functions name should be\
+    \ short and sweet. Include parameter names with their data types in function prototypes;\
+    \ it is preferred in Linux although it is not required by the C language. It is\
+    \ a pretty simple way to add valuable information for the reader. How many local\
+    \ variables should declare in a function? They should not exceed 5~10. If you\
+    \ need more variables then, re-think the function and split it into more functions.\
+    \ Early research found the working memory cut-off to be seven items, but recent\
+    \ research shows that mind’s limit four things at once. This study published in\
+    \ the journal Proceedings of the National Academy of Sciences. Functions should\
+    \ have one blank line before the next source code (Exceptional: `EXPORT` macro.\
+    \ It should follow immediately after the closing function brace line).\n\n```c\n\
+    int system_status_check(int){\n    return system_state == SYSTEM_RUNNING;\n}\n\
+    EXPORT_SYMBOL(system_status_check);\n```\n\n### Commenting\nComments are good,\
+    \ you can tell WHAT your code does, but you should not comment HOW. It is a waste\
+    \ of time to explain your badly written code in your comment; rather’s much better\
+    \ to write the self-explanatory code. Write comments at the head of the function,\
+    \ where you should tell people what the function does. The preferred style for\
+    \ long (multi-line) comments is:\n```c\n/** This is the preferred style for multi-line\n\
+    * comments in the Linux kernel source code.\n* Please use it consistently.\n*\
+    \ Description: This function does this, that,\n* and blah blah blah.\n*/\n```\n\
+    The use of comment for data is extremely important, whether the data are basic\
+    \ types or derived types. Use just one data declaration per line, don’t use multiple\
+    \ data declaration per line. This approach you to provide small comments on each\
+    \ item, explaining the data and it’s used.\n\n### Kconfig configuration file\n\
+    Indentation is different for all of the Kconfig files through the source tree.\
+    \ Lines here under a config definition are indented with one tab, while help text\
+    \ put after two additional spaces.\n```config\nconfig AUDIT\n    \"Auditing support\"\
+    \n    depends on NE\nThe help text. Blah blah blah.\nAnd crucial / dangerous features\
+    \ should be advertised in their prompt string:\nconfig KRFS_FS\n    \"KRFS read\
+    \ support (DANGEROUS)\"\n```\n\n### Macros and Enums\nMacro names defining labels\
+    \ in enums, constants should be capitalized.\n```c\n#define MAX 999\n```\nMore\
+    \ rules regarding macros\n- Macros resembling functions may be named in lower\
+    \ case.\n- Macros with multiple statements preferably enclosed in a do-while block.\n\
+    - Macros should not affect control flow.\n\n### Printing kernel messages\nMake\
+    \ your kernel messages clear, unambiguous, concise, and simple. Kernel messages\
+    \ should not have to be period terminated. Make your kernel messages matched with\
+    \ the right device and driver, and tagged with the right level (error level, warning\
+    \ level, and information level). For example `dev_err()`, `dev_warn()`, `dev_info()`.\
+    \ A good debugging message can be a huge help for remote troubleshooting.\n\n\
+    ### Memory allocation\nLinux kernel provides a couple of general purpose allocators:\n\
+    - `kmalloc()`\n- `kzalloc()`\n- `kmalloc_array()`\n- `kcalloc()`\n- `vmalloc()`\n\
+    - `vzalloc()`\nIn these memory allocators, the preferred form of passing a size\
+    \ of a struct is the following: `p = kmalloc(sizeof(*p), …)`\n"
+  raw: 'brw-rw----  1 root disd 9,   1 May 17 10:15 sda1Here, the major number of
+    sda and sda1 is 9, and minor numbers are different, 0 and 1.Explanation # 4Any
+    interface under /dev/xxx “everything is about file”, so the operation of the device
+    driver is actually the operation of the file.The APIs of a device driver we can
+    think all about file operations and the device driver is used to define/open/read/write
+    etc. functionalities.All file operations are defined in the file_operations structure
+    of the kernel <linux/fs.h> header file.In the following device driver example,
+    we will seestruct file_operations gpio_fops = {read    :       gpio_read,write   :       gpio_write,open    :       gpio_open,release
+    :       gpio_close,owner   :       GPIO_MODULE};Here, we have declared a structure
+    and assigned it to the structure variable gpio_fops. The values are function pointers
+    except for the owner.Then we have used cdev_add to rgister the file operation
+    struction with each driver in the init module.Developing a tiny GPIO char device
+    driver#include <linux/kernel.h>#include <linux/module.h>#include <linux/moduleparam.h>#include
+    <linux/init.h>#include <linux/stat.h>#include <linux/cdev.h>#include <linux/device.h>#include
+    <linux/fs.h>#include <linux/slab.h>#include <asm/uaccess.h>#include <linux/string.h>//
+    end of header include section#define DEVICE_MAJOR  200#define DEVICE_MINOR  0#define
+    DEVICE_DEV_COUNT 2// end of define defition sectionstatic int     gpio_open( struct
+    inode *, struct file * );static ssize_t gpio_read( struct file * ,        char
+    *  , size_t, loff_t *);static ssize_t gpio_write(struct file * , const  char * 
+    , size_t, loff_t *);static int     gpio_close(struct inode *, struct file * );struct
+    file_operations gpio_fops = {read    :       gpio_read,write   :       gpio_write,open    :       gpio_open,release
+    :       gpio_close,owner   :       GPIO_MODULE};struct cdev gpio_cdev;static char
+    *dev_c_message = NULL;static int entrance(void){​ // get device number​ // A device
+    ID is represented using the type dev_t.​ dev_t devno;​ unsigned int count = DEVICE_DEV_COUNT;​
+    int err;​ // A device ID consists of two parts: a major ID, identifying the class//
+    of the device, and a minor ID, identifying a specific instance of a// device in
+    that class. Given major and minor device IDs, makedev() combines these to produce//
+    a device ID, returned as the function result.// The major and minor number are
+    how Linux identifies the underlying hardware device associated with a device file.//
+    Most of the cases major number identifies the driver while the minor distinguishes
+    the different devices the driver controls.​ devno = MKDEV(DEVICE_MAJOR, DEVICE_MINOR);​
+    // register_chrdev_region function — register a range of device numbers​ // parameters
+    are (dev_t from, unsigned count, const char * name);​ // from - the first in the
+    desired range of device numbers; must include the major number.​ // count - the
+    number of consecutive device numbers required​ // name - the name of the device
+    or driver.​ register_chrdev_region(devno, count , "gpiodev");​ // cdev_init —
+    initialize a cdev structure​ cdev_init(&gpio_cdev, &gpio_fops);​ gpio_cdev.owner
+    = GPIO_MODULE;​ // cdev_add registers a character device with the kernel.​ //
+    The kernel maintains a list of character devices under cdev_map​ err = cdev_add(&gpio_cdev,
+    devno, count);​ if (err < 0)​ {​ printk("Error: While Adding Device\n");​ return
+    -1;​ }​ printk("TINY GPIO Device Driver.\n");​ printk("''mknod /dev/gpiodev_0
+    c %d 0''.\n", DEVICE_MAJOR);​ printk("''mknod /dev/gpiodev_1 c %d 1''.\n", DEVICE_MAJOR);​
+    // kmalloc is the normal method of allocating memory for objects smaller than
+    page size in the kernel.​ dev_c_message = (char *)kmalloc(32, GFP_KERNEL);​ if
+    (dev_c_message !=NULL) {​ printk("kmalloc dev_c_message: 0x%p\n", dev_c_message);​
+    }return 0;}// end of init sectionstatic void out(void){​ dev_t devno;​ printk("Bye
+    TINY GPIO Driver\n");​ if (dev_c_message){// release relevant kernel memorykfree(dev_c_message);​
+    }​ // release the tiny GPIO char device​ devno = MKDEV(DEVICE_MAJOR, DEVICE_MINOR);​
+    // unregister_chrdev_region — unregister a range of device numbers​ unregister_chrdev_region(devno,
+    DEVICE_DEV_COUNT);​ // cdev_del - remove a cdev from the system​ cdev_del(&gpio_cdev);}//
+    End of cleanup sectionstatic int gpio_open(struct inode *inod, struct file *fil){​
+    int dev_major;​ int dev_minor;​ dev_major = imajor(inod);​ dev_minor = iminor(inod);​
+    printk("\n*****TINY GPIO DEVICE: OPEN :  major %d  minor %d*****\n",dev_major,
+    dev_minor);​ return 0;}static int gpio_close(struct inode *inod, struct file *fil){​
+    int dev_major;​ int dev_minor;​ dev_major = MAJOR(filp->f_dentry->d_inode->i_rdev);​
+    dev_minor = MINOR(filp->f_dentry->d_inode->i_rdev);​ printk("\n*****TINY GPIO
+    DEVICE: CLOSE :  major %d  minor %d*****\n",dev_major, dev_minor);​ return 0;}static
+    ssize_t gpio_read(struct file *filp, char *buff, size_t len, loff_t *off){​ int
+    dev_major, dev_minor;​ short count;​ dev_major = MAJOR(filp->f_dentry->d_inode->i_rdev);​
+    dev_minor = MINOR(filp->f_dentry->d_inode->i_rdev);​ printk("FILE OPERATION READ:%d:%d\n",
+    dev_major, dev_minor);​ switch(minor){​ case 0:​ strcpy(dev_c_message,"DATA FROM
+    MOUDLE: minor : 0");​ break;​ case 1:​ strcpy(dev_c_message,"DATA FROM MOUDLE:
+    minor : 1");​ break;​ default:​ len = 0;​ }​ // copy_to_user — Copy a block of
+    data into user space.​ // Returns number of bytes that could not be copied. On
+    success, this will be zero.​ count = copy_to_user( buff, dev_c_message, len);​
+    return 0;}static ssize_t gpio_write(struct file *filp, const char *buff, size_t
+    len, loff_t *off){​ int dev_major, dev_minor;​ short count;​ memset(dev_c_message,
+    0, 32);​ dev_major = MAJOR(filp->f_dentry->d_inode->i_rdev);​ dev_minor = MINOR(filp->f_dentry->d_inode->i_rdev);​
+    count = copy_from_user( dev_c_message, buff, len );​ printk("FILE OPERATION WRITE:%d:%d\n",dev_major,dev_minor);​
+    printk("dev_c_message: %s", dev_c_message);​ return len;}module __init (entrance);module
+    __exit(out);MODULE_LICENSE("BSD");MODULE_DESCRIPTION("TINY GPIO Device Driver");And
+    Makefileobj-m += gpiodriver.oall:​ make -C /lib/modules/$(shell uname -r)/build
+    M=$(PWD) modulesclean:​ make -C /lib/modules/$(shell uname -r)/build M=$(PWD)
+    cleanNow, compile the above source code, get gpiodriver.ko , then sign it, and
+    finally load it into the kernel via insmod .Check if it is loaded successfully:$
+    insmod gpiodriver.ko$ lsmod | grep gpiodriver$ cat /proc/devices | grep gpiodriver$
+    dmesg | tail -10Appendix A:Linux Kernel Coding StyleIndentationOne of the most
+    important rules, as tabs are 8 characters long, so indentations will also be 8
+    characters long. Now, some programmers will claim that having 8-individual indentations
+    makes the code move too far to the right, and makes it difficult to examine on
+    an 80-individual terminal screen.The solution to that is that if you need extra
+    than 3 degrees of indentation, you need to repair your source code.The 8-char
+    indents make things simpler to read, and feature the added advantage of caution
+    you when you’re nesting your functions too deep.switch (test) {case ''1'':case
+    ''2'':data <<= 2;break;case ''3'':case ''4'':data <<= 4;break;case ''5'':case
+    ''6'':data <<= 6;​ break;case ''7'':case ''8'':data <<= 8;​ break;case ''9'':case
+    ''10'':data <<= 10;​ break;default:break;}-           In a single line don’t do
+    multiple assignments. Kernel coding should be super simple, easier to read, and
+    understand.-           Make your expressions easy to understand.-           Don’t
+    leave whitespace at the end of the line.-           In a single line don’t put
+    multiple statements.Breaking long linesIt is strongly preferred that you should
+    limit the length of lines to 80 columns. Never break this rule.Any statement longer
+    than 80 columns must be broken into several parts, exception: exceeding 80 columns
+    significantly increases the readability of your source code and does not hide
+    any information.Placement of spaces-          Use a space after keywords (exceptional
+    keywords those look somewhat like functions and usually used with parentheses,
+    for example, alighnof, _attribute, sizeof, typeof)-           Don’t use spaces
+    inside parenthesized expressions.use a space after these keywords:case, for, do,
+    while, do while, if,but not with sizeof, typeof, alignof, or __attribute__. E.g.,s
+    = sizeof(struct file);Placement of bracesC styling placement of braces are highly
+    suggested.if ( input > N) {​ di = ci * N;}The same rule for switch, do while,
+    while etc.switch (input) {case 1:input = input +1;case 2:input = input +2;case
+    3:input = input +3;default:return input;}For if, else if,if (input > N) {input
+    * N;} else if (input < N) {input / N;} else {input + N;}Do While Loop,do {input++;}
+    while (input < N);In a single statement, do not unnecessarily use braces.if (a
+    > b)a = b * 2;andif (a > b)do_this();elsedo_that();But, while you have multiple
+    operations in one condition statement, then use braces.if (condition) {do_this();do_that();}
+    else {otherwise();}Naming Local and Global VariablesC programmers do not use a
+    cute name like Pascal and Modula-2 programmers. While Pascal programmers use VariableTemporaryCounter,
+    c programmers use tmp. Compared to VariableTemporaryCounter, the tmp variable
+    name is much easier to write and not hard to understand.In C, local variables
+    should be short, easy to write, and simple. For example, tmp can be any type of
+    variable that holds temporary value. For the integer loop counter, you don’t need
+    to use loop_counter_integer; rather i is enough.For global variables, you need
+    to use a descriptive name. For example, count_active_students are suggested, not
+    cntastu.FunctionsFunctions will do just one thing and will do that well, and functions
+    name should be short and sweet.Include parameter names with their data types in
+    function prototypes; it is preferred in Linux although it is not required by the
+    C language. Why it is preferred in Linux? Because it is a pretty simple way; to
+    add valuable information for the reader.How many local variables you should declare
+    in a function? They should not exceed 5 ~ 10\. If you need more variables then
+    this suggestion, then re-think the function and split it into more functions.Early
+    research found the working memory cut-off to be about seven items, but recent
+    research shows that mind’s limit four things at once. This study published in
+    the journal Proceedings of the National Academy of Sciences.Functions should have
+    one blank line before the next source code. (Exceptional: EXPORT macro. It should
+    follow immediately after the closing function brace line).int system_status_check(int){return
+    system_state == SYSTEM_RUNNING;}EXPORT_SYMBOL(system_status_check);CommentingComments
+    are good, you can tell WHAT your code does, but you should not comment HOW. It
+    is a waste of time to explain your badly written code in your comment; rather
+    it’s much better to write the self-explanatory code.Write comments at the head
+    of the function, where you should tell people what the function does.The preferred
+    style for long (multi-line) comments is:/** This is the preferred style for multi-line*
+    comments in the Linux kernel source code.* Please use it consistently.** Description: 
+    This function does this, that,* and blah blah blah.*/The use of comment for data
+    is extremely important, whether the data are basic types or derived types.Use
+    just one data declaration per line, don’t use multiple data declaration per line.
+    This approach you to provide small comments on each item, explaining the data
+    and it’s used.Kconfig configuration fileIndentation is different for all of the
+    Kconfig* configuration files through the source tree. Lines here under a config
+    definition are indented with one tab, while help text put after two additional
+    spaces.config AUDITbool "Auditing support"depends on NEThelpThe help text. Blah
+    blah blah.And crucial / dangerous features should be advertised in their prompt
+    string:config KRFS_FSbool " KRFS read support (DANGEROUS)"Macros and EnumsMacro
+    names defining labels in enums, constants should be capitalized.#define MAX 999More
+    rules regarding macros-           Macros resembling functions may be named in
+    lower case.-           Macros with multiple statements preferably enclosed in
+    a do-while block.-           Macros should not affect control flow.Printing kernel
+    messages-            Make your kernel messages clear, unambiguous, concise, and
+    simple.-            Kernel messages should not have to be period terminated.-
+              Make your kernel messages matched with the right device and driver,
+    and also tagged with the right level (error level, warning level, and information
+    level). For example, dev_err(), dev_warn(), dev_info().-            A good debugging
+    message can be a huge help for remote troubleshooting.Memory allocationLinux kernel
+    provides a couple of general purpose memory allocators:-           kmalloc()-          
+    kzalloc()-           kmalloc_array()-           kcalloc()-           vmalloc()-          
+    vzalloc()In these memory allocators, the preferred form of passing a size of a
+    struct is the following:p = kmalloc(sizeof(*p), …);About the AuthorMd Mahbubur
+    Rahman is an inventor, software engineer, technology book author, and loves entrepreneurship.
+    He has more than 5 US & EU Patents in the field of Wireless Charging AND Indoor
+    Positioning & Navigation System. And he has more than 10 years’ experience in
+    the software engineering field.  '
+  toc: []
+  trans: "\n\n`brw-rw----  1 root disd 9,  1 May 17 10:15 sda1`\n\n这里，`sda` 和 `sda1`\
+    \ 的主号是 9，次号不同，分别为 0 和 1。\n\n# 解释 #4\n\n任何 `/dev/xxx` 下的接口都遵循“一切皆文件”，因此设备驱动的操作实际上就是对文件的操作。我们可以认为设备驱动的\
+    \ API 全都是关于文件操作，而设备驱动被用于定义/打开/读/写等功能。所有的文件操作都定义在内核头文件 `<linux/fs.h>` 的 `file_operations`\
+    \ 结构体中。\n\n在接下来的设备驱动示例中，我们将看到 `file_operations` 结构体：\n\n```c\nstruct file_operations\
+    \ gpio_fops = {\n    read    : gpio_read,\n    write   : gpio_write,\n    open\
+    \    : gpio_open,\n    release : gpio_close,\n    owner   : GPIO_MODULE\n};\n\
+    ```\n\n在这里，我们声明了一个结构体并将其赋值给结构体变量 `gpio_fops`。除了 `owner` 之外，这些值都是函数指针。然后我们使用 `cdev_add`\
+    \ 在初始化模块中为每个驱动注册文件操作结构体。\n\n# 开发一个微型 GPIO 字符设备驱动\n\n```c\n#include <linux/kernel.h>\n\
+    #include <linux/module.h>\n#include <linux/moduleparam.h>\n#include <linux/init.h>\n\
+    #include <linux/stat.h>\n#include <linux/cdev.h>\n#include <linux/device.h>\n\
+    #include <linux/fs.h>\n#include <linux/slab.h>\n#include <asm/uaccess.h>\n#include\
+    \ <linux/string.h>\n\n// 头文件包含结束\n#define DEVICE_MAJOR  200\n#define DEVICE_MINOR\
+    \  0\n#define DEVICE_DEV_COUNT 2\n\n// 定义结束\n\nstatic int gpio_open(struct inode\
+    \ *, struct file *);\nstatic ssize_t gpio_read(struct file *, char *, size_t,\
+    \ loff_t *);\nstatic ssize_t gpio_write(struct file *, const char *, size_t, loff_t\
+    \ *);\nstatic int gpio_close(struct inode *, struct file *);\n\nstruct file_operations\
+    \ gpio_fops = {\n    read    : gpio_read,\n    write   : gpio_write,\n    open\
+    \    : gpio_open,\n    release : gpio_close,\n    owner   : GPIO_MODULE\n};\n\n\
+    struct cdev gpio_cdev;\nstatic char *dev_c_message = NULL;\n\nstatic int entrance(void)\
+    \ {\n    // 获取设备号\n    // 设备 ID 使用类型 dev_t 来表示。\n    dev_t devno;\n    unsigned\
+    \ int count = DEVICE_DEV_COUNT;\n    int err;\n\n    // 设备 ID 由两部分组成：主 ID（用于识别设备类）\n\
+    \    // 和次 ID（用于识别该类中特定设备的实例）。\n    // 给定主设备和次设备 ID，makedev() 将这些合并以产生\n    //\
+    \ 设备 ID，并作为函数结果返回。\n    // 主号和次号是 Linux 识别与设备文件相关的底层硬件设备的方式。\n    // 大多数情况下主号标识驱动程序，而次号区分驱动程序控制的不同设备。\n\
+    \    devno = MKDEV(DEVICE_MAJOR, DEVICE_MINOR);\n\n    // register_chrdev_region\
+    \ 函数 — 注册设备设备号\n    // 参数为 (dev_t from, unsigned count, const char * name);\n\
+    \    // from - 目标设备号范围中的第一个；必须包含主号。\n    // count - 需要的连续设备号数量\n    // name -\
+    \ 设备或驱动程序的名称\n    register_chrdev_region(devno, count, \"gpiodev\");\n\n    //\
+    \ cdev_init — 初始化一个 cdev 结构体\n    cdev_init(&gpio_cdev, &gpio_fops);\n    gpio_cdev.owner\
+    \ = GPIO_MODULE;\n\n    // cdev_add 向内核注册一个字符设备。\n    // 内核在 cdev_map 下维护了一个字符设备列表\n\
+    \    err = cdev_add(&gpio_cdev, devno, count);\n    if (err < 0) {\n        printk(\"\
+    Error: While Adding Device\\n\");\n        return -1;\n    }\n\n    printk(\"\
+    TINY GPIO Device Driver.\\n\");\n    printk(\"'mknod /dev/gpiodev_0 c %d 0'.\\\
+    n\", DEVICE_MAJOR);\n    printk(\"'mknod /dev/gpiodev_1 c %d 1'.\\n\", DEVICE_MAJOR);\n\
+    \n    // kmalloc 是内核中为小于页大小的对象分配内存的标准方法。\n    dev_c_message = (char *)kmalloc(32,\
+    \ GFP_KERNEL);\n    if (dev_c_message != NULL) {\n        printk(\"kmalloc dev_c_message:\
+    \ 0x%p\", dev_c_message);\n    }\n    return 0;\n}\n// 初始化部分结束\n\nstatic void\
+    \ out(void) {\n    dev_t devno;\n    printk(\"Bye TINY GPIO Driver\\n\");\n  \
+    \  if (dev_c_message) {\n        // 释放相关内存\n        kfree(dev_c_message);\n  \
+    \  }\n    // 释放微型字符设备\n    devno = MKDEV(DEVICE_MAJOR, DEVICE_MINOR);\n    //\
+    \ unregister_chrdev_region — 注销设备设备号范围\n    unregister_chrdev_region(devno, DEVICE_DEV_COUNT);\n\
+    \    // cdev_del — 从系统中删除 cdev\n    cdev_del(&gpio_cdev);\n}\n// 清理部分\n\nstatic\
+    \ int gpio_open(struct inode *inode, struct file *fil) {\n    int dev_major;\n\
+    \    int dev_minor;\n    dev_major = MAJOR(inode);\n    dev_minor = MINOR(inode);\n\
+    \    printk(\"\\nTINY GPIO DEVICE: OPEN : %d %d\\n\", dev_major, dev_minor);\n\
+    \    return 0;\n}\n\nstatic int gpio_close(struct inode *inode, struct file *fil)\
+    \ {\n    int dev_major;\n    int dev_minor;\n    dev_major = MAJOR(inode);\n \
+    \   dev_minor = MINOR(inode);\n    printk(\"\\nTINY GPIO DEVICE: CLOSE : %d %d\\\
+    n\", dev_major, dev_minor);\n    return 0;\n}\n\nstatic ssize_t gpio_read(struct\
+    \ file *filp, char *buff, size_t len, loff_t *off) {\n    int dev_major;\n   \
+    \ int dev_minor;\n    short count;\n    dev_major = MAJOR(filp);\n    dev_minor\
+    \ = MINOR(filp);\n    printk(\"FILE OPERATION READ:%d:%d\\n\", dev_major, dev_minor);\n\
+    \    switch (minor) {\n        case 0:\n            strcpy(dev_c_message, \"DATA\
+    \ FROM minor : 0\");\n            break;\n        case 1:\n            strcpy(dev_c_message,\
+    \ \"DATA FROM minor : 1\");\n            break;\n        default:\n          \
+    \  len = 0;\n    }\n    // copy_to_user — 将数据拷贝到用户空间。\n    // 成功时返回未拷贝的字节数。\n\
+    \    count = copy_to_user(buff, dev_c_message, len);\n    return 0;\n}\n\nstatic\
+    \ ssize_t gpio_write(struct file *filp, const char *buff, size_t len, loff_t *off)\
+    \ {\n    int dev_major;\n    int dev_minor;\n    short count;\n    memset(dev_c_message,\
+    \ 0, 32);\n    dev_major = MAJOR(filp);\n    dev_minor = MINOR(filp);\n    count\
+    \ = copy_from_user(dev_c_message, buff, len);\n    printk(\"FILE OPERATION WRITE:%d:%d\\\
+    n\", dev_major, dev_minor);\n    printk(\"dev_c_message: %s\", dev_c_message);\n\
+    \    return len;\n}\n\nmodule_init(entrance);\nmodule_exit(out);\nMODULE_LICENSE(\"\
+    BSD\");\nMODULE_DESCRIPTION(\"TINY GPIO Driver\");\n\n# Makefile\n```makefile\n\
+    obj-m += gpiodriver.o\nall:\n\tmake -C /lib/modules/$(shell uname -r)/build M=$(PWD)\n\
+    clean:\n\tmake -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean\n```\n\n\
+    现在编译上述源码，获取 `gpiodriver.ko`，对其进行签名，最后通过 `insmod` 将其加载到内核。检查是否成功加载：\n```bash\n\
+    insmod gpiodriver.ko\nlsmod | grep gpiodriver\ncat /proc/devices | grep gpiodriver\n\
+    dmesg | tail -10\n```\n\n# 附录 A：Linux 内核编码风格\n\n### 缩进\n最重要的规则之一，因为 Tab 占用 8 个字符，所以缩进也是\
+    \ 8 个字符。现在，有些程序员声称 8 字符的缩进会导致代码向右移动太远，难以在 80 字符的屏幕上查看。解决这个办法是，如果你需要超过 3 级的缩进，你就需要修复你的源码。8\
+    \ 字符缩进让阅读变得更简单，并且在函数嵌套过深时具有额外的警示作用。\n\n```c\nswitch (test) {\n    case '1':\n\
+    \    case '2':\n        data <<= 2;\n        break;\n    case '3':\n    case '4':\n\
+    \        data <<= 4;\n        break;\n    case '5':\n    case '6':\n        data\
+    \ <<= 6;\n        break;\n    case '7':\n    case '8':\n        data <<= 8;\n\
+    \        break;\n    case '9':\n    case '10':\n        data <<= 10;\n       \
+    \ break;\n    default:\n        break;\n}\n```\n\n- 在单行内不要进行多次赋值。内核代码应该是极其简单、易于阅读和理解的。\n\
+    - 让你的表达式变得易于理解。\n- 不要在行尾留有空白字符。\n- 在单行内不要放置多个语句。\n\n### 长行折行\n强烈建议将行长度限制在 80 列以内。永远不要打破此规则。任何超过\
+    \ 80 列的语句都必须拆分成几部分，超过 80 列会显著降低源码的可读性，且不会隐藏任何信息。\n\n### 空格的放置\n在关键字后使用空格（例外是那些像函数且通常与括号一起使用的关键字，例如\
+    \ `if`、`attribute`、`sizeof`、`typeof`）。不要在括号内部使用空格。\n\n### 大括号的位置\n建议在结构定义处使用大括号。\n\
+    ```c\nif (input) {\n    input++;\n} else switch (input) {\n    case 1:\n     \
+    \   input++;\n        break;\n    case 2:\n        input++;\n        break;\n\
+    \    default:\n        break;\n}\n```\n在函数定义处使用大括号。\n```c\nvoid function(void)\
+    \ {\n    // ...\n}\n```\n在 `if` 语句中使用大括号。\n```c\nif (condition) {\n    // ...\n\
+    }\n```\n在 `switch` 语句中使用大括号。\n```c\nswitch (variable) {\n    case 1:\n       \
+    \ // ...\n        break;\n}\n```\n"
+- fmt: '
+
+    '
+  raw: '* * *'
+  toc: []
+  trans: ' '
