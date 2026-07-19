@@ -1,0 +1,14 @@
+name: Unix as IDE
+name_cn: Unix IDE 指南
+slug: unix-as-ide
+toc:
+- - '##'
+  - lsof -p 30779
+- - '##'
+  - ls -l /proc/30779/fd
+- - '##'
+  - 使用 `pmap` 查看内存分配
+- - '##'
+  - 'pmap 30779 '
+- - '##'
+  - 修订

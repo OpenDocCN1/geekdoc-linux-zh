@@ -631,6 +631,7 @@
 +   [理解 Linux 内核：初学者指南：最简单、最易理解、学习和使用 Linux 内核的书籍。](docs/understanding-linux-kernel-absolute-beginners-guide-the-most/README.md)
 +   [Linux 内核开发理解：理解并修改 Linux 系统核心](docs/understanding-linux-kernel-development-understanding-and-mod/README.md)
 +   [理解 Linux 虚拟内存管理器](docs/understanding-the-linux-virtual-memory-manager-bruce-perens-/README.md)
++   [Unix IDE 指南](docs/unix-as-ide/README.md)
 +   [UNIX编程：UNIX进程、内存管理、进程通信、网络及Shell脚本（英文版）](docs/unix-programming-unix-processes-memory-management-process-co/README.md)
 +   [像 IDE 一样使用 vim](docs/use-vim-ide/README.md)
 +   [Linux 使用指南 (使用系列)](docs/using-linux-using-series/README.md)
