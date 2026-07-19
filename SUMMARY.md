@@ -611,6 +611,7 @@
 +   [新手电脑黑客指南：无线网络破解、基础安全、渗透测试及 Kali Linux 完整指南](docs/the-new-computer-hacking-for-novices-and-dummies-complete-gu/README.md)
 +   [CompTIA Linux+ 认证官方学生指南（XK0-004 考试）](docs/the-official-comptia-linux-student-guide-exam-xk0-004/README.md)
 +   [Ubuntu 官方指南](docs/the-official-ubuntu-book/README.md)
++   [Ubuntu 官方指南 (第8版)](docs/the-official-ubuntu-book-8th-edition/README.md)
 +   [Ubuntu 官方指南（第9版）](docs/the-official-ubuntu-book-9th-edition/README.md)
 +   [管理心理学：心智在确定、教授和实施最小浪费方法中的功能](docs/the-psychology-of-management-the-function-of-the-mind-in-det/README.md)
 +   [终极 Linux Shell 脚本指南：使用 Linux Shell 脚本实现自动化、优化与赋能任务](docs/the-ultimate-linux-shell-scripting-guide-automate-optimize-a/README.md)
