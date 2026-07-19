@@ -635,6 +635,7 @@
 +   [Linux 内核开发理解：理解并修改 Linux 系统核心](docs/understanding-linux-kernel-development-understanding-and-mod/README.md)
 +   [理解 Linux 虚拟内存管理器](docs/understanding-the-linux-virtual-memory-manager-bruce-perens-/README.md)
 +   [Unix IDE 指南](docs/unix-as-ide/README.md)
++   [UNIX 编程指南指南](docs/unix-programming/README.md)
 +   [UNIX编程：UNIX进程、内存管理、进程通信、网络及Shell脚本（英文版）](docs/unix-programming-unix-processes-memory-management-process-co/README.md)
 +   [UNIX 问答指南](docs/unix-questions-and-answers/README.md)
 +   [最可能遇到的 UNIX Shell 编程面试题：工作面试问题系列](docs/unix-shell-programming-interview-questions-youll-most-likely/README.md)
