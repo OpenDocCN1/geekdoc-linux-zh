@@ -645,6 +645,7 @@
 +   [像 IDE 一样使用 vim](docs/use-vim-ide/README.md)
 +   [Linux 使用指南 (使用系列)](docs/using-linux-using-series/README.md)
 +   [Ubuntu Linux 使用指南](docs/using-ubuntu-linux/README.md)
++   [虚拟化完全指南：商业基础版](docs/virtualization-complete-business-basic-edition/README.md)
 +   [酷炫 Shell 脚本（第 2 版）：Linux、OS X 和 UNIX 系统 101 个脚本示例](docs/wicked-cool-shell-scripts-2nd-edition-101-scripts-for-linux-/README.md)
 +   [Windows Server 2022 与 Powershell 一站式入门指南](docs/windows-server-2022-amp-powershell-all-in-one-for-dummies/README.md)
 +   [Windows Server 2022 与 Powershell 一站式指南（傻瓜书（计算机／技术））](docs/windows-server-2022-amp-powershell-all-in-one-for-dummies-fo/README.md)
