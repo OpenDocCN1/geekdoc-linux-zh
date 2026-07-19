@@ -636,6 +636,7 @@
 +   [UNIX编程：UNIX进程、内存管理、进程通信、网络及Shell脚本（英文版）](docs/unix-programming-unix-processes-memory-management-process-co/README.md)
 +   [UNIX 问答指南](docs/unix-questions-and-answers/README.md)
 +   [最可能遇到的 UNIX Shell 编程面试题：工作面试问题系列](docs/unix-shell-programming-interview-questions-youll-most-likely/README.md)
++   [UNIX Shell 脚本面试题、答案与解析：UNIX Shell 认证复习](docs/unix-shell-scripting-interview-questions-answers-and-explana/README.md)
 +   [像 IDE 一样使用 vim](docs/use-vim-ide/README.md)
 +   [Linux 使用指南 (使用系列)](docs/using-linux-using-series/README.md)
 +   [Ubuntu Linux 使用指南](docs/using-ubuntu-linux/README.md)
