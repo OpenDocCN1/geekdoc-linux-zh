@@ -652,6 +652,7 @@
 +   [Windows Server 2022 与 Powershell 一站式指南（傻瓜书（计算机／技术））](docs/windows-server-2022-amp-powershell-all-in-one-for-dummies-fo/README.md)
 +   [Windows Server 2022 与 Powershell 一册通](docs/windows-server-2022-powershell-all-in-one-for-dummies-for-du/README.md)
 +   [Windows 到 Linux 迁移工具包](docs/windows-to-linux-migration-toolkit/README.md)
++   [无线黑客 · Kali Linux 无线黑客入门指南](docs/wireless-hacking-introduction-to-wireless-hacking-with-kali-/README.md)
 +   [Kali Linux 无线破解：快速学习任何无线网络渗透测试实施指南](docs/wireless-hacking-with-kali-linux-learn-fast-how-to-hack-any-/README.md)
 +   [Kali Linux 无线渗透测试](docs/wireless-penetration-testing-with-kali-linux/README.md)
 +   [Linux 2015 使用指南](docs/you-can-use-linux-2015/README.md)
