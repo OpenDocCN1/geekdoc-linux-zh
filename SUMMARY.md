@@ -629,6 +629,7 @@
 +   [Ubuntu Linux 圣经（第11版）](docs/ubuntu-linux-bible-11th-edition/README.md)
 +   [Ubuntu 高级技巧与定制秘籍](docs/ubuntu-powerful-hacks-and-customizations/README.md)
 +   [Ubuntu Unleashed 2014 版：涵盖 13.10 和 14.04（第 9 版）](docs/ubuntu-unleashed-2014-edition-covering-1310-and-1404-9th-edi/README.md)
++   [Ubuntu 2019 版：涵盖 18.04, 18.10, 19.04](docs/ubuntu-unleashed-2019-edition-covering-18-04-18-10-19-04/README.md)
 +   [理解 Linux 进程](docs/udstd-linux-proc/README.md)
 +   [终极Linux项目 第一版2022](docs/ultimate-linux-projects---first-edition-2022/README.md)
 +   [理解 Linux 内核：初学者指南：最简单、最易理解、学习和使用 Linux 内核的书籍。](docs/understanding-linux-kernel-absolute-beginners-guide-the-most/README.md)
