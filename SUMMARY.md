@@ -659,6 +659,7 @@
 +   [Kali Linux 无线破解：快速学习任何无线网络渗透测试实施指南](docs/wireless-hacking-with-kali-linux-learn-fast-how-to-hack-any-/README.md)
 +   [Kali Linux 无线渗透测试](docs/wireless-penetration-testing-with-kali-linux/README.md)
 +   [Unix 进程实战](docs/working-with-unix-processes-for-greg-kennedy/README.md)
++   [x64 汇编语言步步营：Linux 编程 (Tech Today), 第 4 版](docs/x64-assembly-language-step-by-step-programming-with-linux-te/README.md)
 +   [宝贝，是时候打鼓了：鼓手手音乐趣味乐器礼物 ~ 小号横线笔记本](docs/yeah-baby-its-time-to-play-the-drums-drummer-music-novelty-i/README.md)
 +   [Linux 2015 使用指南](docs/you-can-use-linux-2015/README.md)
 +   [Linux 内核：开发过程详解（Linux 内核设计与实现完整指南）](docs/ядро-linux-описание-процесса-разработки-исчерпывающее-руково/README.md)
