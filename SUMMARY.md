@@ -632,6 +632,7 @@
 +   [非极客的Ubuntu：无痛、项目式、实用高效指南（涵盖Ubuntu 7.04 火猄版）](docs/ubuntu-for-non-geeks-a-pain-free-project-based-get-things-do/README.md)
 +   [Ubuntu Linux 100 个成功秘籍、技巧、窍门与技巧工具箱及实用指南](docs/ubuntu-linux-100-success-secrets-tips-tricks-hints-and-hacks/README.md)
 +   [Ubuntu Linux 圣经（第11版）](docs/ubuntu-linux-bible-11th-edition/README.md)
++   [Ubuntu Linux 圣经（含索引）](docs/ubuntu-linux-bible-includes-index/README.md)
 +   [Ubuntu Linux 圣经第三版](docs/ubuntu-linux-bible-third-edition/README.md)
 +   [Ubuntu 高级技巧与定制秘籍](docs/ubuntu-powerful-hacks-and-customizations/README.md)
 +   [Ubuntu Unleashed，2012版：涵盖 Ubuntu 11.10 和 12.04](docs/ubuntu-unleashed-2012-edition-covering-ubuntu-1110-and-1204/README.md)
