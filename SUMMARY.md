@@ -520,6 +520,7 @@
 +   [Python 和 Qt 快速 GUI 编程](docs/prentice-hall-open-source-software-development-mark-summerfi/README.md)
 +   [Ubuntu Mobile 开发高级指南](docs/professional-ubuntu-mobile-development/README.md)
 +   [编程与编码：IoT 开发、Java、Java EE、Java Swing、JavaScript、jQuery、JSON、Julia 编程、Junit、内核、Kotlin、Laravel、Laravel 框架、LaTeX、LibGDX、LINQ 与 Linux](docs/programming-coding-iot-development-java-java-ee-java-swing-j/README.md)
++   [初学者编程指南：本书包含初学者 SQL 计算机编程、Python、Kali Linux、基于 Kali Linux 的黑客攻击。2020 编程语言学习。](docs/programming-for-beginners-this-book-includes-sql-computer-pr/README.md)
 +   [Linux 游戏编程](docs/programming-linux-games/README.md)
 +   [PyQt：Python 跨平台 GUI 开发：无需重写代码即可在 Windows、macOS 和 Linux 上无缝运行软件](docs/pyqt-cross-platform-gui-development-with-python-run-your-sof/README.md)
 +   [Python 快速成教程：7 天或更短学习 Python 的初学者指南，带你进入数据科学、人工智能……机器学习的世界，并包含实战项目](docs/python-crash-course-a-practical-beginners-guide-to-learn-pyt/README.md)

@@ -1,0 +1,2 @@
++   [初学者编程指南：本书包含初学者 SQL 计算机编程、Python、Kali Linux、基于 Kali Linux 的黑客攻击。2020 编程语言学习。](README.md)
++   [初学者编程指南：本书包含初学者 SQL 计算机编程、Python、Kali Linux、基于 Kali Linux 的黑客攻击。2020 编程语言学习。](programming-for-beginners-this-book-includes-sql-computer-pr_0.md)
