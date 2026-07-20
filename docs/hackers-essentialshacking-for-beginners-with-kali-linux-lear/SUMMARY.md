@@ -1,2 +1,0 @@
-+   [黑客精要；Kali Linux 入门黑客指南：学习 Kali Linux 并精通破解网站、无线网络的工具以获取收入（5 合 1 丛书）（黑客精要）](README.md)
-+   [黑客精要；Kali Linux 入门黑客指南：学习 Kali Linux 并精通破解网站、无线网络的工具以获取收入（5 合 1 丛书）（黑客精要）](hackers-essentialshacking-for-beginners-with-kali-linux-lear_0.md)

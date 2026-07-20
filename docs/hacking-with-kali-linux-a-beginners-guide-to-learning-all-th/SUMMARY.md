@@ -1,2 +1,0 @@
-+   [Kali Linux 攻防：学习 Kali Linux 基础与网络安全的初学者指南。包含网络防御策略、渗透测试及计算机黑客工具。](README.md)
-+   [Kali Linux 攻防：学习 Kali Linux 基础与网络安全的初学者指南。包含网络防御策略、渗透测试及计算机黑客工具。](hacking-with-kali-linux-a-beginners-guide-to-learning-all-th_0.md)

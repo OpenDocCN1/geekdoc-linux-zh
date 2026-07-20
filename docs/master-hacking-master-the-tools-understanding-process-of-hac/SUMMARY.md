@@ -1,2 +1,0 @@
-+   [黑客攻击与工具精通：理解黑客流程、Linux、Linux Mint、Kali Linux 概念及渗透测试等：Kali Linux 工具清单](README.md)
-+   [黑客攻击与工具精通：理解黑客流程、Linux、Linux Mint、Kali Linux 概念及渗透测试等：Kali Linux 工具清单](master-hacking-master-the-tools-understanding-process-of-hac_0.md)

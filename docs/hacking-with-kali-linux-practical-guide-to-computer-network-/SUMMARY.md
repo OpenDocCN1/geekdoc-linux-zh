@@ -1,2 +1,0 @@
-+   [Kali Linux 攻防：初学者计算机网络黑客、加密、网络安全与渗透测试实用指南。VPN 服务、防火墙与 Linux 命令行秘籍](README.md)
-+   [Kali Linux 攻防：初学者计算机网络黑客、加密、网络安全与渗透测试实用指南。VPN 服务、防火墙与 Linux 命令行秘籍](hacking-with-kali-linux-practical-guide-to-computer-network-_0.md)

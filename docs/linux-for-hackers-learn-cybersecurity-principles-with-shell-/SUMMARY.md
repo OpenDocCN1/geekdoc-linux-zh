@@ -1,2 +1,0 @@
-+   [黑客 Linux：使用 Kali Linux 工具、通过 Shell、Python 和 Bash 编程学习网络安全原理，初学者指南](README.md)
-+   [黑客 Linux：使用 Kali Linux 工具、通过 Shell、Python 和 Bash 编程学习网络安全原理，初学者指南](linux-for-hackers-learn-cybersecurity-principles-with-shell-_0.md)

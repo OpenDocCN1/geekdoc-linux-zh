@@ -1,2 +1,0 @@
-+   [Kali Linux 攻防：道德黑客指南：使用示例进行基础设施安全测试的初学者指南：网络安全与道德黑客基础学习](README.md)
-+   [Kali Linux 攻防：道德黑客指南：使用示例进行基础设施安全测试的初学者指南：网络安全与道德黑客基础学习](hacking-with-kali-linux-a-guide-to-ethical-hacking-a-beginne_0.md)
