@@ -641,6 +641,7 @@
 +   [Ubuntu 2019 版：涵盖 18.04, 18.10, 19.04](docs/ubuntu-unleashed-2019-edition-covering-18-04-18-10-19-04/README.md)
 +   [理解 Linux 进程](docs/udstd-linux-proc/README.md)
 +   [企业级 Linux 网络安全终极指南](docs/ultimate-linux-network-security-for-enterprises/README.md)
++   [企业级 Linux 网络安全终极指南：精通高效高级网络安全技术，保护 Linux 网络并管理企业级网络服务](docs/ultimate-linux-network-security-for-enterprises-master-effec/README.md)
 +   [终极Linux项目 第一版2022](docs/ultimate-linux-projects---first-edition-2022/README.md)
 +   [Ultimate SQL Server 与 Azure SQL 数据管理与现代化：在 Linux、云端和混合环境中部署、安全保护及优化 SQL Server 的全方位专家解决方案及性能调优策略](docs/ultimate-sql-server-and-azure-sql-for-data-management-and-mo/README.md)
 +   [理解 Linux 内核：初学者指南：最简单、最易理解、学习和使用 Linux 内核的书籍。](docs/understanding-linux-kernel-absolute-beginners-guide-the-most/README.md)
