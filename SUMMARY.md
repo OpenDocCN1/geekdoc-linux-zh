@@ -659,6 +659,7 @@
 +   [无线黑客 · Kali Linux 无线黑客入门指南](docs/wireless-hacking-introduction-to-wireless-hacking-with-kali-/README.md)
 +   [Kali Linux 无线破解：快速学习任何无线网络渗透测试实施指南](docs/wireless-hacking-with-kali-linux-learn-fast-how-to-hack-any-/README.md)
 +   [Kali Linux 无线渗透测试](docs/wireless-penetration-testing-with-kali-linux/README.md)
++   [grep, sed 和 awk 快速上手指南](docs/working-with-grep-sed-and-awk-pocket-primer/README.md)
 +   [Unix 进程实战](docs/working-with-unix-processes-for-greg-kennedy/README.md)
 +   [x64 汇编语言步步营：Linux 编程 (Tech Today), 第 4 版](docs/x64-assembly-language-step-by-step-programming-with-linux-te/README.md)
 +   [宝贝，是时候打鼓了：鼓手手音乐趣味乐器礼物 ~ 小号横线笔记本](docs/yeah-baby-its-time-to-play-the-drums-drummer-music-novelty-i/README.md)
