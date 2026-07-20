@@ -516,6 +516,7 @@
 +   [Linux 实用取证：数字调查员指南](docs/practical-linux-forensics-a-guide-for-digital-investigators/README.md)
 +   [实用 Linux 编程：设备驱动、嵌入式系统与互联网（编程系列）](docs/practical-linux-programming-device-drivers-embedded-systems-/README.md)
 +   [危机四伏的海峡](docs/precarious-straits/README.md)
++   [Python 和 Qt 快速 GUI 编程](docs/prentice-hall-open-source-software-development-mark-summerfi/README.md)
 +   [Ubuntu Mobile 开发高级指南](docs/professional-ubuntu-mobile-development/README.md)
 +   [编程与编码：IoT 开发、Java、Java EE、Java Swing、JavaScript、jQuery、JSON、Julia 编程、Junit、内核、Kotlin、Laravel、Laravel 框架、LaTeX、LibGDX、LINQ 与 Linux](docs/programming-coding-iot-development-java-java-ee-java-swing-j/README.md)
 +   [Linux 游戏编程](docs/programming-linux-games/README.md)
