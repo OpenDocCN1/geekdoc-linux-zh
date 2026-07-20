@@ -649,6 +649,7 @@
 +   [理解 Linux 虚拟内存管理器](docs/understanding-the-linux-virtual-memory-manager-bruce-perens-/README.md)
 +   [UNIX and Linux 系统管理手册](docs/unix-and-linux-system-administration-handbook/README.md)
 +   [Unix 和 Linux 系统管理手册 [电子资源]](docs/unix-and-linux-system-administration-handbook-electronic-res/README.md)
++   [Unix 和 Linux 系统管理手册 第五版](docs/unix-and-linux-system-administration-handbook-fifth-edition/README.md)
 +   [Unix IDE 指南](docs/unix-as-ide/README.md)
 +   [UNIX 编程指南指南](docs/unix-programming/README.md)
 +   [UNIX编程：UNIX进程、内存管理、进程通信、网络及Shell脚本（英文版）](docs/unix-programming-unix-processes-memory-management-process-co/README.md)
