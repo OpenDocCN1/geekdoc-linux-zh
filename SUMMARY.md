@@ -648,6 +648,7 @@
 +   [Linux 内核开发理解：理解并修改 Linux 系统核心](docs/understanding-linux-kernel-development-understanding-and-mod/README.md)
 +   [理解 Linux 虚拟内存管理器](docs/understanding-the-linux-virtual-memory-manager-bruce-perens-/README.md)
 +   [UNIX and Linux 系统管理手册](docs/unix-and-linux-system-administration-handbook/README.md)
++   [UNIX and Linux 系统管理手册 (第4版)](docs/unix-and-linux-system-administration-handbook-4th-ed/README.md)
 +   [Unix 和 Linux 系统管理手册 [电子资源]](docs/unix-and-linux-system-administration-handbook-electronic-res/README.md)
 +   [Unix 和 Linux 系统管理手册 第五版](docs/unix-and-linux-system-administration-handbook-fifth-edition/README.md)
 +   [Unix IDE 指南](docs/unix-as-ide/README.md)
