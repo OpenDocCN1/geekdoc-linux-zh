@@ -60,6 +60,7 @@
 +   [VXLAN BGP EVPN 数据中心构建指南：思科NX-OS视角（网络技术）](docs/building-data-centers-with-vxlan-bgp-evpn-a-cisco-nx-os-pers/README.md)
 +   [全 Linux 邮件服务器解决方案构建指南：虚拟域与用户](docs/building-full-linux-mail-server-solution-with-virtual-domain/README.md)
 +   [C、C++、Java、Python、PHP、JavaScript和Linux初学者指南](docs/c-c-java-python-php-javascript-and-linux-for-beginners/README.md)
++   [C++ 游戏开发：无需先前的编程经验；逐像素打造你的梦想游戏。思考玩家、敌人、道具——这一切……原理！（Python 拓荒者圣经）](docs/c-for-game-development-no-prior-programming-experience-is-re/README.md)
 +   [C 语言入门：Linux 与树莓派上的 C 编程](docs/c-here---programming-in-c-in-linux-and-raspberry-pi/README.md)
 +   [IoT C语言编程：初学者 Linux 计算机运行指南：如何在用户登录时自动运行程序](docs/c-programming-for-iot-computer-run-linux-book-for-beginners-/README.md)
 +   [Linux 下 C 语言实战：学习在 Linux 中编程](docs/c-programming-in-linux-learn-how-to-program-in-linux/README.md)
