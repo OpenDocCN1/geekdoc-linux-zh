@@ -610,6 +610,7 @@
 +   [Linux 命令行入门指南](docs/the-linux-command-line-beginners-guide/README.md)
 +   [Linux 命令行手册：深度解析](docs/the-linux-command-line-handbook-an-in-depth-look/README.md)
 +   [Linux Mint 初学者指南](docs/the-linux-mint-beginners-guide/README.md)
++   [Linux 编程接口](docs/the-linux-programming-interface/README.md)
 +   [Linux 调度器：十年浪费的核心](docs/the-linux-scheduler-a-decade-of-wasted-cores/README.md)
 +   [新手电脑黑客指南：无线网络破解、基础安全、渗透测试及 Kali Linux 完整指南](docs/the-new-computer-hacking-for-novices-and-dummies-complete-gu/README.md)
 +   [CompTIA Linux+ 认证官方学生指南（XK0-004 考试）](docs/the-official-comptia-linux-student-guide-exam-xk0-004/README.md)
