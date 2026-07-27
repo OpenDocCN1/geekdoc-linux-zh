@@ -1,0 +1,3764 @@
+groups:
+- md: "\n# THE LINUX FOUNDATION TRAINING\n\n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_0_0.png)\n\
+    \n# A SysAdmin’s Essential Guide to Linux Workstation Security\n\nHow to work\
+    \ from anywhere and keep your data, identity, and sanity\n\n*License information:\
+    \ This work was created by The Linux Foundation and is licensed under a Creative\
+    \ Commons Attribution-ShareAlike 4.0 International License. It can be found, and\
+    \ forked, on GitHub.*\n\n## Contents\n\n- Choosing the right hardware 6\n- Pre-boot\
+    \ environment 7\n- Distro choice considerations 9\n- Distro installation guidelines\
+    \ 12\n- Post-installation hardening 16\n- Personal workstation backups 19\n- Best\
+    \ practices 21\n  - Password managers 26\n  - Securing SSH and PGP private keys\
+    \ 28\n  - Hibernate or shut down, do not suspend 29\n  - SELlinux on the workstation\
+    \ 29\n- Further reading 31\n- License 31\n- Printable Checklist 32\n\n## A SysAdmin’s\
+    \ Essential Guide to Linux Workstation Security\n\nHow to work from anywhere and\
+    \ keep your data, identity, and sanity\n\n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_2_0.png)\n\
+    \nBy Konstantin Ryabitsev\nDirector of IT Infrastructure Security\nat The Linux\
+    \ Foundation\n\nThis document is aimed at teams of systems administrators who\
+    \ use Linux workstations to access and manage your project's IT infrastructure.\n\
+    \nIf your systems administrators are remote workers, you may use this set of guidelines\
+    \ to ensure that their workstations pass core security requirements in order to\
+    \ reduce the risk that they become attack vectors against the rest of your IT\
+    \ infrastructure.\n\nEven if your systems administrators are not remote workers,\
+    \ chances are that they perform a lot of their work either from a portable laptop\
+    \ in a work environment, or set up their home systems to access the work infrastructure\
+    \ for after-hours/emergency support. In either case, you can adapt this set of\
+    \ recommendations to suit your environment.\n\n## A SysAdmin's Essential Guide\
+    \ to Linux Workstation Security\n\n### Limitations\n\nThis, by no means, is an\
+    \ exhaustive “workstation hardening” document, but rather an attempt at set of\
+    \ baseline recommendations to avoid most glaring security errors without introducing\
+    \ too much inconvenience. You may read this document and think it is way paranoid,\
+    \ while someone else may think this barely scratches the surface. Security is\
+    \ just like driving on the highway — anyone going slower than you is an idiot,\
+    \ while anyone driving faster than you is a crazy person. These guidelines are\
+    \ merely a basic set of core safety rules that is neither exhaustive, nor a replacement\
+    \ for experience, vigilance, and common sense.\n\nWe're sharing this document\
+    \ as a way to bring the benefits of open-source collaboration to IT policy documentation.\
+    \ If you find it useful, we hope you'll contribute to its development by making\
+    \ a fork for your own organization and sharing your improvements.\n\n### Structure\n\
+    \nEach section is split into two areas:\n\n- The checklist that can be adapted\
+    \ to your project's needs\n- Free-form list of considerations that explain what\
+    \ dictated these decisions\n\n## A SysAdmin's Essential Guide to Linux Workstation\
+    \ Security\n\n### Checklist priority levels\n\nThe items in each checklist include\
+    \ the priority level, which we hope will help guide your decision:\n\n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_0.png)\n\
+    \n(ESSENTIAL) items should definitely be high on the consideration list. If not\
+    \ implemented, they will introduce high risks to your workstation security.\n\n\
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_1.png)\n\n(NICE) to have items will\
+    \ improve the overall security, but will affect how you interact with your work\
+    \ environment, and probably require learning new habits or unlearning old ones.\n\
+    \n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_2.png)\n\n(PARANOID) is reserved\
+    \ for items we feel will significantly improve your workstation security, but\
+    \ will require a lot of adjustment to the way you interact with your operating\
+    \ system.\n\nRemember, these are only guidelines. If you feel these priority levels\
+    \ do not reflect your project's commitment to security, you should adjust them\
+    \ as you see fit.\n\n## Choosing the right hardware\n\nWe do not mandate that\
+    \ our admins use a specific vendor or a specific model, so this section addresses\
+    \ core considerations when choosing a work system.\n\n### Checklist\n\n- System\
+    \ supports SecureBoot (ESSENTIAL)\n- System has no firewire, thunderbolt or ExpressCard\
+    \ ports (NICE)\n- System has a TPM chip (NICE)\n\n### Considerations\n\n### SecureBoot\n\
+    \nDespite its controversial nature, SecureBoot offers prevention against many\
+    \ attacks targeting workstations (Rootkits, \"Evil Maid,\" etc), without introducing\
+    \ too much extra hassle. It will not stop a truly dedicated attacker, plus there\
+    \ is a pretty high degree of certainty that state security agencies have ways\
+    \ to defeat it (probably by design), but having SecureBoot is better than having\
+    \ nothing at all.\n\nAlternatively, you may set up Anti Evil Maid which offers\
+    \ a more wholesome protection against the type of attacks that SecureBoot is supposed\
+    \ to prevent, but it will require more effort to set up and maintain.\n\n## A\
+    \ SysAdmin's Essential Guide to Linux Workstation Security\n\n### Firewire, thunderbolt,\
+    \ and ExpressCard ports\n\nFirewire is a standard that, by design, allows any\
+    \ connecting device full direct memory access to your system (see Wikipedia).\
+    \ Thunderbolt and ExpressCard are guilty of the same, though some later implementations\
+    \ of Thunderbolt attempt to limit the scope of memory access. It is best if the\
+    \ system is getting none of these ports, but it is not critical, as they usually\
+    \ can be turned off via UEFI or disabled in the kernel itself.\n\n### TPM Chip\n\
+    \nTrusted Platform Module (TPM) is a crypto chip bundled with the motherboard\
+    \ separately from the core processor, which can be used for additional platform\
+    \ security (such as to store full-disk encryption keys), but is not normally used\
+    \ for day-to-day workstation operation. At best, this is a nice-to-have, unless\
+    \ you have a specific need to use TPM for your workstation security.\n\n### Pre-boot\
+    \ environment\n\nThis is a set of recommendations for your workstation before\
+    \ you even start with OS installation.\n\n### Checklist\n\n- UEFI boot mode is\
+    \ used (not legacy BIOS) (ESSENTIAL)\n- Password is required to enter UEFI configuration\
+    \ (ESSENTIAL)\n- SecureBoot is enabled (ESSENTIAL)\n- UEFI-level password is required\
+    \ to boot the system (NICE)\n\n### Considerations\n\n### UEFI and SecureBoot\n\
+    \nUEFI, with all its warts, offers a lot of goodies that legacy BIOS doesn’t,\
+    \ such as SecureBoot. Most modern systems come with UEFI mode on by default.\n\
+    \nMake sure a strong password is required to enter UEFI configuration mode. Pay\
+    \ attention, as many manufacturers quietly limit the length of the password you\
+    \ are allowed to use, so you may need to choose high-entropy short passwords vs.\
+    \ long passphrases (see below for more on passphrases).\n\nDepending on the Linux\
+    \ distribution you decide to use, you may may not have to jump through additional\
+    \ hoops in order to import your distribution’s SecureBoot key that would allow\
+    \ you to boot the distro. Many distributions have partnered with Microsoft to\
+    \ sign their released kernels with a key that is already recognized by most system\
+    \ manufacturers, therefore saving you the trouble of having to deal with key importing.\n\
+    \nAs an extra measure, before someone is allowed to get to the boot partition\
+    \ and try some badness, let’s make them enter a password. This password should\
+    \ be different from your UEFI management password, in order to prevent surfer-surfing.\
+    \ If you shut down and start a lot, you may choose to not bother with this, as\
+    \ you will already have to enter a LUKS passphrase and this will save you a few\
+    \ keystrokes.\n\n## Distro choice considerations\n\nChances are you'll stick with\
+    \ a fairly widely-used distribution such as Fedora, Ubuntu, Arch, Debian, or one\
+    \ of their close spin-offs. In any case, this is what you should consider when\
+    \ picking a distribution to use.\n\n### Checklist\n\n- Has a robust MAC/RBAC implementation\
+    \ (SELinux/AppArmor/GrSecurity (ESSENTIAL))\n- Publishes security bulletins (ESSENTIAL)\n\
+    - Provides timely security patches (ESSENTIAL)\n- Provides cryptographic verification\
+    \ of packages (ESSENTIAL)\n- Fully supports UEFI and SecureBoot (ESSENTIAL)\n\
+    - Has robust native disk encryption support (ESSENTIAL)\n\n### Considerations\n\
+    \n### SELinux, AppArmor, and GrSecurity/PaX\n\nMandatory Access Controls (MAC)\
+    \ or Role-Based Access Controls (RBAC) are an extension of the basic user/group\
+    \ security mechanism used in legacy POSIX systems. Most distributions these days\
+    \ either come bundled with a MAC/RBAC implementation (Fedora, Ubuntu), or provide\
+    \ a mechanism to add it via an optional post-installation step (Gentoo, Arch,\
+    \ Debian). Obviously, it is highly advised that you pick a distribution that comes\
+    \ pre-configured with a MAC/RBAC system, but if you have strong feelings about\
+    \ a distribution that doesn't have one enabled by default, plan to configure it\
+    \ post-installation.\n"
+  mdcn: "\n\n# LINUX 基金会培训\n\n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_0_0.png)\n\n\
+    # 系统管理员 Linux 工作站安全必备指南\n\n如何随时随地工作并保护你的数据、身份和神智健康\n\n*许可信息：本作品由 Linux 基金会创建，并根据知识共享署名-相同相同\
+    \ 4.0 国际许可协议发布。你可以在 GitHub 上找到并对其进行派叉。*\n\n## 目录\n\n- 选择合适的硬件 6\n- 启动前环境 7\n-\
+    \ 发行版选择考量 9\n- 发行版安装指南 12\n- 安装后加固 16\n- 个人工作站备份 19\n- 最佳实践 21\n  - 密码管理器 26\n\
+    \  - 保护 SSH 和 PGP 私钥安全 28\n  - 使用休眠或关机，不要使用挂起 29\n  - 工作站上的 SELlinux 29\n- 延伸阅读\
+    \ 31\n- 许可 31\n- 可打印检查清单 32\n\n## 系统管理员 Linux 工作站安全必备指南\n\n如何随时随地工作并保护你的数据、身份和神智健康\n\
+    \n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_2_0.png)\n\n作者：Konstantin Ryabitsev\n\
+    Linux 基金会 IT 基础设施安全总监\n\n本文面向使用 Linux 工作站访问和管理项目 IT 基础设施的系统管理员团队。\n\n如果你的系统管理员是远程办公，你可以使用这套指南确保他们的工作站通过核心安全要求，从而降低他们成为针对你其他\
+    \ IT 基础设施攻击向量的风险。\n\n即使你的系统管理员不是远程办公，他们也很可能在工作环境中使用便携式笔记本电脑完成大部分工作，或者设置家庭系统以访问工作基础设施以进行下班后/紧急支持。无论何种情况，你都可以根据自己的环境调整这套建议。\n\
+    \n## 系统管理员 Linux 工作站安全必备指南\n\n### 局限性\n\n这绝不是一份详尽的“工作站加固”文档，而是尝试提供基准建议，旨在在不引入过多不便的情况下避免大多数明显的安全错误。你可能会读此文档并认为它非常偏执，而另人可能认为这仅仅触及了皮毛。安全就像在公路上开车——任何比你得慢的人都是傻瓜，而任何比你得快的人都是疯子。这些指南仅仅是一套基础的核心安全规则，既不详尽，也不能替代经验、警惕和常识。\n\
+    \n我们分享此文档是为了将开源协作的优势带入 IT 策略文档。如果你觉得它有用，我们希望你通过为自己的组织创建一个派叉并分享你的改进来为开发做出贡献。\n\n\
+    ### 结构\n\n每个章节分为两个部分：\n\n- 可以根据项目需求调整的检查清单\n- 自由格式的考虑因素列表，解释这些决策的依据\n\n## 系统管理员\
+    \ Linux 工作站安全必备指南\n\n### 检查清单优先级\n\n每个检查清单中的项目包含优先级，我们希望这能帮助指导你的决策：\n\n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_0.png)\n\
+    \n（必须）项目绝对应该在考虑列表中处于高位。如果不实施，它们将为你的工作站安全带来高风险。\n\n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_1.png)\n\
+    \n（理想）有的项目将提高整体安全性，但会影响你与工作环境交互的方式，并且可能需要学习新习惯或遗忘旧习惯。\n\n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_2.png)\n\
+    \n（偏执）留给那些我们认为会显著提高你的工作站安全，但需要对你与操作系统交互的方式进行大量调整的项目。\n\n记住，这些仅仅是指南。如果你觉得这些优先级没有反映你项目对安全的承诺，你应该根据自己的情况进行调整。\n\
+    \n## 选择合适的硬件\n\n我们不强制要求管理员使用特定的供应商或型号，因此本节讨论了选择工作系统时的核心考量。\n\n### 检查清单\n\n- 系统支持\
+    \ SecureBoot（必须）\n- 系统没有火线线（firewire）、雷电（thunderbolt）或 ExpressCard 接口（理想）\n- 系统带有\
+    \ TPM 芯片（理想）\n\n### 考量\n\n### SecureBoot\n\n尽管具有争议性，但 SecureBoot 提供了针对工作站的许多攻击（Rootkits、“恶意女女”等）的防御，且不会引入过多的额外麻烦。它无法阻止真正专注的攻击者，而且有极大的把握认为国家安全机构有方法击败它（可能就是这样设计的），但拥有\
+    \ SecureBoot 总比什么都没有要好。\n\n或者，你可以设置 Anti Evil Maid（反恶意女女），它对 SecureBoot 旨在防止的这类攻击提供了更完善全面的保护，但需要更多精力来设置和维护。\n\
+    \n## 系统管理员 Linux 工作站安全必备指南\n\n### 火线、雷电和 ExpressCard 接口\n\n火线（Firewire）是一种在设计上允许任何连接设备对你的系统具有完全直接内存访问的标准（参见\
+    \ Wikipedia）。雷电（Thunderbolt）和 ExpressCard 也有同样的问题，尽管雷电的一些后期实现尝试限制内存访问范围。这些接口通常可以关闭。\n\
+    \n### TPM 芯片\n\n信任平台模块（TPM）是一个封装在主板上的加密芯片，用于平台安全（例如存储全盘加密密钥），但通常不是必需的，除非你有特殊需求。\n\
+    \n### 启动前环境\n\n这是在你开始安装之前针对工作站的一系列建议。\n\n### 检查清单\n\n- 使用 UEFI 模式（而非传统 BIOS）（必须）\n\
+    - 需要密码才能进入 UEFI 配置（必须）\n- 已启用 SecureBoot（必须）\n- 需要 UEFI 级别的密码（理想）\n\n### 考量\n\n\
+    ### UEFI 和 SecureBoot\n\nUEFI 尽管有各种缺点，但提供了许多传统 BIOS 无法提供的优点，例如 SecureBoot。大多数现代系统默认开启\
+    \ UEFI 模式。\n\n确保需要强密码才能进入 UEFI 配置。注意，许多发行版对允许使用的密码长度有限制，因此你可能需要在高熵密码和长短语之间做出选择。\n\
+    \n取决于你选择使用的 Linux 发行版，你可能需要费额外的精力来导入该发行版的 SecureBoot 密钥。许多发行版已与微软合作，对其发布的内核进行了签名，从而免去了你处理导入的麻烦。\n\
+    \n作为一种额外措施，在允许任何人访问引导分区并尝试某些坏事之前，让他们输入密码。这个密码应该与你的 UEFI 管理密码不同，以防止越权。如果你经常关机并重启，你可能会选择不这样做，因为你已经必须输入\
+    \ LUKS 密钥语了，这可以节省几次击键。\n\n## 发行版选择考量\n\n你很可能会坚持使用广泛使用的发行版，如 Fedora、Ubuntu、Arch\
+    \ 或其紧密的分支。无论如何，这些都是你在选择要使用的发行版时应该考虑的内容。\n\n### 检查清单\n\n- 具有健壮的 MAC/RBAC 实现（SELinux/AppArmor/GrSecurity（必须））\n\
+    - 发布安全公告（必须）\n- 提供及时的安全补丁（必须）\n- 提供软件包加密验证（必须）\n- 完全支持 UEFI 和 SecureBoot（必须）\n\
+    - 具有原生磁盘加密支持（必须）\n\n### 考量\n\n### SELinux、AppArmor\n\n强制访问控制（MAC）或基于角色的访问控制（RBAC）是传统\
+    \ POSIX 系统基本用户/组安全机制的扩展。如今大多数发行版要么内置了 MAC/RBAC 实现（Fedora, Ubuntu），要么提供了可选的安装后步骤来添加它（Gentoo,\
+    \ Arch, Debian）。\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # THE LINUX FOUNDATION TRAINING
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_0_0.png)
+
+
+    # # A SysAdmin’s Essential Guide to Linux Workstation Security
+
+
+    How to work from anywhere and keep your data, identity, and sanity
+
+
+    *License information: This work was created by The Linux Foundation and is licensed
+    under a Creative Commons Attribution-ShareAlike 4.0 International License. It
+    can be found, and forked, on GitHub.'
+  - "[PAGE 1]\n\n# # Contents\n\n+   * Choosing the right hardware 6\n* Pre-boot environment\
+    \ 7\n* Distro choice considerations 9\n* Distro installation guidelines 12\n*\
+    \ Post-installation hardening 16\n* Personal workstation backups 19\n* Best practices\
+    \ 21\n  * Password managers 26\n  * Securing SSH and PGP private keys 28\n  *\
+    \ Hibernate or shut down, do not suspend 29\n  * SELlinux on the workstation 29\n\
+    * Further reading 31\n* License 31\n* Printable Checklist 32"
+  - '[PAGE 2]
+
+
+    # # A SysAdmin’s Essential Guide to Linux Workstation Security
+
+
+    How to work from anywhere and keep your data, identity, and sanity
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_2_0.png)
+
+
+    By Konstantin Ryabitsev
+
+    Director of IT Infrastructure Security
+
+    at The Linux Foundation
+
+
+    This document is aimed at teams of systems administrators who use Linux workstations
+    to access and manage your project''s IT infrastructure.
+
+
+    If your systems administrators are remote workers, you may use this set of guidelines
+    to ensure that their workstations pass core security requirements in order to
+    reduce the risk that they become attack vectors against the rest of your IT infrastructure.
+
+
+    Even if your systems administrators are not remote workers, chances are that they
+    perform a lot of their work either from a portable laptop in a work environment,
+    or set up their home systems to access the work infrastructure for after-hours/emergency
+    support. In either case, you can adapt this set of recommendations to suit your
+    environment.'
+  - '[PAGE 3]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Limitations
+
+
+    This, by no means, is an exhaustive “workstation hardening” document, but rather
+    an attempt at set of baseline recommendations to avoid most glaring security errors
+    without introducing too much inconvenience. You may read this document and think
+    it is way paranoid, while someone else may think this barely scratches the surface.
+    Security is just like driving on the highway — anyone going slower than you is
+    an idiot, while anyone driving faster than you is a crazy person. These guidelines
+    are merely a basic set of core safety rules that is neither exhaustive, nor a
+    replacement for experience, vigilance, and common sense.
+
+
+    We''re sharing this document as a way to bring the benefits of open-source collaboration
+    to IT policy documentation. If you find it useful, we hope you''ll contribute
+    to its development by making a fork for your own organization and sharing your
+    improvements.
+
+
+    # Structure
+
+
+    Each section is split into two areas:
+
+
+    +   * The checklist that can be adapted to your project''s needs
+
+    * Free-form list of considerations that explain what dictated these decisions'
+  - '[PAGE 4]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Checklist priority levels
+
+
+    The items in each checklist include the priority level, which we hope will help
+    guide your decision:
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_0.png)
+
+
+    (ESSENTIAL) items should definitely be high on the consideration list. If not
+    implemented, they will introduce high risks to your workstation security.
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_1.png)
+
+
+    (NICE) to have items will improve the overall security, but will affect how you
+    interact with your work environment, and probably require learning new habits
+    or unlearning old ones.
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_2.png)
+
+
+    (PARANOID) is reserved for items we feel will significantly improve your workstation
+    security, but will require a lot of adjustment to the way you interact with your
+    operating system.
+
+
+    Remember, these are only guidelines. If you feel these priority levels do not
+    reflect your project''s commitment to security, you should adjust them as you
+    see fit.'
+  - '[PAGE 5]
+
+
+    # Choosing the right hardware
+
+
+    We do not mandate that our admins use a specific vendor or a specific model, so
+    this section addresses core considerations when choosing a work system.
+
+
+    # Checklist
+
+
+    +   - System supports SecureBoot (ESSENTIAL)
+
+    - System has no firewire, thunderbolt or ExpressCard ports (NICE)
+
+    - System has a TPM chip (NICE)
+
+
+    # Considerations
+
+
+    # SecureBoot
+
+
+    Despite its controversial nature, SecureBoot offers prevention against many attacks
+    targeting workstations (Rootkits, "Evil Maid," etc), without introducing too much
+    extra hassle. It will not stop a truly dedicated attacker, plus there is a pretty
+    high degree of certainty that state security agencies have ways to defeat it (probably
+    by design), but having SecureBoot is better than having nothing at all.
+
+
+    Alternatively, you may set up Anti Evil Maid which offers a more wholesome protection
+    against the type of attacks that SecureBoot is supposed to prevent, but it will
+    require more effort to set up and maintain.'
+  - '[PAGE 6]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Firewire, thunderbolt, and ExpressCard ports
+
+
+    Firewire is a standard that, by design, allows any connecting device full direct
+    memory access to your system (see Wikipedia). Thunderbolt and ExpressCard are
+    guilty of the same, though some later implementations of Thunderbolt attempt to
+    limit the scope of memory access. It is best if the system is getting none of
+    these ports, but it is not critical, as they usually can be turned off via UEFI
+    or disabled in the kernel itself.
+
+
+    # TPM Chip
+
+
+    Trusted Platform Module (TPM) is a crypto chip bundled with the motherboard separately
+    from the core processor, which can be used for additional platform security (such
+    as to store full-disk encryption keys), but is not normally used for day-to-day
+    workstation operation. At best, this is a nice-to-have, unless you have a specific
+    need to use TPM for your workstation security.
+
+
+    # Pre-boot environment
+
+
+    This is a set of recommendations for your workstation before you even start with
+    OS installation.
+
+
+    # Checklist
+
+
+    +   - UEFI boot mode is used (not legacy BIOS) (ESSENTIAL)
+
+    - Password is required to enter UEFI configuration (ESSENTIAL)
+
+    - SecureBoot is enabled (ESSENTIAL)
+
+    - UEFI-level password is required to boot the system (NICE)'
+  - '[PAGE 7]
+
+
+    # Considerations
+
+
+    # UEFI and SecureBoot
+
+
+    UEFI, with all its warts, offers a lot of goodies that legacy BIOS doesn’t, such
+    as SecureBoot. Most modern systems come with UEFI mode on by default.
+
+
+    Make sure a strong password is required to enter UEFI configuration mode. Pay
+    attention, as many manufacturers quietly limit the length of the password you
+    are allowed to use, so you may need to choose high-entropy short passwords vs.
+    long passphrases (see below for more on passphrases).
+
+
+    Depending on the Linux distribution you decide to use, you may may not have to
+    jump through additional hoops in order to import your distribution’s SecureBoot
+    key that would allow you to boot the distro. Many distributions have partnered
+    with Microsoft to sign their released kernels with a key that is already recognized
+    by most system manufacturers, therefore saving you the trouble of having to deal
+    with key importing.
+
+
+    As an extra measure, before someone is allowed to get to the boot partition and
+    try some badness, let’s make them enter a password. This password should be different
+    from your UEFI management password, in order to prevent surfer-surfing. If you
+    shut down and start a lot, you may choose to not bother with this, as you will
+    already have to enter a LUKS passphrase and this will save you a few extra keystrokes.'
+  - '[PAGE 8]
+
+
+    # Distro choice considerations
+
+
+    Chances are you''ll stick with a fairly widely-used distribution such as Fedora,
+    Ubuntu, Arch, Debian, or one of their close spin-offs. In any case, this is what
+    you should consider when picking a distribution to use.
+
+
+    # Checklist
+
+
+    +   - Has a robust MAC/RBAC implementation (SELinux/AppArmor/GrSecurity (ESSENTIAL))
+
+    - Publishes security bulletins (ESSENTIAL)
+
+    - Provides timely security patches (ESSENTIAL)
+
+    - Provides cryptographic verification of packages (ESSENTIAL)
+
+    - Fully supports UEFI and SecureBoot (ESSENTIAL)
+
+    - Has robust native disk encryption support (ESSENTIAL)
+
+
+    # Considerations
+
+
+    # SELinux, AppArmor, and GrSecurity/PaX
+
+
+    Mandatory Access Controls (MAC) or Role-Based Access Controls (RBAC) are an extension
+    of the basic user/group security mechanism used in legacy POSIX systems. Most
+    distributions these days either come bundled with a MAC/RBAC implementation (Fedora,
+    Ubuntu), or provide a mechanism to add it via an optional post-installation step
+    (Gentoo, Arch, Debian). Obviously, it is highly advised that you pick a distribution
+    that comes pre-configured with a MAC/RBAC system, but if you have strong feelings
+    about a distribution that doesn''t have one enabled by default, plan to configure
+    it post-installation.'
+- md: '
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    Distributions that do not provide any MAC/RBAC mechanisms should be strongly avoided,
+    as traditional POSIX user- and group-based security should be considered insufficient
+    in this day and age. If you would like to start out with a MAC/RBAC workstation,
+    AppArmor and GrSecurity/PaX are generally considered easier to learn than SELinux.
+    Furthermore, on a workstation, where there are few or no externally listening
+    daemons, and where user-run applications pose the highest risk, GrSecurity/PaX
+    will offer more security benefits than just SELinux.
+
+
+    # Distro security bulletins
+
+
+    Most of the widely used distributions have a mechanism to deliver security bulletins
+    to their users, but if you are fond of something esoteric, check whether the developers
+    have a documented mechanism of alerting the users about security vulnerabilities
+    and patches. Absence of such mechanism is a major warning sign that the distribution
+    is not mature enough to be considered for a primary admin workstation.
+
+
+    # Timely and trusted security updates
+
+
+    Most of the widely used distributions deliver regular security updates, but it
+    is worth checking to ensure that critical package updates are provided in a timely
+    fashion. Avoid using spin-offs and “community rebuilds” for this reason, as they
+    routinely delay security updates due to having to wait for the upstream distribution
+    to release it.
+
+
+    These days, it is hard to find a distribution that does not use cryptographic
+    signatures on packages, updates metadata, or both. That being said, fairly widely
+    used distributions have been known to go for years before introducing this basic
+    security measure (Arch, I''m looking at you), so this is something worth checking.
+
+
+    ## Distros supporting UEFI and SecureBoot
+
+
+    Check that the distribution supports UEFI and SecureBoot. Find out whether it
+    requires importing an extra key or whether it signs a key already trusted by systems
+    manufacturers (e.g. via an agreement with Microsoft). Some distributions do not
+    support UEFI/SecureBoot but offer alternatives to ensure tamper-proof or tamper-evident
+    boot environments (Qubes-OS uses Anti Evil Maid, mentioned earlier). If a distribution
+    doesn''t support SecureBoot and has no mechanisms to prevent boot-level attacks,
+    look elsewhere.
+
+
+    ## Full disk encryption
+
+
+    Full disk encryption is a requirement for securing data at rest, and is supported
+    by most distributions. As an alternative, systems with self-encrypting hard drives
+    may be used (normally implemented via the on-board TPM chip) and offer comparable
+    levels of security plus faster operation, but at a considerably higher cost.
+
+
+    # Distro installation guidelines
+
+
+    All distributions are different, but here are general guidelines:
+
+
+    # Checklist
+
+
+    - Use full disk encryption (LUKS) with a robust passphrase (ESSENTIAL)
+
+    - Make sure swap is also encrypted (ESSENTIAL)
+
+    - Require a password to edit bootloader (can be same as LUKS) (ESSENTIAL)
+
+    - Set up a robust root password (can be same as LUKS) (ESSENTIAL)
+
+    - Use an unprivileged account, part of administrators group (ESSENTIAL)
+
+    - Set up a robust user-account password, different from root (ESSENTIAL)
+
+
+    # Considerations
+
+
+    ### Full disk encryption
+
+
+    Unless you are using self-encrypting hard drives, it is important to configure
+    your installer to fully encrypt all the disks that will be used for storing your
+    data and your system files. It is not sufficient to simply encrypt the user directory
+    via auto-mounting cryptofs loop files (I''m looking at you, older versions of
+    Ubuntu), as this offers no protection for system binaries or swap, which is likely
+    to contain a slew of sensitive data. The recommended encryption strategy is to
+    encrypt the LVM device, so only one passphrase is required during the boot process.
+
+
+    The /boot partition will usually remain unencrypted, as the bootloader needs to
+    be able to boot the kernel before invoking LUKS/dm-crypt. Some distributions support
+    encrypting the /boot partition as well (e.g. Arch), and it is possible to do the
+    same on other distros, but likely at the cost of complicating system updates.
+    It is not critical to encrypt /boot if your distro of choice does not natively
+    support it, as the kernel image itself leaks no data and will be protected against
+    tampering with a cryptographic signature checked by SecureBoot.
+
+
+    ### Choosing good passphrases
+
+
+    Modern Linux systems have no limitation of password/passphrase length, so the
+    only real limitation is your level of paranoia and your stubbornness. If you boot
+    your system a lot, you will probably have to type at least two different passwords:
+    one to unlock LUKS, and another one to log in, so long passphrases will probably
+    get old really fast. Pick passphrases that are 2-3 words long, easy to type, and
+    preferably from rich/mixed vocabularies.
+
+
+    Examples of good passphrases (yes, you can use spaces):
+
+
+    - nature abhors roomba
+
+    - 12 in-flight Jebediahs
+
+    - perdon, tendo flatulence
+
+
+    Weak passphrases are combinations of words you''re likely to see in published
+    works or anywhere else in real life, and you should avoid using them, as attackers
+    are starting to include such simple passphrases into their brute-force strategies.
+
+
+    Examples of passphrases to avoid:
+
+
+    - Mary had a little lamb
+
+    - you''re a wizard, Harry
+
+    - to infinity and beyond
+
+
+    You can also stick with non-vocabulary passwords that are at least 10-12 characters
+    long, if you prefer that to typing passphrases.
+
+
+    Unless you have concerns about physical security, it is fine to write down your
+    passphrases and keep them in a safe place away from your work desk.
+
+
+    # Root, user passwords and the admin group
+
+
+    We recommend that you use the same passphrase for root password as you use for
+    disk encryption (unless you share your laptop with other people who should be
+    able to unlock the drives, but shouldn''t be able to become root). If you are
+    the sole user of the laptop, having your root password different from your LUKS
+    has no meaningful advantages.
+
+
+    You should have a different, but equally strong password for your regular user
+    account that you will be using day-to-day tasks. This user should be member of
+    the admin group (e.g. `wheel` or similar, depending on the distribution), allowing
+    you to perform `sudo` to elevate privileges.
+
+
+    In other words, if you are the sole user on your workstation, you should have
+    two distinct, robust passphrases you will need to remember:
+
+
+    ### Admin-level, used in the following locations:
+
+
+    - UEFI administration
+
+    - Bootloader (GRUB)
+
+    - Disk encryption (LUKS)
+
+    - Workstation admin (root user)
+
+
+    ### User-level, used for the following:
+
+
+    - User account and sudo
+
+    - Master password for the password manager
+
+
+    All of them, obviously, can be different if there is a compelling reason.
+
+
+    # Post-installation hardening
+
+
+    Post-installation security hardening will depend greatly on your distribution
+    of choice, so it is futile to provide detailed instructions in a general document
+    such as this. However, here are some steps you should take:
+
+
+    # Checklist
+
+
+    - Globally disable firewire and thunderbolt modules (ESSENTIAL)
+
+    - Check your firewalls to ensure all incoming ports are filtered (ESSENTIAL)
+
+    - Make sure root mail is forwarded to an account you check (ESSENTIAL)
+
+    - Set up an automatic OS update schedule, or update reminders (ESSENTIAL)
+
+    - Check to ensure sshd is disabled by default (NICE)
+
+    - Configure the screensaver to auto-lock after a period of inactivity (NICE)
+
+    - Set up watchdog (NICE)
+
+    - Install and use rkhunter (NICE)
+
+    - Install an Intrusion Detection System (NICE)
+
+
+    # Considerations
+
+
+    ### Blacklisting modules
+
+
+    To blacklist a firewire and thunderbolt modules, add the following lines to a
+    file in /etc/modprobe.d/blacklist-dma.conf:
+
+
+    ```
+
+    blacklist firewire-core
+
+    blacklist thunderbolt
+
+    ```
+
+    '
+  mdcn: '
+
+
+    # 系统管理员 Linux 工作站安全必备指南
+
+
+    应强烈避免使用不提供任何 MAC/RBAC 机制的发行版，因为在当今时代，传统的基于 POSIX 用户和用户组的安全机制被认为是不够的。如果你想从 MAC/RBAC
+    工作站开始，AppArmor 和 GrSecurity/PaX 通常被认为比 SELinux 更容易学习。此外，在工作站上，由于很少或没有外部监听守护进程，且用户运行的应用程序风险最高，GrSecurity/PaX
+    提供的安全收益比仅仅使用 SELinux 更多。
+
+
+    # 发行版安全公告
+
+
+    大多数广泛使用的发行版都有向其用户分发安全公告的机制，但如果你青睐某些小众发行版，请检查开发者是否有一种记录的机制来向用户提醒安全漏洞和补丁。缺乏此类机制是该发行版尚未成熟到可以考虑作为主管理员工作站的重大警告信号。
+
+
+    # 及时且可靠的安全更新
+
+
+    大多数广泛使用的发行版都提供定期的安全更新，但值得检查以确保关键包更新能够及时提供。出于原因，请避免使用衍生版本（spin-offs）和“社区重新构建版”（community
+    rebuilds），因为它们通常由于等待上游发行版的发布而推迟安全更新。
+
+
+    如今，很难找到一个一个不对软件包使用加密签名、更新元数据或两者兼具的发行版。尽管如此，已知一些相当广泛使用的发行版在引入这项基础安全措施之前已经运行了多年（Arch，我是在说你呢），所以这是值得检查的。
+
+
+    ## 支持 UEFI 和 SecureBoot 的发行版
+
+
+    检查该发行版是否支持 UEFI 和 SecureBoot。了解它是否需要导入额外的密钥，或者它是否签名了系统制造商信任的密钥（例如通过与微软的协议）。某些发行版不支持
+    UEFI/SecureBoot，但提供了替代方案来确保启动环境防篡改或可检测（Qubes-OS 使用了之前提到的 Anti Evil Maid）。如果一个发行版不支持
+    SecureBoot 且没有防止启动级攻击的机制，请寻找其他。
+
+
+    ## 全盘加密
+
+
+    全盘加密是保护静态数据安全的要求，大多数发行版都支持该功能。作为替代，可以使用带有自加密硬盘的系统（通常通过板载 TPM 芯片实现），它们提供相当水平的安全性和更快的运行速度，但成本高得多。
+
+
+    # 发行版安装指南
+
+
+    所有发行版都不相同，但这里有一些通用指南：
+
+
+    # 检查清单
+
+
+    - 使用带有强密码句的全盘加密 (LUKS)（必须的）
+
+    - 确保交换分区（swap）也被加密（必须的）
+
+    - 编辑启动加载程序需要需要密码（可以与 LUKS 相同）（必须的）
+
+    - 设置一个强 root 密码（可以与 LUKS 相同）（必须的）
+
+    - 使用非特权账户，属于管理员组（必须的）
+
+    - 设置一个强用户账户密码，与 root 不同（必须的）
+
+
+    # 考虑因素
+
+
+    ### 全盘加密
+
+
+    除非你使用自加密硬盘，否则配置你的安装程序以完全加密所有用于存储数据和系统文件的磁盘是非常关重要的。仅仅通过自动挂载 cryptofs 环回文件来加密用户目录是不够的（我是在说你呢，旧版本的
+    Ubuntu），因为这对系统二进制文件或交换分区不提供保护，而交换分区可能包含大量敏感数据。推荐的加密策略是加密 LVM 设备，这样在启动过程中只需要一个密码句。
+
+
+    /boot 分区通常保持未加密状态，因为启动加载程序需要在调用 LUKS/dm-crypt 之前能够引导内核。某些发行版也支持加密 /boot 分区（例如
+    Arch），在其他发行版上也可以这样做，但可能会以增加系统更新复杂度为代价。如果你选择的发行版没有原生支持它，那么加密 /boot 并不是关键的，因为内核镜像本身不泄露数据，并将受到通过
+    SecureBoot 检查的加密签名保护防止篡改。
+
+
+    ### 选择良好的密码句
+
+
+    现代 Linux 系统对密码/密码句的长度没有限制，因此唯一的实际限制是你的偏执程度和你的固执程度。如果你频繁启动系统，你可能需要至少输入两个不同的密码：一个用于解锁
+    LUKS，另一个用于登录，所以长密码句可能会很快让你厌烦。选择长度为 2-3 个单词、易于输入且最好来自丰富/混合词汇库的密码句。
+
+
+    良好的密码句示例（是的，你可以使用空格）：
+
+
+    - nature abhors roomba
+
+    - 12 in-flight Jebediahs
+
+    - perdon, tendo flatulence
+
+
+    弱质的密码句是你可能在出版作品或现实生活中任何地方看到的单词组合，你应该避免使用它们，因为攻击者已经开始将此类简单的密码句纳入他们的暴力破解策略中。
+
+
+    应避免的密码句示例：
+
+
+    - Mary had a little lamb
+
+    - you''re a wizard, Harry
+
+    - to infinity and beyond
+
+
+    如果你倾向于而不是输入密码句，也可以坚持使用至少 10-12 个字符的非词汇密码。
+
+
+    除非你担心物理安全，否则将你的密码句写下来并保存在远离你办公桌的安全地方是可以的。
+
+
+    # Root、用户密码和管理员组
+
+
+    我们建议你对 root 密码使用与磁盘加密相同的密码句（除非你与其他人共享笔记本电脑，他们应该能够解锁硬盘，但不应该能够成为 root）。如果你是笔记本电脑的唯一用户，将
+    root 密码与 LUKS 不同没有意义上的优势。
+
+
+    你应该为你日常任务使用的普通用户账户设置一个不同但同样强大的密码。该用户应该是管理员组的成员（取决于发行版，例如 `wheel` 或类似），允许你通过 `sudo`
+    提升权限。
+
+
+    换句话说，如果你是工作站的唯一用户，你应该有两个不同的、强力的密码句需要记住：
+
+
+    ### 管理员级，用于以下位置：
+
+
+    - UEFI 管理
+
+    - 启动加载程序 (GRUB)
+
+    - 磁盘加密 (LUKS)
+
+    - 工作站管理员 (root 用户)
+
+
+    ### 用户级，用于以下：
+
+
+    - 用户账户和 sudo
+
+    - 密码管理器的主密码
+
+
+    显然，如果有充分的理由，所有这些都可以不同。
+
+
+    # 安装后加固
+
+
+    安装后的安全加固在很大程度上取决于你选择的发行版，因此在这样的通用文档中提供详细说明是徒劳的。然而，这里是你采取的一些步骤：
+
+
+    # 检查清单
+
+
+    - 全局禁用 firewire 和 thunderbolt 模块（必须的）
+
+    - 检查你的防火墙确保所有输入端口都经过过滤（必须的）
+
+    - 确保 root 邮件转发到你检查的账户（必须的）
+
+    - 设置自动操作系统更新计划或更新提醒（必须的）
+
+    - 检查确保 sshd 默认禁用（可选的）
+
+    - 配置屏幕保护程序在一段时间活动后自动锁定（可选的）
+
+    - 设置看门狗（可选的）
+
+    - 安装并使用 rkhunter（可选的）
+
+    - 安装入侵检测系统（可选的）
+
+
+    # 考虑因素
+
+
+    ### 黑名单模块
+
+
+    要黑名单 firewire 和 thunderbolt 模块，请在 /etc/modprobe.d/blacklist-dma.conf 文件中添加以下行：
+
+
+    ```
+
+    blacklist firewire-core
+
+    blacklist thunderbolt
+
+    ```
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 9]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    Distributions that do not provide any MAC/RBAC mechanisms should be strongly avoided,
+    as traditional POSIX user- and group-based security should be considered insufficient
+    in this day and age. If you would like to start out with a MAC/RBAC workstation,
+    AppArmor and GrSecurity/PaX are generally considered easier to learn than SELinux.
+    Furthermore, on a workstation, where there are few or no externally listening
+    daemons, and where user-run applications pose the highest risk, GrSecurity/PaX
+    will offer more security benefits than just SELinux.
+
+
+    # Distro security bulletins
+
+
+    Most of the widely used distributions have a mechanism to deliver security bulletins
+    to their users, but if you are fond of something esoteric, check whether the developers
+    have a documented mechanism of alerting the users about security vulnerabilities
+    and patches. Absence of such mechanism is a major warning sign that the distribution
+    is not mature enough to be considered for a primary admin workstation.
+
+
+    # Timely and trusted security updates
+
+
+    Most of the widely used distributions deliver regular security updates, but it
+    is worth checking to ensure that critical package updates are provided in a timely
+    fashion. Avoid using spin-offs and “community rebuilds” for this reason, as they
+    routinely delay security updates due to having to wait for the upstream distribution
+    to release it.
+
+
+    These days, it is hard to find a distribution that does not use cryptographic
+    signatures on packages, updates metadata, or both. That being said, fairly widely
+    used distributions have been known to go for years before introducing this basic
+    security measure (Arch, I''m looking at you), so this is something worth checking.'
+  - '[PAGE 10]
+
+
+    # # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # ## Distros supporting UEFI and SecureBoot
+
+
+    Check that the distribution supports UEFI and SecureBoot. Find out whether it
+    requires importing an extra key or whether it signs a key already trusted by systems
+    manufacturers (e.g. via an agreement with Microsoft). Some distributions do not
+    support UEFI/SecureBoot but offer alternatives to ensure tamper-proof or tamper-evident
+    boot environments (Qubes-OS uses Anti Evil Maid, mentioned earlier). If a distribution
+    doesn''t support SecureBoot and has no mechanisms to prevent boot-level attacks,
+    look elsewhere.
+
+
+    # ## Full disk encryption
+
+
+    Full disk encryption is a requirement for securing data at rest, and is supported
+    by most distributions. As an alternative, systems with self-encrypting hard drives
+    may be used (normally implemented via the on-board TPM chip) and offer comparable
+    levels of security plus faster operation, but at a considerably higher cost.'
+  - '[PAGE 11]
+
+
+    # Distro installation guidelines
+
+
+    All distributions are different, but here are general guidelines:
+
+
+    # Checklist
+
+
+    +   - Use full disk encryption (LUKS) with a robust passphrase (ESSENTIAL)
+
+    - Make sure swap is also encrypted (ESSENTIAL)
+
+    - Require a password to edit bootloader (can be same as LUKS) (ESSENTIAL)
+
+    - Set up a robust root password (can be same as LUKS) (ESSENTIAL)
+
+    - Use an unprivileged account, part of administrators group (ESSENTIAL)
+
+    - Set up a robust user-account password, different from root (ESSENTIAL)
+
+
+    # Considerations
+
+
+    # Full disk encryption
+
+
+    Unless you are using self-encrypting hard drives, it is important to configure
+    your installer to fully encrypt all the disks that will be used for storing your
+    data and your system files. It is not sufficient to simply encrypt the user directory
+    via auto-mounting cryptofs loop files (I''m looking at you, older versions of
+    Ubuntu), as this offers no protection for system binaries or swap, which is likely
+    to contain a slew of sensitive data. The recommended encryption strategy is to
+    encrypt the LVM device, so only one passphrase is required during the boot process.
+
+
+    The /boot partition will usually remain unencrypted, as the bootloader needs to
+    be able to boot the kernel before invoking LUKS/dm-crypt. Some distributions support
+    encrypting the /boot partition as well (e.g. Arch), and it is possible to do the
+    same on other distros, but likely at the'
+  - '[PAGE 12]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    cost of complicating system updates. It is not critical to encrypt /boot if your
+    distro of choice does not natively support it, as the kernel image itself leaks
+    no data and will be protected against tampering with a cryptographic signature
+    checked by SecureBoot.
+
+
+    # Choosing good passphrases
+
+
+    Modern Linux systems have no limitation of password/passphrase length, so the
+    only real limitation is your level of paranoia and your stubbornness. If you boot
+    your system a lot, you will probably have to type at least two different passwords:
+    one to unlock LUKS, and another one to log in, so long passphrases will probably
+    get old really fast. Pick passphrases that are 2-3 words long, easy to type, and
+    preferably from rich/mixed vocabularies.
+
+
+    Examples of good passphrases (yes, you can use spaces):
+
+
+    +   - nature abhors roomba
+
+    - 12 in-flight Jebediahs
+
+    - perdon, tendo flatulence
+
+
+    Weak passphrases are combinations of words you''re likely to see in published
+    works or anywhere else in real life, and you should avoid using them, as attackers
+    are starting to include such simple passphrases into their brute-force strategies.
+
+
+    Examples of passphrases to avoid:
+
+
+    +   - Mary had a little lamb
+
+    - you''re a wizard, Harry
+
+    - to infinity and beyond'
+  - '[PAGE 13]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    You can also stick with non-vocabulary passwords that are at least 10-12 characters
+    long, if you prefer that to typing passphrases.
+
+
+    Unless you have concerns about physical security, it is fine to write down your
+    passphrases and keep them in a safe place away from your work desk.
+
+
+    # Root, user passwords and the admin group
+
+
+    We recommend that you use the same passphrase for your root password as you use
+    for your LUKS encryption (unless you share your laptop with other trusted people
+    who should be able to unlock the drives, but shouldn''t be able to become root).
+    If you are the sole user of the laptop, having your root password be different
+    from your LUKS password has no meaningful security advantages. Generally, you
+    can use the same passphrase for your UEFI administration, disk encryption, and
+    root account — knowing any of these will give an attacker full control of your
+    system anyway, so there is little security benefit to have them be different on
+    a single-user workstation.
+
+
+    You should have a different, but equally strong password for your regular user
+    account that you will be using for day-to-day tasks. This user should be member
+    of the admin group (e.g. `wheel` or similar, depending on the distution), allowing
+    you to perform `sudo` to elevate privileges.'
+  - '[PAGE 14]
+
+
+    In other words, if you are the sole user on your workstation, you should have
+    2 distinct, robust, equally strong passphrases you will need to remember:
+
+
+    # Admin-level, used in the following locations:
+
+
+    +   * UEFI administration
+
+    * Bootloader (GRUB)
+
+    * Disk encryption (LUKS)
+
+    * Workstation admin (root user)
+
+
+    # User-level, used for the following:
+
+
+    +   * User account and sudo
+
+    * Master password for the password manager
+
+
+    All of them, obviously, can be different if there is a compelling reason.'
+  - '[PAGE 15]
+
+
+    # Post-installation hardening
+
+
+    Post-installation security hardening will depend greatly on your distribution
+    of choice, so it is futile to provide detailed instructions in a general document
+    such as this one. However, here are some steps you should take:
+
+
+    # Checklist
+
+
+    +   - Globally disable firewire and thunderbolt modules (ESSENTIAL)
+
+    - Check your firewalls to ensure all incoming ports are filtered (ESSENTIAL)
+
+    - Make sure root mail is forwarded to an account you check (ESSENTIAL)
+
+    - Set up an automatic OS update schedule, or update reminders (ESSENTIAL)
+
+    - Check to ensure sshd is disabled by default (NICE)
+
+    - Configure the screensaver to auto-lock after a period of inactivity (NICE)
+
+    - Set up watchdog (NICE)
+
+    - Install and use rkhunter (NICE)
+
+    - Install an Intrusion Detection System (NICE)
+
+
+    # Considerations
+
+
+    # Blacklisting modules
+
+
+    To blacklist a firewire and thunderbolt modules, add the following lines to a
+    file in /etc/modprobe.d/blacklist-dma.conf:
+
+
+    ```
+
+    blacklist firewire-core
+
+    blacklist thunderbolt
+
+    ```'
+- md: '
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    The modules will be blacklisted upon reboot. It doesn''t hurt doing this if you
+    don''t have these ports (but it doesn''t do anything either).
+
+
+    ## Root mail
+
+
+    By default, root mail is just saved on the system and tends to never be read.
+    Make sure you set your /etc/aliases to forward root mail to a mailbox that you
+    actually read, otherwise you may miss important system notifications and reports:
+
+
+    ```
+
+    # Person who should get root''s mail
+
+    bob@example.com
+
+    ```
+
+
+    Run newaliases after this and test it to make sure that it actually gets delivered,
+    as some email providers will reject email coming from nonexistent or non-routable
+    domain names. If that is the case, you will need to play with your mail forwarding
+    configuration until this actually works.
+
+
+    ## Firewalls, sshd, and listening daemons
+
+
+    The default firewall settings will depend on your distribution, but many of them
+    will allow incoming sshd ports. Unless you have a compelling legitimate reason
+    to allow incoming ssh, you should filter that out and disable the sshd daemon.
+
+
+    ```
+
+    systemctl disable sshd.service
+
+    systemctl stop sshd.service
+
+    ```
+
+
+    You can always start it temporarily if you need to use it.
+
+
+    In general, your system shouldn''t have any listening ports apart from responding
+    to ping. This will help safeguard you against network-level exploits.
+
+
+    ## Automatic updates or notifications
+
+
+    It is recommended to turn on automatic updates, unless you have a very good reason
+    not to do so, such as fear that an automatic update would render your system unusable
+    (it''s happened in the past, so this fear is not unfounded). At the very least,
+    you should enable automatic notifications of available updates. Most distributions
+    already have this service automatically running for you, so chances are you don''t
+    have to do anything. Consult your distribution documentation to find out more.
+
+
+    You should apply all outstanding errata as soon as possible, even if something
+    isn''t specifically labeled as "security update" or has an associated CVE code.
+    All bugs have the potential of being security bugs and erring on the side of newer,
+    unknown bugs is generally a safer strategy than sticking with old, known ones.
+
+
+    ## Watching logs
+
+
+    You should have a keen interest in what happens on your system. For this reason,
+    you should install logwatch and configure it to send nightly activity reports
+    of everything that happens on your system. This won''t prevent a dedicated attacker,
+    but is a good safety-net feature to have in place.
+
+
+    Note, many systemd distros will no longer automatically install a syslog server
+    that logwatch needs (due to systemd relying on its own journal), so you will need
+    to install and enable syslog to make sure your `/var/log` is not empty logwatch
+    will be of any use.
+
+
+    ## Rkhunter and IDS
+
+
+    Installing rkhunter and an intrusion detection system (IDS) like `aide` or `tripwire`
+    will not be that useful unless you actually understand how they work and take
+    the necessary steps to set them up (such as, keeping the databases on external
+    media, running checks from a trusted environment, remembering to refresh the hash
+    databases after performing system updates and configuration changes, etc). If
+    you are not willing to take these steps and adjust how you do things on your own
+    workstation, these tools will introduce hassle without any tangible security benefit.
+
+
+    We do recommend that you install `rkhunter` and run it nightly. It''s fairly easy
+    to learn and use, and though it will not deter a sophisticated attacker, it may
+    help you catch your own mistakes.
+
+
+    ## Personal workstation backups
+
+
+    Workstation backups tend to be overlooked or done in a haphazard, often unsafe
+    manner.
+
+
+    ## Checklist
+
+
+    - Set up encrypted workstation backups to external storage (ESSENTIAL)
+
+    - Use zero-knowledge backup tools for off-site/cloud backups (NICE)
+
+
+    ## Considerations
+
+
+    ### Full encrypted backups to external storage
+
+
+    It is handy to have an external hard drive where one can dump full backups without
+    having to worry about such things like bandwidth and upstream speeds (in this
+    day and age most providers still offer dramatically asymmetric upload/download
+    speeds). Needless to say, this hard drive needs to be in its itself encrypted
+    (again, via LUKS), or you should use a backup tool that creates encrypted backups,
+    such as duplication or its GUI companion, deja-dup. I recommend using the latter
+    with a good randomly generated passphrase, stored in a safe offline. If you travel
+    with your laptop, leave this drive at home to have something come back in case
+    your laptop is lost or stolen.
+
+
+    In addition to your home directory, you should also back up `/etc` and `/var/log`
+    for various forensic purposes.
+
+
+    Above all, avoid copying your home directory onto any unencrypted storage, even
+    as a quick way to move your files between systems, as you will most certainly
+    forget to erase it when you''re done, exposing potentially private or otherwise
+    sensitive data to snooping hands — especially if you keep storage media in the
+    same bag with your laptop or in your office desk drawer.
+
+
+    ### Selective zero-knowledge backups off-site
+
+
+    Off-site backups are also extremely important and can be done either to your employer,
+    if they offer space for it, or to a cloud provider. You can set up a separate
+    duplicate/deja-dup profile to include only important files in order to avoid transferring
+    huge amounts of data that you don''t really care to back up off-site (internet
+    cache, music, downloads, etc).
+
+
+    Alternatively, you can use a zero-knowledge backup tool, such as SpiderOak, which
+    offers an excellent Linux GUI tool and has additional useful features such as
+    synchronizing content between multiple systems and platforms.
+
+
+    ## Best practices
+
+
+    What follows is a curated list of best practices that we think you should adopt.
+    It is most certainly non-exhaustive, but rather attempts to offer practical advice
+    that strikes a workable balance between security and overall usability.
+
+
+    ### Graphical environment
+
+
+    The venerable X protocol was conceived and implemented for a wholly different
+    era of personal computing and lacks important security features that should be
+    considered essential on a networked workstation. To give a few examples:
+
+
+    - Any X application has access to full screen contents
+
+    - Any X application can register to receive all keystrokes, regardless into which
+    window they are typed
+
+
+    A sufficiently severe browser vulnerability means attackers get automatic access
+    to what is effectively a builtin keylogger and screen recorder and can watch and
+    capture everything you type into your root terminal sessions.
+
+
+    You should strongly consider switching to a more modern platform like Wayland,
+    even if this means using many of your existing applications through an X11 protocol
+    wrapper. With Fedora starting to default to Wayland for all applications, we can
+    hope that most software will soon stop requiring the legacy X11 layer.
+
+
+    ## Browsers
+
+
+    There is no question that the web browser will be the piece of software with the
+    largest and the most exposed attack surface on your system. It is a tool written
+    specifically to download and execute untrusted, frequently hostile code. It attempts
+    to shield you from this danger by employing multiple mechanisms such as sandboxes
+    and code sanitization, but they have all been previously defeated on multiple
+    occasions. You should learn to approach browsing websites as the most insecure
+    activity you''ll engage in on any given day.
+
+
+    There are several ways you can reduce the impact of a compromised browser, but
+    the truly effective ways will require significant changes in the way you operate
+    your workstation.
+
+
+    ### 1: Use two different browsers (ESSENTIAL)
+
+
+    This is the easiest to do, but only offers minor security benefits. Not all browser
+    compromises give an attacker unfettered access to your system — sometimes they
+    are limited to allowing one to read local browser storage, steal active sessions
+    from other tabs, capture input entered into the browser, etc. Using two different
+    browsers, one for work/high security sites, and another for everything else, will
+    prevent minor compromises from giving attackers access to the whole cookie jar.
+    The main inconvenience will be the amount of memory consumed by two different
+    browser processes.
+
+
+    Here''s what we recommend:
+
+
+    #### Firefox for work and high security sites
+
+
+    Use Firefox to access work-related sites, where extra care should be taken to
+    ensure that data like cookies, sessions, login information, keystrokes, etc, should
+    definitely not fall into attackers'' hands. You should NOT
+
+    '
+  mdcn: '
+
+
+    # 系统管理员 Linux 工作站安全必备指南
+
+
+    这些模块将在重启后被列入黑名单。如果你没有这些端口，这样做也没有害（但也不会产生任何作用）。
+
+
+    ## Root 邮件 (Root mail)
+
+
+    默认情况下，root 邮件仅保存在系统本地，往往永远不会被读取。请确保你设置了 `/etc/aliases`，将 root 邮件转发到一个你实际上会读取的邮箱箱，否则你可能会错过重要的系统通知和报告：
+
+
+    ```
+
+    # 应该接收 root 邮件的人员
+
+    bob@example.com
+
+    ```
+
+
+    执行此操作后运行 `newaliases` 并进行测试，以确保邮件确实能够送达，因为某些电子邮件提供商会拒绝来自不存在或不可路由域名的邮件。如果出现这种情况，你可能需要反复调整你的邮件转发配置，直到它正常工作。
+
+
+    ## 防火墙、sshd 和监听守护进程
+
+
+    默认的防火墙设置取决于你的发行版，但许多发行版会允许入站的 sshd 端口。除非你有充分且正当的理由允许入站 ssh，否则你应该过滤掉它并禁用 sshd 守护进程。
+
+
+    ```
+
+    systemctl disable sshd.service
+
+    systemctl stop sshd.service
+
+    ```
+
+
+    如果你需要使用，可以随时临时启动它。
+
+
+    通常情况下，你的系统不应该有除了响应 ping 之外的任何监听端口。这将有助于你免受网络层面的攻击。
+
+
+    ## 自动更新或通知
+
+
+    建议开启自动更新，除非你有非常充分的理由不这样做，例如担心自动更新会导致你的系统无法使用（这在过去确实发生过，所以这种担心并非空穴）。至少，你应该启用可用更新的自动通知。大多数发行版已经为你自动运行了此服务，所以你可能什么都不需要做。咨询你的发行版文档以获取更多信息。
+
+
+    你应该尽快应用所有待处理的修复，即使某些内容没有明确标记为“安全更新”或没有关联的 CVE 代码。所有的漏洞都有成为安全漏洞的可能，与坚持旧旧漏洞相比，倾向于新的未知的漏洞通常是一个更安全的策略。
+
+
+    ## 监控日志 (Watching logs)
+
+
+    你应该对系统上发生的事情保持浓厚的兴趣。出于这个原因，你应该安装 `logwatch` 并配置它每天晚上发送一份系统上发生的所有内容的活动报告。这虽然阻止专门的攻击者，但是一个很好的安全防护措施。
+
+
+    注意，许多使用 systemd 的发行版不再会自动安装 `logwatch` 需的 syslog 服务器（因为 systemd 依赖于自身的 journal），因此你需要安装并启用
+    syslog，以确保你的 `/var/log` 不为空，否则 `logwatch` 将没有任何用处。
+
+
+    ## Rkhunter 和入侵检测系统 (IDS)
+
+
+    安装 `rkhunter` 和如 `aide` 或 `tripwire` 等入侵检测系统 (IDS) 并不有用，除非你真正理解它们的工作原理并采取必要的步骤进行设置（例如：将数据库存储在外部介质上、从受信任的环境运行检查、记住在执行系统更新和配置更改后刷新哈希数据库等）。如果你不愿意采取这些步骤并根据自己的情况调整在个人工作站上的操作方式，那么这些工具只会带来困扰，而不会带来任何实质性的安全益处。
+
+
+    我们确实建议安装 `rkhunter` 并在每晚运行它。它非常容易学习和使用，虽然它无法震慑复杂的攻击者，但可能帮助你发现自己的错误。
+
+
+    ## 个人工作站备份
+
+
+    工作站备份往往被忽视，或者以一种草率、通常是不安全的方式进行。
+
+
+    ## 检查清单 (Checklist)
+
+
+    - 设置到外部存储的加密工作站备份（必备）
+
+    - 使用零知识备份工具进行离线/云端备份（良好）
+
+
+    ## 考虑因素
+
+
+    ### 到外部存储的全加密备份
+
+
+    拥有一个外部硬盘是非常方便的，你可以在上面导出全量备份，而无需担心带宽和上行速度等问题（在当今，大多数提供商仍然提供极度不对称的上传/下载速度）。不言而喻，这个硬盘本身需要被加密（再次通过
+    LUKS），或者你应该使用创建加密备份的备份工具，例如 `duplication` 或其 GUI 伴侣 `deja-dup`。我建议使用后者，并配合一个良好的随机生成的强密码，该密码存储在安全的离线位置中。如果你携带笔记本电脑旅行，请将此硬盘留在家里，以防笔记本丢失或被盗时有物可找。
+
+
+    除了家目录（home directory）之外，你还应该备份 `/etc` 和 `/var/log` 以备各种取证目的。
+
+
+    最重要的是，避免将你的家目录复制到任何未加密的存储设备上，即使作为在系统之间移动文件的快捷方法，因为你肯定会在完成后忘记删除它，从而导致潜在的隐私或其他敏感数据暴露给窥探者——尤其是当你把存储介质放在笔记本电脑同一个包里或办公桌抽屉时。
+
+
+    ### 离线选择性零知识备份
+
+
+    离线备份也极其重要，可以备份到你的雇主处（如果他们提供空间）或云提供商处。你可以设置一个独立的 `duplication/deja-dup` 配置文件，仅包含重要文件，以避免传输你并不真正需要离线备份的大量数据（网络缓存、音乐、下载内容等）。
+
+
+    或者，你可以使用零知识备份工具，例如 `SpiderOak`，它提供了一个优秀的 Linux GUI 工具，并具有其他有用功能，如在多个系统和平台之间同步内容。
+
+
+    ## 最佳实践 (Best practices)
+
+
+    以下是我们认为你应该采纳的一系列精选最佳实践。这显然不是详尽的，而是试图提供实用的建议，在安全性和整体易用性之间取得可行的平衡。
+
+
+    ### 图形环境
+
+
+    古老的 X 协议是为完全不同的个人计算时代设计并实现的，缺乏在网络化工作站上被认为是至关重要的安全功能。举几个例子：
+
+
+    - 任何 X 应用程序都可以访问完整的屏幕内容
+
+    - 任何 X 应用程序都可以注册接收所有的击键，无论是在哪个窗口中输入的
+
+
+    足够严重的浏览器漏洞意味着攻击者自动获得了一个内置键记录器和屏幕录制器，并可以捕获你输入的一切。
+
+
+    你应该强烈考虑切换到更现代的平台如 Wayland，即使这意味着需要通过 X11 封装器运行你的现有应用程序。随着 Fedora 开始对所有应用程序默认 Wayland，我们可以希望大多数软件很快不再需要旧的
+    X11 层。
+
+
+    ## 浏览器 (Browsers)
+
+
+    无疑，浏览器是系统中攻击面最大、暴露程度最高的软件。它是一个专门为下载和执行不可信的频繁敌意的代码而编写的工具。它通过多种机制（如沙箱和代码清理）保护你免受这种危险，但这些机制此前已被多次破解。你应该学会将网页视为你每天中最不安全的活动。
+
+
+    你有几种方法可以减少浏览器破解的影响，但真正有效的方法需要你操作工作站的方式进行重大改变。
+
+
+    ### 1：使用不同的浏览器（必备）
+
+
+    这是最容易实现的，但仅提供细微的安全处。并非所有的浏览器破解都能让攻击者不受限制地访问系统——有时它们仅限于读取本地浏览器存储、窃取其他标签页的活动会话、捕捉浏览器中的输入等。使用两个浏览器（一个用于工作/高安全性网站，另一个用于其他所有内容），可以防止小型破解让攻击者获取整个
+    Cookie 桶。主要的不便是两个不同浏览器进程消耗的内存。
+
+
+    以下是我们的建议：
+
+
+    #### 用于工作和高安全性网站的 Firefox
+
+
+    使用 Firefox 访问工作网站，需要格外小心，以确保 Cookie、会话、登录信息、击键等数据绝对不会落入攻击者手中。你不应该
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 16]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    The modules will be blacklisted upon reboot. It doesn''t hurt doing this if you
+    don''t have these ports (but it doesn''t do anything either).
+
+
+    # Root mail
+
+
+    By default, root mail is just saved on the system and tends to never be read.
+    Make sure you set your /etc/aliases to forward root mail to a mailbox that you
+    actually read, otherwise you may miss important system notifications and reports:
+
+
+    ```
+
+    # Person who should get root''s mail
+
+    bob@example.com
+
+    ```
+
+
+    Run newaliases after this and test it to make sure that it actually gets delivered,
+    as some email providers will reject email coming from nonexistent or non-routable
+    domain names. If that is the case, you will need to play with your mail forwarding
+    configuration until this actually works.
+
+
+    # Firewalls, sshd, and listening daemons
+
+
+    The default firewall settings will depend on your distribution, but many of them
+    will allow incoming sshd ports. Unless you have a compelling legitimate reason
+    to allow incoming ssh, you should filter that out and disable the sshd daemon.
+
+
+    ```
+
+    systemctl disable sshd.service
+
+    systemctl stop sshd.service
+
+    ```
+
+
+    You can always start it temporarily if you need to use it.
+
+
+    In general, your system shouldn''t have any listening ports apart from responding
+    to ping. This will help safeguard you against network-level exploits.'
+  - '[PAGE 17]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Automatic updates or notifications
+
+
+    It is recommended to turn on automatic updates, unless you have a very good reason
+    not to do so, such as fear that an automatic update would render your system unusable
+    (it''s happened in the past, so this fear is not unfounded). At the very least,
+    you should enable automatic notifications of available updates. Most distributions
+    already have this service automatically running for you, so chances are you don''t
+    have to do anything. Consult your distribution documentation to find out more.
+
+
+    You should apply all outstanding errata as soon as possible, even if something
+    isn''t specifically labeled as "security update" or has an associated CVE code.
+    All bugs have the potential of being security bugs and erring on the side of newer,
+    unknown bugs is generally a safer strategy than sticking with old, known ones.
+
+
+    # Watching logs
+
+
+    You should have a keen interest in what happens on your system. For this reason,
+    you should install logwatch and configure it to send nightly activity reports
+    of everything that happens on your system. This won''t prevent a dedicated attacker,
+    but is a good safety-net feature to have in place.
+
+
+    Note, many systemd distros will no longer automatically install a syslog server
+    that logwatch needs (due to systemd relying on its own journal), so you will need
+    to install and enable syslog to make sure your `/var/log` is not empty logwatch
+    will be of any use.'
+  - '[PAGE 18]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Rkhunter and IDS
+
+
+    Installing rkhunter and an intrusion detection system (IDS) like `aide` or `tripwire`
+    will not be that unless you actually understand how they work and take the necessary
+    steps to set them up (such as, keeping the databases on external media, running
+    checks from a trusted environment, remembering to refresh the hash databases after
+    performing system updates and configuration changes, etc). If you are not willing
+    to take these steps and adjust how you do things on your own workstation, these
+    tools will introduce hassle without any tangible security benefit.
+
+
+    We do recommend that you install `rkhunter` and run it nightly. It''s fairly easy
+    to learn and use, and though it will not deter a sophisticated attacker, it may
+    help you catch your own mistakes.
+
+
+    # Personal workstation backups
+
+
+    Workstation backups tend to be overlooked or done in a haphazard, often unsafe
+    manner.
+
+
+    # Checklist
+
+
+    +   - Set up encrypted workstation backups to external storage (ESSENTIAL)
+
+    - Use zero-knowledge backup tools for off-site/cloud backups (NICE)'
+  - '[PAGE 19]
+
+
+    # SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Considerations
+
+
+    # Full encrypted backups to external storage
+
+
+    It is handy to have an external hard drive where one can dump full backups without
+    having to worry about such things like bandwidth and upstream speeds (in this
+    day and age most providers still offer dramatically asymmetric upload/download
+    speeds). Needless to say, this hard drive needs to be in its iself encrypted (again,
+    via LUKS), or you should use a backup tool that creates encrypted backups, such
+    as duplication or its GUI companion, deja-dup. I recommend using the latter with
+    a good randomly generated passphrase, stored in a safe offline. If you travel
+    with your laptop, leave this drive at home to have something come back in case
+    your laptop is lost or stolen.
+
+
+    In addition to your home directory, you should also back up `/etc` and `/var/log`
+    for various forensic purposes.
+
+
+    Above all, avoid copying your home directory onto any unencrypted storage, even
+    as a quick way to move your files between systems, as you will most certainly
+    forget to erase it when you''re done, exposing potentially private or otherwise
+    sensitive data to snooping hands — especially if you keep storage media in the
+    same bag with your laptop or in your office desk drawer.
+
+
+    # Selective zero-knowledge backups off-site
+
+
+    Off-site backups are also extremely important and can be done either to your employer,
+    if they offer space for it, or to a cloud provider. You can set up a separate
+    duplicate/deja-dup profile to include only important files in order to avoid transferring
+    huge amounts of data that you don''t really care to back up off-site (internet
+    cache, music, downloads, etc).'
+  - '[PAGE 20]
+
+
+    Alternatively, you can use a zero-knowledge backup tool, such as SpiderOak, which
+    offers an excellent Linux GUI tool and has additional useful features such as
+    synchronizing content between multiple systems and platforms.
+
+
+    # Best practices
+
+
+    What follows is a curated list of best practices that we think you should adopt.
+    It is most certainly non-exhaustive, but rather attempts to offer practical advice
+    that strikes a workable balance between security and overall usability.
+
+
+    # Graphical environment
+
+
+    The venerable X protocol was conceived and implemented for a wholly different
+    era of personal computing and lacks important security features that should be
+    considered essential on a networked workstation. To give a few examples:
+
+
+    +   * Any X application has access to full screen contents
+
+    * Any X application can register to receive all keystrokes, regardless into which
+    window they are typed
+
+
+    A sufficiently severe browser vulnerability means attackers get automatic access
+    to what is effectively a builtin keylogger and screen recorder and can watch and
+    capture everything you type into your root terminal sessions.
+
+
+    You should strongly consider switching to a more modern platform like Wayland,
+    even if this means using many of your existing applications through an X11 protocol
+    wrapper. With Fedora starting to default to Wayland for all applications, we can
+    hope that most software will soon stop requiring the legacy X11 layer.'
+  - '[PAGE 21]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Browsers
+
+
+    There is no question that the web browser will be the piece of software with the
+    largest and the most exposed attack surface on your system. It is a tool written
+    specifically to download and execute untrusted, frequently hostile code. It attempts
+    to shield you from this danger by employing multiple mechanisms such as sandboxes
+    and code sanitization, but they have all been previously defeated on multiple
+    occasions. You should learn to approach browsing websites as the most insecure
+    activity you''ll engage in on any given day.
+
+
+    There are several ways you can reduce the impact of a compromised browser, but
+    the truly effective ways will require significant changes in the way you operate
+    your workstation.
+
+
+    # 1: Use two different browsers (ESSENTIAL)
+
+
+    This is the easiest to do, but only offers minor security benefits. Not all browser
+    compromises give an attacker unfettered access to your system — sometimes they
+    are limited to allowing one to read local browser storage, steal active sessions
+    from other tabs, capture input entered into the browser, etc. Using two different
+    browsers, one for work/high security sites, and another for everything else will
+    help prevent minor compromises from giving attackers access to the whole cookie
+    jar. The main inconvenience will be the amount of memory consumed by two different
+    browser processes.
+
+
+    Here''s what we recommend:
+
+
+    # Firefox for work and high security sites
+
+
+    Use Firefox to access work-related sites, where extra care should be taken to
+    ensure that data like cookies, sessions, login information, keystrokes, etc, should
+    definitely not fall into attackers'' hands. You should NOT'
+- md: "\n# A SysAdmin's Essential Guide to Linux Workstation Security\n\nuse this\
+    \ browser for accessing any other sites except select few.\n\nYou should install\
+    \ the following Firefox add-ons:\n\n- NoScript (ESSENTIAL)\n  - NoScript prevents\
+    \ active content from loading, except from user whitelisted domains. It is a great\
+    \ hassle to use with your default browser (though offers really good security\
+    \ benefits), so we recommend only enabling it on the browser you use to access\
+    \ work-related sites.\n\n- Privacy Badger (ESSENTIAL)\n  - EFF's Privacy Badger\
+    \ will prevent most external trackers and ad platforms from being loaded, which\
+    \ will avoid compromises on these tracking sites from affecting your browser (trackers\
+    \ and ad sites are very commonly targeted by attackers, as they allow rapid infection\
+    \ of thousands of systems worldwide.\n\n- HTTPS Everywhere (ESSENTIAL)\n  - This\
+    \ EFF-developed Add-on will ensure that most of your sites are accessed over a\
+    \ secure connection, even if a link you click is using http:// (great to avoid\
+    \ a number of attacks, such as SSL-strip).\n\n- Certificate Patrol (NICE)\n  -\
+    \ This tool will alert you if the site you're accessing has recently changed their\
+    \ TLS certificates — especially if it wasn't nearing expiration dates or if it\
+    \ is now using a different certification authority. It helps alert you if someone\
+    \ is trying to man-in-the-middle your connection, but generates a lot of benign\
+    \ false-positives.\n\n# A SysAdmin's Essential Guide to Linux Workstation Security\n\
+    \nYou should leave Firefox as your default browser for opening links, as NoScript\
+    \ will prevent most active content from loading or executing.\n\n# Chrome/Chromium\
+    \ for everything else\n\nChromium developers are aware of Firefox in adding a\
+    \ lot of nice security features (at seccomp sandboxes, kernel user namespaces,\
+    \ etc, which act as an added layer of isolation between the sites you visit and\
+    \ the rest of your system. Chromium is the upstream open-source project, and Chrome\
+    \ is Google's proprietary binary build based on it (insert the usual paranoid\
+    \ caution about not using it for anything you don't want Google to know).\n\n\
+    It is recommended that you install Privacy Badger and HTTPS Everywhere extensions\
+    \ in Chrome and give it a distinct theme from Firefox to indicate that this is\
+    \ your \"untrusted sites\" browser.\n\n# 2: Use Firejail (ESSENTIAL)\n\nFirejail\
+    \ is a project that uses Linux namespaces and seccomp-bpf to create a sandbox\
+    \ around Linux applications. It is an excellent way to help build additional protection\
+    \ between the browser and the rest of your system. You can use Firejail to create\
+    \ separate instances of Firefox to use for different purposes — for work, for\
+    \ personal but trusted sites (such as banking), and one more for casual browsing\
+    \ (social media, etc).\n\nFirejail is most effective on Wayland, unless you use\
+    \ X11-isolation mechanisms (the --x11 flag). To starting Firejail with Firefox,\
+    \ please refer to the documentation provided by the project:\n\n- Firefox Sandboxing\
+    \ Guide\n\n# A SysAdmin's Essential Guide to Linux Workstation Security\n\n# 3:\
+    \ Fully separate your work and play environments via virtualization (PARANOID)\n\
+    \nSee QubesOS project, which strives to provide a \"reasonably secure\" workstation\
+    \ environment via compartmentalizing your applications into separate fully isolated\
+    \ VMs. You may also investigate SubgraphOS that achieves similar goals using container\
+    \ technology (currently in Alpha).\n\n# Use Fido U2F for website 2-factor authentication\n\
+    \nFido U2F is a standard developed specifically to provide a mechanism for 2-factor\
+    \ authentication and combat credential phishing. Regular OTP (one-time password)\
+    \ mechanisms are ineffective in the case where the attacker is able to trick you\
+    \ into submitting your password and token into a malicious site masquerading as\
+    \ a legitimate service. The U2F protocol will store site authentication data on\
+    \ the USB token that will prevent you from accidentally giving an attacker both\
+    \ your password and your one-time token if you try to use it on anything other\
+    \ than the legitimate website.\n\nSee this site for a curated list of services\
+    \ providing Fido U2F support:\n\n- dongleauth.info\n\nNote, that not all browsers\
+    \ currently support U2F-capable hardware tokens, and if you use sandboxes or virtualization-based\
+    \ isolation around your browser, you may have to work extra hard to enable USB\
+    \ pass-through from the application to your USB token.\n\n# Password managers\n\
+    \n# Checklist\n\n- Use a password manager (ESSENTIAL)\n- Use unique, randomly\
+    \ generated passwords on unrelated sites (ESSENTIAL)\n- Use a password manager\
+    \ that supports team sharing (NICE)\n- Use a separate password manager for non-website\
+    \ accounts (NICE)\n\n# Considerations\n\nUsing strong, unique, randomly generated\
+    \ passwords should be a critical requirement for every member of your team. Credential\
+    \ theft is happening all the time — either via compromised computers, stolen database\
+    \ dumps, remote site exploits, or any number of other means. No credentials should\
+    \ be reused across different sites, ever.\n\n# In-browser password manager\n\n\
+    Every browser has a mechanism for saving passwords that is fairly secure and can\
+    \ sync with vendor-maintained cloud storage while keeping the data encrypted with\
+    \ a user-provided passphrase. However, this mechanism has important disadvantages:\n\
+    \n1. It does not work across browsers\n2. It does not offer any way of sharing\
+    \ credentials with team members\n\n# A SysAdmin's Essential Guide to Linux Workstation\
+    \ Security\n\nThere are several well-supported, free-cheap password managers that\
+    \ are well-integrated into multiple browsers, work across platforms, and offer\
+    \ group sharing (usually as a paid service). Solutions can be easily found via\
+    \ search engines.\n\n# Standalone password manager\n\nOne of the major drawbacks\
+    \ of any password manager that comes integrated with the browser is the fact that\
+    \ it's part of the application that is most likely to be attacked by intruders.\
+    \ If this makes you uncomfortable (and it should), you may choose to have two\
+    \ different password managers — one for websites that is integrated into your\
+    \ browser, and one that runs as a standalone. The latter can be used to store\
+    \ high-risk credentials such as root passwords, database passwords, etc.\n\nIt\
+    \ may be particularly useful to have such tool for sharing credentials with other\
+    \ members of your team (server passwords, ILO passwords, database admin passwords,\
+    \ etc.).\n\nA few tools can help you:\n\n- KeePassXC, which improves team sharing\
+    \ in version 2\n- Pass, which uses text files and integrates with PGP\n- Django-Pstore,\
+    \ which uses GPG to share credentials between admins\n- Hiera-yaml, which, if\
+    \ you are already using Puppet for your infrastructure, may be a handy way to\
+    \ track server/service credentials\n\n# A SysAdmin's Essential Guide to Linux\
+    \ Workstation Security\n\n# Securing SSH and PGP private keys\n\nPersonal encryption\
+    \ keys, including SSH and PGP private keys, are going to be the most prized items\
+    \ on your workstation — something the attackers will be most interested in obtaining,\
+    \ as that would allow them to further attack your infrastructure or impersonate\
+    \ you to other admins. You should take extra steps to ensure that your private\
+    \ keys are well protected.\n\n# Checklist\n\n- Strong passphrases are used to\
+    \ protect private keys (ESSENTIAL)\n- PGP Master is stored on removable storage\
+    \ (NICE)\n- Auth, Sign and Encrypt Subkeys are stored on a smartcard device (NICE)\n\
+    - SSH is configured to use PGP Auth key as ssh private key (NICE)\n\n# Considerations\n\
+    \nThe best way to prevent private key theft is to use a smartcard to store your\
+    \ encryption private keys and never copy them onto the workstation. There are\
+    \ several manufacturers that offer OpenPGP capable devices:\n\n- Kernel Concepts,\
+    \ where you can purchase both the OpenPGP compatible smartcards and the USB readers,\
+    \ you should need one.\n- Yubikey, which offers OpenPGP smartcard functionality\
+    \ in addition to many other cool features (U2F, PIV, HOTP, etc).\n- NitroKey,\
+    \ which is based on open-source software and hardware\n\nIt is also important\
+    \ to make sure that the master PGP key is not stored on the main workstation,\
+    \ and only subkeys are used. The master key\n"
+  mdcn: "\n\n# 系统管理员 Linux 工作站安全必备指南\n\n使用此浏览器访问除少数几个站点以外的所有其他网站。\n\n您应该安装以下 Firefox\
+    \ 扩展：\n\n- NoScript（**核心必备**）\n  - NoScript 可防止活动内容的加载，除非其来自用户白名单中的域名。在默认浏览器中使用它非常麻烦（尽管它提供了极佳的安全收益），因此我们建议仅在用于访问工作相关网站的浏览器上启用它。\n\
+    \n- Privacy Badger（**核心必备**）\n  - EFF 的 Privacy Badger 将防止大多数外部追踪器和广告平台的加载，从而避免这些跟踪站点受攻击的影响影响到您的浏览器（追踪器和广告网站是攻击者经常针对的目标，因为它们可以迅速感染全球数以万计的系统）。\n\
+    \n- HTTPS Everywhere（核心必备**）\n  - 这个由 EFF 开发的扩展将确保您大多数网站都通过安全连接访问，即使您点击的链接使用的是\
+    \ http://（这对于避免诸如 SSL-strip 等攻击非常有用）。\n\n- Certificate Patrol（**可选**）\n  - 如果您访问的网站最近更改了\
+    \ TLS 证书，此工具将提醒您——特别是当证书并非临近到期，或者现在使用了不同的认证授权机构时。它可以帮助在有人尝试对您的连接进行中间人攻击时提醒您，但会产生很多良误报。\n\
+    \n# 系统管理员 Linux 工作站安全必备指南\n\n您应该将 Firefox 设置为打开链接的默认浏览器，因为 NoScript 将阻止大多数活动内容的加载或执行。\n\
+    \n# 其他任务使用 Chrome/Chromium\n\nChromium 开发者在参考 Firefox 的基础上添加了许多优秀的安全特性（如 seccomp\
+    \ 沙箱、内核用户命名空间等，这些在您访问的站点与系统其余部分之间构建了额外的隔离层）。Chromium 是上游开源项目，而 Chrome 是基于其开发的\
+    \ Google 专有二进制版本（请记住通常的偏执性谨慎：不要将其用于任何您不想让 Google 知道的事务）。\n\n建议在 Chrome 中安装 Privacy\
+    \ Badger 和 HTTPS Everywhere 扩展，并为它设置一个与 Firefox 不同的主题，以指示这是您的“不可信站点”浏览器。\n\n#\
+    \ 第 2：使用 Firejail（**核心必备**）\n\nFirejail 是一个利用 Linux 命名空间和 seccomp-bpf 为 Linux\
+    \ 创建沙箱的项目。它是帮助在浏览器与系统其余部分之间构建额外保护的极佳方式。您可以使用 Firejail 创建 Firefox 的独立实例，用于不同的用途——用于工作、用于个人但受信任的站点（如银行），以及另一个用于闲闲浏览（社交媒体等）。\n\
+    \nFirejail 在 Wayland 上最有效，除非您使用了 X11 隔离机制（`--x11` 标志）。要使用 Firefox 启动 Firejail，请参考该项目提供的文档：\n\
+    \n- Firefox 沙箱指南\n\n# 系统管理员 Linux 工作站安全必备指南\n\n# 第 3：通过虚拟化完全隔离工作和娱乐环境（**偏执级**）\n\
+    \n参阅 QubesOS 项目，该项目致力于通过将应用程序划分到独立的完全隔离虚拟机（VM）中来提供“相当安全”的工作站环境。您也可以研究 SubgraphOS，它使用容器技术实现了类似的目标（目前处于\
+    \ Alpha 阶段）。\n\n# 使用 Fido U2F 进行网站双重身份验证\n\nFido U2F 是一种专门开发的标准，旨在提供双重身份验证机制并对抗凭据钓鱼。当攻击者能够欺骗您将密码和令牌提交到伪装合法服务的恶意网站时，常规的\
+    \ OTP（一次性密码）机制是无效的。U2F 协议会将站点验证数据存储在 USB 令牌上，防止您在尝试合法网站以外的任何地方使用它时，意外向攻击者提供密码和一次性令牌。\n\
+    \n访问此网站获取提供 Fido U2F 支持的服务精选列表：\n\n- dongleauth.info\n\n注意，并非所有浏览器目前都支持 U2F 功能的硬件令牌，如果您在浏览器周围使用了沙箱或基于虚拟化的隔离，您可能需要花费额外精力来启用从应用程序到\
+    \ USB 令牌的 USB 透传（pass-through）。\n\n# 密码管理器\n\n# 清单\n\n- 使用密码管理器（**核心必备**）\n- 在不相关的站点上使用唯一的、随机生成的密码（**核心必备**）\n\
+    - 使用支持团队共享的密码管理器（**可选**）\n- 为非网站账户使用独立的密码管理器（**可选**）\n\n# 注意事项\n\n使用强力、唯一、随机生成的密码应该是您团队每位成员的关键要求。凭据窃取随时发生——通过计算机被攻破、数据库转储泄露、远程站点漏洞或任何其他手段。绝不要在不同站点之间重复使用凭据。\n\
+    \n# 浏览器内置密码管理器\n\n每个浏览器都有一套相当安全的密码保存机制，并可以与供应商维护的云存储同步，同时使用用户提供的短语对数据进行加密。然而，这种机制有重要的缺点：\n\
+    \n1. 它无法跨浏览器工作。\n2. 它没有提供任何与团队成员共享凭据的方法。\n\n# 系统管理员 Linux 工作站安全必备指南\n\n有许多支持良好的、免费或廉价的密码管理器，它们集成在多个浏览器中，支持跨平台，并提供分组共享（通常作为付费服务）。可以通过搜索引擎轻松找到这些解决方案。\n\
+    \n# 独立密码管理器\n\n任何集成在浏览器中的密码管理器的主要缺点之一是，它是最可能被入侵者攻击的应用程序的一部分。如果这让您感到不适（本就如此），您可以选择两个不同的密码管理器——一个集成在浏览器中用于网站，另一个作为独立程序运行。后者可存储高风险凭据，如\
+    \ root 密码、数据库密码等。\n\n此类工具对于与团队其他成员共享凭据（服务器密码、ILO 密码、数据库管理员密码等）可能特别有用。\n\n一些工具可以帮助您：\n\
+    \n- KeePassXC，它在版本 2 中改进了团队共享\n- Pass，它使用文本文件并与 PGP 集成\n- Django-Pstore，它使用 GPG\
+    \ 在管理员之间共享凭据\n- Hiera-yaml，如果您已经在基础设施中使用了 Puppet，这可能是跟踪服务器/服务凭据的方便方法\n\n# 系统管理员\
+    \ Linux 工作站安全必备指南\n\n# SSH 和 PGP 私密钥的安全防护\n\n个人加密密钥（包括 SSH 和 PGP 私密钥）将是您工作站上最珍贵的物品——攻击者最感兴趣获取这些物品，因为这允许他们进一步攻击您的基础设施或向其他管理员冒充您。您应该采取额外步骤确保您的私密钥得到良好保护。\n\
+    \n# 清单\n\n- 使用强密码语保护私密钥（**核心必备**）\n- 将 PGP 主密钥存储在移除式存储设备中（**可选**）\n- 将认证、签名和加密子密钥存储在智能卡设备中（**可选**）\n\
+    - 配置 SSH 使用 PGP 密钥作为 SSH 私密钥（**可选**）\n\n# 注意事项\n\n防止私密钥密钥的最佳方法是使用智能卡存储加密私密钥，并且绝不复制到工作站上。有几家厂商提供支持\
+    \ OpenPGP 的设备：\n\n- Kernel Concepts，您可以在那里购买兼容 OpenPGP 的智能卡和 USB 读器，您需要一个。\n-\
+    \ Yubikey，除了提供 OpenPGP 智能卡功能外，还提供了许多酷的功能（U2F、PIV、HOTP 等）。\n- NitroKey，它基于开源软件和硬件\n\
+    \n此外，确保 PGP 主密钥不存储在主工作站上，仅使用子密钥也是重要的。主密钥\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 22]\n\n# A SysAdmin's Essential Guide to Linux Workstation Security\n\n\
+    use this browser for accessing any other sites except select few.\n\nYou should\
+    \ install the following Firefox add-ons:\n\n+   - NoScript (ESSENTIAL)\n  - NoScript\
+    \ prevents active content from loading, except from user whitelisted domains.\
+    \ It is a great hassle to use with your default browser (though offers really\
+    \ good security benefits), so we recommend only enabling it on the browser you\
+    \ use to access work-related sites.\n\n+   - Privacy Badger (ESSENTIAL)\n  - EFF's\
+    \ Privacy Badger will prevent most external trackers and ad platforms from being\
+    \ loaded, which will avoid compromises on these tracking sites from affecting\
+    \ your browser (trackers and ad sites are very commonly targeted by attackers,\
+    \ as they allow rapid infection of thousands of systems worldwide.\n\n+   - HTTPS\
+    \ Everywhere (ESSENTIAL)\n  - This EFF-developed Add-on will ensure that most\
+    \ of your sites are accessed over a secure connection, even if a link you click\
+    \ is using http:// (great to avoid a number of attacks, such as SSL-strip).\n\n\
+    +   - Certificate Patrol (NICE)\n  - This tool will alert you if the site you're\
+    \ accessing has recently changed their TLS certificates — especially if it wasn't\
+    \ nearing expiration dates or if it is now using a different certification authority.\
+    \ It helps alert you if someone is trying to man-in-the-middle your connection,\
+    \ but generates a lot of benign false-positives."
+  - '[PAGE 23]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    You should leave Firefox as your default browser for opening links, as NoScript
+    will prevent most active content from loading or executing.
+
+
+    # Chrome/Chromium for everything else
+
+
+    Chromium developers are aware of Firefox in adding a lot of nice security features
+    (at seccomp sandboxes, kernel user namespaces, etc, which act as an added layer
+    of isolation between the sites you visit and the rest of your system. Chromium
+    is the upstream open-source project, and Chrome is Google''s proprietary binary
+    build based on it (insert the usual paranoid caution about not using it for anything
+    you don''t want Google to know).
+
+
+    It is recommended that you install Privacy Badger and HTTPS Everywhere extensions
+    in Chrome and give it a distinct theme from Firefox to indicate that this is your
+    "untrusted sites" browser.
+
+
+    # 2: Use jailjail (ESSENTIAL)
+
+
+    Firejail is a project that uses Linux namespaces and seccomp-bpf to create a sandbox
+    around Linux applications. It is an excellent way to help build additional protection
+    between the browser and the rest of your system. You can use Firejail to create
+    separate instances of Firefox to use for different purposes — for work, for personal
+    but trusted sites (such as banking), and one more for casual browsing (social
+    media, etc).
+
+
+    Firejail is most effective on Wayland, unless you use X11-isolation mechanisms
+    (the --x11 flag). To starting Firejail with Firefox, please refer to the documentation
+    provided by the project:
+
+
+    +   - Firefox Sandboxing Guide'
+  - '[PAGE 24]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # 3: Fully separate your work and play environments via virtualization (PARANOID)
+
+
+    See QubesOS project, which strives to provide a "reasonably secure" workstation
+    environment via compartmentalizing your applications into separate fully isolated
+    VMs. You may also investigate SubgraphOS that achieves similar goals using container
+    technology (currently in Alpha).
+
+
+    # Use Fido U2F for website 2-factor authentication
+
+
+    Fido U2F is a standard developed specifically to provide a mechanism for 2-factor
+    authentication and combat credential phishing. Regular OTP (one-time password)
+    mechanisms are ineffective in the case where the attacker is able to trick you
+    into submitting your password and token into a malicious site masquerading as
+    a legitimate service. The U2F protocol will store site authentication data on
+    the USB token that will prevent you from accidentally giving an attacker both
+    your password and your one-time token if you try to use it on anything other than
+    the legitimate website.
+
+
+    See this site for a curated list of services providing Fido U2F support:
+
+
+    +   - dongleauth.info
+
+
+    Note, that not all browsers currently support U2F-capable hardware tokens, and
+    if you use sandboxes or virtualization-based isolation around your browser, you
+    may have to work extra hard to enable USB pass-through from the application to
+    your USB token.'
+  - '[PAGE 25]
+
+
+    # Password managers
+
+
+    # Checklist
+
+
+    +   - Use a password manager (ESSENTIAL)
+
+    - Use unique, randomly generated passwords on unrelated sites (ESSENTIAL)
+
+    - Use a password manager that supports team sharing (NICE)
+
+    - Use a separate password manager for non-website accounts (NICE)
+
+
+    # Considerations
+
+
+    Using strong, unique, randomly generated passwords should be a critical requirement
+    for every member of your team. Credential theft is happening all the time — either
+    via compromised computers, stolen database dumps, remote site exploits, or any
+    number of other means. No credentials should be reused across different sites,
+    ever.
+
+
+    # In-browser password manager
+
+
+    Every browser has a mechanism for saving passwords that is fairly secure and can
+    sync with vendor-maintained cloud storage while keeping the data encrypted with
+    a user-provided passphrase. However, this mechanism has important disadvantages:
+
+
+    +   1. It does not work across browsers
+
+    2. It does not offer any way of sharing credentials with team members'
+  - '[PAGE 26]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    There are several well-supported, free-cheap password managers that are well-integrated
+    into multiple browsers, work across platforms, and offer group sharing (usually
+    as a paid service). Solutions can be easily found via search engines.
+
+
+    # Standalone password manager
+
+
+    One of the major drawbacks of any password manager that comes integrated with
+    the browser is the fact that it''s part of the application that is most likely
+    to be attacked by intruders. If this makes you uncomfortable (and it should),
+    you may choose to have two different password managers — one for websites that
+    is integrated into your browser, and one that runs as a standalone application.
+    The latter can be used to store high-risk credentials such as root passwords,
+    database passwords, other shell account credentials, etc.
+
+
+    It may be particularly useful to have such tool for sharing superuser account
+    credentials with other members of your team (server passwords, ILO passwords,
+    database admin passwords, bootloader passwords, etc.).
+
+
+    A few tools can help you:
+
+
+    +   - KeePassX, which improves team sharing in version 2
+
+    - Pass, which uses text files and PGP and integrates with git
+
+    - Django-Pstore, which uses GPG to share credentials between admins
+
+    - Hiera-Eyaml, which, if you are already using Puppet for your infrastructure,
+    may be a handy way to track your server/service credentials as part of your encrypted
+    Hiera data store'
+  - '[PAGE 27]
+
+
+    # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Securing SSH and PGP private keys
+
+
+    Personal encryption keys, including SSH and PGP private keys, are going to be
+    the most prized items on your workstation — something the attackers will be most
+    interested in obtaining, as that would allow them to further attack your infrastructure
+    or impersonate you to other admins. You should take extra steps to ensure that
+    your private keys are well protected against theft.
+
+
+    # Checklist
+
+
+    +   - Strong passphrases are used to protect private keys (ESSENTIAL)
+
+    - PGP Master is stored on removable storage (NICE)
+
+    - Auth, Sign and Encrypt Subkeys are stored on a smartcard device (NICE)
+
+    - SSH is configured to use PGP Auth key as ssh private key (NICE)
+
+
+    # Considerations
+
+
+    The best way to prevent private key theft is to use a smartcard to store your
+    encryption private keys and never copy them onto the workstation. There are several
+    manufacturers that offer OpenPGP capable devices:
+
+
+    +   - Kernel Concepts, where you can purchase both the OpenPGP compatible smartcards
+    and the USB readers, you should need one.
+
+    - Yubikey, which offers OpenPGP smartcard functionality in addition to many other
+    cool features (U2F, PIV, HOTP, etc).
+
+    - NitroKey, which is based on open-source software and hardware
+
+
+    It is also important to make sure that the master PGP key is not stored on the
+    main workstation, and only subkeys are used. The master key'
+- md: "\nwill only be needed when signing someone else's keys or creating new subkeys\
+    \ — operations which do not happen very frequently. You may follow the Debian's\
+    \ subkeys to learn how to move your master key to removable storage and how to\
+    \ create subkeys.\n\nYou should configure your gnupg key to act as your ssh agent\
+    \ and use the smartcard-BGP Auth key to act as your ssh private key. We publish\
+    \ a detailed guide on how to do that using either a smartcard reader or a Yubikey\
+    \ NEO.\n\nIf you are not willing to go that far, at least make sure you have a\
+    \ strong passphrase on both your PGP private key and your SSH private key, which\
+    \ will make it harder for attackers to steal and use them.\n\n## Hibernate or\
+    \ shut down, do not suspend\n\nWhen a system is suspended, the RAM contents are\
+    \ kept on the memory chips and can be read by an attacker (known as the Cold Boot\
+    \ Attack). If you are going away from your system for an extended period of time,\
+    \ such as at the end of the day, it is best to shut it down or hibernate it instead\
+    \ of suspending it or leaving it on.\n\n## SELinux on the workstation\n\n## Checklist\n\
+    \n- Make sure SELinux is enforcing on your workstation (ESSENTIAL)\n\n## Considerations\n\
+    \nSELinux is a Mandatory Access Controls (MAC) extension to core POSIX permissions\
+    \ functionality. It is mature, robust, and has come a long way since its initial\
+    \ roll-out. Regardless, many sysadmins to this day repeat the outdated mantra\
+    \ of “just turn it off.”\n\nThat being said, SELinux will have limited security\
+    \ benefits on the workstation, as most applications you will be running as a user\
+    \ are going to be running unconfined. It does provide enough net benefit to warrant\
+    \ leaving it on, as it will likely help prevent an attacker from escalating privileges\
+    \ to gain root-level access via a vulnerable daemon service.\n\nOur recommendation\
+    \ is to leave it on and enforcing.\n\n## Further reading\n\nThe world of IT security\
+    \ is a rabbit hole with no bottom. If you would like to go deeper, or find out\
+    \ more about security features on your particular distribution, please check out\
+    \ the following links:\n\n- Fedora Security Guide\n- CESG Ubuntu Security Guide\n\
+    - Debian Security Manual\n- Arch Linux Security Wiki\n- Mac OSX Security\n\n##\
+    \ License\n\nThis work is licensed under a Creative Commons Attribution-ShareAlike\
+    \ 4.0 International License.\n\n# # THE LINUX FOUNDATION\nTRAINING\n\n# ## QUICK\
+    \ REFERENCE CHECKLISTS\nWORKSTATION SECURITY\n\n### Choosing the right hardware\n\
+    \n- System supports SecureBoot (ESSENTIAL)\n- System has no firewall, thunderbolt\
+    \ or ExpressCard ports (NICE)\n- System has a TPM chip (NICE)\n\n### Post-installation\
+    \ hardening\n\n- Globally disable firewall and thunder modules (ESSENTIAL)\n-\
+    \ Check your firewalls to ensure all incoming ports are filtered (ESSENTIAL)\n\
+    - Make sure root mail is forwarded to an account you check (ESSENTIAL)\n- Set\
+    \ up an automatic update schedule, or remind updates (ESSENTIAL)\n- Check sshd\
+    \ service is enabled by default (NICE)\n- Configure theaver to auto-lock after\
+    \ a period of inactivity (NICE)\n- Set up watchdog (NICE)\n- Install an Intrusion\
+    \ Detection System (NICE)\n\n### Pre-boot environment\n\n- UEFI mode is used (not\
+    \ legacy BIOS) (ESSENTIAL)\n- Password is required to enter UEFI configuration\
+    \ (ESSENTIAL)\n- SecureBoot enabled (ESSENTIAL)\n- UEFI-level password is required\
+    \ to boot the system (NICE)\n\n### Distro choice considerations\n\n- Has a robust\
+    \ MAC/RBAC implementation (SELinux/AppArmor/GrSecurity) (ESSENTIAL)\n- Publishes\
+    \ bulletins (ESSENTIAL)\n- Provides timely security patches (ESSENTIAL)\n- Provides\
+    \ cryptographic verification of packages (ESSENTIAL)\n- Fully supports UEFI and\
+    \ SecureBoot (ESSENTIAL)\n- Has robust full disk encryption support (ESSENTIAL)\n\
+    \n### Browsing\n\n- Use two browsers (ESSENTIAL)\n- Use Firefox for web and high\
+    \ security sites. Installing the Firefox add-ons:\n  - NoScript (ESSENTIAL)\n\
+    \  - Privacy Badger (ESSENTIAL)\n  - HTTPS Everywhere (ESSENTIAL)\n  - Certificate\
+    \ Patrol (NICE)\n- Use Chrome/Chromium for everything\n- Use two different, one\
+    \ a dedicated VM (NICE)\n- Fully separate your work and play environments via\
+    \ virtualization (PARANOID)\n\n### Distro installation guidelines\n\n- Use full\
+    \ disk encryption (LUKS) with a robust passphrase (ESSENTIAL)\n- Make swap is\
+    \ also encrypted (ESSENTIAL)\n- Require a password to edit bootloader (can be\
+    \ same as LUKS) (ESSENTIAL)\n- Set up a root partition (can be same as LUKS) (ESSENTIAL)\n\
+    - Use an unprivileged account, part of administrators group (ESSENTIAL)\n- Set\
+    \ up a user-account access, different from root (ESSENTIAL)\n\n### Securing SSH\
+    \ and PGP keys\n\n- Strong passwords are used to protect private keys (ESSENTIAL)\n\
+    - PGP key is stored on removable storage (NICE)\n- Auth, Sign and Encrypt Subkeys\
+    \ are stored on a smartcard (NICE)\n- SSH is configured to use as ssh private\
+    \ key (NICE)\n\n### Password managers\n\n- Use a password manager (ESSENTIAL)\n\
+    - Use unique passwords on unrelated sites (ESSENTIAL)\n- Use a password manager\
+    \ that supports team sharing (NICE)\n- Use a separate manager for non-website\
+    \ accounts (NICE)\n\n### SELinux on the workstation\n\n- Make SELinux is enforcing\
+    \ on your workstation (ESSENTIAL)\n\n### Personal workstation backups\n\n- Set\
+    \ up encrypted backups to external storage (ESSENTIAL)\n- Use zero-knowledge backup\
+    \ tools for off-site (NICE)\n\n### Checklist priority levels\n\nThe items in each\
+    \ checklist include the priority level, which will help guide your decision.\n\
+    \n(ESSENTIAL) items should definitely be high on the consideration list. If not\
+    \ implemented, they will introduce high risks to your work-security.\n\n(NICE)\
+    \ items are reserved for when you need all the security, but by how much they\
+    \ affect your work environment, and may require learning new habits or updating\
+    \ old ones.\n\n```\nhttp://training.linuxfoundation.org\n```\n\n## Advance Your\
+    \ Career With Training From The Linux Foundation\n\nThe Linux Foundation is the\
+    \ go-to place for training and certification on some of the hottest and most important\
+    \ software technologies. As the home to 50+ leading open source projects — including\
+    \ Linux, Node.js, Cloud Foundry, Kubernetes, and many others — The Linux Foundation\
+    \ offers:\n\n- Detailed, hands-on training from true industry experts that you\
+    \ just can't find anywhere.\n- Certifications created by collaborating with some\
+    \ of the top companies and subject-matter experts in the world. And they're available\
+    \ online anytime, anywhere, saving you trip to the testing center.\n- Unparalleled\
+    \ expertise and experience in teaching people and profit from open source technology.\n\
+    \ntake your expertise to the next level with training straight from the source.\
+    \ For more information on The Linux Foundation's training and certification programs,\
+    \ please visit: http://training.linuxfoundation.org.\n\n![](img/c6b17a0003e220fc326f5d6cfbbb41b3_32_0.png)\n\
+    \nTHE LINUX FOUNDATION\nThe Linux Foundation promotes, protects and standardizes\
+    \ Linux by providing unified resources and services needed for open source to\
+    \ successfully compete with closed platforms.\n\nTo learn more about our Linux\
+    \ Training program, please visit us at training.linuxfoundation.org.\n"
+  mdcn: "\n\n只有在签名他人的密钥或创建新的子密钥时才需要主密钥——这些操作并不频繁。你可以参考 Debian 的子密钥指南，学习如何将主密钥移动到移动存储设备以及如何创建子密钥。\n\
+    \n你应该配置你的 gnupg 密钥作为你的 ssh agent，并使用 smartcard-BGP Auth 密钥作为你的 ssh 私钥。我们发布了一份关于如何使用智能卡阅读器或\
+    \ Yubikey NEO 实现这些操作的详细指南。\n\n如果你不愿意做到这一步，至少确保你的 PGP 私钥和 SSH 私钥都设置了强密码短语，这将增加攻击者窃取和使用它们的难度。\n\
+    \n## 请使用休眠或关机，不要挂起\n\n当系统被挂起时，RAM 内容将保留在内存芯片上，攻击者可以对其读取（即“冷启动攻击”）。如果你需要离开系统一段时间（例如在一天结束时），最好是关机或休眠，而不是挂起或保持开启状态。\n\
+    \n## 工作站上的 SELinux\n\n## 检查清单\n\n- 确保 SELinux 在你的工作站上处于强制模式（必须执行）\n\n## 考虑因素\n\
+    \nSELinux 是核心 POSIX 权限功能的强制访问控制（MAC）扩展。它成熟、健壮，并且自最初发布以来取得了长足进步。尽管如此，许多系统管理员直到今天仍重复“直接关掉它”这一过时的格调。\n\
+    \n话虽如此，SELinux 在工作站上的安全收益有限，因为你作为用户运行的大多数应用程序都将以无限制（unconfined）模式运行。但它提供的净收益足以让你开启它，因为它可能有助于防止攻击者通过漏洞的守护进程提升权限以获取\
+    \ root 级访问。\n\n我们的建议是保持开启并设置为强制模式。\n\n## 延伸阅读\n\nIT 安全的世界是一个没有底的兔子洞。如果你想深入研究，或者了解更多关于特定发行版的安全特性，请查看以下链接：\n\
+    \n- Fedora 安全指南\n- CESG Ubuntu 安全指南\n- Debian 安全手册\n- Arch Linux 安全 Wiki\n- Mac\
+    \ OSX 安全\n\n## 许可协议\n\n本作品根据知识产权 署名-相同共享 4.0 国际许可协议授权。\n\n# # LINUX 基金会\n培训\n\n\
+    # # ## 快速参考检查清单\n工作站安全\n\n### 选择合适的硬件\n\n- 系统支持 SecureBoot（必须执行）\n- 系统没有防火墙、Thunderbolt\
+    \ 或 ExpressCard 端口（可选）\n- 系统带有 TPM 芯片（可选）\n\n### 安装后加固\n\n- 全局禁用防火墙和 thunder 模块（必须执行）\n\
+    - 检查你的防火墙以确保所有入站端口都已过滤（必须执行）\n- 确保 root 邮件转发到你会检查的账户（必须执行）\n- 设置自动更新计划或提醒更新（必须执行）\n\
+    - 检查 sshd 服务是否默认启用（可选）\n- 配置屏幕保护程序在空闲一段时间后自动锁定（可选）\n- 设置守护进程（watchdog）（可选）\n-\
+    \ 安装入侵检测系统（可选）\n\n### 启动前环境\n\n- 使用 UEFI 模式（而非传统 BIOS）（必须执行）\n- 进入 UEFI 配置需要密码（必须执行）\n\
+    - 启用 SecureBoot（必须执行）\n- 启动系统需要 UEFI 级密码（可选）\n\n### 发行版选择考虑因素\n\n- 具有健壮的 MAC/RBAC\
+    \ 实现（SELinux/AppArmor/GrSecurity）（必须执行）\n- 发布公告（必须执行）\n- 提供及时的安全补丁（必须执行）\n- 提供软件包的密码学验证（必须执行）\n\
+    - 完全支持 UEFI 和 SecureBoot（必须执行）\n- 具有健壮的全磁盘加密支持（必须执行）\n\n### 浏览\n\n- 使用两个浏览器（必须执行）\n\
+    - 使用 Firefox 访问网页和高安全站点。安装 Firefox 插件：\n  - NoScript（必须执行）\n  - Privacy Badger（必须执行）\n\
+    \  - HTTPS Everywhere（必须执行）\n  - Certificate Patrol（可选）\n- 使用 Chrome/Chromium\
+    \ 处理所有事务\n- 使用两个不同的环境，其中一个虚拟机（可选）\n- 通过虚拟化完全隔离你的工作和娱乐环境（偏执级）\n\n### 发行版安装指南\n\n\
+    - 使用强密码短语全盘加密（LUKS）（必须执行）\n- 确保交换 分区也被加密（必须执行）\n- 编辑引导程序需要密码（可以与 LUKS 相同）（必须执行）\n\
+    - 设置根分区（可以与 LUKS 相同）（必须执行）\n- 使用非特权账户加入管理员组（必须执行）\n- 设置用户账户访问，与 root 不同（必须执行）\n\
+    \n### 安全 SSH 和 PGP 密钥\n\n- 使用强密码保护私钥（必须执行）\n- PGP 密钥存储在移动存储设备上（可选）\n- Auth、Sign\
+    \ 和 Encrypt 子密钥存储在智能卡上（可选）\n- 配置 SSH 使用 ssh 私钥（可选）\n\n### 密码管理器\n\n- 使用密码管理器（必须执行）\n\
+    - 在不相关的网站上使用唯一密码（必须执行）\n- 使用支持团队共享的密码管理器（可选）\n- 为非网站账户使用独立的管理器（可选）\n\n### 工作站上的\
+    \ SELinux\n\n- 确保 SELinux 在你的工作站上处于强制模式（必须执行）\n\n### 个人工作站备份\n\n- 设置到外部存储的加密备份（必须执行）\n\
+    - 使用零知识备份工具进行异地备份（可选）\n\n### 检查清单优先级\n\n每个检查清单中的项目都包含优先级，这将有助于指导你的决策。\n\n（必须执行）项目应该绝对列在考虑列表的首位。如果不实施，将为你的工作带来高风险。\n\
+    \n（可选）项目留当你需要所有安全性时，取决于它们对你工作环境的影响，可能需要学习新习惯或更新旧习惯。\n\n"
+  merge: 1
+  raw:
+  - '[PAGE 28]
+
+
+    will only be needed when signing someone else''s keys or creating new subkeys
+    — operations which do not happen very frequently. You may follow the Debian''s
+    subkeys to learn how to move your master key to removable storage and how to create
+    subkeys.
+
+
+    You should configure your gnupg key to act as your ssh agent and use the smartcard-BGP
+    Auth key to act as your ssh private key. We publish a detailed guide on how to
+    do that using either a smartcard reader or a Yubikey NEO.
+
+
+    If you are not willing to go that far, at least make sure you have a strong passphrase
+    on both your PGP private key and your SSH private key, which will make it harder
+    for attackers to steal and use them.
+
+
+    # Hibernate or shut down, do not suspend
+
+
+    When a system is suspended, the RAM contents are kept on the memory chips and
+    can be read by an attacker (known as the Cold Boot Attack). If you are going away
+    from your system for an extended period of time, such as at the end of the day,
+    it is best to shut it down or hibernate it instead of suspending it or leaving
+    it on.
+
+
+    # SELinux on the workstation
+
+
+    # Checklist
+
+
+    +   - Make sure SELinux is enforcing on your workstation (ESSENTIAL)'
+  - '[PAGE 29]
+
+
+    # Considerations
+
+
+    SELinux is a Mandatory Access Controls (MAC) extension to core POSIX permissions
+    functionality. It is mature, robust, and has come a long way since its initial
+    roll-out. Regardless, many sysadmins to this day repeat the outdated mantra of
+    “just turn it off.”
+
+
+    That being said, SELinux will have limited security benefits on the workstation,
+    as most applications you will be running as a user are going to be running unconfined.
+    It does provide enough net benefit to warrant leaving it on, as it will likely
+    help prevent an attacker from escalating privileges to gain root-level access
+    via a vulnerable daemon service.
+
+
+    Our recommendation is to leave it on and enforcing.'
+  - '[PAGE 30]
+
+
+    # Further reading
+
+
+    The world of IT security is a rabbit hole with no bottom. If you would like to
+    go deeper, or find out more about security features on your particular distribution,
+    please check out the following links:
+
+
+    +   * Fedora Security Guide
+
+    * CESG Ubuntu Security Guide
+
+    * Debian Security Manual
+
+    * Arch Linux Security Wiki
+
+    * Mac OSX Security
+
+
+    # License
+
+
+    This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International
+    License.'
+  - "[PAGE 31]\n\n# # THE LINUX FOUNDATION\nTRAINING\n\n# ## QUICK REFERENCE CHECKLISTS\n\
+    WORKSTATION SECURITY\n\n# ### Choosing the right hardware\n\n+   - System supports\
+    \ SecureBoot (ESSENTIAL)\n- System has no firewall, thunderbolt or ExpressCard\
+    \ ports (NICE)\n- System has a TPM chip (NICE)\n\n# ### Post-installation hardening\n\
+    \n+   - Globally disable firewall and thunder modules (ESSENTIAL)\n- Check your\
+    \ firewalls to ensure all incoming ports are filtered (ESSENTIAL)\n- Make sure\
+    \ root mail is forwarded to an account you check (ESSENTIAL)\n- Set up an automatic\
+    \ update schedule, or remind updates (ESSENTIAL)\n- Check sshd service is enabled\
+    \ by default (NICE)\n- Configure theaver to auto-lock after a period of inactivity\
+    \ (NICE)\n- Set up watchdog (NICE)\n- Install an Intrusion Detection System (NICE)\n\
+    \n# ### Pre-boot environment\n\n+   - UEFI mode is used (not legacy BIOS) (ESSENTIAL)\n\
+    - Password is required to enter UEFI configuration (ESSENTIAL)\n- SecureBoot enabled\
+    \ (ESSENTIAL)\n- UEFI-level password is required to boot the system (NICE)\n\n\
+    # ### Distro choice considerations\n\n+   - Has a robust MAC/RBAC implementation\
+    \ (SELinux/AppArmor/GrSecurity) (ESSENTIAL)\n- Publishes bulletins (ESSENTIAL)\n\
+    - Provides timely security patches (ESSENTIAL)\n- Provides cryptographic verification\
+    \ of packages (ESSENTIAL)\n- Fully supports UEFI and SecureBoot (ESSENTIAL)\n\
+    - Has robust full disk encryption support (ESSENTIAL)\n\n# ### Browsing\n\n+ \
+    \  - Use two browsers (ESSENTIAL)\n- Use Firefox for web and high security sites.\
+    \ Installing the Firefox add-ons:\n  - NoScript (ESSENTIAL)\n  - Privacy Badger\
+    \ (ESSENTIAL)\n  - HTTPS Everywhere (ESSENTIAL)\n  - Certificate Patrol (NICE)\n\
+    - Use Chrome/Chromium for everything\n- Use two different, one a dedicated VM\
+    \ (NICE)\n- Fully separate your work and play environments via virtualization\
+    \ (PARANOID)\n\n# ### Distro installation guidelines\n\n+   - Use full disk encryption\
+    \ (LUKS) with a robust passphrase (ESSENTIAL)\n- Make swap is also encrypted (ESSENTIAL)\n\
+    - Require a password to edit bootloader (can be same as LUKS) (ESSENTIAL)\n- Set\
+    \ up a root partition (can be same as LUKS) (ESSENTIAL)\n- Use an unprivileged\
+    \ account, part of administrators group (ESSENTIAL)\n- Set up a user-account access,\
+    \ different from root (ESSENTIAL)\n\n# ### Securing SSH and PGP keys\n\n+   -\
+    \ Strong passwords are used to protect private keys (ESSENTIAL)\n- PGP key is\
+    \ stored on removable storage (NICE)\n- Auth, Sign and Encrypt Subkeys are stored\
+    \ on a smartcard (NICE)\n- SSH is configured to use as ssh private key (NICE)\n\
+    \n# ### Password managers\n\n+   - Use a password manager (ESSENTIAL)\n- Use unique\
+    \ passwords on unrelated sites (ESSENTIAL)\n- Use a password manager that supports\
+    \ team sharing (NICE)\n- Use a separate manager for non-website accounts (NICE)\n\
+    \n# ### SELinux on the workstation\n\n+   - Make SELinux is enforcing on your\
+    \ workstation (ESSENTIAL)\n\n# ### Personal workstation backups\n\n+   - Set up\
+    \ encrypted workstation backups to external storage (ESSENTIAL)\n- Use zero-knowledge\
+    \ backup tools for off-site cloud backups (NICE)\n\n# ### Checklist priority levels\n\
+    \nThe items in each checklist include the priority level, which will help you\
+    \ guide your decision.\n\n(ESSENTIAL) items should definitely be high on the consideration\
+    \ list. If not implemented, they will introduce high risks to your work-security.\n\
+    \n(NICE) items are reserved for when you need all the security, but by how much\
+    \ they affect your work environment, and may require learning new habits or updating\
+    \ old ones.\n\n```\nhttp://training.linuxfoundation.org\n```"
+  - '[PAGE 32]
+
+
+    # Advance Your Career With Training From The Linux Foundation
+
+
+    The Linux Foundation is the go-to place for training and certification on some
+    of the hottest and most important software technologies. As the home to 50+ leading
+    open source projects — including Linux, Node.js, Cloud Foundry, Kubernetes, and
+    many others — The Linux Foundation offers:
+
+
+    +   - Detailed, hands-on training from true industry experts that you just can''t
+    find anywhere else.
+
+    - Certifications created by collaborating with some of the top companies and subject-matter
+    experts in the world. And they''re available online anytime, anywhere, saving
+    you trip to the testing center.
+
+    - Unparalleled expertise and experience in teaching people and profit from open
+    source technology.
+
+
+    take your expertise to the next level with training straight from the source.
+    For more information on The Linux Foundation''s training and certification programs,
+    please visit: http://training.linuxfoundation.org.
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_32_0.png)'
+  - '[PAGE 33]
+
+
+    THE LINUX FOUNDATION
+
+    The Linux Foundation promotes, protects and standardizes Linux by providing unified
+    resources and services needed for open source to successfully compete with closed
+    platforms.
+
+
+    To learn more about our Linux Training program, please visit us at training.linuxfoundation.org.'
+pages:
+- img_proc: true
+  md: '# THE LINUX FOUNDATION TRAINING
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_0_0.png)
+
+
+    # # A SysAdmin’s Essential Guide to Linux Workstation Security
+
+
+    How to work from anywhere and keep your data, identity, and sanity
+
+
+    *License information: This work was created by The Linux Foundation and is licensed
+    under a Creative Commons Attribution-ShareAlike 4.0 International License. It
+    can be found, and forked, on GitHub.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: "# # Contents\n\n+   * Choosing the right hardware 6\n* Pre-boot environment\
+    \ 7\n* Distro choice considerations 9\n* Distro installation guidelines 12\n*\
+    \ Post-installation hardening 16\n* Personal workstation backups 19\n* Best practices\
+    \ 21\n  * Password managers 26\n  * Securing SSH and PGP private keys 28\n  *\
+    \ Hibernate or shut down, do not suspend 29\n  * SELlinux on the workstation 29\n\
+    * Further reading 31\n* License 31\n* Printable Checklist 32"
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # A SysAdmin’s Essential Guide to Linux Workstation Security
+
+
+    How to work from anywhere and keep your data, identity, and sanity
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_2_0.png)
+
+
+    By Konstantin Ryabitsev
+
+    Director of IT Infrastructure Security
+
+    at The Linux Foundation
+
+
+    This document is aimed at teams of systems administrators who use Linux workstations
+    to access and manage your project''s IT infrastructure.
+
+
+    If your systems administrators are remote workers, you may use this set of guidelines
+    to ensure that their workstations pass core security requirements in order to
+    reduce the risk that they become attack vectors against the rest of your IT infrastructure.
+
+
+    Even if your systems administrators are not remote workers, chances are that they
+    perform a lot of their work either from a portable laptop in a work environment,
+    or set up their home systems to access the work infrastructure for after-hours/emergency
+    support. In either case, you can adapt this set of recommendations to suit your
+    environment.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Limitations
+
+
+    This, by no means, is an exhaustive “workstation hardening” document, but rather
+    an attempt at set of baseline recommendations to avoid most glaring security errors
+    without introducing too much inconvenience. You may read this document and think
+    it is way paranoid, while someone else may think this barely scratches the surface.
+    Security is just like driving on the highway — anyone going slower than you is
+    an idiot, while anyone driving faster than you is a crazy person. These guidelines
+    are merely a basic set of core safety rules that is neither exhaustive, nor a
+    replacement for experience, vigilance, and common sense.
+
+
+    We''re sharing this document as a way to bring the benefits of open-source collaboration
+    to IT policy documentation. If you find it useful, we hope you''ll contribute
+    to its development by making a fork for your own organization and sharing your
+    improvements.
+
+
+    # Structure
+
+
+    Each section is split into two areas:
+
+
+    +   * The checklist that can be adapted to your project''s needs
+
+    * Free-form list of considerations that explain what dictated these decisions'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Checklist priority levels
+
+
+    The items in each checklist include the priority level, which we hope will help
+    guide your decision:
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_0.png)
+
+
+    (ESSENTIAL) items should definitely be high on the consideration list. If not
+    implemented, they will introduce high risks to your workstation security.
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_1.png)
+
+
+    (NICE) to have items will improve the overall security, but will affect how you
+    interact with your work environment, and probably require learning new habits
+    or unlearning old ones.
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_4_2.png)
+
+
+    (PARANOID) is reserved for items we feel will significantly improve your workstation
+    security, but will require a lot of adjustment to the way you interact with your
+    operating system.
+
+
+    Remember, these are only guidelines. If you feel these priority levels do not
+    reflect your project''s commitment to security, you should adjust them as you
+    see fit.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Choosing the right hardware
+
+
+    We do not mandate that our admins use a specific vendor or a specific model, so
+    this section addresses core considerations when choosing a work system.
+
+
+    # Checklist
+
+
+    +   - System supports SecureBoot (ESSENTIAL)
+
+    - System has no firewire, thunderbolt or ExpressCard ports (NICE)
+
+    - System has a TPM chip (NICE)
+
+
+    # Considerations
+
+
+    # SecureBoot
+
+
+    Despite its controversial nature, SecureBoot offers prevention against many attacks
+    targeting workstations (Rootkits, "Evil Maid," etc), without introducing too much
+    extra hassle. It will not stop a truly dedicated attacker, plus there is a pretty
+    high degree of certainty that state security agencies have ways to defeat it (probably
+    by design), but having SecureBoot is better than having nothing at all.
+
+
+    Alternatively, you may set up Anti Evil Maid which offers a more wholesome protection
+    against the type of attacks that SecureBoot is supposed to prevent, but it will
+    require more effort to set up and maintain.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Firewire, thunderbolt, and ExpressCard ports
+
+
+    Firewire is a standard that, by design, allows any connecting device full direct
+    memory access to your system (see Wikipedia). Thunderbolt and ExpressCard are
+    guilty of the same, though some later implementations of Thunderbolt attempt to
+    limit the scope of memory access. It is best if the system is getting none of
+    these ports, but it is not critical, as they usually can be turned off via UEFI
+    or disabled in the kernel itself.
+
+
+    # TPM Chip
+
+
+    Trusted Platform Module (TPM) is a crypto chip bundled with the motherboard separately
+    from the core processor, which can be used for additional platform security (such
+    as to store full-disk encryption keys), but is not normally used for day-to-day
+    workstation operation. At best, this is a nice-to-have, unless you have a specific
+    need to use TPM for your workstation security.
+
+
+    # Pre-boot environment
+
+
+    This is a set of recommendations for your workstation before you even start with
+    OS installation.
+
+
+    # Checklist
+
+
+    +   - UEFI boot mode is used (not legacy BIOS) (ESSENTIAL)
+
+    - Password is required to enter UEFI configuration (ESSENTIAL)
+
+    - SecureBoot is enabled (ESSENTIAL)
+
+    - UEFI-level password is required to boot the system (NICE)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Considerations
+
+
+    # UEFI and SecureBoot
+
+
+    UEFI, with all its warts, offers a lot of goodies that legacy BIOS doesn’t, such
+    as SecureBoot. Most modern systems come with UEFI mode on by default.
+
+
+    Make sure a strong password is required to enter UEFI configuration mode. Pay
+    attention, as many manufacturers quietly limit the length of the password you
+    are allowed to use, so you may need to choose high-entropy short passwords vs.
+    long passphrases (see below for more on passphrases).
+
+
+    Depending on the Linux distribution you decide to use, you may may not have to
+    jump through additional hoops in order to import your distribution’s SecureBoot
+    key that would allow you to boot the distro. Many distributions have partnered
+    with Microsoft to sign their released kernels with a key that is already recognized
+    by most system manufacturers, therefore saving you the trouble of having to deal
+    with key importing.
+
+
+    As an extra measure, before someone is allowed to get to the boot partition and
+    try some badness, let’s make them enter a password. This password should be different
+    from your UEFI management password, in order to prevent surfer-surfing. If you
+    shut down and start a lot, you may choose to not bother with this, as you will
+    already have to enter a LUKS passphrase and this will save you a few extra keystrokes.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Distro choice considerations
+
+
+    Chances are you''ll stick with a fairly widely-used distribution such as Fedora,
+    Ubuntu, Arch, Debian, or one of their close spin-offs. In any case, this is what
+    you should consider when picking a distribution to use.
+
+
+    # Checklist
+
+
+    +   - Has a robust MAC/RBAC implementation (SELinux/AppArmor/GrSecurity (ESSENTIAL))
+
+    - Publishes security bulletins (ESSENTIAL)
+
+    - Provides timely security patches (ESSENTIAL)
+
+    - Provides cryptographic verification of packages (ESSENTIAL)
+
+    - Fully supports UEFI and SecureBoot (ESSENTIAL)
+
+    - Has robust native disk encryption support (ESSENTIAL)
+
+
+    # Considerations
+
+
+    # SELinux, AppArmor, and GrSecurity/PaX
+
+
+    Mandatory Access Controls (MAC) or Role-Based Access Controls (RBAC) are an extension
+    of the basic user/group security mechanism used in legacy POSIX systems. Most
+    distributions these days either come bundled with a MAC/RBAC implementation (Fedora,
+    Ubuntu), or provide a mechanism to add it via an optional post-installation step
+    (Gentoo, Arch, Debian). Obviously, it is highly advised that you pick a distribution
+    that comes pre-configured with a MAC/RBAC system, but if you have strong feelings
+    about a distribution that doesn''t have one enabled by default, plan to configure
+    it post-installation.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    Distributions that do not provide any MAC/RBAC mechanisms should be strongly avoided,
+    as traditional POSIX user- and group-based security should be considered insufficient
+    in this day and age. If you would like to start out with a MAC/RBAC workstation,
+    AppArmor and GrSecurity/PaX are generally considered easier to learn than SELinux.
+    Furthermore, on a workstation, where there are few or no externally listening
+    daemons, and where user-run applications pose the highest risk, GrSecurity/PaX
+    will offer more security benefits than just SELinux.
+
+
+    # Distro security bulletins
+
+
+    Most of the widely used distributions have a mechanism to deliver security bulletins
+    to their users, but if you are fond of something esoteric, check whether the developers
+    have a documented mechanism of alerting the users about security vulnerabilities
+    and patches. Absence of such mechanism is a major warning sign that the distribution
+    is not mature enough to be considered for a primary admin workstation.
+
+
+    # Timely and trusted security updates
+
+
+    Most of the widely used distributions deliver regular security updates, but it
+    is worth checking to ensure that critical package updates are provided in a timely
+    fashion. Avoid using spin-offs and “community rebuilds” for this reason, as they
+    routinely delay security updates due to having to wait for the upstream distribution
+    to release it.
+
+
+    These days, it is hard to find a distribution that does not use cryptographic
+    signatures on packages, updates metadata, or both. That being said, fairly widely
+    used distributions have been known to go for years before introducing this basic
+    security measure (Arch, I''m looking at you), so this is something worth checking.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# # A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # ## Distros supporting UEFI and SecureBoot
+
+
+    Check that the distribution supports UEFI and SecureBoot. Find out whether it
+    requires importing an extra key or whether it signs a key already trusted by systems
+    manufacturers (e.g. via an agreement with Microsoft). Some distributions do not
+    support UEFI/SecureBoot but offer alternatives to ensure tamper-proof or tamper-evident
+    boot environments (Qubes-OS uses Anti Evil Maid, mentioned earlier). If a distribution
+    doesn''t support SecureBoot and has no mechanisms to prevent boot-level attacks,
+    look elsewhere.
+
+
+    # ## Full disk encryption
+
+
+    Full disk encryption is a requirement for securing data at rest, and is supported
+    by most distributions. As an alternative, systems with self-encrypting hard drives
+    may be used (normally implemented via the on-board TPM chip) and offer comparable
+    levels of security plus faster operation, but at a considerably higher cost.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Distro installation guidelines
+
+
+    All distributions are different, but here are general guidelines:
+
+
+    # Checklist
+
+
+    +   - Use full disk encryption (LUKS) with a robust passphrase (ESSENTIAL)
+
+    - Make sure swap is also encrypted (ESSENTIAL)
+
+    - Require a password to edit bootloader (can be same as LUKS) (ESSENTIAL)
+
+    - Set up a robust root password (can be same as LUKS) (ESSENTIAL)
+
+    - Use an unprivileged account, part of administrators group (ESSENTIAL)
+
+    - Set up a robust user-account password, different from root (ESSENTIAL)
+
+
+    # Considerations
+
+
+    # Full disk encryption
+
+
+    Unless you are using self-encrypting hard drives, it is important to configure
+    your installer to fully encrypt all the disks that will be used for storing your
+    data and your system files. It is not sufficient to simply encrypt the user directory
+    via auto-mounting cryptofs loop files (I''m looking at you, older versions of
+    Ubuntu), as this offers no protection for system binaries or swap, which is likely
+    to contain a slew of sensitive data. The recommended encryption strategy is to
+    encrypt the LVM device, so only one passphrase is required during the boot process.
+
+
+    The /boot partition will usually remain unencrypted, as the bootloader needs to
+    be able to boot the kernel before invoking LUKS/dm-crypt. Some distributions support
+    encrypting the /boot partition as well (e.g. Arch), and it is possible to do the
+    same on other distros, but likely at the'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    cost of complicating system updates. It is not critical to encrypt /boot if your
+    distro of choice does not natively support it, as the kernel image itself leaks
+    no data and will be protected against tampering with a cryptographic signature
+    checked by SecureBoot.
+
+
+    # Choosing good passphrases
+
+
+    Modern Linux systems have no limitation of password/passphrase length, so the
+    only real limitation is your level of paranoia and your stubbornness. If you boot
+    your system a lot, you will probably have to type at least two different passwords:
+    one to unlock LUKS, and another one to log in, so long passphrases will probably
+    get old really fast. Pick passphrases that are 2-3 words long, easy to type, and
+    preferably from rich/mixed vocabularies.
+
+
+    Examples of good passphrases (yes, you can use spaces):
+
+
+    +   - nature abhors roomba
+
+    - 12 in-flight Jebediahs
+
+    - perdon, tendo flatulence
+
+
+    Weak passphrases are combinations of words you''re likely to see in published
+    works or anywhere else in real life, and you should avoid using them, as attackers
+    are starting to include such simple passphrases into their brute-force strategies.
+
+
+    Examples of passphrases to avoid:
+
+
+    +   - Mary had a little lamb
+
+    - you''re a wizard, Harry
+
+    - to infinity and beyond'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    You can also stick with non-vocabulary passwords that are at least 10-12 characters
+    long, if you prefer that to typing passphrases.
+
+
+    Unless you have concerns about physical security, it is fine to write down your
+    passphrases and keep them in a safe place away from your work desk.
+
+
+    # Root, user passwords and the admin group
+
+
+    We recommend that you use the same passphrase for your root password as you use
+    for your LUKS encryption (unless you share your laptop with other trusted people
+    who should be able to unlock the drives, but shouldn''t be able to become root).
+    If you are the sole user of the laptop, having your root password be different
+    from your LUKS password has no meaningful security advantages. Generally, you
+    can use the same passphrase for your UEFI administration, disk encryption, and
+    root account — knowing any of these will give an attacker full control of your
+    system anyway, so there is little security benefit to have them be different on
+    a single-user workstation.
+
+
+    You should have a different, but equally strong password for your regular user
+    account that you will be using for day-to-day tasks. This user should be member
+    of the admin group (e.g. `wheel` or similar, depending on the distution), allowing
+    you to perform `sudo` to elevate privileges.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'In other words, if you are the sole user on your workstation, you should have
+    2 distinct, robust, equally strong passphrases you will need to remember:
+
+
+    # Admin-level, used in the following locations:
+
+
+    +   * UEFI administration
+
+    * Bootloader (GRUB)
+
+    * Disk encryption (LUKS)
+
+    * Workstation admin (root user)
+
+
+    # User-level, used for the following:
+
+
+    +   * User account and sudo
+
+    * Master password for the password manager
+
+
+    All of them, obviously, can be different if there is a compelling reason.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Post-installation hardening
+
+
+    Post-installation security hardening will depend greatly on your distribution
+    of choice, so it is futile to provide detailed instructions in a general document
+    such as this one. However, here are some steps you should take:
+
+
+    # Checklist
+
+
+    +   - Globally disable firewire and thunderbolt modules (ESSENTIAL)
+
+    - Check your firewalls to ensure all incoming ports are filtered (ESSENTIAL)
+
+    - Make sure root mail is forwarded to an account you check (ESSENTIAL)
+
+    - Set up an automatic OS update schedule, or update reminders (ESSENTIAL)
+
+    - Check to ensure sshd is disabled by default (NICE)
+
+    - Configure the screensaver to auto-lock after a period of inactivity (NICE)
+
+    - Set up watchdog (NICE)
+
+    - Install and use rkhunter (NICE)
+
+    - Install an Intrusion Detection System (NICE)
+
+
+    # Considerations
+
+
+    # Blacklisting modules
+
+
+    To blacklist a firewire and thunderbolt modules, add the following lines to a
+    file in /etc/modprobe.d/blacklist-dma.conf:
+
+
+    ```
+
+    blacklist firewire-core
+
+    blacklist thunderbolt
+
+    ```'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    The modules will be blacklisted upon reboot. It doesn''t hurt doing this if you
+    don''t have these ports (but it doesn''t do anything either).
+
+
+    # Root mail
+
+
+    By default, root mail is just saved on the system and tends to never be read.
+    Make sure you set your /etc/aliases to forward root mail to a mailbox that you
+    actually read, otherwise you may miss important system notifications and reports:
+
+
+    ```
+
+    # Person who should get root''s mail
+
+    bob@example.com
+
+    ```
+
+
+    Run newaliases after this and test it to make sure that it actually gets delivered,
+    as some email providers will reject email coming from nonexistent or non-routable
+    domain names. If that is the case, you will need to play with your mail forwarding
+    configuration until this actually works.
+
+
+    # Firewalls, sshd, and listening daemons
+
+
+    The default firewall settings will depend on your distribution, but many of them
+    will allow incoming sshd ports. Unless you have a compelling legitimate reason
+    to allow incoming ssh, you should filter that out and disable the sshd daemon.
+
+
+    ```
+
+    systemctl disable sshd.service
+
+    systemctl stop sshd.service
+
+    ```
+
+
+    You can always start it temporarily if you need to use it.
+
+
+    In general, your system shouldn''t have any listening ports apart from responding
+    to ping. This will help safeguard you against network-level exploits.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Automatic updates or notifications
+
+
+    It is recommended to turn on automatic updates, unless you have a very good reason
+    not to do so, such as fear that an automatic update would render your system unusable
+    (it''s happened in the past, so this fear is not unfounded). At the very least,
+    you should enable automatic notifications of available updates. Most distributions
+    already have this service automatically running for you, so chances are you don''t
+    have to do anything. Consult your distribution documentation to find out more.
+
+
+    You should apply all outstanding errata as soon as possible, even if something
+    isn''t specifically labeled as "security update" or has an associated CVE code.
+    All bugs have the potential of being security bugs and erring on the side of newer,
+    unknown bugs is generally a safer strategy than sticking with old, known ones.
+
+
+    # Watching logs
+
+
+    You should have a keen interest in what happens on your system. For this reason,
+    you should install logwatch and configure it to send nightly activity reports
+    of everything that happens on your system. This won''t prevent a dedicated attacker,
+    but is a good safety-net feature to have in place.
+
+
+    Note, many systemd distros will no longer automatically install a syslog server
+    that logwatch needs (due to systemd relying on its own journal), so you will need
+    to install and enable syslog to make sure your `/var/log` is not empty logwatch
+    will be of any use.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Rkhunter and IDS
+
+
+    Installing rkhunter and an intrusion detection system (IDS) like `aide` or `tripwire`
+    will not be that unless you actually understand how they work and take the necessary
+    steps to set them up (such as, keeping the databases on external media, running
+    checks from a trusted environment, remembering to refresh the hash databases after
+    performing system updates and configuration changes, etc). If you are not willing
+    to take these steps and adjust how you do things on your own workstation, these
+    tools will introduce hassle without any tangible security benefit.
+
+
+    We do recommend that you install `rkhunter` and run it nightly. It''s fairly easy
+    to learn and use, and though it will not deter a sophisticated attacker, it may
+    help you catch your own mistakes.
+
+
+    # Personal workstation backups
+
+
+    Workstation backups tend to be overlooked or done in a haphazard, often unsafe
+    manner.
+
+
+    # Checklist
+
+
+    +   - Set up encrypted workstation backups to external storage (ESSENTIAL)
+
+    - Use zero-knowledge backup tools for off-site/cloud backups (NICE)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Considerations
+
+
+    # Full encrypted backups to external storage
+
+
+    It is handy to have an external hard drive where one can dump full backups without
+    having to worry about such things like bandwidth and upstream speeds (in this
+    day and age most providers still offer dramatically asymmetric upload/download
+    speeds). Needless to say, this hard drive needs to be in its iself encrypted (again,
+    via LUKS), or you should use a backup tool that creates encrypted backups, such
+    as duplication or its GUI companion, deja-dup. I recommend using the latter with
+    a good randomly generated passphrase, stored in a safe offline. If you travel
+    with your laptop, leave this drive at home to have something come back in case
+    your laptop is lost or stolen.
+
+
+    In addition to your home directory, you should also back up `/etc` and `/var/log`
+    for various forensic purposes.
+
+
+    Above all, avoid copying your home directory onto any unencrypted storage, even
+    as a quick way to move your files between systems, as you will most certainly
+    forget to erase it when you''re done, exposing potentially private or otherwise
+    sensitive data to snooping hands — especially if you keep storage media in the
+    same bag with your laptop or in your office desk drawer.
+
+
+    # Selective zero-knowledge backups off-site
+
+
+    Off-site backups are also extremely important and can be done either to your employer,
+    if they offer space for it, or to a cloud provider. You can set up a separate
+    duplicate/deja-dup profile to include only important files in order to avoid transferring
+    huge amounts of data that you don''t really care to back up off-site (internet
+    cache, music, downloads, etc).'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'Alternatively, you can use a zero-knowledge backup tool, such as SpiderOak,
+    which offers an excellent Linux GUI tool and has additional useful features such
+    as synchronizing content between multiple systems and platforms.
+
+
+    # Best practices
+
+
+    What follows is a curated list of best practices that we think you should adopt.
+    It is most certainly non-exhaustive, but rather attempts to offer practical advice
+    that strikes a workable balance between security and overall usability.
+
+
+    # Graphical environment
+
+
+    The venerable X protocol was conceived and implemented for a wholly different
+    era of personal computing and lacks important security features that should be
+    considered essential on a networked workstation. To give a few examples:
+
+
+    +   * Any X application has access to full screen contents
+
+    * Any X application can register to receive all keystrokes, regardless into which
+    window they are typed
+
+
+    A sufficiently severe browser vulnerability means attackers get automatic access
+    to what is effectively a builtin keylogger and screen recorder and can watch and
+    capture everything you type into your root terminal sessions.
+
+
+    You should strongly consider switching to a more modern platform like Wayland,
+    even if this means using many of your existing applications through an X11 protocol
+    wrapper. With Fedora starting to default to Wayland for all applications, we can
+    hope that most software will soon stop requiring the legacy X11 layer.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Browsers
+
+
+    There is no question that the web browser will be the piece of software with the
+    largest and the most exposed attack surface on your system. It is a tool written
+    specifically to download and execute untrusted, frequently hostile code. It attempts
+    to shield you from this danger by employing multiple mechanisms such as sandboxes
+    and code sanitization, but they have all been previously defeated on multiple
+    occasions. You should learn to approach browsing websites as the most insecure
+    activity you''ll engage in on any given day.
+
+
+    There are several ways you can reduce the impact of a compromised browser, but
+    the truly effective ways will require significant changes in the way you operate
+    your workstation.
+
+
+    # 1: Use two different browsers (ESSENTIAL)
+
+
+    This is the easiest to do, but only offers minor security benefits. Not all browser
+    compromises give an attacker unfettered access to your system — sometimes they
+    are limited to allowing one to read local browser storage, steal active sessions
+    from other tabs, capture input entered into the browser, etc. Using two different
+    browsers, one for work/high security sites, and another for everything else will
+    help prevent minor compromises from giving attackers access to the whole cookie
+    jar. The main inconvenience will be the amount of memory consumed by two different
+    browser processes.
+
+
+    Here''s what we recommend:
+
+
+    # Firefox for work and high security sites
+
+
+    Use Firefox to access work-related sites, where extra care should be taken to
+    ensure that data like cookies, sessions, login information, keystrokes, etc, should
+    definitely not fall into attackers'' hands. You should NOT'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# A SysAdmin's Essential Guide to Linux Workstation Security\n\nuse this browser\
+    \ for accessing any other sites except select few.\n\nYou should install the following\
+    \ Firefox add-ons:\n\n+   - NoScript (ESSENTIAL)\n  - NoScript prevents active\
+    \ content from loading, except from user whitelisted domains. It is a great hassle\
+    \ to use with your default browser (though offers really good security benefits),\
+    \ so we recommend only enabling it on the browser you use to access work-related\
+    \ sites.\n\n+   - Privacy Badger (ESSENTIAL)\n  - EFF's Privacy Badger will prevent\
+    \ most external trackers and ad platforms from being loaded, which will avoid\
+    \ compromises on these tracking sites from affecting your browser (trackers and\
+    \ ad sites are very commonly targeted by attackers, as they allow rapid infection\
+    \ of thousands of systems worldwide.\n\n+   - HTTPS Everywhere (ESSENTIAL)\n \
+    \ - This EFF-developed Add-on will ensure that most of your sites are accessed\
+    \ over a secure connection, even if a link you click is using http:// (great to\
+    \ avoid a number of attacks, such as SSL-strip).\n\n+   - Certificate Patrol (NICE)\n\
+    \  - This tool will alert you if the site you're accessing has recently changed\
+    \ their TLS certificates — especially if it wasn't nearing expiration dates or\
+    \ if it is now using a different certification authority. It helps alert you if\
+    \ someone is trying to man-in-the-middle your connection, but generates a lot\
+    \ of benign false-positives."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    You should leave Firefox as your default browser for opening links, as NoScript
+    will prevent most active content from loading or executing.
+
+
+    # Chrome/Chromium for everything else
+
+
+    Chromium developers are aware of Firefox in adding a lot of nice security features
+    (at seccomp sandboxes, kernel user namespaces, etc, which act as an added layer
+    of isolation between the sites you visit and the rest of your system. Chromium
+    is the upstream open-source project, and Chrome is Google''s proprietary binary
+    build based on it (insert the usual paranoid caution about not using it for anything
+    you don''t want Google to know).
+
+
+    It is recommended that you install Privacy Badger and HTTPS Everywhere extensions
+    in Chrome and give it a distinct theme from Firefox to indicate that this is your
+    "untrusted sites" browser.
+
+
+    # 2: Use jailjail (ESSENTIAL)
+
+
+    Firejail is a project that uses Linux namespaces and seccomp-bpf to create a sandbox
+    around Linux applications. It is an excellent way to help build additional protection
+    between the browser and the rest of your system. You can use Firejail to create
+    separate instances of Firefox to use for different purposes — for work, for personal
+    but trusted sites (such as banking), and one more for casual browsing (social
+    media, etc).
+
+
+    Firejail is most effective on Wayland, unless you use X11-isolation mechanisms
+    (the --x11 flag). To starting Firejail with Firefox, please refer to the documentation
+    provided by the project:
+
+
+    +   - Firefox Sandboxing Guide'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # 3: Fully separate your work and play environments via virtualization (PARANOID)
+
+
+    See QubesOS project, which strives to provide a "reasonably secure" workstation
+    environment via compartmentalizing your applications into separate fully isolated
+    VMs. You may also investigate SubgraphOS that achieves similar goals using container
+    technology (currently in Alpha).
+
+
+    # Use Fido U2F for website 2-factor authentication
+
+
+    Fido U2F is a standard developed specifically to provide a mechanism for 2-factor
+    authentication and combat credential phishing. Regular OTP (one-time password)
+    mechanisms are ineffective in the case where the attacker is able to trick you
+    into submitting your password and token into a malicious site masquerading as
+    a legitimate service. The U2F protocol will store site authentication data on
+    the USB token that will prevent you from accidentally giving an attacker both
+    your password and your one-time token if you try to use it on anything other than
+    the legitimate website.
+
+
+    See this site for a curated list of services providing Fido U2F support:
+
+
+    +   - dongleauth.info
+
+
+    Note, that not all browsers currently support U2F-capable hardware tokens, and
+    if you use sandboxes or virtualization-based isolation around your browser, you
+    may have to work extra hard to enable USB pass-through from the application to
+    your USB token.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Password managers
+
+
+    # Checklist
+
+
+    +   - Use a password manager (ESSENTIAL)
+
+    - Use unique, randomly generated passwords on unrelated sites (ESSENTIAL)
+
+    - Use a password manager that supports team sharing (NICE)
+
+    - Use a separate password manager for non-website accounts (NICE)
+
+
+    # Considerations
+
+
+    Using strong, unique, randomly generated passwords should be a critical requirement
+    for every member of your team. Credential theft is happening all the time — either
+    via compromised computers, stolen database dumps, remote site exploits, or any
+    number of other means. No credentials should be reused across different sites,
+    ever.
+
+
+    # In-browser password manager
+
+
+    Every browser has a mechanism for saving passwords that is fairly secure and can
+    sync with vendor-maintained cloud storage while keeping the data encrypted with
+    a user-provided passphrase. However, this mechanism has important disadvantages:
+
+
+    +   1. It does not work across browsers
+
+    2. It does not offer any way of sharing credentials with team members'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    There are several well-supported, free-cheap password managers that are well-integrated
+    into multiple browsers, work across platforms, and offer group sharing (usually
+    as a paid service). Solutions can be easily found via search engines.
+
+
+    # Standalone password manager
+
+
+    One of the major drawbacks of any password manager that comes integrated with
+    the browser is the fact that it''s part of the application that is most likely
+    to be attacked by intruders. If this makes you uncomfortable (and it should),
+    you may choose to have two different password managers — one for websites that
+    is integrated into your browser, and one that runs as a standalone application.
+    The latter can be used to store high-risk credentials such as root passwords,
+    database passwords, other shell account credentials, etc.
+
+
+    It may be particularly useful to have such tool for sharing superuser account
+    credentials with other members of your team (server passwords, ILO passwords,
+    database admin passwords, bootloader passwords, etc.).
+
+
+    A few tools can help you:
+
+
+    +   - KeePassX, which improves team sharing in version 2
+
+    - Pass, which uses text files and PGP and integrates with git
+
+    - Django-Pstore, which uses GPG to share credentials between admins
+
+    - Hiera-Eyaml, which, if you are already using Puppet for your infrastructure,
+    may be a handy way to track your server/service credentials as part of your encrypted
+    Hiera data store'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# A SysAdmin''s Essential Guide to Linux Workstation Security
+
+
+    # Securing SSH and PGP private keys
+
+
+    Personal encryption keys, including SSH and PGP private keys, are going to be
+    the most prized items on your workstation — something the attackers will be most
+    interested in obtaining, as that would allow them to further attack your infrastructure
+    or impersonate you to other admins. You should take extra steps to ensure that
+    your private keys are well protected against theft.
+
+
+    # Checklist
+
+
+    +   - Strong passphrases are used to protect private keys (ESSENTIAL)
+
+    - PGP Master is stored on removable storage (NICE)
+
+    - Auth, Sign and Encrypt Subkeys are stored on a smartcard device (NICE)
+
+    - SSH is configured to use PGP Auth key as ssh private key (NICE)
+
+
+    # Considerations
+
+
+    The best way to prevent private key theft is to use a smartcard to store your
+    encryption private keys and never copy them onto the workstation. There are several
+    manufacturers that offer OpenPGP capable devices:
+
+
+    +   - Kernel Concepts, where you can purchase both the OpenPGP compatible smartcards
+    and the USB readers, you should need one.
+
+    - Yubikey, which offers OpenPGP smartcard functionality in addition to many other
+    cool features (U2F, PIV, HOTP, etc).
+
+    - NitroKey, which is based on open-source software and hardware
+
+
+    It is also important to make sure that the master PGP key is not stored on the
+    main workstation, and only subkeys are used. The master key'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'will only be needed when signing someone else''s keys or creating new subkeys
+    — operations which do not happen very frequently. You may follow the Debian''s
+    subkeys to learn how to move your master key to removable storage and how to create
+    subkeys.
+
+
+    You should configure your gnupg key to act as your ssh agent and use the smartcard-BGP
+    Auth key to act as your ssh private key. We publish a detailed guide on how to
+    do that using either a smartcard reader or a Yubikey NEO.
+
+
+    If you are not willing to go that far, at least make sure you have a strong passphrase
+    on both your PGP private key and your SSH private key, which will make it harder
+    for attackers to steal and use them.
+
+
+    # Hibernate or shut down, do not suspend
+
+
+    When a system is suspended, the RAM contents are kept on the memory chips and
+    can be read by an attacker (known as the Cold Boot Attack). If you are going away
+    from your system for an extended period of time, such as at the end of the day,
+    it is best to shut it down or hibernate it instead of suspending it or leaving
+    it on.
+
+
+    # SELinux on the workstation
+
+
+    # Checklist
+
+
+    +   - Make sure SELinux is enforcing on your workstation (ESSENTIAL)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Considerations
+
+
+    SELinux is a Mandatory Access Controls (MAC) extension to core POSIX permissions
+    functionality. It is mature, robust, and has come a long way since its initial
+    roll-out. Regardless, many sysadmins to this day repeat the outdated mantra of
+    “just turn it off.”
+
+
+    That being said, SELinux will have limited security benefits on the workstation,
+    as most applications you will be running as a user are going to be running unconfined.
+    It does provide enough net benefit to warrant leaving it on, as it will likely
+    help prevent an attacker from escalating privileges to gain root-level access
+    via a vulnerable daemon service.
+
+
+    Our recommendation is to leave it on and enforcing.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Further reading
+
+
+    The world of IT security is a rabbit hole with no bottom. If you would like to
+    go deeper, or find out more about security features on your particular distribution,
+    please check out the following links:
+
+
+    +   * Fedora Security Guide
+
+    * CESG Ubuntu Security Guide
+
+    * Debian Security Manual
+
+    * Arch Linux Security Wiki
+
+    * Mac OSX Security
+
+
+    # License
+
+
+    This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International
+    License.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# # THE LINUX FOUNDATION\nTRAINING\n\n# ## QUICK REFERENCE CHECKLISTS\nWORKSTATION\
+    \ SECURITY\n\n# ### Choosing the right hardware\n\n+   - System supports SecureBoot\
+    \ (ESSENTIAL)\n- System has no firewall, thunderbolt or ExpressCard ports (NICE)\n\
+    - System has a TPM chip (NICE)\n\n# ### Post-installation hardening\n\n+   - Globally\
+    \ disable firewall and thunder modules (ESSENTIAL)\n- Check your firewalls to\
+    \ ensure all incoming ports are filtered (ESSENTIAL)\n- Make sure root mail is\
+    \ forwarded to an account you check (ESSENTIAL)\n- Set up an automatic update\
+    \ schedule, or remind updates (ESSENTIAL)\n- Check sshd service is enabled by\
+    \ default (NICE)\n- Configure theaver to auto-lock after a period of inactivity\
+    \ (NICE)\n- Set up watchdog (NICE)\n- Install an Intrusion Detection System (NICE)\n\
+    \n# ### Pre-boot environment\n\n+   - UEFI mode is used (not legacy BIOS) (ESSENTIAL)\n\
+    - Password is required to enter UEFI configuration (ESSENTIAL)\n- SecureBoot enabled\
+    \ (ESSENTIAL)\n- UEFI-level password is required to boot the system (NICE)\n\n\
+    # ### Distro choice considerations\n\n+   - Has a robust MAC/RBAC implementation\
+    \ (SELinux/AppArmor/GrSecurity) (ESSENTIAL)\n- Publishes bulletins (ESSENTIAL)\n\
+    - Provides timely security patches (ESSENTIAL)\n- Provides cryptographic verification\
+    \ of packages (ESSENTIAL)\n- Fully supports UEFI and SecureBoot (ESSENTIAL)\n\
+    - Has robust full disk encryption support (ESSENTIAL)\n\n# ### Browsing\n\n+ \
+    \  - Use two browsers (ESSENTIAL)\n- Use Firefox for web and high security sites.\
+    \ Installing the Firefox add-ons:\n  - NoScript (ESSENTIAL)\n  - Privacy Badger\
+    \ (ESSENTIAL)\n  - HTTPS Everywhere (ESSENTIAL)\n  - Certificate Patrol (NICE)\n\
+    - Use Chrome/Chromium for everything\n- Use two different, one a dedicated VM\
+    \ (NICE)\n- Fully separate your work and play environments via virtualization\
+    \ (PARANOID)\n\n# ### Distro installation guidelines\n\n+   - Use full disk encryption\
+    \ (LUKS) with a robust passphrase (ESSENTIAL)\n- Make swap is also encrypted (ESSENTIAL)\n\
+    - Require a password to edit bootloader (can be same as LUKS) (ESSENTIAL)\n- Set\
+    \ up a root partition (can be same as LUKS) (ESSENTIAL)\n- Use an unprivileged\
+    \ account, part of administrators group (ESSENTIAL)\n- Set up a user-account access,\
+    \ different from root (ESSENTIAL)\n\n# ### Securing SSH and PGP keys\n\n+   -\
+    \ Strong passwords are used to protect private keys (ESSENTIAL)\n- PGP key is\
+    \ stored on removable storage (NICE)\n- Auth, Sign and Encrypt Subkeys are stored\
+    \ on a smartcard (NICE)\n- SSH is configured to use as ssh private key (NICE)\n\
+    \n# ### Password managers\n\n+   - Use a password manager (ESSENTIAL)\n- Use unique\
+    \ passwords on unrelated sites (ESSENTIAL)\n- Use a password manager that supports\
+    \ team sharing (NICE)\n- Use a separate manager for non-website accounts (NICE)\n\
+    \n# ### SELinux on the workstation\n\n+   - Make SELinux is enforcing on your\
+    \ workstation (ESSENTIAL)\n\n# ### Personal workstation backups\n\n+   - Set up\
+    \ encrypted workstation backups to external storage (ESSENTIAL)\n- Use zero-knowledge\
+    \ backup tools for off-site cloud backups (NICE)\n\n# ### Checklist priority levels\n\
+    \nThe items in each checklist include the priority level, which will help you\
+    \ guide your decision.\n\n(ESSENTIAL) items should definitely be high on the consideration\
+    \ list. If not implemented, they will introduce high risks to your work-security.\n\
+    \n(NICE) items are reserved for when you need all the security, but by how much\
+    \ they affect your work environment, and may require learning new habits or updating\
+    \ old ones.\n\n```\nhttp://training.linuxfoundation.org\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Advance Your Career With Training From The Linux Foundation
+
+
+    The Linux Foundation is the go-to place for training and certification on some
+    of the hottest and most important software technologies. As the home to 50+ leading
+    open source projects — including Linux, Node.js, Cloud Foundry, Kubernetes, and
+    many others — The Linux Foundation offers:
+
+
+    +   - Detailed, hands-on training from true industry experts that you just can''t
+    find anywhere else.
+
+    - Certifications created by collaborating with some of the top companies and subject-matter
+    experts in the world. And they''re available online anytime, anywhere, saving
+    you trip to the testing center.
+
+    - Unparalleled expertise and experience in teaching people and profit from open
+    source technology.
+
+
+    take your expertise to the next level with training straight from the source.
+    For more information on The Linux Foundation''s training and certification programs,
+    please visit: http://training.linuxfoundation.org.
+
+
+    ![](img/c6b17a0003e220fc326f5d6cfbbb41b3_32_0.png)'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'THE LINUX FOUNDATION
+
+    The Linux Foundation promotes, protects and standardizes Linux by providing unified
+    resources and services needed for open source to successfully compete with closed
+    platforms.
+
+
+    To learn more about our Linux Training program, please visit us at training.linuxfoundation.org.'
+  merge: -1
+  pgno: 33
+toc:
+- - '#'
+  - 系统管理员 Linux 工作站安全必备指南
+- - '##'
+  - 局限性
+- - '##'
+  - 结构
+- - '##'
+  - 检查清单优先级
+- - '##'
+  - 检查清单
+- - '##'
+  - 考量
+- - '##'
+  - SecureBoot
+- - '##'
+  - 火线、雷电和 ExpressCard 接口
+- - '##'
+  - TPM 芯片
+- - '##'
+  - 启动前环境
+- - '###'
+  - 检查清单
+- - '###'
+  - 考量
+- - '###'
+  - UEFI 和 SecureBoot
+- - '###'
+  - 检查清单
+- - '###'
+  - 考量
+- - '###'
+  - SELinux、AppArmor
+- - '##'
+  - 检查清单
+- - '##'
+  - 考虑因素
+- - '###'
+  - 全盘加密
+- - '###'
+  - 选择良好的密码句
+- - '###'
+  - 管理员级，用于以下位置：
+- - '###'
+  - 用户级，用于以下：
+- - '##'
+  - 检查清单
+- - '##'
+  - 考虑因素
+- - '###'
+  - 黑名单模块
+- - '##'
+  - Root 邮件 (Root mail)
+- - '###'
+  - 应该接收 root 邮件的人员
+- - '###'
+  - 检查清单 (Checklist)
+- - '###'
+  - 考虑因素
+- - '###'
+  - 到外部存储的全加密备份
+- - '###'
+  - 离线选择性零知识备份
+- - '###'
+  - 图形环境
+- - '###'
+  - 1：使用不同的浏览器（必备）
+- - '####'
+  - 用于工作和高安全性网站的 Firefox
+- - '##'
+  - 使用 Fido U2F 进行网站双重身份验证
+- - '##'
+  - 清单
+- - '##'
+  - 注意事项
+- - '##'
+  - SSH 和 PGP 私密钥的安全防护
+- - '##'
+  - 清单
+- - '##'
+  - 注意事项
+- - '##'
+  - 检查清单
+- - '##'
+  - 考虑因素
+- - '##'
+  - 快速参考检查清单
+- - '###'
+  - 选择合适的硬件
+- - '###'
+  - 启动前环境
+- - '###'
+  - 发行版选择考虑因素
+- - '###'
+  - 浏览
+- - '###'
+  - 发行版安装指南
+- - '###'
+  - 安全 SSH 和 PGP 密钥
+- - '###'
+  - 密码管理器
+- - '###'
+  - 工作站上的 SELinux
+- - '###'
+  - 个人工作站备份
+- - '###'
+  - 检查清单优先级

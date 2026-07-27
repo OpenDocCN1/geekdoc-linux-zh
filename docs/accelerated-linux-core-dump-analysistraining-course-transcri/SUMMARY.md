@@ -1,0 +1,2 @@
++   [加速 Linux 核心转储分析：带 GDB 和 WinDbg 练习的训练课程教程，第二版（Linux 内部原理补充）](README.md)
++   [加速 Linux 核心转储分析：带 GDB 和 WinDbg 练习的训练课程教程，第二版（Linux 内部原理补充）](accelerated-linux-core-dump-analysistraining-course-transcri.md)
