@@ -1,5 +1,6 @@
 +   [10年 Linux 安全：报告单](docs/10-years-of-linux-security-a-report-card/README.md)
 +   [100 个 Linux 技巧与窍门](docs/100-linux-tips-and-tricks/README.md)
++   [101 个酷酷 Linux 技巧](docs/101-cool-linux-hacks/README.md)
 +   [101 Linux 命令](docs/101-linux-cmd/README.md)
 +   [20 款强大的 Kali Linux 工具](docs/20-fantastic-kali-linux-tools/README.md)
 +   [250+ Linux 面试题与答案](docs/250-linux-interview-questions-and-answers/README.md)
