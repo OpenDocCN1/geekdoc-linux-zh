@@ -1,0 +1,2534 @@
+- img_proc: true
+  md: '![](img/02c5567fb834f88299ec1da6031f7afb_0_0.png)
+
+
+    Linux Integration
+
+    with Windows (Samba)
+
+    (Course Code QLX26)
+
+
+    # Student Exercises
+
+
+    ERC 4.0
+
+
+    IBM Certified Course Material'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Trademarks
+
+
+    IBM® is a registered trademark of International Business Machines Corporation.
+
+    The following are trademarks of International Business Machines Corporation in
+    the UnitednStates, or other countries, or both:
+
+
+    +   - AIX®
+
+    - Hummingbird™
+
+    - Perform™
+
+    - PowerPC®
+
+    - PS/2®
+
+    - SP™
+
+
+    Microsoft, Windows and Windows NT are trademarks of Microsoft Corporation in the
+
+    United States, other countries, or both.
+
+
+    Pentium is a trademark of Intel Corporation in the United States, other countries,
+    or both.
+
+
+    UNIX is a registered trademark of The Open Group in the United States and other
+
+    countries.
+
+
+    Linux is a registered trademark of Linus Torvalds in the United States and other
+    countries.
+
+
+    Other company, product and service names may be trademarks or service marks of
+    others.
+
+
+    # October 2003 Edition
+
+
+    The information contained in this document has not been submitted to any formal
+    IBM test and is distributed on an "as is" without
+
+    any warranty express or implied. The use of this information or the implementation
+    of any of these techniques is a customer
+
+    responsibility and depends on the customer''s ability to evaluate and integrate
+    them into the operational environment. While
+
+    each item may have been reviewed by IBM for accuracy in a specific situation,
+    there is no guarantee that the same or similar results will
+
+    result elsewhere. Customers attempting to adapt these techniques to their own
+    environments do so at their own risk. The original
+
+    epository for this course has been certified as Year 2000 compliant.
+
+
+    © Copyright International Machines Corporation 1999. All rights reserved.
+
+    This document may not be reproduced in whole or in part without the prior permission
+    of IBM.
+
+
+    Note to U.S. Government Users — Documentation related to restricted rights — Use,
+    duplication or disclosure is subject to restrictions
+
+    set forth in GSA ADP Schedule Contract with IBM Corp.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Contents
+
+
+    Trademarks. ................................................................................................................................
+    v
+
+
+    Exercises Description ...................................................................................................................
+    vii
+
+
+    Exercise 1. Installing Samba ...................................................................................................................
+    1-1
+
+
+    Exercise 2. Network Browsing ......................................................................................................
+    2-1
+
+
+    Exercise 3. Authentication ..................................................................................................................
+    3-1
+
+
+    Exercise 4. File Sharing .......................................................................................................................
+    4-1
+
+
+    Exercise 5. Printer Sharing ......................................................................................................
+    5-1
+
+
+    Exercise 6. Windows Domain Support ................................................................................
+    6-1
+
+
+    Exercise 7. Configuring Samba with SWAT .........................................................................
+    7-1'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Trademarks
+
+
+    The reader should recognize that the following terms, which appear in the content
+    of this training document, are official trademarks of IBM or other companies:
+
+
+    IBM® is a registered trademark of International Business Machines Corporation.
+
+
+    The following are trademarks of International Business Machines Corporation in
+    the United States, or other countries, or both:
+
+
+    AIX® Hummingbird® Perform™
+
+    PowerPC® PS/® SPT™
+
+
+    Microsoft, Windows and Windows NT are trademarks of Microsoft Corporation in the
+    United States, other countries, or both.
+
+
+    Pentium is a trademark of Intel Corporation in the United States, other countries,
+    or both.
+
+
+    UNIX is a registered trademark of The Open Group in the United States and other
+    countries.
+
+
+    Linux is a registered trademark of Linus Torvalds in the United States and other
+    countries.
+
+
+    Other company, product and service names may be trademarks or service marks of
+    others.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Exercises Description
+
+
+    Each exercise in this course is divided into sections as described below. Select
+    the section that best fits your method of working in labs. You may elect to use
+    a combination of these sections as appropriate.
+
+
+    **Exercise Instructions** — This section contains what it are you to accomplish.
+    There are no definitive details on how to perform the tasks. You are given the
+    opportunity to work through the exercise given, using what you learned in the
+    unit presentation, utilizing the Student Notebook for the unit, your past experience
+    and maybe a little intuition.
+
+
+    **Exercise Instructions With Hints** — This section is an exact duplicate of the
+    Exercise Instructions section except that in addition, specific details and/or
+    hints are provided to help you step through the exercise. A combination of using
+    the Instructions section along with Instructions With Hints section can make for
+    a rewarding combination providing you with hints only when you need them.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # Exercise 1. Installing Samba
+
+
+    # What This Exercise is About
+
+
+    In this exercise you are going to install Samba from source and from the RPM files
+    that came with your distribution.
+
+
+    # What You Should Be Able to Do
+
+
+    At the end of the lab, you should be able to:
+
+
+    +   - Compile and install a Samba source tarball
+
+    - Install a Samba binary RPM
+
+
+    # Required Materials
+
+
+    +   - http://www.samba.org: Samba source tarball
+
+    - http://www.redhat.com: Samba RPMs'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Exercise Instructions
+
+
+    # Installing Samba from source
+
+
+    In this first part of the exercise you are going to follow all the steps that
+    are required to install Samba using the original source tarball which is taken
+    from the Samba website. After this, you are briefly going to test this installation
+    and uninstall it. The reason for this is that we want everybody in the classroom
+    to use the same configuration and that can only be assured if everybody installs
+    from the binary RPM that is provided with your operating system.
+
+
+    +   1. Log in to your Linux machine as root. The password is ibminx, unless your
+    instructor indicates otherwise.
+
+    2. Start a graphical user environment and start a browser (Konqueror, Netscape,
+    Mozilla or Galeon).
+
+    Your instructor might indicate that you need to configure your browser for a proxy
+    or socks server, since the classroom might be behind a firewall.
+
+    Once you can browse the web, go to the Samba website (http://www.samba.org). Browse
+    the site. Go to the download section and download the latest Samba release. Store
+    it in /root
+
+    3. Go to the /usr/src directory and unpack the source tarball.
+
+    4. Go into the Samba source directory and look through the file “Manifest” until
+    you see the installation directions. Read these carefully.
+
+    5. Go into the “source” directory and run the /configure --help. View the different
+    configuration options carefully; these options decide where all the files and
+    features of Samba (including experimental features) will be enabled.
+
+    6. Run the /configure script without any options. Not supplying any options will
+    ensure that we can install easily later on. The disadvantage is that not all binaries
+    will end up in a place that is included in $PATH.
+
+    This script will take a minute or so.
+
+    7. Run the make command so that all your binaries are built. This will take 5-20
+    minutes, depending on the speed of your system. You might want to get a cup of
+    coffee while the system is compiling.
+
+    8. Run the make install command so that everything is installed. Note that all
+    files are installed relative to a directory /usr/local/samba.
+
+    9. Create a basic smb.conf file in the directory where the config file should
+    go (with a regular install, /usr/local/samba/lib). If you don''t know where the
+    config file field
+
+
+    > Note: In order to download time, your instructor might already have downloaded
+    this release and stored it locally. Check with the instructor if this is the case.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'go, run the **testparm** command which was installed as part of the **make
+    install**. You© read© the directory from the output of the testparm command.
+
+
+    The smb.conf file should contain a **netbios name** and a **workgroup** statement.
+
+
+    +   10. Run the testparm command again.
+
+
+    +   11. Start the **smbd** and **nmbd** daemons, both with the **-D** option so
+    that they are started
+
+    as daemons.
+
+
+    +   12. Use the **smclient** command to verify that your daemons are indeed functioning.
+
+
+    +   13. Kill all Samba daemons.
+
+
+    +   14. Use the **make uninstall** to uninstall all Samba programs. Verify that
+    the
+
+    /usr/local/samba directory is indeed empty, except for the smb.conf file that
+    we
+
+    created ourselves, some documentation and a few lock- and logfiles. Then remove
+
+    /usr/local/samba directory completely.
+
+
+    # **Installing Samba from RPM**
+
+
+    +   15. Depending on the lab setup, the Samba RPMs that came with your distribution
+    are
+
+    located in /root or are stored on a network server. Alternatively, your instructor
+    may
+
+    have CDs to distribute to you. In any case, install all Samba RPMs and list the
+
+    information on these RPMs and the files they contain.
+
+
+    +   16. Browse the contents of the default smb.conf file that was configured on
+    your system.
+
+
+    +   17. Use your distributions start script to start Samba.
+
+
+    +   18. Use the **smclient** command again to test your local configuration.
+
+
+    +   19. Stop the Samba daemons using your distributions scripts.
+
+
+    # **END OF LAB**'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Exercise Instructions With Hints
+
+
+    # Installing Samba from source
+
+
+    In this first part of the exercise you are going to follow all of the steps that
+    are required to install Samba using the original source tarball which is taken
+    from the Samba website. After this, you are briefly going to test this installation
+    and uninstall it. The reason for this is that we want everybody in the classroom
+    to use the same configuration and can only be assured if everybody installs from
+    the binary RPM that is provided with your operating system.
+
+
+    +   1. Log in to your Linux machine as root. The password is ibminx, unless your
+    instructor indicates otherwise.
+
+
+    > Login as root and provide ibminx as root password.
+
+
+    +   2. Start a graphical user environment and start a browser (Konqueror, Netscape,
+    Mozilla or Galeon).
+
+
+    Your instructor might indicate that you need to configure your browser for a proxy
+    or socks server, since the classroom might be behind a firewall.
+
+
+    Once you can the web, go to the Samba website (http://www.samba.org). Browse the
+    site. Go to the download section and download the latest stable Samba release.
+    Store it in /root
+
+
+    Note: In order to save download, your instructor might already have downloaded
+    the release and stored it locally. Check with the instructor if this is the case.
+
+
+    +   3. Go to the /usr/src directory and unpack the samba tarball.
+
+
+    ```
+
+    # cd /usr/src
+
+    # tar -zxvf /root/samba-version.tar.gz
+
+    ```
+
+
+    +   4. Go into the Samba directory and browse the file "Manifest" until you see
+    the installation directions. Read these carefully.
+
+
+    ```
+
+    # cd samba-version
+
+    # less Manifest
+
+    ```
+
+
+    +   5. Go into the "source" directory and run the ./configure --help. View the
+    different configuration carefully: these options decide where all the files and
+    what features of Samba (including experimental features) will be enabled.
+
+
+    ```
+
+    # cd source
+
+    # ./configure --help | less
+
+    ```
+
+
+    +   6. Run the ./configure script without any options. Not supplying options will
+    ensure that we can reinstall Samba easily later on. The disadvantage is that not
+    all binaries end up in a place that is included in your $PATH.
+
+
+    This script will take a minute or so.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '>> # ./configure
+
+
+    +   7. Run the make command so that all your binaries are built. (This will take
+    5-20 minutes, depending on the speed of the system. You might want to get a cup
+    of coffee while the system is compiling.)
+
+
+    >> # make
+
+
+    +   8. Run the make install command so that everything is installed. Note that
+    all files are installed relative to a directory /usr/local/samba.
+
+
+    >> # make install
+
+
+    +   9. Create a basic smb.conf file in the directory where the config file should
+    go (with a regular install,usr/local/samba/lib). If you don''t know where the
+    config file should go, run the testpalm command which was installed as part of
+    the make install. You can read the directory from the output of the testpalm command.
+
+
+    The smb.conf file should contain a netbios name and a workgroup statement.
+
+
+    ```
+
+    >> cd /usr/local/samba/bin
+
+    >> # /testpalm
+
+    >> cd /usr/local/samba/lib
+
+    >> vi smb.conf
+
+    ```
+
+
+    Edit the file so that it looks like
+
+
+    ```
+
+    [global]
+
+    netbios name = system1
+
+    workgroup = 1x26
+
+    ```
+
+
+    +   10. Run the testpalm command again.
+
+
+    >> # /usr/local/samba/bin/testpalm
+
+
+    +   11. Start the smbd and nmbd daemons, both with the -D option so that they
+    are daemons.
+
+
+    ```
+
+    >> /usr/local/samba/bin/smbd -D
+
+    >> /usr/local/samba/bin/nmbd -D
+
+    ```
+
+
+    +   12. Use the smclient command to verify that your daemons are indeed functioning.
+
+
+    >> /usr/local/samba/bin/smclient -L system1 -N
+
+
+    +   13. Kill all Samba daemons.
+
+
+    ```
+
+    >> killall smbd
+
+    >> killall nmbd
+
+    ```
+
+
+    +   14. Use the make uninstall command to uninstall all Samba programs. Verify
+    that the /usr/local/samba directory is indeed empty, except for the smb.conf file
+    that you created ourselves, some documentation and a few lock- and logfiles. Then
+    remove the /usr/local/samba directory completely.
+
+
+    >> cd /usr/src/samba-version/source'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '```
+
+    # make uninstall
+
+    # cd /usr/local/samba
+
+    # ls -IR | less
+
+    # cd /root
+
+    # rm -fr /usr/local/samba
+
+    ```
+
+
+    # Installing Samba from RPM
+
+
+    +   15. Depending on the lab setup, the Samba RPMs that came with your distribution
+    are located in /root or are stored on a network server. Alternatively, your instructor
+    may have CDs to distribute to you. In any case, install all Samba RPMs and list
+    the information on these RPMs and the files they contain.
+
+
+    # Is samba*.rpm
+
+    # rpm -qip samba*.rpm | less
+
+    # rpm -qlp samba*.rpm | less
+
+    # rpm -ivh samba*.rpm
+
+
+    +   16. Browse the contents of the default smb.conf file that was configured on
+    your system.
+
+
+    # less /etc/samba/smb.conf
+
+
+    +   17. Use your distributions start script to start Samba.
+
+
+    redhat# service smb start
+
+    suse# rcnmb start; rcnmb start
+
+
+    +   18. Use the smbclient command to test your local configuration.
+
+
+    # smbclient -L localhost -N
+
+
+    +   19. Stop the Samba daemons using your distributions scripts.
+
+
+    redhat# service smb stop
+
+    suse# rcnmb stop; rcnmb stop
+
+
+    # END OF LAB'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Exercise 2. Network Browsing
+
+
+    # What This Exercise is About
+
+
+    In this exercise you are going to configure Samba for network browsing.
+
+
+    # What You Should Be Able to Do
+
+
+    At the end of the lab, you should be able to:
+
+
+    +   - Configure Samba for network browsing'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Exercise Instructions
+
+
+    # Configuring Master Browsers
+
+
+    In this part of the exercise you need to team up with one or two partner teams,
+    and configure your two or three systems in the same workgroup. You are going to
+    play with various browsing settings that different machines will (predictably)
+    become local and domain master browser.
+
+
+    +   1. Find one or two partner teams to work with and, if necessary, introduce
+    yourself to each other.
+
+    2. Move the default smbconf file that came with your distribution to a safe location
+    so that you can start off with a blank smbconf file. In this new file, configure
+    a netbios name (your own hostname) and a workgroup (a name you decide on with
+    your partner teams). Also include a log level = 2 statement, and make sure the
+    log output goes to /var/log/samba/
+
+    3. Start your graphical user environment, if this has not yet been started. Open
+    at least two terminal windows. In one window, start a tail -f of the /var/log/samba/nmbd,
+    and in another, run the smclient -L localhost -N continuously with one second
+    interval.
+
+    4. Use the uptime command to determine which system has been running the longest.
+    Start the Samba daemons. Wait a minute or so to see the browser elections in action.
+    How long does it take before a master browser is elected for your workgroup? Why
+    so long? Which system was elected and why?
+
+    5. Stop all Samba daemons on all systems. In one system, configure Samba to be
+    a Local Master Browser, with an os level of 32. Start all Samba daemons again.
+    Which became LMB? Why? How long did it take this?
+
+    6. Leave the system that became LMB running. On a non-LMB system, stop the Samba
+    daemons and configure this system as a preferred master with an os level of 33.
+    Start this daemon. Does this system become LMB?
+
+    7. While you were doing these exercises, you may also see other master browsers
+    appear in the output of the smclient command? How long did this take?
+
+
+    # WINS Service
+
+
+    +   8. Your instructor will appoint one of the systems (or his/her server) in
+    the classroom as the WINS server. Configure all your systems to use this WINS
+    server, and then run the same simulation. Does this make a difference in the time
+    it takes?'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Clean-up
+
+
+    ___ 9. Change your smb.conf file so that you are a simple system with os level
+    zero, and part of the lx26 workgroup. Do not attempt to become master browser.
+
+
+    END OF LAB'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# Exercise Instructions With Hints\n\n# Configuring Master Browsers\n\nIn this\
+    \ part of the exercise you need to team up with one or two partner teams, and\
+    \ configure your two or three systems in the same workgroup. You are going to\
+    \ play with various browsing settings that different machines (predictably) become\
+    \ local and domain master browser.\n\n+   1. Find one or two partner teams to\
+    \ work with, and, necessary, introduce yourself to each other.\n2. Move the default\
+    \ smb.conf file that came with your distribution to a safe location so that you\
+    \ can start off with a blank smb.conf file. In this new blank, configure a netbios\
+    \ name (your hostname) and a workgroup (a name you decide on together with your\
+    \ partner teams). Also include a log level = 2 statement, and make sure the log\
+    \ outputs to /var/log/samba/log.%m\n   > `mv /etc/samba/smb.conf /etc/samba/smb.conf`\n\
+    \   > `vi /etc/samba/smb.conf`\nThe contents of the file should look like:\n```\n\
+    [global]\nnetbios name = systemgroup\nworkgroup = oursgroup\nlog level = 2\nlog\
+    \ file = /var/log/samba/log.%m\n```\n   > # testparam\n3. Start your graphical\
+    \ user environment, if this has not yet been started. Open at least two terminal\
+    \ windows. In one window, start a `tail -f` of the file /var/log/samba/log.mbnd,\
+    \ and in another window, start the smbclient -L localhost-N continuously with\
+    \ a one second interval.\n   > # startx\n   > In one xterm/nxterm/rxvt/Konsole/gnome-terminal\
+    \ window:\n   > # tail -f /var/log/samba/log.mbnd\n   > In another xterm/nxterm/rxvt/Konsole/gnome-terminal\
+    \ window:\n   > # while true\n   > do\n   > clear\n   > smbclient -L localhost-N\n\
+    \   > sleep 1\n   > done"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '+   4. Run the uptime command to determine which system has been running the
+    longest. Start the Samba daemons. Wait a minute or so to see the browser elections
+    in action. How long does it take before a master browser is elected for your workgroup?
+    Why so long? Which system was elected and why?
+
+
+    ```
+
+    >> # uptime
+
+    >> redhat# service smb restart
+
+    ssuse: rcnmb start; rcsmb start
+
+    ```
+
+
+    +   5. Stop all Samba daemons on all systems. On one system, configure Samba to
+    be a Local Master Browser, with an os level of 32. Start all Samba daemons again.
+    Which system became LMB? Why How long did it take this time?
+
+
+    ```
+
+    >> redhat# service smb stop
+
+    suse# rcnmb stop; rcnmb stop
+
+    >> # vi /etc/samba/smb.conf
+
+    ```
+
+
+    Add the following lines:
+
+
+    ```
+
+    local master = yes
+
+    os level = 32
+
+    ```
+
+
+    ```
+
+    >> redhat# service smb start
+
+    ssuse: rcnmb start; rcsmb start
+
+    ```
+
+
+    +   6. Leave the system that became LMB running. On a non-LMB system, stop the
+    Samba daemons and configure this system as a preferred master with an os level
+    of 33. Start this daemon. Does this system become LMB?
+
+
+    ```
+
+    >> redhat# service smb stop
+
+    suse: rcsmb stop; rcnmb conf
+
+    >> # vi /etc/samba/smb.conf
+
+    ```
+
+
+    Add the following lines:
+
+
+    ```
+
+    local master = yes
+
+    os level = 33
+
+    preferred master = yes
+
+    ```
+
+
+    ```
+
+    >> # testparam
+
+    >> redhat# service smb start
+
+    ssuse# rcnmb start; rcsmb start
+
+    ```
+
+
+    +   7. While you were doing these exercises, did you also see other master browsers
+    appear in the output of the smclient command? How long did this take?
+
+
+    # WINS Service
+
+
+    +   8. Your instructor will appoint one of the systems (his/her own server) in
+    the classroom as the WINS server. Configure all your systems to use this WINS
+    server,'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'and then run the simulation again. Does this make a difference in the time
+    it takes?
+
+
+    +   >> redhat# service smb stop
+
+    suse: rcmcb stop; rcnmb stop
+
+    >> # vi /etc/samba/smb.conf
+
+
+    If you are the WINS server, add the following line:
+
+    wins support = yes
+
+
+    If you are a WINS client, add the following line:
+
+    wins server = <IP address of WINS server>
+
+
+    +   >> # testpalm
+
+    >> redhat# service smb start
+
+    suse:# rcnmb start; rcsmb start
+
+
+    # Clean-up
+
+
+    +   9. Change your smb.conf file so that you are a simple system with os level
+    zero, and part of the lx26 workgroup. Do not attempt to become master browser.
+
+
+    > >> # vi /etc/samba/smb.conf
+
+    Change the file so that it looks like:
+
+    [global]
+
+    netbios name = system1
+
+    workgroup = lx26
+
+    >> # testpalm
+
+    >> redhat# service smb restart
+
+    suse## rcnmb restart; rcsmb restart
+
+
+    # END OF LAB'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Exercise 3. Authentication
+
+
+    # What This Exercise is About
+
+
+    This unit will be used to familiarize the student with Windows authentication
+    and its implementation in Samba.
+
+
+    # What You Should Be Able to Do
+
+
+    At the end of the lab, you should be able to:
+
+
+    +   * Configure basic authentication
+
+    * Configure encrypted passwords
+
+    * Configure a guest account'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Exercise Instructions
+
+
+    # Basic Authentication
+
+
+    +   1. Verify that on your system two user accounts, samba1 and samba2, are added,
+    and that the passwords of these accounts are samba1 and samba2, respectively.
+
+
+    +   2. Configure your smb.conf file for Samba is in the security = user mode.
+    Use smbclient to access Samba as user samba1. Use the password "samba1". Does
+    this work?
+
+
+    +   3. Now try to log on with the password "SAMBA1" (all capitals). Does this
+    work? Why?
+
+
+    +   4. Change the UNIX password of samba1 to "Samba1" (with a capital S). Then
+    try to log on with passwords "samba1","Samba1" and "SAMBA1". Does this work? Change
+    the password level to 1 and try these passwords again. Do they work now?
+
+
+    +   5. Try different UNIX passwords (multiple capitals) for samba1 and various
+    password settings until you understand how this works.
+
+
+    +   6. Set the password of samba1 back to samba1.
+
+
+    +   7. Edit the file /etc/samba/smusers and add an alias for samba1 so that the
+    Windows username "Samba User 1" is used for it. Change the smb.conf file so that
+    the /etc/smamba file is used. Then try to log on to Samba with the Windows username
+    "Samba User 1".
+
+
+    # Encrypted Passwords
+
+
+    +   8. Configure Samba to use encrypted passwords. Use the smadduser to add samba1
+    and samba2 to the Samba password files. View the result /etc/samba/smbpasswd file.
+
+
+    +   9. Try to log on to Samba as samba1. Does this work? Now change the UNIX password
+    of samba1 to something completely different. Try to log on again.
+
+
+    +   10. Set the password of samba1 back to samba1.
+
+
+    # Guest Accounts
+
+
+    +   11. Try to login to Samba with an invalid username. What happens?
+
+
+    +   12. Add a UNIX account "pcguest" to your system. DO NOT give this account
+    a password. Change the smb.conf file so that this account is used when a user
+    supplies an invalid username. Try to log in to Samba with an invalid username
+    again. What happens now?'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Logging onto Samba from a Windows 95/98/ME machine
+
+
+    Depending on local circumstances, one or two machines in the classroom are set
+    up Windows 95/98/ME machines, or you will have a preconfigured VMware image on
+    your system with Windows 95/98/ME. The instructor can tell you what is used in
+    your classroom.
+
+
+    +   13. Boot the Windows 95/98/ME machine. When you need to log on, do so as "samba1"
+    with password "samba1". Start the Windows Explorer and browse your network neighborhood.
+    (Note: It might take several minutes after booting before you can actually access
+    the network neighborhood: Windows machines do browser elections too...) Browse
+    your own Samba server. Do you get access?
+
+
+    +   14. Log out (Start; Shut Down; Close all programs and log on as a different
+    user) and log in with a username that does not exist on the Samba server. Browse
+    the network neighborhood and try to access your system. Does this work? Why?
+
+
+    +   15. If there is still time, then disable the guest account on the Samba server
+    and try to access your Samba server from the Windows machine again. Does this
+    work?
+
+
+    END OF LAB'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Exercise Instructions With Hints
+
+
+    # Basic Authentication
+
+
+    +   1. Verify that on your system two user accounts, samba1 and samba2, are added,
+    that the passwords of these accounts are samba1 and samba2, respectively.
+
+    >> # id samba1
+
+    >> # id samba2
+
+    >> Switch to a free virtual terminal with <Alt-F6> or <Ctrl-Alt-F6> and try to
+    log in as samba1 with password samba1. Do the same for samba2.
+
+
+    +   2. Configure your smb.conf file so that Samba is in security = user mode.
+    Use smbcient to access Samba as user1. Use the password “samba1”. Does this work?
+
+    >> redhat# service smb stop
+
+    suse: rscmp stop; rscmp stop
+
+    >> # vi /etc/samba/smb.conf
+
+    Add the following line:
+
+    security = user
+
+    >> # testparam
+
+    >> redhat# service smb start
+
+    suse# rscmp start; rscmp start
+
+    >> # smbcient -L localhost -U samba1
+
+    Password: samba1
+
+
+    +   3. Now try to log on with the password “SAMBA1” (all capitals). Does this
+    work?
+
+
+    +   4. Change the UNIX password of samba1 to “Samba1” (with a capital S). Then
+    try to log on with passwords “samba1”, “Samba1” and “SAMBA1”. Does this work?
+    Change the password level to 1 and try these passwords again. Do they work now?
+
+    >> # passwd samba1
+
+    New password: Samba1
+
+    Retype new password: Samba1
+
+    >> # smbcient -L localhost -U samba1
+
+    Log on with password samba1, Samba1 and SAMBA1.
+
+    >> # vi /etc/samba/smb.conf
+
+    Add the following line:
+
+    password level = 1
+
+    >> # testparam
+
+    >> redhat# service smb restart
+
+    suse# rscmp restart; rscmp restart'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# # smclient -L localhost -U samba1
+
+
+    Log on with password samba1 and SAMBA1.
+
+
+    +   5. Try different UNIXIX passwords (with multiple capitals) and various password
+    level settings until you understand how this works.
+
+
+    +   6. Set the password of samba1 back to samba1.
+
+
+    > # passwd samba1
+
+
+    New password: samba1
+
+
+    Retype new password: samba1
+
+
+    +   7. Edit the file /etc/samba/smbsusers and add an alias for samba1 so that
+    the Windows username "Samba User 1" is used for it. Change the smb.conf file so
+    that the /etc/samba/smbsusers file is used. Then try to logon to Samba with the
+    Windows username "Samba User 1".
+
+
+    > # vi /etc/samba/smbsusers
+
+
+    Add the following line:
+
+    sambal = "Samba User 1"
+
+
+    > # vi /etc/samba/smb.conf
+
+
+    Add the following line:
+
+    username map = /etc/samba/smbsusers
+
+
+    > #testparam
+
+
+    > redhat# service smb restart
+
+    suse# rcnmb restart; rcsmb restart
+
+
+    > # smclient -L localhost -U "Samba User 1"
+
+
+    # Encrypted Passwords
+
+
+    +   8. Configure Samba to use encrypted passwords. Use the smadduser to add samba1
+    and samba2 to the Samba password files. View the resulting /etc/samba/smbpasswd
+    file.
+
+
+    > # vi /etc/samba/smb.conf
+
+
+    Add the following lines:
+
+    crypt passwords = yes
+
+    smbpasswd file = /etc/samba/smbpasswd
+
+
+    > #testparam
+
+
+    > redhat# service smb restart
+
+    suse: rcnmb restart; rcsmb restart
+
+
+    > # smadduser samba1:samba1
+
+
+    New SMB password: samba1'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'Retype new SMB password: samba1
+
+
+    >> smbadduser samba2:samba2
+
+
+    New SMB password: samba2
+
+
+    Retype new SMB password: samba2
+
+
+    >> less /etc/samba/smbpasswd
+
+
+    +   9. Try to log on to Samba as samba1. Does this work? Now change the UNIX password
+    of samba1 to something completely different. Try to log on again. Does this work?
+
+
+    >> smclient -L localhost -U samba1
+
+
+    >> passwd samba1
+
+
+    New password: something completely different
+
+
+    Retype new password: something completely different
+
+
+    >> smclient -L localhost -U samba1
+
+
+    +   10. Set the password of samba1 back to samba1.
+
+
+    >> passwd samba1
+
+
+    New password: samba1
+
+
+    Retype new password: samba1
+
+
+    # Guest Accounts
+
+
+    +   11. Try to log in to Samba with an invalid username. What happens?
+
+
+    >> smclient -L localhost -U “An invalid username"
+
+
+    Password: bla
+
+
+    +   12. Add a UNIX account "pcguest" to your system. DO NOT give this account
+    a password. Then change the smb.conf file so that this account is used when a
+    user supplies an invalid username. Try to log in with Samba with an invalid username
+    again. What happens?
+
+
+    >> useradd pcguest
+
+
+    >> vi /etc/samba/smb.conf
+
+
+    Add the following lines:
+
+
+    ```
+
+    guest account = pcguest
+
+    map to guest = bad user
+
+    ```
+
+
+    >> testpart
+
+
+    >> redhat service smb restart
+
+
+    >> use#rcsm restart; rcsmb restart
+
+
+    >> smclient -L localhost -U “An invalid username"'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Logging onto Samba from a Windows 95/98/ME
+
+
+    Depending on local circumstances, one or two machines in the classroom are set
+    up as Windows 95/98/ME machines, or you will have a preconfigured VMware image
+    on your system with Windows 95/98/ME. The instructor can tell you what is used
+    in your classroom.
+
+
+    +   13. Boot the Windows 95/98/ME machine. When you need to log on, do so as "samba1"
+    with password "samba1". Start the Windows Explorer and browse your network neighborhood.
+    (Note: It might take several minutes after booting before you can actually access
+    the network neighborhood: Windows machines do browser elections too...) Browse
+    your own Samba server. Do you get access?
+
+
+    +   14. Log out (Start; Shut Down; Close all programs and log on as a different
+    user) and log in with a username that does not exist on the Samba server. Browse
+    the network neighborhood again and try to access your system. Does this work?
+    Why?
+
+
+    +   15. If there is still time, then disable the guest account on the Samba server
+    and try to access your Samba server from the Windows machine again. Does this
+    work?
+
+
+    END OF LAB'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Exercise 4. File Sharing
+
+
+    # What This Exercise is About
+
+
+    In this exercise you will practice the techniques given in the lecture for configuring
+    Samba to share directories on the Linux host. You will experiment with dynamic
+    home directories, permission issues, and other characteristics of disk shares.
+
+
+    # What You Should Be Able to Do
+
+
+    At the end of the lab, you should be able to:
+
+
+    +   - Properly set up the defaults for dynamic home directory shares
+
+    - Configure disk shares for read-only, public access, and so on'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Exercise Instructions
+
+
+    The [homes] template share
+
+
+    As shown in the lecture, the [homes] share is actually a template which is used
+    for sharing the home directory of the user to that particular user.
+
+
+    +   1. Modify the smb.conf file so that the [homes] share is added.
+
+
+    +   2. Use the smbclient command to retrieve a list of shares on your owner server,
+    while logging in anonymously, as samba1, as samba2 and with an incorrect username.
+
+
+    +   3. Use the smbclient command to log in to the home directory of samba1. Upload
+    the file /etc/passwd. Log out and view the permissions on the file /home/samba1/passwd.
+    Are these permissions what you expected?
+
+
+    +   4. Use the smbmount command to access the home directory of samba2. Upload
+    the file /etc/passwd. Disconnect and view the permissions on the file /home/samba2/passwd.
+
+
+    Note: This only works under Linux (not any other UNIX) and only if your Linux
+    kernel supports the smbfs filesystem.
+
+
+    +   5. On a Windows 95/98/ME system, log in as samba1 with password samba1. Browse
+    your network neighborhood and go to your own server. What shares do you see? Access
+    the samba1 share and see what files are in. Can you read and write files?
+
+
+    +   6. On a Windows 95/98/ME system, start an MS-DOS prompt. Run the command use
+    h: \servername/homes. What does this command do? Does it work? Why would you use
+    "homes" instead of your own username?
+
+
+    # Other file shares
+
+
+    +   7. Edit the smb.conf file and add a [tmp] share as shown in the lecture. Access
+    this share, either using smbclient or smbmount, or from a Windows 95/98/ME system.
+    Can you add and delete your own files? Can add only samba1 as its secondary group.
+
+
+    +   8. Create a new UNIX group "samba". Add only samba1 to this group as its secondary
+    group. Create a group directory/groups/samba with the correct group ownership
+    and permissions. Then add to the smb.conf file for this directory. Browse your
+    server as samba1 and samba2. Who can see and access the share? Now add samba2
+    to the group. Is there anything else you need to do allow samba2 access to the
+    group?
+
+
+    +   9. Configure a share which exports your local CD-ROM drive. Samba should automatically
+    close the CD tray and mount the CD when somebody connects to it, unmount and eject
+    the CD when it is disconnected. Try to see if this works from a Windows 95/98/ME
+    system.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Student Exercises
+
+
+    # Note
+
+
+    For unknown reasons, the root posttexec command does not seem to work correctly.
+
+    This is under investigation.
+
+
+    END OF LAB
+
+
+    © Copyright IBM Corp. 1999, 2003
+
+
+    Exercise 4. File Sharing
+
+
+    4-3
+
+
+    Course materials may not be reproduced in whole or in part
+
+    without the prior written permission of IBM.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# Exercise Instructions With Hints\n\nThe [homes] template share\n\nAs shown\
+    \ in the lecture, the [homes] is actually a template which is used for sharing\
+    \ the home directory of the user to that particular user.\n\n+   1. Modify the\
+    \ smb.conf file so that the [homes] share is added.\nn    » # vi /etc/samba/smb.conf\n\
+    \    Add the following:\n\n    [homes]\n    path = /home/%u\n    comment = Home\
+    \ Directory of %U\n    browseable = no\n    writable = yes\n    » # testparam\n\
+    \    » redhat# service samba restart\nsuse rncmd restart; rsmcb restart\n\n+ \
+    \  2. Use the smclient command to retrieve a list of shares on own server, while\
+    \ logging in anonymously, samba1, samba2 and with an incorrect username.\n\n \
+    \   » # smclient -L localhost -N\n    » # smclient -L localhost -U samba1\n  \
+    \  » # smclient -L localhost -U samba2\n    » # smclient -L localhost -U \"invalid\
+    \ username\"\n\n+   3. Use the smclient command to log in to the home directory\
+    \ of samba1. Upload the file /etc/passwd to /home/samba1/passwd. Are these permissions\
+    \ what you expected?\n\n    » # smclient //localhost/samba1 -U samba1%samba1\n\
+    smb: > put /etc/passwd password\nsmb: > quit\n    » # ls -l /home/samba1/password\n\
+    \n+   4. Use the smb command to access the home directory of samba2. Upload the\
+    \ file /etc/passwd. Disconnect and view the permissions on the file /home/samba2/password.\n\
+    \nNote: This only works on Linux (not any other UNIX) and only if your Linux kernel\
+    \ supports the smbfs filesystem.\n\n    » # mkdir /mnt/smb\n    » # smount //localhost/samba2/mnt/smb\
+    \ -o username=samba2\n    Password: samba2\n    » # cp /etc/passwd /mnt/smb\n\n\
+    Linux Integration with Windows (Samba)"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '+   >> umount /mnt/samba
+
+    >> ls -l /home/samba2/passwd
+
+
+    5. On a Windows 95/98/ME system, log in as samba1 with password samba1. Browse
+    your network neighborhood and go to your own server. What shares do you see? Access
+    the samba1 share and see what files are in there. You can read and write files?
+
+
+    6. On a Windows 95/98/ME system, start an MS-DOS prompt. Run the command net use
+    h: \servername\homes. What does this command do? Does it work? Why would you use
+    “homes” instead of your own username?
+
+
+    # Other shares
+
+
+    +   7. Edit the smb.conf file and add a [tmp] share as shown in the lecture. Access
+    this share, either using smclient or smbmount, or from a Windows 95/98/ME system.
+    Can you add and delete your own files?
+
+
+    +   >> vi /etc/samba/smb.conf
+
+
+    Add the following share:
+
+
+    [tmp]
+
+    comment = Free disk space here
+
+    writable = yes
+
+    browsable = yes
+
+    public = yes
+
+    path = /tmp
+
+
+    +   >> #testparam
+
+    redhat# service restart
+
+    suse# rcnmb restart; rscmb restart
+
+
+    +   8. Create a new UNIX group "samba". Only add samba1 to this group as its secondary
+    group. Create a group directory /groups/samba for this group with the correct
+    group ownership and permissions. Then add a share to the smb.conf file for directory.
+    Browse your server as samba1 and samba2. Which users can see and access the share?
+    Now add samba2 to the group as well. Is there anything else you need to allow
+    samba2 access to the group?
+
+
+    +   >> groupadd samba
+
+    >> usermod -G group samba1
+
+    >> mkdir -p /groups/samba
+
+    >> chmod 2770 /groups/samba
+
+    >> chgrp samba /groups/samba
+
+    >> vi /etc/samba/smb.conf
+
+
+    Add the following share:
+
+
+    [samba]
+
+    comment = samba group share'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Student Exercises
+
+
+    ```
+
+    writable = yes
+
+    browsable = yes
+
+    public = no
+
+    path = /groups/samba
+
+    valid users = @samba
+
+    # testparm
+
+    # redhat# service smb restart
+
+    suse# rerun restart; rscmb restart
+
+    # smclient -L localhost -N
+
+    # smclient //localhost/samba -U samba1%samba1
+
+    # smclient //localhost/samba -U samba2%samba1
+
+    # smclient //localhost/samba -U samba2%samba2
+
+    # smclient //localhost/samba -U samba2%samba2
+
+    # usermod -G samba samba2
+
+    # smclient -L localhost -U samba2%samba2
+
+    # smclient //localhost/samba -U samba2%samba2
+
+    ```
+
+
+    9. Configure a share which exports your CD-ROM drive. Samba should automatically
+    close the CD tray and mount the CD when someone connects to it, and unmount and
+    eject the CD when the share is disconnected. Try to see if this works from a Windows
+    95/98/ME system.
+
+
+    # Note
+
+
+    For unknown reasons, the root postexec command does not seem to work correctly.
+    This is under investigation.
+
+
+    ```
+
+    # # vi /etc/samba/b.conf
+
+    Add the following share:
+
+    [CD]
+
+    comment = CD-ROM
+
+    writable = no
+
+    browsable = yes
+
+    public = no
+
+    path = /mnt/cdrom
+
+    root postexec = eject -t ; mount /mnt/cdrom
+
+    root postexec = ummount /mnt/cdrom ; eject
+
+    # testparm
+
+    # redhat# service smb restart
+
+    suse# rerun restart; rscmb restart
+
+    ```
+
+
+    # END OF LAB'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Exercise 5. Printer Sharing
+
+
+    # What This Exercise is About
+
+
+    In this exercise you will configure a Linux Samba server to support all of the
+    printers currently supported by the host Linux operating system. In addition,
+    you will learn how to restrict which printers are actually shared.
+
+
+    # What You Should Be Able to Do
+
+
+    At the end of the lab, you should be able to:
+
+
+    +   - Configure a basic Samba setup which exposes all of the Linux-configured
+    printers to the SMB network clients
+
+    - Restrict the above configuration to selected printers only'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Exercise Instructions
+
+
+    # Configuring a UNIX printer
+
+
+    Considering the wide variety of classrooms that this course will be taught in,
+    it is not possible to include instructions here on how to configure your system
+    so that a UNIX printer (a printer that can be accessed with the regular UNIX commands)
+    is available. Your instructor will tell you how to configure your UNIX printer.
+
+
+    Red Hat Linux uses the redhat-config-printer utility, while SUSE configures printers
+    by YaST2 Control Center.
+
+
+    As an alternative, if no printers are available at all in your classroom, you
+    can print to a virtual terminal (instance /dev/tty9 or xterm /dev/pts/n) figure
+    this out with the tty command). If this is the case, make sure that the printing
+    subsystem user ("lp") has access to this device (chown lp /dev/tty9).
+
+
+    +   1. Configure your printer using the instructions that will be provided by
+    your instructor.
+
+    2. Create a test file, /root/testfile and put something in here, such as a poem,
+    so that you are able to identify this file as your own.
+
+    3. Send the test file to the printer using the regular UNIX commands to verify
+    that your printing subsystem works.
+
+
+    # Configuring the [printers] template share
+
+
+    +   4. Modify your smb.conf file so that all printers in your printcap file are
+    automatically shared. Then restart Samba.
+
+    5. Use the smbclient command to browse your Samba server. Do you see the printer
+    share? What is the name of the printer share, and why?
+
+    6. Use the smbclient command to print the test file. Log in as samba1. Verify
+    that the file was inserted correctly.
+
+    7. Switch over to a Windows 95/98/ME system and browse your network neighborhood
+    again. Install the printer which was shared on your Samba server and try to print
+    a file.
+
+
+    # Configuring individual printers
+
+
+    +   8. Edit your smb.conf file so that printers are not loaded automatically anymore.
+    Then configure two printers, one named "linenumber" and one named "linenumbers".
+    For both, add a print command statement that both print to the same printer, the
+    second one should add line numbers to the print job. Use the same smbprint command
+    to print your test file to the printer.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Working with pseudo-printers (optional)
+
+
+    By modifying the print command for an individual printer, we can do a lot of strange
+    things. A typical example is sending the print job to a fax instead of a printer.
+    We don''t have a fax in our classroom, so we will do something else, just to get
+    the idea.
+
+
+    +   9. Configure a printer share named "mailtoroot". If jobs are submitted to
+    this printer, they need to be mailed to root.
+
+
+    +   10. On the Windows system, install this additional printer as a Generic text-only
+    printer and print a small text file (create one with WordPad or Notepad, if necessary)
+    to this printer. Then, as root, check your mailbox with the mail command. Did
+    it work?
+
+
+    +   11. Make a list of files in /var/spool/samba. Do you see any files here? Why?
+    How would you solve this?
+
+
+    END OF LAB'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Exercise Instructions With Hints\n\n# Configuring a UNIX printer\n\nConsidering\
+    \ the wide variety of classrooms that this course will be taught in, it is not\
+    \ possible to include instructions here on how to configure your system so that\
+    \ a UNIX printer (a printer that can be accessed with the regular UNIX commands)\
+    \ is available. Your instructor will tell you how to configure your UNIX printer.\n\
+    \nRed Hat Linux uses the redhat-config-printer utility, while SuSE configures\
+    \ printers through Yast2 Control Center.\n\nAs an alternative, if no printers\
+    \ are available at all in your classroom, you can print to a virtual terminal\
+    \ (instance /dev/tty9 or xterm /dev/pts/n) figure this out with the tty command).\
+    \ If this is the case, make sure that the printing subsystem (\"lp\") has access\
+    \ to this device (chown lp /dev/tty9).\n\n+   1. Configure your UNIX printer using\
+    \ the instructions that will be provided by your instructor.\n   >> All assume\
+    \ that the configured printer has the name \"lp\". If this is not the case, change\
+    \ all printer queue names to the corresponding names and don't forget to add the\
+    \ -P queue option to all relevant commands (lpr, lpq, lpc and so forth).\n\n+\
+    \   2. Create a test file, /root/testfile and put something in here, such as a\
+    \ poem, so that you can identify this file as your own.\n   >> # vi /root/testfile\n\
+    \n+   3. Send the test file to the printer using the regular UNIX commands to\
+    \ verify that your printing subsystem works.\n   >> # lpr /root/testfile\n\n#\
+    \ Configuring the [printers] map share\n\n+   4. Modify your smb.conf file so\
+    \ that all printers in your printcap file are automatically shared. Restart Samba.\n\
+    \   >> # vi /etc/samba/smb.conf\nIn the [global] section, adding the following\
+    \ lines:\n```\nprinting = lprng\nprintcap name = /etc/printcap\nload printers\
+    \ = yes\n```\nat the end of the file, add the following share:\n```\n[printers]\n\
+    path = /var/pool/samba\nread only = true\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '```
+
+    printable = true
+
+    guest ok = true
+
+    # testparam
+
+    redhat# service smb restart
+
+    suse# rcnmb restart; rcsmb restart
+
+    ```
+
+
+    +   5. Use the smclient command to browse your Samba server. Do you see the printer
+    share? What is the name of the printer share, and why?
+
+
+    > # smclient -L localhost -N
+
+
+    +   6. Use the smclient command to print the test file. Log in as samba1. Verify
+    that the file was indeed printed.
+
+
+    > # smclient //localhost/ip -U samba%samba1
+
+    smb: \> print /root/testfile
+
+    smb: \> exit
+
+
+    +   7. Switch over to a Windows 95/98/ME system and browse your neighborhood again.
+    Install the printer which was shared on your Samba server and try to print a file.
+
+
+    # Configuring individual printers
+
+
+    +   8. Edit your samba.conf file so that printers are not loaded automatically
+    anymore. Then configure two printers, one "nolinenumber" and one "linenumbers".
+    For both, add a print command statement that they both print to the same printer,
+    the second one should add line numbers to the print job. Then use the smprint
+    command to print your test file to the printer.
+
+
+    > # vi /etc/samba/samba.conf
+
+    Change the load printers statement to:
+
+    load printers = no
+
+    Add the following two shares:
+
+    [nolinenumbers]
+
+    path = /var/spool/samba
+
+    writable = no
+
+    guest ok = yes
+
+    printable = yes
+
+    print command = lpr -r -P lp %s
+
+
+    [linenumbers]
+
+    path = /var/spool/samba
+
+    writable = no
+
+    guest ok = yes'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Student Exercises
+
+
+    ```
+
+    printable = yes
+
+    print command = nl % | lpr -r -P lp
+
+    # testparam
+
+    redhat# service mb restart
+
+    suse# rcnmb restart; rcsmb restart
+
+    # smbclient //localhost/ninenumbers -U samba1%samba
+
+    smb: \> print /root/testfile
+
+    smb: \> exit
+
+    # smbclient //localhost/ninenumbers -U samba1%samba
+
+    smb: \> print /root/testfile
+
+    smb: \> exit
+
+    ```
+
+
+    # Working with pseudo-printers (optional)
+
+
+    By modifying the print command for an individual printer, we can do a lot of strange
+    things. A typical example is sending the print job to a fax instead of a printer.
+    We don''t have a fax in our classroom, so we will do something else, just to get
+    the idea.
+
+
+    +   9. Configure a printer share named "mailoroot". If jobs are submitted to this
+    printer, they need to be mailed to root.
+
+    >> # vi /etc/samba/smb.conf
+
+    Add the following share:
+
+    [mailoroot]
+
+    path = /var/spool/samba
+
+    writable = no
+
+    gest ok = yes
+
+    printable = yes
+
+    print command = cat %s | mail -s "Print file from %U" root
+
+    >> # testparam
+
+    >> redhat# service mb restart
+
+    suse# rcnmb restart; rcsmb restart
+
+    10. On the Windows system, install this additional printer as a Generic text-only
+    printer and print a small text file (create one with Word or Notepad, if necessary)
+    to this printer. Then, as root, check your mailbox with the mail command. Did
+    it work?
+
+    11. Make a list of files in /var/spool/samba. Do you see any files here? Why?
+    How would you solve this?
+
+    >> # ls -l /var/spool/samba
+
+
+    # END OF LAB'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Exercise 6. Windows Domain Support
+
+
+    # What This Exercise is About
+
+
+    This workshop will provide you with experience in configuring the Samba software
+    to act as a domain controller in a moderately complex network.
+
+
+    # What You Should Be Able to Do
+
+
+    At the end of the lab, you should be able to:
+
+
+    +   * Configure Samba to act as a Primary Domain Controller
+
+    * Configure logon scripts
+
+    * Configure roaming profiles'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Exercise Instructions
+
+
+    # Configuring Samba PDC
+
+
+    In this section you are going to configure your Samba server as a Primary Domain
+    Controller. Since there can only be one PDC in a domain, you are going to change
+    your workgroup from LX26 to something unique.
+
+
+    +   1. Configure your smb.conf file so that you are in a unique workgroup, and
+    that your system is able to accept domain logons.
+
+    2. Switch over to a Windows 95/98/ME system and configure for this domain logons.
+    Delete all *.PWL files from C:\Windows. Reboot the machine and log on to your
+    domain as samba1 with an invalid password. Does this work? Then log on to the
+    domain as samba1 with the valid password.
+
+
+    # Logon scripts
+
+
+    +   3. Modify your smb.conf file so that a client logs on the domain uses the
+    logon script /home/netlogon/login.bat. Create the logon script so that it contains
+    the MS-DOS command net h: \server\homes.
+
+    4. On your Windows 95/98/ME system, log off and log on again. After you have logged
+    on, start the Windows Explorer. Do you see the H:-disk? Can you modify and add
+    files?
+
+
+    # Roaming profiles
+
+
+    +   5. Modify your smb.conf file so that roaming profiles are supported, both
+    for Windows 95/98/ME clients and Windows NT/2000 clients.
+
+    6. Go to your Windows 95/98/ME system and configure it for roaming profiles. Reboot
+    the system, then log on as samba1. Answer "yes" to the question whether you want
+    to use roaming profiles. Change something in your environment (such as the background
+    pattern) and log out.
+
+
+    # Joining a Samba server in a domain
+
+
+    For this part of the exercise you will have to work together with a partner team.
+
+
+    +   7. Discuss with your partner team who is going to be the PDC for the domain,
+    and whose server is going to join the domain. Exchange information regarding netbios
+    names, domain names, root passwords and so forth.
+
+    8. Configure the PDC so that it allows systems to automatically join the domain.
+
+    9. Create a machine trust account on the PDC for the other server.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '10. Configure the other server so that it supports domain logons, and join
+    it to the domain.
+
+
+    11. From any Samba server, use the smbclient command to view the information on
+    the samba server (not the PDC). Log in as samba1. What password do you need? On
+    the PDC, change the password of the user samba1 to something else. Then try to
+    log on to to the other server again. Are passwords really checked on the PDC?
+
+
+    # END OF LAB'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Exercise Instructions With Hints
+
+
+    # Configuring Samba as PDC
+
+
+    In this section you are going to configure your Samba server as a Primary Domain
+    Controller. Since there can be only one PDC in a domain, you are going to change
+    your workgroup from LX26 to something unique.
+
+
+    +   1. Configure your smb.conf file so that you are in a unique workgroup, and
+    that your system is able to accept domain logins.
+
+
+    >> # vi /etc/samba/smb.conf
+
+    Change the file so that it looks like this:
+
+
+    ```
+
+    [global]
+
+    netbios name = system1
+
+    workgroup = workgroup1
+
+    security = user
+
+    os level = 64
+
+    domain master = yes
+
+    local master = yes
+
+    preferred master = yes
+
+    domain logins = yes
+
+
+    [netlogon]
+
+    writable = no
+
+    public = no
+
+    path = /home/netlogon
+
+    ```
+
+
+    Any print options shares that you configured earlier may be left in place.
+
+
+    >> # mkdir /home/netlogon
+
+    >> # testparam
+
+    >> redhat# service smb restart; rcsb restart; rscmb restart
+
+
+    +   2. Switch over to a *PWL Windows 95/98/ME system and log on to your domain.
+    Delete all *.PWL files from C:\Windows. Reboot the machine and log on to your
+    domain as samba1 with an invalid password. Does this work? Then log on to
+
+    >> Go to your Network Properties. Select "Client for Microsoft Networks" and click
+    on Properties. Enable "Logon to a Windows NT domain".
+
+    >> Delete all *.PWL files from C:\Windows using the Windows Explorer.
+
+    >> Reboot the system.
+
+    >> Log on as samba1 with an invalid password.
+
+    >> Log on as samba1 with a valid password.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Logon scripts
+
+
+    +   3. Modify your smb.conf file so that a client logs on to the domain uses the
+    logon script /home/netlogon/logon.bat. Create the logon script so that it contains
+    the MS-DOS command use h: \server\homes.
+
+
+    > > vi /etc/samba/smb.conf
+
+    Add the following line to the [global] section:
+
+
+    logon script = logon.bat
+
+    > testpam
+
+    > redhat# service rcmbm restart; rcmbm restart
+
+    > suse# vi /home/netlogon/logon.bat
+
+    The file should contain:
+
+
+    @echo off
+
+    net use h: \servername\homes
+
+
+    +   4. On your Windows 95/98/ME system, log off and log on again. After you have
+    logged on, start the Windows Explorer. Do you see the H:-disk? Can you modify
+    and add files?
+
+
+    # Roaming profiles
+
+
+    +   5. Modify your smb.conf file so that roaming profiles are supported, both
+    for Windows 95/98/ME clients and Windows NT/2000 clients.
+
+
+    > > # mkdir /home/profile
+
+    > # mkdir /home/profile/samba1
+
+    > # chown samba1:samba1 /home/profile/samba1
+
+    > # mkdir /home/profile/samba2
+
+    > # chown samba2:samba2 /home/profile/samba2
+
+    > # vi /etc/samba/smb.conf
+
+
+    Remove the logon script line, since our current script will interfere with the
+    logon drive parameter.
+
+    Add the following lines in the [global] section:
+
+
+    logon path = \server1\profile\%U
+
+    logon drive = H:
+
+    logon home = \server1\%U
+
+    preserve case = yes
+
+    short preserve case = yes'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'case sensitive = no
+
+
+    Add the following share:
+
+
+    ```
+
+    [profile]
+
+    path = /home/profile
+
+    create mode = 0600
+
+    directory mode = 0770
+
+    browsable = yes
+
+    writable = yes
+
+    ```
+
+
+    >> testparam
+
+    >> redhat# service smb restart rscmb restart
+
+    suse# rnbm restart; rscmb restart
+
+
+    +   6. Go to your Windows 95/98/ME and configure it for roaming profiles. Reboot
+    the system, then log on as samba1. Answer "yes" to the question whether you will
+    want to use roaming profiles. Change something in your environment (such as the
+    background pattern) and log out.
+
+    >> Click Start; Settings: Control Panel. Click on Passwords. Go to the tab User
+    Profiles and select the level of roaming profiles you want. Click OK, but do not
+    reboot the computer just.
+
+    >> In the Control Panel, click on Network. Verify that the Primary Logon is set
+    to "Client for Microsoft-Networks".n>> Reboot your system.
+
+    >> Log in samba1 with password samba1. When a message appears asking whether you
+    want to enable roaming profiles, click Yes.
+
+    >> Change something in your environment, such as the background pattern and log
+    out.
+
+    >> On the PDC:
+
+
+    # Is -l /home/samba1
+
+    >> Log in again samba1 on your Windows machine. Did everything work?
+
+    >> Log in samba1 to another Windows machine in the classroom which has also been
+    set up for roaming profiles (don''t forget to specify your own domain name). Does
+    this work?
+
+
+    # Joining a Samba server in a domain
+
+
+    For this part of the exercise you will have to work with a partner team.
+
+
+    +   7. Discuss with your partner team who is going to be the PDC for the domain,
+    and whose server is going to join the domain. Exchange information regarding netbios
+    names, domain names, root passwords and so forth.
+
+
+    +   8. Configure the PDC so that it allows systems to automatically join the domain.
+
+    >> # vi /etc/samba/smb.conf'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'Add the following script in the [global] section (on one line):
+
+    add user script = /usr/sbin/useradd -g 100 -d /dev/null -c "%U" -s /bin/false
+    -M %u
+
+
+    +   >> testparam
+
+    >> redhat# service smb restart
+
+    suse# rcmnb restart; rcmnb restart
+
+    >> # smbadduser root:root
+
+
+    New SMB password: ibmlinx
+
+    Retype New SMB password: ibmlinx
+
+
+    +   9. Create a machine trust account on the PDC for the other server.
+
+    >> useradd -g 100 -d /dev/null -c "System 2" -s /bin/false -M system2$
+
+    >> password -l system2
+
+    >> # smbpasswd -a -m system2
+
+
+    +   10. Configure the other server so that it supports domain logons, and join
+    it to the domain.
+
+    >> redhat# service smb stop
+
+    suse# rcmnb stop; rcmnb stop
+
+    >> mv /etc/samba/smb.conf /etc/samba/smb.conf.pdc
+
+    >> vi /etc/samba/smb.conf
+
+
+    ```
+
+    Create this file so that it looks like this:
+
+    [global]
+
+    netbios name = system2
+
+    workgroup = workgroup1
+
+    security = domain
+
+    password server = *
+
+    encrypt passwords = yes
+
+    >> testparam
+
+    >> # smbpasswd -j workgroup1 -r system1 -U root
+
+    >> redhat# service smb start
+
+    suse# rcmnb start; rcmnb start
+
+    ```
+
+
+    +   11. From any Samba server, use the smclient command to view the information
+    on the samba server (not the PDC). Log in as samba1. What password do you need?
+    On the PDC, change the password of the user samba1 to something else. Then try
+    to log on to the other server. Are passwords really checked on the PDC?
+
+
+    +   >> smclient -L server2 -U samba1%samba1
+
+
+    (On the PDC)
+
+    >> # smbpasswd samba1
+
+    New SMB password: somethingelse'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'Retype new SMB password: somethingelse
+
+    (On any system)
+
+
+    ```
+
+    >> # smclient -L server2 -U samba1%samba1
+
+    >> # smclient -L server2 -U samba1%somethingelse
+
+    ```
+
+
+    END OF LAB'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Exercise 7. Configuring Samba with SWAT
+
+
+    # What This Exercise is About
+
+
+    This exercise will use the graphical SWAT environment to configure the Samba server.
+
+
+    # What You Should Be Able to Do
+
+
+    At the end of the lab, you should be able to:
+
+
+    +   * Install SWAT and configure xinetd.conf
+
+    * Use SWAT to configure file shares
+
+    * Use SWAT to configure printer shares'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Exercise Instructions
+
+
+    # Installing and configuring SWAT
+
+
+    Red Hat Linux bundles SWAT in a separate RPM than the Samba server and client
+    software, while SuSE includes SWAT in the main Samba server RPM.
+
+
+    +   1. **Red Hat Linux Only**: Verify that the SWAT RPM was installed. If it was
+    not installed, install it now.
+
+    2. **Enable SWAT.**
+
+
+    # Running SWAT
+
+
+    Your goal in this lab is to recreate the smb.conf file that you''ve generated
+    so far by using SWAT. You''ll start with an empty configuration file and step
+    through the SWAT screens, filling in the parameters to create disk shares and
+    printer shares.
+
+
+    In the answers for these labs, we''ve listed the parameters you''re likely to
+    have changed, but they may not be complete or you may have a synonym at some point
+    (for example, `writable = yes` and `read only = no` are synonyms). So the answer
+    may not contain all the settings you need to create a configuration file exactly
+    like the one you built the last couple of days.
+
+
+    +   3. Rename **smb.conf** file to **smb.conf.org** so that your original settings
+    are saved. Then create a new /etc/smb.conf for **SWAT**.
+
+    4. Start a web browser (Netscape, Conqueror or Lynx) and access `http://localhost:901`.
+    Log in with the root password. Browse around the different screens until you feel
+    comfortable with the setup.
+
+    Note: If your browser earlier to use a proxy server, you might need to disable
+    this proxy server now.
+
+    5. Visit the section for global parameters and in the fields with the values you''ve
+    been using so far. It would be best to do this from memory, or by reviewing previous
+    labs, but if you get stuck, have your /etc/samba/smb.conf.org file to rely on.
+    You can always visit the **View** link to see what the configuration file looks
+    like so far.
+
+    6. Now go to the section for disk shares and create the shares that you''ve been
+    using in the class.
+
+    7. At this point, you should be able to restart the server and use a client to
+    verify the work you''ve done so far. Try it and see how it works!
+
+    8. Now add printer shares as well. Depending on the contents of your **printcap
+    file**, the last step could be quite easy, because Samba will just read that file
+    and create the printer shares on the fly. If you wish, you may go back to the
+    global section and turn off **load printers**, as you did in a previous lab, and
+    create those shares by yourself.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Comparing the files
+
+
+    +   9. Try comparing the /etc/smb.orig and /etc/smb.conf files to see which parameters
+    are different. What are you going to do about the comments?
+
+
+    +   10. Is there a program which prints all out of the configuration parameters,
+    but ignores any comments? If so, you could run that program against the smb.orig
+    file and save the results. Then run it again on the smb.conf file and save those
+    results, too. When you compare those two sets of results, it will be accurate
+    because the comments won''t be there. Do that now.
+
+
+    END OF LAB'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# Exercise Instructions With Hints\n\n# Installing and configuring SWAT\n\n\
+    Red Hat Linux bundles SWAT in a separate RPM than the Samba server and client\
+    \ software, while SuSE includes SWAT in the main Samba server RPM.\n\n+   1. **Red\
+    \ Hat Linux Only**: Verify that the SWAT RPM was installed. If it was not installed,\
+    \ install it.\n\n    > `redhat# rpm -qi samba-swat`\n\n    If you don't know the\
+    \ name and version number of the RPM, then install it with the command `rpm -ivh\
+    \ samba-swat-version.rpm`.\n2. Enable SWAT.\n\n    > `redhat# chkconfig swat on`\n\
+    \    > `redhat# service xinetd restart`\n\n    > `suse# chkconfig samba`\n   \
+    \ > `suse# rcxinetd restart`\n\n# Running SWAT\n\nYour goal in this lab is to\
+    \ recreate the smb.conf file that you've generated so far by using SWAT. You'll\
+    \ start with installing an empty configuration file and step through the SWAT\
+    \ screens, filling in the parameters to recreate disk shares and printer shares.\n\
+    \nIn the answers for these last steps, we've listed the parameters you're likely\
+    \ to have changed, but they may not be complete or you may have a synonym at some\
+    \ point (for example, `writable = read only = no` are synonyms). So the answer\
+    \ may not contain all of the settings you need to create a configuration exactly\
+    \ like the one you have built over the last couple of days.\n\n+   3. Rename the\
+    \ **smb.conf** file to **smb.conf.orig** so that your original settings are saved.\
+    \ Then create a new /etc/samba/conf for SWAT to use.\n\n    > `# mv /etc/samba/smb.conf\
+    \ /etc/samba/smb.conf.orig`\n    > `# touch /etc/samba/smb.conf`\n4. Start a web\
+    \ browser `http://localhost:901`. Log in as root with the root password. Browse\
+    \ around the different screens until you feel comfortable with the site setup.\n\
+    \nNote: If you configured your browser earlier to use a proxy server, then you\
+    \ might need to disable this proxy server now.\n\n+   5. Visit the section for\
+    \ global parameters and fill in the fields with the values you've been using so\
+    \ far. It would be best to do this from memory, or by reviewing previous labs,\
+    \ but if you get stuck, you always have `/etc/samba/smb.conf.orig` file to"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'rely on. You can always visit the View link to see what the configuration file
+    looks like so far.
+
+
+    +   6. Now go to the section for disk shares and create the shares that you''ve
+    been using in the class.
+
+
+    +   7. At this point, you should be able to restart the server and use a client
+    to verify the work you''ve done so far. Try it and see how it works!
+
+
+    +   8. Now add all printer shares as well. Depending on the contents of your printcap
+    file, the last step could have been quite easy, because Samba will read that file
+    and create the printer shares on the fly. If you wish, you may go back to the
+    global section and turn off load printers, as you did in a previous lab, and create
+    those shares by yourself.
+
+
+    # Comparing the files
+
+
+    +   9. Try comparing the /etc/smb.org and /etc/smb.conf files to see which parameters
+    are different. What are you going to do about the comments?
+
+
+    ```
+
+    ## diff /etc/samba/smb.conf /etc/samba/smb.conf.org
+
+    ```
+
+
+    +   10. Is there a program that prints out all of the configuration parameters,
+    but ignores any comments? If so, you could run that program against the smb.org
+    file and save the results. Then run it again on the smb.conf file and save those
+    results, too. When you compare two sets of results, it will be accurate because
+    the comments won''t be there. Do that.
+
+
+    ```
+
+    >> testParm /etc/samba/smb.conf.org > /tmp/smb.conf.org
+
+    >> testParm /etc/samba/smb.conf > /tmp/smb.conf
+
+    >> diff /tmp/smb.conf /tmp/smb.conf
+
+    ```
+
+
+    The output of the previous command is the configuration parameters that still
+    need to be charged.
+
+
+    # END OF LAB'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '![](img/02c5567fb834f88299ec1da6031f7afb_55_0.png)'
+  merge: -1
+  pgno: 55

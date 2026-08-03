@@ -1,0 +1,2 @@
++   [Linux 内核入门指南：x86 和 PowerPC 架构的自顶向下法方法 (Prentice Hall 开源软件开发系列)](README.md)
++   [Linux 内核入门指南：x86 和 PowerPC 架构的自顶向下法方法 (Prentice Hall 开源软件开发系列)](the-linuxr-kernel-primer-a-top-down-approach-for-x86-and-pow.md)

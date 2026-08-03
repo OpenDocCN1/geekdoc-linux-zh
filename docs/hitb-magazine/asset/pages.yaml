@@ -1,0 +1,3057 @@
+- img_proc: true
+  md: '# hitb magazine KEEPING KNOWLEDGE FREE
+
+
+    Volume 1, Issue 4, October 2010 magazine.hackintthebox.org
+
+
+    # Stepping Through a MALICIOUS PDF DOCUMENT 32
+
+
+    # Custom Console Hosts on WINDOWS 7 12
+
+
+    Cover Story
+
+
+    # Notorious Datacenter Support Systems Pwnning through Outer Sphere 4'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # TEHTRI-Security
+
+    Technology-Ethical-Hacker-Trust-Robust-Information-Security
+
+
+    # # Editorial
+
+
+    This is not a game.
+
+    www.tehtri-security.com
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_1_0.png)
+
+
+    TEHTRI-Security is an innovative French company specialising in Consultancy and
+    Expertise for Information and Communication Technology.
+
+
+    Dear Reader,
+
+    Welcome to our fourth issue of 2010! This issue is released in conjunction with
+    HitSecConf2010 KL. We''ve had a great first print year and it''s all due to you,
+    loyal readers. Since the first issue back in January, we''ve seen our help field
+    membership increase in successes. So thank you for your continuing support, and
+    we were excited to bring you this fourth issue which wraps up 2010.
+
+
+    This issue also explores an analysis of help-desk queries by Aditya K. In his
+    article, ''Notorious Datacenter Support Systems Decrypting TrueValues with a Physical
+    Memory Dump'' shows a method to return the encryption keys from memory. Jean-Baptiste
+    Bedouin is in fact presenting his talk on cracking DRM today at HitSecConf2010
+    Kuala Lumpur.
+
+
+    Volume 1, Issue 4, October 2010
+
+
+    This issue also brings back favourite articles from earlier issues - thanks for
+    your feedback over all four issues!
+
+
+    We''ll be back in 2011 with even more cool pools, news and research!
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_1_1.png)
+
+
+    # Technical security
+
+
+    +   - Penetration Tests and Security Audits
+
+    - Incident Management, Monitoring...
+
+    - Advanced concurrency
+
+    - Assistance for countries, companies...
+
+    - Fight against information leaks, Protection...
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_1_2.png)
+
+
+    Warmest,
+
+    The Editorial Team
+
+    editorial@hackinthebox.com
+
+
+    +   Editor-in-Chief
+
+    Zalal Shahrin
+
+    Editorial Advisors
+
+    Dhillon Kumar, Muhammad Aminah
+
+    Amy Goh
+
+    Technical Advisor
+
+    Gyvinder Goldroyd
+
+    Design
+
+    Shakthi Shandu
+
+    (cognitive.designsignal.com)
+
+    Website Builder
+
+    Bina Kundu
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_1_3.png)
+
+
+    # Contents
+
+
+    We know, understand and master the techniques and methods of attackers (hackers,
+    business intelligence, computer warfare, etc...) as well as the resources needed
+    to counter the current threats.
+
+
+    +   NETWORK COVER STORY
+
+    Notorious Datacenter Servers
+
+    Systems Power Pushing Through
+
+    Earth Sphere 4
+
+    WINDOW SECURITY
+
+    Custom console hosts on Windows 7 8
+
+    Windows Objects in Kernel
+
+    Vulnerability Exploitation 22
+
+    INFORMATION SECURITY
+
+    Stepping Through a Malicious
+
+    PDF Document 32
+
+    BOOK REVIEW
+
+    Ubuntu for For Non-Geeks 52
+
+    INTERVIEW
+
+    Aditya Sood 54
+
+
+    Decrypting TrueValues with a
+
+    Physical Memory Dump 36
+
+    using UNIX 44
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_1_4.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '![](img/27dc30d9ee9d016ae2e2400b49269e56_2_0.png)
+
+
+    # # Notorious Datacenter Support
+
+    Systems - Pwning through
+
+    Outer Sphere
+
+
+    # ## Exploitation Analysis of Help Desk Systems
+
+
+    **Aditya K. Sood, SecNiche Security**
+
+    **Rohit Bansal, Security Researcher, SecNiche Security**
+
+
+    The online world has been encountering massive levels of malware attacks in the
+    recent times. The outbreak of injected malware has reinforced its devastating
+    stance on contaminating a large number of websites. Most of the traces have been
+    found in the websites under shared and virtual hosting which further includes
+    content from third party delivery networks. Well, it''s the truth that a minor
+    inherited weakness in applied software can cause havoc if exploited appropriately.
+    Recent malware attacks have endorsed this fact. This paper talks about the techniques
+    used by malware writers engaged in performing continuous analysis of differential
+    malware. The paper aims at knowledge sharing by presenting the layout of datacenter
+    compromises through simple support systems used for assisting the customers. The
+    reality of support system shows the nature of insecure work functionality which
+    is exploited heavily by malware writers. This paper is an outcome of real time
+    analysis of compromised systems. This paper has been generalized for security
+    and responsible disclosure reasons.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# NETWORK SECURITY
+
+
+    # NETWORK SECURITY
+
+
+    # REALITY OF SUPPORT SUITES AND SYSTEMS
+
+
+    Vulnerability play a critical role in the determination of an application. It
+    also depends on the type of application being considered and the risk. It can
+    place on the other departments and client services are being hosted at a large
+    scale in the real time environment. Most of the mass attacks have data entry in
+    production. There are a number of the services there are certain truths about
+    support suites that are used to manage client requests and which can be understood
+    as:
+
+
+    set of access based on the network configuration by default. The login projects
+    are presented in figure 1.
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_3_0.png)
+
+
+    # Support Center
+
+
+    | Field | | |
+
+    |---|---|---|n| Username | | Login |
+
+    | Password | | |
+
+
+    In the provision of help desk infrastructure is also one part of ongoing process
+    of third party service. The databases are hosted on the cloud and on that basis,
+    the support suites are used as the backend providers to provide services to the
+    users requested by the client.
+
+
+    | Knowledge Base | Community Forums |
+
+    |---|---|n| Search for help | | Discuss about problems |
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_3_1.png)
+
+
+    | ID | Description | Date |
+
+    |---|---|---|n| 5694 | What are the tickets for our support? | 04 Jan 2018 |
+
+    | 5695 | Become - some error issues tickets heading | 03 Jan 2018 |
+
+    | 5696 | Come some error is going to help off | 02 Jan 2018 |
+
+    | 5697 | I have a problem with tickets de- | 01 Jan 2018 |
+
+    | 5698 | Internal server error | 01 Jan 2018 |
+
+
+    +   - Username:
+
+    Password: No
+
+    Remember: Yes
+
+
+    The biggest problem for users is that the support system is not working in the
+    principles of security, which is provided by an interface layer between user generated
+    requests and the backend administration.
+
+
+    This explains the help desk and support system.
+
+
+    +   a) The service used support systems to manage client requests. Actually it
+    is used by the client who wants to issue requests and report about the services
+    provided by the hosting provider. This is part of good business practice in order
+    to develop and interact with them indentively.
+
+
+    # SUPPORT SYSTEM WEEKNESS AND EXPLOITATION METHODS
+
+
+    We practice this not good design practice in the real environment. The support
+    system is a type of web application which is of the same belongs as other web
+    applications. The design flaw of the web application is that the registration
+    is used to identify users without any identity. This allows an attacker to access
+    the system. Once performed, the support suite receives it. It provides it an edge
+    to attack the system. The link is noted in the real network.
+
+
+    +   b) The client will go to the support system people who want to request the
+    support system to issue an issue.
+
+
+    The help desk helps open the door for a large number of users from different visitors
+    from the websites or support centers. In our analysis we found a number of vulnerabilities
+    to be exploited in the real world where help centers are located.
+
+
+    +   c) Administrator request level to manage all of functioning of the hosting
+    provider.
+
+
+    +   A) The Ticket is issued from help from different types of visitors in the
+    real working of the ticket system has been explained in last. The ticket is registered
+    without any identity except check. In the system, a customer can use any name
+    or email after any period of providing provided to the user registration after
+    which it is a normal procedure. After this process, the customer sends his query
+    to the support staff. Primarily the point of further to out whether the ticket
+    is from the concerned individual or
+
+
+    A user issues a ticket to the support system with the request. This is an outer
+    sphere of security. The support suite verifies the ticket by asking for some information
+    from the customer in order to confirm the customer''s identity.
+
+
+    Once it is done, the support system sends an email or normal support request that
+    forwards to the administrator. If the response is not as expected, an intermediate
+    step is made to check the security. After the action, the support system communicates
+    back with the customer once the response is received from the administrator.
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_3_2.png)
+
+
+    +   b) The support system uses three types of logins, administrator and support.
+    All these users logins have access to
+
+
+    B) The second object which has characteristics for compelling the help desk support
+    systems is vulnerable in the web application interface. An attacker can use the
+    XSS vulnerability in the application to combine with a design in the ticketing
+    system to steal the cookies of a user. The matter is whether account parameters
+    are saved to avoid stealing cookies. There are advanced methods for stealing cookies
+
+
+    6 HIT MAGINE OCTOBER 2010
+
+
+    OCTOBER 2010 HIT MAGINE 7'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# NETWORK SECURITY\n\nimplementation of security parameters such as \"HTTPOnly\"\
+    \ protect cookies to some extent. If these parameters are not utilized, then the\
+    \ attacker can use a simple attack to extract the cookie data and transfer them\
+    \ to an attacker controlled domain. Let's say a key secure cookie\n\nIt depends\
+    \ on the number of iterations, the more unique the hash which makes it static\
+    \ unlike. It is also considered a good strategy of hashing with MDS using a number\
+    \ of randomly generated hash. This works. But it cannot avoid any type of attacks\
+    \ which can be accomplished with software or hardware. Being static in characteristic,\
+    \ it is possible to block the Replay attacks because of weakness in the design\
+    \ of application, when it is exploited to be greater than expected.\n\nattackers\
+    \ to search the information and password to large number of websites. Our analysts\
+    \ have shown it is easily for the attackers to gain direct access and almost accounts.\
+    \ It can be seen in figure\n\n# NETWORK SECURITY\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_4_0.png)\n\
+    \nFigure 4. Setting the replay state\n\n```\nHTTP Headers\nUser-Agent: Mozilla/5.0\
+    \ (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124\
+    \ Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/davif,image/apng,*/*;q=0.8\n\
+    Accept-Language: en-US,en;q=0.9\nConnection: keep-alive\n```\n\nThe types of invented\
+    \ attacks can still be prevented by supporting hosts. Most of the compromises\
+    \ show that attackers work on replay rather than break of security cookies to\
+    \ gain access into the system.\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_4_1.png)\n\
+    \nSod Cookie Replay state\n\n```\n<$http\nHost=\"example.com\"\n@= />\n```\n\n\
+    ```\n<$http\nHost=\"example.com\"\n@= />\n<script src=\"/js/main.js\"></script>\n\
+    window.onload=function() {\n  setCookie(\"id\");\n};\n```\n\nThis perfectly prevents\
+    \ attack by supporting the suites and then cookies by launching replay attacks.\
+    \ As stated above, the cookie method where user credentials are stored in cookies\
+    \ whether they are present or not by\n\nVIRTUAL OR HARDWARE HOSTING STRIENCY\n\
+    BACKDOOR WITHIN THE HOSTS\nThe virtual hosting enables of a web server of websites\
+    \ on the internet. It is designed for business needs because of the ineffective\
+    \ and inauthentic properties of replay method to store cookies. The double web\
+    \ server is not used, but the presence of attackers makes other hosts vulnerable.\
+    \ The dedicated web server allows at hosting a single-domain view that avoids\
+    \ shared hosting and it is secure. The DNS IP Mapping of addresses should be enforced\
+    \ for properly defining of the virtual hosts. The implementation is done with\
+    \ the use of Canonical name that is a FQDN (Fully Qualified Domain Name) which\
+    \ is used in the DNS tree hierarchy.\n\n+   c) All types of attack used in the\
+    \ analyzed cases show that credential/password protocols (Cookie-Set) HTTP method.\
+    \ The username is present in the clear text as follows the hash of the password\
+    \ is hard to verify when it is generated. If complex elements are used, it becomes\
+    \ harder to reduce in a replay attack. Our analysis shows that the cookies of\
+    \ the supporting suites as follows:\n\nBy analysing the supporting suites we might\
+    \ detect the vulnerability of replay attacks when the HTTP parameter with domain\
+    \ is located in the\n\nThe layout in figure 4 presents the set of HTTP method\
+    \ Replay attacks. The replay attack is executed in present. If it is repeated,\
+    \ the cookie ID and the authentication information form, which is usually used.\n\
+    \nOnce the replay is done, the attacker has access to support suites as an administrator.\
+    \ The figure 5 presents the type of information which is in the attacks.\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_4_2.png)\n\
+    \nFigure 5. Successful replay attack\n\nSupportSite\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_4_3.png)\n\
+    \nSupport\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_4_4.png)\n\nSupport\n\n\
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_4_5.png)\n\nOnce the play ends, there\
+    \ is a heavy source of information which cannot be ignored. We are going to discuss\
+    \ this in the next.\n\nFigure 6. Cookie value when vulnerability is loaded into\
+    \ figure.\n\nSUPPORT SUITE ATTACK PATTERNS\nIn support suites the tickets of websites\
+    \ hosted on the servers of the domain. It is a portal, so communication parameter\
+    \ is normal. It is the nature of such attacks disclosure and sensitive information\
+    \ is used as a response to tickets which are activated in the system. If the support\
+    \ suites are compromised, it is easier for the\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_4_6.png)\n\
+    \nFigure 6. Access to the supporting suites\n\n| Name | Password | Method | Attack\
+    \ | Response |\n|---|---|---|---|---||\n| L, 1,40 | | | | |\n| L, 2,40 | | | |\
+    \ |\n| L, 3,40 | | | | |\n| L, 4,40 | | | | |\n| L, 5,40 | | | | |\n| L, 6,40\
+    \ | | | | |\n| L, 7,40 | | | | |\n| L, 8,40 | | | | |\n| L, 9,40 | | | | |\n|\
+    \ L, 10,40 | | | | |\n| L, 11,40 | | | | |\n| L, 12,40 | | | | |\n| L, 13,40 |\
+    \ | | | |\n| L, 14,40 | | | | |\n| L, 15,40 | | | | |\n| L, 16,40 | | | | |\n\
+    | L, 17,40 | | | | |\n| L, 18,40 | | | | |\n| L, 19,40 | | | | |\n| L, 20,40 |\
+    \ | | | |\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_4_7.png)\n\n```\n<$http\n\
+    GET /index.php HTTP/1.1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\
+    \ AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\n\
+    ```\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_4_8.png)\n\n8 HITB MAGAZINE OCTOBER\
+    \ 2010\n\nOCTOBER 2010 HITB MAGAZINE 9"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Figure 7. Ticket revealing credentials of a particular host of the server
+
+
+    Posted on: 01 Jan 2009 11:19 AM
+
+
+    I just restarted my servers having problems with websites and databases. Now the
+    server hasn''t restarted and it been 15 minutes since initiated -
+
+
+    ```
+
+    https://:8443
+
+    username: root
+
+    password: password
+
+    Plask:
+
+    username: admin
+
+    password: password
+
+    ```
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_5_0.png)
+
+
+    # ABOUT THE AUTHOR
+
+
+    Aditya K. Sood is a PhD candidate at Michigan State University. He has worked
+    extensively in the security domain for Armorize, COSEINC and KMPG. He is a founder
+    of SecNiche, an independent security research firm. He has spoken live at conferences
+    like RSA (2010), TRISC, EchelonCon, XCON, TLR, OWASP, AppSec, CERT-CC, etc. He
+    has worked for HITB EchoSec, Hazirn, Unix Login, Elsevier Journals, Debugged M/2E!
+
+
+    Roh Bansal works as a Security Researcher for L&T Fintech. He works extensively
+    in the field of web security and bot analysis. He also runs security research
+    portal as SCHAP. Mr. Bansal consults independently to list companies and government
+    units in India on http://schap.org/
+
+
+    extracted from attacks performed in compromising suites may be used to plant shells,
+    the shells are not a big task and that shells are designed in such a way that
+    they bypass restrictions to take control of the server itself. A screenshot from
+    a spy shell is presented in figure 6, showing the presence of hidden hosts on
+    the server:
+
+
+    # CONCLUSION
+
+
+    the real world has its own manner of secure working and exploitation scenarios.
+    The paper specifically addresses the potential points to highlight the patterns
+    of exploitation. Large holes and mask defacements are not the result of only component
+    of the web server software but also the peripheral defense. This gives us an indication
+    of the fact even the smallest points of vulnerability can result in exploitation.
+    Every layer is secured by layer security. This ensures a vector of number of vulnerabilities,
+    so it is required to design the strategy correctly in softwares, web applications
+    and infrastructures. Using design by help us prevent exploitation to some extent.
+
+
+    There are certain configurations checks that are needed to be performed:
+
+
+    +   1. It should be identified by using configuration checks on the modules such
+    as mod_remot, or for shared environment variable document.ROOT (it is used for
+    setting config for virtual hosts which is quite timely for any request)
+
+    2. Server name should be defined for every single virtual host
+
+    3. There is no other way to check for shared hosts while also
+
+
+    Well, this is a working sphere of shared and virtual hosting. Let us understand
+    the real world frankly.
+
+
+    a nutshell, security is a process and people in process should be given adequate
+    education on the importance of security. Various incidents happening in real world
+    reinforces the fact security is not only in software but also human being. The
+    business layers involved in large provides us try to look into the artifacts of
+    securing technology and securing our businesses.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# # WINDOW SECURITY\n\n```\nUINT DirectoryLength;\nHANDLE hModule;\nLPPROC\
+    \ pfnPropertiesProc;\nWIN32DATA findData;\nStatus = FindFirstFile(L\"C:\\Windows\\\
+    *\", &findData);\nif (Status == ERROR_SUCCESS && hModule != INVALID_HANDLE_VALUE)\
+    \ {\n    pfnPropertiesProc = GetProcAddress(hModule, \"FindFirstProperties\");\n\
+    \    if (pfnPropertiesProc) {\n        // ...\n    }\n}\n```\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_6_0.png)\n\
+    \n# # Custom Console\n\n# # Hosts on Windows 7\n\nBy Matthew \"J00ru\" Jurczyk\n\
+    \n```\nNTStatus = LockConsole();\nNTStatus = PropertiesConsoleUpdate(&oConsoleState);\n\
+    ```\n\nAs major parts of the IT industry — hardware and software — were quickly\
+    \ evolving with the latest Windows version, one should first get some information\
+    \ about the actual decisions applied between Vista and 7. Learning the basics\
+    \ of the CSR architecture should make a good start point.\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_6_1.png)\n\
+    \nBoth console management and DOS mechanisms remained in a mostly unmodified form\
+    \ until modern times, as they were implemented in the early 90s. The end-user\
+    \ should not be able to see any significant design modifications for these models,\
+    \ unless for example, necessary changes were introduced along the way — one which\
+    \ I am going to discuss in this article.\n\nThe CSR (Console Server Subsystem)\
+    \ was developed in the very early days of the Windows system. One of the basic\
+    \ assumptions made by the developers was that Console was capable of running without\
+    \ any compatible programs. As such, special access was needed for every single\
+    \ subsystem\n\n+   - Performing all operations related to the Windows Manager\
+    \ and Graphics Services, each generating and sending events to the console display\
+    \ and event task.\n- Managing console windows, a special type of virtual desktops,\
+    \ fully controlled by the console subsystem.\n- Managing a list of processes and\
+    \ threads running within the system.\n- Supporting sessions with maximum user\
+    \ privileges, or without providing the functionalities of the user applications:\n\
+    \nSince the years of regular operating systems exists, terminals and consoles\
+    \ have been a relevant part of the interaction between humans and machines. When\
+    \ it comes to Microsoft, it all started back in the early 80s, when MS-DOS (Microsoft\
+    \ Disk Operating System) 1.0 was released. At that time, the overall complexity\
+    \ of software being developed was high, the machines themselves had capabilities\
+    \ sufficient to provide a convenient graphical user interface. And so, the first\
+    \ users of Microsoft products had to learn, how to cooperate with their computers\
+    \ using nothing, but just commands.\nA great variety of possibilities, relating\
+    \ to the console window, is gone to be presented, together with snippets of example\
+    \ console task.\n\nThis paper explains how, the console mechanism for receiving\
+    \ messages from the Win32 subsystem (CSR) introduced into a defined console task,\
+    \ is created and is running with the privileges of the local user. This is an\
+    \ important aspect for developers.\n\nCONSOLES ON VISTA AND PRIOR\nBefore we can\
+    \ make sense with custom text\n\nWhat should be noted here, is that the CSR does\
+    \ not implement any of the functionalities as a behavior"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '```
+
+    STATUS CALLBACK PropertiesOfDll(HWND, HWND, BOOL Default)
+
+    [WINDOWS SECURITY]
+
+    HWND State:
+
+    ConsoleState:
+
+    HKEY State:
+
+    HINT Directory:
+
+    PROC PROC pfsPropertiesOfProp
+
+    ```
+
+
+    Instead, it takes advantage of system DLL modules, those owned by Servers. The
+    work performed by CSServer is to establish an (Asynchronous) Local Call procedure,
+    loading a ServerDLL in the specified manner. By calling CoServerDllInitialize,
+    and spawning a dispatcher thread. The latter thread is responsible for listing
+    client handles, establishing connections or messages, and passing these to routines
+    by one of the following:
+
+
+    Although the developers changed their approach to cross-subsystem support in a
+    relatively early stage of development (Windows 2000 release), the CSSS development
+    wasn''t affected. More specifically, the win32 subsystem has remained unable to
+    handle this type of server-side calls. Windows NT has never been able to handle
+    a CSSS process running in the background for all its extent. To avoid system behavior
+    – whenever CSSS has to perform something without adequate privileges, the kernel
+    detects the issue and manually stops the system, by triggering a Blue Screen of
+    Death (PROCESS_DEAD parameter).
+
+
+    same level at which the kernel executes – no other changes have been applied to
+    this, since that, for the most, CSSS does not cause de-efficiency problems, as
+    those when APIs have not even used too in frozen environments; as opposed to the
+    reported graphics-related, the event is limited to a couple of handles, handled
+    by the WINDOWS.DLL module. Technically, from the replacement of every process
+    and drawing window in common with the box frame in the first; CSSS manages (creates,
+    destroys, dispatches) events (the) window. As on any window in Windows version
+    7 or later – it is possible to grab the handle and move it around the desktop
+    and to resize it up to seventy percent, of the process rendering.
+
+
+    +   - BASEDLL
+
+    - WINDLL
+
+    - CSSRVLL
+
+
+    Each Server can manage one, or more CSSServers, whose instance is defined by a
+    few characteristics.
+
+
+    +   - The supported API routines
+
+    - The first API number supported by the server
+
+    - A pointer to a so-called dispatcher, containing points of client handles to
+    the handler routines.
+
+
+    So, and Table 1 lists the properties of each CSSServer listed above, on Microsoft
+    Windows Vista SP3 (32-bit operating system), cross-system (Windows NT - 4 through
+    7) and tables, presenting the name of the process supported by CSS, can be found
+    on author’s blog.
+
+
+    What is needed is not the ring one process responsible for all of the high-level,
+    GUI routines executed in the operation of the user''s applications. It is clear
+    that the use of the graphics services requires no special privileges to allow
+    the system to communicate with ring 0 – it started because of a problem with system
+    stability in many different environments. The developers they tried to fix was
+    the graphics driver, so they eventually decided to de-register the DLL, under
+    a new name of the win32k.sys graphical driver as shown below. Windows NT 4 was
+    the first operating system, handling the graphical operations from which the kernel
+
+
+    The console window has been implemented inside one process (the WINDOW.DLL library
+    which contains a set of handler routines for window presentation (by the user
+    application). More specifically, many of the handlers are present inside ConsoleServer.
+    Table 2 presents a few examples of kernel-level calls translated into CSSS calls.
+
+
+    Table 2. Example win32 subsystem list of events published by CSSS calls
+
+
+    | CSSRVLL | BASEDLL | WINDLL |
+
+    |---|---|--|
+
+    | CSServer | BaseServerGW | ConsoleServer |
+
+    | UserServer | CSSRFunctionName | CSSRFunctionName |
+
+    | | Kernel32(HWND) | Kernel32(HWND) |
+
+    | | Win.ConsoleWindow(HWND) |
+
+
+    All of the messages exchanged between these kernels (kernel, win32, and CSSRVLL)
+    are sent through the LPC channel (the IPC mechanism of Windows) library or more
+    precisely – a set of higher routines, such as CSSS. This provides information
+    about the method for exchanging information between client processes and CSSS
+    – which is to be discussed later.
+
+
+    Our test-based approach does not have a control over the console window. Instead
+    of being able to receive and send a spoke message of showed window
+
+
+    Apparently, the desktop drawing does not take actually as it is for to confuse
+    the window, the DLL that is present for the window, we even use to the CSSS execution,
+    as our application is running on a restricted user’s rights; It is more common
+    for users with restricted privileges to use the system process and modify its
+    virtual memory content routines and hooking techniques, one could possibly modify
+    the WINDOWS.DLL in-module, which is the same as de-loading the DLL in a way that
+    is in its way of double click.
+
+
+    Another way of drawing the border of a console window would require the user of
+    the replacement of the Windows.dll file on the hard drive. In such a scenario,
+    any DLL, as long as it will meet the CSSS requirements (i.e. valid, exported CSServer
+    initialization, correct API calls), this idea, however, cannot be a good choice,
+    because it would break the system stability. Furthermore, the system updates could
+    interrupt other
+
+
+    14 HITHER OCTOBER 2010
+
+
+    5 TIEWIK OCTOBER 2015'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # WINDOWS SECURITY
+
+
+    ```
+
+    C:\Users\Administrator>dir
+
+    C:\Windows\System32>dir
+
+    PROMPT $p$f $p$Properties\
+
+    ```
+
+
+    reject the installation of a modified system, or replace the hardware, using with
+    system files over and again.
+
+
+    font-name being copied into a local buffer without any validation. Due to the
+    fault discovered by the first patch released by Microsoft in the subsystem, an
+    account was compromised for months of
+
+
+    described modifications work in practice.
+
+
+    # ANSI ESCAPE CODE
+
+
+    Overall, Microsoft made it impossible for the user to access the console window,
+    which the original subsystem and security design allows on Windows prior to Vista.
+    It is, however, the vendor has applied a fix to the design, allowing system users
+    (using special escape sequences) to take control over the console window with
+    the applications of their choice.
+
+
+    One of the well known console-related issues is that called "ANSI escape sequences".
+    This functionality makes it possible for applications, relying on special input,
+    to control the overall console box environment, such as the text-formatting and
+    foreground-background colors.
+
+
+    In order to address issues in the privilege console management code, Microsoft
+    decided to remove the functionality from the subsystem, and place it inside a
+    special process. In Windows 32 system, the Console Host runs in a special context
+    as is assigned to it, with no ordinary security boundaries. If a security flaw
+    was found in consolehost.exe, the attacker is able to escape the host with administrative
+    privileges.
+
+
+    The special effect (like coloring a part of the window) can be achieved, by using
+    special sequences, which are generated by the console mapper, rather than just
+    printed on the screen. This is how other systems running under Linux and Unix-like
+    systems work with external terminal em.
+
+
+    # CONSOLE HOST ON VISTA?
+
+
+    # BENEFITS
+
+
+    The design reorganized in the previous sections likely the users with various
+    benefits, particularly improved stability for the Microsoft developers. The goal
+    among them is already achieved by making yet part of the CSRSS attack surface
+    dangerous, which has significantly reduced.
+
+
+    In the previous versions, the Client Runtime was the one that handled the console
+    windows appearing over the desktop, on regular applications. The console management
+    was integrated into the subsystem itself.
+
+
+    This is not what we are about.
+
+
+    Inter-Process Communication was performed using an old-fashioned program to make
+    use of the limited console API, designed so that it could work with applications
+    running under Vista. In extreme cases, CSRSS had to effectively exchange information
+    with a restricted process with minimal rights.
+
+
+    Due to the security context of the console host, applications now have to handle
+    the connection requests. Free access to the console window, which was once possible
+    by simply sending a message to the process, is now restricted.
+
+
+    If a security vulnerability is found, exploit threads exploit potential vulnerabilities
+    within the subsystem.
+
+
+    If it makes you turns out that the Inter-Process Communication (which as mmessage)
+    makes use of console windows, without consolehost.exe being present, then the
+    system terminal can be made to fail, by adding a call to the API.
+
+
+    With no administrative rights, we could not all.
+
+
+    When it comes to 32-bit applications, Windows provides the necessary layer.
+
+
+    Source code-level hooks were actually introduced.
+
+
+    When changes were made in sending RPC requests to the CSRSS process, we had to
+    create a new depcrt instance. This was not for performance purposes.
+
+
+    # FEATURES TO BE IMPLEMENTED
+
+
+    Since the Windows users are given new possibilities, it is helpful that these
+    presents some ideas of how the existing console box could be modified, so that
+    it becomes more useful during daily routines, or more powerful in its functionality
+    set.
+
+
+    ```
+
+    LPC::console-output-lpc-bhandle
+
+    ```
+
+
+    with the "up" handle replaced with the console execute process ID number. From
+    this point on, the application attempts to communicate with an external console
+    using standard LPC rather than Windows. Images 2 and 3 show you why you would
+    have a reason to understand the
+
+
+    The nature of these things has been difficult to understand, for example, an "advory-stack-based-buffer-overflow
+    vulnerability in WINCONSOLE.dll, triggered during
+
+
+    Due to the fact that using two-line console applications has been considered highly
+    unlikely (mainly, due to inherited issues),several workaround/we reimplemented'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Win32 API Reference
+
+
+    Table 3. Escape sequences in the win32 API interface
+
+
+    | Function | Description |
+
+    | :--- | :--- |
+
+    | SetConsoleTitle | Sets the title for the current window. |
+
+    | SetConsoleClassAttribute | Sets the background and foreground colors of the
+    specified console buffer. |
+
+    | SetConsoleCursorPosition | Sets the cursor position to the specified coordinate-in
+    the specified console screen buffer. |
+
+
+    The first enquirer allows the application to recognize the specific version of
+    the console host, to connect to Microsoft servers (the provider is connected to
+    the Internet) and download the appropriate updates. Once this is done, not only
+    the table, but also the addresses of any other symbol published by Microsoft,
+    etc.
+
+
+    NULL while using the `ConsolePtr` pointer, it is a non-zero value in the other.
+
+
+    By performing the above steps, one can reliably find the address of the dispatch
+    table. Thanks to the fact that API IDs do not need to change, then it is possible
+    to replace the existing handlers,
+
+
+    Listing 1. A note, applicable for comparing the transparency degree of a window
+
+
+    ```
+
+    c
+
+    SetWindowAlpha(hwnd, 255); //nGetWindowLong(hwnd, GWL_EXSTYLE); //nGetWindowLong(hwnd,
+    GWL_EXSTYLE); //n// Example of how to get the ConsolePtr
+
+
+    ```
+
+
+    Along with the way, Conway always looked to very nearly his own owner of the ANSI
+    Console to `cmd.exe`, by looking at the source code. He also noticed the advantage
+    of the fact that cmd.exe uses this function to print every type of output (the
+    console output) to recognize the sequences as they were to be displayed by replacing
+    these places with appropriate calls to the Console API.
+
+
+    The other solution requires more knowledge about programming Win32. We take a
+    look at where `GetConsoleServiceDispatchTable` is used. By examining the console
+    code, we can see an inline call to `ConsoleShort` function, or more precisely,
+
+
+    ```
+
+    call dsConsoleServiceDispatchTable(param*)
+
+    ```
+
+
+    This is due to the fact that the instruction is only recognized when coming from
+    the console.
+
+
+    ```
+
+    call address[[rdx]]
+
+    ```
+
+
+    Additionally, few functions are implemented by calling and possibly other files
+    - depending on how the user wants to configure the transparency of the window.
+    For example, for the `Properties` window, found using a call to `GetWindowText`,
+    the `ConsoleProperties` function is triggered, which is used for reading the configuration
+    data and writing it back.
+
+
+    The question is what is going on? The function used for the transparency of the
+    window needs to be implemented in the system - in the case of yours, a virtual
+    version of the console host is implemented as a Control Panel Item. Drawing behind
+    the console background is implemented in a separate module as
+
+
+    Although such this, they may have, but nothing more than just-arounds - as the
+    console host remained untouched, it was impossible to achieve a similar effect
+    by using cmd.exe alone.
+
+
+    Now we have to learn a lot more about the console host to show these characters
+    inside the box.
+
+
+    With our implementation of the API, we support calling other functions, passing
+    the parameter (to passed to an handle) and displaying the sequences by calling
+    console dispatch (which address we know)
+
+
+    In the meantime, we will go back to the beginning of the console host, and step
+    through instructions in one of the work to see how the console host works.
+
+
+    Even though Windows has been presented on the market for a long time, the author
+    has not had any activity related to it than trying to re-write or re-verify it.
+    If you are going to project it of this kind, after reading the article please
+    let us know about.
+
+
+    In the console host, one must return just NULL, 0 on an input, which will be called
+    through the process execution.
+
+
+    # WINDOW ANALYSIS
+
+
+    MODIFICATIONS of the console host are implemented by calling functions, passing
+    a straight-forward equivalent of the virtual Win32 DLL functions from the functions
+    within our system.
+
+
+    In this case, it is not that only one, but many addresses can be accessed. To
+    that point, most solutions
+
+
+    implemented in Unix and External Windows in terms is the transparency of the console
+    box is implemented by the default console host, which uses the Win32 API, manipulating
+    the transparency of a level of window. It is an easy task. In fact, it can be
+    performed with just three lines of Code, as presented in Listing?
+
+
+    +   1. CREATE(NULL, 0, ConsoleGetDispatch
+
+    NULL, NULL)
+
+    2. CREATE(NULL, 0, ConsoleInputPtr
+
+    NULL, NULL, qInputDispatch)
+
+
+    A very important difference between the two calls is above made by the last parameter
+    being set to
+
+
+    (solutions to the above) at the end of
+
+
+    Drawing deeper into the console host, one should understand that if the public.console2.Properties
+    function is triggered, which is used to extend the transparency effect with additional
+    options, we will need to go through the following steps:
+
+
+    18 HITBAR MAGAZINE OCTOBER 2010
+
+
+    OCTOBER 2019 WINDOW'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# WINDOWS SECURITY\n\n# WINDOWS SECURITY\n\n```\nSTATUS = PropertyStoreGetConsoleState(STD_OUTPUT_HANDLE,\
+    \ &Default);\n[WINDOWS] ConsoleState:\n  Handle:Handle(STD_INPUT_HANDLE);\n  Directory:Length\n\
+    \  WindowSize:\n  Proc:Properties\n  Proc:fProperties\n```\n\n```\nSTATUS = PropertyStoreGetConsoleState(STD_OUTPUT_HANDLE,\
+    \ &Default);\n[WINDOWS] ConsoleState:\n  Handle:Handle(STD_INPUT_HANDLE);\n  Directory:Length\n\
+    \  WindowSize:\n  Proc:Properties\n  Proc:fProperties\n```\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_10_0.png)\n\
+    \n![](img/27dc30d9ee9d016ae2e2400b49269e56_10_1.png)\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_10_2.png)\n\
+    \n![](img/27dc30d9ee9d016ae2e2400b49269e56_10_3.png)\n\n```\nC:\\Windows\\system32\\\
+    cmd.exe\n```\n\n| USER-MODE | | USER-MODE |\n|---|---|---|n| CMD EXE | | CMD EXE\
+    \ |\n| KERNEL_MODE | | KERNEL_MODE |\n| RESTRICTED USER | | RESTRICTED USER |\n\
+    | VIRTUAL_USER | | VIRTUAL_USER |\n| OS SYSTEM | | OS SYSTEM |\n| COMPOSITE |\
+    \ | COMPOSITE |\n| KERNEL_MODE | | KERNEL_MODE |\n\n| USER-MODE | | USER-MODE\
+    \ |\n|---|---|---|n| CMD EXE | | CMD EXE |\n| KERNEL_MODE | | KERNEL_MODE |\n\
+    | RESTRICTED USER | | RESTRICTED USER |\n| VIRTUAL_USER | | VIRTUAL_USER |\n|\
+    \ OS SYSTEM | | OS SYSTEM |\n| COMPOSITE | | COMPOSITE |\n| KERNEL_MODE | | KERNEL_MODE\
+    \ |\n\nLiting 2.4 A C-like pseudocode of the function called upon the new control.\n\
+    \n```\nSTATUS = PropertyStoreGetConsoleState(STD_OUTPUT_HANDLE, &Default);\nCONSOLE\
+    \ ConsoleState:\n  Handle:Handle(STD_INPUT_HANDLE);\n  Directory:Length\n  WindowSize:\n\
+    \  Proc:Properties\n  Proc:fProperties\nif(Default)\n  ConsoleState=ConsoleState(Default);\n\
+    \  Directory=GetDirectory(ConsoleState.Directory);\n  if(ConsoleState.WindowSize)\n\
+    \    WindowSize=GetSize(ConsoleState.WindowSize);\n  if(ConsoleState.Proc)\n \
+    \   Proc=Properties(ConsoleState.Proc);\n    fProperties=GetProperties(Proc.Proc);\n\
+    ```\n\nactually needs the value of a few bytes in the\n\nThird of expanding the\
+    \ existing function due to the fact that it is fixed-size structure in the PropertyStoreGetConsoleState\
+    \ function with additional values. And so, one would probably have to handle the\
+    \ change in the structure, which may require backward compatibility from the new\
+    \ mode.\n\nFourth of modifying Properties, the function called by PropertyStoreGetConsoleState\
+    \ data from the source. Or use more efficient methods\n\n```\nif(Default)\n  ConsoleState=ConsoleState(Default);\n\
+    \  Directory=GetDirectory(ConsoleState.Directory);\n  if(ConsoleState.WindowSize)\n\
+    \    WindowSize=GetSize(ConsoleState.WindowSize);\n  if(ConsoleState.Proc)\n \
+    \   Proc=Properties(ConsoleState.Proc);\n    fProperties=GetProperties(Proc.Proc);\n\
+    ```\n\nHowever, such a project would require enormous amounts of work, especially\
+    \ at the start. A major list of implementations to be implemented:\n\nthe only\
+    \ option at time of release. Consequently, the computer users (independent researchers)\
+    \ might forget what the system developers forgot or refused to implement, from\
+    \ time to time, one of the console message\n\n+   1. Implementation of the Inter-Process\
+    \ communication mechanisms, using consolehost.exe and on previous versions using\
+    \ implementation of console.exe, which provides the advantages of 'Back Buffers'\
+    \ and a shared buffer.\n\n+   2. Various synchronization methods by using console.exe\
+    \ and client applications, might be used without trouble, and in a secure manner.\
+    \ Furthermore, the console could prevent any potential vulnerability to the system,\
+    \ by allowing allowed processes to connect to the console.\n\nTaking projects\
+    \ of this kind is not only useful for the future of Windows, but also to extend\
+    \ the operating system design itself, which might benefit and provide the reader\
+    \ with the results of fun during analysis and development process.\n\n# >>REFERENCES\n\
+    \n+   1. Thomas Owens, Microsoft Windows NT Group Handler Allowed Access to Windows\
+    \ Kernel Switch, HTML API docs.\n\n+   2. James Martin\n\nExtending the Properties\
+    \ within the ConsoleStore is not a very easy task. It is difficult because it\
+    \ requires a special configuration, or one of the existing methods to work.\n\n\
+    Good luck to all!\n\nExpanding the Properties within the ConsoleStore from the\
+    \ source. Or use more\n\n# OTHER MODIFICATIONS\n\nIt is believed that other missing\
+    \ functions in Windows 7 might be potentially implemented by researchers, even\
+    \ though it is noted that the function itself might be very hard to add in a real\
+    \ manner.\n\nThe console box is built from a graphical window of the view. The\
+    \ drawing procedure would not only be simple to make sure, but also need to be\
+    \ able to handle various functionalities related to the input/output being rendered.\n\
+    \nAll of the above require thorough knowledge of the Windows architecture, but\
+    \ might be implemented properly for some use of them in the future.\n\n```\nConsoleState:\n\
+    \  Handle:Handle\n  STATUS=PropertyStoreGetConsoleState(Default);\nreturn(STATUS);\n\
+    ```\n\nIn conclusion the author wanted to present a design change, introduced\
+    \ in the latest Windows version, as well as a way of user's favor, rather than\
+    \ producing diverse work-around as 'ANSI' (back)\n\nIt is believed that other\
+    \ missing functions in Windows 7 might be potentially implemented by researchers,\
+    \ even though it is noted that the function itself might be very hard to add in\
+    \ a real manner.\n\nDue to the above reasons, creating an alternative version\
+    \ of Microsoft Console from the very would be a great choice, in terms of reliability\
+    \ and flexibility.\n\nIf the resulting issue is in a PE file, describing of the\
+    \ data, adding a new control (e.g. a text edit). To modify the behavior of the\
+    \ hook by adding a routine here, as modified in property, just to\n\n20 HIT MAGAZINE\
+    \ OCTOBER 2010\n\n1 OCTOBER HIT MAGAZINE 2021"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# [WINDOWS SECURITY]
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_11_0.png)
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_11_1.png)
+
+
+    Windows kernel vulnerabilities are continuously becoming more alarming to security
+    experts, in recent years. This is probably caused by the fact that code running
+    in the microprocessor has set of rules, as well as potential bugs. Moreover, the
+    effects of exploiting a kernel vulnerability are tremendously different from these,
+    found in user-mode. Such differences are a simple consequence of the operating
+    system design itself - both processor modes are to be used by code responsible
+    for various tasks, such as:
+
+
+    +   - Security management
+
+
+    +   - Providing a stable environment for user applications
+
+    - Physical device management
+
+    - Running-user specific programs, such as word processor, internet browser, etc.
+
+
+    As seen above, the first three points require higher privilege systems, than the
+    latter one. Operating different code modules with different privilege levels is
+    called privilege separation, and operational mode introduced in the intel x86
+    processors in the 90s. This paper aims to cover some of the possible ways of protecting
+    sensitive data from the current application privileges, consequently leading to
+    system security compromises.
+
+
+    # PROTECTED-MODE BASIS
+
+
+    Before thinking of how the system privileges could be escalated by a potential
+    attacker, one should first focus on some information about the Protected-Mode
+    design.
+
+
+    What has been mentioned in the previous section, various tasks require multiple
+    privilege levels to work on. Thus, in order to provide for system security, less
+    modules should be assigned lower privilege levels while the more critical ones
+    should run with full control over the system. This is (so-called rings); with
+    ring-0 being the most, and ring-3 privileged mode. In practice, most of the modern
+    operating systems only take advantage of these levels, leaving the remaining two
+    levels unused. Here, two type of code can be distinguished, which is not limited
+    to the kernel (only), having almost complete control over the machine (virtualization
+    mechanisms are beyond the scope of this paper), and most commonly used by ordinary
+    applications, used by the user himself.
+
+
+    # # Windows Objects in Kernel Vulnerability Exploitation
+
+
+    By Matthew "j00ru" Jurczyk
+
+
+    One of the revolutionary features brought by Pro-
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_11_2.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# WINDOWS SECURITY
+
+
+    # WINDOWS SECURITY
+
+
+    Diagram 1.
+
+
+    Protected mode improves. The Windows virtual memory layout today is shown in Diagram
+    1 as the image presents, the virtual address space is split into two parts user
+    and kernel memory.
+
+
+    developed, ring-3 to ring-0 transitioning, as
+
+
+    first choose the appropriate and what emerged in the executive columns, so that
+    the operating system leads to demands
+
+
+    After 24 years of the above properties, Microsoft introduced debugging of the
+    object model. The most important structures are defined in the ''Debugging'' functions
+    which can be traversed with pointers. In fact, Windows used structures are as
+    follows:
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_12_0.png)
+
+
+    Application memory
+
+
+    The lower part of the address space is protected to access by applications. All
+    of the benefits before working in Windows memory separations are advantages of
+    virtual memory: every single process can operate on its own gigabytes of memory,
+    without interfering with any other program; this part is part of the protected
+    space.
+
+
+    +   - System calls (SYSCENTER/SYSEXIT instructions)
+
+    - Interrupts (INT instruction)
+
+    - Call Gates (CALL FAR instruction)
+
+
+    All of the above methods allow a call-defined kernel function to run with user
+    parameters. In some cases, the user is in a special mode-mode-restricted, which
+    requires an interrupt via a Descriptor Gate.
+
+
+    For the last few years, using critical memory (using the <handle> type) for objects
+    files, directories, threads and events has been described in detail. This includes
+    objects such as DebugObject, NtProcessObject and NtThreadObject. Some of the above
+    object types are defined in the Windows API. Some examples of object types are
+    as follows:
+
+
+    Internally, objects are implemented as basic structures, containing information.
+    An object structure has only one possible physical state. One or another of the
+    above object types is no longer a subject of further interest for user-mode applications.
+
+
+    RETRIEVING INFORMATION FROM USER-MODE
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_12_1.png)
+
+
+    Kernel memory
+
+
+    Protected mode was necessary
+
+
+    As pointed out, Ring 3 mode was necessary because the available virtual memory
+    in a common manner was scarce. The address space was limited (1 megabyte to 4
+    gigabytes). Furthermore, protection from direct access to physical memory was
+    also necessary to ensure stability.
+
+
+    OBJECTS in Windows
+
+    In order to provide access, the operating system implements a specific API for
+    objects. Objects are managed by the Object Manager. The Object Manager handles
+    a table of objects, which in turn contains points to the object structures. These
+    structures are used as handles by the user as representation of systems, processes
+    and other objects.
+
+
+    NtQueryInformation part of the kernel returns information about an object, such
+    as its process or thread information or its system settings (e.g., create time).
+
+    NtQueryObjectInformation part of the kernel returns information about an object,
+    such as the type of the object.
+
+
+    The higher part, on the other hand, remains the same regardless of the kernel.
+    It can be accessed by a special call - only ordinary-mode code can be executing
+    this call.
+
+
+    +   - To provide a common mechanism for handle protection, Object isolation is
+    placed in the operating system so that user-mode applications can access a limited
+    set of objects they use.
+
+    - Establishment of a naming-scheme allows that programs can independently identify
+    objects, files, and directories of the system, or other collections of names.
+
+
+    The OS was also necessary to prevent the memory from being corrupted by malicious,
+    careless processes.
+
+
+    Provide the ability to isolate objects for a specific session to belong to both
+    local and global objects in the namespaces.
+
+
+    However, all features in the new CPU system would be useful if these features
+    supports the features used by Windows. The operating system had to design a reasonable
+    security model, based on the
+
+
+    # THE REAL NATURE OF OBJECTS
+
+
+    With elementary knowledge of how Protected mode was, one could provide objects
+    for a user-mode application, since Windows needed some objects to address, after
+    all. One of
+
+
+    Even with user-mode applications to interact with the kernel, Ring 3 mode was
+    restricted because of the number of operations that cannot be avoided without
+    using system management functions, objects are handled by the kernel. It is impossible
+    to directly call kernel code, even with some access restrictions.
+
+
+    being found in drivers, and many of them can be defined as particular kind of
+    objects makes it possible for the user to write a specific function (what) to
+    choose a location (where). Such a location is needed.
+
+
+    As shown, perhaps the only possible way to require this would be introducing a
+    vulnerability in the kernel function, which is by (potentially hostile) user application.
+
+
+    In this paper, we are mostly interested
+
+
+    | List 1. OF THE OBJECT STRUCTURE IN WINDOWS KERNEL |
+
+    | Type | Size |
+
+    |---|--|
+
+    | OBJECT_HEADER | Int | 48 |
+
+    | Process | Int | 240 |
+
+    | Handle | Int | 16 |
+
+    | File | Int | 32 |
+
+    |Thread | Int | 216 |
+
+    | Event | Int | 32 |
+
+    | Section | Int | 32 |
+
+    | WaitObject | UChar | 4 |
+
+    | TypeIndex | UChar | 4 |
+
+    | KernelObject | UChar | 4 |
+
+    | DescriptorObject | UChar | 4 |
+
+    | MemoryObject | UChar | 4 |
+
+    | MemoryObject | UChar | 4 |
+
+    | SectionObject | UChar | 4 |
+
+    | WaitObject | UChar | 4 |
+
+    | SynchronizationObject | UChar | 4 |
+
+    | TokenObject | UChar | 4 |
+
+    | JobObject | UChar | 4 |
+
+    | ALPC | UChar | 4 |
+
+    | ALPC | UChar | 4 |
+
+    | SectionObject | UChar | 4 |
+
+    | MemoryObject | UChar | 4 |
+
+    | KernelObject | UChar | 4 |
+
+    | OBJECT_CREATE_OBJECT | UChar | 4 |
+
+    | WaitObject | QWORD | |
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_12_2.png)
+
+
+    24 HITE MAGAZINE
+
+
+    OCTOBER 2010 | HITE MAGAZINE 25'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Listing 2. Definitions of the structure returned by\nNtQueryInformationSystemObject\
+    \ call\n\nspecific information about a specific\nWindows object.\n\n# Listing\
+    \ 4. The KTM structure definition\n\n```\ntypedef struct _SYSTEM_INFORMATION {\n\
+    \  ULONG               Length;\n  ULONG               NumberOfCount;\n  HANDLE\
+    \              ProcessHandle;\n  PVOID               InformationBuffer;\n  ULONG\
+    \               InformationLength;\n} SYSTEM_INFORMATION, *PSYSTEM_INFORMATION;\n\
+    ```\n\nA majority of the NtQueryInformation-\nfunctions have their counters defined\n\
+    SystemInformation - responsible for\nchanging the specified information\nreturned\
+    \ to the caller. However,\namong all the information classes\ndefined in ntdll.h\
+    \ and which\nthe Windows NT 7.0 API reference\ncan only be accessed by other\n\
+    handles, as well as the fact that the\nobject is created, destroyed,\nand obtained\
+    \ by using\nexternal libraries, such as\nkernel32.dll, which is used to access\n\
+    nocumentedocumented\nWindows API functions.\n\nknow its numeric value. Being after\n\
+    fin any given object, lets to\nthe next time:\n\n# PARTICULAR WINDOW\nOBJECTS\
+    \ IN PRACTICE\n\n```\ntypedef struct _KTM_OBJECT {\n  LARGE_INTEGER Query;\n \
+    \ LARGE_INTEGER Timeout;\n  HANDLE    CreateEntry;\n  LARGE_INTEGER Reserved;\n\
+    \  ULONG     User;\n  PVOID     Status;\n} KTM_OBJECT, *PKTM_OBJECT;\n```\n\n\
+    In the section of this chapter I will\nexplain why the retry-what-where\nexample\
+    \ is useful; one must find that\nthe object - could have a\nstraight edge to leverage.\
+    \ In\nother applicable fields, such as\nfunctions, the more the kernel\nconstructs\
+    \ the object for\nntuser-mode to perform an\noperation, the less it poses a\n\
+    problem.\n\n# Listing 3. The KDM structure definition\n\n```\ntypedef struct _KTM_OBJECT_INFO\
+    \ {\n  ULONG Type;\n  HANDLE ObjectHandle;\n  PVOID   InformationBuffer;\n  ULONG\
+    \   InformationLength;\n  HANDLE  WaitHandle;\n} KTM_OBJECT_INFO, *PKTM_OBJECT_INFO;\n\
+    ```\n\nmechanism highly locking to\nschedule a procedure to be-\nlater in time,\
+    \ with lower priority.\nAnd the KDM structure\n\n```\nNTSTATUS NtQueryInformationObject(\n\
+    \  HANDLE                  ProcessHandle,\n  SYSTEM_INFORMATION_CLASS ProcessInformationClass,\n\
+    \  PVOID                   ProcessInformation,\n  ULONG                   InformationLength,\n\
+    \  PACCESS_INFORMATION_INFORMATION *ReturnLength);\n```\n\nis placed inside the\
+    \ Deferred\nobject, at offset (0xffffff).\n\nAs shown, controlling over the\n\
+    object is so important that to let\nthe potential attacker gain a risk-\nby bypassing\
+    \ the Object-handle\nprotection is not worth being gained-\nwhere, a new, KDM\
+    \ structure-\ncould be created easily.\n\n# Listing 3. An example, returning the\n\
+    virtual address of a specific object\n\n```\nNTSTATUS GetObjectAddress(n  HANDLE\
+    \                  ObjectHandle,\n  SYSTEM_INFORMATION_CLASS ObjectInformationClass,\n\
+    \  PVOID                   ObjectInformation,\n  ULONG                   InformationLength,\n\
+    \  PACCESS_INFORMATION_INFORMATION *ReturnLength);\n```\n\nAfter being created,\
+    \ the object\nhandle is enough but it is\nimportant to know what kind of\nobject\
+    \ it is. The kernel\nntAPI functions - such as the\nNtCreateTimer and NtCreateTimer-\n\
+    \n```\nNTSTATUS NtQueryInformationObject(\n  HANDLE HandleHandle,\n  n_SYSTEM_INFORMATION_CLASS\
+    \ Class,\n  PVOID ObjectInformation,\n  ULONG InformationLength,\n  P_ACCESS_INFORMATION_INFORMATION*\
+    \ pReturnLength\n\n```\n\nBecause of the fact that every\nobject has its own type,\
+    \ it is\nisimportant to know what\ninformation about a specific\ns represents.\n\
+    \nA timer object is created by\nuser mode object state which is set\nto the specified\
+    \ time after\nThere are two\ntypes: manual-reset and auto-reset-\ntimer. A timer\
+    \ of any type can be a-\nperiodic.\n\n# TIMER OBJECT\n\nThis mechanism has present\
+    \ in\nstructure since the very\nbeginning of years, and has not\ntouched much\
+    \ during the past, however\nAPI functions utilized by legitimate\nuser mode applications\
+    \ include:\n\nTo deactivate the timer\nmechanism and close the\nhandle is by using\
+    \ the object\nobject's handle is possible.\n\nThe NtQueryInformation-\nfunction\
+    \ with SystemInformation-\nObject returns all\ndata about an\n object. It returns\
+    \ a 32-bit integer-\nunderflow - Number and the\naddress returned in\nListing\
+    \ 2.\n\nAfter reconstructing structures of\nthe existing systems, one can\nmake\
+    \ it very easy to find an object.\nthe problem is simple when\nyou know the context\
+    \ of the-\nclass in this case - but when\neffluent values are are known that\n\
+    nnit is enough to find the right\ndirectory the object.\n\nIn practice, it is\
+    \ possible to get\nthe address of an object, regardless\nof its type - the only\
+    \ requirement is\nthat the process in creation is\nhandled to a handle, and we\n\
+    \n+   - CreateWaitTimer and Create-\n\nAt a first glance, one might not see\n\
+    any value that could be worth\nbeneicial. The fact is, that the DCP-\nacronym\
+    \ stands for Deferred Procedure\nCall, a possible kernel-mode windows"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Listing 7: The ApsC field initialization
+
+
+    # Listing 8: The KPROCESS structure definition
+
+
+    | Name | Type | Description |
+
+    |---|---|---|
+
+    | Apc | _KAPC | push |
+
+    | PreviousApc | _KAPC | push |
+
+    | KernelApc | _KAPC | push |
+
+    | NextApc | _KAPC | push |
+
+    | DeferredApcRoutine | _KAPC | push |
+
+    | DeferredApcList | _KAPC | LIST_ENTRY |
+
+    | DeferredCurrentApc | _KAPC | LIST_ENTRY |
+
+    | DeferredApcHead | _KAPC | LIST_ENTRY |
+
+    | ApcState | _KAPC | push |
+
+
+    | Name | Type | Description |
+
+    |---|---|---|
+
+    | TableEntry | _KPROCESS | LIST_ENTRY |
+
+    | TableBase | _KPROCESS | PVOID_ULONG |
+
+    | TableLimit | _KPROCESS | ULONG |
+
+    | WaitState | _KPROCESS | KWAIT_STATE |
+
+    | QueueList | _KPROCESS | LIST_ENTRY |
+
+    | Priority | _KPROCESS | KLONG |
+
+    | BasePriority | _KPROCESS | KLONG |
+
+    | PreviousModeProcess | _KPROCESS | _PROCESS |
+
+    | NextProcess | _KPROCESS | _PROCESS |
+
+    | CurrentProcess | _KPROCESS | _PROCESS |
+
+    | InitialProcess | _KPROCESS | _PROCESS |
+
+    | ServiceProcess | _KPROCESS | _PROCESS |
+
+    | DirectoryTable | _KPROCESS | PVOID |
+
+    | DirectoryTableBase | _KPROCESS | PVOID |
+
+    | Cr3Value | _KPROCESS | PVOID |
+
+    | PageDirectory | _KPROCESS | PVOID |
+
+    | PageSize | _KPROCESS | ULONG |
+
+    | SectionObject | _KPROCESS | POBJECT |
+
+    | KernelBase | _KPROCESS | PVOID |
+
+    | KernelStack | _KPROCESS | PVOID |
+
+    | StackBase | _KPROCESS | PVOID |
+
+    | StackLimit | _KPROCESS | PVOID |
+
+    | ThreadListHead | _KPROCESS | LIST_ENTRY |
+
+    | Timeout | _KPROCESS | KLONG |
+
+    | Lock | _KPROCESS | KSPIN_LOCK |
+
+    | Wait = _KPROCESS | KLONG |
+
+    | Signal | _KPROCESS | LONG |
+
+    | ServiceTable | _KPROCESS | PVOID |
+
+    | SessionProcess | _KPROCESS | _PROCESS |
+
+    | SessionObject | _KPROCESS | POBJECT |
+
+    | ObjectTable | _KPROCESS | POBJECT |
+
+    | DescriptorTable | _KPROCESS | PVOID |
+
+    | DescriptorBase | _KPROCESS | PVOID |
+
+    | WorkingSet | _KPROCESS | PVOID |
+
+    | WorkingSetQuota | _KPROCESS | KLONG |
+
+    | WorkingSetPrivate | _KPROCESS | KLONG |
+
+    | WorkingSetLimit | _KPROCESS | KLONG |
+
+    | WorkingSetMinimum | _KPROCESS | KLONG |
+
+    | WorkingSetCount | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetLinks | _KPROCESS | KLONG |
+
+    | WorkingSetSize | _KPROCESS | KLONG |
+
+    | WorkingSetBits | _KPROCESS | KLONG |
+
+    | WorkingSetFlags | _KPROCESS | KLONG |
+
+    | WorkingSetTimer | _KPROCESS | KLONG |
+
+    | WorkingSetLock | _KPROCESS | KLONG |
+
+    | WorkingSetUser | _KPROCESS | KLONG |
+
+    | WorkingSetSystem | _KPROCESS | KLONG |
+
+    | WorkingSetKernel | _KPROCESS | KLONG |
+
+    | WorkingSetStatus | _KPROCESS | KLONG |
+
+    | WorkingSetWorking | _KPROCESS | KLONG |
+
+    | WorkingSetFault | _KPROCESS | KLONG |
+
+    | WorkingSetCycle | _KPROCESS | KLONG |
+
+    | WorkingSetPool | _KPROCESS | KLONG |
+
+    | WorkingSetHard | _KPROCESS | KLONG |
+
+    | WorkingSetSoft | _KPROCESS | KLONG |
+
+    | WorkingSetIdle | _KPROCESS | KLONG |
+
+    | WorkingSetShared | _KPROCESS | KLONG |
+
+    | WorkingSetPrivate | _KPROCESS | KLONG |
+
+    | WorkingSetMapped | _KPROCESS | KLONG |
+
+    | WorkingSetImage | _KPROCESS | KLONG |
+
+    | WorkingSetData | _KPROCESS | KLONG |
+
+    | WorkingSetFile | _KPROCESS | KLONG |
+
+    | WorkingSetCode | _KPROCESS | KLONG |
+
+    | WorkingSetStack | _KPROCESS | KLONG |
+
+    | WorkingSetHeap | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+    | WorkingSetList | _KPROCESS | KLONG |
+
+
+    the target thread. When the thread is already suspended, the intent of how the
+    mechanisms works is the thread that the user is able to:
+
+
+    +   1. Retrieve the address of a specific KPROCESS structure, and find the Suspense
+    field
+
+    2. Indirectly (then system call) call the function using KAPC
+
+
+    versions, as possible. Let reflect about above, or any other attacks based overwriting
+    the contents of Windows objects, it could be used to develop a strategy to intercept
+    processes of three processes by preparing the data used over the object, and sending
+    a signal to the vulnerability in the kernel memory by other.
+
+
+    If additionally, a way of overtaking certain memory areas (using a vulnerable
+    device driver), the KPROCESS structure could be successfully exploit the vulnerability
+    strategy.
+
+
+    The presented method of enumerate all handles presents in the Windows SystemInformation
+    parameter is well known by the author, and can be used as a resource of handler-information
+    to obtain the base of the object we just found. The second request requires another
+    effect to exploit the vulnerability.
+
+
+    One thing thought that there is a way to suspend the thread mechanism without
+    being active. Active and inactive in case is is not possible, because if the thread
+    is normally suspended, based on the priority, affinity, general system will not
+    schedule it. In later case, however, the thread is not suspended and it does not
+    execute its execution, current stack processor context
+
+
+    The technique was covered in this was first described by Sly and using KPROCESS
+    structure in Windows kernel as the vulnerability.
+
+
+    Global and Local. Because of the vulnerability a per-processor, the state will
+    be changed every time the process is scheduled. To save the state, it must be
+    stored at at least one DL (with the vulnerability) so that the decision of whether
+    to use the local or not up to the application space. As a consequence, every process
+    can be created and maintained by the system process.
+
+
+    Another object that could be taken into consideration while exploiting a write-what-where
+    is the process object. Just, like the thread, it can also be used for a different
+    type of vulnerability.
+
+
+    As presented in the GDT and local kernel vulnerability, having after exploited
+    may frequently affect the system state. A potential attacker could try to use
+    the write-what-where redirect or escalate the execution privileges.
+
+
+    A variety of fields that could be taken advantage of, can be observed. In this
+    case the KPROCESS structure belonging to the thread in consideration. We would
+    like to focus on Lookaside.
+
+
+    The descriptor table functions manage the memory (Kernel32) and other objects
+    (ntdll). All these objects are initialized when the system starts. If an attacker
+    wants information, he can be reached by calling ntdll.
+
+
+    NtListThreads are part of the native API set. One other type, querying for the
+    information of a process, is described by using NtQuerySystemInformation with
+    (SystemProcess).
+
+
+    # COMPATIBILITY
+
+
+    net-mode stacks. Thread execution block pointer, multiple function pointers, and
+    the more, the more. The most important part is
+
+
+    of the KTHREAD structure, one is special: it is a pointer to the kernel stack.
+    The
+
+
+    Suspending and resuming can be achieved by using the example of "Apc field" in
+    the KPROCESS structure. The thread is suspended and resumed by swapping the current,
+    respectively, with the suspended thread.
+
+
+    The question is - what how to do with the Suspense field in our structure?
+
+
+    On thread creation, the KernelThread initializes the Suspense field with a value
+    which won''t change the thread execution. When the terminal processor needs to
+    suspend the thread
+
+
+    The x86 architecture uses two types of Descriptors: The
+
+
+    Compatibility refers to kernel-exploit, what counts the most compatibility across
+    a great number of system
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_14_0.png)
+
+
+    OCTOBER 2010 | HTTM MAGAZINE 29'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# WINDOWS SECURITY
+
+
+    # Authorised Reseller
+
+
+    doesn''t pose any problem in the compatibility context.
+
+
+    # CONCLUSION
+
+
+    in detail. For sure, a great number of other interesting or less targets exist
+    - finding and testing them out as an exercise for the vector. Furthermore, one
+    could probably find ways of overwriting the structures covered in other fields.
+
+
+    Taking about facts into consideration the only potential, significant issue world-specific
+    objects could vary from one system and multiple countermeasures can be used in
+    order to eliminate this problem.
+
+
+    In this paper, the author wanted to present a general idea of what the kernel
+    could be treated as without extra attributes (such as overwriting parts of) a
+    consequence of a vulnerability in one of the device drivers.
+
+
+    Therefore, this paper can be relatively stable, in comparison to other, existing
+    techniques.
+
+
+    Out of all the existing possibilities, only three possible vector attacks have
+    been chosen and described
+
+
+    Happy vulnerability hunting * however, the overall idea, remains the same.
+
+
+    # >>REFERENCES
+
+
+    +   1. Robert Samanta, Explaining Control Flows in Drivers, https://www.microsoft.com/en-us/windows/drivers/articles/view.aspx?id=316883
+
+    2. Koya Kichihara, Real Kernel Pool Explanation, https://www.microsoft.com/en-us/windows/drivers/articles/view.aspx?id=316883
+
+    3. How to exploit a kernel pool vulnerability, https://www.microsoft.com/en-us/windows/drivers/articles/view.aspx?id=316883
+
+    4. Mark-user-mode-pool, https://www.microsoft.com/en-us/windows/drivers/articles/view.aspx?id=316883
+
+    5. Microsoft, Debugging Tools and Symbols
+
+    6. S. Shell, Windows Kernel Debugging for System Information, https://undocumented.ntintern.com/en-us/Mode/undocumented.ntinternals/nt/QueryInformationProcess.html
+
+    7. QueryProcessInformation, https://undocumented.ntinternals.com/en-us/Mode/undocumented.ntinternals/nt/QueryInformationProcess.html
+
+    8. SetProcessInformation, https://undocumented.ntinternals.com/en-us/Mode/undocumented.ntinternals/nt/SetProcessInformation.html
+
+    9. OpenObjectsProcess, https://undocumented.ntinternals.com/en-us/Mode/undocumented.ntinternals/nt/OpenObjectsProcess.html
+
+    10. Tom Nash, Windows Kernel Debugging for Undocumented Kernel, https://undocumented.ntinternals.com/en-us/Mode/undocumented.ntinternals/nt%20Functions.html
+
+
+    Objects/NtQueryInformation/Thread.html
+
+
+    # drive a mac.
+
+    ask us how
+
+
+    # [i] store by C-Zone
+
+
+    Lot 2.07, 2nd floor Digital Mall, SS14, Petaling Jaya T - 603.7954.8841 F - 603.7954.8841
+
+
+    30 HTER MAGAZINE |1
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# INFORMATION SECURITY
+
+
+    # # Stepping Through a Malicious PDF Document
+
+
+    Have you wondered how a malicious PDF document takes control over a Windows machine?
+    This article will explain in detail how this is possible:
+
+
+    By Didier Steevens, didier.stevens@gmail.com
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_16_0.png)
+
+
+    What happens when a PDF reader executes xref 0-8. The reader will check if the
+    file is a PDF document for the presence of a header and a PDF document. A PDF
+    document starts with a header like %PDF-1.1. The version of the language used
+    in the PDF document is specified in the string for the trailer. The PDF reader
+    looks for the keyword xref at the end of the file. The absolute position of the
+    trailer below is 2294. The PDF reader application finds the keyword xref when
+    it starts parsing from the end of the PDF.
+
+
+    ```
+
+    %PDF-1.1
+
+
+    trainer
+
+    000000000 000055 f
+
+    000000012 000012 n
+
+    000000016 000016 n
+
+    000000024 000024 n
+
+    000000049 000049 n
+
+    000000052 000052 f
+
+    000000067 000067 n
+
+    <
+
+    /Size 8
+
+    /Root 1-0 R
+
+    /startref 2294
+
+    %%EOF
+
+    ```
+
+
+    A cross reference table contains the absolute position of all objects used in
+    the PDF document. The number of zero xref entries in the PDF reader application
+    indicates that it has indexed the objects zero by number. The second number is
+    the size of the cross reference table. In our example, the cross reference table
+    has 8 entries. It is mandatory and necessary for it to be 00000000 for length.
+    The value of /OpenAction is a reference to object 7. All entries are relative
+    offsets from the first object.
+
+
+    ```
+
+    /OpenAction 7-0 R
+
+    >>
+
+    endobj
+
+    ```
+
+
+    The dictionary in object 1 has an /OpenAction key. The key of this instructs the
+    PDF reader table-reader to take an action when the PDF document is opened. The
+    value of /OpenAction is a reference to object 7.
+
+
+    Object 7, located at absolute position 657, contains the dictionary:
+
+
+    ```
+
+    7-0
+
+    /Type /Action
+
+    /S /JavaScript
+
+    ```
+
+
+    In our example, the cross reference table shows object 1 version 0 starts at offset
+    12, object 2 version 0 starts at offset 37. The PDF reader application finds object
+    7 at absolute position 657.
+
+
+    Following the cross reference table, the PDF reader application finds the JavaScript
+    application in the PDF. The dictionary is a data structure containing keys and
+    values with << keys and >>. Names start with a / character and can be any alphanumeric
+    string except other dictionaries.
+
+
+    ```
+
+    //shellcode = escape(\u0073\u0068\u0065\u006c\u0063\u006f\u0064")
+
+    while(n.length< 0x0060000) {
+
+    var blocks=new Array(n);
+
+    for(i=0;i<1200;i++) {
+
+    blocks[i]=shellcode;
+
+    }
+
+    }
+
+    eval(blocks.join("));
+
+    ```
+
+
+    After parsing the trailer, the PDF reader application looks for the dictionary
+    that contains some /Root key. One important key-value is a reference to the /Root
+    body. The body object contains dictionaries that have a root node, a dictionary
+    /Root key that indicates the offset of the root tree. In our example, the root
+    is object 1. This indicates that the offset is absolute. And object 1 is identified.
+    The PDF reader knows that the root object is object 1 with version 0 starts at
+    offset 0. From the cross reference table, it shows object 1 at absolute position
+    12.
+
+
+    Object 1 contains a dictionary and more key-value pairs that closes the dictionary.
+
+
+    ```
+
+    <<
+
+    /Type /Catalog
+
+    /Outlines /Pages-3-0 R
+
+    ```
+
+
+    Before we investigate the code, we need to know more about JavaScript in the PDF.
+    The PDF language allows JavaScript execution. JavaScript scripts are found inside
+    the PDF document. These scripts are executed by the PDF engine. The JavaScript
+    engine is sandboxed, it has no access to the operating system files. A JavaScript
+    engine cannot access (read/write) attributes of files or registry keys.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'JavaScript execute directive to compromise the Windows machine on which the
+    PDF reader is running. They need to use the PDF JavaScript engine to infect this
+    install by exploiting vulnerabilities.
+
+
+    This statement defines a high probability that by doing this the content of the
+    string is a hexadecimal value 1234. The content of 0x03030330 is a NOP slide.
+
+
+    This is the first part of the script for which we postponed the analysis. Virtual
+    memory 0x033030 is located in the memory segment reserved for the stack; however,
+    it can be used to execute the JavaScript engine to store the values of dynamically
+    generated strings.
+
+
+    By doing this, we have a high probability that 0x03030330 will be executed. The
+    next instruction is also a NOP slide. This will be executed, and goes on, until
+    the first instruction of our shellcode is executed. The slide then executes the
+    first instruction of our shellcode, then the shellcode, which will execute the
+    shellcode downloaded from a web server, will infect this system and execute it.
+
+
+    ```
+
+    util.printf("4566666612999999999998888888888888888888888888888888888888888888");
+
+    ```
+
+
+    ```
+
+    var shellcode = "escape(\u0088\u00e0\u00b8\u00d3\u00c1\u0060\)";
+
+    ```
+
+
+    The first part of the script helps the shellcode, which contains executable characters
+    (this technique is called heap spray). The heap spray is needed to populate the
+    memory so it will start to execute the code at location 0x03030330.
+
+
+    ```
+
+    var Nops = "escape(\u0090)";
+
+    while (Nops.length < length) {
+
+    Nops += Nops;
+
+    }
+
+    ```
+
+
+    Let us analyze the last line of the JavaScript script as the util.printf function
+    is used to format values into a string. This statement
+
+
+    A NOP operation is a simple machine instruction; it executes nothing and moves
+    to the next instruction.
+
+
+    will format 0.6666666 to two decimal places and the decimal point
+
+
+    ```
+
+    VAR = "0.678";
+
+    ```
+
+
+    Next, the script will create a very long string containing NOP operations; the
+    heap spray will fill our memory with copies of the shellcode.
+
+
+    When you assign a value to a variable in a JavaScript script, the bytes of these
+    strings are written in the heap. The heap spray manages a loop of the function
+    to fill the memory with the bytes of the string in this string.
+
+
+    It is very unlikely that 0x03030330 will contain shellcode. Our shellcode will
+    only execute when the program counter hits our shellcode.
+
+
+    The util.printf statement in our document infects the PDF JavaScript engine to
+    execute a very long string of shellcode.
+
+
+    Malware shellcode is, independent of the environment, use shellcode that was downloaded
+    from a web server, will infect this system and execute it.
+
+
+    Here is the result of the following spray:
+
+
+    ```
+
+    var hit = "HITB Magazine";
+
+    ```
+
+
+    # ABOUT THE AUTHOR
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_17_0.png)
+
+
+    The trick uses a hash function to assign a number to strings, spraying the heap
+    until the address 0x03030330 (in our case) is occupied. So let us see the result
+    of the following spray:
+
+
+    David Steers (CISSP, CISP, MCIT, OSCEP) is a security consultant currently working
+    as an IT consultant for a Belgian- firm.
+
+
+    But it does not open the PDF in Adobe Reader prior to version 9.1.3. These versions
+    contain a bug that allows the spray to overwrite the return address at location
+    0x03030330. By overwriting the return address, the util.printf function will execute
+    the shellcode instead of the original program code.
+
+
+    IT Consulting Services company. You can find his website at www.davidsteers.com.
+    He frequently writes about security at blog.davidsteers.com.
+
+
+    When the PDF reader was sprayed the address at location 0x03030330 was not in
+    use. In virtual memory pages were created because address 0x03030330 is not contained
+    in a variable that the PDF reader will access.
+
+
+    But if we could program code in memory at address
+
+
+    ```
+
+    var test = unescape("㐒");
+
+    ```
+
+
+    ```
+
+    var blocks = new Array();
+
+    for (i = 0; i < 1200; i++)
+
+    blocks[i] = Nops + shellcode;
+
+    ```
+
+
+    # >>REFERENCES
+
+
+    +   1. The steps are described here.
+
+    2. An example of this vulnerability (CVE-2008-2992) can be found here: https://www.securityfocus.com/archive/n/article/388127/00/shellcode.html'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# # Decrypting TrueCrypt Volumes with a Physical Memory Dump
+
+
+    By Jean-Baptiste Bédrune - SOGETI/ESEC
+
+
+    TrueCrypt is a popular disk encryption software, running on Windows, Linux and
+    OSX. This article shows a simple method to retrieve the volume encryption keys
+    from a memory dump created while the volume was mounted. It describes a tool that
+    decrypts a whole volume using these keys. The technique detailed here should work
+    on all Windows versions.
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_18_0.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# INFORMATION SECURITY\n\n# INFORMATION SECURITY\n\ns in the TrueCrypt documentation\
+    \ frequently compromised master key may be stored in RAM. When a non-TrueCrypt\
+    \ master key is destroyed in RAM, TrueCrypt encrypts its volume. It is obvious\
+    \ that TrueCrypt protects its physical memory. An attack is far out of the TrueCrypt\
+    \ security model.\n\nnormal volume, and after so if it becomes encrypted with\
+    \ its password, he will not be able to see if there is a hidden volume looking\
+    \ at the normal volume. When a normal volume containing a hidden volume is mounted,\
+    \ the user enters the password for both volumes to complete the de-encryption\
+    \ process.\n\na PKCS #11 token. The PKCS #11 is actually used to store keys; its\
+    \ advantage over a key pair is being PIN protected.\n\nFor security reasons, memory\
+    \ encryption keys cannot be swapped to disk. If they are never in memory, they\
+    \ will be erased in present. Here, the keys should behave as expected.\n\nThis\
+    \ secret is copied into a Password structure:\n#define __PASSWORD\n\nvolume encryption\
+    \ keys, needed to perform encryption and decryption operations.\n\nThe password\
+    \ is erased from memory, as it is not needed anymore, except if 'Cache passwords'\
+    \ key is enabled. If the password is in memory, it is established only when the\
+    \ volume is mounted.\n\n# VOLUME SCHEMA\n\n# ENCRYPTION KEYS IN MEMORY\n\nThe\
+    \ hypothesis is that we have taken a snapshot of the TrueCrypt volume while the\
+    \ physical memory was wiped. When the volume is locked, the encryption keys are\
+    \ like cold boot attack (COLD BOOT); FireWire[FireWire] or PC cards (PC cards).\
+    \ This is however out of the scope of the security model.\n\n| Normal volume |\n\
+    | Hidden volume |\n\n# A QUICK BACKGROUND ON TRUECRYPT?\n\nThis part contains\
+    \ all details needed to understand the rest of the article. If you want more details,\
+    \ check the TrueCrypt website, which has a great documentation about the program.\n\
+    \n```\n// Maximum possible length password\ntypedef struct {\n// Modifying this\
+    \ structure can introduce inoperability with various versions\nunsigned int32\
+    \ length;\nunsigned char *PKCS_MAX_PASSWORD = 64;\nunsigned char *password = NULL;\n\
+    } CRYPTO_MASTER;\n```\n\nIf the keys are longer than 64 bytes, a True hash algorithm\
+    \ is used to produce the CRYPTO_MASTER structure and sends the password to this\
+    \ structure.\n\nHowever, all the cryptographic keys needed to mount the volume\
+    \ and decrypt it are in memory.\n\n| Volume data |\n| Hidden data |\n\nAnother\
+    \ question is how to decrypt the volume without revealing the key. The idea is\
+    \ to use the key without revealing it so it works independently of the operating\
+    \ system.\n\n| Backup of normal volume |\n| Backup of hidden volume |\n\n# Volume\
+    \ format\n\nA TrueCrypt volume is a file that contains the encrypted volume. Each\
+    \ volume is encrypted with a password, a set of keys, or a set of keys. TrueCrypt\
+    \ uses AES, Serpent or Twofish algorithms. The encryption mode is stored in the\
+    \ header of the file. The mode is also encrypted with the master key.\n\nThe encryption\
+    \ of the hidden volume will not be detailed here, as it needs two keys.\n\nDuring\
+    \ the creation, the user chooses one or more hidden volumes. A hash is used for\
+    \ the key derivation and a hash function for the pseudo random generator.\n\n\
+    The TrueCrypt file can contain a hidden volume. However, if the user forgets to\
+    \ reveal the hidden volume with his password, he will not be able to recover it,\
+    \ even if all sensitive data is stored.\n\nDecryption keys are created to mount\
+    \ the Password structure using the salt of the normal volume. TrueCrypt uses the\
+    \ PBKDF2 algorithm with the hashing function for 1000 iterations for SHA-1 and\
+    \ SHA-256, and 50000 iterations for SHA-512.\n\nWhen the hidden volume is not\
+    \ mounted, the decrypt function is not used. If the user wants to change the password,\
+    \ the hidden volume must be mounted and then the new password is entered.\n\n\
+    Then, TrueCrypt decrypts the hidden volume to decrypt the corrupted key, it if\
+    \ the password is correct.\n\nEach file has a header which contains data for the\
+    \ normal volume, immediately followed by one or more hidden volumes.\n\n+   -\
+    \ The start of the encrypted volume (a 65536 bytes for a normal volume, after\
+    \ the initial header, and hidden volumes)\n- Volume encryption keys (1 to 3 keys\
+    \ can be contained)\n- Data contained between 2 and 6 encryption keys.\n- Data\
+    \ used to integrity check.\n\nIf the file does not contain a hidden volume, the\
+    \ header contains data, and there is no way to decrypt from a real encrypted volume.\n\
+    \nIn the other case, the hidden volume is stored inside the\n\nMounting a volume\n\
+    On Windows, TrueCrypt volumes are mounted using a filtering driver. A secret is\
+    \ mounted to a normal volume. This can be a password, a set of keys, or\n\nAs\
+    \ said before, data to cryptography is stored in a CRYPTO_INFO structure. Here\
+    \ is what the structure:\n\n```\ntypedef struct CRYPTO_INFO {\n int as_len; //\
+    \ Encryption key\n int mode; // (e.g. XTS)\n unsigned char *KTI[1]; // Primary\
+    \ key schedule (if it is a case, it contains multiple keys) for XTS mode;\n unsigned\
+    \ char *KTI[2]; // Secondary key schedule (if case, multiple keys) for XTS mode;\n\
+    } CRYPTO_INFO;\n```\n\nThe driver carries the keys of the encrypted volume. All\
+    \ the data to cryptographic information is stored in a CRYPTO_INFO structure.\
+    \ In this structure is\n\nBOOL_hidden:\n// Whether the volume is mounted/as hidden\
+    \ volume\n\n38 HITR MAGAZINE OCTOBER 2010\n\n10 OCTOBER 2010 HITR MAGAZINE 39"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# # INFORMATION SECURITY\n\n# # INFORMATION SECURITY\n\n```\n```c\n#ifndef\
+    \ TC_WINDOWS_BOOT\ntype uint HeaderVersion;\n\nGCFTx gf_ctx = {\n    unsigned\
+    \ int master_key_MASTER;\n    KEYDATA = { // This holds the value\n        header\
+    \ area concatenated key\n        secondary and secondary_key(s) (KTS) for\n  \
+    \      tweak between the master and secondary key. For CBC\n        (deprecated)/legacy;\
+    \ it contains the IV\n        body (CBC) contains the key\n        seed;\n   \
+    \ };\n\n    unsigned int k2[MASTER, KEYTER];\n    { // For this, the\n       \
+    \ contains the secondary key, \n        multiple concatenated). For Lw (deprecated\n\
+    \        )/legacy; it contains the tweak. For CBC\n        (deprecated) it contains\
+    \ the key\n    };\n\n    unsigned int salt[PRNG5];\n```\n```\n\nThe galois has\
+    \ the parameters of the XT modes.\nTo find the encryption keys, extract from the\n\
+    TrueCrypt value, and search for it.\nchoose only the notations parameters to\n\
+    verify only the CRYPTO INFO that we found.\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_20_0.png)\n\
+    \nFigure 2 shows an extract of the CRYPTO INFO structure\nfrom a memory dump.\n\
+    \n4 keys in master_key\n2 keys in k2\n\nThe 64 bytes are found in purple, immediately\n\
+    followed by the number of iteration (AES-256). To find\nlook for either the master_key,\
+    \ the\nsecondary key, and the k2 tables, each of them beginning\n\n| 065051AD\
+    \ | 84 21 24 70 7C 97 3B 54 | S..$#&!*--04 |\n| 065051B0 | 28 21 24 7C 23 3E 30\
+    \ 80 44 88 9C 02 29 07 68 | |\n| 065051C0 | 02 2F 2B 83 4C 15 47 25 | 79 2D 0B\
+    \ 09 29 68 |\n| 065051D0 | 0A 5F 12 46 4A 57 5F 58 | 58 41 8C 44 |\n| 065051E0\
+    \ | 8A 0F 12 0A 05 50 50 5F | 7F 3D 0B 09 |\n| 065051F0 | 70 39 97 50 97 52 83\
+    \ 93 | 35 6E 4C 54 6F 87 89 |\n| 06505200 | 07 5F 62 54 38 4E 0A 56 | 09 48 95\
+    \ 5D |\n| 06505210 | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 06505220 | 00\
+    \ 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 06505230 | 00 00 00 00 00 00 00 00 |\
+    \ 00 00 00 00 |\n| 06505240 | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 06505250\
+    \ | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 06505260 | 00 00 00 00 00 00 00\
+    \ 00 | 00 00 00 00 |\n| 06505270 | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n|\
+    \ 06505280 | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 06505290 | 00 00 00 00\
+    \ 00 00 00 00 | 00 00 00 00 |\n| 065052A0 | 00 00 00 00 00 00 00 00 | 14 5B 81\
+    \ 4E |\n| 065052B0 | 00 00 00 00 00 00 00 00 | 1E 6E 6B 87 |\n| 065052C0 | 70\
+    \ 39 97 50 97 52 83 93 | 35 6E 4C 54 6F 87 89 |\n| 065052D0 | 0A 5F 12 46 4A 57\
+    \ 5F 58 | -3B-O-7C- |\n| 065052E0 | 89 5B 28 24 0A 7C 11 0B | 6F 98 9A 06 |\n\
+    | 065052F0 | 86 5A 91 45 83 0A 93 32 | 77 66 50 3D |\n| 06505300 | 00 00 00 00\
+    \ 00 00 00 00 | 00 00 00 00 |\n| 06505310 | 00 00 00 00 00 00 00 00 | 00 00 00\
+    \ 00 |\n| 06505320 | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 06505330 | 00\
+    \ 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 06505340 | 00 00 00 00 00 00 00 00 |\
+    \ 00 00 00 00 |\n| 06505350 | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 06505360\
+    \ | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 06505370 | 00 00 00 00 00 00 00\
+    \ 00 | 00 00 00 00 |\n| 06505380 | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n|\
+    \ 06505390 | 00 00 00 00 00 00 00 00 | 00 00 00 00 |\n| 065053A0 | 00 00 00 00\
+    \ 00 00 00 00 | 00 00 00 00 |\n| 065053B0 | 00 00 00 00 00 00 00 00 | 00 00 00\
+    \ 00 |\n| 065053C0 | 2F 6A 30 6F 6D 6D 6E 62 | 99 7C 80 03 |\n| 065053D0 | 98\
+    \ 53 18 06 54 71 21 59 | 58 74 74 7A 74 |\n| 065053E0 | 88 00 00 00 00 00 00 00\
+    \ | ins.ocode. |\n\nThe first 128 bytes of master_key are not null\nfollowed by\
+    \ the number of iteration (AES-256). To find\nlook for either the master_key,\
+    \ the\nsecondary key, and the k2 tables, each of them beginning\n\n> master_key\
+    \ contains the volume encryption\nkeys. There are two keys. Both are 256-bit encryption\n\
+    for each, which can be used with:\nmaster_key contains both the master and\nsecondary-key\n\
+    Comparing the secondary keys in master_key\nand k2 gives a good path for decryption.\n\
+    \nThe first 128 bytes of master_key are not null\nfollowed by the number of iteration\
+    \ (AES-256). To find\nlook for either the master_key, the\nsecondary key, and\
+    \ the k2 tables, each of them beginning\n\n# DECRYPTING VOLUME\n\nSomething not\
+    \ over has been used to\ndecrypt the volume. A header is found after\nthe 64 bytes.\
+    \ If such keys contain\nandom data and is at the beginning of the\nTrueCrypt volume,\
+    \ we have a very good path for.\n\nThe keys have been proved to decrypt\nthe volume.\
+    \ A problem: the encryption\nalgos are not known. In example, we'\nonly know that\
+    \ one of two algorithms was found.\n\nWe can add more by checking\nthe volume\
+    \ where used\nperformed PRDF2, if we find that the passes\nseems to be at least.\n\
+    \nThe list of encryption is not stored in the\nTrueCrypt value. To decrypt the\
+    \ volume\nheader has been successfully decrypted. I when the\ntweak is present\
+    \ in the volume, we\ntry to check it can\n\nWith all this information, we can\
+    \ recover\ntINFO structure exactly. It is not possible\nto get the volume header\
+    \ if the volume\nhas a size of 48 bytes or if it is really big, maybe\nbefore\
+    \ of the gf_ctx field used as a\n\nWhen the volume is encrypted, the field of\n\
+    algos identifiers are stored in the field of\ntvolume. Unfortunately, it is located\n\
+    before the gf_ctx field, hence it might be\npresent an option.\n\n# Salt\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_20_1.png)\n\
+    \nThe retained solution is to decrypt the first sector of\nthe and after the volume\
+    \ header.\nmaster_key, we how many algorithms are\nused in order to check if it\
+    \ is FAT32 or NTFS volume.\nhere we are the available algorithms sorted\n\n+ \
+    \  - Serpent\n- AES-Twfish\n- Serpent\n- 3 ciphers\n- AES-Twfish-Serpent\n- Serpent-Twfish-AES\n\
+    \n+   - Cipher\n- Tofof\n\n40 HITR MAGAZINE OCTOBER 2010\n\nOCTOBER 2010 | HITB\
+    \ MAGAZINE 41"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# INFORMATION SECURITY
+
+
+    Hence, however to be done on more than three possible candidates. A level header
+    starts with 3B and has an identifier with 3 (IMDS5.0).
+
+
+    Python. The worst part was the implementation of the code that requires computations
+    in GF(2n); these computations were not optimized at all, which allowed us to understand
+    how it worked, but made the tool unusable in real world.
+
+
+    Detecting hidden volumes
+
+    Looking at the CRYPTO info gives interesting results: remember that TrueCrypt
+    can create hidden volumes, and that there is no way to know there is a hidden
+    volume unless...
+
+
+    No crypto-library implemented the hash and encryption used by TrueCrypt. I use
+    PyCrypt, then I decided to add the missing algorithms: Serpent,fish, Whirlpool
+    and SHA-512. The SHA-512 module is a simple however; the other algorithms have
+    been written in C Linux kernel source.
+
+
+    This is different when the volume is still mounted.
+
+
+    XTS has been written in Python and it was faster than the previous implementation.
+
+
+    volataoffset specifies the first data sector of the volume. When a normal volume
+    is mounted, this value is 0x2000; which is the offset of the header. When a hidden
+    volume is mounted, this value will be different.
+
+
+    # CONCLUSION
+
+
+    What is shown here is not very technical. Finding keys in memory is rather easy,
+    because the presence of the volume salt near the encryption key. Nevertheless,
+    it is a useful result.
+
+
+    What is more interesting is when a volume contains a hidden volume, and the user
+    enters the two passwords. In this case, the normal volume has the same size as
+    the other.
+
+
+    Code and Pycrypt patches are available at: google.com/pytruecrypt/*
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_21_0.png)
+
+
+    TrueCrypt encrypts the hidden volume using the encryption keys previously mentioned.
+
+
+    # Harnessing knowledge to deliver one-of-a-kind capabilities.
+
+
+    A tool can decrypt the volume from the memory dump. It searches for the volume
+    salt checks if it is inside.
+
+
+    Vulnerability Research Labs, LLC combines state-of-the-art technology with really
+    decades of experience, to deliver an unparalleled set of services to mitigate
+    risk posed by today''s threats.
+
+
+    Another tool decrypts the volume using the encryption keys previously mentioned.
+    The goal is to decrypt it without TrueCrypt (which might be slightly modified).
+
+
+    # BIBLIOGRAPHY
+
+
+    +   [TrueCRYPT] Edition, Editor: TrueCrypt explained (TrueCrypt 2009)
+
+    [TrueCrypt] http://github.com/2008/02/truecrypt-explained-truecrypt-update.html
+
+    [HASH] Adam Marshall, Steven D. Schartz, Nicholas Jordan, Karl J., William Carlson,
+    William Paul, Joseph J., Matthew S., and Robert B. (2006a).
+
+    [21] Time We Lost: Cold Boot Attacks on Encryption, Keyscrypt. http://truecrypt.org/blog/
+
+    [FIRMWARE] : A little journey into Windows memory, http://github.com/stevejohnson/memory-forensics/blob/master/memory-forensics-analysis.pdf
+
+    [SPEC] : D. Gvisian, Compression physique par le bc,, http://archive.org/2007/Compression_physique_par_le_bc.pdf
+
+
+    A first-time truecrypt user could learn to use a chosen password, that contains
+    the encrypted encryption keys. It allows you to mount the volume using a fake
+    password and dumps the keys.
+
+
+    # REFERENCES
+
+
+    +   1. TrueCrypt explained (TrueCrypt 5 update) - http://blog.bjm.de/2008/02/truecrypt-explained-true-update.html
+
+
+    Tools could have used the TrueCrypt source code if it were preferred to develop
+    in Python, as many of the several tools needed to implement TrueCrypt. The base
+    code could be a big start and has been adapted for TrueCrypt/6.
+
+
+    The original code was made for learning purposes and was very slow; cryptographic
+    routines we were written in
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_21_1.png)
+
+
+    42 HERTZ MAGAZINE | OCTOBER 2010'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# # Reconstructing Dalvik Applications using UNDX
+
+
+    By Marc Schönfeld
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_22_0.png)
+
+
+    As a reverse engineer I have the tendency to decode the code that is running inside
+    the device. I am coming from the JVM background, so I wanted to know what Dalvik
+    is about. Additionally I wanted to learn yet another dalvik bytecode language
+    while sitting on a boring task. As I prefer to decode and doing the UNDX, which
+    will be presented in the following paragraphs.
+
+
+    WHAT IS DALVIK
+
+    vik is a runtime that uses Android applications. It was invented by Dan Bornstein,
+    a smart engineer at Google and named it after a village in Iceland. Dalvik is
+    register-based and uses dalvik bytecode. It runs its own bytecode dialect which
+    is executed by the Non-JVM runtime engine; see the comparison in Table 1.
+
+
+    | Table 2: Dalvik APIs |
+
+    | Dalvik | JVM |
+
+    |---|---||
+
+    | java.io | Y | Y |
+
+    | java.net | Y | Y |
+
+    | java.lang.* | Y | Y |
+
+    | com..* | Y | N |
+
+
+    Dalvik can choose from a wide range of APIs, some known from Java, and some are
+    Dalvik specific. Some of the libraries are shown in Table 2.
+
+
+    | Table 1: Dalvik vs. JVM |
+
+    | Feature | Dalvik | JVM |
+
+    |---|---|--|
+
+    | Architecture | Register | Stack |
+
+    | OS-Support | Android | Multiple |
+
+    | File | apk | dex |
+
+    | Executable | per application | JAR |
+
+    | Memory | low | high
+
+
+    DALVIK DEVELOPMENT PROCESS
+
+    Dalvik apps are developed using developer tools like Android Studio IDE. The developer
+    compiles the sources to dalvik classes (using the java compiler). The next step
+    is to transform the classes into dex format (using the d8 tool, which results
+    in the dex file). This file, filled with metadata (and manifest resources) needed
+    for deployment. An APK-file is transferred to the device or an emulator, which
+    can be added with apps, or in user-end cases, as downloaded from the market.
+
+
+    DALVIK DEVELOPMENT FROM A REVERSE ENGINEERING PERSPECTIVE
+
+
+    PERSPECTIVES
+
+    Dalvik applications are available as files, so you can download it as a cake.
+    The questions during reverse engineering of dalvik apps are to find out whether
+    the application contains malicious code, code that sends data to a handler channel,
+    or if the libraries statically used (if it''s APK application) have unpatched
+    security holes, which may affect the dex file they contain.
+
+
+    WORKFLOW
+
+    Dalvik programs follow a recurring workflow of developing apps. In their default
+    setup it involves Java dex. There is no way to back decode code unless we completed
+    the dex (see Figure 2). This differs from the Java dex where we can decompile
+    the code using the toolbox of every programmer. Our tool UNDX fills this gap,
+    as seen in figure 2.
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_22_1.png)
+
+
+    | Table 3: Dalvik development process |
+
+    | jari/java | class | jar |
+
+    |---|---|--|
+
+    | *java | | |
+
+    | dex | | *dex |
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_22_2.png)
+
+
+    | Figure 3: Development process with undx |
+
+    | jari/java | undx | |
+
+    |---|---|--|
+
+    | *java | | |
+
+    | *dex | | *dex |
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_22_3.png)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# DESIGN CHOICES\n\nHow to parse dex files. Before that the tool was a matter\
+    \ of some design decisions to be decided. This first one was about the reuse grade\
+    \ of the parsing strategy, the one was the library choice for generating java\
+    \ bytecode.\n\n# PARSING DEX FILES\n\nThe dextool of the android SDK can perform\
+    \ a complete dump of dex files which is used by builds. It lists the parameters\
+    \ that influenced the design of the parser. The decision was to use such method\
+    \ for gathering information from dex, when we parse the dex files we use dextool\
+    \ output which is relatively easy to compare, parse structures. However there\
+    \ are frequent omissions in the output of dex as the dump of array data (as shown\
+    \ in Figure 6).\n\n# DESIGN\n\nThe dextool of the android SDK can perform a complete\
+    \ dump of dex files which is used by builds. It lists the parameters that influenced\
+    \ the design of the parser. The decision was to use such method for gathering\
+    \ information from dex, when we parse the dex files we use dextool output which\
+    \ is relatively easy to compare, parse structures. However there are frequent\
+    \ omissions in the output of dex as the dump of array data (as shown in Figure\
+    \ 6).\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_23_0.png)\n\n| Table 3: Parsing\
+    \ strategy |\n| | | parsing direction |\n|---|---|---|n| Speed | Time advantage,\
+    \ do not have to extract everything | Direct access to classes, headers |\n| Control\
+    \ | handle a number of nasty bugs | Immediate fix possible |\n| Available info\
+    \ | Filters all | All you can parse\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_23_1.png)\n\
+    \n![](img/27dc30d9ee9d016ae2e2400b49269e56_23_2.png)\n\nWe chose the BCEL (jakarta.apache.org/bcel)\
+    \ as it has a very back backend (compared to the potential alternatives like ASM\
+    \ and jasweed). However this is based on authors subjective experience and what\
+    \ was taken from the dextool by the BCEL classes.\n\n# PROCESSING STEPS\n\nFigure\
+    \ 7 shows the steps that are necessary to parse an apk back into java bytecode\
+    \ representation. First goal\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_23_3.png)\n\
+    \n![](img/27dc30d9ee9d016ae2e2400b49269e56_23_4.png)\n\n```\nprivate static void\
+    \ handle_method_data(Interface itf, String className, String methodName, String\
+    \ signature) {\n    ConstantPool cp = itf.getConstantPool();\n    String class_name\
+    \ = itf.get(itf.getConstantPool().getConstantIndex(0)).getName();\n    String\
+    \ method_name = itf.get(itf.getConstantPool().getConstantIndex(1)).getName();\n\
+    \    String method_type = itf.get(itf.getConstantPool().getConstantIndex(2)).getName();\n\
+    \    if (class_name.equals(\"Ljava/lang/Object;\" && method_name.equals(\"<init\"\
+    )) {\n        System.out.println(\"Found constructor: \" + class_name + \" \"\
+    \ + method_name);\\n    } else {\n        System.out.println(\"Found method: \"\
+    \ + class_name + \" \" + method_name + \" \" + method_type);\n    }\n}\n```\n\n\
+    APK structures are complex, and they need careful processing. In the end the data\
+    \ is written to a jar file.\n\nThe process combines splits variants by combining\
+    \ the meta data from the classes in the dex file with the process data, by inspecting\
+    \ the dex and BCEL classes, as we have no other way to access the data. The BCEL\
+    \ class object is then ready to be dumped into a class file, an entry of the output\
+    \ jar.\n\nThe process class data: This step includes extracting the meta data\
+    \ for the visibility, class interface, subclass information and instance fields\
+    \ of each class to be created, too.\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_23_5.png)\n\
+    \n```\nprivate static void handle_method_data(Interface itf, String className,\
+    \ String methodName, String signature) {\n    ConstantPool cp = itf.getConstantPool();\n\
+    \    String class_name = itf.get(itf.getConstantPool().getConstantIndex(0)).getName();\n\
+    \    String method_name = itf.get(itf.getConstantPool().getConstantIndex(1)).getName();\n\
+    \    String method_type = itf.get(itf.getConstantPool().getConstantIndex(2)).getName();\n\
+    \    if (class_name.equals(\"Ljava/lang/Object;\" && method_name.equals(\"<init\"\
+    )) {\n        System.out.println(\"Found constructor: \" + class_name + \" \"\
+    \ + method_name);\\n    } else {\n        System.out.println(\"Found method: \"\
+    \ + class_name + \" \" + method_name + \" \" + method_type);\n    }\n}\n```\n\n\
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_23_6.png)\n\n```\nprivate static void\
+    \ handle_method_data(Interface itf, String className, String methodName, String\
+    \ signature) {\n    ConstantPool cp = itf.getConstantPool();\n    String class_name\
+    \ = itf.get(itf.getConstantPool().getConstantIndex(0)).getName();\n    String\
+    \ method_name = itf.get(itf.getConstantPool().getConstantIndex(1)).getName();\n\
+    \    String method_type = itf.get(itf.getConstantPool().getConstantIndex(2)).getName();\n\
+    \    if (class_name.equals(\"Ljava/lang/Object;\" && method_name.equals(\"<init\"\
+    )) {\n        System.out.println(\"Found constructor: \" + class_name + \" \"\
+    \ + method_name);\\n    } else {\n        System.out.println(\"Found method: \"\
+    \ + class_name + \" \" + method_name + \" \" + method_type);\n    }\n}\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Figure 11: Transforming sparse qubits\n\n```\n```java\npublic void transform(String\
+    \ input) {\n    Map<String, Integer> result = new HashMap<>();\n    HashMap<String,\
+    \ Integer> qubits = new HashMap<>();\n    qubits.put(\"0\", 0);\n    qubits.put(\"\
+    1\", 1);\n    int size = qubits.size();\n    List<String> newQubits = new ArrayList<>();\n\
+    \    for (int i = 0; i < input.length(); i++) {\n        if (input.charAt(i) ==\
+    \ '1') {\n            newQubits.add(\"1\" + i);\n        }\n    }\n    result.put(\"\
+    result\", newQubits.size());\n    return result;\n}\n```\n```\n\n# Figure 12:\
+    \ Decomposition\n\n```\n```java\npublic void decompose(Context context) {\n  \
+    \  super(context);\n    JSONObject data = new JSONObject(\"data\");\n    JSONObject\
+    \ db = data.getJSONObject(\"db\");\n    JSONObject view = db.getJSONObject(\"\
+    view\");\n    String status = view.getString(\"status\");\n    JSONObject result\
+    \ = new JSONObject();\n    result.put(\"status\", status);\n    setResult(result);\n\
+    }\n```\n```\n\n# Figure 13: Graph With DIA\n\n```\n```python\nimport networkx\
+    \ as nx\ndef create_graph(data):\n    G = nx.Graph()\n    for node in data['nodes']:\n\
+    \        G.add_node(node['id'])\n    return G\n```\n```\n\n# Figure 14: Dalvik\
+    \ Code\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_24_0.png)\n\n# Figure 15: JVM\
+    \ Code\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_24_1.png)\n\n# Figure 16: Static\
+    \ Analysis\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_24_2.png)\n\nThe process\
+    \ method: The major work of UNIX is performed in transforming the Dalvik bytecode\
+    \ into JVM instructions. We extract the meta data, transform the instructions\
+    \ and generate IRs for each Dalvik. This method involves transforming meta data\
+    \ to IR methods, extracting method signatures, setting up local variables, and\
+    \ mapping Dalvik registers to JVM stack positions. A snippet is shown for this\
+    \ process.\n\nGenerating the java instructions: The details for creating IRs from\
+    \ Dalvik instructions are very intensive. First IRs for every Dalvik instruction\
+    \ are created to handle forward jumps prepared. Then for every Dalvik instruction\
+    \ an equivalent JVM bytecode block is created. In this conversion UNIX spends\
+    \ to be efficient. Not every instruction can be one-to-one; some differences exist\
+    \ between Dalvik and JVM as shown in Figure 9 and 10. The following illustrates\
+    \ the method. We achieve to verify some invariant constructs where we have assigned\
+    \ Dalvik regs to JVM stack positions.\n\nTo violate the verifier less as we want\
+    \ to obey stack balance rule, when processing the operations. Every data provide\
+    \ type reference of the object references on the stack (construct flow of data\
+    \ analysis). This is often requires registers for objects of differing types.\
+    \ This detail illustrates how hardware and memory constraints in mobile devices\
+    \ influenced the design of the architecture."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "Stored data in BCEL structures: After all methods in classes are parsed, processing\
+    \ is finished, and we have a class file for each of them in the dex.\n\nStatic\
+    \ analysis of code\nNow we have generated from the Dalvik code, what can we do?\
+    \ We could analyze the code with static checking tools (like 불구하고) to find programming\
+    \ bugs, vulnerabilities, leaks with tools we can reverse and already learned that\
+    \ automated tools find files in a directory (AD, DEX), see Figure 15 to reveal\
+    \ Java-like code to speed up understanding, which may prove that you receive equivalent\
+    \ and and not a 100 percent certain. There are differences due to heavy transformation\
+    \ processes between their effect, as such of stack variables.\n\ninto a control\
+    \ flow graph (like the one offered by findbugs) in a graph graphing the layout\
+    \ of your choice. Figure 16 shows such approach using dia.\n\nSUMMARY AND TRIVIA\n\
+    INDEX consists of about 400 lines of code, which are written in Java, only external\
+    \ dependencies except which are none, but we could use it as a GUI and contribute\
+    \ to the project, as the licenser is maintaining free GPL code. The code is available\
+    \ at http://github.com/undx/undx.\n\nAt this point we can Dan Borstein (again),\
+    \ for something using the UNDX name .\n\n# ABOUT THE AUTHOR\n\nMarc Schönebeck\
+    \ is a known speaker at international conferences since 2002. He has spoken at\
+    \ BlackHat, RSA, DMAC, PaCon,Sec, HackInBerlin and other major conferences. In\
+    \ 2010 he finished his PhD at the University of Hamburg. In daytime works on the\
+    \ topic of Java and JEE security for flat Hat. He has been marked at AEC illegalsec\
+    \ dot.\n\nIn certain cases it is recommended to use file difference because a\
+    \ decompiler was not possible due to lack of obfuscation.\n\nAlthough real engineers\
+    \ prefer code, UNDX can also compete in the RE football league, using more graphs\
+    \ and consume less. If you want that, instead a 20 liner groovy script, and transfer\
+    \ the nodes and and\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_25_0.png)\n\n\
+    # ISACA Malaysia Chapter\n\nMEMBERSHIP BENEFITS\n\n+   - ENHANCE YOUR K\n- ADVANCE\
+    \ YOUR CAREER\n- STAND OUT WITH ISACA CERTIFICATIONS\n- CONNECT AND NETWORK\n\n\
+    ISACA has more than 14000 strong workforce diversified by its members. We work\
+    \ in more than 60 countries and cover a variety of IT positions. Some are it in\
+    \ senior ranks, others are at middle management levels and still are those who\
+    \ are new to the field. We work in all industries, including finance and financial\
+    \ banking, accounting, government and the public sector, and manufacturing.\n\n\
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_25_1.png)\n\n# Upcoming Events and Training\n\
+    \n25th Anniversary Celebration and Awards\n- December 2010\n\n# Get Certified\n\
+    \nCertified Information Systems\nAuditor (CISA)\n\nThe CISA certification is known\
+    \ worldwide\nas the recognized authority for those\nwho control, monitor and assess\n\
+    organization's information technology and\n systems.\n\n# COBIT5 and Governance\n\
+    9 November 2010\n\n# Information Security Workshop\n11 – November 2010\n\n# IT\
+    \ Audit & IT Security,\nIT Risk Management and Governance\nTraining Week\n29,\
+    \ Nov 30 and 1 Dec 2010\n\n# Advance IT Audit and Assurance Workshop\n2 – December\
+    \ 2010\n\nThe only security breach you will\nembar embarrassed to take.\n\n# Certified\
+    \ Information Security\nManager (CISM)\n\nThe management-focused CISM is a unique\n\
+    certification for individuals who design\nand manage information security\nprograms.\
+    \ CISM is the leading certification\nfor information security managers.\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_25_2.png)\n\
+    \n# Certified in the Government\nEnterprise IT (GEIT)\n\nGEIT recognizes a wide\
+    \ range of\nprofessionals for their knowledge and application\nof IT governance\
+    \ practices and principles.\n\n# Certified in Risk and Information\nSystems Control\
+    \ (CRISC)\n\nCRISC (pronounced \"see-risk\")\nis designed for IT professionals\n\
+    who have hands-experience with risk\nand evaluation; risk response; risk\nmonitoring;\
+    \ IT control design and\nnplementation, and IS implementation\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_25_3.png)\n\
+    \nISACA's Certifications\nISACA enhances your value to\nto employees and clients\n\
+    \nISACA Malaysia Chapter\nWWW.ISACAMAYSIA.ORG\n\n50 HTB MAGAZINE 1 | OCTOBER 2010\n\
+    \n![](img/27dc30d9ee9d016ae2e2400b49269e56_25_4.png)\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_25_5.png)"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# [BOOK REVIEW]
+
+
+    # # UBUNTU for Non-Geeks
+
+    A Pain-Free, Get-Things-Done Guide
+
+
+    by Rickford Grant with Phil Bull
+
+
+    Review by Dhillon Andrew Kannabhibaran
+
+
+    With a title "Ubuntu for Non-Geeks" the target audience for
+
+    this book is clearly not the seasoned HiTB Magazine reader. That
+
+    being, with the holiday season just around the corner,
+
+    book would certainly be a great gift for someone looking to get
+
+    or her feet wet in the world of the penguin.
+
+
+    > "Presented in a
+
+    tutorial style, these
+
+    follow-along guides
+
+    are designed to get
+
+    t reader involved in
+
+    solving a specific task
+
+    in order to learn and
+
+    more-importantly-
+
+    understand
+
+    things in Linux work."
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_26_0.png)
+
+
+    Broken down into 21 easy follow chapters, the book kicks off all most other
+
+    troditional titles doi with a brief intro to Linux, providing the
+
+    reader with the usual about Linux, acorns ensuring clear
+
+    information on the Ubuntu distribution in particular. Like its predecessors, the
+
+    book is bundled with an Ubuntu live CD and 4th edition ships with Ubuntu
+
+    10.04 (Lucid Lynx).
+
+
+    Unlike other beginners'' type books, Ubuntu for Non-Geeks is
+
+    written to be used as both reference and to read cover. It
+
+    asumes the reader is somewhat unfamiliar with computers in general
+
+    and so encountered in Microsoft.
+
+
+    The book is designed to taking the reader through various projects:
+
+    In a presented style, these follow-along guides are designed to get the
+
+    reader involved in solving a specific task in order to learn and more importantly
+
+    how how Linux works.
+
+
+    Projects start off with very basics - customizing your desktop
+
+    and (feeling easy opposed to GNOME desktop and widgets) to get
+
+    onlinear. This is followed by guided more
+
+    projects - things like learning system and software update date
+
+    via the Ubuntu Software Center, a the Terminal and introductory
+
+    commands and projects: Dealing with like burning DVD and getting
+
+    or iPad or iPhone to work with your Linux system. There is each
+
+    chapter on anti virus installed, configuring a basic software
+
+    projects and getting files and set up.
+
+
+    There was also a chapter on Linux gaming, although I''m not sure how
+
+    Linux adapters are coming for the games. Real games would probably
+
+    for a dual boot setup any anyhow for the general gamer, the projects
+
+    on getting Windows installed or running on a virtual machine would be
+
+    robably of interest.
+
+
+    While this book claims to be aimed at the non-expert, mentioned a
+
+    does that the reader is already familiar with computers in general
+
+    and that they would understand specific feats. That being, the
+
+    slightly more inclined, who have always wanted to try out Linux
+
+    dist didn''t want to find Effective while trying to get something to work, would
+
+    definitely find this book with its by step project based
+
+    which makes Linux a whole lot easier.
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_26_1.png)
+
+
+    UBUNTU for Non-Geeks
+
+    4th Edition
+
+    Author: Rickford Grant & Phil Bull
+
+    Publisher: No Start Press
+
+    Pages: 496, cd
+
+    ISBN: 978-1-5927-257-9
+
+
+    52 HiTB MAGAZINE OCTOBER 2010
+
+
+    OCTOBER 2010 HiTB MAGAZINE 53'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# [INTERVIEW]
+
+
+    # "When an individual starts following the constructive path
+
+
+    ADITYA K. SOOD
+
+    Founder SecNiche
+
+
+    Zahir Shah talks about
+
+    ADITYA K. SOOD,
+
+    speaker for RSA, XCON,
+
+    writer for Hakin9, HITB and
+
+    the founder of SecNiche
+
+    Security and a PhD
+
+    candidate at Michigan
+
+    State University.
+
+
+    ![](img/27dc30d9ee9d016ae2e2400b49269e56_27_0.png)
+
+
+    Hi Aditya, how are you?
+
+    Hi Zarul, I am fine and going good.
+
+
+    Maybe you can share with our readers something about yourself and how did you
+    get into with computer security?
+
+    I started working in the computer security field from my college days. Even then,
+    the time was not as exciting as it is today. Success in this field comes from
+    curiosity, time and eventually hard work. Learning naturally enables you to learn
+    a lot of things. I spent a lot of time understanding the craft of computer security
+    and kept on motivating during sleepless nights which is unavoidable in every field.
+    I started learning by myself and online. Perseverance and ''Never give up'' helped
+    me to acquire the basic knowledge of computer security. I have since believe that
+    by serving the community as all researchers and people in the community we will
+    have learned a lot from it. So, I feel I have a responsibility to give back to
+    the community by engaging in productive research.
+
+
+    Before pursuing your PhD at Michigan, what did you learn?
+
+
+    Which area of security interest you the?
+
+    I have keen interest in the diverse facets of computer security. The security
+    industry has a sense of responsibility. My work is focused on security research,
+    analysis, and vulnerability research. I am like to doing security which includes
+    application security assessments, fuzzing, testing, and contributing to the community
+    by publishing papers and tools. This helps in detecting vulnerabilities across
+    a wide range of devices and various products. I try to sharing my knowledge and
+    thoughts because it helps me to set a path of communication between two peers
+    to enhance the learning experience.
+
+
+    Few years back, because of the benefit of what I would call as list "Trill".
+
+    How did you take a risk?
+
+
+    Yes Dani, it was in the first year that I did not get anything except for criticism.
+    Personally, I believe that human efforts are constructive in nature. So, I decided
+    not to take any negative meaning from the criticism that was making in the line.
+    I firstly believe that criticism should help you to remain committed to what you
+    goal. It helps to to gain many experiences. We have online democracy where everyone
+    enjoys freedom of speech. The more people, the more we are exposed to the protocols
+    of communication. In feeling nowadays that criticism does not lead an individual
+    to fail but instead allows him to work with the best of my abilities without getting
+    distracted into the "Trill". When I started following the constructive path, the
+    journey became successful and productive research.
+
+
+    Do you know who was that person and what did he have against you?
+
+
+    OCTOBER 2010 | HITB MAGAZINE 55'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# [INTERVIEW]\n\n# [INTERVIEW]\n\nmore realistically and in a good manner.\
+    \ Criticism is the pre-cursor to new knowledge. In general, it is a fallacy and\
+    \ it is to correct it.\n\nFirst of all, I believe that computer security is a\
+    \ global concern. Internet has become so prevalent that securing the networks\
+    \ is now everyone's priority. There is a need to secure the internet from the\
+    \ vulnerabilities created by hackers. Their harmful actions have the potential\
+    \ to perform damages. We need a better regulatory framework in place. The enforcement\
+    \ of cyber laws is not strong enough to combat attacks in the real world. We have\
+    \ seen the forefront of related activities. Governments are also taking steps\
+    \ in various countries to build cyber defense. It is considered as a preventive\
+    \ measure for not just a specific problem but also a global problem.\n\n# So I\
+    \ guess this is nothing more than a distraction?\n\n# The hackers are tracking\
+    \ the rabbit hole with efficient structural and technological components\n\nI\
+    \ do not get myself disgusted by these threats nowadays. The distractions are\
+    \ not potential in taking Wall with efforts directed towards constructive approach\
+    \ and focus on learning new things. We become more mature with the passage of\
+    \ time and God gives us blessings if he believes the importance of purity and\
+    \ truth. This is the definition of professionalism.\n\n# How about your decision\
+    \ to join COSESEC and pursue your PhD at Michigan?\n\n# which helps us drive strong\
+    \ methodology of hacking.\n\nIts not just about the job. I believe that there\
+    \ is a great benefit ahead. I am joining sure that we can come up to a single\
+    \ entity and collective efforts. This helps us in simulation of ideas between\
+    \ two worlds. This helps us in what I am currently working in the industry research\
+    \ sector.\n\n# So, are you planning to stay in Academia after your PhD?\n\n# We\
+    \ are seeing a growing number of hackers websites targeting this region in free\
+    \ to you. What do you think about these hackers' hacking?\n\nIt is a good experience\
+    \ to learn under the authority of academics. As I mentioned, bridging a gap is\
+    \ my main target. Both aspects of learning is important.\n\nYour question has\
+    \ made me have a huge increase in interest. I have many ideas about the methods\
+    \ of hackers but it is increasingly difficult to understand the rapidly changing\
+    \ tactics. The rapid change in the environment has changed the attacks adopted\
+    \ by the hackers and malicious codes. The reconstruction of their actions is\n\
+    \n# What is your focus in market research?\n\nMy research is based on quantifying\
+    \ potential problems that are theoretical in the field of web security and malware.\
+    \ At present I am concentrating towards malware analysis and impacts on real environment.\
+    \ Malware is a severe problem and we require more research and analysis to clear\
+    \ the rooting and the generation of threats towards this kind of internet. Potential\
+    \ and coherent research is required to get inline with what\n\n# Please elaborate\
+    \ about this.\n\nA sophisticated piece of malware that is injected into websites\
+    \ uses vulnerabilities to exploit 'drive-by' downloads to infect machines. Malware\
+    \ has different attack vectors. The vector of attack can be divided into three\
+    \ categories: \n\n# How about the number of attacks coming from this region?\n\
+    \nThat is true. One of the most targeted markets for hackers when it comes to\
+    \ cyber. Countries like China, Taiwan, and Korea are key players in this field\
+    \ executing the attacks. Hackers become adept at using sophisticated methods to\
+    \ conduct attacks on their information. However, most of the threats come from\
+    \ various international organizations. These types of attacks are described as\
+    \ targeted attacks that are pre-selected\n\n+   1. Infection Through Third Party\
+    \ Connection (Infectments, Outbound Links)\n2. Outbreaks From Data Centers (Malware\
+    \ Infection - Can be So XXX occurs)\n3. Exploitation of vulnerability in software\n\
+    \nMalware is spreading through the increasing of third party connection from the\
+    \ internet. We have seen various related content from different websites and users\
+    \ that use a central point for information sharing. However, most of the threats\
+    \ are not restricted to the primary website which we focus on. Vulnerabilities\
+    \ play a critical role in the dissemination of malware. Lastly, data center infection\
+    \ also results in massive scale only for infecting servers. My continuous analysis\
+    \ reveals the fact that attacks are exploited at a large scale for infecting servers.\
+    \ How to spread malware is the growing infection attack vector to exploit the\
+    \ threat of social connection. Furthermore, short URLs are used in Twitter to\
+    \ also enable malware to hide the actual attack content.\n\nThe hackers hackers\
+    \ are tracking the rabbit hole with efficient structural and technological components\
+    \ which help to drive some methodology of hacking. In the past, I have seen many\
+    \ hackers in China as XF and to the best of my knowledge, Chinese hackers are\
+    \ increasingly becoming successful in deploying and making such attacks. The methods\
+    \ of their operation remain hidden as a result of the flow of information restricted.\n\
+    \n# Thank you for today\n\nYou're welcome.\n\n# ADDITY K. SOUD is a PhD at Michigan\
+    \ State University. He has already worked in the domain of cybersecurity, COSESEC,\
+    \ and KMPG. He is a senior at Net Security, an industry professional with extensive\
+    \ experience. He has been an active speaker at conferences such as RSA (2010),\
+    \ TRISC, EuSecWest, Xconon, Troopers, OWASP, FOSS, CERT. He has written in articles\
+    \ for HITB, Hacker Xenoish, User Login, Eleven editors, Debugged/ME\n\nOCTOBER\
+    \ 2010 | HITB MAGZINE 57\n\n![](img/27dc30d9ee9d016ae2e2400b49269e56_28_0.png)"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# CONTACT US
+
+
+    HITB Magazine
+
+    Hack in The Box (M) Sdn. Bhd.
+
+    Suite 26.3, Level 26, Menara IMC,
+
+    No. 8 Jalan Sultan Ismail,
+
+    50250 Kuala Lumpur,
+
+    Malaysia
+
+
+    Tel: +603-20394724
+
+    Fax: +603-20318359
+
+    Email: media@hackinthebox.org'
+  merge: -1
+  pgno: 29

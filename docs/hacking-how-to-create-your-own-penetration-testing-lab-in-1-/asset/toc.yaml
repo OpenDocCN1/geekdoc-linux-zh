@@ -1,0 +1,86 @@
+- - '#'
+  - Hacking：1 小时内创建你自己的渗透测试实验室！（Kali Linux 小册）（计算机科学）
+- - '#'
+  - 欢迎
+- - '##'
+  - 硬件准备
+- - '###'
+  - 最低配置
+- - '###'
+  - 推荐配置
+- - '###'
+  - 关于竞争的说明
+- - '###'
+  - USB Wi-Fi 适配器
+- - '###'
+  - 在 BIOS 中启用虚拟化
+- - '###'
+  - 下载软件
+- - '####'
+  - VMware
+- - '####'
+  - Kali Linux
+- - '####'
+  - Windows
+- - '####'
+  - Metasploitable
+- - '####'
+  - Ubuntu Server
+- - '####'
+  - Damn Vulnerable Web App (DVWA)
+- - '###'
+  - VMware 的替代方案
+- - '####'
+  - Virtual Box
+- - '####'
+  - Hyper-V
+- - '###'
+  - 安装 VMware
+- - '###'
+  - 安装 Kali Linux
+- - '###'
+  - 在 VMware Workstation Player 上配置虚拟机
+- - '###'
+  - 在 VMware 上安装 Kali
+- - '###'
+  - 在 VMware 上完成 Kali 安装
+- - '###'
+  - 安装 Windows 10
+- - '##'
+  - 在 VMware Workstation Player 上配置虚拟机
+- - '##'
+  - 在 VMware 上安装 Windows 10
+- - '##'
+  - 完成 VMware 上的 Windows 10 安装
+- - '##'
+  - 导入和配置 Metasploitable VMware 镜像
+- - '###'
+  - 导入 Metasploitable VMware 镜像
+- - '##'
+  - 配置 Metasploitable VMware 镜像
+- - '##'
+  - 安装 DVWA
+- - '##'
+  - 在 VMware 上安装 Ubuntu Server
+- - '###'
+  - 在 VMware 上配置虚拟机并运行“易安装”
+- - '##'
+  - 在 VMware 上完成 Ubuntu 安装
+- - '##'
+  - 在 Ubuntu 服务器上配置 LAMP 栈
+- - '##'
+  - 安装 DVWA
+- - '##'
+  - DVWA - VMware Workstation 12 Player（非商业用途）
+- - '#'
+  - 要使用的数据库管理系统
+- - '##'
+  - 变量
+- - '###'
+  - 使用 PostgreSQL
+- - '###'
+  - 使用 'RECAPTCHA CAPTCHA'
+- - '###'
+  - 默认安全设置
+- - '##'
+  - 接下来做什么？

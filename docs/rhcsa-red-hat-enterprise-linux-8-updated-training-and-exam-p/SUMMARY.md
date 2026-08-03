@@ -1,0 +1,2 @@
++   [RHCSA Red Hat Enterprise Linux 8 (更新版)：培训与考试准备指南 (EX200)](README.md)
++   [RHCSA Red Hat Enterprise Linux 8 (更新版)：培训与考试准备指南 (EX200)](rhcsa-red-hat-enterprise-linux-8-updated-training-and-exam-p.md)

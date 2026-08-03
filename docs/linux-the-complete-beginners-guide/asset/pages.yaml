@@ -1,0 +1,1691 @@
+- img_proc: true
+  md: '# THE COMPLETE BEGINNER''S GUIDE
+
+
+    # LINUX
+
+
+    ![](img/b3e3eefc67e59bf919d973fe9d804363_0_0.png)
+
+
+    BYRON FRANCIS'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # The Linux Operating System
+
+
+    Arthur: Fyrus Aqil
+
+
+    © 2016'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# © Copyright 2016 by - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    +   - From a Declaration of Principles which was accepted and approved equally
+    by a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information provided herein is offered for informational purposes solely,
+    and is universal as so. The presentation of the information is without contract
+    or any type of guarantee assurance.
+
+
+    The trademarks that are used without any consent, and the publication of the trademark
+    is without permission or backing by the trademark owner. All trademarks and brands
+    within this book are for clarifying purposes only and are owned by the owners
+    themselves, not affiliated with this document.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Disclaimer and Terms of Use: The Author and Publisher has strived to be accurate
+    and complete as possible in the creation of this book, notwithstanding the fact
+    that he does not warrant or represent at any time that the contents within are
+    accurate due to the rapidly changing nature of the Internet. While all attempts
+    have been made to verify information provided in this publication, the Author
+    and Publisher assumes no responsibility for errors, omissions, or contrary interpretation
+    of the subject matter herein. Any perceived slights of specific persons, peoples,
+    or organizations are unintentional. In practical advice books, Readers are cautioned
+    to rely on their own judgment about their individual circumstances and act accordingly.
+    This book is not intended for use as a source of legal, medical, business, accounting
+    or financial advice. All readers are advised to seek services of competent professionals
+    in the legal, medical, business, accounting, and finance fields.
+
+
+    # Table of Contents'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '© Copyright 2016 by - All rights reserved.
+
+
+    # INTRODUCTION
+
+
+    Myths about Linux
+
+
+    Differences Between Linux And Windows
+
+
+    Understanding Linux Partition Types & Linux Hard Disk Partitioning
+
+
+    “Setting Up” Linux Hard Disk Partitions
+
+
+    Steps to Create and Run a Linux Script to Run Linux Commands
+
+
+    How To Get A Red Hat Linux Certification
+
+
+    Linux Installation Help - How To Install the Linux OS from a New Linux Download
+
+
+    7 Steps to Install Linux on a New Computer System
+
+
+    Linux Quick Start - How to Use Linux Video Tutorials from CD and Run Linux in
+    Windows
+
+
+    Download Linux Virtual Machines and Run Linux in Windows!
+
+
+    How to Use Linux Command Line Components
+
+
+    Running Linux to Get Real Experience
+
+
+    Conclusion'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# # INTRODUCTION
+
+
+    I want to thank you and congratulate you for downloading the book, “The Linux
+    Operating System”.This book contains proven steps and strategies on how to Run
+    Linux to get real experience, getting Linux books for system administration commands,
+    as well as installing Linux on a windows and so much as you can see in the Table
+    of content. Don’t raise your eyebrows or by hearing the word Linux. It is as user
+    friendly as windows.
+
+
+    It’s a free operating system available to download but you have to pay a tiny
+    bit to make order it or buy it from a company. Linux came into being 22 years
+    ago- it was developed by Linux Tornados of Finland with a group of programmers
+    from the open source software movement.
+
+
+    Linux is growing steadily year after year. With a passionate community backing
+    it, with big companies Like IBM and HP pledging their support for it, it’s no
+    wonder Linux-the wonder operating system for servers of the past, has also made
+    it to the desktops of today.
+
+
+    Linux is based on the commercial OS, UNIX. All the operating systems try to pack
+    in command line management of systems. System administrators of companies use
+    command all the times as their lifeline, but it’s not really meant for regular
+    users.
+
+
+    If you want to get comfortable with Linux, you don’t have to go of windows. Get
+    Linux installed on a separate partition and you can switch between Windows and
+    Linux. For new users who don’t have any computer background learning windows or
+    Linux takes both same time and sitting.
+
+
+    It is suggested that new PC buyers get both operating systems installed and should
+    use them equally. If you’re getting Linux for more than 2-3 PCs, you can also
+    get training and support at a small free, if you choose to have it. Else it’s
+    the Linux community on the Net to your rescue.
+
+
+    You don’t have to be a great computer user to work with Linux. There are Desktop
+    environments that you work in Linux as you work in Windows. As is the same with
+    Linux.
+
+
+    Linux has a better security support for multi-users, lets you set up a stable
+    server, internet gateways etc, and still lets it-self be used as a desktop workstation.
+    There are no blue screens and no viruses to speak of. It is rarely attacked by
+    any viruses and there are very'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'less number of viruses written for Linux. It can be given 10+ points on a 10
+    point scale for security.
+
+
+    Thanks again for downloading this book, I hope you enjoy it!'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Myths about Linux
+
+
+    Installation:
+
+
+    Linux is hard to install, isn''t it? Not really. Most people haven''t installed
+    Windows on their computers either-since it comes preloaded. Linux is as easy-some
+    as easier-to-install compared to Windows. You can install it through a graphical
+    user interface like Windows. These days Linux Versions are easier to install than
+    Windows. But what really stumps most people in installing Linux on a second partition
+    on their hard disk, when they want to be able to use both operating systems.
+
+
+    A partition is a way of organizing space on your hard disk by creating virtual
+    sections that are separate from each other. Most computers that are running Windows
+    or MS DOS have one large chunk of space holding the OS. This space is the C drive.
+    If you have a large hard disk, it''s likely that it has been divided into smaller
+    bits partitions to help you organize your data better. These partitions are usually
+    D;, E: etc. you could have Linux on any of these.
+
+
+    Windows 98 creates a system called FAT32 on the entire hard disk, DOS and Win95
+    use FAT16. Linux has many file systems-on the most popular is ext3. But you could
+    have Linux installed on Fat32 partitions also.
+
+
+    Linux is very difficult and based on text command
+
+
+    Linux has come a long way from being the system of brilliant computer users. It
+    has extremely advanced X Windows systems that have a complete graphical user interface-you
+    know, like Windows. It also has a large number of window manager that you work
+    with different levels of customization of your desktop.
+
+
+    Linux has a robust character-cell interface where commands need to be typed in.
+    x Windows is a free program that runs with Linux to provide a GUI where the mouse
+    and keyboard can be used extensively. But the X system itself is q primitive and
+    needs a window manager, or a desktop environment- like GNOME or KDE- to be really
+    usable.
+
+
+    Window managers are programs that let you interact with the underlying X system
+    and Linux OS by relaying commands. The popular window managers are Sawfish, Enlightenment,
+    Black box, after step and Window manager.
+
+
+    As for desktop managers, they have their own window manager and other tools that
+    make'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'you feel that you are working in Window! GNOME and KDE are the most popular
+    of these. GNOME stands for GNU Network Model
+
+
+    Environment and KDE for K desktop Environment. They have tools that allow drag
+    and drop, have panels and taskbar- almost like clones of windows.
+
+
+    Hardware compatibility problem and few applications that run on Linux
+
+
+    Well, most new distributions will detect and configure your hardware in a jiffy,
+    unless you have some really old or exotic piece of hardware. All hardware are
+    properly detected and their drivers installed. Only Win modems driven by Windows
+    drivers face problems.
+
+
+    As software, there''s plenty. And most of it comes free-free for you to use, modify
+    and configure according to your needs. Almost excellent software for Linux is
+    free and you don''t lose anything by giving it a try. You get free support on
+    the Net q quickly on any q you may have. And you don''t even have to wipe out
+    your Windows. Just get Linux on a different hard disk partition and to switch
+    between them as you please.
+
+
+    Other packages are commercial and you have to buy the software-but this is mostly
+    for the software and training you, and not for the software itself. Sometimes,
+    if you have the Windows version (as a doom) you can download a small program that
+    will allow you to play the game in Linux. The games in Linux are of very high
+    quality and features. You''ll enjoy them. Here''s what available?
+
+
+    Office suites: Star Office, Open Office, Applixware, Corel WordPerfect
+
+
+    Graphics: GIMP, Corel Photo player
+
+
+    Music: XMMS, Free amp, Real Player
+
+
+    Video: MTV, Xine
+
+
+    Games: FreeCiv, Tux racer, Doom, Quake, Heretic, Unreal And the list is growing.
+
+
+    # Linux varieties for Home Users:'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'If there are so many people working on it. There''s likely to be many Linux
+    versions too. Many companies working on Linux have come up with what are called
+    Linux distributions. There are Linux versions that are compiled and packaged and
+    released with additional software.
+
+
+    **RedHat**: Probably the most popular and in many ways the leading version. It''s
+    currently in version 9. The installation and configuration is easy. A blue curve
+    file manager and the default GNOME desktop look quite stunning. With a host of
+    tools that allow usage as a server and as a workstation. The Red Hat Package Manager
+    (RPM) format developed by Red Hat has become the defector for software distribution
+    in Linux world. Installing new software is a breeze. It also has an advanced and
+    easy font management system that makes fonts in Windows look cool.
+
+
+    Mandrake: Linux is now in its version 10. It can be installed on a native Windows
+    Partition using Lin4Win tool, which may slow down the machine. It also lets you
+    do a traditional Linux install into its dedicated partition. Mandrake''s configuration
+    and software installation is painless. A slightly modified RPM architecture called
+    mdk.rpm but most Red Hat software can also be used for Mandrake. The outstanding
+    feature in this version is the collection of window managers-eye-candy freaks
+    which will have a great time.
+
+
+    SUSE: From Germany comes the Chameleon, SUSE. Now in its 8.x avatar, it has one
+    of the most extensive software packages compiled, and getting them installed is
+    easy with yeast (Yet another Software Tool) which gives a centralized interface
+    from where you can pick and choose the software to be installed. Among other things,
+    SUSE comes with some stunning 3D games that showcase Linux gaming prowess
+
+
+    Corel/Xandross: Corel entered the market with Core Linux a few years ago. Now
+    it has merged into Xandross OS, which is based on Core Linux. This is a Debian-type
+    version, and can be installed without much fuss after resizing the Windows partition.
+    Xandross contains Crossover office, which is a refined retail version of WINE
+    that lets you install and run many Microsoft apps.
+
+
+    # Windows applications in Linux
+
+
+    Some applications have been ported over to Linux, other run with a program called
+    WINE (Wine is Not an Emulator). Crossover, commercially available software also
+    lets you use your Windows programs on Linux. VMware is another program that lets
+    you run Windows under Linux. Now many software companies have started developing
+    high end software for Linux.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: The cool thing about Linux is that most software is free, and you can legitimately
+    use them without worrying about piracy. If you’re worried that Linux won’t look
+    as pretty as windows can, all you have to do is check out some of the cool Linux
+    interfaces and Window managers. But you don’t find a lot of multimedia titles
+    for Linux. And if you’re into a lot of these, Windows is in the way to go. So
+    if you have a PC that runs both, you can easily switch between the two, and get
+    the best of both worlds.
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Differences Between Linux And Windows
+
+
+    This sub-topic will discuss the differences between the Linux and Windows operating
+    software’s, I’ll discuss some of the pro’s and con’s of each system.
+
+
+    Let us first start out with a general overview of the Linux operating system.
+    Linux at its most basic form is a computer kernel. The Kernel is the underlying
+    computer code, used to communicate with hardware, and other system software, it
+    also runs all of the basic functions of the computer.
+
+
+    The Linux Kernel is an operating system, which runs on a wide variety of hardware
+    and for a variety of purposes. Linux is capable of running on devices as simple
+    as a wrist watch, or a cell phone, but it can also run on a home computer, for
+    example Intel, or AMD processors, and its even capable of running on high end
+    servers using Sun Sparc CPU’s or IBM POWER processors. Thousands of Linux distro’s
+    can only run one processor, while others can run many at once.
+
+
+    Common uses for Linux include that of a home desktop computing system, or more
+    commonly for a server application, such as use as a web server, or mail server.
+    You can even use Linux as a dedicated firewall to help protect other machines
+    that are on the same network.
+
+
+    A programmer named Linus Torvalds first made Linux in 1991 as a variant of the
+    Unix operating system. Linus Torvalds made Linux open source with the GNU (General
+    Public License), so other programmers could download the source code of free and
+    alter it whatever they see. Thousands of coders that the world began downloading
+    and altering the source code of Linux, applying patches, and bug fixes, and other
+    improvements, to make the OS better and better. Over the years Linux has gone
+    from a simple text based clone of Unix to to powerful operating system, with full-featured
+    desktop environments, and unprecedented portability, and a variety of uses. Most
+    of the original Unix code has also been gradually written out of Linux over the
+    years.
+
+
+    As a result of Linux being open source software, there is no one version of Linux;
+    instead there are many different versions or distributions of Linux, that are
+    suited for a variety of different users and task. Some Distributions of Linux
+    include Gentoo, and Slackware, due to the lack of a complete graphical environment
+    is best, suited for Linux experts, programmers, and other users who know their
+    way around a command prompt. Distributions that lack a graphical environment are
+    best suited for older computers lacking the processing power necessary to process
+    graphics, or for computers performing intensive task, where it is desirable to
+    have all of the system resources focused on the task at hand, rather than wasting
+    resources by processing graphics.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Other Linux distributions aim at making the computing experience as easy as
+    possible. Distributions such as Ubuntu, Linspike make Linux easier to use, offering
+    full-featured graphical environments that eliminate the need for a command prompt.
+    Of the downside of ease of use is less configurability, and wasted system resources
+    on graphics processing. Other distributions such as Suse try to find a common
+    ground between ease of use and configurability.
+
+
+    Linux has two parts, they include include the Kernel mentioned previously, and
+    in most circumstances it will also include a graphical interface, which runs atop
+    the "Kernel" reference #3. In most cases the user will communicate with the computer
+    via the graphical interface. (ref #6) Some of the more common graphical environments
+    that can run on Linux the following. The KDE GUI (Graphical user interface).
+
+
+    Matthias Ethric developed KDE in 1996. He wanted a GUI for the Unix desktop that
+    would make all of the applications look and feel alike. He also wanted a desktop
+    environment for Unix that would be easier to use than the ones available at time.
+    KDE is a free open source project, with millions of coders working on throughout
+    the world, but it also has commercial support from companies such as Novell, Troltech,
+    and Mandriva. KDE aims to make an easy to use desktop environment
+
+
+    without sacrificing configurability. Windows users might note that KDE has a similar
+    look to Windows. Another popular GUI is (ref #7) GNOME. GNOME puts a heavy emphasis
+    on simplicity, and user ability. Much like KDE
+
+
+    GNOME is open source and free to download. One feature of GNOME is the fact that
+    it supports many different languages; GNOME supports over 100 different languages.
+    Gnome is license under the LGPL license (lesser general public license). The license
+    allows applications written for GNOME to use a much wider set of licenses, including
+    some commercial applications. The name GNOME stands for GNU Network object environment.
+
+
+    GNOME’s look and feel is similar to that of other desktop environments. Fluxbox
+    is another example of a Linux GUI. With less of an emphasis on ease of use and
+    eye candy, Fluxbox aims to be a very lightweight, and more efficient user of system
+    resources. The interface has only a taskbar and a menu bar, which is accessed
+    by right clicking over the desktop. Fluxbox is most popular for older computers
+    that have a limited abundance of system resources.
+
+
+    Most Linux distributions offer a graphical environment, to simplify the user experience,
+    they all offer a way for more technically involved users to directly communicate
+    with the Kernel via a shell or command line. The command line allows you to run
+    the computer without a GUI, executing commands from a text-based interface.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'An advantage of using the command prompt is it uses less system resources and
+    enables your computer to focus more of its energy on the task at hand. Examples
+    of commands include the cd command for changing your directory, or the halt command
+    for shutting down your system, or the reboot command for restarting your computer
+    etc.
+
+
+    Now that we are more familiar with the Linux operating system, we can note the
+    many ways in which Linux differs from the worlds most popular OS, Microsoft Windows.
+    From this point forward we will discuss some of the most prominent ways in which
+    Linux deferrers from Windows.
+
+
+    For starters there is only one company that releases a Windows operating system,
+    and that company is Microsoft. All versions of Windows, weather Windows XP Home,
+    Business, or Vista, all updates, security patches, and service patches for Windows
+    comes from Microsoft. With Linux on the other hand there is not one company that
+    releases it.
+
+
+    Linux has millions of coders and companies throughout the world, your time to
+    work on updates, newer versions, and software applications. Although some companies,
+    charge for TECH support, and others charge for their distribution of Linux, packaging
+    it with non-free software, you will always be able to get the Linux Kernel for
+    free, and you can get full-featured Linux desktops with all the necessary applications
+    for general use, as well required to release a free version in order
+
+
+    comply with the GPL License agreement. With Microsoft Windows on the other hand
+    you have to pay Microsoft for the software, and you will also have to pay for
+    most of the applications that you will use.
+
+
+    Windows and Linux also differ on TECH support issues. Windows is backed by the
+    Microsoft Corporation, which means that if you have an issue with any of your
+    products the company should resolve it. For example if Windows is not working,
+    then you should be able to call Microsoft and make use of their TECH support to
+    fix the issue. TECH support is usually included with the purchase of the product
+    for a certain amount of time, maybe a two year period, and from there on you may
+    be charged for the service. Although IBM backs their Linux products, for the
+
+
+    most if you use Linux you are on your own. If you have a problem with Ubuntu Linux
+    you cannot call Ubuntu and expect any help. Despite the lack of professional help,
+    you can however receive good TECH advice, from the
+
+
+    thousands or millions of Linux forums are on the web. You can get great help from
+    social networking sites such as Myspace, by posting q questions in many Linux
+    groups. You can usually receive responses for your q questions a matter of hours
+    form many qualified people
+
+
+    Configurability is another key difference between the two operating software’s.
+    Although'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'Windows offers its control panel to help users configure the computer to their
+    liking, it does not match the configuring options Linux provides especially if
+    you are a real TECH savvy user. In Linux the Kernel is open source, so if you
+    know how, you can
+
+
+    modify it in virtually any way you see fit. Also Linux offers a variety of Graphical
+    environments to further suit your needs. As mentioned earlier Linux is capable
+    of running full-featured graphical environments like KDE, or more lightweight
+    and resource friendly GUI''s like Fluxbox, or Black, to suit users with older
+    computers. There are also versions of Linux that are designed to emulate the Windows
+    look and feel as closely as possible. Distributions such as Linspare are best
+    for users who are migrating over from the Windows world.
+
+
+    There are also distributions that include no graphical environment at all to better
+    suit users that need to squeeze out all of the computing power that
+
+
+    they get for various computing activities, and for users that are more advanced
+    than others. All of this configurability can be problematic sometimes, as you
+    will have to make a decision on which desktop is right for you, and to make things
+    easier on yourself you will need to install applications that are native to your
+    distribution and graphical environment.
+
+
+    (ref #1) The cost effectiveness of Linux is another way it separates itself from
+    Windows. For home use Linux is cheap and in most cases completely free, while
+    Windows varies in cost depending on which version you buy. With Linux most of
+    the applications will also be free, however for Windows in the majority of cases
+    you suppose to pay for the applications. For most cases, with Linux there is no
+    need to enter a product activation key when performing an installation, you are
+    free to install it on as many computers as you''d like. With Windows you are only
+    allowed to install it on one computer and Microsoft uses product activation software
+    to enforce this rule.
+
+
+    When installing Windows you must enter a product activation key, which will expire
+    after many uses. If you wish you can purchase Linux from a variety of vendors,
+    which will include a boxed set of CDs, Manuals, and TECH support for around 40-130$.
+    Of course If you purchase a high-end version of Linux used for servers it may
+    cost anywhere from 400$-2000$. In "2002 computer world magazine quoted the chief
+    technology architect at Merrill Lynch in New York, as saying "the cost of running
+    Linux is typically a tenth of the cost of running Unix or Windows alternatively."(ref#1)
+
+
+    (ref #1) Installation of Windows is generally easier, installing Linux. "With
+    Windows XP there are three ways to install. There is a clean install, in which
+    you install Windows on a blank hard drive. There is also an upgrade install, in
+    which you start with an older version of Windows and "upgrade" to a newer one.
+    An advantage of upgrading is that all of the files on the older system should
+    remain intact throughout the process. You'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'can perform a repair install, in which case you are installing the same version
+    of Windows on top of itself in order to fix a damaged version of Windows.
+
+
+    There is also a recovery, which Technically is not an install; it is used to restore
+    a copy of Windows back to its factory settings. The disadvantage of recovering
+    Windows is the fact that you will lose all of your data,
+
+
+    which resides on the damaged copy of Windows.” (ref#1) Also with Windows you can
+    rest assured that your hardware will most likely be supported by the operating
+    software, although this is not much of a problem with Linux unless you can be
+    sure Linux will support all of your hardware. With Linux installation varies greatly
+    from Distro to Distro.
+
+
+    You may be presented with a graphical installer or it may be a text-based installer,
+    these variations make Linux a bit more difficult and unpredictable to install
+    than Windows,(the difficulty is disappearing). You may perform a clean install
+    of Linux or dual boot, to co-exist with another operation software. With Linux
+    rather than having to buy an upgrade CD, you can install by downloading and installing
+    them while your desktop runs. With Linux it is also not necessary to reboot your
+    computer after most upgrades. It is only necessary to reboot after an upgrade
+    to the kernel.
+
+
+    Another major difference between Linux and Windows is the applications that you
+    will use with other OS. Windows includes a much wider abundance of commercially
+    backed applications than Linux. It is much easier to find the software that you
+    are looking for with Windows than it is with Linux, so many software vendors make
+    your products compatible with Windows only. With Linux you will for the most part
+    be forced to let go of the familiar applications that you have grown accustomed
+    to with Windows, in favor of lesser-known open source apps that are made for Linux.
+
+
+    Applications such as Microsoft office, Outlook, Internet Explorer, Adobe Creative
+    suite, and chat clients such as MSN messenger, do not work natively with Linux.
+    Although with Linux you can get Microsoft office and'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'Adobe creative suite to work using software from codeWeavers called Over Office.
+    Instead of using these applications you will need to use Linux apps such as open
+    office, The Gimp Image Editor, The Thunderbird email
+
+
+    client, Instead of the MSN messenger you can use GAIM messenger, and you can use
+    Firefox as your web browser.
+
+
+    Also with Linux it can be difficult to install software even if it is for Linux.
+    This is due to the fact that Linux has so many different versions. Software that
+    is to install on one version probably will require some configuration in order
+    to install on another version. An example would be if you were trying to install
+    software that was made for the KDE graphical environment, on the GNOME GUI, This
+    app would not easily install on the GNOME GUI, and would re quire some configuring
+    on your part to successfully install it.
+
+
+    The type of hard that Linux and windows runs on also causes them to differ. Linux
+    will run on many different hardware platforms, from Intel and AMD chips, to computers
+    running IBM PC processors. Linux will run on the slowest 386 machines to the biggest
+    mainframes on the planet, newer versions of Windows will not run on the same amount
+    of hardware as Linux. Linux can be configured to run on apples, Ipod’s, or smart
+    phones. A disadvantage of Linux '' is when it comes to using hardware devices
+    such as Printers, Scanners, or Digital camera’s.
+
+
+    Where as the driver software for these devices will often be easily available
+    for Windows, with Linux you are for the most part left on your own to find drivers
+    for these devices. Most Linux users will find comfort in the fact that drivers
+    for the latest hardware are constantly being written by coders throughout the
+    world and are usually quickly made available.
+
+
+    (ref #1) One of the notable differences between the two operating software’s is
+    Windows legendary problems with malicious code, known as Viruses and Spy. Viruses,
+    Spy-ware and a general lack of security are the biggest problems facing the Windows
+    community. Under Windows Viruses and Spy-ware have the ability to execute themselves
+    with little or no input from the user. This makes constant concern for any Windows
+    user.
+
+
+    Windows users are forced to employ third party virus software to help limit the
+    possibility of the computer rendered useless by malicious code. Anti virus software
+    often has the negative side effect of hogging system resources, slowing down your
+    entire computer, also most anti virus software requires that you pay a subscription
+    service, and that you constantly download updates in order to stay ahead of the
+    intruders.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'With Linux on the other hand problems with viruses are practically non-existent,
+    and in reality you do not need virus protection for your Linux machine. One reason
+    why Viruses and Spy-ware are not a problem for Linux is simply due to the fact
+    that there are far being more than Linux. A more important reason is that running
+    a virus on a Linux machine is more difficult and re qui a lot more from the user.
+    With Windows you might accidentally run a virus, by opening an email attachment,
+    or double clicking on a file that contains malicious code. However with Linux
+    a virus would need to run in the terminal, re quiires the user to execute file
+    permissions, and then open it in the terminal.
+
+
+    And in order to cause any real damage to the system the user would have to log
+    in as root, by typing a user name and password before running the virus.
+
+
+    Foreexample to run a virus that is embedded in an email attachment the user would
+    have to, open the attachment, save it, then right click the file and choose properties
+    form the menu, in properties they can give execute permissions, they would then
+    be able to open the file in the terminal to run the virus. And even then the user
+    would only be able to damage his or her home folder, all other users data will
+    be left untouched, and all root system files would also remain untouched, because
+    Linux qui a root password to make changes to these files.
+
+
+    The only way the user can damage the whole computer would be if he so logged as
+    root user by providing the root user name and password to the terminal before
+    running the virus. Unlike Windows in Linux an executable file cannot run automatically,
+    It needs to be given execute permissions manually this significantly improves
+    security. In Linux the only realistic reason you would need virus protection is
+    if you share files with Windows users, and that is to protect them not you, so
+    you are not to accidentally pass a virus to the Windows computer that you are
+    sharing with.
+
+
+    The above was a general over of some differences between the Windows operating
+    system, and Linux. To recap we started with the fact that Windows has only one
+    vendor that releases the software, while Linux comes from millions of different
+    coders throughout the world. We also commented on the fact that the Linux Kernel
+    and much of the applications used with it are completely free of charge, with
+    as windows as you are forced to pay for most of the software. Unlike Windows is
+    often lacking in professional Tech support, and Linux users are often left on
+    their own or rely on the many Linux Forums and groups available on the Internet.
+    Due to the fact that the kernel is open source, Linux has a huge advantage over
+
+
+    Windows in configurability. You can configure Linux to run almost any way you
+    see fit by manipulating the Kernel.
+
+
+    Installing the Windows Operating system and applications is easier by the fact
+    that you'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'has a universal installer. Also finding applications for Windows is easier
+    because of its popularity most apps are available for Windows only, and are made
+    easily available. Linux will run on a greater variety of hard ware than does Windows,
+    from mainframe super computers running multiple IBM Power PC Chips, to a small
+    laptop running an AMD processor. And of course the difference in this writer''s
+    opinion is the fact that Linux does not suffer from an onslaught of Viruses and
+
+
+    other malicious code, unlike Windows which is plagued by countless number of malicious
+    code that can easily destroy your system if not properly guarded against.
+
+
+    Linux OS really is the superior software. Other than a few minor nuisances, linux
+    out performs Windows in most categories. The fact that Linux is more secure is
+    the tipping point, that tilts the scales in the favor of Linux. Windows simply
+    suffers from far to many security vulnerabilities for it to be considered the
+    better over all desktop environment.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# # Understanding Linux Partition Types & Linux Hard Disk Partitioning
+
+
+    When you''re doing Linux disk partitioning (during or after installing Linux)
+    you will likely run into situations where you can''t create partitions - and can''t
+    do other tasks you''d like to do with partitions!
+
+
+    This is when you need to understand the Linux hard disk partitioning “rules” described
+    below.
+
+
+    Linux System Admin Training Tips: Keep in mind that the “rules” below apply to
+    using the Linux fdisk command, which is the most commonly used disk partitioning
+    utility. may be able to “break” these rules with other hard disk partitioning
+    utilities.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# “Setting Up” Linux Hard Disk Partitions
+
+
+    You can “set up” and configure your Linux partitions while using the installation
+    routine of most Linux distributions - and also by using the Linux fdisk and parted
+    commands - and some other partitioning commands.
+
+
+    Also, as Linux System Administrator, you will also need to manage (create, delete,
+    and modify) partitions on existing Linux systems (after the OS has been installed).
+    To do this, you use the fdisk command / utility or the parted command / utility
+    - and there are also other disk partitioning commands and utilities.
+
+
+    There are several Linux hard partition “types”, such as primary, extended and
+    logical - and there are strict “rules” about using these Linux partition types.
+
+
+    # Linux Primary Partitions
+
+
+    The disk partitioning utility in a Linux installation routine and the fdisk command
+    (and other disk partitioning commands) can create a maximum of four Primary partitions
+    per hard disk drive.
+
+
+    If you need more than four hard disk partitions, you need to create at least one
+    Extended partition and then create one or Logical partitions in the Extended partition.
+
+
+    To be able to create an Extended partition on a hard disk that already has four
+    Primary partitions, you need to delete one of the Primary Partitions and then
+    create the Extended partition. So, you can have a maximum of three Primary partitions
+    if you are creating an Extended partition on a Linux hard disk.
+
+
+    # Linux Extended Partitions
+
+
+    A Linux hard disk must have at least one Primary partition before it can have
+    an Extended partition. fdisk cannot create more than one Extended partition per
+    drive. To be able to use the disk space in an Extended partition, it must have
+    at least one Logical partition (within the Extended partition).
+
+
+    # Linux Logical Partitions'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Extended partitions contain one or more Logical partitions. An Extended partition
+    is not accessed directly. It is accessed via one or more Logical partitions within
+    the Extended partition. If a hard disk has an Extended partition, then it has
+    at least one Logical partition in that partition.
+
+
+    # Partition Numbering
+
+
+    The maximum number of Primary partitions that fdisk can create is four and the
+    maximum number of Extended partitions that it can create one.
+
+
+    Remember, you must have at least one Primary partition before you can have an
+    Extended partition. You can only have one Extended partition and the maximum number
+    of the combination of Primary and Extended partitions is four.
+
+
+    The Linux disk partitioning concepts covered here apply to: Debian, Red Hat, Fedora,
+    Ubuntu, Slackware, SUSE, openSUSE - and ALL other Linux distributions.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# # Steps to Create and Run a Linux Script to Run Linux Commands
+
+
+    Creating and running a Linux script to automatically run a series of Linux commands
+    that you commonly run is easy!
+
+
+    With a Linux script, you put a series of routinely run commands in a text file,
+    and then run all of them by simply typing in the name of the file and pressing
+    Enter.
+
+
+    Linux Script Example to Create a Script to Automatically Run A Series of Linux
+    System Administration Commands.
+
+
+    Follow along with the steps in the example below to create and run your first
+    Linux script!
+
+
+    1. Run a Linux text editor.
+
+
+    2. Put the following text at the top left of the text file (indented below for
+    emphasis):
+
+    #!/bin/bash
+
+
+    This indicates that the text file is a Linux script file.
+
+
+    Press Enter twice to have a blank line below the line above.
+
+
+    3. Put the Linux command(s) in the script file.
+
+
+    The Linux commands below are used to provide an example. You can put any commands
+    in a script.
+
+
+    The Linux commands below will: clear the screen, change into the /etc directory
+    path, and then show the current path with the Linux pwd (path to working directory)
+    command.
+
+
+    Then provide a long list of the fstab file (to show you it''s there) and then
+    change into your home directory (represented by the ~ symbol) and then show the
+    path of the current'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'directory.
+
+
+    The Linux echo command is not required, but has been put in the file to show the
+    progress
+
+    of the execution of the script.
+
+
+    Also, you don''t need to indent the commands below in the Linux script - they
+    are just indented here for emphasis.
+
+
+    clear
+
+
+    echo The Screen has been cleared
+
+
+    cd /etc
+
+
+    pwd
+
+
+    echo This is the etc directory
+
+
+    ls -l fstab
+
+
+    echo This is a long listing of the fstab file
+
+    cd ~
+
+
+    pwd echo Now in my home directory
+
+
+    Linux Commands Training Tips: A Linux script can contain hundreds of lines of
+    text if
+
+    necessary - and also include complex programming logic, such as if . . then statements.
+
+
+    4. Save the text / script file with a meaningful name to create it and by give
+    it a name.
+
+
+    For example, if you want to list files in a few directories, call the file: listdirs
+
+
+    5. Run the Linux chmod command to change the permissions of the file and make
+    the
+
+    Linux text “executable”.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'In our example, the file is named: listdirs
+
+
+    Below is a Linux chmod command example for running the chmod command to change
+    the permissions of the Linux script file - and to make the listdirs text / script
+    file “executable”, so that you can run the script file in the same way as you
+    run a command.
+
+
+    $ $ (dollar sign) below is the Linux command line prompt. Don''t type in the $
+    (dollar sign), type in the command that appears at the right of the $ prompt.
+
+
+    $ chmod u+x listdirs
+
+
+    The Linux command above is chmod and it is being used to assign the x (executable)
+    permission to the u (user) of the file with: u+x and the script file name is listdirs.
+
+
+    Running a Linux Script to Run System Administration Commands
+
+
+    To run a Linux script (that is in the “current” directory), such as the listdirs
+    script, simply type in a period (dot) and a space and then the name of the file
+    and press Enter.
+
+
+    $ . listdirs
+
+
+    The concepts and Linux command examples shown above work in Red Hat, Ubuntu, Fedora,
+    Slackware, and Debian Linux - and also ALL Linux distributions.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# How To Get A Red Hat Linux Certification
+
+
+    Why Should I Get A Linux Certification?
+
+
+    Well, the first q question you might have is why should you get a Linux certification?
+    The answer to this is similar to getting certifications in general. It helps to
+    prove your knowledge in the Linux operating system, by testing and passing a minimum
+    standard of knowledge.
+
+
+    It can also help you get a job in the industry. Many jobs require a certification
+    in Linux, such as Linux administrators or general server administrators. It can
+    also add to your existing Linux knowledge, which you could apply to your current
+    job.
+
+
+    Which Linux Certification Should I Get?
+
+
+    This could be an entire post on its own - but I''ll include all the information
+    here in one convenient place.
+
+
+    There are four main providers of Linux certifications, and they all offer a range
+    of different certifications for different levels.
+
+
+    Novell
+
+
+    They offer a range of certifications, with labels of Engineer, Professional and
+    Desktop Administrator.
+
+
+    +   * Certified Linux Engineer 11 (CLE 11) - provides engineer-level skills for
+    managers and architects on large systems based on SUSE Linux Enterprise Server.
+    You need to have passed the Certified Linux Professional 11 to be eligible for
+    this.
+
+
+    +   * Certified Linux Administrator 11 (CLA 11) - a new certification, focusing
+    on daily operation of SUSE Linux Enterprise Server networks.
+
+
+    +   * Certified Linux Desktop Administrator (CLDA) - focused on those with Windows
+    desktop experience and wish to learn about SUSE Linux Enterprise Desktop.
+
+
+    +   * Certified Linux Professional 11 (CLP 11) - provides skills necessary to
+    administrate'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'SUSE Linux Enterprise Server.
+
+
+    # CompTIA
+
+
+    * CompTIA only provide a single Linux certification, the Linux+.
+
+
+    * Linux+ - an entry-level certification for those looking to get into the Linux
+    field. Vendor neutral.
+
+
+    # Linux Professional Institute
+
+
+    * The Linux Professional Institute, otherwise known as LPI, offer a few Linux
+    certifications.
+
+
+    * Linux Professional Institute Certification Level 1 (LPIC-1) - a junior level
+    Linux certification that tests basic skills in major Linux distributions.
+
+
+    * Linux Professional Institute Certification Level 2 (LPIC-2) - an advanced level
+    Linux certification that includes skills in administration. Passing the LPIC-1
+    is required for this.
+
+
+    * Linux Professional Institute Certification Level 3 (LPIC-3) - a senior-level
+    Linux certification for major Linux distributions that offers several specialties.
+    Passing the LPIC-2 is re quired for.
+
+
+    # Red Hat
+
+
+    * Red Hat offer a few certifications for their distribution of Linux.
+
+
+    * Red Hat Certified System Administrator (RHCSA) - a lower-level Linux certification
+    that covers the basics of administration.
+
+
+    * Red Hat Certified Engineer (RHCE) - more advanced Linux certification, aimed
+    at experienced Linux professionals. Passing the RHCSA is a requirement for this'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'certification.
+
+
+    +   * Red Hat Certified Virtualization Administrator (RHCVA) - focused on deploying
+    virtual hosts in the Linux environment
+
+
+    +   * Red Hat Certified Security Specialist (RHCSS) - focused on security features
+    of Linux
+
+
+    +   * Red Hat Certified Datacentre Specialist (RHCDS) - focused on the re requirements
+    administring and supporting datacentre environments
+
+
+    +   * Red Hat Certified Architect (RHCA) - the highest level of Red Hat certification,
+    this focuses on expert topics of Linux administration and usage.
+
+
+    So, the answer to which Linux certification should you get?
+
+
+    It depends on your experience and re requirements. There are several junior Linux
+    certifications (Linux+, RHCSA, LPIC, CLE11) that could be useful if you''re looking
+    to start out.
+
+
+    More advanced certifications such as the RHCE, LPIC-2, CLA11 and CLP11 can be
+    beneficial if you have more experience. If you''re a senior professional in the
+    Linux area, I''d look into the RHCA or the LPIC-3.
+
+
+    However, this part of the eBook is focused on the Red Hat certifications, so we''re
+    going to look at how to get a Red Hat Linux certification in this article.
+
+
+    # How To Get A Red Hat Linux Certification
+
+
+    The steps to getting a Red Hat Linux certification are fairly straightforward.
+    I mean, the concept is simple, but actually doing the work and getting the certification
+    can be tough, especially for the more advanced certifications.
+
+
+    The process you can follow is something like this:
+
+
+    +   * Determine which certification to get. This will come down to two things
+    - which one you want, and which one you''re eligible for. Have a look at the re
+    requirements and'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'recommended experience for each of the certifications, and make a decision.
+    Many of them are based on junior/intermediate/ expert levels, and have prerequisite
+    exams, which limits your choices. The Red Hat Certified System Administrator is
+    a good place to start, if you''re not sure.
+
+
+    +   * Determine the requirements. Confirm the re requirements on the official
+    website. This may include previous exams, years of experience, and certain knowledge.
+    You should be eligible to sit the exam before attempting to study for it.
+
+
+    +   * Enroll in the course. Make an enrolment into the course, and set an exam
+    date. Yes, do this before you even start studying. This will give you a deadline,
+    and subconsciously motivate you to study more and get it done quicker. Without
+    a set date, the study may just never happen.
+
+
+    +   * Study. Read the material, get familiar with the course work and the included
+    topics. Take notes, practice, and learn.
+
+
+    +   * Sit the exam. Depending on the exam, it will be either a theory exam based
+    on computers, or a live exam where you perform on a Linux machine.
+
+
+    +   * Pass. Knowing your material and getting the questions right will mean you
+    pass the exam.
+
+
+    +   * Celebrate! Well done, you''ve passed the exam and earned a certification!
+    All your hard work has paid off and now you''re Red Hat Linux Certified!'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# # Linux Installation Help - How To Install the Linux OS from a New Linux
+    Download
+
+
+    You can install Linux from CD or DVD onto a new computer system. This will allow
+    you to learn how to use Linux to get real, practical Linux training and experience.
+    In this section, we''re talking about a new system that doesn''t already have
+    an operating system (like Windows) on it.
+
+
+    You can download the Linux OS (operating system) as a Linux ISO file and burn
+    it to CD or DVD yourself, or you can order Linux on CD or DVD and have it mailed
+    to you.
+
+
+    Linux Tips: Linux ISO files are large. Only download Linux if you have high-speed
+    Internet access. You can buy and have the Linux OS delivered to you by mail very
+    cheaply. Just do an an Internet search for “list of linux cds” or “list of linux
+    dvds”.
+
+
+    Linux Tips: Linux DVDs hold a lot more programs than CDs. Order a Linux DVD version
+    and you will have more Linux software programs to choose from than on a CD version
+    - and you will also need fewer Linux DVDs than CDs!'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# #7 Steps to Install Linux on a New Computer System
+
+
+    # ## 1. Document Your Linux Installation Settings
+
+
+    During the Linux installation, you need to specify some system settings. These
+    include: the Linux software programs and desktop(s) you want installed, networking
+    settings, and disk partition sizes.
+
+
+    # ## 2. Boot with the Linux CD or DVD and Start the Linux Installation Routine
+
+
+    The steps to set up your system to boot from its CD or DVD drive.
+
+
+    Shut down your system and boot it with the first Linux CD / DVD in the drive and
+    start the Linux installation routine.
+
+
+    # ## 3. Specify Your Linux Installation Settings
+
+
+    Follow the on-screen prompts and put in the installation settings you documented
+    in Step 1.
+
+
+    # ## 4. Create a Regular (“Non-root”) User
+
+
+    You log in to work on a Linux system as a “user”, with a user name and password.
+    You can log in as the “root” user, or as a “non-root” user.
+
+
+    You log in and work on the Linux OS as the root user when you need to do Linux
+    system administration tasks. For example, you work as the root user to run a Linux
+    command to create a new Linux user, or to do the steps to install a Linux server.
+
+
+    When you install Linux, the root user is always created automatically for doing
+    Linux system administration tasks. However, for security reasons, you should never
+    log in to a Linux desktop as the root user.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'At some point during the installation routine, you will be asked if you want
+    to create one or more “regular” (non-root) Linux users. Always create at least
+    one regular Linux user and log in as this user to do day-to-day tasks.
+
+
+    # 5. Let the Linux OS Install on Your Hard Disk
+
+
+    After you specify the Linux installation settings and create one or more new Linux
+    users, the installation routine will copy the Linux OS and Linux software programs
+    onto the hard disk in the system, and then reboot.
+
+
+    # 6. Log In to Test the System
+
+
+    Once the system reboots, log in as a “regular” (non-root) Linux user to test that
+    you can work as this user. At this point, the Linux desktop appears and you can
+    run Linux programs to test the system.
+
+
+    Linux Tips: Remember not to log in to a Linux desktop as the root user.
+
+
+    Test the root user by logging in as a regular Linux user and opening a terminal
+    emulation window. Then run the su command to log in and work as the root user.
+
+
+    # 7. Have fun!
+
+
+    The Linux OS is an amazing and extremely reliable system. And there are thousands
+    of Linux software programs for all kinds of uses.
+
+
+    By installing and running Linux you can get lots of great practical Linux training
+    experience while working with Linux. You can work at a Linux desktop and run commonly
+    used Linux software programs. You can also work at the Linux command line and
+    learn how to use Linux commands - the way real pros do Linux system administration.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# # Linux Quick Start - How to Use Linux Video Tutorials from CD and Run Linux
+    in Windows
+
+
+    Linux video tutorials are an excellent, easy and fast way to get started at learning
+    how to use Linux.
+
+
+    Getting Linux Running in Windows - So You Can Learn How to Use Linux in Windows!
+
+
+    You can download a free Linux virtual machine “player” and a free Linux virtual
+    machine so you can run Linux in Windows.
+
+
+    Just download and quickly install the free Linux virtual machine “player”, the
+    same way you install any Windows program. This takes about twenty minutes.
+
+
+    Then download a free Linux virtual machine and uncompress the virtual machine
+    files into a folder on your Windows hard disk. Not including the download time,
+    this takes about ten minutes.
+
+
+    There is a free sample Linux video tutorial that shows every step of how to: download
+    the free Linux virtual machine player and a free Linux virtual machine, so you
+    can easily run Linux in Windows.
+
+
+    **Linux Tips:** There are hundreds of free Linux virtual machines available for
+    download for lots of popular Linux distributions (versions), including Ubuntu
+    Linux, Debian Linux, Red Hat Linux, Fedora Linux, SUSE Linux and lots more!
+
+
+    Next, run the virtual machine player and open a virtual machine, in the same way
+    as you run a word processor and open a document - and you easily get Linux in
+    Windows!
+
+
+    So, now you have Linux running in a “window” in Windows. And you can run Linux
+    software programs from the Linux desktop and also open a terminal emulation window,
+    to get to the Linux command line prompt, to run Linux commands.
+
+
+    **Linux Tips:** To open a terminal emulation window on the Linux desktop to run
+    Linux commands: click on the icon that looks like a computer screen - or right-click
+    on the desktop and select “Linux Terminal” or “Linux Console” (or similar) - look
+    through the menus and select “Linux Terminal” or “Linux Console” (or similar).'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# # Running Linux Video Tutorials from CD in Windows
+
+
+    Now put in the CD that contains the Linux video tutorials. This causes your browser
+    to automatically run and display the list of Linux video tutorials.
+
+
+    To watch a Linux video, just click on the name of the video tutorial in the list,
+    such as “Running Linux in Windows”, or “Installing Linux from CD / DVD”, or “Learning
+    How to Run Linux Commands” - and the tutorial runs in the browser (in Windows).
+
+
+    So, now you have a Linux video running in your browser and you also have Linux
+    running in another window.
+
+
+    # # Learning Linux in Windows to Get Real Practical Experience Yourself!
+
+
+    Now here’s the best part about running Linux in Windows to get Linux training.
+
+
+    Not only do you get to watch the Linux videos to see and hear how to use Linux,
+    but you also get to use a Linux desktop to run Linux software programs and most
+    importantly - run Linux commands!
+
+
+    Just start a Linux video, such as “How to Run the Linux grep Command” and watch
+    a bit of how to run the command - step-by-step. Then click on the pause button.
+
+
+    Hold down the Alt key (at the left of the spacebar on your keyboard) and press
+    the Tab key, to go to the Linux command line prompt, in the Linux window.
+
+
+    Now try the Linux command you have just seen - experiment a bit!
+
+
+    Then hold down Alt and press Tab and go to the Linux video window to watch a bit
+    of the Linux video and learn some more options of the command.
+
+
+    Then press Alt+Tab again to go to the Linux command line prompt in the Linux window
+    and try the new Linux command options. And so on.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# # Download Linux Virtual Machines and Run Linux in Windows!
+
+
+    You can run Linux in Windows by running a free Linux virtual machine player program
+    and opening a free Linux virtual machine!
+
+
+    This is fantastic for a new Linux user who needs to get Linux training and wants
+    to learn Linux in Windows.
+
+
+    You just download Linux in Windows as a “pre-installed” virtual machine, uncompress
+    the virtual machine files in the Linux download file into a folder on the Windows
+    hard disk, and run a virtual machine player program to run Linux in Windows.
+
+
+    There are lots of new Linux “flavors” (versions) available as virtual machines
+    to choose from. You can experiment with Linux commands to do Linux administration
+    tasks - without messing up Windows on your computer system!
+
+
+    For example, while learning to do Linux administration tasks, you do things like:
+    create a new Linux user, install Linux software programs, and create or delete
+    directories in the Linux file system.
+
+
+    When you do these steps, you may accidentally cause the Linux system to stop working
+    properly. If this happens, all you have to do is erase the Linux virtual machine
+    files, uncompress the original files into their folder again, and start running
+    Linux in Windows again!
+
+
+    The steps below outline how Linux is installed on a computer system, how a Linux
+    virtual machine is created, and how to run Linux in Windows.
+
+
+    Installing the Linux OS on a computer system “from scratch” is a very time-consuming
+    process. You do the following steps:
+
+
+    +   + Set up the system to boot from CD / DVD
+
+
+    +   + Boot the system with a Linux CD / DVD'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '+ Run the Linux installation routine
+
+
+    + Provide several Linux system configuration settings, such as Linux networking
+    settings and partition settings
+
+
+    + Select the Linux software programs to be installed on the system
+
+
+    + Wait while thousands of Linux software programs are copied onto the hard disk
+    of the system
+
+
+    To create a Linux virtual machine, someone does the following steps for you:
+
+
+    All the steps above to install the Linux OS on a computer system - as a virtual
+    machine compresses the files that make up the virtual machine into a single file
+    puts the virtual machine on a Linux server as a free Linux download file
+
+
+    # To run Linux in Windows, you just:
+
+
+    + Download and install the virtual machine player program
+
+
+    + Download a single file containing the compressed Linux virtual machine files
+
+
+    + Uncompress the virtual machine files into a folder
+
+
+    + Run the virtual machine player
+
+
+    + Open (and run) the Linux virtual machine
+
+
+    To run a Linux command, open a terminal emulation window on the Linux desktop
+    get to the Linux command line.
+
+
+    Once you get a Linux virtual machine running, you can go to the Linux command
+    line and run Linux commands. This is the best way to learn how to do Linux administration
+    tasks. And you can use video tutorials with your virtual machine to learn how
+    to use Linux. Just watch a bit of a video tutorial on a Linux command and then
+    go to the Linux'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'virtual machine and try the command yourself!
+
+
+    This is a great way to get Linux training and experiment with using Linux.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# How to Use Linux Command Line Components
+
+
+    Linux Commands - The great thing about Linux commands is that they are virtually
+    identical from one Linux distribution (version) to another. So the way the real
+    pros Linux administration is to work at the Linux command line and run Linux commands.
+
+
+    Learning how to run a Linux command can be very difficult for someone new to Linux,
+    so here are some Linux tips that will help you to learn how to use Linux commands
+    when working at the Linux command prompt.
+
+
+    There are three main parts of a Linux command:
+
+
+    +   1. The Linux command name
+
+
+    +   2. Options that can be used with the Linux command
+
+
+    +   3. The “item(s)” that the Linux command is being run “on”
+
+
+    When you run a Linux command, spaces are used between: the Linux command name,
+    the command options and the “item” command is being run “on”. The “item” could
+    be a Linux directory, file, user or some other Linux software component.
+
+
+    For example, you run the Linux command named ls (for list) “on” a Linux directory
+    to see a list of files in the directory. You run the Linux command named rm (remove)
+    “on” a Linux directory to remove the directory from the Linux file system.
+
+
+    To run a Linux command, you type in the name of the command, and any other parts
+    of the command, such as options, and press the Enter key.
+
+
+    You can see an example of the Linux command that is used to create a new Linux
+    user below. The useradd command is being run “on” the bthatcher user name to create
+    this Linux user.
+
+
+    **Linux Tips:** Linux commands are run at the Linux command line prompt and this
+    is shown as]# at the left of the command. You don’t type in the prompt, you type
+    the'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'Linux command at the right of the prompt.
+
+
+    **Linux Tips**: The Linux command prompt may also appear as: ]$ or as another
+    symbol, instead of # or $.
+
+
+    ```
+
+    # useradd -c "Becky Thatcher" bthatcher
+
+    ```
+
+
+    This Linux command creates a new Linux user named bthatcher with the full name
+    of “Becky Thatcher”. The -c (for comment) option is used with this command to
+    add the full name as a comment to the Linux user of bthatcher.
+
+
+    One of the easiest and best ways to get Linux training is to see Linux commands
+    being run in Linux video tutorials. With this method - you see, hear and do.
+
+
+    With a Linux video tutorial, you see and hear how to run a Linux command and see
+    and hear a description of the output of the command. You can also pause the video
+    so you can run the Linux command yourself!'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Running Linux to Get Real Experience
+
+
+    You learn Linux best by getting real practical experience working with it. By
+    using a Linux desktop, running Linux programs, and especially running Linux commands
+    - the real power behind Linux administration.
+
+
+    # 5 Ways to Get Linux Running to Get Linux Training
+
+
+    +   1. Get Linux “pre-installed” on a new computer
+
+
+    This is one of the easiest ways to start working with Linux. Several major retailers
+    now offer Linux pre-installed on their computer systems. Just buy it, boot it
+    and start working!
+
+
+    +   2. Install Linux on a system that doesn’t have Windows
+
+
+    You can install Linux “from scratch”, from CD or DVD, on a new or used system
+    that doesn’t already have an operating system (like Windows) on it.
+
+
+    +   3. Install Linux on a Windows system
+
+
+    If you don’t want to buy a new or used system for Linux, you can install Linux
+    on an existing Windows system. When you do this, you create a “dual boot” (Linux
+    and Windows) system.
+
+
+    After you install Linux and boot your system, a menu will appear allowing you
+    to boot into Windows or boot into Linux!
+
+
+    In this case, you don’t need to buy a computer just for Linux. But there is a
+    downside: if you make a mistake during the installation, or even if you delete
+    Linux from your system later, you may lose all your Windows programs and data!
+
+
+    Linux Tip: Be sure to back up your system before you install Linux and before
+    remove Linux.
+
+
+    +   4. Boot a system with a Linux “live” CD or DVD version'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'This one’s quite fun and very easy to do!
+
+
+    You can work with a Linux “live” version by booting a system with a Linux live
+    CD
+
+    DVD.
+
+
+    Just put the Linux live CD / DVD in your drive and start your system. As soon
+    as your system boots, Linux will automatically start and run “live”. No installation
+    required!
+
+
+    Linux Tip: If you don’t have a high-speed connection to download Linux, you can
+    buy Linux on CD or DVD and have it mailed to you anywhere in the world for a surprisingly
+    small amount of money.
+
+
+    5. Run Linux from within Windows
+
+
+    A free “player” version of Linux is the easiest and fastest way to get Linux running
+    from
+
+    within Windows, on an existing Windows system!
+
+
+    Just run Windows and download and install the free Linux “player” program and
+    a free
+
+    “player” version of Linux. This lets you easily run Linux from within Windows!
+
+
+    Run the player program and open the player version of Linux and you get a fully
+
+    functional version of Linux running from within Windows!'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Conclusion
+
+
+    Thank you again for downloading this book!
+
+    I hope this book was able to help you to acquire more more knowledge about Linux
+    Operating
+
+    System and other important set ups that will enable you to get the best experience
+    with it.
+
+
+    ![](img/b3e3eefc67e59bf919d973fe9d804363_41_0.png)
+
+
+    Finally, if you enjoyed this book, then I''d like to ask you for a favor, would
+    you be kind
+
+    enough to leave a review for this book on Amazon? It''d be greatly appreciated!
+
+
+    Click here to leave a review for this book on Amazon!
+
+
+    Thank you and good luck!
+
+
+    © Fyrus Aqil'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 42

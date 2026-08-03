@@ -1,0 +1,6425 @@
+- img_proc: true
+  md: "# # The Chromebook Guide to Google Linux\n\n# ## Easy access to over 50 thousand\
+    \ software packages at no cost.\n\n| PID USER | PRI | NI | VIRT | RES | SHR |\
+    \ %CPU %MEM S TIME Command |\n|---|---|---|---|---|---|---|---|---|---||\n| 627\
+    \ root | 20 | 0 | 6927 | 5028 | 6234 | 0.0 | 2.2 | S | 1.17 | /usr/bin/xterm |\n\
+    | 958 zen | 20 | 0 | 10180 | 7536 | 6441 | 0.0 | 0.0 | S | 0.0 | /usr/lib/dbus-daemon-session\
+    \ |\n| 211 root | 20 | 0 | 15441 | 7188 | 0 | 0.0 | 1.4 | S | 0.0 | /usr/libexec/gnome-shell\
+    \ |\n| 619 root | 20 | 0 | 21598 | 5036 | 5472 | 0.0 | 0.0 | S | 0.0 | /usr/bin/at\
+    \ |\n| 1318 zen | 20 | 0 | 5470 | 5256 | 4471 | 0.0 | 0.0 | S | 0.0 | /usr/bin/X-org\
+    \ |\n| 629 root | 20 | 0 | 30368 | 4036 | 5016 | 0.0 | 0.0 | S | 0.0 | /usr/lib/dbus-daemon-session\
+    \ |\n| 1237 zen | 20 | 0 | 26990 | 17800 | 0 | 0.0 | 0.0 | S | 0.0 | /usr/bin/message-bus\
+    \ |\n| 629 root | 20 | 0 | 30828 | 6024 | 5032 | 0.0 | 0.0 | S | 0.0 | /usr/bin/sshd\
+    \ |\n| 146 root | 20 | 0 | 15634 | 5992 | 4972 | 0.0 | 0.0 | S | 0.0 | /usr/sbin/sshd\
+    \ |\n| 105 root | 20 | 0 | 10160 | 8192 | 0 | 0.0 | 0.0 | R | 0.0 | /usr/sbin/kworker\
+    \ |\n| 1051 root | 20 | 0 | 10160 | 8192 | 0 | 0.0 | 0.0 | R | 0.0 | /usr/sbin/kworker\
+    \ |\n| 99 root | 20 | 0 | 20680 | 5468 | 3568 | 0.0 | 0.0 | S | 0.0 | /usr/sbin/syslogd\
+    \ |\n| 436 root | 20 | 0 | 49326 | 3588 | 588 | 0.0 | 0.0 | S | 0.0 | /usr/bin/xinit\
+    \ |\n| 1137 root | 20 | 0 | 66532 | 2356 | 0 | 0.0 | 0.0 | S | 0.0 | /usr/lib/dbus-daemon-session\
+    \ |\n| 1137 root | 20 | 0 | 7716 | 1500 | 1360 | 0.0 | 0.1 | S | 0.0 | /usr/sbin/abinet\
+    \ |\n| 120 root | 20 | 0 | 231M | 8468 | 6145 | 0.0 | 0.3 | S | 0.0 | /usr/bin/python3\
+    \ |\n\n```\nzenpenguin\nOS Debian GNU/Linux-11 (bullseye) on Chromebook\nKernel:\
+    \ 5.10.92-1453-g179c52807ab5\nPackages: 2794 (dpkg)\nTheme: dark\nClearlooks (7x,2)\n\
+    Terminal: xterm\nCPU: (8)\nMemory: 10GB / 2773MiB\n```\n\n```\nHelp Search Filter\
+    \ SortBy Nice - \nno IPv6 down E: No battery 15.1 GiB 6.6 0.8 MiB | 2023-02-22\
+    \ 17:26:05\n```\n\nR. S. Ake"
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '![](img/b7499e434c2bd9c15bf347d1647edb1b_1_0.png)
+
+
+    https://archive.org/details/chromebookguidet0000robe'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # The Chromebook Guide to Google
+
+    Linux
+
+
+    R. S. AKE'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+    Copyright © 2022 by Robert Scott Ake
+
+
+    All rights reserved. Reproduction or distribution
+
+    in any form is prohibited.
+
+
+    The information in this book is provided on an
+
+    "As is" basis, without warranty. The author and
+
+    publisher assume no liability for any loss or
+
+    damage caused from the usage of the
+
+    information provided by this book.
+
+
+    This is an independent publication and has not
+
+    been authorized, sponsored, or otherwise
+
+    approved by Google LLC. Google,
+
+    Chromebooks®, and Chrome OS® are registered
+
+    trademarks of Google LLC. Linux® is a registered
+
+    tradrademark of Linus Torvalds.
+
+
+    Products and company names mentioned in this
+
+    book may be the trademarks of their respective
+
+    owners. Rather than use a trademark symbol
+
+    with every occurrence of a trademark name, the
+
+    names are used in an editorial fashion only and
+
+    to the benefit of the respective trademark
+
+    owner, with no intention of infringement of the
+
+    tntrademark.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   Introduction . . . . . . . . . . . . . . . . . . . 1
+
+    What’s a Chromebook . . . . . . . . . . . . . . . 2
+
+    Working with Chromebooks . . . . . . . . . . . 6
+
+    Installing Linux . . . . . . . . . . . . . . . . . 15
+
+    Installing LXDE . . . . . . . . . . . . . . . . . . 20
+
+    Synaptic . . . . . . . . . . . . . . . . . . 30
+
+    LXDE Taskbar . . . . . . . . . . . . . . . . . 36
+
+    Print & Scan . . . . . . . . . . . . . . . . 43
+
+    USB Devices . . . . . . . . . . . . . . . . 48
+
+    CLI . . . . . . . . . . . . . . . . . . . . . 51
+
+    Installing i3wm . . . . . . . . . . . . . . . 58
+
+    Software . . . . . . . . . . . . . . . . . . . 72
+
+    eNotebooks . . . . . . . . . . . . . . . . . 118
+
+    Jupyter Notebook . . . . . . . . . . . . . 132
+
+    Containers. . . . . . . . . . . . . . . . 138
+
+    Loose Ends . . . . . . . . . . . . . . . . 152
+
+    Xpad Notepad . . . . . . . . . . . . . . 158
+
+    Quick Reference . . . . . . . . . . . . . 160'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# INTRODUCTION
+
+
+    “The Chromebook Guide to Google Linux”, TCGTL, is written for Chromebook users
+    with Linux enabled Chromebooks. To verify a Chromebook is Linux enabled, enter
+    the word “Linux” in the Settings search bar and press enter. If the search returns
+    "Linux development environment", the Chromebook is Linux enabled. Schools and
+    companies will likely block access to this feature.
+
+
+    Access to Linux means access to over 50 thousand software packages. This book
+    does not use any techniques that require rooting. Short configuration tweaks are
+    used to provide access to Full Linux Desktops and Linux software Package Mangers.
+
+
+    TCGTGL is written with the Linux beginner in mind. More advanced Linux users may
+    find this a handy time saver and reference for dealing with the quirky nature
+    of Chromebooks.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# WHAT’S A CHROMEBOOK
+
+
+    Chromebooks once easily categorized as a web appliance for browsing the web have
+    become a rather complex animal capable of running Linux, Android, and even Windows
+    programs. The performance specs promoted by Google promote solid state design,
+    long battery life, a very lean OS, and a keyboard layout while unique provides
+    a standard. There are even 2 in 1 tablet / laptop Chromebooks.
+
+
+    # Popular Computer History
+
+
+    +   * 1947 AT&T creates the Transistor
+
+    * 1958 TI invents Integrated Circuit
+
+    * 1971 Intel creates the Microprocessor
+
+    * 1974 AT&T announces Unix
+
+    * 1974 MITS releases Altair 8800
+
+    * 1975 Microsoft sells BASIC Interpreter'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    +   - 1977 Apple releases Apple II
+
+    - 1981 IBM releases IBM PC
+
+    - 1983 GNU Project - modern open source
+
+    - 1984 Apple releases the Macintosh
+
+    - 1985 ARM - Advanced RISC Machines
+
+    - 1991 Linus Torvalds releases Linux
+
+    - 1993 Internet opens to public
+
+    - 1996 Debian Distro released
+
+    - 2000 Apple releases Darwin
+
+    - 2000 JetBrains – IntelliJ
+
+    - 2005 One Laptop per Child
+
+    - 2007 Apple releases iPhone
+
+    - 2007 Asus releases the EEE PC
+
+    - 2008 Google phones available
+
+    - 2008 LXC - Linux Containers - first released
+
+    - 2011 Google Chromebooks available
+
+    - 2012 Raspberry Pi released ($35)
+
+    - 2013 Dockers - first released
+
+    - 2018 Chromebooks are able to run Linux
+
+    - 2019 Google switches to JetBrains Kotlin
+
+    - 2020 COVID
+
+    - 2021 Chromebook Linux no longer in Beta
+
+
+    # Chromebooks in 2022
+
+
+    Chromebooks have been becoming larger, 14” and even 16” models are common with
+    larger screens and keyboards. A good base system will have a 4 core Intel or 8
+    core ARM processor with at least 4GB of memory, 64GB of storage, a minimum of
+    1 USB-C port and a battery life of at least 8 hours. $200 is a fair minium starting
+    price. Always look up the model id and check the EOL, End Of Life. With high priced
+    models check for over heating concerns and battery life.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    Chromebooks originally targeted at schools, tend to have a very long battery life.
+    Chrome OS has excellent second monitor and virtual desktop support. Not all apps
+    will run on all computers and not all hardware works with all computers. Generally
+    the type of CPU will not be an issue. There are however special situations that
+    require a specific type of CPU. If purchasing a new Chromebook to run a specific
+    software package, be sure to check the requirements.
+
+
+    # What''s the catch?
+
+
+    The Chrome OS boot loader is a non-standard boot loader, which means it is not
+    always possible to replace Chrome OS. Chromebooks have a set End Of Life, not
+    a very green policy. Some USB connected devices will not work. Bluetooth files
+    transfers do not work. Google''s revenue model is built on collecting and monetizing
+    as much personal information as possible.
+
+
+    # Software
+
+
+    In all the world there is no greater software value, than in Linux, often called
+    GNU Linux. There are endless Linux Distros, Linux Distribution (Collections of
+    Linux Software) with commercial industrial grade software. Software for every
+    need; 3D printing, CAD, mathematics, publishing, office software, games, and so
+    much more. If there''s a need, there is likely a software package. A visit to
+    the distrowatch.com web site can provide an idea of just how many Linux Distros
+    there are.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Linux on Chromebooks
+
+
+    By default Linux enabled Chromebooks will load Penguin, a custom Linux Container
+    version of Debian Linux. Things like WiFi will work through Chrome OS. If Chrome
+    OS is connected to WiFi, then Linux is connected to WiFi. Linux has several desktops
+    to choose from, this book will cover LXDE and i3wm. Six software package managers
+    will be covered, but focus will be given to Synaptic. Starting and stopping Linux
+    under Chrome OS works a little different than just running Linux, but it is still
+    a fast and easy process. There is a nested structure to running Linux on Chrome
+    OS. Penguin runs inside the Termina Virtual Machine, which runs inside Chrome
+    OS.
+
+
+    # Nested Structure
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_10_0.png)
+
+
+    Nested Structure of Linux on Chrome OS'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# WORKING WITH CHROMEBOOKS
+
+
+    Working with Chromebooks is very different from working with other computers.
+    Chromebook''s interface works through special URL''s. The Chromebook keyboard
+    while very unique, is very functional. The Chromebook Touchpad lacking a simple
+    right click, is simply annoying.
+
+
+    # Chromebook Touchpad
+
+
+    To perform a right click on a Chromebook, press the Touchpad with two fingers.
+    Using an External Mouse or Touchpad will allow you to right click. To perform
+    the action of a scroll wheel, slide two fingers up and down the Touchpad.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Linux Mouse Pointer
+
+
+    If the Linux **mouse pointer** disappears or fails to show at start up, press
+    the **Fullscreen** key, then move the **mouse pointer** down the screen. The **mouse
+    pointer** should show, press the **Fullscreen** key again to restore the screen.
+
+
+    # Line Under Display
+
+
+    If there is a line under the current screen. Most likely a white line at the bottom
+    of a black display, press the **Show windows** key twice, with a pause in between.
+
+
+    # Screen Tearing
+
+
+    Some Chromebooks will experience Screen Tearing while running Linux. Pressing
+    the **Fullscreen** key twice provides a quick short term fix. Repeat as needed.
+
+
+    # Runaway Backspace
+
+
+    In the event work starts to vanish from a document while working, as though the
+    **Backspace** key were pressed. Press the **Esc** key and try to restore the lost
+    work using the program''s undo function or try **Ctrl** + Z.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Chrome OS Function Keys
+
+
+    As of the writing of this book, the full use of all 12 function keys requires
+    the setting of a flag to work.
+
+
+    Open the Chrome OS Chrome Browser.
+
+    Go to the URL:
+
+
+    +   - chrome://flags
+
+    - In the Search Box, enter:
+
+    - improved keyboard shortcuts
+
+
+    There should be one flag.
+
+    **Disable** the flag and reboot.
+
+
+    If this should stop working, possible after an update:
+
+    **Enable** the flag and reboot, then **Disable** the flag and reboot again.
+
+
+    # Chrome OS Keyboard
+
+
+    Some Chrome OS keyboard controls may not be available while in a Linux Desktop
+    Environment. Press the Show windows key then try again. The keys left to right
+    across the top of a Chromebook keyboard are, Esc, Previous Page, Next Page, Reload
+    Page, Fullscreen, Show windows, Dim Display, Brighten Display, Mute, Volume Down,
+    Volume Up, and Counting. The Esc key as one, the Search key is the fourth key
+    down the left side of the keyboard. The Search key key has a picture of a hand
+    held magnifying glass on it. Chromebooks work well with external keyboards. USB-C
+    port only Chromebooks may require a USB to USB-C adapter or USB-C HUB.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+
+    # Chrome OS Keyboard
+
+
+    # Windows Keyboard = Windows Key
+
+
+    Esc – Often used as a quick exit.
+
+
+    +   Esc
+
+
+    +   Esc
+
+
+    Previous Page
+
+
+    +   Previous Page
+
+
+    +   F1
+
+
+    Next Page
+
+
+    +   Next Page
+
+
+    +   F2
+
+
+    Reload Page
+
+
+    +   Reload Page
+
+
+    +   F3
+
+
+    Fullscreen Toggle
+
+
+    +   Fullscreen
+
+
+    +   F4
+
+
+    Virtual Desktops & App Screens
+
+
+    +   Show windows
+
+
+    +   F5
+
+
+    Dim Display
+
+
+    +   Dim Display
+
+
+    +   F6
+
+
+    Brighten Display
+
+
+    +   Brighten Display
+
+
+    +   F7
+
+
+    Turn off sound.
+
+
+    +   Mute
+
+
+    +   F8
+
+
+    Turn Volume Down
+
+
+    +   Volume Down
+
+
+    +   F9'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+
+    # Turn Up Volume
+
+
+    Volume Up F10
+
+
+    # System Lock Options
+
+
+    Lock Win + L
+
+
+    # Show all shortcut keys
+
+
+    Alt + Ctl + / Alt + Ctrl + /
+
+
+    # Help
+
+
+    Ctrl + / Ctrl + /
+
+
+    # Mirror to Second Display
+
+
+    Ctrl + Fullscreen Ctrl + F4
+
+
+    # Swap Primary & Secondary Display
+
+
+    Alt + Fullscreen Alt + F4
+
+
+    # Zoom In
+
+
+    Ctrl + Shift + + Ctrl + Shift + +
+
+
+    # Zoom Out
+
+
+    Ctrl + Shift + - Ctrl + Shift + -
+
+
+    # Task Manager
+
+
+    Search + Esc Win + Esc
+
+
+    # File App
+
+
+    Alt + Shift + M Alt + Shift + M
+
+
+    # Notifications
+
+
+    Alt + Shift + N Alt + Shift + N'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    Open Crosh - Chrome OS Shell
+
+
+    Alt + Ctrl + T  Alt + Ctrl + T
+
+
+    Function Keys F1 to F12
+
+
+    Search + 1 thru = Win + F1 thru F12
+
+
+    Delete
+
+
+    Alt + Backspace Delete
+
+
+    Caps Lock
+
+
+    Alt + Search Caps Lock
+
+
+    Page Up
+
+
+    Alt + Cursor Up Page Up
+
+
+    Page Down
+
+
+    Alt + Cursor Down Page Down
+
+
+    Terminal Page Up
+
+
+    Alt + Shift + Cursor Up Shift + Page Up
+
+
+    Terminal Page Down
+
+
+    Alt + Shift + Cursor Down Shift + Page Down
+
+
+    Virtual Desktop move left
+
+
+    Search + [ Win + [
+
+
+    Virtual Desktop move right
+
+
+    Search + ] Win + ]'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# Slow Key Repeat Rate\n\nWhile typing, most users will expect a fairly rapid\
+    \ response while holding down a key such as the spacebar. The Chrome OS keyboard\
+    \ key Repeat rate determines the key repeat rate for Linux, it must be set from\
+    \ the Chrome OS settings.\n\nChrome OS Settings → Device → Keyboard\nThe Repeat\
+    \ rate setting is located in the Enable auto-repeat section.\n\n# Chrome Browser\
+    \ URL’s\n\nThe Chrome Browser is a direct interface to Chrome OS. In addition\
+    \ to checking the chrome://history, log into google.com and checking your privacy\
+    \ settings. The file:/// URL’s the entire URL to work.\n\n```\nchrome://about\
+    \ - Full list of Chrome URL's\nchrome://flags - OS Flag Settings\nchrome://history\
+    \ - History - including Linux\nchrome://os-settings - System Settings\nchrome://system\
+    \ - System Information\nfile:///home/chronos/user/MyFiles/\nfile:///home/chronos/user/Downloads/\n\
+    After Linux has been installed:\n  chrome-untrusted://crosh - Chrome OS Shell\n\
+    \  chrome-untrusted://terminal - Linux Terminal\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Settings
+
+
+    Finding settings using the Settings Search Bar.
+
+
+    # Screen Time Out
+
+
+    +   - Search on "power" or just "po"
+
+
+    # Data Stored Online aka Sync and Google Services
+
+
+    +   - Search on "sync" or just "sy"
+
+
+    # Linux Install
+
+
+    +   - Search on "linux" or just "li"
+
+
+    # Linux Programs as Apps
+
+
+    Linux programs can often be run as Chrome OS Apps. Linux apps should show up in
+    the Chrome OS App Drawer, Linux apps folder. If not, try running the command,
+    "sudo apt update" from Terminal. Then check again. Linux programs were not designed
+    to run as Chrome OS Apps. If your program doesn''t run at all, doesn''t work properly,
+    or doesn''t look right, try running it in a Full Linux Desktop Environment. Coming
+    chapters will cover the LXDE and i3wm Linux Desktops. These two Desktops do not
+    conflict with each other and can both be installed and even run at the same time.
+
+
+    Linux programs can also be started from the Terminal command line. Programs may
+    not scale properly when run outside of a Desktop Environment. Sommelier can be
+    used to control scaling (Page 105). Scale will vary. From Terminal:
+
+
+    ```
+
+    sommelier -X --scale=2 --glamor <program>
+
+    ```'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Hardware Recommendations
+
+
+    When looking for value be sure to check online eMalls, department stores, computer
+    discount warehouses you frequent. End of Year Holiday and Beginning of School
+    Year sales are good times to look for sales.
+
+
+    +   - Single purpose adapters such as:
+
+    - USB-C to MicroSD Card $2 to $9.
+
+    - VAVA 7 in 1 USB-C hub:
+
+    - VA-UC017 about $30.
+
+    - Nekteck 100W GaN USB-C Charger:
+
+    - About $30.
+
+    - 360 Electrical Surge Protector power strips:
+
+    - Outlets rotate helping with bulky transformers.
+
+    - Original versions did not have wall mounts, use L brackets and velcro. About
+    $19 to $40.
+
+    - USB cords are cheaper to buy in bulk.
+
+    - Watch for fake painted braids.
+
+    - USB-C cords have 24 wires.
+
+    - Logitech K40or keyboard:
+
+    - Long wireless reach, integrated mousepad.
+
+    - From $12 to $35.
+
+    - Hisense 40" TV''s as a second monitor.
+
+    - Look for $100 to $150 sales.
+
+    - Turn on Graphic or Direct (Monitor) Mode.
+
+    - Creality Ender 3, Open Source 3D Printer:
+
+    - About $200.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# INSTALLING LINUX
+
+
+    Installing and removing Linux on a Linux enabled Chromebook is a short simple
+    procedure. Fixing Linux Desktops so they run properly does NOT require rooting
+    a Chromebook or any heavy hacking.
+
+
+    # Install Linux
+
+
+    Chromebooks install Linux in a Container, inside a Virtual Machine, under Chrome
+    OS. A Crosh session runs outside the Container. A Terminal session runs inside
+    a Container. A Terminal session can manually be started from a Crosh session.
+    To Install Linux the Chromebook must be connected to the internet. Navigate to
+    the Linux development environment in Settings. Type linux in the Settings Search
+    Bar and press Enter. Or, in Settings: Advanced → Developers → Linux development
+    environment.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+
+    # Turn On Linux
+
+
+    Developers
+
+
+    Linux development environment
+
+    Run Linux tools, editors, and IDEs on your Chromebook. Learn more
+
+
+    Turn on
+
+
+    # Click the Turn on button.
+
+
+    From the Linux development environment panel, click the Turn on button.
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_21_0.png)
+
+
+    Click the Next button.
+
+
+    The set up Linux development environment panel will open, click the Next button.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Make Selections
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_22_0.png)
+
+
+    Click the **Install** button to continue.
+
+
+    Enter a **Username** and select the **Disk size** to be allocated to Linux. The
+    **Username** can be any name. The **Disk size** can be changed at any time.
+
+
+    # Removing Linux
+
+
+    Once the install is complete, Linux can be removed at anytime. From the **Linux
+    development environment panel**, **Remove Linux development environment** section,
+    click the **Remove** button.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Completing the Install
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_23_0.png)
+
+
+    Installation should complete within minutes.
+
+
+    An Installing Linux panel will show the progress of the install.
+
+
+    Once the installation has completed, the Terminal App will open. A command prompt
+    will be displayed: `<user-id>@penguin:$
+
+
+    It''s handy to have the Terminal App pinned to the Taskbar. Right click on the
+    Terminal icon and select Pin. Open the Terminal icon menu again and select Settings
+    or `Ctrl + Shift + P`. Here the appearance of the Terminal app can be changed.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    ```
+
+    zen@penguin: $ uname -a
+
+    Linux 5.4.157-17185-gbd27b903c738 #1 SMP PREEMPT Sat Jan 1
+
+    19:17:16 PST 2022 aarch64 GNU/Linux
+
+    zen@penguin: $ hostname
+
+    Static hostname: penguin
+
+    Icon name: computer-container
+
+    Chassis: container
+
+    Machine ID: a820b1bd557d66f0101d70b46165a979
+
+    Boot ID: 20de4b6cb515d41381c31d10e02f8c2f
+
+    Virtualization: lxc
+
+    Operating System: Debian GNU/Linux 11 (bullseye)
+
+    Kernel: Linux 5.4.157-17185-gbd27b903c738
+
+    Architecture: arm64
+
+    zen@penguin: $ cat /etc/os-release
+
+    PRETTY_NAME="Debian GNU/Linux 11 (bullseye)
+
+    VERSION_ID="11"
+
+    VERSION=11 (bullseye)
+
+    VERSION_CODENAME=debian
+
+    ID=debian
+
+    ```
+
+
+    Once installation completes Terminal opens.
+
+
+    Enter the following five commands to learn more about the system:
+
+
+    +   - uname -a
+
+    hostnamectl
+
+    cat /etc/os-release
+
+    cat /etc/debian_version
+
+    getconf LONG_BIT
+
+
+    From this it can be seen the Google container name is Penguin. The actual Distro
+    is Debian 11 Bullseye. The architecture is also important, will likely be AMD
+    / Intel or ARM. getconf LONG_BIT will show whether the system is running as a
+    32 or 64 bit system.
+
+
+    Now set the user and root passwords. The command for password has a unique spelling,
+    passwd. The password will need to be entered twice for each id.
+
+
+    ```
+
+    sudo passwd <user-id>
+
+    sudo passwd root
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# INSTALLING LXDE
+
+
+    LXDE is a rich full featured desktop that''s good with resources and easy to decorate
+    and configure. It offers a comprehensive set of tools, superior program integration
+    and control including advanced printing and scanning features.
+
+
+    Install the LXDE Desktop, the nano editor, and nested X server Xephyr. LXDE will
+    provide the desktop environment. Xephyr keeps the desktop intact. Nano is an editor
+    used to create a start up script for LXDE. The LXDE install will likely take 20
+    to 50 minutes. From the Terminal App:
+
+
+    ```
+
+    sudo apt update -y
+
+    sudo apt dist-upgrade -y
+
+    sudo apt install task-lxde-desktop -y
+
+    sudo apt install nano -y
+
+    sudo apt install xserver-xephyr -y
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# LXDE Launch Script\n\n```\n#!/bin/bash\ngol.sh * \nXephyr -br -fullscreen\
+    \ -resizeable :20 &\nsleep 5\nDISPLAY=:20 startlxde &\n```\n\nNano: ^ is short\
+    \ for Ctrl key.\n\nUsing Nano to create the file gol.sh. From the Terminal App,\
+    \ start Nano and enter the four line script:\n\nnano gol.sh\n\n```\n#!/bin/bash\n\
+    Xephyr -br -fullscreen -resizeable :20 &\nsleep 5\nDISPLAY=:20 startlxde &\n```\n\
+    \nWhen done, Ctrl + O, Enter to save. Ctrl + X exit."
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# LXDE Desktop
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_27_0.png)
+
+
+    # The LXDE Desktop
+
+
+    **chmod** makes the gol.sh script executable. "./" tells Linux to run the script
+    from the current directory. **ls** lists files. **pwd** prints the working directory,
+    /home/<user-id> is the users home directory. **echo** $PATH lists the search paths
+    for executables. “No session for pid . . . Error message popups can safely be
+    ignored, click the Ok button.
+
+
+    ```
+
+    chmod +x gol.sh
+
+    ls -l g*
+
+    pwd
+
+    echo $PATH
+
+    ./gol.sh
+
+    ```'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# LXDE Startup and Shutdown
+
+
+    Startup:
+
+    Run the **Terminal** App.
+
+    Select **Penguin** from the Terminal menu.
+
+    ./gol.sh
+
+    Press **Fullscreen** if needed.
+
+
+    Shutdown (LXDE shuts down with Terminal):
+
+    Exit any running Linux programs.
+
+    Right click on the **Terminal** icon and select **Shut down Linux**.
+
+
+    # Crosh and Terminal
+
+
+    Everything on a Chromebook can be run through the Chrome browser. Crosh runs outside
+    a Linux Container. To be clear, Termina is a virtual machine, Terminal is a Terminal
+    interface. Three important Chrome URL''s to bookmark:
+
+
+    ```
+
+    chrome-untrusted://crosh
+
+    chrome-untrusted://terminal
+
+    chrome://about
+
+    ```'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Navigating from Crosh to Terminal
+
+
+    Navigating from Crosh, outside a container, to the inside of a container is a
+    short process. Allow one command to finish before entering the next command. Enter
+    the URL chrome-untrusted://crosh in the Chrome Browser. Ctrl + Shift + P opens
+    preferences. Enter the following commands, <user-id> is your user id:
+
+
+    ```
+
+    vmc start termina
+
+    lxc start penguin
+
+    lxc exec penguin su - <user-id>
+
+    ./gol.sh
+
+    ```
+
+
+    LXDE will start, return to the Chrome Browser. If LXDE is covering the Chrome
+    Browser, just press Fullscreen. Enter the following commands:
+
+
+    ```
+
+    exit
+
+    lxc stop penguin
+
+    exit
+
+    vmc stop termina
+
+    ```
+
+
+    If termina is misspelled while starting termina (vmc start termina), a new virtual
+    machine will be started with the new name. To correct this, exit the VM, stop
+    it, then destroy it. Any containers inside it will also be deleted:
+
+
+    ```
+
+    vmc start pug
+
+    exit
+
+    vmc list
+
+    vmc stop pug
+
+    vmc destroy pug
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# When Terminal won’t Start\n\nWhile starting Terminal, on occasion you may\
+    \ have a re-occurring error, such as; \"can't open display :2\". To clear the\
+    \ error try the following:\n\n+   1) First try:\n   From the Chrome OS Chrome\
+    \ Browser:\n   From the Chrome URL:\n   `chrome-untrusted://crosh`\n   `vmc stop\
+    \ termina`\n\n+   2) If that fails then:\n   From the Chrome OS Chrome Browser\n\
+    \   From the URL:\n   `chrome-untrusted://crosh`\n   `vmc start termina`\n   `lxc\
+    \ stop penguin`\n   exit\n   `vmc stop termina`\n\n+   3) If that fails, last\
+    \ try :\n   From Terminal\n   Select Penguin from the Terminal menu.\n   sudo\
+    \ halt\n   Restart Terminal and select Penguin, then do:\n   `Ctrl + C`n   From\
+    \ the Chrome OS Chrome Browser:\n   From the Chrome URL:\n   `chrome-untrusted://crosh`\n\
+    \   `vmc stop termina`\n\n+   4) Reboot the Chromebook, start at step one."
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# LXDE Screen Resolution
+
+
+    LXDE will dynamically adapt to any change in the Chrome OS Display settings:
+
+    Chrome OS Settings → Device → Displays
+
+
+    # Screensaver
+
+
+    To turn off the LXDE Screensaver:
+
+    LXDE Menu → Preferences → Screensaver
+
+    For Mode select Disable Screen Saver.
+
+
+    # LXDE Fullscreen Shortcut
+
+
+    Windows Keyboard: Alt + F11
+
+    Chromebook Keyboard: Alt + Search + - Alt + Search + Dash
+
+
+    If the Fullscreen shortcut doesn''t work. From the Chrome OS Chrome Browser, go
+    to the URL: chrome://flags
+
+
+    In the Search Box, enter:
+
+    improved keyboard shortcuts\Disable the flag and reboot.
+
+
+    If this should stop working, possible after an update: Enable the flag and reboot,
+    then Disable the flag and reboot again.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Screenshots
+
+
+    LXDE Screenshot files by default ~ saved in the Pictures folder in the users home
+    folder, ~/Pictures:
+
+    Menu → Accessories → Screenshot
+
+    Chrome OS Screenshot files are saved in the Chrome OS Download folder: Ctrl +
+    Show windows
+
+
+    # LXDE Font Settings
+
+
+    LXDE font settings can be found in a few spots:
+
+
+    +   Menu → Preferences → Customize Look and Feel
+
+    Widget tab: Default font
+
+    Window Border tab:
+
+    Title Bar sub tab:
+
+    Font for active window title
+
+    Font for inactive window title
+
+    Misc. sub tab:
+
+    Font for menu header
+
+    Font for menu Item
+
+    Font for on-screen display
+
+    Font for inactive on-screen display
+
+
+    Right click on the Taskbar → Panel Settings
+
+    Appearance tab:
+
+    Font
+
+
+    Right click on the Desktop → Desktop Preferences
+
+    Appearance tab:
+
+    Text'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Apt
+
+
+    Apt is a command line software package manager. ^target-get$ provides an exact
+    match. "update", updates the software links. "dist-upgrade", upgrades the core
+    operating system. history, displays a list of previous commands. Pressing the
+    Cursor Up arrow key, recalls the previous command, which can then be edited. Adding
+    -y, replies y to the do you wish to install questions. Instead of retyping a command,
+    recall and edit previous commands. Use the backspace and cursor keys (bottom right
+    of keyboard) to edit previous commands. From Terminal enter the following:
+
+
+    ```
+
+    sudo apt update -y
+
+    sudo apt dist-upgrade -y
+
+    sudo apt search info
+
+    sudo apt search ^info$
+
+    sudo apt install ^info$ -y
+
+    sudo apt install ^htop$ -y
+
+    sudo apt install ^neofetch$ -y
+
+    sudo apt install ^screenfetch$ -y
+
+    history
+
+    ```
+
+
+    Linux has several help systems. Most programs also offer help screens. man is
+    short for manual. apt shows the manual for apt, use the Cursor Up / Down keys
+    to scroll through the document and Q to quit. info is an ebook like help, Q to
+    quit, H for help. htop is a system monitor, Q to quit. neofetch and screenfetch
+    provide information about a system. env will display information about the Linux
+    environment.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'From Terminal enter the following:
+
+
+    ```
+
+    apt -h
+
+    man apt
+
+    Q
+
+    info
+
+    H
+
+    Q
+
+    htop
+
+    Q
+
+    neofetch
+
+    screenfetch
+
+    env
+
+    ```
+
+
+    # # SuperUser Access
+
+
+    Access to some areas of the file system require Superuser permission. The LXDE
+    file manager, pcmanfm, can be started with the sudo, SuperUser DO, or run from
+    the root id to gain access. Pressing Alt + Backspace while a file or directory
+    is selected, will send it to the trash can. A convenient way to edit a file from
+    pcmanfm, is to right click on the file and select Mousepad. To set permissions,
+    right click on the file and select Properties, then select the Permissions tab.
+    Run pcmanfm with SuperUser access. From the LXDE menu select Run and enter:
+
+
+    ```
+
+    sudo pcmanfm
+
+    ```'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# SYNAPTIC
+
+
+    LXDE includes the Synaptic Package Manager which provides easy access to thousands
+    of programs. On some Chromebooks Synaptic requires a simple change to it''s menu
+    launch command to enable it to work. Keeping Linux programs on the Linux Desktop
+    requires a different change to a program''s menu launch command.
+
+
+    **Note:** To perform a right click using a Chromebook''s Touchpad, press the Touchpad
+    with two fingers.
+
+
+    On some Chromebooks, Synaptic has issues such as not being able to do repeated
+    searches. The following change will prevent issues with Synaptic.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Fixing Synaptic
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_36_0.png)
+
+
+    Synaptic Command Fixed
+
+
+    Menu → Preferences — Synaptic Package Manager
+
+    Right click on Synaptic Package Manager.
+
+    Select Properties.
+
+    Select the Desktop Entry tab.
+
+    Change the Command:
+
+
+    From:
+
+    synaptic-pkexec
+
+
+    To:
+
+    pkexec "/usr/sbin/synaptic"
+
+
+    Press the Ok button to save the change.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# # The Chromebook Guide to Linux
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_37_0.png)
+
+
+    # ## Synaptic Package Manager
+
+
+    ### Synaptic Package:
+
+    LXDE Menu → Preferences → Synaptic Package Manager
+
+
+    Synaptic has five sections, a menu and toolbar at the top, a status bar at the
+    bottom, search groups on the left, a software package list on the right and below
+    that the software package description. The center sections can be resized. It
+    is important from time to time to update the package information by pressing **Reload
+    (toolbar top left). Search** searches the entire software package list by keyword.
+    The software package list can be scrolled, paged, or will jump to a software package
+    as you type out its name. Clicking on a packing will highlight it, double clicking
+    will offer to mark it for install. Highlighted software packages can be marked
+    for install by pressing the **Spacebar** or **Enter** key. Pressing **Apply (toolbar)**
+    will install the software package. Synaptic warnings can safely be ignored, and
+    they are informational. An actual error message will usually provide a solution.
+
+
+    32'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Install cmatrix with Synaptic
+
+
+    Click Search in the toolbar.
+
+    In the search box enter: cmatrix
+
+    Press the Search button.
+
+    Double click on cmatrix in the package list.
+
+    In the "Mark additional required changes" pop up:
+
+    Click the Mark button.
+
+    Click Apply in the toolbar.
+
+    In the "Apply the following changes?" pop up:
+
+    Click the Apply button.
+
+    In the "Changes applied" pop up:
+
+    Click the Close button.
+
+    Synaptic will update.
+
+    Click Properties in the toolbar.
+
+    Maximize the cmatrix Properties pop up window.
+
+    Click the "Installed Files" tab.
+
+    Useful for finding program names and file locations.
+
+    /usr/bin/cmatrix
+
+    Close Synaptic.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Keeping Apps On the Desktop
+
+
+    Run LXTermina, it will run outside the desktop.
+
+    Menu → System Tools → LXTerminal
+
+    Close LXTerminal.
+
+
+    Some Linux programs require a change to their launch command to keep them on the
+    desktop. Edit the LXTer-inal launch command.
+
+
+    Menu → System Tools → LXTerminal
+
+    Right click on **LXTerminal**.
+
+    Select the **Properties**.
+
+    Select the **Desktop Entry** tab.
+
+    Prefix with **env GDK_BACKEND=x11**
+
+    Change the **Command:**
+
+    From:
+
+
+    ```
+
+    lxterminal
+
+    env GDK_BACKEND=x11 lxterminal
+
+    ```
+
+
+    To:
+
+    The prefix is lower case **env**, space, capital **GDK**, underscore, capital
+    **BACKEND** equal sign, lower case **x**, one. LXTerminal now runs inside the
+    LXDE Desktop. Use this same fix for any apps that run outside of the LXDE Desktop.
+    In some cases it will be necessary to reboot for the fix to take effect. The following
+    should be fixed:
+
+
+    +   Screenshot
+
+    Menu → Accessories → Screenshot
+
+    Calculator / Galculator
+
+    Menu → Accessories → Galculator'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Mousepad
+
+
+    Menu → Accessories → Mousepad
+
+
+    # Xarchiver
+
+
+    Menu → Accessories → Xarchiver
+
+
+    # Connnman Settings
+
+
+    Menu → Preferences → Connman Settings
+
+
+    # LibreOffice Programs
+
+
+    Menu → Office → LibreOffice Programs
+
+
+    # LibreOffice Draw
+
+
+    Menu → Graphics → LibreOffice Draw
+
+
+    When a menu item is edited, it is copied from: /usr/share/applications/ To: ~/.local/share/applications/
+
+
+    {dot}.desktop files in the ~/.local/share/applications/ directory can be edited
+    or deleted without causing any harm, they are override files. If they are deleted,
+    the menu lists will return to what they were before the file was created.
+
+
+    Explore the cmatrix program loaded from Synaptic. which shows a program''s location.
+    Q to quit cmatrix. From LXTerminal:
+
+
+    ```
+
+    cmatrix
+
+    man cmatrix
+
+    Q
+
+    cmatrix
+
+    Q
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# LXDE TASKBAR
+
+
+    The LXDE Taskbar can be can be colored, styled, and repositioned. There can be
+    more than one panel and applets can be added and removed from the Taskbar.
+
+
+    # LXDE Taskbar Defaults
+
+
+    The LXDE Taskbar can easily be reset to it''s default settings by deleting the
+    lxpanel directory and then rebooting Linux. This is also useful if the Taskbar
+    is accidentally deleted. To reset the LXDE Taskbar to it''s default values, from
+    Terminal:
+
+
+    ```
+
+    cd ~/.config
+
+    rm -r lxpanel
+
+    ```
+
+
+    Shutdown and restart Linux.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# # Panel Preferences
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_42_0.png)
+
+
+    # # Taskbar Default Applets
+
+
+    The LXDE Taskbar is feature rich and easy to configure. Right click on the **Taskbar**
+    and select **Add / Remove Panel Items**. The **Panel Preferences** panel opens
+    with the **Panel Applets** tab selected. All the panel settings can be set from
+    here. To change an applets settings, select it and click the **Preferences** button.
+    Applets can be moved left and right along the Taskbar using the **Up** and **Down**
+    buttons. Select an applet and click the **Remove** button to delete it.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Add Plugin to Panel
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_43_0.png)
+
+
+    Clicking the **Add** button opens the **Add plugin to panel** panel, which shows
+    a full list of Taskbar applet plugins. Select an applet and click the **Add**
+    button to add it to the Taskbar.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Application Launch Bar
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_44_0.png)
+
+
+    # Application Launch Bar Editor
+
+
+    Programs can be added/pinned or removed/unpinned from an Application Launch Bar.
+    From the Panel Preferences, Panel Applets tab, select the Application Launch Bar
+    on the left and click the Preferences button. The Application Launch Bar panel
+    opens. To pin, select an application from the right side then press the Add button.
+    To unpin, select an application from the left side then press the Remove button.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Add Connnman to the Taskbar
+
+
+    Pin the **Connnman Settings** program to the Application Launch Bar.
+
+
+    +   - From the **Application Launch Bar** panel:
+
+    - Expand **Preferences** on the right side.
+
+    - Select **Connnman Settings**.
+
+    - Click the **Add** button.
+
+    - Click the **Close** button.
+
+
+    Add the **Network Status Monitor** applet to the Taskbar.
+
+
+    +   - From the **Add plugin to panel** panel:
+
+    - Select the **Network Status Monitor**.
+
+    - Click the **Add** button.
+
+    - Click the **Close** button.
+
+
+    Linux connects to the outside world through bridge software which connects it
+    to the Chromebook. The Network Status Monitor icon will flash because Linux is
+    talking to the Chromebook. Linux can not turn off the Chromebooks network connection,
+    but it can turn off it''s connection to the bridge software network.
+
+
+    **Note:** Connman connection profiles are located: /var/lib/connnman/<profile-folder>'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Connnman
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_46_0.png)
+
+
+    Connnman, Network Settings
+
+
+    Connnman Network Controls :
+
+
+    Start **Connnman**.
+
+    From the **Network Settings** window:
+
+    Click the switch in the top right corner.
+
+    The **Network Status Monitor** will stop flashing.
+
+    Linux is now disconnected from the network.
+
+    Click the switch to turn the network on.
+
+    Close the **Network Settings** window.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# # Changing a Program''s Icon
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_47_0.png)
+
+
+    Change a program''s icon.
+
+
+    To change a program''s icon, right click the menu item and select **Properties**.
+    In the **File Properties** window click the program''s icon, the **Choose An Icon**
+    window opens. Select an icon and click the Ok button.
+
+
+    The **/usr/share/icons** directory contains a large number of icons. It''s usually
+    necessary to drill down a few directories to find an icon.
+
+
+    Other directories in **/usr/share/images** may also contain icons. The **images**
+    directory contains a few Debian icons.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# PRINT & SCAN
+
+
+    Printer and scanner setup is automatic, while allowing for manual setup and configuration.
+    The CUPS printer interface is accessed thru a browser. Xsane can scan multi-page
+    documents, and allows detailed control over quality and type of scan. The Chromebook
+    and Scanner / Printer should all be on the same network. From Synpatic, install:
+
+
+    ```
+
+    cups
+
+    printer-driver-cups-pdf
+
+    ```
+
+
+    Verify the user-id with whoami and then add the user-id to the printer management
+    group with usermod. From LXTerminal:
+
+
+    ```
+
+    whoami
+
+    sudo usermod -aG lpadmin <user-id>
+
+    ```
+
+
+    Shutdown and restart Linux to pickup the change.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    # # Printing with CUPS
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_49_0.png)
+
+
+    Open Firefox then go to and bookmark the URL:
+
+    127.0.0.1:631 aka localhost:631
+
+
+    Printers can be manually added here. Printers can be suspended and restarted.
+    Output can be rerouted. Printer defaults can be set here. CUPS opens on the Home
+    page tab. Click the Printer tab. Click on the printer name. From the Maintenance
+    pull-down, select Print Test Page. To set the Default Options: Printers → Select
+    Printer - Administration pull-down → Set Default Options'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Scanning with Xsane
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_50_0.png)
+
+
+    Xsane at startup.
+
+
+    Start Xsane:
+
+
+    LXDE menu → Graphics → Xsane
+
+
+    Xsane will open four windows when it starts, only two are needed. From the primary
+    window''s Window menu, uncheck Show histogram and Show standard options.
+
+
+    Hovering over an option provides a pop up that describes the option. Some likely
+    option settings changes are: Scan Mode from lineart to color and Scan Resolution
+    from 75 to 300.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: 'Pressing the Acquire preview button will scan and display the entire image
+    or any part be selected for the scan. Press the Scan button scans the image which
+    then opens in a Viewer Window where the file can be saved.
+
+
+    Multi-page scans are a two step process. Scans are saved as individual files and
+    then appended to the desired file type when done. Press Ctrl + M or change the
+    Target option to Multi-page (top right), the multi-page project windows. Press
+    the Scan button to add pages. Press the Save multipage file button in the multi-page
+    project window when done. Leave the Number of pages to scan set to 1 (primary
+    window top left).
+
+
+    # Embedded Web Server
+
+
+    Printers which use Internet Printing Protocol (IPP) often have an Embedded Web
+    Server (EWS). A printer may not be using IPP or have an EWS. If it does, it can
+    be a useful feature.
+
+
+    From LXTerminal:
+
+    ippfind
+
+
+    If the ippfind command returns something like: ipp://HPo068EBCE3A2B.local:631/ipp/print
+    copy (Ctrl + Shift + C) everything between ipp:// and :631, for this example:
+    HPo068EBCE3A2B.local Paste this into your browser''s search bar.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Printing On Chromebooks
+
+
+    From **Chrome OS Settings**, under **Advanced**, select **Print and scan**. Select
+    **Printer** from the **Print and scan** panel. Chrome OS will search for a printer.
+    When the printer shows up:
+
+    Press the **Save** button.
+
+
+    # Scanning On Chromebooks
+
+
+    From **Chrome OS Settings**, under **Advanced** select **Print and scan**. Select
+    **Scan** from the **Print and scan** panel. Chrome OS will search for a scanner.
+    When the scanner shows up make any selections and press the **Scan** button to
+    scan.
+
+
+    # Printables
+
+
+    Googling **printable paper models** will produce endless pages of results. Construction
+    usually requires a color printer, scissors, cardstock and glue. PosteRazor (Page
+    84) can be used to enlarge images. LibreOffice Draw and Gimp (Page 76) can be
+    used to create and edit images. *Business card magnets can be used to tile posters
+    and other objects to make them magnetic.* Some printed materials can be painted
+    with polyurethane or other like materials to make them more durable.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# USB DEVICES
+
+
+    Chromebooks keep tight control over USB devices. Linux access must be enabled
+    from the Chrome OS Settings Linux development environment panel.
+
+
+    USB keyboards that work with Chrome OS will automatically work with Linux. In
+    some cases a USB to USB-C adapter or HUB maybe required.
+
+
+    Connect the USB device to the Chromebook and go to the Linux development environment
+    panel. Click on Manage USB devices, turn on access.
+
+
+    For Chrome OS to share storage of any kind with Linux additional access is required
+    that can only be granted from the Chrome OS Files App. From the Files App, right
+    click on the directory to be shared and select Share with Linux. A panel will
+    pop up asking to confirm, click Ok.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+
+    USB Storage will show up in Linux here:
+
+    /mnt/chromos/removable/
+
+
+    To stop sharing storage of any kind with Linux, go to the Linux development environment.
+    Click on Manage shared folders, click the X for any directories that are no longer
+    to be shared.
+
+
+    If a folder fails to share with Linux, stop sharing all folders with Linux. Then
+    add the folder to be shared. If the folder still fails to share, stop sharing
+    all folders with Linux and reboot. Then add the folder to be shared.
+
+
+    To format a USB storage device to exFAT, use the Chrome OS Files App. From the
+    Files App right click on the device and select Format device. Enter a name for
+    the Drive name, and select exFAT from the format menu. Click the Erase and Format
+    button to format the drive.
+
+
+    # Saving Data Outside of a Container
+
+
+    If a Linux container fails, the data stored in it will be lost. The Chrome OS
+    Files App can be used to copy files into and out of a Linux container, the container
+    must be running. Some Linux programs can read and write to Chrome OS directories
+    that are shared with Linux. The Linux Backup & restore will not backup shared
+    Chrome OS directories.
+
+
+    Shared Directories will show up in Linux here:
+
+    /mnt/chromos/'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Backup Linux
+
+
+    FAT32 formatted storage devices will not work with files larger than 4GB and should
+    be reformatted to exFAT. Shutdown Linux and go to the **Linux development environment**.
+    Click on **Backup & restore**. Click the **Backup** button. Select the location
+    where the backup will be stored, the name can be changed. Click the **Save** button
+    to start the backup. See Best Practices in the Quick Reference section (Page 164).
+    This method of backing up Linux will **not** backup Shared Chrome OS directories.
+    Shared directories can be copied using the Chrome OS Files App.
+
+
+    If **Manage extra containers** (Page 151) has been enabled and used to create
+    containers, the container to be backed up will need to be selected from a pull-down
+    menu.
+
+
+    # Restore Linux
+
+
+    Shutdown Linux and go to the **Linux development environment**. Click on **Backup
+    & restore**. Click the **Restore** button. A **Confirm Restore** panel will pop
+    up, click the **Restore** button to continue. Select the backup file to be used
+    and click the **Open** button. The restore will start.
+
+
+    If **Manage extra containers** (Page 151) has been enabled and used to create
+    containers, the container to be restored will need to be selected from a pull-down
+    menu.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# CLI
+
+
+    There are two primary styles of interfaces; GUI, Graphic User Interface and CLI,
+    Command Line Interface. For some tasks a CLI is the only way a task can be performed.
+    CLI is also faster for some tasks.
+
+
+    # Running Scripts
+
+
+    Commands that can be entered in a Linux terminal can be entered into a file and
+    run as a script, often called a BASH script. help provides help for built-ins
+    (commands which are not themselves programs). From LXTerminal:
+
+
+    ```
+
+    help
+
+    bash -c help
+
+    help -help
+
+    man bash
+
+    Q
+
+    which bash
+
+    ```'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'sudo su
+
+    Tab Tab
+
+    Y
+
+    Hold down Enter or Q to Quit
+
+    exit
+
+
+    echo prints to a terminal. > sends output to a file. >> appends output to a file.
+    $HOME is a variable that holds the user''s home directory. ~ is short for $HOME.
+    rm removes, deletes a file. cp copies a file. mv moves or renames a file. Enter
+    the following in LXTerminal:
+
+
+    ```
+
+    echo "neofetch" > test.sh
+
+    echo "neofetch" > test.sh
+
+    echo "screenfetch" >> test.sh
+
+    cat test.sh
+
+    bash test.sh
+
+    ./test.sh              Will fail.
+
+    chmod +x test.sh      Make executable.
+
+    ./test.sh               Will work.
+
+    pwpd
+
+    echo $HOME
+
+    echo ~
+
+    ~/test.sh
+
+    ls
+
+    cp test.sh test2.sh
+
+    ls
+
+    mv test.sh test2.sh
+
+    rm test2.sh
+
+    ls
+
+    ```'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Directories
+
+
+    Directories also called folders provide a hierarchical structure for organizing
+    files. **cd**, change directory, command is used to move between directories.
+    **cd ..** is used to move up a directory structure. **mkdir** is used to make
+    a directory. Use single or double quotes when a directory name contains a space.
+    **rm -r** will remove a directory and any files or directories in it. **touch**
+    will create an empty file.
+
+
+    From LXTerminal:
+
+
+    ```
+
+    mkdir numbers
+
+    ls
+
+    cd numbers
+
+    touch one
+
+    touch "two three"
+
+    ls
+
+    cd ..
+
+    ls
+
+    rm -r numbers
+
+    ls
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# Networks
+
+
+    Modern networks assign an address to a device much like an apartment building
+    has an address. Device port numbers are like apartment numbers. An application
+    may use one or more ports of a computer''s address. URL prefixes like http, data,
+    file, and https are URI schemes which define the purpose of the URL. https://127.0.0.1:631
+    is an IPv4 formatted address that tells a browser to look for a web page (https)
+    on the local machine (127.0.0.1 means the machine itself) on port 631 which is
+    used by CUPS. IPv6 is the new version of IP Internet Protocol. To see your IP
+    address as seen from the internet go to a search engine such as google.com or
+    start.duckduckgo.com and search on "my ip". The search engine will show your IP
+    as seen from the internet. While there search on "my user agent". The user agent
+    is your browser and OS information. Firefox allows a User Agent to be set manually,
+    it is preferable not to change this.
+
+
+    Display the User Agent from Firefox: Firefox Menu → More Tools → Web Developer
+    Tools Select the Console tab Enter:
+
+
+    ```
+
+    navigator.userAgent
+
+    ```
+
+
+    Linux is connected to the Chromebook network through bridge software. The Chromebook
+    may be connected to a router or tethered to another device. Different levels of
+    a network may use different IP addresses. hostname -I shows the network addresses
+    of the host. ip add show will show all network addresses. lsof can be used to
+    show all open ports. | pipes the output from lsof to grep is used to filter the
+    output.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+
+    From LXTerminal:
+
+
+    ```
+
+    hostname -I
+
+    ip add show
+
+    sudo lsof -i -P -n | grep LISTEN
+
+    ```
+
+
+    Use dig whois to find out more about a website.
+
+    traceroute shows how many hops and how long it takes to reach a site. "Webhet"
+    can provide detailed technical information on a website and has over 900 plugins.
+    "Net-cat" is powerful network multi-tool, with many YouTubes dedicated to it.
+    Load the following from Synatpic:
+
+
+    ```
+
+    bind9-dnsutils
+
+    whois
+
+    traceroute
+
+    ```
+
+
+    From LXTerminal:
+
+
+    ```
+
+    dig google.com
+
+    whois google.com
+
+    traceroute google.com
+
+    ```
+
+
+    Ctrl + C If needed.
+
+
+    To view the Chromebook side of the network. From the Chrome OS Chrome Browser
+    go to the URL:
+
+
+    ```
+
+    chrome://system
+
+    Ctrl + F - find ifconfig
+
+    ```
+
+
+    Click the Expand button'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# Viewing Logs
+
+
+    **dmesg** can display the current log messages. The system journal can be viewed
+    with the **journalctl** command. The **--list-boots** option will list boot logs.
+    Previous boots will show a negative offset at the beginning of the line, use with
+    the **-b** option. In the example that follows zero will be used, negative numbers
+    can be used to view previous boots. The **-x** option offers explanations and
+    possible messages. Use the Cursor Up / Down keys to scroll and Q to quit. From
+    LXTerminal:
+
+
+    ```
+
+    sudo su
+
+    dmesg
+
+    journalctl --list-boots
+
+    Q
+
+    journalctl -b 0
+
+    Q
+
+    journalctl -b 0 -x
+
+    Q
+
+    journalctl --help
+
+    Q
+
+    exit
+
+    ```
+
+
+    Check a program''s man page, programs may keep their own log files. It maybe be
+    helpful to start a program from the command line. Copy a program''s start command
+    from the LXDE menu. **Menu** → right click on the **App** → **Properties** → **Entry
+    tab**, copy **Ctrl** + C the **Command** and paste it **Ctrl** + Shift + **V**
+    into LXTerminal. Any errors will likely show up in LXTerminal.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Troubleshooting
+
+
+    Not all programs will work on all computers. There are times when searching the
+    internet will provide no help, man files and logs files provide no clues, and
+    even starting a program from LXTerminal provides no helpful messages. `strace`
+    records system calls, `-o` sends the output to a text file, `-C` shows a summary.
+    The file can be viewed with any text editor. `cat` can be a quick way to view
+    a file. Piping the output to less, `less`, allows the file to be scrolled using
+    the Cursor Up / Down keys, Q to quit.
+
+
+    From Synaptic install:
+
+    manpages-dev
+
+    strace
+
+
+    From LXTerminal:
+
+    man syscalls
+
+    Q
+
+    man strace
+
+    Q
+
+    strace -C -o st.txt cmatrix
+
+    Q
+
+    cat st.txt | less
+
+    Q
+
+
+    Chrome OS has it''s own trace program. In the Chrome OS Chrome Browser, enter
+    the URL:
+
+    chrome://tracing'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# INSTALLING i3WM
+
+
+    Tiling Window Managers are unmatched in their efficiency. They are easy on system
+    resources while providing powerful features. They are generally configured by
+    editing a small number of configuration files. The i3 Reference Card is about
+    half a page long. Tutorial video links can be found on the i3wm.org web site under
+    Screens. There is an excellent presentation on Tiling Window Managers by Aline
+    Abler for Linux Days on YouTube. This chapter will cover installing and configuring
+    i3wm. i3wm screens can be installed and run alongside LXDE.
+
+
+    Check Chrome OS settings for a screen size that works well with LXDE. 1080x675
+    will be used in this chapter. i3wm screens do not dynamically resize like LXDE:
+    Chrome OS Settings → Device → Displays
+
+
+    Shift + Search + Q will close the active window.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# i3wm Documentation
+
+
+    If not already installed, from Synaptic install:
+
+
+    +   - i3
+
+    - xterm
+
+    - qpdfview
+
+    - cups
+
+    - printer-driver-cups-pdf
+
+
+    Printing a web page to a PDF is a convenient way to save a web page. Open Firefox
+    and go to i3wm.org select Docs then select the i3 reference card.
+
+
+    Open the print dialog with Ctrl + P Scroll down and click on "Print using system
+    dialog . ."
+
+
+    On the General tab:
+
+    Select PDF
+
+    On the Page Setup tab:
+
+    Select Paper size: US Letter
+
+    Select Orientation: Landscape
+
+    Click the Print button.
+
+
+    The PDF will be saved in the PDF folder in the users home directory, ~/PDF. It''s
+    a good practice to create your own ebook directory with category folders to organize
+    your ebooks.
+
+
+    Open the LXDE file manager and navigate to the PDF folder. Right click on the
+    i3 reference card PDF, and select Properties. The File Properties pop-up box opens.
+    From the Open with: pull-down select'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'qpdfview. This tells pcmanfm that future PDF docs should be opened with the
+    QPDFviewer. The PDF can also be renamed with a more user friendly name, keep the
+    {dot}.pdf on the end.
+
+
+    Double click the i3 reference card PDF, it will open in the QPDFviewer. If needed
+    rotate the image, View → Rotate right. Fit to page width, View → Fit to page width.
+
+
+    Go back to Firefox and i3wm.org select Docs then select the User''s Guide. Print
+    the document to PDF, this time use an orientation of Portrait.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# i3wm Launch Script\n\nUse LXDE to set up i3wm. Open Mousepad:\nMenu → Accessories\
+    \ → Mousepad\n\nCreate ~/goi.sh using Mousepad, **File → Save As...**, enter the\
+    \ Name: **goi.sh** . Click the **Save** button.\n\nMousepad has many useful features.\
+    \ Under **View** check (turn on) **Line Numbers, Toolbar, Statusbar**, and select\
+    \ a **Color Scheme**. Font size can be set under **Edit → Preferences**, check\
+    \ **Highlight current line**, check **Highlight matching brackets**, uncheck **Use\
+    \ system monospace** font then select a font size.\n\nUsing Mousepad edit ~/goi.sh,\
+    \ add the following four lines to goi.sh and save the file. Use the **screen size\
+    \ from your Chrome OS settings**. The #! sha-bang at the start of the file, tells\
+    \ the program loader what interpreter program to use. BASH is an acronym for Bourne\
+    \ Again Shell.\n\n~/goi.sh:\n\n```\n#!/bin/bash\nXephyr -br -screen 1080x675 -resizeable\
+    \ :30 & \nsleep 5\nDISPLAY=:30 i3 &\n```"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: Close any running programs in LXDE and shutdown Linux from Terminal as normal.
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# i3wm Configuration
+
+
+    Deleting the i3 directory would reset the i3wm configuration and would not harm
+    i3wm. The generate config questions would have to be answered again. The i3wm
+    configuration file is located at:
+
+
+    ~/.config/i3/config
+
+
+    The Xresources file needs to be created in the home directory:
+
+
+    ~/.Xresources
+
+
+    Restart Linux, from LXDE run the File Manager pcmanfm. Select the Home Folder.
+    Hidden folders are not really hidden, they just start with a "." dot / period.
+    If the .config folder is not visible, View → check Show Hidden or press Ctrl +
+    H. Open the .config folder then open the i3 folder. Right click on the config
+    file, select Open With..., then expand Accessories and select Mousepad. Save the
+    file as config.bak. Close Mousepad and reopen the config file again with Mousepad.
+
+
+    Changes made to the config file will overide the settings found in the i3 reference
+    card document. In the config file, $mod means the Chromebook Search key or the
+    Windows key on a Windows keyboard. mod+1 is the Alt key.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# i3/config
+
+
+    Make the following changes to ~/.config/i3/config. Use Ctrl + F or Search → Find,
+    to find a location:
+
+
+    ```
+
+    Find: pango:m
+
+    From: font pango:monospace 8
+
+    To: font pango:monospace 12
+
+    ```
+
+
+    ```
+
+    Find: sen
+
+    From: exec i3-sensible-terminal
+
+    To: exec xterm
+
+    ```
+
+
+    ```
+
+    Find: dmenu_run
+
+    From: --no-startup-id dmenu_run
+
+    To: --no-startup-id i3-dmenu-desktop
+
+    ```
+
+
+    ```
+
+    Find: mod+h $mod+h split h
+
+    From: bindsym mod1+Ctrl+h split h
+
+    ```
+
+
+    ```
+
+    Find: mod+v
+
+    From: bindsym $mod+v split v
+
+    To: bindsym mod1+Ctrl+v split v
+
+    ```
+
+
+    ```
+
+    Find: Shift+sp
+
+    From: bindsym $mod+Shift+space floating toggle
+
+    To: bindsym mod1+Ctrl+space floating toggle
+
+    ```
+
+
+    At the bottom of the file add:
+
+    exec xrddb -merge ~/.Xresources && xterm
+
+
+    Save the file and close Mousepad.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# i3wm Menu Fix\n\nThe i3wm menu requires the addition of one line of code\
+    \ to i3-dmenu-desktop to keep apps on the desktop. Find the location of the menu\
+    \ with which command. In order to access this file location, run pcmanfm with\
+    \ sudo. From LXDE open LXTerminal:\n\n```\nwhich i3-dmenu-desktop\nsudo pcmanfm\n\
+    ```\n\nNavigate to /usr/bin Open i3-dmenu-desktop with Mousepad. Because this\
+    \ is a different user, Mousepad will need to be configured again, this will only\
+    \ need to be done once per user. Save the file as i3-dmenu-desktop.bak. Close\
+    \ Mousepad. Open /usr/bin/i3-dmenu-desktop again with Mousepad:\n\n```\nFind:\
+    \ \"$exec\nFrom:\n  }\n  $cmd = qq|exec nosn \"$exec\"|;\n}\nTo:\n  }\n  $exec\
+    \ = \"env GTK_BACKEND=x11 ${$exec}\";\n  $cmd = qq|exec nosn \"$exec\"|;\n}\n\
+    ```\n\nSave the file and close Mousepad, Pcmmanfm and LXTerminal."
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# i3wm Xresources
+
+
+    The {Dot} .Xresources file is used by apps like XTerm. The command: **xrdb -merge
+    ~/.Xresources** must be run in order to load the changes from Xresources. Use
+    Mousepad to create the ~/.Xresources in the home directory:
+
+
+    ```
+
+    xterm*saveLines: 2000
+
+    xterm*loginShell: true
+
+    xterm*selectToClipboard: true
+
+    xterm*faceName: Monospace
+
+    xterm*faceSize: 12
+
+    xterm*Foreground: SlateBlue
+
+    xterm*Background: black
+
+    xterm*pointerColor: red3
+
+    xterm*cursorColor: red3
+
+    ```
+
+
+    Save the file and exit Mousepad
+
+
+    There are numerous YouTubes and web pages dedicated to XTerm and how to configure
+    it.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# i3wm Startup and Shutdown
+
+
+    Startup:
+
+    From Terminal:
+
+    Select Penguin from the Terminal menu.
+
+    ./goi.sh
+
+    Press Fullscreen if needed.
+
+
+    Shutdown:
+
+    Exit any running Linux programs.
+
+    Right click on the Terminal icon\and select Shut down Linux.
+
+
+    # i3wm Keyboard Shortcuts
+
+
+    i3wm starts with an XTerm session. To quit XTerm use the exit. See the i3wm Reference
+    Card for a complete list of keyboard shortcuts. Earlier in this chapter keyboard
+    shortcuts were redefined in the ~/.config/i3/
+
+    config file to avoid conflicts with Chrome OS. They can be changed at anytime.
+
+
+    +   Search + Enter - opens a terminal window
+
+    Alt + Ctrl + H - next split Horizontal
+
+    Alt + Ctrl + V - next split Vertical
+
+    Search + D - show menu top right
+
+    Alt + Ctrl + Spacebar - Floating Toggle
+
+    Search + F - Fullscreen'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# i3wm Floating Window
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_73_0.png)
+
+
+    i3wm does allow Windows to Float.
+
+
+    Floating Windows:
+
+
+    +   - exit
+
+    - Search + D
+
+    - sy
+
+    - Enter Search + D
+
+    - galc
+
+    - Enter Alt + Ctrl + Spacebar
+
+
+    Quit Programs:
+
+
+    +   - Ctrl + Q
+
+    - Ctrl + Q'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+
+    # i3wm Split Windows
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_74_0.png)
+
+
+    # i3wm Split Windows Format
+
+
+    Split Windows:
+
+
+    +   Search + Enter
+
+    htop
+
+    Search + Enter
+
+    neofetch
+
+    Alt + Ctrl + V
+
+    Search + Enter
+
+    cmatrix
+
+
+    I know right!
+
+
+    Quit Programs:
+
+
+    +   Q
+
+    exit
+
+    exit
+
+    Q
+
+    exit
+
+
+    69'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# i3wm Workspaces\n\nBecause the Chromebook uses Search (o - 9) for function\
+    \ keys, the i3wm Workspaces keys need to be redefined. Change all 10 binds for\
+    \ # switch to workspace and # move focused container to workspace. Edit the i3wm\
+    \ config ~/.config/i3/config file:\n\n```\n# switch to workspace change:\nFrom:\n\
+    \  bindsym $mod+1 workspace ...\nTo:\n  bindsym Ctrl+1 workspace ...\n```\n\n\
+    ```\n# move focused container to workspace change:\nFrom:\n  bindsym $mod+Shift+1\
+    \ move ...\nTo:\n  bindsym mod+1 move ...\n```\n\nWorkspaces aka Virtual Desktops\
+    \ are now accessed by pressing Ctrl (o - 9), zero is Workspace 10. The Workspace\
+    \ number is shown on the bottom left of the screen. Move a selected Window between\
+    \ Workspaces by pressing Alt + (o - 9). Selecting a Window and pressing Alt +\
+    \ 5, moves the Window to Workspace 5. Pressing Ctrl +5 jumps to Workspace 5."
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# i3wm References
+
+
+    i3wm.org :
+
+    Docs:
+
+    - **User''s Guide** - handy but technical.
+
+    - **i3 reference card** - config file overrides.
+
+    Screens:
+
+    - Links to i3wm YouTubes, start here.
+
+
+    YouTube Searches:
+
+    - **i3wm Alx Booker** - 3 Part Tutorial
+
+    - **Aline Abler Linux Days** - Tiling Window Managers
+
+    **i3wm** - videos about i3wm
+
+
+    There are many amazing Desktop Environments available for Linux users to explore.
+    Always backup Linux before making changes.
+
+
+    # i3wm Screen Saver
+
+
+    **Screen Saver** screen blanking can be turned off XTerm: **q** to display, **s
+    off** to turn off.
+
+
+    ```
+
+    xset q
+
+    xset s off
+
+    ```'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# SOFTWARE
+
+
+    A great strength of Linux is it''s infinite diversity. There is a saying in the
+    Linux Community, "If you don''t like it, fork it." It is important to note, not
+    every app will work on every computer. A visit to distrowatch.com can provide
+    an idea of how many Distros there are. This chapter provides a taste of what Linux
+    has to offer.
+
+
+    Debian provides access to over 50,000 software packages. External repositories
+    can be added to the list of Debian repositories. Many Linux software providers
+    offer the most current versions of their software directly from their web sites.
+    (Dot deb) .deb files can be downloaded and directly installed.
+
+
+    Where a "Prefix" is noted, it is recommended to prefix the LXDE menu launch command
+    with that "Prefix". CLI means the program is run through a terminal like LXTerminal,
+    or Xterm. For slow or glitchy programs try using Sommelier, explained later in
+    this chapter (Page 105).'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Fullscreen Keyboard Shortcuts
+
+
+    Fullscreen mode can make screens easier to read and work with. On a Chromebook
+    keyboard, the function keys F1 thru F12 are implemented using:
+
+    Search + (1 thru =). F10 = Search + o (Zero) F11 = Search + - (Dash), F12 = Search
+    + - =
+
+
+    +   - i3wm Fullscreen Toggle: Chromebook Keyboard: Search + F
+
+    - LXDE Fullscreen Toggle: Chromebook Keyboard : Alt + Search + - (Dash)
+
+    - Windows Keyboard: Win + F
+
+
+    If the LXDE Fullscreen Toggle is not working make sure the improved keyboard shortcuts
+    flag is disabled.
+
+
+    From the Chrome OS Chrome Browser:
+
+    Go to the URL: chrome://flags
+
+    In the Search Box, enter:
+
+    improved keyboard shortcuts
+
+    There should be one flag. Disable the flag and reboot. If this should stop working,
+    possible after an update: Enable the flag and reboot, then Disable the flag and
+    reboot again.
+
+
+    # Keyboard Shortcuts aka Hot Keys
+
+
+    To view or edit Keyboard Shortcuts:
+
+    LXDE: Menu → Preferences → Setup Hot Keys
+
+    i3wm: Edit the file: ~/.config/i3/config'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Blender – Animation
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_79_0.png)
+
+
+    **Install:** blender
+
+
+    **Description:** Create 2D and 3D animation. Blender has been used to create movies.
+
+
+    **Documentation:** Help menu. There are numerous books, web sites, and YouTubes
+    dedicated to Blender. If Blender runs slow or glitchy try using Sommelier, explained
+    later in this chapter (Page 105).
+
+
+    **LXDE:** Menu → Graphics → Blender
+
+    **i3wm:** bl - Blender'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    # FreeFreeAD – CAD
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_80_0.png)
+
+
+    # FreeCAD
+
+
+    **Install:** freecad
+
+
+    **Description:** FreeCAD is a full CAD system, which can be expanded with addons.
+    FreeCAD is suitable for use with slicers and 3D printers.
+
+
+    **Documentation:** Help menu (? Help F1 fails, other help functions work.). There
+    are numerous books, web sites, and YouTubes dedicated to FreeCAD. If FreeCAD runs
+    slow or glitchy try using Sommermelier, explained later in this chapter (Page
+    105).
+
+
+    **LXDE:** Menu → Graphics → FreeCAD
+
+    **i3wm:** fr - FreeCAD'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# Gimp - Bitmap Editing\n\n![](img/b7499e434c2bd9c15bf347d1647edb1b_81_0.png)\n\
+    \nGimp\n\n**Install:** gimp, gimp-data-extras, gimp-gap, gimp-help-en, gimp-lensfun,\
+    \ gimp-plugin-registry, gimp-texturize\n\n**Description:** Edit photos and other\
+    \ bitmap graphics.\n\n**Documentation:** Help menu. There are numerous books,\
+    \ web sites, and YouTubes dedicated to Gimp.\n\n**LXDE:** Menu $\rightarrow$ Graphics\
+    \ $\rightarrow$ GNU Image Manipulation Program\n\n**i3wm:** gn - GNU Image Manipulation\
+    \ Program"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    # Flowblade - Video Editor
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_82_0.png)
+
+
+    Flowblade
+
+
+    Install: flowblade
+
+
+    Description: Flowblade is a video editor. A key feature of Flowblade is its use
+    of rendering, which allows videos to be edited in low resolution and then rendered
+    in high resolution.
+
+
+    Documentation: YouTube is the best way to learn Flowblade. If Flowblade runs slow
+    or glitchy try using Sommelier, explained later in this chapter (Page 105).
+
+
+    Prefix: env GDK_BACKEND=x11
+
+
+    LXDE: Menu → Sound & Video → flowblade i3wm: flo - flowblade'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# LMMS - Music Studio
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_83_0.png)
+
+
+    Install: lmms
+
+
+    Description: LMMS is complete music studio.
+
+
+    Documentation: Help Menu. There are numerous YouTubes dedicated to LMMS. If LMMS
+    runs slow or glitchy try using Sommelier, explained later in this chapter (Page
+    105).
+
+
+    LXDE: Menu → Sound & Video → LMMS
+
+
+    i3wm: l1 – LMMS'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# The Chromebook Guide to Google Linux\n\n# Qtikz - Diagram Editor\n\n![](img/b7499e434c2bd9c15bf347d1647edb1b_84_0.png)\n\
+    \nQtikz\n\nInstall: qtikz\n\n**Description:** Qtikz is a TikZ diagram editor.\n\
+    \n**Documentation:** Help menu $\rightarrow$ Qtikz Handbook. There are numerous\
+    \ web sites and Youtubes dedicated to TikZ.\nSearch on \"Tikz diagrams\".\n\n\
+    **Examples:** texample.net/tikz/\n**Examples:** pgfplots.net\n\n**LXDE:** Menu\
+    \ $\rightarrow$ Office $\rightarrow$ Qtikz\n**i3wm:** qti - Qtikz"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    # wxMaxima - Math CAD
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_85_0.png)
+
+
+    wxMaxima
+
+
+    Install: wxMaxima
+
+
+    Description: Math CAD
+
+
+    Documentation: Help → wxMaxima Help. There are numerous web sites and YouTubes
+    dedicated to wxMaxima.
+
+
+    Prefix: env GDK_BACKEND=x11
+
+
+    LXDE: Menu → Education → wxMaxima
+
+    i3wm: w - wxMaxima'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# GeoGebra - Math CAD
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_86_0.png)
+
+
+    **Install:** geogebra
+
+
+    **Description:** GeoGebra
+
+
+    **Documentation:** geogebra.org, There are numerous web sites and YouTubes dedicated
+    to GeoGebra. Video: youtube.com/user/GeoGebraChannel
+
+
+    **LXDE:** Menu → Education → GeoGebra
+
+
+    **i3wm:** ge - GeoGebra'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# Audacious - Music Player
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_87_0.png)
+
+
+    Audacious
+
+
+    **Install:** audacious
+
+
+    **Description:** Audacious media player, plays MP3, Ogg, ACC, ACC+, FLAC, ALAC,
+    WMA, and WAVE formats.
+
+
+    **Documentation:** man audacious, audacious --help
+
+
+    **Customization Example:**
+
+    View → Visualizations → **Appearance** side tab
+
+    Interface: pull down select **Winamp Classic Interface**
+
+    Skin: select **Refugee**
+
+    Click the **Close** button.
+
+    Click on the Audacious Display.
+
+    `Ctrl + D` - Size Toggle
+
+    Click the icon in the top left corner for a menu.
+
+    Load files from the Playlist Editor "PL" on the display.
+
+
+    **LXDE:** Menu → Sound & Video → Audacious
+
+    **i3wm:** au - Audacious'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+
+    # Pidgin - IM Chat
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_88_0.png)
+
+
+    Pidgin
+
+
+    **Install:** pidgin
+
+
+    **Example** using Bonjour protocol:
+
+
+    Bonjour chat sessions are serverless, but must be on the same network. This requires
+    access to port 5298.
+
+
+    **From the Chromebook Settings:**
+
+    Settings → Developers → Linux → Port forwarding
+
+    Click the **Add** button.
+
+
+    Port number: 5298, TCP, Label: pidgin
+
+
+    **From the Pidgin Accounts window** (Ctrl + A):
+
+    Click the **Add** button.
+
+    From the Protocol pull down select **Bonjour**.
+
+    nEnter a Username.
+
+    Click the **Add** button.
+
+
+    **LXDE:** Menu → Internet → Pidgin Internet Messenger
+
+
+    **i3wm:** pi - Pidgin Internet Messenger'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# # PosteRazor - Image Enlarger
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_89_0.png)
+
+
+    **Install:** posterazor
+
+
+    **Description:** PosteRazor produces multi-page PDF enlargements of images. PosteRazor
+    can accept BMP, GIF, ICO, JPG, PNG, TIFF, XPM, DDS, IFF, JIBIG, JPEG, and most
+    other formats.
+
+
+    **Documentation:** Click the question mark, top right.
+
+
+    **LXDE: Menu** → Graphics → PosteRazor
+
+
+    **i3wm:** po - PosteRazor'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# # Onboard - On Screen Keyboard
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_90_0.png)
+
+
+    Onboard shown with Theme options.
+
+
+    **Install:** onboard
+
+
+    **Description:** Onboard is an on screen keyboard. Onboard has several themes,
+    and layout styles. Second key down from top right is used to move the keyboard,
+    which is resizable.
+
+
+    **Prefix:** `env GDK_BACKEND=x11`
+
+
+    **LXDE:** Menu → Universal Access → Onboard
+
+    **LXDE:** Menu → Preferences → Onboard Settings
+
+    **i3wm:** on - Onboard / Onboard Settings'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# # Screenkey - Keystroke Banner
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_91_0.png)
+
+
+    **Install:** screenkey
+
+
+    **Description:** Screenkey displays keystrokes in a banner format. Right click
+    on the tray icon to set preferences; font, color, location, size and speed.
+
+
+    **Documentation:** man screenkey, screenkey --help
+
+
+    **Prefix:** envK_BACKEND=x11
+
+
+    **LXDE:** Menu → Accessories → Screenkey
+
+    **i3wm:** scr - Screenkey'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# # Figlet and Toilet - Text Banners
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_92_0.png)
+
+
+    **Install:** figlet, toilet, lolcat
+
+
+    **Description:** Create text banners from a terminal.
+
+
+    **Documentation:** man figlet, figlet --help, man toilet, toilet --help, man lolcat,
+    lolcat --help
+
+
+    **CLI:** Run from LXTerminal, XTerm, Terminal.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# MPV - Media Player\n\n**Description:** MPV is an effective video player that\
+    \ installs with LXDE. Depending on the power of the Chromebook, the screen can\
+    \ be resized to the taste of the viewer. From pcmanfm, right click on the video\
+    \ file and select **Properties**. From the **Open with** pull down select \"mpv\
+    \ Media Player\", this only needs to be done once. Double clicking on the file\
+    \ will now open it in MPV. Do **not** modify the launch command. Set the Chrome\
+    \ OS Taskbar to **Autohide shelf**. If the video disappears, press the Show Windows\
+    \ key and select the video.\n\n+   - F - Fullscreen\n- I - Information\n - L -\
+    \ Loop a-b, Shift + L - Loop entire video.\n- M - Mute\n- P - Pause / Play\n-\
+    \ Q - Quit\n- S - Screenshot - saves to home directory.\n- T - Move Subtitle\n\
+    - V - Display Subtitles\n- 9 - Decrease Volume\n- 0 - Increase Decrease Volume\
+    \ (Zero)\n- Spacebar - Pause / Play\n- Cursor Left / Right - Advance Back / Forward\n\
+    \n```\nmpv --help, mpv --list-options\n```\n\n**From pcmanfm:** Double click on\
+    \ the <file-name>.\n**CLI:** open <file-name>"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Kazam - Screen Recorder
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_94_0.png)
+
+
+    Install: kazam
+
+
+    Description: Kazam is a screen recorder that can record fullscreen, windows, or
+    areas. File → Preferences, to set preferences. Videos are saved in the users home
+    directory in the Videos folder. To quit, left click on the tray icon and select
+    Quit or Finish Recording.
+
+
+    Documentation: man kazam, kazam --help
+
+
+    Prefix: env GDK_BACKEND=x11
+
+
+    LXDE Menu → Sound & Video → Kazam
+
+    i3wm: ka - Kazam'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# vokoscreenNG - Screen Recorder
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_95_0.png)
+
+
+    vokoscreenNG
+
+
+    **Install:** vokoscreenNG
+
+
+    **Description:** vokoscreenNG is a screen recorder that can record fullscreen,
+    windows, or areas. Videos are saved in the users home directory in the **Videos**
+    folder. To quit, right click on the tray icon and select **Exit**.
+
+
+    **Documentation:** man vokoscreenNG, vokoscreenNG --help
+
+
+    **Prefix:** env GDK_BACKEND=x11
+
+
+    LXDE Menu → Sound & Video → volkscreenNG
+
+
+    **i3wm:** vo - vokoscreenNG'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Media Conversion
+
+
+    **FFmpeg - Description:** FFmpeg is the leading multi-media framework, able to
+    decode, encode, transcode, mux, demux, stream, filter and play pretty much anything
+    that humans and machines have created. It supports the most obscure ffmpeg formats
+    up to the cutting edge.
+
+
+    **Install:** ffmpeg, ffmpeg-doc
+
+
+    **Documentation:** man ffmpeg, ffmpeg --help From pecanmf, right click on: /usr/share/doc/ffmpeg/manual/ffmpeg.html
+    and select Firefox. There are numerous web sites and YouTube dedicated to FFmpeg.
+
+
+    **CLI:** Run from LXTerminal, XTerm, Terminal.
+
+
+    **ImageMagick - Description:** A bitmap image composer and converter.
+
+
+    **Install:** imagemagick
+
+
+    **Documentation:** imagemagick.org/index.php There are numerous web sites and
+    YouTube dedicated to ImageMagick, man convert, convert --help
+
+
+    **CLI:** Run from LXTerminal, XTerm, Terminal.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# Disk Usage Analyzer
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_97_0.png)
+
+
+    # Disk Usage Analyzer
+
+
+    **Install:** baobab
+
+
+    **Description:** Disk Usage Analyzer is a graphical menu driven application. Due
+    to the Chromebook''s design actual numbers are not exact, but are helpful.
+
+
+    **Documentation:** man baobab, baobab --help
+
+
+    **Prefix:** env GTK_BACKEND=x11
+
+
+    **LXDE:** Menu → System Tools → Disk Usage Analyzer
+
+    **i3wm:** disk - Disk Usage Analyzer'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Update Alternatives
+
+
+    **Description:** Update Alternatives controls several important Debian settings.
+    One of the lesser settings is browser preference. Many programs open their html
+    based help files in the default browser. The default setting causes the process
+    to fail.
+
+
+    **Force the Default Browser to be Firefox.**
+
+
+    ```
+
+    From LXTerminal:
+
+    sudo su
+
+    update-alternatives --get-selections
+
+    cd /usr/bin
+
+    ls *
+
+    cp garcon-url-handler garcon-url-handler.bak
+
+    nano garcon-url-handler
+
+    ```
+
+
+    **Change the exec line:**
+
+
+    ```
+
+    From:
+
+    exec /opt/google/cros-container/bin/garcon...
+
+    To:
+
+    exec /usr/bin/firefox-esr --client --url "$@"
+
+    Ctrl + O
+
+    Enter
+
+    Ctrl + X
+
+    Reboot the system.
+
+    ```
+
+
+    **Documentation:** man update-alternatives, update-alternatives --help
+
+
+    **CLI:** Run from LXTerminal, XTerm, Terminal.'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# Python – Programming
+
+
+    **Install:** idle-python3.9 - (3.9 or highest number) python3-pip, python3-pipdeptree,
+    python3-examples, python3-doc (Optional: Thonny Python IDE)
+
+
+    **Description:** High demand, high paying area of programming, heavily used in
+    AI.
+
+
+    **Configure IDLE:**
+
+    Options → Configure IDLE → **General** tab
+
+    Click in the **Auto-Squeeze Min. Lines** box.
+
+    Change to **5000**.
+
+    Click **Apply** and then **Ok** button.
+
+    **Additional Help Sources**
+
+    Click the **Add** button.
+
+    Name: **Local Copy
+
+    Help file path:
+
+    /usr/share/devhelp/books/python3.9/index.html
+
+    Click the **Ok** button.
+
+    Click **Apply** and then **Ok** button.
+
+
+    **Documentation:** python.org, YouTube, books
+
+    Help → Local Copy
+
+    Help → Turtle Demo
+
+    Click **Example**, select one and press **Start**.
+
+
+    **LXDE:** Menu → Programming → IDLE
+
+    **3wm:** i - IDLE (using Python 3.9)'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# SQLite – Database
+
+
+    **Note:** Python is shipped with an SQLite library (import sqlite3). The R SQLite
+    library can be loaded from Synaptic (r-cran-rsqlite) or from CRAN (install.packages("SQLite")).
+
+
+    **Install:** sqlite3, sqlite3-doc
+
+
+    **Description:** SQLite is a serverless database that is implemented as a library.
+    sqlite3 is a text based SQLite query tool, {dot}help .help for help. {dot}exit
+    to quit.
+
+
+    **Documentation:** sqlite.org/index.html, /usr/share/doc/sqlite3/index.html, man
+    sqlite3, sqlite3 --help
+
+
+    **CLI:** sqlite3 - .help .exit
+
+
+    **Install:** sqlitebrowser
+
+
+    **Description:** DB Browser for SQLite is a GUI based SQLite browser editor.
+
+
+    **Documentation:** man sqlitebrowser sqlitebrowser --help
+
+
+    **LXDE:** Menu → DB Browser for SQLite **i3wm:** db - DB Browser for SQLite'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Clipart – LibreOffice
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_101_0.png)
+
+
+    Install: openclipart-libreoffice
+
+
+    Description: LibreOffice installs with LXDE. Clip art can be added from the View
+    or Insert menu:
+
+
+    View → Gallery
+
+    Insert → Image...
+
+
+    File Location: /usr/share/openclipart/png/'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Text Based Browsers
+
+
+    Text browsers are extremely fast, make very efficient use of system resources
+    and network bandwidth, useful for filtering out ads, and can be used to automate
+    internet related tasks. Text browsers are geared toward more technical users and
+    require configuration. It is not uncommon to have to set the user agent.
+
+
+    Install: lynx
+
+
+    Documentation: man lynx, lynx --help There are numerous YouTubes on Lynx.
+
+
+    CLI: lynx
+
+
+    Install: w3m (Optional: w3m-img)
+
+
+    Documentation: man w3m, w3m --help There are numerous YouTubes on w3m.
+
+
+    CLI: w3m'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# nInvaders – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_103_0.png)
+
+
+    Install: ninvaders
+
+
+    **Description:** Terminal character arcade game. To set LXTerminal fonts size,
+    Edit → Preferences → Style tab → Terminal font.
+
+
+    P – Pause, Q – Quit, Spacebar – Fire, Cursor Left / Right – Move Left / Right.
+
+
+    **Documentation:** man nInvaders, nInvaders --help
+
+
+    CLI: nInvaders (Capital I - nInvaders)'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# # KPatience – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_104_0.png)
+
+
+    # # KPatience Klondike
+
+
+    **Install:** kpat
+
+
+    **Description:** KPatience plays 12 solitaire card games.
+
+
+    **Documentation:** man kpat, kpat --help
+
+    Help → KPatience Handbook
+
+
+    **LXDE:** → Menu → Games → Katience
+
+
+    **i3wm:** k - KPatience'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# # DreamChess – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_105_0.png)
+
+
+    **Install:** dreamchess
+
+
+    **Description:** Esc c to quit. Settings are under the Configuration menu. Theme
+    allows a choice of four different piece-board styles. Change resolution.. allows
+    Fullscreen mode to be selected.
+
+
+    **Documentation:** man dreamchess, dreamchess --help
+
+
+    **LXDE:** Menu → Games → DreamChess
+
+    **i3wm:** dr - DreamChess'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+
+    # Kigo – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_106_0.png)
+
+
+    Kigo
+
+
+    **Install:** kigo
+
+
+    **Description:** Allows a choice of board sizes.
+
+
+    **Documentation:** kigo --help-all,
+
+    Help → Kigo Handbook
+
+
+    **LXDE:** Menu → Games → Kigo
+
+
+    **i3wm:** ki - Kigo'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# BillardGL – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_107_0.png)
+
+
+    BillardGL
+
+
+    Install: billard-gl
+
+
+    **Description:** 3D Billard game for two players. Click on the screen to start.
+    Esc for menu. Leave names as Name 1 and Name 2. Tutorial is interactive.
+
+
+    **Documentation:** man billard-gl, Built-in help system includes tutorial and
+    rules for Billard.
+
+
+    **LXDE:** Menu → Games → Billard-GL
+
+    **i3wm:** b - Billard-GL'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# Flight of the Amazon Queen-Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_108_0.png)
+
+
+    Flight of the Amazon Queen
+
+
+    **Install:** flight-of-the-amazon-queen
+
+
+    **Description:** Uses the Scumm VM backend. For more adventure games search on
+    "scumm". Controls: `Esc` - skip intro, `O` - Open, `C` - Close, `L` - Look, `P`
+    - Pickup, `U` - Use, `F` - Fast Mode. Game Menu - `Search` + 5.
+
+
+    **Documentation:** man scummvm
+
+
+    **LXDE:** Menu → Games → Flight of the Amazon Queen
+
+    **i3wm:** fl - Flight of the Amazon Queen'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Extreme Tux Racer – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_109_0.png)
+
+
+    Extreme Tux Racer
+
+
+    Install: extremetuxracer
+
+
+    Description: 3D downhill skiing game. Cursor key Left / Right to turn, Up to accelerate,
+    Down to slow down, Spacebar to jump, P - pause, R to restart Esc to exit.
+
+
+    Documentation: Built-In Help
+
+
+    LXDE: Menu → Games → Extreme Tux Racer
+
+
+    i3wm: ex - Extreme Tux Racer'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# Sommelier - Wayland Compositor
+
+
+    **Description:** Sommelier is a Wayland compositor, it handles session connections
+    to Linux. There is no one size fits all solution for every program. Sommelier
+    can be run as a wrapper around a program, allowing custom settings for that program.
+    Scale will vary.
+
+
+    **Documentation:** sommelier --help
+
+
+    # Three recommended Prefix options:
+
+
+    +   1) No prefix.
+
+    2) env GDK_BACKEND=x11 <program-name>
+
+    3) sommelier -X --scale=.5 --glamor --frame-color=#000000 <program-name>
+
+
+    Lower case sommelier, space, dash, capital X, space, dash, dash, lower case scale,
+    equal, point 5, space, dash, dash, lower case glamor, space, dash, dash, lower
+    case frame, dash, color, equals pound sign, six zeros, program name. When sommelier
+    is used as a prefix, the program will run outside the desktop while appearing
+    to run on the Desktop. Clicking on the Desktop will cause the program to disappear,
+    press Show windows and select the program to restore it.
+
+
+    Scale will vary with the Chromebook Display settings, screen size, and the program.
+    A good starting point for high resolution is a scale .5, a good starting point
+    for low resolution is a scale of 1.2. The larger the number, the smaller the screen.
+    The larger the number, if .3 is a little too large and .4 is a little too small,
+    try .35. Try the Fullscreen key, sometimes it works.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: 'Frame Color uses a two digit hex red green blue coding scheme. 000000 is black,
+    FFFFFF is white, FF0000 is red, 00FF00 is green, FF00FF is purple. Hex uses 0
+    plus A, B, C, D, E, and F. 2A hex = 2x16+10 = 42. FF=255, so there are 255 to
+    the third power possible colors, over 16 million possible colors.
+
+
+    To edit an LXDE menu item, right click on it, select Properties, Desktop Entry
+    tab, edit the Command:, this will also fix 13wm. ~/.local/share/applications/<name>.desktop
+    are override files and can be manually edited or deleted without hurting anything.
+
+
+    When a menu item is edited, it is copied from: /usr/share/applications/ To: ~/.local/share/applications/
+
+
+    Check a program''s documentation for command line options. Also check a program''s
+    settings. If a program is glitchy, try lowering it''s resolution and possibly
+    turn off features. Most programs will have a fullscreen option in their settings.
+
+
+    To keep the Chrome OS Taskbar hidden while using Linux, right click on the Chrome
+    OS Taskbar and select Autohide shelf. Press Show windows right click on the Taskbar
+    and select Always show shelf from the menu to restore.
+
+
+    The following six programs are all run using themelier prefix. Your scale setting
+    will likely be different. The full Launch command will be shown in place of a
+    Prefix.'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# Frozen-Bubble – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_112_0.png)
+
+
+    **Install:** sommelier-bubble
+
+
+    **Description:** Puzzle shooting game. Cursor Left / Right, Up to shoot, Esc to
+    quit.
+
+
+    **Documentation:** man frozen-bubble, frozen-bubble --help
+
+
+    **Launch:** sommelier -X --scale=.55 --glamor --frame-color=#000000 frozen-bubble
+
+
+    LXDE: Menu → Games → Frozen-Bubble
+
+
+    **i3wm:** fro - Frozen-Bubble'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Powermanga – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_113_0.png)
+
+
+    Powermanga
+
+
+    **Install:** powermanga
+
+
+    **Description:** 2D scrolling shooting game. The first time Powermanga is run
+    press Esc then F – Fullscreen (Centers and enlarges the screen Esc within the
+    window.). Cursor keys to move, Spacebar to shoot, P to Pause, Esc to quit.
+
+
+    **Documentation:** man powermanga, powermanga --help
+
+
+    **Launch:** sommelier -X --scale=.45 --glamor --frame-color=#000000 powermanga
+
+
+    **LXDE:** Menu → Games → Powermanga
+
+    **i3wm:** pow - Powermanga'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# SuperTux 2 – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_114_0.png)
+
+
+    **Install:** supertux
+
+
+    **Description:** 2D jump and run side scroller game. Screen settings are in the
+    Options menu. Cursor Left / Right to move, Spacebar to jump, Esc to pause or quit.
+    When starting, Spacebar or mouse to select.
+
+
+    **Documentation:** man supertux2, supertux2 --help
+
+
+    **Launch:** sommelier -X --scale=.6 --glamor --frame-color=#000000 supertux2
+
+
+    **LXDE:** Menu → Games → SuperTux 2
+
+    **i3wm:** su - SuperTux 2'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: 'The Chromebook Guide to Google Linux
+
+
+    # ## SuperTuxKart- Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_115_0.png)
+
+
+    SuperTuxKart
+
+
+    **Install:** supertuxkartkart
+
+
+    **Description:** 3D arcade racer. Cursor Left / Right to turn, Up to accelerate
+    forward, Down for backwards, Spacebar to honk horn, Esc to pause or quit. Ignore
+    "Your screen resolution is too low to run STK."
+
+
+    **Documentation:** man supertuxkart, supertuxkartkart --help
+
+
+    **Launch:** sommelier -X --scale=.55 --glamor --frame-color=#000000 supertuxkart
+
+
+    **LXDE:** Menu → Games → SuperTuxKart
+
+    **i3wm:** kar - SuperTuxKart'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# GLtron – Games
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_116_0.png)
+
+
+    GLtron
+
+
+    **Install:** gltron
+
+
+    **Description:** Tron like 3D lightcycle game. Check Configure Keys and Configure
+    Players to view and change settings.
+
+
+    **Documentation:** man gltron, gltron --help
+
+
+    **Launch:** sommelier -X --scale=.7 --glamor --frame-color=#FF00 gltron
+
+
+    **LXDE:** Menu → Games → Gltron
+
+
+    **i3wm:** gl - GLtron'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# Scratch – Programming
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_117_0.png)
+
+
+    **Install:** scratch
+
+
+    **Description:** Scratch is a Block Programming language created by MIT. Drag
+    and drop programming.
+
+
+    **Documentation:** scratch.mit.edu, YouTube. Also see: developers.google.com/blocky
+
+
+    **Launch:** sommelier -X --scale=.7 --glamor --frame-color=#0000FF scratch %f
+
+
+    Fullscreen key works.
+
+
+    **LXDE:** Menu → Education → Scratch
+
+    **i3wm:** scr - Scratch'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# APT – Software
+
+
+    **Description:** APT - Advanced Packaging Tool In addition to being able to search
+    and download from the Debian repositories, can directly install opt deb software
+    package files offered by some web sites:
+
+
+    ```
+
+    sudo apt install <file-name>.deb
+
+    ```
+
+
+    **Most used, prefix with sudo:**
+
+
+    +   - apt update update package list
+
+    - apt dist-upgrade upgrade the OS
+
+    - apt upgrade upgrade everything
+
+    - apt full-upgrade upgrade with delete
+
+    - apt list <name> search by name
+
+    - apt search <desc> search descriptions
+
+    - apt show <name> show package details
+
+    - apt install <name> install package
+
+    - apt remove <name> remove package
+
+    - apt satisfy <name> satisfy dependencies
+
+
+    **Documentation:** man apt, apt --help
+
+
+    **CLI:** Run from LXTerminal, XTerm, Terminal.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# Task Select – Software
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_119_0.png)
+
+
+    Install: tasksel (and any desired "tasks")
+
+
+    **Description:** Task Select is a semi-GUI based software package installer that
+    can be started from the command line. Search Synaptic for "tasksel", there are
+    many "tasks" that can be added to tasksel to provide additional software selections.
+
+
+    **Documentation:** man tasksel
+
+
+    CLI: tasksel'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# GDebi – Software
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_120_0.png)
+
+
+    **Install:** gdebi
+
+
+    **Description:** Like apt, GDebi can be used to install local deb packages resolving
+    and installing dependencies. Unlike apt, it can also resolve and install dependencies
+    for remote (http and ftp) packages.
+
+
+    **Prefix:** envK_BACKEND=x11
+
+
+    **Documentation:** man gdebi, gdebi --help
+
+
+    **LXDE:** Menu → System Tools → GDebi Package Installer
+
+    **i3wm:** g - Gdebi Package Installer'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# Gnome Software – Software
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_121_0.png)
+
+
+    Gnome Software
+
+
+    **Install:** gnome-software, gnome-packagekit
+
+
+    **Description:** For both LXDE and i13wm do a "sudo apt update" from the command
+    line and a reboot after installing. If Gnome Software does not populate with software
+    repeat the apt update and reboot as needed.
+
+
+    **Prefix:** env GDK_BACKEND=x11
+
+
+    **LXDE:** Menu → Preferences → Software
+
+
+    **i3wm:** so - Software'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    # KDE Plasma Discover – Software
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_122_0.png)
+
+
+    # KDE Plasma Discover
+
+
+    Install: plasma-discover
+
+
+    **Description:** For both LXDE and i3wm do a "sudo apt update" from the command
+    line and a reboot after installing. If KDE Plasma Discover does not populate with
+    software repeat the apt update and reboot as needed.
+
+
+    **Prefix:** `env GDK_BACKEND=x11`
+
+
+    **LXDE:** Menu → System Tools → Discover
+
+    **i3wm:** di - Discover'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# ENOTEBOOKS
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_123_0.png)
+
+
+    Tiddly Wiki is an eNotebook that runs on everything. It''s great for school notes,
+    recipes, photo albums, anything that might be done with a paper notebook. Tiddly
+    Wiki is'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    key word searchable and is easy to stylize. Tiddly Wiki is a self-editing HTML
+    page that runs in a browser. Tiddly saves are sent to the download folder. An
+    empty wiki is about 2M, the Tiddly Wiki web site wiki is about 6M. Tiddly Wiki
+    does not require an internet connection to function. Using Firefox go to tiddlywiki.com
+    At the top right:
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_124_0.png)
+
+
+    Create Tiddler, Control Panel, Save Changes
+
+
+    Click on the Plus Sign under the Tiddly Wiki title. The Save Changes icon will
+    turn red.
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_124_1.png)
+
+
+    Save Changes icon turns red.
+
+
+    Click on the Save Changes icon to save the Tiddly Wiki web site wiki to the Downloads
+    folder.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '![](img/b7499e434c2bd9c15bf347d1647edb1b_125_0.png)
+
+
+    Download Empty button
+
+
+    Slide down the page to the **Download Empty** button and click it to download
+    an empty Tiddly Wiki to the Downloads folder. Close Firefox.
+
+
+    If not already installed, from Synaptic, install:
+
+
+    +   - cups
+
+    - printer-driver-cups-pdf
+
+    - pdftk
+
+    - imagemagick
+
+
+    # Firefox Print Dialog Fix
+
+
+    The System Print Dialog does a better job than the Firefox Print Dialog. Open
+    Firefox.
+
+
+    Enter **about:config** in the search bar. Click the **Accept the Risk and Continue**
+    button. In the **Search preference name bar** enter:
+
+    `print.tab`
+
+    The **print.tab_modal.enabled** switch will display. Click the **Toggle** to right,
+    setting it to **false**.'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Tiddly Wiki Setup
+
+
+    Create a Blank Wiki Project Folder template. These best practices can help prevent
+    data lose.
+
+
+    +   1) Create a Project Folder named Blank Wiki.
+
+
+    +   2) From the downloads folder copy the empty and tiddlywiki html files into
+    the Blank Wiki project folder.
+
+
+    +   3) Rename tiddlywiki.html to Help.html
+
+
+    +   4) In the Blank Wiki folder create two folders: Archive and Images.
+
+
+    +   5) To start a new project copy the Blank Wiki folder and rename the folder
+    and edit wiki.
+
+
+    +   6) Before starting an edit session copy the Blank Wiki folder and rename the
+    folder copy the wiki to the Archive folder. Rename it with a date prefix. Year
+    Month Day YYYYMMDD is a good format. pets.html on 3/10/2022 would be 20220310pets.html.
+
+
+    +   7) When editing save often. Saves are sent to the Downloads folder and numbered
+    pets(1).html, pets(2).html, pets(3).html, the highest number is the most current.
+
+
+    +   8) When done, copy the current save from the Downloads folder to the Project
+    folder. Then delete the old wiki and rename the new wiki removing the (number).'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# Tiddly Wiki in Action
+
+
+    Copy the Blank Wiki project folder and rename the folder to Pets. Rename the empty.html
+    file to Pets.html.
+
+
+    Place an image in the Image folder any image will do.
+
+
+    Double click on Pets.html, it should open in Firefox. If not from pcmanfm, right
+    click on Pets.html, select **Properties** and make sure it is set to **Open with**
+    Firefox.
+
+
+    The **GettingStarted** Tiddler will be open. Click the X at the top right of the
+    Tiddler, to close it.
+
+
+    Click the + Plus sign under **My TiddlyWiki** to create a new Tiddler.
+
+
+    The default **New Tiddler** name will be highlighted. Change the name to **Dogs**.
+
+
+    Just under the Tiddler name, enter a **tag name**. Enter **Dogs**, and press the
+    **Add** button.
+
+
+    At the bottom set the **Type** to **TiddlyWiki 5(text/vnd.tiddlywiki).**'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# The Chromebook Guide to Google Linux
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_128_0.png)
+
+
+    In the **Type the text for this tiddler** section, enter the following. There
+    is a space before **width** and after **50%**. There is a blank line after `</p>`
+    use your image name in place of **dog.png**:
+
+
+    !Dogs
+
+    ---
+
+
+    <p>Best Friends for Life!</p>
+
+
+    +   * Playful
+
+    * Great walking companions
+
+    * Always ready to listen
+
+
+    <center> [img width=50% [Images/dog.png]] </center>'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Dogs
+
+
+    # My TiddlyWiki
+
+
+    # Dogs
+
+
+    Best Friends for Life!
+
+
+    +   - Playful
+
+    - Great walking companions
+
+    - Always ready to listen
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_129_0.png)
+
+
+    Rendered Tiddler
+
+
+    Click the **Check Mark** at the top right of the Tiddler. The Tiddler will be
+    rendered. Click the red Save changes icon to save the wiki to the download folder.
+    Give the download a moment to finish, check the download progress before closing
+    the wiki. Remember saves are sent to the Downloads folder.
+
+
+    Open the **Help.html** file in Firefox. On the right side, click on the **Contents**
+    tab. Select **Working with TiddlyWiki**, this is a good place to start. Tiddly
+    Wiki has been around since 2004 and even has an entry in Wikipedia. Googling Tiddly
+    Wiki will produce pages of results. There are numerous YouTubes dedicated to Tiddly
+    Wiki.
+
+
+    To change the color palette, click the **Control Panel** gear then select the
+    **Appearance** tab and then the **Palette** tab.'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Tiddly Wiki Page Breaks
+
+
+    Page breaks are necessary for controlling page layout when printing. Before page
+    breaks can be used, the feature must be added to the theme''s base Tiddler.
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_130_0.png)
+
+
+    Control Panel → Appearance tab → Theme tab
+
+
+    Find the theme being used. Click on the Control Panel gear, then select the Appearance
+    tab and the Theme tab under that. Above the theme being used is:
+
+    Vanilla Basic theme
+
+
+    The Theme''s base theme Tiddler must be edited.'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# # Tiddly Wiki Finding a Base Tiddler
+
+
+    | Open | Recent | Tools | More |
+
+    |---|---|---|--|
+
+    | All | $:/Acknowledgements | | |
+
+    | Recent | $:/AdvancedSearch | | |
+
+    | Tags | $:/config/AnimationDuration | | |
+
+    | Missing | $:/config/AutoSave | | |
+
+    | Drafts | $:/config/BitmapEditor/Colour | | |
+
+    | Orphans | $:/config/BitmapEditor/ImageSizes | | |
+
+    | Types | $:/config/BitmapEditor/LineWidth | | |
+
+    | System | $:/config/BitmapEditor/LineWidths | | |
+
+    | Shadows | $:/config/BitmapEditor/Opacities | | |
+
+    | Explorer | $:/config/BitmapEditor/Opacity | | |
+
+    | Plugins | $:/config/DefaultMoreSidebarTab | | |
+
+    | | $:/config/DownloadSaver/AutoSave | | |
+
+
+    **More** top tab → **Shadows** side tab
+
+
+    Click on the **More** top tab and then the **Shadows** side tab.
+
+
+    ```
+
+    $:/temp/search
+
+    $:/themes/tiddlywiki/snowwhite/base
+
+    $:/themes/tiddlywiki/vanilla/base
+
+    $:/themes/tiddlywiki/vanilla/metrics/bodyfontsize
+
+    ```
+
+
+    Slide down to the theme''s base Tiddler.'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "# Tiddly Wiki Using Page Breaks\n\nClick on the theme's base Tiddler and edit\
+    \ it.\n\n```\n$:/themes/tiddlywiki/<theme-name>/base\n```\n\nAdd the following\
+    \ to the bottom of the file:\n\n```\n.page-break {\n  page-break-after: always;\n\
+    }\n```\n\nAdd the following to a Tiddler to cause a page break:\n\n```\n@@.page-break\n\
+    <p></p>\n@@\n```"
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Firefox Headers and Footers
+
+
+    Firefox headers and footers can be set from the Print Dialog or about:config settings.
+
+
+    Ctrl + P, Select the Options tab. Select a value from the pull down. If a value
+    is already set to Custom, set it to blank, then go back to Custom.
+
+
+    OR
+
+
+    Enter about:config in the search bar. Click the Accept the Risk and Continue button.
+    In the Search preference name bar enter: `print.print_head` or `print.print_foot`
+
+
+    The values can be left blank, static text, or any of the following:&P (And Capital
+    P) for Page number. &PT (And Capital PT) for Page with Total. &D (And Capital
+    D) for Date and Time. &T (And Capital T) for Page Title. &U (And Capital U) for
+    URL.
+
+
+    Defaults are: Top Left: Title Top Right: URL Bottom Left: Page # of # Bottom Right:
+    Date/Time'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# pdftk - PDF Toolkit
+
+
+    PDF Toolkit is a toolkit for working with PDFs.
+
+
+    PDF Toolkit help:
+
+    `pdftk --help`
+
+
+    Assemble chapter PDFs to create a PDF called book:
+
+    `pdftk ch1.pdf ch2.pdf output book.pdf`
+
+
+    Split a PDF book into separate PDF pages:
+
+    `pdftk book.pdf burst`
+
+
+    # ImageMagick
+
+
+    ImageMagick is a powerful bitmap processing tool. It can also be used for splitting
+    and merging PDFs.
+
+
+    ImageMagick help:
+
+    `convert --help`
+
+
+    Assemble chapter PDFs to create a PDF called book:
+
+    `convert -density 300 ch1.pdf ch2.pdf book.pdf`
+
+
+    Split a PDF book into PDF pages:
+
+    `convert book.pdf page%03d.pdf`'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# Firefox Notepad
+
+
+    Enter the following line into the Firefox search bar to use Firefox as a notepad.
+    Click in the screen and type. To save a note, Ctrl + P and print to PDF. To edit
+    a PDF note, open the PDF in Firefox and copy the text back into the notepad. The
+    notepad can be bookmarked for convince. PDF files are saved in the PDF folder
+    in the users home directory.
+
+
+    ```
+
+    data:text/html,<html contenteditable="true">
+
+    <Title>Notepad</Title>
+
+    ```
+
+
+    For some older browsers, there is a slight change. Still a single line, remove="true".
+
+
+    ```
+
+    data:text/html,<html contenteditable="true">
+
+    <Title>Notepad</Title>
+
+    ```
+
+
+    # Firefox File Browser
+
+
+    Enter the following line into the Firefox search bar to use Firefox as a file
+    browser. The browser can be bookmarked for convince. Drill down on home, <user-name>.
+
+
+    ```
+
+    file://
+
+    ```'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# Browser Configuration
+
+
+    Browsers often have advanced features which do not have an obvious means of access.
+    To access these settings enter the following in the search bar.
+
+
+    Firefox
+
+
+    ```
+
+    about:about
+
+    ```
+
+
+    Chrome
+
+
+    ```
+
+    chrome://about
+
+    ```
+
+
+    Edge
+
+
+    ```
+
+    edge://about
+
+    ```
+
+
+    # Firefox Zoom Fix
+
+
+    If Firefox jumps zoom levels while working.
+
+
+    Enter **about:config** in the search bar.
+
+    Click the **Accept the Risk and Continue** button.
+
+    In the **Search preference name** bar enter:
+
+    **mousewheel.with_control.action**
+
+    Change the value from **3 to 0** (zero).'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '# JUPYTER NOTEBOOK
+
+
+    Jupyter Notebooks are interactive browser based notebooks which utilize Python
+    and markdown (md) text formatting. There are numerous addons and modifications
+    available for Jupyter Notebooks. Visit jupyter.org to learn more. There are also
+    numerous YouTubes on the subject.
+
+
+    If not already installed, from Synaptic install:
+
+    idle-python3.9 - (3.9 or highest number)
+
+    python3-pip
+
+    python3-pipdeptree
+
+    python3-examples
+
+    python3-doc
+
+    jupyter
+
+    python3-matplotlib
+
+    python3-numpy
+
+    python3-pandas
+
+
+    R is optional, to proceed without R, continue on page 135.'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# Install R
+
+
+    From LXTerminal:
+
+
+    ```
+
+    sudo su
+
+    update-alternatives --get-selections
+
+    update-alternatives --config x-terminal-emulator
+
+    Select: 6 for /usr/bin/xterm
+
+    exit
+
+    ```
+
+
+    In the users home directory, create the text file:
+
+    .Renviron
+
+    Enter the following into the {dot}Renviron file:
+
+    R_LIBS_USER="/usr/local/lib/R/site-library"
+
+
+    From Synaptic install:
+
+
+    +   - r-base
+
+    - r-cran-curl
+
+    - r-cran-rgl
+
+    - r-cran-rcmdr
+
+    - r-cran-multcomp
+
+
+    From LXTerminal:
+
+    sudo R
+
+    library(Rcmdr)
+
+    Click the Yes button to install packages.
+
+    Click the Ok button, panel remains while loading.
+
+    Exit R Commander:
+
+    File → Exit → From Commander and R
+
+    Close LXterminal.'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: 'Reopen LXTerminal:
+
+
+    ```
+
+    sudo R
+
+    install.packages(''IRkernel'')
+
+    IRkernel::installspec(user = FALSE)
+
+    q()
+
+    ```
+
+
+    Reply n to Save workspace ...
+
+
+    # R Command Line
+
+
+    From LXTerminal:
+
+
+    ```
+
+    R
+
+    demo()
+
+    Cursor Up / Down, Q to quit.
+
+    demo(graphics)
+
+    Ctrl + C to exit.
+
+    help.start()
+
+    q() to quit
+
+    ```
+
+
+    Reply n to Save workspace ...
+
+
+    # R Commander
+
+
+    Menu → Education → R Commander (Give it time.)
+
+
+    +   Set Font Sizes:
+
+    Tools → Options... → Fonts tab
+
+    Click the Restart R Commander button.
+
+    Tools → Save Remdr options...
+
+    Help → help menu
+
+
+    File → Exit → From Commander and R
+
+    Click the Exit button.'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '# Jupyter Notebook Configuration
+
+
+    From LXTerminal:
+
+
+    ```
+
+    cd ~
+
+    mkdir myynotebook
+
+    cd myynotebook
+
+    jupyter notebook --help
+
+    jupyter notebook --help-all
+
+    jupyter notebook --version
+
+    jupyter notebook --generate-config
+
+    ```
+
+
+    Using Mousepad edit:
+
+    ~/.jupyter/jupyter_notebook_config.py
+
+
+    Find: p.br
+
+    From: # c.NotebookApp.browser = '' ''
+
+    To: c.NotebookApp.browser = ''/usr/bin/firefox''
+
+
+    # Jupyter Notebook Markdown
+
+
+    There are many internet resources for markdown including numerous YouTube.
+
+
+    daringfireball.net/projects/markdown/markdownguide.org/basic-syntax/itsfoss.com/markdown-guide/'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# # Jupyter Notebook Example
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_141_0.png)
+
+
+    From LXTerminal:
+
+    cd ~/mynotebook
+
+    jupyter notebook
+
+
+    To the right under **Quit**, click on **New**, select **Python 3**.
+
+    A Python Notebook opens:
+
+    print("Hello World")
+
+    Press the **Run** button.
+
+    !uname -a
+
+    Press the **Run** button.
+
+    %lsmagic
+
+    Press the **Run** button.'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# Jupyter Notebook Help
+
+
+    Click on **Help**:
+
+
+    +   - Take the **User Interface Tour**.
+
+    - View the **Keyboard shortcuts**.
+
+    - Close the **Keyboard shortcuts**.
+
+    - Select the **Home Page** tab.
+
+    - Click on the **box** to the left of the **ipynb** file.
+
+    - Click the **Red Trash Can** button.
+
+    - Click the **Delete** button.
+
+    - Click the **Quit** button.
+
+    - Close Firefox.
+
+
+    If servers don''t stop, press **Ctrl** + C twice.
+
+
+    Firefox Font Size:
+
+
+    +   - **Ctrl + Shift +** Larger Font
+
+    - **Ctrl + Shift + -** Smaller Font'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '# CONTAINERS
+
+
+    Chrome OS installs Penguin, Google’s custom Debian Linux Container, which includes
+    custom bridge software that allows it to smoothly communicate with Chrome OS.
+    It is possible to download Guest Containers, copy containers, backup and restore
+    Guest Containers, and run more than one container at a time. Breaking the Container
+    system may require the removal and reinstall of Linux.
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_143_0.png)'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '# Three tiers of Linux on Chrome OS
+
+
+    Chrome OS / Crosh Terminal
+
+    Prompt: **crosh>**
+
+
+    Termina Virtual Machine / LXC Commands
+
+    Prompt: **(termina) chronos@localhost ~ $
+
+
+    Penguin / Custom Debian Container
+
+    Prompt: **<user-id>@penguin:~$**
+
+
+    # Crosh Terminal
+
+
+    From the Chrome OS, Chrome Browser go to the URL:
+
+    `chrome-untrusted://crosh`
+
+    Alt + **Shift** + Cursor **Up** - scroll up
+
+    Alt + **Shift** + Cursor **Down** - scroll down
+
+    Tab **Tab** - twice to show commands
+
+    **help** - shows help
+
+    **help_advanced** - advanced help
+
+    **vmc** --help - help for Virtual Machine Console
+
+    **vmc list** - List Virtual Machines VMs.
+
+    **vmc start termina** - starts Termina Terminal
+
+    **exit** - Exit Termina, return to Crosh Terminal.
+
+    **vsh termina** - Reconnect.
+
+    If it fails to connect: **vmc start termina**
+
+
+    # Start a Termina Terminal
+
+
+    From a Crosh Terminal:
+
+    `vmc start termina`'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: "# Termina Terminal\n\nDisplay information about Termina Terminal: help - BASH\
+    \ help.\n\n+   - **uname -a** - Operating System Information\n- **whoami** - Show\
+    \ user name.\n- **groups** - Groups user belongs to.\n- **env** - Environment\
+    \ Settings\n- **export** - Shows export variables.\n- **stty -a** - Terminal Information\n\
+    - **shopt** - Shell Information\n- **df - h** - Display file space.\n- **mount**\
+    \ - Show mounts.\n- **lsblk** - List of block devices.\n- **ps -A** - List of\
+    \ running processes.\n- **top** - Show what's running. - Q to quit.\n- **hash**\
+    \ - List of previous commands.\n- **history** - List of previous commands.\n\n\
+    Files can be written to the /tmp directory, but will be deleted when the system\
+    \ is rebooted.\n\n```\ncd /tmp\ncat > test.txt\n  this is line 1\n  this is line\
+    \ 2\nCtrl + D\nls\ncat test.txt\nrm test.txt\ncd ~\n```"
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# # LXC Display Commands
+
+
+    From --help Terminal:
+
+
+    +   - lxc --help - Help, use with features / commands.
+
+    - lxc <feature> <command> --help
+
+    - lxc alias list --help - Example of detail help.
+
+    - lxc version - Version
+
+    - lxc info - Show container or server information.
+
+    - lxc info penguin - Information on Penguin.
+
+    - lxc remote list - List container download sites.
+
+    - lxc network list - List available networks.
+
+    - lxc profile list - List profiles.
+
+    - lxc profile show default - Show configuration.
+
+    - lxc storage list - List storage profiles.
+
+    - lxc storage show default - Show configuration.
+
+    - lxc project list - List project.
+
+    - lxc project show default - Project options.
+
+    - lxc list - List containers.
+
+    - lxc image list - List local images.
+
+    - lxc image list images: List remote images.
+
+    - lxc image list images: debian/11 - List Debian
+
+    - lxc image list images: arch=arm64
+
+    - lxc image list images: arch=arm64 os=Ubuntu
+
+    - lxc image list images: arch=arm64 os=Ubuntu release=focal
+
+
+    # # List of Downloadable Containers
+
+
+    A list of downloadable Containers can be found at:
+
+
+    us.lxd.images.canonical.com'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# Download Arch Linux
+
+
+    The LXC launch command is used to download a container image and start a container.
+    The alias command allows an image to be given a more user friendly second name.
+    From a Termina Terminal:
+
+
+    ```
+
+    lxc list
+
+    lxc image list
+
+    lxc image list images:
+
+    lxc image list images: archlinux/current
+
+    lxc launch images:archlinux/current arch
+
+    lxc image list
+
+    ```
+
+
+    Create an alias for the Arch Linux image. Place the mouse pointer at the front
+    of the Archlinux fingerprint id. Hold down the left Touchpad button while dragging
+    the mouse over the fingerprint to highlight it. Press Ctrl + Shift + C to copy
+    the fingerprint.
+
+
+    ```
+
+    lxc image alias create myarc `Ctrl + Shift + V`nlxc image list
+
+    lxc image info myarc
+
+    lxc image delete myarc
+
+    lxc list
+
+    lxc stop arch
+
+    lxc list
+
+    lxc delete arch
+
+    lxc list
+
+    ```'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# Clone Penguin
+
+
+    Create a copy of the Penguin container, log into it as root and then your <user-id>,
+    and last delete it. A practical use for this is testing software or configuration
+    changes on the "copy of Penguin" before making changes to Penguin itself. If a
+    lot of programs have been installed, Penguin may be very large and you may wish
+    to skip this example. From a Termina Terminal:
+
+
+    ```
+
+    lxc list
+
+    If penguin is running stop it:
+
+    lxc stop penguin
+
+    lxc list
+
+    lxc copy penguin testbird
+
+    lxc list
+
+    lxc start testbird
+
+    lxc list
+
+    lxc exec testbird -- bash
+
+    whoami
+
+    ls /home
+
+    exit
+
+    lxc exec testbird su - <user-id>
+
+    whoami
+
+    exit
+
+    lxc list
+
+    lxc stop testbird
+
+    lxc list
+
+    lxc delete testbird
+
+    lxc list
+
+    ```'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: '# Edit a Profile
+
+
+    Termina does not have an editor, Ctrl + X, Ctrl + E. In order to edit a profile,
+    it is necessary to copy the profile to a Variable or File. From a Termina Terminal:
+
+
+    ```
+
+    env | grep EDITOR
+
+    ls /usr/bin/v*
+
+    lxc profile create test
+
+    lxc profile list
+
+    ```
+
+
+    To a Variable:
+
+
+    ```
+
+    HOLDTXT=$(EDITOR=cat lxc profile edit test)
+
+    lxc profile show test
+
+    echo "$HOLDTXT"
+
+    echo "$HOLDTXT" | lxc profile edit test
+
+    ```
+
+
+    To a File (Use your user <id>):
+
+
+    ```
+
+    cd /tmp
+
+    EDITOR=cat lxc profile edit test > h.txt
+
+    cat h.txt
+
+    lxc file push /tmp/h.txt penguin/home/<id>/h.txt
+
+    lxc exec penguin su - <id>
+
+    ls
+
+    nano h.txt
+
+    Ctrl + X
+
+    exit
+
+    lxc file pull penguin/home/<id>/h.txt /tmp/h2.txt
+
+    ls
+
+    cat h2.txt | lxc profile edit test
+
+    lxc profile delete test
+
+    lxc stop penguin
+
+    ls
+
+    rm h*
+
+    cd ~
+
+    ```'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '# Download Ubuntu Apache2
+
+
+    Download a Ubuntu container and start an Apache2 server. The server will be accessible
+    from other Linux containers and the Chrome OS Chrome Browser. It will not be accessible
+    from Android Apps or any external system. From a Termina Terminal:
+
+
+    ```
+
+    lxc image list images: ubuntu
+
+    lxc image list images: ubuntu/jammy
+
+    lxc launch images:ubuntu/jammy ubj
+
+    lxc exec ubj - ubuntu
+
+    sudo apt update -y
+
+    sudo apt install apache2 -y
+
+    sudo systemctl start apache2
+
+    exit
+
+    lxc list
+
+    ```
+
+
+    Copy the Ubuntu IVP4 address.
+
+    Open another Chrome Browser tab.
+
+    Paste the address in the search bar.
+
+    The Apache2 Welcome Page is displayed.
+
+
+    ```
+
+    lxc stop ubj
+
+    lxc list
+
+    lxc delete ubj
+
+    lxc list
+
+    lxc image list
+
+    lxc image delete <Ubuntu-fingerprint>
+
+    lxc image list
+
+    ```'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# Penguin Backup and Restore
+
+
+    The Chrome OS built-in Linux backup system can not be used to backup or restore
+    guest containers. Doing a restore will not delete any guest containers.
+
+
+    # Backup Guest Container to Penguin
+
+
+    Copy (publish) a container (sam in this example) to an image file. Then export
+    the image file to a compressed file (.tar.gz). Last the compressed file is pushed
+    into the Penguin container. In this example files are copied into the Penguin
+    container (Use your <id>). Use Manage extra containers page 151 or “lxc copy penguin
+    sam” to create a container named sam.
+
+
+    ```
+
+    lxc publish sam --alias backup
+
+    lxc image export backup $LXD_CONF/backup
+
+    lxc file push $LXD_CONF/backup.tar.gz npenguin/home/<id>/backup.tar.gz
+
+    ```
+
+
+    +   Clean up Files:
+
+    lxc image list
+
+    lxc image delete backup
+
+    lxc image list
+
+    cd $LXD_CONF
+
+    ls
+
+    rm backup.tar.gz
+
+    lxc list
+
+    lxc delete sam
+
+    cd ~'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: "# Restore Guest Container from Penguin\n\nPull a compressed File (.tar.gz)\
+    \ from the Penguin container (Use your <id>). Then import the image file from\
+    \ the compressed file. Last launch a container from the image file.\n\n```\nlxc\
+    \ file pull penguin/home/<id>/backup.tar.gz\nlxc $LXD_CONF/backup.tar.gz\nlxc\
+    \ image list\nlxc image import $LXD_CONF/backup.tar.gz\n  --alias sam\nlxc image\
+    \ list\nlxc list\nlxc launch sam sam\nlxc list\n```\n\n# Clean up Files:\nlxc\
+    \ list\nlxc stop sam\nlxc list\nlxc delete sam\nlxc list\nlxc image list\nlxc\
+    \ image delete sam\nlxc image list\ncd $LXD_CONF\nls\nrm backup.tar.gz\nls\ncd\
+    \ ~"
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# Backup a Guest Container to USB Drive
+
+
+    Copy (publish) a container (use in this example) to an image file. Then export
+    the image file to a compressed file (.tar.gz) on the USB drive. Plug in the USB
+    drive. Open the Chrome OS Files App, right click on the drive and select Share
+    with Linux. Manage extra contain-ers page 151 or "lxc copy penguin sue" to create
+    a container named named sue. From a Termina Terminal:
+
+
+    ```
+
+    cd /mnt/shared
+
+    It may take a moment for the drive to mount. Use ls to check for the removable
+    directory. Then cd to the remov-able directory, use ls to find <drive-name>.
+
+    ls
+
+    cd removable
+
+    ls
+
+    lxc list
+
+    lxc image list
+
+    lxc publish sue --alias backup
+
+    lxc image list
+
+    lxc image export backup
+
+    /mnt/shared/removable/<drive-name>/backup
+
+    ```
+
+
+    Stop sharing the drive with Linux. From the Linux de-velopment environment, Manage
+    shared folders, click the X for the <drive-name> to stop sharing.
+
+
+    # Clean up Files:
+
+
+    ```
+
+    lxc image list
+
+    lxc image delete backup
+
+    lxc image list
+
+    lxc list
+
+    lxc delete sue
+
+    lxc image list
+
+    ```'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: '# Restore Guest Container from USB Drive
+
+
+    Import a compressed file (.tar.gz) from the USB drive to an image file. Then launch
+    a container from the image file. Plug in the USB drive. Open the Chrome OS Files
+    App, right click on the Drive and select Share with Linux. From a Termina Terminal:
+
+
+    ```
+
+    cd /mnt/shared
+
+    It may take a moment for the drive to mount. Use ls to check for the removable
+    directory. Then cd to the removable directory, use ls to find the <drive-name>.
+
+    ls
+
+    cd removable
+
+    ls
+
+    lxc image import /mnt/shared/removable/
+
+    <drive-name>/backup.tar.gz --alias sue
+
+    lxc image list
+
+    lxc launch sue sue
+
+    lxc list
+
+    ```
+
+
+    Stop sharing the drive with Linux. From the Linux development environment, Manage
+    shared folders, click the X for the <drive-name> to stop sharing.
+
+
+    # Clean up Files:
+
+
+    ```
+
+    lxc image list
+
+    lxc image delete sue
+
+    lxc list
+
+    lxc stop sue
+
+    lxc delete sue
+
+    lxc list
+
+    ```'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: '# Storage Locations
+
+
+    **Containers and Image Files:**
+
+    /mnt/stateful/lxd/storage-pools/default\Compressed Files .tar.gz:
+
+    echo $LXD_CONF
+
+    cd $LXD_CONF
+
+    **USB Drives:**
+
+    /mnt/shared
+
+
+    # Google Bridge Software
+
+
+    Containers require bridge software to properly communicate with the outside world.
+    Google''s Chromebook container bridge software is called **cros-container-guest-tools.
+    Bazel build** is used to build the bridge software. There is no single procedure
+    for installing the cros-container-guest-tools that works across all Distros. Distros
+    may have specific instructions on their web site, there are also YouTubes for
+    several Distros. Penguin already contains the bridge software and can easily be
+    cloned to create special purpose containers.
+
+
+    # Dockers Containers Kubernetes
+
+
+    Dockers are used to run applications. Containers are used to run operating systems.
+    Kubernetes are used to run large numbers of Dockers and like Beowulfs often use
+    computer clusters.'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: "# Manage extra containers\n\nCurrently in the works, Manage extra containers,\
+    \ can be enabled with the Allow multiple Crostini containers flag and accessed\
+    \ from the Linux development environment panel. From the Chrome OS Chrome browser\
+    \ go to the URL:\n\n```\nchrome://flags\nSearch on : crostini multi\nSet the Flag\
+    \ to: Enabled\n```\n\nContainers are created from downloaded image files (lxc\
+    \ image list). When image files are no longer needed they can be deleted (lxc\
+    \ image delete <fingerprint>).\n\nPenguin containers can be created by just entering\
+    \ a Container name. The user's email id will be their user id.\n\nNon-Penguin\
+    \ containers can be created by entering a Container name and using the Advanced\
+    \ pulldown. For Image Server enter:\nhttps://images.linuxcontainers.org\n Image\
+    \ Alias enter a valid Alias, example: archlinux/current\n\nFrom Manage extra containers,\
+    \ containers can be Stopped, Deletion, Backed up, and Restored. Terminal can be\
+    \ used to start Penguin containers installed with Manage extra containers. Non-Penguin\
+    \ containers have no bridge software and can be started manually from Crash:\n\
+    \n```\nvmc start termina\nlxc start <container-name>\nlxc exec <container-name>\
+    \ -- bash\n```"
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: 'The free range nature of Linux allows it to evolve as need and often in several
+    directions at one time. If you don''t like it, fork it. There are two major trends
+    in Linux that touch virtually every system. The move from X.org to Wayland does
+    clean up a lot of X.org issues. Wayland also blocks GUI root sessions, which causes
+    the creation of convoluted methods of going around the limit. There has been a
+    move from initd to Systemd. Systemd is a much more robust system automation. Systemd
+    suffers from Urban Sprawl and uses binary files instead of traditional Unix/Linux
+    text files.
+
+
+    X.org to Wayland - Interface, displays, etc.
+
+    initd to Systemd - Start up, shutdown, automation.
+
+
+    # LOOSE ENDS'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '# Setting Passwords
+
+
+    Due to the design of Linux Containers, you are never locked out of Linux and can
+    always reset your Linux passwords. From a Termina Terminal:
+
+
+    List the containers:
+
+
+    ```
+
+    lxc list
+
+    ```
+
+
+    Start the Linux Container, example Penguin:
+
+
+    ```
+
+    lxc start penguin
+
+    ```
+
+
+    Run BASH as root:
+
+
+    ```
+
+    lxc exec penguin -- bash
+
+    ```
+
+
+    Change the root password. Note spelling.
+
+
+    ```
+
+    passwd
+
+    ```
+
+
+    Change user password:
+
+
+    ```
+
+    ls /home
+
+    ```
+
+
+    ```
+
+    passwd <user-id>
+
+    ```'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: '# Web Links
+
+
+    ### The starting point for all things Chrome:
+
+    chromium.org
+
+
+    ### The Debian Web Site:
+
+    debian.org
+
+
+    ### More Software Sources:
+
+    docker.com
+
+    snapcraft.io
+
+    flatpak.org
+
+    store.steampowered.com
+
+
+    ### Educational:
+
+    grow.google/certificates
+
+    grasshopper.app
+
+    developers.google.com/machine-learning/crash-course
+
+    tensorflow.org
+
+    youtube.com search for: alphago the movie
+
+
+    ### Go Paperless:
+
+    myboogieboard.com
+
+    getrocketbook.com'
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: "# Install Linux on Android\n\nFrom the Play Store install Userland (Does not\
+    \ require rooting). Use APT to install software, no sound. Some working programs:\
+    \ LibreOffice, Gimp, Inkscape, Python, R, Firefox, Tiddly Wiki, Xpad, Powermanga.\
+    \ Keyboards may requires a USB-C to USB or Micro USB to USB adapter. For small\
+    \ screen devices, screen casting, screen magnifiers, or magnifying glasses are\
+    \ helpful.\n\n# Userland Home Screen:\n\nThe Section menu runs along the bottom\
+    \ of the Userland Home Screen. The Apps section is used to install Debian. The\
+    \ Sessions section is used to start Debian (long click, select) stop Debian (long\
+    \ click, select Stop Session). The Filesystems section is used to: Backup Debian\
+    \ (long click, select Export – be sure to long click, select Edit show passwords\
+    \ when screen shot, needed for restore. Delete Debian (long click, select Delete).\
+    \ Restore click + (Plus Sign) top right.\n\n# Install Debian and LXDE:\n\n+  \
+    \ From the Apps section:\n- Select Debian.\n- Grant the permissions requested\
+    \ by Userland.\n- Please select a connection type:\n- Select Graphical and click\
+    \ Continue.\n- When the install completes:\n- The built in VNC screen will open.\n\
+    - A Linux Terminal will open inside that. \n- Install LXDE from the Linux Terminal:\n\
+    \n```\nsudo apt update -y\nsudo apt dist-upgrade -y\nsudo apt install task-lxde-desktop\
+    \ -y\n```"
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: '# Configuring keyboard-configuration panel:
+
+
+    Tab to <Ok> and press the Spacebar. Configuring wicd-daemon panel:
+
+
+    Press Spacebar to select userland. Tab to <Ok> and press the Spacebar. startlxde:
+
+
+    The screen will look very confused, close Userland. Start Userland:
+
+
+    From the Userland Menu, top right, select Settings: Select Default Landing Page,
+    select Sessions. Click on Sessions at the bottom of the screen. Long click Debian,
+    if running, select Stop Session. Click on Debian, to start Debian.
+
+
+    # LXDE Desktop Startup:
+
+
+    Start LXDE from the Linux Terminal: startlxde & Let the LXDE Desktop start. Save
+    history pop-up, click No. exit
+
+
+    The VNC floating menu will appear over the desktop. The left most icon allows
+    the VNC menu to be moved. From the VNC menu’s menu (right most icon):
+
+
+    +   - If using a keyboard, select Disable Extra Keys. Input Mode: Direct, Hold
+    Pan Scaling: Fit to Screen
+
+
+    Note: if Android is blocking access to CPU usage, right click on the CPU monitor,
+    bottom right, and select Remove-“Usage Monitor” from Panel.
+
+
+    # Set Time Zone:
+
+
+    +   - Menu → System Tools → LXTerminal sudo apt install dpkg -y sudo dpkg-reconfigure
+    tzdata Follow instructions, then restart Debian.'
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: '# Set Screen Size by editing ~/.vncrc:
+
+
+    Menu → System Tools → LXTerminal
+
+    sudo apt install nano -y
+
+    cd ~/
+
+    cp .vncrc .vncrc.bak
+
+    nano .vncrc
+
+    Stop and Restart Debian.
+
+
+    # To Exit:
+
+
+    Close any running programs.
+
+    From the VNC menu’s menu select Disconnect.
+
+    Long click Debian, select Stop Session.
+
+    Close Userland, Win + Enter will close Userland.
+
+
+    # Userland File Locations:
+
+
+    Internal Storage:
+
+    Inside Debian: /storage/internal
+
+    Android File System:
+
+    /Internal Storage/Android/data/tech.ula/files/storage
+
+    External SD Card Storage:
+
+    Inside Debian: /storage/sdcard
+
+    Android File System:
+
+    /<Sdcard-Id>/Android/data/tech.ual/files/storage
+
+
+    Connecting a Chromebook to an Android device provides a way to move files into
+    and out of Userland using the Chrome OS Files App. Looking for a Linux phone?
+    There are several, with the Pine Phone starting at $150.
+
+
+    # For R add the following:
+
+
+    ```
+
+    sudo apt install r-cran-sem -y
+
+    sudo apt install gnuplot -y
+
+    ```'
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: '# XPAD NOTEPAD
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_163_0.png)
+
+
+    Looking to challenge yourself? Backup your system first. Just the wrong Xpad Preference
+    settings can prevent LXDE and i3wm from starting and even crash Terminal. Fix
+    Terminal first, then from Terminal run: xpad Try different preference settings,
+    shutdown and restart Linux, then start LXDE or i3wm or start Xpad.'
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: '# Fixing Xpad
+
+
+    Fix Xpad using the settings below. Right click inside a notepad or the Tray icon,
+    select Preferences. Color individual notes, right click inside a notepad, Edit
+    – Layout: Use this font, Use these colors.
+
+
+    +   **View tab - Check:**
+
+    - Show scrollbar
+
+    - Show window decorations
+
+    - Hide all notes from the taskbar and...
+
+
+    +   **Layout tab – Select:**
+
+    - Use this font
+
+    - Use these colors
+
+
+    +   **Startup tab – Check:**
+
+    - Nothing checked
+
+
+    +   **Tray tab – Check:**
+
+    - Enable tray icon
+
+    - Tray left mouse click behavior:
+
+    - Toggle Show All
+
+
+    +   **Other tab - Check:**
+
+    - Confirm pad deletion
+
+
+    **Install:** xpad
+
+
+    **Documentation:** Right click the Tray icon or inside a note and select Help.
+
+
+    **Prefix:** env GDK_BACKEND=x11
+
+
+    **LXDE:** Menu → Accessories → Xpad
+
+
+    **i3wm:** xp - Xpad'
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: '# QUICK REFERENCE
+
+
+    Chromebook''s streamlined rugged design combined with one button Linux install
+    offers historic easy of access to over 50 thousand software packages. Access to
+    tried and tested software like LibreOffice, Gimp, Blender, FreeCAD, and Python.
+
+
+    The focus of this book is access and achieving the best user experience. How to
+    start a Full Linux Desktop under Chrome OS. Fixing Software Package Managers that
+    provide access to software. And, tweaking program launch commands to provide the
+    best experience.
+
+
+    Want to know more? The Debian Handbook can be installed using Synaptic, install:
+    debian-handbook. Open the index.html file with Firefox:
+
+
+    ```
+
+    /usr/share/doc/debian-handbook/html/en-US/index.html
+
+    ```
+
+
+    Explore the debian.org and chromium.org web sites.'
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: '# Quick Reference Troubleshooting
+
+
+    Never panic, Chromebooks and Linux are very robust.
+
+
+    +   1) Restart Linux.
+
+
+    +   2) Reboot the Chromebook.
+
+
+    +   3) Check for updates.
+
+
+    +   4) Fix the Chrome OS Terminal first.
+
+
+    +   5) If there was a recent config change, undo it.
+
+
+    +   6) If there was a recent program install, uninstall it.
+
+
+    +   7) Google error messages and symptoms.
+
+
+    +   8) Check the system logs for messages.
+
+
+    +   9) If Linux will not start at all, for example if the Termina virtual machine
+    is broken. Remove Linux, Install Linux and restore Linux from the last backup
+    (Page 50). See Saving Data Outside of a Container (Page 49).
+
+
+    +   10) For Port issues, delete all forwarded ports, reboot and re-add needed
+    port(s). Settings: Linux port forwarding \sudo lssof -i -P -n | grep LISTEN
+
+
+    +   11) For file sharing issues, remove all file shares, reboot and re-add needed
+    file shares. Settings: Linux shared folders'
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: '# Quick Reference Fixing Terminal
+
+
+    While starting Terminal, on occasion you may have a re-occurring error, such as;
+    "can''t open display :2". To clear the error try the following:
+
+
+    +   1) First try:
+
+    From the Chrome OS Chrome Browser:
+
+    From the Crosh URL:
+
+    `chrome-untrusted://crosh`
+
+    vmc stop termina
+
+
+    +   2) If that fails then:
+
+    From the Chrome OS Chrome Browser
+
+    From the URL:
+
+    `chrome-untrusted://crosh`
+
+    vmc start termina
+
+    lxc stop penguin
+
+    exit
+
+    vmc stop termina
+
+
+    +   3) If that fails, last try :
+
+    From Terminal:
+
+    Select Penguin from the Terminal menu.
+
+    sudo halt
+
+    Restart Terminal and select Penguin, then do:
+
+    `Ctrl + C`
+
+    From the Chrome OS Chrome Browser:
+
+    From the Crosh URL:
+
+    `chrome-untrusted://crosh`
+
+    vmc stop termina
+
+
+    +   4) Reboot the Chromebook, start at step one.'
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: '# Quick Reference Finding Programs
+
+
+    Synaptic is one of the easiest ways to find a program''s name and file locations.
+    Synaptic can be started from the Chrome OS Terminal app :
+
+
+    ```
+
+    pkexec "/usr/sbin/synaptic"
+
+    ```
+
+
+    Find the installed program. Select it by clicking on it once, then click on Properties
+    (Toolbar top right.) Maximize the program''s Properties pop up window. Select
+    the Installed Files tab. File names and locations can be found there.
+
+
+    Most programs can be started from Chrome OS Terminal. This can be helpful when
+    a program''s startup setting causes a Desktop to crash. Start the program from
+    Terminal and correct the setting. If the program can not be fixed it can be deleted
+    using Synaptic.
+
+
+    Program start-up commands can be found in .desktop files in the ~/.local/share/applications/
+    and /usr/share/applications/ directories.
+
+
+    ```
+
+    cat <name>.desktop | grep Exec
+
+    ```'
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: '# Quick Reference Best Practices
+
+
+    Best Practices can greatly reduce the time and work required to recover from an
+    issue.
+
+
+    While working, it is often helpful to save a file name with a version number.
+    For example myfile1.txt, myfile2.txt, myfile3.txt. Save often while working.
+
+
+    At least, back up project files after working for long periods.
+
+
+    Backup a system at least once a month.
+
+
+    Backup a system before making configuration changes or installing new software.
+
+
+    Before editing a configuration file, copy it to a .bak file. Use versions as needed,
+    .bak1, .bak2, .bak3 etc . .
+
+
+    Use external media for backups. Alternate media so all current backups are not
+    on the same media.
+
+
+    Save critical files outside of Chromebook only backups, so they can be read by
+    other systems.
+
+
+    Consider “Saving Data Outside of a Container” see page 49.'
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: '# Quick Reference Desktops
+
+
+    Update Debian Linux:
+
+
+    ```
+
+    sudo apt update -y
+
+    sudo apt dist-upgrade -y
+
+    ```
+
+
+    Install Nano editor:
+
+
+    ```
+
+    sudo apt install nano -y
+
+    ```
+
+
+    Install Xephyr - Nested X Server:
+
+
+    ```
+
+    sudo apt install xserver-xephyr -y
+
+    ```
+
+
+    Install LXDE and i3wm Desktops:
+
+
+    ```
+
+    sudo apt install task-lxde-desktop -y
+
+    sudo apt install i3 -y
+
+    ```
+
+
+    LXDE Launch Script ~/gol.sh:
+
+
+    ```
+
+    #!/bin/bash
+
+    Xephyr -br -fullscreen -resizeable :20 & sleep 5
+
+    DISPLAY=:20 startlxde &
+
+    ```
+
+
+    i3wm Launch Script ~/goi.sh:
+
+
+    ```
+
+    #!/bin/bash
+
+    Xephyr -br -screen 1080x675 -resizeable :30 & sleep 5
+
+    DISPLAY=:30 i3 &
+
+    ```
+
+
+    Three recommended Prefix options:
+
+
+    +   1) No prefix.
+
+    2) env GDK_BACKEND=x11 <program-name>
+
+    3) sommelier -X --scale=.5 --glamor
+
+    --frame-color=#000000 <program-name>'
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: '# Quick Reference LXDE Startup
+
+
+    Startup:
+
+    Run the **Terminal** App.
+
+    Select **Penguin** from the Terminal menu.
+
+    ./gol.sh
+
+    Press Fullscreen if needed.
+
+
+    Shutdown (LXDE shuts down with Terminal):
+
+    Exit any running Linux programs.
+
+    Right click on the **Terminal** icon and select **Shut down Linux.**
+
+
+    # Quick Reference LXDE from Crosh
+
+
+    From the Chrome OS Chrome browser:
+
+    Go to the URL:
+
+    **chrome-untrusted://crosh**
+
+
+    ```
+
+    Startup:
+
+    vmc start termina
+
+    lxc start penguin
+
+    lxc exec penguin su - <user-id>
+
+    ./gol.sh
+
+    Shutdown:
+
+    exit
+
+    lxc stop penguin
+
+    exit
+
+    vmc stop termina
+
+    ```'
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: '# Quick Reference Chrome Browser
+
+
+    Chrome Browser URL''s: chrome://about - Full list of Chrome URL''s file://home/chronos/user/MyFiles/
+    file:///home/chronos/user/Downloads/
+
+
+    After Linux has been installed: chrome-untrusted://crosh - Chrome OS Shell chrome-untrusted://terminal
+    - Linux Terminal
+
+
+    chrome://flags F1 thru F12 are implemented using Search + (1 thru =). F10 = Search
+    + o (Zero) F11 = Search + - (Dash), F12 = Search + = Flag: improved keyboard shortcuts
+    Disable the flag and reboot. If this should stop working, possible after an update:
+    Enable the flag and reboot, then Disable the flag and reboot.
+
+
+    Manage extra containers: Flag : Allow multiple Crostini multi Enable the flag
+    and reboot.
+
+
+    If a Chromebook flag setting breaks after an update, unset the flag and reboot.
+    Then set the flag and reboot again.'
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: '# Quick Reference Firefox Browser
+
+
+    Firefox Browser URL''s:
+
+    **about:about** - Full list of Firefox URL''s
+
+    file://
+
+    data:text/html,<html contenteditable="true">
+
+    <Title>Notepad</Title>
+
+
+    **about:config**
+
+    Use System Print Dialog.
+
+    Flag: **print.tab_modal.enabled** set to **False**
+
+
+    Set Headers and Footers.
+
+    Flags: **print.print_head** / **print.print_foot**
+
+    Blank, static text, or any of the following:
+
+    &P, &PT, &D, &T, &U
+
+
+    Stop random zoom levels while working.
+
+    Flag: **mousewheel.with_control_action**
+
+    Change the value from **3** to **0** (zero).
+
+
+    Printers using IPP often have an Embedded Web Server.
+
+    Copy everything between ipp:// and :631, paste this into
+
+    y browser''s search bar. From a terminal:
+
+    ippfind'
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: '# Quick Reference CLI
+
+
+    help
+
+    man <command>
+
+    env
+
+    history
+
+    whoami
+
+    touch <file>
+
+    cp <from> <to>
+
+    mv <from> <to>
+
+    rm <file>
+
+    ls
+
+    ls -la
+
+    cd <directory>
+
+    cd ..
+
+    mdir <directory>
+
+    pwd
+
+    rm -r <directory>
+
+    which <program>
+
+    cat <file>
+
+    cat >> <file>
+
+    sudo chmod +x go.sh
+
+    sudo pcmanfm
+
+    password
+
+    sudo passwd <id>
+
+    sudo usermod -aG <g> <u>
+
+    groups
+
+    sudo dmesg
+
+
+    BASH help
+
+    Manual help
+
+    Environment
+
+    Previous commands
+
+    Show user
+
+    Create file
+
+    Copy file
+
+    Move / rename file
+
+    Delete file
+
+    List files
+
+    All with details
+
+    Change Directories
+
+    Up directory level
+
+    Make directory
+
+    Current directory
+
+    Delete directory
+
+    Show location
+
+    Read text file
+
+    Write text file
+
+    Append Ctl+D
+
+    Make executable
+
+    SU File Manager
+
+    Set user password
+
+    Set <id> password
+
+    Add User to Group
+
+    Show user groups
+
+    Display log
+
+
+    **Using Synaptic** install: debian-refcard The files will install here: /usr/share/doc/debian-refcard/
+    gz files.
+
+
+    **Open gz files with Xarchiver** (Menu → **Xarchiver**), then open the pdf with
+    **qpdfview**.'
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: '# ABOUT THE AUTHOR
+
+
+    R. S. Ake started programming back in the days of the S-100 microcomputers and
+    never stopped. He is very grateful to have worked in field of IT his entire life.
+    He has known exhaustion, but never boredom. He is a fan and long time user of
+    Linux. He is inspired by curiosities like the game of life running inside the
+    game of life, the most beautiful equation in math, and the logic machine of Lewis
+    Carroll.'
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: 'Made in the USA
+
+    Columbia, SC
+
+    11 November 2022
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_181_0.png)'
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: 'Is your Chromebook Linux enabled? Enter the word linux in the Chromebook Settings
+    search bar and press enter. If the search returns Linux development environment,
+    the Chromebook is Linux enabled, giving you access to Google''s custom Debian
+    Linux Container.
+
+
+    This book is written with the Linux Beginner in mind. The techniques used in this
+    book do NOT require rooting. Advanced Linux Users may find this a handy time saver
+    and reference for dealing with the quirky nature of Chromebooks.
+
+
+    Short tweaks are used to take you from install to Full Linux Desktop Environment.
+    This includes Linux Software Package Mangers that allow easy access to programs
+    like LibreOffice, Gimp, Blender, FreeCAD, and Python.
+
+
+    Coverage includes the LXDE and i3wm Desktops, six Software Package Mangers including
+    Synaptic, Linux Containers, Tiddly Wiki, Jupyter Notebooks, and Linux on Android.
+
+
+    ![](img/b7499e434c2bd9c15bf347d1647edb1b_183_0.png)'
+  merge: -1
+  pgno: 183

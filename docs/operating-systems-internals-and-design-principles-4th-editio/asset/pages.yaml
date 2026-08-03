@@ -1,0 +1,2782 @@
+- img_proc: true
+  md: '# UNIX
+
+
+    William Stallings
+
+
+    This document is an extract from
+
+    Operating Systems: Internals and Design Principles, Fourth Edition
+
+    Prentice Hall, 2000, ISBN 0-13-031999-6
+
+    It is available at WilliamStallings.com/OS4e.html
+
+
+    Copyright 2001 William Stallings'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '2.6 TRADITIONAL UNIX SYSTEMS....................................................................................4
+
+
+    History...............................................................................................................................4
+
+
+    Description......................................................................................................................4
+
+
+    2.7 MODERN UNIX SYSTEMS...............................................................................................6
+
+
+    System V Release 4 (SVR4)................................................................................6
+
+
+    Solaris 2.x.......................................................................................................6
+
+
+    4.4BSD..................................................................................................................6
+
+
+    Linux..................................................................................................................6
+
+
+    History..................................................................................................................6
+
+
+    Modular Structure..................................................................................................7
+
+
+    3.4 UNIX SVR4 PROCESS MANAGEMENT..................................................................9
+
+
+    Process States...............................................................................................................9
+
+
+    Process Description.....................................................................................9
+
+
+    Process Control..................................................................................................10
+
+
+    4.5 SOLARIS THREAD AND SMP MANAGEMENT.......................................................12
+
+
+    Multithreaded Architecture...............................................................................12
+
+
+    Motivation.......................................................................................................13
+
+
+    Process Structure......................................................................................13
+
+
+    Thread Execution.........................................................................................13
+
+
+    Interrupts as Threads..................................................................................14
+
+
+    4.6 LINUX PROCESS AND THREAD MANAGEMENT...............................................16
+
+
+    Linux Processes......................................................................................16
+
+
+    Linux Threads......................................................................................17
+
+
+    6.7 UNIX CONCURRENCY MECHANISMS...............................................................17
+
+
+    Pipes.........................................................................................................17
+
+
+    Messages......................................................................................................17
+
+
+    Shared Memory...............................................................................................17
+
+
+    Semaphores..................................................................................................18
+
+
+    Signals.......................................................................................................18
+
+
+    6.8 SOLARIS THREAD SYNCHRONIZATION PRIMITIVES...............................19
+
+
+    Mutual Exclusion Lock.....................................................................19
+
+
+    Semaphores..................................................................................19
+
+
+    Readers/Writer Lock.....................................................................19
+
+
+    Condition Variables.....................................................................20
+
+
+    8.3 UNIX AND SOLARIS MEMORY MANAGEMENT...............................................21
+
+
+    Paging System.....................................................................................21
+
+
+    Data Structures.........................................................................................21
+
+
+    Page Replacement.....................................................................................22
+
+
+    Kernel Memory Allocator.....................................................................22
+
+
+    8.4 LINUX MEMORY MANAGEMENT...............................................................24
+
+
+    Linux Virtual Memory.....................................................................24
+
+
+    Virtual Memory Addressing...............................................................24
+
+
+    Page Allocation.................................................................................24
+
+
+    Page Replacement Algorithm...............................................................24
+
+
+    Kernel Memory Allocation.................................................................24
+
+
+    9.3 TRADITIONAL UNIX SCHEDULING......................................................26
+
+
+    10.3 LINUX SCHEDULING......................................................................28
+
+
+    10.4 UNIX SVR4 SCHEDULING...............................................................20
+
+
+    11.8 UNIX SVR4 I/O...........................................................................30
+
+
+    Buffer Cache.....................................................................................30
+
+
+    Character Queue.............................................................................30
+
+
+    Unbuffered I/O...............................................................................31
+
+
+    UNIX Devices..................................................................................31'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '+   12.7 UNIX FILE MANAGEMENT ................................................................................
+    32
+
+    Inodes .....................................................................................................................
+    32
+
+    File Allocation..................................................................................................................
+    32
+
+    13.6 SUN CLUSTER..............................................................................................................
+    34
+
+    Object and Communication Support...........................................................................
+    34
+
+    Process Management...........................................................................................................
+    34
+
+    Networking......................................................................................................................
+    34
+
+    Global File System................................................................................................
+    35
+
+    13.7 BEOWULF AND LINUX CLUSTERS...............................................................................
+    36
+
+    Beowulf Features...............................................................................................................
+    36
+
+    Beowulf Software...............................................................................................................
+    36'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# TRADITIONAL UNIX SYSTEMS
+
+
+    # History
+
+
+    The history of UNIX is an oft-told tale and will not be repeated in detail here.
+    Instead, a brief summary; highlights are depicted in Figure 2.14, which is based
+    on a figure in [SALI94].
+
+
+    UNIX was initially developed at Bell Labs and became operational on a PDP-7 in
+    1970. Some of the people involved at Bell Labs had participated in the time-sharing
+    working done at MIT''s Project MAC. This project led to the development of CTS
+    and Multics. Although it is common to say that UNIX is a scaled-down version of
+    Multics, the developers of UNIX actually claimed to be influenced by CTS [RITC78].
+    Nevertheless, UNIX incorporated many ideas from Multics.
+
+
+    Bell Labs produced a series of versions of UNIX. The first notable version was
+    UNIX from the PDP-7 to PDP-11. This was the first that UNIX would be an operating
+    system for all computers. The next important was the rewriting of UNIX in the
+    programming language C. This was an unheard-of-strategy at the time. It was generally
+    felt that something as complex as an operating system, which must deal with time-critical
+    events, had to be written in assembly language. The C implementation demonstrated
+    the advantages of using a high-level language for most not of the code. Early
+    versions of UNIX were written in assembly at Bell Labs. In 1974, the UNIX system
+    was described in a technical journal for the first time [RITC74]. This sparked
+    interest in the system. Licenses for UNIX were provided to commercial institutions
+    as well as universities. The first widely available outside Bell Labs was Version
+    6, in 1976. The follow-on Release 7, is the ancestor of most modern UNIX systems.
+    The most of non-AT&T systems to be developed was done at the University of California
+    at Berkeley, called UNIX BSD, running first on PDP and VA machines. AT&T continued
+    to define and refine the system. By 1982, Bell Labs had combined several AT&T
+    variants of UNIX into a single system, marketed as UNIX III. A number of features
+    were later added to the operating system to produce UNIX V.
+
+
+    # Description
+
+
+    Figure 2.15 provides a general description of the UNIX architecture. The underlying
+    hardware is surrounded by the operating-software. The operating system is often
+    called the kernel, primarily to emphasize its isolation from the user and applications.
+    This portion of UNIX is what we will be concerned with in our use of UNIX as an
+    example in this book. However UNIX equipped with a number of user services and
+    interfaces that are considered part of the system. These are grouped into the
+    shell, other interface software, and the components of the C compiler (compiler,
+    assembler, loader). The layer outside of this consists of user applications and
+    the kernel is the interface to C.
+
+
+    A closer look at the kernel is provided in Figure 2.16. User programs can invoke
+    operating system services directly or through library functions. The system interface
+    is the boundary between the user and higher-level software to gain access to specific
+    kernel functions. At the other end the operating system maintains primitive routines
+    that interact directly with the hardware. Between these two interfaces, the kernel
+    is divided into two parts, one concerned with process control and the other concerned
+    with memory management and I/O. The process control subsystem is responsible for
+    memory management, the scheduling and dispatching of processes, and the file system
+    exchanges data between memory and external devices as either as a
+
+
+    > A more complete tree is presented in [MCKU96].'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'characters or in blocks. To achieve this, a variety of device drivers are used.
+    For block-oriented transfers, a disk cache approach is used: a system buffer in
+    main memory is interposed between the user address space and the external device.
+
+
+    The description in this subsection dealt with what might be termed traditional
+    UNIX systems: AH80 uses this to refer to System V Release 3 (SVR3), 4.3BSD, and
+    earlier versions. The following general statements may be made about a traditional
+    UNIX system. It is designed to run on a single processor and lacks the ability
+    to protect its data structures from concurrent access by multiple processors.
+    Its kernel is not very versatile, supporting a single type of file system, process
+    scheduling policy, and executable file format. The traditional UNIX kernel is
+    not designed to be extensible and has few facilities for code reuse. The result
+    is that, as new features were added to the various UNIX versions, much new code
+    had to be added, yielding a bloated and unmodular kernel.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_6_0.png)
+
+
+    Figure 2.15 General UNIX Architecture'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_7_0.png)
+
+
+    Figure 2.16 Traditional UNIX Kernel [BACH86]'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# 2.7 MODERN UNIX SYSTEMS
+
+
+    As UNIX evolved, the number of different implementations proliferated, providing
+    some useful features. There was a need to produce a new implementation that unified
+    the most important innovations, added other OS-design features, and produced a
+    more modular architecture. Typical of the modern UNIX kernel is the architecture
+    developed in Figure 2.17. There is a small core of facilities, written in a modular
+    fashion, that provide functions and services needed by a number of OS processes.
+    Each of the outer circles represents functions and an interface that may be implemented
+    in a variety of ways.
+
+
+    We now turn to System Release 4 (SVR4)
+
+
+    # System V Release 4 (SVR4)
+
+
+    SVR4, developed jointly by AT&T and Sun Microsystems, combines features from SVR3,
+    4.3BSD, Microsoft Unix V, and SunOS. It was also a rewrite of the System V kernel
+    and produced a clean, if complex, implementation. New features in the release
+    include real-time processing support, scheduling classes, dynamically allocated
+    data structures, virtual memory management, virtual file system, and a preemptive
+    kernel.
+
+
+    SVR4 draws on experience of both commercial and academic designers and was developed
+    to provide a uniform platform for commercial deployment. It has succeeded in its
+    objective and is perhaps the most important UNIX variant ever. It incorporates
+    the most important features developed on any UNIX system, and is so in an integrated,
+    commercially viable fashion. SVR4 is running on machines ranging from 32-bit microprocessors
+    up to supercomputers and is one of the most important operating systems ever developed.
+    Many of the UNIX examples in this book are from SVR4.
+
+
+    # Solaris 2.x
+
+
+    Solaris is Sun''s SVR4-based UNIX, with the latest version being 2.8. The version
+    2 Solaris implementations provide all of the features of SVR4 plus a number of
+    more advanced features, such as a fully preemptive, multithreaded kernel, full
+    support for SMP, and an object-oriented interface to file systems. Solaris is
+    the most used and most successful commercial UNIX implementation. For OS features,
+    Solaris provides the UNIX examples in this book.
+
+
+    # 4.3BSD
+
+
+    The Berkeley Software Distribution BSD of UNIX releases has played a key role
+    in the development of OS design. 4.3BSD is widely used in academic installations
+    and has served as the basis of many commercial UNIX products. It is probably safe
+    to say that BSD is responsible for much of the popularity of UNIX and that enhancements
+    to UNIX first appeared in BSD versions.
+
+
+    4.4BSD is the final version of BSD to be released by Berkeley, with the design
+    and implementation organization subsequently dissolved. It is a major upgrade
+    to 4.3BSD and includes a new virtual memory system, changes in the kernel structure,
+    and a long list of other feature enhancements.
+
+
+    # Linux
+
+
+    # History
+
+
+    Linux started as a UNIX variant for the IBM PC architecture. The initial version
+    was written by Lin Torvalds, a Finnish student of computer science. Torvalds posted
+    an early version of Linux on the Internet in 1991. Since then, a number of people,
+    collaborating over the Internet, have contributed to the development of Linux,
+    all under the control of Torvalds. Because Linux is free and the source code is
+    available, it became an early alternative to other UNIX workstations, such as
+    those offered by Sun Microsystems, Digital Equipment Corp (now'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Compaq, and Silicon Graphics. Today, Linux is a full-featured UNIX system that
+    runs on all of these platforms and more.
+
+
+    Key to the success of Linux has been its character as a free package available
+    under the auspices of the Free Software Foundation (FSF). FSF''s goal is stable,
+    platform-independent software that is free, high quality, and enhanced by the
+    user community. FSF''s GNU project provides tools for software developers, and
+    the GNU Public License (GPL) Torvalds used GNU tools in developing his kernel,
+    which he released under the GPL. Linux distributions that you use today are the
+    product of FSF''s GNU project, Torvalds''s individual effort, and many collaborators
+    all over the world.
+
+
+    In addition to its use by many individual programmers, Linux has now made significant
+    penetration into the corporate world [MANCO0]. This is not primarily because of
+    the free software, but because of the quality of the Linux kernel. Many talented
+    programmers have contributed to the current version, resulting in a technically
+    impressive product. Moreover, Linux is highly modular and configurable. This makes
+    it easy to squeeze optimal performance from a variety of platforms. With the source
+    code available, vendors can tweak applications and utilities to meet specific
+    requirements. Throughout this book, we will provide details of Linux kernels.
+
+
+    # Modular Structure
+
+
+    Most UNIX kernels are monolithic. While a monolithic kernel is one that includes
+    virtually all of the operating-functionality in one large block of code that runs
+    as a single process with a single address space. All components of the kernel
+    have access to all of its internal data structures and routines. If changes are
+    made to any portion of a monolithic operating system, all the modules and routines
+    must be rebuilt and reinstalled and the system rebooted before the changes take
+    effect. As a result, any modification, such as adding a new driver or file system,
+    is difficult. This is especially acute for Linux, for which development is global
+    and driven by a loosely associated group of independent programmers.
+
+
+    To solve this problem, Linux is organized as a collection of relatively independent
+    blocks referred to as loadable modules [GOYE9]. The Linux loadable modules have
+    two important characteristics:
+
+
+    +   * Dynamic linking: A kernel module can be loaded and linked into the kernel
+    while the kernel is already in memory and executing. A module can also be unloaded
+    and removed from memory at any time.
+
+
+    +   * Stackable modules: The modules are arranged in a hierarchy. Individual modules
+    serve as libraries when they are referenced by client modules higher up in the
+    hierarchy and as clients they reference modules further down.
+
+
+    Dynamic linking [FRAN97] eases the task of configuration and saves kernel memory.
+    In Linux, a user or program can use the insmod and rmmod commands to load and
+    unload modules as needed. Stackable modules, dependencies between modules can
+    be defined. This has two benefits:
+
+
+    +   1. Code common to a set of similar modules (e.g., drivers for similar hardware)
+    can be moved into a single module, reducing replication.
+
+    2. The kernel can make sure that needed modules are present, refraining from unloading
+    a module on which other modules depends, and loading any added required when a
+    new module is loaded.
+
+
+    Figure 2.18 illustrates the structures used by Linux to manage modules. The figure
+    shows the list of kernel modules after only two modules have been loaded: FAT
+    and'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'VFAT. Each module is defined by two tables, the module table and the symbol
+    table. The module table includes the following elements:
+
+
+    +   * next: Pointer to the following module. All modules are organized into a
+    linked list. The list begins with a pseudocode (not shown in Figure 2.18).
+
+    * ref: List of modules that use this module.
+
+    * symtab: Pointer to this module''s symbol table.
+
+    * name: Module name.
+
+    * size: Module size in memory pages.
+
+    * addr: Starting address of module.
+
+    * state: Current state of module.
+
+    * *cleanup(): Points to routine launched at module unloading.
+
+
+    The symbol table defines those symbols controlled by this module that are used
+    elsewhere. It includes the following elements:
+
+
+    +   * size: Total table size.
+
+    * n_symbols: Number of symbols.
+
+    * n_refs: Number of references.
+
+    * symbols: Table of symbols.
+
+    * references: List of modules dependent on this module.
+
+
+    Figure 2.18 shows that the VFAT module was loaded after the FAT module and that
+    the VFAT module is dependent on the FAT module.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_11_0.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 3.4 UNIX SVR4 PROCESS MANAGEMENT
+
+
+    UNIX System V uses of a simple but powerful process facility that is highly visible
+    to the user. UNIX follows the model of Figure 3,14b, in which most of the operating
+    system executes within the environment of a user process. Thus, two modes, user
+    and kernel, are required. UNIX uses two categories of processes: system processes
+    and user processes. Processes run in kernel mode and execute system code to perform
+    administrative and housekeeping functions, such as allocation of memory and swapping.
+    Processes operate in user mode to execute user programs and utilities and in kernel
+    mode to execute instructions to the kernel. A user process enters kernel mode
+    by issuing a system call, when an exception (fault) is generated or when an interrupt
+    occurs.
+
+
+    # Process States
+
+
+    A total of nine states are recognized by the UNIX operating system; these are
+    listed in Table 3.9 and a state transition diagram shown in Figure 3.16 (based
+    on figure [BACH86]). This figure is similar to Figure 3.7, with the UNIX sleeping
+    states corresponding to the two blocked states. The differences can be summarized
+    quickly:
+
+
+    +   * Unlike Running two states to indicate whether the process is executing in
+    user mode or kernel mode.
+
+    * A distinction is made between the two states: (Ready to Run, in Memory) and
+    (Preempted). These are essentially the same state, as indicated by the dotted
+    line joining them. The distinction is made to the way in which the preempted state
+    is entered. When a process is running in kernel mode (as a result of a supervisor
+    call, check interrupt, or I/O interrupt), there will come a time when the kernel
+    has completed its work and is ready to return control to the user process. At
+    this point, the kernel may decide to preempt the current process in favor of one
+    that is ready and of higher priority. In this case, the current process moves
+    to the preempted state. For purposes of dispatching, those processes in the preempted
+    state and those in the Ready to Run, in Memory state form one queue.
+
+
+    Preemption can only occur when a process is about to move from kernel mode to
+    user mode. While a process is running in kernel mode, it may not be preempted.
+    This makes UNIX unsuitable for real-time processing. A discussion of the requirements
+    for real-time processing is provided in Chapter 10.
+
+
+    Two processes are unique in UNIX. Process 0 is a special process that is created
+    when the system boots; in effect, it is predefined at boot time. In addition,
+    it spawns process 1, referred to as the init process; all processes in the system
+    have process 1 as an ancestor. When a new interactive user logs onto the system,
+    it creates a user process for that user. Subsequently, the user process can create
+    processes in a branching tree, so that any particular application can create number
+    of related processes.
+
+
+    # Process Description
+
+
+    A process in UNIX is a rather complex set of data structures that provide the
+    operating system with all the information necessary to manage and dispatch processes.
+    Table 3.10 summarizes the elements of the process image, which are organized into
+    three parts: user-level context, register context, and system-level context.
+
+
+    The user-level context contains the basic elements of a user''s program and can
+    be generated directly from a compiled object file. The user''s program is separated
+    into text and data areas; the text area is read-only and is intended to hold the
+    program''s instructions. While the process is executing, the processor uses the
+    user stack area for procedure calls and returns'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'process passing. The shared memory area is a data area that is shared with
+    other processes. There is only one physical copy of a shared memory area, but
+    by the use of virtual memory, it appears to sharing that the shared memory region
+    is in its address space. When a process is not running, the processor status information
+    is stored in the register context area. The system-level control remains constant
+    that the operation system needs to manage the process. It consists of a process
+    table, which is fixed in size and stays with the process throughout its lifetime,
+    a dynamic part, which varies in size through the life of the process. Element
+    of the static part is the process table, with one entry per process. The process
+    table maintained by the operating system contains control information that is
+    accessible to the kernel at all times; hence, in a virtual system, all process
+    entries are maintained in main memory. Table 3.1 lists the contents of the process
+    table. User area, or U area contains additional process information that is needed
+    by the kernel when it is executing in the context of this process; it is also
+    used when paging processes to and from memory. Table 3.2 shows the contents of
+    this table.
+
+
+    The distinction between process entry and the U area reflects that the kernel
+    always executes in the context of some process. Much of the time, the kernel will
+    be dealing with the concerns of process. However, some of the time, when the kernel
+    is performing a scheduling algorithm relatively to dispatching another process,
+    it will need information about other processes.
+
+
+    The third static part is the process region table, which is used by the memory
+    management system. Finally, the kernel stack is the dynamic part of system-level
+    context. This stack is used when the process is executing in kernel and contains
+    the information that must be saved and restored as procedure calls and interrupts
+    occur.
+
+
+    # Process Control
+
+
+    Process creation in UNIX is made by means of the kernel system call, fork( ).
+    When a process issues a request, the operating system performs the following functions
+    [BACH86]:
+
+
+    +   1. It allocates a slot in the process table for the new process.
+
+    2. It assigns a unique process ID to the child process.
+
+    3. It makes a copy of the process image of the parent, with the exception of any
+    shared memory.
+
+    4. It increments counters for any files owned by the parent, to reflect that an
+    addition process now also owns those files.
+
+    5. It assigns the child process to a Ready to Run state.
+
+    6. It returns the ID number of the child to the parent process, and a 0 value
+    to the child process.
+
+
+    All of this work is accomplished in kernel in the parent process. When the kernel
+    completed these functions it can do one of the following, as part of the dispatcher
+    routine:
+
+
+    +   1. Stay in the parent process. Control returns to user mode at the point of
+    the fork call of the parent.
+
+    2. Transfer control to the child process. The child begins executing at the same
+    point in the code as the parent, namely at the return from the fork call.
+
+    3. Transfer control to another process. Both parent and child are left in the
+    Ready to Run state.
+
+
+    It is perhaps difficult to visualize this method of process creation because both
+    parent and child are executing the same passage of code. The difference is this:
+    when the return from the fork occurs, the return parameter is tested. If the value
+    is zero, then this is the child process, and'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: a branch can be executed to the appropriate user program to continue execution.
+    If the value is nonzero, then this is the parent process, and the main line of
+    execution can continue.
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Table 3.9 UNIX Process States
+
+
+    | | |
+
+    |---||
+
+    | User Running | Executing in user mode. |
+
+    | Kernel Running | Executing in kernel mode. |
+
+    | Ready to Run, in Memory | Ready to run as soon as the kernel schedules it. |
+
+    | Asleep in Memory | Unable to execute until an event occurs; process is in main
+    memory (a blocked state). |
+
+    | Ready to Run, Swapped | Process is ready to run, but the swapper must swap the
+    process into main memory before the kernel can schedule it to execute. |
+
+    | Sleeping, Swapped | The process is awaiting an event and has been swapped to
+    secondary storage (a blocked state). |
+
+    | Preempted | Process is returning from kernel to user mode, but the kernel preempts
+    it and does a process switch to schedule another process. |
+
+    | Created | Process is newly created and not yet ready to run. |
+
+    | Zombie | Process no longer exists, but it leaves a record for its parent process
+    to collect.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Table 3.10 UNIX Process Image
+
+
+    | User-Level Context |
+
+    |---|---|
+
+    | Process Text | Executable machine instructions of the program |
+
+    | Process Data | Data accessible by the program of this process |
+
+    | User Stack | Contains the arguments, local variables, and pointers for functions
+    executing in user mode |
+
+    | Shared Memory | Memory shared with other processes, used for interprocess communication
+    |
+
+
+    | Register Context |
+
+    |---|---|
+
+    | Program Counter | Address of next instruction to be executed; may be in kernel
+    or user memory space of this process |
+
+    | Processor Status Register | Contains the hardware status at the time of preemption;
+    contents and format are hardware dependent |
+
+    | Stack Pointer | Points to the top of the kernel or user stack, depending on
+    the mode of operation at the time or preemption |
+
+    | General-Purpose Registers | Hardware dependent |
+
+
+    | System-Level Context |
+
+    |---|---|
+
+    | Process Table Entry | Defines state of a process; this information is always
+    accessible to the operating system |
+
+    | U (user) Area | Process control information that needs to be accessed only in
+    the context of the process |
+
+    | Per Process Region Table | Defines the mapping from virtual to physical addresses;
+    also contains a permission field that indicates the type of access allowed the
+    process: read-only, read-write, or read-execute |
+
+    | Kernel Stack | Contains the stack frame of kernel procedures as the process
+    executes in kernel mode |'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Table 3.11 UNIX Process Table Entry
+
+
+    | Process Status | Current state of process. |
+
+    |---||
+
+    | | Current state of process. |
+
+    | Pointers | To U area and process memory area (text, data, stack). |
+
+    | Process Size | Enables the operating system to know how much space to allocate
+    the process. |
+
+    | User Identifiers | The **real user ID** identifies the user who is responsible
+    for the running process. The **effective user ID** may be used by a process to
+    gain temporary privileges associated with a particular program; while that program
+    is being executed as part of the process, the process operates with the effective
+    user ID. |
+
+    | Process Identifiers | ID of this process; ID of parent process. These are set
+    up when the process enters the Created state during the fork system call. |
+
+    | Event Descriptor | Valid when a process is in a sleeping state; when the event
+    occurs, the process is transferred to a ready-to-run state. |
+
+    | Priority | Used for process scheduling. |
+
+    | Signal | Enumerates signals sent to a process but not yet handled. |
+
+    | Timers | Include process execution time, kernel resource utilization, and user-set
+    timer used to send alarm signal to a process. |
+
+    | P_link | Pointer to the next link in the ready queue (valid if process is ready
+    to execute). |
+
+    | Memory Status | Indicates whether process image is in main memory or swapped
+    out. If it is in memory, this field indicates whether it may be swapped out or
+    is temporarily locked into main memory. |'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Table 3.12 UNIX U Area
+
+
+    | Process | Description |
+
+    | :--- | :--- |
+
+    | Table Pointer | Indicates entry that corresponds to the U area. |
+
+    | User Identifiers | Real and effective user IDs. Used to determine user privileges.
+    |
+
+    | Timers | Record time that the process (and its descendants) spent executing
+    in user mode and in kernel mode. |
+
+    | Signal-Handler Array | For each type of signal defined in the system, indicates
+    how the process will react to receipt of that signal (exit, ignore, execute specified
+    user function). |
+
+    | Control Terminal | Indicates login terminal for this process, if one exists.
+    |
+
+    | Error Field | Records errors encountered during a system call. |
+
+    | Return Value | Contains the result of system calls. |
+
+    | I/O Parameters | Describe the amount of data to transfer, the address of the
+    source (or target) data array in user space, and file offsets for I/O. |
+
+    | File Parameters | Current directory and current root describe the file system
+    environment of the process. |
+
+    | User File Descriptor Table | Records the files the process has open. |
+
+    | Limit Fields | Restrict the size of the process and the size of a file it can
+    write. |
+
+    | Permission Modes Fields | Mask mode settings on files the process creates. |'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_19_0.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# 4.5 SOLARIS THREAD AND SMP MANAGEMENT
+
+
+    Solaris implements an unusual multilevel thread support designed to provide considerable
+    flexibility in exploiting processor resources.
+
+
+    # Multithreaded Architecture
+
+
+    Solaris makes use of four separate thread-related concepts:
+
+
+    +   * **Process:** This is the normal UNIX process and includes the user''s address
+    space, stack, and process control block.
+
+    * **User-level threads:** Implemented through a thread library in the address
+    space of a process, these are invisible to the operating system. User-level threads
+    (ULTs) are the interface for application parallelism.
+
+    * **Lightweight processes:** A lightweight process (LWP) can be viewed as a mapping
+    between LWPs and kernel threads. Each LWP supports one or more ULTs and maps to
+    one kernel thread. LWPs are scheduled by the kernel independently and may execute
+    in parallel on multiprocessors.
+
+    * **Kernel threads:** These are the fundamental entities that can be scheduled
+    and dispatched to run on one of the system processes.
+
+
+    Figure 4.15 illustrates the relationship among these four entities. Note that
+    there is always one kernel thread for each LWP. An LWP is visible within a process
+    to the application. Thus, LWP data structures exist within their respective process
+    space. At the same time, each LWP is bound to a single dispatchable thread, and
+    the data structure for kernel is maintained within the kernel''s address space.
+
+    In example, process 1 consists of a single LWP bound to a single ULT. Thus, there
+    is a single thread of execution, similar to the traditional UNIX process. When
+    concurrency is not required within a single process, an application uses this
+    simple structure. Process 2 corresponds to a pure ULT. All of the ULTs are supported
+    by a single kernel thread, and therefore only one ULT can execute at a time. This
+    structure is useful for an application that can be programmed in a way that expresses
+    concurrency but for which it is not necessary to have parallel execution of multiple
+    threads. Process 3 shows multiple threads multiplexed on a LWP. In general, Solaris
+    allows applications to multiplex threads on a lesser or equal number of LWPs.
+    This enables the application to specify the degree of parallelism on the kernel
+    level that supports it. Process the4 has four threads mapped to LWPs in a one-to-one
+    mapping. This structure makes fully parallel execution possible within an application.
+    It is useful if threads will typically or frequently be suspended in a blocking
+    fashion. Process 5 shows both mapping of multiple ULTs onto multiple LWPs and
+    the binding of a ULT to a LWP. In addition, one LWP is bound to a particular process.
+
+    Not shown in the figure is the presence of kernel threads that are not associated
+    with LWPs. The kernel creates, runs, and destroys these kernel threads to execute
+    specific system functions. The use of threads rather than kernel to implement
+    system functions reduces the overhead of switching within the kernel (from a process
+    switch to a thread switch).
+
+
+    # Motivation
+
+
+    The combination of user-level and kernel-level threads gives the application programmer
+    the opportunity to exploit concurrency in a way that is most efficient and most
+    appropriate to a given application.
+
+
+    2 Again, the acronym ULT is is not found in the Solaris literature.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Some programs have logical parallelism that can be exploited to simplify and
+    structure the code but do not need hardware parallelism. For example, an application
+    that employs multiple windows, only one which is active at a time, could with
+    advantage be implemented as a set of ULTs on a LWP. The advantage of restricting
+    such applications to ULTs is efficiency. ULTs may be created, destroyed, blocked,
+    etc., without involving the kernel. If ULT were known to the kernel, the kernel
+    would have to allocate data structures for each one and thread switching. As we
+    have seen (Table 4.1), kernel-level thread switching is more expensive than user-level
+    thread switching.
+
+
+    If an application invokes threads that block, such as performing I/O, having multiple
+    LWPs to support an equal or greater number of ULTs is necessary. Neither the application
+    nor the thread library provides contention contours to allow other threads within
+    the same process to execute. Instead, if one thread in a process blocks, other
+    threads within the process may run on the remaining LWPs.
+
+
+    Mapping ULTs to LWPs is effective for some applications. For example, a parallel
+    array computation could divide the rows of its arrays among different threads.
+    If there is exactly one ULT per LWP, no thread switching is required for the computation
+    to proceed.
+
+
+    A mixture of threads that are permanently bound to LWPs and unbounded (multiple
+    threads sharing a LWP) is appropriate for some applications. For example, a real-time
+    application may have some threads with priority scheduling and real-time scheduling,
+    while other threads perform background functions and can share one or a small
+    pool of LWPs.
+
+
+    # Process Structure
+
+
+    Figure 4.16 compares, in general terms, the structure of a traditional UNIX system
+    with Solaris. Under a UNIX implementation, the process structure includes ID;
+    the user IDs; a dispatch table, which the kernel uses to decide what to do when
+    sending a signal to a process; file descriptors, which describe the state of files
+    used in this process; a memory map, which defines the space for this process;
+    and a processor structure, which includes the kernel stack for Solaris retains
+    this basic structure but replaces the processor structure with a list of structures
+    containing one data block for each LWP.
+
+
+    The LWP data structure includes the following elements:
+
+
+    +   * An LWP identifier
+
+    * The priority of LWP and hence the kernel thread that supports it
+
+    * A signal mask that tells the kernel which signals will be accepted
+
+    * Saved values of user-level registers (when the LWP is not running)
+
+    * The kernel stack for this LWP, which includes system call arguments, results,
+    and error codes for each level
+
+    * Resource usage and profiling data
+
+    * Pointer to the corresponding kernel thread
+
+    * Pointer to the process structure
+
+
+    # Thread Execution
+
+
+    Figure 4.17 shows a simplified view of both ULT and LWP execution states. The
+    execution of user-level threads is managed by the thread library. Let us first
+    consider unbounded threads, threads that share a number of LWPs. An unbounded
+    thread can be in one of four states: runnable, active, sleeping, or stopped. A
+    ULT in the active state is currently assigned to a LWP and executes while the
+    underlying kernel executes. A number of events may cause the ULT to leave the
+    active state. Let us consider an active ULT T1. The following events may occur:
+
+
+    +   * Synchronization: T1 invokes one of the concurrency primitives introduced
+    in Chapter 5 to coordinate its activity with other threads and to enforce mutual
+    exclusion. T1 is placed in'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'the sleeping state. When the synchronization condition is met, T1 is moved
+    to the runnable state.
+
+
+    +   Suspension: Any thread (including T1) may cause T1 to be suspended and placed
+    in the stopped state. T1 remains in state until another thread issues a continue
+    request, which moves it to the runnable state.
+
+
+    +   Preemption: Any active thread (T1 or some other) that causes another thread
+    (T2) of higher priority to become runnable. If T1 is the lowest-priority active
+    thread, it is preempted and moved to the runnable state, and T2 is assigned to
+    the LWP made available.
+
+
+    +   Yielding: If T1 executes the thr_yield() library command, the threads scheduler
+    in the library will look to see if there is another thread (T2) of the same priority.
+    If not, T1 is placed in the runnable state and T2 is assigned to the LWP made
+    available.
+
+    T1 continues to run.
+
+
+    In all of the cases, when T1 is moved out of the active state, the threads library
+    selects another unbound thread and runs it on the newly available LWP.
+
+    Figure 4.17 also shows the state diagram for a LWP. We can view this state diagram
+    as a detailed description of the ULT active state, because an unbound thread only
+    has a LWP assigned to it when in the Active state. The ULT state diagram is reasonably
+    self-explanatory. An active thread is only executing when its LWP is in the Running
+    state. When an active thread executes a blocking system call, the LWP enters the
+    blocked state. However, the ULT remains bound to that LWP and, as far as the threads
+    library is concerned, the ULT remains active.
+
+
+    With bound, the relationship between ULT and LWP is slightly different. For example,
+    if bound moves to the Sleeping state awaiting a synchronization event, its LWP
+    must also stop running. This is achieved by having the LWP block on a kernel-level
+    synchronization.
+
+
+    # Interrupts as Threads
+
+
+    Operating systems contain two fundamental forms of asynchronous activity: processes
+    and threads. Or processes cooperate with each other and manage the use of shared
+    structures by means of primitives that enforce mutual exclusion (only one process
+    at a time can execute certain code or access certain data) and synchronize their
+    execution. Interrupts are interrupted by preventing their occurrence for a period
+    of time. Solaris unifies these concepts into a single name: threads and the mechanisms
+    for scheduling and executing kernel threads. By this, interrupts are converted
+    to kernel threads.
+
+
+    The motivation for converting interrupts is to reduce overhead. Interrupt handlers
+    often manage shared data by executing, therefore while a kernel routine that accesses
+    such data must be blocked, though most interrupts will not affect that data. Typically,
+    the way this is done is for the routine to set the interrupt priority level higher
+    to block interrupts, and then lower the priority level after access is completed.
+    These operations take time. The problem is magnified on a multiprocessor system.
+    The kernel must protect more objects and may need to block interrupts on all processors.
+
+
+    The solution in Solaris is summarized as follows:
+
+
+    +   1. Solaris employs a set of kernel threads to handle interrupts. With any
+    kernel thread, an interrupt thread has its own identifier, priority, context,
+    and stack.
+
+    2. The kernel accesses to data structures and synchronization among threads using
+    mutual exclusion primitives, of the type discussed in Chapter 5. That is, the
+    normal synchronization techniques for threads are used in LWP interrupts.
+
+    3. Interrupt threads are assigned higher priorities than all other types of kernel.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'When an interrupt occurs, it is delivered to a particular processor and the
+    thread that was executing on that processor is pinned. A pinned thread cannot
+    move to another processor and its context is preserved; it is simply suspended
+    until the interrupt is processed. The processor then begins executing an interrupt
+    thread. There is a pool of deactivated interrupt threads available, so that a
+    new thread creation is not required. The interrupt then executes to handle the
+    interrupt. If the handler routine needs access to a data structure that is currently
+    locked in some fashion for use by another executing thread, the interrupt thread
+    must wait for access to that data structure. An interrupt thread can only be preempted
+    by another interrupt thread of higher priority.
+
+
+    Experience with Solaris interrupt threads indicates that this approach provides
+    superior performance to the traditional interrupt-handling strategy [KLEI95].'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_24_0.png)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_25_0.png)
+
+
+    ![](img/e8a705e38cf3a8576620995ac6bb6f53_25_1.png)
+
+
+    Figure 4.16 Process Structure in Traditional UNIX and Solaris [LEWI96]'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_26_0.png)
+
+
+    Figure 4.17 Solaris User-Level Thread and LWP States'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# 4.6 LINUX PROCESS AND THREAD MANAGEMENT
+
+
+    Linux Processes
+
+    A process, or task, in Linux is represented by a task_struct data structure. Linux
+    maintains a task table, which is a linear vector of pointers to every task_struct
+    data structure currently defined. The task_struct data structure contains information
+    in a number of categories:
+
+
+    +   - **State**: The execution state of the process (executing, ready, suspended,
+    stopped, zombie).
+
+    This is described subsequently.
+
+    - **Scheduling**: Information provided by Linux to schedule processes. A process
+    can be normal or real-time and has a priority. Real-time processes are scheduled
+    before normal processes, and within each category, relative priorities are used.
+    A counter keeps track of the amount a process is allowed to execute.
+
+    - **Identifiers**: Each process has a unique identifier and also has group identifiers.
+    A group identifier is used to assign resource privileges to a group of users.
+
+    - **Interprocess communication**: Linux supports the IPC mechanisms found in UNIX
+    SVR4, described in Chapter 6.
+
+    - **Links**: Each process includes a link to its parent process, links to its
+    siblings (with the same parent), and links to all of its children.
+
+    - **Timers and timers**: Includes process creation time and the amount of time
+    consumed by the process. A process may also have associated one or more interval
+    intervals. A process defines an interval by means of a system call; as a result
+    a signal is sent to the process when the timer expires. A timer may be single
+    or periodic.
+
+    - **File system**: Includes pointers to any files opened by this process.
+
+    - **Virtual memory**: Defines the virtual memory assigned to this process.
+
+    - **Processor-specific context**: The registers and stack information that constitute
+    the context of this process.
+
+
+    Figure 4.18 shows the execution state of a process. These are:
+
+
+    +   - **Running**: This state value corresponds to two states. A Running process
+    is either executing or ready to execute.
+
+    - **Interruptable**: This is a blocked state, in which the process is waiting
+    for an event, such as the end of an I/O operation, or a signal from another process.
+
+    - **Uninterruptable**: This is another blocked state. The difference between this
+    and the Interruptable state is that a process is waiting directly on hardware
+    conditions and will not accept any signals.
+
+    - **Stopped**: The process has been halted, and can only be resumed by positive
+    action from another process. For example, a process that is being debugged can
+    be put into the Stopped state.
+
+    - **Zombie**: The process has been terminated, but for some reason, still must
+    have its task structure in the process table.
+
+
+    Linux Threads
+
+    A new process is created in Linux by copying the attributes of the current process.
+    A new process can be cloned so that it shares resources, such as files, signal
+    handlers, and virtual memory. When the two processes share the same virtual memory,
+    they function as threads within a single process. However, no separate type of
+    data structure is defined for a thread. Linux makes no distinction between a thread
+    and a process.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_28_0.png)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# 6.7 UNIX CONCURRENCY MECHANISMS
+
+
+    UNIX provides a variety of mechanisms for interprocessor communication and synchronization.
+    Here, we look at the most important of these:
+
+
+    +   - Pipes
+
+    - Messages
+
+    - Shared memory
+
+    - Semaphores
+
+    - Signals
+
+
+    Pipes, messages, and shared memory provide a means of communicating data across
+    processes, whereas semaphores and signals are used to trigger actions by other
+    processes.
+
+
+    # Pipes
+
+
+    One of the most significant contributions of UNIX to the development of operating
+    systems is the pipe. Inspired by the concept of coroutines [ITC84], a pipe is
+    a circular buffer allowing two processes to communicate in the producer-consumer
+    model. Thus, it is a first-in-first-out queue, written by one process and read
+    by another.
+
+
+    When a pipe is created, it is of fixed size in bytes. When a process attempts
+    to write into the pipe, the write is immediately executed if there is sufficient
+    room; otherwise the process is blocked. Similarly, a reading request is blocked
+    if it attempts to read more bytes than are currently in the pipe; otherwise the
+    read request is immediately executed. The operating system enforces mutual exclusion:
+    that only one process can access a pipe at a time.
+
+
+    There are two types of pipes: named and unnamed. Only related processes can share
+    unnamed pipes, whereas unrelated processes can share named pipes.
+
+
+    # Messages
+
+
+    A message is a block of text with an accompanying type. UNIX provides msgsnd and
+    msgrcv systems for processes to communicate in message passing. With each process
+    there is a message queue, which functions like a mailbox.
+
+
+    The message sender specifies the type of message with each message sent, and this
+    can be used as a selection criterion by the receiver. The receiver can retrieve
+    messages in first-out first order or by type. A process will suspend when trying
+    to send a message to a full queue. A process will also suspend when trying to
+    read from an empty queue. If a process attempts to read a message of a certain
+    type and fails because no message of that type is present, the process is not
+    suspended.
+
+
+    # Shared Memory
+
+
+    The fastest of interprocess communication provided in UNIX is shared memory. This
+    is a common block of virtual memory shared by multiple processes. Processes read
+    and write memory using the same instructions to read and write other portions
+    of their virtual memory space. Permission is read-only or read-write for a process,
+    determined on a per-process basis. Mutual exclusion constraints are not part of
+    the shared-memory facility but must be provided by the processes using the shared
+    memory.
+
+
+    # Semaphores
+
+
+    The semaphore system calls in System V are a generalization of the wait and signal
+    primitives defined in Chapter 5, in that several operations can be done simultaneously
+    and the increment and decrement operations can be greater than 1. The kernel does
+    all of the requested operations atomically; no other process may access the semaphore
+    until all operations are done.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'A semaphore consists of the following elements:
+
+
+    +   * Current value of the semaphore to operate on the semaphore
+
+    * Process ID of the last process to operate on the semaphore
+
+    * Number of processes waiting for the semaphore value to be greater than its current
+    value
+
+    * Number of processes waiting for the semaphore value to be zero
+
+
+    Associated with the semaphore are queues of processes suspended on that semaphore.
+
+    Semaphores are actually created in sets, with a semaphore consisting of one or
+    more semaphores. There is a semctl call that allows all of the semaphores in the
+    set to be set at the same time. In addition, there is a semop system call that
+    takes as an argument a list of semaphore operations, each defined in one of the
+    semaphores in a set. When this call is made, the kernel performs the indicated
+    operations one at a time. For each operation, the actual function is specified
+    by the value sem_op. The following are possibilities:
+
+
+    +   * If sem_op is positive, the kernel increments the value of the semaphore
+    and awakens all processes waiting for the value to increase.
+
+    * If sem_op is 0, it continues with the other operations on the list; otherwise,
+    it increments the number of processes waiting for the semaphore to be 0 and suspends
+    the process on the event that the value of the semaphore equals 0.
+
+    * If sem_op is negative and its absolute value is less than or equal to the semaphore
+    value, the kernel adds sem-op (a negative number) to the semaphore value. If the
+    result is 0, the kernel awakens all processes waiting for the value of the semaphore
+    to equals 0.
+
+    * If sem_op is negative and its absolute value is greater than the semaphore value,
+    the kernel suspends the process on the event that the value of the semaphore increases
+
+
+    This generalization of the semaphore provides considerable flexibility in performing
+    process synchronization and coordination.
+
+
+    # Signals
+
+
+    A signal is a software mechanism that informs a process of the occurrence of asynchronous
+    events. A signal is similar to a hardware interrupt but does not employ priorities.
+    That is, all signals are treated equally; signals that occur at the same time
+    are presented to a process one at a time, with no particular order.\Processes
+    may send each other, or the kernel may send signals internally. A signal is delivered
+    by updating a field in the process table for the process to which the signal is
+    being sent. Because each signal is maintained as a single bit, signals of a given
+    type cannot be queued. A signal is processed just after a process wakes up or
+    whenever the process is preparing to return from a system call. A process may
+    respond to a signal by performing some default action (e.g., termination), executing
+    a signal handler function, or ignoring the signal.
+
+
+    Table 6.2 lists signals defined for UNIX SVR4'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Table 6.2 UNIX Signals
+
+
+    | Value | Name | Description |
+
+    | --- | --- | --- |
+
+    | 01 | SIGHUP | Hang up; sent to process when kernel assumes that the user of
+    that process is doing no useful work |
+
+    | 02 | SIGINT | Interrupt |
+
+    | 03 | SIGQUIT | Quit; sent by user to induce halting of process and production
+    of core dump |
+
+    | 04 | SIGILL | Illegal instruction |
+
+    | 05 | SIGTRAP | Trace trap; triggers the execution of code for tracing |
+
+    | 06 | SIGOT | IOT instruction |
+
+    | 07 | SIGEMT | EMT instruction |
+
+    | 08 | SIGFPT | Floating-point exception |
+
+    | 09 | SIGKILL | Kill; terminate process |
+
+    | 10 | SIGBUS | Bus error |
+
+    | 11 | SIGSEGV | Segmentation violation; process attempts to access location outside
+    its virtual address space |
+
+    | 12 | SIGSYS | Bad argument to system call |
+
+    | 13 | SIGPIPE | Write on a pipe that has no readers attached to it |
+
+    | 14 | SIGALARM | Alarm clock; issued when a process wishes to receive a signal
+    after a period of time |
+
+    | 15 | SIGTERM | Software termination |
+
+    | 16 | SIGUSR1 | User-defined signal 1 |
+
+    | 17 | SIGUSR2 | User-defined signal 2 |
+
+    | 18 | SIGCLD | Death of a child |
+
+    | 19 | SIGPWR | Power failure |'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# 6.8 SOLARIS THREAD SYNCHRONIZATION PRIMITIVES
+
+
+    In addition to the concurrency mechanisms of UNIX SVR4, Solaris supports four
+    thread synchronization primitives:
+
+
+    +   - Mutual exclusion (mutex) locks
+
+    - Semaphores
+
+    - Multiple readers, single writer (readers/writer) locks
+
+    - Condition variables
+
+
+    Solaris implements these primitives within the kernel for kernel threads; they
+    are also provided in the threads library for user-level threads. Execution of
+    a primitive creates a data structure that contains parameters specified by the
+    creating thread (Figure 6.13). Once a synchronization object is created, there
+    are essentially two operations that can be performed: enter (acquire, lock) and
+    release (unlock). There are no mechanisms in the kernel or the threads library
+    to enforce mutual exclusion or to prevent deadlock. If a thread attempts to access
+    a piece of data or code that is supposed to be protected but does not use the
+    appropriate synchronization primitive, such access occurs. If a thread locks an
+    object and fails to unlock it, no action is taken.
+
+
+    All of the synchronization requires the existence of a hardware instruction that
+    allows an object to be tested and set in one atomic operation, as described in
+    Section 5.3.
+
+
+    # Mutual Exclusion Lock
+
+
+    A mutex prevents more than one thread from proceeding when the lock is acquired.
+    The thread that locks the mutex must be the one that unlocks it. A thread attempts
+    to acquire a lock by executing the mutex_enter primitive. If mutex_enter cannot
+    set the lock (because it is already held by another thread), the blocking action
+    depends on type-specific information stored in the mutex. The default blocking
+    policy is a spin lock: A blocked thread polls the status of the lock while executing
+    in a spin wait. An interrupt-based locking mechanism is optional. In the latter
+    case, the mutex includes a thread id that identifies a queue of threads sleeping
+    on it.
+
+
+    The primitives associated with a mutex lock are:
+
+
+    ```
+
+    mutex_enter()Acquires the lock, potentially blocking if it is already held
+
+    mutex_exit()   Releases the lock, potentially blocking a waiter
+
+    mutex_tryenter()Acquires the lock if it is not already held
+
+    ```
+
+
+    The mutex_tryenter primitive provides a nonblocking way of performing the mutual
+    exclusion function. This enables the programmer to use a busy-wait approach for
+    user-level threads, which avoids locking the process entry while one thread is
+    blocked.
+
+
+    # Semaphores
+
+
+    Solaris provides classic counting semaphores, with the following primitives:
+
+
+    +   - sem_p()   Decrements the semaphore, potentially blocking the thread
+
+    - sem_v()   Increments the semaphore, potentially blocking a waiter
+
+    - sem_try() Increments the semaphore if blocking is not required
+
+
+    Again, the sem_try() primitive permits busy waiting.
+
+
+    # Readers/Writer Lock'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "The readers/writer lock allows multiple threads to have simultaneous read-only\
+    \ access to an object protected by the lock. It also allows a single thread to\
+    \ access the object for writing at one time, excluding all readers. When the lock\
+    \ is acquired for writing it takes the status of write lock; all threads attempting\
+    \ access for reading or writing must wait. If one or more readers have acquired\
+    \ the lock, its status is read lock. The primitives are:\n\n```\nrw_enter()  \
+    \    Attempts to acquire a lock as reader or writer\nrw_exit()        Releases\
+    \ a lock as reader or writer\nrw_tryenter()     Acquires a lock if blocking is\
+    \ not required\nrw_downgrade()    A thread that has acquired a write lock converts\
+    \ it to a reader lock.\n                               Any writer remains waiting\
+    \ until this thread releases the lock. If there are no writers, the primitive\
+    \ wakes up any pending readers.\n\nrw_tryupgrade()   Attempts to convert a reader\
+    \ lock into a writer lock.\n```\n\n# Condition Variables\n\nA condition variable\
+    \ is used to wait until a particular condition is true. Condition variables must\
+    \ be used in conjunction with a mutex lock. This implements a monitor of the type\
+    \ illustrated in Figure 5.22. The primitives are:\n\n```\ncv_wait()       Blocks\
+    \ until the condition is signaled\ncv_signal()     Wakes up one of the threads\
+    \ blocked in cv_wait()\ncv_broadcast()  Wakes up all of the threads blocked in\
+    \ cv_wait()\n```\n\ncv_wait() releases the associated mutex before blocking and\
+    \ reacquires it before returning. Because reacquisition of the mutex may be blocked\
+    \ by other threads waiting for the mutex, the condition that was waited must be\
+    \ retested. Thus, typical usage is as follows:\n\n+   * mutex_enter(&m)\n* while\
+    \ (some_condition) {\n    cv_wait(&cv, &m);\n}\n* mutex_exit(&m);\n\nThis allows\
+    \ the condition to be a complex expression, because it is protected by the mutex."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '| Type (1 octet) | wlock (1 octet) | waiters (2 octets) | union (4 octets)
+    (statistic specific pointer or number of write requests) | thread owner (4 octets)
+    | (c) Reader/writer lock | wlock (2 octets) | (d) Condition variable |
+
+
+    | owner (3 octets) | lock (1 octet) | waiters (2 octets) | type specific info,
+    (4 octets) (possibly a turnstile id, lock type filler, or statistics pointer)
+    | (a) MUTEX lock | Type (1 octet) | wlock (1 octet) | waiters (2 octets) | count
+    (4 octets) |
+
+
+    Figure 6.13 Semaphore Solaris Synchronization Data Structures'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# 8.3 UNIX IN SOLARIS MEMORY MANAGEMENT
+
+
+    UNIX is intended to be machine independent, its memory-management scheme will
+    vary from one system to the next. Earlier versions of UNIX simply used variable
+    partitioning with no virtual memory scheme. Current implementations, including
+    SVR4 and Solaris 2.x, make use of paging memory.
+
+
+    In SVR4 and Solaris, there are actually two memory-management schemes. The paging
+    system provides a virtual memory capability that allocates page frames in memory
+    to processes and also allocates page frames to disk blocks. Although this is an
+    effective memory-management scheme for user processes and disk I/O, a paging virtual
+    memory scheme is less suited to managing the memory allocation for the kernel.
+    For this latter purpose, a kernel memory allocator is used. We examine these mechanisms
+    in turn.
+
+
+    # Paging System
+
+
+    # Data Structures
+
+
+    For paged memory, UNIX makes use of data structures that, with minor adjustment,
+    are machine independent (Table 8.22 and Table 8.5):
+
+
+    +   - Page table: Typically, there will be one page table per process, with one
+    entry for each page in virtual memory for that process.
+
+
+    +   - Disk descriptor: Associated with each page of a process is an entry in this
+    table that describes the disk copy of the virtual page.
+
+
+    +   - Page frame data table: Describes each frame of real memory and is indexed
+    by frame number.
+
+
+    +   - Swap-table: There is one swap-table for each swap device, with one entry
+    for each page on the device.
+
+
+    Most of the fields defined in Table 8.5 are self-explanatory. A warrant comment-
+    The field in the paging table is an indication of how long it has been since a
+    program referenced this field. However, the number of bits and the frequency of
+    update of this field are implementation dependent. Therefore, there is no universal
+    UNIX of this field for page replacement policy.
+
+
+    The Type of storage in the disk descriptor is needed for the following reason:
+    When an executable is first used to create a new process, only a portion of the
+    program and data for the file is loaded into running memory. Later, as page faults
+    occur, new portions of the program and data are loaded. It is only at the time
+    of first loading that virtual memory pages are created and assigned to locations
+    to be swapping. At that time, the operating system is told whether it to clear
+    (set to 0) the locations in the page frame before the first loading of a block
+    or program data.
+
+
+    # Page Replacement
+
+
+    The page frame data table is used for page replacement. Several pointers are used
+    to create lists within this table. All of the available frames are linked together
+    in a list of free frames available for bringing in. When the number of available
+    pages drops below a certain threshold, the kernel will need a steal of pages to
+    compensate.
+
+
+    The page-replacement algorithm used in SVR4 is the refinement of the clock algorithm
+    (Algorithm 8.16) using the two-handed clock algorithm (Figure 8.23). The algorithm
+    uses the reference bit in page table entry for each page that is eligible (not
+    locked) to be swapped out. This bit is set to 0 when the page is first brought
+    in and set to 1 when the page is referenced for a read or write. In the clock
+    algorithm, the fronthand, sweeps through the pages on the list of eligible pages
+    and sets the reference bit to 0 on each page. Later, the backhand sweeps through
+    the same list and checks the reference bit. If the bit is set to 1,'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "then that page has been referenced the fronhand swept; these frames are ignored.\
+    \ If the bit is set to 0, the page has not been referenced in the time interval\
+    \ between the visit by fronhand and backhand; these pages are placed on a list\
+    \ to be paged out.\nTwo parameters determine the operation of the algorithm:\n\
+    \n+   * Scrate: The rate at which the two hands scan through the page list, in\
+    \ pages per second\n* Handspread: The gap between fronhand and backhand\n\nThese\
+    \ two parameters have default values set at boot time based on the amount of physical\
+    \ memory. The scant parameter can be altered to meet changing conditions. The\
+    \ parameter varies linearly between the values slowscan and fastscan (at configuration\
+    \ time) as the amount of free memory varies between the values lossless and free.\
+    \ If the amount of free memory shrinks, the clock hands move more rapidly to free\
+    \ up more pages. The handspread determines the gap between the fronhand and the\
+    \ backhand and therefore, together with scant, the window of opportunity to use\
+    \ a page before it is swapped out due to lack of use.\n\n# Kernel Memory Allocator\n\
+    \nThe kernel generates and destroys small tables and buffers during the course\
+    \ of execution, each of which requires dynamic memory allocation. [VAHA96] lists\
+    \ the following examples:\n\n+   * The pathname translation routine may allocate\
+    \ a buffer to copy a pathname from user space.\n* The allocb() routine allocates\
+    \ STREAMS of arbitrary size.\n* Many UNIX implementations allocate zombie structures\
+    \ to retain exit status and resource information after deceased processes.\n*\
+    \ In SVR4 and Solaris, the kernel allocates many objects (as proc structures,\
+    \ vnodes, and file descriptors) dynamically when needed.\n\nMost of these blocks\
+    \ are significantly smaller than the typical kernel page size, and therefore the\
+    \ paging mechanism would be inefficient for kernel memory allocation. For SVR4,\
+    \ a modification of the buddy system, described in Section 7.2, is used.\n\nIn\
+    \ buddy systems, the cost to allocate and free a block of memory is low compared\
+    \ to that of best-first or first-fit policies [KNUT97]. However, in the case of\
+    \ kernel memory management, the allocation and free operations must be made as\
+    \ fast as possible. The drawback of the buddy system is the required fragmentation\
+    \ and copying.\n\nBarkley and AT&T proposed a version with a lazy buddy system\
+    \ [BARK89], and this is the technique adopted SVR4. The authors observed that\
+    \ UNIX exhibits steady-state behavior in kernel memory demand; that, the amount\
+    \ of blocks of a particular size varies in time. If a block of size 2^i is released\
+    \ and immediately coalesced with a block of size 2^i, the kernel may next request\
+    \ a block of size 2^i, which may necessitate splitting the larger block again.\
+    \ To avoid this unnecessary coalescing and splitting, the buddy system defers\
+    \ coalescing until it seems like it is needed, and then coalesces as many blocks\
+    \ as possible.\nThe lazy buddy system uses the following parameters:\n\n$N_i =\
+    \ \text{current number of blocks of size } 2^i$\n\n$A_i = \text{current number\
+    \ of blocks of size } 2^i \text{ that are allocated (occupied)}\n\n$G_i = \text{current\
+    \ number of blocks of size } 2^i \text{ that are globally free; these are blocks\
+    \ that are eligible for coalescing; if the buddy of such a block becomes free,\
+    \ then the"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'two blocks will be coalesced into a globally free of size $2^{+1}$. All free
+    blocks (holes) in the standard buddy system could be considered globally free.
+
+
+    $L_l = \text{current number of blocks of size } 2^l \text{ that are locally free;
+    these are blocks that are not eligible for coalescing. Even if the buddy of such
+    a block becomes free, the two blocks are not coalesced. The locally free blocks
+    are retained in the anticipation of future demand for a block of that size.
+
+
+    The following relationship holds:
+
+
+    $N_i = A_i + G_i + L_i$
+
+
+    In general, the lazy buddy system tries to maintain a pool of locally free blocks
+    and only invokes coalescing if the number of locally free blocks exceeds a threshold.
+    If there are too many locally free blocks, then there is a chance that there will
+    be a lack of free blocks at the next level to satisfy demand. Most of the time,
+    when a block is freed, coalescing does not occur, so there minimizes minimal bookkeeping
+    and operational costs. When a block is to be allocated, no distinction is made
+    between locally and globally free blocks; again, this minimizes bookkeeping.
+
+
+    The criterion used for coalescing is that the number of locally free blocks of
+    a given size should not exceed the number of allocated blocks of that size (i.e.,
+    we must have $L_i \leq A_i$). This is a reasonable guideline for restricting the
+    growth of locally free blocks, and experiments in [BARK89] confirm that this scheme
+    results in noticeable savings.
+
+
+    To implement the scheme, the authors define a delay variable as follows:
+
+
+    $D_i = A_i - L_i = N_i - 2L_i - G_i$
+
+
+    Figure 8.24 shows the algorithm.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Table 8.5 UNIX SVR4 Memory Management Parameters (page 1 of 2)
+
+
+    | Page Table Entry |
+
+    |---||
+
+    | Page frame number | Refers to frame in real memory. |
+
+    | Age | Indicates how long the page has been in memory without being referenced.
+    The length and contents of this field are processor dependent. |
+
+    | Copy on write | Set when more than one process shares a page. If one of the
+    processes writes into the page, a separate copy of the page must first be made
+    for all other processes that share the page. This feature allows the copy operation
+    to be deferred until necessary and avoided in cases where it turns out not to
+    be necessary. |
+
+    | Modify | Indicates page has been modified. |
+
+    | Reference | Indicates page has been referenced. This bit is set to zero when
+    the page is first loaded and may be periodically reset by the page replacement
+    algorithm. |
+
+    | Valid | Indicates page is in main memory. |
+
+    | Protect | Indicates whether write operation is allowed. |
+
+    | Disk Block Descriptor | |
+
+    | Swap device number | Logical device number of the secondary device that holds
+    the corresponding page. This allows more than one device to be used for swapping.
+    |
+
+    | Device block number | Block location of page on swap device. |
+
+    | Type of storage | Storage may be swap unit or executable file. In the latter
+    case, there is an indication as to whether the virtual memory to be allocated
+    should be cleared first. |'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Table 8.5 UNIX SVR4 Memory Management Parameters (page 2 of 2)
+
+
+    | Page Frame Data Table Entry |
+
+    |---||
+
+    | Page State | Indicates whether this frame is available or has an associated
+    page. In the latter case, the status of the page is specified: swap device, in
+    executable file, or DMA in progress. |
+
+    | Reference count | Number of processes that reference the page. |
+
+    | Logical device | Logical device that contains a copy of the page. |
+
+    | Block number | Block location of the page copy on the logical device. |
+
+    | Pfdata pointer | Pointer to other pfdata table entries on a list of free pages
+    and on a hash queue of pages. |
+
+    | **Swap-use Table Entry** |
+
+    | Reference count | Number of page table entries that point to a page on the swap
+    device. |
+
+    | Page/storage unit number | Page identifier on storage unit. |'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '| Page frame number | Age | Copy on | Mod-ify | Ref-erence | Valid | Pro-tect
+    |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+
+    (a) Page table entry
+
+
+    | Swap device number | Device block number | Type of storage |
+
+    | --- | --- | --- |
+
+
+    (b) Disk block descriptor
+
+
+    | Page state | Reference count | Logical device | Block number | Pfdata pointer
+    |
+
+    | --- | --- | --- | --- | --- |
+
+
+    (c) Page frame data table entry
+
+
+    | Reference count | Page/storage unit number |
+
+    | --- | --- |
+
+
+    (d) Swap-use table entry
+
+
+    # Figure 8.22 UNIX SVR4 Memory Management Formats'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_41_0.png)
+
+
+    Figure 8.23 Two-Handed Clock Page-Replacement Algorithm'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'Initial value of $D_i$ is 0
+
+    After an operation, the value of $D_i$ is updated as follows
+
+
+    +   (II) if the next operation is a block free request
+
+    Case $D_i \ge 2$
+
+    mark it locally free and free it locally
+
+    D_i := D_i - 2
+
+    Case $D_i = 1$
+
+    mark it globally free and free it globally; coalesce if possible
+
+    D_i := 0
+
+    Case $D_i = 0$
+
+    mark it globally free and free it globally; coalesce if possible
+
+    select one locally free block of size 2i and free it globally; coalesce if possible
+
+    D_i := 0
+
+
+    # Figure 8.24 Lazy Buddy System Algorithm'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# 8.4 LINUX MEMORY MANAGEMENT
+
+
+    Linux shares many of the characteristics of the memory management schemes of other
+    UNIX implementations but has its unique features. Overall, the Linux memory-management
+    scheme is quite complex [DUBE98]. Here, we give a brief overview.
+
+
+    # Linux Virtual Memory
+
+
+    # Virtual Memory Addressing
+
+
+    Linux use of a three-level page table structure, consisting of the following types
+    of tables (each individual table is the size of one page):
+
+
+    +   - **Page directory**: An active process has a single page directory that is
+    the size of one page. Each entry in the page directory points to one page of the
+    page middle. The page directory must be in main memory for an active process.
+
+    - **Page middle**: The page middle directory may span multiple pages. Each entry
+    in the page directory points to one page in the table.
+
+    - **Page table**: The page table may also span multiple pages. Each table entry
+    refers to one virtual page of the process.
+
+
+    To use this three-level page table structure, a virtual address in Linux is viewed
+    as consisting of four fields. The leftmost (most significant) field is used as
+    an index into the page directory. The next field serves as an index into the page
+    middle directory. The third field serves as an index into the page table. The
+    fourth field gives the offset within the selected page of memory.
+
+
+    The Linux page table structure is platform independent and was designed to accommodate
+    the 64-bit Alpha processor, which provides hardware support for three levels of
+    paging. With 64-bit addresses, the use of two levels of pages on the Alpha would
+    result in very large page tables and directories. The 32-bit Pentium/x86 architecture
+    has a two-level hardware paging mechanism. The Linux software accommodates the
+    two-level scheme by defining the size of the page middle directory to one.
+
+
+    # Page Allocation
+
+
+    To enhance the efficiency of reading and writing out pages to from main memory,
+    Linux defines a mechanism for dealing with contiguous blocks of pages mapped into
+    contiguous blocks of frames. For this purpose, the buddy system is used. The kernel
+    maintains a list of contiguous page frames of fixed size: a group consists of
+    1, 2, 4, 8, 16, or 32 pages. As pages are allocated and deallocated in main memory,
+    the available pages are split and merged using the buddy algorithm.
+
+
+    # Page Replacement Algorithm
+
+
+    The Linux page replacement algorithm is based on the clock algorithm described
+    in Section 8.2 (see Figure 8.16). In the simple clock algorithm, the use bit and
+    modify bit are associated with each page in main memory. In the Linux, the use
+    bit is replaced with an 8-bit age variable. Each time a page is accessed, the
+    age variable is incremented. In the background, Linux periodically sweeps through
+    the global page pool and decrements the age variable for each page it rotates
+    through all the pages in main memory. A page with an age of 0 is an "old" page
+    that has not been referenced in some time and is the best candidate for replacement.
+    The larger the value of age, the more frequently a page has been used in recent
+    times and the less eligible it is for replacement. Thus, the Linux algorithm is
+    a form of least used policy.
+
+
+    # Kernel Memory Allocation'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'The foundation of kernel memory allocation in Linux is the page allocation
+    mechanism used for user virtual memory management. As in the virtual memory scheme,
+    a buddy algorithm is used so that memory for the kernel can be allocated and deallocated
+    in units of one or more pages. Because the minimum amount of memory that can be
+    allocated in this fashion is one page, the page allocator alone would be inefficient
+    because the kernel requires small short-term memory chunks in odd sizes. To accommodate
+    these small chunks, Linux uses a scheme known as slab allocation [BONW94] within
+    an allocated page. On a Pentium/x86 machine, the page size is 4 kbytes, and chunks
+    within a page may be allocated of sizes 32, 64, 128, 252, 508, 2040, and 4080
+    bytes.
+
+
+    The slab allocator is relatively complex and is not examined in detail here; a
+    good description can be found in [VAHA96]. In essence, Linux maintains a set of
+    linked lists, one for each size of chunk. Chunks may be split and aggregated in
+    a manner similar to the buddy algorithm, and moved between lists accordingly.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# 9.3 TRADITIONAL UNIX SCHEDULING
+
+
+    In this section we examine traditional UNIX scheduling, which is used in SVR3
+    and 4.3 BSD Unix. These systems are primarily targeted at the time-sharing interactive
+    environment. The scheduling algorithm being designed to provide good response
+    time for interactive users while ensuring that low-priority jobs do not starve.
+    This algorithm has been replaced in modern UNIX systems, but it is worthwhile
+    to examine the approach because it is representative of practical time-sharing
+    scheduling algorithms. The scheduling scheme for SVR4 includes an accommodation
+    for real-time requirements, and so discussion is deferred to Chapter 10.
+
+
+    The traditional UNIX scheduler employs multilevel feedback using round robin within
+    each of the priority queues. The system makes use of 1-second preemption. That
+    is, if a running process does not complete within 1 second, it is preempted. Priority
+    is based on process type and execution history. The following formulas apply:
+
+
+    ```
+
+    CPU(i-1)/2
+
+    P(i) = Base_j, + \frac{CPU(i-1)}{2} + nice_j
+
+    ```
+
+
+    where
+
+    CPU_j(i) = Measure of process utilization by process j through interval i
+
+    P_j(i) = Priority of process j at beginning of interval i; lower values equal
+    higher priorities
+
+    Base_j = Base priority of process j
+
+    nice_j = user-controllable adjustment factor
+
+
+    The priority of each process is recomputed once per second, at which time a new
+    scheduling decision is made. The base priority and CPU and nice components are
+    restricted to fixed bands of priority levels to prevent a process from migrating
+    out of its assigned band (by the base priority level). These bands are used to
+    optimize access to block devices (e.g., disk) and to allow the operating system
+    to respond quickly to system calls. In decreasing order of priority, the bands
+    are:
+
+
+    +   - Swapper
+
+    - Block I/O device control
+
+    - File manipulation
+
+    - Character I/O device control
+
+    - User processes
+
+
+    This hierarchy provides the most efficient use of the I/O devices. Within the
+    user process band, the execution of history time penalizes process-bound processes
+    at the expense of I/O-bound processes. Again, this should improve efficiency.
+    Coupled with the round robin preempt scheme, the scheduling strategy is well equipped
+    to satisfy the requirements for general-purpose time sharing.
+
+
+    An example of process scheduling is shown in Figure 9.17. Processes A, B, and
+    C are created at the same time with base priorities of 60 (we will ignore the
+    nice value). The clock interrupts the system 60 times per second and increments
+    a counter for the running process. The example assumes that none of the process
+    blocks themselves and that no other processes are ready to run. Compare this with
+    Figure 9.16.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '| Time | Process A Priority | Process A CPU Count | Process B Priority | Process
+    B CPU Count | Process C Priority | Process C CPU Count |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | 0 | 60 | 0 | 60 | 0 | 60 | 0 |
+
+    | | | 1 | | | | |
+
+    | | | • | | | | |
+
+    | | | 60 | | | | |
+
+    | 1 | 75 | 30 | 60 | 0 | 60 | 0 |
+
+    | | | | | 1 | | |
+
+    | | | | | 2 | | |
+
+    | | | | | • | | |
+
+    | | | | | 60 | | |
+
+    | 2 | 67 | 15 | 75 | 30 | 60 | 0 |
+
+    | | | | | | | 1 |
+
+    | | | | | | | 2 |
+
+    | | | | | | | | • |
+
+    | | | | | | | 60 |
+
+    | 3 | 63 | 7 | 67 | 15 | 75 | 30 |
+
+    | | | 8 | | | | |
+
+    | | | 9 | | | | |
+
+    | | | • | | | | |
+
+    | | | 67 | | | | |
+
+    | 4 | 76 | 33 | 63 | 7 | 67 | 15 |
+
+    | | | | | 8 | | |
+
+    | | | | | 9 | | |
+
+    | | | | | • | | |
+
+    | | | | | 67 | | |
+
+    | 5 | 68 | 16 | 76 | 33 | 63 | 7 |
+
+
+    Shaded rectangle represents executing process
+
+
+    # Figure 9.17 Example of Traditional UNIX Process Scheduling'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# 10.3 LINUX SCHEDULING\n\nLinux builds on the traditional UNIX scheduling\
+    \ described in Section 9.3 by adding two scheduling classes for soft real-time\
+    \ processing. The three Linux scheduling classes are:\n\n+   - SCHED_FIFO: First-in-first-out\
+    \ real-time threads\n- SCHED_RR: Round-robin real-time threads\n- SCHED_OTHER:\
+    \ Non-real-time threads\n\nWithin each class, multiple priorities may be used,\
+    \ with priorities in the real-time classes higher than the priorities for the\
+    \ SCHED_OTHER class. For FIFO threads, the following rules apply:\n\n+   1. The\
+    \ system will not interrupt an executing FIFO thread except in the following cases:\n\
+    \   a. Another FIFO thread of higher priority becomes ready.\n   b. The executing\
+    \ FIFO thread becomes blocked waiting for an event, such as I/O.\n   c. The executing\
+    \ thread voluntarily gives up the processor a call to the primitive `sched_yield`.\n\
+    2. When an executing FIFO thread is interrupted, it is placed in the queue associated\
+    \ with its priority.\n3. When a FIFO thread becomes ready and that thread has\
+    \ a higher priority than the currently executing thread, the currently executing\
+    \ thread is preempted and the highest priority FIFO thread is executed. If more\
+    \ than one thread has that highest priority, the thread that has been waiting\
+    \ the longest is chosen.\n\nThe SCHED_RR policy is similar to the SCHED_FIFO policy,\
+    \ except for the addition of a time quota associated with each thread. When a\
+    \ SCHED_RR thread has executed for its time quota, it is suspended and a real-time\
+    \ thread of equal or higher priority is selected for running.\n\nFigure 10.9,\
+    \ from [COMP98], is an example that illustrates the distinction between FIFO and\
+    \ RR scheduling. Assume a program with four threads with three relative priorities\
+    \ assigned as shown in Figure 10.9a. Assume that all waiting threads are ready\
+    \ to execute when the current thread waits or terminates and that no higher-priority\
+    \ thread is awakened while a thread is executing. Figure 10.9a shows a flow in\
+    \ which all of the threads are in the SCHED_FIFO class. Thread D executes until\
+    \ it waits or terminates. Next, threads B and C have the same priority, thread\
+    \ B starts because it has been waiting longer than thread C. Thread B executes\
+    \ until it waits or terminates, C executes until it waits or terminates. Finally,\
+    \ thread A executes.\n\nFigure 10.9c shows a sample flow if all of the threads\
+    \ are in the SCHED_RR class. Thread D executes until it waits or terminates. Next,\
+    \ threads B and C are time sliced, because they have the same priority. Finally,\
+    \ thread A executes.\n\nThe final scheduling class is SCHED_OTHER. A thread in\
+    \ this class can only execute if there are no real-time threads ready to execute.\
+    \ Within the SCHED_OTHER class, the traditional UNIX scheduling algorithm described\
+    \ in Section 9.3 is used."
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '| A | minimum |
+
+    | B | middle |
+
+    | C | middle |
+
+    | D | maximum |
+
+
+    (a) Relative thread priorities
+
+
+    ![](img/e8a705e38cf3a8576620995ac6bb6f53_48_0.png)
+
+
+    (b) Flow with FIFO scheduling
+
+
+    ![](img/e8a705e38cf3a8576620995ac6bb6f53_48_1.png)
+
+
+    (c) Flow with RR scheduling
+
+
+    # Figure 10.9 Example of Linux Scheduling'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# 10.4 UNIX SVR4 SCHEDULING
+
+
+    The scheduling algorithm in UNIX SVR4 is a complete overhaul of the scheduling
+    algorithm in earlier UNIX systems (described in Section 9.3). The new algorithm
+    is designed to give highest preference to real-time processes, next-highest preference
+    to kernel-mode processes, and lowest preference to user-mode processes, referred
+    to as time-shared processes.
+
+
+    The major modifications implemented in SVR4 are:
+
+
+    +   1. The addition of a preemptive static priority scheduler and the introduction
+    of a set of 160 priority levels divided into three priority classes.
+
+    2. The insertion of preemption points. Because the basic kernel is non-preemptive,
+    it can only be split into processes that must run without interruption. Between
+    the processes, safe places can safely interrupt processing and schedule a new
+    process. At identified where the kernel can, a safe place is defined as a region
+    of code where all kernel data structures are either updated and locked via a semaphore.
+
+
+    Figure 10.10 illustrates the 160 priority levels defined in SVR4. Each process
+    is defined to belong to one of three priority classes and is assigned a priority
+    level within that class. The classes are:
+
+
+    +   * Real-time (159-100):** Processes at this priority are guaranteed to be run
+    before any kernel or time-sharing process. In addition, real-time processes can
+    make use of preemption points to preempt kernel processes and user processes.
+
+    * Kernel (99-60):** Processes at these levels are guaranteed to be run before
+    any time-sharing process but must defer to real-time processes.
+
+    * Time-shared (59-0):** The lowest-priority processes, intended for user applications
+    other than real-time applications.
+
+
+    Figure 10.11 indicates how scheduling is implemented in SVR4. A dispatch queue
+    is associated with each priority level, and processes at a given priority level
+    are executed in round-robin fashion. A bit-map vector, dqmap, contains one bit
+    for each priority level; the bit is set for one priority with a nonempty queue.
+    Whenever a process leaves the Running state, due to a block, time-slice expiration,
+    or preemption, the dispatcher checks dqmap and reaches a process from the highest-priority
+    nonempty queue. In addition, whenever a defined preemption point is reached, the
+    kernel checks a flag called kprunrun. If this indicates that at least one real-time
+    process is in the Ready state, the kernel preempts the current process if it is
+    of lower priority than the highest-priority real-time ready process.
+
+
+    Within the time-sharing class, the priority of a process is variable. The scheduler
+    reduces the priority of a process each time it uses up time quantum, and raises
+    its priority if it blocks on an event or resource. The time quantum allocated
+    to a time-sharing process depends on its priority, ranging from 100 ms for priority
+    0 to 10 ms for priority 59. Each real-time process has a fixed priority and a
+    fixed time quantum.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '| Priority Class | Global Value | Scheduling Sequence |
+
+    | --- | --- | --- |
+
+    | Real-time | 159 • • • 100 | first |
+
+    | Kernel | 99 • • 60 | |
+
+    | Time-shared | 59 • • • 0 | \|> last |
+
+
+    Figure 10.10 SVR4 Priority Classes'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '| dqmap | 0 | ... | 1 | ... | 1 | 0 |
+
+    |---|---|---|---|---|---||
+
+    | dispq | 159 | ... | n | ... | 2 | 0 |
+
+    | | | | | | | |
+
+
+    Figure 10.11 SVR4 Dispatch Queues'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# 11.8 UNIX SVR4 I/O
+
+
+    In UNIX, each individual I/O device is associated with a special file. These are
+    managed by the file system and are read and written in the same manner as user
+    data files. This provides a clean, uniform interface to users and processes. To
+    read or write to a device, read and write requests are made for the special file
+    associated with the device.
+
+
+    Figure 11.14 illustrates the logical structure of the I/O facility. The file system
+    manages files on secondary storage devices. In addition, it serves as the interface
+    to devices, which are treated as files.
+
+
+    There are two types of I/O in UNIX: buffered and unbuffered. Buffered I/O passes
+    through system buffers, whereas unbuffered I/O typically involves the DMA facility,
+    with the transfer taking place directly between the module and the process I/O
+    area. For buffered I/O, two types of buffers are used: system buffer cache and
+    character queues.
+
+
+    # Buffer Cache
+
+
+    The buffer cache in UNIX is essentially a disk cache. I/O operations with disk
+    are handled through the buffer cache. The data transfer between the buffer cache
+    and the process space always occurs via DMA. Because both the buffer cache and
+    the process I/O area are in main memory, the DMA facility is used to perform a
+    memory-to-memory copy. This does not use any process cycles, but it consumes bus
+    cycles. To manage the cache, several lists are maintained:
+
+
+    +   - **Free list**: List of all slots in the cache (a slot is referred to as
+    a buffer in UNIX; each slot holds one disk sector) that are available for allocation
+
+    - **Device list**: List of all buffers currently associated with each disk
+
+    - **Driver I/O queue**: List of buffers that are actually queued or waiting for
+    I/O on a particular device
+
+
+    All buffers should be on the free list or on the driver I/O queue list. A buffer
+    once associated with a device, remains associated with the device if it is on
+    the free list, until it is actually reused and associated with another device.
+    These lists are maintained as pointers rather than physically separate lists.
+    When a reference is made to a hash number on a particular device, the operating
+    system first checks if the block is in the hash cache. To minimize the search
+    time, the device is organized as a hash table, using a chaining technique to prevent
+    the overflow chaining technique discussed in Appendix 8A (Figure 8.2b). Figure
+    11.15 depicts the organization of the buffer cache. There is a hash table of fixed
+    length that contains pointers into the buffer cache. Each reference to a device
+    (device#, block#) maps into a hash table. The pointer in entry points to the first
+    buffer in the cache. A hash pointer points to the next buffer in the cache for
+    that hash entry. Thus, for each (device#, block#) that map to the same hash entry,
+    if the corresponding block is in the buffer cache, then that buffer will be in
+    the chain for that hash entry. Thus, the length of the search of the buffer cache
+    is reduced by a factor of order of N, where N is the length of the hash table.
+
+
+    For replacement, a least-recently-used algorithm is used: After a buffer has been
+    allocated to a disk block, it is not used for another block until all other buffers
+    have been used more recently. The free list preserves this least-recently-used
+    order.
+
+
+    # Character Queue
+
+
+    Block-oriented devices, such as disk and tape, can be effectively served by the
+    buffer cache. A different form of buffering is appropriate for character-oriented
+    devices, such as terminals and printers. A character queue is either written by
+    the I/O device and read by process or'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'by the process and read by the device. In both cases, the producer/consumer
+    model introduced in Chapter 5 is used. Thus, character queues may only be read
+    once; as each character is read, it is effectively destroyed. This is in contrast
+    to the buffer cache, which may be read multiple times and hence follows the readers/writers
+    model (also discussed in Chapter 5).
+
+
+    # Unbuffered I/O
+
+
+    Unbuffered I/O, which is simply DMA between device and process space, is always
+    the fastest method for a process to perform I/O. A process that is performing
+    unbuffered I/O is locked in main memory and cannot be swapped out. This reduces
+    the opportunities for swapping by tying up part of main memory, thus reducing
+    the overall system performance. Also, the I/O device is tied up with the process
+    for the duration of the transfer, making it unavailable for other processes.
+
+
+    # UNIX Devices
+
+
+    UNIX recognizes five types of devices:
+
+
+    +   * Disk drives
+
+    * Tape drives
+
+    * Terminals
+
+    * Communication lines
+
+    * Printers
+
+
+    Table 11.5 shows the types of I/O suited to each device. Disk drives are heavily
+    used in UNIX, are block oriented, and have the potential for reasonable high throughput.
+    I/O for these devices tends to be unbuffered or via buffer cache. Tape drives
+    are functionally similar to disk drives and use similar I/O schemes.
+
+
+    Because terminals involve relatively slow exchange of characters, terminal I/O
+    typically makes use of the character queue. Similarly, communication lines require
+    serial processing of bytes for input or output and are best handled by character
+    queues. Finally, the type of I/O used for a printer will generally depend on its
+    speed. Slow printers will normally use the character queue, while a fast printer
+    might employ unbuffered I/O. A buffer cache could be used for a fast printer.
+    However, because data going to a printer is never reused, the overhead of the
+    buffer cache is unnecessary.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Table 11.5 Device I/O in UNIX
+
+
+    | | Unbuffered I/O | Buffer Cache | Character Queue |
+
+    |---|---|---|--|
+
+    | Disk drive | X | X | |
+
+    | Tape drive | X | X | |
+
+    | Terminals | | | X |
+
+    | Communication lines | | | X |
+
+    | Printers | X | | X |'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_55_0.png)
+
+
+    Figure 11.14 UNIX I/O Structure'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_56_0.png)
+
+
+    Figure 11.15 UNIX Buffer Cache Organization'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# 12.7 UNIX FILE MANAGEMENT
+
+
+    The UNIX kernel views all files as streams of bytes. Any internal logical structure
+    is application specific. However, UNIX is concerned with the physical structure
+    of files.
+
+    Four types of files are distinguished:
+
+
+    +   * **Ordinary**: Files that contain information in them by a user, an application
+    program, or a system utility program.
+
+    * **Directory**: Contains a list of file names pointers to indexes (inodes), described
+    later. Directories are hierarchically organized (Figure 12.4). Directory files
+    are actually ordinary files with special protection privileges so that only the
+    file system can write into them, while read access is available to all users.
+
+    * **Special**: Used to access peripheral devices, such as terminals and printers.
+    Each I/O device is associated with a special file, as discussed in Section 11.7.
+
+    * **Named**: Named pipes, as discussed in Section 6.
+
+
+    In this section, we are concerned with the handling of ordinary files, which correspond
+    to what most systems treat as files.
+
+
+    # Inodes
+
+
+    All types of UNIX inodes are administered by the operating system as inodes. An
+    inode (information node) is a control structure that contains the key information
+    needed by the operating system for a particular file. Several file names may be
+    associated with a single inode
+
+
+    # File Allocation
+
+
+    File allocation is done on a block basis. Allocation is dynamic, as rather than
+    using preallocation. Hence, the blocks of a file on disk are not necessarily contiguous.
+    An indexed method is used to keep track of each file, with part of the index stored
+    in the inode for the file. The inode includes 39 bytes of address information
+    that is organized as thirty-three addresses, or pointers. The first 10 addresses
+    point to the first 10 blocks of the file. If the file is longer than 10 blocks,
+    then one or more levels of indexing is used as follows:
+
+
+    +   * The eleventh address in the inode points to a block on disk that contains
+    the next portion of the index. This is referred to as the single indirect block.
+    This block contains the pointers to succeeding blocks in the file.
+
+    * If the file contains more blocks, the twelfth address in the inode points to
+    a double indirect block. This block contains a list of single indirect blocks.
+    Each of single indirect blocks, in turn, contains pointers to file blocks.
+
+    * If the file contains still more blocks, the thirteenth address in the inode
+    points to a triple indirect block that is a third level of indexing. This block
+    points to additional indirect blocks.
+
+
+    All of this is illustrated in Figure 12.3. The total number of data blocks in
+    a file depends on the capacity of the fixed-size blocks in the system. UNIX System
+    V, the length of a block is 1 Kbyte, and each block can hold a total of 256 block
+    addresses. Thus, the maximum size of a file with this scheme is over 16 Gbytes
+    (Table 12.5).
+
+    This scheme has several advantages:'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '+   1. The inode is of fixed size and relatively small and hence may be kept
+    in main memory for long periods.
+
+    2. Smaller files may be accessed with little or no indirection, reducing processing
+    and disk access time.
+
+    3. The theoretical maximum size of a file is large enough to satisfy virtually
+    all applications.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# Table 12.4 Information in a UNIX Disk-Resident Inode
+
+
+    | File Mode | |
+
+    |---|---|
+
+    | | 16-bit flag that stores access and execution permissions associated with the
+    file. |
+
+    | 9-11 | File type (regular, directory, character or block special, FIFO pipe
+    Execution flags |
+
+    | 8 | Owner read permission |
+
+    | 7 | Owner write permission |
+
+    | 6 | Owner execute permission |
+
+    | 5 | Group read permission |
+
+    | 4 | Group write permission |
+
+    | 3 | Group execute permission |
+
+    | 2 | Other read permission |
+
+    | 1 | Other write permission |
+
+    | 0 | Other execute permission |
+
+    | Link Count | Number of directory references to this inode |
+
+    | Owner ID | Individual owner of file |
+
+    | Group ID | Group owner associated with this file |
+
+    | File Size | Number of bytes in file |
+
+    | File Addresses | 39 bytes of address information |
+
+    | Last Accessed | Time of last file access |
+
+    | Last Modified | Time of last file modification |
+
+    | Inode Modified | Time of last inode modification |'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Table 12.5 Capacity of a UNIX File
+
+
+    | Level | Number of Blocks | Number of Bytes |
+
+    |---|---|---|n| Direct | 10 | 10K |
+
+    | Single Indirect | 256 | 256K |
+
+    | Double Indirect | 256 × 256 = 65K | 65M |
+
+    | Triple Indirect | 256 × 65K = 16M | 16G |'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_61_0.png)'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# 13.6 CLUSTER
+
+
+    Sun Cluster is a distributed operating system built as a set of extensions to
+    the base Solaris UNIX system. It provides cluster with a single-system image:
+    that is, the cluster appears to the user and applications as a single computer
+    running the Solaris operating system.
+
+
+    Figure 13.17 shows the overall architecture of Sun Cluster. The major components
+    are:
+
+
+    +   * Object and communication support
+
+    * Process management
+
+    * Networking
+
+    * Global distributed file system
+
+
+    # Object and Communication Support
+
+
+    The Sun Cluster implementation is object oriented. The CORBA object model (see
+    Appendix B) is used to define objects and the remote call (RPC) mechanism implemented
+    in Sun Cluster. The CORBA Interface Definition Language (IDL) is used to specify
+    interfaces between MC components in different nodes. The elements of the object-oriented
+    language C+. The use of a uniform object model and IDL provides a mechanism for
+    internode and intransprocess communication. All of this is built on top of the
+    Solaris kernel with virtually no changes to the kernel.
+
+
+    # Process Management
+
+
+    Process management extends process operations so that the location of a process
+    is transparent to the user. Sun Cluster maintains a global view of processes so
+    that there is a unique identifier for each process in the cluster and that each
+    node can learn the location and status of each process. Process migration (described
+    in Chapter 14) is possible: a process can move from one node to another during
+    its lifetime, to achieve load balancing or for failover. However, the threads
+    of a single process must be on the same node.
+
+
+    # Networking
+
+
+    The designers of Sun Cluster considered three approaches for handling network
+    traffic:
+
+
+    +   1. Perform all network protocol processing on a single node. In particular,
+    for a TCP/IP-based admission, (incoming and outgoing) traffic would go through
+    a network-connection node for incoming traffic would analyze TCP and IP headers
+    and the encapsulated data to the appropriate node; and for outgoing TCP would
+    encapsulate data from other nodes in TCP/IP headers. This approach is not scalable
+    for a large number of nodes and was rejected.
+
+    2. Assign a unique IP address to each node and run the network protocols over
+    the external network directly to each node. One difficulty with this approach
+    is that the cluster configuration is no longer transparent to the outside world.
+    Another complication is the difficulty of failover when a running application
+    moves to another node with a different underlying network.
+
+    3. Use a packet filter to route packets to the proper node and perform process
+    processing on that node. Externally, the cluster appears as a single server with
+    a single IP address. Incoming connections (client requests) are load balanced
+    among the available nodes of the cluster. This is the approach adopted in Sun
+    Cluster.
+
+
+    The Sun Cluster networking subsystem has three key elements:'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '+   1. Incoming packets are first received on the node that has the network
+    adapter physically attached to it; the receiving node filters the packet and delivers
+    it to the correct target node over the cluster interconnect.
+
+    2. All outgoing packets are routed over the cluster interconnect to the node (or
+    one of multiple alternative nodes) that has an external physical connection. All
+    protocol processing for outgoing packets is done by the originating node.
+
+    3. A global network configuration database is maintained to keep track of network
+    traffic to each node.
+
+
+    # Global File System
+
+
+    The most important element of Sun Cluster is the global file system, which contrasts
+    MC file management with the Solaris scheme. Both are built on the use of inode
+    and virtual file system concepts.
+
+
+    In Solaris, the virtual node (vnode) is used to provide a powerful, general-purpose
+    interface to all types of file systems. A inode is used to map pages of memory
+    into the address space of a process and permit access to a file system. While
+    an inode is used to map processes to UNIX files, a vnode can map an object to
+    any file system type. In this way, a system call need not understand the actual
+    object being manipulated, only how to make the proper object-oriented type using
+    the vnode interface. The vnode interface accepts general-purpose file system manipulation
+    commands, such as read and write, and translates them into actions appropriate
+    for the file system. As vnodes are used to describe individual file system objects,
+    the virtual file system architectures are used to describe entire file systems.
+    The vfs/vnode interfaces accept general-purpose commands that operate on entire
+    files and translate them into actions appropriate for the file system de.
+
+
+    In Sun Cluster, the global file system provides a uniform interface to files distributed
+    over the cluster. The process can open a file anywhere in the cluster, and processes
+    on all nodes system built on top of the existing Solaris use the vnode interface.
+    The vfs/vnode operations are converted by a proxy layer into object invocations
+    (see Figure 13.18b). The invoked object may reside anywhere in the system. The
+    vnode performs a local vfs operation on the underlying file system. Neither the
+    kernel nor the existing file systems have to be modified to support this global
+    file environment.
+
+
+    To reduce the number of remote object invocations, caching is used. Sun Cluster
+    supports caching of file contents, directory information, and file attributes.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_64_0.png)'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_65_0.png)
+
+
+    Figure 13.18 Sun Cluster File System Extensions
+
+
+    ![](img/e8a705e38cf3a8576620995ac6bb6f53_65_1.png)
+
+
+    (a) Standard Solaris'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# 13.7 BEOWULF AND LINUX CLUSTERS
+
+
+    In 1994, the Beowulf project was initiated under the sponsorship of the NASA High
+    Performance Computing and Communications (HPCC) project. Its goal was to investigate
+    the potential of clustered PCs for performing important computations beyond the
+    capabilities of contemporary workstations at minimum cost. The Beowulf approach
+    is widely implemented and is the most important cluster technology available.
+
+
+    # Beowulf Features
+
+
+    Key features of Beowulf can include [RIDG97]:
+
+
+    +   * Mass market commodity components
+
+    * Dedicated processors (rather than scavenging cycles from idle workstations)
+
+    * A dedicated, private network (LAN or WAN or internetted combination)
+
+    * No custom components
+
+    * Easy replication from multiple vendors
+
+    * Scalable I/O
+
+    * A freely available software base
+
+    * Use of freely available distribution tools with minimal changes
+
+    * Return of the improvements to the community
+
+
+    Elements of Beowulf software have been implemented on a number of different platforms,
+    the most obvious choice for base is Linux, and most Beowulf implementations use
+    a cluster of Linux workstations and/or PCs. Figure 13.19 depicts a representative
+    configuration. The cluster consists of a number of workstations, performing hardware
+    platforms, all running the Linux operating system. Secondary storage at each workstation
+    may be available for distributed access (for distributed file sharing, distributed
+    virtual memory, or other uses). The cluster nodes (the Linux boxes) are interconnected
+    by a commodity networking approach, typically Ethernet. The Ethernet support may
+    be in the form of a single Ethernet switch or interconnected set of switches.
+    Commodity Ethernet products at the standard data rates (10 Mbps, 100 Mbps, 1 Gbps)
+    are used.
+
+
+    # Beowulf Software
+
+
+    The Beowulf software environment is an add-on to commercially available, royalty-free
+    Beowulf distributions. The principal source of open-source Beowulf software is
+    the Beowulf site at www.beowulf.org, but numerous organizations also offer free
+    Beowulf tools and utilities.
+
+
+    Each node in the Beowulf cluster runs its own copy of the Linux kernel and function
+    as an autonomous Linux system. To support the Beowulf cluster concept, extensions
+    are made to the Linux kernel to allow the individual nodes to participate in a
+    band of global namespaces. Some examples of Beowulf software:
+
+
+    +   * Beowulf distributed process space (BPROC): This package allows an ID space
+    to span multiple nodes in a cluster environment and provides mechanisms for starting
+    processes on other nodes. The goal of this package is to provide key elements
+    needed for a single system image on Beowulf cluster. BPROC provides a mechanism
+    to start processes on remote nodes without logging into another node and by making
+    the remote processes visible in the process table of the cluster''s front end.
+
+
+    +   * Beowulf Ethernet Channel Bonding: This is a mechanism that joins multiple
+    low-cost networks into a single logical network with higher bandwidth. The only
+    additional over using a single network interface is the computationally simple
+    task of distributing the'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: 'packets over the available device transmit queues. This approach allows load
+    balancing over multiple Ethernets connected to Linux workstations.
+
+
+    +   * **Pymsync**: This is a programming environment that provides synchronization
+    mechanisms and shared data objects for processes in a Beowulf cluster.
+
+
+    +   * **EnFusion**: EnFusion consists of a set of tools for parametric computing,
+    as described in Section 13.4. Parametric computing involves the execution of a
+    program as a large number of jobs, each with different parameters or starting
+    conditions. EnFusion emulates a set of robot users on a single root node machine,
+    each of which will log into one of the many client node machines the form a cluster.
+    Each job is set up to run with a unique, programmed scenario, with an appropriate
+    set of starting conditions [KAPP00].'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '![](img/e8a705e38cf3a8576620995ac6bb6f53_68_0.png)'
+  merge: -1
+  pgno: 68

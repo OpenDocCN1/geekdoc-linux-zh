@@ -1,0 +1,510 @@
+- img_proc: true
+  md: '# # Jesse Dhammu blog
+
+    Just another WordPress weblog
+
+
+    To set up your Weblog with wordpress, first of all you will need to download the
+    source files of wordpress blog software from the link http://www.wordpress.org
+    XAMPP for Linux (Download it from- http://www.apachefriends.org/en/xampp-linux.html
+
+
+    **Save the following three files on your Desktop.**
+
+
+    +   1. xampp-linux-1.7.1.tar.gz
+
+    2. wordpress-2.9.2.tar.gz
+
+
+    **First of all install XAMPP on the P.C. by CLI.****
+
+
+    Install XAMPP by extracting its content in a folder named "opt", this folder is
+    located at the root of the file system.
+
+
+    +   1. Open the **Terminal**, enter the following command:
+
+
+    ```
+
+    jesse@Punjabij ~ $ sudo tar -zxvf /home/jesse/Desktop/xampp-linux-1.7.1.tar.gz
+    -C /opt/
+
+    ```
+
+
+    (Please note here jesse is my user name so you must enter the name of the user
+    on which you are currently logged in).'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '![](img/f510d08fe53c65ebaa1a32d935781b34_1_0.png)
+
+
+    Press enter after giving this command now it will prompt you for your Password,
+    give your user login password and press enter.
+
+    This command will extract all the files on Xampp into your /opt/ directory.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '![](img/f510d08fe53c65ebaa1a32d935781b34_2_0.png)
+
+
+    Now all the files have been extracted. So, we can Start XAMPP
+
+
+    +   1. Open the **Terminal**, enter the following command:
+
+
+    ```
+
+    sudo /opt/lampp/lampp start
+
+    ```
+
+
+    The following lines will appear on your Terminal, if everything is done correctly:
+
+
+    XAMPP: Starting Apache with SSL (and PHP5)...
+
+    XAMPP: Starting MySQL...
+
+    XAMPP: Starting ProFTPD...
+
+    XAMPP for Linux started.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Now test your XAMPP installation
+
+
+    +   1. Open web browser.
+
+    2. Enter the following address:
+
+
+    http://localhost
+
+
+    It should show the following page:'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # XAMPP for Linux 1.7.1 - Mozilla Firefox
+
+
+    Welcome to XAMPP for Linux 1.7.1
+
+
+    Congratulations
+
+    nYou successfully installed XAMPP on this system!
+
+
+    Now you can start using Apache and MySQL. Firstly you should by ~Status~ on the
+    left navigation to make sure everything works fine.
+
+
+    If you want to start programming PHP or Perl (or whatever) please take a look
+    at the XAMPP manual first and get more information about your XAMPP
+
+
+    Good luck,
+
+    Kai "Oswald" Seidler + Kay Vegelong
+
+
+    ![](img/f510d08fe53c65ebaa1a32d935781b34_4_0.png)
+
+
+    Click the Status link to see what''s running:'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# # XAMPP for Linux 1.7.1 - Mozilla Firefox
+
+
+    ## XAMPP Status
+
+    This page offers you one view all information about what''s running and what''s
+    not.
+
+
+    | Component | Status | Hint |
+
+    | --- | --- | --- |
+
+    | MySQL database | ACTIVATED | |
+
+    | PHP | ACTIVATED | |
+
+    | Common Gateway Interface (CGI) | ACTIVATED | |
+
+    | Server Side Includes (SSI) | ACTIVATED | |
+
+    | PHP extension -validator | DEACTIVATED | FAQ |
+
+    | PHP extension -OCIB/Oracle | DEACTIVATED | FAQ |
+
+
+    Some changes to the configuration may cause false negative status reports.
+
+
+    ![](img/f510d08fe53c65ebaa1a32d935781b34_5_0.png)
+
+
+    If it appears like this, then you''re on the right track.
+
+
+    Now click on "phpmyadmin" which is listed under Tools. And here create a database
+    named wordpress
+
+
+    Now extract the wordpress files in the directory /opt/lamp/htdocs/ with this command
+
+
+    ```
+
+    jesse@Punjabizm / $ sudo tar -xzvf /home/jesse/Downloads/wordpress-2.9.2.tar.gz
+    -C
+
+    /opt/lampp/htdocs/
+
+    ```'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '```
+
+    wordpress/wp-content/themes/default/single.php
+
+    wordpress/wp-content/themes/default/search.php
+
+    wordpress/wp-content/themes/default/comment.php
+
+    wordpress/wp-content/themes/default/archive.php
+
+    wordpress/wp-content/themes/default/page.php
+
+    wordpress/wp-content/themes/default/footer.php
+
+    wordpress/wp-content/themes/default/sidebar.php
+
+    wordpress/wp-content/themes/default/style.css
+
+    wordpress/wp-content/themes/default/attachment.php
+
+    wordpress/wp-content/themes/default/links.php
+
+    wordpress/wp-content/themes/default/track.css
+
+    wordpress/wp-cron.php
+
+    wordpress/wp-feed.php
+
+    wordpress/index.php
+
+    jessampunjabi ~ $ sudo tar -xzvf /home/Downloads/wordpress-2.9.2.tar.gz
+
+    cd /opt/lammps/htdocs/
+
+    ```
+
+
+    ![](img/f510d08fe53c65ebaa1a32d935781b34_6_0.png)
+
+
+    This will create a folder wordpress in htdocs directory.
+
+    Now open your web browser and browse the url http://localhost/phpmyadmin
+
+    This will show the following page on the screen'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '![](img/f510d08fe53c65ebaa1a32d935781b34_7_0.png)
+
+
+    Crate a new database base named wordpress by filing the database name in the input
+    box and then press create. After Database is created, press home.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '![](img/f510d08fe53c65ebaa1a32d935781b34_8_0.png)
+
+
+    When you are at home page go to privileges, and there click on add new user.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: Here in this add user screen, fill up the required fields like username, Database
+    name and password.
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'This part is done now scroll down the screen and press go button at the bottom
+    of the page.
+
+    Next screen will appear, now scroll down a little and select wordpress from the
+    dropdown list.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# localhost | localhost | phpMyAdmin 3.1.1.3 - Mozilla Firefox\n\n+   - cicol\
+    \ (1)\n- drupal (6)\n- information_schema (28)\n- joomla (36)\n- mysql (9)\n-\
+    \ phpmyadmin (8)\n- wordpress\n\nPlease select a database\n\nDatabase-specific\
+    \ privileges\n\nDatabase Privileges Grant Table-specific privileges Action\n\n\
+    Add privileges on the following database: \n\nChange password:\n\nPassword:\n\n\
+    Password Hashing:\n\nAnd then moving down the screen, click on check all in Global\
+    \ privileges so that all the check box will be tick marked as shown in screen\
+    \ shot.\n\n![](img/f510d08fe53c65ebaa1a32d935781b34_11_0.png)"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Now press go. So you have successfully added a new user and have given the
+    privileges to that user, next you can open the url http://localhost/wordpress
+
+    This screen will appear. Here click on "Create a Configuration file"'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# WordPress - Mozilla Firefox
+
+
+    There doesnt seem to be a vp-config.php file. I need this before we can get started.
+    Need more help? We got you. You can create a vp-config.php file through a web
+    interface, but this doesn''t work for all servers. The safest way is to manually
+    create the file.
+
+
+    Create a Configuration File
+
+
+    Next screen will appear to you. Read the details and click lets go.
+
+
+    # WordPress Setup Configuration File - Mozilla Firefox
+
+
+    Welcome to WordPress. Before getting started, we need some information on the
+    database. You will need to know the following items before proceeding.
+
+
+    +   1. Database name
+
+    2. Database username
+
+    3. Database password
+
+    4. Database host
+
+    5. Table prefix (if you want to run more than one in a single database)
+
+
+    If for any reason this automatic file creation doesn''t work, don''t worry. All
+    this fills in the database information to a configuration file. You may simply
+    open wp-config-sample.php in a text editor, fill in your information, and save
+    it as wp-config.php.
+
+
+    In any case, these items were supplied to you by your Web Host. If you do not
+    have this information, you will need to contact them before you can continue.
+    If you''re already...
+
+
+    Let''s go!'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'Here if the browser gives some error about write permissions Don''t be afraid,
+    just open your terminal window, and change the permissions of /opt/lampp/htdocs/wordpress
+    by
+
+    jesse@Punjabizim / $ sudo chmod 777 /opt/lampp/htdocs/wordpress/
+
+
+    ![](img/f510d08fe53c65ebaa1a32d935781b34_14_0.png)
+
+
+    ok now..|
+
+
+    After clicking on Let''s go button, a Database connection setup screen will come.
+    There you need to fill up your information like user name which you have given
+    while creating database in Xampp, and password, localhost'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# WordPress > Setup Configuration File - Mozilla Firefox
+
+
+    Below you should enter your database connection details. If you''re not sure,
+    contact your host.
+
+
+    | Database Name | wordpress | The name of the database you want to run WP in.
+    |
+
+    |---|---|-|
+
+    | User Name | jesse | Your MySQL username |
+
+    | Password | dhammu | ...and MySQL password. |
+
+    | Database Host | localhost | 99% chance you won''t need to change this value.
+    |
+
+    | Table Prefix | wp_ | If you want to run multiple WordPress reinstallations in
+    a single database, change this. |
+
+
+    After filling up the information, click on submit. In the next screen, Press “Run
+    the Install”.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '![](img/f510d08fe53c65ebaa1a32d935781b34_16_0.png)
+
+
+    In Next welcome screen, fill up your Blog Title and your E-Mail address, the blog
+    title will appear on your Main page, then click install wordpress.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# # Welcome
+
+
+    Welcome to the famous minute WordPress Installation process! You may want to browse
+    the ReadMe documentation at your leisure. Otherwise, just fill in the information
+    below and you''ll be on your way to using the most extensible and powerful publishing
+    platform in the world.
+
+
+    # # Information needed
+
+
+    Please provide the following information. Don''t worry, you can always change
+    these settings later.
+
+
+    ![](img/f510d08fe53c65ebaa1a32d935781b34_17_0.png)
+
+
+    Success....!!!! . In the next screen it should show the message that wordpress
+    has been successfully installed .. Here it will also provide username admin and
+    a randomly generated password. You will need to copy that password or write it
+    down somewhere. You will need this later while logging on your blog.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '![](img/f510d08fe53c65ebaa1a32d935781b34_18_0.png)
+
+
+    In this screen just copy the password (you can change it later) and press log
+    in ..!'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '![](img/f510d08fe53c65ebaa1a32d935781b34_19_0.png)
+
+
+    Here you will have to put that that randomly generated password and user name
+    as admin.
+
+    Just click log in then ..nIts complete...the next screen is your blog Dashboard,
+    as I told you earlier, you can change your profile password from this screen.
+    Just click on the link “Yes take me to my Profile page” on the top of the screen.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: In the Profile page, you can edit and update your personal information like,
+    your first name, last name, your web-page, Email id, IM's and password (you cannot
+    change the user name “admin”)
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Profile - Jesse Dhammy blog — WordPress — Mozilla Firefox
+
+
+    Click on Update profile and it is done.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# # Jesse Dhammu blog
+
+
+    # ## this is Jesse
+
+
+    March 11th, 2010
+
+
+    this is my first post on wordpress
+
+
+    Posted in Uncategorized | Edit | No Comments »
+
+
+    # ## Hello world!
+
+
+    March 11th, 2010
+
+
+    Welcome to WordPress. This is your first post. Edit or delete it, then start blogging!
+
+
+    Posted in Uncategorized | Edit | 1 Comment »
+
+
+    +   Pages
+
+    * About
+
+
+    +   Archives
+
+    * March 2010
+
+
+    +   Categories
+
+    * WordPress (2)
+
+
+    +   Blogroll
+
+    * Development Blog
+
+    * Documentation
+
+    * Plugins
+
+    * Support Forum
+
+    * Themes
+
+    * WordPress Planet
+
+
+    +   Meta
+
+    * Site Admin
+
+
+    See your Personal wordpress blog is ready!!
+
+
+    Documentation by:
+
+    Rupinder singh Dhammu
+
+    IIAS | Shimla
+
+    jesse@email.ru'
+  merge: -1
+  pgno: 22

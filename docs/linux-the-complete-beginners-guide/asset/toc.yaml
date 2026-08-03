@@ -1,0 +1,38 @@
+- - '#'
+  - Linux：初学者指南
+- - '#'
+  - 引言
+- - '#'
+  - 关于 Linux 的误解
+- - '##'
+  - 硬件兼容性问题以及少数运行在 Linux 上的应用程序
+- - '##'
+  - 针对家庭用户的 Linux 版本：
+- - '##'
+  - Linux 中的 Windows 应用程序
+- - '##'
+  - Linux 与 Windows 的区别
+- - '#'
+  - 如何获得 Red Hat Linux 认证
+- - '###'
+  - 为什么我应该获得 Linux 认证？
+- - '###'
+  - 我应该获得哪种 Linux 认证？
+- - '####'
+  - Novell
+- - '####'
+  - CompTIA
+- - '####'
+  - Linux Professional Institute
+- - '####'
+  - Red Hat
+- - '#'
+  - Linux 安装帮助 - 如何从新下载的 Linux 安装
+- - '##'
+  - 1. 记录你的 Linux 安装设置
+- - '#'
+  - useradd -c "Becky Thatcher" bthatcher
+- - '##'
+  - 运行 Linux 以获得真实经验
+- - '##'
+  - 获取 Linux 运行以获得 Linux 训练的 5 种

@@ -1,0 +1,2979 @@
+- md: '
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_0_0.png)
+
+
+    # LPI LINUX ESSENTIALS 010-160
+
+    QUESTIONS & DUMPS
+
+
+    EXAM PREP QUESTIONS FOR LPI
+
+    010-160 LATEST VERSION
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_0_1.png)
+
+
+    # LPI Linux Essentials 010-160 Questions & Dumps
+
+
+    Exam Prep Questions for LPI 010-160 latest version
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_3_0.png)
+
+
+    Authored By: Maxim Books
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_3_1.png)
+
+
+    # Copyright Notice © 2023 – Maxim Books
+
+
+    Protected by copyright law. No piece of this distribution might be repeated, distributed,
+    or sent in any structure or using any and all means, including copying, recording,
+    or other electronic or robotized strategies, without the earlier composed assent
+    of the distributor, with the exception of brief citations exemplified in basic
+    audits and certain other noncommercial purposes allowed by intellectual property
+    owner.
+
+
+    # About Maxim Books:
+
+
+    Maxim Books is a book publishing company incorporated in Dallas, Texas, USA, a
+    place that is accessible both on the web and locally, which releases the force
+    of education substances, Certifications guidebooks, poetry, and numerous other
+    book genres. We make it simple for authors and writers to get their books planned,
+    distributed, marketed, and sell expertly on an international scale with digital
+    book + Print conveyance. Maxim Books was established in 2018 and expanding its
+    business in more countries.
+
+
+    Note: Answers of the questions are at the end of the book
+
+
+    # QUESTION 1
+
+
+    What are the differences between hard disk drives and solid state disks? (Choose
+    two.)
+
+
+    - A. Hard disks have a motor and moving parts, solid state disks do not.
+
+    - B. Hard disks can fail due to physical damage, while solid state disks cannot
+    fail.
+
+    - C. Solid state disks can store many times as much data as hard disk drives.
+
+    - D. /dev/sda is a hard disk device while /dev/sda is a solid state disk.
+
+    - E. Solid state disks provide faster access to stored data than hard disks.
+
+
+    # QUESTION 2
+
+
+    Reverse DNS assigns hostnames to IP addresses. How is the name of the IP address
+    198.51.100.165 stored on a DNS server?
+
+
+    - A. In the A record for 165.100.51.198.ipv4.arpa.
+
+    - B. In the PTR record for 165.100.51.198.in-addr.arpa.
+
+    - C. In the RNAME record for 198-51-100-165.rev.arpa.
+
+    - D. In the ARPA record for 165.100.51.198.rev.
+
+    - E. In the REV record for arpa.in-addr.198.51.100.165.
+
+
+    # QUESTION 3
+
+
+    What information can be displayed by top?
+
+
+    - A. Existing files, ordered by their size.
+
+    - B. Running processes, ordered by CPU or RAM consumption.
+
+    - C. User accounts, ordered by the number of logins.
+
+    - D. User groups, ordered by the number of members.
+
+    - E. User accounts, ordered by the number of files.
+
+
+    # QUESTION 4
+
+
+    Which of the following commands can be used to resolve a DNS name to an IP address?
+
+
+    - A. dnsname
+
+    - B. dns
+
+    - C. query
+
+    - D. host
+
+    - E. iplookup
+
+
+    # QUESTION 5
+
+
+    Which of the following outputs comes from the command free?
+
+
+    A. 21:04:15 up 14 days, 7:43, 3 users, load average: 0.89, 1.00, 0.99
+
+
+    B. | avg-cpu: | %user | %nice | %system | %iowait | %steal | %idle |
+
+    |---|---|---|---|---|---|---|
+
+    | 34.04 | 0.03 | 13.88 | 1.06 | 0.00 | 50.99 |
+
+
+    C. | Filesystem | Size | Used | Avail | Use% | Mounted on |
+
+    |---|---|---|---|---|---|
+
+    | /dev/mapper/vg_ssd-root | 25G | 20G | 3.6G | 85% | / |
+
+
+    D. 1.8M /tmp
+
+
+    E. | total | used | free | shared | buff/cache | available |
+
+    |---|---|---|---|---|---|
+
+    | Mem: | 16123128 | 12565680 | 2011624 | 412128 | 1545824 | 7180416 |
+
+
+    # QUESTION 6
+
+
+    What is the UID of the user root?
+
+
+    - A. 1
+
+    - B. -1
+
+    - C. 255
+
+    - D. 65536
+
+    - E. 0
+
+
+    # QUESTION 7
+
+
+    What is true about the owner of a file?
+
+
+    - A. Each file is owned by exactly one user and one group.
+
+    - B. The owner of a file always has full permissions when accessing the file.
+
+    - C. The user owning a file must be a member of the file''s group.
+
+    - D. When a user is deleted, all files owned by the user disappear.
+
+    - E. The owner of a file cannot be changed once it is assigned to an owner.
+
+
+    # QUESTION 8
+
+
+    What information is stored in /etc/passwd? (Choose three.)
+
+
+    - A. The user''s storage space limit
+
+    - B. The numerical user ID
+
+    - C. The username
+
+    - D. The encrypted password
+
+    - E. The user''s default shell
+
+
+    # QUESTION 9
+
+
+    Which of the following tar options handle compression? (Choose two.)
+
+
+    - A. -bz
+
+    - B. -z
+
+    - C. -g
+
+    - D. -j
+
+    - E. -z
+
+
+    # QUESTION 10
+
+
+    Which of the following keys can be pressed to exit less?
+
+
+    - A. l
+
+    - B. x
+
+    - C. e
+
+    - D. q
+
+    - E. !
+
+
+    # QUESTION 11
+
+
+    Which of the following commands sorts the output of the command export-logs?
+
+
+    - A. export-logs < sort
+
+    - B. export-logs > sort
+
+    - C. export-logs & sort
+
+    - D. export-logs | sort
+
+    - E. export-logs <> sort
+
+
+    # QUESTION 12
+
+
+    A directory contains the following files:
+
+
+    - a.txt
+
+    - b.txt
+
+    - c.cav
+
+
+    What would be the output of the following shell script?
+
+
+    ```bash
+
+    for file in *.txt
+
+    do
+
+    echo $file
+
+    done
+
+    ```
+
+
+    - A. *.txt
+
+    - B. a b
+
+    - C. c.cav
+
+    - D. a.txt
+
+    - E. a.txt, b.txt
+
+
+    # QUESTION 13
+
+
+    Which of the following commands will search for the file foo.txt under the directory
+    /home?
+
+
+    - A. search /home -file foo.txt
+
+    - B. search /home foo txt
+
+    - C. find /home -file foo.txt
+
+    - D. find /home -name foo.txt
+
+    - E. find /home foo txt
+
+
+    # QUESTION 14
+
+
+    The current directory contains the following:
+
+
+    ```
+
+    -rw-r--r-- 1 root root 0 Oct 27 10:00 file.txt
+
+    -rw-r--r-- 1 root root 0 Oct 27 10:00 script.sh
+
+    ```
+
+
+    A user wants to find all files ending in .txt in the /home directory recursively.
+    Which command should they use?
+
+
+    - A. find /home -name "*.txt"
+
+    - B. find /home -name "*.txt"
+
+    - C. find /home -type f -name "*.txt"
+
+    - D. locate /home/*.txt
+
+    - E. ls -R /home | *.txt
+
+
+    # QUESTION 15
+
+
+    What is a distribution?
+
+
+    - A. A bundling of Linux kernel.
+
+    - B. A set of software.
+
+    - C. An operating system based on Linux.
+
+    - D. A file system.
+
+    - E. A collection of tools.
+
+
+    # QUESTION 16
+
+
+    Which package management tool is used in Red Hat-based systems?
+
+
+    - A. portage
+
+    - B. rpm
+
+    - C. apt-get
+
+    - D. dpkg
+
+    - E. yum
+
+
+    # QUESTION 17
+
+
+    Why are web cookies considered dangerous?
+
+
+    - A. Cookies support identification and tracking.
+
+    - B. Cookies are always accessible to anyone.
+
+    - C. Cookies consume significant amounts of storage.
+
+    - D. Cookies store critical data which is lost when cookie is deleted.
+
+    - E. Cookies can contain viruses and malware.
+
+
+    # QUESTION 18
+
+
+    Which of the following are typical services offered by cloud providers? (Choose
+    three.)
+
+
+    - A. Platform as a Service (PaaS)
+
+    - B. Infrastructure as a Service (IaaS)
+
+    - C. Internet as a Service (IaaS)
+
+    - D. Graphics as a Service (GaaS)
+
+    - E. Software as a Service (SaaS)
+
+
+    # QUESTION 19
+
+
+    Which of the following characters in a shell prompt indicates the shell is running
+    with root privileges?
+
+
+    - A. !
+
+    - B. #
+
+    - C. *
+
+    - D. &
+
+    - E. $
+
+
+    # QUESTION 20
+
+
+    What is true about a recursive directory listing?
+
+
+    - A. It includes the content of sub-directories.
+
+    - B. It includes the permissions of the directory listed.
+
+    - C. It includes details of file system, such as inodes.
+
+    - D. It includes ownership information for the files.
+
+    - E. It includes a preview of content for each file.
+
+
+    # QUESTION 21
+
+
+    Which of the following directories contains information, documentation and example
+    configuration files for installed software packages?
+
+
+    - A. /usr/share/doc/
+
+    - B. /etc/defaults/
+
+    - C. /var/info/
+
+    - D. /doc/
+
+    - E. /usr/examples/
+
+
+    # QUESTION 22
+
+
+    Which of the following commands adds the directory new/dir/ to the PATH environment
+    variable?
+
+
+    - A. $PATH=/new/dir: $PATH
+
+    - B. PATH=/new/dir: PATH
+
+    - C. export PATH=/new/dir: PATH
+
+    - D. export PATH=/new/dir: $PATH
+
+    - E. export PATH=/new/dir: $PATH
+
+
+    # QUESTION 23
+
+
+    A user is currently in the directory /home/user/Downloads/ and runs the command
+    ls ../Documents/
+
+
+    Assuming it exists, which directory''s content is displayed?
+
+
+    - A. /home/user/Documents/
+
+    - B. /home/user/Documents/Downloads/
+
+    - C. /home/user/Downloads/Documents/
+
+    - D. /Documents/
+
+    - E. /home/user/Documents
+
+
+    # QUESTION 24
+
+
+    Which of the following is a protocol used for automatic IP address configuration?
+
+
+    - A. NFS
+
+    - B. LDAP
+
+    - C. SMTP
+
+    - D. DNS
+
+    - E. DHCP
+
+    '
+  mdcn: '
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_0_0.png)
+
+
+    # LPI LINUX ESSENTIALS 010-160
+
+    题目与真题
+
+
+    针对 LPI 的考试备习题
+
+    010-160 最新版本
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_0_1.png)
+
+
+    # LPI Linux Essentials 010-160 题目与真题
+
+
+    针对 LPI 010-160 最新版本的考试备习题
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_3_0.png)
+
+
+    作者：Maxim Books
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_3_1.png)
+
+
+    # 版权声明 © 2023 – Maxim Books
+
+
+    受版权法保护。未经发行者事先许可，本发行版的任何部分均不得以异步结构或使用任何手段重复、分发或发送，包括复制、记录或其他电子或机器人策略，但基础审计中示例的简短引用以及知识所有者允许的某些非商业目的除外。
+
+
+    # 关于 Maxim Books：
+
+
+    Maxim Books 是一家在美国德克萨斯州达拉斯市注册成立的图书出版公司，可以通过网络和本地访问，发布教育材料、认证指南书、诗歌以及许多其他类型的书籍。我们让作者和作家能够轻松地通过数字书籍+纸质传输的方式，在全球范围内专业地规划、分发、营销和销售他们的书籍。Maxim
+    Books 成立于 2018 年，并向更多国家扩展其业务。
+
+
+    注意：问题的答案位于书末
+
+
+    # 第 1 题
+
+
+    硬盘驱动（HDD）和固态硬盘（SSD）之间的区别是什么？（选择两项）
+
+
+    - A. 硬盘具有电机和移动部件，而固态硬盘没有。
+
+    - B. 硬盘可能会因为物理损坏而故障，而固态硬盘不会故障。
+
+    - C. 固态硬盘存储的数据量可以是硬盘的许多倍。
+
+    - D. /dev/sda 是硬盘设备，而 /dev/sda 是固态硬盘。
+
+    - E. 固态硬盘提供存储数据的访问速度比硬盘更快。
+
+
+    # 第 2 题
+
+
+    反向 DNS 为 IP 地址分配主机名。IP 地址 198.51.100.165 的名称是如何存储在 DNS 服务器上的？
+
+
+    - A. 在 165.100.51.198.ipv4.arpa 的 A 记录中。
+
+    - B. 在 165.100.51.198.in-addr.arpa 的 PTR 记录中。
+
+    - C. 在 198-51-100-165.rev.arpa 的 RNAME 记录中。
+
+    - D. 在 165.100.51.198.rev 的 ARPA 记录中。
+
+    - E. 在 arpa.in-addr.198.51.100.165 的 REV 记录中。
+
+
+    # 第 3 题
+
+
+    top 命令可以显示哪些信息？
+
+
+    - A. 按大小排序的现有文件。
+
+    - B. 按 CPU 或 RAM 消耗排序的运行进程。
+
+    - C. 按登录次数排序的用户账户。
+
+    - D. 按成员数量排序的用户组。
+
+    - E. 按文件数量排序的用户账户。
+
+
+    # 第 4 题
+
+
+    下列哪种命令可以将 DNS 名称解析为 IP 地址？
+
+
+    - A. dnsname
+
+    - B. dns
+
+    - C. query
+
+    - D. host
+
+    - E. iplookup
+
+
+    # 第 5 题
+
+
+    下列输出中哪一个来自 free 命令？
+
+
+    A. 21:04:15 up 14 days, 7:43, 3 users, load average: 0.89, 1.00, 0.99
+
+
+    B. | avg-cpu: | %user | %nice | %system | %iowait | %steal | %idle |
+
+    |---|---|---|---|---|---|---|
+
+    | 34.04 | 0.03 | 13.88 | 1.06 | 0.00 | 50.99 |
+
+
+    C. | Filesystem | Size | Used | Avail | Use% | Mounted on |
+
+    |---|---|---|---|---|---|
+
+    | /dev/mapper/vg_ssd-root | 25G | 20G | 3.6G | 85% | / |
+
+
+    D. 1.8M /tmp
+
+
+    E. | total | used | free | shared | buff/cache | available |
+
+    |---|---|---|---|---|---|
+
+    | Mem: | 16123128 | 12565680 | 2011624 | 412128 | 1545824 | 7180416 |
+
+
+    # 第 6 题
+
+
+    用户 root 的 UID 是什么？
+
+
+    - A. 1
+
+    - B. -1
+
+    - C. 255
+
+    - D. 65536
+
+    - E. 0
+
+
+    # 第 7 题
+
+
+    关于文件所有者，哪个说法是正确的？
+
+
+    - A. 每个文件都恰好属于一个用户和一个组。
+
+    - B. 文件所有者在访问文件时始终拥有完全权限。
+
+    - C. 拥有文件的用户必须是该文件组的成员。
+
+    - D. 当用户被删除时，所有由该用户拥的文件都会消失。
+
+    - E. 文件所有者一旦分配给所有者就无法更改。
+
+
+    # 第 8 题
+
+
+    /etc/passwd 中存储了哪些信息？（选择三项）
+
+
+    - A. 用户的存储空间限制
+
+    - B. 数值用户 ID (UID)
+
+    - C. 用户名
+
+    - D. 加密密码
+
+    - E. 用户的默认 shell
+
+
+    # 第 9 题
+
+
+    下列哪些 tar 选项处理压缩？（选择两项）
+
+
+    - A. -bz
+
+    - B. -z
+
+    - C. -g
+
+    - D. -j
+
+    - E. -z
+
+
+    # 第 10 题
+
+
+    按下哪个键可以退出 less？
+
+
+    - A. l
+
+    - B. x
+
+    - C. e
+
+    - D. q
+
+    - E. !
+
+
+    # 第 11 题
+
+
+    下列哪个命令可以对 export-logs 命令的输出进行排序？
+
+
+    - A. export-logs < sort
+
+    - B. export-logs > sort
+
+    - C. export-logs & sort
+
+    - D. export-logs | sort
+
+    - E. export-logs <> sort
+
+
+    # 第 12 题
+
+
+    一个目录包含以下文件：
+
+
+    - a.txt
+
+    - b.txt
+
+    - c.cav
+
+
+    以下 shell 脚本的输出是什么？
+
+
+    ```bash
+
+    for file in *.txt
+
+    do
+
+    echo $file
+
+    done
+
+    ```
+
+
+    - A. *.txt
+
+    - B. a b
+
+    - C. c.cav
+
+    - D. .txt
+
+    - E. a, b
+
+
+    # 第 13 题
+
+
+    下列哪个命令递归搜索 /home 目录下所有以 .txt 结尾的文件？
+
+
+    - A. find /home -type f
+
+    - B. find /home "*.txt"
+
+    - C. find /home -name "*.txt"
+
+    - D. find /home/*.txt
+
+    - E. /home
+
+
+    # 第 14 题
+
+
+    当前目录包含以下内容：
+
+
+    ```
+
+    -rw-r--r-- 1 root root Oct 27 10:00 file.txt
+
+    ```
+
+    下列哪个命令会搜索：
+
+
+    - A. *.txt
+
+    - B. .txt
+
+    - C. /home file.txt
+
+    - D. /home
+
+    - E. /txt
+
+
+    # 第 15 题
+
+
+    什么是发行版（distribution）？
+
+
+    - A. Linux 内核。
+
+    - B. 软件包集合。
+
+    - C. 基于 Linux 的操作系统。
+
+    - D. 文件系统。
+
+    - E. 工具集。
+
+
+    # 第 16 题
+
+
+    哪些包管理工具用于 Red 系统？
+
+
+    - A. portage
+
+    - B. rpm
+
+    - C. apt-get
+
+    - D. dpkg
+
+    - E. yum
+
+
+    # 第 17 题
+
+
+    为什么 cookie 被认为是危险的？
+
+
+    - A. Cookie 支持身份识别和跟踪。
+
+    - B. Cookie 任何人都可以访问。
+
+    - C. Cookie 占用大量存储。
+
+    - D. 删除 cookie 会丢失。
+
+    - E. Cookie 可能包含病毒和恶意软件。
+
+
+    # 第 18 题哪些是云供应商提供的服务？（选择三项）
+
+
+    - A. 平台服务 (PaaS)
+
+    - B. 基础设施服务 (IaaS)
+
+    - C. 互联网服务 (IaaS)
+
+    - D. 图形服务 (GaaS)
+
+    - E. 软件服务 (SaaS)
+
+
+    # 第 19 题
+
+
+    提示符中的以下哪个字符表示 shell 以 root 权限运行？
+
+
+    - A. !
+
+    - B. #
+
+    - C. *
+
+    - D. &
+
+    - E. $
+
+
+    # 第 20 题
+
+
+    关于递归目录列表，哪个说法是正确的？
+
+
+    - A. 它包含子目录的内容。
+
+    - B. 它包含列出目录的权限。
+
+    - C. 它包含文件系统的细节，如节点。
+
+    - D. 它包含文件的所有权信息。
+
+    - E. 它包含每个文件的内容预览。
+
+
+    # 第 21 题
+
+
+    下列哪个目录包含安装软件包的信息、文档和示例配置？
+
+
+    - A. /usr/share/doc/
+
+    - B. /etc/defaults/
+
+    - C. /var/info/
+
+    - D. /doc/
+
+    - E. /usr/examples/
+
+
+    # 第 22 题
+
+
+    下列哪个命令将目录 new/dir/ 添加到 PATH 环境变量？
+
+
+    - A. $PATH=/new/dir: $PATH
+
+    - B. PATH=/new/dir: PATH
+
+    - C. export PATH=/new/dir: PATH
+
+    - D. export PATH=/new/dir: $PATH
+
+    - E. export PATH=/new/dir: $PATH
+
+
+    # 第 23 题
+
+
+    用户当前位于 /home/user/Downloads/ 并运行命令 ls ../Documents/
+
+
+    假设它存在，显示的是哪个目录的内容？
+
+
+    - A. /home/user/Documents/
+
+    - B. /home/user/Documents/Downloads/
+
+    - C. /home/user/Downloads/Documents/
+
+    - D. /Documents/
+
+    - E. /home/user/Documents
+
+
+    # 第 24 题
+
+
+    下列种协议用于自动 IP 地址配置？
+
+
+    - A. NFS
+
+    - B. LDAP
+
+    - C. SMTP
+
+    - D. DNS
+
+    - E. DHCP
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_0_0.png)
+
+
+    # LPI LINUX ESSENTIALS 010-160
+
+    QUESTIONS & DUMPS
+
+
+    EXAM PREP QUESTIONS FOR LPI
+
+    010-160 LATEST VERSION
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_0_1.png)'
+  - '[PAGE 1]
+
+
+    <!-- no content -->'
+  - '[PAGE 2]
+
+
+    <!-- no content -->'
+  - '[PAGE 3]
+
+
+    # # LPI Linux Essentials 010-160 Questions & Dumps
+
+
+    Exam Prep Questions for LPI 010-160 latest version
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_3_0.png)
+
+
+    Authored By: Maxim Books
+
+
+    ![](img/3febf44e4631a1f348bdbcee15e440a0_3_1.png)'
+  - '[PAGE 4]
+
+
+    <!-- no content -->'
+  - '[PAGE 5]
+
+
+    # Copyright Notice © 2023 – Maxim Books
+
+
+    Protected by copyright law. No piece of this distribution might be repeated, distributed,
+    or sent in any structure or using any and all means, including copying, recording,
+    or other electronic or robotized strategies, without the earlier composed assent
+    of the distributor, with the exception of brief citations exemplified in basic
+    audits and certain other noncommercial purposes allowed by intellectual property
+    owner.'
+  - '[PAGE 6]
+
+
+    # About Maxim Books:
+
+
+    Maxim Books is a book publishing company incorporated in Dallas, Texas, USA, a
+    place that is accessible both on the web and locally, which releases the force
+    of education substances, Certifications guidebooks, poetry, and numerous other
+    book genres. We make it simple for authors and writers to get their books planned,
+    distributed, marketed, and sell expertly on an international scale with digital
+    book + Print conveyance. Maxim Books was established in 2018 and expanding its
+    business in more countries'
+  - '[PAGE 7]
+
+
+    Note: Answers of the questions are at the end of the book'
+  - '[PAGE 8]
+
+
+    # QUESTION 1
+
+
+    What are the differences between hard disk drives and solid state disks? (Choose
+    two.)
+
+
+    +   A. Hard disks have a motor and moving parts, solid state disks do not.
+
+
+    +   B. Hard disks can fail due to physical damage, while solid state disks cannot
+    fail.
+
+
+    +   C. Solid state disks can store many times as much data as hard disk drives.
+
+
+    +   D. /dev/sdais a hard disk device while /dev/ssdais a solid state disk.
+
+
+    +   E. Solid state disks provide faster access to stored data than hard disks.
+
+
+    # QUESTION 2
+
+
+    Reverse DNS assigns hostnames to IP addresses. How is the name of the IP address
+    198.51.100.165 stored on a DNS server?
+
+
+    +   A. In the A record for 165.100.51.198.ipv4.arpa.
+
+
+    +   B. In the PTR record for 165.100.51.198.in-addr.arpa.
+
+
+    +   C. In the RNAME record for 198-51-100-165.rev.arpa.
+
+
+    +   D. In the ARPA record for 165.100.51.198.rev.
+
+
+    +   E. In the REV record for arpa.in-addr.198.51.100.165.
+
+
+    # QUESTION 3
+
+
+    What information can be displayed by top?
+
+
+    +   A. Existing files, ordered by their size.
+
+
+    +   B. Running processes, ordered by CPU or RAM consumption.
+
+
+    +   C. User accounts, ordered by the number of logins.
+
+
+    +   D. User groups, ordered by the number of members.
+
+
+    +   E. User accounts, ordered by the number of files.'
+  - '[PAGE 9]
+
+
+    # QUESTION 4
+
+
+    Which of the following commands can be used to resolve a DNS name to an IP address?
+
+
+    +   A. dnsname
+
+    B. dns
+
+    C. query
+
+    D. host
+
+    E. iplookup
+
+
+    # QUESTION 5
+
+
+    Which of the following outputs comes from the command free?
+
+
+    A. 21:04:15 up 14 days, 7:43, 3 users, load average: 0.89, 1.00, 0.99
+
+
+    | avg-cpu: | %user | %nice | %system | %iowait | %steal | %idle |
+
+    |---|---|---|---|---|---|---||
+
+    | 34.04 | 0.03 | 13.88 | 1.06 | 0.00 | 50.99 |
+
+
+    | Filesystem | Size | Used | Avail | Use% | Mounted on |
+
+    |---|---|---|---|---|---||
+
+    | /dev/mapper/vg_ssd-root | 25G | 20G | 3.6G | 85% | / |
+
+
+    D. 1.8M /tmp
+
+
+    | total | used | free | shared | buff/cache | available |
+
+    |---|---|---|---|---|---||
+
+    | Mem: | 16123128 | 12565680 | 2011624 | 412128 | 1545824 | 7180416 |'
+  - '[PAGE 10]
+
+
+    # QUESTION 6
+
+
+    What is the UID of the user root?
+
+
+    +   A. 1
+
+    B. -1
+
+    C. 255
+
+    D. 65536
+
+    E. 0
+
+
+    # QUESTION 7
+
+
+    What is true about the owner of a file?
+
+
+    +   A. Each file is owned by exactly one user and one group.
+
+    B. The owner of a file always has full permissions when accessing the file.
+
+    C. The user owning a file must be a member of the file''s group.
+
+    D. When a user is deleted, all files owned by the user disappear.
+
+    E. The owner of a file cannot be changed once it is assigned to an owner.
+
+
+    # QUESTION 8
+
+
+    What information is stored in /etc/passwd? (Choose three.)
+
+
+    +   A. The user''s storage space limit
+
+    B. The numerical user ID
+
+    C. The username
+
+    D. The encrypted password
+
+    E. The user''s default shell'
+  - '[PAGE 11]
+
+
+    # QUESTION 9
+
+
+    Which of the following taroptions handle compression?
+
+    (Choose two.)
+
+
+    +   A. -bz
+
+    B. -z
+
+    C. -g
+
+    D. -j
+
+    -z2
+
+
+    # QUESTION 10
+
+
+    Which of the following keys can be pressed to exit less?
+
+
+    +   A. l
+
+    B. x
+
+    C. e
+
+    D. q
+
+    E. !
+
+
+    # QUESTION 11
+
+
+    Which of the following commands sorts the output of the command export-logs?
+
+
+    +   A. export-logs < sort
+
+    B. export-logs > sort
+
+    C. export-logs & sort
+
+    D. export-logs | sort
+
+    E. export-logs <> sort'
+  - '[PAGE 12]
+
+
+    # QUESTION 12
+
+    A directory contains the following files:
+
+
+    +   - a.txt
+
+    - b.txt
+
+    - c.cav
+
+
+    What would be the output of the following shell script? for file in *.txt
+
+    do
+
+    echo $file
+
+    done
+
+
+    +   A. *.txt
+
+    B. a b
+
+    C. c.cav
+
+    D. a.txt
+
+    E. a. txt
+
+    b. txt
+
+
+    # QUESTION 13
+
+    Which of the following commands will search for the file foo.txt tunder the directory
+    /home?
+
+
+    +   A. search /home -file foo.txt
+
+    B. search /home foo txt
+
+    C. find /home -file foo.txt
+
+    D. find /home -name foo.txt
+
+    E. find /home foo.txt'
+  - '[PAGE 13]
+
+
+    # QUESTION 14
+
+
+    The current directory contains the following file:
+
+
+    ```
+
+    -rw-r--r-- 1 root exec 24551 Apr 2 12:36 test.sh
+
+    ```
+
+
+    The file contains a valid shell script, but executing this file using ./test.shleads
+    to this error:
+
+
+    ```
+
+    bash: ./test.sh: Permission denied
+
+    ```
+
+
+    What should be done in order to successfully execute the script?
+
+
+    +   A. The file''s extension should be changed from .shto.bin.
+
+    B. The execute bit should be set in the file''s permissions.
+
+    C. The user executing the script should be added to the execgroup.
+
+    D. The SetUID bit should be set in the file''s permissions
+
+    E. The script should be run using #!./test.shinstead of ./test.sh.
+
+
+    # QUESTION 15
+
+
+    What is a Linux distribution?
+
+
+    +   A. The Linux file system as seen from the root account after mounting all
+    file systems.
+
+    B. A bundling of the Linux kernel, system utilities and other software.
+
+    C. The set of rules which governs the distribution of Linux kernel source code.
+
+    D. An operating system based on Linux but incompatible to the regular Linux kernel.
+
+    E. A set of changes to Linux which enable Linux to run on another processor architecture.'
+  - '[PAGE 14]
+
+
+    # QUESTION 16
+
+
+    Which package management tool is used in Red Hat-based Linux Systems?
+
+
+    +   A. portage
+
+    B. rpm
+
+    C. apt-get
+
+    D. dpkg
+
+    E. packagectl
+
+
+    # QUESTION 17
+
+
+    Why are web browser cookies considered dangerous?
+
+
+    +   A. Cookies support identification and tracking of users.
+
+    B. Cookies are always public and accessible to anyone on the internet.
+
+    C. Cookies consume significant amounts of storage and exhaust disk space.
+
+    D. Cookies store critical data which is lost when a cookie is deleted.
+
+    E. Cookies can contain and execute viruses and malware.
+
+
+    # QUESTION 18
+
+
+    Which of the following are typical services offered by public cloud providers?
+    (Choose three.)
+
+
+    +   A. Platform as a Service(PaaS)
+
+    B. Infrastructure as a Service(IaaS)
+
+    C. Internet as a Service(IaaS)
+
+    D. Graphics as a Service (GaaS)
+
+    E. Software as a Service (SaaS)'
+  - "[PAGE 15]\n\n# QUESTION 19\n\nWhich of the following characters in a shell prompt\
+    \ indicates the shell is running with root privileges?\n\n+   A. !\nB. #\nC. *\n\
+    D. \n&\nE. $\n\n# QUESTION 20\n\nWhat is true about a recursive directory listing?\n\
+    \n+   A. It includes the content of sub-directories.\nB. It includes the permissions\
+    \ of the directory listed.\nC. It includes details of file system internals, such\
+    \ as inodes.\nD. It includes ownership information for the files.\nE. It includes\
+    \ a preview of content for each file in the directory.\n\n# QUESTION 21\n\nWhich\
+    \ of the following directories contains information, documentation and example\
+    \ configuration files for installed software packages?\n\n+   A. /usr/share/doc/\n\
+    B. /etc/defaults/\nC. /var/info/\nD. /doc/\nE. /usr/examples/"
+  - '[PAGE 16]
+
+
+    # QUESTION 22
+
+
+    Which of the following commands adds the directory
+
+    new/dir/ to the PATHenvironment variable?
+
+
+    +   A. $PATH=/new/dir: $PATH
+
+    B. PATH=/new/dir: PATH
+
+    C. export PATH=/new/dir: PATH
+
+    D. export PATH=/new/dir: $PATH
+
+    E. export PATH=/new/dir: $PATH
+
+
+    # QUESTION 23
+
+
+    A user is currently in the directory /home/user/Downloads/
+
+    and runs the command
+
+
+    Is ../Documents/
+
+
+    Assuming it exists, which directory''s content is displayed?
+
+
+    +   A. /home/user/Documents/
+
+    B. /home/user/Documents/Downloads/
+
+    C. /home/user/Downloads/Documents/
+
+    D. /Documents/
+
+    E. /home/user/Documents
+
+
+    # QUESTION 24
+
+
+    Which of the following is a protocol used for automatic IP
+
+    address configuration?
+
+
+    +   A. NFS
+
+    B. LDAP
+
+    C. SMTP
+
+    D. DNS
+
+    E. DHCP'
+- md: '
+
+    # QUESTION 25
+
+
+    Which of the following devices represents a hard disk partition?
+
+
+    - A. /dev/ttyS0
+
+    - B. /dev/sata0
+
+    - C. /dev/part0
+
+    - D. /dev/sda2
+
+    - E. /dev/sda/p2
+
+
+    # QUESTION 26
+
+
+    What can be found in the /proc/directory?
+
+
+    - A. One directory per installed program.
+
+    - B. One device file per hardware device.
+
+    - C. One file per existing user account.
+
+    - D. One directory per running process.
+
+    - E. One log file per running service.
+
+
+    # QUESTION 27
+
+
+    A new server needs to be installed to host services for a period of several years.
+    Throughout this time, the server should receive important security updates from
+    its Linux distribution.
+
+
+    Which of the following Linux distributions meet these requirements? (Choose two.)
+
+
+    - A. Ubuntu Linux LTS
+
+    - B. Fedora Linux
+
+    - C. Debian GNU/Linux Unstable
+
+    - D. Ubuntu Linux non-LTS
+
+    - E. Red Hat Enterprise Linux
+
+
+    # QUESTION 28
+
+
+    Which of the following directories must be mounted with read and write access
+    if it resides on its own dedicated file system?
+
+
+    - A. /opt
+
+    - B. /lib
+
+    - C. /etc
+
+    - D. /var
+
+    - E. /usr
+
+
+    # QUESTION 29
+
+
+    The ownership of the file doku.odt should be changed. The new owner is named tux.
+    Which command accomplishes this change?
+
+
+    - A. chmod u=tux doku.odt
+
+    - B. newuser doku.odt tux
+
+    - C. chown tux doku.odt
+
+    - D. transfer tux: doku.odt
+
+    - E. passwd doku.odt:tux
+
+
+    # QUESTION 30
+
+
+    What happens to a file residing outside the home directory when the file owner''s
+    account is deleted? (Choose two.)
+
+
+    - A. During a file system check, the file is moved to /lost+found.
+
+    - B. The file is removed from the file system.
+
+    - C. The UID of the former owner is shown when listing the file''s details.
+
+    - D. The user root is set as the new owner of the file.
+
+    - E. Ownership and permissions of the file remain unchanged.
+
+
+    # QUESTION 31
+
+
+    What is true about links in a Linux file system?
+
+
+    - A. A symbolic link can only point to a file and not to a directory.
+
+    - B. A hard link can only point to a directory and never to a file.
+
+    - C. When the target of the symbolic link is moved, the link is automatically
+    updated.
+
+    - D. A symbolic link can point to a file on another file system.
+
+    - E. Only the root user can create hard links.
+
+
+    # QUESTION 32
+
+
+    Which files are the source of the information in the following output?
+
+    uid=1000 (bob) gid=1000 (bob) groups=1000 (bob), 10 (wheel), 150 (wireshark),
+    989 (docker), 1001 (libvirt)
+
+
+    - A. /etc/id
+
+    - B. /etc/passwd
+
+    - C. /etc/group
+
+    - D. /home/index
+
+    - E. /var/db/users
+
+
+    # QUESTION 33
+
+
+    Which of the following tasks can the command passwd accomplish? (Choose two.)
+
+
+    - A. Change a user''s username.
+
+    - B. Change a user''s password.
+
+    - C. Create a new user account.
+
+    - D. Create a new user group.
+
+    - E. Lock a user account.
+
+
+    # QUESTION 34
+
+
+    Which command displays file names only and no additional information?
+
+
+    - A. ls -a
+
+    - B. ls -lh
+
+    - C. ls -l
+
+    - D. ls -alh
+
+    - E. ls -nl
+
+
+    # QUESTION 35
+
+
+    Which of the following commands puts the lines of the file data.csv into alphabetical
+    order?
+
+
+    - A. a..z data.csv
+
+    - B. sort data.csv
+
+    - C. abc data.csv
+
+    - D. wc -s data.csv
+
+    - E. grep --sort data.csv
+
+
+    # QUESTION 36
+
+
+    Which of the following examples shows the general structure of a for loop in a
+    shell script?
+
+
+    - A. for *.txt as file => echo $file
+
+    - B. for *.txt (echo $)
+
+    - C. for file in *.txt do
+
+    echo $i done
+
+    - D. for ls *.txt exec {} \;
+
+    - E. foreach @{file}{echo $}
+
+
+    # QUESTION 37
+
+
+    What is the return value of a shell script after successful execution?
+
+
+    - A. 1
+
+    - B. 0
+
+    - C. -1
+
+    - D. -255
+
+    - E. 255
+
+
+    # QUESTION 38
+
+
+    Which of the following statements are true regarding a typical shell script? (Choose
+    two.)
+
+
+    - A. It has the executable permission bit set.
+
+    - B. It starts with the two character sequence #!.
+
+    - C. It is located in /usr/local/scripts/
+
+    - D. It is located in /etc/bash/scripts/
+
+    - E. It is compiled into a binary file compatible with the current machine architecture.
+
+
+    # QUESTION 39
+
+
+    Which of the following commands extracts the contents of the compressed archive
+    file1.tar.gz?
+
+
+    - A. tar -czf file1.tar.gz
+
+    - B. ztar file1.tar.gz
+
+    - C. tar -xzf file1.tar.gz
+
+    - D. tar --extract file1.tar.gz
+
+    - E. detar file1.tar.gz
+
+
+    # QUESTION 40
+
+
+    Which of the following commands finds all lines in the file operating-systems.txt
+    which contain the term linux, regardless of the case?
+
+
+    - A. igrep linux operating-systems.txt
+
+    - B. less -i linux operating-systems.txt
+
+    - C. grep -i linux operating-systems.txt
+
+    - D. cut linux operating-systems.txt
+
+    - E. cut [Li] [Ii] [Nn] [Uu] [Xx] operating-systems.txt
+
+
+    # QUESTION 41
+
+
+    Which of the following programs are web servers? (Choose two.)
+
+
+    - A. Apache HTTPD
+
+    - B. Postfix
+
+    - C. Curl
+
+    - D. Dovecot
+
+    - E. NGINX
+
+
+    # QUESTION 42
+
+
+    Which of the following Linux Distributions is derived from Red Hat Enterprise
+    Linux?
+
+
+    - A. Raspbian
+
+    - B. openSUSE
+
+    - C. Debian
+
+    - D. Ubuntu
+
+    - E. CentOS
+
+
+    # QUESTION 43
+
+
+    What are the differences between a private web browser window and a regular web
+    browser window? (Choose three.)
+
+
+    - A. Private web browser windows do not allow printing or storing websites.
+
+    - B. Private web browser windows do not store cookies persistently.
+
+    - C. Private web browser windows do not support logins into websites.
+
+    - D. Private web browser windows do not keep records in the browser history.
+
+    - E. Private web browser windows do not send regular stored cookies.
+
+
+    # QUESTION 44
+
+
+    What is the preferred source for the installation of new applications in a Linux
+    based operating system?
+
+
+    - A. The vendor''s version management system
+
+    - B. A CD-ROM disk
+
+    - C. The distribution''s package repository
+
+    - D. The vendor''s website
+
+    - E. A retail store
+
+
+    # Answers
+
+
+    - 1. Correct Answer: AE
+
+    - 2. Correct Answer: B
+
+    - 3. Correct Answer: B
+
+    - 4. Correct Answer: D
+
+    - 5. Correct Answer: E
+
+    - 6. Correct Answer: E
+
+    - 7. Correct Answer: A
+
+    - 8. Correct Answer: BCE
+
+    - 9. Correct Answer: BD
+
+    - 10. Correct Answer: D
+
+    - 11. Correct Answer: D
+
+    - 12. Correct Answer: E
+
+    - 13. Correct Answer: D
+
+    - 14. Correct Answer: B
+
+    - 15. Correct Answer: B
+
+    - 16. Correct Answer: B
+
+    - 17. Correct Answer: A
+
+    - 18. Correct Answer: ABE
+
+    - 19. Correct Answer: B
+
+    - 20. Correct Answer: A
+
+    - 21. Correct Answer: A
+
+    - 22. Correct Answer: E
+
+    - 23. Correct Answer: D
+
+    - 24. Correct Answer: E
+
+    - 25. Correct Answer: D
+
+    - 26. Correct Answer: D
+
+    - 27. Correct Answer: AE
+
+    - 28. Correct Answer: D
+
+    - 29. Correct Answer: C
+
+    - 30. Correct Answer: CE
+
+    - 31. Correct Answer: D
+
+    - 32. Correct Answer: BC
+
+    - 33. Correct Answer: CE
+
+    - 34. Correct Answer: A
+
+    - 35. Correct Answer: B
+
+    - 36. Correct Answer: C
+
+    - 37. Correct Answer: B
+
+    - 38. Correct Answer: AE
+
+    - 39. Correct Answer: C
+
+    - 40. Correct Answer: C
+
+    - 41. Correct Answer: AE
+
+    - 42. Correct Answer: E
+
+    - 43. Correct Answer: BDE
+
+    - 44. Correct Answer: C
+
+    '
+  mdcn: '
+
+
+    # 问题 25
+
+
+    以下哪个设备代表硬盘分区？
+
+
+    - A. /dev/ttyS0
+
+    - B. /dev/sata0
+
+    - C. /dev/part0
+
+    - D. /dev/sda2
+
+    - E. /dev/sda/p2
+
+
+    # 问题 26
+
+
+    在 /proc/ 目录下可以找到什么？
+
+
+    - A. 每个已安装的程序对应一个目录。
+
+    - B. 每个硬件设备对应一个设备文件。
+
+    - C. 每个现有账户对应一个文件。
+
+    - D. 每个运行中的进程对应一个目录。
+
+    - E. 每个运行的服务对应一个日志文件。
+
+
+    # 问题 27
+
+
+    需要安装一个新的服务器来托管未来几年的服务。在此期间，该服务器应该从其使用的 Linux 发行版接收重要的安全更新。
+
+
+    以下哪些 Linux 发行版满足这些要求？（选择两个。）
+
+
+    - A. Ubuntu Linux LTS
+
+    - B. Fedora Linux
+
+    - C. Debian GNU/Linux Unstable
+
+    - D. Ubuntu Linux non-LTS
+
+    - E. Red Hat Enterprise Linux
+
+
+    # 问题 28
+
+
+    如果以下目录位于其独立的专用文件系统中，则必须以读写权限挂载哪个？
+
+
+    - A. /opt
+
+    - B. /lib
+
+    - C. /etc
+
+    - D. /var
+
+    - E. /usr
+
+
+    # 问题 29
+
+
+    应该更改文件 doku.odt 的所有者。新所有者名为 tux。哪个命令可以完成此更改？
+
+
+    - A. chmod u=tux doku.odt
+
+    - B. newuser doku.odt tux
+
+    - C. chown tux doku.odt
+
+    - D. transfer tux: doku.odt
+
+    - E. passwd doku.odt:tux
+
+
+    # 问题 30
+
+
+    当文件所有者账户删除时，位于家目录之外的文件会发生什么？（选择两个。）
+
+
+    - A. 在文件系统检查期间，文件会被移动到 /lost+found。
+
+    - B. 文件将从文件系统中删除。
+
+    - C. 在列出文件详情时会显示原所有者的 UID。
+
+    - D. 用户 root 被设置为文件的新所有者。
+
+    - E. 文件的所有权和权限保持不变。
+
+
+    # 问题 31
+
+
+    关于 Linux 文件系统中的链接（links），以下说法是正确的？
+
+
+    - A. 符号链接（symbolic link）只能指向文件而不能指向目录。
+
+    - B. 硬链接（hard link）只能指向目录而永远不能指向文件。
+
+    - C. 当符号链接的目标被移动时，链接会自动更新。
+
+    - D. 符号链接可以指向另一个文件系统上的文件。
+
+    - E. 只有 root 用户可以创建硬链接。
+
+
+    # 问题 32
+
+
+    哪些文件是以下输出信息的来源？
+
+    uid=1000 (bob) gid=1000 (bob) groups=1000 (bob), 10 (wheel), 150 (wireshark),
+    989 (docker), 1001 (libvirt)
+
+
+    - A. /etc/id
+
+    - B. /etc/passwd
+
+    - C. /etc/group
+
+    - D. /home/index
+
+    - E. /var/db/users
+
+
+    # 问题 33
+
+
+    passwd 命令可以完成以下哪些任务？（选择两个。）
+
+
+    - A. 修改用户的用户名。
+
+    - B. 修改用户的密码。
+
+    - C. 创建新的用户账户。
+
+    - D. 创建新的用户组。
+
+    - E. 锁定用户账户。
+
+
+    # 问题 34
+
+
+    哪个命令仅显示文件名且不显示额外信息？
+
+
+    - A. ls -a
+
+    - B. ls -lh
+
+    - C. ls -l
+
+    - D. ls -alh
+
+    - E. ls -nl
+
+
+    # 问题 35
+
+
+    以下哪个命令将 data.csv 文件的行按字母顺序排序？
+
+
+    - A. a..z data.csv
+
+    - B. sort data.csv
+
+    - C. abc data.csv
+
+    - D. wc -s data.csv
+
+    - E. grep --sort data.csv
+
+
+    # 问题 36
+
+
+    以下哪个示例显示了 shell 脚本中 for 循环通用结构？
+
+
+    - A. for *.txt as file => echo $file
+
+    - B. for *.txt (echo $)
+
+    - C. for file in *.txt do
+
+    echo $i done
+
+    - D. for ls *.txt exec {} \;
+
+    - E. foreach @{file}{echo $}
+
+
+    # 问题 37
+
+
+    shell 脚本在成功执行后的返回值是什么？
+
+
+    - A. 1
+
+    - B. 0
+
+    - C. -1
+
+    - D. -255
+
+    - E. 255
+
+
+    # 问题 38
+
+
+    关于典型的 shell 脚本，以下哪些说法是正确的？（选择两个。）
+
+
+    - A. 它设置了执行权限位。
+
+    - B. 它以双字符序列 #! 开头。
+
+    - C. 它位于 /usr/local/scripts/
+
+    - D. 它位于 /etc/bash/scripts/
+
+    - E. 它被编译为与机器架构兼容的二进制文件。
+
+
+    # 问题 39
+
+
+    以下哪个命令提取压缩归文件 file1.tar.gz 的内容？
+
+
+    - A. tar -czf file1.tar.gz
+
+    - B. ztar file1.tar.gz
+
+    - C. tar -xzf file1.tar.gz
+
+    - D. tar --extract file1.tar.gz
+
+    - E. detar file1.tar.gz
+
+
+    # 问题 40
+
+
+    以下哪个命令可以在 operating-systems.txt 文件中找到包含 linux 术的所有行，忽略大小写？
+
+
+    - A. igrep linux operating-systems.txt
+
+    - B. less -i linux operating-systems.txt
+
+    - C. grep -i linux operating-systems.txt
+
+    - D. cut linux operating-systems.txt
+
+    - E. cut [Li] [Ii] [Nn] [Uu] [Xx] operating-systems.txt
+
+
+    # 问题 41
+
+
+    以下哪些程序是 Web 服务器？（选择两个。）
+
+
+    - A. Apache HTTPD
+
+    - B. Postfix
+
+    - C. Curl
+
+    - D. Dovecot
+
+    - E. NGINX
+
+
+    # 问题 42
+
+
+    以下哪个 Linux 发行版源自 Red Hat Enterprise Linux？
+
+
+    - A. Raspbian
+
+    - B. openSUSE
+
+    - C. Debian
+
+    - D. Ubuntu
+
+    - E. CentOS
+
+
+    # 问题 43
+
+
+    隐私浏览器窗口和普通 Web 浏览器窗口之间的区别是什么？（选择三个。）
+
+
+    - A. 隐私浏览器窗口不允许打印或存储网站。
+
+    - B. 隐私浏览器窗口不会持久化地存储 cookie。
+
+    - C. 隐私浏览器窗口不支持登录网站。
+
+    - D. 隐私浏览器窗口不会在浏览器历史中保留记录。
+
+    - E. 隐私浏览器窗口不会发送常规存储的 cookie。
+
+
+    # 问题 44
+
+
+    在基于 Linux 的操作系统中安装新应用程序的首选来源是什么？
+
+
+    - A. 供应商的版本管理系统
+
+    - B. CD-ROM 光盘
+
+    - C. 发行版的包仓库
+
+    - D. 供应商的网站
+
+    - E. 零售店
+
+
+    # 答案
+
+
+    - 1. 正确答案: AE
+
+    - 2. 正确答案: B
+
+    - 3. 正确答案: B
+
+    - 4. 正确答案: D
+
+    - 5. 正确答案: E
+
+    - 6. 正确答案: E
+
+    - 7. 正确答案: A
+
+    - 8. 正确答案: BCE
+
+    - 9. 正确答案: BD
+
+    - 10. 正确答案: D
+
+    - 11. 正确答案: D
+
+    - 12. 正确答案: E
+
+    - 13. 正确答案: D
+
+    - 14. 正确答案: B
+
+    - 15. 正确答案: B
+
+    - 16. 正确答案: B
+
+    - 17. 正确答案: A
+
+    - 18. 正确答案: ABE
+
+    - 19. 正确答案: B
+
+    - 20. 正确答案: A
+
+    - 21. 正确答案: A
+
+    - 22. 正确答案: E
+
+    - 23. 正确答案: BDE
+
+    - 24. 正确答案: C
+
+    - 25. 正确答案: D
+
+    - 26. 正确答案: D
+
+    - 27. 正确答案: AE
+
+    - 28. 正确答案: D
+
+    - 29. 正确答案: C
+
+    - 30. 正确答案: CE
+
+    - 31. 正确答案: D
+
+    - 32. 正确答案: BC
+
+    - 33. 正确答案: CE
+
+    - 34. 正确答案: A
+
+    - 35. 正确答案: B
+
+    - 36. 正确答案: C
+
+    - 37. 正确答案: B
+
+    - 38. 正确答案: AE
+
+    - 39. 正确答案: C
+
+    - 40. 正确答案: C
+
+    - 41. 正确答案: AE
+
+    - 42. 正确答案: E
+
+    - 43. 正确答案: BDE
+
+    - 44. 正确答案: C
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 17]
+
+
+    # QUESTION 25
+
+
+    Which of the following devices represents a hard disk partition?
+
+
+    +   A. /dev/ttyS0
+
+    B. /dev/sata0
+
+    C. /dev/part0
+
+    D. /dev/sda2
+
+    E. /dev/sda/p2
+
+
+    # QUESTION 26
+
+
+    What can be found in the /proc/directory?
+
+
+    +   A. One directory per installed program.
+
+    B. One device file per hardware device.
+
+    C. One file per existing user account.
+
+    D. One directory per running process.
+
+    E. One log file per running service.
+
+
+    # QUESTION 27
+
+
+    A new server needs to be installed to host services for a period of several years.
+    Throughout this time, the server should receive important security updates from
+    its Linux distribution.
+
+
+    Which of the following Linux distributions meet these requirements? (Choose two.)
+
+
+    +   A. Ubuntu Linux LTS
+
+    B. Fedora Linux
+
+    C. Debian GNU/Linux Unstable
+
+    D. Ubuntu Linux non-LTS
+
+    E. Red Hat Enterprise Linux'
+  - '[PAGE 18]
+
+
+    # QUESTION 28
+
+    Which of the following directories must be mounted with read and write access
+    if it resides on its own dedicated file system?
+
+
+    +   A. /opt
+
+    B. /lib
+
+    C. /etc
+
+    D. /var
+
+    E. /usr
+
+
+    # QUESTION 29
+
+    The ownership of the file doku.odtshould be changed. The new owner is named tux.
+    Which command accomplishes this change?
+
+
+    +   A. chmod u=tux doku.odt
+
+    B. newuser doku.odt tux
+
+    c. chown tux doku.odt
+
+    D. transfer tux: doku.odt
+
+    E. passwd doku.odt:tux
+
+
+    # QUESTION 30
+
+    What happens to a file residing outside the home directory when the file owner''s
+    account is deleted? (Choose two.)
+
+
+    +   A. During a file system check, the file is moved to /lost+found.
+
+    B. The file is removed from the file system.
+
+    C. The UID of the former owner is shown when listing the file''s details.
+
+    D. The user root is set as the new owner of the file.
+
+    E. Ownership and permissions of the file remain unchanged.'
+  - '[PAGE 19]
+
+
+    # QUESTION 31
+
+    What is true about links in a Linux file system?
+
+
+    +   A. A symbolic link can only point to a file and not to a directory.
+
+    B. A hard link can only point to a directory and never to a file.
+
+    C. When the target of the symbolic link is moved, the link is automatically updated.
+
+    D. A symbolic link can point to a file on another file system.
+
+    E. Only the root user can create hard links.
+
+
+    # QUESTION 32
+
+    Which files are the source of the information in the following output?
+
+    uid=1000 (bob) gid=1000 (bob) groups=1000 (bob), 10 (wheel), 150 (wireshark),
+    989 (docker), 1001 (libvirt)
+
+
+    +   A. /etc/id
+
+    B. /etc/passwd
+
+    C. /etc/group
+
+    D. /home/index
+
+    E. /var/db/users
+
+
+    # QUESTION 33
+
+    Which of the following tasks can the command passwd accomplish? (Choose two.)
+
+
+    +   A. Change a user''s username.
+
+    B. Change a user''s password.
+
+    C. Create a new user account.
+
+    D. Create a new user group.
+
+    E. Lock a user account.'
+  - '[PAGE 20]
+
+
+    # QUESTION 34
+
+
+    Which command displays file names only and no additional information?
+
+
+    +   A. ls -a
+
+    B. ls -lh
+
+    C. ls -l
+
+    D. ls -alh
+
+    E. ls -nl
+
+
+    # QUESTION 35
+
+
+    Which of the following commands puts the lines of the file data.csvzinto alphabetical
+    order?
+
+
+    +   A. a..z data.csv
+
+    B. sort data.csv
+
+    C. abc data.csv
+
+    D. wc -s data.csv
+
+    E. grep --sort data.csv
+
+
+    # QUESTION 36
+
+
+    Which of the following examples shows the general structure of a forloop in a
+    shell script?
+
+
+    +   A. for *.txt as file => echo $file
+
+    B. for *.txt (echo $)
+
+    C. for file in *.txt do
+
+    echo $i done
+
+    D. for ls *.txt exec {} \;
+
+    E. foreach @{file}{echo $}
+
+    }'
+  - '[PAGE 21]
+
+
+    # QUESTION 37
+
+
+    What is the return value of a shell script after successful execution?
+
+
+    +   A. 1
+
+    B. 0
+
+    C. -1
+
+    D. -255
+
+    E. 255
+
+
+    # QUESTION 38
+
+
+    Which of the following statements are true regarding a typical shell script? (Choose
+    two.)
+
+
+    +   A. It has the executable permission bit set.
+
+    B. It starts with the two character sequence #!.
+
+    C. It is located in /usr/local/scripts/
+
+    D. It is located in /etc/bash/scripts/
+
+    E. It is compiled into a binary file compatible with the current machine architecture.
+
+
+    # QUESTION 39
+
+
+    Which of the following commands extracts the contents of the compressed archive
+    file1.tar.gz?
+
+
+    +   A. tar -czf file1.tar.gz
+
+    B. ztar file1.tar.gz
+
+    C. tar -xzf file1.tar.gz
+
+    D. tar --extract file1.tar.gz
+
+    E. detar file1.tar.gz'
+  - '[PAGE 22]
+
+
+    # QUESTION 40
+
+
+    Which of the following commands finds all lines in the file operating-systems.txtwhich
+    contain the term linux, regardless of the case?
+
+
+    +   A. igrep linux operating-systems.txt
+
+    B. less -i linux operating-systems.txt
+
+    C. grep -i linux operating-systems.txt
+
+    D. cut linux operating-systems.txt
+
+    E. cut [Li] [Ii] [Nn] [Uu] [Xx] operating-systems.txt
+
+
+    # QUESTION 41
+
+
+    Which of the following programs are web servers? (Choose two.)
+
+
+    +   A. Apache HTTPD
+
+    B. Postfix
+
+    C. Curl
+
+    D. Dovecot
+
+    E. NGINX
+
+
+    # QUESTION 42
+
+
+    Which of the following Linux Distributions is derived from Red Hat Enterprise
+    Linux?
+
+
+    +   A. Raspbian
+
+    B. openSUSE
+
+    C. Debian
+
+    D. Ubuntu
+
+    E. CentOS'
+  - '[PAGE 23]
+
+
+    # QUESTION 43
+
+
+    What are the differences between a private web browser window and a regular web
+    browser window? (Choose three.)
+
+
+    +   A. Private web browser windows do not allow printing or storing websites.
+
+    B. Private web browser windows do not store cookies persistently.
+
+    C. Private web browser windows do not support logins into websites.
+
+    D. Private web browser windows do not keep records in the browser history.
+
+    E. Private web browser windows do not send regular stored cookies.
+
+
+    # QUESTION 44
+
+
+    What is the preferred source for the installation of new applications in a Linux
+    based operating system?
+
+
+    +   A. The vendor''s version management system
+
+    B. A CD-ROM disk
+
+    C. The distribution''s package repository
+
+    D. The vendor''s website
+
+    E. A retail store'
+  - '[PAGE 24]
+
+
+    # # Answers
+
+
+    +   1. Correct Answer: AE
+
+
+    +   2. Correct Answer: B
+
+
+    +   3. Correct Answer: B
+
+
+    +   4. Correct Answer: D
+
+
+    +   5. Correct Answer: E
+
+
+    +   6. Correct Answer: E
+
+
+    +   7. Correct Answer: A
+
+
+    +   8. Correct Answer: BCE
+
+
+    +   9. Correct Answer: BD
+
+
+    +   10. Correct Answer: D
+
+
+    +   11. Correct Answer: D
+
+
+    +   12. Correct Answer: E'
+  - '[PAGE 25]
+
+
+    13.Correct Answer: D
+
+
+    14.Correct Answer: B
+
+
+    15.Correct Answer: B
+
+
+    16.Correct Answer: B
+
+
+    17.Correct Answer: A
+
+
+    18.Correct Answer: ABE
+
+
+    19.Correct Answer: B
+
+
+    20.Correct Answer: A
+
+
+    21.Correct Answer: A
+
+
+    22.Correct Answer: E
+
+
+    23.Correct Answer: D
+
+
+    24.Correct Answer: E
+
+
+    25.Correct Answer: D'
+  - '[PAGE 26]
+
+
+    26.Correct Answer: D
+
+
+    27.Correct Answer: AE
+
+
+    28.Correct Answer: D
+
+
+    29.Correct Answer: C
+
+
+    30.Correct Answer: CE
+
+
+    31.Correct Answer: D
+
+
+    32.Correct Answer: BC
+
+
+    33.Correct Answer: CE
+
+
+    34.Correct Answer: A
+
+
+    35.Correct Answer: B
+
+
+    36.Correct Answer: C
+
+
+    37.Correct Answer: B'
+  - '[PAGE 27]
+
+
+    38.Correct Answer: AE
+
+
+    39.Correct Answer: C
+
+
+    40. Correct Answer: C
+
+
+    41.Correct Answer: AE
+
+
+    42.Correct Answer: E
+
+
+    43.Correct Answer: BDE
+
+
+    44. Correct Answer: C'

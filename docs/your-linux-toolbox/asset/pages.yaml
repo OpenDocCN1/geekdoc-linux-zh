@@ -1,0 +1,5797 @@
+- img_proc: true
+  md: '# # YOUR LINUX TOOLBOX
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Bite Size Linux
+
+
+    By Julia Evans
+
+
+    +   - proc
+
+
+    +   - signals
+
+
+    +   - inodes
+
+
+    +   - threads
+
+
+    +   - permissions
+
+
+    +   - sockets
+
+
+    +   - copy on write
+
+
+    +   - file descriptors
+
+
+    +   - pipes'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'what''s a socket?
+
+
+    you''re in the right place! This zine has 19 comics explaining important Linux
+    concepts.
+
+
+    Julia
+
+
+    ... 5 minutes later ...
+
+
+    oh wow ! That''s not so complicated. I want to learn more now!
+
+
+    by Julia Evans
+
+    https://jvns.ca
+
+    twitter.com/bork'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Table of contents
+
+
+    +   unix permissions...4 sockets...10 virtual memory...17
+
+    unix domain sockets...11
+
+    proc...5 shared libraries...18
+
+    system calls....6 processes...12 copy on write...19
+
+    ssignals...7 threads...13 page faults...20
+
+    file descriptors.8 floating point...14 mmap...21
+
+    pipes...9 file buffering...15 man page sections...22
+
+    memory allocation...16'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# unix permissions
+
+
+    There are 3 things you can do to a file
+
+
+    ls -l file.txt shows you permissions.
+
+    Here''s how to interpret the output:
+
+
+    ```
+
+    rw- rw- ---- bork staff
+
+    bork (user) staff (group) ANYONE
+
+    can can can read & write & write read
+
+    ```
+
+
+    read write execute
+
+
+    File permissions are 12 bits
+
+
+    110 in binary is 6
+
+
+    setuid affects executables
+
+
+    ```
+
+    setuid setgid
+
+    user group all
+
+    000 110 110 100
+
+    ```
+
+
+    ```
+
+    rw- r-- r--
+
+    = 110 100 100
+
+    = 6 4 4
+
+    ```
+
+
+    ```
+
+    $ls -l /bin/ping
+
+    rws r-x r-x root root root
+
+    ```
+
+
+    +   For files:
+
+    r = can read
+
+    w = can write
+
+    x = can execute
+
+
+    this means ping always runs as root
+
+
+    +   For directories, it''s approximately:
+
+    r = can list files
+
+    w = can create files
+
+    x = can cd into & access files
+
+
+    chmod 644 file.txt means change the permissions to:
+
+
+    setgid does 3 different unrelated things for executables, directories, and regular
+    files:
+
+
+    ```
+
+    rw- r-- ---- simple!
+
+    ```
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# an amazing directory: /proc
+
+
+    Every process on Linux has a PID (process ID) like 42.
+
+
+    /proc/PID/cmdline
+
+    command arguments the process was started with
+
+
+    /proc/PID/exe
+
+    symlink to the process''s binary; magic: works even if the binary has been deleted!
+
+
+    In /proc/42, there''s a lot of VERY USEFUL information about process 42.
+
+
+    /proc/PID/environ
+
+    all of the process''s environment variables
+
+
+    /proc/PID/status
+
+    Is the program running or asleep? How much memory is it using? And much more!
+
+
+    /proc/PID/fd
+
+    Directory with every file the process has open!
+
+
+    /proc/PID/stack
+
+    The kernel''s current stack for the process. Useful if it''s stuck in a system
+    call.
+
+
+    and more...
+
+    Look at
+
+
+    Run $ls -l /proc/42/fd
+
+    to see the list of files for process 42.
+
+
+    These symlinks are also magic & you use them to recover deleted files ❤
+
+
+    /proc/PID/maps
+
+    List of process''s memory maps. Shared libraries, heap, anonymous maps, etc.
+
+
+    man proc
+
+    for more information!'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# system calls
+
+
+    The Linux kernel has code to do a lot of things
+
+
+    your program doesn''t know how to do those things
+
+
+    programs ask Linux to do work for them using system calls
+
+
+    read from a hard drive
+
+
+    make network connections
+
+
+    TCP? dude I have no idea how that works.
+
+
+    please write to this file
+
+
+    create new process
+
+
+    kill process
+
+
+    switch to running kernel code
+
+
+    NO, I do not know how the ext4 filesystem is implemented. I just want to read
+    some files!
+
+
+    done! I wrote 1097 bytes!
+
+
+    change permissions
+
+
+    keyboard drivers
+
+
+    program resumes>
+
+
+    every program uses system calls
+
+
+    and and every system call has a number (eg. chmod #90 on x86-64)
+
+
+    you can see which system calls a program is using trace
+
+
+    I use the ''open'' syscall to open files
+
+
+    So what''s actually going on when you change a file''s permissions is:
+
+
+    $ strace /tmp
+
+
+    Python program
+
+
+    run syscall #90 with these arguments
+
+
+    will show every system call ''ls'' uses! it''s really fun!
+
+
+    me too!
+
+
+    strace has high overhead so don''t run it on your production database
+
+
+    me three!
+
+
+    ok!
+
+
+    Java program
+
+
+    C program
+
+
+    Linux'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# # signals
+
+
+    If you''ve ever used `kill` you''ve used signals
+
+    (DIE!!!)
+
+    okay process
+
+
+    the Linux kernel sends processes signals in lots of situations
+
+    y child terminated
+
+    that pipe is closed
+
+    illegal instruction
+
+    the timer you set expired
+
+    segmentation fault
+
+
+    You can send signals yourself with the `kill` system call or command
+
+    SIGINT ctrl-C various
+
+    SIGTERM kill levels
+
+    SIGKILL kill-9 "die"
+
+    SIGHUP Kill -HUP
+
+    often interpreted as "reload config", e.g. by nginx
+
+
+    +   Every signal has a default action, which is one of:
+
+    - ignore
+
+    - Kill process
+
+    - Kill process AND make core dump file
+
+    - stop process
+
+    - resume process
+
+
+    Your program can set custom handlers for almost any signal
+
+    SIGTERM (terminate) okay! I''ll clean up and then exit! process
+
+    exceptions: SIGSTOP & SIGKILL can''t be ignored
+
+    got SIGKILLED
+
+
+    Signals can be hard to handle correctly since they can happen at ANY time
+
+    handing a signal
+
+    SURPRISE! another signal!'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# file descriptors
+
+
+    Unix systems use integers to track open files
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_8_0.png)
+
+
+    these integers are called file descriptors
+
+
+    lsof (list open files) will show a process''s open files
+
+
+    ```
+
+    $ lsof -p 4242 - PID we''re interested in
+
+    FD NAME
+
+    0 /dev/pts/tty1
+
+    1 /dev/pts/tty1
+
+    2 pipe:24174
+
+    3 /home/bark/awesome.txt
+
+    5 /tmp/
+
+    ```
+
+
+    FD is for file descriptor
+
+
+    +   file descriptors can refer to:
+
+    -> files on disk
+
+    -> pipes
+
+    -> sockets (network connections)
+
+    -> terminals (like xterm)
+
+    -> devices (your speaker? /dev/null!)
+
+    -> LOTS MORE (event fd, notify, poll, etc.)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_8_1.png)
+
+
+    When you read or write to a file/pipe/network connection you do that using a file
+    descriptor
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_8_2.png)
+
+
+    Let''s see how some simple Python code works under the hood:
+
+    Python:
+
+
+    ```
+
+    f = open("file.txt")
+
+    f.read lines()
+
+    ```
+
+
+    Behind the scenes:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_8_3.png)
+
+
+    (almost) every process has 3 standard FDs:
+
+
+    ```
+
+    stdin -> 0
+
+    stdout -> 1
+
+    stderr -> 2
+
+    ```
+
+
+    > “read from stdin” means read from the file descriptor 0”
+
+
+    could be a pipe or file or terminal'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# pipes
+
+
+    a pipe is a pair
+
+    of 2 magical
+
+    file descriptors
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_9_0.png)
+
+
+    When ls does
+
+    write("hi"),
+
+    wc can read it!
+
+    read("hi")
+
+    Pipes are one way.
+
+    You can''t write to .
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_9_1.png)
+
+
+    Linux creates a buffer
+
+    for each pipe.
+
+
+    buffer data waiting to read
+
+    If data gets written to the pipe
+
+    faster than it''s read, the buffer
+
+    will fill up.
+
+    When the buffer is full, writes
+
+    to will block (wait) until the
+
+    readers. This is normal & ok
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_9_2.png)
+
+
+    what if your
+
+    target process dies?
+
+
+    If wc dies, the pipe
+
+    will close and ls will be
+
+    sent SIGPIPE. By default,
+
+    SIGPIPE terminates your process.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_9_3.png)
+
+
+    named pipes
+
+    $ mkfifo my-pipe
+
+    This lets 2 unrelated
+
+    processes communicate
+
+    through a pipe !
+
+
+    ```
+
+    f=open(./my-pipe)
+
+    f.write("hi\n")
+
+    ```
+
+
+    ```
+
+    f=open(./my-pipe)
+
+    f.readline()("hi!")
+
+    ```'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# sockets
+
+
+    networking protocols are complicated
+
+
+    Unix systems have an API called the "socket API" that makes it easier to make
+    network connections
+
+
+    here''s what getting a cat picture with the socket API looks like:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_10_0.png)
+
+
+    +   - Create a socket
+
+    - fd=socket(AF_INET,SOCK_STREAM...
+
+    - Connect to an IP/port connect(fd, 12.13.14.15:80)
+
+    - Make a request write(fd, "GET /cat.png HTTP/1.1 ...")
+
+    - Read the response cat-picture=read(fd ...)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_10_1.png)
+
+
+    Every HTTP library uses sockets under the hood $ curl awesome.com Python: requests.get("yay.us")
+
+
+    # AF_INET? What''s that?
+
+
+    # 3 kinds of internet (AF_INET) sockets:
+
+
+    AF_INET means basically "internet socket": it lets you connect to other computers
+    on the internet using their IP address.
+
+
+    SOCK_STREAM = TCP curl uses this
+
+    SOCK_DGRAM = UDP dig(DNS) uses this
+
+    SOCK_RAW = just let me send IP packets. ping uses this I will implement my own
+    protocol.
+
+
+    The main alternative is AF_UNIX ("unix domain socket") for connecting to programs
+    on the same Computer.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_10_2.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# unix domain sockets
+
+
+    unix domain sockets are files.
+
+
+    ```
+
+    $ file mysock.sock socket
+
+    ```
+
+
+    the file''s permissions determine who can send data to the socket.
+
+
+    they let 2 programs on the same computer communicate.
+
+
+    Docker uses Unix domain sockets, for example!
+
+
+    ```
+
+    GET /container HTTP request
+
+    ```
+
+
+    Here you go!
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_11_0.png)
+
+
+    There are 2 kinds of unix domain sockets:
+
+
+    +   stream like TCP! Lets you send a continuous stream of bytes.
+
+
+    +   datagram like UDP! Lets you send discrete chunks of data
+
+
+    # advantage 1
+
+
+    Lets you use file permissions to restrict access to HTTP/ database services! chmod
+    600 secret.sock
+
+
+    This is why Docker uses a unix domain socket.
+
+
+    # advantage 2
+
+
+    UDP sockets aren''t always reliable (even on the same computer). unix domain datagram
+    sockets are reliable! And they won''t reorder packets!
+
+
+    ```
+
+    I can send data and I it''ll arrive
+
+    ```
+
+
+    # advantage 3
+
+
+    You can send a file descriptor over a unix domain socket. Useful when handling
+    untrusted input files!
+
+
+    ```
+
+    here''s a file I downloaded from sketchy.com
+
+    ```'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# # what''s in a process ?
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_1.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_2.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_3.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_4.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_5.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_6.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_7.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_8.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_9.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_10.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_12_11.png)'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# # threads
+
+
+    Threads let a process do many different things at the same time
+
+
+    process:
+
+    ![image](https://example.com/image1.png)
+
+    thread 1
+
+    - I''m calculating ten million digits of π! so fun!
+
+    thread 1
+
+    - I''m finding a REALLY BIG prime number!
+
+    thread 2
+
+
+    threads in the same process share memory
+
+
+    ![image](https://example.com/image2.png)
+
+    thread 1
+
+    - I''ll write some digits of π to Ox129420 in memory
+
+    - uh oh! that''s where I was putting my prime numbers.
+
+    thread 2
+
+
+    and they share code
+
+    ```
+
+    calculate-pi\find-big-prime-number
+
+    ```
+
+    but each thread has its own stack and they can be run by different CPUs at the
+    same time
+
+    ```
+
+    CPU 1 \pi thread
+
+    CPU 2 \primes thread
+
+    ```
+
+
+    sharing memory can cause problems (race conditions!)
+
+    ![image](https://example.com/image3.png)
+
+    thread 1
+
+    - I''m going to add 1 to that number!
+
+    same time
+
+    thread 2
+
+    - I''m going to add 1 to that number!
+
+
+    why use threads instead of starting a new process?
+
+    - a thread takes less time to create.
+
+    - sharing data between threads is very easy. But it''s also easier to make mistakes
+    with threads.
+
+    ![image](https://example.com/image4.png)
+
+    thread 1
+
+    - you weren''t supposed to CHANGE that data!
+
+    RESULT: 24 WRONG. Should be 25!'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# # floating point
+
+
+    a double is 64 bits
+
+    sign exponent fraction
+
+    00000000 00000000 00000000 00000000
+
+    00000000 00000000 00000000 00000000
+
+    ± E-1023 × 1.\f{frac}
+
+
+    That means there are $2^{64}$ doubles.
+
+    The biggest one is about $2^{1023}$
+
+
+    weird double arithmetic
+
+    $2^{52} + 0.2 \cdot 2^{52}$ (the next number after $2^{52}$ is $2^{52}+1)
+
+    $1 + \frac{1}{2^{54}} =$ (the next number after 1 is $1+\frac{1}{2^{52}})
+
+    $2^{2000} = \text{infinity}$ (infinity is a double)
+
+    infinity-infinity = \text{nan}$
+
+
+    doubles get farther apart as they get bigger
+
+
+    between $2^n$ and $2^{n+1}$ there are always $2^{52}$ doubles, evenly spaced.
+
+
+    that means the next double after $2^{60}$ is $2^{60+64} \cdot \frac{260}{252}$
+
+
+    Javascript only has doubles (no integers!)
+
+
+    > $2^{}53$
+
+    9007199254740992
+
+
+    > $2^{}53+1$
+
+    9007199254740992
+
+    same number! uh oh!
+
+
+    > doubles are scary and their arithmetic is weird!
+
+    ntthey''re very logical! just understand how they work and don''t use integers
+    over $2^{53}$ in Javascript ♥'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# # file buffering
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_15_0.png)
+
+
+    I printed some text but it didn''t appear on the screen. why??
+
+
+    On Linux, you write to files & terminals with the system call
+
+
+    ❤ write ❤
+
+
+    I/O libraries don''t always call write when you print.
+
+
+    ```
+
+    printf("I ❤️ cats");
+
+    ```
+
+
+    time to learn about flushing!
+
+
+    please write "I ❤️ cats" to file #1 (stdout)
+
+
+    I''ll wait for a newline before actually writing
+
+
+    This is called buffering and it helps save on syscalls.
+
+
+    # 3 kinds of buffering (defaults vary by library)
+
+
+    # flushing
+
+
+    when it''s useful to flush
+
+
+    +   - None. This is the default for stderr.
+
+    - Line buffering. (write after newline). The default for terminals.
+
+    - "full" buffering: (write in big cunks) The default for files and pipes.
+
+
+    To force your I/O library to write everything it has in its buffer right now,
+    call flush!
+
+
+    +   - when writing an interactive prompt!
+
+    - Python example: print("password: ", flush=True)
+
+    - when you''re writing to a pipe / socket'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# memory allocation
+
+
+    16
+
+
+    your program has memory
+
+
+    - 10MB binary
+
+    - 3MB stack
+
+    - 587MB heap
+
+    the heap is what your allocator manages
+
+
+    your memory allocator (malloc) is responsible for 2 things.
+
+
+    THING 1: keep track of what memory is used /free.
+
+
+    587 MB
+
+    used
+
+    free
+
+
+    THING 2: Ask the OS for more memory!
+
+
+    - used
+
+    - free
+
+    - oh no! I''m being asked for 40 MB and I don''t have it.
+
+    - Can I have 60 MB?
+
+
+    malloc - here you go! OS
+
+
+    your memory allocator''s interface
+
+    malloc (size_t size) allocate size bytes of memory & return a pointer to it.
+
+    free(void* pointer) - mark the memory as unused (and may give back to the OS).
+
+    realloc(void* pointer, size_t size) - ask for more/less memory for pointer.
+
+    malloc(size_t members, size_t size) allocate array + initialize to 0.
+
+
+    malloc tries to fill in unused space when you ask for memory
+
+
+    can I have 512 bytes of memory?
+
+    YES!
+
+    malloc
+
+
+    malloc isn''t magic! it''s just a function!
+
+
+    you can always:
+
+    - use a different malloc library like jemalloc or tcmalloc (easy!)
+
+    - implement your own malloc (harder)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# virtual memory
+
+
+    your computer has physical memory
+
+
+    physical memory has addresses, like
+
+    O-8GB
+
+    but when your program references an address Ox 5c69a2a2, that''s not a physical
+    memory address! It''s a virtual address.
+
+
+    every program has its own virtual address space
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_17_0.png)
+
+
+    > Ox129520 → “puppies”
+
+
+    program 1
+
+
+    > Ox129520 → “bananas”
+
+
+    program 2
+
+
+    Linux keeps a mapping from virtual memory pages to physical memory pages called
+    the page table
+
+
+    when your program accesses a virtual address
+
+
+    every time you switch which process is running, Linux needs to switch the page
+    table
+
+
+    > a “page” is a 4kb or sometimes chunk of memory bigger
+
+
+    > I''m accessing Ox21000
+
+
+    > here''s the address of process 2950''s page table
+
+
+    CPU
+
+
+    > I''ll look that up the page table and then access the right physical address
+
+
+    Linux
+
+
+    | PID | virtual addr | physical addr |
+
+    |---|---|---|n| 1971 | Ox20000 | Ox192000 |
+
+    | 2310 | Ox20000 | Ox228000 |
+
+    | 2310 | Ox21000 | Ox9788000 |
+
+
+    > thanks, I''ll use that now !
+
+
+    MMU “memory management unit” hardware
+
+
+    MMU'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# shared libraries
+
+
+    Most programs on Linux use a bunch of C libraries. some popular libraries:
+
+
+    +   - openssl (for SSL!)
+
+    - sqlite (embedded db!)
+
+    - libcre (regular expressions!)
+
+    - zlib (gzip!)
+
+    - libstdc++ (C++ standard library?)
+
+
+    There are 2 ways to use any library:
+
+
+    +   - Link it into your binary `code zlib sqlite` big binary with lots of things!
+
+
+    Programs like this `code zlib sqlite` are called "statically linked" and programs
+    like this
+
+
+    +   - Use separate shared libraries `code zlib sqlite` all different files are
+    called "dynamically linked"
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_18_0.png)
+
+
+    Where the dynamic linker looks
+
+
+    ```
+
+    $ ldd /usr/bin/curl libz.so.1 => /lib/x86-64... resolv.so.2 =>... libc.so.6 =>...
+    +34 more
+
+    ```
+
+
+    > I got a "library not found" error when running my binary ??
+
+
+    If you know where the library is, try setting the `LD_LIBRARY_PATH` environment
+
+
+    +   - DT_RPATH in your executable
+
+    - LD_LIBRARY_PATH
+
+    - DT_RUNPATH in executable
+
+    - /etc/ld.so.cache (run ldconfig -p to see contents)
+
+    - /lib, /usr/lib
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_18_1.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# copy on write
+
+
+    On Linux, you start new processes using the `fork()` or `clone()` system call.
+
+
+    the cloned process has EXACTLY the same memory.
+
+
+    copying all that memory every time we fork would be slow and a waste of RAM
+
+
+    calling fork creates a child process that''s a copy of the caller
+
+
+    +   - same heap
+
+    - same stack
+
+    - same memory maps
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_19_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_19_1.png)
+
+
+    if the parent has 36B of memory, the child will too...
+
+
+    so Linux lets share physical RAM and only copies the memory when one of them tries
+    to write
+
+
+    Linux does this by giving both the processes identical page tables.
+
+
+    When a process tries to write to a shared memory address:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_19_2.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_19_3.png)
+
+
+    +   ① there''s a page fault
+
+    ② Linux makes a copy of the page table & updates the page table
+
+    ③ the process continues, blissfully ignorant
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_19_4.png)
+
+
+    but it marks every page as read only.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_19_5.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# page faults
+
+
+    every Linux process has a page table
+
+
+    * page table *
+
+
+    | virtual memory address | physical memory address |
+
+    | --- | --- |
+
+    | Ox 19723000 | Ox 1422000 |
+
+    | Ox 19724000 | Ox 1423000 |
+
+    | Ox 11524000 | not in memory |
+
+    | Ox 1844000 | Ox 4a4000 read only |
+
+
+    some pages are marked as either
+
+
+    +   * read only
+
+    * not resident in memory
+
+
+    when you try to access a page that''s marked "not resident in memory", it triggers
+    a page fault!
+
+
+    what happens during a page fault?
+
+    -> the MMU sends an interrupt
+
+    -> your program stops running
+
+    -> Linux Kernel code to handle the page fault runs
+
+
+    > I''ll fix the problem and let your program keep running
+
+
+    "not resident in memory" usually means the data is on disk!
+
+
+    # how swap works
+
+
+    +   ① run out of RAM
+
+
+    +   ④ When a program tries to access the memory, there''s a page fault!
+
+
+    +   ② Linux saves some RAM data to disk
+
+
+    +   ⑤ time to move some data back to RAM!
+
+
+    +   ③ mark those pages "not resident in memory" in the page table
+
+
+    +   ⑥ if this happens alot, your program gets VERY SLOW
+
+
+    virtual memory
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_20_0.png)
+
+
+    in RAM on disk
+
+
+    Having some virtual memory that is actually on disk is how swap and mmap work.
+
+
+    > I''m always waiting for data to be moved out of RAM'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# mmap
+
+
+    21
+
+
+    What''s mmap for?
+
+
+    I want to work with a VERY LARGE FILE but it won''t fit in memory
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_21_0.png)
+
+
+    you could try mmap! (mmap = "memory map")
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_21_1.png)
+
+
+    load files lazily with mmap
+
+
+    When you mmap a file, it gets mapped into your program''s memory.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_21_2.png)
+
+
+    but nothing is ACTALLY read into RAM until you access the memory. (how it works:
+    page faults!)
+
+
+    how to mmap in Python
+
+
+    ```
+
+    import mmap
+
+    f = open("HUGE.txt", "r")
+
+    m = mmap.mmap(f.fileno(), 0)
+
+    ```
+
+
+    this won''t read the file from disk! Finishes ~instantly. this will read only
+    the last 1000 bytes.
+
+
+    sharing big files with mmap
+
+
+    we all want to read the same file! no problem mmap
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_21_3.png)
+
+
+    Even if 10 processes mmap a file, it will only read into memory once
+
+
+    dynamic linking uses mmap
+
+
+    I need to use libc.so (standard library)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_21_4.png)
+
+
+    You too eh? no problem. I always mmap, so that file is probably loaded into memory
+    already.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_21_5.png)
+
+
+    anonymous memory maps
+
+
+    - not from a file (memory set to ∅ by default)
+
+
+    - with MAP_SHARED, you can use them to share memory with a subprocess!'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# man page sections
+
+
+    man pages are split up into 8 sections
+
+
+    # man page sections
+
+
+    +   ① ② ③ ④ ⑤ ⑥ ⑦ ⑧
+
+
+    +   ① programs
+
+
+    +   ② system calls
+
+
+    $ man grep
+
+
+    $ man sendfile
+
+
+    $ man 2 read
+
+
+    $ man ls
+
+
+    $ man ptrace
+
+
+    means "get me the man page for read from section 2".
+
+
+    +   ③ C functions
+
+
+    +   ④ devices
+
+
+    $ man printf
+
+
+    $ man null
+
+
+    There''s both
+
+    → a program called "read"
+
+    → and a system call called "read",
+
+
+    $ man fop
+
+
+    for /dev/null docs
+
+
+    +   ⑤ file formats
+
+
+    +   ⑥ games
+
+
+    $ man sudoers
+
+
+    not super useful.
+
+
+    for /etc/proc
+
+    $ man proc
+
+    files in /proc /
+
+
+    $ man sl
+
+    is my favourite
+
+    from that section
+
+
+    $ man 1 read
+
+    gives you a different man page from
+
+    $ man 2 read
+
+
+    +   ⑦ miscellaneous
+
+
+    +   ⑧ sysadmin programs
+
+
+    explains concepts!
+
+    $ man 7 pipe
+
+    $ man 7 symlink
+
+
+    If you don''t specify a section, man will
+
+    look through all the sections & show
+
+    t first one it finds.
+
+
+    $ man apt
+
+    $ man chroot'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'Want to learn more?
+
+    I highly recommend
+
+    this book:-
+
+
+    Every chapter is a readable,
+
+    short (usually 10-20 pages)
+
+    explanation of a Linux system.
+
+
+    I used it as a reference
+
+    constantly when writing
+
+    this zine.
+
+
+    I ♡ it because even though
+
+    it''s huge and comprehensive
+
+    (1500 pages!), the chapters,
+
+    are short and self-contained
+
+    and it''s very easy to pick it
+
+    up and learn something.
+
+
+    # THE LINUX
+
+    PROGRAMMING
+
+    INTERFACE
+
+
+    MICHAEL KERRISK
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_23_0.png)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/7fb494784d11059c33eeec0b7adb1608_24_0.png)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# # let''s learn tcpdump by Julia Evans
+
+
+    WHAT ARE THOSE COMPUTERS SAYING TO EACH OTHER?
+
+
+    WITH TCPDUMP, YOU CAN FIND OUT!'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# # what's this?\n\nThe man page for tcpdump starts like this:\n\n# NAME\n\n\
+    tcpdump - dump traffic on a network\n\n# SYNOPSIS\n\n```\ntcpdump [-AbdDefhHIJKLLnNpOqStuUvXX#\
+    \ ] [-B buffer_size ]\n  [-C count ]\n  [-C file_size ] [-G rotate_seconds ] [-F\
+    \ file ]\n  [-i interface ] [-j tstamp_type ] [-m module ] [-M secret ]\n  [--number\
+    \ ] [-Q in|out] ]\n  [-r file ] [-V file ] [-s snaplen ] [-T type ] [-w file ]\n\
+    \  [-w count ]\n  [-E spi@ipaddr algo=secret,... ]\n  [-y datalinktype ] [-z poststrate-command\
+    \ ] [-Z user ]\n  [--time-stamp-precision=tstamp_precision ]\n  [--immediate-mode\
+    \ ] [--version ]\n  [ expression ]\n```\n\n![](img/7fb494784d11059c33eeec0b7adb1608_26_0.png)\n\
+    \n![](img/7fb494784d11059c33eeec0b7adb1608_26_1.png)"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# what is tcpdump for?
+
+
+    tcpdump captures network traffic and prints it out for you.
+
+
+    For example! Yesterday DNS lookups on my laptop were slow.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_27_0.png)
+
+
+    $ sudo tcpdump -n -i any port 53
+
+
+    DNS queries
+
+    11:12:44.48676 IP 192.168.1.170.28282 192.168.1.53: 2445+ A? ask.metafilter.com.
+    (36)
+
+    11:12:47.46891 IP 192.168.1.170.28282 192.168.1.53: 2445+ A? ask.metafilter.com.
+    (36)
+
+    11:12:50.45672 IP 192.168.1.170.28282 192.168.1.53: 2445+ A? ask.metafilter.com.
+    (36)
+
+    11:12:50.46784 IP 192.168.1.53 > 192.168.1.170.28282: 2445 2/4 CNAME metafilter.com.,
+    A
+
+    54.186.13.33 (307)
+
+
+    > > DNS response
+
+    > This means that there were 3 DNS queries (at 11:12:44, 11:12:47, 11:12:50),
+    but only the 3rd one got a response!
+
+
+    I figured my router was probably the problem, so I restarted it and my internet
+    was fast again!
+
+
+    Let''s learn how to debug problems with tcpdump!'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# questions you can answer with tcpdump\n\n+   - what DNS queries is my laptop\
+    \ sending?\n  $ tcpdump -i any port 53\n\nI have a server running on port 1337.\n\
+    Are any packets arriving at that port AT ALL?\n\n```\n$ tcpdump -i any port 1337\n\
+    ```\n\n+   - what packets are coming into that server from IP 1.2.3.4?\n\n```\n\
+    $ tcpdump -i any port 1337 and host 1.2.3.4\n```\n\n+   - show me all DNS queries\
+    \ that fail.\n  $ tcpdump 'udp[11] & Oxf==3'\n  (complicated, but it works! This\
+    \ checks for a flag in the 11th byte of the UDP packet)\n\n+   - how long are\
+    \ the TCP connections on this box lasting right now?\n  Save packets to disk with:\n\
+    \  $ tcpdump -w packets.pcap\n  and analyze packets.pcap in Wireshark"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# what tcpdump output means
+
+
+    Every line of tcpdump output represents a packet.
+
+    The parts I usually pay attention to are
+
+
+    +   * source + dest IP addresses and ports
+
+    * timestamp
+
+    * TCP flags like SYN and ACK. Good for spotting the beginning of a TCP connection
+
+    * the DNS query, for DNS queries
+
+
+    UDP packet:
+
+
+    | timestamp | source IP | port | dest IP (my router) | |
+
+    |---|---|---|---||
+
+    | 11:12:44.486716 | 192.168.1.170 | 28282 > 192.168.1.53:24457+ ask.metafilter.com.,
+    (36) | |
+
+
+    DNS query queryID (I ignore this)
+
+
+    # TCP packet:
+
+
+    TCP flags. Sis is for SYN is for ACK
+
+
+    09:16:23.402215 IP 192.168.1.170.33016 > 52.84.90.246.443: Flags (S.), seq 319184319,
+    win 29020, options [mss 1460,sackOK,ts 2414798023 ecr 0,nop,wscale 7], length
+    0
+
+
+    Ever seen a "Connection refused" error? Here''s what that looks like in tcpdump!
+    SYN
+
+
+    09:50:22.544102 IP 127.0.0.1.40822 > 127.0.0.1.1234: Flags [S]
+
+    09:50:22.544118 IP 127.0.0.1.1234 > 127.0.0.1.40822: Flags [R] RST ACK
+
+
+    We sent a SYN to open the connection, but the server replied with an RST packet.
+    That gets translated to "connection refused."'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# BPF filters!
+
+
+    tcpdump uses a small language called BPF ("berkeley packet filter") to let you
+    filter packets
+
+
+    In`sudo tcpdump port 53`, "port 53" is a BPF filter which means "only show port
+    53 packets" Here''s a quick guide to BPF filters:
+
+
+    +   - port 53
+
+    - checks if the source port OR the dest port is 53. Matches TCP port 53 and UDP
+    port 53.
+
+
+    +   - src port 80
+
+    - dst port 80
+
+    - tcp port 80
+
+    - are what they look like ʬ. so are:
+
+    - src host 1.2.3.4
+
+    - dst host 1.2.3.4
+
+
+    +   - host 192.168.3.2
+
+    - checks if the source or dest IP is 192.168.3.2.
+
+
+    +   - udp[] & Oxf ==3 byte 11
+
+    - you can do bit math on packet contents! This checks for the DNS response "NXDOMAIN"
+    (I googled to find this, and it works ʬ
+
+
+    +   - host 192.168.3.2
+
+    - and port 80
+
+
+    you can use ''and'', ''or'', or ''not''.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# # ♡ Wireshark ♡
+
+
+    I want to know more about what''s in my packets!
+
+
+    you want Wireshark!
+
+
+    Wireshark is an incredibly powerful packet analysis tool!
+
+
+    what protocols do you understand, Wireshark?
+
+
+    HTTP! DNS! TCP! ARP! IP! MSN! AIM! AOL! Ethernet! Bluetooth! A lot, okay?
+
+
+    Things Wireshark has:
+
+
+    +   * nice graphical interface!
+
+    * search through your packets easily!
+
+
+    +   * it can filter to just packets from one TCP connection!
+
+
+    If you want to analyze packets from tcpdump in Wireshark, you can either:
+
+
+    +   ① save a .pcap file & open it in Wireshark
+
+    ② pipe tcpdump output into Wireshark:
+
+
+    ```
+
+    ssh some.remote.host tcpdump -pni any -w -s0 -U port 8888 | wireshark -k -i
+
+    ```'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# my ♡ favorite ♡
+
+    command line arguments
+
+
+    I use these 3 arguments the most:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_32_0.png)
+
+
+    which network interface to capture
+
+    packets on. I often use -i any
+
+    The default interface tcpdump picks
+
+    isn''t always what you want.
+
+
+    +   Example: sudo tcpdump -i lo
+
+    shows you packets on the local
+
+    "loopback" interface.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_32_1.png)
+
+
+    Instead of printing out packets,
+
+    write them to a file! This is
+
+    VERY USEFUL for analyzing the
+
+    packets later. I use it all the time.
+
+
+    +   Example: sudo tcpdump host 8.8.8.8
+
+    -w packets.pcap
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_32_2.png)
+
+
+    When writing to a file, be careful!
+
+    You don''t want to accidentally fill up
+
+    your hard drive. -C 10000 will
+
+    only capture 10,000 packets.
+
+
+    +   Example: sudo tcpdump host 8.8.8.8
+
+    -w packets.pcap
+
+    -c 30000'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'and here are a few more good ones:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_33_0.png)
+
+
+    This prints out every packet''s contents!
+
+    For example, suppose I have a webserver
+
+    on port 7777.
+
+
+    ```
+
+    sudo tcpdump -A port 7777
+
+    ```
+
+
+    Will show me all the HTTP packets
+
+    being sent to /from the server
+
+
+    ngrep is better than tcpdump -A for
+
+    looking at HTTP request bodies, though
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_33_1.png)
+
+
+    By default, tcpdump will translate
+
+    IP addresses to hostnames. -n
+
+    forces it to just print the IP.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_33_2.png)
+
+
+    Includes the MAC address
+
+    that the packet came from.
+
+    Ethernet
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_33_3.png)
+
+
+    Filters to only packets to/from
+
+    your computer''s IP address.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# network administration tools
+
+
+    Finally, there are a lot more tools than tcpdump! We won''t explain them here,
+    but here''s a list!
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_1.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_2.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_3.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_4.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_5.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_6.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_7.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_8.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_9.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_10.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_34_11.png)'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# nmap
+
+
+    # whois
+
+
+    # lssof
+
+
+    in ur network scanning ur ports
+
+
+    look up a domain
+
+
+    "what ports are being used?"
+
+
+    # telnet
+
+
+    # ssh
+
+
+    # stunnel
+
+
+    see if a port on another server is open
+
+
+    can''t forget this one 🤙
+
+
+    a TLS proxy
+
+
+    # network manager
+
+    manager
+
+    ethogs/ab/nload
+
+    iptraf/netperf/iperf
+
+    iftop/netsniff -ng
+
+
+    GUI tool to configure wifi etc on a laptop
+
+
+    lots of different performance and benchmarking tools
+
+
+    # paping
+
+
+    # open vpn
+
+
+    # socat
+
+
+    ping using TCP
+
+
+    set up a VPN!
+
+
+    connect TCP and unix sockets
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_35_0.png)
+
+
+    > thanks so much for reading the zine!'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '![](img/7fb494784d11059c33eeec0b7adb1608_37_0.png)
+
+
+    # A small wizard tool handbook for anyone who writes (or runs!) programs on Linux
+    computers.
+
+
+    by Julia Evans'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# what's this?\n\nHi! This is me:\n\n![](img/7fb494784d11059c33eeec0b7adb1608_38_0.png)\n\
+    \nJULIA EVANS\nblog: jvns.ca\ntwitter: @børk\n\nand in this zine I want to tell\
+    \ you about:\n\n![](img/7fb494784d11059c33eeec0b7adb1608_38_1.png)\n\nThese are\
+    \ 5 ways I've changed how I think\nabout debugging:\n\n+   Remember the bug is\
+    \ happening\for a logical reason.\nIt's never magic. Really. Even when it makes\
+    \ no sense.\n\n+   I'm confident I can fix it.\nbefore: maybe this is too hard.\
+    \ now: (Well, I've fixed a lot of hard bugs before!)\n\n+   Talk to my coworkers."
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Know my debugging toolkit.
+
+
+    before: I want to know $THING BUT I don''t know how to find out. now: I KNOW!
+    I''ll use tcpdump!
+
+
+    # most importantly: I learned to like it!
+
+
+    before: oh no a bug now: I think I''m about to learn something! facial expression:
+    determination.
+
+
+    > what you''ll learn
+
+
+    I can''t teach you in 20 pages to ♡ debugging. (though I''ll try anyway!) I can
+    show you some of my debugging toolkit though!
+
+
+    These are the tools I reach for when I have a question about a program I want
+    to know the answer to. By the end of this zine, I hope to have given you a few
+    new-tools to use!'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# section 1: I/O and system calls
+
+
+    In this zine, there are 3 sections of tools that I love.
+
+
+    For each tool, I’ll tell you why it''s useful and give an example. Each one is
+    either:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_40_0.png)
+
+
+    Some of the most basic questions you might have when you log into a misbehaving
+    machine are:
+
+
+    +   - is this machine writing to or reading from disk? The network?
+
+    - are the programs reading files? Which files?
+
+
+    So, we’re starting with finding out which resources are being used and what our
+    programs are doing. Let''s go!'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'I love dstat because it''s super simple. Every second, it prints out how many
+    bytes were written to the network/disk that second.
+
+
+    Once, I had an intermittently slow database server. I opened up dstat and stared
+    at the output while monitoring database speed.
+
+
+    ```
+
+    $ dstat
+
+    ```
+
+
+    | recv | during this period, |
+
+    |---|---|
+
+    | 0 | everything is normal |
+
+    | 3k | |
+
+    | 5k | |
+
+    | 300 MB | DATABASE |
+
+    | 48 MB | GETS SLOW || |
+
+    | 0 | |
+
+    | 0 | back to normal
+
+
+    Could 300MB coming in over the network mean... a 300MB database query? YES!
+
+
+    This was an AWESOME CLUE that helped me isolate the problem query.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# strace
+
+
+    strace is my favorite program. It prints every system call your program used.
+    It''s a cool way to get an overall picture of what your program is doing, and
+    I ♡ using it to answer questions like “which files are being opened?”
+
+
+    ```
+
+    $ strace python my_program.py
+
+    ```
+
+
+    /open("/home/bork/.config_file") = 3 file descriptor read(3, "the contents of
+    the file") ... hundreds of lines... /connect(5, "172.217.0.163") send "hi!!!"
+    sendto(5, "hi!!!") 172.217.0.163
+
+
+    > strace can make your programs run 50x slower. Don''t run it on WARNING your
+    production data base!
+
+
+    I can''t do justice to strace here, but I have a whole other zine about it at:
+
+
+    # wizardzines.com'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# # opensnoop!
+
+    eBBPF!
+
+
+    When you run
+
+
+    ```
+
+    $ opensnoop -p PID
+
+    ```
+
+
+    it will print out in real time every file being opened by a program. You might
+    think...
+
+
+    strace can do this too! Just use $ strace -e open -p PID and you would be right.
+    But strace can make your program run 50x slower. opensnoop won''t slow you down.
+
+
+    # ## how to get it
+
+
+    # ## how it works
+
+
+    Requires: Ubuntu 16.04+ or ~ 4.14+ kernel version
+
+    Installation instructions at:
+
+
+    opensnoop is a script that uses a new kernel feature called eBPF. eBPF is fast!
+
+
+    github.com/iovisor/bcc
+
+
+    There''s also an opensnoop on OSX & BSD!
+
+    That one is powered by dtrace.
+
+
+    there are lots of eBPF powered tools! Check out that GitHub repo to learn more!'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# section 2: networking
+
+
+    I''ve devoted a lot of space in this zine to networking tools, and I want to explain
+    why.
+
+
+    A lot of the programs I work with communicate over HTTP.
+
+
+    ```
+
+    request response "GET /cats/42" => my program => (name: "frufru" color: "blue")
+
+    ```
+
+
+    Every programming language uses the same network protocols! So the network is
+    a nice language-independent place to answer questions like:
+
+
+    +   * was the request wrong, or was it the response?
+
+    * is my service even running?
+
+    * my program is slow. Whose fault is that?
+
+
+    Let''s go!'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# netcat
+
+
+    HTTP requests are just text, and you can use netcat to make any HTTP request you
+    want by hand. Here''s how to make a request for example.com! Try it!
+
+
+    ```
+
+    printf "GET / HTTP/1.1\r\nHost: example.com\r\n\r\n" | nc example.com 80
+
+    ```
+
+
+    You should get a response back with a bunch of HTML! You can also use netcat to
+    send huge files over a local network quickly:
+
+
+    | step 1: (on target machine) |
+
+    | $ hostname - |
+
+    | 192.168.2.132 |
+
+    | $ nc -1 9931 > bigfile |
+
+
+    | step 2: (on the source) |
+
+    | cat bigfile |
+
+    | nc 192.168.2.132 9931 |
+
+
+    this listens on the port!
+
+
+    this sends the data!
+
+
+    * you can also use ifconfig to get your IP address'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# netstat
+
+
+    Every network request gets sent to a port (like 80) on a computer. To receive
+    a request, a program (aka "server") needs to be "listening" on the port. Finding
+    out which programs are listening on which ports is really easy. It''s just:
+
+
+    # tuna, please!
+
+
+    also known as
+
+
+    ```
+
+    $ sudo netstat -tunap
+
+    ```
+
+
+    Here''s what you''ll see:
+
+
+    proto local address PID / program name
+
+    tcp 0.0.0.0:8080 2993 / python
+
+    port
+
+
+    So! I♡ netstat because it tells me which processes are using which ports.
+
+
+    On OSX, use lsof -Pni instead'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# ♡ ngrep ♡
+
+
+    ngrep is my favorite starter network spy tool! Try it right now! Run:
+
+
+    ```
+
+    sudo ngrep -d any metafilter
+
+    ```
+
+
+    Then go to http://metafilter.com in your browser. You should see matching network
+    packets in ngrep''s output! We are SPIES!😃
+
+
+    Once at work, I made a change to a client so that it sent {"some_id":...}
+
+
+    with all its requests. I wanted to make sure it was working, so I ran:
+
+
+    ```
+
+    sudo ngrep some_id
+
+    ```
+
+
+    I found out everything was okay. 😃'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# tcpdump
+
+
+    tcpdump is the most difficult networking tool we''ll discuss here, and it took
+    me a while to ♡ it. I use it to save network traffic to analyze later!
+
+
+    > see wizardines.com for a zine all about tcpdump!
+
+
+    sudo tcpdump port 8997 -w service.pccap
+
+
+    > a pcap file ("packet capture") is the standard for saving network, traffic.
+    Everything understands pccap.
+
+
+    > 8997 is actually a tiny program in the Berkeley Packet Filter (BPF) language.
+    These programs are compiled and they run really fast!
+
+
+    Some situations where I''ll use tcpdump:
+
+
+    +   * I''m sending a request to a machine and I want to know where it''s even
+    getting there. tcpdump port 80 prints every packet on port 80.
+
+
+    +   * I have some slow network connections and I want to know whether to blame
+    the client or server(also need wireshark!)
+
+
+    +   * I just want to print out packets to see them. (tcpdump -A)'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# wireshark
+
+
+    Wireshark is an amazing GUI tool for network analysis. Here''s an exercise to
+    learn it! Run this:
+
+
+    ```
+
+    $ sudo tcpdump port 80 -w http.pcap
+
+    ```
+
+
+    While that''s running, open metafilter.com in your browser. Then press Ctrl+C
+    to stop tcpdump. Now we have a pcap file to analyze!
+
+
+    ```
+
+    $ wireshark http.pcap
+
+    ```
+
+
+    Explore the Wireshark interface! Questions you can try to answer:
+
+
+    +   1. What HTTP headers did your browser send to metafilter.com?
+
+    (hint: search frame contains "GET")
+
+
+    +   2. How long did the longest request take?
+
+    (hint: click Statistics -> Conversations)
+
+
+    +   3. How many packets were sent to metafilter.com''s servers?
+
+    (hint: search ip.dst == 54.186.13.33)'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# section 3 : CPU + perf
+
+
+    Your programs spend a lot of time on the CPU! Billions of cycles. What are they
+    DOING?!
+
+
+    This section is about using perf to answer that question. perf is a Linux-only
+    tool that is extremely useful and not as well known as it should be.
+
+
+    Some things I didn''t have space for in this section but wanted to mention anyway:
+
+
+    +   - valgrind
+
+    - the Java ecosystem''s fantastic tools (jstack, Visual VM, Your kit), Which your
+    language is probably jealous of
+
+    - ftrace (for linux kernel tracing)
+
+    - LTTng (ditto)
+
+    - eBPF'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# perf perf
+
+
+    perf is not simple or elegant. It''s a weird multitool that does a few different,
+    very useful things. First, it''s a sampling profiler
+
+
+    Try running:
+
+
+    ```
+
+    $ sudo perf record python # saves a file perf.data (press Ctrl+C after a few seconds)
+
+    ```
+
+
+    You can look at the results with:
+
+
+    ```
+
+    $ sudo perf report
+
+    ```
+
+
+    Mine says it spent 5% of its time in the Py Dict_GetItem function. Cool! We learned
+    a tiny thing about the CPython interpreter.
+
+
+    Shows you C functions
+
+
+    Works everywhere ♡
+
+
+    if you use perf to profile a Python program, it''ll show you the C functions (symbols)
+    from the CPython interpreter, not the Python functions.
+
+
+    perf can be installed on pretty much any Linux machine. The exact features it
+    has will depend on your kernel version!'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# perf is for everyone
+
+
+    One day, I had a server that was using 100% of its CPU. Within about 60 seconds,
+    I knew it was doing regular expression matching in Ruby. How? perf top is like
+    top, but for functions instead of programs.
+
+
+    ```
+
+    $ sudo perf top top
+
+    ```
+
+
+    | process PID % function |
+
+    |---|---|---|---|
+
+    | ruby 1957 77 match_at |
+
+
+    perf top doesn''t always help. But it''s easy to try, and sometimes Ruby''s internal
+    regex matching function! I learn something!
+
+
+    ... especially for Java and node devs! Remember when I said perf only knows C
+    functions? It''s not quite true. node.js and the JVM (Java, Scala, Clojure) have
+    both taught perf about their functions.
+
+
+    Use the --perf-basic-prof command line option Look up perf-map-agent on GitHub
+    and follow the directions'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Flamegraphs
+
+
+    Flamegraphs are an awesome way to visualize CPU performance. Generate them with
+    Brendan Gregg''s flamegraph.pl tool:
+
+
+    ```
+
+    github.com/breandgregg/flamegraph
+
+    ```
+
+
+    Here''s what they look like:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_53_0.png)
+
+
+    They''re constructed from collections (usually thousands) of stack traces sampled
+    from a program. The one above means 80% of the stack traces started with [main
+    alligator] and 10% with [main panda].
+
+
+    You can construct them from perf recordings (see Brendan Gregg''s flamegraph GitHub
+    for how), but lots of other unrelated tools can produce them too. I ♡ them.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# spy on your CPU!
+
+
+    Your CPU has a small cache on it (the L1 cache) that it can access in ~0.5 nanoseconds!
+    200 times faster than RAM!
+
+
+    > tip! google "Latency numbers every programmer should know!
+
+
+    If you''re trying to do an operation in microseconds, CPU cache use matters!
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_54_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_54_1.png)
+
+
+    > pass -e to request a specific statistic
+
+
+    ```
+
+    $ perf stat ls
+
+    ```
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_54_2.png)
+
+
+    This runs 1s and prints a report at the end Your CPU can track all kinds of counters
+    about what it''s doing. perf stat asks it to count things (like L1 cache misses)
+    & report the results.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_54_3.png)
+
+
+    Hardware is cool. I''ve never used perf stat in earnest, but I think it''s awesome
+    that you can get so much info from your CPU!'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '> I hope you learned something new.
+
+    Thanks for reading ♡
+
+
+    Thanks to my partner kamal for reviewing and to the amazing Monica Dinculescu
+    (@notwaldorf) for the cover art.
+
+
+    To learn more, see:
+
+
+    +   * my blog: jvns.ca
+
+    * my other zines: wizardines.com
+
+    * brendangregg.com
+
+
+    But really you just need to experiment. Try these tools everywhere. See where
+    they help you track down bugs and where they don’t.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_55_0.png)
+
+
+    It takes practice, but I find these tools both fun and useful for my job! I hope
+    you will too!'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '![](img/7fb494784d11059c33eeec0b7adb1608_56_0.png)'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# # NETWORKING! ACK!
+
+
+    A COMPUTER NETWORKING, ZINE!
+
+
+    BY JULIA EVANS!
+
+
+    THERE''S SO MUCH NETWORKING STUFF TO LEARN! OMG!
+
+
+    THE INTERNET, APP, NAMESERVER, TCP, SOCKETS,
+
+
+    HEY, IT''S NOT SO BAD! LET''S LEARN THE IDEAS ONE AT A TIME!
+
+
+    NETWORKING ISN''T MAGIC, BUT I SURE FEEL LIKE A WIZARD NOW!'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# cast of characters
+
+
+    in your house
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_58_0.png)
+
+
+    computers you''ll talk to
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_58_1.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_58_2.png)
+
+
+    in the middle
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_58_3.png)'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# # What's this?!\n\nHi! I'm Julia.\n\n![](img/7fb494784d11059c33eeec0b7adb1608_59_0.png)\n\
+    \nI put a picture of a cat on the internet here:\n\n```\njvns.ca/cat.png\n```\n\
+    \nIn this zine, we'll learn everything (mostly) that needs to happen to get that\
+    \ cat picture from my server to your laptop.\n\nMy goal is to help get you from:\
+    \ \n\n> I've heard about some of these HTTP/TCP things, but I don't understand\
+    \ how they work exactly or how they all fit together.\n\n> me after I'd been working\
+    \ as a web developer for a year\n\nto...\n\n> there's a networking problem! I\
+    \ totally know where to start!\n\nme now"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# our star:
+
+    the packet
+
+
+    All data is sent over the internet in packets. A packet is a series of bits (011001001...)
+    and it''s split into section (aka "headers")."
+
+
+    Here''s what a UDP packet that says "mangotea" looks like. It''s 50 bytes (400
+    bits) in all!
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_60_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_60_1.png)
+
+
+    | destination MAC | source MAC addr | type | Ethernet frame header (14 bytes)
+    |
+
+    | 4 bytes 32 bits | | |
+
+
+    | ver | hlen | TOS | packet length | 160 bits |
+
+    | identification | flg | fragment offst | 20 bytes |
+
+    | TTL | protocol | header checksum | |
+
+    | Source IP address | | |
+
+    | Destination IP address | | |
+
+
+    IP header
+
+    This tells routers what IP to send the packet to.
+
+
+    | source port | destination port | 64 bits |
+
+    | length | UDP checksum | 8 bytes |
+
+    | m | a | n | g |
+
+    | o | t | e | a |
+
+
+    UDP header
+
+    (a TCP packet would have a TCP header instead here)
+
+    The packet''s "contents" go here. ASCII characters are 1 byte so "mangotea" =
+    8 bytes 64 bits'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# steps to get a cat picture
+
+    from jvns.ca/cat.png
+
+
+    When you download an image, there are a LOT of networking moving pieces. Here
+    are the basic steps, which we''ll explain in the next few pages.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_61_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_61_1.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_61_2.png)'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# # DNS
+
+
+    * Step (1): get the IP address for jvns.ca *
+
+
+    All networking happens by sending packets. To send a packet to a server on the
+    internet, you need an IP address like 104.28.7.94.
+
+
+    jvns.ca and google.comare domain names. DNS (the Domain Name System) is the protocol
+    we use to get the IP address for a domain name.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_62_0.png)
+
+
+    The DNS request & response are both usually UDP packets.
+
+
+    When you run $ curl jvns.ca/cat.png:
+
+
+    | curl calls the getaddrinfo function jvns.ca | getaddrinfo finds the system DNS
+    server (like 8.8.8.8) | getaddrinfo makes a DNS request to 8.8.8.8 | IP address:
+    obtained! ★ 104.28.7.94 |
+
+
+    Your system''s default DNS server is often configured in /etc/resolv.conf.
+
+
+    8.8.8.8 is Google''s DNS server, and lots of people use it. Try it if your default
+    DNS server isn''t working!'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# There are 2 Kinds of DNS servers:
+
+
+    authoritative
+
+
+    recursive
+
+    DNS
+
+    I can get you an IP address for ANY website by asking the right authoritative
+    server.
+
+
+    DNS server
+
+    wanna know where jvns.ca is? Talk to ME! (like art.ns.cloudflare.com)
+
+
+    When you query a recursive DNS server, here''s what happens:
+
+
+    I have to talk to THREE authoritative DNS servers? Okay!
+
+    recursive DNS server
+
+
+    the recursive DNS server keeps a permanent list of root servers
+
+
+    where''s jvns.ca?
+
+    where''s jvns.ca?
+
+    where''s jvns.ca?
+
+
+    ask there!
+
+    root DNS server a-root-servers.net
+
+
+    ca DNS server jc-ca-servers.ca
+
+
+    ask there!
+
+
+    jvns.ca. DNS server art.ns.cloudflare.com
+
+
+    104.28.77.94 and 104.28.6.94
+
+
+    Recursive DNS servers usually cache DNS records.
+
+    Every DNS record has a TTL ("time to live") that says how long to cache it for.
+    You often can''t force them to update their cache. You just have to wait:
+
+
+    I updated my DNS records, but when I visit the site in my browser I see the old
+    version
+
+
+    20 minutes later after the recursive DNS cache updates...
+
+
+    everything is great now'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# let''s make DNS requests
+
+
+    When you''re setting up DNS for a new domain, often this happens:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_64_0.png)
+
+
+    Here''s how you can make DNS queries from the command line to understand what''s
+    going on:
+
+
+    ```
+
+    $ dig jvns.ca
+
+    ```
+
+
+    ```
+
+    ; ANSWER SECTION
+
+    jvns.ca 268 IN A 104.28.6.94
+
+    jvns.ca 268 IN A 104.28.7.94
+
+    this record expires after 268 seconds
+
+    an A record is an IP address
+
+    ;;SERVER 127.0.1.#53
+
+    ```
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_64_1.png)
+
+
+    ```
+
+    $ dig @8.8.8.8 jvns.ca
+
+    ```
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_64_2.png)
+
+
+    ```
+
+    $ dig +trace jvns.ca
+
+    ```
+
+
+    ```
+
+    502441 IN ns h.root-servers.net
+
+    ca. 172800 IN ns c-servers.net
+
+    jvns.ca. 86400 IN ns art.ns.cloudflare.com
+
+    jvns.ca. 300 IN A 104.28.6.94
+
+    ```
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_64_3.png)
+
+
+    ```
+
+    dig+trace basically does the same thing, a recursive DNS server would do to find
+    your domain''s IP.
+
+    ```
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_64_4.png)'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# sockets
+
+
+    Step ②: Now that we have an IP address, the next step is to open a socket!
+
+    Let''s learn what that is.
+
+
+    | your program doesn''t know how to do TCP | What using sockets is like |
+
+    |---|---|
+
+    | idk what "TCP" is. I just want to get a web page | step 1: ask the OS for a
+    socket |
+
+    | code.py don''t worry! I can help! | step 2: connect the socket to an IP address
+    and port |
+
+    | program | step 3: write to the socket to send data |
+
+
+    | 4 common socket types | When you connect with a TCP socket |
+
+    |---|---|
+
+    | TCP to use TCP | OS |
+
+    | UDP to use UDP | SYN ACK |
+
+    | raw for ULTIMATE POWER. ping us to send ICMP packets. | jns server (We''ll explain
+    this SYN ACK thing soon) |
+
+
+    | When you write to a socket | this socket interface is great! |
+
+    | code.py --> writes lots of data | operating system does so much for me! |
+
+    | program splits it up into packets to send it |'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# # TCP: how to reliably get a cat
+
+
+    Step 3 in our plan is "open a TCP connection!"
+
+    Let''s learn what this "TCP" thing is 🐱
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_66_0.png)
+
+
+    how does TCP work, you ask? WELL!
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_66_1.png)'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# The TCP handshake
+
+
+    This is what a TCP header looks like:
+
+
+    the "sequence number" lets you assemble packets in the right order
+
+
+    | Source Port | Destination Port |
+
+    |---|---|
+
+    | Sequence Number |
+
+    | Acknowledgement Number |
+
+    | Data Offset | Reserved | ACK | SYN | Window |
+
+    | Checksum | Urgent Pointer |
+
+    | Options | Padding |
+
+
+    Every TCP connection starts with a "handshake". This makes sure both sides of
+    the connection can communicate with each other.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_67_0.png)
+
+
+    But what do "SYN" and "ACK" mean? Well! TCP headers have 6 bit flags (SYN, ACK,
+    RST, FIN, PSH, URG) that you can set (you can see them in the diagram). A SYN
+    packet is a packet with the SYN flag set to 1.
+
+
+    When you see "connection refused" or "connection timeout" errors, that means the
+    TCP handshake didn''t finish! Here''s what a TCP handshake looks like in tcpdump:
+
+
+    ```
+
+    $ sudo tcpdump host jvns.ca
+
+    localhost:51104 > 104.28.6.94:80 flags [S] TCP
+
+    104.28.6.94:80 > localhost:51104 flags [S.] handshake!
+
+    localhost:51104 > 104.28.6.94:80 flags [.]
+
+    jvns.ca IP address
+
+    ```
+
+
+    S is for SYN
+
+    is is for ACK'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# HTTP
+
+
+    Step 4: Finally we can request cat.png!
+
+    Every time you get a webpage or see an image online, you''re using HTTP.
+
+
+    HTTP is a pretty simple plaintext protocol. In fact, it''s so simple that you
+    can make an HTTP request by hand right now. Let''s do it!!!
+
+
+    ```
+
+    $ printf "GET / HTTP/1.1\r\nHost: example.com\r\n\r\n"
+
+    nc example.com 80
+
+    ```
+
+
+    the nc command ("netcat") sets up a TCP connection to example.com and sends the
+    HTTP request you wrote!
+
+    The response we get back looks like:
+
+
+    ```
+
+    200 OK
+
+    Content-Length: 120321
+
+    ... headers ...
+
+
+    <html>
+
+    <body>
+
+    .... more HTML
+
+    ```
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_68_0.png)
+
+
+    HTTP/2 is the next version of HTTP. Some big differences are that it''s a binary
+    protocol, you can make multiple requests at the same time, and you have to use
+    TLS.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# important HTTP headers
+
+
+    This is an HTTP request:
+
+    GET /cat.png HTTP/1.1
+
+    Host: jvns.ca
+
+    User-Agent: zine
+
+
+    The User-Agent and Host
+
+    lines are called "headers".
+
+
+    They give the webserver
+
+    extra information about
+
+    What webpage you want!
+
+
+    the Host header my favorite!
+
+
+    dude, do you even know
+
+    how many websites I
+
+    serve? You gotta be
+
+    more specific.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_69_0.png)
+
+
+    GET/
+
+    Host: jvns.ca
+
+
+    jvns.ca
+
+    Server
+
+
+    NOW we''re talking
+
+
+    Most servers serve lots of
+
+    different websites. The
+
+    Host header lets you pick
+
+    the one you want!
+
+
+    Servers also send
+
+    response headers with
+
+    extra information
+
+    about the response.
+
+
+    # More useful headers:
+
+
+    User - Agent
+
+    Lots of servers
+
+    use this to check
+
+    if you''re using an
+
+    old browser or if
+
+    you''re a bot.
+
+
+    Accept - Encoding
+
+    Want to save
+
+    bandwidth? Set
+
+    to "gzip" and
+
+    the server might
+
+    compress your
+
+    response.
+
+
+    Cookie
+
+    When you''re logged
+
+    to a website, your
+
+    browser sends data
+
+    in this header! This
+
+    is how the server
+
+    Knows you''re logged
+
+    in.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# ... and now for even MORE
+
+
+    We''ve covered the basics of how to download a cat picture now! But there''s a
+    lot more to know!
+
+    Let''s talk about a few more topics.
+
+
+    We''ll explain a little more about networking protocols:
+
+
+    +   - what a port actually is
+
+    - how a packet is put together
+
+    - security: how SSL works
+
+    - the different networking layers
+
+    - UDP and why it''s amazing
+
+
+    and how packets get sent from place to place:
+
+
+    +   - how packets get sent in a local network
+
+    - and how packets get from your house to jvns.ca
+
+    - networking notation
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_70_0.png)'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "# # networking layers\n\n> I don't always find this useful, but it's good to\
+    \ know what \"layer 4\" means.\n\nNetworking layers\nmost correspond to different\
+    \ sections of a packet.\n\nLayer 1: wires + radio waves\n\nLayer 2: Ethernet/wifi\
+    \ protocol\n\nYour network card\nunderstands it.\n\n| destination MAC | source\
+    \ MAC addr | type |\n|---|---|---|\n| | 4 bytes | |\n\n| ver | hlen | TOS | packet\
+    \ length |\n|---|---|---|---|\n| identification | flg | fragment offset |\n\n\
+    | TTL | protocol | header checksum |\n|---|---|---|\n| Source IP address | Destination\
+    \ IP address |\n\nLayer 3: IP addresses\nrouters look at this to\ndecide where\
+    \ to send\nthe packet next\n\n| source port | destination port |\n|---|---|\n\
+    | length | UDP checksum |\n\nLayer 4: TCP or UDP\nWhere you get your ports!\n\n\
+    | G | E | T |\n|---|---|---|\n| | | H |\n\nLayer 5+6: don't really exist\n(though\
+    \ they call SSL \"layer 5\")\nLayer 7: HTTP and friends\nRouters ignore this layer,\n\
+    most. DNS queries,\nemails, etc. go here.\n\n> layer 3 networking tool\n↑\nignores\
+    \ layer 4\n above\n\n> I only know about IP addresses?\ni don't even know what\
+    \ a port is\nlet alone what the packet says.\n\n> who uses\nwhich layer?\n\nnetwork\
+    \ card- layers 1+2\nhome router - layers 2+3+4\napplications - mostly layer 7\n\
+    but also layer 4 for the port\n\nThe cool thing is that the\\layers are mostly\
+    \ independent\nof each other - you can\nchange the IP address (layer\n3) and not\
+    \ worry about layers\n4+7."
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# what''s a port?
+
+
+    ports are part of the TCP and UDP protocols.
+
+    (TCP port 999 and UDP port 999 are different!)
+
+    When you send a TCP message, you want to talk to a specific kind of program.
+
+    This would be bad:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_72_0.png)
+
+
+    We want to have different kinds of programs on the same server:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_72_1.png)
+
+
+    So every TCP/UDP packet has a port number between 1 and 65535 on it:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_72_2.png)
+
+
+    | DNS | UDP port 53 |
+
+    | HTTP | TCP port 80 |
+
+    | HTTPS | TCP port 443 |
+
+    | SMTP | TCP port 25 |
+
+    | Minecraft | TCP + UDP port 25565 |'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# # UDP
+
+    datagram protocol
+
+
+    DNS sends requests using UDP. UDP is a really simple protocol. The packets look
+    like this:
+
+
+    > "unreliable data protocol" (not what it really stands for)
+
+    When you send UDP packets, they might arrive:
+
+
+    +   - out of order
+
+    - never
+
+
+    any packet can actually get last, but UDP won''t do anything to help you.
+
+
+    | source port | destination port |
+
+    | length | UDP checksum |
+
+    | packet contents ~ |
+
+
+    UDP header
+
+
+    Packet sizes are limited
+
+
+    you need to decide how to organize your data into packets manually
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_73_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_73_1.png)
+
+
+    # VPNs use UDP
+
+
+    Streaming video often uses UDP
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_73_2.png)
+
+
+    Read http://hpbn.co/webrtc for a GREAT discussion of using UDP in a real-time
+    protocol.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# # Local networking
+
+
+    aka "how to talk to a computer in the same room
+
+
+    Every computer is in a subnet. Your subnet is the list of computers that you can
+    talk to directly.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_74_0.png)
+
+
+    What does it mean to talk "directly" to another computer? Well, every computer
+    on the internet has a network card with a MAC address.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_74_1.png)
+
+
+    When you send a packet to a computer in your subnet, you put the computer''s MAC
+    address on it. To get the right MAC, your computer uses a protocol called ARP:
+    "Address Resolution Protocol".
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_74_2.png)
+
+
+    You can run arp -na to see the contents of the ARP table on your computer. It
+    should look like this:
+
+
+    ```
+
+    $ arp -na
+
+    ? (192.168.1.120) at 44:53:30:30:98 [ether] on wlp3s0
+
+    ```'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# # How packets get sent across the ocean
+
+
+    > > I have a packet f 8.7.9, but how do I get through all this INTERNET?
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_75_0.png)
+
+
+    When a packet arrives at a router:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_75_1.png)
+
+
+    Routers use a protocol called BGP to decide what router the packet should go to
+    next:
+
+
+    A packet can take a lot of different routes to get to the same destination!
+
+
+    The route it takes to get from A→B might be different from B→A.
+
+
+    # Exercise:
+
+
+    Run traceroute google.com to see what steps your packet takes to get to google.com.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# # Notation time !
+
+
+    10.0.0/8  132.5.23.0/24
+
+
+    People often describe groups of IP addresses using CIDR notation.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_76_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_76_1.png)
+
+
+    CIDR range of IPs 10.0.0/8 10.*.\* 10.0.0/8 and 192.168.0/16
+
+    10.9.0/16 10.9.\* and 172.16.0/12 are reserved
+
+    10.9.0/24 10.9.8.* for local networking.
+
+
+    In CIDR notation, a /n gives you $2^{32-n}$ IP addresses. So a /24 is $2^{8} =
+    256$ IPs.
+
+
+    It''s important to represent groups of IP addresses efficiently because routers
+    have LOTS TO DO.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_76_2.png)
+
+
+    The IP address 10.9.0.0 is in binary:
+
+    00001010 00001001 00000000
+
+
+    first 24 bits
+
+
+    10.9.0.0/24 is all the IP addresses which have the same first 24 bits as 10.9.0.0!'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# # SSL/TLS
+
+
+    (TLS: newer version of SSL)
+
+
+    When you send a packet on the internet, LOTS of people can potentially read it.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_77_0.png)
+
+
+    SSL encrypts your packets: new packet
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_77_1.png)
+
+
+    here is my secret lemon pie recipe
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_77_2.png)
+
+
+    What happens when you go to https://jvns.ca:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_77_3.png)
+
+
+    Once the client and server agree on a key for the session, they can encrypt all
+    the communication they want.
+
+
+    To see the certificate for jvns.ca, run:
+
+
+    ```
+
+    $ openssl s_client -connect jvns.ca:443 -servername jvns.ca
+
+    ```
+
+
+    TLS is really complicated. You can use a tool like SSL Labs to check the security
+    of your site.'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# wireshark
+
+
+    Wireshark is an amazing tool for packet analysis.
+
+    Here''s an exercise to learn it! Run this:
+
+
+    ```
+
+    $ sudo tcpdump port 80 -w http.pcap
+
+    ```
+
+
+    While that''s running, open metafilter.com in your browser.
+
+    Then press Ctrl+C to stop tcpdump. Now we have a pcap!
+
+    Open http.pcap with Wireshark.
+
+    Some questions you can try to answer:
+
+
+    +   - What HTTP headers did your browser sent to metafilter.com?
+
+    (hint: search frame contains "GET")
+
+
+    +   - How many packets were exchanged with metafilter.com''s server?
+
+    (hint: search ip_dst == 54.1.2.3) ping metafilter.com here
+
+
+    Wireshark makes it easy to look at:
+
+
+    +   * IP addresses and ports
+
+    * SYNS and ACKs for TCP traffic
+
+    * exactly what''s happening with DNS requests
+
+    * and so much more! It''s a great way to poke around and learn.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# # ♡ thanks ♡ for reading\n\nIf you want to know more about networking:\n\n\
+    +   - make network requests! play with\n  - `dig`\n  - `traceroute`\n  - `tcpdump`\n\
+    \  - `ifconfig`\n  - `netcat`\n  - `wireshark`\n  - `netstat`\n- [beej's guide\
+    \ to network programming] is a useful + funny guide to the socket API on Unix\
+    \ systems.\n- [beej.us/guide/bgnet]\n- [High Performance Browser Networking] is\
+    \ a ★fantastic★ and practical guide on what you need to know about networking\
+    \ to make fast websites.\n  You can read it for free at:\n  - hpbn.co\n\nThanks\
+    \ for Kamal Marhubi, Chris kanich, and Ada Munroe for reviewing this!"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '![](img/7fb494784d11059c33eeec0b7adb1608_80_0.png)'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# # Profiling & Tracing
+
+    WITH PERF
+
+    by Julia Evans
+
+
+    What is using all of my CPU?!
+
+
+    Let''s ask perf!
+
+
+    perf lets you
+
+    Profile your Programs!
+
+
+    Trace system calls with low overhead!
+
+    And more!
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_81_0.png)'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# # what's this?\n\n(only Linux!) perf on Linux is one of my favorite debugging\
+    \ tools.\nIt lets you:\n\n+   * trace system calls faster than strace\n* profile\
+    \ your C, Go, C++, node.js, Rust, and Java/JVM programs really easily\n* trace\
+    \ or count almost *any* kernel event\n  (e.g. \"perf, count how many packets every\
+    \ program sends\")\n\nI've even used it more than once to profile Ruby programs,\
+    \ so it's not just for systems wizards.\n\nThe zine explains both how to use the\
+    \ most important perf subcommands and a little bit about how perf works under\
+    \ the hood.\n\n> let me show you my favorite perf features + how I use it!\n\n\
+    JULIA EVANS\n@bork\nhttps://jvns ca"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Table of Contents
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_83_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_83_1.png)
+
+
+    +   * perf top 4-5
+
+    * perf record 6-7
+
+    * analyzing perf record data 8-9
+
+    * perf +node.js / Java 10
+
+    * kernel functions in my stack trace? ~11
+
+    * perf cheat sheet ★ 12-13
+
+    * perf stat 14-15
+
+    * perf trace 16
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_83_2.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_83_3.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_83_4.png)
+
+
+    +   * overview 17
+
+    * on kernel versions 18
+
+    * how profiling with perf works 19
+
+    * which languages perf can profile 20
+
+    * perf: under the hood 21-22
+
+    * more perf resources 23'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# perf top\n\nMy favorite place to start with perf is perf top.\n\n![](img/7fb494784d11059c33eeec0b7adb1608_84_0.png)\n\
+    \nI know how much CPU every program is using! Well I know how much CPU every function\
+    \ is using! perf top\n\nI like to run perf top on machines when a program is using\
+    \ 100% of the CPU and I don't know why.\n\n![](img/7fb494784d11059c33eeec0b7adb1608_84_1.png)\n\
+    \nAs an example, let's profile a really simple program I wrote. It has a single\
+    \ function, run_awesome_function, which is an infinite loop.\n\nHere's the code\
+    \ I ran. I called the binary use_cpu.\n\n```\nvoid run_awesome_function() {\n\
+    \  int x = 0;\n  while (1) {\n    x = x + 1;\n  }\n}\nint main() { run_awesome_function();\
+    \ };\n```\n\nWhile that's running, start perf top. It needs to run as root, like\
+    \ every perf subcommand.\n\n# $ sudo perf top"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# perf top output
+
+
+    Here''s what it looks like when I run perf top when use_cpu is running on my laptop:
+
+
+    99.78% use_cpu [.] run_awesome_function
+
+    0.02% [kernel] [k] update_vsyscall
+
+    0.02% [kernel] [k]__softirqentry_text_start
+
+
+    +   % of the CPU function is using
+
+    name of program or library
+
+    function name/symbol
+
+
+    This is telling us that 100% of the CPU time is being spent in run_awesome_function:
+
+
+    perf top can tell you about both:
+
+
+    +   * functions in userspace programs
+
+    * functions in the kernel
+
+
+    Here''s what it looks in an an example where the kernel is using a lot of CPU:
+
+
+    ```
+
+    27.70% [kernel] [k]cpuidle_reflect
+
+    11.87% [libxu.sol] [.]_init
+
+    10.24% [kernel] [k]_aesni_encl
+
+    6.75% [kernel] [k]end_bio_extent_writepage
+
+    3.94% [kernel] [k]find_get_pages_contig
+
+    ```
+
+
+    This function is doing encryption ("aes") because I''m writing to an encrypted
+    filesystem'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# perf record
+
+
+    perf top is great for getting a quick idea of what''s happening, but I often want
+    to investigate more in depth.
+
+
+    perf record collects the same information as perf top, but it lets you save the
+    data to analyze later. It saves it in a file called perf.data in your current
+    directory.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_86_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_86_1.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_86_2.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_86_3.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_86_4.png)
+
+
+    There are 3 main ways to choose what process(es) to profile with perf record:
+
+
+    +   - perf record COMMAND: start COMMAND and profile it until it exits
+
+    - perf record PID: profile PID until you press ctrl+c
+
+    - perf record -a: profile every process until you press ctrl+c
+
+
+    There''s a 4th hybrid thing you can do: if you specify both a PID (or -a) and
+    a command, it''ll profile the PID until the command exits. Like this:
+
+
+    ```
+
+    PID COMMAND
+
+    perf record -p 8325 sleep 5
+
+    ```
+
+
+    This useful trick lets you profile PID 8325 for 5 seconds!'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# collect tracing data with perf record
+
+
+    So far we''ve collected profiling data with perf like "what function is running?".
+    When perf collects profiling data, it samples — it checks what function is running
+    100 times/second or something.
+
+
+    But perf can also record lots of different kinds of events. And when it records
+    events, it doesn''t sample — if you ask it to record system calls, it''ll attempt
+    to record every single system call.
+
+
+    Here are a few kinds of events:
+
+
+    +   - system calls
+
+    - sending network packets
+
+    - reading from a block device (disk)
+
+    - context switches/page faults
+
+    - and you can make any kernel function into an event (that''s called "kprobes")
+
+
+    > list every event with perf list
+
+
+    For example, let''s say you have a program outbound network connections, but you
+    don''t know which program. perf can help!
+
+
+    This perf incantation records every time a program connects to a web server (the
+    connect system call), and it also records the stack trace that led up to the syscall.
+
+
+    ```
+
+    perf record -e syscalls:sys_enter_connect -ag stack trace
+
+    ```
+
+
+    Being able to take a syscall/page fault/disk write and trace it back to the exact
+    code that caused it is pretty magical.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# analyzing perfrecord data
+
+
+    There are 3 ways to analyze a perf.data file generated by perf record:
+
+
+    perf report displays a quick interactive report showing you which functions are
+    used the most
+
+
+    ```
+
+    self command shared object symbol
+
+    0.01% use_cpu [kernel.kallsyms] update_wall_time
+
+    99.74% use_cpu use_cpu [.] run_awesome_function
+
+    ~100% of the time is spent in this function
+
+    ```
+
+
+    perf annotate will tell you which assembly instructions your program is spending
+    most of its time executing (be careful, can be off by one instruction)
+
+
+    Disassembly of function :text:
+
+
+    ```
+
+    00000000000404d6 <run_awesome_function>:
+
+    run_awesome_function():
+
+    push %rbp
+
+    mov %rsp,%rbp
+
+    mov $0x0,-4(%rbp) this add instruction is where all the
+
+    99.68 b: addl $0x1,-4(%rbp) time''s being spent
+
+    0.32 jmp b
+
+    ```
+
+
+    perf script prints out all the samples collected as text you can run scripts on
+    the output to do analysis. Like the flamegraph script on the next page! ->
+
+
+    ```
+
+    use_cpu instruction
+
+    stack 13650 12337 096592:657702 cycles:ppp:
+
+    trace 4e1 run_awesome_function (use_cpu)
+
+    4f5 main (use_cpu) symbol
+
+    20830 __lib_start_main (libc-2.23.so)
+
+    8fe258d4c544155 [unknown] ([unknown])
+
+    ```'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# flameigraphs
+
+
+    Flameigraphs are an awesome way to visualize profiling data, profiling data. They
+    were invented and popularized by Brendan Gregg.
+
+
+    Here''s what they look like:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_89_0.png)
+
+
+    They''re constructed from lots (usually thousands) of stack traces sampled from
+    a program. This one above means that 20% of the stack traces started with panda
+    and 28% started with teeth.
+
+
+    To generate flamegraphs, get
+
+
+    ```
+
+    github.com/brendandregg/flamegraph
+
+    ```
+
+
+    and put it in your PATH. Once you have that, here''s how to generate a flamegraph:
+
+
+    ```
+
+    sudo perf script | stackcollapse-perf.pl | flamegraph.pl > graph.svg
+
+    ```
+
+
+    open this in your browser!
+
+
+    (this is the same perf script from the previous page)'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "# perf + node.js = Java\n\nNormally with interpreted languages like node.js,\
+    \ perf will tell you which interpreter function is running but not Javascript\
+    \ function is running. But:\n\nThis works because both node and Java have a JIT\
+    \ compiler.\n\n```\nfunction awesome() {\n  // do a thing\n}\n```\n\nJIT compiled\
+    \ instructions\n\n| Ox affeaffe |\n| :--- |\n| Ox affebafe |\n\nnode.js communicates\
+    \ with perf by writing a file called /tmp/perf-$PID.map\n\nHow to set that up:\n\
+    \n+   1 get perf-map-agent from github\n2 find PID of process\n3 create-java-perf-map.sh\
+    \ $PID\n\nnode --perf-basic-profil program.js"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "# # Why are there kernel functions in my stack trace?\n\nSometimes you'll get\
+    \ a stack trace from perf, and it'll mix functions from your program (like __getd64)\
+    \ and functions from the kernel (like btrfs_real_readdr). This is normal!\n\n\
+    Example:\n\n```\n27968 79997.204322: 707897 cycles:pp:\n\ffff0c34aec7 read_extent_buffer\
+    \ ([kernel.kallsyms])\n\ffff0c32ae4f btrfs_real_readdr ([kernel.kallsyms])\n\f\
+    fff8129eb8 iterate_dir ([kernel.kallsyms])\n\ffff8122a39 sys_getdents ([kernel.kallsyms])\n\
+    \ffff8185fc8 entry_SYSCALL_64_fastpath ([kernel.kallsyms])\nc88eb__getdents64\
+    \ (/lib/x86_64-linux-gnu/libc-2.23.so)\n```\n\nIt usually means your program did\
+    \ a system call or there was a page fault, and it's telling you exactly which\
+    \ kernel functions were called as a result of that syscall.\n\nFor example, because\
+    \ I'm using the btrfs filesystem, in this case the gets calls btrsf_real_readdr\
+    \ function. Neat!\n\n> Oh, the kernel isn't magic. it kinda makes sense!"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# # ★ perf cheat sheet
+
+
+    important command line arguments:
+
+    ❤ what data to get❤
+
+    ❤ what program(s) to look at❤
+
+    -F: pick sample frequency -a: entire system
+
+    -g: record stack traces -p: specify a PID
+
+    -e: choose events COMMAND: run this
+
+
+    # ## perf top: get updates live! ★
+
+
+    +   - Sample CPUs at 49 Hertz, show top symbols:
+
+    perf top -f 49
+
+
+    +   - Sample CPUs, show process names and segments:
+
+    perf top -ns comm,dso
+
+
+    +   - Count system calls by process, refreshing every 1 second:
+
+    perf top -e raw_syscalls:sys_enter-*ns comm -d1
+
+
+    +   - Count sent network packets by process, rolling output:
+
+    stdbf -oL -e net:net_dev_xmit -ns comm | strings
+
+
+    # ## perf stat: count events! CPU counters! ★
+
+
+    +   - CPU counter statistics for COMMAND:
+
+    perf stat COMMAND
+
+
+    +   - *Detailed* CPU counter statistics for COMMAND:
+
+    perf stat -ddd command
+
+
+    +   - Count system calls for PID, until Ctrl-C:
+
+    perf stat -e ''syscalls:sys_enter-*'' -p PID
+
+
+    +   - Count block device I/O events for the entire system, for 10 seconds:
+
+    perf stat -e ''block:*'' -a sleep 10
+
+
+    # ## Reporting ★
+
+
+    +   - Show perf.data in an ncurses browser:
+
+    perf report
+
+
+    +   - Show perf.data as a text report:
+
+    perf report --stdio
+
+
+    +   - List all events from perf.data:
+
+    perf script
+
+
+    +   - Annotate assembly instructions from perf.data
+
+    with percentages
+
+    perf annotate --stdio'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "sourced from breandingregg.com/perf.html, which has many more great examples\n\
+    \n# # perf trace: trace system calls & other events\n\n+   - Trace syscalls system\
+    \ wide\n perf trace\n- Trace syscalls for PID\n perf trace -p PID\n\n# # perf\
+    \ record: record profiling data\n\n+   - Sample CPU functions for COMMAND at 99\
+    \ Hertz;\n perf record -f 99 COMMAND\n records into perf.data file\n- Sample CPU\
+    \ functions for PID, until Ctrl-C:\n perf record -p PID\n\n+   - Sample CPU functions\
+    \ for PID, for 10 seconds:\n perf record -p PID sleep 10\n\n+   - Sample CPU traces\
+    \ for PID, for 10 seconds:\n perf record -p PID -g -- sleep 10\n\n+   - Sample\
+    \ CPU traces for PID, using DWARF to unwind stack:\n perf record -p PID --call-graph\
+    \ dwarf\n\n# # perf record: record tracing data\n\n+   - Trace new processes,\
+    \ until Ctrl-C:\n perf record -e sched:sched_process_exec -a\n records into perf.data\
+    \ file\n\n+   - Trace all context switches, until Ctrl-C:\n perf record -e context-switches\
+    \ -a\n\n+   - Trace all context switches with stack traces, for 10 seconds:\n\
+    \ perf record -e context-switches -ag -- sleep 10\n\n+   - Trace all page faults\
+    \ with stack traces, until Ctrl-C:\n perf record -e page-faults -ag\n\n# # adding\
+    \ new trace events\n\n+   - Add a tracepoint for kernel function tcp_send_msg():\n\
+    \ perf probe 'tcp_send_msg'\n\n+   - Trace previously created probe:\n perf record\
+    \ -e probe:tcp_send_msg -a\n\n+   - Add a tracepoint for myfunc() and include\
+    \ the retval as a string:\n perf probe 'myfunc$return+$(retval):string'\n\n+ \
+    \  - Trace previous probe when size > 0:\n perf record -e probe:tcp_send_msg --filter\
+    \ 'size > 0' -a\n\n+   - Add a tracepoint for os_sys_open() with the filename\
+    \ as a string:\n perf probe 'do_sys_open filename:string'"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# perf stat: CPU counters
+
+
+    If you''re writing high-performance programs, there are a lot of CPU/hardware-level
+    events you might be interested in counting:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_94_0.png)
+
+
+    You might wonder:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_94_1.png)
+
+
+    Basically, Linux can ask your CPU to start recording various statistics:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_94_2.png)
+
+
+    As an example, here''s part of the output of perf stat -ddd 1 is for detailed
+
+
+    ```
+
+    $ perf stat -ddd 1 ls -R /
+
+    Performance counter stats for ''ls -R /'':
+
+    3849.615096 task-lock (msec) * 0.535 CPUs utilized
+
+    26,120 context-switches * 0.007 M/sec
+
+    7,942 page-faults * 0.089 K/sec
+
+    10 8,583,744,395 cycles * 2.230 GHz
+
+    10,337,612,995 instructions * 1.20 insns per cycle
+
+    1,987,339,660 branches * 516.244 M/sec
+
+    happen 20,738,887 branch-misses * 1.04% of all branches
+
+    fast 2,883,947,626 dTLB-misses * 749.152 M/sec
+
+    branch prediction stats
+
+    7.19255725 seconds time elapsed
+
+    ```'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# perf stat : count any event
+
+
+    You can actually count lots of different events with perf stat — the same events
+    you can record with perf record!
+
+
+    Here are a couple of examples of using perf stat ls -R (which lists files recursively,
+    so it makes lots of system calls):
+
+
+    +   ① count context switches between the kernel and userspace!
+
+
+    +   ② count system calls
+
+
+    ```
+
+    $ sudo perf stat -e ''syscalls:sys_enter-*'' ls -R / /dev/null
+
+    count system call
+
+    8,028 syscalls:sys_enter_newstat
+
+    15,167 syscalls:sys_enter_write
+
+    254,755 syscalls:sys_enter_close
+
+    254,777 syscalls:sys_enter_open
+
+    509,496 syscalls:sys_enter_newstat
+
+    509,598 syscalls:sys_enter_getdents
+
+    ```
+
+
+    perf stat does introduce some overhead. Counting "every" system call for find
+    make the program run up to 6 times slower in my brief experiments.
+
+
+    I think as long as you only count a few different events (like just the syscalls:sys_enter_open
+    event) it should be fine. I don''t 100% understand why there''s so much here though.'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# perf trace
+
+
+    strace is an awesome Linux debugging tool that traces system calls. It has one
+    problem though:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_96_0.png)
+
+
+    perf trace traces system calls, but with way less overhead. It''s safe to run
+    in production, unlike strace.
+
+
+    There are 2 disadvantages (as of Linux 4.4):
+
+
+    +   - sometimes it drops system calls (this is sort of an advantage since it limits
+    overhead)
+
+
+    +   - it won''t show you the strings that are being read/written.
+
+
+    Here''s a comparison of both strace and perf trace output, on the same program:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_96_1.png)
+
+
+    ```
+
+    brk(brk: 0x2397000) write(fd: 2, buf: 0x28) read(buf: 0x7fd77b0a8, 1) ioctl(cmd:
+    TCGETS, arg:) ioctl(cmd: TCSETSW, arg:)
+
+    brk(brk: 0x2397000) write(2, "bork@kiwi-", 13) read(0, "#4", 1) ioctl(0, TCGETS,
+    arg: 0x7fd77b0a) ioctl(0, SNDCTL_TMR_STOP OR TCSETSW)
+
+    ```
+
+
+    These have the same system call, but only strace actually shows you what string
+    was written. Recently I used perf trace, and it told me Docker calling stat on
+    200,000 files, which was a VERY USEFULUE that helped me figure out that Docker
+    gets container sizes by looking at every file. I used perf trace because I didn''t
+    want to deal with strace''s overhead!'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# how perf works: overview
+
+
+    Now that we know how to use perf, let''s see how it works!
+
+    The perf system is split into 2 parts:
+
+
+    +   - a program in userspace called perf
+
+    - a system in the Linux kernel
+
+
+    When you run perf record, perf stat, or perf top to get information about a program,
+    here''s what happens:
+
+
+    +   - perf asks the kernel to collect information.
+
+    - the kernel gets samples/traces/CPU counters from the programs perf asks about.
+
+    - perf displays the data back to you in a (hopefully) useful way.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_97_0.png)
+
+
+    So here''s the big picture:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_97_1.png)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# on kernel versions\n\nperf works really closely with the Linux Kernel. This\
+    \ means a couple of things:\n\n+   - You need to install a version of perf that\
+    \ exactly matches your Kernel version.\n On Ubuntu, you can do that with:\nsudo\
+    \ apt-get install linux-tools-$(uname -r)\n\n+   - perf's features (and sometimes\
+    \ command-line options) change between kernel versions.\n\nThe first version of\
+    \ perf was in Linux 2.6.\n\nThis also means that there's a perf documentation\
+    \ folder in the Linux git repository! You can see it on github:\n\n```\ngithub.com/torvalds/linux/tree/master/tools/perf/Documentation\n\
+    ```\n\nSome of the cool things in there:\nperf.data file format spec\nhow to use\
+    \ perf's built-in Python interpreter (?)\nwrite scripts\nall the man pages for\
+    \ each perf subcommand\n\n![](img/7fb494784d11059c33eeec0b7adb1608_98_0.png)"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# how profiling with perf works
+
+
+    The Linux Kernel has a built-in sampling profiler.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_99_0.png)
+
+
+    How does Linux Know which functions your program is running though? Well, the
+    Linux Kernel is in charge of scheduling.
+
+
+    That means that at all times it has a list of every process and the address of
+    the CPU instruction that process is currently running. That address is called
+    the instruction pointer.
+
+
+    Here''s what the information the Linux Kernel has looks like:
+
+
+    | command | PID | thread ID | instruction pointer |
+
+    |---|---|---||
+
+    | python | 2379 | 2379 | 0x00759d2d |
+
+    | bash | 1229 | 1229 | 0x00123456 |
+
+    | use_cpu | 4991 | 4991 | 0xabababab |
+
+    | use_cpu | 4991 | 4992 | 0xababdddd |
+
+
+    Sometimes perf can''t figure out how to turn an instruction pointer address into
+    a function name. Here''s an example of what that looks like:
+
+
+    ```
+
+    self command shared object symbol
+
+    0.00% nodejs [.] 0x0000759d20
+
+    0.00% V8 WorkerThread [kernel.kallsyms] [k] hrtimer_active
+
+    ```'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# which programming languages can perf profile?
+
+
+    The way perf usually figures out what function your programs are running is:
+
+
+    +   - get the program''s instruction pointer address
+
+    - get a copy of the program''s stack
+
+    - unwind the stack to find the address of the current function call
+
+    - use the program''s symbol table to figure out the name of the symbol that address
+    corresponds to!
+
+
+    The important thing to understand is that perf will by default give you a symbol
+    from the program symbol table. That means perf won''t give you function names
+    for binaries where the symbols are stripped.
+
+    Here''s how perf can help you, broken down by programming language:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_100_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_100_1.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_100_2.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_100_3.png)'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# perf: under the hood
+
+
+    It''s often useful to have a basic understanding of how our tools are implemented.
+    So let''s look at the interface userspace tool (perf) uses to talk to the Linux
+    Kernel. Here''s what happens, basically:
+
+
+    +   - perf calls the perf_event_open system call
+
+    - the kernel writes events to a ring buffer in userspace
+
+    - perf reads events off that ring buffer and displays them to you somehow
+
+
+    What''s a ring buffer?
+
+
+    Basically, it''s important to use a limited amount of memory for profiling events.
+    So the kernel allocates a fixed amount of money:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_101_0.png)
+
+
+    each of these is space for 1 record and when that memory gets full because new
+    records are being written faster than perf can read them...
+
+
+    > whoops! we''re out of space, guess I can''t write more events!
+
+
+    Linux so if you see warnings from perf about events being dropped, that''s what
+    happening.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "# the perf_event_open system call\n\nThis system call is how perf asks the\
+    \ Linux Kernel to start sampling or tracing.\n\nHere's the system call's signature,\
+    \ from man perf_event_open:\n\n```\nint perf_event_open(struct perf_event_attr\
+    \ *attr,\n               pid_t pid, int cpu, int group_fd,\n               unsigned\
+    \ long flags);\n```\n\nPID& CPU to look at. Can be \"all of them\". this is where\
+    \ most of the arguments are.\n\nI don't find this page all useful for day-to-day\
+    \ perf usage. But did you know the perf CLI tool isn't the only program that uses\
+    \ the perf_event_open syscall?\n\nThe bcc project is a toolkit for writing advanced\
+    \ profiling tools using eBPF. github.com/iovisor/bcc\n\nWith bcc, you can relatively\
+    \ easily use perf_event_open to create your own profiling/tracing events! And\
+    \ then you can write code to aggregate/display them any way you want.\n\nSearch\
+    \ for BCC_PERF_OUTPUT in the bcc docs to learn more."
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# more perf resources
+
+
+    Thanks for reading! A few more useful resources:
+
+
+    Brendan Gregg''s blog -> brendangregg.com/perf.html<- is my favorite perf resource.
+    His blog & talks are also useful!
+
+
+    LWN is a great Linux publication, and they sometimes publish articles about perf!
+    Linux Weekly News LWN.net
+
+
+    perf has man pages, as you''d expect. man perf top, for example.
+
+
+    +   most importantly: experiment -> Pick a program and try to profile it! -> See
+    what your kernel is doing under different workloads! -> Try recording or counting
+    a few kinds of perf events and see what happens
+
+
+    good luck! have fun JULIA'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '![](img/7fb494784d11059c33eeec0b7adb1608_104_0.png)'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# # SO YOU WANT
+
+    TO BE A
+
+    WIZARD
+
+    by Julia Evans
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_105_0.png)
+
+
+    Here’s how I approach learning hard things and getting better at programming!'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# about this zine
+
+
+    Hi! I''m Julia.
+
+    JULIA EVANS
+
+    @bork
+
+    blog: jvs.ca
+
+
+    I don''t always feel like a wizard. I''m not the most
+
+    Experienced member on my team. Like most people I find
+
+    my work difficult sometimes, and I have a TON TO LEARN.
+
+
+    But over the past 5 years, I''ve learned a few things that
+
+    have helped me. We''ll talk about:
+
+
+    +   - how asking dumb questions is actually a superpower
+
+    - debugging tools that help you FEEL like a wizard
+
+    - how learning to write a design doc has helped me
+
+    - how to approach learning a complex system
+
+    - reading the source code to your dependencies and
+
+    why that''s useful
+
+
+    This zine definitely won''t teach you to be a wizard
+
+    by itself, but hopefully it has one or two useful
+
+    tips!
+
+
+    A lot of it is what I wish I''d known a little
+
+    erlier in my career ◡'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# TABLE OF CONTENTS
+
+
+    Here''s what we''ll cover !
+
+
+    +   - asking good questions
+
+
+    > I learned just what I needed to know!
+
+
+    +   - reading the source code
+
+
+    > This code is undocumented, but I can handle that.
+
+
+    +   - debugging
+
+
+    > tricky bug? this will be fun! I''ll fix it.
+
+
+    +   - designing
+
+
+    > big underspecified problem? let''s start !
+
+
+    +   - building expertise
+
+
+    > How do I learn something that takes years to master?
+
+
+    +   - strategies for learning
+
+
+    > wow! I learned SO MUCH at my job this year.'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# # How to be a Wizard Programmer
+
+
+    who can do anything (takes a very long time)
+
+
+    +   - ASK QUESTIONS. As long as there are people around you know things you don''t,
+    ask them how to do things. Dumb questions. Scary-to-ask questions. Your questions
+    will get less dumb fast.
+
+
+    +   - Run into a problem your coworkers don''t know how to solve either.
+
+
+    +   - DECIDE YOU WILL FIGURE OUT HOW TO SOLVE THE PROBLEM ANYWAY (this is very
+    hard but sometimes it works U)
+
+
+    The more programming I do, the more issues I run into where:
+
+    - I don''t know
+
+    - my colleagues don''t know
+
+    - Google doesn''t know
+
+    - we gotta figure it out anyway
+
+
+    When this happens, I think:
+
+
+    > Right, this is why they pay a human with a brain (me!!!) who can investigate
+    and learn.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_108_0.png)
+
+
+    This zine is about what the skill of "figure it out anyway" looks like.'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# # When to invest in understanding?
+
+
+    We work with a lot of abstractions. You don''t always need to spend time understanding
+    how they all work under the hood.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_109_0.png)
+
+
+    But a huge part of becoming a wizard is understanding how a seemingly magical
+    computer system works. When is it useful to spend time learning how a thing works?
+
+
+    +   - When you''re trying to debug a tricky problem
+
+    - Sometimes the libraries you depend on have bugs.
+
+    - Often,libraries/systems (like CSS or Linux) have complex abstractions (like
+    the box model or epoll) that take time to learn.
+
+
+    +   - When you''re trying to push the limits /optimize performance
+
+
+    For example, if you''re writing data to a file you''re always limited by the speed
+    of your disks! Thinking about hardware can be important.
+
+
+    +   - When you''re trying to innovate
+
+
+    If you''re building a new abstraction (like an async library), you gotta understand
+    how the next layer down works! (epoll, select, etc.)'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# Asking good questions
+
+
+    One of my favorite tools for learning is asking questions of all the awesome people
+    I know!
+
+    what''s a good question?
+
+    good questions:
+
+
+    +   * are easy for the person to answer
+
+    * get you the information you''re looking for
+
+    Here are some strategies for asking them:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_110_0.png)
+
+
+    so, I know when the database gets a lot of writes, the hard drive can''t keep
+    up.
+
+    that''s right! I don''t think that was our problem, though.
+
+    Look at this...
+
+
+    +   This helps because:
+
+    * I''m forced to think what I know
+
+    * I''m less likely to get answers that are too basic or too advanced
+
+
+    Guessing the answer:
+
+    * makes me think!
+
+    * helps my coworker see what kind of answer I''m looking for
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_110_1.png)'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "# choose who to ask\n\nThe person who knows the\nMOST isn't always the best\n\
+    person to ask!\n\nOften, someone who learned\nmore recently will remember\nbetter\
+    \ what it was like to\nnot understand.\n\nthe database's\ncreator\nyour coworker\
+    \ with\na bit more experience\nthan you\n\nprobably a better choice. Has a\ngood\
+    \ shot at answering your\nquestion + way more time\n\n# find a good time\n\nEspecially\
+    \ if I have LOTS\nof questions, it's good to be\nrespectful of their time\n\n\
+    > hey, can I ask you\nabout database\nperformance for\n20 minutes?\n\n> yeah!\
+    \ after lunch!\n\n> ok!\n\n# do some research\n\nSO I found out that\ngreat creating\
+    \ database\nindexes takes time,\nwhat happens if\n run a query during\nindex creation?\n\
+    \nIf I spend some time\ndoing research first, I\nask a WAY BETTER\nquestion\n\n\
+    # ask yes/no questions\n\nI asking yes/no questions\nlike this because they're\n\
+    easier to answer and it means\nI have to focus on the questionion\ncarefully.\n\
+    \n> does this database\ntake out a lock\nwhen it does writes?\n\n> yes! Here are\
+    \ the\ndocs you should read\nif you want to know\nmore!"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "# read the source code\n\nOkay, but you can't ALWAYS ask people questions!\n\
+    Sometimes:\n\n+   - there's no documentation\n- your coworkers are busy\n- they\
+    \ don't know the answer\n- or you want to know A LOT more details\than it is really\
+    \ reasonable to ask about\n\nLuckily, we have open source!!!\n\n![](img/7fb494784d11059c33eeec0b7adb1608_112_0.png)\n\
+    \nOne day, I wanted to know if I could configure a socket on Linux to not queue\
+    \ connections. I googled and got some conflicting answers. But one of the Stack\
+    \ Overflow answers linked directly to the KERNEL CODE!\n\nIt looked basically\
+    \ like: hardcoded constant!\nbacklog: max(backlog, 8)\n\nSo it's impossible to\
+    \ set the backlog to 0.\nIt'll always end up being at least 8"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# tips for reading code
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_113_0.png)
+
+
+    Here are some things I''ve found helpful when dealing with unfamiliar code:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_113_1.png)
+
+
+    When I see an error message I don''t understand, searching the source for it is
+    really easy and sometimes helps.
+
+
+    If the code I''m using is less than a few thousand lines, I like to quickly try
+    to read it all to learn the basics of how it works.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_113_2.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_113_3.png)
+
+
+    +   Get your hands dirty!
+
+    - step through with a debugger
+
+    - add tests!
+
+    - add print statements!
+
+    - introduce bugs!
+
+    - experiment!
+
+    - don''t always trust the comments'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# debugging: ♥ love your bugs ♥n(thanks to Allison Kaptur for teaching me this
+    attitude! she has a great talk called "Love Your Bugs.")
+
+
+    Debugging is a great way to learn. First, the harsh reality of bugs in your code
+    is a good way to reveal problems with your mental model.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_114_0.png)
+
+
+    ing bugs is also a good way to learn to write more reliable code!
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_114_1.png)
+
+
+    Also, you get to solve a mystery and get immediate feedback about whether you
+    were right or not.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_114_2.png)
+
+
+    Nobody writes great code without writing + fixing lots of bugs. So let''s talk
+    about debugging skills a bit!'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# how I got better at debugging
+
+
+    Remember: the bug is happening for a logical reason.
+
+
+    It''s never magic. Really. Even when it makes no sense.
+
+
+    Be confident I can fix it
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_115_0.png)
+
+
+    Talk to my coworker
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_115_1.png)
+
+
+    know my debugging toolkit
+
+
+    before:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_115_2.png)
+
+
+    most importantly: I learned to like it
+
+
+    before:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_115_3.png)'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# learning at work
+
+
+    Almost everything I spend time on day to day is something I''ve learned on the
+    job.
+
+
+    +   hmm, I need to use kubernetes at work, but I don''t understand it well. set
+    aside work time to:
+
+    - read source code
+
+    - ask questions
+
+    - watch talks
+
+    - read docs/blog posts
+
+    - do experiments
+
+
+    Debugging is one way to learn at work. Here are more ways!
+
+
+    | follow up on bugs you couldn''t figure out
+
+    ooh, someone else fixed that. Let''s see how! | Volunteer to do work that seems
+    hard
+
+    I''m sure* I''ll figure it out.
+
+    *I''m not always 100% sure, but it''s worth trying. | pay attention to others''
+    code
+
+    this PR has some great ideas! | Watch more senior people operate
+
+    "that person does AWESOME work. How do they do it?"
+
+
+    don''t: advocate for using something at work just because you want to learn it.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "# learning on my own\n\ngo to a conference\n\nimplement something\nthat seems\
+    \ hard\n\nespecially in an area\nI don't know well\n(like Linux Kernel networking)\n\
+    \ngzip! tcp! keyboard driver!\ndebugger!\n\npick a concept +\nspend 3 hours on\
+    \ it\n\ntry a new tool\n\nhmm, can I debug\nPython with gdb?\n\nb-trees! epoll!\
+    \ asyncio!\n\nread a paper\n\ndo some experiments\n\nAdrian Colyer's\n\"The Morning\
+    \ Paper\"\nhas amazing paper\nsummaries\n\nhow many\requests/sec\ncan I serve\n\
+    \ Flask?\n\nteach/blog it!\n\nA huge part of my learning process is teaching as\
+    \ I learn!\nReasons it helps:\n\n+   - revisiting basic questions\nis is important.\n\
+    \n+   - it forces me to realize\nwhen I don't actually\nunderstand something\n\
+    yet.\n\n*How does* asynchronous\nprogramming work?\n\nwait, I didn't realize\n\
+    Unix groups did that!"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# learning to design software
+
+
+    It''s surprisingly easy to end up in this situation:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_118_0.png)
+
+
+    A little bit of planning helps me make sure hard work doesn''t go to waste.
+
+
+    Here are a few things I find helpful to remember:
+
+
+    +   - you can''t predict how requirements will change let''s reprocess every record
+    every day ...2 years later... ok, doing that is way too expensive now
+
+
+    I just try my best and deal with changes when they come.
+
+
+    +   - "good enough" is often really awesome this is a bit sketchy but it should
+    work ...2 years later... wow it''s still working with... no problems
+
+
+    +   - making a proof of concept can really help. I bet we can make this 100x faster
+    show me a prototype and I''ll believe it coming right up!'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# scenes from writing design docs
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_119_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_119_1.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_119_2.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_119_3.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_119_4.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_119_5.png)'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# let''s build expertise!
+
+
+    Let''s zoom out a bit. A lot of the people I admire the most have been working
+    on getting better at what they do for years ★.
+
+
+    I''ve found it useful to pick a few things I''m really interested in (like Linux!)
+    and focus on those.
+
+
+    Things I''ve spent significant amounts of time (at least a year) working on getting
+    better at:
+
+
+    +   - Linux networking!
+
+    - debugging + profiling tools!
+
+    - machine learning!
+
+    - planning projects at work!
+
+    - technical writing/speaking!
+
+
+    There are lots of things (Go! Databases! Javascript!) that are important and I
+    know a little about but haven''t spent that much time on. That''s okay!
+
+
+    It''s super fun to see a progression like:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_120_0.png)
+
+
+    I think a) picking something to focus on and b) *actively* working on getting
+    better at it is how all the people I admire got where they are'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# it''s not too late to start learning
+
+
+    I started learning Linux in high school, in 2003. In 2013, after using it every
+    day for 10 years, I realized some thing kind of scary:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_121_0.png)
+
+
+    There were all KDS of concepts that I either didn''t understand or didn''t even
+    know existed:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_121_1.png)
+
+
+    Just today (in 2017!), I realized I don''t don''t fully understand how Linux users/groups
+    work. No big deal! I picked up my copy of "The Linux Programming Interface", read
+    Chapter 9, and now I understand.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_121_2.png)'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# ways to build expertise
+
+
+    learn fundamental concepts
+
+
+    > system call What''s that?
+
+
+    +   1 figure out which ideas are the most important
+
+    2 Learn them!
+
+
+    do experiments!
+
+
+    > what system calls is THIS program using?
+
+
+    > what''s in /proc?
+
+
+    > what happens if I run out of memory on purpose?
+
+
+    > how long does it take to read 5GB from disk?
+
+
+    read books
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_122_0.png)
+
+
+    even just reading a few chapters of a good book can help!
+
+
+    do hard projects
+
+
+    > ooh, I''d need to learn a lot more to do that project
+
+
+    > I''ll work on that!
+
+
+    When you don''t understand something, dig in
+
+
+    > that''s weird...
+
+
+    * figure it out
+
+
+    > I learned something new!
+
+
+    don''t forget: it takes a long time
+
+
+    > after 3 years, I know a lot... but there''s a lot more still!!!'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# take on hard projects
+
+
+    To wrap up, let''s talk about one last wizard skill: confidence. When there''s
+    a hard project, sometimes I think:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_123_0.png)
+
+
+    and I imagine this magical human:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_123_1.png)
+
+
+    But in programming:
+
+
+    +   - we''re changing the tech we use all the time.
+
+    - every project is different, and it''s rarely obvious how to do it.
+
+    - there aren''t many experts, and they certainly don''t have time to do everything.
+
+
+    So instead, we have me:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_123_2.png)'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# # SPYING ON YOUR PROGRAMS WITH STRACE
+
+    ## BY JULIA EVANS'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Who makes this?
+
+
+    Hi! I''m Julia! I look a little like this:
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_126_0.png)
+
+
+    About 5 years ago, I learned that there was a program called strace that let you
+    spy on what your programs were doing.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_126_1.png)
+
+
+    strace introduced me to a whole world of awesome Linux debugging tools that let
+    you spy on your network / your programs, and it really changed the way I think
+    about debugging and computers.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_126_2.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_126_3.png)'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# ♡ a tiny manifesto ♡
+
+
+    operating systems are
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_127_0.png)
+
+
+    the strace zine thinks:
+
+
+    +   ♡your computer is yours
+
+
+    +   ♡your OS is yours
+
+
+    +   ♡open licenses mean you can READ AND CHANGE THE CODE!!
+
+
+    +   ♡Linux is REALLY COOL
+
+
+    →→→→→→→→→→→→→→→→→→→→→yaaaaaay→→→→→→→→→→→→
+
+    LET’S GO LEARN
+
+    →→→→→→→→→→→→→→→→→→→→→it’s really fun→→→→→→→→'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# # what is this strace thing?
+
+
+    pronounced ess-strace is a program on Linux that lets you inspect what a program
+    is doing without:
+
+
+    > on OSX you can use dtrace/dtruss
+
+
+    +   - a debugger
+
+    - or the source code
+
+    - or even knowing the programming language at all (?!?!?? how can it be?)
+
+
+    Basically strace makes you a wizard
+
+
+    > strace! what config file does bash open when it starts? thank you!
+
+
+    .bashrc! strace
+
+
+    To understand how this works, let''s talk a little about operating systems !'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# # Why you should ♡ your operating system
+
+
+    Some things it does for you:
+
+
+    +   - understands how your hard drive works and how the file system on it organizes
+    the bytes into files so you can just read the file
+
+
+    +   - runs code everytime you press a key so that you can type
+
+
+    +   - implements networking protocols like TCP/IP so that you can get webpages
+    pictures of cats from the internet
+
+
+    +   - keeps track of all the the memory every process is using
+
+
+    +   - basically knows everything about how all your hardware works so you can
+    just write programs♡
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_129_0.png)'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '![](img/7fb494784d11059c33eeec0b7adb1608_130_0.png)
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_130_1.png)
+
+
+    System calls are the API for your operating system:
+
+
+    +   - want to open a file? use open and then read and write to it
+
+
+    +   - sending data over a network? Use connect to open a connection and send and
+    recv pictures of cats.
+
+
+    really, all of them! Every program on your computer is using system calls all
+    the time to manage memory, write files, do networking, and lots more.'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# a first cup of strace
+
+
+    You might think with all the talk of operating systems and system calls that using
+    strace is hard.
+
+
+    Getting started is easy! If you have a Linux machine, I want you to try it RIGHT
+    NOW.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_131_0.png)
+
+
+    There''s a LOT of output and it''s pretty confusing at first. I''ve annotated
+    some for you on the next page. 🤘
+
+
+    > try stracing more programs! Google the system calls! Don''t worry if you don''t
+    understand everything! I sure don''t.'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "# annotated strace\n\nWhen you run strace, you'll see thousands of lines of\
+    \ output like this:\n\n```\n$ strace ls /home/bork/blah\nexecve(\"/bin/ls\", \"\
+    ls\", \"/home/bork/blah\\ [/* 62 vars */]) = 0\nbrk(NULL) = 0xb67000\nopen(\"\
+    /etc/ld.so.cache\", O_RDONLY|O_CLOEXEC) = 3\nopen(\"/proc/filesystems\", O_RDONLY)\
+    \ = 3\n    omitted\nopen(\"/home/bork/blah\", O_RDONLY|O_NONBLOCK|O_DIRECTORY)\
+    \ = 3\nfstat(3, {st_mode=S_IFDIR|07755, st_size=168, ...}) = 0\ntdents(3, /* 3\
+    \ entries */, 32768) = 80\ntdents(3, /* 0 entries */, 32768) = 0\nclose(3) = 0\n\
+    fstat(1, {st_mode=S_IFCHR|0620, st_rdev=136, 5, ...}) = 0\nwrite(1, \"awesome_file\\\
+    n\", 13) = 13\nclose(1) = 0\nclose(2) = 0\nexit_group(0) = ?\n```\n\nStudies show\
+    \ this is not self-explanatory (me asking my friends if it makes sense and NOPE\
+    \ NOPE)\n\nlet's learn how to interpret strace output\n\n```\n11999 execve(\"\
+    /bin/ls\", \"ls\", \"/home/bork/blah\") = 0\n```\n\n+   ① The process ID (included\
+    \ when you run strace -f)\n② The name of the system call (execve starts programs)\n\
+    ③ The system call's arguments, in this case a program to start and the arguments\
+    \ to start it with\n④ The return value"
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Here''s an example of how to interpret an open system call (opening a file!)
+    in a little more depth:
+
+
+    system name file to open open with read/write permissions file descriptor open("awesome.txt",
+    O_RDWR = 3
+
+
+    The 3 here is a file descriptor number. Internally, Linux tracks open files with
+    numbers! You can see all the file descriptors for process 42 and what they point
+    to by doing:
+
+
+    ```
+
+    $ ls -1 /proc/42/fd fd is for file descriptor!
+
+    ```
+
+
+    and here''s what strace displays when a program reads from a file: file descriptor
+    what got read number of bytes read strace(3, "wow!yay!") = 9\downarrow$
+
+
+    If you don''t understand something in your strace output:
+
+
+    +   * it''s normal! There are lots of system calls and
+
+    * it''s ok if you don''t know what futex does yet
+
+    try reading the man page for the system call!
+
+    * man 2 open\downarrow$
+
+
+    +   * remember that just understanding
+
+    read + write + open + execve
+
+    can take you a long way'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# my favorite system calls
+
+
+    # open
+
+
+    Have you ever not been sure what
+
+    configuration files a program is using?
+
+    THAT NEVER NEEDS TO HAPPEN TO YOU
+
+    AGAIN 🕯️🕯️🕯️. Skip the docs and head
+
+    straight for:
+
+
+    ```
+
+    ```
+
+    strace -f -e open mplayer
+
+    ever-gonna-give-you-up.mp3
+
+    ```
+
+    ```
+
+
+    > checking what files a program is
+
+    opening is my #1 favorite
+
+    thing to do with strace ♡
+
+
+    # write
+
+
+    Programs write logs.
+
+    If you''re sure your program is writing
+
+    Very Important Information but don''t
+
+    Know what or where, strace -e write
+
+    may be for you.
+
+
+    read is super useful too!'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: 'Sometimes a program is sending network requests to another machine and I want
+    to know WHICH MACHINE.
+
+
+    ```
+
+    $ strace -e connect PROGRAM
+
+    ```
+
+
+    shows me every IP address a program connects to.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_135_0.png)
+
+
+    What''s fun? Spying on network activity is fun. If you have an HTTP service and
+    you''re debugging and totally at your wits'' end, maybe it''s time to look at
+    what''s REALLY EXACTLY being sent over the network...
+
+
+    these are your pals♡
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_135_1.png)
+
+
+    Once on my first day of work, a Ruby script that ran some ssh commands wasn''t
+    working. Oh no! But who wants to read the code to find out why? Neither of us
+    did.
+
+
+    ```
+
+    $ strace -f -e execve ./script.rb
+
+    ```
+
+
+    told us what the problem ssh command was, and we fixed it!'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# # strace command line flags I ♡
+
+
+    -e Overwhelmed by all the system calls you don''t understand? Try
+
+
+    ```
+
+    $ strace -e open
+
+    ```
+
+
+    and it''ll just show you open system calls much simpler. ❤
+
+
+    -f Does your program start subprocesses? is for follow
+
+
+    Use -f to see what those are doing too. Or just always use -f! That''s what I
+    do.
+
+
+    -P "OH NO! I STARTED THE PROGRAM 6 HOURS AGO AND NOW I WANT TO STRACE IT!"
+
+
+    > don''t worry! Just find your program''s PID (like 747) and run:
+
+
+    tip: if the process runs as root, you''ll need to be root because SECURITY
+
+
+    ```
+
+    $ strace -p 747
+
+    ```'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: 'Sometimes I''m looking at the output of recvfrom and it''s like:
+
+
+    recvfrom(6, "and then the monster...") and OH NO THE SUSPENSE.
+
+
+    strace -s 800 will show you the first 800 characters of each string. I use -s
+    all the time.
+
+
+    Let''s get real. No matter what, prints way too much output. Use:
+
+
+    ```
+
+    $ strace -o too_much_stuff.txt
+
+    and sort through it later.
+
+    ```
+
+
+    Have no idea which file the file descriptor "3" refers to? -y is a flag in newer
+    versions of strace, and it''ll show you filenames instead of just numbers! -yy
+    does the same for sockets too.
+
+
+    Putting it all together:
+
+
+    Want to spy on a ssh session:
+
+
+    ```
+
+    $ strace -f -o ssh.txt ssh juliabox.com
+
+    ```
+
+
+    Want to see what files a Dropbox sync process (with PID 230) is opening?
+
+
+    ```
+
+    $ strace -f -p 230 -e open
+
+    ```'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '![](img/7fb494784d11059c33eeec0b7adb1608_138_0.png)
+
+
+    More seriously, there''s obviously a TON more to learn about operating systems
+    and many further levels of wizardry. But I find just strace by itself to be an
+    incredibly useful tool.
+
+
+    And so fun! On a 12-hour train ride from New York to Montreal, I had no book and
+    no internet. So I just started stracing programs on my computer, and I could totally
+    figure out how the killall program works without reading the source code or ANYTHING.
+
+
+    I learned about strace 5 years ago and even though I know about lots more tools
+    though it''s often still the first thing I reach for.
+
+
+    ![](img/7fb494784d11059c33eeec0b7adb1608_138_1.png)'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '# Resources + FAQ
+
+
+    I''ve written like 7 posts about strace because I have an unhealthy obsession.
+    They''re at:
+
+
+    jvns.ca/categories/strace
+
+
+    A few questions you might have about strace:
+
+
+    Q: Is there strace on OS X?
+
+    A: No, but trydtruss/dtrace!
+
+
+    Q: Can I strace solace?
+
+    A: Yup! If you do, you''ll find out that strace uses the ptrace system call to
+    do its magic.
+
+
+    Q: Should I strace my production database?
+
+    A: NONONONONO. It will slow down your database a LOT.
+
+
+    Q: Is there a way to trace system calls that won''t slow down my programs?
+
+    A: Yes! Look into perf trace and eBPF-based tools.'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 140
