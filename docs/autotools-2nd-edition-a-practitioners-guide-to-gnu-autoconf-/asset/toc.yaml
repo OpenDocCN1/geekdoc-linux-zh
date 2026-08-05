@@ -1,0 +1,1152 @@
+- - '#'
+  - Autotools 第二版：GNU Autoconf、Automake 和 Libtool 实用指南
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于技术审核员
+- - '#'
+  - 3 理解 GNU 编码标准
+- - '#'
+  - 4 使用 AUTOCONF 配置你的项目
+- - '#'
+  - 5 趣玩 AUTOCONF：配置用户选项
+- - '#'
+  - 6 使用 AUTOMAKE 实现自动化构建
+- - '#'
+  - 7 使用 LIBTOOL 构建库
+- - '#'
+  - 8 库接口版本控制与运行时动态链接
+- - '#'
+  - 12 章 本地化
+- - '#'
+  - 15 章 FLAIM 第二部分：突破极限
+- - '#'
+  - 16 章在 Autoconf 中使用 M4 处理器
+- - '#'
+  - '17 章在 Windows 上使用 Autotools '
+- - '#'
+  - 18 优秀优秀项目的技巧与可重用解决方案
+- - '#'
+  - 索引
+- - '#'
+  - 第一版前言
+- - '#'
+  - 第二版前言
+- - '#'
+  - 前言
+- - '##'
+  - 为什么要使用 Autools？
+- - '##'
+  - 第一版致谢
+- - '##'
+  - 第二版致谢
+- - '##'
+  - 祝一切顺利
+- - '#'
+  - 引言
+- - '#'
+  - 谁应该读这本书
+- - '#'
+  - 本书结构
+- - '##'
+  - 本书使用的 Autotools 版本
+- - '##'
+  - 终端用户对 GNU AUTOTOOLS 的视角
+- - '##'
+  - 软件源码存档
+- - '#'
+  - 构建软件
+- - '#'
+  - 测试构建
+- - '##'
+  - GNU Autoconf 2.69 test suite.
+- - '##'
+  - Test results.
+- - '##'
+  - testsuite.log was created.
+- - '#'
+  - 安装构建好的软件
+- - '#'
+  - 总结
+- - '#'
+  - 2 GNU Autotools 简述
+- - '#'
+  - 谁应该使用 Autotools？
+- - '#'
+  - 什么时候不应该使用 Autotools？
+- - '#'
+  - Apple 平台和 Mac OS X
+- - '#'
+  - 语言的选择
+- - '##'
+  - 生成你的软件包构建系统
+- - '##'
+  - 配置
+- - '##'
+  - Autoconf
+- - '##'
+  - 注意
+- - '##'
+  - autoreconf
+- - '###'
+  - 图 2-1 autoreconf 工具的数据流图
+- - '###'
+  - autoheader
+- - '###'
+  - autoscan
+- - '###'
+  - autoupdate
+- - '##'
+  - ifnames
+- - '##'
+  - autom4te
+- - '##'
+  - 协作工作
+- - '##'
+  - Automake
+- - '##'
+  - Libtool
+- - '##'
+  - libtool
+- - '##'
+  - libtoolize
+- - '##'
+  - itdl，Libtool C API
+- - '##'
+  - 构建你的软件包
+- - '##'
+  - 运行 configure
+- - '##'
+  - 运行 make
+- - '##'
+  - 安装最新的 Autotools
+- - '##'
+  - 总结
+- - '##'
+  - 理解 GNU 编码标准
+- - '##'
+  - 创建新的项目目录结构
+- - '##'
+  - 名称意味着什么？
+- - '##'
+  - 项目结构
+- - '#'
+  - Makefile 基础
+- - '#'
+  - 规则 (Rules)
+- - '#'
+  - 变量 (Variables)
+- - '#'
+  - 每个命令一个独立的 Shell (A Separate Shell for Each Command)
+- - '##'
+  - 变量绑定 (Variable Binding)
+- - '##'
+  - 规则详述 (Rules in Detail)
+- - '##'
+  - 隐式规则 (Implicit Rules)
+- - '##'
+  - 伪目标 (Phony Targets)
+- - '##'
+  - 多重目标 (Multiple Targets)
+- - '##'
+  - 强制运行规则
+- - '##'
+  - 前导控制字符
+- - '##'
+  - 自动测试发行版
+- - '##'
+  - 单元测试，有人要做吗？
+- - '##'
+  - 安装产品
+- - '##'
+  - 安装选择
+- - '#'
+  - 注意
+- - '#'
+  - 卸载包
+- - '#'
+  - 测试安装和卸载
+- - '##'
+  - 文件系统层次结构标准 (FHS)
+- - '##'
+  - 支持标准目标和变量
+- - '##'
+  - 标准目标
+- - '##'
+  - 标准变量
+- - '##'
+  - 表 3-1：prefix 变量及其默认值
+- - '##'
+  - 表 3-1（续）
+- - '##'
+  - 将你的项目引入 Linux 发行版
+- - '##'
+  - 构建覆盖 vs 安装覆盖
+- - '##'
+  - 用户变量
+- - '#'
+  - 表 3-2（续）
+- - '#'
+  - include src/Makefile
+- - '#'
+  - 第 3 章
+- - '#'
+  - 配置你的包
+- - '##'
+  - Autoconf 配置脚本
+- - '##'
+  - 最简单的 configure.ac
+- - '##'
+  - 比较 M4 和 C 预处理器
+- - '##'
+  - M4 宏的本质
+- - '##'
+  - 执行 autoconf
+- - '##'
+  - 执行 configure
+- - '##'
+  - 执行 config.status
+- - '#'
+  - 添加一些真实功能
+- - '#'
+  - Makefile. Generated from Makefile.in by configure.
+- - '#'
+  - '@configure_input@'
+- - '#'
+  - 软件包特有的替换变量
+- - '#'
+  - 前缀特有的替换变量
+- - '##'
+  - 添加 VPATH 构建功能
+- - '##'
+  - VPATH 特定的替换变量
+- - '###'
+  - 列表 4-9：Makefile.in：为顶层 make 添加 VPATH 构建能力
+- - '###'
+  - 列表 4-10：src/Makefile.in：为底层 make 添加 VPATH 构建能力
+- - '##'
+  - 使用 Autoconf 配置你的项目
+- - '#'
+  - 使用 autoscan 更快启动
+- - '#'
+  - Process this file with autoconf to produce a script.
+- - '#'
+  - Checks for programs.
+- - '#'
+  - Checks for libraries.
+- - '#'
+  - Checks for header files.
+- - '#'
+  - Checks for typedefs, structures, and compiler characteristics.
+- - '#'
+  - Checks for library functions.
+- - '#'
+  - 所谓的 bootstrap.sh 脚本
+- - '##'
+  - 使用 Autoconf 配置你的项目
+- - '#'
+  - AUTOCONF 中缺的必要文件
+- - '#'
+  - 更新 Makefile.in
+- - '#'
+  - 初始化和包信息
+- - '###'
+  - AC_PREREQ
+- - '###'
+  - AC_INIT
+- - '###'
+  - 这里的检查
+- - '#'
+  - 使用 Autoconf 配置你的项目
+- - '#'
+  - 实例化宏
+- - '##'
+  - 为模板生成头文件
+- - '##'
+  - 生成模板头文件
+- - '##'
+  - 配置头文件
+- - '##'
+  - 生成头文件
+- - '##'
+  - 生成包含文件
+- - '##'
+  - 使用 Autoconf 配置你的项目
+- - '#'
+  - include <dlfcn.h>
+- - '#'
+  - Error, this code requires dlfcn.
+- - '##'
+  - 暂时回到远程构建
+- - '##'
+  - 总结
+- - '##'
+  - 5 玩 AUTOCONF 的更多乐趣：配置用户选项
+- - '##'
+  - 替换与定义
+- - '###'
+  - AC_SUBST
+- - '##'
+  - AC_DEFINE
+- - '##'
+  - 检查编译器
+- - '#'
+  - Checks for programs.
+- - '##'
+  - 检查其他变量
+- - '##'
+  - 检查其他程序
+- - '#'
+  - 注意 将变量设置作为参数传递给 configure
+- - '##'
+  - Autofunc 的常见问题
+- - '#'
+  - 检查程序。
+- - '##'
+  - 检查库和头文件
+- - '##'
+  - 是正确还是足够？
+- - '#'
+  - 工具特定变量
+- - '#'
+  - 工具相关的替换变量
+- - '##'
+  - 工具相关的替换变量
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查头文件。
+- - '##'
+  - 打印消息
+- - '#'
+  - 支持可选特性
+- - '#'
+  - 检查程序。
+- - '##'
+  - 检查头文件。
+- - '##'
+  - 检查命令行选项
+- - '#'
+  - 检查库。
+- - '##'
+  - 检查类型定义、结构体和编译器特性。
+- - '#'
+  - 检查命令行选项。
+- - '#'
+  - AC_OUTPUT 宏
+- - '##'
+  - 引用规则
+- - '##'
+  - 总结
+- - '##'
+  - 6 使用 Automake 自动生成 Makefile
+- - '##'
+  - 进入正题
+- - '##'
+  - README
+- - '##'
+  - 在 configure.ac 中启用 Automake
+- - '#'
+  - -*- Autoconf -*-
+- - '#'
+  - 使用 autoconf 处理此文件以生成 configure
+- - '##'
+  - parallel-tests
+- - '##'
+  - subdir-objects
+- - '##'
+  - version
+- - '##'
+  - NOTE
+- - '##'
+  - 一个隐藏的益处：自动依赖跟踪
+- - '##'
+  - 注意
+- - '##'
+  - Makefile.am 文件中到底包含什么？
+- - '##'
+  - 分析我们的新构建系统
+- - '##'
+  - 产品列表
+- - '##'
+  - 位置前缀
+- - '##'
+  - 安装无关的前缀
+- - '##'
+  - check
+- - '##'
+  - Primaries（主产品）
+- - '##'
+  - PROGRAMS（程序）
+- - '##'
+  - LIBRARIES/LTLIBRARIES（库）
+- - '##'
+  - LISP
+- - '##'
+  - PYTHON（Python）
+- - '##'
+  - SCRIPTS（脚本）
+- - '##'
+  - DATA（数据）
+- - '##'
+  - HEADERS（头文件）
+- - '##'
+  - MANS（手册）
+- - '##'
+  - Product Source Variables（源变量）
+- - '##'
+  - Product Option Variables（选项变量）
+- - '##'
+  - 单元测试：支持 make
+- - '##'
+  - 逐 Makefile 选项
+- - '##'
+  - 构建新库
+- - '##'
+  - $distclean
+- - '##'
+  - AC_PROG_INSTALL
+- - '##'
+  - 发布包包含什么？
+- - '##'
+  - 关于工具的说明
+- - '##'
+  - 维护模式
+- - '##'
+  - 消除噪音
+- - '##'
+  - 非递归 Automake
+- - '##'
+  - Process PREREQ to produce a script.
+- - '##'
+  - Checks for library functions.
+- - '##'
+  - 使用 Libtool
+- - '##'
+  - 抽象过程
+- - '##'
+  - 运行时链接
+- - '##'
+  - 安装 Libtool
+- - '##'
+  - 共享库
+- - '##'
+  - LT_INIT 选项
+- - '##'
+  - 自定义 Libtool
+- - '###'
+  - dlopen
+- - '###'
+  - win32-dll
+- - '###'
+  - aix-somame-both
+- - '###'
+  - disable-fast-install
+- - '###'
+  - shared and disable-shared
+- - '###'
+  - static and disable-static
+- - '###'
+  - pic-only and no-pic
+- - '##'
+  - 重新配置并构建
+- - '##'
+  - 那么 到底是什么？
+- - '##'
+  - PIC 问题
+- - '##'
+  - libcommon.la - a libtool
+- - '##'
+  - Generated by libtool (GNU libtool) 2.4.6
+- - '##'
+  - Debian-2.4.6-0
+- - '##'
+  - Please delete this file!
+- - '##'
+  - It is necessary for linking the library.
+- - '##'
+  - The name that can use dopen(3).
+- - '##'
+  - The name of the static archive.
+- - '##'
+  - Linker flags that cannot go in dependency_libs.
+- - '##'
+  - Libraries that one depends upon.
+- - '##'
+  - 总结
+- - '##'
+  - 接口版本
+- - '##'
+  - 运行时链接
+- - '##'
+  - 特定系统的版本
+- - '##'
+  - Linux 和 Solaris 库
+- - '##'
+  - IBM AIX 库
+- - '##'
+  - Microsoft DLL 版本
+- - '##'
+  - HP-UX/AT&T 库版本
+- - '##'
+  - Libtool 版本方案
+- - '##'
+  - 库版本控制
+- - '##'
+  - 当库版本不够
+- - '##'
+  - 使用 libtd
+- - '##'
+  - 基础设施
+- - '##'
+  - 添加插件
+- - '##'
+  - 采用老方法
+- - '##'
+  - 检查文件。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查 typedef、结构体和编译器特性。
+- - '##'
+  - 检查库。
+- - '##'
+  - '列表-9: config.ac 在传递给列表中的'
+- - '##'
+  - 转换为 Libtool
+- - '##'
+  - 检查文件。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查 typedef、结构体和编译器特性。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查多个模块
+- - '##'
+  - define get_salutation
+- - '##'
+  - here_LTX_salutation
+- - '##'
+  - 检查一切
+- - '##'
+  - 总结
+- - '#'
+  - Autotest
+- - '##'
+  - 概述
+- - '##'
+  - 连接 Autotest
+- - '##'
+  - Autoconf -
+- - '##'
+  - AT_SETUP 定义组
+- - '##'
+  - 使用 Autoconf 处理文件以生成脚本。
+- - '##'
+  - 检查程序。
+- - '##'
+  - '列表-3: 顶层 Makefile.am: 添加子目录'
+- - '##'
+  - '列表-3: 顶层 Makefile.am: 添加子目录'
+- - '##'
+  - '列表-4: alloc 的模板'
+- - '##'
+  - '列表-5: configure.ac: 让 async_exec'
+- - '##'
+  - 变量
+- - '##'
+  - 检查列表
+- - '##'
+  - 'config.ac '
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查命令行选项。
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - 测试结果
+- - '##'
+  - '--------------------'
+- - '##'
+  - 添加测试
+- - '##'
+  - '--------------------'
+- - '##'
+  - 'TOTAL: 1'
+- - '##'
+  - 'PASS: 1'
+- - '##'
+  - 'SKIP: 0'
+- - '##'
+  - 'XFAIL: 0'
+- - '##'
+  - 'ERROR: 0'
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - 检查程序
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 总结
+- - '##'
+  - AC_OUTPUT 宏
+- - '##'
+  - AC_OUTPUT 宏
+- - '##'
+  - 引用规则
+- - '##'
+  - 总结
+- - '#'
+  - 前缀特定的替换变量
+- - '##'
+  - VPATH 特定的替换变量
+- - '###'
+  - 列表 4-9：Makefile.in：为顶层 make 添加 VPATH 构建能力
+- - '###'
+  - 列表 4-10：src/Makefile.in：为底层 make 添加 VPATH 构建能力
+- - '##'
+  - 使用 Autoconf 配置你的项目
+- - '#'
+  - 使用 autoscan 更快启动
+- - '#'
+  - Process this file with autoconf to produce a script.
+- - '#'
+  - Checks for programs.
+- - '#'
+  - Checks for libraries.
+- - '#'
+  - Checks for header files.
+- - '#'
+  - Checks for typedefs, structures, and compiler characteristics.
+- - '#'
+  - Checks for library functions.
+- - '#'
+  - Process this file with autoconf to produce a script.
+- - '#'
+  - 所谓的 bootstrap.sh 脚本
+- - '##'
+  - 使用 Autoconf 配置你的项目
+- - '#'
+  - AUTOCONF 中缺的必要文件
+- - '#'
+  - 更新 Makefile.in
+- - '#'
+  - 初始化和包信息
+- - '###'
+  - AC_PREREQ
+- - '###'
+  - AC_INIT
+- - '###'
+  - 这里的检查
+- - '#'
+  - 使用 Autoconf 配置你的项目
+- - '#'
+  - 实例化宏
+- - '##'
+  - 为模板生成头文件
+- - '##'
+  - 生成模板头文件
+- - '##'
+  - 配置头文件
+- - '##'
+  - 生成头文件
+- - '##'
+  - 生成包含文件
+- - '##'
+  - 使用 Autoconf 配置你的项目
+- - '#'
+  - include <dlfcn.h>
+- - '#'
+  - Error, this code requires dlfcn.
+- - '##'
+  - 暂时回到远程构建
+- - '##'
+  - 总结
+- - '##'
+  - 5 玩 AUTOCONF 的更多乐趣：配置用户选项
+- - '##'
+  - 替换与定义
+- - '###'
+  - AC_SUBST
+- - '##'
+  - AC_DEFINE
+- - '##'
+  - 检查编译器
+- - '#'
+  - Checks for programs.
+- - '##'
+  - VPATH-specific substitution variables
+- - '#'
+  - Tool-specific substitution variables
+- - '##'
+  - 检查其他程序
+- - '#'
+  - Tool-specific substitution variables
+- - '#'
+  - 注意 将变量设置作为参数传递给 configure
+- - '##'
+  - Autofunc 的常见问题
+- - '#'
+  - 检查程序。
+- - '##'
+  - 检查库和头文件
+- - '##'
+  - 是正确还是足够？
+- - '#'
+  - 工具特定变量
+- - '#'
+  - include <pthread.h>
+- - '##'
+  - 工具相关的替换变量
+- - '##'
+  - 工具相关的替换变量
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查头文件。
+- - '##'
+  - 打印消息
+- - '#'
+  - 支持可选特性
+- - '#'
+  - 检查程序。
+- - '##'
+  - 检查头文件。
+- - '##'
+  - 检查命令行选项
+- - '#'
+  - 检查库。
+- - '##'
+  - 检查类型定义、结构体和编译器特性。
+- - '#'
+  - include <pthread.h>
+- - '#'
+  - 检查命令行选项。
+- - '#'
+  - include <stdint.h>
+- - '#'
+  - include <types.h>
+- - '#'
+  - include <sys/types.h>
+- - '#'
+  - include <sys/stat.h>
+- - '#'
+  - include <stdlib.h>
+- - '#'
+  - include <stddef.h>
+- - '#'
+  - include <stdlib.h>
+- - '#'
+  - if defined STDC_HEADERS && defined HAVE_MEMORY_H
+- - '#'
+  - include <memory.h>
+- - '#'
+  - include <string.h>
+- - '#'
+  - include <strings.h>
+- - '#'
+  - include <intypes.h>
+- - '#'
+  - include <stdint.h>
+- - '#'
+  - include <unistd.h>
+- - '#'
+  - AC_OUTPUT 宏
+- - '#'
+  - AC_OUTPUT 宏
+- - '##'
+  - 引用规则
+- - '##'
+  - 总结
+- - '##'
+  - 6 使用 Automake 自动生成 Makefile
+- - '##'
+  - 进入正题
+- - '##'
+  - README
+- - '##'
+  - 在 configure.ac 中启用 Automake
+- - '#'
+  - -*- Autoconf -*-
+- - '#'
+  - 使用 autoconf 处理此文件以生成 configure
+- - '##'
+  - parallel-tests
+- - '##'
+  - subdir-objects
+- - '##'
+  - version
+- - '##'
+  - NOTE
+- - '##'
+  - 一个隐藏的益处：自动依赖跟踪
+- - '##'
+  - 注意
+- - '##'
+  - Makefile.am 文件中到底包含什么？
+- - '##'
+  - 分析我们的新构建系统
+- - '##'
+  - 产品列表
+- - '##'
+  - 位置前缀
+- - '##'
+  - 安装无关的前缀
+- - '##'
+  - check
+- - '##'
+  - Primaries（主产品）
+- - '##'
+  - PROGRAMS（程序）
+- - '##'
+  - LIBRARIES/LTLIBRARIES（库）
+- - '##'
+  - LISP
+- - '##'
+  - PYTHON（Python）
+- - '##'
+  - SCRIPTS（脚本）
+- - '##'
+  - DATA（数据）
+- - '##'
+  - HEADERS（头文件）
+- - '##'
+  - MANS（手册）
+- - '##'
+  - Product Source Variables（源变量）
+- - '##'
+  - Product Option Variables（选项变量）
+- - '##'
+  - 单元测试：支持 make
+- - '##'
+  - 逐 Makefile 选项
+- - '##'
+  - 构建新库
+- - '##'
+  - $distclean
+- - '##'
+  - AC_PROG_INSTALL
+- - '##'
+  - 发布包包含什么？
+- - '##'
+  - 关于工具的说明
+- - '##'
+  - 维护模式
+- - '##'
+  - 消除噪音
+- - '##'
+  - 非递归 Automake
+- - '##'
+  - Process PREREQ to produce a script.
+- - '##'
+  - Checks for library functions.
+- - '##'
+  - 使用 Libtool
+- - '##'
+  - 抽象过程
+- - '##'
+  - 运行时链接
+- - '##'
+  - 安装 Libtool
+- - '##'
+  - 共享库
+- - '##'
+  - LT_INIT 选项
+- - '##'
+  - 自定义 Libtool
+- - '###'
+  - dlopen
+- - '###'
+  - win32-dll
+- - '###'
+  - aix-somame-both
+- - '###'
+  - disable-fast-install
+- - '###'
+  - shared and disable-shared
+- - '###'
+  - static and disable-static
+- - '###'
+  - pic-only and no-pic
+- - '##'
+  - 重新配置并构建
+- - '##'
+  - 那么 到底是什么？
+- - '##'
+  - PIC 问题
+- - '##'
+  - libcommon.la - a libtool
+- - '##'
+  - Generated by libtool (GNU libtool) 2.4.6
+- - '##'
+  - Debian-2.4.6-0
+- - '##'
+  - Please delete this file!
+- - '##'
+  - It is necessary for linking the library.
+- - '##'
+  - The name that can use dopen(3).
+- - '##'
+  - The name of the static archive.
+- - '##'
+  - Linker flags that cannot go in dependency_libs.
+- - '##'
+  - Libraries that one depends upon.
+- - '##'
+  - 总结
+- - '##'
+  - 接口版本
+- - '##'
+  - 运行时链接
+- - '##'
+  - 特定系统的版本
+- - '##'
+  - Linux 和 Solaris 库
+- - '##'
+  - IBM AIX 库
+- - '##'
+  - Microsoft DLL 版本
+- - '##'
+  - HP-UX/AT&T 库版本
+- - '##'
+  - Libtool 版本方案
+- - '##'
+  - 库版本控制
+- - '##'
+  - 当库版本不够
+- - '##'
+  - 使用 libtd
+- - '##'
+  - 基础设施
+- - '##'
+  - 添加插件
+- - '##'
+  - 采用老方法
+- - '##'
+  - 检查文件。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查 typedef、结构体和编译器特性。
+- - '##'
+  - 检查库。
+- - '##'
+  - '列表-9: config.ac 在传递给列表中的'
+- - '##'
+  - 转换为 Libtool
+- - '##'
+  - 检查文件。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查 typedef、结构体和编译器特性。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查文件。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查文件。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查文件。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查 typedef、结构体和编译器特性。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查多个模块
+- - '##'
+  - define get_salutation
+- - '##'
+  - here_LTX_salutation
+- - '##'
+  - 检查一切
+- - '##'
+  - 总结
+- - '#'
+  - 1otest
+- - '##'
+  - 概述
+- - '##'
+  - 连接 Autotest
+- - '##'
+  - Autoconf -
+- - '##'
+  - AT_SETUP 定义组
+- - '##'
+  - 使用 Autoconf 处理此文件以生成脚本。
+- - '##'
+  - 检查程序。
+- - '##'
+  - '列表-3: 顶层 Makefile.am: 添加子目录'
+- - '##'
+  - '列表-3: 顶层 Makefile.am: 添加子目录'
+- - '##'
+  - '列表-4: alloc 的模板'
+- - '##'
+  - '列表-5: configure.ac: 让 async_exec'
+- - '##'
+  - 变量
+- - '##'
+  - 检查列表
+- - '##'
+  - 'config.ac '
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查命令行选项。
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - 测试结果
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - 'TOTAL: 1'
+- - '##'
+  - 'PASS: 1'
+- - '##'
+  - 'SKIP: 0'
+- - '##'
+  - 'XFAIL: 0'
+- - '##'
+  - 'ERROR: 0'
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - '--------------------'
+- - '##'
+  - 检查程序
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 检查程序。
+- - '##'
+  - 检查库。
+- - '##'
+  - 总结
