@@ -1,0 +1,634 @@
+- md: '
+
+    # Linux, Software Radio and the Radio Amateur
+
+
+    ![](img/9ab9989930ff1da97e91eafd6a1c4caf_0_0.png)
+
+
+    How software radio technology might revitalize experimentation in Amateur Radio.
+
+
+    For a long time there has been concern about the impact of SDR and experimentation
+    in the Amateur Radio on the demographics of the community, and the possible impact
+    on the regulatory status of the Amateur Radio Service (ARS). Advances in electronics,
+    since pioneered by amateur radio backgrounds, brought technologies that are limited
+    by the hardware implementation skills of most without a professional background.
+    The title of this article is inspired by an article published 50 years ago by
+    James Kosten, where John found that widespread use of SSB led to a rapid decline
+    in HF equipment building and a more adverse impact on the ARS. The thesis of this
+    article is that a well-connected strategy using software radio technology for
+    the ARS has a positive impact on reversing the apparent decline of experimentation
+    and might even bring a new younger, and experimentally motivated group into Amateur
+    Radio.
+
+
+    # What is Software Radio?
+
+
+    A software radio is one in which one or more transceivers are performed by digital
+    control on digital hardware. Software radios use digital signal processing (DSP)
+    for filtering, modulation and demodulation of signals within the radio. DSP can
+    also do functions that are difficult or impossible for analog radios. However
+    software radios are related to the computer revolution in that the design and
+    implementation of these radios employs the technical skills that generate interest
+    in today''s younger generations.
+
+
+    The radio implements a 2-meter transceiver with DSP and makes the source code
+    available for modification by users. As personal computers use both hardware and
+    software and can be modified by adding or modifying software, software radios
+    can acquire new functionality throughout their hardware limits if new or modified.
+    No need for the old soldering iron?
+
+
+    In the new world of software radios, experimentation would involve writing software
+    transmitter or receiver functions, modifying existing software to ''tweak it,''
+    or reading about a new program, following it and trying it over the air. Believe
+    that this type of experimentation can generate new interest in ham radio and develop
+    skills that are valuable in today''s society.
+
+
+    As the DSP-10-meter transceiver has been developed by Bob Larkin, WTPUA, which
+    has been available in kit form from the Tucson Packet Radio (TAPR) organization.
+
+
+    # Present Barriers to Software Radios
+
+
+    While some innovations in ham radio technology have been showed by the ICC faction,
+    not that this is the case here FCC rules appear to enable both the use and sale
+    of software products. The previous intentions of TI show this policy in action.
+    The major barrier seems to be lack of interest in the ham radio community towards
+    making a radio that allows users to use software interfaces.
+
+
+    A check of ads for top-of-the-line transceivers will show that many have computers
+    and many of them have DSP. So what of the words ''mechanical interaction'' that
+    were used previously. Today''s interfaces can change as easily as a computer—like
+    turning the knobs. They do not allow you to easily rewrite any of the software.
+
+
+    Consider the following example: both traditional and software radios usually receive
+    filters with a variety of bands. A traditional radio would have to adjust a resonator
+    for each band. In the software radio, a mathematical algorithm is used and a set
+    of variables filter the frequency, bandwidth and shape. No ham manufacturer today
+    allows users to change these functions of any model of which I am aware, that
+    allows users of modification interface instead of hardware.
+
+
+    # ARRL''s Active Role in Software
+
+
+    In early 2002, the ARRL initiated a Software-Defined Working Group to press for
+    development of some of the things for which Mike called, and more. The group,
+    led by Bob Larkin, Leif Asbrik, SMSBSZ, Gary Baour, ACQ, Paul Rinardi, Gerald
+    Younglund, and Mike, excites. We filed our first report in the ARRL tech newsletter
+    in June 2002. You can find more on the web at http://www.arl.org/announce.html.
+
+
+    It is true that nowadays some of the things that Mike suggested might take a long
+    time to come compared to hardware. That''s not stopping experiments, and at least
+    four Working Groups made progress. Others from around the ham world have come
+    out with the software that they developed very useful, and we will wait to see
+    what happens at the end of the year.
+
+
+    Some ham transceivers have had the ability to update software by kit (Kenwood,
+    Ten-Ele); however, users have not been able to source source code to write their
+    own embedded software. Support issues exist, as I safely state that such software—usually
+    written in assembly, the native language—would be very difficult to program and
+    edit, even to the best of effort. That is what software transceivers differ.
+
+
+    Consider a radio that has a high frequency interface that could pass signals to
+    samples from an external software. Software development could then proceed where
+    platform is convenient, such as a personal computer for easy access, as illustrated
+    in some of the articles listed below.
+
+
+    Beyond that, it is possible to construct DSP software that would be easier to
+    use than any of their favorite radios, leaving all the heavy-crunching inside
+    the radio. Flexibility is the name of the game.
+
+
+    Expect some reality checks to arise from current work progress—the decline in
+    implementation and hardware.
+
+
+    ARRL ham market needs a new type of ham.
+
+
+    However, the intellectual property argument doesn''t explain how to load filter
+    contents into any present radios. Filtering is not writing a program; it is just
+    to download a filter to be used by programs. The explanation for this follows
+    shortly in the remaining chapters.
+
+
+    The second concern expressed by the manufacturers is the issue of user support.
+    Support is limited by relatively small group for user support and marketing departments.
+
+
+    I had discussions with some ham manufacturers on the use of software radios for
+    ARS. Some transceivers have kept in concept these, but others have expressed that
+    software development would require users to access manufacturers'' proprietary
+    property.
+
+
+    The manufacturers probably have legal concerns regarding intellectual property
+    in their products for specific functions; for example, downconverter, demodulator
+    and the overall architecture of the radio. One wonders if they perceive this view
+    of intellectual property in order to maintain or slightly improve after software
+    changes.
+
+
+    After repeated reading this article the whole ham community will think about reinvigorating
+    the ARS might revert trends and the go. Would you buy the package from the ham
+    groups and the ham who would provide user support to the craft of ARS?
+
+
+    The third point is that hams aren''t interested in developing and maintaining
+    the software for such radios. I am responding to this by pointing out the well-documented
+    DSP-10 meter radio. Check out on the web at www.gnu.org/gnuradio.html.
+
+
+    You have been wondering why Linux is mentioned in this article. GNU, a free software
+    project that is being sponsored by the Free Foundation, is one of the current
+    operating systems present. The radio is not a transceiver. But the principle has
+    been established for Linux-style software for defined radios.
+
+
+    Manufacturers weren''t concentrating on more traditional operating systems. Many
+    have now accepted Linux as a viable choice for the personal computer. Perhaps
+    Ars manufacturers have similar concerns, especially if consumers ignore doubtful
+    in the future. An exchange between the ham and amateur community on this topic
+    might lead to mutual benefits.
+
+
+    The authors acknowledge the kindness received while writing this article from
+    Paul Hendricks, WARI1, and Wayne Hendricks, WADBJP.
+
+
+    The notes are presented here of those and not that much necessary.
+
+
+    In the early days of the computer industry, the adoption of new hardware and software
+    was also a good move than technologically advanced radios.
+
+
+    # Near-Term Steps
+
+
+    There are several near-term steps that could usher the movement toward how use
+    radio and software changes the Ars. The one might be just to duplicate the DSP-2-meter
+    software radio. It is available in kit, but building it is also a lot of effort
+    and people of headache.
+
+
+    Although we use IFs at any frequency greater than half the bandwidth of the band
+    would have had many handlers and would now many signals to be attenuated by inadequate
+    hardware for audio and F may seem uncertain, in theory and in practice. Another
+    near-term step might be for manufacturers to include in their radios, or for clubs
+    to provide digital modes.
+
+
+    # Summary
+
+
+    In summary, DSP technology has a broad impact on the future of the Ars as hams
+    can access gives them flexibility and rapidly share software for new features.
+    However, present trends in manufactured equipment make the commercial availability
+    of hardware.
+
+
+    # Notes
+
+
+    - Notes on page 35.
+
+    - U5- October 2002 33
+
+    - 34 October 2002
+
+    - J5.
+
+    '
+  mdcn: '
+
+
+    # Linux、软件无线电与无线电爱好者
+
+
+    ![](img/9ab9989930ff1da97e91eafd6a1c4caf_0_0.png)
+
+
+    软件无线电技术如何让业余无线电实验焕发生机。长期以来，人们一直关注软件无线电（SDR）和业余无线电实验对社区人口的影响，以及对业余无线电业务（ARS）监管地位的可能影响。电子技术的进步最初由业余无线电背景的人引领，它们带来的技术受限于大多数没有专业背景的人员的硬件实现能力。本文标题的灵感源于James
+    Kosten在50年前发表的一篇文章，在文中John发现单边带（SSB）的广泛使用导致高频（HF）设备制作的快速衰减，并对ARS产生了更具负面的影响。本文的观点是：一种利用软件无线电技术为ARS建立良好的连接策略，对于扭转实验明显的衰减趋势具有积极影响，甚至可能为业余无线电带来一个更年轻、受实验驱动的新兴群体。
+
+
+    # 什么是软件无线电？
+
+
+    软件无线电是指通过数字硬件上的数字控制来实现一个或多个收发机的设备。软件无线电使用数字信号处理（DSP）对无线电内部的信号进行滤波、调制和解调。DSP还能完成模拟无线电难以或无法实现的功能。然而，软件无线电与计算机革命密切相关，因为这些无线电的设计和实现利用了引起当今年轻一代兴趣的专业技能。
+
+
+    该无线电实现了一个带有DSP的2米波收发机，并开放源代码供用户进行修改。由于个人电脑同时使用硬件和软件，并且可以通过添加或修改软件来对其修改，因此软件无线电在引入新的或修改过的软件后，可以在其硬件限制范围内获得新功能。不再需要旧的电烙铁了？
+
+
+    在软件无线电的新世界里，实验将涉及编写软件发射器或接收器函数、修改现有软件以进行“微调”，或者阅读新程序、遵循它并进行空中测试。相信这种类型的实验可以激发人们对火腿无线电的新兴趣，并培养在当今社会中非常有价值的技能。
+
+
+    DSP-10米收发机由Bob Larkin（WTPUA）开发，已由图森森数据包无线电（TAPR）组织以套件形式提供。
+
+
+    # 软件无线电面临的障碍
+
+
+    虽然ICC小组展示了火腿无线电技术的一些创新，但注意此处并非如此，FCC的规则似乎允许软件产品的使用和销售。德州仪器（TI）之前的意图显示了这一政策的执行。主要的障碍似乎是业余无线电社区对制作允许用户使用软件接口的无线电缺乏兴趣。
+
+
+    检查顶级收发机的广告会发现，许多设备都带有计算机，其中许多设备带有DSP。那么以前使用的“机械交互”一词又是怎么解释？现在的接口可以像计算机一样容易改变——比如转动旋钮。它们并不能让你轻松地重写任何软件。
+
+
+    考虑以下示例：传统无线电和软件无线电通常都带有各种波段的滤波器。传统无线电必须为每个波段调整谐振器。而在软件无线电中，则使用数学算法并通过一组变量来滤波频率、带宽和形状。据我所知，今天没有哪个火腿制造商允许用户更改任何型号的这些功能，允许用户使用修改接口而不是硬件。
+
+
+    # ARRL在软件方面的积极作用
+
+
+    2002年初，ARRL启动了一个软件定义工作组，以推动Mike所说的某些事项的发展。该工作组由Bob Larkin、Leif Asbrik（SMSBSZ）、Gary
+    Baour（ACQ）、Paul Rinardi、Gerald Younglund和Mike领导。我们于2002年6月在ARRL技术简报上提交了第一份报告。你可以在网上找到更多信息：http://www.arl.org/announce.html。
+
+
+    诚然，如今与硬件相比，Mike建议的某些事情可能需要很长时间才能实现。这并没有阻止实验，至少有四个工作组取得了进展。来自火腿世界其他地方的人也开发了他们认为非常有用的软件，我们将观察年底会发生什么。
+
+
+    一些火腿收发机已经了通过套件更新软件的能力（Kenwood, Ten-Ele）；然而，用户无法获得源代码来编写自己的嵌入软件。支持方面的问题仍然存在，因为我可以负责任地说，此类软件——通常用原生语言汇编编写——即使尽最大努力，也很难进行编程和编辑。这就是软件收发机与传统设备的不同之处。
+
+
+    考虑一种具有高频接口的无线电，它可以将信号传递到外部软件的样本。这样，软件开发就可以在方便平台上进行，例如为了方便访问而使用个人电脑，如下文列出的某些文章所示。
+
+
+    此外，可以构建出DSP软件，它比他们喜欢的任何无线电都更易使用，将所有沉重的计算留到无线电内部。灵活性是游戏规则。
+
+
+    预计当前的工作进展将引发一些现实检查——即实现和硬件方面的衰减。
+
+
+    ARRL火腿市场需要一种新型火腿。
+
+
+    然而，知识产权论点并没有解释如何将滤波器内容加载到任何现有无线电中。滤波不是写程序；只是下载一个滤波器供程序使用。对此的解释将在剩余章节中随后说明。
+
+
+    制造商表达的第二个担忧是用户支持问题。由于用户支持和营销部门规模较小，支持是有限的。
+
+
+    我与一些火腿制造商讨论过将软件无线电用于ARS。一些收发机在概念上保留了这些功能，但另一些人表示，软件开发将需要用户访问制造商的专有财产。
+
+
+    制造商可能对产品中特定功能的知识产权存在法律担忧；例如下变频器、解调器和无线电的整体架构。人们好奇，他们是否认为这种知识产权观点是为了在软件更改后维持或略微提高性能。
+
+
+    在反复阅读本文后，整个火腿社区都会思考重振ARS可能扭转趋势并取得成功。你会从火腿小组购买软件包，并由为ARS手工艺提供用户支持的火腿提供吗？
+
+
+    第三点是，火腿对开发和维护此类无线电的软件不感兴趣。我通过指出记录良好的DSP10米无线电来回应这一点。访问 www.gnu.org/gnuradio.html
+    获取更多信息。
+
+
+    你可能好奇为什么文中提到了Linux。GNU是由自由基金会赞助的自由软件项目，是目前的操作系统之一。无线电本身不是收发机。但对于软件定义无线电的原则已经建立。
+
+
+    制造商过去没有关注更传统的操作系统。许多人现在接受Linux作为个人电脑的可行选择。也许制造商也有类似的担忧，特别是消费者对未来持怀疑态度时。火腿与爱好者社区之间的交流可能会带来互利。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Linux, Software Radio and the Radio Amateur
+
+
+    ![](img/9ab9989930ff1da97e91eafd6a1c4caf_0_0.png)
+
+
+    How software radio technology might revitalize experimentation in Amateur Radio.
+
+
+    For a long time there has been concern about the impact of SDR and experimentation
+    in the Amateur Radio on the demographics of the community, and the possible impact
+    on the regulatory status of the Amateur Radio Service (ARS). Advances in electronics,
+    since pioneered by amateur radio backgrounds, brought technologies that are limited
+    by the hardware implementation skills of most without a professional background.
+    The title of this article is inspired by an article published 50 years ago by
+    James Kosten, John found that widespread use of SSB led to a rapid decline in
+    HF equipment building and a more adverse impact on the ARS. The thesis of this
+    article is that a well-connected strategy using software radio technology for
+    the ARS has a positive impact on reversing the apparent decline of experimentation
+    and might even bring a new
+
+
+    younger, and experimentally motivated group into Amateur Radio.
+
+
+    # What is Software Radio?
+
+
+    A software radio is one in which one or more transceivers are performed by digital
+    control on digital hardware. Software radios use digital signal processing (DSP)
+    for filtering, modulation and demodulation of signals within the radio. DSP can
+    also do functions that are difficult or impossible for analog radios. However
+    software radios are related to the computer revolution that the design and implementation
+    of these radios employs the technical skills that generate interest in today''s
+    younger generations.
+
+
+    radio implements a 2-meter transceiver with DSP and makes the source code available
+    for modification by users. As personal computers use both hardware and software
+    and can be modified by adding or modifying software, software radios can acquire
+    new functionality throughout their hardware limits if new or modified. No need
+    for the old soldering iron?
+
+
+    In the new world of software radios, experimentation would involve writing software
+    transmitter or receiver functions, modifying existing software to ''tweak it,''
+    or reading about a new program, following it and trying it over the air. Believe
+    that this type of experimentation can generate new interest in ham radio and develop
+    skills that are valuable in today''s society.
+
+
+    AS the DSP-10-meter transceiver has been developed by Bob Larkin, WTPUA, which
+    has been available in kit form from the Tucson Packet Radio (TAPR) organization.
+    This
+
+
+    # Present Barriers to Software Radios
+
+
+    While some innovations in ham radio technology have been showed by
+
+
+    > *Notes on page 35.
+
+
+    U5- October 2002 33'
+  - '[PAGE 1]
+
+
+    ICC faction, not that this is the case here FCC rules appear to enable both the
+    use and sale of software products. The previous intentions of TI show this policy
+    in action. The major barrier seems to be lack of interest in the ham radio community
+    towards making a radio that allows users to use software interfaces.
+
+
+    A check of ads for top-of-the-line transceivers will show that many have computers
+    and many of them have DSP. So what of the words ''mechanical interaction'' that
+    were used previously. Today''s interfaces can change as easily as a computer—like
+    turning the knobs. They do not allow you to easily rewrite any of the software.
+
+
+    Consider following example: both traditional and software radios usually receive
+    filters with a variety of bands. A traditional radio would have to adjust a resonator
+    for each band. In the software radio, a mathematical algorithm is used and a set
+    of variables filter the frequency, bandwidth and shape. No ham manufacturer today
+    allows users to change these functions of any model of which I am aware that allows
+    users of modification interface instead of hardware.
+
+
+    # ARRL''s Active Role in Software
+
+
+    In early 2002, the ARRL initiated a Software-Defined Working Group to press for
+    development of some of the things for which Mike called, and more. The group,
+    led by Bob Larkin, Leif Asbrik, SMSBSZ, Gary Baour,, ACQ, Paul Rinardi, Gerald
+    Younglund, and Mike, excites. We filed our first report in the ARRL tech newsletter
+    in June 2002. You can find more on the web at http://www.arl.org/announce.html.
+
+
+    It is true that nowadays some of the things that Mike suggested might take a long
+    time to come compared to hardware. That''s not stopping experiments, and at least
+    four Working Groups made progress. Others from around the ham world have come
+    out with the software that they developed very useful, and we will wait to see
+    what happens at the end of the year.
+
+
+    Some ham transceivers have had the ability to update software by-by-kit (Kenwood,
+    Ten-Ele); however, users have not been able to source code to write their own
+    embedded software. Support issues exist, as I safely state that such software—usually
+    written in assembly, the native language—would be very difficult to program and
+    edit, even to the best of effort. That is what of software transceivers differs.
+
+
+    Consider a radio that has a high frequency interface that could pass signals to
+    samples from an external software. Software development could then proceed where
+    platform is convenient, such as a personal computer for easy access, as illustrated
+    in some of the articles listed below.
+
+
+    Beyond that, it is possible to construct DSP software that would be easier to
+    use than any of their favorites radios, leaving all the heavy-crunching inside
+    the radio. Flexibility is the name of the game.
+
+
+    Expect some reality checks to arise from current work progress—the decline in
+    implementation and hardware.
+
+
+    ARRL ham market needs a new type of ham.
+
+
+    However, the intellectual property argument doesn''t explain how to load filter
+    contents into any present radios. Filtering is not writing a program; it is just
+    to download a filter to be used by programs. The explanation for this follows
+    shortly in the remaining chapters.
+
+
+    The second concern expressed by the manufacturers is the issue of user support.
+    Support is limited by relatively small group for user support and marketing departments.
+
+
+    I had discussions with some ham manufacturers on the use of software radios for
+    ARS. Some transceivers have kept in concept these, but others have expressed that
+    software development would require users to access manufacturers'' proprietary
+    property.
+
+
+    The manufacturers probably have legal concerns regarding intellectual property
+    in their products for specific functions; for example, downconverter, demodulator
+    and the overall architecture of the radio. One wonders if they perceive this view
+    of intellectual property in order to maintain or slightly improve after software
+    changes.
+
+
+    After repeated reading this article the whole ham community will think about reinvigorating
+    the ARS might revert trends and the go
+
+
+    sole distributors of the hardware/software packages. Would you buy the package
+    from the ham groups and the ham who would provide user support to the craft of
+    ARS?
+
+
+    The third point is that ham aren''t interested in developing and maintaining the
+    software for such radios. I am responding to this by pointing out the well-documented
+    DSP-10 meter radio. Check out on the web at www.gnu.org/gnuradio.html.
+
+
+    You have been wondering why Linux is mentioned in this article. GNU, a free software
+    project that is being sponsored by the Free Foundation, is one of the current
+    operating systems present. The radio is not a transceiver. But the principle has
+    been established for Linux-style software for defined radios.
+
+
+    34 October 2002
+
+
+    J5.'
+  - '[PAGE 2]
+
+
+    manufacturers weren''t concentrating on more traditional operating systems. Many
+    have now accepted Linux as a viable choice for the personal computer. Perhaps
+    Ars manufacturers have similar concerns, especially if consumers ignore
+
+
+    doubtful in the future. An exchange between the ham and amateur community on this
+    topic might lead to mutual benefits.
+
+
+    might need to be deferred in a real time to consider CBRS and regulations. www.fwiradio.com
+
+
+    The authors acknowledge the kindness received while writing this article from
+    Paul Hendricks, WARI1, and Wayne Hendricks, WADBJP.
+
+
+    The notes are presented here of those and not that much necessary
+
+
+    In the early days of the computer industry, the adoption of new hardware and software
+    was also a good move than technologically advanced radios.
+
+
+    # Near-Term Steps
+
+
+    There are several near-term steps that could usher the movement toward how use
+    radio and software changes the Ars. The one might be just to duplicate the DSP-2-meter
+    software radio. It is available in kit, but building it is also a lot of effort
+    and people of headache.
+
+
+    Although we use IFs at any frequency greater than half the bandwidth of the band
+    would have had many handlers and would now many signals to be attenuated by inadequate
+    hardware for audio and F may seem uncertain, in theory and in practice.
+
+
+    Another near-term step might be for manufacturers to include in their radios,
+    or for clubs to provide digital mode decoders, and output IFs and audio-frequencies
+    in a common interface such as USB or FireWire.
+
+
+    Mark Marcus, MJN37710 operated in radio in high frequency and still works with
+    a Technical license since the technology of the technician of Halggens. He has
+    worked for the federal government for more than 20 years in the amateur area.
+
+
+    We could also experiment with digital outreach of the transceiver without being
+    forced to send the signal to the receiver and again in A/D and digital conversion.
+
+
+    When he visits, he uses 2 m 70 cm for length of practice and has hit the top of
+    Mt Mansfield for some QSOs? He can be reached at mjelson.com.
+
+
+    If additionally, allowing the ham to follow the changes in receivers would be
+    the first step that would not compromise any property features of existing factors.
+
+
+    +   R. Vinken, VK6GG, "The Direodyne: A New Radio Architecture?", QEX, Jun 2002.
+
+
+    +   G. Youngblood, AC506, "Software-Defined Radio: Part 1", QEX, Jul, 2002;
+
+
+    +   L. Asher, SMSB52, "New Possibilities for Digital Mode: Part 1", QEX, Oct,
+    2002.
+
+
+    C. Ping, BAIHAM, "An Switched-Converter Performance?", QEX, Sep 2007.
+
+
+    For further information visit www.taper.org/report/index.html."
+
+
+    # Notes
+
+
+    The Amateur Radio generates frequencies in the first 71 goals in 47 MHz. These
+    goals have been sought for a long time, creating demands for special filters and
+    existing applications of vintage equipment. Maybe the local contact between the
+    government and hams, resulted in the advancement of radio is one of the five
+
+
+    John, "Poison, Shannon, and the Amateur Radar", Part 2, DEC, 2006. This article
+    expresses concern about the fact that ARS was given in communication with the
+    author.
+
+
+    An adequate amateur-supported digital-wideband transceiver would have provided
+    a better overall comparison to SSB analysis of his article. This article is also
+    available online at
+
+
+    Sources of information about amateur radio technology and their implications are
+    found in our computers and reference as well as Chapter 13: "Digital Sequencing".
+
+
+    The variables are numbers that define its frequency range. Given a frequency and
+    the response in any rate; other using public-domain computers. One possible application
+    of changing lifters exter
+
+
+    # Summary
+
+
+    In summary, DSP technology has a broad impact on the future of the Ars as hams
+    can access gives them flexibility and rapidly share software for new features.
+    However, present trends in manufactured equipment make the commercial availability
+    of hardware
+
+
+    # NEW PRODUCTS
+
+
+    PORTABLE GROUND-COUPLED ANTENA MOUNT FROM MFJ
+
+
+    Designed for operation or use in any antenna-mount
+
+
+    Ground-Coupled Antenna Mount is ideal at providing an effective and ground point
+    for mounted vertical antennas. Placing the four-legged platform at the desired
+    position, puts the ground and mount your antenna.
+
+
+    The mount is a 2-leg steel construction with reinforced hooks. This handles many
+    cables and making the really easy to use and install.
+
+
+    Price: $99.95. For more information, contact your favorite Amateur Radio parts
+    dealer of MFJ, 300 Industrial Park Rd, Somerville, MS, 39759; tel 800-647-1800.
+    email: www.mfjenterprises.com.
+
+
+    est:
+
+
+    October 2002
+
+
+    ![](img/9ab9989930ff1da97e91eafd6a1c4caf_2_0.png)'
