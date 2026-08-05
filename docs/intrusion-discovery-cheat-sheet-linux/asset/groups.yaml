@@ -1,0 +1,674 @@
+- md: '
+
+    # Unusual Accounts
+
+
+    Look in /etc/passwd for new accounts, especially with UID 0 or GID 0
+
+
+    ```
+
+    ### less /etc/passwd
+
+    # grep :0 /etc/passwd
+
+    ```
+
+
+    Normal accounts will be there, but look for new, unexpected accounts
+
+
+    # Unusual Log Entries
+
+
+    Look through your system log files for suspicious events, including:
+
+
+    - Promiscuous mode: "entered promiscuous mode"
+
+    - Large number of authentication or login failures from either local or remote
+    access tools (e.g., telnet, sshd, etc.).
+
+    - Remote Procedure Call (rpc) programs with a log entry that includes a large
+    number (> 20) strange characters (-^PM-^PM-^PM-^PM-^PM-^^PM-)
+
+    - For web servers: Large number of Apache logs saying "error"
+
+
+    # Additional Supporting Tools
+
+
+    The following tools are often not built into the Linux operating system, but can
+    be used to analyze its status in detail. Each is available for free download at
+    the listed web site.
+
+
+    - Chrootkit looks for anomalies on systems introduced by user-mode and kernel-mode
+    Rootkits: www.chkrootkit.org - free
+
+    - Tripwire looks for changes to critical system files: www.tripwire.org - free
+    for Linux for commercial use
+
+    - AIDE looks for changes to critical system files: http://www.cs.tut.fi/~rammer/aide.html
+
+
+    ![](img/38f1e2a03f098d3d644bc2f5a7d47d1c_0_0.png)
+
+
+    # Purpose
+
+
+    System Administrators are often on the first lines of computer security. This
+    guide aims to support System Administrators in finding indications of a system
+    problem.
+
+
+    # What to use this sheet
+
+
+    On a periodic basis (daily, weekly, or each time you logon to a system you), run
+    these quick steps to look for anomalous behavior that might be caused by a computer
+    intrusion. Each of these commands runs locally on a system.
+
+
+    This sheet is split into these sections:
+
+
+    - Unusual Processes
+
+    - Unusual Files
+
+    - Unusual Network Usage
+
+    - Unusual Scheduled Tasks
+
+    - Unusual Accounts
+
+    - Unusual Log Entries
+
+    - Additional Supporting Tools
+
+
+    If you spot anomalous behavior: DO NOT PANIC!
+
+    Your system may not have come under attack. Please contact the Incident Handling
+    team to report the activities and get further assistance:
+
+    [Chief Handler''s Name]
+
+    [Contact Phone Number]
+
+    [Contact Pager Number]
+
+    [Relevant Internal Web]
+
+
+    # Unusual Processes
+
+
+    Look for running processes:
+
+    # ps -aux
+
+
+    Get familiar with "normal" processes for the machine.
+
+
+    Look for unusual processes. Focus on processes with root (UID 0) privileges.
+
+
+    If you spot a process that is unfamiliar, investigate unusual processes, getting
+    more detail using:
+
+    # lsof -p [pid]
+
+
+    This command shows all files and ports used by the running process.
+
+
+    # Unusual Files
+
+
+    Look for unusual SUID root files:
+
+    # find -uid 0 -perm -4000 -print
+
+    Requires knowledge of normal SUID files
+
+
+    Look for unusual large files (greater than 10 MegaBytes):
+
+    # find -size 10000k -print
+
+    Requires knowledge of normal large files
+
+
+    Look for files named with colons and spaces:
+
+    "* . . . " and ""
+
+    # find -name "*.**"
+
+    # find -name "*..*"
+
+    # find -name "* .*"
+
+
+    # Unusual Files Continued
+
+
+    On a Linux machine installed with RPM (RedHat, Mandrake, etc.), run the RPM tool
+    to verify cases
+
+
+    ```
+
+    # rpm -Va
+
+    ```
+
+
+    Checks size, MD5 sum, permissions, type, owner, and group of each file with information
+    from RPM database
+
+
+    Output includes:
+
+
+    | Flag | Description |
+
+    | :--- | :--- |
+
+    | S | Size differs |
+
+    | M | Mode differs (permissions) |
+
+    | M | MD5 sum differs |
+
+    | D | Device number mismatch |
+
+    | L | readLink path mismatch |
+
+    | U | user ownership differs |
+
+    | G | group ownership differs |
+
+    | T | modification time differs |
+
+
+    Pay special attention to changes associated with items in /sbin, /bin, /usr/sbin,
+    and /usr/bin
+
+
+    Look for promiscuous mode, which might indicate a sniffer:
+
+
+    ```
+
+    # ip link | grep PROMISC
+
+    ```
+
+
+    Note that ifconfig doesn''t work reliably for detecting promiscuous mode on Linux
+    kernel 2.4
+
+
+    # Unusual Network Usage Continued
+
+
+    Look for unusual port listeners:
+
+    # lsof -i
+
+    # netstat -nap
+
+
+    Need to know TCP and UDP ports are normally listening on your system and look
+    for deviations from the norm
+
+
+    Look for ARP entries, mapping IP address to MAC addresses that aren''t correct
+    for the LAN:
+
+
+    ```
+
+    # arp -a
+
+    ```
+
+
+    Requires detailed knowledge of what is supposed to be on the LAN
+
+
+    # Unusual Scheduled Tasks
+
+
+    Look for cron jobs scheduled by root and any other UID 0 accounts:
+
+
+    ```
+
+    # crontab -u root -
+
+    ```
+
+
+    Look for unusual system-wide cron jobs:
+
+
+    ```
+
+    # cat /etc/crontab
+
+    # ls /etc/cron.*
+
+    ```
+
+
+    # Unusual Network Usage
+
+    '
+  mdcn: '
+
+
+    # 异常账户
+
+
+    检查 `/etc/passwd` 以查找新账户，特别是具有 UID 0 或 GID 0 的账户。
+
+
+    ```
+
+    ### less /etc/passwd
+
+    # grep :0 /etc/passwd
+
+    ```
+
+
+    正常账户会出现在那里，但请寻找新的、异常的账户。
+
+
+    # 异常日志条目
+
+
+    检查系统日志文件以查找可疑事件，包括：
+
+
+    - 混杂模式："entered promiscuous mode"
+
+    - 来自本地或远程访问工具（例如 telnet、sshd 等）的大量身份验证或登录失败。
+
+    - 远程过程调用 (rpc) 程序的日志条目包含大量（> 20 个）奇怪字符 (-^PM-^PM-^PM-^PM-^PM-^^PM-)
+
+    - 对于 Web 服务器：大量显示为 "error" 的 Apache 日志
+
+
+    # 额外的辅助工具
+
+
+    以下工具通常未内置于 Linux 操作系统，但可以用于详细分析系统状态。每个工具都可以在列出的网站免费下载。
+
+
+    - Chrootkit：查找由用户态和内核态 Rootkits 引入的系统异常：www.chkrootkit.org - 免费
+
+    - Tripwire：查找关键系统文件的更改：www.tripwire.org - Linux 商业用免费
+
+    - AIDE：查找关键系统文件的更改：http://www.cs.tut.fi/~rammer/aide.html
+
+
+    ![](img/38f1e2a03f098d3d644bc2f5a7d47d1c_0_0.png)
+
+
+    # 目的
+
+
+    系统管理员通常处于计算机安全的第一线。本指南旨在帮助系统管理员发现系统问题的迹象。
+
+
+    # 如何使用此表
+
+
+    定期（每天、每周或每次登录到你自己的系统时）运行这些快速步骤，以查找可能由计算机入侵引起的异常行为。这些命令中的每一个都是在系统本地运行的。
+
+
+    本表分为以下部分：
+
+
+    - 异常进程
+
+    - 异常文件
+
+    - 异常网络使用
+
+    - 异常计划任务
+
+    - 异常账户
+
+    - 异常日志条目
+
+    - 额外的辅助工具
+
+
+    如果你发现了异常行为：**不要惊慌！**
+
+    你的系统可能并没有正受到攻击。请联系事件处理团队报告这些活动并获取进一步协助：
+
+    [首席处理人姓名]
+
+    [联系电话号码]
+
+    [联系机器号码]
+
+    [相关内部网站]
+
+
+    # 异常进程
+
+
+    查找正在运行的进程：
+
+    # ps -aux
+
+
+    熟悉该机器的“正常”进程。
+
+
+    查找异常进程。关注具有 root (UID 0) 权限的进程。
+
+
+    如果你发现了一个不熟悉的进程，请调查异常进程，并使用以下命令获取更多详细信息：
+
+    # lsof -p [pid]
+
+
+    此命令显示运行进程所使用的所有文件和端口。
+
+
+    # 异常文件
+
+
+    查找异常的 SUID root 文件：
+
+    # find -uid 0 -perm -4000 -print
+
+    需要具备正常 SUID 文件的知识。
+
+
+    查找异常的大文件（大于 10 MegaBytes）：
+
+    # find -size 10000k -print
+
+    需要具备正常大文件的知识。
+
+
+    查找以冒号和空格命名的文件：
+
+    "* . . . " 和 ""
+
+    # find -name "*.**"
+
+    # find -name "*..*"
+
+    # find -name "* .*"
+
+
+    # 异常文件（继续）
+
+
+    在安装了 RPM（RedHat、Mandrake 等）的 Linux 机器上，运行 RPM 工具验证这些情况。
+
+
+    ```
+
+    # rpm -Va
+
+    ```
+
+
+    通过 RPM 数据库中的信息检查每个文件的大小、MD5 和、权限、类型、所有者和组。
+
+
+    输出包括：
+
+
+    | 标记 |  |
+
+    | :--- | :--- |
+
+    | S | 大小差异 |
+
+    | M | 模式差异（权限） |
+
+    | M | MD5 和差异 |
+
+    | D | 设备号不匹配 |
+
+    | L | readLink 路径不匹配 |
+
+    | U | 用户所有权差异 |
+
+    | G | 组所有权差异 |
+
+    | T | 修改时间差异 |
+
+
+    特别关注与 /sbin、/bin、/usr/sbin 和 /usr/bin 项目相关的更改。
+
+
+    查找混杂模式，这可能表明存在嗅探器：
+
+
+    ```
+
+    # ip link | grep PROMISC
+
+    ```
+
+
+    注意，在 Linux 内核 2.4 上，ifconfig 无法可靠地检测混杂模式。
+
+
+    # 异常网络使用（继续）
+
+
+    查找异常的端口监听器：
+
+    # lsof -i
+
+    # netstat -nap
+
+
+    需要了解系统上正常监听的 TCP 和 UDP 端口，并寻找偏离正常的情况。
+
+
+    查找 ARP 条目，即将 IP 地址映射到错误的局域网 MAC 地址：
+
+
+    ```
+
+    # arp -a
+
+    ```
+
+
+    需要对局域网内应存在的内容有详细了解。
+
+
+    # 异常计划任务
+
+
+    查找由 rootstring任何其他 UID 0 账户调度的 cron 任务：
+
+
+    ```
+
+    # crontab -u root -
+
+    ```
+
+
+    查找异常的系统级 cron 任务：
+
+
+    ```
+
+    # cat /etc/crontab
+
+    # ls /etc/cron.*
+
+    ```
+
+
+    # 异常网络使用
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Unusual Accounts
+
+
+    Look in /etc/passwd for new accounts, especially with UID 0 or GID 0
+
+
+    ```
+
+    ### less /etc/passwd
+
+    # grep :0 /etc/passwd
+
+    ```
+
+
+    Normal accounts will be there, but look for new, unexpected accounts
+
+
+    # Unusual Log Entries
+
+
+    Look through your system log files for suspicious events, including:
+
+
+    Promiscuous mode
+
+    "entered promiscuous mode"
+
+
+    Large number of authentication or login failures from either local or remote access
+    tools (e.g., telnet, sshd, etc.).
+
+
+    Remote Procedure Call (rpc) programs with a log entry that includes a large number
+    (> 20) strange characters (-^PM-^PM-^PM-^PM-^PM-^^PM-)
+
+
+    For web servers: Large number of Apache logs saying "error"
+
+
+    # Additional Supporting Tools
+
+
+    The following tools are often not built into the Linux operating system, but can
+    be used to analyze its status in detail. Each is available for free download at
+    the listed web site.
+
+
+    Chrootkit looks for anomalies on systems introduced by user-mode and kernel-mode
+    Rootkits
+
+    www.chkrootkit.org - free
+
+
+    Tripwire looks for changes to critical system files
+
+    www.tripwire.org - free for Linux for commercial use
+
+
+    AIDE looks for changes to critical system files
+
+    http://www.cs.tut.fi/~rammer/aide.html
+
+
+    ![](img/38f1e2a03f098d3d644bc2f5a7d47d1c_0_0.png)
+
+
+    # Purpose
+
+
+    System Administrators are often on the first lines of computer security. This
+    guide aims to support System Administrators in finding indications of a system
+    problem.
+
+
+    # What to use this sheet
+
+
+    On a periodic basis (daily, weekly, or each time you logon to a system you), run
+    these quick steps to look for anomalous behavior that might be caused by a computer
+    intrusion. Each of these commands runs locally on a system.
+
+    This sheet is split into these sections:
+
+
+    +   - Unusual Processes
+
+    - Unusual Files
+
+    - Unusual Network Usage
+
+    - Unusual Scheduled Tasks
+
+    - Unusual Accounts
+
+    - Unusual Log Entries
+
+    - Additional Supporting Tools
+
+
+    If you spot anomalous behavior: DO NOT PANIC!
+
+    Your system may not have come under attack. Please contact the Incident Handling
+    team to report the activities and get further assistance:
+
+    [Chief Handler''s Name]
+
+    [Contact Phone Number]
+
+    [Contact Pager Number]
+
+    [Relevant Internal Web]'
+  - "[PAGE 1]\n\n# Unusual Processes\n\nLook for running processes:\n# ps -aux\n\n\
+    Get familiar with \"normal\" processes for the machine.\n\nLook for unusual processes.\
+    \ Focus on processes with\nroot (UID 0) privileges.\n\nIf you spot a process that\
+    \ is unfamiliar, investigate\nunusual processes, getting more detail using:\n\
+    # lsof -p [pid]\n\nThis command shows all files and ports used by the\nrunning\
+    \ process.\n\n# Unusual Files\n\nLook for unusual SUID root files:\n# find -uid\
+    \ 0 -perm -4000 -print\nRequires knowledge of normal SUID files\n\nLook for unusual\
+    \ large files (greater than 10\nMegaBytes):\n# find -size 10000k -print\n\nRequires\
+    \ knowledge of normal large files\n\nLook for files named with colons and spaces:\n\
+    \"* , . . . \" and \"\"\n# find -name \"*.**\"\n# find -name \"*..*\"\n# find\
+    \ -name \"* .*\"\n\n# Unusual Files Continued\n\nOn a Linux machine installed\
+    \ with RPM (RedHat,\nMandrake, etc.), run the RPM tool to verify cases\n\n```\n\
+    # rpm -Va\n```\n\nChecks size, MD5 sum, permissions, type, owner, and\ngroup of\
+    \ each file with information from RPM\ndatabase\n\nOutput includes:\n\n+   S -\
+    \ Size differs\nM - Mode differs (permissions)\nM - MD5 sum differs\nD - Device\
+    \ number mismatch\nL - readLink path mismatch\nU user ownership differs\nG group\
+    \ ownership differs\nT - modification time differs\n\nPay special attention to\
+    \ changes associated with\nitems in /sbin, /bin, /usr/sbin, and /usr/bin\n\nLook\
+    \ for promiscuous mode, which might indicate a\nsniffer:\n\n```\n# ip link | grep\
+    \ PROMISC\n```\n\nNote that ifconfig doesn't work reliably for detecting\npromiscuous\
+    \ mode on Linux kernel 2.4\n\n# Unusual Network Usage Continued\n\nLook for unusual\
+    \ port listeners:\n# lsof -i\n# netstat -nap\n\nNeed to know TCP and UDP ports\
+    \ are\nnormally listening on your system and look for\ndeviations from the norm\n\
+    \nLook for ARP entries, mapping IP address to\nMAC addresses that aren't correct\
+    \ for the LAN:\n\n```\n# arp -a\n```\n\nRequires detailed knowledge of what is\
+    \ supposed to\be on the LAN\n\n# Unusual Scheduled Tasks\n\nLook for cron jobs\
+    \ scheduled by root and any other\nUID 0 accounts:\n\n```\n# crontab -u root -\n\
+    ```\n\nLook for unusual system-wide cron jobs:\n\n```\n# cat /etc/crontab\n# ls\
+    \ /etc/cron.*\n```\n\n# Unusual Network Usage"
