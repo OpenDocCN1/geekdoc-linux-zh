@@ -1,0 +1,94 @@
+- - '#'
+  - Linux 内核破解不靠谱指南
+- - '##'
+  - 第 1 章 引言
+- - '##'
+  - 第 2 章 参与者
+- - '###'
+  - 2.1 用户上下文
+- - '###'
+  - 2.2 硬件中断（硬中断）
+- - '###'
+  - 2.3 软件中断上下文：下半部、Tasklets、softirqs
+- - '##'
+  - 注意事项
+- - '##'
+  - 第 3 章：一些基本规则
+- - '###'
+  - 无内存保护
+- - '###'
+  - 无浮点运算或 MMX
+- - '###'
+  - 严格的栈空间限制
+- - '###'
+  - Linux 内核是可移植的
+- - '##'
+  - 第 4 章：iols：不要编写新的系统调用
+- - '##'
+  - 第 5 章：死锁配方
+- - '##'
+  - 第 6 章：常用程序
+- - '###'
+  - 6.1 printk() include/linux/kernel.h
+- - '###'
+  - 6.2 copy_[to/from]_user() / get_user() / put_user() include/asm/uaccess.h
+- - '###'
+  - 6.3 kmalloc()/kfree() include/linux/slab.h
+- - '###'
+  - 6.4 current include/asm/current.h
+- - '###'
+  - 6.5 udelay()/mdel() include/asm/delay.h
+- - '###'
+  - 6.6 local_irq_save()/local_irq_restore()
+- - '###'
+  - 6.7 local_bh_disable()/local_bh_enable()
+- - '###'
+  - 6.8 smp_processor_id()/cpu_[number/logical]_map()
+- - '###'
+  - 6.9 __init__/exit/__initdata
+- - '###'
+  - 6.10 __initcall()/module_init
+- - '###'
+  - 6.11 module_exit() include/linux/init.h
+- - '###'
+  - 6.12 MOD_INC_USE_COUNT/MOD_DEC_USE_COUNT include/linux/module.h
+- - '##'
+  - 第 7 章 等待队列
+- - '###'
+  - include/linux/wait.h
+- - '###'
+  - 7.1 声明
+- - '###'
+  - 7.2 入队
+- - '###'
+  - 7.3 唤醒队列中的任务
+- - '##'
+  - 第 8 章 原子操作
+- - '##'
+  - 第 9 章 符号
+- - '###'
+  - 9.1 EXPORT_SYMBOL() include/linux/module.h
+- - '###'
+  - 9.2 EXPORT_SYMTAB
+- - '##'
+  - 第 10 章 例程与约定
+- - '###'
+  - 10.1 双向链表 include/linux/list.h
+- - '###'
+  - 10.2 返回约定
+- - '###'
+  - 10.3 破坏编译
+- - '###'
+  - 10.4 初始化结构体成员
+- - '###'
+  - 10.5 GNU 扩展
+- - '###'
+  - 10.6 C++
+- - '###'
+  - '10.7 #if'
+- - '##'
+  - 第 11 章 将你的代码放入内核
+- - '##'
+  - 第 12 章 内核口诀
+- - '##'
+  - 第 13 章 感谢
