@@ -1,0 +1,994 @@
+- - '#'
+  - 嵌入式 FreeBSD 秘籍，嵌入式技术系列
+- - '#'
+  - 前言
+- - '#'
+  - 前提条件和其他资源
+- - '##'
+  - 结构
+- - '###'
+  - 粗体宏文本
+- - '###'
+  - 嵌入式系统
+- - '###'
+  - 物联网设备
+- - '##'
+  - 第一章 入门
+- - '###'
+  - FreeBSD
+- - '###'
+  - GNU 开发工具
+- - '###'
+  - Java
+- - '###'
+  - 硬件
+- - '###'
+  - 服务器
+- - '###'
+  - 数据采集
+- - '###'
+  - 启动设备
+- - '##'
+  - 开发问题
+- - '##'
+  - 上市时间
+- - '##'
+  - 人才资源池
+- - '##'
+  - 许可协议
+- - '##'
+  - DIO 服务器设备
+- - '##'
+  - 总结
+- - '##'
+  - 第二章 系统编程
+- - '##'
+  - 概述
+- - '##'
+  - 进程
+- - '##'
+  - size hostname data bss dec hex filename
+- - '##'
+  - 进程创建
+- - '##'
+  - fork 系统调用
+- - '##'
+  - execve 系统调用
+- - '##'
+  - 进程终止
+- - '##'
+  - exit 系统调用
+- - '##'
+  - wait 系统调用
+- - '##'
+  - 示例
+- - '##'
+  - seteuid 和 setegid 系统调用
+- - '##'
+  - 示例
+- - '##'
+  - ./ids
+- - '##'
+  - 进程组
+- - '##'
+  - setpgid 和 getpgid 系统调用
+- - '##'
+  - 文件
+- - '##'
+  - 文件描述符
+- - '##'
+  - 权限
+- - '##'
+  - umask 系统调用
+- - '##'
+  - 当前工作目录
+- - '##'
+  - chdir 系统调用
+- - '##'
+  - 资源
+- - '##'
+  - setrlimit 和 getrlimit 系统调用
+- - '##'
+  - 会话
+- - '##'
+  - setsid 系统调用
+- - '##'
+  - 控制终端
+- - '##'
+  - 调度
+- - '###'
+  - 优先级
+- - '###'
+  - getpriority 和 setpriority 系统调用
+- - '##'
+  - kill 系统调用
+- - '##'
+  - 守护进程 (Daemons)
+- - '##'
+  - 守护进程函数框架
+- - '###'
+  - handle_sigchld 函数
+- - '###'
+  - init_daemon 函数
+- - '##'
+  - 总结
+- - '##'
+  - 第三章
+- - '###'
+  - 概述
+- - '##'
+  - 库函数与系统调用
+- - '##'
+  - 软件中断
+- - '##'
+  - 传递数据
+- - '##'
+  - 系统调用示例
+- - '##'
+  - truss
+- - '##'
+  - 系统调用参数
+- - '##'
+  - copymem 系统调用
+- - '##'
+  - copyin 和 copyout 函数
+- - '##'
+  - sysent 结构体
+- - '##'
+  - 系统调用号
+- - '##'
+  - SYSCALL_MODULE 宏
+- - '##'
+  - 简单的调试器
+- - '##'
+  - 命令定义
+- - '##'
+  - 命令表
+- - '##'
+  - dumpmem 函数
+- - '##'
+  - 命令处理函数
+- - '##'
+  - read 命令
+- - '##'
+  - write 处理函数
+- - '##'
+  - quit 处理函数
+- - '##'
+  - help 处理函数
+- - '##'
+  - 主程序
+- - '##'
+  - 示例
+- - '##'
+  - uname -r
+- - '##'
+  - nm /kernel | grep osrelease
+- - '##'
+  - ./copymem
+- - '##'
+  - uname -r
+- - '##'
+  - 总结
+- - '##'
+  - 设备驱动程序
+- - '###'
+  - 概述
+- - '###'
+  - 自动配置
+- - '###'
+  - 设备切换表
+- - '##'
+  - 驱动结构
+- - '##'
+  - 驱动数据结构
+- - '###'
+  - device_method_t 结构
+- - '###'
+  - cdevsw 结构
+- - '##'
+  - device_t 结构
+- - '##'
+  - 第四章
+- - '##'
+  - driver_t 结构
+- - '##'
+  - softc 结构
+- - '##'
+  - struct devclass_t
+- - '##'
+  - DRIVER_MODULE 宏
+- - '##'
+  - 嵌入式 FreeBSD 食谱
+- - '##'
+  - dev_t 结构
+- - '##'
+  - make_dev 函数
+- - '##'
+  - destroy_dev 函数
+- - '##'
+  - DIO24 设备驱动程序
+- - '##'
+  - 骨架驱动源
+- - '##'
+  - DIO 驱动函数
+- - '###'
+  - dio_pci_probe 函数
+- - '##'
+  - 提示
+- - '##'
+  - dio_pci_attach 函数
+- - '##'
+  - device_attach 函数
+- - '##'
+  - dio_allocate_resources 函数
+- - '##'
+  - dio_deallocate_resources 函数
+- - '##'
+  - dioopen 函数
+- - '##'
+  - dioclose 函数
+- - '##'
+  - ioctl 函数
+- - '##'
+  - 寄存器影子
+- - '##'
+  - 定义 ioctl 代码
+- - '##'
+  - 嵌入式 FreeBSD 食谱
+- - '##'
+  - 嵌入式 FreeBSD 菜谱
+- - '##'
+  - 设备文件
+- - '##'
+  - mknod DIO c 200 0
+- - '##'
+  - MAKEDEV dio0
+- - '##'
+  - 编译、加载与卸载
+- - '##'
+  - cd /sys/modules/dio
+- - '##'
+  - make clean
+- - '##'
+  - make depend
+- - '##'
+  - make
+- - '##'
+  - make uninstall
+- - '##'
+  - make install
+- - '##'
+  - 总结
+- - '##'
+  - 中间接口库
+- - '##'
+  - 概述
+- - '##'
+  - 共享库
+- - '##'
+  - 创建和使用共享库
+- - '##'
+  - gcc -c -fpic -o dioif.o dioif.c
+- - '##'
+  - gcc -shared -o libdioif.so dioif.o
+- - '##'
+  - gcc -o diotest diotest.c -L. -ldioif
+- - '##'
+  - 加载共享库
+- - '##'
+  - gcc -o diotest diotest.c -L -ldioif -Wl,-rpath /usr/proj/lib
+- - '##'
+  - 访问设备驱动程序
+- - '##'
+  - 设备文件
+- - '##'
+  - 设备驱动程序系统调用
+- - '##'
+  - Open 系统调用
+- - '##'
+  - close 系统调用
+- - '##'
+  - ioctl 系统调用
+- - '##'
+  - read 系统调用
+- - '##'
+  - write 系统调用
+- - '##'
+  - Port A 数据寄存器
+- - '##'
+  - Port B 数据寄存器
+- - '##'
+  - Port C 数据寄存器
+- - '##'
+  - 中断状态寄存器
+- - '##'
+  - DIO24 应用接口库
+- - '##'
+  - dio_get 和 dio_set 函数
+- - '##'
+  - 访问数字 IO 线
+- - '##'
+  - dioline_t 枚举
+- - '##'
+  - diolinestate_t 枚举
+- - '##'
+  - dio_set_line 和 dio_get_line 函数
+- - '##'
+  - 中断控制器
+- - '##'
+  - diolinestate_t 枚举
+- - '##'
+  - dio_set_int 和 dio_get_int 函数
+- - '##'
+  - dio_set_pint 和 dio_get_pint 函数
+- - '##'
+  - polarity 枚举
+- - '##'
+  - dio_set_polarity 和 dio_get_polarity 函数
+- - '##'
+  - 配置寄存器的编程
+- - '##'
+  - dioconfig_t 枚举
+- - '##'
+  - dio_set_config 和 dio_get_config 函数
+- - '##'
+  - diodirection_t 枚举
+- - '##'
+  - dio_get_direction 函数
+- - '##'
+  - 第五章
+- - '##'
+  - 守护进程
+- - '##'
+  - 概述
+- - '##'
+  - TCP/IP 简介
+- - '##'
+  - 链路层
+- - '##'
+  - 网络层
+- - '##'
+  - IP 路由
+- - '##'
+  - ARP
+- - '##'
+  - RARP
+- - '##'
+  - ICMP
+- - '##'
+  - 传输层
+- - '##'
+  - 端口
+- - '##'
+  - UDP
+- - '##'
+  - TCP
+- - '##'
+  - 应用层
+- - '##'
+  - Socket 系统调用
+- - '##'
+  - 网络字节序
+- - '##'
+  - bind 系统调用
+- - '##'
+  - close 系统调用
+- - '##'
+  - 服务器
+- - '##'
+  - listen 系统调用
+- - '##'
+  - accept 系统调用
+- - '##'
+  - 客户端
+- - '##'
+  - connect 系统调用
+- - '##'
+  - 第六章 守护进程
+- - '##'
+  - 连接数据传输
+- - '##'
+  - send 系统调用
+- - '##'
+  - recv 系统调用
+- - '##'
+  - 无连接数据传输
+- - '##'
+  - recvfrom 系统调用
+- - '##'
+  - sendto 系统调用
+- - '##'
+  - DIO 守护进程
+- - '##'
+  - 协议
+- - '##'
+  - operation_t 枚举
+- - '##'
+  - 嵌入式 FreeBSD 食谱指南
+- - '##'
+  - diod_request 结构体
+- - '##'
+  - 服务器
+- - '##'
+  - process_request 函数
+- - '##'
+  - init_dio 函数
+- - '##'
+  - main 函数
+- - '##'
+  - 总结
+- - '##'
+  - 远程管理
+- - '##'
+  - 概述
+- - '##'
+  - 使用 Secure Shell (SSH)
+- - '##'
+  - 获取 SSH
+- - '##'
+  - cd /usr/ports/security/openssh
+- - '##'
+  - make
+- - '##'
+  - make install
+- - '##'
+  - make clean
+- - '##'
+  - 运行 SSH
+- - '##'
+  - 配置 SSH
+- - '##'
+  - 这是 ssh 服务端全局系统配置文件。
+- - '##'
+  - '$FreeBSD: src/crypto/'
+- - '##'
+  - LogLevel INFO
+- - '##'
+  - RhostsAuthentication no
+- - '##'
+  - RhostsRSAAuthentication no
+- - '##'
+  - RSAAuthentication yes
+- - '##'
+  - PasswordAuthentication yes
+- - '##'
+  - PermitEmptyPasswords no
+- - '##'
+  - AllowUsers admin
+- - '##'
+  - 远程账户
+- - '##'
+  - DIOShell
+- - '##'
+  - command_t 结构
+- - '##'
+  - 命令表
+- - '##'
+  - 第七
+- - '##'
+  - readline_handler 函数
+- - '##'
+  - writeline_handler 函数
+- - '##'
+  - config_handler 函数
+- - '##'
+  - 第七章
+- - '###'
+  - int_handler 函数
+- - '###'
+  - pciint_handler 函数
+- - '###'
+  - setpolarity_handler 函数
+- - '###'
+  - getpolarity_handler 函数
+- - '###'
+  - getdirection_handler 函数
+- - '###'
+  - quit_handler 函数
+- - '###'
+  - help_handler 函数
+- - '###'
+  - DIOShell main
+- - '##'
+  - Makefile
+- - '##'
+  - 总结
+- - '##'
+  - 第八章
+- - '##'
+  - JNI 层
+- - '##'
+  - 概述
+- - '##'
+  - JDK
+- - '##'
+  - 获取 JDK
+- - '##'
+  - cd /usr/ports/java/jdk
+- - '##'
+  - make
+- - '##'
+  - make install
+- - '##'
+  - make clean
+- - '##'
+  - JDK_HOME 环境变量
+- - '##'
+  - CLSPATH 环境变量
+- - '##'
+  - LD_LIBRARY_PATH 环境变量
+- - '##'
+  - 创建 JNI 层
+- - '##'
+  - 在 Java 中实现 C 枚举
+- - '##'
+  - C DIOLineState 类
+- - '##'
+  - DIOLineNumber 类
+- - '##'
+  - DIOLineDirection 类
+- - '##'
+  - Java 代码
+- - '##'
+  - DIOIfJNI 类
+- - '##'
+  - 原生代码
+- - '##'
+  - Java_DIOfJNI_SetLineNative 函数
+- - '##'
+  - Java_DIOfJNI_GetLineNative 函数
+- - '##'
+  - Java_DIOIFJNI_GetDirectionNative 函数
+- - '##'
+  - Makefile
+- - '##'
+  - 总结
+- - '##'
+  - 第九章
+- - '##'
+  - Tomcat 目录结构
+- - '##'
+  - bin
+- - '##'
+  - cd $TOMCAT_HOME/bin
+- - '##'
+  - startup.sh
+- - '##'
+  - cd $TOMCAT_HOME/bin
+- - '##'
+  - shutdown.sh
+- - '##'
+  - doc
+- - '##'
+  - lib
+- - '##'
+  - logs
+- - '##'
+  - webapps
+- - '##'
+  - conf
+- - '##'
+  - JSP 概述
+- - '##'
+  - JSP 语法
+- - '##'
+  - 注释
+- - '##'
+  - 指令
+- - '##'
+  - 声明
+- - '##'
+  - 表达式
+- - '##'
+  - 脚本 (Scriptlets)
+- - '##'
+  - JSP 页面
+- - '##'
+  - 总结
+- - '##'
+  - 构建内核
+- - '##'
+  - 概述
+- - '##'
+  - 内核配置文件
+- - '##'
+  - GENERIC 配置
+- - '##'
+  - machine 关键字
+- - '##'
+  - ident 关键字
+- - '##'
+  - maxusers 关键字
+- - '##'
+  - options 关键字
+- - '##'
+  - ncr 挂载旧设备
+- - '##'
+  - RAID 控制器
+- - '##'
+  - 连接到 系统 RAID 控制器
+- - '##'
+  - 第十章 构建内核
+- - '##'
+  - atkbd0 同时控制键盘和 PS/2 鼠标
+- - '##'
+  - 启动界面/屏幕保护
+- - '##'
+  - syscons 是默认控制台
+- - '##'
+  - 启用此项和 PCVT_FREEBSD 获得兼容 pcvt vt20 的控制台
+- - '##'
+  - 浮点运算
+- - '##'
+  - 浮点运算 - 禁用。
+- - '##'
+  - 电源管理
+- - '##'
+  - 电源管理（其他选项）
+- - '##'
+  - PCCARD 支持
+- - '##'
+  - PCCARD (PCMCIA) 支持
+- - '##'
+  - 串口
+- - '##'
+  - 串口 (COM) 端口
+- - '##'
+  - 口
+- - '##'
+  - 以太网接口
+- - '##'
+  - MII 总线控制器代码的以太网卡
+- - '##'
+  - 注意：务必保留 miibus' 行以便使用
+- - '##'
+  - 伪设备
+- - '##'
+  - 伪设备启用
+- - '##'
+  - USB 支持
+- - '##'
+  - USB 支持
+- - '##'
+  - 嵌入式 FreeBSD 菜谱
+- - '##'
+  - 选项的详细列表以及对设备的详细解释
+- - '##'
+  - 同样存在 LINT 配置文件中。如果你对某行的有疑问，
+- - '##'
+  - 先在 LINT 中检查。
+- - '##'
+  - '$FreeBSD: src/sys/i386/conf/GENERIC,v 1.246'
+- - '##'
+  - 2001/08/12
+- - '##'
+  - 使用 gdb(1) 调试
+- - '##'
+  - 符号
+- - '##'
+  - 潜在文件系统
+- - '##'
+  - 网络文件系统
+- - '##'
+  - 伯克利快速系统
+- - '##'
+  - FFS 作为根使用
+- - '##'
+  - SYSVM-风格的共享内存
+- - '##'
+  - SYSVM-风格的消息队列
+- - '##'
+  - SYSVM-风格的信号量
+- - '##'
+  - SYSVM-风格的实时扩展
+- - '##'
+  - 错误回复的速率
+- - '##'
+  - 限制 在 /dev 中安装 CDEV
+- - '##'
+  - 第十章：构建内核
+- - '##'
+  - 要构建内核，需要以下选项
+- - '##'
+  - 软盘驱动器
+- - '##'
+  - 软盘驱动器
+- - '##'
+  - 磁盘几何
+- - '##'
+  - 磁盘几何
+- - '##'
+  - 概述
+- - '##'
+  - 概述
+- - '##'
+  - 阶段
+- - '##'
+  - 阶段
+- - '##'
+  - 系统启动
+- - '##'
+  - 系统启动
+- - '##'
+  - 启动
+- - '##'
+  - 启动
+- - '##'
+  - BIOS
+- - '##'
+  - BIOS
+- - '##'
+  - 配置
+- - '##'
+  - 配置
+- - '##'
+  - init
+- - '##'
+  - init
+- - '##'
+  - ls -l /boot
+- - '##'
+  - ls -l /boot
+- - '##'
+  - boot2
+- - '##'
+  - boot2
+- - '##'
+  - 第三阶段
+- - '##'
+  - 第三阶段
+- - '##'
+  - $1 = 大小
+- - '##'
+  - $2 = 挂载点
+- - '##'
+  - $3 = md 单元（在 5.0之前的系统中被忽略）
+- - '##'
+  - $4 =（可选）每个索引字节
+- - '##'
+  - 格式化系统
+- - '##'
+  - 格式化系统
+- - '##'
+  - newfs /dev/ad2sla
+- - '##'
+  - mount /dev/ad2sla /flash
+- - '##'
+  - mount /dev/ad2sla /flash
+- - '##'
+  - df /flash
+- - '##'
+  - df /flash
+- - '##'
+  - 复制到启动设备
+- - '##'
+  - 复制到启动设备
+- - '##'
+  - 迭代方法
+- - '##'
+  - 安装方法
+- - '##'
+  - 安装方法
+- - '##'
+  - 第十一章
+- - '##'
+  - 第十一章
+- - '##'
+  - CompactFlash 启动设备
+- - '##'
+  - CompactFlash 启动设备
+- - '##'
+  - 概述
+- - '##'
+  - 概述
+- - '##'
+  - 配置
+- - '##'
+  - 配置
+- - '##'
+  - 适配器
+- - '##'
+  - 适配器
+- - '##'
+  - 适配器
+- - '##'
+  - 适配器
+- - '##'
+  - 总结
+- - '##'
+  - 总结
+- - '##'
+  - 附录 A
+- - '##'
+  - 附录 A
+- - '##'
+  - FreeBSD 许可证
+- - '##'
+  - FreeBSD 许可证
+- - '##'
+  - PCI 配置
+- - '##'
+  - PCI 配置
+- - '##'
+  - PCI 总线
+- - '##'
+  - PCI 总线
+- - '##'
+  - PCI 配置寄存器
+- - '##'
+  - PCI 配置寄存器
+- - '##'
+  - 附录 B
+- - '##'
+  - 附录 B
+- - '##'
+  - 厂商 ID 寄存器
+- - '##'
+  - 厂商 ID 寄存器
+- - '##'
+  - 设备 ID 寄存器
+- - '##'
+  - 设备 ID 寄存器
+- - '##'
+  - 命令寄存器
+- - '##'
+  - 命令寄存器
+- - '##'
+  - 嵌入式 FreeBSD 指南
+- - '##'
+  - 嵌入式 FreeBSD 指南
+- - '##'
+  - 状态寄存器 (Status Register)
+- - '##'
+  - 状态寄存器 (Status Register)
+- - '##'
+  - 版本 ID (Revision ID)
+- - '##'
+  - 版本 ID (Revision ID)
+- - '##'
+  - 类代码 (Class Code)
+- - '##'
+  - 类代码 (Class Code)
+- - '##'
+  - 缓存行大小 (Cache Line Size)
+- - '##'
+  - 缓存行大小 (Cache Line Size)
+- - '##'
+  - 延迟计时器 (Latency Timer)
+- - '##'
+  - 延迟计时器 (Latency Timer)
+- - '##'
+  - 头部类型 (Header Type)
+- - '##'
+  - 头部类型 (Header Type)
+- - '##'
+  - 内置自检 (BIST)
+- - '##'
+  - 内置自检 (BIST)
+- - '##'
+  - 基地址寄存器 (Base Address Registers)
+- - '##'
+  - 基地址寄存器 (Base Address Registers)
+- - '##'
+  - CardBus CIS 指针 (CardBus CIS Pointer)
+- - '##'
+  - CardBus CIS 指针 (CardBus CIS Pointer)
+- - '##'
+  - 子系统厂商 ID (Subsystem Vendor ID)
+- - '##'
+  - 子系统厂商 ID (Subsystem Vendor ID)
+- - '##'
+  - 子系统 ID (Subsystem ID)
+- - '##'
+  - 子系统 ID (Subsystem ID)
+- - '##'
+  - 扩展 ROM 地址 (Expansion ROM Address)
+- - '##'
+  - 扩展 ROM 地址 (Expansion ROM Address)
+- - '##'
+  - 最大延迟 (Maximum Latency)
+- - '##'
+  - 最大延迟 (Maximum Latency)
+- - '##'
+  - 最小授权 (Minimum Grant)
+- - '##'
+  - 最小授权 (Minimum Grant)
+- - '##'
+  - 中断引脚 (Interrupt PIN)
+- - '##'
+  - 中断引脚 (Interrupt PIN)
+- - '##'
+  - 中断线 (Interrupt Line)
+- - '##'
+  - 中断线 (Interrupt Line)
+- - '##'
+  - 内核可加载模块 (Kernel Loadable Modules)
+- - '##'
+  - 内核可加载模块 (Kernel Loadable Modules)
+- - '##'
+  - 概述
+- - '##'
+  - 概述
+- - '##'
+  - 内核可加载模块
+- - '##'
+  - 内核可加载模块
+- - '##'
+  - Makefile
+- - '##'
+  - Makefile
+- - '##'
+  - 加载处理函数 (The Load Handler Function)
+- - '##'
+  - 加载处理函数 (The Load Handler Function)
+- - '##'
+  - offset 变量
+- - '##'
+  - offset 变量
+- - '##'
+  - SYSCALL_MODULE 宏
+- - '##'
+  - SYSCALL_MODULE 宏
+- - '##'
+  - 设备驱动程序
+- - '##'
+  - 设备驱动程序
+- - '##'
+  - cdevsw 结构
+- - '##'
+  - cdevsw 结构
+- - '##'
+  - dev_t 变量
+- - '##'
+  - dev_t 变量
+- - '##'
+  - load_handler 函数
+- - '##'
+  - load_handler 函数
+- - '##'
+  - 附录 C
+- - '##'
+  - 附录 C
+- - '##'
+  - 内内核可加载模块
+- - '##'
+  - 内内核可加载模块
+- - '##'
+  - kldload -v ./kld_driver.ko
+- - '##'
+  - kldload -v ./kld_driver.ko
+- - '##'
+  - kldstat
+- - '##'
+  - kldstat
+- - '##'
+  - kldunload 命令
+- - '##'
+  - kldunload -n kld_driver.ko
+- - '##'
+  - kldunload -n kld_driver.ko
+- - '##'
+  - kldstat
+- - '##'
+  - kldstat
+- - '##'
+  - 索引
+- - '##'
+  - 索引
+- - '###'
+  - 数字与符号
+- - '###'
+  - 数字与符号
+- - '##'
+  - 第十二章
+- - '##'
+  - 第十二章
+- - '##'
+  - CompactFlash 启动设备
+- - '##'
+  - CompactFlash 启动设备
+- - '##'
+  - 总结
+- - '##'
+  - 总结
