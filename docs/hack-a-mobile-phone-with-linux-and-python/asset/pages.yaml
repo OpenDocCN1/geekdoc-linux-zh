@@ -1,0 +1,380 @@
+- img_proc: true
+  md: '# # Hack a Mobile Phone with Linux and Python
+
+
+    A mobile phone is a cool gadget to play with, especially when I can run my favourite
+    programming language (no prize for guessing what it is!) on! That was the logic
+    which made me purchase a Nokia Series 60 smartphone, the N-Gage QD. This article
+    describes experiments I did with the mobile - setting up Bluetooth communication
+    links, running Python/C and emulating serial ports.
+
+
+    # ## Bluetooth on Linux
+
+
+    Bluetooth is a short distance communication standard. It is commonly used to facilitate
+    data transfer between PC''s and cell phones/PDAs''s. The hardware which provides
+    Bluetooth connectivity to the PC is a small device called a _USB Bluetooth dongle
+    which you can plug into a spare USB port of your machine. I approached the locals
+    electronics asking for such a device and got one which didn''t even have the manufacturer''s
+    name on it. The driver CDM came with it which contained only Windows software.
+    Deciding to try my luck, I plugged the device on and booted my system Fedora Core
+    3 - bluetooth service was started by executing:
+
+
+    ```
+
+    sh /etc/init.d/bluetooth start
+
+    ```
+
+
+    Here is the output when I commanded ''hicconfig'' (which is similar to the ''ifconfig''
+    command to configure TCP/IP network interfaces):
+
+
+    ```
+
+    hci0: Type: USB
+
+    BD Address: 00:11:B1:07:A2:B5 SCO MTU: 64:8
+
+    UP RUNNING PSCAN SCAN
+
+    RX bytes:378 acl:0:0 events:16 errors:0
+
+    TX bytes:309 acl:0:0 commands:16 errors:0
+
+    ```
+
+
+    My no-name Bluetooth dongle has been detected and configured properly! The number
+    00:11:B1:07:A2:B5 is the Bluetooth address of the device.
+
+
+    # ## Detecting the mobile
+
+
+    The next step is to check whether Linux is able to sense the proximity of the
+    mobile. If your phone has bluetooth disabled, enable it and run the following
+    command (on the Linux machine):
+
+
+    ```
+
+    hctool scan
+
+    ```
+
+
+    Here is the output obtained on my machine:
+
+
+    ```
+
+    Scanning ...
+
+    00:E6:6D:9A:57:48 Dijkstra
+
+    ```
+
+
+    The _Bluez protocol stack running on my GNU/Linux has ''discovered'' the Nokia
+    N-Gage sitting nearby and printed its Bluetooth address as the one which was assigned
+    to: ''Dijkstra''.
+
+
+    # ## Pairing the mobile
+
+
+    For security reasons, some interactions with the mobile require the device to
+    be ''paired'' with the one it is interacting with. First, a number (or more digits)
+    in the file/etc/bluetooth/pin (say 12345). Stop and restart the bluetooth service
+    by doing:
+
+
+    ```
+
+    sh /etc/init.d/bluetooth stop
+
+    sh /etc/init.d/bluetooth start
+
+    ```
+
+
+    Now initiate a ''pairing'' action on the mobile (the phone will tell you how this
+    is). The software on the phone will detect the presence of the Bluetooth-enabled
+    Linux mask and ask for a code - you should enter the very number you have stored
+    in /etc/bluetooth/pin on the PC - the pairing process will succeed.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Transferring files
+
+
+    Files are transferred to the Linux machine using a high level protocol called
+    OBEX (for ObjectExchange, originally designed for Infrared links). First, you
+    have to find out whether your mobile supports OBEX based message transfer. Try
+    running the following command on the Linux machine (the number is the bluetooth
+    address of the phone):
+
+
+    ```
+
+    sdptool browse 00:ee:6d:9a:57:48
+
+    ```
+
+
+    You might get voluminous output - here is part of what I got:
+
+
+    ```
+
+    Service Description: OBEX Object Push
+
+    Service RecordListHandle: 0x10005
+
+    Service Class ID List: (0x1105)
+
+    "OBEX Object Push"
+
+    Protocol Descriptor List:
+
+    "LCG" (0x0010)
+
+    "RFCOMM" (0x0003)
+
+    Channel: 9
+
+    "OBEX" (0x0008)
+
+    ```
+
+
+    OBEX is built on top of a lower-level protocol called RFCOMM. The ‘Object Push’
+    service uses RFCOMM ‘channel’ 9. Let''s try to upload a file to the phone; run
+    the following command on the Linux machine:
+
+
+    ```
+
+    obex_push 00:ee:6d:9a:57:48 a.txt
+
+    ```
+
+
+    The phone will respond by asking you whether to accept the message coming over
+    the bluetooth link. The command, invoked without any option, can be used to receive
+    files from the mobile over the bluetooth link (the corresponding ‘man’ page for
+    more details).
+
+
+    # Installing Python
+
+
+    Nokia has done a port of Python to the ‘Series 60’ smartphones running the Symbian
+    operating system. The Python interpreter as well as a few important modules are
+    packaged into a single .sis file (somewhat like the Linux RPM file) which can
+    be obtained from http://www.forum.nokia.com/main/0_034-821.html. The file to be
+    installed PythonForSeries60_pre_SDK20.sis. The first step is to transfer this
+    file to the mobile via obex_push. Trying to open it in the Nokia installer program
+    running - it will ask you to install Python on the limited amount of memory which
+    phone has or to an additional MMC card (if one is present). Once the installation
+    is over, you will see a not-so-cute Python logo on the main menu of the phone
+    - Figure 1 is a screenshot I took of the main menu.
+
+
+    ![](img/b2912f82085f2b2d61cbed8cf3a429c5_1_0.png)
+
+
+    Figure 2 shows the interactive Python prompt at which you can try typing Python
+    scripts!'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Python
+
+
+    ![](img/b2912f82085f2b2d61cbed8cf3a429c5_2_0.png)
+
+
+    symbian_s60
+
+    Type ''copyright'', ''credits''
+
+    or ''license'' for more
+
+    information.
+
+    (InteractiveConsole)
+
+    >>>
+
+    >>>
+
+
+    Exit
+
+
+    Options
+
+
+    # Running the Python ‘Hello, World’
+
+
+    You can write Python scripts on the Linux mobile and upload to the mobile with
+    ‘obex_push’. If you try to open these scripts (on the mobile), the ‘applications
+    manager’ will ask you to install the header files being Python scripts or not.
+    Once installed as scripts, you can execute them by following the instructions
+    displayed on the screen when you open the ‘Python’ application from the menu.
+
+
+    Figure 3 shows the output obtained by installing and running the following script
+    on the mobile:
+
+
+    ```
+
+    appuiwf # The application UI framework
+
+    appuiwf.app.title = ''Cool Python''
+
+    appuiwf.note(u''OK'', ''info'')
+
+    ```
+
+
+    ![](img/b2912f82085f2b2d61cbed8cf3a429c5_2_1.png)
+
+
+    Python for Series 60 -
+
+    OK
+
+
+    # Socket programming
+
+
+    Application programs running on the phone as well as the Linux interface with
+    the Bluetooth protocol stack via the socket API. Listing 1 shows a simple client
+    program running on the mobile which connects to a server running on the Linux
+    machine and sends it a message; the server code is shown in Listing 2.
+
+
+    The Python client running on the mobile opens a Bluetooth connection and to the
+    PC device whose address is specified in the variable ‘ATHLON’. The connection
+    is established, it simply sends a string ‘Hello, world’.
+
+
+    The server running on the PC opens a Bluetooth socket,, binds to RFCOMM channel
+    4 and calls ‘accept’ - the server is now waiting for a connection request to arrive
+    from the client. Once the request is received, the server comes out of the accept,
+    returning a ‘connected’ socket calling ‘recv’ on which will result in the server
+    getting the client that had transmitted.
+
+
+    The ‘bapy’ function is defined as an inline function in one of the headers - so
+    no need in any extra library to get the executable. But if you are using any of
+    the other Bluetooth utility functions like ‘ba2stf’, you have to link /usr/lib/libbluetooth.so
+    to your code.
+
+
+    # UsingBlueZ
+
+
+    There is an interesting interface to the Bluetooth library in Linux called ‘PyBlueZ’
+    available for download from http://org.csail.net/bluez. It simplifies the process
+    of writing bluetooth socket programs on the Linux machine. Listing 3'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "shows the Python implementation of the server program described in the previous\
+    \ section.\n\n# Emulating serial links\n\nPrograms like `minicom` are used to\
+    \ detect devices connected over a serial link (a modem). There is a neat softare\
+    \ trick to present a `serial-port-like` view of a bluetooth link so that programs\
+    \ `minicom` can manipulate the connection effortlessly. Let's try it out.\n\n\
+    First, edit /etc/bluetooth/rfcomm.conf so that it looks like the following:\n\n\
+    ```\nrfcomm0 {\n  bind no;\n  device 00:0e:6d:9a:57:48;\n  channel 1;\n  comment\
+    \ \"Example Bluetooth device\";n}\n```\n\nAfter stopping and restarting the bluetooth\
+    \ service, run the following command:\n\n```\nrfcomm bind /dev/rfcomm0\n```\n\n\
+    You will see a `rfcomm0` /dev/under after executing the above command. Now, you\
+    \ can set up `minicom` by running:\n\n```\nminicom -s\n```\n\nThe only thing to\
+    \ do is to set the name of the device to connect as /dev/rfcomm0. Save the new\
+    \ configuration as the default and invoke:\n\n```\nminicom -m\n```\n\nMinicom\
+    \ is now ready to talk to your phone! Type in `AT` and the program will respond\
+    \ with `OK`. Say you wish to make your phone number dial. Just type:\n\n```\n\
+    atdt 1234567;\n```\n\nThere are many other AT commands you can experiment with;\
+    \ try googling for `mobile phone AT commands` or something of that!\n\nAfter you\
+    \ have finished with your virtual port manipulations, you should remove:\n\n```\n\
+    rfcomm release /dev/rfcomm0\n```\n\nto `release` the serial-bluetooth link.\n\n\
+    # Python over a Bluetooth connection\n\nOnce you get the serial port emulation\
+    \ working, there is another interesting hack to explore. The Nokia Python distribution\
+    \ comes with a program called `bluetooth.py`. On one console of your Linux machine,\
+    \ run the command:\n\n```\nrfcomm listen /dev/rfcomm0\n```\n\nNow run `bluetooth.py`\
+    \ on the phone. You will see that after a few seconds, `rfcomm` will respond with\
+    \ a `connected` message. Once you get this message, take another console and run:\n\
+    \n```\nminicom -m\n```"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Mobile Phone with Linux and Python
+
+
+    What do you do on the screen? A Python interactive interpreter prompt! You can
+    now use in Python snippets and execute
+
+    them on the phone-the-fly! Isn''t that cool?
+
+
+    # Parting Thought
+
+
+    I was curious to know how Microsoft''s Windows operating system works, famous
+    for its ''ease of use''; would compare with Linux
+
+    when it comes to interacting with it my Ngage QD. I installed the Windows driver
+    for my no-name us-bluetooth dongle and tried
+
+    it the Nokia PC suite up and running on an XP machine - maybe it''s because I
+    am far more experienced in GNU/Linux than on MS
+
+    operating systems, I found the XP experience less ''friendly'' than MS would care
+    to admit. I believe that most of the ''user
+
+    friendliness'' of the Microsoft operating system comes from hardware vendors and
+    application developers tightly integrating the
+
+    products with the platform rather than any inherent quality of the OS as such.
+
+
+    # References
+
+
+    For a general introduction to Bluetooth technology, see here http://www.dell.com/downloads/vectors/2003_bluetooth.pdf.
+    An
+
+    interesting paper on Bluetooth security is available at http://www.nikula.cs.ht.fi/-jiiw/bluesec.html.
+
+
+    http://www.holtmann.org/ has plenty of information regarding Bluetooth and Linux;
+    I found the document ''Bluetooth Programming
+
+    for Linux'' (http://www.holtmann.org/papers/bluetooth/wic2003_slides.pdf) very
+    informative.
+
+
+    Lots of information about Python on series 60 modules is available at
+
+    http://www.postneo.com/postwiki/moin.cgi/PythonForSeries60/. ObexFTP seems to
+    be an interesting tool - you can get it from
+
+    http://triq.net/obex/. There are some documents floating on the net which describe
+    how you can do an NFS mount of your phone''s
+
+    file system - try a google search for more info.
+
+
+    Source/errata concerning this article will be available at http://pramode.net/ify-jun.'
+  merge: -1
+  pgno: 4
