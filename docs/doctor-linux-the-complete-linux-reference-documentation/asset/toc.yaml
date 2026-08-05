@@ -1,0 +1,2150 @@
+- - '#'
+  - Linux 参考：完整的 Linux 参考文档
+- - '#'
+  - Linux 项目简介
+- - '##'
+  - 摘要
+- - '##'
+  - Linux 简介
+- - '#'
+  - Linux 信息表
+- - '#'
+  - 硬件问题
+- - '#'
+  - 可用配置
+- - '##'
+  - 支持的硬件
+- - '###'
+  - 串口
+- - '###'
+  - 其他硬件
+- - '###'
+  - 语言与环境
+- - '###'
+  - 图形化环境
+- - '###'
+  - 文本处理
+- - '##'
+  - 获取 Linux
+- - '###'
+  - 匿名 FTP
+- - '##'
+  - Linux 的法律状态
+- - '##'
+  - 关于 Linux 的新闻
+- - '##'
+  - 未来
+- - '##'
+  - 本档
+- - '###'
+  - 摘要
+- - '###'
+  - 引言
+- - '##'
+  - 物理介质上的 Linux
+- - '##'
+  - A
+- - '##'
+  - 商业网络
+- - '##'
+  - 邮件服务器等
+- - '##'
+  - Linux 发行版
+- - '##'
+  - Linux 邮件列表
+- - '##'
+  - 各种程序的文档
+- - '##'
+  - 更多文档
+- - '##'
+  - 跟踪当前发布
+- - '##'
+  - 文档规范
+- - '#'
+  - 目录
+- - '##'
+  - Linux 内核教程 (Linux Kernel HOWTO)
+- - '##'
+  - Linux 键盘与控制台教程 (Linux Keyboard and Console HOWTO)
+- - '##'
+  - mSQL 和 perl Web 服务器小型教程 (A mSQL and perl Web Server Mini HOWTO)
+- - '##'
+  - Linux NET-3 教程, Linux 网络教程 (Linux NET-3-HOWTO, Linux Networking)
+- - '##'
+  - NFS（网络文件系统）教程 (NFS HOWTO)
+- - '##'
+  - Linux NIS(YP)/NIS+/NYS 教程 (Linux NIS(YP)/NIS+/NYS HOWTO)
+- - '##'
+  - Linux PCMIA 教程 (PCMIA HOWTO)
+- - '##'
+  - Pilot 教程 (Pilot HOWTO)
+- - '##'
+  - Linux PPP（拨点协议）教程 (Linux PPP HOWTO)
+- - '##'
+  - Linux 打印教程 (Linux Printing HOWTO)
+- - '##'
+  - Linux 打印使用教程 (Linux Printing Usage HOWTO)
+- - '##'
+  - RPM 教程 (RPM HOWTO)
+- - '##'
+  - Linux SCSI 教程 (Linux SCSI HOWTO)
+- - '##'
+  - Linux SCSI 编程教程 (Linux SCSI Programming HOWTO)
+- - '##'
+  - Linux 串口教程 (Linux Serial HOWTO)
+- - '##'
+  - Linux 串口编程教程 (Linux Serial Programming HOWTO)
+- - '##'
+  - Linux 影子密码教程 (Linux Shadow Password HOWTO)
+- - '##'
+  - SMB 教程 (SMB HOWTO)
+- - '##'
+  - Linux 音效教程 (Linux Sound HOWTO)
+- - '##'
+  - Linux 音效播放教程 (Linux Sound Playing HOWTO)
+- - '##'
+  - SRM 固件教程 (SRM Firmware HOWTO)
+- - '##'
+  - TeTeX 教程 (TeTeX HOWTO)
+- - '##'
+  - Linux 用户组教程 (Linux Group HOWTO)
+- - '##'
+  - 服务教程 (Virtual Services HOWTO)
+- - '##'
+  - 从 VMS 到 Linux 的教程 (From VMS to Linux HOWTO)
+- - '##'
+  - Linux WWW 教程 (Linux WWW-HOWTO)
+- - '##'
+  - XFree86 视频频率教程 (XFree86 Video Timings HOWTO)
+- - '##'
+  - 索引 (Index) ...... 1607
+- - '#'
+  - 第一部分 (Part I)
+- - '##'
+  - 给 UNIX 高手的提示
+- - '##'
+  - 读者群
+- - '##'
+  - 结构
+- - '##'
+  - 致谢
+- - '##'
+  - 鸣谢与法律声明
+- - '#'
+  - 第一章
+- - '##'
+  - Linux 简介
+- - '##'
+  - 关于本书
+- - '##'
+  - Linux 简史
+- - '##'
+  - 系统功能
+- - '##'
+  - 软件特性
+- - '##'
+  - 文本处理与文字处理
+- - '#'
+  - Linux 简介
+- - '##'
+  - 软件特性
+- - '###'
+  - 编程语言与工具
+- - '###'
+  - 窗口系统
+- - '###'
+  - 网络
+- - '###'
+  - 软件功能
+- - '###'
+  - 电信与 BBS 软件
+- - '###'
+  - 全球网
+- - '###'
+  - 与 MS-DOS 接口
+- - '###'
+  - Linux 简介
+- - '###'
+  - 其他应用程序
+- - '#'
+  - Linux 的设计与哲学
+- - '##'
+  - Linux 与其他操作系统的区别
+- - '##'
+  - Linux 简介
+- - '##'
+  - Linux 与其他 UNIX 实现
+- - '#'
+  - 硬件要求
+- - '###'
+  - 主板和 CPU 要求
+- - '###'
+  - 内存要求
+- - '#'
+  - 硬盘控制器要求
+- - '#'
+  - 硬盘空间要求
+- - '#'
+  - 显示器和视频适配器要求
+- - '#'
+  - 杂项硬件
+- - '#'
+  - 鼠标和指向设备
+- - '#'
+  - Linux 信息的来源
+- - '##'
+  - 在线文档
+- - '##'
+  - 万维网上的 Linux
+- - '##'
+  - 书籍和其他出版物
+- - '##'
+  - Usenet 新闻组
+- - '#'
+  - 获取帮助
+- - '##'
+  - 互联网邮件列表
+- - '##'
+  - Linux 简介
+- - '#'
+  - 第 2 章
+- - '##'
+  - 获取与安装 Linux
+- - '##'
+  - 通用安装
+- - '###'
+  - 主要 Linux 发行版
+- - '##'
+  - 常见问题
+- - '##'
+  - 硬件
+- - '#'
+  - 通用安装
+- - '###'
+  - 系统计划工作表
+- - '###'
+  - 通用
+- - '###'
+  - X-Windows
+- - '###'
+  - 网络
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - 简介
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)
+- - '#'
+  - dpkg --configure (package)
+- - '#'
+  - dpkg -r (package)
+- - '#'
+  - dpkg --purge (package)
+- - '#'
+  - dpkg -s (package)
+- - '#'
+  - dpkg -l (package-name)
+- - '#'
+  - dpkg -S (filename)
+- - '#'
+  - 关于 Debian/Linux
+- - '##'
+  - 邮件列表
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 致谢
+- - '##'
+  - 注意
+- - '##'
+  - 获取与安装
+- - '###'
+  - rpm -install (package).rpm
+- - '###'
+  - rpm -upgrade (package).rpm
+- - '###'
+  - rpm -erase (package).rpm
+- - '#'
+  - 关于 Red Hat Linux
+- - '##'
+  - 创建软盘
+- - '##'
+  - 安装媒体
+- - '##'
+  - 定制安装
+- - '##'
+  - Red Hat Linux
+- - '##'
+  - 最小安装
+- - '#'
+  - Caldera OpenLinux
+- - '##'
+  - 安装后步骤
+- - '##'
+  - Caldera OpenLinux
+- - '#'
+  - Linux Slackware
+- - '##'
+  - '简介 '
+- - '###'
+  - 历史
+- - '###'
+  - 选择方法
+- - '###'
+  - 分区策略
+- - '##'
+  - 鼠标
+- - '##'
+  - 硬盘和 CD-ROM
+- - '##'
+  - Linux 下的驱动器
+- - '##'
+  - 通用安装
+- - '##'
+  - X Window 系统
+- - '##'
+  - 网络
+- - '##'
+  - 分区策略
+- - '##'
+  - 通用安装方法
+- - '###'
+  - FIPS.EXE
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - dd if=(diskimage) of=(boot floppy) bs=512 conv=sync; sync
+- - '##'
+  - 磁盘分区
+- - '##'
+  - 准备启动 Linux
+- - '##'
+  - 在 DOS 下创建 Linux 启动盘
+- - '##'
+  - 在 Linux 下创建 Linux 启动盘
+- - '#'
+  - Debian GNU/Linux 安装特性
+- - '##'
+  - 获取软盘镜像
+- - '##'
+  - 下载软件包
+- - '##'
+  - 从软盘启动并安装 Debian GNU/Linux
+- - '#'
+  - Debian GNU/Linux
+- - '##'
+  - 分区硬盘
+- - '##'
+  - 初始化并激活交换磁盘分区
+- - '##'
+  - 初始化 Linux 磁盘分区
+- - '##'
+  - 安装基础系统
+- - '##'
+  - 安装操作系统内核
+- - '##'
+  - 配置设备驱动程序
+- - '##'
+  - 配置基础系统
+- - '##'
+  - 配置网络
+- - '##'
+  - 使硬盘可启动
+- - '##'
+  - 启动软盘
+- - '##'
+  - 重启系统
+- - '#'
+  - 运行 Debian GNU/Linux
+- - '##'
+  - 'dpkg '
+- - '#'
+  - dpkg -i (filename).deb
+- - '#'
+  - dpkg -unpack (filename)

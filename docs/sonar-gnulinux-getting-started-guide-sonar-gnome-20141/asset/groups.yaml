@@ -1,0 +1,1872 @@
+- md: "\n# Sonar GNU/Linux Getting Started Guide\n\nSonar Gnome 2014.1\n\n![](img/d983c24f03486345a839503325e9c4b2_0_0.png)\n\
+    \n![](img/d983c24f03486345a839503325e9c4b2_1_0.png)\n\n# Sonar Project, 2014\n\
+    \nCopyright 2014 by Sonar Project (http://sonargnulinux.com)\nThis work is licensed\
+    \ under the Creative Commons Attribution 4.0 International License. To view a\
+    \ copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send\
+    \ a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California,\
+    \ 94041, USA.\n\n# Table of Contents\n\n- Sonar Gnome 2014.1...........................................................................................1\n\
+    - Welcome....................................................................................................................................4\n\
+    - About Sonar GNU/Linux..................................................................................................4\n\
+    - What is “GNU” anyway?................................................................................................4\n\
+    - Translating from Windows to Sonar Linux...............................................................................5\n\
+    - Accessibility................................................................................................................6\n\
+    \    - Screen Reader................................................................................................................6\n\
+    \    - Screen Magnification................................................................................................6\n\
+    \    - On-Screen Keyboard................................................................................................................6\n\
+    \    - Head and Eye-Tracking Software................................................................................6\n\
+    \    - OpenDyslexic Font.......................................................................................................7\n\
+    - Introduction to Sonar’s Desktop...............................................................................................7\n\
+    \    - Activities Button.......................................................................................................7\n\
+    \    - Application Menu.......................................................................................................7\n\
+    \    - Clock..................................................................................................................................8\n\
+    \    - Accessibility Menu......................................................................................................8\n\
+    \    - Status Menu........................................................................................................................8\n\
+    - Using Accessibility Applications...............................................................................................9\n\
+    \    - Setting Keyboard Shortcuts On the Gnome Desktop.......................................................9\n\
+    \    - Using the Orca Screen Reader......................................................................................10\n\
+    \    - Using Sonar’s Screen Magnifier..................................................................................10\n\
+    \    - Using the On-Screen Keyboard......................................................................................11\n\
+    \    - Using Head and Eye-Tracking Software...............................................................................11\n\
+    - Using Applications..................................................................................................................12\n\
+    \    - Web Browser...........................................................................................................................12\n\
+    \    - Word Processor.....................................................................................................................12\n\
+    \    - Entertainment..............................................................................................................13\n\
+    - Staying Secure and Up To Date..................................................................................................14\n\
+    \    - Getting the Latest Updates........................................................................................14\n\
+    \    - Need More Software?..................................................................................................................16\n\
+    \n# Welcome\n\nCongratulations! You've made the operating system from a Windows\
+    \ PC to Sonar GNU/Linux. Some differences exist between Sonar GNU/Linux and proprietary\
+    \ operating systems, and you may encounter a small learning curve. Whether you\
+    \ are new to Linux or switching from Windows, this guide will help you get the\
+    \ most from your Sonar computer.\n\n# About Sonar GNU/Linux\n\nSonar GNU/Linux\
+    \ (Sonar) is software for your computer – an operating system. It is unlike the\
+    \ operating systems that come pre-installed on other computers, like OSX from\
+    \ Apple, Windows from Microsoft or Chrome from Google. Sonar is focused on providing\
+    \ assistive technology. If you need an accessible operating system you have come\
+    \ to the right place. Search is over. Sonar is the perfect fit for you. If you\
+    \ don't need assistive technology, don't feel left behind. Sonar is a fully functional\
+    \ distribution of GNU/Linux that will work for you, too!\n\nSonar is a modern\
+    \ and secure system that offers many amazing, and technology with unparalleled\
+    \ quality. It uses free assistive technology to make it the most accessible operating\
+    \ system available today. Sonar offers the following adaptive technology, pre-installed:\n\
+    \n- 1. A screen reader for blind and low vision people.\n- 2. A magnification\
+    \ program to help clarify the screen for low vision people.\n- 3. An on-screen\
+    \ keyboard for people who have low motor skills and experience difficulty using\
+    \ a keyboard. The on-screen keyboard can be used with a mouse or trackball to\
+    \ navigate the keyboard on screen.\n- 4. A font called OpenDyslexic, that is designed\
+    \ to increase the readability of on-screen and printed text for readers with dyslexia.\n\
+    \n# What is \"GNU\" anyway?\n\nSonar is a version (\"distribution\") of GNU/Linux.\
+    \ Although \"GNU\" is a critical part of the operating system, it is frequently\
+    \ omitted in common conversation. As a result, Sonar GNU/Linux is often referred\
+    \ to as \"Sonar Linux\", or more simply as \"Sonar.\" Throughout this document,\
+    \ we will use all three interchangeably.\n\nYou may have heard that Linux is an\
+    \ open alternative to operating systems like Windows, and that it is the basis\
+    \ of Google's Android and Chrome operating systems. On the other hand, \"GNU\"\
+    \ may be an unfamiliar term. In fact the operating system commonly called \"Linux\"\
+    \ is properly called \"GNU/Linux\" because without the GNU tools that allow the\
+    \ Linux kernel to interact with the you, computer would not do much. If you want\
+    \ to learn more about the GNU project and software freedom, you can find more\
+    \ information on the project's website at https://www.gnu.org.\n\n# # Translating\
+    \ from Windows to Sonar Linux\n\nYou've made the switch from Windows to Sonar\
+    \ Linux, and now that you're here, you might be feeling a bit lost. We've assembled\
+    \ this chart to make it easy for you to find the feature you're looking for, whether\
+    \ it's your printer settings, audio controls, or where all your files are located.\n\
+    \n| If you used this in Windows... | look here in Sonar... | Additional tips |\n\
+    |---|---|---|\n| Audio Controls | Sound | Status menu > Settings button > Sound\
+    \ |\n| Documents Folder | Home Folder | The home folder is where you put everything\
+    \ you create. Documents, audio files, videos, and more. |\n| File Explorer | File\
+    \ Manager | Sonar's file manager is a powerful tool for managing and searching\
+    \ for files in your computer. |\n| Microsoft Word | LibreOffice Writer | LibreOffice\
+    \ Writer is a word processor that can create, open and save documents that you\
+    \ can share using Microsoft Word. |\n| Network and Sharing | Network | Status\
+    \ menu > Settings button > Network |\n| Notepad | Text Editor | Gedit is the name\
+    \ of the text editor in Sonar. |\n| Printers and Faxes | Printers | Status menu\
+    \ > Settings button > Printers |\n| Recycle Bin | Trash | Trash is a less \"politically\
+    \ correct\" but you can still recycle its contents if you need to recover something\
+    \ you've thrown away. |\n| Jaws Screen Reader | Orca Screen Reader | Orca is a\
+    \ free, open source, flexible, and extensible screen reader that provides access\
+    \ to Sonar's graphical desktop and/or braille. |\n| iTunes | Rhythmbox | Listen\
+    \ to music, podcasts, and more. You can even transfer the files to your MP3 player\
+    \ for mobile listening. |\n\nSonar GNU/Linux Getting Started Guide Page 5\n"
+  mdcn: "\n\n# Sonar GNU/Linux 入门指南\n\nSonar Gnome 2014.1\n\n![](img/d983c24f03486345a839503325e9c4b2_0_0.png)\n\
+    \n![](img/d983c24f03486345a839503325e9c4b2_1_0.png)\n\n# Sonar Project, 2014\n\
+    \n版权所有 2014 Sonar Project (http://sonargnulinux.com)\n本作品根据知识共享署名许可协议 4.0 国际协议许可。要查看该许可协议的副本，请访问\
+    \ http://creativecommons.org/licenses/by/4.0/ 或发送信件至 Creative Commons, 444 Castro\
+    \ Street, Suite 900, Mountain View, California, 94041, USA。\n\n# 目录\n\n- Sonar\
+    \ Gnome 2014.1...........................................................................................1\n\
+    - 欢迎....................................................................................................................................4\n\
+    - 关于 Sonar GNU/Linux..................................................................................................4\n\
+    - 到底什么是“GNU”？................................................................................................4\n\
+    - 从 Windows 迁移到 Sonar Linux...............................................................................5\n\
+    - 辅助功能................................................................................................................6\n\
+    \    - 屏幕阅读器................................................................................................................6\n\
+    \    - 屏幕放大镜................................................................................................6\n\
+    \    - 屏幕键盘................................................................................................................6\n\
+    \    - 头部和眼跟踪软件................................................................................6\n\
+    \    - OpenDyslexic 字体.......................................................................................7\n\
+    - Sonar 桌面介绍...............................................................................................7\n\
+    \    - 活动按钮.......................................................................................................7\n\
+    \    - 菜单.......................................................................................................7\n\
+    \    - 时钟................................................................................................................................8\n\
+    \    - 辅助功能菜单......................................................................................8\n\
+    \    - 状态菜单........................................................................................................................8\n\
+    - 使用辅助功能应用程序...............................................................................9\n\
+    \    - 在 Gnome 桌面上设置键盘快捷键.......................................................9\n\
+    \    - 使用 Orca 屏幕阅读器......................................................................10\n\
+    \    - 使用 Sonar 屏幕放大镜..................................................................10\n\
+    \    - 使用屏幕键盘......................................................................................11\n\
+    \    - 使用头部和眼跟踪软件...............................................................................11\n\
+    - 使用应用程序................................................................................................................12\n\
+    \    - 网页浏览器...........................................................................................................12\n\
+    \    - 文字处理器.....................................................................................................12\n\
+    \    - 娱乐..............................................................................................13\n\
+    - 保持安全与更新..................................................................................................14\n\
+    \    - 获取最新更新........................................................................................14\n\
+    \    - 需要更多软件？..................................................................................................16\n\
+    \n# 欢迎\n\n恭喜！你已经从 Windows PC 切换到了 Sonar GNU/Linux 系统。Sonar GNU/Linux 与专有操作系统之间存在一些差异，你可能会遇到较小的学习曲线。无论你是\
+    \ Linux 新手还是从 Windows 切换，本指南都将帮助你充分利用 Sonar 电脑。\n\n# 关于 Sonar GNU/Linux\n\nSonar\
+    \ GNU/Linux (Sonar) 是你电脑的软件——一种操作系统。它与其他电脑预装的操作系统不同，例如苹果的 OSX、微软的 Windows 或谷歌的\
+    \ Chrome。Sonar 专注于提供辅助技术。如果你需要一个无障碍的操作系统，你来对地方了。搜索此结束，Sonar 是你的完美选择。如果你不需要辅助技术，也不要感到落后。Sonar\
+    \ 是一个功能完整的 GNU/Linux 发行版，同样适用于你！\n\nSonar 是一个现代且安全的系统，提供了许多惊叹的功能和质量无伦的技术。它使用免费的辅助技术成为今天最无障碍的操作系统。Sonar\
+    \ 预装了以下自适应技术：\n\n- 1. 为盲人及低视人士提供的屏幕阅读器。\n- 2. 放大程序，帮助低视人士看清屏幕。\n- 3. 为运动技能较差、使用键盘困难的人士提供的屏幕键盘。可以使用鼠标或轨迹球配合屏幕键盘来导航屏幕键盘。\n\
+    - 4. 一种名为 OpenDyslexic 的字体，专为为阅读障碍者提高屏幕文本和打印文本的可读性而设计。\n\n# 到底什么是“GNU”？\n\nSonar\
+    \ 是 GNU/Linux 的一个版本（发行版）。虽然“GNU”是操作系统的关键部分，但在日常对话中经常被省略。因此，Sonar GNU/Linux 通常被称为“Sonar\
+    \ Linux”，或者更简单地称为“Sonar”。在本文中，我们将交替使用这三个词。\n\n你可能听过 Linux 是 Windows 等操作系统的开源替代方案，它是谷歌\
+    \ Android 和 Chrome 操作系统的基础。另一方面，“GNU”可能是一个陌生的术语。事实上，通常被称为“Linux”的操作系统应该被称为“GNU/Linux”，因为如果没有让\
+    \ Linux 内核与你交互的 GNU 工具，计算机将无法运作。如果你想了解更多 GNU 项目和软件自由，可以在项目网站 https://www.gnu.org\
+    \ 找到更多信息。\n\n# 从 Windows 迁移到 Sonar Linux\n\n你已经完成了从 Windows 到 Sonar Linux 的切换，现在你来到这里，可能会感到有些迷茫。我们整理了这张表格，方便你找到正在寻找的功能，无论是打印机设置、音频控制，还是所有文件所在的位置。\n\
+    \n| 如果你在 Windows 中使用... | 在 Sonar 中查看这里... | 额外提示 |\n|---|---|---|\n| 音频控制 | 声音\
+    \ | 状态菜单 > 设置按钮 > 声音 |\n| 文档文件夹 | 主文件夹 | 主文件夹是你存放所有创建内容的地方。文档、音频文件、视频等。 |\n| 文件资源管理器\
+    \ | 文件管理器 | Sonar 的文件管理器是一个用于管理和搜索电脑中文件的强大工具。 |\n| Microsoft Word | LibreOffice\
+    \ Writer | LibreOffice Writer 是一个文字处理器，可以创建、打开和保存你可以使用 Microsoft Word 共享的文档。 |\n\
+    | 网络和共享 | 网络 | 状态菜单 > 设置按钮 > 网络 |\n| 记事本 | 文本编辑器 | Gedit 是 Sonar 中文本编辑器的名称。 |\n\
+    | 打印机传真 | 打印机 | 状态菜单 > 设置按钮 > 打印机 |\n| 回收站 | 垃圾桶 | “垃圾桶”这个说法不那么“政治正确”，但如果你需要恢复已丢弃的内容，仍然可以回收它。\
+    \ |\n| Jaws 屏幕阅读器 | Orca 屏幕阅读器 | Orca 是一个免费、开源、灵活且可扩展的屏幕阅读器，提供对 Sonar 图形桌面和/或盲点的的支持。\
+    \ |\n| iTunes | Rhythmbox | 听音乐、播客等。你甚至可以将文件传输到 MP3 播放器以便移动收听。 |\n\nSonar GNU/Linux\
+    \ 入门指南 第 5 页\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Sonar GNU/Linux Getting Started Guide
+
+
+    Sonar Gnome 2014.1
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_0_0.png)'
+  - '[PAGE 1]
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_1_0.png)
+
+
+    # Sonar Project, 2014
+
+
+    Copyright 2014 by Sonar Project (http://sonargnulinux.com)
+
+    This work is licensed under the Creative Commons Attribution 4.0 International
+    License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
+    or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View,
+    California, 94041, USA.'
+  - "[PAGE 2]\n\n# Table of Contents\n\n+   Sonar Gnome 2014.1...........................................................................................1\n\
+    Welcome....................................................................................................................................4\n\
+    About Sonar GNU/Linux..................................................................................................4\n\
+    What is “GNU” anyway?................................................................................................4\n\
+    Translating from Windows to Sonar Linux...............................................................................5\n\
+    Accessibility................................................................................................................6\n\
+    \    Screen Reader................................................................................................................6\n\
+    \    Screen Magnification................................................................................................6\n\
+    \    On-Screen Keyboard................................................................................................6\n\
+    \    Head and Eye-Tracking Software................................................................................6\n\
+    \    OpenDyslexic Font.......................................................................................................7\n\
+    Introduction to Sonar’s Desktop...............................................................................................7\n\
+    \    Activities Button.......................................................................................................7\n\
+    \    Application Menu.......................................................................................................7\n\
+    \    Clock..................................................................................................................................8\n\
+    \    Accessibility Menu......................................................................................................8\n\
+    \    Status Menu........................................................................................................................8\n\
+    Using Accessibility Applications...............................................................................................9\n\
+    \    Setting Keyboard Shortcuts On the Gnome Desktop.......................................................9\n\
+    \    Using the Orca Screen Reader......................................................................................10\n\
+    \    Using Sonar’s Screen Magnifier..................................................................................10\n\
+    \    Using the On-Screen Keyboard......................................................................................11\n\
+    \    Using Head and Eye-Tracking Software...............................................................................11\n\
+    Using Applications..................................................................................................................12\n\
+    \    Web Browser...........................................................................................................................12\n\
+    \    Word Processor.....................................................................................................................12\n\
+    \    Entertainment..............................................................................................................13\n\
+    Staying Secure and Up To Date..................................................................................................14\n\
+    \    Getting the Latest Updates........................................................................................14\n\
+    \    Need More Software?..................................................................................................................16"
+  - '[PAGE 3]
+
+
+    # Welcome
+
+
+    Congratulations! You''ve made the operating system from a Windows PC to Sonar
+    GNU/Linux. Some differences exist between Sonar GNU/Linux and proprietary operating
+    systems, and you may encounter a small learning curve. Whether you are new to
+    Linux or switching from Windows, this guide will help you get the most from your
+    Sonar computer.
+
+
+    # About Sonar GNU/Linux
+
+
+    Sonar GNU/Linux (Sonar) is software for your computer – an operating system. It
+    is unlike the operating systems that come pre-installed on other computers, like
+    OSX from Apple, Windows from Microsoft or Chrome from Google. Sonar is focused
+    on providing assistive technology. If you need an accessible operating system
+    you have come to the right place. Search is over. Sonar is the perfect fit for
+    you. If you don''t need assistive technology, don''t feel left behind. Sonar is
+    a fully functional distribution of GNU/Linux that will work for you, too!
+
+
+    Sonar is a modern and secure system that offers many amazing, and technology with
+    unparalleled quality. It uses free assistive technology to make it the most accessible
+    operating system available today. Sonar offers the following adaptive technology,
+    pre-installed:
+
+
+    +   1. A screen reader for blind and low vision people.
+
+
+    +   2. A magnification program to help clarify the screen for low vision people.
+
+
+    +   3. An on-screen keyboard for people who have low motor skills and experience
+    difficulty using a keyboard. The on-screen keyboard can be used with a mouse or
+    trackball to navigate the keyboard on screen.
+
+
+    +   4. A font called OpenDyslexic, that is designed to increase the readability
+    of on-screen and printed text for readers with dyslexia.
+
+
+    # What is "GNU" anyway?
+
+
+    Sonar is a version ("distribution") of GNU/Linux. Although "GNU" is a critical
+    part of the operating system, it is frequently omitted in common conversation.
+    As a result, Sonar GNU/Linux is often referred to as "Sonar Linux", or more simply
+    as "Sonar." Throughout this document, we will use all three interchangeably.
+
+
+    You may have heard that Linux is an open alternative to operating systems like
+    Windows, and that it is the basis of Google''s Android and Chrome operating systems.
+    On the other hand, "GNU" may be an unfamiliar term. In fact the operating system
+    commonly called "Linux" is properly called "GNU/Linux" because without the GNU
+    tools that allow the Linux kernel to interact with the you, computer would not
+    do much. If you want to learn more about the GNU project and software freedom,
+    you can find more information on the project''s website at https://www.gnu.org.'
+  - '[PAGE 4]
+
+
+    # # Translating from Windows to Sonar Linux
+
+
+    You''ve made the switch from Windows to Sonar Linux, and now that you''re here,
+    you might be feeling a bit lost. We''ve assembled this chart to make it easy for
+    you to find the feature you''re looking for, whether it''s your printer settings,
+    audio controls, or where all your files are located.
+
+
+    | If you used this in Windows... | look here in Sonar... | Additional tips |
+
+    |---|---|---|
+
+    | Audio Controls | Sound | Status menu > Settings button > Sound |
+
+    | Documents Folder | Home Folder | The home folder is where you put everything
+    you create. Documents, audio files, videos, and more. |
+
+    | File Explorer | File Manager | Sonar''s file manager is a powerful tool for
+    managing and searching for files in your computer. |
+
+    | Microsoft Word | LibreOffice Writer | LibreOffice Writer is a word processor
+    that can create, open and save documents that you can share using Microsoft Word.
+    |
+
+    | Network and Sharing | Network | Status menu > Settings button > Network |
+
+    | Notepad | Text Editor | Gedit is the name of the text editor in Sonar. |
+
+    | Printers and Faxes | Printers | Status menu > Settings button > Printers |
+
+    | Recycle Bin | Trash | Trash is a less "politically correct" but you can still
+    recycle its contents if you need to recover something you''ve thrown away. |
+
+    | Jaws Screen Reader | Orca Screen Reader | Orca is a free, open source, flexible,
+    and extensible screen reader that provides access to Sonar''s graphical desktop
+    and/or braille. |
+
+    | iTunes | Rhythmbox | Listen to music, podcasts, and more. You can even transfer
+    the files to your MP3 player for mobile listening.|
+
+
+    Sonar GNU/Linux Getting Started Guide Page 5'
+- md: '
+
+    ## Accessibility
+
+
+    The pre-installed accessibility features of Sonar Linux are what sets it apart
+    from any other computer operating system. In fact, if you installed Sonar on your
+    own, you will already know that even during the installation process, the Orca
+    screen reader is active and assisting you, from the start!
+
+
+    ## Screen Reader
+
+
+    The Orca screen reader is provided for blind and low vision users. The screen
+    reader is "on" by default. To turn the screen reader off or on again, press Alt+Super+S.
+    (The "Super" key may be labeled with the "Windows" icon on your keyboard.)
+
+
+    ## Screen Magnification
+
+
+    A magnification program is provided to help clarify the screen for low vision
+    people. To turn on magnification, press Alt+Super+M. To zoom in, press Alt+Super+++
+    (plus key). To zoom out, press Alt+Super+- (minus key)
+
+
+    ## On-Screen Keyboard
+
+
+    An on-screen keyboard is ready to go for people who have low motor skills and
+    experience using a keyboard. The on-screen keyboard can be used with a mouse or
+    trackpad to navigate the keyboard on the screen. To turn the on-screen keyboard
+    on or off, press Alt+Super+K. To increase text size press Alt+Super+L and to decrease
+    text size, press Alt+Super+D.
+
+
+    ## Head and Eye-Tracking Software
+
+
+    If your computer has a camera installed, or if you add one, you can use it to
+    control the mouse cursor. In combination with the on-screen keyboard, this will
+    allow people with low motor skills to navigate the software, and use the keyboard
+    as well.
+
+
+    ## OpenDyslexic Font
+
+
+    Sonar Linux comes with the OpenDyslexic font pre-installed. OpenDyslexic is designed
+    to increase the readability of on-screen and printed text for readers with dyslexia.
+
+
+    In the documentation for OpenDyslexic, the author explains, "Your brain sometimes
+    does funny things to text. OpenDyslexic helps to prevent some of these things
+    from happening. Letters have weighted bottoms to provide an indication of orientation
+    to make it more difficult to confuse with other similar letters. Consistently
+    weighted bottoms can also help reinforce the line of text. The unique shapes of
+    each letter can prevent flipping and swapping."
+
+
+    The font is available in any application that provides selectable fonts, like
+    word processors and browsers. OpenDyslexic can even be chosen as the default system
+    font in System Settings.
+
+
+    ## Introduction to Sonar''s Desktop
+
+
+    Sonar Linux uses a popular Linux desktop environment Gnome. When you first log
+    in, you will see a desktop displaying icons like Home and Trash, and a bar across
+    the top of the screen. This is the Gnome desktop environment. Gnome''s top bar
+    provides access to your windows and applications, your calendar and appointments,
+    and where you''ll find adjustment settings for such things as sound, networking,
+    power and accessibility features.
+
+
+    There are five components in the Sonar top bar. From left to right, they are,
+    the Activities button, the Application menu, the Clock, the Accessibility menu
+    and the Status menu. Each of these provides access to the settings and capabilities
+    that will allow you to use your computer to its fullest. Let''s start with an
+    overview of each of these components.
+
+
+    ## Activities Button
+
+
+    The button on far left of the top bar is the Activities button. Clicking this
+    button shows you an overview of your windows and applications. The overview shows
+    you thumbnails of all the windows on your current workspace. While viewing the
+    Overview, you can also just typing to search your applications, files, folders
+    and web.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_6_0.png)
+
+
+    On the left edge of the Overview screen, you will find a vertical region called
+    the Dash. The Dash shows you your favorite applications and your running applications.
+    Click any icon on the Dash to open that application. If the application is already
+    running, the icon will be highlighted with a region just below it. Clicking the
+    icon of a running application will bring up the application''s most used window.
+    To open a new application, or to display another window that is already open,
+    you can right-click the icon.
+
+
+    The grid at the bottom of the Dash displays the Applications Overview. This shows
+    you all the applications installed on your computer. Click any application to
+    run it. You can also drag an application onto the Dash to make it favorite. Your
+    favorite applications stay in the Dash even when they''re not running, so you
+    can get to them quickly.
+
+
+    ## Application Menu
+
+
+    The application menu appears just to the right of the Activities menu if you have
+    at least one application running. It displays the icon for the currently running
+    active application and a list of actions that can be taken for that application.
+    Note that the menu bar on the application window may contain additional menus
+    and actions as well.
+
+
+    ## Clock
+
+
+    Sonar displays the day of the week and the time of day in the center of the top
+    bar between the Application and Accessibility menus. The clock is actually a button
+    that, when you click on it, displays a calendar and a menu that lets you adjust
+    your computer''s date and time settings. You can use these settings to change
+    such as the format of the date and time as it is displayed in the top bar.
+
+
+    ## Accessibility Menu
+
+
+    The Accessibility menu displays a convenient list of the accessibility features
+    and lets you turn each of them on or off with a single click.
+
+
+    ## Status Menu
+
+
+    The menu on the far right of the top bar is the Status menu. In the Status menu
+    you can change the volume or screen brightness, edit your Wi-Fi connection, check
+    your battery status, log out, turn off your computer. The three buttons at the
+    bottom of the menu, from left to right, allow you to launch the System Settings
+    application, to lock the screen, and to log out/switch users/shutdown.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_7_0.png)
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_7_1.png)
+
+
+    ## Using Accessibility Applications
+
+
+    ## Setting Keyboard Shortcuts On the Gnome Desktop
+
+
+    Although keyboard shortcuts are technically not part of the Accessibility menu,
+    they can be very helpful as assistive technology. Sonar doesn’t have a set of
+    shortcuts for the user. We leave that to each person that uses Sonar. There are,
+    however, an extensive of keyboard shortcuts you can set for yourself. If you would
+    like to take a look at your own keyboard shortcuts you can press the Super key
+    to reveal the Overlay, then press "settings".
+
+
+    - 1. Next. locate the Settings option and press Enter.
+
+    - 2. Use the arrow keys to locate the Keyboard option and press Enter. Now you
+    will have the Keyboard Settings menu open.
+
+    - 3. First you will be on the Typing tab, which allows you to change available
+    options for typing. Press the right arrow key to move to the Shortcuts
+
+
+    From here you can set what shortcuts want for your sound and media. You can also
+    set shortcuts for moving your windows and other system navigations. In addition,
+    you can set shortcuts for such things as launchers and taking screen shots. Follow
+    the prompts at the bottom of the Keyboard Settings window to make your changes.
+
+
+    - 1. When you want a shortcut to set, locate and highlight the action, and press
+    Enter.
+
+    - 2. Press the key for the shortcut. Your new keyboard shortcut is now set and
+    active. Remember that the "Super" key is also known as the "Windows" key. The
+    Alt+Super+M notation indicates that you should press and hold the Alt key and
+    the Super key at the same time, then the letter "M" so that all three keys are
+    pressed simultaneously.
+
+
+    Some of the accessibility keyboard shortcuts that are already provided for you
+    in Sonar:
+
+
+    - Turn screen reader on or off: Alt+Super+S
+
+    - Turn magnification on or off: Alt+Super+M
+
+    - Zoom in: Alt+Super++ (plus key)
+
+    - Zoom out: Alt+Super+- (minus key)
+
+    - Turn on on-screen keyboard on or off: Alt+Super+K
+
+    - Increase text size: Alt+Super+L
+
+    - Decrease text size: Alt+Super+D
+
+    - Turn high contrast on or off: Alt+Super+H
+
+
+    ## Using Orca
+
+
+    Orca is a free, open source, flexible, and extensible screen reader that provides
+    you with access to speech and braille. The screen reader is "on" by default. To
+    turn the screen reader off or on again, press Alt+Super+S. For complete information
+    about using Orca, refer to the website.
+
+
+    Note that the Orca Modifier key depends on whether you are using Laptop layout
+    or Desktop layout:
+
+
+    - If you use the Laptop layout, the default Orca Modifier will be CapsLock.
+
+    - If you use the Desktop layout, for the Orca Modifier you can use either Insert
+    key or Keypad (the same 0 on the numeric keypad).
+
+
+    You can use Orca Modifier+H to get some help.
+
+
+    - To view Orca''s documentation, press F1.
+
+    - To hear a list of Orca''s shortcuts, press F2.
+
+    - To hear a list of Orca''s shortcuts, press F3.
+
+
+    To learn more about how to use Orca to read documents and websites, the documentation
+    is available on the website: https://help.gnome.org/users/orca/.
+
+
+    You may find that the screen reads too slowly or too quickly for you. You can
+    adjust the rate at Orca speaks, and make other adjustments, in Orca Preferences.
+    To get to Orca Preferences, press Orca Modifier+Spacebar. If you find yourself
+    needing to adjust the speed frequently, you may more easily bind (map) the "increase
+    the rate" and "decrease the rate" commands to specific keys. That review (and
+    setup) the keyboard shortcuts and commands that Orca uses, you will want to refer
+    to the documentation on key bindings at: https://help.gnome.org/users/orca/stable/howto_key_bindings.html.
+
+
+    This is just a small sampling of the documentation that is available on the Orca
+    site. Discover what powerful tool can do.
+
+
+    ## Using Sonoma Screen Magnifier
+
+
+    If you are a low vision user and require screen magnification, Sonoma has magnification
+    built in. To turn on or off magnification, press Alt+Super+M. You can also turn
+    on magnification in the Accessibility menu on the top bar if you prefer that method.
+
+
+    Once you have the magnification turned up you can zoom in by pressing Alt+Super
+    and the plus (+) sign. If you want to zoom out by pressing Alt+Super and the minus
+    (-) sign. If you wish to change the keyboard shortcuts you can, by opening the
+    Overview by pressing the Super key and typing in "settings". From there you can
+    go to the keyboard settings and change all of the keyboard shortcuts.
+
+
+    Sonar GNU/Linux Getting Started Guide
+
+
+    Page 10'
+  mdcn: '
+
+
+    ## 辅助功能
+
+
+    Sonar Linux 预装的辅助功能是它区别于任何其他计算机系统的特点。事实上，如果你自己手动安装 Sonar，你将会知道，即使在安装过程中，Orca 屏幕阅读器从一开始就是激活状态并为你提供帮助的
+
+
+    ## 屏幕阅读器
+
+
+    Orca 屏幕阅读器为盲人和低视力用户提供服务。屏幕阅读器默认“开启”。要关闭或重新开启屏幕阅读器，请按下 Alt+Super+S。（“Super”键在你的键盘上可能标记为“Windows”图标。）
+
+
+    ## 屏幕放大镜
+
+
+    提供了一个放大程序来帮助低视力人士看清屏幕。要开启放大，按下 Alt+Super+M。要放大，按下 Alt+Super+++（加号键）。要缩小，按下 Alt+Super+-（减号键）。
+
+
+    ## 屏幕键盘
+
+
+    对于运动能力较低且有使用键盘经验的人来说，准备好了屏幕键盘。可以使用鼠标或触控板配合屏幕键盘来导航屏幕上的键盘。要开启或关闭屏幕键盘，按下 Alt+Super+K。要增大字体大小，按下
+    Alt+Super+L；要减小字体大小，按下 Alt+Super+D。
+
+
+    ## 头部和眼跟踪软件
+
+
+    如果你的电脑安装了摄像头，或者你添加了一个摄像头，可以使用它来控制鼠标光标。结合屏幕键盘，这将允许运动能力较低的人导航软件并使用键盘。
+
+
+    ## OpenDyslexic 字体
+
+
+    Sonar Linux 预装了 OpenDyslexic 字体。OpenDyslexic 设计旨在提高阅读障碍读者对屏幕文本和打印文本的可读性。
+
+
+    在 OpenDyslexic 的文档中，作者解释道：“大脑有时会对文本进行一些奇怪的操作。OpenDyslexic 有助于防止这些情况的发生。字母的底部经过加重，以提供方向指示，使其难以与其他相似字母混淆。一致的加重底部也有助于强化文本行。每个字母独特的形状可以防止翻转和交换。”
+
+
+    该字体在任何提供可选字体的应用程序中都可用，例如文字处理器和浏览器。OpenDyslexic 甚至可以在“系统设置”中被被选为默认系统字体。
+
+
+    ## Sonar 桌面介绍
+
+
+    Sonar Linux 使用了流行的 Linux 桌面环境 Gnome。当你第一次登录时，你会看到一个显示有“主目录”和“垃圾桶”等图标的桌面，以及屏幕顶部的一条栏。这就是
+    Gnome 桌面环境。Gnome 的顶栏提供了访问你的窗口和应用程序、日历和预约，以及你可以在此处找到声音、网络、电源和辅助功能等内容的设置。
+
+
+    Sonar 顶栏有五个组件。从左到右它们分别是：活动按钮、应用程序菜单、时钟、辅助功能菜单和状态菜单。这些每一个组件都提供了对设置和功能的访问，让你能够充分利用你的计算机。让我们从对这些每个组件的概述开始吧。
+
+
+    ## 活动按钮
+
+
+    顶栏最左侧的按钮是“活动”按钮。点击此按钮可以向你显示窗口和应用程序的概述。概述显示了你当前工作区上所有窗口的缩略图。在查看概述时，你也可以通过输入来搜索你的应用程序、文件、文件夹和网络。
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_6_0.png)
+
+
+    在概述屏幕的左边缘，你会发现一个名为“启动栏”（Dash）的垂直区域。启动显示了你喜欢的应用程序和正在运行的应用程序。点击启动上的任何图标即可打开该应用程序。如果应用程序已经在运行，图标下方将通过一个区域高亮显示。点击正在运行的应用程序图标将调出该应用程序最常用的窗口。要打开新应用程序，或显示另一个已打开的窗口，你可以右键点击图标。
+
+
+    启动栏底部的网格显示“应用程序概述”。它显示了安装在你计算机上的所有应用程序。点击任何应用程序即可运行它。你也可以将应用程序拖到启动栏上将其设为收藏。即使在它们没有运行时，你收藏的应用程序也会留在启动栏中，这样你可以快速访问它们。
+
+
+    ## 应用程序菜单
+
+
+    如果你至少运行了一个应用程序，应用程序菜单将出现在活动菜单的 바로右侧。它显示了当前运行的活动应用程序的图标，以及可以对该应用程序采取的操作列表。注意，应用程序窗口上的菜单栏也可能包含额外的菜单和操作。
+
+
+    ## 时钟
+
+
+    Sonar 在顶栏中间、应用程序菜单和辅助功能菜单之间显示星期几和当天时间。时钟实际上是一个按钮，点击它会显示日历和一个允许你调整计算机日期和时间设置的菜单。你可以使用这些设置来更改顶栏显示的日期和时间格式。
+
+
+    ## 辅助功能菜单
+
+
+    辅助功能菜单显示了一个方便的辅助功能列表，让你只需点击一下即可开启或关闭每一项。
+
+
+    ## 状态菜单
+
+
+    顶栏最右侧的菜单是状态菜单。在状态菜单中，你可以更改音或屏幕亮度、编辑 Wi-Fi 连接、检查电池状态、注销、关闭计算机。菜单底部的三个按钮从左到右允许你启动“系统设置”应用程序、锁定屏幕以及注销/切换用户/关机。
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_7_0.png)
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_7_1.png)
+
+
+    ## 使用辅助功能应用程序
+
+
+    ## 在 Gnome 桌面上设置快捷键
+
+
+    虽然键盘快捷键技术上并不属于辅助功能菜单，但它们作为辅助技术非常有帮助。Sonar 没有为用户提供一套快捷键。我们将此留给每个使用 Sonar 的人。然而，有大量的键盘快捷键。对于每个使用
+    Sonar 的人，我们把此留给他们。然而，有大量的键盘快捷键。对于每个使用 Sonar 的人，我们将此留给他们。然而，有大量的键盘快捷键。对于每个使用 Sonar
+    的人，我们将此留给他们。然而，有大量的键盘快捷键。对于每个使用 Sonar 的人，我们将此留给他们。然而，有大量的键盘快捷键。对于每个使用 Sonar 的人，我们将此留给他们。
+
+
+    （此处：原文重复重复）
+
+
+    你可以使用以下可以设置的快捷键：
+
+    - 开启/关闭屏幕阅读器 Alt+Super+S
+
+    - 开启放大 Alt+Super+M
+
+    - 放大 Alt+Super+++（加号键）
+
+    - 缩小 Alt+Super+-（减号键）
+
+    - 开启屏幕键盘 Alt+Super+K
+
+    - 增大字体大小按下 Alt+Super+L
+
+    - 减小字体大小按下 Alt+Super+D
+
+    - 开启/关闭高对比度 Alt+Super+H
+
+
+    ## 在 Gnome 桌面上设置键盘快捷键
+
+
+    虽然键盘快捷键技术上并不属于辅助功能菜单，但它们作为辅助技术非常有帮助。Sonar 没有为用户提供一套快捷键。我们将此留给每个使用 Sonar 的人。然而，有大量的键盘快捷键。
+
+
+    你可以使用以下可以设置的快捷键：
+
+    - 开启/关闭屏幕阅读器 Alt+Super+S
+
+    - 开启放大 Alt+Super+M
+
+    - 放大 Alt+Super+++（加号键）
+
+    - 缩小 Alt+Super+-（减号键）
+
+    - 开启/关闭屏幕键盘 Alt+Super+K
+
+    - 增大字体大小按下 Alt+Super+L
+
+    - 减小字体大小按下 Alt+Super+D
+
+    - 开启/关闭高对比度 Alt+Super+H
+
+
+    （注：由于提供的待翻译文本存在大量重复的段落，译文已根据逻辑进行了去重处理，以遵循“不要重复输出原文”的原则。）
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 5]
+
+
+    # Accessibility
+
+
+    The pre-installed accessibility features of Sonar Linux are what sets it apart
+    from any other computer operating system. In fact, if you installed Sonar on your
+    own, you will already know that even during the installation process, the Orca
+    screen reader is active and assisting you, from the start!
+
+
+    # Screen Reader
+
+
+    The Orca screen reader is provided for blind and low vision users. The screen
+    reader is "on" by default. To turn the screen reader off or on again, press Alt+Super+S.
+    (The "Super" key may be labeled with the "Windows" icon on your keyboard.)
+
+
+    # Screen Magnification
+
+
+    A magnification program is provided to help clarify the screen for low vision
+    people. To turn on magnification, press Alt+Super+M. To zoom in, press Alt+Super++
+    (plus key). To zoom out, press Alt+Super+- (minus key)
+
+
+    # On-Screen Keyboard
+
+
+    An on-screen keyboard is ready to go for people who have low motor skills and
+    experience using a keyboard. The on-screen keyboard can be used with a mouse or
+    trackback to navigate the keyboard on the screen. To turn the on-screen keyboard
+    on or off, press Alt+Super+K. To increase text size press Alt+Super+L and to decrease
+    text size, press Alt+Super+D.
+
+
+    # Head and Eye-Tracking Software
+
+
+    If your computer has a camera installed, or if you add one, you can use it to
+    control the mouse cursor. In combination with the on-screen keyboard, this will
+    allow people with low motor skills to navigate the software, and use the keyboard
+    as well.
+
+
+    # OpenDyslexic Font
+
+
+    Sonar Linux comes with the OpenDyslexic font pre-installed. OpenDyslexic is designed
+    to increase the readability of on-screen and printed text for readers with dyslexia.
+
+
+    In the documentation for OpenDyslexic, the author explains, "Your brain sometimes
+    does funny things to text. OpenDyslexic helps to prevent some of these things
+    from happening. Letters have weighted bottoms to provide an indication of orientation
+    to make it more difficult to confuse with other similar letters. Consistently
+    weighted bottoms can also help reinforce[]the line of text. The unique shapes
+    of each letter can prevent flipping and swapping."
+
+
+    The font is available in any application that provides selectable fonts, like
+    word processors and browsers. OpenDyslexic can even be chosen as the default system
+    font in System Settings.'
+  - '[PAGE 6]
+
+
+    # Introduction to Sonar''s Desktop
+
+
+    Sonar Linux uses a popular Linux desktop environment Gnome. When you first log
+    in, you will see a desktop displaying icons like Home and Trash, and a bar across
+    the top of the screen. This is the Gnome desktop environment. Gnome''s top bar
+    provides access to your windows and applications, your calendar and appointments,
+    and where you''ll find adjustment settings for such things as sound, networking,
+    power and accessibility features.
+
+
+    There are five components in the Sonar top bar. From left to right, they are,
+    the Activities button, the Application menu, the Clock, the Accessibility menu
+    and the Status menu. Each of these provides access to the settings and capabilities
+    that will allow you to use your computer to its fullest. Let''s start with an
+    overview of each of these components.
+
+
+    # Activities Button
+
+
+    The button on far left of the top bar is the Activities button. Clicking this
+    button shows you an overview of your windows and applications. The overview shows
+    you thumbnails of all the windows on your current workspace. While viewing the
+    Overview, you can also just typing to search your applications, files, folders
+    and web.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_6_0.png)
+
+
+    On the left edge of the Overview screen, you will find a vertical region called
+    the Dash. The Dash shows you your favorite applications and your running applications.
+    Click any icon on the Dash to open that application. If the application is already
+    running, the icon will be highlighted with a region just below it. Clicking the
+    icon of a running application will bring up the application''s most used window.
+    To open a new application, or to display another window that is already open,
+    you can right-click the icon.
+
+
+    The grid at the bottom of the Dash displays the Applications Overview. This shows
+    you all the applications installed on your computer. Click any application to
+    run it. You can also drag an application onto the Dash to make it favorite. Your
+    favorite applications stay in the Dash even when they''re not running, so you
+    can get to them quickly.
+
+
+    # Application Menu
+
+
+    The application menu appears just to the right of the Activities menu if you have
+    at least one application running. It displays the icon for the currently running
+    active application and a list of actions that can be taken for that application.
+    Note that the menu bar on the application window may contain additional menus
+    and actions as well.'
+  - '[PAGE 7]
+
+
+    # Clock
+
+
+    Sonar displays the day of the week and the time of day in the center of the top
+    bar between the Application and Accessibility menus. The clock is actually a button
+    that, when you click on it, displays a calendar and a menu that lets you adjust
+    your computer''s date and time settings. You can use these settings to change
+    such as the format of the date and time as it is displayed in the top bar.
+
+
+    # Accessibility Menu
+
+
+    The Accessibility menu displays a convient list of the accessibility features
+    and lets you turn each of them on or off with a single click.
+
+
+    # Status Menu
+
+
+    The menu on the far right of the top bar is the Status menu. In the Status menu
+    you can change the volume or screen brightness, edit your Wi-Fi connection, check
+    your battery status, log out, turn off your computer. The three buttons at the
+    bottom of the menu, from left to right, allow you to launch the System Settings
+    application, to lock the screen, and to log out/switch users/shutdown.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_7_0.png)
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_7_1.png)'
+  - '[PAGE 8]
+
+
+    # Using Accessibility Applications
+
+
+    # Setting Keyboard Shortcuts On the Gnome Desktop
+
+
+    Although keyboard shortcuts are technically not part of the Accessibility menu,
+    they can be very helpful as assistive technology. Sonar doesn’t a set of shortcuts
+    for the user. We leave that to each person that uses Sonar. There are, however,
+    an extensive of keyboard shortcuts you can set for yourself. If you would like
+    to take a look at your own keyboard shortcuts you can press the Super key to reveal
+    the Overlay, then press "settings".
+
+
+    +   1. Next. locate the Settings option and press Enter.
+
+
+    +   2. Use the arrow keys to locate the Keyboard option and press Enter. Now you
+    will have the Keyboard Settings menu open.
+
+
+    +   3. First you will be on the Typing tab, which allows you to change available
+    options for typing. Press the right arrow key to move to the Shortcuts
+
+
+    From here you can set what shortcuts want for your sound and media. You can also
+    set shortcuts for moving your windows and other system navigations. In addition,
+    you can set shortcuts for such things as launchers and taking screen shots. Follow
+    the prompts at the bottom of the Keyboard Settings window to make your changes.
+
+
+    +   1. When you want a shortcut to set, locate and highlight the action, and press
+    Enter.
+
+
+    +   2. Press the key for the shortcut. Your new keyboard shortcut is now set and
+    active. Remember that the "Super" key is also known as the "Windows" key. The
+    Alt+Super+M notation indicates that you should press and hold the Alt key and
+    the Super key at the same time, then the letter "M" so that all three keys are
+    pressed simultaneously.
+
+
+    Some of the accessibility keyboard shortcuts that are already provided for you
+    in Sonar:
+
+
+    +   * Turn screen reader on or off: Alt+Super+S
+
+    * Turn magnification on or off: Alt+Super+M
+
+    * Zoom in: Alt+Super++ (plus key)
+
+    * Zoom out: Alt+Super+- (minus key)
+
+    * Turn on-screen keyboard on or off: Alt+Super+K
+
+    * Increase text size: Alt+Super+L
+
+    * Decrease text size: Alt+Super+D
+
+    * Turn high contrast on or off: Alt+Super+H'
+  - '[PAGE 9]
+
+
+    # Using the Orca Screen Reader
+
+
+    Orca is a free, open source, flexible, and extensible screen reader that provides
+    you with access to the graphical desktop via user-customizable combinations of
+    speech and/or braille. The Orca screen reader in Son is "on" by default. Turn
+    the screen reader off or on again, press Alt+Super+S.
+
+
+    For complete information about using and configuring the Orca screen reader, refer
+    to the website https://help.gnome.org/users/orca/stable/.
+
+
+    Note: The Orca documentation on the web occasionally refers to the "Orca Modifier"
+    key. The key that Orca uses by default as theOrca Modifier" depends on whether
+    you are using Orca''s keyboard layout or its Desktop keyboard layout:
+
+
+    +   * If you use the Laptop layout, the default Orca Modifier will be CapsLock.
+
+
+    +   * If you use the Desktop layout, for the Orca Modifier you can use either
+    the Normal Insert key or the KeyPad Input. KeyPad Input is the same as the 0 (zero)
+    on the numeric keypad.
+
+
+    You can use the "Orca Modifier" to get some help. Press Orca Modifier+H to enter
+    "learn mode."
+
+
+    +   * To view Orca''s documentation, press F1.
+
+
+    +   * To hear a list of Orca''s shortcuts, press F2.
+
+
+    +   * To hear a list of Orca''s shortcuts, press F3.
+
+
+    To learn more about how to use Orca to read documents and websites, the documentation
+    is available on the website: https://help.gnome.org/users/orca/stable#reading.
+
+
+    You may find that the screen reads too slowly or too quickly for you. You can
+    adjust the rate at Orca speaks, and make other adjustments, in Orca Preferences.
+    To get to the Orca Preferences, press Orca Modifier+Spacebar. If you find yourself
+    needing to adjust the speed frequently, you may more easily bind (map) the "increase
+    the rate" and "decrease the rate" commands to specific keys. That review (and
+    setup) the keyboard shortcuts and commands that Orca uses, you will want to refer
+    to the documentation on key bindings at: https://help.gnome.org/users/orca/stable/howto_key_bindings.html.
+
+
+    This is just a small sampling of the documentation that is available to you on
+    the Orca site. Discover what powerful tool can do.
+
+
+    # Using Sonoma Screen Magnifier
+
+
+    If you are a low vision user and require screen magnification, Sonoma has magnification
+    built in. To turn on or off screen magnification, press Alt+Super+M. You can also
+    turn on magnification in the Accessibility menu on the top bar if you prefer that
+    method.
+
+
+    Once you have the magnification turned on you can zoom in by pressing Alt+Super
+    and the plus (+) sign. If you want to zoom out by pressing Alt+Super and the minus
+    (-) sign. If you wish to change the keyboard shortcuts you can, by opening the
+    Overview by pressing the Super key and typing in "settings". From there you can
+    go to the keyboard settings and change all of the keyboard shortcuts not only
+    for the magnification but for all keyboard shortcuts.
+
+
+    Sonar GNU/Linux Getting Started Guide
+
+
+    Page 10'
+- md: '
+
+    # Using the On-Screen Keyboard
+
+
+    Press Alt+Super+K to toggle the on-screen keyboard on and off. The on-screen keyboard
+    is only visible when you need it. For example, when a document is the active window
+    and your cursor is in a position where you can type, you will see the on-screen
+    keyboard. If you click the Solar desktop, or somewhere else does not accept typed
+    characters, the keyboard vanishes.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_10_0.png)
+
+
+    Illustration 4: The on-screen keyboard.
+
+
+    # Using Head and Eye-Tracking Software
+
+
+    Enable Viacam (frequently abbreviated as Eviacam) is mouse replacement software
+    that moves the pointer as your head. If you have low motor skills, with nothing
+    more than your webcam and Eviacam can easily use your computer. You don''t need
+    anything than a webcam to use Eviacam – no cables, no dots and no additional hardware
+    is required.
+
+
+    With Eviacam, you can control your computer with intuitive head movements. There
+    is no need to use your hands! It''s designed to eliminate the need for assistance
+    after it''s installed -- and remember, it''s already installed with Sonar!
+
+
+    Make it your own. You can customize the pointer speed, motion acceleration and
+    smoothness, dwelling time and more!
+
+
+    To learn how to use and configure Eviacam, the user''s manual is available within
+    the software. It''s on-line at http://eviacam.sourceforge.net/help/en/en/contents.html.
+
+
+    # Using Applications
+
+
+    Now you have Sonar installed you most likely to know what applications are installed,
+    and how to use them. If you would like to see a list of all your applications
+    you can press Super+A. This will bring up a list of all the applications you have
+    installed on your system. You can choose any application from this list and press
+    enter or click on it to launch it. We won''t cover any of the preinstalled applications
+    here, but let''s discuss which will be most popular.
+
+
+    # Web Browser
+
+
+    One of the first applications you might want to use is the web browser, Firefox.
+    To open Firefox, press the Super key also known as the Windows key. This will
+    bring up the Overview. You can also get there by clicking the Activities button
+    as we described earlier. Now that the Overview is up, start to type "firefox"
+    and it should automatically fill the text box. Once you see it you can press Enter
+    and Firefox will open. You can do the same with any installed application.
+
+
+    Now the Overview is pretty powerful. Not only can you search for applications
+    by name, but you can also search by the function of the application. For example,
+    type something like "music" and Sonar will find any applications that you have
+    installed that have anything to do with music. So you don''t need to know the
+    name of the program. Sonar will find it for you using the Overview. You can also
+    search for files and folders, so you just type the name of the file or folder
+    and will bring it up in the Overview. So really the Overview is Sonar''s powerful
+    search tool for your whole system.
+
+
+    # Word Processor
+
+
+    You might want to create a simple document, compose a newsletter, or write a novel,
+    then save your work in a file. Word processor is the perfect tool for this and
+    Sonar already has one waiting for you to. Sonar is pre-installed with the LibreOffice
+    suite of applications that includes a word processor (Writer), a spreadsheet application
+    (Calc), a program for creating professional presentations (Impress), a formula
+    editor for scientific or school work (Math), and a database for cataloging anything
+    you want (Base).
+
+
+    As we have before, by opening the Overview by pressing the Super key. Start to
+    type "word processor" or "writer" and the word processor will be highlighted before
+    you can finish typing! Press Enter to open LibreOffice Writer. Just like any word
+    processor you have ever used, you can type on the screen, change the font, format
+    the text using bold, underline and italics, create tables, insert pictures and
+    more. Press the Save icon to save your work, Control+P to print, and exit using
+    Control+Q.
+
+
+    With all operating systems, Sonar provides more than one way to accomplish each
+    of these actions, and you will learn them over time. If you have switched to Sonar
+    from Windows, you will adapt easily because most things work the same way they
+    did on your old system.
+
+
+    # Entertainment
+
+
+    If you took our suggestion earlier, you will already know that when you type "music"
+    at the Overview, the application Rhythmbox is a multi-media powerhouse that rivals
+    Apple’s iTunes. Whether you want to listen to Last.fm, your collection of MP3
+    files, or you are looking to subscribe to your favorite Linux podcast, Rhythmbox
+    gives you the ability to do all that and more. You can listen from your computer,
+    or transfer your play lists to your mobile phone, tablet or media player, and
+    listen on the go.
+
+
+    You''ll find detailed instructions on how to adjust the preferences, view all
+    of the settings, and read the manual, by clicking the Application menu. Remember
+    that''s right next to the Activities button on Sonar''s top panel. Make sure Rhythmbox
+    is open when you click. Play some tunes while you explore all of the other applications
+    available to you in Sonar GNU/Linux!
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_12_0.png)
+
+
+    Illustration 5: The Rhythmbox media player
+
+
+    # Staying Secure and Up To Date
+
+
+    # Getting the Latest Updates
+
+
+    When updates are available for Sonar or any of its applications, the Update Manager
+    displays a notification at the bottom of the screen.
+
+
+    The updates are free, and are available for download from the software repositories,
+    also known as "repos." You use the Update Manager to perform the updates.
+
+
+    1. Click the Activities button (or press the Super button) to open the Overview.
+
+    2. Type "software update" and press Enter. The Update Manager opens and pauses
+    for a moment or two to contact the software repositories.
+
+    3. When the list has refreshed, if there are updates, you simply click the Apply
+    button and provide your Sonar password to start downloading all of the updates.
+
+    4. A progress bar keeps you informed as the download and installation proceeds.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_13_0.png)
+
+
+    | Update Manager | |
+
+    | :--- | :--- |
+
+    | 33 available updates | |
+
+    | bash 4.3.022-1 | 1.21 MiB |
+
+    | blue 5.22-1 | 439.3 KiB |
+
+    | cracklib 2.9.1-1 | 238.2 KiB |
+
+    | cups-filters 0.10.57-1 | 659.3 KiB |
+
+    | efootbmgr 0.7.0.16.g099e110-1 | 22.1 KiB |
+
+    | evifar 0.10.8.g8d0146-1 | 18.3 KiB |
+
+    | fakeroot 1.2.01-1 | 59.5 KiB |
+
+    | gnupg 2.0.26-1 | 1.51 MiB |
+
+    | gpgme 1.5-1 | 214.6 KiB |
+
+    | icedtea-web-java7 1.5.1-1 | 1.24 MiB |
+
+    | inxi 2.1.29-1 | 107.1 KiB |
+
+    | kbd 2.0.2-1 | 1.07 MiB |
+
+    | krb 5.12.2-1 | 1.07 MiB |
+
+    | lib32-libxcb 11-1 | 156.3 KiB |
+
+    | libbsd 0.7.0 | 119.6 KiB |
+
+    | Total download size: 77.02 MiB | |
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_13_1.png)
+
+
+    5. When the process is complete, the window will display the message, "Transaction
+    successfully." Click Close to continue.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_14_0.png)
+
+
+    6. The Update Manager does one final check and displays the message, "Your system
+    is up-to-date." Click Close to close the Update Manager.
+
+
+    Your system is now up to date with the latest updates and security fixes for the
+    operating system and its applications.
+
+
+    # Need More Software?
+
+
+    Enjoy Sonar''s Free software. Never again to worry about paying for that next
+    upgrade, or having to pay for the features or functionality you''ve been looking
+    for.
+
+
+    Note that Sonar Linux is based on the Manjaro distribution, so you may refer to
+    Manjaro repositories, tools, utilities, and support site as you use Sonar. If
+    you see these, don''t worry. You are in the right place. The Manjaro Linux team
+    provides a great deal of support for Sonar. In fact, the release of GNU/Linux
+    would not have been possible without their support.
+
+
+    You use the Package Manager software to get new software applications from the
+    repositories.
+
+
+    1. Click the **Activities** button (or press the **Super** button) to open the
+    Overview.
+
+    2. Type "add/remove software" and press **Enter**. The Package Manager opens.
+
+    3. The Package Manager offers four tabs to locate the software you want. The easiest
+    way to find what you want is the Search tab. This tab is the default, all you
+    need to do is begin typing.
+
+    4. You can type the package name if you know it - like "Skype." If you don''t
+    know the name, search for what you want to do, like "image manipulation." The
+    package manager displays the possible packages that match your search in the top
+    right panel.
+
+    5. Click on the name of the package in the list for a brief description of the
+    software.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_15_0.png)
+
+
+    Illustration 9: Searching the Package Manager
+
+
+    Sonar GNU/Linux Getting Started Guide
+
+    Page 13
+
+    '
+  mdcn: '
+
+
+    # 使用屏幕键盘
+
+
+    按下 Alt+Super+K 可以切换屏幕键盘的开启和关闭。屏幕键盘仅在你需要时才可见。例如，当一个文档是活动窗口且光标位于可以打字的位置时，你将看到屏幕键盘。如果你点击
+    Solar 桌面或其他不接受输入字符的地方，键盘就会消失。
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_10_0.png)
+
+
+    插图 4：屏幕键盘。
+
+
+    # 使用头部和眼动跟踪软件
+
+
+    启用 Viacam（通常缩写为 Eviacam）是一种鼠标替代软件，它可以随着你的头部移动而移动指针。如果你的运动能力较低，只需通过摄像头和 Eviacam
+    就能轻松使用电脑。使用 Eviacam 不需要任何其他设备——不需要电缆、标记点，也不需要额外的硬件。
+
+
+    通过 Eviacam，你可以通过直观的头部动作控制电脑。无需用手！它的设计是为了在安装后消除对辅助——请记住，它已经随 Sonar 预装好了！
+
+
+    让它成为你的专属。你可以自定义指针速度、运动加速度和流畅度、停留时间等！
+
+
+    要学习如何使用和配置 Eviacam，可以在软件内找到用户手册。它的在线地址为为 http://eviacam.sourceforge.net/help/en/en/contents.html。
+
+
+    # 使用应用程序
+
+
+    现在你已经安装了 Sonar，你可能已经知道安装了哪些应用程序以及如何使用它们。如果你想查看所有应用程序的列表，可以按下 Super+A。这将显示你系统上安装的所有应用程序列表。你可以从此列表中选择任何应用程序并按回车键或点击它来启动。我们在这里不会介绍任何预装的应用程序，但让我们讨论一下哪些最受欢迎。
+
+
+    # 网页浏览器
+
+
+    你可能想使用的第一个应用程序之一是网络浏览器 Firefox。要打开 Firefox，按下 Super 键（也称为 Windows 键）。这将打开概览（Overview）。你也可以像我们之前描述的那样，点击活动（Activities）按钮进入那里。现在概览已打开，开始输入“firefox”，它应该会自动填充文本框。一旦看到它，就可以按回车键，Firefox
+    就会打开。你可以对任何安装的应用程序执行同样的操作。
+
+
+    现在概览功能非常强大。你不仅可以按名称搜索应用程序，还可以按应用程序的功能搜索。例如，输入类似“music”（音乐）的词，Sonar 将找到你安装的任何与音乐相关的应用程序。因此你不需要知道程序的名称。Sonar
+    会通过概览为你找到。你还可以搜索文件和文件夹，只需输入文件或文件夹的名称，它就会出现在概览中。所以，概览真的是 Sonar 针对你整个系统的强大搜索工具。
+
+
+    # 文字处理器
+
+
+    你可能想创建一个简单的文档、撰写新闻通讯或撰写小说，然后将工作保存到文件中。文字处理器是此的完美工具，Sonar 已经为你准备了一个在等候使用。Sonar
+    预装了 LibreOffice 软件套，其中包含一个文字处理器（Writer）、一个电子表格应用程序（Calc）、一个用于创建专业演示文的程序（Impress）、一个用于科学或学校作业的公式编辑器（Math），以及一个用于编目任何你内容的数据库（Base）。
+
+
+    正如之前一样，通过按下 Super 键打开概览。开始输入“word processor”或“writer”，在你完成输入之前，文字处理器就会被高亮！按回车键打开
+    LibreOffice Writer。就像你用过的任何文字处理器一样，你可以在屏幕上打字、更改字体、使用粗体、下划线和斜体格式化文本、创建表格、插入图片等。点击保存图标保存你的工作，按
+    Control+P 打印，并使用 Control+Q 退出。
+
+
+    对于所有操作系统，Sonar 都提供了多种方法来完成这些操作，你将随着时间的推移学会它们。如果你是从 Windows 切换到 Sonar，你会很容易适应，因为大多数功能的工作方式与你的旧系统一样。
+
+
+    # 娱乐
+
+
+    如果你采取了我们之前的建议，你已经知道当在概览中输入“music”时，Rhythmbox 是一个可以与 Apple 的 iTunes 竞争的多媒体中心。无论你想听
+    Last.fm、你的 MP3 文件集，还是想订阅你喜喜欢的 Linux 播客，Rhythmbox 都能让你做到这一切以及更多。你可以从电脑上听，或将播放列表传输到手机、平板电脑或媒体播放器上随地听。
+
+
+    你可以通过点击应用程序菜单找到如何调整偏好、查看所有设置和阅读手册的详细说明。记住，它就在 Sonar 顶部面板活动按钮旁边。点击时请确保 Rhythmbox
+    是打开的。在探索 Sonar GNU/Linux 中提供的其他所有应用程序时，听一些音乐吧！
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_12_0.png)
+
+
+    插图 5：Rhythmbox 媒体播放器
+
+
+    # 保持安全和更新
+
+
+    # 获取最新更新
+
+
+    当 Sonar 或其任何应用程序可用更新时，更新管理器（Update Manager）会在屏幕底部显示通知。
+
+
+    更新是免费的，并可以从软件源（也称为“repos”）下载。你使用更新管理器执行更新。
+
+
+    1. 点击活动按钮（或按下 Super 按钮）打开概览。
+
+    2. 输入“software update”并按回车键。更新管理器打开并暂停一、二秒以联系软件源。
+
+    3. 当列表刷新后，如果有更新，你只需点击应用（Apply）按钮并提供你的 Sonar 密码开始下载所有更新。
+
+    4. 进度条会在下载和安装进行时让你了解进度。
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_13_0.png)
+
+
+    | 更新管理器 | |
+
+    | :--- | :--- |
+
+    | 33 个可用更新 | |
+
+    | bash 4.3.022-1 | 1.21 MiB |
+
+    | blue 5.22-1 | 439.3 KiB |
+
+    | cracklib 2.9.1-1 | 238.2 KiB |
+
+    | cups-filters 0.10.57-1 | 659.3 KiB |
+
+    | efootbmgr 0.7.0.16.g099e110-1 | 22.1 KiB |
+
+    | evifar 0.10.8.g8d0146-1 | 18.3 KiB |
+
+    | fakeroot 1.2.01-1 | 59.5 KiB |
+
+    | gnupg 2.0.26-1 | 1.51 MiB |
+
+    | gpgme 5-1 | 214 KiB |
+
+    | icedtea-web-7 1.5.1-1 | 24 MiB |
+
+    | inxi 2.29-1 | 107 KiB |
+
+    | kbd 2.0.2-1 | 1.07 MiB |
+
+    | krb 5.12-1 | 1.07 MiB |
+
+    | lib32-libxcb 11-1 | 156.3 KiB |
+
+    | libbsd 0.7.0 | 119.6 KiB |
+
+    | 总大小：77.02 MiB | |
+
+
+    img/d983c24f03486345a839503325e9c4b2_13_1.png
+
+
+    5. 进程完成后，窗口将显示消息“事务成功”。关闭继续。
+
+
+    img/d983c24f03486345a839503325e9c4b2_14_0.png
+
+
+    6. 更新管理器进行最后的检查并显示“系统是最新的”。关闭更新管理器。
+
+
+    你的系统现在已获得操作系统及其应用程序的最新更新和安全修复。
+
+
+    # 需要更多软件？
+
+
+    享受 Sonar 的免费软件。再也不用为下次升级或你一直在寻找的功能付费了。
+
+
+    请注意，Sonar Linux 基于 Manjaro 发行版，因此在使用 Sonar 时可以参考 Manjaro 仓库、工具、实用程序支持网站。如果你看到这些，不要担心。你在对的地方。Manjaro
+    Linux 团队提供了 Sonar 巨大的支持。事实上，没有他们的支持，GNU/Linux 的发布是不可能的。
+
+
+    你使用软件包管理器从仓库获取新的应用程序。
+
+
+    1. 点击活动按钮（或按下 Super 按钮）打开概览。
+
+    2. 输入“add/remove software”并按回车键。打开软件包管理器。
+
+    3. 管理器提供四个标签来定位你需要的软件。寻找软件最简单的方法是搜索标签。该标签是默认的，你只需开始输入。你可以直接输入包名称，如“Skype”。如果你不知道名称，可以搜索你想的操作，如“image
+    manipulation”。软件包管理器会在右上面板显示与你的搜索相关的可能包。
+
+    4. 点击列表中的包名称查看该软件的简要描述。
+
+
+    img/d983c24f03486345a839503325e9c4b2_15_0.png
+
+
+    插图 9：搜索软件包管理器
+
+
+    Sonar GNU/Linux 入门指南
+
+    第 13 页
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 10]
+
+
+    # Using the On-Screen Keyboard
+
+
+    Press Alt+Super+K to toggle the on-screen keyboard on and off. The on-screen keyboard
+    is only visible when you need it. For example, when a document is the active window
+    and your cursor is in a position where you can type, you will see the on-screen
+    keyboard. If you click the Solar desktop, or somewhere else does not accept typed
+    characters, the keyboard vanishes.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_10_0.png)
+
+
+    Illustration 4: The on-screen keyboard.
+
+
+    # Using Head and Eye-Tracking Software
+
+
+    Enable Viacam (frequently abbreviated as Eviacam) is mouse replacement software
+    that moves the pointer as your head. If you have low motor skills, with nothing
+    more than your webcam and Eviacam can easily use your computer. You don''t need
+    anything than a webcam to use Eviacam – no cables, no dots and no additional hardware
+    is required.
+
+
+    With Eviacam, you can control your computer with intuitive head movements. There
+    is no need to use your hands! It''s designed to eliminate the need for assistance
+    after it''s installed -- and remember, it''s already installed with Sonar!
+
+
+    Make it your own. You can customize the pointer speed, motion acceleration and
+    smoothness, dwelling time and more!
+
+
+    To learn how to use and configure Eviacam, the user''s manual is available within
+    the software. It''s on-line at http://eviacam.sourceforge.net/help/en/en/contents.html.'
+  - '[PAGE 11]
+
+
+    # Using Applications
+
+
+    Now you have Sonar installed you most likely to know what applications are installed,
+    and how to use them. If you would like to see a list of all your applications
+    you can press Super+A. This will bring up a list of all the applications you have
+    installed on your system. You can choose any application from this list and press
+    enter or click on it to launch it. We won''t cover any of the preinstalled applications
+    here, but let''s discuss which will be most popular.
+
+
+    # Web Browser
+
+
+    One of the first applications you might want to use is the web browser, Firefox.
+    To open Firefox, press the Super key also known as the Windows key. This will
+    bring up the Overview. You can also get there by clicking the Activities button
+    as we described earlier. Now that the Overview is up, start to type "firefox"
+    and it should automatically fill the text box. Once you see it you can press Enter
+    and Firefox will open. You can do the same with any installed application.
+
+
+    Now the Overview is pretty powerful. Not only can you search for applications
+    by name, but you can also search by the function of the application. For example,
+    type something like "music" and Sonar will find any applications that you have
+    installed that have anything to do with music. So you don''t need to know the
+    name of the program. Sonar will find it for you using the Overview. You can also
+    search for files and folders, so you just type the name of the file or folder
+    and will bring it up in the Overview. So really the Overview is Sonar''s powerful
+    search tool for your whole system.
+
+
+    # Word Processor
+
+
+    You might want to create a simple document, compose a newsletter, or write a novel,
+    then save your work in a file. Word processor is the perfect tool for this and
+    Sonar already has one waiting for you to. Sonar is pre-installed with the LibreOffice
+    suite of applications that includes a word processor (Writer), a spreadsheet application
+    (Calc), a program for creating professional presentations (Impress), a formula
+    editor for scientific or school work (Math), and a database for cataloging anything
+    you want (Base).
+
+
+    As we have before, by opening the Overview by pressing the Super key. Start to
+    type "word processor" or "writer" and the word processor will be highlighted before
+    you can finish typing! Press Enter to open LibreOffice Writer. Just like any word
+    processor you have ever used, you can type on the screen, change the font, format
+    the text using bold, underline and italics, create tables, insert pictures and
+    more. Press the Save icon to save your work, Control+P to print, and exit using
+    Control+Q.
+
+
+    With all operating systems, Sonar provides more than one way to accomplish each
+    of these actions, and you will learn them over time. If you have switched to Sonar
+    from Windows, you will adapt easily because most things work the same way they
+    did on your old system.'
+  - '[PAGE 12]
+
+
+    # Entertainment
+
+
+    If you took our suggestion earlier, you will already know that when you type "music"
+    at the Overview, the application Rhythmbox is a multi-media powerhouse that rivals
+    Apple’s iTunes. Whether you want to listen to Last.fm, your collection of MP3
+    files, or you are looking to subscribe to your favorite Linux podcast, Rhythmbox
+    gives you the ability to do all that and more. You can listen from your computer,
+    or transfer your play lists to your mobile phone, tablet or media player, and
+    listen on the go.
+
+
+    You''ll find detailed instructions on how to adjust the preferences, view all
+    of the settings, and read the manual, by clicking the Application menu. Remember
+    that''s right next to the Activities button on Sonar''s top panel. Make sure Rhythmbox
+    is open when you click. Play some tunes while you explore all of the other applications
+    available to you in Sonar GNU/Linux!
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_12_0.png)
+
+
+    Illustration 5: The Rhythmbox media player
+
+
+    Sonar GNU/Linux Getting Started Guide
+
+
+    Page 13'
+  - '[PAGE 13]
+
+
+    # Staying Secure and Up To Date
+
+
+    # Getting the Latest Updates
+
+
+    When updates are available for Sonar or any of its applications, the Update Manager
+    displays a notification at the bottom of the screen.
+
+
+    The updates are free, and are available for download from the software repositories,
+    also known as "repos." You use the Update Manager to perform the updates.
+
+
+    +   1. Click the Activities button (or press the Super button) to open the Overview.
+
+    2. Type "software update" and press Enter. The Update Manager opens and pauses
+    for a moment or two to contact the software repositories.
+
+    3. When the list has refreshed, if there are updates, you simply click the Apply
+    button and provide your Sonar password to start downloading all of the updates.
+
+    4. A progress bar keeps you informed as the download and installation proceeds.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_13_0.png)
+
+
+    | Update Manager | |
+
+    |---||
+
+    | 33 available updates | |
+
+    | bash 4.3.022-1 | 1.21 MiB |
+
+    | blue 5.22-1 | 439.3 KiB |
+
+    | cracklib 2.9.1-1 | 238.2 KiB |
+
+    | cups-filters 0.10.57-1 | 659.3 KiB |
+
+    | efootbmgr 0.7.0.16.g099e110-1 | 22.1 KiB |
+
+    | evifar 0.10.8.g8d0146-1 | 18.3 KiB |
+
+    | fakeroot 1.2.01-1 | 59.5 KiB |
+
+    | gnupg 2.0.26-1 | 1.51 MiB |
+
+    | gpgme 1.5-1 | 214.6 KiB |
+
+    | icedtea-web-java7 1.5.1-1 | 1.24 MiB |
+
+    | inxi 2.1.29-1 | 107.1 KiB |
+
+    | kbd 2.0.2-1 | 1.07 MiB |
+
+    |krb 5.12.2-1 | 1.07 MiB |
+
+    | lib32-libxcb 1.11-1 | 156.3 KiB |
+
+    | libbsd 0.7.0-1 | 119.6 KiB |
+
+    | Total download size: 77.02 MiB | |
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_13_1.png)'
+  - '[PAGE 14]
+
+
+    5. When the process is complete, the window will display the message, "Transaction
+    successfully finished." Click Close to continue.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_14_0.png)
+
+
+    6. The Update Manager does one final check and displays the message, "Your system
+    is up-to-date." Click Close to close the Update Manager window.
+
+
+    Your system is now up to date with the latest updates and security fixes for the
+    operating system and its installed applications. Everything is now running the
+    latest versions available for each of your software applications.'
+  - '[PAGE 15]
+
+
+    # Need More Software?
+
+
+    Enjoy Sonar''s Free software. Never again to worry about paying for that next
+    upgrade, or having to pay for the features or functionality you''ve been looking
+    for. Most of the software applications you will need are already installed in
+    Sonar, or are available in the repositories.
+
+
+    Note that Sonar Linux is based on the Manjaro distribution, so you may refer to
+    Manjaro repositories, tools, utilities, and support site as you use Sonar. If
+    you see these, don''t worry. You are in the right place. The Manjaro Linux team
+    provides a great deal of support for Sonar. In fact, the release of GNU/Linux
+    would not have been possible without their support.
+
+
+    You use the Package Manager software to get new software applications from the
+    repositories.
+
+
+    +   1. Click the **Activities** button (or press the **Super** button) to open
+    the Overview.
+
+    2. Type "add/remove software" and press **Enter**. The Package Manager opens.
+
+    3. The Package Manager offers four tabs to locate the software you want. The easiest
+    way to find what you want to use is the Search tab. This tab is the default, all
+    you need to do is begin typing.
+
+    4. You can type the package name if you know it - like "Skype." If you don''t
+    know the name, search for what you want to do, like "image manipulation." The
+    package manager displays the possible packages that match your search in the top
+    right panel.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_15_0.png)
+
+
+    Illustration 9: Searching the Package Manager
+
+
+    +   5. Click on the name of the package in the list for a brief description of
+    the software.
+
+
+    Sonar GNU/Linux Getting Started Guide'
+- md: '
+
+    6. With the package selected in the list, press the Spacebar or double-click the
+    box to indicate that you want to install the package. A check mark appears in
+    the check box. If you change your mind, press the Spacebar or double-click again,
+    to uncheck the box.
+
+
+    7. You can continue to search for, and check mark as many software packages as
+    you like, before you begin the installation process. All of the software you have
+    selected, and any other utilities or other that they will require will be installed,
+    at the same time.
+
+
+    8. To display a "transaction summary" of the packages that will be installed,
+    click the icon at the top of the window that looks like a blue arrow. It''s second
+    from the left.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_16_0.png)
+
+
+    9. Click OK to begin the installation.
+
+
+    10. A progress bar keeps you informed as the download and installation proceeds.
+    When the process is complete, the window will display the message, "Transaction
+    successfully finished." Click Close to finish.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_16_1.png)
+
+    '
+  mdcn: '
+
+    6. 在列表中选中软件包后，按下空格键或双击复选框以表示你想要安装该软件包。复选框中将出现一个勾标记。如果你改变了主意，再次按下空格键或双击复选框即可取消勾选。
+
+
+    7. 在开始安装过程之前，你可以继续搜索并根据需要勾选任意数量的软件软件包。你所选择的所有软件，以及它们所需的任何其他工具或其他组件都将同时被安装。
+
+
+    8. 如需显示将安装的软件包的“事务摘要”，请点击窗口顶部看起来像蓝色箭头的图标。它位于左侧数第二个位置。
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_16_0.png)
+
+
+    9. 点击 OK 开始安装。
+
+
+    10. 在下载和安装过程中，进度条会向你告知最新状态。进程完成后，窗口将显示消息“Transaction successfully finished”（事务成功完成）。点击
+    Close 即可完成。
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_16_1.png)
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 16]
+
+
+    6. With the package selected in the list, press the Spacebar or double-click the
+    box to indicate that you want to install the package. A check mark appears in
+    the check box. If you change your mind, press the Spacebar or double-click again,
+    to uncheck the box.
+
+
+    7. You can continue to search for, and check mark as many software packages as
+    you like, before you begin the installation process. All of the software you have
+    selected, and any other utilities or other that they will require will be installed,
+    at the same time.
+
+
+    8. To display a "transaction summary" of the packages that will be installed,
+    click the icon at the top of the window that looks like a blue arrow. It''s second
+    from the left.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_16_0.png)
+
+
+    9. Click OK to begin the installation.
+
+
+    10. A progress bar keeps you informed as the download and installation proceeds.
+    When the process is complete, the window will display the message, "Transaction
+    successfully finished." Click Close to finish.
+
+
+    ![](img/d983c24f03486345a839503325e9c4b2_16_1.png)'
