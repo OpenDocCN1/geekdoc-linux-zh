@@ -1,0 +1,522 @@
+- - '#'
+  - Linux Mint 21 Vanessa 安装后自助指南
+- - '#'
+  - 致谢
+- - '#'
+  - 安装机器详情
+- - '#'
+  - 引言
+- - '##'
+  - LastPass 365
+- - '##'
+  - 远程办公 367
+- - '##'
+  - Citrix 368
+- - '##'
+  - Microsoft Teams 370
+- - '##'
+  - Slack 372
+- - '##'
+  - Zoom 373
+- - '##'
+  - 沙盒 375
+- - '##'
+  - Firejail 376
+- - '##'
+  - Firetools 378
+- - '##'
+  - 软件发行 380
+- - '##'
+  - Flatpak 384
+- - '##'
+  - Flathub 385
+- - '##'
+  - Snap 386
+- - '##'
+  - Java 389
+- - '##'
+  - Ocs-url 390
+- - '##'
+  - Open Java 391
+- - '##'
+  - deb-get 392
+- - '##'
+  - App Outlet 394
+- - '##'
+  - pacstall 395
+- - '##'
+  - 流媒体 396
+- - '##'
+  - OBS Studio 397
+- - '##'
+  - Owncast 403
+- - '##'
+  - 系统清理工具 404
+- - '##'
+  - Bleachbit 406
+- - '##'
+  - Czkaka 408
+- - '##'
+  - Flsint Unofficial 412
+- - '##'
+  - Stacer 414
+- - '##'
+  - Synaptic 包管理器 416
+- - '##'
+  - Sweeper 418
+- - '##'
+  - 系统设置 420
+- - '##'
+  - 32 位架构 423
+- - '##'
+  - 备用 DNS 424
+- - '##'
+  - CleanBrowsing 427
+- - '##'
+  - DNS.WATCH 427
+- - '##'
+  - 自动分区 429
+- - '##'
+  - 显卡驱动 430
+- - '##'
+  - 使用软件管理器安装 NVIDIA 显卡驱动 434
+- - '##'
+  - Mousepad 436
+- - '##'
+  - 鼠标速度设置速度到最大 438
+- - '##'
+  - 夜光设置设置夜光（蓝光保护） 439
+- - '##'
+  - 可能的 Intel 消除问题使用 echo 命令行修复 440
+- - '##'
+  - 使用软件源清理 PPA 441
+- - '##'
+  - 使用 ppa-purge 命令行清理 PPA 442
+- - '##'
+  - 设置默认应用程序按分类设置 444
+- - '##'
+  - 按文件扩展设置默认应用程序 446
+- - '##'
+  - 启动应用程序使用安装应用程序 447
+- - '##'
+  - 启动应用程序自定义命令 448
+- - '##'
+  - 卸载软件使用软件管理器 449
+- - '##'
+  - 更新 Linux Mint 21 453
+- - '##'
+  - 系统工具 456
+- - '##'
+  - 使用 flatpak 命令安装 Flowblade 472
+- - '##'
+  - Kdenlive 473
+- - '###'
+  - 使用软件管理器安装 Kdenlive 473
+- - '###'
+  - 使用 apt 命令行安装 Kdenlive 474
+- - '###'
+  - 使用 flatpak 命令行安装 Kdenlive 475
+- - '###'
+  - 使用 Snap Store 安装 Kdenlive 476
+- - '###'
+  - 使用 snap 命令行安装 Kdenlive 477
+- - '##'
+  - Openshot 478
+- - '###'
+  - 使用软件管理器安装 Openshot 478
+- - '###'
+  - 使用 apt 命令行安装 Openshot 479
+- - '###'
+  - 使用 flatpak 命令行安装 Openshot 480
+- - '###'
+  - 使用 .AppImage 安装 Openshot 481
+- - '##'
+  - Shotcut 482
+- - '###'
+  - 使用软件管理器安装 Shotcut 482
+- - '###'
+  - 使用 apt 命令行安装 Shotcut 483
+- - '###'
+  - 使用 flatpak 命令行安装 Shotcut 484
+- - '###'
+  - 使用 Snap Store 安装 Shotcut 485
+- - '###'
+  - 使用 snap 命令行安装 Shotcut 486
+- - '##'
+  - 视频点流媒体 487
+- - '###'
+  - Amazon Prime Video 488
+- - '###'
+  - 访问 Amazon Prime Video 488
+- - '##'
+  - Disney+ 489
+- - '###'
+  - 访问 Disney+ 489
+- - '##'
+  - Netflix 490
+- - '###'
+  - 访问 Netflix 490
+- - '##'
+  - Paramount+ 491
+- - '###'
+  - 访问 Paramount+ 491
+- - '##'
+  - 虚拟化 492
+- - '##'
+  - Virt-manager 493
+- - '###'
+  - 使用 apt 命令行安装 Virt-manager 493
+- - '##'
+  - Virtualbox 495
+- - '###'
+  - 使用软件管理器安装 Virtualbox 495
+- - '###'
+  - 使用 apt 命令行安装 Virtualbox 496
+- - '##'
+  - 浏览器 497
+- - '##'
+  - Firefox 499
+- - '###'
+  - 使用软件管理器安装 Firefox 499
+- - '###'
+  - 使用 apt 命令行安装 Firefox 500
+- - '###'
+  - 使用 flatpak 命令行安装 Firefox 502
+- - '###'
+  - 使用 Snap Store 安装 Firefox 503
+- - '##'
+  - Firefox ESR 504
+- - '###'
+  - 使用 .tar.gz 安装 Firefox ESR 504
+- - '##'
+  - Chromium 505
+- - '###'
+  - 使用 Snap Store 安装 Chromium 505
+- - '###'
+  - 使用 snap 命令行安装 Chromium 506
+- - '##'
+  - Google Chrome 507
+- - '###'
+  - 使用 apt 命令行安装 Google Chrome 507
+- - '###'
+  - 使用 .deb 安装 Google Chrome 510
+- - '##'
+  - Microsoft Edge 511
+- - '###'
+  - 使用 apt 命令行安装 Microsoft Edge 511
+- - '###'
+  - 使用 .deb 安装 Microsoft Edge 513
+- - '##'
+  - Opera 514
+- - '###'
+  - 使用 Snap Store 安装 Opera 514
+- - '###'
+  - 使用 snap 命令行安装 Opera 515
+- - '##'
+  - Librewolf 516
+- - '###'
+  - 使用软件管理器安装 Librewolf 516
+- - '###'
+  - 使用 apt 命令行安装 Librewolf 517
+- - '###'
+  - 使用 flatpak 命令行安装 Librewolf 521
+- - '##'
+  - Pale Moon 522
+- - '###'
+  - 使用 apt 命令行使用 Pale Moon 522
+- - '##'
+  - 魔兽世界 525
+- - '###'
+  - 游戏商店黑屏 Bug 的可能修复 526
+- - '###'
+  - Direct X 12 错误 533
+- - '##'
+  - 如何手动安装魔兽世界插件 535
+- - '##'
+  - 魔兽世界插件管理器 538
+- - '###'
+  - Curseforge 539
+- - '###'
+  - 使用 .AppImage 安装 Curseforge 539
+- - '###'
+  - Curseforge 手添加游戏 540
+- - '###'
+  - Curseforge 安装插件 541
+- - '###'
+  - Curseforge 更新插件 542
+- - '###'
+  - Curseforge 移除插件 543
+- - '##'
+  - 反病毒软件
+- - '##'
+  - ClamAV
+- - '###'
+  - 使用 apt 命令行安装 ClamAV
+- - '##'
+  - ClamAV 实时防护
+- - '###'
+  - 使用 apt & systemctl 命令行使用 ClamAV 实时防护
+- - '##'
+  - ClamTK
+- - '###'
+  - 使用软件管理器安装 ClamTK
+- - '###'
+  - 使用 apt 命令行安装 ClamTK
+- - '###'
+  - 使用 flatpak 命令行安装 ClamTK
+- - '##'
+  - 音频编辑器
+- - '##'
+  - Audacity
+- - '###'
+  - 使用软件管理器安装 Audacity
+- - '###'
+  - 使用 apt 命令行安装 Audacity
+- - '###'
+  - 使用 flatpak 命令行安装 Audacity
+- - '##'
+  - Brasero
+- - '###'
+  - 使用软件管理器安装 Brasero
+- - '###'
+  - 使用 apt 命令行安装 Brasero
+- - '##'
+  - K3b
+- - '###'
+  - 使用软件管理器安装 K3b
+- - '###'
+  - 使用 apt 命令行安装 K3b
+- - '##'
+  - XFBurn
+- - '###'
+  - 使用软件管理器安装 XFBurn
+- - '###'
+  - 使用 apt 命令行安装 XFBurn
+- - '##'
+  - 云备份
+- - '##'
+  - Insync
+- - '###'
+  - 使用 .deb 安装 Insync
+- - '###'
+  - 使用 apt 命令行安装 Insync
+- - '##'
+  - overGrive
+- - '###'
+  - 使用 .deb 安装 overGrive
+- - '##'
+  - 云办公套件
+- - '##'
+  - Google Docs
+- - '##'
+  - Microsoft Office 365
+- - '##'
+  - Zoho Docs
+- - '##'
+  - 通信
+- - '##'
+  - Discord
+- - '###'
+  - '使用软件管理器安装 Discord ### '
+- - '##'
+  - Ferdium
+- - '###'
+  - 使用软件管理器安装 Ferdium
+- - '###'
+  - 使用 snap 命令行安装 Ferdium
+- - '###'
+  - 使用 flatpak 命令行安装 Ferdium
+- - '##'
+  - Pidgin
+- - '###'
+  - 使用软件管理器安装 Pidgin
+- - '###'
+  - 使用 apt 命令行安装 Pidgin
+- - '###'
+  - 使用 flatpak 命令行安装 Pidgin
+- - '##'
+  - Signal
+- - '###'
+  - 使用软件管理器安装 Signal
+- - '###'
+  - 使用 flatpak 命令行安装 Signal
+- - '###'
+  - 使用 Snap Store 安装 Signal
+- - '###'
+  - 使用 snap 命令行安装 Signal
+- - '##'
+  - 加密货币钱包
+- - '##'
+  - Coin
+- - '###'
+  - 使用 Snap Store 安装 Coin
+- - '###'
+  - 使用 snap 命令行安装 Coin
+- - '##'
+  - Exodus
+- - '###'
+  - 使用软件管理器安装 Exodus
+- - '###'
+  - 使用 flatpak 命令行安装 Exodus
+- - '###'
+  - 使用 .deb 安装 Exodus
+- - '##'
+  - Guarda Wallet
+- - '###'
+  - 使用 .deb 安装 Guarda Wallet
+- - '##'
+  - Wasabi Wallet
+- - '###'
+  - 使用软件管理器安装 Wasabi Wallet
+- - '###'
+  - 使用 flatpak 命令行安装 Wasabi Wallet
+- - '###'
+  - 使用 .deb 安装 Wasabi Wallet
+- - '##'
+  - 自定义内核
+- - '##'
+  - 数据恢复
+- - '##'
+  - R-Linux
+- - '###'
+  - 使用 .deb 安装 R-Linux
+- - '##'
+  - 桌面环境
+- - '##'
+  - Tasksel
+- - '###'
+  - 使用 apt 命令行安装 Tasksel
+- - '##'
+  - KDE Plasma
+- - '###'
+  - 使用 apt 命令行安装 KDE Plasma
+- - '##'
+  - LXDE
+- - '###'
+  - 使用 apt 命令行安装 LXDE
+- - '##'
+  - LXQT
+- - '###'
+  - 使用 apt 命令行安装 LXQT
+- - '##'
+  - 下载管理器
+- - '##'
+  - FlareGet
+- - '###'
+  - 使用 .deb 安装 FlareGet
+- - '###'
+  - 使用软件管理器安装 FlareGet
+- - '###'
+  - 使用 apt 命令行安装 FlareGet
+- - '##'
+  - KGet
+- - '###'
+  - 使用软件管理器安装 KGet
+- - '###'
+  - 使用 apt 命令行安装 KGet
+- - '###'
+  - 使用 flatpak 命令行安装 KGet
+- - '##'
+  - Motrix
+- - '###'
+  - 使用软件管理器安装 Motrix
+- - '###'
+  - 使用 Snap Store 安装 Motrix
+- - '###'
+  - 使用 snap 命令行安装 Motrix
+- - '##'
+  - Persepolis
+- - '###'
+  - 使用软件管理器安装 Persepolis
+- - '###'
+  - 使用 apt 命令行安装 Persepolis
+- - '##'
+  - Calibre
+- - '###'
+  - 使用软件管理器安装 Calibre
+- - '###'
+  - 使用 apt 命令行安装 Calibre
+- - '###'
+  - 使用 flatpak 命令行安装 Calibre
+- - '##'
+  - FlatReader
+- - '###'
+  - 使用软件管理器安装 FlatReader
+- - '###'
+  - 使用 apt 命令行安装 FlatReader
+- - '###'
+  - 使用 Snap Store安装 FlatReader
+- - '###'
+  - 使用 snap 命令行安装 FlatReader
+- - '##'
+  - Lucidor
+- - '###'
+  - 使用 .deb 安装 Lucidor
+- - '##'
+  - Okular
+- - '###'
+  - 使用软件管理器安装 Okular
+- - '###'
+  - 使用 apt 命令行安装 Okular
+- - '###'
+  - 使用 flatpak 命令行安装 Okular
+- - '##'
+  - Bookworm
+- - '###'
+  - 使用软件管理器安装 Bookworm
+- - '###'
+  - 使用 apt 命令行安装 Bookworm
+- - '###'
+  - 使用 flatpak 命令行安装 Bookworm
+- - '##'
+  - Elder
+- - '##'
+  - Gaming
+- - '##'
+  - DOSBox
+- - '###'
+  - 使用软件管理器安装 DOSBox
+- - '###'
+  - 使用 apt 命令行安装 DOSBox
+- - '###'
+  - 使用 flatpak 命令行安装 DOSBox
+- - '##'
+  - Gnome App
+- - '###'
+  - 使用软件管理器安装 Gnome App
+- - '###'
+  - 使用 apt 命令行安装 Gnome App
+- - '###'
+  - 使用 flatpak 命令行安装 Gnome App
+- - '##'
+  - ScummVM
+- - '###'
+  - 使用软件管理器安装 ScummVM
+- - '###'
+  - 使用 apt 命令行安装 ScummVM
+- - '###'
+  - 使用 flatpak 命令行安装 ScummVM
+- - '##'
+  - P7Zip-Desktop
+- - '###'
+  - 使用软件管理器安装 P7Zip-Desktop
+- - '###'
+  - 使用 apt 命令行安装 P7Zip-Desktop
+- - '###'
+  - 使用 snap 命令行安装 P7Zip-Desktop
+- - '##'
+  - Peazip
+- - '###'
+  - 使用软件管理器安装 Peazip
+- - '###'
+  - 使用 apt 命令行安装 Peazip
+- - '###'
+  - 使用 .deb 安装 Peazip
+- - '##'
+  - 这里的源替代方案
+- - '##'
+  - UFW
+- - '###'
+  - 使用软件管理器安装 UFW
+- - '###'
+  - 使用 apt 命令行安装 UFW
