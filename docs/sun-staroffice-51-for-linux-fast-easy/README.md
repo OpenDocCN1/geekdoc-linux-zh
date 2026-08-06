@@ -1,0 +1,7 @@
+# Linux 下 StarOffice 5.1 快速上手指南
+
+> 原文：[Sun StarOffice 5.1 for Linux fast & easy]()
+> 
+> 译者：[飞龙](https://github.com/wizardforcel)
+> 
+> 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
