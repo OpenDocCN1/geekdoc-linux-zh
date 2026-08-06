@@ -1,0 +1,899 @@
+- - '#'
+  - Tru64 UNIX-Oracle9i 集群快速参考 (HP 技术)
+- - '#'
+  - 引言
+- - '#'
+  - 致谢
+- - '##'
+  - 本参考书使用的规范
+- - '#'
+  - sysman
+- - '##'
+  - 命令提示符
+- - '###'
+  - 表 I-1：本参考书使用的命令提示符
+- - '##'
+  - 使用的参考配置
+- - '###'
+  - 表 i-2：使用的图形
+- - '##'
+  - 第1章 硬件验证与控制台命令
+- - '##'
+  - 硬件概述
+- - '##'
+  - 第 2 章 — 存储配置
+- - '##'
+  - 概述
+- - '##'
+  - 计划 40 分钟配置一个带有 36 块磁盘的 RAID 控制器
+- - '##'
+  - 存储摘要
+- - '##'
+  - Tru64 UNIX 磁盘要求
+- - '##'
+  - 交换空间 (Swap Space)
+- - '##'
+  - 存储区域网络 (SAN) 拓扑结构
+- - '##'
+  - SAN 配置指南
+- - '##'
+  - SAN 冗余
+- - '##'
+  - SAN 拓扑结构
+- - '##'
+  - 监控交换机性能
+- - '##'
+  - 显示交换机许可证信息
+- - '##'
+  - 显示交换机信息
+- - '##'
+  - 在线帮助
+- - '###'
+  - 名称
+- - '###'
+  - 语法
+- - '###'
+  - 可用性
+- - '###'
+  - 描述
+- - '##'
+  - RAID 控制器概述
+- - '##'
+  - HSG80 控制器（正面）
+- - '##'
+  - 存储配置步骤
+- - '###'
+  - 根磁盘选项
+- - '###'
+  - KGPSA-BC 适配器的 WWN
+- - '#'
+  - 计算 RAID 5 分区大小
+- - '#'
+  - Raidset 分区工作表
+- - '#'
+  - HSG1_a> show r1
+- - '##'
+  - 29. 将操作系统设置为 "Tru64" 以正常工作光纤连接。在混合环境（Windows/UNIX）中，只有连接到 Tru64 系统的连接会被设置。
+- - '##'
+  - 30. 再次显示连接类型以确认新设置。
+- - '##'
+  - 31. 为了方便管理，可以将连接名称重命名为与主机名匹配。使用 rename 命令更改默认名称。
+- - '##'
+  - 切换到节点 1 的控制台
+- - '##'
+  - 32. 使用 wwidmgr 设置用于引导的光纤通道磁盘。如果看到以下消息，请使用 init 命令。
+- - '##'
+  - 切换到节点 2 的控制台
+- - '##'
+  - 33. 使用 wwidmgr 设置用于引导的光纤通道。如果你看到以下消息，请使用 init 命令。
+- - '##'
+  - HSG RAID 控制器命令
+- - '###'
+  - add disk
+- - '###'
+  - stripeset
+- - '###'
+  - mirrorset
+- - '###'
+  - Disk Size
+- - '###'
+  - add snapshot units
+- - '###'
+  - add sparset
+- - '###'
+  - add unit
+- - '##'
+  - clear_errors cli
+- - '##'
+  - clear_errors invalid cache
+- - '##'
+  - clear_errors device unknown
+- - '##'
+  - clear_errors unit lost data
+- - '##'
+  - clear_errors unwriteable data
+- - '##'
+  - configuration reset
+- - '##'
+  - configuration restore
+- - '##'
+  - configuration save
+- - '##'
+  - 诊断与实用程序
+- - '##'
+  - set identifier
+- - '##'
+  - show
+- - '##'
+  - shutdown
+- - '##'
+  - 第3章 — Tru64 UNIX 安装
+- - '##'
+  - 概述
+- - '##'
+  - 开始之前
+- - '###'
+  - 表 3-1：安装前的自检查清单
+- - '##'
+  - Tru64 UNIX 摘要
+- - '#'
+  - '***软件选择 ***'
+- - '##'
+  - 23. 为 /var 文件系统选择 dsk0。
+- - '##'
+  - 24. /var 将选择 "h" 分区。为 /var 文件系统选择 AdvFS。
+- - '##'
+  - 25. 确认所有文件系统选择。
+- - '##'
+  - 27. 选定的软件子集从 CD-ROM 加载。
+- - '##'
+  - 28. 软件子集加载后，系统将从 dsk0 重启。
+- - '##'
+  - 32. 选择选项 5 开始系统配置。
+- - '##'
+  - 33. sysman 工具将启动并显示一个关于基本用法的信息屏幕。按 <return> 键继续。
+- - '##'
+  - 34. 显示设置步骤以供参考。选择“Next”开始配置。
+- - '##'
+  - 35. 现在跳过此步骤中的许可证信息。选择“Next”继续。在网络配置完成后，本章将介绍 Tru64 UNIX 的设置。
+- - '##'
+  - 快速设置：输入基础许可证信息
+- - '##'
+  - 36. 输入主机名、IP 地址和网络掩码。请参考第 59 页表 3-1 中的示例使用你的系统信息。选择“Next”继续。
+- - '##'
+  - 快速设置：设置网络接口卡 (NIC)
+- - '##'
+  - 37. 输入网络管理员为你的站点提供的默认路由。在示例中，默认路由为 192.168.1.1。选择“Next”继续。
+- - '##'
+  - 快速设置：设置路由
+- - '##'
+  - 38. 为你的站点输入域名信息以及 DNS 服务器 IP 地址。如果有备用 DNS 服务器，请提供信息。选择“Next”继续。
+- - '##'
+  - 39. Tru64 UNIX 集群要求所有成员之间进行时间同步。如果你有本地时间服务器，请使用它作为服务器，或选择一个外部的互联网时间服务。请访问以下网站
+    http://tycho.usno.navy.mil/ntp/html 获取时间服务。
+- - '##'
+  - 44. 显示快速设置摘要。如果有任何错误，请使用后退按钮进行任何更改。选择“Next”（下一步）完成网络设置。
+- - '##'
+  - 45. 最后的网络摘要页显示所有选项。选择“Finish”（完成）将所选内容应用到您的系统。
+- - '##'
+  - Tru64 UNIX 许可证信息
+- - '#'
+  - lmfsetup
+- - '#'
+  - lmf list
+- - '##'
+  - 创建新的共享 Profile
+- - '#'
+  - csh /bin/sh
+- - '#'
+  - Oracle Settings
+- - '#'
+  - 设置 Oracle SID
+- - '#'
+  - 更新 UNIX Path
+- - '#'
+  - 设置默认命令行编辑器
+- - '#'
+  - '------------------------------------'
+- - '#'
+  - 为 Oracle VLM 提高默认 shell 限制
+- - '#'
+  - '------------------------------------'
+- - '#'
+  - 设置标准提示符
+- - '#'
+  - '------------------------------------'
+- - '#'
+  - '------------------------------------'
+- - '#'
+  - 设置别名
+- - '#'
+  - '------------------------------------'
+- - '#'
+  - 检查用户邮箱
+- - '#'
+  - MAIL=/usr/spool/mail/$USER
+- - '#'
+  - chmod +x /usr/local/oracle.profile
+- - '#'
+  - cp /.profile /.profile.save
+- - '#'
+  - echo ". /usr/local/oracle.profile" > /.profile
+- - '#'
+  - cat /.profile
+- - '#'
+  - cp /.profile /usr/skel
+- - '#'
+  - 管理 Tru64 UNIX 软件子集
+- - '#'
+  - 安装用于远程访问的 X-Server
+- - '#'
+  - xrdb $HOME/.Xresources
+- - '#'
+  - xsetroot -solid grey
+- - '#'
+  - xterm -geometry 80x24+10+1 -ls -title "$VNCDESKTOP Desktop" &
+- - '#'
+  - twm &
+- - '##'
+  - 使用 Sysman 查看硬件信息
+- - '##'
+  - checklist
+- - '#'
+  - setup
+- - '#'
+  - sysman
+- - '#'
+  - unset DISPLAY
+- - '#'
+  - sysman
+- - '#'
+  - sysman -help
+- - '#'
+  - sysman -network
+- - '#'
+  - setld -l
+- - '#'
+  - hwmgr -view device
+- - '#'
+  - hwmgr -show scsi
+- - '#'
+  - hwmgr -delete scsi -did 10
+- - '#'
+  - hwmgr -scan scsi
+- - '#'
+  - hwmgr -view device
+- - '#'
+  - dsfmgr -m dsk10 dsk999
+- - '#'
+  - dsfmgr -m dsk11 dsk10
+- - '#'
+  - '/dev/rdsk/dsk913:'
+- - '#'
+  - '表 4-1: 集群根磁盘标签大小'
+- - '#'
+  - '/dev/rdsk/dsk913c:'
+- - '#'
+  - 'partitions: size offset ftype fsize cpg'
+- - '#'
+  - 安装Cluster软件子集
+- - '#'
+  - '*** 输入子集选择 ***'
+- - '#'
+  - 3. 为所有 TruCluster 软件和可选子集选择选项 3。
+- - '#'
+  - 4. 确认你的选择并继续安装软件。
+- - '#'
+  - 检查并安装 Tru64 UNIX 补丁
+- - '#'
+  - Tru64 UNIX 补丁工具 (Rev. 32-02)
+- - '#'
+  - 创建集群和成员 1
+- - '#'
+  - 这是 TruCluster 创建程序
+- - '#'
+  - 定义仲裁
+- - '##'
+  - 11. 定义仲票磁盘（quorum disk）。在本例中将使用 dsk916 作为仲票磁盘。
+- - '##'
+  - 12. 选择第一个成员启动磁盘，dsk914。成员启动磁盘将包含用于启动的小型根分区和交换空间。成员启动分区的大小默认设置为 512MB，剩余空间将用于交换分区。
+- - '##'
+  - 13. 接受默认的集群互连 IP 名称。
+- - '##'
+  - 14. 接受默认的集群互连 IP 地址。
+- - '##'
+  - 15. 选择集群互连类型。
+- - '##'
+  - 16. 确认集群的所有设置。按回车键构建集群。
+- - '##'
+  - 17. 创建集群期间，文件将从 Tru64 安装磁盘复制到集群根和成员磁盘。
+- - '##'
+  - 18. 在创建集群磁盘并构建了新内核后，应重启系统。
+- - '##'
+  - 向集群添加额外成员
+- - '##'
+  - 23. 确认新成员的所有选择并回车。如有必要，选择 No。
+- - '##'
+  - 24. 在新成员启动之前，为新成员配置磁盘。TruCluster 的独特功能允许未物理连接的集群进行添加和管理。集群文件系统使得这一切。
+- - '##'
+  - 25. 使用此屏幕上的信息准备新成员的启动。
+- - '##'
+  - 从节点 2 输入命令
+- - '##'
+  - 27. 按照指示添加第二个成员，启动内核。
+- - '##'
+  - 28. 软件子集在首次启动时。此过程是自动的。
+- - '##'
+  - 29. 按回车运行 clu_netsetup。
+- - '##'
+  - TruClusters 添加成员网络
+- - '##'
+  - 配置/删除网络接口
+- - '#'
+  - 为新成员许可证信息
+- - '#'
+  - 集群验证
+- - '#'
+  - 集群仲裁数据：rac（截至2001年10月27日）
+- - '#'
+  - Tru64 UNIX 滚动
+- - '#'
+  - 开始滚动之前
+- - '#'
+  - cru_upgrade -v check setup 1
+- - '#'
+  - 表 4-3：Tru64 滚动升级
+- - '##'
+  - clu_check config
+- - '##'
+  - clu_create
+- - '##'
+  - clu_create
+- - '##'
+  - clu_delete_member
+- - '##'
+  - clu_delete -m 1
+- - '##'
+  - clu_get_info
+- - '##'
+  - clu_get_info
+- - '##'
+  - clu_quorum
+- - '##'
+  - clu_quorum -d dsk30 1
+- - '#'
+  - 集群更新通过 `clu_upgrade` 和选项进行管理：
+- - '#'
+  - clu_upgrade setup
+- - '#'
+  - clu_upgrade preinstall
+- - '#'
+  - clu_upgrade install
+- - '#'
+  - clu_upgrade postinstall
+- - '#'
+  - clu_upgrade switch
+- - '#'
+  - clu_upgrade clean
+- - '#'
+  - drdmgr -a server dsk12
+- - '#'
+  - drdmgr -a server tape0
+- - '#'
+  - drdmgr -a server=rac1 tape0
+- - '#'
+  - statistics dsk1
+- - '#'
+  - hwmgr -view devices -cluster
+- - '#'
+  - imc_init
+- - '#'
+  - imcs -s
+- - '#'
+  - mkcdsl
+- - '#'
+  - cd /usr/local
+- - '#'
+  - mkcdsl notes.txt
+- - '#'
+  - echo "this is" > notes.txt
+- - '#'
+  - ls -l notes.txt
+- - '#'
+  - mkcdsl -c /usr/local/notes.txt
+- - '##'
+  - 第 5 章 — 逻辑管理器
+- - '##'
+  - LSM 概述
+- - '##'
+  - 10 分钟完成 LSM 设置与配置
+- - '##'
+  - 为什么要使用 LSM？
+- - '##'
+  - 某些配置使用 LSM
+- - '##'
+  - S.A.E. (镜像)
+- - '##'
+  - S.A.R. (所有条带)
+- - '##'
+  - LSM选项
+- - '##'
+  - 表 5-1：LSM术语
+- - '##'
+  - LSM快速总结
+- - '##'
+  - LSM基础
+- - '##'
+  - 磁盘组 (rootdg)
+- - '##'
+  - 理解 LSM磁盘带
+- - '##'
+  - LSM 设置步骤
+- - '##'
+  - LSM带大小
+- - '##'
+  - 移除卷
+- - '##'
+  - voldiskadd
+- - '##'
+  - voldiskadd dsk0
+- - '##'
+  - voldiskadm
+- - '##'
+  - voldiskadm
+- - '##'
+  - voldisksetup
+- - '##'
+  - voldisksetup -i dsk30
+- - '##'
+  - voledit
+- - '##'
+  - voledit -rm u01_volume
+- - '##'
+  - voledap
+- - '##'
+  - volinstall
+- - '##'
+  - volmake
+- - '##'
+  - '11'
+- - '##'
+  - disklabel [options] [disk device]
+- - '##'
+  - 清除标签 (Clear Label)
+- - '#'
+  - disklabel -z dsk24
+- - '##'
+  - 编辑磁盘标签 (Edit Label)
+- - '#'
+  - disklabel -e dsk24
+- - '##'
+  - 创建新的（默认）磁盘标签
+- - '#'
+  - disklabel -rw dsk24 SCSI
+- - '##'
+  - 使 AdvFS 磁盘可启动
+- - '#'
+  - disklabel -r dsk0 > /tmp/a
+- - '#'
+  - disklabel -t advfs -R /dev/disk/dsk0a /tmp/a
+- - '##'
+  - 读取磁盘标签
+- - '#'
+  - disklabel -r dsk0
+- - '##'
+  - 示例 fstab 文件。
+- - '#'
+  - cat /etc/fstab
+- - '##'
+  - mkfdmn
+- - '#'
+  - mkfdmn /dev/disk/dsk5c u01_domain
+- - '#'
+  - mkfdmn /dev/vol/rootdg/u01_volume u01_domain
+- - '##'
+  - mkfset
+- - '#'
+  - mkfset u01_domain oracle
+- - '##'
+  - mount
+- - '#'
+  - mkdir /u01
+- - '#'
+  - mount /u01
+- - '#'
+  - mount u01_domain#u01
+- - '##'
+  - rmfdmn [options]
+- - '#'
+  - rmfdmn u01_domain
+- - '##'
+  - rmvol [options] [special]
+- - '#'
+  - rmvol /dev/disk/dsk2c domain_1
+- - '##'
+  - showfdmn [options] [domain]
+- - '#'
+  - showfdmn u01_domain
+- - '##'
+  - showfsets [options] [domain]
+- - '#'
+  - showfsets u01_domain
+- - '##'
+  - verify [options] [domain]
+- - '#'
+  - /sbin/advfs -a u01
+- - '##'
+  - 第 7 章 Oracle9i 安装
+- - '##'
+  - '表 7-1: Oracle9i 术语'
+- - '##'
+  - Oracle9i 安装摘要
+- - '##'
+  - Oracle9i 安装步骤
+- - '##'
+  - Oracle9i 附加前提
+- - '##'
+  - 验证 Shell环境变量
+- - '##'
+  - 表 7-2：Oracle环境变量
+- - '##'
+  - Oracle 内内核参数
+- - '##'
+  - Oracle 的 UNIX 内核参数
+- - '##'
+  - 表 7-3：Oracle9i 最小内核设置
+- - '##'
+  - 优化架构 (OFA)
+- - '##'
+  - Oracle Base
+- - '##'
+  - 表 7-4：Oracle Base目录结构
+- - '##'
+  - Oracle Home
+- - '##'
+  - Oracle 数据库文件
+- - '##'
+  - 表 7-5：Oracle 数据库命名规范
+- - '##'
+  - Oracle 数据库管理文件
+- - '##'
+  - '表 7-6: Oracle 数据库管理子目录'
+- - '##'
+  - 准备文件目录
+- - '##'
+  - 安装 Oracle
+- - '#'
+  - '输入本地 bin 目录的完整路径: [/usr/local/bin]: <return>'
+- - '##'
+  - 安装 Oracle 补丁
+- - '##'
+  - Oracle9i 安装命令摘要
+- - '#'
+  - /usr/sbin/swapon -s
+- - '#'
+  - sysconfig -s
+- - '#'
+  - sysconfig -q ipc
+- - '#'
+  - sysconfig -Q ipc msg_max
+- - '#'
+  - sysconfigdb -m f sysconfig.stanza
+- - '##'
+  - 第 8 章 — 创建和管理 Oracle9i 数据库
+- - '##'
+  - 概述
+- - '##'
+  - 计划用 1 小时创建一个示例数据库
+- - '##'
+  - Oracle9i 创建数据库摘要
+- - '##'
+  - Oracle9i 全局服务进程
+- - '##'
+  - Oracle9i 监听器
+- - '#'
+  - 'LISTENER.ORA.RAC1 Network File:'
+- - '#'
+  - Generated by Oracle tools. 数据库配置步骤
+- - '#'
+  - 'LISTENER.ORA.RAC1 Network File:'
+- - '#'
+  - Generated by Oracle tools. 数据库配置步骤
+- - '#'
+  - 'LISTENER.ORA.RAC1 Network File:'
+- - '#'
+  - Generated by Oracle tools. 数据库配置步骤
+- - '##'
+  - 查看文件
+- - '##'
+  - 查看表空间
+- - '##'
+  - 创建 Oracle 用户
+- - '##'
+  - racdba 用户权限
+- - '##'
+  - 显示 Oracle 版本
+- - '##'
+  - 使用服务器控制程序 Oracle9i
+- - '##'
+  - 启动名为“demo”的实例。
+- - '##'
+  - 停止数据库
+- - '##'
+  - 状态
+- - '##'
+  - 配置文件
+- - '##'
+  - SQL Loader
+- - '##'
+  - 可迁移表空间 (Transportable Tablespaces)
+- - '##'
+  - 迁移表空间
+- - '##'
+  - 多块大小
+- - '##'
+  - 闪器查询
+- - '##'
+  - 服务器参数 (spfile)
+- - '##'
+  - 客户端配置 — 透明故障转移 (TAF)
+- - '##'
+  - Oracle9i 命令摘要
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - dbca -help
+- - '#'
+  - sqlldr userid=racdba/control=alpha.ctl
+- - '#'
+  - cat alpha.ctl
+- - '#'
+  - srvctl status -p demo
+- - '#'
+  - srvctl start -p demo
+- - '#'
+  - srvctl start -p demo
+- - '#'
+  - srvctl stop -p demo
+- - '#'
+  - srvctl -snr
+- - '#'
+  - srvctl -help
+- - '##'
+  - 第 9 章 — 系统性能监控
+- - '##'
+  - 概述
+- - '##'
+  - 表 9-1:常用性能监控工具
+- - '##'
+  - 表 9-1:常用监控工具
+- - '##'
+  - 系统性能/监控
+- - '##'
+  - 显示物理内存
+- - '##'
+  - 交换空间 (Swap Space)
+- - '##'
+  - 磁盘统计
+- - '##'
+  - RECORD 1 (102314399:0) (Tue Jan 29 07:37 2002)
+- - '##'
+  - 磁盘统计
+- - '##'
+  - RECORD 2 (102314411:0) (Tue Jan 29 07:37 2002)
+- - '##'
+  - 磁盘统计
+- - '##'
+  - RECORD 3 (102314433:0) (Tue Jan 29 07:37 2002)
+- - '##'
+  - 磁盘统计
+- - '##'
+  - RECORD 1 (102367220:0) (Sat Feb 11 33:40 2002)
+- - '##'
+  - 磁盘统计
+- - '##'
+  - RECORD 2 (102367222:0) (Sat Feb 11 33:42 2002)
+- - '##'
+  - 磁盘统计
+- - '##'
+  - RECORD 3 (102367244:0) (Sat Feb 11 33:44 2002)
+- - '##'
+  - 进程信息
+- - '##'
+  - Top
+- - '##'
+  - Collect
+- - '##'
+  - RECORD 1 (100433907:0) (Mon Oct 29 14:57 2001)
+- - '##'
+  - 磁盘统计
+- - '##'
+  - CPU IDLE WAIT
+- - '##'
+  - CPU RUNQ AVG30 AVG60
+- - '##'
+  - ' '
+- - '##'
+  - 第 10 章 — 备份/恢复
+- - '##'
+  - 概述
+- - '##'
+  - 40 分钟 Tru64 UNIX 操作系统计划
+- - '##'
+  - 操作系统备份
+- - '##'
+  - 介质
+- - '##'
+  - 第三方软件
+- - '##'
+  - 可选第三方软件
+- - '##'
+  - Oracle备份
+- - '##'
+  - 安装磁库工具
+- - '##'
+  - 3. 确认已选软件并安装以下子集：
+- - '##'
+  - 4. 从此处开始，磁库工具的安装将自动执行。
+- - '##'
+  - Tru64 UNIX 设备文件
+- - '##'
+  - 6. 将磁带加载到驱动器中。使用 `file` 命令指定磁带设备以查看有关信息。
+- - '##'
+  - file /dev/ntape/tape0
+- - '##'
+  - 磁带操作
+- - '##'
+  - 倒带磁带
+- - '##'
+  - 跳过磁带上的会话
+- - '##'
+  - 操作系统备份
+- - '##'
+  - 7. 在 /usr/local/backup 中创建一个名为 `backup.sh` 的文件。该目录还将备份日志文件。该示例提供了操作系统的基础知识。增强包括额外的机器人以及向备份日志文件添加戳的功能。
+- - '##'
+  - '表 10-1: vdump选项'
+- - '##'
+  - '表 10-1: vdumpdates选项'
+- - '##'
+  - 恢复文件
+- - '##'
+  - 远程备份和恢复文件
+- - '##'
+  - dd
+- - '#'
+  - dd if=/dev/disk/disk12c of=/dev/disk/disk14c bs=128k
+- - '##'
+  - gunzip
+- - '#'
+  - gunzip myfile.tar.gz
+- - '##'
+  - gzip
+- - '#'
+  - gzip myfile.tar
+- - '##'
+  - mt
+- - '#'
+  - mt -f /dev/tape/tape0 rewind
+- - '#'
+  - mt -f /dev/ntape/tape0 fsf 1
+- - '#'
+  - mt -f /dev/tape/tape0 status
+- - '##'
+  - robot
+- - '#'
+  - export MRU_ROBOT=/dev/changer/mc0
+- - '#'
+  - robot show robot
+- - '#'
+  - robot show slot 0-9
+- - '#'
+  - robot show drive
+- - '#'
+  - robot show port
+- - '#'
+  - robot load slot 2 drive 0
+- - '#'
+  - mt -f /dev/ntape/tape0 offline
+- - '#'
+  - robot unload drive 0 slot 2
+- - '#'
+  - robot eject slot 2 port 0
+- - '#'
+  - robot inject port 0 slot 2
+- - '##'
+  - vdump
+- - '#'
+  - vddump -D -f tiger:/dev/tape/tape0
+- - '##'
+  - rvrestore
+- - '#'
+  - rvrestore -xf sleeping:/dev/tape/tape0 -D /u01/restore
+- - '##'
+  - tar
+- - '#'
+  - cd /usr/local
+- - '#'
+  - tar cvf local_bin.tar bin
+- - '#'
+  - tar xvf local_bin.tar
+- - '##'
+  - uncompress
+- - '#'
+  - uncompress myfile.tar
+- - '##'
+  - vdump
+- - '#'
+  - vdump -D -f /dev/ntape/tape0 -C -v /usr 2> backup.log
+- - '#'
+  - vdump -D -f /u01 | vrestore -xf -D /u02
+- - '##'
+  - vrestore
+- - '#'
+  - vrestore -x -v /dev/ntape/tape0 -D /u01/restore
+- - '#'
+  - vrestore -x -v -f /dev/ntape/tape0
+- - '#'
+  - vrestore -l -v /dev/ntape/tape0
+- - '##'
+  - xrobot
+- - '#'
+  - xrobot /dev/changer/mc0
+- - '##'
+  - Raidset Partition
+- - '##'
+  - Tru64 UNIX 安装 IP Address
+- - '##'
+  - Tru64 UNIX Cluster
+- - '##'
+  - Tru64 UNIX 滚动升级清单
+- - '##'
+  - 附录 — B
+- - '##'
+  - Tru64 UNIX 和 Oracle9i 参考书籍
+- - '##'
+  - 存储区域网络
+- - '##'
+  - Tru64 UNIX
+- - '#'
+  - TruCluster
