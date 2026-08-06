@@ -1,0 +1,380 @@
+- - '#'
+  - Linux 上的 Microsoft SQL Server 2017
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于技术编辑
+- - '##'
+  - 在 Red Hat Enterprise Linux 上配置 Pacemaker
+- - '##'
+  - 透明数据加密 (TDE)
+- - '#'
+  - 前言
+- - '##'
+  - Linux 版 Microsoft SQL Server 2017
+- - '##'
+  - 致谢
+- - '##'
+  - 引言
+- - '#'
+  - 第 1 章：Linux 版 SQL Server
+- - '##'
+  - 第 1 章：Linux 上的 SQL Server：入门
+- - '##'
+  - 安装 SQL Server
+- - '##'
+  - 第 3 步：设置：配置可选功能
+- - '##'
+  - 第 4 步：总结与购买
+- - '##'
+  - 第 1 章：Linux上的 SQL Server：快速入门
+- - '##'
+  - 注意
+- - '#'
+  - Unix 命令简介
+- - '#'
+  - 连接到 SQL Server
+- - '##'
+  - 安装其他组件
+- - '#'
+  - 第 1 章：Linux 上的 SQL Server 入门
+- - '#'
+  - 在 Ubuntu 上安装
+- - '#'
+  - 在 Docker 上运行 SQL Server
+- - '##'
+  - 第 1 章：Docker 上的 SQL Server：入门
+- - '##'
+  - 运行 SQL
+- - '##'
+  - 卸载 SQL Server
+- - '##'
+  - 总结
+- - '#'
+  - 第 2 章
+- - '##'
+  - Linux 上的 SQL Server 如何工作
+- - '##'
+  - 本章内容
+- - '##'
+  - Sybase 时代
+- - '#'
+  - 第 2 章：Linux 版 SQL Server 的原理
+- - '##'
+  - SQLOS
+- - '##'
+  - 注意事项
+- - '##'
+  - 行业变迁
+- - '##'
+  - 赫尔辛基项目（Project Helsinki）
+- - '##'
+  - 第 2 章：Linux 版 SQL Server 工作原理
+- - '##'
+  - 虚拟化的惊喜
+- - '##'
+  - Drawbridge
+- - '###'
+  - 注意
+- - '##'
+  - 寻找捷径
+- - '##'
+  - SQLPAL
+- - '##'
+  - 系统架构
+- - '##'
+  - 总结
+- - '#'
+  - 第 3 章
+- - '##'
+  - 面向专业人士的 Linux
+- - '##'
+  - 本章
+- - '##'
+  - 入门
+- - '#'
+  - 第 3 章：SQL Server 专业人士的 Linux
+- - '#'
+  - 注意
+- - '#'
+  - 参见
+- - '#'
+  - 图 3-1 man 页面
+- - '##'
+  - 文件与目录
+- - '##'
+  - 文件
+- - '#'
+  - 第 3 章：SQL Server 专业人士的 Linux
+- - '##'
+  - Unix 文件系统
+- - '##'
+  - 其他命令
+- - '##'
+  - 第 3 章：面向 SQL Server 专业人士的 Linux
+- - '##'
+  - 注意
+- - '##'
+  - cat /etc/redhat-release
+- - '##'
+  - 构建命令
+- - '##'
+  - 权限
+- - '##'
+  - ch chown root file3
+- - '##'
+  - ls -l
+- - '##'
+  - Bash Shell
+- - '##'
+  - 注意
+- - '##'
+  - systemctl is-active mssql
+- - '##'
+  - systemctl try-restart mssql
+- - '##'
+  - systemctl start mssql-server.service
+- - '##'
+  - systemctl list-units --type service
+- - '##'
+  - systemctl reload mssql-server.service
+- - '##'
+  - systemctl enable mssql-server.service
+- - '##'
+  - systemctl disable mssql-server.service
+- - '##'
+  - systemctl halt
+- - '##'
+  - systemctl reboot
+- - '##'
+  - systemctl poweroff
+- - '##'
+  - 软件管理
+- - '##'
+  - yum list mssql*
+- - '##'
+  - yum search mssql
+- - '##'
+  - NOTE
+- - '##'
+  - 磁盘管理
+- - '##'
+  - 系统监控
+- - '#'
+  - 第 4 章
+- - '##'
+  - SQL Server 配置
+- - '##'
+  - 本章内容
+- - '##'
+  - 注意
+- - '##'
+  - mssql-conf 工具
+- - '#'
+  - /opt/mssql/bin/mssql-conf
+- - '##'
+  - /opt/mssql/bin/mssql-conf set network.tcpport 1436
+- - '##'
+  - /opt/mssql/bin/mssql-conf set network.tcpport 1435
+- - '##'
+  - /opt/mssql/bin/mssql-conf traceflag 3226 1222
+- - '##'
+  - /opt/mssql/bin/mssql-conf traceflag 1222 off
+- - '##'
+  - more /var/opt/mssql/mssql.conf
+- - '##'
+  - 使用变量
+- - '##'
+  - tuned-adm profile throughput-performance
+- - '##'
+  - tuned-adm active
+- - '##'
+  - sysctl -w vm.dirty_ratio = 40
+- - '##'
+  - blockdev --report
+- - '##'
+  - blockdev --getra /dev/sdb
+- - '##'
+  - blockdev --setra 4096 /dev/sdb
+- - '##'
+  - 透明大页 (Transparent Huge Pages)
+- - '##'
+  - more /sys/kernel/mm/transparent_hugepage/enabled
+- - '##'
+  - 交换文件 (Swap File)
+- - '##'
+  - /proc/swaps
+- - '##'
+  - swapmon -s
+- - '##'
+  - mount -o remount/
+- - '##'
+  - 内存溢出杀手 (Out-of-Memory Killer)
+- - '##'
+  - tempdb 配置
+- - '##'
+  - 跟踪标志
+- - '##'
+  - 进程亲和性 (Process Affinity)
+- - '##'
+  - 最大并行度 (Max Degree of Parallelism)
+- - '##'
+  - 并行阈值 (Cost Threshold for Parallelism)
+- - '##'
+  - 统计信息
+- - '##'
+  - 标准自动统计更新
+- - '#'
+  - 第 5 章
+- - '##'
+  - SQL Server 查询调优与优化
+- - '##'
+  - 本章内容
+- - '##'
+  - 查询处理器架构
+- - '##'
+  - 查询语句
+- - '##'
+  - 解析与绑定（Parsing and Binding）
+- - '##'
+  - 查询优化（Query Optimization）
+- - '##'
+  - 生成候选计划（Generating Plans）
+- - '##'
+  - 查询执行与缓存
+- - '##'
+  - 图形计划
+- - '##'
+  - XML计划
+- - '##'
+  - 文本计划
+- - '##'
+  - 查询错
+- - '##'
+  - sys.dm_exec_requests
+- - '##'
+  - sys.dm_exec_sessions
+- - '##'
+  - statement_start_offset
+- - '##'
+  - statement_end_offset
+- - '##'
+  - sql_handle
+- - '##'
+  - plan_hash
+- - '##'
+  - 查找消耗查询
+- - '##'
+  - STATISTICS IO
+- - '##'
+  - 创建索引
+- - '##'
+  - 聚簇索引与堆 (Heaps)
+- - '##'
+  - 聚簇键
+- - '##'
+  - 统计信息 (Statistics)
+- - '##'
+  - 创建和更新统计
+- - '##'
+  - 基数估计
+- - '##'
+  - 基数错误
+- - '##'
+  - 统计维护
+- - '##'
+  - 典型参数
+- - '##'
+  - 每次执行优化
+- - '##'
+  - 使用局部变量
+- - '##'
+  - OPTIMIZE FOR UNKNOWN
+- - '##'
+  - 禁用参数
+- - '##'
+  - 查询限制
+- - '##'
+  - 查询研究
+- - '##'
+  - 提示
+- - '##'
+  - 何时使用
+- - '##'
+  - 提示类型
+- - '#'
+  - 第 6 章
+- - '##'
+  - 新查询处理功能
+- - '##'
+  - 本章内容
+- - '##'
+  - 自适应查询处理
+- - '##'
+  - 模式反馈
+- - '##'
+  - 多语句值函数
+- - '##'
+  - 交叉执行
+- - '##'
+  - 自动调优
+- - '##'
+  - 选项
+- - '##'
+  - Always Encrypted
+- - '##'
+  - SQL Server 2016 Service Pack 1
+- - '##'
+  - CXPACKET 等等待
+- - '#'
+  - 第 7 章
+- - '##'
+  - 高可用与灾难恢复
+- - '##'
+  - SQL Server 高可用与灾难功能
+- - '##'
+  - Always On 可用组
+- - '##'
+  - 自动故障转移，可用组需要以下配置：
+- - '##'
+  - Windows 与 Linux 上的可用组
+- - '##'
+  - 实现可用组
+- - '##'
+  - T-SQL 配置
+- - '##'
+  - 验证可用组
+- - '##'
+  - 高可用性与灾难
+- - '##'
+  - SQL 管理配置
+- - '##'
+  - 选择数据库
+- - '##'
+  - 在 Red Hat 上配置 Pacemaker
+- - '##'
+  - 在 Ubuntu 上配置 Pacemaker
+- - '##'
+  - 高可用与灾备恢复
+- - '##'
+  - pcs property list
+- - '##'
+  - pcs status
+- - '##'
+  - sudo pcs cluster destroy
+- - '#'
+  - 第 8 章
+- - '##'
+  - 安全
+- - '##'
+  - SQL Server 安全简介
+- - '##'
+  - 透明数据加密
+- - '##'
+  - 安全性
+- - '##'
+  - 将 TDE 数据库附加或恢复到另一个 SQL Server 实例
+- - '##'
+  - 动态数据掩码
+- - '##'
+  - 总结
