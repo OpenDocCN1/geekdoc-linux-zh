@@ -1,0 +1,873 @@
+- - '#'
+  - SUSE Linux Enterprise Server 10 高级管理指南
+- - '#'
+  - 学习 Shell 脚本中的有用命令 5-51
+- - '#'
+  - 第 6 从源码编译软件
+- - '#'
+  - 第 7 执行健康检查与性能优化
+- - '##'
+  - 第 8 硬件管理
+- - '##'
+  - 第 9 准备 Novell CLP 10 实践考试
+- - '##'
+  - 简介
+- - '##'
+  - 课程目标
+- - '##'
+  - 目标读者
+- - '##'
+  - 认证与先决条件
+- - '##'
+  - 图 Intro-1
+- - '##'
+  - SUSE Linux Enterprise Server 10 支持与维护
+- - '##'
+  - Novell 客户中心
+- - '##'
+  - SUSE Linux Enterprise Server 10 在线资源
+- - '##'
+  - 课程安排
+- - '##'
+  - 场景
+- - '##'
+  - 练习规范
+- - '##'
+  - 第 1 节 使用 Xen 管理虚拟化
+- - '###'
+  - 目标
+- - '##'
+  - 引言
+- - '##'
+  - 目标 1
+- - '###'
+  - 理解虚拟化概念
+- - '##'
+  - 目标 2
+- - '###'
+  - 理解 Xen 的工作原理
+- - '##'
+  - 理解虚拟化方法
+- - '##'
+  - 全虚拟化
+- - '##'
+  - 图 1-3
+- - '##'
+  - 理解 Xen 架构
+- - '##'
+  - 目标 3
+- - '##'
+  - 安装 Xen
+- - '##'
+  - SUSE Linux Enterprise Server 10 高级管理
+- - '##'
+  - 使用 Xen 管理虚拟化
+- - '##'
+  - 图 1-8
+- - '##'
+  - 图 1-9
+- - '##'
+  - 练习 1-2
+- - '###'
+  - 安装客域（Guest Domain）
+- - '##'
+  - 目标 5
+- - '###'
+  - 在命令行管理 Xen 域
+- - '###'
+  - 理解域配置文件
+- - '##'
+  - 域的唯一名称
+- - '##'
+  - 运行的内核路径
+- - '##'
+  - 运行的初始化 RAM 磁盘
+- - '##'
+  - 分配的内存（MB）
+- - '##'
+  - CPU 核心数量
+- - '##'
+  - 磁盘配置
+- - '##'
+  - 网络配置
+- - '##'
+  - 练习 1-3 修改客户域的内存分配
+- - '##'
+  - 自动化域的启动和关闭
+- - '##'
+  - 练习 1-4 自动化域启动
+- - '##'
+  - 目标 6
+- - '###'
+  - 理解 Xen 网络
+- - '###'
+  - 理解基础网络概念
+- - '###'
+  - 理解桥接
+- - '###'
+  - 理解 domain0 中的网络接口
+- - '##'
+  - 练习 1-5 检查网络配置
+- - '##'
+  - 目标 7 迁移虚拟机（Guest Domain）
+- - '##'
+  - 使用域保存和恢复
+- - '##'
+  - 使用迁移和热迁移
+- - '##'
+  - 总结
+- - '##'
+  - 目标总结
+- - '##'
+  - 第二 节 配置 Web 服务器
+- - '##'
+  - 目标
+- - '##'
+  - 目标 1 设置基础 Web 服务器
+- - '##'
+  - Web 服务器的基本功能
+- - '##'
+  - 安装基础 Web 服务器
+- - '##'
+  - 启动并测试 Web 服务器
+- - '##'
+  - insserv apache2
+- - '##'
+  - 图 2-2
+- - '##'
+  - 定位 Web 服务器的 DocumentRoot
+- - '##'
+  - 练习 2-1
+- - '##'
+  - 安装 Apache
+- - '##'
+  - 练习 2-2
+- - '##'
+  - 测试 Apache 安装
+- - '##'
+  - 理解 Apache 配置文件的结构和基本元素
+- - '##'
+  - 定位 Apache 配置文件
+- - '##'
+  - 理解配置文件的基本规则
+- - '##'
+  - 理解默认 Apache 配置
+- - '##'
+  - 表 2-1
+- - '##'
+  - 目标 2
+- - '##'
+  - 配置虚拟主机
+- - '##'
+  - 虚拟主机的概念
+- - '##'
+  - 图 2-3
+- - '##'
+  - 配置虚拟主机
+- - '##'
+  - 表 2-2
+- - '##'
+  - 练习 2-3
+- - '##'
+  - 配置虚拟主机
+- - '##'
+  - 目标 3 限制 Web 服务器的访问
+- - '##'
+  - 基于 IP 地址限制访问
+- - '##'
+  - 使用用户身份验证限制访问
+- - '##'
+  - 练习 2-4 配置身份验证
+- - '##'
+  - 目标 4 使用 OpenSSL 配置 Apache
+- - '##'
+  - SSL 加密的基础
+- - '##'
+  - 图 2-4
+- - '##'
+  - 以下说明了签名过程：
+- - '###'
+  - 图 2-5
+- - '##'
+  - 创建测试证书
+- - '##'
+  - 创建 RSA 密钥对
+- - '##'
+  - 签名公钥以创建证书
+- - '##'
+  - 配置 Apache 使用 SSL
+- - '##'
+  - 图 2-6
+- - '##'
+  - 安装 PHP
+- - '##'
+  - 测试 PHP 安装
+- - '##'
+  - 当你使用类似 http://myserver.php/php_info.php 的 URL 请求此文件时（假设你将文件命名为 php_info.php），将显示如下所示的页面：
+- - '##'
+  - 练习 2-6
+- - '##'
+  - 安装 PHP
+- - '##'
+  - 目标 6
+- - '##'
+  - 描述 Tomcat
+- - '##'
+  - 目标 7：安装和配置 Tomcat
+- - '##'
+  - 安装 Tomcat 软件包
+- - '##'
+  - 练习 2-7：安装 Tomcat
+- - '##'
+  - 理解文件系统结构
+- - '##'
+  - SUSE Linux Enterprise Server 10 高级管理
+- - '##'
+  - CNI 仅供内部使用-允许打印
+- - '##'
+  - 表 2-4
+- - '##'
+  - SUSE Linux Enterprise Server 10 高级管理
+- - '##'
+  - 图 2-8
+- - '##'
+  - 练习 2-8 使用配置模板
+- - '##'
+  - 目标 8
+- - '##'
+  - 安装 Web 应用
+- - '##'
+  - 练习 2-9 安装示例应用程序
+- - '##'
+  - 目标 9 使用 Tomcat 的管理工具
+- - '###'
+  - 使用 Manager 控制 Web 应用
+- - '##'
+  - 图 2-9
+- - '###'
+  - 使用管理界面调整服务器配置
+- - '##'
+  - 图 2-10
+- - '##'
+  - 限制对管理工具的访问
+- - '##'
+  - 练习 2-10 启用管理器和管理员工具
+- - '##'
+  - 目标 10 使用端口 80 访问 Tomcat
+- - '##'
+  - 练习 2-11
+- - '##'
+  - 配置 rinetd 将端口 80 转发到端口 8080
+- - '##'
+  - 总结
+- - '##'
+  - 目标总结
+- - '##'
+  - 第 3 节 配置和使用 Samba
+- - '###'
+  - 目标
+- - '##'
+  - 目标 1
+- - '###'
+  - 理解 Samba
+- - '##'
+  - 目标 2：配置简单的文件服务器
+- - '##'
+  - 安装 Samba
+- - '##'
+  - 练习 3-1：安装 Samba
+- - '##'
+  - 理解 Samba 配置文件
+- - '##'
+  - 创建一个通用服务器配置节
+- - '##'
+  - 创建一个用于共享文件的节
+- - '##'
+  - 目标 3：配置用户身份验证
+- - '##'
+  - 配置一个仅允许一个用户访问的共享
+- - '##'
+  - 为用户组配置共享访问
+- - '##'
+  - 配置家目录导出
+- - '##'
+  - 目标 4
+- - '##'
+  - 使用 Samba 客户端工具
+- - '##'
+  - 使用 nmblookup
+- - '##'
+  - 使用 smclient
+- - '##'
+  - 浏览服务器提供的共享
+- - '##'
+  - 练习 3-3 使用 smbclient 访问用户 Geeko 的共享
+- - '##'
+  - 将 SMB 共享挂载到 Linux 文件系统
+- - '##'
+  - 练习 3-4 挂载 Geeko 共享
+- - '##'
+  - 目标 5 将 Samba 作为域控制器
+- - '##'
+  - 理解域控制器
+- - '##'
+  - 配置 /etc/samba/smb.conf
+- - '##'
+  - 创建工作站账户
+- - '##'
+  - Sample smbpasswd file.
+- - '##'
+  - To use this, set 'encrypt passwords = yes' in the [global]-section
+- - '##'
+  - of /etc/samba/smb.conf
+- - '##'
+  - 目标 6
+- - '###'
+  - 将 Samba 集成到域
+- - '##'
+  - 目标 7 将 Samba 配置为打印服务器
+- - '##'
+  - 在 Samba 服务器上预处理
+- - '###'
+  - 共享一台打印机
+- - '##'
+  - 图 3-2
+- - '##'
+  - 共享多个打印机
+- - '##'
+  - 仅限 CNI 使用-允许打印副本
+- - '##'
+  - 在 Windows 客户端预处理
+- - '##'
+  - 图 3-3
+- - '##'
+  - 配置 Samba 作为打印服务器
+- - '##'
+  - 总结
+- - '##'
+  - 4. 使用客户端工具
+- - '##'
+  - 5. 使用 Samba 作为域控制器
+- - '##'
+  - 6. 在域中集成 Samba
+- - '##'
+  - 7. 配置 Samba 作为打印服务器
+- - '##'
+  - 第 4 节 启用网络服务
+- - '###'
+  - 目标
+- - '##'
+  - 启用扩展守护进程 (xinetd)
+- - '##'
+  - 使用 YaST 配置 xinetd
+- - '##'
+  - 手动管理 xinetd
+- - '##'
+  - 启动、停止和重启 xinetd
+- - '##'
+  - 表 4-1
+- - '##'
+  - 配置 xinetd
+- - '##'
+  - 文件 /etc/xinetd.conf
+- - '##'
+  - 目录 /etc/xinetd.d/
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: finger 服务器响应请求。'
+- - '##'
+  - 协议允许远程用户
+- - '##'
+  - 信息，如登录名和时间
+- - '##'
+  - 示例中关键字的含义
+- - '##'
+  - /etc/xinetd.d/echo
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: echo server. This is the tcp version.'
+- - '##'
+  - /etc/xinetd.d/echo-udp
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: echo server. This is the udp version.'
+- - '##'
+  - chconfig
+- - '##'
+  - SUSE Linux Enterprise Server 10 高级管理
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: Telnet is the old login server which is INSECURE and should never
+    be used. Use secure'
+- - '##'
+  - 配置访问
+- - '##'
+  - 仅供内部使用-允许打印
+- - '##'
+  - 访问控制
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: Telnet is the old login server which is insecure.'
+- - '##'
+  - 4-3
+- - '##'
+  - PureFTPd 的优势
+- - '##'
+  - 安装并运行 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 域的唯一名称
+- - '##'
+  - 运行的内核路径
+- - '##'
+  - 运行的初始化 RAM 磁盘
+- - '##'
+  - 分配的内存（MB）
+- - '##'
+  - CPU 核心数量
+- - '##'
+  - 磁盘配置
+- - '##'
+  - 网络配置
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - NOTE ** 当使用 pureftd 从 xinetd 启动时，控制
+- - '##'
+  - 其行为的参数应添加到文件中
+- - '##'
+  - 配置 PureFTPd
+- - '##'
+  - 'default: off'
+- - '##'
+  - 'description: ftpd server serves FTP connections. It uses normal,'
+- - '##'
+  - usernames and passwords for authentication.
+- - '##'
+  - This ftpd is the pureftd.
+- - '##'
+  - '** 当使用 pure pured 从 x xd 启动时时，'
+- - '##'
+  - 参数参数 添加到
+- - '##'
+  - 概述
+- - '##'
+  - 概述
+- - '##'
+  - 硬件时钟和系统时间
+- - '##'
+  - 使用 netdate 和 hwclock 同步
+- - '##'
+  - 使用 hwclock
+- - '##'
+  - 表 4-3
+- - '##'
+  - 使用 netdate
+- - '##'
+  - 网络协议 (NTP)
+- - '##'
+  - 网络协议
+- - '##'
+  - 层 (Stratum)
+- - '##'
+  - NTP 守护进程 (ntpd)
+- - '##'
+  - 使用 NTP 同步
+- - '##'
+  - 从命令行启动 ntpd
+- - '##'
+  - 使用 ntpdate 调整时间
+- - '##'
+  - Config 服务器 (/etc/ntp.conf)
+- - '##'
+  - 外部同步源
+- - '##'
+  - 使用 YaST 配置一个客户端
+- - '##'
+  - 目标 4 配置 ntpd
+- - '##'
+  - 配置网络系统（NFS）
+- - '##'
+  - 网络系统基础
+- - '##'
+  - 图 4-7
+- - '##'
+  - NFS 的原理
+- - '##'
+  - 配置概述
+- - '##'
+  - 手动配置 NFS
+- - '##'
+  - SUSE Linux Enterprise Server 10 高级管理
+- - '##'
+  - /etc/exports
+- - '##'
+  - /home da10(rw, sync) da20(rw, sync)
+- - '##'
+  - /usr/lib/texmf da10(ro, sync) da20(ro, sync)
+- - '##'
+  - /srv/ftp * (ro, sync)
+- - '##'
+  - 使用 YaST 配置 服务器
+- - '##'
+  - 显示如下：
+- - '##'
+  - 图 4-8
+- - '##'
+  - 4-9
+- - '##'
+  - 4-10
+- - '###'
+  - 临时导出目录
+- - '###'
+  - 使用 YaST 配置客户端访问
+- - '##'
+  - 客户端配置对话框：
+- - '####'
+  - 图 4-11
+- - '####'
+  - 图 4-12
+- - '###'
+  - 从命令行配置客户端访问
+- - '###'
+  - 从服务器手动导入目录
+- - '###'
+  - 自动挂载 NFS 目录
+- - '##'
+  - 监控 NFS 系统
+- - '##'
+  - SUSE Linux Enterprise Server 10 高级管理
+- - '##'
+  - 仅供内部使用-允许打印
+- - '##'
+  - 练习 4-4 设置和管理网络系统 (NFS)
+- - '##'
+  - 总结
+- - '##'
+  - 目标 2
+- - '##'
+  - 使用基础脚本元素
+- - '##'
+  - 专用-1允许打印
+- - '##'
+  - SUSE Linux Enterprise Server 10 高级管理
+- - '##'
+  - 专用-1允许打印
+- - '##'
+  - 练习 5-2
+- - '###'
+  - 创建基础 脚本
+- - '##'
+  - 目标 3 理解变量和命令替换
+- - '##'
+  - Shell脚本
+- - '##'
+  - 练习 5 使用变量和命令替换
+- - '##'
+  - 目标 4 使用控制结构
+- - '###'
+  - 创建分支
+- - '##'
+  - SUSE Linux Enterprise Server 10 高级管理
+- - '##'
+  - 另一种循环结构是 while 循环：
+- - '##'
+  - 与 while 循环相似的是 until 循环：
+- - '##'
+  - 练习 5-5 使用 while 循环
+- - '##'
+  - 目标 5
+- - '##'
+  - 使用算术运算符
+- - '##'
+  - 练习 5-7 读取输入
+- - '##'
+  - 目标 7 使用数组
+- - '##'
+  - SUSE Linux Enterprise Server 10 高级管理
+- - '##'
+  - 仅供内部使用-允许打印
+- - '##'
+  - 练习 5-8
+- - '###'
+  - 使用数组
+- - '##'
+  - 目标 8 完成课程项目
+- - '##'
+  - 查看请求详情
+- - '##'
+  - 仅供内部使用-允许打印
+- - '##'
+  - 删除请求
+- - '##'
+  - 练习 5-9
+- - '###'
+  - 添加命令
+- - '##'
+  - 目标 9
+- - '###'
+  - 使用高级脚本技术
+- - '##'
+  - 使用函数
+- - '##'
+  - 练习 5-10 使用 Shell 函数
+- - '##'
+  - 使用 getopts 读取选项
+- - '##'
+  - getopts optionstring variable
+- - '##'
+  - 目标 10
+- - '##'
+  - 学习 Shell 脚本中的实用命令
+- - '##'
+  - 使用 cat 命令
+- - '##'
+  - 使用 cut 命令
+- - '##'
+  - 使用 date 命令
+- - '##'
+  - 使用 grep 和 egrep 命令
+- - '##'
+  - grep pattern filename
+- - '##'
+  - 使用 sed 命令
+- - '##'
+  - sed editing-command filename
+- - '##'
+  - 表 5-1 (续)
+- - '##'
+  - 仅供内部使用-允许打印复印件
+- - '##'
+  - 使用 test 命令
+- - '##'
+  - 表 5-2
+- - '##'
+  - 表 5-3
+- - '##'
+  - 表 5-4
+- - '##'
+  - 表 5-5
+- - '##'
+  - 表 5-6
+- - '##'
+  - 使用 tr 命令
+- - '##'
+  - 总结
+- - '##'
+  - 创建 Shell 脚本
+- - '##'
+  - 摘要
+- - '###'
+  - 5. 使用算术运算符
+- - '###'
+  - 6. 读取用户输入
+- - '##'
+  - 第 6 节 从源码编译软件
+- - '##'
+  - 目标
+- - '##'
+  - 介绍
+- - '##'
+  - 目标 1
+- - '##'
+  - 理解 C 语言基础
+- - '##'
+  - 源码与可执行文件的区别
+- - '##'
+  - 简单 C 程序的结构
+- - '##'
+  - 编译简单的 C 程序
+- - '##'
+  - 练习 6-1
+- - '##'
+  - 编译简单的 C 程序
+- - '##'
+  - 目标 2 了解共享库的概念
+- - '##'
+  - 目标 3
+- - '##'
+  - 理解 GNU 构建工具链
+- - '##'
+  - 使用 configure 准备构建过程
+- - '##'
+  - 使用 make 编译源代码
+- - '##'
+  - Makefile for my_name
+- - '##'
+  - 使用 make install 安装编译后的程序
+- - '##'
+  - 安装构建环境所需的包
+- - '##'
+  - 从源码编译软件
+- - '##'
+  - 6-2
+- - '##'
+  - 目标 4 配置 ntpd
+- - '##'
+  - 配置网络系统（NFS）
+- - '##'
+  - 目标 4 配置 ntpd
