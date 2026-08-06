@@ -1,0 +1,808 @@
+- img_proc: true
+  md: '# # Enchantment OS
+
+    ## Linux Simplified for Home and Office
+
+
+    Kelley Winters, Ph.D.
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_0_0.png)
+
+
+    Edition 16.04
+
+
+    A Full-Color Easy-to-Read Guide for Enchantment OS Linux Systems'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: "![](img/746a5cdaf3de849af71e213250fb281f_1_0.png)\n\n![](img/746a5cdaf3de849af71e213250fb281f_1_1.png)\n\
+    \n+   * \n* \n* \n* \n*"
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_3_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_3_1.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_4_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_4_1.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_4_2.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_4_3.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_6_0.png)
+
+
+    # XFCE
+
+
+    +   -
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_6_1.png)
+
+
+    +   -
+
+
+    +   -
+
+
+    +   -
+
+
+    +   -
+
+
+    +   -
+
+
+    +   -'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "```\nbash-2.05b$ pwd\n/home/dstone\nbash-2.05b$ cd /usr/app-shells/bash\nbash-2.05b$\
+    \ ls -al\ntotal 60\ndrux-xr-x 3 root root 4096 May 14 12:05\ndrux-xr-x 26 root\
+    \ root 4096 May 17 02:36\ndrux-rw-xr-x 1 root root 13710 May 03 22:35 Changelog\n\
+    drux-rw-xr-x 1 root root 14128 May 14 12:05 Manifest\ndrux-rw-xr-x 1 root root\
+    \ 3720 May 14 12:05 bash-2.05b-r11.ebuid\ndrux-rw-xr-x 1 root root 3516 May 21\
+    \ 20:05 bash-2.05b-r9.ebuid\ndrux-rw-xr-x 1 root root 25536 May 14 12:05 bash-3.0-r11.ebuid\n\
+    drux-rw-xr-x 1 root root 4038 May 14 12:05 bash-3.0-r7.ebuid\ndrux-rw-xr-x 1 root\
+    \ root 3931 May 14 12:05 bash-3.0-r8.ebuid\ndrux-rw-xr-x 1 root root 3998 May\
+    \ 14 12:05 bash-3.0-r9.ebuid\ndrux-xr-x 2 root root 4096 May 13 22:35 files\n\
+    drux-xr-x 1 root root 164 Dec 29 2003 nodata.xml\nbash-2.05b$ cat version.xml\n\
+    <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<pkgnedata SYSTEM \"http://www.gentoo.org/dtd/nodata.dtd\"\
+    >\n<pkgnedata>\n<chardbase-system-herd>\n</pkgnedata>\nbash-2.05b$ sudo /etc/init.d/bluetooth\
+    \ status\nPassword: * stopped\nbash-2.05b$ ping -c 6 en.wikipedia.org\nPING en.wikipedia.org\
+    \ (172.102.141.54): 56(84) bytes of data.\n\n--- rr.wikipedia.org ping statistics\n\
+    6 packets transmitted, 6 received, 0.0% packet loss, time \nrtt min avg/max/mdev\
+    \ = 112.076/112.076/112.078/0 ms\nbash-2.05b$ grep -i /dev/sda /etc/fstab | cut\
+    \ --fields=3\n/dev/sda1\nbash-2.05b$ ls /dev/sda\n/dev/sda1  /dev/sda2\nbash-2.05b$\
+    \ date\nWed May 25 11:36:56 PDT 2005\n```\n\n![](img/746a5cdaf3de849af71e213250fb281f_7_0.png)"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_8_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_8_1.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Please select boot device:
+
+    SATA:PM-PLEXTOR PX-64M1S
+
+    USB:Verbatim TUFF
+
+
+    ↑ and ↓ to move selection
+
+    ENTER to select boot device
+
+    ESC to boot using defaults
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# # enchantment
+
+    linux simplified
+
+
+    Enchantment OS, based on Xubuntu 16.04 LTS
+
+
+    Use Linux: Save Files (Persistent USBdrives)
+
+    Try Linux: Files are Not Saved (DVD or USB)
+
+    Install Enchantment Linux on Hard Drive
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_10_0.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '```
+
+    GNU GRUB versi1
+
+    Ubuntu
+
+    Advanced options for Ubuntu
+
+    Memory test (memtest86+)
+
+    Memory test (memtest86+, serial con
+
+    ```
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_11_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_11_1.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_12_0.png)'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_13_0.png)'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_14_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_14_1.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_16_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_16_1.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_16_2.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_17_0.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# # Software Boutique
+
+
+    There is an abundance of software available for Ubuntu MATE and some people find
+    that choice overwhelming. The Boutique is a carefully curated selection of the
+    best-class applications chosen because they integrate well, complement Ubuntu
+    MATE and enable you to find what you''re looking for, install one of the software
+    centers to explore your computing experience.
+
+
+    If you can''t find what you''re looking for, install one of the software centers
+    to explore the complete Ubuntu software catalog.
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_18_0.png)
+
+
+    # # Synaptic Package Manager
+
+
+    | File | Edit | Package | Settings | Help |
+
+    |---|---|---|---|---|
+
+
+    Quick search
+
+
+    | Reload | Mark All Upgrades | Apply | Properties |
+
+    |---|---|---|---|---|
+
+
+    | All | Package | Installed Version | Latest Version |
+
+    |---|---|---|---||
+
+    | Installed | 2vccard | 0.5-3 |
+
+    | Installed (local or obsolete) | 3270-common | 3.3.10ga4 |
+
+    | Installed (manual) | 3dchess | 0.8.1-16 |
+
+    | Installed (upgradable) | 3depict | 0.0.1-1 |
+
+    | New in repository | | | |
+
+    | Not installed | | | |
+
+
+    # ## 3D chess for X11
+
+
+    Get Screenshot
+
+
+    3 dimensional Chess game for X11R6. There are three boards, stacked vertically:
+    96 pieces of which most are the traditional chess pieces with just a couple of
+    additions; 26 directions in which to move. AI isn''t wonderful, but provides a
+    challenging enough game to play.
+
+
+    +   - Sections
+
+    - Status
+
+    - Origin
+
+    - Custom Filters
+
+    - Search Results
+
+
+    32258 packages listed, 1309 installed, 0 broken. 0 to install/upgrade, 0 to remove'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_19_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_19_1.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Volume Control
+
+
+    Playback Recording Output Devices Input Devices Configuration
+
+
+    System Sounds
+
+    Mono
+
+    Silence
+
+    105% (1.21dB)
+
+
+    Rhythmbox: ''Sinfonia in D Major'' by ''Wendy Carlos''
+
+    Front Left
+
+    100% (0.00dB)
+
+    Front Right
+
+    Silence
+
+    100% (0.00dB)
+
+
+    Show: Applications
+
+
+    # Volume Control
+
+
+    Playback Recording Output Devices Input Devices Configuration
+
+
+    Built-in Audio Digital Stereo (HDMI)
+
+    Port: HDMI / DisplayPort (unplugged)
+
+    Front Left
+
+    94% (-1.61dB)
+
+    Front Right
+
+    94% (-1.61dB)
+
+    Silence
+
+    100% (0dB)
+
+
+    Advanced
+
+
+    Built-in Audio Analog Stereo
+
+    Port: Speakers
+
+    Front: Headphones (unplugged)
+
+    Front Right
+
+    78% (-6.47dB)
+
+    Silence
+
+    100% (0dB)
+
+
+    Advanced
+
+
+    Show: All Output Devices'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_21_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_21_1.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Sound & Video
+
+
+    # Codecs Pack
+
+
+    Includes a library that offers a complete, cross-platform solution to decode,
+    encode, record, convert and stream audio and video. it also includes a MP3 audio
+    decoder that permits the playback of MPEG 1 audio layer 3 (MP3) streams in Rhythmbox.
+
+
+    | License | Open Source |
+
+    | --- | --- |
+
+    | Platform | 32-bit 64-bit aarch32(ARMv7) PowerPC |
+
+    | Category | Codecs / Libraries |
+
+    | Source | Ubuntu Repository |
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_22_0.png)
+
+
+    Set to retrieve the latest software listings.
+
+    Version: 16.10.0~xenial.1.7
+
+
+    # Firewall
+
+
+    Firewall
+
+    Profile: Public
+
+    Status: ON
+
+    Incoming: Reject
+
+    Outgoing: Allow
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_22_1.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_22_2.png)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Welcome
+
+
+    +   Celtina
+
+    Cymraeg
+
+    Dansk
+
+    Deutsch
+
+    Eesti
+
+    English
+
+    Español
+
+    Esperanto
+
+    Euskara
+
+    Français
+
+    Gaeilge
+
+
+    You may wish to read the release notes.
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_23_0.png)
+
+
+    # Installation Complete
+
+
+    Installation has finished. You can continue testing Xubuntu now, but until you
+    restart the computer, any changes you make or documents you save will not be preserved.
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_23_1.png)
+
+
+    Continue Testing
+
+
+    Restart Now'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_24_0.png)
+
+
+    You''re browsing privately - Mozilla Firefox
+
+
+    You''re browsing privately x
+
+
+    Firefox | Search or enter address
+
+
+    Most Visited Getting Started
+
+
+    # # You''re browsing privately
+
+
+    Firefox won''t remember any history for this window.
+
+
+    That includes browsing history, search History, download history, web form history,
+    cookies, and temporary internet files. However, files you download and bookmarks
+    you make will be kept.
+
+
+    While this computer won''t have a record of your browsing history, your employer
+    or internet service provider can still track the pages you visit.
+
+
+    Learn More.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_26_0.png)'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_27_0.png)'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_28_0.png)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Samba Users
+
+
+    kelley
+
+
+    Add User
+
+
+    Edit User
+
+
+    Delete User
+
+
+    # Create New Samba User
+
+
+    Unix Username:
+
+
+    kelley
+
+
+    Windows Username:
+
+
+    kelley
+
+
+    Samba Password:
+
+
+    ********
+
+
+    Confirm Samba Password:
+
+
+    ********
+
+
+    OK
+
+
+    Cancel
+
+
+    OK
+
+
+    # Create Samba Share
+
+
+    # Create Samba Share
+
+
+    Basic
+
+
+    Access
+
+
+    Basic
+
+
+    Access
+
+
+    Directory:
+
+
+    /home/kelley/Pictures
+
+
+    Browse...
+
+
+    Share name:
+
+
+    Pictures
+
+
+    Description:
+
+
+    my photos
+
+
+    +   - Only allow access to specific users
+
+
+    +   - kelley
+
+
+    +   - Writable
+
+
+    +   - Visible
+
+
+    +   - Allow access to everyone
+
+
+    OK
+
+
+    Cancel
+
+
+    OK
+
+
+    Cancel'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_30_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_30_1.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_30_2.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_30_3.png)'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_31_0.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Pictures\n\nHome Folder\n\n+   - Pictures\n  - (Empty)\n- Videos\n  - Downloads\n\
+    - Computer\n  - WDC WD100S12X-555JTETO: home:1000\n- JetFlash Transcend 16GB:\
+    \ Transcend\n- SD02G: 2.0 GB Volume\n- Catalogs\n- Selections\n\n![](img/746a5cdaf3de849af71e213250fb281f_32_0.png)\n\
+    \n![](img/746a5cdaf3de849af71e213250fb281f_32_1.png)\n\n![](img/746a5cdaf3de849af71e213250fb281f_32_2.png)\n\
+    \n![](img/746a5cdaf3de849af71e213250fb281f_32_3.png)\n\n![](img/746a5cdaf3de849af71e213250fb281f_32_4.png)\n\
+    \n![](img/746a5cdaf3de849af71e213250fb281f_32_5.png)\n\nShow: All\n\n13 files\
+    \ (4.3 MB) · 78.5 GB of free space\n\n![](img/746a5cdaf3de849af71e213250fb281f_32_6.png)"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "![](img/746a5cdaf3de849af71e213250fb281f_33_0.png)\n\n![](img/746a5cdaf3de849af71e213250fb281f_33_1.png)\n\
+    \n+   - \n-* \n-*"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_35_0.png)'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_36_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_36_1.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_36_2.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_36_3.png)'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_37_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_37_1.png)'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Transcend - File Manager
+
+
+    /media/kelley/Transcend/
+
+
+    | Name | Size | Type | Date Modified |
+
+    | --- | --- | --- | --- |
+
+    | Pictures | 8.2 kB | folder | 2016-06-26 16: |
+
+
+    +   - File System
+
+    - home1000
+
+    - linux64
+
+    - uefi
+
+    - Transcend
+
+    - 2.0 GB Volume
+
+
+    +   - kelley
+
+    - Desktop
+
+    - Trash
+
+
+    1 item, Free space: 15.8 GB
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_39_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_39_1.png)
+
+
+    | ID | Attribute | Value | Normalized | Threshold | Worst | Type | Updates | Assessment
+    |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 1 | Read Error Rate | 0 | 200 | 51 | 200 | Pre-Fail | Online | OK |
+
+    | 3 | Spinuup Time | 1 second | 188 | 21 | 187 | Pre-Fail | Online | OK |
+
+    | 4 | Start/Stop Count | 34 | 100 | 0 | 100 | Old-Age | Online | OK |
+
+    | 5 | Reallocated Sectors Count | 0 sectors | 200 | 140 | 200 | Pre-Fail | Online
+    | OK |
+
+    | 7 | Seek Error Rate | 0 | 200 | 0 | 200 | Old-Age | Online | OK |'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "![](img/746a5cdaf3de849af71e213250fb281f_40_0.png)\n\n+   * \n* \n*\n*\n*\n\
+    *\n*\n*\n*\n*\n\n![](img/746a5cdaf3de849af71e213250fb281f_40_1.png)"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_41_0.png)
+
+
+    ![](img/746a5cdaf3de849af71e213250fb281f_41_1.png)'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_42_0.png)'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "```\nbash-2.05b$ pwd\n/home/dstone\nbash-2.05b$ cd /usr/portage/app-shells/bash\n\
+    bash-2.05b$ ls -al\ntotal 60\ndrwxr-xr-x 3 root 4096 May 14 12:05\n 26 root 4096\
+    \ May 17 02:36\n-rwxr-xr-x 1 root 13710 May 14 22:35 Changelog\n-rwxr-xr-x 1 root\
+    \ 27934 May 14 12:05 Manifest\n-rwxr-xr-x 1 root 3720 May 14 20:05 bash-2.05b-r9.ebuild\n\
+    -rwxr-xr-x 1 root 3516 May 14 20:05 bash-2.05b-r8.ebuild\n-rwxr-xr-x 1 root 2954\
+    \ May 14 22:35 bash-2.05b-r7.ebuild\n-rwxr-xr-x 1 root 3931 May 14 12:05 bash-3.0-r8.ebuild\n\
+    -rwxr-xr-x 1 root 4038 May 14 12:05 bash-3.0-r7.ebuild\n-rwxr-xr-x 1 root 24111\
+    \ May 14 21:10 bash-3.0-r9.ebuild\ndrwxr-xr-x 2 root 4096 May 14 22:35 files\n\
+    -rwxr-xr-x 1 root 164 Dec 29 2003 metadata.xml\nbash-2.05b$ cat metadata.xml\n\
+    <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE metadata SYSTEM \"http://www.gentoo.org/dtd/metadata.dtd\"\
+    >\n<metadata>\n<herd-base-system>\n</herd>\n</metadata>\nbash-2.05b$ sudo /etc/init.d/bluetooth\
+    \ status\nPassword: stopped\nbash-2.05b$ ping -c 1 en.wikipedia.org\nPING cc.htpa.wikipedia.org\
+    \ (207.142.131.247): 64 bytes of data.\n\n--- cc.htpa.wikipedia.org ping statistics\
+    \ ---\n1 packets transmitted, 1 received, 0% packet loss, time 1005ms\nrtt min/avg/max/mdev\
+    \ = 112.076/112.076/112.076/0.000 ms\n\nbash-2.05b$ grep -l /dev/sda /etc/fstab\
+    \ | cut --fields=3 -f\n/dev/sda1 /root\n/dev/sda2\nbash-2.05b$ date\nWed May 25\
+    \ 11:36:56 PDT 2005\n```\n\n![](img/746a5cdaf3de849af71e213250fb281f_43_0.png)"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_44_0.png)'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '![](img/746a5cdaf3de849af71e213250fb281f_45_0.png)'
+  merge: -1
+  pgno: 45
