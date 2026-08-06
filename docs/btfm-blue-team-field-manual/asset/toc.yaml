@@ -1,0 +1,562 @@
+- - '#'
+  - BTFM：蓝队实战手册
+- - '#'
+  - 前言
+- - '##'
+  - 4 响应（分析）
+- - '###'
+  - 现场分查 - WINDOWS
+- - '###'
+  - 现场分查 - LINUX
+- - '###'
+  - 恶意软件分析
+- - '##'
+  - 5 恢复（修复）
+- - '###'
+  - 补丁
+- - '###'
+  - OS 秘籍
+- - '###'
+  - 应急响应清单
+- - '###'
+  - 事件记录与事件共享词汇 (VERIS)
+- - '##'
+  - 1 识别（范围）
+- - '##'
+  - 扫描与漏洞
+- - '###'
+  - nmap -sn -PE <IP ADDRESS OR RANGE>
+- - '###'
+  - nmap --open <IP ADDRESS OR RANGE>
+- - '###'
+  - nmap -sV <IP ADDRESS>
+- - '###'
+  - nmap -p 80,443 <IP ADDRESS OR RANGE>
+- - '###'
+  - nmap -sU -p 53 <IP ADDRESS OR RANGE>
+- - '###'
+  - nmap -v -Pn -sU -sT -p U:53,111,137,T:21-25,80,139,8080 <IP ADDRESS>
+- - '###'
+  - NESSUS
+- - '###'
+  - nessus -q -x -T html <NESSUS SERVER IP ADDRESS> <NESSUS SERVER PORT 1241> <ADMIN
+    ACCOUNT> <ADMIN PASSWORD> <FILE WITH TARGETS>.txt <RESULTS FILE NAME>.html
+- - '###'
+  - nessus [-vnh] [-c .rcfile] [-V] [-T format]
+- - '###'
+  - nessus -q [-pPPS] <HOST> <PORT> <USER NAME> <PASSWORD> <targets-file> <result-file>
+- - '##'
+  - 报告转换：
+- - '###'
+  - nessus -i in. [nsr|nbe] -o out. [xml|nsr|nbe|html|txt
+- - '##'
+  - OPENVAS
+- - '###'
+  - apt-get install openvas-server openvas-client openvas-plugins-base openvas-plugins-dfsg
+- - '###'
+  - openvas-nvt-sync
+- - '###'
+  - openvas-adduer
+- - '###'
+  - service openvas-server start
+- - '###'
+  - vi scanme.txt
+- - '###'
+  - openvas-client -q 127.0.0.1 9390 sysadm nsrc+ws
+- - '##'
+  - WINDOWS
+- - '###'
+  - 网络发现
+- - '###'
+  - DHCP
+- - '###'
+  - DNS
+- - '###'
+  - 哈希校验 (HASHING)
+- - '###'
+  - NETBIOS
+- - '###'
+  - USER ACTIVITY
+- - '##'
+  - 网络发现
+- - '###'
+  - smbtree -b
+- - '###'
+  - smbtree -D
+- - '###'
+  - smbtree -S
+- - '###'
+  - smbclient -L <HOST NAME>
+- - '###'
+  - smbstatus
+- - '###'
+  - for ip in $(seq 1 254); do ping -c 1
+- - '###'
+  - DHCP
+- - '###'
+  - cat /var/lib/dhcpd/dhcpd.leases
+- - '###'
+  - grep -Ei 'dhcp' /var/log/syslog.1
+- - '###'
+  - tail -f dhcpd.log
+- - '###'
+  - DNS
+- - '###'
+  - rndc querylog
+- - '###'
+  - tail -f /var/log/messages | grep named
+- - '###'
+  - 哈希处理
+- - '###'
+  - find /<PATHNAME TO ENUMERATE> -type f -exec md5sum
+- - '###'
+  - md5deep -rs / > md5sums.txt
+- - '###'
+  - NETBIOS
+- - '###'
+  - nbtscan <IP ADDRESS OR RANGE>
+- - '###'
+  - 密码
+- - '###'
+  - while read line; do username=$line; while
+- - '##'
+  - 2 保护（防御）
+- - '##'
+  - 禁用/停止服务
+- - '##'
+  - 主机系统防火墙
+- - '###'
+  - 显示防火墙日志：
+- - '###'
+  - 密码
+- - '###'
+  - 更改密码：
+- - '###'
+  - 远程更改密码：
+- - '##'
+  - HOST 文件
+- - '###'
+  - 刷新恶意域名/IP 的 DNS：
+- - '###'
+  - 刷新主机/IP 的 NetBios 缓存：
+- - '###'
+  - 白名单
+- - '###'
+  - 限制
+- - '###'
+  - 采用 AppLocker 的步骤（数字签名应用限制需要 GUI）：
+- - '###'
+  - 显示任何本地规则的 GridView 列表：
+- - '###'
+  - IPSEC
+- - '###'
+  - 显示名为 "MyIPsecPolicy" 的 IPSEC 本地安全策略：
+- - '###'
+  - 停止或取消 IPSEC 策略：
+- - '###'
+  - 创建一个适用于任何连接的 IPSEC 高级防火墙规则、策略以及预共享密钥：
+- - '###'
+  - 在所有出站请求上要求 IPSEC 预共享密钥：
+- - '###'
+  - 创建一个用于网页浏览的规则：
+- - '###'
+  - 创建一个 DNS 规则：
+- - '###'
+  - 删除 IPSEC 规则：
+- - '###'
+  - 获取并强制更新新策略：
+- - '###'
+  - 不带活动目录 (AD) 的独立系统
+- - '###'
+  - 仅发送 NTLM2 响应/拒绝 LM 和 NTLM：
+- - '###'
+  - 限制匿名访问：
+- - '###'
+  - 禁用 IPv6：
+- - '###'
+  - 禁用粘滞键：
+- - '###'
+  - 禁用备切换键：
+- - '###'
+  - 禁用过滤键：
+- - '###'
+  - 禁用屏幕键盘：
+- - '###'
+  - iptables -L
+- - '###'
+  - iptables -F
+- - '###'
+  - service iptables start
+- - '###'
+  - service iptables stop
+- - '###'
+  - ufw enable
+- - '###'
+  - ufw disable
+- - '###'
+  - ufw logging on
+- - '###'
+  - ufw logging off
+- - '###'
+  - cp /lib/ufw/{user.rules,user6.rules} /<备份路径>
+- - '###'
+  - cp /lib/ufw/{user.rules,user6.rules} ./
+- - '###'
+  - ufw status verbose
+- - '###'
+  - 'ufw delete <RULE #>'
+- - '###'
+  - ufw allow for <IP ADDRESS>
+- - '###'
+  - ufw allow all 80/tcp
+- - '###'
+  - ufw allow all ssh
+- - '###'
+  - ufw deny from <BAD IP ADDRESS> proto udp to any port 443
+- - '###'
+  - 密码
+- - '###'
+  - HOST 文件
+- - '###'
+  - echo 127.0.0.1 <MALICIOUS DOMAIN> >> /etc/hosts
+- - '###'
+  - ping -c 1 <MALICIOUS DOMAIN>
+- - '###'
+  - /etc/init.d/dns-clean start
+- - '###'
+  - /etc/init.d/nscd restart
+- - '###'
+  - service nscd restart
+- - '###'
+  - service nscd reload
+- - '###'
+  - nscd -i hosts
+- - '###'
+  - /etc/init.d/dnsmasq restart
+- - '###'
+  - 白名单
+- - '###'
+  - IPSEC
+- - '###'
+  - 4：在两个主机上添加预共享密钥。
+- - '###'
+  - echo <HOST2 IP ADDRESS> <PRESHRED PASSWORD>
+- - '###'
+  - echo <HOST1 IP ADDRESS> <PRESHRED PASSWORD>
+- - '###'
+  - 5：在两个系统上重启服务。
+- - '###'
+  - service setkey restart
+- - '###'
+  - setkey -D
+- - '###'
+  - setkey -DP
+- - '##'
+  - 3 探测（可见性）
+- - '##'
+  - 网络监控
+- - '###'
+  - TCPDUMP
+- - '###'
+  - tcpdump -A
+- - '###'
+  - tcpdump -X
+- - '###'
+  - tcpdump -tttt -n -vv
+- - '###'
+  - tcpdump -nn -c 1000 | awk '{print $3}' | cut -d - -f1-4 | sort -n | uniq -c |
+    sort -nr
+- - '###'
+  - tcpdump -w <FILENAME>.pcap -i any dst <TARGET IP ADDRESS> and port 80
+- - '###'
+  - tcpdump host 10.0.0.1 && host 10.0.0.2
+- - '###'
+  - tcpdump not net 10.10 && not host 192.168.1.2
+- - '###'
+  - tcpdump host 10.10.10 && host 10.10.20
+- - '###'
+  - tcpdump -n -s65535 -C 1000 -w host_%Y-%m-%d_%H:%M:%S.pcap
+- - '###'
+  - 将 pcap 文件保存到远程主机：
+- - '###'
+  - tcpdump -w - | ssh <REMOTE HOST ADDRESS> cat >/tmp/remapture.pcap
+- - '###'
+  - tcpdump -n -A -s0 | grep pass
+- - '###'
+  - tcpdump -n -A -s0 port http or port ftp or smtp or pop3 | egrep -i pass=|login=|username|=password|user|color
+    --auto -buffered
+- - '###'
+  - tcpdump -w - | pv /dev/null
+- - '###'
+  - tcpdump not ipv6
+- - '###'
+  - tcpdump ip6
+- - '###'
+  - 寻找可疑和自签名 SSL 证书：
+- - '###'
+  - tshark -r -A '(tcp[12:1] & 0xf0):5:1 = 0x16'
+- - '###'
+  - 获取 SSL 证书：
+- - '###'
+  - openssl s_client -connect <URL>:443 </dev/null | sed -ne '/BEGIN CERTIFICATE/,/-END
+    CERTIFICATE/' > <CERT>.pem
+- - '###'
+  - 检查并验证证书是否为自签名：
+- - '###'
+  - openssl x509 -text -in <CERT>.pem
+- - '###'
+  - openssl x509 -text -in <CERT>.pem
+- - '###'
+  - SNORT
+- - '###'
+  - 网络捕获 (PCAP)
+- - '###'
+  - EDITCAP
+- - '###'
+  - MERGCAP
+- - '###'
+  - 蜜罐技术
+- - '###'
+  - WINDOWS
+- - '###'
+  - 蜜罐哈希（用于检测 Mimikatz 使用）：
+- - '###'
+  - LINUX
+- - '###'
+  - 蜜罐端口：
+- - '###'
+  - 需要监控的关键日志：
+- - '###'
+  - 访问 -审计部分：
+- - '###'
+  - 对象访问 -审计：
+- - '###'
+  - 策略更改 - 审计：
+- - '###'
+  - 注册表、更改
+- - '###'
+  - 补丁、设置：
+- - '###'
+  - 共享 -审计：
+- - '###'
+  - 访问 -审计：
+- - '###'
+  - 自动加载信息：
+- - '###'
+  - 启动目录：
+- - '###'
+  - 自动启动的地方：
+- - '###'
+  - 策略与设置：
+- - '###'
+  - 硬盘获取：
+- - '###'
+  - 内存获取：
+- - '###'
+  - 系统信息：
+- - '###'
+  - uptime -a
+- - '###'
+  - timedatectl
+- - '###'
+  - mount
+- - '###'
+  - last
+- - '###'
+  - /etc/shadow
+- - '###'
+  - 运行 chkhroot：
+- - '###'
+  - apt-get install chkhroot
+- - '###'
+  - 运行 rkhunter：
+- - '###'
+  - apt-get install rkhunter
+- - '###'
+  - rkhunter --update
+- - '###'
+  - 运行 tiger：
+- - '###'
+  - apt-get install tiger
+- - '###'
+  - /var/log/tiger/report
+- - '###'
+  - 运行 lynis：
+- - '###'
+  - apt-get install lynis
+- - '###'
+  - /var/log/lynis.log
+- - '###'
+  - 恶意软件检测 (LMD)：
+- - '###'
+  - wget http://www.rfx.com/maldetect-current.tar.gz
+- - '###'
+  - tar xfz maldetect-current.tar.gz
+- - '###'
+  - ./install.sh
+- - '###'
+  - maldetect -u
+- - '###'
+  - maldetect -a <DIRECTORY>
+- - '###'
+  - 恶意软件分析
+- - '###'
+  - 静态分析
+- - '###'
+  - Windows PE 分析：
+- - '###'
+  - hexdump -C -n 500 somefile.exe
+- - '###'
+  - xxd somefile.exe
+- - '###'
+  - Windows PE 分析：
+- - '###'
+  - 步骤 5：停止并移除恶意软件：
+- - '###'
+  - 步骤 6：清理恶意文件重启。
+- - '###'
+  - 步骤 7：进程监视 (Process Monitor)
+- - '###'
+  - 步骤 8：根据需要操作，找到所有恶意文件和进程，并与其他工具结合。
+- - '###'
+  - 文件哈希分析 (FILE HASH)
+- - '###'
+  - 哈希查询 (HASH QUERY)
+- - '###'
+  - curl -v --request POST --url 'https://www.virustotal.com/api/v3/report' -d apikey=<VT
+    API KEY> file=<PATH>
+- - '###'
+  - 恶意软件分析 (FILE HASH/FILE HASH)
+- - '###'
+  - 硬盘和内存获取 (HARD DRIVE AND MEMORY ACQUISITION)
+- - '###'
+  - WINDOWS
+- - '###'
+  - 内存转储：
+- - '###'
+  - LINUX
+- - '###'
+  - 内存转储：
+- - '###'
+  - dd=/dev/MEMORY.dd of=/tmp/MEMORY.dump
+- - '###'
+  - 创建内存转储：
+- - '###'
+  - insmod lime
+- - '###'
+  - core
+- - '###'
+  - strings /path/to/core
+- - '###'
+  - /dev/mem if=/tmp/MEMORY.dump
+- - '###'
+  - /dev/mem if=/tmp/MEMORY.dump format=raw
+- - '###'
+  - gcore <PID>
+- - '###'
+  - strings /path/to/core
+- - '###'
+  - /dev/mem if=/tmp/MEMORY.dump format=raw
+- - '###'
+  - strings if=/MOUNTED LOCATION/<FILE>.img
+- - '###'
+  - hash=USER NAME@<DESTINATION ADDRESS>
+- - '###'
+  - dd=/dev/INPUT DEVICE> <DESTINATION ADDRESS> own### nc -p <SAME PORT> -l | dd=/dev/INPUT
+    DEVICE bs=16M
+- - '###'
+  - nc -p <SAME PORT> -l -r | dd=/dev/INPUT DEVICE bs=16M
+- - '##'
+  - 5 恢复 (REMEDIATE)
+- - '##'
+  - 补丁 (PATCHING)
+- - '###'
+  - WINDOWS
+- - '###'
+  - LINUX
+- - '###'
+  - apt-get update
+- - '###'
+  - apt-get upgrade
+- - '###'
+  - apt-get dist-upgrade
+- - '###'
+  - up2date
+- - '###'
+  - up2date-nox --update
+- - '###'
+  - up2date -u <PACKAGE NAME>
+- - '###'
+  - pup
+- - '###'
+  - apt-get update
+- - '###'
+  - yum list <PACKAGE NAME>
+- - '###'
+  - yum install <PACKAGE NAME>
+- - '##'
+  - 备份 (BACKUP)
+- - '###'
+  - WINDOWS
+- - '###'
+  - LINUX
+- - '###'
+  - reboot -f
+- - '###'
+  - reboot -f
+- - '###'
+  - passwd
+- - '###'
+  - apt-get install --reinstall <受损包>
+- - '###'
+  - apt-get install --reinstall $(dpkg --get-selections|grep v)
+- - '###'
+  - 杀死恶意进程
+- - '###'
+  - WINDOWS
+- - '###'
+  - LINUX
+- - '###'
+  - kill <PID>
+- - '###'
+  - chmod -x /usr/sbin/<可疑文件名>
+- - '###'
+  - mkdir /home/quarantine/
+- - '###'
+  - mv
+- - '###'
+  - 检测 PSEXEC 流量的 Snort：
+- - '###'
+  - DOS/DDOS
+- - '##'
+  - DoS/DDOS 指纹识别
+- - '###'
+  - iftop -n
+- - '###'
+  - tshark -r <FILE NAME>.pcap -q -z io,phs
+- - '###'
+  - tshark -c 1000 -q -z io,phs
+- - '###'
+  - tcpdump -tnr $FILE NAME|awk -F '.' '{print $1"","$2"","$3"","$4"}' | sort | uniq-c
+    | sort -n | tail
+- - '###'
+  - tcpdump -qnn "tcp[tcpflags] & (tcp-syn) != 0
+- - '###'
+  - netstat -s
+- - '###'
+  - tcpdump -nn not arp and not udp
+- - '###'
+  - tcpdump -nn
+- - '###'
+  - 资源型：状态耗尽
+- - '###'
+  - netstat -n | awk '{print $6}' | sort | uniq -c | sort -nr | head
+- - '###'
+  - 应用型：七层攻击
+- - '###'
+  - tshark -c 10000 -T fields -e http.host | sort | uniq -c | sort -r | head
+- - '###'
+  - tshark -r capture6 -T fields -e http.request.full_uri | sort | uniq -c | sort
+    -r | head -n 10
+- - '###'
+  - tcpdump -n 'tcp[32] = 0x474520' | cut -f 7 -d ""
