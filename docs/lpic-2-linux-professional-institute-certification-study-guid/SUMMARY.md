@@ -1,0 +1,2 @@
++   [LPIC-2：Linux Professional Institute 认证学习指南（考试 201 和 202）](README.md)
++   [LPIC-2：Linux Professional Institute 认证学习指南（考试 201 和 202）](lpic-2-linux-professional-institute-certification-study-guid.md)
