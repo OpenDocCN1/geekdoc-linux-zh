@@ -1,0 +1,344 @@
+- - '#'
+  - Linux 游戏编程：使用 SDL、OpenAL 及其他 API 构建多媒体应用
+- - '#'
+  - 5 Linux 音频编程
+- - '##'
+  - 6 Linux 下的游戏脚本编写
+- - '##'
+  - 7 Linux 下的网络游戏
+- - '##'
+  - 8 在 Linux 控制台玩游戏
+- - '##'
+  - 9 完成企鹅战士
+- - '##'
+  - 10 每一个 Linux 发行版
+- - '#'
+  - 第一章 游戏的解剖
+- - '##'
+  - 游戏类型概览
+- - '###'
+  - 模拟游戏
+- - '##'
+  - 游戏的解剖
+- - '###'
+  - 第一人称射击游戏
+- - '###'
+  - 即时战略游戏
+- - '###'
+  - 回合制战略游戏
+- - '###'
+  - 欺骗性的复杂性
+- - '###'
+  - 角色扮演游戏
+- - '###'
+  - 益智游戏
+- - '###'
+  - 多用户迷宫
+- - '##'
+  - 快速查看内部
+- - '###'
+  - 这代码太糟糕了！
+- - '##'
+  - 输入子系统
+- - '##'
+  - 游戏结构剖析
+- - '###'
+  - 音频子系统
+- - '###'
+  - 网络子系统
+- - '###'
+  - 更新子系统
+- - '#'
+  - 第二章 Linux 开发工具
+- - '##'
+  - 编程编辑器
+- - '###'
+  - Emacs
+- - '###'
+  - NEdit
+- - '##'
+  - 在 Linux 下编译程序
+- - '##'
+  - 使用 Make 工具
+- - '###'
+  - 创建 Makefile
+- - '###'
+  - 变量替换
+- - '###'
+  - 隐式规则
+- - '###'
+  - 伪目标 (Phony Targets)
+- - '##'
+  - 错误处理
+- - '###'
+  - 使用库
+- - '###'
+  - 静态库
+- - '###'
+  - 共享库
+- - '###'
+  - 创建共享库
+- - '##'
+  - Linux 链接特性
+- - '##'
+  - 调试 Linux 应用
+- - '###'
+  - 为调试编译
+- - '###'
+  - gdb
+- - '###'
+  - 一个简单的示例
+- - '###'
+  - 访问数据
+- - '###'
+  - 查看栈
+- - '###'
+  - 远程调试
+- - '###'
+  - 调试多线程应用程序
+- - '###'
+  - ddd
+- - '###'
+  - 错误跟踪
+- - '##'
+  - 使用 CVS 管理项目
+- - '###'
+  - CVS 简要教程
+- - '###'
+  - 创建 CVS 模块
+- - '###'
+  - 警告
+- - '###'
+  - 使用 CVS 项目工作
+- - '###'
+  - CVS 版本号
+- - '###'
+  - 添加和删除文件
+- - '###'
+  - 源码树分支
+- - '##'
+  - 远程访问 CVS
+- - '##'
+  - 其他实用工具
+- - '##'
+  - 使用 grep 快速搜索文本
+- - '##'
+  - 使用 diff 和 patch 更新源码
+- - '##'
+  - 警告
+- - '#'
+  - 第三章 Linux 游戏 API
+- - '##'
+  - LINUX 游戏 API
+- - '##'
+  - LINUX 游戏 API
+- - '###'
+  - 图形 API
+- - '###'
+  - SVGALib
+- - '###'
+  - GGI
+- - '###'
+  - SDL
+- - '###'
+  - ClanLib
+- - '###'
+  - OpenGL
+- - '###'
+  - Plib
+- - '###'
+  - Glide
+- - '###'
+  - Xlib
+- - '###'
+  - 图形用户界面工具包
+- - '###'
+  - GTK+
+- - '###'
+  - Tk
+- - '###'
+  - Fltk
+- - '###'
+  - Qt
+- - '###'
+  - SDL GUI 支持
+- - '###'
+  - 音频接口
+- - '###'
+  - OSS
+- - '###'
+  - ALSA
+- - '###'
+  - ESD
+- - '###'
+  - OpenAL
+- - '###'
+  - 脚本库
+- - '###'
+  - Tcl
+- - '###'
+  - Guile 和 MzScheme
+- - '###'
+  - Python 和 Perl
+- - '###'
+  - 网络 API
+- - '###'
+  - BSD sockets
+- - '###'
+  - OpenPlay
+- - '###'
+  - IPX 和 SPX
+- - '###'
+  - 文件处理
+- - '###'
+  - libpng 和 libjpeg
+- - '###'
+  - libaudiofile 和 libsndfile
+- - '###'
+  - Ogg Vorbis
+- - '##'
+  - SDL MPEG 库，SMPEG
+- - '##'
+  - zlib
+- - '#'
+  - 第四章 精通 SDL
+- - '##'
+  - 计算机图形硬件
+- - '###'
+  - 帧缓冲区
+- - '###'
+  - 索引模式
+- - '###'
+  - 高色模式
+- - '###'
+  - 真色彩 (True Color)
+- - '###'
+  - 直接色 (Direct Color)
+- - '##'
+  - SDL 视频 API
+- - '###'
+  - 设置显示器
+- - '###'
+  - 函数 SDL.Quit()
+- - '###'
+  - 函数 SDL.QuitSubsystem()
+- - '##'
+  - 直接绘制表面
+- - '###'
+  - 结构 SDL_Surface
+- - '####'
+  - 成员
+- - '###'
+  - 函数 SDL_LockSurface(surf)
+- - '###'
+  - 函数 SDLUnlockSurface(surf)
+- - '###'
+  - 结构 SDL_PixelFormat
+- - '##'
+  - 函数 SDL_UpdateRect(surface, left, top, right, bottom)
+- - '##'
+  - 使用快速传输（Blits）绘图
+- - '##'
+  - 函数 SDL.LoadBMP(filename)
+- - '##'
+  - 函数 BlitSurface(src, srect, dest, destrect)
+- - '###'
+  - SDL_Rect
+- - '##'
+  - 颜色键与透明度
+- - '##'
+  - 函数 SDL_SetColorKey(surface, flags, colorkey)
+- - '##'
+  - 加载其他图像格式
+- - '##'
+  - Alpha 混合（Alpha Blending）
+- - '##'
+  - 使用 SDL 实现平滑动画
+- - '###'
+  - 第一次尝试
+- - '##'
+  - 函数 SDL_Flip(surface)
+- - '##'
+  - 函数 SDL_DisplayFormat(surface)
+- - '##'
+  - 改进版本
+- - '##'
+  - 输入和事件处理
+- - '###'
+  - 鼠标事件
+- - '###'
+  - SDL.GetMouseState(x, y)
+- - '###'
+  - SDL.WaitEvent(event)
+- - '###'
+  - SDL.PollEvent(event)
+- - '###'
+  - Function SDL_PumpEvents()
+- - '###'
+  - 处理键盘事件
+- - '###'
+  - 简单的键盘输入示例 (keyboard-events)
+- - '###'
+  - SDL_GetKeyState(numkeys)
+- - '###'
+  - 处理摇杆事件
+- - '###'
+  - Function SDL_CreateMutex
+- - '###'
+  - Function SDL_DestroyMutex
+- - '###'
+  - Function SDL_mutexP(mutex)
+- - '###'
+  - Function SDL_mutexV(mutex)
+- - '##'
+  - SDL 音频编程
+- - '###'
+  - 使用 PCM 表示声音
+- - '###'
+  - Function SDL_LoadWAV(file, spec, buffer)
+- - '###'
+  - Function SDL_FreeWAV(buffer)
+- - '###'
+  - Structure SDL_AudioSpec
+- - '###'
+  - 为声卡提供数据
+- - '###'
+  - SDL_ConvertAudio(cvt)
+- - '###'
+  - 创建图形
+- - '###'
+  - vs GLUT
+- - '###'
+  - 简单的粒子系统
+- - '###'
+  - 加载音频文件
+- - '###'
+  - sf_read_type(sndfile, buffer, frames)
+- - '###'
+  - sf_close(sndfile)
+- - '###'
+  - 其他选项
+- - '###'
+  - 使用 OSS
+- - '###'
+  - 现实检查
+- - '###'
+  - 直接访问 DMA 缓冲区
+- - '###'
+  - 使用 ALSA 播放
+- - '###'
+  - alGenSources(count, buffer)
+- - '###'
+  - alGenBuffers(count, buffer)
+- - '###'
+  - alSourcePlay(sourceid)
+- - '###'
+  - alSourceStop(sourceid)
+- - '###'
+  - alBufferData(buffer, format, size, freq)
+- - '##'
+  - 使用 Ogg Vorbis 实现音乐
+- - '##'
+  - Vorbis 文件
+- - '###'
+  - vorbis.info
