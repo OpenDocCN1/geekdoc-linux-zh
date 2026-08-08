@@ -1,0 +1,812 @@
+- - '#'
+  - 实用取证：使用 Linux 工具保护数字证据
+- - '#'
+  - 关于作者
+- - '#'
+  - 详细内容
+- - '#'
+  - 0 数字法证概述
+- - '#'
+  - 1 存储媒体概述
+- - '##'
+  - 2 作为取证获取平台的 Linux
+- - '##'
+  - 3 取证镜像格式
+- - '##'
+  - 4 计划与准备
+- - '##'
+  - 5 将目标介质连接到采集主机
+- - '##'
+  - 6 取证镜像采集
+- - '##'
+  - 7 取证镜像管理
+- - '#'
+  - 8 特殊镜像访问话题
+- - '#'
+  - 9 提取取证镜像的子集
+- - '#'
+  - 结语
+- - '#'
+  - 索引
+- - '#'
+  - 引言
+- - '#'
+  - 为什么我要写这本书
+- - '#'
+  - 本书的独特之处
+- - '#'
+  - 为什么要使用命令行？
+- - '#'
+  - 目标读者和前提条件
+- - '#'
+  - 谁应该读这本书？
+- - '#'
+  - 前提知识
+- - '#'
+  - 预装平台和软件
+- - '#'
+  - '0'
+- - '##'
+  - 数字取证概述
+- - '##'
+  - 数字取证历史
+- - '##'
+  - Y2K 前
+- - '##'
+  - 2000–2010
+- - '##'
+  - 2010 年至今
+- - '##'
+  - 取证获取趋势与挑战
+- - '##'
+  - 证据尺寸、位置和复杂度的变化
+- - '##'
+  - 多司法管辖方面
+- - '##'
+  - 行业、学术界与执法部门的协作
+- - '##'
+  - 事后取证原理
+- - '##'
+  - 数字取证标准
+- - '##'
+  - 同行评审研究
+- - '##'
+  - 行业法规与最佳实践
+- - '##'
+  - 本书使用的原则
+- - '#'
+  - '1'
+- - '##'
+  - 存储介质概述
+- - '##'
+  - 磁性存储介质
+- - '###'
+  - 硬盘
+- - '###'
+  - 磁带
+- - '##'
+  - 遗留存储
+- - '##'
+  - 非易失性内存
+- - '##'
+  - 固态硬盘
+- - '#'
+  - hdparm -I /dev/sda
+- - '##'
+  - USB 闪存盘
+- - '##'
+  - 可移动内存卡
+- - '##'
+  - 传统非易失性内存
+- - '##'
+  - 光存储介质
+- - '#'
+  - 遗留光存储
+- - '#'
+  - 接口与物理连接
+- - '#'
+  - SATA ATA
+- - '#'
+  - 串行 SCSI 和光纤通道
+- - '#'
+  - mmls /dev/nvme0n
+- - '##'
+  - 通用串行总线 (USB)
+- - '##'
+  - 遗留接口
+- - '#'
+  - 命令、协议与桥接
+- - '#'
+  - ATA 命令
+- - '###'
+  - 表 1-1：常见 ATA 命令
+- - '#'
+  - SCSI 命令
+- - '#'
+  - sg_raw -i 512 /dev/sda 08 00 00 00 01 00
+- - '#'
+  - 桥接、隧道化与透传
+- - '#'
+  - 主题
+- - '#'
+  - DCO 和 HPA 磁盘区域
+- - '#'
+  - 磁盘服务与维护区域
+- - '#'
+  - USB 协议
+- - '#'
+  - dmesg
+- - '#'
+  - cat /sys/block/sda/queue/logical_block_size
+- - '#'
+  - cat /sys/block/sda/queue/physical_block_size
+- - '#'
+  - blockdev --getbsz /dev/sda
+- - '#'
+  - blockdev --getssz /dev/sda
+- - '#'
+  - mls /dev/sda
+- - '##'
+  - 作为法证取证平台的 Linux
+- - '##'
+  - 取证背景下的 Linux 和开源软件
+- - '##'
+  - 法证实验室中 Linux 和开源软件的优势
+- - '##'
+  - 法证实验室中 Linux 和开源软件的缺点
+- - '##'
+  - Linux 内核与存储设备
+- - '##'
+  - 内核设备检测
+- - '###'
+  - udevadm monitor
+- - '###'
+  - udev info /dev/sdf
+- - '###'
+  - /dev 中的存储设备
+- - '##'
+  - Linux 内核与文件系统
+- - '##'
+  - 内核文件系统支持
+- - '##'
+  - Shell（壳）
+- - '##'
+  - 命令执行（Command Execution）
+- - '##'
+  - 管道与重定向（Piping and Redirection）
+- - '##'
+  - 结语（Closing Thoughts）
+- - '#'
+  - '3'
+- - '##'
+  - 法证镜像格式（FORENSIC IMAGE FORMATS）
+- - '#'
+  - img_stat -i list
+- - '##'
+  - 原始镜像（Raw Images）
+- - '##'
+  - 传统 dd（Traditional dd）
+- - '##'
+  - 法证 dd 变体（Forensic dd Variants）
+- - '##'
+  - 数据恢复工具（Data Recovery Tools）
+- - '##'
+  - 取证格式
+- - '###'
+  - EnCase EWF
+- - '###'
+  - FTK SMART
+- - '###'
+  - AFF
+- - '##'
+  - 作为取证容器的 SquashFS
+- - '###'
+  - SquashFS 背景
+- - '###'
+  - SquashFS 取证证据容器
+- - '#'
+  - 结语
+- - '#'
+  - '4'
+- - '##'
+  - 规划与准备
+- - '#'
+  - 审计追踪
+- - '##'
+  - 任务管理
+- - '###'
+  - Taskwarrior
+- - '###'
+  - $ task list
+- - '###'
+  - Todo.txt
+- - '##'
+  - Shell 别名 (Alias)
+- - '##'
+  - Shell 历史记录 (Shell History)
+- - '##'
+  - 日志审计
+- - '#'
+  - 整理收集的证据和命令输出
+- - '##'
+  - 文件和目录的命名规范
+- - '##'
+  - 使用重定向保存命令输出
+- - '###'
+  - fls /dev/sda1 > fls-part1.txt
+- - '###'
+  - fls /dev/sda2 > fls-part2.txt
+- - '###'
+  - fls /dev/sda > fls-part1.txt
+- - '###'
+  - fls /dev/sda > fls-part1.txt 2>&1
+- - '###'
+  - grep clientnames.xls fls-part1.txt >> notes.txt
+- - '###'
+  - (ls -1 image.raw; cp -v image.raw; md5sum image.raw)|ts
+- - '##'
+  - 文件压缩 (File Compression)
+- - '##'
+  - 稀疏文件 (Sparse Files)
+- - '###'
+  - dd if=/dev/zero of=image.raw
+- - '###'
+  - dd if=/dev/sparse of=image.raw conv=sparse
+- - '###'
+  - ls -ls image.raw sparse-image.raw
+- - '###'
+  - md5sum.raw sparse-image.raw
+- - '##'
+  - 报告的文件大小 (Reported File Sizes)
+- - '###'
+  - ls -lh
+- - '##'
+  - 移动和复制镜像 (Moving and Copying Images)
+- - '##'
+  - 预计任务完成时间 (Estimated Task Completion Times)
+- - '##'
+  - 性能与瓶颈
+- - '###'
+  - dmidecode -t processor
+- - '###'
+  - dmidecode -t cache
+- - '###'
+  - dmidecode -t memory
+- - '###'
+  - dmidecode -t slot
+- - '###'
+  - lshw -class storage
+- - '###'
+  - hdparm -I /dev/sda
+- - '###'
+  - lsusb -v
+- - '###'
+  - hddemp /dev/sdb
+- - '###'
+  - smartctl -x /dev/sdb
+- - '###'
+  - dd if=/dev/sdb of=./image.raw
+- - '###'
+  - fg
+- - '##'
+  - 建立法证写阻塞保护
+- - '##'
+  - 写阻塞器
+- - '##'
+  - 桥接信息
+- - '##'
+  - 驱动器信息
+- - '##'
+  - 驱动器 HPA/DCO/安全信息
+- - '##'
+  - 软件写保护器
+- - '###'
+  - hdparm -r1 /dev/sdk
+- - '###'
+  - blockdev --setro /dev/sdk
+- - '###'
+  - 将指定的块设备标记为只读
+- - '###'
+  - 父级块设备标记为只读
+- - '##'
+  - Linux 取证启动光盘
+- - '##'
+  - 具有只读模式的介质
+- - '##'
+  - 结语
+- - '##'
+  - 将目标磁盘连接到采集主机
+- - '##'
+  - 目标 PC 硬件
+- - '##'
+  - 查看采集宿主机硬件
+- - '###'
+  - lshw -businfo
+- - '###'
+  - lshw -businfo -class disk
+- - '###'
+  - lspci
+- - '###'
+  - lspci -d ::0106
+- - '###'
+  - for i in 00 01 04 05 06 07 08; do lspci -d ::01$; done
+- - '###'
+  - lspci -d ::0C03
+- - '###'
+  - for i in 00 03 04; do lsusb -d ::0C$; done
+- - '###'
+  - lsusb
+- - '##'
+  - 识别目标驱动器
+- - '###'
+  - lusb -vd 0781:583
+- - '###'
+  - scsi -v
+- - '###'
+  - lsblk -o TRAN,REV,WWN,SIZE,HCTL,SUBSYS
+- - '##'
+  - 查询磁盘信息
+- - '##'
+  - 记录设备细节
+- - '###'
+  - tableau-parm /dev/sdc > write-blocked.txt
+- - '###'
+  - blockdev /dev/sda > wrtlb.txt
+- - '###'
+  - lsusb -v -s 2:2 > lsusb.txt
+- - '###'
+  - lsblk /dev/sda > lsblk.txt
+- - '###'
+  - lcsi -vt -L 16:0:0 > lcsi.txt
+- - '##'
+  - 使用 hdparm 查询磁盘能力和特性
+- - '###'
+  - hdparm -I /dev/sda
+- - '##'
+  - 使用 smartctl 提取 SMART 数据
+- - '###'
+  - smartctl -x /dev/sda
+- - '##'
+  - 启用隐藏扇区
+- - '##'
+  - 移除 DCO
+- - '###'
+  - hdparm -I /dev/sda
+- - '##'
+  - 移除 HPA
+- - '###'
+  - hdparm -I /dev/sda
+- - '###'
+  - hdparm -yes-i-know-am-doing -N 97673168 /dev/sd1
+- - '###'
+  - hdparm -yes-i-know-am-doing -N 97673168 /dev/sd1
+- - '##'
+  - 硬盘服务区
+- - '###'
+  - F3
+- - '##'
+  - 用户分区
+- - '###'
+  - 系统分区
+- - '###'
+  - hdparm -r1 /dev/sdk
+- - '###'
+  - blockdev --setro /dev/sdk
+- - '###'
+  - /usr/bin/wrtblk
+- - '###'
+  - 将指定的块设备标记为只读
+- - '###'
+  - 父级块设备标记为只读
+- - '##'
+  - Linux 取证启动光盘
+- - '##'
+  - 具有只读模式的介质
+- - '##'
+  - 结语
+- - '##'
+  - 将目标磁盘连接到采集主机
+- - '##'
+  - 目标 PC 硬件
+- - '##'
+  - 查看采集宿主机硬件
+- - '###'
+  - lshw -businfo
+- - '###'
+  - lshw -businfo -class disk
+- - '###'
+  - lspci
+- - '###'
+  - lspci -d ::0106
+- - '###'
+  - for i in 00 01 04 05 06 07 08; do lspci -d ::01$; done
+- - '###'
+  - lspci -d ::0C03
+- - '###'
+  - for i in 00 03 04; do lsusb -d ::0C$; done
+- - '###'
+  - lsusb
+- - '##'
+  - 识别目标驱动器
+- - '###'
+  - lusb -vd 0781:583
+- - '###'
+  - scsi -v
+- - '###'
+  - lsblk -o TRAN,REV,WWN,SIZE,HCTL,SUBSYS
+- - '##'
+  - 查询磁盘信息
+- - '##'
+  - 记录设备细节
+- - '###'
+  - tableau-parm /dev/sdc > write-blocked.txt
+- - '###'
+  - blockdev /dev/sda > wrtlb.txt
+- - '###'
+  - lsusb -v -s 2:2 > lsusb.txt
+- - '###'
+  - lsblk /dev/sda > lsblk.txt
+- - '###'
+  - lcsi -vt -L 16:0:0 > lcsi.txt
+- - '##'
+  - 使用 hdparm 查询磁盘能力和特性
+- - '###'
+  - hdparm -I /dev/sda
+- - '##'
+  - 使用 smartctl 提取 SMART 数据
+- - '###'
+  - smartctl -x /dev/sda
+- - '##'
+  - 启用隐藏扇区
+- - '##'
+  - 移除 DCO
+- - '###'
+  - hdparm -I /dev/sda
+- - '###'
+  - hdparm -I /dev/sda
+- - '###'
+  - hdparm -yes-i-know-am-doing -N 97673168 /dev/sd1
+- - '###'
+  - hdparm -yes-i-know-am-doing -N 97673168 /dev/sd1
+- - '##'
+  - 硬盘服务区
+- - '###'
+  - F3
+- - '##'
+  - 用户分区
+- - '###'
+  - 系统分区
+- - '###'
+  - hdparm -r1 /dev/sdk
+- - '###'
+  - blockdev --setro /dev/sdk
+- - '###'
+  - /usr/bin/wrtblk
+- - '###'
+  - 将指定的块设备标记为只读
+- - '###'
+  - 父级块设备标记为只读
+- - '##'
+  - Linux 取证启动光盘
+- - '##'
+  - 具有只读模式的介质
+- - '##'
+  - 结语
+- - '##'
+  - 将目标磁盘连接到采集主机
+- - '##'
+  - 目标 PC 硬件
+- - '##'
+  - 查看采集宿主机硬件
+- - '###'
+  - lshw -businfo
+- - '###'
+  - lshw -businfo -class disk
+- - '###'
+  - lspci
+- - '###'
+  - lspci -d ::0106
+- - '###'
+  - for i in 00 01 04 05 06 07 08; do lspci -d ::01$; done
+- - '###'
+  - lspci -d ::0C03
+- - '###'
+  - for i in 00 03 04; do lsusb -d ::0C$; done
+- - '###'
+  - lsusb
+- - '##'
+  - 识别目标驱动器
+- - '###'
+  - lusb -vd 0781:583
+- - '###'
+  - scsi -v
+- - '###'
+  - lsblk -o TRAN,REV,WWN,SIZE,HCTL,SUBSYS
+- - '##'
+  - 查询磁盘信息
+- - '##'
+  - 记录设备细节
+- - '###'
+  - tableau-parm /dev/sdc > write-blocked.txt
+- - '###'
+  - blockdev /dev/sda > wrtlb.txt
+- - '###'
+  - lsusb -v -s 2:2 > lsusb.txt
+- - '###'
+  - lsblk /dev/sda > lsblk.txt
+- - '###'
+  - lcsi -vt -L 16:0:0 > lcsi.txt
+- - '##'
+  - 使用 hdparm 查询磁盘能力和特性
+- - '###'
+  - hdparm -I /dev/sda
+- - '##'
+  - 使用 smartctl 提取 SMART 数据
+- - '###'
+  - smartctl -x /dev/sda
+- - '##'
+  - 启用隐藏扇区
+- - '##'
+  - 移除 DCO
+- - '###'
+  - hdparm -I /dev/sda
+- - '###'
+  - hdparm -I /dev/sda
+- - '###'
+  - hdparm -yes-i-know-am-doing -N 97673168 /dev/sd1
+- - '###'
+  - hdparm -yes-i-know-am-doing -N 97673168 /dev/sd1
+- - '##'
+  - 硬盘服务区
+- - '###'
+  - F3
+- - '##'
+  - 用户分区
+- - '###'
+  - 系统分区
+- - '###'
+  - hdparm -r1 /dev/sdk
+- - '###'
+  - blockdev --setro /dev/sdk
+- - '###'
+  - /usr/bin/wrtblk
+- - '###'
+  - 将指定的块设备标记为只读
+- - '###'
+  - 父级块设备标记为只读
+- - '#'
+  - '4'
+- - '##'
+  - 任务管理
+- - '###'
+  - Taskwarrior
+- - '###'
+  - $ task list
+- - '###'
+  - Todo.txt
+- - '##'
+  - Shell 别名 (Alias)
+- - '##'
+  - Shell 历史记录 (Shell History)
+- - '##'
+  - 日志审计
+- - '#'
+  - 整理收集的证据和命令输出
+- - '##'
+  - 文件和目录的命名规范
+- - '##'
+  - 使用重定向保存命令输出
+- - '###'
+  - fls /dev/sda1 > fls-part1.txt
+- - '###'
+  - fls /dev/sda2 > fls-part2.txt
+- - '###'
+  - fls /dev/sda > fls-part1.txt
+- - '###'
+  - fls /dev/sda > fls-part1.txt 2>&1
+- - '###'
+  - grep clientnames.xls fls-part1.txt >> notes.txt
+- - '###'
+  - (ls -1 image.raw; cp -v image.raw; md5sum image.raw)|ts
+- - '##'
+  - 文件压缩 (File Compression)
+- - '##'
+  - 稀疏文件 (Sparse Files)
+- - '###'
+  - dd if=/dev/zero of=image.raw
+- - '###'
+  - dd if=/dev/sparse of=image.raw conv=sparse
+- - '###'
+  - ls -ls image.raw sparse-image.raw
+- - '###'
+  - md5sum.raw sparse-image.raw
+- - '##'
+  - 报告的文件大小 (Reported File Sizes)
+- - '###'
+  - ls -lh
+- - '##'
+  - 移动和复制镜像 (Moving and Copying Images)
+- - '##'
+  - 预计任务完成时间 (Estimated Task Completion Times)
+- - '##'
+  - 性能与瓶颈
+- - '###'
+  - dmidecode -t processor
+- - '###'
+  - dmidecode -t cache
+- - '###'
+  - dmidecode -t memory
+- - '###'
+  - dmidecode -t slot
+- - '###'
+  - lshw -class storage
+- - '###'
+  - hdparm -I /dev/sda
+- - '###'
+  - lsusb -v
+- - '###'
+  - hddemp /dev/sdb
+- - '###'
+  - smartctl -x /dev/sdb
+- - '###'
+  - dd if=/dev/sdb of=./image.raw
+- - '###'
+  - fg
+- - '##'
+  - 建立法证写阻塞保护
+- - '##'
+  - 写阻塞器
+- - '##'
+  - 桥接信息
+- - '##'
+  - 驱动器信息
+- - '##'
+  - 驱动器 HPA/DCO/安全信息
+- - '##'
+  - 软件写保护器
+- - '###'
+  - hdparm -r1 /dev/sdk
+- - '###'
+  - blockdev --setro /dev/sdk
+- - '###'
+  - 将指定的块设备标记为只读
+- - '###'
+  - 父级块设备标记为只读
+- - '##'
+  - Linux 取证启动光盘
+- - '##'
+  - 具有只读模式的介质
+- - '##'
+  - 结语
+- - '##'
+  - 将目标磁盘连接到采集主机
+- - '##'
+  - 目标 PC 硬件
+- - '##'
+  - 查看采集宿主机硬件
+- - '###'
+  - lshw -businfo
+- - '###'
+  - lshw -businfo -class disk
+- - '###'
+  - lspci
+- - '###'
+  - lspci -d ::0106
+- - '###'
+  - for i in 00 01 04 05 06 07 08; do lspci -d ::01$; done
+- - '###'
+  - lspci -d ::0C03
+- - '###'
+  - for i in 00 03 04; do lsusb -d ::0C$; done
+- - '###'
+  - lsusb
+- - '##'
+  - 识别目标驱动器
+- - '###'
+  - lusb -vd 0781:583
+- - '###'
+  - scsi -v
+- - '###'
+  - lsblk -o TRAN,REV,WWN,SIZE,HCTL,SUBSYS
+- - '##'
+  - 查询磁盘信息
+- - '##'
+  - 记录设备细节
+- - '###'
+  - tableau-parm /dev/sdc > write-blocked.txt
+- - '###'
+  - blockdev /dev/sda > wrtlb.txt
+- - '###'
+  - lsusb -v -s 2:2 > lsusb.txt
+- - '###'
+  - lsblk /dev/sda > lsblk.txt
+- - '###'
+  - lcsi -vt -L 16:0:0 > lcsi.txt
+- - '##'
+  - 使用 hdparm 查询磁盘能力和特性
+- - '###'
+  - hdparm -I /dev/sda
+- - '##'
+  - 使用 smartctl 提取 SMART 数据
+- - '###'
+  - smartctl -x /dev/sda
+- - '##'
+  - 启用隐藏扇区
+- - '##'
+  - 移除 DCO
+- - '###'
+  - hdparm -I /dev/sda
+- - '###'
+  - hdparm -I /dev/sda
+- - '###'
+  - hdparm -yes-i-know-am-doing -N 97673168 /dev/sd1
+- - '###'
+  - hdparm -yes-i-know-am-doing -N 97673168 /dev/sd1
+- - '##'
+  - 硬盘服务区
+- - '###'
+  - F3
+- - '##'
+  - 用户分区
+- - '###'
+  - 系统分区
+- - '###'
+  - hdparm -r1 /dev/sdk
+- - '###'
+  - blockdev --setro /dev/sdk
+- - '###'
+  - /usr/bin/wrtblk
+- - '###'
+  - 将指定的块设备标记为只读
+- - '###'
+  - 父级块设备标记为只读
+- - '##'
+  - Linux 取证启动光盘
+- - '##'
+  - 具有只读模式的介质
+- - '##'
+  - 结语
+- - '##'
+  - 将目标磁盘连接到采集主机
+- - '##'
+  - 目标 PC 硬件
+- - '##'
+  - 查看采集宿主机硬件
+- - '###'
+  - lshw -businfo
+- - '###'
+  - lshw -businfo -class disk
+- - '###'
+  - lspci
+- - '###'
+  - lspci -d ::0106
+- - '###'
+  - for i in 00 01 04 05 06 07 08; do lspci -d ::01$; done
+- - '###'
+  - lspci -d ::0C03
+- - '###'
+  - for i in 00 03 04; do lsusb -d ::0C$; done
+- - '###'
+  - lsusb
+- - '##'
+  - 识别目标驱动器
+- - '###'
+  - lusb -vd 0781:583
+- - '###'
+  - scsi -v
+- - '###'
+  - lsblk -o TRAN,REV,WWN,SIZE,HCTL,SUBSYS
+- - '##'
+  - 查询磁盘信息
+- - '##'
+  - 记录设备细节
+- - '###'
+  - tableau-parm /dev/sdc > write-blocked.txt
+- - '###'
+  - blockdev /dev/sda > wrtlb.txt
+- - '###'
+  - lsusb -v -s 2:2 > lsusb.txt
+- - '###'
+  - lsblk /dev/sda > lsblk.txt
+- - '###'
+  - lcsi -vt -L 16:0:0 > lcsi.txt
