@@ -1,0 +1,2 @@
++   [Linux 经（2009 版）：启动 Ubuntu、Fedora、KNOPPIX、Debian、OpenSUSE 等](README.md)
++   [Linux 经（2009 版）：启动 Ubuntu、Fedora、KNOPPIX、Debian、OpenSUSE 等](linux-bible-2009-edition-boot-up-ubuntu-fedora-knoppix-debia.md)
