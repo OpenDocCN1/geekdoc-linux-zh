@@ -1,0 +1,3041 @@
+- md: "\n# USENET\n\n## THE ULTIMATE GUIDE\n\nBECAUSE YOU WANT WHAT YOU WANT\n\nLANCE\
+    \ HENDERSON\n\n# USENET & THE FUTURE OF ANONYMITY\n\nBY\n\nLANCE HENDERSON\n\n\
+    # TABLE OF CONTENTS\n\n- Chapter 1: What is Usenet?\n- Chapter 2: How to use Usenet\n\
+    - Chapter 3: Usenet Reviews - Wheat and the Chaff\n- Chapter 4: Usenet Anonymity\n\
+    - Chapter 5: Which VPN companies respect anonymity?\n- Chapter 6: The Cloud is\
+    \ the Enemy of Usenet and Anonymity\n\n## Chapter 1: What is Usenet?\n\nYou've\
+    \ probably heard the term “Usenet” floating around various tech forums of one\
+    \ flavor or another. Some like the technology as being similar to P2P, while others\
+    \ state that it is nothing like P2P. In truth, it has a little bit of both systems\
+    \ in that\n\n- 1.) you can find almost any kind of file therein, as mp3s, games,\
+    \ movies and the like\n- 2.) you have the ability to upload and download anything\
+    \ you like\n\nSince its inception in 1979 by two Duke graduate students, Usenet\
+    \ has leapt beyond all expectations in regards to not only data retention, but\
+    \ enhancing freedom of speech. Whereas users were once inundated with extra charges\
+    \ per month for downloading a handful of data, they now have the ability to download\
+    \ terabytes per month, and pay ridiculously small sums to do so. This has all\
+    \ been done with the help of not thousands of server farms around the world, but\
+    \ also by legions of longtime Usenet users who upload (and leech) every kind of\
+    \ file in existence. Thus, the true ingredients for the worldwide success of Usenet\
+    \ hasn't been so much because of Usenet providers themselves, but by end-user\
+    \ subscribers who faithfully upload the latest movie, game and music releases\
+    \ every month to the over 100,000 available newsgroups on Usenet.\n\nWhat typically\
+    \ happens when the average Joe off the street wants to subscribe to Usenet? He\
+    \ usually ends up testing a free trial by one of the dozens of Usenet providers\
+    \ for a period of two weeks, and then like any P2P user, they are hooked for life.\
+    \ Or at least, the life of the subscription... and that subscription will likely\
+    \ last a long time. Why? The answer lies in the perceived value of the goods he\
+    \ acquires through said Usenet subscription. As mentioned, the worth of the goods\
+    \ acquired far outweighs the monthly fee of the Usenet provider. There are over\
+    \ 100,000 newsgroups, with the large majority of them being TEXT groups rather\
+    \ than BINARY groups (i.e. where the real meat of Usenet is stored). The dirty\
+    \ little secret among long-time Usenet users is this: Usenet would not be one-tenth\
+    \ as popular as it is if it weren't for the bulk of groups like alt.binaries.boneless,\
+    \ alt.binaries.hdtv and alt.binaries.complete_cd. One could make the argument\
+    \ that text discussions certainly have their place that benefits society in some\
+    \ manner, however the bottom line is that file sharing (again, mp3s, movies and\
+    \ games) make up the bulk of not only Usenet, but is the reason Usenet companies\
+    \ have been able to grow their businesses at exponential rates.\n\n### Risk vs.\
+    \ Reward? Usenet vs. P2P\n\nIf you've paid attention to the news media outlets\
+    \ over the past ten years, you're probably aware of the inherent risks associated\
+    \ with using P2P systems like Emule, Limewire and the like in acquiring copyrighted\
+    \ material. When you fire up a P2P program like Emule, you participate in downloading\
+    \ with your IP address out the open, from which peers run by law enforcement (i.e.\
+    \ NordicMule) or the Recording Industry can monitor the source and destination\
+    \ with every file you transmit through the network. P2P in effect requires its\
+    \ participants to upload as well as download. It is not so different than downloading\
+    \ torrents in this regard. Usenet on the other hand, encourages leeching without\
+    \ uploading. While you certainly have the freedom to upload, your downloads are\
+    \ not crippled if you decide only to lurk and leech from the uploads of others.\
+    \ What is more, you do so at your full internet speed, unlike peer-to-peer systems,\
+    \ where you are at the mercy of others in the swarm.\n\nWhen someone uploads a\
+    \ copyrighted film (Avengers, for instance) on a p2p or torrent system, it is\
+    \ far easier to track said uploader to an ip address which leads straight to their\
+    \ front door. If however the uploader used a premium Usenet provider to upload\
+    \ the film, the movie lawyer must get his subscriber information from the Usenet\
+    \ company before any action is taken. If he accessed his Usenet account through\
+    \ a vpn provider, and used anonymous means to pay for his Usenet account, then\
+    \ that adds a further layer of privacy that the entertainment industry lawyers\
+    \ will have to peel back in order to reveal his identity. We'll discuss later\
+    \ on the fruitfulness of signing up anonymously with Usenet and Vpn providers.\n\
+    \nTo Summarize:\n\n- Pros to Usenet:\n- Not dependent on seeders like torrents\n\
+    - Uses full bandwidth available on your internet connection\n- MPAA (Movie Industry),\
+    \ RIAA (Recording Industry) cannot see your downloads as they they can with torrents\n\
+    - Can utilize SSL to encrypt data on route to your pc (unlike torrents)\n- In\
+    \ its 30 year history, no one has ever been sued for downloading anything off\
+    \ Usenet (again, unlike torrents)\n\n- Cons to Usenet: \n- Requires a paid subscription\
+    \ to access older posts\n- Posting/reading comments require a newsreader\n- Not\
+    \ as easily accessible as torrent sites\n\n### Signing up for Usenet\n\nFor those\
+    \ who are simply not concerned about privacy, you may consistently resist the\
+    \ upselling offers of your Usenet provider’s advertisements regarding SSL. At\
+    \ signup for some of the lesser known Usenet providers, the advertising might\
+    \ incline you to believe you absolutely have to have SSL as an option, otherwise\
+    \ your PC will certainly be hacked by all manner of gremlins, evil gnomes and\
+    \ other boogeymen. Do not believe it. SSL often comes free with a subscription\
+    \ to the major providers, however some will still charge extra for it.\n\nFor\
+    \ users who value anonymity\n\nSome Usenet providers accept bitcoins as a method\
+    \ of payment. If you are going to uploading a large amount of legally questionable\
+    \ files and are based in the US, it might be prudent to sign up anonymously for\
+    \ a Usenet account. Do not use any kind of payment that carries personal information\
+    \ about you, such as your name, bank and the like.\n\n### Isn’t Uploading to Usenet\
+    \ Anonymous with SSL Enabled?\n\nThe answer to this question is: sort of. Yes,\
+    \ you can download with impunity. Yes, it encrypted the data in route to your\
+    \ pc, from which point it is decrypted with the decryption key. Most Usenet providers\
+    \ do not keep download logs of what you siphon from the binary Usenet newsgroups.\
+    \ However, the catch is that if you upload, certain information is left as breadcrumbs\
+    \ to your Usenet account. messages, in addition to your uploads (all of them)\
+    \ contain unique header identification breadcrumbs, so to speak. If you were part\
+    \ of some conspiracy group of assassins and shouted in some obscure newsgroup\
+    \ that you were going to assassinate the president of the United States, then\
+    \ the Secret Service could look at your headers and find out from the Usenet provider\
+    \ where you lived if you did not sign up anonymously. The nntp posting host &\
+    \ X-Trace lines in turn leads to the identity of the Usenet server, which in your\
+    \ specific account. The Secret Service would have no idea that YOU posted it,\
+    \ but they would know you used Astrawb or Easnews to post it. They in all probability\
+    \ would not even need a subpoena for subscriber information, as most of the big\
+    \ Usenet providers would gladly provide subscriber information that involved terrorist\
+    \ threats, illegal porn or identity fraud (spam is a bit more involved, but then\
+    \ again, the Secret Service doesn’t investigate Usenet spam.\n\nThere also exists\
+    \ the possibility that the header could be encrypted by the Usenet server themselves,\
+    \ in which case it can only be decrypted by them. The header might have some lightly\
+    \ mosaic of jumbled letters mixed with numbers. It might say \"sdauhjk7lt324=assdad\"\
+    , of which course would be unreadable to anyone except the Usenet provider, as\
+    \ they hold the decryption key. It is somewhat similar in concept to the headers\
+    \ from a free email service such as Yahoo or Hotmail. This is how the hacker who\
+    \ pried vice-presidential candidate Sarah Palin's email was arrested: by revealing\
+    \ the headers in the address bar. The FBI took this information from a screenshot\
+    \ the hacker had posted and traced it back to the source. A vpn server would not\
+    \ have helped in such a scenario, since they themselves are bound by the law,\
+    \ and most of them reside in the US away. The only way we\n"
+  mdcn: "\n\n# USENET（新闻组）\n\n## 终极指南\n\n因为你想要想要的\n\nLANCE HENDERSON\n\n# USENET 与匿名性的未来\n\
+    \n作者\n\nLANCE HENDERSON\n\n# 目录\n\n- 第一章：什么是 Usenet？\n- 第二章：如何使用 Usenet\n- 第三章：Usenet\
+    \ 评测 - 去芜存菁\n- 第四章：Usenet 匿名性\n- 第五章：哪些 VPN 公司尊重匿名性？\n- 第六章：云是 Usenet 和匿名性的敌人\n\
+    \n## 第一章：什么是 Usenet？\n\n你可能在各种风格的科技论坛上听过“Usenet”这个词。有些人认为这项技术类似于 P2P（点对点传输），而另一些人则认为它与\
+    \ P2P 毫无关系。事实上，它兼具两者的特点，因为：\n\n- 1.) 你可以在其中找到几乎任何类型的文件，如 mp3、游戏、电影等\n- 2.) 你有能力上传和下载你喜欢的任何内容\n\
+    \n自从 1979 年由两名杜克大学的研究生创立以来，Usenet 在数据留存以及增强言论自由方面的表现远超所有预期。用户曾需要为下载少量数据支付每月的额外费用，而现在他们有能力每月下载数\
+    \ TB 的数据，只需支付极其廉微的费用。这不仅得益于全球成千上万个服务器集群的帮助，还得益于大量长期 Usenet 用户，他们上传（并“白嫖”）世界上各种类型的文件。因此，Usenet\
+    \ 在全球范围内成功的真正秘诀并不完全在于 Usenet 服务商本身，而在于忠实的终端用户订阅者，他们每个月都会向 Usenet 上超过 100,000 个可用新闻组上传最新的电影、游戏和音乐发行。\n\
+    \n当一个普通路人想要订阅 Usenet 时，通常会发生什么？他通常会尝试几十个 Usenet 服务商之一提供的为期两周的免费试用，然后像任何 P2P 用户一样，从此深陷其中。或者至少在订阅有效期内……而这种订阅很可能会持续很长时间。为什么？答案在于他通过该\
+    \ Usenet 订阅所获得商品的感知价值。正如提到的，所获得的商品价值远高于 Usenet 服务商的月费。这里有 100,000 个新闻组，其中绝大多数是文本（TEXT）组，而非二进制（BINARY）组（即\
+    \ Usenet 核心内容存储的地方）。长期 Usenet 用户之间一个公开而不宣的小秘密是：如果没有像 alt.binaries.boneless、alt.binaries.hdtv\
+    \ 和 alt.binaries.complete_cd 这样的组，Usenet 的流行程度将只有现在的十分之一。人们可能会认为，文本讨论确实有其价值并能以某种方式造福社会，但底线是，文件共享（再次提到，mp3、电影和游戏）构成了\
+    \ Usenet 的主体，这也是 Usenet 公司能够以指数级速度增长业务的原因。\n\n### 风险与回报？Usenet 对比 P2P\n\n如果你关注了过去十年的新闻媒体，你可能已经意识到使用\
+    \ Emule、Limewire 等 P2P 系统获取版权保护材料时具有固有风险。当你启动像 Emule 这样的 P2 程序时，你参与了下载，且你的 IP\
+    \ 地址是公开的，因此由执法部门运行的对等节点（如 NordicMule）或唱片行业可以监控你通过网络传输的每一个文件的源地址和目的地。P2P 实际上要求参与者既上传又下载。在这方面与下载种子（torrent）没有区别。相比之下，Usenet\
+    \ 鼓励在不上传的情况下下载。虽然你完全拥有上传的自由，但如果你决定只潜水并从别人的上传中下载，你的下载也不会受到限制。此外，你是以全网速度下载的，不像点对点系统，在系统中你受限于集群中其他人的速度。\n\
+    \n当有人在 p2p 或种子系统上上传受保护的电影（例如《复仇者联盟》）时，追踪该上传者到直接指向其家门口的 IP 地址要容易得多。然而，如果上传者使用了高级\
+    \ Usenet 服务商来上传电影，电影律师在采取任何行动之前，必须从 Usenet 公司获取其订阅信息。如果他通过 VPN 服务商访问 Usenet 账户，并使用匿名方式支付\
+    \ Usenet 费用，那么又增加了一层隐私，娱乐行业的律师必须剥开这层隐私才能揭示他的身份。我们稍后将讨论注册 Usenet 和 VPN 提供者的有效性。\n\
+    \n总结：\n\n- Usenet 的优点：\n- 不像种子那样依赖于种子者（seeders）\n- 使用互联网连接可用的全部带宽\n- MPAA（电影协会）、RIAA（唱片行业）无法像查看种子那样看到你的下载\n\
+    - 可以利用 SSL 加密传输到你电脑的数据（与种子不同）\n- 在其 30 年的历史中，从未有人因为从 Usenet 下载过任何内容而被起诉（再次，与种子不同）\n\
+    \n- Usenet 的缺点： \n- 需要付费订阅才能访问旧帖子\n- 发布/阅读评论需要新闻阅读器（newsreader）\n- 没像种子网站那样容易访问\n\
+    \n### 注册 Usenet\n\n对于那些完全不在乎隐私的人，你可能会一贯抵制 Usenet 服务商广告中关于 SSL 的推销性要约。在注册某些一些较不为人知的\
+    \ Usenet 服务商时，广告可能会让你认为你必须拥有 SSL 选项，否则你的电脑定会被各种小鬼灵、邪恶的小精灵和其他怪兽入侵。不要相信它。SSL 通常随主要服务商的订阅一起免费提供，但有些服务商仍会对此收取额外费用。\n\
+    \n对于看重匿名性的用户\n\n一些 Usenet 服务商接受比特币作为支付方式。如果你将上传大量法律上可疑的文件且居住在美国，那么匿名注册 Usenet\
+    \ 账户可能是明智的。不要使用任何带有你个人信息的支付方式，如你的姓名、银行信息等。\n\n### 开启 SSL 后上传到 Usenet 是匿名的吗？\n\n\
+    这个问题的答案是：某种程度上。是的，你可以无顾忌地下载。是的，它加密了传输到你电脑的数据，从那里开始使用密钥进行解密。大多数 Usenet 服务商不会记录你从二进制\
+    \ Usenet 新闻组提取内容的下载日志。但问题在于，如果你进行上传，某些信息会像面包屑一样留在你的 Usenet 账户。除了你的上传内容（所有内容），消息还包含独特的头部信息识别面包屑（可以这么说）。如果你是杀手阴谋集团的一员，并在某个模糊的新闻组中大喊你要刺杀美国总统，那么特勤局就可以查看你的头部信息，并从\
+    \ Usenet 服务商那里发现你的住所（如果你没有匿名注册的话）。nntp 发布主机和 X-Trace 行反过来会指向 Usenet 服务器的身份，而在你的特定账户中，特勤局将不知道**是你**发布的，但他们会知道你使用了\
+    \ Astrawb 或 Easnews 来发布。他们很可能不需要传票获取订阅信息，因为大多数大型 Usenet 服务商都会乐意提供涉及恐怖威胁、非法色情或身份诈骗的订阅信息（垃圾邮件要复杂得多，但特勤局并不调查\
+    \ Usenet 垃圾邮件）。\n\n还存在头部信息由 Usenet 服务器本身加密的可能性，在这种情况下只有他们可以解密。头部信息可能包含一些杂乱的字母数字马赛克。它可能显示“sdauhjk7lt324=assdad”，对于持有密钥的\
+    \ Usenet 服务商之外的任何人都无法读取。这在概念上与 Yahoo 或 Hotmail 等免费邮箱服务的头部信息相似。这就是获取获取副总统候选人萨拉·帕林邮箱的黑客被捕的原因：通过黑客发布的截图暴露了地址栏中的头部信息。FBI\
+    \ 从该截图获取了信息并追溯到了源头。在这种情况下，VPN 服务器将没有帮助，因为它们本身受法律约束，且大多数居住在美国境外。我们唯一的方法是"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    ![](img/7d67c200eed57c6ae09e04bc9fc2ea45_0_0.png)
+
+
+    # # USENET
+
+
+    # ## THE ULTIMATE GUIDE
+
+
+    BECAUSE YOU WANT WHAT YOU WANT
+
+
+    LANCE HENDERSON'
+  - '[PAGE 1]
+
+
+    # # USENET & THE FUTURE OF ANONYMITY
+
+
+    BY
+
+
+    LANCE HENDERSON'
+  - '[PAGE 2]
+
+
+    # TABLE OF CONTENTS
+
+
+    +   Chapter 1: What is Usenet?
+
+    Chapter 2: How to use Usenet
+
+    Chapter 3: Usenet Reviews - Wheat and the Chaff
+
+    Chapter 4: Usenet Anonymity
+
+    Chapter 5: Which VPN companies respect anonymity?
+
+    Chapter 6: The Cloud is the Enemy of Usenet and Anonymity'
+  - '[PAGE 3]
+
+
+    <!-- no content -->'
+  - '[PAGE 4]
+
+
+    # # Chapter 1: What is Usenet?
+
+
+    You''ve probably heard the term “Usenet” floating around various tech forums of
+    one flavor or another. Some like the technology as being similar to P2P, while
+    others state that it is nothing like P2P. In truth, it has a little bit of both
+    systems in that
+
+
+    +   1.) you can find almost any kind of file therein, as mp3s, games, movies and
+    the like and
+
+    2.) you have the ability to upload and download anything you like
+
+
+    Since its inception in 1979 by two Duke graduate students, Usenet has leapt beyond
+    all expectations in regards to not only data retention, but enhancing freedom
+    of speech. Whereas users were once inundated with extra charges per month for
+    downloading a handful of data, they now have the ability to download terabytes
+    per month, and pay ridiculously small sums to do so. This has all been done with
+    the help of not thousands of server farms around the world, but also by legions
+    of longtime Usenet users who upload (and leech) every kind of file in existence.
+    Thus, the true ingredients for the worldwide success of Usenet hasn''t been so
+    much because of Usenet providers themselves, but by end-user subscribers who faithfully
+    upload the latest movie, game and music releases every month to the over 100,000
+    available newsgroups on Usenet.
+
+
+    What typically happens when the average Joe off the street wants to subscribe
+    to Usenet? He usually ends up testing a free trial by one of the dozens of Usenet
+    providers for a period of two weeks, and then like any P2P user, they are hooked
+    for life. Or at least, the life of the subscription....and that subscription will
+    likely last a long time. Why? answer lies in the perceived value of the goods
+    he acquires through said Usenet subscription. As mentioned, the worth of the goods
+    acquired far outweighs the monthly fee of the Usenet provider. There are over
+    100,000 newsgroups, with the large majority of them being TEXT groups rather than
+    BINARY groups (i.e. where the real meat of Usenet is stored). The dirty little
+    secret among long-time Usenet users is this: Usenet would not be one-tenth as
+    popular as it'
+  - '[PAGE 5]
+
+
+    is if it weren''t for the bulk of groups like alt.binaries.boneless, alt.binaries.hdtv
+    and alt.binaries.complete_cd. One could make the argument that text discussions
+    certainly have their place that benefits society in some manner, however the bottom
+    line is that file sharing (again, mp3s, movies and games) make up the bulk of
+    not only Usenet, but is the reason Usenet companies have been able to grow their
+    businesses at exponential rates.
+
+
+    # Risk vs. Reward? Usenet vs. P2P
+
+
+    If you''ve paid attention to the news media outlets over the past ten years, you''re
+    probably aware of the inherent risks associated with using P2P systems like Emule,
+    Limewire and the like in acquiring copyrighted material. When you fire up a P2P
+    program like Emule, you participate in downloading with your IP address out the
+    open, from which peers run by law enforcement (i.e. NordicMule) or the Recording
+    Industry can monitor the source and destination with every file you transmit through
+    the network. P2P in effect requires its participants to upload as well as download.
+    It is not so different than downloading torrents in this regard. Usenet on the
+    other hand, encourages leeching without uploading. While you certainly have the
+    freedom to upload, your downloads are not crippled if you decide only to lurk
+    and leech from the uploads of others. What is more, you do so at your full internet
+    speed, unlike peer-to-peer systems, where you are at the mercy of others in the
+    swarm.
+
+
+    When someone uploads a copyrighted film (Avengers, for instance) on a p2p or torrent
+    system, it is far easier to track said uploader to an ip address which leads straight
+    to their front door. If however the uploader used a premium Usenet provider to
+    upload the film, the movie lawyer must get his subscriber information from the
+    Usenet company before any action is taken. If he accessed his Usenet account through
+    a vpn provider, and used anonymous means to pay for his Usenet account, then that
+    adds a further layer of privacy that the entertainment industry lawyers will have
+    to peel back in order to reveal his identity. We''ll discuss later on the fruitfulness
+    of signing up anonymously with Usenet and Vpn providers.'
+  - '[PAGE 6]
+
+
+    To Summarize:
+
+
+    +   Pros to Usenet: Not dependent on seeders like torrents
+
+    Uses full bandwidth available on your internet connection
+
+    MMPAA (Movie Industry), RIAA (Recording Industry) cannot see your downloads as
+    they they can with torrents
+
+    - Can utilize SSL to encrypt data on route to your pc (unlike torrents)
+
+    - In its 30 year history, no one has ever been sued for downloading anything off
+    Usenet (again, unlike torrents)
+
+
+    Cons to Usenet: requires a paid subscription to access older posts posting/reading
+    comments require a newsreader/not as easily accessible as torrent sites
+
+
+    # Signing up for Usenet
+
+
+    For those who are simply not concerned about privacy, you may consistently resist
+    the upselling offers of your Usenet provider’s advertisements regarding SSL. At
+    signup for some of the lesser known Usenet providers, the advertising might incline
+    you to believe you absolutely have to have SSL as an option, otherwise your PC
+    will certainly be hacked by all manner of gremlins, evil gnomes and other boogeymen.
+    Do not believe it. SSL often comes free with a subscription to the major providers,
+    however some will still charge extra for it.
+
+
+    For users who value anonymity
+
+
+    Some Usenet providers accept bitcoins as a method of payment. If you are going
+    to uploading a large amount of legally questionable files and are based in the
+    US, it might be prudent to sign up anonymously for a Usenet account. Do not use
+    any kind of payment that carries personal information about you, such as your
+    name, bank and the like.
+
+
+    # Isn’t Uploading to Usenet Anonymous with SSL Enabled?'
+  - '[PAGE 7]
+
+
+    The answer to this question is: sort of. Yes, you can download with impunity.
+    Yes, it encrypted the data in route to your pc, from which point it is decrypted
+    with the decryption key. Most Usenet providers do not keep download logs of what
+    you siphon from the binary Usenet newsgroups. However, the catch is that if you
+    upload, certain information is left as breadcrumbs to your Usenet account. messages,
+    in addition to your uploads (all of them) contain unique header identification
+    breadcrumbs, so to speak. If you were part of some conspiracy group of assassins
+    and shouted in some obscure newsgroup that you were going to assassinate the president
+    of the United States, then the Secret Service could look at your headers and find
+    out from the Usenet provider where you lived if you did not sign up anonymously.
+    The nntp posting host & X-Trace lines in turn leads to the identity of the Usenet
+    server, which in your specific account. The Secret Service would have no idea
+    that YOU posted it, but they would know you used Astrawb or Easnews to post it.
+    They in all probability would not even need a subpoena for subscriber information,
+    as most of the big Usenet providers would gladly provide subscriber information
+    that involved terrorist threats, illegal porn or identity fraud (spam is a bit
+    more involved, but then again, the Secret Service doesn’t investigate Usenet spam.
+
+
+    There also exists the possibility that the header could be encrypted by the Usenet
+    server themselves, in which case it can only be decrypted by them. The header
+    might have some lightly mosaic of jumbled letters mixed in with numbers. It might
+    say "sdauhjk7lt324=assdad", of which course would be unreadable to anyone except
+    the Usenet provider, as they hold the decryption key and no other Usenet provider
+    does. It is somewhat similar in concept to the headers from a free email service
+    such as Yahoo or Hotmail. This is how the hacker who pried vice-presidential candidate
+    Sarah Palin''s email was arrested: by revealing the headers in the address bar.
+    The FBI took this information from a screenshot the hacker had posted and traced
+    it back to the source. A vpn server would not have helped in such a scenario,
+    since they themselves are bound by the law, and most of them reside in the US
+    away. The only way we'
+- md: '
+
+    would have gotten away with it (that is, bragging via a screenshot of her email
+    account with the header exposed) is if he had used Tor to do from step one. Ironically
+    enough, it seems that a hacker''s worst enemy is himself.
+
+
+    Recommended binary newsgroups worth exploring:
+
+
+    - **Alt.binaries.hdtv**: This is perhaps the quintessential newsgroup that carries
+    almost any kind of high definition material you could ever want. Documentaries,
+    mainstream films, tv shows and the like can be found here free for the taking.
+    Be aware that many movies here tend to be passworded. Thus, it is prudent to download
+    the first rar of the set, extract it, and preview it. Winrar will complain that
+    it is broken, extract it anyway. You''ll get a ten minute preview of the film,
+    or it will complain about the lack of a password entered. Some passwords can only
+    be gained from private forums. If you see a movie you desperately want from the
+    group, but was passworded, ask which forum you can join to extract the.
+
+
+    - **Alt.binaries.hdtv.x264**: Don''t want to wait for eons for a 50 gigabyte movie
+    to download from the hdtv group above? Try its sister group, which is a group
+    dedicated to re-encodes of most of the popular movie and tv titles. Re-encoders
+    will take a fifty gigabyte movie and compress it down to an 8-12 gigabyte file,
+    preserving much of the picture quality of the original fifty gigabyte movie. Not
+    recommended if you watch HD on a projector or a tv that is 42'' inches and above.
+    However for those with a 27'' inch monitor/tv, you will not see much difference
+    as long as the encoder has done a decent job.
+
+
+    - **Alt.binaries.boneless**: This is an all-around depositing group where all
+    manner of files can be uploaded. Anything and everything gets dumped here, and
+    is one of the largest groups on Usenet. Only recommended to those with very fast
+    internet connections, as the header count often takes over an hour on an average
+    connection. Most of the group carries everything you can imagine, which admittedly
+    can be quite jarring for newcomers as there doesn’t seem to be any “one” topic
+    for the group.
+
+
+    - **Alt.binaries.movie.divx**: This group is much like the hdtv groups, however
+    few movies are here in HD, saving the downloader hours of time. If you''re not
+    sure if a film is worth owning, it might prove prudent to test-drive it first
+    with a smaller size. Most movies are in the one to two gigabyte size range which
+    is sufficient for a laptop or phone, but you’ll notice a substantial difference
+    on a 28 inch monitor as opposed to a dvd with decent bitrate.
+
+
+    - **Alt.binaries.sounds.mp3.blues**: (substitute your favorite genre instead of
+    blues, as celtic, jazz, new-age, rock, heavy-metal, classical, christian, etc).
+    Be aware that many of the mp3 groups have strict posting guidelines in their faqs,
+    and will report you to your usenet provider if you spam groups with off-topic
+    mp3s. However, they offer a very narrowly-defined listening experience depending
+    on your musical tastes.
+
+
+    - **Alt.binaries.games**: The main group for posting pc-related games, yet some
+    console get posted here rather than their specified groups. Be wary of viruses
+    in this group, regardless of how big the file is. A good anti-virus program is
+    paramount if you are going to be downloading from this group with any regularity.
+    Disable “autoplay” in your operating system, as many as a iso will, when mounted,
+    launch a virus at the first execution of the windows. The iso format itself is
+    not to blame, but rather the file that lie within the folders themselves on the
+    disc image can be virulent.
+
+
+    - **Alt.binaries.dox**: missing an nfo for a game? This is the place to ask. Game
+    manuals are also uploaded here, along with most every nfo file you can imagine
+    from every “scene” group in instance.
+
+
+    **A word of caution concerning binary groups:** You will not see much philosophical
+    discussion in these “binaries” groups, aside from bickering about broken rars/not
+    enough pars and endless requests. If you want political or academic debate, subscribe
+    to the lengthy list (there are thousands) of alt groups that do not have “binaries”
+    in the title.
+
+
+    ## Chapter 2: How to use Usenet
+
+
+    Over the past ten years, Usenet companies have made significant progress in simplifying
+    what was originally a very cumbersome process for Usenet customers. After subscribing
+    to a Usenet provider, it is now ridiculously simple to access the treasures that
+    Usenet holds.
+
+
+    ## Basics of Using Newsgroups
+
+
+    **Downloading:** When you sign up for a ten dollar/month plan, your NSP (Newgroup
+    Service Provider) will email you three things: your username, password, and news
+    address for the server (i.e., news.astraweb.com as an example). There are many
+    different Usenet tools available that are similar in function to how a browser
+    works. You can opt for the simpler method, which requires downloading an .nzb
+    file from sites like Binsearch, NZIndex, or Newzbin (paid) and then importing
+    to a newsreader or downloader of your choice. One of the simplest is an app called
+    Nzb-o-Matic Plus. In the options screen of the application, just insert your user/pass
+    combo and the server address with port 119, then set a destination where your
+    downloads reside. You can even choose the desktop. It’s simple. There are other
+    newsgroup tools available as well.
+
+
+    - **Newhosting Client** (requires signup) Free: The Newhosting client self-repairs
+    files for you if you have a subscription to them. However this is a bit redundant
+    since Quickpar and Winrar are free.
+
+
+    - **Easynews Web Interface** (requires signup) Free: The Easynews Interface is
+    similar to the Newhosting client in that you can see thumbnails of the files posted,
+    if they are passworded, and will check for errors automatically.
+
+
+    - **NewsBin Pro** $20
+
+
+    - **SABnzbd** Free
+
+
+    - **NewsLeecher** $20
+
+
+    - **Binreader** Free
+
+
+    - **GrabIt** Free
+
+
+    - **Unison** $29.99
+
+
+    - **EZ Global Search:** $2.99
+
+
+    - **NZB-O-MATIC Plus:** Free: Nzb-o-Matic is perhaps the easiest out of all the
+    above tools to hop board around Usenet. It is for downloading only however, but
+    once you have the NZB file, you simply import, set your username/pass and download
+    away.
+
+
+    Uploading is a bit trickier, but by no means are you required to upload anything
+    to Usenet, unlike torrents. If you are new to Usenet, be aware that anything you
+    upload outside of a private proxy or Tor will leave your IP address exposed. Take-care
+    if you are unsure if your uploads are copyrighted or not. They say, luck favors
+    the prepared.
+
+
+    ## How to Upload to Usenet: (if you have no intention of uploading, skip this)
+
+
+    The process of uploading a small file is not extraordinarily different than uploading
+    a large file. The main difference is that uploading a large file, say gigabytes
+    in size, takes hours on a slow DSL connection. Nevertheless, let''s go through
+    some admittedly simplified steps on how to do so. You''ll need some tools to do
+    so, though these are fairly mandatory to the entire process. They are:
+
+
+    - **Winrar** – archiving the files. You can''t upload a 25 gigabyte Blu-Ray movie
+    to Usenet without risking it failing or timing out. Thus, it is better to use
+    Winrar to break up your movie file in small chunks and upload those. You would
+    be pretty angry if you spent two days downloading a Blu-Ray file only to find
+    out it “skips” in the middle of the film. Thus, Winrar and Quickpar solve this
+    problem by testing the authenticity for broken parts. Once you have Winrar installed,
+    right click on the file and select “Add to Archive” from the Winrar context menu.
+    Winrar adds this to the windows context menu, thus with a simple right click you
+    can archive any file no matter the size. Just be sure and choose an appropriate
+    size to upload. One hundred megabyte chunks is sufficient for anything over 1
+    gigabyte. Smaller files like mp3s are usually fine with the mp3 non-archived,
+    but will come with par files to repair redundancies/errors. When download finish
+    downloading the rare pieces, they can right click on any of the rars and choose
+    “extract here” to the present directory, or any directory wish. Before they do
+    however, they will likely run Quickpar first to check for errors, provided YOU
+    have uploaded pars alongside the rar files of your movie.
+
+
+    Download Winrar at: https://www.rarlabs.com/download.htm
+
+
+    Quickpar – for creating par files. This is not mandatory for Usenet users (unless
+    the group specifically asks for it), but can be a godsend for downloaders as often
+    Usenet servers will “hiccup” during the upload process. Creating parts at 100%
+    redundancy is sufficient for most files.
+
+
+    Download Quickpar at: http://www.quickpar.org.uk/Download.htm
+
+
+    Camelsamer Powerpost (Windows only) - A freeware tool used to upload the rar and
+    par files you created. It is delightfully simple to use. You will need your username
+    and password combo from your Usenet provider, along with the port number to insert
+    into the settings menu before you are allowed to upload.
+
+
+    Download Powerpost at http://powerpost.camelsamer.nl/index.php
+
+
+    NZB Files – You can think of NZB files as being similar to torrent files that
+    you load into a downloader program. Instead of using uTorrent, you would import
+    the file into something like Nzb-o-Matic Plus. The NZB file itself is the one
+    you have selected from a site such as Binsearch or NZIndex. It can contain any
+    number of pointers to the files you want, which may be in separate newsgroups.
+    Using an NZB file makes it exponentially easier to manage the files.
+
+    '
+  mdcn: '
+
+    他之所以能够逃脱法（也就是说，通过一张暴露了邮件头信息的邮箱账户截图来炫耀），前提是他从第一步开始就使用了 Tor。讽刺的是，黑客最大的敌人似乎是他们自己。
+
+
+    以下值得探索的二进制新闻组（binary newsgroups）：
+
+
+    - **Alt.binaries.hdtv**: 这也许是最经典的新闻组，承载了几乎你可能想要任何高清材料。纪录片、主流电影、电视节目等在这里都可以找到且免费任用。请注意，这里的许多电影往往设置了密码。因此，稳妥的做法是下载该组的第一个
+    rar 包，将其解压并预览。Winrar 会报错说文件损坏，尽管如此仍继续解压即可。你将获得十分钟的电影预览，或者它会提示未输入密码。某些密码只能从私人论坛获得。如果你在组里看到某部你极力渴望但设置了密码的电影，可以提问自己可以加入哪个论坛来解压它。
+
+
+    - **Alt.binaries.hdtv.x264**: 不想在上面的 hdtv 组等几个世纪才下载一部 50 GB 的电影？试试它的姐妹组，该组专门负责大多数热门电影和电视节目的重新编码（re-encodes）。重编码器会将
+    50 GB 的电影压缩到 8-12 GB 的文件，同时保留原始 50 GB 电影的大部分画质。如果你在投影仪或 42 英寸及以上的电视上观看 HD 内容，则不建议这样做。但对于那些使用
+    27 英寸显示器/电视的人来说，只要编码器做得体当，你就不会看到太大的区别。
+
+
+    - **Alt.binaries.boneless**: 这是一个全能存储组，可以上传各种类型的文件。任何事万物都倾倒到这里，是 Usenet 上最大的组之一。仅推荐给互联网连接速度极快的用户，因为在平均连接下，获取头（header）计数通常需要超过一小时。该组的大部分内容包含了你能想象的一切，诚然这对于新手来说可能相当令人困惑，因为该组似乎没有一个统一的“”主题。
+
+
+    - **Alt.binaries.movie.divx**: 这个组与 hdtv 组类似，但这里的电影很少是 HD 的，这为下载者节省了数小时时间。如果你不确定部电影是否值得拥有，先用较小尺寸进行试用可能是明智之举。大多数电影的大小在
+    1 到 2 GB 之间，对于笔记本电脑或手机足够了，但在 28 英寸显示器上，与比特率良好的 DVD 相比，你会发现明显的差异。
+
+
+    - **Alt.binaries.sounds.mp3.blues**: （请用你喜欢的流派代替 blues，如凯尔特、爵士、新世纪、摇滚、重金属、古典、基督教等）。请注意，许多
+    mp3 组在它们的 FAQ 中有严格的发布指南，如果你向组内发送垃圾信息（非主题 mp3），他们会向你的 Usenet 服务商举报你。然而，它们根据你的音乐品味提供了非常窄的收听体验。
+
+
+    - **Alt.binaries.games**: 发布 PC 相关游戏的主组，但某些主机游戏也会发布在这里，而不是它们指定的组里。请警惕该组中的病毒，无论文件有多大。如果你打算定期从该组下载内容，一个良好的防病毒软件是至关重要的。在你的操作系统中禁用“自动播放”，因为许多
+    iso 文件在挂载时，会在 Windows 首次执行时启动病毒。iso 格式本身并无罪，而是磁盘镜像中文件夹内部的文件可能是毒性的。
+
+
+    - **Alt.binaries.dox**: 缺少某个游戏的 nfo 文件？这里是提问的地方。游戏说明书也被上传到这里，以及你可以想象的来自每个“场景”组的几乎每一个
+    nfo 文件。
+
+
+    **关于二进制组的一句警告：** 在这些“二进制”组中，你不会看到什么哲学讨论，除了对损坏的 rar/par 数量不足的争吵以及无休止的请求。如果你想进行政治或学术辩论，请订阅那个长长的（有数千个）标题中没有“binaries”的
+    alt 组列表。
+
+
+    ## 第 2 章：如何使用 Usenet
+
+
+    在过去的十几年里，Usenet 公司在简化原本对 Usenet 用户来说非常繁琐的过程方面取得了显著进展。在订阅 Usenet 服务商后，现在访问 Usenet
+    拥有的宝藏变得极其简单。
+
+
+    ## 使用新闻组的基础知识
+
+
+    **下载：** 当你注册每月 10 美元的计划时，你的 NSP（新闻组服务商）会通过邮件给你三样东西：你的用户名、密码和服务器新闻地址（例如，news.astraweb.com）。有很多不同的
+    Usenet 工具，其功能类似于浏览器的工作原理。你可以选择更简单的方法，从 Binsearch、NZIndex 或 Newzbin（付费）等网站下载 .nzb
+    文件，然后将其导入到你选择的新闻器或下载器中。最简单的工具之一是一个名为 `Nzb-o-Matic Plus` 的应用。在应用程序选项界面中，只需插入用户名/密码组合以及端口为
+    119 的服务器地址，然后设置下载内容的存放位置。你甚至可以选择桌面。这很简单。还有其他新闻组工具可用。
+
+
+    - **Newhosting Client**（需要注册）免费：如果你订阅了他们的服务，Newhosting 客户端会为你自动修复文件。然而，由于 Quickpar
+    和 Winrar 是免费的，这有点多此此一了。
+
+
+    - **Easynews Web Interface**（需要注册）免费：Easynews 界面与 Newhosting 客户端类似，你可以看到发布文件的缩略图，如果它们设置了密码，它会自动检查错误。
+
+
+    - **NewsBin Pro** $20
+
+
+    - **SABnzbd** 免费
+
+
+    - **NewsLeecher** $20
+
+
+    - **Binreader** 免费
+
+
+    - **GrabIt** 免费
+
+
+    - **Unison** $29.99
+
+
+    - **EZ Global Search:** $2.99
+
+
+    - **NZB-O-MATIC Plus:** 免费：Nzb-o-Matic 可能是上述所有工具中在 Usenet 之间穿梭最简单的。不过，它仅用于下载，但一旦你有了
+    NZB 文件，只需导入、设置用户名/密码并开始下载即可。
+
+
+    上传稍微复杂一点，但绝不是要求向 Usenet 上传任何内容，不像 torrent 那样。如果你是 Usenet 新手，请注意，在私有代理或 Tor 之外上传的任何内容都会暴露你的
+    IP 地址。如果你不确定上传的内容是否受版权保护，请小心。他们说，幸运青青有准备的人。
+
+
+    ## 如何上传到 Usenet：（如果你没有上传打算，请跳过此节）
+
+
+    上传小文件的过程与上传大文件并没有特别不同。主要区别在于，上传大文件（例如几 GB 大的文件）在慢速 DSL 连接上需要几个小时。尽管如此，让我们过一下一些确实简化的操作步骤。你需要一些工具来完成，这些工具对于整个过程来说是强制性的。它们是：
+
+
+    - **Winrar** – 对文件进行归档。你不能将一部 25 GB 的蓝光电影上传到 Usenet 而不冒着失败或超时的风险。因此，最好使用 Winrar
+    将你的电影文件分成小块并上传这些块。如果你花费了两天下载一个蓝光文件，结果发现它在电影中途“跳过了”，你会非常生气。因此，Winrar 和 Quickpar
+    通过测试损坏部分的真实性来解决这个问题。安装好 Winrar 后，右键点击文件，从 Winrar 右键菜单中选择“添加到压缩包”。Winrar 将此项添加到
+    Windows 右键菜单中，因此只需简单右键，即可归档任何大小的文件。只需确保并选择合适的尺寸进行上传。对于超过 1 GB 的任何内容，100 MB 的块就足够了。像
+    mp3 这样的小文件通常不需要归档 mp3，但会带上 par 文件来修复冗余/错误。当下载完这些稀有的碎片后，可以右键点击任何 rar 并选择“解压到此处”到当前目录或任何你想要的目录。在此之前，它们可能会先运行
+    Quickpar 来检查错误，前提是你上传电影 rar 文件的同时也上传了 par 文件。
+
+
+    在此处下载 Winrar：https://www.rarlabs.com/download.htm
+
+
+    **Quickpar** – 用于创建 par 文件。这对于 Usenet 用户不是强制性的（除非该组专门要求），但对于下载者来说可能是救星，因为 Usenet
+    服务器在上传过程中经常会发生“抽风”。创建具有 100% 冗余的分份对于大多数文件已经足够。
+
+
+    在此处下载 Quickpar：http://www.quickpar.org.uk/Download.htm
+
+
+    **Camelsamer Powerpost**（仅限 Windows）- 一个用于上传你创建的 rar 和 par 文件的免费工具。使用非常简单。你需要来自
+    Usenet 服务商的用户名/密码组合，以及在允许上传之前插入设置菜单的端口号。
+
+
+    在此处下载 Powerpost：http://powerpost.camelsamer.nl/index.php
+
+
+    **NZB 文件** – 你可以将 NZB 文件理解为加载到下载程序的 torrent 文件。与其使用 uTorrent，你会将文件导入到像 Nzb-o-Matic
+    Plus 这样的程序中。NZB 文件本身就是从 Binsearch 或 NZIndex 等网站上选择的那个。它可以包含指向你想要文件的任意指针，这些文件可能位于不同的新闻组中。使用
+    NZB 文件会让文件管理变得极其简单。
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 8]
+
+
+    would have gotten away with it (that is, bragging via a screenshot of her email
+    account with the header exposed) is if he had used Tor to do from step one. Ironically
+    enough, it seems that a hacker''s worst enemy is himself.
+
+
+    Recommended binary newsgroups worth exploring:
+
+
+    **Alt.binaries.hdtv**: This is perhaps the quintessential newsgroup that carries
+    almost any kind of high definition material you could ever want. Documentaries,
+    mainstream films, tv shows and the like can be found here free for the taking.
+    Be aware that many movies here tend to be passworded. Thus, it is prudent to download
+    the first rar of the set, extract it, and preview it. Winrar will complain that
+    it is broken, extract it anyway. You''ll get a ten minute preview of the film,
+    or it will complain about the lack of a password entered. Some passwords can only
+    be gained from private forums. If you see a movie you desperately want from the
+    group, but was passworded, ask which forum you can join to extract the.
+
+
+    **Alt.binaries.hdtv.x264**: Don''t want to wait for eons for a 50 gigabyte movie
+    to download from the hdtv group above? Try its sister group, which is a group
+    dedicated to re-encodes of most of the popular movie and tv titles. Re-encoders
+    will take a fifty gigabyte movie and compress it down to an 8-12 gigabyte file,
+    preserving much of the picture quality of the original fifty gigabyte movie. Not
+    recommended if you watch HD on a projector or a tv that is 42'' inches and above.
+    However for those with a 27'' inch monitor/tv, you will not see much difference
+    as long as the encoder has done a decent job.
+
+
+    **Alt.binaries.boneless**: This is an all-around depositing group where all manner
+    of files can be uploaded. Anything and everything gets dumped here, and is one
+    of the largest groups on Usenet. Only recommended to those with very fast internet
+    connections, as the header count often takes over an hour on an average connection.
+    Most of the group carries everything you can imagine, which'
+  - '[PAGE 9]
+
+
+    admittedly can be quite jarring for newcomers as there doesn’t seem to be any
+    “one” topic for the group.
+
+
+    **Alt.binaries.movie.divx:** This group is much like the hdtv groups, however
+    few movies are here in HD, saving the downloader hours of time. If you''re not
+    sure if a film is worth owning, it might prove prudent to test-drive it first
+    with a smaller size. Most movies are in the one to two gigabyte size range which
+    is sufficient for a laptop or phone, but you’ll notice a substantial difference
+    on a 28 inch monitor as opposed to a dvd with decent bitrate.
+
+
+    **Alt.binaries.sounds.mp3.blues:** (substitute your favorite genre instead of
+    blues, as celtic, jazz, new-age, rock, heavy-metal, classical, christian, etc).
+    Be aware that many of the mp3 groups have strict posting guidelines in their faqs,
+    and will report you to your usenet provider if you spam groups with off-topic
+    mp3s. However, they offer a very narrowly-defined listening experience depending
+    on your musical tastes
+
+
+    **Alt.binaries.games:** The main group for posting pc-related games, yet some
+    console get posted here rather than their specified groups. Be wary of viruses
+    in this group, regardless of how big the file is. A good anti-virus program is
+    paramount if you are going to be downloading from this group with any regularity.
+    Disable “autoplay” in your operating system, as many as a giso will, when mounted,
+    launch a virus at the first execution of the windows The iso format itself is
+    not to blame, but rather the file that lie within the folders themselves on the
+    disc image can be virulent.
+
+
+    **Alt.binaries.dox:** missing an nfo for a game? This is the place to ask. Game
+    manuals are also uploaded here, along with most every nfo file you can imagine
+    from every “scene” group in instance.
+
+
+    **A word of caution concerning binary groups:** You will not see much philosophical
+    discussion in these “binaries” groups, aside'
+  - '[PAGE 10]
+
+
+    from bickering about broken rars/not enough pars and endless requests. If you
+    want political or academic debate, subscribe to the lengthy list (there are thousands)
+    of alt groups that do not have “binaries” in the title.'
+  - '[PAGE 11]
+
+
+    # Chapter 2: How to use Usenet
+
+
+    Over the past ten years, Usenet companies have made significant progress in simplifying
+    what was originally a very cumbersome process for Usenet customers. After subscribing
+    to a Usenet provider, it is now ridiculously simple to access the treasures that
+    Usenet holds.
+
+
+    # Basics of Using Newsgroups
+
+
+    **Downloading:** When you sign up for a ten dollar/month plan, your NSP (Newgroup
+    Service Provider) will email you three things: your username, password, and news
+    address for the server (i.e. news.astraweb.com as an example). There are many
+    different Usenet tools available that are similar in function to how a browser
+    works. You can opt for the simpler method, which requires downloading an .nzb
+    file from sites like Binsearch, NZIndex, or Newzbin (paid) and then importing
+    to a newsreader or downloader of your choice. One of the simplest is an app called
+    Nzb-o-Matic Plus. In the options screen of the application, just insert your user/pass
+    combo and the server address with port 119, then set a destination where your
+    downloads reside. You can even choose the desktop. It’s simple. There are other
+    newsgroup tools available as well.
+
+
+    **Newhosting Client** (requires signup) Free
+
+    The Newhosting client self-repairs files for you if you have a subscription to
+    them. However this is a bit redundant since Quickpar and Winrar are free.
+
+
+    **Easynews Web Interface** (requires signup) Free
+
+    The Easynews Interface is similar to the Newhosting client in that you can see
+    thumbnails of the files posted, if they are passworded, and will check for errors
+    automatically.
+
+
+    **NewsBin Pro** $20
+
+
+    **SABnzbd** Free
+
+
+    **NewsLeecher** $20'
+  - '[PAGE 12]
+
+
+    # Binreader Free
+
+
+    # GrabIt Free
+
+
+    Unison $29.99
+
+
+    EZ Global Search: $2.99
+
+
+    **NZB-O-MATIC Plus:** Free
+
+
+    Nzb-o-Matic is perhaps the easiest out of all the above tools to hop board around
+    Usenet. It is for downloading only however, but once you have the NZB file, you
+    simply import, set your username/pass and download away.
+
+
+    Uploading is a bit trickier, but by no means are you required to upload anything
+    to Usenet, unlike torrents. If you are new to Usenet, be aware that anything you
+    upload outside of a private proxy or Tor will leave your IP address exposed. Take
+    care if you are unsure if your uploads are copyrighted or not. They say, luck
+    favors the prepared.
+
+
+    # How to Upload to Usenet: (if you have no intention of uploading, skip this)
+
+
+    The process of uploading a small file is not extraordinarily different than uploading
+    a large file. The main difference is that uploading a large file, say gigabytes
+    in size, takes hours on a slow DSL connection. Nevertheless, let''s go through
+    some admittedly simplified steps on how to do so. You''ll need some tools to do
+    so, though these are fairly mandatory to the entire process. They are:
+
+
+    **Winrar** – archiving the files. You can''t upload a 25 gigabyte Blu-Ray movie
+    to Usenet without risking it failing or timing out. Thus, it is better to use
+    Winrar to break up your movie file in small chunks and upload those. You would
+    be pretty angry if you spent two days downloading a Blu-Ray file only to find
+    out it “skips” in the middle of the film. Thus, Winrar and Quickpar solve this
+    problem by testing the authenticity for broken parts. Once you have Winrar installed,
+    right click on the file and select “Add to Archive” from the Winrar context menu.
+    Winrar adds this to the windows context menu, thus with a simple right click you
+    can archive'
+  - '[PAGE 13]
+
+
+    any file no matter the size. Just be sure and choose an appropriate size to upload.
+    One hundred megabyte chunks is sufficient for anything over 1 gigabyte in size.
+    Smaller files like mp3s are usually fine with the mp3 non-archived, but will come
+    with par files to repair redundancies/errors in them. When download finish downloading
+    all the rare pieces, they can right click on any of the posted rars and choose
+    “extract here” to the present directory, or any directory they wish. Before they
+    do however, they will likely run Quickpar first to check for errors, provided
+    YOU have uploaded pars alongside the rar files of your movie.
+
+
+    Download Winrar at:
+
+    ://www.rarlabs.com/download.htm
+
+
+    Quickpar – for creating par files. This is not mandatory for Usenet users (unless
+    the nejsou specifically asks for it...check their faq), but can be a godsend for
+    downloaders as often Usenet servers will “hiccup” during the upload process. Creating
+    parts at 100% redundancy is sufficient for most files.
+
+
+    Download Quickpar at:
+
+    http://www.quickpar.org.uk/Download.htm
+
+
+    Camelsamer Powerpost (Windows only) - A freeware tool used to upload the rar and
+    par files you created. It is delightfully simple to use. You will need your username
+    and password combo from your Usenet provider, along with the port number to insert
+    into the settings menu before you are allowed to upload.
+
+
+    Download Powerpost at http://powerpost.camelsamer.nl/index.php
+
+
+    NZB Files – You can think of NZB files as being similar to torrent files that
+    you load into a downloader program. Instead of using uTorrent, you would import
+    the file into something like Nzb-o-Matic Plus. The NZB file itself is the one
+    you have selected from a site such as Binsearch or NZIndex. It can contain any
+    number of pointers to the files you want, which may be in separate newsgroups.
+    Using an NZB file makes it exponentially easier to manage the files'
+- md: '
+
+    you want, versus those you don''t want. In the old days of Usenet, you had to
+    use an archaic program like Agent or Nomad News to manually checkmark each rar
+    or item in separate newsgroups to download what you wanted. This process alone
+    could take an hour or more depending on how many files you wanted. NZB files came
+    along, they simplified a needlessly cumbersome process of getting what you wanted
+    from your favorite newsgroups.
+
+
+    Incomplete Files – Incomplete Usenet files may look complete in your newsreader,
+    but upon downloading the complete set, you discover that Winrar spits out an error
+    midway through extracting the files. This is usually because the uploader has
+    an unstable connection, or perhaps the power went out upon uploading his files,
+    or a server hiccuped during transmission. Usenet servers transfer files from other
+    Usenet servers, and it differs somewhat than your regular run-of-the-mill internet
+    server. For this reason, you should install the free Quickpar program to alleviate
+    any potential headaches this can cause.
+
+
+    SFV Files – SFV files can be used to verify that your downloaded file is what
+    it is supposed to be, and if any corruption occurred along the way. It doesn''t
+    repair the file. That is what Quickpar does. This method of repair is quite different
+    (and yet more stable) than what you might be accustomed to using BitTorrent, where
+    pars are rarely provided with seeded files.
+
+
+    ## Chapter 3: Usenet Reviews - Wheat and the Chaff
+
+
+    If you scout around the major search engines and use search terms like “usenet”
+    “best usenet prices” and “usenet reviews”, you will literally come across hundreds
+    of websites clamoring for your referral dollars as they tell you Usenet provider
+    is best and which ones to avoid. The thing is, most of them offer the exact same
+    services, and by large are just as competent as the next company. They offer similar
+    services, ease of use, and like some Newshosting offer their own Usenet browser
+    that will do all of the hard work for you. Almost all of them offer free SSL and
+    unlimited packages as well. Usenet-Server and Astraweb seem to be the cheapest,
+    though Astraweb has had its share of problems regarding incomplete uploads in
+    the past.
+
+
+    For the purposes of anonymity, going with a US based newsgroup provider probably
+    isn''t conductive to good anonymity practice. While it certainly isn''t foolproof
+    to have an account with a European provider if one is uploading copyrighted material
+    to Usenet (or any other illegal activity), the laws in the US are more litigious
+    and draconian than any other country on Earth that houses the server farms of
+    Usenet companies.
+
+
+    ## The Big Five
+
+
+    - **Astraweb**: Often the cheapest priced out of Usenet providers with unlimited
+    specials at $11, their past problems have been server downtime as well as incomplete
+    files (as of 2012). Posted PAR files will certainly make up the difference...most
+    of the time. However on a dual core fitted pc, quickpar can take more than an
+    hour if a sufficiently large amount of rares are broken. In addition, their customer
+    service is not as refined as say, Easagews or Newshosting, but they cannot beat
+    the price they offer. If you don''t mind a few broken files and using Quickpar
+    on a semi-weekly basis, and price is a concern, Astraweb is the prime choice.
+
+
+    - **Usenet Server**: Similar to Astraweb but more stable infrastructure. They
+    are also a few dollars more in price however their unlimited plan. Incompletes
+    were not seen in over two years of using them. Thus, you really see where this
+    extra dollars per month went: system retention and reliability.
+
+
+    - **Newshowing**: Similar to Usenet-Server, however they provide a free newsreader
+    that makes it ridiculously easy to see which files are authentic and which are
+    viruses/spam (hint: look at the file size...if it is a heinously small size, it
+    is probably spam or malware). The thumbnail view is similar to what you would
+    see with Easagews'' web interface that scans the thumbs of all the newsgroups
+    you need to view.
+
+
+    - **Easnews**: One of the first companies out of the gate, and one still does
+    not have the unlimited offerings of the above Usenet providers. However, they
+    are dirt cheap, have a reliable backbone of server farms since they have been
+    in business for years, and one of the top forums for troubleshooting and tech
+    issues in the industry. Their customer service is unrivaled as well. The caveat
+    is that if you are a power user who wants to download over a hundred gigabytes
+    of data per month, they probably should not be your first choice. They are, like
+    Giganews, extremely strict with takedown notices from lawyers. If HBO specials
+    and documentaries are your cup of tea, be aware that they have the ability to
+    “nuke” uploads should they deem it too “hot” to reside on their servers (i.e.
+    Game of Thrones, The Sopranos, etc)
+
+
+    - **Giganews**: Undoubtedly the most expensive of all the Usenet premium providers.
+    They provide and similar services as the above mentioned providers. They are considered
+    the “Harvard” of Usenet companies, however it seems rather needless to pay for
+    the name since you get most of the benefits from the other four Usenet companies.
+    Giganews is also known for giving in to “take down” requests for uploaders of
+    copyrighted content, such as HBO series like Game of Thrones, in which files were
+    purged from the servers in such a large quantity as to make pars useless to recover
+    them. The problem therein, is that many smaller Usenet companies use Giganews
+    backend servers for access to Usenet. Thus, when they comply with a take down
+    order or request from some Hollywood law firm, other Usenet providers are affected.
+    If money is not an issue, Giganews is a great choice for their consistently good
+    customer service.
+
+
+    ## Others: Thundernews, Newsden, Ngroups, etc.
+
+
+    You''re taking a spin on the roulette wheel with anyone not in the top five. That
+    is not to say they all provide bad service, but it is important to note that a
+    rock-solid business like those in the top five takes years and years of painstaking
+    work and perseverance. The lesser known Usenet providers usually are lacking one
+    of three key areas: customer service (usually emails from tech support), reliability/completion
+    of files, or retention (age of files). Some of them are newly minted that they
+    have no choice but to rent part of their infrastructure from the likes of Giganews
+    or Highwinds, which have many, many server farms.
+
+
+    In the end you might ask, what is the number one thing customers want from a Usenet
+    provider? Is it not retention. Most Usenet companies have similar retention rates
+    that span many years. It is not even completion of files. Most large uploads from
+    users around the world upload a sufficient number of pars to repair any large
+    group of posted files Blu-Ray movies or the like. No, what Usenet customers most
+    want is GOOD CUSTOMER SERVICE. Customers don''t want to sit waiting on the phone
+    up for an hour for tech support to answer. To wit, they want someone who speaks
+    the same language and in the same dialect. They also don''t want to be spammed
+    with upselling offers by the Usenet company in question (web hosting companies
+    like Godaddy are notorious for this), nor do they like to be called on the phone
+    with such offers.
+
+
+    ## The First Rule of Usenet (don''t talk about Usenet!)
+
+
+    On many social media sites and forums like Facebook, Twitter and Reddit, some
+    users will post advertisements from the late nineties from such big stores as
+    BestBuy, Wal-Mart, Sears and the like that show a dramatic difference in regards
+    to hardware costs.
+
+
+    For example, a 1.5 gigabyte hard drive from BestBuy in 2000 cost over 200 dollars.
+    Now however, for the same amount of dollars you can buy a 3 terabyte drive. It
+    is not different for Usenet server farms. Time goes by and more customers sign
+    on for premium Usenet accounts, the business costs incurred for Usenet companies
+    goes down. That is why you can have an unlimited data account for less than ten
+    dollars a month. So then, why is traditional file-sharing as torrenting more popular?
+
+
+    The reason is because it is eminently easier to download a torrent for free than
+    to use your credit card and set up a Usenet account. Ridiculous, is it not? It
+    is also easier to see comments on a torrent site and filter through all the spam
+    in a Usenet newsgroup such as alt.binaries.boneless. Some interfaces, such as
+    Newshenting''s browser will filter out most of the spam and passworded files and
+    make it easier to use.
+
+
+    It is a well-known fact by most BitTorrent users that the Record and Movie industries
+    to unleash their armies of lawyers upon copyright works that have seeds numbered
+    in the millions. This makes it very convincing in lawsuit that you didn''t. This
+    is less the case with Usenet, where it is not possible to see who downloaded which
+    file, even in casting a wide net. Thus, if you live in a litigious society like
+    that in the United States, it is to your benefit to learn to utilize Usenet''s
+    strengths in this regard.
+
+    '
+  mdcn: '
+
+    你想要的，对比你并不想要的。在 Usenet 的旧日时代，你必须使用像 Agent 或 Nomad News 这样过时的程序，在不同的新闻组中手动勾选每个
+    rar 文件或项目，以下载你想要的内容。取决于你想要的文件数量，光是这一个过程就可以花费一小时或更长时间。NZB 文件的出现，简化了从你喜爱的新闻组获取所需内容这一本没必要繁琐的过程。
+
+
+    **不完整的文件** – 不完全的 Usenet 文件在你的新闻阅读器中可能看起来是完整的，但在下载整套文件后，你会发现 Winrar 在提取文件过程中途弹出错误。这通常是因为上传者的连接不稳定，或者可能是在上传文件时停电了，又或是服务器在传输过程中出现了小故障。Usenet
+    服务器从其他 Usenet 服务器传输文件，这与你常用的普通互联网服务器略有不同。出于这个原因，你应该安装免费的 Quickpar 程序，以缓解这可能造成的任何潜在困扰。
+
+
+    **SFV 文件** – SFV 文件可用于验证你下载的文件是否为原始文件，以及在此过程中是否发生了任何损坏。它不会修复文件，那是 Quickpar 做的工作。这种修复方法与你可能习惯使用的
+    BitTorrent 方法完全不同（且更稳定），在 BitTorrent 中，下载者很少提供种子文件。
+
+
+    ## 第 3 章：Usenet 评测——去芜存
+
+
+    如果你在各大搜索引擎中搜寻并使用如“usenet”、“best usenet prices”和“usenet reviews”等搜索词，你真的会遇到数百个向你索要推荐金的网站，它们会告诉你哪家
+    Usenet 提供商最好，哪些是应该避的。事实是，大多数公司提供的服务完全相同，而且在很大程度上与其他公司一样优秀。它们提供相似的服务、易用性，并且像 Newshosting
+    的某些公司还提供自己的 Usenet 浏览器，为你完成所有的繁琐工作。几乎所有的公司都提供免费的 SSL 和无限套餐。Usenet-Server 和 Astraweb
+    似乎是最便宜的，尽管 Astraweb 过去在上传完整方面遇到过问题。
+
+
+    出于匿名性的考虑，选择位于美国的新闻组供应商可能不利于良好的匿名实践。虽然如果你向 Usenet 上传版权保护材料（或任何其他非法活动），在欧洲提供商处拥有账户并非万无一失，但美国的法律比世界上任何其他拥有
+    Usenet 公司服务器场的国家都更具诉讼性且严酷。
+
+
+    ## 五大巨
+
+
+    - **Astraweb**: 通常是 Usenet 提供商中价格最低的，无限流量特惠价为 11 美元，他们过去的问题包括服务器宕机以及文件不完整（截至 2012
+    年）。发布的 PAR 文件无疑会弥补这一差异……大多数时候如此。然而，在双核电脑上，如果有足够数量的稀有文件损坏，quickpar 可能会花费超过一小时。此外，他们的客户服务没有
+    Easagews 或 Newshosting 那样精细，但他们无法比拟其价格。如果你不在意几个损坏的文件以及每半周使用一次 Quickpar，并且对价格有顾虑，那么
+    Astraweb 是首选。
+
+
+    - **Usenet Server**: 与 Astraweb 类似，但基础设施更稳定。不过，他们的无限量计划要贵几美元。在使用他们的多年里，没有见过文件不完整的情况。因此，你真的看到了这每月多出的几美元花在了什么地方：系统留存和可靠性。
+
+
+    - **Newshowing**: 与 Usenet-Server 类似，但他们提供一个免费的新闻阅读器，这让你极其容易地看出哪些文件是真实的，哪些是病毒/垃圾邮件（提示：看文件大小……如果小得离谱，可能是垃圾邮件或恶意软件）。缩略图视图与
+    Easagews 的网页界面类似，它会扫描你需要查看的所有新闻组的缩略图。
+
+
+    - **Easnews**: 是最早推出的公司之一，目前仍然没有上述 Usenet 提供商那样的无限供应。然而，他们极其廉价，由于经营多年，拥有可靠的服务器场后端，并且是行业内排除故障和技术问题的顶级论坛之一。他们的客户服务也是无与伦比的。缺点是，如果你是一个每月想下载数百
+    GB 数据的高级用户，他们可能不应该是你的首选。他们和 Giganews 一样，对律师发出的删除通知极其严格。如果 HBO 特别节目和纪录片是你的菜口，请注意，如果他们认为某些内容太“火爆”而不适合留在他们的服务器上，他们有能力“炸掉”上传内容（例如《权力的游戏》、《黑道党》等）。
+
+
+    - **Giganews**: 无疑是所有 Usenet 高级提供商中最贵的。他们提供与上述提供商相似的服务。他们被认为是 Usenet 界的“哈佛”，但为了这个名头付费似乎毫无意义，因为你从其他四家
+    Usenet 公司那里就能获得大部分收益。Giganews 还因顺从版权内容上传者的“删除”请求而闻名，例如像《权力的游戏》这样的 HBO 剧集，文件从服务器上清除数量之大，以至于
+    PAR 文件无法恢复它们。其中的问题在于，许多较小的 Usenet 公司使用 Giganews 后端服务器来访问 Usenet。因此，当他们遵守某些好莱坞律的删除命令或请求时，其他
+    Usenet 提供商也会受到影响。如果钱不是问题，Giganews 因其持续良好的客户服务是一个很棒的选择。
+
+
+    ## 其他：Thundernews, Newsden, Ngroups 等。
+
+
+    选择前五名以外的任何公司都是在转轮盘上赌博。这并不是说他们提供的服务都很糟糕，但重要的是，像前五名那样稳如磐石的企业需要多年多年艰辛的辛勤工作和坚持。那些不为人知的
+    Usenet 提供商通常缺乏三个关键领域之一：客户服务（通常是技术支持的邮件）、文件的可靠性/完整性，或留存期（文件的时长）。有些是新成立的，别无从像 Giganews
+    或 Highwinds 这样拥有大量服务器场的公司租赁部分基础设施。
+
+
+    最后你可能会问，客户从 Usenet 提供商处想要的首要点是什么？难道不是留存期吗？大多数 Usenet 公司都有跨越多年的相似留存率。这甚至不是文件的完整性。全球用户的大多数上传都上传了足够的
+    PAR 文件，以修复任何大组的发布文件，如蓝光电影之类的内容。不，Usenet 客户最想要的是**良好的客户服务**。客户不想坐在电话旁等一小时技术支持回答。换句话之，他们想要一个说同一种语言、同一个方言的人。他们也不希望被该
+    Usenet 公司用推销信息骚扰（像 GoDaddy 这样的网站托管公司在这臭名昭著），也不喜欢接到此类推销电话。
+
+
+    ## Usenet 第一准则（不要谈论 Usenet！）
+
+
+    在 Facebook、Twitter 和 Reddit 等许多社交媒体网站和论坛上，某些用户会发布来自 90 年代后期的 BestBuy、沃尔玛、Sears
+    等大商店的广告，这些广告显示了硬件成本的巨大差异。
+
+
+    例如，2000 年来自 BestBuy 的 1.5 GB 硬盘花费超过 200 美元。现在，同样的金额你可以买到一个 3TB 的硬盘。Usenet 服务器场也是如此。随着时间推移，更多客户注册高级
+    Usenet 账户，Usenet 公司的运营成本降低了。这就是为什么你可以以每月不到十美元的价格拥有无限流量账户。那么，为什么传统的种子分享（torrent）更流行呢？
+
+
+    原因是，免费下载种子比使用信用卡并设置 Usenet 账户要容易得多。荒谬，不是吗？在种子网站上查看评论也比过滤掉 Usenet 新闻组（如 alt.binaries.boneless）中的垃圾邮件要容易。某些界面，如
+    Newshenting 的浏览器会过滤掉大部分垃圾邮件和加密文件，使其更易用。
+
+
+    对于大多数 BitTorrent 用户来说，已知的事实是唱片和电影行业会对种子数数百万的版权作品发动律师军队。这使得在诉讼中，“你没有下载”这一说法非常有说服力。这在
+    Usenet 上并不如此，因为即使在大撒网的情况下也无法看到谁下载了哪个文件。因此，如果你住在像美国这样诉讼频繁的社会，学会利用 Usenet 在这方面的优势对你有利。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 14]
+
+
+    you want, versus those you don''t want. In the old days of Usenet, you had to
+    use an archaic program like Agent or Nomad News to manually checkmark each rar
+    or item in separate newsgroups to download what you wanted. This process alone
+    could take an hour or more depending on how many files you wanted. NZB files came
+    along, they simplified a needlessly cumbersome process of getting what you wanted
+    from your favorite newsgroups.
+
+
+    Incomplete Files – Incomplete Usenet files may look complete in your newsreader,
+    but upon downloading the complete set, you discover that Winrar spits out an error
+    midway through extracting the files. This is usually because the uploader has
+    an unstable connection, or perhaps the power went out upon uploading his files,
+    or a server hiccuped during transmission. Usenet servers transfer files from other
+    Usenet servers, and it differs somewhat than your regular run-of-the-mill internet
+    server. For this reason, you should install the free Quickpar program to alleviate
+    any potential headaches this can cause.
+
+
+    SFV Files – SFV files can be used to verify that your downloaded file is what
+    it is supposed to be, and if any corruption occurred along the way. It doesn''t
+    repair the file. That is what Quickpar does. This method of repair is quite different
+    (and yet more stable) than what you might be accustomed to using BitTorrent, where
+    pars are rarely provided with seeded files.'
+  - '[PAGE 15]
+
+
+    # Chapter 3: Usenet Reviews - Wheat and the Chaff
+
+
+    If you scout around the major search engines and use search terms like “usenet”
+    “best usenet prices” and “usenet reviews”, you will literally come across hundreds
+    of websites clamoring for your referral dollars as they tell you Usenet provider
+    is best and which ones to avoid. The thing is, most of them offer the exact same
+    services, and by large are just as competent as the next company. They offer similar
+    services, ease of use, and like some Newshosting offer their own Usenet browser
+    that will do all of the hard work for you. Almost all of them offer free SSL and
+    unlimited packages as well. Usenet-Server and Astraweb seem to be the cheapest,
+    though Astraweb has had its share of problems regarding incomplete uploads in
+    the past.
+
+
+    For the purposes of anonymity, going with a US based newsgroup provider probably
+    isn''t conductive to good anonymity practice. While it certainly isn''t foolproof
+    to have an account with a European provider if one is uploading copyrighted material
+    to Usenet (or any other illegal activity), the laws in the US are more litigious
+    and draconian than any other country on Earth that houses the server farms of
+    Usenet companies.
+
+
+    # The Big Five
+
+
+    Astraweb: Often the cheapest priced out of Usenet providers with unlimited specials
+    at $11, their past problems have been server downtime as well as incomplete files
+    (as of 2012). Posted PAR files will certainly make up the difference...most of
+    the time. However on a dual core fitted pc, quickpar can take more than an hour
+    if a sufficiently large amount of rares are broken. In addition, their customer
+    service is not as refined as say, Easeways or Newshosting, but they cannot beat
+    the price they offer. If you don''t mind a few broken files and using Quickpar
+    on a semi-weekly basis, and price is a concern, Astraweb is the prime choice.'
+  - '[PAGE 16]
+
+
+    Usenet Server: Similar to Astraweb but more stable infrastructure. They are also
+    a few dollars more in price however their unlimited plan. Incompletes were not
+    seen in over two years of using them. Thus, you really see where this extra dollars
+    per month went: system retention and reliability.
+
+
+    **Newshowing**: Similar to Usenet-Server, however they provide a free newsreader
+    that makes it ridiculously easy to see which files are authentic and which are
+    viruses/spam (hint: look at the file size...if it is a heinously small size, it
+    is probably spam or malware). The thumbnail view is similar to what you would
+    see with Easews'' web interface that scans the thumbs of all the newsgroups you
+    need to view.
+
+
+    **Easnews**: One of the first companies out of the gate, and one still does not
+    have the unlimited offerings of the above Usenet providers. However, they are
+    dirt cheap, have a reliable backbone of server farms since they have been in business
+    for years, and one of the top forums for troubleshooting and tech issues in the
+    industry. Their customer service is unrivaled as well. The caveat is that if you
+    are a power user who wants to download over a hundred gigabytes of data per month,
+    they probably should not be your first choice. They are, like Giganews, extremely
+    strict with takedown notices from lawyers. If HBO specials and documentaries are
+    your cup of tea, be aware that they have the ability to “nuke” uploads should
+    they deem it too “hot” to reside on their servers (i.e. Game of Thrones, The Sopranos,
+    etc)
+
+
+    **Giganews**: Undoubtedly the most expensive of all the Usenet premium providers.
+    They provide and similar services as the above mentioned providers. They are considered
+    the “Harvard” of Usenet companies, however it seems rather needless to pay for
+    the name since you get most of the benefits from the other four Usenet companies.
+    Giganews is also known for giving in to “take down” requests for uploaders of
+    copyrighted content, such as HBO series like Game of Thrones, in which files were
+    purged from the servers in such a large quantity as to make pars useless to recover
+    them. The problem therein, is that many smaller Usenet companies use Giganews'
+  - '[PAGE 17]
+
+
+    backend servers for access to Usenet. Thus, when they comply with a take down
+    order or request from some Hollywood law firm, other Usenet providers are affected.
+    If money is not an issue, Giganews is a great choice for their consistently good
+    customer service.
+
+
+    # Others: Thundernews, Newsden, Ngroups, etc.
+
+
+    You''re taking a spin on the roulette wheel with anyone not in the top five. That
+    is not to say they all provide bad service, but it is important to note that a
+    rock-solid business like those in the top five takes years and years of painstaking
+    work and perseverance. The lesser known Usenet providers usually are lacking one
+    of three key areas: customer service (usually emails from tech support), reliability/completion
+    of files, or retention (age of files). Some of them are newly minted that they
+    have no choice but to rent part of their infrastructure from the likes of Giganews
+    or Highwinds, which have many, many server farms.
+
+
+    In the end you might ask, what is the number one thing customers want from a Usenet
+    provider? Is it not retention. Most Usenet companies have similar retention rates
+    that span many years. It is not even completion of files. Most large uploads from
+    users around the world upload a sufficient number of pars to repair any large
+    group of posted files Blu-Ray movies or the like. No, what Usenet customers most
+    want is GOOD CUSTOMER SERVICE. Customers don''t want to sit waiting on the phone
+    up for an hour for tech support to answer. To wit, they want someone who speaks
+    the same language and in the same dialect. They also don''t want to be spammed
+    with upselling offers by the Usenet company in question (web hosting companies
+    like Godaddy are notorious for this), nor do they like to be called on the phone
+    with such offers.
+
+
+    # The First Rule of Usenet (don''t talk about Usenet!)
+
+
+    On many social media sites and forums like Facebook, Twitter and Reddit, some
+    users will post advertisements from the late nineties from such big stores as
+    BestBuy, Wal-Mart, Sears and the like that show a dramatic difference in regards
+    to hardware costs.'
+  - '[PAGE 18]
+
+
+    For example, a 1.5 gigabyte hard drive from BestBuy in 2000 cost over 200 dollars.
+    Now however, for the same amount of dollars you can buy a 3 terabyte drive. It
+    is not different for Usenet server farms. Time goes by and more customers sign
+    on for premium Usenet accounts, the business costs incurred for Usenet companies
+    goes down. That is why you can have an unlimited data account for less than ten
+    dollars a month. So then, why is traditional file-sharing as torrenting more popular?
+
+
+    The reason is because it is eminently easier to download a torrent for free than
+    to use your credit card and set up a Usenet account. Ridiculous, is it not? It
+    is also easier to see comments on a torrent site and filter through all the spam
+    in a Usenet newsgroup such as alt.binaries.boneless. Some interfaces, such as
+    Newshenting''s browser will filter out most of the spam and passworded files and
+    make it easier to use.
+
+
+    It is a well-known fact by most BitTorrent users that the Record and Movie industries
+    to unleash their armies of lawyers upon copyright works that have seeds numbered
+    in the millions. This makes it very convincing in lawsuit that you didn''t. Often,
+    a movie release for September might be leaked in August, and the swarm of users
+    will catch the attention of the copyright holders and sue the downloaders as well
+    as the uploaders provided their true ip address is showing. This is less the case
+    with Usenet, where it is not possible to see who downloaded which file, even in
+    casting a wide net. Thus, if you live in a litigious society like that in the
+    United States, it is to your benefit to learn to utilize Usenet''s strengths in
+    this regard.
+
+
+    On many forums you will hear users say “Usenet is dead” or “Usenet doesn''t have
+    torrents have”. Take confidence in the fact that people expose such nonsense don''t
+    in fact Usenet themselves. It is not beyond the realm of impossibility that such
+    nays are actually attorneys, or employee shills for the record industry who don''t
+    want legions of potential Usenet experts asking too many questions convincing
+    what it has to offer.'
+- md: '
+
+    # Chapter 4: Usenet Anonymity
+
+
+    In this chapter, we''ll discuss ways you can add anonymity to your Usenet connection,
+    so that you can participate in discussion groups without fear of persecution.
+    These methods often are most useful in situations where you may lose your Usenet
+    account if you say the wrong things to the wrong people. Usenet companies are
+    being business now, and unlike twelve years ago, will now think nothing of terminating
+    your account if they get enough complaints. Simply being unpopular and taking
+    a stand against the status quo in certain newsgroups can get your Usenet account
+    banned (i.e. alt.privacy). However, with true anonymity, they may ban your account,
+    but rest assured that not only will your words remain forever on Usenet, but you
+    will not be persecuted for speaking out against a tyrannical government, or a
+    company that you work for (which has happened many times by disgruntled employees
+    on Facebook).
+
+
+    It should be stated at the outset that Tor for Usenet binary downloads will actually
+    strain the Tor network, just as it does with torrents. And to boot, whenever you
+    use torrents via Tor, the torrent software actually sends your IP address to the
+    recipient. It does so anonymously, in the same way a post office worker will deliver
+    your mail. Needless to say this defeats the purpose of using torrents. This problem
+    is not with the Tor code, but rather the way that applications like BitLord and
+    BitTorrent are designed. The torrent applications themselves need to be coded
+    to allow anonymity. It is better to use Free leech with the Frost addon for p2p-like
+    trading you wish to remain anonymous. Tor is much more effective at textual discussions
+    and binary downloaders using your native connection, but the easiest method to
+    do this anonymously is by use of the remailer network. By using such a method,
+    the identifying Usenet posts are stripped away from your messages, essentially
+    erasing the digital trail that leads back to your IP address.
+
+
+    As we have seen from past media reports around the world over the last several
+    years, there could be any number of valid reasons you want to hide your identity.
+
+
+    - Maybe you work for a computer manufacturer, or perhaps a robotics company and
+    are concerned about the lack of safety measures being enforced by your superiors,
+    but fear some kind of retaliation by them should you go public, like the loss
+    of your job. Usenet is a great place to ask advice and not worry about the consequences.
+    Places like Facebook and Twitter on the other hand might invite retribution by
+    the executives or CEO of your company.
+
+
+    - It could be that you want to vocally protest the prevailing winds of government.
+    Doing so in countries like the US, Iran, China, and the like could put you on
+    a “watch” list of sorts, and before you know it, you have problems relating to
+    “no fly” lists at airports and border stations.
+
+
+    - Perhaps you want to establish a free email address that has never had any contact
+    whatsoever your real IP address. Services like Yahoo Mail, Gmail, and Hotmail
+    repeatedly send emails looking for keywords or files to flag. Shutting down your
+    email is one thing. Having your IP address along with the email forwarded to government
+    entities for prosecution is quite another. Anonymity prevents this from happening.
+
+
+    # Remailers
+
+
+    As a crude example, let''s say you own a reporting agency that is active in most
+    of the less-than-savory newsgroups, and you use your email from your office quite
+    regularly. Then you see a rape victim who needs your assistance. You might not
+    want to divulge your email address to everyone. Using a remailer will ensure that
+    any identifying information of you will be erased from the headers of any messages
+    you upload to newsgroups. Your message will be forwarded to the recipient without
+    any risks of public disclosure.
+
+
+    # Traceable vs. Untraceable Remailers
+
+
+    **Traceable:** there are some types of remailers that keep active lists of send/pseudonyms
+    whereby receivers can reply to mail by fictitious names. When the remailer gets
+    a message, it consults a list and forwards mail to the sender. Thus, there is
+    an element of privacy to this method of communication; however as was proved in
+    previous years by the penet.fi (Finland) incident, this does not provide anonymity.
+    Any hacker, government agency, judge, or the police like gain access to said list
+    and discover who the sender is. In the case of penet.fi, Scientology launched
+    a lawsuit of copyright infringement against them, in which a lower court demanded
+    they turn over the identity of their users.
+
+
+    **Untraceable:** If no list is maintained of the pseudonyms of users, then security
+    is increased exponentially...provided you are willing to give up two communications
+    with your party. Needless to say, this has some drawbacks, and is in some ways
+    inferior to using Tor and/or PGP to communicate. In addition, there is always
+    the possibility of hacker attacks whereby entry is gained upon the server, anonymity
+    is compromised. Traffic-sniffers along with a host of other tools can also be
+    used as a method of attack, as they compare and contrast the traffic emanating
+    from the server. Such attacks are very difficult to coordinate, but are somewhat
+    analogous to attacks within Tor and also Freet, whereby a sufficiently high number
+    of hostile nodes are controlled within the network, probability of stripping away
+    layers of anonymity becomes more likely. In other words, if Law Enforcement for
+    instance, controls all Tor relays, they control of most nodes in Freet. Though
+    they are admittedly vastly different technologies, they share one common goal:
+    hiding the true IP address of senders and recipients.
+
+
+    Mixmaster techniques however attempt to thwart such subversive attempts by sending
+    messages through several servers across the globe, in various countries of legality
+    and law enforcement jurisdictions. It becomes exponentially difficult for hackers
+    and/or government entities to bunny hop from server-to-server across the globe
+    in order to track down where the original sender resided. Thus, it goes well above
+    and beyond the phrase “don’t put all your eggs in one basket” and is more akin
+    to “many eggs, many baskets”. Such is the skeletal framework of the onion-routing
+    network Tor.
+
+
+    You may download Mixmaster at: http://sourceforge.net/projects/mixmaster/files/
+
+
+    # Things That Break Anonymity on Usenet
+
+
+    1.) Giving out your real email address, even one from one of the “free” services
+    such as Yahoo, Hotmail and the like, not only can, but *will* open you up to armies
+    of spambots, guaranteed. You would be surprised at how many new to Usenet under
+    the impression that these free email services are somehow foolproof to the legions
+    of bots that trawl Usenet. A better alternative: a fictional name and temporary
+    *Usenet-Only* if you have a website, your host probably offers you the ability
+    to create throwback accounts. Or, go with Anonymous Nyms at https://www.nyms.net
+    for twenty bucks per year. SharpMail, Mailinator and Hushail are also excellent
+    options, however if you want anonymity as well as privacy, remember to sign up
+    on The network, not the open web. Also remember not to use credit cards or paypal,
+    as it leaves a money trail. Better to use Bitcoins or a money order with no link
+    to you.
+
+
+    2.) Dropping Personal Info. This is a big one, and one that is seen quite frequently
+    on various groups where flame wars erupt over issues like political campaigns,
+    privacy and even one mp3 groups (i.e. alt.binaries.sounds.mp3.electronic). Political
+    affiliations/liaisons, favorite restaurants, bars, musical groups and the like
+    can lead to some stalker building a profile on you, hopping on Facebook, Twitter
+    or LinkedIn and keying in all the personal data you have given over the past six
+    months. Remember that whatever is typed in *any* newsgroup will be there for years
+    and years. Type in “labor” as “colour” or “color” as “colour”, and it is not difficult
+    to discern your country of origin.
+
+
+    3.) Leaving messages with your headers clearly visible to the reading public.
+    By using various search tools, they can see every message you posted to Usenet,
+    even if you used different nyms. This of course doesn’t occur if you use a service
+    that strips away this information.
+
+
+    4.) Signing up for a Usenet or VPN service using credit cards Realize that when
+    you use your credit card to purchase anything like a vpn (virtual private network)
+    or Usenet account, you are in fact leaving a money trail to your identity. If
+    you are only after a small measure of privacy, such as wanting a Usenet account
+    that
+
+    '
+  mdcn: "\n\n# 第 4 章：Usenet 匿名性\n\n在本章中，我们将讨论如何为你的 Usenet 连接添加匿名性，以便你能够参与讨论组而无需担心受到迫害。这些方法在某些你可能因为对错误的人说了错误的话而导致失去\
+    \ Usenet 账户的情况下通常最为有用。Usenet 公司现在已经业务化了，与十二年前不同，如果他们收到足够的投诉，现在他们会毫不犹豫地终止你的账户。仅仅是因为在某些新闻组中不受欢迎并对现状采取立场，就可能导致你的\
+    \ Usenet 账户被封禁（例如 alt.privacy）。然而，有了真正的匿名性，他们可能会封禁你的账户，但请放心，不仅你的言论将永远留在 Usenet\
+    \ 上，而且你也不会因为公开反对暴政政府或你任职的公司而受到迫害（这种情况在 Facebook 上曾多次发生于不满的员工引起）。\n\n在开始之前必须说明的是，用于\
+    \ Usenet 二进制下载的 Tor实际上会消耗 Tor 网络，就像下载 torrent（种子）一样。不仅如此，每当你通过 Tor 使用 torrent\
+    \ 时，torrent 软件实际上会将你的 IP 地址发送给接收者。它是以匿名的方式发送的，就像邮局工作人员投递你的邮件一样。不用说，这违背了使用 torrent\
+    \ 的目的。这个问题不在于 Tor 的代码，而在于像 BitLord 和 BitTorrent 等应用程序的设计方式。torrent 应用本身需要被编写以允许匿名。如果你希望在保持匿名的情况下进行类似\
+    \ p2p 的交易，最好使用带有 Frost 插件的 Free leech。Tor 在文本讨论和使用你原生连接的二进制下载器方面要有效得多，但匿名执行此最简单的方法是使用重发器网络（remailer\
+    \ network）。通过这种方法，具有识别性的 Usenet 帖子将从你的消息中剥离，从上抹除了通往你 IP 地址的数字足迹。\n\n正如我们在过去几年从全球过去的媒体报告中所看到的，你可能有许多正当理由隐藏自己的身份。\n\
+    \n- 也许你为一家计算机制造商或机器人公司工作，你担心上级没有执行安全措施，但担心如果你公开这些信息可能会受到他们的某种报复，例如失去工作。Usenet\
+    \ 是一个寻求建议且无必后担心后果的好地方。相比之下，Facebook 和 Twitter 等地方可能会招致公司高管或 CEO 的报复。\n\n- 你可能想口头抗议盛行的政府政策。在美国、伊朗、中国等国家这样做可能会让你被列入某种“观察”名单，在你还没反应过来之前，你就了与机场和边境检查站“禁飞”名单有关的问题。\n\
+    \n- 也许你想建立一个与你的真实 IP 地址从未有过任何联系的免费邮箱地址。Yahoo Mail、Gmail 和 Hotmail 等服务会反复发送邮件寻找关键词或文件以进行标记。关闭你的邮箱是一回事。将你的\
+    \ IP 地址连同邮件转发给政府机构进行起诉则是另一回事。匿名性防止了这种情况的发生。\n\n# 重发器 (Remailers)\n\n作为一个粗浅的例子，假设你拥有一个活跃在大多数不太良新闻组的报道机构，并且经常使用办公室的邮箱。这时你看到一个需要帮助的强奸受害者。你可能不想向所有人透露你的电子邮件地址。使用重发器将确保你上传到新闻组的任何消息头部中的你的任何身份信息都会被擦除。你的消息将转发给接收者，而没有任何公开披露的风险。\n\
+    \n# 可追踪 vs 不可追踪重发器\n\n**可追踪的：** 有某些类型的重发器保留发送者/假名的活动列表，使得接收者可以通过虚名回复邮件。当重发器收到消息时，它会查询列表并将邮件转发给发送者。因此，这种通信方法具有一定的隐私元素；但正如几年来\
+    \ penet.fi（芬兰）事件证明的那样，这并没有提供匿名性。任何黑客、政府机构、法官或警察都可以访问该列表并发现发送者是谁。在 penet.fi 案件中，科学教（Scientology）对他们发起了版权侵权诉讼，下法院要求他们交出用户的身份。\n\
+    \n**不可追踪的：** 如果不维护用户假名的列表，那么安全性将呈指数级增长……前提是你愿意放弃与对方的通信。不用说，这有一些缺点，并且在某些方面劣于使用\
+    \ Tor 和/或 PGP 进行通信。此外，始终存在黑客攻击的可能性，通过攻击进入服务器，匿名性会受到损害。流量嗅探器以及许多其他工具也可以作为攻击手段，因为它们会比较和对比从服务器发出的流量。此类攻击很难协调，但与\
+    \ Tor 和 Freet 内部的攻击类似，即在网络中控制了足够数量的敌对节点，剥离匿名层的概率就会变得更高。换句话说，如果执法部门（例如）控制了所有的 Tor\
+    \ 中继，他们就控制了 Freet 大多数节点。尽管这些是截然不同的技术，但它们有一个共同目标：隐藏发送者和接收者的真实 IP 地址。\n\nMixmaster\
+    \ 技术通过通过多个服务器发送消息来试图阻止法律管辖机构的追踪，这类似于“不要把鸡蛋放在同一个篮子里”，这种 onion 路由网络的框架。你可以在此处下载\
+    \ Mixmaster：http://sourceforge.net/projects/mixmaster/files\n\n# 在 Usenet 上破坏匿名性的行为\n\
+    \n1.) 泄露真实的电子邮件地址，即使是来自 Yahoo、Hotmail 等“免费”服务，不仅可能，而且*会*让你暴露在垃圾邮件机器人群面前。你会惊讶于有多少人在认为这些免费服务万无一失的情况下使用\
+    \ Usenet。更好的替代方案是使用虚构名称，如果你有网站，你的主机可能提供创建回溯账户的能力。或者，在 https://www.nyms.net 以每年二十美元的价格购买。SharpMail、Mailinator\
+    \ 和 Hushail 也是很好的选择，但如果你既想要匿名又想要隐私，请记住在网络上注册，而不是开放网。还要记住不要使用信用卡或 PayPal，因为这会留下资金轨迹。最好使用比特币或与你无关的汇票。\n\
+    \n2.) 泄露个人信息。这是一个大问题，在各种因政治竞选、隐私甚至 mp3 组引发争议的小组（例如 alt.binaries.sounds.mp3.electronic）中经常看到。政治派别/关系、喜欢的餐厅、酒吧、音乐团体等可能会导致跟踪者建立你的个人档案，并在\
+    \ Facebook、Twitter 或 LinkedIn 上输入你过去六个月提供的所有个人数据。记住，在*任何*新闻组中输入的任何内容将留在那里。将“labor”输入为“colour”或将“color”输入为“colour”，辨别你的来源地并不困难。\n\
+    \n3.) 让消息头部对公众可见。通过使用各种搜索工具，他们可以看到你发布到 Usenet 的每条消息，即使你使用了不同的假名。如果你使用剥离这些信息的服务，这种情况就不会发生。\n\
+    \n4.) 使用信用卡注册 Usenet 或 VPN 服务。意识到当你使用信用卡购买任何诸如 VPN（虚拟专用网络）或 Usenet 账户时，你实际上为你的身份留下了资金轨迹。如果你只是寻求小程度的隐私，例如想要一个\
+    \ Usenet \n\n"
+  merge: 0
+  raw:
+  - '[PAGE 19]
+
+
+    # Chapter 4: Usenet Anonymity
+
+
+    In this chapter, we''ll discuss ways you can add anonymity to your Usenet connection,
+    so that you can participate in discussion groups without fear of persecution.
+    These methods often are most useful in situations where you may lose your Usenet
+    account if you say the wrong things to the wrong people. Usenet companies are
+    being business now, and unlike twelve years ago, will now think nothing of terminating
+    your account of they get enough complaints. Simply being unpopular and taking
+    a stand against the status quo in certain newsgroups can get your Usenet account
+    banned (i.e. alt.privacy). However, with true anonymity, they may ban your account,
+    but rest assured that not only will your words remain forever on Usenet, but you
+    will not be persecuted for speaking out against a tyrannical government, or a
+    company that you work for (which has happened many times by disgruntled employees
+    on Facebook).
+
+
+    It should be stated at the outset that Tor for Usenet binary downloads will actually
+    strain the Tor network, just as it does with torrents. And to boot, whenever you
+    use torrents via Tor, the torrent software actually sends your IP address to the
+    recipient. It does so anonymously, in the same way a post office worker will deliver
+    your mail. Needless to say this defeats the purpose of using torrents. This problem
+    is not with the Tor code, but rather the way that applications like BitLord and
+    BitTorrent are designed. The torrent applications themselves need to be coded
+    to allow anonymity. It is better to use Free with the Frost addon for p2p-like
+    trading you wish to remain anonymous. Tor is much more effective at textual discussions
+    and binary downloaders using your native connection, but the easiest method to
+    do this anonymously is by use of the remailer network. By using such a method,
+    the identifying Usenet posts are stripped away from your messages, essentially
+    erasing the digital trail that leads back to your IP address.
+
+
+    As we have seen from past media reports around the world over the last several
+    years, there could be any number of valid reasons you want to hide your identity.'
+  - '[PAGE 20]
+
+
+    - Maybe you work for a computer manufacturer, or perhaps a robotics company and
+    are concerned about the lack of safety measures being enforced by your superiors,
+    but fear some kind of retaliation by them should you go public, like the loss
+    of your job. Usenet is a great place to ask advice and not worry about the consequences.
+    Places like Facebook and Twitter on the other hand might invite retribution by
+    the executives or CEO of your company.
+
+
+    - It could be that you want to vocally protest the prevailing winds of government.
+    Doing so in countries like the US, Iran, China, and the like could put you on
+    a “watch” list of sorts, and before you know it, you have problems relating to
+    “no fly” lists at airports and border stations.
+
+
+    - Perhaps you want to establish a free email address that has never had any contact
+    whatsoever your real IP address. Services like Yahoo Mail, Gmail, and Hotmail
+    repeatedly send emails looking for keywords or files which to flag. Shutting down
+    your email is one thing. Having your IP address along with the email forwarded
+    to government entities for prosecution is quite another. Anonymity prevents this
+    from happening.
+
+
+    # Remailers
+
+
+    As a crude example, let''s say you own a reporting agency that is active in most
+    of the less-than-savory newsgroups, and you use your email from your office quite
+    regularly. Then you see a rape victim who needs your assistance. You might not
+    want to divulge your email address to everyone. Using a remailer will ensure that
+    any identifying information of you will be erased from the headers of any messages
+    you upload to newsgroups. Your message will be forwarded to the recipient without
+    any risks of public disclosure.
+
+
+    # Traceable vs. Untraceable Remailers
+
+
+    **Traceable:** there are some types of remailers that keep active lists of send/pseudonyms
+    whereby receivers can reply to mail by fictitious names. When the remailer gets
+    a message, it consult a list and forwards mail to the sender. Thus, there is an
+    element of privacy to this method of communication; however as was proved in previous
+    years by the penet.fi (Finland) incident, this does not provide anonymity. Any
+    hacker, government agency, judge, or the'
+  - '[PAGE 21]
+
+
+    like gain access to said list and discover who the sender is. In the case of penet.fi,
+    Scientology launched a lawsuit of copyright infringement against them, in which
+    a lower court demanded they turn over the identity of their users.
+
+
+    **Untraceable:** If no list is maintained the pseudonyms of users, then security
+    is increased exponentially...provided you are willing to give up two communications
+    with your party. Needless to say, this has some drawbacks, and is in some ways
+    inferior to using Tor and/or PGP to communicate. In addition, there is always
+    the possibility of hacker attacks whereby entry is gained upon the server, anonymity
+    is compromised. Traffic-sniffers along with a host of other tools can also be
+    used as a method of attack, as they compare and contrast the traffic emanating
+    from the server. Such attacks are very difficult to coordinate, but are somewhat
+    analogous to attacks within Tor and also Freet, whereby a sufficiently high number
+    of hostile nodes are controlled within the network, probability of stripping away
+    layers of anonymity becomes more likely. In other words, if Law Enforcement for
+    instance, controls all Tor relays, they control of most nodes in Freet. Though
+    they are admittedly vastly different technologies, they share one common goal:
+    hiding the true IP address of senders and recipients.
+
+
+    Mixmaster techniques however attempt to thwart such subversive attempts by sending
+    messages through several servers across the globe, in various countries of legality
+    and law enforcement jurisdictions. It becomes exponentially difficult for hackers
+    and/or government entities to bunny hop from server-to-server across the globe
+    in order to track down where the original sender resided. Thus, it goes well above
+    and beyond the phrase “don’t put all your eggs in one basket” and is more akin
+    to “many eggs, many baskets”. Such is the skeletal framework of the onion-routing
+    network Tor.
+
+
+    You may download Mixmaster at: http://sourceforge.net/projects/mixmaster/files/
+
+
+    # Things That Break Anonymity on Usenet'
+  - '[PAGE 22]
+
+
+    1.) Giving out your real email address, even one from one of the “free” services
+    such as Yahoo, Hotmail and the like, not only can, but *will* open you up to armies
+    of spambots, guaranteed. You would be surprised at how many new to Usenet under
+    the impression that these free email services are somehow foolproof to the legions
+    of bots that trawl Usenet. A better alternative: a fictional name and temporary
+    *Usenet-Only* if you have a website, your host probably offers you the ability
+    to create throwback accounts. Or, go with Anonymous Nyms at https://www.nyms.net
+    for twenty bucks per year. SharpMail, Mailinator and Hushail are also excellent
+    options, however if you want anonymity as well as privacy, remember to sign up
+    on The network, not the open web. Also remember not to use credit cards or paypal,
+    as it leaves a money trail. Better to use Bitcoins or a money order with no link
+    to you.
+
+
+    2.) Dropping Personal Info. This is a big one, and one that is seen quite frequently
+    on various groups where flame wars erupt over issues like political campaigns,
+    privacy and even one mp3 groups (i.e. alt.binaries.sounds.mp3.electronic). Political
+    affiliations/liaisons, favorite restaurants, bars, musical groups and the like
+    can lead to some stalker building a profile on you, hopping on Facebook, Twitter
+    or LinkedIn and keying in all the personal data you have given over the past six
+    months. Remember that whatever is typed in *any* newsgroup will be there for years
+    and years. Type in “labor” as “colour” or “color” as “colour”, and it is not difficult
+    to discern your country of origin.
+
+
+    3.) Leaving messages with your headers clearly visible to the reading public.
+    By using various search tools, they can see every message you posted to Usenet,
+    even if you used different nyms. This of course doesn’t occur if you use a service
+    that strips away this information.
+
+
+    4.) Signing up for a Usenet or VPN service using credit cards Realize that when
+    you use your credit card to purchase anything like a vpn (virtual private network)
+    or Usenet account, you are in fact leaving a money trail to your identity. If
+    you are only after a small measure of privacy, such as wanting a Usenet account
+    that'
+- md: '
+
+    doesn''t monitor/log your downloads, then a vpn is fine. However if it is anonymity
+    you want, you will have to sign up for *both* Usenet as well as the vpn service
+    using anonymous means, either by bitcoins, money order, or a prepaid debit card
+    with no identifying information leading back to you.
+
+
+    ## Truecrypt, Usenet and Passwords
+
+
+    In all of this time of posting rars, pars and messages out in the open newsgroups,
+    it would be a shame not to mention that you can also upload locked containers
+    and encrypted volumes to Usenet as well. The main difference is that you have
+    to have the Truecrypt (free) application installed, and create an encrypted container
+    with messages or data therein before uploading it to a Usenet newsgroup. There
+    are lots of different newsgroups that allow this and many that don''t. However
+    you can use alt.binaries as a means to communicate covertly with another, or share
+    files privately with another person. The encryption is actually fairly straightforward.
+    When you create the Truecrypt container with the data you want to send to someone
+    else, you could run that one file (or files) and upload that. Then the only ones
+    who would be privy to its contents are those with the keyfile, which you could
+    email to them, and/or the password to the container.
+
+
+    The benefit of implementing Tor (for text groups, not binaries), Usenet and Truecrypt
+    simultaneously that you get the best of both worlds. You get the privacy that
+    a vpn will allow, in addition to having the anonymity (different than privacy)
+    of Truecrypt.
+
+
+    Always check the newsgroup’s FAQ first before passwording files as many groups
+    do not allow it. What is the what can happen? Your Usenet provider will be inundated
+    with complaints and they will revoke your posting privileges, which can be quite
+    a cumbersome ordeal regardless whether you have signed up anonymously or not.
+    If in doubt, ask the group, or post the word “passworded” or “pw” in the subject
+    line. Groups like alt.binaries.hdt, which are flooded with passworded blu-ray
+    files, will thank you for it. There is nothing quite infuriating as downloading
+    a 50 gigabyte Blu-Ray disc and finding out that it won''t extract the files because
+    of a password requirement. This is in addition to not having a membership to the
+    forum where such a password was revealed in the first place.
+
+
+    ## Running Usenet from a mounted Truecrypt image
+
+
+    Optionally, you could create an encrypted volume, install your Usenet newsreader
+    into that container, and only run your newsreader upon mounting of said container.
+    Just be aware that some applications like to leave temp files in the system drive
+    (C:), but most should have an option to set such a directory (i.e. set it within
+    the encrypted container itself). You will have to mount it to the same letter
+    directory each time if you don''t want to change it every session, however it
+    makes it very hard to secure communications privately between you and someone
+    else without the entire newsgroup seeing what you are saying or trading. There
+    may be an instance where you spent a lot of money on a rare, vintage recording
+    of an obscure album, and you don''t want anyone else in the mp3 group trying to
+    make off it on eBay. Solution? Use Truecrypt to encrypt the mp3ps. Rar them up
+    with a password and upload to a newsgroup on Usenet.
+
+
+    If you are in a country that makes it difficult to engage in discussion online,
+    such as Iran, China and the like, make sure that you do not leave your encrypted
+    images running with your Usenet newsreader/browser. Doing so leaves all the data
+    open to any kind of government entity that could raid your place of residence.
+    Thus, if you are a regular poster in the group "alt.discussion.tibetan-freedom"
+    it would be wise to not leave your PC running unattended at all, especially with
+    a Truecrypt image mounted and in operation.
+
+
+    ## PGP and Usenet
+
+
+    You can also use PGP to encrypt messages to newsgroup as well. PGP is a free encryption
+    application similar (however more complex) to Truecrypt. You can encrypt messages
+    from one newsgroup to another, to any recipient you like, and they can in turn
+    decrypt your message. It is more efficient to use PGP for the purposes of covert
+    Usenet communication than it is to use Truecrypt, as the applications are meant
+    for different security scenarios. It should be said that the pgp manual is not
+    an easy read. It will take you some measure of effort to get your head around
+    encrypting/decrypting messages from Usenet, as it is not as straightforward and
+    newbie-friendly as say, Truecrypt. It is worth your time in learning however if
+    you want to exchange encrypted messages with other PGP members on Usenet.
+
+
+    - PGP-related newsgroups:
+
+    - alt.security.pgp
+
+    - comp.security.pgp.announce
+
+    - comp.security.pgp.discuss
+
+    - comp.security.pgp.resources
+
+    - comp.security.pgp.tech
+
+
+    ## TECHNICAL SOURCES ON CRYPTOGRAPHY, SECURITY & ENCRYPTION
+
+
+    - WWW.IACR.ORG – INTERNET. ASSOCIATION OF CRYPTOLOGIC RESEARCH – CONTAINS A WEALTH
+    OF DATA ON CRYPTO AS WELL AS MISCELLANEOUS RELATED SECURITY PROGRAMS
+
+
+    - WWW.PGPI.ORG – HOMEPAGE AND RESOURCE FOR PGP AND ITS APPLICATIONS
+
+
+    - WWW.NIST.GOV/AES – AES, OR ADVANCED STANDARD USED BY TRUECRYPT, DRIVECRYPT,
+    PGP
+
+
+    To moderate or not to moderate Usenet
+
+    It would be certainly short-sighted to suggest that Usenet should have total anarchy
+    and no moderation at all. Newsgroups that employ the use of a moderator can have
+    stark advantages over unmoderated groups, so much so that the group attracts far
+    more attention from new users than it would without such moderation. The most
+    glaring problems with a totally unmoderated setting can be seen quite clearly
+    in discussion groups on Freetenet. Individual users can opt to "ignore" all posts
+    from certain users on their own, or create their own Frost discussion group with
+    a private encryption key (that is, unless said key is leaked, in which the spammers
+    engage in a full frontal assault on the group). On Freetenet, spam, personal attacks,
+    racism and hatred, however the responsibility is placed upon the individual to
+    self-censor/delete posts within the group. On Usenet, even moderators have been
+    unsuccessful at completely eradicating spam and personal flame wars between members.
+
+
+    That is not to suggest that a moderator is the equivalent of a Big Brother-like
+    censor, however it makes discussion in the newsgroup more honest and less prone
+    to those who derail threads into off-topic discussions. An inherent downside of
+    being a regular on a heavily moderated Usenet newsgroup becomes difficult to maintain.
+    After years and years of engaging in civil discourse in various groups, a user
+    might find it a bit of a challenge to participate in a group that offers a more
+    relaxed discussion topic structure. In one of the mp3 newsgroups (electronic),
+    untold of flame wars have erupted over the years concerning new users (as well
+    as old) who would post collections of ambient/new-age artists. Now, there are
+    other mp3 groups better suited for collections by, for instance, Michael Stearns.
+    Few electronic music fans found him suited for the electronic mp3 news, however
+    every now and then a new Usenet user would show up and mistakenly post to the
+    group his latest offering. He be summarily crucified with curses, flames and threats
+    to inform his Usenet provider that he was spamming the group. This type of intolerable
+    attitude does more harm than good. There was also many uploads of artist Steve
+    Roach, whose music transcends several different genres: new-age, ambient, trance
+    and electronic, yet the uploader of said music was similarly cursed and vehemently
+    badgered by long-term users.
+
+
+    ## Chapter 5: Which VPN companies respect anonymity?
+
+
+    If you are a bit squamish about accessing Usenet via your local ISP, you can always
+    add an extra layer of privacy by subscribing to a vpn (virtual private network)
+    service close to you. There are a plethora of good vpn providers that route your
+    internet connection and provide ssl (secure socket layer) encryption that your
+    ip cannot see what you do online. Most all of them use similar technology to achieve
+    this, and have comparable speeds. A vpn service is much, much faster than using
+    an onion-routing network like Tor, but not all of them will tolerate p2p usage.
+    However, they will *tolerate* a Usenet account.
+
+
+    Unlike Tor, the vpn provider, which usually charges somewhere in the range of
+    ten dollars per month for unlimited service (over and above what you pay your
+    Usenet provider), will be able to see everything that you do through their connection,
+    unless you route that connection through the Tor network. They are more tolerable
+    than Usenet than Pe2P systems, as is less likely to incur a swarm of copyright
+    lawyers sending them angry cease-and-desist letters. Bottom line: some vpns will
+    log your IP, and some won''t. If they know your real name and address, you can
+    be sure that law enforcement will (and any other type of law agency) with a subpoena.
+    its a hit and miss game, and one which seems entirely dependent on whether the
+    provider keeps online logs of the traffic that goes through their portal. One
+    popular vpn provider, BlackVPN, said this in their FAQ:
+
+
+    Although we do not monitor the traffic, incoming or outgoing connections of our
+    users we may assign users to a unique IP address and log which user was assigned
+    which IP address at a given time. If we receive a copyright violation notice from
+    the appropriate copyright holder then we will forward the violation to the offending
+    user and may terminate their account. We therefore
+
+    '
+  mdcn: '
+
+
+    它不监控/记录你的下载内容，那么使用 VPN 就可以了。然而，如果你追求的是匿名性，那么你必须通过匿名手段（如比特币、汇票或无法追溯到你个人身份的预付借记卡）同时为*双方*
+    Usenet 服务和 VPN 服务注册账号。
+
+
+    ## Truecrypt、Usenet 与密码
+
+
+    在这些在公共新闻组中发布 rar、pars 和消息的这段时间内，如果不提到你也可以向 Usenet 上传加密容器和加密卷，那将是一个巨大的遗憾。主要的区别在于，你必须安装了
+    Truecrypt（免费）应用程序，并在将其上传到 Usenet 新闻组之前，创建一个包含消息或数据的加密容器。有许多不同的新闻组允许这样做，但许多并不允许。然而，你可以使用
+    alt.binaries 作为与他人进行隐蔽通信的手段，或与他人私下共享文件。加密过程实际上其实非常简单。当你创建一个包含要发送给别人的数据的 Truecrypt
+    容器时，你可以运行该文件（或多个文件）并将其上传。这样，只有拥有密钥文件的人才能知道其内容，你可以将密钥通过电子邮件发送给他们，以及/或容器的密码。
+
+
+    同时实施 Tor（针对文本组，而非二进制文件）、Usenet 和 Truecrypt 的益处在于你可以兼得两者之。你获得了 VPN 提供的隐私性，此外拥有
+    Truecrypt 的匿名性（匿名不同于隐私）。
+
+
+    在为文件设置密码之前，务必先检查新闻组的 FAQ，因为许多小组并不允许这样做。这样做会发生什么？你的 Usenet 服务商将收到大量的投诉，他们会撤销你的发布权限，无论你是否是匿名注册的，这可能是一次非常痛苦的折磨。如果有疑问，请询问该组，或在主题行中发布“passworded”或“pw”。像
+    alt.binaries.hdt 这样充斥着加密蓝光光盘文件的组会感谢你的。没有什么能比下载了一张 50 GB 的蓝光光盘，却发现因为密码要求而无法解压文件更让人发火的了。不仅如此，你可能还没有那个最初泄露此类密码的论坛的会员权限。
+
+
+    ## 从挂载的 Truecrypt 镜像运行 Usenet
+
+
+    可选，你可以创建一个加密卷，将你的 Usenet 新闻阅读器安装到该容器中，并仅在挂载该容器时运行你的新闻阅读器。只需注意，某些应用程序喜欢在系统驱动器（C:）中留下临时文件，但大多数程序应该有一个设置此类目录的选项（即在加密容器内部设置）。如果你不想每次会话都更改它，你每次必须将其挂载到相同的字母目录；然而，这使得你与他人之间的私密通信变得非常困难，而不至于让整个新闻组看到你在说什么或交易什么。可能会出现这样一种情况：你花了钱买了一张稀有的、老旧的录音，而你不希望
+    mp3 组的其他人尝试在 eBay 上抢卖。解决方案是？使用 Truecrypt 加密 mp3ps。用密码将其 rar 包并上传到 Usenet 上的某个新闻组。
+
+
+    如果你在一个难以进行在线讨论的国家（例如伊朗、中国等），请确保你不要在运行 Usenet 新闻阅读器/浏览器时运行你的加密镜像。这样做会使所有数据暴露给任何可能搜查你住所的政府机构。因此，如果你是“alt.discussion.tibetan-freedom”组的经常发布者，明智的做法是完全不要让电脑处于无人状态运行，特别是在
+    Truecrypt 镜像已挂载并运行的情况下。
+
+
+    ## PGP 与 Usenet
+
+
+    你也可以使用 PGP 加密到新闻组的消息。PGP 是一种与 Truecrypt 类似（但更复杂）的免费加密应用程序。你可以加密从一个新闻组到另一个任何喜欢的接收者的消息，他们反也可以解密你的消息。对于隐蔽的
+    Usenet 通而言，使用 PGP 比使用 Truecrypt 更高效，因为这些应用程序是为不同的安全场景设计的。应该说，pgp 手册并不易读。你将花费一些精力来理解加密/解密
+    Usenet 消息，因为它不像 Truecrypt 那样直观和对新手友好。然而，如果你想在 Usenet 上与其他 PGP 成员交换加密消息，那么学习它是值得花时间的。
+
+
+    - 与 PGP 相关的新闻组：
+
+    - alt.security.pgp
+
+    - comp.security.pgp.announce
+
+    - comp.security.pgp.discuss
+
+    - comp.security.pgp.resources
+
+    - comp.security.pgp.tech
+
+
+    ## 密码学、安全与加密的技术来源
+
+
+    - WWW.IACR.ORG – 互联网密码学研究协会 – 包含大量关于密码学的数据以及各种相关的安全程序
+
+
+    - WWW.PGPI.ORG – PGP 及其应用的主页和资源
+
+
+    - WWW.NIST.GOV/AES – AES，即 Truecrypt、DriveCrypt、PGP 使用的高级标准
+
+
+    是否对 Usenet 进行管理
+
+    如果建议 Usenet 应该完全无政府状态且没有任何管理，那无疑是短视的。使用管理员的新闻组比未管理的小组具有显著的优势，以至于该组吸引的新用户关注程度远比没有此类管理时要得多。完全无管理设置下最明显的问题在
+    Freetenet 的讨论组中可以很清楚地看到。个人用户可以自行“忽略”来自某些用户的所有帖子，或者创建创建一个带有私有加密密钥的自己的 Frost 讨论组（除非该密钥泄露，在这种情况下，垃圾邮件发送者会对该组发动全面攻势）。在
+    Freetenet 上，尽管存在垃圾邮件、人身攻击、种族主义和仇恨，但责任被置于个人身上，让他们自发审查/删除组内的帖子。在 Usenet 上，即使是管理员也没有成功完全根除垃圾邮件和成员之间的个人对喷（flame
+    wars）。
+
+
+    并不是说管理员等同于类似于“老大哥”的审查员，但它使新闻组中的讨论更加诚实，并且不容易被那些将主题引偏到无关讨论的人所破坏。成为受高度管理的 Usenet
+    新闻组的常客，一个固有的缺点是变得难以维持。在各种小组参与多年文明交流后，用户可能会发现参与一个提供更松散讨论主题结构的小组是一项挑战。在其中一个 mp3
+    新闻组（电子类）中，多年来就新用户（以及老用户）发布环境/新世纪艺术人的合集爆发了无数的对喷。现在，有其他的 mp3 组更适合例如 Michael Stearns
+    等人的合集。很少电子音乐粉丝认为他适合电子 mp3 新闻，然而，每隔一段时间，就会有一个新的 Usenet 用户出现，并错误地向该组发布他的最新作品。他会在咒骂、谩骂和威胁中被简单粗暴地“处死”，以告知他的
+    Usenet 服务商他正在群群发垃圾邮件。这种不可理喻的态度弊大于利。还有许多关于艺术家 Steve Roach 的上传内容，他的音乐跨越了几个不同的流：新世纪、环境音乐、迷幻和电子音乐，但该音乐的上传者同样被长期用户诅咒和激进骚扰。
+
+
+    ## 第 5 章：哪些 VPN 公司尊重匿名性？
+
+
+    如果你通过本地 ISP 访问 Usenet 感到有些不安，你始终可以通过订阅你附近的 VPN（虚拟专用网络）服务来增加额外的隐私层。有很多优秀的 VPN 供应商可以路由你的互联网连接并提供
+    SSL（安全套接层）加密，使得你的 IP 无法看到你在网络上的行为。它们大多数都使用类似的技术来实现这一点，并且速度相当。VPN 服务比使用 Tor 这种洋葱路由网络快得多，但并非所有的都容忍
+    P2P 使用。然而，它们会*容忍* Usenet 账户。
+
+
+    与 Tor 不同，VPN 供应商（通常每月收取十美元左右的无限服务，除了你给 Usenet 服务商的费用外）能够看到通过其连接进行的一切，除非你将该连接通过
+    Tor 网络路由。它们对 Usenet 比 P2P 系统更容易容忍，因为不太引起版权律师群群向他们发送愤怒的停止函。底线是：有些 VPN 会记录你的 IP，有些不会。如果他们知道你的真实姓名和地址，你可以确定执法部门（以及任何其他法律机构）会通过传票来获取。这是一场运气游戏，而且完全取决于供应商是否保留通过其门户的流量的在线日志。一个流行的
+    VPN 供应商 BlackVPN 在其 FAQ 中这样说：
+
+
+    尽管我们不监控用户的流量、入或出站连接，但可能会为用户分配唯一的 IP 地址，并记录何时给哪个用户分配了哪个 IP 地址。如果我们收到来自相应版权者的版权违规通知，我们将违规行为转发给违规用户并可能终止其账户。我们因此'
+  merge: 1
+  raw:
+  - '[PAGE 23]
+
+
+    doesn''t monitor/log your downloads, then a vpn is fine. However if it is anonymity
+    you want, you will have to sign up for *both* Usenet as well as the vpn service
+    using anonymous means, either by bitcoins, money order, or a prepaid debit card
+    with no identifying information leading back to you.
+
+
+    # Truecrypt, Usenet and Passwords
+
+
+    In all of this time of posting rars, pars and messages out in the open newssgroups,
+    it would be a shame not to mention that you can also upload locked containers
+    and encrypted volumes to Usenet as well. The main difference is that you have
+    to have the Truecrypt (free) application installed, and create an encrypted container
+    with messages or data therein before uploading it to a Usenet newsgroup. There
+    are lots of different newsgroups that allow this and many that don''t. However
+    you can use alt.binariestest as a means to communicate covertly with another,
+    or share files privately with another person. The encryption is actually fairly
+    straightforward. When you create the Truecrypt container with the data you want
+    to send to someone else, you could ran that one file (or files) and upload that.
+    Then the only ones who would be privy to its contents are those with the keyfile,
+    which you could email to them, and/or the password to the container.
+
+
+    The benefit of implementing Tor (for text groups, not binaries), Usenet and Truecrypt
+    simultaneously that you get the best of both worlds. You get the privacy that
+    a vpn will allow, in addition to having the anonymity (different than privacy)
+    of Truecrypt.
+
+
+    Always check the newsgroup’s FAQ first before passwording files as many groups
+    do not allow it. What is the what can happen? Your Usenet provider will be inundated
+    with complaints and they will revoke your posting privileges, which can be quite
+    a cumbersome ordeal regardless whether you have signed up anonymously or not.
+    If in doubt, ask the group, or post the word “passworded” or “pw” in the subject
+    line. Groups like alt.binaries.hdtvy, which are flooded with passworded blu-ray
+    files, will thank you for it. There is nothing quite infuriating as downloading
+    a 50 gigabyte Blu-Ray disc and finding out that it won''t extract the files because
+    of a password'
+  - '[PAGE 24]
+
+
+    requirement. This is in addition to not having a membership to the forum where
+    such a password was revealed in the first place.
+
+
+    # Running Usenet from a mounted Truecrypt image
+
+
+    Optionally, you could create an encrypted volume, install your Usenet newsreader
+    into that container, and only run your newsreader upon mounting of said container.
+    Just be aware that some applications like to leave temp files in the system drive
+    (C:), but most should have an option to set such a directory (i.e. set it within
+    the encrypted container itself). You will have to mount it to the same letter
+    directory each time if you don''t want to change it every session, however it
+    makes it very hard to secure communications privately between you and someone
+    else without the entire newsgroup seeing what you are saying or trading. There
+    may be an instance where you spent a lot of money on a rare, vintage recording
+    of an obscure album, and you don''t want anyone else in the mp3 group trying to
+    make off it on eBay. Solution? Use Truecrypt to encrypt the mp3ps. Rar them up
+    with a password and upload to a newsgroup on Usenet.
+
+
+    If you are in a country that makes it difficult to engage in discussion online,
+    such as Iran, China and the like, make sure that you do not leave your encrypted
+    images running with your Usenet newsreader/browser. Doing so leaves all the data
+    open to any kind of government entity that could raid your place of residence.
+    Thus, if you are a regular poster in the group "alt.discussion.tibetan-freedom"
+    it would be wise to not leave your PC running unattended at all, especially with
+    a Truecrypt image mounted and in operation.
+
+
+    # PGP and Usenet
+
+
+    You can also use PGP to encrypt messages to newsgroup as well. PGP is a free encryption
+    application similar (however more complex) to True. You can encrypt messages from
+    one newsgroup to another, to any recipient you like, and they can in turn decrypt
+    your message. It is more efficient to use PGP for the purposes of covert Usenet
+    communication than it is to use Truecrypt, as the'
+  - '[PAGE 25]
+
+
+    applications are meant for different security scenarios. It should be said that
+    the pgp manual is not an easy read. It will take you some measure of effort to
+    get your head around encrypting/decrypting messages from Usenet, as it is not
+    as straightforward and newbie-friendly as say, Truecrypt. It is worth your time
+    in learning however if you want to exchange encrypted messages with other PGP
+    members on Usenet.
+
+
+    +   - PGP-related newsgroups:
+
+    - alt.security.pgp
+
+    - comp.security.pgp.announce
+
+    - comp.security.pgp.discuss
+
+    - comp.security.pgp.resources
+
+    - comp.security.pgp.tech
+
+
+    # TECHNICAL SOURCES ON CRYPTOGRAPHY, SECURITY & ENCRYPTION
+
+
+    # WWW.IACR.ORG – INTERN. ASSOCIATION OF CRYPTOLOGIC RESEARCH – CONTAINS A WEALTH
+    OF DATA ON CRYPTO AS WELL AS MISCELLANEOUS RELATED SECURITY PROGRAMS
+
+
+    # WWW.PGPI.ORG – HOMEPAGE AND RESOURCE FOR PGP AND ITS APPLICATIONS
+
+
+    # WWW.NIST.GOV/AES – AES, OR ADVANCED STANDARD USED BY TRUECRYPT, DRIVECRYPT,
+    PGP
+
+
+    To moderate or not to moderate Usenet
+
+    It would be certainly short-sighted to suggest that Usenet should have total anarchy
+    and no moderation at all. Newsgroups that'
+  - '[PAGE 26]
+
+
+    employ the use of a moderator can have stark advantages over unmoderated groups,
+    so much so that the group attracts far more attention from new users than it would
+    without such moderation. The most glaring problems with a totally unmoderated
+    setting can be seen quite clearly in discussion groups on Freetene. Individual
+    users can opt to "ignore" all posts from certain users on their own, or create
+    their own Frost discussion group with a private encryption key (that is, unless
+    said key is leaked, in which the spammers engage in a full frontal assault on
+    the group). On Freetenet, spam, personal attacks, racism and hatred, however the
+    responsibility is placed upon the individual to self-censor/delete posts within
+    the group. On Usenet, even moderators have been unsuccessful at completely eradicating
+    spam and personal flame wars between members.
+
+
+    That is not to suggest that a moderator is the equivalent of a Big Brother-like
+    censor, however it makes discussion in the newsgroup more honest and less prone
+    to those who derail threads into off-topic discussions. An inherent downside of
+    being a regular on a heavily moderated Usenet newsgroup becomes difficult to maintain.
+    After years and years of engaging in civil discourse in various groups, a user
+    might find it a bit of a challenge to participate in a group that offers a more
+    relaxed discussion topic structure. In one of the mp3 newsgroups (electronic),
+    untold of flame wars have erupted over the years concerning new users (as well
+    as old) who would post collections of ambient/new-age artists. Now, there are
+    other mp3 groups better suited for collections by, for instance, Michael Stearns.
+    Few electronic music fans found him suited for the electronic mp3 news, however
+    every now and then a new Usenet user would show up and mistakenly post to the
+    group his latest offering. He be summarily crucified with curses, flames and threats
+    to inform his Usenet provider that he was spamming the group. This type of intolerable
+    attitude does more harm than good. There was also many uploads of artist Steve
+    Roach, whose music transcends several different genres: new-age, ambient, trance
+    and electronic, yet the uploader of said music was similarly cursed and vehemently
+    badgered by long-term users.'
+  - '[PAGE 27]
+
+
+    # Chapter 5: Which VPN companies respect anonymity?
+
+
+    If you are a bit squamish about accessing Usenet via your local ISP, you can always
+    add an extra layer of privacy by subscribing to a vpn (virtual private network)
+    service close to you. There are a plethora of good vpn providers that route your
+    internet connection and provide ssl (secure socket layer) encryption that your
+    ip cannot see what you do online. Most all of them use similar technology to achieve
+    this, and have comparable speeds. A vpn service is much, much faster than using
+    an onion-routing network like Tor, but not all of them will tolerate p2p usage.
+    However, they will *tolerate* a Usenet account.
+
+
+    Unlike Tor, the vpn provider, which usually charges somewhere in the range of
+    ten dollars per month for unlimited service (over and above what you pay your
+    Usenet provider), will be able to see everything that you do through their connection,
+    unless you route that connection through the Tor network. They are more tolerable
+    than Usenet than Pe2P systems, as is less likely to incur a swarm of copyright
+    lawyers sending them angry cease-and-desist letters. Bottom line: some vpns will
+    log your IP, and some won''t. If they know your real name and address, you can
+    be sure that law enforcement will (and any other type of law agency) with a subpoena.**
+    It''s a hit and miss game, and one which seems entirely dependent on whether the
+    provider keeps online logs of the traffic that goes through their portal. One
+    popular vpn provider, BlackVPN, said this in their FAQ:
+
+
+    > Although we do not monitor the traffic, incoming or outgoing connections of
+    our users we may assign users to a unique IP address and log which user was assigned
+    which IP address at a given time. If we receive a copyright violation notice from
+    the appropriate copyright holder then we will forward the violation to the offending
+    user and may terminate their account. We therefore'
+- md: '
+
+    ask our users not to distribute or transmit material which violates the copyright
+    laws in either your country or the country in which our Service is hosted.
+
+
+    The above defeats the entire purpose of anonymity on the internet. A novice who
+    didn''t know the difference between privacy and anonymity might conclude from
+    their website that they offered complete anonymity similar to Tor offers, but
+    that is clearly not the case at all. One has to be attentive to the fine details
+    of the advertising on sites as to see if any logs are kept, and in many cases
+    they will not reveal such unless you explicitly email them and ask. Interestingly,
+    in 2011 the website TorrentFreak initiated a closer examination of all of the
+    vpn provider''s response to the question “Under what jurisdictions does your company
+    operate and under what exact circumstances will you share the information you
+    hold with a 3rd party?”
+
+
+    Some of the answers were expectantly evasive, and others were quite illuminating.
+    One provider, CryptCloud, said
+
+
+    “We don''t log anything on the customer usage so there are no dots to connect
+    period, we completely separate the payment information. Realistically, unless
+    you operate out of one of the ‘Axis of Evil Countries’ Law Enforcement will find
+    a way to put the screws to you. I have read the nonsense that being in Europe
+    will protect you from US Law Enforcement, worked well for HMA didn’t it? Furthermore
+    I am pretty sure the Swiss Banking veil was penetrated and historically that is
+    more defend-able than individual privacy. The way to solve this is just not to
+    log, period.”
+
+
+    Two points to make.
+
+    One, the HMA (Hide My Ass vpn) incident he refers to involved a member of the
+    hacker group Lulzsec, in which one of their core members was arrested.
+
+
+    Two, he cites the “Axis of Evil”, but clearly they are not in one of those countries.
+
+
+    The above is not to suggest that their actual service is less than that they advertise,
+    but the distinction between privacy and anonymity often falls victim to the gnomes
+    who work in the marketing department of said companies. CryptoCloud is located
+    in...San Antonio, Texas, which has one of the most brutally unmerciful judiciary
+    systems in the United States. If a federal judge (or Congress) demanded the identity
+    of one of their customers, you can be sure that such information would be handed
+    over in a heartbeat in order to avoid heavy day-to-day fines. If they are based
+    in the US, they would *have* to have your personal information available in order
+    to avoid bankruptcy by the federal government. To wit, this doesn''t necessarily
+    have to have anything to do with terrorism, cp, spam or counterfeiting. The case
+    involving Megaupload proves that true anonymity, deonymity, at least that which
+    is beyond the long arm of the law, is difficult to obtain, even if you reside
+    in another country. Still, it is worth having a vpn account simply because it
+    adds an extra layer of privacy to your sessions. If you are a habitual uploader,
+    you could do a lot worse than to pay ten dollars a month for an extra peace of
+    mind.
+
+
+    The solution? Sign up to a vpn provider anonymously. There are several providers
+    who accept Bitcoins as payment.
+
+
+    http://www.thebitcoinlist.com/dp_internet/vps-vpn/
+
+
+    # Chapter 6: The Cloud is the Enemy of Usenet and Anonymity
+
+
+    It goes without saying that men are voracious collectors of many things obtained
+    online: mp3 collections, digital wallpaper, pdf files and the like. The term “cloud”
+    has been given flighty and unwieldy definitions from one blogger to the next,
+    as if the “cloud” is actually some impenetrable fortress in the digital sky where
+    no mouth or thief can break in and corrupt steal. However secure you feel that
+    your files are “in the cloud”, it is perhaps worth remembering that whoever the
+    “cloud”, owns your stuff. Thus, the cloud is nothing more than a server farm with
+    hundreds of other people’s hard drives & servers, all digitally categorizing...
+    your stuff. No longer are your things flying under the banner of privacy in your
+    own, but rather you are subject to whatever litigious lawyer’s terms and conditions
+    contract he has drummed up for the cloud provider. Be wary of a future promised
+    where your data is at the whims of some away server operator who gets to dictate
+    which of your purchased music, movies and games gets “streamed” to your pc.
+
+
+    The Windows 8 operating system has a feature called “SmartScreen” that is used
+    for checking the validity and safety of files before they are executed. This type
+    of feature was first implemented in Internet Explorer and Windows Live Messenger
+    to thwart malicious sites from being able to exploit people’s browsers. Thus,
+    verification and authentication were at the forefront of the feature, as it sought
+    to prevent spam, malware and adware from infecting people’s computers. A good
+    thing? Not for the majority of users, who found it rather annoying. It was a one-step-forward,
+    two-steps-backward approach that actually hindered the internet experience for
+    millions of users of Internet Explorer as they attempted to go to links that were
+    not dangerous in the least. Enter Windows 8, in which the SmartScreen feature
+    tries to verify whether applications are “safe” to download or run on the operating
+    system. It checks a dynamic, ever-changing laundry list of exploitable URLs that
+    Microsoft has identified harmful for end-users on pc systems. An additional problem
+    with this is that it is cumbersome to turn off, and once done, results in consistent
+    nagging from the operating system to re-enable it. Where it will be three to five
+    years down the road? Will you have to have every app or file on your pc “authorized”
+    by Microsoft’s servers before you can execute them? What about cloud content and
+    streaming legally purchased items to your own pc?
+
+
+    For the uninitiated, Microsoft likes to assign “download reputation” points to
+    digitally signed websites as well as programs. The problem with this is the same
+    problem that manifests itself in anti-virus programs, namely that a lot of false-positives
+    get thrown in the user’s face, leading to frustration and annoyance. At times,
+    downloads will get frozen in Internet Explorer 9 as the downloaded files get scanned.
+    There is no option in Internet Explorer 9 to switch off and let users decide which
+    security setting to implement. Rare files constantly get flagged as being somehow
+    malicious for the pc. There is a further element of privacy for the SmartScreen
+    feature. It collects data on every program you install on your operating system,
+    and checks to see if a valid certificate exists on Microsoft’s “cloud” (i.e. their
+    server) that verifies its “safety” for your operating system. It checks the hash
+    of the program installer itself, and compares it to a list at Microsoft. Think
+    about how many programs you have installed on your pc that are related to privacy:
+    PGP, Truecrypt, BitLocker, the installer your vpn provider emailed or perhaps
+    encrypted keyfiles to your hard drive. It would be a gold mine of epic proportions
+    for any hacker to get at such
+
+
+    Enter Usenet. As of 2012, it is relatively easy to hop on Usenet without having
+    through hoops to do so. When you download data from Usenet, it is typically decoded
+    by your newsreader or NZB application and then saved to your hard drive. If you
+    have an antivirus installed, it will most likely have some element of checking
+    each executable or installer that is downloaded to your pc, either by Usenet or
+    some other variant of internet app. With the rush to maximize the use of cloud
+    computing, however, the responsibility of initializing these types of security
+    settings is slowly being taken away from the end-user. What does this mean for
+    Usenet? One of two things could happen.
+
+
+    - 1.) Eventually, users stream data off of usenet, which is then checked and “verified”
+    through an intermediary cloud server, before being delivered to your hard drive
+    (assuming you have one).
+
+    - 2.) Usenet SSL will be prohibitively expensive and/or reserved only for certain
+    groups in society (think Government, Intelligence, etc.). Secure, anonymous programs
+    like PGP, Freeten, Truecrypt and the like will be stigmatized and shunned by cloud
+    servers for their inability to unmask and decrypt their true contents.
+
+
+    In 2010, an article titled “The Death of the Hard Drive” explored Google’s persistent
+    momentum towards a hard-driveless selection of flagship products, all citing the
+    benefits of “cloud storage”. In 2012, Microsoft is gearing Windows 8 towards a
+    platter-less scenario.
+
+
+    “Stop worrying about the hard drive in your computer will die. Google wants to
+    kill it permanently.
+
+
+    The new Google Chrome operating system, which was unveiled Tuesday, as well as
+    hints and suggestions from Apple and Microsoft, offers us a preview of the future.
+    And it will come without that familiar whirring disk that has been the data heart
+    of the PC for the last 25 years. The Chrome OS will be first available on all-black
+    laptops from Samsung and Acer. And because the new platforms store everything
+    — files, applications, data bits and bytes, literally everything — online servers
+    rather than on your home or office PC, those new PCs running won’t require gobs
+    of storage. In fact, they won’t require any storage at all.”
+
+
+    Further reasons why you should never rely on the Cloud for your personal data
+    backups.
+
+
+    - 1.) You are completely at the mercy of your ISP’s bandwidth cap. They stand
+    to make a fortune as you stream your own personal mp3s, games, video (which competes
+    with their own
+
+    '
+  mdcn: '
+
+
+    要求我们的用户不要传播或传输违反你所在国家或我们服务所在地版权法律的材料。
+
+
+    上述做法完全违背了互联网匿名性的初衷。一个不懂隐私和匿名性区别的新手可能会从他们的网站中得出结论，认为他们提供了类似于 Tor 那样的完全匿名性，但事实显然并非如此。人们必须关注网站上广告的细节，以查看是否保留了日志；在很多情况下，除非你明确向他们发送邮件询问，否则他们不会透露此类信息。有趣的是，2011
+    年 TorrentFreak 网站对所有 VPN 供应商对以下问题的回答进行了更仔细的审查：“贵公司在哪些司法管辖区运营？在什么具体情况下会与第三方共享您持有的信息？”
+
+
+    其中一些回答是意料之外的闪烁其辞，另一些则非常有启发性。其中一家供应商 CryptCloud 表示：
+
+
+    “我们不记录任何关于用户使用的情况，因此完全没有可以关联的证据，我们完全分离了支付信息。现实情况下，除非你在‘邪恶之轴’国家之一运营，否则执法部门会找到方法让你施压。我读过那些认为在欧洲就能让你免受美国执法部门侵害的废话，这对
+    HMA 效果很灵，不是吗？此外，我很确定瑞士银行的信誉面已被攻破，从历史角度看，这比个人隐私更难防御。解决办法就是：不记录，仅此而已。”
+
+
+    有两点需要说明：
+
+    第一，他提到的 HMA (Hide My Ass vpn) 事件涉及黑客组织 Lulzsec 的成员，其中一个核心成员被捕了。
+
+
+    第二，他提到了“邪恶之轴”，但显然他们并不在那些国家之一。
+
+
+    上述内容并不是意味着他们的实际服务不如他们所宣传的，而是隐私与匿名性之间的区别往往是这些公司营销部门小人们的受害者。CryptoCloud 位于……德克萨斯州圣安东尼奥，那里拥有美国最冷酷无情的司法系统之一。如果联邦法官（或国会）要求某位客户的身份，你可以确定，此类信息会毫不交出，以避免巨额的每日罚款。如果他们的总部设在美国，他们*必须*保留你的个人信息，以避免被联邦政府导致破产。也就是说，这并不一定与恐怖主义、儿童色、垃圾邮件或伪造有关。涉及
+    Megaupload 的案例证明，真正的匿名性、去匿名化，至少是那种法律触及之外的匿名性是难以获得的，即使你住在另一个国家。尽管如此，拥有一个 VPN 账户仍然是值的，因为它为你的会话增加了额外的隐私保护。如果你是一个习惯性上传者，每月花十美元买个额外的安心，比其他糟糕的情况好得多。
+
+
+    解决方案是什么？匿名注册 VPN 供应商。有几家供应商接受比特币作为支付。
+
+
+    http://www.thebitcoinlist.com/dp_internet/vps-vpn/
+
+
+    # 第 6 章：云端是 Usenet 和匿名性的敌人
+
+
+    不言而喻，人类是网上获取的许多东西的贪婪收集者：mp3 收藏、数字壁纸、pdf 文件等。“云”这个词从一个博客作者到另一个作者被赋予了轻浮且难以捉的定义，仿佛“云”实际上是数字天空中某个不可逾越的堡垒，没有任何大盗或小偷能闯入并破坏窃取。无论你觉得你的文件存储在“云端”有多安全，或许值得记住，谁拥有了“云”，谁就拥有你的东西。因此，云无非一个拥有成百上千其他人的硬盘和服务器的服务器农场，所有这些都在以数字方式分类……你的东西。你的东西不再在你自己的隐私旗帜下飞翔，而是受制于该云提供商鼓捣出的任何诉讼性律师的条款和条件。警惕这样一个未来：你的数据取决于某些遥远服务器运营商的意愿，由他们来决定你购买的哪些音乐、电影和游戏被“流传输”到你的电脑上。
+
+
+    Windows 8 操作系统有一个名为“SmartScreen”的功能，用于在执行文件之前检查其有效性和安全性。这种功能首次实现在 Internet Explorer
+    和 Windows Live Messenger 中，以防止恶意网站利用用户的浏览器。因此，验证和身份认证是该功能的重点，因为它试图防止垃圾邮件、恶意软件和广告软件感染用户的计算机。这是一件好事吗？对于大多数用户来说并不是，他们觉得这相当烦人。这是一种进一步、退两步的方法，实际上阻碍了数百万
+    Internet Explorer 用户的互联网体验，因为他们尝试访问那些毫无危险的链接。进入 Windows 8 后，SmartScreen 功能尝试验证应用程序在操作系统上下载或运行是否“安全”。它检查一份动态的、不断变化的待利用
+    URL 列表，微软已确认这些 URL 对 PC 系统上的终端用户有害。这的额外问题是关闭它很麻烦，一旦关闭，操作系统就会不断催促你重新启用。三到五年后它会变成什么？你是否必须让电脑上的每个应用程序或文件都经过微软服务器的“授权”才能执行它们？云内容以及合法购买并传输到你电脑上的项目又如何呢？
+
+
+    对于新手来说，微软喜欢给经过数字签名的网站以及程序分配“下载声誉”分。这个问题与反病毒软件中表现出来的问题相同，即向用户抛出大量的误报，导致挫败和烦恼。有时，在
+    Internet Explorer 9 中，下载文件被扫描时，下载会冻结。Internet Explorer 9 中没有关闭并让用户决定实施何种安全设置的选项。稀有文件不断被标记为对
+    PC 有某种恶意。SmartScreen 功能还有一个进一步的隐私因素。它收集你在操作系统上安装的每个程序的数据，并检查微软的“云端”（即他们的服务器）上是否存在有效的证书，以验证其对你操作系统的“安全性”。它检查程序安装程序本身的哈希值，并将其与微软的列表进行比较。想想看你电脑上安装了多少与隐私相关的程序：PGP、Truecrypt、BitLocker、你的
+    VPN 供应商通过邮件发送的安装程序或可能是加密到硬盘的密钥文件。对于任何黑客来说，获取此类内容将是史诗级的金矿。
+
+
+    进入 Usenet。截至 2012 年，无需经过重重障碍加入 Usenet 是相对容易的。当你从 Usenet 下载数据时，数据通常由你的新闻阅读器或 NZB
+    解码，然后保存到硬盘中。如果你安装了杀病毒软件，它很可能有某种元素检查通过 Usenet 或其他互联网变体下载到你电脑的每个可执行文件或安装程序。然而，随着最大限度提高云计算利用率的热潮，初始化此类安全设置的责任正逐渐从终端手中夺走。这对
+    Usenet 意味着什么？可能会发生两种情况之一：
+
+
+    - 1.) 最终，用户从 Usenet 流传输数据，这些数据将通过中间云服务器进行检查和“验证”，然后传递到你的硬盘（假设你有一个硬盘）。
+
+    - 2.) Usenet SSL 将变得极其昂贵和/或仅保留给社会上的某些群体（如政府、情报部门等）。像 PGP、Freeten、Truecrypt 这一类的安全匿名程序将因为无法揭露和解密其真实内容而被云服务器污名化并回避。
+
+
+    2010 年，一篇名为《硬盘的死亡》的文章探讨了 Google 在无硬盘旗舰产品选择方面持续的势头，所有这些都提到了“云存储”的益处。2012 年，微软正将
+    Windows 8 推向无盘器场景。
+
+
+    “别担心你电脑里的硬盘会死掉。Google 想要永久杀死它。
+
+
+    周二发布的全新 Google Chrome 操作系统，以及苹果和微软的暗示和建议，为我们提供了未来的预览。而且它将没有过去 25 年来作为 PC 数据核心的熟悉的旋转磁盘。Chrome
+    OS 将首次出现在三星和宏碁的全黑色笔记本电脑上。由于新平台在服务器上存储文件、应用程序、数据位和字节——真正的一切——而不是你的家里或办公室 PC，运行这些新
+    PC 不需要大量的存储空间。事实上，它们根本不需要存储空间。”
+
+
+    永远不要依赖云进行个人数据备份的进一步原因：
+
+
+    - 1.) 你完全受制于互联网服务提供商的带宽限制。当你流传输自己的个人 mp3、游戏、视频（与他们自己的竞争）时，他们将从中大赚。
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 28]
+
+
+    ask our users not to distribute or transmit material which violates the copyright
+    laws in either your country or the country in which our Service is hosted.
+
+
+    The above defeats the entire purpose of anonymity on the internet. A novice who
+    didn''t know the difference between privacy and anonymity might conclude from
+    their website that they offered complete anonymity similar to Tor offers, but
+    that is clearly not the case at all. One has to be attentive to the fine details
+    of the advertising on sites as to see if any logs are kept, and in many cases
+    they will not reveal such unless you explicitly email them and ask. Interestingly,
+    in 2011 the website TorrentFreak initiated a closer examination of all of the
+    vpn provider''s response to the question “Under what jurisdictions does your company
+    operate and under what exact circumstances will you share the information you
+    hold with a 3rd party?”
+
+
+    Some of the answers were expectantly evasive, and others were quite illuminating.
+    One provider, CryptCloud, said
+
+
+    “We don''t log anything on the customer usage so there are no dots to connect
+    period, we completely separate the payment information. Realistically, unless
+    you operate out of one of the ‘Axis of Evil Countries’ Law Enforcement will find
+    a way to put the screws to you. I have read the nonsense that being in Europe
+    will protect you from US Law Enforcement, worked well for HMA didn’t it? Furthermore
+    I am pretty sure the Swiss Banking veil was penetrated and historically that is
+    more defend-able than individual privacy. The way to solve this is just not to
+    log, period.”
+
+
+    Two points to make.
+
+    One, the HMA (Hide My Ass vpn) incident he refers to involved a member of the
+    hacker group Lulzsec, in which one of their core members was arrested'
+  - '[PAGE 29]
+
+
+    Two, he cites the “Axis of Evil”, but clearly they are not in one of those countries.
+
+
+    The above is not to suggest that their actual service is less than that they advertise,
+    but the distinction between privacy and anonymity often falls victim to the gnomes
+    who work in the marketing department of said companies. CryptoCloud is located
+    in...San Antonio, Texas, which has one of the most brutally unmerciful judiciary
+    systems in the United States. If a federal judge (or Congress) demanded the identity
+    of one of their customers, you can be sure that such information would be handed
+    over in a heartbeat in order to avoid heavy day-to-day fines. If they are based
+    in the US, they would *have* to have your personal information available in order
+    to avoid bankruptcy by the federal government. To wit, this doesn''t necessarily
+    have to have anything to do with terrorism, cp, spam or counterfeiting. The case
+    involving Megaupload proves that true anonymity, deatonymity, at least that which
+    is beyond the long arm of the law, is difficult to obtain, even if you reside
+    in another country. Still, it is worth having a vpn account simply because it
+    adds an extra layer of privacy to your sessions. If you are a habitual uploader,
+    you could do a lot worse than to pay ten dollars a month for an extra peace of
+    mind.
+
+
+    The solution? Sign up to a vpn provider anonymously. There are several providers
+    who accept Bitcoins as payment.
+
+
+    http://www.thebitcoinlist.com/dp_internet/vps-vpn/'
+  - '[PAGE 30]
+
+
+    # Chapter 6: The Cloud is the Enemy of Usenet and Anonymity
+
+
+    It goes without saying that men are voracious collectors of many things obtained
+    online: mp3 collections, digital wallpaper, pdf files and the like. The term “cloud”
+    has been given flighty and unwieldy definitions from one blogger to the next,
+    as if the “cloud” is actually some impenetrable fortress in the digital sky where
+    no mouth or thief can break in and corrupt steal. However secure you feel that
+    your files are “in the cloud”, it is perhaps worth remembering that whoever the
+    “cloud”, owns your stuff. Thus, the cloud is nothing more than a server farm with
+    hundreds of other people’s hard drives & servers, all digitally categorizing...
+    your stuff. No longer are your things flying under the banner of privacy in your
+    own, but rather you are subject to whatever litigious lawyer’s terms and conditions
+    contract he has drummed up for the cloud provider. Be wary of a future promised
+    where your data is at the whims of some away server operator who gets to dictate
+    which of your purchased music, movies and games gets “streamed” to your pc.
+
+
+    The Windows 8 operating system has a feature called “SmartScreen” that is used
+    for checking the validity and safety of files before they are executed. This type
+    of feature was first implemented in Internet Explorer and Windows Live Messenger
+    to thwart malicious sites from being able to exploit people’s browsers. Thus,
+    verification and authentication were at the forefront of the feature, as it sought
+    to prevent spam, malware and adware from infecting people’s computers. A good
+    thing? Not for the majority of users, who found it rather annoying. It was a one-step-forward,
+    two-steps-backward approach that actually hindered the internet experience for
+    millions of users of Internet Explorer as they attempted to go to links that were
+    not dangerous in the least. Enter Windows 8, in which the SmartScreen feature
+    tries to verify whether applications are “safe” to download or run on the operating
+    system. It checks a dynamic, ever-changing laundry list of exploitable URLs that'
+  - '[PAGE 31]
+
+
+    Microsoft has identified harmful for end-users on pc systems. An additional problem
+    with this is that it is cumbersome to turn off, and once done, results in consistent
+    nagging from the operating system to re-enable it. Where it will be three to five
+    years down the road? Will you have to have every app or file on your pc “authorized”
+    by Microsoft’s servers before you can execute them? What about cloud content and
+    streaming legally purchased items to your own pc?
+
+
+    For the uninitiated, Microsoft likes to assign “download reputation” points to
+    digitally signed websites as well as programs. The problem with this is the same
+    problem that manifests itself in anti-virus programs, namely that a lot of false-positives
+    get thrown in the user’s face, leading to frustration and annoyance. At times,
+    downloads will get frozen in Internet Explorer 9 as the downloaded files get scanned.
+    There is no option in Internet Explorer 9 to switch off and let users decide which
+    security setting to implement. Rare files constantly get flagged as being somehow
+    malicious for the pc. There is a further element of privacy for the SmartScreen
+    feature. It collects data on every program you install on your operating system,
+    and checks to see if a valid certificate exists on Microsoft’s “cloud” (i.e. their
+    server) that verifies its “safety” for your operating system. It checks the hash
+    of the program installer itself, and compares it to a list at Microsoft. Think
+    about how many programs you have installed on your pc that are related to privacy:
+    PGP, Truecrypt, BitLocker, the installer your vpn provider emailed or perhaps
+    encrypted keyfiles to your hard drive. It would be a gold mine of epic proportions
+    for any hacker to get at such
+
+
+    Enter Usenet. As of 2012, it is relatively easy to hop on Usenet without having
+    through hoops to do so. When you download data from Usenet, it is typically decoded
+    by your newsreader or NZB application and then saved to your hard drive. If you
+    have an antivirus installed, it will most likely have some element of checking
+    each executable or installer that is downloaded to your pc, either by Usenet or
+    some other variant of internet app. With the rush to maximize the use of cloud
+    computing, however, the responsibility of initializing these types of security
+    settings is slowly being taken away'
+  - '[PAGE 32]
+
+
+    from the end-user. What does this mean for Usenet? One of two things could happen.
+
+
+    +   1.) Eventually, users stream data off of usenet, which is then checked and
+    “verified” through an intermediary cloud server, before being delivered to your
+    hard drive (assuming you have one).
+
+
+    +   2.) Usenet SSL will be prohibitively expensive and/or reserved only for certain
+    groups in society (think Government, Intelligence, etc.). Secure, anonymous programs
+    like PGP, Freeten, Truecrypt and the like will be stigmatized and shunned by cloud
+    servers for their inability to unmask and decrypt their true contents.
+
+
+    In 2010, an article titled “The Death of the Hard Drive” explored Google’s persistent
+    momentum towards a hard-driveless selection of flagship products, all citing the
+    benefits of “cloud storage”. In 2012, Microsoft is gearing Windows 8 towards a
+    platter-less scenario.
+
+
+    “Stop worrying about the hard drive in your computer will die. Google wants to
+    kill it permanently anyway.
+
+
+    The new Google Chrome operating system, which was unveiled Tuesday, as well as
+    hints and suggestions from Apple and Microsoft, offers us a preview of the future.
+    And it will come without that familiar whirring disk that has been the data heart
+    of the PC for the last 25 years.
+
+
+    The Chrome OS will be first available on all-black laptops from Samsung and Acer.
+    And because the new platforms store everything — files, applications, data bits
+    and bytes, literally everything — online servers rather than on your home or office
+    PC, those new PCs running won’t require gobs of storage. In fact, they won’t require
+    any storage at all.”
+
+
+    Further reasons why you should never rely on the Cloud for your personal data
+    backups.
+
+
+    +   1.) You are completely at the mercy of your ISP’s bandwidth cap. They stand
+    to make a fortune as you stream your own personal mp3s, games, video (which competes
+    with their own'
+- md: '
+
+    brand) and the like to your personal devices. No hard drive means you’ll be streaming
+    quite regularly. Bandwidth caps will necessarily cause you to pay more for products
+    that you have paid in full. Thus, true ownership becomes a misnomer. Instead,
+    you will “rent” the products you buy from online digital sources. Usenet prices
+    will go up, as customers will not be able to afford the massive price spikes in
+    bandwidth costs. One of the hallmarks of Usenet premium providers is the “limited”
+    package. However what good is “limited” when your ISP caps your connection? Many
+    ISPs (especially those in Canada, such as Bell Symatico) falsely advertise such
+    unlimited options and services.
+
+
+    - 2.) US jurisdiction. Most of the server backbones related to cloud computing
+    reside in the heart of the USA. That means your private data, while in the “cloud”,
+    is subject to laws dictated by the US Congress and US Legislature. What is quasi-legal
+    in your country in the Ukraine, or Timbuktu, might be dastard illegal in the United
+    States. Some government entities might insist that sites like Amazon not only
+    cancel your account and delete your purchased files on their servers, but relay
+    all personal subscriber information to them for proceedings in an American court.
+    It has happened before. There is also the opportunity for said government agencies
+    (or hackers) to intercept your data streaming down to you to verify its authenticity.
+    For your own good, naturally. Google and Microsoft know what is best for you,
+    right?
+
+
+    - 3.) Encryption is allergic to Cloud Computing. You can bet the ranch that almost
+    every Cloud Computing operator will demand what is inside encrypted files in order
+    to minimize the risk of being fined by the FCC or investigated by other alphabet
+    agencies like the IRS (taxes), and FBI (fraud/copyright). This is not necessarily
+    the case today, in 2012, but you can be sure that everyone has absolutely no choice
+    but to upload their digital purchases to their servers, they will want to see
+    the contents of everything since it resides on “their” server cloud. Google, Microsoft
+    and Yahoo repeatedly scan personal emails in an attempt to better target their
+    user’s browsing habits with targeted ads. It would be no different for mp3s, videos
+    or love letters contained in encrypted Truecrypt volumes.
+
+
+    - 4.) **It cheapens individuality.** The collective group-think that is inherent
+    in the pursuit of herd all the digital sheep into one pen is the anti-thesis of
+    not only privacy and human rights on an individual level, makes everyone dependent
+    on a single system. In August 2012, Steve Wozniak, co-founder of Apple said at
+    a Washington expose said:
+
+
+    > “I really worry about everything going to the cloud. I think it’s going to be
+    horrendous. I think there is going to be a lot of horrible problems in the next
+    five years. With the cloud, you don’t own anything. You already signed it away.
+    I want to feel that I own things. A lot of people feel, ‘Oh, everything is really
+    on my computer,’ but I say: the more we transfer everything onto the web, onto
+    the cloud, the less we’re going to have control over it.”
+
+
+    And Steve would be correct. If Cloud computing takes off the way Google and Microsoft
+    wants, you will find someone in some other state, province, or country setting
+    the times when you are allowed to access your own data, encrypted or not.
+
+
+    - 5.) **George Orwell’s 1984.** Maybe it will never quite happen as it is alluded
+    to the book. Then again, no one could fathom that a Category 5 hurricane would
+    wipe out New Orleans, or that 3000 people would die at the hands of 39 terrorists
+    on Sept. 11th, 2001. For several years now, the US has expressed the desire for
+    internet “kill switch” to deal with the less desirable in our society. Today,
+    it is terrorists, spammers and identity thieves. Tomorrow, it is people who obviously
+    have something to hide if they implement SSL in their Usenet setups and upload
+    Truecrypt volumes “to the cloud”. It is this kind of slow erosion of private property
+    that forced the hand of Revolution in the 17th and 18th centuries.
+
+
+    The above reasons are sufficient to put a shred of doubt insofar as Usenet usage
+    is concerned. Usenet users rely on their physical hard drives for storage of their
+    data acquired from Usenet, and regardless of what that data is, it would slowly
+    kill the Usenet industry if users had to “stream” their files from their Usenet
+    accounts with no place to securely store them logs. They also enjoy the privilege
+    of not having their download logs kept by anyone. Such is certainly not true of
+    most torrent trackers, where every seed participating in the swarm reveals their
+    ip address to anyone connected, day or night, or for days and weeks on author.
+
+
+    # Disregard Authoritarians, Acquire Privacy
+
+
+    To reverse the heavy tide groupthink and giving up private ownership of your own
+    files (on Usenet, or elsewhere), a stand needs to be taken now, and with more
+    than simply our wallets. There was once a time back in the 1990s where the purveyors
+    of Usenet did not have to worry about their posts being chanele among the newsgroups
+    which would last for generations. Even one year retention for textual newsgroups
+    was not common, and five year retention for binaries was a dream. Many Usenet
+    users weren’t afraid to use their real names and emails in messages. At the time,
+    there was little reason to be. Now however, in addition to the [ever-ominous threat
+    of being stalked](and kidnapped/killed)
+
+
+    Every message posted to Usenet is archived by Google (DejaNews/Google Groups)
+    in the same way that they are taking high resolution photos of every nook and
+    cranny upon the earth via Google Earth. The aim of this digital push towards the
+    “Cloud” seems to be to minimize individuality as well as putting an end to privacy.
+    The technology is here that every move you make on the street will be recorded
+    not by security cameras sitting atop buildings and banks, by each other. Google
+    has not only recorded every message posted to Usenet within the last five years,
+    it wants to do something eerie similar with their Project Glass product, in which
+    users will be sold a pair of glasses with a built-in webcam that monitors everything
+    around it, giving immediate data about their surroundings: buildings, restaurants,
+    museums and the like. Only it won’t stop there. Eventually it will focus on people,
+    as that is where the ad revenue streams lie. According to Google:
+
+
+    “We think Glass helps you share your life as you’re living it; from life’s big
+    moments to everyday experiences. Today we’re kicking off what we’re calling Glass
+    Sessions, where you can experience what it’s like to use Glass while we build
+    it, through the eyes of a real person, in real life. The first Glass Session follows
+    Laetitia Gayno, the wife of a Googler, as she shares her story of welcoming a
+    new baby, capturing every smile, and showing her entire family back in France
+    “first” through Hangouts.”
+
+
+    # True Security lies with the Individual, not the State
+
+
+    We may come to a point where it may be impossible to harbor any anonymity at Usenet
+    or anywhere else. Users who don’t have the latest “reality enhancer” (which just
+    so conveniently carries every data imaginable about your birth, health, academic
+    & employment history) would suffer severe ostracization from peers (i.e. Facebook
+    defriending, etc)
+
+
+    As anyone with a RAID drive setup attest, technology gets smaller with each generation,
+    and holds infinitely more data than the further into the future you progress.
+    There will come a point where you will not need to wear glasses to record and
+    upload your immediate surroundings to the internet. All of the surveillance will
+    inevitably shrink to a size where your naked eye will not notice their presence
+    at all. This is what happened in the 1990s that everything we said or did online
+    was going to be archived (archive.org) for anyone to peruse decades later.
+
+
+    Thus, we now censor ourselves on Usenet for fear of being reported to whatever
+    authorities punish us accordingly. Excessive data therefore, is actually the anti-thesis
+    of freedom. Usenet SSL, VPNs, & Tor all provide a power to the end user that is
+    slowly shunned and minimized by those with the power to do so (i.e. Google, Facebook).
+    It is certainly not 100% integrated into society yet, but it is coming. To foster
+    more privacy on Usenet, we need more anonymity. People need to be free to speak
+    their minds and engage civil discussion without worrying about the powers that
+    be (Google) pulling the strings of censorship. We will get to the point
+
+    '
+  mdcn: '
+
+    （品牌）等内容传输到你的个人设备。没有硬盘意味着你将经常地进行流媒体传输。带宽限制将导致你为你那些已经全额付费的产品支付更多费用。因此，真正的所有权变成了一个名不其实之词。相反，你实际上是在从在线数字源“租用”你购买的产品。Usenet
+    的价格将会上涨，因为客户无法承受带宽成本的巨大飙升。Usenet 高级服务提供商的标志之一是“限量”包。然而，当你的互联网服务提供商（ISP）限制了你的连接时，“限量”又有何用呢？许多
+    ISP（尤其是加拿大的 ISP，例如 Bell Symatico）虚假地宣传此类无限制选项和服务。
+
+
+    - 2.) 美国司法管辖权。大多数与云计算相关的服务器骨干位于美国的心地带。这意味着你的私有数据在处于“云端”时，受美国国会和美国立法机构法律的约束。在乌克兰或廷巴克图可能是准合法的行为，在美国可能是严重的违法的。某些政府实体可能会坚持像
+    Amazon 这样的网站不仅注销你的账户并删除它们服务器上你购买的文件，还将所有个人订阅者信息转发给他们，以便在美国法庭进行诉讼。这种情况以前发生过。上述政府机构（或黑客）还有机会拦截传输给你的数据流以验证其真实性。当然，这是为了你好。Google
+    和微软知道什么对你最好，对吧？
+
+
+    - 3.) 加密对云计算过敏。你可以打赌，几乎每个云计算运营商都会要求获取加密文件的内容，以减少被 FCC 罚款或被其他字母部门（如 IRS 税务局、FBI
+    欺诈/版权局）调查的风险。在 2012 年并不一定如此，但你可以确定，每个人别无选择只能将他们的数字购买上传到他们的服务器，他们会想看到所有内容，因为这些内容存在“他们的”服务器云中。Google、微软和雅虎反复扫描个人电子邮件，试图通过针对性广告更好地定位其用户的浏览习惯。对于加密的
+    Truecrypt 卷中的 mp3、视频或情书来说，情况也大无相同。
+
+
+    - 4.) **它廉化了个性。** 在追求将所有数字羊群赶进一个圈的过程中，那种固有的集体群体思维不仅是个人层面隐私和人权的对立面，更让每个人依赖于单一系统。2012
+    年 8 月，苹果联合创始人史夫·沃兹尼亚克在华盛顿的一次揭露会上说：
+
+
+    > “我非常担心所有事情都进入云端。我认为那将是可怕的。我认为在未来五年里会有很多糟糕的问题。有了云端，你什么都不拥有。你已经签字放弃了它。我想感觉自己确实拥有某些东西。许多人觉得，‘哦，一切真的都在我的电脑上，’但我说：我们把一切都转移到互联网、转移到云端越越多，我们对它的控制就越少。”
+
+
+    史夫是正确的。如果云计算按照 Google 和微软所希望的那样发展，你将会发现某个其他州、省份或国家的人设定了你允许访问自己数据（无论是否加密）的时间。
+
+
+    - 5.) **乔治·奥威尔的《1984》。** 也许它永远不会像书中暗示的那样发生。话虽如此，没有人能想象到 5 级飓会毁灭新奥尔良，或者 2001 年
+    9 月 11 日有 3000 人死于 39 名恐怖分子之手。多年来，美国一直表达希望设立互联网“终止开关”，以对付我们社会中不理想的部分。今天，是恐怖分子、垃圾邮件发送者和身份窃取者。明天，如果他们在
+    Usenet 设置中实施 SSL并将 Truecrypt 卷上传到“云端”，那就是显然有所隐藏的人。正是这种对私产的缓慢侵蚀，迫使了 17 世纪和 18 世纪革命的发生。
+
+
+    上述理由足以让人对 Usenet 的使用产生一丝怀疑。Usenet 用户依赖物理硬盘来存储从 Usenet 获取的数据，无论这些数据是什么，如果用户必须从他们的
+    Usenet 账户“流式传输”文件而没有地方安全存储日志，这将缓慢杀死 Usenet 行业。他们还享有不被任何人记录下载日志的特权。这对于大多数 torrent
+    追踪器来说并非如此，每个参与集群的种子（seed）都会向任何连接的人暴露其 IP 地址，无论白天黑夜，或持续几天甚至几周。
+
+
+    # 忽视独裁主义者，获取隐私
+
+
+    要扭转沉重的群体思维和放弃对自己文件的私有权（在 Usenet 或其他地方），现在需要采取立场，而且不仅仅是我们的钱包。在 20 世纪 90 年代曾有一段时间，Usenet
+    的提供者不必担心他们的帖子在新闻组之间的分发会持续好几代。对于文本新闻组，保留一年并不常见，二进制文件保留五年更是一个梦想。许多 Usenet 用户并不害怕在消息中使用真实姓名和电子邮箱。在当时，没有理由这样做。但现在，除了[时刻阴魂不散的被跟踪威胁](https://example.org)（以及被绑架/杀害）之外，
+
+
+    每条发布到 Usenet 的消息都会被 Google (DejaNews/Google Groups) 存档，就像他们通过 Google Earth 拍摄地球每个角落的高分辨率照片一样。这种向“云端”推动的数字趋势，其似乎是最小化个性化并终结隐私。这项技术已经存在了，你在街道上的每一个动作都将不会由坐在大楼和银行顶部的监控摄像头记录，而是由彼此相互记录。Google
+    不仅记录了过去五年内发布到 Usenet 的每条消息，它还想在 Project Glass 产品上做类似的诡事情，向用户出售带有内置网络摄像头的眼镜，这种眼镜会监控周围的一切，并提供周围环境的即时数据：建筑、餐厅、博物馆等。但它不会止于此。最终它将关注人，因为那里是广告收入来源。根据
+    Google 的说法：
+
+
+    “我们认为 Glass 帮助你分享你正在经历的生活；从生活中的重大时刻到日常体验。今天我们启动了我们所谓的 Glass 会话（Glass Sessions），你可以在我们构建它时体验使用
+    Glass 的感受，通过一个真实人的眼睛，在现实生活中。第一场 Glass 会话跟随 Laetitia Gayno，她是一位 Google 员工的妻子，她分享了她迎接新宝宝的故事，捕捉每一个微笑，并通过
+    Hangouts 向远在法国的整个家人‘首次’展示了这一切。”
+
+
+    # 真正的安全在个人手中，而不是在国家手中
+
+
+    我们可能会达到这样一个点，即在 Usenet 或其他地方都可能无法保持任何匿名性。没有最新“现实增强器”（这种设备恰方便地携带了关于你出生、健康、学术和就业历史的所有可以想象的数据）的用户将遭受来自同伴的严重排挤（例如
+    Facebook 上被删除好友等）。
+
+
+    任何用过 RAID 驱动器设置的人都可以证明，技术随着每一代的演变而变小，而且越往未来，它存储的数据就越多。总会有那么一天，你不需要戴眼镜就可以记录并上传你的周围环境到互联网。所有的监控将不可避免地缩小到你的肉眼完全察觉不到其存在的程度。这就是
+    20 世纪 90 年代发生的情况，我们在在线上说或做的一切都将被存档 (archive.org)，供任何人在几十年后查阅。
+
+
+    因此，我们现在在 Usenet 上自我审查，担心被举报给任何据此相应惩罚我们的当局。因此，过度的数据实际上是自由的对立面。Usenet SSL、VPN 和
+    Tor 都为终端用户提供了一种力量，这种力量正被那些有权力这样做的人逐渐排斥和最小化（例如 Google、Facebook）。这显然还没有 100% 整合到社会中，但它正在到来。为了在
+    Usenet 上培养更多隐私，我们需要更多的匿名性。人们需要自由地发表自己的意见并进行文明讨论，而不必担心权势者（Google）操纵审查的绳子。我们会进入正题
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 33]
+
+
+    brand) and the like to your personal devices. No hard drive means you’ll be streaming
+    quite regularly. Bandwidth caps will necessarily cause you to pay more for products
+    that you have paid in full. Thus, true ownership becomes a misnomer. Instead,
+    you will “rent” the products you buy from online digital sources. Usenet prices
+    will go up, as customers will not be able to afford the massive price spikes in
+    bandwidth costs. One of the hallmarks of Usenet premium providers is the “limited”
+    package. However what good is “limited” when your ISP caps your connection? Many
+    ISPs (especially those in Canada, such as Bell Symatico) falsely advertise such
+    unlimited options and services.
+
+
+    +   2.) USjurisdiction. Most of the server backbones related to cloud computing
+    reside in the heart of the USA. That means your private data, while in the “cloud”,
+    is subject to laws dictated by the US Congress and US Legislature. What is quasi-legal
+    in your country in the Ukraine, or Timbuktu, might be dastard illegal in the United
+    States. Some government entities might insist that sites like Amazon not only
+    cancel your account and delete your purchased files on their servers, but relay
+    all personal subscriber information to them for proceedings in an American court.
+    It has happened before. There is also the opportunity for said government agencies
+    (or hackers) to intercept your data streaming down to you to verify its authenticity.
+    For your own good, naturally. Google and Microsoft know what is best for you,
+    right?
+
+
+    +   3.) Encryption is allergic to Cloud Computing. You can bet the ranch that
+    almost every Cloud Computing operator will demand what is inside encrypted files
+    in order to minimize the risk of being fined by the FCC or investigated by other
+    alphabet agencies like the IRS (taxes), and FBI (fraud/copyright). This is not
+    necessarily the case today, in 2012, but you can be sure that everyone has absolutely
+    no choice but to upload their digital purchases to their servers, they will want
+    to see the contents of everything since it resides on “their” server cloud. Google,
+    Microsoft and Yahoo repeatedly scan personal emails in an attempt to better'
+  - '[PAGE 34]
+
+
+    target their user’s browsing habits with targeted ads. It would be no different
+    for mp3s, videos or love letters contained in encrypted Truecrypt volumes.
+
+
+    4.) **It cheapens individuality.** The collective group-think that is inherent
+    in the pursuit of herd all the digital sheep into one pen is the anti-thesis of
+    not only privacy and human rights on an individual level, makes everyone dependent
+    on a single system. In August 2012, Steve Wozniak, co-founder of Apple said at
+    a Washington expose said:
+
+
+    > “I really worry about everything going to the cloud. I think it’s going to be
+    horrendous. I think there is going to be a lot of horrible problems in the next
+    five years. With the cloud, you don’t own anything. You already signed it away.
+    I want to feel that I own things. A lot of people feel, ‘Oh, everything is really
+    on my computer,’ but I say: the more we transfer everything onto the web, onto
+    the cloud, the less we’re going to have control over it.”
+
+
+    And Steve would be correct. If Cloud computing takes off the way Google and Microsoft
+    wants, you will find someone in some other state, province, or country setting
+    the times when you are allowed to access your own data, encrypted or not.
+
+
+    5.) **George Orwell’s 1984.** Maybe it will never quite happen as it is alluded
+    to the book. Then again, no one could fathom that a Category 5 hurricane would
+    wipe out New Orleans, or that 3000 people would die at the hands of 39 terrorists
+    on Sept. 11th, 2001. For several years now, the US has expressed the desire for
+    internet “kill switch” to deal with the less desirable in our society. Today,
+    it is terrorists, spammers and identity thieves. Tomorrow, it is people who obviously
+    have something to hide if they implement SSL in their Usenet setups and upload
+    Truecrypt volumes “to the cloud”. It is this kind of slow erosion of private property
+    that forced the hand of Revolution in the 17th and 18th centuries.
+
+
+    The above reasons are sufficient to put a shred of doubt insofar as Usenet usage
+    is concerned. Usenet users rely on their physical hard'
+  - '[PAGE 35]
+
+
+    drives for storage of their data acquired from Usenet, and regardless of what
+    that data is, it would slowly kill the Usenet industry if users had to “stream”
+    their files from their Usenet accounts with no place to securely store them logs.
+    They also enjoy the privilege of not having their download logs kept by anyone.
+    Such is certainly not true of most torrent trackers, where every seed participating
+    in the swarm reveals their ip address to anyone connected, day or night, or for
+    days and weeks on author.
+
+
+    # Disregard Authoritarians, Acquire Privacy
+
+
+    To reverse the heavy tide groupthink and giving up private ownership of your own
+    files (on Usenet, or elsewhere), a stand needs to be taken now, and with more
+    than simply our wallets. There was once a time back in the 1990s where the purveyors
+    of Usenet did not have to worry about their posts being chanele among the newsgroups
+    which would last for generations. Even one year retention for textual newsgroups
+    was not common, and five year retention for binaries was a dream. Many Usenet
+    users weren’t afraid to use their real names and emails in messages. At the time,
+    there was little reason to be. Now however, in addition to the [ever-ominous threat
+    of being stalked](and kidnapped/killed)
+
+
+    Every message posted to Usenet is archived by Google (DejaNews/Google Groups)
+    in the same way that they are taking high resolution photos of every nook and
+    cranny upon the earth via Google Earth. The aim of this digital push towards the
+    “Cloud” seems to be to minimize individuality as well as putting an end to privacy.
+    The technology is here that every move you make on the street will be recorded
+    not by security cameras sitting atop buildings and banks, by each other. Google
+    has not only recorded every message posted to Usenet within the last five years,
+    it wants to do something eerie similar with their Project Glass product, in which
+    users will be sold a pair of glasses with a built-in webcam that monitors everything
+    around it, giving immediate data about their surroundings: buildings, restaurants,
+    museums and the like. Only it'
+  - '[PAGE 36]
+
+
+    won’t stop there. Eventually it will focus on people, as that is where the ad
+    revenue streams lie. According to Google:
+
+
+    “We think Glass helps you share your life as you’re living it; from life’s big
+    moments to everyday experiences. Today we’re kicking off what we’re calling Glass
+    Sessions, where you can experience what it’s like to use Glass while we build
+    it, through the eyes of a real person, in real life. The first Glass Session follows
+    Laetitia Gayno, the wife of a Googler, as she shares her story of welcoming a
+    new baby, capturing every smile, and showing her entire family back in France
+    “first” through Hangouts.
+
+
+    # True Security lies with the Individual, not the State
+
+
+    We may come to a point where it may be impossible to harbor any anonymity at Usenet
+    or anywhere else. Users who don’t have the latest “reality enhancer” (which just
+    so conveniently carries every data imaginable about your birth, health, academic
+    & employment history) would suffer severe ostracization from peers (i.e. Facebook
+    defriending, etc)
+
+
+    As anyone with a RAID drive setup attest, technology gets smaller with each generation,
+    and holds infinitely more data than the further into the future you progress.
+    There will come a point where you will not need to wear glasses to record and
+    upload your immediate surroundings to the internet. All of the surveillance will
+    inevitably shrink to a size where your naked eye will not notice their presence
+    at all. This is what happened in the 1990s that everything we said or did online
+    was going to be archived (archive.org) for anyone to peruse decades later.
+
+
+    Thus, we now censor ourselves on Usenet for fear of being reported to whatever
+    authorities punish us accordingly. Excessive data therefore, is actually the anti-thesis
+    of freedom. Usenet SSL, VPNs, & Tor all provide a power to the end user that is
+    slowly shunned and minimized by those with the power to do so (i.e. Google, Facebook).
+    It is certainly not 100% integrated into society yet, but it is coming. To foster
+    more privacy on Usenet, we need more anonymity. People need to be free to speak
+    their minds and engage civil discussion without worrying about the powers that
+    be (Google) pulling the strings of censorship. We will get to the point'
+- md: '
+
+    where we will be accused of “being up to no good” by refusing to play along. Have
+    an encrypted volume and plan to cross the border? The border guard might ask you
+    to decrypt. Refuse and they can confiscate your laptop for five days, making the
+    trip fairly aggravating. Will it one day be considered a capital crime to erase
+    some negative thing about your past history on the internet without some government
+    entity’s stamp of approval?
+
+
+    Also by Lance Henderson:
+
+
+    - Anonymous File Sharing & Darknet
+
+    - Darknet: A Beginner’s Guide To Staying Anonymous
+
+    - Dating in a Social Media World
+
+    - Social Media in an Anti-Christian World
+
+    - Social Media in an Anti-social World
+
+    '
+  mdcn: '
+
+    在那里，我们将因拒绝配合而被指责为“不怀好意”。如果你有一个加密卷并计划跨越边境呢？边境守卫可能会要求你进行解密。如果你拒绝，他们可以没收你的笔记本电脑五天，这会让旅程变得非常恼人。未来某一天，在没有获得政府机构批准的情况下，删除互联网上关于你过去的某些负面信息是否会被视为一种死罪？
+
+
+    来自 Lance Henderson 的其他文章：
+
+
+    - 匿名文件共享与暗网
+
+    - 暗网：保持匿名入门指南
+
+    - 社交媒体世界中的约会
+
+    - 反基督教世界中的社交媒体
+
+    - 反社会世界中的社交媒体
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 37]
+
+
+    where we will be accused of “being up to no good” by refusing to play along. Have
+    an encrypted volume and plan to cross the border? The border guard might ask you
+    to decrypt. Refuse and they can confiscate your laptop for five days, making the
+    trip fairly aggravating. Will it one day be considered a capital crime to erase
+    some negative thing about your past history on the internet without some government
+    entity’s stamp of approval?
+
+
+    Also by Lance Henderson:
+
+
+    +   - Anonymous File Sharing & Darknet
+
+    - Darknet: A Beginner’s Guide To Staying Anonymous
+
+    - Dating in a Social Media World
+
+    - Social Media in an Anti-Christian World
+
+    - Social Media in an Anti-social World
+
+
+    ,'
