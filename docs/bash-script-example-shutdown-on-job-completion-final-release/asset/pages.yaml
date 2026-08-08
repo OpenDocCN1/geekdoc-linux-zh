@@ -1,0 +1,88 @@
+- img_proc: true
+  md: '# BASHCRIPT EXAMPLE
+
+
+    FreeBSD as well as Linux
+
+
+    # HOW TO SHUTDOWN / POWEROFF
+
+    ON JOB COMPLETION
+
+
+    ![](img/d2b866cfaae74fd79dc234d0e2d8d667_0_0.png)
+
+
+    Following example of a bash script is already tested on FreeBSD and
+
+    Linux, both. It works fine. It uses pgrep (sys-utils on FreeBSD and
+
+    procs in Linux). Alternatively one can use pidof as well on Linux.
+
+
+    ```
+
+    #!/bin/sh # or #/usr/local/bin/bash For FreeBSD
+
+    #!/bin/bash # For Linux
+
+
+    # Creating a lock
+
+    scriptname=$(basename $0)
+
+    pfile=/tmp/$scriptname).lock
+
+    # lock it
+
+    exec 200>$pidfile
+
+    ock -n 200 || exit 1
+
+    p=$$
+
+    echo Spid 1>&200
+
+    ###
+
+
+    SERVICE="mplayer" # watching a long video on mplayer cli.
+
+    # CHECK="pidof "$SERVICE" # Also works fine.
+
+    CHECK="pgrep -f "$SERVICE" >/dev/null 2>&1
+
+    if [ ! -z "$CHECK" ]; # Also works fine.
+
+    then
+
+    # echo "$SERVICE is running..."
+
+    sleep 300s
+
+    else
+
+    # echo "$SERVICE is NOT running"
+
+    echo "Powering-off in next 3 minutes."
+
+    sleep 18s # it will work for sysVinit and systemd
+
+    #release the lock
+
+    sudo rm -f$pidfile
+
+    sudo shutdown -p now # For sysVinit shutdown -p +3
+
+    # sudo systemctl poweroff # For systemd (not tested)
+
+    fi
+
+    exit 0
+
+    ```
+
+
+    ![](img/d2b866cfaae74fd79dc234d0e2d8d667_0_1.png)'
+  merge: -1
+  pgno: 0

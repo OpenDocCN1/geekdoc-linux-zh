@@ -1,0 +1,16 @@
+- - '#'
+  - Bash 脚本示例：任务完成后关机（最终版 - FreeBSD 与 Linux）
+- - '##'
+  - 创建锁
+- - '##'
+  - 锁定
+- - '###'
+  - 'CHECK="pidof "$SERVICE" # 同样运行良好'
+- - '###'
+  - echo "$SERVICE is running..."
+- - '###'
+  - echo "$SERVICE is NOT running"
+- - '##'
+  - 释放锁
+- - '###'
+  - 'sudo systemctl poweroff # 对于 systemd (未测试)'

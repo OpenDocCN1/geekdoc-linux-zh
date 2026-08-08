@@ -1,0 +1,23 @@
+groups: []
+pages:
+- img_proc: false
+  md: "![](bbox=[0.08, 0.06, 0.3, 0.24])\n\n# [BASHSCRIPT EXAMPLE](https://example.com)\n\
+    FreeBSD as well as Linux\n\n# HOW TO SHUTDOWN / POWEROFF ON JOB COMPLETION\n\n\
+    Following example of a bash script is already tested on FreeBSD and Linux, both.\
+    \ It works just fine. It uses pgrep (sys-utils on FreeBSD and procps on Linux).\
+    \ Alternatively once can use pidof as well on Linux.\n\n```\n#!/bin/sh  # or #/usr/local/bin/bash\
+    \  For FreeBSD\n#!/bin/bash # For Linux\n\n# Creating a lock\nscriptname=$(basename\
+    \ $0)\npidfile=\"/tmp/${scriptname}.lock\"\n# lock it\nexec 200>$pidfile\nflock\
+    \ -n 200 || exit 1\npid=$$\necho $pid 1>&200\n# ###\n\nSERVICE=\"mplayer\" # watching\
+    \ a long video on mplayer cli.\n# CHECK='pidof \"$SERVICE\"' # Also works fine.\n\
+    CHECK='pgrep -f \"$SERVICE\"'\nif pgrep -f \"$SERVICE\" >/dev/null 2>&1 ;\n#if\
+    \ [ ! -z \"$CHECK\" ];   # Also works fine.\nthen\n    # echo \"$SERVICE is running\
+    \ ...\"\n    sleep 300s\nelse\n    # echo \"$SERVICE is NOT running.\"\n    echo\
+    \ \"Powering-off in next 3 minutes.\"\n    sleep 180s # it will work for sysVinit\
+    \ and systemd\n        #release the lock\n        sudo rm -f \"$pidfile\"\n  \
+    \      sudo shutdown -p now # For sysVinit sudo shutdown -p +3\n    # sudo systemctl\
+    \ poweroff # For systemd (not tested)\nfi\nexit 0\n```\n\n![](bbox=[0.09, 0.93,\
+    \ 0.17, 1.0])"
+  merge: -1
+  pgno: 0
+toc: []
