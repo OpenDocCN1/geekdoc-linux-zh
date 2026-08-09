@@ -1,0 +1,210 @@
+- - '#'
+  - Linux 编程：反逆向工程技术
+- - '#'
+  - 序言
+- - '#'
+  - 为什么要读这本书？
+- - '#'
+  - 未涵盖的话题
+- - '##'
+  - 第 1 章：引言
+- - '##'
+  - 介绍“Trouble”
+- - '###'
+  - 什么是绑定 shell？
+- - '##'
+  - 使用 CMake
+- - '###'
+  - 这将为绑定 shell 创建一个 32 字节的“密码”。该命令
+- - '###'
+  - 仅在运行 "cmake" 时执行，所以如果你想生成新密码，
+- - '###'
+  - 应该从命令行运行 "cmake ..; make"
+- - '###'
+  - 将随机密码作为宏传递给 ${PROJECT_NAME}
+- - '###'
+  - 构建成功后，向用户显示随机密码
+- - '##'
+  - 代码
+- - '##'
+  - 第 2 章：编译器选项
+- - '##'
+  - 访问 Shell
+- - '###'
+  - 聚焦 GCC
+- - '##'
+  - 节头部
+- - '###'
+  - DWARF
+- - '###'
+  - objdump
+- - '##'
+  - 在 GDB 中生成回溯轨迹
+- - '##'
+  - 使用 Hexxdump 恢复 Bind Shell 密码
+- - '##'
+  - 查看 Trouble 的程序头
+- - '##'
+  - 使用 hexdump 打印 s_password
+- - '##'
+  - C语言中的 check_password() 调用
+- - '##'
+  - 移除调试信息
+- - '##'
+  - 使用 GDB 在没有调试信息的情况下打印 s_password
+- - '##'
+  - 在 IDA 中没有调试信息的情况下查看 check_password()
+- - '##'
+  - 案例研究：XOR DDOS
+- - '###'
+  - 查看 XOR DDOS 的 debug_info
+- - '###'
+  - -s
+- - '###'
+  - SYMTAB 与动态
+- - '##'
+  - 节头部：
+- - '###'
+  - 使用 .symtab 查找 Shell 密码
+- - '###'
+  - 案例研究：FILE 符号
+- - '###'
+  - 检查 -s 后的 Trouble
+- - '###'
+  - Trouble -s
+- - '###'
+  - -fvisibility
+- - '###'
+  - 查看 FUNC 符号
+- - '###'
+  - 隐藏 FUNC
+- - '###'
+  - 静态函数
+- - '##'
+  - GDB 等待 main
+- - '##'
+  - Radare2 中没有 check_password() 的情况
+- - '##'
+  - Radare2：未使用 -fvisibility-hidden 时调用 check_password
+- - '##'
+  - Radare2：使用 -fvisibility=hidden 时调用 check password
+- - '##'
+  - -O
+- - '##'
+  - 编写良好的代码
+- - '###'
+  - 未优化的 btea_encrypt 的大小
+- - '###'
+  - 反编译的 btea_encrypt(int arg)
+- - '###'
+  - -Os
+- - '###'
+  - -Os 版本的 btea_encrypt() 大小
+- - '###'
+  - 反编译的 -Os 版本的 btea_encrypt()
+- - '###'
+  - -O3
+- - '###'
+  - 在 Radare2 中查找 -O3 btea_encrypt() 的大小
+- - '###'
+  - 反编译的 -O3 btea_encrypt()
+- - '##'
+  - -funroll-loops
+- - '##'
+  - 在运行时解析函数
+- - '###'
+  - Trouble 的动态符号
+- - '##'
+  - LD_PRELOAD
+- - '##'
+  - 使用 musl
+- - '###'
+  - 在 Ubuntu 16.04 上安装 musl-tools
+- - '##'
+  - 体积很重要
+- - '##'
+  - 第 3 章：文件格式技巧
+- - '##'
+  - Trouble 的节头部表
+- - '###'
+  - .comment 的内容
+- - '###'
+  - 从 Trouble 中移除 .comment
+- - '###'
+  - 每次编译后移除 .comment
+- - '##'
+  - 移除节头部表
+- - '###'
+  - Trouble 的 ELF 头
+- - '##'
+  - 修改 ELF 头部后的 Radare2 节
+- - '##'
+  - 使用 strings 查找节段名称
+- - '###'
+  - 在 Trouble 上使用 stripBinary
+- - '###'
+  - 小端序还是大端序？
+- - '##'
+  - man elf
+- - '###'
+  - 查看 Trouble 中的 EI_DATA
+- - '###'
+  - 使用 dd 修改 EI_DATA 字节
+- - '###'
+  - 修改 EI_DATA 后的 readelf
+- - '###'
+  - 用字节序谎言弄崩 GDB
+- - '###'
+  - Trouble 仍然可用
+- - '###'
+  - 用字节序谎言弄崩 Radare2
+- - '##'
+  - 用于插入字节序谎言的 CMake 命令
+- - '##'
+  - echo ‘Ag==' | base64-d
+- - '##'
+  - 第 3 章：文件格式
+- - '##'
+  - 使用 EI_DATA 混淆编译 Trouble
+- - '##'
+  - 节是谎言
+- - '##'
+  - 翻转执行位
+- - '##'
+  - 第 3 章：文件格式破解
+- - '##'
+  - stripBinary 后的 Trouble 视图
+- - '###'
+  - chap_3_format_hacks/fakeHeadersBit/CMakeLists.txt
+- - '###'
+  - fakeHeadersBit.cpp
+- - '##'
+  - '节头部:'
+- - '##'
+  - '程序头部:'
+- - '##'
+  - '节到段映射:'
+- - '##'
+  - 第 3 章：文件格式黑客
+- - '###'
+  - Trouble 的入口点
+- - '###'
+  - Trouble main 函数的反汇编开头
+- - '###'
+  - Trouble main 函数未反汇编的开头
+- - '##'
+  - 带有更新版本 fakeHeadersXBit 的 Trouble
+- - '##'
+  - Radare2 中更新的 fakeHeadersXBit 的问题
+- - '##'
+  - 启动 Radare2 GUI
+- - '##'
+  - Radare2 正在反汇编 .init 节
+- - '##'
+  - IDA 正在反汇编 .init 节
+- - '###'
+  - 通过重叠入口点和 .init 来在 IDA 中隐藏入口点
+- - '##'
+  - 隐藏入口点
+- - '##'
+  - 第 3 章：文件格式技巧
