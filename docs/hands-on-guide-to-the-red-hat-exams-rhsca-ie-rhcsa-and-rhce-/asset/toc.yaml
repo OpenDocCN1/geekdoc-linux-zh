@@ -1,0 +1,526 @@
+- - '#'
+  - Red Hat 考试实用指南：RHSCA [即 RHCSA] 和 RHCE 认证指南与实验手册
+- - '##'
+  - 第1章 安装 29
+- - '##'
+  - 第2章 系统初始化 47
+- - '##'
+  - 第3章 磁盘与分区 71
+- - '##'
+  - 第4章 文件系统及其他
+- - '##'
+  - 第5章 网络 149
+- - '##'
+  - 第6章 包管理 169
+- - '##'
+  - 第7章 用户级安装 195
+- - '##'
+  - 第8章 网络安装 221
+- - '##'
+  - 第9章 系统日志、监控与自动化 239
+- - '##'
+  - 第10章 内核 265
+- - '##'
+  - 第11章 SELinux 277
+- - '##'
+  - 第12章 系统安全 291
+- - '##'
+  - 第13章 远程访问 309
+- - '##'
+  - 第14章 Web 服务 325
+- - '##'
+  - 第15章 NFS 351
+- - '##'
+  - 第16章 Samba 369
+- - '##'
+  - 第17章 FTP 383
+- - '##'
+  - 第18章 DNS 393
+- - '##'
+  - 第19章 网络服务 421
+- - '##'
+  - 第20章 邮件服务 443
+- - '##'
+  - 第21章 故障排除 463
+- - '##'
+  - 第22章 使用 KVM 进行虚拟化 473
+- - '##'
+  - 实验考试 1 483
+- - '##'
+  - 实验考试 2 485
+- - '##'
+  - 索引 486
+- - '#'
+  - 第 1 章
+- - '#'
+  - 安装
+- - '###'
+  - 开始安装
+- - '####'
+  - 使用 RHEL5 的旧版本安装
+- - '####'
+  - 实际战技巧
+- - '####'
+  - 警告
+- - '####'
+  - RED HAT ENTERSE LINUX 5
+- - '####'
+  - 首次启动过程
+- - '####'
+  - RED HAT ENTERSE LINUX 5
+- - '#####'
+  - 防火墙
+- - '###'
+  - 创建用户
+- - '###'
+  - 验证安装
+- - '###'
+  - ls
+- - '###'
+  - 总结
+- - '###'
+  - 习题
+- - '###'
+  - 习题答案
+- - '###'
+  - 实验
+- - '####'
+  - 任务 1 - 首次安装
+- - '####'
+  - 任务 2 - 第二次安装
+- - '#'
+  - 本章涵盖了以下主题
+- - '#'
+  - 涵盖了以下 RHCSA 考试目标
+- - '#'
+  - 系统初始化
+- - '#'
+  - 启动过程
+- - '#'
+  - 真实技巧
+- - '#'
+  - 一般信息
+- - '#'
+  - cat
+- - '#'
+  - init
+- - '#'
+  - 'Author:'
+- - '#'
+  - 默认运行级别
+- - '#'
+  - init
+- - '#'
+  - 'Author:'
+- - '#'
+  - 默认运行级别
+- - '#'
+  - init
+- - '#'
+  - 'Author:'
+- - '#'
+  - 默认运行级别
+- - '#'
+  - 'Author:'
+- - '#'
+  - 默认运行级别
+- - '#'
+  - init
+- - '#'
+  - 'Author:'
+- - '#'
+  - 默认运行级别
+- - '#'
+  - init
+- - '#'
+  - 'Author:'
+- - '#'
+  - 默认运行级别
+- - '#'
+  - 运行级别如下：
+- - '##'
+  - 与 GRUB 工作
+- - '####'
+  - Grub 启动选项：
+- - '####'
+  - 配置文件
+- - '###'
+  - cat /boot/grub/grub.conf
+- - '###'
+  - cat grub.conf
+- - '####'
+  - 运行级别工具 (Runlevel Utilities)
+- - '####'
+  - 真实世界技巧 (REAL-WORLD TIP)
+- - '#'
+  - shutdown -h now
+- - '#'
+  - shutdown -r now
+- - '#'
+  - reboot
+- - '#'
+  - shutdown -h 120
+- - '#'
+  - shutdown now
+- - '#'
+  - halt
+- - '#'
+  - cd /sbin
+- - '#'
+  - ls -l | grep halt
+- - '#'
+  - runlevel
+- - '#'
+  - who -r
+- - '#'
+  - runlevel
+- - '#'
+  - init 3
+- - '#'
+  - runlevel
+- - '###'
+  - 救援与运行级别 (Rescue and Runlevels)
+- - '####'
+  - init 1
+- - '####'
+  - init 5
+- - '###'
+  - 服务管理 (Service Management)
+- - '####'
+  - ls -l /etc/rc3/
+- - '###'
+  - 考试贴士
+- - '####'
+  - 步骤 1。检查 sshd 服务的状态：
+- - '####'
+  - chkconfig --list sshd
+- - '####'
+  - 步骤 2。
+- - '####'
+  - chkconfig sshd off
+- - '####'
+  - 步骤 3。
+- - '####'
+  - chkconfig --list sshd
+- - '####'
+  - 步骤 4。
+- - '####'
+  - chkconfig sshd on
+- - '####'
+  - 步骤 5。
+- - '####'
+  - chkconfig --list sshd
+- - '#'
+  - chkconfig --level 4 sshd off
+- - '####'
+  - 步骤 6。
+- - '####'
+  - chkconfig --list sshd
+- - '##'
+  - ntsysv --level 2
+- - '#'
+  - service ntpd status
+- - '#'
+  - service ntpd start
+- - '#'
+  - service ntpd stop
+- - '#'
+  - service ntpd status
+- - '###'
+  - Upstart 转换
+- - '####'
+  - cat control-alt-delete
+- - '####'
+  - cat ck-log-system-start
+- - '####'
+  - cat ck-log-system-start
+- - '####'
+  - initctl list
+- - '##'
+  - 真实世界技巧
+- - '##'
+  - 总结
+- - '##'
+  - 复习题
+- - '##'
+  - 复习题答案
+- - '##'
+  - 实验 2
+- - '####'
+  - 任务 1 – GRUB 设置
+- - '####'
+  - 任务 2 – 启动故障
+- - '####'
+  - 任务 3 – 系统服务
+- - '####'
+  - 任务 4 – 丢失密码
+- - '#'
+  - cat /proc/partitions | grep hda
+- - '#'
+  - cat /proc/partitions | grep sd
+- - '#'
+  - fdisk -l
+- - '#'
+  - parted -l
+- - '##'
+  - 创建分区
+- - '####'
+  - fdisk /dev/hdb
+- - '####'
+  - 步骤 6. 验证你新创建的分区：
+- - '####'
+  - 步骤 7. 将更改写入磁盘：
+- - '####'
+  - 步骤 8. 调用 partprobe 命令：
+- - '#'
+  - partprobe /dev/hdb
+- - '##'
+  - 通用信息
+- - '####'
+  - 步骤 9. 最后一次验证分区创建：
+- - '#'
+  - disk -l
+- - '#'
+  - parted /dev/hdc
+- - '#'
+  - partprobe
+- - '##'
+  - 创建交换分区
+- - '####'
+  - 步骤 4. 验证分区是否正确：
+- - '####'
+  - 步骤 5. 保存退出：
+- - '####'
+  - 步骤 6. 从想要使用的磁盘开始：
+- - '####'
+  - parted /dev/hdd
+- - '####'
+  - 步骤 7. 创建分区：
+- - '####'
+  - 步骤 8. 验证分区是否正确：
+- - '####'
+  - 步骤 9. 最后，退出 parted 并重新读取分区表：
+- - '#'
+  - partprobe /dev/hdd
+- - '##'
+  - 删除分区
+- - '####'
+  - 步骤 1. 启动 fdisk：
+- - '#'
+  - fdisk /dev/hdb
+- - '####'
+  - 步骤 2. 打印当前分区表：
+- - '####'
+  - 步骤 3. 删除第一个分区：
+- - '####'
+  - 步骤 4. 删除第二个分区：
+- - '####'
+  - 步骤 5. 将更改写入磁盘：
+- - '####'
+  - 步骤 6. 不要忘记重新读取分区表：
+- - '#'
+  - partprobe /dev/hdb
+- - '####'
+  - 步骤 7. 启动 parted：
+- - '#'
+  - parted /dev/hdc
+- - '####'
+  - 步骤 8. 打印当前表：
+- - '####'
+  - 步骤 9. 再次在磁盘上看到两个分区。移除它们：
+- - '####'
+  - 步骤 10. 退出 parted 并重新读取分区表：
+- - '#'
+  - partprobe /dev/hdc
+- - '####'
+  - 步骤 11. 同样创建的交换分区：
+- - '#'
+  - parted /dev/hdd
+- - '####'
+  - 步骤 12. 第一个分区：
+- - '####'
+  - 步骤 13. 退出 parted 并重新读取分区表：
+- - '#'
+  - partprobe /dev/hdd
+- - '####'
+  - 步骤 14. 你可以使用 fdisk 验证所有的：
+- - '#'
+  - fdisk -l
+- - '##'
+  - 逻辑卷管理器
+- - '##'
+  - 通用信息
+- - '#'
+  - 分配的 PE
+- - '#'
+  - vgs
+- - '#'
+  - vgdisplay
+- - '#'
+  - lvs
+- - '#'
+  - lvdisplay
+- - '#'
+  - open 1
+- - '##'
+  - 创建 LVM 分区
+- - '#'
+  - pvcreate /dev/hdb
+- - '#'
+  - pvdisplay /dev/hdb
+- - '#'
+  - vgcreate vg_group1 /hdb
+- - '#'
+  - vgdisplay -v vg_group1
+- - '#'
+  - lvcreate -L 3G VolGroup1
+- - '#'
+  - lvdisplay vg_group1
+- - '#'
+  - vgdisplay -v VolGroup1
+- - '#'
+  - open 0
+- - '#'
+  - lvcreate -L 3000 -n SecretData vg_group1
+- - '#'
+  - lvrename /dev/vg_group1/lvol01 /dev/vg_group1/SecretData
+- - '#'
+  - lvdisplay vg_group1
+- - '#'
+  - open 0
+- - '##'
+  - 调整 LVM 分区
+- - '#'
+  - 考试提示
+- - '#'
+  - lxtend -L +200G VolGroup1
+- - '#'
+  - lxtend -L 600G /dev/VolGroup1
+- - '#'
+  - lvresize -L 700G /dev/VolGroup1
+- - '#'
+  - lvdisplay vggroup1
+- - '##'
+  - 分段
+- - '####'
+  - 第 5 步：在某处创建一个物理卷：
+- - '#'
+  - pvcreate /dev/hdc
+- - '####'
+  - 第 6 步：扩展你的卷组以包含新物理卷：
+- - '#'
+  - vgextend vg_group1 /hdc
+- - '####'
+  - 第 7 步：现在查看增加后卷组的详情：
+- - '#'
+  - 在命令行执行 vgdisplay -v vg_group1
+- - '#'
+  - open 0
+- - '####'
+  - 第 8 步：将逻辑卷的大小缩小到 2GB：
+- - '#'
+  - lvresize -l 4000 /dev/vg_group/SecretData
+- - '####'
+  - 第 9 步：你也可以以下命令：
+- - '#'
+  - lvresize -l 2000 /dev/vg_group1/SecretData
+- - '####'
+  - 第 10 步：要缩小卷组不再包含物理卷 /hdc，你可以使用 `vgreduce` 命令：
+- - '#'
+  - vgreduce vg_group1 /hdc
+- - '####'
+  - 第 11 步：使用 `vgdisplay` 命令验证卷组和逻辑卷的扩展或缩小：
+- - '#'
+  - vgdisplay vg_group1
+- - '####'
+  - 第 1 步：验证 vg_group1 组有两个物理卷：
+- - '#'
+  - vgdisplay -v vg_group1
+- - '#'
+  - open 0
+- - '####'
+  - 第 2 步：由于只有一个物理磁盘，你需要将 /dev/sdc 添加回组：
+- - '#'
+  - vgextend vg_group1 /dev/sdc
+- - '####'
+  - 第 3 步：同样创建一个逻辑卷来迁移的数据：
+- - '#'
+  - lvcreate -l 500 vg_group1
+- - '####'
+  - 第 4 步：验证所有逻辑卷已就位：
+- - '#'
+  - lvdisplay vg_group1
+- - '#'
+  - open 0
+- - '#'
+  - open 0
+- - '####'
+  - 第 5 步：你现在应该验证 vg_group1 组有两个物理磁盘：
+- - '#'
+  - vgdisplay -v vg_group1
+- - '#'
+  - open 0
+- - '####'
+  - 第 6 步：从“损坏”硬盘迁移数据：
+- - '#'
+  - pvmove /dev/hdb /hdc
+- - '####'
+  - 第 7 步：验证物理卷 /db 是空的：
+- - '#'
+  - pvdisplay /dev/hdb
+- - '##'
+  - 步骤
+- - '#'
+  - lvremove /dev/vg_group/SecretData
+- - '#'
+  - vgremove vg_group1
+- - '#'
+  - vgremove -f vg_group1
+- - '#'
+  - vgdisplay vg_group1
+- - '#'
+  - pvremove /dev/hdb
+- - '##'
+  - 设置 RAID
+- - '#'
+  - yum install -y mdadm
+- - '#'
+  - rpm -qa | grep mdadm
+- - '##'
+  - 真实世界提示
+- - '##'
+  - 创建 RAID 阵列
+- - '#'
+  - fdisk -l
+- - '#'
+  - 当磁盘故障时做什么
+- - '#'
+  - mdadm /dev/md0 -f /dev/hdd1
+- - '#'
+  - mdadm -D /dev/md0
+- - '#'
+  - mdadm /dev/md0 -r /dev/hdd1
+- - '#'
+  - mdadm -D /dev/md0
+- - '#'
+  - 考试贴士
+- - '#'
+  - mdadm -v /dev/md0 -f /hdd1 -r
+- - '#'
+  - mdadm -v /dev/md0 -a /hdd1
+- - '#'
+  - 6 6。验证它是否正确：：
+- - '#'
+  - ////
+- - '#'
+  - 步骤 7。查询内核：
+- - '#'
+  - cat /proc/mdstat
+- - '#'
+  - 当磁盘故障时做什么
+- - '#'
+  - mdadm /dev/md0 -f /hdd1
+- - '#'
+  - mdadm -D /dev/md0
+- - '#'
+  - mdadm ///00 - / / /1
