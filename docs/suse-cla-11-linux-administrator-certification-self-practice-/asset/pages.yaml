@@ -1,0 +1,2499 @@
+- img_proc: true
+  md: '# # SUSE CLA 11 Linux Administrator Certification
+
+
+    # ## Self-Practice Review Questions 2015 Edition
+
+
+    (with 90+ questions for exam 050-720)
+
+
+    ![](img/b57c28af4c9ffd6d86776d602dc97ebb_0_0.png)
+
+
+    EXAMREVIEW.NET
+
+    NO FRILLS Exam Prep Books
+
+
+    Copyright 2015.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# NO FRILLS Exam Prep Books
+
+
+    Intellectual Properties, Trademarks and Copyrights
+
+
+    ExamREVIEW.NET (a.k.a. ExamREVIEW) is an independent content developer not associated/affiliated
+    with the certification vendor(s) mentioned throughout this book. The name(s),
+    title(s) and award(s) of the certification exam(s) mentioned in this book are
+    the trademark(s) of the respective certification vendor(s). We mention these name(s)
+    and/or the relevant terminologies only for describing the relevant exam process(es)
+    and knowledge.
+
+
+    > We are NOT affiliated with SUSE. This book is also NOT endorsed by SUSE. The
+    CLA 11 certification is the property of SUSE.
+
+
+    ExamREVIEW(TM) and ExamFOCUS(TM) are our own trademarks for publishing and marketing
+    self-developed examprep books worldwide. The EXREVIEW.NET web site has been created
+    on the Internet since January 2001. The EXFOCUS.NET division has its web presence
+    established since 2009.
+
+
+    > Copyright 2015. ExamREVIEW.NET. All rights reserved.
+
+
+    Contents of this book are fully copyrighted. We develop study material entirely
+    on our own. Braindump is strictly prohibited. We provide essential knowledge contents,
+    NOT any generalized "study system" kind of "pick-the-right-answer-every time"
+    techniques or "visit this link" referrals.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Contents Update
+
+
+    All books come with LIFE TIME FREE UPDATES. When you find a newer version of the
+    purchased book all you need to do is go and download. Please check our web site''s
+    Free Updates regularly: http://www.examreview.net/free_updates.htm
+
+
+    # Page Formatting and Typeface
+
+
+    To accommodate the needs of those with weaker vision, we use LARGER PRINT throughout
+    the book whenever practical. The text in this book was created using Garamond
+    (size 16). A little bit of page resizing, however, may have happened along the
+    actual book printing process.
+
+
+    # The Exam
+
+
+    This product covers the SUSE CLA 11 certification exam. We create these self-practice
+    test questions referencing the concepts and principles currently valid in the
+    exam. Each question comes an answer and a short explanation which aids you in
+    seeking further study information. For purpose of exam readiness drilling, this
+    product includes questions that have varying numbers of choices. We have 2 while
+    some have 5 or 6. Some questions are fill-in-the-blanks. We want to make sure
+    these questions are enough to really test your readiness and draw your focus to
+    the weak areas. Think of these as challenges presented to you so to assess your
+    comprehension of the subject matters. The goal is to reinforce learning, to validate
+    successful transference of knowledge and to identify areas of weakness that require
+    remediation. The questions are NOT designed to “simulate” actual questions. “realistic”
+    or actual questions that are for cheating purpose are not available in any of
+    our products.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Question 1
+
+
+    Which of the following is true regarding FUSE (choose all that apply)
+
+
+    # Possible choices:
+
+
+    +   - It needs to be installed as a package.
+
+    - It cannot support ISO images.
+
+    - It cannot support SSH connections.
+
+    - Many FUSE plugins are shipped with SUSE Linux by default.
+
+    - None of the choices.
+
+
+    # ANSWER:
+
+
+    File system in userspace FUSE is a kernel module that when combined with plug-ins
+    can be used to access almost all file systems via means such as remote SSH connections,
+    ISO images, and the like. FUSE itself needs to be installed as a package. FUSE
+    plugins, however, are not shipped with SUSE Linux by default.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Question 2
+
+
+    With SUSE Linux, distributions are segmented into:
+
+
+    # Possible choices:
+
+
+    +   - modules
+
+    - units
+
+    - packages
+
+    - services
+
+    - None of the choices.
+
+
+    # ANSWER:
+
+
+    Linux distributions are segmented into packages. Each of these packages includes
+    the specific Linux flavors plus some specific applications or services.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Question 3
+
+
+    With SUSE Linux, a package is typically provided in the form of:
+
+
+    # Possible choices:
+
+
+    +   - compiled code
+
+    - source code
+
+
+    # ANSWER:
+
+
+    A package is typically provided in the form of compiled code so manual compilation
+    is not necessary. There are installation and package removal utilities in the
+    form of package management system, with package description, version, and dependencies.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Question 4 \__________ is a plugin that can mount CD-ROM images with ISO9660
+    file systems in them.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+    fuseiso is a plugin that can mount CD-ROM images with ISO9660 file systems in
+    them. ntfs-3g is a plug in that can mount NTFS volumes with complete read and
+    write support.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Question 5
+
+
+    _______ is a plug in that serves as a file system client based on SSH file transfer
+    protocol. On the other hand, _______ is a plug in that can mount WebDAV file systems.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    # ANSWER:
+
+
+    sshfs is a plug in that serves as a file system client based on SSH file transfer
+    protocol. wdfs is a plug in that can mount WebDAV file systems.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Question 6
+
+    What is the most important command for seeking help on Linux?
+
+
+    # Possible choices:
+
+
+    +   seek
+
+    man
+
+    help
+
+    ?
+
+    info
+
+    None of the choices.
+
+
+    ANSWER:
+
+    The most important command for seeking help on Linux is man. To specify language,
+    use the LANG parameter. To automatically view one screen of information at a time,
+    use the less command.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Question 7
+
+
+    More detailed help information can be retrieved via:
+
+
+    # **Possible choices:**
+
+
+    +   - help
+
+    - info
+
+    - manual
+
+    - seek help
+
+    - None of the choices.
+
+
+    # ANSWER:
+
+
+    Some programs do not use the man pages. To seek help information on them you need
+    to use the info command to access help information stored with more details. The
+    info format is fancier.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Question 8
+
+
+    The MBR is located at:
+
+
+    # Possible choices:
+
+
+    +   - cylinder 0, head 0, sector 0
+
+    - cylinder 0, head 1, sector 0
+
+    - cylinder 0, head 0, sector 1
+
+    - cylinder 1, head 0, sector 0
+
+    - None of the choices.
+
+
+    # ANSWER:
+
+
+    When the server''s Power-On Self-Test POST process is completed, the hardware
+    needs to jump to a specific location in RAM to look for a boot device. When the
+    boot device (typically on the hard disk) is found, the hardware will go to the
+    position at cylinder 0, head 0, sector 0 and then load and execute the instructions
+    there. This is the master boot record MBR.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Question 9
+
+
+    The configuration of LILO can be fine tuned through which file?
+
+
+    # Fill in the blank:
+
+
+    [  ]
+
+
+    # ANSWER:
+
+
+    The code in the MBR can help find the active partition for executing the code
+    there. The LILO program is part of the partition and is generally referred to
+    as a "boot loader". The configuration of LILO can be fine tuned through /etc/lilo.conf.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Question 10
+
+    LILO is capable of finding all the data that it needs from the raw hard disks:
+
+
+    # Possible choices:
+
+
+    as long as there is sufficient partitioning data.
+
+    even without any partitioning data.
+
+
+    ANSWER:
+
+    LILO is a bootloader. It is capable of finding all the data that it needs from
+    the raw hard disks even without any partitioning data.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Question 11
+
+    Which of the following can be supported by GRUB (choose all that apply):
+
+
+    **Possible choices:**
+
+    Ext2
+
+    Ext3
+
+    ReiserFS
+
+    Minix
+
+    FAT
+
+    None of the choices.
+
+
+    ANSWER:
+
+    Some distributions use GRUB as the choice of boot loader. SUSE 8.1 uses GRUB2.
+    Grand Unified Bootloader GRUB is the "official" boot loader for SUSE. It can support
+    many different file systems, including Ext2, Ext3, ReiserFS, Minix, and even the
+    DOS FAT file system.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Question 12
+
+
+    In order to create a file to be used a swap, you need to first create the file
+    via __________, then you need to prepare the file for usage as swap space using
+    ________.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    # ANSWER:
+
+
+    In order to create a file to be used a swap, you need to first create the file
+    via dd. Then you need to prepare the file for usage as swap space using mkswap.
+    What is special about swap is that it has no mount point associated with it.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Question 13
+
+
+    /boot is for the kernel. \_\______ is for keeping files that are frequently changing
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    /boot is for the kernel. /var is for keeping files that are frequently changing'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Question 14
+
+
+    The good thing about GRUB 2 custom menu is that kernel and system updates will
+    change and update it automatically.
+
+
+    # Possible choices:
+
+
+    +   - True
+
+    - False
+
+
+    ANSWER:
+
+
+    False. GRUB 2 custom menus offer many benefits over the default one. The custom
+    menu will change only when the user edits it. Kernel and system updates will not
+    change it.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Question 15
+
+
+    /usr is for user programs. ________ is for user files and user specific configurations.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    /usr is for user programs. /home is for user files and user specific configurations.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'Question 16
+
+
+    What is the name of the GRUB 2 menu configuration file?
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    GRUB 2 custom menus offer many benefits over the default one. It is the GRUB 2
+    menu configuration file known as grub.cfg that has section remarks showing the
+    responsible scripts.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Question 17
+
+
+    __________ is where the user''s name and other account information are stored.
+    On the other hand, __________ keeps the shadow passwords.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+    /etc/passwd is where the user''s name and other account information are stored.
+    Passwords are stored here as clear text. /etc/shadow keeps shadow passwords which
+    are more secure than clear text passwords.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Question 18
+
+    /etc/group stores group names, while \_\_\_\_\_\_\_\_\_\_\_ stores users'' nickname
+    for email.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+    /etc/group stores group names. /etc/aliases stores users'' nickname for email.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Question 19\n\n__________ is the path that stores a list of users with special\
+    \ privileges.\n the other hand, __________ stores information on system logins\
+    \ and logouts.\n\n# Fill in the blank:\n\n[ ] / [\n\nANSWER:\n/etc/sudoers stores\
+    \ a list of users with special privileges. /var/log/wtmp stores information on\
+    \ system logins and logouts."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Question 20
+
+
+    __________ is the path that stores information on who is currently logged on to
+    the system. On the other hand, __________ stores information on failed logins.
+
+
+    # Fill in the blank:
+
+
+    [ ]/[
+
+
+    # ANSWER:
+
+
+    /var/run/utmp stores information on who is currently logged on to the system.
+
+    /var/log/btmp stores information on failed logins.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Question 21
+
+
+    GRUB 2 custom menus are constructed via:
+
+
+    # **Possible choices:**
+
+
+    +   - headers
+
+    - scripts
+
+    - objects
+
+    - packages
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    GRUB 2 custom menus offer many benefits over the default one. It is constructed
+    via a series of scripts, including /etc/grub.d/00_header and /etc/grub.d/05_header.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'Question 22
+
+
+    Which of the following is a command you can use to scan and fine tune serial devices?
+
+
+    # Possible choices:
+
+
+    +   - setserial
+
+    - mkserial
+
+    - cfserial
+
+    - bdserial
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    setserial is a command you can use to scan and fine tune serial devices. For printing,
+    the printtool utility will create an entry in /etc/printcap. It can detect for
+    you which parallel port corresponds to a printer device.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Question 23
+
+
+    The relevant configuration files for Cups are stored in ________.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    Cups is another administration and configuration tool for printers. The relevant
+    configuration files are stored in /etc/cups.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Question 24
+
+
+    For USB, it is possible to use __________ and __________ to determine the type
+    of host controller that is used on your system.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    For USB, it is possible to use lsmod and lsusb to determine the type of host controller
+    that is used on your system, which may be UHCI, OHCI or EHCI.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Question 25
+
+
+    By default Webmin uses which port for communication?
+
+
+    # Possible choices:
+
+
+    +   - TCP port 1000
+
+    - UDP port 1000
+
+    - TCP port 10000
+
+    - UDP port 10000
+
+    - TCP port 20000
+
+    - UDP port 20000
+
+    - TCP port 30000
+
+    - UDP port 30000
+
+
+    # ANSWER:
+
+
+    Webmin is a web-based system configurator based largely on Perl and running its
+    own process and web server. By default it uses TCP port 10000 for communication.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'Question 26
+
+
+    Which of the following are examples of CUPS based programs (choose all that that
+    apply)
+
+
+    # Possible choices:
+
+
+    +   - lpr
+
+    - kprinter
+
+    - xpp
+
+    - gtk
+
+    - gtk+
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    With CUPS implemented, print jobs may be sent to servers by CUPS-based programs.
+    Examples include lpr, kprinter, and xpp.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Question 27
+
+
+    If you have multiple languages installed, the __________ directory may contain
+    different language versions of the manuals.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+    If you have multiple languages installed, the /usr/share/doc/manual directory
+    may contain different language versions of the manuals. The HTML versions are
+    available in the help center of the desktop.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'Question 28
+
+
+    XFree86:
+
+
+    # Possible choices:
+
+
+    +   is the free version of KDE.
+
+
+    +   is a freely redistributable open-source implementation of the QT.
+
+
+    +   is a freely redistributable open-source implementation of GTK+.
+
+
+    +   is a freely redistributable open-source implementation of the X Window System.
+
+
+    +   None of the choices.
+
+
+    ANSWER:
+
+
+    The XFree86 Project produces XFree86, which is a freely redistributable open-source
+    implementation of the X Window System. Originated at the MIT, the X window system
+    (aka X11) provides a basis for GUI as well as rich input device capability for
+    networked computers. XFree86 can run on SUSE Linux.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Question 29
+
+
+    When the howto package is installed on your system, it is ________ that holds
+    the howto subdirectory.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    When the howto package is installed on your system, it is /usr/share/doc that
+    holds the howto subdirectory.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'Question 30
+
+
+    Configuration of the SUSE Linux Enterprise Server is managed through the configuration
+    files located in:
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    Configuration of the SUSE Linux Enterprise Server is managed through the configuration
+    files located in /etc/sysconfig. To edit them, use YaST sysconfig.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Question 31
+
+
+    How do you invoke the YaST Control Center graphical mode?
+
+
+    # **Possible choices:
+
+
+    +   - use the command yast
+
+    - use the command yast2
+
+    - use the command yastg
+
+    - use the command yastqt
+
+    - None of the choices.
+
+
+    **ANSWER:
+
+    YaST shorts for Yet another Setup Tool. It is a tool you can use to complete most
+    system configuration tasks. Its nurses refers to text mode while Qt refers to
+    the graphical mode. To invoke the YaST Control Center, use the command yast for
+    text mode or yast2 for graphical mode.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Question 32
+
+
+    You can switch between shells and exit if necessary using what command?
+
+
+    # Possible choices:
+
+
+    +   - swap
+
+    - switch
+
+    - quit
+
+    - exit
+
+    - change
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    You can switch between shells and exit if necessary using the exit command. You
+    want to know that /etc/profile is a system-wide configuration file that is to
+    be read by all shells.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Question 33
+
+
+    Talking about environment variables, ________ determines the searching of program,
+    while ________ represents the user''s home directory.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    Environment variables can be used to configure the behavior of the shell. PATH
+    determines the searching of program, while HOME represents the user''s home directory.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Question 34
+
+
+    The environment variable called __________ is a colon-separated set of directories
+    where libraries should be searched first. __________, on the other hand, simply
+    lists those shared libraries with functions that can override the standard set.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [
+
+
+    # ANSWER:
+
+
+    The environment variable called LD_LIBRARY_PATH is a colon-separated set of directories
+    where libraries should be searched first (even before the standard set of directories).
+    LD_PRELOAD, on the other hand, simply lists those shared libraries with functions
+    that can override the standard set.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Question 35
+
+
+    Talking about environment variables, ________ is the login name of the actual
+    user while ________ specifies the language to be used.
+
+
+    **Fill in the blank:**
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    Environment variables can be used to configure the behavior of the shell. USER
+    is the login name of the actual user, while LANG specifies the language to be
+    used.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Question 36
+
+
+    Which of the following can be used to maintain the shared library cache?
+
+
+    # Possible choices:
+
+
+    +   - lddset
+
+    - ldcfg
+
+    - ldcache
+
+    - ldconfig
+
+    - lddconf
+
+    - None of the choices.
+
+
+    ANSWER:
+
+    ldconfig can be used to create the needed links and cache to the most recent libraries
+    that are found in the directories specified through the command line. Simply put,
+    it maintains the shared library cache.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Question 37
+
+
+    Ipchains support (choose all that apply):
+
+
+    # Possible choices:
+
+
+    +   - packet filtering
+
+    - IP masquerading
+
+    - port filtering
+
+    - transparent proxy
+
+    - None of the choices.
+
+
+    ANSWER:
+
+    Ipchains is a firewall and router software that supports features like IP masquerading,
+    packet / port filtering and transparent proxy.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Question 38
+
+
+    ______ can be used to ignore the HUP signal. On the other hand,
+
+    ______ can be used to detach a process from the current shell.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+    nohup can be used to ignore the HUP (i.c. hangup) signal. On the other hand,
+
+    tmux can be used to detach a process from the current shell.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Question 39
+
+
+    Which of the following enables a Linux server to serve as a file server for Microsoft
+    clients?
+
+
+    # Possible choices:
+
+
+    +   - Squid
+
+    - Ipchains
+
+    - SAMBA
+
+    - HuP
+
+    - Yum
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    SAMBA is a SMB client/server application that enables a Linux server to serve
+    as a file server for Microsoft clients.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Question 40
+
+
+    Which of the following has the primary function of caching web contents?
+
+
+    # Possible choices:
+
+
+    +   - Squid
+
+    - Ipchains
+
+    - SAMBA
+
+    - HuP
+
+    - Yum
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    Squid is a proxy server for caching frequently accessed web content. You can use
+    it to control outgoing web access as well.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Question 41
+
+
+    You use ________ to send file contents to the standard output, or use ________
+    to move or rename files.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [
+
+
+    ANSWER:
+
+
+    You use cat to send file contents to the standard output, such as the display.
+    You use cd to change directory. You use mv to move or rename files. You use cp
+    to copy files, or use dd to convert and copy a file.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Question 42
+
+
+    You use ____ to find out the amount of disk space used on each mounted filesystem,
+    or use ____ to create a symbolic link to a file.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ - ]
+
+
+    # ANSWER:
+
+
+    You use df to find out the amount of disk space used on each mounted filesystem.
+    You use ln to create a symbolic link to a file, or ls to list the available files.
+    You use touch to change the time stamp of a file.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Question 43
+
+
+    ________ is for making a directory while ________ is for removing a directory.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    mkdir is for making a directory while rmdir is for removing a directory. You use
+    pwd to display the name of the current working directory.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Question 44
+
+
+    You use ________ to find out where the binary files are for a particular command.
+    You use ________ to shutdown the Linux system.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    You use whereis to find out where the binary, source and manual page files are
+    for a particular command. You use shutdown to shutdown the Linux system.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Question 45
+
+
+    You use ________ to create new user. You may also use ________ to create new users
+    in batch form.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    You use useradd to create new user, userdel to delete user account, or userm to
+    modify a user account. You may also use newusers to create new users in batch
+    form.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'Question 46
+
+
+    You use ________ to create a new group, or use ________ to modify existing group.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    You use groupadd to create a new group, groupdel to delete a group, or groupmod
+    to modify a group.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Question 47
+
+
+    You use ________ to change the time a user''s password will expire, or ________
+    to change the owner of a file to another user.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    You use chage to change the time a user''s password will expire, chgrp to change
+    the group ownership of files, or chown to change the owner of a file to another
+    user.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Question 48
+
+
+    You use ________ to set or update a user''s password. You may also use ________
+    to create the file /etc/shadow.
+
+
+    # Fill in the blank:
+
+
+    [ ] /[
+
+
+    # ANSWER:
+
+
+    You use passwd to set or update a user''s password. You may also use pwconv to
+    create the file /etc/shadow from the file /etc/passwd - that is, to convert clear
+    text passwords to shadow passwords.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Question 49
+
+
+    You use ________ to display statistics on users'' connect time, and ________ to
+    enable the accounting of processes.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    # ANSWER:
+
+
+    You use ac to display statistics on users'' connect time, and accton to enable
+    the accounting of processes. You also use last to display a list of users who
+    have logged in.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Question 50
+
+
+    You use ________ to turn system quotas on. You also use ________ to turn system
+    quotas off.
+
+
+    # Fill in the blank:
+
+
+    ANSWER:
+
+    You use quotaon to turn system quotas on. You also use quotaoff to turn system
+    quotas off.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Question 51
+
+
+    You use ________ to edit user quotas. You also use ________ to show the various
+    users'' limits
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    You use edquota to edit user or group quotas. You also use quota to show the various
+    users'' limits and current disk usage.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Question 52
+
+
+    What is the default mode of vi?
+
+
+    # Possible choices:
+
+
+    +   - command
+
+    - input
+
+    - output
+
+    - admin
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    You use vi to invoke the vi text editor. You use head to view the first few lines
+    of a file. vi is a mode-oriented editor. The default is command mode. To enter
+    text you need to first switch to input mode.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Question 53
+
+
+    You use ________ to view the last few lines, or use ________ to search for pattern
+    in a file.
+
+
+    # Fill in the blank:
+
+
+    [ ] / [
+
+
+    ANSWER:
+
+
+    You use tail to view the last few lines. You use grep to search for pattern in
+    a file.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Question 54
+
+
+    The default permissions are ________ for Executable files and ________ for Text
+    files.
+
+
+    # Possible choices:
+
+
+    +   - 777/666
+
+    - 666/777
+
+    - 555/666
+
+    - 666/555
+
+    - 022/666
+
+    - 666/022
+
+
+    None of the choices.
+
+
+    # ANSWER:
+
+
+    umask is used to set and determine the default file creation permissions on the
+    system. The default permissions are 777 for Executable files and 666 for Text
+    files. These defaults allow all users to execute an executable file but not to
+    execute a text file. All users can read and write the text file though.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Question 55
+
+
+    The most common umask setting is:
+
+
+    # Possible choices:
+
+
+    +   - 022
+
+    - 023
+
+    - 055
+
+    - 066
+
+    - 444
+
+    - 555
+
+    - 666
+
+
+    ANSWER:
+
+
+    The most common umask setting is 022. The /etc/profile script is where you may
+    have the umask command set for all users.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# Question 56
+
+
+    Unusual hidden files that start with a period:
+
+
+    # Possible choices:
+
+
+    are normally shown thru the ls command.
+
+
+    are normally not shown thru the ls command.
+
+
+    # ANSWER:
+
+
+    Unusual hidden files that start with a period are normally not shown thru the
+    ls command. These files may be used to hide tools and malicious programs. For
+    example, a hacker may exploit SUID root programs and leave a SUID program as a
+    backdoor. You may use the find command to find them all out.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Question 57
+
+
+    Unowned files may indicate:
+
+
+    # **Possible choices:**
+
+
+    +   - an intrusion
+
+    - system error
+
+    - file system corruption
+
+
+    ANSWER:
+
+
+    You may use tripwire to scan for changes in system files. Unowned files may indicate
+    an intrusion and should not be permitted.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# Question 58
+
+
+    Linux relies on the __________ file to enable server and client programs to convert
+    service names to port numbers.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    # ANSWER:
+
+
+    Linux relies on the /etc/services file to enable server and client programs to
+    convert service names to port numbers. Only the "root" user should be allowed
+    to make modification to this file. You may even immunize this file via the command
+    chattr.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Question 59
+
+
+    Which of the following refers to files that include dynamically loadable kernel
+    components?
+
+
+    # Possible choices:
+
+
+    +   - DRM
+
+    - RPM
+
+    - RSM
+
+    - ROM
+
+    - PRM
+
+    - PKG
+
+    - DEB
+
+    - LKM
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    The term Loadable Kernel Modules (LKM) refers to files that include dynamically
+    loadable kernel components. They are normally for loading device drivers and other
+    hardware drivers.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# Question 60
+
+
+    The controlling of who is allowed to execute tasks via cron is stored in which
+    2 files?
+
+
+    # Fill in the blank:
+
+
+    [ ] / [ ]
+
+
+    ANSWER:
+
+
+    cron and at are used to execute certain tasks at predefined times, and are often
+    the attack targets. Note that the controlling of who is allowed to execute tasks
+    via cron is stored in the /var/adm/cron/cron.allow and /var/adm/cron/cron.deny
+    file.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Question 61
+
+
+    You should restrict su command to certain users only through editing:
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    # ANSWER:
+
+
+    The su command allows you to substitute user. In other words, it allows you to
+    become other existing users on the system. You should restrict su command to certain
+    users only through editing the /etc/pam.d/ directory.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Question 62
+
+
+    Which of the following is a security framework installed with SLE 11?
+
+
+    # Possible choices:
+
+
+    +   - Checkpoint FW
+
+    - NortonAW
+
+    - Stateful Chain
+
+    - Novell AppArmor
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    Novell AppArmor is a security framework installed with SLE 11. It provides network
+    application security via mandatory access control.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Question 63
+
+
+    In the Linux file system, a ______ link is in fact a second name for a file.
+
+
+    # Possible choices:
+
+
+    +   - soft
+
+    - hard
+
+    - virtual
+
+    - symbolic
+
+
+    None of the choices.
+
+
+    # ANSWER:
+
+
+    In the Linux file system, a hard link is in fact a second name for a file. If
+    you fail to check the number of links to a file, an attacker may write to or read
+    from this file through their own links in their directory. You don''t want to
+    allow for too many links to your files.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# Question 64
+
+
+    A _______ link is a special type of file that contains a path name.
+
+
+    # Possible choices:
+
+
+    +   soft
+
+    hard
+
+    virtual
+
+    symbolic
+
+    None of the choices.
+
+
+    ANSWER:
+
+
+    A symbolic link is a special type of file that contains a path name. An attacker
+    can use a symbolic link to cause your application to write to the wrong file.
+    Or, he can substitute his data for your own when you read your file. You may want
+    to avoid functions that follow symbolic links as much as possible.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Question 65
+
+
+    If you are to export file systems via the NFS service, for security sake you should
+    configure the ________ file with the most restrictive access possible.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    # ANSWER:
+
+
+    If you are to export file systems via the NFS service, configure the /etc/exports
+    file with the most restrictive access possible (such as read only). You should
+    also ensure that the sticky bit is set on /tmp and /usr/tmp.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'Question 66
+
+    syslog and RMON are identical in functionality under the latest SUSE Linux kernel.
+
+
+    # Possible choices:
+
+
+    +   - True
+
+    - False
+
+
+    ANSWER:
+
+
+    False. syslog refers to the standard for forwarding log messages. This work primarily
+    in an IP network. The syslog protocol is a client server protocol. RMON (Remote
+    Network MONitoring) supports monitoring and protocol analysis of LANs. The configuration
+    set in the syslog.conf file determines what gets logged and what does not.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Question 67
+
+
+    To run SuSEconfig manually, what command should you use?
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    SuSEconfig serves as the backend for YaST2. To run SuSEconfig manually, use the
+    command SuSEconfig.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# Question 68
+
+
+    __________ be used to show information about the available USB buses in the system.
+    However, to make use of it the Linux kernel needs to support the interface.
+
+
+    # Fill in the blank:
+
+
+    [ __________ ]/[ ]
+
+
+    # ANSWER:
+
+
+    Isusb can be used to show information about the available USB buses in the system
+    as well as the devices connected to them. To make use of it, the Linux kernel
+    needs to support the /proc/bus/usb interface.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# Question 69
+
+
+    You may use __________ to protect a file against accidental overwriting.
+
+
+    # Possible choices:
+
+
+    +   - chmod 400
+
+    - chmod 500
+
+    - chmod 600
+
+    - chmod 644
+
+    - chmod 660
+
+
+    None of the choices.
+
+
+    # ANSWER:
+
+
+    You may use chmod 400 file to protect a file against accidental overwriting. You
+    may use chmod 644 file to make a publicly readable file changeable only by the
+    issuing user. And you may use chmod 660 file so that only those users belonging
+    to your group can change this files.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'Question 70
+
+    sysfs can support bus types (choose all that apply):
+
+
+    # Possible choices:
+
+
+    +   - ISA
+
+    - AGP
+
+    - PCI
+
+    - USB
+
+    - S/390
+
+    - None of the choices.
+
+
+    ANSWER:
+
+    sysfs is a virtual file system. Through virtual files sysfs can export information
+    about the various kernel subsystems, devices and drivers from the kernel''s device
+    model. The supported buses include PCI, USB and S/390 buses.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# Question 71
+
+
+    Configfs is a RAM-based virtual file system available since the _______ Linux
+    kernel.
+
+
+    # Possible choices:
+
+
+    +   2.0
+
+    2.1
+
+    2.3
+
+    2.4
+
+    2.6
+
+    2.9
+
+
+    ANSWER:
+
+
+    sysfs is a virtual file system. Configfs is a RAM-based virtual file system since
+    the 2.6 Linux kernel and is complementary to sysfs.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# Question 72
+
+    SysVinit:
+
+
+    # Possible choices:
+
+
+    +   has a group of processes for controlling the very basic functions of a Linux
+    system.
+
+    has a group of processes for securing the very basic functions of a Linux system.
+
+    has a group of processes for virtualizing the very basic functions of a Linux
+    system.
+
+    replaces init.
+
+    None of the choices.
+
+
+    # ANSWER:
+
+
+    System V initialization SysVinit is a package that has a group of processes for
+    controlling the very basic functions of a Linux system. It includes the init program.
+    Configuration can be done via /etc/inittab.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# Question 73
+
+
+    A cpio archive can be attached to the kernel image via which of the following?
+
+
+    **Possible choices:**
+
+
+    +   - initram
+
+    - initramvs
+
+    - initramatch
+
+    - initramfs
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    initramfs is introduced since the 2.6 Linux kernel series. It has the modules
+    necessary for mounting the rootfs. With it, a cpio archive can be attached to
+    the kernel image.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Question 74
+
+
+    Configuration changes to GRUB2 backgrounds and themes may be made to the __________
+    file.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    # ANSWER:
+
+
+    GRUB 2 is the default boot loader and manager for many new Linux distributions.
+    Configuration changes of the backgrounds and themes may be made to the /etc/default/grub
+    file. The default entry is specified via the GRUB_DEFAULT=setting within this
+    file.'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Question 75
+
+
+    Which of the following can be used to show information about the available USB
+    buses in the system?
+
+
+    # Possible choices:
+
+
+    +   - exusb
+
+    - lsusb
+
+    - shusb
+
+    - prtusb
+
+
+    None of the choices.
+
+
+    # ANSWER:
+
+
+    lsusb can be used to show information about the available USB buses in the system.
+    Ispci, on the other hand, can be used to list all the detailed information about
+    the available PCI buses and devices.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Question 76
+
+
+    What can be used to control systemd?
+
+
+    # Possible choices:
+
+
+    +   - init.r
+
+    - init.sc
+
+    - systemctl
+
+    - systemcrm
+
+    - systemcfg
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    systemd is a system and service manager. If it runs as PID 1 on boot, it serves
+    as the init system that brings up the various userspace services. systemctl can
+    be used to control it.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# Question 77
+
+
+    The __________ signal allows the systemd system manager to serialize its state
+    and reexecute itself.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    The SIGTERM signal allows the systemd system manager to serialize its state and
+    reexecute itself. This is kind of like systemctl daemon-reexec.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Question 78
+
+
+    The __________ signal allows the systemd manager to start the sigpwr.target unit.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+    nThe SIGPWR signal allows the systemd manager to start the sigpwr.target unit.
+    This is just like systemctl start sigpwr.target.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Question 79
+
+
+    __________ being used internally by shutdown for implementing delayed shutdowns.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+    /run/systemd/shutdownd is being used internally by shutdown for implementing delayed
+    shutdowns.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'Question 80
+
+    What can be used to generate a configuration file for GRUB?
+
+
+    # Possible choices:
+
+
+    +   - grub-setconfig
+
+    - grub-mkconfigfile
+
+    - grub-makeconfig
+
+    - grub-mkconfig
+
+    - None of the choices.
+
+
+    ANSWER:
+
+    grub-mkconfig can be used to generate a configuration file for GRUB, which is
+    grub.cfg. The menu.lst of GRUB legacy is no longer in use in GRUB 2.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# Question 81
+
+
+    When you use GRUB_HIDDEN_TIMEOUT= , the menu will simply be shown for the number
+    of seconds specified in:
+
+
+    # Possible choices:
+
+
+    +   - GRUBTIMEOUT
+
+    - GRUB_TIMELOG
+
+    - GRUB_TIMEOUT
+
+    - GRUB_HIDE_TIME
+
+    - GRUB_TIMEOUT_HIDDEN
+
+    - GRUB_HIDDEN_TIMEOUT_ALTERNATIVE
+
+
+    None of the choices.
+
+
+    # ANSWER:
+
+
+    When you use GRUB_HIDDEN_TIMEOUT= , the menu will simply be shown for the number
+    of seconds specified in GRUB_TIMEOUT.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Question 82
+
+
+    What can be used to specify the background image to use by GRUB2?
+
+
+    # Possible choices:
+
+
+    +   - GRUB_BACK
+
+    - GRUB_BACKIMG
+
+    - GRUB_BACKIMAGE
+
+    - GRUB_BACKGD
+
+    - GRUB_BACKGROUND
+
+    - GRUB_BACKIMG_OPT
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    GRUB_BACKGROUND can be used to specify the background image to use by GRUB2. You
+    should enter the full image path here.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# Question 83
+
+
+    When you use GRUB_HIDDEN_TIMEOUT=___, the system will be immediately booted to
+    the default OS.
+
+
+    # Possible choices:
+
+
+    +   0
+
+    1
+
+    2
+
+    None of the choices.
+
+
+    ANSWER:
+
+
+    When you use GRUB_HIDDEN_TIMEOUT=0, no menu will be displayed and the system will
+    be immediately booted to the default OS.'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# Question 84
+
+
+    Which of the following often serves as the back-end to other front-end tools such
+    as synaptic and aptitude?
+
+
+    # Possible choices:
+
+
+    +   - apt-get
+
+    - apt-seek
+
+    - apt-read
+
+    - apt-proc
+
+    - apt-cache
+
+    - None of the choices.
+
+
+    # ANSWER:
+
+
+    apt-get is a command-line tool for handling packages. It often serves as the back-end
+    to other front-end tools such as synaptic and aptitude.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'Question 85
+
+
+    By default, the X Window System of SUSE can be configured with:
+
+
+    # Possible choices:
+
+
+    +   - SaX2
+
+    - XFree86
+
+    - Xconfig
+
+    - libzypp
+
+    - Yast
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    By default, the X Window System of SUSE can be configured with the SaX2 interface.
+    Alternatively you can have it configured manually through editing its configuration
+    files.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Question 86
+
+
+    You may use the ________ command to create the /etc/X11/xorg.conf file.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    You use the command known as sax2 to create the /etc/X11/xorg.conf file, which
+    is the primary configuration file of the X Window System.'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# Question 87
+
+
+    You may view the ________ file to identify partitions that have been created,
+    as well as the parameters with which they have been mounted.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    You may view the /etc/vfstab file to identify partitions that have been created,
+    as well as the parameters with which they have been mounted. For partitions that
+    hardly change you may want to set the ro [read-only] mount parameter. For real
+    sensitive partitions, consider to have the nosuid parameter set.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'Question 88
+
+
+    Which of the following is the software management engine for SUSE Linux?
+
+
+    # Possible choices:
+
+
+    +   - SaX2
+
+    - XFree86
+
+    - Xconfig
+
+    - libzypp
+
+    - Yast
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    libzypp is the software management engine for SUSE Linux – it manages dependencies
+    for products and patterns. A pattern refers to an installable list of packages
+    that carry some special purposes.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Question 89
+
+
+    The YaST LVM configuration section can be reached via:
+
+
+    # Possible choices:
+
+
+    +   - the YaST Expert Partitioner.
+
+    - the YaST Disk Manager
+
+    - the YaST Volume Wizard
+
+    - SaX2
+
+    - libzypp
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    The YaST LVM configuration section can be reached via the YaST Expert Partitioner.
+    Do realize that LVM is suitable primarily for heavily used PCs or small servers
+    with growing data stocks. The first to deploy LVM is to create a volume group.
+    Do this only through YaST. You do not want to mess with any command line tools
+    on this.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# Question 90
+
+
+    The YaST Partitioner GUI tool can be used to configure (choose all that apply)
+
+
+    # Possible choices:
+
+
+    +   - the partitioning of hard disks
+
+    - RAID
+
+    - Volume Management
+
+    - Crypt Files
+
+    - NAT
+
+    - NFS
+
+    - None of the choices.
+
+
+    ANSWER:
+
+
+    You use the YaST Partitioner GUI tool to configure or modify the partitioning
+    of hard disks. You can also use it to configure functions like RAID, Volume Management,
+    Crypt Files, or NFS.'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Question 91
+
+
+    The __________ specifies the domain to which the host belongs, plus the status
+    of the name server address.
+
+
+    # Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+    /etc/resolv.conf specifies the domain to which the host belongs, plus the status
+    of the name server address. /etc/hosts has IP addresses assigned to hostnames.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "Question 92\n/etc/bash.bashrc:\n\n# Possible choices:\n\n+   applies to all\
+    \ users\napplies to the owner of the home folder only\nis legacy. \n\nANSWER:\n\
+    \nYou want to know that /etc/bash.bashrc applies to all users, while ~/.bashrc\
+    \ applies to the user of a home folder (in other words, personal preferences and\
+    \ personal scripts should be kept here)."
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Question 93
+
+
+    unset can be used to unset read-only shell variables.
+
+
+    # Possible choices:
+
+
+    +   True
+
+
+    +   False
+
+
+    # ANSWER:
+
+
+    False. You want to know that unset can be used to unset a shell variable and have
+    it removed from memory. Keep in mind, it cannot unset read-only shell variables.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# Question 94
+
+
+    What script can be used to start, stop or restart network interfaces?
+
+
+    Fill in the blank:
+
+
+    [ ]
+
+
+    ANSWER:
+
+
+    ifup, ifdown, and ifstatus are scripts you can use to start or stop network interfaces
+    or find out the status of the specified interface. The rcnetwork script can also
+    be used to start, stop or restart network interfaces.
+
+
+    END OF BOOK'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: 'Made in the USA
+
+    Middletown, DE
+
+    18 June 2015'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# About ExamREVIEW.NET
+
+
+    ExamREVIEW is an independent content developer not associated/affiliated with
+    the certification vendor(s) mentioned throughout this book. The name(s), title(s)
+    and award(s) of the certification exam(s) mentioned in this book are the trademark(s)
+    of the respective certification vendor(s). We mention these name(s) and/or the
+    relevant terminologies only for describing the relevant exam process(es) and knowledge.
+    We at ExamREVIEW develop material entirely on our own without endorsement from
+    the certification vendor(s). Our material is fully copyrighted. Brandump is strictly
+    prohibited. We provide essential knowledge contents, NOT any generalized "study
+    system" kind of "pick-the-right-answer-every time" techniques or "visit this link"
+    referrals. We keep prices low by eliminating all the non-essential study features.
+
+
+    We are NOT affiliated with SUSE. This book is also NOT endorsed by SUSE. CLA 11
+    is the certification of SUSE.
+
+
+    # EXAMREVIEW.NET
+
+    NO FRILLS Exam Prep Books
+
+
+    ![](img/b57c28af4c9ffd6d86776d602dc97ebb_103_0.png)'
+  merge: -1
+  pgno: 103
