@@ -1,0 +1,3190 @@
+- md: '
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_0_0.png)
+
+
+    # Linux Mint 18
+
+
+    Guide for Beginners
+
+
+    William Rowley
+
+
+    # Linux Mint 18
+
+
+    # Guide for Beginners
+
+
+    By William Rowley
+
+
+    Copyright© 2017 by William Rowley
+
+    All Rights Reserved
+
+
+    Copyright © 2017 by William Rowley
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the author, except in the case of brief quotations embodied in critical reviews
+    and certain other noncommercial uses permitted by copyright law.
+
+
+    # Table of Contents
+
+
+    Introduction
+
+
+    Chapter 1- What is Linux Mint?
+
+
+    Chapter 2- Installation of Linux Mint
+
+
+    Chapter 3- Linux Mint Desktop
+
+
+    Chapter 4- Software Management
+
+
+    Chapter 5- Tips and Tricks
+
+
+    # Conclusion
+
+
+    # Disclaimer
+
+
+    While all attempts have been made to verify the information provided in this book,
+    the author does not assume any responsibility for errors, omissions, or contrary
+    interpretations of the subject matter contained within. The information provided
+    in this book is for educational and entertainment purposes only. The reader is
+    responsible for his or her own actions and the author does not accept any responsibilities
+    for any liabilities or damages, real or perceived, resulting from the use of this
+    information.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are owned by
+    the owners themselves, not affiliated with this document. **
+
+
+    # Introduction
+
+
+    Most people in the world have turned to using Linux as opposed to the common Windows
+    operating system. This is because they have realized how powerful Linux is and
+    that one can achieve a lot when using Linux. One also feels proud when they are
+    termed to be a “Linux Geek.” Linux comes in a wide variety of distributions, and
+    each distribution has been made to be used in a particular field for which it
+    is suitable.
+
+
+    Linux Mint is one of the available Linux distributions, and this was developed
+    based on Ubuntu and Debian. You can use this Linux distribution to perform a number
+    of tasks. This book is a guide for you on how to use Linux Mint, and it has been
+    updated to Linux Mint 18.0. Enjoy reading!
+
+
+    # Chapter 1- What is Linux Mint?
+
+
+    Linux Mint forms one of the common Linux distributions used worldwide by millions
+    of people. This Linux distribution offers full multimedia support and is easy
+    for one to use. It is open source, which means that one can download it and then
+    perform some customizations on it so as to meet their needs. The development of
+    Linux Mint is community driven, which means that the user is able to give back
+    feedback on their experience when using Linux Mint for the purpose of improving
+    it.
+
+
+    The development of Linux Mint is based on Ubuntu and Debian, and it comes with
+    the best packages, up to 30,000 of them, with the best package manager. The first
+    version of Linux Mint was released in the year 2006 as Linux Mint 1.0, and this
+    was a beta release. Later on, Linux Mint 2.0 was released, and this used Ubuntu
+    as its codebase.
+
+
+    In 2010, the Debian-based version of Linux Mint was released. This version of
+    Linux Mint was not tied to the Ubuntu packages.
+
+
+    # Chapter 2- Installation of Linux Mint
+
+
+    The Linux Mint operating system can be downloaded for free. This will be downloaded
+    in the form of an ISO file which you are able to burn on a DVD. The liveDVD is
+    bootable and has a fully-functional operating system which you are able to try
+    without having to alter your PC. It is good for you to first try the liveDVD and
+    then install Linux Mint if you like what you see in it. All the tools you may
+    need, including the ones for partitioning, will be available.
+
+    '
+  mdcn: '
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_0_0.png)
+
+
+    # Linux Mint 18
+
+
+    新手指南
+
+
+    William Rowley
+
+
+    # Linux Mint 18
+
+
+    # 新手指南
+
+
+    作者：William Rowley
+
+
+    版权所有 © 2017 William Rowley
+
+    保留所有权利
+
+
+    Copyright © 2017 by William Rowley
+
+    保留所有权利。未经作者事先书面许可，不得以任何形式或通过任何手段（包括复印、录制或其他电子或机械方法）复制、发行或传输本出版物的任何部分，但批判性评论中的简短引用以及版权法允许的某些非商业用途除外。
+
+
+    # 目录
+
+
+    引言
+
+
+    第 1 章 什么是 Linux Mint？
+
+
+    第 2 章 Linux Mint 的安装
+
+
+    第 3 章 Linux Mint 桌面
+
+
+    第 4 章 软件管理
+
+
+    第 5 章 技巧与提示
+
+
+    # 结论
+
+
+    # 免责声明
+
+
+    尽管已尽一切努力验证书中提供的信息，但作者对书中包含的主题内容的错误、遗漏或相反解释不承担任何责任。书中提供的信息仅供教育和娱乐之用。读者对其自己的行为负责，作者对使用这些信息所导致的任何实际或感知的责任或损害不承担任何责任。
+
+
+    书中使用的商标均未经许可，且这些商标的出版未获得商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，由其所有者所有，与本文无关联。**
+
+
+    # 引言
+
+
+    世界上绝大多数人已经转向使用 Linux 而不是常见的 Windows 操作系统。这是因为他们已经意识到 Linux 是多么强大，以及使用 Linux 可以成就很多目标。当被称为“Linux
+    极客”时，人们也会感到自豪。Linux 有多种发行版，每种发行版都是为了特定的领域而设计的。
+
+
+    Linux Mint 是可选的 Linux 发行版之一，基于 Ubuntu 和 Debian 开发。你可以使用这个 Linux 发行版完成许多任务。本书是一份关于如何使用
+    Linux Mint 的指南，并已更新至 Linux Mint 18.0。阅读愉快！
+
+
+    # 第 1 章 什么是 Linux Mint？
+
+
+    Linux Mint 是全球数百万用户使用的常用 Linux 发行版之一。该 Linux 发行版提供完整的多媒体支持，并且易于使用。它是开源的，这意味着用户可以下载它并对其进行一些定制以满足自己的需求。Linux
+    Mint 的开发是社区驱动的，这意味着用户能够对其使用 Linux Mint 的体验提供反馈，以改进它。
+
+
+    Linux Mint 的开发基于 Ubuntu 和 Debian，并配备了最优秀的软件包（多达 30,000 个）以及最好的包管理器。Linux Mint
+    的第一个版本于 2006 年作为 Linux Mint 1.0 发布，这是一个测试版本。随后，发布了 Linux Mint 2.0，它使用 Ubuntu 作为代码库。
+
+
+    2010 年，发布了基于 Debian 的 Linux Mint 版本。这个版本的 Linux Mint 不受限于 Ubuntu 软件包。
+
+
+    # 第 2 章 Linux Mint 的安装
+
+
+    可以免费下载 Linux Mint 操作系统。它将以 ISO 文件的形式下载，你可以将其刻录到 DVD 中。LiveDVD 是启动的，并包含一个功能完整的操作系统，你可以在不更改电脑的情况下对其进行尝试。建议你先尝试
+    LiveDVD，如果你喜欢你看到的内容，再安装 Linux Mint。你可能需要的所有工具（包括分区工具）都将可用。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_0_0.png)
+
+
+    # # Linux Mint 18
+
+
+    Guide for Beginners
+
+
+    William Rowley'
+  - '[PAGE 1]
+
+
+    # # Linux Mint 18
+
+
+    # # Guide for
+
+    Beginners
+
+
+    By William Rowley'
+  - '[PAGE 2]
+
+
+    # Copyright©2017 by William
+
+    Rowley
+
+    All Rights Reserved'
+  - '[PAGE 3]
+
+
+    Copyright © 2017 by William Rowley
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the author, except in the case of brief quotations embodied in critical reviews
+    and certain other noncommercial uses permitted by copyright law.'
+  - '[PAGE 4]
+
+
+    # Table of Contents
+
+
+    Introduction
+
+
+    Chapter 1- What is Linux Mint?
+
+
+    Chapter 2- Installation of Linux Mint
+
+
+    Chapter 3- Linux Mint'
+  - '[PAGE 5]
+
+
+    # Desktop
+
+
+    # Chapter 4- Software
+
+
+    # Management
+
+
+    # Chapter 5- Tips and Tricks
+
+
+    # Conclusion'
+  - '[PAGE 6]
+
+
+    # Disclaimer
+
+
+    While all attempts have been made to verify the information provided in this book,
+    the author does assume any responsibility for errors, omissions, or contrary interpretations
+    of the subject matter contained within. The information provided in this book
+    is for educational and entertainment purposes only. The reader is responsible
+    for his or her own'
+  - '[PAGE 7]
+
+
+    actions and the author does not accept any responsibilities for any liabilities
+    or damages, real or perceived, resulting from the use of this information.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document. **'
+  - '[PAGE 8]
+
+
+    # # Introduction
+
+
+    Most people in the world have turned to using Linux as opposed to the common Windows
+    operating system. This is because they have realized how powerful Linux is and
+    that one can achieve a lot when using Linux. One also feels proud when they are
+    termed to be a *'
+  - '[PAGE 9]
+
+
+    “Linux Geek.” Linux comes in a wide variety of distributions, and each distribution
+    has been made to be used in a particular field for which it is suitable.
+
+    Linux Mint is one of the available Linux distributions, and this was developed
+    based on Ubuntu and Debian. You can use this Linux distribution to perform a number
+    of tasks. This book is a guide for you on how to use Linux Mint, and it has'
+  - '[PAGE 10]
+
+
+    been updated to Linux Mint 18.0. Enjoy reading!'
+  - '[PAGE 11]
+
+
+    # Chapter 1- What is Linux Mint?
+
+
+    Linux Mint forms one of the common Linux distributions used worldwide by millions
+    of people. This Linux distribution offers full multimedia support and is easy
+    for one to use. It is open source, which means that one can'
+  - '[PAGE 12]
+
+
+    download it and then perform some customizations on it so as to meet their needs.
+    The development of Linux Mint is community driven, which means that the user is
+    able to give back feedback on their experience when using Linux Mint for the purpose
+    of improving it.
+
+
+    The development of Linux Mint is based on Ubuntu and Debian, and it comes with'
+  - '[PAGE 13]
+
+
+    the best packages, up to 30,000 of them, with the best package manager. The first
+    version of Linux Mint was released in the year 2006 as Linux Mint 1.0, and this
+    was a beta release. Later on, Linux Mint 2.0 was released, and this used Ubuntu
+    as its codebase.
+
+
+    In 2010, the Debian-based version of Linux Mint was released. This version'
+  - '[PAGE 14]
+
+
+    of Linux Mint was not tied to the Ubuntu
+
+    packages.'
+  - '[PAGE 15]
+
+
+    # Chapter 2-
+
+    Installation of Linux Mint
+
+
+    The Linux Mint operating system can be downloaded for free. This will be downloaded
+    in the form of an ISO file which you are able to burn on a DVD.
+
+    The liveDVD is bootable and has a'
+  - '[PAGE 16]
+
+
+    fully-functional operating operating system which you are able to try without
+    having to alter your PC. It is good for you to first try the liveDVD and then
+    install Linux Mint if you like what you see in it. All the tools you may need,
+    including the ones for partitioning, will be available on the DVD. The first step
+    is for you to begin by downloading the ISO of the OS which you can find at'
+  - '[PAGE 17]
+
+
+    http://www.linuxmint.com/download.phr
+
+
+    You will then be able to choose the version you need. In this book, we are only
+    interested in Linux Mint 18. This will be found in this download page, so go ahead
+    to download it. The page will also have the following:
+
+
+    +   - a torrent link
+
+    - how to verify the ISO'
+  - '[PAGE 18]
+
+
+    +   * a list of the download mirrors
+
+
+    In this case, we need to download the ISO of the file. There are two ways that
+    we can download this, by torrent, which provides a peer to peer protocol, and
+    by a download mirror, which uses either the FTP or the HTTP protocol. The SHA256
+    checksum will help you know whether your image is corrupted or not once the'
+  - '[PAGE 19]
+
+
+    download is complete.
+
+
+    Once the download of the ISO image is complete, you should go ahead to burn it
+    to a DVD. If the DVD has some faults, you will experience difficulties when trying
+    to boot from it, and finding help will be hard for you. An error in the downloaded
+    ISO file may also make you experience difficulties when trying to'
+  - '[PAGE 20]
+
+
+    boot from it. Errors may also occur as you burn the file to the DVD, and these
+    may give you a headache when trying to boot from it.
+
+
+    The SHA256 checksum will work to help you verify whether the file is as it should
+    be. This verification should be done before you can burn the image to the DVD.
+    The sha256 checksum comes'
+  - '[PAGE 21]
+
+
+    installed with all the versions of Linux.
+
+
+    Open your terminal, and use the “cd” command so as to navigate to the directory
+    in which you have kept the downloaded file. Once you are in that directory, type
+    the following command:
+
+
+    ```
+
+    sha256sum -b linuxmint.iso
+
+    ```
+
+
+    The command will give you a series of'
+  - '[PAGE 22]
+
+
+    numbers and letters, and these represent the checksum for your ISO file. If your
+    ISO file is changed slightly, then the checksum will change drastically. This
+    is why we have to verify and be sure that it is the same.
+
+
+    The link labeled “verify your ISO” on the download page for the ISO has a checksum,
+    and you should compare the'
+  - '[PAGE 23]
+
+
+    one obtained above with this one. If you find that the two checksums are the same,
+    then you should conclude that your ISO file is okay, and then you can proceed
+    to burn it to your DVD.
+
+
+    For those using Windows, it is most likely that you have not installed the sha256sum.
+    You can download and then install it on your system. Both the ISO'
+  - '[PAGE 24]
+
+
+    file and the md5sum.exe should be kept in the same directory. You can then navigate
+    to the directory you have kept these two in via the command line and then type
+    the following command:
+
+
+    ```
+
+    ```sha256sum linuxmint.iso```
+
+    ```
+
+
+    You will then have a chance to compare the two checksums. Now that you have'
+  - '[PAGE 25]
+
+
+    done the verification, and probably you are sure that the ISO image is okay, you
+    can proceed to burn it to the DVD. Just insert it into the drive and then begin
+    to burn the image to the DVD. For Linux users who want to burn the image to the
+    DVD via the command line, you can run the following command:
+
+
+    ```
+
+    cdrecord -v -dao dev=1,0,0
+
+    ```'
+  - '[PAGE 26]
+
+
+    # linuxmint.iso
+
+
+    Ensure that you are in the directory in which you have downloaded the file.
+
+    Ensure that the number dev= has been replaced with the correct number for the
+    device. If you don''t know the device number, just run the command given below:'
+  - '[PAGE 27]
+
+
+    # cdrecord –scanbus
+
+
+    You can proceed to burn the image to the DVD.
+
+
+    # Boot the LiveDVD
+
+
+    Insert the DVD into the drive, and then restart your computer. The following screen
+    will be seen:'
+  - '[PAGE 28]
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_28_0.png)'
+  - '[PAGE 29]
+
+
+    In case you fail to see the screen, the reason is because you have not configured
+    the BIOS settings of your computer so as to boot from the DVD. You can restart
+    the computer and then restart the computer and then the key which commands your
+    computer to boot from the drive. This can be F1, F2, or the Escape key, depending
+    on the computer you are using.'
+- md: "\nYou can then choose “Start Linux Mint” and then hit the Enter key. The live\
+    \ system will be started and you will see its screen. The live system will be\
+    \ ready after some minutes, and the desktop will be presented.\n\nNote that at\
+    \ this point, Linux Mint will not be installed on your computer, but it will only\
+    \ be running from the DVD. However, once you install it on your computer, it will\
+    \ just be the same as the one which you are running from the DVD. Also, you should\
+    \ know that the system will be slower when running it from the DVD than after\
+    \ you have installed it on the computer. The reason behind this is that the data\
+    \ has to be read from the DVD, rather than reading it from the hard disk, which\
+    \ is a bit faster.\n\nClick on the “Install Linux Mint” icon which is located\
+    \ on the desktop. The installer will then appear. It will also be good for you\
+    \ to read more about the release notes so that you can know more about the features,\
+    \ as well as how to tackle any issues which may arise.\n\nChoose the language\
+    \ which you need, and then click on “Continue.” A screen which asks you whether\
+    \ you need to install the third party software will be presented. This refers\
+    \ to the software which is not fully open source but it has some conditions for\
+    \ licensing. If you need to use these, just check the box and then click on “Continue.”\n\
+    \nIn our next step, laptop users should ensure that they are connected to a power\
+    \ source, an Internet connection, and that the recommended amount of disk space\
+    \ is available. You can then click on “Continue.\"\n\n# Installation type\n\n\
+    This computer currently has no detected operating systems. What would you like\
+    \ to do?\n\n- Erase disk and install Linux Mint\n  Warning: This will delete all\
+    \ your programs, documents, photos, music, and any other files in all operating\
+    \ systems\n\n- Encrypt the new Linux Mint installation for security\n  You will\
+    \ choose a security key in the next step\n\n- Use LVM with the new Linux Mint\
+    \ installation\n  This will set up Logical Volume Management. It allows taking\
+    \ snapshots and easier partition resizing\n\n- Something else\n  You can create\
+    \ or resize partitions yourself, or choose multiple partitions for Linux Mint\n\
+    \nQuit Back Install Now\n\nYou will then have the option of assigning the whole\
+    \ of your hard disk to Linux Mint, or choose to install it alongside another operating\
+    \ system. You can also choose to assign the partitions in a manual manner. However,\
+    \ it is good for you to be aware that if you choose the entire hard disk, anything\
+    \ in the disk will be deleted and replaced by Linux Mint.\n\nIf you choose to\
+    \ install it alongside another operating system, the installer will make use of\
+    \ the available disk space, and the rest will be left for your other operating\
+    \ system. If you choose the option to partition your drive manually, then the\
+    \ partition editor will be presented to you, and you will have to partition the\
+    \ disk manually.\n\nOnce you have selected the option which you need, click on\
+    \ the button for “Install Now.” The installer will be going in the background,\
+    \ and you will be asked some of the setup questions.\n\nFrom the map, click on\
+    \ the location for the city which is near to you. This will help in selecting\
+    \ the time zone you are in. Adjust the time to the correct one and then click\
+    \ on “Continue.”\n\nIt is now time for you to choose the kind of keyboard you\
+    \ will be using. If you are not sure of your keyboard type, begin to type in the\
+    \ text field which is located at the bottom. Keep observing this text field so\
+    \ as to be sure that the key you type is the one which appears on it, and this\
+    \ will tell you whether you have selected the right keyboard or not. Once done,\
+    \ click on “Continue” button.\n\n# Keyboard layout\n\nChoose your keyboard layout:\n\
+    \n| English (urania) | English (US) - English (Dvorak, international with dead\
+    \ keys) |\n| English (Nigeria) | English (US) - Macintosh |\n| English (South\
+    \ Africa) | English (US) - English (Programmer Dvorak) |\n| English (UK) | English\
+    \ (US) - English, alternative international |\n| English (US) | English (US) -\
+    \ English, international with dead keys |\n| Esperanto | English (US) - English,\
+    \ with euro 5 |\n| Estonian | English (US) - Workman |\n| Faroese | English (US)\
+    \ - English (Workman, international with dead keys) |\n| Finnish | English (US)\
+    \ - English (classic Dvorak) |\n\nType here to test your keyboard\n\nDetect Keyboard\
+    \ Layout\n\nBack\n\nContinue\n\nYou can then type in your actual name, and the\
+    \ username, as well as the password. Every time that you need to use Linux Mint,\
+    \ you will have to use this username and password so as to login. After the installation\
+    \ of Linux Mint, you will be in a position to define other accounts if there are\
+    \ other users of the system. You can also give the computer a name which will\
+    \ be used for establishing network connections. Once you are through with this,\
+    \ click on the “Forward” button.\n\nIf there are other operating systems in your\
+    \ computer, the installer will detect them and then ask you to migrate some of\
+    \ your personal information from it. If you are interested in this, just allow\
+    \ it and then click on the “Continue” button.\n\nThe installation will then continue\
+    \ for about 10 to 15 minutes. A progress bar will be shown so as to show you the\
+    \ amount of time which is remaining for the installation to complete.\n\n# Welcome\
+    \ to Linux Mint\n\nWelcome and thank you for choosing Linux Mint. This slideshow\
+    \ will show you around while the system is being installed on your computer.\n\
+    \n![](img/b32d4147b6351d994b4ff9c76e21a196_45_0.png)\n\nAlmost finished copying\
+    \ files...\n\nOnce the installation of Linux Mint has been completed, click on\
+    \ the button for “Restart Now” and your liveDVD will be shut down. You will be\
+    \ prompted to eject the DVD, so just hit the Enter key and it will be removed.\
+    \ The system will then boot from the Linux Mint which you have just installed.\n\
+    \n# Chapter 3- Linux Mint Desktop\n\nThe Desktop refers to a part of the operating\
+    \ system and it is responsible for the elements which you will see on the desktop.\
+    \ These include the Wallpaper, the Panel, the menus, the Control Center, and others.\n\
+    \n# Cinnamon Desktop\n\nCinnamon Linux Mint makes use of the “Cinnamon” desktop,\
+    \ which is very powerful and intuitive.\n\n# Desktop Settings\n\nThe Desktop is\
+    \ a menu for allowing you to change the aspects of the Cinnamon Desktop which\
+    \ you will mostly be using.\n\nTo launch it, click on the “Menu” which is located\
+    \ at the bottom-left corner of the screen, choose “System Settings,” and then\
+    \ click on “Desktop.”\n\nLinux Mint comes in with a default Cinnamon menu. If\
+    \ you need to launch the menu, click on the “Menu” button which is located on\
+    \ the bottom left corner of the screen or hit the “CTRL+SUPER_L.” The SUPER_L\
+    \ on your keyboard refers to the left Windows key.\n\n# “Places” Menu\n\nOnce\
+    \ you choose the section for “Places,” you will be presented with five entries.\
+    \ These entries will provide you with easy access to some of the places on your\
+    \ Cinnamon desktop.\n\nIt is the one which will show the storage volumes which\
+    \ you have in your computer. If you had mounted all the partitions in your computer\
+    \ and you have set the “Desktop Settings” to show the “Mounted Volumes” on your\
+    \ desktop, then there will be no need for you to access the Places on a regular\
+    \ basis. However, for those who chose not to show the mounted volumes on the desktop,\
+    \ or who need to do some mounting on a partition which had not been mounted before,\
+    \ you will have to access this place as it is useful to you.\n\nThe “Home” place\
+    \ is one of the places which will prove to be useful to you.\n\nFor those who\
+    \ have been using the Cinnamon desktop in the past, you must be used to clicking\
+    \ on the “Home” icon which is located on the desktop. Once you have opened too\
+    \ many windows and the desktop disappears, the menu will help you to be able to\
+    \ access the “Home” very quickly.\n\nThe “Home” folder provides you with a location\
+    \ on your system in which you can store all the data which is personal. The “Desktop”\
+    \ folder represents all the data which you have kept on the desktop.\n"
+  mdcn: "\n您可以选择“启动 Linux Mint”然后按下回车键。实时系统将启动，您将看到它的屏幕。几分钟后，实时系统将准备就绪，并显示桌面。\n\n\
+    请注意，此时 Linux Mint 尚未安装到您的计算机上，它仅在从 DVD 运行。然而，一旦您将其安装到计算机上，它将与您现在从 DVD 运行的完全相同。此外，您应该知道，从\
+    \ DVD 运行系统会比安装在电脑上慢。这背后的原因是数据必须从 DVD 读取，而不是从速度较快的硬盘中读取。\n\n点击桌面上的“安装 Linux Mint”图标。安装程序随后将会出现。此外，多阅读一下发布说明也对您大有益，这样您就可以了解更多功能，以及如何处理可能出现的任何问题。\n\
+    \n选择您需要的语言，然后点击“继续”。系统将显示一个询问您是否需要安装第三方软件的界面。这指的是那些并非完全开源但具有某些许可限制的软件。如果您需要使用这些软件，只需勾选该框然后点击“继续”。\n\
+    \n在下一步下一步中，笔记本电脑用户应确保已连接到电源、互联网连接，并且有足够的磁盘空间。然后您可以点击“继续”。\n\n# 安装类型\n\n此计算机当前未检测到操作系统。您想做什么？\n\
+    \n- 擦除磁盘并安装 Linux Mint\n  警告：这将删除您所有操作系统中的所有程序、文档、照片、音乐以及任何其他文件\n\n- 对新的 Linux\
+    \ Mint 安装进行加密以确保安全\n  您将在下一步中选择一个安全密钥\n\n- 在新的新的 Linux Mint 安装中使用 LVM\n  这将设置逻辑卷管理（LVM）。它允许创建快照并更方便地调整分区大小\n\
+    \n- 其他\n  您可以自己创建或调整调整分区大小，或者为 Linux Mint 选择多个分区\n\n退出 退出 立即安装\n\n随后您将有把整个硬盘分配给\
+    \ Linux Mint 的选项，或者选择与另一个操作系统并存安装。您也可以选择手动方式分配分区。然而，您需要意识到的是，如果您选择整个硬盘，磁盘中的任何内容都将被删除并被\
+    \ Linux Mint 替换。\n\n如果您选择与另一个操作系统并存安装，安装程序将利用可用磁盘空间，其余空间将留给您的其他操作系统。如果您选择手动分区驱动器，将向您显示分区编辑器，您必须手动对磁盘进行分区。\n\
+    \n一旦您选择了所需的选项，点击“立即安装”按钮。安装程序将在后台运行，您会被问及一些设置问题。\n\n在地图上，点击您所在附近的城市位置。这将有助于选择您所在的时区。将时间调整为正确的时间，然后点击“继续”。\n\
+    \n现在该选择您将要使用的键盘类型了。如果您不确定键盘类型，请在底部的文本框中开始输入。持续观察此文本框，以确保您输入的按键与屏幕上显示的按键一致，这将告诉您是否选择了正确的键盘。完成后，点击“继续”按钮。\n\
+    \n# 键盘布局\n\n选择您的键盘布局：\n\n| English (urania) | English (US) - English (Dvorak,\
+    \ international with dead keys) |\n| English (Nigeria) | English (US) - Macintosh\
+    \ |\n| English (South Africa) | English (US) - English (Programmer Dvorak) |\n\
+    | English (UK) | English (US) - English, alternative international |\n| English\
+    \ (US) | English (US) - English, international with dead keys |\n| Esperanto |\
+    \ English (US) - English, with euro 5 |\n| Estonian | English (US) - Workman |\n\
+    | Faroese | English (US) - English (Workman, international with dead keys) |\n\
+    | Finnish | English (US) - English (classic Dvorak) |\n\n在此处输入测试您的键盘\n\n检测键盘布局\n\
+    \n返回\n\n继续\n\n然后您可以输入您的真实姓名、用户名以及密码。每当您需要使用 Linux Mint 时，都必须使用此用户名和密码进行登录。安装 Linux\
+    \ Mint 后，如果系统还有其他用户，您将能够定义其他账户。您还可以为计算机命名，将其用于建立网络连接。完成后，点击“向前”按钮。\n\n如果您的计算机中还有其他操作系统，安装程序将检测到它们并要求您从从中迁移一些个人信息。如果您感兴趣，只需允许并点击“继续”按钮。\n\
+    \n安装将持续大约 10 到 15 分钟。屏幕将显示一个进度条，向您显示完成安装所需的剩余时间。\n\n# 欢迎使用 Linux Mint\n\n感谢选择\
+    \ Linux Mint。在您的计算机上安装系统期间，此幻灯片将带您了解周围。\n\n![](img/b32d4147b6351d994b4ff9c76e21a196_45_0.png)\n\
+    \n几乎完成复制文件...\n\n一旦 Linux Mint 安装完成，点击“立即重启”按钮，您的实时 DVD 将关闭。系统会提示您弹出 DVD，只需按下回车键即可将其移除。随后系统将从您刚刚安装的\
+    \ Linux Mint 启动。\n\n# 第 3 章 - Linux Mint 桌面\n\n桌面是操作系统的一部分，负责显示您在桌面上看到的元素。这些包括壁纸、面板、菜单、控制中心等。\n\
+    \n# Cinnamon 桌面\n\nCinnamon Linux Mint 使用“Cinnamon”桌面，该桌面非常强大且直观。\n\n# 桌面设置\n\n\
+    桌面是一个允许您更改您主要使用的 Cinnamon 桌面的菜单。\n\n要启动它，点击屏幕左下角的“菜单”，选择“系统设置”，然后点击“桌面”。\n\nLinux\
+    \ Mint 自带默认的 Cinnamon 菜单。如果您需要启动菜单，点击屏幕左下角的“菜单”按钮或按下“CTRL+SUPER_L”。键盘上的 SUPER_L\
+    \ 指左 Windows 键。\n\n# “位置”菜单\n\n一旦您选择“位置”部分，将向您显示五个项目。这些项目将为您提供对 Cinnamon 桌面某些位置的快捷访问。\n\
+    \n它是显示您计算机中存储卷的项。如果您挂载了计算机中的所有分区，并将“桌面设置”设置为在桌面上显示“挂载卷”，那么您就不需要经常访问这些位置了。然而，对于那些选择不在此桌面上显示挂载卷的用户，或者需要挂载以前未挂载的分区的用户，您将必须访问此位置，因为它对您很有用。\n\
+    \n“主目录”位置是对您证明非常有用的位置之一。\n\n对于过去使用 Cinnamon 桌面的用户，您可能习惯了点击桌面上的“主目录”图标。当您打开了太多窗口导致桌面消失时，菜单将帮助您能够快速访问“主目录”。\n"
+  merge: 0
+  raw:
+  - '[PAGE 30]
+
+
+    You can then choose “Start Linux Mint” and then hit the Enter key. The live system
+    will be started and you will see its screen. The live system will be ready after
+    some minutes, and the desktop will be presented.
+
+
+    Note that at this point, Linux Mint will not be installed on your computer, but
+    it'
+  - '[PAGE 31]
+
+
+    will only be running from the DVD. However, once you install it on your computer,
+    it will just be the same as the one which you are running from the DVD. Also,
+    you should know that the system will be slower when running it from the DVD than
+    after you have installed it on the computer. The reason behind this is that the
+    data has to be read from the DVD, rather than reading it'
+  - '[PAGE 32]
+
+
+    from the hard disk, which is a bit faster.
+
+
+    Click on the “Install Linux Mint” icon which is located on the desktop. The installer
+    will then appear. It will also be good for you to read more about the release
+    notes so that you can know more about the features, as well as how to tackle any
+    issues which may arise.'
+  - '[PAGE 33]
+
+
+    Choose the language which you need, and then click on “Continue.” A screen which
+    asks you whether you need to install the third party software will be presented.
+    This refers to the software which is not fully open source but it has some conditions
+    for licensing. If you need to use these, just check the box and then click on
+    “Continue.”'
+  - '[PAGE 34]
+
+
+    In our next step, laptop users should ensure that they are connected to a power
+    source, an Internet connection, and that the recommended amount of disk space
+    is available. You can then click on “Continue.",'
+  - "[PAGE 35]\n\n# Installation type\n\nThis computer currently has no detected operating\
+    \ systems. What would you like to do?\n\n+   - Erase disk and install Linux Mint\n\
+    \  Warning: This will delete all your programs, documents, photos, music, and\
+    \ any other files in all operating systems\n\n+   - Encrypt the new Linux Mint\
+    \ installation for security\n  You will choose a security key in the next step\n\
+    \n+   - Use LVM with the new Linux Mint installation\n  This will set up Logical\
+    \ Volume Management. It allows taking snapshots and easier partition resizing\n\
+    \n+   - Something else\n  You can create or resize partitions yourself, or choose\
+    \ multiple partitions for Linux Mint\n\nQuit Back Install Now"
+  - '[PAGE 36]
+
+
+    You will then have the option of assigning the whole of your hard disk to Linux
+    Mint, or choose to install it alongside another operating system. You can also
+    choose to assign the partitions in a manual manner. However, it is good for you
+    to be aware that if you choose the entire hard disk, anything in the disk will
+    be deleted and replaced by Linux Mint.'
+  - '[PAGE 37]
+
+
+    If you choose to install it alongside another operating system, the installer
+    will make use of the available disk space, and the rest will be left for your
+    other operating system. If you choose the option to partition your drive manually,
+    then the partition editor will be presented to you, and you will have to partition
+    the disk manually.'
+  - '[PAGE 38]
+
+
+    Once you have selected the option which you need, click on the button for “Install
+    Now.” The installer will be going in the background, and you will be asked some
+    of the setup questions.
+
+
+    From the map, click on the location for the city which is near to you. This will
+    help in selecting the time zone you are'
+  - '[PAGE 39]
+
+
+    in. Adjust the time to the correct one and then click on “Continue.”
+
+
+    It is now time for you to choose the kind of keyboard you will be using. If you
+    are not sure of your keyboard type, begin to type in the text field which is located
+    at the bottom. Keep observing this text field so as to be sure that the key you
+    type is the one which appears on it, and'
+  - '[PAGE 40]
+
+
+    this will tell you whether you have selected the right keyboard or not. Once done,
+    click on “Continue” button.'
+  - '[PAGE 41]
+
+
+    # Keyboard layout
+
+
+    Choose your keyboard layout:
+
+
+    | English (urania) | English (US) - English (Dvorak, international with dead keys)
+    |
+
+    | English (Nigeria) | English (US) - Macintosh |
+
+    | English (South Africa) | English (US) - English (Programmer Dvorak) |
+
+    | English (UK) | English (US) - English, alternative international |
+
+    | English (US) | English (US) - English, international with dead keys |
+
+    | Esperanto | English (US) - English, with euro 5 |
+
+    | Estonian | English (US) - Workman |
+
+    | Faroese | English (US) - English (Workman, international with dead keys) |
+
+    | Finnish | English (US) - English (classic Dvorak) |
+
+
+    Type here to test your keyboard
+
+
+    Detect Keyboard Layout
+
+
+    Back
+
+
+    Continue'
+  - '[PAGE 42]
+
+
+    You can then type in your actual name, and the username, as well as the password.
+    Every time that you need to use Linux Mint, you will have to use this username
+    and password so as to login. After the installation of Linux Mint, you will be
+    in a position to define other accounts if there are other users of the system.
+    You can also give the computer a'
+  - '[PAGE 43]
+
+
+    name which will be used for establishing network connections. Once you are through
+    with this, click on the “Forward” button.
+
+
+    If there are other operating systems in your computer, the installer will detect
+    them and then ask you to migrate some of your personal information from it. If
+    you are interested in this, just allow it and'
+  - '[PAGE 44]
+
+
+    then click on the “Continue” button.
+
+
+    The installation will then continue for about 10 to 15 minutes. A progress bar
+    will be shown so as to show you the amount of time which is remaining for the
+    installation to complete.'
+  - '[PAGE 45]
+
+
+    # Welcome to Linux Mint
+
+
+    Welcome and thank you for choosing Linux Mint. This slideshow will show you around
+    while the system is being installed on your computer.
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_45_0.png)
+
+
+    Almost finished copying files...'
+  - '[PAGE 46]
+
+
+    Once the installation of Linux Mint has been completed, click on the button for
+    “Restart Now” and your liveDVD will be shut down. You will be prompted to eject
+    the DVD, so just hit the Enter key and it will be removed. The system will then
+    boot from the Linux Mint which you have just installed.'
+  - '[PAGE 47]
+
+
+    # Chapter 3- Linux Mint Desktop
+
+
+    The Desktop refers to a part of the operating system and it is responsible for
+    the elements which you will see on the desktop. These include the Wallpaper, the
+    Panel, the menus, the Control Center, and others.'
+  - '[PAGE 48]
+
+
+    # Cinnamon Desktop
+
+
+    Cinnamon Linux Mint makes use of the “Cinnamon” desktop, which is very powerful
+    and intuitive.
+
+
+    # Desktop Settings
+
+
+    The Desktop is a menu for allowing you'
+  - '[PAGE 49]
+
+
+    to change the aspects of the Cinnamon Desktop which you will mostly be using.
+
+
+    To launch it, click on the “Menu” which is located at the bottom-left corner of
+    the screen, choose “System Settings,” and then click on “Desktop.”'
+  - '[PAGE 50]
+
+
+    <!-- no content -->'
+  - '[PAGE 51]
+
+
+    Linux Mint comes in with a default Cinnamon menu. If you need to launch the menu,
+    click on the “Menu” button which is located on the bottom left corner of the screen
+    or hit the “CTRL+SUPER_L.” The SUPER_L on your keyboard refers to the left Windows
+    key.'
+  - '[PAGE 52]
+
+
+    # “Places” Menu
+
+
+    Once you choose the section for “Places,” you will be presented with five entries.
+    These entries will provide you with easy access to some of the places on your
+    Cinnamon desktop.
+
+
+    It is the one which will show the storage'
+  - '[PAGE 53]
+
+
+    volumes which you have in your computer. If you had mounted all the partitions
+    in your computer and you have set the “Desktop Settings” to show the “Mounted
+    Volumes” on your desktop, then there will be no need for you to access the Places
+    on a regular basis. However, for those who chose not to show the mounted volumes
+    on the desktop, or who need to do some'
+  - '[PAGE 54]
+
+
+    mounting on a partition which had not been mounted before, you will have to access
+    this place as it is useful to you.
+
+
+    The “Home” place is one of the places which will prove to be useful to you.
+
+    For those who have been using the Cinnamon desktop in the past, you must be used
+    to clicking on the “Home” icon which is located on the desktop. Once'
+  - '[PAGE 55]
+
+
+    you have opened too many windows and the desktop disappears, the menu will help
+    you to be able to access the “Home” very quickly.
+
+
+    The “Home” folder provides you with a location on your system in which you can
+    store all the data which is personal. The “Desktop” folder represents all the
+    data which you have kept on the desktop.'
+- md: '
+
+    If you place some data on this folder, it will also be added to the desktop. You
+    can also do the same by dragging your file to the desktop. The “Network” place
+    is responsible for showing you the shared devices, domains, and other computers
+    as well as the workgroups which are available on your computer. The “Trash” place
+    is responsible for keeping the files which have been deleted.
+
+
+    After right clicking on a file, you will be provided with two options, namely,
+    “Delete” and “Move to Trash.” In case you select “Delete,” this file will be deleted
+    permanently, but if you select “Move to Trash,” this file will simply be moved
+    to the “Trash” place, and you will be able to access this from the menu. If you
+    need to restore the file, it will be possible for you to drag and drop it to where
+    you need. If you need to permanently delete all the items which are contained
+    in the trash, you will have to choose “Empty Trash,” and the files will be deleted
+    permanently.
+
+
+    # “System” Menu
+
+
+    The menu provides us with a number of system choices. They are good in providing
+    us with quick access to the most important features of your system. It is not
+    possible for any unauthorized user to access these because a password will be
+    needed for you to gain access.
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_61_0.png)
+
+
+    The button for “Software Manager” will open the Linux Mint Software Manager. It
+    forms the best program for the installation of software in Linux Mint. For you
+    to gain access to the system rights, you will be asked to provide a password.
+
+
+    The button for “Package Manager” will open an application known as “Synaptic.”
+    This package is responsible for management of the apps which have been installed
+    on your computer, as well as the ones which are available in the repositories.
+
+
+    The button for “System Settings” opens the Cinnamon Control Center. The app allows
+    us to configure each and every aspect of the Cinnamon desktop as well as the whole
+    computer in general. Let us discuss the items which are contained in this control
+    center.
+
+
+    The "Terminal" button opens an application named "Terminal" which allows one to
+    use the keyboard for entering commands. For those used to the Windows OS, this
+    might be a bit complex, as its command prompt has not progressed much. The Linux
+    Mint terminal is very powerful, and it becomes too easy if one gets used to it.
+    It is worth it for you to know that any command which you run via the graphical
+    desktop in Linux Mint must go through the terminal. A good example is when you
+    click on an icon on the desktop. In this case, Cinnamon is instructed to pass
+    some textual information to the terminal. The terminal can help you achieve a
+    lot with just a single command, as opposed to achieving the same by opening several
+    windows.
+
+
+    The button for “Lock Screen” is used for locking your screen. For you to unlock
+    it, you will be prompted to enter the password. When you click on the “Logout”
+    button, a popup which will allow you to logout or switch the users will be launched.
+
+
+    The “Quit” button will launch a dialog box which allows you to choose what you
+    need. The “Suspend” option will save your session to the RAM, and the computer
+    will sleep until you have pressed a key. The "Hibernate" option will save the
+    session to the hard drive, and the computer will shut down. The "Restart" option
+    will restart the computer. The "Shut Down" option will turn off the computer.
+
+
+    # “Applications” Menu
+
+
+    A Linux Mint DVD is usually compressed, and it usually has about 3GB of data.
+    The applications which come installed by default after the installation of Linux
+    Mint are part of the "Default Software Selection."
+
+
+    Note that Linux Mint is developed so that the users can find it easy for them
+    to use it. This is why it comes with some default software installed so that the
+    user can be able to accomplish some of the basic tasks. All the installed applications
+    can be found on the menu’s right hand section. The apps have been organized into
+    categories. The first of all the categories is known as “All applications,” and
+    it will give the list of all the apps which have been installed.
+
+
+    The other two categories are “Preferences” and “Administration,” and they show
+    the applications and the tools which are useful for the configuration and administration
+    of Linux Mint.
+
+
+    In the section for “Accessories,” the following is some of the software you will
+    find:
+
+
+    - 1. Archive Manager- this is the tool for viewing, creating, and extracting the
+    archive files.
+
+    - 2. Calculator- this is simply a calculator.
+
+    - 3. Character Map- this is a tool for easily copying special characters.
+
+    - 4. Disks- this is a tool for showing how the partitioning of the hard disks
+    has been done.
+
+    - 5. Files- this is a link for opening the home directory in the Nemo.
+
+    - 6. Font Viewer- this is a tool for looking for the available fonts.
+
+    - 7. Help- a tool for showing a suitably formatted document which is comparable
+    to this document.
+
+    - 8. Passwords and keys- this is for management of password and the other keys.
+
+    - 9. Screen reader- this helps us to access the graphical desktop environment,
+    a refreshable Braille, or a synthesized speech.
+
+    - 10. Screenshot- this tool helps us take screenshots. To launch it alternatively,
+    you may use the “Print Scrn” key on the keyboard for taking screenshots of the
+    desktop, or “ALT” + “Print Scrn” if you need to take screenshots of the current
+    window.
+
+    - 11. Terminal- this will open the terminal.
+
+    - 12. Text Editor- this is the Gedit, which is a text editor.
+
+    - 13. Tomboy Notes- this is an application to allow you take notes.
+
+    - 14. USB Image Writer- this is a simple tool which helps us write ISO images
+    to the USB drive.
+
+    - 15. USB Stick Formatter- this is a simple tool for cleaning and formatting a
+    USB drive.
+
+
+    The “Education” section provides the following:
+
+
+    - 1. LibreOffice Math- this is for creating and editing scientific formulas and
+    equations.
+
+
+    The “Graphics” section will provide you with the following software:
+
+
+    - 1. GIMP Image Editor- this is an application which will allow you to modify,
+    create, or convert pictures. It can be seen to be the same as Photoshop in Windows.
+
+    - 2. Image Viewer- this refers to the Gnome Image Viewer.
+
+    - 3. LibreOffice Draw- this is a graphics application.
+
+    - 4. Pix- this is an application for viewing and organizing images.
+
+    - 5. Simple Scan- this is a tool for capturing images from the scanner.
+
+
+    The “Internet” section will have the following software:
+
+
+    - 1. Firefox Web Browser- this is a web browser.
+
+    - 2. Hexchat- the IRC chat system. This has been configured so that it can connect
+    you to the Linux chat room by default. It is good for those who need to communicate
+    with Linux Mint users.
+
+    - 3. Pidgin Internet Messenger- this is an Internet messenger. This can be connected
+    to AIM, Gadu-Gadu, Google-Talk, Bonjour, GroupWise, ICQ, IRC, MySpaceIM, QQ, MSN,
+    SIMPLE, XMPP, Yahoo, Sametime, and Zephyr
+
+    - 4. Thunderbird Mail- an application for Email.
+
+    - 5. Transmission- a torrent client.
+
+
+    The following is the software you will find in the “Office” section:
+
+
+    - 1. Document Viewer- this is a tool for viewing PDFs as well as other documents.
+
+    - 2. LibreOffice- this is a general starter for the office suite.
+
+    - 3. LibreOffice Base- a database application.
+
+    - 4. LibreOffice Calc- this is a spreadsheet application, similar to Excel in
+    Windows, and is compatible with XLS.
+
+    - 5. LibreOffice Draw- this is a graphics application.
+
+    - 6. LibreOffice Impress- an application for making slides for presentation. Similar
+    to PowerPoint in Windows.
+
+    - 7. LibreOffice Math- a tool for creation and editing of mathematical formulas.
+
+    - 8. LibreOffice Writer- a word processor, similar to Microsoft Word in Windows.
+
+
+    The following is the software to find in the section for “Sound & Video”:
+
+
+    - 1. Banshee- this is a music application for playing online radio, and streaming
+    online music services from the Internet. It will also allow you to listen to your
+    music you have kept in
+
+    '
+  mdcn: '
+
+    如果你将某些数据放在此文件夹中，它也将被添加到桌面上。你也可以通过将文件拖到桌面来实现相同的操作。“网络”位置负责向你显示共享设备、域以及其他计算机，以及你计算机上可用的工作组。“废弃篓”位置负责保留已删除的文件。
+
+
+    在文件上点击右键后，你将获得两个选项，即“删除”和“移动到废弃篓”。如果你选择“删除”，该文件将被永久删除；但如果你选择“移动到废弃篓”，该文件将简单移动到“废弃篓”处，你可以从菜单访问它。如果你需要恢复文件，可以将其拖放到你需要的地方。如果你需要永久删除废弃篓中的所有项目，你必须选择“清空废弃篓”，这些文件将被永久删除。
+
+
+    # “系统”菜单
+
+
+    该菜单为我们提供了许多系统选项。它们能够帮助我们快速访问系统最核心的功能。未经授权的用户无法访问这些内容，因为访问这些内容需要密码。
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_61_0.png)
+
+
+    “软件管理器”按钮将打开 Linux Mint 软件管理器。它是 Linux Mint 中安装软件的最佳程序。为了让你获得系统权限，系统将要求你提供密码。
+
+
+    “软件包管理器”按钮将打开一个名为“Synaptic”的应用程序。该软件包负责管理已安装在计算机上的程序，以及存储库中提供的程序。
+
+
+    “系统设置”按钮打开 Cinnamon 控制中心。该程序允许我们配置 Cinnamon 桌面的每一个方面以及整个计算机。让我们讨论一下此控制中心中包含的项目。
+
+
+    “终端”按钮打开一个名为“终端”的应用程序，它允许用户使用键盘输入命令。对于习惯 Windows 系统的用户来说，这可能有一点复杂，因为它的命令提示符没有进步多少。Linux
+    Mint 终端非常强大，一旦习惯了，它会变得轻而易举。值得你了解，在 Linux Mint 图形化桌面上运行的任何命令都必须通过终端。一个很好的例子是当你点击桌面上的图标时。在这种情况下，Cinnamon
+    被指示向终端传递一些文本信息。通过一个命令，终端就可以帮助你完成很多工作，而无需通过打开多个窗口来实现相同的目标。
+
+
+    “锁定屏幕”按钮用于锁定你的屏幕。解锁时，系统会提示你输入密码。当你点击“注销”按钮时，会弹出一个允许你注销或切换用户的窗口。
+
+
+    “退出”按钮将启动一个对话框，允许你选择所需的选项。“挂起”选项会将会话保存到内存中，计算机将进入睡眠状态直到你按下按键。“休眠”选项会将会话保存到硬盘中，计算机将关机。“重启”选项将重启计算机。“关机”选项将关闭计算机。
+
+
+    # “应用程序”菜单
+
+
+    Linux Mint DVD 通常是压缩的，通常有约 3GB 的数据。在安装 Linux Mint 后默认安装的应用程序属于“默认软件选择”的一部分。
+
+
+    请注意，Linux Mint 的开发是为了让用户能够易于使用它。这就是为什么它带了一些默认安装的软件，以便用户完成一些基础任务。所有安装的应用程序都可以在菜单的右侧部分找到。应用程序被组织成类别。第一个类别被称为“所有应用程序”，它将列出所有已安装程序的列表。
+
+
+    另外两个类别是“偏好”和“管理”，它们显示了用于 Linux Mint 配置和管理的实用程序和工具。
+
+
+    在“工具”部分，你会找到以下部分软件：
+
+
+    - 1. 归档管理器-这是一个查看、创建和提取归档文件的工具。
+
+    - 2. 计算器-这仅仅是一个计算器。
+
+    - 3. 字符映射表-这是一个用于方便复制特殊字符的工具。
+
+    - 4. 磁盘-这是一个显示硬盘分区情况的工具。
+
+    - 5. 文件-这是一个在 Nemo 中打开主目录的链接。
+
+    - 6. 字体查看器-这是一个查找可用字体的工具。
+
+    - 7. 帮助-一个显示格式良好的文档的工具，与本文档类比。
+
+    - 8. 密码和密钥-这用于管理密码和其他密钥。
+
+    - 9. 屏幕阅读器-这帮助我们访问图形化桌面环境、可刷新盲文或合成语音。
+
+    - 10. 截图-此工具帮助我们截屏。要替代启动它，你可以使用键盘上的“Print Scrn”键截取桌面屏幕，或者如果你需要截取当前窗口屏幕，可以使用“ALT”
+    + “Print Scrn”。
+
+    - 11. 终端-这将打开终端。
+
+    - 12. 文本编辑器-这是 Gedit，一个文本编辑器。
+
+    - 13. Tomboy 笔记-这是一个让你记笔记的应用程序。
+
+    - 14. 镜像写入器-这是一个帮助我们将 ISO 镜像写入 USB 盘的工具。
+
+    - 15. U 盘格式化-这是一个格式化 USB 盘的简单工具。
+
+
+    “教育”部分提供了：
+
+
+    - 1. LibreOffice Math-用于创建和编辑科学公式。
+
+
+    “图形”部分将为你提供以下软件：
+
+
+    - 1. GIMP 图像编辑器-这是一个允许修改、创建或转换图片的应用程序。它可以类似于 Windows 中的 Photoshop。
+
+    - 2. 图片查看器-指的是 Gnome 图片查看器。
+
+    - 3. LibreOffice Draw-这是一个图形应用程序。
+
+    - 4. Pix-这是一个查看和组织图片的应用程序。
+
+    - 5. Simple Scan-这是一个用于从扫描仪捕捉图像的工具。
+
+
+    “互联网”部分将包含以下软件：
+
+
+    - 1. Firefox 浏览器-这是一个浏览器。
+
+    - 2. Hexchat-IRC 聊天系统。它已配置为默认连接到 Linux 聊天室。对于需要与 Linux Mint 用户通信的人非常好。
+
+    - 3. Pidgin 即时通讯-这是一个即时通讯软件。它可以连接 AIM、Gadu-Gadu、Google-Talk、Bonjour、GroupWise、ICQ、IRC、MySpaceIM、QQ、MSN、SIMPLE、XMPP、Yahoo、Sametime
+    和 Zephyr
+
+    - 4. Thunderbird 邮件-一个电子邮件应用程序。
+
+    - 5. Transmission-一个种子客户端。
+
+
+    “办公”部分包含：
+
+
+    - 1. 文档查看器-这是一个查看 PDF 以及其他文档的工具。
+
+    - 2. LibreOffice-这是办公套件的通用启动。
+
+    - 3. LibreOffice Base-一个数据库应用程序。
+
+    - 4. LibreOffice Calc-这是一个电子表格应用程序，类似于 Windows 中的 Excel，并兼容 XLS。
+
+    - 5. LibreOffice Draw-这是一个图形应用程序。
+
+    - 6. LibreOffice Impress-一个制作演示幻灯片的应用程序。类似于 Windows 中的 PowerPoint。
+
+    - 7. Math-用于创建和编辑数学公式的工具。
+
+    - 8. LibreOffice Writer-一个文字处理器，类似于 Windows 中的 Microsoft Word。
+
+
+    “声音和视频”部分的软件有：
+
+
+    - 1. Banshee-这是一个用于播放在线电台和从互联网流式传输在线音乐服务的音乐应用程序。它还允许你收听保存在其中的音乐
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 56]
+
+
+    If you place some data on this folder, it will also be added to the desktop. You
+    can also do the same by dragging your file to the desktop. The “Network” place
+    is responsible for showing you the shared devices, domains, and other computers
+    as well as the workgroups which are available on your computer. The “Trash” place
+    is responsible for keeping the files which have been'
+  - '[PAGE 57]
+
+
+    deleted.
+
+
+    After right clicking on a file, you will be provided with two options, namely,
+    “Delete” and “Move to Trash.\” In case you select “Delete,” this file will be
+    deleted permanently, but if you select “Move to Trash,” this file will simply
+    be moved to the “Trash” place, and you will be able to access this from the'
+  - '[PAGE 58]
+
+
+    menu. If you need to restore the file, it will be possible for you to drag and
+    drop it to where you need. If you need to permanently delete all the items which
+    are contained in the trash, you will have to choose “Empty Trash,” and the files
+    will be deleted permanently.'
+  - '[PAGE 59]
+
+
+    # “System” Menu
+
+
+    The menu provides us with a number of system choices. They are good in providing
+    us with quick access to the most important features of your system.
+
+    It is not possible for any unauthorized user to access these because a password
+    will be needed for you to gain access.'
+  - '[PAGE 60]
+
+
+    <!-- no content -->'
+  - '[PAGE 61]
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_61_0.png)'
+  - '[PAGE 62]
+
+
+    The button for “Software Manager” will open the Linux Mint Software Manager. It
+    forms the best program for the installation of software in Linux Mint. For you
+    to gain access to the system rights, you will be asked to provide a password.
+
+
+    The button for “Package Manager” will'
+  - '[PAGE 63]
+
+
+    open an application known as “Synaptic.” This package is responsible for management
+    of the apps which have been installed on your computer, as well as the ones which
+    are available in the repositories.
+
+
+    The button for “System Settings” opens the Cinnamon Control Center. The app allows
+    us to configure each and every'
+  - '[PAGE 64]
+
+
+    aspect of the Cinnamon desktop as well as the the whole computer in general. Let
+    us discuss the items which are contained in this control center.
+
+
+    The "Terminal" button opens an application named "Terminal" which allows one to
+    use the keyboard for entering commands. For those used to the Windows OS, this
+    might be a bit'
+  - '[PAGE 65]
+
+
+    complex, as its command prompt has not progressed much. The Linux Mint terminal
+    is very powerful, and it becomes too easy if one gets used to it. It is worth
+    it for you to know that any command which you run via the graphical desktop in
+    Linux Mint must go through the terminal. A good example is when you click on an
+    icon on the desktop. In this case, Cinnamon is'
+  - '[PAGE 66]
+
+
+    instructed to pass some textual information to the terminal. The terminal can
+    help you achieve a lot with just a single command, as opposed to achieving the
+    same by opening several windows.
+
+
+    The button for “Lock Screen” is used for locking your screen. For you to unlock
+    it, you will be prompted to enter the'
+  - '[PAGE 67]
+
+
+    password. When you click on the “Logout” button, a popup which will allow you
+    to logout or switch the users will be launched.
+
+
+    The “Quit” button will launch a dialog box which allows you to choose what you
+    need. The “Suspend” option will save your session to the RAM, and the computer
+    will sleep until you have'
+  - '[PAGE 68]
+
+
+    pressed a key. The "Hibernate" option will save the session to the hard drive,
+    and the computer will shut down. The "Restart" option will restart the computer.
+    The "Shut Down" option will turn off the computer.
+
+
+    # “Applications” Menu
+
+
+    A Linux Mint DVD is usually'
+  - '[PAGE 69]
+
+
+    compressed, and it usually has about 3GB of data. The applications which come
+    installed by default after the installation of Linux Mint are part of the "Default
+    Software Selection."
+
+
+    Note that Linux Mint is developed so that the users can find it easy for them
+    to use it. This is why it comes with some default software installed so that the
+    user'
+  - '[PAGE 70]
+
+
+    can be able to accomplish some of the basic tasks. All the installed applications
+    can be found on the menu’s right hand section. The apps have been organized into
+    categories. The first of all the categories is known as “All applications,” and
+    it will give the list of all the apps which have been installed.
+
+
+    The other two categories are'
+  - '[PAGE 71]
+
+
+    “Preferences” and “Administration,” and they show the applications and the tools
+    which are useful for the configuration and administration of Linux Mint.
+
+
+    In the section for “Accessories,” the following is some of the software you will
+    find:
+
+
+    +   1. Archive Manager- this is the tool for'
+  - '[PAGE 72]
+
+
+    viewing, creating, and extracting the archive files.
+
+
+    +   2. Calculator- this is simply a calculator.
+
+
+    +   3. Character Map- this is a tool for easily copying special characters.
+
+
+    +   4. Disks- this is a tool for showing how the partitioning of the hard disks
+    has'
+  - '[PAGE 73]
+
+
+    been done.
+
+
+    +   5. Files- this is a link for opening the home directory in the Nemo.
+
+
+    +   6. Front Viewer- this is a tool for looking for the available fonts.
+
+
+    +   7. Help- a tool for showing a suitably formatted document which is comparable
+    to this document.'
+  - '[PAGE 74]
+
+
+    8. Passwords and keys- this is for management of password and the other keys.
+
+
+    9. Screen reader- this helps us to access the graphical desktop environment, a
+    refreshable Braille, or a synthesized speech.
+
+
+    10. Screenshot- this tool helps us take'
+  - '[PAGE 75]
+
+
+    screenshots. To launch it alternatively, you may use the “Print Scrn” key on the
+    keyboard for taking screenshots of the desktop, or “ALT” + “Print Scrn” if you
+    need to take screenshots of the current window.
+
+
+    +   11. Terminal- this will open the terminal.
+
+
+    +   12. Text Editor- this is the'
+  - '[PAGE 76]
+
+
+    Gedit, which is a text editor.
+
+
+    13. Tomboy Notes- this is an application to allow you take notes.
+
+
+    14. USB Image Writer- this is a simple tool which helps us write ISO images to
+    the USB drive.
+
+
+    15. USB Stick Formatter- this is a simple tool for cleaning and'
+  - '[PAGE 77]
+
+
+    formatting a USB drive.
+
+
+    The “Education” section provides the following:
+
+
+    +   1. LibreOffice Math- this is for creating and editing scientific formulas
+    and equations.
+
+
+    The “Graphics” section will provide'
+  - '[PAGE 78]
+
+
+    you with the following software:
+
+
+    +   1. GIMP Image Editor- this is an application which will allow you to modify,
+    create, or convert pictures. It can be seen to be the same as Photoshop in Windows.
+
+
+    +   2. Image Viewer- this refers to the Gnome Image Viewer.'
+  - '[PAGE 79]
+
+
+    +   3. LibreOffice Draw- this is a graphics application.
+
+
+    +   4. Pix- this is an application for viewing and organizing images.
+
+
+    +   5. Simple Scan- this is a tool for capturing images from the scanner.
+
+
+    The “Internet” section will have the'
+  - '[PAGE 80]
+
+
+    following software:
+
+
+    +   1. Firefox Web Browser- this is a web browser.
+
+
+    +   2. Hexchat- the IRC chat system. This has been configured so that it can connect
+    you to the Linux chat room by default. It is good for those who need to communicate
+    with Linux Mint'
+  - '[PAGE 81]
+
+
+    users.
+
+
+    +   3. Pidgin Internet Messenger- this is an Internet messenger. This can be connected
+    to AIM, Gadu-Gadu, Google-Talk, Bonjour, GroupWise, ICQ, IRC, MySpaceIM, QQ, MSN,
+    SIMPLE, XMPP, Yahoo, Sametime, and Zephyr
+
+
+    +   4. Thunderbird Mail- an application for'
+  - '[PAGE 82]
+
+
+    Email.
+
+
+    +   5. Transmission- a torrent client.
+
+
+    The following is the software you will find in the “Office” section:
+
+
+    +   1. Document Viewer- this is a tool for viewing PDFs as well as other documents.'
+  - '[PAGE 83]
+
+
+    2. LibreOffice- this is a general starter for the office suite.
+
+
+    3. LibreOffice Base- a database application.
+
+
+    4. LibreOffice Calc- this is a spreadsheet application, similar to Excel in Windows,
+    and is compatible with XLS.'
+  - '[PAGE 84]
+
+
+    5. LibreOffice Draw- this is a graphics application.
+
+
+    6. LibreOffice Impress- an application for making slides for presentation. Similar
+    to PowerPoint in Windows.
+
+
+    7. LibreOffice Math- a tool for creation and editing of mathematical formulas.
+
+
+    8. LibreOffice Writer- a word'
+  - '[PAGE 85]
+
+
+    processor, similar to Microsoft Word in Windows.
+
+
+    The following is the software to find in the section for “Sound & Video”:
+
+
+    +   1. Banshee- this is a music application for playing online radio, and streaming
+    online music services from the Internet. It will also allow you to listen to your
+    music you have kept in'
+- md: '
+
+    a collection.
+
+
+    - 2. Brasero- this is an application for burning CDs/DVDs. You can also use it
+    for the purpose of making audio CDs from multimedia files.
+
+    - 3. Videos- Totem video player.
+
+    - 4. VLC media player- this is a video player, and is capable of playing almost
+    all types of videos which are available on the web.
+
+
+    # The “Search” Field
+
+
+    This is a feature which will provide you with access to an item which you have
+    forgotten where you can find it, or the one you want to access quickly. You just
+    have to click on the Menu which is located on the bottom-left corner of your screen
+    and then begin to type the name of the application which you are looking for.
+    As you continue to type, only the applications which match the words you have
+    typed will be visible on the menu.
+
+
+    This menu will also allow you to define some of your favorite applications and
+    then keep them on a special menu so that they can be accessed easily. From the
+    menu, right click on the application which you like and then choose “Add to favorites.”
+    Also, you may have to choose “Remove from favorites.” The part with the favorites
+    will be shown on the left of the menu. It is also possible for you to organize
+    how these elements are laid out. You just have to drag and then drop them, and
+    they will be reorganized in the order that you like.
+
+
+    # Making Shortcuts
+
+
+    For those who don’t like or are not interested in having the “favorites” section,
+    you can achieve a quick access to the elements from the desktop or the panel.
+    Simply right click on the application you want and then select “Add to Panel,”
+    or “Add to desktop.”
+
+
+    # Changing Menu Appearance
+
+
+    There are a number of ways that you can customize the menu. Just right click on
+    the “Menu” and then choose “Configure.” You will see the configuration tool for
+    the menu will be presented. You will be given a chance to modify the aspects of
+    your Cinnamon menu.
+
+
+    # Restoring Default Settings
+
+
+    If you need to get back to the default settings, from the configure menu, just
+    click on the button which is located on the right of “Remove” and then select
+    “Reset to defaults.”
+
+
+    # Automatic Launch of Applications
+
+
+    The application named “Startup Applications” can be found under the Preferences.
+    It is possible for you to add an application here. The menu editor can provide
+    you with the right information which you need for the application. If you do this,
+    the application will be launched automatically whenever you start the PC. If you
+    need to disable this, you just have to deselect the app.
+
+
+    # Chapter 4- Software Management
+
+
+    # Package Management
+
+
+    For those who are using Linux Mint for the first time, you may not be aware of
+    how to organize your software into a “package.” This is a very good feature when
+    it comes to security and the ease of access.
+
+
+    Linux Mint has been made in such a way that any hardware attached will be automatically
+    detected and all the drivers are automatically installed. It has also been made
+    possible for the user of Linux Mint to be in a position to do most tasks without
+    having to look for any third party software. The installation of Linux Mint also
+    comes with a fully working office suite, a quality and professional image editing
+    solution, IRC and IM clients, several media players, a disk burner, and many other
+    useful accessories. These are all free software!
+
+
+    There are a number of problems when you are looking for software to use on your
+    Linux system from third party websites. First, it becomes difficult for you to
+    know whether the software has been tested and that it has been proved to be compatible
+    with your operating system. Also, it is difficult to know whether the software
+    will be compatible and then work as you expect with the rest of the software in
+    your system. The software might also be coming from an unknown developer, and
+    you are not sure whether the software will harm your computer or not.
+
+
+    You may be downloading and installing multiple and different programs from different
+    vendors. However, the problem with this is that you will lack a managerial structure
+    in your system. Also, it is good for you to come up with a plan on how you will
+    ensure that the pieces of software you are downloading onto your system will be
+    kept up to date. Sometimes, you may get tired with a certain program. How will
+    you get rid of the program? Some software programs do not offer options for removing
+    them once they have been installed, and even if they may come with it, the program
+    will not be fully removed from the system. What this means is that after you ran
+    the installer for this program on your computer, it took some control of your
+    computer, not forgetting that the program was written by a stranger.
+
+
+    In such a circumstance, the software which has been distributed in such a manner
+    becomes static. This means that you will have to first download the program itself,
+    and then the data libraries which are necessary for it to run. The developer of
+    the program is now aware of the software and libraries which you have installed
+    on your system. This means that for them to make sure that you run the program
+    successfully on your system, they have to supply the program itself as well as
+    the data libraries to you. The download itself will be too big, and whenever you
+    need to update it, you will have to do it or the program itself as well as for
+    the rest of the libraries. This will also be done separately as opposed to doing
+    it at once. This means that with distribution of the static software on your system,
+    there will be the duplication of unnecessary work.
+
+
+    In Linux Mint and other Linux distributions, package management has been used
+    for long and it is the best method for management of software and sorting out
+    of these issues. It provides a safe and automatic installation of software.
+
+
+    # The Software Manager
+
+
+    This provides us with the easiest way for installation and management of software.
+    This is built on top of package technology but makes everything easy for us as
+    it allows us to install the individual programs rather than the packages. However,
+    it is good for you to be aware that this uses the package technology in the background,
+    meaning the same benefits will be provided.
+
+
+    To use it, launch the Menu and then click on “Software Manager.” The Software
+    Manager will allow you to browse for the software which is made available for
+    Linux Mint. The browsing can be made by category, the search made by keyword,
+    or the software can be rated based on popularity or by rating.
+
+
+    # Synaptic & APT
+
+
+    If you need to install more than a single app or you need something which is not
+    provided in the Software Portal or in the Software Manager, there are two other
+    ways which are provided by Linux Mint for installation of the software. These
+    include the “Synaptic,” which is a graphical tool and the “APT,” which is a command
+    line tool. We will demonstrate how these can be used for installation of Opera:
+
+
+    Begin by opening the Menu and then clicking the “Synaptic Package Manager.” Click
+    on the button for “Search,” and then type in “Opera.” A list of packages will
+    then be presented to you. Navigate through this list so as to identify the one
+    which corresponds to the Opera web browser and then click on it. Tick the box
+    which corresponds to this option, and then choose “Mark for Installation.” Lastly,
+    click on the “Apply” button.
+
+
+    To do the same by use of the APT command line tool, follow the steps given below:
+
+
+    Begin by opening the menu, and then click on “Terminal.” Type the command given
+    below:
+
+
+    ```
+
+    apt install opera
+
+    ```
+
+
+    However, you should ensure that you have closed the synaptic before you can begin
+    to use the APT. This is because the synaptic usually uses the APT in the background,
+    meaning that it is impossible for you to run the two simultaneously. The same
+    will apply for the software manager.
+
+
+    As you must have noticed, the use of the APT is much easier, but it does not provide
+    a graphical user interface. If you are a Linux beginner, you may prefer to
+
+    '
+  mdcn: '
+
+    一个集合。
+
+
+    - 2. Brasero- 这是一个用于刻录 CD/DVD 的应用程序。你也可以用它将多媒体文件制作音频 CD。
+
+    - 3. 视频- Totem 视频播放器。
+
+    - 4. VLC媒体播放器- 这是一个视频播放器，能够播放网络上提供的几乎所有类型的视频。
+
+
+    # “搜索”字段
+
+
+    此功能可以让你访问那些你忘记了在何处找到的项目，或者你想要快速访问的项目。你只需点击屏幕左下角的“菜单”，然后开始输入你正在寻找的应用程序名称。随着你不断输入，菜单上将只显示与你输入的单词相匹配的应用程序。
+
+
+    此菜单还允许你定义一些你喜爱的应用程序，并将它们保留在一个特殊的菜单中，以便于访问。在菜单中，右键点击你喜欢的应用程序，然后选择“添加到收藏夹”。同样，你可能需要选择“从收藏夹中移除”。收藏部分将显示在菜单的左侧。你还可以组织这些元素的布局方式。你只需要拖动并释放它们，它们就会按照你喜欢的顺序重新排列。
+
+
+    # 创建快捷方式
+
+
+    对于那些不喜欢或对“收藏”部分感兴趣的人，你可以从桌面或面板快速访问元素。只需右键点击你想要的应用程序，然后选择“添加到面板”或“添加到桌面”。
+
+
+    # 更改菜单外观
+
+
+    你有多种方法可以自定义菜单。只需右键点击“菜单”并然后选择“配置”。你将看到菜单的配置工具出现。你将有机会修改 Cinnamon 菜单各个方面。
+
+
+    # 恢复默认设置
+
+
+    如果你需要恢复默认设置，在配置菜单中，只需点击“移除”右侧的按钮，然后选择“重置为默认”。
+
+
+    # 自动启动应用程序
+
+
+    在“偏好”下可以找到名为“启动应用程序”的程序。你可以在这里添加应用程序。菜单编辑器可以为你提供应用程序所需的正确信息。如果你这样做，该应用程序将在你每次启动电脑时自动启动。如果你需要禁用此项，只需取消勾选该程序即可。
+
+
+    # 第 4 章- 软件管理
+
+
+    # 包管理
+
+
+    对于第一次使用 Linux Mint 的用户，你可能不知道如何将软件组织成一个“包”。在安全和访问便利性方面，这是一个非常好的功能。
+
+
+    Linux Mint 的设计使得任何连接的硬件都会被自动检测，并且所有驱动程序都会自动安装。它还让 Linux Mint 用户能够完成大多数任务，而无需寻找任何第三方软件。Linux
+    Mint 的安装版还带有一个功能完整的办公套件、一个高质量且专业的图像编辑解决方案、IRC 和 IM 客户端、几个媒体播放器、一个磁盘刻录机以及许多实用配件。这些都是免费软件！
+
+
+    当你从第三方网站寻找要在 Linux 系统上使用的软件时，会遇到很多问题。首先，你很难知道该软件是否经过测试，以及是否已被证明与你的操作系统兼容。此外，很难知道该软件是否能与系统中的其他软件兼容并按你预期的方式运行。该软件还可能来自未知的开发者，你不确定该软件是否会损坏你的计算机。
+
+
+    你可能会从不同的供应商下载并安装多个不同的程序。然而，这样做的问题在于，你的系统将缺乏一种管理结构。此外，你最好能制定一个计划，说明如何确保你下载到系统中的软件部分能够保持更新。有时，你可能会对某个程序感到厌倦。你将如何摆脱该程序呢？有些软件程序在安装后不提供移除选项，即使它们可能随之附带，程序也不会从系统中完全删除。这意味着在你电脑上运行了该程序的安装程序后，它获取了你电脑的一些控制权，更忘了该程序是由陌生人编写的。
+
+
+    在这种情况下，以这种方式分发的软件就变成了静态的。这意味着你必须先下载程序本身，然后是运行它所需的数据库。该程序的开发者现在意识到了你系统上安装的软件和库。这意味着，为了确保你在你的系统上成功运行该程序，他们必须向你提供程序本身以及数据库。下载本身将非常大，而且每当你需要更新它时，你都必须更新程序本身以及其余库。这也是分开进行的，而不是一次性完成。这意味着通过分发静态软件，会产生重复工作。
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 86]
+
+
+    a collection.
+
+
+    +   2. Brasero- this is an application for burning CDs/DVDs. You can also use
+    it for the purpose of making audio CDs from multimedia files.
+
+
+    +   3. Videos- Totem video player.
+
+
+    +   4. VLC media player- this is a video player, and is capable of playing almost
+    all types of videos which are'
+  - '[PAGE 87]
+
+
+    available on the web.
+
+
+    # The “Search” Field
+
+
+    This is a feature which will provide you with access to an item which you have
+    forgotten where you can find it, or the one you want to access quickly. You just
+    have to click on the Menu which is located on the bottom-left corner of your'
+  - '[PAGE 88]
+
+
+    screen and then begin to type the name of the application which you are looking
+    for. As you continue to type, only the applications which match the words you
+    have typed will be visible on the menu.
+
+
+    This menu will also allow you to define some of your favorite applications and
+    then keep them on a special menu so that they can be accessed easily. From the'
+  - '[PAGE 89]
+
+
+    menu, right click on the application which you like and then choose “Add to favorites.”
+    Also, you may have to choose “Remove from favorites.” The part with the favorites
+    will be shown on the left of the menu. It is also possible for you to organize
+    how these elements are laid out. You just have to drag and then drop them, and
+    they will be reorganized in the order that you like.'
+  - '[PAGE 90]
+
+
+    # Making Shortcuts
+
+
+    For those who don’t like or are not interested in having the “favorites” section,
+    you can achieve a quick access to the elements from the desktop or the panel.
+    Simply right click on the application you want and then select “Add to Panel,”or
+    “Add to desktop.”'
+  - '[PAGE 91]
+
+
+    # # Changing Menu Appearance
+
+
+    There are a number of ways that you can customize the menu. Just right click on
+    the “Menu” and then choose “Configure.” You will see the configuration tool for
+    the menu will be presented. You will be given a chance to modify the aspects of
+    your Cinnamon'
+  - '[PAGE 92]
+
+
+    menu.'
+  - '[PAGE 93]
+
+
+    # Restoring Default Settings
+
+
+    If you need to get back to the default settings, from the configure menu, just
+    click on the button which is located on the right of “Remove” and then select
+    “Reset to defaults.”
+
+
+    # Automatic Launch of Applications'
+  - '[PAGE 94]
+
+
+    The application named “Startup Applications” can be found under the Preferences.
+    It is possible for you to add an application here. The menu editor can provide
+    you with the right information which you need for the application. If you do this,
+    the application will be launched automatically whenever you start the PC. If you
+    need to disable this,'
+  - '[PAGE 95]
+
+
+    you just have to deselect the app.'
+  - '[PAGE 96]
+
+
+    # Chapter 4- Software Management
+
+
+    # Package Management
+
+
+    For those who are using Linux Mint for the first time, you may not be aware of
+    how to organize your software into a “package.” This is a very good feature'
+  - '[PAGE 97]
+
+
+    when it comes to security and the ease of access.
+
+
+    Linux Mint has been made in such a way that any hardware attached will be automatically
+    detected and all the drivers are automatically installed. It has also been made
+    possible for the user of Linux Mint to be in a position to do most tasks without
+    having to look for any third'
+  - '[PAGE 98]
+
+
+    party software. The installation of Linux Mint also comes with a fully working
+    office suite, a quality and professional image editing solution, IRC and IM clients,
+    several media players, a disk burner, and many other useful accessories. These
+    are all free software!
+
+
+    There are a number of problems when you are looking for software to use on'
+  - '[PAGE 99]
+
+
+    your Linux system from third party websites. First, it becomes difficult for you
+    to know whether the software has been tested and that it has been proved to be
+    compatible with your operating system. Also, it is difficult to know whether the
+    software will be compatible and then work as you expect with the rest of the software
+    in your system. The software might also be coming from an'
+  - '[PAGE 100]
+
+
+    unknown developer, and you are not sure whether the software will harm your computer
+    or not.
+
+
+    You may be downloading and installing multiple and different programs from different
+    vendors. However, the problem with this is that you will lack a managerial structure
+    in your system. Also, it is good for you to come up with'
+  - '[PAGE 101]
+
+
+    a plan on how you will ensure that the pieces of software you are downloading
+    onto your system will be kept up to date. Sometimes, you may get tired with a
+    certain program. How will you get rid of the program? Some software programs do
+    not offer options for removing them once they have been installed, and even if
+    they may come with it, the program will not be fully removed from the'
+  - '[PAGE 102]
+
+
+    system. What this means is that after you ran the installer for this program on
+    your computer, it took some control of your computer, not forgetting that the
+    program was written by a stranger.
+
+
+    In such a circumstance, the software which has been distributed in such a manner
+    becomes static. This means that you will have to first download the'
+  - '[PAGE 103]
+
+
+    program itself, and then the data libraries which are necessary for it to run.
+    The developer of the program is now aware of the software and libraries which
+    you have installed on your system.
+
+    This means that for them to make sure that you run the program successfully on
+    your system, they have to supply the program itself as well as the data libraries
+    to you. The download itself'
+  - '[PAGE 104]
+
+
+    will be too big, and whenever you need to update it, you will have to do it or
+    the program itself as well as for the rest of the libraries. This will also be
+    done separately as opposed to doing it at once. This means that with distribution
+    of the static software on your system, there will be the duplication of unnecessary
+    work.'
+  - '[PAGE 105]
+
+
+    In Linux Mint and other Linux distributions, package management has been used
+    for long and it is the best method for management of software and sorting out
+    of these issues. It provides a safe and automatic installation of software.'
+  - '[PAGE 106]
+
+
+    # The Software Manager
+
+
+    This provides us with the easiest way for installation and management of software.
+    This is built on top of package technology but makes everything easy for us as
+    it allows us to install the individual programs rather than the packages. However,
+    it is good for you to be aware that this uses the package'
+  - '[PAGE 107]
+
+
+    technology in the background, meaning the same benefits will be provided.
+
+
+    To use it, launch the Menu and then click on “Software Manager.” The Software
+    Manager will allow you to browse for the software which is made available for
+    Linux Mint. The browsing can be made by category, the search made by keyword,
+    or the software can be rated'
+  - '[PAGE 108]
+
+
+    based on popularity or by rating.'
+  - '[PAGE 109]
+
+
+    # Synaptic & APT
+
+
+    If you need to install more than a single app or you need something which is not
+    provided in the Software Portal or in the Software Manager, there are two other
+    ways which are provided by Linux Mint for installation of the software. These
+    include the “Synaptic,” which is a graphical tool and the “APT,” which is a'
+  - '[PAGE 110]
+
+
+    command line tool. We will demonstrate how these can be used for installation
+    of Opera:
+
+
+    Begin by opening the Menu and then clicking the “Synaptic Package Manager.” Click
+    on the button for “Search,” and then type in “Opera.” A list of packages will
+    then be presented to you. Navigate through this list so as to'
+  - '[PAGE 111]
+
+
+    identify the one which corresponds to the Opera web browser and then click on
+    it. Tick the box which corresponds to this option, and then choose “Mark for Installation.”
+    Lastly, click on the “Apply” button.
+
+
+    To do the same by use of the APT command line tool, follow the steps given below:'
+  - '[PAGE 112]
+
+
+    Begin by opening the menu, and then click on “Terminal.” Type the command given
+    below:
+
+
+    ```
+
+    apt install opera
+
+    ```
+
+
+    However, you should ensure that you have closed the synaptic before you can begin
+    to use the APT. This is because the'
+  - '[PAGE 113]
+
+
+    synaptic usually uses the APT in the background, meaning that it is impossible
+    for you to run the two simultaneously. The same will apply for the software manager.
+
+
+    As you must have noticed, the use of the APT is much easier, but it does not provide
+    a graphical user interface. If you are a Linux beginner, you may prefer to'
+- md: '
+
+    do things via the graphical user interface, but with time, you will appreciate
+    the power of the terminal and how it makes things easy and fast for you. Sometimes,
+    you may also find it impossible for you to access the packages which belong to
+    a particular application.
+
+
+    The difference with the Software Manager is that it allows you to install the
+    applications by obtaining the packages which are right for you. This will not
+    be done from the repositories (packages databases) which the APT and the Synaptic
+    are able to access as well as from the other places which can be found from the
+    Internet.
+
+
+    The Software Manager can be used mainly for two reasons:
+
+
+    - 1. If you are not used to the use of APT or the Synaptic.
+
+    - 2. If the application you need to install cannot be accessed from the APT or
+    the Synaptic.
+
+
+    ## Removing Applications
+
+
+    The APT is one of the easy ways we can use so as to remove applications. Also,
+    this is the command line, and it makes things easy for us as you are going to
+    see. Remember that we had installed the Opera web browser in our system. Let us
+    try to remove this via the APT. Open the menu and then click on Terminal. Type
+    the following command on the terminal:
+
+
+    ```
+
+    apt remove opera
+
+    ```
+
+
+    Again, before you can use the APT, ensure that you have closed the Synaptic. This
+    is because the Synaptic is using the APT in the background, and it will be impossible
+    for you to make use of the two.
+
+
+    With execution of the single command given above, Opera will have been uninstalled
+    from your system.
+
+
+    ## Synaptic
+
+
+    Synaptic can also be used for the purpose of uninstalling packages. Let us demonstrate
+    how one can achieve this.
+
+
+    Begin by opening the menu and then clicking on “Package Manager.” Click on the
+    button for “Search” and then type in “Opera.” You can then navigate through the
+    list which is provided, and then find the option which is corresponding to the
+    Opera web browser which we installed earlier on. Tick the box which corresponds
+    to this option, choose “Mark for Removal,” and then click on the “Apply” button.
+
+
+    ## Updating System and Applications
+
+
+    After a new version of a package you have installed on your computer has been
+    made, it is possible for you to upgrade it to the new version. The update can
+    be in the form of a security update to a component of your operating system, or
+    the optimization of a specific library or you may need to update to some new version
+    of the Firefox browser.
+
+
+    The Linux Mint system is made up of packages, and the update to this system can
+    be done by updating any part of these packages. Once you do, the old package will
+    be replaced with the new package.
+
+
+    In Linux Mint, a number of ways exist that one can update their packages, but
+    we recommend that you use only one of those ways.
+
+
+    The APT can be used for upgrading the system by use of a single command which
+    is “apt upgrade” but this is not recommended. The problem with this is that no
+    distinction will be made on what you need to upgrade, and everything in your system
+    will be upgraded.
+
+
+    You should note that some of the parts of the system are up to date while the
+    others are not. Consider the situation in which you upgrade your kernel, which
+    is the part which directly communicates with the hardware. If you do this, your
+    sound support might be broken, the support for the wireless card as well as the
+    other applications like the VirtualBox and the VMWare as they are closely connected
+    to the kernel.
+
+
+    ## The Update Manager
+
+
+    The Update Manager is a tool which comes with Linux Mint. It is responsible for
+    providing the user with information regarding updates, and the user is also allowed
+    to specify how secure an update should be before it can be applied. This means
+    that it works to shield you from security vulnerabilities.
+
+
+    If the mouse pointer is placed on top of this, then you will be informed of whether
+    your system is up to date or not, and the number of updates which are available.
+
+
+    ## Welcome to the Update Manager
+
+
+    This tool provides your operating system with software and security updates.
+
+    Please choose an update policy.
+
+
+    - **Don''t break my computer!** Recommended for novice users. Only select updates
+    which are known to be safe or which do not impact critical parts of the operating
+    system. Don''t show me updates which can harm the stability of my system.
+
+    - **Optimize stability and security** Recommended for most users. Only select
+    updates which are known to be safe or which do not impact critical parts of the
+    operating system. But also show security and kernel updates.
+
+    - **Always update everything** Recommended for experienced users. Select all available
+    updates. Keep my computer fully up to date. If a regression breaks something,
+    I''ll fix it.
+
+
+    Once you have clicked on the icon for lock, the Update Manager will be opened
+    and for the first time, you will be asked for the update policy which you need.
+    You should then read through the available options and then choose the best one
+    for you.
+
+
+    The majority of the users of Linux Mint like to have their software up to date,
+    and they like to use the second option. However, for those who need the computer
+    to work and then get all updates which are needed, you should choose the first
+    option.
+
+
+    You will then be presented with the real update screen. You will also be asked
+    whether you need to switch to some local mirror for the updates. Throughout the
+    world, organizations exist which need to help Linux Mint in distributing updates
+    to the world so that the users are able to get the best experience when using
+    Linux Mint. For you to get the fastest updates, it will be good for you to choose
+    the mirror which is near you. If you don’t need to use a local mirror, then it
+    is possible for you to change this below the Edit-Preferences.
+
+
+    The Update Manager will show you the updates which are available. The interface
+    will be very easy for you to use. For each update done on the package, you will
+    be in a position to read the description, changelog which describes the changes
+    which are made by the developers. If there are warnings from Linux Mint regarding
+    the updates, you will also see the same. It is also possible for you to see the
+    version which you have on your computer, as well as the one which you should update
+    to. A symbol will also be shown, and this will specify whether it is a security
+    or a package update.
+
+
+    The stability level which has been assigned to the package update will also be
+    shown. Each update to the package usually brings some improvements or fixes to
+    the security issues, but sometimes, bugs may occur. Linux Mint also assigns the
+    stability level to each of the packages, and informs one of how safe they will
+    be once they have applied the update.
+
+
+    It is possible for you to click on the columns and then sort them by status, stability
+    level, version, or package name. The “Clear” and “Select All” buttons can be used
+    for selecting or unselecting all the updates.
+
+
+    Both the Level 1 and the Level 2 updates are risk free, which means that you can
+    go ahead and apply them. The Level 3 updates are expected to be “safe,” and you
+    should ensure that you have checked for them from the list of the updates. Whenever
+    you experience any problem with a Level 3 update, it will be good for you to inform
+    the Linux Mint development team so that the update can be made a Level 4 or Level
+    5 and others will be discouraged against applying it as a Level 3 update.
+
+
+    Choose Edit, Preferences, and then Level and you will see the screen given below:
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_138_0.png)
+
+
+    The default setting is that the Update Manager tells you more about the Level
+    1, 2 and 3 updates. One is free to make a decision on whether to make the Level
+    4 and Level 5 updates visible. If this is done, then more updates will appear
+    on the list. It is also possible for you to make the Level 4 and the Level 5 updates
+    to be “safe” if you want. However, this is not recommended, as doing that will
+    cause the selection of these to be automatic on the Update
+
+    '
+  mdcn: '
+
+    虽然可以通过图形化用户界面进行操作，但随着时间的推移，你会发现终端的力量，以及它如何让操作变得简单快速。有时，你可能会发现自己无法访问某个特定应用程序的软件包。
+
+
+    与软件管理器（Software Manager）的区别在于，它允许通过获取合适的软件包来安装应用程序。这不需要从 APT 和 Synaptic 访问的仓库（软件包数据库），也可以从互联网上的其他地方获取。
+
+
+    软件管理器主要有两个用途：
+
+
+    - 1. 如果你不习惯使用 APT 或 Synaptic。
+
+    - 2. 如果你需要安装的应用程序无法通过 APT 或 Synaptic 获取。
+
+
+    ## 移除应用程序
+
+
+    APT 是我们删除应用程序的简单方法之一。此外，这是命令行操作，正如你将看到的，它让我们的工作变得非常方便。记得我们在系统中安装了 Opera 浏览器吗？让我们尝试通过
+    APT 移除它。打开菜单，然后点击“终端”。在终端中输入以下命令：
+
+
+    ```
+
+    apt remove opera
+
+    ```
+
+
+    再次，在使用 APT 之前，请确保你已关闭了 Synaptic。因为 Synaptic 正在后台使用 APT，你将无法同时使用两者。
+
+
+    执行上述命令后，Opera 将从你的系统中卸载。
+
+
+    ## Synaptic
+
+
+    Synaptic 也可以用于卸载软件包。让我们演示如何实现这一点。
+
+
+    首先打开菜单并点击“软件包管理器（Package Manager）”。点击“搜索”按钮并输入“Opera”。你可以在提供的列表中找到对应之前安装的 Opera
+    浏览器的选项，勾选“标记为移除（Mark for Removal）”，然后点击“应用（Apply）”。
+
+
+    ## 更新系统和应用程序
+
+
+    在你计算机上的软件包有了新版本后，可以进行更新。更新可以安全更新的形式应用于操作系统，或者你可能需要更新 Firefox 浏览器。
+
+
+    Linux Mint 系统由软件包组成，可以通过更新这些软件包来完成更新。一旦完成，旧软件包将被新软件包替换。
+
+
+    在 Linux Mint 中，有很多方法可以更新软件包，但我们建议只使用一种。APT 可以通过使用命令 `apt upgrade` 来升级系统，但这并不推荐。这样做的问题在于，系统中的所有需要升级的部分都将升级了。
+
+
+    你应该注意，系统的某些部分是最新的，而其他部分不是。在考虑升级内核时，如果你执行此操作，可能会导致网卡以及如 VirtualBox 和 VMware 等其他应用程序出现问题。
+
+
+    ## 更新管理器
+
+
+    更新管理器（Update Manager）是 Linux Mint 自带的一个工具。它负责向用户提供有关更新的信息，并允许用户指定更新的安全性。这意味着它可以保护你免受安全漏洞的影响。
+
+
+    如果鼠标悬停在上方，你会被告知系统是否是最新的，以及有多少可用更新。
+
+
+    ## 欢迎使用更新管理器
+
+
+    此工具为你的操作系统提供软件和安全更新。请选择更新策略：
+
+
+    - **不要弄坏我的电脑 (Don''t break my computer!)** 推荐新手。仅选择已知安全不影响系统关键部分的更新。不要显示可能损害系统稳定性的更新。
+
+    - **优化稳定性和 (Optimize stability and security)** 推荐大多数用户。仅选择已知安全不影响系统关键部分的更新。同时也显示内核更新。
+
+    - **始终更新一切 (Always update everything)** 推荐经验丰富的用户。选择所有可用更新。保持我的电脑完全最新。如果出现回归问题，我会修复它。
+
+
+    一旦你点击图标，更新管理器将打开，第一次它会要求你选择更新策略。你应该阅读可用选项并选择最适合你的一个。
+
+
+    大多数 Linux Mint 用户希望软件保持最新，他们喜欢使用第二个选项。然而，对于那些需要计算机工作并获取所有所需更新的人，你应该选择第一个选项。
+
+
+    你将看到更新界面。系统还会询问你是否需要切换到本地镜像进行更新。全球范围内有很多组织帮助 Linux Mint 分发更新，以便用户在使用 Linux Mint
+    时获得最佳体验。为了获得最快的更新，最好选择离你最近的镜像。如果你不需要使用本地镜像，可以在“编辑-设置（Edit-Preferences）”下方更改。
+
+
+    更新管理器将向你显示可用更新。界面非常易用。对于软件包的每个更新，你都可以读取日志（changelog），它描述了开发者所做的更改。如果 Linux Mint
+    对更新有警告，你也会看到同样的内容。你还可以查看计算机上的现有版本以及你应该更新到的版本。还会显示一个符号，标明它是安全更新还是软件包更新。
+
+
+    分配给软件包更新的稳定性级别也会显示。每个软件包更新通常会带来一些改进或修复安全问题，但有时会出现 bug。Linux Mint 还会为每个软件包分配稳定性级别，并告知用户应用更新后有多安全。
+
+
+    你可以点击列并按状态、稳定性级别、版本或包名进行排序。“清除”和“全选”按钮可用于选择或取消选择所有更新。
+
+
+    级别 1 和级别 2 的更新都是无风险的，这意味着你可以直接应用它们。级别 3 更新预期是“安全的”，你应该确保已在更新列表中检查了它们。当你遇到任何关于级别
+    3 更新的问题时，最好通知 Linux Mint 开发团队，以便该更新被设为级别 4 或级别 5，从而阻止他人将其作为级别 3 更新应用。
+
+
+    选择“编辑（Edit）”、“设置（Preferences）”，然后“级别（Level）”，你将看到下面的屏幕：
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a96_138_0.png)
+
+
+    默认设置是更新管理器提供有关级别 1、2、3 更新的信息。你可以自由决定是否让级别 4 和级别 5 更新可见。如果这样做，列表中将出现更多更新。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 114]
+
+
+    do things via the graphical user interface, but with time, you will appreciate
+    the power of the terminal and how it makes things easy and fast for you. Sometimes,
+    you may also find it impossible for you to access the packages which belong to
+    a particular application.
+
+
+    The difference with the Software'
+  - '[PAGE 115]
+
+
+    Manager is that it allows you to install the applications by obtaining the packages
+    which are right or you. This will not be done from the repositories (packages
+    databases) which the APT and the Synaptic are able to access but as well as from
+    the other places which can be found from the Internet.
+
+
+    The Software Manager can be used'
+  - '[PAGE 116]
+
+
+    mainly for two reasons:
+
+
+    +   1. If you are not used to the use of APT
+
+    or the Synaptic.
+
+
+    +   2. If the application you need to install
+
+    cannot be accessed from the APT or
+
+    the Synaptic.
+
+
+    # Removing Applications'
+  - '[PAGE 117]
+
+
+    The APT is one of the easy ways we can use so as to remove applications. Also,
+    this is the command line, and it makes things easy for us as you are going to
+    see. Remember that we had installed the Opera web browser in our system. Let us
+    try to remove this via the APT. Open the menu and then click on Terminal. Type
+    the following command on the terminal:'
+  - '[PAGE 118]
+
+
+    ```
+
+    apt remove opera
+
+    ```
+
+
+    Again, before you can use the APT, ensure that you have closed the Synaptic. This
+    is because the Synaptic is using the APT in the background, and it will be impossible
+    for you to make use of the two.'
+  - '[PAGE 119]
+
+
+    With execution of the single command given above, Opera will have been uninstalled
+    from your system.
+
+
+    # Synaptic
+
+
+    Synaptic can also be used for the purpose of uninstalling packages. Let us demonstrate
+    how one can achieve this.'
+  - '[PAGE 120]
+
+
+    Begin by opening the menu and then clicking on “Package Manager.” Click on the
+    button for “Search” and then type in “Opera.” You can then navigate through the
+    list which is provided, and then find the option which is corresponding to the
+    Opera web browser which we installed earlier on. Tick the box which corresponds
+    to this option, choose “Mark for Removal,” and'
+  - '[PAGE 121]
+
+
+    then click on the “Apply” button.
+
+
+    # Updating System and Applications
+
+
+    After a new version of a package you have installed on your computer has been
+    made, it is possible for you to upgrade it to the new version. The update can
+    be in the form of a security'
+  - '[PAGE 122]
+
+
+    update to a component of your operating system, or the optimization of a specific
+    library or you may need to update to some new version of the Firefox browser.
+
+
+    The Linux Mint system is made up of packages, and the update to this system can
+    be done by updating any part of these packages. Once you do, the old'
+  - '[PAGE 123]
+
+
+    package will be replaced with the new package.
+
+
+    In Linux Mint, a number of ways exist that one can update their packages, but
+    we recommend that you use only one of those ways.
+
+
+    The APT can be used for upgrading the system by use of a single command'
+  - '[PAGE 124]
+
+
+    which is “apt upgrade” but this is not recommended. The problem with this is that
+    no distinction will be made on what you need to upgrade, and everything in your
+    system will be upgraded.
+
+
+    You should note that some of the parts of the system are up to date while the
+    others are not. Consider the situation in which you upgrade your kernel, which
+    is'
+  - '[PAGE 125]
+
+
+    the part which directly communicates with the hardware. If you do this, your sound
+    support might be broken, the support for the wireless card as well as the other
+    applications like the VirtualBox and the VMWare as they are closely connected
+    to the kernel.'
+  - '[PAGE 126]
+
+
+    # The Update Manager
+
+
+    The Update Manager is a tool which comes with Linux Mint. It is responsible for
+    providing the user with information regarding updates, and the user is also allowed
+    to specify how secure an update should be before it can be applied. This means
+    that it works to shield you from security vulnerabilities.'
+  - '[PAGE 127]
+
+
+    If the mouse pointer is placed on top of this, then you will be informed of whether
+    your system is up to date or not, and the number of updates which are available.'
+  - '[PAGE 128]
+
+
+    # Welcome to the Update Manager
+
+
+    This tool provides your operating system with software and security updates.
+
+    Please choose an update policy.
+
+
+    +   Don''t break my computer!
+
+    Recommended for novice users.
+
+    Only select updates which are known to be safe or which do not impact critical
+    parts of the operating system.
+
+    Don''t show me updates which can harm the stability of my system.
+
+
+    +   Optimize stability and security
+
+    Recommended for most users.
+
+    Only select updates which are known to be safe or which do not impact critical
+    parts of the operating system.
+
+    But also show security and kernel updates.
+
+
+    +   Always update everything
+
+    Recommended for experienced users.
+
+    Select all available updates.
+
+    Keep my computer fully up to date. If a regression breaks something, I''ll fix
+    it.'
+  - '[PAGE 129]
+
+
+    Once you have clicked on the icon for lock, the Update Manager will be opened
+    and for the first time, you will be asked for the update policy which you need.
+    You should then read through the available options and then choose the best one
+    for you.
+
+
+    The majority of the users of Linux Mint'
+  - '[PAGE 130]
+
+
+    like to have their software up to date, and they like to use the second option.
+    However, for those who need the computer to work and then get all updates which
+    are needed, you should choose the first option.
+
+
+    You will then be presented with the real update screen. You will also be asked
+    whether you need to switch to some'
+  - '[PAGE 131]
+
+
+    local mirror for the updates. Throughout the world, organizations exist which
+    need to help Linux Mint in distributing updates to the world so that the users
+    are able to get the best experience when using Linux Mint. For you to get the
+    fastest updates, it will be good for you to choose the mirror which is near you.
+    If you don’t need to use a local mirror, then it is possible for you to change
+    this'
+  - '[PAGE 132]
+
+
+    below the Edit-Preferences.
+
+
+    The Update Manager will show you the updates which are available. The interface
+    will be very easy for you to use. For each update done on the package, you will
+    be in a position to read the description, changelog which describes the changes
+    which are made by the developers. If there are warnings'
+  - '[PAGE 133]
+
+
+    from Linux Mint regarding the updates,
+
+    you will also see the same. It is also
+
+    possible for you to see the version
+
+    which you have on your computer, as
+
+    well as the one which you should update
+
+    to. A symbol will also be shown, and
+
+    this will specify whether it is a security
+
+    or a package update.
+
+
+    The stability level which has been'
+  - '[PAGE 134]
+
+
+    assigned to the package update will also be shown. Each update to the package
+    usually brings some improvements or fixes to the security issues, but sometimes,
+    bugs may occur. Linux Mint also assigns the stability level to each of the packages,
+    and informs one of how safe they will be once they have applied the update.'
+  - '[PAGE 135]
+
+
+    It is possible for you to click on the columns and then sort them by status, stability
+    level, version, or package name. The “Clear” and “Select All” buttons can be used
+    for selecting or unselecting all the updates.
+
+
+    Both the Level 1 and the Level 2 updates are risk free, which means that you can
+    go ahead and apply them. The Level 3'
+  - '[PAGE 136]
+
+
+    updates are expected to be “safe,” and you should ensure that you have checked
+    for them from the list of the updates. Whenever you experience any problem with
+    a Level 3 update, it will be good for you to inform the Linux Mint development
+    team so that the update can be made a Level 4 or Level 5 and others will be discouraged
+    against applying it as a Level 3 update.'
+  - '[PAGE 137]
+
+
+    Choose Edit, Preferences, and then Level and you will see the screen given below:'
+  - '[PAGE 138]
+
+
+    ![](img/b32d4147b6351d994b4ff9c76e21a196_138_0.png)
+
+
+    The default setting is that the Update Manager tells you more about the Level'
+  - '[PAGE 139]
+
+
+    1, , and 3 updates. One is free to make a decision on whether to make the Level
+    4 and Level 5 updates visible. If this is done, then more updates will appear
+    on the list. It is also possible for you to make the Level 4 and the Level 5 updates
+    to be “safe” if you want. However, this is not recommended, as doing that will
+    cause the selection of these to be automatic on the Update'
+- md: '
+
+    Manager.
+
+
+    The Update Manager works by counting only the “safe” updates. If you are told
+    that your system is up to date, it only means that there are no new updates which
+    have been made for the level of update which you have assigned to be safe in your
+    system. The Update Manager will only have the “visible” updates in its list.
+
+
+    A good example is when all of the levels have been made to be “visible,” but only
+    the Levels 1 and 2 have been marked to be “safe.” In this case, a lot of updates
+    will be seen in the list, and the Update Manager will be telling you that your
+    system is up to date.
+
+
+    The tab for “Options” gives you a number of choices by which you can alter the
+    settings for the Update Manager. You will also find the option “Include updates
+    which requires the installation of new packages or the removal of installed packages”
+    under Options and this will allow you to specify whether the Update Manager will
+    be allowed to install some new dependencies or not. It is good for you to be careful
+    whenever you are using this option as, although it may help you to install some
+    new dependencies, it may also remove the ones which you have already installed.
+
+
+    The tab for “Auto-Refresh” will help you to define how often your Update Manager
+    will be checking for updates. In the tab for “Ignored packages,” you are able
+    to define the packages for which you don’t need to receive updates. The use of
+    “*” and “?” is supported.
+
+
+    The tab for “Icons” allows you to change the icons used by the Update Manager
+    in the system tray. In case the Update Manager gives you errors, you can proceed
+    to check for the issue in the logs. Go to the system array, and right-click on
+    lock icon. Choose “Information,” and you will see a new screen popup.
+
+
+    ## Chapter 5- Tips and Tricks
+
+
+    In Linux Mint, there are ways that one can perform the simplest tasks more easily.
+    This will help you save on time.
+
+
+    Let us discuss some of the tips and tricks in Linux Mint which can help you do
+    this.
+
+
+    ## Copying and Pasting
+
+
+    In most cases, Linux Mint users have to select and then right click on the text
+    which they need to copy. Others also do this by clicking on the “Edit” menu. This
+    is time consuming. It is possible for you to copy and then paste the text that
+    you want by use of the mouse only. In this case, the left button of the mouse
+    will be responsible for copying the text, while the middle button will be responsible
+    for pasting the text. That is very simple and time saving!
+
+
+    To demonstrate this, open a text editor or the LibreOffice Writer, or any application
+    you like and which allows you to input some text. Type a few sentences into it.
+    Use the left button of the mouse so as to select some of the text which you have
+    just typed. Most do it by clicking on the “Edit” menu and then clicking on “Copy.”
+    Others also like to use some combination of keys such as “CTRL + COPY.” Linux
+    makes it simpler. By selecting a text, you will have copied it. Since you have
+    already selected the text, it has been copied and kept in the “mouse buffer,”
+    and there is no need for you to press any other keys.
+
+
+    Click on some other part of the document so as to place your cursor there. Click
+    on the middle button of the mouse. If your mouse has a wheel, just wheel-click
+    while for those whose mouse has two buttons only, click the right and the left
+    buttons together. You will observe that the text which you had just copied will
+    be pasted.
+
+
+    If you get used to doing it, copying and pasting of text in Linux Mint will become
+    easy for you. This also applies to the other Linux distributions.
+
+
+    It is good for you to note that the buffer which is used by the mouse is not the
+    same as the one which is used by the Cinnamon desktop. This means that you can
+    use your mouse to copy some text and then use the CTRL +C for copying another
+    text or by the use of the “Edit” menu. This means that you will have copied two
+    different items and the way you paste them will be determined by the way you copied
+    them, either by use of the middle button of the mouse, the use of “CTRL + V,”
+    or by use of the “Edit” menu.
+
+
+    ## Taking Notes
+
+
+    Everyone likes taking notes when they are using the computer. One may also need
+    to write something when they are using the computer, such as something they have
+    been told via a phone. These are mostly the things which one needs to remember.
+    Some people usually find themselves writing such notes on applications which are
+    not suitable for such tasks. A good example is launching the LibreOffice writer
+    so as to write a phone number. Linux Mint comes with a tool which is suitable
+    for note-taking. This is known as “Tomboy Notes.”
+
+
+    The tool is very easy to use as after you have just clicked on it, it will be
+    launched with all your notes. If you need to take some new notes, you just have
+    to click on “Create New Note.” This will open up a new note. Once you have changed
+    the title for this, you will also have changed its name. You may choose to write
+    whatever you need into the note and then close it. You will then be in a position
+    to access the content which you have just written by use of Tomboy Notes. There
+    will be no need for you to save the note, and you can even shut down and restart
+    the computer without affecting the note. The note is saved immediately as you
+    type it.
+
+
+    If you are done with the note and you are sure that you will not need to use it
+    anymore, you can delete it by clicking on the “Delete” button. If you happen to
+    write the title of a particular note in the note you are creating, then this second
+    note will be opened once you have clicked on the link which will be created automatically
+    by Tomboy. Tomboy Notes also allows you to use some formatting features as you
+    create the note. Examples of these features include search features, synchronization,
+    as well as exporting of notes to HTML, PDF, and others. That is how you can take
+    notes in Linux Mint.
+
+
+    ## Conclusion
+
+
+    Linux Mint is one of the distributions of Linux. It is based on Ubuntu and Debian.
+    With Linux Mint, one can do a lot. By now, you must be comfortable with the various
+    aspects regarding the use of Linux Mint. The Linux Mint terminal can help you
+    accomplish most of the tasks more easily and quickly. A good example is when you
+    are performing an upgrade of your system. You can do this by use of just a simple
+    command, as opposed to use of the GUI in which you will have to update each component
+    of your system. To the Linux Mint beginners, the use of the command line might
+    seem to a bit complex, but it is good for you to begin practicing and you will
+    get used to it with time. When it comes to updates in Linux Mint, they are classified
+    in the range of Level 1 to Level 5. One has to specify the level at which the
+    system will be “safe.” If this is violated, then you will get a notification in
+    terms of the updates which are currently available, and you will have the option
+    of upgrading to that level.
+
+    '
+  mdcn: '
+
+    更新管理器。
+
+
+    更新管理器（Update Manager）通过仅计算“安全”更新来工作。如果系统提示您的系统是最新状态，这仅意味着对于您在系统中指定的为“安全”的更新级别，没有新的更新可用。更新管理器的列表中只会显示“可见”的更新。
+
+
+    一个很好的例子是，当所有级别都被设置为“可见”时，但只有级别 1 和级别 2 被标记为“安全”的。在这种情况下，列表中将看到许多更新，但更新管理器会告诉您您的系统是最新状态。
+
+
+    “选项（Options）”选项卡为您提供了许多选择，您可以借此更改更新管理器的设置。您还会在“选项”下找到“包含需要安装新软件包或卸载已安装软件包的更新”选项，这将允许您指定是否允许更新管理器安装某些新的依赖项。在使用此选项时务必小心，因为尽管它可能帮助您安装某些新的依赖项，但也可能会移除您已经安装的依赖项。
+
+
+    “自动刷新（Auto-Refresh）”选项卡将帮助您定义更新管理器检查更新的频率。在“忽略的包（Ignored packages）”选项卡中，您可以定义不需要接收更新的包。该处支持使用“*”和“?”。
+
+
+    “图标（Icons）”选项卡允许您更改更新管理器在系统托盘中使用的图标。如果更新器给您错误，您可以继续在日志中检查问题。进入系统区域，右键点击锁形图标。选择“信息（Information）”，您将看到弹出一个新窗口。
+
+
+    ## 第 5 章 技巧与窍门
+
+
+    在 Linux Mint 中，有一种方法可以让人们更轻松地执行最简单的任务。这将帮助您节省时间。
+
+
+    让我们讨论一下 Linux Mint 中一些可以帮助您实现此目标的技巧。
+
+
+    ## 复制与粘贴
+
+
+    在大多数情况下，Linux Mint 用户必须选择需要复制的文本然后对其点击右键。其他人也通过点击“编辑（Edit）”菜单来这样做。这非常耗时。您可以仅通过使用鼠标来复制并粘贴您想要的文本。在这种情况下，鼠标的左键负责复制文本，而中键将负责粘贴文本。这非常简单且节省时间！
+
+
+    为了演示这一点，请打开文本编辑器、LibreOffice Writer 或任何您喜欢的、允许输入文本的应用程序。在其中输入几句子。使用鼠标左键选择您刚刚输入的一些文本。大多数人通过点击“编辑”菜单然后点击“复制”。其他人也喜欢使用某些组合键，例如“CTRL
+    + COPY”。Linux 让它变得更简单。通过选择文本，您就已经复制了它。由于您已经选择了文本，它已经被复制并保存在“鼠标缓冲区”中，您不需要按下任何其他键。
+
+
+    点击文档的其他部分以将光标放置在那个位置。点击鼠标中键。如果您的鼠标有滚轮，只需在点击时按压滚轮即可；而对于那些只有两个按钮的鼠标，请同时点击右键和左键。您会发现刚刚复制的文本被粘贴了。
+
+
+    如果您习惯了这种操作，在 Linux Mint 中复制和粘贴文本对您来说将变得简单。这适用于其他的 Linux 发行版。
+
+
+    请您注意，鼠标使用的缓冲区与 Cinnamon 桌面使用的缓冲区是不相同的。这意味着您可以使用鼠标复制某些文本，然后使用 `CTRL +C` 复制另一个文本，或通过使用“编辑”菜单。这意味着您将复制两个不同的项目，而粘贴它们的方式将取决于您复制的方式。
+
+
+    ## 笔记
+
+
+    在 Linux Mint 中，人们有多种方法可以记录笔记。大家在运行电脑时喜欢记录笔记。Linux Mint 自带了一个适用于此类任务的工具，被称为 Tomboy。
+
+
+    该工具非常易用，在您点击它后将加载您的笔记。如果您需要记录新笔记，只需点击“新建笔记（Create New Note）”。这将打开一个笔记。一旦您更改了标题，您也可以更改它的名称。您可以在笔记中编写任何需要的内容然后将其关闭。通过
+    Tomboy，您可以访问刚刚编写的内容。您不需要保存笔记，甚至可以重启电脑也不会影响笔记。笔记会在您输入时立即保存。
+
+
+    如果您已经完成了笔记并确定不再需要它，可以点击“删除（Delete）”按钮将其删除。如果您在正在创建的笔记中写了特定笔记的标题，那么点击该链接后将打开第二个笔记。Tomboy
+    还允许您在创建笔记时使用某些格式功能。这些功能包括搜索功能、同步以及将笔记导出为 HTML、PDF 等。这就是在 Linux Mint 中记录笔记的方法。
+
+
+    ## 总结
+
+
+    Linux Mint 是 Linux 的发行版之一。它基于 Ubuntu 和 Debian。通过 Linux Mint，人们可以做很多事情。现在，您应该对使用
+    Linux Mint 的各个方面了如。Linux Mint 终端可以帮助您更轻松、更快速地完成大多数任务。一个很好的例子是当您执行系统升级时。您可以使用一个简单的命令来完成，而不是使用
+    GUI 手动更新系统的每个组件。对于 Linux Mint 初学者来说，使用命令行可能看起来有点复杂，但对您来说开始练习是有好处的。涉及到 Linux Mint
+    的更新时，它们被分类在级别 1 到级别 5 之间。人们必须指定系统处于“安全”的级别。如果违反了这一点，您将收到有关可用更新的通知，并获得升级到该级别的选项。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 140]
+
+
+    Manager.
+
+
+    The Update Manager works by counting only the “safe” updates. If you are told
+    that your system is up to date, it only means that there are no new updates which
+    have been made for the level of update which you have assigned to be safe in your
+    system. The Update Manager will only have the “visible”'
+  - '[PAGE 141]
+
+
+    updates in its list.
+
+
+    A good example is when all of the levels have been made to be “visible,” but only
+    the Levels 1 and 2 have been marked to be “safe.” In this case, a lot of updates
+    will be seen in the list, and the Update Manager will be telling you that your
+    system is up to date.'
+  - '[PAGE 142]
+
+
+    The tab for “Options” gives you a number of choices by which you can alter the
+    settings for the Update Manager.
+
+    nYou will also find the option “Include updates which requires the installation
+    of new packages or the removal of installed packages” under Options and this will
+    allow you to specify whether the Update Manager will be allowed to install some
+    new dependencies or not. It'
+  - '[PAGE 143]
+
+
+    is good for you to be careful whenever you are using this option as, although
+    it may help you to install some new dependencies, it may also remove the ones
+    which you have already installed.
+
+
+    The tab for “Auto-Refresh” will help you to define how often your Update Manager
+    will be checking for updates. In the tab for “Ignored packages,” you are'
+  - '[PAGE 144]
+
+
+    able to define the packages for which you don’t need to receive updates. The use
+    of“*” and “?” is supported.
+
+
+    The tab for “Icons” allows you to change the icons used by the Update Manager
+    in the system tray. In case the Update Manager gives you errors, you can proceed
+    to check for the issue in the logs. Go to the system array, and right'
+  - '[PAGE 145]
+
+
+    click on lock icon. Choose “Information,” and you will see a new screen popup.'
+  - '[PAGE 146]
+
+
+    # # Chapter 5- Tips and Tricks
+
+
+    In Linux Mint, there are ways that one can perform the simplest tasks more easily.
+    This will help you save on time.
+
+
+    Let us discuss some of the tips and tricks in Linux Mint which can help you do
+    this.'
+  - '[PAGE 147]
+
+
+    # Copying and Pasting
+
+
+    In most cases, Linux Mint users have to select and then right click on the text
+    which they need to copy. Others also do this by clicking on the “Edit” menu. This
+    is time consuming. It is possible for you to copy and then paste the text that
+    you want by use of the mouse only. In this'
+  - '[PAGE 148]
+
+
+    case, the left button of the mouse will be responsible for copying the text, while
+    the middle button will be responsible for pasting the text. That is very simple
+    and time saving!
+
+
+    To demonstrate this, open a text editor or the LibreOffice Writer, or any application
+    you like and which allows you to input some text. Type a few'
+  - '[PAGE 149]
+
+
+    sentences into it. Use the left button of the mouse so as to select some of the
+    text which you have just typed. Most do it by clicking on the “Edit” menu and
+    then clicking on “Copy.” Others also like to use some combination of keys such
+    as “CTRL + COPY.” Linux makes it simpler. By selecting a text, you will have copied
+    it. Since you have already selected the text, it has been copied and'
+  - '[PAGE 150]
+
+
+    kept in the “mouse buffer,” and there is no need for you to press any other keys.
+
+
+    Click on some other part of the document so as to place your cursor there. Click
+    on the middle button of the mouse. If your mouse has a wheel, just wheel-click
+    while for those whose mouse has two buttons only, click the right and the left
+    buttons together. You will observe'
+  - '[PAGE 151]
+
+
+    that the text which you had just copied
+
+
+    will be pasted.
+
+
+    If you get used to doing it, copying and
+
+
+    pasting of text in Linux Mint will
+
+
+    become easy for you. This also applies
+
+
+    to the other Linux distributions.
+
+
+    It is good for you to note that the buffer
+
+
+    which is used by the mouse is not the'
+  - '[PAGE 152]
+
+
+    same as the one which is used by the Cinnamon desktop. This means that you can
+    use your mouse to copy some text and then use the CTRL +C for copying another
+    text or by the use of the “Edit” menu. This means that you will have copied two
+    different items and the way you paste them will be determined by the way you copied
+    them, either by use of the middle button of the mouse, the use'
+  - '[PAGE 153]
+
+
+    of “CTRL + V,” or by use of the “Edit” menu.'
+  - '[PAGE 154]
+
+
+    # Taking Notes
+
+
+    Everyone likes taking notes when they are using the computer. One may also need
+    to write something when they are using the computer, such as something they have
+    been told via a phone. These are mostly the things which one needs to remember.
+    Some people usually find themselves writing such notes on'
+  - '[PAGE 155]
+
+
+    applications which are not suitable for such tasks. A good example is launching
+    the LibreOffice writer so as to write a phone number. Linux Mint comes with a
+    tool which is suitable for note-taking. This is known as “Tomboy Notes.”
+
+
+    The tool is very easy to use as after you have just clicked on it, it will be
+    launched with all your notes. If you need'
+  - '[PAGE 156]
+
+
+    to take some new notes, you just have to click on “Create New Note.” This will
+    open up a new note.
+
+
+    Once you have changed the title for this, you will also have changed its name.
+    You may choose to write whatever you need into the note and then close it. You
+    will then be in a position to access the content which you have just written by'
+  - '[PAGE 157]
+
+
+    use of Tomboy Notes. There will be no need or you to save the note, and you can
+    even shut down and restart the computer without affecting the note. The note is
+    saved immediately as you type it.
+
+
+    If you are done with the note and you are sure that you will not need to use it
+    anymore, you can delete it by clicking on the “Delete” button. If you happen to'
+  - '[PAGE 158]
+
+
+    write the title of a particular note in the note you are creating, then this second
+    note will be opened once you have clicked on the link which will be created automatically
+    by Tomboy. Tomboy Notes also allows you to use some formatting features as you
+    create the note. Examples of these features include search features, synchronization,
+    as well as exporting of notes to HTML, PDF,'
+  - '[PAGE 159]
+
+
+    and others. That is how you can take notes in Linux Mint.'
+  - '[PAGE 160]
+
+
+    # Conclusion
+
+
+    Linux Mint is one of the distributions of Linux. It is based on Ubuntu and Debian.
+    With Linux Mint, one can do a lot. By now, you must be comfortable with the various
+    aspects regarding the use of Linux Mint. The Linux Mint terminal can help you
+    accomplish most of the tasks'
+  - '[PAGE 161]
+
+
+    more easily and quickly. A good example is when you are performing an upgrade
+    of your system. You can do this by use of just a simple command, as opposed to
+    use of the GUI in which you will have to update each component of your system.
+    To the Linux Mint beginners, the use of the command line might seem to a bit complex,
+    but it is good for you to begin practicing and you'
+  - '[PAGE 162]
+
+
+    will get used to it with time. When it comes to updates in Linux Mint, they are
+    classified in the range of Level 1 to Level 5. One has to specify the level at
+    which the system will be “safe.” If this is violated, then you will get a notification
+    in terms of the updates which are currently available, and you will have the option
+    of upgrading to that level.'
+  - '[PAGE 163]
+
+
+    <!-- no content -->'
