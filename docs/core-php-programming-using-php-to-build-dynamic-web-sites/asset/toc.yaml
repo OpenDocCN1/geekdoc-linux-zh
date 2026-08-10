@@ -1,0 +1,616 @@
+- - '#'
+  - PHP 核心编程：使用 PHP 构建动态网站指南
+- - '#'
+  - Atkinson, Leon.
+- - '#'
+  - 第二部分
+- - '##'
+  - 函数参考 84
+- - '##'
+  - 8 I/O 函数 87
+- - '##'
+  - 9 数据函数 159
+- - '##'
+  - 正则表达式 209
+- - '##'
+  - 10 数学函数 213
+- - '##'
+  - 11 时间、日期和配置函数 231
+- - '##'
+  - 12 图像函数 251
+- - '##'
+  - 13 数据库函数 279
+- - '#'
+  - 第三部分 算法
+- - '##'
+  - 14 排序、搜索和随机数 429
+- - '##'
+  - 15 解析与评估 453
+- - '##'
+  - 16 数据库集成 469
+- - '##'
+  - 17 生成图形 489
+- - '#'
+  - 第四部分 软件工程 507
+- - '##'
+  - 18 与 HTML 集成 509
+- - '##'
+  - 19 设计 527
+- - '##'
+  - 20 效率与调试 539
+- - '##'
+  - 附录 A：反斜线代码 545
+- - '##'
+  - 附录 B：ASCII 代码 547
+- - '##'
+  - 附录 C：运算符 553
+- - '##'
+  - 附录 D：PHP 标签 555
+- - '##'
+  - 附录 E：安装 PHP 557
+- - '##'
+  - 索引 561
+- - '#'
+  - 致谢
+- - '#'
+  - 前言
+- - '##'
+  - 核心 PHP 编程：使用 PHP 构建动态网站
+- - '##'
+  - 第一部分
+- - '##'
+  - 使用 PHP 进行编程
+- - '##'
+  - PHP 简介
+- - '###'
+  - 本章主题
+- - '##'
+  - 第 1 章
+- - '###'
+  - PHP 的起源
+- - '#'
+  - 为什么 PHP 比其他替代方案更好
+- - '#'
+  - 第一章 PHP 简介
+- - '#'
+  - PHP 如何与 Web 服务器工作
+- - '#'
+  - HTML 页面看起来
+- - '#'
+  - 如何开始 PHP
+- - '#'
+  - PHP 脚本长什么样
+- - '#'
+  - 存储数据以备后用
+- - '#'
+  - 重复代码
+- - '#'
+  - 结论
+- - '#'
+  - 变量、运算符和表达式
+- - '##'
+  - 第 2 章
+- - '##'
+  - 标识符
+- - '#'
+  - 第 2 章 变量、运算符和表达式
+- - '##'
+  - 数据类型
+- - '##'
+  - 变量创建与作用域
+- - '##'
+  - 给变量赋值
+- - '##'
+  - 运算符
+- - '##'
+  - 常量
+- - '##'
+  - 逻辑运算符与关系运算符
+- - '##'
+  - 位运算符
+- - '##'
+  - 运算运算符
+- - '##'
+  - 杂项运算符
+- - '##'
+  - 赋值运算符
+- - '##'
+  - 表达式
+- - '##'
+  - 控制语句
+- - '###'
+  - 本章主题
+- - '##'
+  - 第 3 章
+- - '##'
+  - 真与假
+- - '##'
+  - if 语句
+- - '##'
+  - '? 运算符'
+- - '#'
+  - 第 3 章 控制语句
+- - '##'
+  - switch 语句
+- - '##'
+  - 循环
+- - '##'
+  - while 语句
+- - '##'
+  - break 语句
+- - '##'
+  - do...while 语句
+- - '##'
+  - 'for 语句 '
+- - '##'
+  - exit 语句
+- - '##'
+  - 函数
+- - '##'
+  - 第4章
+- - '##'
+  - 定义函数
+- - '#'
+  - 第 4章 函数
+- - '##'
+  - return 语句
+- - '##'
+  - 作用域与 global 语句
+- - '##'
+  - 参数
+- - '##'
+  - 递归
+- - '##'
+  - 动态函数调用
+- - '##'
+  - 数组
+- - '##'
+  - 第 5 章
+- - '##'
+  - 一维数组
+- - '##'
+  - 类
+- - '###'
+  - 本章主题
+- - '##'
+  - 第 6 章
+- - '##'
+  - 定义类
+- - '#'
+  - 第 6 章 类
+- - '##'
+  - 创建对象
+- - '##'
+  - 访问属性
+- - '##'
+  - 使用方法
+- - '##'
+  - 对象数组
+- - '##'
+  - 第 7 章
+- - '##'
+  - 输出到浏览器
+- - '#'
+  - 第 7 章 I/O 与磁盘访问
+- - '##'
+  - 文件上传
+- - '##'
+  - 环境变量
+- - '##'
+  - include 和 require 函数
+- - '##'
+  - Cookies
+- - '##'
+  - 读取和文件
+- - '##'
+  - 文件的读取与写入
+- - '##'
+  - 第 8 章
+- - '###'
+  - 向浏览器发送文本
+- - '##'
+  - 文件
+- - '##'
+  - 布尔 chdir(string directory)
+- - '##'
+  - 示例
+- - '##'
+  - 相关函数
+- - '##'
+  - 布尔 chgrp(string filename, string group)
+- - '##'
+  - 布尔 chmod(string filename, integer mode)
+- - '##'
+  - 布尔 chown(string filename, string user)
+- - '##'
+  - closedir(integer directory_handle)
+- - '##'
+  - 布尔 copy(string source, string destination)
+- - '##'
+  - 对象 dir(string directory)
+- - '##'
+  - 布尔 fclose(integer file_handle)
+- - '##'
+  - 布尔 feof(integer file_handle)
+- - '##'
+  - 整数 ftell(integer file_handle)
+- - '##'
+  - 字符串 fgetc(integer file_handle)
+- - '##'
+  - 字符串 fgets(integer file_handle, integer length)
+- - '##'
+  - 字符串 fgetss(integer file_handle, integer length)
+- - '##'
+  - 整数 filetime(string filename)
+- - '##'
+  - 整数 filegroup(string filename)
+- - '##'
+  - 整数 fileinode(string filename)
+- - '##'
+  - 整数 fileowner(string filename)
+- - '##'
+  - 整数 fileperms(string filename)
+- - '##'
+  - 整数 filesize(string filename)
+- - '##'
+  - string filetype(string filename)
+- - '##'
+  - 整数 fopen(string filename, string mode)
+- - '##'
+  - boolean gzclose(integer file_handle)
+- - '##'
+  - boolean gdeof(integer file_handle)
+- - '##'
+  - array gzfile(string filename)
+- - '##'
+  - string gzgetc(integer file_handle)
+- - '##'
+  - string gzgets(integer file_handle, integer length)
+- - '##'
+  - string gzgetss(integer file_handle, integer length)
+- - '##'
+  - integer gzopen(string filename, string mode)
+- - '##'
+  - boolean gzpassthru(integer file_handle)
+- - '##'
+  - boolean gzputs(int file_handle, string output)
+- - '##'
+  - boolean gzrewind(integer file_handle)
+- - '##'
+  - string gzseek(integer file_handle, integer offset)
+- - '##'
+  - integer gzftell(integer file_handle)
+- - '##'
+  - boolean mkdir(string directory, integer mode)
+- - '##'
+  - opendir(string directory)
+- - '##'
+  - boolean pclose(integer file_handle)
+- - '##'
+  - string readdir(string directory)
+- - '##'
+  - boolean rename(string oldname, string newname)
+- - '##'
+  - string rewinddir
+- - '##'
+  - boolean rmdir(string directory)
+- - '##'
+  - boolean unlink(string filename)
+- - '##'
+  - boolean touch(string filename)
+- - '##'
+  - boolean symlink(string filename, string target)
+- - '##'
+  - boolean stat(string filename)
+- - '##'
+  - 'string stat_type '
+- - '##'
+  - boolean symlink(string source, string destination)
+- - '##'
+  - boolean touch(string filename, integer time)
+- - '##'
+  - integer umask(integer umask)
+- - '##'
+  - boolean error_log(string message)
+- - '##'
+  - boolean closelog()
+- - '##'
+  - string dblist()
+- - '##'
+  - boolean debugger_off()
+- - '##'
+  - object get_browser
+- - '##'
+  - string get_cfg_var
+- - '##'
+  - string getcurrent_user
+- - '##'
+  - integer getlastmod
+- - '##'
+  - integer getmytinode
+- - '##'
+  - integer getmypid
+- - '##'
+  - boolean leak
+- - '##'
+  - string phpinfo
+- - '##'
+  - string version
+- - '##'
+  - string show_source
+- - '##'
+  - string syslog
+- - '##'
+  - string exec
+- - '##'
+  - string passthru
+- - '##'
+  - string putenv
+- - '##'
+  - string system
+- - '##'
+  - boolean virtual
+- - '##'
+  - array getallheaders
+- - '##'
+  - string get_header
+- - '##'
+  - boolean setcookie
+- - '##'
+  - string get_browser
+- - '##'
+  - string get_var
+- - '##'
+  - integer getlastmod
+- - '##'
+  - integer getlastmod
+- - '##'
+  - integer getmytinode
+- - '##'
+  - string getmypid
+- - '##'
+  - string get_user
+- - '##'
+  - string get_headers
+- - '##'
+  - string get_all_var
+- - '##'
+  - boolean is_integer
+- - '##'
+  - boolean is_object
+- - '##'
+  - boolean is_array
+- - '##'
+  - boolean is_string
+- - '##'
+  - boolean is_float
+- - '##'
+  - boolean is_bool
+- - '##'
+  - boolean is_null
+- - '##'
+  - boolean is_resource
+- - '##'
+  - boolean is_callable
+- - '##'
+  - boolean is_readable
+- - '##'
+  - boolean is_writable
+- - '##'
+  - boolean is_executable
+- - '##'
+  - boolean is_link
+- - '##'
+  - boolean is_numeric
+- - '##'
+  - boolean is_dir
+- - '##'
+  - boolean is_file
+- - '##'
+  - integer get_int
+- - '##'
+  - integer get_float
+- - '##'
+  - integer get_string
+- - '##'
+  - integer get_file_type
+- - '##'
+  - integer get_size
+- - '##'
+  - integer get_time
+- - '##'
+  - integer get_mtime
+- - '##'
+  - string get_time
+- - '##'
+  - string get_time
+- - '##'
+  - string get_headers
+- - '##'
+  - string get_headers
+- - '##'
+  - string get_all
+- - '##'
+  - string get_all
+- - '##'
+  - string get_all
+- - '##'
+  - string get_all
+- - '##'
+  - string get_all
+- - '##'
+  - string get_input
+- - '##'
+  - string get_output
+- - '##'
+  - string get_error
+- - '##'
+  - string get_error
+- - '##'
+  - string get_signal
+- - '##'
+  - string get_string
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
+- - '##'
+  - string get_integer
