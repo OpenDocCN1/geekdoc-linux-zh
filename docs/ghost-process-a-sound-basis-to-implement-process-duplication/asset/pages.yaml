@@ -1,0 +1,905 @@
+- img_proc: true
+  md: '# # Ghost Process: a Sound Basis to Implement Process Duplication, Migration
+    and Checkpoint/Restart in Linux Clusters
+
+
+    Geoffroy Vallée
+
+    ORNL/INRIA/EDF
+
+    Computer Science and Mathematics Division
+
+    Oak Ridge National Laboratory
+
+    Oak Ridge, TN 38731, USA
+
+    valleeg@ornl.gov
+
+    Fax: 865-576-5491
+
+
+    Renaud Lottiaux Darg Margery
+
+    Christine Morin
+
+    IRISA/INRIA, PARIS project-team
+
+    Campus Universitaire de Beaulieu
+
+    35042 Renes, Cedex, France
+
+    [rlottiau, dmargery, cmorin]@irisa.fr
+
+    Fax: +33 2 99 84 71 71
+
+
+    Jean-Yves Berthou
+
+    EDF R&D
+
+    1 avenue de Général de Gaulle
+
+    BP408, 92141 Clermont, France\jyberthou@edf.com
+
+    Fax: +33 1 47 65 34 99
+
+
+    # ## Abstract
+
+
+    Process management mechanisms (process duplication, migration and checkpoint/restart)
+    are very useful for high performance and high availability in clustering systems.
+
+
+    The single image approach aims at providing a global process management service
+    mechanism for checkpoint process, process migration and process duplication. In
+    this context, a common mechanism for virtualization is highly difficult but traditional
+    operating systems do not provide such a mechanism.
+
+
+    This paper presents a kernel service for virtualization ghost process, extending
+    the Linux kernel. The ghost process mechanism has been implemented in the Kerrighed
+    system image based on Linux.
+
+
+    **Keywords:** Linux cluster, distributed operating system, system image, process
+    visualization.
+
+
+    ease cluster use and to take advantage of the cluster''s distributed resources.
+    Process management mechanisms are very useful in this respect. Process duplication
+    allows the deployment of processes of a parallel execution on cluster nodes. While
+    the traditional checkpoint mechanism extends a cluster to take advantage of the
+    cluster resources during the execution of a given workload, may not be sufficient
+    to correctly place the checkpoints on the cluster nodes when they are created.
+    Dynamic load balancing strategies are essential to keep a cluster balanced. These
+    strategies are implemented by an efficient process management mechanism to move
+    a process from one node to another.
+
+
+    # ## 1 Introduction
+
+
+    Today, clusters are more and more widely used to execute numerical applications.
+    Mechanisms are needed to
+
+
+    > ¹The submitted manuscript has been authored by a contractor of the U.S. Government
+    under Contract No. TA-A500-02722. Generally, the U.S. Government retains a non-exclusive
+    royalty-free right to publish or reproduce the published form of this contribution,
+    or allow others to do so, for U.S. Government purposes
+
+
+    For the sake of efficiency and ease of use, a kernel level implementation of the
+    mechanisms needed for global process management in a cluster (process duplication,
+    migration, checkpoint/restart) is highly desirable. The Linux'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'kernel does not provide system services and interfaces for process virtualization.
+
+
+    In this paper we present the ghost process mechanism for process virtualization
+    based on the Linux kernel, which provides a service and an API to virtualize processes.
+    This mechanism allows the implementation of mechanisms for process management.
+    As example, we present the implementation of process migration at the cluster
+    scale: a new migration and a mechanism of process checkpoint/restart.
+
+
+    The ghost process mechanism has been implemented in the KIRRIGED System Image
+    (SSI) cluster operating[9], based on Linux. It has been used to efficiently implement
+    process checkpoint/restart in Kirriged. With associated checkpoint/restart mechanisms
+    and other global resource management mechanisms (e.g. global sign management mechanisms)
+    which are out of scope of this paper, it allows global management of processes.
+
+
+    The structure of this paper is organized as follows: Section 2 relates to global
+    process management in clusters. Section 3 describes the process concept we propose
+    for process virtualization. Section 4 shows how to implement process migration
+    and checkpoint/restart on the cluster. Section 5 provides an evaluation of the
+    ghost mechanism in the framework of its use for checkpoint/restart. Finally, Section
+    6 concludes.
+
+
+    proaches allow implementation of process migration. First, process migration can
+    be implemented through a checkpoint/restart mechanism: the process is checkpointed
+    on a shared file system (e.g. using NFS) and restored from a file system on the
+    node. The second approach is like Condor: to migrate processes directly through
+    the network for efficiency. In such a system, the process is extracted from a
+    node, directly sent to another node and a new process is created. We use OpenSSI[3]
+    or Most[1] for this approach.
+
+
+    Currently, no system provides the complete set of mechanisms in an efficient way,
+    Genesis[4] is based on a micro-kernel and does not provide a complete unit like
+
+
+    # 3 The Ghost Concept for Process Virtualization
+
+
+    The Linux kernel provides some simple interfaces to manage processes on a single
+    machine. Unfortunately, there is no interface to extract a process from the system
+    to create an "image" of the process which is independent of the local
+
+
+    To have a convenient process virtualization, we need a service to extract any
+    process and a simple interface to manage extracted processes. The mechanisms of
+    process management should not be associated with the process. for migration the
+    process is extracted and then transferred through the network to a node, whereas
+    the checkpoint is saved on a stable device. Therefore, the interface of process
+    virtualization should provide the definition of the process used to manipulate
+    processes. This definition is very important to guarantee a simple implementation
+    of mechanisms for global process management. The capability is also important
+    to developing mechanism of global process management adapted to hardware. For
+    example, with shared resource access, process migration can be performed on a
+    network technology that uses a specific programming.
+
+
+    Section 3.1 describes the service of process virtualization, and Section 3.2 presents
+    interfaces to virtualization and define access to resources to use with the virtualization
+    mechanism.
+
+
+    # 3.1 Implementation of Process Virtualization
+
+
+    In a system, a process is represented by two kinds of information: process information
+    that is available in the kernel (e.g. open files, memory segments, signaling,
+    pro-
+
+
+    A list of clusters allows alike deployment of processes. Tools like rsh ssh allow
+    users to naturally deploy applications. Users undoubtedly have choice for process
+    creation so there is no global resource management mechanism. Other systems like
+    batch (e.g. PBS[5], BATCH[6]) or programming resource managers (e.g. API, PVM)
+    provide automatic and efficient deployment of applications. With such systems,
+    users no longer need to manually deploy processes.
+
+
+    Some clusters, like Epoint[1], or BL[3] offer checkpoint mechanisms. With all
+    these systems, a checkpoint mechanism is implemented by the extraction of process
+    information which is stored on a source. Depending on the checkpoint mechanism,
+    different ways to processes are created. Traditionally, resources used to process
+    checkpoint are (i) memory for efficiency or (ii) disks for storage usage. With
+    these images, a process can be restarted a clone process from a checkpoint.
+
+
+    Other systems allow to dynamically migrate processes between cluster nodes. A
+    lot of academic studies have been made to implement process migration[8]. Two
+    major approach
+
+
+    # 2 Background'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'cess identifier) and the register values associated to the pro-
+
+    execution.
+
+
+    With this, it is possible to execute any proc-
+
+    where in a cluster. The ghost process mechanism allows
+
+    extraction of all information. The extraction of the
+
+    process''s address and state is not an issue if
+
+    information is available (if the mechanism can
+
+    access the operating system data structures).
+
+
+    The extraction of register values is more difficult.
+
+    With most processors and systems, these values are
+
+    only available in priority systems. For example,
+
+    in Linux using 86 processors, register values are only
+
+    aavailable in return during kernel execution, such as
+
+    interceptions. Therefore, to create a ghost process in the
+
+    Linux system has to be modified so that register
+
+    values are available. It is also able to state that
+
+    activation of the process at any time, even if the
+
+    process is not active (not running on a pro-
+
+    cessor). Such is very similar to the signal event
+
+    state. We have created a new state to the signal
+
+    state (see Figure 1). This
+
+    state is accessible after the treatment of pending signals,
+
+    sless information (a priori signal) needs to be marked.
+
+    The creation of this state creates a kernel modification
+
+    about time. This modification allows to make a process
+
+    wait for an extraction (which very similar to the
+
+    process marked as having a ghost signal). This
+
+    state is active during the execution of systems, such
+
+    interceptions. Therefore, register values are available
+
+    and process can be activated at any time.
+
+
+    is not locally available) and create a clone process from the
+
+    ghost process.
+
+
+    The system programmer needs to give a ghost process
+
+    object by an exportation and a new process is cre-
+
+    at(forking) and installed in the local system (the process
+
+    is active and can run in the system). Therefore, after the
+
+    process importation is ready to run on the
+
+    local node, indented to the source.
+
+
+    # 3.2.2 Interfaces for Resource Access Definition
+
+
+    The mechanisms for ghost process management are always
+
+    associated to a resource object representing the device used
+
+    to back the ghost process. Furthermore, process migration is
+
+    a combination of resource object representing the network
+
+    management mechanism and resource export/checkpoint is the result of the combination
+    of
+
+    resource object associated to a stable storage device
+
+    (e.g hard drive) with these mechanisms. Therefore, an in-
+
+    ter is needed to specify the resource object with a
+
+    specific definition allows for global process
+
+    management, but is also used to
+
+    adapt the mechanisms to new technologies which
+
+    provide own network interface. We say a resource
+
+    object is placed in the mechanism of process virtu-
+
+    alization.
+
+
+    The interface between access objects and the
+
+    mechanism of process virtualization is based on read/write
+
+    methods. The method is automatically called during
+
+    the process exportation, whereas the read method is called
+
+    during the importation.
+
+
+    Some access objects need extra parameters. For
+
+    example, to access the network, we need to know the
+
+    node address before starting the data. The pa-
+
+    rameters are defined during the initialization step of
+
+    the access object. For example, if we specify
+
+    memory address is accessed in a ghost pro-
+
+    process. Then the ghost process importation reads ghost
+
+    process information from the memory. A statistic
+
+
+    The current implementation allows to read from and
+
+    write to the object, read from source and write to
+
+    send. Each access ob-
+
+    ject is identified by a unique identifier wide. To
+
+    pluch a resource object in a ghost process, a simple in-
+
+    terface is available for each resource object (see Listing 1)
+
+    to listen to each resource object, and the
+
+    system programmer must update an internal function of
+
+    the ghost process mechanism. This function also sets
+
+    function to initialize/finalize the resource access, to
+
+    read/write in the source.
+
+
+    # 3.2 Process Virtualization Interfaces
+
+
+    # 3.2.1 Virtualization Interfaces
+
+
+    To use the process of virtualization, an API is avail-
+
+    nto deal with ghost processes. This API is based on
+
+    concepts of process exportation and process importation.
+
+    the process exportation (see Listing 1) allows to virtual-
+
+    a a process from the local system and provides an object-
+
+    resenting the ghost process. This object has the complete
+
+
+    # Listing 1. Ghost Process API
+
+
+    ```
+
+    // Export process / /
+
+    int export_process(ghost process );
+
+    // Import data to process / /
+
+    int import_process(ghost );
+
+    // Plug a resource object to a ghost process /
+
+    int plug_resource_object(class_id, ghost );
+
+    ```
+
+
+    The process importation (see Listing 1) allows to transfer
+
+    the ghost process in the local memory (if the ghost process
+
+
+    A set of interface has been defined for file access,'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '![](img/758d342663593ae2e0648d2aefd9a8ae_3_0.png)
+
+
+    # Figure 1. Kernel state for process virtualization
+
+
+    **Memory Access** The interface to manage buffers in memory is shown in Listing
+    2.
+
+
+    This interface is integrated in the ghost process management and it is possible
+    to associate a file with a ghost using the interface shown in Listing 3.
+
+
+    +   ### Listing 2. Kerrighed API for memory access
+
+    // Initialization function */
+
+    // int buf_create, create_new_buffer(buffer size);
+
+    // Read function */
+
+    // int buf_read(buffer, size);
+
+    // Write function */
+
+    // int buf_write(buffer, source, size);
+
+    // Function to plug the memory access method
+
+    // in an instance of a ghost process /*
+
+    // int associate_buffer_to_ghost(buffer, ghost);
+
+
+    This interface is integrated in the ghost process management and it is possible
+    to attach a buffer to a ghost shown in Listing 2.
+
+
+    **Network Access** KERRIGED provides an interface to send/receive data over the
+    network (see Listing 4).
+
+
+    +   ### Listing 4. Kerrighed API for network access
+
+    // Read function */
+
+    // int network_read(remote_node_id, variable, size);
+
+    // Write function */
+
+    // int network_write(remote_node_id, variable, size);
+
+    // Function to plug the network access method
+
+    // in an instance of a ghost process /*
+
+    // int associate_node_to_ghost(remote_node_id, channel, ghost);
+
+
+    This interface is integrated in the ghost process management and it is possible
+    to associate a file with a ghost shown in Listing 4.
+
+
+    **File Access** KERRIGED also provides an interface to manage file/write operations
+    (see Listing 3).
+
+
+    +   ### Listing 3. Kerrighed API for file access
+
+    // Initialization function */
+
+    // int file_open(file, pathname);
+
+    // Read function */
+
+    // int file_read(file, destination, size);
+
+    // Write function */
+
+    // int file_write(file, source, size);
+
+    // Finalization function */
+
+    // int file_close(file);
+
+    // Function to plug the file access method
+
+    // in an instance of a ghost process /*
+
+    // int associate_file_to_ghost(file, ghost);
+
+
+    # ## 3.3 Summary
+
+
+    The ghost process mechanism is a mechanism for process virtualization which allows
+    the implementation, an easy way, of global process management such as duplication,
+    migration and checkpoint/restart.
+
+
+    To use the ghost process mechanism, the next section details the implementation
+    of two global process management mechanisms: (i) process migration and (ii) process
+    checkpoint/restart.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# 4 Using Processes to Create Mechanisms for Global Process Management\n\n\
+    The API described in Section 3.2 is used to create new mechanisms to globally\
+    \ manage processes. For each mechanism (e.g. process migration or duplication),\
+    \ after the creation of a ghost process, system programmers have to manage the\
+    \ process from which the ghost has been created and to manage the new active process\
+    \ created from the ghost process. We illustrate this on the examples of process\
+    \ migration in Section 4.1 and process checkpoint in Section 4.2.\n\n# 4.1 Process\
+    \ Management\n\nFor example, List 5 shows a simple approach to implement a process\
+    \ migration is to extract the ghost process in the memory of the source node,\
+    \ then send the ghost through the network to a remote destination. On the destination,\
+    \ the ghost process needs to be imported and then, the ghost process creates a\
+    \ new active process. When the new process is created at the destination, an acknowledgement\
+    \ is sent to the source node. The acknowledgement received is destroyed.\n\n```\n\
+    // Process migration: algorithm executed on the source node /\nvoid migrate_ghost(pid)\
+    \ {\n    // find to migrate /\n    pid task = find_task_by_pid(pid);\n    // create\
+    \ a new instance of ghost process /\n    ghost ghost = create_new_ghost();\n \
+    \   // plug ghost process into the memory /\n    plug_resource_interface(MEMORY_WRITE,\
+    \ ghost);\n    // export in memory /\n    export_ghost(ghost);\n    // send the\
+    \ ghost process to the remote node /\n    send_ghost(ghost, remote_node_id);\n\
+    \    // wait for the acknowledgement from the remote node after the process creation\
+    \ /\n    distant_pid = wait_ack(remote_node_id);\n    // destroy the ghost process\
+    \ on the source node /\n    destroy_process(process);\n}\n```\n\n```\n// Process\
+    \ migration: algorithm executed on the destination node /\nvoid receive_migrated_ghost(pid)\
+    \ {\n    // receive the ghost process from the source node the ghost process is\
+    \ saved in a buffer /\n    memory_buffer = receive_ghost(original_node_id);\n\
+    }\n```\n\n```\n// create a new instance of a ghost process /\nghost = create_new_ghost();\n\
+    // associate the memory buffer with the ghost process /\nassociate_buffer_to_ghost(buffer,\
+    \ ghost);\n// plug the ghost process into the memory in read only interface /\n\
+    plug_resource_interface(MEMORY_READ, ghost);\n// if the ghost is loaded, a process\
+    \ is created /\nnew_pid = import_process(ghost, process);\n// if the process is\
+    \ successfully created, an acknwolegement is sent to the source node /\nsend_ack(original_node_id,\
+    \ new_node_id);\n```\n\n# 4.2 Checkpoint/Restart Mechanism\n\nA process checkpoint\
+    \ is quite simple. A process image needs to be extracted and stored in a stable\
+    \ storage. The process restart mechanism is also simple. An active process is\
+    \ created from the process image saved in storage device. In Kubernetes, checkpoints\
+    \ can be stored in memory or disk.\n\nThis section details the implementation\
+    \ of the checkpoint/restart mechanism based on the ghost process. We present in\
+    \ Section 4.3 the implementation of a checkpoint/restart mechanism in which checkpoints\
+    \ are saved in local memory of the process execution. We present in Section 4.4\
+    \ the implementation of a checkpoint/restart mechanism in which checkpoints are\
+    \ saved in the local disk of the checkpoint process execution.\n\n# 4.3 Implementation\
+    \ of a MemoryCheckpoint/Restart Mechanism\n\nThe algorithm to create a memory\
+    \ checkpoint is shown in List 6.\n\n# List 6. Memory checkpoint:process_in_memory(process_identifier)\n\
+    \n```\nbuffer = create_new_buffer();\nghost = create_new_ghost();\n// associate\
+    \ memory buffer with the ghost process /\nplug_resource_interface(MEMORY_WRITE,\
+    \ ghost);\nassociate_buffer_to_ghost(buffer, ghost);\nprocess = find_task_by_pid(process_identifier);\n\
+    export_ghost(ghost, process);\n```\n\n```\nvoid memory_restart(memory_checkpoint_id)\
+    \ {\nif (process_state == running) then\n```"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '```
+
+    destroy_process();
+
+    ghost = create_new_ghost();
+
+    / associate memory interface to ghost process
+
+    mechanism;
+
+    plug_resource_interface(MEMORY_READ, ghost);
+
+    buffer = find_memory_checkpoint
+
+    (memory_checkpoint_id);
+
+    associate_file_to_ghost(buffer, ghost);
+
+    import_process(ghost);
+
+    ```
+
+
+    | | Ghost size (KBytes) |
+
+    |---||
+
+    | 500x500 | 4 229 |
+
+    | 750x750 | 9 334 |
+
+    | 1000x1000 | 12 429 |
+
+    | 1250x1250 | 20 629 |
+
+    | 1500x1500 | 28 729 |
+
+    | 2000x2000 | 32 933 |
+
+
+    Table 1. Process size for the MGS application according to the matrix
+
+
+    We have seen that the process mechanism is composed of two parts: the definition
+    of the ghost process data and the resource access method. For a memory checkpoint,
+    the ghost process needs to use the local memory, using a resource access method
+    defined in KERRIG (see Figure 2). The memory access method is based on the KERRIG
+    memory interface presented in Listing 2.
+
+
+    > / the ghost process mechanism *
+
+    flush (file);
+
+    rest ghost;
+
+
+    ```
+
+    void disk_restart (disk_checkpoint_id)
+
+    if (state == running) then
+
+    destroy_process();
+
+    ghost = create_new_ghost();
+
+    / associate disk access to ghost process
+
+    mechanism;
+
+    plug_resource_interface(FILE_READ, ghost);
+
+    file = find_checkpoint(disk_checkpoint_id);
+
+    associate_buffer_to_ghost(file, ghost);
+
+    import_process(ghost)
+
+    ```
+
+
+    ![](img/758d342663593ae2e0648d2aefd9a8ae_5_0.png)
+
+
+    For a disk checkpoint, the ghost process needs to use the local file system, using
+    a resource access method defined in KERRIG (see Figure 3). The disk access method
+    is based on the KERRIG disk access interface presented in Listing 3.
+
+
+    The restart mechanism is quite simple similar to the memory restart. The original
+    process (if it is still running) needs to be stopped. A new process is created
+    from a disk checkpoint (see Listing 7). To restart a process from a disk checkpoint,
+    the ghost process needs to be associated to a method to access the local file
+    system.
+
+
+    # 4.4 Implementation of a Disk Checkpoint/Restart Mechanism
+
+
+    # 5 Evaluation
+
+
+    The algorithm used to create a disk checkpoint is shown in Listing 7.
+
+
+    > Listing 7. Disk checkpoint/restart
+
+    ghost_disk_checkpoint (process_identifier)
+
+
+    ```
+
+    file = open(path);
+
+    / associate disk access method to the ghost
+
+    process;
+
+    plug_resource_interface(FILE_WRITE, ghost);
+
+    associate_file_to_ghost(file, ghost);
+
+    file = find_checkpoint_by_id(checkpoint_identifier);
+
+    export_process(ghost, process);
+
+    / associate the disk access method to *
+
+    ```
+
+
+    In this section, we present the evaluation of the ghost process mechanism through
+    its use in the checkpoint/restart mechanism. The evaluations have been done using
+    the implementation of these mechanisms in the clustered operating system. Our
+    clusters are for a cluster where each node is a PC containing 1 GHz processor,
+    5 MB RAM, 100Mbps Ethernet and a hard disk. All evaluations have been performed
+    by executing a sequential version of the Modified Gram-Schmidt (mgs) application.
+    mgs produces from a set of vectors an orthonormal basis of the space generated
+    by these vectors.
+
+
+    Table 1 shows the size of the ghost process for a range of matrix sizes. Typically,
+    the ghost process size is'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'portional to the size of the application memory space. The bigger memory space
+    is, the bigger the ghost process. For the mgs application, the memory size impacts
+    on the ghost space because the other process information has a constant size (the
+    application always accesses the same files for example).
+
+
+    memory during the process extraction) time is a major part of the total checkpoint
+    time. So, the efficiency of the checkpoint mechanism, using local memory, depends
+    on the efficiency of the exportation mechanism.
+
+
+    Figure 5 shows the time needed to restart a process from a memory checkpoint.
+    The cost of a restart is similar to the cost of a checkpoint (with a local memory).
+    The efficiency of the exportation of the ghost mechanism. The ghost process importation
+    time is the major part of the restart time.
+
+
+    ![](img/758d342663593ae2e0648d2aefd9a8ae_6_0.png)
+
+
+    Figure 4. Cost of the creation of a memory process checkpoint
+
+
+    We evaluated the cost of the process checkpoint/restart mechanism, considering
+    the cost of exportation/importation mechanism. So we computed the total time for
+    creating a checkpoint (i.e. the time between the process checkpoint and the end
+    of memory of the ghost process) and the exportation time. Note that the process
+    creation time is a part of the total checkpoint creation time.
+
+
+    # 5.2 Evaluation of the Checkpoint/Restart Mechanism Using the Local DC
+
+
+    The file API of Kernel uses the local file system. When a checkpoint is created
+    to store a ghost process, this file is also stored in the local file cache (with
+    local memory to ensure that data is physically stored on disk). Moreover, to be
+    sure that no cache effect improves all performances, all restarts are after a
+    machine reboot.
+
+
+    Figure 6 shows the time needed to checkpoint a process on the local disk for different
+    matrix sizes. As memory
+
+
+    ![](img/758d342663593ae2e0648d2aefd9a8ae_6_1.png)
+
+
+    Figure 6. Cost of a process disk checkpoint
+
+
+    # 5.1 Evaluation of the Checkpoint/Restart Mechanism Using the Local Memory
+
+
+    Figure 4 shows the time to checkpoint a process in local memory, presenting both
+    the total checkpoint creation time and the ghost process expiration time. The
+    ghost process
+
+
+    ![](img/758d342663593ae2e0648d2aefd9a8ae_6_2.png)
+
+
+    checkpoints, the access time (the exportation phase) is a major part of the total
+    checkpoint time.
+
+
+    Figure 7 shows the cost for restarting a process from a checkpoint stored on disk
+    that the checkpoint file is not cached. The restart cost is due to the disk accesses.
+    We observed in our configuration the disk checkpoint cost is about 10 times higher
+    than the cost of a memory checkpoint.
+
+
+    Figure 5. Restart cost from a memory checkpoint-point
+
+
+    # 5.3 Summary
+
+
+    The performance evaluation shows that for both checkpoint/restart in memory and
+    disk, performance depends directly on the efficiency of the ghost management.
+    So, improving the efficiency of the ghost process
+
+
+    (and so memory accesses, data being saved in'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '![](img/758d342663593ae2e0648d2aefd9a8ae_7_0.png)
+
+
+    mechanism, and in the particular efficiency of resource allocations, the efficiencies
+    of mechanisms for global process management will be improved.
+
+
+    # # Conclusion
+
+
+    In this paper, we have presented the ghost mechanism for process virtualization
+    and how it can be used to ensure the ease of implementation for various mechanisms
+    for global process management. The ghost process mechanism provides a full service
+    for process virtualization (the export/import mechanism) and a set of interfaces
+    for ghost process instances to access shared resources. Through the ghost process,
+    various mechanisms of process management can be extended to the cluster scale.
+    This approach guarantees the ease of maintenance and development of new mechanisms
+    for global process management. The second benefit is that improving the efficiency
+    of the ghost process mechanism and global process management can become more efficient.
+
+
+    The ghost process mechanism has been implemented in the KERRIG global cluster
+    operating system. The KERRIG uses process duplication and checkpoint restart mechanisms
+    based on the ghost process
+
+
+    Kerrid provides different distributed services that are in charge of resource
+    management. Combining global memory management, ghost processes (the import process
+    duplication synchronization service, and a cluster without synchronization), a
+    complete set of processes has been implemented in Kerrid.
+
+
+    Systems that provide mechanisms for process virtualization (e.g., process migration,
+    process checkpoint) operate at the kernel level and based on a specific kernel
+    patch. Nevertheless, all these patches are similar. Therefore, a common patch
+    and the integration of this patch should be used to simplify the development of
+    such a virtualization mechanism for clustering systems. The ghost process mechanism
+    can easily be
+
+
+    ported on such a patch.
+
+
+    # # References
+
+
+    +   [1] A. Barak and O. La''adan. The MOSIX multicom operating system for high
+    performance cluster computing. Generation Computer Systems, 13(4-5):361–372, 1998.
+
+
+    +   [2] J. Bakery and M. Livny. Deploying a high checkpoint clustering. In R.
+    Buyya, High Performance Cluster Computing: Architectures and Systems, Volume 1.
+    IEEE Press, 1999.
+
+
+    +   [3] D. J. Harris and E. Roman. The design and implementation of lab kernel
+    checkpoint/restart. Technical Report, Berkeley Lab, 2005.
+
+
+    +   [4] A. Gremicki, M. Hoblich, and J. Sickcos. Efficiency gains and easy to
+    use cluster operating systems. Parallel Computer, 28(4):557–606, 2002.
+
+
+    +   [5] Henderson and L. Robert. Scheduling under the portable batch system. In
+    G. French and L. Rudolph, Scheduling Strategies for Parallel Processing, 5th European
+    Workshop on OpenMP (EUOMP ''93), Sept. 2995. Lecture Notes in Computer Science,
+    940.
+
+
+    +   [6] E. Marshall. The Bewfoot process service department. In Industrial Cluster
+    Systems (ICS) 2002, pages 129–132, New York City, USA, 2002.
+
+
+    +   [7] D. Gray, G. Gallard, R. Lontiaux, C. Morin, and J.-Berth. A cluster system
+    for running OpenMP. In. 5th European Workshop on OpenMP (EUOMP ''03), Sept. 2003.
+
+
+    +   [8] A. Gulić, F. Daulis, Y. Paindandre, R. Witcher, and S. Zona. Process migration.
+    ACM Computing Systems (CSUR), 33(2):241–299, 2000.
+
+
+    +   [9] C. Morin, P. Gallard, R. Lontiaux, and G. Wallard. Towards efficient scheduling:
+    Image processing cluster operating system. In Generation Computer Systems, 2004.
+
+
+    +   [10] C. Morin, R. Lontiaux, G. Gallard, G. Utard, R. Badnadh, and L. Rilling.
+    Kerrigid: a single image cluster system for high performance computing. In: Proc
+    of 2003: Parallel processing, volume 279 of Lect. Notes in Comput. Sci. pages
+    1291–1294. Springer Verlag, Aug. 2003.
+
+
+    +   [11] E. Pagnon. Transparent checkpointing of parallel processes. International
+    Symposium on Parallel and Distributed Processing Symposium, Nice, France, apr.
+    2003.
+
+
+    +   [12] G. Wallard, C. J.-Berth, and L. Rilling. New approach to configurable
+    dynamic scheduling in clusters based on single image techniques. In Industrial
+    Track of the International Parallel and Distributed Processing Symposium, Nice,
+    France, apr.
+
+
+    +   [13] B. J. Waller. Open system image cluster project. Technical report. Hewlett-Packard,
+    2000.'
+  merge: -1
+  pgno: 7
