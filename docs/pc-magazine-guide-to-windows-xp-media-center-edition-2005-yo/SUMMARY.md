@@ -1,0 +1,2 @@
++   [PC magazine® Windows XP Media Center Edition 2005 指南：全面整合数字生活中心的完整指南](README.md)
++   [PC magazine® Windows XP Media Center Edition 2005 指南：全面整合数字生活中心的完整指南](pc-magazine-guide-to-windows-xp-media-center-edition-2005-yo.md)
