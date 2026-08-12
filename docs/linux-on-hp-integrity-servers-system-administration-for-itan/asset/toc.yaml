@@ -1,0 +1,230 @@
+- - '#'
+  - HP Integrity 服务器上的 Linux：基于 Itanium 系统的系统管理
+- - '#'
+  - 关于 Prentice Hall Professional Technical Reference
+- - '#'
+  - 前言
+- - '##'
+  - 关于本书
+- - '##'
+  - 前言
+- - '##'
+  - 致谢
+- - '##'
+  - Stephen Gears
+- - '##'
+  - 作者 - Marty Poniatowski
+- - '##'
+  - Phil Anderson
+- - '##'
+  - Glen Foster
+- - '##'
+  - Elizabeth Zinkank
+- - '##'
+  - Steven M. Wolff
+- - '##'
+  - Bill Garcia
+- - '##'
+  - Randald Adams
+- - '##'
+  - Brian Allen
+- - '##'
+  - Marty Paul
+- - '##'
+  - 评审员与贡献者
+- - '#'
+  - EFI 和 POSSE
+- - '##'
+  - 命令帮助
+- - '##'
+  - 操作员 / 管理员帮助 (OPERATOR / ADMINISTRATOR HELP)
+- - '##'
+  - 控制台模式帮助 (CONSOLE MODE HELP)
+- - '##'
+  - 会话帮助 (SESSION HELP)
+- - '##'
+  - 机箱代码 (CHASSIS CODE)
+- - '##'
+  - 端口帮助 (PORTS HELP)
+- - '##'
+  - 远程/调制调器端口帮助 (REMOTE/MODEM PORT HELP)
+- - '##'
+  - 内部端口帮助 (INTERNAL PORT HELP)
+- - '##'
+  - HPTERM & VT100 帮助 (HPTERM & VT100 HELP)
+- - '##'
+  - 配置管理处理器 (MP)
+- - '#'
+  - 第 1 章 启动：EFI 和管理处理器
+- - '##'
+  - 表 1-4 MP:CM> 服务 (Serv) 专用命令
+- - '##'
+  - 表 1-5 MP:CM> 操作 (Oper) 专用命令（包含服务命令）
+- - '##'
+  - 警报级别
+- - '##'
+  - 表 1-6 MP:CM> 管理员 (Admin) 专用命令（包含服务和操作命令）
+- - '##'
+  - 表 1-8 配置命令
+- - '##'
+  - 表 1-9 单元本地内存 (CLM)、HPUX 引导程序和 SAC 命令
+- - '###'
+  - HPUX-Bootloader 命令
+- - '###'
+  - SAC> 命令
+- - '#'
+  - 第 2 章 安装 Linux、RPM 和 LILO
+- - '##'
+  - 使用串口台安装 Red Hat Advanced Server
+- - '##'
+  - 安装 Linux、RPM 和 LILO
+- - '##'
+  - 我为系统准备的 /boot/efi 分区分区与启动
+- - '##'
+  - Red Hat 软件包管理器 RPM
+- - '#'
+  - 第 3 章 GNOME 和 KDE
+- - '##'
+  - KDE
+- - '##'
+  - OpenOffice.org
+- - '#'
+  - 第 4 章 磁盘和文件系统设置
+- - '##'
+  - 在 Integrity 服务器上添加和分区 SCSI 磁盘
+- - '##'
+  - 使用 fdisk 向 IA-32 系统中添加 IDE 磁盘
+- - '##'
+  - 使用 fsck 和 e2fsck、inodes 和超级 进行文件系统维护
+- - '###'
+  - fsck 和 e2fsck
+- - '##'
+  - Linux 日志文件
+- - '##'
+  - 将所有内核消息记录到控制台
+- - '##'
+  - 权限限制
+- - '##'
+  - 记录 cron
+- - '#'
+  - 第 4 章 磁盘与文件系统
+- - '##'
+  - 使用 fsck 和 e2fsck 进行文件系统维护
+- - '##'
+  - Linux 文件布局
+- - '##'
+  - Smart Array 配置
+- - '##'
+  - 创建内核的步骤
+- - '##'
+  - 配置
+- - '##'
+  - 文件系统 (Filesystems)
+- - '##'
+  - 更新引导程序
+- - '##'
+  - sysctl 命令
+- - '#'
+  - 第 5 章 与内核交互
+- - '##'
+  - 更改 IP 转发
+- - '##'
+  - 表 5-1 /proc 条目
+- - '##'
+  - 补丁内核
+- - '#'
+  - 第 6 章 系统启动和关机脚本
+- - '##'
+  - 系统启动和关机脚本
+- - '##'
+  - 执行脚本
+- - '##'
+  - 序列脚本
+- - '##'
+  - 子目录和链接文件
+- - '##'
+  - 运行级别与 /etc/inittab
+- - '##'
+  - service, xinetd 和 chkconfig
+- - '##'
+  - 系统关机
+- - '#'
+  - 第 7 章 网络背景
+- - '##'
+  - IEEE 802.3 和 TCP/IP 概述
+- - '##'
+  - 物理层（第 1 层）
+- - '##'
+  - 数据链路层（第 2 层）
+- - '##'
+  - 网络层（第 3 层）
+- - '##'
+  - 传输层（第 4 层）
+- - '##'
+  - 图 7-4 地址类别（续）
+- - '##'
+  - 子网掩码
+- - '##'
+  - 端口及相关话题
+- - '#'
+  - 第8 章 配置与使用网络
+- - '##'
+  - 常用网络文件
+- - '###'
+  - ifcfg-eth0
+- - '##'
+  - /etc/sysconfig/network-scripts/ifcfg-lo
+- - '##'
+  - /etc/sysconfig/network
+- - '##'
+  - /etc/hosts
+- - '##'
+  - /etc/nsswitch.conf
+- - '##'
+  - /etc/resolv.conf
+- - '##'
+  - 网络 (NFS)
+- - '##'
+  - NFS 配置
+- - '#'
+  - 第 9 章 备份
+- - '##'
+  - 内置备份程序
+- - '##'
+  - 在 fromdir 中生成归档并恢复到 todir
+- - '#'
+  - 第 10 章 其他系统管理
+- - '##'
+  - 磁盘相关概念
+- - '##'
+  - 查看挂载的文件系统和交换空间
+- - '##'
+  - 磁盘占用
+- - '##'
+  - Users and Groups
+- - '##'
+  - Samba
+- - '##'
+  - Global parameters
+- - '##'
+  - 用户设置
+- - '##'
+  - 启动
+- - '##'
+  - 将 Windows 驱动器映射到 Linux 目录
+- - '##'
+  - 其他 Samba 主题
+- - '###'
+  - Web 配置工具 (SWAT)
+- - '##'
+  - Samba 工具和程序
+- - '##'
+  - 获取 Samba
+- - '#'
+  - 第 12 章 Linux 版 ServiceGuard
+- - '##'
+  - ServiceGuard 背景
+- - '##'
+  - Service Manager
+- - '#'
+  - 第 13 章 Integrity 服务器上的 HP-UX 和 Windows 安装
