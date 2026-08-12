@@ -1,0 +1,5523 @@
+- img_proc: true
+  md: '# # LabSim Manual
+
+    nThe Lessons Only Experience Can Teach
+
+    IS-418
+
+    Linux+
+
+    TestOut'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # LabSim Manual
+
+
+    ## The Lessons Only Experience Can Teach
+
+
+    # ## Linux+
+
+
+    # ## TestOut
+
+
+    PEARSON
+
+    Custom Publishing'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Copyright © 2006 by TestOut™ Corporation.
+
+    TestOut™ Corporation, 50 South Main Street, Pleasant Grove, Utah 84062
+
+    TestOut™, CourseSim™, ExamSim™, LabSim™, and the TestOut Logo are registered trademarks
+    of TestOut Corporation
+
+    All rights reserved.
+
+
+    Permission in writing must be obtained from the publisher before any part of this
+    work may be reproduced or transmitted in any form or by means, electronic or mechanical,
+    including photocopying and recording, and by any information storage or retrieval
+    system.
+
+
+    All trademarks, service marks, registered trademarks, and registered service marks
+    are the property of their respective owners and are used herein for identification
+    purposes only.
+
+
+    Trademarks
+
+    TestOut is a registered trademark of TestOut Corporation.
+
+    isco Systems is a trademark of Cisco Systems, Inc.
+
+    Novell is a registered trademark of Novell.
+
+    NetWare is a registered trademark of Novell, Inc.
+
+    Novell Direct Services is a registered trademark of Novell, Inc.
+
+    CNA is a trademark of Novell, Inc.
+
+    IPX is a trademark of Novell, Inc.
+
+    IPX/SPX is a trademark of Novell, Inc.
+
+
+    Microsoft is a registered trademark or trademark of Microsoft Corporation in the
+    United States and/or other countries.
+
+    Windows is a registered trademark or trademark of Microsoft Corporation in the
+    United States and/or other countries.
+
+    Word is a registered trademark or trademark of Microsoft Corporation in the United
+    States and/or other countries.
+
+    MCAD is a registered trademark or trademark of Microsoft Corporation in the United
+    States and/or other countries.
+
+    MCE is either a registered trademark or trademark of Microsoft Corporation in
+    the United States and/or other countries.
+
+    MCSA is either a registered trademark or trademark of Microsoft Corporation in
+    the United States and/or other countries.
+
+    CP is a registered trademark or trademark of Microsoft Corporation in the United
+    States and/or other countries.
+
+    CCNA is either a registered trademark or trademark of Cisco Systems, Inc.
+
+    A+ is either a registered trademark or trademark of CompTIA, Inc.
+
+    Linux+ is a registered trademark or trademark of CompTIA, Inc.
+
+    Network+ is either a registered trademark or trademark of CompTIA, Inc.
+
+    Security+ is either a registered trademark or trademark of CompTIA, Inc.
+
+    UNIX is a registered trademark, licensed exclusively through X/Open Company, Ltd.
+
+
+    All brand and product names, fonts and company names are trademarks or registered
+    trademarks of their respective companies.
+
+
+    Printed in the United States of America
+
+
+    10 9 8 7 6 5 4 3 2
+
+
+    ISBN 0-536-29685-5
+
+
+    2006200229
+
+
+    EM
+
+
+    Please visit our web site at www.pearsoncustom.com
+
+
+    ![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_3_0.png)
+
+
+    PEARSON
+
+    CUSTOM PUBLISHING
+
+    75 Arlington Street, Suite 300, Boston, MA 02116
+
+    A Pearson Education Company'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Contents
+
+
+    +   2.0 Using Linux ................................................................................
+    1
+
+
+    +   2.2.3 Find the Working Directory.......................................................
+    2
+
+
+    +   2.2.4 Find a Hidden File....................................................................
+    4
+
+
+    +   2.2.5 View File Information ..........................................................
+    6
+
+
+    +   2.3.4 View a List of Available Shells ...................................
+    7
+
+
+    +   2.3.5 View the Contents of a File ........................................
+    8
+
+
+    +   2.4.5 Modify an Existing File ....................................... 9
+
+
+    +   2.4.6 Create a New File ...................................................
+    11
+
+
+    +   2.5.3 View Environment Variables....................................... 12
+
+
+    +   2.6.2 Get Help 1 ............................................................
+    14
+
+
+    +   2.6.3 Get Help 2 ............................................................
+    15
+
+
+    +   2.6.4 Get Help 3 ............................................................
+    16
+
+
+    +   3.0 Users and Groups .......................................................
+    17
+
+
+    +   3.1.3 Create a User Account ........................................ 18
+
+
+    +   3.1.4 Rename a User Account ....................................... 21
+
+
+    +   3.1.5 Find the User ID ................................................ 22
+
+
+    +   3.1.6 Delete a User ................................................... 24
+
+
+    +   3.2.3 Add Users to a Group ....................................... 25
+
+
+    +   3.2.4 View Group Membership ................................ 27
+
+
+    +   3.2.5 Add a User to Additional Groups ................ 28'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   3.2.6 Remove a User from a Group ............................................................
+    30
+
+    3.2.7 Remove a User from All Groups.....................................................................
+    31
+
+    3.2.8 Rename and Create Groups...............................................................................
+    32
+
+    3.2.9 Delete a Group and Users...............................................................................
+    33
+
+    3.3.3 Find the User Quota...........................................................................
+    35
+
+    3.3.4 Turn Quotas On..................................................................................
+    36
+
+    3.3.5 Turn Quotas Off...............................................................................
+    37
+
+    3.3.6 Edit Quotas 1......................................................................................
+    38
+
+    3.3.7 Edit Quotas 2...............................................................................
+    39
+
+    3.3.8 Generate a Quota Report......................................................................
+    40
+
+    3.4.3 Find the Login Name...........................................................................
+    41
+
+    3.4.4 Switch Users for a Command..................................................................
+    42
+
+    3.4.5 Switch to the Root User.....................................................................
+    44
+
+    3.4.6 Log Out of the System.......................................................................
+    46
+
+    3.4.8 Change Your Password.......................................................................
+    47
+
+    3.4.9 Change a User''s Password..................................................................
+    49
+
+    3.4.10 Lock and Unlock User Accounts.......................................................
+    51
+
+
+    # 4.0 Managing the File System ............................................................
+    53
+
+
+    +   4.1.3 Set Directory Permissions ...................................................
+    54
+
+    4.1.4 Add File Permissions ................................................................
+    58
+
+    4.1.5 Set File Permissions......................................................................
+    60
+
+    4.1.6 Enable Directory Browsing.....................................................
+    61
+
+    4.1.7 Set the SUID Bit...............................................................................
+    63
+
+    4.1.8 Remove SUID and GUID Permissions..............................................
+    65
+
+    4.1.9 Change the Umask 1....................................................................
+    68
+
+    4.1.10 Change the Umask 2..............................................................
+    70
+
+    4.1.11 Change the Umask 3..............................................................
+    72
+
+    4.2.3 Change File Ownership........................................................................
+    74'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '+   4.2.4 Change Group Ownership for a File ....................................................................
+    75
+
+    4.2.5 Change Directory Ownership..................................................................................
+    76
+
+    4.3.3 Create Directories.....................................................................................................
+    77
+
+    4.3.4 Delete Directories...............................................................................................
+    80
+
+    4.3.5 Delete Files...............................................................................................................
+    81
+
+    4.3.6 Delete a Directory Structure..............................................................................
+    83
+
+    4.3.7 Move Files................................................................................................................
+    84
+
+    4.3.8 Create a Hard Link.....................................................................................................
+    86
+
+    4.3.9 Create a Soft Link......................................................................................................
+    88
+
+    4.3.10 Determine the Directory Size................................................................
+    89
+
+    4.3.11 Determine the Amount of Free Disk Space................................................
+    90
+
+
+    +   5.0 Services and Processes..................................................................................
+    91
+
+    5.1.3 Find the Runlevel...........................................................................................
+    92
+
+    5.1.4 Change the Runlevel.....................................................................................
+    93
+
+    5.1.5 Change the Default Runlevel.......................................................................
+    94
+
+    5.1.6 Change a Service Runlevel...............................................................................
+    96
+
+    5.2.3 Determine Service Status...............................................................................
+    98
+
+    5.2.4 Restart a Service...........................................................................................
+    99
+
+    5.3.6 Kill a Remote Terminal Services Session................................................
+    101
+
+    5.3.7 Stop a Zombie Process...............................................................................
+    103
+
+
+    +   6.0 Installing Software..................................................................................
+    105
+
+
+    +   6.3.3 Create a Tarball Archive File...............................................................
+    106
+
+    6.3.4 Create and Extract from Tarball Archive Files.......................................
+    109
+
+
+    +   7.0 Installing Hardware..................................................................................
+    111
+
+
+    +   7.1.1 Change the Boot Device Order..................................................................
+    112
+
+    7.1.2 Disable Memory Tests..............................................................................
+    114
+
+    7.1.3 Enable the Parallel Port.....................................................................
+    115'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 8.0 Managing Devices...............................................................................................
+    117
+
+
+    +   8.1.3 Insert a Module into the Kernel ............................................................
+    118
+
+
+    +   8.1.4 Remove a Module from the Kernel .......................................................
+    120
+
+
+    +   8.4.2 Print a File...............................................................................................
+    121
+
+
+    +   8.4.3 Remove a Print Job..................................................................................
+    122
+
+
+    # 9.0 Disks and Volumes......................................................................................
+    125
+
+
+    +   9.1.3 Find the Boot Device.......................................................................
+    126
+
+
+    +   9.1.4 Find the Swap Device..................................................................
+    127
+
+
+    +   9.2.3 Format a Hard Disk......................................................................
+    128
+
+
+    +   9.2.4 Format a Floppy Disk.....................................................................
+    129
+
+
+    +   9.2.5 Format a Hard Disk with reiserfs..................................................
+    130
+
+
+    +   9.2.6 Create a Swap Area..................................................................
+    132
+
+
+    +   9.3.3 Mount a Volume.......................................................................
+    133
+
+
+    +   9.3.4 Unmount a Volume......................................................................
+    135
+
+
+    +   9.3.5 Mount Devices.......................................................................
+    136
+
+
+    # 10.0 Boot and Shutdown......................................................................
+    139
+
+
+    +   10.1.4 Read the Boot File.....................................................................
+    140
+
+
+    +   10.2.3 Shut Down Immediately...............................................................
+    143
+
+
+    +   10.2.4 Shut Down with Notification..................................................
+    144
+
+
+    +   10.2.5 Shut Down and Reboot.....................................................
+    145
+
+
+    +   10.2.6 Control Shutdown Users.....................................................
+    146
+
+
+    # 13.0 Troubleshooting.........................................................................
+    139
+
+
+    +   13.1.3 View /proc Information 1..................................................
+    150
+
+
+    +   13.1.4 View /proc Information 2......................................................
+    151
+
+
+    +   13.2.3 Start a NIC.......................................................................
+    152
+
+
+    +   13.2.4 Stop a NIC.......................................................................
+    153'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '```
+
+    root@localhost:~
+
+    File Edit View Terminal Go Help
+
+    [root@localhost root]# set
+
+    BASH=/bin/bash
+
+    BASH_ENV=/root/.bashrc
+
+    ```
+
+
+    ```
+
+    root@localhost:~
+
+    File Edit View Terminal Go Help
+
+    [root@localhost root]# cat /etc/passwd | less
+
+    root:x:0:0:root:/root:/bin/bash
+
+    bin:x:1:1:bin:/sbin/nologin
+
+    ```
+
+
+    ```
+
+    root@localhost:~
+
+    File Edit View Terminal Go Help
+
+    USERDEL (8)
+
+
+    NAME
+
+    userdel - Delete a user account and related files
+
+
+    SYNOPSIS
+
+    userdel [-r] login
+
+    ```
+
+
+    # 2.0 Using Linux'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 2.2.3 FIND THE WORKING DIRECTORY
+
+
+    What is your current working directory?
+
+
+    # Steps
+
+
+    The working directory is the directory a user is currently in. Use the pwd command
+    to find the working directory. If you create a file without specifying a path,
+    the file saves directly into your working directory.
+
+
+    Complete the following steps:
+
+
+    +   1. Click the **Simulation** button to find the information to answer the question.
+
+    2. To display the working directory, type: **pwd**.
+
+
+    What is the working directory?
+
+    3. Type **cd ..** to change the current directory.
+
+    4. Type **pwd** to display the working directory.
+
+
+    How did the directory change?
+
+    5. Type **cd wadams.**
+
+    6. Type **pwd** to display the working directory.
+
+
+    What is the current working directory?'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '+   7. Type cd hr to try to change to the hr directory.
+
+    What happened? Why?
+
+
+    +   8. Type cd /hr change to the hr directory.
+
+    What is the current working directory?
+
+
+    +   9. Type cd to change the current directory.
+
+    What is the current working directory?
+
+
+    +   10. Click the Done button and answer the question using the information from
+    step 2.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# 2.2.4 FIND A HIDDEN FILE
+
+
+    What is the name of the hidden file in the /etc directory?
+
+
+    # Steps
+
+
+    The ls command displays a list of files in a directory. However, many directories
+    contain system or configuration files that are rarely edited, which you cannot
+    see with just the ls command. To view these hidden files, use the -a switch with
+    the ls command. A period (.) precedes a hidden file name.
+
+
+    Complete the following steps:
+
+
+    +   1. Click the Simulation button to find the information to answer the question.
+
+    2. Type pwd.
+
+    Which directory are you in?
+
+    What two pieces of information can you get from the command prompt?
+
+    3. To move to the /etc directory, type: cd /etc.
+
+    How did the command prompt change?
+
+    4. To display a list of files, type: ls.
+
+    How many files are listed in the /etc directory?'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '+   5. To display all files in /etc (including hidden files), type: ls -a.
+
+
+    How many files are now listed in the /etc directory?
+
+
+    What is the hidden file in the /etc directory?
+
+
+    +   6. Click the Done button and use the information in step 5 to answer the question.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# 2.2.5 VIEW FILE INFORMATION
+
+
+    View detailed information for the /sbin/eltvune file. What is the file size, the
+    modified date, and the modified time? (Type the information exactly as it is shown
+    on the screen.)
+
+
+    # Steps
+
+
+    You may find it useful to append a path to the end of a directory command rather
+    than moving to another directory. For example, if you wanted to view information
+    about a file named games in the /etc directory, but you were in the /root directory,
+    you could enter the ls -l /etc/games command. This allows you to stay in the root
+    directory while viewing information about the games file (the -l option gives
+    you a long listing of file information).
+
+
+    You could also view information about all files in the /etc directory by using
+    the more option. For example, the ls -l /etc | more command allows you to view-detailed
+    information for all files in /etc (use the space bar to scroll through files that
+    don''t appear on the screen).
+
+
+    Complete the following steps:
+
+
+    +   1. Click the Simulation button to find the information to answer the question.
+
+
+    Which directory are you in?
+
+
+    +   2. Display the detailed information for the /eltvune file by typing: ls -l
+    /sbin/eltvune.
+
+    Complete the following table:
+
+
+    | Property | Value |
+
+    | File size | |
+
+    | Modified date | |
+
+    | Modified time | |
+
+
+    +   3. Click the Done button and use the information in step 2 to answer the question.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# 2.3.4 VIEW A LIST OF AVAILABLE SHELLS
+
+
+    The /etc/shells file contains a list of shells that are available on the current
+    system. View the contents of the file and answer the following question.
+
+
+    Of the shells listed below, which are *not* available on the system?
+
+
+    +   - A. /bin/bsh
+
+    - B. /bin/csh
+
+    - C. /bin/sh
+
+    - D. /bin/tcsh
+
+
+    # Explanation
+
+
+    The correct answer is D.
+
+
+    To find the answer, click the **Simulation** button and type: `cat /etc/shells`.
+
+
+    The shell is the interface between the user and the operating system. Via the
+    shell, users and programs send commands to the kernel. In many ways, the shell
+    is much like the DOS command interpreter. Like everything else in Linux, the shell
+    is just a component. This means that you can choose the shell you want to use,
+    or have multiple shells installed on your system at the same time. A list of shells
+    on your system is stored in the /etc/shells file. To view the contents of a file,
+    like /etc/shells, use the **cat** command.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 2.3.5 VIEW THE CONTENTS OF A FILE
+
+
+    View the contents of the /root/.bash_profile file. What is the last word in the
+    file?
+
+
+    # Steps
+
+
+    Linux provides various ways to view file contents, including the cat command,
+    which also allows you to manipulate file contents when combined with other options.
+
+
+    Complete the following steps:
+
+
+    +   Click the Simulation button to find the information to answer the question.
+
+
+    +   Type cat /etc/passwd.
+
+    What happens? Can you determine what the first line in the file is? Why not?
+
+
+    +   To view the /etc/passwd file one page at a time, type cat /etc/passwd | more.
+
+    What happens?
+
+
+    +   Press the Spacebar on the keyboard to page through the file.
+
+
+    +   Type cat /root/.bash_profile.
+
+    Can you read the first line of the file? Why?
+
+
+    +   What is the last word in the file?
+
+
+    +   Click the Done button and use the information in step 5 to answer the question.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# 2.4.5 MODIFY AN EXISTING FILE
+
+
+    Scenario
+
+
+    You have just added a custom entry to your /etc/hosts file. After testing, however,
+    you find that you have mistyped the line in the file.
+
+
+    Your task in this lab is to:
+
+
+    +   * Use vi to open the /etc/hosts file.
+
+    * Modify the host name time-a.nis.gov to read time-a.nist.gov
+
+    * Save your changes.
+
+
+    Steps
+
+
+    A text editor allows you to create and modify text files. Vim (vi improved) is
+    the most common command-line text editor included with Linux. While there are
+    vi commands that can take you to specific lines and positions in a file, you can
+    also use the arrow keys to place the cursor in the correct position before you
+    edit the file.
+
+
+    Complete the following steps:
+
+
+    +   1. To open the vi editor, type vi.
+
+    2. Press i.
+
+    How can you tell what vi will now allow you to do?
+
+    3. Type your name at the top of the screen.
+
+    How does this affect the screen?'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '4. Press the Esc (escape) key on the keyboard.
+
+    What happened?
+
+
+    5. Type :q.
+
+    Did you exit vi? Why not?
+
+
+    6. To exit vi without saving (writing) changes to the file, type :q!
+
+
+    7. Use the following command to open the /etc/hosts file in vi: vi /etc/hosts.
+
+
+    8. Use the arrow keys to position cursor under the last period in the time-a.nis.gov.
+
+
+    9. To be able to enter text in the file, you must enter insert mode. To do this,
+    type i.
+
+
+    10. Type t to modify the hostname entry.
+
+
+    11. To enter command mode to save the change to the file and exit vi, press the
+    Esc key.
+
+
+    12. To exit vi and write (save) the change to the file at the same time, use the
+    following command: :wq.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 2.4.6 CREATE A NEW FILE
+
+
+    Scenario
+
+
+    In this lab, you will create and edit a file in vi. Complete the following tasks:
+
+
+    +   - Open the vi editor with a new file named /root/shell.
+
+    - Add the following lines to the file:
+
+    ```
+
+    SHELL=/bin/tsch
+
+    export SHELL
+
+    ```
+
+    - Save and close the file.
+
+
+    # Steps
+
+
+    The vim text editor offers two working modes: command mode or insert mode. By
+    default, the editor opens in command mode. To enter a command in command mode,
+    generate a : (colon) prompt by typing <Shift> : . There are numerous ways to move
+    from command mode to insert mode, but two of the most common ways are to type
+    i or a and begin editing the file.
+
+
+    Complete the following steps:
+
+
+    +   1. To enter and create the new file at the same time, use the following command:
+
+    vi /root/shell.
+
+    2. To enter insert mode, type i.
+
+    3. To add the first line of text to the file, type SHELL=/bin/tsch and press Enter.
+
+    4. To add the second line of text, type export SHELL.
+
+    5. To enter command mode, press the Esc (escape) key.
+
+    6. To write the changes to the file and exit vi, type :wq.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# 2.5.3 VIEW ENVIRONMENT VARIABLES
+
+
+    View the currently set environment variables to find the values below.
+
+
+    +   - HOME
+
+    - LANG
+
+    - SHELL
+
+    - TERM
+
+
+    # Steps
+
+
+    An environment variable is a setting that the operating system or programs working
+    in the operating system access. Environment variables make up the user environment.
+    The standard for writing variable names (called *variable identifiers*) is to
+    use upper case.
+
+
+    Complete the following steps:
+
+
+    +   - Click the **Simulation** button to find the information to answer the question.
+
+    - To display the HISTSIZE variable identifier''s value, type `echo $HISTSIZE`.
+
+    - What is the value of the HISTSIZE variable?
+
+
+    +   - To display all the variables in the system, type `env`.
+
+    - What are the first three lines of output?'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '+   4. To display the set environment variables, type set.
+
+
+    Do you get the same results as the env command? Why not?
+
+
+    In the output from the set command, locate the values for the following variables:
+
+
+    | Variable | Value |
+
+    | --- | --- |
+
+    | HOME | |
+
+    | LANG | |
+
+    | SHELL | |
+
+    | TERM | |
+
+
+    +   5. Click the Done button and use the information in step 4 to answer the question.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# 2.6.2 GET HELP
+
+
+    According to the command help, which switch can you use with the killall command
+    to kill a process group instead of just a process?
+
+
+    +   - A. -g
+
+    - B. -q
+
+    - C. -v
+
+    - D. -w
+
+
+    # Explanation
+
+
+    The correct answer is A.
+
+
+    Click the Simulation button and, type: killall -h or killall -help. Complete the
+    following table from the help information:
+
+
+    | Switch | Function |
+
+    |---|---|
+
+    |-g | |
+
+    | -q | |
+
+    | -v | |
+
+    | -V | |
+
+    | -w | |'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 2.6.3 GET HELP 2
+
+
+    What does the -M switch do with the useradd command?
+
+
+    +   - A. Moves the home directory.
+
+
+    +   - B. Creates the home directory regardless of system settings.
+
+
+    +   - C. Prevents the home directory from being created regardless of system settings.
+
+
+    +   - D. Identifies an alternate path to the home directory.
+
+
+    # Explanation
+
+
+    The correct answer is C.
+
+
+    Click the Simulation button and type man useradd to view a description of the
+    available switches for the command. When you use the man command, the corresponding
+    file is opened in the command prompt window using the default paging program (typically
+    less). Use the Space bar to move through the file one page at a time. If you want
+    to exit the man help before you reach the last page, press the q key on the keyboard.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 2.6.4 GET HELP 3
+
+
+    According to the command help, what can the mount command be used for? (Select
+    all that apply.)
+
+
+    +   - A. Move a subtree
+
+    - B. Mount a directory tree
+
+    - C. Mount a device
+
+    - D. Mount a volume label
+
+    - E. Mount a filesystem on a device
+
+
+    # Explanation
+
+
+    The correct answers are A, B, and E.
+
+
+    Click the Simulation button and type mount -help to find what the mount command
+    can do.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_24_0.png)
+
+
+    # 3.0
+
+
+    # Users and Groups'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# 3.1.3 CREATE A USER ACCOUNT
+
+
+    Scenario
+
+
+    The VP of Marketing has told you that Paul Denunzio will join the company as a
+    market analyst in two weeks. You need to create a new user account for him.
+
+
+    Your task in this simulation is to:
+
+
+    +   - Create the pdenunzio user account
+
+    - Include the full name as a comment for the user account
+
+    - Set the password to eye8cereal
+
+
+    Steps
+
+
+    Linux stores user account information in the /etc/passwd and /etc/shadow files.
+    While you can edit these files manually, doing so can disable your system. As
+    an alternative, use the useradd or passwd commands and their options to work with
+    users.
+
+
+    Complete the following steps:
+
+
+    +   1. Type man useradd to view the documentation for the useradd command. Complete
+    the following table:
+
+
+    | Command Switch | Option |
+
+    |---|---|
+
+    | | Add a comment to the user account |
+
+    | | Define the home directory for the user |
+
+    | | Prevent creating the home directory |
+
+    | | Set the password |
+
+    | | Configure an expiration date |
+
+    | | Display default values |
+
+
+    Tips: Press the Spacebar to scroll down the help contents. Press q to exit the
+    man page.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '2. Type ls /home to display the contents of the /home directory.
+
+
+    What directories exist beneath the /home directory?
+
+
+    3. To add the pdenunzio user account with the user''s full name as part of the
+    command, type the following: useradd -c "Paul Denunzio" pdenunzio
+
+
+    4. Type ls /home.
+
+
+    How did the directory list change?
+
+
+    5. Type cat /etc/passwd to view the contents of the passwd file.
+
+
+    Record the information for the last line in the file.
+
+
+    6. Type cat /etc/shadow to view the contents of the shadow file.
+
+
+    Record the information for the last line in the file.
+
+
+    7. To assign the pdenunzio account a password, do the following:
+
+
+    +   - Type password pdenunzio.
+
+    - Type eye8cereal.
+
+    - Retype eye8cereal.
+
+
+    Why don''t you see the password as you type it?'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '+   8. Type cat /etc/shadow.
+
+
+    How has the entry for the pdenunzio account changed?
+
+
+    How can you identify user accounts without passwords?'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# 3.1.4 RENAME A USER ACCOUNT\n\nScenario\n\nBrenda Cassini (user account bcassini)\
+    \ has recently married. You want to update her user account to reflect her new\
+    \ last name. Complete the following tasks:\n\n+   - Rename the user account bpalmer.\n\
+    - Change the comment field to read Brenda Palmer.\n- Change the home directory\
+    \ to /home/bpalmer, moving the contents of the old home directory to the new location.\n\
+    \nSteps\n\nYou can modify existing user accounts with the usermod command.\n\n\
+    Complete the following steps:\n\n+   1. Type cat /etc/passwd to view the contents\
+    \ of the passwd file.\n   Circle the UID for bcassini.\n   505 506 507 508\n2.\
+    \ To verify that the bcassini home directory exists, type ls /home.\n3. To accomplish\
+    \ all the tasks in the lab with a single command, type the following:\n   usermod\
+    \ -c \"Brenda Palmer\" -d /home/bpalmer -m bpalmer bcassini\n4. To verify the\
+    \ user account name change, type cat /etc/passwd.\n5. To verify that the home\
+    \ directory name has changed, type ls /home."
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# 3.1.5 FIND THE USER ID
+
+
+    What is the UID for user schawla?
+
+
+    # Steps
+
+
+    Linux stores user account information in the /etc/passwd and /etc/shadow files.
+    Each user has a line that describes the user account. Each account is identified
+    with a User Identifier (UID). Accounts with UIDs between 1 and 100 are used by
+    various daemons when they log into the system. UIDs for users begin by default
+    at 500, with the exception of root, which uses UID 0 (zero).
+
+
+    You can use the cat command to view the /etc/passwd and /etc/shadow files. The
+    /etc/passwd file is divided into seven colon-separated fields, each of which holds
+    a specific piece of user data. Shown below is a sample line from the passwd file:
+
+
+    ```
+
+    pclark:x:501:Petunia Clark:home/pclark:/bin/bash
+
+    ```
+
+
+    The table below describes each field in the /etc/passwd file.
+
+
+    | Field Number | Description |
+
+    |---|---|n| 1 | User account name. |
+
+    | 2 | Password. An x in the field indicates passwords are stored in the /etc/shadow
+    file. |
+
+    | 3 | User ID number. |
+
+    | 4 | Primary group ID number, typically this number matches the UID number. |
+
+    | 5 | GECOS field, typically used for a description or the user''s full name.
+    |
+
+    | 6 | Path to the home directory. |
+
+    | 7 | Path to the default shell. |'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'Complete the following steps:
+
+
+    +   1. Click the **Simulation** button to find the information to answer the question.
+
+    2. To view the /etc/passwd file, type **cat /etc/passwd**.
+
+    How many non-daemon users are listed in the file?
+
+
+    What is Maggie Brown''s user ID?
+
+
+    What is Salman Chawla''s group ID?
+
+
+    What is the default shell for the users listed in the file?
+
+
+    What is schawla''s UID?
+
+    3. Click the **Done** button and answer the question using the information from
+    step 2.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# 3.1.6 DELETE A USER
+
+
+    Scenario
+
+
+    Terry Haslam has been dismissed from the organization. His colleagues have harvested
+    the files they need from his home and other directories. Your company security
+    policy states that upon dismissal, users accounts should be removed in their entirety.
+
+
+    Your task in this simulation is to remove the thlaslam user account and the home
+    directory from the system.
+
+
+    Steps
+
+
+    To remove a user from the system, use the userdel command. When combined with
+    the -r option, the user account and home directory are removed from the system.
+
+
+    Complete the following steps:
+
+
+    +   1. To verify that the thlaslam user account exists, type cat /etc/passwd.
+
+
+    What is the user ID for thlaslam?
+
+
+    +   2. Type man userdel to view the documentation for the userdel command. (Press
+    the Spacebar to scroll down the help contents. Press q to exit the man page.)
+
+
+    What does the -r option do?
+
+
+    +   3. To remove the thlaslam user account and its home directory, type userdel
+    -r thlaslam.
+
+
+    What does the system do to indicate the operation succeeded?
+
+
+    +   4. To verify that the user account was removed, type cat /etc/passwd.
+
+
+    +   5. To verify that the home directory was deleted, type ls /home.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# 3.2.3 ADD USERS TO A GROUP
+
+
+    Scenario
+
+
+    Maggie Brown (username mbrown) and Corey Flynn (username cflynn) have recently
+    hired in the Human Resources department. You have already created the two user
+    accounts.
+
+
+    Make the two user accounts members of the hr group on this computer.
+
+
+    Steps
+
+
+    In addition to modifying the user account directly, you can use the usermod command
+    to add a user to a group when you include the -G option, which allows you to make
+    users members of secondary groups. (Because primary group membership affects the
+    permission structure for your distribution, it''s best to accept the default primary
+    group for your distribution.)
+
+
+    Like user information, group information is stored in the /etc/group file. Like
+    /etc/passwd, the /etc/group file uses a colon-separated list to store information.
+    Shown below is a sample line from the group file:
+
+
+    ```
+
+    sales:x:510:pclark,mmckay,hsamson
+
+    ```
+
+
+    The table below describes each field in the /etc/group file.
+
+
+    | Field Number | Description |
+
+    | --- | --- |
+
+    | 1 | Group name. |
+
+    | 2 | Group password. This field will have an x if group passwords are contained
+    in the /etc/gshadow file. |
+
+    | 3 | Group ID number. |
+
+    | 4 | Group members. A comma-separated list of user accounts that are members
+    of the group. |'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'Complete the following steps:
+
+
+    +   1. Type cat /etc/group to view the contents of the group file.
+
+
+    What is the GID of the hr group?
+
+
+    +   2. Type man useradd to view the documentation for the useradd command.
+
+
+    Complete the following table.
+
+
+    | Command Switch | Option |
+
+    |---|---|
+
+    | | Assign a new home directory |
+
+    | | Move contents of home directory to the new home directory |
+
+    | | Expiration date |
+
+    | | Lock a user''s password |
+
+    | | Unlock a user''s password |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press q to exit
+    the man page.
+
+
+    +   3. To add Maggie Brown to the hr group, type usermod -G hr mbrown.
+
+
+    +   4. To add Corey Flynn to the hr group, type usermod -G hr cflynn.
+
+
+    +   5. To verify that the operation succeeded, type cat /etc/group.
+
+
+    How has the hr group entry changed?'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# 3.2.4 VIEW GROUP MEMBERSHIP
+
+
+    To which groups does user cflynn belong? (Select all that apply.)
+
+
+    +   - A. mgmt1
+
+    - B. mgmt2
+
+    - C. hr
+
+    - D. sales
+
+    - E. devel
+
+    - F. it
+
+    - G. cflynn
+
+
+    Explanation
+
+
+    The correct answers are A, C, F, and G.
+
+
+    Click the Simulation button, then type groups cflynn to display the group membership.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# 3.2.5 ADD A USER TO ADDITIONAL GROUPS
+
+
+    Scenario
+
+
+    The VP of Sales promoted Salman Chawla to Regional Sales Director. He will now
+    need the right and permissions assigned to the mgmt2 and hr groups.
+
+
+    Your task in this simulation is to:
+
+
+    +   - Make schawla a member of the mgmt2 and hr groups.
+
+    - Make sure the user is still a member of all current groups.
+
+
+    You are logged on as root.
+
+
+    # Steps
+
+
+    When you use the usermod -G command to assign group membership, the user account
+    is removed from all existing secondary groups before being added to the groups
+    specified with the usermod command.
+
+
+    Complete the following steps:
+
+
+    +   - To display the groups to which schawla currently belongs, type cat /etc/group.
+
+    Which group lists schawla as a member?
+
+
+    +   - To make schawla a member of the required secondary groups, type the following:
+
+    usermod -G mgmt2,hr schawla.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '3. To verify the operation''s success by viewing the contents of the group
+    file, type the following command: **cat /etc/group.**
+
+
+    What groups does shawla belong to?
+
+
+    Why isn''t shawla still a member of the sales group?
+
+
+    4. To make shawla a member of the required secondary groups, including the original
+    group to which he belonged, type the following: **usermod -G sales,mgmtmt2,hr
+    shawla.**'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# 3.2.6 REMOVE A USER FROM A GROUP
+
+
+    Scenario
+
+
+    Corey Flynn (user account cflynn) currently belongs to several groups. Due to
+    some restructuring, he no longer needs to be a member of the hr group.
+
+
+    Your task in this simulation is to:
+
+
+    +   * Remove cflynn from the hr group.
+
+    * Preserve all other group memberships.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. Type `cat /etc/group` to view the contents of the group file.
+
+
+    To which groups does cflynn belong?
+
+
+    +   2. To make cflynn a member of the required secondary groups, type the following
+    command: `usermod -G mgmt1,it cflynn`.
+
+
+    +   3. To verify the operation succeeded, type `groups cflynn`.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# # 3.2.7 REMOVE A USER FROM ALL GROUPS
+
+
+    ## Scenario
+
+
+    Salman Chawla is no longer part of the sales team and is awaiting reassignment
+    to a new position. In the meantime, you do not want him to have access to sales
+    resources.
+
+
+    You task in this simulation is to:
+
+
+    +   - Remove user *chawla* from all secondary group membership.
+
+
+    You are logged on as root.
+
+
+    ## Steps
+
+
+    When you use the **usermod -G** command with double quotation marks that are not
+    separated by a comma, you can remove all secondary group memberships for a user.
+
+
+    Complete the following steps:
+
+
+    +   1. To remove chawla from all secondary group memberships, type **usermod -G
+    """ chawla**.
+
+    2. To verify the operation succeeded, type **groups chawla**.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# 3.2.8 RENAME AND CREATE GROUPS
+
+
+    Scenario
+
+
+    Currently all the Sales people in your company belong to a group called *sales*.
+    The VP of Sales wants two Sales groups: western sales division and eastern sales
+    division.
+
+
+    You task in this simulation is:
+
+
+    +   - Rename the sales group to *western_sales_division*.
+
+    - Create the *eastern_sales_division* group.
+
+    - Modify the group membership so that only bcassini is a member of the *western_sales_division*
+    group, and only aesinoza is a member of the *eastern_sales_division* group.
+
+
+    Steps
+
+
+    Just as you can modify existing users, you can use the **groupmod** command to
+    modify existing groups, including changing the name of a group with the **-n**
+    option. You can also add a group using the **groupadd** command.
+
+
+    Complete the following steps:
+
+
+    +   1. To rename the sales group to western_sales_division, type the following:
+    `groupmod -n western_sales_division sales`.
+
+    2. To create the eastern_sales_division group, type `groupadd eastern_sales_division`.
+
+    3. To make aesinoza a member of the eastern_sales_division group, type the following:
+    `usermod -G eastern_sales_division aesinoza`.
+
+    4. Type `cat /etc/group` to view the contents of the group file.
+
+
+    Do you have to make bcassini a member of the western_sales_division group? Why?
+
+
+    Do you have to remove aesinoza from the western_sales_division group? Why not?'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# 3.2.9 DELETE A GROUP AND USERS
+
+
+    Scenario
+
+
+    Linda Blaine and Rhonda Conger are temporary employees who have been auditing
+    your organization''s financials. Their user accounts have been made a member of
+    the auditors group. They have completed their work and have moved on to new assignments.
+    You need to remove their user accounts and the auditors group from the system.
+
+
+    Your task in this simulation is to:
+
+
+    +   * Delete the lblaine user account.
+
+    * Delete the lblaine home directory.
+
+    * Delete the rconger user account.
+
+    * Delete the rconger home directory.
+
+    * Delete the auditors group.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# Steps\n\nTo remove a group from the system, you can use the **groupdel groupname**\
+    \ command.\n\nComplete the following steps:\n\n+   1. Type **groupdel auditors**.\n\
+    \nWhat is the message that you receive?\n\n+   2. Type **man groupdel** to find\
+    \ information for the **groupdel** command.\n\nWhy did you receive the message\
+    \ in step 1?\n\n+   3. To remove the user accounts, type the following commands:\n\
+    \    - **userdel -r lblaine**\n    - **userdel -r rconger\n\n+   4. To remove\
+    \ the auditors group, type **groupdel auditors**."
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# 3.3.3 FIND THE USER QUOTA
+
+
+    Review the quota information for the wadams user account. What is the blocks quota,
+    the blocks limit, the files quota, and the files limit? (Type the information
+    exactly as it is shown on the screen.)
+
+
+    # Explanation
+
+
+    Click the Simulation button, then type the quota command to view quota information
+    for the current user (wadams). Record the information in the following table:
+
+
+    | Value | Setting |
+
+    |---|---|
+
+    | Blocks quota | |
+
+    | Blocks limit | |
+
+    | Files quota | |
+
+    | Files limit | |'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# 3.3.4 TURN QUOTAS ON
+
+
+    Scenario
+
+
+    The quotas for the system have been turned off. Turn quotas back on.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. Type **quotaon**.
+
+
+    What is the message you receive?
+
+
+    What arguments does the quotaon command accept?
+
+
+    How do you indicate a filesystem when writing commands?
+
+
+    2. To turn quota tracking on, type **quotaon** /.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# 3.3.5 TURN QUOTAS OFF
+
+
+    Scenario
+
+
+    Your system is running hard disk quotas for users and groups. Turn the quotas
+    off.
+
+
+    Steps
+
+
+    Complete the following step:
+
+
+    +   1. To turn quota tracking off, type **quotaoff** /.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# 3.3.6 EDIT QUOTAS 1
+
+
+    Scenario
+
+
+    Salman Chawla (user account schawla) has reached his user quota limit. Rather
+    than delete some of his files, he wants more space. Your manager has approved
+    an increase in his quota limit.
+
+
+    Increase the hard and soft block limits on the schawla user account to 1048576
+    Kb (1 Gb).
+
+
+    Steps
+
+
+    You can set quotas either on the amount of disk space available to a user (blocks)
+    or on the number of files a user is allowed to create (inodes). Each setting uses
+    both soft and hard limits. Users can exceed a soft limit for a certain period
+    of time, but hard limits are absolute.
+
+
+    Complete the following steps:
+
+
+    +   - Type man edquota to view the documentation for the edquota command. Complete
+    the following table.
+
+
+    | Command Switch | Option |
+
+    | -u | |
+
+    | -g | |
+
+    | -t | |
+
+
+    > Tips: Press the Spacebar to scroll down the help contents. Press q to exit the
+    main page.
+
+
+    +   - To edit the quota for schawla, type edquota -u schawla.
+
+
+    +   - Press i to edit the file.
+
+
+    +   - Use the arrow keys to move the cursor to the space below the first soft
+    and type 1048576 (use the delete key to delete extra spaces caused by the insertion).
+
+
+    +   - Move the cursor to the space below the first hard and type 1048576 (use
+    the delete key to delete extra spaces caused by the insertion).
+
+
+    +   - Press the Esc key to enter command mode in vi.
+
+
+    +   - Type :wq to save the changes and exit.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# 3.3.7 EDIT QUOTAS 2
+
+
+    Scenario
+
+
+    Users have complained that the 7 day default grace period for soft limits is too
+    short.
+
+
+    Increase the grace period for users from 7 to 30 days.
+
+
+    Steps
+
+
+    While the hard and soft limits for blocks and inodes are set for each user individually,
+    the length of time for which users can exceed soft limits is controlled centrally
+    in the grace period file. Use the `edquota -u -t` command to modify the grace
+    period for both blocks and inodes. When you use this command without specifying
+    a username, the modifications you make apply to every user in the system for whom
+    quotas are set.
+
+
+    Complete the following steps:
+
+
+    +   1. To open the user soft quota grace period file, type `edquota -u -t`.
+
+
+    +   2. Press i to edit the file.
+
+
+    +   3. Use the arrow keys to move the cursor to the space below Block grace period,
+    delete the 7, and insert 30.
+
+
+    +   4. Move the cursor to the space below Inode grace period, delete the 7, and
+    insert 30.
+
+
+    +   5. Press the Esc key.
+
+
+    +   6. Type :wq to save the changes and exit.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# 3.3.8 GENERATE A QUOTA REPORT
+
+
+    Use **repquota -u (use | more more if you need to)** to answer the following questions:
+
+
+    +   * Which user does not have a quota limit?
+
+    * What is the hard limit for most users?
+
+    * What is the soft limit for most users?
+
+    * What is the highest set hard limit?
+
+    * Which user has the highest set hard limit?
+
+
+    # Expiation
+
+
+    Click the **Simulation** button, then type the **repquota -u** command to generate
+    a quota report. The report tells you the limits and grace period for the users
+    in the file system. Use the report to answer the questions.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# 3.4.3 FIND THE LOGIN NAME
+
+
+    ![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_48_0.png)
+
+
+    What is your login name?
+
+
+    # Explanation
+
+
+    Click the **Simulation** button, type the **whoami** command to see the currently
+    logged in user. You can use the **who -u** command to see a list of all users
+    logged in to the system.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# 3.4.4 SWITCH USERS FOR A COMMAND
+
+
+    Scenario
+
+
+    Earlier in the day you created a user account for Brenda Cassini. When she goes
+    to log on, she can''t. You realize that you misspelled her name as *Casini.*
+
+
+    Your task in this simulation is to:
+
+
+    +   - Change the user account name from *bcasini* to *bcassini* (with 2 s''s).
+
+    - Change the home directory to `/home/bcassini`.
+
+
+    You are logged on as wadams. Instead of switching users to complete the task,
+    use the **su -c** command to make the necessary changes using a single command
+    (enclose the command in double quotation marks). The root password is *1worm4b8*.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Steps
+
+
+    Because best security practices dictate that you use an account other than root
+    for most of your day-to-day administrative tasks, you''ll regularly find it necessary
+    to invoke root privileges with the su command. Using the syntax of the su command
+    that you see here, you can execute a single command as the root user.
+
+
+    ```
+
+    su -c "command" -l name
+
+    ```
+
+
+    For example, su -c "ls /home/rgurate" -l switches to the root user and executes
+    the ls command on the user rgurate''s home directory. (You can enclose the command
+    in either single or double quotation marks.) Before the command executes, however,
+    you need to submit the root user''s password, which prevents unauthorized use
+    of the su command.
+
+
+    Complete the following steps:
+
+
+    +   To change the user account name and home directory with a single command,
+    type the following:
+
+    su -c "usermod -l bcassini -d /home/bcassini bcasini" -l
+
+    At the password prompt, type 1worm4b8.
+
+    To verify that the user account was modified, type cat /etc/passwd and check to
+    see that the account was changed to bcassini.
+
+    To verify that the home directory was changed, type ls /home and check to see
+    that the home directory was changed to bcassini.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# 3.4.5 SWITCH TO THE ROOT USER\n\nScenario\n\nYou are logged in as wadams.\
+    \ Switch to the root user. The password for the root account is 1worm4b8.\n\n\
+    Steps\n\nWhile you most often work from a user account other than root, and while\
+    \ you use su to execute single commands, you must also know how to access the\
+    \ root user account (or another user’s account) using the su command.\n\nComplete\
+    \ the following steps:\n\n+   1. Type man su to view the help page for the su\
+    \ command.\n   Which switch would you use to identify the user name?\n\n+   2.\
+    \ Press the Spacebar until you see the information for the -version switch. Read\
+    \ the line following this information.\n\nWhat happens if you use su - or su -l\
+    \ without identifying a user name?\n\n+   3. Type q to exit the man pages."
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '+   4. Type su -l root, then the password.
+
+
+    Who is the current user?
+
+
+    +   5. Type su -l wadams.
+
+
+    Who is the current user?
+
+
+    +   6. Type su -, then the password.
+
+
+    Who is the current user?
+
+
+    +   7. Type su - again.
+
+
+    Why didn''t the user change?'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# 3.4.6 LOG OUT OF THE SYSTEM
+
+
+    Scenario
+
+
+    Your system administrator scheduled a system update that requires all machines
+    to be running and all users to be logged out of the system. Log out of the system,
+    but do not turn the computer off.
+
+
+    Steps
+
+
+    Most users find it advantageous to leave their computers running, even when they
+    are away from their terminals. A running computer, however, presents security
+    vulnerabilities if the user remains logged in. If you leave your terminal while
+    you''re logged in as root, anyone can execute any command on the system, causing
+    irreparable harm. To protect your system when you leave, simply issue the logout
+    command, which ends your account session but leaves your machine running. When
+    you return, submit your username and password, and resume working.
+
+
+    Complete the following step:
+
+
+    +   1. To exit the system but leave the machine running, type logout.
+
+
+    How did the screen change?'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# # 3.4.8 CHANGE YOUR PASSWORD
+
+
+    ![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_54_0.png)
+
+
+    Scenario
+
+
+    You have been using a special user account called *administrator* to log on to
+    your computer. Now, you think someone has learned your password.
+
+
+    Your task in this simulation is to:
+
+
+    +   - Change your password to *r8ting4str*. Your current password is 7hevn9jan.
+
+
+    You are currently logged in as administrator.
+
+
+    Steps
+
+
+    To secure user accounts on your system, use the shadow password file. When you
+    use shadow passwords, passwords are removed from the /etc/passwd file, encrypted,
+    and placed in the /etc/shadow file. By default, shadow passwords are enabled during
+    installation.
+
+
+    Additionally, you need to manage user accounts, which includes assigning, changing,
+    and managing passwords. To ensure security, passwords should meet the following
+    requirements:
+
+
+    +   - Contain a minimum of eight characters
+
+    - Must contain a mix of lower case and upper case letters and numbers
+
+    - Do not contain recognizable patterns (such as words or the user account name)
+
+
+    To change a password, use the **passwd username** command. If you don''t include
+    the username, you can change the password of the current user.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'Complete the following steps:
+
+
+    +   1. Type man edquota to view the documentation for the edquota command.
+
+
+    Complete the following table.
+
+
+    | Command Switch | Option |
+
+    | --- | --- |
+
+    | - | |
+
+    | -u | |
+
+    | -d | |
+
+    | -n | |
+
+    | -x | |
+
+    | -w | |
+
+    | -S | |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press q to exit
+    the man page.
+
+
+    +   2. To change your password, type passwd.
+
+
+    +   3. At the prompt, enter the current password by typing 7hevn9jan.
+
+
+    +   4. At the prompt, enter the new password by typing r8tingstr.
+
+
+    +   5. At the prompt, retype the new password.
+
+
+    How do you know the operation completed successfully?'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# 3.4.9 CHANGE A USER’S PASSWORD
+
+
+    Scenario
+
+
+    Salman Chawla has forgotten his password. Change the password for the shawla user
+    account: G2004oly. Make sure the password is encrypted in the shadow file.
+
+
+    Steps
+
+
+    Though you can execute the passwd command to change a password for your current
+    account, you must be logged in as the root user to change the password for another
+    user. Including the su command to execute a single command or switch to the root
+    user account, you can logout of the system and then log back in as the root user.
+
+
+    Complete the following steps:
+
+
+    +   1. Type passwd schawla to change the password for Salman Chawla.
+
+
+    > Why did the command fail?
+
+
+    > What must you do before you can change another users’ password?
+
+
+    +   2. To switch to the root user account, type su-.
+
+    3. At the password prompt, type 1worm4b8.
+
+    4. To change the password for schawla, type passwd schawla.
+
+    5. At the new password prompt, type G2004oly.
+
+    6. Retype the password.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '+   7. To check the new password in the passwd file, type cat /etc/passwd.
+
+    Why is there an x after the user''s name?
+
+
+    +   8. To check the new password in the shadow file, type cat /etc/shadow.
+
+    Why can''t you read the password in the shadow file?'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# 3.4.10 LOCK AND UNLOCK USER ACCOUNTS\n\nScenario\n\nEvery seven years, your\
+    \ company provides a 6 week sabbatical for every employee. Vera Edwards, Corey\
+    \ Flynn, and Bhumika Kahn are leaving today, while Maggie Brown, Brenda Cassini,\
+    \ and Arturo Espinoza are just returning. The company security policy mandates\
+    \ that user accounts for employees gone longer than 2 weeks are disabled.\n\n\
+    You task in this simulation is to:\n\n+   - Lock the vedwards, cflynn, and bkahn\
+    \ user accounts.\n- Unlock the mbrown, bcassini, and aespinoza user accounts.\n\
+    \n# Steps\n\nComplete the following steps:\n\n+   1. Type cat /etc/shadow to view\
+    \ the shadow file.\n   Record the entry for the vedwards user account.\n2. Type\
+    \ passwd -l vedwards to lock the account.\n3. Type cat /etc/shadow.\n   How did\
+    \ the entry for vedwards change?\nWhich other user accounts are currently locked?"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '+   4. To lock additional accounts, type passwd -l cflynn and usermod -L bkahn.
+
+
+    +   5. To unlock accounts, type the following:
+
+    passwd -u brown, usermod -U bcassini, and usermod -U aespinoza.
+
+
+    +   6. Type cat /etc/shadow to verify that the accounts are locked or unlocked.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_60_0.png)
+
+
+    # # 4.0 Managing the File System'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# 4.1.3 SET DIRECTORY PERMISSIONS
+
+
+    Scenario
+
+
+    An assistant administrator has been modifying permissions on the /hr directory.
+    You want to quickly change the permissions to match the permission settings documented
+    in your security policy.
+
+
+    Your task in this lab is to modify the permissions on the /hr directory to be
+    as follows:
+
+
+    +   * User = read, write, execute
+
+    * Group = read, execute
+
+    * Other = read, execute
+
+
+    Steps
+
+
+    Every file has an *inode* (information node) that stores information about the
+    file, including permissions. The portion of the inode that stores permission information
+    is called the *mode*. The mode has three sections:
+
+
+    +   * User (owner) permissions
+
+    * Group (group owner) permissions
+
+    * Other (everyone on the Linux system) permissions
+
+
+    There are three types of permissions contained in the mode:
+
+
+    +   * r (Read) – Open and read a file or a directory, list directory contents
+    (requires execute permission, also).
+
+    * w (Write) – Open, read, edit a file for a directory, add, delete, and rename
+    files (requires execute permission, also).
+
+    * x (Execute) – Execute the file (if it''s a program file) or the shell script,
+    or for a directory enter the directory and work with its contents.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# 4.0 Managing the File System 55
+
+
+    When you view the permissions set on a file or a folder, you will see these letters
+    for each of the three sets of permissions. For example, the following show all
+    three permissions granted for the user, group, and other.
+
+
+    | File Permissions | Folder Permissions |
+
+    | -rwxrwxrwx | drwxrwxr-x |
+
+
+    Each permission (r, w, or x) can be designated by an octal number. You can configure
+    permissions by typing a number that corresponds to the combination of permissions
+    to set. In this list, you will practice working with permissions to learn the
+    numbers that correspond to each permission.
+
+
+    Complete the following steps:
+
+
+    +   1. Begin clearing all permissions on the /hr directory by typing chmod 000
+    /hr.
+
+    2. To view the current permissions, type ls -l / and locate the /hr directory.
+
+    3. Type chmod 111 /hr to change the current permissions.
+
+    4. Type ls -l /.
+
+
+    Notice that the command sets the same permission for the user, group, and other.
+
+    What permission is given when you use the number 1 with the chmod command?
+
+
+    +   5. Change the permissions again by typing: chmod 222 /hr.
+
+    6. Type ls -l /.
+
+
+    What permission is given when you use the number 2 with the chmod command?'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '7. Type chmod 444 /hr, then view the results with the ls -l / command.
+
+
+    Complete the following table with the information you have learned.
+
+
+    | Octal Value | Permission |
+
+    |---|---|
+
+    | 0 | |
+
+    | 1 | |
+
+    | 2 | |
+
+    | 4 | |
+
+
+    8. You can grant multiple permissions to the user, group, or other by adding the
+    octal values together. To see an example, type: chmod 333 /hr, then view the results
+    with ls -l / .
+
+
+    What permissions are given when you use the number 3 with the chmod command?
+
+
+    Complete the following table with the octal value you would use in each case to
+    set the combined permissions indicated.
+
+
+    | Permissions | Octal Value |
+
+    |---|---|
+
+    | r, W | |
+
+    | r, X | |
+
+    | r, W, X | |
+
+    | W, X | |'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '9. To grant different permissions to the user, group, and other, simply modify
+    the first, second, or third number with the **chmod** command. For an example,
+    type **chmod 753 /hr**, then view the results with **ls -l/**.
+
+
+    Circle the permissions that have been assigned to each owner.
+
+
+    ```
+
+    User      r w x
+
+    Group r w x
+
+    Everyone r w x
+
+    ```
+
+
+    10. To identify the permissions required by the scenario, complete the following
+    table.
+
+
+    | Owner | Permissions | Octal Value |
+
+    | User | r, w, x | |
+
+    | Group | r, x | |
+
+    | Other | r, x | |
+
+
+    Type the corresponding **chmod** command to modify the permissions as required.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# 4.1.4 ADD FILE PERMISSIONS
+
+
+    Scenario
+
+
+    A change in company policy requires users of the /hr group to make changes to
+    the files in the /hr directory. To allow compliance with the new policy, modify
+    the permissions on the files in the /hr directory to give the group the write
+    permission in addition to any other permissions already given.
+
+
+    Steps
+
+
+    +   Complete the following steps:
+
+    1. Use the ls -l / and ls -l /hr commands to view the current permission granted
+    to the /hr directory and its contents. Complete the following table:
+
+
+    | Folder/File | Current Permissions | Octal Values |
+
+    |---|---||
+
+    | /hr | | |
+
+    | /hr/contacts | | |
+
+    | /hr/evaluations | | |
+
+    | /hr/payroll | | |
+
+    | /hr/personnel | | |
+
+    | /hr/stats | | |
+
+
+    +   2. Type chmod 020 /hr/contacts to change the permissions on the contacts file.
+
+
+    +   3. Type ls -l /hr to view the new permissions set on the file.
+
+
+    Did the command you used in step 2 meet the scenario requirements for changing
+    the permissions on the file? Why or why not?'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '+   4. Type **chmod 640 /hr/contacts** to reset the permissions on the contacts
+    file to their original state. What octal value must you use to add the write permission
+    to the group owner?
+
+
+    +   5. Type the **chmod** command with the appropriate value (from step 4) to
+    add the write permission to the group owner for the contacts file. Type **ls -l
+    /hr** to verify that the permissions were changed correctly.
+
+
+    +   6. In step 5, you figured out the existing permissions set on a file and then
+    added the necessary octal value to the existing permissions in **order** to use
+    the **chmod** command to change all permissions to the desired setting. A quicker
+    way is to simply add the necessary permissions (while retaining the existing permissions).
+
+
+    +   7. Type **chmod g+w /hr/evaluations** to add the extra permission to the evaluations
+    file.
+
+
+    +   8. Type **ls -l /hr** to view the current permissions for the **file**.
+
+
+    What command would you use to add the read permission to everyone for this file?
+
+
+    +   9. Although you could change the permission for each remaining file within
+    the /hr directory individually, an easier way would be to change the permissions
+    for the directory and all of its contents. To do so, type **chmod g+w /hr -R**
+
+
+    Note: This command will add the write permission to the group owner to the /hr
+    directory as well. However, because this permission is already granted to the
+    /hr directory, the net change in permissions on the directory will not change.
+
+
+    +   10. Type **ls -l /hr** to verify the permissions set on each file in the /hr
+    directory.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 4.1.5 SET FILE PERMISSIONS
+
+
+    Scenario
+
+
+    The /hr directory is used by members of the Human Resources team to keep important
+    employee documents. Over time, you notice that permissions set on each file have
+    become inconsistent. You want to make sure that all files in the /hr directory
+    have the same set.
+
+
+    Configure permissions on all files in the /hr directory as follows:
+
+
+    +   * Both the user and group owners should be able to read and write to the file.
+
+    * The other group should have no permissions to any file.
+
+
+    When you are finished, the permissions for all files in the /hr directory should
+    be the same.
+
+
+    # Steps
+
+
+    Before completing this lab, fill in the following table to help you identify the
+    necessary permissions to grant.
+
+
+    | Owner | Required Permissions | Octal Value |
+
+    | --- | --- | --- |
+
+    | User | read, write | |
+
+    | Group | read, write | |
+
+    | Other | None | |
+
+
+    Complete the following steps:
+
+
+    +   1. Type **ls - /hr** to view the current permissions set on the files in the
+    /hr directory.
+
+    2. To change the permissions for the files in the /hr directory, type the necessary
+    **chmod** command. **Tip:** Use `/hr/*` as the file path to change all files in
+    the /hr directory at once.
+
+    3. To verify that the operation succeeded, type **ls -l /hr**.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# 4.1.6 ENABLE DIRECTORY BROWSING
+
+
+    Scenario
+
+
+    The Sales team uses the /sales directory to store documents related to sales,
+    contacts, and orders. Currently, permissions on the directory only allow the user
+    and group owners to view the contents of the directory. Users who are not part
+    of the group owner are unable to list the contents of the directory. As part of
+    a new company policy to increase teamwork, you want to allow all users to see
+    the /sales directory and list its contents. You also want to let all users open,
+    but not change, any document inside that directory.
+
+
+    Your task in this lab is to:
+
+
+    +   - Allow the other group to browse the /sales directory.
+
+    - Modify permissions on all files in the /sales directory to allow members of
+    the other group to view, but not change, the file.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. To view the current permissions on the sales directory, type ls -l /.
+
+    Record the permissions for the /sales directory.
+
+    2. To test access to the /sales directory, type su -placy to switch users.
+
+    3. Type cd /sales to try to access the /sales directory.
+
+    What is the message that you receive?
+
+    4. To switch back to the root user, type su - and use 1worm4b8 for the password.
+
+    5. To modify permissions on the /sales directory to allow members of the other
+    category to browse the directory, type chmod o+rx /sales.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '+   6. To test access to the /sales directory, switch users with the **su -
+    placy** command.
+
+
+    +   7. Type **cd /sales**.
+
+
+    +   8. To browse the /sales directory, type **ls**.
+
+
+    What are the files in the /sales directory?
+
+
+    +   9. To switch back to the root user, type **su** – and use **worm4b4** for
+    the password.
+
+
+    +   10. In addition to changing the directory permissions, the scenario requires
+    you to modify the file permissions. To modify permissions on the files in the
+    /sales directory to allow members of the other category to view file contents,
+    type **chmod o+r /sales/**.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# 4.1.7 SET THE SUID BIT
+
+
+    ![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_70_0.png)
+
+
+    Scenario
+
+
+    You have a Linux workstation that you use at home for browsing the Internet, playing
+    music, and writing letters. When you run your MP3 player, it sometimes pauses
+    in playback. You have heard that you might be able to alleviate the problem by
+    raising the priority of the program. You decide to set the SUID bit to automatically
+    run the program as root thereby raising its priority.
+
+
+    Your task in this lab is to set the SUID bit for the /usr/bin/xmms program. Do
+    not change any other permissions on the file.
+
+
+    Steps
+
+
+    In addition to the read, write, and execute permissions, there are three sets
+    of special permissions:
+
+
+    +   - SUID - Set the User ID.
+
+    - SGID - Set the Group ID.
+
+    - Sticky Bit.
+
+
+    SUID does not affect directories, but when it is set for a file that is executed,
+    the SUID allows the user who executed the file to be the file owner as long as
+    the file is executing.
+
+
+    The most common use of SUID is to allow users to run a command as the root user.
+    Users do not become the root user, but rather the command or program runs as if
+    executed by the root user. Be careful in setting the SUID bit as it could give
+    a program too many permissions.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "Complete the following steps:\n\n+   1. Type `ls -l /usr/bin/`.\n   What are\
+    \ the current permissions on the xmms file?\n\n+   2. To modify the SUID for the\
+    \ xmms file, type `chmod u+s/usr/bin/xmms`.\n3. Type `ls -l /usr/bin/`.\n   How\
+    \ is the SUID permission indicated?"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# 4.1.8 REMOVE SUID AND GUIDID PERMISSIONS\n\nScenario\n\nYou have a Linux\
+    \ workstation that you use at home. You are the only user of this computer. You\
+    \ want to improve security by removing the SUID and SGID from some files.\n\n\
+    Your task in this lab is to:\n\n+   - Remove the SUID from the following files:\n\
+    \  * /usr/bin/gpasswd\n  * /usr/bin/newgrp\n- Remove the SGID from the following\
+    \ files:\n  * /usr/bin/kdesud\n  * /usr/bin/wall\n  * /usr/bin/write\n\nDo not\
+    \ change any other permissions."
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "# Steps\n\nJust as you use the + (plus) sign to add permissions, you can subtract\
+    \ permissions using the - (minus) sign.\n\nComplete the following steps:\n\n+\
+    \   1. Type **ls -l /usr/bin | more**. (Use the Space bar to scroll through the\
+    \ screens. Type **q** if you want to exit the screens before reaching the last\
+    \ screen.)\n\nHow are the names of the files you need to change different from\
+    \ the other file names?\n\nHow are file names with SUID permissions different\
+    \ from file names with SGID permissions?\n\nIn the file permissions, where do\
+    \ you find the SGID?\n\n+   2. To remove the SUID permissions from the files,\
+    \ type the following commands:\n    * `chmod u-s /usr/bin/passwd`\n    * `chmod\
+    \ u-s /usr/bin/newgrp`\n\n+   3. Type **ls -l /usr/bin | more**.\n\nWhat are the\
+    \ permissions for the /usr/bin/passwd and /usr/bin/newgrp files?\n\n+   4. To\
+    \ remove the SGID permission from the files, type the following commands:\n  \
+    \  * `chmod g-s /usr/bin/kdesud`\n    * `chmod g-s /usr/bin/wall`\n    * `chmod\
+    \ g-s /usr/bin/write`"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '5. Type ls -l /usr/bin | more.
+
+
+    How do the permissions for the /usr/bin/wall file differ from the /usr/bin/kdesud
+    and the /usr/bin/write files?'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# ## 4.1.9 CHANGE THE UMASK 1
+
+
+    Scenario
+
+
+    You are logged in as wadams. You want to change your default umask to give yourself
+    and members of the groups to which you belong full permissions to the files and
+    directories you create. You want to deny permissions for everyone else.
+
+
+    Change your umask value to 007.
+
+
+    Steps
+
+
+    By default, files receive rw-rw-rw- (666) permissions, and directories receive
+    rwxrwx (777) permissions when they are created. In most cases, the default assignment
+    gives excessive permission to files and directories.
+
+
+    You can customize the default permission assignments by setting a *umask*. The
+    umask identifies which permissions are *removed* from the default permissions
+    when files and directories are created.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'Complete the following steps:
+
+
+    +   1. To view your current umask, type **umask**.
+
+
+    What is your current umask?
+
+
+    In the following table, cross out the permissions that are *blocked* by the current
+    umask.
+
+
+    | Owner | r | w | x |
+
+    |---|---|---||}{
+
+    | User | r | | x |
+
+    | Group | r | w | x |
+
+    | Other | r | w | x |
+
+
+    If you were to create a file with the current umask, what would be the default
+    permissions?
+
+
+    +   2. To change your umask, type **umask 007**.
+
+
+    +   3. To verify the umask did change, type **umask**.
+
+
+    In the following table, cross out the permissions that are *blocked* by the new
+    umask.
+
+
+    | Owner | r | w | x |
+
+    |---|---|---||}{
+
+    | User | r | | x |
+
+    | Group | r | | x |
+
+    | Other | r | | x |
+
+
+    If you were to create a file with the current umask, what would be the default
+    permissions?'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# 4.1.1.10 CHANGE THE UMASK 2
+
+
+    Scenario
+
+
+    Bhumika Kahn (username bkahn) asks you why she can access directories she creates,
+    but she can en no longer access files she creates. You find that she has a umask
+    value of 666.
+
+
+    Change the umask value for bkahn to 022.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. To check the umask value, type **umask**.
+
+
+    What is the umask value?
+
+
+    Whose umask are you looking at?
+
+
+    +   2. To switch to the bkahn account, type **su - bkahn**.
+
+    3. Type **umask**.
+
+
+    What is the umask setting for bkahn?
+
+
+    +   4. Type **umask 022** to change the umask.'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '5. To verify that the umask changed, type umask.
+
+
+    In the following table, cross out the permissions that are blocked by the new
+    umask.
+
+
+    | Owner | Permissions |
+
+    |---|---|
+
+    | User | r w x |
+
+    | Group | r w x |
+
+    | Other | r w x |
+
+
+    If you were to create a file with the current umask, what would be the default
+    permissions?'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# 4.1.11 CHANGE THE UMASK 3
+
+
+    # Scenario
+
+
+    Arturo Espinoza wants to give write permissions to group members and other users,
+    but policy prohibits users from changing their own umask values.
+
+
+    Change the umask value for aespinza to 011.
+
+
+    # Steps
+
+
+    Complete the following steps:
+
+
+    +   1. Type **su - aespinza** to switch user accounts.
+
+    2. Type **umask**.
+
+
+    What is aespinza''s current umask?
+
+
+    In the following table, cross out the permissions that are *blocked* by the current
+    umask.
+
+
+    | Owner | | | |
+
+    |---|---|---|--|
+
+    | User | r | w | x |
+
+    | Group | r | w | x |
+
+    | Other | r | w | x |
+
+
+    If you were to create a file with the current umask, what would be the default
+    permissions?'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '3. To change the ummask for aespinoza, type ummask 011.
+
+
+    In the following table, cross out the permissions that are blocked by the new
+    ummask.
+
+
+    | Owner | Permissions | |
+
+    |---|---||
+
+    | User | r w x |
+
+    | Group | r w x |
+
+    | Other | r w x |
+
+
+    If you were to create a file with the current umask, what would be the default
+    permissions?'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# 4.2.3 CHANGE FILE OWNERSHIP
+
+
+    Scenario
+
+
+    Brenda Cassini is taking over the payroll documentation for Will Adams. Give the
+    bcassini user account ownership of the /hr/payroll file.
+
+
+    Steps
+
+
+    When a user creates a file (or directory), the user and the user''s primary group
+    receive ownership for the file (or directory). File ownership determines which
+    users are allowed to change the file''s ownership and permissions. Only a file
+    owner and the root user can change file ownership or permissions.
+
+
+    Complete the following steps:
+
+
+    +   1. Type ls -l /hr to view information for the files in the /hr directory.
+
+
+    Complete the following table for the listed files.
+
+
+    | File | User owner | Group owner |
+
+    | /hr/evaluations | | |
+
+    | /hr/payroll | | |
+
+    | /hr/personnel | | |
+
+
+    +   2. To change the ownership of the /hr/payroll file from wadams to bcassini,
+    type chown bcassini /hr/payroll.
+
+
+    +   3. To verify that the file ownership changed, type ls -l /hr.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# 4.2.4 CHANGE GROUP OWNERSHIP FOR A FILE\n\nScenario\n\nThe hr group currently\
+    \ owns the /hr/personnel file. However, the mgmt1 group should own the file to\
+    \ protect employee privacy.\n\nYour task in this lab is to:\n\n+   - Change the\
+    \ group ownership of the /hr/personnel file from hr to mgmt1.\n\n# Steps\n\nTo\
+    \ change group ownership, you can use the chgrp command.\n\nComplete the following\
+    \ steps:\n\n+   1. Type ls -l /hr to view information for the files in the /hr\
+    \ directory.\n   Who is the current user owner for every file?\n\n> Who is the\
+    \ current group owner for every file?\n\n+   2. To change the ownership of the\
+    \ /hr/personnel file from hr to mgmt1, chgrp mgmt1 /hr/personnel.\n\n+   3. To\
+    \ verify that the file ownership changed, type ls -l /hr."
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# 4.2.5 CHANGE DIRECTORY OWNERSHIP
+
+
+    Scenario
+
+
+    During a random security audit, you found that ownership (and group ownership)
+    for the /hr directory is set to wadams. For security reasons, you need to change
+    the ownership. You want to give ownership to Brenda Cassini, the office manager,
+    and you want to give group ownership to the hr group for all files in the directory.
+    Once you do this, though, you have to reset group ownership on the /hr/personnel
+    file to mgmt1.
+
+
+    Your task in this lab is to:
+
+
+    +   - Give bcassini ownership of the /hr directory and all of its contents.
+
+    - Give group ownership of the /hr directory and all of its contents to the hr
+    group.
+
+    - Give group ownership of the /hr/personnel file to mgmt1.
+
+
+    # Steps
+
+
+    Complete the following steps:
+
+
+    +   1. To change the ownership of the /hr directory and its contents, type `chown
+    -R bcassini:hr /hr`.
+
+
+    +   2. To give group ownership of the /hr/personnel file to mgmt1, type `chgrp
+    mgmt1 /hr/personnel`.
+
+
+    +   3. To verify the ownership changes, type `ls -l /hr`.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# 4.3.3 CREATE DIRECTORIES\n\nScenario\n\nYou are preparing to manage a new\
+    \ project code named White Horse. You need to prepare directories for white horse\
+    \ documents. You are logged in as user wadams.\n\nYour task in this lab is to\
+    \ create the following directories inside the home directory for user wadams:\n\
+    \n+   * Directly inside the home directory, create a directory called *wh*.\n\
+    * In the wh directory, create three more directories:\n  * *plan*\n  * *research*\n\
+    \  * *implement*\n\nSteps\n\nUnlike other file systems, Linux does not use drive\
+    \ letters to refer to file systems on the hard drive partition. Instead, Linux\
+    \ uses the / (forward slash) character to refer to root. From root, different\
+    \ file systems connect to different directories on the directory tree.\n\nLinux\
+    \ allows you to reference directories and files in two ways:\n\n+   * An *absolute*\
+    \ pathname lists the full name of the file or directory starting from root. For\
+    \ example, /home/wadams/directory/file.\n* A *relative* pathname lists the name\
+    \ of the file or directory relative to the current working directory. For example,\
+    \ if the working directory is /home/wadams, you could reference a subdirectory\
+    \ by name, without the / character preceding the directory."
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'Complete the following steps:
+
+
+    +   1. Type **man mkdir** to view the documentation for the **mkdir** command.
+
+
+    Complete the following table.
+
+
+    | Command Switch | Option |
+
+    |---|---|
+
+    | | Set permissions |
+
+    | | Create parent directories |
+
+    | | Receive a message when a directory is created |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press **q** to
+    exit the man page.
+
+
+    +   2. Type **pwd** to display the current directory.
+
+
+    What is the current directory?
+
+
+    +   3. Type **ls** to view the contents of the current directory.
+
+
+    What folders and files currently exist in this directory?
+
+
+    +   4. Type **mkdir wh** to create a new directory.
+
+
+    +   5. Type **ls**.
+
+
+    Where was the new directory created?
+
+
+    +   6. Type **mkdir plan**, then type **ls**.
+
+
+    Where was this directory created?
+
+
+    +   7. To remove the plan directory, type **rmdir plan**.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '+   8. To create the plan directory inside the wh directory using a path relative
+    to the current directory, type **mkdir wh/plan.**
+
+
+    +   9. Type **cd wh** to change the current working directory.
+
+
+    +   10. Type the necessary command to create the research directory in the current
+    working directory.
+
+
+    +   11. Type **cd** / to change the working directory.
+
+
+    +   12. To create the implement directory using an absolute path, use the following
+    command: **mkdir /home/wadams/wh/implement.**
+
+
+    +   13. To verify that the directories were created correctly, type: **ls /home/wadams/wh.**'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# ## 4.3.4 DELETE DIRECTORIES
+
+
+    Scenario
+
+
+    Your company has changed directions and decided to terminate three products. The
+    files have been backed up, archived, and all necessary files have been deleted.
+    You''ve been asked to remove each of the directories from the /project directory.
+
+
+    Your task in this lab is to delete the following directories:
+
+
+    +   - /projects/heartmon
+
+    - /projects/heartbt
+
+    - /projects/heartstrng
+
+
+    Steps
+
+
+    Use rmdir command to delete a directory.
+
+
+    Complete the following steps:
+
+
+    +   1. To try to delete the /projects directory, type rmdir /projects.
+
+
+    What must you do before you can delete the /projects directory?
+
+
+    +   2. To delete the directories inside the /projects directory, type the following
+    commands:
+
+    - rmdir /projects/heartmon
+
+    - rmdir /projects/heartbt
+
+    - rmdir /projects/heartstrng'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# 4.3.5 DELETE FILES
+
+
+    Scenario
+
+
+    Someone created duplicate versions of three project documents. You''ve had problems
+    with version control in the past when other users have done the same thing. To
+    avoid problems this time, you want to delete the duplicate files.
+
+
+    Your task in this lab is to delete the following files from the /projects directory.
+
+
+    +   - darkhorse1
+
+    - camouflage1
+
+    - endgame1'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Steps
+
+
+    Complete the following steps:
+
+
+    +   1. Type **man rm** to view the documentation for the **rm** command.
+
+    Complete the following table:
+
+
+    | Command Switch | Option |
+
+    | --- | --- |
+
+    | | Do not receive a confirmation prompt |
+
+    | | Receive a confirmation prompt |
+
+    | | Remove the contents of a directory as well as the directory |
+
+    | | Receive explanatory messages |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press **q** to
+    exit the man page.
+
+
+    +   2. To delete the darkhorse1 file using the absolute path, type **rm /projects/darkhorse1**.
+
+
+    +   3. To confirm the deletion, type **y** and press Enter.
+
+
+    +   4. To delete the camouflage1 file without being prompted before deleting,
+    type **rm -f /projects/camouflage1**.
+
+
+    What risk do you run by using the **-f** option?
+
+
+    +   5. To delete the endgame1 file, type **rm -f /projects/endgame1**.'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# 4.3.6 DELETE A DIRECTORY STRUCTURE
+
+
+    Scenario
+
+
+    The White Horse project is complete. Everything produced under the code name has
+    been backed up and removed from the system. You now want to remove the White Horse
+    directory structure from your system. You are logged in as wadams.
+
+
+    You task in this lab is to:
+
+
+    +   - Delete the /home/wadams/wh directory and all of its contents.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. Type `rm /home/wadams/wh`.
+
+
+    What happens?
+
+    2. Type `ls /home/wadams/wh` to view the contents of the wh directory.
+
+
+    Why couldn''t you delete the directory in step 1?
+
+    3. To delete the wh directory and all of its contents (without a confirmation
+    message), type `rm -rf /home/wadams/wh`.
+
+    4. To verify that the directory has been deleted, type `ls /home/wadams`.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# 4.3.7 MOVE FILES
+
+
+    Scenario
+
+
+    Peter Lacy has taken an extended leave from the company for personal reasons.
+    However, he was working on a critical project code named White Horse with several
+    other employees. The project leader has requested that you move any White Horse
+    documents in Peter Lacy''s home directory to Brenda Cassini''s home directory.
+    You are logged on as wadams.
+
+
+    You task in this lab is to:
+
+
+    +   - Switch to the root user. You must have root user permissions to move other
+    people''s files. Use 1worm4b8 for the root user password.
+
+
+    +   - Move the confid_wh and projplan_wh files in placy''s home directory to bcassini''s
+    home directory.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Steps
+
+
+    Complete the following steps:
+
+
+    +   1. Type **man mv** to view the documentation for the **mv** command.
+
+    Complete the following table.
+
+
+    | Command Switch | Option |
+
+    |---|---|
+
+    | | Create a backup of existing destination files |
+
+    | | No prompt before overwriting |
+
+    | | Prompt before overwriting |
+
+    | | Move when a source file is newer than its destination equivalent |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press **q** to
+    exit the man page.
+
+
+    +   2. You must be logged on as the root user before you can delete another person’s
+    files. To switch to the root user, type **su** - with **1worm4b8** as the password.
+
+
+    +   3. Type **ls /home/placy** to view the contents of the placy directory.
+
+
+    +   4. To move the files to the /home/bcassini directory, type the following commands:
+
+    * `mv /home/placy/confid_wh /home/bcassini`
+
+    * `mv /home/placy/projplan_wh /home/bcassini`
+
+
+    +   5. Type **ls /home/placy** and **ls /home/bcassini** to verify that the files
+    have been moved.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# 4.3.8 CREATE A HARD LINK
+
+
+    Scenario
+
+
+    The user madam owns and maintains a database file in /home/wadams called contacts.db.
+    The file holds contact information for prospective clients. Users bcassini and
+    vedwards want to access and add contact information to the file to share the data
+    among the three users.
+
+
+    Your task in this lab is to:
+
+
+    +   - Create a hard link file in /home/bcassini called contacts_link to /home/wadams/contacts.db
+
+    - Create a hard link file in /home/vedwards called contacts_link to /home/wadams/contacts.db
+
+
+    Steps
+
+
+    Linked files are files that are somehow associated with one another. There are
+    two ways to link files:
+
+
+    +   - A hard link creates an exact copy of a file in a different location. You
+    can have an unlimited number of hard links to a file, but they must all be on
+    the same file system. If one hard linked file is modified, all other copies of
+    the file are also modified.
+
+    - A symbolic link creates a shortcut to the original file.'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "Complete the following steps:\n\n+   1. To create the hard links for the files,\
+    \ type the following commands:\n   - ln /home/wadams/contacts.db /home/bcassini/contacts_link\n\
+    \   - ln /home/wadams/contacts.db /home/vedwards/contacts_link\n\n+   2. To verify\
+    \ the hard links exist, type the following commands:\n   - ls -l /home/bcassini\n\
+    \   - ls -l /home/vedwards\n\nWho is the individual owner and group owner of the\
+    \ contacts_link file in each directory?\n\nWhat is the size of each link?\n\n\
+    +   3. To find information for the contacts.db file, type ls -l /home/wadams.\n\
+    \nWho is the individual owner and group owner of contacts.db?\n\nWhat is the size\
+    \ of the contacts.db file?"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# 4.3.9 CREATE A SOFT LINK
+
+
+    Scenario
+
+
+    Your company used a proprietary graphics program called imitator that is stored
+    in the root directory to create images before transitioning to a new graphics
+    application licensed for each machine. Maggie Brown (username mbrown) needs to
+    modify files created with imitator.
+
+
+    Your task in this lab is to create a symbolic link file in /home/mbrown called
+    imitator_link to / imitator.
+
+
+    Steps
+
+
+    Because a symbolic link is actually a shortcut to the original file, when you
+    open a symbolic link and edit the file, you are editing the original file directly.
+    If the original file is deleted from the system, the symbolic link becomes useless,
+    as it points to a file that no longer exists.
+
+
+    Complete the following steps:
+
+
+    +   1. To create the symbolic link, type ln -s /imitator /home/mbrown/imitator_link.
+
+    2. Type ls -l /home/mbrown to find information about the symbolic link
+
+
+    What is the size of the symbolic link?
+
+
+    Who owns the imitator_link file in /home/mbrown?
+
+
+    +   3. To find information about the imitator file, type ls -l.
+
+
+    What is the size of the imitator file?'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# 4.3.10 DETERMINE THE DIRECTORY SIZE
+
+
+    You are logged on as the wadams user. Your working directory is /home/wadams.
+    Use the du command ( | more if you need to) to answer the following questions:
+
+
+    +   - How big is the /home/wadams directory?
+
+    - What is the largest directory in /home/wadams?
+
+    - What is the size of the /./gnome2 directory?
+
+
+    Explanation
+
+
+    Click the Simulation button and type the du -h /home/wadams | more command to
+    view information for the /home/wadams directory.
+
+
+    To allocate space in a file system, you must monitor directory space usage to
+    know which directories consume the most disk space. The du (disk usage) command
+    allows you to view the size of a directory and everything it contains in Kilobytes.
+    (If you want a more user-friendly readout, use the -h option.)'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# 4.3.11 DETERMINE THE AMOUNT OF FREE DISK SPACE
+
+
+    Use the df -h command to answer the following:
+
+
+    +   - How much space is used on /dev/hda2?
+
+    - How much space is available on /dev/hda2?
+
+    - What percentage of space is used on /dev/hda1?
+
+
+    # Explanation
+
+
+    Click the Simulation button and type the df -h command to find the information
+    you need.
+
+
+    Of the file systems mounted to a directory tree, the / file system is the most
+    important. It must have enough free space to allow the operating system to work
+    uninhibited, and so it requires frequent monitoring. If it falls below 10% free
+    space, you may experience performance problems. To monitor the amount of space
+    used by a file system, use the df command. (Like the du command, it also takes
+    the -h switch.)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '```
+
+    root@localhost:~ Load average: 0.00, 0.00, 0.00
+
+    le Edit View Terminal Go Help
+
+    13:36:43 up 6 days, 22:17, 1 user, 0 zombie, 10 started, 22.
+
+    33 sleeping, 1 running, 0.05 total
+
+    41 processes: 0.00 user, 0.18 system, 4712k free 60
+
+    CPU states: 0.00 185988k used, 0k in id, 177k 10k free
+
+    Mem: 190680k used, 109824k act, 269184k free
+
+    Swap: 391064k used TIME CPU C
+
+    PID USER PRI NI SIZE RSS SHARE STAT 0.1 0.2 0:05
+
+    1957 root 20 0 476 2348 236 S
+
+    2907 root 20 0 1142 1118 S
+
+    ```
+
+
+    # # 5.0n Services and Processes'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# 5.1.3 FIND THE RUNLEVEL
+
+
+    What is the current system runlevel?
+
+
+    # Explanation
+
+
+    Click the Simulation button, then type runlevel to find the answer to the question.
+    The runlevel command returns two numeric values, the first of which is the previous
+    runlevel, the second of which is the current runlevel.
+
+
+    Linux lets you define multiple runlevels. A runlevel identifies a collection of
+    services that defines a specific system state.
+
+
+    ![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_99_0.png)'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# 5.1.4 CHANGE THE RUNLEVEL
+
+
+    Scenario
+
+
+    You''ve come in after hours to perform system maintenance. However, you don''t
+    want others who may be working late to log in to the system either remotely or
+    locally.
+
+
+    Your task in this lab is to set the system to a run level that allows you to perform
+    your tasks but prevents others from logging in to the system.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. Type **cat /etc/inittab | more** to view the documentation for the different
+    runlevels.
+
+    Complete the following table:
+
+
+    | Runlevel | Description |
+
+    | 0 | |
+
+    | 1 | |
+
+    | 2 | |
+
+    | 3 | |
+
+    | 4 | |
+
+    | 5 | |
+
+    | 6 | |
+
+
+    +   2. To exit, type **q**.
+
+    3. To view the current runlevel, type **runlevel**.
+
+    What is the current runlevel?
+
+    4. To change the runlevel, type the **init** command followed by the necessary
+    runlevel. For example, **init 5** changes the runlevel to level 5.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# 5.1.5 CHANGE THE DEFAULT RUNLEVEL
+
+
+    Scenario
+
+
+    To your system cannot load at boot up. The terminal shows a login prompt, but
+    before you can log in, the GUI attempts to load and fails. This process repeats
+    every two seconds, preventing you from logging in at the terminal. However, you
+    can log in remotely, so you decide to change the default runlevel to avoid using
+    the GUI at all.
+
+
+    Your task in this lab is to:
+
+
+    +   - Edit the /etc/inittab file and change the default runlevel so the system
+    boots without the GUI.
+
+
+    Steps
+
+
+    The init (initialize) daemon is responsible for loading all the other daemons
+    that bring the system to a usable state. (A daemon is a system service.) To load
+    the other daemons, init uses the /etc/inittab (init table) configuration file.
+    The graphic below shows you an example of part of an inittab file.
+
+
+    ```
+
+    id:5:initdefault:
+
+    # System initialization.
+
+    sii::sysinit:/etc/rc.d/rc.sysinit
+
+    10:0:wait:/etc/rc.d/rc 0
+
+    11:1:wait:/etc/rc.d/rc 1
+
+    12:2:wait:/etc/rc.d/rc 2
+
+    13:3:wait:/etc/rc.d/rc 3
+
+    14:4:wait:/etc/rc.d/rc 4
+
+    15:5:wait:/etc/rc.d/rc 5
+
+    16:6:wait:/etc/rc.d/rc 6
+
+
+    # Trap CTRL-ALT-DELETE
+
+    ca::ctrlaltld::/sbin/shutdown -t3 -r now
+
+    ```
+
+
+    The current default runlevel is the number after id, which in this case is 5.
+    You can edit the /etc/-inittab file to change the runlevel using the vi editor.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'Complete the following steps:
+
+
+    +   1. To edit the inittab file, type `vi /etc/initab`.
+
+
+    +   2. Use the arrow keys to place the cursor under the **5** that follows **id:**
+
+
+    +   3. To enter insert mode, press **i**.
+
+
+    +   4. Press the **Delete** key to delete the current runlevel setting.
+
+
+    +   5. To insert a runlevel that boots without the GUI, type **3**.
+
+
+    +   6. Press the **Esc** key to enter command mode.
+
+
+    +   7. Type`:wq` to save the changes to the file and exit vi.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# # 5.1.6 CHANGE A SERVICE RUNLEVEL
+
+
+    Scenario
+
+
+    You want to restrict task scheduling to single-user mode as a way of ensuring
+    that no one else accesses the at command while you''re performing system maintenance,
+    including the scheduling of some new tasks.
+
+
+    Your task in this lab is to:
+
+
+    +   - Make atd active in single-user mode (runlevel 1) only'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# Steps
+
+
+    In addition to controlling the system runlevel, you can control the runlevel for
+    each service using the **chkconfig** command.
+
+
+    Complete the following steps:
+
+
+    +   Type **man chkconfig** to view the documentation for the **chkconfig** command.
+    Complete the following table:
+
+
+    | Command Switch | Description |
+
+    |--- |--- |
+
+    | --level | |
+
+    | --add | |
+
+    | --del | |
+
+    | --list | |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press **q** to
+    exit the man page.
+
+
+    +   To get a list of the services registered to work with chkconfig, type **chkconfig
+    --list** | **more** (use the Space bar to advance screens). Type **q** to exit
+    before you reach the end.)
+
+
+    For which levels is *atd* currently turned *off*?
+
+
+    What other service is turned on at runlevel 1?
+
+
+    +   To turn atd off at runlevels 3, 4, and 5, type **chkconfig --level 345 atd
+    off.**
+
+
+    +   To turn atd on at runlevel 1, type **chkconfig --level 1 atd on.**
+
+
+    +   To verify your changes, type **chkconfig --list atd.**'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# 5.2.3 DETERMINE SERVICE STATUS
+
+
+    Of the services listed below, which service is *stopped*?
+
+
+    +   - A. portmap
+
+    - B. sshd
+
+    - C. xfs
+
+    - D. ypbind
+
+
+    Explanation
+
+
+    The correct answer is D.
+
+
+    Click the **Simulation** button and type: **service --status-all | more** to receive
+    a detailed report for all the services. Use the Spacebar to advance each screen
+    until you find the status for the services in the question.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# 5.2.4 RESTART A SERVICE
+
+
+    Scenario
+
+
+    You have just finished installing an update to your system. As the final step,
+    the documentation suggests that you restart the SSH service.
+
+
+    Your task in this lab is to restart the sshd daemon.
+
+
+    Steps
+
+
+    The options available for managing services using the entire service path are
+    also available with the service command. In other words, the two commands you
+    see below are identical:
+
+
+    ```
+
+    /etc/rc.d/init.d atd restart
+
+    ```
+
+
+    ```
+
+    service atd restart
+
+    ```
+
+
+    Complete the following steps:
+
+
+    +   1. To stop the SSH service, type service sshd stop.
+
+    2. To verify the SSH service status, type service --status-all and locate sshd
+    toward the bottom of the list.
+
+    What is the status of the ntpd service?
+
+
+    +   3. To start the SSH service, type service sshd start.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '+   4. To restart the SSH service, type **service sshd restart**. Notice *that
+    the service is stopped, then restarted with a single command*
+
+
+    +   5. To try to restart a stopped service, type **service ntpd restart**.
+
+
+    Why did the first task fail?
+
+
+    What is the final state of the service?'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# 5.3.6 KILL A REMOTE TERMINAL SERVICES SESSION
+
+
+    # Scenario
+
+
+    Vera Edwards started a remote session, but she left before closing out of it.
+    Because you need to do some maintenance, all other remote users have closed their
+    sessions at your request.
+
+
+    Your task in this lab is to:
+
+
+    +   - Find the open remote session process ID (PID). (Remote session process names
+    are pts/x where x is the number of remote terminal sessions instigated.)
+
+    - Kill the remote session process.
+
+
+    # Steps
+
+
+    A process refers to a program that is running in memory and in the CPU. There
+    are two types of processes that you should be aware of:
+
+
+    +   - User processes are started when a user executes a program file. For example,
+    when you execute a shell command, you start a user process.
+
+    - Daemon processes are started by the system (usually when the system boots up),
+    but they can be started manually. Most daemons provide system services.
+
+
+    Linux also allows you to run processes as either foreground processes or background
+    processes.
+
+
+    +   - Foreground processes are attached to and running on the terminal.
+
+    - Background processes are waiting in idle. You have limited signal control over
+    waiting processes (like calling them back to the foreground). When you run a background
+    process, you create a job.'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: 'The system uses the following numbers to identify processes:
+
+
+    +   - The process ID (PID) uniquely identifies each process. System-started processes
+    typically have low numbers, while user-started processes have higher numbers.
+
+    - The parent process ID (PPID) identifies the process that spawned (or started)
+    the process.
+
+    - The job number identifies running jobs.
+
+
+    The PIDs, PPIDs, and job numbers become important when you want to manage your
+    processes. These numbers allow you to identify processes, parent processes, and
+    background processes to run commands against them.
+
+
+    Complete the following steps:
+
+
+    +   1. **Type man ps** to view the documentation for the **ps** command.
+
+    Complete the following table:
+
+
+    | Command Switch | Description |
+
+    |---|-|
+
+    | -A | |
+
+    | -e | |
+
+    | -u | |
+
+    | -U | |
+
+    | -f | |
+
+    | -j | |
+
+    | -l | |
+
+    | -H | |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press **q** to
+    exit the man page.
+
+
+    +   2. To display all running processes, type **ps -A** | **more**.
+
+
+    What is the process ID for the pts/14 process?
+
+
+    +   3. To terminate the open remote process, type **kill** plus the process ID
+    number. For example, **kill 1805** terminates process 1805.'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# 5.3.7 STOP A ZOMBIE PROCESS
+
+
+    Scenario
+
+
+    As a part of your daily maintenance, you can scan for and kill any zombie processes
+    on the system.
+
+
+    Your task in this lab is to:
+
+
+    +   - Find zombie processes.
+
+    - Kill zombie processes.
+
+
+    Steps
+
+
+    A zombie process is an orphaned process (a process without a parent). This happens
+    when the parent process fails to kill its child processes properly. Zombie processes
+    can linger in the system, consuming resources and PIDs that the system needs.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: 'Complete the following steps:
+
+
+    +   1. To display all processes (including those not attached to a terminal),
+    type **ps -ax** | more.
+
+
+    **Tips:** Use the Spacebar to advance each screen. To exit before reaching the
+    final screen, type **q**.
+
+
+    The STAT column is the process state column. The following table lists the various
+    status codes that may appear.
+
+
+    | Status Code | Meaning |
+
+    |---|---|
+
+    | S | Sleeping |
+
+    | W | Process has no contents in memory |
+
+    | R | Running |
+
+    | Z | Zombie |
+
+    | N | Low priority process |
+
+    | < | High priority process |
+
+
+    What is the status of process ID 4?
+
+
+    Which processes are zombie processes? (Be sure to scroll down and examine the
+    status of all listed processes.)
+
+
+    +   2. Use the **kill -9** command with the process ID number to kill each zombie
+    process identified in step 1. For example, use **kill -9 1257** to terminate process
+    1257.'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_112_0.png)
+
+
+    # 6.0
+
+    Installing Software'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# ## 6.3.3 CREATE A TARBALL ARCHIVE FILE
+
+
+    Scenario
+
+
+    You need to send a backup copy of the /etc directory across the network.
+
+
+    Your task in this lab is to:
+
+
+    +   - Create a compressed archive of the /etc directory and all its contents
+
+    - Save the file with the name /etcbup.tar.gz
+
+
+    Steps
+
+
+    One common backup and archive utility is **tar**. (short for tape archiver) creates
+    an archive file directly on a file system or directly on a device. **tar** allows
+    you to create new archives, extract files from existing archives, update files
+    in existing archives, or store additional files in existing archives.'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: 'Complete the following steps:
+
+
+    +   1. Type **man tar** to view the documentation for the **tar** command.
+
+    Complete the following table:
+
+
+    | Command Switch | Description |
+
+    |---||
+
+    | | Create a new archive |
+
+    | | Delete from the archive |
+
+    | | Append files to the end of an archive |
+
+    | | List the contents of an archive |
+
+    | | Append only files that are newer than existing copies |
+
+    | | Extract files from an archive |
+
+    | | Use an archive file (identifies the source as an archive file) |
+
+    | | List files as they are processed |
+
+    | | Run the files through gzip (compress the files) |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press **q** to
+    exit the man page.
+
+    nWhich options would be performed if you used the **-zcf** switch with the **tar**
+    command?'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '2. To create a compressed archive backup file of the /dev directory without
+    the verbose option, type the following command: `tar -zcf/devup.tar.gz /dev`.
+
+
+    How is the backup directory distinguished from other directories?
+
+
+    What is the size of the devup.tar.gz file compared to the /dev directory?
+
+
+    How many files are in the /etc directory?
+
+
+    3. To create a compressed archive backup file of the /etc directory using the
+    verbose option, type the following command: `tar -zcvf/etcup.tar.gz /etc`.
+
+
+    How can the verbose option help to ensure data integrity?'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# 6.3.4 CREATE AND EXTRACT FROM TARBALL ARCHIVE FILES
+
+
+    Scenario
+
+
+    You''ve received a tarball archive for a corporate-wide passwd file from a centrally
+    managed /etc directory. Corporate''s new IT policy requires all systems to maintain
+    identical passwd files in the individual /etc directories. You need to install
+    the passwd file from the passwd1.tar.gz archive in root to the /etc directory.
+    However, you want to back up your own passwd file prior to installing the new
+    file.
+
+
+    Your task in this lab is to:
+
+
+    +   - Create the /passwdwbkbup.tar.gz file to archive the /etc/passwd file.
+
+    - Extract the passwd file from the /passwd1.tar.gz archive to /etc.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   - Type ls -l /etc/passwd to view information for the current passwd file.
+
+
+    What is the size of the passwd file?
+
+
+    +   - To examine the passwd file archive you just received, type ls -l /passwd1.tar.gz.
+
+
+    What is the size of the archive file?
+
+
+    +   - To archive the /etc/passwd file, type the following command:
+
+    tar -zcvf /passwdwbkbup.tar.gz -C /etc passwd.
+
+
+    +   - To extract the new passwd file, type the following command:
+
+    tar -zxvf /passwd1.tar.gz -C /etc passwd.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_118_0.png)
+
+
+    # 7.0
+
+    Installing Hardware'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# 7.1.1 CHANGE THE BOOT DEVICE ORDER
+
+
+    ![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_119_0.png)
+
+
+    Scenario
+
+
+    You just built a new computer. You are preparing to install the computer''s operating
+    system by booting to the operating system''s installation CD. Change this computer''s
+    setting to look for system files on the computer''s CD drive before looking on
+    the hard drive. Also, to avoid viruses spread by floppy disks, configure the computer
+    to always attempt to boot from the hard drive before attempting to boot from a
+    floppy disk. Attempt a network boot last. Remember to save your changes.
+
+
+    Note: If you need to restart the simulated computer, use the Power On/Power Off
+    button in the lower left corner of the lab.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# Steps
+
+
+    A computer''s boot order determines the order in which the BIOS looks at devices
+    for bootable operating system files. You can customize the boot order using the
+    Boot menu. Because a "boot device" might actually include multiple types of hardware,
+    you can maintain further control over the boot order by selecting and modifying
+    a category at the bottom of the screen such as Hard Drives or Removable Devices.
+
+
+    Complete the following steps:
+
+
+    +   1. Quickly after the simulation window opens, press the **F1** key to enter
+    the BIOS setup program. (If you don''t press F1 soon enough, and the computer
+    gives you a DOS prompt, press the **Power Off/Power On** button in the lower left
+    corner of the screen to restart the lab.)
+
+
+    Examine the instructions at the bottom of the BIOS Setup Utility screen. How do
+    you select a menu?
+
+
+    How do you select an item?
+
+
+    How do you save and exit?
+
+
+    +   2. Use the Right arrow key to select the **Boot** menu.
+
+
+    +   3. Use the Down arrow key to highlight the entry for the First Boot Device
+    position.
+
+
+    +   4. To move **Removable Devices** to the Third Boot Device position, press
+    the - (minus) key twice.
+
+
+    +   5. Use the Up arrow key to move to the First Boot Device position.
+
+
+    +   6. To move **Hard Drive** to the Second Boot Device position, press the -
+    (minus) key once.
+
+
+    +   7. To save your changes and exit the setup utility, press the **F10** key,
+    then press Enter to accept the changes.'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# 7.1.2 DISABLE MEMORY TESTS
+
+
+    Scenario
+
+
+    A user complains of a computer that counts its memory every time it boots. To
+    speed up the boot process, you want the computer to skip the memory count. Configure
+    the computer appropriately. Remember to save your changes.
+
+
+    **Note:** If you need to restart the simulated computer, use the Power On/Power
+    Off button in the lower left corner of the lab.
+
+
+    Steps
+
+
+    You can speed up the boot process by enabling Quick Boot mode. This allows the
+    BIOS to skip certain POST routines such as counting extended memory. However,
+    while this speeds up the boot process, it increases the risk of a hardware error
+    going undetected.
+
+
+    Complete the following steps:
+
+
+    +   1. Quickly after the simulation window opens, press the **F1** key to enter
+    the BIOS setup program. (If you don''t press F1 soon enough, and the computer
+    gives you a DOS prompt, press the **Power Off/Power On** button in the lower left
+    corner of the screen to restart the lab.)
+
+    2. Use the Right arrow key to select the **Boot** menu.
+
+    3. Use the Down arrow key to move to the QuickBoot Mode setting.
+
+    4. To change the setting to Enabled, press the - (minus) key.
+
+    5. Press the **F10** key to save and exit. Press the Enter key to accept the changes.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# 7.1.3 ENABLE THE PARALLEL PORT
+
+
+    Scenario
+
+
+    A user has connected a scanner to a computer''s parallel port, but the scanner
+    does not work. You verify that the proper driver and other software are loaded.
+    The scanner powers on okay, but no communication between the scanner and computer
+    occurs. The user admits that this is the first device ever connected to the parallel
+    port. You suspect that the parallel port has been disabled in the BIOS. Enable
+    the parallel port keeping its default configuration settings. Remember to save
+    your changes.
+
+
+    Note: If you need to restart the simulated computer, use the Power On/Power Off
+    button in the lower left corner of the lab.
+
+
+    Steps
+
+
+    Hardware devices on a motherboard are either enabled and disabled by setting jumpers
+    on the motherboard or by configuring the BIOS, which is most common with modern
+    motherboards. You can locate settings for hardware devices by exploring the menus
+    and using the Item Specific Help.
+
+
+    Complete the following steps:
+
+
+    +   1. Quickly after the simulation opens, press the F1 to enter the BIOS setup
+    program. (If you don''t press F1 soon enough, and the computer gives you a DOS
+    prompt, press the Power Off/Power On button in the lower left corner of the screen
+    to restart the lab.)
+
+    2. Use the Right arrow key to select the Advanced menu.
+
+    3. Use the Down arrow to highlight Peripheral Configuration, then press Enter.
+
+    4. Use the Down arrow to move to the Parallel port setting.
+
+    5. To change the setting to Enabled, press the - (minus) key.
+
+    6. To save your changes and exit the setup utility, press the F10 key, then press
+    Enter.'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_124_0.png)
+
+
+    # 8.0
+
+
+    # Managing Devices'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# # 8.1.3 INSERT A MODULE INTO THE KERNEL
+
+
+    Scenario
+
+
+    You just got a new PowerMate input device that you want to use on your computer.
+    You don''t think that the module has been inserted into the kernel yet.
+
+
+    Your task in this lab is to:
+
+
+    +   * Insert the *powermate* module into the kernel.
+
+
+    Steps
+
+
+    A kernel module is similar to a device driver. Modules extend the capabilities
+    of the kernel. Module types include:
+
+
+    +   * Device drivers
+
+    * File system drivers
+
+    * System calls
+
+    * Network drivers (protocols and interfaces)
+
+    * TTY line disciplines
+
+    * Executable interpreters
+
+
+    When the system boots, it uses one of the following files to automatically load
+    modules (the exact file used depends on the implementation):
+
+
+    +   * /etc/modules.conf
+
+    * /etc/conf.modules
+
+    * /etc/modprobe.conf'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "You can load and unload modules manually. To load a module manually, use the\
+    \ following command syntax:\n\n```\ninsmod module_name\n```\n\n**insmod** will\
+    \ fail if the module you try to loads has unloaded dependencies. Use the **-p**\
+    \ switch with the name to verify that a specific module was loaded successfully.\n\
+    \nComplete the following steps:\n\n+   1. To view the modules that are loaded\
+    \ in the kernel, type **lsmod**.\n   Which modules are dependent on (used by)\
+    \ the input module?\n\n2. To insert the powermate module into the kernel, type\
+    \ **insmod powermate**.\n3. Type **lsmod**.\n   Which modules does the powermate\
+    \ module depend on?\n\nWhy does it depend on these particular modules?"
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# 8.1.4 REMOVE A MODULE FROM THE KERNEL
+
+
+    Scenario
+
+
+    You''ve been experiencing problems with your PS/2 mouse, so you bought a USB mouse.
+    Now you want to remove the PS/2 mouse driver from the kernel.
+
+
+    Your task in this lab is to:
+
+
+    +   - View the installed modules and locate the one with *mouse* in its name.
+
+    - Remove the mouse driver module from the kernel.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. To view the modules that are loaded in the kernel, type `lsmod`.
+
+    2. Locate the module name that you need to remove. Use the `rmmod` command followed
+    by the module name to remove it.
+
+    3. Type `lsmod` to verify that the module was removed.'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# 8.4.2 PRINT A FILE
+
+
+    Scenario
+
+
+    You are logged on as wadams. As part of a presentation, you need to print the
+    sales document. Your task in this lab is to print the sales document in /home/wadams.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   Type man lpr to view the documentation for the lpr command.
+
+    Complete the following table.
+
+
+    | Command Switch | Function |
+
+    | | Encrypt the connection to a printer |
+
+    | | Print to a specific printer using the printer name |
+
+    | | Set the job name |
+
+    | | Print a specific number of copies |
+
+    | | Delete a job from the queue after printing |
+
+
+    Tips: Press the Spacebar to scroll down the help contents. Press q to exit the
+    man page.
+
+
+    +   To send the document to the print queue, type lpr sales.'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# 8.4.3 REMOVE A PRINT JOB
+
+
+    Scenario
+
+
+    The user bcassini sent a document called baby1 to the printer. The document is
+    a large photo file that is taking up the printing resources. Jobs behind baby1
+    cannot print.
+
+
+    You must complete the following tasks for this lab:
+
+
+    +   * Find the baby1 print job number.
+
+    * Delete the baby1 print job from the print queue.'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Steps
+
+
+    In addition to printing, you can manage your print jobs as well as jobs from other
+    users, as long as you have permissions to perform print queue management tasks.
+
+
+    Complete the following steps:
+
+
+    +   1. Type **man lpq** to view the documentation for the **lpq** command.
+
+
+    What does the **-a** option do?
+
+
+    What does the **-l** option do?
+
+
+    +   2. To view the jobs in the print queue, type **lpq**.
+
+
+    Who is the owner of the proj_outline job?
+
+
+    What is the size (in bytes) of the devel_projects print job file?
+
+
+    What is the print job number for the baby1 file?
+
+
+    +   3. To remove the baby1 print job, type **lprm** followed by the print job
+    number you found in step 2.
+
+
+    +   4. Type **lpq** to verify that the operation succeeded.'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_132_0.png)
+
+
+    # 9.0
+
+
+    # Disks and Volumes'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# 9.1.3 FIND THE BOOT DEVICE
+
+
+    Use fdisk -l to find the boot disk and answer the following questions about the
+    boot disk.
+
+
+    +   - Is the disk a SCSI or IDE disk?
+
+    - Which physical disk is the boot disk on?
+
+    - Which disk partition is the boot disk on?
+
+
+    # Explanation
+
+
+    Click the Simulation button and type fdisk -l command to find the information
+    to answer the questions.
+
+
+    +   - An hd at the beginning of a device file name denotes an IDE drive, and an
+    sd at the beginning of a device file name denotes a SCSI drive.
+
+    - The boot device is defined by an * (asterisk) in the Boot column.'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# 9.1.4 FIND THE SWAP DEVICE
+
+
+    Use **fdisk** -l to find the swap area and answer the following questions about
+    the disk that holds the swap area.
+
+
+    +   - Is the disk a SCSI or IDE disk?
+
+    - Which physical disk is the swap area on?
+
+    - Which disk partition is the swap area on?
+
+
+    Explanation
+
+
+    Click the **Simulation** button and type **fdisk -l** command to find the information
+    to answer the questions.
+
+
+    A swap file system is used as virtual memory (the portion of the hard disk used
+    to temporarily store portions of main memory) by the operating system. A recommended
+    practice is to make the swap file equal in size to the amount of memory in your
+    system.'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# 9.2.3 FORMAT A HARD DISK
+
+
+    Scenario
+
+
+    You''ve installed a new hard drive. Now you need to format it.
+
+
+    Your task in this lab is to:
+
+
+    +   - Format the /dev/hdb2 volume with the ext3 file system.
+
+
+    Steps
+
+
+    Unlike other operating systems, Linux does not offer a single utility for formatting
+    drives. With Linux, each file system type has its own format command. However,
+    there is a single command (called mkfs) that acts as a wrapper command and which
+    launches the other formatting commands as required.
+
+
+    Complete the following steps:
+
+
+    +   1. Type man mkfs to view the documentation for the mkfs command.
+
+
+    What does the -t option allow you to?
+
+
+    Which option can you include to check the disk for bad blocks?
+
+
+    +   2. To format the /dev/hdb2 volume with the ext3 file system, type the following
+    command: mkfs -t ext3 /dev/hdb2.
+
+
+    Complete the following table with information about the new file system.
+
+
+    | Parameter | Value |
+
+    |---|---|
+
+    | Block size | | |
+
+    | Fragment size | | |
+
+    | Total number of inodes | | |
+
+    | Automatic filesystem check interval | |'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# 9.2.4 FORMAT A FLOPPY DISK
+
+
+    Scenario
+
+
+    To back up some personal files, you have mounted a floppy disk drive (ID fd0)
+    and want to transfer some files to it.
+
+
+    Your task in this lab is to format the floppy disk with ext2.
+
+
+    Steps
+
+
+    +   1. To format the /dev/hdb2 volume with the ext3 file system, type the following
+    command:
+
+    `mkfs -t ext2 /dev/fd0`
+
+
+    Complete the following table with information about the new file system.
+
+
+    | Parameter | Value |
+
+    |---||
+
+    | Block size | |
+
+    | Fragment size | |
+
+    | Total number of inodes | |
+
+    | Number of blocks per group | |
+
+    | Automatic filesystem check interval | |'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '# 9.2.5 FORMAT A HARD DISK WITH REISERFS
+
+
+    Scenario
+
+
+    You''ve installed a new hard drive, and you want to use a high-performance file
+    system that provides you with the following features:
+
+
+    +   - Journaling as a native feature (not as a modification to an older file system
+    type)
+
+    - Indexing
+
+    - Stability
+
+    - Fast data transfer rates
+
+
+    Your task in this lab is to:
+
+
+    +   - Format /dev/hdb2 with the file system that supports the listed features.
+
+
+    Steps
+
+
+    ReiserFS is the newest Linux file system. Because reiserFS was independently built
+    from the ground up, its journaling capability is native and more robust, offering
+    a great deal of reliability. It is also more efficient at storing small files
+    than other file systemsms. Because this is a newer file system, you need to make
+    sure your system supports it. It is quickly becoming a popular file system choice.'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: 'Complete the following steps:
+
+
+    +   1. Type **man mkreiserfs** to view the documentation for the **mkreiserfs**
+    command.
+
+    Complete the following table:
+
+
+    | Command Switch | Description |
+
+    |---|---|
+
+    | | Set the volume label |
+
+    | | Designate a location for the journal |
+
+    | | Set the journal size |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press **q** to
+    exit the main page.
+
+
+    +   2. To format the /dev/hdb2 volume, type **mkreiserfs /dev/hdb2.**
+
+
+    What happens if you continue the operation?
+
+
+    +   3. Press **y**, then press **Enter** to complete the operation.'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '# 9.2.6 CREATE A SWAP AREA
+
+
+    Scenario
+
+
+    You have just upgraded your computer and added an extra 512 MB of RAM. Consequently,
+    you want to increase your swap space by adding a new swap area. The second hard
+    disk has an unused partition (hda2) that you want to format for the swap area.
+
+
+    Your task in this lab is to:
+
+
+    +   - Create a swap area on /dev/hdb2.
+
+
+    # Steps
+
+
+    A swap file system is used as virtual memory (the portion of the hard disk used
+    to temporarily store portions of main memory) by the operating system. A recommended
+    practice is to make the swap file equal in size to the amount of memory in your
+    system.
+
+
+    Complete the following steps:
+
+
+    +   1. To view the swap file on /dev/hda, type fdisk -l.
+
+
+    What is the size (in blocks) of the swap file on /dev/hda?
+
+
+    +   2. To create the swap space on /dev/hdb2, type mkswap /dev/hdb2.
+
+
+    What is the size (in kB) of the new swap file?'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '# 9.3.3 MOUNT A VOLUME
+
+
+    Scenario
+
+
+    You''ve installed a new hard drive with a volume named /dev/hdb2, and formatted
+    the volume with the ext3 file system. Now you want to mount the volume.
+
+
+    Your task in this lab is to:
+
+
+    +   - Create the /mnt/disk directory.
+
+
+    +   - Mount /dev/hdb2 to the /mnt/disk directory.'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: "# Steps\n\n**Mounting** is the process of making a device accessible to users\
+    \ through the directory tree. When you mount a volume, you mount it to a directory.\
+    \ The directory to which the device is attached is called the mount point. When\
+    \ you access that directory in the file system, you are actually accessing the\
+    \ volume mounted to that directory. (Remember that device files are located in\
+    \ the /dev directory.)\n\nTo mount a volume, use the following command syntax:\n\
+    \n```\nmount /dev/device /mountpoint\n```\n\nTo verify that a volume is mounted\
+    \ correctly, use the **mount** command with no arguments. Also, remember that\
+    \ the command syntax to create a directory is **mkdir** /path.\n\nComplete the\
+    \ following steps:\n\n+   1. To view the currently mounted devices, type **mount**.\n\
+    \n   Which filesystem does the hda device use?\n\n   Which directory is the hda2\
+    \ partition mounted to?\n\n   Why is hda1 mounted to the /boot directory?\n\n\
+    2. Type **mkdir /mnt/disk** to create the /mnt/disk directory.\n3. To mount the\
+    \ /dev/hdb2 device, type **mount /dev/hdb2 /mnt/disk**.\n4. Type **mount** again\
+    \ to verify that /dev/hdb2 is properly mounted."
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# 9.3.4 UNMOUNT A VOLUME
+
+
+    Scenario
+
+
+    The /dev/hdb2 volume is mounted to two different locations: /mnt/data and /mnt/disk.
+    You want to remove the redundant mount point.
+
+
+    Your task in this lab is to:
+
+
+    +   - Unmount /dev/hdb2 from /mnt/data. Do not unmount the volume from /mnt/disk.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. To verify that /dev/hdb2 is mounted twice, type mount.
+
+    2. Switch to the / / directory by typing cd /.
+
+    3. Type unmount /dev/hda2.
+
+
+    Why does the system tell you that you can''t unmount the volume?
+
+
+    +   4. Type cd to switch back to the root directory.
+
+    5. To unmount /dev/hdb2, type unmount /dev/hdb2.'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '# 9.3.5 MOUNT DEVICES
+
+
+    Scenario
+
+
+    You need to install a new application from CD-ROM and a license file from a floppy
+    disk. However, neither the CD-ROM drive (device ID cdrom) nor the floppy drive
+    (device ID fd0) is mounted.
+
+
+    Your task in this lab is to:
+
+
+    +   - Mount the CD-ROM drive to /mnt/cdrom directory.
+
+    - Mount the floppy drive to /mnt/floppy directory.'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '# Steps
+
+
+    Complete the following steps:
+
+
+    +   1. To view the contents of the /etc directory, type ls /etc. Notice that the
+    directory already contains data (files and other directories).
+
+
+    +   2. Type mount /dev/cdrom /etc to mount the CD-ROM drive.
+
+
+    What does the message tell you about the status of the CD-ROM device?
+
+
+    +   3. Type ls /etc.
+
+
+    What is the effect of using /etc as a mount point? (Hint: The CD-ROM disc is empty).
+
+
+    +   4. To unmount the /dev/cdrom device, type umount /etc.
+
+
+    +   5. Type ls /etc.
+
+
+    What happened to the files in /etc when you mounted the CD-ROM drive?
+
+
+    +   6. To mount the /dev/cdrom and the /dev/fd0 devices to the appropriate mount
+    points, the following commands:
+
+    * mount /dev/cdrom /mnt/cdrom
+
+    * mount /dev/fd0 /mnt/floppy'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: "```\nroot@localhost:~# \nFile Edit View Terminal Go Help\nLoading Linux...\n\
+    Uncompressing Linux..., Ok, booting the kernel.\nLinux version 2.4.20-8 (bhcompile@porky.devel.redhat.com)\
+    \ (gcc)\n30222 (Red Hat Linux 3.2.5) #1 Thu Mar 13 12:54:20 EST 2003\nBIOS-provided\
+    \ physical RAM map:\nBIOS-e80: 0000000000000000 - 000000000000f2c0 (usable)\n\
+    BIOS-e80: 0000000000009fc0 - 000000000000a000 (reserved)\nBIOS-e80: 0000000000000000\
+    \ - 0000000000010000 (reserved)\nBIOS-e80: 0000000000010000 - 00000000000f0000\
+    \ (usable)\nBIOS-e80: 00000000000f0000 - 000000000000cff00 (reserved)\nBIOS-e80:\
+    \ 000000000000cff00 - 000000000000cff00 (ACPI data)\nBIOS-e80: 000000000000cff00\
+    \ - 0000000000009000 (ACPI BUS)\nBIOS-e80: 00000000ffffc000 - 0000000100000000\
+    \ (reserved)\nOMB HIGHMEM available.\n200MB LOWMEM available.\n```\n\n# # 10.0\n\
+    \n# # Boot and Shutdown"
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# 10.1.4 READ THE BOOT FILE
+
+
+    This system has been configured to dual boot another operating system. Open the
+    lilo.conf file and find the answers the following questions.
+
+
+    +   * What is the label of the default operating system?
+
+    * How many seconds will LILO show the prompt before booting to the default OS?
+
+    * Where is LILO installed?
+
+    * Is LBA support enabled?
+
+    * What is the label for the second operating system?'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# Explanation
+
+
+    Click the **Simulation** button and type `cat /etc/lilo.conf` to view the contents
+    of the lilo file. Use the following table to navigate the file and find the information
+    you need to answer the questions.
+
+
+    | LILO Keyword Example | Description |
+
+    | --- | --- |
+
+    | boot=/dev/hda | Gives the path to the hard drive on which LILO is installed.
+    This line must point to one of the following:
+
+
+    If you have two IDE drives, it must point to one of them.
+
+
+    If you have one IDE drive and SCSI drives, it must point to either the IDE drive
+    or the SCSI drive with ID 0 (sda).
+
+
+    If you have SCSI drives only, it must point to either ID 0 or drive ID 1. |
+
+    | map=/boot/map | Gives the path to the LILO map file. The map file gives the
+    location of the Linux kernel on the hard disk. |
+
+    | install=/boot/boot.b | Gives the path to the boot sector image. This line is
+    optional. When it is not used, the default setting is /boot/boot.t. It is possible
+    to replace this entry with one that points to a boot menu (letting you choose
+    which operating system to use). |
+
+    | prompt | Displays a LILO prompt. Use prompt and timeout to build a delay to
+    allow the user to choose a boot image. |
+
+    | timeout=40 | Specifies the amount of time (in tenths of a second, so 40 equals
+    4 seconds) that LILO waits for user input before proceeding. |
+
+    | message=/boot/message | Gives either a text message or a path to a graphical
+    screen to display at startup. (You can override this and receive a prompt by pressing
+    Ctrl + c.) You must run lilo if you change the source file that the line points
+    to. |'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: '# LabSim MANUAL for Linux+
+
+
+    | LILO Keyword Example | Description |
+
+    | lba32 | Institutes large block addressing (32-bit), and enables LILO to boot
+    from anywhere on the disk (above the 1024 limit). Use lba32 only if the BIOS supports
+    LBA. Use linear to make LILO linear sector addressing if LBA is not supported.
+    |
+
+    | default=linux | Specifies the default OS. The value corresponds to one of the
+    operating system labels listed later in the file. |
+
+    | image=/boot/vmlinuz-2.2.5-15 | image sections are for Linux operating systems.
+    The first image= in the lilo.conf file is the default. The image= keyword gives
+    the path to the kernel. |
+
+    | label=linux | The label= keyword shows the name that appears on the boot menu
+    below the prompt (or on the LILO GUI). |
+
+    | initrd=/boot/initrd-2.4.20-8.img | The in-itrd= keyword gives the path to the
+    RAM drive image. |
+
+    | read-only root=/dev/hda3 | read-only sets the root partition as read-only during
+    the boot process. The root= keyword gives the path to the root partition. other
+    sections are for non-Linux operating systems. |
+
+    | other=/dev/hda1 label=W95 table=/dev/hda | The other= keyword gives the path
+    to the boot loader on that partition. The label= keyword shows the name that appears
+    on the boot menu below the prompt (or on the LILO GUI). The table= keyword gives
+    the path to the partition table information. |'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '# 10.2.3 SHUT DOWN IMMEDIATELY
+
+
+    Scenario
+
+
+    The power has gone out in your facility. You have a UPS (uninterruptible power
+    source) that protects your system and provides enough power to allow you to shut
+    down safely.
+
+
+    Your task in this lab is to shut down the system immediately using the command
+    line.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. Type **man shutdown** to view the documentation for the **shutdown** command.
+    Complete the following table:
+
+
+    | Command Switch | Description |
+
+    | --- | --- |
+
+    | | Use the /etc/shutdown.allow file |
+
+    | | Define a specific number of seconds to wait before shutting down |
+
+    | | Send a shutdown warning message |
+
+    | | Reboot the machine after shutdown |
+
+    | | Halt after shutdown |
+
+    | | Stop a shutdown command from proceeding |
+
+
+    **Tips:** Press the Spacebar to scroll down the help contents. Press **q** to
+    exit the man page.
+
+
+    +   2. To shut the system down immediately, type **shutdown -h now**.'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# 10.2.4 SHUT DOWN WITH NOTIFICATION
+
+
+    Scenario
+
+
+    You have planned and informed users that you need to bring the machine down at
+    the end of the day to perform routine maintenance. However, prior to shutting
+    the system down, you want to give users fifteen minutes to save data and exit
+    the system.
+
+
+    Your task in this lab is to:
+
+
+    +   - Shut the machine down with a 15 minute delay, sending a message to all logged-in
+    users.
+
+
+    Steps
+
+
+    When using the **shutdown** command, you can replace the **now** option with a
+    time parameter. For example +3 allows the system to shut down in three minutes
+    rather than shutting down immediately. This is useful when you want to give users
+    time to exit before the system goes offline.
+
+
+    Complete the following step:
+
+
+    +   - To shut down the system with a time delay, type `shutdown -h +15`. (At this
+    point you may exit the lab; you do not have to wait fifteen minutes before exiting
+    to answer the lab correctly.)'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: '# # 10.2.5 SHUT DOWN AND REBOOT
+
+
+    ## Scenario
+
+
+    You''ve encountered system problems that require you to reboot the system. You
+    want to inform users that the system will shut down and reboot.
+
+
+    Your task in this lab is to send a command to reboot the system in 5 minutes.
+
+
+    ## Steps
+
+
+    Complete the following steps:
+
+
+    +   - To shut the system down immediately, type `shutdown -h now`.
+
+
+    +   - To restart the system, press the **Power On** button in the lower left hand
+    corner of the screen.
+
+
+    +   - Type `root` as your localhost login with `1worm4b8` as your password.
+
+
+    +   - Type `shutdown -r now`.
+
+
+    How did using the command with the `-r` switch differ from using the command with
+    the `-h` switch?
+
+
+    +   - Type `root` to log in with `1worm4b8` as the password.
+
+
+    +   - To reboot the system in 5 minutes, type `shutdown -r +5`. (At this point
+    you may exit the lab; you do not have to wait fifteen minutes before exiting to
+    answer the lab correctly.)'
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# # 10.2.6 CONTROL SHUTDOWN USERS
+
+
+    Scenario
+
+
+    You''ve had a problem with someone using the Ctrl+Alt+Delete keys to shut down
+    the system. You want to prevent all users except those you authorize from using
+    the key combination.
+
+
+    Your task in this lab is to:
+
+
+    +   - Create the /etc/shutdown.allow file.
+
+    - Authorize Robert Cronin (rcronn) and Maggie Brown (mbrown) to shut the system
+    down by putting their user names in the shutdown.allow file.
+
+    - Add the -a switch to the Trap CTRL-ALT-DELETE section of /etc/inittab.'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: '# Steps
+
+
+    The system uses the /etc/shutdown.allow file to verify who can shut down the system.
+    The most common use of this switch is to edit the /etc/inittab file and add the
+    -a switch to the CTRL-ALT-DELETE section (add it before the now -or other existing--time
+    parameter option). When the switch is present, the shutdown.allow file checks
+    to see if a listed user or root is logged on. If so, the system shuts down. If
+    not, shutdown is not allowed. If the file does not exist, there are no restrictions
+    on who can shut down the system.
+
+
+    Complete the following steps:
+
+
+    +   1. Type vi /etc/shutdown.allow to create the shutdown.allow file.
+
+    2. To enter insert mode, press i.
+
+    3. Type rcronn and mbrown on separate lines.
+
+    4. Press the Esc key to enter command mode.
+
+    5. Type :wq to save file and exit.
+
+    6. To edit the inittab file, type vi /etc/inittab.
+
+    7. Press i.
+
+    8. Locate the Trap CTRL-ALT-DELETE section. Add the -a switch to the following
+    line: ca::ctrlaltdel:/sbin/shutdown -t3 -r now (add it before the now parameter
+    where the other switches are).\n9. Press the Esc key and type :wq to save and
+    exit.'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: '![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_156_0.png)
+
+
+    # 13.0
+
+
+    # Troubleshooting'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '# 13.1.3 VIEW /PROC INFORMATION 1
+
+
+    View various files in the /proc directory to find the answers to the following
+    questions.
+
+
+    +   - What is the CPU speed (in MHz)? Enter the exact total (including decimal
+    places).
+
+    - How much physical memory does the system have in (in kB)? Look for the MemTotal
+    line in the corresponding file.
+
+    - What is the Linux kernel version? Enter the version in the format of n.n.n-n.
+
+
+    # Steps
+
+
+    The /proc file system is a virtual file system that contains current system information.
+    Files and directories inside /proc are referenced by the kernel. Use these files
+    to view system information and, in some cases, change the system state by editing
+    the files
+
+
+    Complete the following steps:
+
+
+    +   1. Click the Simulation button to start the simulator.
+
+    2. To view the files in the /proc directory, type ls /proc.
+
+
+    Based on the file name, complete the following table with the filename you think
+    should choose to find specific information.
+
+
+    | To find information about... | View this file |
+
+    | CPU | |
+
+    | I/O Ports | |
+
+    | Linux Kernel Version | |
+
+    | Memory | |
+
+
+    +   3. Use the cat command to view the contents of the files necessary to answer
+    the questions. For example, use cat /proc/ioports to view the contents of that
+    file.
+
+    4. Click the Done button and answer the questions using the information you found
+    in step 3.'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '# 13.1.4 VIEW /PROC INFORMATION 2
+
+
+    View various files in the /proc directory to find the answers to the following
+    questions.
+
+
+    +   - What IRQ is used for the network card?
+
+    - What is the I/O memory range used for the S3 Trio video card?
+
+    - What device is on PCI bus 0, device 8, function 0?
+
+
+    # Explanation
+
+
+    Click the **Simulation** button and use the **cat** command to view the contents
+    of the various files necessary to find the information required by the questions.'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: "# 13.2.3 START A NIC\n\nScenario\n\nYou share a number of files from your computer,\
+    \ and you've received a number of calls from users who say they can't connect\
+    \ to the files. You check your computer only to find that the Ethernet cable is\
+    \ unplugged. You've plugged the Ethernet cable in, so now you you need to start\
+    \ the network interface card (NIC).\n\nYour task in this simulation is to restart\
+    \ the network interface card (NIC) without restarting the computer.\n\n# Steps\n\
+    \nBefore you can restart a network card, you must find its alias. The card is\
+    \ denoted by the letters eth followed by a number.\n\nComplete the following steps:\n\
+    \n+   1. To find the network card's alias, type ifconfig -a.\n   How can you tell\
+    \ the card is not up and running?\n2. To start the NIC, type ifup eth0.\n3. To\
+    \ verify that the card is running, type ifconfig -a again."
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '# 13.2.4 STOP A NIC
+
+
+    Scenario
+
+
+    You''ve experienced connectivity issues, and you suspect it may be one of the
+    NICs in your computer.
+
+
+    Your task in this simulation is to stop the eth1 NIC as the first step to try
+    to isolate the problem.
+
+
+    Steps
+
+
+    Complete the following steps:
+
+
+    +   1. To view the card''s status, type ifconfig -a.
+
+    2. To stop the NIC, type ifdown eth1.'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: '![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_163_0.png)
+
+
+    # Linux+
+
+
+    ![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_163_1.png)
+
+
+    TestOut Corporation
+
+    50 South Main Street
+
+    Pleasant Grove UT 84062
+
+    1-800-877-4889 Toll Free
+
+    1-801-785-0575 Fax
+
+    www.testout.com
+
+
+    W8-AOS-449
+
+
+    ![](img/8d2cfc37d0c66d3d99ab1a5ce6c5f9e3_163_2.png)
+
+
+    ISBN 0-536-29685-9
+
+    9 780536296856
+
+    9000'
+  merge: -1
+  pgno: 163
