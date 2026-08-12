@@ -1,0 +1,257 @@
+- img_proc: true
+  md: '# # Linux Device Model Customer Document
+
+
+    Version: 0.1
+
+    Release date: 2011-04-15
+
+
+    © 2008 - 2011 MediaTek Inc.
+
+    This document contains information that is proprietary to MediaTek Inc.
+
+    Unauthorized reproduction or disclosure of this information in whole or in part
+    is strictly prohibited.
+
+    Specifications are subject to change without notice.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# MEDIATEK
+
+    MT6573
+
+    Confidential B
+
+
+    # Document Revision History
+
+
+    | Revision | Date | Author | Description |
+
+    | 0.1 | 2010-01-21 | CC Hwang | Initial Draft |
+
+
+    © 2011 MediaTek Inc.
+
+    This document contains information that is proprietary to MediaTek Inc.
+
+    Unauthorized reproduction or disclosure of this information in whole or in part
+    is strictly prohibited.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Document Revision History ............................................................................
+    2
+
+    Table of Contents.......................................................................................................
+    3
+
+    1 Introduction.........................................................................................................................
+    4
+
+    1.1 Software Environment...............................................................................................
+    4
+
+    1.2 Functionality...........................................................................................................
+    4
+
+    2 Design...............................................................................................................
+    Error! Bookmark not defined.5
+
+    2.1 Architecture.......................................................................................................
+    5
+
+    2.2 Device/Driver Matching Process...............................................................
+    Error! Bookmark not defined.5
+
+    3 Platform Bus......................................................................................................
+    Error! Bookmark not defined.6
+
+    3.1 Platform Device..................................................................................
+    Error! Bookmark not defined.6
+
+    3.2 Platform Driver...............................................................................................
+    Error! Bookmark not defined.6
+
+    4 Module Initialization Sequence................................................................
+    Error! Bookmark not defined.8
+
+
+    # Lists of Tables and Figures'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# # 1 Introduction
+
+
+    # ## 1.1 Software Environment
+
+
+    Driver discussed in this document is designed based on Linux Kernel 2.6.35 and
+    Android 2.3.
+
+
+    # ## 1.2 Functionality
+
+
+    By reading this document, you can understand how to register a new device driver
+    to the Linux model and how to control module initialization sequence for proper
+    operation of the driver.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Architecture
+
+
+    # ## 2.1 Architecture
+
+
+    From BSP''s point of view, the entire system is composed of three parts: busses,
+    drivers, and devices as below.
+
+
+    ![](img/fde35a0d174d3624cc9d9b30b2222353_4_0.png)
+
+
+    There are several busses in Linux, such as USB and I2C. For every bus, there may
+    be several devices and drivers attached to it. The drivers serve the need of the
+    matching devices and make Linux capable of operating on the devices correctly.
+    The matching process will occur when a driver or device is registered to the bus,
+    which will be explained later.
+
+
+    # ## 2.2 Device/Driver Matching Process
+
+
+    When a device or driver is registered with the specified bus, the device/driver
+    matching process occurs. When a device is registered to the bus, all the drivers
+    on the bus will be scanned to see whether there are matching drivers that can
+    serve the newly added device, vice versa.
+
+
+    For every bus, there is a matching function attached to it. The matching function
+    will be used to scan all the devices/drivers for the first step. The matching
+    rules are different for different busses, then the name or capacity of the device/driver.
+    If a matching device/driver is found, then the probing function of the driver
+    will be used to verify that the specified device hardware actually exists and
+    check whether the required resource can be acquired from the system so that the
+    driver can service the device property. After this, the driver can start serving
+    the device.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '![](img/fde35a0d174d3624cc9d9b30b2222353_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# Platform Bus\n\nPlatform bus is a pseudo-bus in Linux and is used to connect\
+    \ devices on busses with minimal infrastructure, like those used to integrate\
+    \ peripherals on many system-on-chip processors, which is extensively used in\
+    \ Linux package provided by Mediate. The matching function of platform bus matches\
+    \ devices and drivers by name.\n\n# Platform device\n\nPlatform devices are those\
+    \ that appear as autonomous entities in the system, as controllers integrated\
+    \ into system-on-chip platforms.\n\n```\nstruct platform_device {\n    const char\
+    \ *name;\n    u32 id;\n    struct device *dev;\n    u32 num_resources;\n    struct\
+    \ resource *resource;\n};\n```\n\nPlatform device holds a pointer to the resource\
+    \ array and may contain the number of elements in the resource array. The resource\
+    \ may be an IRQ line, a section of memory, etc. Sometimes the fields of platform\
+    \ device may not be enough for device initialization. In this case, platform data\
+    \ in dev field is a good candidate for adequate device information carrier. The\
+    \ following is an example:\n\n```\nstruct platform_device android_usb_device =\
+    \ {\n    .name = \"android_usb\",\n    .id = -1,\n    .dev = {\n        platform_data\
+    \ = &android_usb_pdata,\n    }\n};\n```\n\n```\nstruct android_usb_platform_data\
+    \ android_usb_data = {\n    .vendor_id = 0x0bb4,\n    .product_id = 0x0001,\n\
+    \    .product_name = \"Android Phone\",\n    .manufacturer_name = \"MediaTek\"\
+    ,\n    .serial_number = \"MT123456789\",\n};\n```"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# MEDIATEK\nMT6573\nConfidential B\n\n```\nstruct android_usb_platform_data\
+    \ {\n    /* USB device descriptor fields*/\n    __u16 vendor_id;\n\n    /* Default\
+    \ product ID. */\n    __u16 product_id;\n\n    /* Product ID when adb is enabled.\
+    \ */\n    __u16 adb_product_id;\n\n    __u16 version;\n\n    char *product_name;\n\
+    \    char *manufacturer_name;\n    char *serial_number;\n\n    /* number of LUNs\
+    \ for mass storage function */\n    int nlnuns;\n};\n```\n\nPlatform data of arbitrary\
+    \ type can be used to attach device information to platform device as shown.\n\
+    \nAnother example is UART, which demonstrates the usage of resource.\n\n```\n\
+    static struct resource mt6573_resource_uart1[] = {\n    start = UART1_BASE,\n\
+    \    end = MT6573_BASE + MT6573_UART_SIZE - 1,\n    flags = IORESOURCE_MEM,\n\n\
+    \    start = MT6573_UART1_IRQ_LINE,\n    flags = IORESOURCE_IRQ,\n};\n```\n\n\
+    ```\nstatic struct platform_device mt6573_device_uart[] = {\n    .name = \"mt6573-uart\"\
+    ,\n    .id = 0,\n    .num_resources = ARRAY_SIZE(mt6573_resource_uart1),\n   \
+    \ .resource = mt6573_resource_uart1,\n};\n```\n\nMediaTek Confidential\n© 2011\
+    \ MediaTek Inc.\nThis document contains information that is proprietary to MediaTek\
+    \ Inc.\nUnauthorized reproduction or disclosure of this information in whole or\
+    \ in part is strictly prohibited.\nPage 8 of 10"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "As shown in UART example, resources are divided into two types: memory and\
+    \ IRQ line, which indicates the memory section and IRQ line used by the module.\
+    \ Also note that the id field indicates the device instance number, or -1 if device\
+    \ instance number is not used.\n\nAfter the associated resources and platform\
+    \ data are assigned, register the platform device to bus through\n\n```\nint platform_device_register(struct\
+    \ platform_device *pdev);\nint platform_add_devices(struct platform_device **pdevs,\
+    \ int ndev);\n```\n\n# 3.2 Platform driver\n\nPlatform drivers follow the standard\
+    \ driver model convention and many of them are the same.\n\n```\nstruct platform_driver\
+    \ {\n    int (*probe)(struct platform_device *);\n    int (*remove)(struct platform_device\
+    \ *);\n    void (*shutdown)(struct platform_device *);\n    int (*suspend_late)(struct\
+    \ platform_device *, struct pm_message_t state);\n    int (*suspend_early_late)(struct\
+    \ platform_device *, struct pm_message_t state);\n    int (*resume_early)(struct\
+    \ platform_device *);\n    int (*resume)(struct platform_device *);\n    struct\
+    \ device_driver;\n};\n```\n\nThe probing function is used when a match is found\
+    \ on device/driver registration to the bus to verify the existence of the device\
+    \ hardware. To register the platform driver, use\n\n```\nint platform_driver_register(struct\
+    \ platform_driver * drv);\n```"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 4 Module Initialization Sequence
+
+
+    In fact, a device/driver can co-operate correctly after probing, and the module
+    initialization sequence emphasizes on the sequence which the probing functions
+    are called, not the module initialization function itself.
+
+
+    In the design of ALPS, driver registration is done in driver module initialization
+    function, which is distributed among all the device drivers, and all the device
+    registration is put in a common place, that is, mt6573_board_init in alps/mediatek/platform/mt6573/kernel/core/mt6573_devs.c
+    to control the probing sequence of all the platform device/driver in the system.
+
+
+    On the basic knowledge developed in the previous sections, it is clear that the
+    probing function will be called when a match between a device and a driver is
+    found. To make the claim that mt6573_board_init is registered before mt6573_board_init
+    is called. And the probing sequence will be controlled by the device registration
+    sequence. Also note that to ''reduce footprint, data that is unnecessary after
+    initialization should be put at module initialization function, not in probing
+    function. Only data that is is needed at runtime should be in probing function.
+
+
+    | | |
+
+    |---|---|
+
+    | Device1 | |
+
+    | platform_device_register(device1) | probe (driver1) |
+
+    | Device2 | |
+
+    | platform_device_register(device2) | probe (driver2) |
+
+    | Device3 | |
+
+    | platform_device_register(device3) | probe (driver3) |
+
+
+    To postpone driver probing to a later time, either postpone device registration
+    or driver registration will.'
+  merge: -1
+  pgno: 9
