@@ -1,0 +1,5570 @@
+- img_proc: true
+  md: '# Defect Detect
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_0_0.png)
+
+
+    # Memory Thinking C & C++
+
+
+    Linux Diagnostics
+
+
+    Dmitry VostokovnSoftware Diagnostics Services'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Memory Thinking for C & C++
+
+    Linux Diagnostics
+
+
+    Slides with Descriptions Only
+
+
+    Dmitry Vostokov
+
+    Software Diagnostics Services
+
+
+    OpenTask'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'Memory Thinking for C & C++ Linux Diagnostics: Slides with Descriptions Only
+
+
+    Published by OpenTask, Republic of Ireland
+
+
+    Copyright © 2023 by OpenTask
+
+
+    Copyright © 2023 by Dmitry Vostikov
+
+
+    Copyright © 2023 by Software Diagnostics Services
+
+
+    Copyright © 2023 by Dublin School of Security
+
+
+    All rights reserved. No part of this book may be reproduced, stored in a retrieval
+    system, or transmitted in any form or by any means without the prior written permission
+    of the publisher.
+
+
+    OpenTask books are available through booksellers and distributors worldwide. For
+    further information or comments, send requests to press@opentask.com.
+
+
+    Product and company names mentioned in this book may be trademarks of their owners.
+
+
+    A CIP catalog record for this book is available from the British Library.
+
+
+    ISBN-13: 978-1912636570 (Paperback)
+
+
+    Revision 1.00 (December 2023)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Table of Contents 3
+
+
+    +   Preface 15
+
+
+    +   About the Author 16
+
+
+    +   Introduction 17
+
+
+    +   Original Training Course Name 17
+
+
+    +   Prerequisites 18
+
+
+    +   Training Goals 19
+
+
+    +   Training Principles 20
+
+
+    +   Schedule 21
+
+
+    +   Training Idea 22
+
+
+    +   General C & C++ Aspects 23
+
+
+    +   What We Do Not Cover 25
+
+
+    +   Linux C & C++ Aspects 26
+
+
+    +   Why C & C++? 27
+
+
+    +   Which C & C++? 29
+
+
+    +   My History of C & C++ 30
+
+
+    +   C and C++ Mastery Process 32
+
+
+    +   Thought Process 33'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Philosophy of Pointers 34
+
+
+    Pointer 35
+
+
+    Pointer Dereference 36
+
+
+    Many to One 37
+
+
+    Many to One Dereference 38
+
+
+    Invalid Pointer 39
+
+
+    Invalid Pointer Dereference 40
+
+
+    Wild (Dangling) Pointer 41
+
+
+    Pointer to Pointer 42
+
+
+    Pointer to Pointer Dereference 43
+
+
+    Naming Pointers and Entities 44
+
+
+    Names as Pointer Content 45
+
+
+    Pointers as Entities 46
+
+
+    # Memory and Pointers 47
+
+
+    Mental Exercise 48
+
+
+    Debugger Memory Layout 49
+
+
+    Memory Dereference Layout 50
+
+
+    Names as Addresses 51
+
+
+    Addresses and Entities 52'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Addresses and Structures 53
+
+
+    Pointers to Structures 54
+
+
+    Arrays 55
+
+
+    Arrays and Pointers to Arrays 56
+
+
+    Strings and Pointers to Strings 57
+
+
+    # Basic Types 58
+
+
+    ASCII Characters and Pointers 59
+
+
+    Bytes and Pointers 60
+
+
+    Wide Characters and Pointers 61
+
+
+    Integers 62
+
+
+    Little-Endian System 63
+
+
+    Short Integers 64
+
+
+    Long and Long Long Integers 65
+
+
+    Signed and Unsigned Integers 66
+
+
+    Fixed Size Integers 67
+
+
+    Booleans 68
+
+
+    Bytes 69
+
+
+    Size 70
+
+
+    Alignment 71'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '6
+
+
+    LP64 72
+
+
+    Nothing and Anything 73
+
+
+    Automatic Type Inference 74
+
+
+    # Entity Conversion 75
+
+
+    Pointer Conversion (C-Style) 76
+
+
+    Numeric Promotion/Conversion 77
+
+
+    Numeric Conversion 78
+
+
+    Incompatible Types 79
+
+
+    Forcing 80
+
+
+    # Structures, Classes, and Objects 82
+
+
+    Structures 83
+
+
+    Access Level 84
+
+
+    Classes and Objects 85
+
+
+    Structures and Classes 86
+
+
+    Pointer to Structure 87
+
+
+    Pointer to Structure Dereference 88
+
+
+    Many Pointers to One Structure 89
+
+
+    Many to One Dereference 90
+
+
+    Invalid Pointer to Structure 91'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Invalid Pointer Dereference 92
+
+
+    Wild (Dangling) Pointer 93
+
+
+    Pointer to Pointer to Structure 94
+
+
+    Pointer to Pointer Dereference 95
+
+
+    # Memory and Structures 96
+
+
+    Addresses and Structures 97
+
+
+    Structure Field Access 98
+
+
+    Pointers to Structures 99
+
+
+    Pointers to Structure Fields 100
+
+
+    Structure Inheritance 101
+
+
+    Structure Slicing 102
+
+
+    Inheritance Access Level 104
+
+
+    Structures and Classes II 105
+
+
+    Internal Structure Alignment 106
+
+
+    Static Structure Fields 107
+
+
+    # Uniform Initialization 108
+
+
+    Old Initialization Ways 109
+
+
+    New Way {} 110
+
+
+    Uniform Structure Initialization 111'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Static Field Initialization
+
+
+    # Macros, Types, and Synonyms 113
+
+
+    Macros 114
+
+
+    Old Way 115
+
+
+    New Way 116
+
+
+    # Memory Storage 117
+
+
+    Overview 118
+
+
+    Thread Stack Frames 119
+
+
+    Local Variable Value Lifecycle 120
+
+
+    Stack Allocation Pitfalls 122
+
+
+    Explicit Local Allocation 124
+
+
+    Dynamic Allocation (C-style) 125
+
+
+    Dynamic Allocation (C++) 126
+
+
+    Memory Operators 127
+
+
+    Memory Expressions 128
+
+
+    Local Pointers (Manual) 129
+
+
+    In-place Allocation 131
+
+
+    # Source Code Organisation 132
+
+
+    Logical Layer (Translation Units) 133'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Physical Layer (Source Files) 134
+
+
+    Inter-TU Sharing 135
+
+
+    Classic Static TU Isolation 136
+
+
+    Namespace TU Isolation 137
+
+
+    Declaration and Definition 138
+
+
+    TU Definition Conflicts 139
+
+
+    Fine-grained TU Scope Isolation 140
+
+
+    Conceptual Layer (Design) 141
+
+
+    Incomplete Types 142
+
+
+    # References 143
+
+
+    Type& vs. Type* 144
+
+
+    # Values 145
+
+
+    Value Categories 146
+
+
+    Constant Values 147
+
+
+    Constant Expressions 148
+
+
+    # Functions 149
+
+
+    Pointers to Functions 150
+
+
+    Function Pointer Types 152
+
+
+    Reading Declarations 153'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '+   Structure Function Fields 154
+
+
+    +   Structure Methods 155
+
+
+    +   Structure Methods (Inlined) 156
+
+
+    +   Structure Methods (Inheritance) 157
+
+
+    +   Structure Virtual Methods 159
+
+
+    +   Structure Pure Virtual Methods 161
+
+
+    +   Structure as Interface 162
+
+
+    +   Function Structure 163
+
+
+    +   Structure Constructors 164
+
+
+    +   Structure Copy Constructor 165
+
+
+    +   Structure Copy Assignment 166
+
+
+    +   Structure Destructor 167
+
+
+    +   Structure Destructor Hierarchy 168
+
+
+    +   Structure Virtual Destructor 169
+
+
+    +   Destructor as a Method 170
+
+
+    +   Conversion Operators 171
+
+
+    +   Parameters by Value 173
+
+
+    +   Parameters by Pointer/Reference 174
+
+
+    +   Parameters by Ptr/Ref to Const 175'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: A64 Flow Instructions 194
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'A64 Function Parameters 195
+
+
+    A64 Struct Function Parameters 196
+
+
+    this 197
+
+
+    Function Objects vs. Lambdas 198
+
+
+    A64 Lambda Example 200
+
+
+    Captures and Closures 201
+
+
+    A64 Captures Example 203
+
+
+    Lambdas as Parameters 204
+
+
+    A64 Lambda Parameter Example 206
+
+
+    Lambda Parameter Optimization 207
+
+
+    A64 Optimization as Unnamed Functions 209
+
+
+    Lambdas as Unnamed Functions 210
+
+
+    std::function Lambda Parameters 212
+
+
+    auto Lambda Parameters 214
+
+
+    Lambdas as Return Values 216
+
+
+    # Virtual Function Call 218
+
+
+    VTBL Memory Layout 219
+
+
+    VPTR and Struct Memory Layout 220
+
+
+    # Templates: A Planck-length Introduction 221'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Why Templates?
+
+
+    Reusability 223
+
+
+    Types of Templates 225
+
+
+    Types of Template Parameters 226
+
+
+    Type Safety 228
+
+
+    Flexibility 230
+
+
+    Metafunctions 231
+
+
+    # Iterators as Pointers 232
+
+
+    Containers 233
+
+
+    Iterators 234
+
+
+    Constant Iterators 235
+
+
+    Pointers as Iterators 236
+
+
+    Algorithms 237
+
+
+    # Memory Ownership 238
+
+
+    Pointers as Owners 239
+
+
+    Problems with Pointer Owners 240
+
+
+    # Smart Pointers 241
+
+
+    Basic Design 242
+
+
+    Unique Pointers 243'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'Descriptors as Unique Pointers 244
+
+
+    Shared Pointers 245
+
+
+    # RAII 246
+
+
+    RAII Definition 247
+
+
+    RAII Advantages 248
+
+
+    File Descriptor RAII 249
+
+
+    # Threads and Synchronization 250
+
+
+    Threads in C/C++ 251
+
+
+    Threads in C++ Proper 252
+
+
+    Synchronization Problems 253
+
+
+    Synchronization Solution 254
+
+
+    # Resources 255
+
+
+    C and C++ 256
+
+
+    Training (Linux C and C++) 257'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Preface
+
+
+    This full-color reference book is a part of the Accelerated C & C++ for Linux
+    Diagnostics training course organized by Software Diagnostics Services (www.patterndiagnostics.com).
+    The text contains slides, brief notes highlighting particular points, and replicated
+    source code fragments that are easy to copy into your favorite IDE. The book''s
+    detailed Table of Contents makes the usual Index redundant. We hope this reference
+    is helpful for the following audiences:
+
+
+    +   - C and C++ developers who want to deepen their knowledge;
+
+    - Software engineers developing and maintaining products on Linux platforms;
+
+    - Technical support, escalation, DevSecOps, cloud and site reliability engineers
+    dealing with complex software issues;
+
+    - Quality assurance engineers who test software on Linux platforms;
+
+    - Security and vulnerability researchers, reverse engineers, malware and memory
+    forensics analysts.
+
+
+    If you encounter any error, please use the contact form on the Software Diagnostics
+    Services web site, or alternatively, via Twitter @DumpAnalysis.
+
+
+    Facebook group:
+
+
+    http://www.facebook.com/groups/dumpanalysis
+
+
+    LinkedIn page and group:
+
+
+    https://www.linkedin.com/company/software-diagnostics-institute/
+
+    https://www.linkedin.com/groups/8473045/'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# About the Author
+
+
+    Dmitry Vostikov is an internationally recognized expert, speaker, educator, scientist,
+    inventor, and author. He founded the pattern-oriented software diagnostics, forensics,
+    and prognosis discipline (Systematic Software Diagnostics) and Software Diagnostics
+    Institute (DA+TA:DumpAnalysis.org + TraceAnalysis.org). Vostikov has also authored
+    over 50 books on software diagnostics, anomaly detection and analysis, software
+    and memory forensics, root cause analysis and problem solving, memory dump analysis,
+    software trace and log analysis, reverse engineering, and malware analysis. He
+    has over 25 years of experience in software architecture, design, development,
+    and maintenance in various industries, including leadership, technical, and people
+    management roles. Dmitry also found Systematix.io, BriteTrace, Analog.io, DiaThings,
+    Loglett, OpenTask Iterative and Incremental Publishing (OpenTask.com), Software
+    Diagnostics Technology and Services (former Memory Dump Analysis Services) PatternDiagnostics.com,
+    and Software Prognostics. In his spare time, he presents various topics on Debugging.TV
+    and explores Software Narratology, its further development as Narratology of Things
+    and Diagnostics of Things (DoT), Software Pathology, and Quantum Software Diagnostics.
+    His current interest areas are theoretical software diagnostics and its mathematical
+    and computer science foundations, application of formal logic, artificial intelligence,
+    machine learning and data mining to diagnostics and anomaly detection, software
+    diagnostics engineering and diagnostics-driven development, diagnostics workflow
+    and interaction. Recent interest areas also include cloud native computing, security,
+    automation, functional programming, applications of category theory to software
+    development and big data, and diagnostics of artificial intelligence.
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Introduction
+
+
+    Original Training Course Name
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_17_0.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Prerequisites
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_18_0.png)
+
+
+    To get most of this training, you are expected to have basic development experience
+    in a programming language other than C or C++ and optional basic memory dump analysis
+    experience. I also included the necessary x64 and A64 disassembly reviews for
+    some topics.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Training Goals
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_19_0.png)
+
+
+    Our primary goal is to learn C and C++ and its internals in an accelerated fashion.
+    First, we review common C and C++ fundamentals necessary for software diagnostics.
+    Then, we learn various C++ features with a focus on memory and internals. We also
+    see examples of how the knowledge of C and C++ helps in diagnostics and debugging.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'Training Principles
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_20_0.png)
+
+
+    There were many training formats to consider, and I decided that the best way
+    is to concentrate on slides and code examples you can verify.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Schedule
+
+
+    ```
+
+    std::vector<Session> sessions;
+
+    assert(sessions.size() == 5);
+
+    assert(sessions.capacity() > 5);
+
+    ```
+
+
+    I plan the training to have only 5 two-hour sessions, but I may extend it to more
+    sessions if necessary to fit all necessary material in sufficient detail.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Training Idea
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_22_0.png)
+
+
+    After I created a similar Windows-based training, it was natural to port it to
+    Linux. Also, attendees of core dump analysis and reversing training courses asked
+    questions related to C and C++, and I realized that they would have benefited
+    if they had this training. This training may also fill some gaps between these
+    courses. Finally, I recently developed the Accelerated Linux API training course
+    (see the References section at the end of the book), where solid knowledge of
+    classic C and C++ is assumed, and the current C and C++ course may provide such
+    knowledge.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# General C & C++ Aspects
+
+
+    +   * Philosophy of pointers
+
+    * Memory and pointers
+
+    * Structures, classes, and objects
+
+    * Basic types
+
+    * Promotions and conversions
+
+    * Memory and structures
+
+    * Macros, types, and synonyms
+
+    * Uniform initialization
+
+    * Source code organization, Pimpl
+
+    * Memory storage
+
+    * Pointer dereference walkthrough
+
+    * References
+
+    * Functions and function pointers
+
+    * Values, literals, values
+
+    * Inheritance
+
+    * Constant values and expressions
+
+    * Operators,
+
+    * Namespaces
+
+    * Constructors, copy, assignment
+
+    * Destructors, virtual destructors
+
+    * Virtual functions, pure methods
+
+    * Local stack variables and values
+
+    * VTBL and VPTR
+
+    * Memory operators and expressions
+
+    * Access levels
+
+    * Alignment
+
+    * Overloading, overriding
+
+    * Slicing
+
+    * Templates
+
+    * Lambdas and their internals
+
+    * Memory ownership, RAII
+
+    * Threads and synchronization
+
+    * Smart pointers
+
+
+    the general C and C++ aspects that we discuss in this course:
+
+
+    +   * Philosophy of pointers
+
+    * Structures, classes, and objects
+
+    * Promotions and conversions
+
+    * Macros, types, and synonyms
+
+    * Source code organization, Pimpl
+
+    * Pointer dereference walkthrough
+
+    * Functions and function pointers
+
+    * Inheritance
+
+    * Operators, function objects
+
+    * Destructors, virtual destructors
+
+    * Local stack variables and values
+
+    * Memory operators and expressions
+
+    * Alignment
+
+    * Slicing'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '+   * Iterators as pointers
+
+    * Lambdas and their internals
+
+    * Threads and synchronization
+
+    * Memory and pointers
+
+    * Basic types
+
+    * Memory and structures
+
+    * Uniform initialization
+
+    * Memory storage
+
+    * References
+
+    * Values, lvalues, rvalues
+
+    * Constant values and expressions
+
+    * Namespaces
+
+    * Constructors, copy, assignment
+
+    * Virtual functions, pure methods
+
+    * VTBL and VPTR
+
+    * Access levels
+
+    * Overloading, overriding
+
+    * Templates
+
+    * Memory ownership, RAII
+
+    * Smart pointers'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# What We Do Not Cover
+
+
+    # # What We Do Not Cover*
+
+
+    +   - Enumerations
+
+    - Move constructors and assignment operators
+
+    - Deleted and default members
+
+    - Universal references
+
+    - Concepts
+
+    - Coroutines
+
+    - Modules
+
+    - Tasks
+
+    - Ranges
+
+    - Container and algorithm semantics and pragmatics
+
+    - Container allocators
+
+    - Polymorphic allocators
+
+
+    > * We promise to include these topics in the second edition
+
+
+    There are some C++ topics that we did not include:
+
+
+    +   - Enumerations
+
+    - Move constructors and assignment operators
+
+    - Deleted and default members
+
+    - Universal references
+
+    - Concepts
+
+    - Coroutines
+
+    - Modules
+
+    - Tasks
+
+    - Ranges
+
+    - Container and algorithm semantics and pragmatics
+
+    - Container allocators
+
+    - Polymorphic allocators
+
+
+    We promise to include these topics in the second edition of this course.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Linux C & C++ Aspects
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_26_0.png)
+
+
+    In addition, we also discuss related Linux aspects, including:
+
+
+    +   - Linux-specific type aliases and macros
+
+    - LP64
+
+    - Necessary x64 and A64 disassembly
+
+    - Parameter passing
+
+    - Implicit parameter'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Why C & C++?
+
+
+    ```
+
+    Why C & C+++
+
+
+    * Interfacing
+
+    * Malware analysis
+
+    * Vulnerability analysis and exploitation
+
+    * Reversing
+
+    * Diagnostics
+
+    * Low-level debugging
+
+    * OS Monitoring
+
+    * Memory forensics
+
+    * Crash and hang analysis
+
+    * Secure coding
+
+    * Static code analysis
+
+    * Trace and log analysis
+
+    ```
+
+
+    First, why did we create this course? Even if you don’t develop in C and C++,
+    the knowledge of C and C++ and their internals is necessary for many software
+    construction and post-construction activities:
+
+
+    +   * Interfacing
+
+    * Malware analysis
+
+    * Vulnerability analysis and exploitation
+
+    * Reversing
+
+    * Diagnostics
+
+    * Low-level debugging
+
+    * OS Monitoring
+
+    * Memory forensics
+
+    * Crash and hang analysis
+
+    * Secure coding
+
+    * Static code analysis
+
+    * Trace and log analysis'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: In this training, we mostly look at C and C++ from a software diagnostics perspective.
+    This perspective includes memory dump analysis and, partially, trace and log analysis.
+    The knowledge of C and C++ is tacitly assumed in my other courses, where most
+    abnormal software behavior modeling exercises are written in C and C++. Of course,
+    there is an intersection of what we learn with other areas.
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Which C & C++?
+
+
+    +   * C
+
+    * C++ as a better C
+
+    * Proper C++ (legacy and modern)
+
+    * Linux specifics
+
+
+    Which C and C++? We look at a unified presentation approach combining all C and
+    C++ variants. Since this course is about diagnostics and not designing and and
+    implementing code, we do not make distinctions. It is not possible to cover all
+    the differences in the short time that we have. We also describe things as they
+    are in Linux programming (and narrowly from a Linux system programming perspective),
+    not as they ought to be from the latest C++ standards.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# My History of C & C++
+
+
+    # My History of C & C++
+
+
+    +   - C from 1987 and C++ from 1989 (Old CV)
+
+    - C++ as a better C from 1991
+
+    - Implicit design patterns in 1994-1995
+
+    - C++ as proper C++ from 2000
+
+    - Explicit design patterns in 2000
+
+    - C++98/03/STL from 2001
+
+    - BSD dump analysis from 2012
+
+    - Linux core dump analysis from 2015
+
+    - [..
+
+    - C++11/14 from 2016
+
+    - C++17 from 2017
+
+    - Functional programming from 2020
+
+    - Linux system programming since 2022
+
+    - C++20 from 2023
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_30_0.png)
+
+
+    This history slide is only about C and C++ languages. Despite many years, it is
+    still easy to recall when I started learning C. It was shortly after I started
+    my university education. And although my first programming language was FORTRAN,
+    I read the classic K&R book in a library. C++ is harder to recall, but most likely,
+    it was in 1989, least according to my old CV, which is the source of truth. I
+    definitely started using C++ in commercial projects around 1991 but used it as
+    a better C, and there was no standard template library (STL) at that time. I recall
+    some fascinating C++ GUI frameworks for MS-DOS, like Zinc. In 1994-1995, I designed
+    a word processor, and in the process, I implicitly many design patterns later
+    discovered in the GOF book of 2000. The authors also use a word processor for
+    illustration. I mainly understand C++ as C++ in 2000 when I read a book about
+    CORBA distributed object technology that used C++. I continued learning C++ by
+    reading many books of that time and learned the merits of using STL and also how
+    to use it effectively. In 2001, I joined a company that developed C++ static analysis
+    tools, and this greatly improved my C++ knowledge up the expert at'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'that time. C++03 didn''t have major changes compared to C++98, and this is
+    why I included it with C++98 for the year 2001. In 2003, things turned out unexpectedly
+    as I moved from full-time development using C++ to full-time memory dump analysis
+    of C++ programs with Mac OS X core dump analysis of user space (BSD) in 2012 and
+    Linux user space core dump analysis in 2015. I continued using C++03 for writing
+    diagnostic tools, though. In 2016, I learned that the language completely changed
+    to C++11/14. I came back to full-time C++ programming in late 2017, where I also
+    started using language features from C++17. In 2020, I moved to functional programming
+    in Scala, which also influenced my C++ coding for new projects. Now, I have started
+    using C++20 - a bit late since C++23 is already available, and I am switching
+    from Scala to Rust.
+
+
+    # Zinc
+
+
+    https://en.wikipedia.org/wiki/Zinc_Application_Framework
+
+
+    # Old CV
+
+
+    https://opentask.com/Vostokov/CV.htm'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# C and C++ Mastery Process
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_32_0.png)
+
+
+    Despite high-level features in C++, there’s still much low-level overlap with
+    C, and when I program in C and C++, I mentally compile to memory. This helps when
+    I have a doubt about whether this or that construct is safe. I also believe that
+    looking at how C and C++ constructs are implemented in memory greatly helps in
+    learning these languages.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '![](img/c36cc1b69ac7baa75db5d13135bb9d30_33_0.png)
+
+
+    This slide about a thought process when using a programming language is perhaps
+    controversial. With C and C++, we think about memory; with Scala/FP, we think
+    about functions; and with Python, we think about data.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Philosophy of Pointers
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_34_0.png)
+
+
+    We start with pointers, the most important concept in C and also in C++. I originally
+    created this approach in 2015 but now extended it for this training.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Pointer
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_35_0.png)
+
+
+    Conceptually, a pointer is an entity that refers (or points) to some other entity.
+    We say entity, not an object, so as not to confuse it with objects in C++ or objects
+    in object-oriented programming. This can be my finger, for example, pointing to
+    an apple.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Pointer Dereference
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_36_0.png)
+
+
+    A pointer dereference is an act of getting the entity it references for further
+    inspection or usage. Imagine I point to an apple, and you grab it to eat.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Many to One
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_37_0.png)
+
+
+    Several pointers can refer (or point) to the same entity. For example, two people
+    are pointing to the same apple. So, conceptually, pointers are distinct from entities
+    they point to. Should we call the latter pointees?'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Many to One Dereference
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_38_0.png)
+
+
+    Of course, if you dereference the same object, you get the same object. If someone
+    else grabs an apple, I point to, at the same time as you do, both get the same
+    apple.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Invalid Pointer
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_39_0.png)
+
+
+    Some pointers may be invalid; for example, I may point to an imaginary apple.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Invalid Pointer Dereference
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_40_0.png)
+
+
+    When you dereference an invalid pointer, you get a problem; for example, you fail
+    to get an imaginary apple I point to.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '![](img/c36cc1b69ac7baa75db5d13135bb9d30_41_0.png)
+
+
+    Some pointers are called dangling – they used to point to valid entities time
+    ago, but not anymore, so a dereference fails. You’re reaching for an apple that
+    I point to, but someone snatches it a split second ago.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Pointer to Pointer
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_42_0.png)
+
+
+    Since a pointer is also an entity that can be pointed to, there can be a chain
+    of pointers. You point to me; I point to an apple.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Pointer to Pointer Dereference
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_43_0.png)
+
+
+    When we dereference the first pointer, we get an entity, another pointer, which
+    we can also dereference to get the underlying entity. You point to me, but an
+    alien snatches me with an apple I point to. Inside a ship, another alien takes
+    an apple for analysis.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Naming Pointers and Entities
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_44_0.png)
+
+
+    Names are distinct from entities. Names can be programming language identifiers
+    or just unique numbers or IDs.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Names as Pointer Content
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_45_0.png)
+
+
+    Pointers, as entities, may contain names, and these names may be names of pointers,
+    too. If a pointer contains only a name, we say the pointer value is the name.
+    So, the pointer value can be another pointer value, and the latter pointer value
+    is the name of some other entity.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Pointers as Entities
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_46_0.png)
+
+
+    Pointer dereference is an act. If we put acts aside, pointers are just entities
+    with some content that can be interpreted as a name if necessary. All these dereferences
+    happen only at runtime. The pointer content (its value) may be invalid for all
+    time without any problem until we use it.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Memory and Pointers
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_47_0.png)
+
+
+    Now, we look at the memory representation of pointers and entities they point
+    to.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Mental Exercise
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_48_0.png)
+
+
+    Here, in this picture, entities are the so-called memory cells. Memory cells have
+    addresses that start from 0 and are usually incremented by the so-called pointer
+    size, which is 4 on 32-bit systems and 8 on 64-bit systems. Here, for visual clarity,
+    we use memory cells from a 32-bit system.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Debugger Memory Layout
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_49_0.png)
+
+
+    When we use a debugger, it prints memory cell addresses and their contents in
+    a certain layout shown on this slide. Some debugger commands, such as x in GDB,
+    use 2-column and some n-column layouts to print memory.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# Memory Dereference Layout\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_50_0.png)\n\
+    \nFor a 2-column format, some debuggers and their commands may interpret the second\
+    \ column as a pointer. In such a case, the third column is a value from a pointer\
+    \ dereference. Also, notice a case when a pointer points to itself. For GDB, it\
+    \ is possible to emulate such behavior using a custom script:\n\n```\ndefine dpp\n\
+    \    set $i = 0\n    set $p = $arg0\n    while $i < $arg1\n        printf \"%p:\
+    \ \" , $p\n        x/gx *(long *)$$p\n        set $i = $i + 1\n        set $p\
+    \ = $p + 8\nend\n```\n\nend"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Names as Addresses
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_51_0.png)
+
+
+    | 2ab1000: 2ab1008 |
+
+    | 2ab1004: ffffffff |
+
+    | 2ab1008: 2ab1010 |
+
+    | 2ab100c: 2ab100c |
+
+    | 2ab1010: 00000000 |
+
+    | 2ab1014: 00002000 |
+
+
+    To repeat, for memory layout, names are interpreted as addresses, and memory cell
+    content (cell value) can also be interpreted as a memory address.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Addresses and Entities
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_52_0.png)
+
+
+    Entities can be either single cells or multicells. Each part of a multicell can
+    be interpreted as a memory address, if necessary, even if it wasn’t meant to be
+    a memory address.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Addresses and Structures
+
+
+    # Addresses and Structures
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_53_0.png)
+
+
+    A structure in memory is a sequential collection of memory cells; some may be
+    multicell and themselves substructures. Each part of a structure, its member,
+    or structure field has its its own address as well, in addition to the overall
+    address of the structure.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Pointers to Structures
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_54_0.png)
+
+
+    A structure has its address. A pointer to a structure is a memory cell that contains
+    that address. It has its own address.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Arrays
+
+
+    # Arrays
+
+
+    | 2ab1000: 2ab1008 | 2ab1000: 2ab1008 |
+
+    | 2ab1004: ffffffff | ffffffff |
+
+    | 2ab1008: 2ab1010 | 2ab1008: 2ab1010 |
+
+    | 2ab100c: 2ab100c | 2ab100c: |
+
+    | 2ab1010: 00000000 | 2ab1010: 00000000 |
+
+    | 2ab1014: 00002000 | 00002000 |
+
+
+    An array is a contiguous sequence of n-cells in memory called array elements.
+    Each array element has its own address. Since the size of each array element is
+    fixed and the same, addressing the random element is fast.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Arrays and Pointers to Arrays
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_56_0.png)
+
+
+    The array address is the address of its first element. But a pointer to an array
+    is a different memory cell that contains the array address. This is similar to
+    structures and pointers to structures. An array can be considered as a structure
+    as well.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Strings and Pointers to Strings
+
+
+    ```
+
+    ```
+
+    2ab1000: ''H''
+
+    2ab1001: ''e''
+
+    2ab1002: ''1''
+
+    2ab1003: ''1''
+
+    2ab1004: ''o''
+
+    2ab1005: 00
+
+    2ab1216: 2ab1000
+
+    ```
+
+    ```
+
+
+    What about strings? An ASCII string is a zero-terminated array of one-byte memory
+    cells. The address of a string is the address of its first byte. Similar to arrays,
+    a pointer to a string is a memory cell that contains the address of the string,
+    the address of its first element – its first character.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Basic Types
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_58_0.png)
+
+
+    Now, we look at a few fundamental basic types.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# ASCII Characters and Pointers
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_59_0.png)
+
+
+    We have already looked at ASCII zero-terminated strings and pointers conceptually
+    using memory diagrams. Here, we look at some idiomatic C code.
+
+
+    The code example corresponding to the memory diagram:
+
+
+    ```
+
+    char c; // pstr == 2ab1000
+
+    &pstr; // 2ab1216
+
+    c = *pstr; // c == ''H''
+
+    ++pstr; // 2ab1001
+
+    c = *pstr; // c == ''e''
+
+    c = *(pstr+1); // c == ''l''
+
+    ```'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Bytes and Pointers
+
+
+    # Bytes and Pointers
+
+
+    | 2ab1000: | 12 | 2ab1216: | 2ab1000 |
+
+    | 2ab1001: | 34 | unsigned char b; |
+
+    | 2ab1002: | 56 | unsigned char *pb; // pb == 2ab1000 |
+
+    | 2ab1003: | 78 | // 2ab1216 |
+
+    | 2ab1004: | ab | b = *pb; // b == 12 |
+
+    | 2ab1005: | cd | // 2ab1001 |
+
+    | | | b = *pb; // b == 34 |
+
+    | | | b = *(pb+1); // b == 56 |
+
+
+    Characters are signed with small integer values from -128 to 127. But if we want
+    to work with bytes with unsigned values from 0 to 255, we need to use unsigned
+    characters. Later, we see what other types are available to work with bytes.
+
+
+    The code example corresponding to the memory diagram:
+
+
+    ```
+
+    unsigned char b;
+
+    unsigned char *pb; // pb == 2ab1000
+
+    &pb; // 2ab1216
+
+    b = *pb; // b == 12
+
+    ++pb; // 2ab1001
+
+    b = *pb; // b == 34
+
+    b = *(pb+1); // b == 56
+
+    ```'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# Wide Characters and Pointers
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_61_0.png)
+
+
+    If you want to use UNICODE, it is natural to use wide characters that occupy two
+    bytes each.
+
+
+    The code example corresponding to the memory diagram:
+
+
+    ```
+
+    wchar_t wc;
+
+    wchar_t *pwstr; // pwstr == 2ab1000
+
+    &pwstr; // 2ab1216
+
+    wc = *pwstr; // wc == L''H''
+
+    ++pwstr; // 2ab1002
+
+    c = *pwstr; // c == L''e''
+
+    c = *(pwstr+1); // c == L''\0''
+
+    ```'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '62
+
+
+    # Integers
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_62_0.png)
+
+
+    The second type we look at now is integers, which occupy 4 bytes.
+
+
+    The code example corresponding to the memory diagram:
+
+
+    ```
+
+    int i; // 2ab1000
+
+    int *pi; // 2ab1216
+
+    &pi; // i == 0x2ab1008
+
+    i = *pi; // 2ab1004
+
+    ++pi; // i == 0xffffffff
+
+    i = *pi; // i == -1
+
+    i = *(pi+1); // i == 0x2ab1010
+
+    ```'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# Little-Endian System\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_63_0.png)\n\
+    \n| 2ab1000: 1 |\n| 2ab1001: 2 char ba[4]; // {1, 2, 3, 4 } \n int i; // 0x4030201\
+    \ |\n| 2ab1002: 3 |\n| 2ab1003: 4 MOVBE ; x86_64 |\n| 2ab1004: 5 ; Move Data After\
+    \ Swapping Bytes |\n| 2ab1005: 6 |\n\nWhen converting between byte sequences and\
+    \ number values, we need to consider the little-endian system where the least\
+    \ significant digits reside at the lowest memory addresses.\n\nThe code example\
+    \ corresponding to the memory diagram:\n\n```\nchar ba[4]; // { 1, 2, 3, 4 }\n\
+    int i; // 0x4030201\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Short Integers\n\n# Short Integers\n\n```\n2ab1000:  2ab1008      2ab1216:\
+    \  2ab1000\n2ab1004:  ffff\n2ab1008:  2ab1010      short s;      // 2ab1000\n\
+    \                         short *ps;    // 2ab1216\n                         &ps;\
+    \          // s = 0x1008\n                         s = *ps;      // 2ab1002\n\
+    2ab100c:  2ab100c       s = *ps;      // s = 0x2ab\n                         ++ps;\n\
+    2ab1010:  00000000      s = *(ps+1); // s = 0xffff\n2ab1014:  00002000\n```\n\n\
+    Short integers occupy 2 bytes.\n\nThe code example corresponding to the memory\
+    \ diagram:\n\n```\nshort s;      // 2ab1000\nshort *ps;    // 2ab1216\n&ps;  \
+    \        \ns = *ps;      // s = 0x1008\n++ps;         // 2ab1002\ns = *ps;   \
+    \   // s = 0x2ab\ns = *(ps+1); // s = 0xffff\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Long and Long Long Integers
+
+
+    # Long and Long Long Integers
+
+
+    | 2ab1000: 2ab1008 | 2ab1216: 2ab1000 |
+
+    | 2ab1004: ffffffff | | |
+
+    | 2ab1008: 2ab1010 | | |
+
+    | 2ab100c: 2ab100c | | |
+
+    | 2ab1010: 00000000 | | |
+
+    | 2ab1014: 00002000 | | |
+
+
+    ```
+
+    long l; // long long ll;
+
+    long *pl; // 2ab1000
+
+    &pl; // 2ab1216
+
+    l = *pl;
+
+    // ll == 0xffffff`02ab1010
+
+    ++pl; // 2ab1008
+
+    l = *pl;
+
+    // ll == 0x2ab100c`02ab1010
+
+    l = *(pl+1);
+
+    // ll == 0x2000`00000000
+
+    ```
+
+
+    If we want 8-byte 64-bit integers, we need to use long long long for portability.
+
+
+    The code example corresponding to the memory diagram:
+
+
+    ```
+
+    long l; // long long ll;
+
+    long *pl; // 2ab1000
+
+    &pl; // 2ab1216
+
+    l = *pl; // ll == 0xffffff`02ab1010
+
+    ++pl; // 2ab1008
+
+    l = *pl; // ll == 0x2ab100c`02ab1010
+
+    l = *(pl+1); // ll == 0x2000`00000000
+
+    ```'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "Signed and Unsigned Integers\n\n```\nSigned and Unsigned Integers\n© (signed)\
+    \ short / unsigned short\n© signed / (signed) int / unsigned / unsigned int\n\
+    © (signed) long (int) / unsigned long (int)\n© (signed) long long (int) / unsigned\
+    \ long long (int)\n\nfor (unsigned i = 0xffff; i >= 0; --i)\n{\n    // ... Spiking\
+    \ Thread\n}\n```\n\nWe need to be careful to use unsigned index variables in classic\
+    \ loops. The following code example loops indefinitely since the loop variable\
+    \ is always positive: \n\n```\nfor (unsigned i = 0xffff; i >= 0; --i)\n{\n   \
+    \ // ... Spiking Thread\n}\n```\n\nSpiking Thread memory analysis pattern\nhttps://www.dumpanalysis.org/blog/index.php/2015/12/14/crash-dump-analysis-patterns-part-14-linux/"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# Fixed Size Integers
+
+
+    ```
+
+    * uint8_t b;
+
+    * uint32_t dw;
+
+    * uint64_t qw;
+
+    * uintptr_t p;
+
+    ```
+
+
+    It is also possible to be precise and use portable fixed-size types.
+
+
+    The code example:
+
+
+    ```
+
+    uint8_t b;
+
+    uint32_t dw;
+
+    uint64_t qw;
+
+    uintptr_t p;
+
+    ```'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# Booleans\n\n```\nbool b;\nnb = true;\n = = false;\n```\n\nC++ also includes\
+    \ a native type for boolean variables. If you want to use it in pure C, you need\
+    \ to include the `stdbool.h` header.\n\nThe code example:\n\n```\nbool b;\nb =\
+    \ true;\nb = false;\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Bytes
+
+
+    ```
+
+    std::byte b;
+
+    nNot a character
+
+    Not an integer
+
+    ```
+
+
+    The latest C++ standards also include a distinct type for bytes.
+
+
+    The code example:
+
+
+    ```
+
+    std::byte b;
+
+    ```'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Size
+
+
+    ```
+
+    Size
+
+
+    sizeof operator
+
+
+    size_t size = sizeof(int);
+
+
+    int i; size = sizeof i;
+
+
+    size = sizeof(1 + 1);
+
+    ```
+
+
+    The sizeof operator can evaluate the size of types, variables, and target result
+    types of expressions (without expression evaluation).
+
+
+    The code example:
+
+
+    ```
+
+    size_t size = sizeof(int);
+
+
+    int i;
+
+
+    size = sizeof i;
+
+    size = sizeof(1 + 1);
+
+    ```'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# Alignment
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_71_0.png)
+
+
+    Variables are usually aligned in memory at offsets divisible by their type size
+    value in bytes. You can get default alignment values using the alignof operator
+    and change the default alignment using the alignas specifier.
+
+
+    The code example:
+
+
+    ```
+
+    size_t align = alignof(long);
+
+    alignas(4096) long l = 1;
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# LP64
+
+
+    ```
+
+    sizeof(int) == 4
+
+    sizeof(int *) == 8
+
+    sizeof(long) == 8
+
+    sizeof(long long) == 8
+
+    ```
+
+
+    Linux uses the so-called LP64 data model, where Long integers and pointers are
+    64-bit.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# Nothing and Anything
+
+
+    ```
+
+    void foo(void);
+
+    void *p;
+
+    ```
+
+
+    Two distinct types correspond to the concepts of Nothing and Anything can find
+    in other programming languages: void and void *. The latter is a pointer to any
+    type.
+
+
+    The code example:
+
+
+    ```
+
+    void foo(void);
+
+    void *p;
+
+    ```'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# Automatic Type Inference\n\n```\nauto a = \"Hello\";\n\nauto func(decltype(\"\
+    Hello\") cstr)\n{\n    return cstr;\n}\n```\n\nC++11 added automatic type specification,\
+    \ so the type is deduced from the initializing expression.\n\nThe code example:\n\
+    \n```\nauto a = \"Hello\";\n\\auto func(decltype(\"Hello\") cstr)\n{\n    return\
+    \ cstr;\n}\n```"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# Entity Conversion
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_75_0.png)
+
+
+    As you anticipate, the same memory cell addresses and their values are the basis
+    of conversion between different entity types. So, let''s look at some examples.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# Pointer Conversion (C-Style)\n\n# Pointer Conversion (C-Style)\n\n| 2ab1000:\
+    \ | 12 | 2ab1216: | 2ab1000 |\n|---|---|---|---|\n| 2ab1001: | 34 | | unsigned\
+    \ char b; int i; |\n| 2ab1002: | 56 | | unsigned char *pb; // pb == 2ab1000 |\n\
+    | 2ab1003: | 78 | | // 2ab1216 |\n| 2ab1004: | ab | | b = *pb; // b == 12 |\n\
+    | 2ab1005: | cd | | int *pi = (int*)pb; // pi == 2ab1000 |\n| | | | &pb; // !=\
+    \ 2ab1216 |\n| | | | i = *pi; // i == 0x78563412 Intel LSB endian |\n\nPointers\
+    \ can be converted to each other freely because their value is just a memory address.\
+    \ However, when we dereference them, we get the value based on underlying memory\
+    \ contents, which don't change as illustrated here. Please also note that to the\
+    \ least significant byte endian convention, the integer value we get differs from\
+    \ the memory layout byte order.\n\nThe code example corresponding to the memory\
+    \ diagram:\n\n```\nunsigned char b; int i;\nunsigned char *pb; // pb == 2ab1000\n\
+    &pb;               // 2ab1216\nb = *pb;           // b == 12\nint *pi = (int*)pb;\
+    \ // pi == 2ab1000\n&pi;               // != 2ab1216\ni = *pi;           // i\
+    \ == 0x78563412\n                    // Intel LSB endian\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Numeric Promotion/Conversion
+
+
+    ```
+
+    char c = ''a''; int n = c;
+
+    short s = c;
+
+    int n = 0x1234; char c = n;
+
+    ```
+
+
+    Values from the lesser range of values can be automatically promoted to types
+    with a wider range of values. The opposite automatic conversion may lose some
+    bits of information and should be carefully reviewed.
+
+
+    The code example:
+
+
+    ```
+
+    char c = ''a'';
+
+    int n = c;
+
+    short s = c;
+
+    int n = 0x1234;
+
+    char c = n;
+
+    ```'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "Numeric Conversion\n\n# Numeric Conversion\n\n```\n (type)(expr) // C-Style\n\
+    \nstatic_cast<type>(expr)\n\nfor (unsigned i = 0xffff; (int)i >= 0; --i)\n}\n\n\
+    for (unsigned i = 0xffff; static_cast<int>(i) >= 0; --i)\n{}\n```\n\nIn the absence\
+    \ of automatic conversion for compatible types, we can use C-style casts or explicit,\
+    \ specific C++ casts.\n\nThe following code examples solve the problem with the\
+    \ infinite loop:\n\n```\nfor (unsigned i = 0xffff; (int)i >= 0; --i)\n{}\n\nfor\
+    \ (unsigned i = 0xffff; static_cast<int>(i) >= 0; --i)\n{}\n```"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Incompatible Types
+
+
+    ```
+
+    (type)(expr) // C-Style
+
+
+    reinterpret_cast<type>(expr)
+
+
+    int *p = (int *)1;
+
+    p = reinterpret_cast<int *>(1);
+
+    ```
+
+
+    When types are incompatible, for example, integers and pointers to them, we can
+    use either C-style casts or the specific C++ type reinterpretation cast.
+
+
+    The code example:
+
+
+    ```
+
+    int *p = (int *)1;
+
+    p = reinterpret_cast<int *>(1);
+
+    ```'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# Forcing\n\n```\nstruct A\n{\n    unsigned int u1;\n    unsigned int u2;\n\
+    };\nstruct B\n{\n    unsigned long ul;\n} b;\n\nA a = reinterpret_cast<A>(b);\n\
+    \nA a = *(A*)&b;\na = *reinterpret_cast<A *>(b);\n```\n\nDifferent structures\
+    \ are even more incompatible with the failing direct C++ reinterpretation cast.\
+    \ However, we can force reinterpretation of structures by reinterpreting a pointer\
+    \ to a source structure as a pointer to a target structure and then dereferencing\
+    \ it. In such a case, the underlying memory cells are reinterpreted as the target\
+    \ structure field values. You can review the code example after studying the next\
+    \ two sections on structures and memory:\n\n```\nstruct A\n{\n    unsigned int\
+    \ u1;\n    unsigned int u2;\n};\nstruct B\n{\n    unsigned long ul;\n} b;\n```"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '```
+
+    A a = reinterpret_cast<A>(b);
+
+    a a = *(A)&b;
+
+    a = *reinterpret_cast<A*>(&b);
+
+    ```'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Structures, Classes, and Objects
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_82_0.png)
+
+
+    Now, we cover structures, classes, and their objects.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# Structures\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_83_0.png)\n\nWe can\
+    \ view structures as collections of fields laid out in memory. Structures may\
+    \ have names or can be anonymous, as on the right.\n\nThe code example:\n\n```\n\
+    struct MyStruct {\n    int field;\n    // ...\n}\nstruct MyStruct myStruct;\n\
+    MyStruct myStruct2;\nstruct MyStruct *pMyStruct;\nMyStruct *pMyStruct2;\nstruct\
+    \ {\n    int field;\n    // ...\n} myOtherStruct;\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# Access Level\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_84_0.png)\n\nFields\
+    \ with the private access specifier cannot be referenced from the outside.\n\n\
+    The code example:\n\n```\nstruct MyStruct {\n// public:\n  int field1;\nprivate:\n\
+    \  int field2;\n} myStruct;\n\nmyStruct.field1 = 1;\nmyStruct.field2 = 2;\n```"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# Classes and Objects\n\n```\nclass MyClass {\n    int field;\n    // ...\n\
+    }\n\nclass MyClass myClass;\nMyClass myClass2;\n\nclass MyClass *pMyClass;\nMyClass\
+    \ *pMyClass2;\nclass {\n    int field;\n    // ...\n} myObjectClass;\n```\n\n\
+    Classes have the same structure.\n\nThe code example:\n\n```\nclass MyClass {\n\
+    \    int field;\n    // ...\n}\nclass MyClass myClass;\nMyClass myClass2;\nclass\
+    \ MyClass *pMyClass;\nMyClass *pMyClass2;\nclass {\n    int field;\n    // ...\n\
+    } myObjectClass;\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# Structures and Classes
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_86_0.png)
+
+
+    Both structures and classes are completely the same in C++ and can be used interchangeably.
+    This is why you can always see struct in good modern C++ books. The only difference
+    (if we ignore inheritance for now) is the field access, which is public by default
+    in structures and private in classes.
+
+
+    The code example:
+
+
+    ```
+
+    struct tagStruct      class tagClass
+
+    {                      {
+
+    // public:               public: // (private:)
+
+    int field;             int field;
+
+    // ...                  // ...
+
+    };                     };
+
+    ```
+
+    ```'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# Pointer to Structure
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_87_0.png)
+
+
+    Here, we go again through our conceptual philosophy of pointers pictures and annotate
+    them with C and C++ code.
+
+
+    The code example:
+
+
+    ```
+
+    MyStruct *pMyStruct = &myStruct;
+
+    ```'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'Pointer to Structure Dereference
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_88_0.png)
+
+
+    Here, we dereference a pointer to some structure. We get the structure value and
+    copy-assign it to the myStruct variable.
+
+
+    The code example:
+
+
+    ```
+
+    MyStruct myStruct = *pMyStruct;
+
+    ```'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Many Pointers to One Structure
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_89_0.png)
+
+
+    Here, we assign the value of one pointer to another, and both now point to the
+    same structure.
+
+
+    The code example:
+
+
+    ```
+
+    MyStruct *pMyStruct = &myStruct;
+
+    MyStruct *pMyStruct2 = pMyStruct;
+
+    ```'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# Many to One Dereference
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_90_0.png)
+
+
+    If we dereference both, we get the same value with the same address.
+
+
+    The code example:
+
+
+    ```
+
+    assert(&pMyStruct == &pMyStruct2);
+
+    ```'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# Invalid Pointer to Structure
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_91_0.png)
+
+
+    Here, we depict an uninitialized pointer that, depending on the memory storage
+    type, can be a NULL pointer or some random value.
+
+
+    The code example:
+
+
+    ```
+
+    MyStruct *pMyStruct;
+
+    ```'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Invalid Pointer Dereference
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_92_0.png)
+
+
+    Dereferencing an uninitialized pointer can have undefined behavior, most likely
+    an access violation leading to a crash.
+
+
+    The code example:
+
+
+    ```
+
+    MyStruct *pMyStruct;
+
+    MyStruct myStruct = *pMyStruct;
+
+    ```'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# Wild (Dangling) Pointer
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_93_0.png)
+
+
+    Memory for a structure can be dynamically allocated and then deallocated, but
+    if a pointer is not reset to some value easy to check, such as 0, then we have
+    a dangling pointer with its dereferencing resulting in undefined behavior that
+    could lead to further corruption.
+
+
+    The code example:
+
+
+    ```
+
+    MyStruct *pMyStruct = new MyStruct;
+
+    delete pMyStruct;
+
+    ```
+
+
+    MyStruct myStruct = *pMyStruct;'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Pointer to Pointer to Structure
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_94_0.png)
+
+
+    We can also have pointers to pointers to structures and so on, with double
+
+    and more dereferences needed to get the value. We''ll see why we need
+
+    double-pointers later when we discuss passing parameters to functions.
+
+
+    The code example:
+
+
+    ```
+
+    MyStruct *pMyStruct = &myStruct;
+
+    MyStruct **ppMyStruct = &pMyStruct;
+
+    ```'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: 'Pointer to Pointer Dereference
+
+
+    # Pointer to Pointer Dereference
+
+
+    ```
+
+    MyStruct *pMyStruct = *ppMyStruct;
+
+    MyStruct myStruct = *pMyStruct;
+
+    myStruct = **ppMyStruct;
+
+    ```
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_95_0.png)
+
+
+    Here, we have double dereference illustrated.
+
+
+    The code example:
+
+
+    ```
+
+    MyStruct *pMyStruct = *ppMyStruct;
+
+    MyStruct myStruct = *pMyStruct;
+
+    myStruct = **ppMyStruct;
+
+    ```'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Memory and Structures
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_96_0.png)
+
+
+    Now, we look at the memory representation of structures.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "# Addresses and Structures\n\n```\nstruct OuterStruct {\n  int field1;\n  struct\
+    \ InnerStruct {\n    int field1;\n    int field2;\n  } field2;\n  struct InnerStruct\
+    \ {\n    int field;\n  } field3;\n  } myStruct;\n```\n\n| | |\n|---||\n| 2ab1000:\
+    \ | 2ab1008 |\n| 2ab1004: | ffffffff |\n| 2ab1008: | 2ab1010 |\n| | 2ab100c |\n\
+    | 2ab1010: | 00000000 |\n| 2ab1014: | 00000200 |\n\nA structure in memory is a\
+    \ sequential collection of memory cells; some be multicell and themselves substructures.\
+    \ Each part of its, its member, or structure field has its own address as well,\
+    \ in addition to the overall address of the structure.\n\nThe code example corresponding\
+    \ to the memory diagram:\n\n```\nstruct OuterStruct {\n  int field1;\n  struct\
+    \ InnerStruct {\n    int field1;\n    int field2;\n  } field2;\n  struct InnerStruct\
+    \ {\n    int field;\n  } field3;\n  } myStruct;\n```"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Structure Field Access
+
+
+    # Structure Field Access
+
+
+    ```
+
+    &myStruct; // 2ab1004
+
+    &myStruct.field1; // 2ab1004
+
+    myStruct.field1; // fffffff
+
+    &myStruct.field2; // 2ab1008
+
+    &myStruct.field2.field1; // 2ab1008
+
+    myStruct.field2.field1; // 2ab1010
+
+    myStruct.field2.field2; // 2ab100c
+
+    myStruct.field2.field2; // 2ab100c
+
+    &myStruct.field3; // 2ab1010
+
+    myStruct.field3.field; // 2ab1010
+
+    myStruct.field3.field; // 0
+
+    ```
+
+
+    | 2ab1000 | 2ab1008 |
+
+    |--- |--- |
+
+    | 2ab1004 | fffffff |
+
+    | 2ab1008 | 2ab1010 |
+
+    | | 2ab100c |
+
+    | 2ab1010 | 00000000 |
+
+    | 2ab1014 | 00002000 |
+
+
+    This example shows field addresses and access when we have a structure value.
+
+
+    The code example corresponding to the memory diagram:
+
+
+    ```
+
+    &myStruct; // 2ab1004
+
+    &myStruct.field1; // 2ab1004
+
+    myStruct.field1; // fffffff
+
+    &myStruct.field2; // 2ab1008
+
+    &myStruct.field2.field1; // 2ab1008
+
+    myStruct.field2.field1; // 2ab1010
+
+    myStruct.field2.field2; // 2ab100c
+
+    myStruct.field2.field2; // 2ab100c
+
+    &myStruct.field3; // 2ab1010
+
+    myStruct.field3.field; // 2ab1010
+
+    myStruct.field3.field; // 0
+
+    ```'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "Pointers to Structures\n\n# # Pointers to Structures\n\n```\n```\n2ab1000:\
+    \ 2ab1008      2ab1216: 2ab1004\n2ab1004: ffffffff\n2ab1008: 2ab1010\n       \
+    \  2ab100c\n2ab1010: 00000000\n2ab1014: 00002000\n\nOuterStruct *pMyStruct = &myStruct;\n\
+    \n&myStruct; // 2ab1004\npMyStruct; // 2ab1004\n&pMyStruct; // 2ab1216\n``````\n\
+    ```\n\nA structure has its address. A pointer to a structure is a memory cell\
+    \ that contains that address. It has its own address.\n\nThe code example corresponding\
+    \ to the memory diagram:\n\n```\n```\nOuterStruct *pMyStruct = &myStruct;\n&myStruct;\
+    \ // 2ab1004\npMyStruct; // 2ab1004\n&pMyStruct; // 2ab1216\n``````\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '100
+
+
+    # Pointers to Structure Fields
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_100_0.png)
+
+
+    This example shows field addresses and access when we have a pointer to a structure
+    value.
+
+
+    The code example corresponding to the memory diagram:
+
+
+    ```
+
+    pMyStruct; // 2ab1004
+
+    &pMyStruct->field1; // 2ab1004
+
+    pMyStruct->field1; // fffffff
+
+    pMyStruct->field2; // 2ab1008
+
+    &pMyStruct->field2.field1; // 2ab1008
+
+    pMyStruct->field2.field1; // 2ab1010
+
+    pMyStruct->field2.field2; // 2ab100c
+
+    pMyStruct->field2.field2; // 2ab100c
+
+    &pMyStruct->field3; // 2ab1010
+
+    pMyStruct->field3.field; // 2ab1010
+
+    pMyStruct->field3.field; // 0
+
+    ```'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "# Structure Inheritance\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_101_0.png)\n\
+    \nStructures can inherit fields from other structures. In case of the same field\
+    \ names, the derived structure hides the base structure fields, but they can be\
+    \ accessed by explicit base structure name qualification:\n\n```\nstruct Base\
+    \ {\n  int field;\n};\nstruct Derived : Base {\n  int field;\n  int field2;\n\
+    } myDerived;\nmyDerived.field;\nmyDerived.Base::field;\nBase *pMyBase = &myDerived;\n\
+    pMyBase->field;\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "# Structure Slicing\n\n```\nstruct Base\n{\n    int field;\n};\nstruct Derived\
+    \ : Base\n{\n    int field2;\n    myDerived { 0 };\n};\nnBase myBase = myDerived;\n\
+    myDerived = myBase;\nmyDerived = static_cast<Derived>(myBase);\n\nBase *pMyBase\
+    \ = &myDerived;\nDerived *pMyDerived = pMyBase;\n\nDerived *pMyDerived = static_cast<Derived>*(pMyBase);\n\
+    ```\n\nIt is possible to copy a derived structure to a base structure variable,\
+    \ but in this case, the former contents are sliced since the base structure occupies\
+    \ less memory. The other way around, from the base structure to the derived, is\
+    \ forbidden by default because the compiler doesn't know how to fill the new-derived\
+    \ fields. However, this can be forced with a static cast where the derived fields\
+    \ are filled with the existing adjacent memory content, which can be completely\
+    \ random. The same downcast can be done between pointers, but when we try to dereference\
+    \ a target pointer to the derived structure later, we may get random data.\n\n\
+    The code example:\n\n```\nstruct Base\n{\n    int field;\n};\n```"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "```\nstruct Derived : Base {\n    int field2;\n} myDerived { 0 };\n\nBase myBase\
+    \ = myDerived;\nmyDerived = myBase;\nmyDerived = static_cast<Derived>(myBase);\n\
+    \nBase *pMyBase = &myDerived;\nDerived *pMyDerived = pMyBase;\nDerived *pMyDerived\
+    \ = static_cast<Derived*>(pMyBase);\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "# Inheritance Access Level\n\n```\nstruct Base\n{\n    int field;\n}\n\nstruct\
+    \ Derived : private Base\n{\n    int field;\n    int field2;\n} myDerived;\n\n\
+    myDerived.field;\nmyDerived.Base::field;\n\nBase *pMyBase = &myDerived;\npMyBase->field;\n\
+    ```\n\nIt is possible to inherit privately. In such a case, the base structure\
+    \ fields are inaccessible from the outside, even with the explicit qualification.\n\
+    \nThe code example:\n\n```\nstruct Base\n{\n    int field;\n}\n\nstruct Derived\
+    \ : private Derived\n{\n    int field;\n    int field2;\n} myDerived;\n\nmyDerived.field;\n\
+    myDerived.Base::field;\n\nBase *pMyBase = &myDerived;\npMyBase->field;\n```"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "# Structures and Classes II\n\n```\nstruct ==* class\n\nstruct Base {\n  //\
+    \ public:\n  int field;\n}\nclass Base {\n  public:\n  int field;\n}\nstruct Derived\
+    \ : Base // (public) =\nclass Derived : public Base // (private) {\n  // ...\n\
+    }\n```\n\nAgain, structures and classes are almost equivalent except for the default\
+    \ inheritance access (and field access), which is, by default, public for structures\
+    \ and private for classes. Public access needs to be specified explicitly in this\
+    \ training, which is not really relevant for memory thinking when looking at built\
+    \ code.\n\nThe code example:\n\n```\nstruct Base {\n  // public:\n  int field;\n\
+    }\nclass Base {\n  public:\n  int field;\n}\nstruct Derived : Base // (public)\n\
+    \  // ...\n}\nclass Derived : public Base // (private)\n  // ...\n}\n```"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# Internal Structure Alignment\n\n```\nstruct Struct {\n    bool field1;\n\
+    \    short field2;\n    long field3;\n} myStruct;\n\n(gdb) ptype a / Struct\n\
+    /** offset      | size */  | type = struct {\n    bool field1;\n/** XXX 1-byte\
+    \ hole */| 1 *//\n    short field2;\n/** XXX 4-byte hole */| 0 *//\n    long field3;\n\
+    } /* total size (bytes): 16 */\n\n#pragma pack(1)\nstruct StructPacked {\n   \
+    \ bool field1;\n    short field2;\n    long field4;\n} myStructPacked;\n\n(gdb)\
+    \ ptype o / StructPacked\n/** offset      | size */  | type = struct StructPacked\
+    \ {\n    bool field1;\n/** 0 | 1 *//\n    short field2;\n/** 1 | 2 *//\n    long\
+    \ field4;\n/** 3 | 0 *//\n} /* total size (bytes): 11 */\n```\n\nFields may be\
+    \ aligned according to their default type alignment, which may introduce gaps,\
+    \ increasing the overall structure size.\n\nThe code example corresponding to\
+    \ the GDB output:\n\n```\nstruct Struct {\n    bool field1;\n    short field2;\n\
+    \    long field3;\n} myStruct;\n\n#pragma pack(1)\nstruct StructPacked {\n   \
+    \ bool field1;\n    short field2;\n    long field4;\n} myStructPacked;\n```"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# Static Structure Fields\n\n```\nstruct MyStruct\n{\n    int field;\n    static\
+    \ unsigned shared_field;\n} myStruct1, myStruct2;\n\nunsigned MyStruct::shared_field\
+    \ = 123;\n\nmyStruct1.field = 0;\nmyStruct1.shared_field = 123;\nmyStruct2.field\
+    \ = 1;\n\n(gdb) ptype /o MyStruct\n$type = struct MyStruct {\n    /* offset  \
+    \  size */\n    0          | 4 */\n    int field;\n    static unsigned shared_field;\n\
+    \    /* total size (bytes): 4 */\n}\n\n(gdb) x &MyStruct::shared_field:\n0x4028\
+    \ <MyStruct::shared_field>: 0x0000007b\n```\n\nStatic structure field values are\
+    \ shared between the different objects of the same structure type. They occupy\
+    \ uniquely separate memory cells from the objects' memory.\n\nThe code example\
+    \ corresponding to the GDB output:\n\n```\nstruct MyStruct\n{\n    int field;\n\
+    \    static unsigned shared_field;\n} myStruct1, myStruct2;\n\nunsigned MyStruct::shared_field\
+    \ = 123;\n\nmyStruct1.field = 0;\nmyStruct1.shared_field = 123;\nmyStruct2.field\
+    \ = 1;\n```"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# Uniform Initialization
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_108_0.png)
+
+
+    Throughout C++ history, there were several ways to initialize variables.
+
+    Finally, there is some uniform way to do it consistently.'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Old Initialization Ways
+
+
+    ```
+
+    OuterStruct *pMyStruct;
+
+    OuterStruct *pMyStruct = NULL;
+
+    OuterStruct *pMyStruct(NULL);
+
+    OuterStruct *pMyStruct = nullptr;
+
+    ```
+
+
+    When we omit an initialization value, a variable is considered uninitialized if
+    its memory belongs to certain memory classes, such as stack. For static memory,
+    it may be default-initialized with zero memory values.
+
+
+    The code example:
+
+
+    ```
+
+    OuterStruct *pMyStruct;
+
+    OuterStruct *pMyStruct = NULL;
+
+    OuterStruct *pMyStruct(NULL);
+
+    OuterStruct *pMyStruct = nullptr;
+
+    ```'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '```
+
+    OuterStruct *pMyStruct{}
+
+    OuterStruct *pMyStruct{NULL};
+
+    OuterStruct *pMyStruct{nullptr};
+
+    OuterStruct *pMyStruct{&myStruct};
+
+    ```
+
+
+    When we use the new way of initialization in modern C++, we can use empty {} to
+    signal default initialization even for stack memory.
+
+
+    The code example:
+
+
+    ```
+
+    OuterStruct *pMyStruct{}
+
+    OuterStruct *pMyStruct{NULL};
+
+    OuterStruct *pMyStruct{nullptr};
+
+    OuterStruct *pMyStruct{&myStruct};
+
+    ```'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "# Uniform Structure Initialization\n\n```\nstruct OuterStruct\n{\n    int field1;\n\
+    \    struct InnerStruct\n    {\n        int field1;\n        int field2;\n   \
+    \ } field2;\n    struct InnerStruct\n    {\n        int field;\n    } field3;\n\
+    } myStructA {1, {2, 3}, {4}};\nstruct OuterStruct\n{\n    int field1{1};\n   \
+    \ struct InnerStruct\n    {\n        int field1{2};\n        int field2{3};\n\
+    \    } field2;\n    struct InnerStruct\n    {\n        int field{4};\n    } field3;\n\
+    } myStructB;\n```\n\nIt is possible to uniformly initialize the structure outside\
+    \ or provide default field initializers in the structure definition.\n\nThe code\
+    \ example:\n\n```\nstruct OuterStruct\n{\n    int field1;\n    struct InnerStruct\n\
+    \    {\n        int field1;\n        int field2;\n    } field2;\n    struct InnerStruct\n\
+    \    {\n        int field;\n    } field3;\n} myStructA {1, {2, 3}, {4}};\nstruct\
+    \ OuterStruct\n{\n    int field1{1};\n    struct InnerStruct\n    {\n        int\
+    \ field1{2};\n        int field2{3};\n    } field2;\n    struct InnerStruct\n\
+    \    {\n        int field{4};\n    } field3;\n} myStructB;\n```"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "# Static Field Initialization\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_112_0.png)\n\
+    \n```\nstruct MyStruct {\n  int field;\n  inline static unsigned shared_field{123};\n\
+    } myStruct1, myStruct2;\n\n// unsigned MyStruct::shared_field = 123;\n\nmyStruct1.field\
+    \ = 0;\nmyStruct1.shared_field = 123;\nmyStruct2.field = 1;\n```\n\nThe latest\
+    \ C++ standards allow static field initialization inside the structure definition\
+    \ instead of the classic C++ ways of outside initialization (shown in comments).\n\
+    \nThe code example:\n\n```\nstruct MyStruct {\n  int field;\n  inline static unsigned\
+    \ shared_field{123};\n} myStruct1, myStruct2;\n\n// unsigned MyStruct::shared_field\
+    \ = 123;\n\nmyStruct1.field = 0;\nmyStruct1.shared_field = 123;\nmyStruct2.field\
+    \ = 1;\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Macros, Types, and Synonyms
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_113_0.png)
+
+
+    Type names may be long or inconvenient. There are some ways to construct easier
+    type names.'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# Macros
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_114_0.png)
+
+
+    The code example:
+
+
+    ```
+
+    #define TRUE 1
+
+    #define byte_t unsigned char
+
+    #define p_byte_t unsigned char *
+
+    #define p_MyStruct struct MyStruct *
+
+    ```'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# Old Way
+
+
+    ```
+
+    typedef unsigned char byte_t;
+
+    type unsigned char *p_byte_t;
+
+    type unsigned char byte_t,
+
+    *p_byte_t;
+
+    type struct {} MyStruct,
+
+    *p_MyStruct;
+
+    ```
+
+
+    The code example:
+
+
+    ```
+
+    typedef unsigned char byte_t;
+
+    typedef unsigned char *p_byte_t;
+
+    typedef unsigned char byte_t, *p_byte_t;
+
+    typedef struct {} MyStruct, *p_MyStruct;
+
+    ```'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# New Way
+
+
+    ```
+
+    using byte_t = unsigned char;
+
+    using p_byte_t = unsigned char *;
+
+    using MyStruct = struct {};
+
+    ```
+
+
+    The code example:
+
+
+    ```
+
+    using byte_t = unsigned char;
+
+    using p_byte_t = unsigned char *;
+
+    using MyStruct = struct {};
+
+    ```'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# Memory Storage
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_117_0.png)
+
+
+    What memory storage is used to store values ultimately influences program behavior
+    and possible defects.'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# Overview
+
+
+    +   * Global (link)
+
+    * TU static (file)
+
+    * Function static
+
+    * Local (stack)
+
+    * Dynamic (heap)
+
+    * Local-dynamic (stack → heap)
+
+    * In-place (allocator)
+
+    * Polymorphic (allocator)
+
+
+    Here, we show the list of different storage types and talk about them in detail
+    later. We cover the polymorphic allocators in the next edition.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# Thread Stack Frames
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_119_0.png)
+
+
+    When a function is called, a stack frame is allocated in the thread stack memory
+    region to hold local variables'' values.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: 'Local Variable Value Lifecycle
+
+
+    # Local Variable Value Lifecycle
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_120_0.png)
+
+
+    Since the stack frame memory values can be overwritten after the return from the
+    function by subsequent function calls, local variable values have definite values
+    only during the function call where they were initialized.
+
+
+    The code examples corresponding to the memory diagrams.
+
+
+    Before calling the foo function, the memory values below the current stack frame
+    are undefined:
+
+
+    ```
+
+    int *p = foo();
+
+    int i = *p;
+
+    bar();
+
+    int j = *p;
+
+    ```
+
+
+    When we enter the foo function, the corresponding stack frame is created. The
+    function code also initializes the local variable a with 0 value. The function
+    also returns the stack address of that local variable:'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "```\nint *foo()\\{\n    int a = 0;\n    return &a;\n}\n```\n\nIn the caller,\
+    \ we save that value at that address in the i variable. Then we call the bar function:\n\
+    \n```\nint *p = foo();\nint i = *p;\nbar();\nint j = *p;\n```\n\nWhen we enter\
+    \ the bar function, the corresponding stack frame is created. The function code\
+    \ also initializes the local variable a with 1. Coincidentally, the variable a\
+    \ occupies the same stack memory location as the local variable a in the previous\
+    \ foo function call:\n\n```\nvoid bar()\\{\n    int a = 1;\n}\n```\n\nUpon the\
+    \ return from the bar function, we dereference the same p address but get a different\
+    \ value:\n\n```\nint *p = foo();\nint i = *p;\nbar();\nint j = *p;\nassert(i ==\
+    \ j);\n```"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "# Stack Allocation Pitfalls\n\n# # Stack Allocation Pitfalls\n\n```\nfoo(1);\n\
+    void foo(int i) {\n  }\n```\n\n| 2ab1008 | 2ab1008 |\n| --- | --- |\n| ffffffff\
+    \ | ffffffff |\n| 2ab1010 | 2ab1010 |\n| 2ab100c | 2ab100c |\n\n```\nvoid foo(int\
+    \ i) {\n  int a = 0;\n  {\n    int b = 0;\n  }\n  if (i)\n    goto end;\n  int\
+    \ c = 0x78563412;\nend:\nassert(c == 0x78563412);\n```\n\n| 00000000 | 00000000\
+    \ |\n| --- | --- |\n| 00002000 | 00002000 |\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_122_0.png)\n\
+    \nPlease don't forget that stack memory for all function local variables is allocated\
+    \ at the entrance of the function, but individual variables may be initialized\
+    \ at a later time.\n\nThe code example corresponding to the memory diagram:\n\n\
+    # foo(1);\n\nWhen we enter the foo function, the allocated stack frame includes\
+    \ the local variable c, which is initially uninitialized:\n\n```\nvoid foo(int\
+    \ i) {\n  ...\n}\n```\n\nIf the value of the i function parameter is positive,\
+    \ the initialization of the local variable c is skipped, and the assertion is\
+    \ failed:"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "```\nvoid foo(int i)\n{\n    int a = 0;\n    {\n        int b = 0;\n    }\n\
+    \    if (i)\n        goto end;\n    int c = 0x78563412;\nend:\n    assert(c ==\
+    \ 0x78563412);\n}\n```"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# Explicit Local Allocation
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_124_0.png)
+
+
+    +   - alloca
+
+    - May cause stack overflow
+
+
+    It is possible to explicitly allocate memory on the thread stack, for example,
+    for some variable-length array storage. However, be aware of the possible stack
+    overflow.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# Dynamic Allocation (C-style)
+
+
+    ```
+
+    Dynamic Allocation (C-style)
+
+
+    * Persistent across function calls
+
+    * (m|c|re)alloc
+
+    * free
+
+    * Can be replaced
+
+    ```
+
+
+    There are some advantages to a dynamic memory allocation compared to a local stack
+    allocation. The allocated memory and its values persist across function calls.
+    Since allocations are implemented by library calls, they can be replaced with
+    other libraries and custom code that provides debugging capabilities for tracking
+    memory allocations and deallocations, as well as other checks.'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Dynamic Allocation (C++)
+
+
+    # Dynamic Allocation (C++)
+
+    - Persistent across function calls
+
+    - Global operators
+
+    - Structure-specific operators
+
+    - Can be replaced
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_126_0.png)
+
+
+    C++ has its own implementation of dynamic memory that is often implemented by
+    underlying C-style calls and Linux API. However, these high-level allocation facilities
+    are more flexible and customizable to the needs of structure designers. It provides
+    replaceable operators for global allocations for chunks of memory and structure-specific
+    allocations.'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# Memory Operators
+
+
+    ```
+
+    operator new / operator delete
+
+
+    operator new[] / operator delete[]
+
+
+    operator new throws std::bad_alloc
+
+    exception (do not check for nullptr)
+
+    unless told not to via std::nothrow value
+
+    ```
+
+
+    When freeing globally allocated memory, always pay attention to whether it was
+    allocated in the array form to avoid memory leaks, crashes, and other undefined
+    behavior. Also, never check the allocated memory address for nullptr as done in
+    the C-style allocations: C++ allocation operators throw an exception instead.'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# Memory Expressions
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_128_0.png)
+
+
+    Memory allocation expressions are used for allocating memory for values, structures,
+    and arrays. Internally, they may use memory operators. The same advice for non-array/array
+    deallocation and checking return addresses is applicable here.'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: "# Local Pointers (Manual)\n\n# # Local Pointers (Manual)\n\n```\nfoo();\n\n\
+    void foo() {\n    int *p = new int;\n}\nvoid foo() {\n    int *p = new int;\n\
+    \    delete p;\n}\n```\n\n| | | |\n|---|---|---|\n| 2ab1008 | 2ab1008 | 2ab1008\
+    \ |\n| fffffff | fffffff | fffffff |\n| 2ab1010 | 2ab1010 | 78004000 |\n| 2ab100c\
+    \ | 2ab100c | 2ab100c |\n| 00000000 | 00000000 | 00000000 |\n| 00002000 | 00002000\
+    \ | 00002000 |\n\nWhen allocating memory dynamically and assigning the memory\
+    \ address to a local variable, we must not forget to free/delete memory before\
+    \ returning from the function to avoid a memory leak.\n\nThe code example corresponding\
+    \ to the memory diagram:\n\n# foo();\n\nWhen we enter the foo function, the allocated\
+    \ stack frame includes the local variables:\n\n```\nvoid foo() {\n...\n}\n```\n\
+    \nThe local variable p contains the address of the allocated memory for an integer\
+    \ value:"
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: "```\nvoid foo()\n{\n    int *p = new int;\n  ...\n}\n```\n\nHowever, before\
+    \ exiting the function, we must free the memory; otherwise, there is a memory\
+    \ leak. Please note that neither delete nor free change the value of the variable\
+    \ p. It becomes a dangling pointer but it is ok because it goes out of scope here\
+    \ and is not reused for dereferencing unless saved somewhere.\n\n```\nvoid foo()\n\
+    {\n    int *p = new int;\n  ...\n  delete p;\n}\n```"
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# In-place Allocation
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_131_0.png)
+
+
+    ```
+
+    char buf[sizeof(int)];
+
+    int *pi = new(buf) int;
+
+    *pi = 1;
+
+
+    char *pbuf = new char[sizeof(int)];
+
+    pi = new(pbuf) int;
+
+    *pi = 2;
+
+    delete[] pbuf;
+
+    ```
+
+
+    If we want to reuse existing memory buffers, we can use placement new.
+
+
+    The code examples corresponding to the memory diagrams:
+
+
+    ```
+
+    char buf[sizeof(int)];
+
+    int *pi = new(buf) int;
+
+    *pi = 1;
+
+
+    char *pbuf = new char[sizeof(int)];
+
+    pi = new(pbuf) int;
+
+    *pi = 2;
+
+    delete[] pbuf;
+
+    ```'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# Source Code Organisation
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_132_0.png)
+
+
+    We now discuss C and C++ source code organization.'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Logical Layer (Translation Units)
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_133_0.png)
+
+
+    From a compiler perspective, it works with a translation unit as a whole and converts
+    the source code of a translation unit to an object file. Several object files
+    are combined by a linker into an executable file.'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# Physical Layer (Source Files)
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_134_0.png)
+
+
+    Although one physical source code file corresponds to one translation unit, it
+    is passed through a preprocessor, which, among other things, looks for special
+    directives to include other files, and those files may also contain directives
+    to include other files. You can also see, as in the case of the common.h file,
+    by transitivity of inclusion, that that same file may be included many times.'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# Inter-TU Sharing
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_135_0.png)
+
+
+    Variables in different translation units having the same name may conflict during
+    the linkage phase.
+
+
+    The code examples corresponding to the diagrams:
+
+
+    ```
+
+    // TU A
+
+    int counter;
+
+    ```
+
+
+    ```
+
+    // TU B
+
+    extern int counter;
+
+    int counter;
+
+    ```'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# Classic Static TU Isolation
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_136_0.png)
+
+
+    To avoid name conflicts during linkage, C and classic C++ suggest using the static
+    specifier.
+
+
+    The code examples corresponding to the diagrams:
+
+
+    ```
+
+    // TU A
+
+    static int counter;
+
+    ```
+
+
+    ```
+
+    // TU B
+
+    extern int counter;
+
+    int counter;
+
+    ```'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: "# Namespace TU Isolation\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_137_0.png)\n\
+    \nModern C++ suggests using namespaces instead.\n\nThe code examples corresponding\
+    \ to the diagrams:\n\n```\n// TU A\nnamespace {\n  int counter;\n}\n```\n\n```\n\
+    // TU B\nextern int counter;\nint counter;\n```"
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# Declaration and Definition
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_138_0.png)
+
+
+    In C and C++, when reasoning about compilation, it is useful to consider the distinction
+    between declaration and definition. The rule of thumb is that the latter usually
+    describes the memory layout. Please also note that a definition is also a declaration.'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '# TU Definition Conflicts
+
+
+    # TU Definition Conflicts
+
+
+    ```
+
+    Example:
+
+    nstruct S { }; // via thirdparty.h
+
+    //...
+
+    struct S { };
+
+    //...
+
+    S s;
+
+    ```
+
+
+    Multiple declarations of the same entity are allowed, but only one definition
+    is allowed, the essence of ODR, One Definition Rule.
+
+
+    The code example:
+
+
+    ```
+
+    struct S { }; // via thirdparty.h
+
+    //...
+
+    struct S { };
+
+    //...
+
+    S s;
+
+    ```'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: 'Fine-grained TU Scope Isolation
+
+
+    # Fine-grained TU Scope Isolation
+
+
+    +   - Named namespaces
+
+    - Example:
+
+
+    ```
+
+    struct S { }; // via thirdparty.h
+
+    namespace mycode { struct S { }; };
+
+    //...
+
+    mycode::S s;
+
+    using namespace mycode;
+
+    s s2; // ambiguous
+
+    ```
+
+
+    Named namespaces allow fine-grained scope isolation.
+
+
+    The code example:
+
+
+    ```
+
+    struct S { }; // via thirdparty.h
+
+    namespace mycode { struct S { }; };
+
+    //...
+
+    mycode::S s;
+
+    using namespace mycode;
+
+    s s2; // ambiguous
+
+    ```'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# Conceptual Layer (Design)
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_141_0.png)
+
+
+    In the design layer, we may want to separate implementation details.'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: "# Incomplete Types\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_142_0.png)\n\
+    \n```\nstruct MyStruct; // declaration\n\nstruct MyStruct *pMyStruct; // (declaration\
+    \ and) definition\n\n// Pimpl (Pointer to Implementation) idiom\n\nstruct Instrument\
+    \ // (declaration and) definition\n{\n    int getMeasurement(); // declaration\n\
+    \    private:\n    struct InstrumentImpl; // declaration\n    struct InstrumentImpl\
+    \ *pImpl; // definition\n};\n```\n\nSuch separation is achieved via incomplete\
+    \ types and the so-called Pimpl (Pointer to Implementation) idiom:\n\n```\nstruct\
+    \ MyStruct; // declaration\nstruct MyStruct *pMyStruct; // (declaration and) definition\n\
+    // Pimpl (Pointer to Implementation) idiom\nstruct Instrument // (declaration\
+    \ and) definition\n{\n    int getMeasurement(); // declaration\n    private:\n\
+    \    struct InstrumentImpl; // declaration\n    struct InstrumentImpl *pImpl;\
+    \ // definition\n};\n```"
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '# References
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_143_0.png)
+
+
+    Now, a slide for C++ references. We plan to extend this section in the second
+    edition.'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '# Type& vs. Type*
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_144_0.png)
+
+
+    From the memory perspective, references and pointers are the same thing. The only
+    difference is that you cannot have a dangling reference; it must be initialized.'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '![](img/c36cc1b69ac7baa75db5d13135bb9d30_145_0.png)
+
+
+    Let''s now briefly discuss various categories of values. These are what are stored
+    in memory. A pointer value is also a value that is interpreted as a memory address
+    pointing to some other value elsewhere.'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# Value Categories
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_146_0.png)
+
+
+    When reading C++ documentation, you frequently see the so-called lvalues and rvalues
+    mentioned. Crudely, you can think about them as left and right values in expressions,
+    where the right value can be temporary, and the left value has to be backed up
+    by some memory.
+
+
+    # Classification
+
+
+    https://en.cppreference.com/w/cpp/language/value_category'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# Constant Values
+
+
+    # Constant Values
+
+
+    ```
+
+    const int cv{1}; int v;
+
+    const int *pc;
+
+    int * const cp&v;
+
+    const int * const cpc{cp};
+
+    const int& rc{v}; int& r{v};
+
+    ```
+
+
+    The values can also be constant, facilitating functional programming and code
+    security. Please note that there can be pointers and references to constant values,
+    constant pointers to mutable variables, and both. The way to read such declarations
+    is from right to left.
+
+
+    The code examples:
+
+
+    ```
+
+    const int cv{1}; int v;
+
+    const int *pc;
+
+    int * const cp&v;
+
+    const int * const cpc{cp};
+
+    const int& rc{v}; int& r{v};
+
+    ```'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# Constant Expressions
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_148_0.png)
+
+
+    There are different ways to define constants for later symbolic use. The C and
+    classic C++ way uses preprocessor (legacy) and const. The modern way is to use
+    constexpr, which is more flexible.
+
+
+    Code examples:
+
+
+    ```
+
+    #define myConst 1
+
+    const int myConst = 1;
+
+    constexpr int myConst = 1;
+
+    ```'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: '# Functions
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_149_0.png)
+
+
+    This section is the largest in the course. We may split it up in the second edition
+    once it grows more.'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '# Pointers to Functions
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_150_0.png)
+
+
+    Functions are code bytes and, therefore, occupy some memory locations with their
+    start addresses.
+
+
+    The code examples corresponding to the memory diagram:
+
+
+    ```
+
+    int foo (int i)
+
+    {
+
+    // ...
+
+    return 0;
+
+    }
+
+    ```
+
+
+    It is possible to have pointers and references to functions:
+
+
+    ```
+
+    int (*pf) (int) {foo};
+
+    pf = &foo;
+
+    int (&rf) (int) {*pf};
+
+    ```'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: 'When having a pointer or reference to a function, it is possible to call the
+    function with or without using the dereferencing syntax (*):
+
+
+    ```
+
+    pf(10);
+
+    (*pf)(10);
+
+    rf(10);
+
+    ```'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: '# Function Pointer Types
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_152_0.png)
+
+
+    Function pointer type declarations can be done using the classic typedef syntax
+    or via the more modern using type alias.
+
+
+    The code examples:
+
+
+    ```
+
+    typedef int (*PF)(int);
+
+    using PF = int (*)(int);
+
+    PF func{foo}; func(10);
+
+    ```'
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# Reading Declarations
+
+
+    # Reading Declarations
+
+
+    +   - Right → Left, <sub>right</sub> or (<sub>right</sub>) → Right
+
+
+    +   - Examples:
+
+
+    ```
+
+    const int* const* arr[10];
+
+    ```
+
+
+    ```
+
+    int (*difficult)(int (*)(PF), int), int)(int);
+
+    using DF = PF (*PF, int);
+
+    DF difficult2 {difficult};
+
+    ```
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_153_0.png)
+
+
+    It is worth knowing the rules of reading declarations since function pointer types
+    can be quite complicated. The first example reads as an array of 10 elements,
+    with each element a pointer to constant pointers to constant integers. The next
+    example is a pointer to a function that accepts a pointer to a function that accepts
+    an integer and returns an integer, and accepts another integer, and returns a
+    pointer to a function that accepts an integer and returns an integer. It can be
+    simplified by using the common subtype PF. We can verify the compatibility of
+    the two descriptions by initialization. GPT-4 is very good at deciphering such
+    types.
+
+
+    ```
+
+    const int* const* arr[10];
+
+    ```
+
+
+    ```
+
+    int (*difficult)(int (*)(int), int))(int);
+
+    using DF = PF (*PF, int);
+
+    DF difficult2 {difficult};
+
+    ```'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: "# Structure Function Fields\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_154_0.png)\n\
+    \nStructures may contain fields that are pointers to functions: the obvious way\
+    \ to implement OOP in C.\n\nThe code example:\n\n```\nstruct {\n    int field;\n\
+    \    PF pFunc;\n} myStruct {0, foo};\n\nmyStruct.pFunc(0);\n```"
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: "# Structure Methods\n\n```\nstruct MyStruct\n{\n    int field;\n    PF pFunc;\n\
+    \    int method (int i);\n} myStruct{0, foo};\n\nint MyStruct::method(int i) {\
+    \ return i; }\n\nmyStruct.pFunc(0);\nmyStruct.method(0);\n```\n\nC++ introduced\
+    \ structure or class methods. They can be defined either inside the structure\
+    \ definition (next slide) or outside with the structure name qualification.\n\n\
+    The code example:\n\n```\nstruct MyStruct\n{\n    int field;\n    PF pFunc;\n\
+    \    int method (int i);\n} myStruct{0, foo};\n\nint MyStruct::method(int i) {\
+    \ return i; }\n\nmyStruct pFunc(0);\nmyStruct.method(0);\n```"
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: "# Structure Methods (Inlined)\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_156_0.png)\n\
+    \nThis is an alternative way to define short functions, although it exposes users\
+    \ to implementation details.\n\nThe code example:\n\n```\nstruct MyStruct {\n\
+    \    int field;\n    PF pFunc;\n    int method (int i) { return i; }\n} myStruct\
+    \ {0, foo};\n\nmyStruct pFunc(0);\nmyStruct.method(0);\n```"
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: "# Structure Methods (Inheritance)\n\n```\nstruct Base\n{\n    int method (int\
+    \ i) { return i; }\n};\n\nstruct Derived : Base\n{\n    int method (int i) { return\
+    \ ++i; }\n} myDerived;\n\nmyDerived.method(0);\nmyDerived.Base::method(0);\n\n\
+    Base *pMyBase = &myDerived;\npMyBase->method(0);\n```\n\nIn the case of inheritance,\
+    \ like with fields, the derived structure methods hides methods with the same\
+    \ name in the base type unless explicit base type name qualification is used.\
+    \ However, when we have a pointer to a base type, then the base type method is\
+    \ called even if the actual object belongs to the derived type:\n\n```\nstruct\
+    \ Base\n{\n    int method (int i) { return i; }\n};\n\nstruct Derived : Base\n\
+    {\n    int method (int i) { return ++i; }\n} myDerived;\n\nmyDerived.method(0);\n\
+    myDerived.Base::method(0);\n```"
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '```
+
+    Base *pMyBase = &myDerived;
+
+    pMyBase->method(0);
+
+    ```'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: "# Structure Virtual Methods\n\n```\nstruct Base\n{\n    int method (int i)\
+    \ { return i; }\n    virtual int vmethod (int i) { return i; }\n};\nstruct Derived\
+    \ : Base\n{\n    int method (int i) { return ++i; }\n    virtual int vmethod (int\
+    \ i) override { return ++i; }\n} myDerived;\n\nBase *pMyBase = &MyDerived;\npMyBase->method(0);\n\
+    pMyBase->vmethod(0);\npMyBase->Base::vmethod(0);\n```\n\nThis previous slide problem\
+    \ is solved by introducing type-independent call virtual methods. In this case,\
+    \ the method of derived type is called when we have a pointer of a base type to\
+    \ it. The override specify guarantees that we override the correct base method\
+    \ instead of introducing the new one by mistake:\n\n```\nstruct Base\n{\n    int\
+    \ method (int i) { return i; }\n    virtual int vmethod (int i) { return i; }\n\
+    };\nstruct Derived : Base\n{\n    int method (int i) { return ++i; }\n    virtual\
+    \ int vmethod (int i) override { return ++i; }\n} myDerived;\n\nBase *pMyBase\
+    \ = &MyDerived;\npMyBase->method(0);\n```"
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '```
+
+    pMyBase->vmethod(0);
+
+    pMyBase->Base::vmethod(0);
+
+    ```'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: "# Structure Pure Virtual Methods\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_161_0.png)\n\
+    \nIf we want to make sure we never define objects of the base type and make sure\
+    \ we override all virtual methods in the derived type, we can make the virtual\
+    \ functions pure by using 0.\n\nThe code example:\n\n```\nstruct Base\n{\n   \
+    \ int method (int i) { return i; }\n    virtual int vmethod (int i) = 0;\n}\n\
+    struct Derived : Base\n{\n    int method (int i) { return ++i; }\n    virtual\
+    \ int vmethod (int i) override { return ++i; }\n} myDerived;\nBase *pMyBase =\
+    \ &myDerived;\npMyBase->vmethod(0);\n```"
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: "# Structure as Interface\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_162_0.png)\n\
+    \nPure virtual functions allow specifying abstract interfaces the derived types\
+    \ have to implement.\n\nThe code example:\n\n```\nstruct Interface {\n    virtual\
+    \ int vmethod1 (int i) = 0;\n    virtual int vmethod2 (int i) = 0;\n}\nstruct\
+    \ Implementer : Interface {\n    virtual int vmethod1 (int i) override { return\
+    \ ++i; }\n    virtual int vmethod2 (int i) override { return ++++; }\n} myObject;\n\
+    ```\n\nInterface *pIFace = &myObject;\npIFace->vmethod1(0);"
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: "# Function Structure\n\n```\nstruct MyFunction\n{\n    int field{1};\n    int\
+    \ operator() { return field; }\n} myFunction;\n\nmyFunction();\n```\n\nFunctions\
+    \ may also encapsulate state. The best way to do it is via structures that implement\
+    \ function call operators.\n\nThe code example:\n\n```\nstruct MyFunction\n{\n\
+    \    int field{1};\n    int operator() { return field; }\n} myFunction;\n```\n\
+    \nmyFunction();"
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: "# Structure Constructors\n\n```\nStructure Constructors\n\nstruct MyFunction\n\
+    {\n    MyFunction(): field{1} {}\n    MyFunction(int _field): field{field} {}\n\
+    \    int field;\n    int operator() { return field; }\n} myFunction, myFunction2(2);\n\
+    \nmyFunction();\nmyFunction2();\n```\n\nNow, we come to traditional OOP topics\
+    \ in classic C++. Constructors are methods with or without arguments for structure\
+    \ initialization with custom initialization logic inside, for example, acquiring\
+    \ required resources.\n\nThe code example:\n\n```\nstruct MyFunction\n{\n    MyFunction():\
+    \ field{1} {}\n    MyFunction(int _field): field{field} {}\n    int field;\n \
+    \   int operator() { return field; }\n} myFunction, myFunction2(2);\n\nmyFunction();\n\
+    myFunction2();\n```"
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: "# Structure Copy Constructor\n\n```\nstruct MyFunction\n{\n    MyFunction():\
+    \ field{1} { }\n    MyFunction(int _field): field{_field} { }\n    MyFunction(const\
+    \ MyFunction& src):\n        field(src.field) { ++field; }\n    int field;\n \
+    \   int operator() { return field; }\n} myFunction;\n```\n\nMyFunction myFunction2(myFunction);\n\
+    MyFunction myFunction3 = myFunction;\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_165_0.png)\n\
+    \nWhen we copy objects but need complex copying logic or nontrivial memory management\
+    \ copy constructor methods are quite handy. We pass the source object reference\
+    \ as const if we don't plan to modify it.\n\nThe code code example:\n\n```\nstruct\
+    \ MyFunction\n{\n    MyFunction(): field{1} { }\n    MyFunction(int _field): field{_field}\
+    \ { }\n    MyFunction(const MyFunction& src):\n        field(src.field) { ++field;\
+    \ }\n    int field;\n    int operator() { return field; }\n} myFunction;\n```\n\
+    \nMyFunction myFunction2(myFunction);\nMyFunction myFunction3 = myFunction;"
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: "# Structure Copy Assignment\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_166_0.png)\n\
+    \nIn case of nontrivial reassignments, we can implement an assignment operator.\
+    \ We, however, must be careful not to copy to itself (this), and we return the\
+    \ non-const reference to itself (this) to allow chained copies.\n\n```\nstruct\
+    \ MyFunction\n{\n    MyFunction(): field{1} { }\n    MyFunction(int _field): field{_field}\
+    \ { }\n    MyFunction(const MyFunction& src):\n        field(src.field) ++field;\
+    \ }\n    MyFunction& operator=(const MyFunction& src)\n        if (this != &src)\
+    \ { +(field = src.field); }\n        return *this;\n\n    int field;\n    int\
+    \ operator() { return field; }\n} myFunction;\n\nMyFunction myFunction2;\nmyFunction2\
+    \ = myFunction;\n```"
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: "# Structure Destructor\n\n```\nstruct MyFunction\n{\n    MyFunction(): field{1}\
+    \ { }\n    ~MyFunction() { /* close resources */ }\n    MyFunction(int _field):\
+    \ field_{_field} { }\n    MyFunction(const MyFunction& src):\n        field(src.field)\
+    \ { ++field; }\n    MyFunction& operator=(const MyFunction& src)\n        if (this\
+    \ != &src) { ++field = src.field; }\n        return *this;\n    }\n\n    int field;\n\
+    \    int operator() { return field; }\n};\n\n{ MyFunction myFunction; }\n```\n\
+    \nWhat if we want some complex logic, for example, releasing resources when the\
+    \ local object goes out of scope, or we delete it? Destructor is a method that\
+    \ is called automatically in such a case.\n\n```\nstruct MyFunction\n{\n    MyFunction():\
+    \ field{1} { }\n    ~MyFunction() { /* close resources */ }\n    MyFunction(int\
+    \ _field): field_{_field} { }\n    MyFunction(const MyFunction& src):\n      \
+    \  field(src.field) { ++field; }\n    MyFunction& operator=(const MyFunction&\
+    \ src)\n        if (this != &src) { ++field = src.field; }\n        return *this;\n\
+    \    }\n\n    int field;\n    int operator() { return field; }\n};\n\n{ MyFunction\
+    \ myFunction; }\n```"
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: "# Structure Destructor Hierarchy\n\n```\nStructure Destructor Hierarchy\nstruct\
+    \ IFunction {\n    ~IFunction() {}\n    virtual int operator()() = 0;\n};\n\n\
+    struct MyFunction : IFunction {\n    ~MyFunction() { /* close resources */ }\n\
+    \    int field;\n    int operator()() override { return field; }\n};\n\nFunction\
+    \ *pIFunction = new MyFunction;\npIFunction->operator()();\n(*pIFunction)();\n\
+    delete pIFunction; // ~IFunction()\n```\n\nConceptually, destructors are just\
+    \ like a normal method, so the wrong one may be called when we have a pointer\
+    \ of base type to an object of a derived type.\n\n```\nstruct IFunction {\n  \
+    \  ~IFunction() {}\n    virtual int operator()() = 0;\n};\n\nstruct MyFunction\
+    \ : IFunction {\n    ~MyFunction() { /* close resources */ }\n    int field;\n\
+    \    int operator()() override { return field; }\n};\n\nIFunction *pIFunction\
+    \ = new MyFunction;\npIFunction->operator()();\n(*pIFunction)();\ndelete pIFunction;\
+    \ // ~IFunction()\n```"
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: "# Structure Virtual Destructor\n\n# Structure Virtual Destructor\n\n```\nstruct\
+    \ IFunction {\n    virtual ~IFunction() { }\n    virtual int operator()() = 0;\n\
+    };\n\nstruct MyFunction : IFunction {\n    ~MyFunction() { /* close resources\
+    \ */ }\n    int field;\n    int operator()() override { return field; }\n};\n\n\
+    IFunction *pIFunction = new MyFunction;\npIFunction->operator();\n(*pIFunction);\\\
+    ndelete pIFunction; // ~MyFunction()\n```\n\nTo make sure that the correct destructors\
+    \ are called, it is recommended to make them virtual too:\n\n```\nstruct IFunction\
+    \ {\n    virtual ~IFunction() {}\n    virtual int operator()() = 0;\n};\n\nstruct\
+    \ MyFunction : IFunction {\n    ~MyFunction() override { /* close resources */\
+    \ }\n    int field;\n    int operator()() override { return field; }\n};\n\nIFunction\
+    \ *pIFunction = new MyFunction;\npIFunction->operator();\n(*pIFunction);\nndelete\
+    \ pIFunction; // ~MyFunction()\n```"
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: "# Destructor as a Method\n\n```\nstruct Resource\n{\n    Resource() { /* acquire\
+    \ */ }\n    ~Resource() { /* release */ }\nprivate:\n    int m_hData;\n};\n\n\
+    char buf[sizeof(Resource)];\nResource *pResource = new(buf) Resource();\n// ...\n\
+    pResource->~Resource();\n```\n\nSince a destructor is also a method, it is possible\
+    \ to call it directly in cases where we should not use standard delete methods,\
+    \ for example, when objects are allocated using placement new:\n\n```\nstruct\
+    \ Resource\n{\n    Resource() { /* acquire */ }\n    ~Resource() { /* release\
+    \ */ }\nprivate:\n    int m_hData;\n};\n\nchar buf[sizeof(Resource)];\nResource\
+    \ *pResource = new(buf) Resource();\n// ...\npResource->~Resource();\n```"
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: "# Conversion Operators\n\n```\nstruct A\n{\n    unsigned int u1;\n    unsigned\
+    \ int u2;\n};\nstruct B\n{\n    unsigned long ul;\n    operator A()\n    {\n \
+    \       return A\n        { (unsigned int)(ul & 0xFFFFFFFF),\n            (unsigned\
+    \ int)(ul >> 32)\n    }\n}\nA a = b;\n```\n\nSources for copy constructors and\
+    \ copy assignment operators are of the same type. What if we want to assign a\
+    \ different structure type? We can define custom conversion operators (it is also\
+    \ possible to use a \"conversion\" constructor):\n\n```\nstruct A\n{\n    unsigned\
+    \ int u1;\n    unsigned int u2;\n};\nstruct B\n{\n    unsigned long ul;\n    operator\
+    \ A()\n    {\n        return A\n        { (unsigned int)(ul & 0xFFFFFFFF),\n \
+    \           (unsigned int)(ul >> 32)\n    }\n};\n```"
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: '```
+
+    }
+
+    } b;
+
+    A a = b;
+
+    ```'
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: '# Parameters by Value
+
+
+    # Parameters by Value
+
+
+    +   - Original value doesn''t change
+
+    - Inefficient/efficient (basic types)
+
+    - Slicing (passing derived as base)
+
+    - Copy constructor/destructor
+
+
+    ```
+
+    void func(MyStruct ms)
+
+    { ms.field = 0; }
+
+    func(MyStruct);
+
+    func(int i)
+
+    { i = 0; }
+
+    func(1);
+
+    ```
+
+
+    When we pass parameters by values, any modifications inside functions are lost
+    once we return. Passing basic types by value is efficient, but passing structures
+    are not unless they are very simple: various functions may be called, for example,
+    copy constructors and destructors unless optimized by a compiler. There is also
+    a possibility of slicing when inheritance is used.
+
+
+    The code examples:
+
+
+    | void func(MyStruct ms)
+
+    { ms.field = 0; }
+
+    func(MyStruct); | void func(int i)
+
+    { i = 0; }
+
+    func(1); |'
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: "# Parameters by Pointer/Reference\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_174_0.png)\n\
+    \n+   - Original value may change\n- Efficient/inefficient (basic types)\n- Pointer/reference\
+    \ is passed by value\n- Pointer by pointer (by pointer)\n\n```\nvoid func(MyStruct\
+    \ *pms) \n{ pms->field = 0; }\nfunc(&MyStruct);\nvoid func(int &ri) \n{ ri = 0;\
+    \ }\nint i{0};\nfunc(i);\n```\n\nIf we want efficiency for structures and also\
+    \ preserve changes to original values, we need to pass by by reference. Again,\
+    \ this may be inefficient for basic types.\n\nThe code examples:\n\n```\nvoid\
+    \ func(MyStruct *pms) \n{ pms->field = 0; }\nfunc(&MyStruct);\nvoid func(int &ri)\
+    \ \n{ ri = 0; }\nint i{0};\nfunc(i);\n```"
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: "# Parameters by Ptr/Ref to Const\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_175_0.png)\n\
+    \nIf we only want efficiency for structures, we need to pass by reference to const.\
+    \ In such a case, we also cannot modify the original values.\n\nThe code examples:\n\
+    \n```\nvoid func(const MyStruct *pms) \n{ pms->field = 0; }\n\nvoid func(const\
+    \ int& ri) \n{ ri = 0; }\n\nfunc(&MyStruct);\nfunc(int(0));\n```"
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: '# Possible Mistake
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_176_0.png)
+
+
+    If you come from languages that use implicit references, you may omit & by mistake:
+
+
+    ```
+
+    void func(const Struct ms)
+
+    { ms.field = 0; }
+
+    func(myStruct);
+
+
+    void func(const Struct& ms)
+
+    { ms.field = 0; }
+
+    func(myStruct);
+
+    ```'
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: '# Function Overloading
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_177_0.png)
+
+
+    Function overloading allows reusing the same function names for functions with
+    different numbers and types of parameters.
+
+
+    The code example:
+
+
+    ```
+
+    int funco(int i);
+
+    int funco(int i, int j);
+
+    int funco(long &rl);
+
+    ```'
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: "# Immutable Objects\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_178_0.png)\n\
+    \nIf you have const objects, you are only allowed to call methods that have the\
+    \ const specifier in their definition.\n\nThe code example:\n\n```\nstruct MyStruct\
+    \ {\n  MyStruct(int _field) : field{_field} { }\n  int get() const { return field;\
+    \ }\n  void set(int newval) { field = newval; }\n  private:\n  int field;\n} myStruct(1);\n\
+    const MyStruct& myCStruct{myStruct};\nmyCStruct.get();\nmyCStruct.set(2);\n```"
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: "# Static Structure Functions\n\n```\n// multithreading issues are ignored here\n\
+    struct MyStruct\n{\n    MyStruct(int _field) : field{field} { ++count};\n    int\
+    \ get() const { return field; }\n    void set(int newval) { field = newval; }\n\
+    \    static auto get_count()\n{\n        field++;\n        return count;\n   \
+    \ }\nprivate:\n    int field;\n    inline static unsigned count{0};\n};\nmyStruct1(1),\
+    \ myStruct2(2);\nMyStruct::get_count();\nassert(myStruct1.get_count() == myStruct2.get_count());\n\
+    ```\n\nStatic structure functions are only allowed to access static structure\
+    \ fields shared among objects:\n\n```\n// multithreading issues are ignored here\n\
+    struct MyStruct\n{\n    MyStruct(int _field) : field{field} { ++count};\n    int\
+    \ get() const { return field; }\n    void set(int newval) { field = newval; }\n\
+    \    static auto get_count()\n{\n        field++;\n        return count;\n   \
+    \ }\nprivate:\n    int field;\n    inline static unsigned count{0};\n}myStruct1(1),\
+    \ myStruct2(2);\nMyStruct::get_count();\nassert(myStruct1.get_count() == myStruct2.get_count());\n\
+    ```"
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: 'Lambdas
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_180_0.png)
+
+
+    Before discussing lambdas introduced in C++11 and their internals, we take a brief
+    tour of basic x64 and A64 disassembly.'
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: '# x64 CPU Registers
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_181_0.png)
+
+
+    There are familiar 32-bit CPU register names, such as EAX, that are extended to
+    64-bit names, such as RAX. Most of them are traditionally specialized, such as
+    ALU, counter, and memory copy registers. Although, now they all can be used as
+    general-purpose registers. There is, of course, a stack pointer, RSP, and, additionally,
+    a frame pointer, RBP, which is used to address local variables and saved parameters.
+    In some compiler code generation implementations, RBP is also used as a general-purpose
+    register, with RSP taking the role of a frame pointer. An instruction pointer
+    RIP is saved in the stack memory region with every function call, then restored
+    on return from the called function. In addition, the x64 platform features another
+    eight general-purpose registers, from R8 to R15.'
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: '# x64 Instructions and Registers
+
+
+    # x64 Instructions and Registers
+
+
+    +   - Opcode SRC, DST # default AT&T flavour
+
+
+    +   - Examples:
+
+
+    ```
+
+    mov  $0x10, %rax      # 0x10 -> RAX
+
+    mov  %rsp, %rbp      # RSP -> RBP
+
+    add  $0x10, %r10      # R10 + 0x10 -> R10
+
+    imimul %ecx, %edx      # ECX * EDX -> EDX
+
+    callq %rdx           # RDX already contains
+
+    # the address of func (&func)
+
+    # PUSH RIP; &func -> RIP
+
+    # RSP-0x30 -> RSP
+
+    # make room for local variables
+
+    sub %rsp
+
+    ```
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_182_0.png)
+
+
+    This slide shows a few examples of CPU instructions involving operations with
+    registers, such as moving a value and doing arithmetic. The direction of operands
+    is opposite to the Intel x64 disassembly flavor if you are accustomed to WinDbg
+    on Windows. It is possible to use the Intel disassembly flavor in GDB, but we
+    opted for the default AT&T flavor in line with our Accelerated Linux Core Dump
+    Analysis and Accelerated Linux Disassembly, Reconstruction, Reversing books.'
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: '# x64 Memory and Stack Addressing
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_183_0.png)
+
+
+    Before we look at operations with memory, let''s look at a graphical representation
+    of memory addressing. A thread stack is just any other memory region, so instead
+    of RSP and RBP, any other register can be used. Please note that the stack grows
+    towards lower addresses, so to access the previously pushed values, you need to
+    use positive offsets from RSP.'
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: '# x64 Memory Load Instructions
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_184_0.png)
+
+
+    Constants are encoded in instructions, but if we need arbitrary values, we must
+    get them from memory. Round brackets show memory access relative to an address
+    stored in some register.'
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: "# x64 Memory Store Instructions\n\n# x64 Memory Store Instructions\n\n+   -\
+    \ Opcode SRC, Offset(DST)\n\n+   - Opcode SRC|DST\n\n+   - Examples:\n\n```\n\
+    mov     %rcx, -0x20(%rbp)  # RCX -> value at address RBP-0x20\naddl    $1, (%rax)\
+    \          # 1 + 32-bit value at address RAX ->\n                            \
+    \   # value at address RAX\npush    %rsi               # RSP - 8 -> RSP\n    \
+    \                           # RSI -> value at address RSP\ninc     (%rcx)    \
+    \          # 1 + value at address RCX ->\n                               # value\
+    \ at address RCX\n```\n\n© 2023 Software Diagnostics Services\n\nStoring is similar\
+    \ to loading."
+  merge: -1
+  pgno: 185
+- img_proc: true
+  md: '186
+
+
+    # x64 Flow Instructions
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_186_0.png)
+
+
+    Goto (an unconditional jump) is implemented via the JMP instruction. Function
+    calls are implemented via CALL instruction. For conditional branches, look at
+    the official Intel documentation.'
+  merge: -1
+  pgno: 186
+- img_proc: true
+  md: '# x64 Function Parameters
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_187_0.png)
+
+
+    On the x64 Linux platform, the first six C and C++ function parameters from left
+    to right are moved to CPU registers, and the rest are passed via stack locations.'
+  merge: -1
+  pgno: 187
+- img_proc: true
+  md: '# x64 Struct Function Parameters
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_188_0.png)
+
+
+    When an object struct nonstatic member function is called, the first parameter
+    is implicit and, on the x64 Linux platform, is passed via **RDI**. It is an object
+    address to help methods differentiate between objects of the same structure type
+    and reference correct fields'' memory. The rest of the parameters are passed as
+    usual.'
+  merge: -1
+  pgno: 188
+- img_proc: true
+  md: '# A64 CPU Registers
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_189_0.png)
+
+
+    There are 31 general registers from X0 and X30, with some delegated to specific
+    tasks such as intra-procedure calls (X16, XIP0, and X17, XIP1), addressing stack
+    frames (Frame Pointer, FP, X29) and return addresses, the so-called Link Register
+    (LR, X30). When you call a function, the return address of a caller is saved in
+    LR, not as in Intel/AMD x64. The return instruction in a callee uses the address
+    in LR to assign it to PC and resume execution. But if a callee calls other functions,
+    the current LR needs to be manually saved somewhere, usually on the stack. There''s
+    Stack Pointer, SP, of course. To get zero values, there''s the so-called Zero
+    Register, XZR. All X registers are 64-bit, and 32-bit lower parts are addressed
+    via the W prefix. Next, we briefly look at some aspects related to our exercises.'
+  merge: -1
+  pgno: 189
+- img_proc: true
+  md: "# A64 Instructions and Registers\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_190_0.png)\n\
+    \n+   * Opcode DST, SRC, SRC2\n\n+   * Examples:\n```assembly\nmov  x0, #16  \
+    \        // X0 <- 16 (0x10)\nmov  x29, sp         // X29 <- SP\nadd  x1, x2, #16\
+    \     // X1 <- X2+16 (0x10)\nmul  x1, x2, x3      // X1 <- X2*X3\nblr x8     \
+    \         // X8 already contains\n                     // the address of func\
+    \ (&func)\n                     // LR <- PC+4; PC &func\n                    \
+    \ // SP <- SP-48 (-0x30)\nsub  sp, sp, #48     // make room for local variables\n\
+    ```\n\nThis slide shows a few examples of CPU instructions that involve operations\
+    \ with registers, for example, moving a value and doing arithmetic. The direction\
+    \ of operands is the same as in the Intel x64 disassembly flavor if you are accustomed\
+    \ to WinDbg on Windows. It is equivalent to an assignment. BLR is a call of some\
+    \ function whose address is in the register. BL means Branch and Link."
+  merge: -1
+  pgno: 190
+- img_proc: true
+  md: '# A64 Memory and Stack Addressing
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_191_0.png)
+
+
+    Before we look at operations with memory, let''s look at a graphical representation
+    of memory addressing. A thread stack is just any other memory region, so instead
+    of **SP** and **X29 (FP)**, any other register can be used. Please note that the
+    stack grows towards lower addresses, so to access the previously pushed values,
+    you need to use positive offsets from **SP.**'
+  merge: -1
+  pgno: 191
+- img_proc: true
+  md: '# A64 Memory Load Instructions
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_192_0.png)
+
+
+    +   - Opcode DST, DST_, [SRC], Offset]
+
+
+    +   - Opcode DST, DST_, [SRC], Offset // Postincrement
+
+
+    +   - Examples:
+
+    ldr x0, [sp] // x0 ← value at address SP+0
+
+    ldr x0, [x29, -8] // x0 ← value at address X29-0x8
+
+    dp x29, x30, [sp, #16] // x29 ← value at address SP+32 (0x20)
+
+    dp x29, x30, [sp] // x30 ← value at address SP+0 (0x28)
+
+    dp x29, x30, [sp] // x29 ← value at address SP+0
+
+    // SP ← SP+16 (0x10)
+
+
+    Constants are encoded in instructions, but if we need arbitrary values, we must
+    get them from memory. Square brackets show memory access relative to an address
+    stored in some register. There’s also an option to adjust the value of the register
+    after load, the so-called Postincrement, which can be negative.'
+  merge: -1
+  pgno: 192
+- img_proc: true
+  md: "# A64 Memory Store Instructions\n\n# A64 Memory Store Instructions\n\n+   -\
+    \ Opcode SRC, SRC2, [DST, Offset]\n\n+   - Opcode SRC, SRC2, [DST, Offset]! //\
+    \ Preincrement\n\n+   - Examples:\n\n```\nstr x0, [sp, #16]               // x0\
+    \ -> value at address SP+16 (0x10)\nstr x0, [x29, #-8]             // x0 -> value\
+    \ at address SP+32\nstp x29, x30, [sp, #32]          // x29 -> value at address\
+    \ SP+40 (0x28)\nstp x29, x30, [sp, #-16]!        // SP -> SP-16 (-0x10)\n    \
+    \                                 // x29 -> set value at address SP\n        \
+    \                             // x30 -> set value at address SP+8\n```\n\nStoring\
+    \ operand order goes in the other direction compared to other instructions. There's\
+    \ a possibility to Preincrement the destination register before storing values."
+  merge: -1
+  pgno: 193
+- img_proc: true
+  md: "# A64 Flow Instructions\n\n```\nA64 Flow Instructions\n\nOpcode DST, SRC\n\n\
+    Examples:\nadrp x0, 0x420000      // x0 ← 0x420000\nb 0x10493fc1c         // PC\
+    \ ← 0x10493fc1c\n                       // (goto 0x10493fc1c)\nbr x17        \
+    \       // PC ← the value of X17\n\n0x10493fc14:          // PC == 0x10493fc14\n\
+    bl 0x10493ff74       // LR ← PC+4 (0x10493fc18)\n                       // PC\
+    \ ← 0x10493ff74\n                       // (goto 0x10493ff74)\n```\n\nBecause\
+    \ the size of every instruction is 4 bytes (32 bits), it is only possible to encode\
+    \ a part of a large 4GB address range, either as a relative offset to the current\
+    \ PC or via ADRP instruction. Goto (an unconditional branch) is implemented via\
+    \ the B instruction. Function calls are implemented via the BL (Branch and Link)\
+    \ instruction."
+  merge: -1
+  pgno: 194
+- img_proc: true
+  md: '# A64 Function Parameters
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_195_0.png)
+
+
+    On the ARM64 Linux platform, the first eight parameters are passed via registers
+    from left to right and the rest – via the stack locations.'
+  merge: -1
+  pgno: 195
+- img_proc: true
+  md: '# A64 Struct Function Parameters
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_196_0.png)
+
+
+    When an object struct nonstatic member function is called, the first parameter
+    is implicit and, on the ARM64 Linux platform, is passed via X0. It is an object
+    address to help methods differentiate between objects of the same structure type
+    and reference correct fields'' memory. The rest of the parameters are passed as
+    usual.'
+  merge: -1
+  pgno: 196
+- img_proc: true
+  md: "this\n\n```\nstruct MyStruct\n{\n    int a;\n    int foo(int i);\n    MyStruct*\
+    \ myAddress() { return this; }\n}\n\n// myStruct.myAddress() == &MyStruct\n\n\
+    int MyStruct::foo(/* MyStruct this, */ / int i)\n{\n    return a + i + this->a\
+    \ + (*this).a;\n}\n```\n\nThe address of the current object is contained in this\
+    \ pointer inside C++ source code. It can be used to refer to the current object\
+    \ fields and methods and can also be dereferenced.\n\nThe code example:\n\n```\n\
+    struct MyStruct\n{\n    int a;\n    int foo(int i);\n    MyStruct* myAddress()\
+    \ { return this; }\n} myStruct;\n\n// myStruct.myAddress() == &MyStruct\n\nint\
+    \ MyStruct::foo(/* MyStruct this, */ / int i)\n{\n    return a + i + this->a +\
+    \ (*this).a;\n}\n```"
+  merge: -1
+  pgno: 197
+- img_proc: true
+  md: "# 198 Function Objects vs. Lambdas\n\n# Function Objects vs. Lambdas\n\n```\n\
+    struct $_0 // GCC <lambda(int)>\n{\n    auto operator()(int x) { return -x; }\n\
+    } negate;\n// int negate(int)\nauto negate = [](int x) -> int { return -x; };\n\
+    negate(10);\n[](int x) -> int { return -x; }(10);\n// Clang\nlea    -0x10(%rbp),%rdi\n\
+    mov    $0xa,%esi\ncallq <$_0::operator()(int) const>\n// GCC\nlea    -0xa(%rbp),%rax\n\
+    mov    %rax,%rdi\ncallq <<<lambda(int)>::operator()(int) const\n```\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_198_0.png)\n\
+    \nLambdas are internally implemented as function objects.\n\nThe code example:\n\
+    \n```\nstruct $_0 // GCC <lambda(int)>\n{\n    auto operator()(int x) { return\
+    \ -x; }\n} negate;\n// int negate(int)\nauto negate = [](int x) -> int { return\
+    \ -x; };\nnegate(10);\n[](int x) -> int { return -x; }(10);\n// Clang\nlea   \
+    \ -0x10(%rbp),%rdi\nmov    $0xa,%esi\ncallq <$_0::operator()(int) const>\n```"
+  merge: -1
+  pgno: 198
+- img_proc: true
+  md: '```
+
+    // GCC
+
+    lea     -0xa(%rbp),rax
+
+    mov     $0xa,%esi
+
+    mov     %rax,%rdi
+
+    callq  <<lambda(int)>:operator()(int) const>
+
+    ```'
+  merge: -1
+  pgno: 199
+- img_proc: true
+  md: '# A64 Lambda Example
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_200_0.png)
+
+
+    The ARM64 GCC disassembly fragment for the previous lambda example:
+
+
+    ```
+
+    // GCC
+
+    add    x0, sp, #0x10
+
+    mov    w1, #0xa
+
+    bl     <<lambda<int>::operator()>(int) const
+
+    ```'
+  merge: -1
+  pgno: 200
+- img_proc: true
+  md: "# Captures and Closures\n\n# Captures and Closures\n\n```\n```cpp\nint {};\n\
+    auto negate1 = [](int x) { return b - x; };\nauto negate2 = [][](int x) { return\
+    \ b - x; };\nauto negate4 = [&](int x) { return b - x; };\nauto negate5 = [=](int\
+    \ x) { return b - x; }; negate5(10);\nauto negate6 = [&](int x) { return b - x;\
+    \ }; negate6(10);\n```\n```\n\n```\n```assembly\n// [] claim\nstruct t_1 {\n \
+    \ $0(int x) : b(x) {}\n  operator()(int x) { return b - x; }\nnegate5:\n  mov\
+    \    $0x0,-8(%rbp)\n  mov    $0x0,-8(%rbp)\nlea    -0x18(%rbp),%rdi\nlea    -0x20(%rbp),%rdi\n\
+    mov    $0x0,%rdi\ncall   $_.operator(int) const\n```\n```\n\n© 2023 Software Diagnostics\
+    \ Services\n\nInside lambda code, it is possible to use local objects from the\
+    \ outer scope either by copy or by reference. This mechanism is internally implemented\
+    \ by lambda function objects.\n\nThe code example:\n\n```\n```cpp\nint b{};nauto\
+    \ negate1 = [b](int x) { return b - x; };\nauto negate2 = [b](int x) { return\
+    \ b - x; };\nauto negate4 = [&](int x) { return b - x; };\nauto negate5 = [=](int\
+    \ x) { return b - x; };\nauto negate6 = [&](int x) { return b - x; };\n```\n```"
+  merge: -1
+  pgno: 201
+- img_proc: true
+  md: "# The Clang pseudo-code examples and the corresponding x64 disassembly:\n\n\
+    ```\n// [-] Clang\nstruct $0 {\n  int b;\n  $0(int _b) : b(_b) {}\n  auto operator()(int\
+    \ x) { return b-x; }\n} negate5;\n```\n\n```\n// [i] Clang\nstruct $1 {\n  int&\
+    \ rb;\n  Lambda(int& _rb) : rb(_rb) {}\n  auto operator()(int x) { return rb-x;\
+    \ }\n} negate6;\n```\n\n```\nmovl $0x,-0x4(rbp),%eax\nmov -0x18(rbp),%eax\nlea\
+    \ -0x18(rbp),%rdi\nmov $0xa,%esi\ncallq $<0::operator()(int) const>\n```\n\n```\n\
+    movl $0x,-0x4(rbp),%rcx\nlea -0x28(rbp),%rcx\nmov -0x28(rbp),%rdi\nmov $0xa,%esi\n\
+    callq <$1::operator()(int) const>\n```"
+  merge: -1
+  pgno: 202
+- img_proc: true
+  md: "# A64 Capture Example\n\n# A64 Capture Example\n\n```\n{\n  int {0};\n  auto\
+    \ negate1 = [&](int x) { return b - x; };\n  auto negate2 = [&](int x) { return\
+    \ b - x; };\n  auto negate4 = [&](int x) { return b - x; };\n  auto negate5 =\
+    \ [&](int x) { return b - x; }; negate5(10);\n  auto negate6 = [&](int x) { return\
+    \ b - x; }; negate6(10);\n}\n\n// [] GCC\nstruct lambda<int> {\n  lambda<int>(int\
+    \ b) : b(b) {}\n  auto operator()(int x) { return b-x; }\n} negate5;\n\n  str\
+    \ wzr, [sp, #36]\n  ldr w0, [sp, #32]\n  str [sp, #32]\n  add x0, sp, #0x20\n\
+    \  mov w1, #0xa\n  str [sp, #0x24]\n  mov x1, sp, #0xa0\n  bl <<lambda<int>:::operator()(int)\
+    \ const\n```\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_203_0.png)\n\nThe GCC\
+    \ pseudo-code for the same lambdas and the corresponding ARM64 disassembly:\n\n\
+    ```\n// [] GCC\nstruct lambda<int> {\n  int b;\n  lambda<int>(int _b) : b(_b)\n\
+    \  auto operator()(int x) { return b-x; }\n} negate5;\n\n  str wzr, [sp, #36]\n\
+    \  ldr w0, [sp, #32]\n  str [sp, #32]\n  add x0, sp, #0x20\n  mov w1, #0xa\n \
+    \ bl <<lambda<int>:::operator()(int) const\n// [ ] GCC\nstruct lambda<int> {\n\
+    \  int rb;\n  lambda<int>(int _rb) : rb(_rb)\n  auto operator()(int x) { return\
+    \ rb-x; }\n} negate5;\n\n  ldr w0, [sp, #36]\n  ldr w0, [sp, #24]\n  add x0, sp,\
+    \ #0x20\n  str x0, [sp, #48]\n  mov w1, #0xa\n  str x0, [sp, #0x30]\n  bl <<lambda<int>:::operator()(int)\
+    \ const\n```"
+  merge: -1
+  pgno: 203
+- img_proc: true
+  md: "# Lambdas as Parameters\n\n# # Lambdas as Parameters\n\n```\nauto negate =\
+    \ [](int x) { return -x; };\n\nint apply(int arg, int (*pf)(int)) {\n    return\
+    \ pf(arg);\n}\n\nint apply2(int arg, decltype(negate) f) {\n    return f(arg);\n\
+    }\n\nvoid foo() {\n    // Clang: apply(100, $<0::operator()(int) const&&$0)\n\
+    \    apply(100, negate);\n}\n```\n\n```\napply: // Clang\npush %rbp\nmov %rbp,\
+    \ %rsp\nsub %rsp, $16\nmov %edi, -10(%rbp)\nmov -8(%rbp),%rsi\nmov %rdi\ncallq\
+    \ *%rsi\n\napply2: // Clang\npush %rbp\nmov %rbp, %rsp\nsub %rsp, $16\nmov %edi,\
+    \ %4(%rbp)\nmov 8(%rbp),%rsi\nmov %x12(%rbp),%rdi\nlea -x8(%rbp),%rdi\ncallq $<0::operator()(int)\
+    \ const\n```\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_204_0.png)\n\nLambdas\
+    \ can be passed as function parameters. We can use decltype to specify their type.\
+    \ If a normal function pointer is expected, then a special invoker function is\
+    \ internally takes care of the call. If the lambda type parameter is expected,\
+    \ the lambda function object operator() is called.\n\n```\nauto negate = [](int\
+    \ x) { return -x; };\n\nint apply(int arg, int (*pf)(int)) {\n    return pf(arg);\n\
+    }\n\nint apply2(int arg, decltype(negate) f) {\n    return f(arg);\n}\n\nvoid\
+    \ foo() {\n    // Clang: apply(100, $<0::operator()(int) const&&$0)\n    apply(100,\
+    \ negate);\n    apply2(102, negate);\n\n```"
+  merge: -1
+  pgno: 204
+- img_proc: true
+  md: '# The corresponding Clang x64 assembly language fragments:
+
+
+    ```
+
+    apply: // Clang
+
+    push    %rbp
+
+    mov     %rsp,%rbp
+
+    sub     $0x10,%rbp
+
+    mov     %rsi,-0x10(%rbp)
+
+    mov     -0x4(%rbp),%rsi
+
+    mov     -0x18(%rbp),%edi
+
+    callq  *%rsi
+
+    n...
+
+    ```
+
+
+    ```
+
+    apply2: // Clang
+
+    push    %rbp
+
+    mov     %rsp,%rbp
+
+    mov     $0x10,%rsp
+
+    mov     %edi,-0xc(%rbp)
+
+    mov     -0xc(%rbp),%esi
+
+    lea     -0x8(%rbp),%rdi
+
+    callq  <$_0:operator()>(int) const>
+
+    n...
+
+    ```'
+  merge: -1
+  pgno: 205
+- img_proc: true
+  md: "# A64 Lambda Parameter Example\n\n# A64 Lambda Parameter Example\n\n```\nauto\
+    \ negate = [](int x) { return -x };\n\nint apply(int arg, int (*pf)(int)) {\n\
+    \    return pf(arg);\n}\n\nint apply2(int arg, decltype(negate) f) {\n    return\
+    \ f(arg);\n}\n\nvoid foo() {\n    // Clang: apply(100, $<$0::operator int (*)(int)()\
+    \ const &&$_0>)\n    apply(100, negate);\n}\n```\n\n```\napply: Clang\nsub   \
+    \  sp, sp, #0x20\nstp     x29, x30, [sp, #16]\nadd     x29, sp, #-4\nstor    w0,\
+    \ [x29]\nstr     x1, [sp]\nldr     x8, [sp]\nldur    w0, [x29, #-4]\nbl      x0\n\
+    ```\n\n```\napply2: Clang\nsub     sp, sp, #0x20\nstp     x29, x30, [sp, #16]\n\
+    add     x29, sp, #-4\nsub     x29, sp, #0x10\nsturb  w1, [x29, #-1]\nstr     w0,\
+    \ [sp]\nldr     w1, [sp, #8]\nmov     x0, x8\nbl      <$0::operator()>(int) const\n\
+    ```\n\n2023 Software Diagnostics Services\n\nThe corresponding Clang ARM64 assembly\
+    \ language fragments:\n\n```\napply: Clang\nsub     sp, sp, #0x20\nstp     x29,\
+    \ x30, [sp, #16]\nadd     x29, sp, #-4\nstor    w0, [x29]\nstr     x1, [sp]\n\
+    ldr     x8, [sp]\nldur    w0, [x29, #-4]\nbl      x0\n```\n\n```\napply2: Clang\n\
+    sub     sp, sp, #0x20\nstp     x29, x30, [sp, #16]\nadd     x29, sp, #-4\nsub\
+    \     x29, sp, #0x10\nsturb  w1, [x29, #-1]\nstr     w0, [sp]\nldr     w1, [sp,\
+    \ #8]\nmov     x0, x8\nbl      <$0::operator()>(int) const\n```"
+  merge: -1
+  pgno: 206
+- img_proc: true
+  md: "# Lambda Parameter Optimization\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_207_0.png)\n\
+    \nIf you pass lambdas by reference, there is no function object copy.\n\nThe code\
+    \ example and the corresponding assembly language:\n\n```\nauto negate = [](int\
+    \ x) { return -x; };\nint apply3(int arg, const decltype(negate)& crf)\n{\n  \
+    \  return crf(arg);\n}\nvoid bar()\n{\n    apply3(103, negate);\n}\n```"
+  merge: -1
+  pgno: 207
+- img_proc: true
+  md: 'In the x64 Clang disassembly, we see the function object address passed via
+    RSI that later becomes an implicit RDI parameter for the operator():
+
+
+    ```
+
+    apply3: // Clang
+
+    push    %rbp
+
+    mov     %rsp,%rbp
+
+    sub     $0x0,%rsp
+
+    mov     %edi,-0x4(%rbp)
+
+    mov     %rsi,-0x10(%rbp)
+
+    mov     -0x10(%rbp),%rdi
+
+    mov     -0x4(%rbp),%esi
+
+    callq<$_:operator()(int) const>
+
+    add     $0x10,%rsp
+
+    pop     %rbp
+
+    retq
+
+    ```'
+  merge: -1
+  pgno: 208
+- img_proc: true
+  md: "# A64 Optimization Example\n\n# A64 Optimization Example\n\n```\nauto negate\
+    \ = [](int x) { return -x; };\nint apply3(int arg, const decltype(negate)&crf)\n\
+    {\n    return crf(arg);\n}\nvoid bar()\n{\n    apply3(102, negate);\n}\n\napply3:\
+    \ // Clang\nsub    sp, sp, #0x20\nstp    x29, x30, [sp, #16]\nadd     x1, [sp]\n\
+    str\nlldr    x0, [sp]\nmov     x1, apply3(int) const\nldp    x29, x30, [sp, #16]\n\
+    add     sp, sp, #0x20\nret\n```\n\n©2023 Software Diagnostics Services\n\nClang\
+    \ ARM64 disassembly example:\n\n```\napply3: // Clang\nsub    sp, sp, #0x20\n\
+    stp    x29, x30, [sp, #16]\nadd     x29, sp, #0x10\nstur    w0, [x29, #-4]\nstr\
+    \     x1, [sp]\nlldr    x0, [sp]\ndur    w1, [x29, #-4]\nbl     <$0::operator()>(int)\
+    \ const\nldp    x29, x30, [sp, #16]\nadd     sp, sp, #0x20\nret\n```"
+  merge: -1
+  pgno: 209
+- img_proc: true
+  md: "# Lambdas as Unnamed Functions\n\n# # Lambdas as Unnamed Functions\n\n```\n\
+    int apply(int arg, int (*pf)(int))\n{\n    return pf(arg);\n}\n\nvoid foo() {\n\
+    \    int b{0};\n    apply(b, [](int x) -> int { return -x-4; });\n    apply(100,\
+    \ [=](int x) { return -x-b; });\n}\n```\n\n```\nlea -8(%rdi),%rdi // Clang\ncall\
+    \  _Z44operatorint(int)() const\nmov    eax,eax\ncall  apply(int,int (*)(int))\n\
+    apply(0,int(+(int))\nmov    -0x8(%rbp),%rsi\nmov    -0x10(%rbp),%rdx\nmov    %rax,((%rsp),%rax\n\
+    call  *rdx\n```\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_210_0.png)\n\nHowever,\
+    \ the most common usage of lambdas is unnamed functions in a local context. In\
+    \ such a case, a temporary function object is created. However, no context capture\
+    \ is allowed if lambdas are passed where function pointers are expected.\n\nThe\
+    \ example and the corresponding Clang x64 assembly language:\n\n```\nint apply(int\
+    \ arg, int (*pf)(int))\n{\n    return pf(arg);\n}\n\nvoid foo() {\n    int b{0};\n\
+    \    apply(100, [](int x) -> int { return -x-4; });\n    apply(100, [=](int x)\
+    \ { return -x-b; });\n}\n```"
+  merge: -1
+  pgno: 210
+- img_proc: true
+  md: '```
+
+    // // lea -0x8(rbp),%rdi
+
+    callq <$_0::operator int (*)(int)() const>
+
+    mov $0x64,%edi
+
+    mov %rax,%rsi // $_0::__invoke(int)
+
+    callq <apply(int, int (*)(int))>
+
+    ...
+
+    apply(int, int (*)(int)):
+
+    ...
+
+    mov %edi,-0x4(rbp)
+
+    mov %rsi,-0x10(%rbp)
+
+    mov -0x10(rbp),%rsi
+
+    mov -0x4(rbp),%edi
+
+    callq *rsi
+
+    ```'
+  merge: -1
+  pgno: 211
+- img_proc: true
+  md: "# std::function Lambda Parameters\n\n```\nstd::function Lambda Parameters\n\
+    \nint apply4(int arg, std::function<int<int)> f) {\n    return f(arg);\n}\n\n\
+    void foo() {\n    int b[0];\n\n    apply4(100, =](int x) -> int { return -x-b;\
+    \ });\n}\n\n// Clang\nmov -0ax(%rbp),ebx\nmov -0ax(%rbp),eax\nmov -030(%rbp),esi\n\
+    mov -0(%rbp),edi\nmmov rcx,rdx\nmov -048(%rbp),edi\ncallq <apply4(int, std::function<int(int)>>$_0,void>($0)>\n\
+    mov -048(%rbp),rsi\ncallq <apply4(int, std::function<int(int)>)>\n```\n\nAllow\
+    \ passing lambdas to capture context, we can use std::function.\n\nThe code example\
+    \ and the corresponding Clang x64 assembly language:\n\n```\nint apply4(int arg,\
+    \ std::function<int<int)> f) {\n    return f(arg);\n}\n\nvoid foo() {\n    int\
+    \ b[0];\n\n    apply4(100, =](int x) -> int { return -x-b; });\n}\n```"
+  merge: -1
+  pgno: 212
+- img_proc: true
+  md: 'In Clang x64 assembly language, we see the function object constructor that
+    captures the context:
+
+
+    ```
+
+    // Clang
+
+    mov    $0x0,-0x4(%rbp)
+
+    mov    -0x4(%rbp),%eax
+
+    mov    %eax,-0x30(%rbp)
+
+    mov    -0x30(%rbp),%esi
+
+    lea    -0x28(%rbp),%rcx
+
+    mov    %rcx,%rdi
+
+    mov    %rcx,-0x48(%rbp)
+
+    callq  std::function<int(int)>::function<$_0, void,void>($_0)>
+
+    mov    $0x64,%edi
+
+    mov    -0x48(%rbp),%rsi
+
+    callq  <apply4(int,std::function<int(int)>>
+
+    ```'
+  merge: -1
+  pgno: 213
+- img_proc: true
+  md: "# auto Lambda Parameters\n\n# auto Lambda Parameters\n\n```\nint apply5(int\
+    \ arg, const auto& f) { // g++ with -fconcepts\n    return f(arg);\n}\n\nvoid\
+    \ foo() {\n    int b{0};\n\n    apply5(100, [=](int x) -> int { return -x-b; });\n\
+    }\nmov -0x(%rbp), %edi // GCC\nmov -8x(%rbp), %eax\nlea -8(%rbp), %rax\nmov %rax,\
+    \ %rsi\ncallq <<lambda<int>>(int, const <lambda<int>>&)\napply5<<lambda<int>>>(int,\
+    \ const <lambda<int>>&):\nmov -0x10(%rbp), %rsi\nmov -0x8(%rbp), %rax\nmov %rax,\
+    \ %rdi\ncallq <<lambda<int>>::operator()(int) const\n```\n\nTo capture the context\
+    \ and allow more flexibility and efficiency, the modern way is to use auto.\n\n\
+    The code example:\n\n```\nint apply5(int arg, const auto& f) // g++ with -fconcepts\n\
+    {\n    return f(arg);\n}\n\nvoid foo() {\n    int b{0};\n\n    apply5(100, [=](int\
+    \ x) -> int { return -x-b; });\n}}\n```"
+  merge: -1
+  pgno: 214
+- img_proc: true
+  md: 'In the corresponding GCC x64 disassembly, we see all necessary functions
+
+    are generated automatically:
+
+
+    ```
+
+    movl    $0x0,-0x4(%rbp) // GCC
+
+    mov     -0x4(%rbp),%eax
+
+    mov     %eax,-0x8(%rbp)
+
+    lea     -0x8(%rbp),%rax
+
+    mov     %rax,%rsi
+
+    mov     $0x64,%edi
+
+    callq   <<lambda<int>>(int, const <lambda(int)> &)
+
+    ...
+
+    apply5<<Lambda(int)> >(int, const <lambda(int)> &):
+
+    ...
+
+    mov     %edi,-0x4(%rbp)
+
+    mov     %rsi,-0x10(%rbp)
+
+    mov     -0x10(%rbp),%edx
+
+    mov     -0x10(%rbp),%rax
+
+    mov     %edx,%esi
+
+    mov     %rax,%rdi
+
+    callq <<lambda(int)>:operator()(int) const
+
+    ```'
+  merge: -1
+  pgno: 215
+- img_proc: true
+  md: "# Lambdas as Return Values\n\n# Lambdas as Return Values\n\n```\nauto getFunc(int\
+    \ par) {\n    return [par](int x) { return -x - par; }\n}\n\nvoid foo() {\n  \
+    \  getFunc(200);\n}\n\n// clang\n// x64\npush   %rbp\nmov    %rsp,%rbp\nsub  \
+    \  $0x10,%rsp\ncall   %getFunc(int)>\nmov    %ax,(rbp)\nlea    -0x8(%rbp),%rdx\n\
+    mov    %rdx,(rbp),%rd1\ncallq  <getFunc(int):$._0:operator())(int const>\nmov\
+    \    %rax,(rbp)\nadd    $0x10,%rsp\npop    %rbp\nret\n```\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_216_0.png)\n\
+    \nIt is possible to return lambdas and thus mimic the so-called currying feature\
+    \ of functional programming.\n\nThe code example and the corresponding Clang x64\
+    \ assembly language:\n\n```\nauto getFunc(int par) {\n    return [par](int x)\
+    \ { return -x - par; }\n}\n\nvoid foo() {\n    getFunc(200)(16);\n}\n```"
+  merge: -1
+  pgno: 216
+- img_proc: true
+  md: 'The disassembly shows that we return the underlying function object:
+
+
+    ```
+
+    // Clang
+
+    -foo():
+
+    push    %rbp
+
+    mov     %rsp,%rbp
+
+    sub     $00c8,%edi
+
+    movq    <getFunc(int)>
+
+    mov     %eax,-0x8(%rbp)
+
+    lea     -0x8(%rbp),%rdi
+
+    mov     $0x10,%esi
+
+    callq   <getFunc(int):$_0::operator()(int) const>
+
+    mov     %eax,-0xc(%rbp)
+
+    add     $0x10,%rsp
+
+    pop     %rbp
+
+    retq
+
+    ```'
+  merge: -1
+  pgno: 217
+- img_proc: true
+  md: '# Virtual Function Call
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_218_0.png)
+
+
+    This section provides an overview of virtual function calls in C++.'
+  merge: -1
+  pgno: 218
+- img_proc: true
+  md: "# VTBL Memory Layout\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_219_0.png)\n\
+    \nThe virtual function calls are implemented uniformly by having a specific virtual\
+    \ function table (vtbl or vtable) for each structure where the addresses of the\
+    \ base structure methods are replaced with those of the derived structure methods,\
+    \ if any.\n\nThe code examples corresponding to the memory diagram:\n\n```\nstruct\
+    \ Base\n{\n    virtual void vmethod1() {}\n    virtual void vmethod2() {}\n} myBase;\n\
+    \nstruct Derived : Base\n{\n    int field;\n    void vmethod2() override {}\n\
+    } myDerived;\n```"
+  merge: -1
+  pgno: 219
+- img_proc: true
+  md: '# VPTR and Struct Memory Layout
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_220_0.png)
+
+
+    Every object whose structure has virtual methods has an implicit virtual function
+    pointer (_vptr) as its first member containing an address of the corresponding
+    structure virtual functions table. Therefore, each virtual function call from
+    a base structure pointer is a type-independent call where the target function
+    address is easily calculated based on the address of the virtual function table
+    and virtual function offset.
+
+
+    The code examples corresponding to the memory diagram:
+
+
+    ```
+
+    Base *pMyBase = &myBase;
+
+    pMyBase->vmethod2();
+
+
+    pMyBase = &myDerived;
+
+    pMyBase->vmethod2();
+
+    ```'
+  merge: -1
+  pgno: 220
+- img_proc: true
+  md: '# Templates: A Planck-length Introduction
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_221_0.png)
+
+
+    C++ templates and template metaprogramming are a vast universe. We only cover
+    a Planck-length distance in this introduction.'
+  merge: -1
+  pgno: 221
+- img_proc: true
+  md: '# Why Templates?
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_222_0.png)
+
+
+    In the following slides, we briefly cover various “why” aspects.'
+  merge: -1
+  pgno: 222
+- img_proc: true
+  md: "# Reusability\n\n# Reusability\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_223_0.png)\n\
+    \nTemplates allow us to write less code with higher abstractions, delegating implementation\
+    \ details to a compiler. The compiler checks that template arguments are compatible,\
+    \ for example, that they implement the required operations and methods.\n\nThe\
+    \ code example:\n\n```\ntemplate<typename T>\nT add (const T& op1, const T& op2)\n\
+    {\n    return op1 + op2;\n}\nvoid foo()>\n{\n    add<int>(1, 2);\n    add<struct\
+    \ S>(struct S(1), struct S(2));\n}\n```"
+  merge: -1
+  pgno: 223
+- img_proc: true
+  md: "```\nstruct S {\n  S(int _val) : val(_val) {}\n  S operator+(const S& s) const\
+    \ {\n    return S(val + s.val);\n    int val;\n  }\n};\n\n// S operator+(const\
+    \ S& s1, const S& s2)\n// {\n//   return S(s1.val + s2.val);\n// }\n```"
+  merge: -1
+  pgno: 224
+- img_proc: true
+  md: "# Types of Templates\n\n```\nTypes of Templates\n\n* Struct templates\ntemplate\
+    \ <typename T> struct TStruct { T data; }\nstruct TStruct<int> ts;\n\n* Function\
+    \ templates\nstruct FStruct {\n    template <typename T> T zero() { return T(0);\
+    \ }\n} fs;\nfs.zero<int>();\n\n* Variable templates\ntemplate <typename T> T zero();\n\
+    auto z = zero<int>;\n```\n\nThe following code provides examples for struct, function,\
+    \ and (recent) variable template categories:\n\n```\ntemplate <typename T> struct\
+    \ TStruct { T data; }\nstruct TStruct<int> ts;\n\nstruct FStruct {\n    template\
+    \ <typename T> T zero() { return T(0); }\n} fs;\nfs.zero<int>();\n\ntemplate <typename\
+    \ T> T zero{};\nauto z = zero<int>;\n```"
+  merge: -1
+  pgno: 225
+- img_proc: true
+  md: '# Types of Template Parameters
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_226_0.png)
+
+
+    There are two categories of template parameters: type and non-type.
+
+
+    The code example and the corresponding assembly language:
+
+
+    ```
+
+    template <int c> decltype(c) constant() { return c; }
+
+    constant<1>();
+
+    ```
+
+
+    Non-type template parameters allow the generation of very compact code with a
+    distinct purpose, as shown in x64 and ARM64 disassembly:
+
+
+    ```
+
+    call <constant<1>() // Clang and GCC
+
+    ...
+
+    constant<1>():
+
+    push %rbp
+
+    mov %rsp,%rbp
+
+    mov $0x1, %eax
+
+    pop %rbp
+
+    retq
+
+    ```'
+  merge: -1
+  pgno: 226
+- img_proc: true
+  md: '```
+
+    bl <constant1>()
+
+    ... constant<1>():
+
+    mmov0, #0x1
+
+    ret
+
+    ```'
+  merge: -1
+  pgno: 227
+- img_proc: true
+  md: "# Type Safety\n\n# Type Safety\n\n```\ntemplate <typename T>\nT add (const\
+    \ T& op1, const T& op2)\n{\n    return op1 + op2;\n}\n\nvoid foo())\n{\n    add(struct\
+    \ M(1), struct M(2));\n}\nstruct S\n{\n    S(int _val) : val(_val) {}\n    S operator+(const\
+    \ S& s) const {\n        return S(val + s.val);\n    }\n    int val;\n}\nstruct\
+    \ M\n{\n    M(int _val) : val(_val) {}\n    int val;\n};\n```\n\nCompared to pointer\
+    \ casting, the general template code enforces type safety by checking the required\
+    \ operations and compatible types.\n\nThe code example:\n\n```\nstruct S\n{\n\
+    \    S(int _val) : val(_val) {}\n    S operator+(const S& s) const {\n       \
+    \ return S(val + s.val);\n    }\n    int val;\n}\nstruct M\n{\n    M(int _val)\
+    \ : val(_val) {}\n    int val;\n};\n```"
+  merge: -1
+  pgno: 228
+- img_proc: true
+  md: "```\ntemplate <typename T>\nT add (const T& op1, const T& op2)\n{\n    return\
+    \ op1 + op2;\n}\nvoid foo()\n{\n    add(struct M(1), struct M(2));\n}\n```"
+  merge: -1
+  pgno: 229
+- img_proc: true
+  md: "# Flexibility\n\n```\ntemplate<\nstruct M add<struct M>(const struct M& op1,\n\
+    \                           const struct M& op2)\n{\n    return op1.val + op2.val;\n\
+    }\n\nvoid foo()\n{\n    add<struct M>(struct M(1), struct M(2));\n}\n\ntemplate<>\
+    \ decltype(13) constant<13>() { return 14; }\n```\n\nIt is also possible to specialize\
+    \ template definitions for specific types for performance and other reasons.\n\
+    \nThe code example:\n\n```\ntemplate<\nstruct M add<struct M>(const struct M&\
+    \ op1,\n                           const struct M& op2)\n{\n    return op1.val\
+    \ + op2.val;\n}\n\nvoid foo()\n{\n    add<struct M>(struct M(1), struct M(2));\n\
+    }\n\ntemplate<> decltype(13) constant<13>() { return 14; }\n```"
+  merge: -1
+  pgno: 230
+- img_proc: true
+  md: "# Metafunctions\n\n```\nMetafunctions\n\n// f: Value -> Value\n// mf: Type\
+    \ -> Type\n\ntemplate <typename T>\nstruct Pointer {\n    // typedef T* type;\n\
+    \    using type = T;\n}\n\nPointer<int>::type pInt; // int *pInt\nPointer<int\
+    \ *>::type pPInt; // int **ppInt\nPointer<struct M>::type pM; // struct M *pM;\n\
+    ```\n\nMetafunctions transform type: they take types as parameters and return\
+    \ types as output.\n\nThe code example:\n\n```\n// f: Value -> Value\n// mf: Type\
+    \ -> Type\ntemplate <typename T>\nstruct Pointer {\n    // typedef T* type;\n\
+    \    using type = T;\n}\n\nPointer<int>::type pInt; // int *pInt\nPointer<int\
+    \ *>::type pPInt; // int **ppInt\nPointer<struct M>::type pM; // struct M *pM;\n\
+    ```"
+  merge: -1
+  pgno: 231
+- img_proc: true
+  md: '# Iterators as Pointers
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_232_0.png)
+
+
+    Now, we take a bird’s eye view of standard library containers, iterators, and
+    algorithms from a pointer perspective.'
+  merge: -1
+  pgno: 232
+- img_proc: true
+  md: There are many container types in the standard C++ library (formerly called
+    STL, Standard Template Library). In this course edition, we don't delve into their
+    specifics. We hope the names intuitively suggest their semantics.
+  merge: -1
+  pgno: 233
+- img_proc: true
+  md: "# Iterators\n\n# Iterators\n\n```\nstd::vector<int> v{1, 2, 3, 4, 5};\nstd::vector<int>::iterator\
+    \ it = v.begin();\n\nwhile (it != v.end())\n{\n    std::cout << *it;\n    ++it;\n\
+    }\n\nint a[5]{1, 2, 3, 4, 5};\nint *pa = &a[0];\n\nwhile (pa != &a[5])\n{\n  \
+    \  std::cout << *pa;\n    ++pa;\n}\n```\n\nAn iterator is a pointer abstraction.\
+    \ You can move it (depending on container semantics) like a pointer increment/decrement,\
+    \ and you can dereference it like a pointer to get a value:\n\n```\nstd::vector<int>\
+    \ v{1, 2, 3, 4, 5};\nstd::vector<int>::iterator it = v.begin();\n\nwhile (it !=\
+    \ v.end())\n{\n    std::cout << *it;\n    ++it;\n}\n\nint a[5]{1, 2, 3, 4, 5};\n\
+    int *pa = &a[0];\n\nwhile (pa != &a[5])\n{\n    std::cout << *pa;\n    ++pa;\n\
+    }\n```"
+  merge: -1
+  pgno: 234
+- img_proc: true
+  md: "# Constant Iterators\n\n```\nstd::vector<int> v1{1, 2, 3, 4, 5};\nstd::vector<int>::const_iterator\
+    \ cit = v.cbegin();\n\nwhile (cit != v.cend())\n{\n    std::cout << *cit;\n  \
+    \  ++cit;\n}\n\nint a[5]{1, 2, 3, 4, 5 };nconst int *cpa = &a[0];\n\nwhile (cpa\
+    \ != &a[5])\n{\n    std::cout << *cpa;\n    ++cpa;\n}\n```\n\nLike a pointer to\
+    \ constant values, there are constant iterators:\n\n```\nstd::vector<int> v1{1,\
+    \ 2, 3, 4, 5};\nstd::vector<int>::const_iterator cit = v.cbegin();\n\nwhile (cit\
+    \ != v.cend())\n{\n    std::cout << *cit;\n    ++cit;\n}\n\nint a[5]{1, 2, 3,\
+    \ 4, 5 };nconst int *cpa = &a[0];\n\nwhile (cpa != &a[5])\n{\n    std::cout <<\
+    \ *cpa;\n    ++cpa;\n}\n```"
+  merge: -1
+  pgno: 235
+- img_proc: true
+  md: "# Pointers as Iterators\n\n```\nint a[5]{ 1, 2, 3, 4, 5 };\nint *itarr = std::begin(arr);\n\
+    \n// auto itarr = std::begin(arr);\nwhile (itarr != std::end(arr))\n{\n    std::cout\
+    \ << *itarr;\n    ++itarr;\n}\nconst int *citarr = std::cbegin(arr);\nwhile (citarr\
+    \ != std::cend(arr))\n{\n    std::cout << *citarr;\n    ++citarr;\n}\n```\n\n\
+    Pointers can also be considered as iterators.\n\n```\nint a[5]{ 1, 2, 3, 4, 5\
+    \ };\nint *itarr = std::begin(arr);\n\n// auto itarr = std::begin(arr);\nwhile\
+    \ (itarr != std::end(arr))\n{\n    std::cout << *itarr;\n    ++itarr;\n}\nconst\
+    \ int *citarr = std::cbegin(arr);\nwhile (citarr != std::cend(arr))\n{\n    std::cout\
+    \ << *citarr;\n    ++citarr;\n}\n```"
+  merge: -1
+  pgno: 236
+- img_proc: true
+  md: '# Algorithms
+
+
+    # Algorithms
+
+
+    ```
+
+    std::vector<int> v{2, 1, 3, 5, 4};
+
+    std::sort(v.begin(), v.end());
+
+
+    int arr[5]{ 2, 1, 3, 5, 4 };
+
+    std::sort(std::begin(arr), std::end(arr));
+
+    ```
+
+
+    Both iterators and containers and pointers as iterators and arrays can be used
+    with the C++ standard library algorithms.
+
+
+    The code examples:
+
+
+    ```
+
+    std::vector<int> v{2, 1, 3, 5, 4};
+
+    std::sort(v.begin(), v.end());
+
+
+    int arr[5]{ 2, 1, 3, 5, 4 };
+
+    std::sort(std::begin(arr), std::end(arr));
+
+    ```'
+  merge: -1
+  pgno: 237
+- img_proc: true
+  md: '# Memory Ownership
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_238_0.png)
+
+
+    We now look at common memory ownership problems and see how they are resolved
+    in modern C++.'
+  merge: -1
+  pgno: 238
+- img_proc: true
+  md: '# Pointers as Owners
+
+
+    +   * Ownership of dynamic memory after allocation
+
+    * Contain the address of allocated memory
+
+    * Can try Read/Write/Execute/Release
+
+
+    Pointers can be considered owners of dynamically allocated memory since they contain
+    the address, and that memory can be accessed through them.'
+  merge: -1
+  pgno: 239
+- img_proc: true
+  md: '# Problems with Pointer Owners
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_240_0.png)
+
+
+    However, manual pointer usage is prone to multiple errors due to possible shared
+    ownership, crashes due to possible multiple releases, and memory leaks due to
+    dangling pointers and going out of scope.'
+  merge: -1
+  pgno: 240
+- img_proc: true
+  md: '![](img/c36cc1b69ac7baa75db5d13135bb9d30_241_0.png)
+
+
+    To solve memory ownership problems, modern C++ included several kinds of smart
+    pointers in its standard library.'
+  merge: -1
+  pgno: 241
+- img_proc: true
+  md: '# Basic Design
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_242_0.png)
+
+
+    +   * A structure with operators mimicking pointer behavior such as dereferencing
+
+    * Encapsulates raw pointers
+
+    * Restricts undesirable behavior
+
+    * Contains reference count that tracks copies
+
+    * Provides a destructor to release memory if the reference count becomes 0
+
+
+    A smart pointer should include functionality similar to raw pointers for seamless
+    use during the refactoring of legacy code and simultaneously eliminate most, if
+    not all, problems with raw pointer usage.'
+  merge: -1
+  pgno: 242
+- img_proc: true
+  md: "# Unique Pointers\n\n```\nUnique Pointers\nstd::unique_ptr<int> fooU(std::unique_ptr<int>\
+    \ pPar)\n{\n    std::unique_ptr<int> pInt(pPar.release());\n    assert(pPar ==\
+    \ nullptr);\n    if (pInt)\n        int n = *pInt; // *pInt.get();\n    return\
+    \ pInt;\n}\n\nvoid barU() {\n    std::unique_ptr<int> pIntPar(new int(0));\n \
+    \   std::unique_ptr<int> pIntRes;\n    assert(pIntRes == nullptr);\n    pIntRes\
+    \ = fooU(std::move(pInt));\n    assert(pPar == nullptr && pIntRes != nullptr);\n\
+    ```\n\nFor smart pointers without sharing functionality, the unique_ptr should\
+    \ be used. Copying must transfer ownership, making the source nullptr.\n\nThe\
+    \ code example:\n\n```\nstd::unique_ptr<int> fooU(std::unique_ptr<int> pPar)\n\
+    {\n    std::unique_ptr<int> pInt(pPar.release());\n    assert(pPar == nullptr);\n\
+    \    if (pInt)\n        int n = *pInt; // *pInt.get();\n    return pInt;\n}\n\n\
+    void barU() {\n    std::unique_ptr<int> pIntPar(new int(0));\n    std::unique_ptr<int>\
+    \ pIntRes;\n    assert(pIntRes == nullptr);\n    pIntRes = fooU(std::move(pIntPar));\n\
+    \    assert(pPar == nullptr && pIntRes != nullptr);\n```"
+  merge: -1
+  pgno: 243
+- img_proc: true
+  md: "# Descriptors as Unique Pointers\n\n```\n// int fd = open(...);\n// close(fd);\n\
+    \nauto fdDeleter = \n[](auto pfd)\n{\n    if (pfd && (*pfd != -1))\n        ::close(*pfd);\n\
+    };\n\nusing FD = std::unique_ptr<int, decltype(fdDeleter)>;\n```\n\nFile descriptors\
+    \ are good candidates for unique pointers, but they should be supplied with a\
+    \ custom deletion mechanism.\n\nThe code example:\n\n```\n// int fd = open(...);\n\
+    // close(fd);\n\nauto fdDeleter = \n[](auto pfd)\n{\n    if (pfd && (*pfd != -1))\n\
+    \        ::close(*pfd);\n};\n\nusing FD = std::unique_ptr<int, decltype(fdDeleter)>;\n\
+    ```"
+  merge: -1
+  pgno: 244
+- img_proc: true
+  md: "Shared Pointers\n\n# # Shared Pointers\n\n```\nstd::shared_ptr<int> fooS(std::shared_ptr<int>\
+    \ pIntPar)\n{\n    std::shared_ptr<int> pInt(pIntPar);\n    assert(pIntPar !=\
+    \ nullptr && pIntPar.use_count() == 0);\n    if (pInt)\n        int n = *pInt;\n\
+    \    return pInt;\n}\n\nvoid barS() {\n    std::shared_ptr<int> pIntPar(new int(0));\n\
+    \    std::shared_ptr<int> pIntRes;\n    assert(pIntRes == nullptr && pIntRes.use_count()\
+    \ == 0);\n    pIntRes = pInt(pIntPar);\n    assert(pIntPar != nullptr && pIntRes\
+    \ != nullptr);\n    assert(pIntRes.use_count() == 2 && pIntPar.use_count() ==\
+    \ 2);\n}\n```\n\n© 2023 Software Graphics Services\n\nWe want to freely copy pointers\
+    \ with all new copies pointing to the same memory, then the shared_ptr_ptr is\
+    \ our choice:\n\n```\nstd::shared_ptr<int> fooS(std::shared_ptr<int> pIntPar)\n\
+    {\n    std::shared_ptr<int> pInt(pIntPar);\n    assert(pIntPar != nullptr && pIntPar.use_count()\
+    \ == 3);\n    if (pInt)\n        int n = *pInt;\n    return pInt;\n}\n\nvoid barS()\
+    \ {\n    std::shared_ptr<int> pIntPar(new int(0));\n    std::shared_ptr<int> pIntRes;\n\
+    \    assert(pIntRes == nullptr && pIntRes.use_count() == 0 && pIntPar.use_count()\
+    \ == 1);\n    pIntRes = fooS(pIntPar);\n    assert(pIntPar != nullptr && pIntRes\
+    \ != nullptr);\n    assert(pIntRes.use_count() == 2 && pIntPar.use_count() ==\
+    \ 2);\n```"
+  merge: -1
+  pgno: 245
+- img_proc: true
+  md: '# RAII
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_246_0.png)
+
+
+    Finally, the RAII idiom is specifically about managing resources, including memory,'
+  merge: -1
+  pgno: 246
+- img_proc: true
+  md: "# RAII Definition\n\n```\nstruct Resource {\n  Resource Acquisition Is Initialization\n\
+    \  Resource() {\n    // acquire resource, e.g., new\n    // initialize resource,\
+    \ e.g., set memory values to 0\n  }\n  Includes resource release\n  ~Resource()\
+    \ {\n    // release resource, e.g., delete\n  }\n}\n```\n\nAn RAII structure encapsulates\
+    \ simultaneous “atomic” resource acquisition and initialization in its constructors\
+    \ and includes resource release logic in its destructor.\n\nThe code example:\n\
+    \n```\nstruct Resource {\n  Resource() {\n    // acquire resource, e.g., new\n\
+    \    // initialize resource, e.g., set memory values to 0\n  }\n  ~Resource()\
+    \ {\n    // release resource, e.g., delete\n  }\n}\n```"
+  merge: -1
+  pgno: 247
+- img_proc: true
+  md: "# RAII Advantages\n\n```\nRAII Advantages\n\n* Resource safety\n\nvoid foo\
+    \ { Resource r; }\n\n* Resource life-cycle predictability\n\n* Exception safety\n\
+    \ntry {\n    Resource r;\n    throw -1;\n} catch (...) {\n}\n```\n\nThere are\
+    \ several advantages to using the RAII idiom. When going out of scope, it automatically\
+    \ releases a resource due to a called destructor:\n\n# void foo { Resource r;\n\
+    \nIn the presence of exceptions, the destructor releases the acquired resource\
+    \ automatically. All these contribute to the predictable resource life cycle.\n\
+    \n```\ntry {\n    Resource r;\n    throw -1;\n} catch (...) {\n}\n```"
+  merge: -1
+  pgno: 248
+- img_proc: true
+  md: "# File Descriptor RAII\n\n```\nstruct RAII_FD : FD\n{\n    RAII_FD(int _fd)\
+    \ : FD(&fd, fdDeleter), fd(_fd) {};\n    void operator=(int _fd) { FD::reset();\
+    \ fd = _fd;\n    FD::reset(&fd); }\n    operator int() const { return fd; }\n\
+    private:\n    int fd;\n};\n\nint foo ()\n{\n    RAII_FD fd = ::open(...);\n  \
+    \  if (fd == -1)\n        // return -1;\n    return 0;\n}\n```\n\nThe code example\
+    \ of encapsulating file descriptors using the RAII idiom. We reuse the FD type\
+    \ from the previous Descriptors as Unique Pointers slide:\n\n```\nstruct RAII_FD\
+    \ : FD\n{\n    RAII_FD(int _fd) : FD(&fd, fdDeleter), fd(_fd) {};\n    void operator=(int\
+    \ _fd) { FD::reset(); fd = _fd;\n    FD::reset(&fd); }\n    operator int() const\
+    \ { return fd; }\nprivate:\n    int fd;\n};\n\nint foo ()\n{\n    RAII_FD fd =\
+    \ ::open(...);\n    if (fd == -1)\n        // return -1;\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 249
+- img_proc: true
+  md: '# Threads and Synchronization
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_250_0.png)
+
+
+    Our final section in this edition is about threads and synchronization in C++.'
+  merge: -1
+  pgno: 250
+- img_proc: true
+  md: "# Threads in C/C++\n\n```\nvoid *thread_proc (void *arg) {\n  sleep((unsigned\
+    \ long)arg);\n  return 0;\n}\n\nvoid foo() {\n  pthread_t tid;\n\n  pthread_create(&tid,\
+    \ NULL, thread_proc, (void *));\n}\n```\n\nTraditional C/C++ threading using raw\
+    \ pthread API is limited. Passing any parameter type and casting it is error-prone.\n\
+    \nThe code example:\n\n```\nvoid *thread_proc (void *arg) {\n  sleep((unsigned\
+    \ long)arg);\n  return 0;\n}\n\nvoid foo() {\n  pthread_t tid;\n  pthread_create\
+    \ (&tid, NULL, thread_proc, (void*)5);\n}\n```"
+  merge: -1
+  pgno: 251
+- img_proc: true
+  md: "252\n\n# Threads in C++ Proper\n\n```\n// functions, function objects, lambdas\n\
+    void threadProcCpp(int param, std::string msg)\n{\n    ::sleep(param);\n    std::cout\
+    \ << \"New Thread Created!\" + msg << std::endl;\n}\n\nvoid foo()\n{\n    std::thread\
+    \ threadProcCpp(threadProcCpp, 6, \"Hello\");\n    //...\n    threadProcCpp.join();\n\
+    \    // std::jthread threadProcCpp(threadProcCpp, 6, \"Hello\");\n```\n\n2023\
+    \ Software Diagnostics Services\n\nThe proper C++ standard library thread allows\
+    \ the utilization of the power of modern C++ abstractions. Please also note the\
+    \ existence of jthread that combines both thread creation and join:\n\n```\n//\
+    \ functions, function objects, lambdas\nvoid threadProcCpp(int param, std::string\
+    \ msg)\n{\n    ::sleep(param);\n    std::cout << \"New Thread Created!\" + msg\
+    \ << std::endl;\n}\n\nvoid foo()\n{\n    std::thread threadProcCpp(threadProcCpp,\
+    \ 6, \"Hello\");\n    //...\n    threadProcCpp.join();\n    // std::jthread threadProcCpp(threadProcCpp,\
+    \ 6, \"Hello\");\n```"
+  merge: -1
+  pgno: 252
+- img_proc: true
+  md: "# Synchronization Problems\n\n```\nlong counter{0};\n\nvoid threadProcCpp(std::string\
+    \ msg)\n{\n    while (true)\n    {\n        std::cout << msg << \": \" << ++counter\
+    \ << std::endl;\n    }\n}\n\nvoid foo()\\{\n    std::jthread thread1(threadProcCpp,\
+    \ \"Hello1\");\n    std::jthread thread2(threadProcCpp, \"Hello2\");\n}\n```\n\
+    \nIn the code example, the output from << operators from different threads is\
+    \ mixed and looks like garbage:\n\n```\nlong counter{0};\nvoid threadProcCpp(std::string\
+    \ msg)\n{\n    while (true)\n    {\n        std::cout << msg << \": \" << ++counter\
+    \ << std::endl;\n    }\n}\nvoid foo()\\{\n    std::jthread thread1(threadProcCpp,\
+    \ \"Hello1\");\n    std::jthread thread2(threadProcCpp, \"Hello2\");\n}\n\n//\
+    \ Hello2: 1694\n// : 1695\n```"
+  merge: -1
+  pgno: 253
+- img_proc: true
+  md: "# Synchronization Solution\n\n![](img/c36cc1b69ac7baa75db5d13135bb9d30_254_0.png)\n\
+    \n```\nstd::atomic<long> counter{0};\n\nstd::mutex m;\n\nvoid threadProcCpp(std::string\
+    \ msg) {\n    while (true) {\n        std::scoped_lock lock {m};\n        std::cout\
+    \ << msg << \": \" << ++counter << std::endl;\n    }\n}\n\nvoid foo() {\n    std::jthread\
+    \ thread1(threadProcCpp, \"Hello1\");\n    std::jthread thread2(threadProcCpp,\
+    \ \"Hello2\");\n}\n```\n\nThe following code example solves the data race problem\
+    \ by guarding access via scoped_lock that is implemented using mutex:\n\n```\n\
+    std::atomic<long> counter{0};\nstd::mutex m;\nvoid threadProcCpp(std::string msg)\
+    \ {\n    while (true) {\n        std::scoped_lock lock {m};\n        std::cout\
+    \ << msg << \": \" << ++counter << std::endl;\n    }\n}\nvoid foo() {\n    std::jthread\
+    \ thread1(threadProcCpp, \"Hello1\");\n    std::jthread thread2(threadProcCpp,\
+    \ \"Hello2\");\n}\n```"
+  merge: -1
+  pgno: 254
+- img_proc: true
+  md: '# Resources
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_255_0.png)
+
+
+    Now, I have a few slides about references and resources for further reading.'
+  merge: -1
+  pgno: 255
+- img_proc: true
+  md: '# C and C++
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_256_0.png)
+
+
+    My reading list up to C++17:
+
+
+    # My Road to Modern C++
+
+
+    https://www.linkedin.com/pulse/my-road-modern-c-dmitry-vostokov/
+
+
+    cppreference
+
+
+    https://en.cppreference.com/w/
+
+
+    Two recent books are also recommended:
+
+
+    A Tour of C++, Third Edition
+
+    Embracing Modern C++ Safely'
+  merge: -1
+  pgno: 256
+- img_proc: true
+  md: '# Training (Linux C and C++)
+
+
+    ![](img/c36cc1b69ac7baa75db5d13135bb9d30_257_0.png)
+
+
+    +   - Accelerated Linux Core Dump Analysis, Third Edition
+
+    - Accelerated Linux Debugging⁴
+
+    - Accelerated Linux Disassembly, Reconstruction, and Reversing, Second Edition
+
+    - Accelerated Linux API for Software Diagnostics
+
+
+    Additional training courses that use Linux C and C++:
+
+
+    # Accelerated Linux Core Dump Analysis, Third Edition
+
+
+    https://www.patterndiagnostics.com/accelerated-linux-core-dump-analysis-book
+
+
+    # Accelerated Linux Debugging⁴
+
+
+    https://www.patterndiagnostics.com/accelerated-linux-debugging-4d
+
+
+    # Accelerated Linux Disassembly, Reconstruction, and Reversing, Second Edition
+
+
+    https://www.patterndiagnostics.com/accelerated-linux-disassembly-reconstruction-reversing-book
+
+
+    # Accelerated Linux API for Software Diagnostics
+
+
+    https://www.patterndiagnostics.com/accelerated-linux-api-book'
+  merge: -1
+  pgno: 257
