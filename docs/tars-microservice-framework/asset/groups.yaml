@@ -1,0 +1,2360 @@
+- md: '
+
+    # TARS MicroService Framework
+
+
+    # Chapter Overview
+
+
+    In this chapter, we will start off by discussing differences between monolithic
+    and microservice architecture. Next we will introduce the TARS Project and we
+    will dive deep into TARS'' microservice ecosystem. We will also compare TARS with
+    other microservice frameworks and discuss some of the advantages of TARS. Last
+    but not least, we will explain what platforms built with TARS consist of and how
+    the service interaction flow looks like.
+
+
+    # Learning Objectives
+
+
+    - By the end of this chapter, you should be able to:
+
+    - Have a good understanding of the differences between monolithic and microservice
+    architecture.
+
+    - Discuss what TARS is and what its goals are.
+
+    - Describe the TARS Project microservice ecosystem.
+
+    - Compare different microservice frameworks.
+
+    - Explain what platforms built with TARS consist of.
+
+    - Describe service interaction flow.
+
+
+    # Monolith vs Microservice
+
+
+    In the past, developers usually used a monolithic architecture, which is an easy
+    and convenient way to build applications. A monolithic application is built as
+    a single unit, an example of which is a server-side application. While monolithic
+    architecture offers many advantages, e.g., simple development and deployment or
+    debugging, it also has significant drawbacks. With the increasing number of requests
+    and applications being deployed to the cloud on a daily basis, a monolith architecture
+    became largely impractical. First of all, any changes made to the code were affecting
+    the entire system (which was growing and becoming more complex), requiring its
+    thorough review and extending the development process. Another issue involved
+    scalability. Scaling was applied to the entire application rather than parts of
+    it, demanding higher resource utilization.
+
+
+    In 2005, Peter Rodgers introduced the term "Micro-Web-Services" during his presentation
+    at the Web Services Edge conference, but it wasn''t until 2014, when Martin Fowler
+    and James Lewis proposed the concept of **microservices**. They defined microservices
+    as small services composed of a single application, deployed in a way that communicates
+    with other services using HTTP APIs. Those services use the smallest scale of
+    centralized management capabilities (such as Docker), and can be implemented with
+    different programming languages and databases, as well as with other components.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_1_0.png)
+
+
+    Interest in microservices has significantly grown since the mid-2000s, as illustrated
+    by search trends on Google.
+
+
+    According to microservices.io,
+
+
+    “Microservices - also known as the microservice architecture - is an architectural
+    style that structures an application as a collection of services that are:
+
+
+    - Highly maintainable and testable
+
+    - Loosely coupled
+
+    - Independently deployable
+
+    - Organized around business capabilities
+
+    - Owned by a small team.
+
+
+    The microservice architecture enables the rapid, frequent and reliable delivery
+    of large, complex applications. It also enables an organization to evolve its
+    technology stack.
+
+
+    Let’s discuss what these characteristics mean and how they bring value to users.
+
+
+    - Highly maintainable and testable: Fast and frequent development and deployment
+    of applications.
+
+    - Loosely coupled: Components within an application are independent and remain
+    resilient to changes.
+
+    - Independently deployable: Deployments don’t require coordination with other
+    teams/team members.
+
+    - Organized around business capabilities: Focus on customer satisfaction and experience,
+    not on technical capabilities of a product.
+
+    - Owned by a small team: Easier communication and higher productivity.
+
+
+    # Monolith
+
+
+    # Microservices
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_3_0.png)
+
+
+    With existing architectures unable to meet the needs of larger enterprises and
+    increasing data traffic, microservices began to rise in popularity. One of the
+    frameworks developed to help businesses build their microservices platforms was
+    TARS.
+
+
+    # What Is TARS?
+
+
+    TARS is a new generation distributed microservice applications framework that
+    was created in 2008. It provides developers and enterprises with a complete set
+    of solutions to build, release, deploy and maintain stable and reliable applications
+    that run at scale.
+
+
+    In June 2018, TARS joined the Linux Foundation umbrella and became one of its
+    projects. On March 10th, 2020, it was announced that the TARS Project will transition
+    into the TARS Foundation,
+
+
+    > a neutral home for open source microservices projects that empower any industry
+    to quickly turn ideas into applications at scale”.
+
+
+    The TARS Foundation’s goal is to address the most common problems related to microservices
+    application, including solving multi-programming language interoperability, mitigating
+    transfer issues, maintaining consistency of data storage, and ensuring high performance
+    while supporting a growing number of requests.
+
+
+    TARS framework has been successfully used by many companies from diverse industries
+    such as fintech, esports, edge computing, online streaming, e-commerce and education,
+    to name a few.
+
+
+    Check out this video to find out more about TARS applications.
+
+
+    # TARS Project Microservice Ecosystem
+
+
+    The following diagram illustrates an architectural overview of TARS:
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_4_0.png)
+
+
+    Retrieved from https://www.linuxfoundation.org/blog/2020/03/the-tars-foundation-the-formation-of-a-microservices-ecosystem/
+    (image updated in June 2020 to reflect changes in the TARS landscape)
+
+
+    Let’s discuss each of these ecosystem components in more detail.
+
+
+    # Ecosystem Components: Infrastructure
+
+
+    TARS is working in PaaS. It can be run on physical machines, virtual machines
+    and containers, including Docker and Kubernetes.
+
+
+    # Ecosystem Components: Storage
+
+
+    TARS service data can be stored in cache, DB or a file system based on your status.
+
+
+    - For cache, you can use Redis or DCache (a distributed, in-memory NoSQL system
+    which is based on the TARS framework, etc.
+
+    - For DB, you can use MySQL, MariaDB, etc.
+
+    - For file systems, you can use Ceph, HDFS, etc.
+
+
+    # Ecosystem Components: Development Framework
+
+
+    Protocol
+
+
+    TARS framework supports Tars protocol, TUP, SSL, HTTP 1/2, protocol buffers and
+    other customized protocols.
+
+
+    Moreover, Tars protocol is IDL-based (interface definition language), binary,
+    extensible and cross-platform. These features allow servers using different languages
+    to communicate with each other using RPC (remote procedure calls).
+
+
+    RPC
+
+
+    RPC supports synchronous, asynchronous and one-way communication. In the synchronous
+    scenario, a client issues a request and waits for response from the server or
+    until timeout happens. In asynchronous communication, a client sends a request
+    with a callback but doesn’t wait for the response. When a client receives a response,
+    then callback is executed. In the case of one-way communication, client issues
+    a request but doesn’t wait or expect a callback.
+
+
+    # Ecosystem Components: Platforms Built with TARS
+
+
+    A platform built with TARS can be divided into two parts: application nodes and
+    framework nodes.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_6_0.png)
+
+
+    # Application Node
+
+
+    # Framework Node
+
+
+    A platform built with TARS can be divided into two parts: application nodes and
+    framework nodes. Before we discuss them in more detail, let''s review some common
+    terms:
+
+
+    - **Server**
+
+    A server is a computer program or a device that provides functionality for other
+    programs or devices, called "clients".
+
+
+    - **TarsNode**
+
+    A process which manages servers by starting, stopping, publishing and monitoring
+    them.
+
+
+    - **Publish**
+
+    The process in which developers upload their programs to the designated device
+    and get them running.
+
+
+    - **Heartbeat**
+
+    It is a periodic signal generated by hardware or software to indicate normal operation
+    or to synchronize other parts of the computer system.
+
+
+    - **Client**
+
+    A client is a piece of computer hardware or software that accesses a service made
+    available by a server. It can also be another server in TARS.
+
+
+    # Ecosystem Components: Platforms Built with TARS (Cont.)
+
+
+    An application node is an OS instance in which the server runs. It can be a physical
+    machine, a virtual machine or a container. In a platform built with TARS, the
+    number of application nodes can reach thousands. On every application node, there
+    is aarsNode, a process which manages servers by starting, stopping, publishing
+    and monitoring them. In addition, it also accepts a heartbeat message from every
+    server (when servers are running), and reports it back to the TarsRegistry as
+    a data source for service discovery. Clients will call these live servers after
+    TarsRegistry replies.
+
+    '
+  mdcn: '
+
+
+    # TARS 微服务框架
+
+
+    # 章节概述
+
+
+    在本章中，我们将首先开始讨论单体架构与微服务架构之间的差异。接下来，我们将介绍 TARS 项目，并深入探讨 TARS 的微服务生态系统。我们还将将 TARS
+    与其他微服务框架进行比较，并讨论 TARS 的优势。最后，我们将解释使用 TARS 构建的平台包含哪些部分，以及服务交互流是怎样的。
+
+
+    # 学习目标
+
+
+    - 在本章结束时，你应该能够：
+
+    - 良好理解单体架构与微服务架构之间的区别。
+
+    - 讨论 TARS 是什么以及它的目标是什么。
+
+    - 描述 TARS 项目微服务生态系统。
+
+    - 比较不同的微服务框架。
+
+    - 解释使用 TARS 构建的平台包含的内容。
+
+    - 描述服务交互流。
+
+
+    # 单体 vs 微服务
+
+
+    在过去，开发者通常使用单体架构，这是一种构建应用程序的简单且方便的方法。单体应用被作为一个单元构建，一个例子是服务端应用程序。虽然单体架构具有许多优势（例如：简单的开发、部署或调试），但它也有显著的缺点。随着每天部署到云端的请求和应用程序数量不断增加，单体架构在很大程度上变得不再切实际。首先，对代码的任何更改都会影响整个系统（系统正在增长并变得复杂），需要对其进行彻底审查并延长开发周期。另一个问题涉及可扩展性。扩展适用于整个应用程序而非其部分部分，这要求更高的资源利用率。
+
+
+    2005 年，Peter Rodgers 在 Web Services Edge 会议的演讲中提出了“微 Web 服务”（Micro-Web-Services）这一术语，但直到
+    2014 年，Martin Fowler 和 James Lewis 提出了**微服务**的概念。他们将微服务定义为由单个应用程序组成的小型服务，通过 HTTP
+    API 与其他服务通信进行部署。这些服务使用最小规模的中心化管理能力（如 Docker），并可以使用不同的编程语言、数据库以及其他组件进行实现。
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_1_0.png)
+
+
+    自 2000 年中期以来，人们对微服务的兴趣显著增长，Google 的搜索趋势所示。
+
+
+    根据 microservices.io 的描述：
+
+
+    “微服务 - 也称为微服务架构 - 是一种架构风格，它将应用程序结构化为一组服务，这些服务具有：
+
+
+    - 高可维护性和可测试性
+
+    - 低耦合
+
+    - 可独立部署
+
+    - 围绕业务能力组织
+
+    - 由小型团队所有。
+
+
+    微服务架构能够快速、频繁且可靠地交付大型、复杂的应用程序。它还让组织能够演进其技术栈。
+
+
+    让我们讨论一下这些特征意味着什么，以及它们如何为用户带来价值。
+
+
+    - 高可维护性和可测试性：快速且频繁地进行应用程序开发和部署。
+
+    - 低耦合：应用程序中的组件是独立的，并且对变化保持韧性。
+
+    - 可独立部署：部署不需要与其他团队/团队成员进行协调。
+
+    - 围绕业务能力组织：关注客户的满意度和体验，而不是产品的技术能力。
+
+    - 由小型团队所有：更易沟通且生产力更高。
+
+
+    # 单体
+
+
+    # 微服务
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_3_0.png)
+
+
+    由于现有架构无法满足大型企业的需求和日益增长的数据流量，微服务开始流行。为了帮助企业构建其微服务平台而开发的框架之一就是 TARS。
+
+
+    # 什么是 TARS？
+
+
+    TARS 是创建于 2008 年的新一代分布式微服务应用程序框架。它为开发者和企业提供了一套解决方案，用于构建、发布、部署和维护大规模运行的稳定可靠应用程序。
+
+
+    2018 年 6 月，TARS 加入了 Linux 基金会并成为其项目之一。2020 年 3 月 10 日，宣布 TARS 项目将转换为 TARS 基金会，
+
+
+    > 一个开源微服务项目的中立家园，使任何行业都能快速将想法转化为大规模应用程序”。
+
+
+    TARS 基金会的目标是解决与微服务应用程序相关的最常见问题，包括解决多语言互操作性、缓解传输问题、维护数据存储的一致性，并在支持不断增长的请求的同时确保高性能。
+
+
+    TARS 框架已成功应用于金融科技、电竞、边缘计算、在线流、电子商务和教育等多个行业的公司。
+
+
+    查看此视频以获取更多关于 TARS 应用的信息。
+
+
+    # TARS 项目微服务生态系统
+
+
+    下面的图展示了 TARS 的架构概述：
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_4_0.png)
+
+
+    获取自 https://www.linuxfoundation.org/blog/2020/03/the-tars-foundation-the-formation-of-a-microservices-ecosystem/（图像已于
+    2020 年 6 月更新以反映 TARS 格的变化）
+
+
+    让我们详细讨论一下这些生态系统的每一个组件。
+
+
+    # 生态系统组件：基础设施
+
+
+    TARS 运行在 PaaS 上。它可以运行在物理机、虚拟机和容器上，包括 Docker 和 Kubernetes。
+
+
+    # 生态系统组件：存储
+
+
+    TARS 服务数据可以根据你的状态存储在缓存、数据库或文件系统中。
+
+
+    - 对于缓存，你可以使用 Redis 或 DCache（一种基于 TARS 框架的分布式内存 NoSQL 系统，等）。
+
+    - 对于数据库，你可以使用 MySQL、MariaDB 等。
+
+    - 对于文件系统，你可以使用 Ceph、HDFS 等。
+
+
+    # 生态系统组件：开发框架
+
+
+    ### 协议
+
+
+    TARS 框架支持 Tars 协议、TUP、SSL、HTTP 1/2、protocol buffers 以及其他自定义协议。
+
+
+    此外，Tars 协议是基于 IDL（接口定义语言）、二进制的、可扩展且跨平台的。这些特性允许使用不同语言的服务器通过 RPC（远程过程调用）相互通信。
+
+
+    ### RPC
+
+
+    RPC 支持同步、异步和单向通信。在同步场景下，客户端发出请求并等待服务器响应或发生超时。在异步通信中，客户端发送带有回调的请求但不等待响应。当客户端收到响应时，会执行回调。在单向通信的情况下，客户端发出请求但不等待或期望回调。
+
+
+    # 生态系统组件：使用 TARS 构建的平台
+
+
+    使用 TARS 构建的平台可以分为两部分：应用节点和框架节点。
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_6_0.png)
+
+
+    # 应用程序节点
+
+
+    # 框架节点
+
+
+    使用 TARS 构建的平台可以分为两部分：应用节点和框架节点。在我们详细讨论它们之前，让我们先回顾一些常用术语：
+
+
+    - **服务器 (Server)**
+
+    服务器是一个计算机程序或设备，为其他程序或设备（称为“客户端”）提供功能。
+
+
+    - **TarsNode**
+
+    一个通过启动、停止、发布和监控服务器来管理服务器的进程。
+
+
+    - **发布 (Publish)**
+
+    开发者将程序上传到指定设备并使其运行的过程。
+
+
+    - **心跳 (Heartbeat)**
+
+    它是由硬件或软件生成的周期性信号，用于指示正常运行或同步计算机系统的其他部分。
+
+
+    - **客户端 (Client)**
+
+    客户端是访问由服务器提供的服务的计算机硬件或软件。它也可以是 TARS 中的另一个服务器。
+
+
+    # 生态系统组件：使用 TARS 构建的平台（续）
+
+
+    应用节点是运行服务器的操作系统实例。它可以是物理机、虚拟机或容器。在构建使用 TARS 构建的平台中，应用节点的数量可以达到数千个。在每个应用节点上，都有一个
+    TarsNode，这是一个通过启动、停止、发布和监控服务器来管理服务器的进程。此外，它还接收来自每个服务器的心跳消息（当服务器运行时），并将其报告给 TarsRegistry
+    作为服务发现的数据源。客户端将在 TarsRegistry 回复后调用这些活跃服务器。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # TARS MicroService Framework
+
+
+    # Chapter Overview
+
+
+    In this chapter, we will start off by discussing differences between monolithic
+    and microservice architecture. Next we will introduce the TARS Project and we
+    will dive deep into TARS'' microservice ecosystem. We will also compare TARS with
+    other microservice frameworks and discuss some of the advantages of TARS. Last
+    but not least, we will explain what platforms built with TARS consist of and how
+    the service interaction flow looks like.
+
+
+    # Learning Objectives
+
+
+    +   By the end of this chapter, you should be able to:
+
+    - Have a good understanding of the differences between monolithic and microservice
+    architecture.
+
+    - Discuss what TARS is and what its goals are.
+
+    - Describe the TARS Project microservice ecosystem.
+
+    - Compare different microservice frameworks.
+
+    - Explain what platforms built with TARS consist of.
+
+    - Describe service interaction flow.
+
+
+    # Monolith vs Microservice
+
+
+    In the past, developers usually used a monolithic architecture, which is an easy
+    and convenient way to build applications. A monolithic application is built as
+    a single unit, an example of which is a server-side application. While monolithic
+    architecture offers many advantages, e.g., simple development and deployment or
+    debugging, it also has significant drawbacks. With the increasing number of requests
+    and applications being deployed to the cloud on a daily basis, a monolith architecture
+    became largely impractical. First of all, any changes made to the code were affecting
+    the entire system (which was growing and becoming more complex), requiring its
+    thorough review and extending the development process. Another'
+  - '[PAGE 1]
+
+
+    issue involved scalability. Scaling was applied to the entire application rather
+    than parts of it, demanding higher resource utilization.
+
+
+    In 2005, Peter Rodgers introduced the term "Micro-Web-Services" during his presentation
+    at the Web Services Edge conference, but it wasn''t until 2014, when Martin Fowler
+    and James Lewis proposed the concept of **microservices**. They defined microservices
+    as small services composed of a single application, deployed in a way that communicates
+    with other services using HTTP APIs. Those services use the smallest scale of
+    centralized management capabilities (such as Docker), and can be implemented with
+    different programming languages and databases, as well as with other components.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_1_0.png)
+
+
+    Interest in microservices has significantly grown since the mid-2000s, as illustrated
+    by search trends on Google.
+
+
+    According to microservices.io,
+
+
+    “Microservices - also known as the microservice architecture - is an architectural
+    style that structures an application as a collection of services that are:
+
+
+    +   • Highly maintainable and testable
+
+    • Loosely coupled'
+  - '[PAGE 2]
+
+
+    +   • Independently deployable
+
+    • Organized around business capabilities
+
+    • Owned by a small team.
+
+
+    The microservice architecture enables the rapid, frequent and reliable delivery
+    of large, complex applications. It also enables an organization to evolve its
+    technology stack.
+
+
+    Let’s discuss what these characteristics mean and how they bring value to users.
+
+
+    +   • Highly maintainable and testable Fast and frequent development and deployment
+    of applications.
+
+    • Loosely coupled Components within an application are independent and remain
+    resilient to changes.
+
+    • Independently deployable Deployments don’t require coordination with other teams/team
+    members.
+
+    • Organized around business capabilities Focus on customer satisfaction and experience,
+    not on technical capabilities of a product.
+
+    • Owned by a small team Easier communication and higher productivity.'
+  - '[PAGE 3]
+
+
+    # Monolith
+
+
+    # Microservices
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_3_0.png)
+
+
+    With existing architectures unable to meet the needs of larger enterprises and
+    increasing data traffic, microservices began to rise in popularity. One of the
+    frameworks developed to help businesses build their microservices platforms was
+    TARS.
+
+
+    # What Is TARS?
+
+
+    TARS is a new generation distributed microservice applications framework that
+    was created in 2008. It provides developers and enterprises with a complete set
+    of solutions to build, release, deploy and maintain stable and reliable applications
+    that run at scale.
+
+
+    In June 2018, TARS joined the Linux Foundation umbrella and became one of its
+    projects. On March 10th, 2020, it was announced that the TARS Project will transition
+    into the TARS Foundation,
+
+
+    > a neutral home for open source microservices projects that empower any industry
+    to quickly turn ideas into applications at scale”.'
+  - '[PAGE 4]
+
+
+    The TARS Foundation’s goal is to address the most common problems related to microservices
+    application, including solving multi-programming language interoperability, mitigating
+    transfer issues, maintaining consistency of data storage, and ensuring high performance
+    while supporting a growing number of requests.
+
+
+    TARS framework has been successfully used by many companies from diverse industries
+    such as fintech, esports, edge computing, online streaming, e-commerce and education,
+    to name a few.
+
+
+    Check out this video to find out more about TARS applications.
+
+
+    # TARS Project Microservice Ecosystem
+
+
+    The following diagram illustrates an architectural overview of TARS:
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_4_0.png)
+
+
+    Retrieved from https://www.linuxfoundation.org/blog/2020/03/the-tars-foundation-the-formation-of-a-microservices-ecosystem/
+    (image updated in June 2020 to reflect changes in the TARS landscape)'
+  - '[PAGE 5]
+
+
+    Let’s discuss each of these ecosystem components in more detail.
+
+
+    # Ecosystem Components: Infrastructure
+
+
+    TARS is working in PaaS. It can be run on physical machines, virtual machines
+    and containers, including Docker and Kubernetes.
+
+
+    # Ecosystem Components: Storage
+
+
+    TARS service data can be stored in cache, DB or a file system based on your status.
+
+
+    +   - For cache, you can use Redis or DCache (a distributed, in-memory NoSQL system
+    which is based on the TARS framework, etc.
+
+    - For DB, you can use MySQL, MariaDB, etc.
+
+    - For file systems, you can use Ceph, HDFS, etc.
+
+
+    # Ecosystem Components: Development Framework
+
+
+    Protocol
+
+
+    TARS framework supports Tars protocol, TUP, SSL, HTTP 1/2, protocol buffers and
+    other customized protocols.
+
+
+    Moreover, Tars protocol is IDL-based (interface definition language), binary,
+    extensible and cross-platform. These features allow servers using different languages
+    to communicate with each other using RPC (remote procedure calls).
+
+
+    RPC
+
+
+    RPC supports synchronous, asynchronous and one-way communication. In the synchronous
+    scenario, a client issues a request and waits for response from the server or
+    until timeout happens. In asynchronous communication, a client sends a request
+    with a callback'
+  - '[PAGE 6]
+
+
+    but doesn’t wait for the response. When a client receives a response, then callback
+    is executed. In the case of one-way communication, client issues a request but
+    doesn’t wait or expect a callback.
+
+
+    # Ecosystem Components: Platforms Built with TARS
+
+
+    A platform built with TARS can be divided into two parts: application nodes and
+    framework nodes.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_6_0.png)
+
+
+    # Application Node
+
+
+    # Framework Node'
+  - '[PAGE 7]
+
+
+    A platform built with TARS can be divided into two parts: application nodes and
+    framework nodes. Before we discuss them in more detail, let''s review some common
+    terms:
+
+
+    +   - **Server**
+
+    A server is a computer program or a device that provides functionality for other
+    programs or devices, called "clients".
+
+
+    +   - **TarsNode**
+
+    A process which manages servers by starting, stopping, publishing and monitoring
+    them.
+
+
+    +   - **Publish**
+
+    The process in which developers upload their programs to the designated device
+    and get them running.
+
+
+    +   - **Heartbeat**nIt is a periodic signal generated by hardware or software
+    to indicate normal operation or to synchronize other parts of the computer system.
+
+
+    +   - **Client**nA client is a piece of computer hardware or software that accesses
+    a service made available by a server. It can also be another server in TARS.
+
+
+    # Ecosystem Components: Platforms Built with TARS (Cont.)
+
+
+    An application node is an OS instance in which the server runs. It can be a physical
+    machine, a virtual machine or a container. In a platform built with TARS, the
+    number of application nodes can reach thousands. On every application node, there
+    is aarsNode, a process which manages servers by starting, stopping, publishing
+    and monitoring them. In addition, it also accepts a heartbeat message from every
+    server (when servers are running), and reports it back to the TarsRegistry as
+    a data source for service discovery. Clients will call these live servers after
+    TarsRegistry replies.'
+- md: '
+
+    The framework nodes are a series of servers created to maintain good microservice
+    governance. Please note that the number of framework nodes is not fixed. Platform
+    operators need to deploy them on multiple machines at multiple places for fault
+    tolerance and disaster recovery. Moreover, the number of framework nodes depends
+    on the scale of application nodes. For example, if servers print a large amount
+    of data for logs, the number of log servers should be increased.
+
+
+    Framework nodes can be classified into several categories:
+
+
+    - **TarsWeb**
+
+    TarsWeb is a web management system, which monitors the runtime status of servers,
+    as well as starts, stops, deploys and publishes servers.
+
+    - **TarsRegistry**
+
+    TarsRegistry is the control/management server within the microservice cluster
+    that is responsible for service registration and discovery. TarsWeb uses TarsRegistry
+    to start, stop and publish servers. TarsRegistry also provides a naming service
+    and accepts heartbeat messages from servers. One server can query the address
+    (IP/port) of servers through TarsRegistry.
+
+    - **TarsPatch**
+
+    TarsPatch provides the publishing management service and uses it to publish a
+    specific version of the server.
+
+    - **TarsConfig**
+
+    TarsConfig works as a configuration center. It manages the service configuration
+    files of all servers.
+
+    - **TarsLog**
+
+    TarsLog provides remote log service. Server logs are sent to TarsLog, which stores
+    them for use.
+
+    - **TarsStat**
+
+    TarsStat provides data from servers such as workload, response time, out of time
+    ratio, etc. The monitoring service uses this data to discover abnormal servers
+    and to provide warnings.
+
+    - **TarsProperty**
+
+    Beyond statistics from TarsStat, users can define business related properties
+    for servers such as memory usage, queue size and cache hit-rate. The monitoring
+    service uses these statistics to discover abnormal servers and to provide warnings.
+
+    - **TarsNotify**
+
+    TarsNotify provides statistics with abnormal information from servers (such as
+    database failure), to discover abnormal servers and to provide warning.
+
+
+    The successful collaboration of the TarsRegistry, application nodes and framework
+    nodes allows TARS to perform its service governance tasks.
+
+
+    ## Ecosystem Components: Service Governance (Service Register & Discovery)
+
+
+    ## Service Register & Discovery
+
+
+    The TarsRegistry provides a naming service (a naming service can convert a name
+    into a physical address on a network, the most ubiquitous naming service in the
+    world is the DNS). The server is registered with TarsRegistry, and the client
+    gets the actual address from the server name. When the TarsNode cannot report
+    heartbeat due to breakdown, the naming service will no longer return the address
+    of the faulty application node to the client, and the client will automatically
+    make a decision according to the abnormal situation and shield the fault. When
+    the platform is in operation, servers cooperate with each other. Servers can either
+    interact with framework nodes or among themselves. Let''s discuss these two cases.
+
+
+    ## Interactions between servers and framework nodes
+
+
+    The procedure for publishing servers:
+
+    When uploading the new package to be patched via the TarsWeb is successful, developers
+    issue a request to publish the package to the specified application nodes. Then,
+    TarsRegistry notifies TarsNode to transfer the package to the node. TarsNode shuts
+    down the old server and starts a new one. The procedure is shown as the dark blue
+    line in the figure below.
+
+
+    Administration commands:
+
+    Developers can send administration commands to a specified server via TarsWeb.
+    TarsWeb sends the commands to the TarsNode through TarsRegistry. Then, TarsNode
+    sends the commands to the server. The procedure is shown as the green line in
+    the figure below.
+
+
+    Heartbeat:
+
+    When a server is running, it sends a heartbeat message to TarsNode periodically.
+    Then, TarsNode forwards the message to TarsRegistry. The procedure is shown as
+    the black line in the figure below.
+
+
+    Information report:
+
+    When a server is running, it sends statistical information to TarsStat periodically.
+    It also prints logs to TarsLog, sends property information to TarsProperty and
+    sends abnormal information to TarsNotify. The procedure is shown as the light
+    blue line in the figure below.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_10_0.png)
+
+
+    ## Interactions among servers
+
+
+    Servers register this information to TarsRegistry in advance. The client queries
+    this information from TarsRegistry and visits a server.
+
+
+    When a client (can be another server in TARS) tries to visit a server, it needs
+    to connect to the server and call remote functions by specifying the servant,
+    server IP and port.
+
+
+    Servant is a service provider which provides a number of specific interfaces for
+    clients to call. It is always displayed as an object name (e.g. HelloServer.HelloObj).
+    It will be described in detail in the later chapter.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_11_0.png)
+
+
+    ## Ecosystem Components: Service
+
+
+    ## Governance (Load Balance)
+
+
+    ### Load Balance
+
+
+    After the client gets the server IP:Port list via the TarsRegistry, it will use
+    a specified load balance policy to call the server. The supported load balance
+    policies are round-robin, hash and weighted policy.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_12_0.png)
+
+
+    A round robin is an arrangement of choosing all elements in a group equally in
+    some rational order, usually from the top to the bottom of a list and starting
+    again at the top of the list and so on. A simple way to think of round robin is
+    that it is about "taking turns".
+
+
+    In computer science, consistent hashing is a special kind of hashing that when
+    a hash table is resized, only n/m keys need to be remapped on average where n
+    is the number of keys and m is the number of slots.
+
+
+    A weight function is a mathematical device used when performing a sum, integral,
+    or average to give some elements more "weight" or influence on the result than
+    other elements in the same set.
+
+
+    ## Ecosystem Components: Service
+
+
+    ## Governance (Service Configuration)
+
+
+    ### Service Configuration
+
+
+    TARS makes it easy to use configuration with one line of code and visualization.
+
+
+    Service configurations are managed by TarsWeb. Developers can check the history
+    of changes for the particular configuration and rollback to a previous version,
+    if needed.
+
+
+    A configuration file is classified into the following four layers:
+
+
+    - **APP Configuration**
+
+    It is located at the top level and it''s the common configuration for all servers
+    under the same application.
+
+    - **SET Configuration**
+
+    It is the common configuration for servers under a specific SET group. It complements
+    the application configuration.
+
+    - **Service Configuration**
+
+    It is used for a specific server and it refers to the APP configuration.
+
+    - **Node Configuration**
+
+    It is used for a specified backend of a server. Service configuration and node
+    configuration are working together and are used by the backend.
+
+
+    ## Ecosystem Components: Service Governance (Monitoring)
+
+
+    ## Monitoring
+
+
+    TARS supports the following data report functions in order to monitor the quality
+    of the servers'' running status.
+
+
+    ### Metric Monitor
+
+
+    It reports server status change and exception. We can check when the server is
+    published, restarted, or crashed. It is presented as TarsNotify in TARS.
+
+
+    ### First Login -- Set [admin] Password
+
+
+    - Password
+
+    - Repeat password
+
+    - Modify
+
+
+    It also reports invoking statistics among servers to control metrics such as flow,
+    delay, timeout and exception. It is presented as TarsStat in TARS.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_14_0.png)
+
+
+    It reports customized properties to TarsProperty. The customized properties can
+    include memory size, queue length, cache hit rate, etc.
+
+
+    | Time | master name | master IP | property | policy | characteristic value of
+    carr day | characteristic value of content day |
+
+    |---|---|---|---|---|---|---|
+
+    | 1005 | tars.registry | % | tars.registry.mem size | % | 1084 | 1072 |
+
+    | 1010 | tars.registry | % | tars.registry.mem size | % | 1080 | 1068 |
+
+    | 1015 | tars.registry | % | tars.registry.mem size | % | 1080 | 1064 |
+
+    | 1020 | tars.registry | % | tars.registry.mem size | % | 1080 | 1052 |
+
+    | 1025 | tars.registry | % | tars.registry.mem size | % | 1076 | 1052 |
+
+    | 1030 | tars.registry | % | tars.registry.mem size | % | 1076 | 1048 |
+
+    | 1035 | tars.registry | % | tars.registry.mem size | % | 1068 | 1044 |
+
+    | 1040 | tars.registry | % | tars.registry.mem size | % | 1060 | 1044 |
+
+
+    ## Ecosystem Components: Service
+
+
+    ## Governance (Overload Protection)
+
+
+    ### Overload Protection
+
+
+    Sometimes, massive requests or machine faults occur and the system overflows.
+    In order to improve system throughput, the server uses a request queue to process
+    requests asynchronously. Server monitors the length of the queue and if the length
+    exceeds a threshold, the server will refuse new requests. If a request stays in
+    the queue for a long time, the server will drop the request, to.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_15_0.png)
+
+    '
+  mdcn: "\n\n框架节点是为维护良好的微服务治理而创建的一系列服务器。请注意，框架节点的数量不是固定的。平台运营人员需要在多台机器的多个地点上部署它们，以实现容错和灾备恢复。此外，框架节点的数量取决于应用节点的规模。例如，如果服务器打印了大量的日志数据，应该增加日志服务器的数量。\n\
+    \n框架节点可以分为几类：\n\n- **TarsWeb**\n  TarsWeb 是一个 Web 管理系统，用于监控服务器的运行状态，以及启动、停止、部署和发布服务器。\n\
+    - **TarsRegistry**\n  TarsRegistry 是微服务集群内部的控制/管理服务器，负责服务的注册与发现。TarsWeb 使用 TarsRegistry\
+    \ 来启动、停止和发布服务器。TarsRegistry 还提供命名服务并接收来自服务器的心跳包消息。一个服务器可以通过 TarsRegistry 查询服务器的地址（IP/端口）。\n\
+    - **TarsPatch**\n  TarsPatch 提供发布管理服务，并可以使用它发布特定版本的服务器。\n- **TarsConfig**\n  TarsConfig\
+    \ 作为配置中心工作。它管理所有服务器的服务配置文件。\n- **TarsLog**\n  TarsLog 提供远程日志服务。服务器日志被发送到 TarsLog\
+    \ 并存储以备用。\n- **TarsStat**\n  TarsStat 提供来自服务器的数据，如负载、响应时间、超时率等。监控服务使用这些数据来发现异常服务器并提供报警。\n\
+    - **TarsProperty**\n  除了 TarsStat 的统计数据外，用户还可以为服务器定义业务相关的属性，如内存使用、队列大小和缓存命中率。监控服务使用这些统计数据来发现异常服务器并提供报警。\n\
+    - **TarsNotify**\n  TarsNotify 提供带有服务器异常信息的统计数据（如数据库故障），用以发现异常服务器并提供报警。\n\nTarsRegistry、应用节点和框架节点之间的成功协作使得\
+    \ TARS 能够执行其服务治理任务。\n\n## 生态系统组件：服务治理（服务注册与发现）\n\n## 服务注册与发现\n\nTarsRegistry 提供了一种命名服务（命名服务可以将名称转换为网络上的物理地址，世界上无处不在的命名服务是\
+    \ DNS）。服务器注册到 TarsRegistry 中，客户端从服务器名称获取实际地址。当 TarsNode 因故障无法报告心跳时，命名服务将不再向客户端返回故障应用节点的地址，客户端将根据异常情况自动做出决定并屏蔽故障。当平台运行时，服务器之间相互协作。服务器可以与框架节点交互，也可以彼此之间交互。让我们讨论这两种情况。\n\
+    \n## 服务器与框架节点之间的交互\n\n发布服务器的流程：\n当通过 TarsWeb 成功上传要补丁的新包时，开发者发布一个请求将该包发布到指定的应用节点。然后，TarsRegistry\
+    \ 通知 TarsNode 将包传输到该节点。TarsNode 关闭旧服务器并启动新服务器。该流程如图中深蓝实线所示。\n\n管理命令：\n开发者可以通过\
+    \ TarsWeb 向指定的服务器发送管理命令。TarsWeb 通过 TarsRegistry 将命令发送给 TarsNode。然后，TarsNode 将命令发送给服务器。该流程如图中绿实线所示。\n\
+    \n心跳：\n当服务器运行时，它会定期向 TarsNode 发送心跳消息。然后，TarsNode 将消息转发给 TarsRegistry。该流程如图中黑线所示。\n\
+    \n信息上：\n当服务器运行时，它会定期向 TarsStat 发送统计信息。它还会向 TarsLog 打印日志，向 TarsProperty 发送属性信息并向\
+    \ TarsNotify 发送异常信息。该流程如图中浅蓝线所示。\n\n![](img/b34f2ea2b492cd13eb13d7b15e1244c9_10_0.png)\n\
+    \n## 服务器之间的交互\n\n服务器预先将这些信息注册到 TarsRegistry。客户端从 TarsRegistry 查询这些信息并访问服务器。\n\n\
+    当客户端（可以是 TARS 中的另一个服务器）尝试访问服务器时，它需要连接到服务器并通过指定 servant、服务器 IP 和端口调用远程函数。\n\nServant（服务者）是一个服务提供者，为客户端提供多个特定的接口进行调用。它始终显示为对象名称（例如\
+    \ HelloServer.HelloObj）。它将在后面的章节中详细描述。\n\n![](img/b34f2ea2b492cd13eb13d7b15e1244c9_11_0.png)\n\
+    \n## 生态系统组件：服务\n\n## 治理（负载均衡）\n\n### 负载均衡\n\n客户端通过 TarsRegistry 获取服务器 IP:Port\
+    \ 列表后，将使用指定的负载均衡策略来调用服务器。支持的负载均衡策略包括轮询、哈希和加权策略。\n\n![](img/b34f2ea2b492cd13eb13d7b15e1244c9_12_0.png)\n\
+    \n轮询（round robin）是一种按照某种合理顺序等选择组中所有元素的安排，通常是从列表的顶部到底，然后重新从顶部开始，以此此类推。轮询的一种简单思考方式是关于“轮流”。\n\
+    \n在计算机科学中，一致性哈希是一种特殊的哈希算法，当哈希表调整大小时，平均只需要重新映射 n/m 个键，其中 n 是键的数量，m 是槽的数量。\n\n权重函数（weight\
+    \ function）是在执行求和、积分或平均值时使用的数学工具，赋予某些元素对结果比同一集合中其他元素更大的“权重”或影响。\n\n## 生态系统组件：服务\n\
+    \n## 治理（服务配置）\n\n### 服务配置\n\nTARS 通过一行代码和可视化使得使用配置变得简单。\n\n服务配置由 TarsWeb 管理。开发者可以检查特定配置的更改历史，并在需要时回滚到之前的版本。\n\
+    \n配置文件分为以下几类：\n\n- **APP 配置**：位于顶层，是整个应用的通用配置。\n- **SET 配置**：是 SET 组的通用配置。它包含了应用配置。\n\
+    - **Service 配置**：用于特定的服务器。\n- **Node 配置**：用于后端。服务和节点配置协同工作。\n\n## 生态系统组件：服务治理（监控）\n\
+    \n## 监控\n\nTARS 支持通过数据报告来监控服务器的运行状态。\n\n### 指标监控\n\n报告状态变化。我们可以检查服务器是否发布、重启或崩溃。它通过\
+    \ TarsNotify 显示。\n\n### 首次登录 -- 设置\n\n- 密码\n- 重复\n- 修改\n\n它还报告服务器之间的统计数据，控制流量、延迟和异常。它通过\
+    \ TarsStat 显示。\n\n![](img/b34f2ea2b492cd13eb13d7b15e1244c9_14_0.png)\n\n向 TarsProperty\
+    \ 报告属性。自定义属性包括内存大小、队列长度、缓存命中率等。\n\n| 时间 | 主机名称 | 主机 IP | 属性 | 特征值 | 特征值 |\n|---|---|---|---|---|---|\n\
+    | 1005 | tars.registry | % | tars.registry.mem size | % | 1084 | 1072 |\n| 1010\
+    \ | tars.registry | % | tars.registry.mem size | % | 1080 | 1068 |\n| 1015 | tars.registry\
+    \ | % | tars.registry.mem size | % | 1080 | 1064 |\n| 1020 | tars.registry | %\
+    \ | tars.registry.mem size | % | 1080 | 1052 |\n| 1025 | tars.registry | % | tars.registry.mem\
+    \ size | % | 1076 | 1052 |\n| 1030 | tars.registry | % | tars.registry.mem size\
+    \ | % | 1076 | 1048 |\n| 1035 | tars.registry | % | tars.registry.mem size | %\
+    \ | 1068 | 1044 |\n| 1040 | tars.registry | % | tars.registry.mem size | % | 1060\
+    \ | 1044 |\n\n## 生态系统组件：服务\n\n## 治理（过载保护）\n\n### 过载保护\n\n有时，海量请求或机器故障会导致系统溢出。为了提高系统吞吐量，服务器使用请求队列异步处理请求。服务器监控队列长度，如果长度超过阈值，服务器将拒绝新请求。如果请求在队列中长时间过久，服务器将丢弃该请求。\n\
+    \n![](img/b34f2ea2b492cd13eb13d7b15e1244c9_15_0.png)\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 8]
+
+
+    The framework nodes are a series of servers created to maintain good microservice
+    governance. Please note that the number of framework nodes is not fixed. Platform
+    operators need to deploy them on multiple machines at multiple places for fault
+    tolerance and disaster recovery. Moreover, the number of framework nodes depends
+    on the scale of application nodes. For example, if servers print a large amount
+    of data for logs, the number of log servers should be increased.
+
+
+    Framework nodes can be classified into several categories:
+
+
+    +   - **TarsWeb**
+
+    TarsWeb is a web management system, which monitors the runtime status of servers,
+    as well as starts, stops, deploys and publishes servers.
+
+    - **TarsRegistry**
+
+    TarsRegistry is the control/management server within the microservice cluster
+    that is responsible for service registration and discovery. TarsWeb uses TarsRegistry
+    to start, stop and publish servers. TarsRegistry also provides a naming service
+    and accepts heartbeat messages from servers. One server can query the address
+    (IP/port) of servers through TarsRegistry.
+
+    - **TarsPatch**
+
+    TarsPatch provides the publishing management service and uses it to publish a
+    specific version of the server.
+
+    - **TarsConfig**
+
+    TarsConfig works as a configuration center. It manages the service configuration
+    files of all servers.
+
+    - **TarsLog**
+
+    TarsLog provides remote log service. Server logs are sent to TarsLog, which stores
+    them for use.
+
+    - **TarsStat**
+
+    TarsStat provides data from servers such as workload, response time, out of time
+    ratio, etc. The monitoring service uses this data to discover abnormal servers
+    and to provide warnings.
+
+    - **TarsProperty**
+
+    Beyond statistics from TarsStat, users can define business related properties
+    for servers such as memory usage, queue size and cache hit-rate. The monitoring
+    service uses these statistics to discover abnormal servers and to provide warnings.'
+  - '[PAGE 9]
+
+
+    +   TarsNotify provides statistics with abnormal information from servers (such
+    as database failure), to discover abnormal servers and to provide warning.
+
+
+    The successful collaboration of the TarsRegistry, application nodes and framework
+    nodes allows TARS to perform its service governance tasks.
+
+
+    # Ecosystem Components: Service Governance (Service Register & Discovery)
+
+
+    # Service Register & Discovery
+
+
+    The TarsRegistry provides a naming service (a naming service can convert a name
+    into a physical address on a network, the most ubiquitous naming service in the
+    world is the DNS). The server is registered with TarsRegistry, and the client
+    gets the actual address from the server name. When the TarsNode cannot report
+    heartbeat due to breakdown, the naming service will no longer return the address
+    of the faulty application node to the client, and the client will automatically
+    make a decision according to the abnormal situation and shield the fault. When
+    the platform is in operation, servers cooperate with each other. Servers can either
+    interact with framework nodes or among themselves. Let''s discuss these two cases.
+
+
+    # Interactions between servers and framework nodes
+
+
+    The procedure for publishing servers:
+
+    When uploading the new package to be patched via the TarsWeb is successful, developers
+    issue a request to publish the package to the specified application nodes. Then,
+    TarsRegistry notifies TarsNode to transfer the package to the node. TarsNode shuts
+    down the old server and starts a new one. The procedure is shown as the dark blue
+    line in the figure below.'
+  - '[PAGE 10]
+
+
+    Administration commands:
+
+    Developers can send administration commands to a specified server via TarsWeb.
+    TarsWeb sends the commands to the TarsNode through TarsRegistry. Then, TarsNode
+    sends the commands to the server. The procedure is shown as the green line in
+    the figure below.
+
+
+    Heartbeat:
+
+    When a server is running, it sends a heartbeat message to TarsNode periodically.
+    Then, TarsNode forwards the message to TarsRegistry. The procedure is shown as
+    the black line in the figure below.
+
+
+    Information report:
+
+    When a server is running, it sends statistical information to TarsStat periodically.
+    It also prints logs to TarsLog, sends property information to TarsProperty and
+    sends abnormal information to TarsNotify. The procedure is shown as the light
+    blue line in the figure below.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_10_0.png)
+
+
+    # Interactions among servers'
+  - '[PAGE 11]
+
+
+    Servers register this information to TarsRegistry in advance. The client queries
+    this information from TarsRegistry and visits a server.
+
+
+    When a client (can be another server in TARS) tries to visit a server, it needs
+    to connect to the server and call remote functions by specifying the servant,
+    server IP and port.
+
+
+    Servant is a service provider which provides a number of specific interfaces for
+    clients to call. It is always displayed as an object name (e.g. HelloServer.HelloObj).
+    It will be described in detail in the later chapter.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_11_0.png)
+
+
+    # Ecosystem Components: Service
+
+
+    # Governance (Load Balance)
+
+
+    Load Balance
+
+
+    After the client gets the server IP:Port list via the TarsRegistry, it will use
+    a specified load balance policy to call the server. The supported load balance
+    policies are round-robin, hash and weighted policy.'
+  - '[PAGE 12]
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_12_0.png)
+
+
+    A round robin is an arrangement of choosing all elements in a group equally in
+    some rational order, usually from the top to the bottom of a list and starting
+    again at the top of the list and so on. A simple way to think of round robin is
+    that it is about "taking turns".
+
+
+    In computer science, consistent hashing is a special kind of hashing that when
+    a hash table is resized, only n/m keys need to be remapped on average where n
+    is the number of keys and m is the number of slots.
+
+
+    A weight function is a mathematical device used when performing a sum, integral,
+    or average to give some elements more "weight" or influence on the result than
+    other elements in the same set.
+
+
+    # Ecosystem Components: Service
+
+
+    # Governance (Service Configuration)
+
+
+    # Service Configuration
+
+
+    TARS makes it easy to use configuration with one line of code and visualization.
+
+
+    Service configurations are managed by TarsWeb. Developers can check the history
+    of changes for the particular configuration and rollback to a previous version,
+    if needed.'
+  - '[PAGE 13]
+
+
+    A configuration file is classified into the following four layers:
+
+
+    +   * APP Configuration
+
+    It is located at the top level and it''s the common configuration for all servers
+    under the same application.
+
+    * SET Configuration
+
+    It is the common configuration for servers under a specific SET group. It complements
+    the application configuration.
+
+    * Service Configuration
+
+    It is used for a specific server and it refers to the APP configuration.
+
+    * Node Configuration
+
+    It is used for a specified backend of a server. Service configuration and node
+    configuration are working together and are used by the backend.
+
+
+    # Ecosystem Components: Service Governance (Monitoring)
+
+
+    # Monitoring
+
+
+    TARS supports the following data report functions in order to monitor the quality
+    of the servers'' running status.
+
+
+    # Metric Monitor
+
+
+    It reports server status change and exception. We can check when the server is
+    published, restarted, or crashed. It is presented as TarsNotify in TARS.'
+  - '[PAGE 14]
+
+
+    # First Login -- Set [admin] Password
+
+
+    * Password
+
+
+    * Repeat password
+
+
+    Modify
+
+
+    It also reports invoking statistics among servers to control metrics such as flow,
+    delay, timeout and exception. It is presented as TarsStat in TARS.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_14_0.png)
+
+
+    It reports customized properties to TarsProperty. The customized properties can
+    include memory size, queue length, cache hit rate, etc.'
+  - '[PAGE 15]
+
+
+    | Time | master name | master IP | property | policy | characteristic value of
+    carr day | characteristic value of content day |
+
+    |---|---|---|---|---|---||}{
+
+    | 1005 | tars.registry | % | tars.registry.mem size | % | 1084 | 1072 |
+
+    | 1010 | tars.registry | % | tars.registry.mem size | % | 1080 | 1068 |
+
+    | 1015 | tars.registry | % | tars.registry.mem size | % | 1080 | 1064 |
+
+    | 1020 | tars.registry | % | tars.registry.mem size | % | 1080 | 1052 |
+
+    | 1025 | tars.registry | % | tars.registry.mem size | % | 1076 | 1052 |
+
+    | 1030 | tars.registry | % | tars.registry.mem size | % | 1076 | 1048 |
+
+    | 1035 | tars.registry | % | tars.registry.mem size | % | 1068 | 1044 |
+
+    | 1040 | tars.registry | % | tars.registry.mem size | % | 1060 | 1044 |
+
+
+    # # Ecosystem Components: Service
+
+
+    # # Governance (Overload Protection)
+
+
+    ### Overload Protection
+
+
+    Sometimes, massive requests or machine faults occur and the system overflows.
+    In order to improve system throughput, the server uses a request queue to process
+    requests asynchronously. Server monitors the length of the queue and if the length
+    exceeds a threshold, the server will refuse new requests. If a request stays in
+    the queue for a long time, the server will drop the request, to.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_15_0.png)'
+- md: '
+
+    ## Ecosystem Components: Service Governance (Fusing)
+
+
+    # Fusing
+
+
+    Fusing can be implemented in two ways:
+
+
+    - Excluded by the naming service.
+
+    - Blocked by a client.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_16_0.png)
+
+
+    ### Excluded by the naming service
+
+    Servers send heartbeats to TarsRegistry through TarsNode. If any server fails
+    to send heartbeats, TarsRegistry will remove it from server IP:Port list. It will
+    take about a minute to implement.
+
+
+    ### Blocked by a client
+
+    In order to exclude the failed server immediately, a client blocks the server
+    based on response from the server. More specifically, when a client calls a server
+    and requests are continuously timed out, the client removes the server from the
+    active server IP:Port list. Then, the client tries to reconnect to the failed
+    server, and if the server recovers, the client will add it to the active server
+    IP:Port list and send requests to it.
+
+
+    ## Ecosystem Components: Service Governance (SET Module)
+
+
+    # SET Module
+
+
+    To facilitate service management, TARS groups servers into SETs. Every SET is
+    the same as the other, and easy to scale. Clients can only send requests to servers
+    within the same SET. Thus, servers in different SETs can be isolated.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_17_0.png)
+
+
+    In the image presented above, we assume the capacity of one SET supporting 1 million
+    online users. While the number of online users reaches 3 million, TARS will scale
+    to 3 SETs and not affect the original one.
+
+
+    Advantage of the SET module:
+
+
+    - Standardization
+
+    - Prevents failure diffusion
+
+    - Efficient operation of massive services.
+
+
+    ## Ecosystem Components: Service Governance (Distributed Tracing)
+
+
+    ### Distributed Tracing
+
+
+    TARS supports tracing of a specific request of a server. The traced request is
+    labeled and forwarded to servers in the call chain. Servers report logs of traced
+    requests to the log server. We can then analyze these logs and debug them.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_18_0.png)
+
+
+    The image above illustrates a situation in which we want to trace requests including
+    the key ("uid","123456"). In order to do that, we can label the key and all requests
+    including this will automatically be labeled by the TARS framework. In addition,
+    all the logs with the labeled requests will be collected to the log server for
+    further analysis.
+
+
+    ## Ecosystem Components: Service Governance (Area Perception)
+
+
+    # Area Perception
+
+
+    The automatic area perception is a key to handle large latency in cross-IDC calls.
+    Please see the picture below. The IP of the client is 10.0.0.1. The client asks
+    TarsRegistry for addresses of log servers. According to the client''s IP, TarsRegistry
+    knows that the client is in Area-X and that IPs of log servers are 10.0.0.2:80
+    and 10.0.0.3:80. It will however exclude a log server with IP 11.0.0.1:80, because
+    it is located in Area-Y.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_19_0.png)
+
+
+    Advantages:
+
+
+    - Simple operation
+
+    - Reduced latency
+
+    - Reduced bandwidth costs
+
+    - Stronger disaster tolerance
+
+
+    ## Ecosystem Components: Service Governance (Log)
+
+
+    # Log
+
+
+    Log is a file (or several files) automatically created and maintained by a server
+    consisting of a list of activities it performed. TARS provides a function to let
+    the server print log to a remote log server.
+
+
+    ## Integrated DevOps Tools: Code Management
+
+
+    Code management usually means the management of the changes to source code. Changes
+    are usually identified by a number or letter code. TARS can integrate with other
+    code management tools to control the revision of the source code.
+
+
+    ## Integrated DevOps Tools: Continuous Integration, Continuous Delivery, Continuous
+    Deployment
+
+
+    Continuous Integration (CI) and Continuous Deployment or Continuous Delivery (CD)
+    are usually known as CI/CD. Continuous Integration uses automation tools that
+    empower development teams to build and test code after each merge as seamlessly
+    as possible. Focused on keeping the code ready to deploy at any given time, Continuous
+    Delivery is a natural follow-up to CI. Continuous Deployment is an idea of constant
+    and automated production deployment of every change to the code. TARS can integrate
+    with other CI/CD tools to implement that.
+
+
+    # Language
+
+
+    TARS supports many programming languages, including C++, Java, Node.js, PHP, Go
+    and Python. This allows programs written in different languages or available on
+    different platforms to efficiently communicate with each other.
+
+
+    ## Applications on TARS
+
+
+    Most applications, regardless of the industry, can be deployed on TARS. These
+    applications include AI, deep learning, edge, etc. Let’s consider a few different
+    use cases.
+
+
+    ### Applications on TARS: E-sport
+
+
+    With the development of esports, the number of online games has increased. Under
+    such circumstances game architectures had to become more expandable and scalable;
+    however, not all applications were able to handle this situation without influencing
+    existing users. Successful management of the growing number of servers became
+    one of the most common issues for the esport industry.
+
+
+    That''s where TARS SET grouping feature comes into play. As we mentioned before,
+    servers in TARS are isolated, and when the server scales up, it has no effect
+    on existing processes.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_22_0.png)
+
+
+    For instance, we assume the capacity of one SET is supporting 1,000 online users.
+    When the number of online users reaches 5,000K, we will be able to scale-up to
+    five SETs, and it won''t affect the original one.
+
+
+    ### Applications on TARS: Online Streaming
+
+
+    In the case of online streaming, one common issue includes a sudden increase in
+    the number of requests.
+
+
+    For instance, during the NBA season (match days and particularly the finals) online
+    TV platforms can observe traffic that would be a hundred times bigger compared
+    to the non-match days.
+
+
+    ### Traffic during NBA Live, 2019
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_23_0.png)
+
+
+    To address this problem, many online streaming vendors choose TARS because of
+    its naming service and load balance features that support automatic scheduling.
+    If the number of requests is near the threshold, it will scale up; if the balance
+    is lower than the value, it will scale down. This solution helps reduce waste
+    of resources.
+
+
+    ### Applications on TARS: FinTech
+
+
+    In recent years, the financial industry, including banking, insurance, securities,
+    etc., has applied the microservices architecture to many of its services, including
+    mobile banking and Internet banking.
+
+
+    FinTech companies recognized TARS’ benefits including but not limited to:
+
+
+    - Cost reduction
+
+    - Ability to scale systems up and down depending on the needs
+
+    - High performance
+
+    - Data consistency
+
+
+    ### Applications on TARS: Edge Computing
+
+
+    A time-critical application cannot allow the long latency raised by long-distance
+    data transfer. It is also unnecessary and inefficient for Huge Data Long-distance
+    Transfer between the end user and traditional Data Center, and the long latency
+    should be reduced.
+
+
+    TARS provides the PaaS layer and high-performance RPC calls. It efficiently deploys
+    microservices in larger scale-out scenarios, and provides easy-to-understand service
+    monitor features to support complex logic servers. Building applications on MEC
+    (multi-access edge computing) can be a key to solve the issues related to cloud
+    gaming or vehicle-to-everything technology.
+
+
+    # TARS MEC Platform
+
+
+    # TARS
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_24_0.png)
+
+
+    ### Applications on TARS: Telecommunications
+
+
+    5G network is based on the technical concepts of service-oriented architecture
+    (SOA), microservices and virtualization.
+
+
+    It transforms 4G network architecture which is based on point-to-point tight coupling
+    into a new service-based loosely coupled architecture based on service registration,
+    service discovery, and serviced interfaces. All of which are managed by TarsWeb,
+    which is convenient for operators.
+
+
+    The flexibility of the TARS framework facilitates the adaptation of other protocols
+    that 5G may use in the future. TARS can also add a communication protocol in a
+    plug-in manner in order to achieve rapid and agile development iteration in the
+    5G protocol.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_25_0.png)
+
+    '
+  mdcn: '
+
+
+    ## 生态组件：服务治理（熔断）
+
+
+    # 熔断 (Fusing)
+
+
+    熔断可以通过两种方式实现：
+
+
+    - 由命名服务排除。
+
+    - 由客户端阻塞。
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_16_0.png)
+
+
+    ### 由命名服务排除
+
+    服务器通过 TarsNode 向 TarsRegistry 发送心跳。如果任何服务器未能发送心跳，TarsRegistry 将将其从服务器 IP:Port
+    列表中移除。这大约需要一分钟来实现。
+
+
+    ### 由客户端阻塞
+
+    为了立即排除故障服务器，客户端会根据服务器的响应来阻塞该服务器。具体而言，当客户端调用服务器且请求持续超时时，客户端会将该服务器从活跃服务器 IP:Port
+    列表中移除。然后，客户端会尝试重新连接到该故障服务器，如果服务器恢复，客户端将将其添加到活跃服务器 IP:Port 列表中并向其发送请求。
+
+
+    ## 生态组件：服务治理（SET 模块）
+
+
+    # SET 模块
+
+
+    为了方便服务管理，TARS 将服务器分为不同的 SET。每个 SET 都是相同的，并且易于扩展。客户端只能向同一 SET 内的服务器发送请求。因此，不同 SET
+    之间的服务器可以相互隔离。
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_17_0.png)
+
+
+    在图中，我们假设一个 SET 的容量可以支持 100 万在线用户。当在线用户达到 300 万时，TARS 将扩展到 3 个 SET，而不会影响原来的那个。
+
+
+    SET 模块的优势：
+
+
+    - 标准化
+
+    - 防止故障扩散
+
+    - 大规模服务的高效运行。
+
+
+    ## 生态组件：服务治理（分布式链路）
+
+
+    ### 分布式链路 (Distributed Tracing)
+
+
+    TARS 支持对特定的特定请求进行追踪。被追踪的请求会被标记并转发到调用链中的服务器。服务器将追踪请求的日志报告到日志服务器。然后我们就可以分析这些日志并进行调试。
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_18_0.png)
+
+
+    上面的图片展示了我们想要追踪包含键 ("uid","123456") 的请求的情况。为了实现这一点，我们可以标记该键，所有包含该键的请求将由 TARS 框架自动标记。此外，所有带有标记请求的日志将被收集到日志服务器以便进一步分析。
+
+
+    ## 生态组件：服务治理（区域感知）
+
+
+    # 区域感知 (Area Perception)
+
+
+    自动区域感知是处理跨 IDC 调用大延迟的关键。请看下面的图。客户端的 IP 为 10.0.0.1。客户端向 TarsRegistry 请求日志服务器的地址。根据客户端的
+    IP，TarsRegistry 知道客户端位于 Area-X，且日志服务器的 IP 为 10.0.0.2:80 和 10.0.0.3:80。但它会排除 IP
+    为 11.0.0.1:80 的日志服务器，因为它位于 Area-Y。
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_19_0.png)
+
+
+    优势：
+
+
+    - 操作简单
+
+    - 降低延迟
+
+    - 降低带宽成本
+
+    - 更强的容灾能力
+
+
+    ## 生态组件：服务治理（日志）
+
+
+    # 日志 (Log)
+
+
+    日志是由服务器自动创建并维护的文件（或多个文件），由其执行的活动列表组成。TARS 提供了一个函数让服务器将日志打印到远程日志服务器。
+
+
+    ## 集成 DevOps 工具：代码管理
+
+
+    代码管理通常意味着对源代码更改的管理。更改通常通过数字或字母代码来标识。TARS 可以与其他代码管理工具集成，以控制源码的版本。
+
+
+    ## 集成 DevOps 工具：持续集成、持续交付、持续部署
+
+
+    持续集成 (CI) 和持续部署或持续交付 (CD) 通常被称为 CI/CD。持续集成使用自动化工具，赋能开发团队在每次合并后尽可能无缝地构建和测试代码。持续交付专注于保持代码在任何时候都处于就绪部署状态，是
+    CI 的自然衔接。持续部署是一种对代码的每项更改进行持续和自动化生产部署的想法。TARS 可以与其它 CI/CD 工具集成来实现这一点。
+
+
+    # 语言
+
+
+    TARS 支持许多编程语言，包括 C++、Java、Node.js、PHP、Go 和 Python。这使得用不同语言编写或在不同平台上提供的程序能够高效地相互通信。
+
+
+    ## TARS 上的应用
+
+
+    无论行业如何，大多数应用程序都可以部署在 TARS 上。这些应用包括 AI、深度学习、边缘计算等。让我们考虑几个不同的用例。
+
+
+    ### TARS 上的应用：电竞
+
+
+    随着电竞的发展，在线游戏数量不断增加。在这种情况下，游戏架构必须变得更具扩展性和伸缩性；然而，并非所有的应用都能不影响现有用户的情况下处理这种情况。成功管理数量日益增长的服务器已成为电竞行业最常见的问题之一。
+
+
+    这就是 TARS SET 分组功能大显身手的地方。正如我们之前提到的，TARS 中的服务器是隔离的，当服务器扩展时，它对现有进程不会产生影响。
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_22_0.png)
+
+
+    例如，我们假设一个 SET 的容量是支持 100 万在线用户。当在线用户达到 500 万时，TARS 将扩展到 5 个 SET，而不会影响原来的那个。
+
+
+    ### TARS 上的应用：在线直播
+
+
+    随着在线直播的发展，直播的案例中一个常见问题是请求数量的激增。
+
+
+    例如，在 NBA 赛季期间（特别是决赛），在线电视平台观察到的流量可能是非赛日的十倍。
+
+
+    ### 2019 年 NBA 直播期间流量
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_23_0.png)
+
+
+    为了解决这个问题，许多直播平台选择 TARS，是因为其支持自动调度的负载均衡。如果请求接近阈值，它将扩展；如果负载低于值，它将收缩。这种解决方案有助于减少资源浪费。
+
+
+    ### TARS 上的应用：金融科技
+
+
+    近年来，包括银行、保险、证券在内的金融行业已将其微服务应用于许多业务，包括移动银行和网上银行。金融科技公司认可 TARS 的优点包括但不限于：
+
+
+    - 降低成本
+
+    - 根据需要伸缩系统
+
+    - 高性能
+
+    - 数据一致性
+
+
+    ### TARS 上的应用：边缘计算
+
+
+    时间敏感型应用不允许长距离传输引起的长延迟。对于终端与传统数据中心之间的海量数据长距离传输也是不必要且低效的，应该减少延迟。
+
+
+    TARS 提供了 PaaS 层和高性能 RPC 调用。它在大规模扩展场景中高效部署微服务，并提供易于理解的服务监控功能支持复杂的逻辑。在 MEC（多接入边缘计算）上构建应用可以是解决云游戏或车联网技术相关问题的关键。
+
+
+    # TARS MEC 平台
+
+
+    # TARS
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_24_0.png)
+
+
+    ### TARS 上的应用：电信
+
+
+    5G 网络基于面向服务的架构 (SOA)、微服务和虚拟化技术概念。
+
+
+    它将基于点对点紧耦合的 4G 网络架构转变为基于服务注册、服务发现和服务接口的新型松耦合架构。所有这些都由 TarsWeb 管理，对运营商来说非常方便。
+
+
+    TARS 框架的灵活性有助于适应 5G 可能使用的其他协议。TARS 还可以以插件方式添加通信协议，以实现 5G 协议快速、敏捷的开发迭代。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 16]
+
+
+    # Ecosystem Components: Service Governance (Fusing)
+
+
+    # Fusing
+
+
+    Fusing can be implemented in two ways:
+
+
+    +   - Excluded by the naming service.
+
+    - Blocked by a client.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_16_0.png)
+
+
+    Excluded by the naming service
+
+    Servers send heartbeats to TarsRegistry through TarsNode. If any server fails
+    to send heartbeats, TarsRegistry will remove it from server IP:Port list. It will
+    take about a minute to implement.
+
+
+    # Blocked by a client
+
+
+    In order to exclude the failed server immediately, a client blocks the server
+    based on response from the server. More specifically, when a client calls a server
+    and requests are continuously timed out, the client removes the server from the
+    active server IP:Port list. Then, the client tries to reconnect to the failed
+    server, and if the server recovers, the client will add it to the active server
+    IP:Port list and send requests to it.'
+  - '[PAGE 17]
+
+
+    # Ecosystem Components: Service
+
+    Governance (SET Module)
+
+
+    # SET Module
+
+
+    To facilitate service management, TARS groups servers into SETs. Every SET is
+    the same as the other, and easy to scale. Clients can only send requests to servers
+    within the same SET. Thus, servers in different SETs can be isolated.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_17_0.png)
+
+
+    In the image presented above, we assume the capacity of one SET supporting 1 million
+    online users. While the number of online users reaches 3 million, TARS will scale
+    to 3 SETs and not affect the original one.
+
+
+    Advantage of the SET module:
+
+
+    +   * Standardization
+
+    * Prevents failure diffusion
+
+    * Efficient operation of massive services.'
+  - '[PAGE 18]
+
+
+    # # Ecosystem Components: Service Governance (Distributed Tracing)
+
+
+    ### Distributed Tracing
+
+
+    TARS supports tracing of a specific request of a server. The traced request is
+    labeled and forwarded to servers in the call chain. Servers report logs of traced
+    requests to the log server. We can then analyze these logs and debug them.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_18_0.png)
+
+
+    The image above illustrates a situation in which we want to trace requests including
+    the key ("uid","123456"). In order to do that, we can label the key and all requests
+    including this will automatically be labeled by the TARS framework. In addition,
+    all the logs with the labeled requests will be collected to the log server for
+    further analysis.'
+  - '[PAGE 19]
+
+
+    # # Ecosystem Components: Service Governance (Area Perception)
+
+
+    # ## Area Perception
+
+
+    The automatic area perception is a key to handle large latency in cross-IDC calls.
+    Please see the picture below. The IP of the client is 10.0.0.1. The client asks
+    TarsRegistry for addresses of log servers. According to the client''s IP, TarsRegistry
+    knows that the client is in Area-X and that IPs of log servers are 10.0.0.2:80
+    and 10.0.0.3:80. It will however exclude a log server with IP 11.0.0.1:80, because
+    it is located in Area-Y.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_19_0.png)
+
+
+    Advantages:
+
+
+    +   - Simple operation
+
+    - Reduced latency
+
+    - Reduced bandwidth costs
+
+    - Stronger disaster tolerance'
+  - '[PAGE 20]
+
+
+    # Ecosystem Components: Service
+
+
+    # Governance (Log)
+
+
+    # Log
+
+
+    Log is a file (or several files) automatically created and maintained by a server
+    consisting of a list of activities it performed. TARS provides a function to let
+    the server print log to a remote log server.
+
+
+    # Integrated DevOps Tools: Code Management
+
+
+    Code management usually means the management of the changes to source code. Changes
+    are usually identified by a number or letter code. TARS can integrate with other
+    code management tools to control the revision of the source code.
+
+
+    # Integrated DevOps Tools: Continuous Integration, Continuous Delivery, Continuous
+    Deployment
+
+
+    Continuous Integration (CI) and Continuous Deployment or Continuous Delivery (CD)
+    are usually known as CI/CD. Continuous Integration uses automation tools that
+    empower development teams to build and test code after each merge as seamlessly
+    as possible. Focused on keeping the code ready to deploy at any given time, Continuous
+    Delivery is a natural follow-up to CI. Continuous Deployment is an idea of constant
+    and automated production deployment of every change to the code. TARS can integrate
+    with other CI/CD tools to implement that.'
+  - '[PAGE 21]
+
+
+    # Language
+
+
+    TARS supports many programming languages, including C++, Java, Node.js, PHP, Go
+    and Python. This allows programs written in different languages or available on
+    different platforms to efficiently communicate with each other.
+
+
+    # Applications on TARS
+
+
+    Most applications, regardless of the industry, can be deployed on TARS. These
+    applications include AI, deep learning, edge, etc. Let’s consider a few different
+    use cases.
+
+
+    # Applications on TARS: E-sport
+
+
+    With the development of esports, the number of online games has increased. Under
+    such circumstances game architectures had to become more expandable and scalable;
+    however, not all applications were able to handle this situation without influencing
+    existing users. Successful management of the growing number of servers became
+    one of the most common issues for the esport industry.
+
+
+    That''s where TARS SET grouping feature comes into play. As we mentioned before,
+    servers in TARS are isolated, and when the server scales up, it has no effect
+    on existing processes.'
+  - '[PAGE 22]
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_22_0.png)
+
+
+    For instance, we assume the capacity of one SET is supporting 1,000 online users.
+    When the number of online users reaches 5,000K, we will be able to scale-up to
+    five SETs, and it won''t affect the original one.
+
+
+    # # Applications on TARS: Online Streaming
+
+
+    In the case of online streaming, one common issue includes a sudden increase in
+    the number of requests.
+
+
+    For instance, during the NBA season (match days and particularly the finals) online
+    TV platforms can observe traffic that would be a hundred times bigger compared
+    to the non-match days.'
+  - '[PAGE 23]
+
+
+    # # Traffic during NBA Live,2019
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_23_0.png)
+
+
+    To address this problem, many online streaming vendors choose TARS because of
+    its naming service and load balance features that support automatic scheduling.
+    If the number of requests is near the threshold, it will scale up; if the balance
+    is lower than the value, it will scale down. This solution helps reduce waste
+    of resources.
+
+
+    # ## Applications on TARS: FinTech
+
+
+    In recent years, the financial industry, including banking, insurance, securities,
+    etc., has applied the microservices architecture to many of its services, including
+    mobile banking and Internet banking.
+
+
+    FinTech companies recognized TARS’ benefits including but not limited to:'
+  - '[PAGE 24]
+
+
+    +   - Cost reduction
+
+    - Ability to scale systems up and down depending on the needs
+
+    - High performance
+
+    - Data consistency
+
+
+    # Applications on TARS: Edge Computing
+
+
+    A time-critical application cannot allow the long latency raised by long-distance
+    data transfer. It is also unnecessary and inefficient for Huge Data Long-distance
+    Transfer between the end user and traditional Data Center, and the long latency
+    should be reduced.
+
+
+    TARS provides the PaaS layer and high-performance RPC calls. It efficiently deploys
+    microservices in larger scale-out scenarios, and provides easy-to-understand service
+    monitor features to support complex logic servers. Building applications on MEC
+    (multi-access edge computing) can be a key to solve the issues related to cloud
+    gaming or vehicle-to-everything technology.
+
+
+    # TARS MEC Platform
+
+
+    # TARS
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_24_0.png)'
+  - '[PAGE 25]
+
+
+    # Applications on TARS: Telecommunications
+
+
+    5G network is based on the technical concepts of service-oriented architecture
+    (SOA), microservices and virtualization.
+
+
+    It transforms 4G network architecture which is based on point-to-point tight coupling
+    into a new service-based loosely coupled architecture based on service registration,
+    service discovery, and serviced interfaces. All of which are managed by TarsWeb,
+    which is convenient for operators.
+
+
+    The flexibility of the TARS framework facilitates the adaptation of other protocols
+    that 5G may use in the future. TARS can also add a communication protocol in a
+    plug-in manner in order to achieve rapid and agile development iteration in the
+    5G protocol.
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_25_0.png)'
+- md: '
+
+    ## Applications on TARS: AI
+
+
+    Large computing resources are needed in machine learning. If they cannot be allocated
+    or recycled in time, computing efficiency will be affected or resources will be
+    wasted. Thus, intelligent scheduling plays a significant role in AI.
+
+
+    TARS can distribute computing resources to machine learning tasks dynamically
+    and automatically. Moreover, samples will be transferred by P2P server and results
+    are stored in Ceph or HDFS. That way, developers need to focus only on samples,
+    parameters, etc.
+
+
+    ## AI Computing Cluster
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_26_0.png)
+
+
+    ## Microservice Frameworks Comparison
+
+
+    When considering a microservice framework to choose, the following features are
+    often taken into account: service governance and programming language support.
+    Let''s consider a few different options:
+
+
+    - No service governance, RPC calls
+
+    While many frameworks under this category support multiple programming languages,
+    they don''t offer support around service governance issues. Examples of such frameworks
+    include gRPC and Thrift.
+
+
+    - Service governance available, one programming language supported
+
+    In this case, users are required to integrate different open source projects to
+    ensure that service needs are met. Spring Cloud is a symbol of this category because
+    it only supports Java.
+
+
+    - Service governance available, multiple programming languages support through
+    the sidecar pattern (Service Mesh)
+
+    Here, in order to address communication problems, it is recommended to encapsulate
+    a communication component. The downside to this solution is that it increases
+    architecture complexity and maintenance. Examples include Istio and Envoy.
+
+
+    - Service governance available, multiple programming languages support
+
+    This category is self-explanatory. TARS is a microservices framework that not
+    only solves service governance problems but also provides multiple programming
+    languages support. These two features determine TARS’ strength. Different from
+    Kubernetes, which is container orchestration and works in IaaS, TARS is working
+    in PaaS. However, TARS can also run on Kubernetes (we will discuss it in more
+    detail in the next chapter).
+
+    '
+  mdcn: '
+
+
+    ## TARS 上的应用：AI
+
+
+    机器学习需要大量的计算资源。如果无法及时分配或回收这些资源，将影响计算效率或导致资源浪费。因此，智能调度在 AI 领域起着至关重要的作用。
+
+
+    TARS 可以动态、自动地将计算资源分配给机器学习任务。此外，样本将通过 P2P 服务器进行传输，结果则存储在 Ceph 或 HDFS 中。这样一来，开发者只需要关注样本、参数等内容。
+
+
+    ## AI 计算集群
+
+
+    ![](img/b34f2ea2b492cd13eb13d7b15e1244c9_26_0.png)
+
+
+    ## 微服务框架对比
+
+
+    在考虑选择微服务框架时，通常会考虑以下特性：服务治理和编程语言支持。让我们来看几种不同的选项：
+
+
+    - 无服务治理，支持 RPC 调用
+
+    虽然此类类别中的许多框架支持多种编程语言，但它们不提供围绕服务治理问题的支持。此类框架的示例包括 gRPC 和 Thrift。
+
+
+    - 可服务治理，仅支持一种编程语言
+
+    在这种情况下，用户需要集成不同的开源项目来确保服务需求。Spring Cloud 是该类别的代表，因为它只支持 Java。
+
+
+    - 可服务治理，通过 sidecar 模式（Service Mesh）支持多种编程语言
+
+    在这里，为了解决通信问题，建议封装通信组件。该方案的缺点是增加了架构的复杂性和维护成本。示例包括 Istio 和 Envoy。
+
+
+    - 可服务治理，支持多种编程语言
+
+    此类类别不言自明。TARS 是一个微服务框架，不仅解决了服务治理问题，还提供了对多种编程语言的支持。这两个特性决定了 TARS 的优势。与容器编排且运行在
+    IaaS 上的 Kubernetes 不同，TARS 运行在 PaaS 层。不过，TARS 也可以运行在 Kubernetes 上（我们将在下一章详细讨论）。
+
+
+    '
+  merge: 0
+  raw:
+  - "[PAGE 26]\n\n# Applications on TARS: AI\n\nLarge computing resources are needed\
+    \ in machine learning. If they cannot be allocated or recycled in time, computing\
+    \ efficiency will be affected or resources will be wasted. Thus, intelligent scheduling\
+    \ plays a significant role in AI.\n\nTARS can distribute computing resources to\
+    \ machine learning tasks dynamically and automatically. Moreover, samples will\
+    \ be transferred by P2P server and results are stored in Ceph or HDFS. That way,\
+    \ developers need to focus only on samples, parameters, etc.\n\n# AI Computing\
+    \ Cluster\n\n![](img/b34f2ea2b492cd13eb13d7b15e1244c9_26_0.png)\n\n# Microservice\
+    \ Frameworks Comparison\n\nWhen considering a microservice framework to choose,\
+    \ the following features are often taken into account: service governance and\
+    \ programming language support. Let's consider a few different options:\n\n+ \
+    \  - No service governance, RPC calls\n  While many frameworks under this category\
+    \ support multiple programming languages, they don't offer support around service"
+  - '[PAGE 27]
+
+
+    governance issues. Examples of such frameworks include gRPC and Thrift.
+
+
+    +   * Service governance available, one programming language supported
+
+    In this case, users are required to integrate different open source projects to
+    ensure that service needs are met. Spring Cloud is a symbol of this category because
+    it only supports Java.
+
+
+    +   * Service governance available, multiple programming languages support through
+    the sidecar pattern (Service Mesh)
+
+    Here, in order to address communication problems, it is recommended to encapsulate
+    a communication component. The downside to this solution is that it increases
+    architecture complexity and maintenance. Examples include Istio and Envoy.
+
+
+    +   * Service governance available, multiple programming languages support
+
+    This category is self-explanatory. TARS is a microservices framework that not
+    only solves service governance problems but also provides multiple programming
+    languages support. These two features determine TARS’ strength. Different from
+    Kubernetes, which is container orchestration and works in IaaS, TARS is working
+    in PaaS. However, TARS can also run on Kubernetes (we will discuss it in more
+    detail in the next chapter).'
