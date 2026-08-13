@@ -1,0 +1,380 @@
+- - '#'
+  - Linux 杂志 270 期 2023-05 美国版
+- - '#'
+  - 社论
+- - '#'
+  - 更完善的边界
+- - '###'
+  - Flathub 已获得 10 万美元资金，并目标是再筹集 15 万。目标是为更高的运营成本做准备，并实现全职员工。这发生在 Canonical 宣布之后...（此处略）...
+- - '#'
+  - Debian 12 将搭载 KDE Plasma 5.27
+- - '##'
+  - Linux 新闻
+- - '##'
+  - openSUSE Leap 15.5 Beta
+- - '##'
+  - Kubuntu 团队发布新微型桌面
+- - '#'
+  - 内核新闻
+- - '###'
+  - 测试中的 TUXEDOS OS 2 预览版
+- - '###'
+  - Sniffnet
+- - '###'
+  - 流量监控
+- - '###'
+  - Linux 流量队列 (NFQUEUE)
+- - '##'
+  - 深度解析
+- - '##'
+  - Sniffnet
+- - '##'
+  - 完整
+- - '##'
+  - 信息
+- - '#'
+  - David L. Lawrence 会中心
+- - '##'
+  - 深度解析
+- - '##'
+  - MIPI 与 Linux
+- - '##'
+  - Linux 上 MIPI 摄像头的灾难
+- - '##'
+  - 实验时间 (Tinker Time)
+- - '##'
+  - 问题的本质
+- - '##'
+  - 未知的巨头
+- - '#'
+  - 深度解析
+- - '##'
+  - MIPI 摄像头与 Linux
+- - '##'
+  - 出路
+- - '###'
+  - 7.1. 像素率 (Pixel rate)
+- - '###'
+  - 7.2. LP-PI 和 LP-111 驱动
+- - '###'
+  - 7.3. CSI2 发送器驱动
+- - '##'
+  - 内核模块
+- - '#'
+  - 针对真实网络的真实解决方案
+- - '##'
+  - ADMIN 网络与安全 OpenStack
+- - '##'
+  - ADMIN 网络与安全 systemd 安全
+- - '##'
+  - ADMIN 网络与安全 企业级自动化
+- - '##'
+  - ADMIN 网络与安全 Terraform
+- - '##'
+  - ADMIN 网络与安全 Kubernetes
+- - '##'
+  - ADMIN 网络与安全 数据库
+- - '#'
+  - 每年 6 期！立即订购
+- - '##'
+  - 一个命令行字典工具
+- - '###'
+  - Wordsmith
+- - '###'
+  - '来自《Moby Dick II》，作者 Grady Ward, 1.0 [moby-thesaurus]:'
+- - '###'
+  - 信息
+- - '###'
+  - 作者
+- - '###'
+  - 限制性
+- - '###'
+  - 深度解析 ELF 格式
+- - '###'
+  - 4 深度解析 ELF 格式
+- - '##'
+  - 深度解析 ELF 格式
+- - '###'
+  - 深入解析 ELF 格式
+- - '###'
+  - ELF Quest
+- - '#'
+  - ELF 文件格式
+- - '#'
+  - ELF 文件的布局
+- - '#'
+  - ELF 文件头
+- - '#'
+  - '列表 2: 程序头'
+- - '#'
+  - 深度解析
+- - '##'
+  - ELF 格式
+- - '#'
+  - '表 1: 常见节的名称'
+- - '#'
+  - ELF 文件格式
+- - '##'
+  - 节的内容
+- - '##'
+  - 列表 6：重定位
+- - '##'
+  - 导出与导入符号
+- - '##'
+  - 列表 7：导入与导出符号
+- - '##'
+  - 表 2：readelf 开关
+- - '##'
+  - 调试手工的 ELF 镜像
+- - '##'
+  - 信息
+- - '##'
+  - 结论
+- - '##'
+  - 作者
+- - '##'
+  - Linux 杂志订阅
+- - '##'
+  - 深度解析
+- - '##'
+  - 系统 Flatpak 更新
+- - '##'
+  - 快速安装
+- - '##'
+  - 列表 5：全系统定时器
+- - '#'
+  - update-flatpak.timer
+- - '#'
+  - /etc/system/system/
+- - '##'
+  - Systemd 定时器
+- - '##'
+  - 列表 5：全系统定时器
+- - '#'
+  - update-flatpak.timer
+- - '#'
+  - /etc/system/system/
+- - '##'
+  - 启用定时器
+- - '##'
+  - 深度解析
+- - '##'
+  - 让 AI 聊天机器人来工作
+- - '##'
+  - 机器语言
+- - '##'
+  - ELIZA 2.0
+- - '##'
+  - 作者
+- - '##'
+  - 编程快照 – ChatGPT
+- - '##'
+  - 并行编程：充分利用 Go 的威力
+- - '##'
+  - 终端作为客户端
+- - '##'
+  - API 密钥
+- - '##'
+  - 深度解析
+- - '##'
+  - 对象导向
+- - '##'
+  - 提示与完成
+- - '##'
+  - 默认
+- - '##'
+  - 身份验证
+- - '##'
+  - OpenAI
+- - '##'
+  - 完成
+- - '##'
+  - ChatGPT
+- - '##'
+  - 列表
+- - '####'
+  - 'List 1: openai-go'
+- - '####'
+  - 'List 2: chat-go'
+- - '##'
+  - 编程快照 - ChatGPT
+- - '##'
+  - 列表 3：创建二进制文件
+- - '##'
+  - 设置创造力温度
+- - '##'
+  - 听你指挥翻译
+- - '##'
+  - 深度解析
+- - '##'
+  - 列表 4：french.go
+- - '##'
+  - 列表 5：var.sh
+- - '##'
+  - 硬性限制
+- - '#'
+  - 深度解析
+- - '#'
+  - 更简单的数据包过滤器
+- - '#'
+  - 流量规则
+- - '#'
+  - 删除与创建
+- - '#'
+  - 基础配置
+- - '#'
+  - 列表 1：定义防火墙
+- - '#'
+  - 列表 2：进入入站数据包
+- - '###'
+  - 允许端口 22 的入站数据包。
+- - '###'
+  - '使用 iptables:'
+- - '#'
+  - iptables -A INPUT -p tcp --dport 22 -m con --state NEW,ESTABLISHED -j ACCEPT
+- - '#'
+  - iptables -A OUTPUT -p tcp --sport 22 -m con --state ESTABLISHED -j ACCEPT
+- - '###'
+  - '使用 nft:'
+- - '#'
+  - nft add rule ip filter input tcp dport 22 ct established, accept
+- - '#'
+  - 列表 3：添加两个端口
+- - '#'
+  - nft add rule ip filter input tcp dport { 22, 80, 443 } ct established, accept
+- - '#'
+  - 基础操作
+- - '#'
+  - 深度解析
+- - '#'
+  - Info
+- - '#'
+  - 结论
+- - '#'
+  - 保存与恢复
+- - '#'
+  - 作者
+- - '#'
+  - 致谢
+- - '#'
+  - 列表 4：保存 nftables 配置
+- - '#'
+  - nft list ruleset > firewall.config
+- - '#'
+  - '# nft -f firewall.config'
+- - '#'
+  - 列表 5：配置规则
+- - '#'
+  - iptables-translate -A INPUT -p tcp --dport 22 -m count --ctstate accept -j ACCEPT
+- - '#'
+  - iptables-translate -A FORWARD -i eth0 -o eth3 -p udp -m multiport 111,222 -j ACCEPT
+- - '#'
+  - 创客空间 (MakerSpace)
+- - '##'
+  - 花园游猎
+- - '##'
+  - 功能
+- - '##'
+  - 结构
+- - '##'
+  - 零件列表
+- - '##'
+  - 野生动物照外相机 创客空间
+- - '##'
+  - 实时时钟
+- - '#'
+  - 创客空间 (MakerSpace)
+- - '#'
+  - 制作 (Whip It Up)
+- - '#'
+  - 快速
+- - '#'
+  - 创客空间 Whiptail
+- - '#'
+  - 列表 1：Whiptail 菜单
+- - '#'
+  - 01 /bin/bash
+- - '#'
+  - '02'
+- - '#'
+  - 03 wmmenu.sh - 带有诊断工具的 Whiptail 菜单
+- - '#'
+  - '04'
+- - '#'
+  - '05'
+- - '#'
+  - 06 true
+- - '#'
+  - 07 -do
+- - '#'
+  - 08 selection=\$(whiptail --title "Diagnostics" -nocancel
+- - '#'
+  - '10'
+- - '#'
+  - '11'
+- - '#'
+  - '12 # 对所选的菜单项执行操作'
+- - '#'
+  - 13 case selection in
+- - '#'
+  - 14 "df")
+- - '#'
+  - 15 whiptail --title "Disk Space" --msgbox "$(df -h)" 0 0
+- - '#'
+  - '16'
+- - '#'
+  - 17 "vmstat")
+- - '#'
+  - 18 whiptail --title "Memory Stats" --msgbox "$(vmstat)" 0 0
+- - '#'
+  - '19'
+- - '#'
+  - 20 "usb")
+- - '#'
+  - 21 whiptail --title "USB Devices" --msgbox "$(usb)" 0 0
+- - '#'
+  - '22'
+- - '#'
+  - 23 "Exit")
+- - '#'
+  - '24'
+- - '#'
+  - '25'
+- - '#'
+  - 26 esac
+- - '#'
+  - 树莓派诊断
+- - '#'
+  - 诊断工具菜单
+- - '#'
+  - 列表 4：Bash DHT11 传感器项目
+- - '#'
+  - 总结
+- - '#'
+  - 信息
+- - '#'
+  - 作者
+- - '#'
+  - LINUX VOICE（Linux 之声）
+- - '#'
+  - LINUXVOICE
+- - '#'
+  - ELVIE
+- - '#'
+  - LINUX DOGHOUSE - OLD FARIFTS
+- - '#'
+  - 使用 floccus 和 LinkAce 进行书签管理
+- - '#'
+  - 保存与分类
+- - '#'
+  - floccus
+- - '#'
+  - 备份
+- - '#'
+  - 创建账户
+- - '#'
+  - 你想同步？
+- - '#'
+  - 同步策略
+- - '#'
+  - 同步
