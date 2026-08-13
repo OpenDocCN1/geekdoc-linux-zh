@@ -1,0 +1,328 @@
+- - '#'
+  - Oracle Database 11g R2：分步安装指南
+- - '#'
+  - 提交您的意见
+- - '#'
+  - 前言
+- - '#'
+  - 目标读者
+- - '#'
+  - 文档可用性
+- - '#'
+  - 术语
+- - '#'
+  - 排版惯例
+- - '#'
+  - 命令语法
+- - '#'
+  - 访问文档
+- - '#'
+  - 平台特定文档
+- - '#'
+  - 产品文档
+- - '#'
+  - 相关文档
+- - '#'
+  - 安装概述
+- - '##'
+  - 安装概述
+- - '##'
+  - Oracle Client 安装方法
+- - '###'
+  - 交互式安装方法
+- - '###'
+  - 使用响应文件的自动化方法
+- - '#'
+  - Oracle Client 安装类型
+- - '##'
+  - 安装注意事项
+- - '##'
+  - 硬件和软件认证
+- - '##'
+  - 多个 Oracle Home
+- - '##'
+  - 在已有 Oracle 安装的系统上安装软件
+- - '##'
+  - 安装前任务
+- - '###'
+  - 以 root 用户登录系统
+- - '###'
+  - 检查硬件要求
+- - '###'
+  - df -k /tmp
+- - '###'
+  - df -k
+- - '###'
+  - 软件要求
+- - '###'
+  - 在 Linux x86-64 上检查软件要求
+- - '####'
+  - 检查所需的软件
+- - '####'
+  - 检查软件需求
+- - '####'
+  - cat /proc/version
+- - '####'
+  - uname -r
+- - '####'
+  - rpm -q package_name
+- - '###'
+  - 创建 UNIX 组和用户
+- - '###'
+  - 确定 Oracle Inventory 组是否存在
+- - '####'
+  - more /etc/oraInst.loc
+- - '###'
+  - 创建 Oracle Inventory 组
+- - '###'
+  - 创建 Oracle 软件所有者
+- - '###'
+  - 确定现有的 Oracle 软件所有者
+- - '####'
+  - id oracle
+- - '###'
+  - 创建新的 Oracle 软件所有者
+- - '####'
+  - /usr/sbin/useradd -g install|-g dba oracle
+- - '####'
+  - password oracle
+- - '###'
+  - 修改现有的软件所有者
+- - '####'
+  - /usr/sbin/usermod -g install -G dba oracle
+- - '###'
+  - 识别所需的软件目录
+- - '####'
+  - Oracle 基目录
+- - '####'
+  - Oracle 目录目录
+- - '####'
+  - Oracle 目录
+- - '###'
+  - 配置 oracle 用户环境
+- - '####'
+  - mkdir /mount_point/tmp
+- - '####'
+  - chmod awr /mount_point/tmp
+- - '####'
+  - exit
+- - '#'
+  - 3 安装概述
+- - '##'
+  - 下载归档文件
+- - '###'
+  - 从 OTN 网站下载 Oracle 软件
+- - '###'
+  - 提取文件
+- - '###'
+  - 将 Oracle 客户端软件拷贝到硬盘
+- - '##'
+  - 安装 Oracle 客户端软件
+- - '###'
+  - 运行 Oracle 安装程序
+- - '###'
+  - /script_path/script_name
+- - '##'
+  - 安装后任务
+- - '###'
+  - 必要安装后任务
+- - '###'
+  - 下载并安装补丁
+- - '###'
+  - 使用 Enterprise Manager Java Console
+- - '###'
+  - 使用 Instant Client 连接
+- - '###'
+  - 配置 Oracle 产品
+- - '###'
+  - 推荐安装后任务
+- - '###'
+  - 备份 root.sh 脚本
+- - '###'
+  - 设置用户账户
+- - '###'
+  - 生成客户端静态库
+- - '###'
+  - 必须的特定产品安装后任务
+- - '###'
+  - 配置 Oracle Net 服务
+- - '###'
+  - 配置 Oracle 预编译器
+- - '###'
+  - 配置 Pro*C/C++
+- - '###'
+  - 表 4–1 C/C++ 编译器目录
+- - '#'
+  - 5 移除 Oracle 软件
+- - '##'
+  - 移除 Oracle 软件
+- - '##'
+  - 挂载光片
+- - '###'
+  - 在 Linux x86-64 上挂载光片
+- - '##'
+  - 使用响应文件安装和配置 Oracle 产品
+- - '###'
+  - 引言
+- - '###'
+  - 安装概述
+- - '###'
+  - 创建 oraInst.loc 文件
+- - '####'
+  - cd /etc
+- - '####'
+  - chown oracle:install oraInst.loc
+- - '####'
+  - chmod 664 oraInst.loc
+- - '###'
+  - 准备响应文件
+- - '###'
+  - 编辑响应文件模板
+- - '###'
+  - 记录响应文件
+- - '###'
+  - 在静默或抑制模式下运行安装程序
+- - '####'
+  - /oracle_home_path/root.sh
+- - '###'
+  - 调试
+- - '####'
+  - 验证要求
+- - '####'
+  - X Windows 显示错误
+- - '####'
+  - 如果发生安装错误该怎么办
+- - '####'
+  - 查看安装会话的日志
+- - '####'
+  - 排排除配置助手的故障
+- - '####'
+  - 配置助手失败
+- - '####'
+  - 静默模式响应文件错误处理
+- - '####'
+  - 致命错误
+- - '####'
+  - 静默模式响应文件处理
+- - '####'
+  - 安装失败后的清理
+- - '##'
+  - 索引
+- - '###'
+  - A
+- - '###'
+  - B
+- - '###'
+  - C
+- - '###'
+  - D
+- - '###'
+  - E
+- - '###'
+  - F
+- - '##'
+  - Korn shell
+- - '##'
+  - L
+- - '##'
+  - Linux
+- - '##'
+  - G
+- - '##'
+  - group
+- - '##'
+  - H
+- - '##'
+  - M
+- - '##'
+  - mask
+- - '##'
+  - mount point
+- - '##'
+  - I
+- - '##'
+  - installation
+- - '##'
+  - installation software
+- - '##'
+  - instance
+- - '##'
+  - N
+- - '##'
+  - Net Configuration Assistant
+- - '##'
+  - Network Information Services
+- - '##'
+  - O
+- - '##'
+  - OFA
+- - '##'
+  - J
+- - '##'
+  - Java Runtime Environment
+- - '##'
+  - JRE
+- - '##'
+  - K
+- - '##'
+  - kernel
+- - '##'
+  - operating system
+- - '##'
+  - Optimal Flexible Architecture
+- - '##'
+  - SOFA
+- - '##'
+  - Oracle Database
+- - '##'
+  - Oracle Database Client
+- - '##'
+  - Oracle home directory
+- - '##'
+  - Oracle Inventory
+- - '##'
+  - Oracle Net
+- - '##'
+  - Oracle Net Services
+- - '##'
+  - Oracle Precompilers
+- - '##'
+  - Oracle software
+- - '##'
+  - Oracle Software Owner user
+- - '##'
+  - response files
+- - '##'
+  - P
+- - '##'
+  - packages
+- - '##'
+  - PC
+- - '##'
+  - R
+- - '##'
+  - RPM
+- - '##'
+  - U
+- - '##'
+  - S
+- - '##'
+  - shell
+- - '##'
+  - SID
+- - '##'
+  - SuSE
+- - '##'
+  - swap space
+- - '##'
+  - T
+- - '##'
+  - W
+- - '##'
+  - Windows
+- - '##'
+  - X
+- - '##'
+  - X 模拟器
+- - '##'
+  - X窗口系统

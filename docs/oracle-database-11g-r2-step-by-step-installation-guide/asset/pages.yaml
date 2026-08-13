@@ -1,0 +1,3831 @@
+- img_proc: true
+  md: '# Oracle® Database
+
+    Client Installation Guide
+
+    10g Release 1 (10.1.0.3) for Linux x86-64
+
+    Part No. B14400-01
+
+
+    October 2004
+
+
+    ORACLE'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Oracle Database Client Installation, 10g Release 1 (10.1.0.3) for Linux x86-64
+
+
+    Part No. B14400-01
+
+
+    Copyright ©2004, Oracle. All rights reserved.
+
+
+    The Programs which include both the software and documentation contain proprietary
+    information, they are provided under a license agreement containing restrictions
+    on use and disclosure and are protected by copyright, patent, and other intellectual
+    and industrial property laws. Reverse engineering, disassembly, or deconstruction
+    of the Programs, to the extent to require interoperability with other independently
+    created software or as specified by law, is prohibited.
+
+
+    The information contained in this document is subject to change without notice.
+    If you find any problems in the documentation, please report them to us. This
+    document is not guaranteed to be error-free. Except as be permitted in your license
+    agreement for these Programs, no part of the Programs may be reproduced or transmitted
+    in any form or by any electronic, mechanical, or for any purpose
+
+
+    If the Programs are delivered to the United States Government or by licensing
+    or using the Programs over behalf of the United States Government, the following
+    notice is applicable:
+
+
+    U.S. GOVERNMENT Programs, software, databases, relational and technical data delivered
+    to U.S. Government customers are "commercial computer software" or "commercial
+    technical data" pursuant to the applicable federal law acquisition-specific supplemental
+    regulations. Including documentation and technical data, shall be subject to the
+    licensing restrictions set forth in the applicable Oracle license agreement, and,
+    to the extent applicable, the additional rights set forth in FAR 52.227-19, Commercial
+    Computer Software-Business, 500 Oracle Parkway, Redwood City, CA 94065
+
+
+    The Programs are not intended for use in any nuclear, aviation, transit, medical,
+    or other inherently dangerous applications. It shall be the licensee''s responsibility
+    to take all appropriate fail-safe, backup, redundancy and other measures to ensure
+    the safe use of such applications if the Programs are used for such purposes,
+    and we decline liability for any damages caused by use of the Programs.
+
+
+    Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+    Other names may be trademarks of their respective owners.
+
+
+    The Programs provide links to Web Sites and access to content, products, and services
+    from third parties. Oracle is not responsible for the availability of, or any
+    content provided on, third-party Web Sites. You bear all risks associated with
+    the use of such content. If you choose to purchase any products or services from
+    a third party, the relationship is directly between you and the third party. Oracle
+    is not responsible for: (a) the quality of third party products or services, or
+    for fulfillment of any terms of the agreement with the third party, including
+    delivery of products or services and warranties obligations to purchased products
+    or services. Oracle is not responsible for any loss or damage of any sort that
+    you may incur from dealing with any third party.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Contents
+
+
+    Send Us Our Comments ..........................................................................................................................
+    vii
+
+
+    Preface ...................................................................................................................................................
+    ix
+
+
+    +   - Audience ....................................................................................................................................................................
+    ix
+
+    - Documentation Accessibility .................................................................................................................
+    ix
+
+    - Terminology ...................................................................................................................................................................
+    X
+
+    - Typographic Conventions ..........................................................................................................................................
+    X
+
+    - Command Syntax ........................................................................................................................................................
+    X
+
+    - Accessing Documentation .......................................................................................................................................
+    X
+
+    - Related Documentation ............................................................................................................................................
+    xi
+
+
+    # 1 Installation Overview .................................................................................................................................
+
+
+    +   - Installation Overview ..........................................................................................................................................
+    1-1
+
+    - Oracle Client Installation Methods ............................................................................................................................
+    1-1
+
+    - Interactive Installation Methods .................................................................................................................................
+    1-1
+
+    - Automated Installation Methods Using Response Files ................................................................
+    1-1
+
+    - Oracle Client Installation Types ......................................................................................................................
+    1-2
+
+    - Installation Considerations ................................................................................................................................
+    1-2
+
+    - Hardware and Software Certification ............................................................................................................
+    1-2
+
+    - Multiple Oracle Homes .................................................................................................................................
+    1-3
+
+    - Installing the Software on a System with an Existing Oracle Installation..............................................
+    1-3
+
+
+    # 2 Pre-installation Tasks ..........................................................................................................................
+
+
+    +   - Log In to the System as root .......................................................................................................................
+    2-1
+
+    - Check the Hardware Requirements ..........................................................................................................................
+    2-2
+
+    - Check the Software Requirements ......................................................................................................................
+    2-3
+
+    - Checking the Software Requirements on Linux x86-64 ..........................................................................
+    2-3
+
+    - Create Required UNIX Group and User .......................................................................................................
+    2-6
+
+    - Creating the Oracle Inventory Group .................................................................................................
+    2-6
+
+    - Creating the Oracle Software Owner User .................................................................................
+    2-7
+
+    - Identify Required Software Directories ...................................................................................................
+    2-8
+
+    - Identify or Create an Oracle Base Directory ................................................................................
+    2-10
+
+    - Configure the oracle User''s Environment ................................................................................................
+    2-11'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# 3 Installation Tasks
+
+
+    +   Installation Overview...........................................................................................................
+    3-1
+
+    Download Oracle Software from the OTN Web Site..................................................................
+    3-1
+
+    Copy the Oracle Client Software to a Hard Disk...........................................................................
+    3-3
+
+    Install the Oracle Client Software...............................................................................
+    3-3
+
+    Reviewing Product-Specific Installation Guidelines...............................................................
+    3-3
+
+    Running the Oracle Universal Installer...............................................................................
+    3-4
+
+
+    # 4 Post-installation Tasks
+
+
+    +   Required Post-installation Tasks.......................................................................................
+    4-1
+
+    Downloading and Installing Patches..................................................................................
+    4-1
+
+    Running Oracle Enterprise Manager Java Console.....................................................................
+    4-2
+
+    Connecting with Instant Client...........................................................................................
+    4-2
+
+    Configuring Oracle Products...............................................................................................
+    4-3
+
+    Recommended Post-installation Tasks...............................................................................
+    4-3
+
+    Backing Up the root.sh Script...............................................................................................
+    4-3
+
+    Setting Up User Accounts...............................................................................................
+    4-3
+
+    Generating the Client Static Library...............................................................................
+    4-3
+
+    Required Product-Specific Post-installation Tasks................................................................
+    4-4
+
+    Configuring Oracle Net Services......................................................................................
+    4-4
+
+    Configuring Oracle Precompiler...........................................................................................
+    4-4
+
+    Configuring ProC/C++...............................................................................................
+    4-4
+
+
+    # 5 Removing Oracle Software
+
+
+    +   Removing Oracle Software..................................................................................................
+    5-1
+
+
+    # A Mounting Discs
+
+
+    +   Mounting Discs on Linux x86-64.....................................................................................
+    A-1
+
+
+    # B Installing and Configuring Oracle Products Using Response Files
+
+
+    +   Introduction................................................................................................................
+    B-1
+
+    Installation Overview...........................................................................................................
+    B-2
+
+    Create the oracleInst.loc File...............................................................................................
+    B-2
+
+    Prepare a Response File......................................................................................................
+    B-3
+
+    Run the Installer in Silent or Suppressed Mode.......................................................................
+    B-5
+
+
+    # C Troubleshooting
+
+
+    +   Verify Requirements.........................................................................................................
+    C-1
+
+    Windows Display Errors.....................................................................................................
+    C-1
+
+    What to Do If an Installation Error Occurs.....................................................................
+    C-2
+
+    Reviewing the Log of an Installation Session......................................................................
+    C-2
+
+    Troubleshooting Configuration Assistants.....................................................................
+    C-3
+
+    Configuration Assistant Failure...............................................................................
+    C-3
+
+    Fatal Errors................................................................................................................
+    C-4
+
+    Silent-Mode Response File Error Handling...............................................................
+    C-4'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Index'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# Send Us Your Comments\n\nOracle Database Client Installation Guide, 10g Release\
+    \ 1 (10.1.0.3) for Linux x86-64\n\nPart No. B14400-01\n\nOracle welcomes your\
+    \ comments and suggestions on the quality and usefulness of your publication.\
+    \ Your input is an important part of the information used for revision.\n\n+ \
+    \  - Did you find any errors?\n- Is the examples clearly presented?\n- Do you\
+    \ need more information? If so, where?\n- Are the examples correct? Do you need\
+    \ more examples?\n- What features did you like most about this manual?\n\nIf you\
+    \ find any errors or have any other suggestions for improvement, please indicate\
+    \ the title and part number of the documentation and the chapter, section, and\
+    \ page number (if available). You can send comments to us in the following ways:\n\
+    \n+   - Electronic mail: infodef_us@oracle.com\n- FAX: (650) 506-7227. Attn: Server\
+    \ Technologies Documentation Manager\n- Postal service:\n  Oracle Corporation\n\
+    \  Server Technologies Documentation Manager\n  500 Oracle Parkway, Mailstop 4op11\n\
+    \  Redwood Shores, CA 94065\n  USA\n\nIf you would like a reply, please give your\
+    \ name, address, telephone number, and electronic mail address (optional).\n\n\
+    If you have problems with the software, please contact your local Oracle Support\
+    \ Services."
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Preface
+
+
+    This guide describes how to install and configure Oracle Client 10grelease 1 (10.1.0.3)
+    on Linux x86-64.
+
+
+    # Audience
+
+
+    The Oracle Database Installation Guide is intended for anyone responsible for
+    installing Oracle Client 10g release 1 (10.1.0.3) on a single Linux x86-64 system.
+
+
+    # Documentation Accessibility
+
+
+    Our goal is to make Oracle products, services, and supporting documentation accessible,
+    with good usability, to the disabled community. To that end, our documentation
+    includes features that make information available to users of assistive technology.
+    This documentation is available in HTML format, and contains markup to facilitate
+    access by the disabled community. Standards will continue to evolve over time,
+    and Oracle is actively engaged with other market-leading technology vendors to
+    address technical obstacles that our documentation can be accessible to all of
+    our customers. For additional information, visit the Oracle Accessibility Program
+    Web site at
+
+
+    http://www.oracle.com/accessibility/
+
+
+    Accessibility of Code Examples in Documentation JAWS, a Windows screen reader,
+    may not always correctly read the code examples in this document. The conventions
+    for writing code that require braces appear on an otherwise empty line; however,
+    JAWS may not always read a line of text that consists solely of a bracket or brace.
+
+
+    Accessibility of Links to External Web Sites in Documentation This documentation
+    may contain links to Web sites of other companies or organizations that Oracle
+    does not own or control. Oracle evaluates nor makes any representations regarding
+    the accessibility of these Web sites.
+
+
+    Support for Hearing and Speech Impaired Customers Oracle provides dedicated Telephone
+    (TTY) access to Oracle Support Services within the United States of America 24
+    hours a day, seven days a week.
+
+
+    +   * For technical questions, call 1.800.446.2398
+
+    * For non-technical questions, call 1.800.464.2330'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Terminology
+
+
+    The names for UNIX operating systems have been shortened in this guide, as follows:
+
+
+    | Operating System | Abbreviated Name |
+
+    | Linux x86-64 | Linux |
+
+
+    # Typographic Conventions
+
+
+    The following typographic conventions are used in this guide:
+
+
+    | Convention | Description |
+
+    | monospace | Monospace type identifies UNIX commands, directory names, usernames,
+    pathnames, and filenames. |
+
+    | italics | Italic type identifies variables, including variable portions of filenames.
+    It is also used for emphasis and for book titles. |
+
+    | UPPERCASE | Uppercase letters indicate Structured Query Language (SQL) reserved
+    words, initialization parameters, and environment variables. |
+
+
+    # Command Syntax
+
+
+    UNIX command syntax appears in `monospace` font. The dollar sign ($), number sign
+    (#), or percent character (%) are UNIX commands. Do not enter them as part of
+    the command. The following command syntax conventions are used in this guide:
+
+
+    | Convention | Description |
+
+    | slash \ | A backslash is the UNIX continuation character. It is used in command
+    examples that are too long to fit on a single line. Enter the command as displayed
+    (with a backslash) or enter it on a single line without a backslash. |
+
+    | braces [] | Braces indicate required items: .DEFINE (macrol) |
+
+    | brackets [] | Brackets indicate optional items: cvvctert termname [output] |
+
+    | ellipses ... | Ellipses indicate an arbitrary number of similar items: CHKEVAL
+    fieldname value value2 ... valueN |
+
+    | italics | Italic type indicates a variable. Substitute a value for the variable:
+    library_name |
+
+    | vertical line | A vertical line indicates a choice within braces or brackets:
+    FILE filesize [K|M] |
+
+
+    # Accessing Documentation
+
+
+    The documentation for Oracle Client release 1 (10.1) for UNIX Systems includes
+    platform-specific documentation and generic product documentation.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# Platform-Specific Documentation\n\nPlatform-specific documentation includes\
+    \ information about installing and using Oracle products on particular platforms.\
+    \ The platform-specific documentation for this product is available in both Adobe\
+    \ portable document format (PDF) and HTML format on the disc. To access the platform-specific\
+    \ documentation on disc:\n\n+   - Use a browser to open the welcome.htm file in\
+    \ the top-level directory of the disc.\n- For DVD-ROMs only, select the appropriate\
+    \ product link.\n- Select the Documentation tab.\n\nIf you prefer paper documentation,\
+    \ open and print the PDF files.\n\n# Product Documentation\n\nProduct documentation\
+    \ includes information about configuring, using, or administering Oracle products\
+    \ on any platform. The product Database 10g products is available in both HTML\
+    \ and PDF formats in the following locations:\n\n+   - On the Oracle Database\
+    \ 10g Library CD-ROM\n- To access the documentation from the CD-ROM, use a Web\
+    \ browser to view the index.htm file in the top-level directory on the disc.\n\
+    - In the doc subdirectory on the Oracle Database 10g DVD-ROM, use a Web browser\
+    \ to view the welcome.htm file in the top-level directory of the disc, then select\
+    \ the Oracle Database 10g Documentation Library link.\n- Online on the Oracle\
+    \ Technology Network (OTN) Web site: http://www.oracle.com/technology/documentation/\n\
+    \n# Related Documentation\n\nThe platform-specific documentation for Oracle Database\
+    \ 10g products includes the following manuals:\n\n+   - Oracle Database:\n  -\
+    \ Oracle Database Release Notes for Linux x86-64\n  - Oracle Database Quick Installation\
+    \ Guide for Linux x86-64\n  - Oracle Database Installation Guide for Linux x86-64\n\
+    \  - Oracle Real Application Clusters Installation and Configuration Guide\n \
+    \ - Oracle Database Administrator’s Reference for UNIX Systems\n- Oracle Client:\n\
+    \  - Oracle Database Client Quick Installation Guide for Linux x86-64\n  - Oracle\
+    \ Database Client Installation Guide for Linux x86-64\n- Oracle Database 10g Companion\
+    \ CD:\n  - Oracle Database Companion CD Installation Guide for Linux x86-64\n\
+    \  - Oracle Database Companion CD Quick Installation Guide for Linux x86-64"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'Refer to the Oracle Database release notes for your platform for important
+    information that was not available when this book was released. The release notes
+    for Oracle Database 10g are updated regularly. You can get the most-recent version
+    from OTN:
+
+    http://www.oracle.com/technology/documentation/'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# # Installation Overview
+
+
+    This chapter describes the different types of Oracle Client installations that
+    you can perform, and issues that you should consider before installing the software.
+    It includes information about the following topics:
+
+
+    +   - Installation Overview
+
+    - Oracle Client Installation Methods
+
+    - Oracle Client Installation Types
+
+    - Installation Considerations
+
+
+    # ## Installation Overview
+
+
+    The Oracle Client installation process consists of four parts:
+
+
+    +   1. **Planning your installation**: This chapter [Chapter 2](https://example.com/chapter2)
+    describes the Oracle products that you can install and issues that you must consider
+    before starting the installation.
+
+    2. **Completing pre-installation tasks**: Chapter 2 describes pre-installation
+    tasks that you must complete before installing the product.
+
+    3. **Installing software**: Chapter 3 describes how to use the Oracle Universal
+    Installer to install this product.
+
+    4. **Completing post-installation tasks**: Chapter 4 describes recommended and
+    required post-installation tasks.
+
+
+    # ## Oracle Client Installation Methods
+
+
+    You can choose different installation methods to install Oracle Client, as follows:
+
+
+    +   - Interactive Installation Methods
+
+    - Automated Installation Methods Using Response Files
+
+
+    # ## Interactive Installation Methods
+
+
+    When you use the interactive method to install Oracle Client, the Installer displays
+    a series of screens that you enable to specify all of the required information
+    to install the Oracle Client software.
+
+
+    # ## Automated Installation Methods Using Response Files
+
+
+    By creating a response file and specifying this file when you start the Installer,
+    you can automate some or all of the Oracle Client installation. These automated
+    installation'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Oracle Client Installation Types
+
+
+    methods are useful if you need to perform multiple installations on similarly
+    configured systems or if the system where you want to install the software does
+    not have X Window system installed.
+
+
+    When you use a response file, run the Installer in the following modes, depending
+    on whether you specify all of the required information or not:
+
+
+    +   - **Silent Mode:** The Installer runs in silent mode if you use a response
+    file that specifies all required information. None of the Installer screens are
+    displayed.
+
+    - **Suppressed Mode:** The Installer runs in suppressed mode if you do not specify
+    all required information in the response file. The Installer displays only the
+    screens that prompt for the information that you did not specify.
+
+
+    For more detailed information about these modes and how to complete an installation
+    using response files, see Appendix B.
+
+
+    # Oracle Client Installation Types
+
+
+    You can choose one of the following installation types when installing Oracle
+    Client:
+
+
+    +   - **Administrator:** Applications to connect to an Oracle database locally
+    or on a remote system. It also provides tools that allow you to administer an
+    Oracle database.
+
+    - **Runtime:** Applications to connect to an Oracle database on the local system
+    or on a remote system.
+
+    - **Custom:** Allows you to select individual components from the list of Administrator
+    and Runtime components.
+
+    - **Instant Client:** Enables you to install only the shared libraries required
+    by Oracle Call Interface (OCI), Oracle C++ Call Interface (OCI), or Java connectivity
+    (JDBC) OCI applications. This installation type requires much less disk space
+    than the other Oracle Client types.
+
+
+    > See Also: For more information about Instant Client, see the Oracle Call Interface
+    Programmer''s Guide or the Oracle JDBC Developer''s Guide and Reference.
+
+
+    # Installation Considerations
+
+
+    This section contains information that you should consider before deciding to
+    install this product. It contains the following sections:
+
+
+    +   - Hardware and Software Certification
+
+    - Multiple Oracle Homes
+
+
+    # Hardware and Software Certification
+
+
+    The platform-specific hardware and software requirements included in this installation
+    guide were current at the time this guide was published. However, new platforms
+    and operating system software versions may be certified after this guide is published,
+    review the certification matrix on the OracleMetaLink Web site for the most-to-date
+    list of certified hardware platforms and operating system versions. The OracleMetaLink
+    Web site is available at the following URL:
+
+
+    ```
+
+    http://metalink.oracle.com
+
+    ```'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'If you do not have a current Oracle Support Services contract, you can access
+    the same information from the following Web site:
+
+
+    http://www.oracle.com/technology/support/metalink/content.html
+
+
+    # Multiple Oracle Homes
+
+
+    This product supports multiple Oracle homes. This means that you can install this
+    release or previous releases of the software more than once on the same system,
+    in different Oracle home directories.
+
+
+    # Installing the Software on a System with an Existing Oracle Installation
+
+
+    You must install this product into a new Oracle home directory. You cannot install
+    products from one release of Oracle Client into an Oracle home directory of a
+    different release. For example, you cannot install release 10.1 software into
+    an existing Oracle 9i Oracle home directory. If you attempt to install this release
+    into an Oracle home directory that contains software from an earlier Oracle release,
+    the installation fails.
+
+
+    You can install this release more than once on the same system provided that each
+    installation is installed in a separate Oracle home directory.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Pre-installation Tasks\n\nThis chapter describes the tasks that you must\
+    \ complete before you start the Oracle Universal Installer. It includes information\
+    \ about the following tasks:\n\n+   - Log In to the System as root\n- Check the\
+    \ Hardware Requirements\n- Create Required UNIX Group and User\n- Identify Required\
+    \ Software Directories\n- Identify or Create an Oracle Base Directory\n- Configure\
+    \ the oracle User's Environment\n\n# Log In to the System as root\n\nBefore you\
+    \ install the Oracle software, you must complete several tasks as the root user.\
+    \ To log in as the root user, complete one of the following procedures:\n\n> Note:\
+    \ Unless you intend to complete a silent-mode installation, you must install the\
+    \ software from an X Windows System workstation, an X terminal, or a PC or other\
+    \ system with X server installed.\n\nFor more information about silent-mode installations,\
+    \ seenAppendix B.\n\n+   - If you are installing the software from an X Window\
+    \ System workstation or X terminal:\n  1. Start a local terminal session, for\
+    \ example, an X terminal (xterm).\n  2. If you are not installing the software\
+    \ on the local system, enter the following command to enable remote hosts to display\
+    \ applications on the local X server:\n  3. If you are not installing the software\
+    \ on the local system, use the ssh, or telnet command to connect to the system\
+    \ where you want to install the software:\n\n```\n$ xhost +\n```\n\n```\n$ telnet\
+    \ remote_host\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Check the Hardware Requirements
+
+
+    +   4. If you are not logged in as the root user, enter the following command
+    to switch user to root:
+
+
+    ```
+
+    $ su - root
+
+    password:
+
+    #
+
+    ```
+
+
+    If you are installing the software from a PC or other system with X server software
+    installed:
+
+
+    > Note: If necessary, see your X server documentation for more information about
+    completing this procedure. Depending on the X server software that you are using,
+    you may need to complete the tasks in a different order.
+
+
+    +   1. Start the X server software.
+
+    2. Configure the security settings of the X server software to permit remote hosts
+    to display X applications on the local system.
+
+    3. Connect to the remote system where you want to install the software and start
+    a terminal session on that system, for example, an X terminal (xterm).
+
+    4. If you are not logged in as the root user on the remote system, enter the following
+    command to switch user to root:
+
+
+    ```
+
+    $ su - root
+
+    password:
+
+    #
+
+    ```
+
+
+    # Check the Hardware Requirements
+
+
+    The system must meet the following minimum hardware requirements:
+
+
+    +   - 256 MB of physical RAM
+
+    - 512 MB of swap space
+
+    - 400 MB of disk space in the /tmp directory
+
+    - Between 180 MB and 1.9 GB of disk space for the Oracle software, depending on
+    the installation type and platform
+
+
+    To ensure the system meets these requirements, follow these steps:
+
+    1. To determine the physical RAM size, enter the following command:
+
+
+    | Platform | Command |
+
+    | --- | --- |
+
+    | Linux x86-64 | # grep MemTotal /proc/meminfo |
+
+
+    If the size of the physical RAM installed in the system is less than the required
+    size, you must install more memory before continuing.
+
+
+    2. To determine the size of the configured swap space, enter the following command:
+
+
+    | Platform | Command |
+
+    | --- | --- |
+
+    | Linux x86-64 | # grep SwapTotal /proc/meminfo |'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'If necessary, see your operating system documentation for information about
+    how to configure additional swap space.
+
+
+    +   3. To determine the amount of disk space available in the /tmp directory,
+    enter the following command:
+
+
+    ```
+
+    # df -k /tmp
+
+    ```
+
+
+    If there is less than 400 MB of disk space available in the /tmp directory, complete
+    one of the following steps:
+
+
+    +   - Delete unnecessary files from the /tmp directory to achieve the required
+    disk space.
+
+    - Set the TEMP and TMPDIR environment variables when setting the oracle user''s
+    environment (described later).
+
+    - Extend the file system that contains the /tmp directory. If necessary, contact
+    your system administrator for information about extending file systems.
+
+
+    +   4. To determine the amount of free disk space on the system, enter the following
+    command:
+
+
+    ```
+
+    # df -k
+
+    ```
+
+
+    The following table shows the approximate disk space requirements for files for
+    each installation type:
+
+
+    | Platform | Installation Type | Requirement for Software Files (MB) |
+
+    | Linux x86-64 | Instant Client | 110 |
+
+    | Linux x86-64 | Administrator | 650 |
+
+    | Linux x86-64 | Runtime | 350 |
+
+    | Linux x86-64 | Custom (maximum) | 650 |
+
+
+    # Check the Software Requirements
+
+
+    See the following section for information about checking the software requirements:
+
+
+    +   - Checking the Software Requirements on Linux x86-64 on page 2-3
+
+
+    # Checking the Software Requirements on Linux x86-64
+
+
+    Check that the required software and patches are installed on the system.
+
+
+    # Check for Required Software
+
+
+    Depending on the products you intend to install, verify that the following software
+    is installed on the system. The procedure following the table describes how to
+    check these requirements.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Check the Software Requirements
+
+
+    | Installation Type or Product | Requirement |
+
+    |--- | --- |
+
+    | All installations | One of the following operating system versions:
+
+    * Red Hat Enterprise Linux 3 (Update 2)
+
+    * SuSE Linux Enterprise Server (SLES) 8 with service pack 3 or later
+
+    * SuSE Linux Enterprise Server 9 |
+
+    | All installations | The system must be running the following kernel version
+    (or a later version):
+
+    **Red Hat Enterprise Linux 3 (Update 2):**
+
+    2.4.21-158\nNote: This is the default kernel version.
+
+    **SuSE Linux Enterprise Server 8 (x86-64):**
+
+    2.42.185-smp
+
+    **SuSE Linux Enterprise Server 9:**
+
+    2.6.5-79 |
+
+    | All installations | The following packages (or later versions) must be installed:
+
+    **Red Hat Enterprise Linux 3 (Update 2):**\nmake-3.79.1\ngcc-3.2.3-34\ngibc-2.2.295.20\ngibc-devel-2.3.2-95.20\ngibc-devel-2.3.2-95.20
+    (32 bit)\ncompat-db-4.0.14-5\ncompat-gcc-7.3.296.128\ncompat-gcc++-7.3.296.128\ncompat-libstdcc++-7.3.296.128\ncompat-libstdcc++-devel-7.3.296.128\nopenmotif-2.1.30-8\nsetharn-3.1\ngnome-libaio-4.1.2.90-34
+    (32 bit)\nlibaio-0.396-3\nlibaio-devel-0.396-3\n**SuSE Linux Enterprise Server
+    8 (x86-64):**\nmake-3.79.1\ngcc-3.3-43\ngcc-c++-3.3-43\ngibc-2.2.15-213\ngibc-32bit-8.1-9\ngibc-devel-32bit-8.1-9\nopenmotif-2.2.2-124\nlibaio-0.396-3\nlibaio-devel-0.396-3\n**SuSE
+    Linux Enterprise Server 9:**\ngcc-3.3.1-48\ngcc-c++-3.3-43\ngibc-2.3.98\nlibaio-0.3.98-18\nlibaio-devel-0.3.98-18\nmake-3.80\nopenmotif-libs-2.2.2-7.519.1
+    |
+
+
+    2-4 Oracle Database Installation Guide'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '| Installation Type or Product | Requirement |
+
+    | --- | --- |
+
+    | PL/SQL native compilation, Pro/C++, Oracle Call Interface, Oracle C++ Call Interface,
+    Oracle XML Developer''s Kit (XDK) | The version of GNU C and C++ compilers listed
+    previously for your distribution is supported for use with these products. |
+
+    | Oracle JDBC/OCI Drivers | On x86-64 systems only, you can use the following
+    JDK version with the Oracle JDBC/OCI drivers, but it is not required for the installation:
+    |
+
+
+    +   - Sun JDK 1.4.2_63 with the JNDI extension
+
+
+    To ensure that the system meets these requirements, follow these steps:
+
+    1. To determine which distribution and version of Linux is installed, enter the
+    following command:
+
+
+    ```
+
+    # cat /proc/version
+
+    ```
+
+
+    > > Note: Only the distributions and versions listed in the previous table are
+    supported. Do not install the software on other versions of Linux.
+
+
+    2. On Red Hat Linux 3 systems only, enter the following command to determine whether
+    the required kernel errata is installed:
+
+
+    ```
+
+    # uname -r
+
+    2.4.21-15.EL
+
+    ```
+
+
+    In this example, the output shows the kernel version (2.4.21) and errata level
+    (15.EL) on an x86-64 system. If the errata is less than 15, install the latest
+    kernel update. Kernel updates are available from the Red Hat Network.
+
+
+    3. On SuSE Linux Enterprise 8 systems only, enter the following command to determine
+    whether Service Pack 3 is installed:
+
+
+    ```
+
+    # uname -r
+
+    2.4.21-185.smp
+
+    ```
+
+
+    In this example, the output shows the kernel version (2.4.21-185) and type (smp)
+    on an x86-64 system. If the kernel version is less than 2.4.21-185 on x86-64 systems,
+    contact SuSE for information about obtaining and installing Service Pack 3 or
+    later.
+
+
+    4. On SuSE Linux Enterprise 9 systems only, enter the following command to determine
+    whether the required kernel is installed:
+
+
+    ```
+
+    # uname -r
+
+    2.6.5-7.97
+
+    ```
+
+
+    In this example, the output shows the kernel version (2.6.5-7.97) on an x86-64
+    system. If the kernel version is less than 2.6.5-7.97 on x86-64 systems, contact
+    SuSE for information about obtaining and installing the kernel updates.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '5. To determine whether the required packages are installed, enter commands
+    similar to the following:
+
+
+    ```
+
+    # rpm -q package_name
+
+    ```
+
+
+    If a package is not installed, install it from your Linux distribution media or
+    download the required package from your Linux vendor''s Web site.
+
+
+    6. To continue completing pre-installation tasks, go to the "Create Required UNIX
+    Group and User".
+
+
+    # Create Required UNIX Group and User
+
+
+    Depending on whether this is the first time Oracle is installed on the system
+    and on the products that you are installing, you may need to create the following
+    UNIX group and user:
+
+
+    +   - The Oracle inventory group (oin)
+
+
+    You must create this group the first time you install Oracle software on the system.
+    The usual name for this group is oinstall. This group owns the Oracle inventory,
+    which is a catalog of all Oracle software installed on the system.
+
+
+    > Note: If Oracle software is already installed on the system, the existing Oracle
+    Inventory group must be the primary group of the UNIX user you use to install
+    new Oracle software. The following sections describe how to identify an existing
+    Oracle group.
+
+
+    +   - The Oracle software owner user (oracle)
+
+
+    You must create this user the first time you install Oracle software on the system.
+    This user owns all of the software installed during the installation. The usual
+    name chosen for this user is oracle. This user must have the Oracle Inventory
+    group as its primary group.
+
+
+    A single Oracle Inventory group is required for all installations of Oracle software
+    on the system. After the first installation of Oracle software, you must use the
+    same Oracle Inventory group for all subsequent Oracle software installations on
+    that system. However, you can choose to create different Oracle software owner
+    users for separate installations.
+
+
+    The following sections describe how to create the required UNIX user and group.
+
+
+    > Note: The following sections describe how to create local users and groups.
+    As an alternative to creating local users and groups, you could create the appropriate
+    users and groups in a directory service, for example, Network Information Services
+    (NIS). For information about using directory services, contact your system administrator
+    or see your operating system documentation.
+
+
+    # Creating the Oracle Inventory Group
+
+
+    You must create the Oracle Inventory group if it does not already exist. The following
+    subsections describe how to determine the Oracle Inventory group name, if it exists,
+    and how to create it if necessary.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Determine Whether the Oracle Inventory Group Exists\n\nWhen you install Oracle\
+    \ software on the system for the first time, the Installer creates the oraInst.loc\
+    \ file. This file identifies the name of the Oracle Inventory group and the path\
+    \ of the Oracle Inventory directory. To determine whether the Oracle Inventory\
+    \ group exists, enter the following command:\n\n```\n# more /etc/oraInst.loc\n\
+    ```\n\nIf the oraInst.loc file exists, the output from this command is similar\
+    \ to the following:\n\n```\ninventory_loc=/u01/app/oracle/oraInventory\ninst_group=oinstall\n\
+    ```\n\nThe inst_group parameter shows the name of the Oracle Inventory group (oinstall).\n\
+    \n# Create the Oracle Inventory Group\n\nIf the oraInst.loc file does not exist,\
+    \ create the Oracle Inventory group as follows:\n\n+   * Enter the following command\
+    \ to create the oinstall group:\n  # /usr/sbin/groupadd oinstall\n\n# Creating\
+    \ the Oracle Software Owner User\n\nYou must create an Oracle software owner user\
+    \ in the following circumstances:\n\n+   * If an Oracle software owner user does\
+    \ not exist, for example, if this is the first installation of Oracle software\
+    \ on the system\n* If an Oracle software owner user exists, but you want to use\
+    \ a different UNIX user\n\n# Determine Whether an Existing Oracle Software Owner\
+    \ User Exists\n\nTo determine whether an Oracle software owner name oracle exits\
+    \ exists, enter the following command:\n\n```\n# id oracle\n```\n\nIf the user\
+    \ (oracle) exists, the output from this command is similar to the following:\n\
+    uid=440(oracle) gid=200(oinstall) groups=201(dba),202(oper)\n\nIf the user exists,\
+    \ determine whether you want to use the existing user or create a new user. If\
+    \ you want to use the existing user, ensure that the’s primary group is the Oracle\
+    \ Inventory group. See one of the following sections for more information:\n\n\
+    > Note: If necessary, contact your system administrator before using or modifying\
+    \ an existing user.\n\n+   * If you want to use the existing Oracle software owner\
+    \ user, and the user’s primary group is the Oracle Inventory group, see the following\
+    \ section:\n  Identify Required Software Directories on page 2-8\n* To modify\
+    \ an existing user, see the “Modify an Existing Oracle Software Owner User” section\
+    \ on page 2-8."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '+   - To create a new user, see the following section.
+
+
+    # Create a New Oracle Software Owner
+
+
+    If the Oracle software owner does not exist or if you require a new Oracle software
+    owner user, create it as follows, depending on your operating system. In the following
+    procedure, use the name oracle unless a user with that already exists.
+
+
+    +   1. To create the oracle user, enter a command similar to the following:
+
+    # /usr/sbin/useradd -g install|-g dba] oracle
+
+
+    In this command:
+
+
+    +   - The -g option specifies the primary group, which must be the Oracle Inventory
+    group, for example oinstall
+
+    - The -G option specifies optional secondary groups
+
+
+    +   2. Set the password of the oracle user:
+
+    # password oracle
+
+
+    See the following sections to continue:
+
+
+    +   - Identify Required Software Directories on page 2-8
+
+
+    # Modify an Existing Software Owner Owner
+
+
+    If the oracle user exists, but its primary group is not installall, you can modify
+    it as follows:
+
+
+    +   - Enter a command similar to the following, specifying the primary group using
+    the -g option and any required secondary groups using the -G option:
+
+    # /usr/sbin/usermod -g install -G dba oracle
+
+
+    # Identify Required Software Directories
+
+
+    You must identify or create three directories for the Oracle software, as follows:
+
+
+    +   - Oracle base directory
+
+    - Oracle Inventory directory
+
+    - Oracle home directory
+
+
+    The following subsections describe the requirements for these directories:
+
+
+    # Oracle Base Directory
+
+
+    The Oracle base directory acts as a top-level directory for Oracle software installations.
+    It is analogous to the C:\Oracle directory used for Oracle installations on Windows
+    systems. On Linux systems, the Optimal Flexible Architecture (OFA) guidelines
+    recommend that you use a path similar to the following for the Oracle base directory:
+
+
+    ```
+
+    /mount_point/app/oracle_sw_owner
+
+    ```
+
+
+    In this example:
+
+
+    +   - mount_point is the mount point for the file system that will contain the
+    Oracle software.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'The examples in this guide use /u01 for the mount point directory. However,
+    you could choose another mount point directory, /oracle or /opt/oracle for example.
+
+
+    +   - oracle_sw_owner is the UNIX user name of the Oracle software owner, for
+    example oracle.
+
+
+    You can use the same Oracle base directory for more than one installation or you
+    can create Oracle base directories for different installations. If UNIX users
+    install Oracle software on the same system, each user must create a separate Oracle
+    base directory. The following example base directories could all exist on the
+    same system
+
+
+    ```
+
+    /u01/app/oracle
+
+    /u01/app/orauser
+
+    /oracle/app/oracle
+
+    ```
+
+
+    The following sections describe how to identify existing Oracle base directories
+    that might be suitable for your installation and how to create a new Oracle base
+    directory if necessary.
+
+
+    Regardless of whether you create a new Oracle base directory or decide to use
+    an existing one, you must set the ORACLE_BASE environment variable to specify
+    the full path to this directory.
+
+
+    # Oracle Inventory Directory
+
+
+    The Oracle Inventory (oraInventory) stores an inventory of software installed
+    on the system. It is required, and shared, by all Oracle software installations
+    on a single system. The first time you install Oracle software on a system, the
+    Installer prompts you to specify the path to this directory. Oracle recommends
+    that you choose the following path:
+
+
+    ```
+
+    oracle_base/oraInventory
+
+    ```
+
+
+    The Installer creates the directory that you specify and sets the correct owner,
+    group, and permissions on it. You do not need to create it.
+
+
+    > Note: All Oracle software installations rely on this directory. Make sure that
+    you back it up regularly.
+
+    \Do not delete this directory unless you have completely removed all Oracle software
+    from the system.
+
+
+    # Oracle Home Directory
+
+
+    The Oracle home directory is the directory where you choose to install the software
+    for a particular Oracle product. You must install different Oracle products, or
+    different releases of the same Oracle product, in separate Oracle home directories.
+    When you run the Installer, it prompts you to specify the path to this directory,
+    as well as a name that identifies it. The directory that you specify must be a
+    subdirectory of the Oracle base directory. Oracle recommends that you specify
+    a path similar to the following for the Oracle home directory.
+
+
+    ```
+
+    oracle_base/product/10.1.0/client_1
+
+    ```
+
+
+    The Installer creates the path that you specify under the Oracle base directory.
+    It also sets the correct owner, group, and permissions on it. You do not need
+    to create this directory.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Identify or Create an Oracle Base Directory
+
+
+    Before starting the installation, you must identify either an existing Oracle
+    base directory or if required, create a new one. This section contains information
+    about the following:
+
+
+    +   - Identifying an Existing Oracle Base Directory
+
+    - Creating a New Oracle Base Directory
+
+
+    > Note: You can choose to create a new Oracle base directory, even if other Oracle
+    base directories exist on the system.
+
+
+    # Identifying an Existing Oracle Base Directory
+
+
+    Existing Oracle base directories might not have paths that comply with OFA guidelines.
+    However, if you identify an Oracle inventory directory or Oracle home directories,
+    you can usually identify the Oracle base directories, as follows:
+
+
+    +   - Identifying an Oracle Inventory Directory
+
+    ter the following command to view the contents of the oraInst.loc file:
+
+
+    ```bash
+
+    # more /var/opt/oracle/app/oraInst.loc
+
+    ```
+
+    If the oraInst.loc file exists, the output from this command is similar to the
+    following:
+
+
+    ```text
+
+    inventory_loc=/u01/app/oracle/Inventory
+
+    inst_group=install
+
+    ```
+
+
+    The inventory_loc parameter identifies the Oracle inventory directory (oraInventory).
+    The parent directory of the oraInventory is typically an Oracle base directory.
+    In the previous example, /u01/app/oracle is an Oracle base directory.
+
+
+    +   - Identifying existing Oracle home directories
+
+    ter the following command to view the contents of the oratab file:
+
+
+    ```bash
+
+    # more /etc/oratab
+
+    ```
+
+    If the oratab file exists, it contains lines similar to the following:
+
+
+    ```text
+
+    :/u03/app/oracle/product/10.1.0/db_1:N
+
+    :/opt/oracle/infra_904:N
+
+    :/oracle/9.2.0:N
+
+    ```
+
+
+    The paths specified on each line identify Oracle home directories. Directory paths
+    that end with the user name of the Oracle software that you want to use are valid
+    choices for an Oracle base directory. If you intend to use the oracle user to
+    install the software, you could choose one of the following directories from the
+    previous example:
+
+
+    ```text
+
+    /u03/app/oracle
+
+    /oracle
+
+    ```
+
+
+    > Note: If possible, choose a directory path similar to the first (/u03/app/oracle).
+    This path complies with the OFA guidelines.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "To continue:\n\n+   - If an Oracle base directory exists and you want to use\
+    \ it, see the following section:\n  - Configure the oracle User's Environment\
+    \ on page 2-11\n\nWhen you are configuring the oracle user's environment in this\
+    \ chapter, set the ORACLE_BASE environment variable to specify the directory you\
+    \ choose.\n\n+   - If an Oracle base directory does not exist on the system or\
+    \ if you want to create a new Oracle base directory, follow the following section.\n\
+    \n# Creating a New Oracle Base Directory\n\nTo identify appropriate file system,\
+    \ follow these steps:\n\n+   1. Use the df -k command to determine the free disk\
+    \ space on each mounted system.\n2. From the display, identify a file system that\
+    \ has appropriate free space.\n3. Note the name of the mount point directory for\
+    \ the file system that you identified.\n\nTo create the Oracle base directory\
+    \ and specify the correct owner, group, and permissions for it, follow these steps:\n\
+    \n+   1. Enter commands similar to the following to create the recommended subdirectories\
+    \ in the mount point that identified and set the appropriate owner, group, and\
+    \ permissions on them:\n```bash\n# mkdir -p /mount_point/app/oracle_sw_owner\n\
+    # chown -R oracle:oracle /mount_point/app/oracle_sw_owner\n# chmod -R 777 /mount_point/app/oracle_sw_owner\n\
+    ```\n\nIf the mount point you identified is /u1 and oracle is the user name of\
+    \ Oracle software owner, the recommended Oracle base directory path is as follows:\n\
+    /u1/app/oracle\n\n+   2. When you are configuring the oracle user's environment\
+    \ in this chapter, set the ORACLE_BASE environment variable to specify this directory.\n\
+    \n# Configure the oracle User's Environment\n\nYou run the Installer from the\
+    \ oracle account. However, before you start the Installer you must configure the\
+    \ environment of the oracle user to, you must:\n\n+   - Set the default file mode\
+    \ mask (umask) to 022 in the startup file.\n- Set the DISPLAY and ORACLE_BASE\
+    \ environment variables.\n\nTo set the oracle user's environment, follow these\
+    \ steps:\n\n+   1. Start a new terminal session, for example, X terminal (xterm).\n\
+    2. Enter the following command to ensure that X Window applications can display\
+    \ on this system:\n```bash\n$ xhost +\n```\n\n+   3. If you are not already logged\
+    \ into the system where you want to install the software, log in that system as\
+    \ the oracle user.\n4. If you are not logged in as the oracle user, switch user\
+    \ to oracle:"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Configure oracle User''s Environment
+
+
+    $ su oracle
+
+
+    +   5. To determine the default shell for the oracle user, enter the following
+    command:
+
+    $ echo $SHELL
+
+
+    +   6. Open the oracle user''s shell startup file in any text editor:
+
+
+    > Note: On Red Hat Linux, .bash_profile is the user startup file for the Bash
+    shell.
+
+
+    * Bourne shell (sh), Bash shell (bash), or Korn shell (ksh):
+
+    $ vi .bash_profile
+
+    * C shell (csh or tcsh):
+
+    % vi .login
+
+
+    +   7. Enter or edit the following line, specifying a value of 022 for the default
+    file mode creation mask:
+
+    umask 022
+
+
+    +   8. If the ORACLE, SID, ORACLE_HOME, or ORACLE_BASE environment variables are
+    set in the file, remove the appropriate lines from the file.
+
+
+    +   9. Save the file and exit from the editor.
+
+
+    +   10. To run the shell startup script, enter one of the following commands:
+
+    * Bash shell on Red Hat Enterprise Linux:
+
+    $ ./bash_profile
+
+    * Bourne, Bash, or Korn shell:
+
+    $ ./.profile
+
+    * C shell:
+
+    % source ./login
+
+
+    +   11. If you are not installing the software on the local system, enter a command
+    similar to the following to direct X applications to display on the local system:
+
+    * Bourne, Bash, or Korn shell:
+
+    $ DISPLAY=local_host:0.0 ; export DISPLAY
+
+    * C shell:
+
+    % setenv DISPLAY local_host:0.0
+
+
+    In this example, local_host is the host name or IP address of the system that
+    you want to use to display the Installer (your workstation or PC).
+
+
+    +   12. If you determined that /tmp directory has more than 400 MB of free disk
+    space, identify a file system with at least 400 MB of free space and set the TEMP
+    TMPDIR environment variables to specify a temporary directory on this file system:
+
+
+    2-12 Oracle Database Installation Guide'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Configure the oracle User''s Environment
+
+
+    +   a Use the df -k command to identify a suitable file system with sufficient
+    space.
+
+    b. If necessary, enter commands similar to the following to create a temporary
+    directory on the file system that you identified, and set the appropriate permissions
+    on the directory:
+
+
+    - [304, 175, 563, 227]
+
+    ```
+
+    $ su - root
+
+    # mkdir /mount_point/tmp
+
+    # chmod awr /mount_point/tmp
+
+    # exit
+
+    ```
+
+
+    +   c. Enter commands similar to the following to set the TEMP and TMPDIR environment
+    variables:
+
+
+    * Bourne, Bash, or Korn shell:
+
+
+    - [334, 308, 563, 345]
+
+    ```
+
+    $ TEMP=/mount_point/tmp
+
+    $ TMPDIR=/mount_point/tmp
+
+    $ export TEMP TMPDIR
+
+    ```
+
+    * C shell:
+
+
+    - [334, 365, 595, 408]
+
+    ```
+
+    % setenv TEMP /mount_point/tmp
+
+    % setenv TMPDIR /mount_point/tmp
+
+    ```
+
+
+    +   13. Enter commands similar to the following to set the ORACLE_BASE environment
+    variable:
+
+
+    * Bourne, Bash, or Korn shell:
+
+
+    - [334, 465, 563, 513]
+
+    ```
+
+    $ ORACLE_BASE=/u01/app/oracle
+
+    $ export ORACLE_BASE
+
+    ```
+
+    * C shell:
+
+
+    - [334, 532, 613, 568]
+
+    ```
+
+    % setenv ORACLE_BASE /u01/app/oracle
+
+    ```
+
+
+    In these examples, /u01/app/oracle is the Oracle base directory that you created
+    earlier.
+
+
+    +   14. Enter the following command to ensure that the ORACLE_HOME and TNS_ADMIN
+    environment variables are not set:
+
+
+    * Bourne, Bash, or Korn shell:
+
+
+    - [334, 660, 497, 702]
+
+    ```
+
+    $ unset ORACLE_HOME
+
+    % unset TNS_ADMIN
+
+    ```
+
+    * C shell:
+
+
+    - [334, 722, 507, 765]
+
+    ```
+
+    % unsetenv ORACLE_HOME
+
+    % unset TNS_ADMIN
+
+    ```
+
+
+    Note: If the ORACLE_HOME environment variable is set, the Installer uses the value
+    that it specifies as the default path for the Oracle home directory. However,
+    if you set the ORACLE_BASE environment variable, Oracle recommends that you unset
+    the ORACLE_HOME environment variable and choose the default path suggested by
+    the installer.
+
+
+    Pre-installation Tasks 2-13'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '+   15. To verify that the environment has been set correctly, enter the following
+    commands:
+
+
+    ```
+
+    $ umask
+
+    $ env | more
+
+    ```
+
+
+    Verify that the umask command displays a value of 22, 022, or 0022 and the environment
+    variables that you set in this section have the correct values.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# 3
+
+    Installation Tasks
+
+
+    This chapter describes how to start the Oracle Universal Installer and install
+    Oracle products on your system. It includes information about the following topics:
+
+
+    > Note: Review the information in Chapter 1, "Installation Overview" and complete
+    the tasks listed in Chapter 2, "Pre-installation Tasks" before beginning the installation.
+
+
+    +   - Installation Overview
+
+    - Download Oracle Software from the OTN Web Site
+
+    - Copy the Oracle Client Software to a Hard Disk
+
+    - Install the Oracle Client Software
+
+
+    # Installation Overview
+
+
+    The Oracle Client software is available on disc (CD-ROM or DVD-ROM) or you can
+    download it from the Oracle Technology Network (OTN) Web site. In most cases,
+    you can use the graphical user interface (GUI) provided by the Oracle Universal
+    Installer to install the software. However, you can also use the Installer to
+    complete silent-mode installations, without using the GUI. Appendix B for information
+    about silent-mode installations.
+
+
+    This chapter describes how to install Oracle Client from the product media or
+    from the hard disk, you may either download it from OTN and unpack it, or copy
+    it from the discs, if you have them. See one of the following sections, depending
+    on the method that you want to use:
+
+
+    +   - To copy the Oracle Client Software to a Hard Disk page 3-3
+
+    - To install the software from disc or from an existing hard disk location, see
+    the "Install the Oracle Client Software" section on page 3-3.
+
+    - To download the software from OTN, see the following section.
+
+
+    # Download Oracle Software from the OTN Web Site
+
+
+    This section describes how to download the installation archive files and extract
+    them on your hard disk.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Downloading the Installation Archive Files
+
+
+    To download the installation archive files from OTN:
+
+
+    +   1. Use any browser to access the software download page on OTN:
+
+
+    http://www.oracle.com/technology/software/
+
+    2. Navigate to the download page for the product that you want to install.
+
+    3. On the download page, identify the required disk space by adding the file sizes
+    for each required file.
+
+    The file sizes are listed next to the filenames.
+
+    4. Select a file system with enough free space to store and expand the archive
+    files.
+
+    in most cases, the available disk space must be at least twice the size of all
+    of the archive files.
+
+    5. On the file system you selected in step 4, create a parent directory for each
+    product, for example OracleCli10g to hold the installation directories.
+
+    6. Download all of the installation archive files to the directory that you created
+    in step 5.
+
+    7. Verify that the files you downloaded are the same size as the corresponding
+    files on OTN.
+
+
+    # Extracting the Installation Files
+
+
+    To extract the installation files, perform the following steps:
+
+
+    +   1. If necessary, change directory to the directory that contains the downloaded
+    installation archive files.
+
+    2. Uncompress each file, enter a command similar to the following:
+
+    $$ gunzip filename.pio.gz
+
+
+    This command creates files with names similar to the following:
+
+    filename.pio
+
+    3. To extract the installation files, enter commands similar to the following:
+
+    $$ cpio -idmv filename.pio
+
+
+    > Note: See the download page for information about the correct options to use
+    with the cpio command on your platform.
+
+
+    Some browsers uncompress files while downloading them, but leave the .gz file
+    extension. If these steps do not work, remove the .gz extension from the files
+    and repeat step 3.
+
+
+    For each file, this command creates a subdirectory named Diskn, where n is the
+    disk number identified in the filename.
+
+
+    When you have extracted all of the installation files, see the "Install the Oracle
+    Client Software" section on page 3-3.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Copy the Oracle Client Software to a Hard Disk
+
+
+    If your system does not have a CD-ROM or DVD-ROM drive, you can copy the software
+    from the disc to a file system on another system, either mount that file using
+    NFS, or use FTP to copy the files to the system where you want to install the
+    software.
+
+
+    To copy the contents of the disc to a hard disk:
+
+
+    +   1. Create a single directory on the hard disk to hold the Oracle software:
+
+
+    ```
+
+    $ mkdir OracleCli1og
+
+    ```
+
+
+    +   2. Change the directory to the directory you created in step 1:
+
+
+    ```
+
+    $ cd OracleCli1og
+
+    ```
+
+
+    +   3. Create subdirectories for each installation disc with names similar to
+    the following, where n is the disk number:
+
+
+    ```
+
+    $ mkdir Diskn
+
+    ```
+
+
+    +   4. Mount the disc, if it is not already mounted.
+
+
+    Some platforms automatically mount the disc when you insert it into the drive.
+    If the disc does not mount automatically, see Appendix A for platform-specific
+    information about mounting it.
+
+
+    +   5. Copy the contents of the mounted disc to the corresponding new subdirectory
+    as:
+
+
+    ```
+
+    $ cp -R /directory_path Diskl
+
+    ```
+
+
+    In this example, /directory_path is the CD-ROM mount point directory or the path
+    of the client directory on the DVD-ROM. The following table lists typical mount
+    point directories for each platform:
+
+
+    | Platform | Mount Point |
+
+    | --- | --- |
+
+    | Linux (Red Hat) | /mnt/cdrom |
+
+    | Linux (SuSE) | /media/cdrom |
+
+
+    # Install the Oracle Client Software
+
+
+    The following sections describe how to install the Oracle software:
+
+
+    +   * Reviewing Product-Specific Installation Guidelines
+
+    * Running the Oracle Universal Installer
+
+
+    # Reviewing Product-Specific Installation Guidelines
+
+
+    Review the following guidelines before starting the Installer:
+
+
+    +   * Oracle Universal Installer
+
+    * Do not use the Oracle Universal Installer from an earlier Oracle product release
+    to install components from this release.
+
+    * Installations on a Cluster
+
+
+    If Oracle Cluster Ready Services (CRS) and Oracle Real Application Clusters (RAC)
+    are already installed on the system, the Installer displays the Specify'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'Hardware Cluster Installation Mode screen. You must select Local Installation
+    on this screen.
+
+
+    +   - Re-installing Oracle Software
+
+    - If you re-install Oracle software into an Oracle home directory where Oracle
+    Client is already installed, you must also re-install any components that were
+    installed before you began the re-installation.
+
+
+    # Running the Oracle Universal Installer
+
+
+    Start the Installer and install the software, as follows:
+
+
+    +   1. If you are installing the software from disc, mount the first disk if it
+    is not already mounted
+
+    - Some plats automatically mount the disc when you insert it into the drive. If
+    the disc does not mount automatically, see Appendix A for platform-specific information
+    about mounting it.
+
+    2. If necessary, log in as the Oracle software user (oracle) and set the DISPLAY
+    environment variable.
+
+    3. To start the Installer, complete one of the following steps depending on the
+    location of the installation:
+
+    - If the installation files are on disc, enter commands similar to the following,
+    directory_path is the CD-ROM mount point or the path of the client directory on
+    the DVD-ROM:
+
+    ```bash
+
+    cd /tmp
+
+    cd /directory_path/runInstaller
+
+    ```
+
+    - If the installation files are on the hard disk, change directory to the Disk1
+    directory and enter the following command:
+
+    ```bash
+
+    ./runInstaller
+
+    ```
+
+
+    If the Installer does not appear, see the "X Windows Display Errors" section on
+    page C-1 for information about troubleshooting.
+
+    4. Use the following guidelines to complete the installation:
+
+
+    +   - Follow the instructions displayed in the Installer windows. If you need
+    additional information, click Help.
+
+    - When the Installer prompts you to run a script with root privileges, enter a
+    command similar to the following in a terminal where you are logged in as the
+    root user, then click Continue or OK:
+
+    ```bash
+
+    # /script_path/script_name
+
+    ```
+
+
+    Caution: The Oracle Universal Installer automatically installs the Oracle-supplied
+    version of the Java Runtime Environment (JRE). This version is required to run
+    Oracle Universal Installer and several Oracle assistants. Do not modify the JRE
+    except by a patch provided by Oracle Support Services.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '+   5. If you chose an installation type that runs Oracle Net Configuration
+    Assistant (NetCA) in interactive mode, you must provide detailed information about
+    configuring your network.
+
+
+    If you need assistance when using NetCA in interactive mode, click **Help** on
+    any screen.
+
+
+    > **Note:** If you chose a default installation, NetCA runs non-interactively.
+
+
+    +   6. When all of the configuration tools have finished, click **Exit**, then
+    click **Yes** to exit from the Installer.
+
+
+    +   7. See [Chapter 4, "Post-installation Tasks"] for information about tasks
+    that you must complete after you have installed the software.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# # Post-installation Tasks
+
+
+    This chapter describes how to complete post-installation tasks after you have
+    installed the software. It includes information about the following topics:
+
+
+    +   - Required Post-installation Tasks
+
+    - Recommended Post-installation Tasks
+
+    - Required Product-Specific Post-installation Tasks
+
+
+    You must perform the tasks listed in the "Required Post-installation Tasks" section.
+    Oracle recommends that you perform the tasks listed in the "Recommended Post-installation
+    Tasks" section after all installations.
+
+
+    If you installed and intend to use any of the products listed in the "Required
+    Product-Specific Post-installation Tasks" section, you must perform the tasks
+    listed in the product-specific subsections.
+
+
+    > Note: This chapter describes basic configuration only. See the Oracle Database
+    Administrator''s Reference for UNIX Systems and product-specific administration
+    and tuning guides for more sophisticated configuration and tuning information.
+
+
+    # Required Post-installation Tasks
+
+
+    You must perform the tasks described in the following sections after completing
+    an installation:
+
+
+    +   - Downloading and Installing Patches
+
+    - Running Oracle Enterprise Manager Java Console
+
+    - Connecting with Instant Client
+
+    - Configuring Oracle Products
+
+
+    # Downloading and Installing Patches
+
+
+    Check the OracleMetalink Web site for required patches for your installation.
+    To download required patches:
+
+
+    +   - Use a browser to view the OracleMetalink Web site:
+
+
+    ```
+
+    http://metalink.oracle.com
+
+    ```
+
+
+    +   - Log in to OracleMetalink.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Required Post-installation Tasks\n\n> **Note:** If you are not an OracleMetalink\
+    \ registered user, click\n**Register for MetaLink!** and follow the registration\
+    \ instructions.\n\n+   3. On the main OracleMetalink page, click *Patches*.\n\n\
+    +   4. Select *Simple Search*.\n\n+   5. Specify the following information, then\
+    \ click **Go:**\n\n+   * In the *Search By* field, specify Product or Family,\
+    \ then specify RDBMS Server.\n\n+   * In the *Release* field, specify the current\
+    \ release number.\n\n+   * In the *Type* field, specify Patchset/Minipack.\n\n\
+    +   * In the *Platform* or *Language* field, select your platform.\n\n# Using\
+    \ Oracle Enterprise Manager Java Console\n\nIn addition to use Oracle Enterprise\
+    \ Manager Database Control or Grid Control to manage an Oracle Database 10g database,\
+    \ you can also use the Oracle Enterprise Manager Java Console to manage databases\
+    \ from this release or previous releases. The Java Console is installed by the\
+    \ *Administrator* installation type.\n\n> **Note:** Oracle recommends that you\
+    \ use Grid Control or Database Control in preference to the Java Console when\
+    \ possible.\n\nTo start the Java Console, follow these steps:\n\n+   1. Set the\
+    \ `ORACLE_HOME` environment variable to specify the Oracle home directory where\
+    \ you installed Oracle Client.\n\n+   2. Set the shared library path environment\
+    \ variable of the system to include the following directories:\n\n| Platform |\
+    \ Environment Variable | Required Setting |\n| --- | --- | --- |\n| Linux x86-64\
+    \ | LD_LIBRARY_PATH | `$ORACLE_HOME/lib/lib32:$ORACLE_HOME/lib:$LD_LIBRARY_PATH`\
+    \ |\n\n+   3. Enter the following command to start the Java Console:\n\n```\n\
+    $ $ORACLE_HOME/bin/orcmap\n```\n\n# Connecting with Instant Client\n\nIf you use\
+    \ the Instant Client installation type, you can configure users’ environment to\
+    \ enable dynamically linked clients to connect to a database as follows:\n\n+\
+    \   1. Set the appropriate shared library path environment variable for your platform\
+    \ to specify the directory that contains the Instant Client libraries. For the\
+    \ Instant Client installation type, this directory is the Oracle home directory\
+    \ that you specified during the installation, for example:\n\t\t\t`/u1/app/oracle/product/10.1.0/client_1`\n\
+    \nThe following table shows the appropriate environment variable for the platform:"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "| Platform | Environment Variable |\n|---|---|\n| Linux x86-64 | LD_LIBRARY_PATH\
+    \ |\n\n2. Use one of the following methods to specify database connection information\
+    \ for the client application:\n\n+   - Specify a SQL URL string using the following\
+    \ format:\n  //host:port/service_name\n- Set the TNSADMIN environment variable\
+    \ to specify the location of the tnsnames.ora file and specify a service name\
+    \ from that file.\n- Set the TNSADMIN environment variable and set the TWO_TASK\
+    \ environment variable to specify a service name from the tnsnames.ora file.\n\
+    \n> **Note:** You do not have to specify the ORACLE_HOME environment variable.\n\
+    \n# # Configuring Oracle Products\n\nMany Oracle products and options must be\
+    \ configured before you use them for the first time. Before using individual Oracle\
+    \ Database products or options, specify the appropriate manual in the product\
+    \ documentation library, available on the Oracle Documentation Library CD-ROM,\
+    \ the DVD-ROM, or on the OTN Web site.\n\n# # Recommended Post-installation Tasks\n\
+    \nOracle recommends that you perform the tasks described in the following section\
+    \ after completing an installation:\n\n+   - Backing Up root.sh Script\n- Setting\
+    \ Up User Accounts\n- Generating the Client Static Library\n\n# # Backing Up root.sh\
+    \ Script\n\nOracle recommends that you back up the root.sh script after you complete\
+    \ an installation. If you install other products in the same Oracle home directory,\
+    \ then the Oracle Universal Installer updates the contents of the existing root.sh\
+    \ script during the installation. If you require information contained in the\
+    \ original root.sh script, then you can recover it from the backed root.sh file.\n\
+    \n# # Setting Up User Accounts\n\nFor information about setting up additional\
+    \ user accounts, see the Oracle Database Administrator's Reference for UNIX Systems.\n\
+    \n# # Generating the Client Static Library\n\nThe client static library (libclnt10.a)\
+    \ is not generated during installation. If you want to link your applications\
+    \ to the client static library, you must first generate it as follows:"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# Required Product-Specific post-installation Tasks\n\n+   1. Switch user to\
+    \ oracle.\n2. Set the ORACLE_HOME environment variable to specify the Oracle home\
+    \ directory used by the Client installation. For example:\n    * Bourne shell\
+    \ (sh), Bash shell (bash), or Korn shell (ksh):\n```bash\n$ ORACLE_HOME=/u01/app/oracle/product/10.1.0/client_1\n\
+    $ export ORACLE_HOME\n```\n    * C shell (csh or tcsh):\n```bash\n% setenv ORACLE_HOME\
+    \ /u01/app/oracle/product/10.1.0/client_1\n```\n3. Enter the following command:\n\
+    ```bash\n$ $ORACLE_HOME/bin/lnInst\n```\n\n# Required Product-Specific post-installation\
+    \ Tasks\n\nThe following sections describe platform-specific post-installation\
+    \ tasks that you must perform if you install and intend to use the products mentioned:\n\
+    \n+   * Configuring Oracle Net Services\n* Configuring Oracle Precompiler\n\n\
+    # Configuring Oracle Net Services\n\nIf you have a previous release of Oracle\
+    \ software installed on this system, you might want to copy information from the\
+    \ Oracle Net tnsnames.ora configuration file from the previous release to the\
+    \ corresponding file for the new release.\n\n> Note: The default location for\
+    \ the tnsnames.ora file is $ORACLE_HOME/network/admin/ directory. However, you\
+    \ may use a central location for this file, for example /etc.\n\nIf necessary,\
+    \ you can add connection information for additional database instances to the\
+    \ new file.\n\n# Configuring Oracle Precompiler\n\nThe following section describes\
+    \ post-installation tasks for Oracle precompiler:\n\n+   * Configuring Pro*C/C++\n\
+    \n> Note: All precompiler configuration files are located in the $ORACLE_HOME/precomp/admin\
+    \ directory.\n\n# Configuring Pro*C/C++\n\nVerify that the PATH environment variable\
+    \ includes the directory that contains the C compiler executable. Table 4–1 shows\
+    \ the default directories and the appropriate commands to verify the path setting,\
+    \ depending on your platform and compiler."
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Table 4–1 C/C++ Compiler Directory
+
+
+    | Platform | Path | Command |
+
+    |---|---|---|
+
+    | Linux x86-64 | /usr/bin | $ which gcc |'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# 5 Removing Oracle Software\n\nThis chapter describes how to completely remove\
+    \ all software from an Oracle home directory.\n\n> Note: If you want to remove\
+    \ an individual product, check the product-specific documentation for requirements\
+    \ and restrictions.\n\n# Removing Oracle Software\n\nThe following steps describe\
+    \ how to use the Installer to remove Oracle software from an Oracle home:\n\n\
+    > Note: Always use the Oracle Universal Installer to remove Oracle software. Do\
+    \ not delete any Oracle home directories without using the Installer to remove\
+    \ the software.\n\n+   1. If necessary, log in as the oracle user:\n   $ su -\
+    \ oracle\n2. Set the ORACLE_HOME environment variable to specify the path of the\
+    \ Oracle home directory that you want to remove:\n   * Bourne, Bash, or Korn shell:\n\
+    \     $ ORACLE_HOME=/u01/app/oracle/product/10.1.0/client_1\n     $ export ORACLE_HOME\n\
+    \   * C shell:\n     $ setenv ORACLE_HOME /u01/app/oracle/product/10.1.0/client_1\n\
+    3. Start the Installer as follows:\n   $ORACLE_HOME/oui/bin/runInstaller\n4. In\
+    \ the Welcome window, click Uninstall Products.\n5. In the Inventory window, select\
+    \ the Oracle home and the products that you want to remove, then click Remove."
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '+   6. When the Installer displays a confirmation window asking you to confirm
+    that you want to deinstall the products and their dependant components, click
+    **Yes**.
+
+
+    The Installer displays a progress indicator as it removes the software.
+
+
+    +   7. When the products have been deleted, click **Cancel** to exit from the
+    Installer, then click **Yes**.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# # Mounting Discs\n\nThis Oracle product is delivered on both CD-ROM and DVD-ROM.\
+    \ These discs are in ISO 9660 format with Rockridge extensions. This appendix\
+    \ describes how to mount and unmount a disc on each supported platform. It includes\
+    \ information about the following topics:\n\n+   - Mounting Discs on Linux x86-64\
+    \ on page A-1\n\n# ## Mounting Discs on Linux x86-64\n\nOn Linux systems, the\
+    \ discs mount automatically when you insert it into the disc drive. If the disc\
+    \ does not mount automatically, follow these steps to mount it:\n\n+   1. Switch\
+    \ user to root:\n\n```\n$ su - root\n```\n\n+   2. If necessary, enter a command\
+    \ similar to one of the following to eject the currently mounted disc, remove\
+    \ it from the drive:\n\n+   - Red Hat:\n  - # eject /mnt/cdrom\n\n+   - SuSE:\n\
+    \  - # eject /media/cdrom\n\nIn these examples, /mnt/cdrom and /media/cdrom are\
+    \ the point directories for the disc drive.\n\n+   3. Insert the appropriate disc\
+    \ into the disc drive.\n\n+   4. To verify that the disc mounts automatically,\
+    \ enter one of the following commands depending on your platform:\n\n+   - Red\
+    \ Hat:\n  - # ls /mnt/cdrom\n\n+   - SuSE:\n  - # ls /media/cdrom\n\n+   5. If\
+    \ this command fails to display the contents of the disc, enter a command similar\
+    \ to mount it, depending on your platform:\n\n+   - Red Hat:\n  - # mount -t iso9660\
+    \ /dev/cdrom /mnt/cdrom"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '+   SuSE:
+
+    # mount -t iso9660 /dev/cdrom /media/cdrom
+
+
+    In these examples, /mnt/cdrom and /media/cdrom are the mount point directories
+    for the disc drive.
+
+
+    +   6. If the Installer is displaying the Disk Location dialog box, enter the
+    disc mount point directory path, for example: /mnt/cdrom
+
+
+    To continue, go to one of the following sections:
+
+
+    +   - If you want to copy software to a hard disk, see the following section:
+
+    Copy the Oracle Client Software to a Hard Disk on page 3-3
+
+
+    +   - If you want to install the software from the discs, see the "Install the
+    Oracle Client Software" section on page 3-3.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# # B Installing and Configuring Oracle Products Using Response Files
+
+
+    This chapter describes how to install and configure Oracle products using response
+    files. It includes information about the following topics:
+
+
+    +   - Introduction
+
+    - Create the oraInst.loc File
+
+    - Prepare a Response File
+
+    - Run the Installer in Silent or Suppressed Mode
+
+
+    # ## Introduction
+
+
+    You can automate the installation and configuration of Oracle software, either
+    fully or partially, by specifying a response file when you start the Oracle Universal
+    Installer. The Installer uses values contained in the response file to provide
+    answers to some or all of the prompts:
+
+
+    +   - If you include responses for all of the prompts in the response file and
+    specify the -silent option when starting the Installer, then the Installer runs
+    in silent mode. During a silent-mode installation, the Installer does not display
+    any screens. Instead, it displays progress in the terminal that you used to start.
+
+    - If you include responses for some or all of the prompts in the response file
+    and omit the -silent option, then the Installer runs in suppressed mode. During
+    a suppressed-mode installation, the Installer displays only the screens for which
+    you did not specify all required information. You can also use variables in the
+    response file or command-line options to suppress other installer screens, such
+    as the Welcome screen or Summary screen, that do not prompt for information.
+
+
+    The following table describes several reasons why you might want to run the Installer
+    in silent mode or suppressed mode:'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Create the oraInst.loc File\n\n| Mode | Uses |\n|---||\n| Silent | Use silent\
+    \ mode if you want to:\n - Complete an unattended installation, which you might\
+    \ schedule using system utilities such as:\n - Complete several similar installations\
+    \ on multiple systems without user interaction\n - Install the software on a system\
+    \ that does not have X Window System installed on it |\n| Suppressed | Use suppressed\
+    \ mode if you want to complete simple Oracle installations on more than one system,\
+    \ providing default answers to some, but not all of the Installer prompts. |\n\
+    \nThe Installer displays progress information in the terminal that you used to\
+    \ start it, but it does not display any of the Installers.\n\n# Installation Overview\n\
+    \nTo install and configure Oracle products using the Installer in silent or suppressed\
+    \ mode, follow these steps:\n\n> Note: You must complete all required pre-installation\
+    \ tasks on a system before running the Installer in silent or suppressed mode.\n\
+    \n+   1. Create the oraInst.loc file.\n2. Prepare a response file.\n3. Run the\
+    \ Installer in silent or suppressed mode.\nThese steps are described in the following\
+    \ sections.\n\n# Create the oraInst.loc File\n\nIf you plan to install Oracle\
+    \ products using the Installer in silent or suppressed mode, you must manually\
+    \ create the oraInst.loc file if it does not already exist. This file specifies\
+    \ the location of the Oracle Inventory directory where the Installer creates the\
+    \ inventory of Oracle products installed on the system.\n\n> Note: If Oracle software\
+    \ has been installed previously on the system, the oraInst.loc file might already\
+    \ exist. If the file exists, you do not need to create a new file.\n\nTo create\
+    \ the oraInst.loc file, follow these steps:\n\n+   1. Switch user to root:\n\n\
+    ```\n$ su root\n```\n\n+   2. Change directory as follows:\n\n```\n# cd /etc\n\
+    ```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '+   Use a text editor to create the oraInst.loc file, containing the following
+    lines:
+
+
+    ```
+
+    inventory_loc=ORACLE_BASE/orInventory
+
+    st_group=
+
+    ```
+
+
+    In this example, ORACLE_BASE is the path of the Oracle base directory, for example,
+    /01/app/oracle.
+
+
+    +   Enter the commands to set the appropriate owner, and permissions on the oraInst.loc
+    file:
+
+
+    ```
+
+    # chown oracle:install oraInst.loc
+
+    # chmod 664 oraInst.loc
+
+    ```
+
+
+    # Prepare a Response File
+
+
+    There are two methods that you can use to prepare a response file for use during
+    silent-mode or suppressed-mode installations:
+
+
+    +   Edit a response file template
+
+
+    This method is most useful for the Instant Client, Administrator, or Runtime installation
+    types.
+
+
+    +   Record a response file using the Installer
+
+
+    This method is most useful for Custom or software-only installations.
+
+    The following subsections describe each method.
+
+
+    # Editing a Response File Template
+
+
+    Oracle provides response file templates for each product and instance type, and
+    for each configuration tool. These files are located in the response directory
+    on the CD-ROM or the client/response directory on the DVD-ROM.
+
+
+    > Note: If you copied the software to a hard disk, the response files are located
+    in the Disk1/response directory.
+
+
+    Table B-1 lists the response files provided with Oracle Client.
+
+
+    | Response File | Description |
+
+    |---|---|
+
+    | instantClient.rsp | Instant Client installation of Oracle Client |
+
+    | clientAdmin.rsp | Administrator installation of Oracle Client |
+
+    | clientRuntime.rsp | Runtime installation of Oracle Client |
+
+    | clientCustom.rsp | Custom installation of Oracle Client |
+
+
+    To prepare a response file:
+
+
+    +   Copy the response file from the response file directory to a directory on
+    your system:
+
+
+    ```
+
+    $ cp /directory_path/response/response_file.rsp local_directory
+
+    ```'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'In this example, `directory_path` is the CD-ROM mount point directory or the
+    client directory on the DVD-ROM. If you have copied the software to a hard drive,
+    you can edit the file in the `response` directory if you prefer.
+
+
+    +   2. Open the response file in a text editor:
+
+    $ vi /local_dir/response_file.rsp
+
+
+    +   3. Edit the file, following the instructions in the file.
+
+
+    > Note: The Installer or configuration assistant fails if you do not correctly
+    configure the response file. See Silent-Mode Response File Error Handling on page
+    C-4 for more information about troubleshooting a failed silent-mode installation.
+
+
+    # Recording a Response File
+
+
+    You can use the Installer in interactive mode to record a response file that you
+    can edit and then use silent-mode or suppressed-mode installations. When you are
+    recording the response file, you can either complete the installation, or you
+    can exit from the Installer on the Summary page, before it starts to copy the
+    software to the system.
+
+
+    > Note: You cannot use record mode to create a response file during installation
+    that uses the Basic Installation method.
+
+
+    To record a new response file:
+
+
+    +   1. Complete the pre-installation tasks in Chapter 2.
+
+    When you run the Installer to record a response file, it checks the system to
+    verify that it meets the requirements to install the software. For this reason,
+    Oracle recommends that you complete all of the required pre-installation tasks
+    and record the response file while completing an installation.
+
+
+    +   2. If you have not installed Oracle software on this system, create the `oraInst.loc`
+    file, as described in the previous section.
+
+
+    +   3. Make sure that the Oracle owner user (typically `oracle`) has permissions
+    to create or write to the Oracle home path that you specify when you run the Installer.
+
+
+    +   4. To record a response file, enter a command similar to the following to
+    start the Installer.
+
+
+    > Note: Do not specify a relative path to the response file. If you specify a
+    relative path, the Oracle Universal Installer fails.
+
+
+    ```
+
+    $ /directory_path/runInstaller -record -destinationFile filename
+
+    ```
+
+
+    In the following example:
+
+
+    +   * `directory_path` is either the CD-ROM mount point directory, the path of
+    the client directory on the DVD-ROM, or the path of the `Disk1` directory on the
+    hard drive
+
+
+    ![](img/98c6a50499da11b582445838bf7b8c72_49_0.png)'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'Run the Installer in Silent or Suppressed Mode
+
+
+    +   - The -record parameter specifies that you want to record the responses that
+    you enter in a response file
+
+    - `filename` is the full path and name of the response file that you want to record
+
+
+    5. On each Installer screen, specify the required information.
+
+
+    6. When the Installer displays the Summary screen, do one of the following:
+
+
+    +   - Click `Install` to create the response file, then continue with the installation.
+
+    - Click `Cancel`, then `Yes` to create the response file but exit from the Installer
+    without installing the software.
+
+
+    The response file is saved in the location that you specified using the `-destinationFile`
+    option.
+
+
+    7. If you did not complete the installation, delete the Oracle home directory
+    that the Installer created using the path you specified on the Specify File locations.
+
+
+    8. Before using the response file on another system, any text editor to edit the
+    file and make any required changes.
+
+
+    Use the comments in the file as a guide when editing it.
+
+
+    # # Run the Installer in Silent or Suppressed Mode
+
+
+    To run the Oracle Universal Installer in silent or suppressed mode, follow these
+    steps:
+
+
+    +   1. Complete the pre-installation tasks listed in Chapter 2.
+
+    2. Log in as the Oracle software owner user (typically *oracle*).
+
+    3. If you are completing a suppressed-mode installation, set the DISPLAY environment
+    variable.
+
+
+    > Note: You do not have to set the DISPLAY environment variable if you are completing
+    a silent-mode installation.
+
+
+    4. To start the Installer in silent or suppressed mode, enter a command similar
+    to the following:
+
+
+    > Note: Do not specify a relative path to the response file. If you specify a
+    relative path, the Oracle Universal Installer fails.
+
+
+    ```
+
+    $ /directory_path/runinstaller [-silent] -responseFile filename
+
+    ```
+
+
+    In these examples:
+
+
+    +   - `directory_path` is the CD-ROM mount point, the path of the client directory
+    on the DVD-ROM, or the path of the Disk1 directory on the hard drive
+
+    - The `-silent` option indicates that you want to run the Installer in silent
+    mode
+
+    - `filename` is the full path and filename of the installation response file that
+    you configured
+
+
+    Installing and Configuring Oracle Products Using Response Files B-5'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: 'Note: For more information about other options for the runInstaller command,
+    enter the following command:
+
+    $ /directory_path/runInstaller -help
+
+
+    +   5. When the installation completes, log in as the root user and run the root.sh
+    script:
+
+
+    ```
+
+    $ su
+
+    # /oracle_home_path/root.sh
+
+    ```'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Troubleshooting
+
+
+    This appendix contains information about troubleshooting. It includes information
+    about the following topics:
+
+
+    +   * Verify Requirements
+
+    * X Windows Display Errors
+
+    * What to Do If an Installation Error Occurs
+
+    * Reviewing the Log of an Installation Session
+
+    * Troubleshooting Configuration Assistants
+
+    * Silent-Mode Response File Error Handling
+
+    * Cleaning Up After a Failed Installation
+
+
+    # Verify Requirements
+
+
+    Before performing any of the troubleshooting steps in this appendix, ensure that
+    the system meets the requirements and that you have completed all of the pre-installation
+    tasks specified in Chapter 2, "Pre-installation Tasks".
+
+
+    Read the Release Notes
+
+
+    Read the release notes for the product on your platform before installing it.
+    The release notes are available on the Oracle Database 10g disc. The latest version
+    of the release notes is also available on the ONT web site:
+
+
+    http://www.oracle.com/technology/documentation/
+
+
+    # X Windows Display Errors
+
+
+    If you are running the Installer on a remote system and you want to display the
+    Installer''s interface on your local system, you may see error messages similar
+    to the following:
+
+
+    ```
+
+    "Failed to connect to server"
+
+    *"Connection refused by server"
+
+    *"Can''t open display"
+
+    ```
+
+
+    If you see one of these error messages, follow these steps:'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# What to Do if an Installation Error Occurs
+
+
+    > Note: This procedure applies only to users of UNIX workstations. If you are
+    using a PC or other system with X server software installed, see the X server
+    documentation for information about how to permit remote systems to display X
+    applications on the local system.
+
+
+    +   1. In a local terminal window, log in as the user that started the X window
+    session.
+
+
+    +   2. Enter the following command:
+
+
+    $ xhost +
+
+
+    +   3. Enter the following commands, where workstation_name is the host name or
+    IP address of your workstation:
+
+
+    * Bourne, Bash, or Korn shell:
+
+    ```bash
+
+    $ DISPLAY=workstation_name:0.0
+
+    $ export DISPLAY
+
+    ```
+
+    * C or tsh shell:
+
+    ```bash
+
+    $ setenv DISPLAY workstation_name:0.0
+
+    ```
+
+
+    +   4. To determine whether X Window applications display correctly on the local
+    system, enter the following command:
+
+    ```bash
+
+    $ xclock
+
+    ```
+
+
+    The X clock should appear on your monitor.
+
+    If the clock appears, close X clock and start the Installer again.
+
+
+    # What to Do if an Installation Error Occurs
+
+
+    +   If you encountered an error during installation:
+
+    * Do not exit the exit.
+
+    * If you clicked Next after entered incorrect information on one of the installation
+    screens, click Back to the screen and correct the information.
+
+    * If you encounter an error while the Installer is copying or linking files, see
+    the "Reviewing the Log of an Installation Session" section on page C-2.
+
+    * If you encounter an error while a configuration assignment is running, see the
+    "Troubleshooting Configuration Assistants" section on page C-3.
+
+    * If you cannot resolve the problem, remove the failed installation by following
+    the steps listed in the "Cleaning Up After a Failed Installation" section on page
+    C-4.
+
+
+    # Reviewing the Log of an Installation Session
+
+
+    During an installation, the Installer records all of the actions that it performs
+    in a log. If you encounter problems during the installation, review the log file
+    for information about possible causes of the problem.
+
+    To view the log file, follow these steps:
+
+
+    +   1. If necessary, enter one of the following commands to determine the location
+    of the oraInventory directory:'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '```
+
+    $ cat /etc/oraInst.loc
+
+    ```
+
+
+    The inventory_loc parameter in this file specifies the location of the oraInventory
+    directory.
+
+
+    +   2. Enter the following command to change directory to the Installer log directory,
+    where orainventory_location is the location of the oraInventory directory:
+
+
+    ```
+
+    $ cd /inventory_location/logs
+
+    ```
+
+
+    +   3. Enter the following command to determine the file name of the log file:
+
+
+    ```
+
+    $ ls -ltr
+
+    ```
+
+
+    This command lists the files in order of creation, with the most recent file shown.
+    Installer log files have names similar to the following, where date_time indicates
+    the date and time that the installation started:
+
+
+    installActionsdate_time.log
+
+
+    +   4. To view the most recent in the log file, where information about a problem
+    is most likely to appear, enter a command similar to the following:
+
+
+    ```
+
+    $ tail -50 installActionsdate_time.log | more
+
+    ```
+
+
+    This command displays the last 50 lines in the log file.
+
+
+    +   5. If the error displayed by the Installer or listed in the log file indicates
+    a relinking problem, see the following file for more information:
+
+
+    ```
+
+    $ORACLE_HOME/install/make.log
+
+    ```
+
+
+    # Troubleshooting Configuration Assistants
+
+
+    To troubleshoot an installation error that occurs when a configuration assistant
+    is running:
+
+
+    +   * Review the installation log files listed in the "Reviewing the Log of an
+    Installation Session" section on page C-2.
+
+
+    +   * Review the specific assistant log file located in the $ORACLE_HOME/cfgtoologs.
+    Try to fix the issue that caused the error.
+
+
+    +   * If you see the "Fatal Error. Restart" message, look for the cause of the
+    problem by reviewing the log files. Refer to the "Fatal Errors" section for further
+    instructions.
+
+
+    # Configuration Assistant Failure
+
+
+    Oracle configuration assistant failures are noted at the bottom of the installation
+    screen. The configuration assistant interface displays additional information,
+    if available. The configuration assistant execution status is stored in the following
+    file: oraInventory_location/logs/installActionsdate_time.log
+
+
+    The execution status codes are listed in the following table:
+
+
+    | Status | Result Code |
+
+    | --- | --- |
+
+    | Configuration assistant succeeded | 0 |'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Silent-Mode Response File Error Handling
+
+
+    | Status | Result Code |
+
+    | --- | --- |
+
+    | Configuration assistant failed | 1 |
+
+    | Configuration assistant cancelled | -1 |
+
+
+    # Fatal Errors
+
+
+    If you receive a fatal error while a configuration assistant is running, you must
+    remove the current installation and reinstall the Oracle software, as follows:
+
+
+    +   1. Remove the failed installation as described in the "Cleaning Up After a
+    Failed Installation" section on page C-4.
+
+    2. Correct the cause of the fatal error.
+
+    3. Reinstall the Oracle software.
+
+
+    # Silent-Mode Response File Error Handling
+
+
+    To determine whether a silent-mode installation succeeds or fails, see the following
+    log file:
+
+    `/oraInventory_location/logs/silentInstallate_time.log`
+
+
+    If necessary, see the previous section for information about determining the location
+    of the `oraInventory` directory.
+
+
+    A silent installation fails if:
+
+
+    +   * You do not specify a response file
+
+    * You specify an incorrect or incomplete response file
+
+    * The Installer encounters an error, such as insufficient disk space
+
+
+    The Installer or configuration assistant validates the response file at runtime.
+    If the validation fails, the silent-mode installation or configuration process
+    ends. The Installer treats values for parameters that are of the wrong context,
+    format, or type as if no value was specified in the file.
+
+
+    # Cleaning Up After a Failed Installation
+
+
+    If an installation fails, you must remove the files created during the attempted
+    installation and remove the Oracle home directory. Perform the following steps
+    to remove the files:
+
+
+    +   1. Start the Installer as described in the "Install the Oracle Client Software"
+    section on page 3-3.
+
+    2. Click **Install Products** on the Welcome window or click **Installed Products**
+    on any- window.
+
+    3. Select the Oracle home that contains the products you want to remove, then
+    click **Remove**.
+
+    4. Manually remove the Oracle home directory created during the failed installation.
+
+    5. Reinstall the Oracle software.
+
+
+    The Inventory window appears, listing installed products.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Index
+
+
+    # A
+
+
+    administrator.rsp file, B-3
+
+
+    # B
+
+
+    +   - base directory
+
+    - Oracle base directory
+
+    - Bash shell
+
+    - default user startup file, 2-12
+
+    - bash_profile file, 2-12
+
+    - Basic installation type
+
+    - noninteractive installations, B-4
+
+    - Bourne shell
+
+    - default user startup file, 2-12
+
+
+    # C
+
+
+    +   - C compiler
+
+    - requirement on Linux x86-64, 2-5
+
+    - C shell
+
+    - default user startup file, 2-12
+
+    - CD-ROMs
+
+    - mounting
+
+    - on Linux x86-64, A-1
+
+    - certification, hardware and software, 1-2
+
+    - chmod command, 2-11
+
+    - shown command, 2-11
+
+    - configuration assignments
+
+    - troubleshooting, C-3
+
+    - custom.rsp file, B-3
+
+
+    # D
+
+
+    +   - Database Configuration Assistant
+
+    - troubleshooting, C-3
+
+    - default file mode creation mask
+
+    - setting, 2-11
+
+    - directory
+
+    - Oracle base directory, 2-8
+
+    - Oracle home directory, 2-9
+
+    - Oracle Inventory directory, 2-9
+
+    - inventory, 2-9
+
+    - disk space
+
+    - checking, 2-3
+
+    - DISPLAY environment variable
+
+    - setting, 2-11, 2-12
+
+
+    # E
+
+
+    +   - emulator
+
+    - installing from X emulator, 2-2
+
+    - env command, 2-14
+
+    - environment
+
+    - checking settings, 2-14
+
+    - configuring for oracle user, 2-11
+
+    - environment variables
+
+    - DISPLAY, 2-11, 2-12
+
+    - ORACLE_BASE, 2-9, 2-11
+
+    - ORACLE_HOME, 2-11, 2-13 files
+
+    - ORACLE_SID, 2-11
+
+    - PATH, 2-11
+
+    - removing from shell startup file, 2-12
+
+    - SHELL, 2-11
+
+    - TEMP and TMPDIR, 2-13
+
+    - TNS_ADMIN, 2-11
+
+    - errata
+
+    - Linux kernel err, 2-5
+
+    - errors
+
+    - configuration assistants, C-3
+
+    - installation, C-2, C-4
+
+    - non-interactive installation, C-4
+
+    - silent mode, C-4
+
+    - X windows, C-1
+
+    - /etc/orandst.loc, C-3
+
+    - examples
+
+    - Oracle base directories, 2-9
+
+
+    # F
+
+
+    +   - fatal errors, C-4
+
+    - file mode creation mask
+
+    - setting, 2-11
+
+    - file system
+
+    - appropriate for Oracle base directory, 2-11 files
+
+    - administrator.rsp, B-3
+
+    - bash_profile, 2-12
+
+    - custom.rsp, B-3
+
+    - editing shell startup file, 2-12
+
+    - /etc/orandst.loc, C-3
+
+    - instantclient.rsp, B-3
+
+    - .login, 2-12
+
+    - oralinst.loc, 2-7, 10, B-2'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'oratab, 2-10
+
+    -profile, 2-12
+
+    response files, B-3
+
+    runtime.rsp, B-3
+
+    tnsnames.ora, 4-4
+
+
+    Korn shell
+
+    default user startup file, 2-12
+
+
+    # L
+
+
+    Linux
+
+    checking software requirements, 2-5
+
+    kernel errata, 2-5
+
+    Linux x86-64
+
+
+    # G
+
+
+    group
+
+    checking for existing install group, 2-7
+
+    creating the oinstall group, 2-6
+
+    groupupadd command, 2-7
+
+
+    checking distribution, 2-5
+
+    checking version, 2-5
+
+    software requirements, 2-3
+
+    log files, C-2
+
+    troubleshooting, C-2
+
+    login file, 2-12
+
+
+    # H
+
+
+    hardware certification, 1-2
+
+    hardware requirements, 2-2
+
+    home directory
+
+    See Oracle home directory
+
+
+    # M
+
+
+    mask
+
+    setting default file creation mask, 2-11
+
+    memory requirements, 2-2
+
+    mkdir directory, 2-11
+
+    setting default file creation mask, 2-11
+
+    mount point
+
+    for Oracle base directory, 2-8
+
+    mount point directories, 3-3
+
+    multiple Oracle homes, 1-3
+
+
+    # I
+
+
+    installation
+
+    overview, 3-1
+
+    available products, 1-2
+
+    completing, 3-5
+
+    considerations, 1-2
+
+    errors, C-2 C-4
+
+    silent mode, C-4
+
+    guidelines, 3-3
+
+    log files, C-2
+
+    non-interactive
+
+    error handling, C-4
+
+    oracle.loc file, B-2
+
+    response files, B-3
+
+    preparing, B-3
+
+    silent mode, C-4
+
+    temporates, B-3
+
+    silent mode, B-5
+
+    installation guidelines, 3-3, 3-4
+
+    Oracle Universal Installer, 3-3
+
+    re-installing Oracle software, 3-4
+
+    installation software
+
+    copying to a hard disk, 3-3
+
+    extract, 3-2
+
+    re-installing, 3-4
+
+    instance
+
+    instance identifier (SID), 2-11
+
+    instantclient.file, B-3
+
+
+    # N
+
+
+    Net Configuration Assistant
+
+    troubleshooting, C-3
+
+    Network Information Services
+
+    See NIS
+
+    -interactive
+
+    alterative to local user and group, 2-6
+
+    non-interactive installation
+
+    oracle.loc file, B-2
+
+    response files
+
+    preparing, B-3
+
+    silent mode, B-5
+
+    errors, C-4
+
+    non-interactive runnings
+
+    Oracle Universal Installer, B-5
+
+
+    # O
+
+
+    OFA
+
+    recommendations for Oracle base directory, 2-8
+
+    recommended path for Oracle base directory, 2-8
+
+    recommended path for Oracle home
+
+    directory, 2-9
+
+    recommended path for Oracle Inventory
+
+    directory, 2-9
+
+
+    # J
+
+
+    Java Runtime Environment
+
+    See IRE
+
+    JRE
+
+    Oracle supplied version, 3-4
+
+
+    # K
+
+
+    kernel
+
+    Linux errata, 2-5
+
+    oinstall group
+
+    checking for existing, 2-7
+
+    creating, 2-6
+
+    description, 2-6
+
+
+    # Index-2'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'operating system
+
+    checking distribution and version of Linux
+
+
+    x86-64, 2-5
+
+    operating system requirements
+
+
+    Linux x86-64, 2-5
+
+    Optimal Flexible Architecture
+
+
+    S OA
+
+    Oracle base directory
+
+    and ORACLE,BASE environment variable, 2-9
+
+
+    creating, 2-1
+
+    creating now, 2-11
+
+    description, 2-8
+
+    equivalent directory in Windows, 2-8
+
+    examples, 2-9
+
+
+    identifying appropriate file system, 2-11
+
+    identifying existing, 2-10
+
+    mpoint for, 2-8
+
+    recommended path, 2-8
+
+
+    relationship with Oracle Software Owner
+
+    user, 2-8
+
+
+    Oracle Database
+
+    setting ORACLE_SID environment variable, 2-11
+
+    Oracle Database Client
+
+    Custom installation, 1-2
+
+    Runtime installation, 1-2
+
+
+    Oracle home directory
+
+    description, 2-9
+
+    recommended path, 2-9
+
+    requiring for, 2-9
+
+    requiring, 2-9
+
+
+    using to identify Oracle base, 2-10
+
+    Oracle home name, 2-9
+
+    description, 2-9
+
+    pointer file, 2-7
+
+
+    Oracle Inventory
+
+    description, 2-9
+
+    recommended path, 2-9
+
+    Oracle Inventory group
+
+    checking for existing, 2-7
+
+    creating, 2-6, 2-7
+
+    description, 2-6
+
+
+    Oracle Net
+
+    configuration file directory, 4-4
+
+    Oracle Net Services
+
+    post-installation tasks, 4-4
+
+    Oracle Precompilers
+
+    post-installation tasks, 4-4
+
+    Oracle software
+
+    removing, 5-1
+
+    Oracle Software Owner user
+
+    configuring environment for, 2-11
+
+    creating, 2-7
+
+    description, 2-6
+
+    determining default shell, 2-12
+
+    relationship with Oracle base directory, 2-9
+
+    required group membership, 2-6
+
+    Oracle Universal Installer
+
+    installation guidelines, 3-3
+
+
+    response files
+
+    list of, B-3
+
+    running, 3-4
+
+    oracle user
+
+    configuring environment for, 2-11
+
+    crawling, 2-7, 2-8
+
+    description, 2-6
+
+    determining default shell, 2-12
+
+    relationship with Oracle base directory, 2-9
+
+    required group membership, 2-6
+
+    ORACLE_BASE environment variable, 2-9, 2-11
+
+    removing from setup path, 2-12
+
+    setting, 2-11
+
+    ORACLE_HOME environment variable
+
+    removing from setup path, 2-12
+
+    unsetting, 2-13
+
+    ORACLE_SID environment variable
+
+    removing from setup path, 2-12
+
+    setting, 2-11
+
+    oracloc.file, 2-10
+
+    location, 2-7
+
+    location of, 2-7
+
+    Oracle Inventory directory
+
+    Se Oracle Inventory directory
+
+    oratab file
+
+    format, 2-10
+
+    location of orbit file, 2-7
+
+    OTN Web site
+
+    downloading installation software from, 3-1
+
+
+    # P
+
+
+    packages
+
+    checking on Linux x86-64, 2-6
+
+    passed command, 2-8
+
+    PATH environment variable
+
+    setting, 2-11
+
+    PC server
+
+    installing from, 2-2
+
+    permissions
+
+    for Oracle base directory, 2-11
+
+    physical RAM requirements, 2-2
+
+    post-installation
+
+    recommended tasks
+
+    root.sh backing up, 4-3
+
+    user accounts, setting up, 4-3
+
+    required tasks, 4-1
+
+    Oracle Net Services, configuring, 4-4
+
+    Oracle Precompilers, 4-4
+
+    patching and downloading, 4-1
+
+    Precompilers
+
+    requirements on Linux x86-64, 2-5
+
+    Pro/C++
+
+    configuring, 4-4
+
+    requirements on Linux x86-64, 2-5
+
+    See also C compiler
+
+    profile.file, 2-12'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# R
+
+
+    RPM
+
+    RAM requirements, 2-2
+
+    Red Hat
+
+    operating system requirements, 2-4
+
+    Red Hat Package Manager
+
+    See RPM
+
+    requirements
+
+    hardware, 2-2
+
+    response files
+
+    administrator.rsp, B-3
+
+    custom.rsp, B-3
+
+    instclient.rsp, B-3
+
+    runtime.rsp, B-3
+
+    root user, 3-4
+
+    logging in as, 2-1
+
+    root.script
+
+    backing up, 4-3
+
+    RPM
+
+    checking on Linux x86-64, 2-6
+
+    rpm command, 2-6
+
+    runtime.rsp file, B-3
+
+
+    unsetting, 2-13
+
+    trinsnames.ora file, 4-4
+
+    troubleshooting, C-1
+
+    fatal errors, C-4
+
+
+    # U
+
+
+    umask, 2-14
+
+    umask.command, 2-11, 2-14
+
+    UNIX commands, 2-14
+
+    chmod, 2-11
+
+    chown, 2-14
+
+    env, 2-14
+
+    groupadd, 2-7
+
+    midir, 2-1
+
+    password, 2-8
+
+    rmp, 2-6
+
+    swap, 2-3
+
+    swapon, 2-3
+
+    umask, 2-11
+
+    unset, 2-13
+
+    unsetenv, 2-13
+
+    useradd, 2-8
+
+    xhost, 2-13
+
+    xterm, 2-14
+
+
+    UNIX group
+
+    checking for existing installoil group, 2-7
+
+    creating the installoil group, 2-6
+
+    irstoil, 2-6
+
+    required for oracle user, 2-6
+
+    requirements, 2-6
+
+    using NIS, 2-6
+
+
+    UNIX user
+
+    creating the oracle user, 2-7
+
+    oracle, 2-6
+
+    requirements, 2-6
+
+    using NIS, 2-6
+
+    UNIX workstation
+
+    installing from, 2-1
+
+    unset, 2-13
+
+    unsetenv command, 2-13
+
+
+    creating the oracle user, 2-7
+
+    Oracle Software Owner user (oracle), 2-6
+
+    useradd, 2-8
+
+
+    # S
+
+
+    shell
+
+    determining default shell for oracle user, 2-12
+
+    sHELL environment
+
+    checking value of, 2-12
+
+    startup file
+
+    editing, 2-12
+
+    removing environment variables, 2-12
+
+
+    SID
+
+    setting ORACLE_SID environment, 2-11
+
+    silent mode installation, 1-2
+
+    software certification
+
+    software requirements
+
+    checking on Linux x86-64, 2-5
+
+    Linux x86-64, 2-3
+
+    startup file
+
+    for sheill, 2-12
+
+
+    SuSE
+
+    operating system requirements, 2-4
+
+    swap space
+
+    requirements, 2-2
+
+
+    # T
+
+
+    TEMP environment, 2-3
+
+    setting, 2-12
+
+    temporary directory, 2-3
+
+    temporary disk space
+
+    checking, 2-3
+
+    freeing, 2-3
+
+    requirements, 2-2
+
+    /tmp directory
+
+    checking-space in, 2-3
+
+    freeing space in, 2-3
+
+    TMPDIR environment, 2-3
+
+    setting, 2-12
+
+    TNS_ADMIN environment variable
+
+
+    # W
+
+
+    Windows
+
+    analogy for Oracle base discovery, 2-8
+
+
+    # X
+
+
+    X emulator
+
+    installing from, 2-2
+
+    X window system
+
+    enabling remote hosts, 2-1, 2-2
+
+    X windows
+
+    display errors, C-1
+
+    xhost command, 2-1
+
+    xterm command, 2-2
+
+
+    Index-4'
+  merge: -1
+  pgno: 59
