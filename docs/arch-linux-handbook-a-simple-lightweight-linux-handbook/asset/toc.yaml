@@ -1,0 +1,307 @@
+- - '#'
+  - Arch Linux 手册：简单轻量级的 Linux 手册
+- - '#'
+  - 序言
+- - '#'
+  - Arch Linux 手册
+- - '#'
+  - 不要恐慌！
+- - '#'
+  - Arch 之道
+- - '#'
+  - 需要记住的一些想法：
+- - '#'
+  - 关于本指南
+- - '#'
+  - 第一部分：安装基础系统
+- - '##'
+  - 步骤 1：获取最新的安装媒体
+- - '###'
+  - CD 安装程序
+- - '###'
+  - USB 盘
+- - '###'
+  - UNIX 方法：
+- - '####'
+  - 检查 md5sum（可选）：
+- - '####'
+  - Windows 方法：
+- - '##'
+  - 步骤 2：启动 Arch Linux 安装程序
+- - '###'
+  - 更改键位
+- - '####'
+  - '`km` / `loadkeys layout`'
+- - '###'
+  - 文档
+- - '####'
+  - '`less /arch/docs/official_installation_guide_en`'
+- - '###'
+  - 步骤 3：开始安装
+- - '###'
+  - '`/arch/setup`'
+- - '####'
+  - A：选择安装源
+- - '####'
+  - 配置网络（FTP/HTTP）
+- - '####'
+  - 环境无线快速启动（如果你在安装过程中需要无线连接）
+- - '#####'
+  - '`iwconfig`'
+- - '#####'
+  - '`ifconfig ath0 up`'
+- - '#####'
+  - '`iwconfig ath0 ssid "linksys" key 0241baf34c`'
+- - '#####'
+  - '`iwconfig ath0 ssid "linksys"`'
+- - '#####'
+  - '`dhcpcd ath0`'
+- - '#####'
+  - '`ping -c 3 www.google.com`'
+- - '####'
+  - B：设置时钟
+- - '####'
+  - C：准备硬盘
+- - '###'
+  - '`fdisk -l`'
+- - '###'
+  - 我的分区应该有多大？
+- - '###'
+  - 创建分区：cfdisk
+- - '###'
+  - 设置文件系统挂载点
+- - '###'
+  - 文件系统挂载点
+- - '####'
+  - 文件系统类型
+- - '####'
+  - '**关于日志记录（Journaling）**'
+- - '####'
+  - 继续...
+- - '####'
+  - 'D: 选择软件包'
+- - '####'
+  - 'E: 安装软件包'
+- - '####'
+  - 'F: 配置系统'
+- - '###'
+  - '`initramfs`'
+- - '###'
+  - 安装程序能更自动地处理这些吗？
+- - '##'
+  - '`/etc/rc.conf`'
+- - '###'
+  - LOCALIZATION（本地化）部分
+- - '###'
+  - HARDWARE（硬件）部分
+- - '###'
+  - 启动时扫描硬件并加载所需的模块
+- - '###'
+  - 模块黑名单 - 已废弃
+- - '###'
+  - NETWORKING（网络）部分
+- - '##'
+  - 一个 /etc/fstab 示例
+- - '##'
+  - '`/etc/mkinitio.conf`'
+- - '##'
+  - Root 密码
+- - '##'
+  - Pacman-Mirror
+- - '##'
+  - 'G: 安装引导程序'
+- - '###'
+  - GRUB
+- - '###'
+  - 有线局域网
+- - '####'
+  - '`ifconfig -a`'
+- - '####'
+  - '`ifconfig eth0 <ip address> netmask <netmask> up`'
+- - '####'
+  - '`route add default gw <ip address of the gateway>`'
+- - '###'
+  - 无线局域网
+- - '####'
+  - '`iwconfig`'
+- - '####'
+  - '`ifconfig wlan0 up`'
+- - '####'
+  - '`iwlist wlan0 scan | less`'
+- - '####'
+  - '`iwconfig wlan0 ssid links key ABCDEF01234`'
+- - '####'
+  - '`dhcpcd wlan0`'
+- - '###'
+  - 模拟调制解调器
+- - '####'
+  - ISDN
+- - '####'
+  - '`modprobe hisax type=18 protocol=2`'
+- - '####'
+  - '`isdnctrl dial ippo0`'
+- - '####'
+  - DSL (PPPoE)
+- - '####'
+  - '`/etc/rc.d/adsl start`'
+- - '#'
+  - 第二部分：配置并更新新的基础系统
+- - '##'
+  - 2：使用 pacman 更新、同步和升级系统
+- - '###'
+  - 什么是 pacman
+- - '###'
+  - 软件包仓库与 /etc/pacman.conf
+- - '####'
+  - '`[community]`'
+- - '####'
+  - AUR (不支持)
+- - '####'
+  - '`/etc/pacman.conf`'
+- - '####'
+  - '`nano /etc/pacman.conf`'
+- - '###'
+  - 查看 pacman.conf(5) 手册以获取选项和仓库指令
+- - '####'
+  - 通用选项
+- - '####'
+  - 以下路径已注释掉，并列出了默认值。
+- - '####'
+  - 如果你想使用不同的路径，请取消注释并更新路径。
+- - '####'
+  - 如果这些软件包可用，将首先询问它们
+- - '####'
+  - Pacman 不会升级 IgnorePkg 中列出的软件包和 IgnoreGroup 的成员
+- - '####'
+  - 杂选项（默认全部禁用）
+- - '####'
+  - 仓库
+- - '####'
+  - '- 可以在这里定义，或从另一个文件中包含'
+- - '####'
+  - '- pacman 将按照此处定义的顺序搜索仓库'
+- - '####'
+  - '- 本地/自定义镜像可以添加到这里或在独立的文件'
+- - '####'
+  - '- 先列出的仓库具有优先级，当软件包具有相同名称时，无论版本号'
+- - '####'
+  - 仓库条目格式：
+- - '###'
+  - 一个自定义软件包仓库的示例。
+- - '####'
+  - '`[custom]`'
+- - '####'
+  - '`/etc/pacman.d/mirrorlist`'
+- - '####'
+  - '`nano /etc/pacman.d/mirrorlist`'
+- - '###'
+  - '`pacman -Sy python`'
+- - '###'
+  - '`cd /etc/pacman.d`'
+- - '###'
+  - '`cp mirrorlist mirrorlist.backup`'
+- - '###'
+  - '`rankmirrors -n 6 mirrorlist.backup > mirrorlist`'
+- - '###'
+  - 强制 pacman 刷新软件包列表
+- - '###'
+  - '`pacman -Syy`'
+- - '###'
+  - 检查软件包是否为最新
+- - '###'
+  - 忽略软件包
+- - '###'
+  - 忽略配置文件
+- - '###'
+  - 熟悉 pacman
+- - '###'
+  - Powerline，一个 pacman 包装脚本
+- - '##'
+  - 第三步：更新系统
+- - '###'
+  - '`pacman -Syu`'
+- - '###'
+  - '`pacman --sync --refresh --sysupgrade`'
+- - '###'
+  - 滚动模型
+- - '###'
+  - 网络时间协议
+- - '##'
+  - 第四步：添加用户并设置组
+- - '###'
+  - '`useradd -m -G [groups] -s [login_shell] [username]`'
+- - '###'
+  - '`useradd -m -G users, audio, lp, optical, storage, video, wheel, power -s /bin/bash
+    archie`'
+- - '###'
+  - '`passwd archie`'
+- - '###'
+  - '`adduser`'
+- - '###'
+  - '`userdel -r [username]`'
+- - '##'
+  - 第五步：安装并设置 Sudo（可选）
+- - '###'
+  - '`pacman -S sudo`'
+- - '###'
+  - '`EDITOR=nano visudo`'
+- - '#'
+  - 第三部分：安装 X 并配置 ALSA
+- - '##'
+  - 第一步：使用 alsamixer 配置声音
+- - '###'
+  - '`pacman -S alsa-utils`'
+- - '###'
+  - '`pacman -S alsa-oss`'
+- - '###'
+  - '`gpasswd -a username audio`'
+- - '###'
+  - '`su - username`'
+- - '##'
+  - 测试
+- - '###'
+  - 保存音频设置
+- - '###'
+  - '`alsactl store`'
+- - '##'
+  - 步骤 2：安装 X
+- - '###'
+  - A：安装 X
+- - '####'
+  - '`pacman -S xorg`'
+- - '####'
+  - '`pacman -S xf86-input-evdev`'
+- - '####'
+  - '`pacman -S mesa`'
+- - '###'
+  - B：安装视频驱动包
+- - '####'
+  - '`lspci | grep VGA`'
+- - '####'
+  - '`pacman -Ss xf86-video | less`'
+- - '####'
+  - NVIDIA 显卡
+- - '####'
+  - '`pacman -S nvidia-96xx`'
+- - '####'
+  - '`nvidia-xconfig`'
+- - '####'
+  - '`nvidia-xconfig --composite --add-argb-glx-visuals`'
+- - '####'
+  - ATI 显卡
+- - '####'
+  - '`pacman -S xf86-video-ati libgl ati-dri`'
+- - '####'
+  - '`pacman -S xf86-video-radeonhd libgl`'
+- - '###'
+  - 加载 "dri"
+- - '###'
+  - '`modmod -a`'
+- - '##'
+  - 步骤 3：配置 X
+- - '###'
+  - C：安装驱动
+- - '###'
+  - '`pacman -S xf86-video-ati libgl ati-dri`'
+- - '###'
+  - '`nano /etc/rc.conf`'
