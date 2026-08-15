@@ -1,0 +1,2975 @@
+- md: '
+
+    # Deploying Secure Containers for Training and Development
+
+
+    Henry Dalziel
+
+    Jon Schipp
+
+
+    # Deploying Secure Containers for Training and Development
+
+
+    # Deploying Secure Containers for Training and Development
+
+
+    Jon Schipp
+
+
+    Contributing Editor
+
+
+    Henry Dalziel
+
+
+    AMSTERDAM • BOSTON • HEIDELBERG • LONDON
+
+    NEW YORK • OXFORD • PARIS • SAN DIEGO
+
+    SAN FRANCISCO • SINGAPORE • SYDNEY • TOKYO
+
+    Syngress is an imprint of Elsevier
+
+
+    Syngress is an imprint of Elsevier
+
+    225 Wyman Street, Waltham, MA 02451, USA
+
+
+    Copyright © 2016 Elsevier Inc. All rights reserved.
+
+    No of this publication may be reproduced or transmitted in any form or by any
+    means, electronic or mechanical, including photocopying, recording, or any information
+    storage and retrieval system, without permission in writing from the Publisher.
+    Details on how to seek permission, further information about the Publisher''s
+    policies and our arrangements with organizations such as the Copyright Clearance
+    Center and the Copyright Licensing Agency, can be found at our website: www.elsevier.com/permissions
+
+
+    This book and the individual contributions contained in it are protected under
+    copyright by the Publisher (other than may be noted herein).
+
+
+    Notices
+
+    Knowledge and best practice in this field are constantly changing. As new research
+    and experience broaden our understanding, changes in methods or professional practices,
+    may become necessary.
+
+    Practitioners and researchers must always rely on their own experience and knowledge
+    in evaluating and using any information or methods described herein. In using
+    such information or methods they should be mindful of their own safety and the
+    safety of others, including parties for whom they have a professional responsibility.
+
+
+    To the extent of the law, neither the Publisher nor the authors, contributors,
+    or editors, assume any liability for any injury or damage to persons or property
+    as a matter of products liability, negligence or otherwise, or from any use or
+    operation of any methods, products, instructions, or ideas contained in the material
+    herein.
+
+
+    ISBN: 978-0-12-80417-0
+
+
+    British Library Cataloguing-in-Publication Data
+
+    A catalogue record for this book is available from the British Library
+
+
+    Library of Congress Cataloging-in-Publication Data
+
+    A catalog record for this book is available from the Library of Congress
+
+
+    For information on all Sygress publications
+
+    visit our website at http://store.elsevier.com/Sygress
+
+
+    # CONTENTS
+
+
+    - About the Authors ........................................................................
+    vii
+
+    - Introduction................................................................................................
+    ix
+
+    - Chapter 1 Containers...............................................................................1
+
+    - Chapter 2 Using Containers in Training ................................................
+    13
+
+    - Chapter 3 Experimentation..................................................29
+
+    - Conclusion...............................................................................................33
+
+    - References ............................................................................................35
+
+
+    # ABOUT THE AUTHORS
+
+
+    **Henry Dalziel** is a serial education entrepreneur, founder of Concise Ac Ltd,
+    online cybersecurity blogger, and e-book author. He writes for the Concise-Courses.com
+    blog and has developed numerous cybersecurity continuing education courses and
+    books. Concise Ac Ltd develops and distributes continuing education content [books
+    and courses] for cybersecurity professionals seeking skill enhancement and career
+    advancement. The company was recently accepted onto the UK Trade & Investment''s
+    (UKTI) Global Entrepreneur Programme (GEP).
+
+
+    **Jon Schipp** is a Security Engineer at the National Center for Supercomputing
+    Applications, Director of Security at Dracony, as well as the founder and chair
+    of OpenNSM at the University of Illinois at Urbana-Champaign. He is the author
+    of ISLET, among other tools, as well as a contributor to Free and Open Source
+    Projects including The Netsniff-NG Toolkit, SecurityOnion, and the Bro Project.
+    With a few publications and many talks, he has been fortunate enough to have audiences
+    at various conferences including DerbyCon, AIDE, Hack3rCon, BroCon, XSEDE, MOSSCon,
+    and more. In his free time, he enjoys reading about history and philosophy, listening
+    to death metal and playing recreational volleyball.
+
+
+    # INTRODUCTION
+
+
+    I first started looking into containers as a way to scale training environments
+    for BroCon 2014. We were trying to find a more sufficient solution to teach the
+    Bro programming language that involved less setup time. We found that we can have
+    hundreds of training environments on a single host, rather than distributing large
+    machine files to all conference users. Upon research and experimentation, I found
+    that Linux containers were a good solution to the problem. I since explored ways
+    to further apply this technology to other remote areas, which include deploying
+    secure containers for training and development. This short book is intended to
+    present concepts and to spark ideas rather than a walkthrough or tutorial of software.
+    My name is Jon Schipp; I''m a Security Engineer at the National Center for Supercomputing
+    Applications (NCSA) at the University of Illinois at Urbana-Champaign. The NCSA
+    takes advantage of high-performance computing to facilitate scientific research.
+    I am also the Director of Security at Draconyx, a full-service IT consulting business
+    that specializes in information security. In addition, I have contributed to a
+    number of free and open source projects, including the Netsniff-NG Toolkit, Security
+    Onion, and the Bro Project. I am the founder and chair of OpenNSM, which is a
+    weekly network monitoring group with international participation.
+
+
+    # Project Contributions
+
+
+    - Bro Team
+
+    - The Netsniff-NG Toolkit
+
+
+    # CHAPTER 1
+
+
+    # Containers
+
+
+    # Our Focus:
+
+
+    Excels at teaching command-line software on Linux
+
+
+    - Event training
+
+    - Internal software training
+
+    - Development environments
+
+    - Playing around
+
+
+    Containers are typically used to deploy web applications and software stacks.
+    An example of this is deploying software such as WordPress, MySQL, or just hosting
+    your website in a container running Apache or NGINX. Reproducibility and scalability
+    are two benefits of deploying with containers. You can think of container as a
+    package of software including libraries, services, and the application itself.
+    Having your application and all its dependencies wrapped up in a container allows
+    you to deploy it to any system that uses the same container runtime engine or
+    container specification. Reproducibility is achieved in that way, in addition
+    it is easily scalable across multiple systems when network traffic is high or
+    provides redundancy when a system needs an upgrade. All you need to do is configure
+    the container to run on multiple systems and tell a load balancer to redirect
+    traffic. Tools like Kubernetes, Docker Swarm, and others make it easy to scale
+    containers across hosts. While these are typical uses, we will look into the use
+    of containers for software development and training. For example, we can utilize
+    Linux containers to provide a package of a filesystem containing all the common
+    tools used for training on the GNU/Linux operating system. Another example is
+    to compile and run applications for testing and deployment without installing
+    them on your host filesystem. The result of which ends providing a tidier filesystem
+    and eliminates inconveniences of managing multiple versions of shared libraries
+    or programs.
+
+    '
+  mdcn: '
+
+
+    # 用于培训与开发的安全容器部署
+
+
+    Henry Dalziel
+
+    Jon Schipp
+
+
+    # 用于培训与开发的安全容器部署
+
+
+    # 用于培训与开发的安全容器部署
+
+
+    Jon Schipp
+
+
+    特约编辑
+
+
+    Henry Dalziel
+
+
+    阿姆斯特丹 • 波士顿 • 海德堡 • 伦敦
+
+    纽约 • 牛津 • 巴黎 • 圣地埃亚哥
+
+    旧金山 • 新加坡 • 悉尼 • 东京
+
+    Syngress 是 Elsevier（爱思唯）旗下的出版社
+
+
+    Syngress 是 Elsevier（爱思唯）旗下的出版社
+
+    225 Wyman Street, Waltham, MA 02451, USA
+
+
+    版权 © 2016 Elsevier Inc. 保留所有权利。
+
+    未经出版社书面许可，不得以任何形式或手段（电子或机械方式，包括复印、录制或任何信息存储和检索系统）复制或传输本出版物。有关寻求许可的详细信息、关于出版社政策的更多信息以及我们与版权许可中心（Copyright
+    Clearance Center）和版权许可机构（Copyright Licensing Agency）等机构的安排，请参阅我们的网站：www.elsevier.com/permissions
+
+
+    本书及其中包含的个人贡献受出版社版权保护（另有说明除外）。
+
+
+    注意事项
+
+    该领域的知识和最佳实践在不断变化。随着新的研究和经验扩大了我们的理解，方法或专业实践的改变可能变得必要。
+
+    从业者和研究人员必须始终依靠自己的经验。
+
+    在法律范围内，出版社、作者、贡献者或编辑不对使用本书材料导致的任何人员伤害或财产损失承担任何责任。
+
+
+    ISBN: 978-0-12-80417 美国国会图书馆编目数据
+
+    美国国会图书馆编目数据
+
+    自美国国会图书馆编目数据
+
+    美国国会图书馆
+
+    数据自美国国会图书馆
+
+
+    有关 Syngress 的信息，请访问
+
+    store.elsevier.com
+
+
+    # 目录
+
+
+    - 关于作者....................................................... vii
+
+    - 简介............................................................... ix
+
+    - 第一章 容器...............................................1
+
+    - 第二章 使用容器...............................................13
+
+    - 第三章 实验......................................................29
+
+    - 结论...............................................................33
+
+    - 参考文献.......................................................35
+
+
+    # 关于作者
+
+
+    **Henry Dalziel** 是一位连续创业者、Concise Ltd 的创始人、网络安全博客作者，以及本系列书籍的作者。Concise Ltd 专注于网络安全培训课程的开发与发行。在空闲时间，他喜欢阅读历史和哲学，听重金属音乐以及打排排球。
+
+
+    **Jon Schipp** 担任伊利诺伊大学厄巴纳-盛槟分校高性能计算中心（NCSA）的安全工程师，同时也是 Dracony 的董事，这是一家专注于信息安全的安全咨询公司。此外，他还贡献了许多开源项目，包括
+    Netsniff-NG Toolkit、Security Onion 和 Bro Project。他是 OpenNSM 的创始人兼主席，这是一个国际参与的网络监控小组。
+
+
+    # 项目贡献
+
+
+    - Bro Team
+
+    - Netsniff-NG Toolkit
+
+
+    # 第一章 容器
+
+
+    # 我们的重点：
+
+
+    擅长 Linux 命令行软件
+
+
+    - 活动培训
+
+    - 内部软件培训
+
+    - 开发环境
+
+    - 尝试
+
+
+    容器通常用于部署应用程序和软件栈。例如，部署 WordPress、MySQL 等软件，或者在运行 Apache 或 NGINX 的容器中托管网站。可重复性和扩展性是使用容器的两个优势。你可以将容器理解为包含库、和服务应用程序本身的软件包。将你的应用程序及其所有依赖项封装在容器中，就可以将其部署到任何使用相同运行时引擎或容器规范的系统中。这种方式实现了可重复性，此外，当网络流量较高时，它可以轻松扩展，在系统需要升级时提供冗余。你只需要配置容器在多个系统上运行，并让负载均衡器重定向流量。Kubernetes、Docker
+    Swarm 等工具可以轻松地跨主机扩展容器。虽然这些是典型的用法，但我们将探讨将容器用于软件开发和培训。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Deploying Secure Containers for Training and Development
+
+
+    Henry Dalziel
+
+    Jon Schipp'
+  - '[PAGE 1]
+
+
+    # # Deploying Secure Containers for Training and Development'
+  - '[PAGE 2]
+
+
+    This page intentionally left blank'
+  - '[PAGE 3]
+
+
+    # Deploying Secure Containers for Training and Development
+
+
+    Jon Schipp
+
+
+    Contributing Editor
+
+
+    Henry Dalziel
+
+
+    AMSTERDAM • BOSTON • HEIDELBERG • LONDON
+
+    NEW YORK • OXFORD • PARIS • SAN DIEGO
+
+    SAN FRANCISCO • SINGAPORE • SYDNEY • TOKYO
+
+    Syngress is an imprint of Elsevier'
+  - '[PAGE 4]
+
+
+    Sygress is an imprint of Elsevier
+
+    225 Wyman Street, Waltham, MA 02451, USA
+
+
+    Copyright © 2016 Elsevier Inc. All rights reserved.
+
+    No of this publication may be reproduced or transmitted in any form or by any
+    means, electronic or mechanical, including photocopying, recording, or any information
+    storage and retrieval system, without permission in writing from the Publisher.
+    Details on how to seek permission, further information about the Publisher''s
+    policies and our arrangements with organizations such as the Copyright Clearance
+    Center and the Copyright Licensing Agency, can be found at our website: www.elsevier.com/permissions
+
+
+    This book and the individual contributions contained in it are protected under
+    copyright by the Publisher (other than may be noted herein).
+
+
+    Notices
+
+    Knowledge and best practice in this field are constantly changing. As new research
+    and experience broaden our understanding, changes in methods or professional practices,
+    may become necessary.
+
+    Practitioners and researchers must always rely on their own experience and knowledge
+    in evaluating and using any information or methods described herein. In using
+    such information or methods they should be mindful of their own safety and the
+    safety of others, including parties for whom they have a professional responsibility.
+
+
+    To the extent of the law, neither the Publisher nor the authors, contributors,
+    or editors, assume any liability for any injury or damage to persons or property
+    as a matter of products liability, negligence or otherwise, or from any use or
+    operation of any methods, products, instructions, or ideas contained in the material
+    herein.
+
+
+    ISBN: 978-0-12-80417-0
+
+
+    British Library Cataloguing-in-Publication Data
+
+    A catalogue record for this book is available from the British Library
+
+
+    Library of Congress Cataloging-in-Publication Data
+
+    A catalog record for this book is available from the Library of Congress
+
+
+    For information on all Sygress publications
+
+    visit our website at http://store.elsevier.com/Sygress
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_4_0.png)'
+  - '[PAGE 5]
+
+
+    # CONTENTS
+
+
+    +   *About the Authors ........................................................................
+    vii
+
+    *Introduction..................................................................................................
+    ix
+
+    *Chapter 1 Containers...............................................................................1
+
+    *Chapter 2 Using Containers in Training ................................................
+    13
+
+    *Chapter 3 Experimentation..................................................................29
+
+    *Conclusion...............................................................................................33
+
+    *References ............................................................................................35'
+  - '[PAGE 6]
+
+
+    This page intentionally left blank'
+  - '[PAGE 7]
+
+
+    # ABOUT THE AUTHORS
+
+
+    **Henry Dalziel** is a serial education entrepreneur, founder of Concise Ac Ltd,
+    online cybersecurity blogger, and e-book author. He writes for the Concise-Courses.com
+    blog and has developed numerous cybersecurity continuing education courses and
+    books. Concise Ac Ltd develops and distributes continuing education content [books
+    and courses] for cybersecurity professionals seeking skill enhancement and career
+    advancement. The company was recently accepted onto the UK Trade & Investment''s
+    (UKTI) Global Entrepreneur Programme (GEP).
+
+
+    **Jon Schipp** is a Security Engineer at the National Center for Supercomputing
+    Applications, Director of Security at Dracony, as well as the founder and chair
+    of OpenNSM at the University of Illinois at Urbana-Champaign. He is the author
+    of ISLET, among other tools, as well as a contributor to Free and Open Source
+    Projects including The Netsniff-NG Toolkit, SecurityOnion, and the Bro Project.
+    With a few publications and many talks, he has been fortunate enough to have audiences
+    at various conferences including DerbyCon, AIDE, Hack3rCon, BroCon, XSEDE, MOSSCon,
+    and more. In his free time, he enjoys reading about history and philosophy, listening
+    to death metal and playing recreational volleyball.'
+  - '[PAGE 8]
+
+
+    This page intentionally left blank'
+  - '[PAGE 9]
+
+
+    # INTRODUCTION
+
+
+    I first started looking into containers as a way to scale training environments
+    for BroCon 2014. We were trying to find a more sufficient solution to teach the
+    Bro programming language that involved less setup time. We found that we can have
+    hundreds of training environments on a single host, rather than distributing large
+    machine files to all conference users. Upon research and experimentation, I found
+    that Linux containers were a good solution to the problem. I since explored ways
+    to further apply this technology to other remote areas, which include deploying
+    secure containers for training and development. This short book is intended to
+    present concepts and to spark ideas rather than a walkthrough or tutorial of software.
+    My name is Jon Schipp; I''m a Security Engineer at the National Center for Supercomputing
+    Applications (NCSA) at the University of Illinois at Urbana-Champaign. The NCSA
+    takes advantage of high-performance computing to facilitate scientific research.
+    I am also the Director of Security at Draconyx, a full-service IT consulting business
+    that specializes in information security. In addition, I have contributed to a
+    number of free and open source projects, including the Netsniff-NG Toolkit, Security
+    Onion, and the Bro Project. I am the founder and chair of OpenNSM, which is a
+    weekly network monitoring group with international participation.
+
+
+    # Project Contributions
+
+
+    +   - Bro Team
+
+
+    +   - The Netsniff-NG Toolkit
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_9_0.png)
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_9_1.png)
+
+
+    +   - SecurityOnion
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_9_2.png)
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_9_3.png)
+
+
+    +   - OpenNSM'
+  - '[PAGE 10]
+
+
+    This page intentionally left blank'
+  - '[PAGE 11]
+
+
+    # CHAPTER 1
+
+
+    # Containers
+
+
+    # Our Focus:
+
+
+    Excels at teaching command-line software on Linux
+
+
+    +   - Event training
+
+    - Internal software training
+
+    - Development environments
+
+    - Playing around
+
+
+    Containers are typically used to deploy web applications and software stacks.
+    An example of this is deploying software such as WordPress, MySQL, or just hosting
+    your website in a container running Apache or NGINX. Reproducibility and scalability
+    are two benefits of deploying with containers. You can think of container as a
+    package of software including libraries, services, and the application itself.
+    Having your application and all its dependencies wrapped up in a container allows
+    you to deploy it to any system that uses the same container runtime engine or
+    container specification. Reproducibility is achieved in that way, in addition
+    it is easily scalable across multiple systems when network traffic is high or
+    provides redundancy when a system needs an upgrade. All you need to do is configure
+    the container to run on multiple systems and tell a load balancer to redirect
+    traffic. Tools like Kubernetes, Docker Swarm, and others make it easy to scale
+    containers across hosts. While these are typical uses, we will look into the use
+    of containers for software development and training. For example, we can utilize
+    Linux containers to provide a package of a filesystem containing all the common
+    tools used for training on the GNU/Linux operating system. Another example is
+    to compile and run applications for testing and deployment without installing
+    them on your host filesystem. The result of which ends providing a tidier filesystem
+    and eliminates inconveniences of managing multiple versions of shared libraries
+    or programs.'
+- md: "\n# Isolation\nvia kernel namespaces and cgroups\nThe user can't tell the difference.\n\
+    \n# Scalability\nHorizontally and vertically with faster hardware meaning more\
+    \ users or work can be performed\n\n# Lightweight\n~100ms startup time, near bare\
+    \ metal performance, JeOS\n\n# Density\nHigher density than virtual machines\n\
+    \nLet's move on to describe what containers are and what they can provide. Containers\
+    \ enable a layer of isolation and this is done in the Linux Kernel via two kernel\
+    \ components: namespaces and cgroups. Namespaces divide the operating system into\
+    \ virtual segments. For example, assigning a process to namespace A makes it invisible\
+    \ and unreachable to a process in namespace B, even if it runs the “ps” command\
+    \ in a different namespace. Cgroups are short for control groups, which can apply\
+    \ constraints, or limitations, to system resources such as memory, utilization;\
+    \ and CPU, by a percentage of its use.\n\nFrom the perspective of us, interacting\
+    \ with software such as a web application in a container, a virtual machine, or\
+    \ on bare metal, acts and looks the same. The average user is not able to tell\
+    \ what kind of system they are in, or what kind of level of virtualization they\
+    \ are using.\n\nScalability with containers seems to be very easy to do and that's\
+    \ one of its promising points. You can scale both horizontally and vertically.\
+    \ With vertical scaling we scale by applying more resources to the host: more\
+    \ CPU, more memory, faster disks, etc. You can do this with a virtual machine\
+    \ as well, any software really... You can add more resources to the box and then\
+    \ usually perform more. More interesting though is the number of tools to scale\
+    \ horizontally by clustering nodes to run containers. The Apache Mesos project\
+    \ is one example where running your application in a container can be scaled over\
+    \ pools of hundreds or thousands of different machines. Newer tools include Google's\
+    \ Kubernetes and Docker's own Swarm.\n\nContainers tend to be lightweight in size\
+    \ which makes them suitable for scaling. The acronym JeOS (Just Enough Operating\
+    \ System) indicates this, in other words it's alright to say that many images\
+    \ are bare bone. A testament of this is that using a Debian or Ubuntu Docker container\
+    \ image and issuing the “man” command to view the manual pages will result in\
+    \ a “command not found” error from the shell. This is even because the man-doc\
+    \ package is not installed! They tend to be measured in hundreds of megabytes\
+    \ instead of the full distribution one installs is usually much larger.\n\nContainers\
+    \ share the kernel that is running on the host. This means there is one running\
+    \ kernel, the Linux kernel, and it's asked for resources directly. The application\
+    \ can ask it to write to disk, to send a packet across the network, to read from\
+    \ an open file, without having to pass instructions through another layer such\
+    \ as a Hypervisor is the case in Virtual Machines. This gives you a performance\
+    \ increase because the system has to perform less work for kernel requests i.e\
+    \ system calls. Less instructions and translations mean less work and the result\
+    \ is higher level of density for containers than you would have with virtual machines.\
+    \ That means you can run more containers on a host than you would have been able\
+    \ to run with virtual machines. It's not unheard of be able to run 1000 containers\
+    \ on commodity hardware.\n\nIn sum, applications in containers tend to run faster\
+    \ than their counterparts in a virtual machine. A user can get near bare metal\
+    \ performance in the right conditions and the startup time for a container is\
+    \ often less than a second where multiple seconds is the norm when booting virtual\
+    \ machines.\n\n# Security\nLess secure than virtual machines, containers isolate\
+    \ the user land (e.g., filesystem, processes) not the kernel\n\n# Portability\n\
+    Less portable across operating systems. Tends to be portable within an operating\
+    \ system.\n\n# Concurrency\nSome implementations are designed to run a single\
+    \ application or process\n\n# Kernel Versions\nContainers must use the same kernel\
+    \ as the host\n\nLet's delve into a few other differences in security, portability,\
+    \ concurrency, and the kernel. Containers happen to be less secure than virtual\
+    \ machines. That's not to say that they're not secure but rather they're less\
+    \ secure than virtual machines. This is mainly because containers isolate their\
+    \ user land e.g. filesystem, processes etc. and not the kernel. Virtual machines\
+    \ will isolate the entire operating system: the kernel, user land, and all.\n\n\
+    On the topic of portability containers tend to be less portable across operating\
+    \ systems. Note that containers are a subset of a virtualization type called light\
+    \ operating system virtualization, also known as lightweight process virtualization.\
+    \ These technical terms define an entire domain of technology that allows the\
+    \ operating system to run multiple instances of itself on the same host. Different\
+    \ operating systems have different ways of implementing this and the word containers\
+    \ often refer to the Linux kernel implementation. Circling back around, this means\
+    \ that if you run a container on GNU/Linux it's not going to be run on FreeBSD\
+    \ or SmartOS.\n\n# Containers\n\n- **Important: Linux Based Containers**\n  There\
+    \ is no internal container specification.\n  As of, there is a container runtime\
+    \ specification called OCI\n\n- **There are different container (and like) technologies**\n\
+    \  Linux: LXC, OpenVZ, Google containers, etc.\n  Non-Linux: BSD Jails, Solaris\
+    \ Zones, AIX WPAR.\n\n- **What do containers do?**\n  Light-weight process virtualization,\
+    \ A.K.A. operating system virtualization\n\n- **What do virtual machines do?**\n\
+    \  Hardware virtualization\n\nThe technology isn't new, but it's gaining great\
+    \ momentum now. A note on terminology, when referring to Linux containers as a\
+    \ general technology it's better to use the more encompassing term Linux-based\
+    \ containers. There are many runtime implementations of Linux-based containers\
+    \ such as LXC which is short for Linux containers and thus causes confusion. In\
+    \ addition there's also no kernel container specification, there are a few building\
+    \ blocks in the kernel that runtime implementations take advantage of to create\
+    \ containers. Though, as of recent there is an effort to standardize a container\
+    \ runtime specification called OCI (Open Container Initiative); before OCI the\
+    \ CoreOS group worked on a specification called Appsec was subsumed into OCI.\
+    \ OCI is a Linux Foundation project that is\n"
+  mdcn: "\n\n# 隔离\n通过内核命名空间 (namespaces) 和 cgroups\n用户无法感知区别。\n\n# 可扩展性\n通过更快的硬件进行水平和垂直扩展，意味着可以处理更多的用户或工作。\n\
+    \n# 轻量化\n启动时间约 100ms，接近裸机性能，JeOS。\n\n# 密度\n比虚拟机更高的密度\n\n让我们继续描述什么是容器以及它们能提供什么。容器实现了隔离层，这是通过\
+    \ Linux 内核的两个内核组件实现的：命名空间 (namespaces) 和 cgroups。命名空间将操作系统划分为虚拟段。例如，将一个进程分配给命名空间\
+    \ A，它对于命名空间 B 中的进程是不可见且无法访问的，即使在不同的命名空间中运行“ps”命令也是如此。cgroups 是控制组（control groups）的缩写，可以对系统资源（如内存、CPU\
+    \ 使用百分比）应用约束或限制。\n\n从我们的角度来看，与容器、虚拟机或裸机上的 Web 应用等软件交互，其行为和看起来是相同的。普通用户无法判断自己处于哪种系统，或者正在使用何种程度的虚拟化。\n\
+    \n容器的可扩展性似乎非常容易实现，这是其极具前景的优势之一。你可以进行水平和垂直扩展。垂直扩展是通过向主机应用更多资源来实现：更多的 CPU、更多内存、更快的磁盘等。你也可以在虚拟机上这样做，任何软件都是如此……你可以为机器添加更多资源，然后通常可以执行更多任务。更有趣的是通过集群节点来运行容器以水平扩展的工具数量。Apache\
+    \ Mesos 项目就是一个例子，在容器中运行应用程序可以扩展到数百或数千台不同机器的池中。较新的工具包括 Google 的 Kubernetes 和 Docker\
+    \ 自己的 Swarm。\n\n容器的大小往往很轻量，这使其适合扩展。JeOS（恰好操作系统，Just Enough Operating System）这一缩写说明了这一点，换句话说，可以说许多镜像都是精简的。这一证明是，使用\
+    \ Debian 或 Ubuntu Docker 容器镜像并执行“man”命令查看帮助页时，shell 会返回“command not found”错误。这是因为没有安装\
+    \ man-doc 软件包！它们的度量通常以百 MB 计，而你所安装的完整发行版通常要大得多。\n\n容器共享运行在主机上的内核。这意味着只存在一个运行的内核，即\
+    \ Linux 内核，并且它直接请求资源。应用程序可以请求它写入磁盘、跨网络发送数据包、从打开的文件读取，而不需要像虚拟机那样通过 Hypervisor 等其他层传递指令。这带给你性能提升，因为系统为内核请求（即系统调用）执行的工作更少。更少的指令和转换意味着更少的工作，结果容器的密度比虚拟机更高。这意味着在主机上运行的容器比使用虚拟机运行得多。在商用硬件上运行\
+    \ 1000 个容器并非未闻。\n\n总而言之，容器中的应用程序运行速度通常比虚拟机中的程序更快。在适当条件下，用户可以获得接近裸机的性能，容器的启动时间通常小于一秒，而启动虚拟机时几秒是常态。\n\
+    \n# 安全\n比虚拟机不安全，容器隔离的是用户态（例如文件系统、进程）而不是内核。\n\n# 可移植性\n跨操作系统的可移植性较差。通常在操作系统内部具有可移植性。\n\
+    \n# 并发\n某些实现设计用于运行单个应用程序或进程\n\n# 内核版本\n容器必须使用与主机相同的内核\n\n让我们深入研究安全、可移植性、并发和内核方面的其他一些差异。容器的安全性确实比虚拟机低。这并不是说它们不安全，而是它们比虚拟机不安全。这主要是因为容器隔离了它们的用户态（例如文件系统、进程等），而不是内核。虚拟机将隔离整个操作系统：内核、用户态以及一切。\n\
+    \n在可移植性方面，容器跨操作系统的可移植性往往较差。注意，容器是名为轻量级操作系统虚拟化（也称为轻量级进程虚拟化）的虚拟化类型的子集。这些技术术语定义了一个允许操作系统在同一主机上运行多个实例的技术领域。不同的操作系统有不同的实现方式，而“容器”一词通常指的是\
+    \ Linux 内核的实现。回到这一点，这意味着如果你在 GNU/Linux 上运行容器，它将无法在 FreeBSD 或 SmartOS 上运行。\n\n\
+    # 容器\n\n- **重要：基于 Linux 的容器**\n  没有内部的容器规范。\n  截至目前，有一个名为 OCI 的容器运行时规范。\n\n- **有不同的容器（以及类似的）技术**\n\
+    \  Linux：LXC, OpenVZ, Google containers 等。\n  非 Linux：BSD Jails, Solaris Zones,\
+    \ AIX WPAR。\n\n- **容器是做什么的？**\n  轻量级进程虚拟化，即操作系统虚拟化。\n\n- **虚拟机是做什么的？**\n  硬件虚拟化\n\
+    \n这项技术并不新，但它现在正获得巨大的势头。关于术语的说明，当作为通用技术提到 Linux 容器时，使用更具包性的术语基于 Linux 的容器（Linux-based\
+    \ containers）更好。基于 Linux 的容器有很多运行时实现，例如 LXC 是 Linux containers 的缩写，这导致了混淆。此外，还没有内核容器规范，内核中有几个构建块供运行时实现利用以创建容器。尽管如此，近期有一项旨在标准化名为\
+    \ OCI（开放容器倡议）容器运行时规范的努力；在 OCI 之前，CoreOS 组开发过一个名为 Appsec 的规范，该规范已被并入 OCI。OCI 是\
+    \ Linux 基金的一个项目，其\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 12]
+
+
+    # Isolation
+
+
+    via kernel namespaces and cgroups
+
+    The user can''t tell the difference.
+
+
+    # Scalability
+
+
+    Horizontally and vertically with faster hardware meaning
+
+    more users or work can be performed
+
+
+    # Lightweight
+
+
+    ~100ms startup time, near bare metal performance, JeOS
+
+
+    # Density
+
+
+    Higher density than virtual machines
+
+
+    Let''s move on to describe what containers are and what they can provide. Containers
+    enable a layer of isolation and this is done in the Linux Kernel via two kernel
+    components: namespaces and cgroups. Namespaces divide the operating system into
+    virtual segments. For example, assigning a process to namespace A makes it invisible
+    and unreachable to a process in namespace B, even if it runs the “ps” command
+    in a different namespace. Cgroups are short for control groups, which can apply
+    constraints, or limitations, to system resources such as memory, utilization;
+    and CPU, by a percentage of its use.
+
+
+    From the perspective of us, interacting with software such as a web application
+    in a container, a virtual machine, or on bare metal, acts and looks the same.
+    The average user is not able to tell what kind of system they are in, or what
+    kind of level of virtualization they are using.
+
+
+    Scalability with containers seems to be very easy to do and that''s one of its
+    promising points. You can scale both horizontally and vertically. With vertical
+    scaling we scale by applying more resources to the host: more CPU, more memory,
+    faster disks, etc. You can do this with a virtual machine as well, any software
+    really... You can add more resources to the box and then usually perform more.
+    More interesting though is the number of tools to scale horizontally by clustering
+    nodes to run containers. The Apache Mesos project is one example where running
+    your application in a container can be scaled over pools of hundreds or thousands
+    of different machines. Newer tools include Google''s Kubernetes and Docker''s
+    own Swarm.'
+  - '[PAGE 13]
+
+
+    Containers tend to be lightweight in size which makes them suitable for scaling.
+    The acronym JeOS (Just Enough Operating System) indicates this, in other words
+    it''s alright to say that many images are bare bone. A testament of this is that
+    using a Debian or Ubuntu Docker container image and issuing the “man” command
+    to view the manual pages will result in a “command not found” error from the shell.
+    This is even because the man-doc package is not installed! They tend to be measured
+    in hundreds of megabytes instead of the full distribution one installs is usually
+    much larger.
+
+
+    Containers share the kernel that is running on the host. This means there is one
+    running kernel, the Linux kernel, and it''s asked for resources directly. The
+    application can ask it to write to disk, to send a packet across the network,
+    to read from an open file, without having to pass instructions through another
+    layer such as a Hypervisor is the case in Virtual Machines. This gives you a performance
+    increase because the system has to perform less work for kernel requests i.e system
+    calls. Less instructions and translations mean less work and the result is higher
+    level of density for containers than you would have with virtual machines. That
+    means you can run more containers on a host than you would have been able to run
+    with virtual machines. It''s not unheard of be able to run 1000 containers on
+    commodity hardware.
+
+
+    In sum, applications in containers tend to run faster than their counterparts
+    in a virtual machine. A user can get near bare metal performance in the right
+    conditions and the startup time for a container is often less than a second where
+    multiple seconds is the norm when booting virtual machines.
+
+
+    # Security
+
+
+    Less secure than virtual machines, containers isolate the user land (e.g filesystem,
+    processes) not the kernel
+
+
+    # Portability
+
+
+    Less portable across operating systems. Tends to be portable within an operating
+    system.
+
+
+    # Concurrency
+
+
+    Some implementations are designed to run a single application or process
+
+
+    # Kernel Versions
+
+
+    Containers must use the same kernel as the host'
+  - '[PAGE 14]
+
+
+    Let''s delve into a few other differences in security, portability, concurrency,
+    and the kernel. Containers happen to be less secure than virtual machines. That''s
+    not to say that they''re not secure but rather they''re less secure than virtual
+    machines. This is mainly because containers isolate their user land e.g. filesystem,
+    processes etc. and not the kernel. Virtual machines will isolate the entire operating
+    system: the kernel, user land, and all.
+
+
+    On the topic of portability containers tend to be less portable across operating
+    systems. Note that containers are a subset of a virtualization type called light
+    operating system virtualization, also known as lightweight process virtualization.
+    These technical terms define an entire domain of technology that allows the operating
+    system to run multiple instances of itself on the same host. Different operating
+    systems have different ways of implementing this and the word containers often
+    refer to the Linux kernel implementation. Circling back around, this means that
+    if you run a container on GNU/Linux it''s not going to be run on FreeBSD or SmartOS
+    because each have their own operating system virtualization implementation. However,
+    within GNU/Linux system you can run containers across different distributions
+    as long as the run time implementation is supported. Linux container runtime implementations
+    such as Docker will run across Debian and Fedora families among others provided
+    the kernel has the necessary features included for running containers. A modern
+    kernel will have everything you need to run containers.
+
+
+    A note on concurrency is that some container implementations such as Docker are
+    designed to run a single application or process inside the container. Docker is
+    designed in a way that advocates running one process per container. An example
+    use case of this is where you have 10 websites that need to be isolated and served
+    to the world. Each website is placed in a container where it''s running an Apache
+    process to serve the web content. While running 10 instances of Apache might seem
+    inefficient, one gains from the extra layer of security that is provided. If an
+    attacker compromises an Apache daemon in a container and can access the system
+    and issue commands—they''re not able to see or interact with the other websites
+    in the other 9 containers. The design of a single process per container is not
+    a hard limit; Docker doesn''t allow it there are plenty of use cases. You can
+    run multiple processes by making the container''s first process (PID 1) an init
+    system that can spawn and'
+  - '[PAGE 15]
+
+
+    manage other processes in the container. Docker doesn’t provide an init system
+    which is why multiple process cannot be managed but installing one as supervisord
+    is simple enough.
+
+
+    Regarding kernel versions, a container as you may remember uses the same kernel
+    running as the host. Because of this we are not able to experiment with different
+    kernel versions. You can''t have a container that''s using Linux kernel 4.1 and
+    another container running 4.2 and your host running 4.3. Virtual machines don''t
+    have this problem because they virtualize an entire operating system. The benefit
+    of sharing the kernel is what allows us to get that performance benefit that we
+    talked about in the previous slide.
+
+
+    # Containers
+
+
+    +   Important: "Linux Based Containers"
+
+    There is no internal container specification.
+
+    As of, there is a container runtime specification called OCI
+
+
+    +   There are different container (and like) technologies
+
+    Linux: LXC, OpenVZ, Google containers, etc.
+
+    Non-Linux: BSD Jails, Solaris Zones, AIX WPAR.
+
+
+    The technology isn''t new, but it''s gaining great momentum now.
+
+
+    +   What do containers do?
+
+    Light-weight process virtualization, A.K.A. operating system virtualization
+
+
+    +   What do virtual machines do?
+
+    Hardware virtualization
+
+
+    A note on terminology, when referring to Linux containers as a general technology
+    it''s better to use the more encompassing term Linux-based containers. There are
+    many runtime implementations of Linux-based containers such as LXC which is short
+    for Linux containers and thus causes confusion. In addition there''s also no kernel
+    container specification, there are a few building blocks in the kernel that runtime
+    implementations take advantage of to create containers. Though, as of recent there
+    is an effort to standardize a container runtime specification called OCI (Open
+    Container Initiative); before OCI the CoreOS group worked on a specification called
+    Appsec was subsumed into OCI. OCI is a Linux Foundation project that is'
+- md: "\ndedicated to providing a specification: a set of guidelines and rules for\
+    \ the packaging, deployment, and runtime of containers. Some tools follow this\
+    \ and some do not. The specification will be adopted by more runtime implementations\
+    \ as it becomes more mature.\n\nGNU/Linux mentioned that there were multiple implementations\
+    \ of containers. Popular ones like Docker, LXC, and Rocket are gaining traction.\
+    \ Many others exist including lesser known like OpenVZ which uses a modified Linux\
+    \ kernel that the project maintains to provide resource controls and scheduling.\n\
+    \nOn non-Linux systems, but UNIX derivatives, the BSDs; Solaris has Zones, AIX\
+    \ has Partitions, Operating system virtualization technology isn't new, it's around\
+    \ for a long time. FreeBSD, one of the earliest implementations, came out in 2000\
+    \ which is 15 years ago at the time of publication. The technology is gaining\
+    \ a lot of momentum as late because of of the high level of adoption rate for\
+    \ the GNU/Linux operating system as well as the advent of better runtime implementations\
+    \ like Docker that made creation and deployment convenient and workable for system\
+    \ administrators and developers.\n\nContrast operating system virtualization with\
+    \ virtual machines which provide hardware virtualization, virtual machines have\
+    \ to translate hardware instructions; they worry about hardware such as busses,\
+    \ and software as schedulers for the guests. The hypervisor is additional layer\
+    \ of software required to create and manage virtual machines. Although hardware\
+    \ virtualization is getting better and faster, containers simply don't have to\
+    \ do as much work. A simplified illustration is an application in a container\
+    \ that makes a system call to the kernel to ask for a resource such as opening\
+    \ a file for reading and then the kernel (shared with the host) responds back\
+    \ with the result of the system call and moves on. Whereas in the case of an application\
+    \ in a virtual machine it makes a system call, the kernel in the guest services\
+    \ the call but needs to talk to the hypervisor which is the real manager of the\
+    \ hardware (the file resides on disk). The hypervisor translating for the hardware\
+    \ gives the kernel what it needs, the kernel in the guest returns back to the\
+    \ application which can proceed. In general you can see that this is a longer\
+    \ code path, though things are constantly improving over time.\n\n# Linux Kernel\
+    \ Stuff\n\n- **Support:** 3.8 introduce the final building block for containers\n\
+    - **Namespaces:** Process isolation\n  Currently available: pid, net, ipc, uts,\
+    \ mnt, and user\n- **Control Groups:** Resource management\n  e.cpu, cpuset, ludzi,\
+    \ memory, etc.\n\n- It's not may, you can create namespaces and cgroups directly\
+    \ from your shell by modifying procfs and sysfs. That's how they were deployed\
+    \ before userland tools like LXC and Docker existed\n\nThe Linux 3.8 kernel introduced\
+    \ what could said to be the most complete set of building blocks for containers\
+    \ yet. Earlier versions from 2.4.9 had namespaces and more were added over time\
+    \ but not enough to give us the capabilities we have now. The two building blocks\
+    \ we spoke about earlier are namespaces and control groups. Namespaces provide\
+    \ a way to isolate resources. There are currently 6 namespaces provided by the\
+    \ kernel and they include: PID, Network, IPC, UTS, and User. The user namespace\
+    \ adds additional security by mapping users such as root inside a container to\
+    \ a newest of them and not implemented in all runtimes at the time of this writing.\
+    \ An example of the PID namespace follows. Process Z is assigned to namespace\
+    \ A and process Y is assigned to namespace B. A user enters namespace A and runs\
+    \ top sees Process Z, correspondingly a user namespace B and runs top but only\
+    \ sees Process Y. The same with root entering namespace A or B and running top.\
+    \ Though, if not on the global namespace the root user can see that Process Z\
+    \ is running in namespace A and Process Y is running in namespace B. You can see\
+    \ that the PID namespace effectively isolates the view of the operating system.\
+    \ Note that namespaces don't have names, rather they have inode numbers, letters\
+    \ were assigned to simplify expressions. Another example includes the Network\
+    \ namespace which allows each container to have its own network interface and\
+    \ IP address to make a request to the URL of the Apache process running in namespace\
+    \ A and get an entirely different website from the Apache process running in namespace\
+    \ B with a different URL. Apache in namespace A and Apache in namespace B are\
+    \ not able to communicate containers unless configured.\n\nControl groups provide\
+    \ a level of resource management or control on containers. Resources like memory\
+    \ utilization or amount of memory allocated to a container, as well as limiting\
+    \ the disk read and write throughput that a container can serve. CPU limitations\
+    \ such as sharing and quota values per container allow prioritization of processes\
+    \ in containers or prioritization of entire containers. In sum, Namespaces and\
+    \ cgroups used together form what we know as containers.\n\nOne can create their\
+    \ own namespaces using the clone(2) system call. Cgroups can be created directly\
+    \ from the shell by mounting the pseudo cgroup filesystem and interacting with\
+    \ its files.\n\n# Linux Containers?\n\nDocker popularized the technology. It's\
+    \ actually been around 7 years.\n\n![image](img/6a3a576394e676430e9e4cbb7fa2f.png)\n\
+    \n- Automates the deployment of Linux container\n- Provides layers of abstraction\n\
+    - Various methods of creation\n- Docker hub and registries for sharing\n\nThe\
+    \ use of containers are getting more and popular because there are better ways\
+    \ to create them. It's not unreasonable to say Docker Inc., formerly dotCould,\
+    \ has created a large amount of desire for people to contribute and take notice\
+    \ and utilize the container. Docker, later renamed Docker Engine, automates the\
+    \ deployment of Linux containers. The provided chart shows the search terms using\
+    \ Google Trends which is a good indicator of popularity. You can see that around\
+    \ 2013 we have an almost linear growth, as Docker was released as open source\
+    \ project in March 2013. I expect adoption and growth to continue as others improve\
+    \ their systems as well as find use cases for containers.\n\n# Research Moment\n\
+    \n“In general, Docker equals or exceeds KVM performance in every case we tested.”\n\
+    \n- IBM Research Report: An Updated Performance Comparison of Virtual Machines\
+    \ and Linux Containers (http://domino.research.ibm.com/library/cyberberg.nsfipapers/0299052195DD819C85257D2300681E7/$File/rc25482.pdf)\n\
+    \nTo substantiate some of the performance claims made earlier there have been\
+    \ a few studies including one noted by IBM titled “An Updated Performance Comparison\
+    \ of Virtual Machines and Linux Containers.” In that report you will find the\
+    \ concluding statements KVM was the chosen hypervisor to represent virtual machines\
+    \ and Docker was the chosen runtime to implement containers. Disk, memory, CPU,\
+    \ and network experiments were conducted using applications such as Redis, MySQL,\
+    \ netperf, and LZMA. I highly recommend reading the report, freely available online,\
+    \ for more information.\n\n# Container Security\n\n- Networking can be disabled\n\
+    - Don't run processes as root\n- Follow standard filesystem rules for securing\
+    \ data\n- Control CPU and RAM allocation\n- Devicemapper backend can limit disk\
+    \ space\n- Finer environment controls via ulimit for Docker processes: fsize,\
+    \ nproc, etc.\n- Keep container packages up to date\n\nWhen it comes to running\
+    \ important services in containers a defense-in-depth approach is best. By this\
+    \ I mean tighten security across the the\n"
+  mdcn: "\n致力于提供一种规范：一套关于容器打包、部署和运行的指南和规则。某些工具遵循这一规范，而某些则不遵循。随着规范变得越来越成熟，更多的运行时实现将采用它。\n\
+    \nGNU/Linux 提到有多种容器的实现。像 Docker、LXC 和 Rocket 这样的流行工具正受到关注。还有许多其他实现，包括较为人知的 OpenVZ，它使用由该项目维护的修改版\
+    \ Linux 内核提供资源控制和调度。\n\n在非 Linux 系统上，但在 UNIX 派生系统中，例如 BSD 家族；Solaris 有 Zones，AIX\
+    \ 有 Partitions，操作系统虚拟化技术并不新鲜，它已经存在很长时间了。FreeBSD 是最早的实现之一，于 2000 年发布，在出版时已是 15\
+    \ 年前。这项技术之所以现在才获得巨大的势头，是因为 GNU/Linux 操作系统的普及率很高，以及像 Docker 这样更好的运行时实现的出现，这使得系统管理员和开发人员创建和部署变得方便且可行。\n\
+    \n将操作系统虚拟化与提供硬件虚拟化的虚拟机进行对比：虚拟机必须翻译硬件指令；它们担心总线等硬件，以及作为客户机调度器的软件。虚拟机程序是创建和管理虚拟机所需的额外软件层。尽管硬件虚拟化正在变得更好、更快，但容器根本不需要做那么多工作。一个简化的说明是：容器中的应用程序向内核发出系统调用，请求某种资源（例如打开文件进行读取），然后内核（与主机共享）返回系统调用的结果并继续执行。而在虚拟机中的应用程序情况下，它发出系统调用，客户机内的内核处理该调用，但需要与虚拟机程序通信，虚拟机程序才是硬件的真实管理器（文件位于磁盘上）。虚拟机程序为硬件进行翻译，为内核提供所需，客户机内核将结果返回给应用程序，应用程序即可继续运行。通常情况下你可以看到这是一个更长的代码路径，尽管随着时间的推移一直在不断改进。\n\
+    \n# Linux 内核相关\n\n- **支持：** 3.8 版本引入了容器的最终构建模块\n- **命名空间 (Namespaces):** 进程隔离\n\
+    \  当前可用：pid, net, ipc, uts, mnt 和 user\n- **控制组 (Control Groups):** 资源管理\n  e.cpu,\
+    \ cpuset, ludzi, memory 等。\n\n- 这并不难事，你可以通过修改 procfs 和 sysfs 直接从 shell 创建命名空间和\
+    \ cgroups。这就是在 LXC 和 Docker 等用户态工具出现之前的部署方式。\n\nLinux 3.8 内核引入了可以说是目前最完整的容器构建模块。早期的\
+    \ 2.4.9 版本已经有了命名空间，随着时间的推移增加了更多，但不足以赋予我们现在拥的能力。我们之前讨论的两个构建模块是命名空间和控制组。命名空间提供了一种隔离资源的方法。内核目前提供了\
+    \ 6 个命名空间，包括：PID、Network、IPC、UTS 和 User。用户命名空间通过将容器内的 root 等用户映射到它们中的一个新用户增加了额外的安全性，但在本文写作时，它尚未在所有运行时中都实现。以下是\
+    \ PID 命名空间的示例：进程 Z 被分配给命名空间 A，进程 Y 被分配给命名空间 B。用户进入命名空间 A 并运行 top，看到的是进程 Z；相应地，用户进入命名空间\
+    \ B 并运行 top，只能看到进程 Y。root 进入命名空间 A 或 B 并运行 top 也是如此。尽管如此，如果不在全局命名空间，root 用户也可以看到进程\
+    \ Z 正在命名空间 A 中运行，而进程 Y 正在命名空间 B 中运行。你可以看到 PID 命名空间有效地隔离了操作系统的视图。请注意，命名空间没有名称，而是有\
+    \ inode 号，分配字母是为了简化表达式。另一个示例包括网络 命名空间，它允许每个容器都有自己的网络接口和 IP 地址，以便向运行在命名空间 A 中的\
+    \ Apache 进程的 URL 请求，并从运行在命名空间 B 中的不同 URL 的 Apache 进程处获取完全不同的网站。除非配置，命名空间 A 中的\
+    \ Apache 和 B 中的 Apache 无法通信。\n\n控制组为容器提供了一层资源管理或控制。例如内存利用率或分配给容器的内存量，以及限制容器提供的磁盘读写吞吐量。CPU\
+    \ 限制（如每个容器的共享和配额值）允许对容器中的进程或整个容器进行优先级排序。总之，命名空间和 cgroups 结合使用形成了我们所知的容器。\n\n人们可以使用\
+    \ `clone(2)` 系统调用创建自己的命名空间。可以通过挂载伪 cgroup 文件系统并与其文件交互，直接从 shell 创建 cgroups。\n\n\
+    # Linux 容器？\n\nDocker 普及了这项技术。它实际上已经存在 7 年了。\n\n![image](img/6a3a576394e676430e9e4cbb7fa2f.png)\n\
+    \n- 自动化部署 Linux 容器\n- 提供多层抽象\n- 多种创建方法\n- 用于共享的 Docker hub 和注册表\n\n容器的使用正变得越来越流行，因为有了更好的方法来创建它们。可以说\
+    \ Docker Inc.（前身为 dotCloud）极大地激发了人们贡献、关注和利用容器的巨大欲望。Docker（后更名为 Docker Engine）实现了\
+    \ Linux 容器的自动化部署。提供的表格显示了 Google Trends 的搜索词，这是流行程度的良好指标。你可以看到在2013 年左右我们有了近乎线性的增长，因为\
+    \ Docker 是在2013 年 3 月作为开源项目发布的。我预计，随着其他人改进他们的系统并找到容器的用例，采用和增长将持续。\n\n# 研究时刻\n\n\
+    “通常情况下，在我们测试的每种情况下，Docker 的性能都等同或超过了 KVM。”\n\n- IBM 研究报告：虚拟机与 Linux 容器的更新后的性能对比\
+    \ (http://domino.research.ibm.com/library/cyberberg.nsfipapers/0299052195DD819C85257D2300681E7/$File/rc25482.pdf)\n\
+    \n为了证实之前提出的某些性能声明，有一些研究，其中一个由 IBM 指出的标题为“虚拟机与 Linux 容器的更新后的性能对比”。在该报告中，你会发现结论是：KVM\
+    \ 是代表虚拟机的虚拟机虚拟机程序，而 Docker 是实现容器的运行时。使用 Redis、MySQL、netperf 和 LZMA 等应用程序进行了磁盘、内存、CPU\
+    \ 和网络实验。我强烈建议阅读该报告（网上免费提供）获取更多信息。\n\n# 容器安全\n\n- 可以禁用网络\n- 不要以 root 身份运行进程\n-\
+    \ 遵循标准文件系统规则保护数据\n- 控制 CPU 和 RAM 分配\n- Devicemapper 后端可以限制磁盘空间\n- 通过 ulimit 对\
+    \ Docker 进程进行更精细的环境控制：fsize, nproc 等\n- 保持容器包更新\n\n在容器中运行重要服务时，深度防御策略是最好的。我的意思是加固整个...\n"
+  merge: 1
+  raw:
+  - '[PAGE 16]
+
+
+    dedicated to providing a specification: a set of guidelines and rules for the
+    packaging, deployment, and runtime of containers. Some tools follow this and some
+    do not. The specification will be adopted by more runtime implementations as it
+    becomes more mature.
+
+
+    GNU/Linux mentioned that there were multiple implementations of containers. Popular
+    ones like Docker, LXC, and Rocket are gaining traction. Many others exist including
+    lesser known like OpenVZ which uses a modified Linux kernel that the project maintains
+    to provide resource controls and scheduling.
+
+
+    On non-Linux systems, but UNIX derivatives, the BSDs; Solaris has Zones, AIX has
+    Partitions, Operating system virtualization technology isn''t new, it''s around
+    for a long time. FreeBSD, one of the earliest implementations, came out in 2000
+    which is 15 years ago at the time of publication. The technology is gaining a
+    lot of momentum as late because of the high level of adoption rate for the GNU/Linux
+    operating system as well as the advent of better runtime implementations like
+    Docker that made creation and deployment convenient and workable for system administrators
+    and developers.
+
+
+    Contrast operating system virtualization with virtual machines which provide hardware
+    virtualization, virtual machines have to translate hardware instructions; they
+    worry about hardware such as busses, and software as schedulers for the guests.
+    The hypervisor is additional layer of software required to create and manage virtual
+    machines. Although hardware virtualization is getting better and faster, containers
+    simply don''t have to do as much work. A simplified illustration is an application
+    in a container that makes a system call to the kernel to ask for a resource such
+    as opening a file for reading and then the kernel (shared with the host) responds
+    back with the result of the system call and moves on. Whereas in the case of an
+    application in a virtual machine it makes a system call, the kernel in the guest
+    services the call but needs to talk to the hypervisor which is the real manager
+    of the hardware (the file resides on disk). The hypervisor translating for the
+    hardware gives the kernel what it needs, the kernel in the guest returns back
+    to the application which can proceed. In general you can see that this is a longer
+    code path, though things are constantly improving over time.'
+  - "[PAGE 17]\n\n# Linux Kernel Stuff\n\n+   * **Support:** 3.8 introduce the final\
+    \ building block for containers\n* **Namespaces:** Process isolation\n  Currently\
+    \ available: pid, net, ipc, uts, mnt, and user\n* **Control Groups:** Resource\
+    \ management\n  e.cpu, cpuset, ludzi, memory, etc.\n\n+   * It's not may, you\
+    \ can create namespaces and cgroups directly from your shell by modifying procfs\
+    \ and sysfs.\nThat's how they were deployed before userland tools like\nLXC and\
+    \ Docker existed\n\nThe Linux 3.8 kernel introduced what could said to be the\
+    \ most complete set of building blocks for containers yet. Earlier versions from\
+    \ 2.49 had namespaces and more were added over time but not enough to give us\
+    \ the capabilities we have now. The two building blocks we spoke about earlier\
+    \ are namespaces and control groups. Namespaces provide a way to isolate resources.\
+    \ There are currently 6 namespaces provided by the kernel and they include: PID,\
+    \ Network, IPC, UTS, and User. The user namespace adds additional security by\
+    \ mapping users such as root inside a container to an newest of them and not implemented\
+    \ in all runtimes at the time of this writing. An example of the PID namespace\
+    \ follows. Process Z is assigned to namespace A and process Y is assigned to namespace\
+    \ B. A user enters namespace A and runs top sees Process Z, correspondingly a\
+    \ user namespace B and runs top but only sees Process Y. The same with root entering\
+    \ namespace A or B and running top. Though, if not on the global namespace the\
+    \ root user can see that Process Z is running in namespace A and Process Y is\
+    \ running in namespace B. You can see that the PID namespace effectively isolates\
+    \ the view of the operating system. Note that namespaces don't have names, rather\
+    \ they have inode numbers, letters were assigned to simplify expressions. Another\
+    \ example includes the Network namespace which allows each container to have its\
+    \ own network interface and IP address to make a request to the URL of the Apache\
+    \ process running in namespace A and get an entirely different website from the\
+    \ Apache process running in namespace B with a different URL. Apache in namespace\
+    \ A and Apache in namespace B are not able to communicate containers unless configured."
+  - '[PAGE 18]
+
+
+    Control groups provide a level of resource management or control on containers.
+    Resources like memory utilization or amount of memory allocated to a container,
+    as well as limiting the disk read and write throughput that a container can serve.
+    CPU limitations such as sharing and quota values per container allow prioritization
+    of processes in containers or prioritization of entire containers. In sum, Namespaces
+    and cgroups used together form what we know as containers.
+
+
+    One can create their own namespaces using the clone(2) system call. Cgroups can
+    be created directly from the shell by mounting the pseudo cgroup filesystem and
+    interacting with its files in sysfs.
+
+
+    # Linux Containers?
+
+
+    Docker popularized the technology. It''s actually been around for 7 years.
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_18_0.png)
+
+
+    +   * Automates the deployment of Linux based container
+
+    * Provides layers of abstraction
+
+    * Various methods of container creation
+
+    * Docker hub and registries for sharing and deployment
+
+
+    The use of containers are getting more and more popular because there are better
+    ways to create them and there are tools that make it a lot easier to create, manage,
+    and deploy containers. It''s not unreasonable to say that Docker Inc., formerly
+    dotCould, has created a large amount of desire, their implementation Docker Engine
+    has a great deal for getting people to contribute and take notice and utilize
+    the container technology. Docker, later renamed Docker Engine, automates the deployment
+    of Linux containers and provides the ability to use copy-write filesystems as
+    well as ways to deploy containers. The provided chart shows the search terms using
+    Google Trends which is a good indicator of popularity and interest. You can see
+    that around 2013 we have an almost linear growth, as Docker was released as an
+    open source project in March 2013. I expect adoption and growth to continue as
+    others improve their systems as well as find new use cases for containers.'
+  - '[PAGE 19]
+
+
+    # Research Moment
+
+
+    “In general, Docker equals or exceeds KVM performance in every case we tested.”
+
+
+    - IBM Research Report: An Updated Performance Comparison of Virtual Machines and
+    Linux Containers <http://domino.research.ibm.com/library/cyberberg.nsfipapers/0299052195DD819C85257D2300681E7/$File/rc25482.pdf>
+
+
+    To substantiate some of the performance claims made earlier there have been a
+    few studies including one noted by IBM titled “An Updated Performance Comparison
+    of Virtual Machines and Linux Containers.” In that report you will find the concluding
+    statements, “In general, Docker equals or exceeds KVM performance in every case
+    we tested.” KVM was the chosen hypervisor to represent virtual machines and Docker
+    was the chosen runtime to implement containers. Disk, memory, CPU, and network
+    experiments were conducted using applications such as Redis, MySQL, netperf, and
+    LZMA. I highly recommend reading the report, freely available online, for more
+    information.
+
+
+    # Container Security
+
+
+    +   - Networking can be disabled
+
+    - Don''t run processes as root
+
+    - Follow standard filesystem rules for securing data
+
+    - Control CPU and RAM allocation
+
+    - Devicemapper backend can limit disk space
+
+    - Finer environment controls via ulimit for Docker processes: fsize, nproc, etc.
+
+    - Keep container packages up to date
+
+
+    When it comes to running important services in containers a defense in-depth approach
+    is best. By this I mean tighten security across the the'
+- md: '
+
+    environment, from the perimeter to the core of the software you’re protecting
+    to. The perimeter may be the network or operating system and the core may be the
+    application itself. In general you apply the same security principles as the principle
+    of least privilege containers as you do to any system run. Though, with containers
+    there are a few things to be aware of. A few guidelines to follow, disabling network
+    if it’s not needed; if there is none from outside connecting to the service, don’t
+    run the networking services. Don’t add interfaces to the container, this is common
+    in training and development. You might not be developing a network application
+    so you don’t need networking. Good security practice is to not run processes as
+    root on a system unless required; same rule applies to running processes as root
+    inside a container. Apache for example should run as an unprivileged user.
+
+
+    Follow standard filesystem access controls for securing your data. Applying permissions,
+    mount options, and ACL (Access Control Lists) to files can go a long way in reducing
+    the attack surface. The use of control groups to prevent DoS (Denial of Service)
+    of system resources is critical. Control should be placed so that an out of control
+    process in a container cannot bring down the entire system. Docker Engine supports
+    various backends such as devicemapper which can be used to limit the filesystem
+    size in a container. In addition, there are fine grain user and process environment
+    control via ulimit and pam_limits that can be applied to processes to do things
+    like the number of running processes as well as apply a cap to file size.
+
+
+    It’s very important to keep your container packages up to date. If you’re going
+    to deploy a new service, you should log into the container and upgrade all the
+    packages because base images don’t keep current with latest patches. You should
+    also keep your container runtime program up to date as well as the operating system.
+    A kernel or Docker Engine vulnerability could make it possible to break out of
+    a container should it become compromised. Note that there have been Docker Engine
+    vulnerabilities in the past.
+
+
+    # Host Security
+
+
+    - grsecurity patches
+
+    - Detailed access control with SELinux and Apparmor
+
+    - iptables rate limiting to prevent excessive connections
+
+    - Least privileged user, take advantage of user namespaces (soon!)
+
+    - Run a HIDS like OSSEC
+
+    - Keep host up to date
+
+
+    One can go a step further in securing the operating system by applying the GR
+    and PAX patches to harden the kernel with improved ASLR (Automatic Stack Layout
+    Randomization) coverage as well as provide mandatory access control. One should
+    also take advantage of access control policies provided via SELinux and App Armor
+    policies. If you have the packaged version of Docker Engine for example, you have
+    access control policies already enabled on your system but you can go a step further
+    to create container rules. The use of iptables on the host for networked applications
+    is paramount. Rules from limiting access to a service to rate-limiting a Dos attack
+    should be enabled. Taking advantage of the user namespace when supported to further
+    reduce the attack surface. A least privileged user can run the container so that
+    root for example in the container is not equivalent to root outside of the container.
+    Finally, one cannot depend solely on prevention, because one cannot foresee all
+    future attacks. Given this truth it is equally important to have the ability to
+    detect and contain breaches. A powerful network monitoring system like Bro can
+    keep records of all network activity and react on them if configured to do so.
+    More importantly, a host intrusion detection such as a OSSEC on the host should
+    perform log analysis and monitor the filesystem for changes and rootkits. All
+    or most of these things when implemented together provide a powerful defense against
+    attack.
+
+
+    # CHAPTER 2
+
+    Using Containers in Training
+
+
+    ## Problem 1. Training
+
+
+    IT training isn''t easy
+
+
+    Now that we have covered the main concepts, implementations, and security practices
+    we are going to cover use cases for training and development. We begin by tackling
+    the IT training problem with containers. The IT training problem in sum is that
+    it''s rather difficult and time consuming to create and deploy training environments
+    for software-based training. I''ve been to a number of training events covering
+    subjects such as parallel programming, network security monitoring, malware analysis,
+    and programming in various languages, among others and I found a common approach
+    for training is to pass out virtual machines. This is often done prior to the
+    event via a link for download or during an event by distributing them on a medium
+    such as USB stick. Both methods are a hassle for the users and the people providing
+    the training. For the users they have to use their valuable time to download a
+    disk image then can be gigabytes in size as well as the software available is
+    usually a hypervisor. This large piece of software is required to run the virtual
+    machine and then concerns arise about hypervisor compatibility such as whether
+    it''s an image capable of running on Oracle''s VirtualBox or VMware/Fusion, etc.
+    I witnessed the passing of a disk image more than an hour to distribute to the
+    conference attendees, which amounts to a loss in training time for the users.
+    Once the disk images are everywhere on workstations there''s a few users that
+    will have an issue with running the images. I witnessed misconfigurations in network
+    and bus configurations. These problems tend to put students behind others in the
+    group especially if staff are not available to assist. The networking infrastructure
+    at the event is often slow or saturated and this occurs more than you would think.
+    It prevents or prolongs the transfer of files such as a disk image, training materials,
+    or online resources. The venue is not equipped to accommodate the amount of students
+    or their traffic habits on the wireless network.
+
+
+    Distribution problems can also occur with training materials. Mistakes happen
+    in training material leaving them incomplete and it can go unnoticed until it''s
+    called upon while training. If there is a mistake take the best scenario in my
+    mind is where the students can obtain the newly updated material quickly. Packaging
+    the materials in a virtual machine doesn''t work. Having them in a network accessible
+    repository or website works if the network is reliable.
+
+
+    Account management is the final concern I want to present. It''s a concern when
+    accessing resources that require account credentials to authenticate users. Administrators
+    must create and distribute these credentials to the students and ideally in an
+    automated fashion as it''s otherwise time consuming and tedious work. This is
+    less of issue in virtual machine training but arises in environments that provide
+    what I call shared hosting training. A shared host is a system that a user interacts
+    with remotely using his own account for training. The most common example is is
+    accessing a unix-like system using SSH. The account usernames and passwords must
+    be distributed to each user. I have seen this in the wild by passing pieces of
+    paper around the room with each students credentials.
+
+
+    # Common Types of IT Training
+
+
+    1. Shared system training (multiple accounts)
+
+    2. Virtual Machine training (VM per student)
+
+    3. Container training (container per student)
+
+    4. Web based training
+
+
+    Before we discuss solutions I want to bring up the different types of training
+    environments I''ve seen. Number one is the aforementioned shared system training
+    where a single server used to provide access to multiple users. If you were to
+    train 100 users there would be an equivalent number of accounts in the system.
+    A remote access tool such as SSH would connect the user to the system. An inconvenience
+    with this type of training is the creation and distribution of the accounts as
+    well as lacking sufficient isolation of the users.
+
+
+    The second type of training is virtual machine training. This is the most prevalent
+    that I have seen. I have been to a number of conferences where they rely on giving
+    a virtual machine disk image to all the participants. The main problems with this
+    type are distribution, software dependencies, software compatibility, and hardware-resources.
+    Because hypervisors are demanding pieces of software the use of mobile devices
+    such as tablets and phones are effectively prohibited. One benefit is that the
+    user is permitted to keep the virtual machine. This allows them to work in the
+    environment at any time in the future. In some cases such as doing kernel work,
+    managing network configuration, and implementation of network services, virtual
+    machines are the best solution.
+
+
+    Also, there is the case of training using operating system virtualization technology
+    such as the Linux-based containers we discussed. This is the medium for training
+    that I have explored and found to be very useful. For this type we assign one
+    container per student on a single host. The user logs into the host and is placed
+    in their very own container from which they can interact with an isolated but
+    full-line environment.
+
+
+    Finally we have web based training. Web-based training is a way of providing some
+    sort of interactive software such as shell or interpreter embedded in a web page.
+    The Go programming language has an online tutorial on their website that allows
+    you to try the language. Similarly, the Bro project has try.org where one can
+    write and have it returned directly in your web browser. But the web based training
+    method is often limited to complete short ad-hoc tasks and providing only a subset
+    of features of the software to learn. Trainers who need students immersed in an
+    environment where various pieces of software are intended to be utilized and made
+    to work together should look at one of the other training types.
+
+    '
+  mdcn: '
+
+    环境，从你所保护的软件的边界到核心。边界可能是网络或操作系统，而核心可能是应用程序本身。通常情况下，你对容器应用与任何运行系统应用相同的安全原则，例如最小权限原则。不过，在使用容器时，有几点需要注意。有一些需要遵循的指南：如果不需要网络，则禁用网络；如果没有外部连接到该服务，就不要运行网络服务。不要为容器添加接口，这在培训和开发中很常见。你可能并没有在开发网络应用程序，因此不需要网络。良好的安全实践是除非需要，否则不要在系统中以
+    root 身份运行进程；同样的规则适用于在容器内以 root 身份运行进程。例如，Apache 应该作为无权用户运行。遵循标准的文件系统访问控制来保护你的数据。对文件应用权限、挂载选项和
+    ACL（访问控制列表）可以有效减少攻击面。使用控制组（control groups）防止系统资源遭受 DoS（拒绝服务）攻击至关重要。应该进行控制，使得容器中的失控进程无法导致整个系统崩溃。Docker
+    Engine 支持多种后端，例如 `devicemapper`，可以用于限制容器的文件系统大小。此外，通过 `ulimit` 和 `pam_limits`
+    提供了细粒度的用户和进程环境控制，可以应用于进程以执行如限制运行进程数量以及设置文件大小上限等操作。
+
+
+    保持你的容器包更新非常重要。如果你要部署一个新服务，你应该登录容器并升级所有包，因为基础镜像不会保持最新的补丁。你还应该保持你的容器运行时程序以及操作系统的更新。内核或
+    Docker Engine 的漏洞可能导致在被攻破时能够逃逸。请注意，过去出现过 Docker Engine 漏洞。
+
+
+    # 主机安全
+
+
+    - grsecurity 补丁
+
+    - 使用 SELinux 和 Apparmor 进行详细访问控制
+
+    - iptables 速率限制以防止过量连接
+
+    - 最小权限用户，利用用户命名空间（即将到来！）
+
+    - 运行如 OSSEC 这样的 HIDS（主机入侵检测系统）
+
+    - 保持主机更新
+
+
+    可以通过应用 GR 和 PAX 补丁来进一步加强操作系统的安全，通过改进的 ASLR（自动堆栈布局随机化）范围来加固内核，并提供强制性访问控制。还应该利用通过
+    SELinux 和 App Armor 策略提供的访问控制策略。例如，如果你使用的是封装版本的 Docker Engine，你的系统已经启用了访问控制策略，但你可以更进一步地创建容器规则。在主机上为网络应用使用
+    `iptables` 是至关重要的。应该启用从限制服务访问到对 Dos 攻击进行速率限制的各种规则。在支持的情况下利用用户命名空间来进一步减少攻击面。最小权限用户可以运行容器，这样容器内的
+    root 就不等同于容器外的 root。最后，不能仅仅依赖防御，因为无法预见未来所有的攻击。鉴于这一事实，具备检测和包含违规的能力同样重要。像 Bro 这样强大的网络监控系统可以记录所有网络活动，并在配置允许的情况下对其做出反应。更重要的是，主机上如
+    OSSEC 这样的主机入侵检测系统应该执行日志分析，并监控文件系统的变化和 rootkit。当这些或大部分措施被共同实施时，将提供针对攻击的强大防御。
+
+
+    # 第 2 章
+
+    在培训中使用容器
+
+
+    ## 问题 1. 培训
+
+
+    IT 培训并非易事
+
+
+    既然我们已经涵盖了主要的概念、实现和安全实践，我们将介绍用于培训和开发的用例。我们首先处理用容器解决 IT 培训问题。IT 培训问题的总结是，为基于软件的培训创建和部署培训环境相当困难且耗时。我参加过许多涵盖并行编程、网络安全监控、恶意软件分析以及各种语言编程等主题的培训活动，我发现培训的一种常用方法是分发虚拟机。这通常在活动开始前通过下载链接完成，或者在活动期间通过
+    USB 闪盘等介质进行分发。这两种方法对用户和培训提供者来说都是很麻烦的。对于用户来说，他们必须花宝贵的时间下载磁盘镜像（这些镜像可能有几个 GB 大），而且可用的软件通常是一个虚拟机监控程序。这个大型软件被用来运行虚拟机，然后就会出现虚拟机监控程序兼容性的问题，例如，它是否是可以在
+    Oracle 的 VirtualBox 或 VMware/Fusion 等上运行的镜像。我曾见证过为了给会议参与者分发一个磁盘镜像而花费了一个多小时，这导致了用户培训时间的损失。一旦磁盘镜像在工作站上随处可见，会有几个用户在运行镜像时遇到问题。我曾见证过网络和总线配置中的错误配置。这些问题往往会导致学生落后于小组中的其他人，特别是当工作人员无法提供协助时。活动的网络基础设施通常很慢或饱和，这种情况发生的频率比你想象的要多。它阻止或延长了磁盘镜像、培训材料或在线资源的传输。场馆设备无法容纳如此数量的学生或他们在无线网络上的流量习惯。
+
+
+    培训材料的分发也可能出现问题。培训材料中的错误会导致其不完整，直到在培训期间需要时才被察觉。如果有错误，我脑海中最好的方案是学生可以快速获得新更新的材料。将材料打包在虚拟机中是不可行的。但如果网络可靠，将它们放在网络可访问的存储库或网站上是有效的。
+
+
+    账户管理是我想要提出的最后一个关注点。在访问需要账户凭据来验证用户的资源时，这是一个关注的问题。管理员必须为学生创建并分发这些凭据，理想情况下以自动方式进行，否则将是一项耗时且枯燥的工作。这在虚拟机培训中问题不大，但在提供我所说的“共享托管培训”的环境中就会出现。共享主机是一个用户使用自己的账户远程交互以进行培训的系统。最常见的例子是使用
+    SSH 访问类 Unix 系统。账户用户名和密码必须分发给每个用户。我曾在现场看到这种情况，通过在房间里传阅写有每个学生凭据的纸条。
+
+
+    # 常见的 IT 培训类型
+
+
+    1. 共享系统培训（多个账户）
+
+    2. 虚拟机培训（每个学生一个虚拟机）
+
+    3. 容器培训（每个学生一个容器）
+
+    4. 基于 Web 的培训
+
+
+    在讨论解决方案之前，我想介绍我见过的不同培训环境。第一是上述的共享系统培训，单台服务器为多个用户提供访问。如果你要培训 100 个用户，系统中就有相应数量的账户。如
+    SSH 等远程访问工具会将用户连接到系统。这种类型培训的不便之处在于账户的创建和分发，以及缺乏对用户足够的隔离。
+
+
+    第二种培训类型是虚拟机培训。这是我见过的最常见的。我参加过许多会议，他们依赖于给所有参与者分发虚拟机磁盘镜像。这类培训的主要问题是分发、软件依赖、软件兼容性和硬件资源。由于虚拟机监控程序是消耗资源的大型软件，因此实际上禁止使用平板电脑和手机等移动设备。一个优点是用户被允许保留该虚拟机。这允许他们在未来的任何时候都能在该环境中工作。在某些情况下，例如进行内核工作、管理网络配置和实现网络服务，虚拟机是最佳解决方案。
+
+
+    此外，还有使用操作系统虚拟化技术（如我们讨论的 Linux 容器）进行培训的情况。这是我探索过并发现非常有用的培训媒介。对于这种类型，我们在单台主机上为每个学生分配一个容器。用户登录主机并被放置在他们自己的容器中，从那里他们与一个隔离但全功能的环境进行交互。
+
+
+    最后，我们有基于 Web 的培训。基于 Web 的培训是一种提供某种嵌入网页的交互式软件（如 shell 或解释器）的方法。Go 编程语言在他们的网站上有一个在线教程，允许你尝试该语言。同样，Bro
+    项目有 try.org，人们可以在那里编写代码并直接在网络浏览器中返回结果。但基于 Web 的培训方法通常限于完成简短的临时任务，并仅提供软件功能的子集。需要让学生沉浸在需要使用多种软件并协同工作的环境中的培训师，应该考虑其他培训类型。
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 20]
+
+
+    environment, from the perimeter to the core of the software you’re protecting
+    to. The perimeter may be the network or operating system and the core may be the
+    application itself. In general you apply the same security principles as the principle
+    of least privilege containers as you do to any system you run. Though, with containers
+    there a few others things to be aware of. A few guidelines to follow, disabling
+    network if it’s not needed; if there is none from outside connecting to the service,
+    don’t run the networking services. Don’t add interfaces to the container, this
+    is common in training and development. You might not be developing a network application
+    so you don’t need networking. Good security practice is to not run processes as
+    root on a system unless required; same rule applies to running processes as root
+    inside a container. Apache for example should run as an unprivileged user.
+
+
+    Follow standard filesystem access controls for securing your data. Applying permissions,
+    mount options, and ACL (Access Control Lists) to files can go a long way in reducing
+    the attack service. The use of control groups to prevent DoS (Denial of Service)
+    of system resources is critical. Control should be placed so that an out of control
+    process in a container cannot bring down the entire system. Docker Engine supports
+    various backends such as devicemapper which can be used to limit the filesystem
+    size in a container. In addition, there are fine grain user and process environment
+    control via ulimit and pam_limits that can be applied to processes to do things
+    like the number of running processes as well as apply a cap to file size.
+
+
+    It’s very important to keep your container packages up to date. If you’re going
+    to deploy a new service, you should log into the container and upgrade all the
+    packages because base images don’t keep current with latest patches. You should
+    also keep your container runtime program up to date as well as the operating system.
+    A kernel or Docker Engine vulnerability could make it possible to break out of
+    a container should it become compromised. Note that there have been Docker Engine
+    vulnerabilities in the past.'
+  - '[PAGE 21]
+
+
+    # Host Security
+
+
+    +   - grsecurity patches
+
+
+    +   - Detailed access control with SELinux and Apparmor
+
+
+    +   - iptables rate limiting to prevent excessive connections
+
+
+    +   - Least privileged user, take advantage of user namespaces (soon!)
+
+
+    +   - Run a HIDS like OSSEC
+
+
+    +   - Keep host up to date
+
+
+    One can go a step further in securing the operating system by applying the GR
+    and PAX patches to harden the kernel with improved ASLR (Automatic Stack Layout
+    Randomization) coverage as well as provide mandatory access control. One should
+    also take advantage of access control policies provided via SELinux and App Armor
+    policies. If you have the packaged version of Docker Engine for example, you have
+    access control policies already enabled on your system but you can go a step further
+    to create container rules. The use of iptables on the host for networked applications
+    is paramount. Rules from limiting access to a service to rate-limiting a Dos attack
+    should be enabled. Taking advantage of the user namespace when supported to further
+    reduce the attack service. A least privileged user can run the container so that
+    root for example in the container is not equivalent to root outside of the container.
+    Finally, one cannot depend solely on prevention, because one cannot foresee all
+    future attacks. Given this truth it is equally important to have the ability to
+    detect and contain breaches. A powerful network monitoring system like Bro can
+    keep records of all network activity and react on them if configured to do so.
+    More importantly, a host intrusion detection such as a OSSEC on the host should
+    perform log analysis and monitor the filesystem for changes and rootkits. All
+    or most of these things when implemented together provide a powerful defense against
+    attack.'
+  - '[PAGE 22]
+
+
+    This page intentionally left blank'
+  - '[PAGE 23]
+
+
+    # # CHAPTER 2
+
+    Using Containers in Training
+
+
+    # ## Problem 1. Training
+
+
+    IT training isn''t easy
+
+
+    Now that we have covered the main concepts, implementations, and security practices
+    we are going to cover use cases for training and development. We begin by tackling
+    the IT training problem with containers. The IT training problem in sum is that
+    it''s rather difficult and time consuming to create and deploy training environments
+    for software-based training. I''ve been to a number of training events covering
+    subjects such as parallel programming, network security monitoring, malware analysis,
+    and programming in various languages, among others and I found a common approach
+    for training is to pass out virtual machines. This is often done prior to the
+    event via a link for download or during an event by distributing them on a medium
+    such as USB stick. Both methods are a hassle for the users and the people providing
+    the training. For the users they have to use their valuable time to download a
+    disk image then can be gigabytes in size as well as the software available is
+    usually a hypervisor. This large piece of software is required to run the virtual
+    machine and then concerns arise about hypervisor compatibility such as whether
+    it''s an image capable of running on Oracle''s VirtualBox or VMware/Fusion, etc.
+    I witnessed the passing of a disk image more than an hour to distribute to the
+    conference attendees, which amounts to a loss in training time for the users.
+    Once the disk images are everywhere on workstations there''s a few users that
+    will have an issue with running the images. I witnessed misconfigurations in network
+    and bus configurations. These problems tend to put students behind others in the
+    group especially if staff are not available to assist. The networking infrastructure
+    at the event is often slow or saturated and this occurs more than you would think.
+    It prevents or'
+  - '[PAGE 24]
+
+
+    prolongs the transfer of files such as a disk image, training materials, or online
+    resources. The venue is not equipped to accommodate the amount of students or
+    their traffic habits on the wireless network.
+
+
+    Distribution problems can also occur with training materials. Mistakes happen
+    in training material leaving them incomplete and it can go unnoticed until it''s
+    called upon while training. If there is a mistake take the best scenario in my
+    mind is where the students can obtain the newly updated material quickly. Packaging
+    the materials in a virtual machine doesn''t work. Having them in a network accessible
+    repository or website works if the network is reliable.
+
+
+    Account management is the final concern I want to present. It''s a concern when
+    accessing resources that require account credentials to authenticate users. Administrators
+    must create and distribute these credentials to the students and ideally in an
+    automated fashion as it''s otherwise time consuming and tedious work. This is
+    less of issue in virtual machine training but arises in environments that provide
+    what I call shared hosting training. A shared host is a system that a user interacts
+    with remotely using his own account for training. The most common example is is
+    accessing a unix-like system using SSH. The account usernames and passwords must
+    be distributed to each user. I have seen this in the wild by passing pieces of
+    paper around the room with each students credentials.
+
+
+    # Common Types of IT Training
+
+
+    +   1. Shared system training (multiple accounts)
+
+    2. Virtual Machine training (VM per student)
+
+    3. Container training (container per student)
+
+    4. Web based training
+
+
+    Before we discuss solutions I want to bring up the different types of training
+    environments I''ve seen. Number one is the aforementioned shared system training
+    where a single server used to provide access to'
+  - '[PAGE 25]
+
+
+    multiple users. If you were to train 100 users there would be an equivalent number
+    of accounts in the system. A remote access tool such as SSH would connect the
+    user to the system and to the training environment. An inconvenience with this
+    type of training is the creation and distribution of the accounts to the users
+    as well as lacking sufficient isolation of the users environment.
+
+
+    The second type of training is virtual machine training. This is the most prevalent
+    that I have seen. I have been to a number of conferences where they rely on giving
+    a virtual machine disk image to all the participants at the conference. The main
+    problems with this type are distribution, software dependencies, software compatibility,
+    and hardware-resources. Because hypervisors are demanding pieces of software the
+    use of mobile devices such as tablets and phones are effectively prohibited. One
+    benefit is that the user is permitted to keep the virtual machine. This allows
+    them to work in the environment at any time in the future. In some cases such
+    as doing kernel work, managing network configuration, and implementation of network
+    services, virtual machines are the best solution.
+
+
+    Also, there is the case of training using operating system virtualization technology
+    such as the Linux-based containers we discussed. This is the medium for training
+    that I have explored and found to be very useful. For this type we assign one
+    container per student on a single host. The user logs into the host and is placed
+    in their very own container from which they can interact with an isolated but
+    full-line environment.
+
+
+    Finally we have web based training. Web-based training is a way of providing some
+    sort of interactive software such as shell or interpreter embedded in a web page.
+    The Go programming language has an online tutorial on their website that allows
+    you to try the language. Similarly, the Bro project has try.org where one can
+    write and have it returned directly in your web browser. But the web based training
+    method is often limited to complete short ad-hoc tasks and providing only a subset
+    of features of the software to learn. Trainers who need students immersed in an
+    environment where various pieces of software are intended to be utilized and made
+    to work together should look at one of the other training types.'
+- md: '
+
+    # Goals
+
+
+    > Admin: make something that is really easy to install, deploy, and configure
+
+
+    > User: design an intuitive interface and smooth training experience with minimal
+    requirements.
+
+
+    Common training problems have been addressed as well as an over-view of training
+    types. I will now offer a solution that tackles a few of aforementioned problems.
+    Something that is easy to install, deploy, and configure for the administrator
+    and easy to use for the student is needed. Because developing training material
+    and setting up events is an enormous amount of work, taking days, weeks, and more,
+    it would be ideal to quickly and effectively deploy training environments and
+    leave most of one''s work focused on preparation and content. From the perspective
+    of the student, another goal is to design an intuitive interface that provides
+    a smooth training experience for the user with minimal requirements.
+
+
+    | ISLET: A Linux-based Software Training System |
+
+    | :--- |
+
+    | (I)isolated, (S)calable, & (L)ightweight (E)vironment for (T)raining |
+
+    | Web: https://github.com/jonshipping/islet |
+
+    | Press any key to continue or CTRL+C to exit... |
+
+
+    # Isolated, Scalable, and Lightweight Environment for Training
+
+
+    A container system for teaching Linux based software with minimal participation
+    effort. The participation barrier is set very low, students only need an SSH client.
+
+
+    ISLET (Isolated Scalable and Lightweight Environment for Training) is a tool that
+    I wrote that utilizes Docker to quickly provide various training environments
+    that can be used for training events. It streamlines the process and is FOSS (Free
+    and Open Source Software) available on Github.
+
+
+    ## Using Containers in Training
+
+
+    ### How does ISLET address the criticisms? To begin, the participation is very
+    low, all one needs a remote access tool such as an SSH client. OpenSSH is a cross
+    platform tool that is available on servers, smart phones, tablets, and supported
+    by many operating systems. The student is therefore not banished to a workstation
+    where a hypervisor depends upon as a result the choice of hardware is much greater.
+    Next, recall that shared system training had an issue managing user accounts.
+    Having to distribute usernames and passwords for students can be a pain for the
+    trainers. ISLET allows users to create and manage their own accounts. Only one
+    account is shared and that is to allow the users to remotely access the server
+    ISLET. This is often something that can be displayed to all students like an SSID
+    and wireless password. Every student will use it to connect to the system and
+    be placed in the ISLET software where they will create their ISLET account, and
+    be able to immediately gain access to a training environment. From the user''s
+    point of view it takes a handful of seconds or two to end in a training environment
+    ready to perform work. From the perspective of the trainer only a single account
+    on the host needs to be created. In sum, most of the work regarding account management
+    is eliminated. Continuing, updating training materials can easily be done by mounting
+    a directory containing the materials from the host into the containers. Updating
+    or correcting material in the host makes them immediately available to the users.
+
+
+    Moving along, we''ll address the issue of waiting for virtual machines to boot
+    and having to configure them. ISLET tells Docker to create containers that consist
+    of the software the students will be instructed on. This can be anything from
+    the GCC (GNU C Compiler) to an IDS (Intrusion Detection System). It happens to
+    be that just about whatever you can install and run on a GNU/Linux system you
+    can package into a Docker image. From the ISLET menu one can make a selection
+    regarding the training environment they want to enter. The trainer can provide
+    multiple options if they wish. There may be different environments with different
+    software for different topics instead of using large image containing all the
+    tools. Once a training environment is selected a user can perform work it in less
+    than a second, it''s instantaneous. Being placed in a training environment can
+    happen in less than 30 seconds from the initial connection to the ISLET system.
+    It''s harder to feel impatient with that kind of time, the student has more time
+    to get focused and not worry about whether his virtual machine is going boot up.
+    In addition, ISLET is configuration-less for students; the configuration is provided
+    by the trainer. This reduces the possibility of some students falling behind others
+    due to technical difficulties, rather everyone is using the same configuration
+    on the server. Less stress and frustration is experienced as a result which improves
+    the overall training experience for the student.
+
+
+    The next issue to address is common of Web based training. The software environment
+    provided is often limited or ad-hoc for specific tasks. Instead of providing a
+    simplified interpreter for ISLET is intended to give users the power and flexibility
+    of a full file system with the standard unix toolset the student works from a
+    command interpreter like Bash. Students can not only write code but explore the
+    directory structure, system documentation, and take advantage of the powerful
+    tools available on a system that can be used in conjunction with and to enhance
+    the software to learn. ISLET excels at command-line base training.
+
+
+    Finally, a source for a feedback loop is available in the Docker Engine which
+    ISLET uses. A log of standard output and error which includes the commands students
+    executed are available for review. Trainers can spot mistakes made by student
+    and can build on that to improve their training by incorporating information back
+    into the curriculum. For example, if a number of students make the same mistake
+    in their code or executing a command it might be avoided next time by a better
+    explanation or improved instruction. The instructor may not have explained something
+    as well as they could that’s why users were making mistakes.
+
+
+    # Real World Use Cases:
+
+
+    - Launched the precursor at BroCon 14. Used to teach Bro scripting, ~50 users
+    had shell access to Bro and unix tools in a container simultaneously on a lower
+    end (m3.xlarge) EC2 VM - no problem.
+
+    - University of Illinois Digital Forensics 2 course
+
+    - FlowCon Bro training ~100 users
+
+    - Used to teach Linux tools at UIUC LUG meetings
+
+
+    The precursor to ISLET named BroLive! also known as Bro sandbox was launched at
+    BroCon14. It was a beta release intended to demonstrate a better way to train
+    at conferences. It was developed out of a need to address some of the issues we
+    mentioned earlier that occurred at early Bro. BroLive was used to teach the Bro
+    scripting language and to analyze Logs with standard toolset e.g. grep, awk, etc..
+    We had roughly 50 users simultaneously working with Bro in a container that was
+    launched by the tool. The container had installed along with various command line
+    tools that were used to analyze the output of Bro. The machine was hosted on a
+    lower end EC2 virtual machine on Amazon’s AWS infrastructure. It went pretty well
+    for its first run, and addressed the problems it was meant to solve. Colleagues
+    began to see value in the tool and became more cognizant of the state of IT software
+    training. I set out to make it more software neutral and wrote much of it in my
+    free time as was used to train others. It was later named ISLET which was coined
+    by Adam Slagel of the National Center for Supercomputing Applications.
+
+
+    It has since used in various settings, notably at the University of Illinois at
+    Urbana-Champaign, the Digital Forensics 2 course ISLET to train students using
+    computer forensics tools such as Volatility, Sleuthkit, and Autopsy. ISLET has
+    been used to teach Bro training at events like Flowcon and Derbycon. Many hundred
+    users at once. I used it to teach various pieces of software at the GNU/Linux
+    User Group and OpenNSM at UIUC.
+
+
+    # Feedback loop
+
+
+    Container logs show user''s actions e.g. mistakes which can be used to improve
+    future training
+
+
+    I conducted research and work on a paper that evaluated ISLET against a number
+    of metrics to see how it would perform in the real world. Jeanette Dopheide, Adam
+    Slagel, and myself all of Cybersecurity Directorate at the National Center for
+    Supercomputing Application worked on the paper which was eventually published
+    at the XSIDE (Extreme Science and Engineering Discovery Environment) conference
+    in 2015. We used the Bro network security monitor as the tool for training. We
+    ran Bro against a network trace file that’s commonly used at Bro training events
+    which produced many different
+
+    '
+  mdcn: '
+
+
+    # 目标
+
+
+    > 管理员：创建一个非常易于安装、部署和配置的工具
+
+
+    > 用户：设计一个直观的界面和流畅的培训体验，且对硬件有最低要求。
+
+
+    目前常见的培训问题已经得到解决，并对培训类型进行了概述。现在，我将提供一种可以解决上述某些问题的解决方案。我们需要一种对于管理员来说易于安装、部署和配置，而对于学生来说易于使用的工具。由于开发培训材料和设置活动是一项巨大的工作，需要耗费几天、几周甚至更久，因此理想的情况是快速高效地部署培训环境，将大部分工作集中在准备和内容制作上。从学生的角度来看，另一个目标是设计一个直观的界面，以最低的要求为用户提供流畅的培训体验。
+
+
+    | ISLET：一个基于 Linux 的软件培训系统 |
+
+    | :--- |
+
+    | 用于 (T)培训的 (I)隔离、(S)可扩展的且 (L)轻量级 (E)环境 |
+
+    | Web 端: https://github.com/jonshipping/islet |
+
+    | 按任意键继续或按 CTRL+C 退出... |
+
+
+    # 用于培训的隔离、可扩展且轻量级环境
+
+
+    这是一个用于基于 Linux 软件教学的容器系统，参与成本极低。参与门槛设置得非常低，学生只需要一个 SSH 客户端。
+
+
+    ISLET (Isolated Scalable and Lightweight Environment for Training，用于培训的隔离、可扩展且轻量级环境，*注：此处英文缩写对应关系已调整**)
+    是我写的一个工具，它利用 Docker 快速提供各种可用于培训活动的培训环境。它简化了流程，并且是 Github 上可获取的 FOSS（自由开源软件）。
+
+
+    ## 在培训中使用容器
+
+
+    ### ISLET 如何解决这些批评？首先，参与度非常低，用户只需要一个如 SSH 客户端这样的远程访问工具。OpenSSH 是一个跨平台工具，可在服务器、智能手机、平板电脑上运行并受到许多操作系统的支持。因此，学生不再被局限于某个依赖虚拟化程序的工作站，结果硬件的选择范围大得多。其次，回想共享系统培训在用户账户管理方面的问题。为学生分发用户名和密码对培训人员来说可能是一件苦事。ISLET
+    允许用户创建并管理自己的账户。只共享一个账户，用于允许用户远程访问 ISLET 服务器。这通常可以像 SSID 和无线密码一样显示给所有学生。每个学生都将使用它连接到系统并进入
+    ISLET 软件，在其中创建自己的 ISLET 账户，并立即获得培训环境的访问。从用户的角度来看，只需要几秒钟进入可以开始工作的培训环境。从培训人员的角度来看，只需要在主机上创建一个账户。总之，消除了大部分关于账户管理的工作。此外，通过将包含材料的主机目录挂载到容器中，可以轻松地更新培训材料。在主机上更新或修正材料，用户可以立即使用。
+
+
+    接下来，我们将解决等待虚拟机启动和必须配置它们的问题。ISLET 通知 Docker 创建包含学生将学习软件的容器。这可以是从 GCC（GNU C 编译器）到
+    IDS（入侵检测系统）的任何内容。事实上，几乎任何可以在 GNU/Linux 系统上安装和运行的内容，都可以封装到 Docker 镜像中。从 ISLET 菜单中，用户就可以想要进入的培训环境进行选择。培训人员如果愿意，可以提供多个选项。针对不同的主题可以使用带有不同软件的环境，而不是使用包含所有工具的大型镜像。一旦选择了培训环境，用户可以在不到一秒的时间内开始工作，它是瞬时完成的。从初始连接到
+    ISLET 系统到进入培训环境可以在 30 秒内完成。面对这种时间，很难感到焦急，学生有更多的时间专注于学习，而不必担心他的虚拟机是否会启动。此外，ISLET
+    对学生来说是不需要配置的；配置由培训人员提供。这减少了某些学生因技术困难而落后于他人的可能性，每个人都在服务器上使用相同的配置。结果减少了压力和挫败感，提高了学生的整体培训体验。
+
+
+    下一个要解决的问题是基于 Web 培训的常见问题。提供的软件环境通常是有限的或针对特定任务的临时。ISLET 并不是提供一个简化的解释器，而是赋予用户具有标准
+    Unix 工具集的完整文件系统的权限和灵活性，学生在 Bash 等命令解释器中工作。学生不仅可以编写代码，还可以探索目录结构、系统文档，并利用系统上提供的强大工具来配合和增强所学习的软件。ISLET
+    擅长基于命令行培训。
+
+
+    最后，ISLET 使用的 Docker 引擎提供了反馈循环的来源。标准输出和错误的日志（其中包含了学生执行的命令）可供审查。培训人员可以发现学生犯的错误，并在此基础上通过将信息整合回课程来改进培训。例如，如果许多学生在代码或执行命令时犯了同样的错误，可能可以通过更好的解释或改进的指令在下次避免。老师可能没有像他们所能那样解释清楚，这就是为什么用户会犯错。
+
+
+    # 真实世界用例：
+
+
+    - 在 BroCon 14 发布了前身版本。用于教授 Bro 脚本，约 50 名用户同时在低端 (m3.xlarge) EC2 虚拟机上拥有 Bro 和 Unix
+    工具的 shell 访问 - 毫无问题。
+
+    - 伊利诺伊大学数字取证 2 课程。
+
+    - FlowCon，数百用户。
+
+    - 在 UIUC 的会议上教授 Linux 工具。
+
+
+    名为 BroLive 的 ISLET 前身（也称为 Bro sandbox）已发布。这是一个旨在展示更好的培训方式的测试版本。它是为了解决我们提到的早期 Bro
+    活动的问题而开发的。BroLive 用于教学 Bro 脚本并使用标准工具集（如 grep, awk 等）进行分析。我们有大约 50 名用户同时在容器中使用
+    Bro。容器内安装了用于分析 Bro 输出的各种工具。机器托管在 Amazon 基础设施上的低端 EC2 虚拟机上。它的首次运行效果相当不错，并解决了它旨在解决的问题。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 26]
+
+
+    # Goals
+
+
+    > Admin: make something that is really easy to install, deploy, and configure
+
+
+    > User: design an intuitive interface and smooth training experience with minimal
+    requirements.
+
+
+    Common training problems have been addressed as well as an over-view of training
+    types. I will now offer a solution that tackles a few of aforementioned problems.
+    Something that is easy to install, deploy, and configure for the administrator
+    and easy to use for the student is needed. Because developing training material
+    and setting up events is an enormous amount of work, taking days, weeks, and more,
+    it would be ideal to quickly and effectively deploy training environments and
+    leave most of one''s work focused on preparation and content. From the perspective
+    of the student, another goal is to design an intuitive interface that provides
+    a smooth training experience for the user with minimal requirements.
+
+
+    | ISLET: A Linux-based Software Training System |
+
+    | (I)isolated,(S)calable, & (L)ightweight (E)vironment for (T)raining |
+
+    | Web: https://github.com/jonshipping/islet |
+
+    | Press any key to continue or CTRL+C to exit... |
+
+
+    # Isolated, Scalable, and Lightweight Environment for Training
+
+
+    A container system for teaching Linux based software with minimal participation
+    effort. The participation barrier is set very low, students only need an SSH client.
+
+
+    ISLET (Isolated Scalable and Lightweight Environment for Training) is a tool that
+    I wrote that utilizes Docker to quickly provide various training environments
+    that can be used for training events. It streamlines the process and is FOSS (Free
+    and Open Source Software) available on Github.'
+  - '[PAGE 27]
+
+
+    Using Containers in Training
+
+
+    # How does ISLET address the criticisms? To begin, the participation is very low,
+    all one needs a remote access tool such as an SSH client. OpenSSH is a cross platform
+    tool that is available on servers, smart phones, tablets, and supported by many
+    operating systems. The student is therefore not banished to a workstation where
+    a hypervisor depends upon as a result the choice of hardware is much greater.
+    Next, recall that shared system training had an issue managing user accounts.
+    Having to distribute usernames and passwords for students can be a pain for the
+    trainers. ISLET allows users to create and manage their own accounts. Only one
+    account is shared and that is to allow the users to remotely access the server
+    ISLET. This is often something that can be displayed to all students like an SSID
+    and wireless password. Every student will use it to connect to the system and
+    be placed in the ISLET software where they will create their ISLET account, and
+    be able to immediately gain access to a training environment. From the user''s
+    point of view it takes a handful of seconds or two to end in a training environment
+    ready to perform work. From the perspective of the trainer only a single account
+    on the host needs to be created. In sum, most of the work regarding account management
+    is eliminated. Continuing, updating training materials can easily be done by mounting
+    a directory containing the materials from the host into the containers. Updating
+    or correcting material in the host makes them immediately available to the users.
+
+
+    Moving along, we''ll address the issue of waiting for virtual machines to boot
+    and having to configure them. ISLET tells Docker to create containers that consist
+    of the software the students will be instructed on. This can be anything from
+    the GCC (GNU C Compiler) to an IDS (Intrusion Detection System). It happens to
+    be that just about whatever you can install and run on a GNU/Linux system you
+    can package into a Docker image. From the ISLET menu one can make a selection
+    regarding the training environment they want to enter. The trainer can provide
+    multiple options if they wish. There may be different environments with different
+    software for different topics instead of using large image containing all the
+    tools. Once a training environment is selected a user can perform work it in less
+    than a second, it''s instantaneous. Being placed in a training environment can
+    happen in less than 30 seconds from the initial connection to the ISLET system.
+    It''s harder to feel impatient with that kind of time, the student has more time
+    to get focused and not worry about whether'
+  - "[PAGE 28]\n\nhis virtual machine is going boot up. In addition, ISLET is configuration-less\
+    \ for students; the configuration is provided by the trainer. This reduces the\
+    \ possibility of some students falling behind others due to technical difficulties,\
+    \ rather everyone is using the same configuration on the server. Less stress and\
+    \ frustration is experienced as a result which improves the overall training experience\
+    \ for the student.\n\nThe next issue to address is common of Web based training.\
+    \ The software environment provided is often limited or ad-hoc for specific tasks.\
+    \ Instead of providing a simplified interpreter for ISLET is intended to give\
+    \ users the power and flexibility of a full file system with the standard unix\
+    \ toolset the student works from a command interpreter like Bash. Students can\
+    \ not only write code but explore the directory structure, system documentation,\
+    \ and take advantage of the powerful tools available on a system that can be used\
+    \ in conjunction with and to enhance the software to learn. ISLET excels at command-line\
+    \ base training.\n\nFinally, a source for a feedback loop is available in the\
+    \ Docker Engine which ISLET uses. A log of standard output and error which includes\
+    \ the commands students executed are available for review. Trainers can spot mistakes\
+    \ made by student and can build on that to improve their training by incorporating\
+    \ information back into the curriculum. For example, if a number of students make\
+    \ the same mistake in their code or executing a command it might be avoided next\
+    \ time by a better explanation or improved instruction. The instructor may not\
+    \ have explained something as well as they could that’s why users were making\
+    \ mistakes.\n\n# Real World Use Cases:\n\n+   - Launched the precursor at BroCon\
+    \ 14. Used to teach Bro scripting, ~50 users had shell access to Bro and unix\
+    \ tools in a container simultaneously on a lower end (m3.xlarge) EC2 VM - no problem.\
+    \ \n\n+   - University of Illinois Digital Forensics 2 course\n\n+   - FlowCon\
+    \ Bro training ~100 users\n\n+   - Used to teach Linux tools at UIUC LUG meetings"
+  - '[PAGE 29]
+
+
+    Using Containers in Training 19
+
+
+    The precursor to ISLET named BroLive! also known as Bro sandbox was launched at
+    BroCon14. It was a beta release intended to demonstrate a better way to train
+    at conferences. It was developed out of a need to address some of the issues we
+    mentioned earlier that occurred at early Bro. BroLive was used to teach the Bro
+    scripting language and to analyze Logs with standard toolset e.g. grep, awk, etc..
+    We had roughly 50 users simultaneously working with Bro in a container that was
+    launched by the tool. The container had installed along with various command line
+    tools that were used to analyze the output of Bro. The machine was hosted on a
+    lower end EC2 virtual machine on Amazon’s AWS infrastructure. It went pretty well
+    for its first run, and addressed the problems it was meant to solve. Colleagues
+    began to see value in the tool and became more cognizant of the state of IT software
+    training. I set out to make it more software neutral and wrote much of it in my
+    free time as was used to train others. It was later named ISLET which was coined
+    by Adam Slagel of the National Center for Supercomputing Applications.
+
+
+    It has since used in various settings, notably at the University of Illinois at
+    Urbana-Champaign, the Digital Forensics 2 course ISLET to train students using
+    computer forensics tools such as Volatility, Sleuthkit, and Autopsy. ISLET has
+    been used to teach Bro training at events like Flowcon and Derbycon. Many hundred
+    users at once. I used it to teach various pieces of software at the GNU/Linux
+    User Group and OpenNSM at UIUC.
+
+
+    # Feedback loop
+
+
+    Container logs show user''s actions e.g. mistakes which can be used to improve
+    future training
+
+
+    I conducted research and work on a paper that evaluated ISLET against a number
+    of metrics to see how it would perform in the real world. Jeanette Dopheide, Adam
+    Slagel, and myself all of Cybersecurity Directorate at the National Center for
+    Supercomputing Application worked on the paper which was eventually published
+    at the XSIDE (Extreme Science and Engineering Discovery Environment) conference
+    in 2015. We used the Bro network security monitor as the tool for training. We
+    ran Bro against a network trace file that’s commonly used at Bro training events
+    which produced many different'
+- md: "\nprotocol logs. Note that the Bro process performs a lot of work, it's both\
+    \ CPU intensive and requires a lot of memory to keep state of protocols such as\
+    \ TCP. It attaches various analyzers to the connections to decode the network\
+    \ traffic up to the application layer and produces readable logs of the results.\n\
+    \n## Container Startup\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_30_0.png)\n\
+    \nWe performed a number of experiments in our evaluation of Docker Engine and\
+    \ the ISLET training software. First, we were curious about container startup\
+    \ time. For example on the CoreOS website it stated that containers start up in\
+    \ milliseconds and we did not see that claim substantiated so we tested it ourselves.\
+    \ We did a number of independent trials, 100 containers each running the uptime\
+    \ command and exiting. What we found was that it took ~400 milliseconds to create\
+    \ the container, execute the uptime program, and then exit the container. That's\
+    \ how fast the start-up time was for the containers in our system. Container creation\
+    \ time is very fast and most of the time is actually spent running the application.\n\
+    \n## Container Concurrency\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_31_0.png)\n\
+    \nWe also test the container concurrency. We talk about density earlier I.e. how\
+    \ many containers can be running on a host. We were easily able to execute 1000\
+    \ containers each running the program top at the same time on a 16 core host without\
+    \ saturating the system. These containers are all running concurrently. Imagine\
+    \ the overhead of a thousand virtual machine each running top. It would be much\
+    \ harder to scale that on a single host of the same size. Glancing at the load\
+    \ averages on the graph System Load vs. Number of Running Containers you can see\
+    \ that this scales very well until until we run more than 700 containers at once\
+    \ which causes a large spike in load averages. This can be investigated further\
+    \ to find the cause.\n\n## Simulate Training\n\n- Metric: Response/execution time\
+    \ of program to train\n  - Standard time: Average of 2.13 seconds\n  - Cutoff\
+    \ point: 6 seconds (too long to wait)\n\n- We used the Bro network security monitor\
+    \ as the test. Processed a network trace file used for training for Bro events.\
+    \ Bro is a process that does a lot of work.\n\n- Introduced small randomization\
+    \ delays for pauses & common commands for environment - looped 20 times. Ends\
+    \ up simulating ~10 minutes of high user activity\n\nOur next experiment was to\
+    \ perform a simulated training test with the goal of finding how many users can\
+    \ train simultaneously using Bro. Our metric is the execution time it takes for\
+    \ Bro to process through the network trace file. The execution time of the software\
+    \ to be trained measures how well our system is performing during training. If\
+    \ the execution time increases to a point where it affects the users ability to\
+    \ train as growing impatience we need to allocate more resources to the computer.\
+    \ We ran Bro 100 times through the network trace file, 3 times the average amount,\
+    \ was our cutoff point i.e. the point from which we need to add more resources\
+    \ or not allow more users. To find the cutoff point on our system we simulated\
+    \ common commands used in a Bro training session. Tasks like generating and analyzing\
+    \ Bro logs were performed. 10 minutes of simulated but active user activity was\
+    \ created. We simulated an overly active user, one who is not representative of\
+    \ the typical class: for example a training event user performs instructions that\
+    \ the trainer provides. There is a delay between listening to instructions and\
+    \ then carrying them out. This means there will be pauses between tasks as listening\
+    \ to an explanation. We simulate a few seconds of pauses between commands but\
+    \ not that would be representative of a class with a lecture because that’s difficult\
+    \ to measure length of pauses during speech, and we did not have any available\
+    \ data for past conferences.\n\n## Simulation Data\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_33_0.png)\n\
+    \nWe plotted the result in the provided graph. The dotted line on x axis is the\
+    \ processing user's time. The solid line represents the execution time per simulated\
+    \ user's actively working on the system. As more users are training the execution\
+    \ time increases because the system has to run multiple simulations concurrently.\
+    \ If the execution time intersects and rises above the cutoff point value for\
+    \ that the system needs more resources because it took 6 seconds or more run Bro.\
+    \ The execution time ascends completely (including valleys) above the cutoff point\
+    \ when we are at 150 users. This tells us that we can train a few less than 150\
+    \ users on our host comprised of 16 CPU cores and 32GB of RAM without a negligible\
+    \ impact.\n\n## Cost Comparison\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_34_0.png)\n\
+    \nWe did a cost comparison where there's one user per VM allocation on Amazon\
+    \ AWS vs. one host with one container per user. You can see a linear growth with\
+    \ the cost of virtual machines where the cost per hour rises as there are more\
+    \ users. Whereas, in the case of ISLET there's one user per container it grows\
+    \ in steps. Remember that there is one user per training environment and a training\
+    \ environment is either a container or virtual machine. For ISLET you can see\
+    \ that we have step-like growth where you can actually have multiple training\
+    \ environments grow at less cost than it would be if you were using one virtual\
+    \ machine.\n\n## Platform\n\n- Designed for Linux\n- Designed for Linux\n- Designed\
+    \ for Linux\n- Designed for Linux\n\nNow we are going to talk about deploying\
+    \ and configuring ISLET.\n\n## Using Containers in Training\n\nThe requirements\
+    \ for using containers are as follows. It- Designed for Linux\n- Designed for\
+    \ Linux\n- Designed for Linux\n- Designed for Linux\n\nThe requirements for using\
+    \ containers are as follows. It- Designed for Linux\n- Designed for Linux\n- Designed\
+    \ for Linux\n- Designed for Linux\n\nThe requirements for using containers are\
+    \ as follows. It- Designed for Linux\n- Designed for Linux\n- Designed for Linux\n\
+    - Designed for Linux\n\nThe requirements for using containers are as follows.\
+    \ It- Designed for Linux\n- Designed for Linux\n- Designed for Linux\n- Designed\
+    \ for Linux\n\nThe requirements for using containers are as follows. It- Designed\
+    \ for Linux\n- Designed for Linux\n- Designed for Linux\n- Designed for Linux\n\
+    \nThe requirements for using containers are as follows. It- Designed for Linux\n\
+    - Designed for Linux\n- Designed for Linux\n- Designed for Linux\n\nThe requirements\
+    \ for using containers are as follows. It- Designed for Linux\n- Designed for\
+    \ Linux\n- Designed for Linux\n- Designed for Linux\n\nThe requirements for using\
+    \ containers are as follows. It- Designed for Linux\n- Designed for Linux\n- Designed\
+    \ for Linux\n- Designed for Linux\n\nThe requirements for using containers are\
+    \ as follows. It- Designed for Linux\n- Designed for Linux\n- Designed for Linux\n\
+    - Designed for Linux\n\nThe requirements for using containers are as follows.\
+    \ It- Designed for Linux\n- Designed for Linux\n- Designed for Linux\n- Designed\
+    \ for Linux\n\nThe requirements for using containers are as follows. It- Designed\
+    \ for Linux\n- Designed for Linux\n- Designed for Linux\n- Designed for Linux\n\
+    \nThe requirements for using containers are as follows. It- Designed for Linux\n\
+    \n## Architecture\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_35_0.png)\n\nThe\
+    \ architecture of ISLET is outlined below. You have the host system which is the\
+    \ machine it's running on, the next largest box shows ISLET's components. It has\
+    \ an account manager, cleanup, container configuration, and user interface. It\
+    \ includes a number of scripts to clean up and maintain the accounts. For example,\
+    \ there are training events that span 3 days and all containers and user information\
+    \ can automatically cleaned up. The middle and lower box is where ISLET utilizes\
+    \ Docker to launch containers from images. These Docker images contain the pre-packaged\
+    \ tools used for training.\n\n## Configuration & Workflow\n\n- Global: configuration\
+    \ file i.e. /etc/islet/islet.conf\n- Per-image: configuration files per image\
+    \ /etc/islet/*.conf\n- Creating a new training environment (3 steps)\n  1. Build\
+    \ Docker image with the software for training\n  2. Create configuration file\
+    \ and point to new image\n  3. Place in /etc/islet/ e.g. new_image.conf\n\nCreating\
+    \ and deploying new training environments is a simple 3 step process. The first\
+    \ step is to build the Docker image with the software for training. The second\
+    \ step is to create an ISLET configuration file that points to this Docker image\
+    \ and the final step is to drop the file in the /etc/islet directory. Once this\
+    \ is complete the next time a user connects to the ISLET software they can immediately\
+    \ utilize that new image. It's very fast and basic 3 step process.\n\n## Roadmap:\n\
+    \n- Support other container runtimes (lxc, openvz, jails, etc.)\n- Auditing, pen\
+    \ testing\n- Improve build system\n- Rewrite in Go Lang or Python using container\
+    \ API\n- Export containers and exercises\n  1) Users can save their work or continue\
+    \ at home like they can with VM training\n- Scalability testing beyond 1000+ containers,\
+    \ distributed setup\n"
+  mdcn: "\n协议日志。注意，Bro 进程执行了大量工作，它既是 CPU 密集型的，大量的内存来维护 TCP 等协议的状态。它在连接上挂载各种分析器，将网络流量解码到应用层，并产生结果的可读性日志。\n\
+    \n## 容器启动\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_30_0.png)\n\n我们在对 Docker\
+    \ Engine 和 ISLET 训练软件进行评估时，进行了多项实验。首先，我们对容器的启动时间感到好奇。例如，CoreOS 网站上提到容器在毫秒内启动，但我们没有看到这一说法得到证实，因此我们自己进行了测试。我们进行了多次独立实验，每次实验运行\
+    \ 100 个容器，每个容器运行 `uptime` 命令并退出。我们发现，创建容器、执行 `uptime` 程序然后退出容器需要约 400 毫秒。这就是我们系统中容器启动速度的快慢。容器的创建时间非常快，大部分时间实际上都花在了运行应用程序上。\n\
+    \n## 容器并发\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_31_0.png)\n\n我们还测试了容器的并发性。我们之前提到密度，即主机上可以运行多少个容器。我们很容易在\
+    \ 16 核主机上同时执行 1000 个容器，每个容器运行 `top` 程序，而不会使系统饱和。这些容器都是并发运行的。想象一下一千个每个运行 `top`\
+    \ 的虚拟机的开销。在相同大小的单主机上扩展这种规模要困难得多。看一眼“系统负载与运行中容器数量”图表上的负载平均值，你可以发现它的扩展性非常好，直到我们一次性运行超过\
+    \ 700 个容器，导致负载平均值出现巨大的峰值。这可以进一步调查以找到原因。\n\n## 模拟训练\n\n- 指标：训练程序的响应/执行时间\n  - 标准时间：平均\
+    \ 2.13 秒\n  - 截止点：6 秒（等待时间太长了）\n\n- 我们使用 Bro 网络安全监控器作为测试对象。处理了一个用于训练 Bro 事件的网络跟踪文件。Bro\
+    \ 是一个执行大量工作的进程。\n\n- 为环境中的暂停和常用命令引入了小的随机延迟——循环了 20 次。最终模拟了约 10 分钟的高用户活跃度\n\n我们的下一个实验是进行模拟训练测试，目标是找到有多少用户可以同时使用\
+    \ Bro 进行训练。我们的指标是 Bro 处理网络跟踪文件所需的执行时间。被训练软件的执行时间衡量了我们系统在训练期间的性能。如果执行时间增加到影响用户训练能力（由于不耐烦日益增加）的程度，我们需要为计算机分配更多资源。我们让\
+    \ Bro 通过网络跟踪文件运行了 100 次，是平均值的 3 倍，这是我们的截止点，即我们需要添加更多资源或不允许更多用户加入的点。为了在我们的系统中找到截止点，我们模拟了\
+    \ Bro 训练课程中常用的命令。执行了生成和分析 Bro 日志等任务。创建了 10 分钟模拟但活跃的用户活动。我们模拟了一个过度活跃的用户，这种用户并不能代表典型的学生：例如，一个训练活动用户执行培训师提供的指令。在听取指令和执行指令之间存在延迟。这意味着任务之间会有暂停，例如听取解释。我们在命令之间模拟了几秒钟的暂停，但并不会代表有讲座的课程，因为很难衡量演讲期间暂停的长度，而且我们没有过去会议的可用数据。\n\
+    \n## 模拟数据\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_33_0.png)\n\n我们在提供的图表中绘制了结果。x\
+    \ 轴上的虚线是处理用户的时间。实线代表每个模拟用户在系统上活跃工作的执行时间。随着训练人数的增加，执行时间会增加，因为系统必须并发运行多个模拟。如果执行时间交叉并超过该系统的截止点值，则系统需要更多资源，因为运行\
+    \ Bro 花了 6 秒或更长时间。当我们达到 150 个用户时，执行时间完全（包括波谷）上升到截止点之上。这告诉我们，在我们的由 16 个 CPU 核心和\
+    \ 32GB 内存组成的主机上，我们可以训练少于 150 个用户，而不会产生可以忽略的影响。\n\n## 成本比较\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_34_0.png)\n\
+    \n我们进行了成本比较，即 Amazon AWS 上每个 VM 分配一个用户与一个主机上每个用户一个容器的对比。你可以看到虚拟机的成本呈线性增长，随着用户的增加，每小时的成本也会上升。而在\
+    \ ISLET 的情况下，每个容器一个用户，它是阶梯式增长的。记住，每个训练环境有一个用户，而训练环境要么是容器或虚拟机。对于 ISLET，你可以看到我们阶梯式的增长，实际上你可以拥有多个训练环境，其成本比使用一个虚拟机要低。\n\
+    \n## 平台\n\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\n现在我们来谈论如何部署和配置\
+    \ ISLET。\n\n## 在训练中使用容器\n\n使用容器的要求如下：- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\
+    - 为 Linux 设计\n\n使用容器的要求如下：- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux\
+    \ 设计\n\n使用容器的要求如下：- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\n使用容器的要求如下：-\
+    \ 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\n使用容器的要求如下：- 为 Linux\
+    \ 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\n使用容器的要求如下：- 为 Linux 设计\n- 为\
+    \ Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\n使用容器的要求如下：- 为 Linux 设计\n- 为 Linux 设计\n\
+    - 为 Linux 设计\n- 为 Linux 设计\n\n使用容器的要求如下：- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux\
+    \ 设计\n- 为 Linux 设计\n\n使用容器的要求如下：- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为\
+    \ Linux 设计\n\n使用容器的要求如下：- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\
+    \n使用容器的要求如下：- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\n使用容器的要求如下：-\
+    \ 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\n使用容器的要求如下：- 为 Linux\
+    \ 设计\n- 为 Linux 设计\n- 为 Linux 设计\n- 为 Linux 设计\n\n## 架构\n\n![](img/6a3a5763947e676430e69e4cbb77fa2f_35_0.png)\n\
+    \nISLET 的架构如下所示。你有运行它的主机系统，下一个较大的框显示了 ISLET 的组件。它具有帐户管理器、清理、容器配置和用户界面。它包含了许多清理和维护帐户的脚本。例如，跨越\
+    \ 3 天的训练活动可以自动清理容器和用户信息。中间和下方的框是 ISLET 利用 Docker 从镜像启动容器的地方。这些 Docker 镜像包含了用于训练的软件包工具。\n\
+    \n## 配置与工作流\n\n- 全局：配置文件 `/etc/islet/islet.conf`\n- 每个镜像：每个镜像一个配置文件 `/etc/islet/*.conf`\n\
+    - 创建新的训练环境（3 ）\n  1. 构建训练软件的 Docker 镜像\n  2. 创建配置文件并指向新镜像\n  3. 放入 `/etc/islet/`\
+    \ 例如 `new_image.conf`\n\n创建和部署新的训练环境是一个简单的三步过程。第一步是构建训练软件的 Docker 镜像。第二步是创建一个指向该\
+    \ Docker 镜像的 ISLET 配置文件，最后一步是将文件放入 `/etc/islet/` 目录。一旦完成，用户下次连接到 ISLET 软件时，就可以立即使用该新镜像。这非常快，是基础的三步过程。\n\
+    \n## 路线图：\n\n- 支持其他容器运行时（lxc, openvz, jails 等）\n- 审计、渗透测试\n- 改进构建系统\n- 使用 Go Lang\
+    \ 或 Python 通过容器 API 重写\n- 导出容器和练习\n  1) 用户可以像使用虚拟机训练一样保存他们的工作或在家里继续\n- 扩展性测试，支持\
+    \ 1000+ 容器，分布式部署\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 30]
+
+
+    protocol logs. Note that the Bro process performs a lot of work, it''s both CPU
+    intensive and requires a lot of memory to keep state of protocols such as TCP.
+    It attaches various analyzers to the connections to decode the network traffic
+    up to the application layer and produces readable logs of the results.
+
+
+    # Container Startup
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_30_0.png)
+
+
+    We performed a number of experiments in our evaluation of Docker Engine and the
+    ISLET training software. First, we were curious about container startup time.
+    For example on the CoreOS website it stated that containers start up in milliseconds
+    and we did not see that claim substantiated so we tested it ourselves. We did
+    a number of independent trials, 100 containers each running the uptime command
+    and exiting. What we found was that it took ~400 milliseconds to create the container,
+    execute the uptime program, and then exit the container. That''s how fast the
+    start-up time was for the containers in our system. Container creation time is
+    very fast and most of the time is actually spent running the application.'
+  - '[PAGE 31]
+
+
+    # Container Concurrency
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_31_0.png)
+
+
+    We also test the container concurrency. We talk about density earlier I.e. how
+    many containers can be running on a host. We were easily able to execute 1000
+    containers each running the program top at the same time on a 16 core host without
+    saturating the system. These containers are all running concurrently. Imagine
+    the overhead of a thousand virtual machine each running top. It would be much
+    harder to scale that on a single host of the same size. Glancing at the load averages
+    on the graph System Load vs. Number of Running Containers you can see that this
+    scales very well until until we run more than 700 containers at once which causes
+    a large spike in load averages. This can be investigated further to find the cause.'
+  - "[PAGE 32]\n\n# Simulate Training\n\n+   - Metric: Response/execution time of\
+    \ program to train\n Standard time: Average of 2.13 seconds\n Cutoff point: 6\
+    \ seconds (too long to wait)\n\n+   - We used the Bro network security monitor\
+    \ as the test. Processed a network trace file used for training for Bro events.\
+    \ Bro is a process that does a lot of work.\n\n+   - Introduced small randomization\
+    \ delays for pauses & common commands for environment - looped 20 times. Ends\
+    \ up simulating ~10 minutes of high user activity\n\nOur next experiment was to\
+    \ perform a simulated training test with the goal of finding how many users can\
+    \ train simultaneously using Bro. Our metric is the execution time it takes for\
+    \ Bro to process through the network trace file. The execution time of the software\
+    \ to be trained measures how well our system is performing during training. If\
+    \ the execution time increases to a point where it affects the users ability to\
+    \ train as growing impatience we need to allocate more resources to the computer.\
+    \ We ran Bro 100 times through the network trace file, 3 times the average amount,\
+    \ was our cutoff point i.e. the point from which we need to add more resources\
+    \ or not allow more users. To find the cutoff point on our system we simulated\
+    \ common commands used in a Bro training session. Tasks like generating and analyzing\
+    \ Bro logs were performed. 10 minutes of simulated but active user activity was\
+    \ created. We simulated an overly active user, one who is not representative of\
+    \ the typical class: for example a training event user performs instructions that\
+    \ the trainer provides. There is a delay between listening to instructions and\
+    \ then carrying them out. This means there will be pauses between tasks as listening\
+    \ to an explanation. We simulate a few seconds of pauses between commands but\
+    \ not that would be representative of a class with a lecture because that’s difficult\
+    \ to measure length of pauses during speech, and we did not have any available\
+    \ data for past conferences."
+  - '[PAGE 33]
+
+
+    # Simulation Data
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_33_0.png)
+
+
+    We plotted the result in the provided graph. The dotted line on x axis is the
+    processing user''s time. The solid line represents the execution time per simulated
+    user''s actively working on the system. As more users are training the execution
+    time increases because the system has to run multiple simulations concurrently.
+    If the execution time intersects and rises above the cutoff point value for that
+    the system needs more resources because it took 6 seconds or more run Bro. The
+    execution time ascends completely (including valleys) above the cutoff point when
+    we are at 150 users. This tells us that we can train a few less than 150 users
+    on our host comprised of 16 CPU cores and 32GB of RAM without a negligible impact.'
+  - '[PAGE 34]
+
+
+    # Cost Comparison
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_34_0.png)
+
+
+    We did a cost comparison where there''s one user per VM allocation on Amazon AWS
+    vs. one host with one container per user. You can see a linear growth with the
+    cost of virtual machines where the cost per hour rises as there are more users.
+    Whereas, in the case of ISLET there''s one user per container it grows in steps.
+    Remember that there is one user per training environment and a training environment
+    is either a container or virtual machine. For ISLET you can see that we have step-like
+    growth where you can actually have multiple training environments grow at less
+    cost than it would be if you were using one virtual machine.
+
+
+    # Platform
+
+
+    +   - Designed for Linux (currently), 64-bit only (because of Docker)
+
+    - Debian is preferred but will work on others that support Docker. I do nearly
+    all of my testing on Ubuntu so I recommend using that for the best experience.
+
+    - Update: should work with OSX (boot2docker) and FreeBSD with unofficial docker
+    port
+
+
+    Now we are going to talk about deploying and configuring ISLET. Remember that
+    ISLET was designed to be very simple for the admin'
+  - '[PAGE 35]
+
+
+    # Using Containers in Training
+
+
+    and the user. Let''s look at the requirements. It was designed for the GNU/Linux
+    operating system and that''s because we heavily rely on Docker Engine which at
+    this time runs on Linux. Docker also only runs as a 64 bit binary system is required
+    to use it, I recommend using a Debian family distribution for the training system
+    because it''s mostly what I''ve tested. I specifically used Ubuntu for the most
+    - it''s the easiest to work with. Also, recently there was some work done on FreeBSD
+    with an unofficial docker port that utilizes ZFS for the storage backend and jails
+    for isolation. You can probably get ISLET to work with with little effort. To
+    obtain ISLET you can find it at https://github.com/jonschipp/islet.
+
+
+    # Architecture
+
+
+    ![](img/6a3a5763947e676430e69e4cbb77fa2f_35_0.png)
+
+
+    The architecture of ISLET is outlined below. You have the host system which is
+    the machine it''s running on, the next largest box shows ISLET''s components.
+    It has an account manager, cleanup, container configuration, and user interface.
+    It includes a number of scripts to clean up and maintain the accounts in the containers.
+    For example, there are training events that span 3 days and all containers and
+    user information can automatically be cleaned up after the event ends. The middle
+    and lower box is where ISLET utilizes Docker to launch containers from Docker
+    images. These Docker images contain the pre-packaged tools used for training.'
+  - "[PAGE 36]\n\n# Configuration & Workflow\n\n+   * Global: configuration file i.e.\
+    \ /etc/islet/islet.conf\n* Per-image: configuration files per image /etc/islet/*.conf\n\
+    * Creating a new training environment (3 steps)\n  1. Build Docker image with\
+    \ the software for training\n  2. Create configuration file and point to new image\n\
+    \  3. Place in /etc/islet/ e.g. new_image.conf\n\nCreating and deploying new training\
+    \ environments is a simple 3 step process. The first step is to build the Docker\
+    \ image with the software for training. The second step is to create an ISLET\
+    \ configuration file that points to this new Docker image and the final step is\
+    \ to drop the file in the /etc/islet directory. Once this is complete the next\
+    \ time a user connects to the ISLET software they can immediately utilize that\
+    \ new image. It's very fast and basic 3 step process.\n\n# Roadmap:\n\n+   * Support\
+    \ other container runtimes (lxc, openvz, jails, etc.)\n* Auditing, pen testing\n\
+    * Improve build system\n* Rewrite in Go Lang or Python using container API\n*\
+    \ Export containers and exercises\n  1) Users can save their work or continue\
+    \ at home like they can with VM training\n* Scalability testing beyond 1000+ containers,\
+    \ distributed setup\n\nThe roadmap for ISLET is to support other container runtime\
+    \ such as LXC, Rocket, Jails etc. as well as improve the build system for different\
+    \ operating systems and a complete rewrite to take advantage of the Docker API's.\
+    \ In addition exploring the realm of horizontal scaling to open the possibility\
+    \ of teaching Massive Open Online Courses"
+- md: '
+
+    (MOOC) where you have thousands and thousands of users would be incredible. This
+    can be achieved through a distributed architecture.
+
+
+    ## Easy Contributing
+
+
+    ```
+
+    $ git clone https://github.com/jonschipp/vagrant
+
+    $ cd vagrant/islet && vagrant up
+
+    $ ssh -p 2222 demo@127.0.0.1 -o UserKnownHostsFile=/dev/null
+
+    ```
+
+
+    If you would like to contribute to ISLET it''s fairly simple, all you have to
+    do is either clone the repository and submit a patch or pull request. In addition
+    a Vagrantfile is available to setup a development environment for ISLET.
+
+
+    # CHAPTER 3
+
+
+    ## Experimentation
+
+
+    ## Problem 2. Experimentation
+
+
+    ### Comparison and research
+
+
+    Our next section discusses another use for containers, for development and research.
+    We want to be able to experiment in a particular domain. NSM (Network Security
+    Monitoring) is a field that I''ve been very interested in and is primarily focused
+    on analyzing the results of tools. There are many NSM tools available on GNU/Linux
+    systems. An issue that arises is there no standards for how a tool should produce
+    the results of network traffic for forensic investigation. For example, processing
+    trace file through Httpry or PassiveDNS vs Bro will yield different results for
+    HTTP and DNS protocols. The former tools will parse application information from
+    a single packet but not across multiple packets where pieces of data can reside
+    and then joined at the receiving host. Bro does because it keeps state and understands
+    the protocols. Bro does have more accurate information than tools parsing a single
+    packet. Being able to quickly test and experiment with many tools and different
+    inputs is very useful in finding the right tool for the job as well as finding
+    areas for improvement. OpenNSM (Open Network Security Monitoring Group) has an
+    ongoing project to package up NSM tools at various versions — major and minor
+    releases and make them easily available. Being able to run a network trace file
+    of attack against 3 versions of one tool and 4 of another for comparison and validation
+    of results in an automated fashion is timely. One can have multiple points of
+    reference and achieve second or third opinions over sample. The project can also
+    be used to analyze performance and experiment with the tools. There was not an
+    easy way to organize and do until now. You could have 1000 Debian packages or
+    RPMs on a system for the different tools and versions which would be an organization
+    and dependency nightmare. It seems to be very efficient and better for organization
+    to have all contained and isolated in an environment where they have their own
+    file system and their own libraries etc. This allows us to use and reproduce software
+    without interference.
+
+
+    ## Types of Useful Experimentation
+
+
+    - 1. Comparison of software and its versions
+
+    - 2. Debugging and development
+
+    - 3. Performance analysis
+
+    - 4. Research
+
+
+    One can figure out how these tools work and how to improve them by having all
+    of them ready to go in containers. When you enter the container, you run your
+    tools, analyze the results, and can make changes, repeat, and the results are
+    contained and reproducible. Users no longer need to hunt down, compile, install,
+    and package the tools, we do the hard work ahead of time.
+
+
+    ## Goals
+
+
+    > Software: Provide reproducible images with tagged versions of different software
+
+
+    > Application: Use to experiment, research, and compare various software
+
+
+    Our ambitious goal is to contain every network security monitoring tool, Free
+    and Open Source, that we can get our hands on and at every major release or minor
+    release that we can obtain. To package them up into Docker images that anyone—researcher,
+    analyst, developer can pull them down to play, debug, and develop on. I hope that
+    by making it easier to obtain and use NSM software we can improve the tools over
+    time.
+
+
+    ## ContainNSM
+
+
+    Project to create Docker images of all available Free and Open Source network
+    monitoring tools for evaluation, training, study. Releases of major and minor
+    versions version tagged images.
+
+
+    The project is called ContainNSM and is available online at https://github.com/open-nsm/containnsm.
+    We currently have more than 100 images including Bro, Snort, Suricata, Tshark,
+    Tcpdump, and more. In addition, we have written a command-line tool called /containnsm
+    to manage and utilize the images efficiently.
+
+
+    ## Real World Use Cases:
+
+
+    - Created images of all available versions of Bro.
+
+
+    ```
+
+    for i in $(docker images -f "label=program-bro") do docker run -it $i bro --version;
+    done
+
+    bro version 2.4
+
+    bro version 2.3
+
+    bro version 2.2
+
+    bro version 2.3.2
+
+    bro version 2.3.1
+
+    bro version 2.1
+
+    bro version 1.5
+
+    ```
+
+
+    - 100+ images available for NSM tools such as Snort, Suricata, Tcpdump, Tshark,
+    etc.
+
+
+    From the host we perform common tasks when execution of the tool is completed
+    in a container.
+
+
+    - 1. Read a network trace file on the host by the tool in the container and displays
+    the results on host
+
+    - 2. Listen on a virtual network interface in the container with the tool and
+    display results on host
+
+    - 3. Listen on a physical interface on the host from the container and write the
+    results on the host
+
+
+    For a brief look I created a Docker image for a number of different Bro versions
+    from 1.5 to 2.4. We can iterate through every Bro container at different versions
+    and execute a task such as a policy. The image shows a concise example of running
+    Bro printing the different versions.
+
+
+    ## Roadmap:
+
+
+    - Develop command-line tool to manage and utilize images
+
+    - Pass and configure various inputs and output e.g. PCAP, logs
+
+    - User contributed configurations for applications
+
+
+    The future includes providing user contributed configurations for tools as well
+    as supporting multiple input and output settings. The project is incredibly easy
+    to contribute to and the directory structure is very simple to follow. We think
+    this is going to be a very powerful reference for allowing security analysts and
+    researchers in the field to get more work done and faster. At the point we have
+    explored the use of containers for less commonly used and I hope it gets you thinking
+    about other possibilities and problems that can be solved by taking advantage
+    of the technology.
+
+    '
+  mdcn: '
+
+
+    (MOOC) 如果拥有成千上万的用户那将是不可思议的。这可以通过分布式架构来实现。
+
+
+    ## 轻松贡献
+
+
+    ```
+
+    $ git clone https://github.com/jonschipp/vagrant
+
+    $ cd vagrant/islet && vagrant up
+
+    $ ssh -p 2222 demo@127.0.0.1 -o UserKnownHostsFile=/dev/null
+
+    ```
+
+
+    如果你想为 ISLET 贡献代码，非常简单，你只需要克隆仓库并提交补丁（patch）或拉取请求（pull request）。此外，还有一个 Vagrantfile
+    可为 ISLET 设置开发环境。
+
+
+    # 第 3 章
+
+
+    ## 实验
+
+
+    ## 问题 2. 实验
+
+
+    ### 对比与研究
+
+
+    我们的下一节将讨论容器的另一个用途：用于开发和研究。我们希望能够在特定领域内进行实验。NSM（网络安全监控）是我非常感兴趣的一个领域，它主要关注分析工具产生的结果。GNU/Linux
+    系统上有许多 NSM 工具。出现的一个问题是，对于工具如何生成用于取证调查的网络流量结果，并没有标准。例如，通过 Httpry 或 PassiveDNS 处理追踪文件，与通过
+    Bro 处理相比，在 HTTP 和 DNS 协议方面会产生不同的结果。前者从单个数据包解析应用程序信息，但无法跨多个数据包（数据碎片可能存在于多个包中并在接收主机处合并）。Bro
+    可以，因为它保持状态并理解协议。Bro 比解析单个数据包的工具具有更准确的信息。能够快速测试和实验许多工具以及不同的输入，对于寻找合适的工具以及发现改进领域非常有。OpenNSM（开放网络安全监控小组）有一个正在进行的项目，旨在将各种版本的
+    NSM 工具（主版本和次版本）打包并使它们易于获取。能够以自动化的方式针对某个工具的 3 个版本和另一个工具的 4 个版本运行攻击网络追踪文件进行对比和结果验证是非常及时的。人们可以拥有多个参考点，并对样本获得第二或第三意见。该项目还可以用于分析性能和对工具进行实验。直到现在，还没有简单的方法来组织和执行。你可能在系统中拥有
+    1000 个用于不同工具和版本的 Debian 包或 RPM 包，这将是组织和依赖关系的噩梦。似乎将所有内容包含并隔离在一个环境中，让它们拥有自己的文件系统和库等，会更加高效且有利于组织。这允许我们在不受干扰的情况下使用和重现软件。
+
+
+    ## 有用的实验类型
+
+
+    - 1. 软件及其版本的比较
+
+    - 2. 调试与开发
+
+    - 3. 性能分析
+
+    - 4. 研究
+
+
+    通过将所有工具都准备在容器中，可以弄清楚这些工具是如何工作的以及如何改进它们。当你进入容器时，运行你的工具，分析结果，并进行更改、重复，且结果是包含且可重现的。用户不再需要寻找、编译、安装和打包工具，我们提前完成了这些艰性工作。
+
+
+    ## 目标
+
+
+    > 软件：提供带有不同软件版本标记的可重现镜像
+
+
+    > 应用程序：用于实验、研究和比较各种软件
+
+
+    我们雄心勃勃的目标是包含我们能获得的每一个免费开源的网络安全监控工具，以及我们能获得的每一个主版本或次版本发布。将它们打包成 Docker 镜像，让任何人——研究人员、分析师、开发者都可以下载并进行测试、调试和开发。我希望通过让获取和使用
+    NSM 软件变得更容易，随着时间的推移改进这些工具。
+
+
+    ## ContainNSM
+
+
+    一个为所有可用的免费和开源网络监控工具创建 Docker 镜像的项目，用于评估、培训和学习。发布带有主次版本标记的镜像。
+
+
+    该项目名为 ContainNSM，在线地址为 https://github.com/open-nsm/containnsm。我们目前有超过 100 个镜像，包括
+    Bro、Snort、Suricata、Tshark、Tcpdump 等。此外，我们还编写了一个名为 /containnsm 的命令行工具来高效地管理和利用这些镜像。
+
+
+    ## 现实用例：
+
+
+    - 创建了 Bro 所有可用版本的镜像。
+
+
+    ```
+
+    for i in $(docker images -f "label=program-bro") do docker run -it $i bro --version;
+    done
+
+    bro version 2.4
+
+    bro version 2.3
+
+    bro version 2.2
+
+    bro version 2.3.2
+
+    bro version 2.3.1
+
+    bro version 2.1
+
+    bro version 1.5
+
+    ```
+
+
+    - 提供 100 多个镜像用于 NSM 工具，如 Snort、Suricata、Tcpdump、Tshark 等。
+
+
+    在宿主机上，当工具在容器中执行完成后，我们执行常见任务。
+
+
+    - 1. 由容器中的工具读取宿主机上的网络追踪文件并在宿主机上显示结果
+
+    - 2. 使用工具在容器的虚拟网络接口上监听并在宿主机上显示结果
+
+    - 3. 从容器在宿主机的物理接口上监听并将结果写入宿主机
+
+
+    为了进行简要查看，我为从 1.5 到 2.4 的多个不同 Bro 版本创建了 Docker 镜像。我们可以遍历每个版本的 Bro 容器并执行诸如策略之类的任务。镜像展示了运行
+    Bro 并打印不同版本的简洁示例。
+
+
+    ## 路线图：
+
+
+    - 开发用于管理和利用镜像的命令行工具
+
+    - 传递和配置各种输入和输出，例如 PCAP、日志
+
+    - 用户贡献的应用程序配置
+
+
+    未来包括为工具提供用户贡献的配置，以及支持多个输入和输出设置。该项目非常容易贡献，目录结构简单易懂。我们认为这将是一个非常有力的参考，允许领域内的安全分析师和研究人员更快更高效地完成工作。在我们探讨了容器在不常用用途方面的用法之后，希望这能引发你思考其他可以利用该技术解决的可能性和问题。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 37]
+
+
+    (MOOC) where you have thousands and thousands of users would be incredible. This
+    can be achieved through a distributed architecture.
+
+
+    # Easy Contributing
+
+
+    ```
+
+    $ git clone https://github.com/jonschipp/vagrant
+
+    $ cd vagrant/islet && vagrant up
+
+    $ ssh -p 2222 demo@127.0.0.1 -o UserKnownHostsFile=/dev/null
+
+    ```
+
+
+    If you would like to contribute to ISLET it''s fairly simple, all you have to
+    do is either clone the repository and submit a patch or pull request. In addition
+    a Vagrantfile is available to setup a development environnment for ISLET.'
+  - '[PAGE 38]
+
+
+    This page intentionally left blank'
+  - '[PAGE 39]
+
+
+    # CHAPTER 3
+
+
+    # Experimentation
+
+
+    # Problem 2. Experimentation
+
+
+    # Comparison and research
+
+
+    Our next section discusses another use for containers, for development and research.
+    We want to be able experiment in a particular domain. NSM (Network Security Monitoring)
+    is a field that I''ve been very interested in and is primarily focused on analyzing
+    the results of tools. There are many NSM tools available on GNU/Linux systems.
+    An issue that arises is there no standards for how a tool should produce the results
+    of network traffic for forensic investigation. For example, processing trace file
+    through Httpry or PassiveDNS vs Bro will yield different results for HTTP and
+    DNS protocols. The former tools will parse application information from a single
+    packet but not across multiple packets where pieces of data can reside and then
+    joined at the receiving host. Bro does because it keeps state and understands
+    the protocols. Bro does have more accurate information than tools parsing a single
+    packet. Being able to quickly test and experiment with many tools and different
+    inputs is very useful in finding the right tool for the job as well as finding
+    areas for improvement. OpenNSM (Open Network Security Monitoring Group) has an
+    going project to package up NSM tools at various versions — major and minor releases
+    and make them easily available. Being able to run a network trace file of attack
+    against 3 versions of one tool and 4 of another for comparison and validation
+    of results in an automated fashion is timely. One can have multiple points of
+    reference and achieve second or third opinions over sample. The project can also
+    be used to analyze performance and experiment with the tools. There was not an
+    easy way to organize and do until now. You could have 1000 Debian packages or
+    RPM’s on a system for the different tools and'
+  - '[PAGE 40]
+
+
+    versions which would be an organization and dependency nightmare. It seems to
+    be very efficient and better for organization to have all contained and isolated
+    in an environment where they have their own file system and their own libraries
+    etc. This allows us to use and repro-duce software without interference.
+
+
+    # Types of Useful Experimentation
+
+
+    +    1. Comparison of software and its versions
+
+
+    +    2. Debugging and development
+
+
+    +    3. Performance analysis
+
+
+    +    4. Research
+
+
+    One can figure out how these tools work and how to improve them by having all
+    of them ready to go in containers. When you enter the container, you run your
+    tools, analyze the results, and can make changes, repeat, and the results are
+    contained and reproducible. Users no longer need to hunt down, compile, install,
+    and package the tools, we do the hard work ahead of time.
+
+
+    # Goals
+
+
+    > Software: Provide reproducible images with tagged versions of different software
+
+
+    > Application: Use to experiment, research, and compare various software
+
+
+    Our ambitious goal is to contain every network security monitoring tool, Free
+    and Open Source, that we can get our on and at every major release or minor release
+    that we can obtain. To package them up into Docker images that anyone—researcher,
+    analyst, developer can pull them down to play, debug, and develop on. I hope that
+    by making it easier to obtain and use NSM software we can improve the tools over
+    time.'
+  - '[PAGE 41]
+
+
+    # ContainNSM
+
+
+    Project to create Docker images of all available Free and Open Source network
+    monitoring tools for evaluation, training, study.
+
+    Releases of major and minor versions version tagged images.
+
+
+    The project is called ContainNSM and is available online at https://github.com/open-nsm/containnsm.
+    We currently have more than 100 images including Bro, Snort, Suricata, Tshark,
+    Tcpdump, and more. In addition, we have written a command-line tool called /containnsm
+    to manage and utilize the images efficiently.
+
+
+    # Real World Use Cases:
+
+
+    +   - Created images of all available versions of Bro.
+
+
+    ```
+
+    for i in $(docker images -f "label=program-bro") do docker run -it $i bro --version;
+    done
+
+    bro version 2.4
+
+    bro version 2.3
+
+    bro version 2.2
+
+    bro version 2.3.2
+
+    bro version 2.3.1
+
+    bro version 2.1
+
+    bro version 1.5
+
+    ```
+
+
+    +   - 100+ images available for NSM tools such as Snort, Suricata, Tcpdump, Tshark,
+    etc.
+
+
+    From the host we perform common tasks when execution of the tool is completed
+    in a container.
+
+
+    +   1. Read a network trace file on the host by the tool in the container and
+    displays the results on host
+
+    2. Listen on a virtual network interface in the container with the tool and display
+    results on host'
+  - '[PAGE 42]
+
+
+    +   3. Listen on a physical interface on the host from the container and write
+    the results on the host
+
+
+    For a brief look I created a Docker image for a number of different Bro versions
+    from 1.5 to 2.4. We can iterate through every Bro container at different versions
+    and execute a task such as a policy. The image shows a concise example of running
+    Bro printing the different versions.'
+  - '[PAGE 43]
+
+
+    # Roadmap:
+
+
+    +   - Develop command-line tool to manage and utilize images
+
+    - Pass and configure various inputs and output e.g. PCAP, logs
+
+    - User contributed configurations for applications
+
+
+    The future includes providing user contributed configurations for tools as well
+    as supporting multiple input and output settings. The project is incredibly easy
+    to contribute to and the directory structure is very simple to follow. We think
+    this is going to be a very powerful reference for allowing security analysts and
+    researchers in the defensive field to get more work done and faster. At the point
+    we have explored the use of containers for two less commonly used topics and I
+    hope it gets you thinking about other possibilities and problems that can be solved
+    by taking advantage of the technology.'
+  - '[PAGE 44]
+
+
+    This page intentionally left blank'
+  - '[PAGE 45]
+
+
+    # REFERENCES
+
+
+    ContainNSM Docker Hub. <https://hub.docker.com/u/opennsm>.
+
+
+    ContainNSM Github. <https://www.github.com/open-nsm/ContainNSM>.
+
+
+    Docker Inc. <http://domino.research.ibm.com/cybednis/nsm/0929052195DD819C85257D230681E7B/SFile/nc2542.pdf>
+
+
+    IBM Research Report: An Undated Performance Comparison of Virtual Machines and
+    Linux Containers.
+
+
+    Lightweight Virtualization with Linux Containers (LXC). <http://www.ciecloud.org/2013/subject/07-track06-%20Pettazzoni.pdf>
+
+
+    Linux Containers and the Future Cloud. <http://www.haifux.org/lectures/320/netlec8_final.pdf>
+
+
+    NSF Grant. <http://www.nsf.gov/awardsearch/showAward?AWD_ID=1032889>.
+
+
+    Realizing Linux Containers (LXC): Building Blocks, Underpinnings, and Motivations.
+    <www.slideshare.net/BodenRussell/realizing-linux-containersslx>.
+
+
+    Resource management: Linux kernel Namespaces and cgroups. <http://www.haifux.org/lectures/299/netlec7.pdf>
+
+
+    Schipp, J., Dopheide, J., Slagell, A. ISLET: An Isolated, Scalable & Lightweight
+    Environment for Training. In: The Proceedings of XSEDE 2015, St. Louis, MO, Jul.
+    15.'
+  - '[PAGE 46]
+
+
+    <!-- no content -->'
