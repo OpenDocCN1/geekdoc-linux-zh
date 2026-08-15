@@ -1,0 +1,7218 @@
+- - '#'
+  - Fedora 9 与 Red Hat Enterprise Linux 圣经
+- - '##'
+  - DVD 包含
+- - '##'
+  - 圣经
+- - '##'
+  - 先尝试，然后从 CD 或 DVD 安装 Fedora 9 Linux
+- - '##'
+  - DVD 上的 Fedora 9 软件库！
+- - '##'
+  - Fedora Live CD！
+- - '##'
+  - 从这些应用程序组中选择你想要的软件
+- - '##'
+  - 使用 Fedora 9 Linux 的十件酷事
+- - '#'
+  - 关于作者
+- - '#'
+  - 谢谢
+- - '#'
+  - 前言
+- - '#'
+  - 你是谁？
+- - '#'
+  - 本书“通过任务学习”的方法
+- - '#'
+  - 你需要的
+- - '#'
+  - 前言
+- - '#'
+  - Fedora 9 与红帽企业版圣经
+- - '#'
+  - 前言
+- - '##'
+  - 附录
+- - '##'
+  - 关于配套媒体
+- - '##'
+  - 关于配套网站
+- - '##'
+  - 联系我们
+- - '##'
+  - 致谢
+- - '#'
+  - 第14 章：计算机安全问题................位于...........................577
+- - '#'
+  - 第四部分：Fedora 和 RHEL 网络与服务器设置 .................................633
+- - '#'
+  - 第15 章：设置网络连接和局域网 .................................................635
+- - '##'
+  - xxxii 目录
+- - '##'
+  - 目录 xxxiii
+- - '#'
+  - xxx 内容
+- - '##'
+  - 第19章：设置邮件服务器 ................................................... 797
+- - '#'
+  - 内容
+- - '##'
+  - 第20章：设置 FTP 服务器 ............................................................ 829
+- - '##'
+  - 第21章：设置 Web 服务器 ............................................................ 841
+- - '#'
+  - xxxvi 目录
+- - '#'
+  - 第 22 章：设置 LDAP 通讯录服务器 ................................ 893
+- - '#'
+  - 配置 LDAP 的更多方法 xxxvii
+- - '#'
+  - 第 23 章：设置 DHCP 启动服务器 ................................................................
+    911
+- - '#'
+  - 第 24 章：设置 MySQL 数据库服务器 ................................................ 923
+- - '#'
+  - xxxviii 目录
+- - '#'
+  - 第 25 章：通过 DNS 使服务器公网化 ................................957
+- - '#'
+  - 第 26 章：将 Fedora 与 Apple Mac 集成...............................985
+- - '#'
+  - 附录 A：关于媒体 ............................................................ 1013
+- - '#'
+  - 附录 B：运行网络服务 ................................................................ 1017
+- - '#'
+  - 目录
+- - '##'
+  - 附录 C：红帽企业 Linux 5 特性.................................................. 1039
+- - '#'
+  - 索引 ................................................................................................................
+    1049
+- - '#'
+  - 第一部分
+- - '#'
+  - Fedora 和 RHEL 入门
+- - '#'
+  - 第 1 章
+- - '#'
+  - Fedora 和红帽企业 Linux 概述
+- - '##'
+  - 本章
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '#'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '#'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '#'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '#'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '#'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从 其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从 其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从 其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在 UNIX 中的根源
+- - '#'
+  - 常见的 Linux 特性
+- - '##'
+  - Linux 的主要优势
+- - '#'
+  - 第 1 章：Fedora 和红帽企业版 Linux 概述
+- - '##'
+  - 什么是红帽企业版 Linux 和 Fedora？
+- - '##'
+  - 红帽成立 Fedora 项目
+- - '##'
+  - 红帽转向红帽企业级 Linux
+- - '##'
+  - 在 Fedora 和企业版之间进行选择
+- - '##'
+  - 第 1 章：Fedora 和红帽 Enterprise Linux 概述
+- - '##'
+  - 为什么选择 Fedora 或红帽 Enterprise Linux？
+- - '##'
+  - 交叉引用：第 2 章介绍了 Fedora 安装。
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 7 概述
+- - '##'
+  - Fedora 9 的新特性
+- - '##'
+  - KDE 桌面环境 (KDE) 4
+- - '##'
+  - PackageKit 软件管理
+- - '##'
+  - Firefox Web 浏览器
+- - '##'
+  - 预升级（Preupgrade）
+- - '##'
+  - Ext4 文件系统
+- - '##'
+  - 加密文件系统
+- - '##'
+  - 使用 freeIPA 进行身份管理
+- - '##'
+  - NetworkManager
+- - '##'
+  - 获取自定义 Fedora Spins
+- - '#'
+  - 第一部分：入门使用 Fedora 和 RHEL
+- - '#'
+  - 第 1 章：Fedora 和 Red Hat Enterprise Linux 概览
+- - '##'
+  - 防火墙配置
+- - '##'
+  - 软件文化
+- - '##'
+  - 总结
+- - '##'
+  - 第 2 章
+- - '##'
+  - 安装 Fedora
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 理解 Fedora 安装界面
+- - '##'
+  - 使用 Fedora 9 现场 CD
+- - '##'
+  - 第2章：安装 Fedora 25
+- - '##'
+  - 快速安装
+- - '#'
+  - 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 详细安装说明
+- - '##'
+  - 第 2 章：安装 Fedora 29
+- - '##'
+  - 安装 Fedora 9
+- - '##'
+  - 选择安装方法
+- - '##'
+  - 安装还是升级？
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora 31
+- - '##'
+  - 从 DVD、网络还是硬盘？
+- - '##'
+  - 选择计算机硬件
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在笔记本电脑上安装 Fedora
+- - '##'
+  - 使用现场 CD 准备安装
+- - '##'
+  - 显示硬件信息
+- - '##'
+  - 测试你的硬件
+- - '#'
+  - grep Chipset /var/log/Xorg.0.log
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 开始安装
+- - '##'
+  - 选择不同的安装模式
+- - '#'
+  - 42 第一部分：Fedora 和 RHEL 入门
+- - '#'
+  - 第 2 章：安装 Fedora 43
+- - '#'
+  - 第一部分：Fedora RHEL 入门
+- - '##'
+  - 第 2 章：安装 Fedora 45
+- - '#'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 运行 Fedora Firstboot
+- - '##'
+  - 启用身份验证
+- - '##'
+  - 第 2 章：安装 Fedora 47
+- - '##'
+  - 特殊安装程序
+- - '##'
+  - 安装后的后续
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 启动安装的替代方案
+- - '##'
+  - 从硬盘启动安装
+- - '#'
+  - cd /media/disk/isolinux
+- - '#'
+  - cp initrd.img /boot/initrd-boot.img
+- - '#'
+  - cp vmlinuz /boot/vmlinuz-boot
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 从 USB 设备启动安装
+- - '#'
+  - mount /media/disk
+- - '#'
+  - dd if=/media/disk/images/diskboot.img of=/dev/sdb1
+- - '##'
+  - 使用 PXE 启动安装
+- - '##'
+  - 从 其他介质安装
+- - '##'
+  - 开始安装
+- - '##'
+  - 使用文件配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - mount /media/disk             已插入 DVD
+- - '#'
+  - cp -r /media/disk/* /tmp/rh/
+- - '#'
+  - ummount /media/disk; eject /media/disk
+- - '##'
+  - 使用磁盘镜像配置安装服务器
+- - '#'
+  - mkdir /tmp/rh
+- - '#'
+  - dd if=/dev/cdrom of=/tmp/rh/disk.iso  已插入 DVD
+- - '#'
+  - umount /media/disk ; eject /media/disk
+- - '##'
+  - NFS 服务器
+- - '#'
+  - /etc/init.d/nfs restart
+- - '#'
+  - chkconfig nfs on
+- - '##'
+  - Web 服务器
+- - '#'
+  - mkdir /var/www/html/rh/
+- - '#'
+  - cp *.iso /var/www/html/rh
+- - '##'
+  - FTP 服务器
+- - '#'
+  - ln -s /tmp/rh /var/ftp/pub/rh
+- - '##'
+  - 硬硬盘安装
+- - '##'
+  - 启动 VNC 安装
+- - '##'
+  - 第 2 章：安装 Fedora 5
+- - '##'
+  - 执行 kickstart 安装
+- - '##'
+  - 创建 kickstart 文件
+- - '#'
+  - cp anaconda-kscfg ks.cfg
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 第 2 章：安装 Fedora 59
+- - '##'
+  - 以下是所请求的分区信息
+- - '#'
+  - 注意，除非首先清除所有分区，否则任何删除的分区都不会保证工作
+- - '#'
+  - /boot --fstype ext3 --size=100 --ondisk=sda
+- - '#'
+  - /part --fstype ext --size=700 --grow --ondisk=sda
+- - '#'
+  - /part swap --size=128 --grow --maxsize=256 --ondisk=sda
+- - '##'
+  - 安装 kickstart 文件
+- - '#'
+  - mcopy ks.cfg a
+- - '##'
+  - 启动 kickstart 安装
+- - '#'
+  - 第 2 章：安装 Fedora 61
+- - '##'
+  - 特殊安装主题
+- - '#'
+  - 设置 Linux 和 Windows 双启动系统
+- - '#'
+  - 调整你的 Windows 分区大小
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 在 Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - Linux 中使用 Windows 分区
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 第一部分：在 Fedora 和 RHEL 中入门
+- - '##'
+  - 在安装期间使用 Disk Setup 进行分区
+- - '##'
+  - 第2 章：安装 Fedora
+- - '##'
+  - 分区的理由
+- - '##'
+  - 删除、添加和编辑分区
+- - '##'
+  - 使用 fdisk 进行分区
+- - '#'
+  - fdisk -l
+- - '#'
+  - df -h
+- - '#'
+  - fdisk device
+- - '##'
+  - 第 2 章：安装 Fedora
+- - '##'
+  - 创建分区的技巧
+- - '#'
+  - 76 第一部分：入门 Fedora 和 RHEL
+- - '##'
+  - 临时更改启动选项
+- - '##'
+  - 第 2 章：安装 Fedora 7
+- - '##'
+  - 永久更改启动选项
+- - '#'
+  - grub.conf generated by anaconda
+- - '#'
+  - 注意：在修改此文件后，你不需要重新运行 grub。
+- - '#'
+  - root=0
+- - '##'
+  - 添加新的 GRUB 镜像
+- - '#'
+  - cp /usr/src/linux-2.6.25/arch/i386/boot/bzImage /boot/bz-2.6.25
+- - '#'
+  - 安装故障排除
+- - '##'
+  - 制作自己的 Fedora 安装或 Live 介质
+- - '##'
+  - 第 3 章：桌面
+- - '##'
+  - 介绍 Fedora 9 和红帽企业 Linux
+- - '##'
+  - 第 1 章：Fedora 与红帽企业 Linux (RHEL) 概述
+- - '##'
+  - 什么是 Linux？
+- - '##'
+  - Linux 在
