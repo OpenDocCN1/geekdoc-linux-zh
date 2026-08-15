@@ -1,0 +1,2 @@
++   [LAMP 配置指南：让 Linux、Apache、MySQL 和 PHP 协同工作 (Transcend Technique)](README.md)
++   [LAMP 配置指南：让 Linux、Apache、MySQL 和 PHP 协同工作 (Transcend Technique)](setting-up-lamp-getting-linux-apache-mysql-and-php-working-t.md)
