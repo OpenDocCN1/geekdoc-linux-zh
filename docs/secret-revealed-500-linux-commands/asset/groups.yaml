@@ -1,0 +1,6936 @@
+- md: "\n# Secret Revealed\n## 500 LINUX Commands\n## 2022\n\n![](img/cc3925c98d37acaf6e6d4c3b898f4520_0_0.png)\n\
+    \n# Secret Revealed\n## 500 LINUX Commands\n## 2022\n\n![](img/cc3925c98d37acaf6e6d4c3b898f4520_2_0.png)\n\
+    ![](img/cc3925c98d37acaf6e6d4c3b898f4520_2_1.png)\n\n# Introduction\n\nIn this\
+    \ document, you will find more than 500 commands via the Linux terminal. All well-explained\
+    \ how they work and what they do. Entirely in Portuguese, with a simple and objective\
+    \ language that can be understood by all users (from the simplest to advanced\
+    \ level).\n\nThis is an opportunity to not only use the graphical interface to\
+    \ execute the commands, but to master the terminal. Further increasing your knowledge\
+    \ in the Linux universe. After all, at certain times, we need more knowledge to\
+    \ perform certain tasks.\n\nLinux is already present in large companies, and mastering\
+    \ it means an additional differential in relation to other employees of the company.\n\
+    \nEven with daily practice, it is unlikely that you will save all the commands\
+    \ from the terminal, but the idea of this list is to bring the primordial commands\
+    \ to the Linux terminal, as its list is vast.\n\nThis booklet is freely distributed\
+    \ and can be shared and downloaded by anyone, after all, the main objective is\
+    \ its dissemination and distribution, without any profit purpose.\n\nUseful for\
+    \ beginners; curious; intermediate level looking to delve deeper and for those\
+    \ who are already advanced and want to remember some of the commands.\n\nHowever,\
+    \ before executing the commands in the terminal, remember the famous root mode\
+    \ phrase: \"With great power comes great responsibility\" - Stan Lee\n\n# Summary\n\
+    \n- Introduction two\n- 1. Reference Guide – List of Commands for Linux 4\n- 1.1.\
+    \ Knowing the system hierarchy 4\n- 1.2. global shortcuts 5\n- 2. Helpful tips\
+    \ for learning 5\n- 3. command list 6\n- 4. Complete Reference Guide – Advanced\
+    \ Terminal Commands 10\n- 4.1. Linux system information 10\n- 4.2. Shutdown (System\
+    \ Reboot or Logout) 12\n- 4.3. files and directories 12\n- 4.4. find files 14\n\
+    - 4.5. Working with file system 16\n- 4.6. Disk Space 17\n- 4.7. users and groups\
+    \ 18\n- 4.8. File permissions (+Add and --Remove permissions) 19\n- 4.9. Special\
+    \ file attributes (+ = Add and = Remove permissions) 20\n- 4.10. Compressed files\
+    \ and files 22\n- 4.11. RPM packages (Red Hat, Fedora and derivatives) 23\n- 4.12.\
+    \ YUM Updater packages (Red Hat, Fedora and derivatives) 24\n- 4.13. DEB packages\
+    \ (Debian, Ubuntu and derivatives) 25\n- 4.14. APT Package Updater (Debian, Ubuntu\
+    \ and Derivatives) 26\n- 4.15. View the contents of a file 27\n- 4.16. text manipulation\
+    \ 28\n- 4.17. Set the file conversion format 29\n- 4.18. File system analysis\n\
+    - 4.19. Format file systems\n- 4.20. backups\n- 4.21. CD-ROM\n- 4.22. Networks\
+    \ (LAN and WiFi)\n- 4.23. Microsoft Windows Networks (SAMBA) ........................................................\
+    \ 29\n- 4.24. Firewall (iptables) .......................................................................................\
+    \ 29\n- 4.25. Monitoring and Debugging ................................................................................\
+    \ 30\n- 4.26. Helpful hints and commands ........................................................................\
+    \ 31\n\n# 1. Reference Guide – List of Commands for Linux\n\n## 1.1. Knowing the\
+    \ system hierarchy\n\n![](img/cc3925c98d37acaf6e6d4c3b898f4520_6_0.png)\n\n# 2.\
+    \ global shortcuts\n\n```\nCtrl+C\n```\n- Cancels the current running command.\n\
+    \n```\nCtrl+Z\n```\n- \n\n```\nCtrl+D\n```\n- Pause current command, return with\
+    \ \"fg\" in Linux foreground or \"bg\" in background.\n- Logs out the current\
+    \ session (similar to the \"exit\" command).\n\n```\nCtrl+W\n```\n- \n\n```\n\
+    Ctrl+U\n```\n- Deletes a word on the current line.\n- Erase the entire line.\n\
+    \n```\nCtrl+R\n```\n- \n\n```\n!\n```\n- Press to View a recent command.\n- Repeat\
+    \ the last command.\n\n```\nexit\n```\n- Logs out of the current session.\n\n\
+    # 2. Helpful tips for learning\n\n- 1. Type any command followed by “--help” (Two\
+    \ dashes and the word help) for a detailed description of the command. (EX: “wget\
+    \ --help”):\n- 2. Another way to get official documentation for Linux commands\
+    \ is the man command (manual), Type man followed by the name of the command you\
+    \ need information about. (EX: man wget)\n- 3. If for some reason you prefer to\
+    \ save the man information (Manual) of some command on a flash drive or smartphone\
+    \ in PDF for further studies, use this command (EX: man -t wget | ps2pdf – wget.pdf)\n\
+    \n# 3. command list\n\n- **ls**: Directory list.\n- **ls -al**: Directory list\
+    \ with hidden files display.\n- **cd dir**: Changes from the current directory\
+    \ to the specified one (replace the variable dir by the folder name).\n- **CD**:\
+    \ Change to /home directory (personal files).\n- **pwd**: Displays the current\
+    \ directory path.\n- **mkdir dir**: Creates a specified directory (replace the\
+    \ variable dir by the folder name).\n- **rm arch**: Deletes the specified file\
+    \ (replace the variable arch with the name of the file you want to delete).\n\
+    - **rm -r dir**: Deletes the specified directory (replace the variable dir by\
+    \ the folder name).\n- **rm -f file**: Erase the specified file forcibly (-f for\
+    \ force) (replace the variable file by filename you want to delete).\n- **rm -rf\
+    \ dir**: Erase the specified directory forcibly (replace the variable dir by the\
+    \ folder name). Use this command with extreme attention!\n- **cp -r file1 file2**:\
+    \ Copy \"file1\" to \"file2\" (replace variable file by the file name).\n\n```\n\
+    cp -r dir1 dir2\n```\nCopy \"directory1\" to \"directory2\"; creates \"directory2\"\
+    \ if it does not exist (replace the variable say by the directory name).\n\n```\n\
+    mv file1 file2\n```\nDual function: Can be used to rename or move \"file1\" to\
+    \ \"file2\". If file2 is an existing directory, move \"file1\" into the directory\
+    \ \"file2\" (replace the variable arch by file name).\n\n```\nln -s file link\n\
+    ```\nCreate a symbolic link, link (shortcut) to the file (replace the variable\
+    \ q by filename and link by the name that the shortcut will have).\n\n# touch\
+    \ file\nCreate or update the file (replace the variable file by the file name).\n\
+    \n# cat > file\nDirects standard input to a file.\n\n# more arch\nDisplays the\
+    \ contents of a file (replace arch by filename).\n\n# head arch\nDisplay the first\
+    \ 10 lines (replace arch by filename).\n\n# tail arch\nDisplay the last 10 lines\
+    \ (replace arch by filename).\n\n# tail -f arch\nDisplays the contents of a file\
+    \ as it updates (increases in size) (replace arch by filename).\n\n# ps\n# top\n\
+    # kill pid\n# killall proc\n# bg\n# fg\n# chmod octal arch\nChange the permissions\
+    \ of “arch” octal, which can be specified for “user”, “group” and “others”. The\
+    \ octal values are represented below:\n\n- 4 – reading (r, from read).\n- 2 –\
+    \ write (w, from write).\n- 1 – execution (x, from execute)\n\nExplanation: To\
+    \ set permissions, add the above values. For example, to assign the owner of the\
+    \ file (\"user\") full read (r), write (w) and execute (x) access, just add the\
+    \ octal value 4 + 2 + 1 = 7. Assuming you want to limit access to “group” members,\
+    \ allowing read-only and recording, just add 4 + 2 = 6. Combining the two examples,\
+    \ it would be chmod 760 (\"r\" for user, \"w\" for group and \"0\" for others).\n\
+    \nAnother examples:\n\n- chmod 777: read (r), write (w) and execute (x) for all\
+    \ (\"user\", \"group\" and \"others\").\n- chmod 755: \"rwx\" for the \"owner\"\
+    \ (user), \"rw\" for the \"group\" and \"others\".\n\nFor more information, type\
+    \ in the terminal: man chmod\n\n```\nssh user@host\n```\nConnect to host as user\
+    \ (example: ssh gnulluxbrasil@meserver).\n\n```\nssh -p user port rio@host\n```\n\
+    Connect to the host on the specified port (replace \"port\" with the configured\
+    \ port number).\n\n```\nssh-copy-id user@host\n```\nAdd your key for that the\
+    \ host and user; serves to enable passwordless logins using keys.\n\n```\ngrep\
+    \ sequence files\n```\nSearch by string in file (replace string and values matching\
+    \ the search).\n\n```\ngrep -r string dir\n```\nRecursively search for string\
+    \ in dir.\n\n```\ncommand | grep sequence\n```\nSearch for string in command output\
+    \ (replace command and sequence according to the values to be sought).\n\n```\n\
+    locate file\n```\nFinds all instances of a file (replace datafile by the file\
+    \ name).\n\n```\ndate\n```\nG you the current date and time.\n\n```\ncalendar\n\
+    ```\nDisplays a calendar for the current month.\n\n```\nuptime\n```\nDisplays\
+    \ system uptime.\n\n```\nw\n```\nDisplays who is online.\n\n```\nwhoami\n```\n\
+    Displays who you are logged in as.\n"
+  mdcn: "\n\n# 揭秘秘密\n## 500 条 Linux 命令\n## 2022\n\n![](img/cc3925c98d37acaf6e6d4c3b898f4520_0_0.png)\n\
+    \n# 揭秘秘密\n## 500 条 Linux 命令\n## 2022\n\n![](img/cc3925c98d37acaf6e6d4c3b898f4520_2_0.png)\n\
+    ![](img/cc3925c98d37acaf6e6d4c3b898f4520_2_1.png)\n\n# 引言\n\n在本文档，你将通过 Linux 终端找到\
+    \ 500 多条命令。所有命令都详细解释了工作原理和作用。全文完全使用葡萄语编写，语言简单直观，所有用户（从初级到高级水平）都能理解。\n\n这不仅是一个利用图形界面执行命令的机会，更是一个精通终端的机会，进一步增加你在\
+    \ Linux 世界中的知识。毕竟，在某些时候，我们需要更多知识来执行特定的任务。\n\nLinux 已经存在于大型公司，精通它意味着与公司其他员工相比具有额外的优势。\n\
+    \n即使每天练习，你也不可能记住所有的终端命令，但此列表的目的是是将基础命令带入 Linux 终端，因为它的列表非常庞大。\n\n本书免费分发，任何人都可以分享和下载，毕竟其主要目标是传播和分发，无任何盈利目的。\n\
+    \n对于初学者、好奇者、想要深入研究的中级人员，以及已经是高级但想想起某些命令的人来说都很有用。\n\n然而，在终端执行命令之前，请记住著名的 root 模式格言：“能力越大，责任越大”——\
+    \ 斯坦·李（Stan Lee）\n\n# 目录\n\n- 引言（二）\n- 1. 参考指南 – Linux 命令列表 4\n- 1.1. 了解系统层次结构\
+    \ 4\n- 1.2. 全局快捷键 5\n- 2. 学习实用提示 5\n- 3. 命令列表 6\n- 4. 完整参考指南 – 高级终端命令 10\n- 4.1.\
+    \ Linux 系统信息 10\n- 4.2. 关机（系统重启或注销） 12\n- 4.3. 文件和目录 12\n- 4.4. 查找文件 14\n- 4.5.\
+    \ 文件系统操作 16\n- 4.6. 磁盘空间 17\n- 4.7. 用户和组 18\n- 4.8. 文件权限（+添加和--移除权限）19\n- 4.9.\
+    \ 特殊文件属性（+ = 添加和 = 移除权限）20\n- 4.10. 压缩文件和文件 22\n- 4.11. RPM 包（Red Hat, Fedora\
+    \ 及其衍生版） 23\n- 4.12. YUM 更新包（Red Hat, Fedora 及其衍生版） 24\n- 4.13. DEB 包（Debian,\
+    \ Ubuntu 及其衍生版） 25\n- 4.14. APT 包更新器（Debian, Ubuntu 及其衍生版） 26\n- 4.15. 查看文件内容\
+    \ 27\n- 4.16. 文本处理 28\n- 4.17. 设置文件转换格式 29\n- 4.18. 文件系统分析\n- 4.19. 格式化文件系统\n\
+    - 4.20. 备份\n- 4.21. CD-ROM\n- 4.22. 网络（局域网和 WiFi）\n- 4.23. Microsoft Windows 网络\
+    \ (SAMBA) ........................................................ 29\n- 4.24.\
+    \ 防火墙 (iptables) .......................................................................................\
+    \ 29\n- 4.25. 监控与调试 ................................................................................\
+    \ 30\n- 4.26. 有用提示和命令 ........................................................................\
+    \ 31\n\n# 1. 参考指南 – Linux 命令列表\n\n## 1.1. 了解系统层次结构\n\n![](img/cc3925c98d37acaf6e6d4c3b898f4520_6_0.png)\n\
+    \n# 2. 全局快捷键\n\n```\nCtrl+C\n```\n- 取消当前运行的命令。\n\n```\nCtrl+Z\n```\n- \n\n```\n\
+    Ctrl+D\n```\n- 暂停当前命令，在 Linux 中使用 \"fg\" 返回前台，或使用 \"bg\" 返回后台。\n- 注销当前会话（类似于 \"\
+    exit\" 命令）。\n\n```\nCtrl+W\n```\n- \n\n```\nCtrl+U\n```\n- 删除当前行上的一个单词。\n- 擦除整行。\n\
+    \n```\nCtrl+R\n```\n- \n\n```\n!\n```\n- 按下执行上一次命令。\n\n```\nexit\n```\n- 退出当前会话。\n\
+    \n# 2. 学习实用提示\n\n- 然而，在终端中执行命令之前，请记住 斯坦·李（Stan Lee）的著名格言：“能力越大，责任越大”。\n- 1. 想要获取命令的帮助，可以在命令后加上\
+    \ `--help`（例如 `ls --help`）。\n- 2. 另一种获取帮助的方法是使用 `man` 命令（例如 `man ls`），可以查看命令的详细说明。\n\
+    - 3. 想要查看命令的文档，可以使用 `info` 命令。\n\n# 3. 命令列表\n\n- **ls**: 显示目录内容。\n- **ls -al**:\
+    \ 列出所有文件（包括隐藏文件）。\n- **cd**: 切换目录。\n- **pwd**: 显示当前目录路径。\n- **mkdir**: 创建目录。\n\
+    - **rm**: 删除文件。\n- **rm -r**: 递归删除目录及其内容。\n- **rm -f**: 强制删除。\n- **cp**: 复制文件或目录。\n\
+    - **mv**: 移动或重命名文件或目录。\n- **touch**: 创建空文件或更新访问时间。\n- **cat**: 显示文件内容。\n- **more**:\
+    \ 分页查看文件或输出。\n- **head**: 显示文件前几行。\n- **tail**: 显示文件后几行。\n- **tail -f**: 实时查看文件更新（常用于日志）。\n\
+    - **find**: 在目录搜索文件。\n- **grep**: 在文件中搜索字符串。\n- **chmod**: 修改文件权限。\n- **chown**:\
+    \ 修改文件所有者。\n- **tar**: 归档工具。\n- **zip / unzip**: 压缩和解压文件。\n- **wget / curl**:\
+    \ 下载文件。\n- **ssh**: 远程登录。\n- **scp**: 远程复制文件。\n- **rsync**: 同步文件。\n- **df**: 显示磁盘空间使用情况。\n\
+    - **du**: 显示目录占用空间。\n- **top**: 实时进程监控。\n- **htop**: 交互式进程管理器。\n- **ps**: 查看进程状态。\n\
+    - **kill**: 终止进程。\n- **alias**: 设置别名。\n- **unalias**: 别名。\n- **echo**: 输出文本。\n\
+    - **read**: 读取标准输入。\n- **sort**: 排序。\n- **uniq**: 过滤重复行。\n- **diff**: 比较文件。\n\
+    - **which**: 查找命令。\n- **clear**: 清除终端屏幕。\n- **vim / nano**: 文本编辑器。\n- **man**:\
+    \ 查看帮助手册。\n- **sudo**: 以超级权限执行。\n- **env**: 查看环境变量。\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # Secret Revealed
+
+    +500 LINUX Commands
+
+    2022
+
+
+    ![](img/cc3925c98d37acaf6e6d4c3b898f4520_0_0.png)'
+  - '[PAGE 1]
+
+
+    <!-- no content -->'
+  - '[PAGE 2]
+
+
+    # # Secret Revealed
+
+
+    # ##500 LINUX Commands
+
+
+    # # 2022
+
+
+    ![](img/cc3925c98d37acaf6e6d4c3b898f4520_2_0.png)
+
+
+    ![](img/cc3925c98d37acaf6e6d4c3b898f4520_2_1.png)'
+  - '[PAGE 3]
+
+
+    # Introduction
+
+
+    In this document, you will find more than 500 commands via the Linux terminal.
+    All well explained how they work and what they do. Entirely in Portuguese, with
+    a simple and objective language that can be understood by all users (from the
+    simplest to advanced level).
+
+
+    This is an opportunity to not only use the graphical interface to execute the
+    commands, but to master the terminal. Further increasing your knowledge in the
+    Linux universe. After all, at certain times, we need more knowledge to perform
+    certain tasks.
+
+
+    Linux is already present in large companies, and mastering it means an additional
+    differential in relation to other employees of the company.
+
+
+    Even with daily practice, it is unlikely that you will save all the commands from
+    the terminal, but the idea of this list is to bring the primordial commands to
+    the Linux terminal, as its list is vast.
+
+
+    This booklet is freely distributed and can be shared and downloaded by anyone,
+    after all, the main objective is its dissemination and distribution, without any
+    profit purpose.
+
+
+    Useful for beginners; curious; intermediate level looking to delve deeper and
+    for those who are already advanced and want to remember some of the commands.
+
+
+    However, before executing the commands in the terminal, remember the famous root
+    mode phrase: "With great power comes great responsibility" - Stan Lee'
+  - '[PAGE 4]
+
+
+    # summary
+
+
+    +   Introduction two
+
+
+    +   1. Reference Guide – List of Commands for Linux 4
+
+
+    +   1.1. Knowing the system hierarchy 4
+
+
+    +   1.2. global shortcuts 5
+
+
+    +   2. Helpful tips for learning 5
+
+
+    +   3. command list 6
+
+
+    +   4. Complete Reference Guide – Advanced Terminal Commands 10
+
+
+    +   4.1. Linux system information 10
+
+
+    +   4.2. Shutdown (System Reboot or Logout) 12
+
+
+    +   4.3. files and directories 12
+
+
+    +   4.4. find files 14
+
+
+    +   4.5. Working with file system 16
+
+
+    +   4.6. Disk Space 17
+
+
+    +   4.7. users and groups 18
+
+
+    +   4.8. File permissions (+=Add and ==Remove permissions) 19
+
+
+    +   4.9. Special file attributes: (+ = Add and = Remove permissions) 20
+
+
+    +   4.10. Compressed files and files 22
+
+
+    +   4.11. RPM packages (Red Hat, Fedora and derivatives) 23
+
+
+    +   4.12. YUM Updater packages (Red Hat, Fedora and derivatives) 24
+
+
+    +   4.13. DEB packages (Debian, Ubuntu and derivatives) 25
+
+
+    +   4.14. APT Package Updater (Debian, Ubuntu and Derivatives) 26
+
+
+    +   4.15. View the contents of a file 27
+
+
+    +   4.16. text manipulation 28
+
+
+    +   4.17. Set the file conversion format 29
+
+
+    +   4.18. File system analysis
+
+
+    +   4.19. Format file systems
+
+
+    +   backups
+
+
+    +   4.21. CD-ROM
+
+
+    +   4.22. Networks (LAN and WiFi)'
+  - '[PAGE 5]
+
+
+    +   4.23. Microsoft Windows Networks (SAMBA) ........................................................
+    29
+
+
+    +   4.24. Firewall (iptables) .......................................................................................
+    29
+
+
+    +   4.25. Monitoring and Debugging ................................................................................
+    30
+
+
+    +   4.26. Helpful hints and commands ........................................................................
+    31'
+  - '[PAGE 6]
+
+
+    # 1. Reference Guide – List of Commands for Linux
+
+
+    1.1. Knowing the system hierarchy
+
+
+    ![](img/cc3925c98d37acaf6e6d4c3b898f4520_6_0.png)'
+  - '[PAGE 7]
+
+
+    <!-- no content -->'
+  - '[PAGE 8]
+
+
+    <!-- no content -->'
+  - "[PAGE 9]\n\n# 2. global shortcuts\n\n```\nCtrl+C\n```\n\n+   - Cancels the current\
+    \ running command.\n\n```\nCtrl+Z\n```\n\n+   - \n\n```\nCtrl+D\n```\n\nPause\
+    \ current command, return with \"fg\" in Linux foreground or \"bg\" in background.\n\
+    \n+   - Logs out the current session (similar to the \"exit\" command).\n\n```\n\
+    Ctrl+W\n```\n\n+   - \n\n```\nCtrl+U\n```\n\nDeletes a word on the current line.\n\
+    \n+   - Erase the entire line.\n\n```\nCtrl+R\n```\n\n+   - \n\n```\n!\n```\n\n\
+    Press to View a recent command.\n\n+   - Repeat the last command.\n\n```\nexit\n\
+    ```\n\n+   - Logs out of the current session.\n\n# 2. Helpful tips for learning"
+  - '[PAGE 10]
+
+
+    +   1. Type any command followedof “--help” (Two dashes and the word help) for
+    a detailed description of the command.
+
+    (EX: “wget --help”):
+
+
+    +   2. Another way to get official documentation for Linux commands the man command
+    (manual), Type man followed by the name of the command you need information about.
+
+    (EX: man wget)
+
+
+    +   3. If for some reason you prefer to save the man information (Manual) of some
+    command on a flash drive or smartphone in PDF for further studies, use this command
+    (EX: man -t wget | ps2pdf – wget.pdf)'
+  - '[PAGE 11]
+
+
+    # 3. command list
+
+
+    **ls**nDirectory list.
+
+
+    **ls -al**nDirectory list with hidden files display.
+
+
+    **cd dir**nChanges from the current directory to the specified one (replace the
+    variabledir by the folder name).
+
+
+    **CD**nChange to /home directory (personal files).
+
+
+    **pwd**nDisplays the current directory path.
+
+
+    **mkdir dir***
+
+    Creates a specified directory (replace the variabledir by the folder name).
+
+
+    **rm arch**
+
+    Deletes the specified file (replace the variablearq with the name of the file
+    you want to delete).
+
+
+    **rm -r dir**nDeletes the specified directory (replace the variabledir by the
+    folder name).
+
+
+    **rm -f file**nErase the specified file forcibly (-f for force) (replace the variablefile
+    by file name
+
+    th you want to delete).
+
+
+    **rm -rf dir**nErase the specified directory forcibly (replace the variabledir
+    by the folder name).Use this command with extreme attention!
+
+
+    **cp -r file1 file2**'
+  - '[PAGE 12]
+
+
+    Copy "file1" to "file2" (replace variablefile by the file name).
+
+
+    ```
+
+    cp -r dir1 dir2
+
+    ```
+
+
+    Copy "directory1" to "directory2"; creates "directory2" if it does not exist (replace
+    the variablesay by the directory name).
+
+
+    ```
+
+    mv file1 file2
+
+    ```
+
+
+    Dual function: Can be used to rename or move "file1" to "file2". If file2 an existing
+    directory, move "file1" into the directory "file2" (replace the variablearch by
+    file name).
+
+
+    ```
+
+    ln -s file link
+
+    ```
+
+
+    Create a symbolic link, link (shortcut) to the file (replace the variableq by
+    filename and link by the name that the shortcut will have).'
+  - '[PAGE 13]
+
+
+    # touch file
+
+
+    Create or update the file (replace the variablefile by the file name).
+
+
+    # cat > file
+
+
+    Directs standard input to a file (replace variablefile by the file name).
+
+
+    # more arch
+
+
+    Display the contents of a file (replace the variablefile by the file name).
+
+
+    # head arch
+
+
+    Display the first 10 lines of a file (replace the variablefile by the file name).
+
+
+    # tail arch
+
+
+    Display the last 10 lines of a file (replace the variablefile by the file name).
+
+
+    # tail -f arch
+
+
+    Displays the contents of a file as it updates (increases in size), with the last
+    last 10 lines (replace the variablefile by the file name).
+
+
+    # ps
+
+
+    # top
+
+
+    # kill pid
+
+
+    # killall proc
+
+
+    # bg
+
+
+    # fg
+
+
+    # fg work
+
+
+    # chmod octal arch'
+  - '[PAGE 14]
+
+
+    Change the permissions of the file “arch” to octal, which can be specified separately
+    for “user”, “group” and “others”. The octal values are represented below:
+
+
+    +   - 4 – reading (r, from read).
+
+    - 2 – write (w, from write).
+
+    - 1 – execution (x, from execute)
+
+
+    Explanation: To set permissions, add the above values. For example, to assign
+    the owner of the
+
+    file ("user") full read (r), write (w) and execute (x) access, just add the octal
+    value 4 + 2
+
+    + 1 = 7. Assuming you want to limit access to “group” members, allowing read-only
+
+    and recording, just add 4 + 2 = 6. Combining the two examples mentioned, it would
+
+    be: chmod 760 ("r" for user, "w" for group and "0" for others or "rw-")'
+  - "[PAGE 15]\n\nAnother examples:\n\n+   - chmod 777\n  - read (r), write (w) and\
+    \ execute (x) for all (\"user\", \"group\" and \"others\".\n- chmod 755\n  - \"\
+    rwx\" for the \"owner\" (user), \"rw\" for the \"group\" and \"others\".\n\nFor\
+    \ more information, type in the terminal: man chmod\n\n```\nssh user rio@host\n\
+    ```\n\nConnect to host as user (example: ssh gnullinuxbrasil@meserver).\n\n```\n\
+    ssh -p user port rio@host\n```\n\nConnect to the host on the specified port (replace\
+    \ \"port\" with the configured port number).\n\n```\nssh-copy-id user river@host\n\
+    ```\n\nAdd your key for that's host and user; serves to enable passwordless logins\
+    \ using keys.\n\n```\ngrep sequence files\n```\n\nSearch by string in file (replace\
+    \ string and values matching the search).\n\n```\ngrep -r string dir\n```\n\n\
+    Recursively search for string LinuxLinuxLinux in dir\n\n```\ncommand| grep sequence\n\
+    ```\n\nSearch for string in command output (replacecommand and sequence according\
+    \ to the values to be sought).\n\n```\nlocate file\n```\n\nFinds all instances\
+    \ of a file (replace datafile by the file name).\n\n```\ngives you\n```\n\nDisplays\
+    \ the current date and time.\n\n```\nlime\n```\n\nDisplays a calendar for the\
+    \ current month.\n\n```\nuptime\n```\n\nDisplays system uptime.\n\n```\nw\n```\n\
+    \nDisplays who is online.\n\n```\nwhoami\n```\n\nDisplays who you are logged in\
+    \ as."
+- md: '
+
+    ```
+
+    finger
+
+    ```
+
+    User Displays user information.
+
+
+    ```
+
+    uname -a
+
+    ```
+
+    Displays kernel information.
+
+
+    ```
+
+    cat /proc/cpuinfo
+
+    ```
+
+    Displays CPU information.
+
+
+    ```
+
+    cat /proc/meminfo
+
+    ```
+
+    Displays memory information.
+
+
+    # man command
+
+
+    Opens the manual for the specified command (replace the variable command by the
+    name of the command you want to meet).
+
+
+    # df
+
+
+    Displays disk usage.
+
+
+    # du
+
+
+    Displays space usage in a directory.
+
+
+    # free
+
+
+    Displays memory and swap usage.
+
+
+    # whereis application
+
+
+    Displays possible app locations (replace application by program name).
+
+
+    # which application
+
+
+    Shows that the application will run by default (override application by program
+    name).
+
+
+    # tar cf package.tar files
+
+
+    Creates a TAR package (named package.tar) with the specified files (replace the
+    variable arqs with the name of the archive).
+
+
+    # tar xf package.tar
+
+
+    Extract the files from "package.tar" (replace the variable package.tar by file
+    name).
+
+
+    # tar cz package.tar.gz files
+
+
+    Creates a TAR package (named package.tar.gz) with GZip compression.
+
+
+    # tar xzf package.tar.gz
+
+
+    Extracts a TAR package (named package.tar.gz) with GZip compression.
+
+
+    # tar cjf package.tar.bz2
+
+
+    Creates a TAR package (named package.tar.bz2) with BZip2 compression.
+
+
+    # tar xjf package.tar.bz2
+
+
+    Extracts a TAR package (named package.tar.bz2) with BZip2 compression.
+
+
+    # gzip file
+
+
+    Compress a file and rename it to file.gz (replace the variable file by the file
+    name).
+
+
+    ```
+
+    gzip -d file.gz
+
+    ```
+
+    Uncompress file.gz to a file (replace the variable file.gz by the file name).
+
+
+    # ping host
+
+
+    Send an ICMP packet (ping) to the host and display the result (replace the variable
+    host by the domain of a website or the IP number),.
+
+
+    # whois domain
+
+
+    Returns information about the domain (replace the variable domain by a website
+    address or IP number).
+
+
+    # dig host
+
+
+    Returns DNS information for the domain (replace the variable host by a website''s
+    domain or IP number).
+
+
+    # ListAllCommands | grep searchstr
+
+
+    Installation from source code; the commands must be typed in sequence in a terminal,
+    one of each turn.
+
+
+    # dig -x host
+
+
+    Displays the reverse return for a host (replace the variable host by a website''s
+    domain or IP number).
+
+
+    # wget file
+
+
+    Download the file “arq” (replace the variable arq by the file''s online address).
+
+
+    # wget -c file
+
+
+    Continues the interrupted download of an "archive" file (replace the variable
+    arq by the file''s online address).
+
+
+    # installer commands
+
+
+    - * /configure
+
+    - make
+
+    - make install
+
+
+    # dpkg -i package.deb
+
+
+    Install a DEB package (Debian distros) (replace the variable package.deb by the
+    name of the program package).
+
+
+    # rpm -Uvh package.rpm
+
+
+    Installs an RPM package (Distros that use RPM) (replace the variable package.rpm
+    with the package name of program).
+
+
+    ## 4. Complete Reference Guide – Advanced Linux
+
+
+    ## Terminal Commands
+
+
+    ### I.1. Linux system information
+
+
+    ## arch
+
+
+    Displays the machine architecture (1).
+
+
+    ```
+
+    uname -m
+
+    ```
+
+    Displays the machine architecture (2).
+
+
+    ```
+
+    uname -r
+
+    ```
+
+    Displays used kernel version.
+
+
+    ```
+
+    dmidecode -q
+
+    ```
+
+    Displays system components hardware.
+
+
+    ```
+
+    hdparm -i /dev/hda
+
+    ```
+
+    Displays the characteristics of a hard drive.
+
+
+    ```
+
+    hdparm -tT /dev/das
+
+    ```
+
+    Performs read test on a hard drive.
+
+
+    ```
+
+    cat /proc/cpuinfo
+
+    ```
+
+    Displays CPU information.
+
+
+    ```
+
+    cat /proc/interrupts
+
+    ```
+
+    Displays interrupts.
+
+
+    ```
+
+    cat /proc/meminfo
+
+    ```
+
+    Checks memory usage.
+
+
+    ```
+
+    cat /proc/swaps;df -h
+
+    ```
+
+    Displays the size of files and directories sorted by size.
+
+
+    ```
+
+    ls -Sr |more
+
+    ```
+
+    Estimates the space used by the ''dir1'' directory.
+
+
+    ```
+
+    du -sh dir1
+
+    ```
+
+    Displays the size of files and directories sorted by size.
+
+
+    ```
+
+    du -sk * | sort -rn
+
+    ```
+
+    Displays the space used by installed .rpm packages organized by size (Fedora,
+    Red Hat and others).
+
+
+    ```
+
+    rpm -q -aqf ''%10{SIZE}t%{NAME}n'' | sort -k1,1n
+
+    ```
+
+    Displays the space used by installed packages, organized by size (Debian, Ubuntu
+    and others).
+
+
+    ```
+
+    dpkg-query -W -f=''Installed-Size;10}t${Package}n'' | sort -k1,1n
+
+    ```
+
+    Display swap files.
+
+
+    ```
+
+    cat /proc/version
+
+    ```
+
+    Displays the kernel version.
+
+
+    ```
+
+    cat /proc/net/dev
+
+    ```
+
+    Displays network adapters and statistics.
+
+
+    ```
+
+    cat /proc/mounts
+
+    ```
+
+    Displays the mounted file system.
+
+
+    ```
+
+    lspci -tv
+
+    ```
+
+    Displays PCI devices.
+
+
+    ```
+
+    lsusb -tv
+
+    ```
+
+    Displays USB devices.
+
+
+    ```
+
+    date
+
+    ```
+
+    Displays the system date.
+
+
+    # date 2016
+
+
+    View the 2016 calendar.
+
+
+    # date 06 2016
+
+
+    Displays the calendar for the month of June 2016.
+
+
+    # date 041217002016.00
+
+
+    Set (status, adjust) date and time.
+
+
+    ```
+
+    clock -w
+
+    ```
+
+    save changes to date in BIOS.
+
+
+    ### 1.2. Shutdown (System Reboot or Logout)
+
+
+    - shutdown -h now turn off the system (1).
+
+    - shutdown -h minutes shut down the system according to the selected minute (EX.:
+    shutdown -30, shut down in 30 minutes).
+
+    - init 0 turn off the system (2).
+
+    - telinit 0 turn off the system (3).
+
+    - halt turn off the system (4).
+
+    - shutdown -r message: to send a message to users affected by the shutdown, use
+    the command like this: sudo shutdown -r 30 "The system will restart in 30 minutes"
+
+    - shutdown -c cancels a planned system shutdown.
+
+    - shutdown -r reset (1).
+
+    - reboot reset (2).
+
+    - logout close the session.
+
+
+    ### 1.3. files and directories
+
+
+    ```
+
+    cd /home
+
+    ```
+
+    Enter the “home” directory.
+
+
+    ```
+
+    cd ..
+
+    ```
+
+    Go back one level.
+
+
+    ```
+
+    cd ../
+
+    ```
+
+    Go back 2 levels.
+
+
+    ```
+
+    cd
+
+    ```
+
+    Go to the root directory.
+
+
+    ```
+
+    cd ~user1
+
+    ```
+
+    Go to user1''s directory.
+
+
+    ```
+
+    cd -
+
+    ```
+
+    Return to previous directory.
+
+
+    ```
+
+    pwd
+
+    ```
+
+    Displays the working path.
+
+
+    ```
+
+    ls
+
+    ```
+
+    Queries files in directory.
+
+
+    ```
+
+    ls -F
+
+    ```
+
+    Queries files and directories.
+
+
+    ```
+
+    ls -a
+
+    ```
+
+    Show hidden files.
+
+
+    ```
+
+    ls -l
+
+    ```
+
+    Displays details of files.
+
+
+    ```
+
+    tree
+
+    ```
+
+    Displays files in tree.
+
+
+    ```
+
+    mkdir -p dir1
+
+    ```
+
+    Creates directory.
+
+
+    ```
+
+    mkdir dir1 dir2
+
+    ```
+
+    Creates two directories.
+
+
+    ```
+
+    rm -rf dir1
+
+    ```
+
+    Deletes dir1.
+
+
+    ```
+
+    rm -f file1
+
+    ```
+
+    Deletes file1.
+
+
+    ```
+
+    mv file1 dir2
+
+    ```
+
+    Renames or moves a file.
+
+
+    ```
+
+    cp file1 file2
+
+    ```
+
+    Copies a file.
+
+
+    ```
+
+    touch -t 0712250000 file1
+
+    ```
+
+    Modifies the real time (creation time) of a file.
+
+
+    ```
+
+    file1
+
+    ```
+
+    Mime-type output (dump to screen)
+
+
+    ```
+
+    iconv -l
+
+    ```
+
+    Lists of known figures.
+
+
+    ```
+
+    iconv -f fromEncoding -t toEncoding inputFile
+
+    ```
+
+    Creates a new input file assuming it is encoded fromEncoding.
+
+
+    ```
+
+    find . -maxdepth 1 -name *.jpg -print -exec convert "{}" -resize 80×60 "thumbs/{}"
+    \;
+
+    ```
+
+    Group scaled files in directory and send them to thumbnail view (requires Imageagick).
+
+
+    ### I.4. find files
+
+
+    ```
+
+    find / -name file1
+
+    ```
+
+    Search for a file or directory from the system root.
+
+
+    # find / -user user1
+
+    ```
+
+    Finds files and directories owned by ''user1''.
+
+
+    # find /home/user1 -name *.bin
+
+    ```
+
+    Searches for files with extension ''.bin'' in the ''/home/user1'' directory.
+
+
+    # find /usr/bin -type f -atime +100
+
+    ```
+
+    Searches for binary files not used in the last 100 days.
+
+
+    # find /usr/bin -type f -mtime -10
+
+    ```
+
+    Searches for files created or changed in the last 10 days.
+
+
+    # find -name *.rpm -exec chmod 755 ''{}'' \;
+
+    ```
+
+    Searches for files with extension ''.rpm'' and modify permissions.
+
+
+    # find / -xdev -name *.rpm
+
+    ```
+
+    Searches for files with extension ''.rpm'' ignoring removable media such as CD-ROM,
+    USB stick, etc...
+
+
+    # locate *.ps
+
+    ```
+
+    Find files with the extension ''. ps first run with the command ''updatedb''.
+
+
+    # where is halt
+
+    ```
+
+    Displays the location of a binary file, help or source. In this case he asks where
+    is the ''stop'' command.
+
+
+    # which halt
+
+    ```
+
+    Displays the full path (the full path) to a binary/executable.
+
+
+    ### I.5. Working with file system
+
+
+    ```
+
+    mount /dev/hda2 /mnt/hda2
+
+    ```
+
+    Mount a disk called hda2. First, check for the existence of the ''/mnt/hda2''
+    directory; If you do not own, you must create it.
+
+
+    ```
+
+    umount /dev/hda2
+
+    ```
+
+    Remove a disk named hda2. First, from the point of /mnt/hda2.
+
+    '
+  mdcn: "\n\n```\nfinger\n```\n显示用户信息。\n\n```\nuname -a\n```\n显示内核信息。\n\n```\ncat\
+    \ /proc/cpuinfo\n```\n显示 CPU 信息。\n\n```\ncat /proc/meminfo\n```\n显示内存信息。\n\n#\
+    \ man command\n\n打开指定命令的手手册（将变量 `command` 替换为想要查找的命令名称）。\n\n# df\n\n显示磁盘使用情况。\n\
+    \n# du\n\n显示目录的占用空间。\n\n# free\n\n显示内存和交换分区（swap）的使用情况。\n\n# whereis application\n\
+    \n显示应用程序可能的路径（将 `application` 替换为程序名）。\n\n# which application\n\n显示默认将运行的应用程序（将\
+    \ `application` 替换为程序名）。\n\n# tar cf package.tar files\n\n创建一个包含指定文件的 TAR 包（命名为\
+    \ `package.tar`，将变量 `arqs` 替换为归档名称）。\n\n# tar xf package.tar\n\n从 \"package.tar\"\
+    \ 中解压文件（将变量 `package.tar` 替换为文件名）。\n\n# tar cz package.tar.gz files\n\n创建一个使用\
+    \ GZip 压缩格式的 TAR 包（命名为 `package.tar.gz`）。\n\n# tar xzf package.tar.gz\n\n解压一个使用\
+    \ GZip 压缩格式的 TAR 包（命名为 `package.tar.gz`）。\n\n# tar cjf package.tar.bz2\n\n创建一个使用\
+    \ BZip2 压缩格式的 TAR 包（命名为 `package.tar.bz2`）。\n\n# tar xjf package.tar.bz2\n\n解压一个使用\
+    \ BZip2 压缩格式的 TAR 包（命名为 `package.tar.bz2`）。\n\n# gzip file\n\n压缩文件并将其重命名为 file.gz（将变量\
+    \ `file` 替换为文件名）。\n\n```\ngzip -d file.gz\n```\n将 `file.gz` 解压为文件（将变量 `file.gz`\
+    \ 替换为文件名）。\n\n# ping host\n\n向主机发送 ICMP 数据包（ping）并显示结果（将变量 `host` 替换为网站域名或 IP\
+    \ 地址）。\n\n# whois domain\n\n返回有关域名的信息（将变量 `domain` 替换为网站地址或 IP 地址）。\n\n# dig host\n\
+    \n返回域名的 DNS 信息（将变量 `host` 替换为网站域名或 IP 地址）。\n\n# ListAllCommands | grep searchstr\n\
+    \n从源码安装；必须在终端中顺序输入命令，每次输入一个。\n\n# dig -x host\n\n显示主机的反向查询（将变量 `host` 替换为网站域名或\
+    \ IP 地址）。\n\n# wget file\n\n下载文件“arq”（将变量 `arq` 替换为文件的在线地址）。\n\n# wget -c file\n\
+    \n继续下载已中断的“归档”文件（将变量 `arq` 替换为文件的在线地址）。\n\n# installer commands\n\n- * /configure\n\
+    - make\n- make install\n\n# dpkg -i package.deb\n\n安装 DEB 包（Debian 系发行版）（将变量 `package.deb`\
+    \ 替换为程序包名）。\n\n# rpm -Uvh package.rpm\n\n安装 RPM 包（使用 RPM 的发行版）（将变量 `package.rpm`\
+    \ 替换为程序包名）。\n\n## 4. 完整参考指南 – 高级 Linux\n\n## 终端命令\n\n### I.1. Linux 系统信息\n\n##\
+    \ arch\n\n显示机器架构 (1)。\n\n```\nuname -m\n```\n显示机器架构 (2)。\n\n```\nuname -r\n```\n\
+    显示正在使用的内核版本。\n\n```\ndmidecode -q\n```\n显示系统硬件组件。\n\n```\nhdparm -i /dev/hda\n\
+    ```\n显示硬盘的特性。\n\n```\nhdparm -tT /dev/das\n```\n对硬盘进行读取测试。\n\n```\ncat /proc/cpuinfo\n\
+    ```\n显示 CPU 信息。\n\n```\ncat /proc/interrupts\n```\n显示中断。\n\n```\ncat /proc/meminfo\n\
+    ```\n检查内存使用情况。\n\n```\ncat /proc/swaps;df -h\n```\n显示按大小排序的文件和目录大小。\n\n```\nls\
+    \ -Sr |more\n```\n估算 'dir1' 目录占用的空间。\n\n```\ndu -sh dir1\n```\n显示按大小排序的文件和目录大小。\n\
+    \n```\ndu -sk * | sort -rn\n```\n按大小显示已安装 .rpm 包的占用空间（Fedora, Red Hat 等）。\n\n\
+    ```\nrpm -q -aqf '%10{SIZE}t%{NAME}n' | sort -k1,1n\n```\n按大小显示已安装包的占用空间（Debian,\
+    \ Ubuntu 等）。\n\n```\ndpkg-query -W -f='Installed-Size;10}t${Package}n' | sort\
+    \ -k1,1n\n```\n显示交换分区文件。\n\n```\ncat /proc/version\n```\n显示内核版本。\n\n```\ncat /proc/net/dev\n\
+    ```\n显示网络适配器和统计数据。\n\n```\ncat /proc/mounts\n```\n显示已挂载的文件系统。\n\n```\nlspci -tv\n\
+    ```\n显示 PCI 设备。\n\n```\nlsusb -tv\n```\n显示 USB 设备。\n\n```\ndate\n```\n显示系统日期。\n\
+    \n# date 2016\n\n查看 2016 年的日历。\n\n# date 06 2016\n\n显示 2016 年 6 月的日历。\n\n# date\
+    \ 041217002016.00\n\n设置（调整）日期和时间。\n\n```\nclock -w\n```\n将日期更改保存到 BIOS。\n\n###\
+    \ 1.2. 关机（系统重启或注销）\n\n- shutdown -h now 立即关闭系统 (1)。\n- shutdown -h minutes 按选定的分钟数关闭系统（例如：shutdown\
+    \ -30，在 30 分钟后关机）。\n- init 0 关闭系统 (2)。\n- telinit 0 关闭系统 (3)。\n- halt 关闭系统 (4)。\n\
+    - shutdown -r message: 向受关机影响的用户发送消息，使用如下命令：sudo shutdown -r 30 \"系统将在 30 分钟后重启\"\
+    \n- shutdown -c 取消已计划的系统关机。\n\n### 1.3. 文件与目录\n\n```\ncd /home\n```\n进入 home 目录。\n\
+    \n```\ncd ..\n```\n返回上一级。\n\n```\ncd ../\n```\n返回两级目录。\n\n```\ncd\n```\n进入根目录。\n\
+    \n```\ncd ~user1\n```\n进入用户1的目录。\n\n```\ncd -\n```\n返回上一个目录。\n\n```\npwd\n```\n\
+    显示当前工作路径。\n\n```\nls\n```\n查询目录下的文件。\n\n```\nls -F\n```\n显示文件类型标识。\n\n```\nls\
+    \ -a\n```\n显示隐藏文件。\n\n```\nls -l\n```\n显示文件详细信息。\n\n```\ntree\n```\n显示树形结构。\n\n\
+    ```\nmkdir -p dir1\n```\n创建目录。\n\n```\nmkdir dir1 dir2\n```\n创建两个目录。\n\n```\n\
+    rm -rf dir1\n```\n删除 dir1。\n\n```\nrm -f file1\n```\n删除 file1。\n\n```\nmv file1\
+    \ dir2\n```\n重命名或移动文件。\n\n```\ncp file1 file2\n```\n复制文件。\n\n```\ntouch -t 0712250000\
+    \ file1\n```\n修改文件的实际时间（创建时间）。\n\n```\nfile1\n```\n MIME 类型输出（到屏幕）。\n\n```\niconv\
+    \ -l\n```\n列出已知类型。\n\n```\niconv -f fromEncoding -t toEncoding inputFile\n```\n\
+    假设输入文件为 fromEncoding 转换新文件。\n\n```\nfind . -maxdepth 1 -name *.jpg -print -exec\
+    \ convert \"{}\" -resize 80×60 \"thumbs/{}\" \\;\n```\n对目录进行分组并发送到缩略图目录（需要 Imageagick）。\n\
+    \n### I.4. 查找文件\n\n```\nfind / -name file1\n```\n从根目录查找文件或目录。\n\n# find / -user\
+    \ user1\n```\n查找属于 user1 的文件和目录。\n\n# find /home/user1 -name *.bin\n```\n在 /home/user1\
+    \ 目录下查找扩展名为 .bin 的文件。\n\n# find /usr/bin -type f -atime +100\n```\n查找 100 天内未使用的二进制文件。\n\
+    \n# find /usr/bin -type f -mtime -10\n```\n查找 10 天内创建或更改的文件。\n\n# find -name *.rpm\
+    \ -exec chmod 755 '{}' \\;\n```\n查找扩展名为 .rpm 的文件并修改权限。\n\n# find / -xdev -name\
+    \ *.rpm\n```\n查找 .rpm 文件，但忽略可移动介质（如光盘、USB 盘等）。\n\n# locate *.ps\n```\n查找扩展名为 .ps\
+    \ 的文件，首先运行 `updatedb`。\n\n# where is halt\n```\n显示二进制文件、帮助文档或源码的位置。在这种情况下他询问停止命令在哪里。\n\
+    \n# which halt\n```\n显示二进制/可执行文件的完整路径。\n\n### I.5. 文件系统操作\n\n```\nmount /dev/hda2\
+    \ /mnt/hda2\n```\n挂载磁盘 hda2 到 /mnt/hda2。\n\n```\numount /dev/hda2\n```\n卸载磁盘 hda2。\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 16]
+
+
+    ```
+
+    finger
+
+    ```
+
+
+    User Displays user information.
+
+
+    ```
+
+    uname -a
+
+    ```
+
+
+    Displays kernel information.
+
+
+    ```
+
+    cat /proc/cpuinfo
+
+    ```
+
+
+    Displays CPU information.'
+  - '[PAGE 17]
+
+
+    ```
+
+    cat /proc/meminfo
+
+    ```
+
+
+    Displays memory information.
+
+
+    # man command
+
+
+    Opens the manual for the specified command (replace the variablecommand by the
+    name of the command you want to meet).
+
+
+    # df
+
+
+    Displays disk usage.
+
+
+    # du
+
+
+    Displays space usage in a directory.
+
+
+    # free
+
+
+    Displays memory and swap usage.
+
+
+    # whereis application
+
+
+    Displays possible app locations (replaceapplication by program name).
+
+
+    # which application
+
+
+    Shows that the application will run by default (overrideapplication by program
+    name).
+
+
+    # tar cf package.tar files
+
+
+    Creates a TAR package (namedpackage.tar) with the specified files (replace the
+    variable arqs with the name of the archive).
+
+
+    # tar xf package.tar
+
+
+    Extract the files from "package.tar" (replace the variablepackage.tar by file
+    name).
+
+
+    # tar cz package.tar.gz files
+
+
+    Creates a TAR package (namedpackage.tar.gz) with GZip compression.
+
+
+    # tar xzf package.tar.gz
+
+
+    Extracts a TAR package (namedpackage.tar.gz) with GZip compression.
+
+
+    # tar cjf package.tar.bz2
+
+
+    Creates a TAR package (namedpackage.tar.bz2) with BZip2 compression.
+
+
+    # tar xjf package.tar.bz2
+
+
+    Extracts a TAR package (namedpackage.tar.gz) with BZip2 compression.
+
+
+    # gzip file
+
+
+    Compress a file and rename it to file.gz (replace the variablefile by the file
+    name).'
+  - '[PAGE 18]
+
+
+    ```
+
+    gzip -d file.gz
+
+    ```
+
+
+    Uncompress file.gz to a file (replace the variablefile.gz by the file name).
+
+
+    # ping host
+
+
+    Send an ICMP packet (ping) to the host and display the result (replace the variablehost
+    by the domain of a website or the IP number),
+
+
+    # whois domain
+
+
+    Returns information about the domain (replace the variabledomain by a website
+    address or IP number).
+
+
+    # dig host
+
+
+    Returns DNS information for the domain (replace the variablehost by a website''s
+    domain or IP number).'
+  - '[PAGE 19]
+
+
+    # ListAllCommands | grep searchstr
+
+
+    Installation from source code; the commands must be typed in sequence in a terminal,
+    one of each turn.
+
+
+    # dig -x host
+
+
+    Displays the reverse return for a host (replace the variablehost by a website''s
+    domain or IP number).
+
+
+    # wget file
+
+
+    Download the file “arq” (replace the variablearq by the file''s online address).
+
+
+    # wget -c file
+
+
+    Continues the interrupted download of an "archive" file (replace the variablearq
+    by the file''s online address).
+
+
+    # installer commands
+
+
+    +   * /configure
+
+    * make
+
+    * make install
+
+
+    # dpkg -i package.deb
+
+
+    Install a DEB package (Debian distros) (replace the variablepackage.deb by the
+    name of the program package).
+
+
+    # rpm -Uvh package.rpm
+
+
+    Installs an RPM package (Distros that use RPM) (replace the variablepackage.rpm
+    with the package name of program).
+
+
+    # # 4. Complete Reference Guide – Advanced Linux
+
+
+    # ## Terminal Commands
+
+
+    # ### I.1. Linux system information
+
+
+    # arch'
+  - '[PAGE 20]
+
+
+    Displays the machine architecture (1).
+
+
+    ```
+
+    uname -m
+
+    ```
+
+
+    Displays the machine architecture (2).
+
+
+    ```
+
+    uname -r
+
+    ```
+
+
+    Displays used kernel version.
+
+
+    ```
+
+    dmidecode -q
+
+    ```
+
+
+    Displays system components
+
+    hardware).
+
+
+    ```
+
+    hdparm -i /dev/hda
+
+    ```
+
+
+    Displays the characteristics of a hard
+
+    drive.
+
+
+    ```
+
+    hdparm -tT /dev/das
+
+    ```
+
+
+    Performs read test on a hard drive.
+
+
+    ```
+
+    cat /proc/cpuinfo
+
+    ```
+
+
+    Displays CPU information.'
+  - '[PAGE 21]
+
+
+    ```
+
+    cat /proc/interrupts
+
+    ```
+
+
+    Displays interrupts.
+
+
+    ```
+
+    cat /proc/meminfo
+
+    ```
+
+
+    Checks memory usage.
+
+
+    ```
+
+    cat /proc/swaps:df -h
+
+    ```
+
+
+    Displays the size of files and directories sorted by size.
+
+
+    ```
+
+    ls -Sr |more
+
+    ```
+
+
+    Estimates the space used by the ''dir1'' directory.
+
+
+    ```
+
+    du -sh dir1
+
+    ```
+
+
+    Displays the size of files and directories sorted by size.
+
+
+    ```
+
+    du -sk * | sort -rn
+
+    ```
+
+
+    Displays the space used by installed .rpm packages organized by size (Fedora,
+    Red Hat and others).
+
+
+    ```
+
+    rpm -q -aqf ''%10{SIZE}t%{NAME}n'' | sort -k1,1n
+
+    ```
+
+
+    Displays the space used by installed packages, organized by size (Debian, Ubuntu
+    and others).
+
+
+    ```
+
+    dpkg-query -W -f=''Installed-Size;10}t${Package}n'' | sort -k1,1n
+
+    ```
+
+
+    Display swap files.
+
+
+    ```
+
+    cat /proc/version
+
+    ```
+
+
+    Displays the kernel version.
+
+
+    ```
+
+    cat /proc/net/dev
+
+    ```
+
+
+    Displays network adapters and statistics.
+
+
+    ```
+
+    cat /proc/mounts
+
+    ```
+
+
+    Displays the mounted file system.
+
+
+    ```
+
+    lspci -tv
+
+    ```
+
+
+    Displays PCI devices.
+
+
+    ```
+
+    lsusb -tv
+
+    ```
+
+
+    Displays USB devices.
+
+
+    ```
+
+    gives you
+
+    ```'
+  - '[PAGE 22]
+
+
+    Displays the system date.
+
+
+    # lime 2016
+
+
+    View the 2016 calendar.
+
+
+    # lime 06 2016
+
+
+    Displays the calendar for the month of June 2016.
+
+
+    # date 041217002016.00
+
+
+    Set (status, adjust) date and time.'
+  - '[PAGE 23]
+
+
+    clock -w save changes to date in BIOS.
+
+
+    # 1.2. Shutdown (System Reboot or Logout)
+
+
+    shutdown -h now turn off the system (1).
+
+
+    shutdown -h minutes shut down the system according to the selected minute (EX.:
+    shutdown -30, shut down in 30 minutes).
+
+
+    init 0 turn off the system (2).
+
+
+    telinit 0 turn off the system (3).
+
+
+    halt turn off the system (4).
+
+
+    shutdown -r message: to send a message to users affected by the shutdown, use
+    the command like this: sudo shutdown -r 30 "The system will restart in 30 minutes"
+
+
+    shutdown -c cancels a planned system shutdown.
+
+
+    shutdown -r reset (1).
+
+
+    reboot reset (2).
+
+
+    logout close the session.
+
+
+    # 1.3. files and directories'
+  - '[PAGE 24]
+
+
+    ```
+
+    cd /home
+
+    ```
+
+
+    Enter the “home” directory.
+
+
+    ```
+
+    CD ..
+
+    ```
+
+
+    Go back one level.
+
+
+    ```
+
+    CD ../
+
+    ```
+
+
+    Go back 2 levels.
+
+
+    ```
+
+    CD
+
+    ```
+
+
+    Go to the root directory.'
+  - '[PAGE 25]
+
+
+    ```
+
+    cd ~user1
+
+    ```
+
+
+    Go to user1''s directory.
+
+
+    ```
+
+    CD -
+
+    ```
+
+
+    Return() to the previous directory.
+
+
+    ```
+
+    pwd
+
+    ```
+
+
+    Displays the working directory path.
+
+
+    ```
+
+    ls
+
+    ```
+
+
+    Queries files in a directory.
+
+
+    ```
+
+    ls -F
+
+    ```
+
+
+    Queries files in a directory.
+
+
+    ```
+
+    ls -l
+
+    ```
+
+
+    Displays details of files and folders in a directory.
+
+
+    ```
+
+    ls -a
+
+    ```
+
+
+    Show hidden files.
+
+
+    ```
+
+    ls *[0-9]*
+
+    ```
+
+
+    Displays files and folders that contain numbers.
+
+
+    ```
+
+    tree
+
+    ```
+
+
+    Displays files and folders in a tree from the root. (1)
+
+
+    ```
+
+    ltree
+
+    ```
+
+
+    Displays files and folders in a tree from the root. (two)
+
+
+    ```
+
+    mkdir dir1
+
+    ```
+
+
+    Creates a folder or directory named ''dir1''.
+
+
+    ```
+
+    mkdir dir1 dir2
+
+    ```
+
+
+    Creates two folders or directories simultaneously (creating two directories at
+    the same time).
+
+
+    ```
+
+    mkdir -p /tmp/dir1/dir2
+
+    ```
+
+
+    Create a directory tree.
+
+
+    ```
+
+    rm -f file1
+
+    ```
+
+
+    Deletes the file named ''file1''.
+
+
+    ```
+
+    rmdir dir1
+
+    ```'
+  - '[PAGE 26]
+
+
+    Deletes the folder named ''dir1''.
+
+
+    ```
+
+    rm -rf dir1
+
+    ```
+
+
+    Deletes a folder named ''dir1'' with its contents forcibly. (If I deleted all
+    its content).
+
+
+    ```
+
+    rm -rf dir1 dir2
+
+    ```
+
+
+    Deletes two folders (directories) with their contents forcibly.'
+  - '[PAGE 27]
+
+
+    ```
+
+    mv dir1 new_dir
+
+    ```
+
+
+    Renames or moves a file or folder (directory).
+
+
+    ```
+
+    cp file1
+
+    ```
+
+
+    Copy a file.
+
+
+    ```
+
+    cp file1 file2
+
+    ```
+
+
+    Copies both files at the same time.
+
+
+    ```
+
+    cp dir /*
+
+    ```
+
+
+    Copies all files from a directory into the current working directory.
+
+
+    ```
+
+    cp -a /tmp/dir1.
+
+    ```
+
+
+    Copies a directory into the current working directory.
+
+
+    ```
+
+    cp -a dir1
+
+    ```
+
+
+    Copy a directory.
+
+
+    ```
+
+    cp -a dir1 dir2
+
+    ```
+
+
+    Copy directory two in unison.
+
+
+    ```
+
+    ln -s file1 ln1
+
+    ```
+
+
+    Creates a symbolic link to the file or directory.
+
+
+    ```
+
+    ln file1 ln1
+
+    ```
+
+
+    Creates a hard link to the file or directory.
+
+
+    ```
+
+    touch -t 0712250000 file1
+
+    ```
+
+
+    Modifies the real time (creation time) of a file or directory.
+
+
+    ```
+
+    file1
+
+    ```
+
+
+    Mime-type output (dump to screen) from a text file.
+
+
+    ```
+
+    iconv -l
+
+    ```
+
+
+    Lists of known figures.
+
+
+    ```
+
+    iconv -f fromEncoding -t toEncoding inputFile > outputFile
+
+    ```
+
+
+    Creates a new input file shape assuming it is encoded in fromEncoding and converts
+
+
+    for ToEncoding.
+
+
+    ```
+
+    find . -maxdepth 1 -name *.jpg -print -exec convert "{}" -resize 80×60 "thumbs/{}"
+    \;
+
+    ```'
+  - '[PAGE 28]
+
+
+    Group scaled files in current directory and send them to thumbnail view directories
+
+    (requires Imagemagick converter).
+
+
+    # I.4. find files
+
+
+    ```
+
+    find / -name file1
+
+    ```
+
+
+    Search for a file or directory from the system root.'
+  - '[PAGE 29]
+
+
+    # find / -user user1
+
+
+    Finds files and directories owned by user ''user1''.
+
+
+    # find /home/user1 -name ''\*.bin
+
+
+    Searches for files with extension ''.bin'' in the ''/home/user1'' directory.
+
+
+    # find /usr/bin -type f -atime +100
+
+
+    Searches for binary files not used in the last 100 days.
+
+
+    # find /usr/bin -type f -mtime -10
+
+
+    Searches for files created or changed in the last 10 days.
+
+
+    # find -name ''\*.rpm -exec chmod 755 ''{}'' \;
+
+
+    Searches for files with extension ''.rpm'' and modify permissions.
+
+
+    # find / -xdev -name ''\*.rpm
+
+
+    Searches for files with extension ''.rpm'' ignoring removable media such as CD-ROM,
+    USB stick, etc...
+
+
+    # locate *.ps
+
+
+    Find files with the extension ''. ps first run with the command ''updatedb''.
+
+
+    # where is halt
+
+
+    Displays the location of a binary file, help or source. In this case he asks where
+    is the ''stop'' command.
+
+
+    # which halt
+
+
+    Displays the full path (the full path) to a binary/executable.
+
+
+    # I.5. Working with file system
+
+
+    # mount /dev/hda2 /mnt/hda2
+
+
+    Mount a disk called hda2. First, check for the existence of the ''/mnt/hda2''
+    directory; If you do not own, you must create it.
+
+
+    # umount /dev/hda2
+
+
+    Remove a disk named hda2. First, from the point of /mnt/hda2.'
+- md: "\n```bash\nfuser -km /mnt/hda2\n```\nForces removal when device is busy.\n\n\
+    ```bash\numount -n /mnt/hda2\n```\nPerforms the removal without reading the /etc/MTAB\
+    \ file. Useful when file is read-only or disk is full.\n\n```bash\nmount /dev/fd0\
+    \ /mnt/floppy\n```\nMounts a floppy disk (floppy).\n\n```bash\nmount /dev/cdrom\
+    \ /mnt/cdrom\n```\nMount a cdrom/dvdrom.\n\n```bash\nmount /dev/hdc/mnt/cdrom\n\
+    ```\nMount a recordable cd or dvdrom.\n\n```bash\nmount /dev/db/mnt/cdrom\n```\n\
+    Mount a writable cd/dvdrom.\n\n```bash\nmount -o loop file.iso /mnt/cdrom\n```\n\
+    Mount an iso image.\n\n```bash\nmount -t vfat /dev/hda5 /mnt/hda5\n```\nMount\
+    \ a FAT32 file system.\n\n```bash\nmount /dev/sda1 /mnt/usbdisk\n```\nMounts a\
+    \ memory flash drive drive specifying the file system type.\n\n## 4.6. Disk Space\n\
+    \n```bash\ndf -h\n```\nDisplays the size of files and directories sorted by size.\n\
+    \n```bash\nls -l | more\n```\nEstimates the space used by directory.\n\n```bash\n\
+    du -sh\n```\nDisplays the size of files and directories sorted by size.\n\n```bash\n\
+    du * | sort -rn\n```\nDisplays the space used by installed packages, sorted by\
+    \ size (Fedora, Red Hat, and others).\n\n```bash\nrpm -q -a '%{SIZE}' | sort -k1\n\
+    ```\nDisplays the space used by installed packages organized by size (Debian,\
+    \ Ubuntu and derivatives).\n\n```bash\ndpkg-query -W -f='${Package}\\n' | sort\
+    \ -k1\n```\nDisplays packages that consume the most space (in descending order).\n\
+    \n## 1.7. Users and groups\n\n```bash\ngroupadd group_name\n```\nCreate a new\
+    \ group.\n\n```bash\ngroupdel group_name\n```\nDelete a group.\n\n```bash\ngroupmod\
+    \ -n new_group_name group_name\n```\nRenames a group.\n\n```bash\nuseradd -c \"\
+    Name\" -g admin -d /home/user1 user1\n```\nCreates a new user.\n\n```bash\nuserdel\
+    \ -r user1\n```\nDeletes a user.\n\n```bash\nusermod -c \"User\" -g system -d\
+    \ /etc/nologin user1\n```\nChange user attributes.\n\n```bash\npasswd user1\n\
+    ```\nChange password.\n\n```bash\nchage -E 2016-06-22 user1\n```\nSets a time\
+    \ limit for the user's password.\n\n## Linux system information\n\n```bash\npwck\n\
+    ```\nChecks the correct /etc/passwd file format and existence of users.\n\n```bash\n\
+    grpck\n```\nCheck for correct /etc/group file format and existence of groups.\n\
+    \n```bash\nnewgroup group_name\n```\nRegister a new group to change the default\
+    \ group of newly created files.\n\n## 4.8. File permissions (+ = Add and - = Remove\
+    \ permissions)\n\n```bash\nls -lh\n```\nDisplays permissions.\n\n```bash\nls /tmp\
+    \ | pr -T -W$COLUMNS\n```\nDivides the terminal into 5 columns.\n\n```bash\nchmod\
+    \ ugo+rwx directory1\n```\nSet read (r), write (w) and execute (x) permissions\
+    \ for owner (u), group (g) and others (or) on the directory 'file1'.\n\n```bash\n\
+    chmod go-rwx directory1\n```\nRemove read (r), write (w) and execute (x) group\
+    \ (g) and others (or) permission on directory 'file1'.\n\n```bash\nchown user1\
+    \ file1\n```\nChange the owner of a file.\n\n```bash\nchown -R user1 directory1\n\
+    ```\nChanges the owner of a directory and all files and directories contained\
+    \ within.\n\n```bash\nchgrp group1 file1\n```\nChange the filegroup.\n\n```bash\n\
+    chown user1 file1\n```\nChange ownership.\n\n```bash\nfind / -perm -u+s\n```\n\
+    View all files with SUID system configured.\n\n```bash\nchmod u+s /bin/file1\n\
+    ```\nSets the SUID in a binary file. The user running this file acquires the same\
+    \ privileges as owner.\n\n```bash\nchmod -u+s /bin/file1\n```\nDisables the SUID\
+    \ in a binary file.\n\n```bash\nchmod g+s /home/public\n```\nSets the SGID bit\
+    \ on a directory - similar to SUID, but for the directory.\n\n```bash\nchmod -g-s\
+    \ /home/public\n```\nTurns off the SGID bit on a directory.\n\n```bash\nchmod\
+    \ o+t /home/public\n```\nSet STICKY bit in a directory. Allows deletion of files\
+    \ only for legitimate owners.\n\n```bash\nchmod -o-t /home/public\n```\nTurns\
+    \ off STICKY bit on a directory.\n\n## 1.9. Special file attributes (+ = Add and\
+    \ - = Remove permissions)\n\n```bash\nchattr +a file1\n```\nAllows recording by\
+    \ opening a file append mode.\n\n```bash\nchattr +c file1\n```\nAllows a file\
+    \ to be zipped/unzipped automatically.\n\n```bash\nchattr +d file1\n```\nIt ensures\
+    \ that the program ignores deleting files during backup.\n\n```bash\nchattr +i\
+    \ file1\n```\nMakes the file unaltered so it cannot be deleted, changed, renamed,\
+    \ or linked.\n\n```bash\nchattr +s file1\n```\nAllows a file to be safely deleted.\n\
+    \n```bash\nchattr +S file1\n```\nIt ensures that a file is modified, the changes\
+    \ are written in synchronous mode, as specified.\n\n```bash\nchattr +u file1\n\
+    ```\nIt allows the file to be compressed.\n\n```bash\nlsattr file1\n```\nDisplays\
+    \ special attributes.\n\n## 10. Compressed files\n\n```bash\nchattr -u file1\n\
+    ```\nDecompresses the file or allows it to be uncompressed.\n\n```bash\nlsattr\
+    \ file1\n```\nDisplays special attributes.\n\n```bash\nchattr +c file1\n```\n\
+    Allows a file to be compressed.\n\n```bash\nchattr -c file1\n```\nDecompresses\
+    \ the file.\n\n```bash\nchattr +d file1\n```\nAllows a file to be compressed.\n\
+    \n```bash\ngzip -9z file1\n```\nCompresses a file.\n\n```bash\nrpm -q -a\n```\n\
+    Displays all compressed packages.\n\n```bash\nrpm -q - grep\n\n\n\n\n all of with\
+    \ the file.\n\n```bash\nrpm -q -i\n```\nInformation about a compressed package.\n\
+    \n```bash\nrpm -q -l\n```\nDisplays the list of files provided by a compressed\
+    \ package.\n\n```bash\nrpm -q -f\n```\nChecks which compressed package belongs\
+    \ to a given file.\n\n```bash\nrpm -q -p file.rpm -l\n```\nDisplays the list of\
+    \ files provided by a package rpm that has not yet been installed.\n"
+  mdcn: "\n\n```bash\nfuser -km /mnt/hda2\n```\n当设备正忙时强制卸载。\n\n```bash\numount -n\
+    \ /mnt/hda2\n```\n在不读取 /etc/MTAB 文件的情况下执行卸载。适用于文件只读或磁盘已满的情况。\n\n```bash\nmount\
+    \ /dev/fd0 /mnt/floppy\n```\n挂载软磁盘（floppy）。\n\n```bash\nmount /dev/cdrom /mnt/cdrom\n\
+    ```\n挂载 cdrom/dvdrom。\n\n```bash\nmount /dev/hdc/mnt/cdrom\n```\n挂载可刻录的 cd 或 dvdrom。\n\
+    \n```bash\nmount /dev/db/mnt/cdrom\n```\n挂载可写的 cd/dvdrom。\n\n```bash\nmount -o\
+    \ loop file.iso /mnt/cdrom\n```\n挂载 iso 镜像。\n\n```bash\nmount -t vfat /dev/hda5\
+    \ /mnt/hda5\n```\n挂载 FAT32 文件系统。\n\n```bash\nmount /dev/sda1 /mnt/usbdisk\n```\n\
+    挂载指定文件系统类型的内存闪存盘。\n\n## 4.6. 磁盘空间\n\n```bash\ndf -h\n```\n按大小显示文件和目录的大小。\n\n```bash\n\
+    ls -l | more\n```\n估计目录占用的空间。\n\n```bash\ndu -sh\n```\n按大小显示文件和目录的大小。\n\n```bash\n\
+    du * | sort -rn\n```\n显示已安装软件包占用的空间，按大小排序（Fedora、Red Hat 等系统）。\n\n```bash\nrpm\
+    \ -q -a '%{SIZE}' | sort -k1\n```\n按大小组织已安装软件包占用的空间（Debian、Ubuntu 及其衍生版）。\n\n\
+    ```bash\ndpkg-query -W -f='${Package}\\n' | sort -k1\n```\n显示空间最大的软件包（按降序排列）。\n\
+    \n## 1.7. 用户与组\n\n```bash\ngroupadd group_name\n```\n创建新组。\n\n```bash\ngroupdel\
+    \ group_name\n```\n删除组。\n\n```bash\ngroupmod -n new_group_name group_name\n```\n\
+    重命名组。\n\n```bash\nuseradd -c \"Name\" -g admin -d /home/user1 user1\n```\n创建新用户。\n\
+    \n```bash\nuserdel -r user1\n```\n删除用户。\n\n```bash\nusermod -c \"User\" -g system\
+    \ -d /etc/nologin user1\n```\n修改用户属性。\n\n```bash\npasswd user1\n```\n修改密码。\n\n\
+    ```bash\nchage -E 2016-06-22 user1\n```\n为用户密码设置有效期限制。\n\n## Linux 系统信息\n\n```bash\n\
+    pwck\n```\n检查 /etc/passwd 文件的格式正确性以及用户是否存在。\n\n```bash\ngrpck\n```\n检查 /etc/group文件的格式正确性以及组是否存在。\n\
+    \n```bash\nnewgroup group_name\n```\n注册新组，以更改新创建文件的默认组。\n\n## 4.8. 文件权限 (+ = 添加权限和\
+    \ - = 移除权限)\n\n```bash\nls -lh\n```\n显示权限。\n\n```bash\nls /tmp | pr -T -W$COLUMNS\n\
+    ```\n将终端分为 5 列。\n\n```bash\nchmod ugo+rwx directory1\n```\n为目录 'file1' 的所有者 (u)、组\
+    \ (g) 和其他 (o) 设置读 (r)、写 (w) 和执行 (x) 权限。\n\n```bash\nchmod go-rwx directory1\n\
+    ```\n移除目录 'file1' 组 (g) 和其他 (o) 的读 (r)、写 (w) 和执行 (x) 权限。\n\n```bash\nchown user1\
+    \ file1\n```\n更改文件所有者。\n\n```bash\nchown -R user1 directory1\n```\n更改目录及其包含的所有文件和目录的所有者。\n\
+    \n```bash\nchgrp group1 file1\n```\n更改组。\n\n```bash\nchown user1 file1\n```\n\
+    更改所有权。\n\n```bash\nfind / -perm -u+s\n```\n查看所有配置了 SUID 系统的文件。\n\n```bash\nchmod\
+    \ u+s /bin/file1\n```\n在二进制文件中设置 SUID。运行此文件的用户将获得与所有者相同的权限。\n\n```bash\nchmod\
+    \ -u+s /bin/file1\n```\n禁用二进制文件中的 SUID。\n\n```bash\nchmod g+s /home/public\n```\n\
+    在目录上设置 SGID 位 - 类似于 SUID，但针对目录。\n\n```bash\nchmod -g-s /home/public\n```\n关闭目录上的\
+    \ SGID 位。\n\n```bash\nchmod o+t /home/public\n```\n在目录上设置 STICKY（粘滞位）。仅允许合法所有者删除文件。\n\
+    \n```bash\nchmod -o-t /home/public\n```\n关闭目录上的 STICKY 位。\n\n## 1.9. 特殊文件属性 (+\
+    \ = 添加和 - = 移除权限)\n\n```bash\nchattr +a file1\n```\n允许通过追加模式打开文件进行记录。\n\n```bash\n\
+    chattr +c file1\n```\n允许文件自动压缩/解压缩。\n\n```bash\nchattr +d file1\n```\n确保程序在备份期间忽略删除文件的操作。\n\
+    \n```bash\nchattr +i file1\n```\n使文件不可更改，因此无法被删除、修改、重命名或链接。\n\n```bash\nchattr\
+    \ +s file1\n```\n允许安全地删除文件。\n\n```bash\nchattr +S file1\n```\n确保文件被修改时，更改将按照指定的同步模式写入。\n\
+    \n```bash\nchattr +u file1\n```\n允许文件被压缩。\n\n```bash\nlsattr file1\n```\n显示特殊属性。\n\
+    \n## 10. 压缩文件\n\n```bash\nchattr -u file1\n```\n解压缩文件或允许其解压缩。\n\n```bash\nlsattr\
+    \ file1\n```\n显示特殊属性。\n\n```bash\nchattr +c file1\n```\n允许文件被压缩。\n\n```bash\n\
+    chattr -c file1\n```\n解压缩文件。\n\n```bash\nchattr +d file1\n```\n允许文件被压缩。\n\n```bash\n\
+    gzip -9z file1\n```\n压缩文件。\n\n```bash\nrpm -q -a\n```\n显示所有压缩包。\n\n```bash\nrpm\
+    \ -q - grep\n\n\n\n\n all of with the file.\n文件的所有内容。\n\n```bash\nrpm -q -i\n\
+    ```\n关于压缩包的信息。\n\n```bash\nrpm -q -l\n```\n显示压缩包提供的文件列表。\n\n```bash\nrpm -q -f\n\
+    ```\n检查哪个压缩包属于给定的文件。\n\n```bash\nrpm -q -p file.rpm -l\n```\n显示尚未安装的 rpm 包所提供的文件列表。\n"
+  merge: 0
+  raw:
+  - '[PAGE 30]
+
+
+    ```
+
+    fuser -km /mnt/hda2
+
+    ```
+
+
+    Forces removal when device is busy.
+
+
+    ```
+
+    umount -n /mnt/hda2
+
+    ```
+
+
+    Performs the removal without reading the /etc/MTAB file. Useful when file is read-only
+    or disk is full.
+
+
+    ```
+
+    mount /dev/fd0 /mnt/floppy
+
+    ```
+
+
+    Mounts a floppy disk (floppy).
+
+
+    ```
+
+    mount /dev/cdrom /mnt/cdrom
+
+    ```
+
+
+    Mount a cdrom/dvdrom.'
+  - '[PAGE 31]
+
+
+    ```
+
+    mount /dev/hdc/mnt/cdrecorder
+
+    ```
+
+
+    Mount a recordordable cd or dvdrom.
+
+
+    ```
+
+    mount /dev/hdb /mnt/cdrecorder
+
+    ```
+
+
+    Mounts a writable cd/dvdrom (a adev).
+
+
+    ```
+
+    mount -o loop file.iso /mnt/cdrom
+
+    ```
+
+
+    Mount a file or an iso image.
+
+
+    ```
+
+    mount -t vfat /dev/hda5 /mnt/hda5
+
+    ```
+
+
+    Mount a command system on FAT32 files.
+
+
+    ```
+
+    mount /dev/sda1 /mnt/usbdisk
+
+    ```
+
+
+    Mounts a memory or a USB flash drive (without specifying the file system type).
+
+
+    # 4.6. Disk Space
+
+
+    ```
+
+    df -h
+
+    ```
+
+
+    Displays the size of files and directories sorted by size.
+
+
+    ```
+
+    ls -lSr |more
+
+    ```
+
+
+    Estimates the space used by the ''dir1'' directory.
+
+
+    ```
+
+    du -sh dir1
+
+    ```
+
+
+    Displays the size of files and directories sorted by size.
+
+
+    ```
+
+    du -sk * | sort -rn
+
+    ```
+
+
+    Displays the space used by installed .rpm packages, sorted by size (Fedora, Red
+    Hat, and others).
+
+
+    ```
+
+    rpm -q -a ''%10{SIZE}%%{NAME}n'' | sort -k1,1n
+
+    ```
+
+
+    Displays the space used by installed packages and organized by size (Debian, Ubuntu
+    and others).
+
+
+    ```
+
+    dpkg-query -W -f=''${Installed-Size};10}t${Package}n'' | sort -k1,1n > g
+
+    ```
+
+
+    Displays (in Debian or derivatives) a list of 25 installed packages that consume
+    the most space (in descending order)'
+  - '[PAGE 32]
+
+
+    # 1.7. users and groups
+
+
+    ```
+
+    groupadd group_name
+
+    Create a new group.
+
+    ```
+
+
+    ```
+
+    groupdel group_name
+
+    Delete a group.
+
+    ```
+
+
+    ```
+
+    groupmod -n new_group_name viejo_new_group_name
+
+    Renames a group.
+
+    ```
+
+
+    ```
+
+    useradd -c "Name Surname " -g admin -d /home/user1 -s /bin/bash user1
+
+    ```
+
+
+    Creates a new user “admin” from the group.'
+  - "[PAGE 33]\n\n# useradd user1\n\nCreate a new user.\n\n# userdel -r user1\n\n\
+    Deletes a user ('-r') deletes the Home directory.\n\n# usermod -c \"User FTP\"\
+    \ -g system -d /ftp/user1 -s /bin/nologin user1\n\nChange user attributes.\n\n\
+    # passwd\n\nChange password.\n\n# password user1\n\nChange user password (root\
+    \ only).\n\n# chage -E 2016-06-22 user1\n\nSets a time limit for the user's password.\
+    \ In this case it says the key expires\non June 22\nof 2016.\n\n# Linux system\
+    \ information\n\n+   - pwck\n  Checks the correct syntax '/etc/passwd' file format\
+    \ and the\n  existence of users.\n\n+   - grck\n  Check for correctand file format\
+    \ '/etc/group' and the\n  existence of groups.\n\n+   - newgroup group_name:\n\
+    \  Register anew new group to change the default group of newly\n  created files.\n\
+    \n# 4.8. File permissions (+=Add and -=Remove permissions)\n\n# ls -lh\n\nDisplays\
+    \ permissions.\n\n# ls /tmp | pr -T5 -W$COLUMNS\n\nDivides the terminal into 5\
+    \ columns."
+  - '[PAGE 34]
+
+
+    ```
+
+    chmod ugo+rwx directory1
+
+    ```
+
+
+    Set read®, write (w) and execute (x) permissions for owner (u), group (g) and
+    others (or) on the directory ''file1''.
+
+
+    ```
+
+    chmod go-rwx directory1
+
+    ```
+
+
+    Remove read, write (w) and implementation group (x) (g) and others (or) permission
+    on directory ''file1''.
+
+
+    ```
+
+    chown user1 file1
+
+    ```
+
+
+    Change the owner of a file.
+
+
+    ```
+
+    chown -R user1 directory1
+
+    ```
+
+
+    Changes the owner of a directory and all files and directories contained within.'
+  - '[PAGE 35]
+
+
+    # chgrp group1 file1
+
+
+    Change the filegroup.
+
+
+    # chown user1
+
+
+    group1 file1
+
+
+    # find / -perm -u+s
+
+
+    View all files with SUID system configured.
+
+
+    # chmod u+s /bin/file1
+
+
+    Sets the SUID in a binary file. The user running this file acquires the same privileges
+    as owner.
+
+
+    # chmod us+s /bin/file1
+
+
+    Disables the SUID in a binary file.
+
+
+    # chmod g+s /home/public
+
+
+    Sets the SGID bit on a directory - similar to SUID, but for the directory.
+
+
+    # chmod gs /home/public
+
+
+    Turns off the SGID bit on a directory.
+
+
+    # chmod o+t /home/public
+
+
+    Set STIKY bit in a directory. Allows deletion of files only for legitimate owners.
+
+
+    # chmod ot /home/public
+
+
+    Turns off STIKY bit on a directory.
+
+
+    # I.9. Special file attributes: (+ = Add and - = Remove permissions)
+
+
+    # chattr +a file1
+
+
+    Allows recording by opening a file append mode.
+
+
+    # chattr +c file1
+
+
+    Allows a file to be zipped/unzipped automatically.
+
+
+    # chattr +d file1'
+  - '[PAGE 36]
+
+
+    It ensures that the program ignores deleting files during backup.
+
+
+    ```
+
+    chattr +i file1
+
+    ```
+
+
+    Makes the file unaltered so it cannot be deleted, changed, renamed, or linked.
+
+
+    ```
+
+    chattr +s file1
+
+    ```
+
+
+    Allows a file to be safely deleted.
+
+
+    ```
+
+    chattr +S file1
+
+    ```
+
+
+    It ensures that a file is modified, the changes are written in synchronous mode,
+    as with the sync.'
+  - '[PAGE 37]
+
+
+    # chattr +u file1
+
+
+    It allows you to recover the contents of a file even if it is cancelled.
+
+
+    # lsattr
+
+
+    Displays special attributes.
+
+
+    # 4.10. Compressed files and files
+
+
+    # bunzip2 file1.bz2
+
+
+    Unzip a file called ''file1.bz2''.
+
+
+    # bzip file1
+
+
+    Compress a file called ''file1''.
+
+
+    # gunzip file1.gz
+
+
+    Unzip a file called ''file1.gz''.
+
+
+    # gzip file1
+
+
+    Compress a file called ''file1''.
+
+
+    # gzip -9 file1
+
+
+    Compress with maximum compression.
+
+
+    # rar to file1.rar test_file
+
+
+    Create a file withrar called ''file1.rar''.
+
+
+    # rar to file1.rar file2 dir1
+
+
+    Compress ''file1'', ''file2'' and ''dir1'' simultaneously.
+
+
+    # rar x file1.rar
+
+
+    Unzip the rar file.
+
+
+    # unrar x file1.rar
+
+
+    Unzip the rar file.
+
+
+    # tar -cvf archive.tar file1
+
+
+    Creates an unzipped tarball.
+
+
+    # tar -cvf archive.tar file1 file2 dir1
+
+
+    Creates a file containing ''file1'', ''file2'' and ''dir1''.'
+  - '[PAGE 38]
+
+
+    ```
+
+    tar -tf archive.tar
+
+    ```
+
+
+    Display the contents of a file.
+
+
+    ```
+
+    tar -xvf archive.tar
+
+    ```
+
+
+    Extract a tar file.
+
+
+    ```
+
+    tar -xvf archive.tar -C /tmp
+
+    ```
+
+
+    Extract a tarball into /tmp.'
+  - '[PAGE 39]
+
+
+    ```
+
+    tar -cvfj archive.tar.bz2 dir1
+
+    ```
+
+
+    Creates a tar file compressed in bzip2.
+
+
+    ```
+
+    tar -xvjf archive.tar.bz2
+
+    ```
+
+
+    Unzip a compressed bzip2 file
+
+
+    ```
+
+    tar -cvfz archive.tar.gz dir1
+
+    ```
+
+
+    Creates a gzip-compressed tar file.
+
+
+    ```
+
+    tar -xvzf archive.tar.gz
+
+    ```
+
+
+    Unzip a compressed gzip tar file.
+
+
+    ```
+
+    zip file1.zip file1
+
+    ```
+
+
+    Creates a zip compressed file.
+
+
+    ```
+
+    zip -r file1.zip file1file2 dir1
+
+    ```
+
+
+    .compression of multiple files and directories simultaneously.
+
+
+    ```
+
+    unzip file1.zip
+
+    ```
+
+
+    Unzip a zip file.
+
+
+    # I.11. RPM packages (Red Hat, Fedora and derivatives)
+
+
+    ```
+
+    rpm -ivh package.rpm
+
+    ```
+
+
+    Install an rpm package.
+
+
+    ```
+
+    rpm -ivh --nodeeps package.rpm
+
+    ```
+
+
+    Installs an rpm package and ignores dependency requests.
+
+
+    ```
+
+    rpm -U package.rpm
+
+    ```
+
+
+    Updates an rpm package without changing the configuration files.
+
+
+    ```
+
+    rpm -F package.rpm
+
+    ```
+
+
+    Update an rpm package only if it “Commands” is installed.
+
+
+    ```
+
+    rpm -e package_name.rpm
+
+    ```
+
+
+    Remove an rpm package.'
+  - '[PAGE 40]
+
+
+    ```
+
+    rpm -qa
+
+    ```
+
+
+    Displays all rpm packages installed on the system.
+
+
+    ```
+
+    rpm -qa | grep httpd
+
+    ```
+
+
+    Displays all rpm of packages with the name “httpd”.
+
+
+    ```
+
+    rpm -qi package_name
+
+    ```
+
+
+    Information about a specific package installed.
+
+
+    ```
+
+    rpm -qg “System Environment/Daemons”
+
+    ```
+
+
+    Displays a group of software packages rpm.'
+  - '[PAGE 41]
+
+
+    # rpm -ql package_name
+
+
+    Displays the list of files provided by an installed rpm package.
+
+
+    # rpm -qc package_name
+
+
+    Displays the list of files, given by an installed rpm package configuration.
+
+
+    # rpm -q package_name -whatrequires
+
+
+    Displays list of dependencies that are required for an rpm package.
+
+
+    # rpm -q package_name -whatprovides
+
+
+    Displays the capacity provided by an rpm package.
+
+
+    # rpm -q package_name -scripts
+
+
+    Displays scripts started during uninstallation.
+
+
+    # rpm -q package_name -changelog
+
+
+    Displays the revision history of an rpm package.
+
+
+    # rpm -qf/etc/httpd/conf/httpd.conf
+
+
+    Checks which rpm package belongs to a given file.
+
+
+    # rpm -qp package.rpm -l
+
+
+    Displays the list of files provided by a package rpm that has not yet been installed.
+
+
+    # rpm -import/media/cdrom/RPM-GPG-KEY
+
+
+    Import the public key digital signature.
+
+
+    # rpm -checksig package.rpm
+
+
+    Checks the integrity of an rpm package.
+
+
+    # rpm -qa gpg-pubkey
+
+
+    Checks the integrity of all installed rpm packages.
+
+
+    # rpm -V package_name
+
+
+    Checks file size, licenses, types, owner, group, health check, summary of MD5
+    and last modification.
+
+
+    # rpm -V
+
+
+    Checks all rpm packages installed on the system. Use carefully.
+
+
+    # rpm -Vp package.rpm
+
+
+    Checks if an installed package is not rpm yet.'
+- md: '
+
+    ```
+
+    rpm2cpio package.rpm | cpio -extract-make-directories *bin*
+
+    ```
+
+
+    Extracts the executable file from an rpm package.
+
+
+    ```
+
+    rpm -ivh /usr/src/redhat/RPMS/arch/package.rpm
+
+    ```
+
+
+    Installs a package built from an rpm source.
+
+
+    ```
+
+    rpmbuild -rebuild package_name.src.rpm
+
+    ```
+
+
+    Builds an rpm package from a source rpm.
+
+
+    ## 4.12. YUM Updater packages (Red Hat, Fedora and derivatives)
+
+
+    `yum install package_name`
+
+    Download and install an rpm package.
+
+
+    `yum localinstall package_name.rpm`
+
+    It will install an RPM and will try to resolve all dependencies for you, using
+    your repositories.
+
+
+    `yum update package_name.rpm`
+
+    Updates all rpm packages installed on the system.
+
+
+    `yum update package_name`
+
+    Upgrade/update a rpm package.
+
+
+    `yum remove package_name`
+
+    Remove an rpm package.
+
+
+    `yum list`
+
+    Lists all packages installed on the system.
+
+
+    `yum search package_name`
+
+    Find a package in the rpm repository.
+
+
+    `yum clean packages`
+
+    Clears an rpm cache, deleting downloaded packages.
+
+
+    `yum clean headers`
+
+    Deletes all header files that the system uses to resolve the dependency.
+
+
+    `yum clean all`
+
+    Removes cache files and package header.
+
+
+    ## I.13. DEB packages (Debian, Ubuntu and derivatives)
+
+
+    `dpkg -i package.deb`
+
+    Installs/updates a deb package.
+
+
+    `dpkg -r package_name`
+
+    Remove a deb for the system package.
+
+
+    ```
+
+    dpkg -l
+
+    ```
+
+
+    Displays all deb packages installed on the system.
+
+
+    ```
+
+    dpkg -l | grep httpd
+
+    ```
+
+
+    Displays all deb packages with the name “httpd”
+
+
+    ```
+
+    dpkg -s package_name
+
+    ```
+
+
+    Information about a specific package installed on your system.
+
+
+    ```
+
+    dpkg -L package_name
+
+    ```
+
+
+    Displays list of files provided by a package installed on the system.
+
+
+    ```
+
+    dpkg -contents package.deb
+
+    ```
+
+
+    Displays a list of files provided by a package not yet installed.
+
+
+    ```
+
+    dpkg -S /bin/ping
+
+    ```
+
+
+    Checks which package a given file belongs to.
+
+
+    ## 4.14. APT Package Updater (Debian, Ubuntu and Derivatives)
+
+
+    ```
+
+    apt-get install package_name
+
+    ```
+
+
+    Installs/updates a deb package.
+
+
+    ```
+
+    apt-cdrom install package_name
+
+    ```
+
+
+    Installs/updates a deb package from cd-rom.
+
+
+    ```
+
+    apt-get update
+
+    ```
+
+
+    Updates the package list.
+
+
+    ```
+
+    apt-get upgrade
+
+    ```
+
+
+    Updates all installed packages.
+
+
+    ```
+
+    apt-get remove package_name
+
+    ```
+
+
+    Uninstalls a deb package from the system.
+
+
+    ```
+
+    apt-get purge program_name
+
+    ```
+
+
+    Uninstall a system program.
+
+
+    ```
+
+    apt-get check
+
+    ```
+
+
+    Checks if dependency resolutions are correct.
+
+
+    ```
+
+    apt-get clean
+
+    ```
+
+
+    Clear cache of downloaded packages.
+
+
+    ```
+
+    apt-cache search searched-package
+
+    ```
+
+
+    Returns the list of packages that correspond to the ''packages'' series.
+
+
+    ## I.15. View the contents of a file
+
+
+    ```
+
+    cat file1
+
+    ```
+
+
+    Displays the contents of a file starting from the first line.
+
+
+    ```
+
+    tac file1
+
+    ```
+
+
+    Displays the contents of a file starting from the last line.
+
+
+    ```
+
+    more file1
+
+    ```
+
+
+    Displays content across a file.
+
+
+    `less file1`
+
+
+    Similar to the ''more'' command but allows you to save the file as well as move
+    backwards.
+
+
+    `head -2 file1`
+
+
+    Displays the first two lines of a file.
+
+
+    `tail -2 file1`
+
+
+    Displays the last two lines of a file.
+
+
+    `tail -f /var/log/messages`
+
+
+    Displays in real time what has been added to the file.
+
+
+    ## 4.16. text manipulation
+
+
+    `cat file1 .. | command <> file1_in.txt_or_file1_out.txt`
+
+
+    General syntax for manipulating text using pipe, STDIN and STDOUT.
+
+
+    `cat file1 | command(sed, grep, awk, grep, etc...) > result.txt`
+
+
+    General syntax for manipulating text from a file and writing the results to a
+    new file.
+
+
+    `cat file1 | command(sed, grep, awk, grep, etc...) >> result.txt`
+
+
+    General syntax for manipulating text from a file and adding the result to an existing
+    file.
+
+
+    `grep Nov /var/log/messages`
+
+
+    Looks for the "Nov" in the /var/log/messages'' file.
+
+
+    `grep ^Nov /var/log/messages`
+
+
+    Search for words starting with "November" in the /var/log/messages'' file.
+
+
+    `grep [0-9] /var/log/messages`
+
+
+    Select all lines in the /var/log/messages'' file that contain numbers.
+
+
+    `grep Nov -R /var/log/*`
+
+
+    Finds the string "Nov" in the /var/log/ directory and below.
+
+
+    `sed ''s/string1/string2/g'' example.txt`
+
+
+    Relocates "string1" with "string2" in Example.txt.
+
+
+    ```
+
+    sed ''/^$/d'' example.txt
+
+    ```
+
+
+    Remove all blank lines from example.txt
+
+
+    ```
+
+    sed ''/ *#d; /^$/d'' example.txt
+
+    ```
+
+
+    Delete comments and blank lines from Example.txt
+
+
+    ```
+
+    sed -e ''1d'' result.txt
+
+    ```
+
+
+    Delete the first line of the result.txt file.
+
+
+    ```
+
+    sed -n ''/string1/p''
+
+    ```
+
+
+    Display only lines that contain the word “string1”.
+
+
+    ## I.17. Set the file conversion format
+
+
+    `dos2unix fileos.txt fileunix.txt`
+
+    Converts a text file format from MSDOS to UNIX.
+
+
+    `unix2dos fileunix.txt`
+
+    Converts a text file format from UNIX to MSDOS.
+
+
+    ## 4.18. File analysis
+
+
+    `badblocks -v`
+
+    Checks for bad blocks.
+
+
+    `fsck -y`
+
+    Checks and repairs the file system.
+
+
+    `du -sh`
+
+    Displays disk usage of directories.
+
+
+    `df -h`
+
+    Displays free disk space.
+
+
+    `ls -i`
+
+    Displays file inode numbers.
+
+
+    ## I.19. File system
+
+
+    `mkfs.ext4 /dev/sdb1`
+
+    Creates an ext4 file system.
+
+
+    `mount /dev/sdb1 /mnt`
+
+    Mounts a file system.
+
+
+    `umount /mnt`
+
+    Unmounts a file system.
+
+
+    ## 4.20. Backups
+
+
+    `tar -czf backup.tar.gz /home`
+
+    Creates a compressed tar archive.
+
+
+    `tar -xzf backup.tar.gz`
+
+    Extracts a compressed tar archive.
+
+
+    `tar -tvf backup.tar.gz`
+
+    Lists the contents of an archive.
+
+
+    `tar -cvf backup.tar.home`
+
+    Creates an uncompressed tar archive.
+
+
+    `rsync -av /source/ /destination/`
+
+    Synchronizes directories efficiently.
+
+
+    `cp -r /source/ /destination/`
+
+    Copies directories recursively.
+
+
+    `rm -rf /path/to/delete`
+
+    Deletes files and directories recursively and forcibly.
+
+    '
+  mdcn: '
+
+
+    ```
+
+    rpm2cpio package.rpm | cpio -extract-make-directories *bin*
+
+    ```
+
+
+    从 rpm 包中提取可执行文件。
+
+
+    ```
+
+    rpm -ivh /usr/src/redhat/RPMS/arch/package.rpm
+
+    ```
+
+
+    安装从 rpm 源码构建的包。
+
+
+    ```
+
+    rpmbuild -rebuild package_name.src.rpm
+
+    ```
+
+
+    从源码 rpm 重新构建 rpm 包。
+
+
+    ## 4.12. YUM 更新更新包（Red Hat, Fedora 及其衍生版）
+
+
+    `yum install package_name`
+
+    下载并安装一个 rpm 包。
+
+
+    `yum localinstall package_name.rpm`
+
+    它将安装一个 RPM 包，并尝试使用您的存储库为您解析所有的依赖关系。
+
+
+    `yum update package_name.rpm`
+
+    更新系统上安装的所有 rpm 包。
+
+
+    `yum update package_name`
+
+    升级/更新 rpm 包。
+
+
+    `yum remove package_name`
+
+    移除一个 rpm 包。
+
+
+    `yum list`
+
+    列出系统上安装的所有包。
+
+
+    `yum search package_name`
+
+    在 rpm 仓库中查找软件包。
+
+
+    `yum clean packages`
+
+    清除 rpm 缓存，删除已下载的包。
+
+
+    `yum clean headers`
+
+    删除系统用于解析依赖关系的所有包头文件。
+
+
+    `yum clean all`
+
+    移除缓存文件和包头文件。
+
+
+    ## I.13. DEB 包（Debian, Ubuntu 及其衍生版）
+
+
+    `dpkg -i package.deb`
+
+    安装/更新一个 deb 包。
+
+
+    `dpkg -r package_name`
+
+    移除系统包中的 deb 包。
+
+
+    ```
+
+    dpkg -l
+
+    ```
+
+
+    显示系统上安装的所有 deb 包。
+
+
+    ```
+
+    dpkg -l | grep httpd
+
+    ```
+
+
+    显示所有名称为“httpd”的 deb 包。
+
+
+    ```
+
+    dpkg -s package_name
+
+    ```
+
+
+    关于您系统上安装的特定软件包的信息。
+
+
+    ```
+
+    dpkg -L package_name
+
+    ```
+
+
+    显示系统上安装的软件包所提供的文件列表。
+
+
+    ```
+
+    dpkg -contents package.deb
+
+    ```
+
+
+    显示尚未安装的软件包所提供的文件列表。
+
+
+    ```
+
+    dpkg -S /bin/ping
+
+    ```
+
+
+    检查给定文件属于哪个软件包。
+
+
+    ## 4.14. APT 包更新器（Debian, Ubuntu 及其衍生版）
+
+
+    ```
+
+    apt-get install package_name
+
+    ```
+
+
+    安装/更新一个 deb 包。
+
+
+    ```
+
+    apt-cdrom install package_name
+
+    ```
+
+
+    从 cd-rom 安装/更新一个 deb 包。
+
+
+    ```
+
+    apt-get update
+
+    ```
+
+
+    更新软件包列表。
+
+
+    ```
+
+    apt-get upgrade
+
+    ```
+
+
+    更新所有已安装的包。
+
+
+    ```
+
+    apt-get remove package_name
+
+    ```
+
+
+    从系统中卸载 deb 包。
+
+
+    ```
+
+    apt-get purge program_name
+
+    ```
+
+
+    卸载一个系统程序。
+
+
+    ```
+
+    apt-get check
+
+    ```
+
+
+    检查依赖解析是否正确。
+
+
+    ```
+
+    apt-get clean
+
+    ```
+
+
+    清除已下载包的缓存。
+
+
+    ```
+
+    apt-cache search searched-package
+
+    ```
+
+
+    返回与 ''packages'' 系列相对应的软件包列表。
+
+
+    ## I.15. 查看文件内容
+
+
+    ```
+
+    cat file1
+
+    ```
+
+
+    从第一行开始显示文件内容。
+
+
+    ```
+
+    tac file1
+
+    ```
+
+
+    从最后一行开始显示文件内容。
+
+
+    ```
+
+    more file1
+
+    ```
+
+
+    跨页显示文件内容。
+
+
+    `less file1`
+
+
+    与 ''more'' 命令类似，但允许您保存文件并向后移动。
+
+
+    `head -2 file1`
+
+
+    显示文件的前两行。
+
+
+    `tail -2 file1`
+
+
+    显示文件的最后两行。
+
+
+    `tail -f /var/log/messages`
+
+
+    实时显示向文件中添加的内容。
+
+
+    ## 4.16. 文本处理
+
+
+    `cat file1 .. | command <> file1_in.txt_or_file1_out.txt`
+
+
+    使用管道、标准输入（STDIN）和标准输出（STDOUT）进行文本操作的通用语法。
+
+
+    `cat file1 | command(sed, grep, awk, grep, etc...) > result.txt`
+
+
+    从文件处理文本并将结果写入新文件的通用语法。
+
+
+    `cat file1 | command(sed, grep, awk, grep, etc...) >> result.txt`
+
+
+    从文件处理文本并将结果添加到现有文件的通用语法。
+
+
+    `grep Nov /var/log/messages`
+
+
+    在 /var/log/messages 文件中查找 "Nov"。
+
+
+    `grep ^Nov /var/log/messages`
+
+
+    在 /var/log/messages 文件中搜索以 "November" 开头的单词。
+
+
+    `grep [0-9] /var/log/messages`
+
+
+    选择 /var/log/messages 文件中包含数字的所有行。
+
+
+    `grep Nov -R /var/log/*`
+
+
+    在 /var/log/ 目录及其目录下查找字符串 "Nov"。
+
+
+    `sed ''s/string1/string2/g'' example.txt`
+
+
+    将 Example.txt 中的 "string1" 替换为 "string2"。
+
+
+    ```
+
+    sed ''/^$/d'' example.txt
+
+    ```
+
+
+    删除 example.txt 中的所有空行。
+
+
+    ```
+
+    sed ''/ *#d; /^$/d'' example.txt
+
+    ```
+
+
+    删除 Example.txt 中的注释和空行。
+
+
+    ```
+
+    sed -e ''1d'' result.txt
+
+    ```
+
+
+    删除 result.txt 文件的第一行。
+
+
+    ```
+
+    sed -n ''/string1/p''
+
+    ```
+
+
+    仅显示包含单词“string1”的行。
+
+
+    ## I.17. 设置文件转换格式
+
+
+    `dos2unix fileos.txt fileunix.txt`
+
+    将文本文件格式从 MSDOS  UNIX。
+
+
+    `unix2dos fileunix.txt`
+
+    将文本文件格式从 UNIX 转换为 MSDOS。
+
+
+    ## 4.18. 文件分析
+
+
+    `badblocks -v`
+
+    检查坏块。
+
+
+    `fsck -y`
+
+    检查并修复文件系统。
+
+
+    `du -sh`
+
+    显示目录的磁盘占用。
+
+
+    `df -h`
+
+    显示可用磁盘空间。
+
+
+    `ls -i`
+
+    显示文件 inode 号。
+
+
+    ## I.19. 文件系统
+
+
+    `mkfs.ext4 /dev/sdb1`
+
+    创建一个 ext4 文件系统。
+
+
+    `mount /dev/sdb1 /mnt`
+
+    挂载文件系统。
+
+
+    `umount /mnt`
+
+    卸载文件系统。
+
+
+    ## 4.20. 备份
+
+
+    `tar -czf backup.tar.gz /home`
+
+    创建一个压缩的 tar 归档。
+
+
+    `tar -xzf backup.tar.gz`
+
+    解压压缩的 tar 归档。
+
+
+    `tar -tvf backup.tar.gz`
+
+    列出归档的内容。
+
+
+    `tar -cvf backup.tar.home`
+
+    创建一个未压缩的 tar 归档。
+
+
+    `rsync -av /source/ /destination/`
+
+    高效同步目录。
+
+
+    `cp -r /source/ /destination/`
+
+    递归复制目录。
+
+
+    `rm -rf /path/to/delete`
+
+    强制递归删除文件和目录。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 42]
+
+
+    ```
+
+    rpm2cpio package.rpm | cpio -extract-make-directories *bin*
+
+    ```
+
+
+    Extracts the executable file from an rpm package.
+
+
+    ```
+
+    rpm -ivh /usr/src/redhat/RPMS/arch`package.rpm
+
+    ```
+
+
+    Installs a package built from an rpm source.
+
+
+    ```
+
+    rpmbuild -rebuild package_name.src.rpm
+
+    ```
+
+
+    Builds an rpm package from a source rpm.'
+  - '[PAGE 43]
+
+
+    # 4.12. YUM Updater packages (Red Hat, Fedora and derivatives)
+
+
+    yum install package_name
+
+    Download and install an rpm package.
+
+
+    yum localinstall package_name.rpm
+
+    It will install an RPM and will try to resolve all dependencies for you,
+
+    using your repositories.
+
+
+    yum update package_name.rpm
+
+    Updates all rpm packages installed on the system.
+
+
+    yum update package_name
+
+    Upgrade/update a rpm package.
+
+
+    yum remove package_name
+
+    Remove an rpm package.
+
+
+    yum list
+
+    Lists all packages installed on the system.
+
+
+    yum search package_name
+
+    Find a package in the rpm repository.
+
+
+    yum clean packages
+
+    Clears an rpm cache, deleting downloaded packages.
+
+
+    yum clean headers
+
+    Deletes all header files that the system uses to resolve the dependency.
+
+
+    yum clean all
+
+    Removes cache files and package header.
+
+
+    # I.13. DEB packages (Debian, Ubuntu and derivatives)
+
+
+    dpkg -i package.deb
+
+    Installs/updates a deb package.
+
+
+    dpkg -r package_name'
+  - '[PAGE 44]
+
+
+    Remove a deb for the system package.
+
+
+    ```
+
+    dpkg -l
+
+    ```
+
+
+    Displays all deb packages installed on the system.
+
+
+    ```
+
+    dpkg -l | grep httpd
+
+    ```
+
+
+    Displays all deb packages with the name “httpd”
+
+
+    ```
+
+    dpkg -s package_name
+
+    ```
+
+
+    Information about a specific package installed on your system.'
+  - '[PAGE 45]
+
+
+    ```
+
+    dpkg -L package_name
+
+    ```
+
+
+    Displays list of files provided by a package installed on the system.
+
+
+    ```
+
+    dpkg -contents package.deb
+
+    ```
+
+
+    Displays a list of files provided by a package not yet installed.
+
+
+    ```
+
+    dpkg -S /bin/ping
+
+    ```
+
+
+    Checks which package a given file belongs to.
+
+
+    # 4.14. APT Package Updater (Debian, Ubuntu and Derivatives)
+
+
+    ```
+
+    apt-get install package_name
+
+    ```
+
+
+    Installs/updates a deb package.
+
+
+    ```
+
+    apt-cdrom install package_name
+
+    ```
+
+
+    Installs/updates a deb package from cdomrom.
+
+
+    ```
+
+    apt-get update
+
+    ```
+
+
+    Updates the package list.
+
+
+    ```
+
+    apt-get upgrade
+
+    ```
+
+
+    Updates all installed packages.
+
+
+    ```
+
+    apt-get remove package_name
+
+    ```
+
+
+    Uninstalls a deb package from the system.
+
+
+    ```
+
+    apt-get purge program_name
+
+    ```
+
+
+    Uninstall a system program.
+
+
+    ```
+
+    apt-get check
+
+    ```
+
+
+    Checks if dependency resolutions are correct.
+
+
+    ```
+
+    apt-get clean
+
+    ```
+
+
+    Clear cache of downloaded packages.
+
+
+    ```
+
+    apt-cache search searched-package
+
+    ```
+
+
+    Returns the list of packages that correspond to the ''packages'' series.'
+  - '[PAGE 46]
+
+
+    # \text{I}15. View the contents of a file
+
+
+    ```
+
+    cat file1
+
+    ```
+
+
+    Displays the contents of a file starting from the first line.
+
+
+    ```
+
+    tac file1
+
+    ```
+
+
+    Displays the contents of a file starting from the last line.
+
+
+    ```
+
+    more file1
+
+    ```
+
+
+    Displays content across a file.'
+  - '[PAGE 47]
+
+
+    less file1
+
+
+    Similar to the ''more'' command but allows you to save the file as well as move
+    backwards.
+
+
+    head -2 file1
+
+
+    Displays the first two lines of a file.
+
+
+    tail -2 file1
+
+
+    Displays the last two lines of a file.
+
+
+    tail -f /var/log/messages
+
+
+    Displays in real time what has been added to the file.
+
+
+    # 4.16. text manipulation
+
+
+    cat file12 .. | command <> file1_in.txt_or_file1_out.txt
+
+
+    General syntax for manipulating text using pipe, STDIN and STDOUT.
+
+
+    cat file1 | command(sed, grep, awk, grep, etc...) > result.txt
+
+
+    General syntax for manipulating text from a file and writing the results to a
+    new file.
+
+
+    cat file1 | command(sed, grep, awk, grep, etc...) >> result.txt
+
+
+    General syntax for manipulating text from a file and adding the result to an existing
+    file.
+
+
+    grep Nov /var/log/messages
+
+
+    Looks for the "Nov" in the /var/log/messages'' file.
+
+
+    grep ^Nov /var/log/messages
+
+
+    Search for words starting with "November" in the /var/log/messages'' file
+
+
+    grep [0-9] /var/log/messages
+
+
+    Select all lines in the /var/log/messages'' file that contain numbers.
+
+
+    grep Nov -R /var/log/*
+
+
+    Finds the string "Nov" in the /var/log/ directory and below.
+
+
+    sed ''s/string1/string2/g'' example.txt
+
+
+    Relocates "string1" with "string2" in Example.txt'
+  - '[PAGE 48]
+
+
+    ```
+
+    sed ''/^$/d'' example.txt
+
+    ```
+
+
+    Remove all blank lines from example.txt
+
+
+    ```
+
+    sed ''/ *#d; /^$/d'' example.txt
+
+    ```
+
+
+    Delete comments and blank lines from Example.txt
+
+
+    ```
+
+    sed -e ''1d'' result.txt
+
+    ```
+
+
+    Delete the first line of the result.txt file
+
+
+    ```
+
+    sed -n ''/string1/p''
+
+    ```
+
+
+    Display only lines that contain the word “string1”.'
+  - '[PAGE 49]
+
+
+    # I.17. Set the file conversion format
+
+
+    dos2unix filedos.txt fileunix.txt
+
+    Converts a text file format from MSDOS to UNIX.
+
+
+    unix2dos fileunix.txt filedos.txt
+
+    Converts a UNIX text file format to MSDOS.
+
+
+    recode.HTML < page.txt > page.html
+
+    Convert a text file to html.
+
+
+    recode -l | more
+
+    Displays all available format conversions.
+
+
+    # 4.18. File system analysis
+
+
+    badblocks -v /dev/hda1
+
+    Checks for bad blocks on disk hda1.
+
+
+    fsck /dev/hda1
+
+    Repairs the integrity of the Linux system file on the hda1 disk.
+
+
+    fsck.ext2 /dev/hda1
+
+    Repairs the integrity of the ext2 file system on the hda1 disk.
+
+
+    e2fsck /dev/hda1
+
+    Repairs the integrity of the ext2 file system on the hda1 disk.
+
+
+    e2fsck -j /dev/hda1
+
+    Repairs the integrity of the ext3 file system on the hda1 disk.
+
+
+    fsck.ext3 /dev/hda1
+
+    Repairs the integrity of the ext3 file system on the hda1 disk.
+
+
+    fsck.vfat /dev/hda1
+
+    Repairs verifies integrity of file system fat disk hda1.
+
+
+    fsck.msdos /dev/hda1'
+  - '[PAGE 50]
+
+
+    Repairs/verifies the integrity of a file from dos on the hda1 disk system.
+
+
+    ```
+
+    dosfsck /dev/hda1
+
+    ```
+
+
+    Repairs/verifies the integrity of a file from dos on the hda1 disk system.
+
+
+    # I.19. Format file systems
+
+
+    ```
+
+    mkfs /dev/hda1
+
+    ```
+
+
+    Checks for bad blocks on disk hda1.'
+  - '[PAGE 51]
+
+
+    # mke2fs /dev/hda1
+
+
+    Repairs / verifies the integrity of the Linux system file on the hda1 disk.
+
+
+    # mke2fs -j /dev/hda1
+
+
+    Repairs/verifies the integrity of the ext2 file system on the hda1 disk.
+
+
+    # mkfs -t vfat 32 -F /dev/hda1
+
+
+    Repairs/verifies the integrity of the ext2 file system on the hda1 disk.
+
+
+    # fdformat -n /dev/fd0
+
+
+    Repairs/verifies the integrity of the ext3 file system on the hda1 disk.
+
+
+    # mkswap /dev/hda3
+
+
+    Repairs/verifies the integrity of the ext3 file system on the hda1 disk.
+
+
+    # 4.20. backups
+
+
+    # dump -0aj -f /tmp/home0.bak /home
+
+
+    Makes a full backup and saves the ''Home'' directory.
+
+
+    # dump -1aj -f /tmp/home0.bak /home
+
+
+    Makes an incremental backup of the '' /home'' directory.
+
+
+    # restore -if /tmp/home0.bak
+
+
+    Restores a save interactively.
+
+
+    # rsync -rogpav -delete /home /tmp
+
+
+    Synchronization between directories.
+
+
+    # rsync -rogpav -e ssh -delete /home ip_address
+
+
+    Rsync through the SSH tunnel.
+
+
+    # rsync -az -e ssh -delete ip_addr
+
+
+    Synchronize a local directory with a remote directory via ssh and compression.'
+  - '[PAGE 52]
+
+
+    ```
+
+    rsync -az -e ssh --delete /home/local ip_addr
+
+    ```
+
+
+    Sync a remote directory to a local directory through ssh and compression.
+
+
+    ```
+
+    dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr dd of=hda.gz
+
+    ```
+
+
+    Backs up a remote host''s hard drive via ssh.
+
+
+    ```
+
+    dd if=/dev/sda of=/tmp/file1
+
+    ```
+
+
+    Saves the contents of a hard drive to a file. (In this case the hard disk is
+
+    "sda" and the file
+
+    "file1").
+
+
+    ```
+
+    tar -Puf backup.tar /home/user
+
+    ```
+
+
+    Saves the /etc and root directories (excluding the contents of the /root/dir1/
+
+    subdirectory) to a file
+
+    compressed, whose name includes the current date and time.'
+  - '[PAGE 53]
+
+
+    ```
+
+    ( cd /tmp/local/ && tar c. ) | ssh -C user@ip_addr ''cd /home/share/ && tar x
+    -p''
+
+    ```
+
+
+    Copy the contents of a directory to a remote directory over ssh.
+
+
+    ```
+
+    ( tar c home ) | ssh -C user@ip_addr ''cd /home/backup-home &&& tar x -p''
+
+    ```
+
+
+    Copy a local directory to a remote directory over ssh.
+
+
+    ```
+
+    tar cf - | (cd /tmp/backup) ; tar xf -
+
+    ```
+
+
+    Copy the location preserving the licenses and links from one directory to another.
+
+
+    ```
+
+    find /home/user1 -name ''*.txt'' | xargs cp -av -target-directory=home/backup/-parents
+
+    ```
+
+
+    Find and copy all files with ''.txt'' extension from one directory to another
+
+
+    ```
+
+    find /var/log -name ''*.log'' | tar cv -files-from=- | bzip2 > log.tar.bz2
+
+    ```
+
+
+    Find all files with ''.log'' and make a bzip file.
+
+
+    ```
+
+    dd if=/dev/hda of=/dev/fd bs=512 count=1
+
+    ```
+
+
+    Makes a copy of the MRB (Master Boot Record) to a floppy disk.
+
+
+    ```
+
+    dd if=/dev/fd0 of=/dev/hda bs=512 count=1
+
+    ```
+
+
+    Restores the copy of the (MBR Master Boot Record) recorded on the floppy disk.
+
+
+    # I.21. CD-ROM
+
+
+    ```
+
+    cdrecord -v dev=/dev/cdrom -eject blank=fast -force
+
+    ```
+
+
+    Wipe erase a rewritable CD (CD-RW)
+
+
+    ```
+
+    mkisofs /dev/cdrom > cd.iso
+
+    ```
+
+
+    Creates an .iso image of the CD-ROM on disk.
+
+
+    ```
+
+    mkisofs /dev/cdrom | gzip > cd_iso.gz
+
+    ```
+
+
+    Creates a compressed image of the CD-ROM on disk.
+
+
+    ```
+
+    mkisofs -J-allow-leading-dots -R -V "Label CD" -iso-level 4 -0
+
+    ```'
+- md: '
+
+    ```
+
+    /cd.iso data_cd
+
+    ```
+
+    Creates an .iso image of a directory.
+
+
+    ```
+
+    cdrecord -v dev=/dev/cdrom cd.iso
+
+    ```
+
+    Writes an iso image.
+
+
+    ```
+
+    gzip -dc dc cd_iso.gz | cdrecord dev=/dev/cdrom
+
+    ```
+
+    Writes a compressed iso image.
+
+
+    ```
+
+    mount -o loop cd.iso /mnt/iso
+
+    ```
+
+    Mount an iso image.
+
+
+    ```
+
+    cd-paranoia -B
+
+    ```
+
+    Take music from a cd to wav files.
+
+
+    ```
+
+    cd-paranoia - "3"
+
+    ```
+
+    Take the first 3 songs from a cd to wav files.
+
+
+    ```
+
+    cdrecord -scanbus
+
+    ```
+
+    Scans the buffer to identify the scsi channel.
+
+
+    ```
+
+    dd if=/dev/hdc | md5sum
+
+    ```
+
+    Runs md5sum on a device, such as a CD.
+
+
+    ## 4.22. Networks (LAN and WiFi)
+
+
+    ```
+
+    ifconfig eth0
+
+    ```
+
+    Displays the configuration of an Ethernet network card.
+
+
+    ```
+
+    ifup eth0
+
+    ```
+
+    Activates an ''eth0'' interface.
+
+
+    ```
+
+    ifdown eth0
+
+    ```
+
+    Disables an ''eth0'' interface.
+
+
+    ```
+
+    ifconfig eth0 192.168.0.1 netmask 255.255.255.0
+
+    ```
+
+    Configure an IP address.
+
+
+    ```
+
+    ifconfig eth0 promisc
+
+    ```
+
+    Set ''eth0'' common mode to get packets (sniffing).
+
+
+    ```
+
+    dhclient eth0
+
+    ```
+
+    Activates the ''eth0'' interface in dhcp mode.
+
+
+    ```
+
+    route -n
+
+    ```
+
+    Displays route table.
+
+
+    ```
+
+    route add -net 0/0 gw IP_Gateway
+
+    ```
+
+    Configures the standard input.
+
+
+    ```
+
+    route add -net 192.168.0.0 netmask 255.255.255.0 gw 192.168.1.1
+
+    ```
+
+    Configure a static route to find the network, ''192.168.0.0/16''.
+
+
+    ```
+
+    route del 0/0 gw IP_gateway
+
+    ```
+
+    Removes the static route.
+
+
+    ```
+
+    echo "1" > /proc/sys/net/ipv4/ip_forward
+
+    ```
+
+    Enable route IP.
+
+
+    ## hostname
+
+    Displays the system hostname.
+
+
+    ## hostyww.example.com
+
+    Finds the hostname to resolve the name of an IP (1).
+
+
+    ## nslookupwww.example.com
+
+    Finds the hostname to resolve the name of an IP and vice versa (2).
+
+
+    ## ip link
+
+    Displays the status of all interfaces.
+
+
+    ## mii-tool eth0
+
+    Displays the status of ''eth0'' link.
+
+
+    ## ethtool eth0
+
+    Displays statistics for the ''eth0'' network card.
+
+
+    ## netstat -tupl
+
+    Displays all active network connections and their PID.
+
+
+    ## netstat -tupl
+
+    Displays all service network listeners on the system and their PID.
+
+
+    ## tcpdump tcp port 80
+
+    Displays all HTTP traffic.
+
+
+    ## iwlist scan
+
+    Displays wireless networks.
+
+
+    ## iwconfig eth1
+
+    Displays the configuration of a wireless network card.
+
+
+    ## whois.example.com
+
+    Search Whois database.
+
+
+    ## 4.23. Microsoft Windows Networks (SAMBA)
+
+
+    ## nbtscan ip_addr
+
+    BIOS network name resolution.
+
+
+    ## nmblookup -A ip_addr
+
+    BIOS network name resolution.
+
+
+    ## smbclient -L ip_addr/hostname
+
+    View remote shares from a windows host.
+
+
+    ## 4.24. Firewall (iptables)
+
+
+    ```
+
+    iptables -t filter -L
+
+    ```
+
+    Displays all streams in the filter table.
+
+
+    ```
+
+    iptables -t nat -L
+
+    ```
+
+    Displays all currents from the nat table.
+
+
+    ```
+
+    iptables -t filter -F
+
+    ```
+
+    Clears all rules from the filter table.
+
+
+    ```
+
+    iptables -t nat -F
+
+    ```
+
+    Clears all rules from the nat table.
+
+
+    ```
+
+    iptables -t filter -X
+
+    ```
+
+    Deletes any user-created strings.
+
+
+    ```
+
+    iptables -t filter -A INPUT -p tcp -dport telnet -j ACCEPT
+
+    ```
+
+    Allows incoming telnet connections.
+
+
+    ```
+
+    iptables -t filter -A OUTPUT -p tcp -dport http -j DROP
+
+    ```
+
+    Blocks outbound HTTP connections.
+
+
+    ```
+
+    iptables -t filter -A FORWARD -p tcp -dport pop3 -j ACCEPT
+
+    ```
+
+    Allows POP connections for a forward chain.
+
+
+    ```
+
+    iptables -t nat -A INPUT -j LOG --log-prefix “DROP INPUT”
+
+    ```
+
+    Registers an input string.
+
+
+    ```
+
+    iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+    ```
+
+    Configures a PAT (port address translation) on eth0, hiding outgoing packets from
+    coercion.
+
+
+    ## 4.25. Monitoring and Debugging
+
+
+    ```
+
+    top
+
+    ```
+
+    Displays the most CPU intensive Linux tasks.
+
+
+    ```
+
+    ps -eafw
+
+    ```
+
+    Displays Linux tasks.
+
+
+    ```
+
+    ps -e -o pid,args --forest
+
+    ```
+
+    Displays Linux tasks hierarchically.
+
+
+    ```
+
+    pstree
+
+    ```
+
+    Displays a tree of system processes.
+
+
+    ```
+
+    kill -9 Process_ID
+
+    ```
+
+    Forces a process to end.
+
+
+    ```
+
+    kill -1 Process_ID
+
+    ```
+
+    Forces a process to reload the configuration.
+
+
+    ```
+
+    lsof -p $$
+
+    ```
+
+    Displays a list of files opened by processes.
+
+
+    ```
+
+    lsof /home/user1
+
+    ```
+
+    Displays a list of open files in a given system path.
+
+
+    ```
+
+    strace -c ls >/dev/null
+
+    ```
+
+    Displays the system of calls made and received by a process.
+
+
+    ```
+
+    strace -f -e opens ls>/dev/null
+
+    ```
+
+    View calls to the library.
+
+
+    ```
+
+    watch -n1 ''cat /proc/interrupts''
+
+    ```
+
+    Displays real-time interruptions.
+
+
+    ```
+
+    last reboot
+
+    ```
+
+    Last system reboot.
+
+
+    ```
+
+    lsmod
+
+    ```
+
+    Displays the loaded kernel.
+
+
+    ```
+
+    free -m
+
+    ```
+
+    Displays RAM status in megabytes.
+
+
+    ```
+
+    smartctl -A /dev/hda
+
+    ```
+
+    Monitors the reliability of a hard drive through SMART.
+
+
+    ```
+
+    smartctl -i /dev/hda
+
+    ```
+
+    Checks if SMART is enabled on a hard drive.
+
+
+    ```
+
+    tail /var/log/dmesg
+
+    ```
+
+    Displays events inherent in the kernel loading process.
+
+
+    ```
+
+    tail /var/log/messages
+
+    ```
+
+    Displays system events.
+
+
+    ## 4.26. Helpful hints and commands
+
+
+    - **apropos ...keyword**
+
+    Displays a list of commands that pertain to a program''s keywords; useful when
+    you know what your program does, but doesn''t know the command name.
+
+
+    - **man ping**
+
+    Displays online manual pages; for example, a ping command, use the ''-k'' option
+    to find any related command.
+
+
+    - **whatis ...keyword**
+
+    Displays the description of what the program does.
+
+
+    ```
+
+    mkbootdisk --device /dev/fd0 `uname -r`
+
+    ```
+
+    Create a bootable floppy disk.
+
+
+    ```
+
+    gpg -c file1
+
+    ```
+
+    Encodes a file with the GNU security guard.
+
+
+    ```
+
+    gpg file1.gpg
+
+    ```
+
+    Decodes a file with GNU security guard, Linux U system information.
+
+
+    ```
+
+    wget -rww.example.com
+
+    ```
+
+    Download an entire site.
+
+
+    ```
+
+    wget -cww.example.com/file.iso
+
+    ```
+
+    Download a file with the possibility to stop the download and resume later.
+
+
+    ```
+
+    echo ''wget -cww.example.com/files.iso'' | at 09
+
+    ```
+
+    Download a file at 09
+
+
+    ```
+
+    ldd /usr/bin/ssh
+
+    ```
+
+    Displays shared libraries that are required by the ssh command.
+
+
+    ```
+
+    alias hh=''history''
+
+    ```
+
+    Put an alias for a command – hh = history.
+
+
+    ```
+
+    chsh
+
+    ```
+
+    Change the command shell.
+
+
+    ```
+
+    chsh –list-shells
+
+    ```
+
+    It is a suitable command to find out if you have remote control in another terminal.
+
+
+    ```
+
+    clear
+
+    ```
+
+    Clear the terminal screen.
+
+
+    ```
+
+    acommand > outputfile.txt 2>&1
+
+    ```
+
+    Executes a command and redirects the output to a file, combining STDOUT and STDERR.
+
+
+    ```
+
+    acommand | archivodesada.txt 2> archivodeerros.txt
+
+    ```
+
+    Run a command, you redirect the output (STDOUT) to a file and the errors (STDERR)
+    to other.
+
+
+    ```
+
+    acommand | tee file output.txt
+
+    ```
+
+    Executes a command, displays the output on the screen, and simultaneously writes
+    to a file.
+
+    '
+  mdcn: '
+
+
+    ```
+
+    /cd.iso data_cd
+
+    ```
+
+    为目录创建一个 .iso 镜像。
+
+
+    ```
+
+    cdrecord -v dev=/dev/cdrom cd.iso
+
+    ```
+
+    写入 iso 镜像。
+
+
+    ```
+
+    gzip -dc dc cd_iso.gz | cdrecord dev=/dev/cdrom
+
+    ```
+
+    写入压缩的 iso 镜像。
+
+
+    ```
+
+    mount -o loop cd.iso /mnt/iso
+
+    ```
+
+    挂载 iso 镜像。
+
+
+    ```
+
+    cd-paranoia -B
+
+    ```
+
+    将音乐从 cd 提取为 wav 文件。
+
+
+    ```
+
+    cd-paranoia - "3"
+
+    ```
+
+    将前 3 首歌歌曲从 cd 提取为 wav 文件。
+
+
+    ```
+
+    cdrecord -scanbus
+
+    ```
+
+    扫描缓冲区以识别 scsi 通道。
+
+
+    ```
+
+    dd if=/dev/hdc | md5sum
+
+    ```
+
+    在设备（如 CD）上运行 md5sum。
+
+
+    ## 4.22. 网络（局域网 LAN 和 WiFi）
+
+
+    ```
+
+    ifconfig eth0
+
+    ```
+
+    显示以太网网卡的配置信息。
+
+
+    ```
+
+    ifup eth0
+
+    ```
+
+    激活 ''eth0'' 接口。
+
+
+    ```
+
+    ifdown eth0
+
+    ```
+
+    禁用 ''eth0'' 接口。
+
+
+    ```
+
+    ifconfig eth0 192.168.0.1 netmask 255.255.255.0
+
+    ```
+
+    配置 IP 地址。
+
+
+    ```
+
+    ifconfig eth0 promisc
+
+    ```
+
+    设置 ''eth0'' 为混杂模式以获取数据包（嗅探）。
+
+
+    ```
+
+    dhclient eth0
+
+    ```
+
+    在 dhcp 模式下激活 ''eth0'' 接口。
+
+
+    ```
+
+    route -n
+
+    ```
+
+    显示路由表。
+
+
+    ```
+
+    route add -net 0/0 gw IP_Gateway
+
+    ```
+
+    配置默认输入。
+
+
+    ```
+
+    route add -net 192.168.0.0 netmask 255.255.255.0 gw 192.168.1.1
+
+    ```
+
+    配置静态路由以查找网络 ''192.168.0.0/16''。
+
+
+    ```
+
+    route del 0/0 gw IP_gateway
+
+    ```
+
+    删除静态路由。
+
+
+    ```
+
+    echo "1" > /proc/sys/net/ipv4/ip_forward
+
+    ```
+
+    启用 IP 路由转发。
+
+
+    ## hostname
+
+    显示系统主机名。
+
+
+    ## hostyww.example.com
+
+    查找用于解析 IP 名称的主机名 (1)。
+
+
+    ## nslookupwww.example.com
+
+    查找用于解析 IP 名称的主机名，反之亦然 (2)。
+
+
+    ## ip link
+
+    显示所有接口的状态。
+
+
+    ## mii-tool eth0
+
+    显示 ''eth0''链路状态。
+
+
+    ## ethtool eth0
+
+    显示 ''eth0'' 网卡的统计数据。
+
+
+    ```
+
+    netstat -tupl
+
+    ```
+
+    显示所有活跃的网络连接及其 PID。
+
+
+    ```
+
+    netstat -tupl
+
+    显示系统上所有的服务网络监听器及其 PID。
+
+
+    ```
+
+    tcpdump tcp port 80
+
+    显示所有 HTTP 流量。
+
+
+    ```
+
+    iwlist scan
+
+    显示无线网络。
+
+
+    ```
+
+    iwconfig eth1
+
+    ```
+
+    显示无线网卡的配置。
+
+
+    ## whois.example.com
+
+    搜索 Whois 数据库。
+
+
+    ## 4.23. 微软 Windows 网络 (SAMBA)
+
+
+    ## nbtscan ip_addr
+
+    BIOS 网络名称解析。
+
+
+    ## nmblookup -A ip_addr
+
+    BIOS 网络名称解析。
+
+
+    ## smbclient -L ip_addr/hostname
+
+    查看来自 Windows 宿机的远程共享。
+
+
+    ## 4.24. 防火墙 (iptables)
+
+
+    ```
+
+    iptables -t filter -L
+
+    ```
+
+    显示 filter 表中的所有流。
+
+
+    ```
+
+    iptables -t nat -L
+
+    ```
+
+    显示 nat 表中的所有当前。
+
+
+    ```
+
+    iptables -t filter -F
+
+    ```
+
+    清除 filter 表中的所有规则。
+
+
+    ```
+
+    iptables -t nat -F
+
+    ```
+
+    清除 nat 表中的所有规则。
+
+
+    ```
+
+    iptables -t filter -X
+
+    ```
+
+    删除任何用户创建的链（strings）。
+
+
+    ```
+
+    iptables -t filter -A INPUT -p tcp -dport telnet -j ACCEPT
+
+    ```
+
+    允许入站 telnet 连接。
+
+
+    ```
+
+    iptables -t filter -A OUTPUT -p tcp -dport http -j DROP
+
+    ```
+
+    阻塞出的 HTTP 连接。
+
+
+    ```
+
+    iptables -t filter -A FORWARD -p tcp -dport pop3 -j ACCEPT
+
+    ```
+
+    允许转发链的 POP 连接。
+
+
+    ```
+
+    iptables -t nat -A INPUT -j LOG --log-prefix “DROP INPUT”
+
+    ```
+
+    注册一个输入字符串。
+
+
+    ```
+
+    iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+    ```
+
+    在 eth0 上配置 PAT（端口地址转换），隐藏传出的数据包以防止强制。
+
+
+    ## 4.25. 监控与调试
+
+
+    ```
+
+    top
+
+    ```
+
+    显示 CPU 占用最高的 Linux 任务。
+
+
+    ```
+
+    ps -eafw
+
+    ```
+
+    显示 Linux 任务。
+
+
+    ```
+
+    ps -e -o pid,args --forest
+
+    ```
+
+    以树形结构显示 Linux 任务。
+
+
+    ```
+
+    pstree
+
+    ```
+
+    显示进程树。
+
+
+    ```
+
+    kill -9 Process_ID
+
+    ```
+
+    强制结束进程。
+
+
+    ```
+
+    kill -1 Process_ID
+
+    ```
+
+    重新加载配置。
+
+
+    ```
+
+    lsof -p Process_ID
+
+    ```
+
+    显示进程打开的文件。
+
+
+    ```
+
+    lsof /home/user
+
+    ```
+
+    显示指定路径下的打开文件。
+
+
+    ```
+
+    strace -c >/dev/null
+
+    ```
+
+    显示系统调用的统计。
+
+
+    ```
+
+    strace -f -e ls >dev/null
+
+    ```
+
+    查看库的调用。
+
+
+    ```
+
+    watch -n1 ''cat /proc/interrupts''
+
+    ```
+
+    实时显示中断。
+
+
+    ```
+
+    last reboot
+
+    ```
+
+    最后一次重启记录。
+
+
+    ```
+
+
+    lsmod
+
+    ```
+
+    显示加载的内核模块。
+
+
+    ```
+
+    free -m
+
+    ```
+
+    以 MB 为单位显示内存状态。
+
+
+    ```
+
+    smartctl -A /dev/hda
+
+    ```
+
+    通过 SMART 监控硬盘可靠性。
+
+
+    ```
+
+    smartctl -i /dev/hda
+
+    ```
+
+    检查硬盘是否启用了 SMART。
+
+
+    ```
+
+    tail /var/log/dmesg
+
+    ```
+
+    显示内核加载过程中的事件。
+
+
+    ```
+
+    tail /var/log/messages
+
+    ```
+
+    显示系统事件。
+
+
+    ## 4.26. 提示命令
+
+
+    - **apropos ...keyword**
+
+    显示与关键词命令列表；当你知道程序的功能但不知道命令名称时非常有用。
+
+
+    - **man ping**
+
+    显示在线帮助页；例如 ping 命令，使用 ''-k'' 选项查找任何相关命令。
+
+
+    - **whatis ...keyword**
+
+    显示程序的功能描述。
+
+
+    ```
+
+    mkbootdisk --device /fd0 `uname -r`
+
+    ```
+
+    创建一个可启动软盘。
+
+
+    ```
+
+    gpg -c file1
+
+    ```
+
+    使用 GNU 安全守护者加密文件。
+
+
+    ```
+
+    gpg file1.gpg
+
+    ```
+
+    使用 GNU 安全守护者解密文件，系统信息。
+
+
+    ```
+
+    wget -rww.example.com
+
+    ```
+
+    下载整个站点。
+
+
+    ```
+
+    wget -cww.example.com/file.iso
+
+    ```
+
+    下载文件并支持停止后恢复。
+
+
+    ```
+
+    echo ''wget -cww.example.com/files.iso'' | at 09
+
+    ```
+
+    在 09 点定时下载文件。
+
+
+    ```
+
+    ldd /usr/bin/ssh
+
+    ```
+
+    显示 ssh 命令所需的共享库。
+
+
+    ```
+
+    alias hh=''history''
+
+    ```
+
+    为命令设置别名 – hh = history。
+
+
+    ```
+
+    chsh
+
+    ```
+
+    更改命令行 shell。
+
+
+    ```
+
+    chsh --list-shells
+
+    ```
+
+    这是一个用于检查是否在另一个终端中具有远程控制权的合适命令。
+
+
+    ```
+
+    clear
+
+    ```
+
+    清除终端屏幕。
+
+
+    ```
+
+    acommand > outputfile.txt 2>&1
+
+    ```
+
+    执行命令并将输出重定向到文件，合并标准输出和标准错误。
+
+
+    ```
+
+    acommand | archivodesada.txt 2> archivodeerros.txt
+
+    ```
+
+    运行命令，将输出（STDOUT）重定向到文件，将错误（STDERR）重定向到另一个文件。
+
+
+    ```
+
+    acommand | tee file output.txt
+
+    ```
+
+    执行命令，在屏幕上显示输出并同时写入文件。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 54]
+
+
+    ```
+
+    /cd.iso data_cd
+
+    ```
+
+
+    Creates an .iso image of a directory.
+
+
+    ```
+
+    cdrecord -v dev=/dev/cdrom cd.iso
+
+    ```
+
+
+    Writes an iso image.
+
+
+    ```
+
+    gzip -dc dc cd_iso.gz | cdrecord dev=/dev/cdrom
+
+    ```
+
+
+    Writes a compressed iso image.
+
+
+    ```
+
+    mount -o loop cd.iso /mnt/iso
+
+    ```
+
+
+    Mount an iso image.
+
+
+    ```
+
+    cd-paranoia -B
+
+    ```
+
+
+    Take music from a cd to wav files.
+
+
+    ```
+
+    cd-paranoia - "3"
+
+    ```
+
+
+    Take the first 3 songs from a cd to wav files.'
+  - '[PAGE 55]
+
+
+    ```
+
+    cdrecord -scanbus
+
+    ```
+
+
+    Scans the buffer to identify the scsi channel.
+
+
+    ```
+
+    dd if=/dev/hdc | md5sum
+
+    ```
+
+
+    Runs md5sum on a device, such as a CD.
+
+
+    # 4.22. Networks (LAN and WiFi)
+
+
+    ```
+
+    ifconfig eth0
+
+    ```
+
+
+    Displays the configuration of an Ethernet network card.
+
+
+    ```
+
+    ifup eth0
+
+    ```
+
+
+    Activates an ''eth0'' interface.
+
+
+    ```
+
+    ifdown eth0
+
+    ```
+
+
+    Disables an ''eth0'' interface.
+
+
+    ```
+
+    ifconfig eth0 192.168.0.1 netmask 255.255.255.0
+
+    ```
+
+
+    Configure an IP address.
+
+
+    ```
+
+    ifconfig eth0 promisc
+
+    ```
+
+
+    Set ''eth0'' common mode to get packets (sniffing).
+
+
+    ```
+
+    dhclient eth0
+
+    ```
+
+
+    Activates the ''eth0'' interface in dhcp mode.
+
+
+    ```
+
+    route -n
+
+    ```
+
+
+    Displays route table.
+
+
+    ```
+
+    route add -net 0/0 gw IP_Gateway
+
+    ```
+
+
+    Configures the standard input.
+
+
+    ```
+
+    route add -net 192.168.0.0 netmask 255.255.255.0 gw
+
+    192.168.1.1
+
+    ```
+
+
+    Configure a static route to find the network, ''192.168.0.0/16''.
+
+
+    ```
+
+    route del 0/0 gw IP_gateway
+
+    ```
+
+
+    Removes the static route.
+
+
+    ```
+
+    echo "1" > /proc/sys/net/ipv4/ip_forward
+
+    ```'
+  - '[PAGE 56]
+
+
+    Enable route IP.
+
+
+    # hostname
+
+
+    Displays the system hostname.
+
+
+    # hostyww.example.com
+
+
+    Finds the hostname to resolve the name of an IP (1).
+
+
+    # nslookupwww.example.com
+
+
+    Finds the hostname to resolve the name of an IP and vice versa (2).'
+  - '[PAGE 57]
+
+
+    # ip link
+
+
+    Displays the status of all interfaces.
+
+
+    # mii-tool eth0
+
+
+    Displays the status of ''eth0'' link.
+
+
+    # ethtool eth0
+
+
+    Displays statistics for the ''eth0'' network card.
+
+
+    # netstat -tupl
+
+
+    Displays all active network connections and their PID.
+
+
+    # netstat -tupl
+
+
+    Displays all service network listeners on the system and their PID.
+
+
+    # tcpdump tcp port 80
+
+
+    Displays all HTTP traffic.
+
+
+    # iwlist scan
+
+
+    Displays wireless networks.
+
+
+    # iwconfig eth1
+
+
+    Displays the configuration of a wireless network card.
+
+
+    # whois.example.com
+
+
+    Search Whois database.
+
+
+    # I.23. Microsoft Windows Networks (SAMBA)
+
+
+    # nbtscan ip_addr
+
+
+    BIOS network name resolution.
+
+
+    # nmblookup -A ip_addr
+
+
+    BIOS network name resolution.
+
+
+    # smbclient -L ip_addr/hostname
+
+
+    View remote shares from a windows host.'
+  - '[PAGE 58]
+
+
+    # 4.24. Firewall (iptables)
+
+
+    ```
+
+    iptables -t filter -L
+
+    ```
+
+
+    Displays all streams in the filter table.
+
+
+    ```
+
+    iptables -t nat -L
+
+    ```
+
+
+    Displays all currents from the nat table.
+
+
+    ```
+
+    iptables -t filter -F
+
+    ```
+
+
+    Clears all rules from the filter table.'
+  - '[PAGE 59]
+
+
+    # iptables -t nat -F
+
+
+    Clears all rules from the nat table.
+
+
+    # iptables -t filter -X
+
+
+    Deletes any user-created strings.
+
+
+    # iptables -t filter -A INPUT -p tcp -dport telnet -j ACCEPT
+
+
+    Allows incoming telnet connections.
+
+
+    # iptables -t filter -A OUTPUT -p tcp -dport http -j DROP
+
+
+    Blocks outbound HTTP connections.
+
+
+    # iptables -t filter -A FORWARD -p tcp -dport pop3 -j ACCEPT
+
+
+    Allows POP connections for a forward chain.
+
+
+    # iptables -t nat -A INPUT -j LOG --log-prefix “DROP INPUT”
+
+
+    Registers an input string.
+
+
+    # iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+
+    Configures a PAT (port address translation) on eth0, hiding outgoing packets from
+    coercion.
+
+
+    # I.25. Monitoring and Debugging
+
+
+    # top
+
+
+    Displays the most CPU intensive Linux tasks.
+
+
+    # ps -eafw
+
+
+    Displays Linux tasks.
+
+
+    # ps -e -o pid,args --forest
+
+
+    Displays Linux tasks hierarchically.
+
+
+    # pstree
+
+
+    Displays a tree of system processes.
+
+
+    # kill -9 Process_ID
+
+
+    Forces a process to end.'
+  - '[PAGE 60]
+
+
+    ```
+
+    kill -1 Process_ID
+
+    ```
+
+
+    Forces a process to reload the configuration.
+
+
+    ```
+
+    lsof -p $$
+
+    ```
+
+
+    Displays a list of files opened by processes.
+
+
+    ```
+
+    lsof /home/user1
+
+    ```
+
+
+    Displays a list of open files in a given system path.
+
+
+    ```
+
+    strace -c ls >/dev/null
+
+    ```
+
+
+    Displays the system of calls made and received by a process.'
+  - '[PAGE 61]
+
+
+    ```
+
+    strace -f -e opens ls>/dev/null
+
+    View calls to the library.
+
+    ```
+
+
+    ```
+
+    watch -n1 ''cat /proc/interrupts''
+
+    Displays real-time interruptions.
+
+    ```
+
+
+    ```
+
+    last reboot
+
+    Last system reboot.
+
+    ```
+
+
+    ```
+
+    lsmod
+
+    Displays the loaded kernel.
+
+    ```
+
+
+    ```
+
+    free -m
+
+    Displays RAM status in megabytes.
+
+    ```
+
+
+    ```
+
+    smartctl -A /dev/hda
+
+    Monitors the reliability of a hard drive through SMART.
+
+    ```
+
+
+    ```
+
+    smartctl -i /dev/hda
+
+    Checks if SMART is enabled on a hard drive.
+
+    ```
+
+
+    ```
+
+    tail /var/log/dmesg
+
+    Displays events inherent in the kernel loading process.
+
+    ```
+
+
+    ```
+
+    tail /var/log/messages
+
+    Displays system events.
+
+    ```
+
+
+    # 4.26. Helpful hints and commands
+
+
+    apropos ...keyword
+
+    Displays a list of commands that pertain to a program''s keywords; useful when
+    you
+
+    know what your program does, but doesn''t know the command name.
+
+
+    man ping
+
+    Displays online manual pages; for example a ping command, use the ''-k'' option
+    to find
+
+    any related command.
+
+
+    whatis ...keyword'
+  - '[PAGE 62]
+
+
+    Displays the description of what the program does.
+
+
+    ```
+
+    mkbootdisk --device /dev/fd0 `uname -r`
+
+    ```
+
+
+    Create a bootable floppy disk.
+
+
+    ```
+
+    gpg -c file1
+
+    ```
+
+
+    Encodes a file with the GNU security guard.
+
+
+    ```
+
+    gpg file1.gpg
+
+    ```
+
+
+    Decodes a file with GNU security guard, Linux U system information.'
+  - '[PAGE 63]
+
+
+    ```
+
+    wget -rww.example.com
+
+    ```
+
+
+    Download an entire site.
+
+
+    ```
+
+    wget -cww.example.com/file.iso
+
+    ```
+
+
+    Download a file with the possibility to stop the download and resume later.
+
+
+    ```
+
+    echo ''wget -cww.example.com/files.iso'' | at 09
+
+    ```
+
+
+    Download a file at 09 am
+
+
+    ```
+
+    ldd /usr/bin/ssh
+
+    ```
+
+
+    Displays shared libraries that are required by the ssh command.
+
+
+    ```
+
+    alias hh=''history''
+
+    ```
+
+
+    Put an alias for a command – hh = history.
+
+
+    ```
+
+    chsh
+
+    ```
+
+
+    Change the command shell.
+
+
+    ```
+
+    chsh –list-shells
+
+    ```
+
+
+    It is a suitable command to find out if you have remote control in another terminal.
+
+
+    ```
+
+    clear
+
+    ```
+
+
+    Clear the terminal screen.
+
+
+    ```
+
+    acommand > outputfile.txt 2>&1
+
+    ```
+
+
+    Executes a command and redirects the output to a file, combining STDOUT and STDERR.
+
+
+    ```
+
+    acommand | archivodesada.txt 2> archivodeerros.txt
+
+    ```
+
+
+    Run a command, you redirect the output (STDOUT) to a file and the errors (STDERR)
+    to other.
+
+
+    ```
+
+    acommand | tee file output.txt
+
+    ```
+
+
+    Executes a command, displays the output on the screen, and simultaneously writes
+    to a file.'
