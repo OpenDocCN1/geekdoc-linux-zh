@@ -1,0 +1,4978 @@
+- img_proc: true
+  md: 'BY BOBBY ILIEV
+
+
+    # # Introduction to Bash Scripting
+
+
+    FOR DEVELOPERS
+
+
+    ![](img/7521519cf793a2e66883462104020ab5_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   About the book ................................................................................................
+    8
+
+    About the author ..............................................................................................
+    9
+
+    Sponsors ............................................................................................................
+    10
+
+    Ebook PDF Generation Tool .................................................................
+    12
+
+    Ebook ePub Generation Tool ................................................................
+    13
+
+    Book Cover .......................................................................................................
+    14
+
+    License ................................................................................................................
+    15
+
+
+    +   Introduction to Bash scripting ...................................................................
+    16
+
+
+    +   Bash Structure ................................................................................................
+    17
+
+
+    +   Bash Hello World .......................................................................................
+    18
+
+
+    +   Bash Variables ...............................................................................................
+    20
+
+
+    +   Bash User Input ............................................................................................
+    24
+
+
+    +   Bash Comments ............................................................................................
+    26
+
+
+    +   Bash Arguments ..........................................................................................
+    27
+
+
+    +   Bash Arrays ...............................................................................................
+    29
+
+    Substring in Bash :: Slicing ........................................................................
+    31
+
+
+    +   Bash Conditional Expressions ........................................................
+    33'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '+   File expressions ................................................................................
+    34
+
+
+    +   String expressions ...............................................................................
+    36
+
+
+    +   Arithmetic operators .......................................................................
+    38
+
+
+    +   Exit status operators ........................................................................
+    40
+
+
+    # Bash Conditionals ..........................................................................
+    41
+
+
+    +   If statement ......................................................................................
+    42
+
+
+    +   If Else statement .............................................................................
+    43
+
+
+    +   Switch case statements ................................................................
+    46
+
+
+    +   Conclusion ...................................................................................
+    48
+
+
+    # Bash Loops .................................................................................
+    49
+
+
+    +   For loops ......................................................................................
+    50
+
+
+    +   While loops ................................................................................
+    52
+
+
+    +   Until Loops ................................................................................
+    54
+
+
+    +   Continue and Break ........................................................
+    55
+
+
+    # Bash Functions ..........................................................................
+    57
+
+
+    # Debugging, testing and shortcuts ........................................ 59
+
+
+    # Creating custom bash commands ........................................ 62
+
+
+    +   Example ...................................................................................
+    63
+
+
+    +   Making the change persistent ....................................... 65
+
+
+    +   Listing all of the available aliases ................................ 66
+
+
+    +   Conclusion ...................................................................
+    67
+
+
+    # Write your first Bash script ....................................... 68
+
+
+    +   Planning the script ......................................................
+    69
+
+
+    +   Writing the script ......................................................
+    70'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Adding comments .................................................................................
+    71
+
+
+    Adding your first variable ...................................................................
+    72
+
+
+    Adding your first function ................................................................
+    73
+
+
+    Adding more functions challenge ........................................................
+    75
+
+
+    The sample script ..............................................................................
+    76
+
+
+    Conclusion .......................................................................................
+    78
+
+
+    # Creating an interactive menu in Bash ..........................................
+    79
+
+
+    Planning the functionality ..........................................................
+    80
+
+
+    Adding some colors ..........................................................................
+    82
+
+
+    # Adding the menu ................................................................................
+    83
+
+
+    Testing the script .......................................................................
+    85
+
+
+    Conclusion .......................................................................................
+    88
+
+
+    # Executing BASH scripts on Multiple Remote Servers ................... 89
+
+
+    Prerequisites ..........................................................................
+    90
+
+
+    The BASH Script ......................................................................
+    91
+
+
+    Running the Script on all Servers ........................................ 93
+
+
+    Conclusion .......................................................................................
+    94
+
+
+    # Work with JSON in BASH using jq ................................................
+    95
+
+
+    Planning the script ..........................................................
+    96
+
+
+    Installing jq ..........................................................................
+    97
+
+
+    Parsing JSON with jq ....................................................... 99
+
+
+    Getting the first element with jq ................................... 101
+
+
+    Getting a value only for specific key ................................... 102
+
+
+    Using jq in a BASH script ........................................ 103
+
+
+    Conclusion .......................................................................................
+    106'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Working with Cloudflare API with Bash 107
+
+
+    Prerequisites ................................................................................................
+    108
+
+
+    Challenge - Script requirements .......................................................................
+    109
+
+
+    Example script ...................................................................................................
+    110
+
+
+    Conclusion .......................................................................................................
+    112
+
+
+    # BASH Script parser to Summarize Your NGINX and Apache Access Logs 113
+
+
+    # Script requirements ................................................................................
+    114
+
+
+    Example script .................................................................................................
+    115
+
+
+    Running the script ......................................................................................
+    116
+
+
+    Understanding the output ......................................................................
+    117
+
+
+    Conclusion .......................................................................................................
+    118
+
+
+    # Sending emails with Bash and SMTPM 119
+
+
+    Prerequisites ...................................................................................
+    120
+
+
+    Installing SMTPP ...............................................................................
+    121
+
+
+    Configuring SMTPP .............................................................................
+    122
+
+
+    Sending emails with SMTPP ......................................................
+    123
+
+
+    Sending A File with SMTPP (optional) ....................................... 124
+
+
+    Conclusion .......................................................................................
+    125
+
+
+    # Password Generator Bash Script 126
+
+
+    :warning: Security ........................................................................
+    127
+
+
+    Script summary ..........................................................................
+    128
+
+
+    Prerequisites .......................................................................
+    129
+
+
+    Generate a random password ...................................................
+    130
+
+
+    The script ...................................................................
+    132
+
+
+    The full script: .......................................................... 133'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   Conclusion ................................................................................................
+    134
+
+
+    +   Contributed by ............................................................................................
+    135
+
+
+    +   Redirection in Bash ................................................................................
+    136
+
+
+    +   Difference between Pipes and Redirections ........................................
+    137
+
+
+    +   Redirection in Bash ................................................................................
+    138
+
+
+    +   STDIN (Standard Input) ...................................................................
+    139
+
+
+    +   STDOUT (Standard Output) ............................................................
+    140
+
+
+    +   STDERR (Standard Error) ...................................................................
+    142
+
+
+    +   Piping ................................................................................................
+    144
+
+
+    +   HereDocument .......................................................................................
+    146
+
+
+    +   HereString ..........................................................................................
+    148
+
+
+    +   Summary ............................................................................................
+    149
+
+
+    +   Automatic Wordpress on LAMP installation with BASH ................... 150
+
+
+    +   Prerequisites .......................................................................................
+    151
+
+
+    +   Planning the functionality .........................................................
+    152
+
+
+    +   The script ..........................................................................................
+    154
+
+
+    +   The full script ................................................................................
+    161
+
+
+    +   Summary ............................................................................................
+    165'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# # About the book
+
+
+    +   * This version was published on Feb 01 2021
+
+
+    This is an open-source introduction to Bash scripting guide that will help you
+    learn the basics of Bash scripting and start writing awesome Bash scripts that
+    will help you automate your daily SysOps, DevOps, and Dev tasks. No matter if
+    you are a DevOps/SysOps engineer, developer, or just a Linux enthusiast, you can
+    use Bash scripts to combine different Linux commands and automate tedious and
+    repetitive tasks so that you can focus on more productive and fun things.
+
+
+    The guide is suitable for anyone working as a developer, system administrator,
+    or a DevOps engineer and wants to learn the basics of Bash scripting.
+
+
+    The first 13 chapters would be purely focused on getting some solid Bash scripting
+    foundations, then the rest of the chapters would give you some real-life examples
+    and scripts.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# About the author
+
+
+    My name is Bobby Iliev, and I have been working as a Linux DevOps Engineer since
+    2014. I am an avid Linux lover and supporter of the open-source movement philosophy.
+    I am always doing that I cannot do in order that I may learn how to do it, and
+    I believe in sharing knowledge.
+
+
+    I think it''s essential always keep professional and surround yourself with good
+    people, work hard, and be nice to everyone. You have to perform at a consistently
+    higher level than others. That''s the mark of a true professional.
+
+
+    For more information, please visit my blog at https://bobbyiliev.com, follow me
+    on Twitter @bobbyiliev_ and YouTube.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Sponsors
+
+
+    This book is made possible thanks to these fantastic companies!
+
+
+    # Materialize
+
+
+    The Streaming Database for Real-time Analytics.
+
+
+    Materialize is a reactive database that delivers incremental view updates. Materialize
+    helps developers easily build with streaming data using standard SQL.
+
+
+    # DigitalOcean
+
+
+    DigitalOcean is a cloud services platform delivering the simplicity developers
+    love and businesses trust to run production at scale.
+
+
+    It provides highly available, secure, and scalable compute, storage, and networking
+    solutions that help developers build software faster.
+
+
+    Founded in 2012 with offices in New York and Cambridge, MA, DigitalOcean offers
+    transparent and affordable pricing, an elegant user interface, and one of the
+    largest libraries of open source resources available.
+
+
+    For more information, please visit https://www.digitalocean.com or follow @digitalocean
+    on Twitter.
+
+
+    If you are new to DigitalOcean, you can get a free $100 credit and spin up your
+    own servers via this referral link:
+
+
+    Free $100 Credit For DigitalOcean
+
+
+    # DevDojo
+
+
+    DevDojo is a resource to learn all things web development and web design. Learn
+    on your lunch break or wake up and enjoy a cup of coffee with us to learn something
+    new.
+
+
+    Join this developer community, and we can all learn together, build together,
+    and grow together.
+
+
+    Join DevDojo'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: For more information, please visit https://www.devdojo.com or follow @thedevdojo
+    on Twitter.
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Ebook PDF Generation Tool
+
+
+    This ebook was generated by Ibis developed by Mohamed Said.
+
+
+    Ibis is a PHP tool that helps you write eBooks in markdown.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Ebook ePub Generation Tool
+
+
+    The ePub version was generated by Pandoc.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Book Cover
+
+
+    The cover for this ebook was created with Canva.com.
+
+
+    If you ever need to create a graphic, poster, invitation, logo, presentation –
+    or anything that looks good — give Canva a go.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# License
+
+
+    MIT License
+
+
+    Copyright (c) 2020 Bobby Iliev
+
+
+    Permission is hereby granted
+
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+    INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+    PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+    HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+    OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Introduction to Bash scripting
+
+
+    Welcome to this Bash basics training guide! In this **bash crash course**, you
+    will learn the **Bash basics** so you could start writing your own Bash scripts
+    and automate your daily tasks.
+
+
+    Bash is a Unix shell and command language. It is widely available on various operating
+    systems, and it is also the default command interpreter over most Linux systems.
+
+
+    Bash stands for Bourne-Again SHell. As with other shells, you can use Bash interactively
+    directly in your terminal, and also, you can use Bash like any other programming
+    language to write scripts. This book will help you learn the basics of Bash including
+    Bash Variables, User Input, Comments, Arguments, Arrays, Conditional Expressions,
+    Conditionals, Loops, Functions, Debugging, and testing.
+
+
+    Bash scripts are great for automating repetitive workloads and can help you save
+    time considerably. For example, imagine working with a group of five developers
+    on a project that requires a tedious environment setup. In order for the program
+    to work correctly, each developer will have to manually set up the environment.
+    That''s the same and very long task (setting up the environment) repeated five
+    times at least. This is where you and Bash scripts come to the rescue! So instead,
+    you create a simple text file containing all the necessary instructions and share
+    it with your teammates. And now, all they have to execute the Bash script and
+    everything will be created for them.
+
+
+    In order to write Bash scripts, you just need a UNIX terminal and a text editor
+    like Sublime Text, VS Code, or a terminal-based editor like vim or nano.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Bash Structure
+
+
+    Let''s start by creating a new file with a .sh extension. As an example, we could
+    create a file called devdojo.sh.
+
+
+    To create that file, you can use the touch command:
+
+
+    ```
+
+    touch devdojo.sh
+
+    ```
+
+
+    Or you can use your text editor instead:
+
+
+    ```
+
+    nano devdojo.sh
+
+    ```
+
+
+    In order to execute/run a bash script file with the bash shell interpreter, the
+    first line of a script must indicate the absolute path to the bash executable:
+
+
+    ```
+
+    #!/bin/bash
+
+    ```
+
+
+    This is also called a Shebang.
+
+
+    All that the shebang does is to instruct the operating system to run the script
+    with the /bin/bash executable.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# # Bash Hello World
+
+
+    Once we have our devdojo.sh file created and we''ve specified the shebang on the
+    very first line, we are ready to create our first Hello World script.
+
+
+    To do that, open the devdojo.sh file again and add the following after the #!/bin/bash
+    line
+
+
+    ```
+
+    #!/bin/bash
+
+
+    echo "Hello World!"
+
+    ```
+
+
+    Save the file and exit.
+
+
+    After that make the script executable by running:
+
+
+    ```
+
+    chmod +x devdojo.sh
+
+    ```
+
+
+    After that execute the file:
+
+
+    ```
+
+    ./devdojo.sh
+
+    ```
+
+
+    You will see a "Hello World" message on the screen.
+
+
+    Another way to run the script would be:
+
+
+    ```
+
+    bash devdojo.sh
+
+    ```
+
+
+    As bash can be used interactively, you could run the following command directly
+    in your terminal and you would get the same result:'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '```
+
+    echo "Hello DevDojo!"
+
+    ```
+
+
+    Putting a script together is useful once you have to combine multiple commands
+    together.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# # Bash Variables
+
+
+    As in any other programming language, you can use variables in Bash Scripting
+    as well. However, there are no data types, and a variable in Bash can contain
+    numbers as well as characters.
+
+
+    To assign a value to a variable, all you need to do is the = sign:
+
+
+    ```
+
+    name="DevDojo"
+
+    ```
+
+
+    > > Notice: as an important note, you can not have spaces before and after the
+    = sign.
+
+
+    After that, to access the variable, you have to use the $ and reference it as
+    shown below:
+
+
+    ```
+
+    echo $name
+
+    ```
+
+
+    Wrapping the variable name between curly brackets is not required, but is considered
+    a good practice, and I would advise you to use them whenever you can:
+
+
+    ```
+
+    echo ${name}
+
+    ```
+
+
+    The above code would output: DevDojo as this is the value of our name variable.
+
+
+    Next, let''s update our devmojo.sh script and include a variable in it.
+
+
+    Again, you can open the file devdojo.sh with your favorite text editor, I''m using
+    nano here to open the file:'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '```
+
+    nano devdojo.sh
+
+    ```
+
+
+    Adding our name variable here in the file, with a welcome message. Our file now
+    looks like this:
+
+
+    ```
+
+    #!/bin/bash
+
+    name="DevDojo"
+
+    echo "Hi there $name"
+
+    ```
+
+
+    Save it and run the file using the command below:
+
+
+    ```
+
+    ./devdojo.sh
+
+    ```
+
+
+    You would see the following output on your screen:
+
+
+    Hi there DevDojo
+
+
+    Here is a rundown of the script written in the file:
+
+
+    +   * #!/bin/bash - At first, we specified our shebang.
+
+    * name=DevDojo - Then, we defined a variable called name and assigned a value
+    to it.
+
+    * echo "Hi there $name" - Finally, we output the content of the variable on the
+    screen as a welcome message by using echo
+
+
+    You can also add multiple variables in the file as shown below:
+
+
+    ```
+
+    #!/bin/bash
+
+    name="DevDojo"
+
+    greeting="Hello"
+
+    echo "$greeting $name"
+
+    ```'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Save the file and run it again:
+
+
+    ```
+
+    ./devdojo.sh
+
+    ```
+
+
+    You would see the following output on your screen:
+
+
+    ```
+
+    Hello DevDojo
+
+    ```
+
+
+    Note that you don''t necessarily need to add semicolon ; at the end of each line.
+    It works both ways, bit like other programming language such as JavaScript!
+
+
+    You can also add variables in the Command Line outside the Bash script and they
+    can be read as parameters:
+
+
+    ```
+
+    ./devdojo.sh Bobby buddy!
+
+    ```
+
+
+    This script takes in two parameters Bobby buddy! seperated by space. In the devdojo.sh
+    file we have the following:
+
+
+    ```
+
+    #!/bin/bash
+
+    echo "Hello there" $1
+
+    ```
+
+
+    $1 is the first input (Bobby) in the Command Line. Similarly, there could be more
+    inputs and they are all referred to the $ sign and their respective order of input.
+    This means that buddy! is referenced to using $2. Another useful method for reading
+    variables is the $@ which reads all inputs.
+
+
+    So now let''s change the devdojo.sh file to better understand:'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '```
+
+    #!/bin/bash
+
+    necho "Hello there" $1
+
+    # $1 : first parameter
+
+    echo "Hello there" $2
+
+    # $2 : second parameter
+
+    echo "Hello there" $@
+
+    # $@ : all
+
+    ```
+
+
+    The oupat for:
+
+
+    ```
+
+    ./devdojo.sh Bobby buddy!
+
+    ```
+
+
+    Would be the following:
+
+
+    ```
+
+    Hello there Bobby
+
+    Hello there buddy!
+
+    Hello there Bobby buddy!
+
+    ```'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Bash User Input
+
+
+    With the previous script, we defined a variable, and we output the value of the
+    variable on the screen with the echo $name.
+
+
+    Now''s go ahead and ask the user for input instead. To do that again, open the
+    file with your favorite text editor and update the script as follows:
+
+
+    ```
+
+    #!/bin/bash
+
+    necho "What is your name?"
+
+    read name
+
+
+    echo "Hi there $name"
+
+    echo "Welcome to DevDojo!"
+
+    ```
+
+
+    The above will prompt the user for input and then store that input as a string/text
+    in a variable.
+
+
+    We can then use the variable and print a message back to them.
+
+
+    The output of the above script would be:
+
+
+    +   - First run the script:
+
+
+    ```
+
+    ./devdojo.sh
+
+    ```
+
+
+    +   - Then, you would be prompted to enter your name:
+
+
+    ```
+
+    What is your name?
+
+    Bobby
+
+    ```
+
+
+    +   - Once you''ve typed your name, just hit enter, and you will get the following
+    output:'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'Hi there Bobby
+
+    Welcome to DevDojo!
+
+
+    To reduce the code, we could change the first echo statement with the read -p,
+    the read command used with -p flag will print a message before prompting the user
+    for their input:
+
+
+    ```
+
+    #!/bin/bash
+
+    nread -p "What is your name? " name
+
+    echo "Hi there $name"
+
+    echo "Welcome to DevDojo!"
+
+    ```
+
+
+    Make sure to test this out yourself as well!'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# # Bash Comments\n\nAs with any other programming language, you can add comments\
+    \ to your script. Comments are used to leave yourself notes through your code.\n\
+    \nTo do that in Bash, you will need to add the # symbol at the beginning of the\
+    \ line. Comments will never be rendered on the screen.\n\nHere is an example of\
+    \ a comment:\n\n```\n# This is a comment and will not be rendered on the screen\n\
+    ```\n\nLet's go ahead and add some comments to our script:\n\n```\n#!/bin/bash\n\
+    # Ask the user for their name\nread -p \"What is your name? \" name\n\n Greet\
+    \ the user\necho \"Hi there $name\"\necho \"Welcome to DevDojo!\"\n```\n\nComments\
+    \ are a great way to describe some of the more complex functionality directly\
+    \ in your scripts so that other people could find their way around your code with\
+    \ ease."
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Bash Arguments
+
+
+    You can pass arguments to your shell script when you execute it. To pass an argument,
+    you just need to write it right after the name of your script. For example:
+
+
+    ```
+
+    .devdojo.com your_argument
+
+    ```
+
+
+    In the script, we can then use $1 in order to reference the first argument that
+    we specified.
+
+
+    If we pass a second argument, it would be available as $2 and so on.
+
+
+    Let''s create a short script called arguments.sh as an example:
+
+
+    ```
+
+    #!/bin/bash
+
+    echo "Argument one is $1"
+
+    echo "Argument two is $2"
+
+    echo "Argument three is $3"
+
+    ```
+
+
+    Save the file and make it executable:
+
+
+    ```
+
+    chmod +x arguments.sh
+
+    ```
+
+
+    Then run the file and pass 3 arguments:
+
+
+    ```
+
+    ./arguments.sh dog cat bird
+
+    ```
+
+
+    The output that you would get would be:'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'Argument one is dog
+
+    Argument two is cat
+
+    Argument three is bird
+
+
+    To reference all arguments, you can use $@:
+
+
+    ```
+
+    #!/bin/bash
+
+
+    echo "All arguments: $@"
+
+    ```
+
+
+    If you run the script again:
+
+
+    ```
+
+    ./arguments.sh dog cat bird
+
+    ```
+
+
+    You will get the following output:
+
+
+    All arguments: dog cat bird
+
+
+    Another thing that you need to keep in mind is that $0 is used to reference the
+    script itself.
+
+
+    This is an excellent way to create self destruct the file if you need to or just
+    get the name of the script.
+
+
+    For example, let''s create a script that prints out the name of the file and deletes
+    the file after that:
+
+
+    ```
+
+    #!/bin/bash
+
+
+    echo "The name of the file is: $0 and it is going to be self-deleted."
+
+
+    rm - f $0
+
+    ```
+
+
+    You need to be careful with the self deletion and ensure that you have your script
+    backed up before you self-delete it.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Bash Arrays
+
+
+    If you have ever done any programming, you are probably already familiar with
+    arrays.
+
+
+    But just in case you are not a developer, the main thing that you need to know
+    is that unlike variables, arrays can hold several values under one name.
+
+
+    You can initialize an array by assigning values divided by space and enclosed
+    in ().
+
+    Example:
+
+
+    ```
+
+    my_array=("value 1" "value 2" "value 3" "value 4")
+
+    ```
+
+
+    To access the elements in the array, you need to reference them by their numeric
+    index.
+
+
+    > Notice: keep in mind that you need to use curly brackets.
+
+
+    +   - Access a single element, this would output: value 2
+
+
+    ```
+
+    echo ${my_array[1]}
+
+    ```
+
+
+    +   - This would return the last element: value 4
+
+
+    ```
+
+    echo ${my_array[-1]}
+
+    ```
+
+
+    +   - As with command line arguments using @ will return all arguments in the
+    array, as follows: value 1 value 2 value 3 value 4
+
+
+    ```
+
+    echo ${my_array[@]}
+
+    ```'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '+   - Prepending the array with a hash sign (#) would output the total number
+    of elements in the array, in our case it is 4:
+
+
+    ```
+
+    echo ${#my_array[@]}}
+
+    ```
+
+
+    Make sure to test this and practice it at your end with different values.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Substring in Bash :: Slicing
+
+
+    Let''s review the following example of slicing in a string in Bash:
+
+
+    ```
+
+    #!/bin/bash
+
+    letters=( "A""B""C""D""E" )
+
+    echo ${letters[@]}
+
+    ```
+
+
+    This command will print all the elements of an array:
+
+
+    Output:
+
+
+    ```
+
+    $ ABCDE
+
+    ```
+
+
+    Let''s see a few more examples:
+
+
+    +   - Example 1
+
+
+    ```
+
+    #!/bin/bash
+
+    letters=( "A""B""C""D""E" )
+
+    b=\${letters:0:2}
+
+    echo "${b}"
+
+    ```
+
+
+    This command will print array from starting index 0 to 2 where 2 is exclusive.
+
+
+    ```
+
+    $ AB
+
+    ```
+
+
+    +   - Example 2'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '```
+
+    #!/bin/bash
+
+
+    letters=( "A"B"C"D"E" )
+
+    b=\${letters::5}
+
+    echo "${b}"
+
+    ```
+
+
+    This command will print from from base index 0 to 5, where 5 is exclusive and
+    starting index
+
+    is default set to 0.
+
+
+    # $ ABCDE
+
+
+    +   - Example 3
+
+
+    ```
+
+    #!/bin/bash
+
+
+    letters=( "A"B"C"D"E" )
+
+    b=\${letters:3}
+
+    echo "${b}"
+
+    ```
+
+
+    This command will print from starting index 3 to end of array inclusive .
+
+
+    # $ DE'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# # Bash Conditional Expressions
+
+
+    In computer science, conditional statements, conditional expressions, and conditional
+    constructs are features of a programming language, which perform different computations
+    or actions depending on whether a programmer-specified boolean condition evaluates
+    to true or false.
+
+
+    In Bash, conditional expressions are used by the [[ compound command and the [built-in
+    commands to test file attributes and perform string and arithmetic comparisons.
+
+
+    Here is a list of the most popular Bash conditional expressions. You do not have
+    to memorize them by heart. You can simply refer back to this list whenever you
+    need it!'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# File expressions
+
+
+    +   - True if file exists.
+
+
+    ```
+
+    [[ -a ${file} ]]
+
+    ```
+
+
+    +   - True if file exists and is a block special file.
+
+
+    ```
+
+    [[ -b ${file} ]]
+
+    ```
+
+
+    +   - True if file exists and is a character special file.
+
+
+    ```
+
+    [[ -c ${file} ]]
+
+    ```
+
+
+    +   - True if file exists and is a directory.
+
+
+    ```
+
+    [[ -d ${file} ]]
+
+    ```
+
+
+    +   - True if file exists.
+
+
+    ```
+
+    [[ -e ${file} ]]
+
+    ```
+
+
+    +   - True if file exists and is a regular file.
+
+
+    ```
+
+    [[ -f ${file} ]]
+
+    ```
+
+
+    +   - True if file exists and is a symbolic link.
+
+
+    ```
+
+    [[ -h ${file} ]]
+
+    ```'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '+   * True if file exists and is readable.
+
+
+    ```
+
+    [[ -r ${file} ]]
+
+    ```
+
+
+    +   * True if file exists and has a size greater than zero.
+
+
+    ```
+
+    [[ -s ${file} ]]
+
+    ```
+
+
+    +   * True if file exists and is writable.
+
+
+    ```
+
+    [[ -w ${file} ]]
+
+    ```
+
+
+    +   * True if file exists and is executable.
+
+
+    ```
+
+    [[ -x ${file} ]]
+
+    ```
+
+
+    +   * True if file exists and is a symbolic link.
+
+
+    ```
+
+    [[ -L ${file} ]]
+
+    ```'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# String expressions
+
+
+    +   - True if the shell variable varname is set (has been assigned a value).
+
+
+    ```
+
+    [[ -v ${varname} ]]
+
+    ```
+
+
+    True if the length of the string is zero.
+
+
+    ```
+
+    [[ -z ${string} ]]
+
+    ```
+
+
+    True if the length of the string is non-zero.
+
+
+    ```
+
+    [[ -n ${string} ]]
+
+    ```
+
+
+    +   - True if the strings are equal. = should be used with the test command for
+    POSIX conformance. When used with the [[ command, this performs pattern matching
+    as described above (Compound Commands).
+
+
+    ```
+
+    [[ ${string1} == ${string2} ]]
+
+    ```
+
+
+    +   - True if the strings are not equal.
+
+
+    ```
+
+    [[ ${string1} != ${string2} ]]
+
+    ```
+
+
+    +   - True if string1 sorts before string2 lexicographically.
+
+
+    ```
+
+    [[ ${string1} < ${string2} ]]
+
+    ```
+
+
+    +   - True if string1 sorts after string2 lexicographically.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '```
+
+    [[ ${string1} > ${string2} ]]
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Arithmetic operators
+
+
+    +   * Returns true if the numbers are equal
+
+
+    ```
+
+    [[ ${arg1} -eq ${arg2} ]]
+
+    ```
+
+
+    +   * Returns true if the numbers are not equal
+
+
+    ```
+
+    [[ ${arg1} -ne ${arg2} ]]
+
+    ```
+
+
+    +   * Returns true if arg1 is less than arg2
+
+
+    ```
+
+    [[ ${arg1} -lt ${arg2} ]]
+
+    ```
+
+
+    +   * Returns true if arg1 is less than or equal arg2
+
+
+    ```
+
+    [[ ${arg1} -le ${arg2} ]]
+
+    ```
+
+
+    +   * Returns true if arg1 is greater than arg2
+
+
+    ```
+
+    [[ ${arg1} -gt ${arg2} ]]
+
+    ```
+
+
+    +   * Returns true if arg1 is greater than or equal arg2
+
+
+    ```
+
+    [[ ${arg1} -ge ${arg2} ]]
+
+    ```
+
+
+    As a side note, arg1 and arg2 may be positive or negative integers.
+
+
+    As with other programming languages you can use AND & OR conditions:'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '```
+
+    [[ test_case_1 ]] && [[ test_case_2 ]] # And
+
+    [[ test_case_1 ]] || [[ test_case_2 ]] # Or
+
+    ```'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Exit status operators
+
+
+    +   - returns true if the the command was successful without any errors
+
+
+    ```
+
+    [[ $? -eq 0 ]]
+
+    ```
+
+
+    +   - returns true if the the command was not successful or had errors
+
+
+    ```
+
+    [[ $? -gt 0 ]]
+
+    ```'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Bash Conditionals
+
+
+    In the last section, we covered some of the most popular conditional expressions.
+    We can now use them with standard conditional statements like `if`, `if-else`
+    and `switch case` statements.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# If statement
+
+
+    The format of an if statement in Bash is as follows:
+
+
+    ```
+
+    if [[ some_test ]]
+
+    then
+
+    <commands>
+
+    fi
+
+    ```
+
+
+    Here is a quick example which would ask you to enter your name in case that you''ve
+    left it empty:
+
+
+    ```
+
+    #!/bin/bash
+
+
+    # Bash if statement example
+
+
+    read -p "What is your name? " name
+
+    if [[ -z ${name} ]]
+
+    then
+
+    echo "Please enter your name!"
+
+    fi
+
+    ```'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# If Else statement\n\nWith an if-else statement, you can specify an action\
+    \ in case that the condition in the if statement does not match. We can combine\
+    \ this with the conditional expressions from the previous section as follows:\
+    \ \n\n```\n#!/bin/bash\n\n# Bash if statement example\n\nread -p \"What is your\
+    \ name? \" name\n\nif [[ -z ${name} ]]\nthen\n    echo \"Please enter your name!\"\
+    \nelse\n    echo \"Hi there ${name}\"\nfi\n```\n\nYou can use the above if statement\
+    \ with all of the conditional expressions from the previous chapters:\n\n```\n\
+    #!/bin/bashjo\n\nadmin=\"devdojo\"\n\nread -p \"Enter your username? \" username\n\
+    \n# Check if the username provided is the admin\n\nif [[ \"${username}\" == \"\
+    ${admin}\" ]]; then\n    echo \"You are the admin user!\"\nelse\n    echo \"You\
+    \ are NOT the admin user\"\nfi\n```\n\nHere is another example of an if statement\
+    \ which would check your current User ID and would not allow you to run the script\
+    \ as the root user:"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "```\n#!/bin/bash\n\nif (( $EUID == 0 )); then\n    echo \"Please do not run\
+    \ as root\"\n    exit\nfi\n```\n\nIf you put this on top of your script it would\
+    \ exit in case that the EUID is 0 and would not execute the rest of the script.\
+    \ This was discussed on the DigitalOcean community forum.\n\nYou can also test\
+    \ multiple conditions with an if statement. In this example we want to make sure\
+    \ that the user is not the admin user or the root user to ensure the script is\
+    \ incapable of causing too much damage. Use the or operator in this example, noted\
+    \ by ||. This means that either of the conditions needs to be true. If we used\
+    \ the operator of && then both conditions would need to be true.\n\n```\n#!/bin/bash\n\
+    \nadmin=\"devdojo\"\nread -p \"Enter your username? \" username\n\n# Check if\
+    \ the username provided is the admin\nnif [[ \"${username}\" != \"${admin}\" ]]\
+    \ || [[ $EUID != 0 ]];\nthen\n    echo \"You are not the admin or root user, but\
+    \ please safe!\"\nelse\n    echo \"You are the admin user! This could be very\
+    \ destructive!\"\nfi\n```\n\nIf you have multiple conditions and scenerios, then\
+    \ can use elif statement with if and else statements."
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\n#!/bin/bash\n\nread -p \"Enter a number: \" num\n\nif [[ $num -gt 0 ]];\
+    \ then\n    echo \"The number is positive\"\nelif [[ $num -lt 0 ]]; then\n   \
+    \ echo \"The number is negative\"\nelse\n    echo \"The number is 0\"\nfi\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# Switch case statements\n\nAs in other programming languages, you can use\
+    \ a case statement to simplify complex conditionals when there are multiple different\
+    \ choices. So rather than using a few if, if-else statements, you could use a\
+    \ single case statement.\n\nThe Bash case statement syntax looks like this:\n\n\
+    ```\ncase $some_variable in\n  pattern_1)\n    commands\n    ;\n  pattern_2| pattern_3)\n\
+    \    commands\n    ;\n  *)\n    default commands\n    ;\nesac\n```\n\nA quick\
+    \ rundown of the structure:\n\n+   - All case statements start with the case keyword.\n\
+    - On the same line as the case keyword, you need to specify a variable or an expression\
+    \ followed by the in keyword.\n- After that, you use case patterns, where you\
+    \ need to use ) to identify the end of the pattern.\n- You can specify multiple\
+    \ patterns divided by a pipe: |\n- After the pattern, you specify the commands\
+    \ that you would like to be executed in case that pattern matches the variable\
+    \ or the expression that you've specified.\n- All clauses have to be terminated\
+    \ by adding ;; ; at the end.\n- You can have a default statement by adding a *\
+    \ as the pattern.\n- To close the case statement, use the esac (case typed backwards)\
+    \ keyword.\n\nHere is an example of a Bash case statement:"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '```
+
+    #!/bin/bash
+
+    read -p "Enter the name of your car brand: " car in
+
+    case $car in
+
+    Tesla)
+
+    echo -n "${car}''s car factory is in the USA."
+
+    ;;
+
+    BMW | Mercedes | Audi | Porsche)
+
+    echo -n "${car}''s car factory is in Germany."
+
+    ;;
+
+    Toyota | Mazda | Mitsubishi | Subaru)
+
+    echo -n "${car}''s car factory is in Japan."
+
+    ;;
+
+    *)
+
+    echo -n "${car} is an unknown car brand"
+
+    ;;
+
+    esesac
+
+    ```
+
+
+    With this script, we are asking the user to input a name of a car brand like Tesla,
+    BMW, Mercedes and etc.
+
+
+    Then with a case statement, we check the brand name and if it matches any of our
+    patterns, and if so, we print out the factory''s location.
+
+
+    If the brand name does not match any of case statements, we print out a default
+    message: an unknown car brand.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Conclusion
+
+
+    I would advise you to try and modify the script and play with it a bit so that
+    you could practice what you''ve just learned in the last two chapters!
+
+
+    For more examples of Bash case statements, make sure to check chapter 16, where
+    we would create an interactive menu in Bash using a cases statement to process
+    the user input.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Bash Loops
+
+
+    As with any other language, loops are very convenient. With Bash you can use `for`
+    loops, `while` loops, and `until` loops.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# For loops\n\nHere is the structure of a for loop:\n\n```\nfor var in ${list}\n\
+    do\n  your_commands\ndone\n```\n\nExample:\n\n```\n#!/bin/bash\nnusers=\"devdojo\
+    \ bobby tony\"\nfor user in ${users}\ndo\n  echo \"${user}\"\ndone\n```\n\nA quick\
+    \ rundown of the example:\n\n+   - First, we specify a list of users and store\
+    \ the value in a variable called $users.\n- After that, we start our for loop\
+    \ with the for keyword.\n- Then we define a new variable which would represent\
+    \ each item from the list that we give. In our case, we define a variable called\
+    \ user, which would represent each user from the $users variable.\n- Then we specify\
+    \ the in keyword followed by our list that we will loop through.\n- On the next\
+    \ line, we use the do keyword, which indicates what we will do for each iteration\
+    \ of the loop.\n- Then we specify the commands that we want to run.\n- Finally,\
+    \ we close the loop with the done keyword.\n\nYou can also use for to process\
+    \ a series of numbers. For example here is one way to loop through 1 to 10:"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\n#!/bin/bash\nfor num in {1..10}\ndo\n  echo ${num}\ndone\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# While loops\n\nThe structure of a while loop is quite similar to the for\
+    \ loop:\n\n```\nwhile [ your_condition ]\ndo\n  your_commands\ndone\n```\n\nHere\
+    \ is an example of a while loop:\n\n```\n#!/bin/bash\n\ncounter=1\nwhile [[ $counter\
+    \ -le 10 ]]\ndo\n  echo $counter\n  ((counter++))\ndone\n```\n\nFirst, we specified\
+    \ a counter variable and set it to 1, then inside the loop, we added counter by\
+    \ using this statement: ((counter++)). That way, we make sure that the loop will\
+    \ run 10 times and would not run forever. The loop will complete as soon as the\
+    \ counter becomes 10, as this is what we've set as the condition: while [[ $counter\
+    \ -le 10 ]].\n\nLet's create a script that asks the user for their name and not\
+    \ allow an empty input:"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\n#!/bin/bash\n\nread -p \"What is your name? \" name\n\nwhile [[ -z ${name}\
+    \ ]]\ndo\n    echo \"Your name can not be blank. Please enter a valid name!\"\n\
+    \    read -p \"Enter your name again? \" name\ndone\n\necho \"Hi there ${name}\"\
+    \n```\n\nNow, if you run the above and just press enter without providing input,\
+    \ the loop would run again and ask you for your name again and again until you\
+    \ actually provide some input."
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# Until Loops\n\nThe difference between until and while loops is that the until\
+    \ loop will run the commands within the loop until the condition becomes true.\n\
+    \nStructure:\n\n```\nuntil [[ your_condition ]]\ndo\n    your_commands\ndone\n\
+    ```\n\nExample:\n\n```\n#!/bin/bash\n\ncount=1\nuntil [[ $count -gt 10 ]]\ndo\n\
+    \    echo $count\n    ((count++))\ndone\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# Continue and Break\n\nAs with other languages, you can use continue and break\
+    \ with your bash scripts as well:\n\n+   - continue tells your bash script to\
+    \ stop the current iteration of the loop and start the next iteration.\n\nThe\
+    \ syntax of the continue statement is as follows:\n\n```\ncontinue [n]\n```\n\n\
+    The [n] argument is optional and can be greater than equal to 1. When [n] is given,\
+    \ the n-th enclosing loop is resumed. continue 1 is equivalent to continue.\n\n\
+    ```\n#!/bin/bash\nfor i in 1 2 3 4 5\ndo\n    if [[ $i -eq 2 ]]\n    then\n  \
+    \      echo \"skipping number 2\"\n        continue\n    fi\n    echo \"i is equal\
+    \ to $i\"\ndone\n```\n\nWe can also use continue command in similar way to break\
+    \ command for controlling multiple loops.\n\n+   - break tells your bash script\
+    \ to end the loop straight away.\n\nThe syntax of the break statement takes the\
+    \ following form:\n\n```\nbreak [n]\n```\n\n[n] is an optional argument and must\
+    \ be greater than equal to 1. When [n] is provided, the n-th enclosing loop is\
+    \ exited. break 1 is equivalent to break."
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "Example:\n\n```\n#!/bin/bash\n\nnum=1\nwhile [[ $num -lt 10 ]]\ndo\n  if [[\
+    \ $num -eq 5 ]]\n    then\n      break\n    fi\n  ((num++))\ndone\necho \"Loop\
+    \ completed\"\n```\n\nWe can also use break command with multiple loops. If we\
+    \ want to exit out of current working loop whether inner or outer loop, we simply\
+    \ use break if if we are in inner loop & want to exit out of outer loop, we use\
+    \ break 2.\n\nExample:\n\n```\n#!/bin/bash\nfor (( a = 1; a < 10; a++ ))\ndo\n\
+    \  echo \"outer loop: $a\"\n  for (( b = 1; b < 100; b++ ))\n  do\n    if [[ $b\
+    \ -gt 5 ]]\n      then\n        break 2\n      fi\n    echo \"Inner loop: $b\"\
+    \n  done\n```\n\nThe bash script will begin with a=1 & will move to inner loop\
+    \ and when it reaches b=5, it will break the outer loop. We can use break only\
+    \ instead of break 2, to break inner loop & see how it affects the output."
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Bash Functions\n\nFunctions are a great way to reuse code. The structure\
+    \ of a function in bash is quite similar to most languages:\n\n```\nfunction function_name()\
+    \ {\n  your_commands\n}\n```\n\nYou can also omit the function keyword at the\
+    \ beginning, which would also work:\n\n```\nfunction_name() {\n  your_commands\n\
+    }\n```\n\nI prefer putting it there for better readability. But it is a matter\
+    \ of personal preference.\nExample of a \"Hello World!\" function:\n\n```\n#!/bin/bash\n\
+    function hello() {\n  echo \"Hello World Function!\"\n}\nhello\n```\n\n> Notice:\
+    \ One thing to keep in mind is that you should not add the parenthesis when you\
+    \ call the function.\n\nPassing arguments to a function work in the same way as\
+    \ passing arguments to a script:"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\n#!/bin/bash\nfunction hello() {\n    echo \"Hello $1!\"\n}\n\nhello DevDojo\n\
+    ```\n\nFunctions should have comments mentioning description, global variables,\
+    \ arguments, outputs, and returned values, if applicable\n\n```\n###########################################\n\
+    # Description: Hello function\n# Globals:\n# None\n# Arguments:\n# Single input\
+    \ argument\n# Outputs:\n# Value of input argument\n# Returns:\n# 0 if successful,\
+    \ non-zero on error.\n###########################################\nfunction hello()\
+    \ {\n    echo \"Hello $1!\"\n}\n```\n\nIn the next few chapters we will be using\
+    \ functions a lot!"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# # Debugging, testing and shortcuts\n\nIn order to debug your bash scripts,\
+    \ you can use -x when executing your scripts:\n\n```\nbash -x ./your_script.sh\n\
+    ```\n\nOr you can add set -x before the specific line that you want to debug,\
+    \ set -x enables a mode of the shell where all executed commands are printed to\
+    \ the terminal.\n\nAnother way to test your scripts is to use this fantastic tool\
+    \ here: \n\nhttps://www.shellcheck.net/\n\nJust copy and paste your code into\
+    \ the textbox, and the tool will give you some suggestions on how you can improve\
+    \ your script.\n\nYou can also run the tool directly in your terminal:\n\nhttps://github.com/koalaman/shellcheck\n\
+    \nIf you like the tool, make sure to start it on GitHub and contribute!\n\nAs\
+    \ a SysAdmin/DevOps, I spend a lot of my day in the terminal. Here are my favorite\
+    \ shortcuts that help me do tasks quicker while writing Bash scripts or just working\
+    \ in the terminal.\n\nThe below two are particularly useful if you have a very\
+    \ long command.\n\n+   - Delete everything from the cursor to the end of the line:\n\
+    \n```\nCtrl + k\n```\n\n+   - Delete everything from the cursor to the start of\
+    \ the line:"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '```
+
+    Ctrl + u
+
+    ```
+
+
+    +   - Delete one word backward from cursor:
+
+
+    ```
+
+    Ctrl + w
+
+    ```
+
+
+    +   - Search your history backward. This is probably the one that I use the most.
+    It is really handy and speeds up my work-flow a lot:
+
+
+    ```
+
+    Ctrl + r
+
+    ```
+
+
+    +   - Clear the screen, I use this instead of typing the clear command:
+
+
+    ```
+
+    Ctrl + l
+
+    ```
+
+
+    +   - Stops the output to the screen:
+
+
+    ```
+
+    Ctrl + s
+
+    ```
+
+
+    +   - Enable the output to the screen in case that previously stopped by Ctrl
+    + s:
+
+
+    ```
+
+    Ctrl + q
+
+    ```
+
+
+    +   - Terminate the current command
+
+
+    ```
+
+    Ctrl + c
+
+    ```
+
+
+    +   - Throw the current command to background:'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '```
+
+    Ctrl + z
+
+    ```
+
+
+    I use those regularly every day, and it saves me a lot of time.
+
+
+    If you think that I''ve missed any feel free to join the discussion on the DigitalOcean
+    community forum!'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# # Creating custom bash commands
+
+
+    As a developer or system administrator, you might have to spend a lot of time
+    in your terminal. I always try to look for ways to optimize any repetitive tasks.
+
+
+    One way to do that is to either write short bash scripts or create custom commands
+    also known as aliases. For example, rather than typing a really long command every
+    time you could just create a short cut for it.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Example
+
+
+    Let''s start with the following scenario, as a system admin, you might have to
+    check the connections to your web server quite often, so I will use the netstat
+    command as an example.
+
+
+    What I would usually do when I access a server that is having issues with the
+    connections to port 80 or 443 is to check if there are any services listening
+    on those ports and the number of connections to the ports.
+
+
+    The following netstat command would show us how many TCP connections on port 80
+    and 443 we currently have:
+
+
+    ```
+
+    netstat -plant | grep ''80\|443'' | grep -v LISTEN | wc -l
+
+    ```
+
+
+    This is quite a lengthy command typing it every time might be time-consuming in
+    the long run especially when you want to get that information quickly.
+
+
+    To avoid that, we can create an alias, so rather than typing the whole command,
+    we could just type a short command instead. For example, lets say that we wanted
+    to be able to type conn (short for connections) and get the same information.
+    All we need to do in this case is to run the following command:
+
+
+    ```
+
+    alias conn="netstat -plant | grep ''80\|443'' | grep -v LISTEN | wc -l"
+
+    ```
+
+
+    That way we are creating an alias called conn which would essentially be a ''short
+    cut'' for our long netstat command. Now if you just run conn:
+
+
+    ```
+
+    conn
+
+    ```
+
+
+    You would get the same output as the long netstat command. You can get even more
+    creative and add some info messages like this one here:'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '```
+
+    alias conn="echo ''Total connections on port 80 and 443:'' ;
+
+    netstat -plant | grep ''80\|443'' | grep -v LISTEN | wc -l"
+
+    ```
+
+
+    Now if you run conn you would get the following output:
+
+
+    ```
+
+    Total connections on port 80 and 443:
+
+    12
+
+    ```
+
+
+    Now if you log out and log back in, your alias would be lost. In the next step
+    you will see how to make this persistent.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Making the change persistent
+
+
+    In order to make the change persistent, we need to add the alias command in our
+    shell profile file.
+
+
+    By default on Ubuntu this would be the ~/.bashrc file, for other operating systems
+    this might be the ~/.bash_profile. With your favorite text editor open the file:
+
+
+    ```
+
+    nano ~/.bashrc
+
+    ```
+
+
+    Go to the bottom and add the following:
+
+
+    ```
+
+    alias conn="echo ''Total connections on port 80 and 443:''\''; netstat -plant
+    | grep ''80\|443'' | grep -v LISTEN | wc -l"
+
+    ```
+
+
+    Save and then exit.
+
+
+    That way now even if you log out and log back in again your change would be persisted
+    and you would be able to run your custom bash command.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Listing all of of the available aliases
+
+
+    To list all of the available aliases for your current shell, you have to just
+    run the following command:
+
+
+    ```
+
+    alias
+
+    ```
+
+
+    This would be handy in case that you are seeing some weird behavior with some
+    commands.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Conclusion
+
+
+    This is one way of creating custom bash commands or bash aliases.
+
+
+    Of course, you could actually write a bash script and add the script inside your
+    `/usr/bin` folder, but this would not work if you don''t have root or sudo access,
+    whereas with aliases you can do it without the need of root access.
+
+
+    > **Notice**: This was initially posted on DevDojo.com'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# # Write your first Bash script
+
+
+    Let''s try to put together what we''ve learned so far and create our first Bash
+    script!'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# # Planning the script
+
+
+    As an example, we will write a script that would gather some useful information
+    about
+
+    our server like:
+
+
+    +   * Current Disk usage
+
+    * Current CPU usage
+
+    * Current RAM usage
+
+    * Check the exact Kernel version
+
+
+    Feel free to adjust the script by adding or removing functionality so that it
+    matches
+
+    your needs.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Writing the script
+
+
+    The first thing that you need to do is to create a new file with a .sh extension.
+    I will create a file called status.sh as the script we will create would give
+    us the status of our server.
+
+
+    Once you''ve created the file, open it with your favorite text editor.
+
+
+    As we''ve learned in chapter 1, on the very first line of our Bash script we need
+    to specify the so-called Shebang:
+
+
+    ```
+
+    #!/bin/bash
+
+    ```
+
+
+    All that the shebang does is to instruct the operating system to run the script
+    with the /bin/bash executable.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Adding comments
+
+
+    Next, as discussed in chapter 6, let''s start by adding some comments so that
+    people could easily figure out what the script is used for. To do that right after
+    the shebang you can just add the following:
+
+
+    ```
+
+    #!/bin/bash
+
+
+    # Script that returns the current server status
+
+    ```'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# Adding your first variable
+
+
+    Let''s go ahead and apply what we''ve learned in chapter 4 and add some variables
+    which we might want to use throughout the script.
+
+
+    To assign a value to a variable in bash, you just have to use the = sign. For
+    example, let''s store the hostname of our server in a variable so that we could
+    use it later:
+
+
+    ```
+
+    server_name=$$(hostname)
+
+    ```
+
+
+    By using $() we tell bash to actually interpret the command and then assign the
+    value to our variable.
+
+
+    Now if we were to echo out the variable we would see the current hostname:
+
+
+    ```
+
+    echo $server_name
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# Adding your first function\n\nAs you already know after reading chapter 12,\
+    \ in order to create a function in bash you need to use the following structure:\n\
+    \n```\nfunction function_name() {\n  your_commands\n}\n```\n\nLet's create a function\
+    \ that returns the current memory usage on our server:\n\n```\nfunction memory_check()\
+    \ {\n  echo \"\"\n  echo \"The current memory usage on ${server_name} is: \"\n\
+    \  free -h\n  echo \"\"\n}\n```\n\nQuick run down of the function:\n\n+   - function\
+    \ memory_check() {} - this is how we define the function\n- echo \"\" - here we\
+    \ just print a new line\n- echo \"The current memory usage on ${server_name} is:\
+    \ \" - here we print a small message and the $server_name variable\n- } - finally\
+    \ this is how we close the function\n\nThen once the function has been defined,\
+    \ in order to call it, just use the name of the function:"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "```\n# Define the function\nfunction memory_check() {\n    echo \"\"\n    echo\
+    \ \"The current memory usage on ${$server_name} is: \"\n    free -h\n    echo\
+    \ \"\"\n}\n\n# Call the function\nmemory_check\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# Adding more functions challenge
+
+
+    Before checking out the solution, I would challenge you to use the function from
+    above and write a few functions by yourself.
+
+
+    The functions should do the following:
+
+
+    +   - Current Disk usage
+
+    - Current CPU usage
+
+    - Current RAM usage
+
+    - Check the exact Kernel version
+
+
+    Feel free to use google if you are not sure what commands you need to use in order
+    to get that information.
+
+
+    Once you are ready, feel free to scroll down and check how we''ve done it and
+    compare the results!
+
+
+    Note that there are multiple correct ways of doing it!'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# The sample script\n\nHere's what the end result would look like:\n\n```\n\
+    #!/bin/bash\n##\n# BASH script that checks:\n# - Memory usage\n# - CPU load\n\
+    # - Number of TCP connections\n# - Kernel version\n##\n\nserver_name=$(hostname)\n\
+    \nfunction memory_check() {\n    echo \"\"\n    echo \"Memory usage on ${server_name}\
+    \ is: \"\n    free -h\n    echo \"\"\n}\n\nfunction cpu_check() {\n    echo \"\
+    \"\n    echo \"CPU load on ${server_name} is: \"\n    echo \"\"\n    uptime\n\
+    \    echo \"\"\n}\n\nfunction tcp_check() {\n    echo \"\"\n    echo \"TCP connections\
+    \ on ${server_name}: \"\n    echo \"\"\n    cat /proc/net/tcp | wc -l\n    echo\
+    \ \"\"\n}\n\nfunction kernel_check() {\n    echo \"\"\n    echo \"Kernel version\
+    \ on ${server_name} is: \"\n    echo \"\"\n}\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\nuname -r\necho \"\"\n}\nfunction all_checks() {\n    memory_check\n  \
+    \  cpu_check\n    tcp_check\n    kernel_check\n}\nall_checks\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Conclusion
+
+
+    Bash scripting is awesome! No matter if you are a DevOps/SysOps engineer, developer,
+    or just a Linux enthusiast, you can use Bash scripts to combine different Linux
+    commands and automate boring and repetitive daily tasks, so that you can focus
+    on more productive and fun things!
+
+
+    > > **Notice:** This was initially posted on DevDojo.com'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Creating an interactive menu in Bash
+
+
+    In this tutorial, I will show you how to create a multiple-choice menu in Bash
+    so that your users could choose between what action should be executed!
+
+
+    We would reuse some of the code from the previous chapter, so if you have not
+    read it yet make sure to do so.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Planning the functionality\n\nLet's start again by going over the main functionality\
+    \ of the script:\n\n+   - Checks the current Disk usage\n- Checks the current\
+    \ CPU usage\n- Checks the current RAM usage\n- Checks the check the exact Kernel\
+    \ version\n\nIn case that you don't have it on hand, here is the script itself:\n\
+    \n```\n#!/bin/bash\n\n##\n# BASH menu script that checks:\n# Memory usage\n# CPU\
+    \ load\n# Number of TCP connections\n# Kernel version\n##\n\nserver_name=$(hostname)\n\
+    \nfunction memory_check() {\n  echo \"\"\n  echo \"Memory usage on ${server_name}\
+    \ is:\"\n  free -h\n  echo \"\"\n}\n\nfunction cpu_check() {\n  echo \"\"\n  echo\
+    \ \"CPU load on ${server_name} is:\"\n  echo \"\"\n  uptime\n  echo \"\"\n}\n\n\
+    function tcp_check() {\n  echo \"\"\n  echo \"TCP connections on ${server_name}:\"\
+    \n  echo \"\"\n  cat /proc/net/tcp | wc -l\n```"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\necho \"\"\n}\nfunction kernel_check() {\n    echo \"Kernel version on\
+    \ ${server_name} is: \"\n    echo \"\"\n    echo \"\"\n    uname -r\n    echo\
+    \ \"\"\n}\nnfunction all_checks() {\n    memory_check\n    cpu_check\n    tcp_check\n\
+    \    kernel_check\n}\n```\n\nWe will then build a menu that allows the user to\
+    \ choose which function to be executed.\n\nOf course, you can adjust the function\
+    \ or add new ones depending on your needs."
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# Adding some colors\n\nIn order to make the menu a bit more 'readable' and\
+    \ easy to grasp at first glance, we will add some color functions.\n\nAt the beginning\
+    \ of your script add the following color functions:\n\n```\n## Color Variables\n\
+    ##\ngreen='\\e[32m'\nblue='\\e[34m'\nclear='\\e[0m'\n\n## Color Functions\n##\n\
+    ColorGreen(){\n  echo -ne $green$1$clear\n}\nColorBlue(){\n  echo -ne $blue$1$clear\n\
+    }\n```\n\nYou can use the color functions as follows:\n\n```\necho -ne $(ColorBlue\
+    \ 'Some text here')\n```\n\nThe above would output the Some text here string and\
+    \ it would be blue!"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# Adding the menu\n\nFinally, to add our menu, we will create a separate function\
+    \ with a case switch for our menu options:\n\n```\nmenu() {\n  echo -ne \"\nMy\
+    \ First Menu\n  ($ColorGreen '1') Memory usage\n  ($ColorGreen '2') CPU load\n\
+    \  ($ColorGreen '3') Number of TCP connections\n  ($ColorGreen '4') Kernel version\n\
+    \  ($ColorGreen '5') Check All\n  ($ColorGreen '0') Exit\n  ($ColorBlue 'Choose\
+    \ an option:') \"\n  read a\n  case $a in\n    1) memory_check; menu;\n    2)\
+    \ cpu_check; menu;\n    3) tcp_check; menu;\n    4) kernel_check; menu;\n    5)\
+    \ all_checks; menu;\n    0) exit 0;\n    *) echo -e \"$redWrong option.\\$clear\"\
+    \nWrongCommand;\n}\n```\n\n# A quick rundown of the code\n\nFirst we just echo\
+    \ out the menu optsions with some color:"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "```\necho -ne \"\nMy First Menu\n$(ColorGreen '1') Memory usage\n$(ColorGreen\
+    \ '2') CPU load\n$(ColorGreen '3') Number of TCP connections\n$(ColorGreen '4')\
+    \ Kernel version\n$(ColorGreen '5') Check All\n$(ColorGreen '0') Exit\n$(ColorBlue\
+    \ 'Choose an option:') \"\n```\n\nThen we read the answer of the user and store\
+    \ it in a variable $a:\n\n```\nread a\n```\n\nFinally, we have a switch case which\
+    \ triggers a different function depending on the value of $a:\n\n```\ncase $a\
+    \ in\n  1) memory_check ; menu ;;\n  2) cpu_check ; menu ;;\n  3) tcp_check ;\
+    \ menu ;;\n  4) kernel_check ; menu ;;\n  5) all_checks ; menu ;;\n  0) exit 0\
+    \ ;\n  *) echo -e $red\"Wrong option.\\\\$clear;\"\nesesac\n```\n\nWrongCommand;\n\
+    \nAt the end we need to call the menu function to actually print out the menu:\n\
+    \n```\n# Call the menu function\nmenu\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# Testing the script\n\nIn the end, your script will look like this:\n\n```\n\
+    #!/bin/bash\n##\n# BASH menu script that checks:\n# - Memory usage\n# - CPU load\n\
+    # - Number of TCP connections\n# - Kernel version\n##\n\nserver_name=$(hostname)\n\
+    \nfunction memory_check() {\n    echo \"Memory usage on ${server_name} is:\"\n\
+    \    free -h\n    echo \"\"\n}\n\nfunction cpu_check() {\n    echo \"\"\n    echo\
+    \ \"CPU load on ${server_name} is:\"\n    echo \"\"\n    uptime\n    echo \"\"\
+    \n}\n\nfunction tcp_check() {\n    echo \"\"\n    echo \"TCP connections on ${server_name}\
+    \ is:\"\n    echo \"\"\n    cat /proc/net/tcp | wc -l\n    echo \"\"\n}\n\nfunction\
+    \ kernel_check() {\n    echo \"\"\n    echo \"Kernel version on ${server_name}\
+    \ is:\"\n    echo \"\"\n}\n```"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "```\nuname - r\necho \" \"\"\n}\nfunction all_checks() {\n    memory_check\n\
+    \    cpu_check\n    tcp_check\n    kernel_check\n}\n```\n\n##\n# Color Variables\n\
+    ##\ngreen='\\e[32m'\nblue='\\e[34m'\nclear='\\e[0m'\n\n##\n# Color Functions\n\
+    ##\n\n```\nColorGreen(){\n    echo -ne $green$clear\n}\n```\n\n```\nColorBlue(){\n\
+    \    echo -ne $blue$clear\n}\n```\n\n```\nmenu() {\necho -ne \" \nMy First Menu\n\
+    $(ColorGreen '1') Memory usage\n$(ColorGreen '2') CPU load\n$(ColorGreen '3')\
+    \ Number of TCP connections\n$(ColorGreen '4') Kernel version\n$(ColorGreen '5')\
+    \ Check All\n$(ColorGreen '0') Exit\n$(ColorBlue 'Choose an option:') \"\n   \
+    \ read $a\n    case $a in\n        1) memory_check; menu;\n        2) cpu_check;\
+    \ menu;\n        3) tcp_check; menu;\n        4) kernel_check; menu;\n       \
+    \ 5) all_checks; menu;\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "```\n0) exit 0 ;\n*) echo -e $red\"Wrong option.\\$clear;\nWrongCommand;\n\
+    \  esac\n}\n\n# Call the menu function\nmenu\n```\n\nTo test the script, create\
+    \ a new filed with a .sh extension, for example: menu.sh and then run it:\n\n\
+    ```\nbash menu.sh\n```\n\nThe output that you would get will look like this:\n\
+    \n+   My First Menu\n1) Memory usage\n2) CPU load\n3) Number of TCP connections\n\
+    4) Kernel version\n5) Check All\n0) Exit\nChoose an option:\n\nYou will be able\
+    \ to choose a different option from the list and each number will call a different\
+    \ function from the script:\n\n![](img/7521519cf793a2e66883462104020ab5_86_0.png)"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# Conclusion
+
+
+    You now know how to create a Bash menu and implement it in your scripts so that
+    users could select different values!
+
+
+    > **Notice:** This content was initially posted on DevDojo.com'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# Executing BASH scripts on Multiple Remote Servers
+
+
+    Any command that you can run from the command line can be used in a bash script.
+    Scripts are used to run a series of commands. Bash is available by default on
+    Linux and macOS operating systems.
+
+
+    Let''s have a hypothetical scenario where you need to execute a BASH script on
+    multiple remote servers, but you don''t want to manually copy the script to each
+    server, then again login to each server individually and only then execute the
+    script.
+
+
+    Of course you could use a tool like Ansible but lets learn how to do that with
+    Bash!'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Prerequisites
+
+
+    For this example I will use 3 remote Ubuntu servers deployed on DigitalOcean.
+    If you don''t have a Digital Ocean account yet, you can sign up for DigitalOcean
+    and get $100 free credit via this referral link:
+
+
+    https://m.do.co/c/2a9bba940f39
+
+
+    Once you have your Digital Ocean account ready go ahead and deploy 3 droplets.
+
+
+    I''ve gone ahead and created 3 Ubuntu servers:
+
+
+    ![](img/7521519cf793a2e66883462104020ab5_89_0.png)
+
+
+    I''ll put those servers IP''s in a `servers.txt` file which I would use to loop
+    though with our Bash script.
+
+
+    If you are new to DigitalOcean you can follow the steps on how to create a Droplet
+    here:
+
+
+    +   - How to Create a Droplet from the DigitalOcean Control Panel
+
+
+    You can also follow the steps from this video on how to do your initial server
+    setup:
+
+
+    +   - How to do your Initial Server Setup with Ubuntu
+
+
+    Or even better, you can follow this article here on how to automate your initial
+    server setup with Bash:
+
+
+    Automating Initial Server Setup with Ubuntu 18.04 with Bash
+
+
+    With the 3 new servers in place, we can go ahead and focus on running our Bash
+    script on all of them with a single command!'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "# The BASH Script\n\nI will reuse the demo script from the previous chapter\
+    \ with some slight changes. It simply executes a few checks like the current memory\
+    \ usage, the current CPU usage, the number of TCP connections and the version\
+    \ of the kernel.\n\n```\n#!/bin/bash\n##\n# BASH script that checks the following:\n\
+    # Memory usage\n# CPU load\n# Number of TCP connections\n# Kernel version\n##\n\
+    \n##\n# Memory check\n##\nserver_name=$(hostname)\n\nfunction memory_check() {\n\
+    \    echo \"######\"\n    echo \"The current memory usage on ${server_name} is:\
+    \ \"\n    free -h\n    echo \"######\"\n}\n\nfunction cpu_check() {\n    echo\
+    \ \"######\"\n    echo \"The current CPU load on ${server_name} is: \"\n    echo\
+    \ \"\"\n    uptime\n    echo \"######\"\n}\n\nfunction tcp_check() {\n    echo\
+    \ \"######\"\n    echo \"Total TCP connections on ${server_name}: \"\n    echo\
+    \ \"\"\n    cat /proc/net/tcp | wc -l\n    echo \"######\"\n}\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\nfunction kernel_check() {\n    echo \"######\"\n    echo \"The exact Kernel\
+    \ version on \\${server_name} is: \"\n    echo \"\"\n    uname -r\n    echo \"\
+    ######\"\n}\n\nfunction all_checks() {\n    memory_check\n    cpu_check\n    tcp_check\n\
+    \    kernel_check\n}\n\nall_checks\n```\n\nCopy the code bellow and add this to\
+    \ in a file called remote_check.sh. You can also get the script from here."
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Running the Script on all Servers
+
+
+    Now that we have the script and the servers ready and that we''ve added those
+    servers in our servers.txt file we can run the following command to loop though
+    all servers and execute the script remotely without having to copy the script
+    to each server and individually connect to each server.
+
+
+    ```
+
+    for server in $(cat servers.txt); do ssh your_user@${server}
+
+    ''bash -s'' < ./remote_check.sh ; done
+
+    ```
+
+
+    What this for loop does is, it goes through each server in the servers.txt file
+    and then runs the following command for each item in the list:
+
+
+    ```
+
+    ssh your_user@the_server_ip ''bash -s'' < ./remote_check.sh
+
+    ```
+
+
+    You would get the following output:
+
+
+    ![](img/7521519cf793a2e66883462104020ab5_92_0.png)'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# Conclusion
+
+
+    This is just a really simple example on how to execute a simple script on multiple
+    servers without having to copy the script to each server and without having to
+    access the servers individually.
+
+
+    Of course you could run a much more complex script and on many more servers.
+
+
+    If you are interested in automation, I would recommend checking out the Ansible
+    resources page on the DigitalOcean website:
+
+
+    Ansible Resources
+
+
+    > Notice: This content was initially posted on DevDojo'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Work with JSON in BASH using jq
+
+
+    The jq command-line tool is a lightweight and flexible command-line JSON processor.
+    It is great for parsing JSON output in BASH.
+
+
+    One of the great things about jq is that it is written in portable C, and it has
+    zero runtime dependencies. All you need to do is to download a single binary or
+    use a package manager like apt and install it with a single command.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# Planning the script
+
+
+    For the demo in this tutorial, I would use an external REST API that returns a
+    simple JSON ouput called the QuizAPI:
+
+
+    https://quizapi.io/
+
+
+    If you want to follow along make sure to get a free API key here:
+
+
+    https://quizapi.io/clientarea/settings/token
+
+
+    The QuizAPI is free for developers.'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Installing jq
+
+
+    There are many ways to install jq on your system. One of the most straight forward
+    ways to do so is to use the package manager depending on your OS.
+
+
+    Here is a list of the commands that you would need to use depending on your OS:
+
+
+    +   - Install jq on Ubuntu/Debian
+
+
+    ```
+
+    sudo apt-get install jq
+
+    ```
+
+
+    +   - Install jq on Fedora
+
+
+    ```
+
+    sudo dnf install jq
+
+    ```
+
+
+    +   - Install jq on openSUSE
+
+
+    ```
+
+    sudo zypper install jq
+
+    ```
+
+
+    +   - Install jq on Arch
+
+
+    ```
+
+    sudo pacman -S jq
+
+    ```
+
+
+    +   - Installing on Mac with Homebrew
+
+
+    ```
+
+    brew install jq
+
+    ```
+
+
+    +   - Install on Mac with MacPort
+
+
+    ```
+
+    port install jq
+
+    ```
+
+
+    If you are using other OS, I would recommend taking a look at the official'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: 'documentation here for more information:
+
+
+    https://stedolan.github.io/jq/download/
+
+
+    Once you have jq installed you can check your current version by running this
+    command:
+
+
+    ```
+
+    jq --version
+
+    ```'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Parsing JSON with jq
+
+
+    Once you have jq installed and your QuizAPI API Key, you can parse the JSON output
+    of the QuizAPI directly in your terminal.
+
+
+    First, create a variable that stores your API Key:
+
+
+    ```
+
+    API_KEY=YOUR_API_KEY_HERE
+
+    ```
+
+
+    In order to get some output from one of the endpoints of the QuizAPI you can use
+    the curl command:
+
+
+    ```
+
+    curl
+
+    "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=1"
+
+    ```
+
+
+    For a more specific output, you can use the QuizAPI URL Generator here:
+
+
+    https://quizapi.io/api-config
+
+
+    After running the curl command, the output which you would get would look like
+    this:
+
+
+    ![](img/7521519cf793a2e66883462104020ab5_98_0.png)
+
+
+    This could be quite hard to read, but thanks to the jq command-line tool, all
+    we need to do is pipe the curl command to jq and we would see a nice formatted
+    JSON output:
+
+
+    ```
+
+    curl
+
+    "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=1" | jq
+
+    ```
+
+
+    Note the | jq at the end.
+
+
+    In this case the output that you would get look something like this:
+
+
+    ![](img/7521519cf793a2e66883462104020ab5_98_1.png)
+
+
+    Now, this looks much nicer! The jq command-line tool formatted the output for
+    us and'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: added some nice coloring!
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# Getting the first element with jq
+
+
+    Let''s say that we only wanted to get the first element from the JSON output,
+    in order to do that we have to just specify the index that we want to see with
+    the following syntax:
+
+
+    ```
+
+    jq .[0]
+
+    ```
+
+
+    Now, if we run the curl command again and pipe the output to jq .[0] like this:
+
+
+    ```
+
+    curl
+
+    "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=1" | jq .[0]
+
+    ```
+
+
+    You will only get the first element and the output will look like this:
+
+
+    ![](img/7521519cf793a2e66883462104020ab5_100_0.png)'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Getting a value only for specific key
+
+
+    Sometimes you might want to get the value of a specific key only, let''s say in
+    our example the QuizAPI returns a list of questions along with the answers, description
+    and etc. but what if you wanted to get the Questions without the additional information?
+
+
+    This is going to be quite straightforward with jq, all you need to do is add the
+    key after jq command, so it would look something like this:
+
+
+    ```
+
+    jq .[].question
+
+    ```
+
+
+    We have to add the .[] as the QuizAPI returns an array and by specifying .[] we
+    tell jq that we want to get the .question value for all of the elements in the
+    array.
+
+
+    The output that you would get would look like this:
+
+
+    ![](img/7521519cf793a2e66883462104020ab5_101_0.png)
+
+
+    As you can see we now only get the questions without the rest of the values.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Using jq in a BASH script
+
+
+    Let''s go ahead and create a small bash script which should output the following
+
+    information for us:
+
+
+    +   * Get only the first question from the output
+
+    * Get all of the answers for that question
+
+    * Assign the answers to variables
+
+    * Print the question and the answers
+
+    * To do that I''ve put together the following script:
+
+
+    > > Notice: make sure to change the API_KEY part with your actual QuizAPI key:'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '```
+
+    #!/bin/bash
+
+    ##
+
+    # Make an API call to QuizAPI and store the output in a variable
+
+    ##
+
+    output=$(curl ''https://quizapi.io/api/v1/questions?apiKey=API_KEY&limit=10''
+    >/dev/null)
+
+    ##
+
+    # Get only the first question
+
+    ##
+
+    output=$(echo $output | jq.[0])
+
+    ##
+
+    # Get the question
+
+    ##
+
+    question=$(echo $output | jq .question)
+
+    ##
+
+    # Get the answers
+
+    ##
+
+    answer_a=$(echo $output | jq .answers.answer_a)
+
+    answer_b=$(echo $output | jq .answers.answer_b)
+
+    answer_c=$(echo $output | jq .answers.answer_c)
+
+    answer_d=$(echo $output | jq .answers.answer_d)
+
+    ##
+
+    # Output the question
+
+    ##
+
+    echo "
+
+    Question: ${question}
+
+
+    A) ${answer_a}
+
+    B) ${answer_b}
+
+    C) ${answer_c}
+
+    D) ${answer_d}
+
+    "
+
+    ```
+
+
+    If you run the script you would get the following output:'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'We can even go further by making this interactive so that we could actually
+    choose the answer directly in our terminal.
+
+
+    There is already a bash script that does this by using the QuizAPI and j q:
+
+
+    You can take a look at that script here:
+
+
+    +   - https://github.com/QuizApi/QuizAPI-BASH/blob/master/quiz.sh'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Conclusion
+
+
+    The jq command-line tool is an amazing tool that gives you the power to work with
+    JSON directly in your BASH terminal.
+
+
+    That way you can easily interact with all kinds of different REST APIs with BASH.
+
+
+    For more information, you could take a look at the official documentation here:
+
+
+    +   - https://stedolan.github.io/jq/manual/
+
+
+    And for more information on the QuizAPI, you could take a look at the official
+    documentation here:
+
+
+    +   - https://quizapi.io/docs/1.0/overview
+
+
+    > Notice: This content was initially posted on DevDojo.com'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# Working with Cloudflare API with Bash
+
+
+    I host all of my websites on DigitalOcean Droplets and I also use Cloudflare as
+    my CDN provider. One of the benefits of using Cloudflare is that it reduces the
+    overall traffic to your user and also hides your actual server IP address behind
+    their CDN.
+
+
+    My personal favorite Cloudflare feature is their free DDoS protection. It has
+    saved my servers multiple times from different DDoS attacks. They have a cool
+    API that you could use to enable and disable their DDoS protection easily.
+
+
+    This chapter is going to be an exercise! I challenge you to go ahead and write
+    a short bash script that would enable and disable the Cloudflare DDoS protection
+    for your server automatically if needed!'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# Prerequisites
+
+
+    Before following this guide here, please set up your Cloudflare account and get
+    your website ready. If you are not sure how to do that you can follow these steps
+    here: Create a Cloudflare account and add a website.
+
+
+    Once you have your Cloudflare account, make sure to obtain the following information:
+
+
+    +   - A Cloudflare account
+
+    * Cloudflare API key
+
+    * Cloudflare Zone ID
+
+
+    Also, Make sure curl is installed on your server:
+
+
+    ```
+
+    curl --version
+
+    ```
+
+
+    If curl is not installed you need to run the following:
+
+
+    +   - For RedHat/CentOs:
+
+
+    ```
+
+    yum install curl
+
+    ```
+
+
+    +   - For Debian/Ubuntu
+
+
+    ```
+
+    apt-get install curl
+
+    ```'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# Challenge - Script requirements
+
+
+    The script needs to monitor the CPU usage on your server and if the CPU usage
+    gets high based on the number vCPU it would enable the Cloudflare DDoS protection
+    automatically via the Cloudflare API.
+
+
+    The main features of the script should be:
+
+
+    +   - Checks the script CPU load on the server
+
+    - In case of a CPU spike the script triggers an API call to Cloudflare and enables
+    the DDoS protection feature for the specified zone
+
+    - After the CPU load is back to normal the script would disable the "I''m under
+    attack" option and set it back to normal'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Example script
+
+
+    I already have prepared a demo script which you could use as a reference. But
+    I encourage you to try and write the script yourself first and only then take
+    a look at my script!
+
+
+    To download the script just run the following command:
+
+
+    ```
+
+    wget
+
+    https://raw.githubusercontent.com/bobbyiliev/cloudflare-ddos-protetection/main/protection.sh
+
+    ```
+
+
+    Open the script with your favorite text editor:
+
+
+    ```
+
+    nano protection.sh
+
+    ```
+
+
+    And update the following details with your Cloudflare details:
+
+
+    ```
+
+    CF_CON_ID=CF_ZONE_ID
+
+    CF_EMAIL_ADDRESS=YOUR_CF_EMAIL_ADDRESS
+
+    CF_API_KEY=YOUR_CF_API_KEY
+
+    ```
+
+
+    After that make the script executable:
+
+
+    ```
+
+    chmod +x ~/protection.sh
+
+    ```
+
+
+    Finally, set up 2 Cron jobs to run every 30 seconds. To edit your crontab run:
+
+
+    ```
+
+    crontab -e
+
+    ```
+
+
+    And add the following content:'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '```
+
+    * * * * /path-to-the-script/cloudflare/protection.sh
+
+    * * * * ( sleep 30 ; /path-to-the-script/cloudflare/protection.sh )
+
+    ```
+
+
+    Note that you need to change the path to the script with the actual path where
+    you''ve stored the script at.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# Conclusion
+
+
+    This is quite straight forward and budget solution, one of the downsides of the
+    script is that if your server gets unresponsive due to an attack, the script might
+    not be triggered at all.
+
+
+    Of course, a better approach would be to use a monitoring system like Nagios and
+    based on the statistics from the monitoring system then you can trigger the script,
+    but this script challenge could be a good learning experience!
+
+
+    Here is another great resource on how to use the Discord API and send notifications
+    to your Discord Channel with a Bash script:
+
+
+    How To Use Discord Webhooks to Get Notifications for Your Website Status on Ubuntu
+    18.04
+
+
+    > Notice: This content was initially posted on DevDojo'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# # BASH Script parser to Summarize Your NGINX and Apache Access Logs
+
+
+    One of the first things that I would usually do in case I notice a high CPU usage
+    on some of my Linux servers would be to check the process list with either top
+    or htop and in case that I notice a lot of Apache or Nginx process I would quickly
+    check my access logs to determine what has caused or is causing the CPU spike
+    on my server or to figure out if anything malicious is going on.
+
+
+    Sometimes reading the logs could be quite intimidating as the log might be huge
+    and going though it manually could take a lot of time. Also, the raw log log format
+    could be confusing for people with less experience.
+
+
+    Just like the previous chapter, this chapter is going to be a challenge! You need
+    to write a short bash script that would summarize the whole access log for you
+    without the need of installing any additional software.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Script requirements
+
+
+    This BASH script needs to parse and summarize your access logs and provide you
+    with very useful information like:
+
+
+    +   - The 20 top pages with the most POST requests
+
+    - The 20 top pages with the most GET requests
+
+    - Top 20 IP addresses and their geo-location'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# Example script
+
+
+    I already have prepared a demo script which you could use as a reference. But
+    I encourage you to try and write the script yourself first and only then take
+    a look at my script!
+
+
+    In order to download the script, you can either clone the repository with the
+    following command:
+
+
+    ```
+
+    git clone
+
+    https://github.com/bobbyiliev/quick_access_logs_summary.git
+
+    ```
+
+
+    Or run the following command which would download the script in your current directory:
+
+
+    ```
+
+    wget
+
+    https://raw.githubusercontent.com/bobbyiliev/quick_access_logs
+
+    summary/master/spike_check
+
+    ```
+
+
+    The script does not make any changes to your system, it only reads the content
+    of access log and summarizes it for you, however, once you''ve downloaded the
+    file, make sure to review the content yourself.'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# Running the script
+
+
+    All that you have to do once the script has been downloaded is to make it executable
+    and run it.
+
+
+    To do that run the following command to make the script executable:
+
+
+    ```
+
+    chmod +x spike_check
+
+    ```
+
+
+    Then run the script:
+
+
+    ```
+
+    ./spike_check /path/to/your/access_log
+
+    ```
+
+
+    Make sure to change the path to the file with the actual path to your access log.
+    For example if you are using Apache on an Ubuntu server, the exact command would
+    look like this:
+
+
+    ```
+
+    ./spike_check /var/log/apache2/access.log
+
+    ```
+
+
+    If you are using Nginx the exact command would be almost the same, but with the
+    path to the Nginx access log:
+
+
+    ```
+
+    ./spike_check /var/log/nginx/access.log
+
+    ```'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# Understanding the output
+
+
+    Once you run the script, it might take a while depending on the size of the log.
+
+
+    The output that you would see should look like this:
+
+
+    ![](img/7521519cf793a2e66883462104020ab5_116_0.png)
+
+
+    Essentially what we can tell in this case is that we''ve received 16 POST requests
+    to our xmlrpc.php file which is often used by attackers to try and exploit WordPress
+    websites by using various username and password combinations.
+
+
+    In this specific case, this was not a brute force attack, but it gives us an early
+    indication and we can take action to prevent a larger attack in the future.
+
+
+    We can also see that there were a couple of Russian IP addresses accessing our
+    site, in case that you do not expect any traffic from Russia, you might want to
+    block those IP addresses as well.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# Conclusion
+
+
+    This is an example of a simple BASH script that allows you to quickly summarize
+    your access logs and determine if anything malicious is going on.
+
+
+    Of course, you might want to also manually go through the logs as well well but
+    it is a good challenge to try and automate this with Bash!
+
+
+    > > Notice: This content was initially posted on DevDojo'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# # Sending emails with Bash and SSMTP
+
+
+    SSMTP is a tool that delivers emails from a computer or a server to a configured
+    mail host.
+
+
+    SSMTP is not an email server itself and does not receive emails or manage a queue.
+
+
+    One of its primary uses is for forwarding automated email (like system alerts)
+    off your machine and to an external email address.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# # Prerequisites
+
+
+    You would need the following things in order to be able to complete this tutorial
+    successfully:
+
+
+    +   - Access to an Ubuntu 18.04 server as a non-root user with sudo privileges
+    and an active firewall installed on your server. To set these up, please refer
+    to our [Initial Server Setup Guide for Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-guide-for-ubuntu-18-04)
+
+    - An SMTP server along with SMTP server, or you could set up your own SMTP server
+    by following the steps from this tutorial on [https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-16-04](How
+    to Install and Configure Postfix as a Send-Only SMTP Server on Ubuntu 16.04)'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# Installing SSMTP
+
+
+    In order to install SSMTP, you''ll need to first update your apt cache with:
+
+
+    ```
+
+    sudo apt update
+
+    ```
+
+
+    Then run the following command to install SSMTP:
+
+
+    ```
+
+    sudo apt install ssmtp
+
+    ```
+
+
+    Another thing that you would need to install is mailutils, to do that run the
+    following command:
+
+
+    ```
+
+    sudo apt install mailutils
+
+    ```'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# Configuring SSMTP
+
+
+    Now that you have smmtp installed, in order to configure it to use your SMTP server
+    when sending emails, you need to edit the SSMTP configuration file.
+
+
+    Using your favourite text editor opent the /etc/smtp/ssmps.conf file:
+
+
+    ```
+
+    sudo nano /etc/ssmps/ssmps.conf
+
+    ```
+
+
+    You need to incldue the your SMTP configuration:
+
+
+    ```
+
+    root=postmaster
+
+    mailubs=<^your_smtp_host^>:587
+
+    hostname=<^your_hostname^>
+
+    AuthUser=<^your_gmail_username@your_smtp_host.com^>
+
+    AuthPass=<^your_gmail_password^>
+
+    FromLineOverride=YES
+
+    UseSTARTTLS=YES
+
+    ```
+
+
+    Save the file and exit.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# Sending emails with SSMTP
+
+
+    Once your configuration is done, in order to send an email just just run the following
+    command:
+
+
+    ```
+
+    echo "<>Here add your email body<>" | mail -s "<>Here specify your email subject<>"
+
+    <>your_receipient_email@yourdomain.com<>
+
+    ```
+
+
+    You can run this directly in your terminal or include it in your bash scripts.'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# # Sending A File with SSMTP (optional)
+
+
+    If you need to send files as attachments, you can use `mpack`.
+
+
+    To install `mpack` run the following command:
+
+
+    ```
+
+    sudo apt install mpack
+
+    ```
+
+
+    Next, in order to send an email with a file attached, run the following command.
+
+
+    ```
+
+    mpack -s "<Your Subject here>" your_file.zip
+
+    <>your_recipient_email@yourdomain.com<>
+
+    ```
+
+
+    The above command would send an email to
+
+    `<>your_recipient_email@yourdomain.com<>` with the
+
+    `<>your_file.zip<>` attached.'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# Conclusion
+
+
+    SSMTP is a great and reliable way to implement SMTP email functionality directly
+    in bash scripts.
+
+
+    For more information about SSMTP I would recommend checking the official documentation
+    here.
+
+
+    > **Notice:** This content was initially posted on the [DigitalOcean community
+    forum](https://www.digitalocean.com/community).'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# # Password Generator Bash Script
+
+
+    It''s not uncommon situation where you will need to generate a random password
+    that you can use for any software installation or when you sign-up to any website.
+
+
+    There are a lot of options in order to achieve this. You can use a password manager/vault
+    where you often have the option to randomly generate a password or to use a website
+    that can generate the password on your behalf.
+
+
+    You can also use Bash in your terminal (command-line) to generate a password that
+    you can quickly use. There are a lot of ways to achieve that and I will make sure
+    to cover few of them and will leave up to you to choose which option is most suitable
+    with your needs.'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# :warning: Security
+
+
+    This script is intended to practice your bash scripting skills. You can have fun
+    while doing simple projects with BASH, but security is not a joke, so please make
+    sure you do not save your passwords in plain text in a local file or write them
+    down by hand on a piece of paper.
+
+
+    I will highly recommend everyone to use secure and trusted providers to generate
+    and save the passwords.'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# Script summary
+
+
+    Let me first do a quick summary of what our script is going to do.:
+
+
+    +   1. We will have to option to choose the password characters length when the
+    script is executed.
+
+    2. The script will then generate 5 random passwords with the length that was specified
+    in step 1'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# Prerequisites
+
+
+    You would need a bash terminal and a text editor. You can use any text editor
+    like vi, vim, nano or Visual Studio Code.
+
+
+    I''m running the script locally on my Linux laptop but if you''re using Windows
+    PC you can ssh to any server of your choice and execute the script there.
+
+
+    Although the script is pretty simple, having some basic BASH scripting knowledge
+    will help you to better understand the script and how it''s working.'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Generate a random password
+
+
+    One of the great benefits of Linux is that you can do a lot of things using different
+    methods. When it comes to generating a random string of characters it''s not different
+    as well.
+
+
+    You can use several commands in order to generate a random string of characters.
+    I will cover few of them and provide some examples.
+
+
+    +   Using the date command. The date command will output the current date and
+    time. We also further manipulate the output in order to use it as randomly generated
+    password. We can hash the date using md5, sha or just run it through base64. These
+    are few examples:
+
+
+    ```
+
+    date | md5sum
+
+    94cb1cdec0699e2d98acd9a7b8f6fed
+
+    ```
+
+
+    using sha256sum:
+
+
+    ```
+
+    date | sha256sum
+
+    30a0c6091e194c8c7785f0d7bb6e1eac9b76c0528f02213d1b6a5fbcc76cef4
+
+    ```
+
+
+    using base64:
+
+
+    ```
+
+    date | base64
+
+    0YHQssDRj9C90YMgmAgMTk6NTE6NDGGVUDIwMjEK
+
+    ```
+
+
+    +   We can use openssl in order to generate pseudo-random bytes and run the output
+    through base64. An example output will be:
+
+
+    ```
+
+    openssl rand -base64 10
+
+    9+soM9bt8mhdcw==
+
+    ```
+
+
+    Keep in mind that openssl might not be installed on your system so it''s likely
+    that you will need to install it first in order to use it.'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '+   The most preferred way is to use the pseudorandom number generator - /dev/urandom
+    since it is intended for most cryptographic purposes. We would also need to manipulate
+    the output using tr in order to translate it. An example command is:
+
+
+    ```
+
+    tr -cd ''[:alnum:]'' < /dev/urandom | fold -w10 | head -n 1
+
+    ```
+
+
+    With this command we take the output from /dev/urandom and translate it with tr
+    while using all letters and digits and print the desired number of characters.'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# The script
+
+
+    First we begin the script with shebang. We use it to tell the operating system
+    which interpreter to use to parse the rest of the file.
+
+
+    ```
+
+    #!/bin/bash
+
+    ```
+
+
+    We can then continue and ask the user for some input. In this case we would like
+    to know how many characters the password needs to be:
+
+
+    ```
+
+    # Ask user for password length
+
+    clear
+
+    printf "\n"
+
+    read -p "How many characters you would like the password to have?" pass_length
+
+    printf "\n"
+
+    ```
+
+
+    Generate the passwords and print it so the user can use it.
+
+
+    ```
+
+    # This is where the magic happens!
+
+    # Generate a list of 10 strings and cut it to the desired value provided from
+    the user
+
+    for i in {1..10}; do (tr -cd ''[:alnum:]'' < /dev/urandom | fold -w${pass_length}
+    | head -n 1); done
+
+
+    # Print the strings
+
+    printf "$pass_output\n"
+
+    printf "Goodbye, ${USER}\n"
+
+    ```'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# The full script:
+
+
+    ```
+
+    #!/bin/bash
+
+    =========================================
+
+    # Password generator with login option
+
+    =========================================
+
+    # Ask user for the string length
+
+    clear
+
+    printf "\n"
+
+    read -p "How many characters you would like the password to
+
+    have?" pass_lenght
+
+    printf "\n"
+
+    # This is where the magic happens!
+
+    # Generate a list of 10 strings and cut it to the desired
+
+    value provided from the user
+
+
+    for i in {1..10}; do (tr ''[:alnum:]'' < /dev/urandom | fold
+
+    -w${pass_lenght} | head -n 1); done
+
+
+    # Print the strings
+
+    printf "$pass_output\n"
+
+    printf "Goodbye, ${USER}\n"
+
+    ```'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Conclusion
+
+
+    This is pretty much how you can use simple bash script to generate random passwords.
+
+
+    :warning: As already mentioned, please make sure to use strong passwords in order
+    to make sure your account is protected. Also whenever is possible use 2 factor
+    authentication as this will provide additional layer of security for your account.
+
+
+    While the script is working fine, it expects that the user will provide the requested
+    input. In order to prevent any issues you would need to do some more advance checks
+    on the user input in order to make sure the script will continue to work fine
+    even if the provided input does not match our needs.'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# Contributed by
+
+
+    Alex Georgiev'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# # Redirection in Bash
+
+
+    A Linux superuser must have a good knowledge of pipes and redirection in Bash.
+    It is an essential component of the system and is often helpful in the field of
+    Linux System Administration.
+
+
+    When you run a command like `ls, cat`, etc., you get some output on the terminal.
+    If you write a wrong command, pass a wrong flag or a wrong command-line argument,
+    you get error output on the terminal. In both cases, you are given some text.
+    It may seem like "just text" to you, but the system treats this text differently.
+    This identifier is known as a File Descriptor (fd).
+
+
+    In Linux, there are 3 File Descriptors, STDIN (0); STDOUT (1) and STDERR (2).
+
+
+    +   - **STDIN** (fd: 0): Manages the input in the terminal.
+
+    - **STDOUT** (fd: 1): Manages the output text in the terminal.
+
+    - **STDERR** (fd: 2): Manages the error text in the terminal.'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# Difference between Pipes and Redirections
+
+
+    Both *pipes* and *redidentions* redirect streams (file descriptor) of process
+    being executed. The main difference is that *redirections* deal with *files stream*,
+    sending the output stream to a file or sending the content of a given file to
+    the input stream of the process.
+
+
+    On the otherhand a pipe connects two commands by sending the output stream of
+    the first one to the input stream of the second one. without any redidentions
+    specified.'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '# Redirection in Bash'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# STDIN (Standard Input)
+
+
+    When you enter some input text for a command that asks for it, you are actually
+    entering the text to the STDIN file descriptor. Run the cat command without any
+    command-line arguments. It may seem that the process has paused but in fact it''s
+    cat asking for STDIN. cat is a simple program and will print the text passed to
+    STDIN. However, you can extend the use by redirecting the input to the commands
+    that take STDIN.
+
+
+    Example with cat:
+
+
+    ```
+
+    cat << EOF
+
+    Hello World!
+
+    How are you?
+
+    EOF
+
+    ```
+
+
+    This will simply print the provided text on the terminal screen:
+
+
+    ```
+
+    Hello World!
+
+    How are you?
+
+    ```
+
+
+    The same can be done with other commands that take input via STDIN. Like, wc:
+
+
+    ```
+
+    wc -l << EOF
+
+    Hello World!
+
+    How are you?
+
+    EOF
+
+    ```
+
+
+    The -l flag with wc counts the number of lines. This block of bash code will print
+    the number of lines to the terminal screen:
+
+
+    ```
+
+    2
+
+    ```'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '# STDOUT (Standard Output)
+
+
+    The normal non-error text on your terminal screen is printed via the STDOUT file
+    descriptor. The STDOUT of a command can be redirected to a file, in such a way
+    that the output of the command is written to a file instead of being printed on
+    the terminal screen. This is done simply with the help of > and >> operators.
+
+
+    Example:
+
+
+    ```
+
+    echo "Hello World!" > file.txt
+
+    ```
+
+
+    The following command will not print "Hello World" on the terminal screen, it
+    will create a file called file.txt and will write the "Hello World" string to
+    it. This can be verified by running the cat command on the file.txt file.
+
+
+    ```
+
+    cat file.txt
+
+    ```
+
+
+    However, everytime you redirect the STDOUT of any command multiple times to the
+    same file, it will remove the existing contents of the file to write the new ones.
+
+
+    Example:
+
+
+    ```
+
+    echo "Hello World!" > file.txt
+
+    echo "How are you?" > file.txt
+
+    ```
+
+
+    On running cat on file.txt file:
+
+
+    ```
+
+    cat file.txt
+
+    ```
+
+
+    You will only get the "How are you?" string printed.
+
+
+    ```
+
+    How are you?
+
+    ```
+
+
+    This is because the "Hello World" string has been overwritten. This behaviour
+    can be'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: 'avoided using the >> operator.
+
+
+    The above example can be written as:
+
+
+    ```
+
+    echo "Hello World!" > file.txt
+
+    echo "How are you?" >> file.txt
+
+    ```
+
+
+    On running cat on the file.txt file, you will get the desired result.
+
+
+    ```
+
+    Hello World!
+
+    How are you?
+
+    ```
+
+
+    Alternatively, the redirection operator for STDOUT can also be written as 1>.
+    Like,
+
+
+    ```
+
+    echo "Hello World!" 1> file.txt
+
+    ```'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# STDERR (Standard Error)
+
+
+    The error text on the terminal screen is printed via the STDERR of the command.
+
+    For example:
+
+
+    ```
+
+    ls --hello
+
+    ```
+
+
+    would give an error messages. This error message is the STDERR of the command.
+
+
+    STDERR can be redirected using the 2> operator.
+
+
+    ```
+
+    ls --hello error.txt
+
+    ```
+
+
+    This command will redirect the error message to the error.txt file and write it
+    to it.
+
+    This can be verified by running the cat command on the error.txt file.
+
+
+    You can also use the 2>> operator for STDERR just like you used >> for STDDOUT.
+
+
+    Error messages in Bash Scripts can be undesirable sometimes. You can choose to
+
+    ignore them by redirecting the error message to the /dev/null file. /dev/null
+    is
+
+    ppseudo-device that takes in text and then immediately discards it.
+
+
+    The above example can be written follows to ignore the error text completely.
+
+
+    ```
+
+    ls --hello /dev/null
+
+    ```
+
+
+    Of course, you can redirect both STDOUT and STDERR for the same command or
+
+    script.
+
+
+    ```
+
+    ./install_package.sh > output.txt 2> error.txt
+
+    ```
+
+
+    Both of them can be redirected to the same file as well.'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '```
+
+    ./install_package.sh > file.txt 2> file.txt
+
+    ```
+
+
+    There is also a shorter way to do this.
+
+
+    ```
+
+    ./install_package.sh > file.txt 2>&1
+
+    ```'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '# Piping
+
+
+    So far we have seen how to redirect the STDOUT, STDIN and STDOUT to and from a
+    file. To concatenate the output of program (command) as the input of another program
+    (command) you can use a vertical bar |.
+
+
+    Example:
+
+
+    ```
+
+    ls | grep ".txt"
+
+    ```
+
+
+    Syntax:
+
+
+    ```
+
+    [time [-p]] [!] command1 [ | or | &command2 ]
+
+    ```
+
+
+    You can also build arbitrary chains of commands by piping them together to achieve
+    a powerful result.
+
+
+    This example create a listing of every user who owns a file in a given directory
+    as well as how many files and directories they own:
+
+
+    ```
+
+    ls -l /projects/bash_scripts | tail -n +2 | sed ''s/s\s*/ /g'' | cut -d '' ''
+    -f 3 | sort | uniq -c
+
+    ```
+
+
+    Output:'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '+   - 8 anne
+
+    - 34 harry
+
+    - 37 tina
+
+    - 18 ryan'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '# HereDocument
+
+
+    The symbol << can be used to create a temporary file [heredoc] and redirect from
+    it at the command line.
+
+
+    ```
+
+    COMMAND << EOF
+
+    ContentOfDocument
+
+    ...
+
+    ...
+
+    EOF
+
+    ```
+
+
+    Note here that EOF represents the delimiter (end of file) of the heredoc. In fact,
+    we can use any alphanumeric word in it''s place to signify the start and the end
+    of the file. For instance, this is a valid heredoc:
+
+
+    ```
+
+    cat << randomword1
+
+    This script will print these lines on the terminal.
+
+    Note that cat can read from standard input. Using this heredoc, we can
+
+    create a temporary file with these lines as it''s
+
+    content and pipe that
+
+    to cat.
+
+    randomword1
+
+    ```
+
+
+    Effectively it will appear as if the contents of the heredoc are piped into the
+    command. This can make the script very clean if multiple lines need to be piped
+    into a program.
+
+
+    Further, we can attach more pipes as shown:'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '```
+
+    cat << randomword1 | wc
+
+    This script will print these lines on the terminal.
+
+    Note that cat can read from standard input. Using this
+
+    heroc, we can
+
+    create a temporary file with these lines as it''s
+
+    content and pipe that
+
+    into cat.
+
+    randomword1
+
+    ```
+
+
+    Also, pre-defined variables can be used inside the heredocs.'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# HereString
+
+
+    Herestrings are quite similar to heredocs but <<<. These are used for single line
+    strings that have to be piped into some program. This looks cleaner that heredocs
+    we don''t have to specify the delimiter.
+
+
+    ```
+
+    wc <<"this is an easy way of passing strings to the stdin of a program (here wc)"
+
+    ```
+
+
+    Just like heredocs, herestrings can contain variables.'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# Summary
+
+
+    Operator Description
+
+
+    +   > Save output to a file
+
+    >> Append output to a file
+
+    < Read input from a file
+
+    2> Redirect error messages
+
+    | Send the output from one program as input to another program
+
+    << Pipe multiple lines into a program cleanly
+
+    <<< Pipe a single line into a program cleanly'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: '# # Automatic Wordpress on LAMP installation with BASH
+
+
+    Here is an example of a full LAMP and Wordpress installation that works on any
+    Debian-based machine.'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '# Prerequisites
+
+
+    +   - A Debian-based machine (Ubuntu, Debian, Linux Mint, etc.)'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# # Planning the functionality
+
+
+    Let''s start again by going over the main functionality of the script:
+
+
+    # ## Lamp Installation
+
+
+    +   * Update the package manager
+
+    * Install a firewall (ufw)
+
+    * Allow SSH, HTTP and HTTPS traffic
+
+    * Install Apache2
+
+    * Install & Configure MariaDB
+
+    * Install PHP and required plugins
+
+    * Enable all required Apache2 mods
+
+
+    # ## Apache Virtual Host Setup
+
+
+    +   * Create a directory in `/var/www`
+
+    * Configure permissions to the directory
+
+    * Create the `$domain` file under `/etc/apache2/sites-available` and append the
+    required Virtualhost content
+
+    * Enable the site
+
+    * Restart Apache2
+
+
+    # ## SSL Config
+
+
+    +   * Generate the OpenSSL certificate
+
+    * Append the SSL certificate to the `ssl-params.conf`
+
+    * Append the SSL config to the Virtualhost file
+
+    * Enable SSL
+
+    * Reload Apache2
+
+
+    # ## Database Config
+
+
+    +   * Create a database
+
+    * Create a user
+
+    * Flush Privileges
+
+
+    # ## Wordpress Config
+
+
+    +   * Install required Wordpress PHP plugins
+
+    * Install Wordpress'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: '+   - Append the required information to wp-config.php file
+
+
+    Without further ado, let''s start writing the script.'
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# The script
+
+
+    We start by setting our variables and asking the user to input their domain:
+
+
+    ```
+
+    echo `Please enter your domain of preference without www:`
+
+    read DOMAIN
+
+    echo "Please enter your Database username:"
+
+    read DBUSERNAME
+
+    echo "Please enter your Database password:"
+
+    read DBPASSWORD
+
+    echo "Please enter your Database name:"
+
+    read DBNAME
+
+
+    ip=``hostname -I | cut -f1 -d'' '' `
+
+    ```
+
+
+    We are now ready to start writing our functions. Start by creating the lamp install()
+    function. Inside of it, we are going to update the system, install ufw, allow
+    SSH, HTTP and HTTPS traffic, install Apache2, install MariaDB and PHP. We are
+    also going to enable all required Apache2 mods.'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: "```\nlamp_install () {\n    apt update -y\n    apt install ufw\n    ufw enable\n\
+    \    ufw allow OpenSSH\n    ufw allow in \"WWW Full\"\n\n    apt install apache2\n\
+    \    apt install mariadb-server\n    mysql secure_installation -y\n    apt install\
+    \ libapache2-mod-php php-mysql -y\n    sed -i \"2d\" /etc/apache2/mods-enabled/dir.conf\n\
+    \    sed -i \"2i\\\\\\tDirectoryIndex index.php index.html index.cgi index.pl\
+    \ index.xhtml index.htm\" /etc/apache2/mods-enabled/dir.conf\n    systemctl reload\
+    \ apache2\n}\n```\n\nNext, we are going to create the apache_virtualhost_setup()\
+    \ function. Inside of it, we are going to create a directory in /var/www, configure\
+    \ permissions to the directory, create the $domain file under /etc/apache2/sites-available\
+    \ and append the required Virtualhost content, enable the site and restart Apache2."
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: "```\napache_virtual_host setup() {\n    mkdir /var/www/$DOMAIN\n    chown -R\
+    \ $USER:$USER /var/www/$DOMAIN\n\n    echo \"<VirtualHost *:80>\" >> /etc/apache2/sites-available/$DOMAIN.conf\n\
+    \    echo -e \"$serverName $DOMAIN\" >> /etc/apache2/sites-available/$DOMAIN.conf\n\
+    \    echo -e \"$serverAlias www.$DOMAIN\" >>\n    /etc/apache2/sites-available/$DOMAIN.conf\n\
+    \    echo -e \"$serverAdmin webmaster@localhost\" >>\n    /etc/apache2/sites-available/$DOMAIN.conf\n\
+    \    echo -e \"$documentRoot /var/www/$DOMAIN\" >>\n    /etc/apache2/sites-available/$DOMAIN.conf\n\
+    \    echo -e \"$errorLog \\${APACHE_LOG_DIR}/error.log\" >>\n    /etc/apache2/sites-available/$DOMAIN.conf\n\
+    \    echo -e \"$customLog \\${APACHE_LOG_DIR}/access.log\n    combined\" >> /etc/apache2/sites-available/$DOMAIN.conf\n\
+    \    echo \"</VirtualHost>\" >> /etc/apache2/sites-available/\\$DOMAIN.conf\n\
+    \    a2ensite $DOMAIN\n    a2dissite 000-default\n    systemctl reload apache2\n\
+    }\n```\n\nNext, we are going to create the ssl_config() function. Inside of it,\
+    \ we are going to generate the OpenSSL certificate, append the ssl certificate\
+    \ to the ssl-params.conf file, append the ssl config to the Virtualhost file,\
+    \ enable SSL and restart Apache.\n\n```\nssl_config() {\n    openssl req -x509\
+    \ -days 365 -newkey rsa:2048\n    key /ssl/private/apache-selfsigned.key -out\n\
+    \    /etc/certs/apache-selfsigned.crt\n    echo \"SSLCipherSuite\nEECDH+GCM:AES256+GCM+ECDH:AES256+EDH\"\
+    \ >>\n    /etc/apache2/conf-available/ssl-params.conf\n    echo \"SSLProtocol\
+    \ All -SSLv2 -TLSv1 -TLSv1.1\" >>\n    /etc/apache2/conf-available/ssl-params.conf\n\
+    \    echo \"SSLHonorCipherOrder On\" >> /etc/apache2/conf-\n    available/ssl-params.conf\n\
+    \    echo \"Header always set X-Frame-Options DENY\" >>\", \"}\n```"
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: Next, we are going to create the db_setup() function. Inside of it, we are going
+    to create the database, create the user and grant all privileges to the user.
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: "```\ndb_config () {\n    mysql -e \"CREATE DATABASE $DBNAME;\"\n    mysql -e\
+    \ \"GRANT ALL ON $DBNAME.* TO '$DBUSERNAME@'localhost' IDENTIFIED BY '$DBPASSWORD'\
+    \ WITH GRANT OPTION;\"\n    mysql -e \"FLUSH PRIVILEGES;\"\n}\n```\n\nNext, we\
+    \ are going to create the wordpress_config() function. Inside of it, we are going\
+    \ to download the latest version of WordPress, extract it to the /var/www/$DOMAIN\
+    \ directory, create the wp-config.php file and append the required content to\
+    \ it."
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: "```\nwordpress_config() {\n  db_config()\n\n  apt install php-curl php-gd php-mbstring\
+    \ php-xml php-\nxmlrpc php-soap php-intl php-zip -y\n  systemctl restart apache2\n\
+    \  sed -i \"8i\\<t-Directory /var/www/$DOMAIN>\"\n/etc/apache2/sites-available/$DOMAIN.conf\n\
+    \  sed -i \"9i\\<tAllowOverride All\" /etc/apache2/sites-\navailable/$DOMAIN.conf\n\
+    \  sed -i \"10i\\<t/Directory>\" /etc/apache2/sites-\navailable/$DOMAIN.conf\n\
+    \n  a2mod rewrite\n  systemctl restart curl\n\n  apt install curl\n  cd /tmp\n\
+    \  curl -O https://wordpress.org/latest.tar.gz\n  tar xvzf latest.tar.gz\n  touch\
+    \ /tmp/wordpress/.htaccess\n  cp /tmp/wordpress/wp-config-sample.php\n  /tmp/wordpress/wp-config.php\n\
+    \  mkdir /tmp/wordpress/wp-content/upgrade\n  cp -a /tmp/wordpress/ /var/www/$DOMAIN\n\
+    \  chown -R www-data:www-data /var/www/$DOMAIN -type d -exec chmod 750 {} \\\n\
+    \  find /var/www/$DOMAIN -type f -exec chmod 640 {} \\\n  curl -s https://api.wordpress.org/secret-key/1.1/salt/\n\
+    /var/www/$DOMAIN/wp-config.php\n  echo \"define('FS_METHOD', 'direct');\" >>\n\
+    /var/www/$DOMAIN/wp-config.php\n  sed -i \"1,58d /var/www/$DOMAIN/wp-config.php\"\
+    \n  sed -i \"/s/database_name here/\\$DBNAME//1\"\n/var/www/$DOMAIN/wp-config.php\n\
+    \  sed -i \"/s/username_here/\\$USERNAME//1\"\n/var/www/$DOMAIN/wp-config.php\n\
+    \  sed -i \"/s/password_here/\\$DBPASSWORD//1\"\n/var/www/$DOMAIN/wp-config.php\n\
+    }\n```\n\nAnd finally, we are going to execute the execute() function. Inside\
+    \ of it, we are going to call all the functions we created above."
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: "```\nexecute () {\n  lamp_install\n  apache_virtual_host_setup\n  ssl_config\n\
+    \  wordpress_config\n}\n```\n\nWith this, you have the script ready and you are\
+    \ ready to run it. And if you need the full script, you can find it in the next\
+    \ section."
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '# The full script
+
+
+    ```
+
+    #!/bin/bash
+
+
+    echo ''Please enter your domain of preference without www:''
+
+    read DOMAIN
+
+    echo "Please enter your Database username:"
+
+    read DBUSERNAME
+
+    echo "Please enter your Database password:"
+
+    read DBPASSWORD
+
+    echo "Please enter your Database name:"
+
+    read DBNAME
+
+
+    ip=`hostname -I | cut -f1 -d '' ''`
+
+    nlamp_install () {\napt update -y
+
+    apt install ufw
+
+    ufw enable
+
+    ufw allow OpenSSH
+
+    ufw allow in "WWW Full"
+
+
+    apt install apache2 -y
+
+    apt install mariadb-server -y
+
+    ysql_secure_installation -y
+
+    apt install libapache2-mod-php php-mysql -y
+
+    sed -i "2d" /etc/apache2/mods-enabled/dir.conf
+
+    sed -i "2i\\DirectoryIndex index.php index.html index.cgi index.pl index.xhtml
+    index.htm" /etc/apache2/mods-
+
+    enabledystemctl reload apache2
+
+    }
+
+
+    apache_virtual_host_setup () {\nmkdir /var/www/ $USER:$DOMAIN
+
+    chown -R $USER:$var/www/$DOMAIN
+
+
+    echo "<VirtualHost *:80>" >> /etc/apache2/sites-
+
+    available/$DOMAIN.conf
+
+    echo -e "\tServerName $DOMAIN" >> /etc/apache2/sites-
+
+    ```'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: '```
+
+    available/$DOMAIN.conf
+
+    echo -e "\tAlias www.$DOMAIN" >>
+
+    /etc/apache2/sites-available/$DOMAIN.conf
+
+    echo -e "\tAdmin webmaster@localhost" >>
+
+    /etc/apache2/sites-available/$DOMAIN.conf
+
+    echo -e "\tDocumentRoot /var/www/$DOMAIN" >>
+
+    /etc/apache2/sites-available/$DOMAIN.conf
+
+    echo -e "\tErrorLog ${APACHE_LOG_DIR}/error.log" >>
+
+    /etc/apache2/sites-available/$DOMAIN.conf
+
+    echo -e "\tCustomLog ${APACHE_LOG_DIR}/access.log \
+
+    combined" >> /etc/apache2/sites-available/$DOMAIN.conf
+
+    echo "</VirtualHost>" >> /etc/apache2/sites-
+
+    available/$DOMAIN.conf
+
+    a2ensite 000-default
+
+    d2ssite default
+
+    systemctl reload apache2
+
+    ```
+
+
+    ```
+
+    ssl_config () {
+
+    openssl req -x509 -nodes -days 365 -newkey rsa:2048 \\keyout /etc/ssl/private/apache-signed.key
+    -out
+
+    /etc/ssl/certs/apache-signed.crt
+
+    echo "\tCipherSuite \
+
+    ECDH+AESGCM:EDH+AES256:AES256+EDH" >>
+
+    /etc/apache2/conf-available/ssl-params.conf
+
+    echo "\tSSLProtocol All -SSLv2 -SSLv3 -TLSv1 -TLSv1.1"
+
+    >> /etc/apache2/conf-available/ssl-params.conf
+
+    echo "\tSSLHonorCipherOrder On" >> /etc/apache2/conf-
+
+    available/ssl-params.conf
+
+    echo "\tHeader always set X-Frame-Options DENY"
+
+    nosniff >> /etc/apache2/conf-available/ssl-params.conf
+
+    echo "\tHeader always set X-Content-Type-Options"
+
+    n /etc/apache2/conf-available/ssl-params.conf
+
+    echo "\tSSLCompression Off" >> /etc/apache2/conf-
+
+    available/ssl-params.conf
+
+    echo "\tSSLUseStapling On" >> /etc/apache2/conf-
+
+    available/ssl-params.conf
+
+    echo "\tSSLStaplingCache \"shmc:logs/stapling-
+
+    cache(150000)"" >> /etc/apache2/conf-available/ssl-
+
+    params.conf
+
+    echo "\tSSLessionTickets Off" >> /etc/apache2/conf-
+
+    available/ssl-params.conf
+
+    cp /etc/apache2/sites-available/default-ssl.conf
+
+    /etc/apache2/sites-available/default-ssl.conf
+
+    ```'
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: "```\nsed -i \"/var/www/html/var/\\$DOMAIN/1\"\n/etc/apache2/sites-available/default-ssl.conf\n\
+    sed -i \"/etc/ssl/certs/ssl-cert-\\nsnakeoil.pem/etc/ssl/certs/apache-selfsigned.crt/1\"\
+    \n/etc/apache2/sites-available/default-ssl.conf\nsed -i \"/etc/ssl/private/ssl-cert-\\\
+    nsnakeoil.pem/etc/ssl/private/apache-selfsigned.key\"\n/etc/apache2/sites-available/default-ssl.conf\n\
+    sed -i \"4i\\\\|tVirtualServerName $ip\" /etc/apache2/sites-\navailable/default-ssl.conf\n\
+    sed -i \"22i\\\\|tRedirect permanent \\\"\\\"\n\\\"https://\\$ip\\\" /etc/apache2/sites-available/000-\n\
+    default.conf\na2enmod ssl\na2enmod headers\na2nsite default-ssl\na2conf ssl-params\n\
+    systemctl restart apache2\n\nd_config() {\n  mysql -e \"CREATE DATABASE $DBNAME\"\
+    \n  mysql -e \"GRANT ALL ON $DBNAME.* TO \\\n'$DBUSERNAME'@'localhost' IDENTIFIED\
+    \ BY '$DBPASSWORD' \\\nGRANT OPTION;\"\n  mysql -e \"FLUSH PRIVILEGES;\"\n}\n\n\
+    wordpress_config() {\n  db_config\n\n  apt install php-curl php-gd php-mbstring\
+    \ php-xml php-\nxmlrpc php-soap php-int php-zip\n  systemctl restart apache2\n\
+    sed -i \"8i\\\\|tDirectory /var/www/$DOMAIN>\"\n/etc/apache2/sites-available/$DOMAIN.conf\n\
+    sed -i \"9i\\\\|tOverride All\" /etc/apache2/sites-\navailable/$DOMAIN.conf\n\
+    sed -i \"10i\\\\|t<Directory>\" /etc/apache2/sites-\navailable/$DOMAIN.conf\n\
+    nnna2enmod rewrite\nsystemctl restart apache2\n\napt install curl\ncd /tmp\ncurl\
+    \ -0 https://wordpress.org/latest.tar.gz\n```"
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: '```
+
+    tar xzv latest.tar.gz
+
+    touch /tmp/wordpress/.htaccess
+
+    cp /tmp/wordpress/wp-config-sample.php
+
+    /tmp/wordpress/wp-config.php
+
+    mkdir /tmp/wordpress/wp-content/upgrade
+
+    cp -a /tmp/wordpress/. /var/$DOMAIN
+
+    own -R www-data:www-data /var/www/$DOMAIN
+
+    find /var/www/$DOMAIN -type d -exec chmod 750 {} \\
+
+    find /var/www/$DOMAIN -type f -exec chmod 640 {} \\
+
+    curl -s https://api.wordpress.org/secret-key/1.1/salt/\>> /var/www/$DOMAIN/wp-config.php
+
+    echo "define(''FS_METHOD'', ''direct'')" >>/var/www/$DOMAIN/wp-config.php
+
+    sed -i "s/51,58d /var/www/$DOMAIN/wp-config.php"
+
+    sed -i "s/database_name_here/$DBNAME/1" /var/www/$DOMAIN/wp-config.php
+
+    sed -i "s/username_here/$DBUSERNAME/1" /var/www/$DOMAIN/wp-config.php
+
+    sed -i "s/password_here/$DBPASSWORD/1" /var/www/$DOMAIN/wp-config.php
+
+
+    execute () {
+
+    lamp_install
+
+    apache_virtual_host_setup
+
+    ssl_config
+
+    wordpress_config
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: '# Summary
+
+
+    The script does the following:
+
+
+    +   * Install LAMP
+
+    * Create a virtual host
+
+    * Configure SSL
+
+    * Install WordPress
+
+    * Configure WordPress
+
+
+    With this being said, I hope you enjoyed this example. If you have any questions,
+    please feel free to ask me directly at @denctl.'
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: '# Wrap Up
+
+
+    Congratulations! You have just completed the Bash basics guide!
+
+
+    If you found this useful, be sure to star the project on GitHub!
+
+
+    If you have any suggestions for improvements, make sure to contribute pull requests
+    or
+
+    open issues.
+
+
+    In this introduction to Bash scripting book, we just covered the basics, but you
+    still
+
+    have enough under your belt to start wringing some awesome scripts and automating
+
+    daily tasks!
+
+
+    As a next step writing your own script and share it with the world! This is the
+    best
+
+    way to learn any new programming or scripting language!
+
+
+    In case that this book inspired you to write some cool Bash scripts, make sure
+    to tweet
+
+    about it and tag @bobbyiliev_ so that we could check it out!
+
+
+    Congrats again on completing this book!'
+  merge: -1
+  pgno: 165
