@@ -1,0 +1,262 @@
+- img_proc: true
+  md: '# # Penguins Don''t Feel Pain:
+
+    # Linux for Windows Users
+
+
+    Larry Bushey
+
+    · Going Linux Podcast ·
+
+
+    SCaLE 8x
+
+    February 21, 2010
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_0_0.png)
+
+
+    This work is licensed under a Creative Commons Attribution-Share Alike 3.0 United
+    States License.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Penguins Don''t Feel Pain
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_1_0.png)
+
+
+    This work is licensed under a Creative Commons Attribution-Share Alike 3.0 United
+    States License.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Get Prepared
+
+
+    +   - Confidence
+
+    - Motivation
+
+    - Knowledge
+
+    - Support
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_2_0.png)
+
+
+    This work is licensed under a Creative Commons Attribution-Share Alike 3.0 United
+    States License.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# Have Confidence\n\n+   - You can do it\n  - “Linux is for Smart People, and\
+    \ You're Not as Dumb as You Think”\n  - You are intelligent\n  - You have the\
+    \ skills\n  - You are not alone – You're part of a community!\n\n![](img/cb08a6ee76abf6cf613bd8bd44db367d_3_0.png)\n\
+    \nThis work is licensed under a Creative Commons Attribution-Share Alike 3.0 United\
+    \ States License."
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # You KNOW you want to make a change!
+
+
+    +   - Your computer used to be fast, right?
+
+
+    +   - Your computer freezes or crashes now?
+
+
+    +   - Expensive antivirus software nagging you to renew or upgrade?
+
+
+    +   - There is no risk to trying Linux!
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_4_0.png)
+
+
+    This work is licenced under a Creative Commons Attribution-Share Alike 3.0 United
+    States License.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# # What have you got to lose?
+
+
+    +   - Viruses and spyware
+
+
+    +   - Becoming a "spam factory"
+
+
+    +   - Losing important documents, photos and memories to a crash
+
+
+    +   - The ability to use a Windows application you depend on
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Prepare For The Switch
+
+
+    +   - Use cross-platform Open Source software
+
+    - OpenDisc: http://www.theopendisc.com
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# # Now It's Easy To Move To Linux\n\n+   - Learn how to move your\n  - E-mail\n\
+    \  - Browser favorites (bookmarks)\n  - Application preferences painlessly from\
+    \ Windows to Linux\n\n+   - Thunderbird – e-mail\n  - Move \"C:\\Documents and\
+    \ Settings\\[User Name]\\Application Data\\Thunderbird\\Profiles\" to \"~/.mozilla-thunderbird\"\
+    \n  - Firefox – web browser\n  - Move \"C:\\Documents and Settings\\[User Name]\\\
+    Application Data\\Mozilla\" to \"~/.mozilla/n  - OpenOffice.org – office suite\n\
+    \  - Move \"C:\\Documents and Settings\\[User Name]\\Application Data\\OpenOffice.org\\\
+    3\" to \"~/.openoffice.org/3/\"\n\n![](img/cb08a6ee76abf6cf613bd8bd44db367d_7_0.png)\n\
+    \nThis work is licensed under a Creative Commons Attribution-Share Alike 3.0 United\
+    \ States License."
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Find Your Software
+
+
+    +   - Linux alternatives for your favorite applications
+
+    - Use Your Package Manager!
+
+
+    If you **must** install third party software:
+
+
+    Top 100 applications:
+
+    http://ubuntulinuxhelp.com/top-100-of-the-best-useful-opensource-applications/
+
+
+    List of equivalents:
+
+    resources.goinglinux.com#SoftwareEquivalents
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_8_0.png)
+
+
+    > This work is licenced under a Creative Commons Attribution-Share Alike 3.0 United
+    States License.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Use a LiveCD
+
+
+    +   * Assure yourself that your hardware (computer, printer, router, etc.) will
+    work with Linux.
+
+    * Linux Mint: http://www.linuxmint.com
+
+    * Ubuntu: http://www.ubuntu.com
+
+
+    How to burn a LiveCD:
+
+    http://goinglinux.com/screencasts.html#glsc003
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# You are not on your own!\n\n+   * Tap-in to the support network for your\
+    \ new operating system and its applications\n  * On-computer help\n    * Help\
+    \ system\n  * “Virtual” help\n    * On-line help resources\n\n![](img/cb08a6ee76abf6cf613bd8bd44db367d_10_0.png)\n\
+    \nThis work is licenced under a Creative Commons Attribution-Share Alike 3.0 United\
+    \ States License."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# You are not on your own!\n\n+   - “Virtual” and on-line help\n  - Help from\
+    \ the publisher of your version of Linux\n    - Website, wiki or forum\n  - Help\
+    \ from the Linux community\n    - Distribution-agnostic wikis & forums like linuxquestions.org\n\
+    \    - Blogs & websites like goinginux.com\n    - Podcasts like:\n      - Category5\
+    \ or Computer Action Show (video)\n      - Linux Outlaws or Going Linux (audio)\n\
+    \  - Traditional media like:\n    - The Tech Guy\n    - Computer America\n\n![](img/cb08a6ee76abf6cf613bd8bd44db367d_11_0.png)"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Believe you can do this
+
+
+    +   - For the first time, the pain of change is lower than the pain of continuing
+    to use Windows
+
+
+    +   - You have the confidence that you can do it yourself
+
+
+    +   - You aren''t by your self
+
+
+    +   - You have nothing to fear
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_12_0.png)
+
+
+    This work is licenced under a Creative Commons Attribution-Share Alike 3.0 United
+    States License.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Feel No Pain
+
+
+    +   * Be like the penguin
+
+    * Be prepared
+
+    * Feel no pain
+
+    * Try Linux
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_13_0.png)
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_13_1.png)
+
+
+    This work is licensed under a Creative Commons Attribution-Share Alike 3.0 United
+    States License.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Larry Bushey
+
+    Creator and Host
+
+    · Going Linux Podcast ·
+
+
+    ![](img/cb08a6ee76abf6cf613bd8bd44db367d_14_0.png)
+
+
+    goinglinux@gmail.com
+
+    http://goinglinux.com
+
+
+    This work is licenced under a Creative Commons Attribution-Share Alike 3.0 United
+    States License.'
+  merge: -1
+  pgno: 14
