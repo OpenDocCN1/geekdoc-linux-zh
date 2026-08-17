@@ -1,0 +1,2 @@
++   [Kali Linux 基础：使用 Nmap、Metasploit 等工具发现安全漏洞（初学者应用与软件开发完整指南第 13 册）](README.md)
++   [Kali Linux 基础：使用 Nmap、Metasploit 等工具发现安全漏洞（初学者应用与软件开发完整指南第 13 册）](kali-linux-essentials-uncover-security-flaws-using-nmap-meta.md)
