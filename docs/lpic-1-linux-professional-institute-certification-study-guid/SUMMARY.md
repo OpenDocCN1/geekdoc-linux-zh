@@ -1,0 +1,2 @@
++   [LPIC-1：Linux Professional Institute 认证学习指南 (Level 1 考试 101 和 102)](README.md)
++   [LPIC-1：Linux Professional Institute 认证学习指南 (Level 1 考试 101 和 102)](lpic-1-linux-professional-institute-certification-study-guid.md)
