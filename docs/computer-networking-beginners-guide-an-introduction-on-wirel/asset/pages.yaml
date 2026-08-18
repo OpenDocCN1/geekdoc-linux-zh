@@ -1,0 +1,5787 @@
+- img_proc: true
+  md: '# # COMPUTER NETWORKING
+
+
+    # ## BEGINNERS GUIDE
+
+
+    AN INTRODUCTION ON WIRELESS TECHNOLOGY AND SYSTEMS SECURITY TO PASS CCNA EXAM,
+    WITH A HINT OF LINUX PROGRAMMING AND COMMAND LINE
+
+
+    # AXEL ROSS'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '**Computer Networking Beginners Guide**
+
+
+    *An Introduction on Wireless Technology and Systems Security to*
+
+
+    *Pass CCNA Exam, With a Hint of Linux Programming and*
+
+
+    *Command Line*'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '**Table of Contents**
+
+
+    Title Page
+
+
+    Computer Networking Beginners Guide: An Introduction on Wireless
+
+
+    Technology and Systems Security to Pass CCNA Exam, With a Hint of
+
+
+    Linux Programming and Command Line
+
+
+    Description
+
+
+    Introduction
+
+
+    Protocol
+
+
+    Mitigating Network Threats
+
+
+    IPv6
+
+
+    Wiring Your Building
+
+
+    Network Cabling
+
+
+    802.11i Robust security networks
+
+
+    Subnetting
+
+
+    Why Automate the Network?
+
+
+    Packet Tracer Activities
+
+
+    Malware: A Hacker’s Henchman
+
+
+    Products and Services Offered by Cisco Networking Solutions
+
+
+    Addressing Process Risks
+
+
+    IPv4 Summarization'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: Conclusion
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '*Axel Ross*'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '**Description**
+
+
+    **Introduction**
+
+
+    **Chapter 1 - Protocol**
+
+
+    *Why protocols are needed?*
+
+
+    *So What Is An Agreement In Protocol?*
+
+
+    *The Birth and Standardization of Computer Communications*
+
+
+    **Chapter 2 - Mitigating Network Threats**
+
+
+    *Identifying threats*
+
+
+    *How attacks happen*
+
+
+    **Chapter 3 - IPv6**
+
+
+    *How to convert a decimal into hexadecimal?*
+
+
+    *How to convert a hexadecimal into decimal?*
+
+
+    *IPv6 structure*
+
+
+    *Remember the following rules*
+
+
+    *IPv6 address types*
+
+
+    *Unicast*
+
+
+    *Link local unicast:*
+
+
+    *IPv4compatible IPv6*
+
+
+    *Multicast address*
+
+
+    **Chapter 4 - Wiring Your Building**
+
+
+    **Chapter 5 - Network Cabling**
+
+
+    **Chapter 6 - 802.11i Robust security networks**
+
+
+    *Management Operations*
+
+
+    *Contention-Free Service*
+
+
+    **Chapter 7 - Subnetting**
+
+
+    **Chapter 8 - Why Automate the Network?**
+
+
+    **Chapter 9 - Packet Tracer Activities**
+
+
+    **Chapter 10 - Malware: A Hacker’s Henchman**
+
+
+    *Types of Malware*
+
+
+    Virus*:*
+
+
+    *Vulnerability to Malware*
+
+
+    *Homogeneity*
+
+
+    *Cover your tracks*
+
+
+    *Crimeware*
+
+
+    *Bots*
+
+
+    **Chapter 11 - Products and Services Offered by Cisco Networking Solutions**
+
+
+    Access Points'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Outdoor and Industrial Access
+
+
+    Wireless Controllers
+
+
+    Networking Management
+
+
+    Optical Networking
+
+
+    Interfaces and Modules
+
+
+    Next Generation Firewall
+
+
+    **Chapter 12 - Addressing Process Risks**
+
+
+    *People and Policy Risks*
+
+
+    Advanced Malware Protection
+
+
+    VPN Security Clients
+
+
+    Advanced Email Security Protection
+
+
+    Web Security
+
+
+    Business Collaborations (Collaboration Endpoints)
+
+
+    Customer Collaborations
+
+
+    Unified Communications
+
+
+    Unified Computing
+
+
+    Data Center Automation
+
+
+    Secure Data Center
+
+
+    Hyper-Converged Infrastructure
+
+
+    **Chapter 13 IPv4 Summarization**
+
+
+    *Its Purpose & Configurations*
+
+
+    **Conclusion**'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '**© Copyright 2019 - All rights reserved**
+
+
+    No part of this book may be reproduced in any form without permission
+
+
+    in writing from the author. Reviewers may quote brief passages in reviews.
+
+
+    **Disclaimer**
+
+
+    No part of this publication may be reproduced or transmitted in any form
+
+
+    or by any means, mechanical or electronic, including photocopying or
+
+
+    recording, or by any information storage or retrieval system, or transmitted
+
+
+    by email without permission in writing from the publisher.
+
+
+    While all attempts have been made to verify the information provided in
+
+
+    this publication, neither the author nor the publisher assumes any
+
+
+    responsibility for errors, omissions, or contrary interpretations of the subject
+
+
+    matter herein.
+
+
+    This book is for entertainment purposes only. The views expressed are
+
+
+    those of the author alone and should not be taken as expert instructions of
+
+
+    commands. The reader is responsible for his or her own actions.
+
+
+    Adherence to all applicable laws and regulations, including international,
+
+
+    federal, state and local governing professional licensing, business practices,
+
+
+    advertising, and all other aspects of doing business in the US, Canada, or any
+
+
+    other jurisdiction is the sole responsibility of the purchaser or reader.
+
+
+    Neither the author nor the publisher assumes any responsibility or
+
+
+    liability whatsoever on the behalf of the purchaser or reader of these
+
+
+    materials.
+
+
+    Any perceived slight of any individual or organization is purely
+
+
+    unintentional.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "**Description**\n\n![](img/0937bf4b1739a36662bbe2484b163f1b_8_0.png)\n\nComputer\n\
+    \nNetworking is simply the formation of a computer network. A computer\n\nnetwork\
+    \ can be defined as the collection of computers, printers, and other\n\nequipment\
+    \ that are connected (wired or wireless), with the ultimate aim of\n\nfostering\
+    \ communications between the devices. The process of creating this\n\nconnection\
+    \ of devices is known as Computer Networking. \n\nTechnically, Computer Networking\
+    \ is referred to the process of\n\ntransporting and exchanging data between points\
+    \ known as nodes, carried via\n\na shared system, executed in an information system.\
+    \ The whole concept of\n\nComputer Networking does not consist only of the design,\
+    \ construction, and\n\nuse of a network. It also involves the technical management,\
+    \ maintenance,\n\nand running of the involved infrastructure, software, and underlying\
+    \ policies.\n\nSince the advent of wireless technologies, decades ago, our lives\
+    \ have\n\nnever remained the same. And one thing is sure; it only promises to\
+    \ be better.\n\nWith the gradual evolution of 5G in the mainstream, we can only\
+    \ imagine\n\nwhat is to come. One sentence does it, “Wireless technology has affected\
+    \ the\n\nvery intrinsic properties of our lives.”\n\nIt has affected the way we\
+    \ do business; it has transformed the way we\n\nlearn; it has affected the way\
+    \ we communicate and keep up with family and\n\nfriends. Everything has changed,\
+    \ and this is just a testimonial of things to\n\ncome.\n\nThis guide will focus\
+    \ on the following:\n\nProtocol\n\nMitigating Network Threats\n\nIPv6\n\nWiring\
+    \ Your Building\n\nNetwork Cabling"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '802.11i Robust security networks
+
+
+    Subnetting
+
+
+    Why Automate the Network?
+
+
+    Addressing Process Risks
+
+
+    IPv4 Summarization... AND MORE!!!'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "**Introduction**\n\n![](img/0937bf4b1739a36662bbe2484b163f1b_10_0.png)\n\n\
+    A computer network\n\nis made up primarily of interconnecting common, programmable\
+    \ hardware.\n\nThe hardware is designed for a specific purpose (for example, to\
+    \ transmit\n\ndata or video signals). This programmable hardware can be used to\
+    \ transmit a\n\nvariety of different types of data and can support a wide and\
+    \ growing range\n\nof applications. \n\nAccording to this definition: (1) the\
+    \ hardware connected to a computer\n\nnetwork is not limited to ordinary computers,\
+    \ but includes smartphones and\n\nother different types of devices like AR devices,\
+    \ smartwatches that are\n\nflooding the market every day (2) computer networks\
+    \ are not specifically\n\ndesigned to transmit data, but are capable of supporting\
+    \ a wide variety of\n\napplications (including those that may arise in the future).\
+    \ \n\nWe know that in the beginning, computer networks were really used to\n\n\
+    transmit data. But with the development of network technology, the\n\napplication\
+    \ scope of a computer network is increasing, not only networks can\n\ntransmit\
+    \ audio and video files, but also the application scope has far exceeded\n\nthe\
+    \ general communication scope and can be perfectly used for many\n\napplications.\
+    \ \n\nIt is generally believed that computer network refers to the connection\
+    \ of\n\nmultiple computers and network equipment with independent instruments\
+    \ in\n\ndifferent geographical locations through communication lines (including\n\
+    \ntransmission media and network equipment). A computer system for resource"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "sharing and information transfer under the co-management and coordination\n\
+    \nof Network Operating System, network management software and network\n\ncommunication\
+    \ protocol. If you don't know what a computer network is, go\n\nhome, or go to\
+    \ an Internet cafe, or go to your company and see for yourself.\n\nWhat you see\
+    \ is a network of pcs (personal computers) that appear to be\n\nindependent and\
+    \ located in different places, connected by cables and boxes of\n\ndevices (switches,\
+    \ routers). \n\nSimply put, a computer network is a collection of computer systems,\
+    \ or\n\ngroups of computer systems, that work independently and are connected\
+    \ to\n\neach other by communication lines, including connecting cables and network\n\
+    \nequipment. In this set of computer systems, resources can be shared among\n\n\
+    computers, access to each other can be carried out for a variety of computer\n\
+    \nnetwork applications. The computers can be microcomputers, minicomputers,\n\n\
+    midsized computers, mainframes. \n\nBy sharing, I mean sharing resources. Resource\
+    \ sharing has many\n\nimplications. It can be information sharing, software sharing,\
+    \ or hardware\n\nsharing. For example, there are many servers on the Internet\
+    \ (that is, a\n\ndedicated computer) that store a large number of valuable electronic\n\
+    \ndocuments (including audio and video files) that can be easily read or\n\ndownloaded\
+    \ (for free or for a fee) by Internet users. Because of the network,\n\nthese\
+    \ resources are as easy to use as if they were right next to the user. \n\nA typical\
+    \ example of data resource sharing is database resource sharing,\n\nwhere each\
+    \ network user can centrally invoke relevant data information in a\n\nsingle database\
+    \ server. A variety of application servers are also examples of\n\nsharing data\
+    \ resources, such as receiving email through client-side programs\n\nlike Fox\
+    \ Mail and Outlook, and the online games you and your friends play\n\nevery day\
+    \ Or you and your Family Watch the same movie on the Internet\n\nevery day on\
+    \ a different computer at home. There are many examples of\n\nsharing software\
+    \ resources, such as in the enterprise internal network we will\n\nprovide all\
+    \ employees on the server to share some common tools, let users\n\nchoose to install.\
+    \ If pushed to the Internet, it is more intuitive, we\n\ndownloaded from the Internet\
+    \ are all examples of software resource sharing."
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "**Protocol **\n\n![](img/0937bf4b1739a36662bbe2484b163f1b_12_0.png)\n\nIn \n\
+    \nthe \n\nfield \n\nof\n\ncomputer network and information communication, people\
+    \ often refer to the\n\nword \"protocol\". The representative protocols in common\
+    \ use on the internet\n\nare IP, TCP, HTTP and so on. The protocols commonly used\
+    \ in Lan (local\n\narea network) are IPX / SPX (NetWare system protocol developed\
+    \ by Novell)\n\nand so on. \n\n**Why protocols are needed? **\n\nTypically, we\
+    \ send an E-mail, visit a home page to get information and are\n\nunaware of the\
+    \ protocol that goes on in the background, which is only\n\npossible if we reconfigure\
+    \ the computer's network connection and modify\n\nnetwork settings. So as long\
+    \ as the network is set up and connected\n\nsuccessfully, people often forget\
+    \ about protocols and things. As long as the\n\napplication knows how to leverage\
+    \ the protocols, it should be enough to\n\nallow people to use the network connection\
+    \ they have built. It is not\n\nuncommon for a person to be unable to access the\
+    \ Internet because they do\n\nnot understand certain protocols. However, in the\
+    \ process of communication\n\nthrough the network, the protocol plays a vital\
+    \ role and as you are keen on\n\nknowing about protocols can give you a good overview\
+    \ of the topic."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "In a word, the protocol is a kind of \"agreement\" that the client computer\n\
+    \nand the server computer realize the communication through the network. This\n\
+    \n\"convention\" allows computers that are made up of different devices from\n\
+    \ndifferent vendors, different CPUs, and different operating systems to\n\ncommunicate\
+    \ with each other as long as they follow the same protocol. On\n\nthe other hand,\
+    \ if different protocols are used, communication cannot be\n\nachieved. It's like\
+    \ two people speaking in different languages who can't\n\nunderstand each other.\
+    \ There are many types of protocols, each of which\n\nclearly defines its code\
+    \ of conduct. Two computers must be able to support\n\nthe same protocol, and\
+    \ follow the same protocol for processing, so as to\n\nachieve mutual communication.\
+    \ \n\nBefore starting to dwell on the topic of protocols further let us discuss\n\
+    \ntwo very basic things that you need to know for better understanding. They\n\
+    \nare the central processing unit and operating system. \n\nCPU \n\nCPU (Central\
+    \ Processing Unit). It's like the \"heart\" of a computer, every\n\nprogram Is\
+    \ actually scheduled and executed by it. The performance of the\n\nCPU also determines\
+    \ the processing performance of a computer to a great\n\nextent. So, people often\
+    \ say that the history of the computer is actually the\n\nhistory of the CPU.\
+    \ At present, people often use CPU Intel Core, Intel Atom,\n\nARM CORTEX, and\
+    \ other products.\n\nOperating System\n\nOs (Operating System) Operating System,\
+    \ is a kind of basic software. It\n\nintegrates the CPU management, memory management,\
+    \ computer perIPherals\n\nmanagement, and program management and other important\
+    \ functions. The\n\ntreatment of TCP or IP protocols described here, in many cases\
+    \ is already\n\nembedded in specific operating systems. Today's operating systems\n\
+    \ncommonly used in personal computers are UNIX, Windows, Mac OS x,\n\nLinux, and\
+    \ so on. \n\nThe instructions that can be run in a computer vary from one CPU\
+    \ to\n\nanother and from one operating system to another. Therefore, programs\n\
+    \ndesigned for certain CPUs or operating systems may not run directly if they\n\
+    \nare copied directly to computers with other types of CPUs or operating\n\nsystems.\
+    \ The data stored in a computer also varies from CPU to the operating\n\nsystem.\
+    \ Therefore, if the CPU and the operating system between different\n\ncomputers\
+    \ to achieve communication, IT needs a party to support the"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "protocol, and follow this protocol for data reading. This is the reason why\n\
+    \nyou can’t run an android app in an iPhone.\n\nIn addition, a CPU can usually\
+    \ only run one program at a time. In order to\n\nmake multiple programs run at\
+    \ the same time, the operating system adopts\n\nthe CPU time slice rotation mechanism\
+    \ to switch between multiple programs\n\nand schedule reasonably. This approach\
+    \ is called multitasking. \n\n**So What Is An Agreement In Protocol? **\n\nAgreements\
+    \ are like conversations between people. Here's a simple example.\n\nThere's three\
+    \ of them. Sam, Tom, and Jerry. Sam can only speak Chinese,\n\nTom can only speak\
+    \ English, and Jerry can speak both Chinese and English.\n\nNow Sam and Tom need\
+    \ to talk. How should they communicate with each\n\nother? What if Tom and Jerry\
+    \ need to talk? \n\nIf we: Treat Chinese and English as \"agreements. \" Use Chat\n\
+    \ncommunication\" \n\nAnd Treat what you say as \"data. \" \n\nI am afraid that\
+    \ Sam and Tom cannot communicate with each other for as\n\nlong as they speak\
+    \ in one language. Because of the difference in the\n\nagreement (language) used\
+    \ in their conversation, neither party is able to\n\ntransmit the data (what is\
+    \ said) to the other party. (a simultaneous interpreter\n\nbetween the two can\
+    \ facilitate communication, as the gateway does in a\n\nnetwork environment.)\
+    \ \n\nNext, we analyze the conversation between Sam and Jerry. By using this\n\
+    \n\"agreement\" in Chinese, two people can understand what the other person is\n\
+    \ntrying to say. That is to say, Sam and Jerry use the same protocol in order\
+    \ to\n\ncommunicate smoothly so that they can transmit the desired data (what\
+    \ they\n\nwant to say to each other). \n\nIn this sense, agreements are like the\
+    \ language of ordinary speech.\n\nAlthough language is a human property, when\
+    \ computers communicate with\n\neach other over the Internet, it can also be argued\
+    \ that communication is\n\nbased on something akin to human \"language\" (similarly,\
+    \ some of the actions\n\nwe take for granted in our daily lives are in many cases\
+    \ consistent with the\n\nconcept of \"agreement\"). \n\n**The Birth and Standardization\
+    \ of Computer**"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "**Communications **\n\nAt the beginning of computer communication, systematization\
+    \ and\n\nstandardization did not get enough attention. Each computer manufacturer\n\
+    \nproduces its own network products to enable computer communications. No\n\n\
+    strong sense of systematization, layering, etc. In 1974, IBM released the\n\n\
+    SNA, which exposed the company's computer communications technology as\n\na systematic\
+    \ network architecture. Since then, computer manufacturers have\n\nalso released\
+    \ their own network architecture, triggering the systematization of\n\nmany protocols.\
+    \ However, the various network architectures and protocols of\n\nvarious manufacturers\
+    \ are not compatible with each other. Even if two\n\nheterogeneous computers are\
+    \ connected on the physical level, normal\n\ncommunication cannot be realized\
+    \ because of the different network\n\narchitecture and the different protocols.\
+    \ \n\nThis is extremely inconvenient for the user. Because this means that the\n\
+    \ncomputer network products of which vendor was used in the first place can\n\n\
+    only be used from the same vendor all the time. If the relevant vendor goes\n\n\
+    bankrupt or the product exceeds its service life, the entire network equipment\n\
+    \nmust be replaced. In addition, it is not uncommon for different departments\
+    \ to\n\nbe unable to communicate even when they are physically connected to each\n\
+    \nother because the network products used are not the same. The lack of\n\nflexibility\
+    \ and extensibility made it difficult for users to use computer\n\ncommunication\
+    \ freely. \n\nWith the increasing importance of computers, many companies have\n\
+    \ncome to realize the importance of compatibility. People began to work on\n\n\
+    technologies that would allow heterogeneous models produced by different\n\nmanufacturers\
+    \ to communicate with each other. This promotes the openness\n\nand versatility\
+    \ of the web. \n\nIn order to solve these problems, ISO (International Organization\
+    \ for\n\nStandards) has established an International standard, Osi (Open Systems\n\
+    \nInterconnection reference model), and standardized the communication\n\nsystem.\
+    \ Currently, OSI protocols are not commonly used, but the OSI\n\nreference model,\
+    \ which was the guideline of Osi Protocol design, is often\n\nused in the development\
+    \ of network protocols. \n\nThe standardization of the protocol also enables all\
+    \ devices that follow\n\nthe standard protocol to no longer be unable to communicate\
+    \ due to\n\ndifferences in computer hardware or operating systems. Therefore,\
+    \ the"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "standardization of protocols has also promoted the popularization of\n\ncomputer\
+    \ networks. \n\nIn the real world, there are many good technologies that are not\
+    \ widely\n\navailable because their development companies do not publish the\n\
+    \nappropriate development specifications. If companies can make their\n\ndevelopment\
+    \ specifications public, and more of their peers can use them in\n\ntime and become\
+    \ industry standards, then there will be more and better\n\nproducts that can\
+    \ survive and be used by us. \n\nOSI reference model \n\nThis model divides the\
+    \ necessary functions of the communication\n\nprotocol into 7 layers. Through\
+    \ these layers, the more complex network\n\nprotocols are simplified. In this\
+    \ model, each layer receives a specific service\n\nprovided by its lower layer\
+    \ and is responsible for providing a specific service\n\nto its upper layer. The\
+    \ conventions that govern the interaction between upper\n\nand lower layers are\
+    \ called \"interfaces. \". The conventions that govern\n\ninteractions between\
+    \ layers are called protocols. \n\nProtocol layering is like modular development\
+    \ in computer software. The\n\nrecommendations of the OSI reference model are\
+    \ ideal. It wants to implement\n\nall the modules from the first layer to the\
+    \ seventh layer and combine them to\n\nachieve network communication. Layering\
+    \ allows each layer to be used\n\nindependently, so that even if some of the layering\
+    \ changes in the system, it\n\ndoes not affect the whole system. Therefore, it\
+    \ is possible to construct a\n\nsystem that is both extensible and flexible. In\
+    \ addition, by layering the\n\ncommunication functions can be subdivided, making\
+    \ it easier to implement\n\nseparate protocols for each layering and to define\
+    \ the specific responsibilities\n\nand obligations of each layering. These are\
+    \ all advantages of layering. The\n\ndownside of layering may be over modularity,\
+    \ making processing more\n\nburdensome, and having to implement similar processing\
+    \ logic for each\n\nmodule.\n\nUnderstanding Layering Through a Simple Example\
+    \ \n\nFirst, take telephone chat as an example. two people, Adam and Eve, are\n\
+    \ntalking on the telephone (communication device) in English (language\n\nprotocol).\
+    \ On the surface, Adam and Eve are having a direct conversation in\n\nEnglish,\
+    \ but in reality, Adam and Eve are both listening to the voice on the\n\nreceiver\
+    \ of the telephone, both speaking into the microphone. Imagine what a\n\nperson\
+    \ who has never seen a telephone would think if they saw this? I'm"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "afraid he must think Adam and Eve are talking on the telephone in\n\nnetworking\
+    \ perspective.\n\nThe language protocol they use in an audio input to the microphone\
+    \ is\n\ntranslated into radio signals at the communications device level. Sent\
+    \ to each\n\nother's phones, and then converted to audio output by the communications\n\
+    \nequipment layer, passed to each other. Thus, Adam and Eve actually have a\n\n\
+    conversation using an interface between the telephone and the voice\n\nconverted\
+    \ by audio. \n\nPeople often think that when they pick up the phone to talk to\
+    \ someone,\n\nit's as if they're talking to them directly, but if you look closely,\
+    \ it's really the\n\nphone that's mediating the whole process, and there's no\
+    \ denying that. What if\n\nthe electronic signals from Adam's phone were not converted\
+    \ into sounds of\n\nthe same frequency as those from Eve's? This is similar to\
+    \ the difference in\n\nprotocol between Adam's phone and Eve's phone. Eve May\
+    \ hear the voice\n\nand feel that he is not talking to Adam, but to someone else.\
+    \ If the\n\nfrequencies are far apart, Eve is more likely to think he is not hearing\n\
+    \nEnglish. \n\nSo, what if we change the communication device layer by assuming\
+    \ that\n\nthe language layer is the same. For example, change the telephone to\
+    \ a radio.\n\nIf the communication equIPment layer uses the radio, they must learn\
+    \ to use\n\nthe radio method. Since the language layer is still using the English\
+    \ protocol,\n\nusers can talk just as normally as they used to when they were\
+    \ on the phone. \n\nSo, what if the communication device layer uses a telephone\
+    \ and the\n\nlanguage layer changes to English? It is clear that the telephone\
+    \ itself will not\n\nbe limited by the user's language. Therefore, this situation\
+    \ and the use of\n\nEnglish calls exactly the same, still can be achieved call.\
+    \ \n\nThe previous example simply divides the protocol into two layers.\n\nHowever,\
+    \ the actual packet communication protocols can be quite complex.\n\nThe OSI reference\
+    \ model organizes such a complex protocol into seven easy-\n\nto-understand layers.\
+    \ \n\nOSI Reference Model \n\nThe OSI reference model does a good job of summarizing\
+    \ the necessary\n\nfunctions for communication. Network engineers also often prototype\
+    \ the\n\nlayers of the OSI reference model when discussing protocol-related issues.\n\
+    \nFor beginners in computer networks, learning the OSI reference model can be\n\
+    \nthe first step to success."
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "The OSI reference model is, after all, a \"model, \" a rough set of\n\ndefinitions\
+    \ of what each layer does, without a detailed definition of the\n\nprotocol and\
+    \ interface. It serves only as a guide to learning and designing\n\nprotocols.\
+    \ Therefore, if you want to know more details about the agreement,\n\nit is necessary\
+    \ to refer to the specific specifications of each agreement itself. \n\nMany communication\
+    \ protocols correspond to one of the seven layers of\n\nthe OSI reference model.\
+    \ From this, we can get a general idea of the position\n\nand function of the\
+    \ protocol in the whole communication function. While it\n\ntakes a careful reading\
+    \ of the specification to understand the protocol, its\n\ngeneral purpose can\
+    \ be found at the corresponding OSI model layer. This is\n\nwhy the OSI model\
+    \ is the first to be studied before learning about each\n\nprotocol. \n\nThe OSI\
+    \ (Reference Model) divides communication functions into seven\n\nlayers, called\
+    \ the OSI reference model. The OSI Protocol, based on the OSI\n\nReference Model,\
+    \ defines the protocol and interface-related standards for\n\neach layer. Products\
+    \ that follow the OSI Protocol are called Osi products, and\n\nthe communications\
+    \ they follow are called Osi Communications. Do not\n\nconfuse \"Osi reference\
+    \ model\" with \"OSI protocol\" because of their different\n\nmeanings."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "![](img/0937bf4b1739a36662bbe2484b163f1b_19_0.png)\n\n**Mitigating**\n\n**Network\
+    \ Threats**\n\nThere is nothing wrong with being paranoid about your network,\
+    \ or network\n\nsecurity. In fact, paranoia might actually save you. Today networks\
+    \ are under\n\nthreat from so many elements. There are people who just need access\
+    \ to your\n\nnetwork resources because they can for fun, but others will want\
+    \ to steal\n\nimportant information. There is so much damage that someone can\
+    \ do to you\n\nwhen they gain access to your network.\n\nNetwork security is something\
+    \ that most people barely take seriously, yet\n\nit might actually be the difference\
+    \ between life and death. A security breach\n\ncan cripple the entire network,\
+    \ rendering you sitting ducks. \n\nTo be very honest, network security is as important\
+    \ as a basic need, and\n\nyou should do your best to make sure you keep a clean,\
+    \ secure network.\n\nThere are many security threats that you will learn about.\
+    \ Some have been\n\naround for years, others might come up in the future. Some\
+    \ threats simply\n\nevolve and become stronger, worse iterations of their former\
+    \ selves.\n\nThe secret to maintaining your network integrity in terms of security\
+    \ lies\n\nin mitigating risks. Disaster preparedness is something you should always\n\
+    \nwork on. Even the strongest network is always at risk of a security threat.\n\
+    \n**Identifying threats**"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "The dangers to your network are insane. There are so many risks out there\n\
+    \nthat you would be foolhardy to ignore them, or assume that you have the\n\n\
+    most protected network. One tactic that works for a lot of organizations is to\n\
+    \nwork with experts to try hacking the network from time to time, to gauge the\n\
+    \nlevel of security, and determine whether you need to do more.\n\nMost people\
+    \ only recognize malware and viruses as the biggest risk in as\n\nfar as network\
+    \ security is concerned. Indeed, an infection will ground you.\n\nHowever, there\
+    \ are so many other risks out there that can have just as\n\ndamning an effect\
+    \ on your network.\n\nAnyone who tries to gain unauthorized access to your network\
+    \ usually\n\ndoes so either for reconnaissance, or for destructive reasons. Some\
+    \ security\n\nbreaches are so carefully crafted they can accomplish both. Security\
+    \ breaches\n\nare important because there is so much damage that can be done with\
+    \ the\n\ninformation accessed from your network.\n\nMany people are currently\
+    \ paying the price for using an insecure network.\n\nTheir private and personal\
+    \ data was stolen, and some of them were\n\nimpersonated. You might end up being\
+    \ linked to a terror attack you had no\n\nidea about, because someone stole your\
+    \ identity and used it for such. Enough\n\nabout the scary details though. Here\
+    \ are some of the common network\n\nsecurity concerns that you will encounter\
+    \ from time to time as a network\n\nadministrator:\n\n*●* Denial of service\n\n\
+    Denial of service attacks (DoS) block you from accessing the network or\n\nresources\
+    \ associated with the network. It can be done in so many ways. DoS\n\nattacks\
+    \ are common today, and they usually target large corporations. \n\nThe attackers\
+    \ can flood the organization website with too much traffic\n\nthat the servers\
+    \ cannot handle, making it impossible for legitimate users to\n\naccess the website.\n\
+    \n*●* Ping of death\n\nThe ping of death is one of the common forms of DoS attacks.\n\
+    \nSo, what happens in the ping of death attack? To communicate, your\n\ndevice\
+    \ sends ICMP packets to a remote host to establish its availability.\n\nHowever,\
+    \ in a ping of death attack, the intruder will flood the remote host\n\nwith ICMP\
+    \ packets. When this happens, they probably expect the remote host"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "to be overwhelmed, and in the process it either hangs or keeps rebooting.\n\
+    \nLuckily today a lot of operating systems are designed with patches and\n\nsecurity\
+    \ updates to protect them from such an attack.\n\n*●* ^(Smurfs)\n\nForget about\
+    \ the tiny adorable blue fellows you have seen on TV. Smurf\n\nattacks are nowhere\
+    \ close to adorable. What smurf attacks do is that they\n\nkeep flooding your\
+    \ network with spoofed ping broadcasts. Spoofing is using\n\nsomeone else’s IP\
+    \ address.\n\nHow is a smurf attack executed? The attacker will spoof your IP\
+    \ address,\n\nand after that, direct a humongous number of pings to the broadcast\
+    \ addresses\n\nassociated with your IP address. The router that receives the request\
+    \ will\n\nproceed to broadcast the pings on the network, assuming it is a normal\n\
+    \nbroadcast request. From here, all the other hosts will pick up on the\n\nbroadcast.\
+    \ Since they are all echoing a response to the IP address request,\n\nthey create\
+    \ an echo. In a short while, you will have a nightmare on the\n\nnetwork because\
+    \ each of the hosts on that network is trying to respond to the\n\nrequest. \n\
+    \nSmurf attacks are more effective when they target a large network. They\n\n\
+    benefit from the economies of scale. Smurf attacks might be a thing of the\n\n\
+    past, but you can never rule out the possibility of occurring. There is always\n\
+    \nthat one random hacker who decides to take an old school approach that no\n\n\
+    one would suspect. Most routers today are programmed in a way that they\n\ncannot\
+    \ broadcast data packets haphazardly.\n\n*●* Tribe flood network\n\nTribe flood\
+    \ network attacks are very complex, and are commonly known\n\nas distributed denial\
+    \ of service attacks, DDoS. They are orchestrated when\n\nthe attacker launches\
+    \ a series of DoS attacks from several sources, and all the\n\nattacks are directed\
+    \ towards a host of devices.\n\n**How attacks happen**\n\nDepending on their ultimate\
+    \ goal, each attacker will often have an action plan\n\nto get what they want.\
+    \ Some attackers will lure you over a duration of time,"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'in the process learning as much as they can about you and your network, even
+
+
+    without your knowledge before they pounce and execute their attack.
+
+
+    Attackers can interact with you in a very subtle form and you will rarely
+
+
+    realize you are being targeted. Something as simple as a computer game is
+
+
+    sufficient to allow them access to your network. Armed with the knowledge
+
+
+    that someone out there is always trying to gain privileged access to your
+
+
+    network, you must exercise caution.
+
+
+    A directed attack is an attack that is orchestrated by an attacker. This is
+
+
+    someone who was looking for something specific, or who had a very specific
+
+
+    reason for hacking your network. A directed attack is different from things
+
+
+    like viruses, for example. A virus might be transmitted from one device to
+
+
+    another by unwitting users. Viruses usually take advantage of a weak system
+
+
+    and embed into the device. Some viruses clone and look like files you see or
+
+
+    access all the time, so you cannot suspect them at all. Here are some of the
+
+
+    most common network attacks that you might experience while managing a
+
+
+    network:
+
+
+    *●* Active X attack
+
+
+    These attacks are embedded onto small apps that you must install on your
+
+
+    computer to allow you access to something specific. Some websites require
+
+
+    you to install Java or Adobe plugins to play some media. These are the
+
+
+    simple ways the attackers access your devices. Once you install the app, the
+
+
+    program runs in the background without your knowledge, collecting
+
+
+    information that is transmitted to the hacker’s server.
+
+
+    Hackers who use this technique can remotely access everything in your
+
+
+    devices without your knowledge. This is a dangerous attack because someone
+
+
+    who can see everything in your hard drive might as well store damning
+
+
+    information or plant doctored evidence in your device.
+
+
+    *●* Auto rooter
+
+
+    An auto rooter is an automated hack. Hackers who perform this rely on
+
+
+    rootkits. This type of attack is common with hackers who want to spy on your
+
+
+    network. Once affected, they have access to everything you do, and can
+
+
+    monitor your device for as long as they need to.
+
+
+    *●* IP spoofing'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "An IP spoof is a situation where the attacker sends data packets, but\n\ninstead\
+    \ of using their real source address, they use a fake one. More often\n\nyour\
+    \ network will be susceptible because the IP address is spoofed to look\n\nlike\
+    \ it is coming from a device within the network, when in a real sense the\n\n\
+    packets are originating from an alien IP address.\n\nThe problem with IP spoofing\
+    \ is that routers will identify the packets and\n\ntreat them as normal requests\
+    \ within the network, because they can identify\n\nthe IP address. The best way\
+    \ to deal with such an attack is to have a firewall\n\nin place.\n\nThere is a\
+    \ lot of privileged information on the internet today. Think about\n\nthe number\
+    \ of people who shop online, the companies that store user\n\ncredentials and\
+    \ information on the cloud and so forth. Data is the new gold,\n\nand everyone\
+    \ is trying to hack into some system to obtain useful data.\n\nCorporate espionage,\
+    \ for example, is one of the biggest black hat businesses.\n\nPeople are paid\
+    \ too much money to hack into a system and obtain specific\n\ndata. Implementing\
+    \ firewalls on the networks is one of the best ways to avoid\n\nthis problem.\n\
+    \n*●* Backdoor access\n\nA backdoor is a path created by a developer to allow\
+    \ them access to the\n\nprogram or app without going through the normal processes.\
+    \ Most developers\n\ncreate backdoors so that they can access these apps for different\
+    \ reasons.\n\nSome use this as a means of troubleshooting the app if normal processes\
+    \ fail\n\nand they cannot access them.\n\nFor hackers, backdoors allow them to\
+    \ invade the network. It is always\n\nadvisable that you monitor and inspect the\
+    \ network as often as possible to\n\ndetect backdoors. You should also conduct\
+    \ system audits frequently to make\n\nsure your network security is up to par\
+    \ with the present standards in network\n\nsecurity. \n\nConsidering the current\
+    \ state of affairs in data security, most countries\n\nplace a lot of emphasis\
+    \ on the need for system and network audits. You must\n\ndo everything in your\
+    \ power to protect the networks you use, or you might be\n\nheld liable if a data\
+    \ breach ends up with an inappropriate use of the data\n\nobtained.\n\n*●* Application\
+    \ layer attack"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'An application layer attack exploits loopholes in some of the programs or
+
+
+    applications that you use. Most of these attacks target apps and programs that
+
+
+    require permissions, because they collect a lot of privileged information.
+
+
+    Anyone who hacks into your system with such an attack will not just gain
+
+
+    access to the system and devices, they will have access to an information
+
+
+    goldmine.
+
+
+    *●* Packet sniffing
+
+
+    Packet sniffers are tools that network managers use to troubleshoot the
+
+
+    network. They scour the network for problems. However, these same tools
+
+
+    can also be used by hackers. Packet sniffers are commonly used by identity
+
+
+    fraudsters to steal login credentials in the breached networks, and any other
+
+
+    information that might be relevant to their cause.
+
+
+    *●* Brute force
+
+
+    In a brute force attack, the hacker runs a program on your network that
+
+
+    logs into your server, for example. They gain account privileges and from
+
+
+    here, use them for backdoor access. Later on, they can access your network
+
+
+    without needing passwords.
+
+
+    *●* Network reconnaissance
+
+
+    Network reconnaissance is simply spying on the network. The hackers
+
+
+    take their time to obtain as much information as they can about your network
+
+
+    before they pounce. They can scan network ports, or employ phishing
+
+
+    techniques to get the information they need.
+
+
+    *●* Password attack
+
+
+    A password attack is an attack where the hacker pretends to be a valid
+
+
+    user on the network, allowing them access to your resources and credentials.
+
+
+    Password attacks can be initiated in so many ways. They can also be used
+
+
+    alongside other attacks.
+
+
+    *●* Man in the middle'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "Man in the middle attacks take place when the hacker intercepts your\n\ncommunication.\
+    \ They read the data intercepted before it is delivered to the\n\nrecipient. Internet\
+    \ service providers, credit and debit card swipe machines,\n\nand rogue ATM machine\
+    \ operators are commonly used for these attacks.\n\n*●* Trust exploits\n\nIt has\
+    \ often been said that the weakest link in any security apparatus is the\n\nhuman\
+    \ interface. We tend to hold trust in high regard, and this is what brings\n\n\
+    down the entire system. You believe that someone cannot do something bad\n\nbecause\
+    \ you know them personally and they are not of that character.\n\nUnknown to you,\
+    \ they might have ulterior motives, or someone else might be\n\nusing them without\
+    \ their knowledge. Trust exploits occur when a hacker\n\nmanages to exploit the\
+    \ trust relationships that you have in the network.\n\n*●* Port redirection\n\n\
+    In this attack, the hacker uses a host machine that is already\n\ncompromised.\
+    \ The compromised host machine is one that is friendly to your\n\nnetwork. Since\
+    \ this machine already has privileges, the hacker uses it to\n\ngenerate traffic\
+    \ to the network, traffic packets that would normally be\n\nblocked by your firewall\
+    \ from getting into the network.\n\n*●* Phishing \n\nPhishing is one of the most\
+    \ sophisticated hacking attempts you can come\n\nacross today. There is a good\
+    \ reason why it is referred to as social\n\nengineering. As we evolve with the\
+    \ networks, so do the tactics used to obtain\n\nprivileged information by hackers.\
+    \ Phishing attacks require you to offer\n\ninformation to the hacker that you\
+    \ would not offer in your right mind, but you\n\ndo so without knowing it.\n\n\
+    Majority of network administrators have taken steps to protect their\n\nnetworks\
+    \ from attacks. Hacking such networks is not easy. Instead of going\n\nthrough\
+    \ the trouble, hackers simply create something that looks legitimate\n\nand pass\
+    \ it on to the users. With this, they obtain all the information they\n\nneed\
+    \ from you.\n\nA good example of this is a hacker who wants to collect some\n\n\
+    information like identification details, date and place of birth, and so forth."
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'Such a hacker can create a loan app, make it look legitimate and put it up
+    in
+
+
+    an app store. From there, they market the loan app properly and make sure
+
+
+    they get the right attention.
+
+
+    Once you download this app, because perhaps you are looking for cheap
+
+
+    loans with a bad credit score, you feed in all the important details you would
+
+
+    provide the bank or any lender and wait for their feedback. You never get any
+
+
+    feedback from the phishing hackers. They already have information like your
+
+
+    full name, residential address, phone number, email address, and some even
+
+
+    prompt you to create a password, which most people use the same password
+
+
+    across all accounts.
+
+
+    Some phishing hackers even clone emails and make them appear look
+
+
+    like they come from a legitimate source like a well-known government entity
+
+
+    or bank. To avoid these, always make sure you use official links from
+
+
+    websites you access. When you are in doubt, call the official contact details
+
+
+    to find out the truth before you provide your information to hackers.
+
+
+    Some of the phishing attacks use keyloggers. Keyloggers can run in your
+
+
+    system undetected. Today most keyloggers are built in such a way that they
+
+
+    can send not just the key strokes, but some even capture screenshots and
+
+
+    upload them to the hacker’s server without your knowledge. Since you might
+
+
+    be typing a lot on the keyboard, keyloggers can be programmed to capture
+
+
+    only specific information like emails and passwords, phone numbers and so
+
+
+    forth.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "**IPv6**\n\n![](img/0937bf4b1739a36662bbe2484b163f1b_27_0.png)\n\nTo \n\nunderstand\
+    \ \n\nthe\n\nstructure of IPv6 you need to have the knowledge of hexadecimal number\n\
+    \nsystem because the IP version 6 uses hex numbers to represent IP address.\n\n\
+    For a quick review of hexadecimal number, have a look at the following\n\nchart.\n\
+    \n*Note:* remember that decimal number uses only 10 digits (0 to 9) to\n\nrepresent\
+    \ any number, while a hexadecimal number uses 16 digits to\n\nrepresent any number.\n\
+    \nDecimal number\n\nHexadecimal number\n\n0\n\n0\n\n1\n\n1\n\n2\n\n2\n\n3\n\n\
+    3\n\n4\n\n4\n\n5\n\n5\n\n6\n\n6\n\n7\n\n7\n\n8\n\n8\n\n9\n\n9\n\n10\n\nA\n\n11\n\
+    \nB\n\n12\n\nC\n\n13\n\nD\n\n14\n\nE"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '15
+
+
+    F
+
+
+    As you can see from the above table that both decimal 0-9 and
+
+
+    hexadecimal 0-9 looks exactly the same. A decimal value 10 is represented
+
+
+    by letter *A *in hex and decimal 11 is represented by letter *B* in hex number
+
+
+    system. Normally, 0x is written before any hex number to make sure it is not
+
+
+    confused with decimal number.
+
+
+    **How to convert a decimal into hexadecimal?**
+
+
+    Hexadecimal means the base of this number system is 16. Remember that the
+
+
+    decimal number 0 to 15 can be directly converted into hex by using chart
+
+
+    given above. If you have a decimal number 16 or more you need to use the
+
+
+    following procedures to convert it into hexadecimal:
+
+
+    1\. Divide the number by 16, keep note of the reminder
+
+
+    2\. Keep dividing the answer until there is no reminder.
+
+
+    *3\. Convert all the individual reminder into hex value to get the hex*
+
+
+    *equivalent of your decimal number.*
+
+
+    Example: convert decimal 27 into hexadecimal. 27*÷*16*\=1, with reminder*
+
+
+    *11*
+
+
+    1\. The hex value of decimal 1 is 1
+
+
+    2\. And the hex value of decimal 11 is B
+
+
+    *3\. Therefore, the decimal 27 can be written as 1B in hexadecimal*
+
+
+    Let’s see another example. Convert decimal 966 into a decimal.
+
+
+    Reminder in
+
+
+    decimal
+
+
+    Hex equivalent of the
+
+
+    reminder
+
+
+    Divide the number
+
+
+    by 16
+
+
+    966÷16=60
+
+
+    6
+
+
+    6
+
+
+    Divide the answer
+
+
+    60÷16=3
+
+
+    12
+
+
+    C
+
+
+    *3*÷16=0
+
+
+    0
+
+
+    3
+
+
+    Therefore, the hex value of decimal *966 is 0x3C6*
+
+
+    **How to convert a hexadecimal into decimal?**
+
+
+    Use the following simple procedures to convert any hex value into its
+
+
+    decimal equivalent.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '1\. Multiply each bit position value the hexadecimal with the
+
+
+    corresponding digits in the number.
+
+
+    *2\. Add all the results.*
+
+
+    Example: convert a hex 0x179 into decimal value. The ‘ox” before the
+
+
+    number is used remind that it is a hex number, not a decimal number.
+
+
+    Hex number
+
+
+    1
+
+
+    7
+
+
+    9
+
+
+    Decimal value
+
+
+    Bit position
+
+
+    162=256
+
+
+    161=16 160=1
+
+
+    Multiply by position value 1x256=256 7x16=112 9x1=9 256+112+9=377
+
+
+    Therefore, the hex 0x179 equivalent of decimal is 377.
+
+
+    **IPv6 structure**
+
+
+    An IPv6 address is represented with eight distinct four-digit hexadecimal
+
+
+    numbers. Each of the four digits is separated by a colon (:). An example of
+
+
+    IPv6 is
+
+
+    1041:0000:130B:0000:0000:09C1:586D:1305
+
+
+    Since a single hex digit is 4 bit long, the eight group of four-hexadecimal
+
+
+    digit will be equivalent to 4x4x8=128 bits long.
+
+
+    **Remember the following rules**
+
+
+    1\. All the leading 0s in IPv6 can be omitted, if you want.
+
+
+    2\. ‘0000’ can be compressed into ‘0’.
+
+
+    3\. If a digit starts with a zero you can omit it. For example, 09C1 can
+
+
+    be written as 9C1.
+
+
+    *4\. A continuous block of zeros can be represented as a double colon*
+
+
+    *(::)*
+
+
+    By applying the above rules, you can rewrite the given IPv6 in the
+
+
+    example as below:
+
+
+    1041: 0:130B:: 9C1:586D:1305
+
+
+    When shortening an IPv6 address with the above rules, you must
+
+
+    remember that you can use a double colon only once in an IPv6.
+
+
+    In IPv6 subnet is known as prefix.
+
+
+    All the prefix length is written in decimal value.
+
+
+    If an IPv6 ends with a double colon, you can omit it. For instance, the
+
+
+    IPv6
+
+
+    8721:968:8680:256::/64 can be rewritten as 8721:968:8680:256/64'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '**IPv6 address types**
+
+
+    The three types of IPv6 addresses are
+
+
+    **1.****Unicast**
+
+
+    **2.****Anycast**
+
+
+    3. multicast
+
+
+    Address
+
+
+    type
+
+
+    Description
+
+
+    Unicast
+
+
+    Used for host-to-host communication (one to one communication),
+
+
+    just like IPv4.Unicast addresses has several types, based on their
+
+
+    application. The types of unicast addresses are global unicast, link-
+
+
+    local unicast, site-local unicast (deprecated), unique local, IPv4
+
+
+    compatible.
+
+
+    Multicast
+
+
+    Used for one to many communication(broadcasting)
+
+
+    Anycast
+
+
+    Also known as one-to-many, they are used for load balancing,
+
+
+    traffic optimization. Anycast can deliver packets to a host based on
+
+
+    routing metrics such as shortest path. It delivers the packet to the
+
+
+    nearest destination instead of delivering packets to all the address
+
+
+    using the same anycast address
+
+
+    **Unicast**
+
+
+    A unicast address is assigned to a single interface. They have similar
+
+
+    functionality to IPv4. A packet sent to a unicast address is received by a
+
+
+    single interface only. The important aspects of unicast addresses are:
+
+
+    1\. Global unicast
+
+
+    2\. Site-local unicast (no longer used)
+
+
+    3\. link-local unicast
+
+
+    4\. IPv4 mapped IPv6
+
+
+    5\. IPv4 compatible IPv6 address
+
+
+    *6\. Unspecified address*
+
+
+    *Global unicast:* it is similar to class A, B and C addresses of IPv4. They
+
+
+    occupy the 85 percent of the IPv6 address space. A global unicast address
+
+
+    always starts with binary 001. This address is written with a decimal prefix
+
+
+    notation of 2000::/3, which technically means that any IPv6 address whose'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'first three bits are equal to the first three bits of the hex number 2000 belongs
+
+
+    to the global unicast address.
+
+
+    Hex: 2000
+
+
+    Binary:*100*00000000000
+
+
+    Global routing prefix is used for making IPv6 routable in the Internet.
+
+
+    The subnet ID in IPv6 also known as site level aggregator (SLA). Subnet is
+
+
+    used for organization’s internal addressing hierarchy.
+
+
+    A global unicast can uniquely identify an interface in a network using
+
+
+    EUI-64 format (extended universal identifier). It creates a EUI-64 by
+
+
+    inserting a 16-bit value or 4-digit long hex value 0xFFFE between the 24-bit
+
+
+    long vendor ID and 24-bit vendor supplied unique id of a MAC address.
+
+
+    *Anycast:* this type of address helps to identify multiple different
+
+
+    interfaces. A packet sent to an anycast address is received by a number of
+
+
+    interfaces. Anycast uses the built-in support of IPv6 for load balancing and
+
+
+    redundancy. Anycast addresses are drawn from the unicast address pool of
+
+
+    IPv6. Since anycast addresses are not distinguishable from unicast addresses,
+
+
+    the router must be informed if they have anycast addresses. Cisco router
+
+
+    requires using anycast keyword to inform the router that it has an anycast
+
+
+    address.
+
+
+    Router (config-if) #ipv6 address 3004:ddc7::821/64 *anycast*
+
+
+    **Link local unicast:**
+
+
+    Each interface receives a link-local unicast address when IPv6 in enabled in
+
+
+    that interface. This type of address always beings with FE80::/10. They are
+
+
+    used for communication between hosts in the local network. Link-local is not
+
+
+    routable in Internet. The most important usage of link-local unicast is
+
+
+    neighbor discovery and communication of routing protocols. An example of
+
+
+    link local address is
+
+
+    FE80::211:72FD:89FC:22BC:851B
+
+
+    **IPv4compatible IPv6**
+
+
+    It is a mechanism for creating IPv6 address using IPv4 address. IPv4
+
+
+    compatible IPv6 is created by inserting 96 bits of 0s at the beginning of 32
+
+
+    bits IPv4 address. For example, you have an IPv4 address 16.16.10.10; the
+
+
+    following will be your valid IPv4 compatible IPv6'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '0:0:0:0:0:16:1610.10
+
+
+    Or
+
+
+    ::16:1610.10
+
+
+    In hexadecimal form the above address will look like this:
+
+
+    ::A:A:10:10
+
+
+    **Multicast address**
+
+
+    There is no broadcast address in IPv6 because it does not support broadcast
+
+
+    traffic. Instead, you have to use multicast address to send your data packets
+    to
+
+
+    a specific group of hosts. The easiest way to recognize an IPv6 multicast
+
+
+    address is that the first octet of every multicast IP always begins with FF.
+
+
+    The prefix used in IPv6 multicast address is FF00::/8
+
+
+    The first octet after 0xFF expresses the lifetime and second octet indicates
+
+
+    the scope of the multicast. The lifetime of the multicast can be either
+
+
+    permanent or transient. The scope can be any of the followings:
+
+
+    1\. Node (0001)
+
+
+    **2.****Link(0010)**
+
+
+    **3.****Subnet(0011)**
+
+
+    **4.****Admin(0100)**
+
+
+    **5.****Site(0101)**
+
+
+    **6.****Organization(1000)**
+
+
+    7. Global(1110)
+
+
+    The rest of the 112 bits are used to represent the multicast group ID.
+
+
+    Some r multicast addresses are reserved for specific purposes. Those reserved
+
+
+    multicast addresses are:
+
+
+    FF01::1—for multicasting to all nodes/all hosts
+
+
+    FF02::1—multicast to all hosts(link-local scope)
+
+
+    FF01::2—multicast to all routers (within interface-local scope)
+
+
+    FF02::2—multicast to all routers in a link
+
+
+    FF05::2—multicast to all routers in the site (site-local scope)
+
+
+    FF02::5— multicast to all OSPFv3 routers
+
+
+    FF02::6— multicast to all OSPFv3 designated routers
+
+
+    FF02::A—multicast to EIGRP routers'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "FF02::D—multicast to PIM routers\n\nFF02::1:FFXX:XXXX—Solicited-node \n\nmulticast\
+    \ \n\naddress \n\n( \n\nhere\n\nXX:XXXX represents that low order 24 bits of the\
+    \ IPv6 Interface address)"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "**Wiring Your Building **\n\nWhen you begin wiring a building for a network,\
+    \ it seems awesome and\n\noverpowering to you. Questions of how to do every little\
+    \ thing go through\n\nyour mind and doubts start to sink in. Just take a big breath\
+    \ and remember\n\nthat old proverb: \"A network of a thousand computers begins\
+    \ with one wire.\" \n\nGeneral Network Installation Outline \n\nOnce you get started,\
+    \ it becomes a game and starts to fall into place rather\n\nquickly. A little\
+    \ organization up front solves a ton of problems along the way.\n\nHere's a little\
+    \ listing of things to do, in chronological order, that will help a\n\nlot. \n\
+    \n1\\. Decide on a phone closet location.\n\n2\\. Draw a network diagram with\
+    \ present and future computer and printer\n\nlocations.\n\n3\\. Number the devices\
+    \ on the network chart for future reference.\n\n4\\. Figure out the best way to\
+    \ get a wire from each location to the closet.\n\n5\\. Run all the wires before\
+    \ connecting anything. Remember to test them. \n\n6\\. Install all the connectors\
+    \ and jacks.\n\n7\\. Connect the network and test it.\n\nSounds easy enough, doesn't\
+    \ it? Well, it's really that simple, although\n\nyou're sure to run into some\
+    \ unforeseen obstacles along the way that frustrate\n\nyou and make you wonder\
+    \ why you ever started this crazy project. But never\n\nfear! This chapter will\
+    \ help you avoid some of the most common problems,\n\nor at least be aware of\
+    \ them so you can overcome them. At the same time, at\n\nleast it's comforting\
+    \ to know that these problems happen to everyone. Misery\n\nloves company, right?\
+    \ \n\nThe Phone Closet \n\nNot only does it provide you with a central, out of\
+    \ the way place to run\n\nyour wires and set up network equipment, it also serves\
+    \ as a hiding place for\n\nall that stuff that could easily be an eyesore if exposed\
+    \ in an office setting. \n\nYour phone closet should provide these basic features:\
+    \ \n\n• If possible, it should be centrally located, so that you can run wires\
+    \ from\n\neach equipment location and keep the distances as short as possible."
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "Sometimes the back wall of a building ends up serving the purpose. Just work\n\
+    \nwith what you've got! \n\n• There should be some sort of access to the room\
+    \ for wires to be run\n\nfrom the various locations. Don't choose a room with\
+    \ concrete sides, ceiling\n\nand floor. Access to a drop ceiling or attic is necessary.\
+    \ \n\n• You should have enough room to work in the closet without bumping\n\n\
+    into things or having to stand on your head to reach the wires and\n\nconnections.\
+    \ You'll be spending a lot of time in here at first. When you have\n\ntroubleshooting\
+    \ to do, you'll want a comfortable place to stand while you\n\ncheck the wiring.\
+    \ \n\n• Be sure you select a room that has air conditioning or doesn't get too\n\
+    \nhot. Most electronic equipment requires a cooler environment because\n\noverheating\
+    \ can almost always cause damage. \n\n• Finally, the closet should have a wall\
+    \ with space from chest level to eye\n\nlevel on which to attach a large board\
+    \ where equipment and wires will be\n\nmounted. \n\nThe mounting board can be\
+    \ made out of shelving or plywood and should\n\nbe large enough for all your equipment.\
+    \ You should also be able to route the\n\nwires around the equipment to their\
+    \ connections, as shown in the figure\n\nbelow. \n\nMounting Board with Network\
+    \ Equipment\n\nBuilt-in Expansion Ideas \n\nI think “Murphy” has a law that states,\
+    \ \"The size of your network will\n\ngrow to a number greater than the maximum\
+    \ possible connections you have\n\nplanned.\" There is no ultimate defense for\
+    \ this, other than planning for the\n\nlargest network you can imagine and redesigning\
+    \ it whenever you approach\n\n80 or 90 percent capacity. \n\nIf you have a small\
+    \ network in a growing company, you will definitely\n\nhave growth in the network.\
+    \ When new machines are purchased for existing\n\nusers, the old machines rarely\
+    \ get retired. Usually, they end up on someone's\n\ndesk who wanted a computer\
+    \ but had to wait for a hand-me-down. Or they\n\nend up on a vacant desk where\
+    \ it becomes a server of some sort, for e-mail,\n\nfile or print services, and\
+    \ so on. When it gets to that desk, it usually has to be\n\nconnected to the network.\
+    \ There must be a thousand scenarios like this one,\n\nso suffice it to say that\
+    \ you need to plan for at least double the number of\n\nconnections you have now."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "This doesn't mean that you have to actually have room right now for all\n\n\
+    those devices to be plugged in. You can plan for additional hubs or larger\n\n\
+    hubs to be installed at later dates. But you do need to plan to have room for\n\
+    \nthe hubs and the wires or you'll overcrowd your mounting board very\n\nquickly.\n\
+    \nMounting Board with Planned Expansion\n\nSometimes you can plan for future expansion\
+    \ for a small price. If you\n\nhave seven devices to connect to Ethernet, an eight-port\
+    \ hub is really too\n\nsmall for you. Yes, it will do the job for now, but the\
+    \ first addition you have\n\nwill fill it up. Then you'll be stuck with purchasing\
+    \ another hub to expand. In\n\nthis case, it would have been less expensive in\
+    \ the long run to purchase a 12-\n\nport hub in the first place. Then you have\
+    \ a 50 percent expansion capability\n\nbefore having to worry about growth problems.\
+    \ \n\nUsing a Numbering System \n\nIf you didn't plan ahead, you might run all\
+    \ your wires to the closet and\n\nthen begin to connect them. But which wire goes\
+    \ where? There are good\n\nreasons to know where each wire leads. If (or when)\
+    \ you have any problems\n\nwith your network, it's necessary to know how to trace\
+    \ the wires from one\n\nplace to another. When you run each wire, it's a good\
+    \ idea to label each one,\n\nindicating where it goes.\n\nNumbering System Examples\n\
+    \nThis is a good way to keep up with how your wires are run. It will help a\n\n\
+    lot when you begin to troubleshoot a problem on the network. This can be\n\ndone\
+    \ on a piece of paper while you're working and later transferred to a\n\nspreadsheet\
+    \ or database. \n\nTable 10-1 Network Numbering Chart\n\nIf you're really lucky,\
+    \ you'll have pre-existing wiring you can use. Or\n\nmaybe you'll be able to spring\
+    \ for a professional electrician to do all your\n\nwiring for you. Meanwhile,\
+    \ back in the real world, you'll probably have to do\n\nsome or all of the wiring\
+    \ yourself. This is not so bad, but if you've never done\n\nany wiring through\
+    \ a building, you're in for some surprises. (Some areas may\n\nrequire that all\
+    \ wiring be done professionally. Check local ordinances before\n\nyou begin!)\
+    \ \n\nWiring a building can be as simple as pie or more trouble than it is worth.\n\
+    \nSometimes you'll have one or two wires that go through with no trouble at all,\n\
+    \nand a few that nearly kill you. The best thing to do is to remain calm. With\
+    \ a\n\nlittle clear thinking and some simple tricks, you can do it if you don't\
+    \ get"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "discouraged. In this section, I'll try to cover a few of the most common wiring\n\
+    \nenvironments and how to best go about running your wires. \n\nIf your whole\
+    \ building is in one section and has drop ceilings throughout\n\nand relatively\
+    \ new construction, stop now. Give thanks to “Wirus,” the\n\nancient god of networking,\
+    \ and be happy throughout your life. However, if\n\nyou have old construction,\
+    \ a four-story house built in sections over the last\n\n200 years, with stucco\
+    \ and plaster walls, concrete floors and timbers brought\n\nover on the Mayflower...\
+    \ quit now and find another job. You're in trouble.\n\n(Don't forget, cruel and\
+    \ unusual punishment is forbidden under the\n\nconstitution!) \n\nDrop Ceilings\
+    \ \n\nIn case you don’t know what drop ceilings are, they are the tiled ceilings\n\
+    \nwhere every third one or so is a fluorescent light fixture and each tile is\
+    \ held\n\nup by a grid of metal framing. The grid work is held up with wires that\
+    \ attach\n\nto the ceiling above. This ceiling is \"dropped\" down from the real\
+    \ ceiling to a\n\nstandard height throughout the room or building. In between\
+    \ the drop ceiling\n\nand the real ceiling is a lot of space, electrical conduits\
+    \ and wiring, the lights\n\n(of course), the air conditioning ductwork, and a\
+    \ few other surprises. \n\nIt's not hard to wire a building through the drop ceiling\
+    \ area but you'll\n\nneed to be prepared for it. First of all, do not climb up\
+    \ into the ceiling and\n\nexpect to walk on it! You'll undoubtedly fall right\
+    \ through. It's made to hold\n\nup ceiling tiles and lights, not people. So how\
+    \ do you do it? Well, to start\n\nwith, open a tile as close as possible above\
+    \ the wall in the phone closet where\n\nyour mounting board will be. Next, get\
+    \ a flashlight, climb a ladder to about\n\nchest height into the ceiling, and\
+    \ look around to see what kind of layout it\n\nhas. \n\nIn most newer construction,\
+    \ the walls to the office areas only extend a\n\nfew inches above the drop ceiling.\
+    \ They are usually at standard heights —\n\nmaybe eight feet—with the ceiling\
+    \ just a few inches below. The only walls\n\nthat will extend to the real ceiling\
+    \ are the fire walls between major sections of\n\na building. These are also made\
+    \ of sheet rock and can usually be penetrated\n\nwith no problem to run small\
+    \ wires. If this is what you find, you should have\n\nrelatively easy wiring runs.\
+    \ \n\nAfter getting your bearings, you'll want to open a tile at the first\n\n\
+    destination you will be wiring. Check the path between the two sections for\n\n\
+    obstructions, ductwork to go around, and other possible problems. Decide on\n\n\
+    the best direction to go first and head in that direction. How, you ask? Well,"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "you can't walk or crawl up there, so you have to figure out a way to get the\n\
+    \nwires from point A to point B. \n\nThere are several methods for doing this.\
+    \ A couple of my favorites almost\n\nmake it fun. All of them involve string.\
+    \ By passing a string along the same\n\npathway, you can tie the wire to it and\
+    \ pull it through. (They don't call it\n\npulling wire for nothing, you know.)\
+    \ Don't use weak string or small-sized\n\nstring, like kite string, because pulling\
+    \ on it can cut your hands or it could\n\nbreak if the wire gets stuck. Use a\
+    \ nylon string with several fibers woven\n\ntogether like a small rope. For example,\
+    \ the string used for tying packages\n\nshould do nicely. \n\nGo to an area 20\
+    \ to 30 feet from the first open tile, between the two that\n\nare already open,\
+    \ and open a third tile. Run the string from the first open tile\n\nto the next\
+    \ one down the line and repeat every 20 to 30 feet until you reach\n\nyour destination.\
+    \ To get the string from the first hole to the second, you can\n\nuse one of these\
+    \ interesting methods: \n\n• Get a small crossbow and tie the string to the arrow.\
+    \ Be sure and take\n\nthe point off if possible, or make sure you avoid hitting\
+    \ anything that could\n\nbe damaged. Just fire across the next opening so that\
+    \ you can find the string\n\nwhen you get there. You might be able to use a toy\
+    \ dart gun as you would the\n\ncrossbow. \n\n• Tie something heavy to the string\
+    \ and toss or throw it toward the goal.\n\nThis is a little more cumbersome, but\
+    \ since we network types rarely have\n\ncrossbows around, it's more likely you'll\
+    \ end up using this method. Some of\n\nthe better items to tie on are large fishing\
+    \ weights, a roll of tape (electrical\n\ntape works okay; duct tape rolls are\
+    \ pretty heavy and could cause problems),\n\na pair of pliers, or some other tool\
+    \ like an adjustable wrench. Try to avoid\n\nthings that will wobble in flight,\
+    \ or that may stick through the ceiling tiles\n\nwhen they land. \n\n• If there's\
+    \ very little room above the ceiling tiles — I hate this one — you\n\nmay have\
+    \ to take them off one at a time and just pull the string from one to\n\nthe next\
+    \ until you reach the end. \n\nIn all cases, be sure to pull out enough string\
+    \ to get to the next location\n\nbefore you shoot or toss the end of the string.\
+    \ Otherwise, you throw the\n\nweight and it bounces right back at you when it\
+    \ reaches the end of the string.\n\nAlso — sorry, I have to say this — be sure\
+    \ you have one end of the string\n\nsecured before you throw or shoot it. It's\
+    \ very frustrating to send the whole\n\nroll of string across the ceiling and\
+    \ have to do it over. Once you reach the"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "next hole, simply repeat the process until you have one long string stretched\n\
+    \nfrom one end to the other. \n\nThe string method can also work in other types\
+    \ of wiring situations, but\n\ndon't try to use it for close spaces or in areas\
+    \ that require the wire to make a\n\nlot of corners in the run. \n\nWhen you get\
+    \ the string run, you're ready to pull the wire through. It\n\nworks best to have\
+    \ someone at one end feed the wire to you while you pull\n\nfrom the other end.\
+    \ Occasionally you'll get the wire stuck on something and\n\nmay have to open\
+    \ a tile where the wire is stuck to get it to continue feeding\n\nthrough. The\
+    \ wires that hold the ceiling grid up are notorious for this, because\n\nthey\
+    \ make a loop in the gridwork and then wrap around themselves, leaving\n\nthe\
+    \ loose end sticking up. \n\nString and Wire Tied Together for Pulling\n\nEach\
+    \ run is pretty much the same from here. You can move from one\n\nlocation to\
+    \ the other by following the above instructions for each location.\n\nOnce you\
+    \ get to each location, you'll have to decide whether to run the wire\n\ndown\
+    \ the wall, inside the wall to an existing box, or inside the wall to a new\n\n\
+    box that you add. \n\nOther Types of Construction \n\nOf course, not all construction\
+    \ is new and there are other methods of\n\nrunning wires. You may have to ask\
+    \ someone about your particular setup.\n\nSome buildings have wire conduits pre-installed\
+    \ with room for more wires to\n\nbe pulled through them. Some have basements or\
+    \ crawl spaces through which\n\nyou can run your wires. In some cases, you may\
+    \ have to actually run the\n\nwires around the outside of the building to get\
+    \ from one room to the next.\n\nCable and phone companies do this. \n\nJust make\
+    \ sure you've looked at all your options and picked the best one\n\nbased on ease\
+    \ of installation, cosmetics, expandability, protection for the\n\nwires (from\
+    \ the elements, animals, and so on), and ability to get to the phone\n\ncloset.\
+    \ \n\nWiring in Walls \n\nOnce you get from the phone closet to just above your\
+    \ first drop location,\n\nyou may be able to run the wire down the inside of the\
+    \ wall. If this is a sheet\n\nrock or wallboard wall on standard studs, you should\
+    \ be able to do this easily,\n\nespecially if there is no insulation in the wall.\
+    \ (Internal walls rarely have\n\ninsulation unless sound proofing is necessary.)\n\
+    \nRunning Wire Down a Wall Between Studs"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'Before cutting a hole, make sure you are in between the same studs.
+
+
+    Check the electrical outlets for the correct height to make the opening match
+
+
+    up. Also, be sure there is not an electrical outlet on the opposite wall. You
+
+
+    could cut into some electrical wiring, as it is sometimes run across the walls
+
+
+    at the same height as the outlets. To avoid this, trace the area to be cut. Use
+    a
+
+
+    small knife or utility razor to cut through the wall board. Be careful not to
+
+
+    extend the knife too far into the wall. Once you have a hole cut and are sure
+
+
+    it''s safe, you can use a small saw or larger knife to clean out the edges of
+    the
+
+
+    cut.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '**Network Cabling**
+
+
+    In order to connect our devices to our network, we need some type of media
+
+
+    in between them to allow for packets to get from one device to another. This
+
+
+    is where network cabling comes into play. There are different types of cables
+
+
+    you can use to connect your network, but with today’s modern hardware
+
+
+    there are only really two types that we tend to use.
+
+
+    There are two standard wiring schemes for straight through Ethernet
+
+
+    cables. They are either T568A or T568B, with T568B being the more
+
+
+    commonly used wiring scheme in the US. The only difference between the
+
+
+    two are that the pin positions for the green and orange pairs have been
+
+
+    switched. Either one will work just fine on your network, but do not combine
+
+
+    the two unless you want to have communication issues. Whether or not all
+
+
+    four pairs are used is determined by the category of the cable. For example,
+
+
+    an older 10/100Mbps cable would only use two pairs, while a 1Gbps cable
+
+
+    would use all four pairs so it can transmit and receive at the same time.
+
+
+    Some people like to make their own cables so they can determine their
+
+
+    exact length. This is kind of a tedious process unless you get really good at
+    it,
+
+
+    plus you will need to test each cable you make with a cable tester to be sure
+    it
+
+
+    works properly.
+
+
+    *Crossover Cables*
+
+
+    Crossover cables are used to connect similar devices together such as a
+
+
+    switch to switch, router to router, or a router connected directly to a host.
+
+
+    These cables look and feel the same, but the wiring scheme is what makes
+
+
+    them different. They are called crossover cables because one side is wired the
+
+
+    opposite of the other side for four of the eight wires.
+
+
+    If you have been paying attention, you might have noticed that a
+
+
+    crossover cable is basically a cable with the T568A wiring scheme on one
+
+
+    side and the T568B wiring scheme on the other side.
+
+
+    To make things easy to remember, here is a chart listing what scenarios
+
+
+    you would use a straight through cable for compared to a crossover cable.
+
+
+    Rollover Cables
+
+
+    One last type of cable I am going to mention is called a rollover cable,
+
+
+    which is also referred to as a null modem cable. These cables are used to
+
+
+    connect a PC to a console port on a switch or router to perform management
+
+
+    functions when you can’t connect via one of the usual network ports.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'The pin-outs on one end of a rollover cable are reversed at the opposite
+
+
+    end. There is an RJ45 connection on one end and a DB9 connection on the
+
+
+    other end. The RJ45 connection plugs into the switch or router’s management
+
+
+    port, and the DB9 will connect to a serial port on a computer. Most new
+
+
+    computers don’t have serial ports anymore, so you will need to use a USB to
+
+
+    serial adapter in addition to the rollover cable. Some higher end switches now
+
+
+    have micro USB ports for management so you can actually connect with a
+
+
+    USB cable and even use your smartphone!
+
+
+    Ethernet Cable Categories
+
+
+    Now that you know what an Ethernet cable is and how it’s wired, I want
+
+
+    to spend a little time discussing Ethernet cable categories. There were a few
+
+
+    variations before Cat5e and a couple since then, and here is a quick summary
+
+
+    of the Ethernet cable standards and their maximum speed capacity.
+
+
+    *Category 3* – 10Mbps and 16Mhz frequency
+
+
+    *Category 4* – 16Mbps and 20Mhz frequency
+
+
+    *Category 5* – 100Mbps and 100Mhz frequency
+
+
+    *Category 5e* – 1Gbps and 100Mhz frequency
+
+
+    *Category 6* – 1Gbps and 250Mhz frequency
+
+
+    *Category 6a* – 10Gbps and 500Mhz frequency
+
+
+    *Category 7* – 100Gbps and 600Mhz frequency
+
+
+    These higher speeds (such as 1Gbps and above) are achieved by using
+
+
+    four pairs of wires rather than just two, as well as increasing the twists per
+
+
+    centimeter in the wire. Cat6 and above also has a nylon spline which helps to
+
+
+    eliminate crosstalk, which is interference in one circuit that comes from
+
+
+    another circuit. There is also another type of Ethernet cable called a shielded
+
+
+    twisted pair (STP) that has a protective shielding wrapped around the wires to
+
+
+    further prevent interference issues. STP cables are more expensive and harder
+
+
+    to work with because they are not as flexible thanks to the shielding. When a
+
+
+    cable doesn’t have the shielding, it is known as an unshielded twisted pair or
+
+
+    UTP cable.
+
+
+    Tip
+
+
+    99% of the time the type of Ethernet cable that you are working with will
+
+
+    be printed on the jacket of the cable itself. You might just have to look at a
+
+
+    couple of feet before you find it.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'In general, Ethernet cables have a length limit of 100 meters (around 300
+
+
+    feet) before the signal starts to deteriorate and needs to be regenerated to
+
+
+    carry on. Devices like hubs and switches will regenerate the signal so you can
+
+
+    go another 100 meters before having to do it again.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '**802.11i Robust security networks**
+
+
+    ![](img/0937bf4b1739a36662bbe2484b163f1b_44_0.png)
+
+
+    802.11i
+
+
+    The 802.11 wireless connection standards were designed to replace the
+
+
+    earlier wired privacy equivalent protocol. The 802.11i is also known as the
+
+
+    Robust Security Network while the 802.11i gives advanced authentication via
+
+
+    a variety of protocols such as RADIUS, extensible authentication protocol,
+
+
+    and 802.1x including robust security with the advanced encryption standard -
+
+
+    the CCCMP protocol. Equally important is that 802.11i supports the temporal
+
+
+    key integrity protocol that enables the upgrading of earlier wired privacy
+
+
+    equivalent hardware. The 802.11i also accommodates the temporal key
+
+
+    integrity protocol that is less robust than advanced encryption standard - the
+
+
+    Counter Mode with CCCMP Protocol though it is superior to wired privacy
+
+
+    equivalent.
+
+
+    Certification
+
+
+    The Wireless-fidelity Alliance, Wireless-fidelity, avails the certification
+
+
+    for 802.11i-compliant products including the Wireless-fidelity Protected
+
+
+    Alliance logo program, WPA. The Wireless-fidelity Protected Alliance and
+
+
+    Wireless-fidelity Protected Alliance 2 logos certify compliance with an
+
+
+    802.11i subset or the full 802.11i protocol. By having a central authority
+
+
+    manage the development and implementation of the standard, consistency,
+
+
+    and quality is likely to be assured. Additionally, having a central point of
+
+
+    harmonizing the development is necessary to enhance security by ensuring'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "that only good-intentioned entities are participating in the development and\n\
+    \napproval of standards.\n\nTemporal Key Integrity Protocol\n\nThe TKIP refers\
+    \ to an encryption protocol that is integral of the 802.11i\n\nstandard for WLANs\
+    \ and was built to give more secure encryption compared\n\nto the flawed wired\
+    \ privacy equivalent, the earlier wired local connection\n\nsecurity protocol.\
+    \ The temporal key integrity protocol is the encryption\n\ntechnique used in Wireless-fidelity\
+    \ Protected Access that replaced wired\n\nprivacy equivalent in wireless connections\
+    \ or networks. In application, the\n\ntemporal key integrity protocol consists\
+    \ of algorithms that function as a\n\nwrapper to a wired equivalent protocol that\
+    \ allows legacy wireless LAN\n\nequipment to upgrade to temporal key integrity\
+    \ protocol devoid of the need to\n\nreplace the hardware. Temporal key integrity\
+    \ protocol works by utilizing the\n\nearlier wired equivalent protocol programming.\
+    \ Notably, the new encryption\n\ncodes packets of data with a distinct encryption\
+    \ key and they are more robust\n\ncompared to the ones used in earlier encryption.\
+    \ Temporal key integrity\n\nprotocol enhances robustness by adding four additional\
+    \ algorithms:\n\nThere is a cryptographic message integrity check to safeguard\
+    \ packets:\n\n• An instantiation: It is a vector sequencing mechanism that compromises\n\
+    \nof hashing rather than wired privacy equivalent’s plain text transmission.\n\
+    \nHashing implies that the data is encrypted and given a unique value that can\n\
+    \nbe checked to establish any modification during transmission. \n\n• There is\
+    \ a per-packet key blending function to enhance cryptographic\n\nrobustness. By\
+    \ mixing encryption spends, it becomes exceeding difficult for\n\nmalicious users\
+    \ to compromise the data integrity as the computational power\n\nneeded to break\
+    \ the encryption becomes nearly infeasible.\n\n• There is a re-keying technique\
+    \ to generate keys every 10, 000 packets.\n\nBy creating new keys per a set number\
+    \ of transmitted packets, it becomes\n\ndifficult for attackers to establish a\
+    \ common pattern in the data intercepted\n\nwhich enhances the strength of the\
+    \ security on the wireless connection.\n\nWhereas, temporal key integrity protocol\
+    \ is critical for upgrading the\n\nsecurity on devices initially equipped with\
+    \ wired privacy equivalent and does\n\nnot respond to all of the issues of security\
+    \ facing wired local area connections\n\nand may not be efficient or reliable\
+    \ enough for sensitive government and\n\ncorporate transmission of data. The advanced\
+    \ encryption standard is specified\n\nin the 802.11i standard alongside temporal\
+    \ key integrity protocol. Advanced\n\nencryption standard gives a higher degree\
+    \ of security and is recommended for"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "government use but needs an upgrade of hardware for implementation. As\n\n\
+    most organizations are replacing older wireless access and wireless-enabled\n\n\
+    equipment, advanced encryption standard is expected to become the standard\n\n\
+    encryption for the security of wireless connections.\n\nCounter mode with cipher\
+    \ block chaining message authentication code\n\nprotocol.\n\nAs an encryption\
+    \ standard, a counter mode with cipher block chaining\n\nmessage authentication\
+    \ code protocol is integral of 802.11i standard for\n\nwireless connections especially\
+    \ the ones implementing WiMax technology.\n\nThe algorithm of the CCCMP is premised\
+    \ on the advanced encryption\n\nstandard of the United States federal government.\
+    \ It can be argued then that\n\nthis standard seeks to offer the highest degree\
+    \ of data encryption on the\n\nwireless connection.\n\nCompared to similar technologies\
+    \ like TKIP, a CCCMP protocol provides\n\nincreased security. In particular, a\
+    \ counter mode with cipher block chaining\n\nmessage authentication code protocol\
+    \ deploys 128-bit keys as well as a 48-bit\n\ninitialization vector that reduces\
+    \ vulnerability to replay attacks. Specifically,\n\nthe counter mode component\
+    \ gives data privacy. On the other hand, the\n\ncipher block chaining message\
+    \ authentication code element gives data\n\nintegrity and verification. The increased\
+    \ privacy and security of counter mode\n\nwith CCCMP protocol about the temporal\
+    \ key integrity protocol requires\n\nadditional power to process in most cases\
+    \ requiring upgrading hardware. \n\nExercise\n\na. What is the justification for\
+    \ dual channel networking devices?\n\nb. Compare TKIP against wired privacy equivalent\
+    \ protocol?\n\nc. Why are other security measures still necessary even with Wireless-\n\
+    \nfidelity Protected Access?\n\nd. What is the cost of implementing 802.11i on\
+    \ your network? In other\n\nterms, what initial inconvenience will you face when\
+    \ you decide to\n\nimplement the 802.11i standard on your network?\n\n**Management\
+    \ Operations**\n\nNetwork management refers to the process of managing and administering\n\
+    \ncomputer networks. Services provided by network management include\n\nperformance\
+    \ management, network provision, fault analysis, and maintaining"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "the quality of the network. Network management software is the software that\n\
+    \nis used by network administrators to execute their functions.\n\nNetwork and\
+    \ network device management is supported by accessor\n\nmethods. Network management\
+    \ makes it easy for Information Technology\n\nmanagers to keep an eye on network\
+    \ devices and components in a large area\n\nnetwork. Examples of access methods\
+    \ that are used include:\n\nCommand-line interface (CLI)\n\nCustom XML\n\nTranslation\
+    \ Language 1(TL1)\n\nJava Management Extensions (JMX)\n\nCommon Information Model\n\
+    \nWindows Management Instrumentation (WMI)\n\nNetwork management also uses schemes\
+    \ such as MTOSI and the\n\nStructure of Management Information (SMI).\n\nManagement\
+    \ Architecture\n\nNetworks continue to be distributed and complicated as time\
+    \ goes by. As\n\na result, faults such as performance degradation, resource allocation,\
+    \ service\n\nprovision, and bandwidth monitoring and hardware failure are difficult\
+    \ to\n\nsolve and become significant hurdles for network managers. \n\nNetwork\
+    \ Scanning\n\nNetwork scanning is a process that is used to recognize active hosts\
+    \ on a\n\ncomputer network, either for security assessment or to attack them.\
+    \ \n\nMethods such as port scans and ping sweeps provide information such as\n\
+    \nthe mapping of IP addresses to live hosts that are active on the internet.\n\
+    \nBesides, network scanning is essential because it enables an attacker to\n\n\
+    assume viable addresses by returning data regarding the Internet protocol\n\n\
+    address that don’t map on hosts which are live. Scanning is a component of\n\n\
+    gathering intelligence for an intruder or attacker. During scanning, the\n\nintruder\
+    \ gets data regarding the actual Internet Protocol address that can be\n\nseen\
+    \ on the connection or network, services running on every computer, their\n\n\
+    operating systems, and the system architecture. Network scanning has the\n\nfollowing\
+    \ purposes:\n\nRecognizing available TCP and UDP network services operating on\
+    \ the\n\ntargeted hosts"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "Determining the type of operating systems in use by monitoring IP\n\nresponses\n\
+    \nEvaluating the TCP sequence of the target hosts\n\nRecognizing filtering systems\
+    \ between the targeted hosts and the user\n\nAuthentication\n\nAuthentication\
+    \ is determining whether something or someone is what or\n\nwho it declares itself\
+    \ to be. It provides access control for computer systems\n\nby making sure that\
+    \ a user credential matches the credentials in a database\n\nthat contains authorized\
+    \ users. A user is usually identified using a user ID,\n\nand authentication is\
+    \ successful if the user provides a credential such as a\n\nfingerprint that matches\
+    \ the specific user ID.\n\nPower Conservation\n\nIn wireless connections, two\
+    \ main challenges are encountered. The two\n\nproblems are how to conserve battery\
+    \ power and security challenges. Power\n\nconservation is vital for the longevity\
+    \ and reliability of a wireless connection\n\nor network. Most wireless connections\
+    \ consist of numerous wireless sensors\n\nthat collect information such as light,\
+    \ temperature, humidity, and vibration.\n\nThe most commonly used methods to conserve\
+    \ power for wireless\n\nconnections is placing some stations in sleep mode or\
+    \ minimizing the power\n\nused for relaying data for active units. Majority of\
+    \ the techniques do not use\n\npredictive models of loading the network. The nature\
+    \ and size of\n\ncommunication networks determine the type of power conservation\
+    \ approach\n\nto be used.\n\nSpectrum Management\n\nAdaptive control and game\
+    \ theory are the most commonly used\n\ntechniques when doing spectrum management\
+    \ for wireless connections.\n\nAlmost all wireless connections share the radio\
+    \ rate spectrum. Most spectrum\n\nmanagement methods heavily depend on a station\
+    \ receiver that is made using\n\na relaying architecture. Hoc wireless connections\
+    \ need a distributed and\n\nscalable methodology to function optimally. \n\n**Contention-Free\
+    \ Service**\n\nTo make ideal use of applications that need almost real-time service,\
+    \ a\n\nnetwork administrator should use the 802.11 standards. This standard\n\n\
+    includes a coordination functionality that provides a different way of"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "accessing the wireless network. PCF is defined as the point of coordination\n\
+    \nfunction. PCF makes it possible for an 802.11 network to provide forced\n\n\
+    access to the medium. In some cases, accessing the medium under the PCF is\n\n\
+    like accessing the medium using a token. \n\nThe PCF is not widely used because,\
+    \ in the past, a media server\n\nimplemented PCF although it was not successful.\
+    \ Certain enterprise-class\n\nproducts use PCF because it provides the access\
+    \ point’s additional control\n\nover access to wireless connections. Additionally,\
+    \ PCF helps the wireless\n\nnetwork to wrest control away from individual network\
+    \ stations. If\n\ncontention-free delivery is necessary, PCF can be implemented\
+    \ for optimal\n\nresults. Note that PCF is optional for the 802.11 standards.\
+    \ It is not\n\nmandatory for products to use PCF. However, PCF was designed by\
+    \ the\n\nIEEE specifically for stations that use the distributed coordination\
+    \ function.\n\nDetailed PCF Framing\n\nThe contention-free period uses several\
+    \ kinds of frames that are\n\nexclusive. They come together in varying states\
+    \ known as:\n\nPolling\n\nAcknowledgment\n\nData transmission\n\nThis chapter\
+    \ explains how different types of frames are incorporated and\n\nthe way various\
+    \ functions combine during transmissions of frames.\n\nContention-free frames\
+    \ usually combine several functionalities into one\n\nframe.\n\nData+CF-ACK\n\n\
+    It is a frame that combines two functions for efficiency during the\n\ntransmission.\
+    \ Information is channeled in the payload of the frame, and the\n\nframe confirms\
+    \ the receipt of information. Normally, the information and\n\nconfirmation are\
+    \ required for two separate network stations. The free\n\ncontention confirmation\
+    \ is focused on the information for relaying to a\n\nprevious frame’s access point.\n\
+    \nCF-ACK\n\nIf only confirmation is needed, a frame with a header only on the\
+    \ CF-\n\nACK function can be relayed. CF-Poll can transmit information by itself."
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'Normally, it is only access points that can relay information from one
+
+
+    wireless network to another. “Naked” CF-Polls are transferred when the
+
+
+    access points have no buffered information for the recipients and do not need
+
+
+    to confirm receipt of the other frames. A common circumstance when no
+
+
+    confirmation is required each moment the access points exchange a CF-Poll.
+
+
+    Also, sometimes the polled network station does not have information and
+
+
+    doesn’t respond. Whenever the access points do not have information for the
+
+
+    next network station, they transmit a CF-Poll.
+
+
+    Power management and the PCF
+
+
+    CSMA is the fundamental technique used by wireless connections to
+
+
+    share access to a medium. IEEE 802.11’s standard protocol is designed to
+
+
+    overcome the loss of power as a result of fame loss which is caused by
+
+
+    interference. Interference can emanate from any network stations that are not
+
+
+    functioning correctly.
+
+
+    Using 802.11 on Windows 7
+
+
+    For you to be able to connect your computers wirelessly, all the
+
+
+    components on your wireless network connection must agree with the 802.11
+
+
+    wireless network standard. This standard has gone through enhancement
+
+
+    through four versions. Every version is usually indicated by a letter at the end
+
+
+    of 802.11 standards. From the newest to the oldest, they are 802.11 a, b, g,
+
+
+    and 802.11 n.
+
+
+    Please follow the following steps to find out which type of wireless NIC
+
+
+    is found on your computer.
+
+
+    i) Press and hold the Windows Key+Break to open the system
+
+
+    properties menu.
+
+
+    ii) Open the device manager by clicking on the link on the left named
+
+
+    Device Manager.
+
+
+    iii) In the device manager, the pop-up box expands the region indicated
+
+
+    Network Adapters. You will see two network adapters; one represents the
+
+
+    wired Ethernet adapter (NIC) and the other the wireless adapter.
+
+
+    *iv) Open the properties of the networking adapter item. If you have an*
+
+
+    *802.11n-adapter type, you will see several entries for 802.11n settings. They*
+
+
+    *acknowledge that the adapter is 802.11n-acceptable, which implies that it*'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "*can communicate with older 802.11g as well as with 802.11b wireless*\n\n*networking\
+    \ computers.*\n\n***Pros and cons of different wireless standards are shown in\
+    \ the diagram***\n\n***below:***\n\nUsing 802.11 on Windows 10\n\n802.11 is an\
+    \ IEEE network standard that regulates wireless network\n\nrelaying techniques.\
+    \ They are available in the versions below to provide\n\nwireless connectivity\
+    \ in environments such as homes and businesses.\n\n1\\. 802.11n\n\n2\\. 802.11g\n\
+    \n3\\. 802.11b\n\n4\\. 802.11a\n\n802.11n which is the latest version is a non-wired\
+    \ standard that has many\n\nantennas to improve the rate of data transfer. The\
+    \ throughput of this version\n\nis affected by rate, interference from other networks,\
+    \ and the network setup.\n\nIf you notice that your WIFI network is not working\
+    \ for any reason, use the\n\nfollowing procedure to look at the settings for 802.11n\
+    \ connections and re-\n\nenable it if required.\n\nEnable 802.11n for Windows\
+    \ 10\n\nClick the Wireless-fidelity icon available on your Windows 10 taskbar\n\
+    \nand choose ‘Open Network and Sharing Center’ option. Click on change\n\nadapter\
+    \ settings. Select the properties for the WIFI adapter and then under\n\nadvanced\
+    \ tab search for 802.11. Select it and change its value to “Enabled.”\n\n*Windows\
+    \ computer authentication*\n\nWhen you authenticate something, the objective is\
+    \ to confirm that it is\n\ngenuine. In computer networking, authentication refers\
+    \ to the process of\n\nproving identity to an application on the connection or\
+    \ network or a resource.\n\nGenerally, identity is verified by a cryptographic\
+    \ operation that uses a key\n\nthat is only known to the user. The server side\
+    \ of the authentication makes a\n\ncomparison of the shared information with a\
+    \ known cryptographic key to\n\nverify the authentication attempt. \n\nCryptographic\
+    \ keys are usually stored in a central location to make the\n\nauthentication\
+    \ process maintainable and scalable. An active directory is the\n\nstandard recognized\
+    \ technology for storing identity data that includes the"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'cryptographic keys. Kerberos and NTLM implementations require an active
+
+
+    directory. Windows authentication methods range from a simple login to the
+
+
+    operating system or a sign in to an application or a service. This method
+
+
+    identifies users based on something that only the user knows such as a
+
+
+    password or tokens.
+
+
+    *Using 802.11 on Macintosh*
+
+
+    Many computer users connect their MAC computers to a wireless
+
+
+    network and do not bother much about the type of 802.11 protocol that is in
+
+
+    use. Network administrators and advanced users are keen to find out the
+
+
+    version of 802.11 in use to optimize speed and range coverage. Every
+
+
+    wireless standard varies with different ranges. Besides, they provide different
+
+
+    WLAN connection speeds.
+
+
+    The easiest way to find out the 802.11 standards being used by your
+
+
+    computer is to check the advanced wireless fidelity information within the
+
+
+    wireless section in Mac OS. You may check the wireless standard currently
+
+
+    in use by doing the following:
+
+
+    Press the OPTIONS button and hold it down and click on the wireless
+
+
+    icon in the menu bar
+
+
+    Determine the wireless router that is currently connected and search for
+
+
+    the PHY mode in the menu
+
+
+    In the diagram shown below, the current router uses the 802.11n wireless
+
+
+    protocol as shown. PHY is an abbreviation for the physical layer which refers
+
+
+    to the OSI communication model lowest level.
+
+
+    Based on the MAC network card and your router, you may see 802.11g,
+
+
+    n, b, ac, or 802.11a or sometimes 802.11 ay or 802.11 as if you stay in a
+
+
+    wireless local area connection or network (WLAN) laboratory. The wireless
+
+
+    security encryption technique in use can also be determined using the same
+
+
+    procedure.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '**Subnetting**
+
+
+    This refers to the process of dividing a network into two or more networks
+
+
+    which are small and addressable. You have to understand that there is an
+
+
+    increasing demand for IP addresses on a daily basis. This is why the available
+
+
+    IP addresses should be used more efficiently. This is also good for
+
+
+    minimizing the traffic on the network, since there is no unnecessary sending
+
+
+    of packets. The network will also have been made more manageable, and the
+
+
+    overall security of the same network highly improved.
+
+
+    If the company assigns a subnet to each department in their organization,
+
+
+    they will find it easy for them to manage their network. Flooding the network
+
+
+    with traffic is a common occurrence in today’s networks. This can only be
+
+
+    prevented with proper subnetting.
+
+
+    **Public and private networks**
+
+
+    Public networks are the ones which have to rely on government
+
+
+    regulations on regions, and at the same time rely on protocol standards. They
+
+
+    are open for use by both the general public and corporations. Telcos, which
+
+
+    are network operating telephone networks, are an example of such a network.
+
+
+    The Internet is also an example of a public data network.
+
+
+    In the case of private networks, they have to be limited by compound.
+
+
+    Most corporations normally use the public network so as to implement a
+
+
+    private network. Some technologies such as the virtual private networks and
+
+
+    leased lines make use of private wide area networks. In the case of public
+
+
+    networks, they have to stick to an IP address range which is valid, while
+
+
+    private networks can make use of a private/public IP address range. When
+
+
+    public IP addresses have been used, it is possible for one to integrate a public
+
+
+    network with a corporate network.
+
+
+    **TCP/IP Protocols**
+
+
+    A protocol is a predefined set of rules which govern how the
+
+
+    communication and exchange of data between network devices is being done.
+
+
+    Application Protocols
+
+
+    These protocols are built on top of the TCP/IP protocol suite. These
+
+
+    protocols include the following:'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'a. Simple Network Management Protocol- SNMP is a protocol on the
+
+
+    application layer which was developed to manage complex
+
+
+    communication networks. Its functionality involves the sending of
+
+
+    messages, commonly referred to as protocol data units (PDUs), and
+
+
+    these are sent to various parts of the network. The two types of SNMP
+
+
+    include version 1 and version 2.
+
+
+    a. File Transfer Protocol (FTP)- this protocol works on the server side, and
+
+
+    it works by copying files between a client computer and an FTP server
+
+
+    over the TCP/IP network. It mostly communicates with web servers for
+
+
+    the purpose of the uploading and downloading of files. It is one of the
+
+
+    oldest network protocols which are currently in use. It uses port 21 of
+
+
+    the TCP. It makes use of the TCP protocol for the purpose of
+
+
+    communication.
+
+
+    a. Trivial File Transfer Protocol (TFTP)- It is closely related to FTP, with
+
+
+    the difference in that it makes use of the UDP protocol of the purpose of
+
+
+    file transfer. Since UDP is somehow unreliable, this protocol is normally
+
+
+    mostly used for file transfer.
+
+
+    a. Simple Mail Transfer Protocol (SMTP)- This is a protocol in the TCP?
+
+
+    IP protocol suite which is used for the purpose of sending emails
+
+
+    between server computers. It works over port number 25.
+
+
+    b. Post Office Protocol (POP3)- this protocol is used when we need to
+
+
+    fetch emails from a mail server. Mozilla Thunderbird and Outlook
+
+
+    Express are the most commonly used programs in pop3.
+
+
+    a. Internet Message Access Protocol (IMAP)- this allows a local client to
+
+
+    be able to access email located on a remote server. IMAP4 and Pop3 are
+
+
+    the two protocols which are commonly used for retrieving emails.
+
+
+    a. Network File System (NFS)- This is a distributed file system which
+
+
+    allows a computer to be able to access files over a network
+
+
+    transparently.
+
+
+    a. Telnet- this provides users with the capability of login into a remote
+
+
+    computer. The user acts as if he is in direct contact with the remote
+
+
+    computer. The location of the user on the network doesn’t matter, but'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'they should have the necessary credentials to login to the remote
+
+
+    computer.
+
+
+    TCP is used for the purpose of maintaining the connection between these two
+
+
+    computers. Telnet makes use of the TCP port 23.
+
+
+    a. Hypertext Transfer Protocol (HTTP)- this protocol is used for the
+
+
+    purpose of transferring hypertext pages over www (world wide web). It
+
+
+    governs the formatting and transmitting of messages, and the actions
+
+
+    that web servers and browsers take in response to the various
+
+
+    commands. It is the work of HTML to know how messages are
+
+
+    formatted and then displayed on the browser. Since each of the
+
+
+    commands has to be executed independently, HTTP is known as a
+
+
+    stateless protocol. We don’t have to know the commands which
+
+
+    originated from it.
+
+
+    a. Network News Transfer Protocol (NNTP)- this protocol is used for
+
+
+    carrying USENET posting between the USENET servers and the News
+
+
+    clients.
+
+
+    a. Line Printer Remote (LPR), Line Printer Daemon (LPD)- these two
+
+
+    protocols are used for provision of server and printing services on
+
+
+    computers running UNIX.
+
+
+    Network Utilities
+
+
+    ARP Utility
+
+
+    This utility is used for showing whether an IP address is being resolved to
+
+
+    get a MAC address.
+
+
+    NETSTAT utility
+
+
+    This is used for producing utilities for the TCP/IP, and the nbtstat will
+
+
+    produce NetBIOS over the TCP/IP statistics. The command usually shows
+
+
+    how local addresses are being mapped to foreign addresses.
+
+
+    TRACERT Utility'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'This utility is used for finding the route existing from one computer to
+
+
+    another computer on the network.
+
+
+    Ping Utility
+
+
+    This utility is used for checking whether a particular host is responding.
+
+
+    To resolve the localhost, you should use the IP address of 127.0.0.1. 4
+
+
+    response packets are sent after executing the command.
+
+
+    FTP utility
+
+
+    This utility allows to upload and download files to and from an FTP
+
+
+    server across the Internet.
+
+
+    ipconfig and ifconfig
+
+
+    Ipconfig is used for displaying information about the configuration of
+
+
+    TCP/IP for the Windows NT and other later versions of various operating
+
+
+    systems. Ifconfig is used for performing the same tasks in UNIX
+
+
+    environments, and also for performing a configuration on some of the user
+
+
+    interface tasks.
+
+
+    winipcfg utility
+
+
+    This is used for displaying the configuration of TCP/IP in Windows
+
+
+    95/98.
+
+
+    dig utilities and nslookup
+
+
+    These are used for displaying information regarding the resolution of
+
+
+    DNS.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '**Why Automate the Network?**
+
+
+    "The remains of the old must be decently laid away; the path of the new
+
+
+    prepared. That is the difference between Revolution and Progress." *\- Henry*
+
+
+    *Ford*
+
+
+    The time for change has arrived. Enterprise networks have outgrown and
+
+
+    outpaced the ability to effectively manage and maintain themselves using
+
+
+    traditional tools. Historically, network management meant manually
+
+
+    gathering point-in-time information from, or making configuration changes
+
+
+    to, individual devices. Networks are often designed using a configuration
+
+
+    command-driven approach, as opposed to a data-driven approach. Staff
+
+
+    manually execute commands at the CLI to gather information or perform
+
+
+    changes. Information is often regathered to confirm the state of the network
+
+
+    after changes are made. The ongoing creation and maintenance of network
+
+
+    documentation is also performed manually. Hours of effort is required to
+
+
+    make changes, often repeating the same commands only on different devices.
+
+
+    Inevitably, troubleshooting is required because of errors made using the
+
+
+    manual methodology. Network automation solves all these problems.
+
+
+    Scale
+
+
+    The size and scale of the modern network has grown exponentially to
+
+
+    accommodate the needs of organizations. Networks that started out as a few
+
+
+    switches and a router are now large-scale enterprise networks. While logical
+
+
+    networks evolve and grow, the tools used to manage physical devices
+
+
+    remains stagnant. On the campus we now see VoIP phones, wireless access
+
+
+    points, IoT, security cameras, print fleets, desktop fleets and meeting room
+
+
+    equipment. In the data centers large physical and virtual footprints are not
+
+
+    uncommon. World-wide WANs, with switching and routing in each remote
+
+
+    office, is now common place. The device boom has not slowed with even
+
+
+    more devices being added to networks without the appropriate centralized,
+
+
+    automated, management solutions available.
+
+
+    Network management starts with the console cable and a local CLI.
+
+
+    Remote access to the CLI over a management IP address must be enabled by
+
+
+    the administrator. Now imagine network technicians still needing to go to the
+
+
+    physical console of every device to manage it. It sounds unreasonable, but
+
+
+    only remote access to the CLI has been centralized. The same methodology'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'of logging into the CLI to manage the device is followed as if the operator
+    is
+
+
+    virtually at the console. In fact, these remote connections are known as virtual
+
+
+    teletype, or VTY, lines. At the scale of today’s networks, connecting to the
+
+
+    CLI of every device to manage the enterprise is simply unachievable. Even
+
+
+    with a large capable network operations team, everyone is going to operate,
+
+
+    configure, and manage each device their own way. This leads to
+
+
+    configuration drift and a lack of consistency at scale.
+
+
+    Automated solutions scale with the network as device configurations are
+
+
+    templated. Small, feature specific, modular templates ensures each device is
+
+
+    standardized. When new feature requirements arise, the configuration
+
+
+    commands are templated and released at scale, updating the network
+
+
+    standards uniformly. Unique, device-specific, meaningful information is
+
+
+    modeled in a data dictionary. This dictionary holds all the variables used to
+
+
+    compile a unique configuration for each device. Code can be written
+
+
+    modularly to match the topology of the network. By creating playbooks
+
+
+    specific to the environment, such as campus, data center, WAN, or cloud,
+
+
+    Ansible playbooks ensure code simplicity, readability and development
+
+
+    flexibility.
+
+
+    Complexity
+
+
+    The complexity of networks has dramatically increased. Virtual Route
+
+
+    Forwarders (VRFs), QoS, wireless connectivity, cloud connectivity, Virtual
+
+
+    Private Network (VPN), First-Hop Redundancy Protocols (FHRP) such as
+
+
+    Hot-Standby Router Protocol (HSRP), Virtual Switching Systems (VSS), and
+
+
+    security and identity services such as 802.1x, have all stressed the capabilities
+
+
+    of both engineers who design and operators who run the network.
+
+
+    Abstracting important data from the network configurations allows
+
+
+    operators to see the network devices as a collection of human-readable
+
+
+    variables and dynamic templates. This drastically simplifies network design.
+
+
+    Human-readability of the intended configuration for a device also reduces the
+
+
+    technical requirements needed to understand how a device is configured. The
+
+
+    knowledge required to execute commands and understand how a device is
+
+
+    configured is abstracted because the device information is presented as a
+
+
+    human-readable data model.
+
+
+    Documentation
+
+
+    Network documentation is extremely important, especially during times
+
+
+    of crisis, however it is often overlooked during day-to-day operations.
+
+
+    Changes may or may not be reflected in documentation. Files may be'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'scattered across a variety of sources such as local drives, Microsoft
+
+
+    SharePoint sites, or network shares. Stale or out of date documentation is of
+
+
+    little value to an organization. Documentation that does exist is often
+
+
+    represented as complex Visio diagrams, large Excel spreadsheets or text files
+
+
+    that do not interact with the network dynamically. Documentation should be
+
+
+    thought of as a key component, and advantage, of the network automation
+
+
+    solution. The scope of automation is not limited to making changes. Part of
+
+
+    the TFS repository master branch should be a folder structure containing both
+
+
+    the dynamic documentation Ansible playbooks, as well as folders for the
+
+
+    generated output artifacts.
+
+
+    Automated documentation can be built directly into the CI/CD pipeline
+
+
+    creating comma separated value (.csv), Markdown (.md), or text files. These
+
+
+    files are then incorporated into Git commits and pull requests, becoming part
+
+
+    of the code base and repository. TFS and VS Code can view these files
+
+
+    natively, presenting a customizable view of the network as code. These
+
+
+    artifacts include the intended, automatically generated, configuration files as
+
+
+    well as the data model variables manipulated to express the information in
+
+
+    different formats.
+
+
+    For example, is it possible to automatically generate the following
+
+
+    documentation for each device, based on data model variables:
+
+
+    VLANs.
+
+
+    VRFs.
+
+
+    Routing protocol configuration information.
+
+
+    Static routes.
+
+
+    **Interface information:**
+
+
+    Up / Down.
+
+
+    Mode – Access or Trunk.
+
+
+    VLAN(s).
+
+
+    **Port-channels information:**
+
+
+    Member ports.
+
+
+    IP Addresses.
+
+
+    Access Control Lists (ACL).
+
+
+    In fact, any information represented in a data model can be transformed
+
+
+    into dynamic documentation files. This allows for desired information about'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'any device on the network to be automatically generated at build time, and
+
+
+    available through TFS. The history for these documentation files is included
+
+
+    as source and version controls. When adding or removing code, the resulting
+
+
+    documentation updates are automatically performed reflecting the changes.
+
+
+    Standards
+
+
+    Corporate standards are very hard to maintain over time as networks
+
+
+    evolve and transform. Often the pressures of projects and deliverables of day-
+
+
+    to-day work demands leads to standards being overlooked, put off, or
+
+
+    ignored. Natural configuration drift can occur over time as network devices
+
+
+    and IP addresses come and go. If network devices continue to operate,
+
+
+    misconfigurations or poor standards may go unnoticed. When identified,
+
+
+    these cosmetic corrections may be deemed a low priority.
+
+
+    Ansible’s dynamic templating guarantees a standardized configuration for
+
+
+    every device. Complete configuration coverage is achievable and every line
+
+
+    of code in the running-configuration can be derived from a template. Having
+
+
+    accomplished full idempotency between the source of truth and the device
+
+
+    configuration guarantees intent-based standards are uniformly applied. Scale
+
+
+    is not a problem with this approach nor is the human error factor. When new
+
+
+    standards arise, or changes to existing standards are required, only the
+
+
+    centralized templates and data models are updated. These changes are pushed
+
+
+    through the automation engine delivering the new standards to the network.
+
+
+    Golden Configuration
+
+
+    Sometimes referred to in Windows operating system administration as a
+
+
+    “desired state configuration” a golden configuration has many names. Using
+
+
+    Jinja2 templates and YAML data models, a golden configuration for each
+
+
+    device in the network is achieved using software development
+
+
+    methodologies. Logic within the templates is used to intelligently generate
+
+
+    device configuration commands. These configurations are applied at scale to
+
+
+    all devices included in the Ansible *hosts.ini* inventory file.
+
+
+    The master branch represents the golden configuration for the network.
+
+
+    Automated builds package the various artifacts from the master branch and
+
+
+    provide a version number for that iteration of the network. When changes are
+
+
+    required, however minor, working branches are created for code to be
+
+
+    developed and tested. Frequent Git commits during development are used to
+
+
+    check changes into the working branch. A pull request is used to merge these'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'accumulated changes into the master branch, which is then deployed into
+
+
+    production updating the standardized, golden configuration, at scale.
+
+
+    *Security*
+
+
+    Some of the largest security breaches occur because telnet is open on a
+
+
+    port with a public facing IP address. Security standards and best practices can
+
+
+    now be hard-coded into templates guaranteeing enforcement of policies.
+
+
+    Often complex configurations are required on interfaces at the access layer to
+
+
+    address security risks. Consider the access layer and all the following security
+
+
+    standards that should be implemented:
+
+
+    **Spanning-tree toolkit commands.**
+
+
+    Bridge Protocol Data Unit (BPDU) controls.
+
+
+    Portfast.
+
+
+    802.1x or port-security commands.
+
+
+    Data and voice VLANs.
+
+
+    QoS settings.
+
+
+    CDP settings.
+
+
+    Power over Ethernet (PoE) settings.
+
+
+    Native VLAN established.
+
+
+    Native VLAN applied on trunk ports.
+
+
+    NTP source.
+
+
+    Security banner presented at login.
+
+
+    AAA.
+
+
+    RADIUS / TACACS+.
+
+
+    ACLs on management ports.
+
+
+    VLAN 1 disabled.
+
+
+    Security requirements, if missed or incorrectly applied, lead to
+
+
+    vulnerabilities and threats within the network. These vulnerabilities can be
+
+
+    exploited, lead to outages, or bring about data loss in certain scenarios.
+
+
+    Having a guaranteed templated configuration ensures that important security
+
+
+    components are hard-coded into every template and applied to both the
+
+
+    device’s global configuration as well as every interface configuration. Every
+
+
+    access port throughout the campus can now be configured the same way and
+
+
+    will automatically include security posture standards.
+
+
+    Agility'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'In an on-demand world networks continue to be the bottleneck of many
+
+
+    projects. One of the driving factors for moving to automation is the agility it
+
+
+    offers. Most of the common changes to the network become updates to
+
+
+    existing data models. When new feature requirements arise, such as the need
+
+
+    for multicast, new templates along with new data model variables will be
+
+
+    developed. The feature is then released and incorporated into the
+
+
+    orchestration of playbooks as a new task. A very repeatable, modular, process
+
+
+    evolves which provides the agility to deliver projects more efficiently.
+
+
+    Design
+
+
+    Traditional network design often centers around the device configuration
+
+
+    commands. While these commands are essential at implementation, it is the
+
+
+    data that should drive network design. Network engineers'' new
+
+
+    responsibilities include crafting human-readable data models and the logic
+
+
+    that drives the dynamic templates. Existing or new dynamic documentation
+
+
+    should reflect new features as templates are added or updated. Thinking
+
+
+    about data first, and the configuration second, network design evolves.
+
+
+    Deployment
+
+
+    The biggest advantages found in network automation are often on the
+
+
+    operational side of network management. Large-scale changes are often very
+
+
+    difficult to roll out to an enterprise. Introducing QoS to a network, for
+
+
+    example, means touching all devices in all layers of the network, often with
+
+
+    different code per platform. Devices using Multi-Layer Switching (MLS) or
+
+
+    Modular Quality of Service Command Line (MQC) leads to different
+
+
+    requirements and configuration commands by platform. Operations receives
+
+
+    approved, finalized, network designs, along with deployment steps, from the
+
+
+    network engineers. This often requires weeks or months to then complete the
+
+
+    delivery to campus from start to end. Network automation, even a hybrid
+
+
+    model where operators run Ansible playbooks manually, solves operational
+
+
+    headaches related to deploying configurations to the network. Deployment
+
+
+    time is drastically reduced when using Ansible playbooks while quality and
+
+
+    accuracy significantly increases.
+
+
+    Operations
+
+
+    NetDevOps will dramatically change network operations’ role in the
+
+
+    organization. A library of canned, automated, Ansible playbooks develops
+
+
+    over time. Automated builds and deployments will trigger whenever
+
+
+    approved changes are merged into the repository. Operations are often tasked
+
+
+    with running the network day-to-day, incorporating and deploying the'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "changes coming from projects or network engineers. Operations will now\n\n\
+    learn to develop and use code.\n\nIf the deployment, network reconnaissance, and\
+    \ documentation aspects of\n\noperations can be automated, it will allow the operations\
+    \ team to focus on the\n\nday-to-day aspects of the network management along with\
+    \ new automated\n\ntools used to gather the information needed to run the network.\
+    \ With that\n\nsaid, the network may still have the need of an NMS for platform\
+    \ health\n\nmonitoring. There may be network appliances or controllers that are\
+    \ not good\n\ncandidates for automation or there may be non-SSH systems on the\
+    \ network\n\nthat are non-automatable using Ansible.\n\nIntent-Based\n\nThe human-readable\
+    \ nature of this methodology allows for a true intent-\n\ndriven model of the\
+    \ network. The configurations are abstracted into the\n\ntemplates, so focus can\
+    \ be put on the data models. Intent for each device or\n\ngroup of devices can\
+    \ be expressed in a human-readable form. Idempotent\n\nAnsible playbooks combined\
+    \ with check mode can tell exactly if a device’s\n\nrunning-configuration matches\
+    \ intent and if the Ansible playbook would have\n\nadded code. Utilizing the differential\
+    \ option (—diff) allows the operator to\n\nsee what differs between the two configurations\
+    \ and can also be displayed\n\nindicating any commands present on the device but\
+    \ missing from intent.\n\nNew appliance-based solutions are available that offer\
+    \ a GUI-driven\n\nintent system. Drag and drop intentions in the GUI are translated\
+    \ to\n\nconfigurations that are automatically pushed to the devices. These new\
+    \ intent-\n\nbased appliances are the biggest competitor to Ansible network automation.\n\
+    \nEither purchase and configure the appliance, hoping it does everything\n\nadvertised,\
+    \ or build an in-house Ansible automation framework. \n\nSource of Truth\n\nEvery\
+    \ network should have an authoritative artifact identifying what is\n\nthe correct,\
+    \ intended configuration for each device. Source of truth is a\n\ntrusted artifact\
+    \ that network engineers and operators can reference with\n\ncertainty. This can\
+    \ be an IP address, a static route, an ACL, or configuration\n\ncommand. It can\
+    \ be required when designing new solutions, adding new\n\ndevices (scaling), troubleshooting\
+    \ problems, or rebuilding a device after\n\nfailure.\n\nWhere is the network’s\
+    \ source of truth? Is it a network management\n\nsystem? Flat files in folders\
+    \ in a network share? A Microsoft SharePoint site?\n\nThe network device running-configuration\
+    \ itself?"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'Using the new NDLC, a living source of truth in TFS exists. A rich
+
+
+    repository containing data models, templates, and Ansible playbooks which
+
+
+    also stores the compiled, intent-based, dynamically generated configuration
+
+
+    files for each device. TFS is a single, central, RBAC controlled, source of
+
+
+    truth for the network. TFS repository can be used as a reference for all future
+
+
+    network designs and troubleshooting. Source of truth means browsing for
+
+
+    data models or templates that create the configuration or the compiled output
+
+
+    showing the exact device configuration, without ever needing to connect to
+
+
+    the device CLI. Other artifacts such as the routing tables or firewall rule lists
+
+
+    can also be stored in the source of truth as output from dynamic playbooks.
+
+
+    Having this is not something every network can produce; however, it is
+
+
+    indispensable when designing new features, planning future changes, dealing
+
+
+    with network failures or troubleshooting problems.
+
+
+    Change Management
+
+
+    Network automation can help simplify the change management process as
+
+
+    it is a natural part of a pull request. The master branch can be locked, and
+
+
+    only approved changes allowed to be merged through a pull request. An
+
+
+    approver has all the necessary artifacts to approve, deny, or conditionally
+
+
+    reject a pull request asking the developer for more details. Documentation is
+
+
+    automatically generated and the changes to either the data model or dynamic
+
+
+    template of a device is obvious and highlighted in TFS for the approvers
+
+
+    benefit.
+
+
+    Sample Processes:
+
+
+    New requirement / change / feature / correction / refactoring.
+
+
+    Added to work board in TFS.
+
+
+    Work assigned.
+
+
+    New working branch created.
+
+
+    Engineer performs git pull downloading the updates to the central
+
+
+    repository.
+
+
+    Engineer changes to new branch in local VS Code (git checkout).
+
+
+    **Development work:**
+
+
+    Add / change / delete code.
+
+
+    Testing – check mode.
+
+
+    Documentation generated.
+
+
+    Engineer performs commits often, ideally for small related changes.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'Engineer performs a git push uploading the changes to the central
+
+
+    repository.
+
+
+    Engineer submits a pull request in TFS.
+
+
+    Pull request triggers approval workflow.
+
+
+    Approvers / reviewers notified.
+
+
+    Pull request approved or denied.
+
+
+    Approved request merged into master branch.
+
+
+    Automated build triggered.
+
+
+    Documentation updated.
+
+
+    Automated test triggered.
+
+
+    Automated release scheduled.
+
+
+    Change delivered to environment through Ansible.
+
+
+    Alternatively, if full CI/CD automation is not yet established, operators
+
+
+    execute approved Ansible playbooks manually.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '**Packet Tracer Activities**
+
+
+    In this chapter, you will see activities that you can do on your Packet Tracer.
+
+
+    These activities are simple and ideal for beginners like you. Nonetheless,
+
+
+    there are also clues and tips that are meant to guide and help you have a
+
+
+    working network.
+
+
+    Activity 1: Configuring a Switch
+
+
+    Create the network shown above. Since you are using switches, take note
+
+
+    that you have to use copper straight-through cables. When you are done
+
+
+    creating the topology, you should:
+
+
+    1\. Configure the IP address of each one of the computers connected to the
+
+
+    switches. Use the following IP addresses:
+
+
+    For PC0: 192.168.1 1/24
+
+
+    For PC1: 192.168.1 2/24
+
+
+    For PC2: 192.168.1 3/24
+
+
+    For PC3: 192.168.1 4/24
+
+
+    Helpful Tip: If you are not sure about the command that you have to type
+
+
+    on the command line, you can type in a question mark (?), as shown below,
+
+
+    and you will be presented with a list of commands that you can use.
+
+
+    Likewise, if you wish to know which parameters you have to use, you can
+
+
+    type in show ip? You will then be presented with a list of the associate
+
+
+    parameters.
+
+
+    In case you only see <CR>, it means that you do not need to type in any
+
+
+    parameter to complete your command.
+
+
+    2\. Set the names of the switches.
+
+
+    Clue: You can set the name of the switch on the global configuration
+
+
+    mode. You can actually use any hostname you like, but you have to use the
+
+
+    hostname command.
+
+
+    As you can see, you can simply type in ‘ho’ instead of ‘hostname’. Again,
+
+
+    if you want to save time and energy when typing in your commands, you
+
+
+    should use shortcuts.
+
+
+    In this example, your ‘s1’ is set as the name of the switch. For example,
+
+
+    you can use a person’s name:
+
+
+    See? Now, the name of your switch has been changed from s1 to wendy.
+
+
+    It is very simple.
+
+
+    3\. Set a password.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: 'A password can be used to prevent unauthorized access or restrict
+
+
+    physical access to the switch. Switches support console lines for local logins.
+
+
+    Likewise, they support VTYs for remote logins.
+
+
+    Every supported line has to be secured for the User Exec mode. If you
+
+
+    leave any lines unsecure, you also give the malicious attacker a chance to
+
+
+    intrude your network. To set your password, you can type in the following
+
+
+    commands:
+
+
+    When you are done, you have to type in exit until you see the following:
+
+
+    Press the Enter button, and you will be prompted to enter a password.
+
+
+    This password is the one that you just set earlier. If other people do not know
+
+
+    it, they will not be able to continue.
+
+
+    If you typed in the correct password, which in this example is
+
+
+    consoleXYZ, you will be able to continue. The password is hidden for your
+
+
+    protection.
+
+
+    Anyway, now that you have set the password for the console, you have to
+
+
+    set the password for the VTY. In this example, the password telnetABC is
+
+
+    used. You can also type in ‘pass’ instead of ‘password’ as a shortcut.
+
+
+    VTYs refer to virtual terminals, such as SSH and telnet. A switch may
+
+
+    support multiple VTY lines. However, only the first five lines or 0-4 lines are
+
+
+    enabled by default. If you want to have more lines, you need to manually
+
+
+    enable them. How many lines you can use depends on the Switch that you
+
+
+    choose from your Packet Tracer. For example, 16 lines are supported by the
+
+
+    2960 switch.
+
+
+    You can create a password for every line, but you need to specify the
+
+
+    number of the line. You can also just create one password for all of the lines.
+
+
+    In this example, a single password is used for all the lines.
+
+
+    Real-life Application: So, how can you apply this in real life? Well,
+
+
+    setting an individual password for each and every one of the lines you have is
+
+
+    a good strategy to protect your company network. This strategy is actually
+
+
+    ideal for large organization and companies. On the other hand, sharing a
+
+
+    single password is much preferable for small organizations and companies, in
+
+
+    which there are not so many network administrators who work there.
+
+
+    You can either choose the password option or the secret option. Both of
+
+
+    them work the same way, anyway. However, if you choose the secret option,
+
+
+    your password gets stored in an MD5 encryption format whereas if you go
+
+
+    for the password option, your password gets stored in a simple text format.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'When you are done typing those commands, just continue exiting until
+
+
+    you are prompted to enter your username and password.
+
+
+    Then, you will see the following:
+
+
+    Keep in mind that you can only use one of the two options. You should
+
+
+    only go for secret or password. You cannot have them both. In this example,
+
+
+    however, both are used for comparison and display purposes only.
+
+
+    If you used both secret and password in your commands, the enable secret
+
+
+    command will replace the enable password command automatically. In other
+
+
+    words, the other command will be useless.
+
+
+    Here, the first password that you have to type in is testing123. It will then
+
+
+    allow you to proceed. Then, when you try to type in more commands, you
+
+
+    will be prompted to enter another password. In this case, you have to type in
+
+
+    wendy456.
+
+
+    Why is it wendy456 instead of testing123? So, in this case, the enable
+
+
+    password testing123 is gone.
+
+
+    4\. Check out the running configuration.
+
+
+    What if you want to see the running configuration, which is stored in your
+
+
+    RAM? You can use the show running-config command or simply show run.
+
+
+    There are more commands when you scroll downwards. You just have to
+
+
+    keep on scrolling until you reach the end of the line. When everything has
+
+
+    been displayed, you will be able to start anew.
+
+
+    5\. Check the VLANs.
+
+
+    Aside from the running configuration, you can also see the VLAN. You
+
+
+    just have to type in the show vlan command. The switch creates VLAN1
+
+
+    automatically. It also assigns every interface to it. Then again, if you want
+    to
+
+
+    have custom VLANs, you can create them and assign them to your interfaces.
+
+
+    If you want to know about the information on your interfaces, you can
+
+
+    use the show interface command. You will then see a list of all the interfaces.
+
+
+    If you wish obtain information with regard to specific interfaces, you have to
+
+
+    pass their interface numbers as arguments.
+
+
+    For instance, if you want to check out details from FastEthernet 0/1, you
+
+
+    have to type in show int fa0/1 or show interface fastethernet 0/1.
+
+
+    With the first ‘up’, you will find out the current status of your physical
+
+
+    layer. With the second ‘up’, you will find out the current status of your data
+
+
+    link layer.
+
+
+    In the succeeding activities, you are on your own. You should be able to
+
+
+    set your own IP addresses. By this time, you should already be able to create'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'functional public and private networks. You should also be able to design
+
+
+    simple networks on your own.
+
+
+    Activity 2: Subnetting 1
+
+
+    In this activity, you have to subnet the network address and set the IP
+
+
+    addresses for the network shown in the above given topology. Every one of
+
+
+    the LANs in this network requires sufficient space for the addresses of the
+
+
+    end devices, the router, and the switch. You need to set an IP address for
+
+
+    every one of the routers.
+
+
+    Moreover, you have to assign the IP addresses for every one of the
+
+
+    network devices. You have to configure the IP addresses on the router,
+
+
+    switches, and computers. Finally, you have to verify the connectivity.
+
+
+    Activity 3: Subnetting 2
+
+
+    This is another activity on subnetting. For this particular example, you
+
+
+    have to use the network address 172.31.1.0/24. You have to use that to
+
+
+    perform subnetting as well as to provide the IP addresses of the elements in
+
+
+    this network.
+
+
+    When you subnet the network, see to it that you base it on the maximum
+
+
+    number of hosts that the biggest subnet requires. How many subnets are
+
+
+    necessary, depending on the topology shown above? How many bits have to
+
+
+    be borrowed in order to support the subnets?
+
+
+    Then, you have to assign subnets to the above given network. You have
+
+
+    to take note that routing is important if you want data or information to
+
+
+    successfully be transmitted over the network.
+
+
+    Furthermore, you have to set the IP addresses of the network devices and
+
+
+    verify their connectivity.
+
+
+    Activity 4: Setting Up a Switch
+
+
+    In this activity, you have to configure the basic settings. You have to set
+
+
+    the hostname, passwords, terminal options, and motd banner.
+
+
+    Step 1. You should use Wendy’s Laptop to connect to your switch
+
+
+    console.
+
+
+    Step 2. You should configure the hostname of the switch.
+
+
+    Step 3. You should configure the message that you want to be displayed.
+
+
+    Step 4. You have to configure the password for the privileged mode
+
+
+    access. Use “cisco”. Keep in mind that your password has to be md5
+
+
+    encrypted.
+
+
+    Step 5. You have to configure the password encryption on your switch.
+
+
+    Step 6. You have to configure the console access.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: 'Step 7. You have to configure the telnet access.
+
+
+    Step 8. You have to configure the IP addresses of the switches as well as
+
+
+    their default gateways.
+
+
+    Step 9. Test for connectivity.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "**Malware: A Hacker’s Henchman**\n\n![](img/0937bf4b1739a36662bbe2484b163f1b_71_0.png)\n\
+    \nMalicious \n\nsoftware,\n\nor malware for short, includes tools used by hackers\
+    \ for penetrating others’\n\nnetworks or computer systems with the intention of\
+    \ retrieving information\n\nthat may be personal or something that belongs to\
+    \ an organization. Malware\n\nis software that a hacker uses for crippling or\
+    \ disrupting computers or\n\nnetworks operation that gives them a chance to access\
+    \ information. This\n\nsoftware is designed to cause intentional harm to the network\
+    \ or system that\n\nthey attack. Malware, in general, acts against the user’s\
+    \ interests. There are\n\ntwo types of malicious software: Those that cause unintentional\
+    \ harm and\n\nthose that are specifically designed to cause harm. The term badware\
+    \ is used\n\nfor defining them both.\n\nMalware is designed to work in stealth,\
+    \ as the purpose is to gather\n\nsensitive information from the targeted system.\
+    \ They can work for extended\n\nperiods of time and the user may not know that\
+    \ they hide within their system.\n\nThey hide without the knowledge or consent\
+    \ of the user. They are specifically\n\ndesigned to cause harm, retrieving information,\
+    \ payment extortion, or for\n\nsabotaging the system. Both hostile software and\
+    \ intrusive software falls into\n\nthe category of malware. These include a variety\
+    \ of programs and software\n\nlike Trojan horses, viruses, adware, spyware, worms,\
+    \ and a few other\n\nmalicious software programs. All this software disguises\
+    \ itself as non-\n\nmalicious programs. According to recent studies, the majority\
+    \ of malware\n\nused are worms and Trojans. Previously viruses used to be the\
+    \ most widely\n\nused malware, but they have declined in numbers.\n\n**Types of\
+    \ Malware**"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '*Adware*: these are considered to be the least harmful and most lucrative
+
+
+    of all malware. They are specifically designed for displaying ads on
+
+
+    your computer.
+
+
+    *Spyware*: A hacker chooses spyware to constantly spy on the user. These
+
+
+    programs are designed to keep track of the users at all times. They spy
+
+
+    on the Internet activities of the user and display ads accordingly. They
+
+
+    help the adware with the gathered information so that they can be used
+
+
+    when the user is online.
+
+
+    *Virus*: Viruses are contagious programs or code. They attach themselves
+
+
+    to other running software and they can reproduce themselves. The files,
+
+
+    folders, or programs that they are attached to spread the virus when they
+
+
+    are used or transferred to other systems through direct file sharing, or
+
+
+    through a network.
+
+
+    *Worm*: These are small programs that are designed to sabotage the files
+
+
+    of the operating system. They, like viruses, can replicate themselves and
+
+
+    hide within folders. They use up the processor and hard disk resources
+
+
+    that will slow down the processes and decrease the space available on
+
+
+    the hard disk. Some of the worms are harmless, while others keep on
+
+
+    replicating until a drive becomes full.
+
+
+    *Trojan*: Trojans are specifically designed for stealing the user
+
+
+    information. This includes both financial and personal information. Of
+
+
+    all the malware, these are considered to be the most dangerous. For
+
+
+    denial-of-service attacks, hackers use Trojans as a major tool. They help
+
+
+    the hackers keep track of the user''s activities. They maintain a log of all
+
+
+    the activities and send them to the hacker who placed them within the
+
+
+    system. Most of them can remain undetected over very long periods of
+
+
+    time. There are a few Trojans that claim to remove viruses, but instead
+
+
+    they add their own viruses.
+
+
+    *Rootkit*: these are software programs that allow other malware into the
+
+
+    system. These act like backdoors for other malicious software. Like
+
+
+    Trojans, they work in stealth without the user noticing them. For the
+
+
+    user, it looks like nothing is wrong but, in the background, it opens the
+
+
+    gateway to several types of malware.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '*Keyloggers*: Keyloggers are specifically designed to record all the
+
+
+    keyboard input information. They can only store information that is
+
+
+    given to a keyboard and are not capable of recording data that is given
+
+
+    by any other means, such as virtual keyboards. They stay hidden and
+
+
+    record information continuously. They will send the recorded data to the
+
+
+    hacker when the user goes online. Hackers use keyloggers for retrieving
+
+
+    sensitive information like passwords, etc. They usually send all the
+
+
+    recorded data to the hacker. The hacker will then have to guess the
+
+
+    password from the data that was obtained. A key logger doesn''t
+
+
+    understand if the text is a password or not. It simply saves all the typed
+
+
+    keys and will send the whole string of letters to the hacker.
+
+
+    *Ransomware*: This can be defined as an infection within the system.
+
+
+    Ransomware displays messages like "You''ve been locked out of your
+
+
+    system until you pay for your cybercrimes," or something like that. This
+
+
+    software will lock the computer and render it useless.
+
+
+    **Virus**
+
+
+    In computing, a virus is the term for a small program, or sometimes a few
+
+
+    lines of code, that inserts itself into other files such as boot files or system
+
+
+    files. Viruses stay hidden most of the time and have the capability of
+
+
+    replicating themselves. Whenever a virus attaches itself to a folder or file,
+    it
+
+
+    gets infected. Viruses are rarely harmless but mostly harmful. Harmless
+
+
+    viruses are used for pranks and harmful viruses can access your information,
+
+
+    steal data, consume system resources like hard disk space, RAM space, CPU
+
+
+    space etc. Harmful viruses have the capability of crippling your system and
+
+
+    rendering it useless.
+
+
+    **Vulnerability to Malware**
+
+
+    Whenever we say that a “system” is under attack, it implies that it may be a
+
+
+    single application, a computer, an operating system, or a large network that
+
+
+    has been attacked by malware. There are many factors that make a system
+
+
+    vulnerable so that malware can attack. A few of them are:
+
+
+    Security defects in software: Using defects in software’s security is a'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'major vulnerability that any malicious software can take advantage of.
+
+
+    This applies to both small and large software programs from software
+
+
+    that just has a few lines of code to extremely large software programs
+
+
+    like operating systems. These are all vulnerable if there is a soft spot in
+
+
+    security. Outdated plug-ins and older versions of software like browsers
+
+
+    are some of the most common kinds of vulnerable software. You can''t
+
+
+    say that if there is an updated plug-in, it is safe. Some of the plug-ins
+
+
+    leave their older versions installed, which can compromise the security
+
+
+    of that software.
+
+
+    Insecure design or user error: Tricking the user into running a particular
+
+
+    file that is infected with malware is another commonly used method for
+
+
+    spreading malware. This category may include malware copied to
+
+
+    hardware such as USB devices, or flash drives. When the hardware is
+
+
+    used, the malware automatically executes and attaches itself to the user''s
+
+
+    system. If this system is connected to a network, there are chances that
+
+
+    the malware can be spread across the network and to every system
+
+
+    connected to it. This is a very effective method that is used by hackers
+
+
+    for spreading malware.
+
+
+    Using outdated anti-virus: Using outdated or free anti-virus programs
+
+
+    will not be as effective as using the latest updated versions. The updated
+
+
+    anti-virus software will have all the new definitions of viruses and
+
+
+    Trojans in their database. The older version of anti-virus software may
+
+
+    protect you from older threats but they cannot detect and protect you
+
+
+    against new malware and threats.
+
+
+    Over-privileged users and over-privileged code: In computing, privilege
+
+
+    means access to modify the system. In some software programs, the
+
+
+    users are given more access or privileges than they are supposed to have.
+
+
+    This usually happens with software that is poorly designed. Malware can
+
+
+    take advantage of this vulnerability. There are two methods in which a
+
+
+    certain malware can make use of this. They are:
+
+
+    1\. Over-privileged users: In some systems, the users are given privileges to
+
+
+    change and modify the program code. Such users are called over-
+
+
+    privileged users.
+
+
+    2\. Over-privileged code: In some other systems, the code that the user'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'executes will be given more privileges. These privileges include
+
+
+    permissions to access and modify the system resources. Such code is
+
+
+    known as over-privileged code. A few operating systems and a few
+
+
+    scripting languages give these privileges to code, making it over-
+
+
+    privileged code.
+
+
+    In such cases, when the user executes the code, the system will provide
+
+
+    all the privileges to the code as the user who runs it. This will make the
+
+
+    system vulnerable to malicious software that comes from the Internet.
+
+
+    **Homogeneity**
+
+
+    We can say that a set of systems is homogeneous when they all are connected
+
+
+    to the same network and run on the same operating system. This phenomenon
+
+
+    is called homogeneity. When there is homogeneity, it is easier for malware to
+
+
+    spread itself across all the systems that are connected to that network. For
+
+
+    example, if there is a virus in one of the systems, it can spread itself to all
+    the
+
+
+    systems in that network. Homogeneity can be found in various organizations,
+
+
+    like schools, colleges, and most software organizations. The majority of the
+
+
+    systems run on Windows or Mac operating systems. Concentrating on either
+
+
+    one of those operating systems will give the hacker a great opportunity to
+
+
+    exploit a large number of systems that are run on them. One way to remedy
+
+
+    homogeneity is to use different operating systems on each of the systems.
+
+
+    This will make it harder for the malware to spread. But there are a few
+
+
+    disadvantages in the initial stages such as higher expenses for training and
+
+
+    maintenance.
+
+
+    **Cover your tracks**
+
+
+    A good ethical hacker never leaves traces of their intrusion behind. A hacker
+
+
+    cannot risk leaving evidence of having intruded into a network or a system.
+
+
+    In such cases, the hacker can use malware for cleaning all records, such as
+
+
+    event logs, and can have a clean exit. There are many types of malware that
+
+
+    hide network traffic and clean directories.
+
+
+    *Proxy Server*: Making use of the proxy server is a very good idea for a
+
+
+    hacker who intends to tunnel through the sensitive areas of the network.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'Proxy servers cannot be detected by intrusion detection software, as they
+
+
+    leave no trace behind.
+
+
+    For you to become a good hacker, you should be able to select the correct
+
+
+    malware depending upon your current payload. Trojans are usually the best
+
+
+    malware that a hacker can make use of. This is because of their stealth and
+
+
+    their ability to monitor the user for extended periods of time.
+
+
+    **Crimeware**
+
+
+    The software tools, which the hackers use for hacking, are sometimes
+
+
+    referred to as crimeware. Crimeware can be defined as software that is:
+
+
+    Not generally a desirable hardware or software application.
+
+
+    Mostly used for criminal activities online.
+
+
+    Not involuntarily enabling the crime.
+
+
+    One such type of crimeware is the bot. Bots are described in brief below.
+
+
+    **Bots**
+
+
+    What is a bot?
+
+
+    Bot is the short form for robot, but they''re different from the robots
+
+
+    shown in science fiction movies. They are not even the robots from
+
+
+    production line manufactured by companies. They can be considered one of
+
+
+    the most sophisticated crimewares that the Internet is facing today. These
+
+
+    bots are very much similar to Trojan horses and worms. They are different
+
+
+    from other types of malware because of the wide variety of automated tasks
+
+
+    that they perform on behalf of the attacker who placed them. These attackers
+
+
+    are often located at safe locations from the Internet. Bots can perform tasks
+
+
+    like sending spam messages, which comes under the denial-of-service attack.
+
+
+    Computers that are infected by bots will be under the control of the attacker;
+
+
+    those machines are called zombies.
+
+
+    Bots can sneak into a computer in many different ways. They search for
+
+
+    unprotected computers on the Internet. When they find a vulnerable
+
+
+    computer, they infect it quickly and report back to the attacker. They are'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: 'specifically designed to stay hidden until their master commands them to
+
+
+    perform a particular task. Bots stay hidden and in stealth. Most of the victims
+
+
+    do not realize that their systems are infected with bots until their service
+
+
+    provider notifies them that their system has been sending spam messages to
+
+
+    other users. In some cases, bots even clean up the computer that they
+
+
+    infected, making sure they do not get bumped off that machine by another
+
+
+    bot. Bots can spread across the Internet using Trojans, which download them,
+
+
+    by emailing a person from a system infected by bots, or from malicious
+
+
+    websites.
+
+
+    Bots are not designed to work alone. They work together with other
+
+
+    machines infected with bots. This group of machines is called a botnet. The
+
+
+    zombie machines will be controlled by the command and control center,
+
+
+    which is a master computer. The attackers use the command and control
+
+
+    server to instruct the zombie computers to perform activities on their behalf.
+
+
+    Usually, a botnet comprise a huge number of machines infected by bots.
+
+
+    These will be spread across the globe. Smaller botnets might consist of a few
+
+
+    hundred, or a few thousand computers. Larger botnets have more than
+
+
+    100,000 computers as zombies. All of these zombies will be at the disposal of
+
+
+    the attacker.'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '![](img/0937bf4b1739a36662bbe2484b163f1b_78_0.png)
+
+
+    **Products and**
+
+
+    **Services Offered by Cisco Networking**
+
+
+    **Solutions **
+
+
+    Cisco provides various options for a company’s networking needs. A few of
+
+
+    them are listed below. To meet the technological needs of companies that
+
+
+    require data storage, access points, and servers to connect various systems
+
+
+    and to provide VPN access, the following products are designed by Cisco.
+
+
+    *Networking*
+
+
+    Through effective networking, you can be assured of smooth business
+
+
+    transactions and information flow. Cisco offers wide varieties of networking
+
+
+    options that allow a company to not only automate its network, which
+
+
+    provides business agility with scale, but also decrease the WAN cost by a
+
+
+    high fraction. It also assures higher performance from the network. With the
+
+
+    networks built with such detail, they can detect and mitigate any imminent
+
+
+    threats that may cause damage to the company.
+
+
+    *Switching*
+
+
+    Finding the right switch for your company is everything, with data being
+
+
+    the most critical aspect in a growing business world. It is essential to select
+
+
+    the right switch to avoid threats faced by the company - now and also in the
+
+
+    future. Through Cisco System, companies can simplify the management of
+
+
+    their requirements for mobility, IoT, data center and cloud.
+
+
+    *Routing*'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'This product is for networking products designed for LAN, WAN, and
+
+
+    cloud. It includes integrated security, application optimization, automated
+
+
+    provisioning and advanced analytics which deliver a complete and proven
+
+
+    solution to your organizational requirements. Companies can now automate
+
+
+    the process with the help of these routers. These routers also offer application
+
+
+    and intelligent path selection, which needs minimal control through
+
+
+    customization and programming. High performing routers streamline
+
+
+    network operations, which can reduce the cost, speed, and deployment of the
+
+
+    branch making the network more agile. It doesn’t matter whether one has a
+
+
+    small business or a large one; the Cisco Networking solutions can offer a
+
+
+    wide range of services that fit any business model.
+
+
+    *Wireless*
+
+
+    The primary way to access the digital world is through wireless networks.
+
+
+    Without it, a business cannot communicate with consumers, employees
+
+
+    cannot do their jobs and data is left open for attackers to take over. By using
+
+
+    Cisco Wireless Enterprise Technology and Mobility products, you can be
+
+
+    assured to get the state-of-the-art access points and top of the line WAN and
+
+
+    LAN connections. Cisco takes pride in offering the advantage of cutting-edge
+
+
+    innovations, which are designed to provide performance and high-end
+
+
+    security. The best part of it all is that these can fit any small and medium-
+
+
+    sized enterprises to large-scale businesses.
+
+
+    **Access Points**
+
+
+    With the explosion of IoT devices and mobility, the need for security has also
+
+
+    seen unusual growth. The Cisco Catalyst 910 access point exceeds the new
+
+
+    W1-Fi 6 wireless standards and provides radio frequency excellence to high–
+
+
+    density environments. These points provide the performance to increase
+
+
+    employee productivity that allows transmitting data at higher speeds and at an
+
+
+    increased capacity. These access points provide high-end security for the data
+
+
+    that is being transmitted, and efficient data transmission allows upgrades to
+
+
+    the technology much easier than in olden times.
+
+
+    **Outdoor and Industrial Access**
+
+
+    Allows you to not only get data access anywhere but also extends Wi-Fi
+
+
+    outdoors and can provide connectivity in the most hazardous locations,'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'making it safer for companies to continue their operations in ease. These
+
+
+    access points are resistant to high heat and extreme cold temperatures making
+
+
+    it optimal for your data transmission performance.
+
+
+    **Wireless Controllers**
+
+
+    As the world is geared up to go wireless, the Cisco Wireless Controllers are
+
+
+    here to provide secure networking options with simplified segmentation
+
+
+    which can detect encrypted threats. They are easy to access and can be
+
+
+    enabled even on the cloud. They are designed to get faster insights, which
+
+
+    troubleshoot any problems in quickly and thus deliver personalized
+
+
+    experiences. These are also designed to have easy upgrading without any
+
+
+    interruptions.
+
+
+    **Networking Management**
+
+
+    Cisco strives to improve operational efficiency and reduce downtime by
+
+
+    using leading class products and solutions and managing an enterprise
+
+
+    network. These products and services are designed to fit any size
+
+
+    organization and to access improvised digital networking processes and
+
+
+    systems. Through this Cisco provides opportunities to automate policy-based
+
+
+    application profiles, which allow the IT team to respond quickly to new
+
+
+    business opportunities.
+
+
+    **Optical Networking**
+
+
+    Cisco is currently a massive company with optical networking acting as only
+
+
+    a smaller part. Although it is one of the leading companies in traditional
+
+
+    optical networking, its deep balance sheet and assets - including the data,
+
+
+    software, routing, and transportation - provides them a unique opportunity as
+
+
+    the industry evolves to next generation optical infrastructure.
+
+
+    **Interfaces and Modules**
+
+
+    Cisco aims to deploy advanced network capabilities, which can help the
+
+
+    business deliver new services by lowering the costs and thus reducing the'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'ownership costs.
+
+
+    *Security*
+
+
+    The world is now data driven and the safety of consumer’s data has
+
+
+    become the topmost priority. Cisco provides solutions that can change the
+
+
+    face of data protection. One of the most significant security issues being
+
+
+    faced by many companies is that of a cyber threat, which is becoming much
+
+
+    smarter and more dangerous. With Cisco’s integrated portfolio and industry
+
+
+    threat intelligence, you get the scope, scale and capability to keep up with the
+
+
+    complexity of every kind of threat.
+
+
+    **Next Generation Firewall**
+
+
+    Cisco Firewall keeps the business moving while keeping it secure. A business
+
+
+    can get broad network and security visibility and ability to stop the most
+
+
+    advanced threats. Using next-generation IPS and advanced malware
+
+
+    protection to continuously monitor suspicious activity, Cisco lets companies
+
+
+    automate their network settings and allows them to carry on their work with
+
+
+    less worry. The security firewall takes the responsibility of taking care of
+
+
+    your data.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "**Addressing Process Risks **\n\n![](img/0937bf4b1739a36662bbe2484b163f1b_82_0.png)\n\
+    \nProgress Gaps allows\n\nthings to be easier for cybercriminals. It involves\
+    \ not having the capacity to\n\ncomplete a vulnerability appraisal for a framework,\
+    \ and this permits security\n\nbreaches to be undetected. Keeping in mind that\
+    \ the end goal is to give\n\nanother illustration, the absence of intermittent\
+    \ survey of framework logs\n\ncould let a breach to not be distinguished. Establishing\
+    \ and following\n\nappropriate security processes is critical to the security\
+    \ of the organization. \n\nOperational Risks \n\nActivity and Rationale\n\n*•*\
+    \ Performance hazard evaluation and monitoring, including examination\n\nof potential\
+    \ danger: the reason is to keep up the image of the adequacy of the\n\norganization's\
+    \ security control on dangers confronting the organization. \n\n*•* Redeploy or\
+    \ discard resources in a safe way: this takes into\n\nconsideration making sure\
+    \ that the transfer of cyber resources does not\n\nuncover sensitive data to external\
+    \ users who are not approved. \n\n*•* Controlling and monitoring the access points\
+    \ for the protected assets:\n\nthis is to prevent unauthorized access to the assets\
+    \ and enforce some form of\n\naccountability in the entire process."
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "*•* Definition and enforcement of secure control and configuration\n\nmanagement:\
+    \ this is to make sure that the system alterations do not go against\n\nthe security\
+    \ controls which have been created to protect the cyber assets. \n\n*•* Training\
+    \ of employees when it comes to incident handling and\n\ncontingencies: this is\
+    \ to make sure that the personnel responsible for\n\nresponding to the cyber problems\
+    \ and the big disruptions have a large grasp\n\nof the response plans, and they\
+    \ are able to do them even when they are\n\nundergoing stress.\n\nEnforcement\
+    \ of Access Control, Logging, and Monitoring\n\nThe access to the basic cyber\
+    \ resources must only be given to clients who\n\nare approved. This is regardless\
+    \ of whether it is data framework gadgets or\n\nhuman clients, and the exchanges\
+    \ that the clients are approved to do. It\n\nshould be possible through the arrangement\
+    \ of solid confirmation controls to\n\nevaluate the clients who are approved.\
+    \ The other choice is facilitating the\n\nbasic cybersecurity resources inside\
+    \ a safe domain with proper assurance.\n\nThe majority of the cyber resources\
+    \ practically need to incorporate\n\nmechanized devices or hierarchical process\
+    \ controls for evaluating\n\ncybersecurity-related framework. Consider every mechanized\
+    \ framework and\n\nprocess. The monitoring systems should log each distinguished\
+    \ cybersecurity\n\nissue and give a caution each time. These occasions should\
+    \ be assessed, and a\n\nlog should be there for 90 days. \n\nDisposal or Redeployment\
+    \ of the Assets\n\nKeeping in mind that the goal is to ensure delicate information\
+    \ isn't\n\ndisclosed unintentionally, the organization needs to archive procedures\
+    \ and\n\nsystems for the reasons of transfer or redeployment of the cyber resources\n\
+    \nwithin the ESP. That means removing data storage media and having records\n\n\
+    of the asset disposition. \n\nControl, Monitor and Log the Access to the Assets\n\
+    \nThere is a need to actualize and report the components to control access at\n\
+    \neach electronic passage to the ESPs. These may incorporate the specialized\n\
+    \nand procedural controls, which implement the validation of the greater part\
+    \ of\n\nthe client action. Use an entrance control display whose default setting\
+    \ is to\n\ndeny access, to which then needs explicit permission changes to enable\n\
+    \naccess. So also, for the majority of the passages, you would need to empower\n\
+    \njust the ports and administrations required for endorsed tasks. Remote"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "intelligent access to the inside, more often than not, needs to be accompanied\n\
+    \nby solid procedural or specialized controls for verification. The electronic\
+    \ or\n\nmanual procedures—which are there for checking and logging utilization\
+    \ of\n\nelectronic pathways, should be constantly operational. Where practical,\
+    \ the\n\nprocedures need to identify the entrance preliminaries that were not\n\
+    \napproved, and after that, make the related workforce aware of these events.\
+    \ \n\nOn the off chance that there are no conventions for cautioning, at that\n\
+    \npoint, audit the logs for access events during the previous 90 days. The\n\n\
+    electronic logs, as a rule, should be kept for a time of 90 days. For this\n\n\
+    situation, make sure the restricted access benefits are allowed with a specific\n\
+    \nend goal of satisfying the requirements for business. \n\nIncident Handling\n\
+    \nAn incident alludes to security issues which can cause problems. A case\n\n\
+    would be the loss of accessibility of information or tasks. Regardless of\n\n\
+    preventive circumstances to shield frameworks from the effects of security\n\n\
+    occasions, the quality of the framework would be subject to the abilities of\n\
+    \nemployees to identify and react to the report incidents. Issues identified and\n\
+    \ntaken cared of inside the time frame would prompt the avoidance of issues\n\n\
+    spreading to different sectors or divisions. A solid incident handling ability\n\
+    \nwould require adequate planning and recording, also continuous preparing for\n\
+    \nthe workforce that may be expected to report to react to adverse events. This\n\
+    \ncapacity would require good articulation of the incident handling with\n\nprerequisites.\
+    \ \n\nConducting Vulnerability Assessments\n\nComplete a cyber-vulnerability evaluation\
+    \ concerning the pathways to\n\nevery ESP consistently. For this situation, there\
+    \ are a couple of things which\n\nwould need to be done as a base. They can be\
+    \ shown in the following: \n\n*•* A depiction of the vulnerability evaluation\
+    \ process.\n\n*•* Discovering each passage to the ESP.\n\n*•* An audit of ports\
+    \ and administration arrangements—keeping in mind\n\nthat the end goal is to check\
+    \ if the ports and administrations that are required\n\nfor the task of the cyber\
+    \ resources in the perimeter are actuated. \n\n*•* A survey of the network and\
+    \ resource records to center around the\n\ncontrols for the default accounts."
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "*•* Documentation of discoveries and a remediation design. \n\nContingency\
+    \ Planning\n\nThere are possibilities of unplanned disappointments or blackouts\
+    \ within\n\nthe framework. Even if there is an incident handling plan, the organization\n\
+    \nneeds designs, strategy, and conventions for disaster recovery and the\n\nprogression\
+    \ of activities and any other emergency course of action.\n\nArrangement and plans\
+    \ need to incorporate readiness and preparing for\n\nreacting to a crisis, alongside\
+    \ definite methods for the execution of\n\ncharacterized procedures \n\nDisaster\
+    \ recovery designs can relate to large disruptions and benefit\n\nprinciple office\
+    \ infrastructure. This incorporates planning, crisis offices, and\n\nsystems which\
+    \ concern the rebuilding of basic cyber resources and\n\ninfrastructure at substitute\
+    \ sites after crises. Coordination would center on\n\nmanaging the mission and\
+    \ operational capacity of the organization—during\n\nand after disturbance. It\
+    \ could be composed for the mission capacities inside\n\na solitary specialty\
+    \ unit, or it could address the processes of the firm. The\n\nprogression and\
+    \ recuperation designs are some of the things which\n\ncharacterize the interim\
+    \ measures, which improve the speed; therefore, the\n\norganization can continue\
+    \ benefitting after experiencing disruptions. These\n\ndesigns must be sent for\
+    \ every network. Formation of specific measures\n\nadditionally needs a specific\
+    \ comprehension of the scenarios included.\n\n**People and Policy Risks **\n\n\
+    Managing Risk from the Insider Threat\n\nSource:https://ripplenews.tech/2018/01/04/breaking-binance-com-has-\n\
+    \nsome-Cybersecurity-problem-experts-say/\n\nThe insider threat is where the employee\
+    \ acts with or without knowledge\n\nin a counterproductive manner, to cause a\
+    \ lot of destruction to their company,\n\nand it becomes one of the main risks\
+    \ for organizations everywhere. In part,\n\nthis is because of the larger access\
+    \ that individuals share regarding systems\n\nand critical information as the\
+    \ companies get even more connected. At the\n\nsame time, the sophisticated methods\
+    \ for carrying out cyberattacks and the\n\navailability of outlets for leaking\
+    \ information is increasing the size of the\n\nthreat."
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "To assist with managing the insider threat, companies are increasingly\n\n\
+    recruiting employees for that particular function. Systems that log behavior\n\
+    \nfrom the physical access of the use of the IT systems and software monitoring\n\
+    \ntools are also being developed, to analyze the logs and then create an alert\
+    \ if\n\nneeded. Although, a lot of the time, this is not the most effective approach,\
+    \ as\n\nthere are several reports concerning successful attacks on the same companies\n\
+    \nwhich deploy these defenses. That means people still present a bit of a blind\n\
+    \nspot. That being said, protective monitoring can assist the company to\n\nmeaningfully\
+    \ decrease opportunistic crime or behavior, which is counter-\n\nproductive for\
+    \ the insiders in an organization. \n\nImplementation of Effective Protective\
+    \ Monitoring \n\nProtective monitoring encourages individuals to take the appropriate\n\
+    \ncourse of action, to assist in the detection of risky behavior, as it initiates\n\
+    \nsignificant damage. If done the right way, then it will command the support\n\
+    \nof the employees, and it will stimulate a strong security promoting culture.\n\
+    \nThere are three elements which are involved in the implementation of\n\neffective\
+    \ and protective monitoring.\n\nOrganizations have to utilize behavioral anomalies\
+    \ which are seen in old\n\ndata to focus on real-time monitoring, consider the\
+    \ areas or the individuals\n\nthat pose the highest level of risk. Effectively,\
+    \ that would allow companies to\n\nuse hindsight to predict where risks would\
+    \ most likely exist, and focus the\n\nmonitoring accordingly. Organizations also\
+    \ have to manage four factors—\n\nwhich are the assets, like the employees, property,\
+    \ and their data—the\n\nemployees timing in, doing tasks, the volume of transactions,\
+    \ and the identity\n\nof the employees in the context of their roles. The business\
+    \ context is\n\nsignificant as well, as that would inform sensible business rules\
+    \ which allow\n\nfor meaningful alerts. Most of the time, these rules are not\
+    \ obvious, so the\n\nbusiness would definitely benefit from external forms of\
+    \ input. \n\nThe other thing is that companies have to integrate across the relevant\n\
+    \nbusiness and security functions in such a manner that anomalies in the\n\nbehavior\
+    \ of employees are not hidden. Through making personnel risk a\n\nresponsibility\
+    \ that affects human resource, the companies would not only get\n\ninternal clarity\
+    \ of administration but also get sharper focus in their constant\n\nmonitoring\
+    \ which will lead to improved people risk management and\n\nimprovement on these\
+    \ skillsets. Of course, all of the protective monitoring\n\nneeds to comply with\
+    \ the regulatory frameworks, such as the legal and ethical\n\nbasis and it has\
+    \ to be publicized internally in such a way that the workers are"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "aware it is in place and part of business every day—at the same time,\n\nmonitoring\
+    \ has to be unpredictable and so it may not be easily circumvented. \n\n**Advanced\
+    \ Malware Protection**\n\nThis allows companies to get advanced sandboxing, real-time\
+    \ malware\n\nblocking and global threat intelligence to protect from breaches.\
+    \ Since\n\ncompanies cannot prevent threats alone, Cisco ensures analyzing every\
+    \ file,\n\nquickly detecting, containing and removing any possible threats to\
+    \ the\n\nsystem.\n\n**VPN Security Clients**\n\nThreats can occur through various\
+    \ attack vectors, so companies need secure\n\nconnectivity and active protection\
+    \ for the endpoints. On average when others\n\ncan detect threats in 100 days,\
+    \ Cisco can provide such details on threats in\n\njust 4.6 hours and process about\
+    \ 1.5 million malware per day.\n\n**Advanced Email Security Protection**\n\nThe\
+    \ primary avenue for attackers is to rely on email to distribute spam,\n\nmalware,\
+    \ and other threats. To protect from such threats, it is essential to\n\nhave\
+    \ a strong and powerful email security solution. Through Cisco email\n\nsecurity\
+    \ defense against phishing, business email compromising and\n\nransomware, companies\
+    \ can get updates on the security every three to five\n\nminutes through Cisco\
+    \ Talos. This Advanced Malware Protection protects\n\nagainst stealthy malware\
+    \ attachments and industry-leading URL intelligence\n\nmalicious links. It is\
+    \ not only essential to keep the incoming emails safe but\n\nalso the outgoing\
+    \ mails safe. Cisco email security has robust data loss-\n\nprevention and content-encryption\
+    \ to safeguard sensitive information, which\n\nhelps you comply with government\
+    \ and industry regulations.\n\n**Web Security**\n\nOn every legitimate website,\
+    \ there are advanced threats hiding in plain sight\n\nin the form of enticing\
+    \ pop-up ads. The employees or clients may put an"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'organization in trouble by clicking on such ads, which can cause extreme
+
+
+    damage to the company’s data. WSA Web Security Appliances, powered by
+
+
+    Cisco Talos protects you by automatically blocking risky sites.
+
+
+    **Business Collaborations (Collaboration Endpoints)**
+
+
+    Cisco is known as the pioneer in technology, which helps to connect
+
+
+    businesses across the world through technology. Cisco has over time built
+
+
+    several technological solutions that can help a team to come together and
+
+
+    work towards a common goal - for individual employees to be able to talk to
+
+
+    their peers with less effort. These products include Cisco WebEx Board,
+
+
+    Cisco Headset 500 Series, and Cisco WebEx Room Series. Choose the
+
+
+    product that suits your company needs, and you are good to go.
+
+
+    *Conferencing*
+
+
+    Conferencing tool such as WebEx is an open platform that allows
+
+
+    companies to integrate features into their unique workflow. This allows the
+
+
+    team to collaborate, communicate and work together. This tool connects
+
+
+    employees from various countries and provides end-to-end data encryption
+
+
+    and protection to keep your work safe. Cisco helps companies to work
+
+
+    seamlessly so that the team can meet, share and create.
+
+
+    **Customer Collaborations**
+
+
+    In this day and age, consumers can acquire anything under the sun. With this
+
+
+    comes great difficulty to be fast with our responses to their issues and provide
+
+
+    them personalized services. Since the mantra ‘one-size fits all’, contact
+
+
+    centers are long gone, and providing customers with personalized care has
+
+
+    become the rule and not the exception. Cisco has developed products such as
+
+
+    Cisco Packaged Contact Center Enterprise and Cisco Unified Contact
+
+
+    Express to enable ease of service.
+
+
+    **Unified Communications**
+
+
+    People around the globe work together using many collaboration tools. For
+
+
+    example, IP Telephones for Voice Calling, web and video conferencing,
+
+
+    voicemail, mobility desktop sharing, instant messaging, etc. Through Unified'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: 'Communication Solutions, companies get an option to integrate all their tools
+
+
+    and for a seamless user experience, which helps people to work together
+
+
+    more effectively. These tools bring real-time communication to companies
+
+
+    from anywhere. Services like conferencing, messaging and chat option are a
+
+
+    few of the many everyday business applications. Unified Communications
+
+
+    offer on-premise, partner-hosted solutions or as a service which is called UC
+
+
+    SaaS from the cloud provider.
+
+
+    **Computing**
+
+
+    Here is a list of computing technologies provided by Cisco.
+
+
+    **Unified Computing**
+
+
+    The Cisco Unified Computing Services, or UCS, changes the way IT
+
+
+    organizations generally do business. Combining industry-standard x86-
+
+
+    architecture servers with storage and networking access in a single unified
+
+
+    system. UCS brings an increased work efficiency, reduced price of ownership
+
+
+    and scalability into the organization''s data center. It improves the server
+
+
+    performance using an adaptable, scalable architecture, addresses workload
+
+
+    changes through storage capacity, I/O and processing memory while
+
+
+    managing converged infrastructure, networks, servers, and storage.
+
+
+    **Data Center Automation**
+
+
+    Data center automation plays an important role in achieving the business
+
+
+    results that every company needs to compete effectively. It automates IT
+
+
+    processes across computing, storage layers and in virtual environments
+
+
+    effectively. Cisco Data Center Management is designed to give companies
+
+
+    the agility they need to act and achieve results quicker. Cisco can support any
+
+
+    data center - be it infrastructure to applications to design the right automation
+
+
+    strategy for the organization.
+
+
+    **Secure Data Center**
+
+
+    Corporate employees are now moving away from the perimeter of the
+
+
+    organization and accessing data from anywhere around the world making it
+
+
+    difficult for companies to secure their data. Since today’s data centers are'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'immensely complex, organizations must rethink their approach strategy to
+
+
+    security. Through Cisco Secure Data Center, they can utilize faster incident
+
+
+    detection by getting complete visibility to all users and network traffic across
+
+
+    their enterprise, cloud, and data center. By moving laterally within the data
+
+
+    center, it reduces attacks by controlling unauthorized users and advanced
+
+
+    threats from entering. It also quickly identifies, blocks and responds to data
+
+
+    disruptions and breaches.
+
+
+    **Hyper-Converged Infrastructure**
+
+
+    The ease of hyper-convergence extends everywhere in Cisco HyperFlex. Be
+
+
+    it core, edge or multi cloud, hyper-convergence has been keeping IT at the
+
+
+    center of the rapid innovation wherein the current data is everything. In this
+
+
+    latest innovation, HyperFlex and Cisco Intersight are designed to meet the
+
+
+    exclusive needs of deploying hyper-converged infrastructure globally. Since
+
+
+    its inception, it has been named number one in performance. It is known for
+
+
+    its adaptable facilities for multi-cloud and can be deployed everywhere with
+
+
+    Cisco Intersight.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '**IPv4 Summarization**
+
+
+    **Its Purpose & Configurations**
+
+
+    Well, you finally got through subnetting and VLSM. Now comes time to
+
+
+    Summarize or as Spock would call it, “Route Aggregation Captain”. (You
+
+
+    might notice that I’m a big fan of the original Star Trek). What this really
+
+
+    means is, that we must take a bunch of small networks and clump them
+
+
+    together into one or maybe two networks, and then we would need to
+
+
+    advertise them to our core routers, hence, making their routing tables smaller.
+
+
+    There is no need for your core routers to know about all your different LAN’s
+
+
+    in order to make a routing decision. Another use of “Route Aggregation” is to
+
+
+    advertise a summary-address. This is to enable a device, at the destination
+
+
+    level, to be able to distribute the IP’s as it sees fit.
+
+
+    Summarization would allow for lower processing time, when a router
+
+
+    analyzes its own routing table to see which path it needs to take to get to a
+
+
+    destination.
+
+
+    Cisco has a standard called the “Cisco Three Layer Model” This model,
+
+
+    just like the OSI model, is a theoretical model. The model simply informs
+
+
+    you which roles certain routers may perform based on where it sits on the
+
+
+    topology; let’s look at the following:
+
+
+    Cisco’s Three Layer Model
+
+
+    Core
+
+
+    The only purpose of the Core layer is to switch information
+
+
+    reliably and quickly.
+
+
+    Distribution
+
+
+    The primary purpose of this layer is providing routing, filtering,
+
+
+    WAN access and to decide how much data can access the core.
+
+
+    This layer can also be called the “Workgroup Layer”.
+
+
+    Access
+
+
+    This layer also called the “Desktop Layer” is an extension of the
+
+
+    Distribution layer. This layer is where we talk about collision
+
+
+    domains and technologies such as Ethernet or Gigabit.
+
+
+    Important to note: Just because there are three layers, it does not mean you
+
+
+    must have three different devices, remember this is a theoretical model.
+
+
+    With summarization there are some rules that you should follow. The first
+
+
+    being that, the network should start with an even number and have an even'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "number of networks as to not waste any IP’s in the process; thereby not\n\n\
+    introducing any IP’s in the network that do not need to be there.\n\nThe other\
+    \ rule would be in summarization, which is the opposite of\n\nsubnetting. There\
+    \ is a contrast that can be seen here. In subnetting, we would\n\nmove the line\
+    \ to the right and get a larger subnet mask and fewer hosts. In\n\nsummarization\
+    \ however, we move the line to the left and get a smaller subnet\n\nmask and a\
+    \ greater number of hosts. This would bring the networks together\n\nas one. Keep\
+    \ in mind that these had been separated prior to summarization.\n\nSo, let’s reiterate;\
+    \ the purpose of summarization is to keep the routing\n\ntables small, so the\
+    \ router does not have to go through a huge list of networks\n\nto make a routing\
+    \ decision.\n\nBelow is an example of what I mean:\n\nOnce we drew our line, by\
+    \ looking from left to right on the third octet and\n\nstopping where the bits\
+    \ that go down the column are not common, we can\n\nclearly see that they are\
+    \ 0’s and 1’s. We now have our new subnet mask and\n\nas you can see, as all the\
+    \ bit values to the left of the line are all zeroes. This is\n\nprecisely why\
+    \ we have “zero” in the third octet of the summary address. I\n\nhope you got\
+    \ it!\n\nNevertheless, let’s see the actual range of this summary address using\
+    \ our\n\nsubnetting method. What we are looking for is to see if we wasted any\n\
+    \naddresses or added another network in our summarization calculation. Did\n\n\
+    we? yes, no, maybe so?\n\nFirst things first! As usual...draw your line and add\
+    \ your octets\n\naccordingly.\n\n*Guys! See how beautifully it worked out?* There\
+    \ was no wasting of IP\n\naddresses; you have exactly what you needed, and all\
+    \ the networks that you\n\noriginally started with are within the range of the\
+    \ summary address (i.e.:\n\nunder the /22 mask). So, you take that summary address\
+    \ of **10.1.0.0/22** and\n\nyou would advertise it out through the interface connected\
+    \ to your core router\n\nto reduce the routing table. Below is an example of that\
+    \ command using\n\nEIGRP. \n\n*IP summary-address eigrp 100 10.1.0.0 255.255.252.0*\n\
+    \nCommand Protocol AS Summary-address\n\nBut let’s see a visual example of what\
+    \ we are talking about, using an\n\nactual topology.\n\nFor the purpose of the\
+    \ lab above, this is a lot of networks for the HQ\n\nrouters to know about. The\
+    \ router would have to go through each one of these"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '15 entries to see where it needs to send the destination packet. However, we
+
+
+    are going to help with that situation by summarizing each of the LAN’s
+
+
+    networks and advertising their summary address to the HQ router. This will
+
+
+    reduce the amount of entries to the three learned routes and in turn, its three
+
+
+    connected routes. Doing this will decrease the overhead and the router would
+
+
+    only have to look at the three learned routes instead of twelve. So, how do we
+
+
+    do this? Let’s take a look, shall we?
+
+
+    Bear in mind that the starting mask is /24. Subsequently, we count left to
+
+
+    right; you would start at the beginning of the third octet, which is the
+
+
+    interesting octet.
+
+
+    The summary address 192.168.8.0/22
+
+
+    Now that we found our summary address by drawing the line between the
+
+
+    common and un-common bits, it’s time to advertise to the HQ router through
+
+
+    the interface that faces the HQ router. Following is the command you would
+
+
+    use:
+
+
+    LAN1
+
+
+    IP summary-address EIGRP 100 192.168.0.0 255.255.252.0
+
+
+    LAN2
+
+
+    IP summary-address EIGRP 100 192.168.4.0 255.255.252.0
+
+
+    LAN3
+
+
+    IP summary-address EIGRP: 100 192.168.8.0 255.255.252.0
+
+
+    Let’s take a look at the HQ routers routing table after we advertise the
+
+
+    summary routes.
+
+
+    ***HQ#sh ip route***
+
+
+    Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
+
+
+    D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+
+
+    N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+
+
+    E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+
+
+    i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+
+
+    \* - candidate default, U - per-user static route, o - ODR
+
+
+    P - periodic downloaded static route
+
+
+    ***Gateway of last resort is not set***
+
+
+    10.0.0.0/30 is subnetted, 3 subnets
+
+
+    C 10.1.1.4 is directly connected, Serial0/0/0'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'C 10.1.1.8 is directly connected, Serial0/1/0
+
+
+    C 10.1.1.12 is directly connected, Serial0/2/0
+
+
+    D 192.168.0.0/22 \[90/20514560\] via 10.1.1.5, 00:02:08, Serial0/0/0
+
+
+    D 192.168.4.0/22 \[90/20514560\] via 10.1.1.9, 00:01:05, Serial0/1/0
+
+
+    D 192.168.8.0/22 \[90/20514560\] via 10.1.1.13, 00:00:15, Serial0/2/0
+
+
+    ***HQ#***
+
+
+    Here you can see that we have three routes instead of twelve. For that
+
+
+    reason, we are learning that through the routing protocol “EIGRP”, your core
+
+
+    router needs to only look at the 3 learned entries vs. 12! Isn’t this so much
+
+
+    better on your routers processor usage?
+
+
+    There you go! This is why and how we summarize...pretty simple right? I
+
+
+    believe it’s even easier than subnetting. “really Laz?”, well, think about it?
+
+
+    It’s essentially the same process. All you have to do is find the “magic” line.
+
+
+    In this case you draw the line between the common and uncommon bits and
+
+
+    voila!...you’re done. You have to admit. It doesn’t get any easier than that.
+
+
+    I know what you’re thinking “Laz, are we taking a trip into the
+
+
+    jungle?...get it? “wild = jungle” Oh well, I tried” Anyway, we will take a
+
+
+    JOURNEY into the world of Wildcard Masking, but it will be fun, easy but
+
+
+    informative. You guys should know me by now.
+
+
+    However, before we do, let me show you one more example of
+
+
+    summarization that you may find on your exam, but if you don’t, consider
+
+
+    yourself lucky, at least this will reiterate what I’m trying to convey.
+
+
+    As you can see, we started with a /30, but now we have a /27. This is how
+
+
+    all these networks come together. All you have to do is follow the same
+
+
+    concepts and you will be okay. Count from left to right until your reach the
+
+
+    un-common bit values and draw your line, that’s how you find your new
+
+
+    mask. In return, the summary-address would be 192.168.1.0/27. I hope that
+
+
+    by now you have realized that this is really a piece of cake...not the
+
+
+    complicated, theoretical equations with physics algorithms that other books,
+
+
+    teachers and instructors have made it out to be. ;) Remember that my
+
+
+    method is to teach you in a very simplistic manner so you can grasp and
+
+
+    comprehend the concepts to be able to pass your CCNA certification exam,
+
+
+    or your college exam, or whatever exam that would include questions on
+
+
+    IP’s. This is the sole purpose why I decided to write this book. I felt a need
+    to
+
+
+    demystify the whole intimidating scheme surrounding IP’s.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "**Conclusion**\n\nThank you for making it through to the end of Networking\
+    \ for beginners,\n\nlet’s hope it was informative and able to provide you with\
+    \ all of the tools you\n\nneed to achieve your goals whatever they may be. \n\n\
+    The next step is to learn more about computer networking from various\n\nadvanced\
+    \ textbooks. Hope you have learned a lot with this module. For\n\nfurther exploration\
+    \ of computer networks try to look at different hardware\n\nyou encounter in your\
+    \ life.\n\nThis module follows up with a layman introduction to machine learning\n\
+    \nand artificial intelligence. You can check it to improve your expertise in the\n\
+    \nfield. \n\nJust for a quick overview of the material we have seen. We have learned\n\
+    \nabout definition, history, and basics of networking with a thorough overview\n\
+    \nof a network with a lot of examples."
+  merge: -1
+  pgno: 95
