@@ -1,0 +1,6182 @@
+- md: '
+
+    # Xilinx Development Environment
+
+    ## Ultrascale+ Linux Application Development
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_0_0.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+    **2 / 50**
+
+
+    ## Version Record
+
+
+    | Version | Date | Release By | Description |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Rev1.0 | 2021-04-05 | Rachel Zhou | First Release |
+
+
+    We promise that this tutorial is not a permanent, consistent document. We will
+    continue to revise and optimize the tutorial based on the feedback of the forum
+    and the actual development experience.
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_2_0.png)[](img/1cbdc9e6f065399dc26b2b407e539434_2_1.png)
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+    **3 / 50**
+
+
+    ## Content
+
+
+    - Version Record.......................................................................................2
+
+    - Content....................................................................................
+    3
+
+    - Part 1: Building a Minimalist Working Environment.........................5
+
+    - Part 1.1: Introduction to the system environment....................5
+
+    - Part 1.2: System and basic tool installation..............................5
+
+    - Part 1.3: Compilation environment installation.........................5
+
+    - Part 1.4: QtCreator configuration................................................7
+
+    - Part 2: Hello World with Remote Debugging..................................11
+
+    - Part 2.1: GDB Introduction.........................................................11
+
+    - Part 2.2: QT Creator Introduction.............................................12
+
+    - Part 2.3: Experiment Goal.........................................................
+    12
+
+    - Part 2.4: QT Creator Project......................................................12
+
+    - Part 2.5: Get the IP Address of the FPGA Board.................. 12
+
+    - Part 2.6: QtCreator Configures GDB Connection board......13
+
+    - Part 2.7: Run Hello World..........................................................
+    15
+
+    - Part 2.8: Operation Parameter Setting....................................16
+
+    - Part 3: OpenCV Edge Detection.......................................................19
+
+    - Part 3.1: OpenCV Introduction..................................................19
+
+    - Part 3.2: Edge Detection Introduction......................................20
+
+    - Part 3.3: Experiment Goal.........................................................
+    21
+
+    - Part 3.4: Software Flow Chart...................................................21
+
+    - Part 3.5: Operation Preparation................................................21
+
+    - Part 3.6: Program Running........................................................22
+
+    - Part 3.7: Code analysis............................................................
+    23
+
+    - Part 4: OpenCV+Qt Face Detection...............................................27
+
+    - Part 4.1: OpenCV''s Cascade Classifier.................................. 27
+
+    - Part 4.2: Integral Graph..............................................................29
+
+    - Part 4.3: Select Feature.............................................................
+    31
+
+    - Part 4.4: Qt Introduction.............................................................32
+
+    - Part 4.5: Experiment Goal.........................................................
+    33
+
+    - Part 4.6: Software Flow Chart...................................................33
+
+    - Part 4.7: Operation Preparation................................................33
+
+    - Part 4.8: Program Running........................................................33
+
+    - Part 4.9: Code analysis..............................................................34
+
+    - Part 5: GStreamer''s Camera Display..............................................
+    35
+
+    - Part 5.1: GStreamer Introduction.............................................
+    35
+
+    - Part 5.2: Basic concepts of GStreamer...................................36
+
+    - Part 5.3: Experiment Goal.........................................................
+    38
+
+    - Part 5.4: Gstreamer Common Tools........................................ 38
+
+    - Part 5.6: Programming Run Program......................................41
+
+    - Part 5.7: Code Analysis..............................................................42
+
+    - Part 6: Qt+DRM+Gstreamer Camera Display................................43
+
+    - Part 6.1: DRM Introduction........................................................43
+
+    - Part 6.2: Experiment Introduction..............................................45
+
+    - Part 6.3: Experiment Goal.........................................................
+    45
+
+    - Part 6.4: Run the program.........................................................
+    46
+
+    - Part 6.5: Code analysis..............................................................46
+
+    - Part 7: Linux Register Operation......................................................
+    48
+
+    - Part 7.1: Linux Memory Map.....................................................48
+
+    - Part 7.2: Experiment Introduction.............................................49
+
+    - Part 7.3: Run the program.........................................................
+    49
+
+    - Part 7.4: Code analysis..............................................................49
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_3_0.png)[](img/1cbdc9e6f065399dc26b2b407e539434_3_1.png)
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+    **4 / 50**
+
+
+    # Part 1: Building a Minimalist Working Environment
+
+
+    ### Part 1.1: Introduction to the system environment
+
+
+    This tutorial uses QtCreator as a development tool under ubuntu to cross-compile
+    applications. Therefore, under ubuntu, we need to install cross-compilation tools
+    and various library files that need to be used. These can be completed using the
+    sdk.sh installation package. For the origin of the installation package, please
+    refer to the tutorial in the petalinux chapter, which is not introduced here.
+
+
+    ### Part 1.2: System and basic tool installation
+
+
+    1) Under the win10 system, install the virtual machine software VMware.
+
+    Refer to the tool installation "vmware installation.pdf"
+
+
+    2) Use ubuntu-18.04.2-desktop-amd64.iso to create a linux system.
+
+    Refer to the tool to install "ubuntu virtual machine creation.pdf"
+
+
+    3) Install the necessary libraries under ubuntu
+
+    `sudo apt-get install build-essential`
+
+    Refer to the tool installation "ubuntu library installation.pdf"
+
+
+    4) Install QtCreator under ubuntu
+
+    Refer to the tool installation "Qt installation under linux.pdf"
+
+
+    ### Part 1.3: Compilation environment installation
+
+
+    1) Copy sdk.sh to the ubuntu system and open the terminal
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_5_0.png)[](img/1cbdc9e6f065399dc26b2b407e539434_5_1.png)
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+    **6 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_5_2.png)
+
+
+    2) Create a tools directory in the root directory and modify permissions:
+
+    `sudo mkdir /tools`
+
+    `sudo chmod 777 -R /tools`
+
+
+    3) Run sdk.sh
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_5_3.png)
+
+
+    4) Enter the installation directory, where the installation directory is set to
+    "/tools/xilinx_sdk_tool", and press Enter
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_5_4.png)
+
+
+    5) Enter "Y" to start the installation until the end
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_6_0.png)[](img/1cbdc9e6f065399dc26b2b407e539434_6_1.png)
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+    **7 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_6_2.png)
+
+
+    ### Part 1.4: QtCreator configuration
+
+
+    1) Open the QtCreator tool settings
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_6_3.png)
+
+
+    2) Open the compilation tool settings
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_6_4.png)
+
+
+    3) Add C compilation tools
+
+    '
+  mdcn: '
+
+
+    # Xilinx 开发环境
+
+    ## Ultrascale+ Linux 应用开发
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_0_0.png)
+
+
+    ***Ultrascale+ Linux 应用开发教程***
+
+    ***亚马逊商店: https://www.amazon.com/alinx***
+
+    **2 / 50**
+
+
+    ## 版本记录
+
+
+    | 版本 | 日期 | 发布者 | 描述 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Rev1.0 | 2021-04-05 | Rachel Zhou | 首次发布 |
+
+
+    我们承诺本教程不是一份永久性的、不变的文档。我们将根据论坛反馈和实际开发经验持续对教程进行修订和优化。
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_2_0.png)[](img/1cbdc9e6f065399dc26b2b407e539434_2_1.png)
+
+    ***Ultrascale+ Linux 应用开发教程***
+
+    ***亚马逊商店: https://www.amazon.com/alinx***
+
+    **3 / 50**
+
+
+    ## 目录
+
+
+    - 版本记录.......................................................................................2
+
+    - 目录....................................................................................
+    3
+
+    - 第1部分：构建极简工作环境.........................5
+
+    - 第1.1 节：系统环境介绍....................5
+
+    - 第1.2 节：系统及基础工具安装..............................5
+
+    - 第1.3 节：编译环境安装.........................5
+
+    - 第1.4 节：QtCreator 配置................................................7
+
+    - 第2部分：带远程调试的 Hello World..................................11
+
+    - 第2.1 节：GDB 介绍.........................................................11
+
+    - 第2.2 节：QT Creator 介绍.............................................12
+
+    - 第2.3 节：实验目标......................................................... 12
+
+    - 第2.4 节：QT Creator 项目......................................................12
+
+    - 第2.5 节：获取 FPGA 开发板的 IP 地址.................. 12
+
+    - 第2.6 节：QtCreator 配置 GDB 连接板......13
+
+    - 第2.7 节：运行 Hello World..........................................................
+    15
+
+    - 第2.8 节：操作参数设置....................................16
+
+    - 第3部分：OpenCV 边缘检测.......................................................19
+
+    - 第3.1 节：OpenCV 介绍..................................................19
+
+    - 第3.2 节：边缘检测介绍......................................20
+
+    - 第3.3 节：实验目标......................................................... 21
+
+    - 第3.4 节：软件流程图...................................................21
+
+    - 第3.5 节：操作准备................................................21
+
+    - 第3.6 节：程序运行........................................................22
+
+    - 第3.7 节：代码分析............................................................ 23
+
+    - 第4部分：OpenCV+Qt 人脸检测...............................................27
+
+    - 第4.1 节：OpenCV 级级分类器.................................. 27
+
+    - 第4.2 节：积分图..............................................................29
+
+    - 第4.3 节：特征选择............................................................. 31
+
+    - 第4.4 节：Qt 介绍.............................................................32
+
+    - 第4.5 节：实验目标......................................................... 33
+
+    - 第4.6 节：软件流程图...................................................33
+
+    - 第4.7 节：操作准备................................................33
+
+    - 第4.8 节：程序运行........................................................33
+
+    - 第4.9 节：代码分析..............................................................34
+
+    - 第5部分：GStreamer 摄像头显示.............................................. 35
+
+    - 第5.1 节：GStreamer 介绍................................................35
+
+    - 第5.2 节：GStreamer 基础介绍......................................36
+
+    - 第5.3 节：实验目标......................................................... 38
+
+    - 第5.4 节：GStreamer 常见功能................................................38
+
+    - 第5.6 节：程序运行........................................................41
+
+    - 第5.7 节：代码分析..............................................................42
+
+    - 第6部分：GStreamer 摄像头显示.............................................. 43
+
+    - 第6.1 节：GStreamer 介绍................................................43
+
+    - 第6.2 节：基础介绍................................................45
+
+    - 第6.3 节：实验目标......................................................... 45
+
+    - 第6.4 节：程序运行........................................................46
+
+    - 第6.5 节：代码分析..............................................................46
+
+    - 第7部分：Linux 操作......................................................48
+
+    - 第7.1 节：Linux 介绍................................................48
+
+    - 第7.2 节：实验目标.........................................................49
+
+    - 第7.3 节：程序运行..........................................................49
+
+    - 第7.4 节：代码分析..............................................................49
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    **Xilinx Development Environment**
+
+
+    **Ultrascale+ Linux Application Development**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_0_0.png)'
+  - '[PAGE 1]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_1_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_1_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **2 / 50**
+
+
+    **Version Record**
+
+
+    Version
+
+
+    Date
+
+
+    Release By
+
+
+    Description
+
+
+    Rev1.0
+
+
+    2021-04-05
+
+
+    Rachel Zhou
+
+
+    First Release
+
+
+    We promise that this tutorial is not a permanent, consistent
+
+
+    document. We will continue to revise and optimize the tutorial based
+
+
+    on the feedback of the forum and the actual development experience.'
+  - '[PAGE 2]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_2_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_2_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **3 / 50**
+
+
+    **Content**
+
+
+    Version Record.......................................................................................2
+
+
+    Content....................................................................................................
+    3
+
+
+    Part 1: Building a Minimalist Working Environment.........................5
+
+
+    Part 1.1: Introduction to the system environment....................5
+
+
+    Part 1.2: System and basic tool installation..............................5
+
+
+    Part 1.3: Compilation environment installation.........................5
+
+
+    Part 1.4: QtCreator configuration................................................7
+
+
+    Part 2: Hello World with Remote Debugging..................................11
+
+
+    Part 2.1: GDB Introduction.........................................................11
+
+
+    Part 2.2: QT Creator Introduction.............................................12
+
+
+    Part 2.3: Experiment Goal.........................................................
+    12
+
+
+    Part 2.4: QT Creator Project......................................................12
+
+
+    Part 2.5: Get the IP Address of the FPGA Board.................. 12
+
+
+    Part 2.6: QtCreator Configures GDB Connection board......13
+
+
+    Part 2.7: Run Hello World..........................................................
+    15
+
+
+    Part 2.8: Operation Parameter Setting....................................16
+
+
+    Part 3: OpenCV Edge Detection.......................................................19
+
+
+    Part 3.1: OpenCV Introduction..................................................19
+
+
+    Part 3.2: Edge Detection Introduction......................................20
+
+
+    Part 3.3: Experiment Goal.........................................................
+    21
+
+
+    Part 3.4: Software Flow Chart...................................................21
+
+
+    Part 3.5: Operation Preparation................................................21
+
+
+    Part 3.6: Program Running........................................................22
+
+
+    Part 3.7：Code analysis............................................................
+    23
+
+
+    Part 4：OpenCV+Qt Face Detection...............................................27'
+  - '[PAGE 3]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_3_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_3_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **4 / 50**
+
+
+    Part 4.1: OpenCV''s Cascade Classifier.................................. 27
+
+
+    Part 4.2: Integral Graph..............................................................29
+
+
+    Part 4.3: Select Feature.............................................................
+    31
+
+
+    Part 4.4: Qt Introduction.............................................................32
+
+
+    Part 4.5: Experiment Goal.........................................................
+    33
+
+
+    Part 4.6: Software Flow Chart...................................................33
+
+
+    Part 4.7: Operation Preparation................................................33
+
+
+    Part 4.8: Program Running........................................................33
+
+
+    Part 4.9: Code analysis..............................................................34
+
+
+    Part 5: GStreamer''s Camera Display..............................................
+    35
+
+
+    Part 5.1: GStreamer Introduction.............................................
+    35
+
+
+    Part 5.2: Basic concepts of GStreamer...................................36
+
+
+    Part 5.3: Experiment Goal.........................................................
+    38
+
+
+    Part 5.4: Gstreamer Common Tools........................................ 38
+
+
+    Part 5.6: Programming Run Program......................................41
+
+
+    Part 5.7: Code Analysis..............................................................42
+
+
+    Part 6: Qt+DRM+Gstreamer Camera Display................................43
+
+
+    Part 6.1: DRM Introduction........................................................43
+
+
+    Part 6.2:Experiment Introduction..............................................45
+
+
+    Part 6.3: Experiment Goal.........................................................
+    45
+
+
+    Part 6.4: Run the program.........................................................
+    46
+
+
+    Part 6.5: Code analysis..............................................................46
+
+
+    Part 7: Linux Register Operation......................................................
+    48
+
+
+    Part 7.1: Linux Memory Map.....................................................48
+
+
+    Part 7.2: Experiment Introduction.............................................49
+
+
+    Part 7.3: Run the program.........................................................
+    49
+
+
+    Part 7.4: Code analysis..............................................................49'
+  - '[PAGE 4]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_4_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_4_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **5 / 50**
+
+
+    **Part 1: Building a Minimalist Working**
+
+
+    **Environment**
+
+
+    **Part 1.1: Introduction to the system environment**
+
+
+    This tutorial uses QtCreator as a development tool under ubuntu
+
+
+    to cross-compile applications. Therefore, under ubuntu, we need to
+
+
+    install cross-compilation tools and various library files that need to be
+
+
+    used. These can be completed using the sdk.sh installation package.
+
+
+    For the origin of the installation package, please refer to the tutorial in
+
+
+    the petalinux chapter, which is not introduced here.
+
+
+    **Part 1.2: System and basic tool installation**
+
+
+    1) Under the win10 system, install the virtual machine software
+
+
+    VMware.
+
+
+    Refer to the tool installation "vmware installation.pdf"
+
+
+    2) Use ubuntu-18.04.2-desktop-amd64.iso to create a linux system.
+
+
+    Refer to the tool to install "ubuntu virtual machine creation.pdf"
+
+
+    3) Install the necessary libraries under ubuntu
+
+
+    sudo apt-get install build-essential
+
+
+    Refer to the tool installation "ubuntu library installation.pdf"
+
+
+    4) Install QtCreator under ubuntu
+
+
+    Refer to the tool installation "Qt installation under linux.pdf"
+
+
+    **Part 1.3: Compilation environment installation**
+
+
+    1) Copy sdk.sh to the ubuntu system and open the terminal'
+  - '[PAGE 5]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_5_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_5_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **6 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_5_2.png)
+
+
+    2) Create
+
+
+    a
+
+
+    tools
+
+
+    directory
+
+
+    in
+
+
+    the
+
+
+    root
+
+
+    directory
+
+
+    and
+
+
+    modify
+
+
+    permissions
+
+
+    sudo mkdir /tools
+
+
+    sudo chmod 777 –R /tools
+
+
+    3) Run sdk.sh
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_5_3.png)
+
+
+    4) Enter the installation directory, where the installation directory is
+
+
+    set to "/tools/xilinx\_sdk\_tool", and press Enter
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_5_4.png)
+
+
+    5) Enter "Y" to start the installation until the end'
+  - '[PAGE 6]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_6_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_6_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **7 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_6_2.png)
+
+
+    **Part 1.4: QtCreator configuration**
+
+
+    1) Open the QtCreator tool settings
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_6_3.png)
+
+
+    2) Open the compilation tool settings
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_6_4.png)
+
+
+    3) Add C compilation tools'
+- md: '
+
+    4) Set name and path
+
+
+    Where the path is:
+
+    “ /tools/xilinx_sdk_tool/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux/aarch64-xilinx-linux-gcc”
+
+
+    5) Same as the above steps, add C++ compilation tools
+
+
+    Where the path is:
+
+    “ /tools/xilinx_sdk_tool/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux/aarch64-xilinx-linux-g++”
+
+
+    6) Click the button "Apply" to complete this setting
+
+
+    7) Switch to "Qt Versions" and click the add button
+
+
+    8) Select qmake
+
+
+    Where the path is:
+
+    “ /tools/xilinx_sdk_tool/sysroots/x86_64-petalinux-linux/usr/bin/qmake”
+
+
+    9) Click the button "Apply" to complete this setting
+
+
+    10) Switch to the "Debuggers" item and click the "Add" button
+
+
+    Add items to modify the content as shown in the figure, the path is:
+
+    ”/tools/xilinx_sdk_tool/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux/aarch64-xilinx-linux-gdb”
+
+
+    11) Click the button "Apply" to complete this setting
+
+
+    12) Switch to the "Kits" item and click the "Add" button
+
+
+    13) Modify the contents of the newly added items as shown in the figure
+
+
+    14) Click the button "OK" to complete the setting
+
+
+    ## Part 2: Hello World with Remote Debugging
+
+
+    ### Part 2.1: GDB Introduction
+
+
+    GDB, the GNU Project debugger, allows you to see what is happening "internally"
+    when a program is executed, or what a program is doing when it crashes. The main
+    functions are as follows:
+
+
+    1) Start the program, specify any content that may affect its behavior, such as
+    environment variables, operating parameters, etc.
+
+
+    2) Stop the program under specified conditions
+
+
+    3) Check what happened when the program stopped, such as register status, variable
+    value, etc.
+
+
+    4) Manually modify various values in the running of the program, so that the program
+    function can be verified more conveniently
+
+
+    The GNU debugging tools under Linux are gdb and gdbserver. Among them, gdb and
+    gdbserver can complete remote debugging of applications under Linux on the target
+    board. gdbserver is a small application program that runs on the target board
+    and can monitor the operation of the debugged process, and can communicate with
+    gdb on the host computer through the network. Developers can input commands through
+    gdb of the host computer to control the operation of the process on the target
+    board and view the contents of memory and registers.
+
+
+    ### Part 2.2: Qt Creator Introduction
+
+
+    Qt Creator is a cross-platform integrated environment (IDE) that allows developers
+    to create applications across desktop, mobile and embedded platforms. We usually
+    call it Qt Creator. Qt Creator is a tool that helps us develop applications.
+
+
+    ### Part 2.3: Experiment Goal
+
+
+    1) Get GDB
+
+    2) Configures GDB connection
+
+    3) Move the executable program to the board
+
+    4) Qt Creator Project
+
+
+    ### Part 2.4: Qt Creator Project
+
+
+    The .pro file of Qt Creator specifies that the library needs to be used. If it
+    is empty, it means that the library is not called.
+
+
+    ### Part 2.5: Get the IP Address of the Board
+
+
+    1) The ip address of the board can be checked through the "ipconfig" command.
+    DHCP is enabled by default. If local DHCP service is not supported, the result
+    is follows: At this time, you need to manually assign an ip address like 192.168.1.45
+    mask 255.255.255.0.
+
+
+    ### Part 2.6: QtCreator Configures GDB Connection
+
+
+    1) Open the following settings
+
+    2) Click the "Add" button and select "Device"
+
+    3) Go back to the "Device" item, click "Apply" to complete this setting
+
+    4) Click "Next" and "Finish", the interface that appears later is as follows:
+
+
+    ### Part 2.7: Run Hello World
+
+
+    1) Open the helloworld project
+
+    2) Compile the application
+
+    3) Click the run button of QtCreator
+
+
+    We can see that the running print information on the right indicates that the
+    program has been run and exited.
+
+
+    ### Part 2.8: Operation Parameter Setting
+
+
+    1) Open the following setting items
+
+
+    If the following error is prompted, you need to check whether the board is powered
+    on and enter the linux system, and whether the network is normal. If the following
+    error is prompted, you need to clear the compilation result and recompile.
+
+    '
+  mdcn: '
+
+
+    4) 设置名称和路径
+
+
+    路径为：
+
+    “ /tools/xilinx_sdk_tool/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux/aarch64-xilinx-linux-gcc”
+
+
+    5) 与上述步骤相同，添加 C++ 编译工具
+
+
+    路径为：
+
+    “ /tools/xilinx_sdk_tool/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux/aarch64-xilinx-linux-g++”
+
+
+    6) 点击“Apply”（应用）按钮完成此设置
+
+
+    7) 切换到“Qt Versions”（Qt 版本）并点击添加按钮
+
+
+    8) 选择 qmake
+
+
+    路径为：
+
+    “ /tools/xilinx_sdk_tool/sysroots/x86_64-petalinux-linux/usr/bin/qmake”
+
+
+    9) 点击“Apply”（应用）按钮完成此设置
+
+
+    10) 切换到“Debuggers”（调试器）项并点击“Add”（添加）按钮
+
+
+    添加项目并修改内容如图所示，路径为：
+
+    ”/tools/xilinx_sdk_tool/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux/aarch64-xilinx-linux-gdb”
+
+
+    11) 点击“Apply”（应用）按钮完成此设置
+
+
+    12) 切换到“Kits”（套件）项并点击“Add”（添加）按钮
+
+
+    13) 如图所示修改新添加项目的的内容
+
+
+    14) 点击“OK”按钮完成设置
+
+
+    ## 第二部分：远程调试的 Hello World
+
+
+    ### 第 2.1 部分：GDB 简介
+
+
+    GDB（GNU 项目调试器）允许你查看程序在执行时“内部”发生了什么，或者当程序崩溃时程序正在做什么。其主要功能如下：
+
+
+    1) 启动程序，指定任何可能影响其行为的内容，例如环境变量、运行参数等。
+
+
+    2) 在指定条件下停止程序
+
+
+    3) 检查程序停止时发生了什么，例如寄存器状态、变量值等。
+
+
+    4) 手动修改程序运行中的各种值，以便更方便地验证程序功能。
+
+
+    Linux 下的 GNU 调试工具有 gdb 和 gdbserver。其中，gdb 和 gdbserver 可以完成目标板上 Linux 程序的远程调试。gdbserver
+    是运行在目标板上的小型应用程序，可以监控被调试进程的操作，并通过网络与主机计算机上的 gdb 通信。开发者可以通过主机计算机上的 gdb 输入命令来控制目标板上进程的操作，并查看内存和寄存器的内容。
+
+
+    ### 第 2.2 部分：Qt Creator 简介
+
+
+    Qt Creator 是一个跨平台集成开发环境（IDE），允许开发者跨桌面、移动和嵌入式平台创建应用程序。我们通常称之为 Qt Creator。Qt Creator
+    是帮助我们开发应用的工具。
+
+
+    ### 第 2.3 部分：实验目标
+
+
+    1) 获取 GDB
+
+    2) 配置 GDB 连接
+
+    3) 将可执行程序移动到板
+
+    4) Qt Creator 项目
+
+
+    ### 第 2.4 部分：Qt Creator 项目
+
+
+    Qt Creator 的 .pro 文件指定了需要使用的库。如果是空的，则意味着没有调用该库。
+
+
+    ### 第 2.5 部分：获取板的 IP 地址
+
+
+    1) 可以通过“ipconfig”命令检查板的 IP 地址。默认启用 DHCP。如果不支持本地 DHCP 服务，结果如下：此时，你需要手动分配一个 IP 地址，例如
+    192.168.1.45，掩码为 255.255.255.0。
+
+
+    ### 第 2.6 部分：QtCreator 配置 GDB 连接
+
+
+    1) 打开以下设置
+
+    2) 点击“Add”（添加）按钮并选择“Device”（设备）
+
+    3) 返回“Device”项，点击“Apply”（应用）完成此设置
+
+    4) 点击“Next”（下一步）和“Finish”（完成），随后出现的界面如下：
+
+
+    ### 第 2.7 部分：运行 Hello World
+
+
+    1) 打开 helloworld 项目
+
+    2) 编译应用程序
+
+    3) 点击 QtCreator 的运行按钮
+
+
+    我们可以看到右侧运行的打印信息表明程序已运行并退出。
+
+
+    ### 第 2.8 部分：运行参数设置
+
+
+    1) 打开以下设置项
+
+
+    如果提示以下错误，需要检查板是否已上电并进入了 Linux 系统，以及网络是否正常。如果提示以下错误，需要清除编译结果并重新编译。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 7]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_7_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_7_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **8 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_7_2.png)
+
+
+    4) Set name and path
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_7_3.png)
+
+
+    Where the path is
+
+
+    “ /tools/xilinx\_sdk\_tool/sysroots/x86\_64-petalinux-linux/usr/bin/aar
+
+
+    ch64-xilinx-linux/aarch64-xilinx-linux-gcc”
+
+
+    5) Same as the above steps, add C++ compilation tools
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_7_4.png)
+
+
+    Where the path is
+
+
+    “ /tools/xilinx\_sdk\_tool/sysroots/x86\_64-petalinux-linux/usr/bin/aar
+
+
+    ch64-xilinx-linux/aarch64-xilinx-linux-g++”'
+  - '[PAGE 8]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_8_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_8_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **9 / 50**
+
+
+    6) Click the button "Apply" to complete this setting
+
+
+    7) Switch to "Qt Versions" and click the add button
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_8_2.png)
+
+
+    8) Select qmake
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_8_3.png)
+
+
+    Where the path is
+
+
+    “ /tools/xilinx\_sdk\_tool/sysroots/x86\_64-petalinux-linux/usr/bin/qm
+
+
+    ake”
+
+
+    9) Click the button "Apply" to complete this setting
+
+
+    10)Switch to the "Debuggers" item and click the "Add" button
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_8_4.png)
+
+
+    Add items to modify the content as shown in the figure, the path is
+
+
+    ”/tools/xilinx\_sdk\_tool/sysroots/x86\_64-petalinux-linux/usr/bin/aar
+
+
+    ch64-xilinx-linux/aarch64-xilinx-linux-gdb”
+
+
+    11)Click the button "Apply" to complete this setting'
+  - '[PAGE 9]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_9_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_9_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **10 / 50**
+
+
+    12)Switch to the "Kits" item and click the "Add" button
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_9_2.png)
+
+
+    13)Modify the contents of the newly added items as shown in the
+
+
+    figure
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_9_3.png)
+
+
+    14)Click the button "OK" to complete the setting'
+  - '[PAGE 10]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_10_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_10_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **11 / 50**
+
+
+    **Part 2: Hello World with Remote**
+
+
+    **Debugging**
+
+
+    **Part 2.1: GDB Introduction**
+
+
+    GDB, the GNU Project debugger, allows you to see what is
+
+
+    happening "internally" when a program is executed, or what a
+
+
+    program is doing when it crashes. The main functions are as follows:
+
+
+    1) Start the program, specify any content that may affect its behavior,
+
+
+    such as environment variables, operating parameters, etc.
+
+
+    2) Stop the program under specified conditions
+
+
+    3) Check what happened when the program stopped, such as
+
+
+    register status, variable value, etc.
+
+
+    4) Manually modify various values in the running of the program, so
+
+
+    that the program function can be verified more conveniently
+
+
+    The GNU debugging tools under Linux are gdb and gdbserver.
+
+
+    Among them, gdb and gdbserver can complete remote debugging of
+
+
+    applications under Linux on the target board. gdbserver is a small
+
+
+    application program that runs on the target board and can monitor the
+
+
+    operation of the debugged process, and can communicate with gdb
+
+
+    on the host computer through the network. Developers can input
+
+
+    commands through gdb of the host computer to control the operation
+
+
+    of the process on the target board and view the contents of memory
+
+
+    and registers
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_10_2.png)'
+  - '[PAGE 11]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_11_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_11_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **12 / 50**
+
+
+    **Part 2.2: QT Creator Introduction**
+
+
+    Qt Creator is a cross-platform integrated development
+
+
+    environment (IDE) that allows developers to create applications
+
+
+    across desktop, mobile and embedded platforms.
+
+
+    The Qt library we usually say is the library we call when we
+
+
+    develop desktop and other applications, and it will be linked into our
+
+
+    running program. And Qt Creator is a tool that helps us develop
+
+
+    applications. Therefore, the two can be regarded as completely
+
+
+    different things.
+
+
+    **Part 2.3: Experiment Goal**
+
+
+    1) Get to know the Qt Creator project
+
+
+    2) QtCreator configures GDB connection board
+
+
+    3) Move the executable target program to the board
+
+
+    4) Pass parameters to the running program
+
+
+    **Part 2.4: QT Creator Project**
+
+
+    The project file of Qt Creator is xxx.pro. "QT=" in the file specifies
+
+
+    the QT library components that need to be used. If it is empty, it
+
+
+    means that the QT library is not called.
+
+
+    **Part 2.5: Get the IP Address of the FPGA Board**
+
+
+    1) Development board, equipped with sd card of linux system and
+
+
+    powered on
+
+
+    2) View ip address
+
+
+    The ip address of the board can be checked through the
+
+
+    "ipconfig" command. DHCP is enabled by default in the system. If the
+
+
+    local DHCP service is not supported, the query result is as follows:'
+  - '[PAGE 12]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_12_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_12_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **13 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_12_2.png)
+
+
+    At this time, you need to manually assign an ip address, you can
+
+
+    use
+
+
+    the
+
+
+    command
+
+
+    "ipconfig
+
+
+    eth0
+
+
+    192.168.1.45
+
+
+    netmask
+
+
+    255.255.255.0". Here we set the ip address of the board as:
+
+
+    192.168.1.45
+
+
+    **Part 2.6: QtCreator Configures GDB Connection board**
+
+
+    1) Open the tool settings of QtCreator
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_12_3.png)
+
+
+    2) Click the "Add..." button and select "Generic Linux Device"'
+  - '[PAGE 13]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_13_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_13_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **14 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_13_2.png)
+
+
+    3) The parameter settings are as follows
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_13_3.png)
+
+
+    The password is root by default and needs to be filled in
+
+
+    4) Click "Next" and "Finish", in the test that appears later, the
+
+
+    interface after success is as follows
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_13_4.png)'
+  - '[PAGE 14]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_14_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_14_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **15 / 50**
+
+
+    If it is not successful, you need to check the network connection
+
+
+    5) Go back to the "Device" setting item, click "Apply" to complete this
+
+
+    setting
+
+
+    6) Switch settings and configuration as follows
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_14_2.png)
+
+
+    7) Click "OK" to complete the setting
+
+
+    **Part 2.7: Run Hello World**
+
+
+    1) Open the helloworld project
+
+
+    2) Compile the application
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_14_3.png)
+
+
+    3) Click the run button of QtCreator
+
+
+    We can see that the running print information on the right
+
+
+    indicates that the program has been run and exited.'
+  - '[PAGE 15]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_15_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_15_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **16 / 50**
+
+
+    1
+
+
+    If the following error is prompted, you need to check whether
+
+
+    the board is powered on and enter the linux system, and whether the
+
+
+    network is normal
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_15_2.png)
+
+
+    2
+
+
+    If the following error is prompted, you need to clear the
+
+
+    compilation result and recompile
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_15_3.png)
+
+
+    4) At this time, we check the user directory "/home/root" of the board
+
+
+    and find that there is an extra file helloworld
+
+
+    5) We open the pro file of the project
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_15_4.png)
+
+
+    6) The red box is the directory where the program is automatically
+
+
+    loaded when running, which explains why the file helloworld
+
+
+    appears in the "/home/root" directory of the development board
+
+
+    system
+
+
+    **Part 2.8: Operation Parameter Setting**
+
+
+    Sometimes, when we run the program, we need to add some
+
+
+    operating parameters. Below we introduce how to add operating
+
+
+    parameters to the running program during remote debugging.
+
+
+    1) Open the following setting items'
+- md: '
+
+    The parameter here is set to 10
+
+
+    2) Set a breakpoint at the if position of the main function
+
+
+    3) Click the debug button or shortcut key F5
+
+
+    4) We see that the program has stopped at the breakpoint we set
+
+
+    5) Press F5 to continue running, we see the print information as follows
+
+
+    We can see that the starting number after "hello world" has
+
+    changed to 10, indicating that the parameters we set have taken effect
+
+
+    ## Part 3: OpenCV Edge Detection
+
+
+    ### Part 3.1: OpenCV Introduction
+
+
+    OpenCV (Open Source Computer Vision Library) is an open source computer vision
+    and machine learning software library. The establishment of OpenCV provides a
+    common infrastructure for computer vision applications and accelerates the application
+    of machine perception in commercial products. As a BSD-licensed product, OpenCV
+    makes it easy for companies to use and modify the code.
+
+
+    The library has more than 2500 optimization algorithms, including a complete set
+    of classic and most advanced computer vision and machine learning algorithms.
+    These algorithms can be used to detect and recognize faces, recognize objects,
+    classify human behavior in videos, track camera movement, track moving objects,
+    extract 3D models of objects, generate 3D point clouds from stereo cameras, and
+    stitch together images to generate High-resolution images of the entire scene,
+    find similar images from the image library, remove red eyes from images taken
+    with flash, track eye movements, identify the scene and create markers to cover
+    augmented reality, etc. OpenCV has more than 47,000 user communities and an estimated
+    download volume of more than 18 million. It is widely used in companies, research
+    groups and government agencies.
+
+
+    Many implementations of Xilinx''s reVision are based on the opencv interface,
+    and the hardware implementation is xfopencv. This will help us realize the hardware
+    (FPGA) acceleration of the corresponding algorithm
+
+
+    ### Part 3.2: Edge Detection Introduction
+
+
+    Edge detection is a basic problem in image processing and computer vision. The
+    purpose of edge detection is to identify points with obvious brightness changes
+    in digital images. Significant changes in image attributes usually reflect important
+    events and changes in attributes. These include discontinuities in depth, discontinuities
+    in surface orientation, changes in material properties, and changes in scene lighting.
+    Edge detection is a research field in image processing and computer vision, especially
+    in feature extraction.
+
+
+    Image edge information is mainly concentrated in high frequency bands. Generally
+    speaking, image sharpening or edge detection is essentially high-frequency filtering.
+    We know that the differential operation is to find the rate of change of the signal,
+    which has the effect of strengthening the high frequency components. In the spatial
+    calculation, the sharpening of the image is the calculation of the differential.
+    Due to the discrete signal of the digital image, the differential operation becomes
+    the calculation of the difference or gradient. There are a variety of edge detection
+    (gradient) operators in image processing.
+
+
+    Commonly used include ordinary first-order difference, Robert operator (cross-difference),
+    Sobel operator, etc., which are based on finding gradient strength. Laplace operator
+    (second-order difference) is based on zero-crossing detection. By calculating
+    the gradient and setting the threshold, the edge image is obtained.
+
+
+    The general steps of edge detection are:
+
+
+    1) **Filtering:** The edge detection algorithm is mainly based on the first and
+    second derivatives of image intensity, but the derivatives are very sensitive
+    to noise, so filters are needed to improve the performance of noise-related edge
+    detectors.
+
+
+    2) **Enhancement:** The basis of edge enhancement is to determine the change value
+    of the neighborhood intensity of each point of the image. The enhancement algorithm
+    can highlight the points with significant changes in the intensity value of the
+    gray point neighborhood.
+
+
+    3) **Detection:** There are many points in the neighborhood that have large gradient
+    values, but in a specific application, these points are not the edge points to
+    be found, and need to be selected.
+
+
+    ### Part 3.3: Experiment Goal
+
+
+    1) Use opencv to capture usb camera images
+
+    2) Edge detection of canny, sobel, and laplacian algorithms
+
+    3) Use opencv to display images
+
+    4) Responding to opencv window closing operation
+
+
+    ### Part 3.4: Software Flow Chart
+
+
+    ### Part 3.5: Operation Preparation
+
+
+    1) dp interface connected to the display
+
+    2) Plug in the usb camera
+
+    3) After the development board is powered on, wait for the system startup to complete,
+    the system can correctly display the desktop.
+
+    4) In the terminal, you can view the usb camera device.
+
+
+    ### Part 3.6: Program Running
+
+
+    You can refer to the example in the previous chapter, open the opencv project,
+    and use QtCreator to run directly. The running effect is as follows:
+
+
+    ### Part 3.7: Code analysis
+
+
+    1) **Set environment variables:** export DISPLAY=:0
+
+
+    2) **Start the desktop:** /etc/init.d/xserver-start
+
+
+    3) **Adjust monitor resolution:** If the above experiment uses a 4K monitor, so
+    the icons on the desktop are very small. In order to better display the effect,
+    in the application, through the system call, set the output resolution to 1080P.
+    The command is follows: xrandr --output DP-1 --mode 1920x1080
+
+
+    4) **Display output management:** The system uses output power management by default,
+    that is, the display goes blank after a period of time. At this time, we can use
+    the command to cancel the function, the command is follows: xset s 0 0 xset dpms
+    0 0
+
+
+    5) **Multi-threaded operation:** This experiment uses three different algorithms
+    to complete edge detection. The three algorithms are assigned to three thread
+    tasks, which can make full use of ARM''s quad-core A53
+
+
+    6) **usb camera capture:** The camera resolution is set to 640x480, and the camera
+    device that is turned on by default is: /dev/video0, because the algorithm calculation
+    here is a bit slow, and the displayed image will be a little delayed.
+
+
+    7) **canny edge detection:** A multi-level edge detection algorithm developed
+    by John F. Canny in 1986 is considered by many to be the optimal algorithm for
+    edge detection. The three main evaluation criteria for optimal edge detection
+    are:
+
+
+    - Low error rate: Identify as many actual edges as possible while reducing false
+    alarms caused by noise as much as possible.
+
+    - High positioning: The marked edge should be as close as possible to the actual
+    edge in the image.
+
+    - Minimal response: The edges in the image can only be identified once.
+
+    '
+  mdcn: '
+
+    此处的参数设置为 10
+
+
+    2) 在主函数的 if 处设置一个断点
+
+
+    3) 点击调试按钮或使用快捷键 F5
+
+
+    4) 我们看到程序已停止在我们设置的断点处
+
+
+    5) 按 F5 继续运行，我们看到的打印信息如下
+
+
+    我们可以看到 "hello world" 之后的起始数字已经变为 10，这表明我们设置的参数已经生效
+
+
+    ## 第 3 部分：OpenCV 边缘检测
+
+
+    ### 第 3.1 部分：OpenCV 简介
+
+
+    OpenCV（开源计算机视觉库）是一个开源计算机视觉和机器学习软件库。OpenCV 的建立为计算机视觉应用提供了通用的基础架构，并加速了机器感知在商业产品中的应用。作为一种基于
+    BSD 许可的产品，OpenCV 使公司能够轻松使用和修改代码。
+
+
+    该库包含 2500 多个优化算法，包括全套经典和最先进的计算机视觉和机器学习算法。这些算法可以检测和识别人脸、识别物体、分类视频中的人类行为、跟踪摄像头移动、跟踪移动物体、提取对象的
+    3D 模型、从立体相机生成 3D 点云、将图像拼接以生成整个场景的高分辨率图像、从图像库中寻找相似图像、去除闪光灯拍摄照片中的红眼、跟踪眼动、识别场景并创建标记以覆盖增强现实等。OpenCV
+    拥有 47,000 多个用户社区，预计下载量超过 1800 万次。它被广泛应用于公司、研究小组和政府机构。
+
+
+    Xilinx reVision 的许多实现都基于 opencv 接口，硬件实现为 xfopencv。这将帮助我们实现相应算法的硬件（FPGA）加速
+
+
+    ### 第 3.2 部分：边缘检测简介
+
+
+    边缘检测是图像处理和计算机视觉中的基础问题。边缘检测的目的是识别数字图像中亮度明显变化的点。图像属性的显著变化通常反映了重要的事件和属性变化。这些包括深度的不连续性、表面方向的不连续性、材料属性的变化以及场景光照的变化。边缘检测是图像处理和计算机视觉中的一个研究领域，特别是特征提取。
+
+
+    图像边缘信息主要集中在高频带。通常来说，图像锐化或边缘检测本质上是高频滤波。我们知道微分运算是为了寻找信号的变化率，具有增强高频分部分的作用。在空间计算中，图像锐化是微分计算。由于数字图像是离散信号，微分运算变成了差分或梯度的计算。图像处理中有多种边缘检测（梯度）算子。
+
+
+    常用的包括普通一阶差分、Robert 算子（交叉差分）、Sobel 算子等，它们基于寻找梯度强度。拉普拉斯算子（二阶差分）基于零交叉点检测。通过计算梯度并设置阈值，即可边缘图像。
+
+
+    边缘检测的一般步骤为：
+
+
+    1) **滤波：** 边缘检测算法主要基于图像强度的一、二阶导数，但导数对噪声非常敏感，因此需要滤波器来提高噪声相关边缘检测器的性能。
+
+
+    2) **增强：** 边缘增强的基础是确定图像每个点邻域强度的变化值。增强算法可以突出灰度点邻域值发生显著变化的点。
+
+
+    3) **检测：** 邻域中有许多点较大的梯度值，但在特定的应用中，这些点并不是要寻找的边缘点，需要进行筛选。
+
+
+    ### 第 3.3 部分：实验目标
+
+
+    1) 使用 opencv 捕获 摄像头图像
+
+    2) canny、sobel 和 laplacian 算法的边缘检测
+
+    3) 使用 opencv 显示图像
+
+    4) 响应 opencv 窗口关闭操作
+
+
+    ### 第 3.4 部分：软件流程图
+
+
+    ### 第 3.5 部分：操作准备
+
+
+    1) dp 接口连接到显示器
+
+    2) 插入 usb 摄像头
+
+    3) 开发板上电后，等待系统启动完成，系统可以正确显示桌面。
+
+    4) 在终端中可以查看 usb 摄像头设备。
+
+
+    ### 第 3.6 部分：程序运行
+
+
+    你可以参考上一章的示例，打开 opencv 项目，并使用 QtCreator 直接运行。运行效果如下：
+
+
+    ### 第 3.7 部分：代码分析
+
+
+    1) **设置环境变量：** export DISPLAY=:0
+
+
+    2) **启动桌面：** /etc/init.d/xserver-start
+
+
+    3) **调整显示器分辨率：** 如果上述实验使用 4K 显示器，那么桌面上的图标会非常小。为了更好地显示效果，在应用程序中，通过系统调用将输出分辨率设置为
+    1080P。命令如下：xrandr --output DP-1 --mode 1920x1080
+
+
+    4) **显示输出管理：** 系统默认使用输出功率管理，即显示器一段时间后会变空。此时，可以使用命令取消该功能，命令如下：xset s 0 0 xset dpms
+    0 0
+
+
+    5) **多线程操作：** 本实验使用三种不同的算法完成边缘检测。这三个算法被分配给三个线程任务，可以充分利用 ARM 四核 A53 的性能。
+
+
+    6) **usb 摄像头捕获：** 摄像头分辨率设置为 640x480，默认开启的摄像头设备为：/dev/video0，因为这里的算法计算较慢，显示的图像会有一定延迟。
+
+
+    7) **canny 边缘检测：** 由 John F. Canny 于 1986 年开发的层级边缘检测算法被许多人认为是边缘检测的最佳算法。最优边缘检测三个三个评估标准是：
+
+
+    - 低错误率：尽可能识别所有真实的边缘，同时尽可能减少由噪声引起的误报。
+
+    - 高定位：标记的边缘应尽可能接近图像中的实际边缘。
+
+    - 最小响应：图像中的边缘只能被识别一次。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 16]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_16_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_16_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **17 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_16_2.png)
+
+
+    The parameter here is set to 10
+
+
+    2) Set a breakpoint at the if position of the main function
+
+
+    3) Click the debug button or shortcut key F5
+
+
+    4) We see that the program has stopped at the breakpoint we set
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_16_3.png)
+
+
+    5) Press F5 to continue running, we see the print information as
+
+
+    follows'
+  - '[PAGE 17]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_17_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_17_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **18 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_17_2.png)
+
+
+    We can see that the starting number after "hello world" has
+
+
+    changed to 10, indicating that the parameters we set have taken effect'
+  - '[PAGE 18]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_18_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_18_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **19 / 50**
+
+
+    **Part 3: OpenCV Edge Detection**
+
+
+    **Part 3.1: OpenCV Introduction**
+
+
+    OpenCV (Open Source Computer Vision Library) is an open
+
+
+    source computer vision and machine learning software library. The
+
+
+    establishment of OpenCV provides a common infrastructure for
+
+
+    computer vision applications and accelerates the application of
+
+
+    machine perception in commercial products. As a BSD-licensed
+
+
+    product, OpenCV makes it easy for companies to use and modify the
+
+
+    code.
+
+
+    The library has more than 2500 optimization algorithms, including
+
+
+    a complete set of classic and most advanced computer vision and
+
+
+    machine learning algorithms. These algorithms can be used to detect
+
+
+    and recognize faces, recognize objects, classify human behavior in
+
+
+    videos, track camera movement, track moving objects, extract 3D
+
+
+    models of objects, generate 3D point clouds from stereo cameras, and
+
+
+    stitch together images to generate High-resolution images of the
+
+
+    entire scene, find similar images from the image library, remove red
+
+
+    eyes from images taken with flash, track eye movements, identify the
+
+
+    scene and create markers to cover augmented reality, etc. OpenCV
+
+
+    has more than 47,000 user communities and an estimated download
+
+
+    volume of more than 18 million. It is widely used in companies,
+
+
+    research groups and government agencies.
+
+
+    Many implementations of Xilinx''s reVision are based on the
+
+
+    opencv interface, and the hardware implementation is xfopencv. This
+
+
+    will help us realize the hardware (FPGA) acceleration of the
+
+
+    corresponding algorithm'
+  - '[PAGE 19]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_19_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_19_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **20 / 50**
+
+
+    **Part 3.2: Edge Detection Introduction**
+
+
+    Edge detection is a basic problem in image processing and
+
+
+    computer vision. The purpose of edge detection is to identify points
+
+
+    with
+
+
+    obvious
+
+
+    brightness
+
+
+    changes
+
+
+    in
+
+
+    digital
+
+
+    images.
+
+
+    Significant
+
+
+    changes in image attributes usually reflect important events and
+
+
+    changes
+
+
+    in
+
+
+    attributes.
+
+
+    These
+
+
+    include
+
+
+    discontinuities
+
+
+    in
+
+
+    depth,
+
+
+    discontinuities in surface orientation, changes in material properties,
+
+
+    and changes in scene lighting. Edge detection is a research field in
+
+
+    image
+
+
+    processing
+
+
+    and
+
+
+    computer
+
+
+    vision,
+
+
+    especially
+
+
+    in
+
+
+    feature
+
+
+    extraction.
+
+
+    Image edge information is mainly concentrated in high frequency
+
+
+    bands. Generally speaking, image sharpening or edge detection is
+
+
+    essentially high-frequency filtering. We know that the differential
+
+
+    operation is to find the rate of change of the signal, which has the
+
+
+    effect of strengthening the high frequency components. In the spatial
+
+
+    calculation, the sharpening of the image is the calculation of the
+
+
+    differential. Due to the discrete signal of the digital image, the
+
+
+    differential operation becomes the calculation of the difference or
+
+
+    gradient. There are a variety of edge detection (gradient) operators in
+
+
+    image
+
+
+    processing.
+
+
+    Commonly
+
+
+    used
+
+
+    include
+
+
+    ordinary
+
+
+    first-order
+
+
+    difference, Robert operator (cross-difference), Sobel operator, etc.,
+
+
+    which are based on finding gradient strength. Laplace operator
+
+
+    (second-order difference) is based on zero-crossing detection. By
+
+
+    calculating the gradient and setting the threshold, the edge image is
+
+
+    obtained.
+
+
+    The general steps of edge detection are:
+
+
+    1)** Filtering:** The edge detection algorithm is mainly based on the first
+
+
+    and second derivatives of image intensity, but the derivatives are'
+  - '[PAGE 20]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_20_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_20_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **21 / 50**
+
+
+    very sensitive to noise, so filters are needed to improve the
+
+
+    performance of noise-related edge detectors
+
+
+    2)** Enhancement:** The basis of edge enhancement is to determine
+
+
+    the change value of the neighborhood intensity of each point of the
+
+
+    image. The enhancement algorithm can highlight the points with
+
+
+    significant changes in the intensity value of the gray point
+
+
+    neighborhood
+
+
+    3)** Detection:** There are many points in the neighborhood that have
+
+
+    large gradient values, but in a specific application, these points are
+
+
+    not the edge points to be found, and need to be selected
+
+
+    **Part 3.3: Experiment Goal**
+
+
+    1) Use opencv to capture usb camera images
+
+
+    2) Edge detection of canny, sobel, and laplacian algorithms
+
+
+    3) Use opencv to display images
+
+
+    4) Responding to opencv window closing operation
+
+
+    **Part 3.4: Software Flow Chart**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_20_2.png)
+
+
+    **Part 3.5: Operation Preparation**
+
+
+    1) dp interface connected to the display
+
+
+    2) Plug in the usb camera
+
+
+    3) After the development board is powered on, wait for the system'
+  - '[PAGE 21]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_21_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_21_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **22 / 50**
+
+
+    startup to complete, the dp monitor can correctly display the boot
+
+
+    desktop
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_21_2.png)
+
+
+    4) In the terminal, you can view the usb camera device
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_21_3.png)
+
+
+    **Part 3.6: Program Running**
+
+
+    You can refer to the example in the previous chapter, open the
+
+
+    3\_opencv\_edgedete project, and use QtCreator to run the application
+
+
+    directly. The running effect is as follows'
+  - '[PAGE 22]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_22_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_22_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **23 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_22_2.png)
+
+
+    **Part 3.7****：****Code analysis**
+
+
+    1) Set environment variables
+
+
+    Enter the following command in the terminal, the effect is
+
+
+    equivalent to the call setenv in the code
+
+
+    export DISPLAY=:0.0
+
+
+    2) Start the desktop
+
+
+    /etc/init.d/xserver-nodm\_xx start
+
+
+    3) Adjust monitor resolution
+
+
+    If the above experiment uses a 4K monitor, so the icons on the
+
+
+    boot desktop are very small. In order to better display the effect,
+
+
+    in the application, through the system call, set the display output
+
+
+    resolution to 1080P. The command is as follows:
+
+
+    xrandr --output DP-1 --mode 1920x1080
+
+
+    4) Display output management'
+  - '[PAGE 23]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_23_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_23_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **24 / 50**
+
+
+    The system uses output power management by default, that is,
+
+
+    the display goes blank after a period of time. At this time, we can
+
+
+    use the command to cancel the function, the command is as
+
+
+    follows:
+
+
+    xset s 0 0
+
+
+    xset dpms 0 0 0
+
+
+    5) Multi-threaded operation
+
+
+    This experiment uses three different algorithms to complete edge
+
+
+    detection. The three algorithms are assigned to three thread
+
+
+    tasks, which can make full use of ARM''s quad-core A53
+
+
+    6) usb camera capture
+
+
+    The camera resolution is set to 640x480, and the camera device
+
+
+    that is turned on by default is: /dev/video0, because the algorithm
+
+
+    calculation here is a bit slow, and the displayed image will be a
+
+
+    little delayed.
+
+
+    7) canny edge detection
+
+
+    A multi-level edge detection algorithm developed by John F.
+
+
+    Canny in 1986 is considered by many to be the optimal algorithm
+
+
+    for edge detection. The three main evaluation criteria for optimal
+
+
+    edge detection are:
+
+
+    Low error rate: Identify as many actual edges as possible
+
+
+    while reducing false alarms caused by noise as much as
+
+
+    possible.
+
+
+    High positioning: The marked edge should be as close as
+
+
+    possible to the actual edge in the image.
+
+
+    Minimal response: The edges in the image can only be
+
+
+    identified once.
+
+
+    cv:: canny function parameters are as follows:'
+- md: '
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    8) sobel edge detection
+
+
+    This is a more commonly used edge detection method. The function of the Sobel
+    operator integrates Gaussian smoothing and differential derivation. It is also
+    called the first-order differential operator. The derivation operator is used
+    to obtain the derivation in both horizontal and vertical directions. What is obtained
+    is a gradient image of the image in the X direction and the Y direction. Disadvantages:
+    Sensitive and easily affected. Gaussian blur (smoothing) is used to reduce noise,
+    and the edge positioning accuracy is not high enough.
+
+
+    cv:: sobel function parameters are as follows:
+
+
+    | Type | Name | Description |
+
+    | :--- | :--- | :--- |
+
+    | InputArray | src | Input image |
+
+    | OutputArray | dst | Output edge image |
+
+    | int | ddepth | Output image depth |
+
+    | int | dx | Order of derivative x. |
+
+    | int | dy | Order of derivative y |
+
+    | int | ksize = 3 | Sobel kernel size |
+
+    | double | scale = 1 | Optional scale factor for calculated derivative value |
+
+    | double | delta = 0 | Optional increment value to add to the result before storing
+    the result in dst |
+
+    | int | borderType = BORDER_DEFAULT | Pixel extrapolation |
+
+
+    9) Laplacian edge detection
+
+
+    The Laplace operator is a second-order differential operator in the n-dimensional
+    Euclidean space. It is more appropriate when you only care about the position
+    of the edge without considering the grayscale difference of the surrounding pixels.
+    The response of Laplace operator to isolated pixels is stronger than the response
+    to edges or lines, so it is only suitable for noise-free images. In the presence
+    of noise, low-pass filtering is required before edge detection using the Laplacian
+    operator. Therefore, the usual segmentation algorithm is to combine the Laplacian
+    operator and the smoothing operator to generate a new template. Laplace operator,
+    like Sobel operator, belongs to spatial sharpening filtering operation.
+
+
+    cv:: Laplace function parameters are as follows:
+
+
+    | Type | Name | Description |
+
+    | :--- | :--- | :--- |
+
+    | InputArray | src | Input image |
+
+    | OutputArray | dst | Output edge image |
+
+    | int | ddepth | Output image depth |
+
+    | int | ksize = 1 | Used to calculate the size of the second derivative kernel
+    |
+
+    | double | scale = 1 | Optional scale factor used to calculate Laplace |
+
+    | double | delta = 0 | Optional increment value to add to the result before storing
+    the result in dst |
+
+    | int | borderType = BORDER_DEFAULT | Pixel extrapolation |
+
+
+    ## Part 4: OpenCV+Qt Face Detection
+
+
+    ### Part 4.1: OpenCV''s Cascade Classifier
+
+
+    The classifier is a device that judges whether a certain thing belongs to a certain
+    classification. Cascade classifier: It can be understood as connecting N single-class
+    classifiers in series. If a thing can belong to all the classifiers connected
+    in this series, the final result is judged as yes, and if one item does not match,
+    it is judged as no.
+
+
+    For example, a human face has many attributes. We make each attribute into a classifier.
+    If a model meets all the attributes of a human face defined by us, then we believe
+    that this model is a human face. So what do these attributes refer to? For example,
+    a human face needs to have two eyebrows, two eyes, a nose, a mouth, a roughly
+    U-shaped chin or outline, and so on.
+
+
+    The target detection of the cascade classifier based on Haar features is an effective
+    target detection method proposed by Paul Viola and Michael Jones in the paper
+    "Rapid Object Detection using a Boosted Cascade of Simple Features" in 2001. This
+    is a method based on machine learning, in which a cascade function is trained
+    from many positive and negative images. Then, it is used to detect objects in
+    other images.
+
+
+    We will perform face detection here. The algorithm first requires a large number
+    of positive images (face images) and negative images (no face images) to train
+    the classifier. Then we need to extract features from it.
+
+
+    Haar features are divided into three categories: edge features, linear features,
+    central features and diagonal features, which are combined into feature templates.
+
+
+    There are white and black rectangles in the feature template, and the feature
+    value of the template is defined as the sum of white rectangle pixels and minus
+    black rectangle pixels. The Haar eigenvalue reflects the gray level changes of
+    the image. For example, some features of the face can be simply described by rectangular
+    features, such as: the eyes are darker than the cheeks, the sides of the nose
+    are darker than the bridges of the nose, and the mouth is darker than the surroundings.
+    However, the rectangular feature is only sensitive to some simple graphic structures,
+    such as edges and line segments, so it can only describe structures with specific
+    directions (horizontal, vertical, diagonal).
+
+
+    By changing the size and position of the feature template, a large number of features
+    can be listed in the image sub-window. The feature template in the above figure
+    is called the "feature prototype"; the feature that the feature prototype is expanded
+    in the image sub-window (translation and expansion) is called the "rectangular
+    feature"; the value of the rectangular feature is called the "feature value".
+
+
+    ### Part 4.2: Integral Graph
+
+
+    In order to quickly calculate features, an integral map is introduced here, no
+    matter how large the image is, it will reduce the calculation of a given pixel
+    to operations involving four pixels. Integral map is a fast algorithm that can
+    find the sum of pixels in all areas by traversing the image only once, which greatly
+    improves the efficiency of image feature value calculation.
+
+
+    The integral graph is a matrix representation method that can describe global
+    information. The way the integral map is constructed
+
+    '
+  mdcn: '
+
+
+    ***Ultrascale+ Linux 应用开发教程***
+
+    ***亚马逊商店：https://www.amazon.com/alinx***
+
+
+    8) sobel边缘检测
+
+
+    这是一种更常用的边缘检测方法。Sobel 算子集成了高斯平滑和微分求导，也被称为一阶微分算子。微分算子用于获取水平和垂直方向的导数。得到的是图像在 X 方向和
+    Y 方向的梯度图。缺点：敏感且容易受影响。使用高斯模糊（平滑）可以减少噪声，但边缘定位精度不够。
+
+
+    cv:: sobel 函数参数如下：
+
+
+    | 类型 | 名称 | 描述 |
+
+    | :--- | :--- | :--- |
+
+    | InputArray | src | 输入图像 |
+
+    | OutputArray | dst | 输出边缘图像 |
+
+    | int | ddepth | 输出图像深度 |
+
+    | int | dx | x 方向导数的阶数 |
+
+    | int | dy | y 方向导数的阶数 |
+
+    | int | ksize = 3 | Sobel 卷积核 |
+
+    | double | scale = 1 | 计算导数值的可选缩放因子 |
+
+    | double | delta = 0 | 在将结果存储到 dst 之前累加的可选增量 |
+
+    | int | borderType = BORDER_DEFAULT | 像素外推类型 |
+
+
+    9) Laplacian边缘检测
+
+
+    Laplace 算子是 欧几里得空间中的二阶微分算子。当你只关心边缘位置而不考虑周围像素的灰度差异时，它更为合适。Laplace 算子对孤立像素的响应比对边缘或线的响应强，因此它只适用于无噪声图像。在存在噪声的情况下，在使用
+    Laplacian 算子进行边缘检测之前需要低通滤波。因此，通常的分割算法是结合 Laplacian 算子和平滑算子来生成新模板。Laplace 算子与 Sobel
+    算子一样属于空间锐化滤波操作。
+
+
+    cv:: Laplace 函数参数如下：
+
+
+    | 类型 | 名称 | 描述 |
+
+    | :--- | :--- | :--- |
+
+    | InputArray | src | 输入图像 |
+
+    | OutputArray | dst | 输出边缘图像 |
+
+    | int | ddepth | 输出图像深度 |
+
+    | int | ksize = 1 | 用于计算二阶导数核的大小 |
+
+    | double | scale = 1 | 用于计算 Laplace 的可选缩放因子 |
+
+    | double | delta = 0 | 在将结果存储到 dst 之前累加的可选增量 |
+
+    | int | borderType = BORDER_DEFAULT | 像素外推类型 |
+
+
+    ## 第 4 部分：OpenCV+Qt 人脸检测
+
+
+    ### 第 4.1 部分：OpenCV 级联分类器
+
+
+    分类器是判断事物是否属于某一类别的设备。级联分类器：可以理解为将 N 个类分类器串联。如果一个符合串联的所有分类器，则最终结果判断为是；如果其中一项不匹配，则判断为否。
+
+
+    例如，人脸有许多属性。我们将每个属性制成一个分类器。如果一个模型符合我们定义的人脸的所有属性，我们就认为这个模型是人脸。那么这些属性指的是什么呢？例如，人脸需要两条眉毛、只眼睛、一个鼻子、一个嘴巴、一个呈
+    U 型的下巴或轮廓等。
+
+
+    基于 Haar 特征的级联分类器目标检测是 Paul Viola 和 Michael Jones 在 2001 年的论文《使用增强级联简单特征的快速目标检测》中提出的一种有效目标检测方法。这是一种基于机器学习的方法，通过许多正样本和负样本图像训练级联函数，然后用它检测其他图像中的物体。
+
+
+    我们在此处进行人脸检测。算法首先需要大量的正样本（人脸图像）和负样本（无人脸的图像）来训练分类器。然后我们需要从中提取特征。
+
+
+    Haar 特征分为三类：边缘特征、线性特征、中心特征和对角特征，它们被组合成特征模板。
+
+
+    特征模板中有白色和黑色矩形，模板的特征值定义为白色矩形像素之和减黑色矩形像素。Haar 特征值反映了图像的灰度变化。例如，人脸的某些特征可以用矩形特征简单地描述，如：眼睛比脸颊暗，鼻侧面比鼻梁暗，嘴巴比周围暗。然而，矩形特征只对某些简单的图形结构（如边缘和线段）敏感，因此只能描述特定方向（水平、垂直、对角线）的结构。
+
+
+    通过改变特征模板的大小和位置，可以在图像子窗口中列出大量特征。上图中的特征模板被称为“特征原型”；在图像子窗口中扩展（平移和缩放）特征原型所得到的特征被称为“矩形特征”；矩形特征的值被称为“特征值”。
+
+
+    ### 第 4.2 部分：积分图
+
+
+    为了快速计算特征，这里引入了积分图（Integral Map），无论图像多大，它都能将给定像素的计算减少为涉及四个像素的操作。积分图是一种快速算法，只需遍历图像即可找到所有区域的像素和，极大地提高了图像特征值的计算效率。
+
+
+    积分图是一种描述全局信息的矩阵表示方法。积分图的构建方法为
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 24]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_24_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_24_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **25 / 50**
+
+
+    InputArray
+
+
+    image
+
+
+    Input image
+
+
+    OutputArray
+
+
+    edges
+
+
+    Output edge image
+
+
+    double
+
+
+    threshold1
+
+
+    Threshold 1
+
+
+    double
+
+
+    Threshold2
+
+
+    Threshold 2
+
+
+    int
+
+
+    apertureSize=3
+
+
+    Sobel operator size
+
+
+    bool
+
+
+    L2gradient=false
+
+
+    Whether to use a more accurate way to calculate the
+
+
+    image gradient
+
+
+    8) sobel edge detection
+
+
+    This is a more commonly used edge detection method. The
+
+
+    function of the Soble operator integrates Gaussian smoothing
+
+
+    and
+
+
+    differential
+
+
+    derivation.
+
+
+    It
+
+
+    is
+
+
+    also
+
+
+    called
+
+
+    the
+
+
+    first-order
+
+
+    differential operator. The derivation operator is used to obtain the
+
+
+    derivation in both horizontal and vertical directions. , What is
+
+
+    obtained is a gradient image of the image in the X direction and
+
+
+    the Y direction. Disadvantages: Sensitive and easily affected.
+
+
+    Gaussian blur (smoothing) is used to reduce noise, and the edge
+
+
+    positioning accuracy is not high enough.
+
+
+    cv:: sobel function parameters are as follows:
+
+
+    InputArray
+
+
+    src
+
+
+    Input image
+
+
+    OutputArray
+
+
+    dst
+
+
+    Output edge image
+
+
+    int
+
+
+    ddepth
+
+
+    Output image depth
+
+
+    int
+
+
+    dx
+
+
+    Order of derivative x.
+
+
+    int
+
+
+    dy
+
+
+    Order of derivative y
+
+
+    int
+
+
+    ksize = 3
+
+
+    Sobel kernel size
+
+
+    double
+
+
+    scale = 1
+
+
+    Optional scale factor for calculated derivative value
+
+
+    double
+
+
+    delta = 0
+
+
+    Optional increment value to add to the result before
+
+
+    storing the result in dst
+
+
+    Int
+
+
+    borderType=BO
+
+
+    RDER\_DEFAULT
+
+
+    Pixel extrapolation
+
+
+    9) Laplacian edge detection'
+  - '[PAGE 25]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_25_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_25_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **26 / 50**
+
+
+    The Laplacce operator is a second-order differential operator in
+
+
+    the n-dimensional Euclidean space. It is more appropriate when
+
+
+    you only care about the position of the edge without considering
+
+
+    the grayscale difference of the surrounding pixels. The response
+
+
+    of Laplace operator to isolated pixels is stronger than the
+
+
+    response to edges or lines, so it is only suitable for noise-free
+
+
+    images. In the presence of noise, low-pass filtering is required
+
+
+    before edge detection using the Laplacian operator. Therefore,
+
+
+    the usual segmentation algorithm is to combine the Laplacian
+
+
+    operator and the smoothing operator to generate a new template.
+
+
+    Laplace
+
+
+    operator,
+
+
+    like
+
+
+    Sobel
+
+
+    operator,
+
+
+    belongs
+
+
+    to
+
+
+    spatial
+
+
+    sharpening filtering operation.
+
+
+    cv:: Laplacce function parameters are as follows:
+
+
+    InputArray
+
+
+    src,
+
+
+    Input image
+
+
+    OutputArray
+
+
+    dst
+
+
+    Output edge image
+
+
+    int
+
+
+    ddepth
+
+
+    Output image depth
+
+
+    int
+
+
+    ksize = 1
+
+
+    Used to calculate the size of the second derivative kernel
+
+
+    double
+
+
+    scale = 1
+
+
+    Optional scale factor used to calculate Laplacce
+
+
+    double
+
+
+    delta = 0
+
+
+    Optional increment value to add to the result before
+
+
+    storing the result in dst
+
+
+    Int
+
+
+    borderType=BO
+
+
+    RDER\_DEFAULT
+
+
+    Pixel extrapolation'
+  - '[PAGE 26]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_26_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_26_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **27 / 50**
+
+
+    **Part 4****：****OpenCV+Qt Face Detection**
+
+
+    **Part 4.1: OpenCV''s Cascade Classifier**
+
+
+    The classifier is a device that judges whether a certain thing
+
+
+    belongs to a certain classification. Cascade classifier: It can be
+
+
+    understood as connecting N single-class classifiers in series. If a thing
+
+
+    can belong to all the classifiers connected in this series, the final result
+
+
+    is judged as yes, and if one item does not match, it is judged as no.
+
+
+    For example, a human face has many attributes. We make each
+
+
+    attribute into a classifier. If a model meets all the attributes of a human
+
+
+    face defined by us, then we believe that this model is a human face.
+
+
+    So what do these attributes refer to? For example, a human face
+
+
+    needs to have two eyebrows, two eyes, a nose, a mouth, a roughly
+
+
+    U-shaped chin or outline, and so on.
+
+
+    The target detection of the cascade classifier based on Haar
+
+
+    features is an effective target detection method proposed by Paul
+
+
+    Viola and Michael Jones in the paper "Rapid Object Detection using a
+
+
+    Boosted Cascade of Simple Features" in 2001. This is a method
+
+
+    based on machine learning, in which a cascade function is trained
+
+
+    from many positive and negative images. Then, it is used to detect
+
+
+    objects in other images.
+
+
+    We will perform face detection here. The algorithm first requires a
+
+
+    large number of positive images (face images) and negative images
+
+
+    (no face images) to train the classifier. Then we need to extract
+
+
+    features from it.'
+  - '[PAGE 27]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_27_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_27_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **28 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_27_2.png)
+
+
+    Aar features are divided into three categories: edge features,
+
+
+    linear features, central features and diagonal features, which are
+
+
+    combined
+
+
+    into
+
+
+    feature
+
+
+    templates.
+
+
+    There
+
+
+    are
+
+
+    white
+
+
+    and
+
+
+    black
+
+
+    rectangles in the feature template, and the feature value of the
+
+
+    template is defined as the sum of white rectangle pixels and minus
+
+
+    black rectangle pixels. The Haar eigenvalue reflects the gray level
+
+
+    changes of the image. For example, some features of the face can be
+
+
+    simply described by rectangular features, such as: the eyes are darker
+
+
+    than the cheeks, the sides of the nose are darker than the bridges of
+
+
+    the nose, and the mouth is darker than the surroundings. However,
+
+
+    the rectangular feature is only sensitive to some simple graphic
+
+
+    structures, such as edges and line segments, so it can only describe
+
+
+    structures with specific directions (horizontal, vertical, diagonal).
+
+
+    By changing the size and position of the feature template, a large
+
+
+    number of features can be listed in the image sub-window. The
+
+
+    feature template in the above figure is called the "feature prototype";
+
+
+    the feature that the feature prototype is expanded in the image
+
+
+    sub-window (translation and expansion) is called the "rectangular
+
+
+    feature"; the value of the rectangular feature is called the "feature
+
+
+    value".'
+  - '[PAGE 28]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_28_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_28_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **29 / 50**
+
+
+    The rectangle feature can be located at any position of the image,
+
+
+    and the size can also be changed arbitrarily, so the rectangle feature
+
+
+    value is a function of the three factors of the rectangle template type,
+
+
+    the rectangle position and the rectangle size. Therefore, the change of
+
+
+    category, size and position makes a small detection window contain a
+
+
+    lot of rectangular features. For example, the number of rectangular
+
+
+    features can reach 160,000 in a detection window with a size of 24\*24
+
+
+    pixels. So there are two problems to be solved: (1) How to calculate so
+
+
+    many features quickly? (2) Which rectangular features are the most
+
+
+    effective for classifying the classifier?
+
+
+    **Part 4.2: Integral Graph**
+
+
+    In order to quickly calculate features, an integral map is
+
+
+    introduced here, no matter how large the image is, it will reduce the
+
+
+    calculation of a given pixel to operations involving only four pixels.
+
+
+    Integral map is a fast algorithm that can find the sum of pixels in all
+
+
+    areas of the image by traversing the image only once, which greatly
+
+
+    improves the efficiency of image feature value calculation.
+
+
+    The main idea of the integral graph is to store the sum of pixels in
+
+
+    the rectangular area formed by the image from the starting point to
+
+
+    each point as an element of an array in the memory. When the sum of
+
+
+    pixels in a certain area is to be calculated, the elements of the array
+
+
+    can be directly indexed. Recalculate the pixel sum of this area,
+
+
+    thereby speeding up the calculation (this has a corresponding name,
+
+
+    called the dynamic programming algorithm). The integral graph can
+
+
+    use the same time (constant time) to calculate different features under
+
+
+    multiple scales, thus greatly improving the detection speed.
+
+
+    The integral graph is a matrix representation method that can
+
+
+    describe global information. The way the integral map is constructed'
+- md: '
+
+    is that the value $ii(i,j)$ at position $(i,j)$ is the sum of all pixels in the
+    upper left corner of the original image $(i,j)$:
+
+
+    $ii(i,j) = \sum_{0 \le x \le i, 0 \le y \le j} f(x,y)$
+
+
+    Integral graph construction algorithm
+
+
+    1) Use $s(i,j)$ to represent the cumulative sum in the row direction, and initialize
+    $s(i,-1)=0$
+
+
+    2) Use $ii(i,j)$ to represent an integral image, and initialize $ii(-1,i)=0$
+
+
+    3) Scan the image line by line, recursively calculate the cumulative sum $s(i,j)$
+    of each pixel $(i,j)$ in the row direction and the value of the integral image
+    $ii(i,j)$:
+
+    $s(i,j) = s(i,j-1) + f(i,j)$
+
+    $ii(i,j) = ii(i-1,j) + s(i,j)$
+
+
+    4) Scan the image once, and when it reaches the pixel at the bottom right corner
+    of the image, the integral image $ii$ is constructed
+
+
+    After the integral map is constructed, the cumulative sum of pixels in any matrix
+    area in the image can be obtained by simple calculations as shown in the figure.
+
+
+    Assuming that the four vertices of $D$ are $\alpha, \beta, \gamma$, and $\delta$,
+    the sum of the pixels of $D$ can be expressed as:
+
+    $\sum D = ii(\alpha) + ii(\beta) - (ii(\gamma) + ii(\delta))$
+
+
+    The Haar-like eigenvalue is nothing more than the difference between the sum of
+    the two matrix pixels, which can also be completed in constant time. Therefore,
+    calculation of characteristic value of rectangular feature is only related to
+    the integral graph of the end point of characteristic rectangle, so no matter
+    how scale of characteristic rectangle is transformed, time consumed for calculation
+    of characteristic value is constant. In this way, as long as the image is traversed
+    once, characteristic values of all sub-windows can be obtained.
+
+
+    ## Part 4.3: Select Feature
+
+
+    Of all these features, most are irrelevant. For example, consider the picture
+    below. The top row shows two good features. The first feature seems to focus on
+    the attribute that the eye area is usually darker than nose and cheek areas. The
+    second feature depends on properties of eyes that are darker than the bridge of
+    nose. But the same window applied to cheeks or any other place has no effect.
+    So how do we choose the best function from more 160,000? This can be achieved
+    by the AdaBoost algorithm. We apply each feature to all training images. For each
+    feature, it will find the best threshold, and divide face into two categories:
+    positive and negative. Obviously, there will be correct or incorrect classifications.
+    We choose features with the smallest error rate, which means that they are the
+    features that classify human faces and non-face images most accurately. The process
+    is not as simple as this. Each image has an equal weight at the beginning. After
+    each classification, the weight of the misclassified image will increase. Then
+    do the same process. Calculate the new error rate, there will be new weight. The
+    process will continue until the required accuracy or error rate is reached or
+    the required number of features is found
+
+
+    ## Part 4.4: Qt Introduction
+
+
+    Qt is a cross-platform C++ development library, mainly used to develop Graphical
+    User Interface (GUI) programs, of course, you can also develop Command User Interface
+    (CUI) programs without an interface. Qt also has bindings for scripting languages
+    such as Python, Ruby, and Perl, which means that scripting languages can be used
+    to develop programs based on Qt. Qt supports many operating systems, such as general
+    operating systems Windows, Linux, Unix, smartphone systems Android, iOS, WinPhone,
+    embedded systems QNX, VxWorks, and so on. Although Qt is often used as a GUI library
+    to develop graphical interface applications, this is not all of Qt; in addition
+    to drawing beautiful interfaces (including controls, layout, and interaction),
+    Qt also contains many other functions, such as multithreading, access to the database,
+    image processing, audio and video processing, network communication, file operations,
+    etc., these have been integrated. Although Qt also supports mobile phone operating
+    systems, since Android already has Java and Kotlin, and iOS already has Objective-C
+    and Swift, Qt''s market share on the mobile terminal can almost be ignored.
+
+
+    ## Part 4.5: Experiment Goal
+
+
+    - Call Qt library to display video image and face block diagram
+
+    - The use of the CascadeClassifier class of the opencv library
+
+
+    ## Part 4.6: Software Flow Chart
+
+
+    ## Part 4.7: Operation Preparation
+
+
+    - Prepare according to the previous chapter
+
+    - Copy the haar_train folder to the /home/root directory of the development board
+
+
+    ## Part 4.8: Program Running
+
+
+    Run the application, the effect is as follows
+
+
+    ## Part 4.9: Code analysis
+
+
+    - Face detection is mainly cascade.detectMultiScale in face_lookup.cpp During
+    initialization, call cascade.load to load the model haarcascade_frontalface_alt.xml
+
+    - In MainWindow::flushFace, in .pro file, several core gui widgets are added after.
+
+    - Qt''s signals and slots binds the signal of face\_lookup to the slot, and MainWindow
+    handles the position of the face. Same as the above, the display effect is relatively
+    lagging.
+
+
+    ## Part 5: GStreamer''s Camera Display
+
+
+    ### Part 5.1: GStreamer Introduction
+
+
+    GStreamer is a framework for creating streaming media applications. The basic
+    design ideas come from the Oregon Graduate School''s ideas about video pipelines,
+    and also draw lessons from DirectShow''s design ideas. Its characteristics are
+    as follows:
+
+
+    1) Clear structure and powerful function
+
+    2) Object-oriented programming ideas
+
+    3) Flexible and expandable functions
+
+    4) High performance
+
+    5) Separation of core library and plug-in
+
+
+    The architecture of GStreamer is as follows. It supports applications ranging
+    from simple Ogg/Vorbis playback and audio/video streaming to complex audio (mixing)
+    and video (non-linear editing) processing. Applications can transparently utilize
+    advanced codecs and filtering techniques.
+
+
+    ### Part 5.2: Basic concepts of GStreamer
+
+
+    1) Element
+
+
+    Elements are the most basic components that make up the pipeline. Several Elements
+    can be connected together to create a pipeline to complete a special task. For
+    example, media playback or video recording. Elements are classified according
+    to function:
+
+
+    - Source elements
+
+    - Sink elements
+
+    - Filter elements
+
+
+    The application block diagram is as follows:
+
+    '
+  mdcn: "\n即位置 $(i,j)$ 处的值 $ii(i,j)$ 是原始图像 $(i,j)$ 左上角所有像素之和：\n\n$ii(i,j) = \\sum_{0\
+    \ \\le x \\le i, 0 \\le y \\le j} f(x,y)$\n\n积分图构建算法\n\n1) 使用 $s(i,j)$ 表示行方向的累加和，并初始化\
+    \ $s(i,-1)=0$\n\n2) 使用 $ii(i,j)$ 表示积分图，并初始化 $ii(-1,i)=0$\n\n3) 逐行扫描图像，递归计算每个像素\
+    \ $(i,j)$ 在行方向的累加和 $s(i,j)$ 以及积分图的值 $ii(i,j)$：\n$s(i,j) = s(i,j-1) + f(i,j)$\n\
+    $ii(i,j) = ii(i-1,j) + s(i,j)$\n\n4) 扫描一次图像，当到达图像右下角的像素时，积分图 $ii$ 构建完成。\n\n积分图构建完成后，图像中任意矩阵区域的像素累加和可以通过如图所示的简单计算获得。\n\
+    \n假设 $D$ 的四个顶点为 $\\alpha, \\beta, \\gamma, \\delta$，则 $D$ 的像素之和可以表示为：\n$\\sum\
+    \ D = ii(\\alpha) + ii(\\beta) - (ii(\\gamma) + ii(\\delta))$\n\nHaar 特征特征值仅仅是两个矩阵像素和之差，这可以在常数时间内完成。因此，矩形特征特征值的计算仅与特征矩形端点的积分图有关，所以无论特征矩形的大小如何变化，计算特征值消耗的时间都是常数。这样一来，只要遍历一次图像，就可以获得所有子窗口的特征值。\n\
+    \n## 第 4.3 部分：选择特征\n\n在所有这些特征中，大多数都是无关的。例如，考虑下图。第一行显示了两个良好的特征。第一个特征似乎关注于眼部区域通常比鼻子和脸颊区域暗的属性。第二个特征依赖于眼睛比鼻梁暗的属性。但将相同的窗口应用于脸颊或任何其他地方都没有效果。那么，我们如何从超过\
+    \ 160,000 个特征中选择出最好的函数呢？这可以通过 AdaBoost 算法实现。我们将每个特征应用到所有训练图像上。对于每个特征，它将找到最佳阈值，并将脸部分为两类：正类和负类。显然，会出现正确或错误的分类。我们选择错误率最小的特征，这意味着它们是对人脸和非人脸图像分类最准确的特征。这个过程并不简单。每张图像最初具有相同的权重。在每次分类后，分类错误的图像的权重将会增加。然后重复相同的过程。计算新的错误率，产生新的权重。该过程将持续，直到达到所需的准确率或错误率，或者找到了所需的特征数量。\n\
+    \n## 第 4.4 部分：Qt 简介\n\nQt 是跨平台的 C++ 开发库，主要用于开发图形用户界面（GUI）程序，当然，你也可以开发无界面的命令行界面（CUI）程序。Qt\
+    \ 还提供了针对 Python、Ruby 和 Perl 等脚本语言的绑定，这意味着可以使用脚本语言基于 Qt 开发程序。Qt 支持许多操作系统，如通用操作系统\
+    \ Windows、Linux、Unix，手机系统 Android、iOS、WinPhone，嵌入式系统 QNX、VxWorks 等。虽然 Qt 通常用作\
+    \ GUI 库来开发图形界面应用，但这并不是 Qt 的全部；除了绘制漂亮的界面（包括控件、布局和交互），Qt 还包含许多其他功能，如多线程、数据库访问、图像处理、音频视频处理、网络通信、文件操作等，这些都已经集成。尽管\
+    \ Qt 也支持手机操作系统，但由于 Android 已经有了 Java 和 Kotlin，而 iOS 已经有了 Objective-C 和 Swift，Qt\
+    \ 在移动终端的市场份额几乎可以忽略。\n\n## 第 4.5 部分：实验目标\n\n- 调用 Qt 库显示视频图像和人脸框图\n- 使用 OpenCV 库的\
+    \ CascadeClassifier 类\n\n## 第 4.6 部分：软件流程图\n\n## 第 4.7 部分：操作准备\n\n- 根据上一章进行准备\n\
+    - 将 haar_train 文件夹拷贝到开发板的 /home/root \n\n## 第 4.8 部分：程序运行\n\n运行应用程序，效果如下\n\n##\
+    \ 第 4.9 部分：代码分析\n\n- 人脸检测主要是 face_lookup.cpp 中的 `cascade.detectMultiScale`。在初始化期间，调用\
+    \ `cascade.load` 加载模型 `haarcascade_frontalface_alt.xml`。\n- 在 `MainWindow::flushFace`\
+    \ 中，在 .pro 文件中添加了几个核心 GUI 控件。\n- Qt 的信号与槽将 face\\_lookup 的信号绑定到槽，由 `MainWindow`\
+    \ 处理脸部位置。与上述相同，显示效果相对延迟。\n\n## 第 5 部分：GStreamer 摄像头显示\n\n### 第 5.1 部分：GStreamer\
+    \ 简介\n\nGStreamer 是用于创建流媒体应用的框架。其基本设计理念源于俄勒冈研究生学院关于视频流水线的观点，并汲取了 DirectShow 的设计思想。它的特点如下：\n\
+    \n1) 结构清晰，功能强大\n2) 面向对象编程\n3) 功能灵活且可扩展\n4) 高性能\n5) 核心库与插件的分离\n\nGStreamer 的架构如下。它支持从简单的\
+    \ Ogg/Vorbis 回放和音频/视频流到复杂的音频（混合）和视频（非线性编辑）处理等应用程序。应用程序可以透明地利用先进的解码器和过滤技术。\n\n\
+    ### 第 5.2 部分：GStreamer 基本概念\n\n1) Element（元件）\n\n元件是组成流水线的 Basic组件。多个元件可以连接在一起创建一个流水线以完成特定任务，例如媒体播放或视频录制。元件根据功能分类：\n\
+    \n- Source elements（源元件）\n- Sink elements（汇点元件）\n- Filter elements（过滤器元件）\n\n\
+    应用程序框图如下：\n\n"
+  merge: 1
+  raw:
+  - '[PAGE 29]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_29_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_29_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **30 / 50**
+
+
+    is that the value ii(i,j) at position (i,j) is the sum of all pixels in the upper
+
+
+    left corner of the original image (i,j):
+
+
+    ii ݅, ݆=
+
+
+    ݇≤݈݅≤݆
+
+
+    f ݇, ݈
+
+
+    ෍
+
+
+    Integral graph construction algorithm
+
+
+    1) Use s(i,j) to represent the cumulative sum in the row direction, and
+
+
+    initialize s(i,-1)=0
+
+
+    2) Use ii(i,j) to represent an integral image, and initialize ii(-1,i)=0
+
+
+    3) Scan the image line by line, recursively calculate the cumulative
+
+
+    sum s(i,j) of each pixel (i,j) in the row direction and the value of the
+
+
+    integral image ii(i,j)
+
+
+    s(i,j)=s(i,j-1)+f(i,j)
+
+
+    ii(i,j)=ii(i-1,j)+s(i,j)
+
+
+    4) Scan the image once, and when it reaches the pixel at the bottom
+
+
+    right corner of the image, the integral image ii is constructed
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_29_2.png)
+
+
+    After the integral map is constructed, the cumulative sum of pixels
+
+
+    in any matrix area in the image can be obtained by simple calculations
+
+
+    as shown in the figure.
+
+
+    Assuming that the four vertices of D are α, β, γ, and δ, the sum
+
+
+    of the pixels of D can be expressed as
+
+
+    Dsum = ii( α )+ii( β)-(ii( γ)+ii( δ ));
+
+
+    The Haar-like eigenvalue is nothing more than the difference
+
+
+    between the sum of the two matrix pixels, which can also be'
+  - '[PAGE 30]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_30_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_30_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **31 / 50**
+
+
+    completed in a constant time. Therefore, the calculation of the
+
+
+    characteristic value of the rectangular feature is only related to the
+
+
+    integral graph of the end point of the characteristic rectangle, so no
+
+
+    matter how the scale of the characteristic rectangle is transformed, the
+
+
+    time consumed for the calculation of the characteristic value is
+
+
+    constant. In this way, as long as the image is traversed once, the
+
+
+    characteristic values of all sub-windows can be obtained.
+
+
+    **Part 4.3: Select Feature**
+
+
+    Of all these features we calculate, most are irrelevant. For
+
+
+    example, consider the picture below. The top row shows two good
+
+
+    features. The first feature selected seems to focus on the attribute that
+
+
+    the eye area is usually darker than the nose and cheek areas. The
+
+
+    second feature selected depends on the properties of the eyes that
+
+
+    are darker than the bridge of the nose. But the same window applied
+
+
+    to the cheeks or any other place has no effect. So how do we choose
+
+
+    the best function from more than 160,000 functions? This can be
+
+
+    achieved by the AdaBoost algorithm.
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_30_2.png)
+
+
+    We apply each feature to all training images. For each feature, it
+
+
+    will find the best threshold, and divide the face into two categories:
+
+
+    positive and negative. Obviously, there will be correct or incorrect
+
+
+    classifications. We choose the features with the smallest error rate,'
+  - '[PAGE 31]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_31_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_31_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **32 / 50**
+
+
+    which means that they are the features that classify human faces and
+
+
+    non-face images most accurately.(The process is not as simple as this.
+
+
+    Each image has an equal weight at the beginning. After each
+
+
+    classification, the weight of the misclassified image will increase. Then
+
+
+    do the same process. Calculate the new error rate, there will be new
+
+
+    Weight. The process will continue until the required accuracy or error
+
+
+    rate is reached or the required number of features is found)
+
+
+    **Part 4.4: Qt Introduction**
+
+
+    Qt is a cross-platform C++ development library, mainly used to
+
+
+    develop Graphical User Interface (GUI) programs, of course, you can
+
+
+    also develop Command User Interface (CUI) programs without an
+
+
+    interface. Qt also has bindings for scripting languages such as Python,
+
+
+    Ruby, and Perl, which means that scripting languages can be used to
+
+
+    develop programs based on Qt. Qt supports many operating systems,
+
+
+    such as general operating systems Windows, Linux, Unix, smart
+
+
+    phone systems Android, iOS, WinPhone, embedded systems QNX,
+
+
+    VxWorks, and so on. Although Qt is often used as a GUI library to
+
+
+    develop graphical interface applications, this is not all of Qt; in addition
+
+
+    to
+
+
+    drawing
+
+
+    beautiful
+
+
+    interfaces
+
+
+    (including
+
+
+    controls,
+
+
+    layout,
+
+
+    and
+
+
+    interaction),
+
+
+    Qt
+
+
+    also
+
+
+    contains
+
+
+    many
+
+
+    other
+
+
+    functions,
+
+
+    such
+
+
+    as
+
+
+    multithreading , Access to the database, image processing, audio and
+
+
+    video processing, network communication, file operations, etc., these
+
+
+    Qt have been integrated.
+
+
+    Although Qt also supports mobile phone operating systems, since
+
+
+    Android itself already has Java and Kotlin, and iOS itself already has
+
+
+    Objective-C and Swift, Qt''s market share on the mobile terminal can
+
+
+    almost be ignored.'
+  - '[PAGE 32]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_32_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_32_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **33 / 50**
+
+
+    **Part 4.5: Experiment Goal**
+
+
+    1) Call Qt library to display video image and face block diagram
+
+
+    2) The use of the CascadeClassifier class of the opencv library
+
+
+    **Part 4.6: Software Flow Chart**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_32_2.png)
+
+
+    **Part 4.7: Operation Preparation**
+
+
+    1) Prepare according to the previous chapter
+
+
+    2) Copy the haar\_train folder to the /home/root directory of the
+
+
+    development board
+
+
+    **Part 4.8: Program Running**
+
+
+    Run the application, the effect is as follows
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_32_3.png)'
+  - '[PAGE 33]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_33_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_33_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **34 / 50**
+
+
+    **Part 4.9: Code analysis**
+
+
+    1) Face detection is mainly face\_cascade.detectMultiScale in the
+
+
+    face\_lookup.cpp file During initialization, call face\_cascade.load to
+
+
+    load the trained model haarcascade\_frontalface\_alt.xml.
+
+
+    2) In
+
+
+    MainWindow::flushFace,
+
+
+    the
+
+
+    face
+
+
+    block
+
+
+    diagram
+
+
+    will
+
+
+    be
+
+
+    displayed based on the above detection results
+
+
+    3) Because of the training model, the detection here requires that the
+
+
+    face cannot be inclined or sideways.
+
+
+    4) .pro file
+
+
+    Because the Q display interface is called, in the facedete.pro file,
+
+
+    several Qt components of core gui widgets are added after "QT="
+
+
+    5) Qt''s signals and slots
+
+
+    The program binds the signal of face\_lookup and MainWindow to
+
+
+    the slot, and MainWindow handles the picture that needs to be
+
+
+    displayed and marks the position of the face
+
+
+    6) Same as the above routine, the display effect is relatively lagging.'
+  - '[PAGE 34]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_34_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_34_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **35 / 50**
+
+
+    **Part 5: GStreamer''s Camera Display**
+
+
+    **Part 5.1: GStreamer Introduction**
+
+
+    GStreamer
+
+
+    is
+
+
+    a
+
+
+    framework
+
+
+    for
+
+
+    creating
+
+
+    streaming
+
+
+    media
+
+
+    applications. The basic design ideas come from the Oregon Graduate
+
+
+    School''s ideas about video pipelines, and also draw lessons from
+
+
+    DirectShow''s design ideas. Its characteristics are as follows:
+
+
+    1) Clear structure and powerful function
+
+
+    2) Object-oriented programming ideas
+
+
+    3) Flexible and expandable functions
+
+
+    4) High performance
+
+
+    5) Separation of core library and plug-in
+
+
+    The
+
+
+    architecture
+
+
+    of
+
+
+    GStreamer
+
+
+    is
+
+
+    as
+
+
+    follows.
+
+
+    It
+
+
+    supports
+
+
+    applications
+
+
+    ranging
+
+
+    from
+
+
+    simple
+
+
+    Ogg/Vorbis
+
+
+    playback
+
+
+    and
+
+
+    audio/video
+
+
+    streaming
+
+
+    to
+
+
+    complex
+
+
+    audio
+
+
+    (mixing)
+
+
+    and
+
+
+    video
+
+
+    (non-linear editing) processing. Applications can transparently utilize
+
+
+    advanced codecs and filtering techniques.'
+  - '[PAGE 35]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_35_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_35_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **36 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_35_2.png)
+
+
+    **Part 5.2: Basic concepts of GStreamer**
+
+
+    1) Element
+
+
+    Elements are the most basic components that make up the
+
+
+    pipeline. Several Elements can be connected together to create a
+
+
+    pipeline to complete a special task. For example, media playback or
+
+
+    video recording. Elements are classified according to function:
+
+
+    Source elements
+
+
+    Sink elements
+
+
+    Filter elements
+
+
+    The application block diagram is as follows:'
+- md: '
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_36_0.png)[](img/1cbdc9e6f065399dc26b2b407e539434_36_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **37 / 50**
+
+
+    2) bin and Pipeline
+
+
+    Bins are containers that can hold elements. Pipelines are a special subcategory
+    of Bins. Pipelines can operate all elements contained within itself. As shown
+    below
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_36_3.png)
+
+
+    3) Pad
+
+
+    Pads are equivalent to the interface of a component, and each component is connected
+    through this interface, so that the data stream can be transmitted in these components.
+    Pads category:
+
+
+    - always
+
+    - sometimes
+
+    - on request
+
+
+    4) Cap
+
+
+    Caps describes the format of the data stream that can pass through the pad or
+    currently pass through the pad. You can view the media types supported by the
+    component through the gst-inspect-1.0 command.
+
+
+    5) Bus
+
+
+    Each pipeline contains a bus by default, and the application does not need to
+    create another bus. The application program sets up a message processor on the
+    bus. When the main loop is running, the bus will poll the message processor for
+    new messages. When the messages are collected, the bus will call the corresponding
+    callback function to complete the task
+
+
+    6) Buffer
+
+
+    The buffer contains the data stream in the created pipe. Usually a source component
+    will create a new buffer, and at the same time the component will pass the data
+    in the buffer to the next component. When using GStreamer''s underlying structure
+    to create a media pipeline, you don''t need to process the buffers yourself, and
+    the component will automatically process these buffers. The buffer zone is mainly
+    composed of the following components:
+
+
+    - Pointer to a block of memory
+
+    - The size of the memory
+
+    - Buffer timestamp
+
+    - A reference count indicates the number of components used in the buffer. When
+    there is no component to reference, this reference will be used to destroy the
+    buffer
+
+
+    7) Events
+
+
+    Events include control information in the pipeline, such as search information
+    and flow termination signals.
+
+
+    ## Part 5.3: Experiment Goal
+
+
+    gstreamer tool usage
+
+
+    gstreamer programming
+
+
+    ## Part 5.4: Gstreamer Common Tools
+
+
+    ### 1 gst-inspect-1.0
+
+
+    Without parameters, it will list all available elements, that is, all the elements
+    you can use. With a file name, it will use this file as a plug-in of GStreamer,
+    try to open it, and then list all the internal elements. With an element of GStreamer,
+    all the information of the element will be listed.
+
+
+    Print the list of plug-ins and their information, such as:
+
+
+    - Print the list of supported plugins: `gst-inspect-1.0 -a`
+
+    - Print plugin filesrc information: `gst-inspect-1.0 filesrc`
+
+
+    Pad Templates: This section will list all the types of Pads and their Caps. Through
+    these you can confirm whether you can connect to a certain element
+
+
+    ### 2 gst-discoverer
+
+
+    This tool can be used to view the Caps contained in the file, which is a package
+    of the GstDiscoverer object. Accept a URI from the command line, and then print
+    out all the information. This is useful when looking at how the media is encoded
+    and reused, so that we can determine what element to put in the pipeline.
+
+
+    ### 3 gst-launch-1.0
+
+
+    This tool can create a pipeline, initialize and then run. It allows you to quickly
+    test the pipeline before you formally write the code to see if it works. If you
+    need to view the Caps generated by an element in the pipeline, use the -v parameter
+    in gst-launch, as follows:
+
+
+    `gst-launch-1.0 -v v4l2src device=/dev/video0`
+
+
+    As you can see from the picture below, the default video format of the camera
+    is YUY2 with a resolution of 2592x1944
+
+
+    ## Part 5.5: gst-launch-1.0 camera display
+
+
+    ### 1) Confirm the video format supported by your usb camera
+
+
+    Copy `tools/uvc_fmt` to the FPGA development board to run, you can scan the supported
+    resolution
+
+
+    ### 2) Under the control
+
+
+    Under the control, enter the following command. The resolution supported by your
+    usb camera needs to be set according to the monitor:
+
+
+    `gst-launch-1.0 -v v4l2src device=/dev/video0 ! video-x-raw,format=YUY2,width=1920,height=1080
+    ! kmssink video-id=0 sink-overlay=0x0000000 fullscreen=1`
+
+
+    As you can see from the picture below, the default video format of the camera
+    is YUY2 with a resolution of 2592x1944. Note: The resolution supported by your
+    usb camera needs to be set according to the monitor.
+
+
+    ### 3) After running
+
+
+    After running, we can see that the image is very smooth, but the disadvantage
+    is that it can only display on a single screen.
+
+
+    ## Part 5.6: Programming
+
+
+    The routines in this chapter use to achieve the above scenarios, but if we want
+    more effects, they need to be achieved through programming.
+
+
+    1) gst_parse_launch
+
+
+    This function creates a pipeline, the function parameters as follows:
+
+
+    - `const gchar *pipelinedescription`: Describe the pipeline
+
+    - `GError **error`: Error return
+
+
+    2) gst_bus_add_watch
+
+
+    Add the callback function of the bus to process the necessary messages.
+
+
+    ## Part 5.7: Code Analysis
+
+
+    ## Part 6: Qt+DRM+GStreamer Camera Display
+
+
+    ## Part 6.1: DRM Introduction
+
+
+    DRM, the full name of Direct Rendering Manager. It was created to solve the problem
+    of collaborative use of Video Card resources by multiple programs. It provides
+    a set of APIs to user space for output management. DRM has now covered many functions
+    previously handled by user space programs, such as frame buffer management and
+    mode setting, memory shared objects and memory synchronization. Some of these
+    extensions have specific names, such as graphical execution manager GEM or kernel
+    mode settings KMS, which belong to the DRM subsystem.
+
+
+    1) DRM Framebuffer
+
+
+    From the developer''s point of view, Framebuffer is a piece of memory, and writing
+    data in a specific format to the memory means outputting content to the screen.
+    So Framebuffer is a canvas. For example, for the FrameBuffer initialized to 16-bit
+    color, the two bytes in the FrameBuffer represent a point on the screen, from
+    top to bottom, from left to right, the screen position and the memory address
+    have a relationship.
+
+    '
+  mdcn: '
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_36_0.png)[](img/1cbdc9e6f065399dc26b2b407e539434_36_1.png)
+
+
+    ***Ultrascale+ Linux 应用开发教程***
+
+
+    ***亚马逊商店：https://www.amazon.com/alinx***
+
+
+    **37 / 50**
+
+
+    2) bin（容器）和 Pipeline（流水线）
+
+
+    Bin 是可以包含元素的容器。Pipeline 是 Bin 的特殊子类。Pipeline 可以操作其内部包含的所有元素。如下所示
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_36_3.png)
+
+
+    3) Pad（节点）
+
+
+    Pad 等同于组件的接口，每个组件都通过此接口连接，以便数据流可以在这些组件之间传输。Pad 类别有：
+
+
+    - always（始终）
+
+    - sometimes（有时）
+
+    - on request（按请求）
+
+
+    4) Cap（类型）
+
+
+    Caps 描述了可以通过 Pad 或当前通过 Pad 的数据流格式。你可以通过 `gst-inspect-1.0` 命令查看组件支持的媒体类型。
+
+
+    5) Bus（总线）
+
+
+    每个 pipeline 默认包含一个 bus，应用程序不需要创建另一个总线。应用程序在总线上设置了一个消息处理器。当主循环运行时，总线会轮询消息处理器以获取新消息。当收集到消息时，总线将调用相应的回调函数完成任务。
+
+
+    6) Buffer（缓冲区）
+
+
+    buffer 包含创建管道中的数据流。通常源组件会创建一个新的缓冲区，同时组件会将缓冲区中的数据传递给下一个组件。使用 GStreamer 的底层结构创建媒体流水线时，你不需要自己处理缓冲区，组件会自动处理这些缓冲区。缓冲区主要由以下部分组成：
+
+
+    - 指向内存块的指针
+
+    - 内存大小
+
+    - Buffer 时间戳
+
+    - 引用计数，表示使用缓冲区的组件数量。当没有组件引用它时，该引用将销毁缓冲区
+
+
+    7) Events（事件）
+
+
+    事件包括流水线中的控制信息，例如搜索信息和流终止信号。
+
+
+    ## 第 5.3 部分：实验目标
+
+
+    gstreamer 工具使用
+
+
+    gstreamer 编程
+
+
+    ## 第 5.4 部分：Gstreamer 工具
+
+
+    ### 1 gst-inspect-1.0
+
+
+    如果不带参数，它将列出所有可用的元素，即你可以使用的所有元素。如果带有文件名，它会将该文件作为 GStreamer 的插件并尝试打开它，然后列出所有内部元素。对于
+    GStreamer 的某个元素，将列出该元素的所有信息。
+
+
+    打印列表及其信息，例如：
+
+
+    - 打印支持的插件列表：`gst-inspect-1.0 -a`
+
+    - 打印插件 filesrc 信息：`gst-inspect-1.0 filesrc`
+
+
+    Pad Templates（Pad模板）：此部分将列出所有类型的 Pad 及其 Caps。通过这些你可以确认是否可以连接到某个元素。
+
+
+    ### 2 gst-discoverer
+
+
+    此工具用于查看文件中包含的 Caps，这是一个 GstDiscoverer 对象包。它接受命令行传入的 URI，然后打印所有信息。这在查看媒体如何编码和复用非常有用，以便我们决定在流水线中放置哪个元素。
+
+
+    ### 3 gst-launch-1.0
+
+
+    此工具可以创建、初始化并运行一个流水线。它允许你在正式编写代码之前快速测试流水线以查看其运行情况。如果你需要查看流水线中元素生成的 Caps，请在 gst-launch
+    中使用 -v 参数，如下：
+
+
+    `gst-launch-1.0 -v v4l2src device=/dev/video0`
+
+
+    如底图片所示，摄像头的默认视频格式为 YUY2，分辨率为 2592x1944
+
+
+    ## 第 5.5 部分：gst-launch-1.0 摄像头显示
+
+
+    ### 1) 确认你的 USB 摄像头支持的视频格式
+
+
+    将 `tools/uvc_fmt` 拷贝到 FPGA 开发板上运行，可以扫描支持的分辨率
+
+
+    ### 2) 控制
+
+
+    在控制下，输入以下命令。需要根据显示器设置你的 USB 摄像头支持的分辨率：
+
+
+    `gst-launch-1.0 -v v4l2src device=/dev/video0 ! video-x-raw,format=YUY2,width=1920,height=1080
+    ! kmssink video-id=0 sink-overlay=0x000000 fullscreen=1`
+
+
+    如底图片所示，摄像头的默认视频格式为 YUY2，分辨率为 2592x1944。注意：需要根据显示器设置你的 USB 摄像头支持的分辨率。
+
+
+    ### 3) 运行后
+
+
+    运行后可以看到图像非常流畅，但缺点是只能显示在单个屏幕上。
+
+
+    ## 第 5.6 部分：编程
+
+
+    本章中的程序用于实现上述场景，但如果我们想要更多效果，则需要通过编程来实现。
+
+
+    1) gst_parse_launch
+
+
+    此函数创建一个流水线，函数参数如下：
+
+
+    - `const gchar *pipelinedescription`: 描述流水线
+
+    - `GError **error`: 错误返回
+
+
+    2) gst_bus_add_watch
+
+
+    添加总线的回调函数以处理必要的消息。
+
+
+    ## 第 5.7 部分：代码分析
+
+
+    ## 第 6 部分：Qt+DRM+GStreamer 摄像头显示
+
+
+    ## 第 6.1：DRM 简介
+
+
+    DRM 全称为 Direct Rendering Manager（直接渲染管理器）。它的创建是为了解决多个程序协作使用显卡资源的问题。它为用户空间提供了一组用于输出管理的
+    API。DRM 现在已经涵盖了以前由用户空间程序处理的功能，例如帧缓冲区管理和模式设置、内存共享对象和内存同步。其中一些扩展有特定名称，例如图形执行管理器
+    GEM 或内核模式设置 KMS，它们属于 DRM 子系统。
+
+
+    1) DRM Framebuffer（帧缓冲区）
+
+
+    从开发者的角度来看，Framebuffer 是一块内存，向内存中写入特定格式的数据意味着向屏幕输出内容。因此，Framebuffer 是一个画布。例如，对于初始化为
+    16 位颜色的 FrameBuffer，Framebuffer 中的两个字节代表屏幕上的一个点，从上到下、从左到右，屏幕位置与内存地址之间存在关系。
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 36]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_36_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_36_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **37 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_36_2.png)
+
+
+    2) bin and Pipeline
+
+
+    Bins is a container that can hold elements. Pipelines are a special
+
+
+    subcategory of Bins. Pipelines can operate all elements contained
+
+
+    within itself. As shown below
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_36_3.png)
+
+
+    3) Pad
+
+
+    Pads are equivalent to the interface of a component, and each
+
+
+    component is connected through this interface, so that the data
+
+
+    stream can be transmitted in these components. Pads category:
+
+
+    always
+
+
+    sometimes
+
+
+    on request
+
+
+    4) Cap
+
+
+    Caps describes the format of the data stream that can pass
+
+
+    through the pad or currently pass through the pad. You can view the
+
+
+    media types supported by the component through the gst-inspect-1.0
+
+
+    command.
+
+
+    5) Bus
+
+
+    Each pipeline contains a bus by default, and the application does
+
+
+    not need to create another bus. The application program sets up a'
+  - '[PAGE 37]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_37_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_37_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **38 / 50**
+
+
+    message processor on the bus. When the main loop is running, the
+
+
+    bus will poll the message processor for new messages. When the
+
+
+    messages are collected, the bus will call the corresponding callback
+
+
+    function to complete the task
+
+
+    6) Buffer
+
+
+    The buffer contains the data stream in the created pipe. Usually a
+
+
+    source component will create a new buffer, and at the same time the
+
+
+    component will pass the data in the buffer to the next component.
+
+
+    When using GStreamer''s underlying structure to create a media
+
+
+    pipeline, you don''t need to process the buffers yourself, and the
+
+
+    component will automatically process these buffers. The buffer zone is
+
+
+    mainly composed of the following components:
+
+
+    Pointer to a block of memory
+
+
+    The size of the memory
+
+
+    Buffer timestamp
+
+
+    A reference count indicates the number of components used
+
+
+    in the buffer. When there is no component to reference, this
+
+
+    reference will be used to destroy the buffer
+
+
+    7) Events
+
+
+    Events include control information in the pipeline, such as search
+
+
+    information and flow termination signals.
+
+
+    **Part 5.3: Experiment Goal**
+
+
+    gstreamer tool usage
+
+
+    gstreamer programming
+
+
+    **Part 5.4: Gstreamer Common Tools**
+
+
+    1) gst-inspect-1.0
+
+
+    Without parameters, it will list all available elements, that is, all'
+  - '[PAGE 38]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_38_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_38_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **39 / 50**
+
+
+    the elements you can use, with a file name, it will use this file as a
+
+
+    plug-in of GStreamer, try to open it, and then list all the internal
+
+
+    elements, With an element of GStreamer, all the information of
+
+
+    the element will be listed.
+
+
+    Print the list of plug-ins and their information, such as:
+
+
+    Print the list of supported plugins
+
+
+    gst-inspect-1.0 -a
+
+
+    Print plugin filesrc information
+
+
+    gst-inspect-1.0 filesrc
+
+
+    Pad Templates: This section will list all the types of Pads and
+
+
+    their Caps. Through these you can confirm whether you can
+
+
+    connect to a certain element
+
+
+    2) gst-discoverer
+
+
+    This tool can be used to view the Caps contained in the file, which
+
+
+    is a package of the GstDiscoverer object. Accept a URI from the
+
+
+    command line, and then print out all the information. This is useful
+
+
+    when looking at how the media is encoded and reused, so that
+
+
+    we can determine what element to put in the pipeline.
+
+
+    3) gst-launch-1.0
+
+
+    This tool can create a pipeline, initialize and then run. It allows
+
+
+    you to quickly test the pipeline before you formally write the code
+
+
+    to see if it works. If you need to view the Caps generated by an
+
+
+    element in the pipeline, use the -v parameter in gst-launch, as
+
+
+    follows
+
+
+    gst-launch-1.0 -v v4l2src device=/dev/video0
+
+
+    As you can see from the picture below, the default video format of
+
+
+    the camera is YUY2 with a resolution of 2592x1944'
+  - '[PAGE 39]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_39_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_39_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **40 / 50**
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_39_2.png)
+
+
+    **Part 5.5: gst-launch-1.0 camera display**
+
+
+    1) Confirm the video format supported by your usb camera
+
+
+    Copy tools/uvc\_fmt to the FPGA development board to run, you
+
+
+    can scan the supported resolution
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_39_3.png)
+
+
+    2) Under the control terminal, enter the following command
+
+
+    gst-launch-1.0 v4l2src device=/dev/video0 !
+
+
+    video/x-raw,format=YUY2,width=1920,height=1080 ! kmssink
+
+
+    bus-id=fd4a0000.zynqmp-display fullscreen-overlay=1
+
+
+    Note: The resolution and video format here need to be supported
+
+
+    by your own usb camera, which can be set according to the
+
+
+    resolution supported by your camera, and the corresponding
+
+
+    resolution monitor also needs to be supported. When the video is
+
+
+    displayed, the resolution of the monitor will be set to be consistent
+
+
+    with the captured image
+
+
+    3) running result
+
+
+    If the image can be displayed, we can see that the image will be
+
+
+    very smooth, but the disadvantage is that it can only display the
+
+
+    image on a single screen, and it can only display the resolution'
+  - '[PAGE 40]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_40_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_40_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **41 / 50**
+
+
+    supported by both the camera and the monitor.
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_40_2.png)
+
+
+    **Part 5.6: Programming Run Program**
+
+
+    Through commands, we can quickly verify various scenarios we
+
+
+    envisioned, but if we want more status monitoring or user control, this
+
+
+    needs to be achieved through programming.
+
+
+    The routines in this chapter use programs to achieve the above
+
+
+    command effects
+
+
+    1) The matters needing attention are the same as above, you need to
+
+
+    modify the resolution and format supported by the usb camera
+
+
+    2) The program monitors and handles various status changes by
+
+
+    adding a callback function sink\_message for message events.
+
+
+    3) After running the program, you can see that the displayed image is
+
+
+    the same as the command run. At this time, unplug the camera,
+
+
+    the program prints the following information and the program exits.
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_40_3.png)'
+  - '[PAGE 41]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_41_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_41_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **42 / 50**
+
+
+    **Part 5.7: Code Analysis**
+
+
+    1) gst\_parse\_launch
+
+
+    This function creates a pipelin, the function parameters are as
+
+
+    follows:
+
+
+    const gchar \*
+
+
+    pipeline\_description
+
+
+    Describe the pipeline
+
+
+    GError \*\*
+
+
+    error
+
+
+    Error return
+
+
+    2) gst\_bus\_add\_watch
+
+
+    Add the callback function of the bus to process the necessary
+
+
+    messages'
+  - '[PAGE 42]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_42_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_42_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **43 / 50**
+
+
+    **Part 6: Qt+DRM+Gstreamer Camera**
+
+
+    **Display**
+
+
+    **Part 6.1: DRM Introduction**
+
+
+    DRM, the full name of Direct Rendering Manager. It was created
+
+
+    to solve the problem of collaborative use of Video Card resources by
+
+
+    multiple programs. It provides a set of APIs to user space for output
+
+
+    management.
+
+
+    DRM has now covered many functions previously handled by
+
+
+    user space programs, such as frame buffer management and mode
+
+
+    setting, memory shared objects and memory synchronization. Some
+
+
+    of these extensions have specific names, such as graphical execution
+
+
+    manager GEM or kernel mode settings KMS, which belong to the
+
+
+    DRM subsystem.
+
+
+    DRM shows that it mainly involves the following 5 modules
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_42_2.png)
+
+
+    1) DRM Framebuffer
+
+
+    From the developer''s point of view, FrameBuffer is a piece of
+
+
+    memory, and writing data in a specific format to the memory means
+
+
+    outputting content to the screen. So FrameBuffer is a canvas. For
+
+
+    example, for the FrameBuffer initialized to 16-bit color, the two bytes
+
+
+    in the FrameBuffer represent a point on the screen, from top to bottom,
+
+
+    from left to right, the screen position and the memory address have a'
+- md: "\nlinear relationship in order.\n\n2) CRTC\n\nThe task of CRTC is to read the\
+    \ image to be displayed from the Framebuffer and output it to the Encoder according\
+    \ to the corresponding format. Although CRTC literally means a cathode ray picture\
+    \ tube controller, CRT has long been eliminated in ordinary display equipment.\
+    \ The main functions of CRTC in DRI are as follows:\n\n- Configure the resolution\
+    \ (kernel) suitable for the display and output the corresponding timing (hardware\
+    \ logic)\n- Scan the framebuffer and send it to one or more display devices \n\
+    \n3) Planes\n\nWith the continuous updating of software technology, the requirements\
+    \ for hardware performance are getting higher and higher. Under the premise of\
+    \ meeting the normal use of functions, the requirements for power consumption\
+    \ are becoming more and more demanding. Originally the GPU can handle all graphics\
+    \ tasks, but due to its high power consumption during runtime, the designers decided\
+    \ to hand over some simple tasks to the Display Controller for processing (such\
+    \ as compositing), and let the GPU focus on drawing (that is, rendering) This\
+    \ main task. Reduce the burden on the GPU, so as to achieve the purpose of reducing\
+    \ power consumption and improving performance. Thus, Plane (hardware layer unit)\
+    \ was born.\n\nPlanes mainly superimpose and output multiple layers. Some hardware\
+    \ supports layer translation, scaling, cropping, alpha channel, etc.\n\n4) Encoder\n\
+    \nEncode a certain format of image signal (such as RGB, YUV, etc.) into the signal\
+    \ that the connector needs to output. Taking HDMI as an example, the frame/line\
+    \ synchronization/display content is output through the serial bus of TMDS data,\
+    \ and then the parallel sequence is encoded into serial sequence according to\
+    \ the HDMI standard, which is the task of the Encoder.\n\n5) Connector\n\nConnector\
+    \ is actually the physical interface connected to the display. The common ones\
+    \ are VGA/HDMI/DVI/DP, etc. The parameters supported by the display can be read\
+    \ out through the connector.\n\n## Part 6.2: Experiment Introduction\n\nThe DP\
+    \ output of MPSoc supports two layers, and the upper layer (Primary) supports\
+    \ the alpha channel. The experiment in this chapter uses Qt to output content\
+    \ to the Primary layer, and Gstreamer captures video data to the following layer\
+    \ (Overlay). Finally, these two layers are mixed and output by the hardware. The\
+    \ working block diagram is as follows:\n\n## Part 6.3: Experiment Goal\n\n1) DRM\
+    \ output management\n2) DRM layer management\n3) Qt and GStreamer hierarchical\
+    \ display\n\n## Part 6.4: Run the program\n\n1) It should be noted that this experiment\
+    \ requires a usb camera to support 1080 resolution (refers to the bare stream,\
+    \ such as the YUYV422 format above)\n2) Experimental operation effect\n\nYou can\
+    \ see that a Qt interface is superimposed on the video.\n\n## Part 6.5: Code analysis\n\
+    \n1) Check whether the display is connected\nIn the main function, call init\\\
+    _drm to determine whether the initialization is successful, and return -2, which\
+    \ means there is no supported display format, indicating that the monitor is not\
+    \ connected.\n\n2) Set the monitor output resolution\nSet the output resolution\
+    \ and refresh rate through the function drmModeSetCrtc. There is no buffer set\
+    \ here, so the third...\n\n3) Set the monitor output resolution\nThe transparency\
+    \ of the graphics layer\nThe graphics layer supports alpha channel. Here it\\\
+    _alpha is set to 0.\n\n4) Qt display\nGstreamer\n\nThe plane information can be\
+    \ obtained through drmModeGetPlane. As you can see from the code, the attributes\
+    \ of the plane are set as follows:\n- type=dp\n- id=35\n- fullscreen=false\n-\
+    \ overlay=0\n- alpha=0\n\n5) Encoder\nThe plane id is set to 35.\n\n## Part 7:\
+    \ Register Operation\n\n### Part 7.1: Memory Map\n\nMemory mapping is to map an\
+    \ area of user space to kernel space. After the mapping is successful, the modification\
+    \ of this area can be directly reflected in kernel space. Similarly, the modification\
+    \ of this area can also be directly reflected in user space. \n\n### Part 7.2:\
+    \ Experiment Introduction\n\nSometimes, the function of a certain peripheral has\
+    \ been verified under bare metal. If the peripheral does not use interrupts, at\
+    \ this time we can use the method of mapping registers under linux to directly\
+    \ transplant the program under bare metal to linux. This example transplants the\
+    \ gpio example under vitis to drive ps\\_led, and the LED flashes once per second.\
+    \ For other operations, the process is similar.\n\n### Part 7.3: Run the program\n\
+    \nAfter running the application\\_opt, you can see that the LED light of PS flashes\
+    \ once per second.\n\n### Part 7.4: Code analysis\n\n1) Regarding the register\
+    \ address of gpio, here are all copied from the gpio routine of vitisi, and our\
+    \ development idea should be like this later, first use vitisi's bare metal program\
+    \ to verify. For many peripherals and FPGA-side ips, vitisi will help us generate\
+    \ good operation methods and operation addresses, so that we don't need to find\
+    \ the corresponding relationship.\n\n2) When opening /dev/mem, use the option\
+    \ O\\_SYNC.\n\nThe efficiency of memory mapping is higher than calling read/write.\
+    \ Why? The reason is that read() is a system call in which data is copied. It\
+    \ first copies the content of the file from hard disk to a buffer in kernel space,\
+    \ and then copies the data to user space. In this process, the data is actually\
+    \ copied twice. And mmap() is also a system call, there is no data copy in mmap(),\
+    \ and the real data copy is performed when the page fault is interrupted. Because\
+    \ mmap() directly maps the file to user space, only one data copy is performed.\n"
+  mdcn: '
+
+    有序线性关系。
+
+
+    2) CRTC
+
+
+    CRTC 的任务是从帧缓冲区（Framebuffer）中读取要显示的图像，并根据相应的格式将其输出到编码器（Encoder）。虽然 CRTC 的字面意思是“阴极射线显示管控制器”，但
+    CRT 早已在普通显示设备中被淘汰。CRTC 在 DRI 中的主要功能如下：
+
+
+    - 配置适用于显示器的分辨率（内核）并输出相应的时序（硬件逻辑）
+
+    - 扫描帧缓冲区并将其发送到一个或多个显示设备
+
+
+    3) Planes（平面/层）
+
+
+    随着软件技术的不断更新，对硬件性能的要求越来越高。在满足正常功能需求的前提下，对功耗的要求变得越来越严苛。最初 GPU 可以处理所有图形任务，但由于其运行期间功耗较高，设计人员决定将一些简单任务交给显示器控制器（Display
+    Controller）处理（如合成），让 GPU 专注于绘制（即渲染）这一主任务。减轻 GPU 的负担，从而达到降低功耗和提高性能的目的。因此，Plane（硬件层单元）应运而生。
+
+
+    Plane 主要用于叠加和输出多个层。某些硬件支持层平移、缩放、裁剪、Alpha 通道等。
+
+
+    4) Encoder（编码器）
+
+
+    将特定格式的图像信号（如 RGB、YUV 等）编码为连接器需要输出的信号。以 HDMI 为例，帧/行同步/显示内容通过 TMDS 数据的串行线输出，然后根据
+    HDMI 标准将并行序列编码为串行序列，这就是编码器的任务。
+
+
+    5) Connector（接口）
+
+
+    Connector 实际上是连接到显示器的物理接口。常见的有 VGA/HDMI/DVI/DP 等。可以通过接口读取显示支持的参数。
+
+
+    ## 第 6.2 部分：实验介绍
+
+
+    MPSoc 的 DP 输出支持层，上层（Primary）支持 Alpha 通道。本章实验使用 Qt 输出内容到 Primary 层，并使用 Gstreamer
+    捕捉视频数据到后续层（Overlay）。最后，这两层由硬件进行混合并输出。工作框图如下：
+
+
+    ## 第 6.3 部分：实验目标
+
+
+    1) DRM 输出管理
+
+    2) DRM 层管理
+
+    3) Qt 和 GStreamer 分层显示
+
+
+    ## 第 6.4 部分：运行程序
+
+
+    1) 需要注意的是，本实验需要支持 1080 分辨的 USB摄像头（指裸流，例如上述的 YUYV422 格式）
+
+    2) 实验操作效果
+
+
+    你可以看到 Qt 界面叠加在视频上。
+
+
+    ## 第 6.5 部分：代码分析
+
+
+    1) 检查显示器是否连接
+
+    在主函数中，调用 `init_drm` 判断初始化是否成功，返回 -2 表示没有支持的显示格式，说明未连接显示器。
+
+
+    2) 设置显示器输出分辨率
+
+    通过函数 `drmModeSetCrtc` 设置输出分辨率和刷新率。这里没有设置缓冲区，所以第三个...
+
+
+    3) 设置显示器输出分辨率
+
+    图形层的透明度
+
+    图形层支持 Alpha 通道。这里 `it_alpha` 设置为 0。
+
+
+    4) Qt 显示
+
+    Gstreamer
+
+
+    可以通过 `drmModeGetPlane` 获取 Plane 信息。从代码中可以看到，Plane 的属性设置如下：
+
+    - type=dp
+
+    - id=35
+
+    - fullscreen=false
+
+    - overlay=0
+
+    - alpha=0
+
+
+    5) Encoder
+
+    Plane id 设置为 35。
+
+
+    ## 第 7 部分：寄存器操作
+
+
+    ### 第 7.1 部分：内存映射
+
+
+    内存映射是将用户空间的一个区域映射到内核空间。映射成功后，对该区域的修改可以直接反映在内核空间。同样，对该区域的修改也可以直接反映在用户空间。
+
+
+    ### 第 7.2 部分：实验介绍
+
+
+    有时，某个外设的功能已经在裸机上通过验证。如果该外设不使用中断，此时我们可以使用 Linux 下映射寄存器的方法直接将裸机程序移植到 Linux。此示例移植了
+    Vitis 下的 gpio 示例来驱动 ps_led，使 LED 每秒闪烁一次。其他操作的过程也类似。
+
+
+    ### 第 7.3 部分：运行程序
+
+
+    运行 `application_opt` 后，你可以看到 PS 的 LED 每秒闪闪一次。
+
+
+    ### 第 7.4 部分：代码分析
+
+
+    1) 关于 gpio 的寄存器地址，这里全部是从 Vitis 的 gpio 程序中复制的，我们以后的开发思路应该是：先使用 Vitis 的裸机程序进行验证。对于许多外设和
+    FPGA 端的 IP，Vitis 会帮助我们生成良好的操作方法和操作地址，这样我们就不需要寻找对应关系。
+
+
+    2) 打开 `/dev/mem` 时，使用 `O_SYNC` 选项。
+
+
+    内存映射的效率高于调用 `read/write`。为什么？因为 `read()` 是系统调用，涉及数据拷贝。它首先将文件内容从硬盘拷贝到内核空间的缓冲区，然后将数据拷贝到用户空间。在这个过程中，数据实际上被拷贝了两次。而
+    `mmap()` 也是一个系统调用，`mmap()` 中没有数据拷贝，真实的数据拷贝是在页异常中断被处理时执行的。因为 `mmap()` 直接将文件映射到用户空间，所以只执行一次数据拷贝。
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 43]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_43_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_43_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **44 / 50**
+
+
+    linear relationship in order.
+
+
+    2) CRTC
+
+
+    The task of CRTC is to read the image to be displayed from the
+
+
+    Framebuffer
+
+
+    and
+
+
+    output
+
+
+    it
+
+
+    to
+
+
+    the
+
+
+    Encoder
+
+
+    according
+
+
+    to
+
+
+    the
+
+
+    corresponding format. Although CRTC literally means a cathode ray
+
+
+    picture tube controller, CRT has long been eliminated in ordinary
+
+
+    display equipment. The main functions of CRTC in DRI are as follows:
+
+
+    Configure the resolution (kernel) suitable for the display and output
+
+
+    the corresponding timing (hardware logic)
+
+
+    Scan the framebuffer and send it to one or more display devices
+
+
+    3) Planes
+
+
+    With
+
+
+    the
+
+
+    continuous
+
+
+    updating
+
+
+    of
+
+
+    software
+
+
+    technology,
+
+
+    the
+
+
+    requirements for hardware performance are getting higher and higher.
+
+
+    Under the premise of meeting the normal use of functions, the
+
+
+    requirements for power consumption are becoming more and more
+
+
+    demanding. Originally the GPU can handle all graphics tasks, but due
+
+
+    to its high power consumption during runtime, the designers decided
+
+
+    to hand over some simple tasks to the Display Controller for
+
+
+    processing (such as compositing), and let the GPU focus on drawing
+
+
+    (that is, rendering) This main task. Reduce the burden on the GPU, so
+
+
+    as to achieve the purpose of reducing power consumption and
+
+
+    improving performance. Thus, Plane (hardware layer unit) was born.
+
+
+    Planes
+
+
+    mainly
+
+
+    superimpose
+
+
+    and
+
+
+    output
+
+
+    multiple
+
+
+    layers.
+
+
+    Some
+
+
+    hardware supports layer translation, scaling, cropping, alpha channel,
+
+
+    etc.
+
+
+    4) Encoder
+
+
+    Encode a certain format of image signal (such as RGB, YUV, etc.)
+
+
+    into the signal that the connector needs to output. Taking HDMI
+
+
+    as an example, the frame/line synchronization/display content is'
+  - '[PAGE 44]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_44_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_44_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **45 / 50**
+
+
+    output through the serial bus of TMDS data, and then the parallel
+
+
+    sequence is encoded into serial sequence according to the HDMI
+
+
+    standard, which is the task of the Encoder.
+
+
+    5) Connector
+
+
+    Connector is actually the physical interface connected to the
+
+
+    display. The common ones are VGA/HDMI/DVI/DP, etc. The
+
+
+    parameters supported by the display can be read out through the
+
+
+    connector
+
+
+    **Part 6.2:Experiment Introduction**
+
+
+    The DP output of MPSoc supports two layers, and the upper layer
+
+
+    (Primary) supports the alpha channel. The experiment in this chapter
+
+
+    uses Qt to output content to the Primary layer, and Gstreamer
+
+
+    captures video data to the following layer (Overlay). Finally, these two
+
+
+    layers are mixed and output by the hardware. The working block
+
+
+    diagram is as follows:
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_44_2.png)
+
+
+    **Part 6.3: Experiment Goal**
+
+
+    1) DRM output management'
+  - '[PAGE 45]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_45_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_45_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **46 / 50**
+
+
+    2) DRM layer management
+
+
+    3) Qt and GStreamer hierarchical display
+
+
+    **Part 6.4: Run the program**
+
+
+    1) It should be noted that this experiment requires a usb camera to
+
+
+    support 1080 resolution (refers to the bare stream, such as the
+
+
+    YUYV422 format above)
+
+
+    2) Experimental operation effect
+
+
+    You can see that a Qt interface is superimposed on the video
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_45_2.png)
+
+
+    **Part 6.5: Code analysis**
+
+
+    1) Check whether the display is connected
+
+
+    In the main function, call init\_drm to determine whether the
+
+
+    initialization is successful, and return -2, which means there is no
+
+
+    supported display format, indicating that the monitor is not
+
+
+    connected
+
+
+    2) Set the monitor output resolution
+
+
+    Set the output resolution and refresh rate through the function
+
+
+    drmModeSetCrtc. There is no buffer set here, so the third'
+  - '[PAGE 46]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_46_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_46_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **47 / 50**
+
+
+    parameter is set to -1
+
+
+    3) Set the transparency properties of the graphics layer
+
+
+    The graphics layer supports global and single-pixel settings for
+
+
+    alpha values. Here it is set to a single pixel, that is, g\_alpha\_en is
+
+
+    set to 0
+
+
+    4) Qt display
+
+
+    Qt is displayed in the Primary layer by default
+
+
+    5) GStreamer display
+
+
+    The
+
+
+    plane
+
+
+    information
+
+
+    can
+
+
+    be
+
+
+    obtained
+
+
+    through
+
+
+    drmModeGetPlaneResources, including the id number of the plane.
+
+
+    The ID of the overlay layer obtained here is 35. As you can see from
+
+
+    the code, the attributes of kmssink are set as follows:
+
+
+    kmssink sink-type=dp bus-id=fd4a0000.zynqmp-display fullscreen-overlay=false plane-id=35'
+  - '[PAGE 47]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_47_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_47_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **48 / 50**
+
+
+    **Part 7: Linux Register Operation**
+
+
+    **Part 7.1: Linux Memory Map**
+
+
+    Memory mapping is to map a memory area of user space to
+
+
+    kernel space. After the mapping is successful, the user''s modification
+
+
+    of this memory area can be directly reflected in the kernel space.
+
+
+    Similarly, the modification of this area by the kernel space can also
+
+
+    directly reflect the user space. This is very efficient for transferring
+
+
+    large amounts of data between kernel space and user space.
+
+
+    For example, to read a file from the hard disk into the memory,
+
+
+    the data must be copied through the file system, and the data copy
+
+
+    operation is realized by the file system and the hardware driver. In
+
+
+    theory, the efficiency of copying data is the same. But accessing files
+
+
+    on the hard disk through memory mapping is more efficient than
+
+
+    calling the read and write systems. Why?
+
+
+    The reason is that read() is a system call in which data is copied.
+
+
+    It first copies the content of the file from the hard disk to a buffer in the
+
+
+    kernel space, and then copies the data to the user space. In this
+
+
+    process, the data is actually copied twice. And mmap() is also a
+
+
+    system call, there is no data copy in mmap(), and the real data copy is
+
+
+    performed when the page fault is interrupted. Because mmap()
+
+
+    directly maps the file to the user space, the interrupt handling function
+
+
+    directly copies the file from the hard disk to the user space according
+
+
+    to this mapping relationship, and only one data copy is performed.
+
+
+    Therefore, the efficiency of memory mapping is higher than that of
+
+
+    read/write.'
+  - '[PAGE 48]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_48_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_48_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **49 / 50**
+
+
+    **Part 7.2: Experiment Introduction**
+
+
+    Sometimes, the function of a certain peripheral has been verified
+
+
+    under bare metal. If the peripheral does not use interrupts, at this time,
+
+
+    we can use the method of mapping registers under linux to directly
+
+
+    transplant the program under bare metal to linux. In this way, you do
+
+
+    not need to develop a driver.
+
+
+    This example transplants the gpio example under vitis to drive
+
+
+    ps\_led, and the LED flashes once per second. For other operations,
+
+
+    the process is similar.
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_48_2.png)
+
+
+    **Part 7.3: Run the program**
+
+
+    After running the application register\_opt, you can see that the
+
+
+    LED light of PS flashes once per second
+
+
+    **Part 7.4: Code analysis**
+
+
+    1) Regarding the register address of gpio, here are all copied from
+
+
+    the gpio routine of vitisi, and our development idea should be like
+
+
+    this later, first use vitisi''s bare metal program to verify. For many
+
+
+    peripherals and FPGA-side ips, vitisi will help us generate good
+
+
+    operation methods and operation addresses, so that we don''t need
+
+
+    to find the corresponding relationship.
+
+
+    2) When opening /dev/mem, use the option O\_SYNC'
+- md: '
+
+    After writing data to the outside, usually the data is written to the cache buffer.
+    O_SYNC will ensure that data is written to the peripheral before returning. It
+    should be noted that O_SYNC here only affects write operations.
+
+
+    3) Call msync
+
+
+    If you need to write more data to the peripheral at one time, if you call O_SYNC
+    at this time, it will seriously affect the performance of the system. At this
+    time, if we do not use O_SYNC, but call msync after writing the data, this will
+    improve Write performance.
+
+
+    4) Read operation consistency problem
+
+
+    If you need to read the data of the peripheral, because of the existence of the
+    cache, the data fetched in the application is the data in the cache, not the latest
+    state of the peripheral. At this time, the read may be an incorrect value.
+
+    '
+  mdcn: '
+
+
+    在向外部写入数据后，数据通常会被写入缓存缓冲区。`O_SYNC` 会确保数据在返回之前已写入外设。需要注意的是，这里的 `O_SYNC` 仅影响写操作。
+
+
+    3) 调用 msync
+
+
+    如果你需要一次性向外设写入更多数据，此时如果调用 `O_SYNC` 将严重影响系统性能。此时，如果我们不使用 `O_SYNC`，而在写入数据后调用 `msync`，这将提高写入性能。
+
+
+    4) 读取操作的一性问题
+
+
+    如果你需要读取外设的数据，由于缓存的存在，应用程序中获取的数据是缓存中的数据，而不是外设的最新状态。此时，读取到的可能是错误的值。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 49]
+
+
+    ![](img/1cbdc9e6f065399dc26b2b407e539434_49_0.png)![](img/1cbdc9e6f065399dc26b2b407e539434_49_1.png)
+
+
+    ***Ultrascale+ Linux Application Development Tutorial***
+
+
+    ***Amazon Store: https://www.amazon.com/alinx***
+
+
+    **50 / 50**
+
+
+    After writing data to the outside, usually the data is written to the
+
+
+    cache buffer. O\_SYNC will ensure that data is written to the
+
+
+    peripheral before returning. It should be noted that O\_SYNC here
+
+
+    only affects write operations
+
+
+    3) Call msync
+
+
+    If you need to write more data to the peripheral at one time, if you
+
+
+    call O\_SYNC at this time, it will seriously affect the performance
+
+
+    of the system. At this time, if we do not use O\_SYNC, but call
+
+
+    msync after writing the data, this will improve Write performance.
+
+
+    4) Read operation consistency problem
+
+
+    If you need to read the data of the peripheral, because of the
+
+
+    existence of the cache, the data fetched in the application is the
+
+
+    data in the cache, not the latest state of the peripheral. At this
+
+
+    time, the read may be an incorrect value.'
