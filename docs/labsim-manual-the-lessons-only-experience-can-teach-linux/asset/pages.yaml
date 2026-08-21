@@ -1,0 +1,5891 @@
+- img_proc: true
+  md: '# # LabSim Manual
+
+
+    The Lessons Only Experience Can Teach
+
+
+    # Network+
+
+
+    TestOut'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '![](img/ec83bdece8c967d0c687b6a13db22bc0_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # LabSim Manual
+
+    Installation Instructions
+
+    The Lessons Only Experience Can Teach
+
+
+    +   1. Insert the disc into the CD or DVD drive while your computer is connected
+    to the Internet.
+
+
+    +   2. When the installation program starts, click **Install Application** and
+    follow the steps in the installation wizard. (If the installation window does
+    not launch automatically, run the **Autorun.exe** file in your CD or DVD drive
+    directory.)
+
+
+    During the installation, you can choose to run LabSim from the disc (runs more
+    slowly), or you can install the disc contents onto your hard drive (each disc
+    requires approximately 700 MB of free space).
+
+
+    +   3. Following installation, the TestOut Navigator program will be launched.
+    (If this program does not start, use the **TestOut LabSim** shortcut on your Start
+    menu or Desktop). Enter the username and password you received from your instructor.
+
+
+    +   4. After logging on, select the **LabSim link** (on the left under Learning
+    Resources) to run the product. Have your instructor activate the product if it
+    does not appear in the list of available titles.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # LabSim
+
+    Manual
+
+    Network+
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Copyright © 2006 TestOut™ Corporation.
+
+
+    TestOut™, CourseSim™, ExamSim™, LabSim™ and the TestOut Logo are registered trademarks
+    of TestOut Corporation.
+
+
+    All rights reserved. No part of this work carried by the copyright may be reproduced
+    or used in any form or by any means (graphic, electronic, mechanical, including
+    photocopying, recording, taping, Web distribution, or database) without the written
+    permission of the publisher.
+
+
+    # Trademarks
+
+
+    +   TestOut is a registered trademark of TestOut Corporation.
+
+    Cisco Systems is a trademark of Cisco Systems, Inc.
+
+    Novell is a registered trademark of Novell, Inc.
+
+    NetWare is a registered trademark of Novell, Inc.
+
+    Novell Directory Services is a registered trademark of Novell, Inc.
+
+    CNA is either a registered trademark or trademark of Novell, Inc.
+
+    IPX is a trademark of Novell, Inc.
+
+    IPX/SPX is a trademark of Novell, Inc.
+
+    Microsoft is either a registered trademark or trademark of Microsoft Corporation
+    in the United States and/or other countries.
+
+    Windows is either a registered trademark or trademark of Microsoft Corporation
+    in the United States and/or other countries.
+
+    Windows NT is either a registered trademark or trademark of Microsoft Corporation
+    in the United States and/or other countries.
+
+    MCAD is either a registered trademark or trademark of Microsoft Corporation in
+    the United States and/or other countries.
+
+    MCSE is either a registered trademark or trademark of Microsoft Corporation in
+    the United States and/or other countries.
+
+    MCSA is either a registered trademark or trademark of Microsoft Corporation in
+    the United States and/or other countries.
+
+    MCP is either a registered trademark or trademark of Microsoft Corporation in
+    the United States and/or other countries.
+
+    CCNA is either a registered trademark or trademark of Cisco Systems, Inc.
+
+    A+ is either a registered trademark or trademark of CompTIA, Inc.
+
+    Linux+ is either a registered trademark or trademark of CompTIA, Inc.
+
+    Network+ is either a registered trademark or trademark of CompTIA, Inc.
+
+    Security+ is either a registered trademark or trademark of CompTIA, Inc.
+
+    UNIX is a registered trademark, licensed exclusively through X/Open Company, Ltd.
+
+
+    All other brand and product names, fonts and company names and logos are trademarks
+    or registered trademarks of their respective companies.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# 0: Introduction .....................................................................................
+    7
+
+
+    +   0.2: Using the Hardware Simulator .................................................
+    7
+
+    0.2.2 Put an Item on the Workbench ........................ 8
+
+    0.2.3 Select an Item Based on Its Documentation .................................
+    9
+
+    0.2.4 Select Item Categories ...................................................................
+    10
+
+    0.2.5 Install and Uninstall Components ................................................
+    11
+
+    0.2.6 Set Dials and Switches ................................................................
+    12
+
+    0.2.9 Add Cabled Components ...............................................................
+    13
+
+
+    # 2.0: Cables and Connectors ............................................................
+    15
+
+
+    +   2.1: Twisted Pair ............................................................................
+    15
+
+    2.1.3 Connect a Modem ........................................................................
+    16
+
+    2.1.4 Connect to an Ethernet Network ...................................................
+    18
+
+    2.2: Coaxial .......................................................................................
+    19
+
+    2.2.3 Connect a Cable Modem 1 ............................................................
+    20
+
+    2.2.4 Connect a Cable Modem 2 ............................................................
+    22
+
+    2.3: Fiber Optic .................................................................................
+    24
+
+    2.3.3 Connect Fiber Optic Cables 1 ................................................
+    25
+
+    2.3.4 Connect Fiber Optic Cables 2 ................................................
+    27
+
+    2.4: USB and Firewire ......................................................................
+    28
+
+    2.4.3 Connect a USB Device ...............................................................
+    29
+
+    2.4.4 Connect Back-to-Back Computers ............................................
+    30
+
+
+    # 3.0: Networking Devices ...................................................
+    33
+
+
+    +   3.1: Network Adapters ......................................................
+    33
+
+    3.1.6 Select and Install a Network Adapter ...................................
+    34
+
+    3.1.8 Find Connection Information ...................................................
+    37
+
+    3.1.9 View Connection Properties ...................................................
+    41
+
+    3.1.10 Disable a Network Connection ............................................
+    43
+
+    3.2: Network Devices ........................................................
+    44
+
+    3.2.8 Select a Networking Device .................................................
+    45
+
+    3.3: Internetwork Devices ...................................................
+    47
+
+    3.3.4 Select a Router .................................................................
+    48
+
+
+    # 4.0: Wired Networking Standards ....................................... 51
+
+
+    +   4.1: Ethernet ..................................................................
+    51
+
+    4.1.6 Select Ethernet Cable ......................................................
+    52
+
+    4.1.7 Connect to 100BaseTX Network ................................... 54
+
+    4.1.8 Connect to a Fiber Optic Network ................................... 56'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 5.0: Wireless Networking Standards ............................................................................
+    59
+
+
+    +   5.2: Configuring a Wireless Network ........................................................................
+    59
+
+
+    +   5.2.3 Select a Wireless Card .......................................................................................
+    60
+
+
+    +   5.2.4 Create a Wireless Network 1 ............................................................................
+    62
+
+
+    +   5.2.5 Create a Wireless Network 2 ............................................................................
+    65
+
+
+    # 7.0: TCP/IP. .......................................................................................................
+    67
+
+
+    +   7.3: IP Configuration Parameters .......................................................................
+    67
+
+
+    +   7.3.4 Configure IP Settings 1 ......................................................................
+    68
+
+
+    +   7.3.5 Configure IP Settings 2 ......................................................................
+    72
+
+
+    # 8.0: IP Services .......................................................................................
+    75
+
+
+    +   8.1: Name Resolution ......................................................................................
+    75
+
+
+    +   8.1.7 Configure DNS Addresses ...................................................................
+    76
+
+
+    +   8.1.8 Configure WINS Settings ...................................................................
+    78
+
+
+    +   8.2: IP Address Assignment .......................................................................
+    80
+
+
+    +   8.2.4 Configure a DHCP Client ................................................................
+    81
+
+
+    +   8.3: NAT and ICS .....................................................................................
+    82
+
+
+    +   8.3.6 Share an Internet Connection ................................................
+    83
+
+
+    # 9.0: Operating Systems .....................................................................
+    85
+
+
+    +   9.1: Client and Server Operating Systems ........................................
+    85
+
+
+    +   9.1.5 Install a Service ...................................................................
+    86
+
+
+    +   9.2: Windows Networking .......................................................................
+    88
+
+
+    +   9.2.3 Create a Local User Account ...................................................
+    89
+
+
+    +   9.2.5 Modify Group Membership ................................................
+    91
+
+
+    +   9.2.8 Create a Domain User ......................................................
+    94
+
+
+    +   9.3: Windows Resources ................................................................
+    97
+
+
+    +   9.3.2 Map a Drive ........................................................................
+    98
+
+
+    +   9.3.4 Share a Local Printer ..................................................
+    100
+
+
+    +   9.3.5 Add a Network Printer ......................................... 102
+
+
+    +   9.3.7 Share a Folder ......................................................
+    104
+
+
+    +   9.3.10 Configure NTFS Permissions ................................ 107
+
+
+    +   9.5: NetWare Networking ...................................................
+    110
+
+
+    +   9.5.4 Install the MS Novell Client ................................ 111
+
+
+    +   9.5.7 Create an eDirectory User ................................... 113
+
+
+    +   9.5.9 Assign File System Rights ................................ 115'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# 10. Wide Area Networks (WANs) ................................................................................................\
+    \ 117\n\n+   10.2: Internet Connectivity ...................................................................................................\
+    \ 117\n  10.2.2 Connect to the PSTN .......................................................................................................\
+    \ 118\n  10.2.3 Connect to DSL Network ......................................................................................................\
+    \ 120\n  10.2.6 Create a Dial-up Internet Connection ................................................................................\
+    \ 122\n  10.2.7 Configure Internet Settings ...............................................................................................\
+    \ 125\n10.3: Remote Access ............................................................................................................................\
+    \ 128\n  10.3.4 Configure a Remote Access Connection ................................................................................\
+    \ 129\n  10.3.5 Disable Networking Components .......................................................................................\
+    \ 131\n10.4: Securing Remote Connections ................................................................................................\
+    \ 133\n  10.4.3 Configure the Authentication Protocol ......................................................................\
+    \ 134\n  10.4.7 Configure a VPN Connection ............................................................................................\
+    \ 136\n\n# 11.0: Network Protection and Availability ............................................................................\
+    \ 139\n\n+   11.2: Network Security ...................................................................................................\
+    \ 139\n  11.2.4 Enable ICF for a Connection ......................................................................................\
+    \ 140\n  11.2.5 Open a Port ...................................................................................................................\
+    \ 142\n11.5: Disaster Prevention and Recovery ................................................................................\
+    \ 145\n  11.5.4 Create a Mirrored Volume .........................................................................................\
+    \ 146\n  11.5.5 Create a RAID-5 Volume .......................................................................................................\
+    \ 148\n\n# 12.0: Troubleshooting ................................................................................................\
+    \ 151\n\n+   12.2: Troubleshooting Network Communication ...................................................................\
+    \ 151\n  12.2.4 Exploring Network Communications ......................................................................\
+    \ 152\n  12.2.5 Find Path Information 1 ..................................................................................................\
+    \ 154\n  12.2.6 Find Path Information 2 .........................................................................................\
+    \ 156\n  12.2.7 Identify Communication Capabilities 1 ................................................................\
+    \ 158\n  12.2.8 Identify Communication Capabilities 2 ................................................................\
+    \ 160\n  12.2.9 Troubleshooting Network Communication 1 ............................................................\
+    \ 162\n  12.2.10 Troubleshooting Network Communication 2 ..............................................................\
+    \ 164\n  12.2.11 Troubleshooting Network Communication 3 ............................................................\
+    \ 167\n12.4: Troubleshooting IP Configuration ............................................................................\
+    \ 170\n  12.4.4 Find Configuration Information 1 ......................................................................\
+    \ 171\n  12.4.5 Find Configuration Information 2 ......................................................................\
+    \ 173\n  12.4.6 Find Configuration Information 3 ......................................................................\
+    \ 175\n  12.4.7 Troubleshooting IP Configuration Problems 1 ................................................\
+    \ 177\n  12.4.8 Troubleshooting IP Configuration Problems 2 ................................................\
+    \ 179\n  12.4.9 Troubleshooting IP Configuration Problems 3 ................................................\
+    \ 181\n  12.4.10 Troubleshooting IP Configuration Problems 4 ............................................\
+    \ 184\n  12.4.12 Find Linux Information ...................................................................................\
+    \ 187"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# # 0.0: Introduction
+
+
+    # ## 0.2: Using the Hardware Simulator
+
+
+    # ### Objectives
+
+
+    +   - Use the documentation to identify system components and modules.
+
+    - View images to identify system components and modules.
+
+    - Select, drag, and drop system components in different areas of the environment.
+
+    - Install and uninstall system components.
+
+    - Change views, read component documentation, and examine component details.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Put an Item on the Workbench''
+
+
+    # Scenario
+
+
+    To practice using the TestOut Hardware Simulator, complete the following task:
+
+
+    +   1. From the **Shelf**, select the USB scanner.
+
+    2. Place the scanner next to the computer on the **Workbench**.
+
+
+    Click the **Done** button at the bottom of the screen when you are finished.
+
+
+    # Facts & Tasks
+
+
+    Notice that simulator screen is divided into three major areas:
+
+
+    +   - **Scenario** (upper right). The Scenario window gives you information about
+    what you need to do (you are currently reading text window).
+
+    - **Shelf** (left side of the screen). The Shelf window lists hardware items that
+    are available for you to install.
+
+    - **Workbench** (bottom right). The Workbench window shows all hardware items
+    that are currently installed.
+
+
+    # Steps
+
+
+    +   1. Examine the **Shelf** for the scanner entry that says "Scanner, USB 2.0."
+    (Group 2 is the group of USB scanners).
+
+    2. Click and hold any part of the item and drag the mouse to the empty space on
+    either side of the computer case on the **Workbench**.
+
+    3. Release the mouse when you see a white bar with arrows that indicates that
+    the item will be inserted on the Workbench.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 0.2.3 Select an Item Based on Its Documentation
+
+
+    # Scenario
+
+
+    To learn how to view and use item details, complete the following task:
+
+
+    +   - For each item in the **Shelf**, click the Details link to view pictures
+    and documentation for the device.
+
+    - Find the device that includes an optional printer port.
+
+    - Add that device to the **Workbench** next to the computer.
+
+
+    Click the **Done** button at the bottom of the screen when you are finished.
+
+
+    # Facts & Tasks
+
+
+    In this lab, you will learn how to get details about a hardware item on the **Shelf**
+    or **Workbench**. Two types of details are:
+
+
+    +   - **Views.** Multiple views of a hardware item are usually available. These
+    views are normally much bigger than the item''s icon shown on the **Shelf**.
+
+    - **Documentation.** Some hardware items have documentation that goes beyond the
+    item''s description.
+
+
+    # Steps
+
+
+    To put the scanner with the optional printer port on the **Workbench**
+
+
+    +   - Click the Details link next to one of the scanners on the **Shelf**.
+
+    - Click the Documentation tab to see a labeled overview of the scanner''s ports
+    and other controls.
+
+    - Drag the parallel scanner from the **Shelf** to the **Workbench**. The parallel
+    scanner includes a printer port.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '+   1. Make sure the Front or the Back Workbench view is selected. Otherwise,
+    click the Front or the Back Workbench view button on the Workbench toolbar.
+
+    2. If the scanners are not shown on the Shelf, click the Scanners category. Then
+    drag a scanner to the empty Workbench space next to the computer.
+
+    3. If the printers are not shown on the Shelf, click the Printers category. Then
+    drag a printer to the empty Workbench space next to the computer.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Install and Uninstall Components
+
+
+    # Scenario
+
+
+    To learn how to connect and disconnect items, do the following:
+
+
+    +   1. Switch to the Motherboard view.
+
+    2. Return the motherboard to the Shelf.
+
+    3. Switch to the Drive Bays view.
+
+    4. From the Shelf, insert the hard disk in a free slot.
+
+
+    Click the Done button at the bottom of the screen when you are finished.
+
+
+    # Facts & Tasks
+
+
+    So far, you have learned to put items on the Workbench. You can also install hardware
+    components into an existing computer.
+
+
+    # Steps
+
+
+    To remove the motherboard:
+
+
+    +   1. Switch to the Motherboard view (click the Motherboard button on the Workbench
+    button bar).
+
+    2. Drag the motherboard to the Shelf.
+
+
+    To install the hard drive:
+
+
+    +   1. Change to the Drive Bays view (click the Drive Bays button on the Workbench
+    button bar).
+
+    2. Drag the hard drive to the drive bay above the existing hard drive (or any
+    other drive bay of the same size).
+
+    3. Release the mouse and drop the hard drive when the drive bay highlights.
+
+
+    Note: You cannot install the hard drive in the larger slots above the existing
+    hard drive.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 0.2.6 Set Dials and Switches
+
+
+    # Scenario
+
+
+    To learn how to use action areas, complete the following tasks:
+
+
+    +   1. Switch to the Back view to see the back of the external CD drive.
+
+    2. Zoom in on the view until you can clearly see the controls on the drive.
+
+    3. Set the round dial on this CD drive to 4.
+
+    4. Put the TERM switch in the ON position (the switch should be pointing to the
+    right).
+
+
+    Click the Done button at the bottom of the screen when you are finished.
+
+
+    # Facts & Tasks
+
+
+    Some hardware items have action areas (controls such as dials, buttons, or switches).
+    You can manipulate action areas by clicking or shift-clicking them.
+
+
+    # Steps
+
+
+    To set the SCSI ID for the CD drive:
+
+
+    +   1. Change to the Back Workbench view.
+
+    2. Click the Zoom In tool on the Workbench toolbar under the Modes section.
+
+    3. Click the blue dial on the back of the CD drive until it is big enough to work.
+
+    4. Click the Select tool on the Workbench toolbar under the Modes section.
+
+    5. Click or shift-click the blue dial on the back of the CD drive to turn it.
+    (You can also click a number to set the dial to that number directly.)
+
+
+    To put the CD drive''s TERM switch in the ON position:
+
+
+    +   1. Change to the Back Workbench view.
+
+    2. Click the Zoom In tool on the Workbench toolbar under the Modes section.
+
+    3. Click the switch labeled TERM. Make sure the switch is pointing toward the
+    ON label.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# 0.2.9 Add Cabled Components
+
+
+    # Scenario
+
+
+    To learn how to work with cabled devices, complete the following tasks:
+
+
+    +   Put a mouse on the Workbench.
+
+
+    +   Connect the mouse to the computer''s mouse port (be sure to switch to the
+    Back view of the computer).
+
+
+    +   In the Drive Bays Workbench view, put a second hard drive in this computer
+    above the existing hard drive.
+
+
+    +   Open the Cables category on the Shelf and attach Connector 1 of the cable
+    on the Shelf to the existing hard drive.
+
+
+    +   Attach Connector 2 of the cable to the second hard drive you just installed.
+
+
+    +   Attach Connector 3 of the cable to the motherboard (you will need to switch
+    to Motherboard view).
+
+
+    Click the Done button at the bottom of the screen, when you are finished.
+
+
+    # Facts & Tasks
+
+
+    Many hardware devices are connected to the computer, or to each other, using cables.
+    In this lab, you will learn how to install cabled devices. Cables or items connected
+    with a cable will appear in the following area:
+
+
+    +   Workbench Connections. The right side of the Workbench shows all cables or
+    devices that include cables. Read the descriptions for each object to identify
+    where the cable is connected.
+
+
+    # Steps
+
+
+    To install a mouse:
+
+
+    +   Open the Mice category on the Shelf (if it is not already open),
+
+
+    +   Drag the mouse (not its connector) from the Shelf to the empty Workbench space
+    next to the computer.
+
+
+    +   If a message appears, read it and click OK.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '+   4. Change to the Back Workbench view.
+
+
+    +   5. Drag the mouse connector from the Workbench Connections list to the bright
+    green round mouse port on the back of the computer.
+
+
+    To install a second hard drive:
+
+
+    +   1. Change to the Drive Bays Workbench
+
+
+    +   2. Open the Hard Drive category on the Shelf (if it is not already open).
+
+
+    +   3. Drag the hard drive to the drive bay above the existing hard drive (or
+    any other drive bay of the same size). Release the mouse and drop the hard drive
+    when the drive bay highlights.
+
+
+    To connect the hard drives to the motherboard using a cable:
+
+
+    +   1. Change to the Drive Bays Workbench view.
+
+
+    +   2. Open the Cables category on the Shelf (if it is not already open).
+
+
+    +   3. Drag Connector 1 from the Shelf to the IDE port on the back of the existing
+    hard drive. Make sure the port is highlighted before you release the mouse. (If
+    you need help identifying the hard drive''s IDE port, read the hard drive''s documentation
+    prior to performing this step. The IDE port is labeled "IDE Pin 1" in the documentation.)
+
+
+    +   4. If a message appears, read it and click OK.
+
+
+    +   5. Drag Connector 2 from the Shelf to the IDE port on the back of the second
+    hard drive you just installed. Make sure the port is highlighted before you release
+    the mouse. (If you need help identifying the hard drive''s IDE port, read the
+    hard drive''s documentation prior to performing this step. The IDE port is labeled
+    "IDE Pin 1" in the documentation.)
+
+
+    +   6. If a message appears, read it and click OK.
+
+
+    +   7. Change to the Workbench view.
+
+
+    +   8. Drag Connector 3 from the Workbench Connections list to an IDE port on
+    the motherboard. Make sure the port is highlighted before you release the mouse.
+    (If you need help identifying an IDE port, read the motherboard''s documentation
+    prior to performing this step. The IDE ports are labeled "8" in the documentation.)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 2.0: Cables and Connectors
+
+
+    # 2.1: Twisted Pair
+
+
+    # Objectives
+
+
+    +   - Identify phone connectors, ports, and cable.
+
+    - Connect a PC to the Internet via phone connectors, ports, and cable.
+
+    - Identify twisted pair connectors, ports, and cable.
+
+    - Connect a PC to an Ethernet LAN.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# 2.1.3 Connect a Modem
+
+
+    You purchased a new computer to use at home for tasks like tracking your financial
+    records, which includes online banking and bill payment. To accomplish this you
+    need to establish an Internet connection. In your area, there are no broadband
+    Internet Service Providers (ISPs), but you do have a dial-up connection with an
+    ISP.
+
+
+    Your task in this lab is to connect your new computer to the phone line so that
+    you can dial and access your ISP.
+
+
+    # Facts & Tasks
+
+
+    To connect to an ISP using a dial-up Internet connection, connect the modem to
+    the telephone line. Modems are usually connected to the phone system using twisted
+    pair cable. The two most common connectors used with twisted pair cable are RJ-11
+    and RJ-45. Refer to the table below, to see some similarities and differences
+    between the two types of connectors.
+
+
+    | Connector | Description |
+
+    |---|---|
+
+    | RJ-11 | Has 4 connectors
+
+    Supports 2 pairs of wires
+
+    Uses locking device to keep
+
+    connector secure in outlet
+
+    Used primarily for telephone wiring |
+
+    | RJ-45 | Has 8 connectors
+
+    Supports 4 pairs of wires
+
+    Uses locking device to keep
+
+    connector secure in outlet
+
+    Used for Ethernet and some token
+
+    ring connections |
+
+
+    The modem card, used in this lab, has two ports. The port labeled "LINE", provides
+    the means for a dial-up Internet connection with the telephone outlet. The other
+    port, labeled "PHONE", is an optional port used to connect an analog phone to
+    the modem.
+
+
+    # Steps
+
+
+    +   1. In the Shelf, locate and select one end of the cable used for a dial-up
+    modem connection.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '+   - What type of connector did you select?
+
+
+    +   2. Drag the connector to the appropriate port on the PC. (Use the Zoom In
+    tool and scroll as necessary to better see ports, jacks, and connectors.) Once
+    you''ve done that, the other end of the cable moves to Workbench Connections.
+
+
+    +   3. Drag the connector, in Workbench Connections, to the appropriate wall outlet
+    port.
+
+
+    +   - What are two ways to tell the difference between the two ports in the outlet
+    on the left?
+
+
+    +   - What is the unused port used for?'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# 2.1.4 Connect to an Ethernet Network\n\nScenario\n\nYour supervisor has asked\
+    \ you to connect a new employee's computer to the network while she is in her\
+    \ orientation meeting.\n\nConnect the computer to the Ethernet local area network\
+    \ (LAN) using twisted pair cable.\n\nFacts & Tasks\n\nAn Ethernet network uses\
+    \ twisted pair cable with RJ-45 connectors. The RJ-45 connector has 8 wires and\
+    \ is larger than the RJ-11 connector.\n\nStep\n\n+   1. Locate and select the\
+    \ cable used to connect the computer to an Ethernet LAN.\n    * How many of the\
+    \ cables, to choose from, are twisted pair?\n    * List the types of connectors\
+    \ found on twisted pair cables:\n    * Which of these connectors is used for Ethernet?\
+    \ \n\n+   2. Drag a connector from the Shelf to the appropriate port on the computer.\
+    \ Once you've done that, the other end of the cable moves to Workbench Connections.\n\
+    \n+   3. Drag the connector in Workbench Connections to the network port."
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 2.2: Coaxial
+
+
+    Objectives
+
+
+    +   - Identify cable modem connectors, ports, and cable.
+
+    - Connect a PC to the Internet via a cable modem and its connectors, ports, and
+    cable.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 2.2.3 Connect a Cable Modem 1
+
+
+    Scenario
+
+
+    You recently moved to a new area that has broadband Internet service through the
+    cable company. Rather than paying a high installation fee, you opted to install
+    the modem yourself. Connect the cable modem to your computer and to the wall outlet.
+
+
+    Facts & Tasks
+
+
+    Some of the connectors typically used for this type of Internet connection are
+    listed in the table below.
+
+
+    | Connector | Facts |
+
+    | --- | --- |
+
+    | Ethernet RJ-45 | Used primarily for Ethernet LAN connections
+
+    Used to connect a cable modem to a PC |
+
+    | USB Type A | Used to connect two PCs together
+
+    Used primarily to connect the PC to a device, such as a cable modem |
+
+    | USB Type B | Most USB cables with a B connector have an A connector on the other
+    end
+
+    Used to connect a device to a USB hub |
+
+    | Coaxial Type F | Used primarily to create cable and satellite TV connections
+
+    Used to hook a cable modem to a broadband cable connection |'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Steps\n\n+   1. On the **Shelf**, locate and select the appropriate cable\
+    \ to connect the cable modem to the wall outlet.\n   - List the types of ports\
+    \ on the cable modem and wall outlet that can provide an Internet connection:\n\
+    \n+   2. Drag one end of the appropriate cable to the appropriate port in the\
+    \ wall outlet. (The other end of the cable moves to the Workbench Connections\
+    \ area.)\n\n+   3. Drag the end of the cable in the **Workbench Connections**\
+    \ area to the appropriate port in the cable modem.\n\n+   4. On the **Shelf**,\
+    \ locate and select the appropriate cable to connect the cable modem to the PC.\n\
+    \   - List the remaining types of ports on the cable modem and PC that can provide\
+    \ a connection:\n\n+   5. Drag the appropriate connector to the appropriate port\
+    \ on the cable modem. The connector moves to Workbench Connections.\n\n+   6.\
+    \ Drag the connector from **Workbench Connections** to the appropriate port on\
+    \ the computer."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# 2.2.4 Connect a Cable Modem 2\n\nScenario\n\nYou are helping a friend connect\
+    \ to the Internet using a cable modem she recently bought. You decide to connect\
+    \ the cable modem to the computer with an Ethernet cable. You go online and find\
+    \ the cables listed in the **Shelf**. Select and connect the necessary cables\
+    \ to make the connections.\n\nFacts & Tasks\n\nThe NIC has ports for each of the\
+    \ three connectors listed in the table.\n\n| Connector | Facts |\n| --- | ---\
+    \ |\n| RJ-45 ![image]() | Twisted pair cable<br>Typically used for Ethernet |\n\
+    | BNC ![image]() | Coaxial cable<br>Typically used for older Ethernet |\n| AUI\
+    \ ![image]() | Coaxial cable<br>Typically used for older Ethernet |\n\n**Note:**\
+    \ You have the cables providing more than one way to make this connection, but\
+    \ the lab calls for it to be made in a certain way.\n\nSteps\n\n+   1. On the\
+    \ **Shelf**, locate and select the appropriate cable to connect the cable modem\
+    \ to the wall outlet.\n    - Which types of ports are on the cable modem?"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '+   • Which types of cable and connectors are used to connect to cable service?
+
+
+    +   2. Drag one end of the cable to the appropriate wall outlet. (The other end
+    of the cable moves to the Workbench Connections area.)
+
+
+    +   3. Drag the end of the cable in the Workbench Connections area to the appropriate
+    port in the cable modem.
+
+
+    +   4. On the Shelf, locate and select the appropriate cable to connect the cable
+    modem to the PC.
+
+
+    +   • Which cable, on the shelf, will connect the cable modem and the PC?
+
+
+    +   5. Drag one end of the cable to the appropriate port in the PC. The other
+    connector moves to Workbench Connections. (Use the Zoom In tool on the Workbench
+    toolbar and scroll as necessary to locate the ports and connectors.)
+
+
+    +   6. Drag the end of the cable in the Workbench Connections to the appropriate
+    port on the cable modem.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# 2.3: Fiber Optic
+
+
+    Objectives
+
+
+    +   * Identify different types of fiber optic connectors, ports, and cable.
+
+    * Connect a PC to a fiber optic network.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# 2.3.3 Connect Fiber Optic Cables 1
+
+
+    # Scenario
+
+
+    Your first task as a network technician at your company is to connect a new employee''s
+    computer to your fiber optic network.
+
+
+    Note: When connecting the cables, be sure to connect the receive port (RX) to
+    the transmit port (TX).
+
+
+    # Facts & Tasks
+
+
+    Common fiber optic cable connectors are presented in the following table.
+
+
+    | Connector | Facts |
+
+    | --- | --- |
+
+    | ST | Also called a push in twist connector
+
+    Each wire is a single strand that has a single (or separate) connector at each
+    end |
+
+    | SC | Push on, pull off connector type that uses a locking tab to maintain connection
+
+    Each wire is a single strand that has a single (or separate) connector at each
+    end |
+
+    | LC | Composed of a plastic connector with a locking tab, similar to a RJ-45
+    connector
+
+    Each wire has two strands that attach to two single connectors at each end
+
+    Half the size of other fiber-optic connectors |
+
+    | MT-RJ | Composed of a plastic connector with a locking tab
+
+    Uses metal guide pins to ensure it is properly aligned
+
+    Each wire has two strands that attach to two single connectors at each end |'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "Ensure proper installation by keeping track of the color of cable you connect\
+    \ to each port.\n\n![](img/ec83bdece8c967d0c687b6a13db22bc0_29_0.png)\n\n# Steps\n\
+    \n+   1. Locate and select the cable with the appropriate connectors.\n   - What\
+    \ is the name of the connector that you chose?\n\n+   2. Drag one of the connectors\
+    \ to a jack in the wall outlet. The remaining connectors move to Workbench Connections.\
+    \ (Use the Zoom tool and scroll as necessary to locate ports, jacks, and connectors.)\n\
+    \   - What color was the connector that you chose?\n\n+   3. Connect the other\
+    \ end, of the cable that you just attached, into the appropriate jack in the fiber\
+    \ optic card in the computer.\n4. Drag one end of the unused cable to the empty\
+    \ jack in the wall outlet.\n5. Drag the remaining unplugged connector to the remaining\
+    \ jack in the fiber optic card in the computer."
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# 2.3.4 Connect Fiber Optic Cables 2
+
+
+    Scenario
+
+
+    Connect the computer to the fiber optic network by selecting the appropriate cable.
+    Be sure to connect the transmit port to the receive port.
+
+
+    Facts & Tasks
+
+
+    The connectors on either end of a fiber optic cable need not be the same. This
+    provides the flexibility of connecting together components with different port
+    types.
+
+
+    Steps
+
+
+    +   1. Begin by examining the network card and the wall plate to identify the
+    type of cable each uses.
+
+
+    Fill out the characteristics of different type fiber optic cable connectors as
+    you complete this step of the lab. (Ensure that you are describing the connector
+    housing, not the port.)
+
+
+    | Connector | Shape (rectangular or rounded) | Configuration (single or combined)
+    |
+
+    |---|---|---|
+
+    | ST | | |
+
+    | SC | | |
+
+    | LC | | |
+
+    | MT-RJ | | |
+
+
+    +   2. Locate the correct cable on the shelf and drag the appropriate connector
+    to the appropriate port on the NIC in the computer. The remaining connectors move
+    to Workbench Connections.
+
+
+    +   3. Drag the opposite end of the cable, that you just connected, to the appropriate
+    jack in the wall outlet.
+
+
+    +   4. Drag the appropriate connector on Workbench Connections to the appropriate
+    port on the fiber optic card in the computer.
+
+
+    +   5. Drag the remaining connector to the remaining jack in the wall outlet.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# 2.4: USB and Firewire
+
+
+    Objectives
+
+
+    +   - Identify USB connectors, ports, and cable.
+
+    - Connect a component to a computer via USB.
+
+    - Connect two PCs, in a simple network, using USB.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# 2.4.3 Connect a USB Device\n\n# Scenario\n\nYou have installed a wireless\
+    \ network in your home. However, you own an older laptop that did not come with\
+    \ wireless capabilities. To connect to your wireless home network with the laptop,\
+    \ you purchased a USB wireless thumbcard. Install the USB wireless thumbcard in\
+    \ the appropriate slot on your computer.\n\n# Facts & Tasks\n\nThere are several\
+    \ types of USB connectors. The most common is called a Type A. A USB connector,\
+    \ or port, can always be identified by the USB logo, displayed below.\n\n![](img/ec83bdece8c967d0c687b6a13db22bc0_32_0.png)\n\
+    \n# Steps\n\n+   1. To connect to a USB wireless thumbcard to the laptop, drag\
+    \ the thumbcard from the Shelf to a USB port on the back of the laptop.\n  * Is\
+    \ there more than one port for the USB wireless thumbcard to connect to?\n  *\
+    \ What other high-speed serial data port is found on the laptop?"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# ## 2.4.4 Connect Back-to-Back Computers\n\n# ### Scenario\n\nYou bought a\
+    \ new computer, but you have files that you still want to access on your old computer.\
+    \ Rather than copying files to removable media, you want the option of being able\
+    \ to access the computer's hard drive as you need to. You know that you can can\
+    \ create a simple network by connecting both computers directly through a USB\
+    \ cable.\n\nSelect the correct cable and connect the two computers together.\n\
+    \n# ### Facts & Tasks\n\nCommon USB connectors are displayed below.\n\n![](img/ec83bdece8c967d0c687b6a13db22bc0_33_0.png)\n\
+    \nA simple network, allowing two PCs to communicate with each other, can be created\
+    \ by connecting a cable made for this purpose. This type of connection is commonly\
+    \ supported by newer operating systems.\n\n# ### Steps\n\n+   1. On the **Shelf**,\
+    \ locate and select the appropriate cable.\n   - What is the name of the cable\
+    \ that you chose to connect the two PCs?"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '+   2. Drag one of the cable''s connectors to the appropriate port on the first
+    computer. The other connector moves to Workbench Connections.
+
+
+    +   - What type of ports, on the PCs, fit the cable that you chose?
+
+
+    +   3. Drag the remaining connector in Workbench Connectors to the appropriate
+    port on the second computer.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# # 3.0: Networking Devices
+
+
+    # ## 3.1: Network Adapters
+
+
+    **Objectives**
+
+
+    +   - Distinguish differences between modems and network cards.
+
+    - Identify various features of common modems and NICs.
+
+    - Select an appropriate modem or NIC, based on its features.
+
+    - Identify connectors and ports used for modem and network connection.
+
+    - Connect a PC to the Internet via PSTN.
+
+    - Access and identify the status and properties of a network connection.
+
+    - Disable a network connection.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# ### 3.1.6 Select and Install a Network Adapter
+
+
+    # #### Scenario
+
+
+    You want to connect your computer to the Internet through the PSTN (publicly switched
+    telephone network) using the fastest speed possible.
+
+
+    Complete the following tasks:
+
+
+    +   - Select the correct expansion card with the fastest speed to connect to the
+    PSTN.
+
+    - Select the corresponding cable and connect the computer to the PSTN.
+
+
+    # #### Facts & Tasks
+
+
+    Some typical expansion cards used for networking computers are listed below:
+
+
+    +   - Ethernet NIC: Connects to an Ethernet network.
+
+    - Token Ring NIC: Connects to a Token Ring network.
+
+    - Modem: Connects to the phone line to communicate with remote computers.
+
+    - ISDN NIC: Connects through an ISDN network for host-to-host connections.
+
+
+    # #### Steps
+
+
+    +   1. Switch to Motherboard view by clicking the Motherboard button on the Workbench
+    toolbar.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '2. On the **Shelf**, locate and select the appropriate expansion card.
+
+
+    Complete the following table as you work through this lab.
+
+
+    **Note:** When you restart the lab, the expansion card groups will be randomized.
+    If you exit and restart the lab, the correct expansion card may be in a different
+    position.
+
+
+    | Group Number | Card Type | Ports (How many & what types) | Signal Level |
+
+    |---|---|---|-|
+
+    | Group 1 | | | |
+
+    | Group 2 | | | |
+
+    | Group 3 | | | |
+
+    | Group 4 | | | |
+
+    | Group 5 | | | |
+
+    | Group 6 | | | |
+
+
+    3. Drag the appropriate card to the appropriate open slot on the motherboard.
+
+
+    +   - What type of slot did you attach the card to?
+
+
+    4. Switch to Back view by clicking the **Back** button on the **Workbench** toolbar.
+
+
+    5. Expand the **Cables** group on the **Shelf** by clicking the arrow beside **Cables**.
+
+
+    6. Locate and select the cable appropriate connector.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '+   - What type of connector fits the port in the card that you chose?
+
+
+    +   7. Drag the connector to the appropriate port. The other connector moves to
+    Workbench Connections.
+
+
+    +   - What function does the unused port in the card serve?
+
+
+    +   8. Drag the connector in Workbench Connections to the appropriate wall outlet.
+
+
+    +   - What function does the unused port in the wall outlet serve?'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# 3.1.8 Find Connection Information
+
+
+    # Scenario
+
+
+    Click the **Simulation** button and use the lab to answer the following questions.
+
+
+    +   - How many connections are there configured in the Network Connections folder?
+
+
+    +   - What is the speed of the *Local Area Connection*?
+
+
+    +   - For the *Dial Company* connection, what is the phone number used to make
+    the connection?
+
+
+    # Facts & Tasks
+
+
+    There are usually multiple paths for information access within Windows. For example,
+    one way to access **Status** is to:
+
+
+    +   Double-click a connection icon.
+
+
+    +   Right-click a connection icon and select **Status** from the drop-down menu.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '3. Click on a connection icon and a Network Tasks menu may display in the left-hand
+    column of the Network Connections Window. Then click on the View status of this
+    connection option.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_41_0.png)
+
+
+    One way to access Properties is to:
+
+
+    +   1. Right-click a connection icon and select Properties from the drop-down
+    menu.
+
+    2. Click on a connection icon to access the Network Tasks menu. Then click on
+    the Change settings of this connection option.
+
+    3. From the Status window (see above), select the Properties button.
+
+
+    See the different ways to access information, while completing this lab.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Steps\n\nFollow the steps listed below to answer the first question.\n\n\
+    +   1. Open the Control Panel.\n  * Where do you begin, when opening a program\
+    \ or accessing Windows tools?\n\n+   2. Open Network Connections.\n  * Which applet\
+    \ did you select?\n\n+   3. Count the total number of current network connections.\n\
+    \  * How many icons are displayed?\n\nFollow the steps listed below to answer\
+    \ the second question.\n\n+   1. Locate Local Area Connection.\n  * What steps,\
+    \ above, did you take to find the current connections?\n\n+   2. View Local Area\
+    \ Connection's Status.\n  * List two methods to access the status of a current\
+    \ connection:\n\n+   3. Locate the current connection speed.\n\nFollow the steps\
+    \ listed below to answer the third question.\n\n+   1. Locate Dial Company."
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '+   2. View Dial Company''s Properties.
+
+
+    +   3. Locate Dial Company''s connection telephone number.
+
+
+    +   4. Select Done to exit and answer the questions to complete the lab.
+
+
+    +   - How many connections are there configured in the Network Connections?
+
+
+    +   - What is the speed of the Local Area Connection?
+
+
+    +   - For the Dial Company connection, what is the phone number used to make the
+    connection?'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# 3.1.9 View Connection Properties
+
+
+    # Scenario
+
+
+    Click the Simulation button and use the lab to answer the following question.
+
+
+    View the properties of the Local Area Connection. On the General tab are listed
+    several networking components. Select each component and read its description.
+    Then match the component with the description by dragging the description on the
+    right to the component name on the left.
+
+
+    On the table below, draw lines connecting each component (on the left) with the
+    corresponding description of its function (on the right).
+
+
+    | Client for Microsoft Networks | Provides traffic control and prioritization
+    |
+
+    | File and Printer Sharing for Microsoft Networks | Lets your computer communicate
+    across interconnected networks |
+
+    | Internet Protocol (TCP/IP) | Lets your computer share resources on the network
+    |
+
+    | QoS Packet Scheduler | Lets your computer access resources on the network |
+
+
+    # Facts & Tasks
+
+
+    The General tab, in the Properties window, lists network components available
+    for your connection. Network components include clients, services, and protocols
+    used to communicate with servers on the network, once connected to a server. To
+    enable or disable a network component, click or clear the check box next to the
+    name of the component. If unsure, see the system administrator to clarify which
+    items to enable or disable.
+
+
+    # Steps
+
+
+    +   1. Open the Control Panel.
+
+    2. Open Network Connections.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '+   3. Locate and view the Properties for Local Area Connections.
+
+
+    +   - Which method did you use to open the properties window?
+
+
+    +   4. View the description of each available networking component to learn its
+    function.
+
+
+    +   - Which tab and section heading are the networking components found under?
+
+
+    +   - Which section heading are the networking components descriptions found?
+
+
+    +   5. Select Done to exit the Windows portion of the lab and answer the question
+    to complete the lab.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# 3.1.10 Disable a Network Connection
+
+
+    # Scenario
+
+
+    You have a notebook computer with a wireless network card. You want to use the
+    notebook on the airplane, but you need to make sure the computer doesn''t try
+    to connect to a wireless network while in the air.
+
+
+    Disable the wireless network connection.
+
+
+    # Facts & Tasks
+
+
+    Wireless network connections can be disabled in more than one way. List alternative
+    steps, to the steps you used in the lab, to disable a wireless network.
+
+
+    # Steps
+
+
+    +   1. Open the Control Panel.
+
+    2. Open Network Connections.
+
+    3. Locate and disable Wireless Network Connection 2.
+
+
+    +   - How did you locate the disable function?'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# 3.2: Network Devices
+
+
+    # Objectives
+
+
+    +   * Identify components used to link together an Ethernet network.
+
+    * Select appropriate components to include in a network, considering performance,
+    communication, and future additions.
+
+    * Connect PCs to an Ethernet network.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# 3.2.8 Select a Networking Device
+
+
+    # Scenario
+
+
+    You are connecting the first two of several computers that will be on the same
+    network. You want the network to operate at 100 Mbps with full duplex communication
+    and accommodate future additional devices on the network.
+
+
+    Connect the two computers using the appropriate network components.
+
+
+    # Facts & Tasks
+
+
+    Communication capabilities differ from one networking device to another. Listed
+    below, are some differences worth considering:
+
+
+    +   * Simplex: Communication travels in one direction and that direction only.
+
+    * Half-duplex: Communication travels in both directions, just one direction at
+    a time.
+
+    * Full-duplex: Communication travels in both directions, and can do so simultaneously.
+
+
+    # Steps
+
+
+    +   1. On the Shelf, locate and drag the appropriate networking device to the
+    Workbench.
+
+
+    List the functions and relationships, within a network, of each of device and
+    list these characteristics in the table below as you work through this lab.
+
+
+    | Device | Functions |
+
+    | --- | --- |
+
+    | Router | |
+
+    | Switch | |
+
+    | Hub | |
+
+
+    +   2. Click the Cables menu on the Shelf.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "+   3. Locate the cable with appropriate connectors.\n  * Which type connector\
+    \ fits a port in the networking device you chose?\n\n+   4. Drag the connector\
+    \ to an open port on the networking device. The cable moves to Workbench Connections.\n\
+    \n+   5. Drag the unconnected connector from Workbench Connections to the appropriate\
+    \ port on the computer.\n\n+   6. Connect the second computer.\n  * List the steps\
+    \ you performed to complete step 6:\n\n________________________________________________________________________________________________________________________________________________\n\
+    ________________________________________________________________________________________________________________________________________________"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# 3.3: Internetwork Devices
+
+
+    # Objectives
+
+
+    +   - Identify and select an appropriate router, based on its features.
+
+    - Identify and select appropriate connectors, ports, and connectors used for a
+    cable Internet connection.
+
+    - Connect a PC to the Internet via cable.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 3.3.4 Select a Router
+
+
+    # Scenario
+
+
+    You have just signed up for Internet access from ComSpeed, your local cable TV
+    provider. You are responsible for selecting the correct router to connect your
+    computer to the Internet. You are want to use the fastest connection speed available
+    while providing for security for your home computer. Connect your computer to
+    the Internet connection by selecting the correct device and cables.
+
+
+    # Facts & Tasks
+
+
+    +   - Why can''t you use Cat3 cable to complete the requirements in this lab?
+
+
+    # Steps
+
+
+    +   1. On the Shelf, locate and drag the correct router to the Workbench.
+
+
+    Complete the following table as you work through this step of the lab.
+
+
+    > Note: When you restart the lab, the router groups will be randomized. If you
+    exit and restart the lab, the correct expansion card may be in a different position.
+
+
+    | Group # | Router Type | Router''s Primary Function | Firewall (Y/N) | Ports
+    (Number/Types) |
+
+    | Group 1 | | | | |
+
+    | Group 2 | | | | |
+
+    | Group 3 | | | | |
+
+    | Group 4 | | | | |
+
+    | Group 5 | | | | |
+
+    | Group 6 | | | | |'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '+   2. Open the Cables menu on the Shelf.
+
+
+    +   3. Locate the appropriate cable to connect the router to the appropriate wall
+    outlet.
+
+
+    +   - Which cables have connectors that match ports both in the wall outlets and
+    the PC?
+
+
+    +   - How many of each cable, with matching connectors, are there?
+
+
+    +   4. Drag the connector from the Shelf to the appropriate port in the wall outlet.
+    The other connector moves to Workbench Connections.
+
+
+    +   5. Drag the unconnected connector on Workbench Connections to the appropriate
+    port on the cable modem.
+
+
+    +   6. On the Shelf, locate the appropriate cable to connect the cable modem and
+    computer.
+
+
+    +   - Which type of cable, on the Shelf, supports a 10/100BaseTX Ethernet network?
+
+
+    +   7. Drag the connector from the Shelf to the appropriate port on the computer.
+
+
+    +   8. Drag the unconnected cable connector on Workbench Connections to an appropriate
+    port on the cable modem.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# # 4.0: Wired Networking Standards
+
+
+    # ## 4.1: Ethernet
+
+
+    # ### Objectives
+
+
+    +   - Identify different categories of Ethernet cable and their capability.
+
+    - Recognize different Ethernet NIC features.
+
+    - Connect a PC to an Ethernet network, using the correct cables and connectors.
+
+    - Identify different categories of fiber optic cable.
+
+    - Recognize different fiber optic network features.
+
+    - Connect a PC to a fiber optic network, using the correct cables, connectors,
+    and converter.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# 4.1.6 Select Ethernet Cable
+
+
+    Scenario
+
+
+    The dormitory where you will live at college has installed a 1000BaseTX Ethernet
+    network. You need to purchase the cable to connect your computer to the network.
+    However, cost is a factor. Select the cheapest cable that meets the network specifications.
+
+
+    Facts & Tasks
+
+
+    The following table compares the characteristics of various Ethernet implementations.
+
+
+    | Ethernet Specification | Cable Type |
+
+    |---|---|n| 10BaseT | Twisted Pair (Cat3, 4, or 5) |
+
+    | 100BaseT | Twisted Pair (Cat5 or higher) |
+
+    | 1000BaseT | Twisted Pair (Cat5e) |
+
+
+    Steps
+
+
+    +   1. On the **Shelf**, locate the appropriate cable.
+
+
+    Complete the following table as you work through this step of the lab.
+
+
+    | Cable Type | Supports 1000BaseTX Ethernet (Y/N) | Cable Cost (per 6'') |
+
+    |---|---|---|n| Cat | | $ |
+
+    | Cat | | $ |
+
+    | Cat | | $ |
+
+    | Cat | | $ |'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '+   2. Drag one of the connectors from the cable to the appropriate port on
+    the back of the computer. The cable moves to Workbench Connections.
+
+
+    +   3. Drag the connector in Workbench Connections to the appropriate jack in
+    the wall outlet.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '#  4.1.7 Connect to 100BaseTX Network
+
+
+    # Scenario
+
+
+    You are going on temporary assignment to a new building. The building has an Ethernet
+    network that operates at speeds up to 100 Mbps. Connect the computer to the network
+    by selecting the appropriate network card and cabling.
+
+
+    # Facts & Tasks
+
+
+    The following table compares the characteristics of various Ethernet implementations.
+
+
+    | Ethernet Specification | Bandwidth | Cable Type |
+
+    |---|---|--|
+
+    | 10BaseT | 10 Mbps (half-duplex) 20 Mbps (full-duplex) | Twisted Pair (Cat3,
+    4, or 5) |
+
+    | 100BaseT | 100 Mbps (half-duplex) 200 Mbps (full-duplex) | Twisted Pair (Cat5
+    or higher) |
+
+    | 1000BaseT | 1000 Mbps (half-duplex) 2000 Mbps (full-duplex) | Twisted Pair (Cat5e)
+    |
+
+
+    # Steps
+
+
+    +   1. Switch to Motherboard view by clicking the Motherboard button on the Workbench
+    toolbar.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '2. On the **Shelf**, locate and drag the appropriate card to the appropriate
+    open slot.
+
+
+    Complete the following table as you work through this step in the lab.
+
+
+    | Expansion Card Type | Ports (Number/Types) | Ethernet Architecture (if applicable)
+    |
+
+    |---|---|---|
+
+    | | | |
+
+    | | | |
+
+    | | | |
+
+    | | | |
+
+    | | | |
+
+    | | | |
+
+
+    3. Switch to **Back** view of the computer.
+
+
+    4. Open the **Cables** menu on the **Shelf**.
+
+
+    5. Locate the appropriate cable.
+
+
+    +   - Which cable type and category did you select?
+
+
+    6. Drag one connector to the appropriate port on the back of the **computer**.
+    The cable and other connector moves to Workbench Connections.
+
+
+    +   - Which port fits the connectors on your cable?
+
+
+    7. Drag the connector on **Workbench Connections** to the appropriate jack in
+    the wall outlet.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# 4.1.8 Connect to a Fiber Optic Network
+
+
+    # Scenario
+
+
+    Your company has just moved to a new office building. The server room has fiber
+    optic installed to the wall plate. You need to connect the server to the fiber
+    optic network connection.
+
+
+    Select and install the necessary components to connect to the fiber optic network.
+
+
+    # Facts & Tasks
+
+
+    Because your computer doesn''t have a fiber optic NIC to communicate on the fiber
+    optic network, you will need a device to convert the fiber optic signal.
+
+
+    # Steps
+
+
+    +   1. Locate, on the **Shelf**, the appropriate device for bridging between the
+    PC and the fiber optic network and drag it to the **Workbench**.
+
+
+    Complete the following table as you work through this step in the lab.
+
+
+    | Device Type | Ports (Number/Types) | Network Type |
+
+    |---|---|--|
+
+    | | | |
+
+    | | | |
+
+    | | | |
+
+
+    +   2. Open the **Cables** menu on the **Shelf**.
+
+
+    +   3. Locate the appropriate cable to connect the PC to the device that you chose
+    in step 1.
+
+
+    +   * What type of cable is required to connect the PC and device?
+
+
+    +   4. Drag a connector to the appropriate port on the back of the device. The
+    cable and other connector moves to Workbench Connections.
+
+
+    +   5. Drag the connector in **Workbench Connections** to the appropriate port
+    in the PC.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '+   6. Locate the cable, which connects the device to the appropriate wall
+    socket.
+
+
+    +   - What type of network are you connecting to?
+
+
+    +   7. Drag the appropriate connector to the appropriate port in the device. The
+    remaining connectors move to Workbench Connections.
+
+
+    +   - What shape is the connector that you chose?
+
+
+    +   8. Drag the appropriate connector in Workbench Connections to the appropriate
+    jack in the wall outlet.
+
+
+    +   - Did you connect the cable to the send or receive port in step 7?
+
+
+    +   - What color was the cable that you connected in step 7?
+
+
+    +   9. Drag the appropriate connector on Workbench Connections to the remaining
+    port in the device.
+
+
+    +   10. Drag the remaining connector to the remaining jack in the wall outlet.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# 5.0: Wireless Networking Standards
+
+
+    # 5.2: Configuring a Wireless Network
+
+
+    Objectives
+
+
+    +   * Identify the correct wireless standards for given applications.
+
+    * Install wireless network adapters and components that match given requirements.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# 5.2.3 Select a Wireless Card
+
+
+    Scenario
+
+
+    Because you travel frequently, you want to equip your laptop with wireless networking
+    capability. Select and install a wireless device that supports data transfers
+    from 11 Mbps to 54 Mbps on networks that use the 2.4 GHz frequency range. Select
+    the cheapest solution to meet the requirements.
+
+
+    Facts & Tasks
+
+
+    The 802.11x standards listed in the table below:
+
+
+    | Standard | Frequency | Speed |
+
+    | 802.11a | 5.75 - 5.85 GHz | 54 Mbps |
+
+    | 802.11b | 2.4 - 2.4835 GHz | 11 Mbps |
+
+    | 802.11g | 2.4 - 2.4835 GHz | 54 Mbps |
+
+
+    Two ports typically used for installation of wireless devices are displayed in
+    the table below.
+
+
+    | Port | Wireless Device |
+
+    | USB | USB Drive <br> ![USB](image_1) |
+
+    | PCMCIA | PCMCIA card <br> ![PCMCIA](image_2) |'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Steps
+
+
+    +   1. On the Shelf, locate the device that best meets the required standards
+    at the lowest cost.
+
+
+    Complete the following table as you work through this step of the lab.
+
+
+    | Device | Standard | Connection / Port Type | Price |
+
+    | --- | --- | --- | --- |
+
+    | | | | $ |
+
+    | | | | $ |
+
+    | | | | $ |
+
+    | | | | $ |
+
+    | | | | $ |
+
+
+    +   2. Drag the device to an appropriate slot/port.
+
+
+    +   - The computer has two types of ports that accommodate the available devices.
+    List them, below:'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# 5.2.4 Create a Wireless Network 1
+
+
+    # Scenario
+
+
+    You want to set up a wireless network in your apartment. Your roommate wants to
+    connect to it, and you want your friends to be able to connect when they come
+    over. You have decided that 11 Mbps data transfer rate is sufficient for what
+    you need.
+
+
+    Select and install the appropriate networking devices.
+
+
+    # Facts & Tasks
+
+
+    Two typical wireless networking devices are presented in the table below.
+
+
+    | Device | Characteristics |
+
+    |---|---|
+
+    | Wireless NIC | Card inside PC for signal receipt and transmission |
+
+    | Wireless Access Point (WAP) | Equivalent of Ethernet hub. Wireless NICs connect
+    to WAP, which manages connection to network. Can be a port, hub, switch, or router.
+    |
+
+
+    # Steps
+
+
+    +   1. On the **Shelf**, locate and drag the appropriate device to the appropriate
+    slot(s) in your PC. Hint: Switch to alternative views of the PC or PC components
+    to complete this step.
+
+
+    **Note:** When you restart the lab, the device groups will be randomized. If you
+    exit and restart the lab, the correct expansion card may be in a different position.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'Complete questions in the table, on the next page, as you work through this
+    lab.
+
+
+    | Group Number | Type of Device(s) | Type of Port / Slot Connection Required |
+    Network Standards (circle those that apply) |
+
+    | Group 1 | | | 802.11a, b, or g<br>10BaseTX<br>Bluetooth |
+
+    | Group 2 | | | 802.11a, b, or g<br>10BaseTX<br>Bluetooth |
+
+    | Group 3 | | | 802.11a, b, or g<br>10BaseTX<br>Bluetooth |
+
+    | Group 4 | | | 802.11a, b, or g<br>10BaseTX<br>Bluetooth |
+
+    | Group 5 | | | 802.11a, b, or g<br>10BaseTX<br>Bluetooth |'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '+   2. On the **Shelf**, locate and drag the appropriate device to the appropriate
+    slot(s) in your roommate''s PC.
+
+
+    +   3. On the **Shelf**, locate the device that will allow network access to your
+    apartment''s visitors.
+
+
+    +   4. Drag the device to the appropriate location.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Create a Wireless Network
+
+
+    # Scenario
+
+
+    You have a laptop that you use at work. The laptop has a wireless PCMCIA card
+    that is capable of using dual band and transferring data at 108 Mbps. You want
+    to transfer some data between the laptop and your home computer.
+
+
+    Select and install the necessary wireless component(s) to transfer data between
+    the laptop and your home computer. Select only the components necessary.
+
+
+    # Facts & Tasks
+
+
+    Keep things simple by taking advantage of the PCMCIA card that is already in your
+    laptop. Although susceptible from interference from other wireless devices, some
+    of the newer 802.11g devices can use multiple channels (dual band) to effectively
+    double the data transfer rate.
+
+
+    Each wireless network uses one of two primary wireless networking architectures.
+    See the table below to review these architectures.
+
+
+    | Topology | Description |
+
+    | Ad Hoc | Works in a peer-to-peer mode without a WAP, allowing individual computers
+    to link directly to each other. Easy to set up, but limited to 4 hosts. |
+
+    | Infrastructure | Requires a WAP. Can easily add hosts. |
+
+
+    # Steps
+
+
+    +   1. Locate and drag the appropriate device to the appropriate slot / location.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# 7.0: TCP/IP
+
+
+    # 7.3: IP Configuration Parameters
+
+
+    # Objectives
+
+
+    +   - Recognize the parts and meanings of IP, gateway, and DNS addresses and subnet
+    masks.
+
+    - Recognize the uses for IP, gateway, and DNS addresses and subnet masks.
+
+    - Manually configure IP, gateway, and DNS addresses and subnet masks.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# 7.3.4 Configure IP Settings 1
+
+
+    # Scenario
+
+
+    You have just purchased a new computer and need to connect it to a small business
+    network. The network uses static addressing. Configure the TCP/IP settings as
+    follows:
+
+
+    +   - IP address = 10.1.1.12
+
+    - Subnet mask = 255.255.255.0 (Note: This is not the default subnet mask.)
+
+    - Default gateway = 10.1.1.254
+
+    - DNS server addresses = 10.1.1.1, 10.1.1.2 (use this order)
+
+
+    # Facts & Tasks
+
+
+    IP, Subnet Mask, Default Gateway, and DNS addresses can be manually assigned in
+    the Internet'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'Protocol (TCP/IP) Properties window.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_72_0.png)
+
+
+    # Steps
+
+
+    +   1. Open the Control Panel.
+
+
+    +   2. Open Network Connections.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '3. View Properties for the Local Area Connection network connection.
+
+
+    +   - How did you access the menu to open the Properties window?
+
+
+    4. Select the Internet Protocol item from the list of items used by the connection.
+
+
+    5. View the Properties of the Internet Protocol item (If you are configuring a
+    LAN connection, select the General tab.).
+
+
+    +   - Which button did you select to view properties?
+
+
+    6. Switch IP addressing from automatic to manual.
+
+
+    +   - Which button did you select to change the IP addressing preference?
+
+
+    7. Enter the IP address (Select the next field or press the Tab key after the
+    IP address is entered.).
+
+
+    +   - What did you enter? ________ ________ ________
+
+
+    8. Keep the default subnet mask or enter a new subnet mask if the default mask
+    will not be used.
+
+
+    +   - What did you enter? ________ ________ ________
+
+
+    9. To route data to another subnet, enter the default gateway address (if all
+    computers are on a single subnet, you can leave this value blank).
+
+
+    +   - What did you enter? ________ ________ ________
+
+
+    10. To assign a preferred DNS server, enter the appropriate address.
+
+
+    +   - What did you enter? ________ ________ ________
+
+
+    11. To assign an alternate DNS server, enter the Alternate DNS Server address.
+
+
+    +   - What did you enter? ________ ________ ________'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '12. Close all of the windows to save the changes.
+
+
+    +   * Which buttons did you select?'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# 7.3.5 Configure IP Settings 2\n\n# Scenario\n\nClick the Exhibit button and\
+    \ use the network diagram to complete this lab.\n\nYou have just purchased a new\
+    \ computer and need to connect it to a small business network. The network has\
+    \ two subnets and is connected to the Internet as shown in the Exhibit. The network\
+    \ uses static addressing. Configure the TCP/IP settings for the NY-DEV-WRK3 computer\
+    \ so it can communicate both on the local network and the Internet. Use the following\
+    \ settings:\n\n+   * For the IP address, configure the workstation with the last\
+    \ valid address on the network.\nUse the default subnet mask.\n* Configure the\
+    \ default gateway address according to the information in the network diagram.\n\
+    * Configure the DNS server addresses as follows:\n  * Use the DNS server on the\
+    \ local network as the preferred server.\n  * Use the DNS server on the Internet\
+    \ as the alternate DNS server.\n\n# Facts & Tasks\n\nSome useful facts about network\
+    \ addressing can be found in the table below.\n\n| Address Type | Description\
+    \ |\n| IP Address | Four 8-bit numbers, from 0 to 255, each separated by dots.\n\
+    First portion of number is network address.\nLast portion of number is host address.\n\
+    Address class determines the network and host portions of the address.\nA Class\
+    \ C address:\n* Is the most likely to have an IP address available for assignment.\n\
+    * Has the first octet from 192 to 223.\n* Has the first three octets defining\
+    \ the network.\n* Has the last octet defining the host. |"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "| Address Type | Description |\n| --- | --- |\n| Subnet Mask | Identifies which\
+    \ portion of the IP address is the network address. Two devices on the same network\
+    \ must be configured with the same network mask. Default subnet masks for the\
+    \ first three classes are as follows:\n* Class A: 255.0.0.0\n* Class B: 255.255.0.0\n\
+    * Class C: 255.255.255.0 |\n| Default Gateway | Identifies the router to which\
+    \ packets for remote networks are sent. The default gateway address is the IP\
+    \ address of the interface on the same subnet as the local host. Without a default\
+    \ gateway set, most clients will be unable to communicate with hosts outside of\
+    \ the local subnet. |\n| DNS Server | Identifies the DNS server that is used to\
+    \ resolve host names to IP addresses. |\n\n# Steps\n\nOpen **Exhibit**, to view\
+    \ the network diagram. You'll need to refer to the network diagram to determine\
+    \ what information should be entered.\n\n+   1. Open the **Control Panel**.\n\
+    2. Open **Network Connections**.\n3. View **Properties** for the Local Area Connection\
+    \ network connection.\n4. Select the Internet Protocol item from the list of items\
+    \ used by the connection.\n5. View the **Properties** of the Internet Protocol\
+    \ item.\n6. Switch IP addressing from automatic to manual.\n7. Enter the IP address.\n\
+    \    * What is the *last* valid address on the network? (Be sure not to use the\
+    \ network broadcast address.)"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '8. Keep the default subnet mask or enter a new subnet mask if the default subnet
+    mask will not be used.
+
+
+    +   * What subnet mask did you use? ____ * ____ * ____
+
+
+    9. To route data to another subnet, enter the default gateway address.
+
+
+    +   * Where are network gateways found?
+
+
+    +   * What did you enter? ____ * ____ * ____
+
+
+    10. Enter the preferred DNS server address.
+
+
+    +   * Should the primary DNS server be inside your network or outside?
+
+
+    +   * What did you enter? ____ * ____ * ____
+
+
+    11. Enter the Alternate DNS Server address.
+
+
+    +   * Should the Alternate DNS server be inside your network or outside?
+
+
+    +   * What did you enter? ____ * ____ * ____
+
+
+    12. Close all of the windows to save the changes.
+
+
+    13. Click OK again to close the Internet Protocol (TCP/IP) Properties dialog.
+
+
+    14. Click OK again to close the properties of the network connection.'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# 8.0: IP Services
+
+
+    # 8.1: Name Resolution
+
+
+    Objectives
+
+
+    +   - Configure the TCP/IP Protocol to access multiple DNS servers.
+
+    - Configure the TCP/IP Protocol to access multiple WINS servers.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# 8.1.7 Configure DNS Addresses
+
+
+    # Scenario
+
+
+    You are configuring network connections for a Windows XP Professional computer.
+    Currently, your network uses manual IP addressing. Previously, your network did
+    not use a DNS server, but three DNS servers have recently been installed.
+
+
+    Your task in this lab is to configure the TCP/IP protocol for this computer''s
+    Local Area Connection network connection to use the following DNS server addresses:
+
+
+    +   * 192.168.1.1 (preferred DNS server)
+
+    * 192.168.2.1 (first alternate DNS server)
+
+    * 192.168.1.3 (second alternate DNS server)
+
+
+    > Note: When you configure the TCP/IP properties, you can only set two DNS server
+    addresses. To configure additional DNS server addresses, click the **Advanced**
+    button. On the DNS tab, use the **Add** button to configure additional DNS server
+    addresses.
+
+
+    # Facts & Tasks
+
+
+    If more than one DNS server address is listed, change the order of the addresses
+    by selecting a DNS server address and clicking the up or down arrow buttons to
+    the right of the list. The DNS servers will be contacted in the order the addresses
+    are listed (the first address in the list is the preferred DNS server).
+
+
+    # Steps
+
+
+    +   1. Open the **Control Panel**.
+
+
+    +   2. Open **Network Connections**.
+
+
+    +   3. View **Properties** for the Local Area Connection network connection.
+
+
+    +   4. Select the Internet Protocol item from the list of items used by the connection.
+    (When configuring a LAN connection, select the General tab, otherwise, select
+    the **Networking tab**.)
+
+
+    +   * Under which tab did you find the Internet protocol item?'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '5. Then view the Internet Protocol Properties.
+
+
+    +   - Which button did you select to view the Internet Protocol Properties?
+
+
+    6. There is only room for two addresses, the preferred and the first alternate
+    address. You could enter them in this window, but since you have a third address
+    to enter, select the button that will allow you to enter all three addresses.
+
+
+    +   - Which button did you select?
+
+
+    7. Now select the tab that will allow you to enter the three addresses.
+
+
+    +   - What type of server are you addressing?
+
+
+    8. Select the button that will allow you to add addresses (Remember to add the
+    addresses in the order of use.).
+
+
+    +   - Which button did you select?
+
+
+    9. Type an IP address for a DNS server.
+
+
+    10. Repeat step 9 until all three addresses have been entered.
+
+
+    11. Close each window saving the changes.
+
+
+    +   - Which button did you select to close each window?'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# 8.1.8 Configure WINS Settings
+
+
+    # Scenario
+
+
+    You are configuring network connections for a Windows XP Professional computer.
+    Currently, your network does not have a DHCP server. Your network has both Windows
+    98 and Windows XP computers. The network has two WINS servers.
+
+
+    Your task in this lab is to configure the TCP/IP protocol for this computer''s
+    Local Area Connection network connection to use the following WINS server addresses:
+
+
+    +   - 192.168.1.1 (preferred WINS server)
+
+    - 192.168.2.1 (first alternate WINS server)
+
+
+    **Note:** To configure the WINS server addresses, edit the TCP/IP properties as
+    if you were configuring the IP address. Click the **Advanced** button and set
+    the WINS server addresses on the WINS tab.
+
+
+    # Facts & Tasks
+
+
+    If more than one WINS server address is listed, change the order of the addresses
+    by selecting a WINS server address and clicking the up or down arrow buttons to
+    the right of the list. The WINS servers will be contacted in the order the addresses
+    are listed (the first address in the list is the preferred WINS server). Use the
+    **Edit...** or **Remove** buttons to change or delete WINS server addresses in
+    the list.
+
+
+    # Steps
+
+
+    +   1. Open the **Control Panel**.
+
+
+    +   2. Open **Network Connections**.
+
+
+    +   3. View **Properties** for the Local Area Connection network connection.
+
+
+    +   4. Locate, select, and view the Internet Protocol Properties.
+
+
+    +   5. Locate, select, and view the Advanced settings of TCP/IP Settings.
+
+
+    +   - Which button did you select?'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '6. Locate, select, and view the WINS settings of TCP/IP Settings.
+
+
+    +   - Which tab did you select?
+
+
+    7. Add the preferred WINS server address.
+
+
+    +   - Which button did you select?
+
+
+    +   - What did you enter? ______ . ______ . ______
+
+
+    8. Repeat step 7.
+
+
+    +   - What did you enter? ______ . ______ . ______
+
+
+    9. Close each window saving the changes.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# 8.2: IP Address Assignment
+
+
+    Objectives
+
+
+    +   - Configure the TCP/IP Protocol to access either a DHCP server or use Automatic
+    Private IP Addressing (APIPA).'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# 8.2.4 Configure a DHCP Client\n\n# Scenario\n\nYou are configuring network\
+    \ connections for a Windows Server 2003 computer. Previously, your network did\
+    \ not have a DHCP server, but you have just installed and configured one.\n\n\
+    Your task in this lab is to configure the TCP/IP protocol for the Local Area Connection\
+    \ network connection to get IP addressing and DNS server information from the\
+    \ DHCP server.\n\n# Facts & Tasks\n\nThe Obtain an IP address automatically option\
+    \ will use a DHCP server if one exists. Otherwise, it will use Automatic Private\
+    \ IP Addressing (APIPA) to assign an address between 169.254.0.0 and 169.254.255.255.\
+    \ You can also obtain DNS server addresses automatically, or you can configure\
+    \ DNS server addresses addresses manually. To obtain DNS server addresses from\
+    \ a DHCP server, select the Obtain DNS server address automatically option.\n\n\
+    # Steps\n\n+   1. Open the Control Panel.\n2. Open Network Connections.\n3. View\
+    \ Properties for the Local Area Connection network connection.\n4. Locate, select,\
+    \ and view the Internet Protocol Properties.\n5. Locate, select, and view the\
+    \ Advanced settings of TCP/IP Settings.\n6. Locate and select the option that\
+    \ will use either a DHCP server, if one exists, or will use Automatic Private\
+    \ IP Addressing.\n   - Which button did you select?\n7. Locate and select the\
+    \ option that will obtain DNS server addresses automatically\n   - Which button\
+    \ did you select?\n8. Close each window saving the changes."
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# 8.3: NAT and ICS
+
+
+    # Objectives
+
+
+    +   * Enable Dial Internet network connection sharing on a computer.
+
+    * Enable on-demand dialing,
+
+    * Configure other users on the network to enable or disable the Internet connection
+    manually.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# Share an Internet Connection\n\n# Scenario\n\nYou are configuring Internet\
+    \ connectivity for a small office network. You want all computers on the network\
+    \ to connect to the Internet using a shared dial-up network connection on a Windows\
+    \ XP Professional computer. You want the connection to be established automatically\
+    \ any time a computer tries to access the Internet.\n\nYour task in this lab is\
+    \ to share the Dial Internet network connection on this computer. Allow on-demand\
+    \ dialing, but do not allow other users on the network to enable or disable the\
+    \ Internet connection manually.\n\n# Facts & Tasks\n\nIf the username and password\
+    \ for this connection is saved for your use only, you will be prompted to save\
+    \ it for all of users. Otherwise, Internet connection sharing will only work properly\
+    \ when you are logged on to the computer with the shared Internet connection.\
+    \ Click OK. (You can change how the username and password for a connection is\
+    \ saved when you establish the connection.)\n\n# Steps\n\n+   1. Open the Control\
+    \ Panel.\n2. Open Network Connections.\n3. View Properties for the dial-up, VPN,\
+    \ or broadband connection.\n   - Which applet did you select?\n4. Locate the Internet\
+    \ Connection and Sharing settings in the Dial Internet Properties window.\n  \
+    \ - Which tab did you select to find the settings?"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '5. Select the option to share the connection with other users on the LAN.
+
+
+    Check, or leave unchecked, the options that you selected, or did not select in
+    steps 5, 7, and 8.
+
+
+    | Allow other network users to connect this computer''s Internet connection. |
+
+    | Establish a dial-up connection whenever a computer on my network attempts to
+    access the Internet. |
+
+    | Allow other network users to control or disable the shared Internet connection.
+    |
+
+
+    6. Enable automatic dialing.
+
+
+    +   * Did you check the box or not?
+
+
+    7. Select the option to enable on-demand dialing, which causes the connection
+    to be established automatically when other users on the network need it.
+
+
+    8. Select the option to disable (disconnect) the shared connection manually.
+
+
+    9. Enable Internet Connection Sharing.
+
+
+    +   * Did you check the box or not?
+
+
+    10. Close each window saving the changes.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# 9.0: Operating Systems
+
+
+    # 9.1: Client and Server Operating Systems
+
+
+    Objectives
+
+
+    +   - Install the QoS Packet Scheduler networking service.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# 9.1.5 Install a Service
+
+
+    # Scenario
+
+
+    You are configuring network connections for a Windows XP Professional computer.
+    The computer is connected to an IP network that supports Quality of Service (QoS)
+    features. You want to take advantage of these features for certain QoS-enabled
+    programs that the computer runs.
+
+
+    Your task in this lab is to install the QoS Packet Scheduler networking service.
+
+
+    # Facts & Tasks
+
+
+    In this lab, the QoS component is a networking service. As you install the component,
+    select Service as the component type.
+
+
+    In most cases, you can install components from the properties of any connection.
+    However, you cannot install some components from the properties of a dial-up connection.
+
+
+    Depending on the component you install, you might need to reboot the system. If
+    not, click Close.
+
+
+    In most cases, when you install a client, service, or protocol, it is enabled
+    for all connections (and not just the connection where you started the install
+    process). After installation, manually disable the component for specific connections
+    if necessary. Also, keep in mind that the installation process for some components
+    (such as client software) often automatically installs other components (such
+    as appropriate protocols).
+
+
+    # Steps
+
+
+    +   1. Open the Control Panel.
+
+
+    +   2. Open Network Connections.
+
+
+    +   3. View Properties for the Local Area Connection network connection.
+
+
+    +   4. Install a service.
+
+
+    +   * Under which tab did you find the Install button'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '+   • Which connection item(s) did you install before selecting the Install
+    button?
+
+
+    ___ Client for Microsoft Networks
+
+
+    ___ File and printer sharing for Microsoft Networks
+
+
+    ___ Internet Protocol (TCP/IP)
+
+
+    ___ None of the above
+
+
+    +   5. Add a network component type to install.
+
+
+    +   • Which component type did you install?
+
+
+    ___ Client
+
+
+    ___ Service
+
+
+    ___ Protocol
+
+
+    +   6. Select a service to install.
+
+
+    +   • Which service did you install?
+
+
+    ___ QoS Packet Scheduler
+
+
+    ___ SAP Agent'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# 9.2: Windows Networking
+
+
+    Objectives
+
+
+    +   * Create a new local user account including individual user information.
+
+    * Add a local user account to a local group.
+
+    * Use Active Directory Users and Computers to create a new domain user account
+    including user information.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# 9.2.3 Create a Local User Account
+
+
+    # Scenario
+
+
+    You are configuring local users for a Windows XP Professional computer that is
+    a member of a workgroup. You want to create a user account for a new employee.
+    The new employee will not start for a few days, so you want to keep the account
+    disabled for now.
+
+
+    Your task in this lab is to create a new local user account with the following
+    properties:
+
+
+    +   - User Name = sbagley
+
+    - Full Name = Sue Bagley
+
+    - Description = Lead Designer
+
+    - Password = sbagley
+
+    - User must change password at next logon = True
+
+    - Account is disabled = True
+
+
+    # Facts & Tasks
+
+
+    Many of the user account properties required in this scenario (such as setting
+    the full name, description, and account disabling) can only be set by using the
+    Local Users and Groups snap-in. If the computer is a domain member, you can open
+    the Local Users and Group snap-in from the User Accounts applet in the Control
+    Panel. Click the Advanced tab. Then click the Advanced button under the Advanced
+    user management heading.
+
+
+    # Steps
+
+
+    +   - Open the Computer Management window (pre configured MMC console).
+
+
+    +   - Which button did you select to access My Computer?
+
+
+    +   - Which mouse button did you use when selecting My Computer?
+
+
+    +   - Which menu item did you select to open the Computer Management window?'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "+   2. Open System Tools.\n  * Is System Tools found in the right or left column?\n\
+    \n**Note:** If not already done, you may need to expand the outline to move on\
+    \ to the next step.\n\n+   3. Expand Local Users and Groups.\n  * What are the\
+    \ names of the two folders under Local Users and Groups?\n\n+   4. Select New\
+    \ User from under the Users folder.\n  * Is New User found in a column in the\
+    \ Computer Management window or on a drop down menu?\n\n+   5. Enter the name\
+    \ for the user account.\n  * In which field did you enter the new user account\
+    \ name?\n\n+   6. Enter the full name and description values, if necessary.\n\n\
+    +   7. Enter the password and confirm it.\n\n+   8. Enable or disable the following\
+    \ options, as necessary.\n  * User must change password at next logon (This option\
+    \ is not available if either of the next two options are selected. Also, the next\
+    \ two options cannot be selected if this option is selected.)\n  * User cannot\
+    \ change password\n  * Password never expires\n  * Account is disabled\n\n+  \
+    \ 9. Save your changes and exit."
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "# 9.2.5 Modify Group Membership\n\n# Scenario\n\nYou administer a Windows XP\
+    \ Professional computer that is a member of a workgroup. Sue Bagley, the user\
+    \ of this computer, is currently a member of the Users local group. You want to\
+    \ delegate Sue certain administrative tasks such as installing most applications\
+    \ and managing local users and groups.\n\nYour task in this lab is to add Sue\
+    \ Bagley's user account (sbagley) to the Power Users local group.\n\n# Facts &\
+    \ Tasks\n\nIf the computer is a domain member, you can open the Local Users and\
+    \ Group snap-in from the User Accounts applet in the Control Panel. Click the\
+    \ Advanced tab. Then click the Advanced button under the Advanced user management\
+    \ heading.\n\n# Steps\n\n+   1. Open the **Computer Management** window.\n2. Expand\
+    \ **Local Users and Groups**.\n   - Is **Local Users and Groups** found in the\
+    \ right or left column?\n3. Select **Power Users**.\n   - In which folder is **Power\
+    \ Users** found?\n   - Which mouse button accesses the **Power Users** menu?\n\
+    \n**Note:** An alternative method to adding a local user account to a local group\
+    \ is by selecting the user rather than the group.\n\n+   4. Select **Add to Group**\
+    \ from the menu."
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '5. Add Sue Bagley''s local user account to the Power Users local group.
+
+
+    +   - Which button did you select to add the new user account?
+
+
+    +   - What is Sue Bagley''s local user account name?
+
+
+    6. Save your changes and exit.
+
+
+    +   - Is it necessary to select the Check Names option?
+
+
+    +   - Is it necessary to select the Apply button?
+
+
+    Adding a local user account to a local group by editing the user''s account.
+
+
+    +   1. Complete steps 1 and 2, above.
+
+
+    +   2. Select the users folder.
+
+
+    +   - Which folder would you choose to edit the local user''s account?
+
+
+    3. Access the local user''s Properties.
+
+
+    +   - Which mouse button did you use to access the local user''s Properties?'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# 4. Add remove groups that the user account is a member of using the following
+    steps:
+
+
+    +   - Which tab did you select to add a group to this user account?
+
+
+    +   - Which button did you select to add a group to this user account?
+
+
+    +   - What local group name did you enter to add it to the user account?
+
+
+    +   - Which button would you select to remove a group to this user account?
+
+
+    **Note:** To add a group, click **Add...**. Type the name of the local group,
+    or click **Advanced...** then **Find Now** to select from a list of local groups.
+    Then click **OK**.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# 9.2.8 Create a Domain User
+
+
+    Scenario
+
+
+    You are a network administrator for your company. Your company has a single Active
+    Directory domain named westsim.private. You are responsible for creating and maintaining
+    user accounts in the domain.
+
+
+    A new employee named Sally Smith has joined your company as a Sales employee.
+
+
+    Use Active Directory Users and Computers to create a new domain user account as
+    follows:
+
+    In this lab, use Active Directory Users and Computers to create a user account
+    with the following values:
+
+
+    +   * User account context = Create the user in the Sales OU
+
+    * First Name = Sally
+
+    * Initials = [None]
+
+    * Last Name = Smith
+
+    * Full Name = Sally Smith
+
+    * Logon Name = ssmith
+
+    * UPN Suffix = westsim.private
+
+    * Pre-Windows 2000 Logon Name = ssmith
+
+    * Password = sallysmith
+
+    * User must change password at next logon = Enabled (keep all other account options
+    disabled).
+
+
+    Facts & Tasks
+
+
+    A description or details about some of the steps listed below are as follows:
+
+
+    **User Logon Name and UPN Suffix:** This step is required and is the name the
+    user will use to log on the domain. Also known as the user principal name (UPN).
+    You may select a different UPN suffix, if necessary and if available.'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# User Logon Name (Pre-Windows 2000): A user logon name that is backwards compatible\
+    \ with Windows NT domains. By default, the first 15 characters of the user logon\
+    \ name are used, but this can be changed if necessary.\n\nUser must change password\
+    \ at next logon: This option is not available if either of the next two options\
+    \ are selected. Also, the next two options cannot be selected if this option is\
+    \ selected.\n\n# Steps\n\n+   1. Select Administrative Tools.\n2. Select Active\
+    \ Directory Users and Computers.\n3. In Active Directory Users and Computers,\
+    \ navigate to and select the domain, OU (Organizational Unit), or other container\
+    \ in which the user account needs to be created (the user account context).\n\
+    \   * Which side of the window did you find the appropriate domain, OU (Organizational\
+    \ Unit), or other container?\n   * Did you select the domain, OU (Organizational\
+    \ Unit), or other container by clicking, double-clicking, or right-clicking it?\n\
+    4. Now add a new user.\n   * After the last step, does a window or pop-up menu\
+    \ display?\n   * Which selection did you choose?\n   * After choosing New, which\
+    \ selection did you choose?"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '5. Type the following values for the new user:
+
+
+    +   * First Name
+
+    * Initials
+
+    * Last Name
+
+    * Full Name (Required and composed from above values, by default.)
+
+    * User Logon Name and UPN Suffix
+
+    * User Logon Name (Pre-Windows 2000)
+
+
+    6. Select the choice to continue.
+
+
+    +   * Which button did you select?
+
+
+    7. Type the user account''s initial password and confirm it.
+
+
+    8. Enable or disable account options such as the following, if desired, then exit:
+
+
+    +   * User must change password at next logon
+
+    * User cannot change password
+
+    * Password never expires
+
+    * Account is disabled
+
+
+    9. Select the choice to finish.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# 9.3 Windows Resources
+
+
+    # Objectives
+
+
+    +   * Map a drive to a folder on computer.
+
+    * Configure, on a computer, a Local LPT1 printer to be shared.
+
+    * Publish a shared printer to Active Directory.
+
+    * Configure a folder for sharing.
+
+    * Add local user groups to the trustee list.
+
+    * Modify local group''s NTFS permissions.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# 9.3.2 Map Drive
+
+
+    # Scenario
+
+
+    You are configuring the file system of a Windows XP Professional computer. You
+    want to map a drive on this computer to a shared folder on the network.
+
+
+    Your task in this lab is to map the N: drive to the Projects shared folder on
+    the NY-DEV-WRK3 computer (The NY-DEV-WRK3 computer is part of the Westsim.Private
+    domain.) Make sure the drive mapping is persistent, so you do not need to establish
+    the drive mapping manually every time you log on.
+
+
+    # Facts & Tasks
+
+
+    To open Windows Explorer in Folder view (showing a hierarchy of objects and folders
+    on the left), right-click My Computer and select Explore.
+
+
+    You can open Windows Explorer focused on other objects (My Network Places, My
+    Documents, and so forth) by using the same steps (right-click the object and select
+    Open or Explore). You can toggle the Folder view on and off using the Folders
+    button in Windows Explorer.
+
+
+    Open the Map Network Drive dialog in any of the following:
+
+
+    +   - Select Map Network Drive... from the Tools menu.
+
+    - Right-click My Computer and select format Map Network Drive.... (This option
+    is also available when right-clicking My Computer in the Start menu.)
+
+    - Right-click My Network Places and select Map Network Drive.... (This option
+    is also available when right-clicking My Network Places in the Start menu.)
+
+    - Browse My Network Places, right-click a shared folder, and select Map Network
+    Drive...
+
+
+    Type the UNC path to a shared folder using the format \server_name\share_name.
+    Or click the Browse button and select a shared folder. (Skip this step if you
+    opened the Map Network Drive dialog by right-clicking a shared folder and selecting
+    Map Network Drive.... This step will be completed for you automatically.)
+
+
+    Enable the Reconnect at logon option if you want the drive mapping to be restored
+    each time you log on. Otherwise, you will need to recreate the drive mapping manually
+    after logging off.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "# Steps\n\n+   1. View My Computer in Folder view.\n  * How did you get My\
+    \ Computer to display in Folder view?\n\n+   2. Open the Map Network Drive dialog.\n\
+    \  * Which method did you use to open the Map Network Drive dialog?\n\n+   3.\
+    \ In the Map Network Drive dialog, select a drive letter from the Drive drop-down\
+    \ list.\n  * Which drive letter did you select?\n\n+   4. Enter the UNC path to\
+    \ a shared folder.\n  * Which method did you use to enter the UNC path to a shared\
+    \ folder?\n\n+   5. Enable the Reconnect at logon option.\n\n+   6. Close the\
+    \ window."
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# 9.3.4 Share a Local Printer
+
+
+    # Scenario
+
+
+    You are configuring the printing environment for a Windows XP Professional computer.
+    You want to let other users on the network print to a local printer on the computer.
+
+
+    Your task in this lab is to share the Local LPT1 printer on this computer. Use
+    a share name of Dev-Prn2 and make sure the printer is published to Active Directory.
+
+
+    # Facts & Tasks
+
+
+    To open the Printers and Faxes folder, click Start, then click Printers and Faxes.
+    You can also open this folder from the Control Panel.
+
+
+    Right-click the printer you want to share and select Sharing... from the menu.
+    (Optionally, you can select Properties then go to the Sharing tab or select the
+    Share this printer task in the side bar).
+
+
+    Keep the List in the directory option enabled if you want to list the shared printer
+    in Active Directory. Otherwise, uncheck this option. (If the computer is not a
+    member of an Active Directory domain you will not see this.)
+
+
+    If the printer share name is over eight characters, you will be asked if you want
+    to keep the shared printer name. Click Yes.
+
+
+    # Steps
+
+
+    +   1. Access Printer and Faxes.
+
+
+    +   * Which method did you use to access Printer and Faxes?
+
+
+    +   2. Select the applet for the printer that you are configuring to share.
+
+
+    +   3. Select the appropriate window to set printer sharing settings.
+
+
+    +   * Which method did you use to access the Printer sharing window?
+
+
+    +   4. Configure the printer to share.'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '5. Enter the printer''s sharing name.
+
+
+    +   - Which field did you use to enter the printer sharing name?
+
+
+    +   - What was the printer sharing name that you entered?
+
+
+    6. Ensure that the List in the Directory is enabled.
+
+
+    7. Exit and save your changes.'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "# 9.3.5 Add a Network Printer\n\n# Scenario\n\nYou are configuring the printing\
+    \ environment for a Windows XP Professional computer. You want the workstation\
+    \ to be able to print to a network printer.\n\nYour task in this lab is to use\
+    \ the Add Printer Wizard to connect to the Dev-Prn1 printer on the NY-DEV-SRV1\
+    \ network server (in the westim.private domain).\n\n# Facts & Tasks\n\nIn this\
+    \ scenario, you need to create a new network printer that refers to the Dev-Prn1\
+    \ printer on the NY-DEV-SRV1 network server. When you start the wizard, select\
+    \ the network printer option.\n\n# Steps\n\n+   1. Select the Add as a printer\
+    \ task in the Printer Tasks list of the Printers and Faxes window.\n   * How did\
+    \ you access the Printers and Faxes window?\n\n+   2. Begin the Add Printer Wizard.\n\
+    \   * Which button did you select to begin the Add Printer Wizard?\n\n+   3. Select\
+    \ the type of printer that you would like to add (local or network).\n   * Which\
+    \ option did you select?\n   * Which button did you select to advance to the next\
+    \ step?"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "4. Again, select the printer that you would like to add (a printer in the private\
+    \ network or\npublic domain).\n\n+   - Which option did you select?\n\n5. Type\
+    \ the UNC path to the printer share in the Name box. A UNC path uses the format\n\
+    \\\\server_name\\\\share_name. If you do not know the path to the printer, leave\
+    \ the printer\nname box empty and select Next to browse for the desired printer.\n\
+    \n6. Browse and select the printer.\n\n+   - Which applet did you select to begin\
+    \ browsing?\n\n+   - Did you click, double-click, or right-click the applet?\n\
+    \n7. Browse through the directory tree until you have found the appropriate printer,\
+    \ select the\nprinter, and then process to the next step.\n\n+   - Which printer\
+    \ did you select (including directory)?\n\n+   - Which button did you select to\
+    \ advance to the next step?\n\n8. If this is not the first printer for the computer,\
+    \ identify whether you want the new printer to\n the default printer and select\
+    \ the appropriate button to proceed.\n\n9. Once you are through with the printer\
+    \ wizard, select the appropriate button to close the\nwizard."
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# 9.3.7 Share a Folder
+
+
+    # Scenario
+
+
+    You are configuring the file system of a Windows XP Professional computer. The
+    D:\Projects folder needs to be accessed by other users on the network. You want
+    to share the folder.
+
+
+    Your task in this lab is to share the D:\Projects folder using the share name
+    *Projects*. Keep the default share permissions and other settings.
+
+
+    # Facts & Tasks
+
+
+    You can share a folder from the properties of the folder in Windows Explorer or
+    by using Shareders in Computer Management.
+
+
+    To open Windows Explorer and view the contents of the My Computer container, click
+    **My Computer** or right-click My Computer and select Open. To open Windows Explorer
+    in Folder view (showing a hierarchy of objects and folders on the left), right-click
+    My Computer and select Explore.
+
+
+    You can open Windows Explorer focused on other objects (My Network Places, My
+    Documents, and so forth) using the same steps (right-click the object and select
+    Open or Explore). You can toggle the Folder view on and off using the **Folders**
+    button in Windows Explorer.
+
+
+    To open the Shared Folders MMC Snap-In, use the following steps:
+
+
+    +   - Click **Start**.
+
+    - Right-click **My Computer** and select **Manage** to open the pre-configured
+    Computer Management console.
+
+    - Expand **System Tools** and click **Shared Folders**.
+
+
+    To share a Folder or Drive Using Shared Folders, use the following steps:
+
+
+    +   - To open Computer Management, click Start, right-click My Computer, and select
+    **Manage**.
+
+    - In Computer Management, browse to the System/Shared Folders/Shares folder.
+
+    - Right-click the Shares folder and select **New File Share**.
+
+    - Type or browse to the path of the folder you want to share. To share an entire
+    drive, type the path to the root folder (for example, C:\). Click **Next**.'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '+   * Type a share name and (optional) description. To make the share hidden
+    (not viewable\when users browse the network), end the name with a dollar sign
+    ($). Click **Next**.
+
+
+    +   * If the folder you identify does not exist, you will be shown a message.
+    Click **Yes** to create
+
+    t folder.
+
+
+    +   * Select the desired share permissions. To create custom share and NTFS permissions,
+
+    select Customize share and folder permissions. Customize permissions as needed.
+    Click
+
+    OK.
+
+
+    +   * Click **Finish**.
+
+
+    # # Steps
+
+
+    +   1. Open **My Computer** in the Explorer view.
+
+
+    +   * There are a number of ways to open **My Computer** in the Explore view.
+    Which
+
+    method did you use?
+
+
+    +   2. Navigate to the shared folder or drive.
+
+
+    +   * What path did you enter?
+
+
+    +   3. Select the appropriate folder and configure it for sharing.
+
+
+    +   * Which folder did you select?
+
+
+    +   * Did you select it with single-click, a double-click, or a right-click?
+
+
+    +   * Which tab did you need to access?
+
+
+    +   * Which selection did you make to configure the folder for sharing?'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '4. In the Share name field, type the name to be used when accessing the shared
+    folder. To make the share hidden (not viewable when users browse the network),
+    end the name with a dollar sign ($).
+
+
+    +   - Did you need to enter a folder name?
+
+
+    5. If desired, type a comment for the share.
+
+
+    +   - Did you need to enter a comment?
+
+
+    6. If you want to limit the number of users that can concurrently connect to the
+    shared folder, select the Allow this number of users option and specify a number
+    of users.
+
+
+    +   - Did you need to limit the number of users?
+
+
+    7. Click the Permissions... button to modify shared folder and NTFS permissions
+    if desired.
+
+
+    +   - Did you need to modify shared folder and NTFS permissions?
+
+
+    8. Close the properties of the folder or drive.'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# 9.3.10 Configure NTFS Permissions
+
+
+    # Scenario
+
+
+    You are configuring the file system of a Windows XP Professional computer. This
+    computer is a laptop computer shared by multiple users in the company. Currently,
+    all users can view the data on the D:\ drive, but only administrators can change
+    or delete the data. You want to keep these permissions, but also allow members
+    of the Power Users local group to change and delete the contents of the drive.
+
+
+    For the D:\ drive, edit the NTFS permissions as follows:
+
+
+    +   - Add the Power Users local group to the Trustee list.
+
+    - Grant the Power Users group allow Modify NTFS permissions.
+
+
+    # Facts & Tasks
+
+
+    You can open Windows Explorer on other objects (My Network Places, My Documents,
+    and so forth) using the same steps (right-click the object and select Open or
+    Explore). You can toggle the Folder view on and off using the Folders button in
+    Windows Explorer.
+
+
+    The NTFS Folder permissions are the same as the file permission, only applicable
+    to folders. The NTFS File permissions are as follows:
+
+
+    # Steps
+
+
+    +   - Open **My Computer** in the Explore view.
+
+    - Navigate to the appropriate folder.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '+   3. Select the appropriate folder for NTFS Permissions configuring.
+
+    * Did you select it with single-click, a double-click, or a right-click?
+
+
+    +   4. Select Properties of the folder you have chosen.
+
+
+    +   5. Select the appropriate tab.
+
+    * Which tab did you select?
+
+
+    +   6. Add a user or group. (To remove a user or group from the list, select the
+    user or group and click Remove.)
+
+    * Which button should you select to ADD a user?
+
+
+    +   7. If necessary, click the Locations... button and select the location where
+    Windows will look for users or groups.
+
+    * Was it necessary to click the Locations button?
+
+
+    +   8. Locate and select the option that will allow you to search for the appropriate
+    group.
+
+    * Which button did you select to take you to the appropriate window for making
+    your changes?
+
+    * Which button did you select to search for the appropriate group?
+
+
+    +   9. Once the appropriate group has been located, exit the current window.'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '10. Now, configure permissions for an existing user or group on the security
+    list.
+
+
+    +   - What did you need to select before selecting a Permission?
+
+
+    11. Now, select the appropriate Permissions.
+
+
+    12. Then save the changes and exit.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# 9.5: NetWare Networking
+
+
+    Objectives
+
+
+    +   - Install a Client Service.
+
+    - Create a new user account.
+
+    - Grant a user object rights within other directories.'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "# 9.5.4  Install the MS Novell Client\n\n# Scenario\n\nYou are configuring\
+    \ a Windows XP Professional computer to access a Novell NetWare server.\nYou decide\
+    \ to use the NetWare client software supplied with Windows.\nYour task in this\
+    \ lab is to install the Client Service for NetWare client software.\n\n# Facts\
+    \ & Tasks\n\nIn most cases, when you install a client, service, or protocol, it\
+    \ is enabled for all connections (and\not just the connection where you started\
+    \ the install process). After installation, manually disable the component for\
+    \ specific connections if necessary. Also, keep in mind that the installation\
+    \ process for some components (such as client software) often automatically installs\
+    \ other components (such as appropriate protocols).\n\n# Steps\n\n+   1. Open\
+    \ Network Connections.\n2. Select a LAN connection.\n   - Did you select it with\
+    \ single-click, a double-click, or a right-click?\n   - What was the name of the\
+    \ LAN connection that you selected?\n\n+   3. Open the LAN connection's Properties\
+    \ window. (In most cases, you can install components from the properties of any\
+    \ connection. However, you cannot install some components from the properties\
+    \ of a dial-up connection.)\n\n+   4. Select Install to install a client, service,\
+    \ or protocol.\n\nNote: The Install button would be under the Networking tab if\
+    \ you are viewing the properties of a non-LAN connection.\n\n+   - Which tab did\
+    \ you find the Install button under?"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '+   5. Select and add the appropriate client, service, or protocol icon.
+
+    * Did you select a client, service, or protocol?
+
+
+    +   6. Select the component you want and install it.
+
+    * Did you have to make a selection or just accept it?
+
+
+    7. Depending on the component you install, you might need to reboot the system.
+    If not, just exit.'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# 9.5.7 Create an eDirectory User
+
+
+    # Scenario
+
+
+    Rajeev Agarkar was hired in the IS department in Seattle. Create a user account
+    with the following properties: RAgarkaruser.IS.Seattle.WestSim user object. Assign
+    the following properties:
+
+
+    +   - Context (the container where the user object should exist) = IS.Seattle.WestSim
+
+    - Name = RAgarkar
+
+    - Surname = Agarkar
+
+    - Unique ID = RAgarkar (accept the default)
+
+    - Password = go4IT!
+
+
+    # Facts & Tasks
+
+
+    For this lab, browse to the IS.Seattle.WestSim item on the create the user object.
+    To find the right container, remember that the item on the right corresponds to
+    the top object in the tree. The container you are looking for is found in WestSim,
+    Seattle, and then IS.
+
+
+    To edit user object properties after the object is created, select the Define
+    additional properties box. To create multiple user objects, select Create another
+    User.
+
+
+    If you select Define additional properties, the user object properties will be
+    opened automatically. If you select Create another User, the New User dialog will
+    open again.
+
+
+    # Edit User Identification Properties
+
+
+    +   1. Open the user object properties by browsing to the object, right-clicking
+    the object, and selecting Properties....
+
+    2. Click the General tab.
+
+    3. If the Identification item does not appear on the top, click the down arrow
+    on the General tab, and then select Identification from the menu.
+
+    4. After making the changes, click OK or Apply.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# Steps
+
+
+    +   1. In ConsoleOne, browse to the parent container that will hold the new user
+    object.
+
+    * Which three containers do you open before reaching the IS container?
+
+
+    +   2. Select User to open New User Menu.
+
+    * Did you select it with single-click, a double-click, or a right-click?
+
+    * What menu selection did you make before User?
+
+
+    +   3. In the New User dialog, enter the Name and Surname. Accept the value in
+    the Unique ID field.
+
+
+    +   4. Modify the password options to prompt the user for a password at first
+    logon or to *not* set a password for the user object.
+
+
+    +   5. Prompt for a password during creation, and then exit the New User Menu.
+
+
+    +   6. You should be prompted to configure the password.
+
+
+    **Note:** If you accepted the default password option, you will be prompted to
+    set the password. Type and confirm the password, then click **Set Password** and
+    then exit.'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "# 9.5.9 Assign File System Rights\n\nScenario\n\nArmando Gonzales has responsibility\
+    \ for the information in the Personnel directory stored on the WS-SRV2_Shares\
+    \ volume in the Seattle.WestSim container.\n\nComplete the following tasks:\n\n\
+    +   - Make the AGonzales user object (in the Executive.Seattle.WestSim container)\
+    \ a trustee of the Personnel directory.\n- Grant him Supervisor rights.\n\nFacts\
+    \ & Tasks\n\nNetWare 4.x and higher uses a directory service called eDirectory.\
+    \ User accounts are configured in the directory. eDirectory can also run on other\
+    \ servers such as Windows and Linux. eDirectory is organized using the following:\n\
+    \n+   - A Tree represents the entire network which might be one or more distinct\
+    \ divisions.\n- Beneath the Tree are one or more Organization objects.\n- Within\
+    \ each Organization object are Organizational Unit objects.\n- Resources are represented\
+    \ as objects (such as Users, Servers, and Volumes).\n\nSteps\n\n+   1. Start by\
+    \ browsing to the WS-SRV2_Shares volume.\n   - Which objects did you expand to\
+    \ locate the WS-SRV2_Shares volume object?\n\n2. Expand the volume object and\
+    \ find the Personnel folder.\n\n3. Select the Personnel folder's Properties.\n\
+    \n4. Add a trustee.\n\n+   - Under which tab, can you add a trustee?"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '+   5. Browse to and select the AGonzales user object.
+
+
+    +   * In which container did you fine the AGonzales user object?
+
+
+    +   6. Select the user object in the Trustees window.
+
+
+    +   7. Check the appropriate right check box.
+
+
+    +   8. Exit the Properties of Personnel window.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# # 10.0: Wide Area Networks (WANs)
+
+
+    # ## 10.2: Internet Connectivity
+
+
+    # ### Objectives
+
+
+    +   - Connect a computer to the phone network, choosing the correct components
+    and allowing use of both the Internet and the phone.
+
+    - Connect a computer to a DSL service, choosing the correct components.
+
+    - Use the New Connection Wizard in Network Connections to manually create a dial-up
+    Internet connection.
+
+    - Manually configure the TCP/IP properties for the Local Area Connection network
+    connection.'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "# 10.2.2 Connect to the PSTN\n\n# Scenario\n\nYou have just signed up for dial-up\
+    \ Internet access. Select and install the correct components and connect the computer\
+    \ to the phone network. When you are finished, you should be able to use both\
+    \ the Internet and the phone.\n\n# Facts & Tasks\n\nA few facts about a PSTN are\
+    \ listed below:\n\n+   - Uses a single POTS phone line with a modem.\n- Common\
+    \ data transfer rates include 28.8 Kbps, 33.3 Kbps, and 56 Kbps.\n- The phone\
+    \ line cannot be used for voice and the Internet concurrently.\n\n# Steps\n\n\
+    +   1. Switch to Motherboard view by clicking the Motherboard button on the Workbench\
+    \ toolbar.\n2. On the Shelf, locate and select the appropriate expansion card.\n\
+    \   - Which type of expansion card did you select?\n\n+   3. Drag the card to\
+    \ an appropriate slot on the Motherboard.\n   - Which type of slot did you select?\n\
+    \n+   4. Switch to Back view by clicking the Back button on the Workbench toolbar.\n\
+    5. Unplug the phone line from the phone and insert it in the appropriate port\
+    \ in the modem. (Use the Zoom tool and scroll as necessary to better see ports,\
+    \ jacks, and connectors.)\n   - Which port did you plug the phone line into, the\
+    \ LINE or PHONE jack?\n\n+   6. Expand the Cables menu on the Shelf."
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '+   7. Select the appropriate cable and connect it to the telephone. Once you''ve
+    done that, the other end of the cable moves to Workbench Connections.
+
+
+    +   8. Drag the remaining connector in Workbench Connections to the remaining
+    port in the modem.'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# 10.2.3 Connect to DSL Network
+
+
+    Scenario
+
+
+    You upgraded your Internet service from dial-up to DSL. Now you need to set up
+    the components for the DSL service and connect your computer to it.
+
+
+    Facts & Tasks
+
+
+    For DSL, you will need a DSL router connected to the regular phone line. Then
+    connect the computer to the DSL router using an Ethernet port.
+
+
+    Steps
+
+
+    +   1. Locate and drag the appropriate device from the Shelf to the Workbench.
+
+
+    Fill out the characteristics of each device as you complete this step of the lab.
+
+
+    | Device Type | Ethernet Compatibility | Ports (types & number) |
+
+    |---|---|--|
+
+    | | | |
+
+    | | | |
+
+    | | | |
+
+
+    +   2. Open the Cables menu on the Shelf.
+
+
+    +   3. Locate the appropriate cable and connectors and drag a connector from the
+    Shelf to the appropriate port on the computer. The other connector moves to Workbench
+    Connections.
+
+
+    +   * List the two types of ports that are found on the device, the computer,
+    and the wall socket:
+
+
+    +   4. Drag the connector on Workbench Connections to an an open port on the device.'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '+   5. Locate the cable with connectors that match the other type of port.
+
+
+    +   6. Drag a connector from the Shelf to the port on the device. The other connector
+    moves to Workbench Connections.
+
+
+    +   7. Drag the connector on Workbench Connections to the jack on the wall outlet.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# 10.2.6 Create a Dial-up Internet Connection
+
+
+    Scenario
+
+
+    You are configuring network connections for a Windows XP Professional computer.
+    You want to create a dial-up connection to the Internet on this computer.
+
+
+    Your task in this lab is to use the New Connection Wizard in Network Connections
+    to create a dial-up Internet connection on this computer manually with the following
+    properties:
+
+
+    +   - Connection Name/ISP Name = Dial Internet
+
+    - Phone Number = 555-1234
+
+    - User Name = wacky123
+
+    - Password = 56passgo
+
+    - Always use this user name and password? = True
+
+    - Default Internet connection? = True
+
+    - Firewalled? = True
+
+
+    # Facts & Tasks
+
+
+    Explanations for the following options are explained below:
+
+
+    +   - Use this account name and password when anyone connects to the Internet
+    from this computer: If the connection has been made available to all users, this
+    option saves the user name and password and does not prompt for another user name
+    and password when the connection is used.
+
+
+    +   - Make this the default Internet connection: This option configures this dial-up
+    connection to be used by default, such as when a program like Internet Explorer
+    tries to automatically establish an Internet connection.
+
+
+    +   - Turn on Internet Connection Firewall for this connection: This option enables
+    a firewall for this connection to protect the computer from malicious Internet
+    users.'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Steps
+
+
+    +   1. Open the **Network Connections** window.
+
+
+    +   - Which button did you select to access **Control Panel**?
+
+
+    +   - To open **Network Connections**, did you select the applet with single-click,
+    double-click, or a right-click?
+
+
+    +   2. Select **Create a new connection** or **New Connection**.
+
+
+    +   - Where can the **Create a new connection** be found?
+
+
+    +   - Where can the **New Connection** be found?
+
+
+    +   3. Start the **New Connection Wizard**.
+
+
+    +   4. If not already selected, select **Connect to the Internet** and then continue
+    on to the next page.
+
+
+    +   5. If not already selected, select **Set up my connection manually** and then
+    continue on to the next page.
+
+
+    +   6. If not already selected, select **Connect using a dial-up modem** and then
+    continue on to the next page.
+
+
+    +   7. Type the ISP name (this will become the name of the network connection).
+    Then continue on to the next page.
+
+
+    +   8. Type the phone number to dial. Then continue on to the next page.
+
+
+    +   9. Select whether to make the connection available to all users or not. Then
+    continue on to the next page. (This screen might not appear.)
+
+
+    +   10. Type the user name and password to use when connecting to the Internet.
+    Confirm the password.'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '+   11. Enable or disable the following options, Then continue on to the next
+    page:
+
+
+    +   12. Use this account name and password when anyone connects to the Internet
+    from this computer
+
+
+    +   13. Make this the default Internet connection
+
+
+    +   14. Turn on Internet Connection Firewall for this connection
+
+
+    +   15. Exit to create the connection.'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# 10.2.7 Configure Internet Settings
+
+
+    Scenario
+
+
+    You are connecting a Windows Server 2003 member server to your network. You have
+    just installed the server, but have not yet joined the domain. Your network currently
+    uses manual IP addressing.
+
+
+    Your task in this lab is to configure the TCP/IP properties for the Local Area
+    Connection network connection to use the following static values:
+
+
+    +   * IP Address = 192.168.1.6
+
+    * Subnet Mask = 255.255.255.00
+
+    * Default Gateway = 192.168.1.254
+
+    * Preferred DNS Server = 192.168.1.1
+
+
+    # Facts & Tasks
+
+
+    When manually addressing a network connection, a default subnet mask may be provided.
+    A new subnet mask may be entered, if the default mask will not be used.
+
+
+    A default gateway address may be entered, to route data to another subnet. However,
+    if all computers are on a single subnet, a default gateway address need not be
+    entered.
+
+
+    # Steps
+
+
+    +   1. Open the Network Connections window.
+
+    2. In the Network Connections folder, view the properties of the applicable network
+    connection.
+
+    * Which menu choice did you make?
+
+
+    +   3. Select the appropriate tab for configuring a LAN connection.
+
+    * Which tab are Connection Items underneath?'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: "+   4. Select the appropriate connection item to set an IP Address.\n  * Which\
+    \ item provides communication across diverse interconnected networks?\n\n+   5.\
+    \ Select Internet Protocol (TCP/IP) properties.\n  * Which button did you select?\n\
+    \n+   6. Select the option that will allow you to enter the IP address of your\
+    \ choice.\n  * Which option did you select?\n\n+   7. Enter the IP address and\
+    \ move to the next field.\n  * What address did you enter?\n\n+    * Did you move\
+    \ the cursor or use the Tab key to access the next field?\n\n+   9. If required,\
+    \ enter the appropriate information to route data to another subnet or leave the\
+    \ field blank, then go on to the next field."
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '10. To assign a preferred DNS server, select Use the following DNS address
+    option.
+
+
+    +   - Why did you not need to select this option yourself?
+
+
+    11. Enter the DNS address, then go on to the next field.
+
+
+    +   12. Exit the Internet Protocol (TCP/IP) and Local Area Connection Properties
+    windows to save the changes.'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# 10.3: Remote Access
+
+
+    Objectives
+
+
+    +   - Create and configure a dial-up connection that dials a remote access server.
+
+    - Enable and disable properties for a network connection.'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "# 10.3.4 Configure a Remote Access Connection\n\nScenario\n\nYou are configuring\
+    \ network connections for a portable Windows XP Professional computer. You want\
+    \ to let this computer connect to your company network using a dial-up connection.\n\
+    \nYour task in this lab is to create a dial-up connection that dials your company's\
+    \ remote access server. Configure the dial-up connection with the following properties:\n\
+    \n+   - Connection Name/Company Name = Dial Company\n- Phone Number = 555-4321\n\
+    \n**Tip:** When you start the New Connection Wizard, select the **Connect to the\
+    \ network at my workplace** option to create the connection.\n\nFacts & Tasks\n\
+    \nPoint-to-Point-Protocol (PPP) makes establishing a remote connection much easier.\
+    \ To configure PPP, you supply the telephone number to dial and any authentication\
+    \ parameters (such as username and password). PPP negotiates communication parameters\
+    \ including IP addressing, compression, and encryption. PPP also supports multiple\
+    \ protocol suites.\n\nSteps\n\n+   1. Open the **Control Panel**.\n2. Select the\
+    \ **Network Internet Connections** category.\n3. Open **Network Connections**.\n\
+    4. Open the **New Connection Wizard**.\n    - Which method did you use to access\
+    \ the New Connection Wizard?\n5. Start the **New Connection Wizard**.\n    - Which\
+    \ button did you select to start the wizard?"
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '6. Select the option that will allow a business network connection from an
+    offsite location and then select the button that will take you to the next step.
+
+
+    7. Select the option that will connect you using a modem and phone line and then
+    select the button that will take you to the next step.
+
+
+    8. Enter the company name and then select the button that will take you to the
+    next step.
+
+
+    +   * What name did you enter?
+
+
+    9. Enter the phone number to dial and then select the button that will take you
+    to the next step.
+
+
+    +   * What number did you enter?
+
+
+    10. Select whether to make the connection available to all users or not and then
+    select the button that will take you to the next step. (This screen might not
+    appear.)
+
+
+    11. Save the changes and exit.'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: "# 10.3.5 Disable Networking Components\n\n# Scenario\n\nYou are configuring\
+    \ network connections for a Windows Professional computer. To enhance performance\
+    \ and security, you want to make sure that only necessary networking components\
+    \ are being used on the dialup connection.\n\nYour task in this lab is to edit\
+    \ the properties of the *Dial Internet* connection and disable the following components:\n\
+    \n+   - Client for Microsoft Networks\n- File and Printer Sharing for Microsoft\
+    \ Networks\n- Client Service for NetWare\n- NWLnk IPX/SPX/NetBIOS protocol\n\n\
+    # Facts & Tasks\n\nNetworking items can be found under the General tab if the\
+    \ connection is a LAN connection, otherwise they are under the Networking tab.\n\
+    \nTo disable these components, remove the check next to each component in the\
+    \ *Dial Internet* connection properties. When you are finished, the dial-up connection\
+    \ should use only *TCP/IP*. *Do not* uninstall the components, as that will remove\
+    \ them from the system and the other connections.\n\nEnabling or disabling components\
+    \ for a connection does not affect whether the components are enabled or disabled\
+    \ for other connections.\n\n# Steps\n\n+   1. Open the **Control Panel**.\n2.\
+    \ Open **Network Connections**.\n3. Locate the appropriate network connection.\n\
+    \   - Which connection did you select?"
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '+   4. Select the tab displaying the connection items.
+
+
+    +   * Which tab did you select?
+
+
+    +   5. In the list of networking components, enable or disable the components
+    you want to be used for this connection.
+
+
+    +   6. Save and exit.'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# 10.4: Securing Remote Connections
+
+
+    Objectives
+
+
+    +   - Configure the authentication settings for a network connection.
+
+    - Create a VPN connection between a PC and a VPN remote access server.
+
+    - Configure a VPN connection to automatically detect which VPN tunneling protocol
+    to use.'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: "# 10.4.3 Configure the Authentication Protocol\n\n# Scenario\n\nYou are configuring\
+    \ a dial-up connection for a Windows XP Professional laptop computer. The dial-up\
+    \ connection is used to connect to a company remote access server. Your company\
+    \ policy calls for only secure authentication to be used when connecting to the\
+    \ remote access server. Your task in this lab is to configure the authentication\
+    \ settings for the Dial Company connection.\n\n+   1. Edit the properties of the\
+    \ Dial Company connection.\n2. On the Security tab, select the Advanced option.\n\
+    3. Click the Settings... button and configure authentication as follows:\n   *\
+    \ Do not allow PAP, SPAP, or CHAP.\n   * Allow MS-CHAP v1 and v2.\n   * Do not\
+    \ allow connections to older Win95 servers.\n   * Automatically use Windows logon\
+    \ information if possible.\n\n# Facts & Tasks\n\nAuthentication protocols ensure\
+    \ that remote users have the necessary credentials for remote access. Each protocol\
+    \ includes different levels of protection to safeguard login credentials. As a\
+    \ rule, always implement the highest level of authentication possible.\n\n# Steps\n\
+    \n+   1. Open the Control Panel.\n2. Select the option to create network Internet\
+    \ connections.\n3. Select the option to view network connections.\n4. Locate and\
+    \ select the appropriate network connection's properties.\n5. Select the tab that\
+    \ will allow you to view Advanced (Custom Settings)."
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '6. Select the Advanced (Custom Settings).
+
+
+    +   * Which option did you select?
+
+
+    7. Select the button allowing you to view the settings.
+
+
+    +   * Which button did you select?
+
+
+    8. Check or uncheck the authentication protocols as necessary.
+
+
+    Check the necessary authentication protocols in the following table, as you complete
+    this step.
+
+
+    | X | Protocol or Setting |
+
+    |---|---|
+
+    | | Unencrypted password (PAP) |
+
+    | | Shiva password authentication protocol (SPAP) |
+
+    | | Challenge handshake authentication protocol (CHAP) |
+
+    | | Microsoft CHAP (MS-CHAP) |
+
+    | | Allow older MS-CHAP versions for Windows servers |
+
+    | | Microsoft CHAP version 2 (MS-CHAP v2) |
+
+    | | Use my Windows logon name and password (and domain if any) |
+
+
+    9. Exit the Advanced Security Settings window.
+
+
+    10. Exit the Dial Company Properties window.'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '# 10.4.7 Configure a VPN Connection
+
+
+    # ## Scenario
+
+
+    You are configuring network connections for a portable Windows XP Professional
+    computer. You want to let this computer connect to your company network remotely
+    over a VPN connection.
+
+
+    Your task in this lab is to create a VPN connection that connects to your company''s
+    VPN remote access server. Configure the VPN connection with the following properties:
+
+
+    +   - Connection Name/Company Name = Company VPN
+
+    - Internet Connection to Automatically Use = Dial Internet
+
+    - VPN Server = 172.10.5.42
+
+
+    After you have created the VPN connection, the connection will be configured to
+    automatically detect the VPN tunneling protocol to use. You want to require the
+    connection to use the VPN tunneling protocol that uses IPSec for encryption. To
+    configure a specific VPN protocol:
+
+
+    +   1. Edit the properties of the VPN connection.
+
+    2. On the Networking tab, change the VPN Protocol to the appropriate protocol.
+
+
+    > Note: In this lab you will not be able to make the connection to test it.
+
+
+    # ## Facts & Tasks
+
+
+    In this scenario, you create a VPN connection to use the existing dialup connection.
+    After creating the connection, you need to configure it to use L2TP for the VPN
+    tunneling protocol.
+
+
+    # ## Steps
+
+
+    +   1. Open the Control Panel.
+
+    2. Select the option to create network Internet connections.
+
+    3. Open Network Connections.
+
+    4. Open the New Connection Wizard.
+
+    5. Start the New Connection Wizard.'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '6. Select the option that will connect your computer to the network and then
+    select the button that will take you to the next step.
+
+
+    +   - Which option did you select?
+
+
+    7. Select the option to create a VPN and then select the button that will take
+    you to the next step.
+
+
+    +   - Which option did you select?
+
+
+    8. Enter the company name and select the button that will take you to the next
+    step.
+
+
+    +   - What did you enter?
+
+
+    9. Select the option to automatically dial the connection and select the button
+    that will take you to the next step.
+
+
+    +   - Which option did you select?
+
+
+    10. Enter the host name or IP address of the VPN remote access server on the destination
+    network and select the button that will take you to the next step.
+
+
+    +   - What did you enter?
+
+
+    11. Exit the New Connection Wizard window.
+
+
+    12. View the new VPN connection properties.
+
+
+    +   - Which menu option did you select?'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '13. Select the tab used for network options.
+
+
+    +   - Which tab did you select?
+
+
+    14. Select the VPN server type.
+
+
+    +   - Which menu item did you select?
+
+
+    15. Save your changes and exit the Network Connections window.'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# #11.0: Network Protection and Availability
+
+
+    # ##11.2: Internetwork Security
+
+
+    Objectives
+
+
+    +   - Enable Internet Connection Firewall (ICF) for a network connection.
+
+    - Open a port in the ICF firewall, allowing Web communication from the Internet
+    to a computer.'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '# 11.2.4 Enable ICF for a Connection
+
+
+    # Scenario
+
+
+    You are configuring Internet connectivity for a small office network. All computers
+    access the Internet through a shared dial-up connection on a Windows XP Professional
+    computer. You want to protect the office network from malicious Internet users.
+
+
+    Your task in this task is to enable Internet Connection Firewall (ICF) for the
+    Dial Internet network connection on this computer. Keep the default ICF settings.
+
+
+    # Facts & Tasks
+
+
+    Once ICF is enabled, you can configure ICF settings by executing the following
+    steps:
+
+
+    +   In the Dial Internet Properties window, under the Advanced tab, click the
+    Settings... button. This opens the Advanced Settings window.
+
+
+    +   Under the Services tab, select any service on your local network that Internet
+    users should be permitted to access. If the service is provided on a different
+    computer, enter that computer''s name or IP address, then click OK.
+
+
+    +   If you need to add a service that is not on the list, click Add....
+
+
+    +   Type a description for the service.
+
+
+    +   Type the name or IP address of the computer providing the service.
+
+
+    +   Enter the external port number and type (TCP or UDP) that the service uses
+    for communication on the Internet.
+
+
+    +   Enter the internal port number and type what the service uses for communication
+    on the private network.
+
+
+    +   Click OK to add the new service definition.
+
+
+    +   Under the Security Logging tab, select whether to log dropped packets and/or
+    successful connections. You can also specify the path and filename of the log
+    file and specify a size limit of the log file.
+
+
+    +   Under the ICMP tab, select any incoming or outgoing Internet Control Message
+    Protocol (ICMP) message that should be allowed between the local network and the
+    Internet.'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: "# Steps\n\n+   1. Open the Control Panel.\n2. Open Network Connections.\n3.\
+    \ Locate the appropriate network connection.\n   - Which connection did you select?\n\
+    4. Display the network connection's properties.\n5. Locate and select the Dial\
+    \ Internet Properties window tab which displays the Internet firewall settings.\n\
+    \   - Which tab did you select?\n6. Enable the Internet Connection Firewall.\n\
+    \   - Which option did you select?\n7. Save your changes and exit the Dial Internet\
+    \ Properties window."
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: "# 11.2.5 Open Port\n\n# Scenario\n\nYou are configuring Internet connectivity\
+    \ for a small office network. A Windows XP Professional computer has two LAN adapters,\
+    \ one of which is named Broadband Internet and connects to the Internet using\
+    \ an always-on broadband connection. You have shared the Broadband Internet connection,\
+    \ and enabled Internet Connection Firewall (ICF) on the connection to protect\
+    \ the small office network from Internet users. Now Internet users cannot access\
+    \ the Web site that is hosted by the computer. The Web site is hosted over the\
+    \ default TCP port.\n\nYour task in this lab is to allow Web communication from\
+    \ the Internet to this computer (LA-CORP-WRK3) by opening a port in the ICF firewall\
+    \ (secure Web communications are not necessary). Do not allow any other type of\
+    \ communication initiated from the Internet.\n\n# Facts & Tasks\n\nOnce ICF is\
+    \ enabled, you can configure ICF settings. Click the Settings... button. You can\
+    \ configure the following settings:\n\n+   - On the Services tab, select any service\
+    \ on your local network that Internet users should be permitted to access. If\
+    \ the service is provided on a different computer, enter that computer's name\
+    \ or IP address, then click **OK**.\n\n+   - If you need to add a service that\
+    \ is not on the list:\n  - Add...\n  - Type a description for the service.\n \
+    \ - Type the name or IP address of the computer providing the service.\n  - Enter\
+    \ the external port number and type (TCP or UDP) that the service uses for communication\
+    \ on the Internet.\n  - Enter the internal port number and what the service uses\
+    \ for communication on the private network.\n  - Click **OK** to add the new service\
+    \ definition.\n\nOn the Security Logging tab, select whether to log dropped packets\
+    \ and/or successful connections. You can also specify the path and file name of\
+    \ the log file and specify a size limit of the log file.\n\nOn the ICMP tab, select\
+    \ any incoming or outgoing Internet Control Message Protocol (ICMP) message that\
+    \ should be allowed between the local network and the Internet.\n\nTo complete\
+    \ this task, you must edit the ICF settings for the broadband connection (click\
+    \ the **Settings...** button on the Advanced tab). Allow Web (HTTP) communications."
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: "# Steps\n\n+   1. Open the **Control Panel.**\n\n+   2. Open **Network Connections.**\n\
+    \n+   3. Locate the appropriate network connection.\n    * Which connection did\
+    \ you select?\n\n+   4. Display the network connection's properties.\n\n+   5.\
+    \ Locate and select the Broadband Internet properties window tab which displays\
+    \ the Internet firewall settings.\n    * Which tab did you select?\n\n+   6. Enable,\
+    \ if not already enabled, the Internet Connection Firewall.\n    * Which option\
+    \ did you select (if applicable)?\n\n+   7. Select the button that will allow\
+    \ you to configure Internet settings.\n    * Which button did you select?\n\n\
+    +   * Which window opened?"
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '8. Select the option that will open a port in the ICF, allowing communication
+    between the Internet and computer (LA-CORP-WRK3).
+
+
+    +   - Which option did you select?
+
+
+    +   - What window opened?
+
+
+    9. Accept the changes and exit all of the open windows.'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# 11.5: Disaster Prevention and Recovery
+
+
+    Objectives
+
+
+    +   - Create a new volume allocating space as necessary on multiple disks.
+
+    - Create a RAID-5 volume.'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: '# 11.5.4 Create a Mirrored Volume
+
+
+    # Scenario
+
+
+    You have been asked to configure storage space on the server for the Marketing
+    department. Because the data is important to the company, you have been asked
+    to configure fault tolerance for the new storage space.
+
+
+    You have installed a new hard drive. Create a new volume using all of the space
+    on Disk 1 and necessary space on Disk 2 as follows:
+
+
+    +   * Volume type = Mirrored
+
+    * Volume size = 20000 MB
+
+    * Drive letter = M:
+
+    * Format = NTFS
+
+    * Volume label = Marketing
+
+
+    # Facts & Tasks
+
+
+    When selecting additional disks to participate in a mirrored volume, click **Add**.
+    (You can also use the **Remove** or **Remove All** buttons to remove selected
+    disks.) The amount of disk space you specify will be used on both disks to create
+    the mirrored disk. You can also mount the new volume as a folder or create it
+    without assigning a drive letter or drive path.
+
+
+    If you want to format the new volume while creating it, select the following file
+    system properties (otherwise, select **Do not format this partition**):
+
+
+    +   * File System
+
+    * File allocation unit size (In most cases, you should accept the default size.)
+
+    * Volume label.
+
+
+    # Steps
+
+
+    +   1. Open the Computer Management preconfigured MMC console by selecting the
+    option to manage **My Computer**.
+
+
+    +   * Which mouse button did you use to access the drop-down menu?'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '2. Navigate from Storage to Disk Management.
+
+
+    3. Locate unallocated space on a dynamic disk that will participate in the new
+    volume, then select New Volume... from the menu.
+
+
+    +   - Which mouse button did you use to access the drop-down menu?
+
+
+    4. Start the New Volume Wizard.
+
+
+    +   - Which button did you select to start the New Volume Wizard?
+
+
+    5. Select the appropriate volume type, then select the appropriate button to continue.
+
+
+    +   - Which volume type did you select?
+
+
+    6. From the list of dynamic disks labeled Available, add any additional disks
+    that will participate in the mirrored volume.
+
+
+    +   - Which dynamic disk did you select?
+
+
+    +   - Which button did you select?
+
+
+    7. If necessary, type the amount of the disk''s space to be used for the new volume,
+    then select the appropriate button to continue.
+
+
+    8. Select the appropriate drive letter, then select the appropriate button to
+    continue.
+
+
+    9. Perform a quick format or Enable file and folder compression, if desired. Then
+    select the appropriate button to continue.
+
+
+    10. Finish the partition and exit.'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# 11.5.5 Create a RAID-5 Volume
+
+
+    # Scenario
+
+
+    You are preparing the hard disk configuration for a new Windows Server 2003 computer.
+    You want to create a single volume named Data on the new server. You want to choose
+    a volume type that maximizes read performance and provides fault tolerance.
+
+
+    Your task in this lab is to create a RAID-5 volume as follows:
+
+
+    +   - To create the volume, use all four disks. You can start the wizard from
+    any existing hard disk, but after selecting the volume type, add all four disks
+    to the list of disks to use for the volume before proceeding.
+
+    - Make the volume as large as possible. It will consume all of the hard disk capacity
+    in the system.
+
+    - Drive letter = E:
+
+    - File system format = NTFS
+
+    - Volume label = Data
+
+
+    # Facts & Tasks
+
+
+    In this lab, you need to create a RAID-5 volume using all of the computer''s unallocated
+    disk space. A RAID-5 volume evenly distributes data along with parity (fault tolerance)
+    information across all disks participating in the RAID-5 volume. RAID-5 volumes
+    have good read performance as long as a disk does not fail. However, it takes
+    longer to write data parity information must first be calculated. If a single
+    disk in a RAID-5 volume fails, the volume is still accessible because parity information
+    can be used to reconstruct any lost data. However, if two disks fail, the entire
+    RAID-5 volume will also fail.
+
+
+    Create a RAID-5 volume using the Create Volume Wizard. For this scenario, select
+    all disks to participate in the new volume (RAID-5 volumes require at least three
+    disks).
+
+
+    The same amount of disk space will be used from each disk. The maximum amount
+    you can specify depends on the disk in the Selected list that has the least amount
+    of unallocated disk space. Also, be aware that one disk worth of space on the
+    volume is used to store parity information. For example, the RAID-5 volume consists
+    of three disks, 1/3 of the volume''s disk space will be used for parity information
+    and cannot be used to store user data.'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: "# Steps\n\n+   1. Open the Computer Management preconfigured MMC console by\
+    \ selecting the option to manage My Computer.\n2. Navigate from Storage to Disk\
+    \ Management.\n3. Locate unallocated space on a dynamic disk that will participate\
+    \ in the new volume, then select New Volume... from the menu.\n4. Start the New\
+    \ Volume Wizard.\n5. Select the appropriate volume type, then select the appropriate\
+    \ button to continue.\n  * Which volume type did you select?\n6. From the list\
+    \ of dynamic disks labeled Available, add all additional disks that will participate\
+    \ in the RAID-5 volume.\n  * Which dynamic disks did you select?\n7. If necessary,\
+    \ type the amount of the disk space to be used from each disk to create the new\
+    \ volume. Then select the appropriate button to continue.\n8. Select the appropriate\
+    \ drive letter, then select the appropriate button to continue.\n9. Move forward,\
+    \ in the New Volume Wizard to the volume label and enter the appropriate name.\n\
+    10. Select Perform a quick format or Enable file and folder compression, if desired.\
+    \ Then select the appropriate button to continue.\n11. Finish the partition and\
+    \ exit."
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: '# 12.0: Troubleshooting
+
+
+    # 12.2: Troubleshooting Network Communication
+
+
+    Objectives
+
+
+    +   - Test connectivity from various workstations on a simple network, using the
+    ping and tracert commands.
+
+    - Query addresses between workstations on different networks.'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: '# 12.2.4 Exploring Network Communications
+
+
+    # Scenario
+
+
+    In this lab, you will discover important facts about network communications by
+    using ping and tracert from various workstations on this simple network.
+
+
+    Note: To work with each workstation, click its icon in the network diagram to
+    open a command prompt.
+
+
+    Complete the following steps:
+
+
+    +   1. On Wrk3, ping the router interface by typing: ping 192.168.2.254. Does
+    the test succeed?
+
+    2. On Wrk3, ping Wrk4 by typing: ping 199.168.2.2. Why does this test fail?
+
+    3. Wrk2 has an IP address configured, but not a default gateway address. From
+    Wrk2, ping Wrk1. Then ping the router interface 192.168.1.254. Why do these tests
+    succeed?
+
+    4. From Wrk2, ping Wrk3. Try pinging the router interface 192.168.2.254. Why do
+    these tests fail?
+
+    5. From Wrk1, trace the path between Wrk1 and Wrk3 using the command: tracert
+    192.168.2.1. What addresses appear in the path between Wrk1 and Wrk3? Why doesn''t
+    the switch address appear in the path?
+
+    6. From Wrk3, trace the path to Wrk1 by typing: tracert 192.168.1.1. How does
+    this path differ from the path you discovered in the previous step?
+
+    7. Switch2 does not have an IP address set. From Wrk3, ping Wrk1. Why does this
+    test succeed even though the switch does not have an IP address?
+
+
+    # Facts & Tasks
+
+
+    There are several tasks you can perform to troubleshoot connectivity problems.
+    Often the best place to start in troubleshooting a problem is to ping the host
+    you are trying to contact. If you cannot contact a specific remote host, try pinging
+    another host in the same remote network. If successful, then the problem is with
+    the remote host (either a misconfiguration, broken link, or unavailable host).
+
+
+    # Steps
+
+
+    +   1. Locate the computer labeled Wrk3 and select it to open a DOS window.
+
+    2. On Wrk3, ping the router interface by typing: ping 192.168.2.254.'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: '+   - Does the test succeed?
+
+
+    3. On Wrk3, ping Wrk4 by typing: ping 199.168.2.2.
+
+
+    +   - Why does this test fail?
+
+
+    4. Wrk2 has an IP address configured, but not a default gateway address. From
+    Wrk2, ping Wrk1. Then ping the router interface 192.168.1.254.
+
+
+    +   - Why do these tests succeed?
+
+
+    5. From Wrk2, ping Wrk3. Try pinging the router interface 192.168.2.254.
+
+
+    +   - Why do these tests fail?
+
+
+    6. From Wrk1, trace the path between Wrk1 and Wrk3 using the command: tracert
+    192.168.2.1.
+
+
+    +   - What addresses appear in the path between Wrk1 and Wrk3?
+
+
+    +   - Why doesn''t the switch address appear in the path?
+
+
+    7. From Wrk3, trace the path to Wrk1 by typing: tracert 192.168.1.1.
+
+
+    +   - How does this path differ from the path you discovered in the previous step?
+
+
+    8. Switch2 does not have an IP address set. From Wrk3, ping Wrk1.
+
+
+    +   - Why does this test succeed even though the switch does not have an IP address?'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '# 12.2.5 Find Path Information 1
+
+
+    Scenario
+
+
+    Click the Simulation button to run the lab. Click the Wrk computer to open a DOS
+    command line and identify the path between Wrk1 and Wrk3.
+
+
+    From the IP addresses listed in the box on the right, drag the addresses of the
+    routers in the path between Wrk1 and Wrk3 to the box on the left. Make sure each
+    address is listed in order from top to bottom.
+
+
+    | 199.116.22.1 |
+
+    | 209.53.182.1 |
+
+    | 205.10.12.1 |
+
+    | 222.70.1.2 |
+
+    | 214.230.15.2 |
+
+    | 205.10.12.2 |
+
+    | 222.70.1.1 |
+
+    | 193.5.118.2 |
+
+    | 214.230.15.1 |
+
+    | 193.5.118.1 |
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_157_0.png)
+
+
+    Click the Wrk1 computer to open a DOS command line and identify the devices in
+    the path between Wrk1 and Wrk3.'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: "# Facts & Tasks\n\nYou will also see the address 215.61.199.2 in the path,\
+    \ but this is Wrk3 and not a router in the path.\n\n# Steps\n\n+   1. Select Simulation\
+    \ to begin.\n2. Click the Wrk1 computer to open the command prompt.\n3. List the\
+    \ devices in the path between Wrk1 and Wrk3.\n   - Which command did you type\
+    \ to trace the route between the two computers?\n   - What address did you enter\
+    \ to trace the route between the two computers?\n4. Write the addresses listed\
+    \ in response to your query. Ensure that they are listed in the proper order.\n\
+    5. Click the Done button when you have found the information you need and answer\
+    \ the question.\n6. From the IP addresses listed in the box on the right, drag\
+    \ the addresses of the routers in the path between Wrk1 and Wrk3 to the box on\
+    \ the left. Make sure each address is listed in order from top to bottom."
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: '# 12.2.6 Find Path Information 2
+
+
+    Scenario
+
+
+    Click the Simulation button to run the lab. Click the Wrk1 computer to open a
+    DOS command line and find the answer to the following questions.
+
+
+    +   - How many routers are in the path between Wrk1 and Wrk2?
+
+    - What is the default gateway address for Wrk1?
+
+    - What is the IP address of the last router in the path between Wrk1 and Wrk2?
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_159_0.png)
+
+
+    Click the Wrk1 computer to open a DOS command line and find the answer to the
+    questions above.
+
+
+    # Facts & Tasks
+
+
+    If you cannot contact any host in the remote network, try pinging hosts on other
+    remote networks (you might try several other networks). If successful, or if you
+    can contact some remote networks and not others, then the problem is with the
+    routing path between your network and the specific remote network. You can then
+    use the traceroute/traceroute commands to check the path to the problem network.'
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '# Steps
+
+
+    +   1. Select Simulation to begin.
+
+
+    +   2. Click the Wrk1 computer to open the command prompt.
+
+
+    +   3. List the devices in the path between Wrk1 and Wrk2.
+
+
+    +   - Which command did you type to trace the route between the two computers?
+
+
+    +   - What address did you enter to trace the route between the two computers?
+
+
+    +   4. Write the answers to the following questions:
+
+
+    +   - How many routers are in the path between Wrk1 and Wrk2?
+
+
+    +   - What is the default gateway address for Wrk1?
+
+
+    +   - What is the IP address of the last router in the path between Wrk1 and Wrk2?
+
+
+    +   5. Click the Done button when you have found the information you need and
+    answer the questions.
+
+
+    +   6. Answer the questions posed in the lab.'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: "# ## 12.2.7 Identify Communication Capabilities 1\n\n# ### Scenario\n\nClick\
+    \ the **Simulation** button to run the lab. Use the **Ipconfig** command to answer\
+    \ the following question:\n\nAssuming that all configuration values are correct,\
+    \ which of the following things can this workstation do?\n\n+   * Resolve host\
+    \ names.\n* Communicate with hosts on the same network.\n* Communicate with hosts\
+    \ on a different network.\n* Receive an IP address from a DHCP server if one is\
+    \ available.\n\nClick the **Done** button when you are finished to return and\
+    \ answer the question.\n\n# ### Facts & Tasks\n\nThis workstation will not receive\
+    \ an IP address from a DHCP server, because the DHCP Enabled line displays **No**.\
+    \ This means that the workstation has been configured with a static address and\
+    \ it will not try to contact a DHCP server.\n\n# ### Steps\n\n+   1. Select **Simulation**\
+    \ to begin.\n2. Locate and open **Command Prompt**.\n    * In which folder was\
+    \ **Command Prompt** found?\n3. Type the command that displays all of the information\
+    \ about the IP configuration.\n    * What command did you type?\n4. Click the\
+    \ **Done** button when you are finished reviewing the information and ready to\
+    \ return and answer the question."
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: '5. Check which of the following this workstation can do:
+
+
+    +   - Resolve host names.
+
+
+    +   - Communicate with hosts on the same network.
+
+
+    +   - Communicate with hosts on a different network.
+
+
+    +   - Receive an IP address from a DHCP server if one is available.'
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: "# 12.2.8 Identify Communication Capabilities 2\n\n# ## Scenario\n\nClick the\
+    \ **Simulation** button to run the lab. Use the **Ipconfig** command to answer\
+    \ the following question.\n\nAssuming that all configuration values are correct,\
+    \ which of the following things can this workstation do? (Select all that apply.)\n\
+    \n+   - Resolve host names.\n- Communicate with hosts on the same network.\n-\
+    \ Communicate with hosts on a different network.\n- Receive an IP address from\
+    \ a DHCP server if one is available.\n\n# ## Facts & Tasks\n\nThis workstation\
+    \ cannot resolve host names because the DNS server addresses have not been configured.\
+    \ It cannot communicate with other hosts on the network because it does not have\
+    \ a default gateway address set.\n\n# ## Steps\n\n+   1. Select **Simulation**\
+    \ to begin.\n2. Locate and open **Command Prompt**.\n3. Type the command that\
+    \ displays all of the information about the IP configuration.\n   - What command\
+    \ did you type?\n\n+   4. Click the **Done** button when you are finished reviewing\
+    \ the information and ready to return and answer the question."
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: '5. Check which of the following this workstation can do:
+
+
+    +   - Resolve host names.
+
+
+    +   - Communicate with hosts on the same network.
+
+
+    +   - Communicate with hosts on a different network.
+
+
+    +   - Receive an IP address from a DHCP server if one is available.'
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: '# 12.2.9 Troubleshoot Network Communication 1
+
+
+    # Scenario
+
+
+    Click the Simulation button to run the lab. Use the ping and tracert commands
+    from Wrk1 to diagnose the problem and answer the following question.
+
+
+    Wrk1 cannot communicate with Wrk3. Which of the following is the most likely cause
+    of the problem? (Perform all troubleshooting from Wrk1 only.)
+
+
+    +   - The cable between Wrk3 and the switch needs to be replaced.
+
+    - The switch is turned off.
+
+    - The IP address has not been configured on the switch.
+
+    - Wrk1 has been configured with an incorrect IP address or mask.
+
+    - Wrk3 has an incorrect default gateway setting.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_165_0.png)
+
+
+    # Facts & Tasks
+
+
+    If you cannot communicate with any host on the local network, then the problem
+    is likely with the local host or its connection to the network. Troubleshoot the
+    following:
+
+
+    +   - Check physical connectivity'
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: '+   * Validate TCP/IP configuration on the local host
+
+    * Validate IP configuration settings
+
+
+    # Steps
+
+
+    +   1. Select Simulation to begin.
+
+    2. Click the Wrk1 computer to open the command prompt.
+
+    3. Check connectivity with all other devices on the network.
+
+
+    +   * Which command did you type to check connectivity between the computers?
+
+
+    +   * What addresses did you enter to ping the other computers, and, were they
+    a success or did they fail?
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Success / Fail
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Success / Fail
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Success / Fail
+
+
+    +   4. Click the Done button when you are finished reviewing the information and
+    ready to return and answer the question.
+
+
+    +   5. Check which of the following is the most likely cause of the problem:
+
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ The cable between Wrk3 and the
+    switch needs to be replaced.
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ The switch is turned off.
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ The IP address has not been configured
+    on the switch.
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Wrk1 has been configured with
+    an incorrect IP address or mask.
+
+    _\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ Wrk3 has an incorrect default
+    gateway setting.'
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: '# 12.2.10 Troubleshoot Network Communication 2
+
+
+    Scenario
+
+
+    Click the Simulation button to run the lab. Use the ping and tracert commands
+    from Wrk1 and Wrk2 to diagnose the problem and answer the following question.
+
+
+    Wrk1 cannot communicate with Wrk3. Which of the following is the most likely cause
+    of the problem?
+
+
+    +   - The cable between Wrk1 and the switch needs to be replaced.
+
+    - Wrk1 has an incorrect default gateway setting.
+
+    - The router is down.
+
+    - The cable between Wrk3 and the switch needs to be replaced.
+
+    - Wrk1 has been configured with an incorrect IP address or mask.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_167_0.png)'
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: "Wrk1 cannot communicate with Wrk3. Use the ping and tracert commands to diagnose\
+    \ the problem.\n\n**Note:** In this lab, you can perform troubleshooting from\
+    \ both Wrk1 and Wrk2.\n\nWhat is the most likely cause of the problem?\n\n# Facts\
+    \ & Tasks\n\nIf you cannot contact any remote network, ping the default gateway\
+    \ router. If successful, and you still cannot contact any remote host, have the\
+    \ router administrator verify the router configuration. Check for broken links\
+    \ to the remote network, interfaces that have been shut down, or access control\
+    \ lists or other controls that might be blocking traffic.\n\nIf you cannot contact\
+    \ the default gateway router, ping other hosts on the local network. If successful,\
+    \ then check the default gateway router.\n\n# Steps\n\n+   1. Select **Simulation**\
+    \ to begin.\n2. Click the Wrk1 computer to open the command prompt.\n3. From Wrk\
+    \ 1, **ping** Wrk 3.\n    * Was the ping successful or did it fail?\n\n+   4.\
+    \ From Wrk 1, **ping** another workstation.\n    * Was the ping successful or\
+    \ did it fail?\n\n+   5. From Wrk 1, **ping** a host on the network.\n    * Was\
+    \ the ping successful or did it fail?\n    * What did the results of this test\
+    \ confirm?"
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: "+   6. From Wrk 1, **ping** a local router interface.\n  - Was the ping successful\
+    \ or did it fail?\n\n+   7. From Wrk 1, **ping** the remote router interface.\n\
+    \  - Was the ping successful or did it fail?\n  - What did the results of this\
+    \ test confirm?\n\n+   8. From Wrk 2, **ping** Wrk 3.\n  - Was the ping successful\
+    \ or did it fail?\n  - What did the results of this test confirm?\n\n+   9. Click\
+    \ the **Done** button when you are finished reviewing the information and ready\
+    \ to return and answer the question.\n\n+   10. Check which is the most likely\
+    \ cause of the problem:\n  - The cable between Wrk1 and the switch needs to be\
+    \ replaced.\n  - Wrk1 has an incorrect default gateway setting.\n  - The router\
+    \ is down.\n  - The cable between Wrk3 and the switch needs to be replaced.\n\
+    \  - Wrk1 has been configured with an incorrect IP address or mask."
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: '# 12.2.11 Troubleshoot Network Communication 3
+
+
+    Scenario
+
+
+    Click the **Simulation** button to run the lab. Use the **ping** and **tracerct**
+    commands from Wrk1 and Wrk2 to diagnose the problem and answer the following question.
+
+
+    Wrk1 cannot communicate with Wrk3. Which of the following are the most likely
+    causes of the problem? (Select all that apply.)
+
+
+    +   * Wrk1 has an incorrect default gateway setting.
+
+    * Switch2 is down.
+
+    * Switch2 does not have an IP address configured.
+
+    * The cable between Wrk3 and the switch needs to be replaced.
+
+    * Wrk3 had an incorrect default gateway setting.
+
+    * Wrk3 has an incorrect subnet mask setting.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_170_0.png)
+
+
+    Wrk1 cannot communicate with Wrk3. Use the ping and tracerct commands to diagnose
+    the problem.
+
+
+    **Note:** In this lab, you can perform troubleshooting from both Wrk1 and Wrk2.'
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: "# What is the most likely cause of the problem?\n\nFacts & Tasks\\If you cannot\
+    \ contact any host in the remote network, try pinging hosts on other remote networks\
+    \ (you might try several other networks). If successful, or if you can contact\
+    \ some remote networks and not others, then the problem is with the routing path\
+    \ between your network and the specific remote network. You can then use the traceroute/tracerct\
+    \ commands to check the path to the problem network.\n\nRemember, switches do\
+    \ not need an IP address configured to be able to perform switching functions.\n\
+    \nSteps\n\n+   1. Select **Simulation** to begin.\n2. Click the Wrk1 computer\
+    \ to open the command prompt.\n3. From Wrk1, **ping** Wrk 3.\n   - Was the ping\
+    \ successful or did it fail?\n4. From Wrk1, **ping** Wrk 4.\n   - Was the ping\
+    \ successful or did it fail?\n   - What did the results of this test confirm?\n\
+    5. Click the **Done** button when you are finished reviewing the information and\
+    \ ready to return to the question."
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: '6. Check which of the following are most likely the cause of the problem: (Select
+    all that apply.)
+
+
+    +   - Wrk1 has an incorrect default gateway setting.
+
+
+    +   - Switch2 is down.
+
+
+    +   - Switch2 does not have an IP address configured.
+
+
+    +   - The cable between Wrk3 and the switch needs to be replaced.
+
+
+    +   - Wrk3 had an incorrect default gateway setting.
+
+
+    +   - Wrk3 has an incorrect subnet mask setting.'
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: '# 12.4: Troubleshooting IP Configuration
+
+
+    Objectives
+
+
+    +   - Query default gateway, MAC, subnet mask, and IP addresses between workstations
+    on different networks.
+
+    - Check server connection status.
+
+    - Diagnose address configuration problems
+
+    - Access MAC and IP addresses on a Linux system.'
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: "# 12.4.4 Find Configuration Information 1\n\nScenario\n\nClick the Simulation\
+    \ button and use the lab to answer the following questions.\n\n+   - What is the\
+    \ IP address of the workstation?\n- How is the IP address configured on the system?\n\
+    - Which DNS server will the computer contact if the first DNS server is unavailable?\n\
+    \nFacts & Tasks\n\nThere are two ways to find the answers to these questions;\
+    \ you can either view the TCP/IP properties of the network adapter, or use the\
+    \ appropriate ipconfig command prompt.\n\nSteps\n\n+   1. Select Simulation to\
+    \ begin.\n2. Locate and open the Command Prompt.\n   - Which of the two above-mentioned\
+    \ methods is being used in these steps?\n3. Type the command that displays all\
+    \ of of the information about the IP configuration.\n   - What command did you\
+    \ type?\n4. Click the Done button when you are finished reviewing the information\
+    \ and ready to return to answer the question."
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: +   - Which DNS server will the computer contact if the first DNS server is
+    unavailable?
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: "# 12.4.5 Find Configuration Information 2\n\n# Scenario\n\nClick the **Simulation**\
+    \ button and use the lab to answer the following questions.\n\n+   - What is the\
+    \ address of the DHCP server from which this workstation received its IP configuration\
+    \ information?\n- What is the default gateway address?\n- What is the MAC address\
+    \ of the LAN adapter?\n\n# Facts & Tasks\n\nIf the workstation has received configuration\
+    \ information from a DHCP server, the following conditions will exist:\n\n+  \
+    \ - The DHCP Enabled line will show Yes.\n- The DHCP Server line will show the\
+    \ IP address of the DHCP server from which configuration information was received.\n\
+    - The Lease Obtained and Lease Expires lines will show the lease information.\n\
+    \n# Steps\n\n+   1. Select **Simulation** to begin.\n2. Locate and open the **Command\
+    \ Prompt**.\n3. Type the command that displays all of the information about the\
+    \ IP configuration.\n   - What command did you type?\n\n+   4. Click the **Done**\
+    \ button when you are finished reviewing the information and ready to return to\
+    \ answer the question."
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: '5. Answer the following question regarding this workstation:
+
+
+    +   - What is the address of the DHCP server from which this workstation received
+    its IP configuration information?
+
+
+    +   - What is the default gateway address?
+
+
+    +   - What is the MAC address of the LAN adapter?'
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: '# 12.4.6 Find Configuration Information 3
+
+
+    Scenario
+
+
+    Click the Simulation button and use the lab to answer the following questions.
+
+
+    +   - What is the IP address of the workstation?
+
+    - What is the subnet mask?
+
+    - How is the IP address configured on the system?
+
+
+    Facts & Tasks
+
+
+    If the workstation has used APIPA to set configuration information, the following
+    conditions will exist:
+
+
+    +   - The DHCP Enabled entry will display Yes.
+
+    - The Autoconfiguration Enabled entry will display Yes.
+
+    - The DHCP Server, Lease Obtained, and Lease Expires entries will not be shown.
+
+    - The IP address will be in the range of 169.254.0.1 to 169.254.255.254 with a
+    mask of 255.255.0.0.
+
+    - The Default Gateway entry will be blank.
+
+    - The DNS Servers entry will not be displayed.
+
+
+    > Note: When APIPA is used, the workstation sets its own IP address and mask.
+    It does not automatically configure default gateway or DNS server values.
+
+
+    Steps
+
+
+    +   1. Select Simulation to begin.
+
+    2. Locate and open the Command Prompt.
+
+    3. Type the command that displays all of the information about the IP configuration.
+
+    - What command did you type?'
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: '+   4. Click the Done button when you are finished reviewing the information
+    and ready to return to answer the question.
+
+
+    +   5. Answer the following question regarding this workstation:
+
+
+    +   * What is the IP address of the workstation?
+
+
+    +   * What is the subnet mask?
+
+
+    +   * How is the IP address configured on the system?'
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: '# 12.4.7 Troubleshoot IP Configuration Problems 1
+
+
+    # Scenario
+
+
+    Click the Exhibit button and use the graphic to answer the following question.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_180_0.png)
+
+
+    You are in charge of a small network as shown in the graphic. The network is connected
+    to the Internet and uses DHCP for address assignment.
+
+
+    A user reports that his workstation can only communicate with some computers.
+    Click the Simulation button and use the ipconfig command to diagnose the problem.
+
+
+    Based on the ipconfig output, what is the most likely cause of the problem?
+
+
+    +   - The DHCP server is down.
+
+    - The workstation has been configured to use static addressing.
+
+    - The default gateway and DNS server addresses have not been configured on the
+    DHCP server.'
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: '+   • There is a rogue DHCP server on the network.
+
+
+    +   • The DHCP server has been configured with the wrong default gateway address.
+
+
+    # Facts & Tasks
+
+
+    Your DHCP server can send out various IP configuration values in addition to the
+    IP address and mask. If network hosts are configured with incorrect IP values
+    (such as incorrect default gateway or DNS server addresses), first verify that
+    the workstations are contacting the correct DHCP server. If the correct server
+    is being used, go to the DHCP server to verify that it is sending out correct
+    configuration information.
+
+
+    # Steps
+
+
+    +   1. Select **Simulation** to begin.
+
+
+    +   2. In the **Command Prompt** window, type the command that displays all of
+    the information about the IP configuration.
+
+
+    • What command did you type?
+
+
+    +   3. Click the **Done** button when you are finished reviewing the information
+    and ready to return and answer the question.
+
+
+    +   4. Check the following answers that apply to this workstation:
+
+
+    ______ The DHCP server is down.
+
+
+    ______ The workstation has been configured to use static addressing.
+
+
+    ______ The default gateway and DNS server addresses have not been configured on
+    the DHCP server.
+
+
+    ______ There is a rogue DHCP server on the network.
+
+
+    ______ The DHCP server has been configured with the wrong default gateway address.'
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: '# 12.4.8 Troubleshoot IP Configuration Problems 2
+
+
+    Scenario
+
+
+    Click the Exhibit button and use the graphic to answer the following question.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_182_0.png)
+
+
+    You are in charge of a small network as shown in the graphic. The network is connected
+    to the Internet and uses DHCP for address assignment.
+
+
+    A user reports that his workstation can only communicate with some computers.
+    Click the Simulation button and use the Ipconfig command to diagnose the problem.
+
+
+    Based on the Ipconfig output, what is the most likely cause of the problem?
+
+
+    +   - The DHCP server is down.
+
+
+    +   - The workstation has been configured to use static addressing.
+
+
+    +   - The default gateway and DNS server addresses have not been configured on
+    the DHCP server.'
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: '+   - There is a rogue DHCP server on the network.
+
+
+    +   - The DHCP server has been configured with the wrong default gateway address.
+
+
+    # Facts & Tasks
+
+
+    A rogue DHCP server is an unauthorized DHCP server on the network. Symptoms of
+    a rogue DHCP server include:
+
+
+    +   - Conflicting IP addresses on the network.
+
+
+    +   - Incorrect IP configuration information on some hosts.
+
+
+    +   - To identify a rogue DHCP server using ifconfig, verify the DHCP server address.
+    If this address is not the address of your DHCP server, you have a rogue DHCP
+    server.
+
+
+    **Note:** When you have a rogue DHCP server on the network, some hosts will likely
+    receive configuration information from the correct DHCP server and some from the
+    rogue DHCP server.
+
+
+    # Steps
+
+
+    +   1. Select **Simulation** to begin.
+
+
+    +   2. In the **Command Prompt** window, type the command that displays all of
+    the information about the IP configuration.
+
+
+    +   - What command did you type?
+
+
+    +   3. Click the **Done** button when you are finished reviewing the information
+    and ready to return to answer the question.
+
+
+    +   4. Check the following answers that apply to this workstation:
+
+
+    +   - The DHCP server is down.
+
+
+    +   - The workstation has been configured to use static addressing.
+
+
+    +   - The default gateway and DNS server addresses have not been configured on
+    the DHCP server.
+
+
+    +   - There is a rogue DHCP server on the network.
+
+
+    +   - The DHCP server has been configured with the wrong default gateway address.'
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: '# 12.4.9 Troubleshoot IP Configuration Problems 3
+
+
+    Scenario
+
+
+    Click the Exhibit button and use the graphic to answer the following question.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_184_0.png)
+
+
+    You are in charge of a small network as shown in the graphic. The network is connected
+    to the Internet and uses DHCP for address assignment.
+
+
+    A user reports that his workstation can only communicate with some computers.
+    Click the Simulation button and use the Ipconfig command to diagnose the problem.
+
+
+    Based on the Ipconfig output, what is the most likely cause of the problem?
+
+
+    +   - The DHCP server is down.
+
+    - The workstation has been configured to use static addressing.
+
+    - The default gateway and DNS server addresses have not been configured on the
+    DHCP server.'
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: '+   - There is a rogue DHCP server on the network.
+
+    - The DHCP server has been configured with the wrong default gateway address.
+
+
+    # Facts & Tasks
+
+
+    Verify the workstations are contacting the correct DHCP server. If the correct
+    server is being used, go to the DHCP server to verify that it is sending out correct
+    configuration information.
+
+
+    # Steps
+
+
+    +   1. Select Simulation to begin.
+
+    2. In the Command Prompt window, type the command that displays all of the information
+    about the IP configuration.
+
+
+    +   - What command did you type?
+
+
+    +   - What default gateway address displays in the Command Prompt window?
+
+
+    +   - What default gateway address is listed in the graphic exhibit?
+
+
+    +   - What is displayed in the DHCP Enabled line?
+
+
+    +   - What DHCP server address displays in the Command Prompt window?
+
+
+    +   - What DHCP server address is listed in the graphic exhibit?
+
+
+    +   3. Click the Done button when you are finished reviewing the information and
+    ready to return to answer the question.'
+  merge: -1
+  pgno: 185
+- img_proc: true
+  md: '4. Check the following answers that apply to this workstation:
+
+
+    +   - The DHCP server is down.
+
+
+    +   - The workstation has been configured to use static addressing.
+
+
+    +   - The default gateway and DNS server addresses have not been configured on
+    the DHCP server.
+
+
+    +   - There is a rogue DHCP server on the network.
+
+
+    +   - The DHCP server has been configured with the wrong default gateway address.'
+  merge: -1
+  pgno: 186
+- img_proc: true
+  md: '# 12.4.10 Troubleshoot IP Configuration Problems 4
+
+
+    Scenario
+
+
+    Click the Exhibit button and use the graphic to answer the following question.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_187_0.png)
+
+
+    You are in charge of a small network as shown in the graphic. The network is connected
+    to the Internet and uses DHCP for address assignment.
+
+
+    A user reports that his workstation can only communicate with some computers.
+    Click the Simulation button and use the Ipconfig command to diagnose the problem.
+
+
+    Based on the Ipconfig output, what is the most likely cause of the problem?
+
+
+    +   - The DHCP server is down.
+
+
+    +   - The workstation has been configured to use static addressing.
+
+
+    +   - The default gateway and DNS server addresses have not been configured on
+    the DHCP server.'
+  merge: -1
+  pgno: 187
+- img_proc: true
+  md: '+   - There is a rogue DHCP server on the network.
+
+
+    +   - The DHCP server has been configured with the wrong default gateway address.
+
+
+    # Facts & Tasks
+
+
+    If the workstation has used APIPA to set configuration information, the following
+    conditions will exist:
+
+
+    +   - The DHCP Enabled entry will display Yes.
+
+
+    +   - The Autoconfiguration Enabled entry will display Yes.
+
+
+    +   - The DHCP Server, Lease Obtained, and Lease Expires entries will not be displayed.
+
+
+    +   - The IP address will be in the range of 169.254.0.1 to 169.254.255.254 with
+    a mask of 255.255.0.0.
+
+
+    +   - The Default Gateway entry will be blank.
+
+
+    +   - The DNS Servers entry will not be shown.
+
+
+    # Steps
+
+
+    +   1. Select Simulation to begin.
+
+
+    +   2. In the Command Prompt window, type the command that displays all of the
+    information about the IP configuration.
+
+
+    +   - Have the DNS servers and default gateway addresses been configured on the
+    workstation?
+
+
+    +   - What is displaying on the DHCP Enabled line?
+
+
+    +   - What is displaying on the DHCP server address line?'
+  merge: -1
+  pgno: 188
+- img_proc: true
+  md: '+   • Is the IP address in the range of APIPA addresses?
+
+
+    +   3. Click the **Done** button when you are finished reviewing the information
+    and ready to return and answer the question.
+
+
+    +   4. Check the following answers that apply to this workstation:
+
+
+    +   - The DHCP server is down.
+
+
+    +   - The workstation has been configured to use static addressing.
+
+
+    +   - The default gateway and DNS server addresses have not been configured on
+    the DHCP server.
+
+
+    +   - There is a rogue DHCP server on the network.
+
+
+    +   - The DHCP server has been configured with the wrong default gateway address.'
+  merge: -1
+  pgno: 189
+- img_proc: true
+  md: "# 12.4.12 Find Linux Information\n\n# Scenario\n\nYou are working on a Linux\
+    \ system. Click the Simulation button and use the lab to answer the following\
+    \ questions.\n\nWhat is the MAC address of the eth1 interface?\n\nWhat is the\
+    \ IP address of the eth0 interface?\n\nWhat IP address shows for the lo interface?\n\
+    \n# Facts & Tasks\n\nTo display the TCP/IP configuration on a Linux computer,\
+    \ use the ifconfig command.\n\n# Steps\n\n+   1. Select Simulation to begin.\n\
+    \n+   2. In the Command Prompt window, type the command that displays all of the\
+    \ information about the IP configuration.\n    - What command did you type?\n\n\
+    +   3. Click the Done button when you are finished reviewing the information and\
+    \ ready to return to answer the question.\n\n+   4. Check the following answers\
+    \ that apply to this workstation:\n    - What is the MAC address of the eth1 interface?\n\
+    \    - What is the IP address of the eth0 interface?"
+  merge: -1
+  pgno: 190
+- img_proc: true
+  md: +   - What IP address shows for the lo interface?
+  merge: -1
+  pgno: 191
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 192
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 193
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 194
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 195
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 196
+- img_proc: true
+  md: '# # LabSim Manual
+
+    nThe Lessons Only Experience Can Teach
+
+
+    # Network+
+
+
+    # In this LabSim you will learn:
+
+
+    +   - Identify common components, (including jacks/ports/ports, and cable) for
+    different types of networks (including telephone, Ethernet, coaxial, fiber optic,
+    and USB/Firewire).
+
+
+    +   - Connect PCs into various networks via the network components listed above.
+
+
+    +   - Identify features of, distinguish differences between, and match with appropriate
+    networks, a number of NICs and modems.
+
+
+    +   - Access, enable/disable, and identify the status and properties of a network
+    connection.
+
+
+    +   - Identify the correct wireless standards for given applications.
+
+
+    +   - Install wireless network adapters and components to create a wireless network.
+
+
+    +   - Recognize the structure and uses of subnet masks, and IP, gateway, and DNS
+    addresses.
+
+
+    +   - Manually configure subnet masks, and IP, gateway, and DNS addresses.
+
+
+    +   - Configure the TCP/IP Protocol to access multiple DNS and WINS servers.
+
+
+    +   - Install the QoS Packet Scheduler networking service.
+
+
+    +   - Enable the Internet Connection Firewall and open ports in the firewall.
+
+
+    +   - Test Connectivity between and elicit information from the components of
+    a simple network.
+
+
+    ![](img/ec83bdece8c967d0c687b6a13db22bc0_197_0.png)
+
+
+    TestOut Corporation
+
+    50 South Main Street
+
+    Pleases Grove UT 84062
+
+    1-800-877-4889 Toll Free
+
+    1-801-785-0575 Fax
+
+    www.testout.com
+
+
+    ISBN 1-9328237-03-5
+
+    90000
+
+    7 981932 837032'
+  merge: -1
+  pgno: 197
