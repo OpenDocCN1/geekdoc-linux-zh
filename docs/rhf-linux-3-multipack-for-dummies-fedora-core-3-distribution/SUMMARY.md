@@ -1,0 +1,2 @@
++   [RHF Linux 3 Multipack 初学者指南：（Fedora Core 3 发行版，含源码共 9 张光盘，适用于无 DVD 驱动器的用户）（初学者指南）](README.md)
++   [RHF Linux 3 Multipack 初学者指南：（Fedora Core 3 发行版，含源码共 9 张光盘，适用于无 DVD 驱动器的用户）（初学者指南）](rhf-linux-3-multipack-for-dummies-fedora-core-3-distribution.md)
