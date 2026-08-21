@@ -1,0 +1,557 @@
+- - '#'
+  - Red Hat(R) 考试实用指南：RHCSATM 和 RHCE(R) 认证指南与实验手册（认证指南）
+- - '##'
+  - 认证指南
+- - '#'
+  - 目录概览
+- - '###'
+  - 第1章 安装 29
+- - '###'
+  - 第2章 系统初始化 47
+- - '###'
+  - 第3章 磁盘与分区 71
+- - '###'
+  - 第4章 文件系统等 113
+- - '###'
+  - 第5章 网络 149
+- - '###'
+  - 第6章 软件包管理 169
+- - '###'
+  - 第7章 用户管理 195
+- - '###'
+  - 第8章 网络安装 221
+- - '###'
+  - 第9章 系统日志、监控与自动化 239
+- - '###'
+  - 第10章 内核 265
+- - '###'
+  - 第11章 SELinux 277
+- - '###'
+  - 第12章 系统安全 291
+- - '###'
+  - 第13章 远程访问 309
+- - '##'
+  - 第14 章 Web 服务 325
+- - '##'
+  - 第15 章 NFS 351
+- - '##'
+  - 第16 章 Samba 369
+- - '##'
+  - 第17 章 FTP 383
+- - '##'
+  - 第18 章 DNS 393
+- - '##'
+  - 第19 章 网络服务 421
+- - '##'
+  - 第20 章 电子邮件服务 443
+- - '##'
+  - 第21 章 故障排除 463
+- - '##'
+  - 第22 章 使用 KVM 进行虚拟化 473
+- - '##'
+  - 实验 1 483
+- - '##'
+  - 实验 2 485
+- - '##'
+  - 关于作者
+- - '##'
+  - 致谢
+- - '##'
+  - 我们想听听你的意见！
+- - '##'
+  - 读者服务
+- - '##'
+  - 图书特点
+- - '##'
+  - 考试注册与费用
+- - '#'
+  - Red Hat® 考试实战指南：RHCSA® 和 RHCE® 认证指南与实验手册
+- - '##'
+  - 自学与经验
+- - '##'
+  - 资料
+- - '##'
+  - RHCSA 备考指南
+- - '##'
+  - 创建和配置文件系统
+- - '##'
+  - 部署、配置和维护系统
+- - '##'
+  - 管理用户和组
+- - '##'
+  - 管理安全
+- - '##'
+  - RHCE 备考指南
+- - '##'
+  - 系统配置与管理
+- - '##'
+  - HTTP/HTTPS
+- - '##'
+  - DNS
+- - '##'
+  - FTP
+- - '##'
+  - NFS
+- - '##'
+  - Samba
+- - '##'
+  - SMTP
+- - '##'
+  - SSH
+- - '##'
+  - NTP
+- - '##'
+  - 实验环境
+- - '##'
+  - 表-3 实验布局
+- - '##'
+  - 谁应该读这本书？
+- - '##'
+  - 本书的结构
+- - '##'
+  - 引言
+- - '##'
+  - 文件和目录管理
+- - '#'
+  - 红帽®考试实战指南：RHCSA® 和 RHCE® 认证指南与实验手册
+- - '#'
+  - ls
+- - '#'
+  - pwd
+- - '#'
+  - cd Documents/
+- - '#'
+  - pwd
+- - '###'
+  - 第 5 步
+- - '#'
+  - ls -a
+- - '###'
+  - 第 6 步
+- - '#'
+  - cd ..
+- - '###'
+  - 第 7 步
+- - '#'
+  - pwd
+- - '#'
+  - mkdir test
+- - '#'
+  - mkdir -p another/test
+- - '#'
+  - ls another
+- - '#'
+  - cd /home/user01
+- - '#'
+  - touch test1
+- - '#'
+  - ls test1
+- - '#'
+  - file test1
+- - '#'
+  - head /var/log/messages
+- - '#'
+  - tail /var/log/messages
+- - '#'
+  - 红帽®考试 8 实战指南：RHCSA® 和 RHCE® 认证指南与实验手册
+- - '#'
+  - cp /var/log/messages /home/user01
+- - '#'
+  - cp /var/log/messages .
+- - '#'
+  - mv messages messages.bak
+- - '#'
+  - mv messages.bak test/
+- - '#'
+  - ls test
+- - '#'
+  - cd test
+- - '#'
+  - rm messages.bak
+- - '#'
+  - cd ..
+- - '#'
+  - rm -rf test/
+- - '##'
+  - 文件权限基础
+- - '#'
+  - 红帽®实战指南：RHCSA* 和 RHCE* 认证指南与实验手册
+- - '#'
+  - ls -s /home/user01
+- - '#'
+  - ls -s /home/user01
+- - '#'
+  - chown user02 file1
+- - '#'
+  - chown user02 file2
+- - '#'
+  - -rw-rw-r-- 1 user01 user01 0 Dec 11 07:44 file1
+- - '#'
+  - chmod 666 file1
+- - '#'
+  - -rw-rw-rw- 1 user02 user01 Dec 11 07:44 file1
+- - '#'
+  - umask
+- - '#'
+  - 引言
+- - '#'
+  - 使用文本编辑器
+- - '#'
+  - 正则表达式 (Regex)
+- - '#'
+  - 16 红帽®考试实战指南：RHCSA™ 和 RHCE® 认证指南与实验手册
+- - '##'
+  - I/O 重定向
+- - '###'
+  - 步骤 2.
+- - '#'
+  - cat file_example
+- - '###'
+  - 步骤 3.
+- - '#'
+  - cut -d " " -f3 file_example
+- - '###'
+  - 步骤 4.
+- - '#'
+  - cat file_example | cut -d " " -f3 file_example
+- - '#'
+  - 步骤 5.
+- - '#'
+  - echo "This is some more text" > file_example && cut -f3 file_example
+- - '##'
+  - Red Hat® 考试指南：RHCSA™ 和 RHCE® 认证指南与实验手册
+- - '#'
+  - cat file_example
+- - '#'
+  - echo "Different text" > file_example
+- - '#'
+  - cat file_example
+- - '#'
+  - echo "My original text" >> file_example
+- - '#'
+  - cat file_example
+- - '#'
+  - echo "My original text" >> file_example && cat file_example
+- - '#'
+  - uniq file_example > uniq_file && cat uniq_file
+- - '#'
+  - cat /etc/passwd
+- - '#'
+  - sort /etc/passwd
+- - '##'
+  - 选项：
+- - '###'
+  - 步骤 3. 确定 /etc/passwd 文件中有多少行：
+- - '#'
+  - wc -l /etc/passwd
+- - '##'
+  - 压缩与归档
+- - '#'
+  - touch file1 file2 another_file
+- - '#'
+  - tar cvf sample.tar file1 file2 file3 another_file
+- - '#'
+  - tar cvf sample.tar <file>
+- - '#'
+  - tar cvf sample.tar.gz <file>
+- - '##'
+  - 步骤 5. 查看当前目录以查看两个当前的归档文件：
+- - '#'
+  - ls
+- - '##'
+  - 步骤 6. 使用 -t 选项列出构建文件的所有内容：
+- - '#'
+  - tf Dec2010_MyApp.tar.gz
+- - '##'
+  - 步骤 7. 在构建文件中查询你想要的文件：
+- - '#'
+  - tf Dec2010_MyApp.tar.gz | grep file5.jsp
+- - '##'
+  - 步骤 8. 再次查询相同的内容，但使用此命令，-v 获取额外信息：
+- - '#'
+  - tar vf Dec2010_MyApp.tar.gz | grep file5.jsp
+- - '##'
+  - 步骤 9. 现在详细地提取此构建文件：
+- - '#'
+  - xvf Dec2010_MyApp.tar.gz
+- - '##'
+  - Red Hat® 考试实战指南：RHCSA™ 和 RHCE® 认证指南与实验手册
+- - '##'
+  - 第1章：安装
+- - '###'
+  - 使用 RHEL5 的旧版本安装
+- - '##'
+  - 第 7 步。列表中的下一步是设置系统所需的网络接口。对于本次安装，你将设置两个网络接口。第一个应该是 `eth0`，它应该从 DHCP 服务器获取 IP 地址；第二个应该是
+    `eth1`，并以静态方式设置其 IP 地址（见图 1-8）。
+- - '##'
+  - 首次启动过程
+- - '#'
+  - 图 1-10 软件包选择。
+- - '#'
+  - 图 1-11 选择防火墙端口。
+- - '##'
+  - 第 2 步。
+- - '##'
+  - 第 3 步。
+- - '##'
+  - 第 4 步。
+- - '##'
+  - 第 5 步。
+- - '##'
+  - 创建用户
+- - '##'
+  - 验证安装
+- - '##'
+  - 实验 1
+- - '##'
+  - 任务 1 – 首次安装
+- - '##'
+  - 任务 2 – 第二次安装
+- - '##'
+  - 任务 3 – 第三次安装
+- - '##'
+  - 任务 4 – 第四次安装
+- - '##'
+  - 系统初始化
+- - '##'
+  - 启动过程
+- - '#'
+  - cat /etc/initab
+- - '#'
+  - initab          此文件描述了 INIT 进程应该如何在
+- - '#'
+  - 特定的运行级别下设置系统。
+- - '#'
+  - 'Author:          Miquel vanorenberg, <miquels@ddr.net.org>'
+- - '#'
+  - Modified for RHS by Marc Ewing and Donna Barnes
+- - '#'
+  - RHS 使用的运行级别：
+- - '#'
+  - 0 - halt（不要在默认级别）
+- - '#'
+  - 1 - 单用户模式
+- - '#'
+  - 2 - 多用户，带 NFS（如果没有网络，则相同）
+- - '#'
+  - 3 - 全多用户
+- - '#'
+  - 4 - 未使用
+- - '#'
+  - 5 - X1
+- - '#'
+  - 6 - 重启（不要在默认级别）
+- - '##'
+  - 系统初始化
+- - '#'
+  - cat /boot/grub/grub.conf
+- - '#'
+  - grub.conf
+- - '##'
+  - 真实技巧
+- - '#'
+  - GRUB 命令行
+- - '##'
+  - 运行级别 (Runlevels)
+- - '#'
+  - who -r
+- - '##'
+  - 第 2 章：系统初始化
+- - '##'
+  - 救援与运行级别
+- - '##'
+  - 服务管理
+- - '##'
+  - 步骤 1. 检查 sshd 状态：
+- - '#'
+  - chkconfig sshd
+- - '#'
+  - chkconfig sshd off
+- - '#'
+  - chkconfig sshd on
+- - '##'
+  - 第 2 章：系统初始化
+- - '##'
+  - 服务管理
+- - '##'
+  - 步骤 1. 检查 sshd 状态：
+- - '#'
+  - chkconfig sshd
+- - '##'
+  - 权限基础
+- - '#'
+  - 权限和用户访问
+- - '##'
+  - 第 2 章：系统初始化
+- - '##'
+  - 服务管理
+- - '##'
+  - 步骤 1. 检查 sshd 状态：
+- - '#'
+  - chkconfig sshd
+- - '##'
+  - 文件权限基础
+- - '##'
+  - 权限和用户访问
+- - '#'
+  - chown user02 file1
+- - '#'
+  - chown user02 file2
+- - '#'
+  - chmod 666 file1
+- - '##'
+  - 逻辑卷管理器 (LVM)
+- - '##'
+  - 通用信息
+- - '##'
+  - 创建 LVM 分区
+- - '#'
+  - pvcreate /dev/hdb
+- - '#'
+  - pvdisplay /dev/hdb
+- - '#'
+  - vgcreate vg_group0 /dev/hdb
+- - '##'
+  - 步骤 5 步。
+- - '#'
+  - lvcreate -L 3000 VolGroup01
+- - '##'
+  - 步骤 6 步。
+- - '#'
+  - lvdisplay vg_group1
+- - '##'
+  - 步骤 7 步。
+- - '#'
+  - vgdisplay -v VolGroup01
+- - '##'
+  - 步骤 8 步。
+- - '#'
+  - lvcreate -L 3000 -n SecretData vg_group1
+- - '#'
+  - lvrename /dev/vg_group1/lv00 /dev/vg_group1/SecretData
+- - '##'
+  - 步骤 9 步。
+- - '#'
+  - lvdisplay vg_group1
+- - '##'
+  - 调整 LVM 分区的大小
+- - '#'
+  - lxtend -L +2000 /dev/vg_group1/SecretData
+- - '#'
+  - lxtend -L 6000 /dev/vg_group1/SecretData
+- - '#'
+  - lresize -L 7000 /dev/vg_group1/SecretData
+- - '##'
+  - 数据迁移
+- - '#'
+  - vgdisplay -v vg_group1
+- - '#'
+  - pvcreate /sdb
+- - '#'
+  - vgxtend vg_group1 /sdb
+- - '#'
+  - vgdisplay -v vg_group1
+- - '#'
+  - vgextend vg_group1 /dev/sdc
+- - '#'
+  - lvcreate -L 5000 vg_group1
+- - '#'
+  - lvdisplay vg_group1
+- - '#'
+  - vgdisplay -v vg_group1
+- - '#'
+  - pmove /dev/hdb /dev/hdc
+- - '#'
+  - pvsdisplay /dev/hdb
+- - '##'
+  - 磁盘分区
+- - '#'
+  - fdisk /dev/hdb
+- - '#'
+  - parted -l
+- - '#'
+  - fdisk /dev/hdb
+- - '##'
+  - '**删除 LVM 分区**'
+- - '###'
+  - 步骤 1. 要移除逻辑卷，使用 `lvremove` 命令：
+- - '#'
+  - vgremove -f vg_group1
+- - '#'
+  - vgdisplay vg_group01
+- - '##'
+  - 现实世界技巧
+- - '##'
+  - 创建 RAID 阵列
+- - '#'
+  - fdisk -l
+- - '#'
+  - mdadm -Cv /dev/md0 --level=5 /dev/sdb /dev/sdc
+- - '##'
+  - 删除 RAID 阵列
+- - '#'
+  - mdadm --stop /dev/md0
+- - '#'
+  - mdadm --zero-super /dev/sdb
+- - '#'
+  - mdadm --zero-super /dev/sdc
+- - '##'
+  - 磁盘分区
+- - '#'
+  - fdisk /dev/hdb
+- - '#'
+  - parted -l
+- - '#'
+  - fdisk /dev/hdb
+- - '##'
+  - 创建交换分区 (Swap)
+- - '#'
+  - mkswap /dev/hdb
+- - '#'
+  - swapon /dev/hdb
+- - '##'
+  - 删除分区
+- - '#'
+  - fdisk /dev/hdb
+- - '##'
+  - 文件系统设置
+- - '#'
+  - mkfs.ext4 /dev/hdb
+- - '#'
+  - mount /dev/hdb /mnt
+- - '##'
+  - 文件系统
+- - '#'
+  - 选项
+- - '#'
+  - /etc/fstab
+- - '#'
+  - mount -a
+- - '##'
+  - 额外的文件系统
+- - '#'
+  - e2label /dev/hdb
+- - '#'
+  - resize2fs /dev/hdb
+- - '##'
+  - 使用 LUKS 进行加密
+- - '#'
+  - 创建加密分区
+- - '#'
+  - cryptsetup luksFormat /dev/hdb
+- - '#'
+  - cryptsetup open /dev/hdb mycrypt
+- - '##'
+  - 加密分区
+- - '#'
+  - 创建文件系统
+- - '#'
+  - mkfs.ext4 /dev/mapper/mycrypt
+- - '#'
+  - mount /dev/mapper/mycrypt /mnt
+- - '##'
+  - 卸载
+- - '#'
+  - umount /dev/mapper/mycrypt
+- - '#'
+  - cryptsetup close /dev/mapper/mycrypt
