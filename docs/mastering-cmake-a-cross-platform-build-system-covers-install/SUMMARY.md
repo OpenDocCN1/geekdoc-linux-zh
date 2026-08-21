@@ -1,0 +1,2 @@
++   [CMake 精通指南：[跨平台构建系统；涵盖 CMake 的安装与运行；详述将现有构建流程转换为 CMake；创建强大的跨平台构建脚本]](README.md)
++   [CMake 精通指南：[跨平台构建系统；涵盖 CMake 的安装与运行；详述将现有构建流程转换为 CMake；创建强大的跨平台构建脚本]](mastering-cmake-a-cross-platform-build-system-covers-install.md)
