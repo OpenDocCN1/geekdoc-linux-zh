@@ -1,0 +1,658 @@
+- - '#'
+  - Linux 程序员参考指南
+- - '#'
+  - Richard Petersen
+- - '#'
+  - 关于作者
+- - '#'
+  - 目录
+- - '#'
+  - 第 1 章 脚本：命令与注释
+- - '##'
+  - 引言
+- - '##'
+  - Shell 脚本：命令与注释
+- - '###'
+  - Shell 脚本：命令与注释 3 hello
+- - '###'
+  - The hello script says hello
+- - '##'
+  - 控制结构
+- - '###'
+  - 控制结构：
+- - '###'
+  - 函数
+- - '###'
+  - 控制结构：AND, OR 和 NOT
+- - '###'
+  - 函数
+- - '###'
+  - 循环控制结构：while, until, for, in, select
+- - '###'
+  - 函数
+- - '###'
+  - 条件控制结构：if, else, elif, case
+- - '###'
+  - 函数
+- - '##'
+  - 运算符 7
+- - '###'
+  - 运算符
+- - '###'
+  - 'Here: <<'
+- - '###'
+  - mailmark
+- - '###'
+  - '双引号、单引号和反斜杠: " " '' \'
+- - '###'
+  - '反引号:'
+- - '###'
+  - greetargs
+- - '###'
+  - sargs
+- - '###'
+  - 运算符
+- - '###'
+  - 算术运算符
+- - '###'
+  - 运算符 15
+- - '###'
+  - 重定向标准输出： >
+- - '###'
+  - 追加标准输出：>>
+- - '###'
+  - 标准输入：<
+- - '##'
+  - 管道 (Pipe)
+- - '##'
+  - 操作符 19
+- - '##'
+  - 背景：&
+- - '##'
+  - '&& 和 ||'
+- - '##'
+  - 函数：(){}
+- - '##'
+  - BASH 命令
+- - '##'
+  - 冒号 (:)
+- - '##'
+  - source, .
+- - '##'
+  - CTRL-Z：中断
+- - '##'
+  - BASH 命令 25
+- - '##'
+  - alias
+- - '##'
+  - at
+- - '##'
+  - BASH 命令
+- - '##'
+  - BASH 命令
+- - '##'
+  - bg
+- - '##'
+  - bind
+- - '##'
+  - break
+- - '##'
+  - 28 个 BASH 命令
+- - '##'
+  - builtin（内置命令）
+- - '##'
+  - case
+- - '##'
+  - 29 个 BASH 命令
+- - '##'
+  - lschoice
+- - '#'
+  - 程序允许用户选择不同的方式来列出文件
+- - '##'
+  - cd
+- - '##'
+  - continue
+- - '##'
+  - declare（声明）
+- - '##'
+  - dirs（目录列表）
+- - '##'
+  - echo
+- - '##'
+  - 32 个 BASH 命令
+- - '##'
+  - elif
+- - '##'
+  - elseif
+- - '##'
+  - enable [-n] [command-name ...]
+- - '##'
+  - eval [arguments ...]
+- - '#'
+  - exec
+- - '#'
+  - exit
+- - '#'
+  - export
+- - '#'
+  - fc
+- - '#'
+  - fg
+- - '#'
+  - for
+- - '#'
+  - for-in
+- - '##'
+  - BASH 命令 39
+- - '##'
+  - getopts
+- - '##'
+  - hash
+- - '##'
+  - help
+- - '##'
+  - history
+- - '##'
+  - if-then
+- - '##'
+  - jobs
+- - '##'
+  - BASH 命令 43
+- - '##'
+  - BASH 命令
+- - '##'
+  - kill
+- - '##'
+  - let
+- - '##'
+  - helloprg
+- - '##'
+  - local
+- - '##'
+  - logout
+- - '##'
+  - notify
+- - '##'
+  - popd
+- - '##'
+  - ps
+- - '##'
+  - BASH 命令
+- - '##'
+  - pwd
+- - '##'
+  - read [-r] [variable ...]
+- - '##'
+  - greetvar
+- - '##'
+  - pushd
+- - '##'
+  - listfiles
+- - '##'
+  - readonly
+- - '##'
+  - return
+- - '#'
+  - BASH 命令 51
+- - '##'
+  - select
+- - '#'
+  - BASH 命令
+- - '##'
+  - set
+- - '##'
+  - BASH 命令 53
+- - '##'
+  - 54 BASH 命令
+- - '##'
+  - shift
+- - '##'
+  - suspend
+- - '##'
+  - 56 BASH 命令
+- - '##'
+  - test
+- - '##'
+  - BASH 命令 57
+- - '##'
+  - 关系操作
+- - '##'
+  - trap
+- - '##'
+  - type
+- - '##'
+  - BASH Shell 配置 61
+- - '##'
+  - BASH Shell 登录
+- - '##'
+  - .bash_profile
+- - '##'
+  - 获取别名和函数
+- - '##'
+  - 用户特定环境和启动程序
+- - '##'
+  - /etc/profile
+- - '##'
+  - 全局环境和启动程序
+- - '##'
+  - 函数和别名位于 /etc/bashrc
+- - '##'
+  - arena 浏览默认页面
+- - '##'
+  - CRISPlite 的默认路径
+- - '##'
+  - BASH Shell 配置 62
+- - '##'
+  - BASH Shell 配置 63
+- - '##'
+  - BASH Shell 配置 64
+- - '#'
+  - 66 BASH Shell 配置
+- - '##'
+  - BASH Shell 退出初始化文件：.bash_logout
+- - '##'
+  - BASH Shell 配置变量
+- - '##'
+  - BASH Shell 配置 67
+- - '##'
+  - BASH Shell 配置
+- - '##'
+  - 脚本输入与输出：$<
+- - '##'
+  - 输出问候的脚本
+- - '##'
+  - 控制结构
+- - '##'
+  - 重定向与管道：<, << >> |, |
+- - '##'
+  - 条件控制结构：if-then, else switch
+- - '###'
+  - 功能
+- - '##'
+  - 循环控制结构：while and foreach
+- - '###'
+  - 功能
+- - '##'
+  - 测试表达式：()
+- - '#'
+  - 控制结构 77
+- - '#'
+  - TCSH 命令
+- - '##'
+  - 数值变量：@
+- - '##'
+  - alias
+- - '##'
+  - 80 TCSH 命令
+- - '##'
+  - argv
+- - '##'
+  - TCSH 命令 83
+- - '##'
+  - continue
+- - '##'
+  - dirs
+- - '##'
+  - TCSH 命令
+- - '##'
+  - echo
+- - '##'
+  - eval
+- - '##'
+  - exec
+- - '##'
+  - exit
+- - '##'
+  - fg
+- - '##'
+  - foreach
+- - '##'
+  - mylist
+- - '##'
+  - 86 TCSH 命令
+- - '##'
+  - mylist
+- - '##'
+  - cbackup
+- - '##'
+  - mylistarg
+- - '##'
+  - '104'
+- - '##'
+  - TCSH 命令 87
+- - '##'
+  - TCSH 命令
+- - '##'
+  - hup
+- - '##'
+  - if-then
+- - '##'
+  - TCSH 命令 89
+- - '##'
+  - ifls
+- - '##'
+  - if-then-else
+- - '##'
+  - elsels
+- - '##'
+  - necho Enter s to list file sizes,
+- - '##'
+  - jobs
+- - '##'
+  - kill
+- - '##'
+  - logout
+- - '##'
+  - nice
+- - '##'
+  - nohup
+- - '##'
+  - notify
+- - '##'
+  - onintr
+- - '##'
+  - popd
+- - '##'
+  - printenv
+- - '##'
+  - pushd
+- - '##'
+  - repeat
+- - '##'
+  - set
+- - '##'
+  - 94 TCSH 命令
+- - '##'
+  - TCSH 命令 95
+- - '##'
+  - setenv
+- - '##'
+  - shift
+- - '##'
+  - source
+- - '##'
+  - stop
+- - '##'
+  - switch
+- - '##'
+  - TCSH 命令 97
+- - '##'
+  - lschoice
+- - '##'
+  - time [command]
+- - '##'
+  - umask [value]
+- - '##'
+  - unalias pattern
+- - '##'
+  - unset pattern
+- - '##'
+  - unsetenv
+- - '##'
+  - wait
+- - '##'
+  - where
+- - '##'
+  - which
+- - '##'
+  - while
+- - '##'
+  - lschoicew
+- - '##'
+  - TCSH 配置 101
+- - '##'
+  - TCSH 配置
+- - '##'
+  - TCSH Shell 特
+- - '##'
+  - echo
+- - '##'
+  - ignoreeof
+- - '##'
+  - noclobber
+- - '##'
+  - nogglob
+- - '##'
+  - TCSH 配置 103
+- - '##'
+  - TCSH Shell变量
+- - '##'
+  - 106 TCSH 配置
+- - '##'
+  - TCSH Shell 初始化文件
+- - '##'
+  - TCSH 配置 107
+- - '##'
+  - .login
+- - '##'
+  - .tcshrc
+- - '##'
+  - .tcshrc（续）
+- - '##'
+  - 106 配置 106
+- - '##'
+  - .logout
+- - '##'
+  - 控制结构：
+- - '##'
+  - 循环控制结构：
+- - '##'
+  - 循环控制结构：
+- - '##'
+  - Function
+- - '##'
+  - 条件控制结构：
+- - '##'
+  - Function
+- - '##'
+  - 作业：后台、杀死与中断
+- - '##'
+  - 运算符
+- - '##'
+  - 变量的定义与评估：=,$
+- - '##'
+  - 'Here: <<'
+- - '##'
+  - 双引号、单引号与反斜杠："",
+- - '##'
+  - 反引号：``
+- - '##'
+  - 位置参数：$
+- - '##'
+  - 算术运算符
+- - '##'
+  - 运算符
+- - '##'
+  - 条件表达式
+- - '#'
+  - 运算符
+- - '##'
+  - 重定向与管道：<, <<, >, |
+- - '##'
+  - 背景：&
+- - '##'
+  - '冒号 (:):'
+- - '##'
+  - '点 (.):'
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - 双括号：(( ))
+- - '##'
+  - 双括号：[[ ]]
+- - '##'
+  - CTRL-Z：中断
+- - '##'
+  - alias
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - dirs [-v] [arguments ...]
+- - '##'
+  - echo
+- - '##'
+  - elif
+- - '##'
+  - enable
+- - '##'
+  - eval
+- - '##'
+  - exec
+- - '##'
+  - exit
+- - '##'
+  - export
+- - '##'
+  - fc
+- - '##'
+  - 130 Z-Shell 命令
+- - '###'
+  - mylist
+- - '###'
+  - cbackup
+- - '###'
+  - function
+- - '##'
+  - Z-Shell 命令
+- - '###'
+  - functions
+- - '###'
+  - getopts
+- - '###'
+  - function
+- - '##'
+  - Z-Shell Commands
+- - '###'
+  - functions
+- - '###'
+  - getopts
+- - '###'
+  - mylist
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - local
+- - '##'
+  - logout
+- - '##'
+  - notify
+- - '##'
+  - popd
+- - '##'
+  - print
+- - '##'
+  - ps
+- - '##'
+  - pushd
+- - '##'
+  - pwd
+- - '##'
+  - read
+- - '##'
+  - Z-Shell 命令 (read)
+- - '##'
+  - readonly
+- - '##'
+  - repeat
+- - '##'
+  - return
+- - '##'
+  - select
+- - '##'
+  - 142 Z-Shell 命令
+- - '##'
+  - set [+o option-name ...] [-A [name]] [argument ...]
+- - '##'
+  - setopt [+options] [name ...]
+- - '##'
+  - shift [n] [name ...]
+- - '##'
+  - suspend
+- - '##'
+  - test
+- - '##'
+  - 144 Z Shell 命令
+- - '##'
+  - trap
+- - '##'
+  - type
+- - '##'
+  - typeset
+- - '##'
+  - Z-Shell 命令
+- - '##'
+  - which
+- - '##'
+  - while
+- - '##'
+  - myname
+- - '##'
+  - ZSH-Shell 配置
+- - '##'
+  - ZSH 初始化文件
+- - '##'
+  - Shell 配置变量
+- - '##'
+  - ZSH-Shell 配置 151
+- - '##'
+  - 152 ZSH-Shell 配置
+- - '##'
+  - 153 变量
+- - '##'
+  - 154 选项
+- - '##'
+  - myname
+- - '##'
+  - ZSH-Shell 配置
+- - '##'
+  - ZSH 初始化文件
+- - '##'
+  - Shell 配置变量
+- - '##'
+  - ZSH-Shell 配置 151
+- - '##'
+  - which
+- - '##'
+  - while
+- - '##'
+  - myname
+- - '##'
+  - ZSH-Shell 配置
+- - '##'
+  - ZSH 初始化文件
+- - '##'
+  - Shell 配置变量
+- - '##'
+  - ZSH-Shell 配置 151
+- - '##'
+  - which
+- - '##'
+  - while
+- - '##'
+  - myname
+- - '##'
+  - ZSH-Shell 配置
+- - '##'
+  - ZSH 初始化文件
+- - '##'
+  - Shell 配置变量
+- - '##'
+  - ZSH-Shell 配置 151
+- - '##'
+  - 154 ZSH-Shell 配置
+- - '##'
+  - 155 ZSH-Shell 配置
+- - '#'
+  - 2 TCSH Shell 编程 . . . . . . . . . . 71
