@@ -1,0 +1,2 @@
++   [CompTIA Linux+ 和 LPIC 实践指南：考试 LX0-103／LPIC-1 101-400, LX0-104／LPIC-1 102-400, LPIC-2 201, 以及 LPIC-2 202](README.md)
++   [CompTIA Linux+ 和 LPIC 实践指南：考试 LX0-103／LPIC-1 101-400, LX0-104／LPIC-1 102-400, LPIC-2 201, 以及 LPIC-2 202](comptia-linux-and-lpic-practice-tests-exams-lx0-103lpic-1-10.md)
