@@ -1,0 +1,2 @@
++   [Ubuntu 8.10 Linux 圣经：为桌面或网络设置 Ubuntu；下载音乐、观看 DVD 或玩游戏；利用易于使用的管理工具；Kubuntu 全面指南](README.md)
++   [Ubuntu 8.10 Linux 圣经：为桌面或网络设置 Ubuntu；下载音乐、观看 DVD 或玩游戏；利用易于使用的管理工具；Kubuntu 全面指南](ubuntu-810-linux-bible-set-up-ubuntu-for-desktops-or-network.md)
