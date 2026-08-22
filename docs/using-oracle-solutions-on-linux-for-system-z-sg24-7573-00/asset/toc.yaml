@@ -1,0 +1,358 @@
+- - '#'
+  - Linux on System z 的 Oracle 解决方案使用指南
+- - '##'
+  - 6.5 将 BIEE 层连接到数据库层
+- - '#'
+  - 第 8 章. 配合 Oracle 10gr 使用 WebSphere Application Server
+- - '#'
+  - 成为作者
+- - '##'
+  - 1.1 Oracle 数据库服务器 (9i, 10gR1, 10gR2 和 11g)
+- - '##'
+  - 1.2 Oracle Fusion 中件
+- - '###'
+  - 1.2.1 Oracle 应用服务器 (9AS 和 AS10g)
+- - '###'
+  - 1.2.2 Oracle 应用服务器组件
+- - '###'
+  - 1.2.3 Oracle 应用服务器 10.3
+- - '###'
+  - 1.2.4 Oracle 协作套件
+- - '###'
+  - 1.2.5 Oracle 商业智能企业版
+- - '#'
+  - 在适用于 System z 的 Linux 上准备安装 Oracle 产品
+- - '##'
+  - 2.1 为 Oracle 设置 VM 和 Linux 虚拟机
+- - '###'
+  - z/VM
+- - '##'
+  - CPU
+- - '##'
+  - 交换空间 (Swap space)
+- - '##'
+  - Linux
+- - '##'
+  - Oracle 对 Linux RPM 的建议
+- - '##'
+  - Red Hat 4 RPM
+- - '#'
+  - 更新 Oracle 用户 ID 的 shell 限制
+- - '#'
+  - 更新 pam 限制
+- - '##'
+  - 2.2 安装 Oracle 产品
+- - '###'
+  - 2.2.1 安装 Oracle 数据库
+- - '###'
+  - 2.2.2 安装 Oracle AS10g
+- - '###'
+  - 2.2.3 安装 Oracle 应用程序
+- - '##'
+  - 2.3 在 SLES10 上为 10gR2 安装补丁
+- - '###'
+  - 2.3.1 在 SLES10 上安装 Oracle 数据库
+- - '###'
+  - 内核参数
+- - '#'
+  - 控制 IP 包转发
+- - '#'
+  - 控制源路由验证
+- - '#'
+  - 不接受源路由
+- - '#'
+  - 控制核心转储是否附加 PID 到文件名。对多线程应用程序有用。
+- - '###'
+  - 示例 3-4 limits.conf 文件
+- - '#'
+  - /etc/profile
+- - '#'
+  - 系统环境
+- - '###'
+  - 示例 3-5 /etc/profile
+- - '#'
+  - /etc/profile
+- - '#'
+  - 系统环境
+- - '#'
+  - pam_selinux.so open should be the last session
+- - '##'
+  - 3.2.4 使用 VNC 设置 X Window 系统
+- - '##'
+  - 3.3 安装准备
+- - '###'
+  - 3.3.1 下载代码
+- - '###'
+  - 3.3.2 查找文档
+- - '###'
+  - 3.3.3 确定命名规范
+- - '##'
+  - 3.4 安装
+- - '#'
+  - 示例 3-7 ls 命令
+- - '##'
+  - 24. 图 3-23 确认数据库已启动。
+- - '##'
+  - 3.5 使用 OEM 管理 Oracle 数据库
+- - '##'
+  - 'Oracle Enterprise Manager (SYS) - 数据库实例: Inx23rl - Microsoft Internet Explorer'
+- - '#'
+  - ORACLE Enterprise Manager 10g
+- - '#'
+  - '数据库实例: Inx23rl'
+- - '###'
+  - 3.5.1 使用 iSQLPlus 查询数据库
+- - '##'
+  - 3.6 总结
+- - '###'
+  - 4.4 网络配置的最佳实践
+- - '##'
+  - 4.3 IBM System z 上的 Oracle 10g RAC 存储选项
+- - '###'
+  - 4.3.1 z/VM 磁盘选项
+- - '###'
+  - 4.2 在单独的 z9 机器之间设置磁盘
+- - '###'
+  - 4.3.6 OCR 和投票磁盘（Voting disks）的安装
+- - '###'
+  - 4.3.7 共享数据库磁盘安装
+- - '##'
+  - 4.4 为 Oracle RAC 格式化分区磁盘
+- - '#'
+  - dasdfmt -f /dev/dasda -b 4096 -p
+- - '#'
+  - dasdfmt -f /dev/dasdb -b 4096 -p
+- - '#'
+  - dasdfmt -f /dev/dasdc -b 4096 -p
+- - '#'
+  - fdsd -a /dev/dasda
+- - '#'
+  - fdsd -a /dev/dasdb
+- - '#'
+  - fdisk /dev/sda
+- - '#'
+  - pvcreate /dev/dasdal /dev/dasb1 /dev/dasc1
+- - '#'
+  - vgcreate orabinvg /dev/dasdal /dev/dasb1 /dev/dasc1
+- - '#'
+  - vgdisplay orabinvg
+- - '#'
+  - lvcreate -i13 -I32 -L6.8G -orabinlv orarang
+- - '#'
+  - lvsdisplay /dev/orabvg/orablv
+- - '#'
+  - mkfs.ext3 /dev/orabvg/orablv -b 4096
+- - '#'
+  - mkdir -p /oracle
+- - '#'
+  - mount /dev/orabvg/orablv /oracle
+- - '#'
+  - df -h
+- - '#'
+  - vi /etc/fstab
+- - '##'
+  - 4.5 在原始/块设备上安装 Oracle ASM
+- - '#'
+  - ls *.rpm
+- - '##'
+  - 4.7.1 开始使用 Oracle
+- - '##'
+  - 4.7.2 集群验证工具
+- - '##'
+  - 4.7.3 关于 LVM 的说明
+- - '##'
+  - 4.8 关于 Oracle RAC 的更多信息
+- - '##'
+  - 开始使用 z/VM
+- - '##'
+  - 5.1 内存大小与配置
+- - '##'
+  - 5.2 分配
+- - '###'
+  - 5.2.1 确定
+- - '###'
+  - 5.2.2 分配
+- - '##'
+  - 5.3 分页、交换和 I/O 因素
+- - '###'
+  - 5.3.1 z/VM 分页 (paging)
+- - '###'
+  - 5.3.2 Linux 的交换空间 (Swap space)
+- - '###'
+  - 5.3.3 I/O 因素
+- - '###'
+  - 5.3.4 监控
+- - '##'
+  - 5.4 总结
+- - '##'
+  - 6.2 安装 System
+- - '###'
+  - 6.2.1 填充数据库
+- - '##'
+  - 6.3 安装 BIEE 组件
+- - '##'
+  - 6.4 OAS 启动和欢迎页
+- - '#'
+  - 7 为 Oracle 数据库设置多个虚拟机
+- - '##'
+  - 7.1 使用多个 VSwitch 支持工作负载
+- - '###'
+  - 示例 7-2 DTCVS1 条目
+- - '###'
+  - 示例 7-3 CONTROLLER 语句
+- - '###'
+  - 示例 7-4 NICDEF 语句
+- - '###'
+  - 示例 7-5 cat 命令
+- - '###'
+  - 示例 7-6 cp 命令
+- - '###'
+  - 示例 7-7 mv 命令
+- - '###'
+  - 示例 7-8 ifconfig 命令
+- - '###'
+  - 示例 7-9 query vswitch 命令
+- - '#'
+  - Example 7-10 netstat 命令
+- - '##'
+  - 7.2 设置克隆
+- - '##'
+  - 7.3 使用 FlashCopy 由 z/OS 备份
+- - '###'
+  - 7.3.1 备份
+- - '###'
+  - 示例 7-13 minisk 列表
+- - '###'
+  - 7.3.2 恢复
+- - '#'
+  - 使用 Oracle 10gr 使用 WebSphere Application Server
+- - '##'
+  - 8.1 WebSphere Application Server V6.1, Oracle 10.2.2 DB 以及 Trade 6 性能示例
+- - '##'
+  - 8.2 安装 WebSphere Application Server V6.1(base) 和 IBM HTTP V6.1
+- - '##'
+  - 8.3 下载 IBM Trade Performance 应用程序
+- - '###'
+  - 8.3.1 为 Trade 6 设置现有的 Oracle 数据库
+- - '##'
+  - 8.4 将 Trade 6 安装为 WebSphere Application Server 应用程序
+- - '##'
+  - 8.5 填充 (Populate)
+- - '##'
+  - 通过浏览器访问 Trade 6
+- - '#'
+  - 使用 Oracle Data Guard
+- - '##'
+  - 9.1 Oracle Data Guard 概述
+- - '##'
+  - 9.2 Oracle Data Guard Broker
+- - '##'
+  - 9.3 Oracle Data Guard 优势
+- - '##'
+  - 9.4 创建 Data Guard 解决方案的步骤
+- - '##'
+  - 9.5 生产数据库的安装和创建
+- - '##'
+  - 9.6 准备生产数据库
+- - '###'
+  - 9.6.1 启用强制日志
+- - '###'
+  - 9.6.2 创建密码文件
+- - '###'
+  - 9.6.3 配置备用 redo 日
+- - '###'
+  - 9.6.4 设置主数据库初始化参数
+- - '###'
+  - DB_UNIQUE_NAME
+- - '###'
+  - LOG_ARCHIVE_CONFIG
+- - '###'
+  - LOG_ARCHIVE_DEST
+- - '###'
+  - ALTER SYSTEM 设置闪回恢复
+- - '##'
+  - 来自生产数据库的文件
+- - '##'
+  - 启用归档
+- - '##'
+  - 9.7 创建物理备用数据库
+- - '###'
+  - 9.7.1 在主节点上
+- - '###'
+  - 备用数据库的 pfile
+- - '###'
+  - 9.7.2 从主系统复制文件到备用系统
+- - '#'
+  - 将 Oracle 数据库从 z/OS 迁移到 Linux for System z
+- - '##'
+  - 10.1 将您的 Oracle 数据库从 z/OS 迁移到 Linux for System z
+- - '##'
+  - 10.2 使用 Data Pump
+- - '##'
+  - 10.3 在 z/OS 上安装 Oracle 10g
+- - '##'
+  - 10.4 创建数据库和表
+- - '##'
+  - 10.6 准备进行 Data Pump 迁移
+- - '###'
+  - 10.6.1 Data Pump 导出和日志文件
+- - '###'
+  - 症状
+- - '###'
+  - 原因
+- - '###'
+  - 解决方案
+- - '###'
+  - 10.6.2 准备执行 Data Pump
+- - '##'
+  - 10.7 运行 Data Pump 导出
+- - '##'
+  - 10.8 将转储文件移动到 Linux 系统
+- - '##'
+  - 10.9 在 Linux for System z 上安装 Oracle 10g
+- - '##'
+  - 10.10 在 Linux for System z 上创建数据库
+- - '##'
+  - 10.11 准备执行 Data Pump
+- - '##'
+  - 10.12 运行 Data Pump 导入
+- - '###'
+  - 示例 10-7 运行导入
+- - '##'
+  - 10.13 验证 Data Pump 成功
+- - '###'
+  - 示例 10-8 验证 Data Pump 成功
+- - '##'
+  - 11.2.2 z/VM LDBM 和本地认证
+- - '##'
+  - 11.2.3 z/VM SDBM
+- - '##'
+  - 11.2.4 z/VM LDAP 参考
+- - '##'
+  - 11.3 用于 Linux for System z 的 FreeRADIUS
+- - '###'
+  - 11.3.1 FreeRadius 安装
+- - '###'
+  - 11.3.2 FreeRadius 配置
+- - '##'
+  - 11.3.3 FreeRadius 配置 radiusd.conf 文件
+- - '##'
+  - 11.3.4 FreeRadius 配置 clients.conf
+- - '##'
+  - 11.3.5 FreeRadius 配置 users
+- - '##'
+  - 11.4.2 Oracle 客户端
+- - '#'
+  - sqlnet.ora 网络配置文件：
+- - '#'
+  - 由 Oracle 配置工具生成。
+- - '##'
+  - 11.4.3 LDBM 中的用户名和 SDBM 中的密码的 Oracle 客户端连接
+- - '##'
+  - 11.4.4 SDBM 中的用户名和密码的 Oracle 客户端连接
+- - '##'
+  - 11.4.5 外部身份验证的 Oracle 参考
+- - '#'
+  - 缩写与术语
+- - '#'
+  - 索引
