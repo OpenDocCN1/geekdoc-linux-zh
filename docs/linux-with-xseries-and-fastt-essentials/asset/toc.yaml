@@ -1,0 +1,294 @@
+- - '#'
+  - Linux xSeries 与 FAStT：核心指南
+- - '##'
+  - 前言
+- - '##'
+  - 编写本指南的团队
+- - '##'
+  - 成为出版作者
+- - '##'
+  - 意见
+- - '##'
+  - Linux 简介
+- - '##'
+  - Linux 的基础
+- - '##'
+  - 通用许可证
+- - '##'
+  - 1.3 开源
+- - '##'
+  - 1.4 Linux：操作系统
+- - '##'
+  - 1.5 Linux 处于什么位置
+- - '###'
+  - 1.5.1 与其他操作系统协作
+- - '###'
+  - 1.5.2 基础设施
+- - '###'
+  - Web 服务
+- - '###'
+  - 文件和打印服务
+- - '###'
+  - 域名服务器 (DNS) 和 DHCP
+- - '###'
+  - 路由器
+- - '###'
+  - 防火墙和入侵检测服务 (IDS)
+- - '##'
+  - 1 Linux 发行版
+- - '##'
+  - 1.6 Red Hat Enterprise Linux
+- - '###'
+  - 1.6.2 SuSE Linux Enterprise Edition（SuSE Linux企业版）
+- - '###'
+  - 1.6.3 UnitedLinux
+- - '##'
+  - IBM 与 Linux
+- - '##'
+  - 2.1 IBM 对 Linux 的承诺
+- - '###'
+  - 2.1.1 Linux 技术中心
+- - '##'
+  - IBM JFS 到 Linux
+- - '##'
+  - EVMS
+- - '##'
+  - 2.2 Linux 服务和应用解决方案
+- - '###'
+  - 2.2.1 IBM 服务
+- - '###'
+  - 2.2.2 IBM 全球服务
+- - '###'
+  - 2.2.3 IBM 支持热线
+- - '##'
+  - IBM 运营支持服务：Linux 支持热线
+- - '##'
+  - IBM 运营支持服务：Linux 集群支持热线
+- - '##'
+  - IBM 运营支持服务：高级支持
+- - '##'
+  - IBM 运营支持服务：自定义 Linux 支持
+- - '###'
+  - 2.2.4 Linux 咨询
+- - '##'
+  - 2.3 IBM 服务和软件
+- - '###'
+  - 2.3.1 WebSphere
+- - '###'
+  - 2.3.2 DB2 for Linux
+- - '###'
+  - 2.3.3 Tivoli
+- - '##'
+  - Tivoli 的产品支持矩阵
+- - '##'
+  - IBM Tivoli Security Management
+- - '##'
+  - IBM Tivoli Storage Management
+- - '##'
+  - IBM Tivoli 配置与操作
+- - '##'
+  - IBM Tivoli Workload Scheduler
+- - '##'
+  - IBM Tivoli Performance and Availability
+- - '##'
+  - 3.2 Linux 与 X 架构的功能
+- - '###'
+  - 3.2.1 带有 Linux 的企业 X 架构
+- - '##'
+  - 3.3 xSeries 刀片服务器：BladeCenter
+- - '##'
+  - 3.4 Linux 集群
+- - '###'
+  - 3.4.1 不同类型的集群
+- - '##'
+  - 水平扩展
+- - '###'
+  - 3.4.2 Linux 集群
+- - '###'
+  - 3.4.3 集成 Linux 集群：IBM eServer cluster 1350
+- - '#'
+  - 高级服务器技术
+- - '##'
+  - 3.5 整合
+- - '###'
+  - 3.5.1 将分散企业各处的系统整合到集中的位置
+- - '###'
+  - 3.5.2 将系统整合到较少的服务器
+- - '###'
+  - 3.5.3 数据整合
+- - '###'
+  - 3.5.4 应用整合
+- - '#'
+  - 4 IBM TotalStorage 和 FASiT
+- - '##'
+  - 4.1 IBM TotalStorage
+- - '###'
+  - 4.1 价值主张
+- - '##'
+  - 表 4-1 适用于 Linux 的 IBM 存储总结
+- - '##'
+  - 4.2 IBM TotalStorage Proven™
+- - '##'
+  - 4.3 IBM TotalStorage FASTT 产品
+- - '###'
+  - 4.3.1 IBM TotalStorage FASTIT200
+- - '##'
+  - 产品亮点
+- - '###'
+  - 4.3.2 IBM TotalStorage FASST500 存储服务器
+- - '###'
+  - 4.3.3 IBM TotalStorage FASIT600 存储服务器
+- - '###'
+  - FASIT 600 产品亮点
+- - '###'
+  - FASTT600 Turbo 亮点
+- - '###'
+  - 4.3.4 IBM TotalStorage FASTT700 存储服务器
+- - '###'
+  - FASTT700 产品亮点
+- - '###'
+  - 4.3.5 IBM TotalStorage FASST900 存储服务器
+- - '###'
+  - FASIT 900 产品亮点
+- - '###'
+  - FASIT6 扩展机
+- - '###'
+  - EXP500 扩展单元亮点
+- - '###'
+  - EXP700 扩展单元亮点
+- - '##'
+  - 4.4 高级功能
+- - '###'
+  - 4.4.1 存储分区简介
+- - '###'
+  - 4.4.2 FlashCopy 简介
+- - '##'
+  - 基础卷 库卷数据
+- - '###'
+  - 4.4.3 远程镜像简介
+- - '#'
+  - 网络
+- - '#'
+  - SAN
+- - '#'
+  - 存储阵列
+- - '#'
+  - FC Fabric
+- - '##'
+  - 4.4.4 VolumeCopy 简介
+- - '###'
+  - 迁移
+- - '###'
+  - 数据备份
+- - '###'
+  - 将 FlashCopy 逻辑驱动还原到基础逻辑驱动
+- - '##'
+  - 4.5 将 FASIT 连接到 xSeries Linux 主机
+- - '###'
+  - 4.5.1 硬件要求
+- - '###'
+  - 4.5.2 软件要求
+- - '###'
+  - 4.5.3 连接要求
+- - '##'
+  - 5 管理软件
+- - '###'
+  - 5.1.2 IBM Management Suite Java
+- - '###'
+  - 5.1.3 SANnavigator 诊断与管理软件
+- - '###'
+  - 5.1.4 FASIT Service Alert，FASIT 存储服务器的支持选项
+- - '##'
+  - Storage Manager 和 Linux
+- - '##'
+  - A.1 Storage Manager 概念
+- - '###'
+  - 带内 (In-band)
+- - '###'
+  - 带外 (Out-of-band)
+- - '###'
+  - A.1.1 在 FASIT 控制器上设置 IP 和掩码
+- - '###'
+  - A.1.2 Linux 是否有 Storage manager 代理？
+- - '###'
+  - A.1.3 Linux 是否有 RDAC 驱动？
+- - '###'
+  - A.2.2 Launching Storage Manager and connecting to the FASIT
+- - '###'
+  - A.3 Updating the FASTT firmware
+- - '##'
+  - 存储分区向导 - 简介
+- - '##'
+  - '存储分区向导 '
+- - '##'
+  - 存储分区向导 - 简介
+- - '##'
+  - '存储分区向导 '
+- - '##'
+  - 存储分区向导
+- - '##'
+  - 存储分区向导
+- - '##'
+  - 存储分区向导 - 简介
+- - '##'
+  - 存储分区向导
+- - '##'
+  - 存储分区向导 - 简介
+- - '##'
+  - 存储分区向导
+- - '##'
+  - '存储分区向导 '
+- - '##'
+  - 存储分区向导 - 简介
+- - '###'
+  - B.1.2 配置 lun 附件
+- - '###'
+  - B.1.3 用于光纤通道路径的 FASIT MSJ
+- - '##'
+  - IBM FASIT Management Suite Java - HBA View
+- - '##'
+  - IBM FASIT Management Suite Java - HBA View
+- - '##'
+  - killall -TERM qremote
+- - '##'
+  - SuSE 注意
+- - '##'
+  - Red Hat 注意
+- - '##'
+  - IBM TotalStorage 存储服务器与 Linux 的变通
+- - '##'
+  - 支持的逻辑驱动
+- - '##'
+  - Linux 局限性与变通
+- - '##'
+  - X 架构的功能
+- - '##'
+  - Xce4 服务器加速缓存
+- - '##'
+  - 激活诊断
+- - '##'
+  - 相关出版物
+- - '##'
+  - IBM 指南
+- - '##'
+  - 在线资源
+- - '##'
+  - 如何获取 指南
+- - '##'
+  - 来自 IBM 的帮助
+- - '##'
+  - 索引
+- - '#'
+  - T
+- - '#'
+  - U
+- - '#'
+  - V
+- - '#'
+  - W
+- - '#'
+  - X
+- - '#'
+  - Z
+- - '##'
+  - 带有 xSeries 和 FASST 的 Linux
