@@ -1,0 +1,999 @@
+- - '#'
+  - PowerPoint 演示文制作
+- - '#'
+  - 注意！
+- - '##'
+  - dnsdict6
+- - '##'
+  - dnsenum
+- - '##'
+  - dnsmap
+- - '##'
+  - dnsrecon
+- - '##'
+  - dnsrevenum6
+- - '##'
+  - dnstracer
+- - '##'
+  - dnswalk
+- - '##'
+  - fierce
+- - '##'
+  - maltego
+- - '##'
+  - nmap
+- - '##'
+  - urlcrazy
+- - '##'
+  - '[02] 信息收集 - IDS/IPS 识别'
+- - '###'
+  - fragroute
+- - '###'
+  - fragrouter
+- - '###'
+  - wafw00f
+- - '###'
+  - alive6
+- - '###'
+  - arping
+- - '###'
+  - cdpsnarf
+- - '###'
+  - detect-new-ip-6
+- - '###'
+  - detect-sniffer6
+- - '###'
+  - dmitry
+- - '##'
+  - dnmap
+- - '###'
+  - 基础用法
+- - '##'
+  - dnmap-client
+- - '###'
+  - 描述
+- - '##'
+  - dnmap-server
+- - '###'
+  - 描述
+- - '##'
+  - fping
+- - '##'
+  - hping3
+- - '##'
+  - inverse_lookup6
+- - '##'
+  - miranda
+- - '###'
+  - 基础用法
+- - '##'
+  - ncat
+- - '##'
+  - netdiscover
+- - '##'
+  - ifconfig wlan0 down
+- - '##'
+  - ifconfig wlan0 hw ether 00:11:22:33:44:55
+- - '##'
+  - ifconfig wlan0 up
+- - '##'
+  - netdiscover -i wlan0 [options]
+- - '##'
+  - nmap
+- - '##'
+  - passive_discovery6
+- - '##'
+  - thcping6
+- - '##'
+  - wol-e
+- - '##'
+  - xprobe2
+- - '##'
+  - '[05] 信息收集 - 操作系统指纹识别'
+- - '##'
+  - dnmap
+- - '##'
+  - dnmap-client
+- - '##'
+  - dnmap-server
+- - '##'
+  - miranda
+- - '##'
+  - nmap
+- - '##'
+  - '[06] 信息收集 - OSINT 分析'
+- - '##'
+  - casefile
+- - '##'
+  - creepy
+- - '##'
+  - DMitry
+- - '##'
+  - jigsaw
+- - '##'
+  - maltego
+- - '##'
+  - theharvester
+- - '##'
+  - netmask
+- - '##'
+  - 描述 thc-ipv6 - THC-IPV6-ATTACK-TOOLKIT - 直接运行工具而不带选项，它们将为你提供帮助并显示命令行选项。
+- - '##'
+  - '[08] 收集收集 - 服务指纹识别'
+- - '##'
+  - dnmap-client
+- - '##'
+  - dnmap-server
+- - '##'
+  - implementation6
+- - '##'
+  - implementation6d
+- - '##'
+  - ncat
+- - '##'
+  - sslscan
+- - '##'
+  - sslyze
+- - '##'
+  - tlssled
+- - '##'
+  - '[09] 信息收集 - SMB 分析'
+- - '##'
+  - acccheck
+- - '##'
+  - nbtscan
+- - '##'
+  - nmap
+- - '##'
+  - '[10] 信息收集 - SMTP 分析'
+- - '##'
+  - nmap
+- - '##'
+  - smtp-user-enum
+- - '##'
+  - swalks
+- - '##'
+  - '[11] 信息收集 - SNMP 分析'
+- - '##'
+  - braa
+- - '##'
+  - cisco-auditing-tool
+- - '##'
+  - cisco-torch
+- - '##'
+  - copy-router-config
+- - '##'
+  - merge-router-config
+- - '##'
+  - braa (继续/补充)
+- - '##'
+  - nmap
+- - '##'
+  - onesixxtyone
+- - '##'
+  - '[12] 信息收集 - SSL 分析'
+- - '##'
+  - sslcaudit
+- - '##'
+  - ssldump
+- - '##'
+  - sslscan
+- - '##'
+  - sslsniff
+- - '##'
+  - sslstrip
+- - '##'
+  - sslyze
+- - '##'
+  - stunnel4
+- - '##'
+  - tlssled
+- - '##'
+  - '[13] 信息收集 - 电话分析'
+- - '##'
+  - ace
+- - '##'
+  - '[14] 信息收集 - 流量分析'
+- - '##'
+  - cdpsnarf
+- - '##'
+  - intrace
+- - '##'
+  - irpas-ass
+- - '##'
+  - irpass-cdp
+- - '##'
+  - p0f
+- - '##'
+  - tcpflow
+- - '##'
+  - wireshark
+- - '##'
+  - '[15] 信息收集 - VOIP 分析'
+- - '##'
+  - ace
+- - '##'
+  - cisco-global-exploiter
+- - '##'
+  - cisco-ocs
+- - '##'
+  - cisco-torch
+- - '##'
+  - yersinia
+- - '##'
+  - DATABASE ASSESSMENT
+- - '##'
+  - bbqsql
+- - '##'
+  - dbpwaudit
+- - '##'
+  - mdb-sql
+- - '##'
+  - mdb-tables
+- - '##'
+  - oscanner
+- - '##'
+  - sidguesser
+- - '##'
+  - sqldict
+- - '##'
+  - sqlmap
+- - '##'
+  - sqlninja
+- - '##'
+  - sqlsus
+- - '##'
+  - tnscmd
+- - '##'
+  - fuzz_ip6
+- - '##'
+  - ohrwurm
+- - '##'
+  - powerfuzzer
+- - '##'
+  - sfuzz
+- - '##'
+  - siparmyknife
+- - '##'
+  - spike-generic_chunked
+- - '##'
+  - spike-generic_listen_tcp
+- - '##'
+  - spike-generic_send_tcp
+- - '##'
+  - spike-generic_listen_upd
+- - '##'
+  - '[20] 杂项扫描器 '
+- - '##'
+  - lynis
+- - '##'
+  - nikto
+- - '##'
+  - nmap
+- - '##'
+  - unix-privesc-check
+- - '##'
+  - '[21] 开源评估'
+- - '##'
+  - casefile
+- - '##'
+  - maltego
+- - '##'
+  - '[22] OPEN-VAS'
+- - '##'
+  - openvas-gsd
+- - '##'
+  - openvas-setup
+- - '##'
+  - '[23] Web 应用：CMS 识别'
+- - '##'
+  - blindelephant
+- - '##'
+  - plecost
+- - '##'
+  - wpscan
+- - '##'
+  - '[24] 数据库利用'
+- - '##'
+  - bbqsql
+- - '##'
+  - sqlninja
+- - '##'
+  - sqlsus
+- - '##'
+  - '[25] IDS/IPS 识别'
+- - '##'
+  - ua-tester
+- - '##'
+  - '[26] Web 应用程序模糊器'
+- - '##'
+  - burpsuite
+- - '##'
+  - powerfuzzer
+- - '##'
+  - webscarab
+- - '##'
+  - webslayer
+- - '##'
+  - websploit
+- - '##'
+  - wfuzz
+- - '##'
+  - xsser
+- - '##'
+  - zaproxy
+- - '##'
+  - '[27] Web 应用程序代理'
+- - '##'
+  - burpsuite
+- - '##'
+  - paros
+- - '##'
+  - proxystrike
+- - '##'
+  - vega
+- - '##'
+  - webscarab
+- - '##'
+  - zaproxy
+- - '##'
+  - '[28] Web 爬虫'
+- - '##'
+  - apache-users
+- - '##'
+  - cutycapt
+- - '###'
+  - 提示
+- - '##'
+  - dirb
+- - '##'
+  - dirbuster
+- - '##'
+  - vega
+- - '##'
+  - webscarab
+- - '##'
+  - webslayer
+- - '##'
+  - zapro
+- - '##'
+  - '[29] 漏洞扫描器 (继续)'
+- - '##'
+  - cadaver
+- - '##'
+  - davtest
+- - '##'
+  - deblaze
+- - '##'
+  - fimap
+- - '##'
+  - grabber
+- - '##'
+  - joomscan
+- - '##'
+  - nikto
+- - '##'
+  - padbuster
+- - '##'
+  - w3af
+- - '##'
+  - wapiti
+- - '##'
+  - webscarab
+- - '##'
+  - webshag-cli
+- - '##'
+  - webshag-gui
+- - '##'
+  - WebSploit
+- - '##'
+  - wpscan
+- - '##'
+  - xsser
+- - '##'
+  - zaproxy
+- - '##'
+  - sqlmap
+- - '##'
+  - oclhashcat-plus
+- - '##'
+  - pyrit
+- - '##'
+  - '[31] 离线攻击'
+- - '##'
+  - cachedump
+- - '##'
+  - chntpw
+- - '##'
+  - cmospwd
+- - '##'
+  - crunch
+- - '##'
+  - dictstat
+- - '##'
+  - hashcat
+- - '##'
+  - hash-identifier
+- - '##'
+  - john the ripper
+- - '##'
+  - johnny
+- - '##'
+  - lsadump
+- - '##'
+  - maskgen
+- - '##'
+  - oclhashcat-lite
+- - '##'
+  - Kali Linux 工具列表
+- - '##'
+  - oclhashcat-plus
+- - '##'
+  - ophcrack
+- - '##'
+  - ophcrack-cli
+- - '##'
+  - pyrit
+- - '##'
+  - rcracki_mt
+- - '##'
+  - rsmangler
+- - '##'
+  - samdump2
+- - '##'
+  - mkdir -p /mnt/sda1
+- - '##'
+  - mount /dev/sda1 /mnt/sda1
+- - '##'
+  - bkhive /mnt/sda1/Windows/System32/config/SYSTEM /tmp/saved-syskey.txt
+- - '##'
+  - samdump2 /mnt/sda1/Windows/System32/config/SAM /tmp/saved-syskey.txt /tmp/hashes.txt
+- - '##'
+  - burpsuite
+- - '##'
+  - cewl
+- - '##'
+  - cisco-auditing-tool
+- - '##'
+  - dbpwaudit
+- - '##'
+  - Kali Linux 2013 工具列表
+- - '##'
+  - findmyhash
+- - '##'
+  - medusa
+- - '##'
+  - ncrack
+- - '##'
+  - patator
+- - '##'
+  - phrasendrescher
+- - '##'
+  - thc-pptp-bruter
+- - '##'
+  - scarab
+- - '##'
+  - zaproxy
+- - '##'
+  - 无线攻击：蓝牙工具
+- - '##'
+  - bluelog
+- - '##'
+  - bluemaho
+- - '##'
+  - blueranger
+- - '##'
+  - btscanner
+- - '##'
+  - fang
+- - '##'
+  - spoofotooph
+- - '##'
+  - '[34] 其他无线工具'
+- - '##'
+  - zbassocflood
+- - '##'
+  - zbconvert
+- - '##'
+  - zbdsniff
+- - '##'
+  - zbdump
+- - '##'
+  - zbfind
+- - '##'
+  - zbgoodfind
+- - '##'
+  - zbid
+- - '##'
+  - zbreplay
+- - '##'
+  - zbstumbler
+- - '##'
+  - '[35] RFID/NFC 工具：NFC 工具'
+- - '##'
+  - MFCUK - MiFare Classic 通用工具包。
+- - '##'
+  - mfoc
+- - '##'
+  - mifare-classic-format
+- - '##'
+  - nfc-list
+- - '##'
+  - '[37] RFIDIOT FROSCH'
+- - '##'
+  - 读/写克隆唯一 (em4x02)
+- - '##'
+  - 重置 hitag2 标签
+- - '##'
+  - 设置 fdx-b id
+- - '##'
+  - 测试 frosch 读器
+- - '##'
+  - 暴力破解 mifare
+- - '##'
+  - 计算 jcop mifare 密钥
+- - '##'
+  - 芯片与引脚信息
+- - '##'
+  - 持续选择标签
+- - '##'
+  - 电子护照读/写克隆
+- - '##'
+  - 识别高频标签类型
+- - '##'
+  - jcop 信息
+- - '##'
+  - jcop mifare 读/写
+- - '##'
+  - jcop 设置 atr 历史字节
+- - '##'
+  - 读取 mifare
+- - '##'
+  - 读标签
+- - '##'
+  - 选择标签
+- - '##'
+  - '[39] 无线工具'
+- - '##'
+  - aircrack-ng
+- - '##'
+  - aireplay-ng
+- - '##'
+  - airmon-ng
+- - '##'
+  - airodump-ng
+- - '##'
+  - asleap
+- - '##'
+  - cowpatty
+- - '##'
+  - eapmd5
+- - '##'
+  - genpmk
+- - '##'
+  - giskismet
+- - '##'
+  - kismet
+- - '##'
+  - mdk3
+- - '##'
+  - wifarp
+- - '##'
+  - wifidns
+- - '##'
+  - wifi-honey
+- - '##'
+  - wifiping
+- - '##'
+  - wifitap
+- - '##'
+  - eapmd5
+- - '##'
+  - fern-wifi-cracker
+- - '##'
+  - genkeys
+- - '##'
+  - genpmk
+- - '##'
+  - giskismet
+- - '##'
+  - kismet
+- - '##'
+  - wifiping
+- - '##'
+  - '[40] 利用工具：CISCO 攻击'
+- - '##'
+  - cisco-auditing-tool
+- - '##'
+  - cisco-global-exploiter
+- - '##'
+  - cisco-ocs
+- - '##'
+  - '[41] 漏洞 searchsploit'
+- - '##'
+  - '[42] METASPLOIT'
+- - '##'
+  - metasploit community /
+- - '##'
+  - metasploit diagnostic logs
+- - '##'
+  - metasploit shell
+- - '##'
+  - metasploit framework
+- - '##'
+  - '[43] 网络利用'
+- - '##'
+  - exploit6
+- - '##'
+  - ikat
+- - '##'
+  - jboss-autopwn-linux
+- - '##'
+  - jboss-autopwn-win
+- - '##'
+  - termineter
+- - '##'
+  - '[44] 社会工程包'
+- - '##'
+  - se-toolkit
+- - '##'
+  - '[45] 嗅探/欺骗：网络嗅器'
+- - '##'
+  - dnschef
+- - '##'
+  - dnsspoof
+- - '##'
+  - echo 1 >/proc/sys/ipv4/ip_forward (启用端口)
+- - '##'
+  - dnsspoof -f spoofhosts.txt 192.168.1.245 192.168.1.5
+- - '##'
+  - dnsspoof -f spoofhosts.txt 192.168.1.245 192.168.1.5
+- - '##'
+  - dsniff
+- - '##'
+  - ettercap-graphical
+- - '##'
+  - sslsniff
+- - '##'
+  - tcpflow
+- - '##'
+  - urlsnarf
+- - '##'
+  - webmitm
+- - '##'
+  - webspy
+- - '##'
+  - wireshark
+- - '##'
+  - sndump
+- - '##'
+  - tshark
+- - '##'
+  - bettercap
+- - '##'
+  - mitcap
+- - '##'
+  - evilgrade
+- - '##'
+  - fake_advertise_6
+- - '##'
+  - fake_dns6
+- - '##'
+  - fake_dnsupdate6
+- - '##'
+  - fake_mipv6
+- - '##'
+  - fake_mld2
+- - '##'
+  - fake_mld6
+- - '##'
+  - fake_router6
+- - '##'
+  - fake_router6
+- - '##'
+  - fake_mldrouter6
+- - '##'
+  - fake_solicit6
+- - '##'
+  - fiked
+- - '##'
+  - macchanger
+- - '##'
+  - parasite6
+- - '##'
+  - randicmp6
+- - '##'
+  - rebind
+- - '##'
+  - redir6
+- - '##'
+  - redir6
+- - '##'
+  - tcppreplay
+- - '##'
+  - wifi-honey
+- - '##'
+  - yersinia
+- - '##'
+  - '[47] 语音与监控'
+- - '##'
+  - msgsnarf
+- - '##'
+  - '[48] VOIP 工具'
+- - '##'
+  - iaxflood
+- - '##'
+  - 洪
+- - '##'
+  - protos-sip
+- - '##'
+  - rtpbreak
+- - '##'
+  - rtpfload
+- - '##'
+  - rtipinsert
+- - '##'
+  - sctpan
+- - '##'
+  - siparm
+- - '##'
+  - svwar
+- - '##'
+  - '[49] Web 嗅探器'
+- - '##'
+  - burpsuite
+- - '##'
+  - dnsspoof
+- - '##'
+  - echo 1 >/proc/sys/ipv4/ip_forward (启用端口)
+- - '##'
+  - dnsspoof -f spoofhosts.txt 192.168.1.245 192.168.1.5
+- - '##'
+  - dnsspoof -f spoofhosts.txt 192.168.1.245 192.168.1.5
+- - '##'
+  - USAGE driftnet
+- - '##'
+  - USAGE [options] [filter code]
+- - '##'
+  - echo 1 >/proc/sys/ipv4/ip_forward (启用端口)
+- - '##'
+  - '[53] 逆向工程：调试器'
+- - '##'
+  - edb-debugger
+- - '##'
+  - ollydbg
+- - '##'
+  - 12-168-1.5
+- - '##'
+  - '[54] 反汇编'
+- - '##'
+  - jad
+- - '##'
+  - radiff2
+- - '##'
+  - rasm2
+- - '##'
+  - recstudio
+- - '##'
+  - recstudio-cli
+- - '##'
+  - javasnoop
+- - '##'
+  - radare2
+- - '##'
+  - raharun2
+- - '##'
+  - STRESS TESTING
+- - '##'
+  - denial
+- - '##'
+  - dhcp
+- - '##'
+  - dos-new-ip6
+- - '##'
+  - flood_dhc6
+- - '##'
+  - flood_mld26
+- - '##'
+  - flood_mld6
+- - '##'
+  - flood_mldrouter26
+- - '##'
+  - flood_router6
+- - '##'
+  - flood_solicitate6
+- - '##'
+  - inundator
+- - '##'
+  - siege
+- - '##'
+  - smurf6
+- - '##'
+  - '[57] VOIP 压力测试'
+- - '##'
+  - iaxflood
+- - '##'
+  - invite flood
+- - '##'
+  - '[58] WEB 压力测试'
+- - '##'
+  - thc-ssl-dos
+- - '##'
+  - '[59] WLAN 压力测试'
+- - '##'
+  - mdk3
+- - '##'
+  - '[61] ARDUINO TOOLS'
+- - '##'
+  - arduino
+- - '##'
+  - '[62] FORENSICS: ANTI-VIRUS FORENSICS'
+- - '##'
+  - chrootkit
+- - '##'
+  - '[63] DIGITAL ANTI-FORENSICS'
+- - '##'
+  - chrootkit
+- - '##'
+  - '[64] DIGITAL FORENSICS'
+- - '##'
+  - autopsy
+- - '##'
+  - binwalk
+- - '##'
+  - bulk_extractor
+- - '##'
+  - dc3dd
+- - '##'
+  - dcflddd
+- - '##'
+  - extundelete
+- - '##'
+  - foremost
+- - '##'
+  - affcrypto
+- - '##'
+  - affdiskprint
+- - '##'
+  - 描述 AFFLIBv3 - 高级取证库与工具版本 3。
+- - '##'
+  - 打印文件信息。
+- - '##'
+  - affsign
+- - '##'
+  - affstats
+- - '##'
+  - 打印详细统计信息
+- - '##'
+  - affuse
+- - '##'
+  - affxml
+- - '##'
+  - autopsy
+- - '##'
+  - binwalk
+- - '##'
+  - blkcalc
+- - '##'
+  - blkcat
+- - '##'
+  - blkstat
+- - '##'
+  - bulk_extractor
+- - '##'
+  - ffind
+- - '##'
+  - bulk_extractor
+- - '##'
+  - ffind
+- - '##'
+  - fls
+- - '##'
+  - icat-sleuthkit
+- - '##'
+  - ifind
+- - '##'
+  - ils-sleuthkit
+- - '##'
+  - istat
+- - '##'
+  - jcat
+- - '##'
+  - mactime-sleuthkit
+- - '##'
+  - missidentify
+- - '##'
+  - mmcat
+- - '##'
+  - pdgmail
+- - '##'
+  - readpst
+- - '##'
+  - reglookup
+- - '##'
+  - sorter
+- - '##'
+  - sorter -f ntfs -d data/sorter/hda1.dd
+- - '##'
+  - sorter -d data/sorter/hda1.dd
+- - '##'
+  - sorter -i raw -f ntfs -o 63 -d data/sorter/hda1.dd
+- - '##'
+  - sorter -f ntfs -C /usr/local/sleuthkit/share/sort/Images.sort -d data/sorter -h
+    images/hda1.dd
+- - '##'
+  - srch-strings
+- - '##'
+  - tsk_recover
+- - '##'
+  - winopsy
+- - '##'
+  - '[66] 取证刻录工具'
+- - '##'
+  - winopsy
+- - '##'
+  - '[69] winopsy-tools'
+- - '##'
+  - '[70] 网络取证'
+- - '##'
+  - p0f
+- - '##'
+  - '[71] 密码取证工具'
+- - '##'
+  - chntpw
+- - '##'
+  - '[72] PDF 取证工具'
+- - '##'
+  - pdf-parser
+- - '##'
+  - '[73] 内存取证工具'
+- - '##'
+  - volatility
+- - '##'
+  - '[74] 报告工具：证据管理'
+- - '##'
+  - casefile
+- - '##'
+  - keepnote
+- - '##'
+  - magictree
+- - '##'
+  - maltego
+- - '##'
+  - metagoofil
+- - '##'
+  - truecrypt
+- - '##'
+  - '[75] 媒体捕获'
+- - '##'
+  - cutycapt
+- - '##'
+  - recordmydesktop
+- - '##'
+  - '[76] 系统服务'
+- - '##'
+  - apache2
+- - '##'
+  - '[77] METASPLOIT'
+- - '##'
+  - community / pro start
+- - '##'
+  - community / pro stop
+- - '##'
+  - '[78] MYSQL'
+- - '##'
+  - mysql restart
+- - '##'
+  - mysql start
+- - '##'
+  - mysql stop
+- - '##'
+  - '[79] SSHD'
+- - '##'
+  - sshd restart
+- - '##'
+  - sshd start
+- - '##'
+  - sshd stop
+- - '#'
+  - 参考文献
