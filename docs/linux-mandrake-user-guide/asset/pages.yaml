@@ -1,0 +1,5658 @@
+- img_proc: true
+  md: '![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_0_0.png)
+
+
+    # 6.0
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_0_1.png)
+
+
+    # Linux-Mandrake™
+
+
+    # User Guide
+
+
+    # MandrakeSoft™'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Linux-Mandrake
+
+    User Guide
+
+
+    MandrakeSoft
+
+
+    May 1999'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Legal Notice
+
+
+    The present Linux-Mandrake distribution install guide was designed and edited
+    by the MandrakeSoft S.A. company.
+
+
+    Copyright 1998 MandrakeSoft S.A.
+
+    http://www.linux-mandrake.com/
+
+    ISBN 2-95133476-4-2
+
+    (ISBN 2-95133476-8-5 for the French edition)
+
+
+    This manual is distributed either in its entirety or as a part, without modification,
+    under electronic form and printed form, under the condition that:
+
+
+    +   1. this legal notice is kept in its entirety and without modification,
+
+    2. and this is not for a commercial use.
+
+
+    For any other use, authorization must be obtained from MandrakeSoft S.A..
+
+
+    Both "Mandrake" and "Linux-Mandrake" brand name and design are registered.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# Contents\n\n+   1 Foreword .................................................................................\
+    \ . . . . . . . . . . . . . xi\n\n+     1.1 Linux .................................................................................\
+    \ . . . . . . . . . . . . . . . . xi\n\n+     1.2 Free software ........................................................................................................................\
+    \ xii\n\n+     1.3 Graphical interfaces ..........................................................................................................\
+    \ xii\n\n+     1.4 Linux-Mandrake ...............................................................................................................\
+    \ xiii\n\n+         The Concept ....................................................................................................................................\
+    \ xiii\n\n+     1.5 This manual... ....................................................................................................................................\
+    \ xiv\n\n+     1.6 Acknowledgements ..........................................................................................................................\
+    \ xiv\n\n+   2 Installing Linux-Mandrake ............................................................................................................\
+    \ 1\n\n+     2.1 Installation disk ...................................................................................................................................\
+    \ 2\n\n+     2.2 Take PCMCIA ports into account ................................................................................................\
+    \ 3\n\n+     2.3 Choice of installation method ............................................................................................\
+    \ 3\n\n      Installing via NFS ................................................................................................................\
+    \ 4\n\n      Installation from a hard disk ................................................................................................\
+    \ 7\n\n      Installation by FTP ............................................................................................................\
+    \ 7\n\n      Installation by SMB ............................................................................................................\
+    \ 8\n\n+     2.4 Problems-who to contact? .......................................................................................................\
+    \ 8\n\n      Different problems that may occur (non ex-\nhaustive list) ...................................................................................\
+    \ 9\n\n      What can you do in case of a persistent problem? ................................................\
+    \ 12"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# CONTENTS
+
+
+    # 3 Setting up Linux-Mandrake 15
+
+
+    +   3.1 Reinstallation/configuration of . . . . . . . . . . . . . . . . . . .
+    . . . . . 15
+
+
+    lilo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    15
+
+
+    +   3.2 Installing your mouse. . . . . . . . . . . . . . . . . . . . . . . . .
+    17
+
+
+    +   3.3 Installing your video card . . . . . . . . . . . . . . . . . . 17
+
+
+    +   3.4 Setting up your network . . . . . . . . . . . . . . . . . . 18
+
+
+    +   3.5 Installing of your printer . . . . . . . . . . . . . . . 19
+
+
+    +   3.6 Installation of your sound card . . . . . . . . . . 20
+
+
+    +   3.7 Setting up the daemons: linuxconf . . . . . . . . 20
+
+
+    # 4 Discover KDE 21
+
+
+    +   4.1 The history of KDE . . . . . . . . . . . . . . . . . 21
+
+
+    +   4.2 Introduction to KDE . . . . . . . . . . . . . . . 21
+
+
+    An HTML desktop . . . . . . . . . . . . . . . . . . . . . . 22
+
+
+    The K menu, panel and task bar . . . . . . . . . . 22
+
+
+    Using context-dependent menus . . . . . . 23
+
+
+    Drag-and-drop . . . . . . . . . . . . . . . . . . . . . 23
+
+
+    The different desktops . . . . . . . . . . . . . 23
+
+
+    Finding help . . . . . . . . . . . . . . . . . . . . 24
+
+
+    +   4.3 Using the desktop . . . . . . . . . . . . . . . 24
+
+
+    What is the desktop? . . . . . . . . . . . . . . 25
+
+
+    Browse the file structure with KFM . . . . 25
+
+
+    +   4.4 K Menu . . . . . . . . . . . . . . . . . . . . . 26
+
+
+    Different items . . . . . . . . . . . . . . . . . . 26
+
+
+    The Disk Navigator menu . . . . . . . . . 26
+
+
+    The KPanel menu . . . . . . . . . . . . . . 27
+
+
+    +   4.5 File and folder management . . . . . . . 27
+
+
+    Presentation of the KFM menus . . . . . . 27
+
+
+    The different views possible . . . . . . 28
+
+
+    Creation and manipulation of files and folders . 30
+
+
+    Searching for files . . . . . . . . . . . . . 30
+
+
+    +   4.6 Customizing the desktop . . . . . . . 30'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   Customizing the K menu . . . . . . . . . . . . . . . . . . . 30
+
+    KDE Control Centre . . . . . . . . . . . . . . . . . . . . 30
+
+    KFM: setting up KFM . . . . . . . . . . . . . . . . . . . . 36
+
+    4.7 Advanced use of KDE . . . . . . . . . . . . . . . . . . . . 36
+
+    KFM . . . . . . . . . . . . . . . . . . . . . . . . . 36
+
+    Browse the Web with KFM . . . . . . . . . . . . . . . . . 40
+
+    Launching programs on start-up . . . . . . . . . . . . 41
+
+    Mount the disk drive or CD-ROM drive . . . . . . . . 41
+
+
+    +   5 The KDE programs . . . . . . . . . . . . . . . . . . . 43
+
+    5.1 Text Editors . . . . . . . . . . . . . . . . . . . . . . . 43
+
+    5.2 Image editing programs . . . . . . . . . . . . . . 44
+
+    5.3 Use the Internet! . . . . . . . . . . . . . . . . . . 44
+
+    Use of the kpppp dialler . . . . . . . . . . . . . . . . . 45
+
+    The mail viewer, Kmail . . . . . . . . . . . . . . . 47
+
+    5.4 Manage you system . . . . . . . . . . . . . . . . . . 47
+
+    Manipulate programs: kpackage . . . . . . . . . . . . 48
+
+    The processes: KPM and KDE TaskManager . . . 50
+
+    Disk space: kdiskfree . . . . . . . . . . . . . . . . . . 51
+
+    Runlevels: ksysv . . . . . . . . . . . . . . . . . . . . 52
+
+    Character font management . . . . . . . . . . . . 53
+
+    Management of print files . . . . . . . . . . . . 53
+
+
+    +   6 GNOME . . . . . . . . . . . . . . . . . . . . . . . . . 55
+
+    6.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . 55
+
+    6.2 Presentation of the environment . . . . . 56
+
+    6.3 Drag''n''Drop . . . . . . . . . . . . . . . . . . . . . . . 58
+
+    6.4 Launchers . . . . . . . . . . . . . . . . . . . . . . . . 62
+
+    6.5 More about panels . . . . . . . . . . . . . . . . . . . 63
+
+    Manipulation with the mouse . . . . . . . . . . . . . 63
+
+    Panel configuration parameters . . . . . . . . . 63
+
+    6.6 In conclusion . . . . . . . . . . . . . . . . . . . . 63'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "# CONTENTS\n\n+   7 Introduction to Linux ............................................................................................................................\
+    \ 65\n7.1 Starting up and shutting down .................................................................................\
+    \ . . . . 65\n    Start-up .................................................................................................................................\
+    \ . . . . . . . . . . . . . . . . 65\n    The login procedure .................................................................................................................................\
+    \ . . . . . . . 66\n    Shutting down .................................................................................................................................\
+    \ . . . . . . . . . . . . . . 67\n7.2 Linux shells .................................................................................................................................................\
+    \ . . . . . . 68\n7.3 Using the Bash shell ........................................................................................................................................\
+    \ 69\n    The su command ...................................................................................................................................................\
+    \ . . . . . 71\n    The cd command ...................................................................................................................................................\
+    \ . . . . . . . . . . . . 71\n    The ls command ....................................................................................................................................................\
+    \ . . . . . . . . . . . 72\n    The rm command ...................................................................................................................................................\
+    \ . . . . . . . . . . . 72\n    The mkdir and rmdir commands ............................................................................................................................\
+    \ 73\n    The more/less commands .......................................................................................................................................\
+    \ 73\n    The grep command ...................................................................................................................................................\
+    \ . . 73\n    The ps command ....................................................................................................................................................\
+    \ . . . . . . 74\n    The kill command ...................................................................................................................................................\
+    \ . . . . . 74\n    The tar command ...................................................................................................................................................\
+    \ . . . 74\n7.4 Using the Linux multitasking system ....................................................................................................................\
+    \ 75\n7.5 Output redirection ........................................................................................................................................................\
+    \ 76\n7.6 Understanding processes .......................................................................................................................................\
+    \ 77\n\n+   8 System administration ................................................................................................................................\
+    \ 79\n8.1 The User and Groups ...................................................................................................................................................\
+    \ 79\n8.2 Managing users ..............................................................................................................................................................\
+    \ 80\n    Creating an account ...................................................................................................................................................\
+    \ . . . 80\n    Special accounts ...................................................................................................................................................\
+    \ . . . . . . 80\n8.3 Management of programs (RPM) ................................................................................................................................\
+    \ 81\n    RPM on the command line ........................................................................................................................................\
+    \ . . . 81\n    KPackage ...................................................................................................................................................................\
+    \ . . . . . . . . 83\n8.4 Linux-Mandrake installation ............................................................................................................................\
+    \ 84\n    The boot ...................................................................................................................................................................\
+    \ . . . . . . . . 84\n    Runlevels .......................................................................................................................................................................\
+    \ . . . . . . . . 84"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   The file /etc/inittab . . . . . . . . . . . . . . . . 85
+
+    The scripts /etc/rc.d/ . . . . . . . . . . . . . . . . . 87
+
+    The files .bashrc et .bash_profile . . . . . . . . 90
+
+    8.5 Using linuxconf . . . . . . . . . . . . . . . . . 91
+
+    Network . . . . . . . . . . . . . . . . . . . . . 94
+
+    Basic configuration of the machine . . . . . 96
+
+    Name resolution (DNS) . . . . . . . . . . . . 98
+
+    Routing and gateways . . . . . . . . . . . 99
+
+    Search path for the machine name . . . . . . 107
+
+    NIS . . . . . . . . . . . . . . . . . . . . . . . 108
+
+    PPP/SLIP/PLIP . . . . . . . . . . . . . . 109
+
+    User accounts . . . . . . . . . . . . . . . . 111
+
+    File systems . . . . . . . . . . . . . . . . 116
+
+    Base . . . . . . . . . . . . . . . . . . . . . 117
+
+    Options . . . . . . . . . . . . . . . . . 118
+
+    DOS Options . . . . . . . . . . . . . . . 120
+
+    Others . . . . . . . . . . . . . . . . . . . 121
+
+    More... . . . . . . . . . . . . . . . . . . 121
+
+
+    # 9 Documentation . . . . . . . . . . . . . 123
+
+
+    +   9.1 The "HOWTTOs" . . . . . . . . . . . . . 123
+
+    9.2 The man pages . . . . . . . . . . . . . . . 126
+
+    9.3 Interesting documents on the net . . . 127
+
+    9.4 Books . . . . . . . . . . . . . . . . . . 127
+
+
+    # 10 Appendix . . . . . . . . . . . . 129
+
+
+    +   10.1 FAQ . . . . . . . . . . . . . . . . . . . 129
+
+
+    "Unable to display the contents of the directory xxx" . . . . . . . . . . . .
+    . . . . . . . . . . 129
+
+    "Unable to read in xxx. The file does not exist or access is refused." . . . .
+    . . . . 129
+
+    "KFM cannot be connected to ''localhost'' . . . . . 130'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   "My printer worked with previous versions of Linux-Mandrake, but not with
+    version 6.0" . . . . . . . . . . 130
+
+
+    +   The entries in the K menu have been duplicated after updating a previous version
+    of Linux-Mandrake to version 6.0. . . . . . . . 131
+
+
+    +   "How can you delete LILO?" . . . . . . . . . . 131
+
+
+    +   "LILO is not installed correctly. What shall I do?" . . . . . . . . . . .
+    . . . 131
+
+
+    +   "How can I modify the configuration of my keyboard?" . . . . . . . . . . .
+    . . . . 131
+
+
+    +   10.2 Linux-Mandrake specifications . . . . . . . . . . . . 131
+
+
+    +   10.3 List of hardware supported . . . . . . . . . . . . 132
+
+
+    +   10.4 Description of packages supplied with Mandrake 132
+
+
+    +   11 Glossary 133'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Chapter 1
+
+
+    # Foreword
+
+
+    # 1.1 Linus Linux
+
+
+    In 1991, Linus TORVALDS, at the time studying in Helsinki, Finland, created the
+    very first version of Linux for his own needs. This very rudimentary program was
+    intended to run on the PC 80386 of the age. But Linus TORVALDS had the good idea
+    of making it "free" and to involve all those who wanted it. Thanks to the support
+    of the emerging Internet network and the new-born community of developers, but
+    also thanks to the pre-existence of the GNU project 1 started some years earlier
+    by Richard STALLMAN, Linux went on to become some years later a full operating
+    system. Its power is unrivalled, its stability is now legendary and it improves
+    with every day!
+
+
+    To make it easier to use, Linux is offered in the form of distributions, in other
+    words, a set of coherent programs.
+
+
+    > http://www.gnu.org/'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# 1.2 Free software
+
+
+    It is important to know that Linux is only the tip of an iceberg called "Free
+    Software" 2/"Open Source"3. The particular characteristics of Free Software are
+    as follows: free software can be redistributed at will and without cost, and it
+    is modifiable by anyone sufficiently experienced in programming. This concept
+    is used principally by the GPL (General Public License) and BSD-Licence (Berkeley
+    Software Development) although these are not the only ones. Apart from Linux,
+    a gem of Free Software is called "Apache"4 which is a web server program for the
+    Internet and runs more than 50% of the web servers in the world. The majority
+    of software which serves to make the Internet work (at all levels) is Free Software.
+
+
+    # 1.3 Graphical interfaces
+
+
+    For a while, Linux has only operated with "multi-window" graphical interfaces
+    inherited from proprietary Unix systems. Entirely based on the "X Window System",
+    they are named Mwm, Olwm, Fvwm, Afterstep. Towards the end of 1996, a small tem
+    of developers brought together by Matthias ETRICH decided to aim higher and to
+    create a true graphical desktop having advanced functions such as "drag-and-drop",
+    with integrated HTML display. This set, called the "K Desktop Environment"5, or
+    more simply "KDE", was a great success due to its high quality. KDE is the graphical
+
+
+    > 2http://www.fsf.org/
+
+    3http://www.opensource.org/
+
+    4http://www.apache.org/
+
+    5http://www.kde.org/'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'interface installed by default in the Mandrake distribution.
+
+
+    The existence of multiple solutions is also an important aspect of free software.
+    To this end, Linux-Mandrake is not only supplied with KDE, but also with a similar
+    environment called GNOME. GNOME is a project that aims to create a graphical environment
+    based on the graphics library GTK for which the technology relies on CORBA, a
+    protocol for distributed objects.
+
+
+    The two environments have their pros and their cons: with Linux-Mandrake, you
+    can judge for yourself!
+
+
+    # 1.4 Linux-Mandrake
+
+
+    # The Concept
+
+
+    The "Linux-Mandrake" distribution⁶ was born from a simple idea: to supply the
+    user with a solid system base on an approved distribution, in simplifying use
+    thanks to the addition of the most powerful graphical desktop available: the "K
+    Desktop Environment", as well as a certain number of improvements and programs
+    that avoid the need for the user to spend hours on searching on the Internet for
+    the packages he might need to work efficiently and in an agreeable manner. We
+    also think that Linux-Mandrake is also the simplest distribution to install and
+    configure, and the quickest to get up and running. Looking ahead, we are convinced
+    that your new Linux system will bring you much satisfaction. Nevertheless, bear
+    in mind that Linux is not always used like other well-known operating systems
+    and that to start with you will probably be put off. You will begin to appreciate
+    the
+
+
+    ```
+
+    http://www.linux-mandrake.com/
+
+    ```'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'phenomenal power of Linux from the moment you discover
+
+    its coherence, its extraordinary dynamics linked with commu-
+
+    nities on the Internet, but also the philosophy of Free
+
+    Software and the new intellectual perspectives which it opens
+
+    up.
+
+
+    # 1.5 This manual...
+
+
+    For your information, be aware that this manual was entirely
+
+    created under Linux Mandrake with the following programs:
+
+    KlyX, Emacs and LaTeX for the text editing, Gimp and gif2ps
+
+    for image processing, and the psutils for setting it out before
+
+    printing. All of these programs are Free Software.
+
+
+    # 1.6 Acknowledgements
+
+
+    we thank Linus TORVALDS and all those who contributed
+
+    to the Linux kernel. Thanks equally to the GNU project and
+
+    therefore, in particular, to Richard STALLMAN, without whom
+
+    all this would have certainly never existed. Thanks to all
+
+    the developers of Free Software, whether they made the
+
+    or established engineers. We thank all those who made the
+
+    formidable effort to document Linux (the HOWTOs) and the
+
+    transators. Thanks to the entire KDE team for taking the
+
+    initiative to create a true graphical desktop for Linux and
+
+    above all for having the knowledge necessary to create such
+
+    splendid software. Thanks in general to all those who are
+
+    involved or have been involved closely or not with the Free
+
+    Software movement. Finally thanks in particular to all those
+
+    who, with their enthusiasm and their interest, have allowed
+
+    Linux-Mandrake to exist and develop itself.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Chapter 2
+
+
+    # # Installing Linux-Mandrake
+
+
+    This chapter complements the Install Guide. It details the procedures for installing
+    from NFS, FTP, HTTP and a hard disk and shows you how to resolve several problems.
+
+
+    If your computer allows you to boot from the CD-ROM, do it; otherwise, start with
+    the boot disk.
+
+
+    Note: in certain cases, you will have to force your machine''s BIOS to start on
+    the disk drive.
+
+
+    You should see a welcome screen. Click on Enter to continue. You could also choose
+    to start in "expert" mode. To do this, type "expert". Expert mode enables you
+    to enter by hand all the machine parameters (no automatic detection).
+
+
+    A minimal Linux will be launched. It will detect your system''s resources and
+    act as a base for the remainder of the installation.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 2 CHAPTER 2. INSTALLING LINUX-MANDRAKE
+
+
+    In this chapter, we have indicated the important points concerning installations
+    from sources which are not the CD-ROM. The majority of steps are the same. You
+    should therefore refer to the Install Guide to find the relevant details.
+
+
+    # 2.1 Installation disk
+
+
+    When installing from sources other than the CD-ROM, you will need boot disks.
+    The images of these disks can be found on the CD-ROM in the directory \images.
+    Use the rawrite program to create them under Windows.
+
+
+    All the necessary utilities can be found in the \dosutils and \images directories
+    of the installation CD-ROM.
+
+
+    First of all, you need to use DOS or Windows. In Windows, click on Start -> Execute
+    -> Command. You will see a DOS window displayed on the screen.
+
+
+    Insert the Linux-Mandrake installation CD-ROM. In the following section, we suppose
+    that your CD-ROM drive is D:. Replace D: with the letter of your CD-ROM drive,
+    if necessary.
+
+
+    Insert a clean, formatted disk in the disk drive. Type
+
+
+    ```
+
+    D:\dosutils\rawrite.exe
+
+    ```
+
+
+    You will be asked for the source. The files can be found in the directory \images.
+    If you would like to create a boot disk for an installation from CD-ROM or hard
+    disk, you will need the image boot.img, otherwise-you will need the image pcmcia.img.,
+
+
+    Then type
+
+
+    ```
+
+    D:\images\boot.img
+
+    ```'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'or
+
+
+    D:\images\pcmia.img
+
+
+    For the target, type A:, followed by Enter.
+
+    The desired image will be copied onto your disk.
+
+    the two boot disks enable you to start the computer and
+
+    to initialize the installation procedure.
+
+    If your computer ignores the disk, on start-up, you will
+
+    need to modify your computer''s BIOS. Modify the boot se-
+
+    quence to: CDROM, A, C.
+
+
+    # 2.2 Take PCMIA ports into account
+
+
+    If you are installing Linux-Mandrake from a portable, and
+
+    y you use PCMIA peripherals which are used in the installa-
+
+    tion (CD-ROM SCSI or Ethernet network card for an NFS
+
+    installation for example,), you should attempt to detect them.
+
+    So reply yes to the question Use your PCMIA peripherals?.
+
+    Note that this only concerns the peripherals which will be used
+
+    during the installation of Linux-Mandrake. You PCMIA
+
+    peripherals will always be recognized by your newly installed
+
+    Linux system.
+
+
+    # 2.3 Choice of installation method
+
+
+    You can choose between five different installation methods.
+
+    Of course, if you install the PowerPack version of Linux-
+
+    Mandrake, you will certainly use the CD-ROM installation.
+
+    Select one of these methods for installation of Linux-
+
+    Mandrake:'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# CHAPTER 2. INSTALLING LINUX-MANDRAKE
+
+
+    +   1. Local CD-ROM: this is the ideal method if you own a CD-ROM drive. For more
+    information consult the Install Guide.
+
+
+    +   2. NFS Image: this method can be used if you have access to an NFS (Network
+    File System) server which contains Linux-Mandrake on your local network.
+
+
+    +   3. Hard disk: use this method if you have the Linux-Mandrake CD-ROM copied
+    onto a hard disk present on your machine. This method will require the additional
+    installation disk.
+
+
+    +   4. FTP: if you have a high access rate to a distant FTP server holding the
+    Linux-Mandrake distribution, use this method. This method will also require the
+    use of the additional installation disk.
+
+
+    +   5. SMB Image: use this method if you install Linux-Mandrake from a volume
+    shared with Microsoft Windows. This method again requires the use of the additional
+    installation disk.
+
+
+    +   6. Installing from an NFS image: if you have at your disposal, within a local
+    network to which you are connected, an NFS server containing Linux-Mandrake, you
+    can install it directly via the network. Note that this procedure will be slower
+    than installing from a local CD-ROM.
+
+
+    # Installing via NFS
+
+
+    If you choose this method, the installation procedure will search for your network
+    card and initialize it first. It will'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# 2.3. CHOICE OF INSTALLATION METHOD 5
+
+
+    attempt to detect the card automatically first. If this fails, you will have to
+    specify the type and parameters of your card.
+
+
+    For example, for an ISA NE2000 compatible Ethernet card, you will need to specify:
+
+
+    +   - that you have a NE2000 compatible card
+
+    - its parameters: base address (e.g. 0x300) and IRQ (e.g. 5)
+
+
+    If your card is not detected, you will not be able to use this method of installation
+    via NFS.
+
+    As soon as your card is recognized, you will have the choice of several methods
+    of installation by NFS:
+
+
+    Choose the appropriate method: static IP address, DHCP or BOOTP.
+
+
+    +   1. Static IP address: choose this method if you have access to a NFS server
+    for which you know all the characteristics (IP address, location of Mandrake files...)
+
+    2. BOOTP: this method uses the "BOOTP" protocol.
+
+    3. DHCP: this method uses the "DHCP" protocol (Dynamic Host Configuration Protocol)
+
+
+    If you use one of the two latter methods, the installation procedure must be able
+    to automatically detect an active and correctly configured BOOTP or DHCP server.
+
+    If you use the first method, you have to enter a series of parameters:
+
+
+    +   - IP address: enter the IP address of your machine.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# CHAPTER 2. INSTALLING LINUX-MANDRAKE
+
+
+    +   - Sub-network mask: it is guessed automatically from your IP address—you can
+    modify it according to your network.
+
+
+    +   - Default gateway: ditto
+
+
+    +   - Main name server: ditto
+
+
+    The following dialogue box asks you to specify new parameters, in order to find
+    out:
+
+
+    +   1. your domain name
+
+
+    +   2. the name of the machine that you are using
+
+
+    +   3. the IP address of your second name server (optional)
+
+
+    +   4. the IP address of your third name server (optional)
+
+
+    You will now have to give information relating to the NFS server you are using.
+
+
+    Enter the Internet address or IP number of your NFS server. Then enter the directory
+    in which the Mandrake distribution can be found on this machine. This is the directory
+    that contains the Mandrake/ directory. For example, if you have a Mandrake CD
+    mounted on /mnt/cdrom/, the directory to specify is:
+
+
+    ```
+
+    /mnt/cdrom/
+
+    ```
+
+
+    Important note: the directory containing the Mandrake distribution must have export
+    authorization on the NFS server (see the file /etc/export on the server). Otherwise
+    you won''t be able to access it.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 2.3. CHOICE OF INSTALLATION METHOD
+
+
+    # Installation from a hard disk
+
+
+    You have the option to install Linux-Mandrake from the partition of your hard
+    disk that contains the distribution. This installation method requires the use
+    of the second additional installation disk.
+
+
+    Having loaded the second installation disk, you should choose the partition of
+    the disk that contains the Mandrake distribution and the directory containing
+    the Mandrake/ directory. The installation should then proceed without any particular
+    problems.
+
+
+    # Installation by FTP
+
+
+    For installation by FTP, you have to load the second additional installation disk.
+    Once you have done this, choose your FTP server (IP address) and the path to the
+    Mandrake/ directory. Move onto the next chapter for the continuation of installation.
+
+
+    When required, fill in the field name of FTP site, Mandrake Directory:
+
+
+    +   1. The name of FTP site is the Internet address of this site. For example:
+    ftp.linux-mandrake.com.
+
+
+    +   2. The Mandrake directory is the full path where the directory Mandrake/ can
+    be found.
+
+    For example, if the remote FTP server contains the directory: /pub/linux/distributions/mandrake/i386/Mandrake/
+
+    then you should enter /pub/linux/distributions/mandrake/i386.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: Different sorts of problems may occur during installation. Differing in degrees
+    of seriousness, they range from a simple unrecognized card problem—which won't
+    necessarily stop the installation procedure—to the pure and simple crash (very
+    rare!)
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# 2.4. PROBLEMS–WHO TO CONTACT?
+
+
+    which may be much more complicated to deal with. For each case, these are the
+    correct steps to take:
+
+
+    # Different problems that may occur (non exhaustive list)
+
+
+    # You aren’t able to start the installation procedure
+
+
+    Depending on the method of installation you use, there may be several reasons
+    for this. If you are installing directly from a CD-ROM drive, check whether your
+    computer allows you to boot in this way, if not, use a floppy disk. In any case,
+    make sure that your computer is going to boot from the specified device: this
+    can be controlled by the BIOS set up of your computer (hit the delete key when
+    booting, or in some cases "F1").
+
+
+    You should also check that the CD-ROM is not damaged. If you have any doubts about
+    the integrity of your physical disk support, whether it be the disk or CD-ROM,
+    contact your retailer.
+
+
+    If you can’t start the installation procedure with the installation floppy disk,
+    it too may be damaged. Try to make another another one, using the disk image on
+    the CD-ROM (boot.img file from the directory \images).
+
+
+    # Your network card is not recognized during FTP or a NFS installation
+
+
+    In this case, you don’t have much choice: you will most certainly have to use
+    the CD-ROM installation. Nevertheless, be sure of the characteristics of your
+    network card (base address and IRQ) if you are prompted for these features. For
+    example, imagine that you have a NE2000 ISA compatible card set up'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# 10 CHAPTER 2. INSTALLING LINUX-MANDRAKE
+
+
+    with: base address= 0x340 irq=7, you won''t complete the installation successfully
+    if you are unsure of these values.
+
+
+    No Linux-Mandrake system is detected (CD-ROM, FTP, NFS, hard disk or SMB installation)
+
+
+    This won''t happen with the PowerPack version of the CD-ROM. It may be the case
+    that your CD-ROM, remote site (LAN or WAN) or Mandrake image is not expected by
+    the installation procedure.
+
+
+    The procedure stops during the installation of packages
+
+
+    Check that the size of the partition you''re using is bigger than the required
+    size. It is not recommended to install Linux-Mandrake on a partition smaller than
+    300 MB (unless you are not installing X Window).
+
+
+    # You are unable to set up your video card
+
+
+    This is a common problem (becoming less and less common!). Don''t panic, this
+    will not (normally) prevent you Linux system from running. You will be able to
+    set up the card configuration later, after the installation has been completed.
+
+
+    # You are unable to set up your network card (it is not recognized by the system)
+
+
+    This will not (normally) prevent you Linux system from running. You will be able
+    to set up the card configuration later, after the installation has been completed.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 2.4. PROBLEMS—WHO TO CONTACT?
+
+
+    # You are unable to set up your printer
+
+
+    This will not prevent Linux system from running. You will be able to set up the
+    card configuration later, after the installation has been completed.
+
+
+    # You are unable to create your LILO boot floppy
+
+
+    This is an annoying problem which should not occur with current Linux-Mandrake
+    distributions. Pick up a new floppy and try again. In case of repeated failures,
+    contact installation support.
+
+
+    # You are unable to install LILO
+
+
+    This is usually due to a detection problem with the hard disk structure. This
+    should not happen with the latest BIOS releases. If it does, make a LILO boot
+    floppy (as instructed) and use it to boot your Linux system. Then edit the file
+    /etc/lilo.conf and insert the line "linear".
+
+
+    For example, if your Linux partition is mounted on /dev/hda, you should have something
+    like this:
+
+
+    ```
+
+    (...)
+
+    boot=/dev/hda
+
+    linear
+
+    (...)
+
+    ```
+
+
+    Finally, reinstall LILO with the command /sbin/lilo.
+
+
+    # You are not able to boot your old operating system
+
+
+    This may occur if you didn''t manage to install LILO correctly. Try to reinstall
+    LILO from a Linux system (see relevant sec-'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# 12 CHAPTER 2. INSTALLING LINUX-MANDRAKE
+
+
+    tions in this manual). If you have Windows, use a DOS boot disk then type fdisk
+    /mbr to use Windows.
+
+
+    You probably have a hardware problem (cpu, cache memory, memory, ...) or overheating.
+    Disactivate your cache memory, ventilate your machine, move your memory to another
+    slot. The last thing you can do is contact your retailer.
+
+
+    # What can you do in case of a persistent problem?
+
+
+    If you think you have tried all the above solutions, or if your problem is not
+    listed, first consult the extensive documentation available on the Web (FAQ, archives
+    of newsgroups with Dejanews...). The Mandrake site contains a large number of
+    links to these documents as well as a general errata. Also consult the references
+    listed at the end of this manual.
+
+
+    You are invited to join the Linux-Mandrake mailing lists, where you can exchange
+    views and discuss your problems. To subscribe, go to the Linux-Mandrake web site:
+    http://www.linux-mandrake.com/.
+
+
+    If this does not help either, it is perhaps time to use Mandrake installation
+    support (fax or e-mail). Here are the steps to take:
+
+
+    # Detailing the problem
+
+
+    It is important to describe precisely the problem: when did the problem occur?
+    can you reproduce it? what exactly is happening?
+
+
+    > http://www.dejanews.com/'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# 2.4. PROBLEMS WHO TO CONTACT?
+
+
+    It may be useful to swap between the "log consoles" in order to pick up additional
+    information on the problem. You can swap between the consoles with the Alt+F3,
+    and alt+f4 key combinations. Write down the last 4 lines.
+
+
+    Then state your problem, in a clear and precise way, using the above information.
+
+
+    # Contacting the Mandrake installation technical support
+
+
+    First of all, you need to register. Follow exactly the instructions written on
+    the registration card, included in the Mandrake PowerPack box. You will receive
+    a registration confirmation containing necessary instructions for getting in touch
+    with technical support.
+
+
+    Be aware that the quality of the answer from technical support is linked to the
+    accuracy of the description of your problem. Note that it is only an installation
+    support. If you wish to have more support, you will have to subscribe to an additional
+    technical support contract² section.
+
+
+    Then wait...
+
+
+    You will have to wait for a reply from the installation technical support. The
+    delay could be 20 minutes or 24 hours, depending on the service workload and on
+    the complexity of your problem.
+
+
+    > ²To benefit from such support, connect to the site http://www.linux-mandrake.com/index.html
+    and read the information in the "extended support"'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Chapter 3
+
+
+    # Setting up Linux-Mandrake
+
+
+    Once you have installed your Linux-Mandrake system, you may need to carry out
+    a bit of fine tuning: for example, if you didn''t manage to install your video
+    card or printer... You can also configure the services ("daemons") which run on
+    your system. You have all the time you want to make these changes, once Linux-Mandrake
+    has been installed.
+
+
+    # 3.1 Reinstallation/configuration of LILO (LINux LOader)
+
+
+    If you have to reinstall LILO for one reason or other, you need the /etc/lilo.conf
+    file which describes the parameters of all the disks on your system that are recognized
+    by Linux. If the installation of LILO failed during installation, you will need'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# 16 CHAPTER 3. SETTING UP LINUX-MANDRAKE
+
+
+    to recreate this file. To do this, whilst root user¹, use an
+
+    editor (kedit, jed, emacs, vi...) and edit /etc/lilo.conf.
+
+    For example, with kedit, type kedit /etc/lilo.conf.
+
+
+    Let''s look at an example: your system contains a Linux
+
+    a and a DOS system on two partitions of your principal disk
+
+    (/dev/hda). Here is the configuration file /etc/lilo.conf to
+
+    create (for the 2.0.36 kernel):
+
+
+    ```
+
+    boot=/dev/hda
+
+    map=/boot/map
+
+    install=/boot/boot.b
+
+    prompt
+
+    timeout=50
+
+    image=/boot/mlinuz
+
+    label=linux
+
+    root=/dev/hda1
+
+    read-only
+
+    other=/dev/hda
+
+    label=dos
+
+    table=/dev/hda
+
+    ```
+
+
+    Of course, you can modify these parameters according to
+
+    your disk configuration (SCSI disks, several disks, etc.).
+
+
+    To reinstall LILO from your new file /etc/lilo.conf,
+
+    simple type /sbin/lilo. You will have a message similar
+
+    to:
+
+
+    Added linux * (this will be the system loaded by default)
+
+    Added dos
+
+
+    > If you are not sure whether you are in "root", type su. A root
+
+    prompt generally starts with the # character.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# 3.2 Installing your mouse
+
+
+    If you need to reinstall you mouse once the installation is finished, use the
+    mouseconfig utility in text mode. Do do this, type mouseconfig in a "shell" (terminal
+    emulator: kvt or xterm).
+
+
+    If your mouse has only two buttons, use Emulate the third button. In effect, this
+    third button (actually the middle button) enables you to paste text between applications
+    in X (having preselected the relevant part of the text with the left button).
+
+
+    # 3.3 Installing your video card
+
+
+    Under Linux, installing a video card has for a long time been a perilous exercise
+    as you have to edit a configuration file manually according to the parameters
+    of the card concerned! Now this has been made much easier due to several programs
+    which enable you to create this file automatically: xf86config and Xconfigurator.
+
+
+    In the majority of cases, using Xconfigurator is adequate but you may need to
+    resort to xf86config, which is not as user-friendly.
+
+
+    To start, you need to know:
+
+
+    +   1. the type of card you''re using (for example: S3, i740, Matrox, etc.)
+
+
+    +   2. if your card is compatible with Linux-Mandrake,
+
+
+    +   3. the (approximate) characteristics of your monitor.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# 18 CHAPTER 3. SETTING UP LINUX-MANDRAKE
+
+
+    Any computer-hardware retailer can help you with the first question. For the second
+    point, simply check the Linux-Mandrake site² to see whether your card is compatible
+    or not (the list is constantly updated). The third question is not necessarily
+    essential: a modern screen can easily support a 1024x768 @60Hz resolution or more
+    in non-interlaced mode. Therefore you can enter the characteristics that are closest
+    to those of your monitor.
+
+
+    Now use Xconfigurator (type: Xconfigurator) and follow the instructions carefully.
+    At worst, you will have to choose a VGA16 server which works with almost any card
+    but at a very poor resolution.
+
+
+    # 3.4 Setting up your network
+
+
+    First of all, check if your network card is recognized by Linux. When you boot
+    the system, one or more lines mentioning eth0 (for "Ethernet") should appear according
+    to the hardware installed on your PC. Then, to configure your network, you can
+    choose between linuxconf (under console or X Window) and netcfg (only under X
+    Window).
+
+
+    To run these programs, type linuxconf or netcfg in a shell (or right mouse→Execute
+    a command). Both programs can also be launched in the K→non KDE Applications→System
+    menu.
+
+
+    The installation of an Ethernet card and setting up the network requires some
+    specific knowledge: consult the comprehensive "HOWTOs" which cover this subject
+    (all those HOWTOs are available on the Mandrake CD-ROM, in the /doc directory)
+    and/or buy a book such as Linux Network
+
+
+    > http://www.linux-mandrake.com/indexfr.html'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# 3.5. INSTALLING OF YOUR PRINTER\n\nAdministrator's Guide (O'RELLY & Associates).\n\
+    Several utility programs which are very powerful for use with the network are\
+    \ available with Linux-Mandrake. Besides the usual commands on the command line\
+    \ (ifconfig, netstat, ping, telnet, traceroute, ftp, rsh, finger etc.), more \"\
+    visual\" configuration utilities are available in the menu.\n\n# 3.5 Installing\
+    \ of your printer\n\nLinux can handle most of the printers that are available\
+    \ on the market. To configure your printer, use the utility program printtool\
+    \ which is supplied with Mandrake. To launch the printtool program, type printtool\
+    \ in a shell. printtool is also available via the K$\rightarrow$non KDE Applications$\r\
+    ightarrow$System$\rightarrow$Printtool menu.\n\n![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_34_0.png)\n\
+    \nNow you can choose between the options that suit your hardware. Also KDE consult\
+    \ the relevant HOWTOs (the Printing-"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# 20 CHAPTER 3. SETTING UP LINUX-MANDRAKE\n\nHOWTO for example...).\n\n# 3.6\
+    \ Installation of your sound card\n\nLinux recognizes most current sound cards,\
+    \ such as all Sound-blaster cards. Type /usr/sbin/sndconfig to set up your sound\
+    \ card.\n\nFollow the instructions and do not hesitate to try other other parameters\
+    \ should the installation not work. Don't forget to switch on your amplifier and\
+    \ turn up the sound ;-) Consult the relevant HOWTOs! (Sound-HOWTO...)\n\nSeveral\
+    \ sound utilities (including a mixing table, MIDI, MPEG3 and WAV/AU... files players)\
+    \ are supplied with Linux-Mandrake.\n\n# 3.7 Setting up the daemons: linuxconf\n\
+    \nYour Linux system comprises a large number of services and mechanisms whose\
+    \ activity and behaviour can be configured with multiple configuration files.\
+    \ Their text format makes them easy to read for any (english-speaking) user. Most\
+    \ of these files are in the /etc directory.\n\nlinuxconf is what one calls a graphical\
+    \ front-end for all the configuration files. It enables you to adjust the parameters\
+    \ of your Linux system easily (with the mouse) and with precision.\n\nTo use linuxconf\
+    \ (you have to be logged on as the root user), type\"linuxconf\" or select this\
+    \ program in the K$\rightarrow$Applications non KDE$\rightarrow$System$\rightarrow$linuxconf\
+    \ menu.\n\nYou can also use linuxconf on a console or via Netscape."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Chapter 4
+
+
+    # Discover KDE
+
+
+    # 4.1 The history of KDE
+
+
+    KDE is a project that was started by Matthias ETTRICH in 1996! The aim was to
+    create a full graphical environment and not only to create a new window manager.
+    KDE Version 1.0 came out in 1998 and version 1.1 in February 1999. KDE is now
+    a stable and very efficient environment: that is why Mandrake decided to use it
+    as the default graphical manager!
+
+
+    # 4.2 Introduction to KDE
+
+
+    KDE is the default Linux-Mandrake graphical environment. At the same time simple
+    and very complete, it enables you to discover your new Linux-Mandrake system by
+    using only the mouse!'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# An HTML desktop
+
+
+    Today, the Internet is the heart of information technology. The HTML language,
+    on which the Web relies, offers you a simple and fast method for navigating on
+    the Internet. That is why the KDE desktop uses the HTML language so that you can
+    navigate just as easily as your computer as on the Internet.
+
+
+    From now on, a single click enables you to launch a program or to navigate the
+    file structure of your Linux-Mandrake system! There is no difference between the
+    Internet and your computer and you can manipulate the Internet resources as if
+    they were files on your personal computer.
+
+
+    # The K menu, panel and task bar
+
+
+    The K menu provides you with a simple and efficient method for accessing KDE programs.
+    Thanks to the programs which are accessible via the K menu, you have access to
+    all the tools which allow you to use your computer. We shall describe the items
+    of the K menu.
+
+
+    There are two parts to the K menu. The first consists of Graphics, Applications,
+    Internet, etc. items. These open a list of applications installed on your computer.
+    For example, to launch KTelnet, click on K then choose Internet and finally KTelnet
+    in the open menu. The second part contains direct access to elements such as the
+    Trash Can or KDE Control centre.
+
+
+    There are three particular menus: Configuration, Disk Navigator and Panel. The
+    Configuration menu provides you with rapid access to the different areas of the
+    KDE Control Centre. Using the Disk Navigator you can easily access Linux-Mandrake
+    directories. The Panel enables you to control'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# 4.2. INTRODUCTION TO KDE
+
+
+    the icons which are present on the bar at the bottom of your screen (the *panel*).
+
+
+    # Using context-dependent menus, using the right or third button
+
+
+    As is the case with all modern front-ends, KDE supports context-dependent menus.
+    These are accessible by using the second button on your mouse (the right button
+    in general). The menu that is opened depends on the object you are pointing at.
+    If you point at the desktop, the menu which is opened enables you to navigate
+    between bookmarks, to create a new file (certain types) or to access the desktop
+    properties. If, on the other hand, you click on an icon, the context-dependant
+    menu enables you to delete a file or access its properties. The third button (the
+    middle button of a 3-button mouse or press the two buttons together with a 2-button
+    mouse) enables you to browse through the list of open programs, whichever virtual
+    desktop you are using.
+
+
+    # Drag-and-drop
+
+
+    KDE supports drag-and-drop between KDE applications. For example, it allows you
+    to pick up an icon in a directory and drop it on the desktop! Using this method,
+    you can improve your efficiency.
+
+
+    # The different desktops
+
+
+    KDE supports virtual desktops. By default, you have 4 different desktops to choose
+    from (it is possible to have up to 8). You can apply a different background to
+    each desktop as you wish and you can rename them. Using the desktops, you'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'can organize the different applications to avoid overlapping windows.
+
+
+    # Finding help
+
+
+    KDE is supplied with on-line help, in the form of HTML files. The main help is
+    accessible via the K menu. Each application has its own help menu.
+
+
+    # 4.3 Using the desktop
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_39_0.png)'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# 4.3. USING THE DESKTOP
+
+
+    # What is the desktop?
+
+
+    The desktop is the area of the screen in which you are going to work.
+
+
+    On the left, you have a series of icons which permit you to launch applications
+    or to open files. At the bottom you can be found the panel and the K menu which
+    gives you access to all the KDE programs. At the top, you will see the task bar
+    which displays the programs that are open and enables you to switch from one to
+    the other quickly.
+
+
+    # Browse the file structure with *KFM*
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_40_0.png)
+
+
+    KFM could be considered both an Internet navigator and a file manager. To open
+    KFM, you can click on one of the icons on the desktop or use the Disk Navigator
+    (see below) to take yourself directly to the file you desire.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'KFM contains a menu bar, a tool bar, and a bar. The main window shows the files
+    and sub-directories situated in the directory indicated in the bar. It is possible
+    to have a view of the file structure (menu View/File Structure). Notice that because
+    KFM is a web navigator, you can read HTML files directly.
+
+
+    The KFM windows are mounted on a title bar with control buttons. They let you
+    close the window, resize it, iconify it or nail it down.
+
+
+    # 4.4 K Menu
+
+
+    # Different items
+
+
+    The K menu has different items. The programs are ordered thematically (Internet,
+    Graphics, etc...). You will also find direct access to the KDE Control Center,
+    to the Trash Can, to file search tools and other common programs. Below, you will
+    find more detailed explanations about KPanel and Disk Navigator.
+
+
+    # The Disk Navigator menu
+
+
+    The Disk Navigator is a tool which we can''t pass over quickly: it enables you
+    to access quickly a directory in your file structure (Root menu) as well as your
+    personal directories and most importantly the programs that you have used recently.
+
+
+    It is possible to customize it. To do this, you go to the Options menu. You can
+    modify the Personal and Shared parts. Click on your choice, a window will appear
+    which corresponds to a KDE directory. To add an item, simply copy an object (directory
+    or file) in another window then paste it into the'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# 4.5. FILE AND FOLDER MANAGEMENT
+
+
+    Disk Navigator window. Shut the window, choose Apply in the Disk Navigator menu
+    and it''s done!
+
+
+    Use this menu to gain precious time!
+
+
+    # The KPanel menu
+
+
+    The panel is the bar you see at the bottom of your desktop. Other than the K menu
+    and the list of desktops, you can add the programs which you would like to include
+    so that you can launch them easily. The modifications are made via the KPanel
+    menu. To add an item, choose Add an application then select the desired application
+    (you could also select a group). The application is added to the panel. One click
+    of the right button on the icon allows you to move or remove it. The Configure
+    option enables you to access the configuration window of the panel as if you were
+    in the KDE Control Centre.
+
+
+    # 4.5 File and folder management
+
+
+    KDE makes a search for and use of all the resources of your computer easier by
+    giving you a simple and customizable interface to navigate the file structure
+    of your system.
+
+
+    # Presentation of the KFM menus
+
+
+    KFM is the name of the program you will use to explore your system. It is composed
+    of menus (File, Edit,...), a tool bar, a bar and a state bar.
+
+
+    The bar indicates the current directory. It is given in the form file:/xxx, in
+    the same way as a Web browser.
+
+
+    The File and Edit menus are very classic and enable you to carry out the normal
+    operations on files (create, search,'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# CHAPTER 4. DISCOVER KDE
+
+
+    cut and paste, ...). The View menu enables you to set up the KFM display. Using
+    the Go menu, you can move through the history. In the Bookmark menu, you can save
+    your favorites, whether they be local files or Internet sites. The Cache and Options
+    menus enable you to configure precisely your KFM browser.
+
+
+    # The different views possible
+
+
+    The View menu enables you to set up the display mode if the browser. An option
+    is selected when you see a cross next to the name.
+
+
+    Hidden files are the files where the name begins with a full stop: generally are
+    configuration files for your programs. Click on the Show hidden files option if
+    you wish to see them. The file structure option displays 3 names on the left:
+    Root, Home and Desktop. The first is in fact the directory "", the second shortcut
+    to the directory "/home" and the last to your sub-directory Desktop. Click on
+    the triangle to the left of each name. This enables you to open the file structure
+    without updating the right hand part. This is very practical for copying files.
+    If, on the other hand,you click on the name, only the right hand part is updated.
+    Perhaps you would like the file structure to follow your navigation (in other
+    words, changes of directory on the right will be reflected in the file structure
+    view). In this case, go to the Option/Configure file manager menu and then, in
+    the Others section, click on the corresponding case.
+
+
+    The option Show small images is one of the options that you cannot do without
+    once you have tried: if you select it and you browse in a directory that contains
+    images, you will see a little image instead of the normal image icon, giving you'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# 4.5. FILE AND FOLDER MANAGEMENT 29
+
+
+    a preview of images. Finally, the HTML option enables you to choose whether you
+    consider KFM a Web browser or not. For example: type /home/html/ in the bar (which
+    supports completion). If HTML is selected, the web document index.html of this
+    directory will be displayed, as with a Web browser. If HTML is not selected, then
+    the list of files in the directory will be displayed.
+
+
+    The following 4 options enable you to choose the display mode: Big icons, Small
+    icons, Text and Detailed. The Text and Detailed modes are very similar and the
+    equivalent of the ls -l command of the shell: you can see (from right to left)
+    the file name, the associated permissions, the owner and the group the file belongs,
+    the size and the time and date of latest modification.
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_44_0.png)'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Creation and manipulation of files and folders
+
+
+    Using KFM, you can manipulate the files and folders as you wish. Also, you will
+    no longer need to use text commands.
+
+
+    You can move or copy files using drag and drop. To create a new element such as
+    a directory, click with the right button and choose *New*.
+
+
+    # Searching for files
+
+
+    There is a utility, accessible via the K menu or via *File/Search* in KFM, which
+    enables you to search for files. It allows wildcards and enables you to search
+    easily with simple criteria such as date of creation or contents.
+
+
+    # 4.6 Customizing the desktop
+
+
+    # Customizing the K menu
+
+
+    # KDE Control Centre
+
+
+    The *KDE Control Centre* is the place where you can customize and set up the graphical
+    interface.
+
+
+    You can get to the KDE *control centre* via the K menu. The *Configuration* menu
+    is a shortcut to the different areas of the control centre.
+
+
+    The control centre is made up of 8 items grouping the options together, thematically.
+    We shall look at these options.
+
+
+    # The Applications menu
+
+
+    This will enable you to set up some key *KDE* applications.
+
+
+    The connection manager is only accessible as the *root* user. It allows you to
+    manage the different options of *KDM*,'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# 4.6. CUSTOMIZING THE DESKTOP
+
+
+    the KDE graphical connection manager. In the first window, you will be able to
+    choose the welcome message and the language used for these messages (choose English).
+    The following tabs enable you to choose the font, the background and whether to
+    list the users or not.
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_46_0.png)
+
+
+    We won''t return to the File manager and Web browser; these are the same parameters
+    as those which you accessed from the Options menu of KFM (Configure the browser
+    and Configure the file manager sections).
+
+
+    In the Panel menu, you can define the position of the task bar or the panel. The
+    Options tab enables you to choose the presence or non-presence of the information
+    bubble in the K'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'menu or the masking of the task bar. You will also find a Display the time
+    in Internet beats option that we shall leave you to try out! The Desktop tab is
+    very interesting: it enables you to choose the number of virtual desktops that
+    you would like to have, and to rename them. By default, 4 desktops are present.
+    To add another, modify the position of the visible cursor. The size cursor enables
+    you to modify the size of the display reserved for the panel on each desktop.
+    Finally, the last tab is the Disk Navigator which we talked about above.
+
+
+    # The Desktop menu
+
+
+    In this menu you will be able to change the appearance of your desktop.
+
+
+    The background menu gives you a list of all the desktops and enables you to choose
+    a background to apply. If you would like to have an imageless background, choose
+    no wallpaper in the wallpaper menu then set up your colors: one for a uniform
+    background or two for a nice graded look. One click on the colour enables you
+    to modify it and the configure button enables you to access the grading options.
+    On the other hand, if you would like an image in the background, simply choose
+    one from the pull-down wallpaper menu. If you cannot find any that you like, choose
+    one of your by clicking on Browse (any JPEG can be used). If you regularly modify
+    the look of your desktop, you will certainly hope the menu is easily accessible.
+    For this, check the option Insert in the panel. An icon is inserted on the left
+    of the panel; simply click on it to access this menu. If you really like to change
+    it often, check the option random.
+
+
+    In the Border menu, you can choose to activate the borders of each desktop. This
+    means that if you move to the left of'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# 4.6. CUSTOMIZING THE DESKTOP 33
+
+
+    the desktop (for example) and you continue to go left, the desktop will appear
+    to follow you. You can therefore move a window from one desktop to another in
+    this way. The magic borders delimit an attraction zone where the window will be
+    stuck to the border or to the nearest window. For example, set the attraction
+    to 40 pixels. Take a window and move it towards a border. In one move, you will
+    see that it becomes stuck to the border: you have entered the attraction zone.
+
+
+    The Color menu enables you to choose this aspect of the bars. Certain choices
+    have been preconfigured.
+
+
+    The Font menu works on the same principle by enabling you to modify the fonts
+    used.
+
+
+    The desktop has an imaginary grid on which the icons are positioned. In the Icon
+    menu, you can modify the size of this grid to make the icons more or less spaced
+    out. In addition, you can check the Transparent text for desktop icons option
+    to avoid the icons name not being displayed in a background which is different
+    to that of the desktop.
+
+
+    To set up the screen saver, go to corresponding menu. It is possible to demand
+    a password every time the screen saver is displayed. Do not modify the Priority
+    zone which should remain on Elevated!
+
+
+    Finally, go to the Style menu to give a MacOS style to KDE.
+
+
+    # Information menu
+
+
+    The Information menu offers you a simple and efficient way of finding information
+    on your computer (IRQ, DMA, ...). Amongst the most interesting information is
+    State of Samba'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# CHAPTER 4. DISCOVER KDE
+
+
+    if you have Samba installed on your computer and X Server which reminds you of
+    the set up of your display.
+
+
+    # The Keys menu
+
+
+    The Global Shortcut and Standard Shortcut menus enable you to modify the keyboard
+    shortcuts for the elements of the desktop and for the KDE menus (notably KFM menus)
+    respectively.
+
+
+    # The Window menu
+
+
+    The Advanced menu will enable you to define the behaviour of the standard keyboard
+    shortcuts which are Ctrl+Tab and Alt+Tab. We advise that you leave the Capture
+    right mouse button option ticked for correct functionning of non-KDE applications.
+    The filters have a limited use and are furthermore complex because you need to
+    know well how the X server are part of a class (for example, the terminal is part
+    of the XTerm class). The filters enable you to modify the aspect of windows according
+    to their class or title. To add a filter, select an action in the pull-down menu,
+    type the title or class of the window then click on + add it to the list.
+
+
+    The Buttons menu enables you to customize the position of buttons on windows.
+    You can modify their location so that, for example, you don''t close a window
+    when you are trying to enlarge it (by default, these two buttons are next to each
+    other).
+
+
+    > 1 Samba is a program which allows your computer to behave like a server for
+    Microsoft clients.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# 4.6. CUSTOMIZING THE DESKTOP 35
+
+
+    To specify the behaviour of the mouse with respect to windows, go to the Mouse
+    menu. You can control a number of important parameters. For example: open two
+    windows on the same desktop and cover one with the other. Suppose that the active
+    option-middle button contains Place beneath. Now click on the task bar of the
+    title of the active window with the right mouse button: this one now moves behind
+    the other! You can thus precisely configure your mouse to gain in efficiency.
+
+
+    The Property menu is one of the most interesting. You can choose if you would
+    like to see the contents of a window when you resize or move it, or not. But most
+    importantly, you can define a window placement and focus management policy. The
+    window placement management menu has five options of which the aim is to enable
+    you to choose how the new window will be placed on the desktop. If you choose
+    Intelligent, a new window will be placed on the desktop in such a way that it
+    overlaps other windows as little as possible. Cascade places the windows each
+    shifted from the others. The Manual mode displays a cursor; click to position
+    the window. The Interactive option is a cross between Intelligent and Manual:
+    if the new window does not cover the others "too much" (the value of overlap allowed)
+    enables you to define what you consider "too much!), it will be placed automatically;
+    otherwise, a cursor appears.
+
+
+    The choice of focus is important, as this defines what action is produced when
+    the mouse passes over a window behind another. There are 4 possible choices
+
+
+    # Click to have focus
+
+
+    Click on the window to make it active and move it to the foreground.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# CHAPTER 4. DISCOVER KDE
+
+
+    # The focus follows the mouse
+
+
+    The active window is the window in which the cursor can be found, but it stays
+    underneath
+
+
+    # The classic focus follows the mouse
+
+
+    Same behaviour as previous the Alt+Tab combination allows you to pass from window
+    to another.
+
+
+    # Classic focus released
+
+
+    Idem, but if the cursor leaves the window, the window remains active whilst the
+    cursor is not in another window.
+
+
+    Finally, the Title bar menu enables you to choose how the title bar will be displayed
+    and what happens when it is double-clicked.
+
+
+    # KFM: setting up KFM
+
+
+    KFM can be configured via the Option menu of the file manager. You will find the
+    option of changing the font or of choosing the colour of links. An interesting
+    option is file structure view following browsing, which enables you to maintain
+    coherence between the left and right parts of KFM (in file structure mode).
+
+
+    # 4.7 Advanced use of KDE
+
+
+    # KFM
+
+
+    # MIME Types and Applications
+
+
+    KFM is based on the Internet standards for handling file types. The principle
+    of MIME is to associate a type, indi-'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# 4.7. ADVANCED USE OF KDE
+
+
+    cated primarily by the file extension(s) of corresponding files, to an application.
+    In this way, you can read a file by opening the corresponding program with one
+    click! Certain types are predefined but you can modify them or add new ones. To
+    do this, go to Edition/MIME Type. They are ordered thematically.
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_52_0.png)
+
+
+    For example, let''s take the creation of a new type. By default, no MIME type
+    corresponds to files created by KLyX.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# 38 CHAPTER 4. DISCOVER KDE
+
+
+    The files are therefore opened with the text editor, which is far from ideal.
+    To remedy this, we shall create a MIME type and associate it to KLIXX². Go to
+    the Text category. With the right mouse button, click on a zone without text,
+    choose new, then MIME Type. Give it a name without modifying the extension .kdelnk
+    (for example: x-klyx.kdelnk). An error message indicates that no parameters have
+    been specified. Click on the file you have just created with the right mouse button
+    and open the Properties menu. Go to the Link option. The Filters option indicates
+    the relevant file extensions. You can put several, separated by semi-colons (warning:
+    you should always finish with a semi-colon). Type *.lyx; The MIME type is text/x-klyx
+    and you can write "KlyX Document" for example in the Comment box. The Applications
+    menu should by default contain <none>.
+
+
+    At this point, the type exists but no application has been set up to launch it.
+    Open Edit/Applications and click on Word Processing. You should see klyx.kdelnk
+    appear³. Click with the right mouse button and make a list of the file properties
+    appear. We are interested in what can be found under the Applications tab. At
+    the bottom, you will find two important options: on the left is indicated all
+    the MIME types handled by the application and on the left, those available. Find
+    the type text/x-klyx on the left and then click on the arrow ←: the type will
+    appear on the right. KlyX will now handle the files that have the extension *.lyx!
+
+
+    > ²This example assumes that you have installed KlyXX!
+
+
+    > ³If this is not the case, click on the KappFinder option on the desktop and
+    restart.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# 4.7. ADVANCED USE OF KDE
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_54_0.png)
+
+
+    # Management of bookmarks
+
+
+    KFM provides a simple environment for managing your bookmarks. These bookmarks
+    could be either local files or Internet addresses. To add the address of the current
+    page to the bookmark menu, go to the Bookmarks menu then choose Add bookmark.
+
+
+    In KFM, a bookmark is just a file in the directory /home/your_login/.kde/share/apps/kfm/bookmarks
+    (which is the'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# CHAPTER 4. DISCOVER KDE
+
+
+    menu that you can access via the Bookmarks/Modify bookmarks menu) which you can
+    edit as a normal file.
+
+
+    To order bookmarks, simply create a subdirectory in the /home/your_login/.kde/share/apps/kfm/bookmarks
+    directory,
+
+    then move files into this directory.
+
+
+    # Configure the browser
+
+
+    The Options/Configure menu of the KFM browser enables you to configure certain
+    points specific to the Internet. You can indicate the address of a proxy server
+    under the first tab. We advise that you don''t modify the second which should
+    be correct for the majority of sites. The user agent defines the string which
+    will be sent by the browser when a web site requires an identifier. By default,
+    KFM sends "Konqueror" but you can modify this. Type the address of the web on
+    which you would like to carry out the change, enter a new identifier (for example,
+    "Mozilla") to change from KFM to Netscape Navigator), then click Add. Except for
+    particular reasons, you shouldn''t need to change the default. The Cookies tab
+    enables you to define a policy for the acceptance of cookies by default and according
+    to domains.
+
+
+    # Browse the Web with KFM
+
+
+    # Principle
+
+
+    KFM is an Internet browser which allows you to use the majority of Internet services
+    (FTP, Web, ...). It supports Javascript and the latest versions of the HTML langauge.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# 4.7. ADVANCED USE OF KDE
+
+
+    # Viewing a Web page, downloading a file
+
+
+    To view a web page, just type the of the page in the bar of KFM!
+
+
+    In the same way, you can access the MandrakeSoft FTP site by typing: ftp://ftp.linux-andraandrake.com.
+    By default, KFM makes an anonymous connection to the site. If you have a valid
+    account on the FTP site, you can use your login by typing and address of the form:
+    ftp://username@ftp.domaine.extension. KFM will ask you for your password.
+
+
+    # Launching programs on start-up
+
+
+    There is a universal way to start programs on start-up: modify the file ~/.bash_profile
+    and ~/.xinitrc. Luckily, under KDE, you can just place a link to the program that
+    you would like to launch in the StartUp directory which you will see on the desktop.
+
+
+    # Mount the disk drive or CD-ROM drive
+
+
+    There exist, on the desktop, two shortcuts, one to the disk drive and one to the
+    CD-ROM drive.
+
+
+    Usually, in order to be able to access the information on a disk, formatted in
+    ext2 format, the standard file format for Linux, or on a CD-ROM, you will have
+    to mount the appropriate drive.
+
+
+    If the disk is in DOS format, use mtools. Type man mtools for more details on
+    this subject. The best known DOS commands are preceded by the letter m. In a few
+    words, you should type mdir a: to display the contents of the disk. Some relevant
+    commands are: mdir, mformat, mcopy, mdel.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'To mount a disk (or a CD-ROM), type the command mount /mnt/floppy (or mount
+    /mnt/cdrom). This is fairly cumbersome if, as is often the case, you change the
+    disk or CD-ROM often. In effect, if the drive is not unmounted, you cannot remove
+    the CD-ROM.
+
+
+    In Linux-Mandrake, by default, the two shortcuts make life a lot easier. With
+    a single click, you mount the disk or CD-ROM. A small green square will appear
+    on the corresponding icon, serving to remind you that the drive is mounted. To
+    unmount a drive, click with the right mouse button and choose unmount. It''s as
+    simple as that!'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Chapter 5
+
+
+    # The KDE programs
+
+
+    # 5.1 Text Editors
+
+
+    KDE is supplied with 2 text editors as standard: kedit and kwrite. You will find
+    them under Applications in the K Menu.
+
+
+    kedit is a small text editor that allows you to type in a simple way short texts
+    or to edit configuration files. It is possible to edit a message directly on an
+    FTP server or on the Web. Simply indicate the Internet site and the file name
+    at the prompt Placement of the Open menu (for example: ftp://ftp.linux-mandrake.com/Welcome.msg).
+
+
+    kwrite is an editor which is very similar to the previous one, but is more powerful.
+    In particular it allows you to modify the colors used by the text according to
+    the document type. For example, open the document /.bash_profile. It appears in
+    a uniform style. In the Options menu, choose Activate highlighting then Bash (the
+    file .bash_profile is written in Bourne-shell). The style of the text is modified
+    instantly:'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'comments are in italics and functions are displayed in bold. There are also
+    various other interesting modes as HTML or C. There is another interesting function
+    for when you edit long files which gives you the option of placing markers on
+    certain lines of the file. For this, choose *Add in the Markers* menu. Although
+    it doesn''t offer as many features as Emacs, `write` could be very useful to you;
+    therefore do not hesitate to use it!
+
+
+    # 5.2 Image editing programs
+
+
+    KDE is supplied with several graphics utilities which complement those that you
+    will find elsewhere in the *Linux-Man-drake* distribution.
+
+
+    The screen capture utility, called KSnapShot, allows you to make... screen captures!
+    It enables you to make a copy of the whole screen or only the window where the
+    cursor is.
+
+
+    The icon editor will enable you to create your own icons if you cannot find the
+    icon you would like in the icon set supplied with KDE. The program appears as
+    a classic drawing tool. The background is a grid. In effect, an icon is generally
+    a drawing of which the size is strictly defined (32×32 pixels). The grid is there
+    to help you to keep to this size.
+
+
+    The Paint program is a drawing program which is simpler than anything else. Let
+    free your imagination!
+
+
+    # 5.3 Use the Internet!
+
+
+    Linux was created on the Internet, as was *KDE*. It therefore contains the tools
+    necessary to connect to the world wide web. In the *Internet* menu, you will find
+    an e-mail viewer, a news'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# 5.3. USE THE INTERNET!
+
+
+    viewer, a dialler to connect yourself and utilities for other Internet services
+    (IRC, telnet, archie).
+
+
+    Use of the kppp dialler
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_60_0.png)
+
+
+    Before connecting to the Internet, you have to set up your'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'connection1. Launch the dialer then choose Configuration2. Click on the first
+    tab New. Give a name to your connection, then fill in the telephone number. You
+    can check the Save password option if you do not want to have to type the password
+    every time. Do not modify anything else and move to the IP tab, where in general
+    you don''t have to modify the default configuration. In the Domain section of
+    the DNS tab, enter the name of your ISP (for example, aol.com). Enter the IP address
+    or addresses of the name server below and click on Add. If you would like to take
+    advantage of the bill management feature Kppp offers, click on the Billing tab
+    and select your country. To exit, click on OK.
+
+
+    nIn the Peripheral window, you can set up your modem. If it is an external modem,
+    choose /dev/cuax (where x represents serial port0 in the pull down menu). For
+    example, if your modem is linked to COM1, choose /dev/cua0. If, on the other hand,
+    your modem is an internal modem, opt for /dev/tty10. Do not alter the other parameters.
+    After clicking on the modem tab, the windows under the Modem and PPP tabs can
+    select Interrogate modem to verify that it has been set up correctly.
+
+
+    The Modem and PPP tabs normally need not to be modified.
+
+
+    The Graph tab allows you to view the input and output rates for the modem when
+    remains is for you to surf the web!
+
+
+    > 1 All of this supposes that you have an account with an Internet Service Provider
+    and a modem! In addition, your modem must not be one that designed for Microsoft
+    Windows ("winmodem”). If this is the case, it will never work under Linux.
+
+
+    > 2 We shall give details of how to set up an account with a classic Internet
+    service provider (ISP). If you have any problems, consult your service provider
+    for more information.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# 5.4. MANAGE YOU SYSTEM
+
+
+    # The mail viewer, Kmail
+
+
+    Kmail is a high-performance, easy-to-use mail viewer. When you first launch it,
+    a window will be opened to allow you to enter various parameters 3 of your mail
+    account: name, electronic address, signature files. The Network tab allows you
+    to choose the type of connection that you use to send and receive mail. For starters,
+    Sendmail4 is not advised. Click on SMTP and indicate the address of your mail
+    server. You will need to set up an in-box by clicking on Add. If you use Sendmail,
+    you will need a local box; otherwise choose a POP3 box. In the latter case, you
+    will simply need to fill in the details given to you by your ISP. The most important
+    part of the setting up process is now finished. The remaining tabs deal with the
+    ergonomics of your mail viewer.
+
+
+    Kmail has all the features of a modern mail viewer: address book, filters, joint
+    files, etc ... . Simple to use, it allows you to discover the huge benefits of
+    e-mail exchange!
+
+
+    # 5.4 Manage you system
+
+
+    Even if you are not a computer administrator by profession, it is interesting
+    to know how to do some basic operations. Under Linux-Mandrake, certain operations
+    are accessible via the System menu.
+
+
+    > ³In case of doubt, consult your ISP.
+
+
+    > ⁴Sendmail is useful for important sites, handling thousands of messages every
+    day. Sendmail is primarily known for its file configuration which is incredibly
+    complex!'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# 48 CHAPTER 5. THE KDE PROGRAMS\n\n```\nExter Editor Digraph Kwrite Abice\n\
+    Exter Editor Digraph Kwrite Abice\n\n&lt;img src=\"/home/user/images/image.png\"\
+    &gt;\n&lt;body&gt;\n  <div class=\"collapsible-collapsing\">\n    <span style=\"\
+    color:red\">attribute</span>:color\n    &<span style=\"color:red\">value</span>:\n\
+    \      <span style=\"color:red\">text</span>:Mandrake is&lt;a href=\"http://www.mandrake.com\"\
+    &gt;&gt;\n      Mandrake is a new innovative Linux Distribution. It finally integrates\
+    \ the innovative and leading\ngraphical user\ninterface.\n    <span style=\"color:red\"\
+    >attribute</span>:distribution\n    &<span style=\"color:red\">value</span>:Mandrake\
+    \ linux distribution is chooseable-friendly-color-rich. This distribution is also\
+    \ color-rich.\n  </div>\n&lt;/body&gt;\n\n  <span style=\"color:red\">attribute</span>:date\n\
+    \  &<span style=\"color:red\">value</span>:September 22 1999 - Which is the best\
+    \ distribution? http://www.example.com/\n\n  <span style=\"color:red\">attribute</span>:comment\n\
+    \  &<span style=\"color:red\">value</span>:September 22 1999 - Mandrake offers\
+    \ numerous projects/features\n  to build/customize for your own installation configuration\
+    \ &lt;a href=\"/docs/fonts\"&gt;W-wise Mandrake wise the\n The of the Letha\n\n\
+    \  <span style=\"color:red\">attribute</span>:date\n  &<span style=\"color:red\"\
+    >value</span>:\n\n  <span style=\"color:red\">attribute</span>:comment\n  &<span\
+    \ style=\"color:red\">value</span>:September 22 1999 - Thanks to Mandrake for\
+    \ being the W-wise. Daily newspaper\n\n  <span style=\"color:red\">attribute</span>:comment\n\
+    \  &<span style=\"color:red\">value</span>:Thanks to Mandrake for being the W-wise.\
+    \ GL linux mandrake salt on linux mandrake\n  <span style=\"color:red\">attribute</span>:comment\n\
+    \  &<span style=\"color:red\">value</span>:The Linux Edition is #2 at Linux Mandrake\
+    \ TP40 in January-February-Narcisse\n  <span style=\"color:red\">attribute</span>:comment\n\
+    \  &<span style=\"color:red\">value</span>:September 22 1999 - Mandrake distribution.\
+    \ Process. Prose. Lines 1-1\n```\n\n# Manipulate programs: kpackage\n\nThis program,\
+    \ the icon for which you will find on the desktop, allows you to manage the programs\
+    \ which are installed on your computer. Remember that, while all users have the\
+    \ right to see list of installed programs, only the superuser (root) can install\
+    \ or uninstall programs. You can manage local programs (on your computer) or also\
+    \ on an FTP site. KPackage allows to install files of the RPM format (Red-Hat\
+    \ Package Manager, the original Linux-Mandrake format-) and of the DEB format\
+    \ from the Debian distribution. However, it is strongly advised not to install\
+    \ DEB packages!\n\nKPackage is made up of two Windows: on the left is the list\
+    \ of packages, ordered thematically, and on the right is displayed information\
+    \ on the selected package. The List of files tab allows you to view a list of\
+    \ files which comprise the package."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# 5.4. MANAGE YOU SYSTEM
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_64_0.png)
+
+
+    To uninstall a program, it is suffice to select it choose Uninstall then to confirm.
+    You can select several to uninstall a number at the same time. To do this, you
+    must activate multiple selection mode, which you can find in the Packages menu.
+
+
+    There are two methods for installing a program. The first consists of simply clicking
+    the program that you would like to install from the KFM file manager. The KPackage
+    installation window will appear and you should then click on Install. The second
+    method is to launch the KPackage program. Go to the Options menu and choose Install
+    non-installed RPM packages. You can indicate several different places, notably
+    FTP sites. If you install programs from the Linux-Mandra CD-ROM, type in /mnt/cdrom/Mandra/RPM
+    then tick the option Used. Exit the dialogue box and choose Reload in the File
+    menu. The installed packages are preceded by the letter N. You can then easily
+    install new packages!'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# 50 CHAPTER 5. THE KDE PROGRAMS
+
+
+    The Option menu allows you to select the view that you would like (all programs,
+    only those installed or only for those not installed). To speed up the search
+    for information on packages, KPackage uses a cache. It is possible to deactivate
+    it.
+
+
+    Thanks to KPackage, you have the use of simple and efficient tool for managing
+    your Linux-Mandandra system.
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_65_0.png)
+
+
+    # The processes: KPM and KDE TaskManager
+
+
+    KDE TaskManager, which you will find in the System menu, allows you to see a list
+    of the processes that are running. You can easily kill a process (kill task) or
+    see the tree structure of processes running.
+
+
+    Kpm, which can be found in the Utilities menu, gives you the same information
+    but in a form that is a little different.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# 5.4. MANAGE YOU SYSTEM
+
+
+    You can therefore choose the one that you find to your liking!
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_66_0.png)
+
+
+    # Disk space: kddfree
+
+
+    KDFree displays the percentage of space occupied on each drive that has mounted.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 52 CHAPTER 5. THE KDE PROGRAMS
+
+
+    # Runlevels: ksysv
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_67_0.png)
+
+
+    The SysV Init editor is a program that allows you to choose the daemons which
+    are launched in the background. You will need to be the superuser (root) to be
+    able to use it. It is in the form of two series of services. On the left, you
+    will see a list of installed services. On the right, you have, at the top, the
+    services that have been started and below those which have stopped, for each runlevel.
+    For example, at level 6 (computer reboot), all the services are stopped with the
+    exception of reboot. The interesting runlevels are 3 and 5 (the default level)
+    and the entirely graphical level, respectively). Suppose that you do not want
+    the gpm service to be launched when you are at level 5. You will just need to
+    pick it up with the mouse and drag it to the *Stop* zone. This tool is very easy
+    to use but pay attention to what you do otherwise you may have booting problems!'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Character font management
+
+
+    The character font manager is a tool which enables you to manage the fonts which
+    are installed on your system.
+
+
+    # Management of print files
+
+
+    If you own a printer (either local or on the network), you can handle the print
+    queue using the *Print file* program. When you launch it, you will see a list
+    of items in the queue. To delete an item, select it and then click on *Remove*.
+    You can also move an urgent item "to the front of the queue" by choosing *To the
+    front*.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Chapter 6
+
+
+    # GNOME: the GNOME Network Object Model Environment
+
+
+    # 6.1 Introduction
+
+
+    GNOME is a project initialized by Miguel DE ICAZA, with the support of the GNU
+    project, which made of GNOME its desktop environment. Its aim is similar to that
+    of the KDE project: to create a full graphical environment and define a series
+    of driving lines that other applications can follow in order to be "GNOME compatible".
+
+
+    GNOME is much more recent than KDE, but its development was much quicker. It is
+    already an environment rich in functionality and superior to KDE in certain areas,
+    but it lacks maturity and above all compatible applications.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# 6.2 Presentation of the environment
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_71_0.png)
+
+
+    Unlike KDE, GNOME does not come with its own window-dow manager. It can be any
+    window manager, but GNOME defines also a series of conditions which state that
+    the window manager must be "compatible". The first window manager to adopt this
+    compatibility is Enlightenment, and that is the manager that has been used for
+    the screen capture.
+
+
+    In the top right corner and at the bottom of the screen are two panels. Unlike
+    the KDE panel which is unique, a GNOME environment may contain as many panels
+    as you would like. In these panels you can choose two different things: applets
+    and launchers.
+
+
+    Launchers are characterized by the fact that they are put'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# 6.2. PRESENTATION OF THE ENVIRONMENT 57
+
+
+    in position with the help of pixmaps. A launcher, as the name suggests, launches
+    applications. There are three particular types of launchers. You may have two
+    of them at the far lefthand side of the lower panel: the main menu (the footstep
+    mounted on an arrow) and a button for closing the session (immediately on the
+    right). The third type of launcher is the drawer: it acts as a launcher which
+    "contains" a panel which may itself contain other launchers, drawers or applets.
+    Applets are X applications having the option of being completely integrated into
+    the GNOME panels. From top to bottom then left to right you may see:
+
+
+    +   - three monitors: load of CPU, load of swap, load of memory;
+
+    - the GNOME pager (will only work with compatible windows);
+
+    - the clock.
+
+
+    There are two different types of panels: lateral panels and corner panels. Lateral
+    panels occupy one full side of the screen, however many launchers and applets
+    you may have (lower panel). Corner panels occupy no space than is needed for the
+    launchers and applets (top right panel). On the edge of these panels can be found
+    two pointed buttons: they serve to mask the panel from one side to the other.
+
+
+    The icons visible on the base window (the "desktop") are those of the GNOME file
+    manager, gmc. It is clearly less evolved that its KDE equivalent, which is kfm
+    (it cannot display HTML files-although it, like kfm, display the contents of an
+    FTP directory). You can see a gmc window in the top left corner. The window which
+    can be found beneath'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'is that of the GNOME help browser. In the same way as KDE help, the GNOME help
+    browser is capable of showing manual pages or info pages as well as HTML pages.
+    Hidden behind these two windows you can find a GNOME terminal emulator which demonstrates
+    pseudo-transparency.
+
+
+    # 6.3 Drag’n’Drop
+
+
+    GNOME implements a Drag''n''Drop protocol which is different to that of KDE, so
+    Drag''n''Drop will not between a KDE application and a GNOME application. On the
+    other hand, it will work with all Motif applications (and therefore Netscape!)
+    and all applications which use GTK+, 1.1.14 or higher.
+
+
+    You can try for example, to move a gmc image into the application Netscape: Netscape
+    effectively opens the image. In the same way, you can take a address running under
+    Netscape (the green symbol just on the left of "Location: " and "drop" onto the
+    desktop: an icon referencing the will therefore be created at the point at which
+    you go with the mouse.
+
+
+    To illustrate the opportunities of Drag''n''Drop with applications using GTK+,
+    you can for example try the program x11amp v0.9-alpha: launch x11amp, "drag" an
+    mp3 file on top and the file will be played. In the same way, you can make a playlist
+    appear and drag several mp3 files into it: the path of all files will be found
+    in the playlist.
+
+
+    As for KDE, with kfm you can also move files from gmc onto the desktop. But GNOME
+    offers much more. You can copy menu items onto the desktop: instead of releasing
+    the button on the program you would like to execute, keep the button pressed and
+    drag the menu item onto the desktop:'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# 6.3. DRAG''N''DROP
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_74_0.png)
+
+
+    A + sign will appear: this means that the item may be copied here. Release the
+    button:'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_75_0.png)
+
+
+    Now drag this same menu item that you have just copied onto the desktop into one
+    of the panels: if it is a file of a suitable type, a launcher is created on the
+    panel:'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# 6.3. DRAG''N''DROP
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_76_0.png)
+
+
+    You can also shortcut the passage by the desktop and directly drag a menu item
+    onto a panel: the launcher is then created in the same way.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# 6.4 Launchers\n\nYou can also add a launcher either directly on the desktop\
+    \ (right button click $\rightarrow$New$\rightarrow$launcher). The dialogue for\
+    \ the addition of a launcher is given in the following way:\n\n![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_77_0.png)\n\
+    \nThe name of the launcher will be the name of the file created without the extension.\
+    \ The comment is the text which appears in the help bubble when the mouse pointer\
+    \ lingers over the top of the launcher. Finally, the command is that which one\
+    \ must type in the terminal to achieve the same result. In this case, the launcher\
+    \ will be a terminal where the top program program runs.\n\nIt should be noticed\
+    \ that GNOME uses Imlib, and therefore the icon associated with be of almost any\
+    \ known format. Also note that ticking the *Launch in a terminal* option for an\
+    \ X application is not as pointless as that: the standard output channel and the\
+    \ standard error channel are both redirected to"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# 6.5 MORE ABOUT PANELS
+
+
+    the terminal and it is in consequence easier, if not to debug the program, to
+    capture error messages emitted.
+
+
+    A right button click on the launcher will give you the opportunity of editing
+    its properties, of moving it along the panel or even into another panel, or to
+    remove it.
+
+
+    # 6.5 More about panels
+
+
+    # Manipulation with the mouse
+
+
+    The action of the mouse in a given panel will differ according to whether you
+    press the right or the middle button. If you press the middle button and keep
+    it pressed, you can move it around the desktop at will. If you press the right
+    button, you will have access to the global panel configuration parameters, as
+    well as being able to add a launcher or an applet.
+
+
+    # Panel configuration parameters
+
+
+    The parameters common to all the panels apply to animation, the icons associated
+    with launchers, drawers, main menu and end of session and the modification of
+    other parameters: help bubbles, property menus, global behaviour. The individual
+    parameters for each panel apply to their position, their visibility and their
+    appearance.
+
+
+    # 6.6 In conclusion
+
+
+    Even if GNOME isn’t as successful as KDE at the moment, it has several redoubtable
+    benefits: you can use the panels without a compatible window manager (and therefore
+    customize your environment a little more), and its presentation'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'is more enticing (although the corporate side of KDE appeals to certain people).
+    But the lack of dedicated application is cruelly crippling.
+
+
+    Both environments need a lot of memory (if you are not convinced, type M in a
+    top...) and you should avoid running them on less powerful configurations. If
+    your machine is powerful enough, the choice is yours!'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# Chapter 7
+
+
+    # Introduction to Linux
+
+
+    # 7.1 Starting up and shutting down the system
+
+
+    Start-up
+
+
+    To boot Linux-Mandrake, you don’t have to do too much!
+
+    If another system is already present in your computer or if LILO is installed,
+    the latter will start, displaying:
+
+
+    LILO:
+
+
+    Hit the Tab key¹ to display a list of all possible systems. Logically, you should
+    type linux to start your Mandrake system, unless you have given it a different
+    name. If you hit the Enter key, the choice that was defined during installation
+    will be launched, the same happening if you wait for more than five seconds. These
+    parameters are modifiable under Linux in
+
+
+    > ¹It is situated next to the Q key.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'the file /etc/lilo.conf. Refer to the chapter on LILO if you want to modify
+    these parameters.
+
+
+    You have perhaps chosen to use loadlin.exe under DOS or Windows Linux. In this
+    case, it will be launched differently.
+
+
+    # The login procedure
+
+
+    Linux is a multi-user system. In order to access the system, you have to be identified:
+    this is called the login procedure.
+
+
+    During the installation, you created a super-user account called root. At the
+    login prompt, type root then type your password ("Password:"). We recommend that
+    you use the second account that you created during the installation procedure
+    (non-privileged user) for everyday use of the system.
+
+
+    You are now logged on the root account. This account owns all the rights for the
+    whole system. It is an administration account for the computer and not a work
+    account! You can therefore create again a user account, which will be your own.
+    For this,:
+
+
+    adduser login_name
+
+
+    where the login name will be a name that you have chosen (other than root). To
+    create a password for this account, type:
+
+
+    passwd login_name
+
+
+    Should you need all the rights on a machine in the middle of a non-privileged
+    session, use the su command which allows you to access a root command line in
+    a non-privileged session (of course, you have to enter the root password). You
+    can also'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# 7.1. STARTING UP AND SHUTTING DOWN 67
+
+
+    use the file manager in super-user mode: $K\rightarrowSystem\rightarrowFile Manager$
+    (in super-user mode).
+
+
+    You can also create a new user account for each person who may use your system
+    (your work colleagues, a member of your family...). Try to avoid giving them the
+    root password.
+
+
+    Unlike other operating systems which are much more expensive, Linux is a real
+    multi-user system: take advantage of it!
+
+
+    # Shutting down
+
+
+    There are many ways in which you can shut down your Linux system but that should
+    not include using your computer''s power switch! In fact, like many other operating
+    systems, Linux intensely uses cache memories to accelerate the input/output, mostly
+    with the disks (hard disk, floppy disk...). Thus you can never be sure that all
+    the data saved on your disk actually was written to the disk.
+
+
+    Therefore you need to quit your system properly. There are several ways of doing
+    this:
+
+
+    +   1. Just type /sbin/halt (or even halt) and wait for the message system halted
+    to turn your computer off.
+
+
+    +   2. A faster version of the previous solution consists to press the Ctrl+Alt+Del
+    keys simultaneously (as on DOS). Then, the system unmounts all the peripherals
+    properly. Wait for the computer to reinitialize and then cut off the power.
+
+
+    +   3. If you are using a KDM session, click on the button Stop and select Shutdown
+    the system or Reinitialize the system. As in both previous cases, wait for the
+    system'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'reinitialize. Note that you can also disactivate this method in the KDE Control
+    Centre (K menu).
+
+
+    What happens if you cut off the power or if there is a power cut? Linux will restart
+    and verify that all the disks that have been "unmounted" properly. This operation
+    is called fsck and can last last several minutes. Your system will then restart
+    properly.
+
+
+    # 7.2 Linux shells
+
+
+    Once connected to your computer, you will see a prompt with the $ $ symbol. The
+    program awaiting your instructions is the shell. Its role is to transmit your
+    commands to the Linux kernel.
+
+
+    Here is a brief description of the different shells available under Linux:
+
+
+    +   - bash this is the most common Linux shell. It creates a history of commands
+    typed and allows you to edit them.
+
+
+    +   - csh the C shell. It does not enable you to edit the command line.
+
+
+    +   - ksh the Korn shell. This is the best known shell on Unix systems.
+
+
+    +   - tcsh improved version of the C''shell. Also creates an editable history
+    of commands.
+
+
+    +   - sh the oldest...
+
+
+    +   - zsh ...the most modern.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# 7.3. USING THE BASH SHELL
+
+
+    By default, the shell used is the "Bash" (Bourne Again Shell). Simply type:
+
+
+    ```
+
+    echo $SHELL
+
+    ```
+
+
+    to find out which shell you are using.
+
+    Be aware that each shell has its own syntax. We advise you to use the Bash shell,
+    which is both simple and powerful.
+
+    Under Linux-Mandrake, the Bash shell is the default.
+
+    Later, we will use this shell in our examples.
+
+
+    # 7.3 Using the Bash shell
+
+
+    If the shell reminds you at first of the DOS system, everything possible has been
+    done to make the input of commands easy. Among the most useful keyboard shortcuts
+    are:
+
+
+    +   * Ctrl+A Go to the beginning of the line.
+
+    * Ctrl+U Clear the current line.
+
+    * Ctrl+C Stop the task which is running.
+
+
+    Use the semi-colon to type several commands on the same line. The up and down
+    arrows allow you to scroll through the command history. To reach a particular
+    command without having to go through the whole history, type:
+
+
+    ```
+
+    history
+
+    ```
+
+
+    A list of commands in the history is displayed with a number next to each command.
+    To execute a command, type:
+
+
+    ```
+
+    ! command_number
+
+    ```'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# CHAPTER 7. INTRODUCTION TO LINUX
+
+
+    Note that:
+
+
+    !!
+
+
+    allows you to re-execute the last command.
+
+    Under Linux, the program or command names are sometimes long. Luckily, bash supports
+    name completion, in other words after starting to type the name of a command,
+    hitting the Tab key allows you to complete the name of the command, program or
+    directory.
+
+    For example, imagine that you wish to use the decompression program bunzip2. Type:
+
+
+    bu
+
+
+    then press the Tab key.
+
+    Nothing happens because there are several possible ways of completing the command.
+    Press the Tab key again: bash gives you all the occurrences of names beginning
+    with bu. For example, you will have:
+
+
+    bu
+
+    buildhash builtin bunzip2
+
+
+    Type n (bunzip2) is the only name whose third letter is an n then hit the Tab
+    key. The shell completes the name and all that remains is to hit the Enter key!
+
+    All the commands that we describe here can be used in console mode or in a command
+    window in graphical mode (xterm).
+
+
+    > bunzip2, and its complement, gzip, are the most powerful compression/decompression
+    utilities for Unix. They achieve reductions in file size which are superior to
+    those of gzip. A "bzipped" archive has a suffix .bz2. A "gzipped" archive has
+    a name ending in .gz.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# 7.3. USING THE BASH SHELL
+
+
+    # The su command
+
+
+    It enables you to log on to the root account while you are in a user account.
+    When you type su, the shell asks for the password for root. Type it then hit the
+    Enter key: you are now in the root account. Type exit (or press Ctrl+D) to go
+    back to the previous account.
+
+
+    # The cd command
+
+
+    This command enables you to change directory (cd for change directory). It can
+    handle both absolute and relative paths. For example, let''s imagine that you
+    are in your personal directory and you want to go to the docs/ subdirectory. Just
+    type (relative path):
+
+
+    cd docs/
+
+
+    To go to the /usr/bin directory, type (absolute path):
+
+
+    cd /usr/bin/
+
+
+    Some of this command''s practical options are:
+
+
+    +   - cd .. enables you to go back to the parent directory (beware of the space
+    between cd and ..).
+
+
+    +   - cd - enables you to go back to the previous directory.
+
+
+    +   - cd or cd ~ leads you to your personal directory.'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# The ls command
+
+
+    ls (for list) gives you a list of files in the current directory. Two options
+    are generally used: -a to view hidden files and -l to look at long filenames.
+    You can add the name of a directory at the end of the ls command line. For example:
+
+
+    ```
+
+    ls -al /usr/X11R6/bin/
+
+    ```
+
+
+    Type:
+
+
+    ```
+
+    man ls
+
+    ```
+
+
+    to find out all the available options of the ls command.
+
+
+    # The rm command
+
+
+    This is used to delete a file.
+
+
+    > Warning: once the file is deleted, there is no way of getting it back!
+
+
+    Syntax:
+
+
+    ```
+
+    rm file_name
+
+    ```
+
+
+    This command accepts wildcards. The most frequent options are: -i which asks for
+    confirmation before deleting a file and -r to erase files from a directory recursively.
+
+
+    Example:
+
+
+    ```
+
+    rm -i ~/html/*.html
+
+    ```
+
+
+    erases all HTML files of the html/ subdirectory of your home directory.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# 7.3. USING THE BASH SHELL
+
+
+    # The mkdir and rmdir commands
+
+
+    The mkdir command enables you to create a directory, while the rmdir command deletes
+    it if it is empty.
+
+
+    Syntax:
+
+
+    ```
+
+    mkdir directory_name
+
+    rmdir directory_name
+
+    ```
+
+
+    The rmdir command is often replaced by rm -rf which enables you to delete a directory,
+    even if it is not empty. Use with care!
+
+
+    # The more/less commands
+
+
+    The more command enables you to read text page by page. It is very useful for
+    looking at a file on your screen without modifying it.
+
+
+    Type:
+
+
+    ```
+
+    more name_of_text_file
+
+    ```
+
+
+    Use q to quit.
+
+    The less command (of which the name was chosen in position to "more") performs
+    better, because it allows you to go back up the displayed list. Use the arrow
+    keys for this.
+
+
+    # The grep command
+
+
+    This command, which carries a large number of options, allows you to search for
+    a string of characters in a file.
+
+
+    Syntax:
+
+
+    ```
+
+    grep string file
+
+    ```'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# CHAPTER 7. INTRODUCTION TO LINUX
+
+
+    # The ps command
+
+
+    This command lists the running processes. The Command column gives the process''s
+    name and the PID column gives its number (this is the number you have to use to
+    kill a program via the kill command).
+
+
+    Syntax:
+
+
+    ps options
+
+
+    The u option gives you more information and ax enables you to recognize processes
+    that do not belong to you (such as those that are launched at the time of booting).
+
+
+    # The kill command
+
+
+    If a program does not respond anymore, use this command to kill it.
+
+
+    Syntax:
+
+
+    ```
+
+    kill PID_number
+
+    ```
+
+
+    In fact, the kill command sends a message to the program concerned, indicating
+    that it must kill itself. Sometimes, you have to use kill-9 when the program does
+    not respond anymore. The PID number is obtained with the ps command.
+
+
+    Example:
+
+
+    ```
+
+    kill -9 354
+
+    ```
+
+
+    # The tar command
+
+
+    The tar command allows you to create or edit a Unix archive. Therefore, the syntax
+    to include everything in a directory rep/ (and its subdirectories) is:'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# 7.4. USING THE LINUX MULTITASKING SYSTEM 75
+
+
+    ```
+
+    tar -c rep/ > rep.tar
+
+    ```
+
+
+    The archive obtained can then be compressed (with gzip bzip2). For example, by
+    typing:
+
+
+    ```
+
+    gzip rep.tar
+
+    ```
+
+
+    You can expand a tar archive by typing:
+
+
+    ```
+
+    tar -xvf archive.tar
+
+    ```
+
+
+    For our example:
+
+
+    ```
+
+    tar -xvf rep.tar
+
+    ```
+
+
+    or
+
+
+    ```
+
+    tar -xvfz rep.tar.gz
+
+    ```
+
+
+    (if the archive was compressed with gzip)
+
+    To find out all the options of the tar command (there are many!), type:
+
+
+    ```
+
+    man tar
+
+    ```
+
+
+    # 7.4 Using the Linux multitasking system
+
+
+    Linux is a multitasking system and you will certainly want to take advantage of
+    this (for example, to compile a program while you are surfing on the web). Two
+    methods enable you to take advantage of this system''s capacities.
+
+
+    The first method consists of launching the program in the background. To do this,
+    simply type after the name of the'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# CHAPTER 7. INTRODUCTION TO LINUX
+
+
+    program the symbol &. Then, the shell leaves you free to do something else. Note
+    that you have to be careful for some programs that are interactive: nothing will
+    happen if you launch them in the background. To bring a program that was launched
+    in the background back to the foreground, type:
+
+
+    ```
+
+    fg program_name
+
+    ```
+
+
+    The second method consists of launching several independent sessions. If you are
+    in graphics mode, just launch another Xterm or Terminal program (xterm, kvt...).
+    In console mode, press Alt and one of the keys between F1 and F6 simultaneously.
+    A new login box appears and you can log into a new session. This method also enables
+    you to work on another console if your console is no longer accessible and even
+    to kill a crashed program. This is why use of the computer''s reset button is
+    very rare under Linux!
+
+
+    Note that you can also launch genuine session consoles under X by pressing Ctrl+Alt+F1,
+    Ctrl+Alt+F2, etc. To return to X(without closing the session), press Ctrl+Alt+F7.
+
+
+    # 7.5 Output redirection
+
+
+    One often wants to save the output of a program in order to process it. This is
+    called output redirection.
+
+
+    For example, if you want to record the output of the ls
+
+    bin command in a file lsbin, type:
+
+
+    ```
+
+    ls /bin > ~/lsbin
+
+    ```
+
+
+    If the lsbin file already exists, its contents will be erased. To avoid this,
+    type >> instead of > (this permits you to append the lsbin stream to the end of
+    the lsbin file).'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# 7.6. UNDERSTANDING PROCESSES
+
+
+    Generally, the contents of a file or a directory scroll too rapidly on your screen
+    and you don''t have enough time to read them. A solution to this consists of saving
+    the output of a command and then using the utility more to read it (more³ is a
+    viewer that displays the text page by page). So, you should type:
+
+
+    ```
+
+    ls /bin > ~/lsbin
+
+    more ~/lsbin
+
+    ```
+
+
+    Linux proposes a more "elegant" method. For this, we will use pipes. With this
+    method, the output of one command is sent to the input of another command. This
+    gives:
+
+
+    ```
+
+    ls /bin | more
+
+    ```
+
+
+    ```
+
+    ls /bin | less
+
+    ```
+
+
+    Here, the output of the ls command is sent to more (or less) to be treated.
+
+
+    You can combine different pipes to carry out complex procedures.
+
+
+    # 7.6 Understanding processes
+
+
+    A process is an independant program. For example, if you are using Netscape Navigator,
+    a Netscape process is launched. This notion of process is crucial in Unix systems.
+
+
+    The first process that is launched is init. Amongst other things, its role is
+    to mount the file system and to launch getty
+
+
+    > ³and less.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: 'on each console (getty is the process that handles the login procedure).
+
+
+    The ps command enables you to view the processes that are running by the user
+    who launched them.'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Chapter 8
+
+
+    # System administration
+
+
+    # 8.1 The User and Groups
+
+
+    Unlike other operating systems, Linux manages problems of security and notably
+    user groups.
+
+
+    In Linux, there are three types of users: yourself, the group to which you belong,
+    and other users. Each user of the machine has his own personal directory which
+    is a sub-directory of /home. For example, if your login name is fred, your personal
+    directory will be /home/fred (you will often see the abbreviation ~ to designate
+    your personal directory). This symbol is recognized by the bash shell. The only
+    exception is the root account, of which the directory is /root. This notion of
+    user directory allows you to protect your confidential files from being read by
+    other users (only the superuser can access all the personal directories).
+
+
+    However, you will certainly want to share documents with other users. That is
+    why Linux supports groups. A group is a set of users. A user belongs to one group
+    by default but'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    it is possible to belong to several groups. The administrator must organize these
+    groups using the relevant software. Often, groups are created by functions: one
+    group for the accountants service, one for developers, etc...
+
+
+    # 2.2 Managing users
+
+
+    # Creating an account
+
+
+    As you must never work under the root account, you should create at least one
+    user even if you are the only person on your machine.
+
+
+    We have seen the adduser command, but luckily there are graphical tools, notably
+    linuxconf, which we shall summarise here.
+
+
+    linuxconf is a very complete tool that allows you to handle Linux-Mandrake configuration
+    files. Thanks to this tool, the management of user accounts is very simple. As
+    the superuser, launch linuxconf. On the left are displayed the different modules
+    and on the right, the current module. Go to management of users then user accounts.
+    The list of current users is displayed. Choose add then fill in the various fields
+    (for the group, you can choose users, default groups for the current users). Confirm
+    and its finished!
+
+
+    # Special accounts
+
+
+    If you edit the file /etc/passwd (which contains a list of the passwords, encrypted)
+    or the file /etc/groups (where the different groups are indicated), you will notice
+    that there exist users who do not have true accounts, such as ftp or news. These
+    accounts, which are called special accounts, are used'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# 8.3. MANAGEMENT OF PROGRAMS (RPM) 81
+
+
+    by programs or daemons for carrying out their operations. They often need rights
+    that are superior to those of the normal user and it is so to avoid using the
+    root account that there exist special accounts.
+
+
+    It is more likely than not that you will never have to worry about these special
+    accounts.
+
+
+    # 8.3 Management of programs (RPM)
+
+
+    Linux-Mandrake uses the RPM standard, that is the "Red-Hat Package Manager", to
+    allow you to manage your programs easily. Thanks to RPM, you install and uninstall
+    programs with one movement of the hand! The real strength of RPM is its ability
+    to check for dependency between programs. Therefore, it will not allow you to
+    install a program if one of the libraries that it needs is absent.
+
+
+    For Intel processors and compatibles, program names are structured in the following
+    way:
+
+
+    ```
+
+    name.version.i386.rpm
+
+    ```
+
+
+    If it is a source file, you will find src in the name. Under Linux-Mandrake, there
+    are two methods for managing RPM packages: the command line and the Kpackage program.
+    Do not forget that only the root user has the right to install or uninstall programs!
+
+
+    # RPM on the command line
+
+
+    The RPM program is used with options to manage all your RPM programs. command
+    line syntax is:
+
+
+    ```
+
+    rpm -options program_name
+
+    ```'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    Let’s see the available options.
+
+
+    # Install a program
+
+
+    A program can be installed using the option -i. For example, to install the program
+    KLyX, type:
+
+
+    ```
+
+    rpm -ivh klyx-0.9a-f13.rpm
+
+    ```
+
+
+    Your program is installed and is ready for use immediately! The options v (verbal
+    mode) et h (progress) are optional and allow you to see the progress of the installation.
+
+
+    # Update a program
+
+
+    To update a program by installing a more recent version, you should use U instead
+    of i. Thus, all your configuration files will be saved.
+
+
+    # Uninstall a program
+
+
+    Should you wish to delete a program, use the option e, as in extract. Type:
+
+
+    ```
+
+    rpm -e program_name
+
+    ```
+
+
+    The program will thus be deleted immediately.
+
+
+    # Verify a program
+
+
+    Verification allows you to check if all the files of a program are present For
+    this, type:
+
+
+    ```
+
+    rpm -V program_name
+
+    ```'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# 8.3. MANAGEMENT OF PROGRAMS (RPM) 83
+
+
+    # Interrogate a program
+
+
+    It is often very useful to interrogate a program, for example, to know the list
+    of files which comprise the package. You will find in the response a description
+    of the package: you can therefore decide whether to install or uninstall it.
+
+
+    The option to use here is q in combination with one or several others. Use:
+
+
+    +   -qi to interrogate a program that is installed
+
+
+    +   -qip to interrogate a program that is not installed. It is also necessary
+    to specify the full path for the package
+
+
+    +   -ql for a list of the files contained in the package. Add p if the package
+    is not installed.
+
+
+    +   -qPR to know the files which are necessary to install the package
+
+
+    +   -qa to interrogate all packages
+
+
+    All the commands, except the last, are to type before the name of the package.
+
+
+    # Other options
+
+
+    There are a number of further options that you can find out about by consulting
+    the RPM man page. --force is fairly dangerous. Be careful if you use it.
+
+
+    # KPackage
+
+
+    KPackage is the graphical tool that allows you to manage programs. A precise description
+    of KPackage can be found in chapter 5.'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# 8.4 Installation procedure for Linux-Mandrake
+
+
+    This paragraph is dedicated to a the approach used by Linux-Mandrake when you
+    start the computer. You will find relevant information in the file /etc/inittab
+    especially.
+
+
+    # The boot
+
+
+    When you start up Linux, the kernel checks the configuration of the computer.
+    It displays various messages which you can receive using the command dmesg | less.
+    Then it shows the root file system, which is indispensable for the rest of the
+    procedure. Inability to mount this system leads to the famous message Kernel Panic
+    which stops the computer.
+
+
+    The first process to be launched is the init process. It launches, on start-up,
+    other processes and numerous verifications. It is notably this process which will
+    launch the mingetty programs on each console, that are used for the login programs
+    procedure. When the machine is stopped, init will take care of killing all the
+    processes that are running and de-mounting the file systems.
+
+
+    # Runlevels
+
+
+    A runlevel is a particular execution environment. Linux allows you to define several
+    different environments. There are 7 of them.
+
+
+    level 0 Shutdown of the computer.
+
+
+    level 1 Single user mode. Only to be used in particular cases.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# 8.4. LINUX-MANDRAKE INSTALLATION 85
+
+
+    level 2 Multi-user mode without sharing of directories through NFS.
+
+
+    level 3 Normal runlevel in console mode.
+
+
+    level 4 Not used.
+
+
+    level 5 Normal runlevel in graphical mode.
+
+
+    level 6 Computer reboot.
+
+
+    It is strongly advised not to set any other runlevel other than 3 or 5 as the
+    default. In all cases, never set the runlevel to 0 or 6: you will no longer be
+    able to use your computer!
+
+
+    # The file /etc/inittab
+
+
+    This file contains the list of tasks to accomplish according to the execution
+    level that you are in. The normal runlevel is either 3 (console mode) or 5 (graphical
+    mode). Description of the file /etc/inittab.
+
+
+    It appears in the following form (without the line numbers; the shape may vary
+    according to your configuration:
+
+
+    ```
+
+    01 # Default mode:
+
+    02 id:5:initdefault:
+
+    03 # System initialization
+
+    04 si::sysinit:/etc/rc.d/rc.sysinit
+
+    05 10:0:wait:/etc/rc.d/rc 0
+
+    06 11:1:wait:/etc/rc.d/rc 1
+
+    07 12:2:wait:/etc/rc.d/rc 2
+
+    08 13:3:wait:/etc/rc.d/rc 3
+
+    09 14:4:wait:/etc/rc.d/rc 4
+
+    10 15:5:wait:/etc/rc.d/rc 5
+
+    ```'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# 86 CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    ```
+
+    11 16:6:wait:/etc/rc.d/rc 6
+
+    12 # Trap CTRL-ALT-DELETE
+
+    13 ca::ctrlaltld:/sbin/shutdown -t3 -r now
+
+    14 # Run gettyys in standard runlevels
+
+    15 1:12345:respawn:/sbin/mingetty tty1
+
+    16 2:2345:respawn:/sbin/mingetty tty2
+
+    17 3:2345:respawn:/sbin/mingetty tty3
+
+    18 4:2345:respawn:/sbin/mingetty tty4
+
+    19 5:2345:respawn:/sbin/mingetty tty5
+
+    20 6:2345:respawn:/sbin/mingetty tty6
+
+    21 # Run xdm in runlevel 5
+
+    22 x:5:respawn:/opt/kde/bin/kdm -nodaemon
+
+    ```
+
+
+    The general form of each entry is:
+
+
+    ```
+
+    id:rstate:action:process
+
+    ```
+
+
+    +   - Id designates an identification number.
+
+    - Rstate is a sequence of runlevel numbers. If you are in the runlevel of one
+    of the numbers indicated, the line will be executed.
+
+    - Action indicates if the process should be launched once, every time it dies
+    (respawn), etc ... .
+
+    - Process designates the action to follow, often a script.
+
+
+    Line 2 designates the default runlevel of the system.
+
+
+    Warning: Linux-Mandrake now uses the program chkconfig to manage the runlevel.
+    See below the paragraph dedicated to this program.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# 8.4. LINUX-MANDRAKE INSTALLATION
+
+
+    Line 4 is particular. It launches the script rc.sysinit which has the role of
+    checking the integrity of the file systems, activating swap, etc ...
+
+
+    Lines 5 to 11 allow the launching of scripts that depend on the level of execution.
+    The script launched is /etc/rc.d/rc with the runlevel as a parameter
+
+
+    Line 13 indicates that if you press Ctrl+Alt+Del simultaneously, then the system
+    must restart immediately. This is a very dangerous option for a server machine.
+    You can disactivate the line by making it a comment.
+
+
+    Lines 15 to 20 indicate that for runlevels 2 to 5, the program mingetty must be
+    launched, which allows you to connect yourself. The respawn indicates that if
+    the process dies (for example the exit command), it must be relaunched.
+
+
+    Line 22 is used for runlevel 5 to offer you a graphical login procedure (the kdm
+    program).
+
+
+    It is not advised to modify the access to /etc/initab because you risk not being
+    able to restart your computer! When you are in such a case, use the boot disk.
+
+
+    # The scripts /etc/rc.d/
+
+
+    All the Linux-Mandrake installation scripts are contained in the directory /etc/rc.d/.
+    We will now describe the procedures executed.
+
+
+    /etc/rc.d/rc.sysinit
+
+
+    This is the first script to be executed. It is launched once on start-up. From
+    this script comes almost all the messages which you will see on booting.
+
+
+    This script starts by indicating the value of the PATH variable which defines
+    the path of access to programs. Then, the'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    program will search for the network configuration. If the network exists, it executes
+    the network script (/etc/sysconfig/network); otherwise, it indicates to the system
+    that there is no network and therefore the name of the machine will be localhost.
+
+
+    Then the swap partition is activated. The HOSTNAME variable is displayed on the
+    screen. If the NIS service is used, it is set up. The system proceeds to check
+    the partitions (fsck -V -a $fsoptions / command). What follows allows the management
+    of the start-up process if the partition is damaged. Finally, the management of
+    quotas is activated.
+
+
+    The script will configure your PNP cards. Then will launch all the programs which
+    you have in the form of modules. All the partitions are then mounted and verified.
+
+
+    Numerous files are deleted by the boot process (rm -f command) before the system
+    configures the computer time. The activation of serial ports is the next step.
+
+
+    The last part consists of instructions that are specific to Linux-Mandrake and
+    that are executed when you first start up.
+
+
+    ```
+
+    /etc/rc.d/rc
+
+    ```
+
+
+    The program rc is designed to make scripts easier to launch according to the runlevel.
+    This script is therefore quite short. It obtains the current runlevel in order
+    to launch the necessary scripts. If the runlevel is x, then all the scripts of
+    the directory /etc/rc.d/rcx.d are executed.'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# 5.4. LINUX-MANDRAKE INSTALLATION
+
+
+    /etc/rc.d/rcx.d/
+
+
+    The scripts of the directory rcx are executed according to the runlevels. The
+    contents of the rcx.d directories are very particular because these directories
+    contain links to the services that are usable on your computer (contained in /etc/rc.d/init.d).
+    If the name of the link begins with a K, the process is *Killed*;; otherwise,
+    it is *Start*.
+
+
+    We will take the example of the links of the directory rc0d. They are executed
+    when the machine is stopped. Therefore you can see that all the services are stopped,
+    except for the halt service.
+
+
+    The contents of these directories can be changed by using the program ksysv.
+
+
+    # /etc/rc.d/init.d/ and the management of services
+
+
+    This directory contains a list of the daemons which you can use on your computer.
+    This allows you to modify their behaviour on the fly, without having to restart
+    the computer. All daemons use the same syntax. Type the name of the daemon to
+    modify with an option that can be: **start to start** a daemon, **stop to stop**
+    it, **restart to restart** it, **status to see** its state, and **reload to reload**
+    it.
+
+
+    For example, type:
+
+
+    ```
+
+    /etc/rc.d/init.d/kerneld status
+
+    ```
+
+
+    and you will obtain something like: kerneld(pid40) is running...'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    # The program chkconfig
+
+
+    The chkconfig program is used to manage the services of the different runlevels.
+
+
+    There are five distinct functions:
+
+
+    +   - add new services,
+
+    - remove services,
+
+    - display information on the current configuration,
+
+    - change the configuration of the loading of services on start-up,
+
+    - check the start-up state of a particular service.
+
+
+    # The files .bashrc et .bash_profile
+
+
+    On connection, a shell, called the login shell, is attributed to you. The shell
+    is the command interpreter that executes the commands read on the standard input
+    (in the majority of cases, the keyboard) or from a file. The bash shell is the
+    most widespread.
+
+
+    The files /etc/profile and ~/.bash_profile serve to configure the work environment
+    and the files /etc/bashrc and ~/.bashrc serve to define functions and aliases.
+    The files /etc/profile and /etc/bashrc are the files which concern the global
+    configuration of your computer and are valid for all the users that use this shell.
+    The files which begin with a full stop are personal configuration files and apply
+    uniquely to you.
+
+
+    To configure an alias, for example, add a line of the type:
+
+
+    ```
+
+    alias ll=''ls -l''
+
+    ```'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF ''`
+
+
+    in your .bashrc file. In this way, you replace the ls -l command, which is fairly
+    complicated to type every time, with the ll command, which is shorter. To activate
+    the modifications type source "~/.bashrc" and validate with the Enter key, or
+    otherwise, the modifications will be activated when you next connect yourself.
+
+
+    Warning: do not choose names that could represent commands which already exist
+    in the Linux system.
+
+
+    To personalize .bash_profile, you should act similarly. For example, if you have
+    installed Blender in a directory, let''s say, /usr/local/blender/, you should
+    modify the file .bash_profile. Here is an example:
+
+
+    ```
+
+    PATH=$PATH:$HOME/bin
+
+    ENV=$HOME/.bashrc
+
+    USERNAME="fred"
+
+    BLENDERDIR=/usr/local/blender
+
+    (..)
+
+    export USERNAME ENV PATH BLENDERDIR
+
+    ```
+
+
+    Note that we have added a new variable, BLENDERDIR, and we have added the name
+    of this variable to the list of exported variables. In this way, it will take
+    effect in all the terminals used.
+
+
+    # 8.5 Using linuxconf
+
+
+    linuxconf is a configuration utility for which the philosophy is to bring together,
+    under the same interface, all the configuration of a Linux system. It may be that
+    you don''t find it to'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: 'your liking (in other words, no tab for the program you want to configure)
+    but this can be resolved: it is possible to extend linuxconf in a modular fashion,
+    and therefore create-or find-the module that you need.
+
+
+    In its current state of development, linuxconf can already do a lot of things,
+    and unless you are an experimented Unix user or administrator, you will certainly
+    find everything that you would like to configure, and more besides.
+
+
+    linuxconf is also independent of the environment you are using; there exists an
+    interface for console mode (text mode), an HTML interface and a graphical interface.
+    The latter is the one used here. All that will be said can be applied to the other
+    two interfaces.
+
+
+    The graphical interface looks like this. This document will only talk about the
+    configuration aspects which allow you to make your machine operational and quickly
+    functional, so that you can use and appreciate Linux-Mandrake system without too
+    much hassle :)'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF 93
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_108_0.png)'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Network
+
+
+    This package allows you to configure a TCP/IP network from scratch using ethernet
+    and modem (or other serial connection)
+
+
+    +   - Client tasks | Server tasks | Misc
+
+
+    +   - Basic host information
+
+
+    +   - Name server specification (DNS)
+
+
+    +   - Routing and gateways
+
+
+    +   - Host name search path
+
+
+    +   - Network Information System (NIS)
+
+
+    +   - IPX interface setup
+
+
+    +   - PPP/SLIP/PLIP'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF
+
+
+    The network is one of the fundamental points of the configuration of the whole
+    Unix system. Linux is not an exception to the rule. The manual pages for ifconfig
+    and for route dismiss it (and still dismiss it) with no more than the title (although
+    this shouldn''t stop you having a glance :)), and linuxconf has the big merit
+    of proposing a very well organized and clear interface. If you have a machine
+    which is totally isolated, you can skip this section.
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_110_0.png)'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# Basic configuration of the machine
+
+
+    This tab enables you to set up the machine name and the network interfaces linked
+    to the machine (Ethernet card in the majority of cases).
+
+
+    +   * Machine name:
+
+
+    If you have at least one network interface, the machine name will be the full
+    name (FQDN, Fully Qualified Domain Name) attributed to this network interface,
+    which you will have specified during installation. If you would like to change
+    the name, make sure that it is a valid name when associated with one of your interfaces.
+
+
+    +   * Configuration of the network adapter:
+
+
+    This is an example of the configuration of a Tulip type Ethernet card. If your
+    configuration was made using DHCP or BOOTP, you will not need to enter either
+    the IP address nor the name. If you chose a manual configuration, you should enter
+    the IP address associated to the interface as well as the corresponding name,
+    and finally an alias. If you use DNS (see the DNS section, later), the machine
+    name must match with your name server.
+
+
+    You should not enter a network mask unless you cannot work it out from your IP
+    address (in reference to its class). If it isn''t, you system administrator will
+    certainly be able to give you the network mask to specify.
+
+
+    The network interface to use depends on the type of your peripheral: choose ethn
+    for an Ethernet card, where n corresponds to the interface number (be careful
+    to avoid conflicts), arcn for an ARCnet peripheral, etc.'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF
+
+
+    You are allowed to control the parameters which are specific to this host and
+    related to its main connection to the local network
+
+
+    | Host name | Adaptor 1 | 2 | 3 | 4 |
+
+    |---|---|---|---|---||
+
+    | | Enabled | | | |
+
+    | Config mode | Manual | Dhcp | Bootp |
+
+    | Primary name + domain | rtfm.inet.org | | | |
+
+    | Aliases (opt) | rtfm | | | |
+
+    | IP address | 10.0.0.1 | | | |
+
+    | Netmask (opt) | 255.0.0.0 | | | |
+
+    | Net device | eth0 | | | |
+
+    | Kernel module | tulip | | | |
+
+    | I/O port (opt) | | | | |
+
+    | Irq (opt) | | | | |
+
+
+    The kernel module to use also depends on your peripheral. You will only need to
+    enter the options into the module if you have an ISA peripheral. PCI peripherals
+    are configured automatically.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    # Name resolution (DNS)
+
+
+    You can specify which name server will be used to resolve host ip number. Using
+    the DNS is to handle this on a TCP/IP network. The others are the local /etc/hosts
+    file
+
+
+    (see "information about other hosts" menu or the NIS system)
+
+
+    | DNS usage | DNS is required for normal operation |
+
+    | --- | --- |
+
+    | default domain | |
+
+    | nameserver 1 | 10.0.0.1 |
+
+    | nameserver 2 (opt) | |
+
+    | nameserver 3 (opt) | |
+
+    | search domain 1 (opt) | net.org |
+
+    | search domain 2 (opt) | |
+
+    | search domain 3 (opt) | |
+
+    | search domain 4 (opt) | |
+
+    | search domain 5 (opt) | |
+
+    | search domain 6 (opt) | |
+
+
+    DNS (or the Domain Name System) is the protocol used on the Internet to associate
+    the machine name to an IP address. Name resolution does not just use DNS, but
+    this will be discussed later. It suffices to tell your machine how it must'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF 99
+
+
+    "attack" the DNS servers, if it needs to.
+
+
+    > Warning: do not read domain name, understand name server... It is in these fields
+    that you enter, for example, the IP addresses (not names!) of the name servers
+    of your Internet service provider. Do not tick the DNS is required for normal
+    use box unless your machine is connected directly to a name server—therefore,
+    deactivate it if you use a non-permanent Internet connection and you use the name
+    server of your Internet provider.
+
+
+    It is possible to make the search for names less time-consuming if you specify
+    search domain names: in the present configuration for example, the machine vixie.lnet.org,
+    with address 10.0.0.2, can be referenced by a simple vixie. However, pay careful
+    attention to the fact that the different domains specified are searched in order
+    of appearance.
+
+
+    # Routing and gateways
+
+
+    The routing specifies the way in which your machine will be able to reach other
+    isolated machines (other routes to machines), other networks that are physically
+    connected (Routes to other local networks) or reachable via a gateway (other routes
+    to networks) and a default route, in other words a route to reach any other machine
+    which cannot be placed in a category above (Default). Finally, you also have a
+    configuration tab for the routing daemon routed.'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: 'If your network has access to other networks you must tell how to reach those
+    networks For many setup, simply setting the default route is good enough
+
+
+    If you only talk to machines on the local network then all this is not necessary.
+
+
+    | Set | Defaults |
+
+    |---|---|
+
+    | | other routes to networks |
+
+    | | other routes to hosts |
+
+    | | routes to alternate local nets |
+
+    | Configure | the routed daemon |
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_115_0.png)'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF
+
+
+    If your network has access to other networks you must tell how to reach those
+    networks
+
+
+    Select [Add] to add a new route
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_116_0.png)
+
+
+    +   * other routes to machines:
+
+
+    You will arrive at the situation in the figure for example when you want to connect
+    a laptop on your computer using the parallel port and a PLIP interface, which
+    you have configured beforehand (see section "PPP/SLIP/PLIP"). In order to reach
+    the laptop, you need to establish a route to it. Supposing that the PLIP interface
+    has been set up on the desktop computer and that it has the address 192.168.0.1,
+    and supposing that a PLIP interface with the address 201.12.17.37 (this is only
+    an example-do not take this address to be standard!) is set up on the portable,
+    you need to click on Add and fill in the fields in the following manner:'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_117_0.png)
+
+
+    then confirm the route by clicking on Accept. The route will then appear in the
+    list, and to remove it just select it and click on Delete.
+
+
+    +   - routes to other local networks:
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_117_1.png)'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# 5.5. USING LINUXCONF '' 103
+
+
+    An Ethernet network is an example of a local network. The Ethernet card (or other
+    network peripheral) will be allocated an IP address, but cannot yet communicate
+    with other machines on the same sub-network. You therefore need to add a route:
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_118_0.png)
+
+
+    The interface eth0 has the address 10.0.0.1, and this address belongs to the network
+    10.0.0.0. This operation has to be repeated for each interface of the machine
+    that is physically connected to the network.
+
+
+    +   * other routes to networks:
+
+
+    If one of the machines on the physical network is connected to other networks
+    and allows you to access, it is a gateway. You should therefore tell your machine
+    that these networks are accessible, by specifying the name or IP address of that
+    gateway. For example, if the machine rtfm (10.0.0.1) is a gateway to the network
+    192.168.0.0, you can specify it to the machine vicie (10.0.0.2) in the following
+    way:'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    If your network has access to other networks you must tell how to reach those
+    networks
+
+
+    Select [Add] to add a new route
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_119_0.png)
+
+
+    Enter either IP number or name
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_119_1.png)'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF
+
+
+    +   * default
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_120_0.png)
+
+
+    The default route is the route which take all the IP packets whose destination
+    address belongs to none of the accessible sub-networks. You need to configure
+    the field Default gateway to the machine which will be the default router. There
+    are two possibilities:
+
+
+    +   1. the default route is fixed: if this is so, you simply need to enter the
+    corresponding interface''s IP address;
+
+
+    +   2. the default route is dynamic: this is the case, for example, for machines
+    which have an Internet access via modem (see section "PPP/SLIP/PLIP") where the-interface
+    address changes for each connection. therefore, leave the value at 0.0.0.0. The
+    default route will be established on connection.
+
+
+    You can tick the option Activate routing if your machine does any sort of routing
+    (in other words, if your machine is'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    connected to more than one sub-network and it must therefore be capable of transmitting
+    packets from one interface to another.
+
+
+    +   - The routing daemon
+
+
+    ```
+
+    Check the appropriate options unless you have a simple network, routed is required.
+
+
+    ☑ Does not export any routes (Silent)
+
+    ☐ Export your default route
+
+
+    Accept Cancel Help
+
+    ```
+
+
+    If your machine operates as a router for one or more sub-networks, a routing daemon
+    will spare you the fastidious task of setting up all the routes to all of the
+    sub-networks on all the machines. Its role is to send out entries in the routing
+    table to other machines.
+
+
+    If you would like to send out entries of the routing table you will need to deactivate
+    the option Do not send out any routes. If your machine also operates as a default
+    gateway you can choose to send out the default routing table. This is the case,
+    for example, if you use this machine to connect to'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF '' 107
+
+
+    the Internet and would like to send out the route to all the other machines.
+
+
+    Search path for the machine name
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_122_0.png)
+
+
+    The resolution of an IP address into a machine name can be carried out in three
+    different ways:
+
+
+    +   1. hosts: the system searches in the file /etc/hosts for an entry that corresponds
+    to the IP address or the corresponding name and returns the result required. This
+    is the simplest method and it is normally sufficient for a small network;
+
+
+    +   2. DNS: the system interrogates remote name servers. The'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# 108 CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    way in which the system interrogates servers has been explained earlier;
+
+
+    +   3. NIS (Network Information System): see the following paragraph
+
+
+    You can use or not whichever service you want and specify the order in which the
+    services are consulted. If the first fails, the second takes over and so on. hosts
+    DNS is the best compromise, at least you will not have to use NIS, as is the case
+    with certain large Unix networks.
+
+
+    # NIS
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_123_0.png)
+
+
+    NIS is a protocol invented by Sun Microsystems. It avoids information redundancy
+    in, for example, "exporting" user ac-'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF
+
+
+    counts, services and more. If you would like to interrogate an existing NIS domain,
+    you need to enter the domain name and the name or address of the server in the
+    relevant fields. If you would like to create a NIS service, then consult the NIS-HOWTO.
+
+
+    # PPP/SLIP/PLIP
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_124_0.png)
+
+
+    PPP, SLIP and PLIP are three network interfaces similar to Ethernet cards, but
+    with the difference that they are not permanently active. This is why they have
+    been given a dedicated section. The configuration of the SLIP and PLIP interfaces
+    will not be discussed, partly because they are two interfaces that are not used-much,
+    and partly because their'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: 'configurations are relatively simple. PPP interfaces, on the other hand, are
+    very common:
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_125_0.png)
+
+
+    This is the type of interface you need to choose if you would like to set up a
+    connection to the Internet by modem. The serial port corresponding to the modem
+    is designated by the file /dev/ttySx, where x represents the number of the serial
+    port, /dev/ttyS0 corresponds to the first parallel port (COM1), etc.
+
+
+    You will need to find out from the company you chose as your Internet service
+    provider whether you use PAP, in which case you should activate the corresponding
+    option and not fill in here the name of the connection and password. Then you
+    need to click on Customize, which contains four tabs. The only options you need
+    to modify are the following:
+
+
+    +   1. the PAP tab (if you use PAP);
+
+
+    +   2. in the Hardware tab, you can allow each user to activate or deactivate
+    the interface.'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# User accounts
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_126_0.png)'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    This module of linuxconf allows you to set up, in addition to normal user accounts,
+    special accounts such as PPP accounts (if your machine acts as a PPP server),
+    mail aliases and the verification rules of passwords. Even if you are the administrator
+    of an important network, you will probably not need the first tab.
+
+
+    +   - User accounts:
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_127_0.png)'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# 5.5. USING LINUXCONF
+
+
+    This is how the list of system users will be presented. A user has a number which
+    identifies him in a unique way (his uid). It is preferable to leave alone all
+    the uid accounts less than 500, they all have uses. The dialogue for adding a
+    user is as follows:
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_128_0.png)
+
+
+    As indicated, you will need to enter at least the user name and his complete name.
+    You can also specify a group, otherwise a new one will be created, which will
+    only contain the user being created.
+
+
+    The Passwd button allows you to change the password of the user. the Tasks button
+    allows you to program the tasks to carry out at regular intervals (using the cron
+    daemon) for'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# 114 CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    the account of this user:
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_129_0.png)
+
+
+    The task to launch must be written on one command line. In this way, this task
+    launches the script /home/desdemona/bin/restore every Sunday. You can activate
+    and deactivate all the entries individually.
+
+
+    +   - User groups:
+
+
+    The principal is very similar to that of adding or removing a user. The creation
+    of a dedicated group can help to limit access to certain files to members of this
+    group, on the condition that the permissions are set up in an appropriate manner.
+    A user may be in one or many groups.'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF
+
+
+    You can edit, add, or delete groups
+
+    Select [Add] to add a new definition
+
+
+    | Group | ID | Alternate members |
+
+    |---|---|--|
+
+    | nobody | yy | |
+
+    | nogrp | 100 | games |
+
+    | popusers | 231 | |
+
+    | postfix | 233 | |
+
+    | postgres | 234 | |
+
+    | pppusers | 230 | |
+
+    | root | 0 | root |
+
+    | slipusers | 232 | |
+
+    | slocate | 21 | |
+
+    | squid | 16 | |
+
+    | sys | 3 | root bin adm |
+
+    | tty | 5 | |
+
+    | users | 500 | desdemona |
+
+    | utmp | 101 | |
+
+    | uucp | 14 | uucp |
+
+    | wheel | 10 | root |
+
+    | xfs | 102 | |
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_130_0.png)'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# File systems
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_131_0.png)
+
+
+    This module allows you to free yourself of the redoutable command mount. You can
+    treat three types of partitions, i.e. by adding or deleting or modifying the mounting
+    options. Only the local disks are dealt with here, which you can access by selecting
+    the Access local disk tab. You will then see a list of the local storage peripherals
+    (hard disk partitions, disk, CD-ROM, others).
+
+
+    Adding a partition requires filling in different fields:'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# 8.5 USING LINUXCONF ,
+
+
+    You can edit, add, or delete mounts
+
+    Select [Add] to add a new definition
+
+
+    | Source | Mount point | FsType | Size | Partition type | Status |
+
+    |---|---|---|---|---|---||
+
+    | /dev/sda1 | / | ext2 | 2055M | Linux(83) | Mounted |
+
+    | /dev/hdb1 | /home | ext2 | 2051M | Linux(83) | Mounted |
+
+    | /dev/hda2 | /usr | ext2 | 4094M | Linux(83) | Mounted |
+
+    | /dev/hdb3 | /usr/local | ext2 | 1527M | Linux(83) | Mounted |
+
+    | /dev/hdc1 | /opt | ext2 | 3098M | Linux(83) | Mounted |
+
+    | /dev/fd0 | /mnt/floppy | vfat | | | |
+
+    | /dev/cdrom | /mnt/cdrom | iso9660 | | | |
+
+    | none | /dev/ptspts | devpts | | | Mounted |
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_132_0.png)
+
+
+    # Base
+
+
+    In this section you specify the partition to mount (here, it is the first partition
+    of the secondary master IDE disk), the type of file system supposedly located
+    on the partition in question and the directory which will serve as the mount point.'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# CHAPTER 8. SYSTEM ADMINISTRATION
+
+
+    You must enter the specification of a volume or partition and the position (mount
+    point) where you want to install this volume in the directory structure of this
+    workstation
+
+
+    | Base | Options | Dos options | Misc. |
+
+    | --- | --- | --- | --- |
+
+    | Partition | /dev/hdc1 | | |
+
+    | Type | ext2 | | |
+
+    | Mount point | /opt | | |
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_133_0.png)
+
+
+    # Options
+
+
+    This section presents a series of possible mounting options. Pay attention to
+    the fact that there exists file systems for which certain options have no real
+    sense. For example, a FAT partition (12, 16 or 32) does not support special files
+    or quotas.
+
+
+    If the partition in question is essential to the functioning of the system, you
+    should leave the field dump frequency at 1, otherwise the partition will never
+    be checked on start up and'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF '' 119
+
+
+    you risk getting bad surprises. The field fsck priority must be at 1 for the root
+    partition and 2 or more for the other system partitions. For any other partition
+    or non-essential peripheral, these two fields must be left at 0.
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_134_0.png)'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# DOS Options
+
+
+    You must enter the specification of a volume or partition and the position (mount
+    point) where you want to install this volume in the directory structure of this
+    workstation
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_135_0.png)
+
+
+    As the name indicates, this section is used to configure options specific to the
+    DOS file system (msdos and FAT). If a user or a group is specified, all the files
+    of the mounted directory will belong to this user or group. The field default
+    permission has the same format as that of the ummask command. For example, 027
+    gives all the rights to the owning user (0), takes away writing rights from the
+    owning group (2)'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# 8.5. USING LINUXCONF 121
+
+
+    and takes away all rights from other users (7). The translation mode can be left
+    at auto without bother.
+
+
+    # Others
+
+
+    As the name indicates, this section enables you to specify other options to those
+    which are available in the previous sections. See the man page for mount for a
+    list of available options.
+
+
+    # More...
+
+
+    linuxconf is of course capable of much more, and you will have noticed that whilst
+    making your way across modules that have not been discussed here. If the configuration
+    of all aspects linked to network services (NFS, NIS, Samba, etc.) interests you,
+    I strongly recommend that you take the time to read the relevant HOWTOs before
+    attempting anything. If your heart tells you, you can also contribute to development.'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# Chapter 9
+
+
+    # Documentation
+
+
+    # 9.1 The "HOWTOs"
+
+
+    The "HOWTOs" are documents that are often very elaborate relative to a given subject.
+    For example, to engrave CDs under Linux, consult the "CD-Writing HOWTO". To set
+    up a firewall, consult the "firewall HOWTO".
+
+
+    You can also consult these documents on you local hard disk in the directory /usr/doc/howto/
+    in several formats: in text, in HTML (viewed with kfm or netscape), or dvi (viewed
+    with xdvi). The directory /usr/doc/howto/mini/ contains "mini-HOWTOs
+
+
+    The following is a list of available HOWTOs:
+
+
+    +   - 3Dfx-HOWTO
+
+    - AX25-HOWTO
+
+    - Access-HOWTO
+
+    - Alpha-HOWTO
+
+    - Assembly-HOWTO
+
+    - Benchmarking-HOWTO
+
+    - BootPrompt-HOWTO
+
+    - Bootdisk-HOWTO
+
+
+    +   - Busmouse-HOWTO
+
+    - CD-Writing-HOWTO
+
+    - CDROM-HOWTO
+
+    - Chinese-HOWTO
+
+    - Commercial-HOWTO
+
+    - Config-HOWTO
+
+    - Consultants-HOWTO
+
+    - Cyrillic-HOWTO'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '# 124 CHAPTER 9. DOCUMENTATION
+
+
+    +   DNS-HOWTO
+
+    DOS-Win-to-Linux-HOWTO
+
+    DOS-to-Linux-HOWTO
+
+    DOSEMU-HOWTO
+
+    Danish-HOWTO
+
+    Distribution-HOWTO
+
+    ELF-HOWTO
+
+    Emacspeak-HOWTO
+
+    Esperanto-HOWTO
+
+    Ethernet-HOWTO
+
+    Finnish-HOWTO
+
+    Firewall-HOWTO
+
+    French-HOWTO
+
+    Ftape-HOWTO
+
+    GCC-HOWTO
+
+    German-HOWTO
+
+    nGlib2-HOWTO
+
+    HAM-HOWTO
+
+    OW-INDEX
+
+    Hardware-HOWTO
+
+    Hebrew-HOWTO
+
+    INFO-SHEET
+
+    IPCHAINS-HOWTO
+
+    IPX-HOWTO
+
+    IR-HOWTO
+
+    ISP-Hookup-HOWTO
+
+    Installation-HOWTO
+
+    Intranet-Server-HOWTO
+
+    Italian-HOWTO
+
+    Java-CGI-HOWTO
+
+    Kernel-HOWTO
+
+    Keyboard-and-Console-HOWTO
+
+    KickStart-HOWTO
+
+    LinuxDoc+Emacs+Ipsell-HOWTO
+
+    META-FAQ
+
+    MGR-HOWTO
+
+    MILO-HOWTO
+
+    Mail-HOWTO
+
+    Multi-Disk-HOWTO
+
+    Multicast-HOWTO
+
+    NET-3-HOWTO
+
+    NFS-HOWTO
+
+    NIS-HOWTO
+
+    Networking-Overview-HOWTO
+
+    Optical-Disk-HOWTO
+
+
+    +   Oracle-HOWTO
+
+    PCI-HOWTO
+
+    PCMIA-HOWTO
+
+    PPP-HOWTO
+
+    Parallel-Processing-HOWTO
+
+    Pilot-HOWTO
+
+    Polish-HOWTO
+
+    PostgreSQL-HOWTO
+
+    Printing-HOWTO
+
+    Printing-Usage-HOWTO
+
+    Quake-HOWTO
+
+    README
+
+    RPM-HOWTO
+
+    Reading-List-HOWTO
+
+    Root-RAID-HOWTO
+
+    SCSI-Programming-HOWTO
+
+    SMB-HOWTO
+
+    SRM-HOWTO
+
+    Security-HOWTO
+
+    Serial-Programming-HOWTO
+
+    Shadow-Password-HOWTO
+
+    Slovenian-HOWTO
+
+    Sound-HOWTO
+
+    Sound-Playing-HOWTO
+
+    Spanish-HOWTO
+
+    TeTpX-HOWTO
+
+    Text-Terminal-HOWTO
+
+    Thai-HOWTO
+
+    Tips-HOWTO
+
+    MDSOS-HOWTO
+
+    UPS-HOWTO
+
+    UUCP-HOWTO
+
+    User-Group-HOWTO
+
+    VAR-HOWTO
+
+    VME-HOWTO
+
+    VMS-to-Linux-HOWTO
+
+    Virtual-Services-HOWTO
+
+    WWW-HOWTO
+
+    WWW-mSQL-HOWTO
+
+    XFree86-HOWTO
+
+    Free86-Video-Timings-HOWTO'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '# 9.1. THE "HOWTOS"
+
+
+    Mini-HOWTOS:
+
+
+    +   3-Button-Mouse Linux +FreeBSD
+
+    ADSL Linux +FreeBSD-mini-HOWTO
+
+    ADSM-Backup Linux+NT-Loader
+
+    AI-Alife Linux+Win95
+
+    Advocacy Loadlin+Win95
+
+    Apache+SSL+PHP+fp Loopback-Root-FS
+
+    Back-With-MSDOS Mac-Terminal
+
+    Battery-Powered Mail-Queue
+
+    Boca Mail2News
+
+    BogoMips Man-Page
+
+    Bridge Modules
+
+    Bridge+Firewall Multiboot-with-LILO
+
+    Bzip2 NCD-X-Terminal
+
+    Cable-Modem NFS-Root
+
+    Clock NFS-Root-Client
+
+    Coffee Netscape-Proxy
+
+    Colour-ls News-Leafsite
+
+    Cyrus-IMAP Offline-Mailing
+
+    DHCP Partition
+
+    DHCPcd Partition-Rescue
+
+    DPT-Hardware-RAID Path
+
+    Diald Pre-Installation-Checklist
+
+    Diskless Process-Accounting
+
+    Ext2fs-Undletion Proxy-ARP-Subnet
+
+    Fax-Server Public-Web-Browser
+
+    Firewall-Piercing Qmail+MH
+
+    GIS-GRASS Quota
+
+    GTEK-BBS-550 RCS
+
+    Hard-Disk-Upgrade README
+
+    INDEX RPM+Slack
+
+    INDEX.html Remote-Boot
+
+    IO-Port-Programming Remote-X-Apps
+
+    IP-Alias SLIP-PPP-Emulator
+
+    IP-Masquerade Sendmail+UUCP
+
+    IP-Subnetworking Small-Memory
+
+    ISP-Connectivity Software-Building
+
+    Install-From-ZIP Software-RAID
+
+    Kerneld Soundblaster-AWE
+
+    LBX StarOffice
+
+    LILO Term-Firewall
+
+    Large-Disk TkRat
+
+    Leased-Line Token-Ring
+
+    Linux-DOS+Win95+OS2 Ultra-DMA'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: "# CHAPTER 9. DOCUMENTATION\n\n+   list items\n\n# 9.2 The man pages\n\nUnder\
+    \ Linux, as with all Unix systems, you have access to pages of the manual, called\
+    \ man. They refer to the majority of applications supplied with Linux-Mandrake,\
+    \ but also, for example, all the commands of C/C++ etc.\n\nFor example, you might\
+    \ want to know the parameters of the ls command which, by default, lists the contents\
+    \ of a directory. In a shell type:\n\n```\nls\n```\n\nAnd you will see displayed\
+    \ the man page for ls. \nTo read through the man pages, you should know that:\n\
+    \n+   1. hitting Enter displays a new line,\n2. hitting Space displays the next\
+    \ page,\n3. you can move around with the arrow keys (in all directions!),\n4.\
+    \ pressing q allows you to quit the man page.\n\nThe manual pages installed by\
+    \ default in Linux-Mandrake are in English."
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# 9.3 Interesting documents on the Internet
+
+
+    The following is a non-exhaustive list of resources available on the Net. You
+    will find an up-to-date list on our web site.
+
+
+    +   * Linux Weekly News http://lwn.net/
+
+    * Linux Weekly News Daily http://lwn.net/daily/
+
+    * Linux Today http://www.linuxtoday.com/
+
+    * Slashdot http://www.slashdot.org/
+
+    * Linux Applications and Utilities Pages http://www.xnet.com/~blatura/linapps.shtml
+
+    * Linux Web Watcher http://www.webwatcher.org/
+
+    * Freshmeat http://www.fresmeat.net/
+
+    * Linux World http://www.linuxworld.com/
+
+    * Linux online http://www.linux.org/
+
+    * Linux Links http://www.linuxlinks.com/
+
+
+    # 9.4 Books
+
+
+    The bible for all Linux users is Running Linux, written by Matt Welsh and which
+    can be obtained from O’REILLY & Associates.
+
+    Generally speaking, all books covering Unix systems can be read.'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '# Chapter 10
+
+
+    # Appendix
+
+
+    # 10.1 FAQ
+
+
+    You will find below some common Linux-Mandrake error messages and corresponding
+    explanations. This FAQ is regularly updated on the Linux-Mandrake web site.
+
+
+    "Unable to display the contents of the directory xxx"
+
+
+    You do not have permission to read the contents of the directory. Check the directory
+    permissions.
+
+
+    "Unable to read in xxx. The file does not exist or access is refused."
+
+
+    In general, the reason for this is effectively that you do not have permission
+    to read this file. Check the file permissions.'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '# "KFM cannot be connected to ''localhost''"
+
+
+    You have modified the loopback configuration.
+
+    Type: localhost
+
+
+    ```
+
+    ping localhost
+
+    ```
+
+
+    Returned will be something like:
+
+
+    ```
+
+    PING localhost (127.0.0.1): 56 data bytes
+
+    64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.3 ms
+
+    64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.2 ms
+
+    ```
+
+
+    If this is the case, you should reconfigure your loopback. in /etc/hosts add the
+    line:
+
+
+    ```
+
+    127.0.0.1        localhost
+
+    ```
+
+
+    then reboot your computer. If this still does not work, consult technical support.
+
+
+    # "My printer worked with previous versions of Linux-Mandrake, but not with version
+    6.0"
+
+
+    The 2.2.x kernel has modified the management of the parallel port. In order to
+    correct this, edit the file /etc/conf.modules and add the following line:
+
+
+    ```
+
+    alias parport_lowlevel parport_pc
+
+    options parport_pc io=0x378 irq=7
+
+    ```
+
+
+    Then restart your machine.
+
+    The names of the ports have changed. If your printer is on the port /dev/lp1,
+    it will now be on /dev/lp0. Open the file /etc/printcap and replace lp1 with lp0.'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# 10.2. LINUX-MANDRAKE SPECIFICATIONS 131
+
+
+    The entries in the K menu have been duplicated after updating a previous version
+    of Linux-Mandrake to version 6.0.
+
+
+    When you update Linux-Mandrake, it may happen, in certain cases, that the entries
+    in the K Menu appear to have been duplicated. This is due to the fact that the
+    old files are conserved with the .rpmsave extension. To resolve the problem, type:
+
+
+    ```
+
+    rm -f ''/opt/kde/share/applnk \
+
+    -name *.kdelnk.rpmsave -print''
+
+    ```
+
+
+    then restart the graphical interface (K menu/Panel/Reboot).
+
+
+    # "How can you delete LILO?"
+
+
+    Use a DOS boot disk and type fdisk /mbr.
+
+
+    # "LILO is not installed correctly. What shall I do?"
+
+
+    This is often due to a problem in the geometry of the disk. Modify the file /etc/lilo.conf
+    in adding the option linear.
+
+
+    # "How can I modify the configuration of my keyboard?"
+
+
+    Use /usr/sbin/kbdconfig.
+
+
+    # 10.2 Linux-Mandrake specifications
+
+
+    Linux-Mandrake is a Unix type system, conforming to the POSIX standards. It is
+    a genuine pre-emptive multitasking,'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: 'multi-user operating system. It runs in 32-bit protected mode on Intel x86
+    compatible platforms, and in 64-bit mode on other architectures (Sparc, Digital...).
+    It consists of a central kernel and multiple applications conforming on the whole
+    to the criteria of Free Software (or OpenSource)
+
+
+    # 10.3 List of hardware supported under Linux-Mandrake
+
+
+    Please consult the Linux-Mandrake web site for information on this topic, as the
+    list is updated regularly in accordance with the versions of the packages used:
+    http://www.linux-mandrake.com/
+
+
+    # 10.4 Description of packages supplied with Mandrake
+
+
+    A complete list of RPM packages supplied with Linux-Mandrake, as well as a succinct
+    description of each, can be found in the directory /doc on the first CD-ROM (installation
+    CD-ROM). The list is arranged in alphabetical order.'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# Chapter 11
+
+
+    # Glossary
+
+
+    We have collected in this part an explanation of various terms, both those that
+    are specific to Linux and those that are general.
+
+
+    Account :
+
+
+    Linux-Mandrake organizes the users by attributing to each user an account on the
+    machine. An account is a collection of parameters (personal directory, login,
+    alias, shell with its variables, etc ...) which constitutes your work environment.
+
+
+    Alias :
+
+
+    Aliases are abbreviations of commands. In general, you can abbreviate shell commands.
+    To create a new alias, type: alias alias_name=''command''. See the relevant paragraph
+    in the manual.'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: '# CHAPTER 11. GLOSSARY
+
+
+    # Binary :
+
+
+    Programs are said to be in a binary form when they are directly executable by
+    the computer. The binary format is derived from the source code through compilation
+    of the program.
+
+
+    # Boot :
+
+
+    The rebooting procedure. During this procedure, the kernel and modules well as
+    the services are loaded, after which you can access the system.
+
+
+    # Compilation :
+
+
+    Action that consists of creating from the source code a binary program that can
+    be interpreted directly by the computer. Gcc is the most widely used compiler
+    under Linux.
+
+
+    # Console :
+
+
+    Non graphical Linux interface. The console mode is used by servers and by Linux
+    experts. .
+
+
+    # Daemons :
+
+
+    See Services.
+
+
+    # Dependencies :
+
+
+    Under Linux-Mandrake, it is common, that in order for one program to run, it needs
+    other programs or other libraries. We therefore say that this program depends
+    on another. The RPM format handles these interdependencies and will not allow
+    you to install a program if you'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: 'have not installed the programs that are vital for it to run properly¹.
+
+
+    # ELF :
+
+
+    Standard Linux program binary format. This replaces the old a.out format, which
+    is now obsolete.
+
+
+    # Emacs :
+
+
+    Very powerful text editor. Its great strength lies in the possibility of creating
+    extensions due to the LISP language.
+
+
+    # Ethernet :
+
+
+    Protocol for communication between computers on a local network. Via Ethernet,
+    communications can take place at a maximum rate of 10 Mbits/s. Two more evolved
+    protocols, FastEthernet and GigaEthernet, allow communication at 100 Mbits/s and
+    1000 Mbits/s respectively.
+
+
+    # Ext2 :
+
+
+    ext2 is the Linux file system. Its features include permission management, high
+    availability and management of quotas.
+
+
+    # FTP :
+
+
+    File Transfer Protocol. Protocol used to send and receive files. The base ftp
+    program is a text mode program but there are numerous graphical versions.
+
+
+    > ¹http://www.opensource.org/'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# CHAPTER 11. GLOSSARY
+
+
+    # GNU :
+
+
+    The Free Software Foundation project carries the name of GNU ("GNU is Not Unix").
+    The aim is to rebuild a full computer environment in the form of free software.
+    GNU''s highlight software is the gcc compiler. Although Linux borrows a lot from
+    the GNU project, it is not part of it.
+
+
+    # Home :
+
+
+    Personal directory. Each user of Linux-Mandrake will be attributed a personal
+    directory that is a sub-directory of /home.
+
+
+    # KDE :
+
+
+    The K Desktop Environment is the default desktop for Linux-Mandrake. Therefore,
+    your desktop is easy to use, so that using the Linux-Mandrake system doesn''t
+    require a long learning phase.
+
+
+    # Kernel :
+
+
+    The kernel is the heart of the Linux operating system. The 2.2.x kernel is the
+    latest development of the kernel. It contains around 7 million lines of code and
+    is still maintained by Linus TORVALDS.
+
+
+    # Library :
+
+
+    Library of code shared by different applications. It is the equivalent of DLL
+    files under Microsoft Windows.
+
+
+    # Link :
+
+
+    A link is an entry pointing on another file. The best known are symbolic links:
+    they allow you to refer to a file outside of its directory.'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: '# Login :
+
+
+    Authentification procedure. The system Linux-Mandrake being a multi-user one,
+    it is necessary to identify yourself to the system in order to be able to access
+    your rights and your parameters. The login procedure comprises two phases: the
+    login name and the password.
+
+
+    # Loopback :
+
+
+    System that allows you to connect to your machine as it were a remote machine.
+    Loopback is indispensable for good running of Linux.
+
+
+    # MBR :
+
+
+    Master Boot Record (or boot sector). The boot sector contains information on the
+    systems that are bootable by the computer. LILO is the utility that writes the
+    boot sector to allow you to load operating systems.
+
+
+    # Mount point :
+
+
+    A mount point is a directory attached to a peripheral. For example, the mount
+    point of the CD-ROM drive is /mnt/cdrom.
+
+
+    # Mounting :
+
+
+    In order for Linux to be able to use a peripheral, it has to be visible to the
+    system. We therefore talk about "mounting" of a peripheral.
+
+
+    # Multiprocessing :
+
+
+    This means that the computer has more than one processor. The kernel 2.2.x has
+    vastly improved multiprocessor system (MPS) support.'
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# NFS :
+
+
+    Network File System. Protocol that is used to share the same directory between
+    several computers. The machine that owns the shared directory is called the "Host"
+    and the others are clients.
+
+
+    # OS :
+
+
+    Operating system. The operating system is a program that makes the link between
+    applications (such as Corel WordPerfect or Netscape) and the hardware part.
+
+
+    # Path :
+
+
+    Access path. The variable PATH describes the directories in which the shell must
+    search to find programs. The echo $PATH command allows you to find out the input
+    parameters (each directory is separated by a colon).
+
+
+    # Pipe :
+
+
+    The pipe (the | character) allows you to supply to one program the output of another.
+    For example, ls | less, allows you to give the output of the ls command to the
+    less program.
+
+
+    # POSIX :
+
+
+    Set of specifications given out by the Unix group, to ensure the compatibility
+    of programs under different Unix systems. Linux-Mandrake is POSIX compatible.
+
+
+    # Proc :
+
+
+    In your file structure, you can see a directory called /proc. However, this directory
+    does not exist on your'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: Runlevels are used by the system to know which services to start and stop. Level
+    3 is the default level. Level 6 corresponds to rebooting and level 0 to complete
+    stop. It is possible to change the level by editing the file /etc/initstab.
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: '# Service :
+
+
+    Also called *daemons*. Services are programs that run in the background to respond
+    to precise requests. For example, the *telnetd* service responds to *telnet* requests.
+    The list of programs that are available for use your computer is configurable
+    and depends on how you will use your computer.
+
+
+    # Shell :
+
+
+    The shell is the name of the interface that delivers your commands to the kernel.
+    There are several different shells, such as *bash*, C Shell, *zsh*, etc ... The
+    *Bash* shell is the most widespread of these.
+
+
+    # Source :
+
+
+    The source code represents the program as the developer has written it, before
+    any compilation. It is the source code that has be modified in order to tailor
+    programs for a precise requirement.
+
+
+    # Swap :
+
+
+    *Linux* uses a virtual file on the disk to write data when the *RAM* memory is
+    full. Unlike other operating systems, *Linux* uses a dedicated partition (called
+    the swap partition) for this operation.
+
+
+    # Telnet :
+
+
+    Remote connection program. Telnet allows you to execute programs on a distant
+    machine as if they were on your own machine and, possibly, to display the results
+    on your own screen.'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: '# UNIX :
+
+
+    Family of operating systems. All the Unix systems are multi-tasking and multi-users.
+    Linux-Mandrake is a particular Unix system.
+
+
+    # Vi :
+
+
+    Text Editor. Being at the same time rudimentary and very powerful, it is difficult
+    to access because it doesn''t have a graphical interface. In case of problems,
+    it is often the only editor that is accessible. It is for this reason that any
+    Linux system administrator must know how to use it!
+
+
+    # Wildcards :
+
+
+    Wildcards are used to replace strings of characters for certain search procedures.
+    The * symbol is used to replace a string of characters and the ? symbol is used
+    to replace a single character.
+
+
+    # X Terminal :
+
+
+    An X terminal is a computer that does not hold any data but which executes programs
+    and stores data on a remote machine. X terminals allow you to use light configurations
+    in terms of the necessary power.
+
+
+    # X Window :
+
+
+    Name of the set of programs and libraries that manage the graphical part. The
+    version used by Linux is called XFree86.'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '# XTerm :
+
+
+    Terminal window. This allows you to use the shell commands under an X interface.
+    There are other programs that serve the same purpose such as rxvt, Terminal, Konsole,
+    aterm, ... .'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: '![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_163_0.png)
+
+
+    # # Linux-Mandrake™
+
+
+    An easy-to-use powerful Linux system.
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_163_1.png)
+
+
+    MandrakeSoft™
+
+
+    ![](img/b8bd4b587c4dd67fa1a0b81ef3d39692_163_2.png)'
+  merge: -1
+  pgno: 163
