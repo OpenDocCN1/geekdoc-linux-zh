@@ -1,0 +1,447 @@
+- - '#'
+  - Absolute BSD：Free BSD 终极指南
+- - '##'
+  - 第1章：安装
+- - '##'
+  - 第2章：获取更多帮助
+- - '##'
+  - 第3章：在弄坏其他东西之前先读这个！（备份与恢复）
+- - '#'
+  - 献给 Liz
+- - '#'
+  - 致谢
+- - '#'
+  - 前言
+- - '#'
+  - 引言
+- - '#'
+  - 什么是 FreeBSD？
+- - '#'
+  - FreeBSD 是如何变成今天的？
+- - '##'
+  - BSD 许可证：BSD 走向公开
+- - '##'
+  - 现代 FreeBSD 的诞生
+- - '##'
+  - FreeBSD 开发
+- - '##'
+  - 提交者 (Committers)
+- - '##'
+  - 贡献者 (Contributors)
+- - '#'
+  - AIX
+- - '#'
+  - Linux
+- - '#'
+  - IRIX, HPUX, 等.
+- - '#'
+  - FreeBSD 的优势
+- - '#'
+  - 可移植性 (Portability)
+- - '#'
+  - 性能 (Power)
+- - '#'
+  - 简化的软件管理 (Simplified Software Management)
+- - '#'
+  - 优化的升级过程 (Optimized Upgrade Process)
+- - '#'
+  - 文件系统 (Filesystem)
+- - '#'
+  - 谁应该使用 FreeBSD
+- - '#'
+  - 将 FreeBSD 作为你的桌面系统 (FreeBSD as Your Desktop)
+- - '#'
+  - 如何阅读本书
+- - '#'
+  - 你必须知道什么？
+- - '##'
+  - 注意事项
+- - '#'
+  - 如何思考 UNIX
+- - '#'
+  - 通信通道
+- - '##'
+  - 使用通道
+- - '##'
+  - 下载 FreeBSD
+- - '##'
+  - 通过 FTP 安装
+- - '#'
+  - dd if=kern.flp of=/dev/fd0
+- - '##'
+  - 其他 FTP 安装信息
+- - '##'
+  - 硬件设置
+- - '##'
+  - 为 ISA 卡配置内核
+- - '##'
+  - Sysinstall：丑陋的 FreeBSD 安装程序
+- - '##'
+  - 磁盘使用
+- - '##'
+  - 交换空间分拆 (Swap Splitting)
+- - '##'
+  - /var, /usr 和 /home
+- - '##'
+  - 第二块硬盘
+- - '##'
+  - 软更新 (Soft Updates)
+- - '##'
+  - 块大小 (Block Size)
+- - '##'
+  - 提交 (Committing)
+- - '##'
+  - 安装后设置 (Post-Install Setup)
+- - '##'
+  - Root 密码 (Root Password)
+- - '##'
+  - 添加用户 (Adding Users)
+- - '##'
+  - 时区 (Time Zone)
+- - '##'
+  - 鼠标 (Mouse)
+- - '##'
+  - 配置网卡 (Configuring Network Cards)
+- - '#'
+  - XFree86
+- - '#'
+  - 软件
+- - '#'
+  - 重启
+- - '#'
+  - /stand/sysinstall
+- - '#'
+  - 关于编辑器的说明
+- - '#'
+  - 为什么不先发邮件？
+- - '#'
+  - 手页 (Man Pages)
+- - '#'
+  - FreeBSD 手册
+- - '##'
+  - 手页标题
+- - '#'
+  - 其他网站
+- - '##'
+  - 使用 FreeBSD 问题解决资源
+- - '###'
+  - 检查手册（Handbook)/FAQ
+- - '###'
+  - 检查手册页（Man Pages）
+- - '##'
+  - ED(1) FreeBSD 通用命令手册
+- - '##'
+  - ED(4) FreeBSD 内核接口手册
+- - '###'
+  - 检查邮件列表存档
+- - '###'
+  - 使用你的答案
+- - '###'
+  - 发送邮件寻求帮助
+- - '##'
+  - 第 3 章：在破坏其他东西之前先读这里！（备份与恢复）
+- - '###'
+  - 概述
+- - '###'
+  - 系统备份
+- - '###'
+  - 磁带设备
+- - '###'
+  - 如何读取 Dmesg.boot
+- - '#'
+  - 控制你的磁带驱动器
+- - '##'
+  - 设备节点
+- - '##'
+  - 使用 TAPE 变量
+- - '#'
+  - setenv TAPE /dev/sdb0
+- - '##'
+  - mt 命令
+- - '#'
+  - mt status
+- - '##'
+  - 备份程序
+- - '##'
+  - Tar
+- - '##'
+  - Tar 的模式
+- - '#'
+  - tar -c * /
+- - '#'
+  - tar -c /home /usr/local /var
+- - '#'
+  - tar -t
+- - '#'
+  - cd /home/mlwcas
+- - '#'
+  - tar -x etc
+- - '##'
+  - 其他 Tar 标志
+- - '#'
+  - tar -cz -f/dev/null *
+- - '#'
+  - tar -cz -f mybackup.gz /home/mlwucas/absolutebd/
+- - '#'
+  - 注意
+- - '#'
+  - dump -0ua -h0 /dev/da0/
+- - '##'
+  - 卷
+- - '#'
+  - 从归档恢复
+- - '#'
+  - 检查归档内容
+- - '#'
+  - restore -f /dev/da0 -t /etc/motd
+- - '#'
+  - 从归档中提取数据
+- - '#'
+  - 恢复文件
+- - '#'
+  - restore -f /tmp/backup -x /etc/namedb
+- - '#'
+  - 恢复文件系统
+- - '#'
+  - mount /dev/da0 /mnt
+- - '#'
+  - cd /mnt
+- - '#'
+  - 'restore -rf /dev/da0 '
+- - '#'
+  - 交互式恢复
+- - '#'
+  - 记录发生过的事情
+- - '##'
+  - 版本控制 (Revision Control)
+- - '#'
+  - ci /etc/rc.conf
+- - '#'
+  - co test
+- - '#'
+  - ls -1
+- - '#'
+  - co -test
+- - '#'
+  - 查看文件的修订历史
+- - '#'
+  - rcsdiff -rl1.2 -rl1.3 /etc/rc.conf
+- - '#'
+  - 缩进和 inetd 字符串
+- - '##'
+  - 第 4 章：内核大游戏
+- - '##'
+  - 概述
+- - '##'
+  - 什么是内核？
+- - '##'
+  - 配置你的内核
+- - '###'
+  - Sysctl
+- - '#'
+  - sysctl -A > sysctl.out
+- - '#'
+  - sysctl kern
+- - '#'
+  - sysctl kern.securelevel
+- - '##'
+  - 修改 Sysctls
+- - '#'
+  - sysctl -w vfs.usermount=1
+- - '##'
+  - 在启动时设置 Sysctls
+- - '##'
+  - 使用 Loader.conf 配置内核
+- - '##'
+  - 向驱动程序传递提示
+- - '#'
+  - Loader 命令
+- - '##'
+  - 加载内核模块
+- - '##'
+  - 手动配置 Loader
+- - '##'
+  - 在多用户模式下加载和卸载模块
+- - '##'
+  - 查看已加载的模块
+- - '#'
+  - kldstat
+- - '##'
+  - 加载和卸载模块
+- - '#'
+  - kldload /modules/warp_saver.ko
+- - '#'
+  - kldunload warp_saver.ko
+- - '##'
+  - 定制内核
+- - '##'
+  - 准备
+- - '##'
+  - 备份内核
+- - '##'
+  - 编辑内核文件
+- - '#'
+  - machine
+- - '#'
+  - cpu
+- - '#'
+  - ident
+- - '#'
+  - maxusers
+- - '#'
+  - Basic Options
+- - '##'
+  - SCSI 控制器
+- - '##'
+  - EISA AHA1742 家族
+- - '##'
+  - 伪设备 (Pseudo-Devices)
+- - '##'
+  - USB 设备
+- - '##'
+  - 构建你的内核
+- - '#'
+  - config MYKERNEL
+- - '#'
+  - make depend && make all install
+- - '##'
+  - 内核构建故障排除
+- - '##'
+  - 向内核添加内容
+- - '##'
+  - LINT
+- - '#'
+  - CPU_PPRO2CELERON 启用 Mendocino Celeron CPU 的 L2 缓存。在使用 Socket 8 到 Socket 370 转换器时，
+    Pentium Pro BIOS 都启用了 Mendocino Celeron CPU 的 L2 缓存。
+- - '##'
+  - 使用选项修复错误
+- - '#'
+  - 设置每个进程的 PV 条目数量。增加此值可以防止频繁使用共享内存相关的崩溃（panic）。
+- - '##'
+  - 微调内核性能
+- - '#'
+  - 共享内核
+- - '##'
+  - 第 5 章：网络
+- - '##'
+  - 概述
+- - '#'
+  - 网络层
+- - '##'
+  - 物理层
+- - '##'
+  - 物理协议层
+- - '#'
+  - 逻辑协议
+- - '#'
+  - 互联网协议
+- - '#'
+  - IP 地址
+- - '#'
+  - 应用层
+- - '#'
+  - TCP 和 UDP
+- - '#'
+  - 实践中的网络
+- - '#'
+  - Mbufs
+- - '#'
+  - 什么是位（Bit）？
+- - '#'
+  - 以太网
+- - '##'
+  - 这在实践中意味着？
+- - '##'
+  - 子网掩码
+- - '##'
+  - 掩码技巧
+- - '###'
+  - 表 5.1：子网掩码转换
+- - '##'
+  - 可用 IP 地址
+- - '##'
+  - 连接到以太网
+- - '##'
+  - 接口上的多个地址
+- - '##'
+  - 使用 netstat
+- - '#'
+  - netstat -na
+- - '##'
+  - 表 5.2：常见的路由标志
+- - '##'
+  - 第 6 章：升级 FreeBSD
+- - '##'
+  - 概述
+- - '##'
+  - FreeBSD 版本
+- - '##'
+  - FreeBSD–current
+- - '##'
+  - FreeBSD–stable
+- - '##'
+  - 代码冻 (Code Freeze)
+- - '##'
+  - 快照 (Snapshots)
+- - '##'
+  - 更新
+- - '##'
+  - 通过 CVSup
+- - '##'
+  - 安装 CVSup
+- - '#'
+  - cd /usr/ports/net/cvsup
+- - '##'
+  - 构建本地 CVSup
+- - '##'
+  - make install
+- - '##'
+  - 集合
+- - '##'
+  - 修改您的文件
+- - '##'
+  - 更新内核
+- - '##'
+  - 安装系统
+- - '##'
+  - /etc 的更改
+- - '##'
+  - mergemaster
+- - '##'
+  - 默认文件
+- - '##'
+  - 控制访问
+- - '##'
+  - 身份验证
+- - '##'
+  - 第 7 章：保护您的系统
+- - '##'
+  - 概述
+- - '##'
+  - 谁是敌人？
+- - '##'
+  - 脚本小子 (Scripties)
+- - '##'
+  - 高级攻击 (Advanced Attackers)
+- - '##'
+  - 安全公告
+- - '##'
+  - 订阅
+- - '##'
+  - 你获得什么
+- - '##'
+  - 安装安全方案 (Installation Profiles)
+- - '##'
+  - 极高 (Extreme)
+- - '##'
+  - 组
+- - '##'
+  - 一些有趣的组
+- - '##'
+  - 权限
+- - '##'
+  - 更改文件所有权
+- - '##'
+  - 默认组
+- - '##'
+  - 创建新用户
