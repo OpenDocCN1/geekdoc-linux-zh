@@ -1,0 +1,2 @@
++   [Kali Linux：2本合1：初初者的 Kali Linux 入门指南与 Kali Linux 黑客攻击，包含大量无线网络与渗透测试的实用示例](README.md)
++   [Kali Linux：2本合1：初初者的 Kali Linux 入门指南与 Kali Linux 黑客攻击，包含大量无线网络与渗透测试的实用示例](kali-linux-2-books-in-1-the-complete-beginners-guide-about-k.md)
