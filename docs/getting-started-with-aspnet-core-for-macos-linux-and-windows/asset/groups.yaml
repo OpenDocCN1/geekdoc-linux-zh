@@ -1,0 +1,3033 @@
+- md: "\n# Getting Started With ASP.NET Core\n# for macOS, Linux and Windows\n\n![](img/03410162e36ac22ee4df2780b4d3848c_0_0.png)\n\
+    \nMVP Most Valuable Professional Agus Kurniawan\n\n# Copyright\n\nGetting Started\
+    \ with ASP.NET Core for macOS, Linux, and Windows\n\nAgus Kurniawan\n\n1st Edition,\
+    \ 2017\n\nCopyright © 2017 Agus Kurniawan\n\n## Table of Contents\n\n+ Copyright\n\
+    Preface\n1. Preparing Development Environment\n  1.1 ASP.NET Core\n  1.2 System\
+    \ Requirements\n  1.3 Development Tools\n2. Deploying ASP.NET Core\n  2.1 Getting\
+    \ Started\n  2.2 Deploying ASP.NET Core on macOS, Linux and Windows\n  2.3 Testing\n\
+    3. ASP.NET Core MVC Development\n  3.1 Getting Started\n  3.2 ASP.NET Core Template\n\
+    \  3.3 Building Your First ASP.NET Core MVC Application\n    3.3.1 Creating A\
+    \ Project\n    3.3.2 Build and Run the Program\n  3.4 Building ASP.NET Core MVC\
+    \ Application\n    3.4.1 Creating a Project\n    3.4.2 Configuring ASP.NET Core\
+    \ MVC Project\n    3.4.3 Writing Program\n      3.4.3.1 Creating Model\n     \
+    \ 3.4.3.2 Creating Controller\n      3.4.3.3 Creating View\n    3.4.4 Testing\n\
+    \  3.5 What's Next?\n4. ASP.NET Core API Development\n  4.1 Getting Started\n\
+    ## 4.2 Building ASP.NET Core API Application\n\n### 4.2.1 Creating a Project\n\
+    \n### 4.2.2 Writing Program for ASP.NET Core API\n\n### 4.2.3 Testing\n\n## 4.3\
+    \ Client Application for ASP.NET Core API\n\n### 4.3.1 Creating Controller\n\n\
+    ### 4.3.2 Creating View\n\n## 4.4 Testing\n\n## 5. ASP.NET Core and Angular 2\n\
+    \n### 5.1 Getting Started\n\n### 5.2 ASP.NET Core and Angular 2 Project Template\n\
+    \n### 5.3 Run Demo: ASP.NET Core Angular SPA\n\n### 5.3.1 Creating a Project\n\
+    \n### 5.3.2 Running the Program\n\n### 5.4 What's The Next?\n\n## 6. ASP.NET Core,\
+    \ Entity Framework Core and PostgreSQL\n\n### 6.1 Getting Started\n\n### 6.2 PostgreSQL\
+    \ Database\n\n### 6.3 Entity Framework Core\n\n### 6.4 Demo Database Application\n\
+    \n### 6.4.1 Build PostgreSQL Database\n\n### 6.4.2 Creating a ASP.NET Core MVC\
+    \ Project\n\n### 6.4.3 Configure ASP.NET Core MVC Project\n\n### 6.4.4 Develop\
+    \ Data Access\n\n### 6.4.5 Develop ASP.NET Core MVC Controllers\n\n### 6.4.6 Develop\
+    \ ASP.NET Core MVC Views\n\n### 6.4.7 Testing\n\nSource Code\n\nContact\n\n# Preface\n\
+    \nThis book was written to help anyone who wants to get started with ASP.NET Core.\
+    \ It describes ASP.NET Core deploying and the basic elements of ASP.NET Core and\
+    \ shows how to work with several ASP.NET Core features.\n\nAgus Kurniawan\n\n\
+    Depok, January 2017\n\n## 1. Preparing Development Environment\n\n### 1.1 ASP.NET\
+    \ Core\n\nASP.NET Core is a lean and composable framework for building web and\
+    \ cloud applications. ASP.NET Core is fully open source and available on GitHub,\
+    \ http://github.com/aspnet/home.\n\nThis book will focus on how to develop ASP.NET\
+    \ Core 1.1 on OS X, Linux and Windows platforms. We use ASP.NET Core 1.1 version.\n\
+    \n### 1.2 System Requirements\n\nFor testing, I use Debian/Ubuntu Linux, macOS\
+    \ and Windows 10. You can use any Linux distribution which inherits from Debian\
+    \ based.\n\n### 1.3 Development Tools\n\nIn general, we can use any editor to\
+    \ write ASP.NET Core program. You use Sublime Text, http://www.sublimetext.com/,\
+    \ to write ASP.NET Core codes. Microsoft also released Visual Studio Code and\
+    \ you can download it on https://code.visualstudio.com/. In this book, I use Visual\
+    \ Studio Code to develop ASP.NET Core programs.\n\n```\n{\n  \"Microsoft.Net.Core\"\
+    : {\n    \"version\": \"1.0\",\n    \"type\": \"nuget\"\n  },\n  \"Microsoft.AspNetCore.Diagnostics\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.AspNetCore.Mvc.Mvc\": {\n\
+    \    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.AspNetCore.Razor.Tools\": {\n\
+    \    \"version\": \"1.0.8-preview2-final\",\n    \"type\": \"build\"\n  },\n \
+    \ \"Microsoft.AspNetCore.Server.IISIntegration\": {\n    \"version\": \"1.1.0\"\
+    \n  },\n  \"Microsoft.AspNetCore.Server.Kestrel\": {\n    \"version\": \"1.1.0\"\
+    \n  },\n  \"Microsoft.AspNetCore.StaticFiles\": {\n    \"version\": \"1.1.0\"\n\
+    \  },\n  \"Microsoft.Extensions.Configuration.EnvironmentVariables\": {\n    \"\
+    version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Configuration.UserSecrets\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Logging.Console\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Mvc\": {\n   \
+    \ \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Options.ConfigurationExtensions\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"tools\": {\n    \"Microsoft.AspNetCore.Razor.Tools\"\
+    : \"1.0.8-preview2-final\",\n    \"Microsoft.NetCore.Web.Tools\": \"1.0.8-preview2-final\"\
+    \n  }\n}\n```\n\n## 2 Deploying ASP.NET Core\n\nIn this chapter we will learn\
+    \ how to deploy ASP.NET Core.\n\n### 2.1 Getting Started\n\nIn this section we\
+    \ start to deploy ASP.NET Core on your platform. In this book I use ASP.NET Core\
+    \ 1.1. Please follow installation steps in the next section.\n\n### 2.2 Deploying\
+    \ ASP.NET Core on macOS, Linux and Windows\n\nTo install ASP.NET Core on your\
+    \ platform, you should install .NET Core SDK. You can download it on https://www.microsoft.com/net/download/core.\n\
+    \nInstallation steps can be read in this website:\n\n- macOS: https://www.microsoft.com/net/core#macos\n\
+    - Linux: https://www.microsoft.com/net/core#linuxredhat\n  Ubuntu: https://www.microsoft.com/net/core#linuxubuntu\n\
+    - Windows: https://www.microsoft.com/net/core#windowsys2015\n\nYou can see .NET\
+    \ Core SDK 1.1 on macOS.\n\n# Welcome to the Microsoft .NET Core 1.1.0 - SDK 1.0.0\
+    \ Preview 2.1-003177 (x64) Installer\n\n# Microsoft .NET Core CLI\n\n.NET Core\
+    \ is a development platform that you can use to build command-line applications,\
+    \ microservices and modern websites. It is open source, cross-platform and is\
+    \ supported by Microsoft. If you are enjoying it, please consider joining the\
+    \ active community of developers who are contributing to the de-facto standard.\
+    \ .NET Core is a development platform that you can use to build command-line applications,\
+    \ microservices and modern websites. It is open source, cross-platform and is\
+    \ supported by Microsoft. If you are enjoying it, please consider joining the\
+    \ active community of developers who are contributing to the. .NET Core is a development\
+    \ platform that you can use to build command-line applications, microservices\
+    \ and modern websites. It is open source, cross-platform and is supported by Microsoft.\
+    \ If you are enjoying it, please consider joining the active community of developers\
+    \ who are contributing to the. .NET Core is a development platform that you can\
+    \ use to build command-line applications, microservices and modern websites. It\
+    \ is open source, cross-platform and is supported by Microsoft. If you are enjoying\
+    \ it, please consider joining the active community of developers who are contributing\
+    \ to the. .NET Core is a development platform that you can use to build command-line\
+    \ applications, microservices and modern websites. It is open source, cross-platform\
+    \ and is supported by Microsoft. If you are enjoying it, please consider joining\
+    \ the active community of developers who are contributing to the. .NET Core is\
+    \ a development platform that you can use to build command-line applications,\
+    \ microservices and modern websites. It is open source, cross-platform and is\
+    \ supported by Microsoft. If you are enjoying it, please consider joining the\
+    \ active community of developers who are contributing to the. .NET Core is a development\
+    \ platform that you can use to build command-line applications, microservices\
+    \ and modern websites. It is open source, cross-platform and is supported by Microsoft.\
+    \ If you are enjoying it, please consider joining the active community of developers\
+    \ who are contributing to the. .NET Core is a development platform that you can\
+    \ use to build command-line applications, microservices and modern websites. It\
+    \ is open source, cross-platform and is supported by Microsoft. If you are enjoying\
+    \ it, please consider joining the active community of developers who are contributing\
+    \ to the. .NET Core is a development platform that you can use to build command-line\
+    \ applications, microservices and modern websites. It is open source, cross-platform\
+    \ and is supported by Microsoft. If you are enjoying it, please consider joining\
+    \ the active community of developers who are contributing to the de-fact. .NET\
+    \ Core is a development platform that you can use to build command-line applications,\
+    \ microservices and modern websites. It is open source, cross-platform and is\
+    \ supported by Microsoft. If you are enjoying it, please consider joining the\
+    \ active community of developers who are contributing to the. .NET Core is a development\
+    \ platform that you can use to build command-line applications, microservices\
+    \ and modern websites. It is open source, cross-platform and is supported by Microsoft.\
+    \ If you are enjoying it, please consider joining the active community of developers\
+    \ who are contributing to the. .NET Core is a development platform that you can\
+    \ use to build command-line applications, microservices and modern websites. It\
+    \ is open source, cross-platform and is supported by Microsoft. If you are enjoying\
+    \ it, please consider joining the active community of developers who are contributing\
+    \ to the de-fact. .NET Core is a development platform that you can use to build\
+    \ command-line applications, microservices and modern websites. It is open source,\
+    \ cross-platform and is supported by Microsoft. If you are enjoying it, please\
+    \ consider joining the active community of developers who are contributing to\
+    \ the. .NET Core is a development platform that you can use to build command-line\
+    \ applications, microservices and modern websites. It is open source, cross-platform\
+    \ and is supported by Microsoft. If you are enjoying it, please consider joining\
+    \ the active community of developers who are contributing to the. .NET Core is\
+    \ a development platform that you can use to build command-line applications,\
+    \ microservices and modern websites. It is open source, cross-platform and is\
+    \ supported by Microsoft. If you are enjoying it, please consider joining the\
+    \ active community of developers who are contributing to the. .NET Core is a development\
+    \ platform that you can use to build command-line applications, microservices\
+    \ and modern websites. It is open source, cross-platform and is supported by Microsoft.\
+    \ If you are enjoying it, please consider joining the active community of developers\
+    \ who are contributing to the de-fact.\n\n- Introduction\n- License\n- Installation\n\
+    - Summary\n\n![](img/03410162e36ac22ee4df2780b4d3848c_8_0.png)\n\nYou can see\
+    \ .NET Core SDK 1.1 on macOS.\n\n# Welcome to the Microsoft .NET Core 1.1.0 -\
+    \ SDK 1.0.0 Preview 2.1-003177 (x64) Installer\n\n# Microsoft .NET Core CLI\n\n\
+    .NET Core is a development platform that you can use to build command-line applications,\
+    \ microservices and modern websites. It is open source, cross-platform and is\
+    \ supported by Microsoft. If you are enjoying it, please consider joining the\
+    \ active community is a development platform that you can use to build command-line\
+    \ applications, microservices and modern websites. It is open source, cross-platform\
+    \ and is supported by Microsoft. If you are enjoying it, please consider joining\
+    \ the active community of developers who are contributing to the.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_9_0.png)\n\
+    \n# 2.3 Testing\n\nTo test our .NET Core, we build a simple Console application.\
+    \ From Terminal, type these commands.\n\n```\n$ mkdir hello\n$ cd hello\n$ dotnet\
+    \ new\n```\n\nNow you can reload all libraries for .NET Core. Then, run the program.\n\
+    \n```\n$ dotnet restore\n$ dotnet run\n```\n\nYou should see \"Hello World!\"\
+    \ on Terminal. You can see it in Figure below, my implementation.\n\n```\nCreated\
+    \ new C# project in /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello.\n\
+    agusk$ dotnet restore\nlog : Restoring packages for /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello/project.json\n\
+    log : Writing lock file to disk. Path: /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello/project.lock\n\
+    log : /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello/project.lock\n\
+    log : Restore completed in 112ms.\nagusk$ dotnet run\nProject.hello (.NETCoreApp,Version=v.1)\
+    \ will be compiled because expected outputs are missing\nCompiling hello for .NETCoreApp,Version=v.1\n\
+    Compilation succeeded.\n0 Warning(s)\n0 Error(s)\nTime elapsed 00:00:01.1428534\n\
+    ```\n\nHello World!\nagusk$\n\n## 3. ASP.NET Core MVC Development\n\nIn this chapter\
+    \ I'm going to explain how to work with ASP.NET Core MVC development.\n\n### 3.1\
+    \ Getting Started\n\nIn this chapter, we learn how to write a program for ASP.NET\
+    \ Core MVP from scratch.\n\n### 3.2 ASP.NET Core Template\n\nTo simply our development,\
+    \ we can use ASP.NET Core template from yo. Firstly, your computer should already\
+    \ installed Node.js, https://nodejs.org/.\n\nAfter installed Node.js, you can\
+    \ install yo and ASP.NET Core template. Type these commands.\n\n```\n$ npm install\
+    \ -g bower\n$ npm install -g generator-aspnet\n```\n\nIf succeed, you can test\
+    \ it. Open Terminal and type this command.\n\n```\n$ yo aspnet\n```\n\nYou should\
+    \ see a list of template, shown in Figure below.\n"
+  mdcn: "\n\n# ASP.NET Core 入门\n# 适用于 macOS, Linux 和 Windows\n\n![](img/03410162e36ac22ee4df2780b4d3848c_0_0.png)\n\
+    \nMVP 价值专业人士 Agus Kurniawan\n\n# 版权\n\n适用于 macOS、Linux 和 Windows 的 ASP.NET Core\
+    \ 入门\n\nAgus Kurniawan\n\n第1版，2017年\n\n版权所有 © 2017 Agus Kurniawan\n\n## 目录\n\n\
+    + 版权\n前言\n1. 开发环境\n  1.1 ASP.NET Core\n  1.2 系统要求\n  1.3 开发工具\n2. 部署 ASP.NET Core\n\
+    \  2.1 入门\n  2.2 在 macOS, Linux 和 Windows 上部署 ASP.NET Core\n  2.3 测试\n3. ASP.NET\
+    \ Core MVC 开发\n  3.1 入门\n  3.2 ASP.NET Core 模板\n  3.3 构建你的第一个 ASP.NET Core MVC\
+    \ 应用\n    3.3.1 创建项目\n    3.3.2 编译并运行程序\n  3.4 构建 ASP.NET Core MVC 应用\n    3.4.1\
+    \ 创建项目\n    3.4.2 配置 ASP.NET Core MVC 项目\n    3.4.3 编写程序\n      3.4.3.1 创建 Model\n\
+    \      3.4.3.2 创建 Controller\n      3.4.3.3 创建 View\n    3.4.4 测试\n  3.5 接下来\n\
+    4. ASP.NET Core API 开发\n  4.1 入门\n## 4.2 构建 ASP.NET Core API 应用\n\n### 4.2.1 创建项目\n\
+    \n### 4.2.2 为 ASP.NET Core API 编写程序\n\n### 4.2.3 测试\n\n## 4.3 ASP.NET Core API\
+    \ 客户端应用\n\n### 4.3.1 创建 Controller\n\n### 4.3.2 创建 View\n\n## 4.4 测试\n\n## 5.\
+    \ ASP.NET Core 和 Angular 2\n\n### 5.1 入门\n\n### 5.2 ASP.NET Core 和 Angular 2 项目模板\n\
+    \n### 5.3 运行 Demo：ASP.NET Core Angular SPA\n\n### 5.3.1 创建项目\n\n### 5.3.2 运行程序\n\
+    \n### 5.4 接下来是什么\n\n## 6. ASP.NET Core, Entity Framework Core 和 PostgreSQL\n\n\
+    ### 6.1 入门\n\n### 6.2 PostgreSQL 数据库\n\n### 6.3 Entity Framework Core\n\n### 6.4\
+    \ Demo 数据库应用\n\n### 6.4.1 构建 PostgreSQL 数据库\n\n### 6.4.2 创建 ASP.NET Core MVC 项目\n\
+    \n### 6.4.3 配置 ASP.NET Core MVC 项目\n\n### 6.4.4 开发数据访问\n\n### 6.4.5 开发 ASP.NET\
+    \ Core MVC Controllers\n\n### 6.4.6 开发 ASP.NET Core MVC Views\n\n### 6.4.7 测试\n\
+    \n源代码\n\n联系方式\n\n# 前言\n\n这本书旨在帮助任何想要上手 ASP.NET Core 的人。它描述了 ASP.NET Core 的部署以及\
+    \ ASP.NET Core 的基本元素，并展示了如何使用多种 ASP.NET Core 功能。\n\nAgus Kurniawan\n\nDepok，2017年1月\n\
+    \n## 1. 准备开发环境\n\n### 1.1 ASP.NET Core\n\nASP.NET Core 是一个用于构建 Web 和云应用的轻量级可组合框架。ASP.NET\
+    \ Core 完全开源，并可以在 GitHub 上找到：http://github.com/aspnet/home。\n\n本书将重点介绍如何在 OS X、Linux\
+    \ 和 Windows 平台上开发 ASP.NET Core 1.1。我们使用的是 ASP.NET Core 1.1 版本。\n\n### 1.2 系统要求\n\
+    \n为了测试，我使用了 Debian/Ubuntu Linux、macOS 和 Windows 10。你可以使用任何基于 Debian 的 Linux 发行版。\n\
+    \n### 1.3 开发工具\n\n通常，我们可以使用任何编辑器来编写 ASP.NET Core 程序。你可以使用 Sublime Text (http://www.sublimetext.com/)\
+    \ 来编写 ASP.NET Core 代码。微软还发布了 Visual Studio Code，你可以在 https://code.visualstudio.com/\
+    \ 下载。在书中，我使用 Visual Studio Code 开发 ASP.NET Core 程序。\n\n```\n{\n  \"Microsoft.Net.Core\"\
+    : {\n    \"version\": \"1.0\",\n    \"type\": \"nuget\"\n  },\n  \"Microsoft.AspNetCore.Diagnostics\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.AspNetCore.Mvc.Mvc\": {\n\
+    \    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.AspNetCore.Razor.Tools\": {\n\
+    \    \"version\": \"1.0.8-preview2-final\",\n    \"type\": \"build\"\n  },\n \
+    \ \"Microsoft.AspNetCore.Server.IISIntegration\": {\n    \"version\": \"1.1.0\"\
+    \n  },\n  \"Microsoft.AspNetCore.Server.Kestrel\": {\n    \"version\": \"1.1.0\"\
+    \n  },\n  \"Microsoft.AspNetCore.StaticFiles\": {\n    \"version\": \"1.1.0\"\n\
+    \  },\n  \"Microsoft.Extensions.Configuration.EnvironmentVariables\": {\n    \"\
+    version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Configuration.UserSecrets\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Logging.Console\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Mvc\": {\n   \
+    \ \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Options.ConfigurationExtensions\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"tools\": {\n    \"Microsoft.AspNetCore.Razor.Tools\"\
+    : \"1.0.8-preview2-final\",\n    \"Microsoft.NetCore.Web.Tools\": \"1.0.8-preview2-final\"\
+    \n  }\n}\n```\n\n## 2. 部署 ASP.NET Core\n\n在本章中，我们将学习如何部署 ASP.NET Core。\n\n###\
+    \ 2.1 入门\n\n在本节中，我们开始在你的平台上部署 ASP.NET Core。在书中，我使用的是 ASP.NET Core 1.1。请遵循下一节中的安装步骤。\n\
+    \n### 2.2 在 macOS, Linux 和 Windows 上部署 ASP.NET Core\n\n要在你的平台上安装 ASP.NET Core，你应该安装\
+    \ .NET Core SDK。你可以在 https://www.microsoft.com/net/download/core 下载它。\n\n可以在此网站上阅读安装步骤：\n\
+    \n- macOS: https://www.microsoft.com/net/core#macos\n- Linux: https://www.microsoft.com/net/core#linux\n\
+    - Ubuntu: https://www.microsoft.com/net/core#ubuntu\n- Windows: https://www.microsoft.com/net/core#windows\n\
+    \n你可以在 macOS 上看到 .NET Core SDK 1.1。\n\n# 欢迎使用 Microsoft .NET Core 1.1.0 - SDK\
+    \ 1.0.0 Preview 2.1-003177 (x64) 安装\n\n# Microsoft .NET Core CLI\n\n.NET Core\
+    \ 是一个用于构建命令行应用程序、微服务和现代网站的开发平台。它是开源、跨平台的，并由微软支持。如果你喜欢它，请考虑加入活跃的开发者社区……（注：原文此处有大量重复的描述性文本，已按翻译要求保留核心信息）\n\
+    \n- 简介\n- 许可证\n- 安装\n- 总结\n\n![](img/03410162e36ac22ee4df2780b4d3848c_8_0.png)\n\
+    \n你可以在 macOS 上看到 .NET Core SDK 1.1。\n\n# 欢迎使用 Microsoft .NET Core 1.1.0 - SDK\
+    \ 1.0.0 Preview 2.1-003177 (x64) 安装\n\n# Microsoft .NET Core CLI\n\n.NET Core\
+    \ 是一个用于构建命令行应用程序、微服务和现代网站的开发平台。它是开源、跨平台的，并由微软支持。如果你喜欢它，请考虑加入活跃的开发者社区……\n\n![](img/03410162e36ac22ee4df2780b4d3848c_9_0.png)\n\
+    \n# 2.3 测试\n\n为了测试我们的 .NET Core，我们构建了一个简单的控制台应用程序。在终端中输入这些命令。\n\n```\n$ mkdir\
+    \ hello\n$ cd hello\n$ dotnet new\n```\n\n现在你可以加载所有 .NET Core 库。然后运行程序。\n\n```\n\
+    $ dotnet restore\n$ dotnet run\n```\n\n你应该在终端中看到“Hello World!”。你可以查看下面的图，这是我的实现。\n\
+    \n```\nCreated new C# project in /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello.\n\
+    agusk$ dotnet restore\nlog : Restoring packages for /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello/project.json\n\
+    log : Writing lock file to disk. Path: /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello/project.lock\n\
+    log : /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello/project.lock\n\
+    log : Restore completed in 112ms.\nagusk$ dotnet run\nProject.hello (.NETCoreApp,Version=v.1)\
+    \ will be compiled because expected outputs are missing\nCompiling hello for .NETCoreApp,Version=v.1\n\
+    Compilation succeeded.\n0 Warning(s)\n0 Error(s)\nTime elapsed 00:00:01.1428534\n\
+    ```\n\nHello World!\nagusk$\n\n## 3. ASP.NET Core MVC 开发\n\n在本章中我将解释如何进行 ASP.NET\
+    \ Core MVC 开发。\n\n### 3.1 入门\n\n在本章中，我们学习如何从零为 ASP.NET Core MVP 编写程序。\n\n### 3.2\
+    \ ASP.NET Core 模板\n\n为了简化开发，我们可以使用 yo 的 ASP.NET Core 模板。首先，你的电脑应该已经安装 Node.js\
+    \ (https://nodejs.org/)。\n\n安装 Node.js 后，你可以安装 yo 和 ASP.NET Core 模板。输入这些命令。\n\n\
+    ```\n$ npm install -g bower\n$ npm install -g generator-aspnet\n```\n\n如果成功，你可以测试它。打开终端并输入此命令。\n\
+    \n```\n$ yo aspnet\n```\n\n你应该能看到模板列表，如下所示。\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # Getting Started With
+
+    # ASP.NET Core
+
+    for macOS, Linux and Windows
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_0_0.png)
+
+
+    MVP Most Valuable Professional Agus Kurniawan'
+  - '[PAGE 1]
+
+
+    # Copyright
+
+
+    Getting Started with ASP.NET Core for macOS, Linux, and Windows
+
+
+    Agus Kurniawan
+
+
+    1st Edition, 2017
+
+
+    Copyright © 2017 Agus Kurniawan'
+  - "[PAGE 2]\n\n# # Table of Contents\n\n+   Copyright\nPreface\n1. Preparing Development\
+    \ Environment\n  1.1 ASP.NET Core\n  1.2 System Requirements\n  1.3 Development\
+    \ Tools\n2. Deploying ASP.NET Core\n  2.1 Getting Started\n  2.2 Deploying ASP.NET\
+    \ Core on macOS, Linux and Windows\n  2.3 Testing\n3. ASP.NET Core MVC Development\n\
+    \  3.1 Getting Started\n  3.2 ASP.NET Core Template\n  3.3 Building Your First\
+    \ ASP.NET Core MVC Application\n    3.3.1 Creating A Project\n    3.3.2 Build\
+    \ and Run the Program\n  3.4 Building ASP.NET Core MVC Application\n    3.4.1\
+    \ Creating a Project\n    3.4.2 Configuring ASP.NET Core MVC Project\n    3.4.3\
+    \ Writing Program\n      3.4.3.1 Creating Model\n      3.4.3.2 Creating Controller\n\
+    \      3.4.3.3 Creating View\n    3.4.4 Testing\n  3.5 What's Next?\n4. ASP.NET\
+    \ Core API Development\n  4.1 Getting Started"
+  - '[PAGE 3]
+
+
+    # 4.2 Building ASP.NET Core API Application
+
+
+    # 4.2.1 Creating a Project
+
+
+    # 4.2.2 Writing Program for ASP.NET Core API
+
+
+    # 4.2.3 Testing
+
+
+    # 4.3 Client Application for ASP.NET Core API
+
+
+    # 4.3.1 Creating Controller
+
+
+    # 4.3.2 Creating View
+
+
+    # 4.4 Testing
+
+
+    # 5. ASP.NET Core and Angular 2
+
+
+    # 5.1 Getting Started
+
+
+    # 5.2 ASP.NET Core and Angular 2 Project Template
+
+
+    # 5.3 Run Demo: ASP.NET Core Angular SPA
+
+
+    # 5.3.1 Creating a Project
+
+
+    # 5.3.2 Running the Program
+
+
+    # 5.4 What''s The Next?
+
+
+    # 6. ASP.NET Core, Entity Framework Core and PostgreSQL
+
+
+    # 6.1 Getting Started
+
+
+    # 6.2 PostgreSQL Database
+
+
+    # 6.3 Entity Framework Core
+
+
+    # 6.4 Demo Database Application
+
+
+    # 6.4.1 Build PostgreSQL Database
+
+
+    # 6.4.2 Creating a ASP.NET Core MVC Project
+
+
+    # 6.4.3 Configure ASP.NET Core MVC Project
+
+
+    # 6.4.4 Develop Data Access
+
+
+    # 6.4.5 Develop ASP.NET Core MVC Controllers
+
+
+    # 6.4.6 Develop ASP.NET Core MVC Views
+
+
+    # 6.4.7 Testing
+
+
+    Source Code
+
+
+    Contact'
+  - '[PAGE 4]
+
+
+    # Preface
+
+
+    This book was written to help anyone want to get started with ASP.NET Core. It
+    describes ASP.NET Core deploying and the basic elements of ASP.NET Core and shows
+    how to work with several ASP.NET Core features.
+
+
+    Agus Kurniawan
+
+
+    Depok, January 2017'
+  - '[PAGE 5]
+
+
+    # # 1. Preparing Development Environment
+
+
+    # ## 1.1 ASP.NET Core
+
+
+    ASP.NET Core is a lean and composable framework for building web and cloud applications.
+    ASP.NET Core is fully open source and available on GitHub, http://github.com/aspnet/home
+    .
+
+
+    This book will focus on how to develop ASP.NET Core 1.1 on OS X, Linux and Windows
+    platforms. We use ASP.NET Core 1.1 version.
+
+
+    # ## 1.2 System Requirements
+
+
+    For testing, I use Debian/Ubuntu Linux, macOS and Windows 10. You can use any
+    Linux distribution which inheritance from Debian based.
+
+
+    # ## 1.3 Development Tools
+
+
+    In general, we can use any editor to write ASP.NET Core program. You use Sublime
+    Text, http://www.sublimetext.com/ , to write ASP.NET Core codes. Microsoft also
+    released Visual Studio Code and you can download it on https://code.visualstudio.com/
+    . In this book, I use Visual Studio Code to develop ASP.NET Core program.'
+  - "[PAGE 6]\n\n```\n{\n  \"Microsoft.Net.Core\": {\n    \"version\": \"1.0\",\n\
+    \    \"type\": \"nuget\"\n  },\n  \"Microsoft.AspNetCore.Diagnostics\": {\n  \
+    \  \"version\": \"1.1.0\"\n  },\n  \"Microsoft.AspNetCore.Mvc.Mvc\": {\n    \"\
+    version\": \"1.1.0\"\n  },\n  \"Microsoft.AspNetCore.Razor.Tools\": {\n    \"\
+    version\": \"1.0.8-preview2-final\",\n    \"type\": \"build\"\n  },\n  \"Microsoft.AspNetCore.Server.IISIntegration\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.AspNetCore.Server.Kestrel\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.AspNetCore.StaticFiles\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Configuration.EnvironmentVariables\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Configuration.UserSecrets\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Logging.Console\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Mvc\": {\n   \
+    \ \"version\": \"1.1.0\"\n  },\n  \"Microsoft.Extensions.Options.ConfigurationExtensions\"\
+    : {\n    \"version\": \"1.1.0\"\n  },\n  \"tools\": {\n    \"Microsoft.AspNetCore.Razor.Tools\"\
+    : \"1.0.8-preview2-final\",\n    \"Microsoft.NetCore.Web.Tools\": \"1.0.8-preview2-final\"\
+    \n  }\n}\n```"
+  - "[PAGE 7]\n\n# 2 Deploying ASP.NET Core\n\nIn this chapter we will learn how to\
+    \ deploy ASP.NET Core.\n\n# 2.1 Getting Started\n\nIn this section we start to\
+    \ deploy ASP.NET Core on your platform. In this book I use ASP.NET Core 1.1. Please\
+    \ follow installation steps on next section.\n\n# 2.2 Deploying ASP.NET Core on\
+    \ macOS, Linux and Windows\n\nTo install ASP.NET Core on your platform, you should\
+    \ install .NET Core SDK. You can download it on https://www.microsoft.com/net/download/core.\n\
+    \nInstallation steps can be read in this website:\n\n+   - macOS: https://www.microsoft.com/net/core#macos\n\
+    - Linux: https://www.microsoft.com/net/core#linuxredhat ,\n  Ubuntu: https://www.microsoft.com/net/core#linuxubuntu\n\
+    - Windows: https://www.microsoft.com/net/core#windowsys2015\n\nYou can see .NET\
+    \ Core SDK 1.1 on macOS."
+  - '[PAGE 8]
+
+
+    # Welcome to the Microsoft .NET Core 1.1.0 - SDK 1.0.0 Preview 2.1-003177 (x64)
+    Installer
+
+
+    # Microsoft .NET Core CLI
+
+
+    .NET Core is a development platform that you can use to build command-line applications,
+    microservices and modern websites. It is open source, cross-platform and is supported
+    by Microsoft. If you are enjoying it, please consider joining the active community
+    of developers who are contributing to the project on GitHub (https://github.com/dotnet/core).
+    We happily accept issues and PRs.
+
+
+    This package contains all the tools you will need to start writing applications
+    with .NET Core. It includes the several tools, including the C# compiler and NuGet
+    package manager, and a copy of .NET Core for both you and the tools to use.
+
+
+    +   - Introduction
+
+    - License
+
+    - Destination Select
+
+    - Installation Type
+
+    - Installation
+
+    - Summary
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_8_0.png)
+
+
+    Done, you can test. Open Terminal and type this command.
+
+
+    ```
+
+    $ dotnet -help
+
+    ```
+
+
+    You shouldl see a list of dotnet command.'
+  - '[PAGE 9]
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_9_0.png)
+
+
+    # 2.3 Testing
+
+
+    To test our .NET Core, we build a simple Console application. From Terminal, type
+    these commands.
+
+
+    ```
+
+    $ mkdir hello
+
+    $ cd hello
+
+    $ dotnet new
+
+    ```
+
+
+    Now you can reload all required libraries for .NET Core application. Then, run
+    the program.
+
+
+    ```
+
+    $ dotnet restore
+
+    $ dotnet run
+
+    ```
+
+
+    You should see "Hello World!" message on Terminal. You can see it in Figure below
+    from my implementation.'
+  - '[PAGE 10]
+
+
+    ```
+
+    Created new C# project in /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello.
+
+    agusk$ dotnet restore
+
+    log : Restoring packages for /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello/project.json
+
+    log : Writing lock file... to disk. Path: /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello/project.lock.json
+
+    log : /Users/agusk/Documents/MyBooks/peppress/aspnet_core/codes/hello/project.lock.json
+
+    log : Restore completed in 112ms.
+
+    Program.cs project.json project.lock.json
+
+    agusk$ dotnet run
+
+    Project.hello (.NETCoreApp,Version=v1.1) will be compiled because expected outputs
+    are missing
+
+    Compiling hello for .NETCoreApp,Version=v1.1
+
+    Compilation succeeded.
+
+    0 Warning(s)
+
+    0 Error(s)
+
+    Time elapsed 00:00:01.1428534
+
+    ```
+
+
+    Hello World!
+
+    agusk$'
+  - '[PAGE 11]
+
+
+    # 3. ASP.NET Core MVC Development
+
+
+    In this chapter I''m going to explain how to work with ASP.NET Core MVC development.
+
+
+    # 3.1 Getting Started
+
+
+    In this chapter, we learn how to write a program for ASP.NET Core MVP from scratch.
+
+
+    # 3.2 ASP.NET Core Template
+
+
+    To simply our development, we can use ASP.NET Core template from yo. Firstly,
+    your computer should already installed Node.js, https://nodejs.org/.
+
+
+    After installed Node.js, you can install yo and ASP.NET Core template. Type these
+    commands.
+
+
+    ```
+
+    $ npm install -g bower
+
+    $ npm install -g generator-aspnet
+
+    ```
+
+
+    If succeed, you can test it. Open Terminal and type this command.
+
+
+    ```
+
+    $ yo aspnet
+
+    ```
+
+
+    You should see a list of template, shown in Figure below.'
+- md: "\nNow you're ready to develop ASP.NET Core.\n\n## 3.3 Building Your First ASP.NET\
+    \ Core MVC Application\n\nIn this case, we build a simple program for ASP.NET\
+    \ Core MVC. We use the template from yo aspnet.\n\n### 3.3.1 Creating A Project\n\
+    \nIn this section, we create a new project for ASP.NET Core MVC. Open Terminal\
+    \ or Command Prompt. Then, you can type this command on Terminal.\n\n```\n$ yo\
+    \ aspnet\n```\n\nSelect Web Application with Bootstrap for UI framework. Given\
+    \ the project name, for instance, MvcDemo.\n\n```\ncodes – TERM_PROGRAM=Apple_Terminal\
+    \ SHELL=/bin/bash — 80×26\nagusk$ yo aspnet\n      Welcome to the\n      marvellous\
+    \ ASP.NET Core\n      generator!\n  |--(o)--| \n  |       | \n  |   U   | \n \
+    \ |  \\   /  |\n /       /  \\\n|         /   \n|---/    /\n|  /      /\n| / \
+    \     /\n|  *  Y\n\n7? What type of application do you want to create? Web Application\n\
+    7? Which UI framework would you like to use? Bootstrap (3.3.6)\n7? What's the\
+    \ name of your ASP.NET application? (WebApplication) MvcDemo|\n```\n\nIf success,\
+    \ you should form this.\n\n### 3.3.2 Build and Run the Program\n\nNow you can\
+    \ test the program. Firstly, we load all required libraries using dotnet restore.\
+    \ Then, we execute the program using dotnet run.\n\n```\n$ cd MvcDemo\n$ dotnet\
+    \ restore\n$ dotnet run\n```\n\nIf success, you can see the program output.\n\n\
+    ![](img/03410162e36ac22ee4df2780b4d3848c_14_0.png)\n\nMvcDemo - dotnet run - 80x26\n\
+    MvcDemo (.NETCoreApp.Version=v1.0) will be compiled because project is not safe\
+    \ for incremental compilation. Use --build-profile flag for more information.\n\
+    Compiling MvcDemo for (.NETCoreApp.Version=v1.0)\nBundling with configuration\
+    \ from /Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcDemo/bundleconfig.json\n\
+    Processing www://root/css/site.min.css\nProcessing www://root/site.min.js\n\n\
+    Compilation succeeded.\n\n+   0 Warning(s)\n0 Error(s)\n\nTime elapsed 00:00:03.045627\n\
+    (The compilation time can be improved. Run dotnet build --build-profile for more\
+    \ information)\n\n+   - Microsoft.Extensions.DependencyInjection.DataProtectionServices[0]\n\
+    - User profile is available. Using '/Users/agusk/.aspnet/DataProtection-Keys'\
+    \ at key repository; key will not be encrypted at rest.\n- Hosting environment:\
+    \ Production\nContent root path: /Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcDemo\n\
+    Now listening on: http://localhost:5000\nApplication started. Press Ctrl+C to\
+    \ shut down.\n\nYou can open a browser and navigate to http://localhost:5000.\
+    \ You can see the form which is shown in Figure below.\n\n## 3.4 Building ASP.NET\
+    \ Core MVC Application\n\nThe second demo is to build ASP.NET Core MVC application\
+    \ from scratch. We develop a simple entry form and utilize ASP.NET Core MVC session.\
+    \ The following is our scenario:\n\n- User fills a form to create a new product\n\
+    - User clicks Save button to save the data\n- The data will be stored to a session\
+    \ stack\n- Then, the data will be shown on another page\n\nWe start to develop.\n\
+    \n### 3.4.1 Creating a Project\n\nFirstly, we create a project by yo aspnet. Open\
+    \ Terminal and type this command:\n\n```\n$ yo aspnet\n```\n\nPlease select Empty\
+    \ Web Application. Given project name, ProductApp.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_16_0.png)\n\
+    \n![](img/03410162e36ac22ee4df2780b4d3848c_17_0.png)\n\nYou should select Empty\
+    \ Web Application. You can load this folder using Visual Studio Code.\n\n### 3.4.2\
+    \ Configuring ASP.Net MVC Project\n\nWe need to create a config file, called project.json,\
+    \ on the project root folder. It consists of required libraries. We write this\
+    \ script for project.json to enable MVC on ASP.Net Core.\n\n- Controllers\n- Models\n\
+    - Views\n\n```json\n{\n  \"dependencies\": {\n    \"Microsoft.NETCore.App\": {\n\
+    \      \"version\": \"1.1.0\",\n      \"type\": \"platform\"\n    },\n    \"Microsoft.AspNetCore.Diagnostics\"\
+    : \"1.1.0\",\n    \"Microsoft.AspNetCore.Mvc\": \"1.1.0\",\n    \"Microsoft.AspNetCore.Razor.TagHelpers\"\
+    : {\n      \"version\": \"1.0.0-preview-2-final\",\n      \"type\": \"build\"\n\
+    \    },\n    \"Microsoft.AspNetCore.Server.IISIntegration\": \"1.1.0\",\n    \"\
+    Microsoft.AspNetCore.Server.Kestrel\": \"1.1.0\",\n    \"Microsoft.AspNetCore.SpaServices\"\
+    : \"1.1.0-*\",\n    \"Microsoft.AspNetCore.StaticFiles\": \"1.1.0\",\n    \"Microsoft.Extensions.Configuration.EnvironmentVariables\"\
+    : \"1.1.0\",\n    \"Microsoft.Extensions.Configuration.Json\": \"1.1.0\",\n  \
+    \  \"Microsoft.Extensions.Configuration.CommandLine\": \"1.1.0\",\n    \"Microsoft.Extensions.Logging\"\
+    : \"1.1.0\",\n    \"Microsoft.Extensions.Logging.Console\": \"1.1.0\",\n    \"\
+    Microsoft.Extensions.Logging.Debug\": \"1.1.0\",\n    \"Microsoft.Extensions.Options.ConfigurationExtensions\"\
+    : \"1.1.0\"\n  },\n  \"tools\": {\n    \"Microsoft.AspNetCoreCore.Razor.Tools\"\
+    : \"1.0.0-preview2-final\",\n    \"Microsoft.AspNetCore.Server.IISIntegration.Tools\"\
+    : \"1.0.0-preview2-final\",\n    \"Microsoft.DotNet.Watcher.Tools\": \"1.0.0-preview2-final\"\
+    \n  },\n  \"frameworks\": {\n    \"netcoreapp1.1\": {\n      \"imports\": [\n\
+    \        \"dotnet5.6\",\n        \"portable-net45+win8\"\n      ]\n    },\n  \
+    \  \"buildOptions\": {\n      \"emitEntryPoint\": true,\n      \"preserveCompilationContext\"\
+    : true,\n      \"compile\": {\n        \"exclude\": [\"node_modules\"]\n     \
+    \ }\n    },\n    \"runtimeOptions\": {\n      \"configProperties\": {\n      \
+    \  \"System.GC.Server\": true\n      }\n    },\n    \"publishOptions\": {\n  \
+    \    \"include\": [\n        \"appsettings.json\",\n        \"ClientApp/dist\"\
+    ,\n        \"Views\",\n        \"web.config\",\n        \"wwwroot\"\n      ],\n\
+    \      \"exclude\": [\n        \"wwwroot/dist/*.map\"\n      ]\n    }\n  }\n}\n\
+    ```\n\nThen, you create the following folder:\n\n![](img/03410162e36ac22ee4df2780b4d3848c_18_0.png)\n\
+    \n## 3.4.3 Writing Program\n\nIn this section, we write our ASP.NET Core program.\n\
+    \n### 3.4.3.1 Creating Model\n\nA model holds a data. In our case, we create a\
+    \ module, called Product, which consists of four properties. Create a file, called\
+    \ Product.cs, and write this code.\n\n```csharp\nusing System.ComponentModel.Annotations;\n\
+    namespace ProductApp.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"Name\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"Product Code\")]\n        public\
+    \ string ProductCode { get; set; }\n        [Display(Name = \"Quantity\")]\n \
+    \       public int Quantity { get; set; }\n        [Display(Name = \"Is Discount\"\
+    )]\n        public bool IsDiscount { get; set; }\n    }\n}\n```\n\nSave this file\
+    \ into Models folder.\n\n### 3.4.3.2 Creating Controller\n\nNow we create MVC\
+    \ controller, called Home controller. Create a file, called HomeController.cs,\
+    \ and write this code.\n\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.Mvc;\n\
+    \nusing ProductApp.Models;\nnamespace ProductApp.Controllers\n{\n    public class\
+    \ HomeController : Controller\n    {\n        public IActionResult Index()\n \
+    \       {\n            return View();\n        }\n        public IActionResult\
+    \ Create()\n        {\n            var product = new Product();\n            return\
+    \ View(product);\n        }\n        [HttpPost]\n        public IActionResult\
+    \ Create(Product obj)\n        {\n        }\n    }\n}\n```\n"
+  mdcn: "\n\n现在你已经准备好开发 ASP.NET Core 了。\n\n## 3.3 构建你的第一个 ASP.NET Core MVC 应用程序\n\n\
+    在本例中，我们为 ASP.NET Core MVC 构建一个简单的程序。我们使用来自 yo aspnet 的模板。\n\n### 3.3.1 创建项目\n\n\
+    在本节中，我们为 ASP.NET Core MVC 创建新项目。打开终端（Terminal）或命令提示符（Command Prompt）。然后，你可以在终端输入此命令。\n\
+    \n```\n$ yo aspnet\n```\n\n选择使用 Bootstrap 作为 UI 框架的 Web （Web Application）。输入项目名称，例如\
+    \ MvcDemo。\n\n```\ncodes – TERM_PROGRAM=Apple_Terminal SHELL=/bin/bash — 80×26\n\
+    agusk$ yo aspnet\n      Welcome to the\n      marvellous ASP.NET Core\n      generator!\n\
+    \  |--(o)--| \n  |       | \n  |   U   | \n  |  \\   /  |\n /       /  \\\n| \
+    \        /   \n|---/    /\n|  /      /\n| /      /\n|  *  Y\n\n7? What type of\
+    \ application do you want to create? Web Application\n7? Which UI framework would\
+    \ you like to use? Bootstrap (3.3.6)\n7? What's the name of your ASP.NET application?\
+    \ (WebApplication) MvcDemo|\n```\n\n如果成功，你应该形成此结构。\n\n### 3.3.2 构建并运行程序\n\n现在你可以测试该程序了。首先，我们使用\
+    \ `dotnet restore` 加载所有所需的库。然后，我们使用 `dotnet run` 执行程序。\n\n```\n$ cd MvcDemo\n\
+    $ dotnet restore\n$ dotnet run\n```\n\n如果成功，你可以看到程序的输出。\n\n![](img/03410162e36ac22ee4df2780b4d3848c_14_0.png)\n\
+    \nMvcDemo - dotnet run - 80x26\nMvcDemo (.NETCoreApp.Version=v1.0) will be compiled\
+    \ because project is not safe for incremental compilation. Use --build-profile\
+    \ flag for more information.\nCompiling MvcDemo for (.NETCoreApp.Version=v1.0)\n\
+    Bundling with configuration from /Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcDemo/bundleconfig.json\n\
+    Processing www://root/css/site.min.css\nProcessing www://root/site.min.js\n\n\
+    Compilation succeeded.\n\n+   0 Warning(s)\n0 Error(s)\n\nTime elapsed 00:00:03.045627\n\
+    (The compilation time can be improved. Run dotnet build --build-profile for more\
+    \ information)\n\n+   - Microsoft.Extensions.DependencyInjection.DataProtectionServices[0]\n\
+    - User profile is available. Using '/Users/agusk/.aspnet/DataProtection-Keys'\
+    \ at key repository; key will not be encrypted at rest.\n- Hosting environment:\
+    \ Production\nContent root path: /Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcDemo\n\
+    Now listening on: http://localhost:5000\nApplication started. Press Ctrl+C to\
+    \ shut down.\n\n你可以打开浏览器并导航到 http://localhost:5000。你可以看到下方所示的表单。\n\n## 3.4 构建\
+    \ ASP.NET Core MVC 应用程序\n\n第二个演示是从零开始构建 ASP.NET Core MVC 应用程序。我们开发了一个简单的输入表单并利用\
+    \ ASP.NET Core MVC 会话（session）。以下是我们的场景：\n\n- 用户填写表单创建一个新产品\n- 用户点击保存按钮保存数据\n\
+    - 数据将存储在会话栈（session stack）中\n- 然后，数据将在另一个页面上显示\n\n我们开始开发。\n\n### 3.4.1 创建项目\n\n\
+    首先，我们通过 yo aspnet 创建项目。打开终端并输入此命令：\n\n```\n$ yo aspnet\n```\n\n请选择空 Web 应用（Empty\
+    \ Web Application）。输入项目名称，ProductApp。\n\n![](img/03410162e36ac22ee4df2780b4d3848c_16_0.png)\n\
+    \n![](img/03410162e36ac22ee4df2780b4d3848c_17_0.png)\n\n你应该选择空 Web 应用。你可以使用 Visual\
+    \ Studio Code 加载此文件夹。\n\n### 3.4.2 配置 ASP.Net MVC 项目\n\n我们需要在项目根文件夹上创建一个名为 `project.json`\
+    \ 的配置文件。它包含了所需的库。我们编写此 `project.json` 脚本以在 ASP.Net Core 上启用 MVC。\n\n- Controllers（控制器）\n\
+    - Models（模型）\n- Views（视图）\n\n```json\n{\n  \"dependencies\": {\n    \"Microsoft.NETCore.App\"\
+    : {\n      \"version\": \"1.1.0\",\n      \"type\": \"platform\"\n    },\n   \
+    \ \"Microsoft.AspNetCore.Diagnostics\": \"1.1.0\",\n    \"Microsoft.AspNetCore.Mvc\"\
+    : \"1.1.0\",\n    \"Microsoft.AspNetCore.Razor.TagHelpers\": {\n      \"version\"\
+    : \"1.0.0-preview-2-final\",\n      \"type\": \"build\"\n    },\n    \"Microsoft.AspNetCore.Server.IISIntegration\"\
+    : \"1.1.0\",\n    \"Microsoft.AspNetCore.Server.Kestrel\": \"1.1.0\",\n    \"\
+    Microsoft.AspNetCore.SpaServices\": \"1.1.0-*\",\n    \"Microsoft.AspNetCore.StaticFiles\"\
+    : \"1.1.0\",\n    \"Microsoft.Extensions.Configuration.EnvironmentVariables\"\
+    : \"1.1.0\",\n    \"Microsoft.Extensions.Configuration.Json\": \"1.1.0\",\n  \
+    \  \"Microsoft.Extensions.Configuration.CommandLine\": \"1.1.0\",\n    \"Microsoft.Extensions.Logging\"\
+    : \"1.1.0\",\n    \"Microsoft.Extensions.Logging.Console\": \"1.1.0\",\n    \"\
+    Microsoft.Extensions.Logging.Debug\": \"1.1.0\",\n    \"Microsoft.Extensions.Options.ConfigurationExtensions\"\
+    : \"1.1.0\"\n  },\n  \"tools\": {\n    \"Microsoft.AspNetCoreCore.Razor.Tools\"\
+    : \"1.0.0-preview2-final\",\n    \"Microsoft.AspNetCore.Server.IISIntegration.Tools\"\
+    : \"1.0.0-preview2-final\",\n    \"Microsoft.DotNet.Watcher.Tools\": \"1.0.0-preview2-final\"\
+    \n  },\n  \"frameworks\": {\n    \"netcoreapp1.1\": {\n      \"imports\": [\n\
+    \        \"dotnet5.6\",\n        \"portable-net45+win8\"\n      ]\n    },\n  \
+    \  \"buildOptions\": {\n      \"emitEntryPoint\": true,\n      \"preserveCompilationContext\"\
+    : true,\n      \"compile\": {\n        \"exclude\": [\"node_modules\"]\n     \
+    \ }\n    },\n    \"runtimeOptions\": {\n      \"configProperties\": {\n      \
+    \  \"System.GC.Server\": true\n      }\n    },\n    \"publishOptions\": {\n  \
+    \    \"include\": [\n        \"appsettings.json\",\n        \"ClientApp/dist\"\
+    ,\n        \"Views\",\n        \"web.config\",\n        \"wwwroot\"\n      ],\n\
+    \      \"exclude\": [\n        \"wwwroot/*.map\"\n      ]\n    }\n  }\n}\n```\n\
+    \n然后，创建以下文件夹：\n\n![](img/03410162e36ac22ee4df2780b4d3848c_18_0.png)\n\n## 3.4.3\
+    \ 编写程序\n\n在本节中，我们编写 ASP.NET Core 程序。\n\n### 3.4.3.1 创建模型\n\n模型持有数据。在本例中，我们创建一个名为\
+    \ Product 的模块，它包含四个属性。创建一个名为 `Product.cs` 的文件并编写此代码：\n\n```csharp\nusing System.ComponentModel.Annotations;\n\
+    namespace ProductApp.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"名称\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"产品代码\")]\n        public string\
+    \ ProductCode { get; set; }\n        [Display(Name = \"数量\")]\n        public\
+    \ int Quantity { get; set; }\n        [Display(Name = \"是否有折扣\")]\n        public\
+    \ bool IsDiscount { get; set; }\n    }\n}\n```\n\n将此文件保存到 Models 文件夹。\n\n### 3.4.3.2\
+    \ 创建控制器\n\n现在我们创建一个 MVC 控制器，名为 HomeController。创建一个名为 `HomeController.cs` 的文件并编写此代码：\n\
+    \n```csharp\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\
+    using System.Threading.Tasks;\nusing Microsoft.AspNetCore.Mvc;\n\nusing ProductApp.Models;\n\
+    namespace ProductApp.Controllers\n{\n    public class HomeController : Controller\n\
+    \    {\n        public IActionResult Index()\n        {\n            return View();\n\
+    \        }\n        public IActionResult Create()\n        {\n            var\
+    \ product = new Product();\n            return View(product);\n        }\n   \
+    \     [HttpPost]\n        public IActionResult Create(Product obj)\n        {\n\
+    \        }\n    }\n}\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 12]
+
+
+    Now you''re ready to develop ASP.NET Core.
+
+
+    # 3.3 Building Your First ASP.NET Core MVC Application
+
+
+    In this case, we build a simple program for ASP.NET Core MVC. We use the template
+    from yo aspnet.
+
+
+    # 3.3.1 Creating A Project
+
+
+    In this section, we create a new project for ASP.NET Core MVC. Open Terminal or
+    Command Promt. Then, you can type this command on Terminal.
+
+
+    ```
+
+    $ yo aspnet
+
+    ```
+
+
+    Select Web Application with Bootstrap for UI framework. Given the project name,
+    for instance, MvcDemo.'
+  - "[PAGE 13]\n\n```\ncodes – TERM_PROGRAM=Apple_Terminal SHELL=/bin/bash — 80×26\n\
+    agusk$ yo aspnet\n      Welcome to the\n      marvellous ASP.NET Core\n      generator!\n\
+    \  |--(o)--| \n  |       | \n  |   U   | \n  |  \\   /  |\n /       /  \\\n| \
+    \        /   \n|---/    /\n|  /      /\n| /      /\n|  *  Y\n\n7? What type of\
+    \ application do you want to create? Web Application\n7? Which UI framework would\
+    \ you like to use? Bootstrap (3.3.6)\n7? What's the name of your ASP.NET application?\
+    \ (WebApplication) MvcDemo|\n```\n\nIf succeed, you should form this."
+  - '[PAGE 14]
+
+
+    # ##3.3.2 Build and Run the Program
+
+
+    Now you can test the program. Firstly, we load all required libraries using dotnet
+    restore. Then, we execute the program using dotnet run.
+
+
+    ```
+
+    $ cd MvcDemo
+
+    $ dotnet restore
+
+    $ dotnet run
+
+    ```
+
+
+    If success, you can see the program output.
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_14_0.png)'
+  - '[PAGE 15]
+
+
+    MvcDemo - dotnet run - 80x26
+
+    MvcDemo (.NETCoreApp.Version=v1.0) will be compiled because project is not safe
+    for incremental compilation. Use --build-profile flag for more information.
+
+    Compiling MvcDemo for (.NETCoreApp.Version=v1.0)
+
+    Bundling with configuration from /Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcDemo/bundleconfig.json
+
+    Processing www://root/css/site.min.css
+
+    Processing www://root/site.min.js
+
+
+    Compilation succeeded.
+
+
+    +   0 Warning(s)
+
+    0 Error(s)
+
+
+    Time elapsed 00:00:03.045627
+
+    (The compilation time can be improved. Run dotnet build --build-profile for more
+    information)
+
+
+    +   - Microsoft.Extensions.DependencyInjection.DataProtectionServices[0]
+
+    - User profile is available. Using ''/Users/agusk/.aspnet/DataProtection-Keys''
+    at key repository; key will not be encrypted at rest.
+
+    - Hosting environment: Production
+
+    Content root path: /Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcD
+
+
+    emo
+
+    Now listening on: http://localhost:5000
+
+    Application started. Press Ctrl+C to shut down.
+
+
+    You can open a browser and navigate to http://localhost:5000. You can see the
+    form which is shown in Figure below.'
+  - '[PAGE 16]
+
+
+    # 3.4 Building ASP.NET Core MVC Application
+
+
+    The second demo is to build ASP.NET Core MVC application from scratch. We develop
+    a simple entry form and utilize ASP.NET Core MVC session. The following is our
+    scenario:
+
+
+    +   * User fills a form to create a new product
+
+    * User clicks Save button to save the data
+
+    * The data will be stored to a session stack
+
+    * Then, the data will be shown on another page
+
+
+    We start to develop.
+
+
+    # 3.4.1 Creating a Project
+
+
+    Firstly, we create a project by yo aspnet. Open Terminal and type this command:
+
+
+    ```
+
+    $ yo aspnet
+
+    ```
+
+
+    Please select Empty Web Application. Given project name, ProductApp.
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_16_0.png)'
+  - '[PAGE 17]
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_17_0.png)
+
+
+    You should select Empty Web Application. You can load this folder using Visual
+    Studio Code.'
+  - "[PAGE 18]\n\n# 3.4.2 Configuring ASP.Net MVC Project\n\nWe need to create a config\
+    \ file, called project.json, on the project root folder. It consists of required\
+    \ libraries. We write this script for project.json to enable MVC on ASP.Net Core.\n\
+    \n+   - Controllers\n- Models\n- Views\n\n```\n{\n  \"dependencies\": {\n    \"\
+    Microsoft.NETCore.App\": {\n      \"version\": \"1.1.0\",\n      \"type\": \"\
+    platform\"\n    },\n    \"Microsoft.AspNetCore.Diagnostics\": \"1.1.0\",\n   \
+    \ \"Microsoft.AspNetCore.Mvc\": \"1.1.0\",\n    \"Microsoft.AspNetCore.Razor.TagHelpers\"\
+    : {\n      \"version\": \"1.0.0-preview-2-final\",\n      \"type\": \"build\"\n\
+    \    },\n    \"Microsoft.AspNetCore.Server.IISIntegration\": \"1.1.0\",\n    \"\
+    Microsoft.AspNetCore.Server.Kestrel\": \"1.1.0\",\n    \"Microsoft.AspNetCore.SpaServices\"\
+    : \"1.1.0-*\",\n    \"Microsoft.AspNetCore.StaticFiles\": \"1.1.0\",\n    \"Microsoft.Extensions.Configuration.EnvironmentVariables\"\
+    : \"1.1.0\",\n    \"Microsoft.Extensions.Configuration.Json\": \"1.1.0\"\n  }\n\
+    }\n```\n\nThen, you create the following folder:\n\n![](img/03410162e36ac22ee4df2780b4d3848c_18_0.png)"
+  - "[PAGE 19]\n\n```\n\"Microsoft.Extensions.Configuration.CommandLine\": \"1.1.0\"\
+    ,\n\"Microsoft.Extensions.Logging\": \"1.1.0\",\n\"Microsoft.Extensions.Logging.Console\"\
+    : \"1.1.0\",\n\"Microsoft.Extensions.Logging.Debug\": \"1.1.0\",\n\"Microsoft.Extensions.Options.ConfigurationExtensions\"\
+    : \"1.1.0\",\n},\n\"tools\": {\n  \"Microsoft.AspNetCoreCore.Razor.Tools\": \"\
+    1.0.0-preview2-final\",\n  \"Microsoft.AspNetCore.Server.IISIntegration.Tools\"\
+    : \"1.0.0-preview2-final\",\n  \"Microsoft.DotNet.Watcher.Tools\": \"1.0.0-preview2-final\"\
+    \n},\n\"frameworks\": {\n  \"netcoreapp1.1\": {\n    \"imports\": [\n      \"\
+    dotnet5.6\",\n      \"portable-net45+win8\"\n    ]\n  },\n  \"buildOptions\":\
+    \ {\n    \"emitEntryPoint\": true,\n    \"preserveCompilationContext\": true,\n\
+    \    \"compile\": {\n      \"exclude\": [\"node_modules\"]\n    }\n  },\n  \"\
+    runtimeOptions\": {\n    \"configProperties\": {\n      \"System.GC.Server\":\
+    \ true\n    }\n  },\n  \"publishOptions\": {\n    \"include\": [\n      \"appsettings.json\"\
+    ,\n      \"ClientApp/dist\",\n      \"Views\",\n      \"web.config\",\n      \"\
+    wwwroot\"\n    ],\n    \"exclude\": [\n      \"wwwroot/dist/*.map\"\n    ]\n \
+    \ },\n  \"scripts\": {\n    \"prebuild\": {\n      \"npm install\",\n      \"\
+    node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env-prod\"\
+    ,\n      \"node node_modules/webpack/bin/webpack.js --env-prod\"\n    },\n   \
+    \ \"postpublish\": [\"dotnet publish-iis --folder %OutputPath% --framework %pub\"\
+    ]\n  },\n  \"tooling\": {\n    \"defaultNamespace\": \"ProductAng\"\n  }\n}\n\
+    ```"
+  - "[PAGE 20]\n\nApp will start by executing Startup.cs. Create this file and write\
+    \ this code.\n\n```\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\
+    using System.Threading.Tasks;\nusing Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Hosting;\n\
+    using Microsoft.AspNetCore.Http;\nusing Microsoft.Extensions.DependencyInjection;\n\
+    using Microsoft.Extensions.Logging;\n\nusing Microsoft.AspNetCore.Mvc.ViewFeatures;\n\
+    \nnamespace ProductApp\n{\n    public class Startup\n    {\n        // This method\
+    \ gets called by the runtime. Use this method to add services to the container\n\
+    \        // For more information on how to configure your application, visit https://go.microsoft\n\
+    \        public void ConfigureServices(IServiceCollection services)\n        {\n\
+    \            // add ASP.NET MVC service\n            services.AddSingleton<ITimeDataProvider,\
+    \ CookieDataProvider>();\n        }\n\n        // This method gets called by the\
+    \ runtime. Use this method to configure the HTTP requests\n        public void\
+    \ Configure(ApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)\n\
+    \        {\n            loggerFactory.AddConsole();\n\n            // configure\
+    \ ASP.NET MVC Core\n            if (env.IsDevelopment())\n            {\n    \
+    \            app.UseDeveloperPage();\n            }\n            else\n      \
+    \      {\n                app.UseExceptionHandler(\"/Home/Error\");\n        \
+    \    }\n\n            app.UseStaticFiles();\n            // Add external authentication\
+    \ middleware below. To configure them please see https\n            app.UseMvc(routes\
+    \ =>\n            {\n                routes.MapRoute(\n                    name:\
+    \ \"default\",\n                    template: \"{controller=Home}/{action=Index}/{id?}\"\
+    );\n                );\n            });\n        }\n    }\n}\n```\n\n# 3.4.3 Writing\
+    \ Program\n\nIn this section, we write our ASP.NET Core MVC program."
+  - "[PAGE 21]\n\n# ### 3.4.3.1 Creating Model\n\nA model holds a data. In our case,\
+    \ we create a module, called Product, which consists of four properties. Create\
+    \ a file, called Product.cs, and write this code.\n\n```\nusing System.ComponentModel.Annotations;\n\
+    namespace ProductApp.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"Name\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"Product Code\")]\n        public\
+    \ string ProductCode { get; set; }\n        [Display(Name = \"Quantity\")]\n \
+    \       public int Quantity { get; set; }\n        [Display(Name = \"Is Discount\"\
+    )]\n        public bool IsDiscount { get; set; }\n    }\n}\n```\n\nSave this file\
+    \ into Models folder.\n\n# ### 3.4.3.2 Creating Controller\n\nNow we create MVC\
+    \ controller, called Home controller. Create a file, called HomeController.cs,\
+    \ and write this code.\n\n```\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.Mvc;\n\
+    \nusing ProductApp.Models;\nnamespace ProductApp.Controllers\n{\n    public class\
+    \ HomeController : Controller\n    {\n        public IActionResult Index()\n \
+    \       {\n            return View();\n        }\n        public IActionResult\
+    \ Create()\n        {\n            var product = new Product();\n            return\
+    \ View(product);\n        }\n        [HttpPost]\n        public IActionResult\
+    \ Create(Product obj)\n        {\n            }\n```"
+- md: "\n```csharp\n// do database processing\n/////\n// for testing, save it into\
+    \ a session\nTempData[\"name\"] = obj.Name;\nTempData[\"code\"] = obj.ProductCode;\n\
+    TempData[\"quantity\"] = obj.Quantity;\nTempData[\"discount\"] = obj.IsDiscount.ToString();\n\
+    \nreturn RedirectToAction(\"Save\");\n}\npublic IActionResult Save()\n{\n    var\
+    \ product = new Product();\n    product.Name = (string)TempData[\"name\"];\n \
+    \   product.ProductCode = (string)TempData[\"code\"];\n    product.Quantity =\
+    \ (int)TempData[\"quantity\"];\n    product.IsDiscount = Convert.ToBoolean((string)TempData[\"\
+    discount\"]);\n\n    return View(product);\n}\n```\n\n## 3.4.3.3 Creating View\n\
+    \nWe create three page files as follows:\n\n- Index.cshtml\n- Create.cshtml\n\
+    - Save.cshtml\n- _Layout.cshtml\n\nWe create a folder, Home, inside Views folder.\
+    \ Then, add Index.cshtml, Create.cshtml, and Save.cshtml files. Furthermore, create\
+    \ a folder, Shared. Then, add _Layout.cshtml file inside the folder.\n\nYou can\
+    \ see the view structure in Figure below.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_23_0.png)\n\
+    \nWe also create a layout, _Shared.cshtml. This is used for a view template. Write\
+    \ this script.\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"\
+    utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+    >\n    <title>ViewBag.Title - My ASP.NET MVC Core Application</title>\n    <link\
+    \ rel=\"stylesheet\" href=\"https://cdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"\
+    \ integrity=\"sha384-BVvYiISFekIdGmRYakcuHARgR32EdUcww7n3YJgdV4PmStssz/K8vdbE4jh4u\"\
+    \ />\n</head>\n<body>\n    <div class=\"navbar navbar-inverse navbar-fixed-top\"\
+    >\n        <div class=\"container\">\n            <div class=\"navbar-header\"\
+    >\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"\
+    collapse\" data-target=\"navbar\">\n                    <span class=\"icon-bar\"\
+    ></span>\n                    <span class=\"icon-bar\"></span>\n             \
+    \       <span class=\"icon-bar\"></span>\n                </button>\n        \
+    \    </div>\n            <div class=\"navbar-collapse collapse\">\n          \
+    \      <ul class=\"navbar-nav\">\n                    <li><a href=\"/\">Home</a>a></li>\n\
+    \                </ul>\n            </div>\n        </div>\n    </div>\n    <div\
+    \ class=\"container body-content\">\n        @RenderBody()\n    </div>\n    <footer>\n\
+    \        <p>@copy Date.Now.Year - My ASP.NET MVC Core Application</p>\n    </footer>\n\
+    </body>\n</html>\n```\n\nThe following is a script for Index.cshtml file.\n\n\
+    ```razor\n{\n  Layout = \"/Views/Shared/_Layout.cshtml\";\n  ViewBag.Title = \"\
+    Home Page\";\n}\n<div class=\"jumbotron\">\n  <h1>ASP.NET Core MVC Demo</h1>\n\
+    \  <p class=\"lead\"> Filling and submitting a form.</p>\n  <p><a href=\"/Home/Create\"\
+    \ class=\"btn btn-primary btn-large\">Create &rsquo;</a</p>\n</div>\n```\n\nThe\
+    \ following is a script for Create.cshtml file.\n\n```razor\n@using ProductApp.Models\n\
+    @model Product\n{\n  Layout = \"/Views/Shared/_Layout.cshtml\";\n  ViewBag.Title\
+    \ = \"Create Product\";\n}\n<div class=\"jumbotron\">\n  <h1>ASP.NET MVC Core</h1>\n\
+    \  <p class=\"lead\">Create a new product. Fill this form. Then, click Save button\
+    \ if done.</p>\n</div>\n@using Html.BeginForm() {\n  <fieldset>\n    <legend>Create\
+    \ a new Product</legend>\n    <div class=\"editor-label\">\n      @Html.LabelFor(model\
+    \ => model.Name)\n    </div>\n    <div class=\"editor-field\">\n      @Html.TextBoxFor(model\
+    \ => model.Name)\n    </div>\n    <br/>\n    <div class=\"editor-label\">\n  \
+    \    @Html.LabelFor(model => model.ProductCode)\n    </div>\n    <div class=\"\
+    editor-field\">\n      @Html.TextBoxFor(model => model.ProductCode )\n    </div>\n\
+    \    <br/>\n    <div class=\"editor-label\">\n      @Html.LabelFor(model => model.Quantity)\n\
+    \    </div>\n    <div class=\"editor-field\">\n      @Html.TextBoxFor(model =>\
+    \ model.Quantity )\n    </div>\n  </fieldset>\n<div class=\"editor-label\">\n\
+    \  <div style=\"float: left;\">\n    @Html.CheckboxFor(model => model.IsDiscount)\n\
+    \  </div>\n\n  @Html.LabelFor(model => model.IsDiscount)\n</div>\n<br/>\n\n  <input\
+    \ type=\"submit\" value=\"Save\" />\n</fieldset>\n```\n\nThe following is a script\
+    \ for Save.cshtml file.\n\n```razor\n@using ProductApp.Models\n@model Product\n\
+    {\n  Layout = \"/Views/Shared/_Layout.cshtml\";\n  ViewBag.Title = \"Save Product\"\
+    ;\n}\n<div class=\"jumbotron\">\n  <h1>ASP.NET Core MVC Demo</h1>\n  <p class=\"\
+    lead\"> Saving the product.</p>\n  <p><a href=\"/Home/Create\" class=\"btn btn-primary\
+    \ btn-large\">Create &rsquo;</a</p>\n</div>\n```\n"
+  mdcn: "\n\n```csharp\n// 执行数据库处理\n/////\n// 为了测试，将其保存到 Session\nTempData[\"name\"\
+    ] = obj.Name;\nTempData[\"code\"] = obj.ProductCode;\nTempData[\"quantity\"] =\
+    \ obj.Quantity;\nTempData[\"discount\"] = obj.IsDiscount.ToString();\n\nreturn\
+    \ RedirectToAction(\"Save\");\n}\npublic IActionResult Save()\n{\n    var product\
+    \ = new Product();\n    product.Name = (string)TempData[\"name\"];\n    product.ProductCode\
+    \ = (string)TempData[\"code\"];\n    product.Quantity = (int)TempData[\"quantity\"\
+    ];\n    product.IsDiscount = Convert.ToBoolean((string)TempData[\"discount\"]);\n\
+    \n    return View(product);\n}\n```\n\n## 3.4.3.3 创建视图\n\n我们按照如下方式创建三个页面文件：\n\n\
+    - Index.cshtml\n- Create.cshtml\n- Save.cshtml\n- _Layout.cshtml\n\n在 Views 文件夹内部创建一个名为\
+    \ Home 的文件夹。然后，添加 Index.cshtml、Create.cshtml 和 Save.cshtml 文件。此外，创建一个名为 Shared\
+    \ 的文件夹。然后在该文件夹内添加 _Layout.cshtml 文件。\n\n你可以从下图中查看视图结构。\n\n![](img/03410162e36ac22ee4df2780b4d3848c_23_0.png)\n\
+    \n我们还创建了一个布局文件 _Shared.cshtml。它用于视图模板。编写此脚本。\n\n```html\n<!DOCTYPE html>\n<html>\n\
+    <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"\
+    width=device-width, initial-scale=1.0\">\n    <title>ViewBag.Title - 我的 ASP.NET\
+    \ MVC Core </title>\n    <link rel=\"stylesheet\" href=\"https://cdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"\
+    \ integrity=\"sha384-BVvYiISFekIdGmRYakcuHARgR32EdUcww7n3YJgdV4PmStssz/K8vdbE4jh4u\"\
+    \ />\n</head>\n<body>\n    <div class=\"navbar navbar-inverse navbar-fixed-top\"\
+    >\n        <div class=\"container\">\n            <div class=\"navbar-header\"\
+    >\n                <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"\
+    collapse\" data-target=\"navbar\">\n                    <span class=\"icon-bar\"\
+    ></span>\n                    <span class=\"icon-bar\"></span>\n             \
+    \       <span class=\"icon-bar\"></span>\n                </button>\n        \
+    \    </div>\n            <div class=\"navbar-collapse collapse\">\n          \
+    \      <ul class=\"navbar-nav\">\n                    <li><a href=\"/\">首页</a>a></li>\n\
+    \                </ul>\n            </div>\n        </div>\n    </div>\n    <div\
+    \ class=\"container body-content\">\n        @RenderBody()\n    </div>\n    <footer>\n\
+    \        <p>@copy Date.Now.Year - 我的 ASP.NET MVC Core 应用程序</p>\n    </footer>\n\
+    </body>\n</html>\n```\n\n以下是 Index.cshtml 文件的脚本脚本。\n\n```razor\n{\n  Layout =\
+    \ \"/Views/Shared/_Layout.cshtml\";\n  ViewBag.Title = \"首页\";\n}\n<div class=\"\
+    jumbotron\">\n  <h1>ASP.NET Core MVC 演示</h1>\n  <p class=\"lead\"> 填写并提交表单。</p>\n\
+    \  <p><a href=\"/Home/Create\" class=\"btn btn-primary btn-large\">创建 &rsquo;</a</p>\n\
+    </div>\n```\n\n以下是 Create.cshtml 文件的脚本。\n\n```razor\n@using ProductApp.Models\n\
+    @model Product\n{\n  Layout = \"/Views/Shared/_Layout.cshtml\";\n  ViewBag.Title\
+    \ = \"创建产品\";\n}\n<div class=\"jumbotron\">\n  <h1>ASP.NET MVC Core</h1>\n  <p\
+    \ class=\"lead\">创建一个新产品。填写此表单。完成后，点击保存按钮。</p>\n</div>\n@using Html.BeginForm()\
+    \ {\n  <fieldset>\n    <legend>创建一个新产品</legend>\n    <div class=\"editor-label\"\
+    >\n      @Html.LabelFor(model => model.Name)\n    </div>\n    <div class=\"editor-field\"\
+    >\n      @Html.TextBoxFor(model => model.Name)\n    </div>\n    <br/>\n    <div\
+    \ class=\"editor-label\">\n      @Html.LabelFor(model => model.ProductCode)\n\
+    \    </div>\n    <div class=\"editor-field\">\n      @Html.TextBoxFor(model =>\
+    \ model.ProductCode )\n    </div>\n    <br/>\n    <div class=\"editor-label\"\
+    >\n      @Html.LabelFor(model => model.Quantity)\n    </div>\n    <div class=\"\
+    editor-field\">\n      @Html.TextBoxFor(model => model.Quantity )\n    </div>\n\
+    \  </fieldset>\n<div class=\"editor-label\">\n  <div style=\"float: left;\">\n\
+    \    @Html.CheckboxFor(model => model.IsDiscount)\n  </div>\n\n  @Html.LabelFor(model\
+    \ => model.IsDiscount)\n</div>\n<br/>\n\n  <input type=\"submit\" value=\"保存\"\
+    \ />\n</fieldset>\n```\n\n以下是 Save.cshtml 文件的脚本。\n\n```razor\n@using ProductApp.Models\n\
+    @model Product\n{\n  Layout = \"/Views/Shared/_Layout.cshtml\";\n  ViewBag.Title\
+    \ = \"保存产品\";\n}\n<div class=\"jumbotron\">\n  <h1>ASP.NET Core MVC 演示</h1>\n\
+    \  <p class=\"lead\"> 保存产品。</p>\n  <p><a href=\"/Home/Create\" class=\"btn btn-primary\
+    \ btn-large\">创建 &rsquo;</a</p>\n</div>\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 22]
+
+
+    ```
+
+    // do database processing
+
+    /////
+
+    // for testing, save it into a session
+
+    TempData["name"] = obj.Name;
+
+    TempData["code"] = obj.ProductCode;
+
+    TempData["quantity"] = obj.Quantity;
+
+    TempData["discount"] = obj.IsDiscount.ToString();
+
+
+    return RedirectToAction("Save");
+
+    }
+
+    public IActionResult Save()
+
+    {
+
+    var product = new Product();
+
+    product.Name = (string)TempData["name"]
+
+    product.ProductCode = (string)TempData["code"]
+
+    product.Quantity = (int)TempData["quantity"]
+
+    product.IsDiscount = Convert.ToBoolean((string)TempData["discount"]);
+
+
+    return View(product);
+
+    }
+
+
+    ```
+
+
+    # 3.4.3.3 Creating View
+
+
+    We create three page files as follows:
+
+
+    +   * Index.cshtml
+
+    * Create.cshtml
+
+    * Save.cshtml
+
+    * _Layout.cshtml
+
+
+    We create a folder, Home, inside Views folder. Then, add Index.cshtml, Create.cshtml,
+    and Save.cshtml files. Furthermore, create a folder, Shared. Then, add _Layout.cshtml
+    file inside the folder.
+
+
+    You can see the view structure in Figure below.'
+  - "[PAGE 23]\n\n![](img/03410162e36ac22ee4df2780b4d3848c_23_0.png)\n\nWe also create\
+    \ a layout, _Shared.cshtml. This is used for a view template. Write this script.\n\
+    \n```\n<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"utf-8\" />\n    <meta\
+    \ name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>ViewBag.Title\
+    \ - My ASP.NET MVC Core Application</title>\n    <link rel=\"stylesheet\" href=\"\
+    https://cdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"\
+    sha384-BVvYiISFekIdGmRYakcuHARgR32EdUcww7n3YJgdV4PmStssz/K8vdbE4jh4u\" />\n</head>\n\
+    <body>\n    <div class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+    \ class=\"container\">\n            <div class=\"navbar-header\">\n          \
+    \      <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"\
+    \ data-target=\"navbar\">\n                    <span class=\"icon-bar\"></span>\n\
+    \                    <span class=\"icon-bar\"></span>\n                    <span\
+    \ class=\"icon-bar\"></span>\n                </button>\n            </div>\n\
+    \            <div class=\"navbar-collapse collapse\">\n                <ul class=\"\
+    navbar-nav\">\n                    <li><a href=\"/\">Home</a></li>\n         \
+    \       </ul>\n            </div>\n        </div>\n    </div>\n    <div class=\"\
+    container body-content\">\n        @RenderBody()\n    </div>\n    <footer>\n</body>\n\
+    </html>\n```"
+  - "[PAGE 24]\n\n```\n<p>@copy Date.Now.Year - My ASP.NET MVC Core Application</p>\n\
+    </div>\n<body>\n</html>\n```\n\nThe following is a script for Index.cshtml file.\n\
+    \n```\n{\n  Layout = \"/Views/Shared/Layout.cshtml\";\n  ViewBag.Title = \"Home\
+    \ Page\";\n}\n<div class=\"jumbotron\">\n  <h1>ASP.NET Core MVC Demo</h1>\n  <p\
+    \ class=\"lead\"> Filling and submitting a form.</p>\n  <p><a href=\"/Home/Create\"\
+    \ class=\"btn btn-primary btn-large\">Create &rsquo;</a></p>\n</div>\n```\n\n\
+    The following is a script for Create.cshtml file.\n\n```\n@using ProductApp.Models\n\
+    @model Product\n{\n  Layout = \"/Views/Shared/Layout.cshtml\";\n  ViewBag.Title\
+    \ = \"Create Product\";\n}\n<div class=\"jumbotron\">\n  <h1>ASP.NET MVC Core</h1>\n\
+    \  <p class=\"lead\">Create a new product. Fill this form. Then, click Save button\
+    \ if done.</p>\n</div>\n@using Html.BeginForm() {\n  <fieldset>\n    <legend>Create\
+    \ a new Product</legend>\n    <div class=\"editor-label\">\n      @Html.LabelFor(model\
+    \ => model.Name)\n    </div>\n    <div class=\"editor-field\">\n      @Html.TextBoxFor(model\
+    \ => model.Name)\n    </div>\n    <br/>\n    <div class=\"editor-label\">\n  \
+    \    @Html.LabelFor(model => model.ProductCode)\n    </div>\n    <div class=\"\
+    editor-field\">\n      @Html.TextBoxFor(model => model.ProductCode )\n    </div>\n\
+    \    <br/>\n    <div class=\"editor-label\">\n      @Html.LabelFor(model => model.Quantity)\n\
+    \    </div>\n    <div class=\"editor-field\">\n      @Html.TextBoxFor(model =>\
+    \ model.Quantity )\n    </div>\n  </fieldset>\n```"
+  - "[PAGE 25]\n\n```\n<div class=\"editor-label\">\n  <div style=\"float: left;\"\
+    >\n    @Html.CheckboxFor(model => model.IsDiscount)\n  </div>\n\n  @Html.LabelFor(model\
+    \ => model.IsDiscount)\n</div>\n<br/>\n\n  <input type=\"submit\" value=\"Save\"\
+    \ />\n\n</fieldset>\n<p><br></p>\n```\n\nThe following is a script for SaveApp.Models.Product\n\
+    \n```\n@model ProductApp.Models.Product\n(\n  Layout = \"/Views/Shared/_Layout.cshtml\"\
+    ;\n  ViewBag.Title = \"Reading Session\"\n)\n<div class=\"umbotron\">\n  <h1>ASP.NET\
+    \ Core MVC</h1>\n  <p class=\"lead\">Reading data from ASP.NET Core MVC session.</p>\n\
+    \  <p><a href=\"Home\" class=\"btn btn-primary btn-large\">Back to home &amp;rsquo;</a></p>\n\
+    </div>\n<div>\n  <p>Name: @(Model != null ? Model.Name : \"\")</p>\n  <p>Product\
+    \ Code: @(Model != null ? Model.ProductCode : \"\")</p>\n  <p>Quantity: @(Model\
+    \ != null ? Model.Quantity : 0)</p>\n  <p>Is discount: @(Model != null ? Model.IsDiscount\
+    \ : false)</p>\n</div>\n<p><br></p>\n```\n\nSave all files and store them in Views\
+    \ folder. See project structure.\n\n# 3.4.4 Testing\n\nNow you are ready to execute.\
+    \ Type this command to load required libraries and execute the program.\n\n```\n\
+    $ dotnet restore\n$ dotnet build\n$ dotnet run\n```\n\nOpen a browser and navigate\
+    \ to http://localhost:5000. Click Create button."
+  - '[PAGE 26]
+
+
+    # ASP.NET Core MVC Demo
+
+
+    Filling and submitting a form.
+
+
+    Create >
+
+
+    © 2017 - My ASP.NET MVC Core Application
+
+
+    Fill all fields. If done, click Save button.'
+  - '[PAGE 27]
+
+
+    # ASP.NET MVC Core
+
+
+    Create a new product. Fill this form. Then, click Save button if done.
+
+
+    # Create a new Product
+
+
+    Name
+
+
+    handphone 01
+
+
+    Product Code
+
+
+    h0123
+
+
+    Quantity
+
+
+    10
+
+
+    Is Discount
+
+
+    Save
+
+
+    Our filled form will be shown in the next page. It uses ASP.NET session to keep
+    our filled data.'
+  - '[PAGE 28]
+
+
+    # ASP.NET Core MVC
+
+
+    Reading data from ASP.NET Core MVC session.
+
+
+    Back to home »
+
+
+    Name: handphone 01
+
+    Product Code: h0123
+
+    Quantity: 10
+
+    Is discount: True
+
+
+    © 2017 - My ASP.NET MVC Core Application
+
+
+    # 3.5 What''s Next?
+
+
+    I recommend you to read some tutorials about ASP.NET MVC from books or website
+    in order to improve your development skill.'
+  - '[PAGE 29]
+
+
+    # 4. ASP.NET Core API Development
+
+
+    In this chapter I''m going to explain how to work with ASP.NET Core API development.
+
+
+    # 4.1 Getting Started
+
+
+    In this chapter, we learn how to write a program for ASP.NET Core API from scratch.
+    ASP.NET Core API provides JSON output so we also build ASP.NET Core to consume
+    this API (RESTful).
+
+
+    Let''s start.
+
+
+    # 4.2 Building ASP.NET Core API Application
+
+
+    In this demo, we build ASP.NET Core API which provides RESTfull data, product
+    data. The RESTful app will be consumed by ASP.NET Core MVC. We build both applications
+    in one project.
+
+
+    Let''s start to develop.
+
+
+    # 4.2.1 Creating a Project
+
+
+    Using yo aspnet, you can create a project. Select Web API Application and given
+    the project name, ProductAPI.'
+  - "[PAGE 30]\n\n```\ncodes — yo TERM_PROGRAM=Apple_Terminal SHELL=/bin/bash — 80×24\n\
+    agusk$ yo aspnet\n  Welcome to the\nmarvellous ASP.NET Core\ngenerator!\n|--(o)---\n\
+    |    |\n|  'u'  |\n|/   \\ \n|     __\n|___|_\n? What type of application do you\
+    \ want to create? Web API Application\n? What's the name of your ASP.NET application?\
+    \ (WebAPIApplication) ProductAPI\n```\n\nYou can see the project structure on\
+    \ the Figure below.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_30_0.png)"
+  - "[PAGE 31]\n\nWe need a project config file, called project.json, on the project\
+    \ root folder. It consists of required libraries. Please modify this script for\
+    \ project.json file.\n\n```\n{\n  \"dependencies\": {\n    \"Microsoft.NETCore.App\"\
+    : {\n      \"version\": \"1.1.0\",\n      \"type\": \"platform\"\n    },\n   \
+    \ \"Microsoft.AspNetCore.Mvc.Routing\": \"1.1.0\",\n    \"Microsoft.AspNetCore.Server.IISIntegration\"\
+    : \"1.1.0\",\n    \"Microsoft.AspNetCore.Server.Kestrel\": \"1.1.0\",\n    \"\
+    Microsoft.Extensions.Configuration.EnvironmentVariables\": \"1.1.0\",\n    \"\
+    Microsoft.Extensions.Configuration.FileExtensions\": \"1.1.0\",\n    \"Microsoft.Extensions.Configuration.Json\"\
+    : \"1.1.0\",\n    \"Microsoft.Extensions.Configuration.CommandLine\": \"1.1.0\"\
+    ,\n    \"Microsoft.Extensions.Logging\": \"1.1.0\",\n    \"Microsoft.Extensions.Logging.Console\"\
+    : \"1.1.0\",\n    \"Microsoft.Extensions.Options.ConfigurationExtensions\": \"\
+    1.1.0\"\n  },\n  \"tools\": {\n    \"Microsoft.AspNetCore.Server.IISIntegration.Tools\"\
+    : \"1.1.0-preview4-final\"\n  },\n  \"frameworks\": {\n    \"netcoreapp1.1\":\
+    \ {\n      \"imports\": [\n        \"dotnet5.6\",\n        \"portable-net45+win\"\
+    \n      ]\n    }\n  },\n  \"buildOptions\": {\n    \"emitEntryPoint\": true,\n\
+    \    \"preserveCompilationContext\": true\n  },\n  \"runtimeOptions\": {\n   \
+    \ \"configProperties\": {\n      \"System.GC.Server\": true\n    }\n  },\n  \"\
+    publishOptions\": {\n    \"include\": [\n      \"wwwwwwroot\",\n      \"**/*.cshtml\"\
+    ,\n      \"appsettings.json\",\n      \"web.config\"\n    ]\n  },\n  \"scripts\"\
+    : {\n    \"postbuild\": \"dotnet publish-iis --publish-folder %publish:OutputPath%\
+    \ --framework %pub%\"\n  },\n  \"tooling\": {\n    \"defaultNamespace\": \"ProductAPI\"\
+    \n  }\n}\n```"
+- md: "\nApp will start by executing Startup.cs file. Modify this file and write this\
+    \ code.\n\n```c\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\
+    using System.Threading.Tasks;\nusing Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Hosting;\n\
+    using Microsoft.Extensions.Configuration;\nusing Microsoft.Extensions.DependencyInjection;\n\
+    using Microsoft.Extensions.Logging;\n\nnamespace ProductAPI\n{\n    public class\
+    \ Startup\n    {\n        public Startup(IHostingEnvironment env)\n        {\n\
+    \            var builder = new ConfigurationBuilder()\n                .SetBasePath(env.ContentRootPath)\n\
+    \                .AddJsonFile(\"appsettings.json\", optional: true, reloadOnChange:\
+    \ true)\n                .AddJsonFile(\"appsettings.{env.EnvironmentName}.json\"\
+    , optional: true)\n                .AddEnvironmentVariables();\n            Configuration\
+    \ = builder.Build();\n        }\n\n        public IConfiguration Configuration\
+    \ { get; }\n\n        // This method gets called by the runtime. Use this method\
+    \ to add services to the container.\n        public void ConfigureServices(IServiceCollection\
+    \ services)\n        {\n            // Add framework services.\n            services.AddMvc();\n\
+    \        }\n\n        // This method gets called by the runtime. Use this method\
+    \ to configure the HTTP requests.\n        public void Configure(IApplicationBuilder\
+    \ app, IHostingEnvironment env, ILoggerFactory logger)\n        {\n          \
+    \  logger.AddConsole(Configuration.GetSection(\"Logging\"));\n            logger.AddDebug();\n\
+    \n            app.UseMvc(routes =>\n            {\n                routes.MapRoute(\n\
+    \                    name: \"default\",\n                    template: \"controller=Home}/{action=Index}/{id?}\"\
+    );\n                );\n            });\n        }\n    }\n}\n```\n\n## 4.2.2\
+    \ Writing Program for ASP.Net Core API\n\nThe next step is to write RESTful API\
+    \ on ASP.Net Core MVC. You create a controller, ProductController.cs, a model,\
+    \ Product.cs. You can see the project structure as follows.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_33_0.png)\n\
+    \nThe following is the codes for Product model.\n\n```csharp\nusing System.ComponentModel.DataAnnotations;\n\
+    \nnamespace ProductAPI.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"Name\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"Product Code\")]\n        public\
+    \ string ProductCode { get; set; }\n        [Display(Name = \"Quantity\")]\n \
+    \       public int Quantity { get; set; }\n        [Display(Name = \"is Discount\"\
+    )]\n        public bool Isdiscount { get; set; }\n    }\n}\n```\n\nIn Product\
+    \ controller, we expose Get method which generate a random list for Product. The\
+    \ following is code implementation.\n\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.Mvc;\n\
+    \nusing ProductAPI.Models;\nnamespace ProductAPI.Controllers\n{\n    public class\
+    \ ProductController : Controller\n    {\n        // GET a list of product\n  \
+    \      [HttpGet]\n        public List<ProductAPI.Models.Product> Get()\n     \
+    \   {\n            // generate product\n            List<ProductAPI.Models.Product>\
+    \ list = new List<ProductAPI.Models.Product>();\n            for(int i=0;i<10;i++){\n\
+    \                Product o = new Product();\n                o.Name = String.Format(\"\
+    Product %0\",i);\n                o.ProductCode = String.Format(\"PR%0\",i);\n\
+    \                o.Quantity = i;\n                o.IsDiscount = true;\n\n   \
+    \             list.Add(o);\n            }\n\n            return list;\n      \
+    \  }\n    }\n}\n```\n\nSave all codes.\n\n## 4.2.3 Testing\n\nNow we can test\
+    \ our ASP.NET Core API. On our project folder, navigate to your Terminal and type\
+    \ these commands.\n\n```bash\n$ dotnet restore\n$ dotnet build\n$ dotnet run\n\
+    ```\n\nIf, done, you can open a browser and navigate to http://localhost:5000/product/get.\
+    \ You should see a list of product. You can see my program output in Figure below.\n\
+    \n```json\n[{\"name\":\"Product 0\",\"productCode\":\"PR0\",\"quantity\":0,\"\
+    isDiscount\":true},{\"name\":\"Product 1\",\"productCode\":\"PR1\",\"quantity\"\
+    :1,\"isDiscount\":true},{\"name\":\"Product 2\",\"productCode\":\"PR2\",\"quantity\"\
+    :2,\"isDiscount\":true},{\"name\":\"Product 3\",\"productCode\":\"PR3\",\"quantity\"\
+    :3,\"isDiscount\":true},{\"name\":\"Product 4\",\"productCode\":\"PR4\",\"quantity\"\
+    :4,\"isDiscount\":true},{\"name\":\"Product 5\",\"productCode\":\"PR5\",\"quantity\"\
+    :5,\"isDiscount\":true},{\"name\":\"Product 6\",\"productCode\":\"PR6\",\"quantity\"\
+    :6,\"isDiscount\":true},{\"name\":\"Product 7\",\"productCode\":\"PR7\",\"quantity\"\
+    :7,\"isDiscount\":true},{\"name\":\"Product 8\",\"productCode\":\"PR8\",\"quantity\"\
+    :8,\"isDiscount\":true},{\"name\":\"Product 9\",\"productCode\":\"PR9\",\"quantity\"\
+    :9,\"isDiscount\":true}]\n```\n\nNow your ASP.NET Core API is running well.\n\n\
+    In the next section, we build ASP.NET Core MVC to consume RESTful API.\n\n## 4.3\
+    \ Client Application for ASP.Net Core API\n\nIn this section, we write our ASP.Net\
+    \ Core MVC program. We use HTML5 on View to access RESTful. jQuery.\n\n### 4.3.1\
+    \ Creating Controller\n\nFirstly, we create MVC controller, called Home controller.\
+    \ Create a file, called HomeController.cs, and write this code.\n\n```csharp\n\
+    using System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\n\
+    using Microsoft.AspNetCore.Mvc;\n\nnamespace ProductAPI.Controllers\n{\n    public\
+    \ class HomeController : Controller\n    {\n        public IActionResult Index()\n\
+    \        {\n            return View();\n        }\n    }\n}\n```\n\nNext, you\
+    \ should create views.\n\n## 4.3.2 Creating View, _Layout.cshtml for template\
+    \ and Index.cshtml for our UI.\n\nWe create two pages for view, _Layout.cshtml\
+    \ for template and Index.cshtml for our UI.\n\nYou can see the view structure\
+    \ in Figure below.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_36_0.png)\n\nWe\
+    \ also create a layout, _Layout.cshtml. Write this script.\n\n```html\n<!DOCTYPE\
+    \ html>\n<html>\n<head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\"\
+    \ content=\"width=device-width, initial-scale=1.0\">\n    <title>ViewBag.Title\
+    \ - My ASP.NET MVC Core Application</title>\n    <link rel=\"stylesheet\" href=\"\
+    https://cdn.maxcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiIISFeKIdGMJRAKcuHAHRg32OmJcww7n3Rdg24Va+PmStSs/K68vbdeJhj4u\"\
+    \ crossorigin\">\n\n<style>\n    table { margin: 1em; border-collapse: collapse;\
+    \ }\n    td, th { padding: 3em; border: 1px solid #ccc; }\n    thead { background:\
+    \ #f0ff45; }\n    .event{\n      background-color: #beffca;\n    }\n    .odd {\n\
+    \      background-color: #f0f0f0;\n    }\n</style>\n</head>\n<body>\n<div class=\"\
+    navbar navbar-default\">\n  <div class=\"container\">\n    <a class=\"navbar-brand\"\
+    \ href=\"#\">ASP.NET MVC Core</a>\n    <div class=\"navbar navbar-collapse-right\"\
+    >\n      <button class=\"navbar-toggle\" type=\"button\" data-toggle=\"collapse\"\
+    \ data-target=\"#navbar-collapse\">\n        <span class=\"glyphicon-icon\"></span>\n\
+    \      </button>\n      <ul class=\"nav navbar-collapse\" id=\"navbar-collapse\"\
+    >\n        <li class=\"nav-item\"><a class=\"nav-link\" href=\"/\">Home</a></li>\n\
+    \      </ul>\n    </div>\n  </div>\n</div>\n<div class=\"container\">\n  @RenderBody()\n\
+    </div>\n<footer class=\"container\">\n  <p>&copy; @DateTime.Now.Year - My ASP.NET\
+    \ MVC Application</p>\n</footer>\n<script src=\"https://code.jquery.com/jquery-3.1.1.min.js\"\
+    ></script>\n<script src=\"https://cdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"\
+    ></script>\n</body>\n</html>\n```\n\nThe following is Index.cshtml file.\n\n```html\n\
+    @{\n    Layout = \"_Shared/_Layout\";\n    ViewBag.Title = \"Home Page\";\n}\n\
+    <div class=\"umbotron\">\n  <h1>ASP.NET MVC Demo</h1>\n  <p class=\"lead\">Access\
+    \ ASP.NET API.</p>\n  <p><a href=\"#\" id=\"get-data\" class=\"btn btn-primary\"\
+    >Get JSON data</a></p>\n  <span id=\"show-data\"></span>\n</div>\n<table id=\"\
+    myTable\" class=\"table\">\n  <thead>\n    <tr>\n      <th>Product Name</th>\n\
+    \      <th>Quantity</th>\n      <th>Is Discount</th>\n    </tr>\n  </thead>\n\
+    \  <tbody>\n    <!-- Data will be loaded -->\n  </tbody>\n</table>\n\n<script>\n\
+    $(document).ready(function () {\n  $('#get-data').click(function () {\n    var\
+    \ showData = $('#show-data');\n\n    $.getJSON('/product/get', function (data)\
+    \ {\n      console.log(data);\n\n      var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];\n\
+    \      for (var i = 0; i < data.length; i++) {\n        var newRow = tableRef.insertRow(tableRef.rows.length);\n\
+    \        var newCell1 = newRow.insertCell(0);\n        var newText1 = document.createTextNode(data[i].name);\n\
+    \        newCell1.appendChild(newText1);\n        var newCell2 = newRow.insertCell(1);\n\
+    \        var newText2 = document.createTextNode(data[i].productCode);\n      \
+    \  newCell2.appendChild(newText2);\n        var newCell3 = newRow.insertCell(2);\n\
+    \        var newText3 = document.createTextNode(data[i].quantity);\n        newCell3.appendChild(newText3);\n\
+    \        var newCell4 = newRow.insertCell(3);\n        var newText4 = document.createTextNode(data[i].isDiscount);\n\
+    \        newCell4.appendChild(newText4);\n      }\n    });\n    showData.text('Loading\
+    \ the JSON file.');\n  });\n});\n</script>\n```\n"
+  mdcn: "\nApp 将通过执行 Startup.cs 文件启动。请修改此文件并写入以下代码。\n\n```csharp\nusing System;\n\
+    using System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\n\
+    using Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Hosting;\nusing\
+    \ Microsoft.Extensions.Configuration;\nusing Microsoft.Extensions.DependencyInjection;\n\
+    using Microsoft.Extensions.Logging;\n\nnamespace ProductAPI\n{\n    public class\
+    \ Startup\n    {\n        public Startup(IHostingEnvironment env)\n        {\n\
+    \            var builder = new ConfigurationBuilder()\n                .SetBasePath(env.ContentRootPath)\n\
+    \                .AddJsonFile(\"appsettings.json\", optional: true, reloadOnChange:\
+    \ true)\n                .AddJsonFile(\"appsettings.{env.EnvironmentName}.json\"\
+    , optional: true)\n                .AddEnvironmentVariables();\n            Configuration\
+    \ = builder.Build();\n        }\n\n        public IConfiguration Configuration\
+    \ { get; }\n\n        // 此方法由运行时调用。使用此方法向容器中添加服务。\n        public void ConfigureServices(IServiceCollection\
+    \ services)\n        {\n            // 添加框架服务。\n            services.AddMvc();\n\
+    \        }\n\n        // 此方法由运行时调用。使用此方法来配置 HTTP 请求。\n        public void Configure(IApplicationBuilder\
+    \ app, IHostingEnvironment env, ILoggerFactory logger)\n        {\n          \
+    \  logger.AddConsole(Configuration.GetSection(\"Logging\"));\n            logger.AddDebug();\n\
+    \n            app.UseMvc(routes =>\n            {\n                routes.MapRoute(\n\
+    \                    name: \"default\",\n                    template: \"controller=Home}/{action=Index}/{id?}\"\
+    );\n                );\n            });\n        }\n    }\n}\n```\n\n## 4.2.2\
+    \ 为 ASP.Net Core API 编写程序\n\n下一步是在 ASP.Net Core MVC 上编写 RESTful API。你将创建一个控制器\
+    \ ProductController.cs 和一个模型 Product.cs。你可以看到如下项目结构。\n\n![](img/03410162e36ac22ee4df2780b4d3848c_33_0.png)\n\
+    \n以下是 Product 模型的代码。\n\n```csharp\nusing System.ComponentModel.DataAnnotations;\n\
+    \nnamespace ProductAPI.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"Name\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"Product Code\")]\n        public\
+    \ string ProductCode { get; set; }\n        [Display(Name = \"Quantity\")]\n \
+    \       public int Quantity { get; set; }\n        [Display(Name = \"is Discount\"\
+    )]\n        public bool Isdiscount { get; set; }\n    }\n}\n```\n\n在 Product 控制器中，我们暴露了\
+    \ Get 方法为 Product 生成一个随机列表。以下是代码实现。\n\n```csharp\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.Mvc;\n\
+    \nusing ProductAPI.Models;\nnamespace ProductAPI.Controllers\n{\n    public class\
+    \ ProductController : Controller\n    {\n        // 获取产品列表\n        [HttpGet]\n\
+    \        public List<ProductAPI.Models.Product> Get()\n        {\n           \
+    \ // 生成产品\n            List<ProductAPI.Models.Product> list = new List<ProductAPI.Models.Product>();\n\
+    \            for(int i=0;i<10;i++){\n                Product o = new Product();\n\
+    \                o.Name = String.Format(\"Product %0\",i);\n                o.ProductCode\
+    \ = String.Format(\"PR%0\",i);\n                o.Quantity = i;\n            \
+    \    o.IsDiscount = true;\n\n                list.Add(o);\n            }\n\n \
+    \           return list;\n        }\n    }\n}\n```\n\n保存所有代码。\n\n## 4.2.3 测试\n\
+    \n现在我们可以测试我们的 ASP.NET Core API。在项目文件夹中，导航到终端并输入这些命令。\n\n```bash\n$ dotnet restore\n\
+    $ dotnet build\n$ dotnet run\n```\n\n如果完成，你可以打开浏览器并导航到 http://localhost:5000/product。你应该看到产品列表。你可以查看下中的输出。\n\
+    \n```json\n{\"name\":\"Product 0\",\"productCode\":\"PR0\",\"quantity\":0,\"isDiscount\"\
+    :true},{\"name\":\"Product 1\",\"productCode\":\"PR1\",\"quantity\":1,\"isDiscount\"\
+    :true},{\"name\":\"Product 2\",\"productCode\":\"PR2\",\"quantity\":2,\"isDiscount\"\
+    :true},{\"name\":\"Product 3\",\"productCode\":\"PR3\",\"quantity\":3,\"isDiscount\"\
+    :true},{\"name\":\"Product 4\",\"productCode\":\"PR4\",\"quantity\":4,\"isDiscount\"\
+    :true},{\"name\":\"Product 5\",\"productCode\":\"PR5\",\"quantity\":5,\"isDiscount\"\
+    :true},{\"name\":\"Product 6\",\"productCode\":\"PR6\",\"quantity\":6,\"isDiscount\"\
+    :true},{\"name\":\"Product 7\",\"productCode\":\"PR7\",\"quantity\":7,\"isDiscount\"\
+    :true},{\"name\":\"Product 8\",\"productCode\":\"PR8\",\"quantity\":8,\"isDiscount\"\
+    :true},{\"name\":\"Product 9\",\"productCode\":\"PR9\",\"quantity\":9,\"isDiscount\"\
+    :true}\n```\n\n现在你的 ASP.NET Core API 运行良好。在下一节中，我们将构建 ASP.NET Core MVC 来消费 RESTful\
+    \ API。\n\n## 4.3 ASP.Net Core 客户端应用程序\n\n在本节中，我们编写 ASP.Net MVC 程序。我们使用 HTML5 视图访问\
+    \ RESTful API。\n\n### 4.3.1 创建控制器\n\n首先，我们创建一个 MVC 的控制器。创建一个 HomeController.cs\
+    \ 文件并写入此代码。\n\n```csharp\nusing System.Collections.Generic;\nusing System.Linq;\n\
+    using System.Threading.Tasks;\nusing Microsoft.AspNetCore.Mvc;\n\nnamespace ProductAPI.Controllers\n\
+    {\n    public class HomeController : Controller\n    {\n        public IActionResult\
+    \ Index()\n        {\n            return View();\n        }\n    }\n}\n```\n\n\
+    接下来，你应该创建视图。\n\n### 4.3.2 创建视图，Layout.cshtml 作为模板，Index.cshtml 作为 UI\n\n我们创建两个页面：Layout.cshtml\
+    \ 作为模板，Index.cshtml 作为 UI。你可以看到下中的视图结构。\n\n![](img/03410162e36ac22ee4df2780b4d3848c_36_0.png)\n\
+    \n我们还创建了一个布局 Layout.cshtml。写入此脚本。\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n\
+    \    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width,\
+    \ initial-scale=1.0\">\n    <title>ViewBag.Title - My ASP.NET MVC Application</title>\n\
+    \    <link rel=\"stylesheet\" href=\"https://cdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"\
+    >\n\n<style>\n    table { margin: 1em; border-collapse: collapse; }\n    td, th\
+    \ { padding: 3em; border: 1px solid #ccc; }\n    thead { background: #f0ff45;\
+    \ }\n    .event{\n      background-color: #beffca;\n    }\n    .odd {\n      background-color:\
+    \ #f0f0f0;\n    }\n</style>\n</head>\n<body>\n<div class=\"navbar navbar-default\"\
+    >\n  <div class=\"container\">\n    <a class=\"navbar-brand\" href=\"#\">ASP.NET\
+    \ MVC Core</a>\n    <div class=\"navbar-collapse-right\">\n      <button class=\"\
+    navbar-toggle\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbar-collapse\"\
+    >\n        <span class=\"glyphicon-icon\"></span>\n      </button>\n      <ul\
+    \ class=\"nav navbar-collapse\" id=\"navbar-collapse\">\n        <li class=\"\
+    nav-item\"><a class=\"nav-link\" href=\"/\">Home</a></li>\n      </ul>\n    </div>\n\
+    \  </div>\n</div>\n<div class=\"container\">\n  @RenderBody()\n</div>\n<footer\
+    \ class=\"container\">\n  <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>\n\
+    </footer>\n<script src=\"https://code.jquery.com/jquery-3.1.1.min.js\"></script>\n\
+    <script src=\"https://cdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"\
+    ></script>\n</body>\n</html>\n```\n\n以下是 Index.cshtml 文件。\n\n```html\n@{\n   \
+    \ Layout = \"_Shared/_Layout\";\n    ViewBag.Title = \"Home Page\";\n}\n<div class=\"\
+    umbotron\">\n  <h1>ASP.NET MVC Demo</h1>\n  <p class=\"lead\">Access ASP.NET API.</p>\n\
+    \  <p><a href=\"#\" id=\"get-data\" class=\"btn btn-primary\">Get JSON data</a></p>\n\
+    \  <span id=\"show-data\"></span>\n</div>\n<table id=\"myTable\" class=\"table\"\
+    >\n  <thead>\n    <tr>\n      <th>Product Name</th>\n      <th>Quantity</th>\n\
+    \      <th>Is Discount</th>\n    </tr>\n  </thead>\n  <tbody>\n    <!-- Data will\
+    \ be loaded -->\n  </tbody>\n</table>\n\n<script>\n$(document).ready(function\
+    \ () {\n  $('#get-data').click(function () {\n    var showData = $('#show-data');\n\
+    \n    $.getJSON('/product/get', function (data) {\n      console.log(data);\n\n\
+    \      var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];\n\
+    \      for (var i = 0; i < data.length; i++) {\n        var newRow = tableRef.insertRow(tableRef.rows.length);\n\
+    \        var newCell1 = newRow.insertCell(0);\n        var newText1 = document.createTextNode(data[i].name);\n\
+    \        newCell1.appendChild(newText1);\n        var newCell2 = newRow.insertCell(1);\n\
+    \        var newText2 = document.createTextNode(data[i].productCode);\n      \
+    \  newCell2.appendChild(newText2);\n        var newCell3 = newRow.insertCell(2);\n\
+    \        var newText3 = document.createTextNode(data[i].quantity);\n        newCell3.appendChild(newText3);\n\
+    \        var newCell4 = newRow.insertCell(3);\n        var newText4 = document.createTextNode(data[i].isDiscount);\n\
+    \        newCell4.appendChild(newText4);\n      }\n    });\n    showData.text('Loading\
+    \ the JSON file.');\n  });\n});\n</script>\n```\n\n"
+  merge: 1
+  raw:
+  - "[PAGE 32]\n\nApp will start by executing Startup.cs file. Modify this file and\
+    \ write this code.\n\n```\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.Builder;\n\
+    using Microsoft.AspNetCore.Hosting;\nusing Microsoft.Extensions.Configuration;\n\
+    using Microsoft.Extensions.DependencyInjection;\nusing Microsoft.Extensions.Logging;\n\
+    \nnamespace ProductAPI\n{\n    public class Startup\n    {\n        public Startup(IHostingEnvironment\
+    \ env)\n        {\n            var builder = new ConfigurationBuilder()\n    \
+    \            .SetBasePath(env.ContentRootPath)\n                .AddJsonFile(\"\
+    appsettings.json\", optional: true, reloadOnChange: true)\n                .AddJsonFile(\"\
+    appsettings.{env.EnvironmentName}.json\", optional: true)\n                .AddEnvironmentVariables();\n\
+    \            Configuration = builder.Build();\n        }\n\n        public IConfiguration\
+    \ Configuration { get; }\n\n        // This method gets called by the runtime.\
+    \ Use this method to add services to the container.\n        public void ConfigureServices(IServiceCollection\
+    \ services)\n        {\n            // Add framework services.\n            services.AddMvc();\n\
+    \        }\n\n        // This method gets called by the runtime. Use this method\
+    \ to configure the HTTP requests.\n        public void Configure(IApplicationBuilder\
+    \ app, IHostingEnvironment env, ILoggerFactory logger)\n        {\n          \
+    \  logger.AddConsole(Configuration.GetSection(\"Logging\"));\n            logger.AddDebug();\n\
+    \n            app.UseMvc(routes =>\n            {\n                routes.MapRoute(\n\
+    \                    name: \"default\",\n                    template: \"controller=Home}/{action=Index}/{id?}\"\
+    );\n                );\n            });\n        }\n    }\n}\n```\n\n# 4.2.2 Writing\
+    \ Program for ASP.Net Core API\n\nThe next step is to write RESTful API on ASP.Net\
+    \ Core MVC. You create a controller, ProductController.cs, a model, Product.cs.\
+    \ You can see the project structure as follows."
+  - "[PAGE 33]\n\n![](img/03410162e36ac22ee4df2780b4d3848c_33_0.png)\n\nThe following\
+    \ is the codes for Product model.\n\n```\nusing System.ComponentModel.DataAnnotations;\n\
+    \nnamespace ProductAPI.Models\n{\n    public class Product\n    {\n        [Required]\n\
+    \        [MinLength(4)]\n        [Display(Name = \"Name\")]\n        public string\
+    \ Name { get; set; }\n        [Display(Name = \"Product Code\")]\n        public\
+    \ string ProductCode { get; set; }\n        [Display(Name = \"Quantity\")]\n \
+    \       public int Quantity { get; set; }\n        [Display(Name = \"is Discount\"\
+    )]\n        public bool Isdiscount { get; set; }\n    }\n}\n\n```\n\nIn Product\
+    \ controller, we expose Get method which generate a random list for Product. The\
+    \ following is code implementation.\n\n```\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.Mvc;\n\
+    \nusing ProductAPI.Models;\nnamespace ProductAPI.Controllers\n{\n    public class\
+    \ ProductController : Controller\n    {\n        // GET a list of product\n  \
+    \      [HttpGet]\n        public List<ProductAPI.Models.Product> Get(\n      \
+    \  \n\n```"
+  - "[PAGE 34]\n\n```\n// generate product\nList<ProductAPI.Models.Product> list =\
+    \ new List<ProductAPI.Models.Product>();\nfor(int i=0;i<10;i++){\n    Product\
+    \ o = new Product();\n    o.Name = String.Format(\"Product 0\",i);\n    o.ProductCode\
+    \ = String.Format(\"PR0\",i);\n    o.Quantity = i;\n    o.IsDiscount = true;\n\
+    \n    list.Add(o);\n}\n\nreturn list;\n}\n```\n\nSave all codes.\n\n# 4.2.3 Testing\n\
+    \nNow we can test our ASP.NET Core API. On our project folder, navigate to your\
+    \ Terminal and type these commands.\n\n```\n$ dotnet restore\n$ dotnet build\n\
+    $ dotnet run\n```\n\nIf, done, you can open a browser and navigate to http://localhost:5000/product/get\
+    \ . You should see a list of product. You can see my program output in Figure\
+    \ below."
+  - "[PAGE 35]\n\n```\n[{\"name\":\"Product 0\",\"productCode\":\"PR0\",\"quantity\"\
+    :0,\"isDiscount\":true},{\"name\":\"Product 1\",\"productCode\":\"PR1\",\"quantity\"\
+    :1,\"isDiscount\":true},{\"name\":\"Product 2\",\"productCode\":\"PR2\",\"quantity\"\
+    :2,\"isDiscount\":true},{\"name\":\"Product 3\",\"productCode\":\"PR3\",\"quantity\"\
+    :3,\"isDiscount\":true},{\"name\":\"Product 4\",\"productCode\":\"PR4\",\"quantity\"\
+    :4,\"isDiscount\":true},{\"name\":\"Product 5\",\"productCode\":\"PR5\",\"quantity\"\
+    :5,\"isDiscount\":true},{\"name\":\"Product 6\",\"productCode\":\"PR6\",\"quantity\"\
+    :6,\"isDiscount\":true},{\"name\":\"Product 7\",\"productCode\":\"PR7\",\"quantity\"\
+    :7,\"isDiscount\":true},{\"name\":\"Product 8\",\"productCode\":\"PR8\",\"quantity\"\
+    :8,\"isDiscount\":true},{\"name\":\"Product 9\",\"productCode\":\"PR9\",\"quantity\"\
+    :9,\"isDiscount\":true}]\n```\n\nNow your ASP.NET Core API is running well.\n\n\
+    In the next section, we build ASP.NET Core MVC to consume RESTful API.\n\n# 4.3\
+    \ Client Application for ASP.NET Core API\n\nIn this section, we write our ASP.NET\
+    \ Core MVC program. We use HTML5 on View to access RESTfill. jQuery.\n\n# 4.3.1\
+    \ Creating Controller\n\nFirstly, we create MVC controller, called Home controller.\
+    \ Create a file, called HomeController.cs, and write this code.\n\n```\nusing\
+    \ System.Collections.Generic;\nusing System.Collections.Generic;\nusing System.Linq;\n\
+    using System.Threading.Tasks;\nusing Microsoft.AspNetCore.Mvc;\n\nnamespace ProductAPI.Controllers\n\
+    {\n    public class HomeController : Controller\n    {\n        public IActionResult\
+    \ Index()\n    }\n```"
+  - "[PAGE 36]\n\n```\nreturn View();\n}\n}\n```\n\nNext, you should create views.\n\
+    \n# 4.3.2 Creating View, _Layout.cshtml for template and Index.cshtml for our\
+    \ UI.\n\nWe create two pages for view, _Layout.cshtml for template and Index.cshtml\
+    \ for our UI.\n\nYou can see the view structure in Figure below.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_36_0.png)\n\
+    \nWe also create a layout, _Shared.cshtml. Write this script.\n\n```\n<DOCTYPE\
+    \ html>\n<html>\n<head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\"\
+    \ content=\"width=device-width, initial-scale=1.0\">\n    <title>ViewBag.Title\
+    \ - My ASP.NET MVC Core Application</title>\n    <link rel=\"stylesheet\" href=\"\
+    https://cdn.maxcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiIISFeKIdGMJRAKcuHAHRg32OmJcww7n3Rdg24Va+PmStSs/K68vbdeJhj4u\"\
+    \ crossorigin\">\n\n<style>\n    table { margin: 1em; border-collapse: collapse;\
+    \ }\n    td, th { padding: 3em; border: 1px solid #ccc; }\n    thead { background:\
+    \ #f0ff45; }\n```"
+  - "[PAGE 37]\n\n```\n.event{\n  background-color: #beffca;\n}\n.odd {\n  background-color:\
+    \ #f0fff6;\n}\n</style>\n```\n\n```\n<head>\n<body>\n<div class=\"navbar navbar\
+    \ navbar-fixed-top\">\n  <div class=\"container\">\n    <div class=\"navbar-header\"\
+    >\n      <button type=\"button\" class=\"navbar-toggle data-collapse\" data-target='\n\
+    \        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n\
+    \        <span class=\"icon-bar\"></span>\n      </button>\n    </div>\n    <div\
+    \ class=\"navbar-collapse collapse\">\n      <ul class=\"nav nav-nav\">\n    \
+    \    <li><a href=\"/\">Home</a></li>\n      </ul>\n    </div>\n  </div>\n</div>\n\
+    <div class=\"container body-content\">\n<footer>\n  @copy; DateTime.Now.Year -\
+    \ My ASP.NET MVC Core Application\n</footer>\n</div>\n</body>\n</html>\n```\n\n\
+    The following is a script for Index.cshtml file.\n\n```\n@{\n  Layout = \"/Views/Shared/_Layout.cshtml\"\
+    ;n  ViewBag.Title = \"Home Page\";n}\n<script src=\"https://code.jquery.com/jquery-3.1.1.min.js\"\
+    ></script>\n<div class=\"umbotron\">\n  <h1>ASP.NET Core MVC Demo</h1>\n  <p class=\"\
+    lead\">Access ASP.NET Core API.</p>\n  <p><a href=\"#\" id=\"get-data\" class=\"\
+    btn btn-primary btn-large\">Get JSON &rsquo;;</a></p>\n  <table id=\"myTable\"\
+    >\n    <thead>\n      <tr>\n        <th>Product Name</th>\n        <th>Quantity</th>\n\
+    \        <th>Is Discount</th>\n      </tr>\n    </thead>\n    <tbody>\n      <!--\
+    \ Data will be loaded here -->\n    </tbody>\n  </table>\n</div>\n<script>\n$(document).ready(function\
+    \ () {\n```"
+  - "[PAGE 38]\n\n```\n$('$get-data').click(function () {\n  var showData = $('#show-data');\n\
+    \n  $.getJSON('/product/get', function (data) {\n    console.log(data);\n\n  \
+    \  var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];\n\
+    \    var newRow = tableRef.insertRow(tableRef.rows.length);\n    var items = '';\n\
+    \    for (var i = 0; i < data.length; i++) {\n      var newRow = tableRef.insertRow(tableRef.rows.length);\n\
+    \      var newCell1 = newRow.insertCell(0);\n      var newText1 = document.createTextNode(data[i].name);\n\
+    \      newCell1.appendChild(newText1);\n      var newCell2 = newRow.insertCell(1);\n\
+    \      var newText2 = document.createTextNode(data[i].productCode);\n      newCell2.appendChild(newText2);\n\
+    \      var newCell3 = newRow.insertCell(2);\n      var newText3 = document.createTextNode(data[i].quantity);\n\
+    \      newCell3.appendChild(newText3);\n      var newCell4 = newRow.insertCell(3);\n\
+    \      var newText4 = document.createTextNode(data[i].isDiscount);\n      newCell4.appendChild(newText4);\n\
+    \    }\n  });\n  showData.text('Loading the JSON file.');\n});\n});\n</script>\n\
+    ```\n\nSave all files and store them into Views folder.\n\n# ## Testing\n\nNow\
+    \ you are ready to execute. Type this command to load required libraries and execute\
+    \ the program.\n\n```\n$ dotnet restore\n$ dotnet build\n$ dotnet run\n```\n\n\
+    Open a browser and navigate to http://localhost:5004 . Click Get JSON data button.\
+    \ You computer should be connected to Internet because our jQuery file is download.\
+    \ You can download this file and put it in local.\n\nThe following is program\
+    \ output."
+- md: "\n# ASP.NET Core MVC Demo\n\nAccess ASP.NET Core API.\n\n```\nGet JSON data\
+    \ »\n```\n\n| Product Name | Code | Quantity | Is Discount |\n|---|---|---|---|\n\
+    | Product 0 | PR0 | 0 | true |\n| Product 1 | PR1 | 1 | true |\n| Product 2 |\
+    \ PR2 | 2 | true |\n| Product 3 | PR3 | 3 | true |\n| Product 4 | PR4 | 4 | true\
+    \ |\n| Product 5 | PR5 | 5 | true |\n| Product 6 | PR6 | 6 | true |\n| Product\
+    \ 7 | PR7 | 7 | true |\n| Product 8 | PR8 | 8 | true |\n| Product 9 | PR9 | 9\
+    \ | true |\n\n# 5. ASP.NET Core and Angular 2\n\nIn this chapter I'm going to\
+    \ explain how to work with ASP.NET Core MVC and Angular 2.\n\n## 5.1 Getting Started\n\
+    \nIn this section, we develop a simple app to work with ASP.NET RESTful and AngularJS.\n\
+    AngularJS is an open-source JavaScript framework, maintained by Google, that you\
+    \ can visit official website on http://angularjs.org/.\nIn this chapter, we explore\
+    \ to integrate Angular 2 into ASP.NET Core.\n\n## 5.2 ASP.NET Core and Angular\
+    \ 2 Project Template\n\nYou can learn Angular 2 on the official website, https://angular.io.\
+    \ We develop Angular 2 using JavaScript and TypeScript.\nThe idea to integrate\
+    \ ASP.NET Core MVC and Angular 2 is to merge the both projects, ASP.NET Core and\
+    \ Angular 2. Fortunately, we can use aspnetcore spa template, https://github.com/aspnet/JavaScriptServices.\n\
+    You can use this template by typing this command on Terminal.\n\n```\n$ npm install\
+    \ -g yo generator-aspnetcore-spa\n```\n\nIf done, you can build a sample project\
+    \ from this project template.\n\n## 5.3 Run Demo: ASP.NET Core Angular SPA\n\n\
+    In this section, we run program sample from aspnetcore spa template.\n\n### 5.3.1\
+    \ Creating a Project\n\nYou can create ASP.NET Core with Angular 2 by typing this\
+    \ command.\n\n```\n$ yo aspnetcore-spa\n```\n\nSelect Angular 2 as framework.\n\
+    \n# aspnetcore_angular2 — yo TERM_PROGRAM=Apple_Terminal — 80x24\n\n```\nagusk$$\
+    \ cd aspnetcore_angular2/\nagusk$$ yo\n? 'Allo Agus! What would you like to do?\
+    \ Aspnetcore Spa\n\nMake sure you are in the directory you want to scaffold into.\n\
+    This generator can also be run with: yo aspnetcore-spa\n```\n\n![](img/03410162e36ac22ee4df2780b4d3848c_41_0.png)\n\
+    \n- Framework\n- Angular 2\n- Aurelia\n- Knockout\n- React\n- React with Redux\n\
+    \nGiven a project name, called ProductAng.\n\n# aspnetcore_angular2 — yo TERM_PROGRAM=Apple_Terminal\
+    \ — 80x24\n\n```\nagusk$$ cd aspnetcore_angular2/\nagusk$$ yo\n? 'Allo Agus! What\
+    \ would you like to do? Aspnetcore Spa\n\nMake sure you are in the directory you\
+    \ want to scaffold into.\nThis generator can also be run with: yo aspnetcore-spa\n\
+    ```\n\n![](img/03410162e36ac22ee4df2780b4d3848c_41_1.png)\n\n- Framework Angular\
+    \ 2.\n- What type of project do you want to create? project.json (compatible with\
+    \ .NET Core tooling preview 2 and Visual Studio 2015)\n- Do you want to include\
+    \ unit tests? No\n- Your project name (aspnetcore_angular2) ProductAng\n\n## 5.3.2\
+    \ Running the Program\n\nTo run the program, you do it as usual. Open Terminal\
+    \ and navigate to project folder. Then, type these commands.\n\n```\n$ dotnet\
+    \ restore\n$ dotnet build\n$ dotnet run\n```\n\nYou open a browser and navigate\
+    \ to http://localhost:5000/. You should SPA with Angular 2.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_42_0.png)\n\
+    \n## Hello, world!\n\nWelcome to your new single-page application, built with:\n\
+    \n- ASP.NET Core and C# for cross-platform server-side code\n- Angular 2 and TypeScript\
+    \ for client-side code\n- Webpack for building and bundling client-side resources\n\
+    - Bootstrap for layout and styling\n\nTo get you started, we've set up:\n\n- Client-side\
+    \ navigation. For example, click Counter then Back to return here.\n- Server-side\
+    \ rendering. For faster initial loading and improved SEO, the resulting HTML of\
+    \ your Angular 2 app is transferred to the browser where a client-side copy of\
+    \ the app takes over.\n- Webpack dev middleware. In development mode, there's\
+    \ no need to run the webpack build tool. Your client-side resources are dynamically\
+    \ built on demand. Updates are available as soon as you modify any file.\n- Hot\
+    \ module replacement. In development mode, you don't even need to reload the page\
+    \ after making some changes. Within seconds of saving changes to files, your Angular\
+    \ 2 app will be rebuilt and a new instance is injected into the page.\n- Efficient\
+    \ production builds. In production mode, development-time features are disabled,\
+    \ and the webpack build tool produces minified CSS and JavaScript files.\n\nYou\
+    \ can click menu Fetch data to see Angular 2 feed remote data.\n\n## 5.4 What's\
+    \ The Next?\n\nYou can do more practices for AngularJS by reading several tutorial\
+    \ in Internet or books. I also wrote a book about AngularJS Programming by Example.\
+    \ This book helps you learn about AngularJS programming. Please visit my blog,\
+    \ http://blog.aguskurniawan.net/post/AngularJS.aspx . This book uses the first\
+    \ version of AngularJS. Currently, I'm working on my new book for Angular 2.\n\
+    \n![](img/03410162e36ac22ee4df2780b4d3848c_44_0.png)\n\n# 6. ASP.NET Core, Entity\
+    \ Framework Core and PostgreSQL\n\nIn this chapter I'm going to explain how to\
+    \ work with ASP.NET Core MVC, Entity Framework Core and PostgreSQL.\n\n## 6.1\
+    \ Getting Started\n\nIn this chapter, we learn how to work with ASP.NET Core MVC,\
+    \ Entity Framework Core and PostgreSQL.\n\n## 6.2 PostgreSQL\n\nIn this chapter,\
+    \ we use PostgreSQL. You can install it on.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_45_0.png)\n\
+    \n## 6.3 Entity Framework Core\n\nIn this section, we build ASP.NET Core MVC using\
+    \ Entity Framework Core. \n\n## 6.4 Data Access\n\nAfter loaded EF Core inside\
+    \ our project, we develop classes to access PostgreSQL. We create Model and Data\
+    \ objects.\n\n### 6.4.1 Build Database\n\nFirst, we create a table in PostgreSQL.\n\
+    \n```sql\nCREATE TABLE product (\n  id SERIAL PRIMARY KEY,\n  name TEXT NOT NULL,\n\
+    \  product_code TEXT,\n  quantity INTEGER,\n  is_discount BOOLEAN\n);\nALTER TABLE\
+    \ product OWNER TO postgres;\n```\n\n### 6.4.2 Creating an ASP.NET Core Project\n\
+    \nWe create ASP.NET Core MVC project.\n\n### 6.4.3 Configure Database\n\nNext,\
+    \ we add connection string to appsettings.json.\n\n```json\n{\n  \"ConnectionStrings\"\
+    : {\n    \"DefaultConnection\": \"Data Source=localhost;Port=5432;Database=PostgresDemo;User\
+    \ ID=agusk;Password=agusk\"\n  },\n  \"Logging\": {\n    \"LogLevel\": {\n   \
+    \   \"Default\": \"Debug\",\n      \"Microsoft\": \"Information\"\n    }\n  }\n\
+    }\n```\n"
+  mdcn: "\n\n# ASP.NET Core MVC 演示\n\n访问 ASP.NET Core API。\n\n```\n获取 JSON 数据 »\n\
+    ```\n\n| 产品名称 | 编码 | 数量 | 是否有折扣 |\n|---|---|---|---|\n| 产品 0 | PR0 | 0 | true\
+    \ |\n| 产品 1 | PR1 | 1 | true |\n| 产品 2 | PR2 | 2 | true |\n| 产品 3 | PR3 | 3 |\
+    \ true |\n| 产品 4 | PR4 | 4 | true |\n| 产品 5 | PR5 | 5 | true |\n| 产品 6 | PR6 |\
+    \ 6 | true |\n| 产品 7 | PR7 | 7 | true |\n| 产品 8 | PR8 | 8 | true |\n| 产品 9 | PR9\
+    \ | 9 | true |\n\n# 5. ASP.NET Core 与 Angular 2\n\n在本章中，我将介绍如何配合 ASP.NET Core\
+    \ MVC 和 Angular 2 进行工作。\n\n## 5.1 入门\n\n在本节中，我们将开发一个简单的应用程序来配合 ASP.NET RESTful\
+    \ 和 AngularJS 使用。\nAngularJS 是由 Google 维护的开源 JavaScript 框架，你可以访问其官方网站 http://angularjs.org/。\n\
+    在本章中，我们将探索如何将 Angular 2 集成到 ASP.NET Core 中。\n\n## 5.2 ASP.NET Core 和 Angular 2\
+    \ 项目模板\n\n你可以在官方网站 https://angular.io 学习 Angular 2。我们使用 JavaScript 和 TypeScript\
+    \ 开发 Angular 2。\n将 ASP.NET Core MVC 和 Angular 2 整合的思路是将这两个项目（ASP.NET Core 和 Angular\
+    \ 2）合并。幸运的是，我们可以使用 aspnetcore spa 模板，https://github.com/aspnet/JavaScriptServices。\n\
+    你可以在终端中输入此命令来使用该模板。\n\n```\n$ npm install -g yo generator-aspnetcore-spa\n```\n\
+    \n如果完成，你可以从此项目模板构建一个示例项目。\n\n## 5.3 运行演示：ASP.NET Core Angular SPA\n\n在本节中，我们运行\
+    \ aspnetcore spa 模板中的程序示例。\n\n### 5.3.1 创建项目\n\n你可以通过输入以下命令创建带有 Angular 2 的 ASP.NET\
+    \ Core。\n\n```\n$ yo aspnetcore-spa\n```\n\n选择 Angular 2 作为框架。\n\n# aspnetcore_angular2\
+    \ — yo TERM_PROGRAM=Apple_Terminal — 80x24\n\n```\nagusk$$ cd aspnetcore_angular2/\n\
+    agusk$$ yo\n? 'Allo Agus! 你想做什么? Aspnetcore Spa\n\n请确保你处于想要脚手架的目录中。\n此生成器也可以通过以下命令运行：yo\
+    \ aspnetcore-spa\n```\n\n![](img/03410162e36ac22ee4df2780b4d3848c_41_0.png)\n\n\
+    - 框架\n- Angular 2\n- Aurelia\n- Knockout\n- React\n- 带 Redux 的 React\n\n给项目命名命名，称为\
+    \ ProductAng。\n\n# aspnetcore_angular2 — yo TERM_PROGRAM=Apple_Terminal — 80x24\n\
+    \n```\nagusk$$ cd aspnetcore_angular2/\nagusk$$ yo\n? 'Allo Agus! 你想做什么? Aspnetcore\
+    \ Spa\n\n请确保你处于想要脚手架的目录中。\n此生成器也可以通过以下命令运行：yo aspnetcore-spa\n```\n\n![](img/03410162e36ac22ee4df2780b4d3848c_41_1.png)\n\
+    \n- 框架 Angular 2。\n- 你想创建什么类型的项目？project.json (兼容 .NET Core 工具预览 2 和 Visual Studio\
+    \ 2015)\n- 你想包含单元测试吗？否\n- 你的项目名称 (aspnetcore_angular2) ProductAng\n\n## 5.3.2\
+    \ 运行程序\n\n要运行程序，像往常一样操作。打开终端并导航到项目文件夹。然后输入这些命令。\n\n```\n$ dotnet restore\n$ dotnet\
+    \ build\n$ dotnet run\n```\n\n打开浏览器并导航到 http://localhost:5000/。你应该能看到带有 Angular\
+    \ 2 的 SPA。\n\n![](img/03410162e36ac22ee4df2780b4d3848c_42_0.png)\n\n## Hello,\
+    \ world!\n\n欢迎来到你的新单页应用，它构建于：\n\n- 用于跨平台服务器代码的 ASP.NET Core 和 C#\n- 用于客户端代码的 Angular\
+    \ 2 和 TypeScript\n- 用于构建和打包客户端资源的 Webpack\n- 用于布局和样式的 Bootstrap\n\n为了帮助你入门，我们已经设置了：\n\
+    \n- 客户端导航。例如，点击 Counter 然后点击 Back 返回此处。\n- 服务端渲染。为了更快的初始加载和改进 SEO，你的 Angular 2\
+    \ 应用生成的 HTML 将传输到浏览器，那里有一个客户端副本。\n- Webpack 开发中间件。在开发模式下，当你修改任何文件时都会更新。\n- 热模块替换。在开发模式下，你无需刷新页面。\n\
+    - 高效构建。在生产模式下，开发功能被禁用，webpack 会产生压缩后的 CSS 和 JavaScript 文件。\n\n你可以点击 Fetch 数据来查看\
+    \ Angular 2。\n\n## 5.4 接下来是什么？\n\n你可以通过阅读网络上的教程或书籍了解更多关于 AngularJS。我写了一本关于 AngularJS\
+    \ 的书。请访问我的博客 http://aguskiawan.net/post/AngularJS . 我正在编写一本关于 Angular 2 的新书。\n\
+    \n![](img/03410162e36ac22ee4df2780b4d3848c_44_0.png)\n\n# 6. ASP.NET Core, Entity\
+    \ Framework 和 PostgreSQL\n\n在本章中，我将解释如何配合 ASP.NET Core MVC、Entity Framework 和\
+    \ PostgreSQL 进行工作。\n\n## 6.1 入门\n\n在本章，我们将学习如何配合 ASP.NET Core MVC、Entity Framework\
+    \ 和 PostgreSQL 进行工作。\n\n## 6.2 PostgreSQL\n\n在本章中，我们将使用 PostgreSQL。你可以将其安装在：\n\
+    \n![](img/03410162e36ac22ee4df2780b4d3848c_45_0.png)\n\n## 6.3 Entity Framework\n\
+    \n在本节中，我们将使用 Entity Framework 构建 ASP.NET Core MVC。\n\n## 6.4 数据访问\n\n在项目中加载 EF\
+    \ Core 后，我们将开发访问 PostgreSQL 的类。我们创建 Model 和 Data 对象。\n\n### 6.4.1 构建数据库\n\n首先，我们在\
+    \ PostgreSQL 中创建一个表。\n\n```sql\nCREATE TABLE product (\n  id SERIAL PRIMARY KEY,\n\
+    \  name TEXT NOT NULL,\n  product_code TEXT,\n  quantity INTEGER,\n  is_discount\
+    \ BOOLEAN\n);\nALTER TABLE product OWNER TO postgres;\n```\n\n### 6.4.2 创建 ASP.NET\
+    \ Core 项目\n\n我们创建一个 ASP.NET Core MVC 项目。\n\n### 6.4.3 配置数据库\n\n接下来，将连接字符串添加到 appsettings.json。\n\
+    \n```json\n{\n  \"ConnectionStrings\": {\n    \"DefaultConnection\": \"Data Source=localhost;Port=5432;Database=PostgresDemo;User\
+    \ ID=agusk;Password=agusk\"\n  },\n  \"Logging\": {\n    \"LogLevel\": {\n   \
+    \   \"Default\": \"Debug\",\n      \"Microsoft\": \"Information\"\n    }\n  }\n\
+    }\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 39]
+
+
+    # ASP.NET Core MVC Demo
+
+
+    Access ASP.NET Core API.
+
+
+    ```
+
+    Get JSON data »
+
+    ```
+
+
+    | Product Name | Code | Quantity | Is Discount |
+
+    |---|---|---|---|
+
+    | Product 0 | PR0 | 0 | true |
+
+    | Product 1 | PR1 | 1 | true |
+
+    | Product 2 | PR2 | 2 | true |
+
+    | Product 3 | PR3 | 3 | true |
+
+    | Product 4 | PR4 | 4 | true |
+
+    | Product 5 | PR5 | 5 | true |
+
+    | Product 6 | PR6 | 6 | true |
+
+    | Product 7 | PR7 | 7 | true |
+
+    | Product 8 | PR8 | 8 | true |
+
+    | Product 9 | PR9 | 9 | true |'
+  - '[PAGE 40]
+
+
+    # 5. ASP.NET Core and Angular 2
+
+
+    In this chapter I''m going to explain how to work with ASP.NET Core MVC and Angular
+    2.
+
+
+    # 5.1 Getting Started
+
+
+    In this section, we develop a simple app to work with ASP.NET RESTful and AngularJS.
+
+    nAngularJS is an open-source JavaScript framework, maintained by Google, that
+    you can visit official website on http://angularjs.org/.
+
+    In this chapter, we explore to integrate Angular 2 into ASP.NET Core.
+
+
+    # 5.2 ASP.NET Core and Angular 2 Project Template
+
+
+    You can learn Angular 2 on the official website, https://angular.io. We develop
+    Angular 2 using JavaScript and TypeScript.
+
+    The idea to integrate ASP.NET Core MVC and Angular 2 is to merge the both projects,
+    ASP.NET Core and Angular 2. Fortunately, we can use aspnetcore spa template, https://github.com/aspnet/JavaScriptServices.
+
+    You can use this template by typing this command on Terminal.
+
+
+    ```
+
+    $ npm install -g yo generator-aspnetcore-spa
+
+    ```
+
+
+    If done, you can build a sample project from this project template.
+
+
+    # 5.3 Run Demo: ASP.NET Core Angular SPA
+
+
+    In this section, we run program sample from aspnetcore spa template.
+
+
+    # 5.3.1 Creating a Project
+
+
+    You can create ASP.NET Core with Angular 2 by typing this command.
+
+
+    ```
+
+    $ yo aspnetcore-spa
+
+    ```
+
+
+    Select Angular 2 as framework.'
+  - '[PAGE 41]
+
+
+    # aspnetcore_angular2 — yo TERM_PROGRAM=Apple_Terminal — 80x24
+
+
+    ```
+
+    agusk$$ cd aspnetcore_angular2/
+
+    agusk$$ yo
+
+    ? ''Allo Agus! What would you like to do? Aspnetcore Spa
+
+
+    Make sure you are in the directory you want to scaffold into.
+
+    This generator can also be run with: yo aspnetcore-spa
+
+    ```
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_41_0.png)
+
+
+    +   - Framework
+
+    - Angular 2
+
+    - Aurelia
+
+    - Knockout
+
+    - React
+
+    - React with Redux
+
+
+    Given a project name, called ProductAng.
+
+
+    # aspnetcore_angular2 — yo TERM_PROGRAM=Apple_Terminal — 80x24
+
+
+    ```
+
+    agusk$$ cd aspnetcore_angular2/
+
+    agusk$$ yo
+
+    ? ''Allo Agus! What would you like to do? Aspnetcore Spa
+
+
+    Make sure you are in the directory you want to scaffold into.
+
+    This generator can also be run with: yo aspnetcore-spa
+
+    ```
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_41_1.png)
+
+
+    +   - Framework Angular 2.
+
+    - What type of project do you want to create? project.json (compatible with .NET
+
+    Core tooling preview 2 and Visual Studio 2015)
+
+    - Do you want to include unit tests? No
+
+    - Your project name (aspnetcore_angular2) ProductAng'
+  - '[PAGE 42]
+
+
+    # ## 5.3.2 Running the Program
+
+
+    To run the program, you do it as usual. Open Terminal and navigate to project
+    folder. Then, type these commands.
+
+
+    ```
+
+    $ dotnet restore
+
+    $ dotnet build
+
+    $ dotnet run
+
+    ```
+
+
+    You open a browser and navigate to http://localhost:5000/. You should SPA with
+    Angular 2.
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_42_0.png)'
+  - '[PAGE 43]
+
+
+    # # Hello, world!
+
+
+    Welcome to your new single-page application, built with:
+
+
+    +   - ASP.NET Core and C# for cross-platform server-side code
+
+    - Angular 2 and TypeScript for client-side code
+
+    - Webpack for building and bundling client-side resources
+
+    - Bootstrap for layout and styling
+
+
+    To get you started, we''ve set up:
+
+
+    +   - Client-side navigation. For example, click Counter then Back to return here.
+
+    - Server-side rendering. For faster initial loading and improved SEO, the resulting
+    HTML of your Angular 2 app is transferred to the browser where a client-side copy
+    of the app takes over.
+
+    - Webpack dev middleware. In development mode, there''s no need to run the webpack
+    build tool. Your client-side resources are dynamically built on demand. Updates
+    are available as soon as you modify any file.
+
+    - Hot module replacement. In development mode, you don''t even need to reload
+    the page after making some changes. Within seconds of saving changes to files,
+    your Angular 2 app will be rebuilt and a new instance is injected into the page.
+
+    - Efficient production builds. In production mode, development-time features are
+    disabled, and the webpack build tool produces minified CSS and JavaScript files.
+
+
+    You can click menu Fetch data to see Angular 2 feed remote data.'
+  - '[PAGE 44]
+
+
+    # 5.4 What''s The Next?
+
+
+    You can do more practices for AngularJS by reading several tutorial in Internet
+    or books. I also wrote a book about AngularJS Programming by Example. This book
+    helps you learn about AngularJS programming. Please visit my blog, http://blog.aguskurniawan.net/post/AngularJS.aspx
+    . This book uses the first version of AngularJS. Currently, I''m working on my
+    new book for Angular 2.
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_44_0.png)'
+  - '[PAGE 45]
+
+
+    # 6. ASP.NET Core, Entity Framework Core and PostgreSQL
+
+
+    In this chapter I''m going to explain how to work with ASP.NET Core MVC, Entity
+    Framework Core and PostgreSQL.
+
+
+    # 6.1 Getting Started
+
+
+    In this chapter, we will learn how to work with ASP.NET Core MVC to access database,
+    PostgreSQL, using Entity Framework Core.
+
+
+    # 6.2 PostgreSQL Database
+
+
+    In this chapter, we use PostgreSQL for database server. You can install it based
+    on your platform on https://www.postgresql.org.
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_45_0.png)'
+  - "[PAGE 46]\n\n# 6.3 Entity Framework Core\n\nIf you have experiences in Microsoft\
+    \ (EF) library that is used to manage data processing for several database engines,\
+    \ Microsoft provides EF for .NET Core. It is called EF Core. Further information\
+    \ about EF Core, you can visit the official website on https://github.com/aspnet/EntityFramework.\n\
+    \n# 6.4 Demo Database Application\n\nIn this section, we will build a simple ASP.NET\
+    \ Core MVC to access PostgreSQL through Entity Framework Core.\nLets start!\n\n\
+    # 6.4.1 Build PostgreSQL Database\n\nFirst, you create a database, for instance,\
+    \ demodb. Then, create a table for your testing. The following is a script for\
+    \ creating a table.\n\n```\nCREATE TABLE public.product\n(\n  id integer: NOT\
+    \ NULL DEFAULT nextval('product_id_seq'::regclass),\n  quantity integer,\n  is_discount\
+    \ boolean,\n  name text,\n  product_code text\n) WITH (\n  OIDS=FALSE\n);\nALTER\
+    \ TABLE public.product\nOWNER TO postgres;\n```\n\nYou may create a login user\
+    \ for accessing this database.\n\n# 6.4.2 Creating an ASP.Net Core MVC Project\n\
+    \nWe can create ASP.NET Core MVC project using yo aspnet. You can use Web Application\
+    \ template.\n\n# 6.4.3 Configure ASP.Net Core MVC Project\n\nThe next step is\
+    \ to load .NET Framework Core for PostgreSQL into our project. You add these libraries\
+    \ into project.json file under dependencies.\n\n```\n\"Npgsql.EntityFrameworkCore.PostgreSQL\"\
+    : \"1.1.0\",\n\"Microsoft.EntityFrameworkCore.Design\": {\n  \"version\": \"1.1.0\"\
+    ,\n  \"type\": \"build\"\n}\n```"
+  - "[PAGE 47]\n\nThen, you can load required libraries by typing this command on\
+    \ Terminal.\n\n```\n$ dotnet restore\n```\n\nThen, we add our database connection\
+    \ string for PostgreSQL. We add it to appsettings.json file. We add DbContextSettings.\
+    \ You can change values for your PostgreSQL.\n\n```\n{\n  \"ConnectionStrings\"\
+    : {\n    \"DefaultConnection\": \"Data Source=PostgresDemo.db\"\n  },\n  \"DbContextSettings\"\
+    : {\n    \"ConnectionString\": \"User ID=agusk;Password=agusk;Host=localhost;Port=5432;Database=demob\"\
+    \n  },\n  \"Logging\": {\n    \"IncludeScopes\": false,\n    \"LogLevel\": {\n\
+    \      \"Default\": \"Debug\",\n      \"System\": \"Information\",\n      \"Microsoft\"\
+    : \"Information\"\n    }\n  }\n}\n```\n\n# 6.4.4 Develop Data Access\n\nAfter\
+    \ loaded EF Core inside our project, now we develop classes to access PostgreSQL.\
+    \ We create two Model and Data objects. You can see them in Figure below.\n\n\
+    ![](img/03410162e36ac22ee4df2780b4d3848c_47_0.png)"
+  - "[PAGE 48]\n\nProduct is a data model which holds data from database table in\
+    \ PostgreSQL. It's mapping from database table. The following implementation of\
+    \ Product.\n\n```\nusing System.ComponentModel.Annotations.Schema;\n\nnamespace\
+    \ PostgresDemo.Models\n{\n    [Table(\"product\")]\n    public class Product\n\
+    \    {\n        [Column(\"id\")]\n        public int Id { get; set; }\n      \
+    \  [Column(\"name\")]\n        public string Name { get; set; }\n        [Column(\"\
+    product_code\")]\n        public string ProductCode { get; set; }\n        [Column(\"\
+    quantity\")]\n        public int Quantity { get; set; }\n        [Column(\"is_discount\"\
+    )]\n        public bool IsDiscount { get; set; }\n    }\n}\n```\n\nViewModel is\
+    \ object which is used to display data on View of ASP.NET Core MVC.\n\n```\nusing\
+    \ System.ComponentModel.Annotations;\n\nnamespace PostgresDemo.Models\n{\n   \
+    \ public class ProductViewModel\n    {\n        [Display(Name = \"Id\")]\n   \
+    \     public int Id { get; set; }\n        [Required]\n        [MinLength(4)]\n\
+    \        [Display(Name = \"Name\")]\n        public string Name { get; set; }\n\
+    \        [Display(Name = \"Product Code\")]\n        public string ProductCode\
+    \ { get; set; }\n        [Display(Name = \"quantity\")]\n        public int Quantity\
+    \ { get; set; }\n        [Display(Name = \"Is Discount\")]\n        public bool\
+    \ IsDiscount { get; set; }\n    }\n}\n```\n\nWe also create a database context\
+    \ for EF Core. We define DemoDbContext for a database context from PostgreSQL.\n\
+    \n```\nusing Microsoft.EntityFrameworkCore;\nusing PostgresDemo.Models;\n\nnamespace\
+    \ PostgresDemo.Data\n{\n    public class DemoDbContext : DbContext\n    {\n```"
+- md: "\nTo manipulate Product table, we define two methods, Save() and GetProductByCode(),\
+    \ in our object.\n\n```csharp\nusing System.Linq;\nusing PostgresDemo.Models;\n\
+    \nnamespace PostgresDemo.Data\n{\n    public class ProductRepo\n    {\n      \
+    \  private readonly DbContext _databaseContext;\n        public ProductRepo(DbContext\
+    \ databaseContext)\n        {\n            _databaseContext = databaseContext;\n\
+    \        }\n        public Product GetProductByCode(string code)\n        {\n\
+    \            return _databaseContext.Products.SingleOrDefault(x => x.ProductCode\
+    \ == code);\n        }\n        public void Save(Product product)\n        {\n\
+    \            var productFromDb = _databaseContext.Products.SingleOrDefault(x =>\
+    \ x.Id == product.Id);\n            if(productFromDb != null)\n            {\n\
+    \                productFromDb = product;\n            }\n            else\n \
+    \           {\n                _databaseContext.Products.Add(product);\n     \
+    \       }\n            _databaseContext.SaveChanges();\n        }\n    }\n}\n\
+    ```\n\nThese objects will be called from Controller.\n\n## 6.4.5 Develop ASP.Net\
+    \ MVC Controllers\n\nWe create Product Controller to handle our View and push\
+    \ data to UI. The following is ProductCategory class implementation.\n\n```csharp\n\
+    using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\n\
+    using Microsoft.AspNetCore.Mvc;\nusing PostgresDemo.Data;\nusing PostgresDemo.Models;\n\
+    \nnamespace PostgresDemo.Controllers\n{\n    public class ProductController :\
+    \ Controller\n    {\n        private readonly ProductRepo _productRepository;\n\
+    \        public ProductController(DemoDbContext databaseContext)\n        {\n\
+    \            _productRepository = new ProductRepo(databaseContext);\n        }\n\
+    \n        public IActionResult Index()\n        {\n            return View();\n\
+    \        }\n\n        public IActionResult Create()\n        {\n            return\
+    \ View();\n        }\n        [HttpPost]\n        public IActionResult Create(ProductViewModel\
+    \ obj)\n        {\n            // database processing\n            ////\n    \
+    \        Product o = new Product();\n            o.Id = obj.Id;\n            o.Name\
+    \ = obj.Name;\n            o.ProductCode = obj.ProductCode;\n            o.Quantity\
+    \ = obj.Quantity;\n            o.IsDiscount = obj.IsDiscount;\n            _productRepository.Save(o);\n\
+    \            return RedirectToAction(\"Save\");\n        }\n\n        public IActionResult\
+    \ Save()\n        {\n            return View();\n        }\n\n        public IActionResult\
+    \ ActionResult ListProduct()\n        {\n            return View(new ProductViewModel());\n\
+    \        }\n        [HttpPost]\n        public IActionResult List(string code)\n\
+    \        {\n            Product obj = _productRepository.GetProductByCode(code);\n\
+    \            ProductViewModel o = new ProductViewModel();\n            if(o!=null)\n\
+    \            {\n                o.Id = obj.Id;\n                o.Name = obj.Name;\n\
+    \                o.ProductCode = obj.ProductCode;\n                o.Quantity\
+    \ = obj.Quantity;\n                o.IsDiscount = obj.IsDiscount;\n          \
+    \  }\n            return View(o);\n        }\n    }\n}\n```\n\nTo activate EF\
+    \ Core on our project, we add a database context in ConfigureServices() in Startup.cs\
+    \ file. Add these codes.\n\n```csharp\npublic void ConfigureServices(IServiceCollection\
+    \ services)\n{\n    // Add framework services.\n    services.AddDbContext<ApplicationDbContext>(options\
+    \ =>\n        options.UseSqlite(Configuration.ConnectionString(\"DefaultConnection\"\
+    )));\n\n    services.AddIdentity<ApplicationUser, IdentityRole>()\n        .AddEntityFrameworkStores<ApplicationDbContext>()\n\
+    \        .AddDefaultTokenProviders();\n\n    services.AddMvc();\n\n    // Add\
+    \ postgresql\n    var connectionString = Configuration[\"DbContextSettings:ConnectionString\"\
+    ];\n    services.AddDbContext<DemoDbContext>(opts => opts.UseNpgsql(connectionString));\n\
+    \n    // Add application services.\n    services.AddTransient<IEmailSender, AuthMessageSender>();\n\
+    \    services.AddTransient<ISmsSender, AuthMessageSender>();\n}\n```\n\n## 6.4.6\
+    \ Develop ASP.NET Core MVC Views\n\nAfter developed Controller, we develop our\
+    \ Views. We Create Product in Views. Then, create four view files which are shown\
+    \ in Figure below.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_52_0.png)\n\nThe\
+    \ following is implementation of Index.cshtml file.\n\n```cshtml\n@{\n  Layout\
+    \ = \"Views/Shared/Layout.cshtml\";\n  ViewBag.Title = \"Home Page\";\n}\n\n<div\
+    \ class=\"jumbotron\">\n  <h1>AS.NET Core MVC Demo //</h1>\n  <p class=\"lead\"\
+    >Filling and submitting a form.</p>\n  <p><a href=\"/Create\" class=\"btn btn-primary\
+    \ btn-large\">Create &raquo;</a></p>\n</div>\n```\n\nThe following is implementation\
+    \ of Create.cshtml file.\n\n```cshtml\n@using PostgresDemo.Models\n@model ProductViewModel\n\
+    @{\n  Layout = \"Views/Shared/Layout.cshtml\";\n  ViewBag.Title = \"Create Product\"\
+    ;\n}\n\n<div class=\"jumbotron\">\n  <h1>AS.NET Core MVC and Postgres /</h1>\n\
+    \  <p class=\"lead\">Create a new product. Fill this form. Then, click Save button\
+    \ if done.</p>\n</div>\n@using (Html.BeginForm()) {\n  <fieldset>\n    <legend>Create\
+    \ a new Product</legend>\n<div class=\"editor-label\">\n    @Html.LabelFor(model\
+    \ => model.Name)\n</div>\n<div class=\"editor-field\">\n    @Html.TextBoxFor(model\
+    \ => model.Name)\n</div>\n<div class=\"editor-label\">\n    @Html.LabelFor(model\
+    \ => model.ProductCode)\n</div>\n<div class=\"editor-field\">\n    @Html.TextBoxFor(model\
+    \ => model.ProductCode)\n</div>\n<br/>\n<div class=\"editor-label\">\n    @Html.LabelFor(model\
+    \ => model.Quantity)\n</div>\n<div class=\"editor-field\">\n    @Html.TextBoxFor(model\
+    \ => model.Quantity)\n</div>\n<br/>\n<div class=\"editor-label\">\n    <div style=\"\
+    float: left;\">\n        @Html.CheckBoxFor(model => model.IsDiscount)\n    </div>\n\
+    \    @Html.LabelFor(model => model.IsDiscount)\n</div>\n<br/>\n<input type=\"\
+    submit\" value=\"Save\" />\n</fieldset>\n```\n\nThe implementation of Save.cshtml\
+    \ file.\n\n```cshtml\n@{\n  Layout = \"Views/Shared/Layout.cshtml\";\n  ViewBag.Title\
+    \ = \"Saved\";\n}\n<div class=\"jumbotron\">\n  <h1>AS.NET Core MVC and PostgreSQL</h1>\n\
+    \  <p class=\"lead\">Product saved to PostgreSQL.</p>\n</div>\n```\n\nThe implementation\
+    \ of List.cshtml file.\n\n```cshtml\n@using PostgresDemo.Models\n@model ProductViewModel\n\
+    @{\n  Layout = \"Views/Shared/Layout.cshtml\";\n  ViewBag.Title = \"List Product\"\
+    ;\n}\n<div class=\"jumbotron\">\n  <h1>AS.NET Core MVC and PostgreSQL</h1>\n \
+    \ <p class=\"lead\">Filter product by code search.</p>\n</div>\n@using (Html.BeginForm())\
+    \ {\n  <fieldset>\n    <legend>Product Search</legend>\n    <div class=\"editor-label\"\
+    >\n      <label>Product Code</label>\n    </div>\n    <div class=\"editor-field\"\
+    >\n      <input type=\"text\" id=\"code\" name=\"code\">\n    </div>\n    <br/>\n\
+    \    <input type=\"submit\" value=\"Search\" />\n  </fieldset>\n}\n```\n\n## 6.4.7\
+    \ Testing\n\nNow you can the program.\n\n```\n$ dotnet restore\n$ dotnet build\n\
+    $ dotnet run\n```\n\nOpen a browser and navigate to http://localhost:5000/product.\n\
+    \n![](img/03410162e36ac22ee4df2780b4d3848c_55_0.png)\n\nThen, click Create a product\
+    \ button.\n\nFill all fields for creating a new product.\n\n![](img/03410162e36ac22ee4df2780b4d3848c_56_0.png)\n\
+    \nIf done, click Save button. If succeed, you should see the following form.\n\
+    \n![](img/03410162e36ac22ee4df2780b4d3848c_57_0.png)\n\nYou can verify the data\
+    \ in PostgreSQL manager.\n"
+  mdcn: "\n为了操作 Product 表，我们在我们的对象中定义了两个方法：`Save()` 和 `GetProductByCode()`。\n\n```csharp\n\
+    using System.Linq;\nusing PostgresDemo.Models;\n\nnamespace PostgresDemo.Data\n\
+    {\n    public class ProductRepo\n    {\n        private readonly DbContext _databaseContext;\n\
+    \        public ProductRepo(DbContext databaseContext)\n        {\n          \
+    \  _databaseContext = databaseContext;\n        }\n        public Product GetProductByCode(string\
+    \ code)\n        {\n            return _databaseContext.Products.SingleOrDefault(x\
+    \ => x.ProductCode == code);\n        }\n        public void Save(Product product)\n\
+    \        {\n            var productFromDb = _databaseContext.Products.SingleOrDefault(x\
+    \ => x.Id == product.Id);\n            if(productFromDb != null)\n           \
+    \ {\n                productFromDb = product;\n            }\n            else\n\
+    \            {\n                _databaseContext.Products.Add(product);\n    \
+    \        }\n            _databaseContext.SaveChanges();\n        }\n    }\n}\n\
+    ```\n\n这些对象将从 Controller 中调用。\n\n## 6.4.5 开发 ASP.Net MVC \n\n我们创建了 Product Controller\
+    \ 来处理视图并将数据推送到 UI。以下是 ProductCategory 类的实现。\n\n```csharp\nusing System;\nusing\
+    \ System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\n\
+    using Microsoft.AspNetCore.Mvc;\nusing PostgresDemo.Data;\nusing PostgresDemo.Models;\n\
+    \nnamespace PostgresDemo.Controllers\n{\n    public class ProductController :\
+    \ Controller\n    {\n        private readonly ProductRepo _productRepository;\n\
+    \        public ProductController(DemoDbContext databaseContext)\n        {\n\
+    \            _productRepository = new ProductRepo(databaseContext);\n        }\n\
+    \n        public IActionResult Index()\n        {\n            return View();\n\
+    \        }\n\n        public IActionResult Create()\n        {\n            return\
+    \ View();\n        }\n        [HttpPost]\n        public IActionResult Create(ProductViewModel\
+    \ obj)\n        {\n            // 数据库处理\n            ////\n            Product\
+    \ o = new Product();\n            o.Id = obj.Id;\n            o.Name = obj.Name;\n\
+    \            o.ProductCode = obj.ProductCode;\n            o.Quantity = obj.Quantity;\n\
+    \            o.IsDiscount = obj.IsDiscount;\n            _productRepository.Save(o);\n\
+    \            return RedirectToAction(\"Save\");\n        }\n\n        public IActionResult\
+    \ Save()\n        {\n            return View();\n        }\n\n        public IActionResult\
+    \ ActionResult ListProduct()\n        {\n            return View(new ProductViewModel());\n\
+    \        }\n        [HttpPost]\n        public IActionResult List(string code)\n\
+    \        {\n            Product obj = _productRepository.GetProductByCode(code);\n\
+    \            ProductViewModel o = new ProductViewModel();\n            if(o!=null)\n\
+    \            {\n                o.Id = obj.Id;\n                o.Name = obj.Name;\n\
+    \                o.ProductCode = obj.ProductCode;\n                o.Quantity\
+    \ = obj.Quantity;\n                o.IsDiscount = obj.IsDiscount;\n          \
+    \  }\n            return View(o);\n        }\n    }\n}\n```\n\n为了在项目中激活 EF Core，我们在\
+    \ `Startup.cs` 文件的 `ConfigureServices()` 方法中添加数据库上下文。添加这些代码。\n\n```csharp\npublic\
+    \ void ConfigureServices(IServiceCollection services)\n{\n    // 添加框架服务。\n   \
+    \ services.AddDbContext<ApplicationDbContext>(options =>\n        options.UseSqlite(Configuration.ConnectionString(\"\
+    DefaultConnection\")));\n\n    services.AddIdentity<ApplicationUser, IdentityRole>()\n\
+    \        .AddEntityFrameworkStores<ApplicationDbContext>()\n        .AddDefaultTokenProviders();\n\
+    \n    services.AddMvc();\n\n    // 添加 postgresql\n    var connectionString = Configuration[\"\
+    DbContextSettings:ConnectionString\"];\n    services.AddDbContext<DemoDbContext>(opts\
+    \ => opts.UseNpgsql(connectionString));\n\n    // 添加应用服务。\n    services.AddTransient<IEmailSender,\
+    \ AuthMessageSender>();\n    services.AddTransient<ISmsSender, AuthMessageSender>();\n\
+    }\n```\n\n## 6.4.6 开发 ASP.NET Core MVC 视图\n\n开发完 Controller 后，我们开发视图。我们在 Views\
+    \ 中创建 Product。然后创建如图所示的四个视图文件。\n\n![](img/03410162e36ac22ee4df2780b4d3848c_52_0.png)\n\
+    \n以下是 Index.cshtml 文件的实现。\n\n```cshtml\n@{\n  Layout = \"Views/Shared/Layout.cshtml\"\
+    ;\n  ViewBag.Title = \"Home Page\";\n}\n\n<div class=\"jumbotron\">\n  <h1>AS.NET\
+    \ Core MVC Demo //</h1>\n  <p class=\"lead\">填写并提交表单。</p>\n  <p><a href=\"/Create\"\
+    \ class=\"btn btn-primary btn-large\">Create &raquo;</a></p>\n</div\n```\n\n以下是\
+    \ Create.cshtml 文件的实现。\n\n```cshtml\n@using PostgresDemo.Models\n@model ProductViewModel\n\
+    @{\n  Layout = \"Views/Shared/Layout.cshtml\";\n  ViewBag.Title = \"Create Product\"\
+    ;\n}\n\n<div class=\"jumbotron\">\n  <h1>AS.NET Core MVC and Postgres /</h1>\n\
+    \  <p class=\"lead\">创建一个新产品。填写此表单。完成后，点击保存按钮。</p>\n</div>\n@using (Html.BeginForm())\
+    \ {\n  <fieldset>\n    <legend>Create a new Product</legend>\n<div class=\"editor-label\"\
+    >\n    @Html.LabelFor(model => model.Name)\n</div>\n<div class=\"editor-field\"\
+    >\n    @Html.TextBoxFor(model => model.Name)\n</div>\n<div class=\"editor-label\"\
+    >\n    @Html.LabelFor(model => model.ProductCode)\n</div>\n<div class=\"editor-field\"\
+    >\n    @Html.TextBoxFor(model => model.ProductCode)\n</div>\n<br/>\n<div class=\"\
+    editor-label\">\n    @Html.LabelFor(model => model.Quantity)\n</div>\n<div class=\"\
+    editor-field\">\n    @Html.TextBoxFor(model => model.Quantity)\n</div>\n<br/>\n\
+    <div class=\"editor-label\">\n    <div style=\"float: left;\">\n        @Html.CheckBoxFor(model\
+    \ => model.IsDiscount)\n    </div>\n    @Html.LabelFor(model => model.IsDiscount)\n\
+    </div>\n<br/>\n<input type=\"submit\" value=\"Save\" />\n</fieldset>\n```\n\n\
+    Save.cshtml 文件的实现。\n\n```cshtml\n@{\n  Layout = \"Views/Shared/Layout.cshtml\"\
+    ;\n  ViewBag.Title = \"Saved\";\n}\n<div class=\"jumbotron\">\n  <h1>AS.NET Core\
+    \ MVC and PostgreSQL</h1>\n  <p class=\"lead\">Product saved to PostgreSQL.</p>\n\
+    </div>\n```\n\nList.cshtml 文件的实现。\n\n```cshtml\n@using PostgresDemo.Models\n@model\
+    \ ProductViewModel\n@{\n  Layout = \"Views/Shared/Layout.cshtml\";\n  ViewBag.Title\
+    \ = \"List Product\";\n}\n<div class=\"jumbotron\">\n  <h1>AS.NET Core MVC and\
+    \ PostgreSQL</h1>\n  <p class=\"lead\">Filter product by code search.</p>\n</div>\n\
+    @using (Html.BeginForm()) {\n  <fieldset>\n    <legend>Product Search</legend>\n\
+    \    <div class=\"editor-label\">\n      <label>Product Code</label>\n    </div>\n\
+    \    <div class=\"editor-field\">\n      <input type=\"text\" id=\"code\" name=\"\
+    code\">\n    </div>\n    <br/>\n    <input type=\"submit\" value=\"Search\" />\n\
+    \  </fieldset>\n}\n```\n\n## 6.4.7 测试\n\n现在你可以运行程序了。\n\n```\n$ dotnet restore\n\
+    $ dotnet build\n$ dotnet run\n```\n\n打开浏览器并导航到 http://localhost:5000/product。\n\
+    \n![](img/03410162e36ac22ee4df2780b4d3848c_55_0.png)\n\n然后，点击 Create a product\
+    \ 按钮。\n\n填写创建新产品的所有字段。\n\n![](img/03410162e36ac22ee4df2780b4d3848c_56_0.png)\n\
+    \n完成后，点击 Save 按钮。如果成功，你应该看到下面的表单。\n\n![](img/03410162e36ac22ee4df2780b4d3848c_57_0.png)\n\
+    \n你可以在 PostgreSQL 管理器中验证数据。\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 49]\n\nTo manipulate Product table, we define two methods, Save() and GetProductByCode(),\
+    \ in our object.\n\n```\nusing System.Linq;\nusing PostgresDemo.Models;\n\nnamespace\
+    \ PostgresDemo.Data\n{\n    public class ProductRepo\n    {\n        private readonly\
+    \ DbContext _databaseContext;\n        public ProductRepo(DbContext databaseContext)\n\
+    \        {\n            _databaseContext = databaseContext;\n        }\n     \
+    \   public Product GetProductByCode(string code)\n        {\n            return\
+    \ _databaseContext.Products.SingleOrDefault(x => x.ProductCode == code);\n   \
+    \     }\n        public void Save(Product product)\n        {\n            var\
+    \ productFromDb = _databaseContext.Products.SingleOrDefault(x => x.Id == product.Id);\n\
+    \            if(productFromDb != null)\n            {\n                productFromDb\
+    \ = product;\n            }\n            else\n            {\n               \
+    \ _databaseContext.Products.Add(product);\n            }\n            _databaseContext.SaveChanges();\n\
+    \        }\n    }\n}\n```\n\nThese objects will be called from Controller.\n\n\
+    #  6.4.5 Develop ASP.Net MVC Controllers\n\nWe create Product Controller to handle\
+    \ our View and push data to UI. The following is ProductCategory class implementation.\n\
+    \n```\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\
+    using System.Threading.Tasks;\n```"
+  - "[PAGE 50]\n\n```\nusing Microsoft.AspNetCore.Mvc;\n\nusing PostgresDemo.Data;\n\
+    using PostgresDemo.Models;\n\nnamespace PostgresDemo.Controllers\n{\n    public\
+    \ class ProductController : Controller\n    {\n        private readonly ProductRepo\
+    \ _productRepository;\n        public ProductController(DemoDbContext databaseContext)\n\
+    \        {\n            _productRepository = new ProductRepo(databaseContext);\n\
+    \        }\n\n        public IActionResult Index()\n        {\n            return\
+    \ View();\n        }\n\n        public IActionResult Create()\n        {\n   \
+    \         return View();\n        }\n        [HttpPost]\n        public IActionResult\
+    \ Create(ProductViewModel obj)\n        {\n            // database processing\n\
+    \            ////\n            Product o = new Product();\n            o.Id =\
+    \ obj.Id;\n            o.Name = obj.Name;\n            o.ProductCode = obj.ProductCode;\n\
+    \            o.Quantity = obj.Quantity;\n            o.IsDiscount = obj.IsDiscount;\n\
+    \            _productRepository.Save(o);\n            return RedirectToAction(\"\
+    Save\");\n        }\n\n        public IActionResult Save()\n        {\n      \
+    \      return View();\n        }\n\n        public IActionResult ActionResult\
+    \ ListProduct()\n        {\n            return View(new ProductViewModel());\n\
+    \        }\n        [HttpPost]\n        public IActionResult List(string code)\n\
+    \        {\n            Product obj = _productRepository.GetProductByCode(code);\n\
+    \            ProductViewModel o = new ProductViewModel();\n            if(o!=null)\n\
+    \            {\n                o.Id = obj.Id;\n                o.Name = obj.Name;\n\
+    \                o.ProductCode = obj.ProductCode;\n                o.Quantity\
+    \ = obj.Quantity;\n                o.IsDiscount = obj.IsDiscount;\n          \
+    \  }\n            return View(o);\n        }\n    }\n```"
+  - "[PAGE 51]\n\nTo activate EF Core on our project, we add a database context in\
+    \ ConfigureServices() in Startup.cs file. Add these codes.\n\n```\npublic void\
+    \ ConfigureServices(IServiceCollection services)\n{\n    // Add framework services.\n\
+    \    services.AddDbContext<ApplicationDbContext>(options =>\n        options.UseSqlite(Configuration.ConnectionString(\"\
+    DefaultConnection\")));\n\n    services.AddIdentity<ApplicationUser, IdentityRole>()\n\
+    \        .AddEntityFrameworkStores<ApplicationDbContext>()\n        .AddDefaultTokenProviders();\n\
+    \n    services.AddMvc();\n\n    // Add postgresql\n    var connectionString =\
+    \ Configuration[\"DbContextSettings:ConnectionString\"];\n    services.AddDbContext<DemoDbContext>(opts\
+    \ => opts.UseNpgsql(connectionString));\n\n    // Add application services.\n\
+    \    services.AddTransient<IEmailSender, AuthMessageSender>();\n    services.AddTransient<ISmsSender,\
+    \ AuthMessageSender>();\nn}\n```\n\n# ## 6.4.6 Develop ASP.NET Core MVC Views\n\
+    \nAfter developed Controller, we develop our Views. We Create Product in Views.\
+    \ Then, create four view files which are shown in Figure below."
+  - "[PAGE 52]\n\n![](img/03410162e36ac22ee4df2780b4d3848c_52_0.png)\n\nThe following\
+    \ is implementation of Index.cshtml file.\n\n```\n@{\n  Layout = \"Views/Shared/Layout.cshtml\"\
+    ;\n  ViewBag.Title = \"Home Page\";\n}\n\n<div class=\"jumbotron\">\n  <h1>AS.NET\
+    \ Core MVC Demo //</h1>\n  <p class=\"lead\">Filling and submitting a form.</p>\n\
+    \  <p><a href=\"/Create\" class=\"btn btn-primary btn-large\">Create &raquo;/</a></p>\n\
+    </div>\n```\n\nThe following is implementation of Create.cshtml file.\n\n```\n\
+    @using PostgresDemo.Models\n@model ProductViewModel\n@{\n  Layout = \"Views/Shared/Layout.cshtml\"\
+    ;\n  ViewBag.Title = \"Create Product\";\n}\n\n<div class=\"jumbotron\">\n  <h1>AS.NET\
+    \ Core MVC and Postgres /</h1>\n  <p class=\"lead\">Create a new product. Fill\
+    \ this form. Then, click Save button if done.</p>\n</div>\n@using (Html.BeginForm())\
+    \ {\n  <fieldset>\n    <legend>Create a new Product</legend>\n```"
+  - "[PAGE 53]\n\n```\n<div class=\"editor-label\">\n    @Html.LabelFor(model => model.Name)\n\
+    </div>\n<div class=\"editor-field\">\n    @Html.TextBoxFor(model => model.Name)\n\
+    </div>\n<div class=\"editor-label\">\n    @Html.LabelFor(model => model.ProductCode)\n\
+    </div>\n<div class=\"editor-field\">\n    @Html.TextBoxFor(model => model.ProductCode)\n\
+    </div>\n<br/>\n<div class=\"editor-label\">\n    @Html.LabelFor(model => model.Quantity)\n\
+    </div>\n<div class=\"editor-field\">\n    @Html.TextBoxFor(model => model.Quantity)\n\
+    </div>\n<br/>\n<div class=\"editor-label\">\n    <div style=\"float: left;\">\n\
+    \        @Html.CheckBoxFor(model => model.IsDiscount)\n    </div>\n    @Html.LabelFor(model\
+    \ => model.IsDiscount)\n</div>\n<br/>\n<input type=\"submit\" value=\"Save\" />\n\
+    </fieldset>\n<p><br></p>\n```\n\nThe implementation of Layout.Save.cshtml file.\n\
+    \n```\n@{\n    Layout = \"/Views/Shared/Layout.cshtml\";\n    ViewBag.Title =\
+    \ \"Saved Data\";\n}\n<div class=\"umbotron\">\n    <h1>ASP.NET Core MVC and PostgreSQL</h1>\n\
+    \    <p class=\"lead\">Product has saved to PostgreSQL.</p>\n    <p><a href=\"\
+    Product\" class=\"btn btn-primary btn-large\">Back to home &rsquo;</a></p>\n</div>\n\
+    <p><br></p>\n```\n\nThe implementation of ListProduct.cshtml file.\n\n```\n@using\
+    \ PostgresDemo.Models\n@model ProductViewModel\n@{\n    Layout = \"/Views/Shared/Layout.cshtml\"\
+    ;\n    ViewBag.Title = \"List Product\";\n}\n```"
+  - "[PAGE 54]\n\n```\n<div class=\"umbotron\">\n  <h1>AS.NET Core MVC and PostgreSQL</h1>\n\
+    \  <p class=\"lead\">Fill product code. Then, click Search button if done.</p>\n\
+    </div>\n@using (Html.BeginForm()) {\n  <div class=\"editor-label\">\n    <label>Product\
+    \ Code</label>\n  </div>\n  <div class=\"editor-field\">\n    <input type=\"text\"\
+    \ id=\"code\" name=\"code\">\n  </div>\n  <br/>\n  <input type=\"submit\" value=\"\
+    Search\" />\n}\n<p><br/></p>\n<fieldset>\n  <legend class=\"editor-label\">Product\
+    \ Information\n  <div class=\"editor-label\">\n    @Html.LabelFor(model => model.Name)\n\
+    \  </div>\n  <div class=\"editor-field\">\n    @Html.TextBoxFor(model => model.Name)\n\
+    \  </div>\n  <br/>\n  <div class=\"editor-label\">\n    @Html.LabelFor(model =>\
+    \ model.ProductCode)\n  </div>\n  <div class=\"editor-field\">\n    @Html.TextBoxFor(model\
+    \ => model.ProductCode)\n  </div>\n  <br/>\n  <div class=\"editor-label\">\n \
+    \   @Html.LabelFor(model => model.Quantity)\n  </div>\n  <div class=\"editor-field\"\
+    >\n    @Html.TextBoxFor(model => model.Quantity)\n  </div>\n  <br/>\n  <div class=\"\
+    editor-label\">\n    <div style=\"float: left;\">\n      @Html.CheckBoxFor(model\
+    \ => model.IsDiscount)\n    </div>\n    @Html.LabelFor(model => model.IsDiscount)\n\
+    \  </div>\n</fieldset>\n<p><br/></p>\n```\n\nSave All files.\n\n# 6.4.7 Testing\n\
+    \nNow you can the program.\n\n```\n$ dotnet restore\n$ dotnet build\n$ dotnet\
+    \ run\n```"
+  - '[PAGE 55]
+
+
+    Open a browser and navigate to http://localhost:5000/product.
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_55_0.png)
+
+
+    Then, click Create a product button.
+
+
+    Fill all fields for creating a new product.'
+  - '[PAGE 56]
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_56_0.png)
+
+
+    If done, click Save button. If succeed, you should see the following form.'
+  - '[PAGE 57]
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_57_0.png)
+
+
+    You can verify the data in PostgreSQL manager.'
+- md: '
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_58_0.png)
+
+
+    testing of listing data, you can click List products button in home form. Fill
+    a product code that you inserted a product before. If done, click Search button.
+
+
+    You should see a product with a product code which you entry.
+
+
+    # PostgreDemo
+
+
+    | Product Code | Search |
+
+    ||---||
+
+
+    # Product Information
+
+
+    | Name | Product Code | Quantity | Is Discount |
+
+    ||---|---|---|---|
+
+    | Product 1 | PRD01 | 10 | |
+
+
+    # Source Code
+
+
+    Source code can be downloaded on http://www.aguskurniawan.net/book/aspnetcore26st.zip.
+
+
+    # Contact
+
+
+    If you have question related to this book, please contact me at aguskur@hotmail.com
+    . My blog: http://blog.aguskurniawan.net.
+
+
+    # Table of Contents
+
+
+    - Copyright 2
+
+    - Preface 5
+
+    - 1. Preparing Development Environment 6
+
+    - 1.1 ASP.NET Core 6
+
+    - 1.2 System Requirements 6
+
+    - 1.3 Development Tools 6
+
+    - 2. Deploying ASP.NET Core 8
+
+    - 2.1 Getting Started 8
+
+    - 2.2 Deploying ASP.NET Core on macOS, Linux and Windows 8
+
+    - 2.3 Testing 10
+
+    - 3. ASP.NET Core MVC Development 12
+
+    - 3.1 Getting Started 12
+
+    - 3.2 ASP.NET Core MVC Template 12
+
+    - 3.3 Building Your First ASP.NET Core MVC Application 13
+
+    - 3.3.1 Creating A Project 13
+
+    - 3.3.2 Build and Run the Program 15
+
+    - 3.4 Building ASP.NET Core MVC Application 17
+
+    - 3.4.1 Creating a Project 17
+
+    - 3.4.2 Configuring ASP.NET Core MVC Project 19
+
+    - 3.4.3 Writing Program 21
+
+    - 3.4.3.1 Creating Model 22
+
+    - 3.4.3.2 Creating Controller 22
+
+    - 3.4.3.3 Creating View 23
+
+    - 3.4.4 Testing 26
+
+    - 3.5 What''s Next? 29
+
+    - 4. ASP.NET Core API Development 30
+
+    - 4.1 Getting Started 30
+
+    - 4.2 Building ASP.NET Core API Application 30
+
+    - 4.2.1 Creating a Project 30
+
+    - 4.2.2 Writing Program for ASP.NET Core API 33
+
+    - 4.2.3 Testing 35
+
+    - 4.3 Client Application for ASP.NET Core API 36
+
+    - 4.3.1 Creating Controller 36
+
+    - 4.3.2 Creating View 37
+
+    - 4.4 Testing 39
+
+    - 5. ASP.NET Core and Angular 41
+
+    - 5.1 Getting Started 41
+
+    - 5.2 ASP.NET Core and Angular 2 Project Template 41
+
+    - 5.3 Run Demo: ASP.NET Core Angular SPA 41
+
+    - 5.3.1 Creating a Project 41
+
+    - 5.3.2 Running the Program 43
+
+    - 5.4 What''s The Next? 45
+
+    - 6. ASP.NET Core, Entity Framework Core and PostgreSQL 46
+
+    - 6.1 Getting Started 46
+
+    - 6.2 PostgreSQL Database 46
+
+    - 6.3 Entity Framework Core 47
+
+    - 6.4 Demo Database Application 47
+
+    - 6.4.1 Build PostgreSQL Database 47
+
+    - 6.4.2 Creating a ASP.NET Core MVC Project 47
+
+    - 6.4.3 Configure ASP.NET Core MVC Project 48
+
+    - 6.4.4 Develop Data Access 48
+
+    - 6.4.5 Develop ASP.NET Core MVC Controllers 50
+
+    - 6.4.6 Develop ASP.NET Core MVC Views 52
+
+    - 6.4.7 Testing 55
+
+
+    Source Code 61
+
+
+    Contact 62'
+  mdcn: '
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_58_0.png)
+
+
+    列表数据测试，您可以点击首页表单中的“列表产品”（List products）按钮。填写您之前插入过的产品代码。如果完成，点击“搜索”（Search）按钮。
+
+
+    您应该看到一个与输入的代码匹配的产品。
+
+
+    # PostgreDemo
+
+
+    | 产品代码 | 搜索 |
+
+    ||---||
+
+
+    # 产品信息
+
+
+    | 名称 | 产品代码 | 数量 | 是否折扣 |
+
+    |---|---|---|---|
+
+    | 产品 1 | PRD01 | 10 | |
+
+
+    # 源代码
+
+
+    源代码可以在 http://www.aguskurniawan.net/book/aspnetcore26st.zip 下载。
+
+
+    # 联系方式
+
+
+    如果您有任何与此书相关的问题，请通过 aguskur@hotmail.com 与我联系。我的博客：http://blog.aguskurniawan.net。
+
+
+    # 目录
+
+
+    - 版权所有 2
+
+    - 前言 5
+
+    - 1. 准备开发环境 6
+
+    - 1.1 ASP.NET Core 6 6
+
+    - 1.2 系统要求 6
+
+    - 1.3 开发工具 6
+
+    - 2. 部署 ASP.NET Core 8 8
+
+    - 2.1 入门 8
+
+    - 2.2 在 macOS、Linux 和 Windows 上部署 ASP.NET Core 8
+
+    - 2.3 测试 10
+
+    - 3. ASP.NET Core MVC 开发 12
+
+    - 3.1 入门 12
+
+    - 3.2 ASP.NET Core MVC 模板 12
+
+    - 3.3 构建您的第一个 ASP.NET Core MVC 应用程序 13
+
+    - 3.3.1 创建项目 13
+
+    - 3.3.2 构建并运行程序 15
+
+    - 3.4 构建 ASP.NET Core MVC 应用程序 17
+
+    - 3.4.1 创建项目 17
+
+    - 3.4.2 配置 ASP.NET Core MVC 项目 19
+
+    - 3.4.3 编写程序 21
+
+    - 3.4.3.1 创建模型 (Model) 22
+
+    - 3.4.3.2 创建控制器 (Controller) 22
+
+    - 3.4.3.3 创建视图 (View) 23
+
+    - 3.4.4 测试 26
+
+    - 3.5 接下来是什么？29
+
+    - 4. ASP.NET Core API 开发 30
+
+    - 4.1 入门 30
+
+    - 4.2 构建 ASP.NET Core API 应用程序 30
+
+    - 4.2.1 创建项目 30
+
+    - 4.2.2 为 ASP.NET Core API 编写程序 33
+
+    - 4.2.3 测试 35
+
+    - 4.3 ASP.NET Core API 客户端应用程序 36
+
+    - 4.3.1 创建控制器 36
+
+    - 4.3.2 创建视图 37
+
+    - 4.4 测试 39
+
+    - 5. ASP.NET Core 和 Angular 41
+
+    - 5.1 入门 41
+
+    - 5.2 ASP.NET Core 和 Angular 2 项目模板 41
+
+    - 5.3 运行 Demo：ASP.NET Core Angular SPA 41
+
+    - 5.3.1 创建项目 41
+
+    - 5.3.2 运行程序 43
+
+    - 5.4 接下来是什么？45
+
+    - 6. ASP.NET Core, Entity Framework Core 和 PostgreSQL 46
+
+    - 6.1 入门 46
+
+    - 6.2 PostgreSQL 数据库 46
+
+    - 6.3 Entity Framework Core 47
+
+    - 6.4 Demo 应用程序 47
+
+    - 6.4.1 构建 PostgreSQL 数据库 47
+
+    - 6.4.2 创建 ASP.NET Core MVC 项目 47
+
+    - 6.4.3 配置 ASP.NET Core MVC 项目 48
+
+    - 6.4.4 开发数据访问层 48
+
+    - 6.4.5 开发 ASP.NET Core MVC 控制器 50
+
+    - 6.4.6 开发 ASP.NET Core MVC 视图 52
+
+    - 6.4.7 测试 55
+
+
+    源代码 61
+
+
+    联系方式 62
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 58]
+
+
+    ![](img/03410162e36ac22ee4df2780b4d3848c_58_0.png)
+
+
+    testing of listing data, you can click List products button in home form. Fill
+    a product code that you inserted a product before. If done, click Search button.
+
+
+    You should see a product with a product code which you entry.'
+  - '[PAGE 59]
+
+
+    # PostgreDemo
+
+
+    Product Code
+
+
+    Search
+
+
+    # Product Information
+
+
+    Name
+
+
+    Product 1
+
+
+    Product Code
+
+
+    PRD01
+
+
+    Quantity
+
+
+    10
+
+
+    Is Discount'
+  - '[PAGE 60]
+
+
+    # Source Code
+
+
+    Source code can be downloaded on http://www.aguskurniawan.net/book/aspnetcore26st.zip.'
+  - '[PAGE 61]
+
+
+    # Contact
+
+
+    If you have question related to this book, please contact me at aguskur@hotmail.com
+    . My blog: http://blog.aguskurniawan.net.'
+  - '[PAGE 62]
+
+
+    # # Table of Contents
+
+
+    +   Copyright 2
+
+
+    +   Preface 5
+
+
+    +   1. Preparing Development Environment 6
+
+
+    +   1.1 ASP.NET Core 6
+
+
+    +   1.2 System Requirements 6
+
+
+    +   1.3 Development Tools 6
+
+
+    +   2 Deploying ASP.NET Core 8
+
+
+    +   2.1 Getting Started 8
+
+
+    +   2.2 Deploying ASP.NET Core on macOS, Linux and Windows 8
+
+
+    +   2.3 Testing 10
+
+
+    +   3. ASP.NET Core MVC Development 12
+
+
+    +   3.1 Getting Started 12
+
+
+    +   3.2 ASP.NET Core MVC Template 12
+
+
+    +   3.3 Building Your First ASP.NET Core MVC Application 13
+
+
+    +   3.3.1 Creating A Project 13
+
+
+    +   3.3.2 Build and Run the Program 15
+
+
+    +   3.4 Building ASP.NET Core MVC Application 17
+
+
+    +   3.4.1 Creating a Project 17
+
+
+    +   3.4.2 Configuring ASP.NET Core MVC Project 19
+
+
+    +   3.4.3 Writing Program 21
+
+
+    +   3.4.3.1 Creating Model 22
+
+
+    +   3.4.3.2 Creating Controller 22
+
+
+    +   3.4.3.3 Creating View 23
+
+
+    +   3.4.4 Testing 26
+
+
+    +   3.5 What''s Next? 29
+
+
+    +   4. ASP.NET Core API Development 30
+
+
+    +   4.1 Getting Started 30
+
+
+    +   4.2 Building ASP.NET Core API Application 30
+
+
+    +   4.2.1 Creating a Project 30
+
+
+    +   4.2.2 Writing Program for ASP.NET Core API 33
+
+
+    +   4.2.3 Testing 35
+
+
+    +   4.3 Client Application for ASP.NET Core API 36
+
+
+    +   4.3.1 Creating Controller 36
+
+
+    +   4.3.2 Creating View 37'
+  - '[PAGE 63]
+
+
+    4.4 Testing 39
+
+
+    5. ASP.NET Core and Angular 41
+
+
+    5.1 Getting Started 41
+
+
+    5.2 ASP.NET Core and Angular 2 Project Template 41
+
+
+    5.3 Run Demo: ASP.NET Core Angular SPA 41
+
+
+    5.3.1 Creating a Project 41
+
+
+    5.3.2 Running the Program 43
+
+
+    5.4 What''s The Next? 45
+
+
+    6. ASP.NET Core, Entity Framework Core and PostgreSQL 46
+
+
+    6.1 Getting Started 46
+
+
+    6.2 PostgreSQL Database 46
+
+
+    6.3 Entity Framework Core 47
+
+
+    6.4 Demo Database Application 47
+
+
+    6.4.1 Build PostgreSQL Database 47
+
+
+    6.4.2 Creating a ASP.NET Core MVC Project 47
+
+
+    6.4.3 Configure ASP.NET Core MVC Project 48
+
+
+    6.4.4 Develop Data Access 48
+
+
+    6.4.5 Develop ASP.NET Core MVC Controllers 50
+
+
+    6.4.6 Develop ASP.NET Core MVC Views 52
+
+
+    6.4.7 Testing 55
+
+
+    Source Code 61
+
+
+    Contact 62'
