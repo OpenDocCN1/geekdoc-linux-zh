@@ -1,0 +1,549 @@
+- - '#'
+  - GNU Linux 高级管理指南
+- - '#'
+  - Josep Jorba Esteve
+- - '#'
+  - Remo Suppi Boldrito
+- - '#'
+  - 前言
+- - '#'
+  - FTA 简介
+- - '#'
+  - FTA 提供什么？
+- - '#'
+  - FTA 的后盾是谁？
+- - '#'
+  - 谁支持 FTA？
+- - '#'
+  - 许可协议是怎样的？
+- - '#'
+  - 本书的演变
+- - '#'
+  - 参与
+- - '#'
+  - 引言
+- - '#'
+  - 1. 自由软件与开源
+- - '#'
+  - 注意
+- - '##'
+  - 注意
+- - '#'
+  - Note
+- - '#'
+  - 5. 管理员的任务
+- - '##'
+  - 本地系统管理任务（无特定顺序）
+- - '##'
+  - 6.1. Debian
+- - '##'
+  - 7. 我们将涉及……
+- - '#'
+  - 活动
+- - '#'
+  - 与非 Linux 系统的迁移与共存
+- - '#'
+  - 目录
+- - '#'
+  - 引言
+- - '#'
+  - 1. 计算机系统：环境
+- - '#'
+  - 示例
+- - '#'
+  - 网站
+- - '#'
+  - 2. GNU/Linux 服务
+- - '#'
+  - 3. 使用类型
+- - '#'
+  - 4. 迁移或共存
+- - '##'
+  - 迁移流程
+- - '##'
+  - 示例
+- - '##'
+  - 示例
+- - '#'
+  - Note
+- - '#'
+  - 5. 迁移工作坊：案例研究分析
+- - '##'
+  - 5.1. Windows 桌面用户向 GNU/Linux 的个人迁移
+- - '##'
+  - 示例
+- - '##'
+  - 5.2. 带有 Windows 系统和 UNIX 的小型组织的迁移
+- - '##'
+  - 5.3. 将独立的 Windows 服务器迁移到运行 GNU/Linux 的 Samba 服务器
+- - '#'
+  - Activities
+- - '#'
+  - Bibliography
+- - '#'
+  - 介绍
+- - '#'
+  - 1. 图形工具与命令行
+- - '#'
+  - 2. 标准
+- - '#'
+  - 3. 系统文档
+- - '#'
+  - 4. Shell 脚本
+- - '##'
+  - 4.1. 交互式 shell
+- - '##'
+  - 示例
+- - '##'
+  - 4.2. Shells
+- - '##'
+  - 4.3. 系统变量
+- - '##'
+  - 4.4. Bash 中的编程脚本
+- - '###'
+  - 4.4.1. Bash 中的变量
+- - '##'
+  - 5.1. TGZ 包
+- - '##'
+  - '5.2. Fedora/Red Hat: RPM 包系统代表了向前一步，它包含了任务管理。此外，系统存储了一个带有已安装包的小型数据库，可以在新安装时进行查询。按照惯，RPM
+    包使用如下名称：'
+- - '#'
+  - 示例
+- - '#'
+  - 管理员基础工具
+- - '##'
+  - apt-get dist-upgrade
+- - '##'
+  - apt-get install debian-archive-keyring
+- - '##'
+  - gpg -import file.key
+- - '##'
+  - gpg -export -armor XXXXXXX | apt-key add -
+- - '##'
+  - 示例
+- - '##'
+  - 6. 通用管理工具
+- - '##'
+  - 7. 其他工具
+- - '#'
+  - 活动
+- - '#'
+  - 参考文献
+- - '#'
+  - Linux 内核
+- - '#'
+  - 目录
+- - '#'
+  - 引言
+- - '#'
+  - 1. GNU/Linux 系统的内核
+- - '##'
+  - 2. 配置或更新内核
+- - '##'
+  - 3. 配置与编译过程
+- - '###'
+  - 3.1. 内核编译版本 2.4.x
+- - '##'
+  - Linux 内核配置
+- - '##'
+  - 3) 编译内核
+- - '##'
+  - 4) 安装
+- - '#'
+  - make modules_install
+- - '##'
+  - 3.2. 迁移到内核 2.6
+- - '###'
+  - 3.3. 2.6.x 版本内核的编译编译
+- - '#'
+  - make clean mrproper
+- - '#'
+  - make menuconfig
+- - '#'
+  - make dep
+- - '#'
+  - make bzImage
+- - '#'
+  - make modules
+- - '#'
+  - make modules_install
+- - '#'
+  - cp arch/i386/boot/bzimage /boot/vmlinuz-2.6.x.img
+- - '#'
+  - make install
+- - '#'
+  - update-initramfs -c -k 'version'
+- - '###'
+  - 3.4. Debian 内核的编译（Debian 方式）
+- - '#'
+  - bunzip2 patch-xxxxx-2.6.21-version.bz2
+- - '#'
+  - 5. 内核模块
+- - '#'
+  - 示例
+- - '#'
+  - 6. 内核的未来与替代方案
+- - '#'
+  - 教程：根据用户配置内核
+- - '##'
+  - 7.1. 在 Debian 中配置内核
+- - '#'
+  - apt-get update
+- - '#'
+  - apt-cache search linux-image
+- - '#'
+  - apt-get install linux-image-version
+- - '#'
+  - apt-get install xxxx-modules-version（如果某些模块需要）
+- - '#'
+  - apt-get install linux-source-version-generic
+- - '#'
+  - apt-get install linux-headers-version
+- - '#'
+  - restricted
+- - '#'
+  - alias = 1
+- - '#'
+  - restricted
+- - '#'
+  - alias = 2
+- - '##'
+  - 7.2. 在 Fedora/Red Hat 中配置内核
+- - '###'
+  - 未选择的包
+- - '#'
+  - yum install kernel-source
+- - '##'
+  - 7.3. 配置通用内核
+- - '###'
+  - 1) 清理之前的
+- - '###'
+  - 2) 配置内核
+- - '###'
+  - 3) 依赖关系和清理
+- - '###'
+  - 4) 清理内核
+- - '###'
+  - 5) 编译并创建镜像
+- - '###'
+  - 6) 安装模块
+- - '###'
+  - 7) 备份模块
+- - '###'
+  - 8) 安装内核
+- - '#'
+  - cd /usr/src/directory-sources/arch/i386/boot
+- - '#'
+  - cp b2Image /boot/vmlinuz-versionkernel
+- - '#'
+  - cp System.map /boot/System.map-versionkernel
+- - '#'
+  - ln -s /boot/vmlinuz-versionkernel /boot/vmlinuz
+- - '#'
+  - ln -s /boot/System.map-versionkernel /boot/System.map
+- - '###'
+  - 9) 安装模块
+- - '###'
+  - 10) 重启机器并观察结果（如果一切顺利）。
+- - '#'
+  - 活动
+- - '#'
+  - 参考文献
+- - '#'
+  - 本地管理
+- - '#'
+  - 目录
+- - '#'
+  - 引言
+- - '#'
+  - 1. 发行版：特殊特性
+- - '##'
+  - 2. 启动和运行级别
+- - '##'
+  - 3. 监控系统
+- - '##'
+  - 3.1. 系统启动
+- - '##'
+  - 3.2. 内核：/proc
+- - '##'
+  - 3.3. 内核：/sys
+- - '##'
+  - 3.4. 进程
+- - '##'
+  - 3.5. 系统日志
+- - '##'
+  - 3.6. 内存
+- - '###'
+  - 3.7. 磁盘和文件系统
+- - '##'
+  - 文件系统
+- - '##'
+  - 4.1. 挂载点
+- - '##'
+  - 示例
+- - '#'
+  - 6. 打印服务
+- - '#'
+  - 网站
+- - '#'
+  - 示例
+- - '#'
+  - 示例
+- - '##'
+  - 6.1. BSD LPD
+- - '##'
+  - 示例
+- - '#'
+  - Local printer input
+- - '#'
+  - Remote printer input
+- - '##'
+  - 6.2. LPR
+- - '##'
+  - 打印机
+- - '##'
+  - 7. 磁盘管理
+- - '#'
+  - dd if=/dev/zero of=/hd1 bs=1k count=1
+- - '#'
+  - dd if=/dev/zero of=/hd2 bs=1k=1
+- - '#'
+  - dd if=/dev/zero of=/hd1 bs=1k count=1
+- - '#'
+  - pvcreate /dev/sda1
+- - '#'
+  - pvcreate /dev/sda2
+- - '#'
+  - pvcreate /dev/hdb1
+- - '#'
+  - vgcreate group_disks /dev/sda1 /dev/sda2 /dev/hdb1
+- - '#'
+  - lvcreate -L1G -n logical_volume group_disks
+- - '#'
+  - mkfs.reiserfs /group_disks/logical_volume
+- - '#'
+  - mkdir /mnt/backup
+- - '#'
+  - mount -t reiserfs /group_disks/logical_volume /mnt/backup
+- - '##'
+  - 8. 更新软件
+- - '#'
+  - dd if=/dev/zero of=/hd1 bs=1k count=1
+- - '#'
+  - dd if=/dev/zero of=/hd2 bs=1k count=1
+- - '#'
+  - dd if=/dev/zero of=/hd1 bs=1k count=1
+- - '#'
+  - pvcreate /dev/sda1
+- - '#'
+  - pvcreate /dev/sda2
+- - '#'
+  - pvcreate /dev/hdb1
+- - '#'
+  - vgcreate group_disks /dev/sda1 /dev/sda2 /dev/hdb1
+- - '#'
+  - lvcreate -L1G -n logical_volume group_disks
+- - '#'
+  - mkfs.reiserfs /group_disks/logical_volume
+- - '#'
+  - mkdir /mnt/backup
+- - '#'
+  - mount -t reiserfs /group_disks/logical_volume /mnt/backup
+- - '##'
+  - 10. 教程：不同部分的实践
+- - '#'
+  - tail 200 /var/log/messages
+- - '#'
+  - lsmod
+- - '#'
+  - ps -ef
+- - '#'
+  - 活动
+- - '#'
+  - 参考文献
+- - '#'
+  - 网络管理
+- - '#'
+  - 目录
+- - '#'
+  - 附录 控制与 FC6 网络服务的.......... 56
+- - '#'
+  - 引言
+- - '#'
+  - 1. TCP/IP 简介 (TCP/IP 族)
+- - '##'
+  - 1.2. 什么是 TCP/IP？
+- - '#'
+  - 示例
+- - '##'
+  - 2. TCP/IP 概念
+- - '##'
+  - 3. 如何分配互联网地址
+- - '##'
+  - 4. 如何配置网络
+- - '##'
+  - 4.1. 网络适配器 (NIC) 配置
+- - '###'
+  - 4.1.1. Fedora 风格的网络配置
+- - '###'
+  - 4.1.2. Wi-Fi（无线）网络配置
+- - '##'
+  - 4.2. 名称解析器配置
+- - '##'
+  - 4.3. 路由配置
+- - '##'
+  - 4.4. inetd 配置
+- - '##'
+  - 4.4. inetd 配置
+- - '##'
+  - 4.5. 附加配置：协议和网络
+- - '##'
+  - 4.6. 安全方面
+- - '##'
+  - access.conf 示例
+- - '##'
+  - 4.7. IP 选项
+- - '##'
+  - 示例
+- - '###'
+  - 4.7.1. 解决问题的命令
+- - '##'
+  - 5. DHCP 配置
+- - '#'
+  - dhcp.conf 示例
+- - '##'
+  - IP 伪装 (IP Masquerading)
+- - '##'
+  - 8. 使用 2.2 或更高内核的 NAT
+- - '#'
+  - 如何配置拨号和 PPP 连接
+- - '##'
+  - 11. 虚拟专用网络 (VPN)
+- - '###'
+  - 11.1. 简单示例
+- - '#'
+  - xinetd.conf
+- - '#'
+  - 适用于所有服务器的默认配置
+- - '#'
+  - 可以针对每个服务进行修改
+- - '#'
+  - service http
+- - '#'
+  - socket_type = stream
+- - '#'
+  - protocol = tcp
+- - '#'
+  - wait = no
+- - '#'
+  - user = root
+- - '#'
+  - no_access = 0.0.0.0
+- - '#'
+  - only_from = 127.0.0.1
+- - '#'
+  - banner_fail = /etc/telnet_banner
+- - '#'
+  - server = /usr/sbin/in.inetd
+- - '#'
+  - xinetd.conf
+- - '#'
+  - 适用于所有服务器的默认配置
+- - '#'
+  - 可以针对每个服务进行修改
+- - '#'
+  - service http
+- - '#'
+  - socket_type = stream
+- - '#'
+  - protocol = tcp
+- - '#'
+  - wait = no
+- - '#'
+  - user = root
+- - '#'
+  - no_access = 0.0.0.0
+- - '#'
+  - only_from = 127.0.0.1
+- - '#'
+  - banner_fail = /etc/telnet_banner
+- - '#'
+  - server = /usr/sbin/in.inetd
+- - '##'
+  - 活动
+- - '##'
+  - 附录。控制与 FC6 网络相关的服务。
+- - '##'
+  - 服务器管理
+- - '##'
+  - 索引
+- - '##'
+  - 8.1. Wiki 服务器 ....... 45
+- - '#'
+  - 引言
+- - '#'
+  - 1. 域名系统 (DNS)
+- - '#'
+  - 示例
+- - '#'
+  - 1.1. 缓存名称服务器
+- - '#'
+  - 'dig # 127.0.0.1'
+- - '##'
+  - 1.2. 转发 (Forwards)
+- - '##'
+  - 1.3. 自定义域名配置
+- - '##'
+  - 2.2. 使用 NIS 必须指定哪些资源？
+- - '##'
+  - 2.3. 我们如何运行主 NIS 服务器？
+- - '##'
+  - 2.4. 我们如何配置
+- - '##'
+  - 3. 远程连接
+- - '##'
+  - 3.1. Telnet
+- - '##'
+  - 3.2. Secure Shell
+- - '###'
+  - 3.2.1. SSH
+- - '###'
+  - 3.2.2. SSH
+- - '###'
+  - 3.2.3. SSH
+- - '##'
+  - 4. 文件传输
+- - '###'
+  - 4.1. 客户端
+- - '##'
+  - 4.2. 服务器
+- - '##'
+  - 5. 用户级
+- - '###'
+  - 5.1. 客户端
+- - '##'
+  - 5.2. 交换
+- - '###'
+  - 5.2.1. IMAP
+- - '##'
+  - 5.2.2. （更多）
+- - '###'
+  - 5.3. 邮件
+- - '##'
+  - 5.4. （更多）
+- - '###'
+  - 5.4.1. Apache
+- - '##'
+  - 5.4.2. PHP
+- - '##'
+  - 7. 访问
+- - '##'
+  - 7.1. 创建
+- - '##'
+  - 7.2. 维护
+- - '#'
+  - PostgreSQL
+- - '#'
+  - 参考文献
+- - '#'
+  - 数据管理
