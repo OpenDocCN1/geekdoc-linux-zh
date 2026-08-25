@@ -1,0 +1,152 @@
+- - '#'
+  - Linux User & Developer 196 - Linux 优化 196
+- - '#'
+  - 'Nate Graham 谈 KDE:'
+- - '#'
+  - 是时候离开那台跑步机了
+- - '##'
+  - 编辑部
+- - '##'
+  - 欢迎
+- - '###'
+  - 商业
+- - '###'
+  - 数据库厂商 Redis 将其模块代码改为专有
+- - '###'
+  - Steam Play 将 Windows 游戏引入 Linux
+- - '##'
+  - 发行版
+- - '###'
+  - 我们的告别
+- - '###'
+  - 聊聊你为 KDE 做了什么……
+- - '###'
+  - 你是如何从 Apple 工作转来到 KDE 的？
+- - '###'
+  - 你去年在易用性和生产力目标上的工作。我们已经提到过一点，但你能多告诉我们关于这个计划吗？
+- - '###'
+  - 这在质量测试方面有什么变化吗？你们如何测试应用程序和框架？
+- - '###'
+  - 轻量级发行版
+- - '##'
+  - 完全从内存运行
+- - '###'
+  - 针对 USB 优化
+- - '###'
+  - 为非常特定的任务创建的高度专业 Linux 发行版
+- - '##'
+  - 直接送货上门
+- - '###'
+  - 立即注册获取你的**免费** Eclipse 充电器
+- - '##'
+  - 选择你的套餐！
+- - '###'
+  - 印刷版 + 数字版
+- - '##'
+  - 特色案例问责项目
+- - '##'
+  - 焦点
+- - '##'
+  - 开源
+- - '#'
+  - Tom 在调查记者与编辑者（IRE）年度会议上强调谋杀责任制的价值
+- - '#'
+  - 来源
+- - '#'
+  - Linux 核心基础：cfdisk
+- - '##'
+  - 'cfdisk: 磁盘分区与 Linux 安装'
+- - '##'
+  - Linux 基础教程
+- - '###'
+  - mount --bind squashfs-root squashfs-root
+- - '###'
+  - mount -t proc none squashfs-root/proc
+- - '###'
+  - mount -t sysfs none squashfs-root/sys
+- - '###'
+  - mount -o bind /dev /squashfs-root/dev
+- - '###'
+  - mount -o bind /dev/pts squashfs-root/dev/pts
+- - '###'
+  - cp -a /etc /squashfs-root/etc/
+- - '###'
+  - umount /mnt
+- - '###'
+  - 安装到分区
+- - '###'
+  - mkdir arch
+- - '###'
+  - cp /downloads/archlinux-2018.08.01-x86_64.iso .
+- - '###'
+  - iso arch
+- - '###'
+  - cd arch
+- - '###'
+  - mountfs -arch archlinux-2018.08.01-x86_64.iso /arch
+- - '###'
+  - cp /arch/airrootfs.sfs /mnt
+- - '###'
+  - umount /arch
+- - '###'
+  - squashfs-root
+- - '###'
+  - mkfs.ext4 /dev/sdb
+- - '###'
+  - mkfs.fat -f32 /dev/sdb
+- - '##'
+  - Linux 的一个特性是可以在主系统中运行其他安装
+- - '###'
+  - mount /dev/sdb /mnt
+- - '###'
+  - cd /mnt
+- - '###'
+  - umount /dev/sdb
+- - '###'
+  - 图 3
+- - '###'
+  - chroot squashfs-root bash
+- - '###'
+  - cat > /boot/loader/entries/arch.conf
+- - '##'
+  - 将 Linux 安装到 USB 盘
+- - '###'
+  - pacman-S linux
+- - '###'
+  - cat > /boot/loader/entries/arch.conf
+- - '##'
+  - A feature of Linux is that we can run other installations within the main one
+- - '##'
+  - 配置
+- - '##'
+  - 自定义脚本
+- - '##'
+  - 计算机安全
+- - '###'
+  - CompSec：移除你系统中的威胁
+- - '##'
+  - 资源
+- - '###'
+  - 破解旧哈希
+- - '##'
+  - 接下来怎么办？
+- - '###'
+  - 从调试到漏洞利用
+- - '##'
+  - Python 教程：PyInstaller
+- - '###'
+  - PyInstaller：学习如何共享你的项目
+- - '##'
+  - Joey Bernard
+- - '##'
+  - 开始
+- - '###'
+  - pyinstaller --version
+- - '###'
+  - 异常模块包含被导入的模块是你会遇到的问题之一。你可以通过以下选项添加额外的搜索路径：
+- - '###'
+  - 创建 spec 文件
+- - '###'
+  - 检查问题
+- - '###'
+  - 检查选项
