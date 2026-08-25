@@ -1,0 +1,2 @@
++   [初学者计算机编程指南：四合一。LINUX 命令行 + Python 编程 + 网络 + KALI LINUX 黑客攻击。网络安全、无线、LTE、网络与渗透测试](README.md)
++   [初学者计算机编程指南：四合一。LINUX 命令行 + Python 编程 + 网络 + KALI LINUX 黑客攻击。网络安全、无线、LTE、网络与渗透测试](computer-programming-for-beginners-4-books-in-1-linux-comman.md)
