@@ -1,0 +1,451 @@
+- md: '
+
+    # WIRELESS HACKING
+
+    HOW TO HACK WIRELESS NETWORKS
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_0_0.png)
+
+
+    LU XI
+
+
+    # WIRELESS HACKING
+
+    HOW TO HACK WIRELESS NETWORKS
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_1_0.png)
+
+
+    LU XI
+
+
+    # Lu Xi
+
+
+    PUBLISHED BY: Lu Xi
+
+
+    Copyright © 2016 All rights reserved.
+
+
+    No part of this publication may be copied, reproduced in any format, by any means,
+    electronic or otherwise, without prior consent from the copyright owner and publisher
+    of this book.
+
+
+    # Introduction
+
+
+    I want to thank you and congratulate you for downloading this book!
+
+    Everything you need to know about wireless hacking is in this book.
+
+
+    Lu Xi
+
+
+    # Step #1: The Essential Requirement
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_8_0.png)
+
+
+    You will need to make sure that the wireless card of the computer that you will
+    be using is compatible with the CommView software. This is necessary as its compatibility
+    will ensure that it can monitor the network and capture the packets that travel
+    to and from it. You can verify its compatibility by checking the list on the CommView
+    website. If your current wireless card is not included in the list of compatible
+    wireless cards, then you will need to purchase a compatible external wireless
+    card adapter that you can connect to your computer, instead.
+
+
+    # Step #2: CommView Installation
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_9_0.png)
+
+
+    The CommView For Wifi software will be the main tool that will try to capture
+    the packets and provide you with the information that you need with regards to
+    the wireless network password that you are trying to crack. You should download
+    and install the software from their website. You can just follow the onscreen
+    instructions. It has a driver installation guide, as well, which will tell you
+    to install the necessary drivers that you will need for this process.
+
+
+    # Step #3: Aircrack-ng GUI
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_10_0.png)
+
+
+    You will also need the Aircrack-ng GUI software. This is the software that does
+    the actual cracking of the packets that were captured by the CommView software.
+    You just have to go to their website so that you can download and install this
+    particular software. Follow the onscreen instructions religiously to be able to
+    successfully install the software.
+
+
+    # Step #4: Running CommView
+
+
+    After successfully downloading and installing the CommView software, you have
+    to run the program. Once you have opened the program, click on the Play button
+    located at the top left of the page. This is the one with the blue arrow icon
+    and the first button that you will see. This way, you will be able to see the
+    “Scanner” dialog box.
+
+
+    # Step #5: Scanning Networks
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_11_0.png)
+
+
+    On the Scanner dialog box, click on the “Start Scanning” button. Doing so will
+    instruct the software to start scanning the area for different wireless networks
+    that it can find. You just have to wait for a few moments while it is the scanning
+    process. At the end, you will
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_11_1.png)
+
+
+    find a lot of wireless networks along with several details, such as the security
+    type as well as signal, appearing on the screen.
+
+
+    # Step #6: Targeting A Wireless Network
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_13_0.png)
+
+
+    The next thing to do is to choose a wireless network that you will target and
+    hack. Also, choose a network that is WEP-protected, meaning it only has WEP right
+    beside the network name and not WPA. You should choose a network with the highest
+    signal yet lowest decibel or dB. Once you have identified the perfect target,
+    you should click on the “Capture” button. During this process, you need to make
+    sure that the Packets column will reach 100,000 before you can proceed to the
+    next step.
+
+
+    # Step #7: The Logs
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_14_0.png)
+
+
+    After capturing the required amount of packets, go the Logging tab and select
+    all all the saved logs. Open the log file and export the file to any destination
+    that you want. It is advisable to choose a destination path that you can easily
+    access. Make sure the format is in tcpdump. The file should have a .cap extension
+    when you look for it in the destination folder. Do not close the CommView software
+    at any point in time during this process.
+
+
+    # Step #8: Cracking with Aircrack-ng GUI
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_15_0.png)
+
+
+    After getting all the logs, you should then run the Aircrack-ng GUI software.
+    This way, you can start cracking the password for the wireless network. You have
+    to choose WEP and open the file that has a .cap extension. This is the file that
+    you should have saved in the previous step. Then, click on Launch and type the
+    index number or your target wireless network on the command prompt.
+
+
+    # Step #9: Hercules
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_16_0.png)
+
+
+    Lastly, you should wait for a few while. If the software has successfully cracked
+    the password, it will show you the wireless network key on the screen. The wireless
+    network key will then be the one you need to use in order to access your target
+    wireless network. A different step will be necessary, though, if you will need
+    to crack a WPA password.
+
+
+    # Conclusion
+
+
+    Thank you again for downloading this book! I hope you learned a lot!
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_19_0.png)
+
+
+    Finally, if you enjoyed this book, then I''d like to ask you for a favor, would
+    you be kind enough to leave a review for this book on Amazon? It''d be greatly
+    appreciated!
+
+
+    Thank you and good luck
+
+    '
+  mdcn: "\n\n# 无线破解\n如何破解无线网络\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_0_0.png)\n\
+    \nLU XI\n\n# 无线破解\n如何破解无线网络\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_1_0.png)\n\
+    \nLU XI\n\n# Lu Xi\n\n出版者：Lu Xi\n\n版权 © 2016 版权所有。\n\n未经本书版权所有者和出版者的事先许可，不得以任何形式、任何方式（电子或其他）复制或再制本书的任何部分。\n\
+    \n# 引言\n\n我想感谢你，并祝贺你下载了这本书！\n关于无线破解，你需要的所有知识都在书中。\n\nLu Xi\n\n# 第 1 步：必要要求\n\n\
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_8_0.png)\n\n你需要确保你将使用的电脑无线网卡与 CommView\
+    \ 软件兼容。这是必要的，因为它的兼容性将确保它可以监控网络并捕获进出该网络的数据包。你可以通过检查 CommView 网站上的列表来验证其兼容性。如果你当前的无线网卡不在兼容无线卡列表中，那么你需要购买一个兼容的外部无线网卡适配器连接到你的电脑。\n\
+    \n# 第 2 步：安装 CommView\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_9_0.png)\n\n\
+    CommView For Wifi 软件将是主要的工具，用于捕获数据包并提供有关你尝试破解的无线网络密码所需的信息。你应该从他们的网站下载并安装该软件。你只需按照屏幕上的指示操作。它还包含驱动程序安装指南，会告诉你安装此过程所需的必要驱动程序。\n\
+    \n# 第 3 步：Aircrack-ng GUI\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_10_0.png)\n\
+    \n你还需要 Aircrack-ng GUI 软件。这是用于对 CommView 软件捕获的数据包进行实际破解的软件。你只需要访问他们的网站下载并安装这个特定的软件。严格按照屏幕上的指示操作，以便成功安装软件。\n\
+    \n# 第 4 步：运行 CommView\n\n成功下载并安装 CommView 软件后，你必须运行该程序。打开程序后，点击页面左上角的播放按钮。它是带有蓝色箭头图标的也是你看到的第一个按钮。通过这种方式，你就能看到“Scanner”（扫描）对话框。\n\
+    \n# 第 5 步：扫描网络\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_11_0.png)\n\n在 Scanner\
+    \ 对话框上，点击“Start Scanning”（开始扫描）按钮。这将指示软件开始扫描区域内找到的不同无线网络。在扫描过程中，你只需等待片刻。最后，你将\n\
+    \n![](img/2b577c2e27e5c4045a7280a3f5906222_11_1.png)\n\n在屏幕上看到许多无线网络以及若干详细信息，例如安全类型以及信号。\n\
+    \n# 第 6 步：选取目标无线网络\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_13_0.png)\n\n接下来要做的是选择一个你想要目标并破解的无线网络。此外，选择一个受\
+    \ WEP 保护的网络，这意味着网络名称旁边仅有 WEP 而不是 WPA。你应该选择一个信号最强但分贝（dB）最低的网络。一旦确定了完美的目标，就应该点击“Capture”（捕获）按钮。在此过程中，你需要确保\
+    \ Packets（数据包）列达到 100,000 之后才能进入下一步。\n\n# 第 7 步：日志\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_14_0.png)\n\
+    \n捕获了所需数量的数据包后，进入 Logging（日志）选项卡并选择所有保存的日志。打开日志文件并将其导出到你想要的任何位置。建议选择一个你可以轻松访问的目标路径。确保格式为\
+    \ tcpdump。在文件夹中查找时文件应该是 .cap 扩展名。在此过程中任何时候都不要关闭 CommView 软件。\n\n# 第 8 步：使用 Aircrack-ng\
+    \ GUI \n\n![](img/2b577c2e27e5c4045a7280a3f5906222_15_0.png)\n\n获取所有日志后，你应该运行\
+    \ Aircrack-ng GUI 软件。这样就可以就可以破解无线网络的密码。你需要选择 WEP 并打开扩展名为 .cap 文件。这是你在上一步保存的文件。然后，点击\
+    \ Launch（启动）并在命令行提示符输入索引数字或你的目标无线网络。\n\n# 第 9 步：Hercules\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_16_0.png)\n\
+    \n最后，你应该等一会儿。如果软件成功破解了密码，它将在屏幕上显示无线网络密钥。该无线网络密钥将是你访问目标无线网络所需的密钥。不过，如果你需要破解 WPA\
+    \ 密码，则需要不同的步骤。\n\n# 结语\n\n再次感谢你下载这本书！希望你学到了很多！\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_19_0.png)\n\
+    \n最后，如果你喜欢这本书，我想请你帮个忙，你是否愿意在 Amazon 上为这本书留评价？将不胜感激！\n\n感谢并祝你好运\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # WIRELESS
+
+    HACKING
+
+
+    HOW TO HACK WIRELESS NETWORKS
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_0_0.png)
+
+
+    LU XI'
+  - '[PAGE 1]
+
+
+    # # WIRELESS
+
+    HACKING
+
+
+    HOW TO HACK WIRELESS NETWORKS
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_1_0.png)
+
+
+    LU XI'
+  - '[PAGE 2]
+
+
+    <!-- no content -->'
+  - '[PAGE 3]
+
+
+    # Lu Xi
+
+
+    PUBLISHED BY: Lu Xi
+
+
+    Copyright © 2016 All rights reserved.
+
+
+    No part of this publication may be copied, reproduced in any format, by any means,
+    electronic or otherwise, without prior consent from the copyright owner and publisher
+    of this book.'
+  - '[PAGE 4]
+
+
+    <!-- no content -->'
+  - '[PAGE 5]
+
+
+    <!-- no content -->'
+  - '[PAGE 6]
+
+
+    # Introduction
+
+
+    I want to thank you and congratulate you for downloading this book!
+
+    Everything you need to know about wireless hacking is in this book.
+
+
+    Lu Xi'
+  - '[PAGE 7]
+
+
+    <!-- no content -->'
+  - '[PAGE 8]
+
+
+    # Step #1: The Essential Requirement
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_8_0.png)
+
+
+    You will need to make sure that the wireless card of the computer that you will
+    be using is compatible with the CommView software. This is necessary as its compatibility
+    will ensure that it can monitor the network and capture the packets that travel
+    to and from it. You can verify its compatibility by checking the list on the CommView
+    website. If your current wireless card is not included in the list of compatible
+    wireless cards, then you will need to purchase a compatible external wireless
+    card adapter that you can connect to your computer, instead.'
+  - '[PAGE 9]
+
+
+    # # Step #2: CommView Installation
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_9_0.png)
+
+
+    The CommView For Wifi software will be the main tool that will try to capture
+    the packets and provide you with the information that you need with regards to
+    the wireless network password that you are trying to crack. You should download
+    and install the software from their website. You can just follow the onscreen
+    instructions. It has a driver installation guide, as well, which will tell you
+    to install the necessary drivers that you will need for this process.'
+  - '[PAGE 10]
+
+
+    # Step #3: Aircrack-ng GUI
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_10_0.png)
+
+
+    You will also need the Aircrack-ng GUI software. This is the software that does
+    the actual cracking of the packets that were captured by the CommView software.
+    You just have to go to their website so that you can download and install this
+    particular software. Follow the onscreen instructions religiously to be able to
+    successfully install the software.
+
+
+    # Step #4: Running CommView'
+  - '[PAGE 11]
+
+
+    After successfully downloading and installing the CommView software, you have
+    to run the program. Once you have opened the program, click on the Play button
+    located at the top left of the page. This is the one with the blue arrow icon
+    and the first button that you will see. This way, you will be able to see the
+    “Scanner” dialog box.
+
+
+    # Step #5: Scanning Networks
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_11_0.png)
+
+
+    On the Scanner dialog box, click on the “Start Scanning” button. Doing so will
+    instruct the software to start scanning the area for different wireless networks
+    that it can find. You just have to wait for a few moments while it is the scanning
+    process. At the end, you will
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_11_1.png)'
+  - '[PAGE 12]
+
+
+    find a lot of wireless networks along with several details, such as the security
+    type as well as signal, appearing on the screen.'
+  - '[PAGE 13]
+
+
+    # Step #6: Targeting A Wireless Network
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_13_0.png)
+
+
+    The next thing to do is to choose a wireless network that you will target and
+    hack. Also, choose a network that is WEP-protected, meaning it only has WEP right
+    beside the network name and not WPA. You should choose a network with the highest
+    signal yet lowest decibel or dB. Once you have identified the perfect target,
+    you should click on the “Capture” button. During this process, you need to make
+    sure that the Packets column will reach 100,000 before you can proceed to the
+    next step.'
+  - "[PAGE 14]\n\n# # Step #7: The Logs\n\n![](img/2b577c2e27e5c4045a7280a3f5906222_14_0.png)\n\
+    \nAfter capturing the required amount of packets, go the Logging tab and select\
+    \ all all the saved logs. Open the log file and export the file to any destination\
+    \ that you want. It is advisable\n to choose a destination path that you can easily\
+    \ access. Make sure the format is in tcpdump. The file should have a .cap extension\
+    \ when you look for it in the destination folder. Do not close the CommView software\
+    \ at any point in time during this process.\n\n# # Step #8: Cracking with Aircrack-ng\
+    \ GUI"
+  - '[PAGE 15]
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_15_0.png)
+
+
+    After getting all the logs, you should then run the Aircrack-ng GUI software.
+    This way, you can start cracking the password for the wireless network. You have
+    to choose WEP and open the file that has a .cap extension. This is the file that
+    you should have saved in the previous step. Then, click on Launch and type the
+    index number or your target wireless network on the command prompt.'
+  - '[PAGE 16]
+
+
+    # # Step #9: Hercules
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_16_0.png)
+
+
+    Lastly, you should wait for a few while. If the software has successfully cracked
+    the password, it will show you the wireless network key on the screen. The wireless
+    network key will then be the one you need to use in order to access your target
+    wireless network. A different step will be necessary, though, if you will need
+    to crack a WPA password.'
+  - '[PAGE 17]
+
+
+    <!-- no content -->'
+  - '[PAGE 18]
+
+
+    <!-- no content -->'
+  - '[PAGE 19]
+
+
+    # Conclusion
+
+
+    Thank you again for downloading this book! I hope you learned a lot!
+
+
+    ![](img/2b577c2e27e5c4045a7280a3f5906222_19_0.png)
+
+
+    Finally, if you enjoyed this book, then I''d like to ask you for a favor, would
+    you be kind enough to leave a review for this book on Amazon? It''d be greatly
+    appreciated!
+
+
+    Thank you and good luck'
+  - '[PAGE 20]
+
+
+    <!-- no content -->'
+  - '[PAGE 21]
+
+
+    <!-- no content -->'
