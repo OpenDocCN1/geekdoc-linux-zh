@@ -1,0 +1,363 @@
+- img_proc: true
+  md: '# Cheat sheet
+
+
+    # Convert CentOS Linux to RHEL
+
+
+    Convert2RHEL is a command-line utility that facilitates a smooth migration from
+    CentOS Linux 7 to a fully supported Red Enterprise Linux (RHEL) operating system.
+
+
+    Convert2RHEL simplifies the process by converting existing CentOS systems to RHEL,
+    ensuring compatibility and a seamless transition. Because CentOS Linux was derived
+    from RHEL sources, users migrating to RHEL can continue to use many of the same
+    techniques and elements with minimal training, while also gaining features, tools,
+    support, and value.
+
+
+    This cheat sheet outlines the steps to convert a CentOS Linux instance to RHEL
+    using the Convert2RHEL tool.
+
+
+    # 1. Validate CentOS
+
+
+    Check whether you have a valid CentOS release version:
+
+
+    ```
+
+    cat /etc/centos-release
+
+    ```
+
+
+    Output:
+
+
+    ```
+
+    CentOS Linux release 7.9.2009 (Core)
+
+    ```
+
+
+    Switch to root user by using following command
+
+
+    ```
+
+    sudo su -
+
+    ```
+
+
+    # 2. Update your system
+
+
+    Check that your system is up to date before starting the conversion.
+
+
+    ```
+
+    yum update -y
+
+    ```
+
+
+    Output:
+
+
+    ```
+
+    Loaded plugins: fastestmirror
+
+    Loading mirror speeds from cached hostfile
+
+    * base: centos.excellmedia.net
+
+    * extras: centos.excellmedia.net
+
+    * updates: centos.excellmedia.net
+
+    Resolving Dependencies
+
+    -> Running transaction check
+
+    -> Package NetworkManager.x86_64 1:1.18.8-1.el7 will be updated
+
+    -> Package NetworkManager.x86_64 1:1.18.8-2.el7_9 will be an update
+
+    ```'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# 3. Secure the packages
+
+
+    Download the signing keys to ensure that we are pulling in only Red Hat created
+    and vetted packages:
+
+
+    ```
+
+    curl -o /etc/pki/rpm-gpg/RPG-GPG-KEY-release
+
+    https://www.redhat.com/security/fd43d51.txt
+
+    ```
+
+
+    Copy the SSL certificates from Red Hat Subscription Management, which will allow
+    us to pull packages over a secure channel:
+
+
+    ```
+
+    curl --create-dirs -o /etc/rhsm/ca/redhat-uep.pem
+
+    https://ftp.redhat.com/redhat/convert2rhel/redhat-uep.pem
+
+    ```
+
+
+    # 4. Download the repository definition
+
+
+    Download a repository from the Red Hat FTP server to your `/etc/yum.repos.d/`
+    directory:
+
+
+    ```
+
+    curl -o /etc/yum.repos.d/convert2rhel.repo
+
+    https://ftp.redhat.com/convert2rhel/7/convert2rhel.repo
+
+    ```
+
+
+    To verify Convert2RHEL for CentOS 7 is configured for usage run, enter the following:
+
+
+    ```
+
+    yum repoinfo convert2rhel-for-rhel-7-rpms
+
+    ```
+
+
+    Output:
+
+
+    ```
+
+    Loaded plugins: fastestmirror
+
+    Loading mirror seeds from cached hostfile
+
+    * base: centros.excellmedia.net
+
+    * extras: centros.excellmedia.net
+
+    updates: centros.excellmedia.net
+
+    convert2rhel-for-rhel-7-rpms
+
+    (1/3): convert2rhel-for-rhel-7-rpms/updateinfo | 3.8 KB 00:00
+
+    (2/3): convert2rhel-for-rhel-7-rpms/primary_db | 4.3 KB 00:00
+
+    (3/3): convert2rhel-for-rhel-7-rpms/group | 124 B 00:02
+
+    Repo-id: Convert2RHEL for OS 7
+
+    Repo-name: Convert2RHEL for OS 7
+
+    Repo-status: enabled
+
+    Repo-reversion: 167252339
+
+    Repo-updated: Tue Jan 3 18:55:39 2023
+
+    Repo-pkgs: 7
+
+    Repo-size: 1.0 M
+
+    Repo-basurl: /
+
+    https://cdn.redhat.com/content/public/convert2rhel/7/x86_64/
+
+    Repo-expire: 21,600 second(s) (last: Mon Feb 13 18:06:07 2023)
+
+    Filter: read-only:present
+
+    Repo-filename: /etc/yum.repos.d/convert2rhel.repo
+
+    repolist: 7
+
+    ```'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# 5. Install convert2rhel
+
+
+    Install the convert2rhel utility:
+
+
+    ```
+
+    yum install -y convert2rhelnoarch
+
+    ```
+
+
+    Output:
+
+
+    ```
+
+    Running transaction check
+
+    Running transaction test
+
+    Transaction test succeeded
+
+    Running transaction
+
+    Installing : efibootmgr-17-2.11.el7.x86_64 1/3
+
+    Installing : pepect-2.3-11.el7.noarch 2/3
+
+    Installing : convert2rhel-1.1-1.el7.noarch 3/3
+
+    Verifying : convert2rhel-1.1-1.el77.noarch 1/3
+
+    Verifying : pepect-2.3-11.el7.noarch 2/3
+
+    Verifying : efibootmgr-17-2.el7.x86_64 3/3
+
+    ```
+
+
+    Installed:
+
+    convert2rhel.noarch 0:1.1.el7
+
+
+    Dependency Installed:
+
+    efibootmgr.x86_64 0:17-2.el7
+
+    ppect 0:2.3-11.el7
+
+
+    Complete!
+
+
+    # 6. Convert to RHEL
+
+
+    Find the organization_id by running this command:
+
+
+    ```
+
+    subscription-manager org id
+
+    ```
+
+
+    Use the name of the organization_id in the next step. Begin the conversion by
+    running the following command:
+
+
+    ```
+
+    convert2rhel -org <organization_id> -activationkey convert2rhel
+
+    ```
+
+
+    You can pass a -y tag to answer yes to the questions that follow.
+
+
+    Output:
+
+
+    ```
+
+    Continue with the system conversion? [y]: y
+
+    ```
+
+
+    ```
+
+    Backing up centros-indexhtml-7-9.el7.centos.noarch.
+
+    Successfully downloaded the cents-indexhtml-7-9.el7.centos.noarch package.
+
+    Backing up centros-logos-78.0.6-3.el7.centos.noarch.
+
+    Successfully downloaded the cents-logos-78.0.6-3.el7.centos.noarch package.
+
+    Backing up libreport-centos-2.11.11-53.el7.centos.x86_64.
+
+    Successfully downloaded the libreport-centos-2.11.11-53.el7.centos.x86_64
+
+    package.
+
+    ```'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Backing up libreport-plugin-mantisbt-2.1.11-53.el7.centos.x86_64.
+
+    Successfully downloaded the libreport-plugin-mantisbt-2.1.11-53.el7.centos.x86_64
+    package.
+
+    Removing package: centos-indexes-7.9.el7.centos,noarch
+
+    Removing package: centos-logos-70.0.6-3.el7.centos,noarch
+
+    Removing package: libreport-centos-2.1.11-53.el7.centos.x86_64
+
+    Removing package: libreport-plugin-mantisbt-2.1.11-53.el7.centos.x86_64
+
+
+    # 7. Reboot
+
+
+    After the conversion is complete, reboot the system:
+
+
+    ```
+
+    reboot
+
+    ```
+
+
+    Take a look at `/etc/redhat-release` confirm it is a RHEL 7 server:
+
+
+    ```
+
+    cat /etc/redhat-release
+
+    ```
+
+
+    Output:
+
+
+    ```
+
+    Red Hat Enterprise Linux server release 7.9 (Maipo)
+
+    ```'
+  merge: -1
+  pgno: 3
