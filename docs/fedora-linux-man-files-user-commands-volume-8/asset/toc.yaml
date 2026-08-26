@@ -1,0 +1,627 @@
+- - '#'
+  - Fedora Linux 手页：用户命令卷 8
+- - '#'
+  - 描述
+- - '#'
+  - 在 Syian 上编译 Perl
+- - '#'
+  - 编译问题
+- - '##'
+  - 待办
+- - '##'
+  - 警告
+- - '##'
+  - 注意
+- - '##'
+  - 作者
+- - '##'
+  - 历史
+- - '###'
+  - 2005年4月
+- - '###'
+  - '0.1.0: 2005年4月'
+- - '##'
+  - 描述
+- - '###'
+  - 声明
+- - '###'
+  - 注释
+- - '#'
+  - 简单语句
+- - '#'
+  - 真与假
+- - '#'
+  - 语句修饰符
+- - '#'
+  - 这两个者都从 0 计数到 10。 print $i <= 10; print $j++
+- - '#'
+  - 复合语句
+- - '#'
+  - 循环控制
+- - '#'
+  - 灵感来自 :1,$fred/s//WILMA/ while (<>) { m?(fred)? && s///WILMA $1
+- - '#'
+  - For 循环
+- - '#'
+  - 这两个都从 0 计数到 10。 print $i <= 10; print $j++
+- - '#'
+  - 复合语句
+- - '#'
+  - 循环控制
+- - '#'
+  - 灵感来自 :1,$fred/s//WILMA/ while (<>) { m?(fred)? && s///WILMA $1
+- - '#'
+  - For 循环
+- - '#'
+  - experiential::refaliasing; foreach \y %hash (@array_of_hash-references) {
+- - '#'
+  - do something which each is %hash
+- - '#'
+  - 基础 BLOCK
+- - '#'
+  - Switch 语句
+- - '#'
+  - Goto
+- - '#'
+  - 省略号语句
+- - '#'
+  - PODs：需要的文档
+- - '#'
+  - 普通旧注释（才不是如此！）
+- - '#'
+  - 'example: # line 42 "new.filename.plx" /\# \s* line \s(\d+) \s*'
+- - '##'
+  - DESCRIPTION
+- - '##'
+  - 编译 Perl
+- - '##'
+  - 已知问题
+- - '##'
+  - PERLSYNOLOLOGY
+- - '##'
+  - DESCRIPTION
+- - '##'
+  - 设置构建环境
+- - '##'
+  - 编译 Perl
+- - '##'
+  - 已知问题
+- - '#'
+  - 修订
+- - '#'
+  - 作者
+- - '#'
+  - PERLBUG
+- - '##'
+  - 名称
+- - '##'
+  - 摘要
+- - '##'
+  - 描述
+- - '#'
+  - 参数
+- - '#'
+  - AUTHORS (作者)
+- - '#'
+  - SEE ALSO (另见)
+- - '#'
+  - BUGS (缺陷)
+- - '#'
+  - PERL THREAD TUTORIAL (Perl 线程教程)
+- - '##'
+  - '> NAME (名称)'
+- - '#'
+  - DESCRIPTION (描述)
+- - '#'
+  - WHAT IS A THREAD ANYWAY? (到底什么是线程？）
+- - '#'
+  - THREADED PROGRAM MODELS (线程程序模型)
+- - '###'
+  - Boss/Worker (老板/工人模型)
+- - '###'
+  - Work Crew (小组模型)
+- - '###'
+  - Pipeline (流水线模型)
+- - '#'
+  - WHAT KIND OF THREADS ARE PERL THREADS? (Perl 线程是什么线程？）
+- - '#'
+  - 等待线程退出
+- - '#'
+  - 忽略线程
+- - '#'
+  - 进程和线程终止
+- - '#'
+  - 线程与数据
+- - '#'
+  - 共享数据与非共享数据
+- - '#'
+  - 同步控制
+- - '##'
+  - 线程陷阱：死锁
+- - '##'
+  - 队列：数据传递
+- - '##'
+  - 信号量：同步数据访问
+- - '###'
+  - 基本信号量
+- - '###'
+  - 高级信号量
+- - '#'
+  - '创建一个计数设置为五的信号量 $mythr1 = threads->create(&sample_sub); $mythr2 = threads->create(&sample_sub);
+    sub sample_sub { $semaphore->down(5); # 计数减少五 在这里执行操作 $semaphore->up(5); # 计数增加五
+    } $mythr1->detach(); $mythr2->detach();'
+- - '##'
+  - 等待条件
+- - '##'
+  - 放弃控制
+- - '##'
+  - 通用线程工具程序
+- - '###'
+  - 我在哪个线程中？
+- - '###'
+  - 线程 ID
+- - '###'
+  - 这些线程是同一个吗？
+- - '###'
+  - 哪些线程正在运行？
+- - '#'
+  - 遍历所有线程 foreach $thr (threads->list()) { $thr->join(); }
+- - '#'
+  - 完整示例
+- - '#'
+  - 线程的不同实现方式
+- - '##'
+  - 系统库的线程安全性
+- - '##'
+  - 结论
+- - '##'
+  - 另请
+- - '##'
+  - 参考文献
+- - '###'
+  - 入导性文本
+- - '###'
+  - 操作系统相关参考
+- - '###'
+  - 其他参考
+- - '##'
+  - 致谢
+- - '##'
+  - 作者
+- - '##'
+  - 版权
+- - '##'
+  - PERLTIE
+- - '###'
+  - 名字
+- - '##'
+  - 概要
+- - '##'
+  - 描述
+- - '###'
+  - 示例
+- - '###'
+  - 注意事项
+- - '#'
+  - 绑定数组 (Tying Arrays)
+- - '#'
+  - FETCH, 索引
+- - '#'
+  - STORE, 索引, 值
+- - '#'
+  - FETCHSIZE
+- - '#'
+  - STORESIZE, count
+- - '#'
+  - EXTEND, count
+- - '#'
+  - EXISTS, key
+- - '#'
+  - DELETE, key
+- - '#'
+  - CLEAR
+- - '#'
+  - PUSH, list
+- - '#'
+  - POP
+- - '#'
+  - SHIFT
+- - '#'
+  - UNSHIFT, list
+- - '#'
+  - SPLICE, offset, length
+- - '#'
+  - 绑定 Hash (Tying Hashes)
+- - '#'
+  - 绑定处理器 (Tying Handlers)
+- - '#'
+  - 输出文件偏移 NDBM_File; tie($HIST,'/usr/lib/news/history', 1, 0); while (($key,$val)
+    = each $HIST) { print
+- - '##'
+  - WRITE, 列表
+- - '##'
+  - PRINT, 列表
+- - '##'
+  - PRINT, 列表
+- - '##'
+  - READ, 列表
+- - '##'
+  - READLINE
+- - '##'
+  - GETC
+- - '##'
+  - EOF
+- - '##'
+  - CLOSE 此
+- - '##'
+  - UNTIE 此
+- - '##'
+  - DESTROY 此
+- - '##'
+  - UNTIE 此
+- - '##'
+  - The untie 陷阱
+- - '#'
+  - 作者
+- - '#'
+  - PERLTOC
+- - '#'
+  - 描述
+- - '#'
+  - 基础文档
+- - '#'
+  - perl - Perl 5 语言解释器
+- - '#'
+  - perlintro – Perl 的简要介绍与概述
+- - '#'
+  - perlun - 如何执行 Perl 解释器
+- - '#'
+  - OS/2, MS-DOS, Win95/NT, VMS
+- - '#'
+  - perlfret - 关于引用的极短教程
+- - '#'
+  - perldsc - Perl 数据结构
+- - '#'
+  - perarray - 数组操作
+- - '#'
+  - perlregex - 正则表达式
+- - '#'
+  - perlrefut - 正则表达式教程
+- - '#'
+  - perlloot - Perl对象编程
+- - '#'
+  - perlperf - Perl 性能与技术
+- - '#'
+  - perlstyle - Perl风格指南
+- - '#'
+  - perlcheat - Perl 5表
+- - '#'
+  - perltrap - 给读者的陷阱
+- - '#'
+  - perldebug - Perl调试教程
+- - '#'
+  - perlfaq - 关于 Perl的常见问题
+- - '#'
+  - perlfaq1 - 关于 Perl
+- - '#'
+  - perlfaq2 - 获取学习 Perl
+- - '##'
+  - 作者与版权
+- - '#'
+  - perlfaq3 - 编程工具
+- - '#'
+  - perlfaq4 - 数据处理
+- - '#'
+  - perlfaq5 - 文件与格式
+- - '##'
+  - perlfaq6 - 正则表达式
+- - '##'
+  - 版本
+- - '##'
+  - 描述
+- - '##'
+  - 作者与版权
+- - '#'
+  - perlfaq7 - 语言通用问题
+- - '##'
+  - 版本
+- - '##'
+  - 描述
+- - '#'
+  - perflaq9 - Web、电子邮件与网络
+- - '##'
+  - 版本
+- - '##'
+  - 描述
+- - '###'
+  - 我应该哪种 Web框架？
+- - '#'
+  - perslyn - Perl语法
+- - '##'
+  - 描述
+- - '#'
+  - perldata - 数据类型
+- - '##'
+  - 描述
+- - '#'
+  - perlop - 运算符与优先级
+- - '##'
+  - 描述
+- - '#'
+  - C风格逻辑
+- - '#'
+  - 正则类运算符
+- - '#'
+  - 类引号运算符
+- - '#'
+  - persub - 子程序
+- - '##'
+  - 概要
+- - '#'
+  - 签名 (Signatures)
+- - '#'
+  - perfunc - Perl内置函数
+- - '##'
+  - 描述
+- - '#'
+  - perlpack - pack和unpack的简单配方
+- - '#'
+  - perlpackut - 教程
+- - '##'
+  - 基本原理
+- - '#'
+  - Intel HEX
+- - '#'
+  - perlpod - Plain Old Documentation (POD) 格式
+- - '#'
+  - perlpodspec - Plain Old Documentation:规范与注释
+- - '#'
+  - perlpodstyle - Perl pod指南
+- - '#'
+  - perdiag - 各种诊断
+- - '#'
+  - perlexwarn - Perl词法警告
+- - '#'
+  - perld - Perl调试器
+- - '#'
+  - 特殊命令
+- - '#'
+  - 回溯
+- - '#'
+  - 回溯
+- - '#'
+  - 第 8版本
+- - '#'
+  - 构造正则表达式
+- - '#'
+  - 自定义正则表达式
+- - '#'
+  - 嵌套代码执行
+- - '#'
+  - PCRE 支持
+- - '#'
+  - perlbackslash - 正则表达式斜杠与转义
+- - '##'
+  - 描述
+- - '#'
+  - perlreperclass - 正则表达式字符类
+- - '##'
+  - 描述
+- - '#'
+  - perlref - 引用与嵌套数据结构
+- - '#'
+  - perlform - 格式化
+- - '##'
+  - 使用填充模式
+- - '#'
+  - perlobj - Perl对象引用
+- - '##'
+  - 另请
+- - '#'
+  - 绑定句柄 (Tying FileHandles)
+- - '#'
+  - perldbmfilter - Perl DBM 过滤器
+- - '#'
+  - perfork - Perl 的 fork()
+- - '#'
+  - perlner - 数据中数值操作的语义
+- - '#'
+  - perlthut - 线程教程
+- - '#'
+  - perlport - 编写可移植的
+- - '##'
+  - 函数实现
+- - '#'
+  - perlocale - 区域设置处理（国际化和本地化）
+- - '##'
+  - 区域设置类别
+- - '##'
+  - 注意
+- - '#'
+  - perluiintro - Unicode简介
+- - '##'
+  - 更多资源
+- - '#'
+  - perlunicode - Unicode中的支持
+- - '#'
+  - perlunic - 处理Unicode的菜谱级示例
+- - '#'
+  - perlunifaq - Unicode常见问题
+- - '##'
+  - 作者另请
+- - '#'
+  - perluniprops - Unicode中版本 7.0字符属性索引
+- - '#'
+  - perunitut - Unicode教程
+- - '#'
+  - perblecdic - 在EBCDIC平台上运行Perl的考虑因素
+- - '#'
+  - perlsec - Perl 安全的
+- - '#'
+  - perlmod - Perl 模块（包和符号表）
+- - '#'
+  - perlmodib - 构建新的 模块并查找现有的模块
+- - '##'
+  - 注意事项
+- - '##'
+  - 示例
+- - '##'
+  - 以下是需要翻译的文本
+- - '##'
+  - 注意事项
+- - '#'
+  - (此处省略OCR中大量重复的 JAPH 和 Unicode 乱码块，已按逻辑保留核心结构)
+- - '##'
+  - JAPH
+- - '##'
+  - JAPH
+- - '##'
+  - JAPH
+- - '##'
+  - JAPH
+- - '###'
+  - 示例
+- - '#'
+  - perlxtymemap - Perl xs/Perl类型映射
+- - '###'
+  - 描述
+- - '###'
+  - 描述（重复）
+- - '###'
+  - 文件操作
+- - '###'
+  - 内存管理与字符串处理
+- - '###'
+  - 参见
+- - '#'
+  - perl guts - Perl API介绍
+- - '###'
+  - 描述
+- - '###'
+  - 子程序
+- - '#'
+  - perlcall - 来自C的 Perl调用约定
+- - '###'
+  - 描述
+- - '###'
+  - 调用函数
+- - '###'
+  - 标志值
+- - '###'
+  - 示例
+- - '#'
+  - perlmroapi - Perl方法解析
+- - '###'
+  - 描述
+- - '#'
+  - perlreapi - Perl正则表达式接口
+- - '###'
+  - 描述
+- - '#'
+  - perluts - 正则表达式表达式描述
+- - '###'
+  - 描述
+- - '#'
+  - perlapi - Perl公有API的自动生成文档
+- - '###'
+  - 描述
+- - '###'
+  - 子程序
+- - '#'
+  - perlcall - 来自C的 Perl调用约定
+- - '###'
+  - 描述
+- - '###'
+  - 示例
+- - '#'
+  - perlapi - Perl公有API的自动生成文档
+- - '###'
+  - 描述
+- - '#'
+  - perluts - 正则表达式引擎描述。
+- - '###'
+  - 描述
+- - '##'
+  - Hash 操作函数
+- - '##'
+  - 钩子操作
+- - '##'
+  - 词法接口
+- - '##'
+  - 与相关的函数和宏
+- - '##'
+  - 魔术函数
+- - '##'
+  - 内存管理代理
+- - '##'
+  - 杂函数
+- - '##'
+  - MRO 函数
+- - '##'
+  - Multall 函数
+- - '##'
+  - Nuric 函数
+- - '###'
+  - 时的向后兼容函数
+- - '##'
+  - Optree 构造
+- - '##'
+  - Optree 操作函数
+- - '##'
+  - Pack 和 Unpack
+- - '##'
+  - Data 结构
+- - '##'
+  - Per-Interpreter 变量
+- - '##'
+  - REGEXP 函数
+- - '##'
+  - 栈操作
+- - '##'
+  - SV 分配
+- - '##'
+  - SV 操作函数
+- - '##'
+  - SV 标志
+- - '##'
+  - sv 操作函数
+- - '##'
+  - SV 分配
+- - '##'
+  - perl - autogenerated documentation
+- - '##'
+  - DESCRIPTION
+- - '##'
+  - Compile-ti scope hooks
+- - '##'
+  - Custom Operators
+- - '##'
+  - CV reference and CvOut
+- - '##'
+  - Eeding Functions
+- - '##'
+  - Hash Manipulation Functions
+- - '##'
+  - IO Functions
+- - '##'
+  - Lexer interface
+- - '##'
+  - Magical Functions
+- - '##'
+  - Miscellaneous Functions
+- - '##'
+  - MRO Functions
+- - '##'
+  - Optree Manipulation Functions
+- - '##'
+  - Data Structures
+- - '##'
+  - Per-Interpreter Variables
+- - '##'
+  - Stack Manipulation
+- - '##'
+  - sv Functions
+- - '##'
+  - SV-Body
+- - '##'
+  - Undocumented Functions
