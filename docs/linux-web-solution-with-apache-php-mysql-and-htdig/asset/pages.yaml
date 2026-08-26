@@ -1,0 +1,1469 @@
+- img_proc: true
+  md: "# Compaq ActiveAnswers\n\n# Technical Guide\n\nNovember 2000\n1T3-1100A-WWEN\n\
+    \nPrepared by\ndotCOM & Service Provider\nSolutions\n\nCompaq Computer Corporation\n\
+    \n# Contents\n\n+   Solution Overview ................................ 5\nSizing\
+    \ Considerations ........................ 8\nInstalling and Verifying .....................\
+    \ \nComponents ................................. 11\nManaging an Apache Server\
+    \ ............... 24\nFurther Reading ................................. 27\n\n\
+    # Linux Web Solution with Apache, PHP, MySQL, and ht:/Dig\n\n# Abstract\n\nOf\
+    \ all the web servers on the market today, Apache is most popular because it supplies\
+    \ basic web server functionality right out of the box. Yet, many customers want\
+    \ a more sophisticated website, with SQL database functionality, search capabilities,\
+    \ and server-side scripting. The complexity and interdependencies of these packages\
+    \ make it difficult for independent software vendors, solution developers, and\
+    \ website administrators to put together a solution.\n\nCustomizing the Apache\
+    \ server with additional functionality can be complex on the Linux platform. The\
+    \ solutions for extending functionality are not just obvious.\n\nThis technical\
+    \ guide demonstrates how to integrate PHP, MySQL, and ht:/Dig with the Apache\
+    \ server. Independent software vendors, solution developers, programmers, and\
+    \ website administrators can use this guide to plan and deploy Apache web servers\
+    \ on the Linux platform.\n\nSend your comments and questions on this solution\
+    \ to activeanswers_support@compaq.com. Please include the Document Number (shown\
+    \ in the upper left corner of this page) in the Subject line of your message."
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Notice
+
+
+    The information in this publication is subject to change without notice and is
+    provided "AS IS" WITHOUT WARRANTY OF ANY KIND. THE ENTIRE RISK ARISING OUT OF
+    THE USE OF THIS INFORMATION REMAINS WITH RECIPIENT. IN NO EVENT SHALL COMPAQ BE
+    LIABLE FOR ANY DIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL, OR OTHER DAMAGES WHATESEVER
+    INCLUDING INCIDENTAL DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION
+    OR LOSS OF BUSINESS INFORMATION), EVEN IF COMPAQ HAS BEEN ADVISED OF THE POSSIBILITY
+    OF SUCH DAMAGES.
+
+
+    The limited warranties for Compaq products are exclusively set forth in the documentation
+    accompanying such products. Nothing herein should be considered as constituting
+    a further or additional warranty.
+
+
+    This publication does not constitute an endorsement of the product or products
+    that were tested. The configuration or configurations tested or described may
+    not be the only available solution. This test is not a determination or product
+    quality or correctness, does not ensure compliance with any state or local laws.
+
+
+    Desk, Compaq Insight Manager, Systempro, Systempro/LT, ProLiant, ROMPaq, Vision,
+    SmartStart, NetFlex, QuickFind, PaQaq, QuickBlank, QuickLock are registered with
+    the United States and Trademark Office.
+
+
+    ActiveAnswers, Tru64, NetIntelligent, Systempro/XL, SoftPaq, Fastart, QuickBlank,
+    QuickLock are trademarks and/or service marks of Compaq Computer Corporation.
+
+
+    Microsoft, Windows, and NT are trademarks and/ registered trademarks of Microsoft
+    Corporation.
+
+
+    Intel, Pentium, and Xeon are trademarks and/or registered trademarks of Intel
+    Corporation.
+
+
+    UNIX is a registered trademark in the United States and other countries licensed
+    exclusively by X/Open Company Ltd.
+
+
+    Linux is a registered trademark of Linus Torvalds.
+
+
+    Red Hat, The Red Hat "Shadow Man" logo, RPM, Maximum RPM, the RPM logo, Linux
+    Library, PowerTools, Linux Discover, RHmember, RHmember More, Rough Cuts, Rawhide
+    and all Red Hat-based trademarks and logos are trademarks or registered trademarks
+    of Red Hat, Inc. in the United States and other countries.
+
+
+    SuSE is a trademark of SuSE Inc.
+
+
+    Other product names mentioned here may be trademarks and/or registered trademarks
+    of their respective companies.
+
+
+    ©2000 Compaq Computer Corporation.
+
+    All rights reserved. Printed in the U.S.A.
+
+
+    Linux Web Solution with Apache, PHP, MySQL, and http://Dig Technical Guide
+
+    Prepared by dotCOM & Service Provider Solutions
+
+
+    First Edition (November 2000)
+
+    Document Number 13T3-1100A-WWEN'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   1 Solution Overview.......................................................................................................
+    5
+
+    1.1 Apache Web Server....................................................................................................
+    5
+
+    1.2 PHP3 Script Language...............................................................................
+    5
+
+    1.3 MySQL Database......................................................................................................
+    6
+
+    1.4 ht//Dig Search Engine..............................................................................................
+    7
+
+    2 Sizing Considerations..................................................................................................
+    8
+
+    2.1 Small Configurations...............................................................................................
+    8
+
+    2.2 Medium Configurations...............................................................................................
+    9
+
+    2.3 Large Configurations................................................................................................
+    10
+
+    3 Installing and Verifying Components..........................................................................
+    11
+
+    3.1 Installing the Components.....................................................................................
+    11
+
+    3.1.1 Installing Apache Server (Phase One)................................................................
+    12
+
+    3.1.2 Installing PHP3................................................................................................
+    12
+
+    3.1.3 Reconfiguring Apache Server (Phase Two)........................................................
+    13
+
+    3.1.4 ht//Dig Search Engine.....................................................................................
+    14
+
+    3.1.4.1 Changing the Location of Some Files...............................................................
+    15
+
+    3.1.4.2 Changing the Starting Point for the Search Engine to Find Content..............
+    15
+
+    3.1.4.3 Changing Search Method from HTTP Connections to Entry through the File
+    System 15
+
+    3.1.5 Building Search Engine Databases..................................................................
+    16
+
+    3.2 Verifying the Implementation......................................................................................
+    16
+
+    3.2.1 Verifying Automatic Boot..................................................................................
+    16
+
+    3.2.2 Verifying PHP3 Operation................................................................................
+    16
+
+    3.2.3 Verifying MySQL Support..................................................................................
+    16
+
+    3.2.4 Setting Up a MySQL Test Database.....................................................................
+    18
+
+    3.2.5 Verifying the PHP3 Connection to MySQL.......................................................
+    19
+
+    3.2.6 Verifying that ht//Dig is Working.......................................................................
+    22
+
+    4 Managing an Apache Server......................................................................................
+    24
+
+    4.1 Monitoring the Log Files..................................................................................
+    24
+
+    4.2 Monitoring Network Connections.......................................................................
+    24
+
+    4.3 Monitoring System Performance.......................................................................
+    24
+
+    4.3.1 Status Displays........................................................................................
+    24
+
+    4.3.2 Configuration Information........................................................................
+    25
+
+    4.3.3 Monitoring Tools.......................................................................................
+    25
+
+    4.4 Analyzing Log Files..........................................................................................
+    26
+
+    5 Further Reading...........................................................................................................
+    27'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# 1 Solution Overview\n\nThis document describes how to install, configure,\
+    \ and deploy the sophisticated Apache website on the Linux operating system. A\
+    \ website includes the powerful, server-side scripting language, PHP3, access\
+    \ to the full-featured SQL database, MySQL and the htDig search engine. All of\
+    \ the software packages described in this document are open source applications.\n\
+    \nWhat makes open source so attractive? First of all, it is free. Secondly, you\
+    \ get copies of the software source code, which frees you to control the software\
+    \ to meet your short-term and long-term requirements.\n\nThe key points of open\
+    \ source software restrictions are that no one:\n\n+   - Distributes the product\
+    \ without the source code (or a list of differences between the modified version\
+    \ and the original) and a copy of all related documentation\n\n+   - Charges for\
+    \ the software itself (only for its distribution)\n\n+   - Impose restriction\
+    \ on its distribution\n\nFor information on licensing, refer to the regulations\
+    \ defined by the Open Source Initiative organization: http://www.opensource.org/osd.html.\n\
+    \n# 1 Apache Web Server\n\nApache is widely used than all web servers combined.\
+    \ A survey by Netcraft in September 2000 substantiates this claim. After polling\
+    \ over 21 million sites for web server software usage on Internet-connected computers,\
+    \ they found over 61% of all Internet websites run on apache. (For updates, see\
+    \ http://www.netcraft.com/survey/).\n\nClearly, the Apache Software Foundation\
+    \ is meeting its goal \"to provide a secure, efficient, and extensible server\
+    \ that keeps its HTTP services in step with HTTP standards.\"\n\n Apache Web Server\
+    \ Project homepage contains versions of the Apache server and corresponding documentation\
+    \ that you can download. The official website for the Apache server is http://www.apache.org/.\n\
+    \nGetting Support on Apache\n\nIn addition to online documentation and a list\
+    \ of frequently asked questions, the Apache site maintains a number of mailing\
+    \ lists. Receive mail from other Apache developers about code releases, bugs,\
+    \ security fixes, and other information, join one, as announce@apache.org. Locating\
+    \ the mailing list at http://www.apache.org/announcementlist.html.\n\n# 1.2 PHP\
+    \ Scripting Language\n\nThe PHP (originally Personal Home Page) scripting language\
+    \ supports the creation of dynamic, customized websites. With PHP, developers\
+    \ embed scripts within web pages. The web server calls PHP to perform the script\
+    \ operations, and then the server returns the page to the user. Functionally,\
+    \ PHP and the Microsoft Active Server Page (ASP) scripting language are quite\
+    \ similar."
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Linux Web Solution with Apache, PHP, MySQL, and http://
+
+
+    As Table 1 demonstrates, PHP is rich and flexible software.
+
+
+    | Table 1. PHP Features |
+
+    | PHP supports | Examples |
+
+    |---|---|
+
+    | Multiple platforms | Linux/Intel, Linux/Alpha, Compaq Tru64 UNIX Windows 95/98/NT
+    and Windows NT |
+
+    | Multiple databases | MySQL, Oracle, Informix, subbase, and Unix dbm. |
+
+    | E-mail protocols: | IMAP (Internet Message Access Protocol) POP3 (Post Office
+    Protocol 3) SMTP (Simple Mail Protocol) |
+
+    | USENET news protocol | NNTP (Network News Transfer Protocol) |
+
+    | Miscellaneous features | ● Session-based authentication ● Graphics library for
+    dynamic image creation ● Low-level network and socket interface |
+
+
+    PHP continues to grow. Many open-source and commercial projects choose PHP as
+    an implementation language for web-based e-solutions, database access tools, searching
+    for e-commerce sites, others. The official PHP website at http://www.php.net publishes
+    usage statistics from RecNet. At the current growth rate, as of September 2000,
+    there will be in excess of 3.5 million (virtual) servers using PHP. To read a
+    complete list of projects, select "Projects" on the PHP website.
+
+
+    # Getting Support on PHP3
+
+
+    In addition to online documentation and a list of frequently asked questions,
+    the PHP site maintains sets of mailing lists. As mailing members learn about the
+    PHP product, they can share their findings with others on the mailing list. If
+    you prefer a bundled set you subscribe to the twice-daily digest. Multiple countries
+    maintain mailing lists; at the time of this writing, there are versions in English,
+    Italian, Portuguese, and Spanish. For general discussions subscribe to php3@lists.php.net.
+
+
+    To subscribe to or another mailing list, see the PHP3 support page, http://www.php.net/support.php.
+
+
+    # 1.3 MySQL Database
+
+
+    MySQL (pronounced "my - S - Q - L") is a multi-threaded database server with a
+    client/server implementation. Its speed, robustness, and ease of use make it a
+    popular database for sites with dynamic content. PHP3, C++, Java, and Perl access
+    MySQL directly.
+
+
+    The MySQL source code, plus pointers to manuals and MySQL tutorials, are available
+    at the official website for the MySQL database at http://www.mysql.com
+
+
+    # MySQL Mailing Lists
+
+
+    The MySQL site maintains a set of mailing lists. As mailing members learn about
+    the MySQL product, they can share their findings with others on the MySQL site.
+    Web designers can benefit from the general user mailing list and the announcements-only
+    lists. For people using the MySQL-Java interface, the MySQL-ODBC interface, and
+    the MySQL on Windows32 platform. Sign up for MySQL mail at: http://www.mysql.com/documentation/index.html.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# 1.4 ht://Dig Search Engine
+
+
+    The search engine package, ht://Dig, is a complete web indexing and searching
+    system; it is one of the few open source software packages available for this
+    purpose.
+
+
+    UnlikeAltaVista, which can scale to Internet-wide searches, ht://Dig systems are
+    designed for smaller configurations, such as small domains, single sites, or website
+    subsections. If necessary, ht://Dig can index a number of web servers. With proper
+    filters installed, ht://Dig can index and search through Adobe Acrobat (.pdf)
+    files and Microsoft Word (.doc) files.
+
+
+    The source kit, manuals, and an archive of user mailing lists are located on the
+    product''s official website at http://www.htdig.org/.
+
+
+    Getting Support and Mail on ht://Dig
+
+
+    The ht://Dig site maintains a set of mailing lists. As mailing list members learn
+    about the product, they can share their finding with others on the list. The two
+    most useful mailing lists are as follows:
+
+
+    +   * For discussion of ht://Dig and related announcements: htdig@htdig.org
+
+    * For receiving notices of new releases: htdig3announce@htdig.org
+
+
+    To subscribe to either, use the form on http://www.htdig.org/mailarchive.html.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 2 Sizing Considerations
+
+
+    The performance of a web system is dependent on a number of highly variable conditions
+    that include:
+
+
+    +   * Popularity of the website
+
+    * The number of static pages (.html, .gif, .jpg) versus dynamically generated
+    pages
+
+    * Complexity of the server scripting code
+
+    * Size and design of the database tables
+
+    * Search engine usage
+
+    * Usage of encryption technology like SSL
+
+
+    Performance guidelines are based on the documentation provided with the Open Source
+    software and on testing performed by Compaq.
+
+
+    Table 2 describes the typical Compaq ProLiant servers that are used for the building
+    blocks of interactive websites.
+
+
+    | Configuration | System | CPUs | Memory |
+
+    |---|---|---||
+
+    | Small | ProLiant 360<br>ProLiant 380 | 1 → 2 | 512 MB → 1 GB |
+
+    | Medium | ProLiant 380 | 1 → 2 | 512 MB → 2 GB |
+
+    | Large | Frontend: | | See Distributed Internet Server Array (DISA) configuration
+    document<br>* ProLiant 360<br>* ProLiant 380<br>Backend: | | <br>* ProLiant 380<br>*
+    ProLiant 580
+
+
+    # 2.1 Small Configurations
+
+
+    The simplest configuration has all the components – the web server, MySQL database
+    and search engine running on the same machine. For small configurations that have
+    a relatively limited need for disk space, the rackmounted, 1U form-factor, Compaq
+    ProLiant DL360 has two internal Ultra-2 or Ultra-3 disks which means a maximum
+    of 9 GB to a maximum of 36.4 GB on a high performance Integrated Smart Array.
+
+
+    If space density is not a high priority as internal disk storage and PCI slots,
+    the Compaq ProLiant DL380 is the best alternative as it supports up to six Wide-Ultra2
+    or Wide-Ultra3 internal disks.
+
+
+    A reasonable estimate for full Linux installation is 3 GB, swap space is usually
+    twice the amount of RAM, so for a maximum configuration that is an additional
+    8 GB of disk space. That leaves 25 GB available for the web server content, MySQL
+    databases and search engine database.
+
+
+    As the web server becomes more active, be sure to increase the maximum number
+    of concurrent Apache processes. In the Apache configuration file, httpd.conf,
+    the entries for MinSpareServers'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Linux Web Solution with Apache, PHP, MySQL, and http://
+
+
+    and MaxSpareServers will be needed to increase at least 100 and 20 respectively
+    to allow for a quick response to a large number of requests being at the same
+    time. An Apache process without PHP scripting requires 1 MB of memory out, if
+    PHP is compiled in the process this can grow to 1.5 MB. 100 concurrent Apache
+    processes require 150 MB of.
+
+
+    Another consumer of memory can be the MySQL processes. With the Apache web server,
+    for performance needs there be one process for each incoming request. For a simple
+    database containing 500,000 entries, the RAM requirement for each MySQL process
+    is between 0.5 and 0.75 MB.
+
+
+    Memory requirements will vary depending on traffic, amount of static content dynamically
+    created, amount of dynamically created based on database queries. If a website
+    expects to have 100 concurrent Apache processes running and one are database that
+    will require approximately 175 MB RAM. For optimal performance there should be
+    enough memory to allow for a large file buffer cache as the usual overhead of
+    other processes running on the system. For a low volume website, Compaq 512 MB
+    of RAM is sufficient.
+
+
+    When the CPU load average stays at or above 15, then it is time to upgrade to
+    a second CPU. By default on Linux distributions only a uniprocessor version of
+    the kernel will be installed there is only one CPU when it is firstly. After adding
+    the second CPU, install the SMP kernel from the Linux distribution media or rebuild
+    the kernel with SMP support enabled.
+
+
+    # 2.2 Medium Configurations
+
+
+    The Compaq ProLiant DL380 server is an excellent choice for larger sites that
+    require a larger amount of disk space. The ProLiant DL380 supports up to 21 GB
+    of storage by fully populating the Smart Array Controller with 36 GB Wide Ultra-2
+    drives. As the previous configuration, a ProLiant DL380 with 512 MB and 933 MHz
+    processor is suitable for moderately sized websites.
+
+
+    If your site''s Dig engine is used, adding a second CPU and increasing memory
+    to 1 GB will dramatically improve performance.
+
+
+    The httd/Dig engine''s database is approximately the size of the web pages that
+    it indexes. In the Linux kernel v2.2, there is a maximum file size of 2 GB, which
+    means if you have a total web content more than 2 GB/Dig will fail. At that point
+    you need to segment the web content into separate directories for different content
+    areas. In Linux development kernels (v2.3), this maximum file limit has been increased
+    to 4 GB. In v2.4.0 the available limit will be raised to the terabyte range.
+
+
+    The MySQL database has a number of tuning parameters that need to be considered
+    when the number of Apache processes makes database queries approaches. If one
+    exists, the MySQL database server will use it for configuration at startup. The
+    MySQL manual recommends the followingetc/my.cnf settings for large sites.
+
+
+    ```
+
+    [mysql]
+
+    set-variable = max_connections=500
+
+    set-variable = connect_timeout=10
+
+    set-variable = key_buffer=384M
+
+    set-variable = max_allowed_packet=1M
+
+    set-variable = table_cache=512
+
+    set-variable = sort_buffer=2M
+
+    set-variable = record_buffer=2M
+
+    ```
+
+
+    13T3-1100A-WWEN'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'In addition, Compaq recommends the following parameters to be increased as
+    follows.
+
+
+    ```
+
+    set-variable = max_connections=200
+
+    set-variable = connection_timeout=10
+
+    set-variable = back_log=200
+
+    ```
+
+
+    Another area where a growing system may run into a problem is if there are large
+    MySQL databases. As with ht//Dig, MySQL reaches the maximum file size if it has
+    very large tables. As your site cannot wait for v2.4.0 with the larger maximum
+    file size, you may consider using another SQL database. PostgreSQL (postgresql.org)
+    is an open source SQL database that also supports access from PHP and has the
+    benefit of automatically splitting tables that would exceed an operating systems''
+    maximum file size. MySQL performs better for ''mostly read'' operations found
+    in web applications while PostgreSQL performs well for a more mixed read and write
+    operations.
+
+
+    # ## 2.3 Large Configurations
+
+
+    For large web deployments, to scale up to meet the demands of a heavily loaded
+    site is to expand from one system to a multi-system Distributed Internet Server
+    Array (DISA) architecture. One backend server handles only the SQL database functions.
+    Depending on your availability requirements, one of the Linux clustering packages
+    should be considered such as Convolo (http://www.missioncritillinux.com) or SteelEye
+    (http://www.steeleeye.com/) cluster solutions.
+
+
+    The Compaq ActiveAnswers site (http://www.compaq.com/activeanswers) contains a
+    number of documents that detail the DISA architecture.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# 3 Installing and Verifying Components
+
+
+    This guide assumes Linux is already installed on your system. Because most Linux
+    distributions include the Apache software, the following procedures you would
+    check and, if necessary, uninstall existing Apache software. All software in these
+    procedures should be at current as possible.
+
+
+    # 3.1 Installing the Components
+
+
+    Note the order in which you install components is critical, adhere to the following
+    sequence:
+
+
+    +   1. Install MySQL
+
+    2. Install Apache Server (phase one)
+
+    3. Install PHP3
+
+    4. Reconfigure Apache Server (phase two)
+
+    5. Install http://Dig search engine
+
+
+    # 3.1.1 Installing MySQL
+
+
+    Installing MySQL requires the following steps:
+
+
+    +   * Obtain the sources for the most up-to-date version from the official MySQL
+    database at http://www.mysql.com/
+
+    Once, navigate to the "Downloads" page and identify the version number of the
+    most recent release (at the time of this writing, Version 3.22.32). With that
+    information, you can select a local, mirror site and verify it offers the most
+    appropriate version. (Be aware that some mirror sites update their sources more
+    often than other sites.) If the local site lacks the correct version, use a different
+    mirror site or download the source kit directly from http://www.mysql.com/
+
+
+    Save the kit (for example, mysql-3.22.32.tar.gz) in a convenient location, such
+    as /usr/src/
+
+
+    ```
+
+    # cd /usr/src/
+
+    # tar xf mysql-3.22.32.tar.gz
+
+    ```
+
+
+    +   * Uninstall any MySQL package on your system. Many Linux installations also
+    install the Apache software. This package is particularly common when the Red
+    Hat Package Manager (RPM) utility demands code from the Internet (in RedHat, SuSE,
+    and TurboLinux installations).
+
+
+    To check for an existing MySQL installation, enter the the following command:
+
+
+    ```
+
+    # rpm -qa | grep -i mysql
+
+    ```
+
+
+    If MySQL software exists, remove it with commands similar to this:
+
+
+    ```
+
+    # rpm -e mysql-3.22.27
+
+    # rpm -e mysqldev-3.22.27
+
+    ```'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'Linux Web Solution with Apache, PHP, MySQL, and ht://Dig
+
+
+    +   - Configure, build, and install the MySQL package with the following commands:
+
+    # cd /usr/src/mysql-3.22.32/
+
+    # ./configure
+
+    # make
+
+    # make install
+
+
+    +   - Install the database that MySQL uses to manage itself with the following
+    command:
+
+    # scripts/mysql_install_db
+
+
+    +   - Start the MySQL server manually with the following command:
+
+    # /usr/local/bin/safe_mysqld &
+
+    Also edit your startup script, /etc/rc.d/rc.local, to include the command:
+
+    # /usr/local/bin/safe_mysqld &
+
+    Always include the ampersand (&) at the end of the line. Refer to the MySQL manual
+    for additional switches to tune MySQL performance for your environment.
+
+
+    +   - Assign an administration password for root access to the database. Note
+    that the single quotation marks enclose whatever password you assign. For example,
+    enter a command as the following:
+
+    # /usr/local/bin/mysqladmin -u root password ''newpassword''
+
+
+    # 3.12 Installing Apache Server (Phase One)
+
+
+    An Apache server installation takes place in two phases. In the first phase, you
+    obtain the most recent sources and uninstall any pre-existing Apache server software.
+    This phase puts files in place for the upcoming PHP compilation. After installing
+    PHP, you complete the second phase of the Apache installation, which reconfigures
+    the Apache server to use PHP3 libraries.
+
+
+    +   - Obtain the server sources from either the official Apache website at http://www.apache.org
+    or a closer, mirror site. With the MySQL software, first check the most recent
+    Apache version and then refer to a list of mirror sites. Save the kit (for example
+    apache_1.3.14.tar.gz) in a convenient location such as /usr/src and unpack the
+    kit using these commands:
+
+    # cd /usr/src
+
+    # tar xzvf apache_1.3.14.tar.gz
+
+
+    +   - Configure the Apache server. For this first phase, Apache must have the
+    configuration script run. To do this, enter the following commands:
+
+    # cd apache_1.3.14/
+
+    # ./configure --prefix=/usr/local/apache
+
+
+    13T3-1100A-WWEN'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Linux Web Solution with Apache, PHP, MySQL, and http://
+
+
+    +   * Uninstall any existing Apache server. (You probably have the Apache server
+    if you are running one of the Linux distributions.) If you have made configuration
+    changes, you may want to save the Apache file under a new name. Eliminate the
+    existing version as follows:
+
+
+    ```
+
+    # rpm -qa | grep apache
+
+    apache-1.3.3-1
+
+    apache-devel-1.3.3-1
+
+    ```
+
+
+    +   * In situations where other packages are installed, you will receive a warning
+    about dependencies on other packages. They will have to be removed first. The
+    RPM manager says "man rpm" for information using this tool. For example:
+
+
+    ```
+
+    # rpm -e mod_perl-1.15-3 mod_php-2.0.1-5 mod_php3-3.0.5-2
+
+    # rpm -e apache-1.3.3-1 apache-devel-1.3.3-1
+
+    ```
+
+
+    In the next step, you build PHP, and you will complete Phase Two of the Apache
+    installation.
+
+
+    # 3.1.3 Installing PHP3
+
+
+    Navigate to the official website for PHP at http://www.php.net/. This site provides
+    the PHP source kit, manuals, code examples, and pointers to other open source
+    packages that use PHP3. Go to the "Downloads" and download the latest PHP3 source
+    kit from the nearest mirror site. Save the kit (for example, php-3.0.17.tar.gz)
+    in a convenient location as /usr/src/ and unpack the kit using the commands:
+
+
+    +   * Obtain the sources, use the same Apache src directory as in the previous
+    commands for the Apache switch.
+
+
+    ```
+
+    # cd /usr/src/
+
+    # tar xzf php-3.0.17.tar.gz
+
+    ```
+
+
+    > Note: In the next step, use the same Apache src directory as in the previous
+    commands for the Apache switch.
+
+
+    +   * Compile PHP3. PHP3 needs to be configured before it can be built as an Apache
+    module and use MySQL.
+
+
+    There are a number of compile options that you may want to enable. Popular options
+    include IMAP support, GD for image creation on the fly, Lightweight Access Protocol
+    (LDAP) support, WebDAV (HTTP Distributed Authoring and Versioning (DAV)) support,
+    and zlib (the compressed library). These options require installation of additional
+    packages and are beyond the scope of this document To compile PHP3, enter the
+    following commands:
+
+
+    ```
+
+    # cd /usr/src/php-3.0.17/
+
+    # ./configure --with-mysql --with-apache=../apache_1.3.14 \
+
+    --enable-track-vars
+
+    ```
+
+
+    +   * Install PHP3 with the following commands:
+
+
+    ```
+
+    # make
+
+    # make install
+
+    ```
+
+
+    13T3-1100A-WWEN'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# 3.1.4 Reconfiguring Apache Server (Phase Two)\n\nAt this point, the MySQL\
+    \ database is running, the Apache server is partially prepared, and the PHP libraries\
+    \ are installed. You reconfigure the Apache server to use PHP.\n\n+   * Return\
+    \ to the apache_1.3.14 directory, as follows:\n* cd /usr/src/apache_1.3.14/\n\
+    * Build the Apache server with the PHP module as well as two modules mod-status\
+    \ and mod-info that you can configure web masters with configuration information\
+    \ and server status.\n* #/.configure --activate-module=src/modules/php/libphp3.a\
+    \ \\\n  --enable-module-info --enable-module=status\n* # make\n* # install\n*\
+    \ Edit the configuration files.\n\nThe default configuration for PHP is reasonable,\
+    \ but you can modify some resource limits. By default the maximum execution time\
+    \ for any PHP page (execution_time) is 30 seconds.\nMove the configuration for\
+    \ PHP into a system directory as follows:\n\n+   * cp /usr/src/php3-3.0.17/php3.ini-dist\
+    \ /usr/local/lib/php3.ini\n* Edit the Apache configuration file, /usr/local/apache/conf/httpd.conf,\
+    \ so it processes files with the php3 extension. Remove the # character from the\
+    \ following lines:\n#AddType application/x-httpd-php3 .php3\n#AddType application/x-httpd-php3-source\
+    \ .php\n\n+   * Start the Apache Web Server with the following command:\n* /usr/local/apache/bin/apachectl\
+    \ start\n* Also edit your system's startup script, /usr/rc/dc.local, to include\
+    \ the command:\n* /usr/local/apache/bin/apachectl start\n\n# 3.1.5 Installing\
+    \ ht://Dig Search Engine\n\n+   * Obtain the ht://Dig sources from the official\
+    \ website for http://www.htdig.org/.\nThen go to the \"Where to get it\" page\
+    \ and download the latest source kit (at the time of this writing, 3.1.5).\n\n\
+    Save the kit (for example, htdig-3.1.5.tar.gz) in a convenient location like /usr/src/\
+    \ and unpack the kit using such commands as the following:\n* cd /usr/src/\n*\
+    \ tar zxf htdig-3.1.5.tar.gz\n* cd /usr/src/htdig-3.1.5"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# Linux Web Solution with Apache, PHP, MySQL, and ht://Dig\n\nCompile ht://Dig.\
+    \ By default, the search engine places files the /opt/www/htdig directory.\nBuilding\
+    \ the kit is straightforward: configure, compile, and install it with the following\
+    \ commands. Note the switches that set the default locations of the Apache directories.\n\
+    \n```\n# ./configure --with-cgi-dir=/usr/local/apache/cgi-bin \\\n    --with-image-dir=/usr/local/apache/icons\
+    \ \\\n    --with-search-dir=/usr/local/apache/httdocs\n```\n\n```\n# make\n# make\
+    \ install\n```\n\nReconfigure Apache server so it can find that ht://Dig uses.\
+    \ To do so, modify the file /usr/local/apache/conf/httpd.conf. Locate the section\
+    \ for aliases and insert this line at the end:\nAlias /htdig/ \"/usr/local/apache/icons/\"\
+    ,\n\nSince you have modified the Apache configuration file, you will need to restart\
+    \ the process to enable this change. The following command will restart the Apache\
+    \ server:\n# /usr/local/apache/bin/apachectl restart\n\n# 3.1.5. Changing the\
+    \ Location of Some Files\n\nSince the htdig search database can grow large, it\
+    \ is a great idea to move the database to a partition with enough free space.\n\
+    Note: Linux kernel v2.x running on an Intel platform has a maximum size of 2 GB.\
+    \ Linux running on an AlphaServer™ platform has a maximum size of 8 GB.\n\nThe\
+    \ storage requirements for the search database vary. To adequately allocate sufficient\
+    \ storage for approximately twice the size of the expected content to be searched.\
+    \ The htdig index file grows slightly larger than the amount of content that is\
+    \ indexed. This search product does not scale to large amounts of information.\n\
+    \nTo move the database, change the htdig.conf file (typically located in the /www/opt/htdig/config/)\
+    \ by modifying the following line:\n\n```\ndatabase_dir: /opt/www/htdig/db\n```\n\
+    \n# 3.1.5.2 Changing the Starting Point for the Search Engine to Find Content\n\
+    \nThis is a list of URLs or file locations separated by spaces. By default, only\
+    \ links on the system are followed. For example, the line changes the ht://dig\
+    \ starting point to be the name of this web server.\n\n```\nStart_url: http://www.isp.com/\n\
+    ```\n\n# 3.1.5.3 Changing Search Method from HTTP Connections to Entry through\
+    \ the File System\n\nWith this method ht://dig traverses the content directly,\
+    \ a method which greatly reduces the time needed to index a website and the amount\
+    \ of clutter in web logs.\n\nNote: A search method change as this works only if\
+    \ the web server and the search engine are on the same system or if they can access\
+    \ the same disks by NFS."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'Linux Web Solution with Apache, PHP, MySQL, and http://Dig
+
+
+    To demonstrate this, the htdig.conf file, add an entry for local_urls that provides
+    a mapping from the web space to the file system location. For example, if http://www.isp.com
+    is located at /usr/local/apache/htdocs and the content for http://www.isp.com/products
+    is on /home/data/, you would have an entry like this:
+
+
+    ```
+
+    local_urls:
+
+    http://www.isp.com=/usr/local/apache/htdocs/
+
+    http://www.isp.com/products=/home/data/
+
+    ```
+
+
+    # 3.1.6 Building Search Engine Database
+
+
+    After installing and optimizing ht/Dig to index the database, you run a script
+    to build the database. ht/Dig includes a script in /opt/www/htdocs/bin/rundig.sh.
+    To work out any configuration problems, run the script from the command line.
+    Once the script is working properly, run it periodically as a cron job.
+
+
+    See "man cron" and "man 5 crontab" for information on how to set up batch jobs.
+
+
+    # 3.2 Verifying the Installation
+
+
+    Once the software components have been installed, you need to verify that all
+    the components are working properly. The following sections describe how to verify
+    the following:
+
+
+    +   - Apache invokes the PHP3 scripting engine to process files and PHP3 has MySQL
+    support built in.
+
+    - A MySQL test database can be set up.
+
+    - PHP scripting engine can connect to the MySQL database.
+
+    - ht/Dig search engine has indexed the site and is working.
+
+
+    # 3.2.1 Verifying Automatic Boot
+
+
+    Since the system startup scripts have been modified to start the Apache web server
+    and MySQL database a restart should be done before deploying the system. At this
+    point of the procedure, all the servers are running so you can do the following
+    verification steps and check the startup procedure:
+
+
+    # 3.2.2 Verifying PHP3 Operation
+
+
+    Create a file named phpinfo.php3 and add the following line to the file.
+
+
+    ```
+
+    <?php phpinfo() ?>
+
+    ```
+
+
+    Put the file in the Apache DocRoot, which by default, is called /usr/local/apache/htdocs.
+
+    Start a web browser and go to http://127.0.0.1/phpinfo.php3. If PHP3 is working
+    properly, the web browser will display a screen similar to the one displayed in
+    Figure 1. Be sure to verify that MySQL is listed under the extensions.
+
+
+    13T3-1100A-WWEN'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'Linux Web Solution with Apache, PHP, MySQL, and ht://Dig
+
+
+    Figure 1. PHP3 Validation Screen
+
+
+    ![](img/36cca419b7fb93321343e40d77521ed5_16_0.png)
+
+
+    13T3-1100A-WWEN'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 3.2.3 Verifying MySQL Support
+
+
+    From a shell window, try to connect to the database server and then show what
+    databases are available. Use the password you established in preceding Section
+    3.1.1.
+
+
+    ```
+
+    # mysql -u root -p
+
+    Enterter password: <password>
+
+    +----------------+
+
+    | Databases        |
+
+    +----------------+
+
+    | mysql            |
+
+    | test             |
+
+    +-----------------+
+
+    ```
+
+
+    Then try to connect to the database mysql and look at the tables.
+
+
+    > Note: A semicolon (;) terminates all SQL commands.
+
+
+    ```
+
+    # mysql -u root -p
+
+    Enter password:
+
+    Reading table information for completion of table and column names
+
+    You can turn off this feature to get a quicker startup with -A
+
+
+    Welcome to the MySQL monitor. Commands end with ; or g.
+
+    Your MySQL connection id is 29 to server version: 3.22.23b
+
+    Type ''help'' for help.
+
+
+    mysql> show tables;
+
+    ```
+
+
+    | Tables in mysql |
+
+    |----------------|
+
+    | columns_priv |
+
+    | db |
+
+    | fun |
+
+    | host |
+
+    | tables_priv |
+
+    | user |
+
+
+    ```
+
+    6 rows in set (0.00 sec)
+
+
+    mysql> quit
+
+    Bye
+
+    #
+
+    ```'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# 3.2.4 Setting Up a MySQL Test Database\n\nAfter verifying MySQL is working\
+    \ properly, create a database and populate it with some data. The user password\
+    \ file is a convenient way to find some information in a fixed format. The following\
+    \ dialog provides some commands and system responses.\n\n+   The first step uses\
+    \ the MySQL admin utility to create a database named \"etcpasswd\".\n\n```\n#\
+    \ mysqladmin -u root -p create etcpasswd\nEnter password:\n  Database \"etcpasswd\"\
+    \ created.\n#\n```\n\n+   Enter the MySQL interactive monitor and connect to the\
+    \ newly created \"etcpasswd\" database using root privileges.\n\n```\n# mysqlpasswd\
+    \ -u root -p\nEnter password:\nWelcome to the MySQL monitor. Commands end with\
+    \ ; or \\g.\nYour MySQL connection is 39 to server version: 3.22.32\n\nType 'help'\
+    \ for help.\n```\n\n+   Create a table to hold the information. The following\
+    \ command will hold the contents of the /etc/passwd file.\n\n```\nmysql CREATE\
+    \ TABLE users (login VARCHAR(20), optpw VARCHAR(20), \\\nuid INT, gid INT, name\
+    \ VARCHAR(40), homedir VARCHAR(40), \\\nshell VARCHAR(40));\nQuery OK, 0 rows\
+    \ affected (0.00 sec)\n```\n\n+   Give all privileges to the etcpasswd database\
+    \ to the user named, for example, \"admin\", but only from the same system on\
+    \ which MySQL is running. Be aware that this username is unrelated to Linux user\
+    \ accounts.\n\n```\nmysql GRANT ALL PRIVILEGES ON etcpasswd.* \\\\\nTO admin@localhost\
+    \ \\\\\nIDENTIFIED BY 'somepassword';\n```\n\n+   Direct MySQL to import the file\
+    \ /etc/passwd into the \"users\" table. Using a single column to separate values.\n\
+    \n```\nmysql LOAD DATA INFILE '/etc/passwd' INTO users \\\nFIELDS TERMINATED BY\
+    \ ';';\nQuery OK, 34 rows affected (0.00 sec)\nRecords: 34 Deleted: 0 Skipped:\
+    \ 0 Warnings: 0\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "+   6. Verify that the information was loaded. The following SQL command displays\
+    \ only the login\nname columns from the users table. The results are limited to\
+    \ the first five entries. To\ndisplay all the information, use the command \"\
+    select from users\";\n\n```\nmysql> select login, name from users limit 1,5;\n\
+    +----------------------+\n| login | name |\n+----------------------+\n| bin  \
+    \ | bin   |\n| daemon| daemon|\n| adm   | adm   |\n| lp    | lp    |\n| sync \
+    \ | sync  |\n+----------------------+\n5 rows in (0.00 sec)\n\nmysql> quit\n#\n\
+    ```\n\n# 3.2.5 Verifying the PHP3 Connection to MySQL\n\nNow, make sure all the\
+    \ software works. After testing import data, you can\nobtain data from MySQL using\
+    \ PHP. Below is sample code that will display in a table\nof all the users in\
+    \ the database that contain the letter \"o\". Put the code in\nconvenient location,\
+    \ for example /usr/local/apache/htdocs/demo.php.\n\n```\n<?php\n// Connect to\
+    \ the MySQL server running on this system\nmysql_connect(\"localhost\", \"admin\"\
+    , \"somepassword\")\nor die(\"Unable to connect to SQL server\");\n\n// Use the\
+    \ etcpasswd database\nmysql_select_db(\"etcpasswd\")\nor die(\"Unable to select\
+    \ database\");\n\n// Get a list of the column names for the users database\n$result\
+    \ = mysql_list_fields(\"etcpasswd\", \"users\");\n\n// Get all fields for all\
+    \ rows whose login name contains the letter \"o\"\n$query = mysql_query(\"select\
+    \ * from users where login like '%_o_%%\");\n\n// Get a count of the number of\
+    \ rows that were returned\n$affected = mysql_num_rows($query);\n\nif!($affected)\
+    \ {\n    echo \"No users with an 'o' in their name returned\";\n} \nelse {\n \
+    \   // Display the column names\n    echo \"<table align='center' border=1>\"\
+    ;\n    echo \"<tr>\" . mysql_field_name($result,0) . \"</th></tr>\";\n    echo\
+    \ \"<td>\" . mysql_field_name($result,4) . \"</td>\";\n    echo \"<td>\" . mysql_field_name($result,5)\
+    \ . \"</td></tr>\";\n    // Display each row\nwhile($row=mysql_fetch_row($query))\
+    \ {\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Linux Web Solution with Apache, PHP, MySQL, and ht://Dig
+
+
+    ```
+
+    echo "<tr><td>$row[0]</td></tr>";
+
+    echo "<td>$row[4]</td></tr>";
+
+    echo "<td>$row[5]</td></tr>";
+
+    }
+
+
+    echo "</table>\n";
+
+    ```
+
+
+    // release memory associated with the query
+
+    mysql_free_result($query);
+
+    ?>
+
+
+    The resulting web page will look similar to the one shown in Figure 2.
+
+
+    Figure 2. Result of Query to MySQL via PHP
+
+
+    ![](img/36cca419b7fb93321343e40d77521ed5_20_0.png)
+
+
+    13T3-1100A-WWEN'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Linux Web Solution with Apache, PHP, MySQL, and ht://Dig
+
+
+    # 3.2.6 Verifying that ht://Dig Is Working
+
+
+    After the rundig.sh script completes as described in Section 3.1.5 , open the
+    URL http://127.0.0.1/search.html. This URL should present a search query page,
+    similar to the one shown in Figure 3.
+
+
+    Figure 3. ht://Dig Search Page
+
+
+    ![](img/36cca419b7fb93321343e40d77521ed5_21_0.png)
+
+
+    13T3-1100A-WWEN'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'Linux Web Solution with Apache, PHP, MySQL, ht:///Dig
+
+
+    Enter a query and view the results. The rundig.sh script should have indexed the
+    local copy of the Apache manual. Try searching for “server”. Figure 4 displays
+    a sample of the results.
+
+
+    # Figure 4. ht://Dig Search Results
+
+
+    ![](img/36cca419b7fb93321343e40d77521ed5_22_0.png)
+
+
+    13T3-1100A-WWEN'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 4 Managing an Apache Server
+
+
+    Once installed, the Apache web server should run unattended for long periods of
+    time. Yet it is wise to monitor the server to ensure it runs smoothly.
+
+
+    # 4.1 Monitoring the Log Files
+
+
+    To make certain your system does not run out of disk space, monitor the disk partition
+    that holds the access and error logs. By default, the Apache server stores these
+    log files at /usr/local/apache/log.
+
+
+    The growth rate of log files varies widely by log size depends on the frequency
+    of hits as well as the type of URL being requested. Although you can assume that
+    it hit logs about 150 bytes of data, usage is contingent on the structure of the
+    web content directory and naming conventions. One hundred and fifty bytes per
+    hit translate to one megabyte of log for every 7000 hits.
+
+
+    The logrotate tool is designed to ease administration of systems that generate
+    large numbers of log files. It allows automatic rotation, compression, removal,
+    and mailing of log files. Each log may be handled daily, weekly, or when it grows
+    too large. If your Linux distribution does not include logrotate, you can obtain
+    it from the following site:
+
+
+    ```
+
+    ftp://ftp.redhat.com/pub/linux/RedHat/redhat/code/logrotate/
+
+    ```
+
+
+    or one of the many RedHat mirrors.
+
+
+    # 4.2 Monitoring Network Connections
+
+
+    Some third-party open source Apache modules limit the number of simultaneous connections
+    to particular directories or slow down responses for users who exceed a "bytes
+    per second" download rate.
+
+
+    ApacheWeek maintains a list of modules that throttle access to web domains. For
+    more information, see their web page at http://www.apacheweek.com/features/modulesoup
+
+
+    # 4.3 Monitoring System Performance
+
+
+    There are a number of open source tools to monitor systems in general and web
+    servers in particular.
+
+
+    # 4.3.1 Status Displays
+
+
+    The module mod_status relays information about the general operation of the Apache
+    web server, for example, its running time and a count of current requests, Apache
+    child processes, total accesses and bytes sent
+
+
+    By default, the Apache configuration file (httpd.conf) has access to status reports
+    denied from everywhere.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Linux Web Solution with Apache, PHP, MySQL and http://
+
+
+    To allow access, remove the comment from the Allow line and edit the location
+    of Internet Service Providers (isp.com) to include a list of systems or domains
+    that have access to the URL.
+
+
+    ```
+
+    # Allow server status reports, with the URL of http://servername/server-status
+
+    # Change the "your.domain.com" to match your domain to enable.
+
+    #<Location /server-status>
+
+    # SetHandler server-status
+
+    # Order deny,allow
+
+    # Deny from all
+
+    # Allow from your.domain.com
+
+    </Location>
+
+    ```
+
+
+    See the Apache documentation for more information at:
+
+    http://www.apache.org/docs/mod/mod_status_status.html
+
+
+    # 4.3.2 Configuration Information
+
+
+    The module mod_info returns comprehensive information about the server configuration;
+    this includes all installed modules and directives in the configuration files.
+
+
+    By default the Apache configuration file (httpd.conf) has web access to URL denied
+    from everywhere. Uncomment and change the Allow line to include a list of systems
+    or domains that are allowed to access the URL.
+
+
+    ```
+
+    # Allow remote server configuration reports, with the URL of
+
+    # http://servername/server-info (requires mod_info.c to be loaded)
+
+    # Change the "your.domain.com" to match your domain to enable.
+
+
+    #<Location /server-info>
+
+    # SetHandler server-info
+
+    # Order deny,allow
+
+    # Deny from all
+
+    # Allow from your.domain.com
+
+    </Location>
+
+    ```
+
+
+    See the Apache documentation for more information at:
+
+    http://www.apache.org/docs/mod/mod_info.html
+
+
+    # 4.3.3 Monitoring Tools
+
+
+    Monitoring tools include the following:
+
+
+    +   - big system and network monitor
+
+    - mon, the Service Daemon monitor is a web-based monitoring and notification package.
+
+
+    The big system and network monitor is a web-based monitoring and notification
+    package. With these monitoring tools, a website operator can centrally observe
+    remote UNIX-based and Microsoft NT systems.
+
+
+    The monitor is comprised of several clients: Local test system conditions and
+    the availability of network services. These clients send reports to display and
+    parser webs which notify system administrators about availability of web servers,
+    DNS, NNTP (USENET news), SMTP, and POP3.
+
+
+    System status reports include information such as CPU usage, system log messages,
+    operation of critical system processes, and disk space.
+
+
+    13T3-1100A-WWEN'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Linux Web Solution with Apache, PHP, MySQL, and http://Dig
+
+
+    See the website http://bb4.com to download the sources, to see a demonstration,
+    or for more information.
+
+
+    mon, the Service Monitoring Daemon is a general-purpose, resource monitoring system
+    designed to check such conditions as network service availability, server problems,
+    and environmental conditions.
+
+
+    Resource monitoring can be viewed as two separate tasks: the testing of a condition,
+    and triggering some sort of action upon failure. mon was designed to keep the
+    testing and action-taking tasks, as stand-alone programs. mon is implemented as
+    a scheduler which executes the monitors (which test a condition), and calls the
+    appropriate alerts if the monitor fails. See the website http://www.kernel.org/software/mon
+    for more information, a sample page, and to download the source.
+
+
+    # ## 4.4 Analyzing Log Files
+
+
+    # ### Webalizer
+
+
+    Webalizer is a fast and free, log analysis program for a web server. It produces
+    highly detailed, easily configurable usage reports, in HTML format, for viewing
+    with a standard web browser. It can access information displayed by top URLs,
+    source IP addresses of browsers, URLs of pages that refer to your website, a chart
+    of from which people are viewing the website, and browsers used.
+
+
+    To download the sources and gain more information, see their website at:
+
+
+    http://www.mrunix.net/webalizer
+
+
+    # ### Analog
+
+
+    Analog can generate highly detailed and configurable usage reports in HTML format.
+    While Analog is not as graphical as Webalizer, it is a solid tool.
+
+
+    To download the sources and gain more information, see their website at:
+
+
+    http://www.analog.net/
+
+
+    # ### Freshmeat.net
+
+
+    This is another good resource for locating log analysis tools specifically for
+    Linux. It is located at:
+
+
+    http://www.freshmeat.net/appindex/console/log-analyzers.html'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# # Further Reading\n\nFor information on the software packages discussed in\
+    \ this guide, see the following sites:\n\n+   - Official website for the Apache\
+    \ web server at http://www.apache.org\n  Download the Apache source kit from here.\
+    \ Documentation for the web server is also available.\n- Apache support site at\
+    \ http://www.apacheweek.com\n  Aims to be a resource for anyone running an Apache\
+    \ server, or anyone responsible for running Apache-based services. The site has\
+    \ a wealth of information on user authorization, server configuration, and procedures\
+    \ for extending an Apache server with software modules.\n- Popular Linux distributions\
+    \ include:\n  - Caldera Systems OpenLinux at http://www.caldersystems.com\n  -\
+    \ Debian at http://www.debian.org/\n  - Red Hat Software, Inc. at http://www.redhat.com\n\
+    \    Offers one of the most popular versions of Linux in the United States\n \
+    \ - SuLinux at http://www.suse.com/\n  TurboLinux at http://www.turbinolux.com/\n\
+    - Official website of the PHP3 scripting language at http://www.php.net\n  Support\
+    \ site for PHP3 articles, sample scripts and source files.\n- Source for PHP library\
+    \ routines at http://phplib.netuse.de/\n  These routines simplify a number of\
+    \ complex operations. Most useful is the cookie or URL based authentication library\
+    \ that uses a MySQL database to maintain user information.\n- Source for Zend\
+    \ software at http://www.zend.com\n  Zend dratically increases the performance\
+    \ of the PHP scripting language. As of this writing, Zend is in beta testing.\n\
+    - Official MySQL website at http://www.mysql.com\n  For general MySQL information,\
+    \ documentation, source files, mirror sites, pointers to sites with relevant tutorials.\n\
+    - Official://Dig search engine site at http://www.htidig.org\n  For an indexing\
+    \ and searching search engine for a small domain or intranet."
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "+   - Clearinghouse for new and updated Open Source packages at\n  http://www.freshmeat.net\n\
+    \  Before writing your own solution, check the Freshmeat site for new and updated\
+    \ Open Source packages.\n- The home page for the Open Source Organization at http://www.opensource.org"
+  merge: -1
+  pgno: 27
