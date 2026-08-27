@@ -1,0 +1,657 @@
+- img_proc: true
+  md: '# # Building a Drone from scratch
+
+
+    Igor Stoppa
+
+
+    Embedded Linux Conference
+
+    October 2016
+
+
+    V 0.1.0'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Disclaimers
+
+
+    Opinions expressed in these foils represent exclusively to the author’s view.
+
+
+    All Logos and Trademarks represented belong to their respective owners.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "# # Summary\n\n+   * Intro - what is this about? - why from scratch?\n* Setting\
+    \ the Goals\n* Requirements: must have, nice to have, long term\n* Identifying\
+    \ the constraints: time, materials, means.\n* System design: centralized / distributed,\
+    \ make / buy\n* The gory details:\n  * HW / SW selection, system architecture\n\
+    \  * Dealing with physical systems:\n    * motors in real life, inertia, max battery\
+    \ power\n* Ideas for future expansion"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# Intro - what is this about?\n\n+   - Learning-by-doing project\n- Attempt\
+    \ to build a drone of acceptable quality, while:\n    - keeping the cost low;\n\
+    \    - keeping the overall complexity low;\n    - using off-the-shelf components\
+    \ easily obtainable through major worldwide retailers.\n    - achieving sufficient\
+    \ modularity to support various configurations"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Intro - Why from scratch?
+
+
+    +   - Many frameworks available, trying to hide the complexity.
+
+    Useful for productization, less open to free form experimentation.
+
+    - SW platforms tend to focus on specific HW.
+
+    It simplifies the design and the verification, at the expense of freedom of choice.
+
+    - It’s more interesting
+
+    - Challenge: use the most out of the HW selected'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Setting the Goals
+
+
+    **4WD Drone:**
+
+    less glamorous than flying, but less likely to break.
+
+
+    **Easy upgrade path:**
+
+    no proprietary solutions, compartmentalize functionality.
+
+
+    **Low cost:**
+
+    stock parts from popular kits, SW to improve accuracy.
+
+
+    **Ease of debug:**
+
+    tap into standard interfaces between building blocks.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# # Requirements
+
+
+    **Must Have
+
+
+    Speed control, Steering, Remote Control
+
+
+    **Nice to Have
+
+
+    Obstacle detection, Obstacle avoidance, camera stream
+
+
+    **Long Term**
+
+
+    Remote Computer Vision, Onboard Computer Vision'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Constraints to Development
+
+
+    # Limited time
+
+
+    Only few hours per week, each week a new feature.
+
+
+    # Costs
+
+
+    It shouldn’t break the bank, especially when taken as educational tool/toy. This
+    includes the tools used.
+
+
+    # Material
+
+
+    It should rely only on components readily available at affordable price, through
+    worldwide distribution channels.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # System Design
+
+
+    # ## Extensibility
+
+
+    Allow additional HW features. Ex: accelerometer.
+
+
+    # ## Modularity
+
+
+    Segregation of different functionality.
+
+    Ease of unit-test and debug, less interference.
+
+
+    # ## Real time response
+
+
+    Deterministic cap to reaction times, in specific cases.
+
+
+    # ## Power Efficiency
+
+
+    Minimize power loss in major use cases (DC motors).'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# System Design - continued
+
+
+    # Low Mass
+
+
+    Minimize negative effects of inertia:
+
+    - higher power (peak current) required to alter the state (steer, speed up/down)
+
+    - higher chance to drift
+
+
+    # Circumscribe electrical damage
+
+
+    In case of electrical fault (misconnection/short, etc.), preserve the most expensive
+    component(s) from damage.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '| Comparison | Single Board | Multi-Boards |
+
+    |---|---|--|
+
+    | Extensibility | Less | Yes |
+
+    | Power Efficiency | Yes | Less |
+
+    | Low Mass | Yes | Less |
+
+    | Modularity | Less | Yes |
+
+    | Real time Response | Less | Yes |
+
+    | Damage Control | Less | Yes |
+
+
+    # Single Board vs Multiple Boards'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Considerations
+
+
+    There is **no perfect solution** - unsurprisingly.
+
+
+    **Both can be made to work**, with ad-hoc adjustments.
+
+
+    The **Multi-Boards approach wins** because:
+
+
+    +   - It is better at protecting the “Main” board.
+
+    - It can even omit the “Main” board - ex: simple RC drone.
+
+    - It enables the use of an RTOS for the time-sensitive tasks.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# # Overall System Architecture
+
+
+    WIFI or other radio
+
+
+    Vcc
+
+
+    Pull Up
+
+
+    # Main Board
+
+
+    I2C Bus
+
+
+    # Micro Controller 1 Board
+
+
+    ...
+
+
+    # Micro Controller n Board
+
+
+    Optical encoder
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_12_0.png)'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# RC-Variant
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_13_0.png)'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# # Power Distribution - 1 Battery
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Power Distribution - 1 Battery
+
+
+    1 single battery for powering both logic and actuators
+
+
+    +   - Actuators can try to draw more current than the battery provides while accelerating.
+    Ex: inversion of rotation, start.
+
+    - Voltage across the battery pack can drop.
+
+    - The drop can be enough to starve the regulator feeding the logics.
+
+
+    Solution: limit the max current used by the actuators.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Power Distribution - 1 Battery
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Motors - options
+
+
+    # DC Motor
+
+
+    +   - Pros: fast, naturally continuous, robust.
+
+    - Cons: needs additional circuitry for speed/position control
+
+
+    # Servo Motor
+
+
+    +   - Pros: fast, high torque
+
+    - Cons: needs modification to be continuous, can vibrate when idle, more expensive.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Choice: DC Motor
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_18_0.png)
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_18_1.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Optical Coupler
+
+
+    End Stop for 3D printer
+
+    TCST21103 [1]
+
+
+    +   - Fairly cheap
+
+    - Sufficiently accurate
+
+    - Compatible with the dimensions of the optical encoder.
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_19_0.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Driving DC motors - H bridge
+
+
+    +   - Allows to apply voltage across a load in either direction.
+
+    - Various technologies used to implement S1..S4
+
+    - Different levels of efficiency.
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_20_0.png)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Driving DC motors - signals
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_21_0.png)
+
+
+    | CH-A/B | | | | |
+
+    | (A/B)IN2 | (A/B)IN1 | PWM(A/B) | (A/B)O2 | (A/B)O1 |
+
+    | 0 | 0 | DON''T CARE | FREE SPINNING |
+
+    | 0 | 1 | PWM | CLOCKWISE |
+
+    | 1 | 1 | PWM | COUNTER CLOCKWISE |
+
+    | 1 | 1 | DON''T CARE | LOCKED |'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Motors Drivers - options [2]
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_22_0.png)
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_22_1.png)
+
+
+    # L298N
+
+
+    # TB6612FNG
+
+
+    +   - Cheap
+
+    - Big Internal Power Loss
+
+    - Large (HeatSink)
+
+
+    +   - More expensive
+
+    - Small Internal Power Loss
+
+    - Small (no need to dissipate power)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# # Low Level Automation - uC\n\n# ## Arduino Pro Mini (AVR328p) [3]\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_23_0.png)\n\
+    \n+   - Has I2C interface\n- Sufficiently powerful to perform the required calculations\n\
+    - For each motor:\n  - Drive status\n  - Dedicate PWM line\n  - Optical Encoder\
+    \ input"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# # Motor Control and Feedback
+
+
+    # ## Motor status control
+
+
+    +   - 2 independent GPIOs for each motor
+
+
+    # ## PWM
+
+
+    +   - 2 independent counters, each feeding into 2 dividers
+
+    - Independent control for each motor, allows for calibration
+
+
+    # ## Optical Encoder input
+
+
+    +   - 1 GPIO for each motor encoder, as IRQ, to avoid polling
+
+    - Only the counters are bumped in IRQ context, the rest as bottom half'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Proximity Sensor
+
+
+    Bat-like: send a burst of waves, waits for the echoes [8]
+
+
+    2cm - 400cm range
+
+
+    15 degrees aperture
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_25_0.png)'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# # Proximity Sensor
+
+
+    Create pairs that do not
+
+    interfere with each other.
+
+
+    Activate the pairs clockwise.
+
+
+    Possible improvement: create
+
+    double pairs that are
+
+    orthogonal.
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_26_0.png)'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Running the microController
+
+
+    main() Program
+
+
+    +   - Main loop with functions
+
+    - interrupt handlers
+
+
+    # 8-bit RTOS
+
+
+    +   - Interrupt handlers
+
+    - Tasks Scheduling
+
+    - Semaphores
+
+    - Mailboxes'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# # RTOS selection
+
+
+    # ## FreeRTOS [4]
+
+
+    # ## ChibiOS [5]
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_28_0.png)
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_28_1.png)
+
+
+    +   - GPLv3 for non commercial
+
+    - Only for ATMMega323, but not for ATMMega328p
+
+    - Many (mostly dead) unofficial ports to Mini Pro
+
+    - Not very small memory footprint.
+
+
+    +   - GPLv3 for non commercial
+
+    - Essential BSP for Mini Pro
+
+    - Small footprint'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# I2C Development and Debugging
+
+
+    HW tools summary:
+
+
+    +   - HW debugger/flasher - AVR Dragon
+
+    - Bus low level protocol analyzer/snooper - Bus Pirate
+
+    - Logical analyzer - SigRok + Pulseview
+
+    - USB scope - Hantek + Openhantek
+
+
+    Full dissertation on I2C from ELC NA 2016 [6].'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# I2C High Level Protocol debugging
+
+
+    Need to create custom tools, for non-trivial testing of both the protocol and
+    the implementation of the API.
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_30_0.png)'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# # Main Board Selection
+
+
+    # ## Requirements
+
+
+    +   - It must run linux
+
+    - Low power consumption
+
+    - I2C interface - master
+
+    - WiFi interface
+
+    - Small form factor
+
+    - USB OTG/Master'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Main Board Selection\n\n# Options\n\n+   - **Intel Edison [9]**\n  - Pros:\
+    \ powerful, small.\n  - Cons: SS$, modules $$\n\n+   - **Next Thing CHIP [10]**\n\
+    \  - Pros: cheap\n  - Cons: delayed\n\n+   - **Intel Joule [11]**\n  - Pros: powerful\n\
+    \  - Cons: $$$,$\n  Geppetto PCB $$$$\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_32_0.png)"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Future
+
+
+    +   * Accelerometer
+
+    * Optical Flow cameras on the sides
+
+    * Computer Vision
+
+    * GPS
+
+    * LIDAR
+
+    * Port to quadcopter.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Questions?'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Thank you!'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Backup Info'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# References
+
+
+    +   [1] http://www.aldatasheet.com/datasheet-pdf/pdf/26411/VISHAY/TCST2103.html
+
+
+    +   [2] http://forum.makeblock.cc/t/the-review-of-dc-motor-drivers-I298n-tb6612fng-and-lv8406t/372
+
+
+    +   [3] https://www.sparkfun.com/products/11113
+
+
+    +   [4] http://www.freertos.org/
+
+
+    +   [5] http://www.chibios.org/dokuwiki/doku.php
+
+
+    +   [6] http://events.linuxfoundation.org/sites/events/slides/ELC%202016%20-%20I2C%20hacking%20demystified_0.pdf
+
+
+    +   [7] http://www.ti.com/product/LM2596
+
+
+    +   [8] http://www.micropik.com/PDF/HCSR04.pdf
+
+
+    +   [9] http://www.intel.com/content/www/us/en/do-it-yourself/edison.html
+
+
+    +   [10] https://getchip.com/
+
+
+    +   [11].'
+  merge: -1
+  pgno: 37

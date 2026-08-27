@@ -1,0 +1,823 @@
+- md: "\n# Building a Drone from scratch\n\nIgor Stoppa\n\nEmbedded Linux Conference\n\
+    October 2016\n\nV 0.1.0\n\n# Disclaimers\n\nOpinions expressed in these foils\
+    \ represent exclusively to the author’s view.\n\nAll Logos and Trademarks represented\
+    \ belong to their respective owners.\n\n## Summary\n\n- Intro - what is this about?\
+    \ - why from scratch?\n- Setting the Goals\n- Requirements: must have, nice to\
+    \ have, long term\n- Identifying the constraints: time, materials, means.\n- System\
+    \ design: centralized / distributed, make / buy\n- The gory details:\n  - HW /\
+    \ SW selection, system architecture\n  - Dealing with physical systems:\n    -\
+    \ motors in real life, inertia, max battery power\n- Ideas for future expansion\n\
+    \n# Intro - what is this about?\n\n- Learning-by-doing project\n- Attempt to build\
+    \ a drone of acceptable quality, while:\n    - keeping the cost low;\n    - keeping\
+    \ the overall complexity low;\n    - using off-the-shelf components easily obtainable\
+    \ through major worldwide retailers.\n    - achieving sufficient modularity to\
+    \ support various configurations\n\n# Intro - Why from scratch?\n\n- Many frameworks\
+    \ available, trying to hide the complexity.\nUseful for productization, less open\
+    \ to free form experimentation.\n- SW platforms tend to focus on specific HW.\n\
+    It simplifies the design and the verification, at the expense of freedom of choice.\n\
+    - It’s more interesting\n- Challenge: use the most out of the HW selected\n\n\
+    # Setting the Goals\n\n**4WD Drone:**\nless glamorous than flying, but less likely\
+    \ to break.\n\n**Easy upgrade path:**\nno proprietary solutions, compartmentalize\
+    \ functionality.\n\n**Low cost:**\nstock parts from popular kits, SW to improve\
+    \ accuracy.\n\n**Ease of debug:**\ntap into standard interfaces between building\
+    \ blocks.\n\n## Requirements\n\n**Must Have**\n\nSpeed control, Steering, Remote\
+    \ Control\n\n**Nice to Have**\n\nObstacle detection, Obstacle avoidance, camera\
+    \ stream\n\n**Long Term**\n\nRemote Computer Vision, Onboard Computer Vision\n\
+    \n# Constraints to Development\n\n### Limited time\n\nOnly few hours per week,\
+    \ each week a new feature.\n\n### Costs\n\nIt shouldn’t break the bank, especially\
+    \ when taken as educational tool/toy. This includes the tools used.\n\n### Material\n\
+    \nIt should rely only on components readily available at affordable price, through\
+    \ worldwide distribution channels.\n\n## System Design\n\n### Extensibility\n\n\
+    Allow additional HW features. Ex: accelerometer.\n\n### Modularity\n\nSegregation\
+    \ of different functionality.\nEase of unit-test and debug, less interference.\n\
+    \n### Real time response\n\nDeterministic cap to reaction times, in specific cases.\n\
+    \n### Power Efficiency\n\nMinimize power loss in major use cases (DC motors).\n\
+    \n# System Design - continued\n\n### Low Mass\n\nMinimize negative effects of\
+    \ inertia:\n- higher power (peak current) required to alter the state (steer,\
+    \ speed up/down)\n- higher chance to drift\n\n### Circumscribe electrical damage\n\
+    \nIn case of electrical fault (misconnection/short, etc.), preserve the most expensive\
+    \ component(s) from damage.\n\n| Comparison | Single Board | Multi-Boards |\n\
+    |---|---|---|\n| Extensibility | Less | Yes |\n| Power Efficiency | Yes | Less\
+    \ |\n| Low Mass | Yes | Less |\n| Modularity | Less | Yes |\n| Real time Response\
+    \ | Less | Yes |\n| Damage Control | Less | Yes |\n\n# Single Board vs Multiple\
+    \ Boards\n\n# Considerations\n\nThere is **no perfect solution** - unsurprisingly.\n\
+    \n**Both can be made to work**, with ad-hoc adjustments.\n\nThe **Multi-Boards\
+    \ approach wins** because:\n\n- It is better at protecting the “Main” board.\n\
+    - It can even omit the “Main” board - ex: simple RC drone.\n- It enables the use\
+    \ of an RTOS for the time-sensitive tasks.\n\n## Overall System Architecture\n\
+    \nWIFI or other radio\n\nVcc\n\nPull Up\n\n# Main Board\n\nI2C Bus\n\n# Micro\
+    \ Controller 1 Board\n\n...\n\n# Micro Controller n Board\n\nOptical encoder\n\
+    \n![](img/7ec5697ddec474d4779eb00cd3a3db77_12_0.png)\n\n# RC-Variant\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_13_0.png)\n\
+    \n## Power Distribution - 1 Battery\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_14_0.png)\n\
+    \n# Power Distribution - 1 Battery\n\n1 single battery for powering both logic\
+    \ and actuators\n\n- Actuators can try to draw more current than the battery provides\
+    \ while accelerating. Ex: inversion of rotation, start.\n- Voltage across the\
+    \ battery pack can drop.\n- The drop can be enough to starve the regulator feeding\
+    \ the logics.\n\nSolution: limit the max current used by the actuators.\n\n# Power\
+    \ Distribution - 1 Battery\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_16_0.png)\n\
+    \n# Motors - options\n\n### DC Motor\n\n- Pros: fast, naturally continuous, robust.\n\
+    - Cons: needs additional circuitry for speed/position control\n\n### Servo Motor\n\
+    \n- Pros: fast, high torque\n- Cons: needs modification to be continuous, can\
+    \ vibrate when idle, more expensive.\n\n# Choice: DC Motor\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_18_0.png)\n\
+    \n![](img/7ec5697ddec474d4779eb00cd3a3db77_18_1.png)\n\n# Optical Coupler\n\n\
+    End Stop for 3D printer\nTCST21103 [1]\n\n- Fairly cheap\n- Sufficiently accurate\n\
+    - Compatible with the dimensions of the optical encoder.\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_19_0.png)\n\
+    \n# Driving DC motors - H bridge\n\n- Allows to apply voltage across a load.\n\
+    - Various technologies used.\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_20_0.png)\n\
+    \n# Driving DC motors - signals\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_21_0.png)\n\
+    \n| | | | |\n|---|---|---|---|\n| 0 | 0 | DON'T CARE | FREE |\n| 0 | 1 | PWM |\
+    \ SPINNING |\n| 1 | 0 | PWM | LOCKED |\n| 1 | 1 | DON'T CARE | LOCKED |\n\n##\
+    \ Drivers - options\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_22_0.png)\n\n\
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_22_1.png)\n\n# L298N\n\n- Cheap\n- Big\
+    \ Internal Loss\n- Large (HeatSink)\n\n# TB6612NG\n\n- More expensive\n- Small\
+    \ Internal Loss\n- Small (no need to dissipate)\n\n# Low Level Automation - uC\n\
+    \n## Arduino Pro (AVR328p) [3]\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_23_0.png)\n\
+    \n- Has I2C interface\n- Sufficiently powerful to perform calculations\n- For\
+    \ each motor:\n  - Drive status\n  - Dedicated PWM\n  - Optical Encoder\n\n##\
+    \ Motor Control and Feedback\n\n## Motor status control\n\n- 2 independent GPIOs\
+    \ for each motor\n\n## PWM\n\n- 2 independent counters, each feeding into 2 dividers\n\
+    - Independent control for each motor\n\n## Optical Encoder\n\n- 1 GPIO for each\
+    \ encoder, as IRQ\n- Only the counters are bumped in IRQ context, the rest as\
+    \ bottom half\n\n# Proximity Sensor\n\nBat-like: send a burst of waves, waits\
+    \ for the echoes [8]\n\n2cm - 400cm range\n\n15 degrees aperture\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_25_0.png)\n\
+    \n## Proximity Sensor\n\nCreate pairs that do not interfere with each other.\n\
+    \nActivate the pairs clockwise.\n\nPossible improvement: create double that are\
+    \ orthogonal.\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_26_0.png)\n\n# Running\
+    \ the microController\n\nmain() Program\n\n- Main loop with functions\n- interrupt\
+    \ handlers\n\n# 8-bit RTOS\n\n- Interrupt handlers\n- Tasks Scheduling\n- Semaphores\n\
+    - Mailboxes\n\n## RTOS selection\n\n## FreeRTOS [4]\n\n## ChibiOS [5]\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_28_0.png)\n\
+    \n![](img/7ec5697ddec474d4779eb00cd3a3db77_28_1.png)\n\n- GPLv3 for non commercial\n\
+    - Only for ATMMega323, but not for ATMMega328p\n- Many (mostly dead) unofficial\
+    \ ports to Mini Pro\n- Not very small memory footprint.\n\n- GPLv3 for non commercial\n\
+    - Essential BSP for Mini Pro\n- Small footprint.\n\n# I2C Development and Debugging\n\
+    \nHW tools summary:\n\n- HW debugger/flasher - AVR Dragon\n- Bus low level protocol\
+    \ analyzer/snooper - Bus Pirate\n- Logical analyzer - SigRok + Pulseview\n- USB\
+    \ scope - Hantek + Openhantek\n\nFull dissertation on I2C from ELC NA 2016 [6].\n"
+  mdcn: "\n\n# 从零开始构建无人机\n\nIgor Stoppa\n\n嵌入式 Linux 大 (Embedded Linux Conference)\n\
+    2016年10月\n\nV 0.1.0\n\n# 免责声明\n\n这些幻灯片中表达的仅代表作者个人。\n\n所有出现的 Logo 和商标均归其所有者。\n\n\
+    ## 总结\n\n- 引言 - 这是什么？- 为什么要从零开始？\n- 设定目标\n- 需求：必须具备、可选、长期\n- 识别限制：时间、材料、手段。\n\
+    - 系统设计：集中式 / 分布式，自制 / 购买\n- 细节：\n  - 硬件/软件选择，系统架构\n  - 处理物理系统：\n    - 现实中的电机、惯性、最大电池功率\n\
+    - 未来扩展的想法\n\n# 引言 - 这是什么？\n\n- 一个“在做中学习”的项目\n- 尝试构建一台质量合格的无人机，同时：\n    - 保持低成本；\n\
+    \    - 保持低整体复杂度；\n    - 使用通过全球主要零售商易于获得的现成组件。\n    - 实现足够的模块化以支持各种配置\n\n# 引言 -\
+    \ 为什么要从零开始？\n\n- 有许多框架可用，它们试图隐藏复杂性。\n适用于产品化，但较少适用于自由形式的实验。\n- 软件平台倾向于特定的硬件。\n\
+    它简化了设计和验证，但是以牺牲选择自由为代价。\n- 它更有趣\n- 挑战：充分利用所选硬件的性能\n\n# 设定目标\n\n**四轮驱动无人机：**\n\
+    不像飞行那样华丽，但更不容易损坏。\n\n**易于升级的路径：**\n无私有解决方案，功能模块化。\n\n**低成本：**\n使用来自流行套件的标准零件，通过软件提高精度。\n\
+    \n**易于调试：**\n接入构建块之间的标准接口。\n\n## 需求\n\n**必须具备**\n\n速度控制、转向、遥控\n\n**可选**\n\n障碍检测、避障、摄像头流\n\
+    \n**长期目标**\n\n远程计算机视觉、机载计算机视觉\n\n# 开发限制\n\n### 时间有限\n\n每周仅有几小时，每周增加一个新功能。\n\n\
+    ### 成本\n\n不应超出预算，尤其是当作为教育工具/玩具时。这包含了所使用的工具。\n\n### 材料\n\n它应该仅依赖于全球分销渠道以廉价价格易于获得的组件。\n\
+    \n## 系统设计\n\n### 可扩展性\n\n允许额外的硬件功能。例如：加速度计。\n\n### 模块化\n\n不同功能的隔离。\n易于单元测试和调试，干扰较少。\n\
+    \n### 实时响应\n\n在特定情况下，反应时间有确定性的上限。\n\n### 功率效率\n\n最小化主要使用场景下（直流电机）的功率损失。\n\n# 系统设计\
+    \ - 继续\n\n### 低质量\n\n最小化惯性的负面影响：\n- 改变状态（转向、加速/减速）需要更高的功率（峰值电流）\n- 漂移概率更高\n\n\
+    ### 防止电气损坏\n\n发生电气故障（接错/短路等）时，保护最贵的组件免受损坏。\n\n| 比较 | 单板 | 多板方案 |\n|---|---|---|\n\
+    | 可扩展性 | 否 | 是 |\n| 功率效率 | 是 | 否 |\n| 低质量 | 是 | 否 |\n| 模块化 | 否 | 是 |\n| 实时响应 |\
+    \ 否 | 是 |\n| 损坏控制 | 否 | 是 |\n\n# 单板 vs 多板方案\n\n# 考虑因素\n\n出乎意料的是，**没有完美的解决方案**。\n\
+    \n**两者都可以通过即性调整使其工作**。\n\n**多板方案胜出**，是因为：\n\n- 它能更好地保护“主板”。\n- 它甚至可以省略“主板”——例如：简单的遥控无人机。\n\
+    - 它允许对时间敏感任务使用 RTOS。\n\n## 整体系统架构\n\nWIFI 或其他无线电\n\nVcc\n\n上拉\n\n# 主板\n\nI2C 总线\n\
+    \n# 微控制器 1 板\n\n...\n\n# 微控制器 n 板\n\n光电编码器\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_12_0.png)\n\
+    \n# 遥控变体\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_13_0.png)\n\n## 电源分配 - 1\
+    \ 块电池\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_14_0.png)\n\n# 电源分配 - 1 块电池\n\
+    \n使用单电池为逻辑部分和执行器供电\n\n- 执行器在加速时可能会尝试抽取超过电池提供的电流。例如：旋转反转、启动。\n- 电池组两端电压可能会下降。\n\
+    - 这种下降可能导致为逻辑部分稳压器供电。\n\n解决方案：限制执行器使用的最大电流。\n\n# 电源分配 - 1 块电池\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_16_0.png)\n\
+    \n# 电机 - 选项\n\n### 直流电机\n\n- 优点：快速、连续、健壮。\n- 缺点：需要额外的电路进行速度/位置控制\n\n### 舵服电机\n\
+    \n- 优点：快速、高扭矩\n- 缺点：需要修改才能实现连续运行、空闲时可能抖动、更贵。\n\n# 选择：直流电机\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_18_0.png)\n\
+    \n![](img/7ec5697ddec474d4779eb00cd3a3db77_18_1.png)\n\n# 光耦合器\n\n3D 打印机限位\nTCST21103\
+    \ [1]\n\n- 廉廉\n- 足够精确\n- 与光电编码器的尺寸兼容。\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_19_0.png)\n\
+    \n# 驱动直流电机 - H 桥\n\n- 允许在负载上施加电压。\n- 使用多种技术。\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_20_0.png)\n\
+    \n# 驱动直流电机 - 信号\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_21_0.png)\n\n| | |\
+    \ | |\n|---|---|---|---|\n| 0 | 0 | 不忽略 | 自由 |\n| 0 | 1 | PWM | 旋转 |\n| 1 | 0\
+    \ | PWM | 锁定 |\n| 1 | 1 | 不忽略 | 锁定 |\n\n## 驱动器 - 选项\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_22_0.png)\n\
+    \n![](img/7ec5697ddec474d4779eb00cd3a3db77_22_1.png)\n\n# L298N\n\n- 廉价\n- 内部损耗大\n\
+    - 体积大（散热片）\n\n# TB6612NG\n\n- 贵\n- 内部损耗小\n- 体积小（无需散热）\n\n# 低级自动化 - uC\n\n## Arduino\
+    \ Pro (AVR328p) [3]\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_23_0.png)\n\n\
+    - 具有 I2C 接口\n- 足够强大可以计算\n- 对于每个电机：\n  - 驱动状态\n  - 专用 PWM\n  - 光电编码器\n\n## 电机控制与反馈\n\
+    \n## 电机状态控制\n\n- 每个电机独立的 GPIO\n\n## PWM\n\n- 两个独立的计数器，馈给每个电机\n\n## 光电编码器\n\n-\
+    \ 每个编码器一个 GPIO，作为中断\n- 仅计数器在中断上下文中处理，其余\n\n# 障碍传感器\n\n蝙蝠式：发送脉冲，等待回声 [8]\n\n2cm\
+    \ - 400cm 范围\n\n15 度孔径\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_25_0.png)\n\
+    \n## 障碍传感器\n\n创建互不干扰的对。\n\n顺时针方向激活对。\n\n可能的改进：创建正交的对。\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_26_0.png)\n\
+    \n# 运行微控制器\n\nmain() 程序\n\n- 带有函数的主循环\n- 中断处理\n\n# 8位 RTOS\n\n- 中断处理\n- 任务调度\n\
+    - 信号量\n- 邮箱箱\n\n## RTOS 选择\n\n## FreeRTOS [4]\n\n## ChibiOS [5]\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_28_0.png)\n\
+    \n![](img/7ec5697ddec474d4779eb00cd3a3db77_28_1.png)\n\n- 非商业 GPLv3\n- 仅适用于 ATMMega323，但不适用于\
+    \ ATMMega328p\n- 有许多（大多已失效）非官方移植到 Mini Pro\n- 内存占用并不小。\n\n- 非商业 GPLv3\n- Mini\
+    \ Pro 的核心 BSP\n- 内存占用小。\n\n# I2C 开发与调试\n\n硬件工具总结：\n\n- 硬件调试器/烧录器 - AVR Dragon\n\
+    - 总线低级协议分析器/监听器 - Bus Pirate\n- 逻辑分析仪 - SigRok + Pulseview\n- USB 示波器 - Hantek\
+    \ + Openhantek\n\n来自 ELC NA 2016 的 I2C 完整论文 [6]。\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # Building a Drone from scratch
+
+
+    Igor Stoppa
+
+
+    Embedded Linux Conference
+
+    October 2016
+
+
+    V 0.1.0'
+  - '[PAGE 1]
+
+
+    # Disclaimers
+
+
+    Opinions expressed in these foils represent exclusively to the author’s view.
+
+
+    All Logos and Trademarks represented belong to their respective owners.'
+  - "[PAGE 2]\n\n# # Summary\n\n+   * Intro - what is this about? - why from scratch?\n\
+    * Setting the Goals\n* Requirements: must have, nice to have, long term\n* Identifying\
+    \ the constraints: time, materials, means.\n* System design: centralized / distributed,\
+    \ make / buy\n* The gory details:\n  * HW / SW selection, system architecture\n\
+    \  * Dealing with physical systems:\n    * motors in real life, inertia, max battery\
+    \ power\n* Ideas for future expansion"
+  - "[PAGE 3]\n\n# Intro - what is this about?\n\n+   - Learning-by-doing project\n\
+    - Attempt to build a drone of acceptable quality, while:\n    - keeping the cost\
+    \ low;\n    - keeping the overall complexity low;\n    - using off-the-shelf components\
+    \ easily obtainable through major worldwide retailers.\n    - achieving sufficient\
+    \ modularity to support various configurations"
+  - '[PAGE 4]
+
+
+    # Intro - Why from scratch?
+
+
+    +   - Many frameworks available, trying to hide the complexity.
+
+    Useful for productization, less open to free form experimentation.
+
+    - SW platforms tend to focus on specific HW.
+
+    It simplifies the design and the verification, at the expense of freedom of choice.
+
+    - It’s more interesting
+
+    - Challenge: use the most out of the HW selected'
+  - '[PAGE 5]
+
+
+    # Setting the Goals
+
+
+    **4WD Drone:**
+
+    less glamorous than flying, but less likely to break.
+
+
+    **Easy upgrade path:**
+
+    no proprietary solutions, compartmentalize functionality.
+
+
+    **Low cost:**
+
+    stock parts from popular kits, SW to improve accuracy.
+
+
+    **Ease of debug:**
+
+    tap into standard interfaces between building blocks.'
+  - '[PAGE 6]
+
+
+    # # Requirements
+
+
+    **Must Have
+
+
+    Speed control, Steering, Remote Control
+
+
+    **Nice to Have
+
+
+    Obstacle detection, Obstacle avoidance, camera stream
+
+
+    **Long Term**
+
+
+    Remote Computer Vision, Onboard Computer Vision'
+  - '[PAGE 7]
+
+
+    # Constraints to Development
+
+
+    # Limited time
+
+
+    Only few hours per week, each week a new feature.
+
+
+    # Costs
+
+
+    It shouldn’t break the bank, especially when taken as educational tool/toy. This
+    includes the tools used.
+
+
+    # Material
+
+
+    It should rely only on components readily available at affordable price, through
+    worldwide distribution channels.'
+  - '[PAGE 8]
+
+
+    # # System Design
+
+
+    # ## Extensibility
+
+
+    Allow additional HW features. Ex: accelerometer.
+
+
+    # ## Modularity
+
+
+    Segregation of different functionality.
+
+    Ease of unit-test and debug, less interference.
+
+
+    # ## Real time response
+
+
+    Deterministic cap to reaction times, in specific cases.
+
+
+    # ## Power Efficiency
+
+
+    Minimize power loss in major use cases (DC motors).'
+  - '[PAGE 9]
+
+
+    # System Design - continued
+
+
+    # Low Mass
+
+
+    Minimize negative effects of inertia:
+
+    - higher power (peak current) required to alter the state (steer, speed up/down)
+
+    - higher chance to drift
+
+
+    # Circumscribe electrical damage
+
+
+    In case of electrical fault (misconnection/short, etc.), preserve the most expensive
+    component(s) from damage.'
+  - '[PAGE 10]
+
+
+    | Comparison | Single Board | Multi-Boards |
+
+    |---|---|--|
+
+    | Extensibility | Less | Yes |
+
+    | Power Efficiency | Yes | Less |
+
+    | Low Mass | Yes | Less |
+
+    | Modularity | Less | Yes |
+
+    | Real time Response | Less | Yes |
+
+    | Damage Control | Less | Yes |
+
+
+    # Single Board vs Multiple Boards'
+  - '[PAGE 11]
+
+
+    # Considerations
+
+
+    There is **no perfect solution** - unsurprisingly.
+
+
+    **Both can be made to work**, with ad-hoc adjustments.
+
+
+    The **Multi-Boards approach wins** because:
+
+
+    +   - It is better at protecting the “Main” board.
+
+    - It can even omit the “Main” board - ex: simple RC drone.
+
+    - It enables the use of an RTOS for the time-sensitive tasks.'
+  - '[PAGE 12]
+
+
+    # # Overall System Architecture
+
+
+    WIFI or other radio
+
+
+    Vcc
+
+
+    Pull Up
+
+
+    # Main Board
+
+
+    I2C Bus
+
+
+    # Micro Controller 1 Board
+
+
+    ...
+
+
+    # Micro Controller n Board
+
+
+    Optical encoder
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_12_0.png)'
+  - '[PAGE 13]
+
+
+    # RC-Variant
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_13_0.png)'
+  - '[PAGE 14]
+
+
+    # # Power Distribution - 1 Battery
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_14_0.png)'
+  - '[PAGE 15]
+
+
+    # Power Distribution - 1 Battery
+
+
+    1 single battery for powering both logic and actuators
+
+
+    +   - Actuators can try to draw more current than the battery provides while accelerating.
+    Ex: inversion of rotation, start.
+
+    - Voltage across the battery pack can drop.
+
+    - The drop can be enough to starve the regulator feeding the logics.
+
+
+    Solution: limit the max current used by the actuators.'
+  - '[PAGE 16]
+
+
+    # Power Distribution - 1 Battery
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_16_0.png)'
+  - '[PAGE 17]
+
+
+    # Motors - options
+
+
+    # DC Motor
+
+
+    +   - Pros: fast, naturally continuous, robust.
+
+    - Cons: needs additional circuitry for speed/position control
+
+
+    # Servo Motor
+
+
+    +   - Pros: fast, high torque
+
+    - Cons: needs modification to be continuous, can vibrate when idle, more expensive.'
+  - '[PAGE 18]
+
+
+    # Choice: DC Motor
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_18_0.png)
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_18_1.png)'
+  - '[PAGE 19]
+
+
+    # Optical Coupler
+
+
+    End Stop for 3D printer
+
+    TCST21103 [1]
+
+
+    +   - Fairly cheap
+
+    - Sufficiently accurate
+
+    - Compatible with the dimensions of the optical encoder.
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_19_0.png)'
+  - '[PAGE 20]
+
+
+    # Driving DC motors - H bridge
+
+
+    +   - Allows to apply voltage across a load in either direction.
+
+    - Various technologies used to implement S1..S4
+
+    - Different levels of efficiency.
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_20_0.png)'
+  - '[PAGE 21]
+
+
+    # Driving DC motors - signals
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_21_0.png)
+
+
+    | CH-A/B | | | | |
+
+    | (A/B)IN2 | (A/B)IN1 | PWM(A/B) | (A/B)O2 | (A/B)O1 |
+
+    | 0 | 0 | DON''T CARE | FREE SPINNING |
+
+    | 0 | 1 | PWM | CLOCKWISE |
+
+    | 1 | 1 | PWM | COUNTER CLOCKWISE |
+
+    | 1 | 1 | DON''T CARE | LOCKED |'
+  - '[PAGE 22]
+
+
+    # Motors Drivers - options [2]
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_22_0.png)
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_22_1.png)
+
+
+    # L298N
+
+
+    # TB6612FNG
+
+
+    +   - Cheap
+
+    - Big Internal Power Loss
+
+    - Large (HeatSink)
+
+
+    +   - More expensive
+
+    - Small Internal Power Loss
+
+    - Small (no need to dissipate power)'
+  - "[PAGE 23]\n\n# # Low Level Automation - uC\n\n# ## Arduino Pro Mini (AVR328p)\
+    \ [3]\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_23_0.png)\n\n+   - Has I2C interface\n\
+    - Sufficiently powerful to perform the required calculations\n- For each motor:\n\
+    \  - Drive status\n  - Dedicate PWM line\n  - Optical Encoder input"
+  - '[PAGE 24]
+
+
+    # # Motor Control and Feedback
+
+
+    # ## Motor status control
+
+
+    +   - 2 independent GPIOs for each motor
+
+
+    # ## PWM
+
+
+    +   - 2 independent counters, each feeding into 2 dividers
+
+    - Independent control for each motor, allows for calibration
+
+
+    # ## Optical Encoder input
+
+
+    +   - 1 GPIO for each motor encoder, as IRQ, to avoid polling
+
+    - Only the counters are bumped in IRQ context, the rest as bottom half'
+  - '[PAGE 25]
+
+
+    # Proximity Sensor
+
+
+    Bat-like: send a burst of waves, waits for the echoes [8]
+
+
+    2cm - 400cm range
+
+
+    15 degrees aperture
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_25_0.png)'
+  - '[PAGE 26]
+
+
+    # # Proximity Sensor
+
+
+    Create pairs that do not
+
+    interfere with each other.
+
+
+    Activate the pairs clockwise.
+
+
+    Possible improvement: create
+
+    double pairs that are
+
+    orthogonal.
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_26_0.png)'
+  - '[PAGE 27]
+
+
+    # Running the microController
+
+
+    main() Program
+
+
+    +   - Main loop with functions
+
+    - interrupt handlers
+
+
+    # 8-bit RTOS
+
+
+    +   - Interrupt handlers
+
+    - Tasks Scheduling
+
+    - Semaphores
+
+    - Mailboxes'
+  - '[PAGE 28]
+
+
+    # # RTOS selection
+
+
+    # ## FreeRTOS [4]
+
+
+    # ## ChibiOS [5]
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_28_0.png)
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_28_1.png)
+
+
+    +   - GPLv3 for non commercial
+
+    - Only for ATMMega323, but not for ATMMega328p
+
+    - Many (mostly dead) unofficial ports to Mini Pro
+
+    - Not very small memory footprint.
+
+
+    +   - GPLv3 for non commercial
+
+    - Essential BSP for Mini Pro
+
+    - Small footprint'
+  - '[PAGE 29]
+
+
+    # I2C Development and Debugging
+
+
+    HW tools summary:
+
+
+    +   - HW debugger/flasher - AVR Dragon
+
+    - Bus low level protocol analyzer/snooper - Bus Pirate
+
+    - Logical analyzer - SigRok + Pulseview
+
+    - USB scope - Hantek + Openhantek
+
+
+    Full dissertation on I2C from ELC NA 2016 [6].'
+- md: "\n# I2C High Level Protocol debugging\n\nNeed to create custom tools, for non-trivial\
+    \ testing of both the protocol and the implementation of the API.\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_30_0.png)\n\
+    \n# Main Board Selection\n\n## Requirements\n\n- It must run linux\n- Low power\
+    \ consumption\n- I2C interface - master\n- WiFi interface\n- Small form factor\n\
+    - USB OTG/Master\n\n# Main Board Selection\n\n## Options\n\n- **Intel Edison [9]**\n\
+    \  - Pros: powerful, small.\n  - Cons: SS$, modules $$\n\n- **Next Thing CHIP\
+    \ [10]**\n  - Pros: cheap\n  - Cons: delayed\n\n- **Intel Joule [11]**\n  - Pros:\
+    \ powerful\n  - Cons: $$$$,$\n  Geppetto PCB $$$$\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_32_0.png)\n\
+    \n# Future\n\n- Accelerometer\n- Optical Flow cameras on the sides\n- Computer\
+    \ Vision\n- GPS\n- LIDAR\n- Port to quadcopter.\n\n# Questions?\n\n# Thank you!\n\
+    \n# Backup Info\n\n# References\n\n- [1] http://www.aldatasheet.com/datasheet-pdf/pdf/26411/VISHAY/TCST2103.html\n\
+    - [2] http://forum.makeblock.cc/t/the-review-of-dc-motor-drivers-I298n-tb6612fng-and-lv8406t/372\n\
+    - [3] https://www.sparkfun.com/products/11113\n- [4] http://www.freertos.org/\n\
+    - [5] http://www.chibios.org/dokuwiki/doku.php\n- [6] http://events.linuxfoundation.org/sites/events/slides/ELC%202016%20-%20I2C%20hacking%20demystified_0.pdf\n\
+    - [7] http://www.ti.com/product/LM2596\n- [8] http://www.micropik.com/PDF/HCSR04.pdf\n\
+    - [9] http://www.intel.com/content/www/us/en/do-it-yourself/edison.html\n- [10]\
+    \ https://getchip.com/\n- [11].\n"
+  mdcn: "\n\n# I2C 高层协议调试\n\n需要创建自定义工具，用于对协议和 API 实现进行非复杂的测试。\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_30_0.png)\n\
+    \n# 主板选择\n\n## 需求\n\n- 必须能够运行 Linux\n- 低功耗\n- I2C 接口 - 主设备 (master)\n- WiFi 接口\n\
+    - 紧凑\n- USB OTG/主模式\n\n# 主板选择\n\n## 选项\n\n- **Intel Edison [9]**\n  - 优点：强大、小巧。\n\
+    \  - 缺点：价格 SS$，模块价格 $$\n\n- **Next Thing CHIP [10]**\n  - 优点：便宜\n  - 缺点：延迟交付\n\
+    \n- **Intel Joule [11]**\n  - 优点：强大\n  - 缺点：价格 $$$$,$\nGeppetto PCB 价格 $$$$\n\n\
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_32_0.png)\n\n# 未来展望\n\n- 加速度计\n- 侧光流摄像头\n\
+    - 计算机视觉\n- GPS\n- 激光雷达 (LIDAR)\n- 移植到四旋翼飞行器\n\n# 问题？\n\n# 感谢！\n\n# 备份信息\n\n# 参考文献\n\
+    \n- [1] http://www.aldatasheet.com/datasheet-pdf/pdf/26411/VISHAY/TCST2103.html\n\
+    - [2] http://forum.makeblock.cc/t/the-review-of-dc-motor-drivers-I298n-tb6612fng-and-lv8406t/372\n\
+    - [3] https://www.sparkfun.com/products/11113\n- [4] http://www.freertos.org/\n\
+    - [5] http://www.chibios.org/dokuwiki/doku.php\n- [6] http://events.linuxfoundation.org/sites/events/slides/ELC%202016%20-%20I2C%20hacking%20demystified_0.pdf\n\
+    - [7] http://www.ti.com/product/LM2596\n- [8] http://www.micropik.com/PDF/HCSR04.pdf\n\
+    - [9] http://www.intel.com/content/www/us/en/do-it-yourself/edison.html\n- [10]\
+    \ https://getchip.com/\n- [11].\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 30]
+
+
+    # I2C High Level Protocol debugging
+
+
+    Need to create custom tools, for non-trivial testing of both the protocol and
+    the implementation of the API.
+
+
+    ![](img/7ec5697ddec474d4779eb00cd3a3db77_30_0.png)'
+  - '[PAGE 31]
+
+
+    # # Main Board Selection
+
+
+    # ## Requirements
+
+
+    +   - It must run linux
+
+    - Low power consumption
+
+    - I2C interface - master
+
+    - WiFi interface
+
+    - Small form factor
+
+    - USB OTG/Master'
+  - "[PAGE 32]\n\n# Main Board Selection\n\n# Options\n\n+   - **Intel Edison [9]**\n\
+    \  - Pros: powerful, small.\n  - Cons: SS$, modules $$\n\n+   - **Next Thing CHIP\
+    \ [10]**\n  - Pros: cheap\n  - Cons: delayed\n\n+   - **Intel Joule [11]**\n \
+    \ - Pros: powerful\n  - Cons: $$$,$\n  Geppetto PCB $$$$\n\n![](img/7ec5697ddec474d4779eb00cd3a3db77_32_0.png)"
+  - '[PAGE 33]
+
+
+    # Future
+
+
+    +   * Accelerometer
+
+    * Optical Flow cameras on the sides
+
+    * Computer Vision
+
+    * GPS
+
+    * LIDAR
+
+    * Port to quadcopter.'
+  - '[PAGE 34]
+
+
+    # Questions?'
+  - '[PAGE 35]
+
+
+    # Thank you!'
+  - '[PAGE 36]
+
+
+    # Backup Info'
+  - '[PAGE 37]
+
+
+    # References
+
+
+    +   [1] http://www.aldatasheet.com/datasheet-pdf/pdf/26411/VISHAY/TCST2103.html
+
+
+    +   [2] http://forum.makeblock.cc/t/the-review-of-dc-motor-drivers-I298n-tb6612fng-and-lv8406t/372
+
+
+    +   [3] https://www.sparkfun.com/products/11113
+
+
+    +   [4] http://www.freertos.org/
+
+
+    +   [5] http://www.chibios.org/dokuwiki/doku.php
+
+
+    +   [6] http://events.linuxfoundation.org/sites/events/slides/ELC%202016%20-%20I2C%20hacking%20demystified_0.pdf
+
+
+    +   [7] http://www.ti.com/product/LM2596
+
+
+    +   [8] http://www.micropik.com/PDF/HCSR04.pdf
+
+
+    +   [9] http://www.intel.com/content/www/us/en/do-it-yourself/edison.html
+
+
+    +   [10] https://getchip.com/
+
+
+    +   [11].'
