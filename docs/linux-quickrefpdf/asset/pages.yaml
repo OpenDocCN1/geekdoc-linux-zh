@@ -1,0 +1,1490 @@
+- img_proc: true
+  md: '# LINUX Admin Quick Reference
+
+
+    /etc/NETWORKING
+
+    (Slackware)
+
+
+    HOSTNAME=hostname.domain.com
+
+
+    Jialong He
+
+    jialong_he@bigfoot.com
+
+    http://www.bigfoot.com/
+
+
+    boot and name is read from these files.
+
+    May change manually.
+
+
+    # NFS File Sharing
+
+
+    # User Management
+
+
+    # Files
+
+
+    # Files
+
+
+    +   /etc/group
+
+    /etc/passwd
+
+    /etc/shadow
+
+    /etc/bashrc
+
+    /etc/profile
+
+
+    User account information.
+
+
+    +   /etc/fstab
+
+    /etc/exports
+
+    /etc/auto.master
+
+
+    file systems mounted during boot.
+
+    NFS server export list.
+
+    auto master file.
+
+
+    +   /etc/ssh_config
+
+    /etc/login
+
+    $HOME/.bashprofile
+
+    $HOME/.bashrc
+
+
+    bash system wide and user init files.
+
+
+    # Commands
+
+
+    +   /etc/resolv.conf
+
+
+    specify server DNS, DNS domain
+
+    search 192.168.1.200
+
+
+    +   /etc/hosts
+
+
+    host name to IP address.
+
+
+    +   /etc/hostname
+
+
+    lookup order.
+
+    order hosts, bind
+
+    multion on
+
+
+    +   /etc/netswitch.conf
+
+    /etc/networks
+
+    /etc/protocols
+
+    /etc/interfaces
+
+
+    new way to specify information.
+
+
+    +   /etc/rpc
+
+
+    TCP/IP services and ports mapping.
+
+
+    RPC service to map program numbers
+
+
+    # Commands
+
+
+    +   mount
+
+    exports
+
+    showmount -e hostname
+
+
+    mount a file system or all entries in fstab.
+
+    export system list in exports.
+
+    show file exported systems
+
+
+    # Printer Configuration
+
+
+    +   netconfig
+
+    ppsetup
+
+
+    menu driven Ethernet setup program.
+
+    set PPP connection (Slackware).
+
+    set Setup Boot, for example
+
+
+    # Files
+
+
+    +   /etc/printcup
+
+    /etc/printcap.local
+
+    /etc/lpd.conf
+
+    /etc/lpds.conf
+
+
+    Printer capabilities database.
+
+    LPR configuration.
+
+    permissions control for the LPR line printer spooler
+
+
+    +   /etc/hosts.lpd
+
+    /etc/hosts.quiv
+
+
+    Access control (BSD LPD).
+
+    trusted hosts.
+
+    Environment variable of printer.
+
+
+    # Commands
+
+
+    +   useradd, usermod
+
+    usermod
+
+    newusers
+
+    groupadd, groupdel
+
+    chage, fix, chsh
+
+
+    script to create a new user account (slackware) or link to user ideal (Redhat).
+
+    delete, create, modify a new user or update deault new user information.
+
+    update and create new users (batch mode).
+
+    add or modify group.
+
+
+    # PRN
+
+
+    +   ifconfig
+
+    ppsetup
+
+
+    ```
+
+    $ifconfig $1 $IPADDR $BROADCAST $($BROADCAST netmask $NETWORK $ETHMASK) out
+
+    ```
+
+
+    parallel port.
+
+
+    +   host
+
+    domainname
+
+    arping
+
+    ipchains
+
+    iptables
+
+
+    lookup host name IP (or similar to lookup).
+
+    DNS name lookup.
+
+    find out by Ethernet address by first then arp.
+
+    firewall and NAT (etc/sysconfig/network on Redhat)
+
+    firewall and NAT (etc/sysconfig/iptables on Linux)
+
+
+    # Files
+
+
+    +   sendmail.conf
+
+    sendmail.mc
+
+
+    "sendmail.conf" is the configuration file. "sendmail.mc" is a macro file which
+    can be used to generate "sendmail.conf" by: mkmff > sendmail.conf
+
+
+    +   aliases
+
+
+    mail lists, run after any change.
+
+    include the header list in a file.
+
+    mail access control, FEATURE(access),) should be set in sendmail.conf. in /etc/mail
+    access cyberpro.com relay
+
+    domain.com relay DISCARD
+
+
+    +   access
+
+
+    make up hash /etc/mail access / <etc/mail access
+
+    all host subdomain by entry
+
+
+    # Network Configuration
+
+
+    +   /etc/rc.d/1
+
+    (Slackware)
+
+    /etc/sysconfig/network-scripts/ifcfg-eth0 (Redhat)
+
+    /hostname
+
+
+    IP address, Network mask. Default gateway
+
+    are in these files. May edit manually to
+
+    modify network parameters.
+
+
+    hostname is set by "hostname" or during
+
+
+    # Red hat files in /etc/sysconfig
+
+
+    # Configuration Files
+
+
+    +   keyboard
+
+
+    keyboard_map, eg.
+
+    KEYBOARD="/usr/lib/kbd/keysmaps.map"
+
+    Mouse type, eg.
+
+    MOUSEHYPE=machine
+
+    XUMSET=
+
+
+    +   network
+
+
+    network settings, contains
+
+    NETWORKWORKING='
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Commands
+
+
+    rebuild the data base for the mail aliases.
+
+
+    +   - newaliases
+
+
+    build access database, e.g.
+
+
+    +   - makemap
+
+
+    makemap hash access dbs.access
+
+
+    # Useful Configuration Files
+
+
+    Files
+
+
+    +   - httpd
+
+
+    Apache web server configuration file.
+
+
+    +   - smb
+
+
+    Samba server file (for print and Windows).
+
+
+    +   - lilo
+
+
+    LILO boot loader configuration.
+
+
+    +   - syslog
+
+
+    System log daemon (syslog) configuration.
+
+
+    +   - ssh_config
+
+
+    SSH client and server configuration.
+
+
+    +   - ldconfig.conf
+
+
+    default library search path (ldconfig).
+
+
+    +   - mtools.conf
+
+
+    mtool configuration (access DOS file).
+
+
+    +   - named.conf
+
+
+    DNS server name (Redhat).
+
+
+    +   - sysctl.conf
+
+
+    kernel parameters by sysctl.
+
+
+    +   - ntp.conf
+
+
+    net time server.
+
+
+    +   - arada.conf
+
+
+    Internet server configuration.
+
+
+    +   - /etc/resolv.conf
+
+
+    Extended index configuration.
+
+
+    +   - postfix.conf
+
+
+    postfix FTP server.
+
+
+    +   - protpd.conf
+
+
+    network backup server.
+
+
+    +   - /etc/mime.conf
+
+
+    PINE mail server configuration.
+
+
+    # Rebuild Kernel
+
+
+    # Configure Kernel Parameters
+
+
+    +   - makeconfig
+
+
+    Configuring the kernel with menu,
+
+
+    +   - makemenuconfig
+
+
+    or X Window interface.
+
+
+    # Compile Kernel Source
+
+
+    +   - makedep
+
+
+    Building and installing a kernel.
+
+
+    # Manage Modules
+
+
+    insmod, lmmod, modlinfo, modprobe, rmmod, depmod
+
+
+    Loadable modules.
+
+
+    # Miscellaneous
+
+
+    Files
+
+
+    +   - /etc/shells
+
+
+    allowed login shells
+
+
+    +   - /etc/ftpsusers
+
+
+    user names not used to ftp.
+
+
+    +   - /etc/htost.allow
+
+
+    TCP wrapper host configuration.
+
+
+    +   - /etc/host.deny
+
+
+    contains system configurations.
+
+
+    +   - /etc/sysconfig (redhat)
+
+
+    floppy drive
+
+
+    +   - /dev/loop
+
+
+    +   - /etc/init.d
+
+
+    system run level control.
+
+
+    # Commands
+
+
+    +   - fredos, tomlos (Slackware)
+
+
+    convert text file to linux format.
+
+
+    +   - dozux, unit.conf
+
+
+    +   - (Redhat)
+
+
+    verify permission and group files.
+
+
+    +   - pwck
+
+
+    +   - pwidth
+
+
+    +   - grpcnv
+
+
+    +   - grpuncv
+
+
+    +   - shadowconf
+
+
+    convert to and shadow passwords and groups.
+
+
+    +   - quota
+
+
+    +   - quotacheck
+
+
+    +   - quotas
+
+
+    +   - quotaf
+
+
+    +   - requestquota
+
+
+    +   - lilo - D dos
+
+
+    set LILO OS (defaults in lilo.conf)
+
+
+    # crontab
+
+
+    show or edit cron jobs.
+
+
+    +   -sys-unconfig
+
+
+    unconfigure system
+
+
+    +   - chfkroot-list
+
+
+    list services started at run level.
+
+
+    +   - kudzu
+
+
+    probe for new hardware (Redhat).
+
+
+    +   - rpm
+
+
+    ```
+
+    rpm -i INSTALL a package
+
+    ```
+
+
+    ```
+
+    rpm -U upgrade a package
+
+    ```
+
+
+    ```
+
+    rpm -q QUERY package
+
+    ```
+
+
+    ```
+
+    rpm -U UPDATE package
+
+    ```
+
+
+    # Configure Apache 2.0 with SSL
+
+
+    +   man cmd | col -b
+
+
+    save a page with text and reference control commands.
+
+
+    +   mod_ssl
+
+
+    +   (1) when apache, specify --enable-ssl for configure config.
+
+    By default, ssl is not enabled. After compiling, use "mod-ssl" to be in the list
+    modules, "mod-ssl" should be in the header.
+
+
+    +   (2) generate private key
+
+
+    +   (3) generate certificate
+
+
+    +   (4) generate self-signed certificate
+
+
+    ```
+
+    openssl -x509 -days 365 -newkey server.key -out server.key -out server.crt
+
+    ```
+
+
+    +   (5) "mod_ssl", which will be included in httpd.conf.
+
+    spec "--d_ssl", otherwise contained in <IfModule SSL> in the server.
+
+
+    # Syslog
+
+
+    Each line consists of a selector and an action. A section has two parts: priorities
+    and facilities, separated by a bracket (). You may define a priority with an equality
+    sign (=) to specify only this priority or others. If both are valid, tool will
+    proceed with the priority with an exclamation mark (!) to include all priorities,
+    except this one and any higher priority.
+
+
+    Example:
+
+
+    ```
+
+    * *emerg /var/log/log to a file
+
+    *#myhost.domain.com # log to remote host
+
+    ```
+
+
+    +   facilities
+
+
+    +   priorities
+
+
+    +   action
+
+
+    # Compile Modules
+
+
+    +   - make modules
+
+
+    +   - make modules_install
+
+
+    Building and installing modules.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# IPtables (Netfilter)
+
+
+    # X Window (XFree86)
+
+
+    # Command Syntax
+
+
+    Other commands:
+
+
+    Files
+
+    To set resolution, in "Screen" section and "Section Display", specify a mode.
+    For example: Modes "1024x768"
+
+
+    ```
+
+    iptables [-command] <chain> <parameters>
+
+    (1) --name -d (2) -delete -D (4) -erase -Z
+
+    (5) check -C (6) delete -X (7) rename -E
+
+    ```
+
+
+    Save and Restore
+
+    /sbin/iptables-save /etc/sysconfig/iptables
+
+    /sbin/iptables-restore /etc/sysconfig/iptables
+
+
+    To specify refresh rate, in "Monitor" section, specify a rate. For example: Verfresh
+    70-120
+
+
+    Firewall script example
+
+    http://linux.example.com/iptables_examples.html
+
+
+    clients to run after X started
+
+
+    # Parameters
+
+
+    by protocol; by number or using name,
+
+    dp, icmp
+
+
+    ```
+
+    X11/xinit/rc
+
+    X11/xinit/config
+
+    ```
+
+
+    # Build-Table
+
+
+    ```
+
+    --p [protocol] -s [addr] addrmask
+
+    --source -s [addr] addrmask
+
+    --destination -d [addr] addrmask
+
+    ```
+
+
+    source IP address.
+
+
+    incoming interface, eth0 or eth1,
+
+    outout interface,
+
+
+    # Commands
+
+
+    start x window system.
+
+
+    This is the default table for handling packets.
+
+    In chain:
+
+
+    +   1. INPUT - This chain allows packets to
+
+    received via a network interface.
+
+    2. OUTPUT - This chain allows packets
+
+    to sent out the same network interface or received via a network interface.
+
+    3. FORWARD - This chain allows packets
+
+    to received on one network interface and sent out
+
+
+    ```
+
+    startx
+
+    xconfiguration(root)
+
+    free86setup
+
+    free86exit
+
+    ```
+
+
+    setup your X window and GF86config.
+
+
+    # XFree86config
+
+
+    XFree86 configuration (Plug-in)
+
+    gerate a template named "XFree86.conf"
+
+    stop X (on some system) X+Alt+F7nwitch back to graphic mode.
+
+
+    jump to a particular target to which a
+
+    rule. Standard: ACCEPT, DROP,
+
+    QUEUE, REJECT, RETURN jump to a user defined target.
+
+    match or or found with others
+
+
+    # SuperSpace
+
+
+    xdtext driver
+
+
+    ```
+
+    --fragment -j
+
+    ```
+
+
+    source/destination address. Can specify a
+
+    range like 06535, use exclusion
+
+    character (?) to NOT match packets.
+
+
+    # xmap
+
+
+    modifying key and mouse button map.
+
+
+    # Options for TCP and UDP
+
+
+    ```
+
+    --port -source-port
+
+    --port -destination-port
+
+    ```
+
+
+    # xset
+
+
+    server access control for the G.
+
+
+    # xsset
+
+
+    root window manager setting for X.
+
+
+    # xfonts
+
+
+    server font list display for X.
+
+
+    # xset
+
+
+    server preference for UI.
+
+
+    ![](img/ab0d44206c69284724b87c4c0855085b_2_0.png)
+
+
+    This table allows packets to create rules.
+
+    In chain:
+
+
+    +   1. PREROUTING - This chain allows packets
+
+    received via a network interface when they
+
+    arrive.
+
+    2. OUTPUT - This chain allows locally-
+
+    ppackets before they are routed via a
+
+    network interface.
+
+    3. POSTROUTING - This chain allows packets
+
+    received on one network interface and sent out
+
+
+    # Masking everything out
+
+    # iptables -A POSTROUTING -o * -j SNAT
+
+    # MASQUERADE
+
+
+    # Change source for 1.2.3.4
+
+    # iptables -A POSTROUTING -s 1.2.3.4 -j SNAT
+
+
+    # Options for ICMP
+
+
+    This table is for specific types of packet type.
+
+    In chain:
+
+
+    ```
+
+    --icmp-type [type] Match specified ICMP type. Valid ICMP type can be
+
+    ```
+
+
+    list by
+
+
+    # Options for state module (-m state --state)
+
+
+    +   1. PREROUTING - This chain allows locally-
+
+    packets received via a network interface before they are
+
+    routed.
+
+    2. OUTPUT - This chain allows locally-
+
+    packets before they are routed via a
+
+    network interface.
+
+
+    ![](img/ab0d44206c69284724b87c4c0855085b_2_1.png)
+
+
+    ESTABLISHED
+
+    The matching packet is ordered after
+
+    packets in an existing connection.
+
+
+    RELATED
+
+
+    NEW
+
+    The matching packet is starting a new
+
+    connection related in some existing connection.
+
+
+    The matching packet is creating a new
+
+    connection or part of a two-way connection not
+
+    previously seen.
+
+
+    INVALID
+
+    The matching packet cannot be tied to a
+
+    connection.
+
+
+    # Commands | -F
+
+
+    Flush (delete) the rules in the selected chain.
+
+
+    ```
+
+    --policy -p
+
+    Set default policy for a particular chain.
+
+    ```
+
+
+    ```
+
+    --list -l
+
+    List all rules in table, use [-tablename] to
+
+    sify other tables.
+
+    ```
+
+
+    ```
+
+    --append -A
+
+    A appends a rule to the end of the specified chain.
+
+    ```'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'This file is formatted using a configuration file X86Config for setup, or "x86cfg"
+    directory.
+
+    X86Config file is composed of a number of sections which may be present in any
+    order. Each section follows the
+
+
+    Option "OffTime" "time"
+
+
+    Sets the inactivity timeout for the "off" phase of DPMS mode, default 40 minutes.
+
+
+    EXAMPLE
+
+
+    Section "InputDevice"
+
+
+    Identifier "Generic Keyboard"
+
+    Driver Keyboard
+
+    Option "AutoRepeat" "500 30"
+
+    Option "CoreKeyboard"
+
+    EndSection
+
+
+    # Section "SectionName"
+
+
+    # SectionEntry
+
+
+    The graphs are described in the Device sections, and the mouse is described in
+    the Mouse sections. They are reported by the Server section. Keyboard and Mouse
+    are described in InputDevice sections, both Keyboard and Pointer are also registered.
+    ServerLayout section is at the highest level that handles the InputDevice and
+    Device section
+
+
+    Option "DefaultServerLayout" "layout-id"
+
+
+    Sets the default ServerLayout used to serve. Default is the ServerLayout section.
+
+
+    # Section "ServerFlags"
+
+
+    Option "BlankTime" "99999"
+
+    Option "StandbyTime" "99999"
+
+    Option "SuspendedTime" "99999"
+
+    Option "OffTime" "99999"
+
+    EndSection
+
+
+    Section "InputDevice"
+
+
+    Identifier "PS2 Mouse"
+
+    Driver mouse
+
+    Option "CorePointer"
+
+    Option "Device" "dev/mouse"
+
+    Option "Protocol" "PS2"
+
+    Option "EmulateButtons" "true"
+
+    EndSection
+
+
+    # Module Section
+
+
+    Load "modmodule"
+
+
+    Load a module. The module name should be the module''s name, not the module file.
+
+
+    EXAMPLE
+
+
+    Section "Module" "extmod"
+
+    Load "type1"
+
+    EndSection
+
+
+    # File Section
+
+
+    Option "Path" "path"
+
+
+    Font elements may be either absolute directory paths, or a font server identifier
+
+
+    Option "GBPath" "path"
+
+
+    Sets the path for the RGB color device.
+
+
+    ModulePath "path"
+
+
+    Used to set up multiple directories for storing loaded modules by the X86conf
+    server.
+
+
+    EXAMPLE
+
+
+    Section "Files"
+
+    RgbPath "/usr/X11r/X11/rgb"
+
+    FontPath "/etc/type1"
+
+    EndSection
+
+
+    # ServerLayout Section
+
+
+    Option "DontZoom" "boolean"
+
+
+    Disable Ctrl+Alt+Keypad to terminate the X server.
+
+
+    Option "DontZoom" "boolean"
+
+
+    Disabled "Ctrl+Alt+Keypad" and "Ctrl+Alt-Keypad" to switch video mode.
+
+
+    Option "BlankTime" "time"
+
+
+    Sets the inactivity timeout for the blanking phase of the screensaver in minutes.
+    Default 10.
+
+
+    Option "StandbyTime" "time"
+
+
+    Sets the inactivity timeout for the "standby" phase of DPMS mode in minutes. Default
+    20.
+
+
+    Option "SuspendedTime" "time"
+
+
+    Sets the inactivity timeout for the "suspend" phase of DPMS mode, default 30 min.
+
+
+    # InputDevice Section
+
+
+    There are at least two InputDevice sections, for Keyboard and for Mouse.
+
+
+    Identifier
+
+
+    Specify an unique name for this input device.
+
+
+    Driver r
+
+
+    Specify the name of the driver to use for this input device.
+
+
+    Option "CorePointer"
+
+
+    Option "CoreKeyboard"
+
+    This input device is the primary driver.
+
+
+    # Device Section
+
+
+    Specifications about the video card used by the system. You must have at least
+    one Device section in your configuration file. The devices are used in ServerLayout-section.
+
+
+    Identifier
+
+
+    Specify an unique name for this graphics card.
+
+
+    Driver
+
+
+    Specify the name of the driver to use for this graphics card.
+
+
+    EXAMPLE
+
+
+    Section "Device"
+
+    Identifier "ATI MACH64"
+
+    VendorName "ATI MACH64"
+
+    VideoRam 2048
+
+    EndSection
+
+
+    # Monitor Section
+
+
+    Monitor section describes a monitor. There must be at least one monitor and the
+    active one is used in ServerLayout-section.
+
+
+    Identifier
+
+
+    Specify an unique name for this monitor.
+
+
+    HorizSync "horizync-sync"
+
+
+    Sets the range(s) of horizontal sync frequencies of this monitor in kHz.
+
+
+    VertRefresh "vert-refresh"
+
+
+    Sets the range(s) of vertical sync frequencies of this monitor in kHz.
+
+
+    EXAMPLE
+
+
+    Section "Monitor"
+
+    Identifier "Generic Monitor"
+
+    VendorName "Monitor Vendor"
+
+    ModelName "Monitor Modf"
+
+    HorizSync "31.5-56.6"
+
+    VertRefresh 40-70
+
+    EndSection'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Screen Section
+
+
+    Screen Section binds Device and Monitor sections. There must be at least one Screen
+    Section. The active one is in ServerLayout section.
+
+
+    # Identifier
+
+
+    Specify an unique name for this Section.
+
+
+    # Device - "device-id"
+
+
+    This identifies the identifier of Device to be used for this screen.
+
+
+    # Monitor - "monitor-id"
+
+
+    This identifies the identifier of Monitor to be used for this section.
+
+
+    # Default - "depth"
+
+
+    Default color depth, 8, 16 or 24.
+
+
+    # Option - "acc"
+
+
+    Each XAA (X Acceleration Affinity), default is ON.
+
+
+    # DISPLAY SUBSECTION
+
+
+    Each Section must have at least one Display Section which matches the values in
+    DefaultDepth.
+
+
+    # Depth - depth
+
+
+    This entry specifies what color depth of this Display Section.
+
+
+    # Virtual - ydim
+
+
+    Specifies the virtual resolution to be used.
+
+
+    # Viewport - x0 y0
+
+
+    Sets the upper left corner of the initial display.
+
+
+    # Mode - "mode-name..."
+
+
+    Specifies the list of video modes to use. Each mode-name specified must be in
+    double quotes. They must correspond to those specified in the appropriate Monitor
+    section (including implicitly referred but- ESA standards modes), can be switched
+    with Ctrl+Alt+KeypadPlus or Ctrl+Alt+KeypadMinus.
+
+
+    # EXAMPLE
+
+
+    Section "My Screen"
+
+    Device "ATI Mach64"
+
+    Monitor "Generic Monitor"
+
+    DefaultDepth 16
+
+    Subsection "Display"
+
+    Depth 16
+
+    Modes "1024x768" "800x600" "640x480"
+
+    EndSubsection "Display"
+
+    Depth 24
+
+    EndSubsection
+
+    Modes "1024x768" "800x600" "640x480"
+
+    EndSection
+
+
+    # ServerLayout
+
+
+    ServerLayout binds a Screen section and one or more InputSection to form a complete
+    configuration. The active ServerLayout section is specified in ServerLayers. If
+    not, the first ServerLayout section is active. If ServerLayout sections are present,
+    the single screen and two active (core) input devices are selected as described
+    in the relevant sections.
+
+
+    # Identifier
+
+
+    An unique name for this ServerLayout Section.
+
+
+    # Screen screen-name "screen-id" section-information
+
+
+    The field-id is mandatory, and the Screen section being referred referenced.
+
+
+    # InputDevice "devaid" option...
+
+
+    Normally at least two are required, for one core pointer and the other for
+
+    t primary keyboard devices.
+
+
+    # EXAMPLE
+
+
+    Section "ServerLayout"
+
+    Identifier "Default Layout"
+
+    Screen "My Screen"
+
+    InputDevice "Generic Keyboard"
+
+    InputDevice "PS/2 Mouse"
+
+    EndSection'
+  merge: -1
+  pgno: 4
