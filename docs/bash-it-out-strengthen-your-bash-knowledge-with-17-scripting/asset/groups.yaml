@@ -1,0 +1,4196 @@
+- md: "\n# Bash it Out!\n\nStrengthen your Bash knowledge with 17 scripting challenges\
+    \ of varied difficulties\n\nBy Sylvain Leroux\n\nCopyright © 2017 by Sylvain Leroux\n\
+    All rights reserved. This book or any portion thereof may not be reproduced or\
+    \ used in any\nmanner whatsoever without the express written permission of the\
+    \ publisher except for the use\nof brief quotations in a book review.\n\nFirst\
+    \ Edition, 2017\n\nPublished by It's FOSS\nhttps://itsfoss.com\n\n# Acknowledgement\n\
+    \nThis work has started by a humble post in the Linux Users Group on Facebook.\
+    \ Needless to say, I had no idea at the time there be so many Bash Challenges\
+    \ that we could publish an entire book!\n\nCertainly, I couldn't have gone so\
+    \ far without the help of Abhishek Prakash who invited me to publish these challenges\
+    \ not only on It's FOSS Facebook page but also on the It's FOSS website. Abhishek\
+    \ is also at the origin of the idea of compiling all those challenges—including\
+    \ some unreleased material—to make the book you are reading now.\n\nBut there\
+    \ is a whole world between publishing a regular column on a blog and making a\
+    \ book. Illustration, pagination, and overall project management were some of\
+    \ the tasks Rohini Rachita particularly shined at.\n\nLast but not least, I must\
+    \ thank all the people on Internet that enjoyed those challenges. This work was\
+    \ made for you. My goal was to help you in discovering some subtleties or pitfalls\
+    \ of that great tool the Bash is. And given your comments and reactions on Internet,\
+    \ I know you liked that work. I sincerely hope you will have even more fun today\
+    \ by reading this enhanced version of the Bash Challenges!\n\nSylvain Leroux\n\
+    June 2017\n\nYes I Know It\n\n# Contents\n\n- Acknowledgement 3\n- Contents 4\n\
+    - Publisher's Foreword 8\n- How to use this Bash Challenge book 9\n- Before you\
+    \ go on bashing 10\n- Challenge 1: Counting files in the current directory 12\n\
+    \    - What I tried to achieve? 12\n    - The solution 13\n    - How to reproduce?\
+    \ 13\n    - What was the problem? 13\n    - How to fix that? 13\n    - Ignore\
+    \ the file's name 14\n- Challenge 2: My shell don't know how to count 15\n   \
+    \ - What I tried to achieve? 15\n    - The solution 16\n    - How to reproduce?\
+    \ 16\n    - What was the problem? 16\n    - How to fix that? 17\n    - Removing\
+    \ leading zeros 17\n    - Specifying explicity the base 18\n- Challenge 3: My\
+    \ command outputs are in the wrong order! 19\n    - What I tried to achieve? 19\n\
+    \    - The solution 20\n    - What was the problem? 20\n- Challenge 4: Keeping\
+    \ filenames containing some extension 22\n    - What I tried to achieve? 22\n\
+    \    - The solution 23\n    - What was the problem? 23\n    - How to fix that?\
+    \ 23\n    - Protecting the dot from special interpretation 23\n    - Anchoring\
+    \ pattern at the end of a line 24\n- Challenge 5: The lazy typist challenge 25\n\
+    \    - What I tried to achieve? 25\n    - My solution 26\n- Challenge 6: The dangerous\
+    \ file to remove 27\n    - What I tried to achieve? 27\n    - The solution 28\n\
+    \    - What was the problem? 28\n    - How to solve that? 28\n- Challenge 7: The\
+    \ file that didn't want to go away 30\n    - What I tried to achieve? 30\n   \
+    \ - The solution 31\n    - What was the problem? 31\n    - How to achieve my goal?\
+    \ 33\n- Challenge 8: Hex to ASCII conversion in Bash 35\n    - What I tried to\
+    \ achieve? 35\n    - The solution 36\n    - How to reproduce 36\n    - What was\
+    \ the problem here? 36\n    - How to fix that? 37\n    - Alternate solutions 37\n\
+    - Challenge 9: My Bash can't sum data in columns 38\n    - What I tried to achieve?\
+    \ 38\n    - What was the problem? 39\n    - How to fix that? 39\n    - Add the\
+    \ missing zeros 40\n    - Split data on fixed position 40\n- Challenge 10: The\
+    \ file that survived to ram 41\n    - What I tried to achieve? 41\n    - The solution\
+    \ 42\n    - How to reproduce 42\n    - What was the problem? 42\n    - How to\
+    \ fix that? 43\n- Challenge 11: The red/blue token counter 44\n    - What I tried\
+    \ to achieve? 44\n    - The solution 45\n    - What was the problem? 45\n    -\
+    \ The store and process approach 45\n    - Duplicate stream 46\n    - Handle data\
+    \ as they arrive 46\n- Challenge 12: Inserting the same header on top of several\
+    \ different files 48\n    - What I tried to achieve? 48\n    - The solution 49\n\
+    \    - What was the problem? 49\n    - How to fix that? 50\n    - The KISS solution\
+    \ 50\n    - Using sed 50\n    - Using ed or ex 51\n- Challenge 13: Converting\
+    \ text to uppercase 52\n    - What I tried to achieve? 52\n    - The solution\
+    \ 52\n- Challenge 14: The Back in Time Function 54\n    - What I tried to achieve?\
+    \ 54\n    - The solution 55\n    - What was the problem? 55\n    - How to fix\
+    \ that? 55\n    - Converting date to quantities 55\n    - Using the mighty powers\
+    \ of GNU date utils 56\n- Challenge 15: My shell don't know how to count 58\n\
+    \    - What I tried to achieve? 58\n    - The solution 58\n    - What was the\
+    \ problem? 58\n    - How to fix that? 58\n- Challenge 16: Sending a file between\
+    \ computers 60\n    - What I tried to achieve? 60\n    - The solution 60\n   \
+    \ - What was the problem? 60\n- Challenge 17: Generate a fair dice 64\n    - What\
+    \ I tried to achieve? 64\n    - The solution 64\n    - What was the problem? 64\n\
+    \n# Publisher's Foreword\n\nBash Out is our first attempt at bringing out unique\
+    \ and helpful material in book format. It started as a mere post on our Facebook\
+    \ page. With over 250,000 members, we feel one of the most prominent voices in\
+    \ the world. We plan to add more problems in future.\n\nI hope you enjoy the challenges.\n\
+    \nAbhishek Prakash\nCo-Founder, It's FOSS\n\n# How to use this Bash Challenge\
+    \ book\n\nSince you are taking this challenge, we presume that you are aware of\
+    \ the basic fundamentals. The challenges are divided into three levels:\n\n- level\
+    \ 1 challenges covers tricks accessible to all Bash scripters;\n- level 2 challenges\
+    \ requires some knowledge of a specific command or shell feature;\n- level 3 challenges\
+    \ are more tricky and may require more advanced concepts or more subtle solutions.\n\
+    \nThat being said, the division is rather arbitrary, so don't be afraid to try\
+    \ the challenges in the order you want. The only real prerequisites here are some\
+    \ Bash syntax knowledge and most important, the desire to learn while having fun.\n\
+    \n# Before you go on bashing\n\nA few details you should know. To create this\
+    \ challenge, I used:\n\n- - GNU Bash, version 4.4.5 (x86_64-pc-linux-gnu)\n- -\
+    \ Debian 8.4.7-1 (amd64)\n- - All commands are those shipped with a standard Debian\
+    \ distribution\n- - No command was aliased\n\nThe primary aim of this book is\
+    \ not to teach Bash scripting. We aim to provide you with tricky questions that\
+    \ will force you to go deeper with your knowledge. You won't find these things\
+    \ in text books.\n\nWhile taking the challenges, you should refer to man pages\
+    \ of the commands or Google for your usage. There is no restriction on that.\n\
+    \nOne important thing here, we provide one solution to each exercise. But there\
+    \ can be in fact more than one way to solve the same problem. So if you do not\
+    \ find your solution in the book, feel free to discuss it on our Facebook page\
+    \ or by sending us an email.\n\nEnough talk! Come on, Bash It Out!\n"
+  mdcn: "\n\n# 尽情 Bash 吧！\n\n通过 17 个不同难度的脚本挑战加强你的 Bash 知识\n\n作者：Sylvain Leroux\n\n\
+    版权 © 2017 Sylvain Leroux 所有\n保留所有权利。未经出版者明确书面许可，本书或其任何部分均不得以任何方式复制或使用，但书评中的简短引用的除除外。\n\
+    \n第一版，2017 年\n\n由 It's FOSS 出版\nhttps://itsfoss.com\n\n# 致谢\n\n这项工作始于 Facebook\
+    \ 上 Linux 用户组的一篇谦虚的帖子。无需多说，我当时完全没有意识到会有这么多 Bash 挑战到至于我们可以出版一整本书！\n\n当然，如果没有 Abhishek\
+    \ Prakash 的帮助，我无法走到这一步。他邀请我不仅将这些挑战发布在 It's FOSS 的 Facebook 页面，还发布在 It's FOSS 网站上。Abhishek\
+    \ 也是将所有挑战（包括一些尚未发布的材料）汇编成你正在阅读的这本书的灵感来源。\n\n但在在博客上发表常规专栏和制作一本书之间，隔着整个世界。插图、分页和整体项目管理是\
+    \ Rohini Rachita 特别出色的任务。\n\n最后但同样重要的是，我感谢互联网上所有喜欢这些挑战的人。这项工作是为你们做的。我的目标是帮助你们发现\
+    \ Bash 这一伟大工具的某些微妙之处或陷阱。根据你们在互联网上的评论和反应，我知道你们喜欢这项工作。我诚挚地希望你们在阅读这个增强版的《Bash 挑战》时能获得更多乐趣！\n\
+    \nSylvain Leroux\n2017 年 6 月\n\n我知道它\n\n# 目录\n\n- 致谢 3\n- 目录 4\n- 出版者前言 8\n- 如何使用本\
+    \ Bash 挑战书 9\n- 在开始玩 Bash 之前 10\n- 挑战 1：统计当前目录下的文件 12\n    - 我尝试实现什么？ 12\n   \
+    \ - 解决方案 13\n    - 如何复现？ 13\n    - 问题是什么？ 13\n    - 如何修复？ 13\n    - 忽略文件名 14\n\
+    - 挑战 2：我的 shell 不知道如何计数 15\n    - 我尝试实现什么？ 15\n    - 解决方案 16\n    - 如何复现？ 16\n\
+    \    - 问题是什么？ 16\n    - 如何修复？ 17\n    - 去除前零 17\n    - 显式指定基数 18\n- 挑战 3：我的命令输出顺序错了！\
+    \ 19\n    - 我尝试实现什么？ 19\n    - 解决方案 20\n    - 问题是什么？ 20\n- 挑战 4：保留包含某些扩展名的文件名\
+    \ 22\n    - 我尝试实现什么？ 22\n    - 解决方案 23\n    - 问题是什么？ 23\n    - 如何修复？ 23\n    -\
+    \ 防止点号被特殊解释 23\n    - 在行尾锚定模式 24\n- 挑战 5：懒打字员挑战 25\n    - 我尝试实现什么？ 25\n    - 我的解决方案\
+    \ 26\n- 挑战 6：危险的删除文件 27\n    - 我尝试实现什么？ 27\n    - 解决方案 28\n    - 问题是什么？ 28\n \
+    \   - 如何解决？ 28\n- 挑战 7：不愿离开的文件 30\n    - 我尝试实现什么？ 30\n    - 解决方案 31\n    - 问题是什么？\
+    \ 31\n    - 如何实现我的目标？ 33\n- 挑战 8：Bash 中的十六进制到 ASCII 转换 35\n    - 我尝试实现什么？ 35\n\
+    \    - 解决方案 36\n    - 如何复现 36\n    - 这里的问题是什么？ 36\n    - 如何修复？ 37\n    - 替代方案\
+    \ 37\n- 挑战 9：我的 Bash 无法对列数据求和 38\n    - 我尝试实现什么？ 38\n    - 问题是什么？ 39\n    - 如何修复？\
+    \ 39\n    - 补全缺失的零 40\n    - 在固定位置分割数据 40\n- 挑战 10：生存到内存中的文件 41\n    - 我尝试实现什么？\
+    \ 41\n    - 解决方案 42\n    - 如何复现 42\n    - 问题是什么？ 42\n    - 如何修复？ 43\n- 挑战 11：红色/蓝色标记计数器\
+    \ 44\n    - 我尝试实现什么？ 44\n    - 解决方案 45\n    - 问题是什么？ 45\n    - 存储和处理方法 45\n  \
+    \  - 重复流 46\n    - 处理随之到达的数据 46\n- 挑战 12：在多个不同的文件顶部插入相同的头部 48\n    - 我尝试实现什么？\
+    \ 48\n    - 解决方案 49\n    - 问题是什么？ 49\n    - 如何修复？ 50\n    - KISS 解决方案 50\n   \
+    \ - 使用 sed 50\n    - 使用 ed 或 ex 51\n- 挑战 13：将文本转换为大写 52\n    - 我尝试实现什么？ 52\n \
+    \   - 解决方案 52\n- 挑战 14：回到溯的功能 54\n    - 我尝试实现什么？ 54\n    - 解决方案 55\n    - 问题是什么？\
+    \ 55\n    - 如何修复？ 55\n    - 转换数量 55\n    - 使用强大的 GNU 工具 56\n- 挑战 15：我的 shell 不知道如何计数\
+    \ 58\n    - 我尝试实现什么？ 58\n    - 解决方案 58\n    - 问题是什么？ 58\n    - 如何修复？ 58\n- 挑战\
+    \ 16：计算机之间发送文件 60\n    - 我尝试实现什么？ 60\n    - 解决方案 60\n    - 问题是什么？ 60\n- 挑战 17：生成公平的骰子\
+    \ 64\n    - 我尝试实现什么？ 64\n    - 解决方案 64\n    - 问题是什么？ 64\n\n# 出版者前言\n\n《Bash Out》是我们首次以书籍形式呈现独特实用材料。它始于我们\
+    \ Facebook 页面上的一个帖子。拥有超过 250,000 名成员，我们感到是著名的声音之一。我们计划在未来增加更多问题。\n\n希望你们喜欢这些挑战。\n\
+    \nAbhishek Prakash\nIt's FOSS 创始人\n\n# 如何使用本 Bash 挑战书\n\n既然你正在接受这项挑战，我们假设你已经了解基础知识。挑战分为三个级别：\n\
+    \n- 1 级挑战涵盖所有 Bash 脚本人员都可以使用的技巧；\n- 2 级挑战需要某些命令或 shell 特性的知识；\n- 3 级挑战更具挑战性，可能需要更高级的概念或微妙的解决方案。\n\
+    \n尽管如此，这种划分相当任意，所以不要担心按照你顺序尝试挑战。这里真正的先决条件是一些 Bash 语法知识，最重要的是在乐趣中学习的渴望。\n\n说够了！来吧，尽情\
+    \ Bash 吧！\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # Bash it Out!
+
+
+    Strengthen your Bash knowledge with 17 scripting challenges of varied difficulties
+
+
+    By Sylvain Leroux'
+  - '[PAGE 1]
+
+
+    Copyright © 2017 by Sylvain Leroux
+
+    All rights reserved. This book or any portion thereof may not be reproduced or
+    used in any
+
+    manner whatsoever without the express written permission of the publisher except
+    for the use
+
+    of brief quotations in a book review.
+
+
+    First Edition, 2017
+
+
+    Published by It''s FOSS
+
+    https://itsfoss.com'
+  - '[PAGE 2]
+
+
+    # # Acknowledgement
+
+
+    This work has started by a humble post in the Linux Users Group on Facebook. Needless
+    to say, I had no idea at the time there be so many Bash Challenges that we could
+    publish an entire book!
+
+
+    Certainly, I couldn''t have gone so far without the help of Abhishek Prakash who
+    invited me to publish these challenges not only on It''s FOSS Facebook page but
+    also on the It''s FOSS website. Abhishek is also at the origin of the idea of
+    compiling all those challenges—including some unreleased material—to make the
+    book you are reading now.
+
+
+    But there is a whole world between publishing a regular column on a blog and making
+    a book. Illustration, pagination, and overall project management were some of
+    the tasks Rohini Rachita particularly shined at.
+
+
+    Last but not least, I must thank all the people on Internet that enjoyed those
+    challenges. This work was made for you. My goal was to help you in discovering
+    some subtleties or pitfalls of that great tool the Bash is. And given your comments
+    and reactions on Internet, I know you liked that work.I I sincerely hope you will
+    have even more fun today by reading this enhanced version of the Bash Challenges!
+
+
+    Sylvain Leroux
+
+    June 2017
+
+    Yes I Know It'
+  - '[PAGE 3]
+
+
+    # Contents
+
+
+    +   Acknowledgement 3
+
+    Contents 4
+
+    Publisher''s Foreword 8
+
+    How to use this Bash Challenge book 9
+
+    Before you go on bashing 10
+
+    Challenge 1: Counting files in the current directory 12
+
+    What I tried to achieve? 12
+
+    The solution 13
+
+    How to reproduce? 13
+
+    What was the problem? 13
+
+    How to fix that? 13
+
+    Ignore the file''s name 14
+
+    Challenge 2: My shell don''t know how to count 15
+
+    What I tried to achieve? 15
+
+    The solution 16
+
+    How to reproduce? 16
+
+    What was the problem? 16
+
+    How to fix that? 17
+
+    Removing leading zeros 17
+
+    Specifying explicity the base 18
+
+    Challenge 3: My command outputs are in the wrong order! 19
+
+    What I tried to achieve? 19
+
+    The solution 20
+
+    What was the problem? 20
+
+    Challenge 4: Keeping filenames containing some extension 22
+
+    What I tried to achieve? 22
+
+    The solution 23
+
+    What was the problem? 23
+
+    How to fix that? 23
+
+    Protecting the dot from special interpretation 23
+
+    Anchoring pattern at the end of a line 24'
+  - '[PAGE 4]
+
+
+    # Challenge 5: The lazy typist challenge 25
+
+
+    What I tried to achieve? 25
+
+
+    My solution 26
+
+
+    # Challenge 6: The dangerous file to remove 27
+
+
+    What I tried to achieve? 27
+
+
+    The solution 28
+
+
+    What was the problem? 28
+
+
+    How to solve that? 28
+
+
+    # Challenge 7: The file that didn''t want to go away 30
+
+
+    What I tried to achieve? 30
+
+
+    The solution 31
+
+
+    What was the problem? 31
+
+
+    How to achieve my goal? 33
+
+
+    # Challenge 8: Hex to ASCII conversion in Bash 35
+
+
+    What I tried to achieve? 35
+
+
+    The solution 36
+
+
+    How to reproduce 36
+
+
+    What was the problem here? 36
+
+
+    How to fix that? 37
+
+
+    Alternate solutions 37
+
+
+    # Challenge 9: My Bash can''t sum data in columns 38
+
+
+    What I tried to achieve? 38
+
+
+    What was the problem? 39
+
+
+    How to fix that? 39
+
+
+    Add the missing zeros 40
+
+
+    Split data on fixed position 40
+
+
+    # Challenge 10: The file that survived to ram 41
+
+
+    What I tried to achieve? 41
+
+
+    The solution 42
+
+
+    How to reproduce 42
+
+
+    What was the problem? 42
+
+
+    How to fix that? 43
+
+
+    # Challenge 11: The red/blue token counter 44
+
+
+    What I tried to achieve? 44
+
+
+    The solution 45
+
+
+    What was the problem? 45
+
+
+    5'
+  - '[PAGE 5]
+
+
+    The store and process approach 45
+
+
+    Duplicate stream 46
+
+
+    Handle data as they arrive 46
+
+
+    # Challenge 12: Inserting the same header on top of several different files 48
+
+
+    What I tried to achieve? 48
+
+
+    The solution 49
+
+
+    What was the problem? 49
+
+
+    How to fix that? 50
+
+
+    The KISS solution 50
+
+
+    Using sed 50
+
+
+    Using ed or ex 51
+
+
+    # Challenge 13: Converting text to uppercase 52
+
+
+    What I tried to achieve? 52
+
+
+    The solution 52
+
+
+    # Challenge 14: The Back in Time Function 54
+
+
+    What I tried to achieve? 54
+
+
+    The solution 55
+
+
+    What was the problem? 55
+
+
+    How to fix that? 55
+
+
+    Converting date to quantities 55
+
+
+    Using the mighty powers of GNU date utils 56
+
+
+    # Challenge 15: My Bash don''t know how to count. Again! 58
+
+
+    What I tried to achieve? 58
+
+
+    The solution 58
+
+
+    What was the problem? 58
+
+
+    How to fix that? 58
+
+
+    # Challenge 16: Sending a file between two computers 60
+
+
+    What I tried to achieve? 60
+
+
+    The solution 60
+
+
+    What was the problem? 60
+
+
+    Introducing netcat 60
+
+
+    Replacing the client netcat by the Bash 62
+
+
+    # Challenge 17: Generate a fair dice roll 64
+
+
+    What I tried to achieve? 64
+
+
+    The solution 64
+
+
+    What was the problem? 64'
+  - '[PAGE 6]
+
+
+    # Afterword'
+  - '[PAGE 7]
+
+
+    # Publisher’s Foreword
+
+
+    Bash It Out is our first attempt in bringing out unique and helpful Linux related
+    educational material in book format.
+
+
+    Some of you might already know us from the It''s FOSS Linux Blog (https://itsfossoss.com),
+    an open source web portal promoting Linux and Open Source. With over 250,000 members
+    in our community, we feel pride in being one of the most prominent voices in the
+    world of Open Source.
+
+
+    What you are reading as a book was started as a mere Facebook post. It was liked
+    by many Linux enthusiasts and that encouraged us to cover it on the website itself.
+
+
+    Eventually, we thought of putting it all in a more organized form and thus came
+    out Bash It Out!
+
+
+    It consists of a few challenges that we already put on our website and some exclusively
+    new problems.
+
+
+    We plan to add more new problems in this book in future.
+
+
+    I hope you enjoy solving these problems and learn new things from the solutions.
+
+
+    Abhishek Prakash
+
+    Co-Founder, It''s FOSS'
+  - '[PAGE 8]
+
+
+    # How to use this Bash Challenge book?
+
+
+    Since you are taking the Bash challenge, we presume that you are aware of the
+    basic fundamentals of the Bash scripting. You don''t have to be a command line
+    ninja to take up these challenges but you must know a thing or two about Bash
+    and Linux/Unix commands.
+
+
+    The problem given here doesn''t require you to write a Bash script. It rather
+    presents you with a scenario and asks you why the output is not the expected one
+    or why the script is behaving while it shouldn''t.
+
+
+    The Bash scripting challenges in this book are divided into 3 levels of difficulties.
+    So, if you are a beginner, you''ll learn a lot with higher level challenges. And
+    if you are a pro, you can jump to expert level challenges straightaway though
+    I suggest you take all the challenges to test your knowledge.
+
+
+    The primary aim of this book is not to teach Bash scripting. We aim to provide
+    you with tricky question that will force you to go deeper with your Bash knowledge.
+    You won''t find these things in text books.
+
+
+    While taking the challenges, you should refer to man pages of the commands or
+    Google for your usage. There is no restriction on that.
+
+
+    One important thing here, we provide one solution to each Bash exercise here.
+    But there can be in fact more than one ways to solve the same problem. So if you
+    don''t find your solution in the book, feel free to discuss it on our Facebook
+    page or by sending us an email.
+
+
+    Enough talk! Come on, Bash It Out!'
+  - '[PAGE 9]
+
+
+    # Before you go on bashing
+
+
+    A few details you should know. To create this challenge, I used:
+
+
+    +   - GNU Bash, version 4.4.5 (x86_64-pc-linux-gnu)
+
+    - Debian 8.4.7-1 (amd64)
+
+    - All commands are those shipped with a standard Debian distribution
+
+    - No command was aliased
+
+
+    The challenges are divided in three levels.
+
+
+    +   - level 1 challenges covers tricks accessible to all Bash scripters;
+
+    - level 2 challenges requires some knowledge of a specific command or shell feature;
+
+    - level 3 challenges are more tricky and may require more advanced concepts or
+    more subtle solutions.
+
+
+    That being said, the division is rather arbitrary, so don''t be afraid to try
+    the challenges in the order you want. The only real prerequisites here are some
+    basic Bash syntax knowledge and most important, the desire to learn while having
+    fun.
+
+
+    If you feel like discussing any problem, feel free to reach out by any of these
+    three means:
+
+
+    +   - Email: sylvain@yesik.it
+
+    - Facebook page: https://www.facebook.com/Yes.I.Know.IT/
+
+    - Website: https://yesik.it
+
+
+    So, let''s play together!'
+- md: "\n# Level 1\n\n# Bash challenge\n\n## Challenge 1: Counting files in the current\
+    \ directory\n\nWhat I tried to achieve?\n\nI wanted to count the number of files\
+    \ in the current directory. For that, I used the ls and wc commands:\n\n```\n\
+    yesik:~/ItsFOSS$ ls -l\ntotal 0\n-rw-r--r-- 1 yesik yesik Nov 22 22:45 file1\n\
+    -rw-r--r-- 1 yesik yesik Nov 22 22:45 file2\n-rw-r--r-- 1 yesik yesik Nov 22 22:45\
+    \ file3\nok\nyesik:~/ItsFOSS$ ls | wc -l\n4\n```\n\nI was expecting a result of\
+    \ 3 since I visibly have three files in that directory. But for some unknown reason,\
+    \ was not the result I've obtained. Could you explain me why? And most important,\
+    \ how to achieve my goal?\n\n```\nyesik:-/ItsFOSS$ ls -l\ntotal 0\n-rw-r--r--\
+    \ 1 yesik yesik Nov 23 00:29 file1\n-rw-r--r-- 1 yesik yesik Nov 23 00:29 file2\n\
+    -rw-r--r-- 1 yesik yesik Nov 23 00:29 file3\nok\nyesik:-/ItsFOSS$ ls | wc -l\n\
+    4\nyesik:-/ItsFOSS$ \n```\n\n## The solution\n\nHow to reproduce?\nHere is the\
+    \ raw code we used to produce this challenge. If you run that in a terminal, you\
+    \ will be able to reproduce exactly the same result as displayed in the challenge\
+    \ illustration (assuming you are using the same software version as me):\n\n```\n\
+    mkdir -p ItsFOSS\ncd ItsFOSS\ntouch file1 file2 '$file3\\nok'\nclear\nls -1\n\
+    ls | wc -l\n```\n\nWhat was the problem?\nWhen to a pipe, the ls command write\
+    \ each filename on its line. Just like when using ls -1 from a terminal. And the\
+    \ wc -l command count lines. Apparently ls | wc -l should display the number of\
+    \ files or folder in the current directory.\n\nHowever a filename may have the\
+    \ newline character (often denoted \\n). It is certainly uncommon but perfectly\
+    \ valid though.\n\nIn that challenge, the ok you see on the screen capture was\
+    \ part of the third filename, which in fact was file3\\nok. Not file3 as one may\
+    \ believe it at first sight.\n\nThis is a case you might need to take into account\
+    \ in your scripts or shell commands to not break if a filename contains that character.\
+    \ Either by accident, or as the result of some malicious activity.\n\nHow to fix\
+    \ that?\nRemove non-printable characters from the ls output\n\n```\nls -q | wc\
+    \ -l\n```\n\nModern versions of ls have the -q option that will replace non-printable\
+    \ characters by a question mark (?) The -q option is more portable than the -b\
+    \ option you sometimes see used for purpose. In both cases, we are absolutely\
+    \ certain \\n embedded in filename will not interfere with our count. According\
+    \ to POSIX:\n\n- -q Force each instance of non-printable filename characters and\
+    \ <tab>s to be written as the question-mark ('?') ) character. Implementations\
+    \ may provide this option by default if the output is to a terminal device.\n\n\
+    My Debian Squeeze test system, -q was not the default. That's why the ok word\
+    \ appears on its own line. On Debian Stretch, -q is enabled by default and the\
+    \ output is default — **only when the output is a console** — and it will display\
+    \ the last filename as file3?\n\nIgnore the file's name\n\nI want to count the\
+    \ number of *files*. Not the number of filenames. So, as an alternate solution,\
+    \ I could just ignore the filename and issue a *token* for each encountered file.\
+    \ counting the number of tokens will give the same result as counting the number\
+    \ of files. And as we have the control of the token, we cannot be fooled. We can\
+    \ use the find command for that purpose:\n\n```\nfind . -minddepth 1 -maxdepth\
+    \ 1 -printf '\\n' | wc -l\n  -or-\nfind . !-path . -maxdepth 1 -printf '\\n' |\
+    \ wc -l\n```\n\nHere I made the choice of using an empty line (\\n) as the token.\
+    \ So, those two command will produce one empty line per entry in the current directory.\
+    \ Notice the actual filename is never written to the output. So whatever characters\
+    \ may be embedded in filename, they will not interfere with the pipe. I just have\
+    \ to count the number of lines to know the number of files. Please notice -minddepth\
+    \ 1 and !-path . are two different tricks to remove the current directory (.)\
+    \ from the selection. Otherwise, your count will be off by one.\n\n## Challenge\
+    \ 2: My shell don't know how to count\n\nWhat I tried to achieve?\nI have some\
+    \ data containing integer numbers, one on each line, I want to compute the sum\
+    \ of all numbers:\n\n```\nyesik:~/ItsFOSS$ cat sample.data\n102\n071\n210\n153\n\
+    yesik:~/ItsFOSS$ declare -i SUM=0\nyesik:~/ItsFOSS$ while read X ; do\n  SUM+=$X\n\
+    done < sample.data\nyesik:~/ItsFOSS$ echo \"Sum is: $SUM\"\nSum is: 522\n```\n\
+    \n```\nyesik:~/ItsFOSS$ cat sample.data\n102\n071\n210\n153\nyesik:~/ItsFOSS$\
+    \ declare -i SUM=0\nyesik:~/ItsFOSS$ while read X ; do\n  SUM+=$X\ndone < sample.data\n\
+    yesik:~/ItsFOSS$ echo \"Sum is: $SUM\"\nSum is: 522\nyesik:~/ItsFOSS$ \n```\n\n\
+    Unfortunately, the result I obtain is wrong (the expected result was 536). Could\
+    \ you explain why the result is wrong and fix my commands to obtain the correct\
+    \ result?\n\nExtra challenge: could you find a solution using only Bash commands\
+    \ and substitutions.\n\n## The solution\n\nHow to reproduce?\nHere is the raw\
+    \ code we used to produce this challenge. If you run that in a terminal, you will\
+    \ be able to reproduce exactly the same result as displayed in the challenge illustration\
+    \ (assuming you are using the same software version as me):\n\n```\nrm -rf ItsFOSS\n\
+    mkdir -p ItsFOSS\ncd ItsFOSS\ncat sample.data << 'EOT'\n102\n071\n210\n153\nEOT\n\
+    clear\ncat sample.data\ndeclare -i SUM=0\nwhile read X; do\n  SUM+=$X\ndone <\
+    \ sample.data\necho \"Sum is: $SUM\"\n```\n\n## What was the problem?\nThe problem\
+    \ was caused by the 071 value. As you noticed, this number is starting by 0—probably\
+    \ to ensure all data are formatted on three digits. Nothing complicated here,\
+    \ except that following an unfortunate convention from the C programming language,\
+    \ prefixing an integer by 0 is a way to specify that number is expressed in octal,\
+    \ and not in decimal.\n\nOctal numbers are expressed with digits from 0 to 7.\
+    \ Here is a simple table:\n\n| Decimal | Octal | Decimal | Octal | Decimal | Octal\
+    \ | Decimal | Octal |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---\
+    \ |\n| 0 | 0 | 8 | 10 | 16 | 20 | 56 | 10 |\n| 1 | 1 | 9 | 11 | 17 | 21 | ...\
+    \ | 57 |\n| 2 | 2 | 10 | 12 | 18 | 22 | 58 | 72 |\n| 3 | 3 | 11 | 13 | 19 | 23\
+    \ | 59 | 73 |\n| 4 | 4 | 12 | 14 | 20 | 24 | 60 | 74 |\n| 5 | 5 | 13 | 15 | 21\
+    \ | 25 | 61 | 75 |\n| 6 | 6 | 14 | 16 | 22 | 26 | 62 | 76 |\n| 7 | 7 | 15 | 17\
+    \ | 23 | 27 | 63 | 77 |\n\nThe value in bold in the table above the one that caused\
+    \ the error when evaluating the sum. The Bash read 071 and, because of the leading\
+    \ 0, interpreted it as the octal number $71_8$ representing the $57_{10}$ decimal\
+    \ value. You can check that easily:\n\n```\necho $((071))\n57\n```\n\n## How to\
+    \ fix that?\nI can see two main strategies to fix that issue. Either removing\
+    \ the leading zeros. Or finding a way to make the shell understand all my numbers\
+    \ are **decimal** values.\n\nRemoving leading zeros\n\nHere is a simple solution\
+    \ using the sed command to remove the leading zeros:\n\n```\ndeclare -i SUM=0\n\
+    while read X ; do\nSUM+=$X\ndone <(sed -E s/^\\0+//// sample.data)\necho \"Sum\
+    \ is: $SUM\"\n```\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_16_0.png)\n\n**Bonus\
+    \ question:** why didn't I used a `pipe` instead of a *process substitution*?\n\
+    \n## Specifying explicitly the base\n\nThe previous solution is (mostly) straightforward\
+    \ — but the Bash allows us to make things better. Instead of trying to fix the\
+    \ data, we will simply specify *explicitly* our numbers are expressed in base\
+    \ 10 (decimal), instead of base 8 (octal). You can do that by using the base#value\
+    \ syntax.\n\nCompare those three examples:\n\n```\necho $((071))           # The\
+    \ leading 0 specify the number as octal\n57\necho $((8#071))      # We *explicitly*\
+    \ specify base 8 (octal)\n57\necho $((10#071))     # We *explicitly* specify base\
+    \ 10 (decimal)\n71\n```\n\nTo fix my initial command and obtain the correct result,\
+    \ I only have to explicitly specify the base 10 for all my data:\n\n```\ndeclare\
+    \ -i SUM=0\nwhile read X ; do\n  SUM+($(10#$X))\ndone < sample.data\necho \"Sum\
+    \ is: $SUM\"\n```\n\nI let you check yourself, but it definitely should produce\
+    \ the correct result this time!\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_17_0.png)\n"
+  mdcn: "\n\n# 第 1 \n\n# Bash 挑战\n\n## 挑战 1：统计当前目录下的文件\n\n我想实现什么目标？\n\n我想统计当前目录下的文件数量。为此，我使用了\
+    \ `ls` 和 `wc` 命令：\n\n```\nyesik:~/ItsFOSS$ ls -l\ntotal 0\n-rw-r--r-- 1 yesik\
+    \ yesik Nov 22 22:45 file1\n-rw-r--r-- 1 yesik yesik Nov 22 22:45 file2\n-rw-r--r--\
+    \ 1 yesik yesik Nov 22 22:45 file3\nok\nyesik:~/ItsFOSS$ ls | wc -l\n4\n```\n\n\
+    我原本预期的结果是 3，因为我肉眼看到目录里有三个文件。但由于某种未知原因，得到的结果并不是我预期的。你能解释一下这是为什么吗？最重要的是，如何实现我的目标？\n\
+    \n```\nyesik:-/ItsFOSS$ ls -l\ntotal 0\n-rw-r--r-- 1 yesik yesik Nov 23 00:29\
+    \ file1\n-rw-r--r-- 1 yesik yesik Nov 23 00:29 file2\n-rw-r--r-- 1 yesik yesik\
+    \ Nov 23 00:29 file3\nok\nyesik:-/ItsFOSS$ ls | wc -l\n4\nyesik:-/ItsFOSS$ \n\
+    ```\n\n## 解决方案\n\n如何复现？\n这里是我们用来生成这个挑战的原始代码。如果你在终端中运行它，将能够复现出与挑战插图中完全相同的结果（假设你使用的软件版本与我相同）：\n\
+    \n```\nmkdir -p ItsFOSS\ncd ItsFOSS\ntouch file1 file2 '$file3\\nok'\nclear\n\
+    ls -1\nls | wc -l\n```\n\n问题出在哪里？\n当使用管道符时，`ls` 命令会将每个文件名写入单独的一行。就像在终端中使用 `ls\
+    \ -1` 一一样。而 `wc -l` 命令用于统计行数。显然，`ls | wc -l` 应该显示当前目录下文件或文件夹的数量。\n\n然而，文件名可能包含换行符（通常表示为\
+    \ `\\n`）。这虽然罕见，但完全是法的。\n\n在那个挑战中，你在屏幕截图中看到的 `ok` 是第三个文件名的一部分，实际上它是 `file3\\nok`，而不是像初眼看到的那样是\
+    \ `file3`。\n\n你在编写脚本或 shell 命令时可能需要考虑这种情况，以防文件名包含该字符时导致程序崩溃。这可能是意外，也可能是恶意活动的结果。\n\
+    \n如何修复？\n从 `ls` 的输出中移除不可打印字符\n\n```\nls -q | wc -l\n```\n\n现代版本的 `ls` 有 `-q` 选项，它会将不可打印字符替换为问号（?）。`-q`\
+    \ 选项比你有时看到的用于 `-b` 选项更具移植性。在这两种情况下，我们都能完全确定嵌入文件名中的 `\\n` 不会干扰我们的计数。根据 POSIX 标准：\n\
+    \n- -q 强制将每个不可打印文件名字符和 <tab> 写入问号字符（'?'）。如果输出目标是终端设备，实现可以默认提供此选项。\n\n在我的 Debian\
+    \ Squeeze 测试系统中，`-q` 不是默认的。这就是为什么 `ok` 单词会出现在单独的一行的原因。在 Debian Stretch 上，`-q`\
+    \ 是默认开启的，且输出默认——**仅当输出到控制台时**——它会将最后一个文件名显示为 `file3?`\n\n忽略文件名\n\n我想统计*文件*的数量，而不是文件名的数量。所以，作为替代方案，我可以直接忽略文件名并为每个遇到的文件发布一个*令牌*（token）。统计令牌的数量将得到与统计文件数量相同的结果。由于我们控制了令牌，就不会被欺骗。我们可以使用\
+    \ `find` 命令来实现此目的：\n\n```\nfind . -maxdepth 1 -printf '\\n' | wc -l\nfind . !\
+    \ -path . -printf '\\n' | wc -l\n```\n\n在这里我选择使用空行（`\\n`）作为令牌。因此，这两个命令都会为当前目录产生一个空行。注意实际的文件名从未输出。无论文件名中包含什么字符，都不会干扰管道。我只需要统计行数来获取文件数量。请注意\
+    \ `-maxdepth 1` 和 `-path .` 是移除当前目录的两个技巧。否则，你的计数会偏差 1。\n\n## 挑战 2：我的 shell 不会计数\n\
+    \n我想实现什么目标？\n我有一些包含整数的数据，每行一个，我想计算所有数字的和：\n\n```\nyesik:~/ItsFOSS$ cat sample.data\n\
+    102\n071\n210\n153\nyesik:~/ItsFOSS$ declare -i SUM=0\nyesik:~/ItsFOSS$ while\
+    \ read X ; do\n  SUM+=$X\ndone < sample.data\nyesik:~/ItsFOSS$ echo \"Sum is:\
+    \ $SUM\"\nSum is: 522\n```\n\n```\nyesik:~/ItsFOSS$ cat sample.data\n102\n071\n\
+    210\n153\nyesik:~/ItsFOSS$ declare -i SUM=0\nyesik:~/ItsFOSS$ while read X ; do\n\
+    \  SUM+=$X\ndone < sample.data\nyesik:~/ItsFOSS$ echo \"Sum is: $SUM\"\nSum is:\
+    \ 522\nyesik:~/ItsFOSS$ \n```\n\n遗憾的是，得到的结果是错误的（预期结果是 536）。你能解释为什么结果是错误的，并修复我的命令以获得正确结果吗？\n\
+    \n额外挑战：你能仅使用 Bash 命令找到解决方案吗？\n\n## 解决方案\n\n如何复现？\n这是我们生成此挑战的原始代码。如果你在终端中运行它，将能够复现出与挑战图中完全相同的结果（假设你使用的软件版本与我相同）：\n\
+    \n```\nrm -rf ItsFOSS\nmkdir -p ItsFOSS\ncd ItsFOSS\ncat sample.data << 'EOT'\n\
+    102\n071\n210\n153\nEOT\nclear\ncat sample.data\ndeclare -i SUM=0\nwhile read\
+    \ X; do\n  SUM+=$X\ndone < sample.data\necho \"Sum is: $SUM\"\n```\n\n## 问题是什么？\n\
+    问题是由 `071` 值引起的。正如你所看到的，这个数字以 0 开头是为了确保所有数据都是三位数。这里没有什么复杂的，除了遵循 C 语言的约定：在整数前加\
+    \ 0 是指定数字为八进制而非十进制的方法。\n\n八进制用数字 0 到 7 表示。这里有一个简单的表格：\n\n| 十进制 | 八进制 | 十进制 | 八进制\
+    \ | 十进制 | 八进制 | 十进制 | 八进制 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :---\
+    \ | :--- |\n| 0 | 0 | 8 | 10 | 16 | 20 | 56 | 10 |\n| 1 | 1 | 9 | 11 | 17 | 21\
+    \ | ... | 57 |\n| 2 | 2 | 10 | 12 | 18 | 22 | 58 | 72 |\n| 3 | 3 | 11 | 13 | 19\
+    \ | 23 | 59 | 73 |\n| 4 | 4 | 12 | 14 | 20 | 24 | 60 | 74 |\n| 5 | 5 | 13 | 15\
+    \ | 21 | 25 | 61 | 75 |\n| 6 | 6 | 14 | 16 | 22 | 26 | 62 | 76 |\n| 7 | 7 | 15\
+    \ | 17 | 23 | 27 | 63 | 77 |\n\n上表中**加粗**的值是在计算总和时导致错误的那个值。Bash 读取了 `071`，由于前导\
+    \ 0，它将其解释为八进制数 $71_8$，代表十进制值 $57_{10}$。你可以轻松地检查这一点：\n\n```\necho $((071))\n57\n\
+    ```\n\n## 如何修复？\n我看到了两种解决该问题的主要策略。要么移除前导零，要么找到一种方法让 shell 理解我所有的数字都是**十进制**值。\n\
+    \n移除前导零\n\n这是一个使用 `sed` 命令移除前导零的简单解决方案：\n\n```\ndeclare -i SUM=0\nwhile read X\
+    \ ; do\nSUM+=$X\ndone <(sed -E s/^\\0+//// sample.data)\necho \"Sum is: $SUM\"\
+    \n```\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_16_0.png)\n\n**奖励问题**：我为什么没有使用管道符而是使用了进程替换？\n\
+    \n## 显式指定进制\n\n之前的解决方案（大部分）是直观的——但 Bash 允许我们做得更好。与其尝试修复数据，我们只需显式地指定我们的数字是以十进制（base\
+    \ 10）表示，而不是八进制（base 8）。你可以通过 `base#value` 语法来实现。对比这三个例子：\n\n```\necho $((071))\
+    \           # 前导 0 指定数字为八进制\n57\necho $((8#071))      # 我们显式指定为 8（八进制）\n57\necho\
+    \ $((10#071))     # 我们显式指定为 10（十进制）\n71\n```\n\n为了修复我的初始命令并获得正确结果，我只需要为所有数据显式指定进制\
+    \ 10：\n\n```\ndeclare -i SUM=0\nwhile read X ; do\n  SUM+($(10#$X))\ndone < sample.data\n\
+    echo \"Sum is: $SUM\"\n```\n\n让你自己检查，这次绝对应该产生正确的结果了！\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_17_0.png)\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 10]
+
+
+    # Level 1
+
+
+    # Bash challenge'
+  - "[PAGE 11]\n\n# Challenge 1: Counting files in the current directory\n\nWhat I\
+    \ tried to achieve?\n\nI wanted to count the number of files in the current directory.\
+    \ For that, I used the ls and wc commands:\n\n```\nyesik:~/ItsFOSS$ ls -l\ntotal\
+    \ 0\n-rw-r--r-- 1 yesik yesik Nov 22 22:45 file1\n-rw-r--r-- 1 yesik yesik Nov\
+    \ 22 22:45 file2\n-rw-r--r-- 1 yesik yesik Nov 22 22:45 file3\nok\nyesik:~/ItsFOSS$\
+    \ ls | wc -1\n4\n```\n\nI was expecting a result of 3 since I visibly have three\
+    \ files in that directory. But for some unknown reason, was not the result I've\
+    \ obtained. Could you explain me why? And most important, how to achieve my goal?\n\
+    \n```\nyesik:-/ItsFOSS$ ls -l\ntotal 0\n-rw-r--r-- 1 yesik yesik Nov 23 00:29\
+    \ file1\n-rw-r--r-- 1 yesik yesik Nov 23 00:29 file2\n-rw-r--r-- 1 yesik yesik\
+    \ Nov 23 00:29 file3\nok\nyesik:-/ItsFOSS$ ls | wc -l\n4\nyesik:-/ItsFOSS$ \n\
+    ```"
+  - '[PAGE 12]
+
+
+    # The solution
+
+
+    How to reproduce?
+
+    Here is the raw code we used to produce this challenge. If you run that in a terminal,
+    you will be able to reproduce exactly the same result as displayed in the challenge
+    illustration (assuming you are using the same software version as me):
+
+
+    ```
+
+    mkdir -p ItsFOSS
+
+    cd ItsFOSS
+
+    touch file1 file2 ''$file3\nok''
+
+    clear
+
+    ls -1
+
+    ls | wc -1
+
+    ```
+
+
+    What was the problem?
+
+    When to a pipe, the ls command write each filename on its line. Just like when
+    using ls -1 from a terminal. And the wc -1 command count lines. Apparently ls
+    | wc -1 should display the number of files or folder in the current directory.
+
+
+    However a filename may have the newline character (often denoted \n). It is certainly
+    uncommon but perfectly valid though.
+
+
+    In that challenge, the ok you see on the screen capture was part of the third
+    filename, which in fact was file3\nok. Not file3 as one may believe it at first
+    sight.
+
+
+    This is a case you might need to take into account in your scripts or shell commands
+    to not break if a filename contains that character. Either by accident, or as
+    the result of some malicious activity.
+
+
+    How to fix that?
+
+    Remove non-printable characters from the ls output
+
+
+    ```
+
+    ls -q | wc -1
+
+    ```
+
+
+    Modern versions of ls have the -q option that will replace non-printable characters
+    by a question mark (?) The -q option is more portable than the -b option you sometimes
+    see used for purpose. In both cases, we are absolutely certain \n embedded in
+    filename will not interfere with our count. According to POSIX:'
+  - "[PAGE 13]\n\n-q Force each instance of non-printable filename characters and\
+    \ <tab>s to be written as the question-mark ('?') ) character. Implementations\
+    \ may provide this option by default if the output is to a terminal device.\n\n\
+    My Debian Squeeze test system, -q was not the default. That's why the ok word\
+    \ appears on its own line. On Debian Stretch, -q is enabled by default and the\
+    \ output is default — **only when the output is a console** — and it will display\
+    \ the last filename as file3?\n\nIgnore the file's name\n\nI want to count the\
+    \ number of *files*. Not the number of filenames. So, as an alternate solution,\
+    \ I could just ignore the filename and issue a *token* for each encountered file.\
+    \ counting the number of tokens will give the same result as counting the number\
+    \ of files. And as we have the control of the token, we cannot be fooled. We can\
+    \ use the find command for that purpose:\n\n```\nfind . -minddepth 1 -maxdepth\
+    \ 1 -printf '\\n' | wc -l\n  -or-\nfind . !-path . -maxdepth 1 -printf '\\n' |\
+    \ wc -l\n```\n\nHere I made the choice of using an empty line (\\n) as the token.\
+    \ So, those two command will produce one empty line per entry in the current directory.\
+    \ Notice the actual filename is never written to the output. So whatever characters\
+    \ may be embedded in the filename, they will not interfere with following commands\
+    \ in the pipe. I just have to count the number of lines to know the number of\
+    \ files there was.\n\nPlease notice -minddepth 1 and !-path . : those are two\
+    \ different tricks to remove the current directory (.) from the selection. Otherwise,\
+    \ your count will be off by one."
+  - "[PAGE 14]\n\n# Challenge 2: My shell don't know how to count\n\nWhat I tried\
+    \ to achieve?\n\nI have some data file containing integer numbers, one on each\
+    \ line, and I want to compute the sum of all those numbers:\n\n```\nyesik~/ItsFOSS$\
+    \ cat sample.data\n102\n071\n210\n153\nyesik~/ItsFOSS$ declare -i SUM=0\nyesik~/ItsFOSS$\
+    \ while read X ; do\n  SUM+=$X\ndone < sample.data\nyesik~/ItsFOSS$ echo \"Sum\
+    \ is: $SUM\"\nSum is: 522\n```\n\n```\nyesik~/ItsFOSS$ cat sample.data\n102\n\
+    071\n210\n153\nyesik~/ItsFOSS$ declare -i SUM=0\nyesik~/ItsFOSS$ while read X\
+    \ ; do\n  SUM+=$X\ndone < sample.data\nyesik~/ItsFOSS$ echo \"Sum is: $SUM\"\n\
+    Sum is: 522\nyesik~/ItsFOSS$ \n```\n\nUnfortunately, the result I obtain is wrong\
+    \ (the expected result was 536).\nCould you explain why the result is wrong and\
+    \ fix my commands to obtain the correct result?"
+  - "[PAGE 15]\n\nExtra challenge:\ncould you find a solution using only Bash internal\
+    \ commands and/or substitutions.\n\n# The solution\n\nHow to reproduce?\n\nHere\
+    \ is the raw code we used to produce this challenge. If you run that in a terminal,\
+    \ you will be able to reproduce exactly the same result as displayed in the challenge\
+    \ illustration (assuming you are using the same software version as me):\n\n```\n\
+    rm -rf ItsFOSS\nmkdir -p ItsFOSS\ncd ItsFOSS\ncat sample.data << 'EOT'\n102\n\
+    071\n210\n153\nEOT\nclear\ncat sample.data\ndeclare -i SUM=0\nwhile read X; do\n\
+    \  SUM+=$X\ndone < sample.data\necho \"Sum is: $SUM\"\n```\n\n# What was the problem?\n\
+    \nThe problem was caused by the 071 value. As you noticed, this number is starting\
+    \ by a 0—probably to ensure all data are formatted on three digits. Nothing complicated\
+    \ here, except that ... following an unfortunate convention inherited from the\
+    \ C programming language, prefixing an integer by 0 is a way to specify that number\
+    \ is expressed in octal, and not in decimal."
+  - '[PAGE 16]
+
+
+    Octal numbers are expressed with digits from 0 to 7. Here is a simple conversion
+    table:
+
+
+    | Decimal | Octal | Decimal | Octal | Decimal | Octal | Decimal | Octal |
+
+    | --- | --- | --- | --- | --- | --- | --- | --- |
+
+    | 0 | 0 | 8 | 10 | 16 | 20 | 56 | 10 |
+
+    | 1 | 1 | 9 | 11 | 17 | 21 | ... | 57 | 71 |
+
+    | 2 | 2 | 10 | 12 | 18 | 22 | 58 | 72 |
+
+    | 3 | 3 | 11 | 13 | 19 | 23 | 59 | 73 |
+
+    | 4 | 4 | 12 | 14 | 20 | 24 | 60 | 74 |
+
+    | 5 | 5 | 13 | 15 | 21 | 25 | 61 | 75 |
+
+    | 6 | 6 | 14 | 16 | 22 | 26 | 62 | 76 |
+
+    | 7 | 7 | 15 | 17 | 23 | 27 | 63 | 77 |
+
+
+    The value in bold in the table above the one that caused the error when evaluating
+    the sum. The Bash read 071 and, because of the leading 0, interpreted it as the
+    octal number $71_8$ representing the $57_{10}$ decimal value. You can check that
+    easily:
+
+
+    ```
+
+    echo $((071))
+
+    57
+
+    ```
+
+
+    # How to fix that?
+
+
+    I can see two main strategies to fix that issue. Either removing the leading zeros.
+    Or finding a way to make the shell understand all my numbers are **decimal** values.
+
+
+    Removing leading zeros
+
+
+    Here is a simple solution using the sed command to remove the leading zeros:
+
+
+    ```
+
+    declare -i SUM=0
+
+    while read X ; do
+
+    SUM+=$X
+
+    done <(sed -E s/^\0+//// sample.data)
+
+    echo "Sum is: $SUM"
+
+    ```
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_16_0.png)
+
+
+    **Bonus question:
+
+    why didn''t I used a `pipe` instead of a *process substitution*?'
+  - "[PAGE 17]\n\n# Specifying explicitly the base\n\nThe previous solution is (mostly)\
+    \ straightforward — but the Bash allows us to make things better. Instead of trying\
+    \ to fix the data, we will simply specify *explicitly* our numbers are expressed\
+    \ in base 10 (decimal), instead of base 8 (octal). You can do that by using the\
+    \ base#value syntax.\n\nCompare those three examples:\n\n```\necho $((071))  \
+    \         # The leading 0 specify the number as octal\n57\necho $((8#071))   \
+    \   # We *explicitly* specify base 8 (octal)\n57\necho $((10#071))     # We *explicitly*\
+    \ specify base 10 (decimal)\n71\n```\n\nTo fix my initial command and obtain the\
+    \ correct result, I only have to explicitly specify the base 10 for all my data:\n\
+    \n```\ndeclare -i SUM=0\nwhile read X ; do\n  SUM+($(10#$X))\ndone < sample.data\n\
+    echo \"Sum is: $SUM\"\n```\n\nI let you check yourself, but it definitely should\
+    \ produce the correct result this time!\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_17_0.png)"
+- md: "\n# Challenge 3: My command outputs are in the wrong order!\n\nWhat I tried\
+    \ to achieve?\n\nThis time, I want a shell function to log the round trip time\
+    \ (rtt) to a server. Only if the ping\ncommand has succeeded, I want to record\
+    \ the date of the measure on the line below the rtt.\n\nGiven those requirements,\
+    \ I end up with that:\n\n```\nyesik:~/ItsFOSS$ probe((\n  > ping -qnc2 www.google.com\
+    \ | \\\n  > grep rtt & \\\n  > date +\"OK %D %T\"\n  )\nyesik:~/ItsFOSS$ rm -f\
+    \ log\nyesik:~/ItsFOSS$ probe >> log\nyesik:~/ItsFOSS$ probe >> log\nyesik:~/ItsFOSS$\
+    \ cat log\nOK 11/22 22:52:36\nrtt min/avg/max/mdev = 53.394/77.140/100.887/23.748\n\
+    OK 11/22 22:52:39\nrtt min/avg/max/mdev = 49.142/49.731/50.320/0.589\n```\n\n\
+    But, I don't understand why the date and rtt lines are swapped in the log file?!\
+    \ The date should\nappear below the rtt. But here it appears above. Why? Could\
+    \ you fix that?\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_18_0.png)\n\n# The\
+    \ solution problem?\n\nWhat was made a typo:\nI've simply made a typo: I mistaken\
+    \ for &&—maybe I was confused by the pipe (|) symbol above? Indeed, all the |,\
+    \ ||, & and && operators can be used to join two shell commands. They have completely\
+    \ different meanings:\n\n| cmd | operator | Description |\n| :--- | :--- | :---\
+    \ |\n| cmd1 \\| cmd2 | The pipe symbol | Run both commands in parallel in a sub-shell,\
+    \ using the output of cmd1 as input to cmd2. The pipe is a very common way to\
+    \ combine several basic commands in order to accomplish complex tasks. |\n| cmd1\
+    \ & cmd2 | The ampersand | Run cmd1 as a background process, and in parallel,\
+    \ run cmd2 in the foreground. The two commands are not connected in any way using\
+    \ that operator. |\n| cmd1 \\| cmd2 | The short-circuit OR | Run cmd2 only if\
+    \ cmd1 complete before cmd2 is eventually run. In other words, commands run sequentially.\
+    \ |\n| cmd1 && cmd2 | The short-circuit AND | Run cmd2 only if cmd1 was successful.\
+    \ As a consequence cmd1 must complete before cmd2 is eventually run. In other\
+    \ words, commands run sequentially. |\n\nArmed with that knowledge, let's now\
+    \ take look at my original code:\n\n```\nprobe() {\nping -qnc2 www.google.com\
+    \ | \\\ngrep rtt & \\\\\ndate +\"OK %D %T\"\n}\n```\n\n- 1. I want to run the\
+    \ ping command and send its output to the grep command. The pipe is the right\
+    \ operator.\n- 2. But after that, I wanted to write the date only if the pipe\
+    \ was successful. Here, I needed the logical AND operator (&&). But instead of\
+    \ that, I used the & operator, that basically run ping | grep into the background\
+    \ — always. And in the foreground — always. There is a race condition as both\
+    \ processes are now running in parallel and compete to write on stdout (the terminal\
+    \ output). Unsurprisingly, in that particular example, the date command won every\
+    \ time over the ping command.\n\nTherefore the correct syntax would have been:\n\
+    \n```\nprobe() {\nping -qnc2 www.google.com | \\ \\\ngrep rtt && \\\ndate +\"\
+    OK %D %T\"\n}\n```\n\nIn my case, the issue was immediately visible because, obviously,\
+    \ the ping command takes more time to complete than the date command. But, as\
+    \ this is often the case with race conditions, such mistakes could easily remain\
+    \ hidden for a very long time when the two \"contestants\" of the race take almost\
+    \ the same time to complete. For example, the following example is a lot less\
+    \ deterministic:\n\n```\nprobe() {\nping -qnc2 itsfoss.com | sed 1q & \\ \\\n\
+    ping -qnc2 kernel.org | sed 1q\n}\n```\n\nFrom my location, on 2000 runs, the\
+    \ first lost only 3 times. That means the \"bug\" was visible only in 15% of the\
+    \ cases. Next time'll report some occasional crash — be kind with your favorite\
+    \ developers and remember that even by typos, race conditions are hard to reproduce\
+    \ and even harder to trace!\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_20.png)\n\
+    \n# Challenge 4: Keeping filenames\n\nWhat I tried to achieve?\n\nIn a file, I\
+    \ have a list of filenames stored one per line (this is part of the logs). I want\
+    \ to extract from that all files containing .bat extension. That extension must\
+    \ be spelled exactly that and must appear at the end of the filename.\n\nThe grep\
+    \ command is the canonical tool to find lines containing some pattern in a file.\
+    \ Unfortunately, I wasn't able to achieve my intended result:\n\n```\nyesik:~/ItsFOSS$\
+    \ cat sample.data\nlogin.bat\nlogout.batch\nacrobat.exe\nfirst-run.pdf\nfirst-run.bat.orig\n\
+    ```\nyesik:~/ItsFOSS$ grep .bat sample.data\nlogin.bat\nlogout.batch\nacrobat.exe\n\
+    first-run.pdf\nfirst-run.bat.orig\n\nAs you can see, my solution kept filenames\
+    \ I didn't want. It is somewhat understandable for .batch or .bat.orig files.\
+    \ But could you explain why acrobat.exe was retained? And how could you fix my\
+    \ solution to achieve the intended goal?\n\n# The solution\n\nWhat was the problem?\n\
+    \nMy issue here was caused by the grep command taking a regular expression as\
+    \ search pattern not a fixed string. Regular expressions allow to describe a set\
+    \ of strings. This is achieved through the use of metacharacters. That is characters\
+    \ which have a special meaning rather than matching with their value. The dot\
+    \ is such a character. A dot in a regular expression will match any character.\
+    \ So, when we:\n\n```\ngrep .bat sample.data\n```\n\nThat means I want to keep\
+    \ lines containing the letters b, a and t, preceded by any character. Either a\
+    \ verbatim dot. Or any other character.\n\nHow to fix that?\n\nProtecting the\
+    \ dot from special interpretation\n\nTo fix that, I may remove the special meaning\
+    \ of the dot. In a regular expression, you remove the special meaning of a metacharacter\
+    \ by preceding it with a backslash. However there is a pitfall: the argument string\
+    \ is processed twice. Once by the shell that will parse the command. Then a second\
+    \ time by the grep command that will interpret the regular expression. So, for\
+    \ the grep command to see backslash, we must escape that one first from the shell\
+    \ interpretation using a backslash:\n\n```\ngrep \\\\.bat sample.data\n```\n\n\
+    If you don't like the \"double backslash\", a second option is to use single quotes\
+    \ to protect the whole pattern from any shell interpretation:\n\n```\ngrep '\\\
+    .bat' sample.data\n```\n\nFinally, if you really don't like backslashes, you may\
+    \ use a character set in the regular expression:\n\n```\ngrep '[.bat]' sample.data\n\
+    ```\n\nA character set will match any character between the brackets. If you only\
+    \ put a dot between the brackets, it can only match a verbatim dot.\n\nAnchoring\
+    \ a pattern at the end of a line\n\nThe three solutions above removed the special\
+    \ meaning of the dot. But how to keep only files ending by .bat? Once again the\
+    \ solution lies in the regular expression metacharacters. Especially the dollar\
+    \ sign will match the end of the line. And once again, since the dollar sign special\
+    \ meaning in the shell too, we must protect it from the shell interpretation.\n\
+    \nAll finally leading to those possible solutions:\n\n```\nyesik:~/ItsFOSS$ grep\
+    \ '\\.bat$' sample.data\nlogin.bat\nfirst-run.bat\n```\n\nOr\n\n```\nyesik:~/ItsFOSS$\
+    \ grep \\.bat\\$ sample.data\nlogin.bat\nfirst-run.bat\n```\n\nor I let you find\
+    \ a third one, maybe using some brackets?\n\n# Challenge 5: The lazy typist challenge\n\
+    \nWhat I tried to achieve?\n\nI have the following content in my current working\
+    \ directory:\n\n```\nyesik:~/ItsFOSS$ ls -F\narchives/\nreport-fall-2015.pdf\n\
+    report-summer-2015.pdf\nreport-summer-2016.pdf\nreport-winter-2014.pdf\n```\n\n\
+    I just want to copy the summer 2016 & fall 2015 reports in the archive folder.\
+    \ That's pretty simple:\n\n```\nyesik:~/ItsFOSS$ cp report-summer-2016.pdf archives/\n\
+    yesik:~/ItsFOSS$ cp report-fall-2015.pdf archives/\n```\n\nHowever as I'm lazy,\
+    \ I cannot satisfy those commands as they require 70 keystrokes. Way too much\
+    \ for my poor fingers! Could you help me in finding a way to copy those files\
+    \ with the minimum number of keystrokes.\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_24_0.png)\n\
+    \n# My solution\n\nFor this challenge I will not claim to have \"the\" solution.\
+    \ Maybe you will be able to achieve a better score than myself? In that case,\
+    \ you really deserve congratulations!\n\nAnyway...\nThe first and most obvious\
+    \ optimization will be to replace the two commands by only one:\n\n```\ncp report-summer-2016.pdf\
+    \ report-fall-2015.pdf archives/\n```\n\nThen we can use glob patterns to shorten\
+    \ each filename. Since there is only one \"fall\", report, for this one is easy,\
+    \ but we must take extra cares for the summer report since I'm only interested\
+    \ in the 206 version:\n\n```\ncp report-s*-2016.pdf report-fall*.pdf archives/\n\
+    ```\n\nAs a matter of fact, given the other filenames structure, I can go even\
+    \ further into that way:\n\n```\ncp *6* *fa* archives/\n```\n\nBy the way we can\
+    \ do the same for the destination directory—which is the only subdirectory here:\n\
+    \n```\ncp *6* *fa* */\n```\n\nIn some cases, using brace expansion can further\
+    \ reduce the number of required keystrokes. But in that case, we remain stuck\
+    \ at 15 characters:\n\n```\ncp *{6,fa} */\ncp *{6,fa*,}\n```\n\nUnless *you* found\
+    \ something \"better\"?\n"
+  mdcn: "\n\n# 挑战 3：我的命令输出顺序错了！\n\n我想实现什么？\n\n这次，我想写一个 shell 函数来记录到服务器的往返时间 (rtt)。只有当\
+    \ `ping` 命令成功后，我才希望在 rtt 的下方记录测量的日期。\n\n根据这些要求，我写出了这样的代码：\n\n```\nyesik:~/ItsFOSS$\
+    \ probe((\n  > ping -qnc2 www.google.com | \\\n  > grep rtt & \\\n  > date +\"\
+    OK %D %T\"\n  )\nyesik:~/ItsFOSS$ rm -f log\nyesik:~/ItsFOSS$ probe >> log\nyesik:~/ItsFOSS$\
+    \ probe >> log\nyesik:~/ItsFOSS$ cat log\nOK 11/22 22:52:36\nrtt min/avg/max/mdev\
+    \ = 53.394/77.140/100.887/23.748\nOK 11/22 22:52:39\nrtt min/avg/max/mdev = 49.142/49.731/50.320/0.589\n\
+    ```\n\n但是，我不理解为什么日志文件中日期行和 rtt 行反过了？！日期应该出现在 rtt 下方。但在这里它出现在了上方。为什么？你能修复它吗？\n\n\
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_18_0.png)\n\n# 解决方案是什么？\n\n出现的拼写错误：\n\
+    我只是写错了一个符号：我把 `&&` 错成了 `&`——也许是被上面的管道 (|) 符号搞混了？确实，所有的 `|`、`||`、`&` 和 `&&` 运算符都可以连接两个\
+    \ shell 命令。它们的含义完全不同：\n\n| cmd | 运算符 | 说明 |\n| :--- | :--- | :--- |\n| cmd1 \\\
+    | cmd2 | 管道 | 在子 shell 中并行运行两个命令，并将 cmd1 的输出作为 cmd2 的输入。管道是组合多个基本命令以完成复杂任务的非常常用方法。\
+    \ |\n| cmd1 & cmd2 | 安培符 | 将 cmd1 作为后台进程运行，并并行地在前台运行 cmd2。使用该运算符时，两个命令之间没有任何连接。\
+    \ |\n| cmd1 \\| cmd2 | 短路或 | 仅当 cmd1 在 cmd2 运行之前完成后才运行 cmd2。换句话之，命令按顺序执行。 |\n\
+    | cmd1 && cmd2 | 短路与 | 仅当 cmd1 执行成功时运行 cmd2。结果 cmd1 必须在 cmd2 运行之前完成。换句话之，命令按顺序执行。\
+    \ |\n\n掌握了这些知识，现在来看看我的原始代码：\n\n```\nprobe() {\nping -qnc2 www.google.com | \\\n\
+    grep rtt & \\\\\ndate +\"OK %D %T\"\n}\n```\n\n- 1. 我想运行 `ping` 命令并将其输出发送给 `grep`\
+    \ 命令。管道是正确的运算符。\n- 2. 但之后，我只想在管道成功后才写入日期。在这里，我需要的是逻辑与运算符 (`&&`)。但我使用了 `&` 运算符，它基本上是总是将\
+    \ `ping | grep` 放到后台运行，并总是在前台运行。由于两个进程现在都在并行运行并竞争写入 stdout（终端输出），因此存在竞态条件。意乎不用，在那个特定的示例中，`date`\
+    \ 命令每次都赢了 `ping` 命令。\n\n因此，正确的语法应该是：\n\n```\nprobe() {\nping -qnc2 www.google.com\
+    \ | \\ \\\ngrep rtt && \\\ndate +\"OK %D %T\"\n}\n```\n\n在我的情况下，问题是立即可见的，因为 `ping`\
+    \ 命令完成的时间比 `date` 命令长。但由于竞态条件经常发生，当两个“竞争者”完成所需的时间相似时，这种错误很容易被隐藏。下面的例子确定性高得多：\n\
+    \n```\nprobe() {\nping -qnc2 itsfoss.com | \\\nping -qnc2 kernel.org\n}\n```\n\
+    \n在 2000 次运行中，这个“bug”只出现了 15% 的情况。对各位开发者友好一点，即使是竞态条件导致的错误也很难以复现，更难以追踪！\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_20.png)\n\
+    \n# 挑战 4：保留文件名\n\n我想实现什么？\n\n在一个文件中，我有一行文件名列表（这是日志的一部分）。我想提取所有包含 `.bat` 扩展的文件。该扩展名必须完全匹配并且出现在文件名的末尾。\n\
+    \n`grep` 命令是查找包含某些模式的标准工具。遗憾的是，我没有实现预期的结果：\n\n```\nyesik:~/ItsFOSS$ cat sample.data\n\
+    login.bat\nlogout.batch\nacrobat.exe\nfirst-run.pdf\nfirst-run.bat.orig\n```\n\
+    yesik:~/ItsFOSS$ grep .bat sample.data\nlogin.bat\nlogout.batch\nacrobat.exe\n\
+    first-run.pdf\nfirst-run.bat.orig\n```\n\n你可以看到，我的解决方案保留了我不需要的文件。对于 `.batch` 或\
+    \ `.bat.orig` 是可以理解的，但为什么保留了 `exe` 呢？如何修复我的解决方案来实现目标？\n\n# 解决方案\n\n这里问题的原因是 `grep`\
+    \ 命令接收的是正则表达式而不是固定字符串。正则表达式允许描述一组字符串。这是通过使用元字符实现的。点 `.` 是一个具有特殊含义的字符。在正则表达式中，点会匹配任何字符。所以，当我们执行：\n\
+    \n```\ngrep .bat sample.data\n```\n\n这意味着我想保留包含 `b`、`a` 和 `t` 字母的行，前面是任意字符。可以是字面的点或其他字符。\n\
+    \n如何修复？\n\n保护点免受特殊解释\n\n为了修复这个问题，我可能移除点的特殊含义。在正则表达式中，通过在它前面加上斜杠来移除元字符的特殊含义。但有一个陷阱：参数被处理了两次。一次由解析命令的\
+    \ shell，第二次由解释正则表达式的 grep 命令。所以为了让 grep 命令看到斜杠，我们必须先对 shell 进行转义：\n\n```\ngrep\
+    \ \\\\.bat sample.data\n```\n\n如果你不喜欢“双斜杠”，第二个选项是使用单引号保护整个模式免受 shell 的解释：\n\n\
+    ```\ngrep '\\.bat' sample.data\n```\n\n最后，如果你真的不喜欢斜杠，你可以在正则表达式中使用字符集：\n\n```\n\
+    grep '[.bat]' sample.data\n```\n\n字符集会匹配括号内的任何字符。如果你只在括号内放一个点，它只能匹配字面的点。\n\n在行末尾锚定模式\n\
+    \n上面的三个解决方案都移除了点的特殊含义。但如何保留以 `.bat` 结尾的文件呢？再次，解决方案在于正则表达式元字符。特别是美元符号 `$` 会匹配行尾。同样，由于美元符号在\
+    \ shell 中也有特殊含义，我们必须保护它免受 shell 的解释。\n\n最终导致这些可能的解决方案：\n\n```\nyesik:~/ItsFOSS$\
+    \ grep '\\.bat$' sample.data\nlogin.bat\nfirst-run.bat\n```\n\n或者\n\n```\nyesik:~/ItsFOSS$\
+    \ grep \\.bat\\$ sample.data\nlogin.bat\nfirst-run.bat\n```\n\n或者让我找第三种，也许使用括号？\n\
+    \n# 挑战 5：懒打字者挑战\n\n我想实现什么？\n\n我的当前工作目录下有以下内容：\n\n```\nyesik:~/ItsFOSS$ ls -F\n\
+    archives/\nreport-fall-2015.pdf\nreport-summer-2015.pdf\nreport-summer-2016.pdf\n\
+    report-winter-2014.pdf\n```\n\n我只想把 2016 年夏季和 2015 年秋季的报告复制到存档文件夹中。这很简单：\n\n```\n\
+    yesik:~/ItsFOSS$ cp report-summer-2016.pdf\nyesik:~/ItsFOSS$ cp report-fall-2015.pdf\
+    \ archives/\n```\n\n但是，因为我很懒，我无法满足这些命令，因为它们需要 70 次按键。对我这可怜的手来说太太多了！你能帮我找到一种用最少按键次数复制这些文件的方法吗？\n\
+    \n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_24.png)\n\n# 我的解决方案\n\n对于这个挑战我不声称拥有“唯一的”解决方案。也许你可以获得比我更好的分数？如果是那样，你真的值得祝贺！\n\
+    \n总之……\n第一个最显而易见的优化是将两个命令合并为一个：\n\n```\ncp report-summer-2016.pdf report-fall-2015.pdf\
+    \ archives/\n```\n\n然后我们可以使用通配符（glob）来缩短每个文件名。由于只有一个“秋季”报告，这一个很容易，但对于夏季报告我们必须格外小心，因为我只对\
+    \ 2016 版本感兴趣：\n\n```\ncp report-s*-2016.pdf report-fall*.pdf archives/\n```\n\n\
+    事实上，考虑到其他文件名的结构，我可以进一步这样操作：\n\n```\ncp *6* *fa archives/\n```\n\n顺便说一下，我们可以对目标目录执行同样的操作——它是这里唯一的子目录：\n\
+    \n```\ncp *6* *fa */\n```\n\n在某些情况下，使用大括号扩展可以进一步减少所需的按键次数。但在那种情况下，我们仍然停留在 15 个字符：\n\
+    \n```\ncp *{6,fa} */\ncp *{6,fa*,}\n```\n\n除非*你*找到了“更好”的方法？\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 18]\n\n# Challenge 3: My command outputs are in the\nwrong order!\n\nWhat\
+    \ I tried to achieve?\n\nThis time, I want a shell function to log the round trip\
+    \ time (rtt) to a server. Only if the ping\ncommand has succeeded, I want to record\
+    \ the date of the measure on the line below the rtt.\n\nGiven those requirements,\
+    \ I end up with that:\n\n```\nyesik:~/ItsFOSS$ probe((\n  > ping -qnc2 www.google.com\
+    \ | \\\n  > grep rtt & \\\n  > date +\"OK %D %T\"\n  )\nyesik:~/ItsFOSS$ rm -f\
+    \ log\nyesik:~/ItsFOSS$ probe >> log\nyesik:~/ItsFOSS$ probe >> log\nyesik:~/ItsFOSS$\
+    \ cat log\nOK 11/22 22:52:36\nrtt min/avg/max/mdev = 53.394/77.140/100.887/23.748\n\
+    OK 11/22 22:52:39\nrtt min/avg/max/mdev = 49.142/49.731/50.320/0.589\n```\n\n\
+    But, I don't understand why the date and rtt lines are swapped in the log file?!\
+    \ The date should\nappear below the rtt. But here it appears above. Why? Could\
+    \ you fix that?\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_18_0.png)"
+  - '[PAGE 19]
+
+
+    # The solution problem?
+
+
+    What was the made a typo:
+
+    ''ve simply made a typo: I mistaken for &&&—maybe I was confused by the pipe (|)
+    symbol above? Indeed, all the |, ||, & and && operators can be used to join two
+    shell commands. They have completely different meanings:
+
+
+    | cmd1 | cmd2 | The pipe symbol | Run both commands in parallel in a sub-shell,
+    using the output of cmd1 as input to cmd2. The pipe is a very common way to combine
+    several basic commands in order to accomplish complex tasks. |
+
+    | cmd1 & cmd2 | The ampersand | Run cmd1 as a background process, and in parallel,
+    run cmd2 in the foreground. The two commands are not connected in any way using
+    that operator. |
+
+    | cmd1 || cmd2 | The short-circuit OR | Run cmd2 only if cmd1 complete before
+    cmd2 is eventually run. In other words, commands run sequentially. |
+
+    | cmd1 && cmd2 | The short-circuit AND | Run cmd2 only if cmd1 was successful.
+    As a consequence cmd1 must complete before cmd2 is eventually run. In other words,
+    commands run sequentially. |
+
+
+    Armed with that knowledge, let''s now take look at my original code:
+
+
+    ```
+
+    probe() (
+
+    ping -qnc2 www.google.com | \
+
+    grep rtt & \\
+
+    date +"OK %D %T"
+
+    )
+
+    ```
+
+
+    +   1. I want to run the ping command and send its output to the grep command.
+    The pipe is the right operator.
+
+    2. But after that, I wanted to write the date only if the pipe was successful.
+    Here, I needed the logical AND operator (&&). But instead of that, I used the
+    & operator, that basically run ping | grep into the background — always. And in
+    the foreground — always. There is a race condition as both processes are now running
+    in parallel and compete to write on stdout (the terminal output). Unsurprisingly,
+    in that particular example, the date command won every time over the ping command.'
+  - '[PAGE 20]
+
+
+    Therefore the correct syntax would have been:
+
+
+    ```
+
+    probe() (\nping -qnc2 www.google.com | \ \
+
+    grep rtt && \ \
+
+    date +"OK %D %T"
+
+    )
+
+    ```
+
+
+    In my case, the issue was immediately visible because, obviously, the ping command
+    takes\more time to complete than the date command. But, as this is often the case
+    with race
+
+    conditions, such mistakes could easily remain hidden for a very long time when
+    the two
+
+    "contestants" of the race take almost the same time to complete. For example,
+    the following
+
+    example is a lot less deterministic:
+
+
+    ```
+
+    probe() (\nping -qnc2 itsfoss.com | sed 1q & \ \
+
+    ping -qnc2 kernel.org | sed 1q
+
+    )
+
+    ```
+
+
+    From my location in France, on 2000 runs, the first ping lost only 3 times. That
+    means the "bug"
+
+    was visible only in 0.155% of the cases. Next time you''ll report some occasional
+    software
+
+    crash — be kind with your favorite FOSS developers and remember that even caused
+    by typos,
+
+    race conditions are hard to reproduce and even harder to trace!
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_20_0.png)'
+  - '[PAGE 21]
+
+
+    # Challenge 4: Keeping filenames containing some extension
+
+
+    What I tried to achieve?
+
+
+    In a file, I have a list of Windows filenames stored one per line (this is part
+    of the logs from an auditing tool running on my Samba server). I want to extract
+    from that all files containing the .bat extension. That extension must be spelled
+    exactly like that and must appear at the end of the filename(i.e: I don''t want
+    to keep .bat.orig nor .batch files).
+
+
+    The grep command is the canonical tool you want to find lines containing some
+    pattern in a file. Unfortunately, I wasn''t able to achieve my intended result:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ cat sample.data
+
+    login.bat
+
+    login.exe
+
+    logout.batch
+
+    acrobat.exe
+
+    first-run.pdf
+
+    first-run.bat
+
+    first-run.bat.orig
+
+    yesik:~/ItsFOSS$ grep .bat sample.data
+
+    login.bat
+
+    logout.batch
+
+    acrobat.exe
+
+    first-run.bat
+
+    first-run.bat.orig
+
+    ```
+
+
+    As you can see, my solution kept filenames I didn''t want.
+
+
+    It is somewhat understandable for the .batch or .bat.orig files. But could you
+    explain why acrobat.exe was retained too? And how could you fix my solution to
+    achieve the intended goal?'
+  - '[PAGE 22]
+
+
+    # The solution
+
+
+    What was the problem?
+
+
+    My issue here was caused by the grep command taking a *regular expression* as
+    search pattern.
+
+    Not a fixed string.
+
+
+    Regular expressions allow to describe a *set* of strings. This is achieved through
+    the use of metacharacters. That is characters which have a special meaning rather
+    than matching literally with their value.
+
+
+    The dot is such a character. A dot in a regular expression will match *any* character.
+    So, when we:
+
+
+    ```
+
+    grep .bat sample.data
+
+    ```
+
+
+    That means I want to keep lines containing the three letters b, a and t, preceded
+    by *any* character. Either a verbatim dot. Or any other character.
+
+
+    How to fix that?
+
+
+    Protecting the dot from special interpretation
+
+
+    To fix that, I may remove the special meaning of the dot. In a regular expression,
+    you remove the special meaning of a metacharacter by preceding it with a backslash.
+
+
+    However there is a pitfall: the argument string is processed *twice*. Once by
+    the shell that will parse the command. Then a second time by the grep command
+    that will interpret the regular expression. So, for the grep command to see the
+    backslash, we must escape that one first from the shell interpretation using...a
+    second backslash:
+
+
+    ```
+
+    grep \\.bat sample.data
+
+    ```
+
+
+    If you don''t like the "double backslash", a second option is to use single quotes
+    to protect the whole pattern from any shell interpretation:
+
+
+    ```
+
+    grep ''\.bat'' sample.data
+
+    ```'
+  - '[PAGE 23]
+
+
+    Finally, if you *really* don''t like backslashes, you may use a character set
+    in the regular expression:
+
+
+    ```
+
+    grep ''[.bat'' sample.data
+
+    ```
+
+
+    A character set will match any character between the brackets. If you only put
+    a dot between the brackets, it can only match a verbatim dot.
+
+
+    Anchoring a pattern at the end of a line
+
+
+    The three solutions above removed the special meaning of the dot. But how to keep
+    only files ending by *.bat? Once again the solution lies in the regular expression
+    metacharacters. Especially the dollar sign will match the end of the line. And
+    once again, since the dollar sign special meaning in the shell too, we must protect
+    it from the shell interpretation.
+
+
+    All finally leading to those possible solutions:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ grep ''\.bat$'' sample.data
+
+    login.bat
+
+    first-run.bat
+
+    ```
+
+
+    Or
+
+
+    ```
+
+    yesik:~/ItsFOSS$ grep \.bat\$ sample.data
+
+    login.bat
+
+    first-run.bat
+
+    ```
+
+
+    or ... I let you find a third one, maybe using some brackets?'
+  - '[PAGE 24]
+
+
+    # Challenge 5: The lazy typist challenge
+
+
+    What I tried to achieve?
+
+
+    I have the following content in my current working directory:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ ls -F
+
+    archives/
+
+    report-fall-2015.pdf
+
+    report-summer-2015.pdf
+
+    report-summer-2016.pdf
+
+    report-winter-2014.pdf
+
+    ```
+
+
+    I just want to copy the summer 2016 & fall 2015 reports in the archive folder.
+    That''s pretty simple:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ cp report-summer-2016.pdf archives/
+
+    yesik:~/ItsFOSS$ cp report-fall-2015.pdf archives/
+
+    ```
+
+
+    However as I''m lazy, I cannot satisfy those commands as they require 70 keystrokes.
+    Way too much for my poor fingers! Could you help me in finding a way to copy those
+    files with the minimum number of keystrokes.
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_24_0.png)'
+  - '[PAGE 25]
+
+
+    # My solution
+
+
+    For this challenge I will not claim to have "the" solution. Maybe you will be
+    able to achieve a better score than myself? In that case, you really deserve congratulations!
+
+
+    Anyway...
+
+    The first and most obvious optimization will be to replace the two commands by
+    only one:
+
+
+    ```
+
+    cp report-summer-2016.pdf report-fall-2015.pdf archives/
+
+    [57 characters]
+
+    ```
+
+
+    Then we can use *glob patterns* to shorten each filename. Since there is only
+    one "fall", report, for this one is easy, but we must take extra cares for the
+    summer report since I''m only interested in the 206 version:
+
+
+    ```
+
+    cp report-s*-2016.pdf report-fall*.pdf archives/
+
+    [49 characters]
+
+    ```
+
+
+    As a matter of fact, given the other filenames structure, I can go even further
+    into that way:
+
+
+    ```
+
+    cp *6* *fa* archives/
+
+    [22 characters]
+
+    ```
+
+
+    By the way we can do the same for the destination directory—which is the only
+    subdirectory
+
+    here:
+
+
+    ```
+
+    cp *6* *fa* */
+
+    [15 characters]
+
+    ```
+
+
+    In some cases, using brace expansion can further reduce the number of required
+    keystrokes.
+
+    But in that case, we remain stuck at 15 characters:
+
+
+    ```
+
+    cp *{6,fa} */
+
+    cp *{6,fa*,}
+
+    ```
+
+
+    Unless *you* found something "better"?'
+- md: "\n# Challenge 6: The dangerous file to remove\n\nWhat I tried to achieve?\n\
+    \nWhen I was at school (in the VT10 era/) it wasn't uncommon for the poor soul\
+    \ that has left his terminal without closing the session to find strangely named\
+    \ files in his home directory when he was back.\n\nThat was \"cruel jokes\" made\
+    \ by other students passing by. For this challenge, let's pretend you just found\
+    \ a file named -rf * in your home directory:\n\n```\nyesik:~/ItsFOSS$ ls -1\n\
+    dont remove!\n-rf *\nyesik:~/ItsFOSS$ \n```\n\n```\nyesik:~/ItsFOSS$ ls -1\ndont\
+    \ remove!\n-rf *\n```\n\nSo, how to remove the unwanted file from the command\
+    \ line, without removing any other file? Obviously rm -rf * is not the solution...\n\
+    \n> BEWARE:\n> before trying to answer this challenge, think first why this was\
+    \ a \"cruel joke\". What are the risks with the name of this file? IF YOU CAN'T\
+    \ ANSWER THAT QUESTION FIRST DON'T TRY THIS AS HOME !\n\n# The solution\n\nMaybe\
+    \ that was your first reflex, but no, using quotes or backslash is **not** the\
+    \ solution. None of this syntax will work:\n\n```\nyesik:~/ItsFOSS$ rm -rf '*'\n\
+    rm: invalid option --'\nTry 'rm --help' for more information.\nyesik:~/ItsFOSS$\
+    \ rm \\rf\\ '*'\nrm: invalid option --'\nTry 'rm --help' for more information.\n\
+    ```\n\nWhy are those not valid solutions? Because they would protect special characters\
+    \ from shell's interpretation. But here the problem is not with the shell. But\
+    \ with the rm command itself.\n\n# How to solve that?\n\nHopefully, rm like several\
+    \ other standard command supports the -- special option to indicate the start\
+    \ of filename list. After -- the command will no longer try to interpret strings\
+    \ by a dash as an option. Which is exactly what we need:\n\n```\nyesik:~/ItsFOSS$\
+    \ rm '-rf '*'\n```\n\nNotice however quotes (or backslashes) are still necessary\
+    \ to protect the space and the star from shell interpretation. If you want to\
+    \ experiment more with that, I encourage you to use the ls and touch commands,\
+    \ both of them supports the -- option. And they are way less dangerous to use\
+    \ than the rm command!\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_28_0.png)\n\
+    \n# Challenge 7: The file that didn't want to go away\n\nWhat I tried to achieve?\n\
+    \nI was asked to remove the last file of the list displayed below:\n\n```\nyesik:~/ItsFOSS$\
+    \ ls -l\ntotal 0\n-rw-r--r-- 1 yesik yesik 0 Nov 23 00:41 a\n-rw-r--r-- 1 yesik\
+    \ yesik 0 Nov 23 00:41 b\n-rw-r--r-- 1 yesik yesik 0 Nov 23 00:41 c\n-rw-r--r--\
+    \ 1 yesik yesik 0 Nov 23 00:41 d/e\nyesik:~/ItsFOSS$ rm e\nrm: cannot remove 'e':\
+    \ No such file or directory\n```\n\n```\nyesik:~/ItsFOSS$ ls -l\ntotal 0\n-rw-r--r--\
+    \ 1 yesik yesik 0 Nov 22 22:58 a\n-rw-r--r-- 1 yesik yesik 0 Nov 22 22:58 b\n\
+    -rw-r--r-- 1 yesik yesik 0 Nov 22 22:58 c\n-rw-r--r-- 1 yesik yesik 0 Nov 22 22:58\
+    \ e\nyesik:~/ItsFOSS$ rm e\nrm: cannot remove 'e': No such file or directory\n\
+    ```\n\nBut as you can see, a simple rm command didn't work.\n\nWhy? How to remove\
+    \ that file?\n\n# The solution\n\nWhat was the problem?\n\nYou know a slash cannot\
+    \ be part of a filename. And you may have somehow believed the file e was in some\
+    \ subdirectory d.\n\nBut that's wrong.\n\nFirst, there is no reason for the ls\
+    \ -1 command to display the content of a subdirectory using that format, And then,\
+    \ we can see, from the rest of the ls output, there is no subdirectory d here.\n\
+    \nThis problem is a typical homoglyphic confusion. You believed you've seen a\
+    \ slash. But in fact it was a different character, but displayed with an unfortunately\
+    \ confusing glyph. In that particular case, it was the U+2215 DIVISION SLASH Unicode\
+    \ character.\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_30_0.png)\n\nOn my UTF-8\
+    \ terminal the U+2215 DIVISION SLASH Unicode character is encoded using the three\
+    \ bytes sequence 0xE2 0x88 0x95. You can check that using the hexdump command\
+    \ (with a little bit of shell scripting for a more readable output):\n\n| yesik:~/ItsFOSS$\
+    \ for f in *; do echo -n $f | hexdump -C; done | |\n| :--- | :--- |\n| 00000000\
+    \ 61 | a |\n| 00000001 | |\n| 00000000 62 | b |\n| 00000001 | |\n| 00000000 63\
+    \ | c |\n| 00000001 | |\n| 00000000 64 e2 88 95 | d...e |\n| 00000005 | |\n\n\
+    If you have iconv installed on your system, you can even find the corresponding\
+    \ Unicode point by converting the data to utf-16:\n\n| yesik:~/ItsFOSS$ for f\
+    \ in *; do echo -n $f | iconv -t utf16 hexdump -C; done | |\n| :--- | :--- |\n\
+    | 00000000 00 61 | a |\n| 00000002 | |\n| 00000000 00 62 | b |\n| 00000002 | |\n\
+    | 00000000 00 63 | c |\n| 00000002 | |\n| 00000000 00 64 22 15 | d..e |\n| 00000006\
+    \ | |\n\n# How to achieve my goal?\n\nKnowing that, it is now easy to remove the\
+    \ file... if you know the '' syntax:\n\n```\nyesik:~/ItsFOSS$ rm '\\xe2\\x88\\\
+    x95' # using the UTF-8 encoding\nor yesik:~/ItsFOSS$ rm '\\u2215' # using unicode\
+    \ point\n```\n\nBy the way, this would have worked:\n\n```\nyesik:~/ItsFOSS$ rm\
+    \ d*\n```\n\nBut you will agree, by doing this, we would have missed an interesting\
+    \ discussion!\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_32_0.png)\n\n# Level\
+    \ 2 Bash challenge\n\n# Challenge 8: Hex to ASCII conversion\n\nWhat I tried to\
+    \ achieve?\n\nI have a file containing \"secret\" message:\n\n```\nyesik:~/ItsFOSS$\
+    \ cat SECRET\n43 4F 4E 52 52 51 44 4C 4E 53 20 20 48 41 56 49 4E 20 53 43 45 45\
+    \ 20 50 48 53 53 20 48 41 4C 4C 45 45 47\nyesik:~/ItsFOSS$ decode < SECRET\nCONGRULATIONS\
+    \ HAVING SOLVED THIS CHALLENGE\n```\n\nThe secret message is simply \"ASCII encoded\"\
+    , so it is not difficult to find the original text by consulting an ASCII table:\n\
+    \nFor example, the code 43 corresponds to the letter C (row 4, column 3). 4F is\
+    \ the letter O. And so on.\n\nBut I wouldn't do that by hand when a command can\
+    \ do it for me. So, could you write the Bash function I used?\n\n- If needed,\
+    \ see http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html for an introduction to\
+    \ Bash function syntax.\n\nAnd remember, this is a Bash challenge. Your solution\
+    \ must not use any other programming language (no Perl, C, Python, ...)\n\nExtra\
+    \ challenge:\ncould write a decode function using only Bash internal commands\
+    \ & shell expansion (i.e.: strace -e trace=process ... will show no new process\
+    \ creation)\n\n# The solution\n\nHow to reproduce\n\nHere is the raw code we used\
+    \ to produce this challenge. If you run that in a terminal, you will be able to\
+    \ reproduce exactly the same result as displayed in the challenge illustration\
+    \ (assuming you are using the same software version as:)\n\n```\nrm -rf ItsFOSS\n\
+    mkdir -p ItsFOSS\ncd ItsFOSS\nM=\"CONGRATULATIONS FOR HAVING SOLVED THIS CHALLENGE\"\
+    \n(echo -n \"$M\" | hexdump -v -e '/1 \"%02X \" '); echo) > SECRET\ndecode() {\n\
+    \  while read -d '' c; do\n    echo -en '\\x$c'\n  done\n  echo\n}\nclear\ncat\
+    \ SECRET\ndecode < SECRET\n```\n\nWhat was the problem here?\n\nIn the SECRET\
+    \ file, each character of the message is represented by its ASCII code expressed\
+    \ in hexadecimal. 41 → A 42 → B ... 49 → I 4A → J ... 4F → O 50 → P ... 5A → Z\n\
+    had to find a way to read the data and to perform the ASCII → char conversion.\n\
+    \n```\ndecode() {\n  while read -d' ' c ; do\n    echo -en '\\x$c'\n  done\n \
+    \ echo\n}\n```\n\nIn that solution, the decode function will read the message\
+    \ hexadecimal number by hexadecimal number, and will use the echo internal command\
+    \ to output the corresponding character. The trick here is the -e option allowing\
+    \ the echo command to understand \\NN sequences as character codes.\n\nYou can\
+    \ try the -e option easily:\n\n```\necho -e '\\x48\\x45\\x4C\\x4F'\n```\n\n# Alternate\
+    \ solutions\n\nOther solutions are available. The most obvious would be to use\
+    \ the xxd tool which has a dedicated reverse (-r) mode:\n\n```\ndecode() { xxd\
+    \ -r -p; echo; }\n```\n\nIn addition, I cannot resist in showing you a fragile\
+    \ but somewhat clever solution:\n\n```bash\ndecode() {\n  S='$(echo </dev/stdin)\n\
+    \  echo -e ${S// /\\x}\n}\n```\n"
+  mdcn: "\n\n# 挑战 6：要删除的危险文件\n\n我想实现的是什么？\n\n当我上学校时（在 VT10 时代），对于那些离开终端时没有关闭会话的倒霉蛋来说，当他们回来时发现自己的主目录下出现了一些命名奇特的文件，这并不常见见。\n\
+    \n那是由其他路过的同学们开的“恶作剧”。对于这个挑战，让我们假设你刚刚在主目录下发现了一个名为 `-rf *` 的文件：\n\n```\nyesik:~/ItsFOSS$\
+    \ ls -1\ndont remove!\n-rf *\nyesik:~/ItsFOSS$ \n```\n\n```\nyesik:~/ItsFOSS$\
+    \ ls -1\ndont remove!\n-rf *\n```\n\n那么，如何从命令行删除这个不需要的文件，而不删除任何其他文件呢？显然，`rm -rf\
+    \ *` 并不是解决方案……\n\n> 注意：\n> 在尝试回答这个挑战之前，请先思考为什么这这是一场“恶作剧”。这个文件的名称包含哪些风险？如果你先无法回答这个问题，千万不要在主目录下尝试这种操作！\n\
+    \n# 解决方案\n\n这可能是你的第一个反应，但不，使用引号或反斜杠**并不是**解决方案。这些语法都是无效的：\n\n```\nyesik:~/ItsFOSS$\
+    \ rm -rf '*'\nrm: invalid option --''\nTry 'rm --help' for more information.\n\
+    yesik:~/ItsFOSS$ rm \\rf\\ '*'\nrm: invalid option --'\nTry 'rm --help' for more\
+    \ information.\n```\n\n为什么这些不是有效的解决方案呢？因为它们会保护特殊字符免受 shell 的解释。但这里的问题不在于 shell，而在于\
+    \ `rm` 命令本身。\n\n# 如何解决？\n\n希望 `rm` 像其他几个标准命令一样支持 `--` 特殊选项，用于指示文件名列表的开始。在 `--`\
+    \ 之后，命令将不再尝试将以杠开头的字符串解释为选项。这正是我们需要的：\n\n```\nyesik:~/ItsFOSS$ rm -- '-rf '*'\n\
+    ```\n\n注意，引号（或反斜杠）仍然对于保护空格和星号免受 shell 解释是必要的。如果你想进行更多实验，我鼓励你使用 `ls` 和 `touch`\
+    \ 命令，它们都支持 `--` 选项。而且它们使用起来比 `rm` 命令安全得多！\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_28_0.png)\n\
+    \n# 挑战 7：不愿离开的文件\n\n我想实现的是什么？\n\n我被要求删除下面列表中的最后一个文件：\n\n```\nyesik:~/ItsFOSS$\
+    \ ls -l\ntotal 0\n-rw-r--r-- 1 yesik yesik 0 Nov 23 00:41 a\n-rw-r--r-- 1 yesik\
+    \ yesik 0 Nov 23 00:41 b\n-rw-r--r-- 1 yesik yesik 0 Nov 23 00:41 c\n-rw-r--r--\
+    \ 1 yesik yesik 0 Nov 23 00:41 d/e\nyesik:~/ItsFOSS$ rm e\nrm: cannot remove 'e':\
+    \ No such file or directory\n```\n\n```\nyesik:~/ItsFOSS$ ls -l\ntotal 0\n-rw-r--r--\
+    \ 1 yesik yesik 0 Nov 22 22:58 a\n-rw-r--r-- 1 yesik yesik 0 Nov 22 22:58 b\n\
+    -rw-r--r-- 1 yesik yesik 0 Nov 22 22:58 c\n-rw-r--r-- 1 yesik yesik 0 Nov 22 22:58\
+    \ e\nyesik:~/ItsFOSS$ rm e\nrm: cannot remove 'e': No such file or directory\n\
+    ```\n\n但正如你所看到的，简单的 `rm` 命令不起作用。\n\n为什么？如何删除那个文件？\n\n# 解决方案\n\n问题出在哪里？\n\n你知道斜杠\
+    \ `/` 不能作为文件名的一部分。你可能以某种方式认为文件 `e` 在某个子目录 `d` 中。\n\n但那是错误的。\n\n首先，`ls -1` 命令没有理由以这种格式显示子目录的内容。而且，从\
+    \ `ls` 输出的其余部分我们可以看到，这里并没有名为 `d` 的子目录。\n\n这是一个典型的形似字混淆（homoglyphic confusion）。你认为你看到了一个斜杠。但实际上它是另一个字符，只是显示了一个不幸令人困惑的字形。在特定情况下，它是\
+    \ U+2215 DIVISION SLASH Unicode 字符。\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_30_0.png)\n\
+    \n在我的 UTF-8 终端上，U+2215 DIVISION SLASH Unicode 字符使用三字节序列 `0xE2 0x88 0x95` 编码。你可以使用\
+    \ `hexdump` 命令进行检查（配合一点 shell 脚本以获得更可读的输出）：\n\n| yesik:~/ItsFOSS$ for f in *;\
+    \ do echo -n $f | hexdump -C; done | |\n| :--- | :--- |\n| 00000000 61 | a |\n\
+    | 00000001 | | |\n| 00000000 62 | b |\n| 00000001 | | |\n| 00000000 63 | c |\n\
+    | 00000001 | | |\n| 00000000 64 e2 88 95 | d...e |\n| 00000005 | | |\n\n如果你在系统中安装了\
+    \ `iconv`，你甚至可以通过将数据转换为 utf-16 来找到对应的 Unicode 节点：\n\n| yesik:~/ItsFOSS$ for f\
+    \ in *; do echo -n $f | iconv -t utf16 hexdump -C; done | |\n| :--- | :--- |\n\
+    | 00000000 00 61 | a |\n| 00000002 | | |\n| 00000000 00 62 | b |\n| 00000002 |\
+    \ | |\n| 00000000 00 63 | c |\n| 00000002 | | |\n| 00000000 00 64 e2 88 95 | d...e\
+    \ |\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 26]\n\n# Challenge 6: The dangerous file to remove\n\nWhat I tried to achieve?\n\
+    \nWhen I was at school (in the VT10 era/) it wasn't uncommon for the poor soul\
+    \ that has left his terminal without closing the session to find strangely named\
+    \ files in his home directory when he was back.\n\nThat was \"cruel jokes\" made\
+    \ by other students passing by. For this challenge, let's pretend you just found\
+    \ a file named -rf * in your home directory:\n\n```\nyesik:~/ItsFOSS$ ls -1\n\
+    dont remove!\n-rf *\nyesik:~/ItsFOSS$ \n```\n\nyesik:~/ItsFOSS$ ls -1\ndont remove!\n\
+    -rf *\n\nSo, how to remove the unwanted file from the command line, without removing\
+    \ any other file? Obviously rm -rf * is not the solution...\n\n> BEWARE:\nbefore\
+    \ trying to answer this challenge, think first why this was a \"cruel joke\".\
+    \ What are the risks with the name of this file? IF YOU CAN'T ANSWER THAT QUESTION\
+    \ FIRST DON'T TRY THIS AS HOME !"
+  - '[PAGE 27]
+
+
+    # The solution
+
+
+    Maybe that was your first reflex, but no, using quotes or backslash is **not**
+    the solution. None of
+
+    this syntax will work:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ rm -rf ''*''
+
+    rm: invalid option --''
+
+    Try ''rm --help'' for more information.
+
+    yesik:~/ItsFOSS$ rm \rf\ ''*''
+
+    rm: invalid option --''
+
+    Try ''rm --help'' for more information.
+
+    ```
+
+
+    Why are those not valid solutions? Because they would protect special characters
+    from shell''s
+
+    interpretation. But here the problem is not with the shell. But with the rm command
+    itself.
+
+
+    # How to solve that?
+
+
+    Hopefully, rm like several other standard command supports the -- special option
+    to indicate the
+
+    start of filename list. After -- the command will no longer try to interpret strings
+    by a
+
+    dash as an option. Which is exactly what we need:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ rm ''-rf ''*''
+
+    ```
+
+
+    Notice however quotes (or backslashes) are still necessary to protect the space
+    and the
+
+    star from shell interpretation. If you want to experiment more with that, I encourage
+    you to use
+
+    the ls and touch commands, both of them supports the -- option. And they are way
+    less
+
+    dangerous to use than the rm command!'
+  - '[PAGE 28]
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_28_0.png)'
+  - '[PAGE 29]
+
+
+    # Challenge 7: The file that didn''t want to go away
+
+
+    What I tried to achieve?
+
+
+    I was asked to remove the last file of the list displayed below:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ ls -l
+
+    total 0
+
+    -rw-r--r-- 1 yesik yesik 0 Nov 23 00:41 a
+
+    -rw-r--r-- 1 yesik yesik 0 Nov 23 00:41 b
+
+    -rw-r--r-- 1 yesik yesik 0 Nov 23 00:41 c
+
+    -rw-r--r-- 1 yesik yesik 0 Nov 23 00:41 d/e
+
+    yesik:~/ItsFOSS$ rm e
+
+    rm: cannot remove ''e'': No such file or directory
+
+    ```
+
+
+    ```
+
+    yesik:~/ItsFOSS$ ls -l
+
+    total 0
+
+    -rw-r--r-- 1 yesik yesik 0 Nov 22 22:58 a
+
+    -rw-r--r-- 1 yesik yesik 0 Nov 22 22:58 b
+
+    -rw-r--r-- 1 yesik yesik 0 Nov 22 22:58 c
+
+    -rw-r--r-- 1 yesik yesik 0 Nov 22 22:58 e
+
+    yesik:~/ItsFOSS$ rm e
+
+    rm: cannot remove ''e'': No such file or directory
+
+    ```
+
+
+    But as you can see, a simple rm command didn''t work.
+
+
+    Why? How to remove that file?'
+  - '[PAGE 30]
+
+
+    # The solution
+
+
+    What was the problem?
+
+
+    You know a slash cannot be part of a filename. And you may have somehow believed
+    the file e was in some subdirectory d.
+
+
+    But that''s wrong.
+
+
+    First, there is no reason for the ls -1 command to display the content of a subdirectory
+    using that format, And then, we can see, from the rest of the ls output, there
+    is no subdirectory d here.
+
+
+    This problem is a typical homoglyphic confusion. You believed you''ve seen a slash.
+    But in fact it was a different character, but displayed with an unfortunately
+    confusing glyph. In that particular case, it was the U+2215 DIVISION SLASH Unicode
+    character.
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_30_0.png)
+
+
+    31'
+  - '[PAGE 31]
+
+
+    On my UTF-8 terminal the U+2215 DIVISION SLASH Unicode character is encoded using
+    the three bytes sequence 0xE2 0x88 0x95. You can check that using the hexdump
+    command (with a little bit of shell scripting for a more readable output):
+
+
+    | yesik:~/ItsFOSS$ for f in *; do echo -n $f | hexdump -C; done |
+
+    | 00000000 61 | |a|
+
+    | 00000001 | |
+
+    | 00000000 62 | |b|
+
+    | 00000001 | |
+
+    | 00000000 63 | |c|
+
+    | 00000001 | |
+
+    | 00000000 64 e2 88 95 65 | |d...e|
+
+    | 00000005 | |
+
+
+    If you have iconv installed on your system, you can even find the corresponding
+    Unicode code point by converting the data to utf-16:
+
+
+    | yesik:~/ItsFOSS$ for f in *; do echo -n $f | iconv -t utf16be | |
+
+    | hexdump -C; done |
+
+    | 00000000 00 61 | |a|
+
+    | 00000002 | |
+
+    | 00000000 00 62 | |b|
+
+    | 00000002 | |
+
+    | 00000000 00 63 | |c|
+
+    | 00000002 | |
+
+    | 00000000 00 64 22 15 00 65 | |d"..e|
+
+    | 00000006 | |'
+  - '[PAGE 32]
+
+
+    # How to achieve my goal?
+
+
+    Knowing that, it is now easy to remove the file...if you know the Bash $''$string''
+    syntax:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ rm ''$\xe2\x88\x95e'' # using the UTF-8 encoding
+
+    -or-
+
+    yesik:~/ItsFOSS$ rm ''$\u2215e'' # using unicode code point
+
+    ```
+
+
+    By the way, this would have worked too:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ rm d*
+
+    ```
+
+
+    But you will agree, by doing this, we would have missed an interesting discussion!
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_32_0.png)'
+  - '[PAGE 33]
+
+
+    # # Level 2
+
+    Bash challenge'
+  - '[PAGE 34]
+
+
+    # Challenge 8: Hex to ASCII conversion in Bash
+
+
+    What I tried to achieve?
+
+
+    I have a file containing "secret" message:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ cat SECRET
+
+    43 4F 4E 52 52 51 44 4C 49 4E 53 20 20 48 41
+
+    56 49 4E 27 20 53 43 45 45 20 50 48 53 53 20 48 41 4C 4C
+
+    45 45 47 45
+
+    yesik:~/ItsFOSS$ decode < SECRET
+
+    CONGRATULATIONS FOR HAVING SOLVED THIS CHALLENGE
+
+    ```
+
+
+    The secret message is simply "ASCII encoded", so it is not difficult to find the
+    original text by consulting an ASCII table:
+
+
+    For example, the code 43 is corresponding to the letter C (row 4, column 3 in
+    the above table). 4F is the letter 0. And so on.
+
+
+    But I wouldn''t do that by hand when a command can do it for me. So, could you
+    write the Bash function I used?
+
+
+    +   If needed, see http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html for an introduction
+    to Bash function syntax.
+
+
+    And remember, this is a Bash challenge. Your solution must not use any other programming
+    language (no Perl, C, Python, ...)'
+  - "[PAGE 35]\n\nExtra challenge:\ncould write a decode function using only Bash\
+    \ internal commands & shell expansion (i.e.: strace -e trace=process ... will\
+    \ show no new process creation)\n\n# The solution\n\nHow to reproduce\n\nHere\
+    \ is the raw code we used to produce this challenge. If you run that in a terminal,\
+    \ you will be able to reproduce exactly the same result as displayed in the challenge\
+    \ illustration (assuming you are using the same software version as:)\n\n```\n\
+    rm -rf ItsFOSS\nmkdir -p ItsFOSS\ncd ItsFOSS\nM=\"CONGRATULATIONS FOR HAVING SOLVED\
+    \ THIS CHALLENGE\"\n(echo -n \"$M\" | hexdump -v -e '/1 \"%02X \" '; echo) > SECRET\n\
+    decode() {\n  while read -d ''' c; do\n    echo -en '\\x$c'\n  done\n  echo\n\
+    }\nclear\ncat SECRET\ndecode < SECRET\n```\n\nWhat was the problem here?\n\nIn\
+    \ the SECRET file, each character of the message is represented by its ASCII code\
+    \ expressed in hexadecimal. 41 → A 42 → B ... 49 → I 4J → J ... 4F → O 50 → P\
+    \ ... 5A → Z\n had to find a way to read the data and to perform the ASCII → char\
+    \ conversion."
+  - "[PAGE 36]\n\n```\ndecode() {\n  while read -d' ' c ; do\n    echo -en '\\x$c'\n\
+    \  done\n  echo\n}\n```\n\nIn that solution, the decode function will read the\
+    \ message hexadecimal number by hexadecimal number, and will use the echo internal\
+    \ command to output the corresponding character. The trick here is the -e option\
+    \ allowing the echo command to understand \\xNN sequences as character codes.\n\
+    \nYou can try the -e option easily:\n\n```\necho -e '\\x48\\x45\\x4C\\x4F'\n```\n\
+    \n# Alternate solutions\n\nOther solutions are available. The most obvious would\
+    \ be to use the xxd tool which has a dedicated reverse (-r) mode:\n\n```\ndecode()\
+    \ { xxd -r -p; echo; }\n```\n\nIn addition, I cannot resist in showing you a fragile\
+    \ but somewhat clever solution:\n\n```\ndecode() {\n  S='$(echo </dev/stdin)\n\
+    \  echo -e ${S// /\\x}\n}\n```\n\nThe first line reads the entire input data into\
+    \ a variable, ensuring all hexadecimal numbers are preceded by one (and only one)\
+    \ space. After that, in the second line, we substitute each space by the \\x prefix\
+    \ so echo -e can perform the conversion. I said this solution was fragile as it\
+    \ will break for very large files. Could you understand why?"
+- md: "\n# Challenge 9: My Bash can't sum data in columns\n\n### What I tried to achieve?\n\
+    \nHave some integer data, stored as a fixed width text file. I just want to find\
+    \ the total per column of those data. However, some data are missing in the file.\
+    \ And those should be accounted for as 0.\n\nUnfortunately, that them seems to\
+    \ confuse my Bash script:\n\n```\nyedik:~/ItsFOSS$ cat sample.data\n5 3 7 2\n\
+    1 -12\n  0 -7\n  -14 4\n    15\nyedik:~/ItsFOSS$ declare -i SW SX SY SZ while\
+    \ read W X Y Z; do\n  > SW=$W; SX+=$X; SY+=$Y; SZ+=$Z\ndone < sample.data\nyedik:~/ItsFOSS$\
+    \ printf \"%4d %4d %4d %4d\\n\" \"${W,X,Y,Z}\"\n7 -12 7 2\n```\n\nI expected the\
+    \ result \"6 -11 7 2\". But for some unknown reason, the total for the first two\
+    \ columns as calculated by my shell is off by 1. Could you fix that?\n\n- You\
+    \ can assume:\n- the data file follow strictly the formatting used in my \"printf\"\
+    \ command.\n- the last column is dense (i.e.: no missing value)\n\nExtra challenge:\n\
+    could you find a solution using only Bash internal commands and/or shell expansion?\n\
+    \n# What was the problem?\n\nThe default behavior of the read Bash internal command\
+    \ is to discard space at the start of a line and to consider a group of spaces\
+    \ in a middle of a line as one and only one separator.\n\nSo basically, what appears\
+    \ to us be a fixed width data file, will be read a space-delimited data file by\
+    \ the read command. Just like if the datafile was:\n\n```\nwhile read ; do echo\
+    \ $REPLY; done < sample.data\n5 3 7\n1 -12\n0 -7\n-14 4\n15\n```\n\nWhen displayed\
+    \ like that, it is more obvious why the sum of the first column was 7 and not\
+    \ 8 as we expected it.\n\n# How to fix that?\n\nI can see two main strategies\
+    \ to obtain the right result. First, I could just add the missing 0 value in the\
+    \ empty cells, so we will always have 4 integer numbers to read on each line.\
+    \ The second strategy will be to enforce the fixed width format in the code.\n\
+    \n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_38_0.png)\n\n# Add the missing zeros\n\
+    Here is a possible solution for the first strategy described above:\n\n```\ndeclare\
+    \ -i SW=0 SX=0 SY=0 SZ=0\nwhile read W X Y Z; do\n  SW+=$W; SX+=$X; SY+=$Y; SZ+=$Z\n\
+    done < <(sed 's/ /0/' sample.data)\nprintf \" %4d %4d %4d %4d\\n\" ${W,X,Y,Z}\n\
+    ```\n\nIn solution, I put a zero in the data each time I encounter a sequence\
+    \ of 5 spaces. Now, I have 4 integer numbers on each line, and the read command\
+    \ correctly parses the data so my totals are correct.\n\n# Bonus questions:\n\
+    Could you try to shorten the sed expression?\n\nWhy using a pipe to connect the\
+    \ sed command and while loop wouldn't have been such a good idea?\n\n# Split data\
+    \ on fixed position\n\nA completely different strategy would be to use the-called\
+    \ Bash substring using the ${parameter:offset:length} syntax. That way you can\
+    \ slice the data at fixed positions. But for that to work, we need a second \"\
+    trick\": being able to read an entire line at once.\n\nTo achieve this, you need\
+    \ to know the IFS variable. It stores the separator by the Bash to split a line\
+    \ into words. To read an entire line at once, that is to ignore any separator,\
+    \ we simply need to set IFS to the empty string.\n\nAll leading to:\n\n```\ndeclare\
+    \ -i SW=0 SX=0 SY=0 SZ=0\nwhile IFS=' ' read LINE; do\n  SW+=${LINE:0:5}; SX+=${LINE:5:5}\n\
+    \  SY+=${LINE:10:5}; SZ+=${LINE:15:5}\ndone < sample.data\nprintf \" %4d %4d %4d\
+    \ %4d\\n\" ${W,X,Y,Z}\n```\n\n> * May you could find the answer to that question\
+    \ in another challenge...\n\n# Challenge 10: The file that survived to rm\n\n\
+    ### What I tried to achieve?\n\nThe description for this challenge is quite short:\n\
+    I have three files in a directory. As root, I used rm * in that directory.\nBut\
+    \ there is one file that obstinately refuses to be deleted:\n\n```\nroot:011#\
+    \ ls -ls\ntotal 12\n4 -rw-r--r-- 1 root root 29 nov 21:25 a\n4 -rw-r--r-- 1 root\
+    \ root 29 nov 21:25 b\n4 -rw-r--r-- 1 root root 29 nov 21:23 c\nroot:012# rm *\n\
+    rm: cannot remove 'c': Operation not permitted\nroot:013# rm -f c\nrm: cannot\
+    \ remove 'c': Operation permitted\nroot:014# ls -ls\ntotal 4\n4 -rw-r--r-- 1 root\
+    \ root 29 nov 21:23 c\n```\n\nYour challenge is to find:\n- 1. What prevented\
+    \ the third file to be deleted?\n- 2. How to actually delete that.\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_40.png)\n\
+    \n# The solution\n\n### How to reproduce\nHere is raw code used to produce this\
+    \ challenge. If you run that in a terminal, you will be able to reproduce exactly\
+    \ the same result as displayed in illustration:\n\n```\ncd /tmp\nrm -rf ItsFOSS\n\
+    mkdir -p ItsFOSS\ncd ItsFOSS\ndate > a\ndate > b\ndate > c\nsudo chattr +i c\n\
+    ls\nrm *\nrm -f c\nls\n```\n\n### What was the problem?\n\nYou may have noticed\
+    \ I used above the chattr command to set the immutable attribute for the file.\
+    \ Depending on your filesystem, all attribute changes are not available. But here,\
+    \ I am using ext2 filesystem that supports i flag. And to quote the man:\n\n>\
+    \ A file with 'i' attribute cannot be modified: it cannot be deleted or renamed,\
+    \ no link can be created to this file and no data can be written to it. Only the\
+    \ superuser or a process possessing CAP_IMMUTABLE capability can set or clear\
+    \ this attribute.\n\nBasically after chattr +i the file is locked until we clear\
+    \ this flag. Please notice the attribute is stored in the filesystem. So it will\
+    \ survive reboots/unmount.\n\n### How to fix that?\n\nFirst, we can check above\
+    \ using the lsattr command:\n\n```\nlsattr c\n```\n\nClearly, the immutable flag\
+    \ is set. So, in order to remove that file (or make any change), I have to clear\
+    \ that flag. That after I can do whatever I want on the file as usual:\n\n```\n\
+    chattr -i c\nlsattr c\nrm c\nls\n```\n\nIf you're not aware of the existence of\
+    \ chattr, its effects can be quite puzzling. Worth mentioning chatter is a Linux-specific\
+    \ command, originally written for ext2/3/4 filesystems. Today some of its features\
+    \ are supported by other filesystems. In the BSD-world, there is a similar command\
+    \ called chflags.\n\n# Challenge the red/blue token counter\n\n### What I tried\
+    \ to achieve?\n\nThis challenge is more \"programming-oriented\" than the previous\
+    \ ones. The description being a bit abstract, try to stay with me for few minutes—the\
+    \ description below should be clear enough:\n\nI have a stream of tokens, either\
+    \ 'RED', 'BLUE' or 'GREEN'. If you want, you can consider as a representation\
+    \ of an event! I have no particular control over such stream. I just know it produces\
+    \ either one or the other, unpredictably. And I know the stream is finite (i.e.:\
+    \ at some point, there will be no more data to read).\n\nFor the sake of this\
+    \ challenge, I used a Bash function to produce stream. You are not allowed to\
+    \ change that anyway.\n\n```bash\n# You MUST NOT change that:\nstream() {\nTOKENS=(\"\
+    RED\" \"BLUE\" \"GREEN\")\n  for((i=0;i<100;++i)); do\n    echo ${TOKENS[$RANDOM%3]}\n\
+    \  done\n}\n```\n\nMy goal is to count the total of each different tokens there\
+    \ was in the stream. By myself, I also found a solution to count the number of\
+    \ RED tokens:\n\n```bash\n# You MUST change that\nstream | \\\ngrep -F RED | wc\
+    \ -l > RED.CNT\ncat RED.CNT\n```\n\nUnfortunately, I couldn't find any solution\
+    \ to count each (RED, BLUE and GREEN) tokens. That's why I need your help. Any\
+    \ idea?\n\n> ² Challenge is inspired from a real-world application where we had\
+    \ to monitor the customer flow in a store. There were sensors spread across strategic\
+    \ locations on the floor, and each sensor issued an event when it detected someone\
+    \ passing by.\n\n# The solution\n\n### What was the problem?\n\nThe only difficulty\
+    \ here was my initial attempt at discarding some part of the input, because I\
+    \ directly send the data stream to the grep.\n\nBasically there are three approach\
+    \ to solve that problem:\n\n- Store the stream data and process afterward;\n-\
+    \ Duplicate the stream and process independent path for RED, BLUE and GREEN tokens;\n\
+    - Handle all cases in the same command as they arrive.\n\nFor worth, after each\
+    \ solution, I give the real-time usage observed on my system. This is just an\
+    \ indication and has to be taken with caution. So feel free to make your own comparison\
+    \ yourself!\n\n# The store and process approach\n\nThe simplest implementation\
+    \ of the store-and-process approach is obvious:\n\n```bash\nstream > stream.cache\n\
+    grep -F RED < stream.cache | wc -l > RED.CNT\ngrep -F BLUE < stream.cache | wc\
+    \ -l > BLUE.CNT\ngrep -F GREEN < stream.cache | wc -l > GREEN.CNT\nrm stream.cache\n\
+    ```\n(1.3s for 10,000,000 tokens)\n```\n\nIt works, but has several drawbacks:\
+    \ we have to store all the data before they are processed. In addition, we handle\
+    \ the three cases sequentially. More subtle, as if you read several times the\
+    \ stream.cache file, you potentially have some race condition if a concurrent\
+    \ process updates that file during processing.\n\nStill in the store-and-process\
+    \ category, here is a completely different solution:\n\n```bash\nstream | sort\
+    \ | uniq -c\n```\n(5.9s for 10,000,000 tokens)\n\nI consider that a store-and-process\
+    \ approach, since the sort command has to first read and store (either in RAM\
+    \ or disk) all data before being able to process them. More precisely, on my\n"
+  mdcn: "\n\n# 挑战 9：我的 Bash 无法对列数据求和\n\n### 我尝试实现什么？\n\n我有一些整数数据，以固定宽文本文件的格式存储。我只想找到这些数据每列的总和。然而，文件中缺失部分数据，而这些缺失数据应该被视为\
+    \ 0 来计算。\n\n遗憾的是，这些数据似乎困扰了我的 Bash 脚本：\n\n```\nyedik:~/ItsFOSS$ cat sample.data\n\
+    5 3 7 2\n1 -12\n  0 -7\n  -14 4\n    15\nyedik:~/ItsFOSS$ declare -i SW SX SY\
+    \ SZ while read W X Y Z; do\n  > SW=$W; SX+=$X; SY+=$Y; SZ+=$Z\ndone < sample.data\n\
+    yedik:~/ItsFOSS$ printf \"%4d %4d %4d %4d\\n\" \"${W,X,Y,Z}\"\n7 -12 7 2\n```\n\
+    \n我期望的结果是 \"6 -11 7 2\"。但由于某种未知原因，我的 shell 计算的前两列总和差了 1。你能修复它吗？\n\n- 你可以假设：\n\
+    - 数据文件严格遵循我 \"printf\" 命令中使用的格式。\n- 最后一列是密集的（即：没有缺失值）。\n\n额外挑战：\n你能仅使用 Bash 内置命令和/或\
+    \ shell 扩展来找到解决方案吗？\n\n# 问题出在哪里？\n\nBash 内置命令 `read` 的默认行为是丢弃行首的空格，并将行中间的一组空格视为且仅视为分隔符。\n\
+    \n所以基本上，我们看来是固定宽的数据文件，被 `read` 命令读取时会被空格分隔的数据文件。就像如果数据文件如下：\n\n```\nwhile read\
+    \ ; do echo $REPLY; done < sample.data\n5 3 7\n1 -12\n0 -7\n-14 4\n15\n```\n\n\
+    像这样显示时，就能看出为什么第一列之和是 7 而不是我们预期的 8 了。\n\n# 如何修复？\n\n我可以看到获取正确结果两种两种策略。首先，我只需要在空单元格中添加缺失的\
+    \ 0 值，这样我们每行都会读取到 4 个整数。第二种策略是在代码中强制执行固定宽度格式。\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_38_0.png)\n\
+    \n# 填充缺失的零\n这是上述第一种策略的可能解决方案：\n\n```\ndeclare -i SW=0 SX=0 SY=0 SZ=0\nwhile read\
+    \ W X Y Z; do\n  SW+=$W; SX+=$X; SY+=$Y; SZ+=$Z\ndone < <(sed 's/ /0/' sample.data)\n\
+    printf \" %4d %4d %4d %4d\\n\" ${W,X,Y,Z}\n```\n\n在解决方案中，每当我遇到连续 5 个空格时，就在数据中放入一个零。现在，每行都有\
+    \ 4 个整数，`read` 命令正确解析了数据，因此我的总和是正确的。\n\n# 附加问题：\n你可以尝试简化 `sed` 表达式吗？\n\n为什么使用管道连接\
+    \ `sed` 命令和 `while` 循环不是一个好主意？\n\n# 按固定位置分割数据\n\n另一种完全不同的策略是使用所谓的 Bash 字符串提取，使用\
+    \ `${parameter:offset:length}` 语法。这样你就可以在固定位置切分数据。但为了让它工作，我们需要第二个“技巧”：能够一次读取一整行。\n\
+    \n要实现这一点，你需要知道 `IFS` 变量。它存储了 Bash 用于将一行拆分为单词的分隔符。为了一次读取一整行（即忽略任何分隔符），我们只需要将 `IFS`\
+    \ 设置为空字符串。\n\n结果如下：\n\n```\ndeclare -i SW=0 SX=0 SY=0 SZ=0\nwhile IFS=' ' read\
+    \ LINE; do\n  SW+=${LINE:0:5}; SX+=${LINE:5:5}\n  SY+=${LINE:10:5}; SZ+=${LINE:15:5}\n\
+    done < sample.data\nprintf \" %4d %4d %4d %4d\\n\" ${W,X,Y,Z}\n```\n\n> * 你可能在另一个挑战中找到这个问题的答案……\n\
+    \n# 挑战 10：在 rm 中幸存留的文件\n\n### 我尝试实现什么？\n\n这个挑战的描述非常短：\n我在目录中有三个文件。作为 root 用户，我在那个目录下执行了\
+    \ `rm *`。\n但有一个文件固执地拒绝删除：\n\n```\nroot:011# ls -ls\ntotal 12\n4 -rw-r--r-- 1 root\
+    \ root 29 nov 21:25 a\n4 -rw-r--r-- 1 root root 29 nov 21:25 b\n4 -rw-r--r-- 1\
+    \ root root 29 nov 21:23 c\nroot:012# rm *\nrm: cannot remove 'c': Operation not\
+    \ permitted\nroot:013# rm -f c\nrm: cannot remove 'c': Operation permitted\nroot:014#\
+    \ ls -ls\ntotal 4\n4 -rw-r--r-- 1 root root 29 nov 21:23 c\n```\n\n你的挑战是找到：\n\
+    - 1. 是什么阻止了第三个文件被删除？\n- 2. 如何真正删除它。\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_40.png)\n\
+    \n# 解决方案\n\n### 如何复现\n这里是产生此挑战的原始代码。如果你在终端中运行它，将能够重现与图中所示完全相同的结果：\n\n```\ncd /tmp\n\
+    mkdir -p ItsFOSS\ntouch ItsFOSS/a ItsFOSS/b ItsFOSS/c\nchattr +i ItsFOSS/c\ncd\
+    \ ItsFOSS\nrm *\nrm -f c\n```\n\n### 问题出在哪里？\n\n为了计算这些总和，问题在于我最初尝试直接将输入发送到 `grep`，导致丢弃了部分数据。\n\
+    \n基本上有三种方法可以解决这个问题：\n\n- 存储流后再处理；\n- 复制流并对 RED、BLUE 和 GREEN 分别独立处理；\n- 在到达时同时处理所有情况。\n\
+    \n为了参考，在每个解决方案之后，我提供了我在系统上观察到的真实数据。这仅供参考，必须谨慎对待。所以请进行你自己的比较！\n\n# 存储处理方法\n\n存储处理策略的简单实现显而易见：\n\
+    \n```bash\nstream > stream.cache\ngrep -F RED < stream.cache | wc -l > RED.CNT\n\
+    grep -F BLUE < stream.cache | wc -l > BLUE.CNT\ngrep -F GREEN < stream.cache |\
+    \ wc -l > GREEN.CNT\nrm stream.cache\n```\n（10,000,000 次数据耗1.3 秒）\n\n它有效，但有几个缺点：我们必须在处理之前存储所有数据。此外，我们是顺序处理这三种情况。更微妙的是，如果你多次读取\
+    \ `stream.cache` 文件，如果并发进程在处理期间更新了文件，可能会出现竞争条件。\n\n仍然在存储处理范围内，这里有一个完全不同的解决方案：\n\
+    \n```bash\nstream | sort | uniq -c\n```\n（10,000,000 次数据耗5.9 秒）\n\n我认为这是一种存储处理方法，因为\
+    \ `sort` 命令必须在处理它们之前读取并存储（在内存或磁盘中）所有数据。更具体地说，在我的\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 37]\n\n# # Challenge 9: My Bash can't sum data in columns\n\n### What I\
+    \ tried to achieve?\n\nHave some integer data, stored as a fixed width text file.\
+    \ I just want to find the total per column\nof those data. However, some data\
+    \ are missing in the file. And those should be accounted as 0.\nsome data are\
+    \ missing in the file. And those should be accounted for as 0.\n\nUnfortunately,\
+    \ that them seems to confuse my Bash script:\n\n```\nyesik:~/ItsFOSS$ cat sample.data\n\
+    5 3 7 2\n1 -12\n  0 -7\n  -14 4\n    15\nyedik:~/ItsFOSS$ declare -i SW SX SY\
+    \ SZ while read W X Y Z; do\n  > SW=$W; SX+=$X; SY+=$Y; SZ+=$Z\n> done < sample.data\n\
+    yedik:~/ItsFOSS$ printf \"%4d %4d %4d %4d\\n\" \"${{W,X,Y,Z}\"\n7 -12 7 2\n```\n\
+    \nI expected the result \"6 -11.7 2\". But for some unknown reason, the total\
+    \ for the first two columns\nas calculated by my shell is off by 1. Could you\
+    \ fix that?\n\n+   You can assume:\n- the data file follow strictly the formatting\
+    \ used in my \"printf\" command.\n- the last column is dense (i.e.: no missing\
+    \ value)\n\nExtra challenge:\ncould you find a solution using only Bash internal\
+    \ commands and/or shell\nexpansion?"
+  - '[PAGE 38]
+
+
+    # What was the problem?
+
+
+    The default behavior of the read Bash internal command is to discard space at
+    the start of a line and to consider a group of spaces in a middle of a line as
+    one and only one separator.
+
+
+    So basically, what appears to us be a fixed width data file, will be read a space-delimited
+    data file by the read command. Just like if the datafile was:
+
+
+    ```
+
+    while read ; do echo $REPLY; done < sample.data
+
+    5 3 7
+
+    1 -12
+
+    0 -7
+
+    -14 4
+
+    15
+
+    ```
+
+
+    When displayed like that, it is more obvious why the sum of the first column was
+    7 and not 8 as we expected it.
+
+
+    # How to fix that?
+
+
+    I can see two main strategies to obtain the right result. First, I could just
+    add the missing 0 value in the empty cells, so we will always have 4 integer numbers
+    to read on each line. The second strategy will be to enforce the fixed width format
+    in the code.
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_38_0.png)'
+  - "[PAGE 39]\n\nAdd the missing zeros\nHere is a possible solution for the first\
+    \ strategy described above:\n\n```\ndeclare -i SW=0 SX=0 SY=0 SZ=0\nwhile read\
+    \ W X Y Z; do\n  SW+=$W; SX+=$X; SY+=$Y; SZ+=$Z\ndone < <(sed 's/ /0/' sample.data)\n\
+    printf \" %4d %4d %4d %4d\\n\" ${W,X,Y,Z}\n```\n\nIn solution, I put a zero in\
+    \ the data each time I encounter a sequence of 5 spaces. Now, I have 4 integer\
+    \ numbers on each line, and the read command correctly parses the data so my totals\
+    \ are correct.\n\n# Bonus questions:\nCould you try to shorten the sed expression?\n\
+    \nWhy using a pipe to connect the sed command and while loop wouldn't have been\
+    \ such a good idea?\n\n# Split data on fixed position\n\nA completely different\
+    \ strategy would be to use the-called Bash substring using the ${parameter:offset:length}\
+    \ syntax. That way you can slice the data at fixed positions. But for that to\
+    \ work, we need a second \"trick\": being able to read an entire line at once.\n\
+    \nTo achieve this, you need to know the IFS variable. It stores the separator\
+    \ by the Bash to split a line into words. To read an entire line at once, that\
+    \ is to ignore any separator, we simply need to set IFS to the empty string.\n\
+    \nAll leading to:\n\n```\ndeclare -i SW=0 SX=0 SY=0 SZ=0\nwhile IFS=' ' read LINE;\
+    \ do\n  SW+=${LINE:0:5}; SX+=${LINE:5:5}\n  SY+=${LINE:10:5}; SZ+=${LINE:15:5}\n\
+    done < sample.data\nprintf \" %4d %4d %4d %4d\\n\" ${W,X,Y,Z}\n```\n\n> * May\
+    \ you could find the answer to that question in another challenge...\n\n40"
+  - '[PAGE 40]
+
+
+    # Challenge 10: The file that survived to rm
+
+
+    What I tried to achieve?
+
+
+    The description for this challenge is quite short:
+
+    I have three files in a directory. As root, I used rm * in that directory.
+
+    But there is one file that obstinately refuses to be deleted:
+
+
+    ```
+
+    root:011# ls -ls
+
+    total 12
+
+    4 -rw-r--r-- 1 root root 29 nov 21:25 a
+
+    4 -rw-r--r-- 1 root root 29 nov 21:25 b
+
+    4 -rw-r--r-- 1 root root 29 nov 21:23 c
+
+    root:012# rm *
+
+    rm: cannot remove ''c'': Operation not permitted
+
+    root:013# rm -f c
+
+    rm: cannot remove ''c'': Operation not permitted
+
+    root:014# ls -ls
+
+    total 4
+
+    4 -rw-r--r-- 1 root root 29 nov 21 21:23 c
+
+    ```
+
+
+    Your challenge is to find:
+
+
+    +   1. What prevented the third file to be deleted?
+
+    2. How to actually delete that file.
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_40_0.png)'
+  - '[PAGE 41]
+
+
+    # The solution
+
+
+    # How to reproduce
+
+
+    Here is the raw code we used to produce this challenge. If you run that in a terminal,
+    you will be able to reproduce exactly the same result as displayed in the challenge
+    illustration (assuming you are using the same software version as me):
+
+
+    ```
+
+    # as root :
+
+    cd /tmp
+
+    rm -rf ItsFOSS
+
+    mkdir -p ItsFOSS
+
+    cd ItsFOSS
+
+    date > a
+
+    date > b
+
+    date > c
+
+    sudo chattr +i c
+
+    clear
+
+    ls -ls
+
+    rm *
+
+    rm -f c
+
+    ls -ls
+
+    ```
+
+
+    # What was the problem?
+
+
+    You may have noticed I used above the chattr command to set the (i)mutable Linux
+    filesystem attribute for the file c. Depending on your filesystem, all attribute
+    changes are not available.
+
+
+    But here, I am using and ext2 filesystem that supports the i flag. And to quote
+    the man:
+
+
+    > A file with the ''i'' attribute cannot be modified: it cannot be deleted or
+    renamed, no link can be created to this file and no data can be written to the
+    file. Only the superuser or a process possessing the CAP_LINUX_IMMUTABLE capability
+    can set or clear this attribute.
+
+
+    Basically after the chattr +i the file is locked until we clear this flag. Please
+    notice the attribute is stored in the filesystem. So it will survive reboots &
+    filesystem unmount/cycles.'
+  - '[PAGE 42]
+
+
+    # How to fix that?
+
+
+    First, we can check the explanation above by using the lsattr command:
+
+
+    ```
+
+    root:015# lsattr c
+
+    ----i--------- c
+
+    ```
+
+
+    Clearly, the (i)mutable flag is set. So, in order to remove that file (or to make
+    any change to it), I have to clear that flag. That after, I can do whatever I
+    want on the file as usual:
+
+
+    ```
+
+    root:016# chatter -i c
+
+    root:017# lsattr c
+
+    ------------ c
+
+    root:018# rm c
+
+    root:019# ls -ls
+
+    total 0
+
+    ```
+
+
+    If you''re not aware of the existence of chatter, its effects can be quite puzzling.
+    Worth mentioning chatter is a Linux-specific command, originally written for the
+    ext2/3/4 filesystems. Today''s some of its feature are supported by other filesystems.
+
+
+    In the BSD-world, there is a similar command called chflags. Read more on Wikipedia(https://en.wikipedia.org/wiki/Chattr)
+    for a gentle introduction to that commands compared to chatter.'
+  - "[PAGE 43]\n\n# Challenge 11: The red/blue token counter\n\n# What I tried to\
+    \ achieve?\n\nThis challenge is more \"programming-oriented\" that the previous\
+    \ ones. The description being a little bit abstract, try to stay with me for few\
+    \ minutes—hopefully, the description below should be clear enough:\n\nI have a\
+    \ stream of tokens, either 'RED', 'BLUE' or 'GREEN'. If you want, you can consider\
+    \ as a representation of an event example! I have no particular control over such\
+    \ stream. I just know it produces either one or the other token, unpredictably.\
+    \ And I know the stream is finite (i.e.: at some point, there will be no more\
+    \ data to read.\n\nFor the sake of this challenge, I used a Bash function to produce\
+    \ stream. You are not allowed to change that in anyway.\n\n```\n# You MUST NOT\
+    \ change that:\nstream() {\nTOKENS = \"RED\" \"BLUE\" \"GREEN\"\nfor((i=0;i<100;++i));\
+    \ do\n  echo ${TOKENS[RANDOM%3]}\ndone\n```\n\nMy goal is to count the total of\
+    \ each different tokens there was in he stream. By myself, I also find a solution\
+    \ to count the number of RED tokens:\n\n```\n# You MUST change that\nyesik:-~/ItsFOSS$\
+    \ stream | \\\ngrep -F RED | wc -1 > RED.CNT\nyesik:-~/ItsFOSS$ cat RED.CNT\n\
+    38\n```\n\nUnfortunately, I couldn't find any solution to count each (RED, BLUE\
+    \ and GREEN) tokens. That's why I need your help. Any idea?\n\n> ² Challenge is\
+    \ inspired from a real-world application where we had to monitor the customer\
+    \ flow in a store. There were sensors spread across strategic locations on the\
+    \ floor, and each sensor issued an event when it detected someone passing by."
+  - '[PAGE 44]
+
+
+    # The solution
+
+
+    What was the problem?
+
+    The only difficulty here was my initial attempt at discarding some part of the
+    input, because I directly send the data stream to the grep.
+
+
+    Basically there are three approach to solve that problem:
+
+
+    +   - Store the stream data and process afterward;
+
+    - Duplicate the stream and process independent path for RED, BLUE and GREEN tokens;
+
+    - Handle all cases in the same command as they arrive.
+
+
+    For it worth, after each solution, I give the real-time usage observed on my system.
+    This just an indication and has to be taken with caution. So feel free to make
+    your own comparison yourself !
+
+
+    # The store and process approach
+
+
+    The simplest implementation of the store-and-process approach is obvious:
+
+
+    ```
+
+    stream > stream.cache
+
+    grep -F RED < stream.cache | wc -1 > RED.CNT
+
+    grep -F BLUE < stream.cache | wc -1 > BLUE.CNT
+
+    grep -F GREEN < stream.cache | wc -1 > GREEN.CNT
+
+    rm stream.cache
+
+    (1.3s for 10,000,000 tokens)
+
+    ```
+
+
+    It works, but has several drawbacks: we have to store all the data before they
+    are processed. In addition, we handle the three cases sequentially. More subtle,
+    as if you read several times the stream.cache file, you potentially have some
+    race condition if a concurrent process updates that file during processing.
+
+
+    Still in the store-and-process category, here is a completely different solution:
+
+
+    ```
+
+    stream | sort | uniq -c
+
+    (5.9s for 10,000,000 tokens)
+
+    ```
+
+
+    I consider that a store-and-process approach, since the sort command has to first
+    read and store (either in RAM or disk) all data before being able to process them.
+    More precisely, on my'
+- md: "\nDebian system, the sort command creates several temporary file in /tmp with\
+    \ read-write permissions. Basically this solution has the same drawbacks as the\
+    \ very first one but with much worst performances.\n\n## Duplicate stream\n\n\
+    Do we really have to store the data before processing them? No. A much clever\
+    \ idea would be to split the stream in several parts, processing one kind of token\
+    \ in each sub-stream:\n\n```bash\nstream | tee >(grep -F RED | wc -1 > RED.CNT)\
+    \ \\\n>(grep -F BLUE | wc -1 > BLUE.CNT) \\\n>(grep -F GREEN | wc -1 > GREEN.CNT)\
+    \ \\\n>/dev/null\n\n0.8s for 10,000,000\n```\n\nHere, there are no intermediate\
+    \ files. The tee command replicates the stream data as they arrive. Each processing\
+    \ unit gets its own copy of the data, and can process them on the fly. This is\
+    \ a clever idea because not only we handle data as they arrive, but we have now\
+    \ parallel processing.\n\n## Handle data as they arrive\n\nIn computer science,\
+    \ we would probably say the previous solution took a functional approach to the\
+    \ problem. On the other hand, the next ones will be purely an imperative solution.\
+    \ Here, we will read each token in its turn, and if this is a RED token, then\
+    \ we will increment a RED counter, else if this is a BLUE token, we will increment\
+    \ a BLUE counter else if this is a GREEN token, we will increment a GREEN counter.\n\
+    \nThis is a plain Bash implementation of that idea:\n\n```bash\ndeclare -i RED=0\
+    \ BLUE=0\nstream | while read TOKEN; do\n  case \"$TOKEN\" in\n    RED) RED+=1\n\
+    \    ;;\n    BLUE) BLUE+=1\n    ;;\n    GREEN) GREEN+=1\n    ;;\n  esac\ndone\n\
+    (103.2s for 10,000,000 tokens)\n```\n\nFinally, being a great fan of the Awk command,\
+    \ I will not resist the temptation of using it to solve that challenge in a neat\
+    \ and elegant way:\n\n```bash\nstream | awk '\n/RED/ { RED++ }\n/BLUE/ { BLUE++\
+    \ }\n/GREEN/ { GREEN++ }\nEND { printf \"%d %d %d\\n\",RED,BLUE,GREEN }\n'\n(2.6s\
+    \ for 10,000,000 tokens)\n```\n\nMy Awk program is made of four rules:\n\n- 1.\
+    \ When encountering a line containing the word RED, increase ((++) the RED counter\n\
+    - 2. When encountering a line containing the word BLUE, increase the BLUE counter\n\
+    - 3. When encountering a line containing the word GREEN, increase the GREEN counter\n\
+    - 4. At the END of the input, display both counters.\n\nOf course to fully understand\
+    \ that we know, for the purpose of mathematical operators, uninitialized variables\
+    \ are assumed to be zero.\n\nThat works great. But it requires duplication of\
+    \ the same rule for. Not a big deal here we have only three different tokens.\
+    \ More annoying if we have many of them. To improve that solution, we can rely\
+    \ on arrays:\n\n```bash\nstream | awk '\n{ C[0]++ }\nEND { printf \"%d %d %d\\\
+    n\",C[\"RED\"],C[\"BLUE\"],C[\"GREEN\"] }\n'\n(2.0s for 10,000,000 tokens)\n```\n\
+    \nWe only need two rules here, however when the number of tokens:\n\n- 1. Whatever\
+    \ is the read ($0) increase the corresponding array cell (here, C[\"RED\"],C[\"\
+    BLUE\"] or C[\"GREEN\"])\n- 2. At the END of the input, display the content of\
+    \ the array for the different tokens.\n\nPlease notice that \"RED\", \"BLUE\"\
+    \ and \"GREEN\" are now handled as character strings in the program (did you see\
+    \ the double quotes around them?) And that's not an issue for AWK since it supports\
+    \ associative arrays. And just like plain variables, uninitialized cells in an\
+    \ AWK array are assumed to be zero for mathematical operators.\n\nAs I explained\
+    \ it before, I made the choice of using AWK. But Perl fans might have a different\
+    \ opinion of the subject. If you're one of them, writing your own solution?\n\n\
+    ## Challenge 12: Inserting the same header on top of several different files\n\
+    \nWhat I tried to achieve?\nThis time I work with several data files and one header\
+    \ file. I just want to insert the content of the header file on top of each data\
+    \ file:\n\n```bash\nyesik:~/ItsFOSS$ head HEADER DATA01\n==> HEADER <=<\n# Month,\
+    \ Year, Est.Value\n\n==> DATA01 <=<\nDec, 2015, 15000\nJan, 2016, 12540\nFeb,\
+    \ 2016, 11970\nyesik:~/ItsFOSS$ cat HEADER DATA01 | tee DATA01\n# Month, Year,\
+    \ Est.Value\n# Month, Year, Est.Value\n```\n\n```bash\nyesik:~/ItsFOSS$ head HEADER\
+    \ DATA01\n==> HEADER <=<\n# Month, Year, Est.Value\n\n==> DATA01 <=<\nDec, 2015,\
+    \ 15000\nJan, 2016, 12540\nFeb, 2016, 11970\n```\n\nFor the sake of the demonstration,\
+    \ I only displayed the content of one file. But you may imagine I have of them\
+    \ — too many for considering manual editing.\n\nI thought I found a solution using\
+    \ the cat command:\n\n```bash\nyesIk:-ItsFOSS$ cat HEADER DATA01 | tee DATA01\n\
+    # Month, Year, Est.Value\n# Month, Year, Est.Value\n```\n\nUnfortunately, for\
+    \ some reason solution didn't work: not only I lost the data but by the header\
+    \ appears twice.\n\nAs you can see, I really need help here — both to explain\
+    \ to me what was going on and to help me in solving this issue.\n\n## The solution\n\
+    \nWhat was the problem?\n\nIn a pipeline, all commands are launched in parallel.\
+    \ That means the cat command reading the DATA01 file and the cat command overwriting\
+    \ that file are launched simultaneously.\n\nThis is really a race condition. On\
+    \ my system, tee had time to overwrite the destination file before cat had the\
+    \ opportunity to read it. To illustrate that, we can delay the commands and see\
+    \ the output is clearly dependent on the timing:\n\n```bash\ncat HEADER DATA01\
+    \ | ( sleep 1; tee DATA01 )\n# Month, Year, Est.Value\nDec, 2015, 15000\nJan,\
+    \ 2016, 12540\nFeb, 2016, 11970\n```\n\n```bash\n(sleep 1; cat HEADER DATA01 )\
+    \ | tee DATA01\n# Month, Year, Est.Value\n```\n\nI would have a similar issue\
+    \ (albeit deterministic this time) using the simpler:\n\n```bash\ncat HEADER DATA01\
+    \ > DATA01\n```\n\nIn that case, the shell always overwrites the destination file\
+    \ before launching the cat command.\nSo the content of the file is lost long before\
+    \ cat had even the opportunity to read it.\n\n## How to fix that?\n\nObviously,\
+    \ no one would even consider using the sleep hack to solve that challenge in a\
+    \ real situation. This is not an issue: part of the standard POSIX tools, we have\
+    \ several commands at our disposal to insert the header on top of a file. Before\
+    \ that, let's take a look at the most basic solution.\n\n## The KISS solution\n\
+    \n```bash\ncat HEADER DATA01 > DATA01.NEW\nmv -f DATA01.NEW DATA01\n```\n\nDo\
+    \ I really need to comment that? Well, while being rudimentary, this solution\
+    \ has a nice feature: since we will use the system rename, which itself is atomic\
+    \ in sense other process referencing the DATA01.\n\n## Using sed\n\nWhile encountering\
+    \ such kind problems, my first idea is often to use sed. It is easy to insert\
+    \ a \"header\" after the first line. Unfortunately, it's much more difficult to\
+    \ insert something before the first line. In fact, to achieve that, we will need\
+    \ a little bit of magic:\n\n```bash\nsed -i '1{\n  r HEADER\nN\n}' DATA01\n```\n\
+    \nTo fully understand, you need to know the {r}read command inserts the content\
+    \ of a file in the destination stream, but only once the current line has ended.\
+    \ That's why I used the (N)next command: it will end the line 1 processing early.e.:\
+    \ before normal line output). So, when encountering that command, sed ends processing\
+    \ of line 1. Which triggers output of the content of the HEADER file. But the\
+    \ line 1 itself is not sent to the output. It is kept in the sed buffer.\n\nThen\
+    \ sed reads the next line of input, append it to the buffer, and as we do not\
+    \ have any rule for line 2, process it as usual by sending its buffer to the output\
+    \ (remember at that stage, the buffer contains both line 1 and line 2).\n\nThis\
+    \ solution has a major drawback: it assumes there is a line 2. If the data file\
+    \ contains only one line, then this will fail miserably.\n\n## Using ed or ex\n\
+    \nWe have very few occasions of using ed or its cousin ex. Both are line oriented\
+    \ editors. Their behavior is very similar to vi in that you load file into memory,\
+    \ and send commands to the editor to modify that file. The only difference here\
+    \ is we will script the commands instead of using them interactively.\n\n```bash\n\
+    DATA01 <<\nr HEADER\nw\n.\nex -s DATA01 <<\nr HEADER\nwq\n.\n```\n\nThis works\
+    \ great, but as we have to load the whole file into memory which could be an issue\
+    \ for very large files.\n\nAs always, those are probably only a subset of all\
+    \ possible solutions. For example, I bet you could find more solutions using AWK\
+    \ or Perl, for example!\n"
+  mdcn: "\n在 Debian 系统中，`sort` 命令会在 `/tmp` 中创建几个具有读写权限的临时文件。基本上，这个解决方案和第一个方案有相同的缺点，但性能差得多。\n\
+    \n## 重复流\n\n我们真的必须在处理数据之前存储它们吗？不需要。一个更聪明的想法是将流分成几部分，在每个子流中处理一种类型的标记（token）：\n\n\
+    ```bash\nstream | tee >(grep -F RED | wc -1 > RED.CNT) \\\n>(grep -F BLUE | wc\
+    \ -1 > BLUE.CNT) \\\n>(grep -F GREEN | wc -1 > GREEN.CNT) \\\n>/dev/null\n\n0.8s\
+    \ for 10,000,000\n```\n\n在这里，没有中间文件。`tee` 命令在数据到达时复制流数据。每个处理单元都获得数据的副本，并可以进行实时处理。这是一个聪明的主意，因为我们不仅在数据到达时处理它们，而且现在实现了并行处理。\n\
+    \n## 在数据到达时处理数据\n\n在计算机科学中，我们可能会说上一个方案对问题采用了函数式方法。另一方面，接下来的方案将是纯命令式的解决方案。在这里，我们将依次读取每个标记，如果这是一个\
+    \ RED 标记，我们就增加 RED 计数器；否则这是一个 BLUE 标记，我们就增加 BLUE 计数器；否则如果这是一个 GREEN 标记，我们就增加 GREEN\
+    \ 计数器。\n\n这是该想法的简单 Bash 实现：\n\n```bash\ndeclare -i RED=0 BLUE=0\nstream | while\
+    \ read TOKEN; do\n  case \"$TOKEN\" in\n    RED) RED+=1\n    ;;\n    BLUE) BLUE+=1\n\
+    \    ;;\n    GREEN) GREEN+=1\n    ;;\n  esac\ndone\n(103.2s for 10,000,000 tokens)\n\
+    ```\n\n最后，作为 `Awk` 命令的忠实粉丝，我无法抵抗使用它来以一种简洁优雅的方式解决这个挑战的诱惑：\n\n```bash\nstream |\
+    \ awk '\n/RED/ { RED++ }\n/BLUE/ { BLUE++ }\n/GREEN/ { GREEN++ }\nEND { printf\
+    \ \"%d %d %d\\n\",RED,BLUE,GREEN }\n'\n(2.6s for 10,000,000 tokens)\n```\n\n我的\
+    \ Awk 程序由四个规则组成：\n\n- 1. 当遇到包含单词 RED 的行时，增加 ((++) RED 计数器\n- 2. 当遇到包含单词 BLUE 的行时，增加\
+    \ BLUE 计数器\n- 3. 当遇到包含单词 GREEN 的行时，增加 GREEN 计数器\n- 4. 在输入结束（END）时，显示所有计数器。\n\n\
+    为了完全理解这一点，我们知道对于数学运算符，未初始化的变量被假设为零。\n\n这效果非常好。但它需要重复相同的规则。在这里我们只有三个不同的标记，所以不是大问题。如果有许多标记，就会更令人麻烦。为了改进这个解决方案，我们可以依赖数组：\n\
+    \n```bash\nstream | awk '\n{ C[0]++ }\nEND { printf \"%d %d %d\\n\",C[\"RED\"\
+    ],C[\"BLUE\"],C[\"GREEN\"] }\n'\n(2.0s for 10,000,000 tokens)\n```\n\n然而，这里只需要两个规则，当标记数量很多时：\n\
+    \n- 1. 无论读取到什么 ($0)，增加对应的数组单元格（这里是 C[\"RED\"]、C[\"BLUE\"] 或 C[\"GREEN\"]）\n- 2.\
+    \ 在输入结束时，显示不同标记的数组内容。\n\n请注意，“RED\"、BLUE\" 和 \"GREEN\" 现在在程序中被作为字符字符串处理（你看到它们周围的双引号了吗？）？这对于\
+    \ AWK 来说不是问题，因为它支持关联数组。和普通变量一样，AWK 数组中未初始化的单元在数学运算符中也被假设为零。\n\n正如我之前解释的那样，我选择了使用\
+    \ AWK。但 Perl 粉丝可能对这个主题有不同意见。如果你是他们之一，会写你自己的解决方案吗？\n\n## 挑战 12：在多个不同的文件顶部插入相同的表头\n\
+    \n我想实现的是什么？\n这次我处理多个数据文件和一个表头文件。我只想将表头内容插入到每个数据文件的顶部：\n\n```bash\nyesik:~/ItsFOSS$\
+    \ head HEADER DATA01\n==> HEADER <=<\n# Month, Year, Est.Value\n\n==> DATA01 <=<\n\
+    Dec, 2015, 15000\nJan, 2016, 12540\nFeb, 2016, 11970\nyesik:~/ItsFOSS$ cat HEADER\
+    \ DATA01 | tee DATA01\n# Month, Year, Est.Value\n# Month, Year, Est.Value\n```\n\
+    \n```bash\nyesik:~/ItsFOSS$ head HEADER DATA01\n==> HEADER <=<\n# Month, Year,\
+    \ Est.Value\n\n==> DATA01 <=<\nDec, 2015, 15000\nJan, 2016, 12540\nFeb, 2016,\
+    \ 11970\n```\n\n为了演示，我只显示了一个文件的内容。但你可以想象我有许多这样的文件——多到无法考虑手动编辑。\n\n我以为我找到了一个使用\
+    \ `cat` 命令的解决方案：\n\n```bash\nyesIk:-ItsFOSS$ cat HEADER DATA01 | tee DATA01\n\
+    # Month, Year, Est.Value\n# Month, Year, Est.Value\n```\n\n遗憾的是，由于某些原因，解决方案没有作用：不仅我丢失了数据，表头还出现了两次。\n\
+    \n如你所见，我在这里需要帮助——既需要有人向我解释发生了什么，也需要帮助我解决这个问题。\n\n## 解决方案\n\n问题所在哪里\n\n在管道中，所有命令都是并行启动的。这意味着读取\
+    \ DATA01 文件的 `cat` 命令和覆盖该文件的 `cat` 命令是同时启动的。\n\n这确实是一个竞态条件。在 `cat` 命令有机会读取文件之前，`tee`\
+    \ 命令就已经覆盖了目标文件。为了说明这一点，我们让命令延迟：\n\n```bash\ncat HEADER DATA01 | sleep 1 | tee\
+    \ DATA01\n# Month, Year, Est.Value\nDec, 2015, 15000\nJan, 2016, 12540\nFeb, 2016,\
+    \ 11970\n```\n\n```bash\nsleep 1 | cat HEADER DATA01 | tee DATA01\n# Month, Year,\
+    \ Est.ValueDec, 2015, 15000\nJan, 2016, 12540\nFeb, 2016, 11970\n```\n\n在这种情况下，`cat`\
+    \ 总是覆盖目标文件，直到 `cat` 命令有机会读取它。\n\n## 如何修复？\n\n显然，没有人会使用 `sleep` 这种技巧来解决这个问题。在 POSIX\
+    \ 工具中，我们有很多命令可以向文件顶部插入表头。在此之前，让我们看看最基础的解决方案。\n\n## KISS 解决方案\n\n```bash\ncat HEADER\
+    \ DATA01 > DATA01.NEW\nmv -f DATA01.NEW DATA01\n```\n\n我需要注释这个吗？嗯，虽然很原始，但这个解决方案有一个优点：由于我们使用了系统重命名，这种操作本身是原子的。\n\
+    \n"
+  merge: 1
+  raw:
+  - "[PAGE 45]\n\nDebian system, the sort command creates several temporary file in\
+    \ /tmp with read-write permissions. Basically this solution has the same drawbacks\
+    \ as the very first one but with much worst performances.\n\n# Duplicate stream\n\
+    \nDo we really have to store the data before processing them? No. A much clever\
+    \ idea would be to split the stream in several parts, processing one kind of token\
+    \ in each sub-stream:\n\n```\nstream | tee >(grep -F RED | wc -1 > RED.CNT) \\\
+    \n>(grep -F BLUE | wc -1 > BLUE.CNT) \\\n>(grep -F GREEN | wc -1 > GREEN.CNT)\
+    \ \\\n>/dev/null\n\n0.8s for 10,000,000\n```\n\nHere, there are no intermediate\
+    \ files. The tee command replicates the stream data as they arrive. Each processing\
+    \ unit gets its own copy of the data, and can process them on the fly. This is\
+    \ a clever idea because not only we handle data as they arrive, but we have now\
+    \ parallel processing.\n\n# Handle data as they arrive\n\nIn computer science,\
+    \ we would probably say the previous solution took a functional approach to the\
+    \ problem. On the other hand, the next ones will be purely an imperative solution.\
+    \ Here, we will read each token in its turn, and if this is a RED token, then\
+    \ we will increment a RED counter, else if this is a BLUE token, we will increment\
+    \ a BLUE counter else if this is a GREEN token, we will increment a GREEN counter.\n\
+    \nThis is a plain Bash implementation of that idea:\n\n```\ndeclare -i RED=0 BLUE=0\n\
+    stream | while read TOKEN; do\n  case \"$TOKEN\" in\n    RED) RED+=1\n    ;;\n\
+    \    BLUE) BLUE+=1\n    ;;\n    GREEN) GREEN+=1\n    ;;\n  esac\ndone\n(103.2s\
+    \ for 10,000,000 tokens)\n```"
+  - '[PAGE 46]
+
+
+    Finally, being a great fan of the Awk command, I will not resist the temptation
+    of using it to solve that challenge in a neat and elegant way:
+
+
+    ```
+
+    stream | awk ''
+
+    /RED/ { RED++ }
+
+    /BLUE/ { BLUE++ }
+
+    /GREEN/ { GREEN++ }
+
+    END { printf "%d %d %d\n",RED,BLUE,GREEN }
+
+
+    (2.6s for 10,000,000 tokens)
+
+    ```
+
+
+    My Awk program is made of four rules:
+
+
+    +   1. When encountering a line containing the word RED, increase ((++) the RED
+    counter
+
+    2. When encountering a line containing the word BLUE, increase the BLUE counter
+
+    3. When encountering a line containing the word GREEN, increase the GREEN counter
+
+    4. At the END of the input, display both counters.
+
+
+    Of course to fully understand that we know, for the purpose of mathematical operators,
+    uninitialized variables are assumed to be zero.
+
+
+    That works great. But it requires duplication of the same rule for. Not a big
+    deal here we have only three different tokens. More annoying if we have many of
+    them. To improve that solution, we can rely on arrays:
+
+
+    ```
+
+    stream | awk ''
+
+    { C[0]++ }
+
+    END { printf "%d %d %d\n",C["RED"],C["BLUE"],C["GREEN"] }
+
+
+    (2.0s for 10,000,000 tokens)
+
+    ```
+
+
+    We only need two rules here, however when the number of tokens:
+
+
+    +   1. Whatever is the read (\$0) increase the corresponding array cell (here,
+    C["RED"],C["BLUE"] or C["GREEN"])
+
+    2. At the END of the input, display the content of the array for the different
+    tokens.
+
+
+    Please notice that "RED", "BLUE" and "GREEN" are now handled as character strings
+    in the program (did you see the double quotes around them?) And that''s not an
+    issue for AWK since it supports associative arrays. And just like plain variables,
+    uninitialized cells in an AWK array are assumed to be zero for mathematical operators.
+
+
+    As I explained it before, I made the choice of using AWK. But Perl fans might
+    have a different opinion of the subject. If you''re one of them, writing your
+    own solution?'
+  - '[PAGE 47]
+
+
+    # # Challenge 12: Inserting the same header on top of several different files
+
+
+    What I tried to achieve?
+
+    This time I work with several data files and one header file. I just want to insert
+    the content of the header file on top of each data file:
+
+
+    ```
+
+    yesik:~/ItsFOSS$ head HEADER DATA01
+
+    ==> HEADER <=<
+
+    # Month, Year, Est.Value
+
+
+    ==> DATA01 <=<
+
+    Dec, 2015, 15000
+
+    Jan, 2016, 12540
+
+    Feb, 2016, 11970
+
+    yesik:~/ItsFOSS$ cat HEADER DATA01 | tee DATA01
+
+    # Month, Year, Est.Value
+
+    # Month, Year, Est.Value
+
+    ```
+
+
+    ```
+
+    yesik:~/ItsFOSS$ head HEADER DATA01
+
+    ==> HEADER <=<
+
+    # Month, Year, Est.Value
+
+
+    ==> DATA01 <=<
+
+    Dec, 2015, 15000
+
+    Jan, 2016, 12540
+
+    Feb, 2016, 11970
+
+    ```'
+  - '[PAGE 48]
+
+
+    For the sake of the demonstration, I only displayed the content of one file. But
+    you may imagine I have of them — too many for considering manual editing.
+
+
+    I thought I found a solution using the cat command:
+
+
+    ```
+
+    yesIk:-ItsFOSS$ cat HEADER DATA01 | tee DATA01
+
+    # Month, Year, Est.Value
+
+    # Month, Year, Est.Value
+
+    ```
+
+
+    Unfortunately, for some reason solution didn''t work: not only I lost the data
+    but by the header appears twice.
+
+
+    As you can see, I really need help here — both to explain to me what was going
+    on and to help me in solving this issue.
+
+
+    # The solution
+
+
+    What was the problem?
+
+
+    In a pipeline, all commands are launched in parallel. That means the cat command
+    reading the DATA01 file and the cat command overwriting that file are launched
+    simultaneously.
+
+
+    This is really a race condition. On my system, tee had time to overwrite the destination
+    file before cat had the opportunity to read it. To illustrate that, we can delay
+    the commands and see the output is clearly dependent on the timing:
+
+
+    ```
+
+    cat HEADER DATA01 | ( sleep 1; tee DATA01 )
+
+    # Month, Year, Est.Value
+
+    Dec, 2015, 15000
+
+    Jan, 2016, 12540
+
+    Feb, 2016, 11970
+
+    ```
+
+
+    ```
+
+    (sleep 1; cat HEADER DATA01 ) | tee DATA01
+
+    # Month, Year, Est.Value
+
+    ```
+
+
+    I would have a similar issue (albeit deterministic this time) using the simpler:
+
+
+    ```
+
+    cat HEADER DATA01 > DATA01
+
+    ```'
+  - "[PAGE 49]\n\nIn that case, the shell always overwrites the destination file before\
+    \ launching the cat command.\nSo the content of the file is lost long before cat\
+    \ had even the opportunity to read it.\n\n# How to fix that?\n\nObviously, no\
+    \ one would even consider using the sleep hack to solve that challenge in a real\
+    \ situation. This is not an issue: part of the standard POSIX tools, we have several\
+    \ commands at our disposal to insert the header on top of a file. Before that,\
+    \ let's take a look at the most basic solution.\n\n# The KISS solution\n\n```\n\
+    cat HEADER DATA01 > DATA01.NEW\nmv -f DATA01.NEW DATA01\n```\n\nDo I really need\
+    \ to comment that? Well, while being rudimentary, this solution has a nice feature:\
+    \ since we will use the system rename, which itself is atomic in sense other process\
+    \ referencing the DATA01 file will either see the old content or the new content—half-written\
+    \ content.\n\nA somewhat similar solution, by avoiding creating a temporary file\
+    \ visible on the filesystem would first obtain a file descriptor to read from\
+    \ the original file before overwriting it:\n\n```\nexec 3DATA01      # (1)\nrm\
+    \ -f DATA01       # (2)\ncat HEADER -&3>DATA01 # (3)\nexec 3-<             # (4)\n\
+    ```\n\n+   1. Open the file DATA01 for using the file descriptor 3;\n2. Unlink\
+    \ the original file (i.e.: remove its directory entry, but not the data since\
+    \ the file is still open);\n3. Use cat to read the first header, followed by a\
+    \ stdin read from descriptor 3 and to a new DATA01 file;\n4. Close the file descriptor\
+    \ 3. This will effectively delete the old DATA01 content.\n\n note this solution\
+    \ is not atomic in the sense described above. Anyways, Kudos to [Adithya Kiran\
+    \ Gangu](https://github.com/adithyakirangangu) for having suggested me that solution!\n\
+    \n# Using sed\n\nWhile encountering such kind of problems, my first idea is often\
+    \ to use sed. It is easy to insert a \"header\" after the first line using sed.\
+    \ Unfortunately, it's much more difficult to insert something before the first\
+    \ line. In fact, to achieve that, we will need a little bit of magic:"
+  - "[PAGE 50]\n\n```\nsed -i '1{\n  r HEADER\nN\n}' DATA01\n```\n\nTo fully understand,\
+    \ you need to know the {r}read command inserts the content of a file in the destination\
+    \ stream, but only once the current line processing has ended. That's why I used\
+    \ the (N)ext command: it will end the line 1 processing earlyi.e.: before normal\
+    \ line output). So, when encountering that command, sed ends processing of line\
+    \ 1. Which triggers output of the content of the HEADER file. But the line 1 itself\
+    \ is not sent to the output. It is kept in the sed buffer.\n\nThen sed reads the\
+    \ next line of input, append it to the buffer, and as we do not have any rule\
+    \ for line 2, process it as usual by sending its buffer to the output (remember\
+    \ at that stage, the buffer contains *both line 1 and line 2*).\n\nThis solution\
+    \ has a major drawback: it assumes *there is* a line 2. If the data file contains\
+    \ only one line, then this will fail miserably.\n\nUsing ed or ex\n\nWe have very\
+    \ few occasions of using ed or its cousin ex. Both are line oriented editors.\
+    \ Their behavior is very similar to *vi* in that you load file into memory, and\
+    \ send commands to the editor to modify that file. The only difference here is\
+    \ we will script the commands instead of using them interactively.\n\n```\nDATA01\
+    \ <<\nr HEADER\nw\n.\nex -s DATA01 <<\nr HEADER\nwq\n.\n```\n\nThis works great,\
+    \ but as we have to load the whole file into memory which could be an issue for\
+    \ very large files.\n\nAs always, those are probably only a subset of all possible\
+    \ solutions. For example, I bet you could find more solutions using AWK or Perl,\
+    \ for example!"
+- md: "\n# Challenge 13: Converting text to uppercase\n\n## What I tried to achieve?\n\
+    \nI have some text file containing twice the same sentence, once written in English\
+    \ and once written French:\n\n```\nyesik.it:~/ItsFOSS$ cat text\nThis text should\
+    \ be written in all\nercase letters!\n\nCe text doit être affiché uniquement\n\
+    en lettres majuscules!\n```\n\nI need to display the content of that file in all\
+    \ uppcases. Do you have any idea how I could perform that task? I mean without\
+    \ having retype all the text...\n\n## The solution\n\nThe canonical tool to perform\
+    \ character substitution is tr, which stands for transliteration. The tr command\
+    \ takes two arguments: the source alphabet and the destination alphabet. And it\
+    \ performs a one-to-one mapping from the former to the latter.\n\n```\nyesik.it:~/ItsFOSS$\
+    \ tr '[a-z]' '[A-Z]' < text\nTHIS TEXT SHOULD BE WRITTEN IN ALL\nUPPERCASE LETTERS!\n\
+    \nCE TEXT DOIT AFFICHÉ UNIQUEMENT\nEN LETRES MAJUSCULES!\n```\n\nThis worked.\
+    \ But only for the US-ASCII letters. The accentuated letter, and any letter outside\
+    \ the US-ASCII range were not translated.\n\nIf you have some experience in using\
+    \ the regular expression, you may be tempted to use character classes instead\
+    \ of an explicit range:\n\n> ³ The 'tr' command does not use regular expression.\
+    \ But it accepts a syntax similar to character ranges to specify the source and\
+    \ destination alphabets. For example, the syntax [a-z] is a shorthand for abcghijklmnopqrstuvwxyz\n\
+    \nyesik.it:~/ItsFOSS$ tr '[:lower:]' '[:upper:]' < text\nTHIS TEXT SHOULD BE WRITTEN\
+    \ IN ALL\nUPPERCASE LETTERS!\n\nCE TEXT DOIT être AFFICHÉ UNIQUEMENT\nEN LETRES\
+    \ MAJUSCLES!\n\nUnfortunately this doesn't work better. A solution would be to\
+    \ explicitly add the mapping for the required characters:\n\nyesik.it:~/ItsFOSS$\
+    \ tr 'é[a-z]' 'ÉÉ[A-Z]' < text\nTHIS TEXT SHOULD BE WRITTEN IN ALL\nUPPERCASE\
+    \ LETTERS!\n\nCE TEXT DOIT ÊTRE AFFICHÉ UNIQUEMENT\nEN LETRES MAJUSCLES!\n\nThis\
+    \ time, it works, but this is tedious. Especially if you don't know in advance\
+    \ the set of letters that will be present in the text file. Surprisingly, the\
+    \ Bash is much better suited than the tr command to change the character case:\n\
+    \n```\nyesik.it:~/ItsFOSS$ while read; do\n    echo ${REPLY^^}\n  done < text\n\
+    \nTHIS TEXT SHOULD BE WRITTEN IN ALL\nUPPERCASE LETTERS!\n\nCE TEXT DOIT ÊTRE\
+    \ AFFICHÉ UNIQUEMENT\nEN LETRES MAJUSCLES!\n```\n\nIn that code, the while loop\
+    \ simply read the input file line by line. The Bash read command by default store\
+    \ the value into the REPLY variable. And I just have to echo that variable, by\
+    \ using the special ${var^^} notation that will expand the content of a variable\
+    \ but letters converted to uppercase.\n\nAs an exercise, I you experiment with\
+    \ the ${var,,} parameter expansion which works the same, but converting to lowercase\
+    \ rather than uppercase.\n\n# Challenge 14: The Back in Time Function\n\n## What\
+    \ I tried to achieve?\n\nThis time, I want a shell function to display the date\
+    \ and time it two hours ago. The function output must follow the YYYY-MM-DD hh:mm\
+    \ format.\n\nI came to a solution using simple shell arithmetics:\n\n```\nminus-two-hours()\
+    \ {\n  date -d \"$1\" +%F %H:%M\" | \\\n  IFS=\":\" read -a COMP\n  echo \"${COMP[0]}\
+    \ $((${10#${COMP[1]}-2)):${COMP[2]}\"\n}\n```\n\nAs you noticed, the function\
+    \ takes a date as an argument, parse it, and write back that date minus two hours.\
+    \ Unfortunately, the result is far from satisfying as the expected format is not\
+    \ always respected and I even have negative hours sometimes:\n\n```\nyesik.it:~/ItsFOSS$\
+    \ minus-two-hours now\n2016-11-22 20:55\nyesik.it:~/ItsFOSS$ minus-two-hours \"\
+    2016/11/21 05:27:18\"\n2016-11-21 3:27\nyesik.it:~/ItsFOSS$ minus-two-hours \"\
+    2016/11/21 01:10:42\"\n2016-11-21 -1:10\n```\n\nCould you help me finding a solution\
+    \ to obtain the desired result?\n\n# The solution\n\nWhat was the problem arithmetic\
+    \ is much more complicated than one might expect. I strongly discourage you from\
+    \ taking the path I used in my initial attempt: never do date and time calculations\
+    \ by yourself. If you really need an argument to convince you, think for example\
+    \ about issues with daylight saving time.\n\nThat being said, which options do\
+    \ we still have? Any decent programming language should have some facilities to\
+    \ deal with time specific issues. Here we are using the Bash, and we have to rely\
+    \ on the date tool for that purpose.\n\n# How to fix that?\n\nConverting date\
+    \ to quantities\n\nWhen faced with similar problems, the typical solution will\
+    \ be to convert the (human readable) date and time to some numeric quantity.\n\
+    \nUsually, we convert dates to a number of seconds (or milliseconds) since some\
+    \ reference time. Having that numeric quantity, we can now use classic arithmetics\
+    \ to add or subtract hours. Finally, we convert it back to date format.\n\nIn\
+    \ practice, on Unix, the reference time is 1970-01-01 00:00:00 UTC. So we convert\
+    \ the date to seconds, subtract the number of seconds, and then convert back to\
+    \ date format.\n\n```bash\nminus-two-hours() {\n  local seconds=$(date -d \"$1\"\
+    \ +%s)\n  local new_seconds=$((seconds - 7200))\n  date -d \"@$new_seconds\" +\"\
+    %F %H:%M\"\n}\n```\n\nWait, the solution above is for GNU date. On macOS (BSD\
+    \ date), you need to use a different syntax:\n\n```bash\nminus-two-hours \"2016/11/21\
+    \ 05:27:18\"\n2016-11-21 3:27\n```\n\n# Challenge 15: My Bash don't know to count\n\
+    \n## What I tried to achieve?\n\nI just want to add the first and last integer\
+    \ stored in some file.\n\n```\nyesik.it:001$ cat sample.data\n1 2 3\nyesik.it:002$\
+    \ cut -d' ' -f1,3 sample.data | read X Z\nyesik.it:003$ echo $X\n1\nyesik.it:004$\
+    \ echo $((X+Z))\n0\n```\n\nThe result displayed by my shell is 0 (zero). Come\
+    \ on: 1+3 is 4, not 0. Is it broken?\n\n## The solution\n\nKudos to Riccardo Bernard\
+    \ for a great explanation of the \"problem\": line 2 is executed by starting subprocesses.\
+    \ Therefore, read is not run in the shell, but in a subshell and sets variables\
+    \ in subshell. When line 3 is executed, we are back in the parent shell—where\
+    \ variables were never modified. Notice this is different in zsh.\n\nTo fix this,\
+    \ you can use process substitution or a here string:\n\n```bash\nread X Z < <(cut\
+    \ -d' ' -f1,3 sample.data)\necho $((X+Z))\n4\n```\n\nor\n\n```bash\nread X Z <<<\
+    \ \"$(cut -d' ' -f1,3 sample.data)\"\necho $((X+Z))\n4\n```\n\nFinally worth mentioning\
+    \ the Bash in necessary the best solution for that kind of problem. A simple AwK\
+    \ program may do the work much better—especially since the implied loop allows\
+    \ you to handle with exactly the same program file containing one row and a file\
+    \ containing thousands of them:\n\n```bash\nawk '{ print $1+$3 }' sample.data\n\
+    ```\n"
+  mdcn: "\n\n# 挑战 13：将文本转换为大写\n\n## 我尝试实现什么？\n\n我有一个文本文件，里面包含了两次相同的句子，一次用英语写，另一次用法语写：\n\
+    \n```\nyesik.it:~/ItsFOSS$ cat text\nThis text should be written in all\nercase\
+    \ letters!\n\nCe text doit être affiché uniquement\nen lettres majuscules!\n```\n\
+    \n我需要全大写地显示该文件的内容。你有什么想法可以完成这个任务吗？我的意思是在不需要重新输入所有文本的情况下……\n\n## 解决方案\n\n执行字符替换的标准工具是\
+    \ `tr`，它是 transliteration（转写）。`tr` 命令接受两个参数：源字母表和目标字母表。它执行从前者到后者的一一映射。\n\n```\n\
+    yesik.it:~/ItsFOSS$ tr '[a-z]' '[A-Z]' < text\nTHIS TEXT SHOULD BE WRITTEN IN\
+    \ ALL\nUPPERCASE LETTERS!\n\nCE TEXT DOIT AFFICHÉ UNIQUEMENT\nEN LETRES MAJUSCULES!\n\
+    ```\n\n这有效。但只适用于 US-ASCII 字母。带重音的字母以及任何 US-ASCII 范围外的字母都没有被转换。\n\n如果你有使用正则表达式的经验，你可能想使用字符类而不是显式范围：\n\
+    \n> ³ 'tr' 命令不使用正则表达式。但它接受一种类似于字符范围的语法来指定源和目标字母表。例如，语法 `[a-z]` 是 `abcghijklmnopqrstuvwxyz`\
+    \ 的简写。\n\n```yesik.it:~/ItsFOSS$ tr '[:lower:]' '[:upper:]' < text\nTHIS TEXT\
+    \ SHOULD BE WRITTEN IN ALL\nUPPERCASE LETTERS!\n\nCE TEXT DOIT être AFFICHÉ UNIQUEMENT\n\
+    EN LETRES MAJUSCLES!\n```\n\n遗憾的是这效果并不更好。解决方案是显式地添加所需字符的映射：\n\nyesik.it:~/ItsFOSS$\
+    \ tr 'é[a-z]' 'ÉÉ[A-Z]' < text\nTHIS TEXT SHOULD BE WRITTEN IN ALL\nUPPERCASE\
+    \ LETTERS!\n\nCE TEXT DOIT ÊTRE AFFICHÉ UNIQUEMENT\nEN LETRES MAJUSCLES!\n\n```\n\
+    \n这次成功了，但这很枯燥。特别是当你预先不知道文本文件中会出现哪些字母时。惊讶的是，Bash 比 `tr` 命令更适合更改字符大小：\n\n```\nyesik.it:~/ItsFOSS$\
+    \ while read; do\n    echo ${REPLY^^}\n  done < text\n\nTHIS TEXT SHOULD BE WRITTEN\
+    \ IN ALL\nUPPERCASE LETTERS!\n\nCE TEXT DOIT ÊTRE AFFICHÉ UNIQUEMENT\nEN LETRES\
+    \ MAJUSCLES!\n```\n\n在代码代码中，`while` 循环只是逐行读取输入文件。Bash `read` 命令默认将值存储在 `REPLY`\
+    \ 变量中。我只需要使用特殊的 `${var^^}` 符号来输出该变量，它会展开变量的内容并将字母转换为大写。\n\n作为一个练习，你可以尝试一下 `${var,,}`\
+    \ 参数扩展，它的工作原理相同，但是转换为小写而不是大写。\n\n# 挑战 14：两小时前的函数\n\n## 我尝试实现什么？\n\n这次，我想让一个 shell\
+    \ 函数显示两个小时前的日期和时间。函数的输出必须遵循 `YYYY-MM-DD hh:mm` 格式。\n\n我使用简单的 shell 算术得到了解决方案：\n\
+    \n```bash\nminus-two-hours() {\n  date -d \"$1\" +%F %H:%M\" | \\\n  IFS=\":\"\
+    \ read -a COMP\n  echo \"${COMP[0]} $((${10#${COMP[1]}-2)):${COMP[2]}\"\n}\n```\n\
+    \n正如你所看到的，该函数接受一个日期作为参数，解析它，并写回去两小时后的日期。遗憾的是，结果远不如意，因为并不总是遵循预期格式，我有时甚至得到负的小时：\n\
+    \n```\nyesik.it:~/ItsFOSS$ minus-two-hours now\n2016-11-22 20:55\nyesik.it:~/ItsFOSS$\
+    \ minus-two-hours \"2016/11/21 05:27:18\"\n2016-11-21 3:27\nyesik.it:~/ItsFOSS$\
+    \ minus-two-hours \"2016/11/21 01:10:42\"\n2016-11-21 -1:10\n```\n\n能帮我找到一个获得预期结果的解决方案吗？\n\
+    \n# 解决方案\n\n算术问题比人们想象的要复杂得多。我强烈建议不要采取我最初尝试时使用的路径：永远不要自己进行日期时间计算。如果你真的需要一个理由来来说服你，可以考虑一下夏令时的问题。\n\
+    \n尽管如此，我们还有哪些选择？任何优良的编程语言都应该具有处理特定时间问题的功能。在这里我们使用的是 Bash，我们必须依靠 `date` 工具来实现这一目的。\n\
+    \n# 如何修复？\n\n将日期转换为数量\n\n当遇到类似的问题时，典型的解决方案是将（人类可读的）日期和时间转换为某些数值数量。\n\n通常，我们将日期转换为自某个参考时间以来的秒数（或毫秒）。有了这个数值，我们现在可以使用经典的算术来加或减小时。最后，我们将其转换回日期格式。\n\
+    \n在实践中，Unix 上的参考时间是 1970-01-01 00:00:00 UTC。因此我们将日期转换为秒，减去秒数，然后转换回日期格式。\n\n```bash\n\
+    minus-two-hours() {\n  local seconds=$(date -d \"$1\" +%s)\n  local new_seconds=$((seconds\
+    \ - 7200))\n  date -d \"@$new_seconds\" +\"%F %H:%M\"\n}\n```\n\n等等，上面的解决方案适用于\
+    \ GNU date。在 macOS (BSD date) 上，你需要不同的语法：\n\n```bash\nminus-two-hours \"2016/11/21\
+    \ 05:27:18\"\n2016-11-21 3:27\n```\n\n# 挑战 15：我的 Bash 不会计数\n\n## 我尝试实现什么？\n\n\
+    我只想相加文件中存储的和最后一个整数。\n\n```\nyesik.it:001$ cat sample.data\n1 2 3\nyesik.it:002$\
+    \ cut -d' ' -f1,3 sample.data | read X Z\nyesik.it:003$ echo $X\n1\nyesik.it:004$\
+    \ echo $((X+Z))\n0\n```\n\n我的 shell 显示的结果是 0（零）。拜托，1+3 是 4，不是 0。坏了吗？\n\n## 解决方案\n\
+    \n感谢 Riccardo Bernard 对这个“问题”的精彩解释：第 2 行通过启动子进程执行。因此，`read` 不是在 shell 中运行，而是在子壳中运行并设置子壳变量。当执行第\
+    \ 3 行时，我们回到了父 shell——这里的变量从未被修改。注意这在 zsh 中是不同的。\n\n要修复这个问题，可以使用进程替换或此处字符串（here\
+    \ string）：\n\n```bash\nread X Z < <(cut -d' ' -f1,3 sample.data)\necho $((X+Z))\n\
+    4\n```\n\n或者\n\n```bash\nread X Z <<< \"$(cut -d' ' -f1,3 sample.data)\"\necho\
+    \ $((X+Z))\n4\n```\n\n最后值得提到 Bash并不是这类问题的最佳解决方案。一个简单的 AwK 程序可能会做得更好——特别是由于隐含循环允许你用完全相同的程序处理包含一行的文件和包含数千行的文件：\n\
+    \n```bash\nawk '{ print $1+$3 }' sample.data\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 51]
+
+
+    # # Challenge 13: Converting text to uppercase
+
+
+    # ## What I tried to achieve?
+
+
+    I have some text file containing twice the same sentence, once written in English
+    and once written French:
+
+
+    ```
+
+    yesik.it:~/ItsFOSS$ cat text
+
+    This text should be written in all
+
+    ercase letters!
+
+
+    Ce text doit être affiché uniquement
+
+    en lettres majuscules!
+
+    ```
+
+
+    I need to display the content of that file in all uppcases. Do you have any idea
+    how I could perform that task? I mean without having retype all the text...
+
+
+    # ## The solution
+
+
+    The canonical tool to perform character substitution is tr-- stands for transliteration.
+    The tr command takes two arguments: the source alphabet and the destination alphabet.
+    And it performs a one-to-one mapping from the former to the latter.
+
+
+    ```
+
+    yesik.it:~/ItsFOSS$ tr ''[a-z]'' ''[A-Z]'' < text
+
+    THIS TEXT SHOULD BE WRITTEN IN ALL
+
+    UPPERCASE LETTERS!
+
+
+    CE TEXT DOIT AFFICHÉ UNIQUEMENT
+
+    EN LETRES MAJUSCULES!
+
+    ```
+
+
+    This worked. But only for the US-ASCII letters. The accentuated letter, and any
+    letter outside the US-ASCII range were not translated.
+
+
+    If you have some experience in using the regular expression, you may be tempted
+    to use character classes instead of an explicit range:
+
+
+    > ³ The ''tr'' command does not use regular expression. But it accepts a syntax
+    similar to character ranges to specify the source and destination alphabets. For
+    example, the syntax [a-z] is a shorthand for abcghijklmnopqrstuvwxyz'
+  - "[PAGE 52]\n\nyesik.it:~/ItsFOSS$ tr '[:lower:]' '[:upper:]' < text\nTHIS TEXT\
+    \ SHOULD BE WRITTEN IN ALL\nUPPERCASE LETTERS!\n\nCE TEXT DOIT être AFFICHÉ UNIQUEMENT\n\
+    EN LETRES MAJUSCLES!\n\nUnfortunately this doesn't work better. A solution would\
+    \ be to explicitly add the mapping for the required characters:\n\nyesik.it:~/ItsFOSS$\
+    \ tr 'é[a-z]' 'ÉÉ[A-Z]' < text\nTHIS TEXT SHOULD BE WRITTEN IN ALL\nUPPERCASE\
+    \ LETTERS!\n\nCE TEXT DOIT ÊTRE AFFICHÉ UNIQUEMENT\nEN LETRES MAJUSCLES!\n\nThis\
+    \ time, it works, but this is tedious. Especially if you don't know in advance\
+    \ the set of letters that will be present in the text file. Surprisingly, the\
+    \ Bash is much better suited than the tr command to change the character case:\n\
+    \n```\nyesik.it:~/ItsFOSS$ while read; do\n    echo ${REPLY^^}\n  done < text\n\
+    \nTHIS TEXT SHOULD BE WRITTEN IN ALL\nUPPERCASE LETTERS!\n```\n\nCE TEXT DOIT\
+    \ ÊTRE AFFICHÉ UNIQUEMENT\nEN LETRES MAJUSCLES!\n\nIn that code, the while loop\
+    \ simply read the input file line by line. The Bash read command by default store\
+    \ the value into the REPLY variable. And I just have to echo that variable, by\
+    \ using the special ${var^^} notation that will expand the content of a variable\
+    \ but letters converted to uppercase.\n\nAs an exercise, I you experiment with\
+    \ the ${var,,} parameter expansion which works the same, but converting to lowercase\
+    \ rather than uppercase."
+  - "[PAGE 53]\n\n# Challenge 14: The Back in Time Function\n\nWhat I tried to achieve?\n\
+    \nThis time, I want a shell function to display the date and time it two hours\
+    \ ago. The function output must follow the YYYY-MM-DD hh:mm format.\n\nI came\
+    \ to a solution using simple shell arithmetics:\n\n```\nminus-two-hours() {\n\
+    \  date -d \"$1\" +%F %H:%M\" | \\\n  IFS=\":\" read -a COMP\n  echo \"${COMP[0]}\
+    \ $((${10#${COMP[1]}-2)):${COMP[2]}\"\n}\n```\n\nAs you noticed, the function\
+    \ takes a date as an argument, parse it, and write back that date minus two hours.\
+    \ Unfortunately, the result is far from satisfying as the expected format is not\
+    \ always respected and I even have negative hours sometimes:\n\n```\nyesik.it:~/ItsFOSS$\
+    \ minus-two-hours now\n2016-11-22 20:55\nyesik.it:~/ItsFOSS$ minus-two-hours \"\
+    2016/11/21 05:27:18\"\n2016-11-21 3:27\nyesik.it:~/ItsFOSS$ minus-two-hours \"\
+    2016/11/21 01:10:42\"\n2016-11-21 -1:10\n```\n\nCould you help me finding a solution\
+    \ to obtain the desired result?"
+  - '[PAGE 54]
+
+
+    # The solution
+
+
+    What was the problem arithmetic is much more complicated than one might expect.
+    I strongly discourage you from taking the path I used in my initial attempt: never
+    do date and time calculations by yourself. If you really need an argument to convince
+    you, think for example about issues with daylight saving time.
+
+
+    That being said, which options do we still have? Any decent programming language
+    should have some facilities to deal with time specific issues. Here we are using
+    the Bash, and we have to rely on the date tool for that purpose.
+
+
+    # How to fix that?
+
+
+    Converting date to quantities
+
+
+    When faced with similar problems, the typical solution will be to convert the
+    (human readable) date and time to some numeric *quantity*.
+
+
+    Usually, we convert dates to a number of seconds (or milliseconds) since some
+    reference time. Having that numeric quantity, we can now use classic arithmetics
+    to add or remove homogeneous quantities (say never 7200s — that is 2×60×60s —
+    to obtain the date it was hours ago). Finally, using the same facilities as in
+    the initial step, we can convert back the result to a date-time format.
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_54_0.png)'
+  - "[PAGE 55]\n\nIn practice, in Unix-systems, the reference date is usually 00:00:00\
+    \ UTC on 1 January 1970—sometimes known as %s Epoch⁴. The date utility does provide:\n\
+    \n+   - the %s specifier to convert a date to the number of seconds since the\
+    \ Epoch\n- and @@ symbol to specify an input date is expressed as a number of\
+    \ seconds since the Epoch (BSD) will use the -r option for that\n\nSo here is\
+    \ a possible solution to your:\n\n```\nminus-two-hours() {\n  # 1. Convert to\
+    \ number of seconds since Unix Epoch\n  SRC=$(date -d \"1\" +%s)\n  # 2. Remove\
+    \ two hours (expressed as a number of seconds)\n  DST=$((SRC-2*60))\n  # 3. Display\
+    \ the result using the required format\n  date -d \"$DST\" +\"%F %H:%M\"\n}\n\
+    ```\n\nUsing the mighty powers of GNU date utils\n\nThe solution above highly\
+    \ portable—even beyond the limits of shell programming.\n\nBut when using date\
+    \ as we do on Linux for example, we have access to a whole world of subtleties\
+    \ to express the date. In particular, you can simply write that:\n\n```\nminus-two-hours()\
+    \ {\n  date -d \"$1 2 hours ago\" +\"%F %H:%M\"\n}\n```\n\n\"2 hours ago\" is\
+    \ part of the date specification and is understood by GNU date as a way to say\
+    \ \"remove two hours to the previous date\".\n\nAs you can see, when portability\
+    \ is not a concern, it worth taking the time to explore a little bit your specific\
+    \ tools documentation as they may contain hidden gems!\n\n> ⁴I always wondered\
+    \ if the Apoc character name in Matrix was related to that. In \"French English\"\
+    \ both are pronounced the same..."
+  - '[PAGE 56]
+
+
+    # # Level 3
+
+
+    # ## Bash challenge'
+  - '[PAGE 57]
+
+
+    # Challenge 15: My Bash don''t know how to count.
+
+    Again!
+
+
+    # What I tried to achieve?
+
+
+    I just want to add the first and last integer stored in some data file. So I typed
+    that at my Bashnprompt:
+
+
+    ```
+
+    yesik:001$ cat sample.data
+
+    1 2 3
+
+    yesik:002$ cut -d'' '' -f1,3 sample.data | read X Z
+
+    yesik:003$ echo $((X+Z))
+
+    0
+
+    ```
+
+
+    The result displayed by my shell is 0 (zero). C''mon Bash: 1+3 is 4, not 0.
+
+    My bash don''t know how to count! Is it broken?
+
+
+    # The solution
+
+
+    # What was the problem?
+
+
+    Kudos to It''s FOSS reader Riccardo Bernard for a great explanation of the "problem":
+
+
+    > the line [2] is executed by starting the two sides of ''['' in subprocesses.
+    Therefore, read is
+
+    not run in the shell, but in a subprocess and sets the variables in the subshell.
+
+
+    Indeed, you can only change the content of the current shell. You cannot change
+
+    t content of a parent shell''s variable. So since the data are read here in a
+    sub-process, only
+
+    t sub-process environment was changed. When line [3] is executed, we are back
+    in the parent
+
+    shell—where variables were never modified. Notice this is different in zsh.
+
+
+    # How to fix that?
+
+
+    There is several way to fix the problem. All of them require we read the data
+    in the same shell as
+
+    t one that will perform calculations.'
+  - '[PAGE 58]
+
+
+    A simple solution would be to completely discard the cut command, and read the
+    data using a simple redirection:
+
+
+    ```
+
+    yesik:002$ read X Y Z < sample.data
+
+    ```
+
+
+    If you really want to read the output of some external command though, you may
+    use a process redirection instead:
+
+
+    ```
+
+    yesik:002$ read X Z <<($cut -d'' '' -f1,3 sample.data)
+
+    ```
+
+
+    ...or a here string:
+
+
+    ```
+
+    yesik:002$ read X Z <<<($cut -d'' '' -f1,3 sample.data)
+
+    ```
+
+
+    Finally worth mentioning the Bash in necessary the best solution for that kind
+    of problem. A simple AwK program may do the work much better—especially since
+    the implied loop allows you to handle with exactly the same program file containing
+    one row and a file containing thousands of them:
+
+
+    ```
+
+    yesik:002$ awk ''{ print $1+$3 }'' sample.data
+
+    ```
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_58_0.png)'
+- md: '
+
+    [/content]
+
+    # Challenge 16: Sending a file between two computers
+
+
+    ## What I tried to achieve?
+
+
+    I have two computers connected on the same local network. Their respective IPv4
+    addresses are 192.168.10.10 and 192.168.10.11.
+
+
+    I want to send a file from 192.168.10.10 to 192.168.10.11. How can I do that,
+    knowing they do not have access to any kind of file sharing service and none of
+    them has remote terminal facilities like ssh or telnet enabled.
+
+
+    All you may assume here you can ping them from each other and you have access
+    to a terminal running Bash on each host. You should not assume root access to
+    any of the hosts.
+
+
+    Obviously, using a removable media like a USB pen drive would be a solution. But
+    I''ve forgotten my pen drive at home. And it''s late Sunday, so all shops are
+    closed. Anyway, I want a network-based solution!
+
+
+    ## The solution
+
+
+    ### What was the problem?
+
+
+    The challenge here is to find a solution to open some kind of network communication
+    channel between the hosts. And then copy a file from the source host to the destination
+    host through that channel.
+
+
+    That''s the kind of solution that will be used under the hood by a tool like scp.
+    Or rsync in client/server mode. But I assumed in the challenge description those
+    facilities were not available.
+
+
+    So, I have to find a way to create communication by myself. The traditional tool
+    for ad-hoc connections is netcat (or nc as it may be spelled in your distribution)
+    There are chances netcat was installed as part of standard Linux installation.
+    So let''s start using that program—unless your administrator removed it
+
+
+    ## Introducing netcat
+
+
+    Note: if you don''t have access to two different computers on the same network,
+    you can still experiment by testing from two different terminals on your computer
+    and using localhost instead of both IP addresses.
+
+
+    In order to use netcat to transfer data between two hosts, you may start two different
+    instances of the tool. One each host.
+
+
+    The first instance will open a port and wait for incoming requests. It is more
+    straightforward to op the listener on the destination host. This is what I will
+    do:
+
+
+    ```bash
+
+    # On the destination host
+
+    192.168.10.11$ netcat -l 1234
+
+    ```
+
+
+    With this command, netcat will open the port 1234 (an arbitrary number) and wait
+    for an incoming connection (option -l for "listen")
+
+
+    On the source host, we will use netcat too, but this time to connect to the remote
+    host and port we''ve just opened:
+
+
+    ```bash
+
+    # On the source host
+
+    192.168.10.10$ echo hello | netcat 192.168.10.11 1234
+
+    ```
+
+
+    Press enter and the "hello" message will be displayed on the destination host.
+
+
+    What has happened here can be summarized in the following few steps:
+
+
+    1. The destination netcat has opened the port 1234 for incoming connections
+
+    2. The source netcat has established the connection to the destination host 192.168.10.11
+    port 1234
+
+    3. The source netcat then started to read from its standard input and to send
+    the data through the connection established previously
+
+    4. The destination netcat displayed on its standard output the data received from
+    the connection.
+
+    5. At some point, the source netcat detected there was no more data to read and
+    closed the connection (the exact behavior when encountering EOF is controlled
+    by the -N option)
+
+    6. The destination netcat detected the connection has closed and has terminated
+    too.
+
+
+    Once you know that, transferring a file can be achieved using some simple redirection:
+
+
+    ```bash
+
+    # On the destination host
+
+    192.168.10.11$ netcat -l 1234 > my.file
+
+    ```
+
+
+    ```bash
+
+    # On the source host
+
+    192.168.10.10$ netcat 192.168.10.11 1234 < my.file
+
+    ```
+
+
+    ## Replacing the client netcat by the Bash
+
+
+    Unfortunately, we can''t solve that challenge using only the Bash since it is
+    not able to open a server socket (the "listener" part of the communication channel).
+    But the Bash may act as a client to connect to an existing server socket. So,
+    server-side, we will use exactly the same command as above:
+
+
+    ```bash
+
+    # On the destination host
+
+    192.168.10.11$ netcat -l 1234
+
+    ```
+
+
+    client-side, we no longer need netcat:
+
+
+    ```bash
+
+    # On the source host
+
+    192.168.10.11$ echo hello > /dev/tcp/192.168.10.11/1234
+
+    ```
+
+
+    In that case, the shell redirection to /dev/tcp/... will handle under the hood
+    the connection to the remote host just like netcat did it previously.
+
+
+    By the way, no need to search in /dev for the tcp device. It does not really exist.
+    It is simply a magic filename the Bash handle specifically. That means you can
+    only use those special filenames in redirections.
+
+
+    Despite limitations, the Bash /dev/tcp/... pseudo-devices can be remarkably useful,
+    for testing purposes or to diagnose network issues. To conclude on that topic,
+    I can''t resist showing you some use case.
+
+    '
+  mdcn: '
+
+    # 挑战 16：在两台电脑之间发送文件
+
+
+    ## 我想实现什么？
+
+
+    我有两台连接在同一个局域网上的电脑。它们的 IPv4 地址分别为 192.168.10.10 和 192.168.10.11。
+
+
+    我想从 192.168.10.10 发送一个文件到 192.168.10.11。在已知它们没有任何文件共享服务的访问权限，且任何一个都没有启用如 ssh 或
+    telnet 等远程终端功能的情况下，我该如何做？
+
+
+    你可以假设它们之间可以互相 `ping`，并且你可以在每台主机上访问一个运行着 Bash 的终端。你不应该假设自己对任何一台主机拥有 root 权限。
+
+
+    显然，使用 USB U 盘等可移动存储介质是一种解决方案。但我把 U 盘留在家里了。而且现在是周日晚上，所有的商店都关门了。无论如何，我想寻求基于网络的解决方案！
+
+
+    ## 解决方案
+
+
+    ### 问题是什么？
+
+
+    这里的挑战在于找到一种在主机之间开启某种网络通信通道的解决方案。然后通过该通道将文件从源主机拷贝到目标主机。
+
+
+    这就是像 `scp` 或客户端/服务器模式下的 `rsync` 等工具在底层使用的解决方案。但在挑战描述中，我假设这些功能不可用。
+
+
+    所以，我必须找到一种自己创建通信的方法。即时连接的传统工具是 `netcat`（在你的发行版中可能称为 `nc`）。netcat 有可能作为标准 Linux
+    安装的一部分被安装。所以让我们开始使用该程序吧——除非你的管理员删除了它。
+
+
+    ## 介绍 netcat
+
+
+    注意：如果你无法访问同一网络上的两台不同的电脑，你仍然可以通过在电脑上的两个不同终端进行实验，并使用 `localhost` 代替两个 IP 地址。
+
+
+    为了使用 netcat 在两个主机之间传输数据，你可能启动该工具的两个实例。每台主机一个。
+
+
+    第一个实例将打开一个端口并等待传入的请求。在目标主机上开启监听器更为直观。这就是我将做的：
+
+
+    ```bash
+
+    # 在目标主机上
+
+    192.168.10.11$ netcat -l 1234
+
+    ```
+
+
+    通过这条命令，netcat 将打开端口 1234（任意数字）并等待传入的连接（选项 `-l` 表示 "listen"）。
+
+
+    在源主机上，我们也将使用 netcat，但这次是为了连接到我们刚刚打开的远程主机和端口：
+
+
+    ```bash
+
+    # 在源主机上
+
+    192.168.10.10$ echo hello | netcat 192.168.10.11 1234
+
+    ```
+
+
+    按回车键，“hello”消息将显示在目标主机上。
+
+
+    这里发生的情况可以总结为以下几步：
+
+
+    1. 目标 netcat 已打开了端口 1234 等待传入连接。
+
+    2. 源 netcat 建立了到目标主机 192.168.10.11 端口 1234 的连接。
+
+    3. 然后源 netcat 开始从其标准输入读取数据，并通过之前建立的连接发送数据。
+
+    4. 目标 netcat 在其标准输出上显示了从连接接收到的数据。
+
+    5. 在某一点，源 netcat 检测到没有更多数据可读并关闭了连接（遇到 EOF 的确切行为由 `-N` 选项控制）。
+
+    6. 目标 netcat 检测到连接已关闭并随之终止。
+
+
+    一旦你了解了这些，可以使用简单的重定向来实现文件传输：
+
+
+    ```bash
+
+    # 在目标主机上
+
+    192.168.10.11$ netcat -l 1234 > my.file
+
+    ```
+
+
+    ```bash
+
+    # 在源主机上
+
+    192.168.10.10$ netcat 192.168.10.11 1234 < my.file
+
+    ```
+
+
+    ## 用 Bash 替换客户端 netcat
+
+
+    遗憾的是，我们无法仅使用 Bash 解决挑战，因为它无法开启服务器 socket（通信通道的“监听”部分）。但 Bash 可以作为客户端连接到现有的服务器
+    socket。所以，在服务端，我们将使用与上面完全相同的命令：
+
+
+    ```bash
+
+    # 在目标主机上
+
+    192.168.10.11$ netcat -l 1234
+
+    ```
+
+
+    在客户端，我们不再需要 netcat 了：
+
+
+    ```bash
+
+    # 在源主机上
+
+    192.168.10.11$ echo hello > /dev/tcp/192.168.10.11/1234
+
+    ```
+
+
+    在这种情况下，shell 重定向到 `/dev/tcp/...` 将在底层处理到远程主机的连接，就像之前 netcat 执行的那样。
+
+
+    顺便说一下，不需要在 `/dev` 中寻找 tcp 设备。它并不真实存在。它只是一个 Bash 特殊处理的魔法文件名。这意味着你只能在重定向中使用这些特殊文件名。
+
+
+    尽管有局限性，Bash 的 `/dev/tcp/...` 伪设备在测试目的或诊断网络问题时非常有用。在这个话题结束之际，我忍不住想向你展示一些用例。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 59]
+
+
+    # Challenge 16: Sending a file between two computers
+
+
+    # What I tried to achieve?
+
+
+    I have two computers connected on the same local network. Their respective IPv4
+    addresses are 192.168.10.10 and 192.168.10.11.
+
+
+    I want to send a file from 192.168.10.10 to 192.168.10.11. How can I do that,
+    knowing they do not have access to any kind of file sharing service and none of
+    them has remote terminal facilities like ssh or telnet enabled.
+
+
+    All you may assume here you can ping them from each other and you have access
+    to a terminal running Bash on each host. You should not assume root access to
+    any of the hosts.
+
+
+    Obviously, using a removable media like a USB pen drive would be a solution. But
+    I''ve forgotten my pen drive at home. And it''s late Sunday, so all shops are
+    closed. Anyway, I want a network-based solution!
+
+
+    # The solution
+
+
+    # What was the problem?
+
+
+    The challenge here is to find a solution to open some kind of network communication
+    channel between the hosts. And then copy a file from the source host to the destination
+    host through that channel.
+
+
+    That''s the kind of solution that will be used under the hood by a tool like scp.
+    Or rsync in client/server mode. But I assumed in the challenge description those
+    facilities were not available.
+
+
+    So, I have to find a way to create communication by myself. The traditional tool
+    for ad-hoc connections is netcat (or nc as it may be spelled in your distribution)
+    There are chances netcat was installed as part of standard Linux installation.
+    So let''s start using that program—unless your administrator removed it
+
+
+    # Introducing netcat
+
+
+    Note: if you don''t have access to two different computers on the same network,
+    you can still experiment by testing from two different terminals on your computer
+    and using localhost instead of both IP addresses.'
+  - '[PAGE 60]
+
+
+    In order to use netcat to transfer data between two hosts, you may start two different
+    instances
+
+    of the tool. One each host.
+
+
+    The first instance will open a port and wait for incoming requests. It is more
+    straightforward to
+
+    op the listener on the destination host. This is what I will do:
+
+
+    ```
+
+    # On the destination host
+
+    192.168.10.11$ netcat -l 1234
+
+    ```
+
+
+    With this command, netcat will open the port 1234 (an arbitrary number) and wait
+    for an
+
+    incoming connection (option -1 for "listen")
+
+
+    On the source host, we will use netcat too, but this time to connect to the remote
+    host and port
+
+    we''ve just opened:
+
+
+    ```
+
+    # On the source host
+
+    192.168.10.10$ echo hello | netcat 192.168.10.11 1234
+
+    ```
+
+
+    Press enter and the "hello" message will be displayed on the destination host.
+
+
+    What has happened here can be summarized in the following few steps:
+
+
+    +   1. The destination netcat has opened the port 1234 for incoming connections
+
+    2. The source netcat has established the connection to the destination host
+
+    192.168.10.11 port 1234
+
+    3. The source netcat then started to read from its standard input and to send
+    the data
+
+    through the connection established previously
+
+    4. The destination netcat displayed on its standard output the data received from
+    the
+
+    connection.
+
+    5. At some point, the source netcat detected there was no more data to read and
+    closed
+
+    the connection (the exact behavior when encountering EOF is controlled by the
+    -N
+
+    option)
+
+    6. The destination netcat detected the connection has closed and has terminated
+    too.'
+  - '[PAGE 61]
+
+
+    Once you know that, transferring a file can be achieved using some simple redirection:
+
+
+    ```
+
+    # On the destination host
+
+    192.168.10.11$ netcat -l 1234 > my.file
+
+    ```
+
+
+    ```
+
+    # On the source host
+
+    192.168.10.10$ netcat 192.168.10.11 1234 < my.file
+
+    ```
+
+
+    # Replacing the client netcat by the Bash
+
+
+    Unfortunately, we can''t solve that challenge using only the Bash since it is
+    not able to open a server socket (the "listener" part of the communication channel).
+    But the Bash may act as a client to connect to an existing server socket. So,
+    server-side, we will use exactly the same command as above:
+
+
+    ```
+
+    # On the destination host
+
+    192.168.10.11$ netcat -1 1234
+
+    ```
+
+
+    client-side, we no longer need netcat:
+
+
+    ```
+
+    # On the source host
+
+    192.168.10.11$ echo hello > /dev/tcp/192.168.10.11/1234
+
+    ```
+
+
+    In that case, the shell redirection to /dev/tcp/... will handle under the hood
+    the connection to the remote host just like netcat did it previously.
+
+
+    By the way, no need to search in /dev for the tcp device. It does not really exist.
+    It is simply a magic filename the Bash handle specifically. That means you can
+    only use those special filenames in redirections.'
+  - '[PAGE 62]
+
+
+    Despite limitations, the Bash /dev/tcp/... pseudo-devices can be remarkably useful,
+    for testing purposes or to diagnose network issues. To conclude on that topic,
+    I can''t resist showing you some fun use case. I let up to you to do the necessary
+    researches to understand the details:
+
+
+    ```
+
+    # Open a connection with a remote web server
+
+    exec 3<> /dev/tcp/httpbin.org/80
+
+
+    # send a HTTP GET request
+
+    awk -v OS=$''\r\n'' ''{print}'' >&3 << EOT
+
+    GET /ip HTTP/1.1
+
+    host: httpbin.org
+
+    connection: close
+
+
+    EOT
+
+    # (the line above EOT must be empty. i.e. not even containing spaces)
+
+
+    # display the server''s reply
+
+    cat <3-
+
+    ```
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_62_0.png)'
+  - "[PAGE 63]\n\n# Challenge 17: Generate a fair dice roll\n\nWhat I tried to achieve?\n\
+    \nI'm starting to write a text adventure game in the purest tradition of the Colossal\
+    \ Cave Adventure or Zork. But written in Bash.\n\nFor that game, I need a way\
+    \ to generate fair 6-faced dice rolls. Of course, I do not need a \"cryptographically\
+    \ strong pseudorandom number generator\". But, on the other hand, the following\
+    \ solution in probably not satisfying either:\n\n```\nint getRandomNumber() {\n\
+    \    return 4; // chosen by fair dice roll.\n    // guaranteed to be random.\n\
+    }\n```\n\n(from https://xkcd.com/221/ by the xkcd author some reserved.)\n\nCould\
+    \ you help me in generating a random number in the 1-6 range, each result being\
+    \ equally probable?\n\n# The solution\n\nWhat was the problem?\n\nIf you only\
+    \ had to know the $RANDOM Bash variable to produce pseudo-random numbers, this\
+    \ challenge would have probably been put into the \"Level 2\" section. But there\
+    \ is a subtle pitfall involved here. What was it? Let's examine a wrong solution\
+    \ to discover that:\n\n```\n# This does NOT solve the challenge\ngetRandomNumber()\
+    \ {\n    echo $((RANDOM%6+1));\n}\n```\n\nI repeat: this does not solve the challenge,\
+    \ despite the fact by repeatedly calling that you obtain pseudorandom numbers\
+    \ in the 1-6 range."
+  - '[PAGE 64]
+
+
+    So what as wrong with that?
+
+
+    Simple: the outcome is **not** fair.
+
+
+    # What was the problem, really?
+
+
+    The Bash random function returns a pseudo-random integer between 0 and 32767.
+    That is $2^{15}$ possibilities. In the above function, I used the modulo operator
+    (%) to map that range into the 0-5 range. But this mapping can only maintain equiprobability
+    if the destination range is an integer divisor of the original range size.
+
+
+    Simply said, in our case, since the cardinality of the original range is a power
+    of two, you can only have equiprobable results if you map to another set whose
+    size is a power of two itself. Something 6 isn''t.
+
+
+    As this is a little bit hard to explain with words, here is a graphical representation
+    of the mapping from the 0-15 range ($2^4$ items) to the 0-5 range:
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_64_0.png)
+
+
+    It is quite obvious in the above graph there are **greater** chances of obtaining
+    an outcome in the 0-3 range rather than in the 4-5 range. As an exercise I let
+    you produce the same graph for N in the 0-32767 range if you want, you will discover
+    a similar issue.'
+  - '[PAGE 65]
+
+
+    Knowing that, a solution you might end up with is the following one:
+
+
+    ```
+
+    # This does NOT solve the challenge
+
+    getRandomNumber() {
+
+    echo $((RANDOM%2+RANDOM%2+RANDOM%2+RANDOM%2+1));
+
+    }
+
+    ```
+
+
+    There is some logic here: I said if you used a power of two in the modulo operator
+    you will have fair results. 2 is a power of two. And %2 will produce either 0
+    or 1. Adding five times a number between 0 and 1 will produce a result between
+    0 and 5. However:
+
+
+    ```
+
+    # Gather some statistical data
+
+    for ((i=0; i < 500000; ++i))
+
+    do
+
+    getRandomNumber
+
+    done | sort | uniq -c
+
+
+    15531 1
+
+    78134 2
+
+    155880 3
+
+    156604 4
+
+    78184 5
+
+    15667 6
+
+    ```
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_65_0.png)'
+- md: "\nIt is quite obvious the result is not fair. In fact, you can recognize the\
+    \ typical shape of a normal distribution:\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_66_0.png)\n\
+    \n# How to fix that?\n\nThe solution is to consider the modulo operator leads\
+    \ to a fair solution, but only in a subset of the original range. For example,\
+    \ if the original range is 0-15, and the destination range is 0-5, for input values\
+    \ in the 0-11 range, the modulo will produce an output as *fair* as the input.\
+    \ The problem lies for input values in the 12-15 range. This is *exactly* what\
+    \ is illustrated in my initial graph.\n\nA trick is then simply to ignore values\
+    \ in the problematic range, and take another value if the random generator produced\
+    \ such value. All that leading to:\n\n```bash\n# This DO solve the challenge\n\
+    getRandomNumber() {\n  N=$RANDOM\n\n  while ((N>=32768/6*6))\n  do\n    # N is\
+    \ in the problematic range. Take another value:\n    N=$RANDOM\n  done\n\n  echo\
+    \ $((N%6+1));\n}\n```\n\nThree remarks to conclude that challenge:\n\n- 32768/6*6\
+    \ is not the same as 32768*6/6. Can you tell why?\n- With this solution, there\
+    \ is an infinitesimal chance the getRandomNumber will *never* return.\n- And of\
+    \ course, all that demonstration is based on the premise the $RANDOM pseudo-variable\
+    \ produces fair results. But does it *really*?\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_67_0.png)\n\
+    \n# Afterword\n\nIf you reached that point you probably probably took all the\
+    \ challenges. Well, most of them. Or perhaps just a few?\n\nIn any cases, CON-GRA-TU-LA-TIONS!\
+    \ Solving even only one single challenge requires time and efforts. Since we learn\
+    \ more by trials and errors rather than by succeeding at the first try, there\
+    \ are chances you learned more than just the challenge's solution in that process.\
+    \ And hopefully, you had fun while doing that.\n\nWait a minute, you had fun.\
+    \ Don't you?\n\nI couldn't conclude that book without a word for the readers that\
+    \ will find a solution for all the challenges. If that's your case, you are truly\
+    \ A-MA-ZING. Either because you already had an extended knowledge of the subject\
+    \ or because of your efforts, you are Bash gurus! And you should definitely consider\
+    \ sharing and spreading your wisdom. Why not joining the Facebook Linux User Group\
+    \ (https://www.facebook.com/groups/8222867478719993)?\n\nFinally, you learned\
+    \ a lot of ticks and pitfalls about the Bash here. But this book can't replace\
+    \ a proper course on the topic. If you want to support your new knowledge by strong\
+    \ foundations, you may enjoy my Bash and Linux Command Line Course (https://yes.it/BSH101/BASH-CHALLENGE-2017).\
+    \ By following that link you will get a special discount for the readers of this\
+    \ book!\n\nLove. Enjoy. Learn.\nSylvain Leroux\n"
+  mdcn: "\n显而易见的结果是不公平的。事实上，你可以识别出正态分布的典型形状：\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_66_0.png)\n\
+    \n# 如何修复？\n\n解决方案是考虑取模运算符可以得到公平的解决方案，但仅限于原始范围的一个子集。例如，如果原始范围是 0-15，而目标范围是 0-5，那么对于\
+    \ 0-11 范围内的输入值，取模产生的输出与输入一样*公平*。问题出在 12-15 范围内的输入值。这*恰好*就是我最初图表所所示的。\n\n那么，技巧就是简单地忽略问题范围内的值，如果随机生成器产生了这样的值，则取另一个值。这导致了：\n\
+    \n```bash\n# 这确实可以解决挑战\ngetRandomNumber() {\n  N=$RANDOM\n\n  while ((N>=32768/6*6))\n\
+    \  do\n    # N 处于问题范围内。取另一个值：\n    N=$RANDOM\n  done\n\n  echo $((N%6+1));\n}\n\
+    ```\n\n结束该挑战的三个备注：\n\n- 32768/6*6 不同于 32768*6/6。你能知道为什么吗？\n- 使用了这种解决方案，有极小的概率导致\
+    \ `getRandomNumber` *永远*不会返回。\n- 当然，所有的演示都是基于 $RANDOM 伪变量产生公平结果这一前提。但它*真的*可以这样吗？\n\
+    \n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_67_0.png)\n\n# 后记\n\n如果你读到了这里，说明你可能已经完成了所有的挑战。嗯，是其中的大部分。或者只是少数几个？\n\
+    \n无论如何，恭喜你！即使只解决了一个挑战，也需要时间和精力。由于我们通过试错学到的东西比第一次尝试成功学到的更多，因此在这个过程中，你可能学到的不仅仅是挑战的解决方案。希望你在过程中玩得很开心。\n\
+    \n等一下，你玩得很开心。不是吗？\n\n如果没有向为所有挑战找到解决方案的读者说几句话，我就无法结束这本书。如果是你的话，你真的太棒了。无论是因为你已经对该主题有了广泛的知识，还是因为你的努力，你都是\
+    \ Bash 大师了！你绝对应该考虑分享和传播你的智慧。为什么不加入 Facebook Linux User Group（https://www.facebook.com/groups/8222867478719993）呢？\n\
+    \n最后，你在这里学习了很多关于 Bash 的技巧和陷阱。但这本书不能取代关于该主题的课程。如果你想通过坚实的基础来巩你的新知识，可能会喜欢我的 Bash\
+    \ 和 Linux 命令行课程（https://yes.it/BSH101/BASH-CHALLENGE-2017）。点击该链接，你将获得本书读者的专属折扣！\n\
+    \n爱。享受。学习。\nSylvain Leroux\n"
+  merge: 0
+  raw:
+  - "[PAGE 66]\n\nIt is quite obvious the result is not fair. In fact, you can recognize\
+    \ the typical shape of a normal distribution:\n\n![](img/8f6bf8024f58c92982eb49d5f91a7bf7_66_0.png)\n\
+    \n# How to fix that?\n\nThe solution is to consider the modulo operator leads\
+    \ to a fair solution, but only in a subset of the original range. For example,\
+    \ if the original range is 0-15, and the destination range is 0-5, for input values\
+    \ in the 0-11 range, the modulo will produce an output as *fair* as the input.\
+    \ The problem lies for input values in the 12-15 range. This is *exactly* was\
+    \ is illustrated in my initial graph.\n\nA trick is then simply to ignore values\
+    \ in the problematic range, and take another value if the random generator produced\
+    \ such value. All that leading to:\n\n```\n# This DO solve the challenge\ngetRandomNumber()\
+    \ {\n  N=$RANDOM\n\n  while ((N>=32768/6*6))\n  do\n    # N is in the problematic\
+    \ range. Take another value:\n    N=$RANDOM\n  done\n\n  echo $((N%6+1));\n}\n\
+    ```"
+  - '[PAGE 67]
+
+
+    Three remarks to conclude that challenge:
+
+
+    +   - 32768/6*6 is not the same as 32768*6/6. Can you tell why?
+
+    - With this solution, there is an infinitesimal chance the getRandomNumber will
+    *never* return.
+
+    - And of course, all that demonstration is based on the premise the $RANDOM pseudo-variable
+    produces fair results. But does it *really*?
+
+
+    ![](img/8f6bf8024f58c92982eb49d5f91a7bf7_67_0.png)'
+  - '[PAGE 68]
+
+
+    # Afterword
+
+
+    If you reached that point you probably probably took all the challenges. Well,
+    most of them. Or perhaps just a few?
+
+
+    In any cases, CON-GRA-TU-LA-TIONS! Solving even only one single challenge requires
+    time and efforts. Since we learn more by trials and errors rather than by succeeding
+    at the first try, there are chances you learned more than just the challenge''s
+    solution in that process. And hopefully, you had fun while doing that.
+
+
+    Wait a minute, you had fun. Don''t you?
+
+
+    I couldn''t conclude that book without a word for the readers that will find a
+    solution for all the challenges. If that''s your case, you are truly A-MA-ZING.
+    Either because you already had an extended knowledge of the subject or because
+    of your efforts, you are Bash gurus! And you should definitely consider sharing
+    and spreading your wisdom. Why not joining the Facebook Linux User Group (https://www.facebook.com/groups/8222867478719993)?
+
+
+    Finally, you learned a lot of ticks and pitfalls about the Bash here. But this
+    book can''t replace a proper course on the topic. If you want to support your
+    new knowledge by strong foundations, you may enjoy my Bash and Linux Command Line
+    Course (https://yes.it/BSH101/BASH-CHALLENGE-2017). By following that link you
+    will get a special discount for the readers of this book!
+
+
+    Love. Enjoy. Learn.
+
+    Sylvain Leroux'
+  - '[PAGE 69]
+
+
+    <!-- no content -->'
