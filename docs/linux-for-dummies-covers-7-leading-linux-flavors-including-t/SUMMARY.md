@@ -1,0 +1,2 @@
++   [Linux 初学者指南：[涵盖 7 种主流 Linux 发行版，包括新的 Ubuntu 发行版]；[附完整 Fedora Core 和 Knoppix DVD 光盘]](README.md)
++   [Linux 初学者指南：[涵盖 7 种主流 Linux 发行版，包括新的 Ubuntu 发行版]；[附完整 Fedora Core 和 Knoppix DVD 光盘]](linux-for-dummies-covers-7-leading-linux-flavors-including-t.md)
