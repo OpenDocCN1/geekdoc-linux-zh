@@ -1,0 +1,2 @@
++   [SUSE Linux 9.3 初学者指南：[我们的参考指南！；dummies.com 免费小贴士；附带 SUSE Linux 9.3 特别版 DVD](README.md)
++   [SUSE Linux 9.3 初学者指南：[我们的参考指南！；dummies.com 免费小贴士；附带 SUSE Linux 9.3 特别版 DVD](suse-linux-93-for-dummies-a-reference-for-the-rest-of-us-fre.md)
