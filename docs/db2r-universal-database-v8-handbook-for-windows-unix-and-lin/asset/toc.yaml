@@ -1,0 +1,1118 @@
+- - '#'
+  - 前言
+- - '#'
+  - 刷新包缓存
+- - '#'
+  - 缓存
+- - '#'
+  - 外部 UDF 和方法中的 SQL
+- - '#'
+  - CALL 语句
+- - '#'
+  - 开发中心
+- - '#'
+  - SQL 增强
+- - '#'
+  - 总结
+- - '#'
+  - 第 2 章
+- - '##'
+  - DB2 v8 产品概述与架构
+- - '##'
+  - 企业服务器版 (ESE)
+- - '###'
+  - 数据库分区功能 (DPF)
+- - '##'
+  - DB2 工作组服务器版 (WSE)
+- - '##'
+  - 工作组服务器无限制版 (WSUE)
+- - '##'
+  - DB2 个人版 (PE)
+- - '##'
+  - DB2 通用开发者版 (UDE)
+- - '##'
+  - DB2 个人开发者版 (PDE)
+- - '##'
+  - DB2 仓库管理器
+- - '##'
+  - DB2 智能挖掘机
+- - '##'
+  - DB2 空间扩展器
+- - '##'
+  - DB2 搜索版
+- - '##'
+  - 新客户端
+- - '###'
+  - 表 2.1 DB2 64位支持
+- - '##'
+  - DB2 架构
+- - '###'
+  - 表 2.2 客户端兼容性
+- - '###'
+  - 表 2.3 UNIX 上 DB2 进程部分列表
+- - '###'
+  - 表 2.3 DB2 AIX 进程
+- - '###'
+  - 表 2.3 DB2 AIX 进程（续）
+- - '##'
+  - 协调代理 (db2agent)
+- - '##'
+  - 子代理 (db2agentp)
+- - '##'
+  - 缓冲池 (BUFFERPOOLS)
+- - '##'
+  - 预取 (db2pfchr)
+- - '##'
+  - 页面清理器 (db2pclnr)
+- - '##'
+  - 日志 (db2loggr)
+- - '##'
+  - 死锁检测器 (DEADLOCK DETECTOR)
+- - '##'
+  - 连接集中器 (CONNECTION CONCENTRATOR)
+- - '##'
+  - 总结
+- - '##'
+  - 防火墙
+- - '#'
+  - 第 3 章 逻辑与物理设计
+- - '##'
+  - 业务模型 (BUSINESS MODEL)
+- - '##'
+  - 业务实体
+- - '##'
+  - 业务规则
+- - '##'
+  - 实体与关系
+- - '###'
+  - 实体
+- - '###'
+  - 关系
+- - '###'
+  - 候选键
+- - '###'
+  - 主键
+- - '###'
+  - 关系
+- - '###'
+  - 外键
+- - '###'
+  - 基数
+- - '###'
+  - 函数依赖
+- - '##'
+  - 键 (Key)
+- - '##'
+  - 第一范式 (FIRST NORMAL FORM)
+- - '##'
+  - 第二范式 (Second Normal Form)
+- - '##'
+  - 第二范式 (SECOND NORMAL FORM)
+- - '##'
+  - 域定义
+- - '###'
+  - 关系与键定义
+- - '##'
+  - 统一建模语言 (UML)
+- - '##'
+  - 逻辑设计输出
+- - '##'
+  - 物理设计
+- - '##'
+  - 反归一化
+- - '##'
+  - 创建索引
+- - '##'
+  - 创建表空间和表
+- - '##'
+  - 表空间拆分策略
+- - '##'
+  - 缓冲池策略
+- - '##'
+  - 总结
+- - '#'
+  - 第 4 章 应用开发
+- - '##'
+  - 入门
+- - '##'
+  - DB2 管理客户端
+- - '##'
+  - DB2 应用开发客户端
+- - '##'
+  - DB2 个人开发者版 (PDE)
+- - '##'
+  - DB2 通用开发者版
+- - '##'
+  - DB2 开发中心
+- - '##'
+  - DB2 可视化解释 (VISUAL EXPLAIN)
+- - '##'
+  - 数据库连接向导 - 示例
+- - '##'
+  - 图 4.16
+- - '##'
+  - 图 4.17
+- - '##'
+  - DB2 帮助 - Microsoft Explorer
+- - '##'
+  - Java 安全过程
+- - '##'
+  - Java 客户端
+- - '##'
+  - SQL 改进
+- - '##'
+  - 全局表 (DGTT) 改进
+- - '##'
+  - SQL 助手
+- - '##'
+  - 替代性触发器 (Instead Of Triggers)
+- - '##'
+  - 新内置函数
+- - '##'
+  - 信息性约束 (INFORMATIONAL CONSTRAINTS)
+- - '##'
+  - 通过 UNION ALL 视图进行插入 (INSERT THROUGH UNION ALL VIEWS)
+- - '##'
+  - 摘要表 (SUMMARY TABLES)
+- - '##'
+  - 当前刷新年龄特殊寄存器 (CURRENT REFRESH AGE SPECIAL REGISTER)
+- - '##'
+  - 物化查询表 (MATERIALIZED QUERY TABLE, (MQT))
+- - '##'
+  - 用户维护的 MQT (USER-MAINTAINED MQTS)
+- - '##'
+  - 可扩展标记语言 (XML)
+- - '##'
+  - 总结
+- - '#'
+  - 第 5 章 类型2 索引与多维聚类
+- - '##'
+  - 类型2 索引的优势
+- - '##'
+  - 类型2 索引与后续键锁
+- - '##'
+  - 类型2 索引的迁移考虑
+- - '##'
+  - 类型2 索引的建议迁移策略
+- - '##'
+  - 多维聚类
+- - '##'
+  - YearAndMonth, Region 上的复合块索引
+- - '##'
+  - Key值 BID 列表
+- - '##'
+  - MDC 表注意事项
+- - '##'
+  - 总结
+- - '#'
+  - 第 6 章 性能表空间设计与 I/O 策略
+- - '##'
+  - 存储模型
+- - '###'
+  - 表
+- - '###'
+  - 系统管理
+- - '###'
+  - 数据库空间
+- - '##'
+  - 表格与表空间量
+- - '###'
+  - I/O 请求的周期
+- - '###'
+  - I/O 请求的周期
+- - '##'
+  - 调用操作系统
+- - '##'
+  - 独立磁盘阵 (RAID)
+- - '##'
+  - RAID 级别
+- - '##'
+  - RAID-5
+- - '###'
+  - 表空间容器
+- - '###'
+  - 表空间管理
+- - '##'
+  - 企业级存储系统 (ESS)
+- - '##'
+  - DB2 与 ESS
+- - '##'
+  - 术语
+- - '##'
+  - 缓存管理
+- - '##'
+  - 非易性存储
+- - '##'
+  - 最佳性能
+- - '##'
+  - DB2 IBM 企业级存储系统 (ESS SHARK)
+- - '##'
+  - 内容
+- - '##'
+  - 数据库映射
+- - '##'
+  - 维护映射
+- - '##'
+  - 存储专家
+- - '##'
+  - I/O 瓶颈
+- - '##'
+  - 掌握数据库映射
+- - '##'
+  - PCI 总线
+- - '##'
+  - PCI Express (Arapoe, 3G)
+- - '##'
+  - PCI-X
+- - '##'
+  - 链路速度
+- - '#'
+  - 第 7 章 工具与命令
+- - '##'
+  - 重组索引/表
+- - '###'
+  - INPLACE
+- - '###'
+  - USE tablespace-name
+- - '###'
+  - INDEXSCAN
+- - '###'
+  - LONGLOBDATA
+- - '###'
+  - REORG 工具
+- - '###'
+  - UPDATE STATISTICS
+- - '###'
+  - CURRENT STATISTICS
+- - '##'
+  - 数据库向前滚 (Roll-forward Database)
+- - '###'
+  - 实用指南与异常
+- - '##'
+  - 数据库向前滚
+- - '##'
+  - 范围
+- - '##'
+  - 权限
+- - '##'
+  - 命令参数
+- - '##'
+  - USER username
+- - '##'
+  - USING password
+- - '##'
+  - TO isotime
+- - '##'
+  - USING LOCAL TIME
+- - '##'
+  - 注意事项
+- - '##'
+  - 日志结束
+- - '##'
+  - ALL DEPARTITIONNUMS
+- - '##'
+  - EXCEPTION
+- - '##'
+  - ON DEPARTITIONNUM/ON DEPARTITIONNUMS
+- - '###'
+  - db-partition-number1
+- - '###'
+  - db-partition-number2
+- - '##'
+  - COMPLETE/STOP
+- - '##'
+  - CANCEL
+- - '##'
+  - 查询状态
+- - '##'
+  - 数据库分区数量
+- - '##'
+  - 滚向前状态
+- - '##'
+  - 下一个要读取的日志文件
+- - '##'
+  - 已处理的日志文件
+- - '##'
+  - 最后一次提交的事务
+- - '##'
+  - 表空间
+- - '##'
+  - 表空间名称
+- - '##'
+  - ONLINE
+- - '##'
+  - OVERFLOW LOG PATH log-directory
+- - '##'
+  - Log-directory ON DBPARTITIONUM
+- - '##'
+  - NORETRIEVE
+- - '##'
+  - RECOVER DROPPED TABLE drop-table-id
+- - '##'
+  - TO export-directory
+- - '##'
+  - 示例
+- - '##'
+  - ARCHIVE LOG 命令
+- - '##'
+  - 命令参数
+- - '##'
+  - Archive Log 归档日志命令
+- - '##'
+  - 实用程序指南与异常
+- - '##'
+  - 兼容性
+- - '##'
+  - LIST HISTORY
+- - '##'
+  - 权限
+- - '##'
+  - 命令参数
+- - '##'
+  - 备份实用
+- - '##'
+  - 备份类型
+- - '##'
+  - 离线
+- - '##'
+  - 命令参数
+- - '##'
+  - DATABASE
+- - '##'
+  - USER
+- - '##'
+  - USING
+- - '##'
+  - TO
+- - '##'
+  - ONLINE
+- - '##'
+  - INCREMENTAL
+- - '##'
+  - DELTA
+- - '##'
+  - USE TSM
+- - '##'
+  - OPEN
+- - '##'
+  - 并行 (PARALLELISM)
+- - '##'
+  - 无提示 (WITHOUT PROMPTING)
+- - '##'
+  - 还原实用程序 (RESTORE DATABASE UTILITY)
+- - '##'
+  - 数据向导 (Feature Data Wizard)
+- - '##'
+  - 范围 (Scope)
+- - '##'
+  - 权限 (Authorization)
+- - '##'
+  - 需要的连接 (Required connections)
+- - '##'
+  - 命令参数 (Command Parameters)
+- - '##'
+  - 继续 (CONTINUE)
+- - '##'
+  - 终止 (ABORT)
+- - '##'
+  - 用户 (USER username)
+- - '##'
+  - 使用密码 (USING password)
+- - '##'
+  - 表空间 (TABLESPACE tablespace-name)
+- - '##'
+  - 历史文件 (HISTORY FILE)
+- - '##'
+  - 增量 (INCREMENTAL)
+- - '##'
+  - 增量自动 (INCREMENTAL AUTOMATIC/AUTO)
+- - '##'
+  - 增量终止 (INCREMENTAL ABORT)
+- - '##'
+  - 使用 TSM (USE TSM)
+- - '##'
+  - 打开会话 (OPEN num-sessions SESSIONS)
+- - '##'
+  - 使用 XBSA (USE XBSA)
+- - '##'
+  - LOAD shared-library
+- - '##'
+  - TAKEN date-time
+- - '##'
+  - TO target-directory
+- - '##'
+  - INTO target-database-alias
+- - '##'
+  - NEWLOGPATH directory
+- - '##'
+  - WITH num-buffers
+- - '##'
+  - BUFFER buffer-size
+- - '##'
+  - DLREPORT filename
+- - '##'
+  - REPLACE EXISTING
+- - '##'
+  - REDIRECT
+- - '##'
+  - WITHOUT ROLLING FORWARD
+- - '##'
+  - WITHOUT DATALINK
+- - '##'
+  - PARALLELISM n
+- - '##'
+  - Examples
+- - '##'
+  - Examples
+- - '#'
+  - 第 8 章 调整缓冲区池
+- - '##'
+  - 表空间活动
+- - '##'
+  - 将表空间分配给缓冲池：通用概念
+- - '##'
+  - 优缓冲池分配
+- - '##'
+  - 缓冲池定价
+- - '##'
+  - 预取 I/O 的特殊考虑
+- - '##'
+  - 总结
+- - '##'
+  - 配置参数
+- - '#'
+  - 第 9 章 配置调优
+- - '##'
+  - 自主计算 (AUTOMIC COMPUTING)
+- - '##'
+  - 在线配置参数
+- - '##'
+  - 在线配置参数 (ONLINE CONFIGURATION PARAMETERS)
+- - '##'
+  - DB2 内存区域
+- - '##'
+  - 数据库管理器共享内存
+- - '##'
+  - 数据库管理器共享内存 (DATABASE MANAGER SHARED MEMORY)
+- - '##'
+  - 全局块 (Global Block)
+- - '##'
+  - 数据库全局内存 (Database Global Memory)
+- - '##'
+  - 应用程序全局内存 (Application Global Memory)
+- - '##'
+  - 代理私有内存 (Agent Private Memory)
+- - '##'
+  - 数据库管理器内存 (Database Manager Memory)
+- - '##'
+  - 实例内存 (instance_memory)
+- - '##'
+  - 监控堆 (mon_heap_sz)
+- - '##'
+  - 审计缓冲区 (audit_buf_sz)
+- - '##'
+  - 组堆比例 (group_heap_ratio)
+- - '##'
+  - 排序堆排序阈值 (Sort Heap Threshold for Sorts)
+- - '##'
+  - FCM 连接项 (fcm_num_connect)
+- - '##'
+  - FCM 消息锚 (fcm_num_anchors)
+- - '##'
+  - FCM 请求块 (fcm_num_rqdb)
+- - '##'
+  - FCM 缓冲区池 (FCM Bufferpool)
+- - '##'
+  - FCM 缓冲区 (fcm_num_buffers)
+- - '##'
+  - FCM 控制块 (FCM Control Block)
+- - '##'
+  - Java 堆内存 (java_heap_sz)
+- - '##'
+  - 数据库内存 (database_memory)
+- - '##'
+  - 数据库全局内存 (DATABASE GLOBAL MEMORY)
+- - '##'
+  - 实用程序堆 (util_heap_sz)
+- - '##'
+  - 备份缓冲区 (backbufsz)
+- - '##'
+  - 恢复缓冲区 (restbufsz)
+- - '##'
+  - 包缓存大小 (pckcachesz)
+- - '##'
+  - 数据库全局内存 (Database Global Memory)
+- - '##'
+  - 缓冲区池大小 (bufferpage)
+- - '##'
+  - 扩展内存缓存 (Extended Memory Cache)
+- - '#'
+  - 第 10 章 监控
+- - '##'
+  - 监控
+- - '##'
+  - 启用监控
+- - '##'
+  - 监控记录开关
+- - '##'
+  - 示例 10.1
+- - '##'
+  - 表 10.2 常用快照命令
+- - '##'
+  - 示例 10.2 数据库管理器快照
+- - '##'
+  - 示例 10.2 数据库管理器快照（续）
+- - '##'
+  - 数据库管理器快照
+- - '##'
+  - 表 10.3 关键数据库管理器快照元素
+- - '##'
+  - 表 10.3 关键数据库管理器快照元素（续）
+- - '##'
+  - 数据库快照
+- - '##'
+  - 工作区信息
+- - '##'
+  - 表 10.4 关键数据库快照元素
+- - '##'
+  - 表 10.4 关键数据库快照元素（续）
+- - '##'
+  - 应用程序快照
+- - '##'
+  - 示例 10.4
+- - '##'
+  - 示例 10.4
+- - '##'
+  - 示例 10.4
+- - '##'
+  - 动态 SQL 快照
+- - '##'
+  - 动态 SQL 快照结果
+- - '##'
+  - 示例 10.5
+- - '##'
+  - 重置监控开关
+- - '##'
+  - 通过新 SQL 函数获取快照
+- - '##'
+  - 表 10.5 函数及返回数据描述
+- - '##'
+  - 通过新 SQL 函数获取快照
+- - '##'
+  - 使用 SQL 函数
+- - '##'
+  - 表 10.6 用于存储快照的 BP 采样布局
+- - '##'
+  - 表 10.6 BP_SNAP 用于存储快照数据的示例表布局（续）
+- - '#'
+  - 第 11 章 问题确定
+- - '##'
+  - 连接问题
+- - '##'
+  - 性能和应用程序问题
+- - '##'
+  - DB2 代码
+- - '##'
+  - DB2 技术支持
+- - '##'
+  - DB2 技术支持
+- - '##'
+  - DB2 Fixpacks (修复包)
+- - '##'
+  - APAR 52318
+- - '##'
+  - APAR 5231
+- - '##'
+  - DB2DIAG.LOG 文件
+- - '##'
+  - 格式
+- - '##'
+  - DB2DIAG.LOG 文件
+- - '##'
+  - DB2DIAG.LOG 条目
+- - '##'
+  - DB2DIAG.LOG 文件
+- - '##'
+  - 属性
+- - '##'
+  - 系统日志
+- - '##'
+  - 属性
+- - '##'
+  - 系统日志
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪
+- - '##'
+  - 跟踪 (CALL TRACES)
+- - '#'
+  - 第 12 章 理解与调优 DB2
+- - '##'
+  - 排序类型
+- - '##'
+  - 共享排序
+- - '##'
+  - 数据库管理器快照
+- - '##'
+  - 示例 12.1
+- - '##'
+  - 数据库快照
+- - '##'
+  - 示例 12.2
+- - '##'
+  - 排序类型
+- - '##'
+  - 示例 12.2
+- - '##'
+  - 排序类型
+- - '##'
+  - 示例 12.2
+- - '##'
+  - SHEAPTHRES
+- - '##'
+  - 排序内存区域
+- - '##'
+  - 代理私有排序 (SORTHEAP CFG)
+- - '##'
+  - 提示
+- - '##'
+  - 监控性能
+- - '##'
+  - 快照监控
+- - '##'
+  - 示例 12.3
+- - '##'
+  - 事件监控器
+- - '##'
+  - 示例 12.4
+- - '##'
+  - 监控性能
+- - '##'
+  - 示例 12.4
+- - '##'
+  - 语句事件 . . .
+- - '##'
+  - 示例 12.5
+- - '##'
+  - 消除排序
+- - '##'
+  - SQL 解释工具
+- - '##'
+  - 修改 SQL
+- - '##'
+  - 允许反向扫描
+- - '##'
+  - 总结
+- - '##'
+  - 总结
+- - '#'
+  - 第 13 章 企业服务器版——数据库分区功能
+- - '##'
+  - DPF 环境下的 LOAD 实用程序考虑因素
+- - '##'
+  - LOAD 实用程序操作
+- - '##'
+  - Partitioned DB CONFIG Options
+- - '##'
+  - 13.1 改进
+- - '##'
+  - DB2 v8.1 ISE
+- - '##'
+  - 新分区术语
+- - '##'
+  - DB2 v8.1 改进
+- - '##'
+  - 数据库分区
+- - '##'
+  - DB2NODES.CFG 文件
+- - '##'
+  - 分区键
+- - '##'
+  - 分区映射概念
+- - '##'
+  - 数据库分区组
+- - '##'
+  - DB2 v8.1 ESE 改进
+- - '##'
+  - 同位置连接 (Colocated Joins)
+- - '##'
+  - 分区数据库连接策略
+- - '##'
+  - 引导内连接策略 (Directed Inner Join)
+- - '##'
+  - 分区数据库连接策略
+- - '##'
+  - 定向内外表连接 (Directed Inner and Outer Table Joins)
+- - '##'
+  - 分区数据库连接策略 (Partitioned Database Join Strategies)
+- - '##'
+  - 广播表连接——内与外 (Broadcast Table Joins–Inner and Outer)
+- - '##'
+  - 动态位索引 (Dynamic Bitmap Indexing (DBIA))
+- - '##'
+  - 最终结果——性能 (The End Result—Performance)
+- - '##'
+  - 动态位图索引 (DYNAMIC BITMAP INDEX INDEXING (DBIA))
+- - '##'
+  - DPF 环境中的索引考虑 (Index Considerations in a DPF Environment)
+- - '##'
+  - DPF 环境中的索引考虑 (INDEX CONSIDERATIONS IN DPF ENVIRONMENT)
+- - '##'
+  - OLTP 环境 (OLTP Environments)
+- - '##'
+  - BI/DW 环境 (BI/DW Environments)
+- - '###'
+  - 13.4 v8 之前和 v8 LOAD Mode 的比较
+- - '##'
+  - OUTPUT_DBPARTNUMS
+- - '##'
+  - PARTITIONING_DBPARTNUMS
+- - '##'
+  - PART_FILE_LOCATION
+- - '##'
+  - MODE
+- - '##'
+  - MAX_NUM_PART_AGENTS
+- - '##'
+  - ISOLATE_PART_ERRS
+- - '##'
+  - STATUS_INTERVAL
+- - '##'
+  - PORT_RANGE
+- - '##'
+  - CHECK_TRUNCATION
+- - '##'
+  - MAP_FILE_INPUT
+- - '##'
+  - MAP_FILE_OUTPUT
+- - '##'
+  - TRACE
+- - '##'
+  - NEWLINE
+- - '##'
+  - DISTFILE
+- - '##'
+  - OMIT_HEADER
+- - '##'
+  - RUN_STAT_DBPARTNUM
+- - '##'
+  - 监控加载
+- - '##'
+  - 重启或终止失败的加载 操作
+- - '##'
+  - 设置阶段的失败
+- - '##'
+  - 加载工具 操作
+- - '##'
+  - 加载阶段的失败
+- - '##'
+  - 添加数据库分区
+- - '##'
+  - 使用缓冲区插入
+- - '##'
+  - 总结
+- - '##'
+  - 总结
+- - '##'
+  - 附录 A
+- - '##'
+  - SYSCAT.ATTRIBUTES
+- - '##'
+  - SYSCAT.BUFFERPOOLS
+- - '##'
+  - SYSCAT.CASTFUNCTIONS
+- - '##'
+  - SYSCAT.CHECKS
+- - '##'
+  - SYSCAT.COLAUTH
+- - '##'
+  - SYSCAT.COLCHECKS
+- - '##'
+  - SYSCAT.COLDIST
+- - '##'
+  - SYSCAT.COLGROUPIST
+- - '##'
+  - SYSCAT.COLGROUPS
+- - '##'
+  - SYSCAT.COLOPTIONS
+- - '##'
+  - SYSCAT.COLUMNS
+- - '##'
+  - SYSCAT.COLUMNS
+- - '##'
+  - SYSCAT.COLUSE
+- - '##'
+  - SYSCAT.COLUSE
+- - '##'
+  - SYSCAT.COLDEP
+- - '##'
+  - SYSCAT.DBAUTH
+- - '##'
+  - SYSCAT.DBPARTITIONDEF
+- - '##'
+  - SYSCAT.DBPARTITIONDEF
+- - '##'
+  - SYSCAT.DBPARTITIONGRORPS
+- - '##'
+  - SYSCAT.DBPARTITIONGRORPS
+- - '##'
+  - SYSCAT.EVENTMONITORS
+- - '##'
+  - SYSCAT.EVENTMONITORS
+- - '##'
+  - SYSCAT.EVENTS
+- - '##'
+  - SYSCAT.EVENTTABLES
+- - '##'
+  - SYSCAT.FUNCMAPPINGS
+- - '##'
+  - SYSCAT.HIERARCHIES
+- - '##'
+  - SYSCAT.HIERARCHIES
+- - '##'
+  - SYSCAT.INDEXAUTH
+- - '##'
+  - SYSCAT.INDEXAUTH
+- - '##'
+  - SYSCAT.INDEXDEP
+- - '##'
+  - SYSCAT.INDEXDEP
+- - '##'
+  - SYSCAT.INDEXEXTENSIONPARMS
+- - '##'
+  - SYSCAT.INDEXEXTENSIONPARMS
+- - '##'
+  - SYSCAT.INDEXEXTENSIONS（索引扩展）
+- - '##'
+  - SYSCAT.INDEXOPTIONS（索引选项）
+- - '##'
+  - SYSCAT.INDEXEXTENSON（索引扩展）
+- - '##'
+  - SYSCAT.KEYCOLUSE（键列）
+- - '##'
+  - SYSCAT.NAMEMAPPINGS（名称映射）
+- - '##'
+  - SYSCAT.PACKAGEAUTH（包权限）
+- - '##'
+  - SYSCAT.PACKAGEP（包依赖）
+- - '##'
+  - SYSCAT.PACKAGES（包）
+- - '##'
+  - SYSCAT.PARTITIONMAPS
+- - '##'
+  - SYSCAT.PASSTHRUAUTH
+- - '##'
+  - SYSCAT.PREDICATESSPECS
+- - '##'
+  - SYSCAT.PREDICATESSCS
+- - '##'
+  - SYSCAT.PROOPTIONS
+- - '##'
+  - SYSCAT.PROCPARMOPTIONS
+- - '##'
+  - SYSCAT.REFERENCES
+- - '##'
+  - SYSCAT.REVTYPEMAPPINGS
+- - '##'
+  - SYSCAT.REVTYPEMAPPINGS
+- - '##'
+  - SYSCAT.ROUTINEAUTH
+- - '##'
+  - SYSCAT.ROUTINEAUTH
+- - '##'
+  - SYSCAT.UTINEDEP
+- - '##'
+  - SYSCAT.ROUTINEPARMS
+- - '##'
+  - SYSCAT.ROUTINEPARMS
+- - '##'
+  - SYSCAT.ROUTINES
+- - '##'
+  - SYSCAT.ROUTINES
+- - '##'
+  - SYSCAT.SCHEMAAUTH
+- - '##'
+  - SYSCAT.SCHEMAAUTH
+- - '##'
+  - SYSCAT.SCHEMATA
+- - '##'
+  - SYSCAT.SEQUENCEAUTH
+- - '##'
+  - SYSCAT.SEQUENCES
+- - '##'
+  - SYSCAT.SEQUENCE
+- - '##'
+  - SYSCAT.SERVEROPTIONS
+- - '##'
+  - SYSCAT.SERVERS
+- - '##'
+  - SYSCAT.STATEMENTS
+- - '##'
+  - SYSCAT.TABAUTH
+- - '##'
+  - SYSCAT.TABCONST
+- - '##'
+  - SYSCAT.TABDEP
+- - '##'
+  - SYSCAT.TABLES
+- - '##'
+  - SYSCAT.TABLES
+- - '##'
+  - SYSCAT.TABLES
+- - '##'
+  - SYSCAT.TABLESPACES
+- - '##'
+  - SYSCAT.TABLESPACES
+- - '##'
+  - SYSCAT.TABOPTIONS
+- - '##'
+  - SYSCAT.TBSPACEAUTH
+- - '##'
+  - SYSCAT.TRANSFORMS
+- - '##'
+  - SYSCAT.TRANSFORMS
+- - '##'
+  - SYSCAT.TRIGDEP
+- - '##'
+  - SYSCAT.TRIGGERS
+- - '##'
+  - SYSCAT.TYPEMMAPPINGS
+- - '##'
+  - SYSCAT.USEROPTIONS
+- - '##'
+  - SYSCAT.USEROPTIONS
+- - '##'
+  - SYSCAT.VIEWS
+- - '##'
+  - SYSCAT.WRAPOPTIONS
+- - '##'
+  - SYCAT.WRAPPERS
+- - '##'
+  - SYSTAT.COLDIST
+- - '#'
+  - 附录 B
+- - '##'
+  - DB2
+- - '###'
+  - DB2-L LISTSERVER
+- - '##'
+  - NEWSGROUP
+- - '###'
+  - NEWSLETTERS
+- - '###'
+  - BITPIPE
+- - '##'
+  - Data Warehousing
+- - '##'
+  - ITWORLD
+- - '##'
+  - Sysopt
+- - '##'
+  - Tidal Wire
+- - '##'
+  - E-ZINES
+- - '###'
+  - WEB SITES
+- - '##'
+  - DB2 Online Technical Support
+- - '##'
+  - DB2 区域
+- - '##'
+  - -HQ
+- - '##'
+  - IBM Redbooks
+- - '##'
+  - 用户组
+- - '##'
+  - International DB2
+- - '##'
+  - 厂商网站
+- - '##'
+  - BMC Software
+- - '##'
+  - Embaradero Technologies
+- - '##'
+  - Computer Associates
+- - '##'
+  - Candle Corporation
+- - '##'
+  - Compuware
+- - '##'
+  - Quest
+- - '##'
+  - Veritas Software
+- - '#'
+  - 附录 A DB2 目录视图
+- - '#'
+  - 参考文献 461
+- - '#'
+  - 索引 465
+- - '#'
+  - 引言 175
+- - '#'
+  - 总结 189
+- - '#'
+  - 自主计算 192
+- - '#'
+  - 在线配置参数 193
+- - '#'
+  - 总结 321
