@@ -1,0 +1,886 @@
+- - '#'
+  - SAIR Linux 和 GNU 认证二级、Apache 与 Web 服务器
+- - '#'
+  - 致谢
+- - '#'
+  - 引言
+- - '###'
+  - 2.1.30 虚拟主机简介
+- - '###'
+  - 2.1.40 Apache 模块简介
+- - '###'
+  - 2.1.50 Apache API 简介
+- - '###'
+  - 2.1.60 日志记录
+- - '##'
+  - 基础系统
+- - '###'
+  - 2.2.10 多守护进程
+- - '###'
+  - 2.2.20 配置
+- - '###'
+  - 2.2.30 httpd 进程数
+- - '###'
+  - 2.2.40 别名
+- - '###'
+  - 2.2.50 CGI 脚本
+- - '###'
+  - 2.2.60 如何配置 CGI
+- - '###'
+  - 2.2.70 Apache 初始化
+- - '###'
+  - 2.2.80 日志文件
+- - '###'
+  - 2.2.90 日志文件格式
+- - '##'
+  - Shell 与命令
+- - '###'
+  - 2.3.10 基准测试
+- - '##'
+  - 系统工具
+- - '###'
+  - 2.4.10 创建 CGI 脚本
+- - '###'
+  - 2.4.20 性能监控
+- - '###'
+  - 2.4.30 某些良好的日志分析工具
+- - '##'
+  - Apache 与网络
+- - '##'
+  - 运行原理
+- - '###'
+  - 3.1.10 什么是 TCP/IP？Apache 如何使用它？
+- - '###'
+  - 3.1.20 什么是 HTTP?
+- - '###'
+  - 3.1.30 多主机
+- - '##'
+  - 基础系统
+- - '###'
+  - 3.2.10 虚拟主机
+- - '###'
+  - 3.2.20 将请求导向虚拟主机
+- - '###'
+  - 3.2.30 单守护进程/虚拟主机
+- - '###'
+  - 3.2.40 基于 IP 的虚拟主机
+- - '###'
+  - 3.2.50 基于名称的虚拟主机
+- - '##'
+  - Shell 与命令
+- - '###'
+  - 3.3.10 URL 重写 mod_rewrite
+- - '##'
+  - Apache 与安全
+- - '##'
+  - 运行原理
+- - '###'
+  - 4.1.10 安全考量
+- - '###'
+  - 4.1.20 安全策略
+- - '###'
+  - 4.1.30 身份验证
+- - '###'
+  - 4.1.40 加固 Apache
+- - '###'
+  - 4.1.50 漏洞
+- - '###'
+  - 4.1.60 CGI 的安全问题
+- - '###'
+  - 4.1.70 Apache 代理服务器
+- - '###'
+  - 4.1.80 防火墙
+- - '###'
+  - 4.1.90 密码保护
+- - '##'
+  - 基础系统
+- - '###'
+  - 4.2.10 Apache、用户与组
+- - '###'
+  - 4.2.20 权限
+- - '###'
+  - 4.2.30 访问控制
+- - '###'
+  - 4.2.40 设置 Apache 代理
+- - '###'
+  - 4.2.50 安全基础
+- - '###'
+  - 4.2.60 用户访问控制
+- - '###'
+  - 4.2.70 启用来自主目录的内容
+- - '###'
+  - 4.2.80 访问指令
+- - '###'
+  - 4.2.90 在 httpdconf 中定义
+- - '##'
+  - Shell 与命令
+- - '###'
+  - 4.3.10 校验和
+- - '###'
+  - 4.3.20 密码身份验证
+- - '##'
+  - 系统工具
+- - '###'
+  - 4.4.10 服务端包含
+- - '###'
+  - 4.4.20 性能监控
+- - '###'
+  - 4.4.30 某些良好的日志分析工具
+- - '##'
+  - Apache 子进程
+- - '##'
+  - Apache 约定
+- - '##'
+  - 此容器适用于目录的文件系统位置。
+- - '##'
+  - 例如，/home/user/public_html 将指向用户的 public_html 目录。
+- - '##'
+  - Location 适用于 url。例如，-/user 将指向用户的 public_html 目录。
+- - '##'
+  - VirtualHost 适用于你托管的虚拟 站点，例如 mysite.com
+- - '##'
+  - 适用于文件名，无论其位于何处。如果 file_name 为 index.html，那么所有 index.html 的所有实例（无论位于何处）都会受到你的指令的影响。
+- - '##'
+  - 指令 (Directives)
+- - '##'
+  - 处理程序 (Handlers)
+- - '##'
+  - 日志 (Logging)
+- - '##'
+  - 模块 (Modules)
+- - '##'
+  - 静态模块的优点
+- - '##'
+  - 静态模块的缺点
+- - '##'
+  - DSO 的优点
+- - '##'
+  - DSO 的缺点
+- - '##'
+  - DSO 文件
+- - '##'
+  - APXS 使用
+- - '##'
+  - 浏览器
+- - '##'
+  - 如何获取 Apache
+- - '##'
+  - 内容协商概述 (Overview of Content Negotiation)
+- - '##'
+  - 类型 (Type)
+- - '##'
+  - 编码 (Encoding)
+- - '##'
+  - 语言 (Language)
+- - '##'
+  - 选择文档参数 (Choosing Document Parameters)
+- - '##'
+  - 多视图 (MultiViews)
+- - '##'
+  - 浏览器与 HTTP (Browsers and HTTP)
+- - '##'
+  - 第一章 (Chapter 1)
+- - '##'
+  - 样式表 (Style Sheets)
+- - '##'
+  - Java
+- - '##'
+  - 安装与配置 (Installation and Configuration)
+- - '##'
+  - JavaScript
+- - '##'
+  - Base Systems
+- - '##'
+  - RAM
+- - '##'
+  - Hardware
+- - '##'
+  - Hard Drive
+- - '##'
+  - Kernel
+- - '##'
+  - File Handles and Inodes
+- - '##'
+  - Introduction to Packages
+- - '##'
+  - RPM Security Tasks
+- - '##'
+  - Issues with Stock Vendor Basics
+- - '##'
+  - Validating Packages
+- - '##'
+  - 测试结果
+- - '##'
+  - 使用前验证更新
+- - '##'
+  - RPM 安装
+- - '##'
+  - rpm -i apache-x.x.x.rpm
+- - '##'
+  - rpm -ql apache | less
+- - '##'
+  - 查找安全更新
+- - '##'
+  - 通过 RPM 添加模块
+- - '##'
+  - rpm -Uvh apache-x.x.x.rpm
+- - '##'
+  - 启动 Apache
+- - '##'
+  - 本地验证
+- - '##'
+  - lynx localhost
+- - '##'
+  - 表 1.1 httpd 选项
+- - '##'
+  - 网络验证
+- - '##'
+  - ifconfig
+- - '##'
+  - 源 RPM 包
+- - '##'
+  - ls
+- - '##'
+  - cd SRPMS
+- - '##'
+  - ls apache*
+- - '##'
+  - rpm -i apache-x.x.x.rpm
+- - '##'
+  - cd /usr/src/redhat/SPECS
+- - '##'
+  - ls /usr/src/redhat/SOURCES/
+- - '##'
+  - 安装
+- - '##'
+  - 编译
+- - '##'
+  - ./configure --enable-module=so --enable-rule=
+- - '##'
+  - 表 31 安装与配置
+- - '##'
+  - 系统工具
+- - '##'
+  - httpd 守护进程
+- - '##'
+  - 默认值
+- - '##'
+  - 自定义
+- - '##'
+  - 模块与 SSL
+- - '##'
+  - 模块性能功能
+- - '##'
+  - 配置文件
+- - '##'
+  - CGI 脚本
+- - '##'
+  - ScriptAlias 指令
+- - '##'
+  - AddHandler
+- - '##'
+  - 请求处理
+- - '##'
+  - 安装摘要
+- - '##'
+  - 安装与配置
+- - '##'
+  - 配置 日志
+- - '##'
+  - host
+- - '##'
+  - Identity Check
+- - '##'
+  - autouser
+- - '##'
+  - date
+- - '##'
+  - status
+- - '##'
+  - bytes
+- - '##'
+  - Alias
+- - '##'
+  - Authentication-mod_access 和 mod_auth
+- - '##'
+  - Alias filename
+- - '##'
+  - 配置方法
+- - '##'
+  - 编译时设置 -V
+- - '##'
+  - httpd -f /etc/httpd.conf
+- - '##'
+  - 启动时 httpd
+- - '##'
+  - 设置 Apache
+- - '##'
+  - 启动和停止
+- - '##'
+  - 手动启动 httpd
+- - '##'
+  - apachectl fullstatus
+- - '##'
+  - 安装与配置
+- - '##'
+  - apachectl configtest
+- - '##'
+  - graceful
+- - '##'
+  - 安装与配置
+- - '##'
+  - 端口 80
+- - '##'
+  - ServerType stand-alone
+- - '##'
+  - StartServers 5
+- - '##'
+  - MaxSpareServers 10
+- - '##'
+  - MaxClients 150
+- - '##'
+  - MaxRequestChild 0
+- - '##'
+  - 端口 80
+- - '##'
+  - ServerType stand-alone
+- - '##'
+  - StartServers 5
+- - '##'
+  - MaxSpareServers 10
+- - '##'
+  - MaxClients 150
+- - '##'
+  - MaxRequestChild 0
+- - '##'
+  - 表 54 第一章
+- - '##'
+  - 第2章
+- - '##'
+  - 系统管理
+- - '##'
+  - 目标
+- - '##'
+  - 工作原理
+- - '##'
+  - 成为 Web 管理
+- - '##'
+  - 允许 (Allow) 与拒绝 (Deny)
+- - '##'
+  - 最大客户端数 (MaxClients)
+- - '##'
+  - TCP/IP 版本
+- - '##'
+  - 主机查找 (Host Name)
+- - '##'
+  - 表 60 第2 章
+- - '##'
+  - FollowSymLinks (跟随链接) 与 SymLinksOwnerMatch
+- - '##'
+  - AllowOverride (允许覆盖)
+- - '##'
+  - 内容协商 (Content Negotiation)
+- - '##'
+  - 进程创建 (Process Creation)
+- - '##'
+  - 进程死亡 (Process Death)
+- - '##'
+  - KeepAlive
+- - '##'
+  - 虚拟主机简介 (Introduction to Virtual Hosting)
+- - '##'
+  - 目录
+- - '##'
+  - 网络地址
+- - '##'
+  - Apache 模块简介
+- - '##'
+  - 什么是 CGI？
+- - '##'
+  - 何时使用 CGI
+- - '##'
+  - PHP-mod_php
+- - '##'
+  - PHP 邮件列表及更多
+- - '##'
+  - MySQL
+- - '##'
+  - 数据库概念
+- - '##'
+  - 表的规范
+- - '##'
+  - SQL 数据库
+- - '##'
+  - 选择数据库
+- - '##'
+  - 数据库设计考虑
+- - '##'
+  - MySQL 架构
+- - '##'
+  - MySQL 系统管理
+- - '##'
+  - 启动和关闭服务器
+- - '##'
+  - 系统管理 71
+- - '##'
+  - mysqld <options>
+- - '##'
+  - mysqladmin -p
+- - '##'
+  - 数据备份
+- - '##'
+  - 表 72 第2 章
+- - '##'
+  - mysqldadmin -p
+- - '##'
+  - mysqld <Other Options> --log-update
+- - '##'
+  - mysqldump --tab=path/to/the --opt --all-databases
+- - '##'
+  - mysqld shutdown
+- - '##'
+  - mysqld <Other Options>
+- - '##'
+  - ls -1 -t hostname.[0-9]* | xargs cat mysql
+- - '##'
+  - mysqldump backupfile
+- - '##'
+  - mysqldump --drop-table backupfile
+- - '##'
+  - mysqldump --help
+- - '##'
+  - mysql -p < backupfile
+- - '##'
+  - 表 2.1 mysqldump 命令选项
+- - '##'
+  - 管理账户和安全权限
+- - '##'
+  - 允许的权限和操作
+- - '##'
+  - 记录所有日志
+- - '##'
+  - 模块 (Modules)
+- - '##'
+  - 阶段 (Phases)
+- - '##'
+  - 处理器 (Handlers)
+- - '##'
+  - 阶段详情 (Phases in Detail)
+- - '##'
+  - 阶段 1：URI 到文件名的翻译
+- - '##'
+  - 阶段 2：身份验证 (Authentication)
+- - '##'
+  - 阶段 3：身份验证检查 (Authentication Checking)
+- - '##'
+  - 改进的模块
+- - '##'
+  - 日志简介
+- - '##'
+  - 基础系统
+- - '##'
+  - 多守护进程
+- - '##'
+  - 配置
+- - '##'
+  - 表 2.2 配置指令
+- - '##'
+  - 运行守护进程
+- - '##'
+  - 多守护进程验证
+- - '##'
+  - 第2 章
+- - '##'
+  - httpd 进程数量
+- - '##'
+  - Alias（别名）
+- - '##'
+  - CGI 脚本
+- - '##'
+  - ScriptAlias 指令
+- - '##'
+  - AddHandler
+- - '##'
+  - 如何配置 CGI
+- - '##'
+  - 在特定目录内启用
+- - '##'
+  - 在文档根目录下启用特定的 MIME 类型
+- - '##'
+  - 初始化
+- - '##'
+  - 日志文件
+- - '##'
+  - /var/apache/logs/access_log
+- - '##'
+  - 94 第二章
+- - '##'
+  - host
+- - '##'
+  - ident
+- - '##'
+  - autuser
+- - '##'
+  - date
+- - '##'
+  - request
+- - '##'
+  - status
+- - '##'
+  - bytes
+- - '##'
+  - 日志文件格式
+- - '##'
+  - 第二章
+- - '##'
+  - 自定义日志文件格式
+- - '##'
+  - /var/apache/logs/error_log
+- - '##'
+  - 表 2.3 可用格式修饰符
+- - '##'
+  - 表 2.4 日志级别—含义
+- - '##'
+  - 命令
+- - '##'
+  - 基准测试
+- - '##'
+  - ab
+- - '##'
+  - ab -n1000 -c100 http://192.168.1.1:80/htdocs
+- - '##'
+  - ab -n1000 -c100 http://192.168.1.1/htdocs/manual/directives.html
+- - '##'
+  - 系统工具
+- - '##'
+  - 创建 CGI 脚本
+- - '##'
+  - CGI 输出的内容
+- - '##'
+  - 系统管理 101
+- - '##'
+  - CGI 脚本示例
+- - '##'
+  - hello.sh - 一个简单的 CGI 脚本
+- - '##'
+  - hello.sh - 一个简单的 CGI 脚本
+- - '##'
+  - 系统管理 105
+- - '##'
+  - 基础重定向
+- - '##'
+  - old2new.sh - 旧 CGI 脚本重定向到新 CGI 脚本
+- - '##'
+  - 重定向到 http://my.server.com/cgi-bin/new.sh
+- - '##'
+  - old2new.sh - 通过 CGI 从旧服务器重定向到新服务器
+- - '##'
+  - 重定向到 http://someone.elses.com/cgi-bin/new.sh
+- - '##'
+  - redirect.sh - 通过 CGI 脚本重定向到新服务器
+- - '##'
+  - 系统管理
+- - '##'
+  - 性能监控
+- - '##'
+  - mod_status
+- - '##'
+  - ExtendedStatus mod_status
+- - '##'
+  - server-info
+- - '##'
+  - 第 3 章
+- - '##'
+  - 网络
+- - '##'
+  - 目标
+- - '##'
+  - 工作原理
+- - '##'
+  - 什么是 TCP/IP？Apache 如何使用它？
+- - '##'
+  - HTTP
+- - '##'
+  - 头部（Headers）
+- - '##'
+  - 什么是 HTTP？
+- - '##'
+  - HTTP/1
+- - '##'
+  - BrowserMatch
+- - '##'
+  - 过期设置（Expirations）
+- - '##'
+  - Keep-Alive
+- - '##'
+  - Host 头部（Host Header）
+- - '##'
+  - 分块（Chunking）
+- - '##'
+  - 多主机（Multiple Hosts）
+- - '##'
+  - 网络 17
+- - '##'
+  - 虚拟主机 (Virtual Hosting)
+- - '##'
+  - 配置独立守护进程 (Configuring Separate Daemons)
+- - '##'
+  - 表 23.456789:1
+- - '##'
+  - 将请求导向虚拟主机 (Directing to a Virtual Host)
+- - '##'
+  - 单守护进程/虚拟主机 (Single Daemon/Virtual Hosting)
+- - '##'
+  - 基于 IP 的虚拟主机 (IP-Based Hosting)
+- - '##'
+  - ifconfig
+- - '##'
+  - DocumentRoot /www/hosts/ip/htdocs
+- - '##'
+  - ServerName www.iptest.com
+- - '##'
+  - 基于名称的虚拟主机
+- - '##'
+  - Networking 23
+- - '##'
+  - 使用 IP 地址进行示例
+- - '##'
+  - 24 Chapter 3
+- - '##'
+  - 使用混合方法进行主机的示例
+- - '##'
+  - 我们使用基于名称的方法
+- - '##'
+  - secondwebsite.conf /etc/httpd/conf
+- - '##'
+  - 我们使用基于名称的方法
+- - '##'
+  - thirdwebsite.conf /etc/httpd/conf
+- - '##'
+  - 我们使用基于名称的方法
+- - '##'
+  - fourthwebsite.conf /etc/httpd/conf
+- - '##'
+  - 我们使用基于名称的方法
+- - '##'
+  - Shell 与命令
+- - '##'
+  - URL 重写 mod_rewrite
+- - '##'
+  - 网络 127
+- - '##'
+  - CondPattern TestString
+- - '##'
+  - 表 3.1 CondPattern 选项
+- - '##'
+  - 第 3 章
+- - '##'
+  - 其他服务器变量
+- - '##'
+  - HTTP 头部
+- - '##'
+  - 连接与请求
+- - '##'
+  - 服务器内部变量
+- - '##'
+  - 系统变量
+- - '##'
+  - 特殊变量
+- - '##'
+  - 第 3 章
+- - '##'
+  - RewriteRule Substitution
+- - '##'
+  - 表 3.2 替换标志
+- - '##'
+  - hosts.allow 和 hosts.deny
+- - '##'
+  - motd 和 issue 文件
+- - '##'
+  - 美国加密出口法
+- - '##'
+  - 身份验证
+- - '##'
+  - 安全 Apache
+- - '##'
+  - Apache 用户
+- - '##'
+  - 密码
+- - '##'
+  - 漏洞
+- - '##'
+  - Shadow Suite（影子件）
+- - '##'
+  - Apache代理的优势
+- - '##'
+  - 安全 145
+- - '##'
+  - 获取 Apache代理
+- - '##'
+  - 获取文档
+- - '##'
+  - mod_proxy
+- - '##'
+  - 防火墙
+- - '##'
+  - 防火墙类型
+- - '##'
+  - 数据包过滤
+- - '##'
+  - 为什么使用数据包过滤？
+- - '##'
+  - 代理防火墙
+- - '##'
+  - IP 伪装服务器
+- - '##'
+  - 防火墙与网络架构
+- - '##'
+  - 加固防火墙
+- - '##'
+  - 受到攻击时怎么办
+- - '##'
+  - 第 4 章
+- - '##'
+  - 处理正在发生的攻击
+- - '##'
+  - 安全 153
+- - '##'
+  - 密码保护
+- - '##'
+  - 性能监控
+- - '##'
+  - 系统
+- - '##'
+  - Apache、用户与组
+- - '##'
+  - groupadd webgroup
+- - '##'
+  - useradd webuser -g webgroup
+- - '##'
+  - 权限
+- - '##'
+  - chown webuser platform.html
+- - '##'
+  - chown webuser platform.html
+- - '##'
+  - 访问控制
+- - '##'
+  - AllowOverride Order, Allow, Deny
+- - '##'
+  - 158 第 4 章
+- - '##'
+  - 现在我们可以测试了
+- - '##'
+  - 匿名访问
+- - '##'
+  - 设置 Apache代理
+- - '##'
+  - 代理特定指令
+- - '##'
+  - 第 4 章
+- - '##'
+  - 4.1 Apache代理常用指令
+- - '##'
+  - 表 4.2 Apache代理缓存常用指令
+- - '##'
+  - 服务器端配置
+- - '##'
+  - 配置 Apache代理
+- - '##'
+  - 162 第 4 章
+- - '##'
+  - httpd.conf Apache 服务器配置
+- - '##'
+  - 配置 Apache代理/Web 服务器
+- - '##'
+  - 启动 Apache代理
+- - '##'
+  - SYSTEMV SYSTEMS
+- - '##'
+  - BSD SYSTEMS (SLACKWARE)
+- - '##'
+  - 你的 httpd二进制文件的路径，必要包含选项
+- - '##'
+  - SYSTEMV SYSTEMS
+- - '##'
+  - BSD SYSTEMS (SLACKWARE)
+- - '##'
+  - 你的 httpd二进制文件的路径，必要包含选项
+- - '##'
+  - 第 4 章
+- - '##'
+  - 安全基础
+- - '##'
+  - 权限
+- - '##'
+  - chmod -R o+r
+- - '##'
+  - chown -R otheruser.webeditors
+- - '##'
+  - chmod -R g+s
+- - '##'
+  - chmod o+x directory
+- - '##'
+  - touch /var/log/apache/(error,access).log
+- - '##'
+  - chown webuser /var/log/apache/(error,access).log
+- - '##'
+  - chmod +a /var/log/apache/(error,access).log
+- - '##'
+  - suExec
+- - '##'
+  - 理想权限矩阵
+- - '##'
+  - 用户访问控制
+- - '##'
+  - 常见访问控制
+- - '##'
+  - index.html
+- - '##'
+  - 访问文件名 .htaccess
+- - '##'
+  - 阻止访问
+- - '##'
+  - Order
+- - '##'
+  - 第 4 章
+- - '##'
+  - 从主目录启用内容
+- - '##'
+  - UserDir html
+- - '##'
+  - 在控制流中定义
+- - '##'
+  - Shell 与命令
+- - '##'
+  - 校验和 (Checksums)
+- - '##'
+  - PGP 与校验和
+- - '##'
+  - mdsum file_name
+- - '##'
+  - 什么是 MD5？
+- - '##'
+  - 第 4 章
+- - '##'
+  - 密码认证
+- - '##'
+  - 用户
+- - '##'
+  - 组
+- - '##'
+  - 系统工具
+- - '##'
+  - 服务器端包含 (SSI)
+- - '##'
+  - 基础命令
+- - '##'
+  - 变量
+- - '##'
+  - 表 4.4 格式命令
+- - '##'
+  - 表 4.4 格式命令续
+- - '##'
+  - XSSI
+- - '##'
+  - Shell
