@@ -1,0 +1,4735 @@
+- md: '
+
+    ##
+
+    # # LINUX BASICS
+
+    FOR BEGINNERS
+
+
+    The Ultimate Beginners Guide To
+
+    Learn The Linux Operating System,
+
+    Command, Tips And Tricks To
+
+    Master The Linux Interface
+
+
+    SMART WEBB
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in critical
+    reviews and certain other noncommercial uses permitted by copyright law.
+
+
+    # TABLE OF CONTENT
+
+
+    # INTRODUCTION: A BEGINNERS GUIDE TO LINUX..................................8
+
+
+    What Is Linux?................................................................9
+
+
+    Why Use Linux Instead of Windows or macOS? ............................ 16
+
+
+    The Size of the Windows 10 Download Is Huge............................... 20
+
+
+    Linux Is Free ................................................ 21
+
+
+    Linux Has More Free Applications ............................ 23
+
+
+    Security ................................................ 25
+
+
+    Performance............................................... 27
+
+
+    Privacy ................................................ 28
+
+
+    Updates ................................................................31
+
+
+    # Prerequisite for studying Linux.35
+
+
+    Which Linux Distribution Should You Use?..................................................
+    37
+
+
+    # HOW TO RUN LINUX FROM A DVD OR USB ............................................
+    41
+
+
+    How to Install Linux ................................................ 42
+
+
+    What Is a Desktop Environment? 42
+
+
+    Are There Any Decent Office Suites for Linux?..................................
+    45
+
+
+    # HOW TO INSTALL SOFTWARE USING LINUX....................................... 47
+
+
+    The Linux Command Line ............ 48
+
+
+    # Linux for Beginners: Taking Your First Steps ...............................
+    50
+
+
+    # BASIC LINUX COMMANDS........53
+
+
+    # Intermediate Commands........... 62
+
+
+    # TIPS AND TRICKS FOR USING LINUX COMMAND LINE ............74
+
+
+    # Advantages of Linux ................. 75
+
+
+    # What are the Disadvantages of Using Linux?............................... 87
+
+
+    # MOST ESSENTIAL LINUX APPLICATIONS AND TOOLS ......93
+
+
+    # Antivirus Tools........................................ 93
+
+
+    # Audio Players.................................. 94
+
+
+    Artificial Intelligence.............................. 96
+
+
+    Backup Utilities..................................... 97
+
+
+    Boot Loaders ........................................ 98
+
+
+    Calendar Apps........................................ 99
+
+
+    Clipboard Managers............................... 101
+
+
+    Chat Clients..................................... 102
+
+
+    Cloud Storage Tools ................................. 103
+
+
+    Communication Apps............................... 105
+
+
+    Firewalls ....................................... 106
+
+
+    Games............................................... 108
+
+
+    Git Clients........................................ 109
+
+
+    Graphics ........................................ 110
+
+
+    Hacking & Penetration Tools..... 111
+
+
+    - IDE Editors.................................................. 113
+
+    - Image Editors............................................... 115
+
+    - Movie Subtitles ............................................ 116
+
+    - Music Making Software ............................ 117
+
+    - PDF Viewers ................................................ 118
+
+    - Security ................................................ 119
+
+    - Torrent Download Client ....... 121
+
+    - Text Editors............................................... 121
+
+    - Video Players.................................. 122
+
+    - Video Editors.................................. 123
+
+    - Web Browsers ................................. 124
+
+
+    # INTRODUCTION: A BEGINNERS GUIDE TO LINUX
+
+
+    Linux offers a different take on desktop computing than Windows and macOS.
+
+
+    The Linux operating system offers a rich mix of features and security that make
+    it a great free and (mostly) open-source alternative to macOS and Microsoft Windows.
+    Because it''s different "under the hood," consider some of the big-picture aspects
+    of Linux and how it compares to the other desktop operating systems before you
+    take the plunge.
+
+
+    # What Is Linux?
+
+
+    Linux powers a variety of computer systems from light bulbs to guns, laptops to
+    large computer centers.
+
+
+    Linux powers everything from your phone to your smart refrigerator.
+
+
+    In desktop computing, Linux provides an alternative to commercial operating systems
+    such as Windows and macOS.
+
+
+    Linux sources from some of the earliest computer operating systems from the 1960s
+    and 1970s, and so it retains its root philosophies of strong user-level security,
+    customization, and system stability.
+
+
+    For those in the know, you understand that Linux is actually everywhere. It’s
+    in your phones, in your cars, in your refrigerators, your Roku devices. It runs
+    most of the Internet, the supercomputers making scientific breakthroughs, and
+    the world’s stock exchanges. But before Linux became the platform to run desktops,
+    servers, and embedded systems across the globe, it was (and still is) one of the
+    most reliable, secure, and worry-free operating systems available.
+
+
+    Just like Windows XP, Windows 7, Windows 8, and Mac OS X, Linux is an operating
+    system. An operating system is software that manages all of the hardware resources
+    associated with your desktop or laptop. To put it simply – the operating system
+    manages the communication between your software and your hardware. Without the
+    operating system (often referred to as the “OS”), the software wouldn’t function.
+
+
+    The OS is comprised of a number of pieces:
+
+
+    - The Bootloader: The software that manages the boot process of your computer.
+    For most users, this will simply be a splash screen that pops up and eventually
+    goes away to boot into the operating system.
+
+    - The kernel: This is the one piece of the whole that is actually called “Linux”.
+    The kernel is the core of the system and manages the CPU, memory, and peripheral
+    devices. The kernel is the “lowest” level of the OS.
+
+    - Daemons: These are background services (printing, sound, scheduling, etc) that
+    either start up during boot, or after you log into the desktop.
+
+    - The Shell: You’ve probably heard mention of the command line. This is the shell
+    – a command process that allows you to control the computer via commands typed
+    into a text interface. This is what, at one time, scared people away from Linux
+    the most (assuming they had to learn a seemingly archaic command structure to
+    make Linux work). This is no longer the case. With modern desktop Linux, there
+    is no need to ever touch the command line.
+
+    - Graphical Server: This is the subsystem that displays the graphics on your monitor.
+    It is commonly referred to as the X server or just "X".
+
+    - Desktop Environment: This is the piece of the puzzle the users actually interact
+    with. There are many desktop environments to choose from (Unity, GNOME, Cinnamon,
+    Enlightenment, KDE, XFCE, etc). Each desktop environment includes built-in applications
+    (such as file managers, configuration tools, web browsers, games, etc).
+
+    - Applications: Desktop environments do not offer the full array of apps. Just
+    like Windows and Mac, Linux offers thousands upon thousands of high-quality software
+    titles that can be easily found and installed. Most modern Linux distributions
+    (more on this in a moment) include App Store-like tools that centralize and simplify
+    application installation. For example: Ubuntu Linux has the Ubuntu Software Center
+    (Figure 1) which allows you to quickly search among the thousands of apps and
+    install them from one centralized location.
+
+
+    # Why Use Linux Instead of Windows or macOS?
+
+
+    There are many reasons why you would use Linux instead of Windows or macOS and
+    here are just a few of them:
+
+
+    Windows 10 Is Slow on Older Hardware
+
+
+    If you use Windows XP, Vista, or an older Windows 7 PC, chances are your computer
+    isn''t powerful enough to run Windows 8 or Windows 10. You have
+
+    '
+  mdcn: '
+
+
+    ##
+
+    # Linux 基础
+
+    初学者教程
+
+
+    学习 Linux 操作系统、
+
+    命令、技巧与窍门以及
+
+    精通 Linux 界面的终极初学者指南
+
+
+    SMART WEBB
+
+
+    版权所有。未经出版者事先书面许可，不得以任何形式或通过手段（包括复印、录制或其他电子或机械方法）复制、分发或传输本书的任何部分，但批判性评论中的简短引用以及版权法允许的某些非商业用途除外。
+
+
+    # 目录
+
+
+    # 引言：Linux 初学者指南..................................................8
+
+
+    什么是 Linux？................................................................9
+
+
+    为什么使用 Linux 而不是 Windows 或 macOS？ ............................ 16
+
+
+    Windows 10 下载包体积巨大............................... 20
+
+
+    Linux 是免费的 ................................................ 21
+
+
+    Linux 拥有更多免费应用程序 ............................ 23
+
+
+    安全性 ................................................ 25
+
+
+    性能............................................... 27
+
+
+    隐私性............................................... 28
+
+
+    更新 ................................................................31
+
+
+    # 学习 Linux 的先决条件.35
+
+
+    你应该使用哪种 Linux 发行版？.................................................. 37
+
+
+    # 如何从 DVD 或 USB 运行 Linux ............................................ 41
+
+
+    如何安装 Linux ................................................ 42
+
+
+    什么是桌面环境？ 42
+
+
+    Linux 有好用的办公套件吗？.................. 45
+
+
+    # 如何使用 Linux 安装软件....................................... 47
+
+
+    Linux 命令行 ............ 48
+
+
+    # Linux 初学者：迈出第一步 ............................... 50
+
+
+    # 基础 Linux 命令........53
+
+
+    # 中级命令........... 62
+
+
+    # 使用 Linux 命令行的技巧与窍门 ............74
+
+
+    # Linux 的优势 ................. 75
+
+
+    # 使用 Linux 的缺点是什么？............................... 87
+
+
+    # 最核心的 Linux 应用和工具 ......93
+
+
+    # 杀病毒工具........................................ 93
+
+
+    # 音频播放器.................................. 94
+
+
+    人工智能.............................. 96
+
+
+    备份实用..................................... 97
+
+
+    引导加载程序 ........................................ 98
+
+
+    日历应用........................................ 99
+
+
+    剪贴板管理器............................... 101
+
+
+    聊天客户端..................................... 102
+
+
+    云存储工具 ................................. 103
+
+
+    通信应用............................... 105
+
+
+    防火墙 ....................................... 106
+
+
+    游戏............................................... 108
+
+
+    Git 客户端........................................ 109
+
+
+    图形 ........................................ 110
+
+
+    黑客与渗透工具..... 111
+
+
+    - IDE 编辑器.................................................. 113
+
+    - 图像编辑器............................................... 115
+
+    - 电影字幕 ............................................ 116
+
+    - 音乐制作软件 ............................ 117
+
+    - PDF 阅读器 ................................................ 118
+
+    - 安全性............................................... 119
+
+    - Torrent 下载客户端 ....... 121
+
+    - 文本编辑器............................................... 121
+
+    - 视频播放器.................................. 122
+
+    - 视频编辑器.................................. 123
+
+    - 浏览器 ................................. 124
+
+
+    # 引言：Linux 初学者指南
+
+
+    Linux 提供了与 Windows 和 macOS不同的桌面计算理念。
+
+
+    Linux 操作系统提供了丰富的特性和安全性，使其成为 macOS 和微软 Windows 的极佳免费且（大部分）开源的替代方案。由于它在“底层”与众不同，在投入使用之前，请考虑
+    Linux 的一些宏观方面以及它与其他桌面操作系统的对比。
+
+
+    # 什么是 Linux？
+
+
+    Linux 驱动着从灯泡到枪支、从笔记本电脑到大型计算机中心的各种计算机系统。
+
+
+    Linux 驱动着从你的手机到智能冰箱的一切设备。
+
+
+    在桌面计算中，Linux 是 Windows 和 macOS 等商业操作系统的替代方案。
+
+
+    Linux 源自 20 世纪 60 年代最早的计算机操作系统之一。在桌面计算中，Linux 提供了 Windows 和 macOS 这种商业操作系统的替代方案。Linux
+    提供了丰富的丰富的特性和安全性。对于了解情况的人来说，你明白 Linux 无处不在。它运行在你的手机、汽车、冰箱、Roku 设备、超级计算机以及全球范围内。它保留了强大的安全性、定制化和系统稳定性的哲学。在
+    Linux 成为运行桌面、服务器和嵌入式系统的平台之前，它一直是（目前仍然是）最可靠、安全且无后顾的操作系统之一。
+
+
+    就像 Windows XP、Windows 7、Windows 8 和 Mac OS X 一样，Linux 是一个操作系统。操作系统是管理你的桌面或笔记本电脑相关硬件资源的软件。简单来说——操作系统（通常称为
+    OS）管理软件与硬件之间的通信。如果没有操作系统，软件将无法运行。
+
+
+    操作系统由许多部分组成：
+
+
+    - 引导加载程序：管理计算机启动过程的软件。对于大多数用户来说，这只是一个弹出来并最终进入操作系统的启动界面。
+
+    - 内核：这是整个系统中唯一被称为“Linux”的部分。内核是系统的核心，管理 CPU、内存和外围设备。内核是操作系统的最低层。
+
+    - 守护进程：这些是后台服务（打印、声音、调度等），在启动期间或登录桌面后启动。
+
+    - Shell：你可能听说过命令行。这就是 Shell —— 允许你通过文本界面输入命令来控制计算机的过程。这曾是让人们最远离 Linux 的原因（假设必须学习古老的命令结构来让
+    Linux 工作）。现在不再是了。有了现代桌面 Linux，你根本不需要接触命令行。
+
+    - 图形服务器：这是在你的显示器上显示图形的子系统。通常被称为 X 服务器或简单的“X”。
+
+    - 桌面环境：这是用户实际交互的部分。有很多桌面环境可以选择（Unity、GNOME、Cinnamon、Enlightenment、KDE、XFCE 等）。每个桌面环境都包含内置应用程序（如文件管理器、配置工具、浏览器、游戏等）。
+
+    - 应用：桌面环境并不提供所有的应用。就像 Windows 和 Mac 一样，Linux 提供了成千上万高质量的软件，可以很容易地找到并安装。大多数现代 Linux
+    发行版（稍后会介绍）包含类似应用商店的工具，可以集中并简化应用程序安装。例如：Ubuntu Linux 拥有 Ubuntu 软件中心（图 1），允许你从一个中心位置快速搜索并安装数千个应用。
+
+
+    # 为什么使用 Linux 而不是 Windows 或 macOS？
+
+
+    有许多你选择 Linux 而不是 Windows 或 macOS 的原因，以下是其中几个：
+
+
+    Windows 10 在旧硬件上运行缓慢
+
+
+    如果你使用 Windows XP、Vista 或旧的 Windows 7 PC，那么你的电脑可能性能不足以运行 Windows 8 或 Windows 10。你拥有
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # LINUX BASICS
+
+    FOR BEGINNERS
+
+
+    The Ultimate Beginners Guide To
+
+    Learn The Linux Operating System,
+
+    Command, Tips And Tricks To
+
+    Master The Linux Interface
+
+
+    SMART WEBB'
+  - '[PAGE 1]
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in critical
+    reviews and certain other noncommercial uses permitted by copyright law.'
+  - '[PAGE 2]
+
+
+    # TABLE OF CONTENT
+
+
+    # INTRODUCTION: A BEGINNERS GUIDE TO LINUX..................................8
+
+
+    What Is Linux?................................................................9
+
+
+    Why Use Linux Instead of Windows or macOS? ............................ 16
+
+
+    The Size of the Windows 10 Download Is Huge............................... 20
+
+
+    Linux Is Free ................................................ 21
+
+
+    Linux Has More Free Applications ............................ 23
+
+
+    Security ................................................ 25
+
+
+    Performance............................................... 27
+
+
+    Privacy ................................................ 28'
+  - '[PAGE 3]
+
+
+    Updates ................................................................31
+
+
+    # Prerequisite for studying Linux.35
+
+
+    Which Linux Distribution Should You Use?..................................................
+    37
+
+
+    # HOW TO RUN LINUX FROM A DVD OR USB ............................................
+    41
+
+
+    How to Install Linux ................................................ 42
+
+
+    What Is a Desktop Environment? 42
+
+
+    Are There Any Decent Office Suites for Linux?..................................
+    45
+
+
+    # HOW TO INSTALL SOFTWARE USING LINUX....................................... 47
+
+
+    The Linux Command Line ............ 48'
+  - '[PAGE 4]
+
+
+    # Linux for Beginners: Taking Your First Steps ...............................
+    50
+
+
+    # BASIC LINUX COMMANDS........53
+
+
+    # Intermediate Commands........... 62
+
+
+    # TIPS AND TRICKS FOR USING LINUX COMMAND LINE ............74
+
+
+    # Advantages of Linux ................. 75
+
+
+    # What are the Disadvantages of Using Linux?............................... 87
+
+
+    # MOST ESSENTIAL LINUX APPLICATIONS AND TOOLS ......93
+
+
+    # Antivirus Tools........................................ 93
+
+
+    # Audio Players.................................. 94'
+  - '[PAGE 5]
+
+
+    Artificial Intelligence.............................. 96
+
+
+    Backup Utilities..................................... 97
+
+
+    Boot Loaders ........................................ 98
+
+
+    Calendar Apps........................................ 99
+
+
+    Clipboard Managers............................... 101
+
+
+    Chat Clients..................................... 102
+
+
+    Cloud Storage Tools ................. 103
+
+
+    Communication Apps............................... 105
+
+
+    Firewalls ....................................... 106
+
+
+    Games............................................... 108
+
+
+    Git Clients........................................ 109
+
+
+    Graphics ........................................ 110
+
+
+    Hacking & Penetration Tools..... 111'
+  - '[PAGE 6]
+
+
+    +   IDE Editors.................................................. 113
+
+
+    +   Image Editors............................................... 115
+
+
+    +   Movie Subtitles ............................................ 116
+
+
+    +   Music Making Software ............................ 117
+
+
+    +   PDF Viewers ................................................ 118
+
+
+    +   Security ................................................ 119
+
+
+    +   Torrent Download Client ....... 121
+
+
+    +   Text Editors............................................... 121
+
+
+    +   Video Players.................................. 122
+
+
+    +   Video Editors.................................. 123
+
+
+    +   Web Browsers ................................. 124'
+  - '[PAGE 7]
+
+
+    # INTRODUCTION: A BEGINNERS
+
+
+    # GUIDE TO LINUX
+
+
+    Linux offers a different take on desktop computing than Windows and macOS
+
+
+    The Linux operating system offers a rich mix of features and security that make
+    it a great free and (mostly) open-source alternative to macOS and Microsoft Windows.
+    Because it''s different "under the hood," consider some of the big-picture aspects
+    of Linux and how it compares to the'
+  - '[PAGE 8]
+
+
+    other desktop operating systems before you take the plunge.
+
+
+    # What Is Linux?
+
+
+    Linux powers a variety of computer systems from light bulbs to guns, laptops to
+    large computer centers.
+
+
+    Linux powers everything from your phone to your smart refrigerator.
+
+
+    In desktop computing, Linux provides an alternative to commercial operating systems
+    such as Windows and macOS.
+
+
+    Linux sources from some of the earliest computer operating systems'
+  - '[PAGE 9]
+
+
+    from the 1960s and 1970s, and so it retains its root philosophies of strong user-level
+    security, customization, and system stability.
+
+
+    For those in the know, you understand that Linux is actually everywhere. It’s
+    in your phones, in your cars, in your refrigerators, your Roku devices. It runs
+    most of the Internet, the supercomputers making scientific breakthroughs, and
+    the world’s stock exchanges. But before Linux became the platform to run desktops,
+    servers, and embedded systems across the globe, it was (and'
+  - '[PAGE 10]
+
+
+    still is) one of the most reliable, secure, and worry-free operating systems available.
+
+
+    Just like Windows XP, Windows 7, Windows 8, and Mac OS X, Linux is an operating
+    system. An operating system is software that manages all of the hardware resources
+    associated with your desktop or laptop. To put it simply – the operating system
+    manages the communication between your software and your hardware. Without the
+    operating system (often referred to as the “OS”), the software wouldn’t function.'
+  - '[PAGE 11]
+
+
+    The OS is comprised of a number of pieces:
+
+
+    The Bootloader: The software that manages the boot process of your computer. For
+    most users, this will simply be a splash screen that pops up and eventually goes
+    away to boot into the operating system.
+
+
+    The kernel: This is the one piece of the whole that is actually called “Linux”.
+    The kernel is the core of the system and manages the CPU, memory, and peripheral
+    devices. The kernel is the “lowest” level of the OS.'
+  - '[PAGE 12]
+
+
+    Daemons: These are background services (printing, sound, scheduling, etc) that
+    either start up during boot, or after you log into the desktop.
+
+
+    The Shell: You’ve probably heard mention of the Linux command line. This is the
+    shell – a command process that allows you to control the computer via commands
+    typed into a text interface. This is what, at one time, scared people away from
+    Linux the most (assuming they had to learn a seemingly archaic command line structure
+    to make Linux work). This is no longer the case. With modern'
+  - '[PAGE 13]
+
+
+    desktop Linux, there is no need to ever touch the command line.
+
+
+    Graphical Server: This is the subsystem that displays the graphics on your monitor.
+    It is commonly referred to as the X server or just "X".
+
+
+    Desktop Environment: This is the piece of the puzzle that the users actually interact
+    with. There are many desktop environments to choose from (Unity, GNOME, Cinnamon,
+    Enlightenment, KDE, XFCE, etc). Each desktop environment includes built-in applications
+    (such as file managers,'
+  - '[PAGE 14]
+
+
+    configuration tools, web browsers,
+
+    games, etc).
+
+
+    Applications: Desktop environments
+
+    do not offer the full array of apps.
+
+    Just like Windows and Mac, Linux
+
+    offers thousands upon thousands of
+
+    high-quality software titles that can
+
+    be easily found and installed. Most
+
+    modern Linux distributions (more on
+
+    this in a moment) include App Store-
+
+    like tools that centralize and simplify
+
+    application installation. For example:
+
+    Ubuntu Linux has the Ubuntu
+
+    Software Center (Figure 1) which
+
+    allows you to quickly search among'
+  - '[PAGE 15]
+
+
+    the thousands of apps and install them from one centralized location.
+
+
+    # Why Use Linux Instead of
+
+    Windows or macOS?
+
+
+    There are many reasons why you would use Linux instead of Windows or macOS and
+    here are just a few of them:
+
+
+    Windows 10 Is Slow on Older Hardware
+
+
+    If you use Windows XP, Vista, or an older Windows 7 PC, chances are your computer
+    isn''t powerful enough to run Windows 8 or Windows 10. You have'
+- md: '
+
+    two choices. You can either buy a computer running Windows 10 or run Linux.
+
+
+    Certain Linux distributions don''t provide much of a performance boost as their
+    desktop environments use a decent amount of memory. However, some versions of
+    Linux work brilliantly on older hardware.
+
+
+    For newer hardware, try Linux Mint with the Cinnamon Desktop Environment or Ubuntu.
+    For hardware that is two to four years old, try Linux Mint but use the MATE or
+    XFCE desktop environment, which provides a lighter footprint. For older hardware,
+    go for AntiX, Q4OS, Xubuntu, or Lubuntu...
+
+
+    ## You Don''t Like the Windows 10 User Interface
+
+
+    Most people become disorient when they first use a new operating system, especially
+    if the user interface has changed in any way. However, when they get used to a
+    new way of doing things, they end up liking the new interface more than the old
+    one.
+
+
+    If you can''t get to grips with the way Windows 10 does things, you might prefer
+    things to look like Windows 7, or you might decide to try something different.
+
+
+    Linux Mint provides a modern look and feel, but with menus and toolbars working
+    the way they always have. The learning curve to Linux Mint is no more difficult
+    than upgrading from Windows 7 to Windows 10.
+
+
+    ## The Size of the Windows 10
+
+
+    ### Download Is Huge
+
+
+    If you use Windows 7 or Windows 8 and are thinking about upgrading to Windows
+    10, the download for Windows 10 is very large.
+
+
+    Do you have a download limit with your broadband provider? Most Linux distributions
+    can be downloaded in under 2 gigabytes. If you are tight on bandwidth, some can
+    be installed for around 600 megabytes. Some are smaller than that.
+
+
+    You can buy the Windows 10 USB drive, but it costs a decent sum of money.
+
+
+    ## Linux Is Free
+
+
+    The free upgrade that Microsoft offered a couple of years ago has run out. This
+    means you now have to pay for it.
+
+
+    Many manufacturers ship computers with Windows 10 installed. If you are happy
+    with your current computer, the only way to get a new operating system is to pay
+    for the latest version of Windows or download and install Linux for free.
+
+
+    Linux has all the features you need in an operating system and is fully hardware
+    compatible. Some people say that you get what you pay for, but this is one example
+    where that doesn''t ring true.
+
+
+    If Linux is good enough for the top companies in the tech industry, then it''s
+    good enough to run on a home computer.
+
+
+    ## Linux Has More Free Applications
+
+
+    Windows has a few flagship products such as Microsoft Office and Visual Studio,
+    which make some people feel locked in. You can, however, run Microsoft Office
+    on Linux using virtualization software or running the online versions.
+
+
+    Most software development is web-based, and there are many good IDEs available
+    for Linux. With the advance of .NET Core, you can create APIs to use with JavaScript
+    web applications. Python is also a major programming language that can be used
+    cross-platform on Windows, Linux, and Macs. The PyCharm IDE is as good as Visual
+    Studio. The point here is that Visual Studio isn''t the only option.
+
+
+    Linux has a great set of applications that, for most people, provide all the features
+    they need. For example, the LibreOffice suite is great for 99.9% of the average
+    person''s needs. The Rhythmbox audio player is better than anything Windows offers,
+    VLC is a great video player, the Chrome browser is available, Evolution is a great
+    email client, and GIMP is a brilliant image editor.
+
+
+    There are free applications on popular Windows download sites such as CNET, but
+    you must know how to safely download and install software because bad things can
+    happen when you use those sites.
+
+
+    ## Security
+
+
+    While no operating system is completely risk-free, Windows is a big target for
+    developers of viruses and malware. There is little that Microsoft can do about
+    this issue. As such, you must install an antivirus application and firewall software
+    which eats into your memory and CPU usage as the constant stream of downloads
+    required to keep this software up to date.
+
+
+    With Linux, you only need to be clever, stick to trusted software repositories,
+    and avoid using risky programs such as Adobe Flash.
+
+
+    Linux is more secure than Windows because of the way it''s designed and handles
+    user permissions. This is one reason why most of the web runs on Linux.
+
+
+    ## Performance
+
+
+    Linux, even with all the effects and shiny features of modern desktop environments,
+    runs faster than Windows 8.1 and Windows 10.
+
+
+    Users are becoming less reliant on the desktop and more reliant on the web. Do
+    you need all your processing power taken up with the operating system, or do you
+    want something with a lighter footprint, letting you get on with your work and
+    play?
+
+
+    ## Privacy
+
+
+    The Windows 10 privacy policy has been well-documented in the press. It isn''t
+    as bad as some people would have you believe, and Microsoft isn''t doing anything
+    that Facebook, Google, Amazon, and others haven''t been doing for years.
+
+
+    For instance, the voice control system Cortana learns the way you talk and gets
+    better as it goes along by sending usage data to Microsoft. Microsoft uses this
+    data to improve the way Cortana works. Cortana sends targeted advertisements,
+    but Google already does this, and it is a part of modern life.
+
+
+    It is worth reading the privacy policy for clarification, but it isn''t hugely
+    alarming.
+
+
+    Most Linux distributions don''t collect your data. You can, as long as you...
+
+
+    ## Reliability
+
+
+    Windows is not as reliable as Linux. How many times have you, as a Windows user,
+    had a program hang, and when you try to close it remains open? With Linux, each
+    application is self-contained, and you can kill any application with Task command.
+    Aside from all that, Linux applications tend to lock up less frequently. Because
+    Linux and many of its applications are open-source, anyone can look at, review,
+    and improve the underlying code. This leads to a stable system with quick fixes
+    for bugs and security issues.
+
+
+    ## Updates
+
+
+    It can be frustrating when you want to print theater tickets, cinema tickets,
+    or directions to a venue and you turn on your computer to see the following message:
+    "Installing Update 1 of 356"
+
+
+    Even more annoying is that Windows chooses to install updates, and it displays
+    a message saying that your computer is going to be rebooted. As a user, it should
+    be up to you to install updates, and you should, at least, get a notice.
+
+
+    Linux operating systems need to be updated. There is no getting around security
+    holes are patched all the time. You get to choose when those updates are applied,
+    and in most cases, the updates can be applied without rebooting the operating
+    system.
+
+
+    Linux distributions are highly customizable. You can completely change the look
+    and feel and adjust nearly every part of it so that it works the way you want.
+    Windows has a limited set of tweaks available, but Linux lets you alter everything.
+
+
+    Support
+
+
+    Microsoft has a lot of documentation, but when you get stuck, you may need to
+    search their forums, and other people may have asked a question that has no good
+    answers. It isn''t that Microsoft''s support is bad; on the contrary, it is in-depth
+    and good. The truth is, however, that they employ people to offer support, and
+    there is only so much money that is budgeted for this support, and the wealth
+    of knowledge is spread thinly.
+
+
+    Linux support is easier to find, and there are dozens of forums, hundreds of chat
+    rooms, and even more websites dedicated to helping people learn and understand
+    Linux. Unlike Microsoft support, which is likely coming from an employee, Linux
+    support generally comes from enthusiasts. These people genuinely enjoy working
+    with their operating system and probably do so professionally. In some cases,
+    you can talk with the developer that wrote the piece of software that you need
+    assistance with.
+
+
+    # Prerequisite for studying Linux
+
+
+    To get started with Linux, you need to have basic computer skills. That means
+    if you know how to operate a
+
+    '
+  mdcn: '
+
+    有两个选择。你可以购买一台运行 Windows 10 的电脑，也可以运行 Linux。
+
+
+    某些 Linux 发行版并没有提供太大的性能提升，因为它们的桌面环境会消耗大量的内存。然而，某些版本的 Linux 在旧款硬件上运行得非常出色。
+
+
+    对于较新的硬件，尝试带有 Cinnamon 桌面环境的 Linux Mint 或 Ubuntu。对于两到四年前的硬件，尝试 Linux Mint 但请使用
+    MATE 或 XFCE 桌面环境，它们占用的资源更少。对于更旧的硬件，可以选择 AntiX、Q4OS、Xubuntu 或 Lubuntu……
+
+
+    ## 你不喜欢 Windows 10 的用户界面
+
+
+    大多数人在初次使用新操作系统时都会感到无所措，特别是当用户界面发生任何变化时。然而，当他们习惯了新的操作方式后，最终会更喜欢新界面而不是旧界面。
+
+
+    如果你无法适应 Windows 10 的操作方式，你可能更喜欢像 Windows 7 那样的，或者你可能会决定尝试一些不同的。
+
+
+    Linux Mint 提供了现代的视觉感受，但其菜单和工具栏的操作方式与既往一样。学习 Linux Mint 的学习曲线并不比从 Windows 7 升级到
+    Windows 10 更难。
+
+
+    ## Windows 10 的体积
+
+
+    ### 下载包巨大
+
+
+    如果你正在使用 Windows 7 或 Windows 8 并考虑升级到 Windows 10，那么 Windows 10 的下载包非常大。
+
+
+    你的宽带提供商有下载限制吗？大多数 Linux 发行版的下载量可以在 2GB 以内完成。如果你带宽紧张，某些发行版可以在 600 兆字节左右安装。有些比这还要小。
+
+
+    你可以购买 Windows 10 的 USB 盘，但这需要花费一笔钱。
+
+
+    ## Linux 是免费的
+
+
+    微软几年前提供的免费升级已经结束。这意味着你现在必须为之付费。
+
+
+    许多制造商在电脑出厂时就预装了 Windows 10。如果你对目前的电脑满意，获取新操作系统的唯一方法就是购买最新版本的 Windows，或者免费下载并安装
+    Linux。
+
+
+    Linux 包含了你对操作系统所需的所有功能，并且与硬件完全兼容。有些人说一分钱一分货，但在这种例子中这种说法并不成立。
+
+
+    如果 Linux 对科技行业的顶尖公司来说已经足够，那么它运行在家庭电脑上也足够了。
+
+
+    ## Linux 有更多免费应用程序
+
+
+    Windows 有几个旗舰产品，如 Microsoft Office 和 Visual Studio，这让一些人感到被锁死。然而，你可以通过虚拟化软件或运行在线版本在
+    Linux 上运行 Microsoft Office。
+
+
+    大多数软件开发都是基于 Web 的，Linux 有许多好用的 IDE。随着 .NET Core 的进步，你可以创建用于 JavaScript Web 应用程序的
+    API。Python 也是一种主要的编程语言，可以在 Windows、Linux 和 Mac 上跨平台使用。PyCharm IDE 和 Visual Studio
+    一样好。这里的观点是 Visual Studio 并不是唯一的选择。
+
+
+    Linux 拥有一套很棒的应用程序，对大多数人来说提供了他们所需的功能。例如，LibreOffice 套件可以满足普通人 99.9% 的需求。Rhythmbox
+    播放器比 Windows 任何软件都好，VLC 是一个很棒的视频播放器，可以使用 Chrome 浏览器，Evolution 是一个优秀的客户端，GIMP 是一个出色的图像编辑器。
+
+
+    在 CNET 等流行的 Windows 下载网站上有免费应用程序，但你必须知道如何安全地下载和安装软件，因为在使用这些网站时可能会发生糟糕的事情。
+
+
+    ## 安全
+
+
+    虽然没有任何操作系统是完全没有风险的，但 Windows 是病毒和恶意软件开发人员的大目标。对于这个问题，微软能做的很少。因此，你必须安装杀病毒程序和防火墙软件，而为了保持这些软件更新，所需的持续下载会占用你的内存和
+    CPU 使用率。
+
+
+    对于 Linux，你只需要足够聪明，坚持使用受信任的软件源，并避免使用如 Adobe Flash 等高风险程序。
+
+
+    Linux 比 Windows 更安全，这是因为它的设计方式以及处理用户权限的方式。这也是大多数网页运行在 Linux 上的原因之一。
+
+
+    ## 性能
+
+
+    Linux 即使具有现代桌面环境的所有特效和华丽功能，运行速度也比 Windows 8.1 和 Windows 10 快。
+
+
+    用户正变得不再依赖桌面，而是依赖 Web。你需要所有的处理能力都被操作系统占用吗，还是你想要一个占用更少的东西，让你能够专注于工作和娱乐？
+
+
+    ## 隐私
+
+
+    Windows 10 的隐私政策在媒体中已有详尽记录。它并没有某些人让你相信的那样糟糕，微软所做的事情并不是 Facebook、Google、Amazon
+    等公司多年来没有做过的。
+
+
+    例如，语音控制系统 Cortana 会学习你的说话方式，并随着向微软发送使用数据而变得更好。微软使用这些数据来改进 Cortana 的工作方式。Cortana
+    会发送定向广告，但 Google 已经这么做了，而且这是现代生活的一部分。
+
+
+    值得阅读隐私政策以获得澄清，但它并不令人惊惊。
+
+
+    大多数 Linux 发行版不收集你的数据。只要你……
+
+
+    ## 可靠性
+
+
+    Windows 不如 Linux 可靠。作为 Windows 用户，你有多少次遇到程序卡死，当你尝试关闭它时它仍然开启？在 Linux 中，每个应用程序都是自包含的，你可以通过
+    `Task` 命令杀死任何应用程序。除之外，Linux 应用程序锁死的频率更低。因为 Linux 及其许多应用程序是开源的，任何人都可以查看、审查和改进底层代码。这导致了一个稳定的系统，并对漏洞和安全问题提供了快速修复。
+
+
+    ## 更新
+
+
+    当你想要打印剧院票、电影票或场地的路线，结果打开电脑看到以下消息时：“正在安装更新 1 的 356”，这会很令人沮丧。
+
+
+    更恼人的是 Windows 会选择安装更新，并显示消息说你的电脑将重启。作为用户，安装更新应该由你决定，而且你至少应该收到通知。
+
+
+    Linux 操作系统也需要更新。安全漏洞不断被修补是无法避免的。你可以选择何时应用这些更新，在大多数情况下，更新可以在不重启操作系统的情况下应用。
+
+
+    Linux 发行版具有高度的可定制性。你可以完全改变外观和感受，并调整几乎每一个部分，使其按照你想要的方式运行。Windows 提供的调优设置有限，但 Linux
+    允许你修改一切。
+
+
+    支持
+
+
+    微软有大量的文档，但当你遇到困难时，你可能需要搜索他们的论坛，其他人可能已经问过没有良好答案的问题。这并不是微软的支持很糟糕；相反，它是非常深入且良好的。
+
+
+    #  Linux 的前提
+
+
+    要学习 Linux，你需要具备基础计算机技能。这意味着如果你知道如何操作
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 16]
+
+
+    two choices. You can either buy a computer running Windows 10 or run Linux.
+
+
+    Certain Linux distributions don''t provide much of a performance boost as their
+    desktop environments use a decent amount of memory. However, some versions of
+    Linux work brilliantly on older hardware.
+
+
+    For newer hardware, try Linux Mint with the Cinnamon Desktop Environment or Ubuntu.
+    For hardware that is two to four years old, try Linux Mint but use the MATE or
+    XFCE'
+  - '[PAGE 17]
+
+
+    desktop environment, which provides a lighter footprint. For older hardware, go
+    for AntiX, Q4OS, Xubuntu, or Lubuntu...
+
+
+    # You Don''t Like the Windows 10 User Interface
+
+
+    Most people become disorient when they first use a new operating system, especially
+    if the user interface has changed in any way. However, when they get used to a
+    new way of doing things, they end up liking the new interface more than the old
+    one.'
+  - '[PAGE 18]
+
+
+    If you can''t get to grips with the way Windows 10 does things, you might prefer
+    things to look like Windows 7, or you might decide to try something different.
+
+
+    Linux Mint provides a modern look and feel, but with menus and toolbars working
+    the way they always have. The learning curve to Linux Mint is no more difficult
+    than upgrading from Windows 7 to Windows 10.'
+  - '[PAGE 19]
+
+
+    # # The Size of the Windows 10
+
+
+    # ## Download Is Huge
+
+
+    If you use Windows 7 or Windows 8 and are thinking about upgrading to Windows
+    10, the download for Windows 10 is very large.
+
+
+    Do you have a download limit with your broadband provider? Most Linux distributions
+    can be downloaded in under 2 gigabytes. If you are tight on bandwidth, some can
+    be installed for around 600 megabytes. Some are smaller than that.'
+  - '[PAGE 20]
+
+
+    You can buy the Windows 10 USB drive, but it costs a decent sum of money.
+
+
+    # Linux Is Free
+
+
+    The free upgrade that Microsoft offered a couple of years ago has run out. This
+    means you now have to pay for it.
+
+
+    Many manufacturers ship computers with Windows 10 installed. If you are happy
+    with your current computer, the only way to get a new operating system is to pay
+    for the latest version'
+  - '[PAGE 21]
+
+
+    of Windows or download and install Linux for free.
+
+
+    Linux has all the features you need in an operating system and is fully hardware
+    compatible. Some people say that you get what you pay for, but this is one example
+    where that doesn''t ring true.
+
+
+    If Linux is good enough for the top companies in the tech industry, then it''s
+    good enough to run on a home computer.'
+  - '[PAGE 22]
+
+
+    # Linux Has More Free Applications
+
+
+    Windows has a few flagship products such as Microsoft Office and Visual Studio,
+    which make some people feel locked in. You can, however, run Microsoft Office
+    on Linux using virtualization software or running the online versions.
+
+
+    Most software development is web-based, and there are many good IDEs available
+    for Linux. With the advance of .NET Core, you can create APIs to use with JavaScript
+    web applications. Python is also a major programming language that can be'
+  - '[PAGE 23]
+
+
+    used cross-platform on Windows, Linux, and Macs. The PyCharm IDE is as good as
+    Visual Studio. The point here is that Visual Studio isn''t the only option.
+
+
+    Linux has a great set of applications that, for most people, provide all the features
+    they need. For example, the LibreOffice suite is great for 99.9% of the average
+    person''s needs. The Rhythmbox audio player is better than anything Windows offers,
+    VLC is a great video player, the Chrome browser is available, Evolution is a a'
+  - '[PAGE 24]
+
+
+    great email client, and GIMP is a brilliant image editor.
+
+
+    There are free applications on popular Windows download sites such as CNET, but
+    you must know how to safely download and install software because bad things can
+    happen when you use those sites.
+
+
+    # Security
+
+
+    While no operating system is completely risk-free, Windows is a big target for
+    developers of viruses and malware. There is little that Microsoft can do about
+    this issue. As such, you'
+  - '[PAGE 25]
+
+
+    must install an antivirus application and firewall software which eats into your
+    memory and CPU usage as the constant stream of downloads required to keep this
+    software up to date.
+
+
+    With Linux, you only need to be clever, stick to trusted software repositories,
+    and avoid using risky programs such as Adobe Flash.
+
+
+    Linux is more secure than Windows because of the way it''s designed and handles
+    user permissions. This is one'
+  - '[PAGE 26]
+
+
+    reason why most of the web runs on Linux.
+
+
+    # Performance
+
+
+    Linux, even with all the effects and shiny features of modern desktop environments,
+    runs faster than Windows 8.1 and Windows 10.
+
+
+    Users are becoming less reliant on the desktop and more reliant on the web. Do
+    you need all your processing power taken up with the operating system, or do you
+    want something with a lighter footprint, letting you get on with your work and
+    play?'
+  - '[PAGE 27]
+
+
+    # Privacy
+
+
+    The Windows 10 privacy policy has been well-documented in the press. It isn''t
+    as bad as some people would have you believe, and Microsoft isn''t doing anything
+    that Facebook, Google, Amazon, and others haven''t been doing for years.
+
+
+    For instance, the voice control system Cortana learns the way you talk and gets
+    better as it goes along by sending usage data to Microsoft. Microsoft uses this
+    data to improve the way Cortana works. Cortana sends targeted advertisements,
+    but'
+  - '[PAGE 28]
+
+
+    Google already does this, and it is a part of modern life.
+
+
+    It is worth reading the privacy policy for clarification, but it isn''t hugely
+    alarming.
+
+
+    Most Linux distributions don''t collect your data. You can remain hidden away
+    from Big Brother (as long as you never use the internet).
+
+
+    # Reliability
+
+
+    Windows is not as reliable as Linux. How many times have you, as a Windows user,
+    had a program hang, and when you try to close it from the'
+  - '[PAGE 29]
+
+
+    Task Manager (assuming you can get it to open), it remains open, and it takes
+    several attempts to close the offending program?
+
+
+    With Linux, each application is self-contained, and you can kill any application
+    with the XKill command.
+
+
+    Aside from all that, Linux applications tend to lock up less frequently. Because
+    Linux and many of its applications are open-source, anyone can look at, review,
+    and improve the underlying code. This leads to a'
+  - '[PAGE 30]
+
+
+    stable system with quick fixes for bugs and security issues.
+
+
+    # Updates
+
+
+    It can be frustrating when you want to print theater tickets, cinema tickets,
+    or directions to a venue and you turn on your computer to see the following message:
+
+
+    "Installing Update 1 of 356"
+
+
+    Even more annoying is that Windows chooses when to install updates, and it displays
+    a message saying that your computer is going to be rebooted. As a user, it should
+    be up to you when to'
+  - '[PAGE 31]
+
+
+    install updates, and updates shouldn''t be forced on you or you should, at least,
+    get a notice.
+
+
+    Another downside is that Windows often needs to be rebooted to install updates.
+
+
+    Linux operating systems need to be updated. There is no getting around that security
+    holes are patched all the time. You get to choose when those updates are applied,
+    and in most cases, the updates can be applied without rebooting the operating
+    system.'
+  - '[PAGE 32]
+
+
+    Linux distributions are highly customizable. You can completely change the look
+    and feel and adjust nearly every part of it so that it works the way you want.
+
+
+    Windows has a limited set of tweaks available, but Linux lets you alter absolutely
+    everything.
+
+
+    Support
+
+
+    Microsoft has a lot of documentation, but when you get stuck, you may need to
+    search their forums, and'
+  - '[PAGE 33]
+
+
+    other people may have asked a question that has no good answers.
+
+
+    It isn''t that Microsoft''s support is bad; on the contrary, it is in-depth and
+    good. The truth is, however, that they employ people to offer support, and there
+    is only so much money that is budgeted for this support, and the wealth of knowledge
+    is spread thinly.
+
+
+    Linux support is easier to find, and there are dozens of forums, hundreds of chat
+    rooms, and even more websites dedicated to helping people learn and understand
+    Linux.'
+  - '[PAGE 34]
+
+
+    Unlike Microsoft support, which is likely coming from an employee, Linux support
+    generally comes from enethusiasts. These people genuinely enjoy working with their
+    operating system and probably do so professionally. In some cases, you can talk
+    with the developer that wrote the piece of software that you need assistance with.
+
+
+    # Prerequisite for studying Linux
+
+
+    To get started with Linux, you need to have basic computer skills. That means
+    if you know how to operate a'
+- md: '
+
+    computer and its components, you are good to go.
+
+
+    Anyone with the knowledge on how to browse the web can successfully go through
+    the Linux learning resources.
+
+
+    The requirements are also low when it comes to hardware. Any basic machine with
+    single-core CPU, 128 MB of memory and few GBs of harddisk can run Linux.
+
+
+    However, we recommend having at least dual-core machine, 15 GB hard disk and 2
+    GB of RAM for optimal learning performance.
+
+
+    In short, you need minimal things to get started with Linux. Also, you need one
+    Linux distro copy.
+
+
+    ## Which Linux Distribution Should You Use?
+
+
+    The Linux kernel is like an engine. A distribution is an actual vehicle that houses
+    the engine.
+
+
+    So which Linux distribution should you choose? Linux supports several hundred
+    distributions, each optimized for some specific use case:
+
+
+    - Linux Mint: Requires low computer expertise, easy to install, easy to use and
+    has a familiar-looking desktop for Windows users.
+
+    - Debian: For those seeking a truly free Linux distribution with no proprietary
+    drivers, firmware or software, then Debian is for you.
+
+    - Ubuntu: A modern Linux distribution that is easy to install and easy to use.
+
+    - openSUSE: A stable and powerful Linux distribution. Not as easy to install as
+    Mint and Ubuntu but a good alternative nonetheless.
+
+    - Fedora: The most up-to-date Linux distribution with all new concepts incorporated
+    at the earliest possible opportunity.
+
+    - Mageia: Rose from the ashes of the formerly great Mandriva Linux. Easy to install
+    and easy to use.
+
+    - CentOS: As with Fedora, CentOS is based on the commercial Linux distribution,
+    Red Hat Linux. Unlike Fedora, it is built for stability.
+
+    - Manjaro: Based on Arch Linux, Manjaro provides a great balance between ease
+    of use and up to date software.
+
+    - LXLE: Based on the lightweight Lubuntu distribution this provides a fully-featured
+    Linux distribution for older hardware.
+
+    - Arch: A rolling release distribution, meaning that you don''t have to install
+    new versions of the operating system at any point because it updates itself. More
+    difficult for the new user to get to grips with but very powerful.
+
+    - Elementary: Linux for people who like a Mac-style interface.
+
+
+    ## HOW TO RUN LINUX FROM A DVD OR USB
+
+
+    A live Linux DVD or USB lets you run Linux without installing it to your hard
+    drive. This basically lets you test drive Linux before committing to it and is
+    also good for the occasional user.
+
+
+    Most distributions use a live loader to both test and install the distribution.
+    Ubuntu Linux, a common choice for new Linux hobbyists, offers an excellent live
+    environment.
+
+
+    ## How to Install Linux
+
+
+    Each Linux distribution relies upon a different installer, which is a program
+    that guides you through configuring Linux. In most cases, you''re free to install
+    Linux as the new operating system on a computer or as a separate OS that doesn''t
+    overwrite Windows.
+
+
+    ## What Is a Desktop Environment?
+
+
+    A typical Linux distribution includes several different components.
+
+
+    A display manager logs you in while a window manager governs windows, panel, menus,
+    dash interfaces and core applications. Many of these items are bundled together
+    to make a desktop environment.
+
+
+    Some Linux distributions ship with just one desktop environment (although others
+    are available in the software repositories), while others offer different versions
+    of the distribution fine-tuned for different desktop environments.
+
+
+    Common desktop environments include Cinnamon, GNOME, Unity, KDE, Enlightenment,
+    XFCE, LXDE and MATE.
+
+
+    Cinnamon is a more conventional desktop environment that looks much like Windows
+    7, with a panel at the bottom, a menu, system tray icons, and quick launch icons.
+
+
+    GNOME and Unity are fairly similar. They are modern desktop environments that
+    use the concept of launcher icons and a dashboard-style display for picking applications.
+    There are also core applications that integrate well with the overall theme of
+    the desktop environment.
+
+
+    KDE is a classic-style desktop environment with many custom features and a core
+    set of applications that are all highly customizable.
+
+
+    Enlightenment, XFCE, LXDE, and MATE are lightweight desktop environments with
+    panels and menus.
+
+
+    ## Are There Any Decent Office Suites for Linux?
+
+
+    For personal use and for small- to medium-sized businesses, LibreOffice presents
+    a strong alternative to Microsoft Office, for free.
+
+
+    LibreOffice comes with a word processor with the majority of the features you
+    expect from a word processor. It also features a decent spreadsheet tool that
+    is full-featured and includes a basic programming engine, although it isn''t compatible
+    with Excel VBA.
+
+
+    Other tools include the presentation, maths, database, and drawing packages which
+    are all good.
+
+
+    ## HOW TO INSTALL SOFTWARE USING LINUX
+
+
+    Linux does not install software the same way that Windows does. A package manager
+    accesses repositories that archive various software applications that work on
+    a given distribution. The package management tool provides a mechanism to search
+    for software, install software, keep the software up to date, and remove the software.
+
+
+    Each distribution provides its own graphical tool. There are common command-line
+    tools used by many different distributions.
+
+
+    For example, Ubuntu, Linux Mint, and Debian all use the apt-get package manager.
+    Fedora and CentOS use the yum package manager. Arch and Manjaro use Pacman.
+
+
+    ## The Linux Command Line
+
+
+    Given its long heritage and the diversity of approach of modern desktop environments,
+    a lot of Linux still works from a shell session. In the macOS world, these sessions
+    are called the terminal; in Windows, the Command Prompt.
+
+
+    Although the graphical user interface of modern Linux DEs can do just about everything,
+    much online education about Linux relies on the shell because it''s not tied to
+    the peculiarities of a given distribution or window manager. People new to Linux
+    can get away with rarely or never working from the shell, but people who grow
+    to love Linux often go to the shell first because of how easy it is to type one
+    command instead of clicking through many different menus.
+
+
+    ## Linux for Beginners: Taking Your First Steps
+
+
+    Linux for beginners: with cloud-based use of the Linux OS growing exponentially,
+    it might just be time for you to try it out for yourself. Don’t think you’ve ever
+    been introduced to the Linux Operating System? You probably use it every day without
+    even realizing it. After all, Linux servers run Google, Twitter, Facebook, and
+    a whole pile of other major Internet sites.
+
+
+    Linux is virtually synonymous with the cloud. So if you plan on working with cloud-based
+    projects, then it’s probably a good idea to pick up at least some Linux bare essentials.
+
+
+    First, just for fun, here’s a short list of some stuff that runs on Linux:
+
+    - Android phones and tablets.
+
+    - 94% of the world’s supercomputers.
+
+    - Air traffic control systems.
+
+    - CERN, the world’s largest physics laboratory, relies upon Linux to power its
+    huge particle accelerator.
+
+    - The New York Stock Exchange.
+
+    - Japanese high-speed rail.
+
+    - In 2004, Lockheed Martin delivered a Red Hat Linux-powered nuclear submarine
+    to the US Navy (bug-free I hope!).Linux is everywhere. If you want to be anywhere,
+    then I suppose you’ll need at least a passing familiarity.
+
+
+    ## BASIC LINUX COMMANDS
+
+
+    Linux Shell or “Terminal”
+
+
+    So, basically, a shell is a program that receives commands from the user and gives
+    it to the OS to process, and it shows the output. Linux''s shell is its main part.
+    Its distros come in GUI (graphical user interface), but basically, Linux has a
+    CLI (command line interface). In this tutorial, we are going to cover the basic
+    commands that we use in the shell of Linux.
+
+
+    To open the terminal, press Ctrl+Alt+T in Ubuntu, or press Alt+F2, type in gnome-terminal,
+    and press enter. In Raspberry Pi, type in lxterminal. There is also a GUI way
+    of taking it, but this is better!
+
+
+    # Linux Commands and their corresponding Basic Commands
+
+
+    + 1. pwd — When you first open the terminal, you are in the home directory of
+    your user. To know which directory you are in, you can use the “pwd” command.
+    It gives us the absolute path, which means the path that starts from the root.
+    The root is the base of the Linux file system. It is
+
+    '
+  mdcn: '
+
+    计算机及其组件，你就可以就绪了。
+
+
+    任何了解如何浏览网页的人都能顺利地完成 Linux 学习资源。
+
+
+    硬件方面的要求也很低。任何带有单核 CPU、128 MB 内存和几 GB 硬盘的基础机型都可以运行 Linux。
+
+
+    然而，为了获得最佳的学习性能，我们建议至少配备双核机器、15 GB 硬盘和 2 GB 内存（RAM）。
+
+
+    简而言之，你需要极少的东西就可以开始学习 Linux。此外，你还需要一个 Linux 发行版的副本。
+
+
+    ## 你应该使用哪种 Linux 发行版？
+
+
+    Linux 内核就像引擎。而发行版是装载引擎的实际车辆。
+
+
+    那么，你应该选择哪种 Linux 发行版呢？Linux 支持数百种发行版，每种都针对特定的用例进行了优化：
+
+
+    - Linux Mint：对计算机知识要求低，易于安装、易用，并为 Windows 用户提供了熟悉的桌面。
+
+    - Debian：如果你正在寻找一种不包含专有驱动、固件或软件的真正自由 Linux 发行版，那么 Debian 适合你。
+
+    - Ubuntu：一种现代的 Linux 发行版，安装简单且易用。
+
+    - openSUSE：一个稳定且强大的 Linux 发行版。虽然不像 Mint 和 Ubuntu 那么容易安装，但仍然很好的替代方案。
+
+    - Fedora：最先进的 Linux 发行版，尽可能地整合了所有新概念。
+
+    - Mageia：从曾经辉煌的 Mandriva Linux 灰中重生。易于安装且易用。
+
+    - CentOS：与 Fedora 一样，CentOS 基于商业级 Linux 发行版 Red Hat Linux。与 Fedora 不同，它是为了稳定性而构建的。
+
+    - Manjaro：基于 Arch Linux，Manjaro 在易用性和软件的更新之间取得了极好的平衡。
+
+    - LXLE：基于轻量级的 Lubuntu 发行版，为旧硬件提供了一个功能齐全的 Linux 发行版。
+
+    - Arch：一种滚动更新（rolling release）发行，意味着你不需要在任何时候安装操作系统的新版本，因为它会自动更新。对于新用户来说较难掌握，但非常强大。
+
+    - Elementary：为喜欢 Mac 风格界面的人们设计的 Linux。
+
+
+    ## 如何从 DVD 或 USB 运行 Linux
+
+
+    实时 Linux DVD 或 USB 启动盘可以让你在不将其安装到硬盘的情况下运行 Linux。这基本上让你在决定投入使用之前对 Linux 进行“试驾”，对于偶尔使用的用户也很好。
+
+
+    大多数发行版都使用实时加载器（live loader）来测试和安装发行版。Ubuntu Linux 是 Linux 新爱好者的常用选择，提供了极佳实时环境。
+
+
+    ## 如何安装 Linux
+
+
+    每个 Linux 发行版都依赖于不同的安装程序，这是一个引导你完成 Linux 配置的程序。在大多数情况下，你可以自由地将 Linux 安装为计算机的新操作系统，或者作为一个不覆盖
+    Windows 的独立操作系统。
+
+
+    ## 什么是桌面环境？
+
+
+    典型的 Linux 发行版包含几个不同的组件。
+
+
+    显示管理器（display manager）负责你的登录，而窗口管理器（window manager）负责管理窗口、面板、菜单、Dash 界面和核心应用程序。这些项目中的许多被打包在一起形成一个桌面环境。
+
+
+    某些 Linux 发行版只带有一个桌面环境（尽管在软件库中还有其他可选），而另一些则提供针对不同桌面环境精细调整的发行版版本。
+
+
+    常见的桌面环境包括 Cinnamon、GNOME、Unity、KDE、Enlightenment、XFCE、LXDE 和 MATE。
+
+
+    Cinnamon 是一种传统的桌面环境，看起来非常像 Windows 7，底部有一个面板、菜单、系统托盘图标和快速启动图标。
+
+
+    GNOME 和 Unity 相当相似。它们是现代桌面环境，使用启动图标概念和仪表板风格的显示来选择应用程序。还有与桌面环境整体主题融合得很好的核心应用程序。
+
+
+    KDE 是一个经典风格的桌面环境，具有许多自定义功能和核心应用程序，这些程序都是高度可定制的。
+
+
+    Enlightenment、XFCE、LXDE 和 MATE 是带有面板和菜单的轻量级桌面环境。
+
+
+    ## Linux 有好用的办公套件吗？
+
+
+    对于个人使用和小小型企业，LibreOffice 是一个很好的替代品。它是免费的，并且包含了许多功能。
+
+
+    ## 如何从 DVD 或 USB 安装 Linux
+
+
+    （此处对应原文中缺失的安装说明部分）
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 35]
+
+
+    computer and its components, you are good to go.
+
+
+    Anyone with the knowledge on how to browse the web can successfully go through
+    the Linux learning resources.
+
+
+    The requirements are also low when it comes to hardware. Any basic machine with
+    single-core CPU, 128 MB of memory and few GBs of harddisk can run Linux.
+
+
+    However, we recommend having at least dual-core machine, 15 GB hard disk and 2
+    GB of RAM for optimal learning performance.'
+  - '[PAGE 36]
+
+
+    In short, you need minimal things to get started with Linux. Also, you need one
+    Linux distro copy.
+
+
+    # Which Linux Distribution Should You Use?
+
+
+    The Linux kernel is like an engine. A distribution is an actual vehicle that houses
+    the engine.
+
+
+    So which Linux distribution should you choose? Linux supports several hundred
+    distributions, each optimized for some specific use case:
+
+
+    Linux Mint: Requires low computer expertise, easy to install, easy to use'
+  - '[PAGE 37]
+
+
+    and has a familiar-looking desktop for Windows users.
+
+
+    Debian: For those seeking a truly free Linux distribution with no proprietary
+    drivers, firmware or software, then Debian is for you.
+
+
+    Ubuntu: A modern Linux distribution that is easy to install and easy to use.
+
+
+    openSUSE: A stable and powerful Linux distribution. Not as easy to install as
+    Mint and Ubuntu but a good alternative nonetheless.
+
+
+    Fedora: The most up-to-date Linux distribution with all new concepts'
+  - '[PAGE 38]
+
+
+    incorporated at the earliest possible opportunity.
+
+
+    Mageia: Rose from the ashes of the formerly great Mandriva Linux. Easy to install
+    and easy to use.
+
+
+    CentOS: As with Fedora, CentOS is based on the commercial Linux distribution,
+    Red Hat Linux. Unlike Fedora, it is built for stability.
+
+
+    Manjaro: Based on Arch Linux, Manjaro provides a great balance between ease of
+    use and up to date software.'
+  - '[PAGE 39]
+
+
+    LXLE: Based on the lightweight Lubuntu distribution this provides a fully-featured
+    Linux distribution for older hardware.
+
+
+    Arch: A rolling release distribution, meaning that you don''t have to install
+    new versions of the operating system at any point because it updates itself. More
+    difficult for the new user to get to grips with but very powerful.
+
+
+    Elementary: Linux for people who like a Mac-style interface.'
+  - '[PAGE 40]
+
+
+    # HOW TO RUN LINUX FROM A DVD OR USB
+
+
+    A live Linux DVD or USB lets you run Linux without installing it to your hard
+    drive. This basically lets you test drive Linux before committing to it and is
+    also good for the occasional user.
+
+
+    Most distributions use a live loader to both test and install the distribution.
+    Ubuntu Linux, a common choice for new Linux hobbyists, offers an excellent live
+    environment.'
+  - '[PAGE 41]
+
+
+    # How to Install Linux
+
+
+    Each Linux distribution relies upon a different installer, which is a program
+    that guides you through configuring Linux. In most cases, you''re free to install
+    Linux as the new operating system on a computer or as a separate OS that doesn''t
+    overwrite Windows.
+
+
+    # What Is a Desktop Environment?
+
+
+    A typical Linux distribution includes several different components.'
+  - '[PAGE 42]
+
+
+    A display manager logs you in while a window manager governs windows, panel, menus,
+    dash interfaces and core applications. Many of these items are bundled together
+    to make a desktop environment.
+
+
+    Some Linux distributions ship with just one desktop environment (although others
+    are available in the software repositories), while others offer different versions
+    of the distribution fine-tuned for different desktop environments.'
+  - '[PAGE 43]
+
+
+    Common desktop environments include Cinnamon, GNOME, Unity, KDE, Enlightenment,
+    XFCE, LXDE and MATE.
+
+
+    Cinnamon is a more conventional desktop environment that looks much like Windows
+    7, with a panel at the bottom, a menu, system tray icons, and quick launch icons.
+
+
+    GNOME and Unity are fairly similar. They are modern desktop environments that
+    use the concept of launcher icons and a dashboard-style display for picking applications.
+    There'
+  - '[PAGE 44]
+
+
+    are also core applications that integrate well with the overall theme of the desktop
+    environment.
+
+
+    KDE is a classic-style desktop environment with many custom features and a core
+    set of applications that are all highly customizable.
+
+
+    Enlightenment, XFCE, LXDE, and MATE are lightweight desktop environments with
+    panels and menus.
+
+
+    # Are There Any Decent Office Suites for Linux?
+
+
+    For personal use and for small- to medium-sized businesses, LibreOffice'
+  - '[PAGE 45]
+
+
+    presents a strong alternative to Microsoft Office, for free.
+
+
+    LibreOffice comes with a word processor with the majority of the features you
+    expect from a word processor. It also features a decent spreadsheet tool that
+    is full-featured and includes a basic programming engine, although it isn''t compatible
+    with Excel VBA.
+
+
+    Other tools include the presentation, maths, database, and drawing packages which
+    are all good.'
+  - '[PAGE 46]
+
+
+    # HOW TO INSTALL SOFTWARE
+
+
+    # USING LINUX
+
+
+    Linux does not install software the same way that Windows does. A package manager
+    accesses repositories that archive various software applications that work on
+    a given distribution. The package management tool provides a mechanism to search
+    for software, install software, keep the software up to date, and remove the software.
+
+
+    Each distribution provides its own graphical tool. There are common'
+  - '[PAGE 47]
+
+
+    command-line tools used by many different distributions.
+
+
+    For example, Ubuntu, Linux Mint, and Debian all use the apt-get package manager.
+    Fedora and CentOS use the yum package manager. Arch and Manjaro use Pacman.
+
+
+    # The Linux Command Line
+
+
+    Given its long heritage and the diversity of approach of modern desktop environments,
+    a lot of Linux still works from a shell session. In the macOS world, these sessions
+    are'
+  - '[PAGE 48]
+
+
+    called the terminal; in Windows, the Command Prompt.
+
+
+    Although the graphical user interface of modern Linux DEs can do just about everything,
+    much online education about Linux relies on the shell because it''s not tied to
+    the peculiarities of a given distribution or window manager. People new to Linux
+    can get away with rarely or never working from the shell, but people who grow
+    to love Linux often go to the shell first because of how easy it is to type one
+    command instead of'
+  - '[PAGE 49]
+
+
+    clicking through many different menus.
+
+
+    # Linux for Beginners: Taking Your First Steps
+
+
+    Linux for beginners: with cloud-based use of the Linux OS growing exponentially,
+    it might just be time for you to try it out for yourselfDon’t think you’ve ever
+    been introduced to the Linux Operating System? You probably use it every day without
+    even realizing it. After all, Linux servers run Google, Twitter, Facebook, and
+    a whole pile of other major Internet sites.'
+  - '[PAGE 50]
+
+
+    Linux is virtually synonymous with the cloud. So if you plan on working with cloud-based
+    projects, then it’s probably a good idea to pick up at least some Linux bare essentials.
+
+
+    First, just for fun, here’s a short list of some stuff that runs on Linux:Android
+    phones and tablets.94% of the world’s supercomputers.Air traffic control systems.CERN,
+    the world’s largest particle physics laboratory, relies upon Linux to power its
+    huge particle accelerator.The New York Stock Exchange.Japanese high-speed rail.In
+    2004, Lockheed Martin'
+  - '[PAGE 51]
+
+
+    delivered a Red Hat Linux-powered nuclear submarine to the US Navy (bug-free I
+    hope!).Linux is everywhere. If you want to be anywhere, then I suppose you’ll
+    need at least a passing familiarity.'
+  - '[PAGE 52]
+
+
+    # BASIC LINUX COMMANDS
+
+
+    Linux Shell or “Terminal”
+
+
+    So, basically, a shell is a program that receives commands from the user and gives
+    it to the OS to process, and it shows the output. Linux''s shell is its main part.
+    Its distros come in GUI (graphical user interface), but basically, Linux has a
+    CLI (command line interface). In this tutorial, we are going to cover the basic
+    commands that we use in the shell of Linux.
+
+
+    To open the terminal, press Ctrl+Alt+T in Ubuntu, or press'
+  - '[PAGE 53]
+
+
+    Alt+F2, type in gnome-terminal, and press enter. In Raspberry Pi, type in lxterminal.
+    There is also a GUI way of taking it, but this is better!
+
+
+    # Linux Commands and their corresponding Basic Commands
+
+
+    +   1. pwd — When you first open the terminal, you are in the home directory of
+    your user. To know which directory you are in, you can use the “pwd” command.
+    It gives us the absolute path, which means the path that starts from the root.
+    The root is the base of the Linux file system. It is'
+- md: '
+
+    denoted by a forward slash ( / ). The user directory is usually something like
+    "/home/username".
+
+
+    - 2. ls — Use the "ls" command to know what files are in the directory you are
+    in. You can see all the hidden files by using the command "ls -a".
+
+
+    - 3. cd — Use the "cd" command to go to a directory. For example, if you are in
+    the home folder, and you want to go to the downloads folder, then you can type
+    in "cd Downloads". Remember, this command is case sensitive, and you have to type
+    in the name of the folder exactly as it is. But there is a problem with these
+    commands. Imagine you have a folder named “Raspberry Pi”. In this case, when you
+    type in “cd Raspberry Pi”, the shell will take the second argument of the command
+    as a different one, so you will get an error saying that the directory does not
+    exist. Here, you can use a backward slash. That is, you can use “cd Raspberry\
+    Pi” in this case. Spaces are denoted like this: If you just type “cd” and press
+    enter, it takes you to the home directory. To go back from a folder to the folder
+    before that, you can type "cd ..". The two dots represent back.
+
+
+    - 4. mkdir & rmdir — Use the mkdir command when you need to create a folder or
+    a directory. For example, if you want to make a directory called "DIY", then you
+    can type "mkdir DIY". Remember, as told before, if you want to create a directory
+    named "DIY Hacking", then you can type "mkdir DIY\ Hacking". Use rmdir to delete
+    a directory. But rmdir can only be used to delete an empty directory. To delete
+    a directory containing files, use rm.
+
+
+    - 5. rm — Use the rm command to delete files and directories. Use "rm -r" to delete
+    just the directory. It deletes both the folder and the files it contains when
+    using only the rm command.
+
+
+    - 6. touch — The touch command is used to create a file. It can be anything, from
+    an empty txt file to an empty zip file. For example, "touch new.txt".
+
+
+    - 7. man & --help — To know more about a command and how to use it, use the man
+    command. It shows the manual pages of the command. For example, “man cd” shows
+    the manual pages of the cd command. Typing in the command name and the argument
+    helps it show which ways the command can be used (e.g., cd --help).
+
+
+    - 8. cp — Use the cp command to copy files through the command line. It takes
+    two arguments: The first is the location of the file to be copied, the second
+    is where to copy.
+
+
+    - 9. mv — Use the mv command to move files through the command line. We can also
+    use the mv command to rename a file. For example, if we want to rename the file
+    “text” to “new”, we can use “mv text new”. It takes the two arguments, just like
+    the cp command.
+
+
+    - 10. locate — The locate command is used to locate a file in a Linux system,
+    just like the search command in Windows. This command is useful when you don''t
+    know where a file is saved or the actual name of the file. Using the -i argument
+    with the command helps to ignore the case (it doesn''t matter if it is uppercase
+    or lowercase). So, if you want a file that has the word “hello”, it gives the
+    list of all the files in your Linux system containing the word "hello" when you
+    type in “locate -i hello”. If you remember two words, you can separate them using
+    an asterisk (*). For example, to locate a file containing the words "hello" and
+    "this", you can use the command “locate -i *hello*this”.
+
+
+    # Intermediate Commands
+
+
+    - 1. echo — The "echo" command helps us move some data, usually text into a file.
+    For example, if you want to create a new text file or add to an already made text
+    file, you just need to type in, "echo hello, my name is alok >> new.txt". You
+    do not need to separate the spaces by using the backward slash here, because we
+    put in two triangular brackets when we finish what we need to write.
+
+
+    - 2. cat — Use the cat command to display the contents of a file. It is usually
+    used to easily view programs.
+
+
+    - 3. nano, vi, jed — nano and vi are already installed text editors in the Linux
+    command line. The nano command is a good text editor that denotes keywords with
+    color and can recognize most languages. And vi is simpler than nano. You can create
+    a new file or modify a file using this editor. For example, if you need to make
+    a new file named "check.txt", you can create it by using the command "nano check.txt".
+    You can save your files after editing by using the sequence Ctrl+X, then Y (or
+    N for no). In my experience, using nano for HTML editing doesn''t seem as good,
+    because of its color, so I recommend jed text editor. We will come to installing
+    packages soon.
+
+
+    - 4. sudo — A widely used command in the Linux command line, sudo stands for "SuperUser
+    Do". So, if you want any command to be done with administrative or root privileges,
+    you can use the sudo command. For example, if you want to edit a file like viz.alsa-base.conf,
+    which needs root permissions, you can use the command — sudo nano alsa-base.conf.
+    You can enter the root command line using the command “sudo bash”, then type in
+    your user password. You can also use the command “su” to do this, but you need
+    to set a root password before that. For that, you can use the command “sudo passwd”(not
+    misspelled, it is passwd). Then type in the new root password.
+
+
+    - 5. df — Use the df command to see the available disk space in each of the partitions
+    in your system. You can just type in df in the command line and you can see each
+    mounted partition and their used/available space in % and in KBs. If you want
+    it shown in megabytes, you can use the command "df -m".
+
+
+    - 6. du — Use du to know the disk usage of a file in your system. If you want
+    to know the disk usage for a particular folder or file in Linux, you can type
+    in the command df and the name of the folder or file. For example, if you want
+    to know the disk space used by the documents folder in Linux, you can use the
+    command "du Documents". You can also use the command "ls -lah" to view the file
+    sizes of all the files in a folder.
+
+
+    - 7. tar — Use tar to work with tarballs (or files compressed in a tarball archive)
+    in the Linux command line. It has a long list of uses. It can be used to compress
+    and uncompress different types of tar archives like .tar, .tar.gz, .tar.bz2, etc.
+    It works on the basis of the arguments given to it. For example, "tar -cvf" for
+    creating a .tar archive, -xvf to untar a tar archive, -tvf to list the contents
+    of the archive, etc. Since it is a wide topic, here are some examples of tar commands.
+
+
+    - 8. zip, unzip — Use zip to compress files into a zip archive, and unzip to extract
+    files from a zip archive.
+
+
+    - 9. uname — Use uname to show the information about the system your Linux distro
+    is running. Using the command “uname -a” prints most of the information about
+    the system. This prints the kernel release date, version, processor type, etc.
+
+
+    - 10. apt-get — Use apt to work with packages in the Linux command line. Use apt-get
+    to install packages. This requires root privileges, so use the sudo command with
+    it. For example, if you want to install the text editor jed (as I mentioned earlier),
+    we can type in the command “sudo apt-get install jed”. Similarly, any packages
+    can be installed like this. It is good to update your repository each time you
+    try to install a new package. You can do that by typing “sudo apt-get update”.
+    You can upgrade the system by typing “sudo apt-get upgrade”. We can also upgrade
+    the distro by typing “sudo apt-get dist-upgrade”. The command “apt-cache search”
+    is used to search for a package. If you want to search for one, you can type “apt-cache
+    search jed”(this doesn''t require root).
+
+
+    - 11. chmod — Use chmod to make a file executable and to change the permissions
+    granted to it in Linux. Imagine you have a python code named numbers.py in your
+    computer. You''ll need to run “python numbers.py” every time you need to run it.
+    Instead of that, when you make it executable, you''ll just need to run “numbers.py”
+    in the terminal to run the file. To make a file executable, you can use the
+
+    '
+  mdcn: '
+
+    由正斜杠 ( / ) 表示。用户目录通常类似于 "/home/username"。
+
+
+    - 2. ls — 使用 "ls" 命令查看你当前所在目录中有哪些文件。你可以使用命令 "ls -a" 查看所有隐藏文件。
+
+
+    - 3. cd — 使用 "cd" 命令进入某个目录。例如，如果你在主目录（home folder），想进入下载文件夹（downloads folder），那么你可以输入
+    "cd Downloads"。记住，这个命令是区分大小大小的，你必须完全按照名称输入文件夹名称。但这些命令存在一个问题。假设你有一个名为“Raspberry
+    Pi”的文件夹。在这种情况下，当你输入“cd Raspberry Pi”时，shell会将命令的第二个参数视为另一个参数，因此你会收到一个目录不存在的错误。在这里，你可以使用反斜杠。也就是说，在这种情况下你可以使用“cd
+    Raspberry\ Pi”。空格的表示方式如下：如果你只输入“cd”并按回车，它将带你回到主目录。要从当前文件夹返回上一个文件夹，你可以输入 "cd .."两个点表示返回。
+
+
+    - 4. mkdir & rmdir — 当你需要创建一个文件夹或目录时，使用 mkdir 命令。例如，如果你想创建一个名为"DIY"的目录，那么你可以输入
+    "mkdir DIY"。记住，如前所述，如果你想创建一个名为"DIY Hacking"的目录，你可以输入 "mkdir DIY\ Hacking"。使用 rmdir
+    删除目录。但 rmdir 只能用于删除空目录。要删除包含文件的目录，请使用 rm。
+
+
+    - 5. rm — 使用 rm 命令删除文件和目录。使用 "rm -r" 仅删除目录。当仅使用 rm 命令时，它会同时删除文件夹及其包含的文件。
+
+
+    - 6. touch — touch 命令用于创建文件。它可以是任何类型，从一个空的 txt 文件到一个空的 zip 文件。例如，“touch new.txt”。
+
+
+    - 7. man & --help — 要了解更多关于某个命令以及如何使用它，请使用 man 命令。它会显示命令的帮助页。例如，“man cd”会显示 cd
+    命令的帮助页。输入命令名称和参数可以帮助显示该命令的各种用法（例如，cd --help）。
+
+
+    - 8. cp — 使用 cp 命令通过命令行复制文件。它接受两个参数：第一个是要复制的文件的位置，第二个是复制到的位置。
+
+
+    - 9. mv — 使用 mv 命令通过命令行移动文件。我们也可以用 mv 命令来重命名文件。例如，如果我们想把文件“text”重命名为“new”，可以使用“mv
+    text new”。它接受两个参数，就像 cp 命令一样。
+
+
+    - 10. locate — locate 命令用于在 Linux 系统中定位文件，就像 Windows 中的搜索命令一样。当你不知道文件保存在何处或文件的实际名称时，这个命令非常有用。在命令中使用
+    -i 参数可以忽略大小写（大写或小写都没关系）。所以，如果你想要一个包含“hello”单词的文件，当你输入“locate -i hello”时，它会列出 Linux
+    系统中所有包含“hello”单词的文件。如果你记得两个单词，可以使用星号 (*) 将它们分开。例如，要定位一个包含“hello”和“this”单词的文件，你可以使用命令“locate
+    -i *hello*this”。
+
+
+    # 中级命令
+
+
+    - 1. echo — "echo" 命令帮助我们移动一些数据，通常是将文本写入文件。例如，如果你想创建一个新的文本文件或向已有的文本文件添加内容，你只需要输入
+    "echo hello, my name is alok >> new.txt"。你在这里不需要用反斜杠来分隔空格，因为我们在完成需要写入的内容时使用了两个大于号。
+
+
+    - 2. cat — 使用 cat 命令显示文件内容。它通常用于方便查看程序。
+
+
+    - 3. nano, vi, jed — nano 和 vi 是 Linux 命令行中已安装的文本编辑器。nano 命令是一个很好的文本编辑器，它用颜色标记关键词并能识别大多数语言。而
+    vi 比 nano 更简单。你可以使用此编辑器创建新文件或修改文件。例如，如果你需要创建一个名为"check.txt" 的新文件，可以使用命令 "nano
+    check.txt" 创建它。编辑后，你可以使用组合键 Ctrl+X 然后按 Y（或按 N 否）保存文件。根据我的经验，使用 nano 编辑 HTML 看起来并不好，因为其颜色的原因，所以我推荐
+    jed 文本编辑器。我们很快就会介绍安装包。
+
+
+    - 4. sudo — Linux 命令行中一个广泛使用的命令，sudo 代表 "SuperUser Do"超级用户执行）。在 Linux 命令行中，如果你想以超级用户执行某些操作，如果你需要管理员权限，请使用
+    sudo 命令。例如，如果你想编辑某个文件，可以使用 sudo 命令。如果你想以 root权限执行某些操作，可以使用 sudo。
+
+
+    - 5. df — 在 Linux 系统中使用 df 命令查看挂载分区的磁盘空间。它可以查看每个分区的可用/已空间。如果你想以 MB 显示，可以使用命令 df
+    -m。
+
+
+    - 6. du — 使用 du 查看文件的磁盘使用情况。如果你想查看某个文件夹或文件的磁盘使用情况，可以使用 du 命令并输入其名称。例如，如果你想查看 Linux
+    中文件夹的磁盘使用情况，可以使用 du。你也可以使用命令 "ls -lah" 查看所有文件的大小。
+
+
+    - 7. tar — 在命令行中使用 tar 命令处理 tar 包（或压缩在 tar 包中的文件）。它有很多用途。它可以用于压缩和解压不同类型的 tar 存档，如
+    .tar,.gz,.bz2 等。它根据给定的参数运行。例如，-cvf 创建 .tar 存档，-xvf 解压包，-tvf 列出包的内容等。由于这是一个广泛的话题，这里有一些
+    tar 命令示例。
+
+
+    - 8. zip, unzip — 使用 zip 将文件压缩为 zip 存档，使用 unzip 从 zip 存档中提取文件。
+
+
+    - 9. uname — 使用 uname 显示你所运行的系统信息。使用命令 “uname -a”会打印有关系统的大部分信息。这包含了内核发布日期、版本、处理器类型等。
+
+
+    - 10. apt-get — 在 Linux 命令行中使用 apt 处理软件包。使用 apt-get 安装软件包。这需要 root 权限，因此配合 sudo
+    命令使用。例如，如果你想安装文本编辑器 jed，我们可以输入“sudo apt-get install jed”。同样，包都可以这样安装。在每次尝试安装新包之前，更新存储库是好的。你可以通过输入“sudo
+    apt-get update”来实现。通过“sudo apt-get upgrade”升级系统。我们也可以通过“sudo apt-get dist-upgrade”升级发行版。命令“apt-cache
+    search”用于搜索软件包。如果你想搜索某个包，可以输入“apt-cache search jed”（这不需要 root）。
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 54]
+
+
+    denoted by a forward slash( / ). The user directory is usually something like
+    "/home/username".
+
+
+    +   2. Is — Use the "ls" command to know what files are in the directory you are
+    in. You can see all the hidden files by using the command "ls -a".
+
+
+    +   3. cd — Use the "cd" command to go to a directory. For example, if you are
+    in the home folder, and you want to go to the downloads folder, then you can type
+    in "cd Downloads". Remember, this command is case sensitive, and you have to type
+    in the the'
+  - '[PAGE 55]
+
+
+    name of the folder exactly as it is. But there is a a problem with these commands.
+    Imagine you have a folder named “Raspberry Pi”. In this case, when you type in
+    “cd Raspberry Pi”, the shell will take the second argument of the command as a
+    different one, so you will get an error saying that the directory does not exist.
+    Here, you can use a backward slash. That is, you can use “cd Raspberry\ Pi” in
+    this case. Spaces are denoted like this: If you just type “cd” and press enter,
+    it takes you to the home directory. To go back from'
+  - '[PAGE 56]
+
+
+    a folder to the folder before that, you can type "cd .." . The two dots represent
+    back.
+
+
+    +   4. mkdir & rmdir — Use the mkdir command when you need to create a folder
+    or a directory. For example, if you want to make a directory called "DIY", then
+    you can type "mkdir DIY". Remember, as told before, if you want to create a directory
+    named "DIY Hacking", then you can type "mkdir DIY\ Hacking". Use rmdir to delete
+    a directory. But rmdir can only be used to delete an empty directory.'
+  - '[PAGE 57]
+
+
+    To delete a directory containing files,
+
+    use rm.
+
+
+    +   5. rm - Use the rm command to delete files and directories. Use "rm - r" to
+    delete just the directory. It deletes both the folder and the files it contains
+    when using only the rm command.
+
+
+    +   6. touch — The touch command is used to create a file. It can be anything,
+    from an empty txt file to an empty zip file. For example, "touch new.txt".'
+  - '[PAGE 58]
+
+
+    7. man & --help — To know more about a command and how to use it, use the man
+    command. It shows the manual pages of the command. For example, “man cd” shows
+    the manual pages of the cd command. Typing in the command name and the argument
+    helps it show which ways the command can be used (e.g., cd help).
+
+
+    8. cp — Use the cp command to copy files through the command line. It takes two
+    arguments: The first is the location of the file to be copied, the second is where
+    to copy.'
+  - "[PAGE 59]\n\n9. mv — Use the mv command to move files through the command line.\
+    \ \nWe can also use the mv command to rename a file. For example, if we want to\
+    \ rename the file “text” to “new”, we can use “mv text new”. It takes the two\
+    \ arguments, just like the cp command.\n\n10. locate — The locate command is used\
+    \ to locate a file in a Linux system, just like the search command in Windows.\
+    \ This command is useful when you don't know where a file is saved or the actual\
+    \ name of the file.\nUsing the -i argument with the"
+  - '[PAGE 60]
+
+
+    command helps to ignore the case (it doesn''t matter if it is uppercase or lowercase).
+    So, if you want a file that has the word “hello”, it gives the list of all the
+    files in your Linux system containing the word "hello" when you type in “locate
+    -i hello”. If you remember two words, you can separate them using an asterisk
+    (*). For example, to locate a file containing the words "hello" and "this", you
+    can use the command “locate -i *hello*this”.'
+  - '[PAGE 61]
+
+
+    # Intermediate Commands
+
+
+    +   1. echo — The "echo" command helps us move some data, usually text into a
+    file. For example, if you want to create a new text file or add to an already
+    made text file, you just need to type in, "echo hello, my name is alok >> new.txt".
+    You do not need to separate the spaces by using the backward slash here, because
+    we put in two triangular brackets when we finish what we need to write.
+
+
+    +   2. cat — Use the cat command to display the contents of a file. It is usually
+    used to easily view programs.'
+  - '[PAGE 62]
+
+
+    3. nano, vi, jed — nano and vi are already installed text editors in the Linux
+    command line. The nano command is a good text editor that denotes keywords with
+    color and can recognize most languages. And vi is simpler than nano. You can create
+    a new file or modify a file using this editor. For example, if you need to make
+    a new file named "check.txt", you can create it by using the command "nano check.txt".
+    You can save your files after editing by using the sequence Ctrl+X, then Y (or
+    N for no). In my experience, using nano for'
+  - '[PAGE 63]
+
+
+    HTML editing doesn''t seem as good, because of its color, so I recommend jed text
+    editor. We will come to installing packages soon.
+
+
+    +   4. sudo — A widely used command in the Linux command line, sudo stands for
+    "SuperUser Do". So, if you want any command to be done with administrative or
+    root privileges, you can use the sudo command. For example, if you want to edit
+    a file like viz. alsa-base.conf, which needs root permissions, you can use the
+    command — sudo nano alsa-base.conf. You can enter the root'
+  - '[PAGE 64]
+
+
+    command line using the command “sudo bash”, then type in your user password. You
+    can also use the command “su” to do this, but you need to set a root password
+    before that. For that, you can use the command “sudo passwd”(not misspelled, it
+    is passwd). Then type in the new root password.
+
+
+    5. df — Use the df command to see the available disk space in each of the partitions
+    in your system. You can just type in df in the command line and you can see each
+    mounted partition and their used/available'
+  - '[PAGE 65]
+
+
+    space in % and in KBs. If you want it shown in megabytes, you can use the command
+    "df -m".
+
+
+    +   6. du — Use du to know the disk usage of a file in your system. If you want
+    to know the disk usage for a particular folder or file in Linux, you can type
+    in the command df and the name of the folder or file. For example, if you want
+    to know the disk space used by the documents folder in Linux, you can use the
+    command "du Documents". You can also use the command "ls -lah" to view the file
+    sizes of all the files in a folder.'
+  - '[PAGE 66]
+
+
+    7. tar — Use tar to work with tarballs (or files compressed in a tarball archive)
+    in the Linux command line. It has a long list of uses. It can be used to compress
+    and uncompress different types of tar archives like .tar, .tar.gz, .tar.bz2,etc.
+    It works on the basis of the arguments given to it. For example, "tar -cvf" for
+    creating a .tar archive, -xvf to untar a tar archive, -tvf to list the contents
+    of the archive, etc. Since it is a wide topic, here are some examples of tar commands.'
+  - '[PAGE 67]
+
+
+    +   8. zip, unzip — Use zip to compress files into a zip archive, and unzip to
+    extract files from a zip archive.
+
+
+    +   9. uname — Use uname to show the information about the system your Linux distro
+    is running. Using the command “uname -a” prints most of the information about
+    the system. This prints the kernel release date, version, processor type, etc.
+
+
+    +   10. apt-get — Use apt to work with packages in the Linux command line. Use
+    apt-get to install packages. This requires root privileges, so use the'
+  - '[PAGE 68]
+
+
+    sudo command with it. For example, if you want to install the text editor jed
+    (as I mentioned earlier), we can type in the command “sudo apt-get install jed”.
+    Similarly, any packages can be installed like this. It is good to update your
+    repository each time you try to install a new package. You can do that by typing
+    “sudo apt-get update”. You can upgrade the system by typing “sudo apt-get upgrade”.
+    We can also upgrade the distro by typing “sudo apt-get dist-upgrade”. The command
+    “apt-cache search” is used to search for a package. If you want'
+  - '[PAGE 69]
+
+
+    to search for one, you can type in
+
+    “apt-cache search jed”(this doesn''t
+
+    require root).
+
+
+    11. chmod — Use chmod to make a
+
+    file executable and to change the
+
+    permissions granted to it in Linux.
+
+    Imagine you have a python code
+
+    named numbers.py in your computer.
+
+    You''ll need to run “python
+
+    numbers.py” every time you need to
+
+    run it. Instead of that, when you
+
+    make it executable, you''ll just need to
+
+    run “numbers.py” in the terminal to
+
+    run the file. To make a file
+
+    executable, you can use the'
+- md: '
+
+    command "chmod +x numbers.py" in this case. You can use "chmod 755 numbers.py"
+    to give it root permissions or "sudo chmod +x numbers.py" for root executable.
+    Here is some more information about the chmod command.
+
+
+    - 12. hostname — Use hostname to know your name in your host or network. Basically,
+    it displays your hostname and IP address. Just typing "hostname" gives the output.
+    Typing in "hostname -I" gives you your IP address in your network.
+
+
+    - 13. ping — Use ping to check your connection to a server. Wikipedia says, "Ping
+    is a computer network administration software utility used to test the reachability
+    of a host on an Internet Protocol (IP) network". Simply, when you type in, for
+    example, "ping google.com", it checks if it can connect to the server and come
+    back. It measures this round-trip time and gives you the details about it. The
+    use of this command for simple users like us is to check your internet connection.
+    If it pings the Google server (in this case), you can confirm that your internet
+    connection is active!
+
+
+    # TIPS AND TRICKS FOR USING LINUX COMMAND LINE
+
+
+    You can use the clear command to clear the terminal if it gets filled up with
+    too many commands.
+
+
+    TAB can be used to fill up in terminal. For example, You just need to type “cd
+    Doc” and then TAB and the terminal fills the rest up and makes it “cd Documents".
+
+
+    Ctrl+C can be used to stop any command in terminal safely. If it doesn''t stop
+    with that, then Ctrl+Z can be used to force stop it.
+
+
+    You can exit from the terminal by using the exit command.
+
+
+    You can power off or reboot the computer by using the command sudo halt and sudo
+    reboot.
+
+
+    # Advantages of Linux
+
+
+    Let us now discuss some advantages of Linux in brief:
+
+
+    - 1. Open Source
+
+
+    One of the main advantages of Linux is that it is an open source operating system
+    i.e. its source code is easily available for everyone. Anyone capable of coding
+    can contribute, modify, enhance and distribute the code to anyone and for any
+    purpose.
+
+
+    - 2. Security
+
+
+    Linux is more secure in comparison to other operating systems such as Windows.
+    Linux is not completely secure as there is some malware for it also but it is
+    less vulnerable than others. Every program in Linux whether an application or
+    a virus needs authorization from the administrator in the form of a password.
+    Unless the password is typed virus won’t execute. There is no
+
+
+    In Linux you encounter a larger number of software updates. These software updates
+    are much faster than updates in any other operating system. Updates in Linux can
+    be done easily without facing any major issue or concern.
+
+
+    - 5. Customization
+
+
+    A feature that gives a major advantage over other operating systems is customization.
+    You can customize any feature, add or delete any feature according to your need
+    as it is an open source operating system. Not only this, various wallpapers and
+    attractive icon themes can be installed to give an amazing look to your system.
+
+
+    - 6. Various Distributions
+
+
+    There are many distributions available also called distros of Linux. It provides
+    various choices or flavors to the users. You can select any distros according
+    to your needs. Some distros of Linux are Fedora, Ubuntu, Arch Linux, Debian, Linux
+    Mint and many more. If you are a beginner you can use Ubuntu or Linux Mint. If
+    you are a good programmer you may use Debian or Fedora.
+
+
+    - 7. Free to use (Low Cost)
+
+
+    Linux is freely available on the web to download and use. You do not need to buy
+    the license for it as Linux and many of its software come with GNU General Public
+    License. This proved to be one of the major advantages Linux faces over Windows
+    and other operating systems. You need to spend a huge amount to buy the license
+    of Windows which is not the case with Linux.
+
+
+    - 8. Large Community Support
+
+
+    Forums by excited users are made on the web to help and solve the problem any
+    other user is facing. There are a lot of dedicated programmers there to help you
+    out whenever and wherever possible.
+
+
+    - 9. Stability (Reliability)
+
+
+    Linux provides high stability also this is good advantage i.e. it does not need
+    to be rebooted after a short period of time. Your Linux system rarely slows down
+    or freezes. As in windows, you need to reboot your system after installing or
+    uninstalling an application or updating your software but this is not the case
+    with Linux. You can work without any disturbance on your Linux systems.
+
+
+    - 10. Privacy
+
+
+    Linux ensures the privacy of user’s data as it never collects much data from the
+    user while using its distributions or software but this is not true for many other
+    operating systems.
+
+
+    - 11. Performance
+
+
+    Linux provides high performance on various networks and workstations. It allows
+    a large number of users to work simultaneously and handles them efficiently.
+
+
+    - 12. Network Support
+
+
+    Linux gives support for network functionality as it was written by programmers
+    over the internet. Linux helps you to set up client and server systems on your
+    computer systems easily and in a fast manner.
+
+
+    - 13. Flexibility
+
+
+    Linux provides a high range of flexibility as you can install only required components.
+    There is no need to install a full or complete suite. You can also keep Linux
+    file under multiple partitions so if one of them corrupts then there is no major
+    loss. You only need to repair that particular partition, not the complete file
+    which is not the case with other operating systems.
+
+
+    - 14. Compatibility
+
+
+    Linux runs or executes all possible file formats and is compatible with a large
+    number of file formats.
+
+
+    - 15. Fast and easy installation
+
+
+    Linux can be easily installed from the web and does not require any prerequisites
+    as it can run on any hardware, even on your oldest systems.
+
+
+    - 16. Proper use of Hard Disk
+
+
+    Linux performs all the tasks efficiently even after the hard disk is almost full.
+    This increases the performance of the Linux hence Linux provides high performance
+    also.
+
+
+    - 17. Multitasking
+
+
+    Linux is a multitasking operating system as it can perform many tasks simultaneously
+    without any decrease in its speed such as downloading a large file would not slow
+    down the system.
+
+
+    - 18. Run multiple desktops
+
+
+    Linux provides various desktop environments to make it easy to use. While installing
+    Linux you can choose any desktop environment according to your wishes such as
+    KDE (K Desktop Environment) or GNOME (GNU Network Object Model Environment).
+
+
+    # What are the Disadvantages of Using Linux?
+
+
+    There’s no standard edition of Linux. Whereas Microsoft offers several different
+    editions of each version of Windows, there are countless variations of Linux.
+    For a new user it can be confusing to work out which is best for you.
+
+
+    Linux has patchier support for drivers (the software which coordinates your hardware
+    and your operating system). This means you''ll sometimes find it trickier to get
+    a new device set up.
+
+
+    Linux is, for new users at least, not as easy to use as Windows. That''s largely
+    because Linux gives you more control, but does mean you''ll have to spend some
+    time getting used to the way it works.
+
+
+    Because Linux is neither as popular as Windows, nor a commercial product, support
+    works in a different way. You may have to look harder to find the answer to a
+    problem and, while Linux supporters are more likely to offer help, it may not
+    always match your own level of technical understanding.
+
+
+    Many of the programs you are used to in Windows will only run in Linux through
+    a complicated emulator. These programs aren’t guaranteed to work perfectly, and
+    in some cases may be noticeably slower.
+
+
+    While Linux can be suitable for an individual user, its small market share means
+    it’s much harder to introduce in a corporate setting. With most office workers
+    already familiar with Windows and Microsoft programs, there’ll likely be a notable
+    time cost in converting staff to using a Linux system.
+
+
+    While there are perfectly passable alternatives to many Windows programs (such
+    as the various Office components), some high-end applications such as Photoshop
+    don’t have as close equivalents in Linux.
+
+
+    Fans of PC gaming may find Linux offers them a much more limited range. That’s
+    partially because the
+
+    '
+  mdcn: '
+
+    在这种情况下可以使用命令 "chmod +x numbers.py"。你可以使用 "chmod 755 numbers.py" 来赋予其 root 权限，或者使用
+    "sudo chmod +x numbers.py" 赋予 root 执行权限。这里有关于 chmod 命令的更多信息。
+
+
+    - 12. hostname — 使用 hostname 了解你在主机或网络中的名称。基本上，它会显示你的主机主机名和 IP 地址。只需输入 "hostname"
+    即可获得输出。输入 "hostname -I" 则可以获取你在网络中的 IP 地址。
+
+
+    - 13. ping — 使用 ping 检查你与服务器的连接。维基百科说：“Ping 是一种计算机网络管理实用程序，用于测试 Internet 协议 (IP)
+    网络上主机的可达性”。简单来说，当你输入例如 "ping google.com" 时，它会检查是否可以连接到服务器并返回。它会测量这种往返时间并提供相关细节。对于像我们这样的普通用户来说，使用此命令的作用是检查互联网连接。如果它
+    ping 通了 Google 服务器（在这种情况下），你可以确认你的互联网连接是活跃的！
+
+
+    # LINUX 命令行使用技巧与提示
+
+
+    你可以使用 clear 命令来清除终端，如果它被太多命令填满了。
+
+
+    TAB 键可以用于补全终端内容。例如，你只需要输入“cd Doc”然后按 TAB，终端就会补全剩余部分并变为“cd Documents”。
+
+
+    Ctrl+C 可以安全地停止终端中的任何命令。如果通过此操作无法停止，可以使用 Ctrl+Z 强制停止。
+
+
+    你可以通过 exit 命令退出终端。
+
+
+    你可以通过命令 sudo halt 和 sudo reboot 来关闭电源或重启电脑。
+
+
+    # Linux 的优势
+
+
+    现在让我们简要讨论一下 Linux 的一些优势：
+
+
+    - 1. 开源
+
+
+    Linux 的主要优势之一是它是开源操作系统，也就是说它的源代码对所有人开放。任何能够编程的人都可以为任何人、出于任何目的贡献、修改、增强和分发代码。
+
+
+    - 2. 安全
+
+
+    与 Windows 等其他操作系统相比，Linux 更安全。Linux 并非完全安全，因为也有针对它的恶意软件，但它比其他系统更脆弱。Linux 中的每个程序（无论是应用程序还是病毒）都需要管理员以密码的形式进行授权。除非输入密码，否则病毒不会执行。
+
+
+    在 Linux 中，你会遇到数量大量的软件更新。这些软件更新的速度比任何其他操作系统的更新都要快得多。Linux 的更新可以很容易完成，无需面临任何重大问题或担忧。
+
+
+    - 5. 定制化
+
+
+    一个比其他操作系统具有主要优势的功能是定制化。由于 Linux 是开源操作系统，你可以根据需要自定义任何功能、添加或删除任何功能。不仅如此，还可以安装各种壁纸和吸引人的图标主题，为你的系统提供惊艳的外观。
+
+
+    - 6. 多种发行版
+
+
+    Linux 还有许多可选发行版。它为用户提供了多种选择或口味。你可以根据需求选择任何发行版。Linux 的发行版包括 Fedora、Ubuntu、Arch
+    Linux、Debian、Linux Mint 等。如果你是新手，可以使用 Ubuntu 或 Linux Mint。如果你是一个优秀的程序员，可能可以使用
+    Debian 或 Fedora。
+
+
+    - 7. 免费使用（低成本）
+
+
+    Linux 可以在网上免费下载和使用。你不需要为它购买许可证，因为 Linux 及其许多软件都遵循 GNU 通用许可协议 (GPL)。这证明了 Linux
+    与 Windows 及其他操作系统相比的主要优势之一。你需要花费巨资购买 Windows 许可证，而 Linux 并非如此。
+
+
+    - 8. 大大的社区支持
+
+
+    网上由热心的用户建立了论坛，以帮助和解决任何其他用户面临的问题。那里有许多专门的程序员，尽可能在任何时间任何地为你提供帮助。
+
+
+    - 9. 稳定性（可靠性）
+
+
+    Linux 提供了高稳定性，这也是很好的优点，即它不需要在短时间内重新启动。你的 Linux 系统很少会变慢或死机。在 Windows 中，你需要在安装或卸载应用程序或更新软件后重新启动系统，但
+    Linux 并非如此。你可以在 Linux 系统上不受任何干扰地工作。
+
+
+    - 10. 隐私
+
+
+    Linux 确保用户数据的隐私，因为它在使用其发行版或软件时从不从用户那里收集大量数据，但许多其他操作系统并非如此。
+
+
+    - 11. 性能
+
+
+    Linux 在各种网络和工作站上提供高性能。它允许大量用户同时工作，并高效地处理他们。
+
+
+    - 12. 网络支持
+
+
+    Linux 支持网络功能，因为它是程序员在互联网上编写的。Linux 帮助你以简单快速的方式在计算机系统上设置客户端和服务器系统。
+
+
+    - 13. 灵活性
+
+
+    Linux 提供了很高的灵活性，因为你可以只安装所需的组件。没有必要安装完整的套件。你还可以将 Linux 文件保留在多个分区下，这样如果其中一个损坏，就不会有重大损失。你只需要修复那个特定的分区，而不是整个文件，与其他操作系统不同。
+
+
+    - 14. 兼容性
+
+
+    Linux 可以运行或执行所有可能的文件格式，并与大量文件格式兼容。
+
+
+    - 15. 快速方便的安装
+
+
+    Linux 可以从网上轻松安装，不需要任何先决条件，因为它可以运行在任何硬件上，即使是你最旧的系统上。
+
+
+    - 16. 硬盘的合理使用
+
+
+    即使在硬盘几乎满的情况下，Linux 也能高效执行所有任务。这提高了 Linux 的性能，因此 Linux 也提供了高性能。
+
+
+    - 17. 多任务处理
+
+
+    Linux 是一个多任务操作系统，它可以同时执行许多任务而不会降低速度，例如下载大文件不会减慢系统。
+
+
+    - 18. 运行多个桌面
+
+
+    Linux 提供了各种桌面环境以便于使用。在安装 Linux 时，你可以根据意愿选择任何桌面环境，例如 KDE（K 桌面环境）或 GNOME（GNU 网络对象环境）。
+
+
+    # 使用 Linux 有什么缺点？
+
+
+    Linux 没有标准版本。微软为每个版本的 Windows 提供了几个不同的版本，而 Linux 有无数种变体。对于新用户来说，要弄清楚哪一个最适合你可能会令人困惑。
+
+
+    Linux 对驱动程序（协调硬件和操作系统的软件）的支持较少。这意味着你有时会发现设置新设备更为困难。
+
+
+    对于新用户来说，Linux 并不像 Windows 那样易用。这在很大程度上是因为 Linux 给了你更多控制，但也意味着你必须花一些时间适应它的工作方式。
+
+
+    由于 Linux 既不像 Windows 流行，也不是商业产品，因此支持工作的方式不同。你可能需要花更多精力来寻找问题的答案，虽然 Linux 支持者更有可能提供帮助，但这种帮助可能并不总是匹配你自己的技术理解水平。
+
+
+    你在 Windows 中习惯的许多程序将仅通过复杂的模拟器在 Linux 中运行。这些程序不能保证能够完美运行，在某些情况下可能会明显变慢。
+
+
+    虽然 Linux 可能适用于个人用户，但它较小的市场份额意味着在企业环境中引入要困难得多。由于大多数办公室员工已经熟悉 Windows 和微软程序，将员工转为使用
+    Linux 系统 可能会产生显著的时间成本。
+
+
+    虽然许多 Windows 程序有完美的替代方案（例如各种 Office 组件），但某些像 Photoshop 这样的高级应用程序在 Linux 中没有类似的对等替代品。
+
+
+    PC 游戏粉丝可能会发现 Linux 提供的范围要有限得多。这部分是因为是因为
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 70]
+
+
+    command "chmod +x numbers.py" in this case. You can use "chmod 755 numbers.py"
+    to give it root permissions or "sudo chmod +x numbers.py" for root executable.
+    Here is some more information about the chmod command.
+
+
+    +   12. hostname — Use hostname to know your name in your host or network. Basically,
+    it displays your hostname and IP address. Just typing "hostname" gives the output.
+    Typing in "hostname -I" gives you your IP address in your network.'
+  - '[PAGE 71]
+
+
+    13. ping — Use ping to check your connection to a server. Wikipedia says, "Ping
+    is a computer network administration software utility used to test the reachability
+    of a host on an Internet Protocol (IP) network". Simply, when you type in, for
+    example, "ping google.com", it checks if it can connect to the server and come
+    back. It measures this round-trip time and gives you the details about it. The
+    use of this command for simple users like us is to check your internet connection.
+    If it pings the Google server (in this case), you can'
+  - '[PAGE 72]
+
+
+    confirm that your internet connection is active!'
+  - '[PAGE 73]
+
+
+    # # TIPS AND TRICKS FOR USING
+
+    # LINUX COMMAND LINE
+
+
+    You can use the clear command to clear the terminal if it gets filled up with
+    too many commands.
+
+
+    TAB can be used to fill up in terminal.
+
+    For example, You just need to type “cd Doc” and then TAB and the terminal fills
+    the rest up and makes it “cd Documents".
+
+
+    Ctrl+C can be used to stop any command in terminal safely. If it doesn''t stop
+    with that, then Ctrl+Z can be used to force stop it.'
+  - '[PAGE 74]
+
+
+    You can exit from the terminal by using the exit command.
+
+
+    You can power off or reboot the computer by using the command sudo halt and sudo
+    reboot.
+
+
+    # Advantages of Linux
+
+
+    Let us now discuss some advantages of Linux in brief:
+
+
+    +   1. Open Source
+
+
+    One of the main advantages of Linux is that it is an open source operating system
+    i.e. its source code is easily available for everyone. Anyone capable of coding
+    can contribute,'
+  - '[PAGE 75]
+
+
+    modify, enhance and distribute the code to anyone and for any purpose.
+
+
+    # 2. Security
+
+
+    Linux is more secure in comparison to other operating systems such as Windows.
+    Linux is not completely secure as there is some malware for it also but it is
+    less vulnerable than others. Every program in Linux whether an application or
+    a virus needs authorization from the administrator in the form of a password.
+    Unless the password is typed virus won’t execute. There is no'
+  - '[PAGE 76]
+
+
+    In Linux you encounter a larger number of software updates. These'
+  - '[PAGE 77]
+
+
+    software updates are much faster than updates in any other operating system. Updates
+    in Linux can be done easily without facing any major issue or concern.
+
+
+    # 5. Customization
+
+
+    A feature that gives a major advantage over other operating systems is customization.
+    You can customize any feature, add or delete any feature according to your need
+    as it is an open source operating system. Not only this, various wallpapers and
+    attractive icon themes can be'
+  - '[PAGE 78]
+
+
+    installed to give an amazing look to your system.
+
+
+    # 6. Various Distributions
+
+
+    There are many distributions available also called distros of Linux. It provides
+    various choices or flavors to the users. You can select any bistros according
+    to your needs. Some bistros of Linux are Fedora, Ubuntu, Arch Linux, Debian, Linux
+    Mint and many more. If you are a beginner you can use Ubuntu or Linux Mint. If
+    you are a good programmer you may use Debian or Fedora.'
+  - '[PAGE 79]
+
+
+    +   7. Free to use (Low Cost)
+
+
+    Linux is freely available on the web to download and use. You do not need to buy
+    the license for it as Linux and many of its software come with GNU General Public
+    License. This proved to be one of the major advantages Linux faces over Windows
+    and other operating systems. You need to spend a huge amount to buy the license
+    of Windows which is not the case with Linux.'
+  - '[PAGE 80]
+
+
+    # 8. Large Community Support
+
+
+    Forums by excited users are made on the web to help and solve the problem any
+    other user is facing.
+
+
+    There are a lot of dedicated programmers there to help you out whenever and wherever
+    possible.
+
+
+    # 9. Stability (Reliability)
+
+
+    Linux provides high stability also this is good advantage i.e. it does not need
+    to be rebooted after a short period of time. Your Linux system rarely slows down
+    or freezes. As in windows, you need to reboot your'
+  - '[PAGE 81]
+
+
+    system after installing or uninstalling
+
+    an application or updating your
+
+    software but this is not the case with
+
+    Linux. You can work without any
+
+    disturbance on your Linux systems.
+
+
+    # 10. Privacy
+
+
+    Linux ensures the privacy of user’s
+
+    data as it never collects much data
+
+    from the user while using its
+
+    distributions or software but this is
+
+    not true for many other operating
+
+    systems.'
+  - '[PAGE 82]
+
+
+    # 11. Performance
+
+
+    Linux provides high performance on various networks and workstations. It allows
+    a large number of users to work simultaneously and handles them efficiently.
+
+
+    # 12. Network Support
+
+
+    Linux gives support for network functionality as it was written by programmers
+    over the internet. Linux helps you to set up client and server systems on your
+    computer systems easily and in a fast manner.'
+  - '[PAGE 83]
+
+
+    # 13. Flexibility
+
+
+    Linux provides a high range of flexibility as you can install only required components.
+    There is no need to install a full or complete suite. You can also keep Linux
+    file under multiple partitions so if one of them corrupts then there is no major
+    loss. You only need to repair that particular partition, not the complete file
+    which is not the case with other operating systems.'
+  - '[PAGE 84]
+
+
+    # 14. Compatibility
+
+
+    Linux runs or executes all possible file formats and is compatible with a large
+    number of file formats.
+
+
+    # 15. Fast and easy installation
+
+
+    Linux can be easily installed from the web and does not require any prerequisites
+    as it can run on any hardware, even on your oldest systems.
+
+
+    # 16. Proper use of Hard Disk
+
+
+    Linux performs all the tasks efficiently even after the hard disk is almost full.
+    This increases the performance of the'
+  - '[PAGE 85]
+
+
+    Linux hence Linux provides high performance also.
+
+
+    # 17. Multitasking
+
+
+    Linux is a multitasking operating system as it can perform many tasks simultaneously
+    without any decrease in its speed such as downloading a large file would not slow
+    down the system.
+
+
+    # 18. Run multiple desktops
+
+
+    Linux provides various desktop environments to make it easy to use. While installing
+    Linux you can choose any desktop environment according to'
+  - '[PAGE 86]
+
+
+    your wishes such as KDE (K Desktop Environment) or GNOME (GNU Network Object Model
+    Environment).
+
+
+    # What are the Disadvantages of Using Linux?
+
+
+    There’s no standard edition of Linux. Whereas Microsoft offers several different
+    editions of each version of Windows, there are countless variations of Linux.
+    For a new user it can be confusing to work out which is best for you.
+
+
+    Linux has patchier support for drivers (the software which coordinates your'
+  - '[PAGE 87]
+
+
+    hardware and your operating system). This means you''ll sometimes find it trickier
+    to get a new device set up.
+
+
+    Linux is, for new users at least, not as easy to use as Windows. That''s largely
+    because Linux gives you more control, but does mean you''ll have to spend some
+    time getting used to the way it works.
+
+
+    Because Linux is neither as popular as Windows, nor a commercial product, support
+    works in a different way. You may have to look harder to find the'
+  - '[PAGE 88]
+
+
+    answer to a problem and, while Linux supporters are more likely to offer help,
+    it may not always match your own level of technical understanding.
+
+
+    Many of the programs you are used to in Windows will only run in Linux through
+    a complicated emulator. These programs aren’t guaranteed to work perfectly, and
+    in some cases may be noticeably slower.
+
+
+    While Linux can be suitable for an individual user, its small market share means
+    it’s much harder to introduce in a corporate setting. With most'
+  - '[PAGE 89]
+
+
+    office workers already familiar with Windows and Microsoft programs, there’ll
+    likely be a notable time cost in converting staff to using a Linux system.
+
+
+    While there are perfectly passable alternatives to many Windows programs (such
+    as the various Office components), some high-end applications such as Photoshop
+    don’t have as close equivalents in Linux.
+
+
+    Fans of PC gaming may find Linux offers them a much more limited range. That’s
+    partially because the'
+- md: '
+
+    latest games are nearly always a commercial operation and much harder to reproduce
+    in Linux because they are much more individual than, for example, office software.
+
+
+    While there’s no specific reason why this should be the case, in practice quite
+    a few users report finding printing can be troublesome to set up in Linux.
+
+
+    Because Linux is a free, open source system, there are no legal comebacks if you
+    find software isn’t up to scratch or if it causes a problem. While there’s no
+    guarantee you’d win, you do at least have some right of complaint with commercial
+    products such as Windows.
+
+
+    ## MOST ESSENTIAL LINUX APPLICATIONS AND TOOLS
+
+
+    ## Antivirus Tools
+
+
+    - ClamAV – an open-source antivirus for fending off malware, viruses, and Trojans,
+    among other malicious threats.
+
+    - ClamTk – A lightweight graphical front-end for the popular command-line based
+    ClamAV.
+
+    - ChkrootKit – A free and open-source lightweight toolkit to locally check for
+    signs of a rootkit.
+
+    - RootKit Hunter – A remarkable lightweight, open-source security monitoring and
+    analyzing tool.
+
+    - Comodo – a powerful cross-platform anti-virus and email filtering software.
+
+
+    ## Audio Players
+
+
+    - Audacious – a multi-platform, lightweight, free GTK-based music player focused
+    on outstanding audio quality and multiple codec support.
+
+    - Clementine – a multi-platform Amarok-inspired music player that delivers an
+    efficient user flow and outstanding UI.
+
+    - Google Play Music – an unofficial but modern cross-platform Desktop client for
+    Google Play Music.
+
+    - Lollypop – a modern, lightweight, material design-inspired music player built
+    to work wonderfully on the GNOME desktop environment.
+
+    - Museek – a cross-platform open-source music player application developed to
+    be simple and yet, efficient.
+
+
+    ## Artificial Intelligence
+
+
+    - Deeplearning4j - A Java library and computing framework containing a variety
+    of deep learning algorithms.
+
+    - Caffe - a speed, expression, and modularity-focused framework for deep learning.
+
+    - H2O - an open-source platform for in-memory, distributed, and scalable predictive
+    analysis and machine learning.
+
+    - Mllib - a Spark’s scalable machine learning library consisting of common learning
+    algorithms and utilities.
+
+    - Apache Mahout - an open-source project primarily used for creating machine learning
+    algorithms that are scalable.
+
+
+    ## Backup Utilities
+
+
+    - Rsync - a user-favourite command for syncing files locally and remotely on Unix
+    and Linux computers.
+
+    - Fwbackups - a feature-rich, free and open-source cross-platform backup application.
+
+    - Bacula - An open-source data backup and recovery software that was made to be
+    enterprise-ready features such as backup configuration, remote backing up and
+    many more.
+
+    - backupninja - a backup tool that allows users to perform secure and remote backups
+    over a network. It lets users design backup activity configuration files.
+
+    - sbackup - a backup suite for gnome desktops where users can access all configuration
+    through the Gnome interface.
+
+
+    ## Boot Loaders
+
+
+    - GRUB - It is the most commonly used bootloader.
+
+    - LILO - It is a simple and powerful Linux bootloader.
+
+    - BURG – it a new kind of bootloader which ships with features such as support
+    for multiple platforms like Linux and Mac OS X.
+
+    - Syslinux - a lightweight bootloader with the ability to work from a CD-ROM,
+    over a network, etc.
+
+
+    ## Calendar Apps
+
+
+    - Korganizer - a calendar application for scheduling with many rich features like
+    supporting multiple calendars and todo lists.
+
+    - Evolution – a Gnome personal management tool consisting of a calendar, address
+    book, and an email client.
+
+    - California – a relatively new calendar software for Gnome desktops.
+
+    - Day Planner – a free open-source calendar software developed for Linux users
+    to plan easily and manage their time.
+
+    - Lightning – a calendar app used to easily organize schedules and events. It
+    has an extension for the Thunderbird email client.
+
+
+    ## Clipboard Managers
+
+
+    - CopyQ - a smart clipboard manager that allows you to edit your system’s clipboard
+    content.
+
+    - Indicator Bulletin - an applet that allows you intelligently search for and
+    edit your clipboard content using regular expressions.
+
+    - Clipboard Anywhere - a free, lightweight, and cloud-enabled clipboard application
+    with which you can copy to and paste from its clipboard.
+
+    - GPaste – a powerful clipboard manager for Gnome-based systems.
+
+    - Klipper – a clipboard app for KDE desktops.
+
+
+    ## Chat Clients
+
+
+    - Chatty – a Twitch chat client for everyone who appreciates a dedicated desktop
+    application.
+
+    - Caprine – a sleek Facebook Messenger client for desktops.
+
+    - Cutagram – a user-friendly, free and open-source telegram client.
+
+    - Ghetto Skype - an electron-built Skype client for Linux desktops via Skype Web.
+
+    - Messenger for Desktop - an unofficial client for Facebook messenger.
+
+    - Telegram - a messaging app with a focus on speed and security, it is super fast,
+    simple and free.
+
+
+    ## Cloud Storage Tools
+
+
+    - Dropbox - a cloud storage that provides real-time data synchronization across
+    multiple devices.
+
+    - OwnCloud - a suite of client-server software for creating file hosting services
+    and using them.
+
+    - nextCloud - an actively maintained fork of ownCloud, a suite of client-server
+    software for creating and using file hosting services.
+
+    - Seafile - an open-source synchronization and sharing platform with a focus on
+    performance and privacy.
+
+    - Pydio - a powerful open-source cloud storage app with file sharing and synchronization
+    just like the others.
+
+
+    ## Communication Apps
+
+
+    - Skype – a VoIP service for free calls and messages.
+
+    - Pidgin – An instant messaging client with support for all chat services.
+
+    - Empathy – a messaging platform with text, video chat, and file transfer.
+
+    - Viber – With Viber, you can send free calls and messages.
+
+    - Slack - A real-time messaging, archiving and search for modern teams — all protected
+    with end-to-end encryption.
+
+
+    ## Firewalls
+
+
+    - Iptables - a popular command-line utility for configuring Linux kernel firewall.
+
+    - Firewalld - a firewall which changes can be applied instantly without the need
+    for a restart.
+
+    - Shorewall - An open-source gateway/firewall configuration tool for GNU/Linux.
+
+    - UFW - An easy to use firewall for Ubuntu and Debian distributions.
+
+    - Vuurmuur - a powerful firewall manager built on top of iptables.
+
+
+    ## Games
+
+
+    - Steam - a cross-platform gaming platform that opens the gates to many games.
+
+    - Wine ("Wine Is Not an Emulator") is a compatibility layer capable of running
+    Windows applications and games on Linux.
+
+    - PlayOnLinux - a graphical front-end for the Wine compatibility layer which allows
+    Linux users to install Windows-based games.
+
+    - RetroArch - a frontend for emulators, game engines and media players.
+
+    - Itch.io - a simple way to find and share indie games online for free.
+
+
+    ## Git Clients
+
+
+    - GitKraken - a powerful GUI app which users interact better with their repositories.
+
+    - Git-cola - a powerful and highly configurable GUI Git client.
+
+    - SmartGit - a cross-platform GUI based Git client.
+
+    - Giggle - a free Linux based GUI git client that uses GTK+ toolkit.
+
+    - Gitg - a Gnome app for viewing Git repositories.
+
+    - Git GUI - a cross-platform GUI platform that focuses on commit generation.
+
+
+    ## Graphics
+
+
+    - GIMP - an open-source GNU image manipulation program.
+
+    - Aftershot - a powerful, fast and highly customizable photo management app.
+
+    - Agave - a very simple application for the GNOME desktop that allows you to generate
+    a variety of colour-schemes from a single starting colour.
+
+    - Blender - a 3D creation suite with support for all the 3D pipelines.
+
+    - Digikam - an open-source photo editing app meant for photographers.
+
+
+    ## Hacking & Penetration Tools
+
+
+    - Aircrack-ng - a complete suite of tools to assess WiFi network security.
+
+    - THC Hydra - a parallelized login cracker which supports numerous protocols to
+    attack.
+
+    - John the Ripper - a free password cracking software tool.
+
+    '
+  mdcn: '
+
+    最新的游戏几乎总是商业化运营，而且在 Linux 中重现要困难得多，因为它们比办公软件等更具个人化。
+
+
+    虽然没有特定理由说明这种情况是必然，但在实践中，许多用户报告说，在 Linux 中设置打印功能可能会非常麻烦。
+
+
+    由于 Linux 是一个免费的开源系统，如果你发现软件不符合标准或导致了问题，并没有法律上的追回手段。虽然不能保证你一定获胜，但对于像 Windows 这样的商业产品，你至少拥有某些投诉权。
+
+
+    ## 核心 Linux 应用程序与工具
+
+
+    ## 杀病毒工具
+
+
+    - ClamAV – 一种用于防御恶意软件、病毒和木马等其他恶意威胁的开源杀毒软件。
+
+    - ClamTk – 一个为流行的命令行 ClamAV 提供的轻量级图形界面。
+
+    - ChkrootKit – 一个免费且开源的轻量级工具包，用于本地检查 rootkit 迹象。
+
+    - RootKit Hunter – 一个卓越的轻量级开源安全监控与分析工具。
+
+    - Comodo – 一款强大的跨平台杀病毒和邮件过滤软件。
+
+
+    ## 音频播放器
+
+
+    - Audacious – 一个多平台、轻量级、基于 GTK 的免费音乐播放器，专注于卓越的音质和对多种编码的支持。
+
+    - Clementine – 一个受 Amarok 启发的多平台音乐播放器，提供高效的用户流和出色的 UI。
+
+    - Google Play Music – 一个非官方但现代的 Google Play Music 跨平台桌面客户端。
+
+    - Lollypop – 一款现代、轻量级、受 Material 设计启音乐播放器，旨在 GNOME 桌面环境中完美运行。
+
+    - Museek – 一款跨平台开源音乐播放器应用，开发目标是简单且高效。
+
+
+    ## 人工智能
+
+
+    - Deeplearning4j - 一个 Java 库和计算框架，包含多种深度学习算法。
+
+    - Caffe - 一个专注于速度、表达式和模块化的深度学习框架。
+
+    - H2O - 一个用于内存中、分布式和可扩展预测性分析及机器学习的开源平台。
+
+    - Mllib - Spark 的可扩展机器学习库，由常用的学习算法和工具组成。
+
+    - Apache Mahout - 一个主要用于创建可扩展机器学习算法的开源项目。
+
+
+    ## 备份实用
+
+
+    - Rsync - 用户喜爱的命令，用于在 Unix 和 Linux 计算机上同步本地和远程文件。
+
+    - Fwbackups - 一款功能丰富、免费开源的跨平台备份应用。
+
+    - Bacula - 一款开源数据备份和恢复软件，专为企业级设计，支持备份配置、远程备份等。
+
+    - backupninja - 一种备份工具，允许用户通过网络执行安全的远程备份。它允许用户设计备份活动配置文件。
+
+    - sbackup - 一套针对 gnome 桌面的备份套件，用户可以通过 Gnome 界面访问所有配置。
+
+
+    ## 引导加载程序
+
+
+    - GRUB - 它是最常用的引导加载程序。
+
+    - LILO - 这是一个简单且强大的 Linux 引导程序。
+
+    - BURG – 一种新的引导程序，带有支持 Linux 和 Mac OS X 等多个平台的功能。
+
+    - Syslinux - 一个轻量级引导程序，能够通过 CD-ROM、网络等工作。
+
+
+    ## 日历应用
+
+
+    - Korganizer - 一个用于日程管理的日历应用，具有许多丰富功能，如支持多个日历和待办列表。
+
+    - Evolution – Gnome 个人管理工具，由日历、地址录和邮件客户端组成。
+
+    - California – 针对 Gnome 桌面的较新的日历软件。
+
+    - Day Planner – 为 Linux 用户开发的免费开源日历软件，方便用户轻松规划和管理时间。
+
+    - Lightning – 一个用于方便组织日程和事件的日历应用。它拥有 Thunderbird 邮件客户端的扩展。
+
+
+    ## 剪贴板管理器
+
+
+    - CopyQ - 一个智能剪贴板管理器，允许你编辑系统的剪贴板内容。
+
+    - Indicator Bulletin - 一个小组件，允许你使用正则表达式智能地搜索和编辑剪贴板内容。
+
+    - Clipboard Anywhere - 一个允许你跨设备同步剪贴板内容的应用程序。
+
+    - GPaste - 针对 Gnome 的剪贴板管理器。
+
+    - Klipper - 针对 KDE 的剪贴板应用。
+
+
+    ## 聊天客户端
+
+
+    - Chatty – 一个 Telegram 客户端。
+
+    - Caprine – 一个专注于 Telegram 的桌面客户端。
+
+    - Empathy – 一个支持所有聊天服务的即时消息软件。
+
+    - Telegram – 一个带有端到端加密的 Viber 平台。
+
+    - Viber – 一个提供免费通话和消息的服务。
+
+    - Slack - 团队实时消息、存档和搜索工具。
+
+
+    ## 云存储工具
+
+
+    - Dropbox - 一个用于跨设备数据同步的工具。
+
+    - OwnCloud - 一套用于文件共享的服务器软件。
+
+    - nextCloud - 一个专注于性能和隐私的同步平台。
+
+    - Seafile - 一个用于文件共享的开源软件。
+
+    - Pydio - 一套用于文件共享的服务。
+
+
+    ## 防火墙
+
+
+    - Iptables - 用于配置 Linux 内核防火墙的流行命令行。
+
+    - Firewalld - 一个无需重启即可应用更改的防火墙。
+
+    - Shorewall - 用于 GNU/Linux 的工具。
+
+    - UFW - 用于 Ubuntu 和 Debian 的易用防火墙。
+
+    - Vuurmuur - 构建在 iptables 之上的强大防火墙管理器。
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 90]
+
+
+    latest games are nearly always a commercial operation and much harder to reproduce
+    in Linux because they are much more individual than, for example, office software.
+
+
+    While there’s no specific reason why this should be the case, in practice quite
+    a few users report finding printing can be troublesome to set up in Linux.
+
+
+    Because Linux is a free, open source system, there are no legal comebacks if you
+    find software isn’t up to scratch or if it causes a problem. While'
+  - '[PAGE 91]
+
+
+    there’s no guarantee you’d win, you do at least have some right of complaint with
+    commercial products such as Windows.'
+  - '[PAGE 92]
+
+
+    # MOST ESSENTIAL LINUX
+
+
+    # APPLICATIONS AND TOOLS
+
+
+    # Antivirus Tools
+
+
+    ClamAV – an open-source antivirus for fending off malware, viruses, and Trojans,
+    among other malicious threats.
+
+
+    ClamTk – A lightweight graphical front-end for the popular command-line based
+    ClamAV.
+
+
+    ChkrootKit – A free and open-source lightweight toolkit to locally check for signs
+    of a rootkit.'
+  - '[PAGE 93]
+
+
+    RootKit Hunter – A remarkable lightweight, open-source security monitoring and
+    analyzing tool.
+
+
+    Comodo – A powerful cross-platform anti-virus and email filtering software.
+
+
+    # Audio Players
+
+
+    Audacious – A multi-platform, lightweight, free GTK-based music player focused
+    on outstanding audio quality and multiple codec support.
+
+
+    Clementine – a multi-platform Amarok-inspired music player that delivers an efficient
+    user flow and outstanding UI.'
+  - '[PAGE 94]
+
+
+    Google Play Music – An unofficial but modern cross-platform Desktop client for
+    Google Play Music.
+
+
+    Lollypop – A modern, lightweight, material design-inspired music player built
+    to work wonderfully on the GNOME desktop environment.
+
+
+    Museek – A cross-platform open-source music player application developed to be
+    simple and yet, efficient.'
+  - '[PAGE 95]
+
+
+    # Artificial Intelligence
+
+
+    Deeplearning4j - A Java library and computing framework containing a variety of
+    deep learning algorithms.
+
+
+    Caffe - A speed, expression, and modularity-focused framework for deep learning.
+
+
+    H2O - An open-source platform for in-memory, distributed, and scalable predictive
+    analysis and machine learning.
+
+
+    Mllib - A Spark’s scalable machine learning library consisting of common learning
+    algorithms and utilities.'
+  - '[PAGE 96]
+
+
+    Apache Mahout - An open-source project primarily used for creating machine learning
+    algorithms that are scalable.
+
+
+    # Backup Utilities
+
+
+    Rsync - A user-favourite command for syncing files locally and remotely on Unix
+    and Linux computers.
+
+
+    Fwbackups - A feature-rich, free and open-source cross-platform backup application.
+
+
+    Bacula -An open-source data backup and recovery software that was made to be enterprise-ready
+    features such'
+  - '[PAGE 97]
+
+
+    as backup configuration, remote backing up and many more.
+
+
+    backupninja - A backup tool that allows users to perform secure and remote backups
+    over a network. It lets users design backup activity configuration files.
+
+
+    sbackup - A backup suite for gnome desktops where users can access all configuration
+    through the Gnome interface.
+
+
+    # Boot Loaders
+
+
+    GRUB - It is the most commonly used bootloader.'
+  - '[PAGE 98]
+
+
+    LILO - It is a simple and powerful
+
+    Linux bootloader.
+
+
+    BURG \u2013 It\u2013 a new kind of bootloader\which ships with features such as
+
+    support for multiple platforms like
+
+    Linux and Mac OS X.
+
+
+    Syslinux - A lightweight bootloader
+
+    with the ability to work from a CD-
+
+    ROM, over a network, etc.
+
+
+    # Calendar Apps
+
+
+    Korganizer - A calendar application
+
+    for scheduling with many rich features
+
+    like supporting multiple calendars and
+
+    todo lists.'
+  - '[PAGE 99]
+
+
+    Evolution – A Gnome personal management tool consisting of a calendar, address
+    book, and an email client.
+
+
+    California – A relatively new calendar software for Gnome desktops.
+
+
+    Day Planner – A free open-source calendar software developed for Linux users to
+    plan easily and manage their time.
+
+
+    Lightning – A calendar app used to easily organize schedules and events. It has
+    an extension for the Thunderbird email client.'
+  - '[PAGE 100]
+
+
+    # Clipboard Managers
+
+
+    CopyQ - A smart clipboard manager that allows you to edit your system’s clipboard
+    content.
+
+
+    Indicator Bulletin - An applet that allows you intelligently search for and edit
+    your clipboard content using regular expressions.
+
+
+    Clipboard Anywhere - A free, lightweight, and cloud-enabled clipboard application
+    with which you can copy to and paste from its clipboard.'
+  - '[PAGE 101]
+
+
+    GPaste – A powerful clipboard manager for Gnome-based systems.
+
+
+    Klipper – A clipboard app for KDE desktops.
+
+
+    # Chat Clients
+
+
+    Chatty – A Twitch chat client for everyone who appreciates a dedicated desktop
+    application.
+
+
+    Caprine – A sleek Facebook Messenger client for desktops.
+
+
+    Cutagram – A user-friendly, free and open-source telegram client.'
+  - '[PAGE 102]
+
+
+    Ghetto Skype - An electron-built Skype client for Linux desktops via Skype Web.
+
+
+    Messenger for Desktop - An unofficial client for Facebook messenger.
+
+
+    Telegram - A messaging app with a focus on speed and security, it is super fast,
+    simple and free.
+
+
+    # Cloud Storage Tools
+
+
+    Dropbox - A cloud storage that provides real-time data synchronization across
+    multiple devices.'
+  - '[PAGE 103]
+
+
+    OwnCloud - A suite of client-server software for creating file hosting services
+    and using them.
+
+
+    nextCloud - An actively maintained fork of ownCloud, a suite of client-server
+    software for creating and using file hosting services.
+
+
+    Seafile - An open-source synchronization and sharing platform with a focus on
+    performance and privacy.
+
+
+    Pydio - A powerful open-source cloud storage app with file sharing and synchronization
+    just like the others.'
+  - '[PAGE 104]
+
+
+    # Communication Apps
+
+
+    Skype – A VoIP service for free calls and messages as well as cheap internet calls.
+
+
+    Pidgin – An instant messaging client with support for all chat services including
+    Yahoo, Google Talk, and Aim.
+
+
+    Empathy – A messaging platform with text, voice, video chat, and file transfer
+    support.
+
+
+    Viber – With Viber, you can send free calls and messages to other Viber users
+    anywhere in the world.'
+  - '[PAGE 105]
+
+
+    Wire - A best instant messaging app that provides business chats, one-click voice
+    and video conference calls and shared documents — all protected with end-to-end
+    encryption.
+
+
+    Slack - A real-time messaging, archiving and search for modern teams.
+
+
+    # Firewalls
+
+
+    Iptables - A popular command-line utility for configuring Linux kernel firewall.'
+  - '[PAGE 106]
+
+
+    Firewalld - A firewall which changes can be applied instantly without the need
+    for a restart.
+
+
+    Shorewall - An open-source gateway/firewall configuration tool for GNU/Linux.
+
+
+    UFW - An easy to use firewall for configuring and managing a firewall on Ubuntu
+    and Debian distributions.
+
+
+    Vuurmuur - A powerful firewall manager built on top of iptables on Linux.'
+  - '[PAGE 107]
+
+
+    # Games
+
+
+    Steam - A cross-platform gaming platform that opens the gates to many games.
+
+
+    Wine - Wine ("Wine Is Not an Emulator") is a compatibility layer capable of running
+    Windows applications and games on Linux.
+
+
+    PlayOnLinux - A graphical front-end for the Wine software compatibility layer
+    which allows Linux users to install Windows-based games.
+
+
+    RetroArch - A frontend for emulators, game engines and media players.'
+  - '[PAGE 108]
+
+
+    Itch.io - A simple way to find and share indie games online for free.
+
+
+    # Git Clients
+
+
+    GitKraken - A powerful GUI app which its users interact better with their repositories.
+
+
+    Git-cola - A powerful and highly configurable GUI Git client.
+
+
+    SmartGit - A cross-platform GUI based Git client.
+
+
+    Giggle - A free Linux based GUI git client that uses GTK+ toolkit.
+
+
+    Gitg - A Gnome app for viewing Git repositories.'
+  - '[PAGE 109]
+
+
+    Git GUI - A cross-platform GUI platform that focuses on commit generation.
+
+
+    # Graphics
+
+
+    GIMP - An open-source GNU image manipulation program.
+
+
+    Aftershot - A powerful, fast and highly customizable photo management app.
+
+
+    Agave - A very simple application for the GNOME desktop that allows you to generate
+    a variety of colour-schemes from a single starting colour.'
+  - '[PAGE 110]
+
+
+    Blender - A 3D creation suite with support for all the 3D pipelines.
+
+
+    Digikam - An open-source photo editing app meant for photographers.
+
+
+    # Hacking & Penetration Tools
+
+
+    Aircrack-ng - A complete suite of tools to assess WiFi network security.
+
+
+    THC Hydra - A parallelized login cracker which supports numerous protocols to
+    attack.
+
+
+    John the Ripper - A free password cracking software tool.'
+- md: '
+
+    - Metasploit Framework – The world’s most used penetration testing framework.
+
+    - Netcat – A powerful networking utility which reads and writes data across network
+    connections.
+
+    - Nmap – A strong network security scanner.
+
+    - Nessus – A remote security vulnerability scanning tool.
+
+    - WireShark – A free and open-source packet analyzer.
+
+    - Snort – A free open-source network intrusion detection system.
+
+    - Kismet Wireless – A wireless network detector, sniffer, and intrusion detection
+    system.
+
+    - Nikto – An open-source web server scanner.
+
+
+    ## IDE Editors
+
+
+    - Netbeans – A popular open-source IDE used mainly for Java and C/C++ development.
+
+    - Code::Blocks – A free, highly extensible and configurable, cross-platform C++
+    IDE.
+
+    - Eclipse - An open-source cross-platform IDE commonly mostly among Java developers.
+
+    - CodeLite - A free open-source cross-platform IDE, built for programmers.
+
+    - Bluefish - A cross-platform editor which makes writing HTML faster.
+
+    - Brackets - A modern text editor made specifically for web development.
+
+    - Atom - An advanced text editor that can be customized into an IDE.
+
+    - Sublime - A popular lightweight cross-platform text editor.
+
+    - JetBrains - A commercial IDE which provides solutions for almost every language/framework.
+
+    - Microsoft’s Visual Studio - A cross-platform open-source text editor developed
+    by Microsoft.
+
+
+    ## Image Editors
+
+
+    - GIMP - An open-source GNU image manipulation program.
+
+    - Pinta - The Linux version of windows paint.
+
+    - DigiKam - An open-source photo editing app meant for photographers.
+
+    - ShowFOTO – A free standalone image editor with powerful image editing tools.
+
+    - RawTherapee – A free image editing app for optimizing photos.
+
+    - Fotoxx – An open-source photo collection manager which can also be used for
+    photo editing.
+
+    - F-spot – An open-source image editing app for Gnome desktops.
+
+
+    ## Movie Subtitles
+
+
+    - VLC Media Player – An open-source audio and video playing app with subtitle
+    capabilities.
+
+    - Subliminal - An easy-to-use program that searches and downloads movie subtitles.
+
+    - SubDownloader - A program for automatic find and download/upload subtitles for
+    your movies.
+
+    - SMPPlayer - A free GUI media player with subtitle functionality.
+
+
+    ## Music Making Software
+
+
+    - Audacity - An open-source cross-platform audio recording and editing app.
+
+    - Cecilia - An audio signal processing platform aimed at sound designers.
+
+    - Mixxx – A music mixing software that can help you become a professional DJ.
+
+    - Ardour – A complete music-making app for professionals on Linux and Mac OS X.
+
+    - Hydrogen Drum – An advanced drum sampler app for Linux systems.
+
+    - Gitarix – A virtual guitar amplifier app.
+
+
+    ## PDF Viewers
+
+
+    - Okular – A free universal document viewer.
+
+    - Evince - A lightweight document which is the default for Gnome desktops.
+
+    - Foxit - A cross-platform PDF reader which is secure.
+
+    - PDF JS - A web-based PDF viewer.
+
+
+    ## Security
+
+
+    - ClamAV - An antivirus Engine for Linux systems.
+
+    - Fail2ban - An open-source intrusion prevention framework.
+
+    - GuFW - A firewall powered by UFW (Uncomplicated Firewall).
+
+    - Mod_Security - An open-source intrusion detection and prevention software for
+    web apps.
+
+    - Iptables - A popular command-line utility for configuring Linux kernel firewall.
+
+    - Firewalld - A firewall which changes can be applied instantly without the need
+    for a restart.
+
+    - Shorewall - An open-source gateway/firewall configuration tool for GNU/Linux.
+
+
+    ## Torrent Download Client
+
+
+    - aria2 - An open-source cross-platform command-line download manager.
+
+    - Deluge - A torrenting app which is considered to be one of the best.
+
+    - qBittorent - A cross-platform torrenting client.
+
+
+    ## Text Editors
+
+
+    - ViVim Editor - A command-line based text editor with a lot of rich features
+    making the most commonly used.
+
+    - Gedit - A general-purpose text editor.
+
+    - Nano - An easy to use command-line based text editor.
+
+    - Emacs - A command-line text editor which is highly customizable.
+
+    - Kate - A feature-rich text editor that is highly customizable.
+
+    - Lime -
+
+
+    ## Video Players
+
+
+    - VLC Media Player - An open-source audio and video playing app with subtitle
+    capabilities.
+
+    - Kodi - A media player software application developed by the XBMC Foundation.
+
+    - Miro Music - A cross-platform video playing app which allows for the use of
+    internet television.
+
+    - SMPPlayer - A free GUI media player with subtitle functionality.
+
+
+    ## Video Editors
+
+
+    - Open Shot - A cross-platform feature-rich video editing app.
+
+    - Pitivi - An open-source video editing app.
+
+    - Avidemux - An open-source cross-platform video editing software for simple use.
+
+    - Blender - A 3D creation suite with support for all the 3D pipelines.
+
+
+    ## Web Browsers
+
+
+    - Google Chrome - The most popular browser found on both PCs and mobile phones
+    developed by Google.
+
+    - Firefox - An open-source cross-platform web browser gaining a lot of attention
+    lately.
+
+    - Vivaldi - A Chromium Engine based web browser with a beautiful interface.
+
+    - Opera - A web browser released in the 1990s, it is one of the oldest.
+
+    - Chromium - An lightweight open-source cross-platform web browser. Unlike Google
+    Chrome, Chromium is fast.
+
+    - Midori - An open-source web browser which is the default in many Linux systems.
+
+    '
+  mdcn: '
+
+
+    - Metasploit Framework – 世界上最流行的渗透测试框架。
+
+    - Netcat – 一种强大的网络工具，可跨网络连接进行数据读写。
+
+    - Nmap – 一种强大的网络安全扫描器。
+
+    - Nessus – 远程安全漏洞扫描工具。
+
+    - WireShark – 一款免费开源的数据包分析器。
+
+    - Snort – 一个免费开源的网络入侵检测系统。
+
+    - Kismet Wireless – 无线网络检测器、嗅探器和入侵检测系统。
+
+    - Nikto – 一个开源的 Web 服务器扫描器。
+
+
+    ## IDE 编辑器
+
+
+    - Netbeans – 一款流行的开源 IDE，主要用于 Java 和 C/C++ 开发。
+
+    - Code::Blocks – 一款免费、高度可扩展且可配置的跨平台 C++ IDE。
+
+    - Eclipse - 一款开源跨平台 IDE，通常供 Java 开发者使用。
+
+    - CodeLite - 一款为程序员设计的免费开源跨平台 IDE。
+
+    - Bluefish - 一种跨平台编辑器，可以提高 HTML 编写速度。
+
+    - Brackets - 一款专为 Web 开发设计的现代文本编辑器。
+
+    - Atom - 一款可以自定义为 IDE 的高级文本编辑器。
+
+    - Sublime - 一款流行的轻量级跨平台文本编辑器。
+
+    - JetBrains - 一款商业 IDE，为几乎所有语言/框架提供解决方案。
+
+    - Microsoft’s Visual Studio - 由微软开发的跨平台开源文本编辑器。
+
+
+    ## 图像编辑器
+
+
+    - GIMP - 一个开源的 GNU 图像处理程序。
+
+    - Pinta - Windows 画 的 Linux 版本。
+
+    - DigiKam - 一款为摄影师设计的开源照片编辑应用。
+
+    - ShowFOTO – 一个具有强大图像编辑工具的免费独立图像编辑器。
+
+    - RawTherapee – 一个用于优化照片的免费图像编辑应用。
+
+    - Fotoxx – 一个开源的照片集管理器，也可用于照片编辑。
+
+    - F-spot – 一款用于 Gnome 桌面面的开源图像编辑应用。
+
+
+    ## 电影字幕
+
+
+    - VLC Media Player – 一款具有字幕功能的开源音频视频播放应用。
+
+    - Subliminal - 一款用于搜索和下载电影字幕的易用程序。
+
+    - SubDownloader - 一个自动为电影查找并下载/上传字幕的程序。
+
+    - SMPPlayer - 一个带有字幕功能的免费 GUI 媒体播放器。
+
+
+    ## 音乐制作软件
+
+
+    - Audacity - 一款开源跨平台的音频录制和编辑应用。
+
+    - Cecilia - 一个面向音效设计者的音频信号处理平台。
+
+    - Mixxx – 一款音乐混合软件，可以帮你成为专业的 DJ。
+
+    - Ardour – 一款为 Linux 和 Mac OS X 专业人士提供的完整音乐制作应用。
+
+    - Hydrogen Drum – 适用于 Linux 系统的先进鼓机采样应用。
+
+    - Gitarix – 一款虚拟吉他放大器应用。
+
+
+    ## PDF 查看器
+
+
+    - Okular – 一款免费的通用文档查看器。
+
+    - Evince - Gnome 桌面系统的默认轻量级文档查看。
+
+    - Foxit - 一款安全的跨平台 PDF 阅读器。
+
+    - PDF JS - 基于 Web 的 PDF 查看器。
+
+
+    ## 安全
+
+
+    - ClamAV - 适用于 Linux 系统的病毒引擎。
+
+    - Fail2ban - 一个开源入侵防御框架。
+
+    - GuFW - 由 UFW（防火墙）驱动的防火墙。
+
+    - Mod_Security - 用于 Web 应用的开源入侵检测和防御软件。
+
+    - Iptables - 一种用于配置 Linux 内核防火墙的命令行工具。
+
+    - Firewalld - 一个无需重启即可生效更改的防火墙。
+
+    - Shorewall - 适用于 GNU/Linux 的开源网关/防火墙配置工具。
+
+
+    ## Torrent 下载客户端
+
+
+    - aria2 - 一款开源跨平台的命令行下载管理器。
+
+    - Deluge - 一款被认为最好的 Torrent 下载应用。
+
+    - qBittorent - 一款跨平台 Torrent 客户端。
+
+
+    ## 文本编辑器
+
+
+    - ViVim Editor - 一款基于命令行的文本编辑器，拥有丰富功能使其成为常用。
+
+    - Gedit - 一款通用的文本编辑器。
+
+    - Nano - 一款易用的命令行文本编辑器。
+
+    - Emacs - 一款高度自定义的命令行文本编辑器。
+
+    - Kate - 一款功能丰富且高度自定义的文本编辑器。
+
+    - Lime -
+
+
+    ## 视频播放器
+
+
+    - VLC Media Player - 一款具有字幕功能的开源音频视频播放应用。
+
+    - Kodi - 由 XBMC Foundation 开发的媒体播放软件。
+
+    - Miro Music - 一款跨平台视频播放应用，允许观看网络电视。
+
+    - SMPPlayer - 一个带有字幕功能的免费 GUI 媒体播放器。
+
+
+    ## 视频编辑器
+
+
+    - Open Shot - 一款功能丰富的跨平台视频编辑应用。
+
+    - Pitivi - 一款开源视频编辑应用。
+
+    - Avidemux - 一款简单易用的开源跨平台视频编辑软件。
+
+    - Blender - 一个支持所有 3D 工作流 3D 创建套件。
+
+
+    ## 浏览器
+
+
+    - Google Chrome - 由谷歌开发的、在 PC 和手机上最流行的浏览器。
+
+    - Firefox - 最近备受关注的开源跨平台网络浏览器。
+
+    - Vivaldi - 一款基于 Chromium 引擎、界面优美的浏览器。
+
+    - Opera - 一款于 90 年代发布的浏览器，是最老的浏览器之一。
+
+    - Chromium - 一款轻量级开源跨平台浏览器。与 Google Chrome 不同，Chromium 更快。
+
+    - Midori - 一款许多 Linux 系统的默认开源浏览器。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 111]
+
+
+    Metasploit Framework – The world’s most used penetration testing framework.
+
+
+    Netcat – A powerful networking utility which reads and writes data across network
+    connections.
+
+
+    Nmap – A strong network security scanner.
+
+
+    Nessus – A remote security vulnerability scanning tool.
+
+
+    WireShark – A free and open-source packet analyzer.
+
+
+    Snort – A free open-source network intrusion detection system.'
+  - '[PAGE 112]
+
+
+    Kismet Wireless – A wireless network detector, sniffer, and intrusion detection
+    system.
+
+
+    Nikto – An open-source web server scanner.
+
+
+    # IDE Editors
+
+
+    Netbeans – A popular open-source IDE used mainly for Java and C/C++ development.
+
+
+    +   - Code::Blocks – A free, highly extensible and configurable, cross-platform
+    C++ IDE.'
+  - '[PAGE 113]
+
+
+    Eclipse - An open-source cross-platform IDE commonly mostly among Java developers.
+
+
+    CodeLite - A free open-source cross-platform IDE, built for programmers.
+
+
+    Bluefish - A cross-platform editor which makes writing HTML faster.
+
+
+    Brackets - A modern text editor made specifically for web development.
+
+
+    Atom - An advanced text editor that can be customized into an IDE.
+
+
+    Sublime - A popular lightweight cross-platform text editor.'
+  - '[PAGE 114]
+
+
+    JetBrains - A commercial IDE which provides solutions for almost every language/framework.
+
+
+    Microsoft’s Visual Studio - A cross-platform open-source text editor developed
+    by Microsoft.
+
+
+    # Image Editors
+
+
+    GIMP - An open-source GNU image manipulation program.
+
+
+    Pinta - The Linux version of windows paint.
+
+
+    DigiKam - An open-source photo editing app meant for photographers.'
+  - '[PAGE 115]
+
+
+    ShowFOTO – A free standalone image editor with powerful image editing tools.
+
+
+    RawTherapee – A free image editing app for optimizing photos.
+
+
+    Fotoxx – An open-source photo collection manager which can also be used for photo
+    editing.
+
+
+    F-spot – An open-source image editing app for Gnome desktops.
+
+
+    # Movie Subtitles
+
+
+    VLC Media Player – An open-source audio and video playing app with subtitle capabilities.'
+  - '[PAGE 116]
+
+
+    Subliminal - An easy-to-use program that searches and downloads movie subtitles.
+
+
+    SubDownloader - A program for automatic find and download/upload subtitles for
+    your movies.
+
+
+    SMPPlayer - A free GUI media player with subtitles functionality.
+
+
+    # Music Making Software
+
+
+    Audacity - An open-source cross-platform audio recording and editing app.
+
+
+    Cecilia - An audio signal processing platform aimed at sound designers.'
+  - '[PAGE 117]
+
+
+    Mixxx – A music mixing software that can help you become a professional DJ.
+
+
+    Ardour – A complete music-making app for professionals on Linux and Mac OS X.
+
+
+    Hydrogen Drum – An advanced drum sampler app for Linux systems.
+
+
+    Gitarix – A virtual guitar amplifier app.
+
+
+    # PDF Viewers
+
+
+    Okular – A free universal document viewer.'
+  - '[PAGE 118]
+
+
+    Evince - A lightweight document which is the default for Gnome desktops.
+
+
+    Foxit - A cross-platform PDF reader which is secure.
+
+
+    PDF JS - A web-based PDF viewer.
+
+
+    # Security
+
+
+    ClamAV - An antivirus Engine for Linux systems.
+
+
+    Fail2ban - An open-source intrusion prevention framework.
+
+
+    GuFW - A firewall powered by UFW (Uncomplicated Firewall).'
+  - '[PAGE 119]
+
+
+    Mod_Security - An open-source intrusion detection and prevention software for
+    web apps.
+
+
+    Iptables - A popular command-line utility for configuring Linux kernel firewall.
+
+
+    Firewalld - A firewall which changes can be applied instantly without the need
+    for a restart.
+
+
+    Shorewall - An open-source gateway/firewall configuration tool for GNU/Linux.'
+  - '[PAGE 120]
+
+
+    # Torrent Download Client
+
+
+    aria2 - An open-source cross-platform command-line download manager.
+
+
+    Deluge - A torrenting app which is considered to be one of the best.
+
+
+    qBittorent - A cross-platform torrenting client.
+
+
+    # Text Editors
+
+
+    ViVim Editor - A command-line based text editor with a lot of rich features making
+    the most commonly used.
+
+
+    Gedit - A general-purpose text editor.'
+  - '[PAGE 121]
+
+
+    Nano - An easy to use command-line based text editor.
+
+
+    Emacs - A command-line text editor which is highly customizable.
+
+
+    Kate - A feature-rich text editor that is highly customizable.
+
+
+    Lime -
+
+
+    # Video Players
+
+
+    VLC Media Player - An open-source audio and video playing app with subtitle capabilities.
+
+
+    Kodi - A media player software application developed by the XBMC Foundation.'
+  - '[PAGE 122]
+
+
+    Miro Music - A cross-platform video playing app which allows for the use of internet
+    television.
+
+
+    SMPPlayer - A free GUI media player with subtitle functionality.
+
+
+    # Video Editors
+
+
+    Open Shot - A cross-platform feature-rich video editing app.
+
+
+    Pitivi - An open-source video editing app.
+
+
+    Avidemux - An open-source cross-platform video editing software for simple use.'
+  - '[PAGE 123]
+
+
+    Blender - A 3D creation suite with support for all the 3D pipelines.
+
+
+    # Web Browsers
+
+
+    Google Chrome - The most popular browser found on both PCs and mobile phones developed
+    by Google.
+
+
+    Firefox - An open-source cross-platform web browser gaining a lot of attention
+    lately.
+
+
+    Vivaldi - A Chromium Engine based web browser with a beautiful interface.
+
+
+    Opera - A web browser released in the 1990s, it is one of the oldest.'
+  - '[PAGE 124]
+
+
+    Chromium - An lightweight open-source cross-platform web browser.
+
+    nUnlike Google Chrome, Chromium is fast.
+
+
+    Midori - An open-source web browser which is the default in many Linux systems.'
