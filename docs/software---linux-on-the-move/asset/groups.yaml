@@ -1,0 +1,1545 @@
+- md: '
+
+    # Guest Editors'' Introduction
+
+
+    What is Linux? And why should you care? This focus section has insights for both
+    newcomers and diehard fans.
+
+
+    ![](img/1475d122f50e27ffa74a3df49508b6e3_0_0.png)
+
+
+    # Linux on the Move
+
+
+    Terry Bollinger, The Mitre Corporation
+
+    Peter Beckman, Los Alamos National Laboratory
+
+
+    Linux is free, open-source operating system that looks like Unix, except that
+    it runs on PCs as well as other platforms. Linux was created by Lin Torvalds in
+    1991. Today, Linux is cooperatively improved by Torvalds and thousands of volunteers
+    from around the world using open-source development methods. At this point in
+    time, “Linux” generally refers to the entire suite of software in a distribution,
+    from the operating system kernel to the Web server and graphical user interface.
+
+
+    When we say that Linux is “free” we mean, well...free. You do not need to pay
+    to get a copy of it, although it is usually more convenient to buy an inexpensive
+    CD-ROM copy than download an entire distribution over the Internet. Once you get
+    a copy of Linux, you also have the right to make many copies of it as you want.
+
+
+    # DEFINING TERMS
+
+
+    By "open source" we mean that you also have the right to get copies of all the
+    source code from Linux and its associated tools were originally compiled. There
+    are no magical, mysterious binary files, although you could court the Linux system
+    if you prefer. If at some point encounter a bug, you are perfectly free to fix
+    the source code. You are encouraged to improve Linux and share your changes with
+    the community.
+
+
+    # GETTING RESULTS
+
+
+    The only traditional software practice that open-source developers do is peer
+    review, and they do that with a vengeance. Each piece of source code is placed
+    on display in front of a global community of developers. The global community
+    of open-source developers is noted for being brutally honest and focused on bottom-line
+    results.
+
+
+    Alternatively, you can report the bug and simply watch someone fix it for free,
+    in a matter of days or in a matter of hours.
+
+
+    By "Unix" we do not mean simply, a watered-down subset of Unix. Linux is not an
+    operating system by anyone''s definition. It has as many more tools and advancements
+    than traditional Unix OS. It is also a major component of the Internet, where
+    it serves to provide exceptional reliability and stability—7-day work week. Linux
+    has been built to power powerful parallel-processing clusters.
+
+
+    The results of this approach include components that are arguably the most reliable
+    pieces of complex software in existence, since even a modest rate of failure in
+    critical components would cause the Internet to degrade to the point of being
+    unsure. Despite the indifference of open-source methods to software development
+    rules, they do achieve the kind of reliability to which traditional software development
+    methods still aspire.
+
+
+    By "on PCs as also other platforms," we mean that Linux currently has the most
+    impressive platform run of operating system—and the keeps growing. It has run
+    on the Intel x86, Gamma, Alpha, Sun, Apple Macintosh, MIPS, and even the Palm
+    Pilot.
+
+
+    # A SPECIAL ISSUE ON LINUX
+
+
+    The Linux (and other) articles in this issue are described in the Article Summary
+    on page 34. To explore further, see "Open Source and Linux Resources" on p. 34.
+
+
+    Linux also possesses an unusually wide range of drivers for peripheral devices.
+    In cases where a newly released board or device is not supported by Linux, it
+    is uncommon to see the except driver show up on the Internet within hours or even
+    days of the new device hits the market stability, the largest obstacle standing
+    in the way of development drivers for new hardware is finding available specifications.
+
+
+    IEEE Software has to choose Linux not only because it is an interesting and timely
+    topic, but to provide a bit of a wake-up call to traditional software developers
+    who may be a little concerned about Linux and open-source software development.
+    The fact that Linux has widely hidden secrets makes it all easy to dismiss it
+    as "just another software that will fail soon.
+
+
+    By "open-development" we mean what must be one of the high-raising violations
+    of accepted software development practices over to the software radius. Open-source
+    development ignores accepted requirements analysis, process, and software configuration
+    control; it laughs at them and throws them out. The timeline on pp. 32-33 provide
+    a brief history of the movement. The sidebars (pp. 33, 35) provide additional
+    flavor of what this community is all about.
+
+
+    The risk of such thinking is that it will fail to recognize and learn from the
+    open-source movement''s success, as its ability to produce reliable software even
+    in the absence of traditional configuration and management controls. A general
+    principle of science is that when blatant traditions exist between theory and
+    practice,
+
+
+    January/February 1999 IEEE Software 31
+
+
+    # A BRIEF HISTORY OF FREE SOFTWARE AND OPEN SOURCE
+
+
+    Jesus Gonzalez Barahona and Pedro de las Heras Quirós, Carlos III de Madrid
+
+    Terry Bollinger, The Mitre Corporation
+
+
+    ### 1950s-1960s
+
+
+    Software is distributed with source code and without restrictions in forms such
+    as the “Algorithms” section of Communications of the ACM, the IBM Share User Group,
+    and the DEC user group.
+
+
+    ### 1969
+
+
+    April: RFC 1233 describing the first software for the Internet (then ARPANET)
+    was freely accessible to RFCs and especially to the protocol specifications, was
+    key to Internet development.
+
+
+    ### 1971
+
+
+    Richard Stallman began his kernel at MIT in a program that uses only free software
+    (nonproprietary software) includes publicly accessible and redistributable source
+    code.
+
+
+    ### 1978
+
+
+    Donald Knight of Stanford begins working on the system, and it is distributed
+    as free software.
+
+
+    ### 1983
+
+
+    Richard Stallman writes the “GNU (Not Unix)” Manifesto, in which he calls for
+    a return to sharable software. Early non-proprietary software for academic use
+    is largely over.
+
+
+    ### 1985
+
+
+    Cygnus, the first to identify business opportunities in free software, is founded.
+
+
+    ### 1989
+
+
+    Stallman’s organization, the Free Software Foundation, announces its intent to
+    build a powerful Unix-like kernel called Hurd. Their goal is so large that many
+    will never be completed. (As of 1999, Hurd is incomplete.)
+
+
+    ### 1991
+
+
+    August: Finnish graduate student Lin Torvalds has been working on a Unix-like
+    kernel since April 1991, using tools such as GCC and hobby. uses Minix as his
+    development kernel.
+
+
+    October: Tallinn publishes the source code for his Unix-like free kernel and names
+    it Linux
+
+    December: Tallinn releases the first self-supporting version of Linux, version
+    0.01. Developers can now work on Linux without any proprietary operating systems.
+
+
+    ### 1992
+
+
+    The US Force asks New York University to build a free compiler for what is now
+    Ada 95. The NYU team uses GCC for code generation and calls their compiler GNU
+    for NYU Ada 95 Translator.
+
+
+    Tanenbaum: publishes Linux as technology to make Unix obsolete and query architecture.
+    In the using Linux, Torvalds adopts an aggressively open-source stance that attracts
+    new Linux developers.
+
+
+    July: 368BSD is 0.1 written by William and Lynne Jolitz, but it is illegal. A
+    legal battle begins to determine if there is proprietary code in Berkeley Net
+    Release/2, on which 368BSD is based. Some months later, a settlement is reached
+    with Berkeley Net Release/3, on which all free operating systems are based.
+
+
+    ### 1993
+
+
+    August: Ian Murdock creates a new Linux distribution called Debian, developed
+    by a distributed group of volunteers. Debian software can be folded back into
+    other Linux distributions, but does not create any significant long-term split
+    in the Linux distribution.
+
+
+    December: FreeBSD 1.0, one of the first stable descendants of Jolitz''s early,
+    is released on the web.
+
+
+    # 1994
+
+
+    Free Ada compiler software receives a commercial boost with the incorporation
+    of Ada Core Technologies, or by
+
+    '
+  mdcn: '
+
+
+    # 客座编辑介绍
+
+
+    什么是 Linux？你为什么应该关注它？本专栏为新手和硬核粉丝都提供了见解。
+
+
+    ![](img/1475d122f50e27ffa74a3df49508b6e3_0_0.png)
+
+
+    # 移动中的 Linux
+
+
+    Terry Bollinger, Mitre 公司
+
+    Peter Beckman, 洛斯阿拉莫国家实验室
+
+
+    Linux 是一个免费的开源操作系统，看起来像 Unix，不同之处在于它也可以运行在 PC 以及其他平台上。Linux 由 Lin Torvalds 于 1991
+    年创建。如今，Linux 在 Torvalds 和全球数千名志愿者的通过开源开发方法进行合作改进。在目前，“Linux”通常指发行版中的整套软件，从操作系统内核到
+    Web 服务器和图形用户界面一包含。
+
+
+    当我们说 Linux 是“免费”的时，我们的意思是……没错，就是免费的。你不需要付钱获取它的副本，尽管购买一份廉价的 CD-ROM 副本通常比在互联网上下载整个发行版更方便。一旦你获得了
+    Linux 的副本，你还有权根据自己的意愿制作许多副本。
+
+
+    # 定义术语
+
+
+    我们所说的“开源”是指你也有权获取 Linux 及其关联工具最初编译时所有源代码的副本。这里没有魔法般的、神秘的二进制文件，尽管如果你愿意，你也可以拥抱 Linux
+    系统。如果你在某个时间点遇到了 bug，你可以完全自由地修复源代码。我们鼓励你改进 Linux 并与社区分享你的更改。
+
+
+    # 获取成果
+
+
+    开源开发者唯一从事的传统软件实践是同伴评审，而且他们执行得极其严厉。每一段源代码都展示在全球开发者社区面前。全球开源开发者社区以其近乎残酷的诚实和专注于最终结果而闻名。
+
+
+    或者，你可以报告 bug，然后眼睁睁看着某人在几天内或几小时内免费地修复它。
+
+
+    我们所说的“Unix”指的并不仅仅是 Unix 的一个稀释版子集。按照任何人的定义，Linux 并不是一个操作系统。它比传统的 Unix 操作系统多得工具和进步。它还是互联网的主要组件，在互联网中提供卓越的可靠性和稳定性——每周
+    7 天无休工作。Linux 的设计是为了驱动强大的并行处理集群。
+
+
+    这种方法的结果包括了一些可以被认为是世界上存在的最可靠的复杂软件组件，因为即使关键组件出现微不足的失败率，也会导致互联网下降到无法确定的程度。尽管开源方法对软件开发规则漠然不关心，但它们确实实现了传统软件开发方法仍在追求的可靠性。
+
+
+    我们所说的“不仅在 PC 上也在其他平台上”，是指 Linux 目前拥有最令人印象深刻的跨平台运行操作系统——而且仍在不断增长。它已经运行在 Intel x86、Gamma、Alpha、Sun、Apple
+    Macintosh、MIPS 甚至 Palm Pilot 上。
+
+
+    # 关于 Linux 的特刊
+
+
+    本期杂志中关于 Linux（以及其他）的文章已在第 34 页的文章摘要中描述了描述。如需进一步探索，请参阅第 34 页的“开源与 Linux 资源”。
+
+
+    Linux 还拥有范围异常广泛的外围设备驱动程序。在新发布的板 或设备不支持 Linux 的情况下，看到新设备上市几小时内甚至几天内，互联网上出现相应的驱动程序并不罕见。关于稳定性，开发新硬件驱动程序的最大障碍是找到可用的规范。
+
+
+    《IEEE Software》选择 Linux 不仅因为它是一个有趣且及时的话题，而且为了给可能稍微担心 Linux 和开源软件开发的传统软件开发者提个醒。Linux
+    拥有大量隐藏的秘密这一事实，使其很容易被斥为“又一个很快会失败的软件”。
+
+
+    我们所说的“开放开发”是指这必须是软件范围内对被接受的软件开发实践最高程度的违背行为之一。开源开发忽略了被接受的需求分析、过程和软件配置控制；它们对这些付之一笑并把它们抛弃。第
+    32-33 页的时间线提供了该运动的简史。侧边栏（第 33, 35 页）提供了关于该社区本质的更多额外风味。
+
+
+    这种思维的风险在于，它将无法识别和从开源运动的成功中学习，因为即使在缺乏传统配置和管理控制的情况下，它也有产生可靠软件的能力。科学的一个基本原则是，当理论与实践之间存在明显的传统差异时，（此处原文中断，未提供后续内容）
+
+
+    1999 年 1 月/2 月 IEEE Software 31
+
+
+    # 自由软件与开源的简史
+
+
+    Jesus Gonzalez Barahona 和 Pedro de las Heras Quirós，马德里卡洛三
+
+    Terry Bollinger, Mitre 公司
+
+
+    ### 1950 年代-1960 年代
+
+
+    软件以源代码形式分发且不受限制，形式如《ACM 通信报》中的“算法”部分、IBM Share 用户组和 DEC 用户组。
+
+
+    ### 1969 年
+
+
+    4 月：RFC 1233 描述了互联网（当时为 ARPANET）的第一个软件，协议规范，是互联网开发的关键。
+
+
+    ### 1971 年
+
+
+    Richard Stallman 在 MIT 开始编写一个仅使用自由软件（非私有软件）的公开且可分发的内核。
+
+
+    ### 1978 年
+
+
+    斯坦福的 Donald Knight 开始研究该系统，并作为自由软件分发。
+
+
+    ### 1983 年
+
+
+    Richard Stallman 写了《GNU（不是 Unix）宣言》，在其中呼吁回归共享软件。早期的私有软件时代已基本结束。
+
+
+    ### 1985 年
+
+
+    Cygnus 作为第一家识别自由软件商业机会的机构成立了。
+
+
+    ### 1989 年
+
+
+    Stallman 的组织自由软件基金会宣布打算构建一个名为 Hurd 的强大 Unix 类内核。他们的目标如此巨大，以至于许多无法完成。（截至 1999 年，Hurd
+    尚未完成。）
+
+
+    ### 1991 年
+
+
+    8 月：芬兰研究生 Lin Torvalds 从 1991 年 4 月起一直在编写一个类 Unix 内核，使用 GCC 等工具，使用 Minix 作为他的开发内核。
+
+
+    10 月：Tallinn 发布了他的类 Unix 自由内核的源代码并命名为 Linux
+
+    12 月：Tallinn 发布 Linux 的第一个自支持版本 0.01。开发者现在可以在没有任何操作系统的情况下进行 Linux。
+
+
+    ### 1992 年
+
+
+    美国海军要求纽约大学为现在的 Ada 95 构建免费编译器。NYU 团队使用 GCC 进行代码生成，并将他们的编译器命名为 GNU Ada 95。
+
+
+    Tanenbaum：发布 Linux 作为使 Unix 过时的技术。在 Linux 中，Torvalds 采取了激进的开源立场，吸引了新的 Linux 开发者。
+
+
+    7 月：368BSD 是 William 和 Lynne Jolitz 写的 0.1，但它是非法的。一场法律战斗开始，以确定 368BSD 所基于 Berkeley
+    Net Release/2 中是否存在私有代码。几个月后，与 Berkeley Net Release/3 达成和解，所有自由操作系统都基于该。
+
+
+    ### 1993 年
+
+
+    8 月：Ian Murdock 创建了一个名为 Debian 的新 Linux 发行版，由志愿者小组开发。Debian 软件可以合并回其他 Linux 发行版，但没有引起重大的长期分裂。
+
+
+    12 月：FreeBSD 1.0，作为 Jolitz 早期版本的第一个稳定后代之一，在网上发布。
+
+
+    # 1994 年
+
+
+    免费 Ada 编译器软件通过 Ada Core Technologies 的成立获得了商业助力，或通过
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Guest Editors'' Introduction
+
+
+    What is Linux? And why should you care? This focus section has insights for both
+    newcomers and diehard fans.
+
+
+    ![](img/1475d122f50e27ffa74a3df49508b6e3_0_0.png)
+
+
+    # Linux on the Move
+
+
+    Terry Bollinger, The Mitre Corporation
+
+    Peter Beckman, Los Alamos National Laboratory
+
+
+    Linux is free, open-source operating system that looks like Unix, except that
+    it runs on PCs as well as other platforms. Linux was created by Lin Torvalds in
+    1991. Today, Linux is cooperatively improved by Torval and thousands of volunteers
+    from around the world using open-source development methods. At this point in
+    time, “Linux” generally refers to the entire suite of software in a distribution,
+    from the operating system kernel to the Web server and graphical user interface.
+
+
+    When we say that Linux is “free” we mean, well...free. You do not need to pay
+    to get a copy of it, although it is usually more convenient to buy an inexpensive
+    CD-ROM copy than download an entire distribution over the Internet. Once you get
+    a copy of Linux, you also have the right to make many copies of it as you want.'
+  - '[PAGE 1]
+
+
+    # DEFINING TERMS
+
+
+    By "open source" we mean that you also have the right to get copies of all the
+    source code from Linux and its associated tools were originally compiled. There
+    are no magical, mysterious binary files, although you could court the Linux system
+    if you prefer. If at some point encounter a bug, you are perfectly free to fix
+    the source code. You are encouraged to improve Linux and share your changes with
+    the community.
+
+
+    # GETTING RESULTS
+
+
+    The only traditional software practice that open-source developers do is peer
+    review, and they do that with a vengeance. Each piece of source code is placed
+    on display in front of a global
+
+
+    # The global community of open-source developers is noted for being brutally honest
+    and focused on bottom-line results.
+
+
+    Alternatively, you can report the bug and simply watch someone fix it for free,
+    in a matter of days or in a matter of hours.
+
+
+    community of developers who are noted for being brutally honest and focused on
+    bottom-line results.
+
+
+    By "Unix" we do not mean simply, watered-down subset of Unix. Linux is not an
+    operating system by anyone''s definition. It has as many more tools and advancements
+    than traditional Unix OS. It is also a major component of the Internet, where
+    it serves to provide exceptional reliability and stability—7-day work week. Linux
+    has been built to power powerful parallel-processing clusters.
+
+
+    The results of this approach include components that are arguably the most reliable
+    pieces of complex software in existence, since even a modest rate of failure in
+    critical components would cause the Internet to degrade the point of being unsure.
+    Despite the indifference of open-source methods to software development rules,
+    they do achieve the kind of many-reliability which to traditional software development
+    methods still aspire.
+
+
+    By PCs as also other platforms," we mean that Linux currently has the most impressive
+    platform run of operating system—and the keeps growing. It has run on the Intel
+    x86, Gamma, Alpha, Sun, Apple Macintosh, MIPS, and even the Palm Pilot.
+
+
+    # A SPECIAL ISSUE ON LINUX
+
+
+    The Linux (and other) articles in this issue are described in the Article Summary
+    on page 34. To explore further, see "Open Source and Linux Resources" on p. 34.
+
+
+    Linux also possesses an unusually wide range of drivers for peripheral devices.
+    In cases where a newly released board or device is not supported by Linux, it
+    is uncommon to see the except driver show up on the Internet within hours or even
+    days of the new device hits the market stability, the largest obstacle standing
+    in the way of development drivers for new hardware is finding available specifications.
+
+
+    IEEE Software has to choose Linux not only because it is interesting and timely
+    topic, but to provide a bit of a wake-up call to traditional software developers
+    who may be a little concerned about Linux and open-source software development.
+    The fact that Linux does widely hidden secrets makes it all easy to dismiss it
+    as "just another software that will fail soon.
+
+
+    By "open-development" we mean what must be one of the high-raising violations
+    of accepted software development practices over to the software radius. Open-source
+    development ignores accepted requirements analysis, process, and software configuration
+    control; it laughs at them and throws them out. The timeline on pp. 32-33 provide
+    a brief history of the movement. The sidebars (pp. 33, 35) provide additional
+    flavor of what this community is all about.
+
+
+    The risk of such thinking is that it will fail to recognize and learn from the
+    open-source movement''s success, as its ability to produce reliable software even
+    in the absence of traditional configuration and management controls. A general
+    principle of science is that when blatant traditions exist between theory and
+    practice,
+
+
+    Continued on page 35
+
+
+    January/February 1999 IEEE Software 31'
+  - '[PAGE 2]
+
+
+    # # A BRIEF HISTORY OF FREE SOFTWARE AND OPEN SOURCE
+
+
+    Jesus Gonzalez Barahona and Pedro de las Heras Quirós, Carlos III de Madrid
+
+    Terry Bollinger, The Mitre Corporation
+
+
+    # ### 1950s-1960s
+
+
+    Software is distributed with source code and without restrictions in forms such
+    as the “Algorithms” section of Communications of the ACM, the IBM Share User Group,
+    and the DEC user group.
+
+
+    # ### 1969
+
+
+    April:RFC 123 describing the first software for the Internet (then ARPANET) was
+    freely accessible to RFCs and especially to the protocol specifications, was key
+    to Internet development
+
+
+    # ### 1971
+
+
+    Richard Stallman began his kernel at MIT in a program that uses only free software
+    (nonproprietary software) includes publicly accessible and redistributable source
+    code.
+
+
+    # ### 1978
+
+
+    Donald Knight of Stanford begins working on the system, and it is distributed
+    as free software.
+
+
+    # ### 1983
+
+
+    Early non-proprietary software for academic use is largely over. Most software
+    lacks propriety, that it is privately owned and its source code is not publicly
+    available.
+
+
+    Richard Stallman writes the “GNU (Not Unix)” Manifesto, in which he calls for
+    a return to publicly sharable software and source code.
+
+    GNU Project begins: creating a wide range of Unix-like tools and software such
+    as compilers. The Unix kernel is not covered by these efforts.
+
+
+    # ### 1985
+
+
+    MIT’s Window System is distributed as free software under a minimally restrictive
+    license.
+
+
+    # ### 1989
+
+
+    Cygnus, the first to identify business opportunities in free software, is founded.
+
+
+    Stallman’s organization, the Free Software Foundation, announces its intent to
+    build a powerful Unix-like kernel called GNU Hurd. Their goal is to fill the last
+    major hole in the GNU suite of software and create a fully nonproprietary development
+    system. however, the hope of Hurd is so large that many will never be completed.
+    (As of early 1999). Hurd is incomplete.)
+
+
+    # ### 1991
+
+
+    William and Lynne Jolitz writes a series in Dr.Journal on how to port BSD (Berkeley
+    Distribution) Unix to 386-based PCs. This is the start of the BSD family of free
+    movement creates highly tangible control of the technical content of this freely
+    distributed source code.
+
+
+    August: Finnish graduate student Lin Torvalds has been working on a Unix-like
+    kernel since April 1991, using tools such as GCC and hobby. Totalls uses Minix
+    as his development kernel. (Minix is an academically oriented Unix-like operating
+    system
+
+
+    October: Tallinn publishes the source code for his Unix-like free kernel and names
+    it Linux
+
+    December: Tallinn releases the first self-supporting version of Linux, version
+    0.01. Developers can now work on Linux without any proprietary operating or systems.
+
+
+    # ### 1992
+
+
+    The US Force asks New York University to build a free compiler for what is now
+    Ada 95. The NYU team uses GCC for code generation and calls their compiler GNU
+    for NYU Ada 95 Translator.
+
+
+    Tanenbaum: publishes Linux as technology to make Unix obsolete and query architecture.
+    In the using Linux, Torvalds adopts an aggressively open-source stance that attracts
+    new Linux developers.
+
+
+    July: 368BSD is 0.1 written by William and Lynne Jolitz, but it is illegal. A
+    legal battle begins to determine if there is proprietary code in Berkeley Net
+    Release/2, on which 368BSD is based. Some months later, a settlement is reached
+    with Berkeley Net Release/3, on which all free operating systems are based.
+
+
+    # 1993
+
+
+    August: Ian Murdock creates a new Linux distribution called Debian, developed
+    by a distributed group of volunteers. Debian software can be folded back into
+    other Linux distributions, but does not create any significant long-term split
+    in the Linux distribution.
+
+
+    December: FreeBSD 1.0, one of the first stable descendants of Jolitz''s early,
+    is released on the web.
+
+
+    # 1994
+
+
+    Free Ada compiler software receives a commercial boost with the incorporation
+    of Ada Core Technologies, or by
+
+
+    Continued on the next page'
+- md: '
+
+    the original NYU GNAT. GNAT, ACT decides to make money by evolving GNAT and support
+    services, rather than selling GNAT itself. and with the help of ACT, GNAT becomes
+    the dominant AS compiler for commercial applications.
+
+
+    Like the Red Hat Linux distribution, intended to improve on the dominant SoftLinux
+    (SLS) distribution.
+
+
+    January: Linux version (0.91), released by 12 volunteers, is released.
+
+
+    March: First release of Linux is published
+
+
+    October: NetBSD 1.0 is released.
+
+
+    January: FreeBSD 2.0 is released
+
+
+    April: The first official public release (0.62) of Apache is distributed,
+
+
+    First Conference on Redistributable Software is held in Cambridge, Massachusetts.
+
+
+    June: Eric Raymond presents his paper "The Cathedral and the Bazaar" on why Linux
+    software development works.
+
+
+    > Jesus Maria Gonzalez Barranas and de las Heras Quiro are assistant professors
+    of computer science at Universidad Carlos III de Madrid, Spain. Terry Tollinger
+    is a principal systems engineer at The Mitre Corp. E-mail, gjbb@computer.org or
+    terry@mitre.org.
+
+
+    # 1995
+
+
+    January: Partially released by Raymond''s paper, Netscape declares its intent
+    to release the source code for its Navigator browser.
+
+
+    February: Chris Peterson and others use the phrase "open source" to define the
+    business-compatible approach to free software, found in the Red Hat Linux and
+    Netscape releases. (The actual distributions remain dependent on GNU) and free
+    software, here are better understood as a different way of buying and promoting
+    both free and open source);
+
+
+    April: Netscape source code is released, and initial features and beginnings arriving
+    within hours.
+
+
+    July: Linux 2.0 is released by more than 300 volume package makers making more
+    than 1,500 packages.
+
+
+    August: Linux Torvalds and Linux appear on the cover of Forbes magazine.
+
+
+    October: IBM decides to open source with Apache on AS/400.
+
+
+    November: Microsoft "Windows" documents strengths and weaknesses of open-source
+    software and Linux are leaked to the public by Eric Raymond
+
+
+    # 1997
+
+
+    # LINUX: COMPATIBILITY AND RELIABILITY FOR THE CREATIVE TECHNOLOGIST
+
+
+    Dave Hollandeck, Hewlett Packard
+
+
+    As a microprocessor designer, I must outthink my competitors every day. We are
+    living in a frantic race to develop technology—I need every ounce of creativity
+    I can muster. I need tools that are flexible and adaptable to create my work.
+
+
+    Packaged-size-fits-all software seems to, but my job requires more basic tools:
+    I don''t want a painting—I want the paints, canvas, and colors, to create my work
+    of art. Linux needs to maintain the environment I create when it creates a slightly
+    different shade of yellow. I would have the perfect solution, for tomorrow''s
+    challenge will be best met by my unique shade of blue.
+
+
+    complete of freedom: the source code is itself
+
+
+    Linux is reliable. Thanks to an extensive community of users/testers, the frustrating
+    launch is a rarity. If I seriously install additional packages, frequently causes
+    exists, working software to fail? If my time and efforts need to be on real problems,
+    not sanctions or implementation problems. If I do not have my software, I will
+    have to do extra work to gain the quality of a product.
+
+
+    Other methods may drive me; to the creative technologist the computer is not an
+    asset. I must have best of power at disposal in my quest to solve technical problems.
+    If I can gain an advantage using a more adaptable, powerful platform, I will.
+    Moreover, I will not hesitate when I decide.
+
+
+    Dave Hollandeck is a technical lead at Hewlett Packard''s VLSI Technology Center
+    in Fort Collins, Colorado, where he designs high-performance processors. Readers
+    may contact me at dae@hhp.com.
+
+
+    January/February 1999 IEEE Software 33
+
+
+    # OPEN-SOURCE AND LINUX RESOURCES
+
+
+    Linux is gaining momentum as a platform for mainframe computing. Companies such
+    as Associates International, Intel, and IBM are making versions of their systems
+    and applications for Linux, often opening the source code to developers. The emergence
+    of these diverse methodologies should enable Linux to gain ground in the commercial
+    marketplace, including mission-critical applications. This list of Web sites and
+    product listings demonstrates the growing acceptance of Linux and open-source
+    software development.
+
+
+    680x0 and PowerPC. Updates include improved caching for file I/O, improved multiprocessing,
+    and a more efficient way of dealing files on network servers. The update does
+    not include USB or DVD support, but subsequent patches are available: http://www.kernel.com/
+
+
+    # WEB SITES
+
+
+    Ingress Linux Beta Refresh. Computer International Inc. offers a replacement for
+    the last Beta with fixes for problems reported during the beta cycle. Allows Linux
+    users to create applications with development tools (compilers) and to develop
+    Internet-enabled applications using the Apache Server. http://www.ca.com/
+
+
+    The Open Source Page offers general and technical information on open-source development,
+    with case studies and illustrations illustrating its usefulness. You can find
+    the ''Holographic Documents'' here: http://www.opensource.org/
+
+
+    WordPerfect for Linux Personal Edition is available for free download from Core.
+    According to the company, there are 82 attempts in 12 hours to debut the first.
+    Core has several versions of its products, including including Paradox, Painthotraft,
+    and Draw, before Summer 1999. http://www.core.com/
+
+
+    The Free Software Foundation seeks to eliminate restrictions on copyleft, distribution,
+    use, and modification of software, and coordinates the GNU system development
+    project. http://www.sf.org/
+
+
+    Inform Dynamic Linux Edition Suite provides a stable database architecture and
+    enables the development of client-server and Web/internet applications across
+    any platform. The Dynamic and the Inform SE on the Inform Web Bundle are available
+    for download until 31 March 1999: http://www.inform.com/solutions/linux/freextl.html
+
+
+    - Release 1.0, "Ether D''s monthly newsletter, announced on open source in Nov.
+    1998. http://www.eventure.com/release/1998.html
+
+
+    - O''Reilly & Associates, a publisher, offers news and information on Linux, open-source
+    software development as well as: http://www.oreilly.com/
+
+
+    - IBM''s DB2 Universal Developer''s Edition Version 5.2 for Linux and Beta Data.
+    Version 2 for Linux beta code are also available for download from the Web: http://www.software.ibm/
+
+
+    - The Linux Resources provides a wide range of information on Linux, including
+    where to get Linux and product support: http://www.linux.org/
+
+
+    GNUPCs 2.8, the open-source compiler and debugger tool for Linux, is now available
+    for embedded system development, provided by Cygnus Products.
+
+
+    Linux.journal, a monthly magazine from SSC Publishing, is available at http://www.linuxjournal.com/
+
+
+    Linux International is an association of companies and groups that work to promote
+    and advance Linux: http://www.linux.org/
+
+
+    The Linux Documentation Project offers detailed concerning the translation of
+    Linux OS, general information, product descriptions, and commercial links: http://www.linux.org/
+
+
+    The Linux Weekly is a newsletter with news briefs, editorials, and links on the
+    Linux community: http://www.linuxweekly.com/
+
+
+    Freshsoft is a repository that carries a complete set of used applications on
+    Linux. The site also hosts Linux news and editors: http://freshmeat.net/
+
+
+    The Linux Kernel Archives is the primary site for the Linux kernel and 20 GBs
+    of disk space available for merging the Linux-related software: http://www.kernel.org/
+
+
+    For a wide variety of open-source and free-software events visit: http://www.net.org/gtbi-bin/webcal.pl
+
+
+    # PRODUCT INFORMATION
+
+
+    The new Linux 2.2 kernel will be available soon on Intel x86 and 64-bit platforms,
+    or on all Motorola chips, the
+
+
+    The U.S. Linux Suite is software available from U.S. Imports. It includes regular
+    updates: http://www.gnu.org/group/
+
+
+    Cygnus Linux Suite 4.1 for Linux. The software provides a spreadsheet, word processor,
+    presentation graphics, and a package tool. The suite is designed to enable exchange
+    with Microsoft Office 97. http://www.use.de/
+
+
+    Prolifics 4.0, a GUI compiler and web development tool, supports the Linux operating
+    system in its January 1999 release. The product also supports Java and C and Corba
+    objects which are available for Windows NT, Unix and MVS: http://www.prolific.com/
+
+
+    For additional information on these or other Linux products visit Linuxmall at
+    http://www.linuxmall.com/
+
+
+    34 IEEE Software January/February 1999
+
+    '
+  mdcn: '
+
+    最初的 NYU GNAT。对于 GNAT，ACT 决定通过演进 GNAT 和支持服务来盈利，而不是销售 GNAT 本身。在 ACT 的帮助下，GNAT 成为商业应用主要的
+    AS 编译器。
+
+
+    类似于 Red Hat Linux 发行版，旨在改进主地位的 SoftLinux (SLS) 发行版。
+
+
+    1月：Linux 版本 (0.91) 由 12 名志愿者发布。
+
+
+    3月：Linux 的第一个版本正式发布。
+
+
+    10月：NetBSD 1.0 发布。
+
+
+    1月：FreeBSD 2.0 发布。
+
+
+    4月：Apache 的第一个正式发行版 (0.62) 发布。
+
+
+    第一届可再发行软件会议在马萨诸塞州剑桥市举行。
+
+
+    6月：Eric Raymond 埃里克·雷蒙了他的论文《大教堂与集市》，解释了为什么 Linux 软件开发是有效的。
+
+
+    > Jesus Maria Gonzalez Barranas 和 de las Heras Quiro 是西班牙马德里卡洛斯三大学的计算机科学助理教授。Terry
+    Tollinger 是 Mitre 公司的首席系统工程师。邮箱：gjbb@computer.org 或 terry@mitre.org。
+
+
+    # 1995
+
+
+    1月：受 Raymond 论文的影响，网景（Netscape）宣布打算发布其 Navigator 浏览器的源代码。
+
+
+    2月：Chris Peterson 等人使用“开源”一词来定义一种与商业兼容的自由软件方法，这种方法在 Red Hat Linux 和网景发行版中被发现。（实际发行版仍依赖于
+    GNU）而自由软件在这里被更好地理解为另一种购买和推广免费及开源软件的方式）；
+
+
+    4月：网景源代码发布，初始功能和开端在几小时内上线。
+
+
+    7月：由 300 多个软件包制作者发布了 Linux 2.0，包含超过 1500 个软件包。
+
+
+    8月：Linus Torvalds 和 Linux 登上《福布斯》杂志封面。
+
+
+    10月：IBM 决定在 AS/400 上对 Apache 开源。
+
+
+    11月：微软的“Windows”关于开源软件和 Linux 优缺点的内部文档被 Eric Raymond 向公众泄露。
+
+
+    # 1997
+
+
+    # Linux：面向创意技术者的兼容性与可靠性
+
+
+    Dave Hollandeck, 惠尔-惠普 (Hewlett Packard)
+
+
+    作为一名微处理器设计师，我每天必须比竞争对手思考得深。我们处于疯狂的技术开发竞赛中——我需要集起每一丝创造力。我需要灵活且适应性强的工具来完成我的工作。
+
+
+    通用的软件包似乎可以，但我的工作需要更基础的工具：我不要一幅画画——我要的是颜料、画布和颜色，来创作我的艺术品。当 Linux 创建出一种略有不同的黄色时，它需要保持我创建的环境。我将拥有完美的解决方案，因为明天的挑战将通过我独特的蓝色得到最好的解决。
+
+
+    自由的完全：源代码本身就是一切
+
+
+    Linux 是可靠的。得益于广泛的用户/测试者社区，令人沮丧的启动故障是罕见的。如果我认真地安装额外的软件包，是否经常会出现冲突，导致运行良好的软件失败？如果我的时间和精力需要花在真实问题上，而不是制裁或实现问题上。如果我没有软件，我将不得不做额外的工作来获得产品的质量。
+
+
+    其他方法可能会驱动我；但对于创意技术者来说，计算机不是资产。在解决技术问题的过程中，我必须拥有最强大的工具。如果我可以使用更具适应性、更强大的平台来获得优势，我就会这样做。而且，当我决定时，我将毫不犹豫。
+
+
+    Dave Hollandeck 是惠尔-惠普科罗拉多州福特柯林 VLSI 技术中心的技术负责人，他在那里设计高性能处理器。读者可以通过 dae@hhp.com
+    与我联系。
+
+
+    1999年1/2月 IEEE Software 33
+
+
+    # 开源与 Linux 资源
+
+
+    Linux 作为大型机计算平台正获得动力。诸如 Associates International、英特尔和 IBM 等公司正在为 Linux 开发其系统和应用程序，并经常向开发者开放源代码。这些多样化方法的出现应该使
+    Linux 能够在商业市场（包括关键任务应用）中占据一席。这个网站列表和产品列表展示了人们对 Linux 和开源软件开发日益增长的认可。
+
+
+    680x 和 PowerPC。更新包括改进文件 I/O 的缓存、改进多进程处理，以及处理网络服务器上文件的更高效方法。该更新不包含 USB 或 DVD 支持，但后续提供了可用补丁：http://www.kernel.com/
+
+
+    # 网站
+
+
+    Ingress Linux Beta 刷新。Computer International Inc. 提供上一个 Beta 版本的替代品，修复了在 Beta
+    期间报告的问题。允许 Linux 用户使用开发工具（编译器）创建应用程序，并使用 Apache 服务器开发支持互联网的应用程序。http://www.ca.com/
+
+
+    开源页面（Open Source Page）提供有关开源开发的通用和技术信息，以及案例研究和说明明其用处。你可以在这里找到“全息文档”：http://www.opensource.org/
+
+
+    Linux 版 WordPerfect 个人版可以在 Core 免费下载。根据公司说法，在 12 小时内有 82 次尝试首次发布。Core 拥有多个版本的产品，在
+    1999 年夏天之前包括 Paradox、Painthotraft 和 Draw。http://www.core.com/
+
+
+    自由软件基金旨在消除对软件拷贝（copyleft）、分发、使用和修改的限制，并协调 GNU 系统开发项目。http://www.sf.org/
+
+
+    Inform Dynamic Linux 版套件提供了稳定的数据库架构，并允许在任何平台上开发客户端/服务器和 Web/互联网应用程序。Inform Web
+    Bundle 上的 Dynamic 和 Inform SE 可下载至 1999 年 3 月 31 日：http://www.inform.com/solutions/
+
+
+    680x0 和 PowerPC。更新包括改进文件 I/O 的缓存、改进多进程处理，以及处理网络服务器上文件的更高效方法。该更新不包含 USB 或 DVD 支持，但后续提供了可用补丁：http://www.kernel.com/
+
+
+    # 网站
+
+
+    Ingress Linux Beta 刷新。Computer International Inc. 提供上一个 Beta 版本的替代品，修复了在 Beta
+    期间报告的问题。允许 Linux 用户使用开发工具（编译器）创建应用程序，并使用 Apache 服务器开发支持互联网的应用程序。http://www.ca.com/
+
+
+    开源页面（Open Source Page）提供有关开源开发的通用和技术信息，以及案例研究和说明明其用处。你可以在这里找到“全息文档”：http://www.opensource.org/
+
+
+    Linux 版 WordPerfect 个人版可以在 Core 免费下载。根据公司说法，在 12 小时内有 82 次尝试首次发布。Core 拥有多个版本的产品，在
+    1999 年夏天之前包括 Paradox、Painthotraft 和 Draw。http://www.core.com/
+
+
+    自由软件基金旨在消除对软件拷贝（copyleft）、分发、使用和修改的限制，并协调 GNU 系统开发项目。http://www.sf.org/
+
+
+    Inform Dynamic Linux 版套件提供了稳定的数据库架构，并允许在任何平台上开发客户端/服务器和 Web/互联网应用程序。Inform Web
+    Bundle 上的 Dynamic 和 Inform SE 可下载至 1999 年 3 月 31 日：http://www.inform.com/solutions/
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 3]
+
+
+    the original NYU GNAT. GNAT, ACT decides to make money by evolving GNAT and support
+    services, rather than selling GNAT itself. and with the help of ACT, GNAT becomes
+    the dominant As compiler for commercial applications.
+
+
+    Like the Red Hat Linux distribution, intended to improve on the dominant SoftLinux
+    (SLS) distribution.
+
+
+    January: Linux version (0.91), released by 12 volunteers, is released.
+
+
+    March: First release of Linux is published
+
+
+    October: NetBSD 1.0 is released.
+
+
+    January: FreeBSD 2.0 is released
+
+
+    April: The first official public release (0.62) of Apache is distributed,
+
+
+    First Conference on Redistributable Software is held in Cambridge, Massachusetts.
+
+
+    June: Eric Raymond presents his paper "The Cathedral and the Bazaar" on why Linux
+    software development works.
+
+
+    > Jesus Maria Gonzalez Barranas and de las Heras Quiro are assistant professors
+    of computer science at Universidad Carlos III de Madrid, Spain. Terry Tollinger
+    is a principal systems engineer at The Mitre Corp. E-mail, gjbb@computer.org or
+    terry@mitre.org.
+
+
+    # 1995
+
+
+    January: Partially released by Raymond''s paper, Netscape declares its intent
+    to release the source code for its Navigator browser.
+
+
+    February: Chris Peterson and others use the phrase "open source" to define the
+    business-compatible approach to free software, found in the Red Hat Linux and
+    Netscape releases. (The actual distributions remain dependent on GNU) and free
+    software, here are better understood as a different way of buying and promoting
+    both free and open source);
+
+
+    April: Netscape source code is released, and initial features and beginnings arriving
+    within hours.
+
+
+    July: Linux 2.0 is released by more than 300 volume package makers making more
+    than 1,500 packages.
+
+
+    August: Linux Torvalds and Linux appear on the cover of Forbes magazine.
+
+
+    October: IBM decides to open source with Apache on AS/400.
+
+
+    November: Microsoft "Windows" documents strengths and weaknesses of open-source
+    software and Linux are leaked to the public by Eric Raymond
+
+
+    # 1997
+
+
+    # LINUX: COMPATIBILITY AND RELIABILITY FOR THE CREATIVE TECHNOLOGIST
+
+
+    Dave Hollandeck, Hewlett Packard
+
+
+    As a microprocessor designer, I must outthink my competitors every day. We are
+    living in a frantic race to develop technology—I need every ounce of creativity
+    I can muster. I need tools that are flexible and adaptable to create my work.
+
+
+    Packaged-size-fits-all software seems to, but my job requires more basic tools:
+    I don''t want a painting—I want the paints, canvas, and colors, to create my work
+    of art. Linux needs to maintain the environment I create when it creates a slightly
+    different shade of yellow. I would have the perfect solution, for tomorrow''s
+    challenge will be best met by my unique shade of blue.
+
+
+    complete of freedom: the source code is itself
+
+
+    Linux is reliable. Thanks to an extensive community of users/testers, the frustrating
+    launch is a rarity. If I seriously install additional packages, frequently causes
+    exists, working software to fail? If my time and efforts need to be on real problems,
+    not sanctions or implementation problems. If I do not have my software, I will
+    have to do extra work to gain the quality of a product.
+
+
+    Other methods may drive me; to the creative technologist the computer is not an
+    asset. I must have best of power at disposal in my quest to solve technical problems.
+    If I can gain an advantage using a more adaptable, powerful platform, I will.
+    Moreover, I will not hesitate when I decide.
+
+
+    Dave Hollandeck is a technical lead at Hewlett Packard''s VLSI Technology Center
+    in Fort Collins, Colorado, where he designs highperformance processors. Readers
+    may contact me at dae@hhp.com.
+
+
+    January/February 1999 IEEE Software 33'
+  - '[PAGE 4]
+
+
+    # OPEN-SOURCE AND LINUX RESOURCES
+
+
+    Linux is gaining momentum as a platform for mainframe computing. Companies such
+    as Associates International, Intel, and IBM are making versions of their systems
+    and applications for Linux, often opening the source code to developers. The emergence
+    of these diverse methodologies should enable Linux to gain ground in the commercial
+    marketplace, including mission-critical applications. This list of Web sites and
+    product listings demonstrates the growing acceptance of Linux and open-source
+    software development.
+
+
+    680x0 and PowerPC. Updates include improved caching for file I/O, improved multiprocessing,
+    and a more efficient way of dealing files on network servers. The update does
+    not include USB or DVD support, but subsequent patches are available: http://www.kernel.com/
+
+
+    # WEB SITES
+
+
+    Ingress Linux Beta Refresh. Computer International Inc. offers a replacement for
+    the last Beta with fixes for problems reported during the beta cycle. Allows Linux
+    users to create applications with development tools (compilers) and to develop
+    Internet-enabled applications using the Apache Server. http://www.ca.com/
+
+
+    The Open Source Page offers general and technical information on open-source development,
+    with case studies and illustrations illustrating its usefulness. You can find
+    the ''Holographic Documents'' here: http://www.opensource.org/
+
+
+    WordPerfect for Linux Personal Edition is available for free download from Core.
+    According to the company, there are 82 attempts in 12 hours to debut the first.
+    Core has several versions of its products, including including Paradox, Painthotraft,
+    and Draw, before Summer 1999. http://www.core.com/
+
+
+    The Free Software Foundation seeks to eliminate restrictions on copyleft, distribution,
+    use, and modification of software, and coordinates the GNU system development
+    project. http://www.sf.org/
+
+
+    Inform Dynamic Linux Edition Suite provides a stable database architecture and
+    enables the development of client-server and Web/internet applications across
+    any platform. The Dynamic and the Inform SE on the Inform Web Bundle are available
+    for download until 31 March 1999: http://www.inform.com/solutions/linux/freextl.html
+
+
+    +   * Release 1.0, "Ether D''s monthly newsletter, announced on open source in
+    Nov. 1998. http://www.eventure.com/release/1998.html
+
+
+    O''Reilly & Associates, a publisher, offers news and information on Linux, open-source
+    software development as well as: http://www.oreilly.com/
+
+
+    IBM''s DB2 Universal Developer''s Edition Version 5.2 for Linux and Beta Data.
+    Version 2 for Linux beta code are also available for download from the Web: http://www.software.ibm/
+
+
+    The Linux Resources provides a wide range of information on Linux, including where
+    to get Linux and product support: http://www.linux.org/
+
+
+    GNUPCs 2.8, the open-source compiler and debugger tool for Linux, is now available
+    for embedded system development, provided by Cygnus Products.
+
+
+    Linux.journal, a monthly magazine from SSC Publishing, is available at http://www.linuxjournal.com/
+
+
+    Linux International is an association of companies and groups that work to promote
+    and advance Linux: http://www.linux.org/
+
+
+    The Linux Documentation Project offers detailed concerning the translation of
+    Linux OS, general information, product descriptions, and commercial links. http://www.linux.org/
+
+
+    The Linux Weekly is a newsletter with news briefs, editorials, and links on the
+    Linux community: http://www.linuxweekly.com/
+
+
+    Freshsoft is a repository that carries a complete set of used applications on
+    Linux. The site also hosts Linux news and editors: http://freshmeat.net/
+
+
+    The Linux Kernel Archives is the primary site for the Linux kernel and 20 GBs
+    of disk space available for merging the Linux-related software: http://www.kernel.org
+
+
+    For a wide variety of open-source and free-software events visit: http://www.net.org/gtbi-bin/webcal.pl
+
+
+    Cygnus Linux Suite 4.1 for Linux. The software provides a spreadsheet, word processor,
+    presentation graphics, and a package tool. The suite is designed to enable exchange
+    with Microsoft Office 97. http://www.use.de/
+
+
+    # PRODUCT INFORMATION
+
+
+    The new Linux 2.2 kernel will be available soon on Intel x86 and 64-bit platforms,
+    or on all Motorola chips, the
+
+
+    The U.S. Linux Suite is software available from U.S. Imports. It includes regular
+    updates: http://www.gnu.org/group/
+
+
+    Prolifics 4.0, a GUI compiler and web development tool, supports the Linux operating
+    system in its January 1999 release. The product also supports Java and C and Corba
+    objects which are available for Windows NT, Unix and MVS: http://www.prolific.com/
+
+
+    For additional information on these or other Linux products visit Linuxmall at
+    http://www.linuxmall.com/
+
+
+    34 IEEE Software January/February 1999'
+- md: '
+
+    # ReactOS: An Open-Source ALTERATIVE to NT?
+
+
+    Jason Filby, South Africa Free Health Department
+
+
+    ReactOS is an open-source operating system, currently under development, that
+    will be compatible with Windows drivers and applications. We encourage developers
+    around the world to support and contribute to this. The home page, www.reactos.org,
+    contains project information, listings, message boards, and a download section.
+    Right now, ReactOS is being designed for NT compatibility. The kernel is currently
+    in pre-alpha phase and at the moment we cannot predict when it will be stable.
+
+
+    In fact, our next release will contain mostly bug fixes. We desire to document
+    all coded functions and make them available for online browsing and downloading.
+    Our first priority is compatibility with NT drivers and applications. This will
+    keep us busy for time to come—every time Microsoft updates the NT, we will have
+    to focus on maintaining our compatibility. We are currently sharing win32 API
+    information with the WINE project (at www.winehq.org).
+
+
+    The open-source operating system with NT drivers and applications started in 1996
+    when Wayne Majiks created code from FreeWin5. While many projects were in progress,
+    there was little code to show for it. Eventually, the project came closest to
+    success.
+
+
+    In January, the project leaders decided that it should have been scrapped or taken
+    elsewhere. We chose to make a fresh start and reactivated the project in February
+    1998. We renamed it ReactOS, as it was a reaction to the operating system. It
+    took a few months to settle into their terms and work out. But during this initial
+    stage, we were writing code and becoming more interested in doing.
+
+
+    After a few months, ReactOS has progressed rapidly. We are currently in pre-alpha
+    0.1.3. The consistent development has continued to attract members, and we are
+    exploring ways to get members more involved. ReactOS has a short but encouraging
+    journey. Its final release will not make doubts that we can. If we provide a viable
+    alternative to Windows, we will have much support.
+
+
+    Jason Filby is an officer for the Free Health Department, South Africa. He is
+    project coordinator for the ReactOS project, which he contributes on a part-time
+    basis. Readers may contact him at jasonfilby@yahoo.com.
+
+
+    To be back go and look at that more closely. For example, just the internet is
+    altering the dynamics of markets for individuals, it may also be irrevocably changing
+    the nature of software development. Software development is, after all, simply
+    a "mind of the minds" in innovation is expressed and changed in the form of software.
+    Linux is indeed a leader of such changes, understanding it may help us equip for
+    the things we need.
+
+
+    We also, however, do things differently than NT. Unfortunately, there''s a fine
+    line between maintaining compatibility and using better techniques. We hope to
+    provide solution and still maintain compatibility where Microsoft cannot.
+
+
+    ## About the Authors
+
+
+    Terry Bollinger is a principal information systems engineer at the Miner Corporation,
+    where he has worked on distributed systems architectures. He is interested in
+    software technology such as issue, process, and is also interested in the possibility
+    that more fundamental foundations to software exist than have been recognized.
+    Among his interests is physics (he has given several lectures on it emitted from
+    quantum qubits), writing, science, and especially spending time with his wife
+    and four children.
+
+
+    Bollinger has a master''s and degree in computer science from the University of
+    Missouri at Columbia. Readers may contact him at terry@miner.org.
+
+
+    Peter Beckman is a senior scientist at the Advanced Computing Laboratory at Los
+    Alamos National Laboratory (LANL). He is the project leader for the Accelerated
+    Computing Initiative at LANL, and the lead for researchers at the ACL. He also
+    organizes the Extreme Linux workshops and activities (at www.extremune.org) and
+    enjoys linking between Apple''s Linux Mint "Blue Penguin" (cluster.apple.com/cluster/).
+
+
+    Beckman graduated in 1993 with a PhD in computer science from Indiana University.
+    Readers may contact him at beckman@lanl.org.
+
+    '
+  mdcn: '
+
+
+    # ReactOS：NT 的开源替代方案？
+
+
+    Jason Filby，南非自由健康部门
+
+
+    ReactOS 是一个正在开发中的开源操作系统，它将与 Windows 驱动程序和应用程序兼容。我们鼓励全球的开发者支持并为此做出贡献。主页 www.reactos.org
+    包含了项目信息、列表、公告板和下载区域。目前，ReactOS 正在针对 NT 兼容性进行设计。内核目前处于预发布（pre-alpha）阶段，目前无法预测它何时会变得稳定。
+
+
+    事实上，我们的下一个版本将主要包含大量的错误修复。我们希望记录所有代码函数，并使其能够供在线浏览和下载。我们的首要任务是与 NT 驱动程序和应用程序的兼容。这将让我们在未来一段时间里忙碌——每当微软更新
+    NT 时，我们都必须专注于维护兼容性。我们目前正与 WINE 项目（访问 www.winehq.org）共享 win32 API 信息。
+
+
+    这个带有 NT 驱动程序和应用程序的开源操作系统始于1996年，当时 Wayne Majiks 创建了来自 FreeWin5 的代码。虽然有很多项目正在进行，但几乎没有代码可展示。最终，该项目最接近成功。
+
+
+    1月份，项目负责人决定它应该被废弃或移交他处。我们选择从头开始，并在1998年2月重新激活了该项目。我们将其更名为 ReactOS，因为它是对操作系统的反应。他们花了几个月的时间来稳定条款并开展工作。但在初始阶段，我们一直在编写代码，并对这种工作变得越来越感兴趣。
+
+
+    几个月后，ReactOS 进展迅速。我们目前处于预发布 0.1.3 阶段。持续的开发继续吸引着成员，我们正在探索让成员更多参与进来的方法。ReactOS 的历程虽然短暂但令人鼓舞。它的最终发布将不再让人怀疑我们能够做到。如果我们能为
+    Windows 提供一种可行的替代方案，我们将获得巨大的支持。
+
+
+    Jason Filby 是南非自由健康部门的一名官员。他是 ReactOS 项目的协调员，并兼职为该项目做出贡献。读者可以通过 jasonfilby@yahoo.com
+    联系他。
+
+
+    回去更仔细地观察这一点。例如，仅仅是互联网就在改变个人的市场动态，它也可能不可逆转地改变软件开发的本质。毕竟，软件开发仅仅是创新中的“思想之脑”以软件的形式表达和改变。Linux
+    确实是此类变革的领导者，理解它可能帮助我们为所需的事物做好准备。
+
+
+    然而，我们的做法与 NT 不同。遗憾的是，维护兼容性与使用更好的技术之间存在着微妙的界限。我们希望在微软无法做到的地方提供解决方案并同时保持兼容性。
+
+
+    ## 关于作者
+
+
+    Terry Bollinger 是 Miner 公司的首席信息系统工程师，他在那里从事分布式系统架构的工作。他对比软件技术（如问题、流程）感兴趣，并且对存在比已认知的更基础的软件基础的可能性感兴趣。他的兴趣包括物理学（他曾进行过多次关于量子比特的演讲）、写作、科学，特别是与他的妻子和四个孩子度过时光。
+
+
+    Bollinger 拥有密苏里大学哥伦比亚亚分校的计算机科学硕士学位。读者可以通过 terry@miner.org 联系他。
+
+
+    Peter Beckman 是洛斯阿拉莫斯国家实验室（LANL）高级计算实验室的高级科学家。他是 LANL 加速计算计划的项目负责人，也是 ACL 研究人员的负责人。他还组织
+    Extreme Linux研讨会和活动（访问 www.extremune.org），并喜欢连接苹果的 Linux Mint“蓝企鹅”（cluster.apple.com/cluster/）。
+
+
+    Beckman 于1993年毕业于印第安纳大学，获得计算机科学博士学位。读者可以通过 beckman@lanl.org 联系他。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 5]
+
+
+    # # ReactOS: An Open-Source ALTERATIVE to NT?
+
+
+    Jason Filby, South Africa Free Health Department
+
+
+    ReactOS is an open-source operating system, currently under development, that
+    will be compatible with Windows drivers and applications. We encourage developers
+    around the world to support and contribute to this. The home page, www.reactos.org,
+    contains project information, listings, message boards, and a download section.
+    Right now, ReactOS is being designed for NT compatibility. The kernel is currently
+    in pre-alpha phase and at the moment we cannot predict when it will be stable.
+
+
+    In fact, our next release will contain mostly bug fixes. We desire to document
+    all coded functions and make them available for online browsing and downloading.
+    Our first priority is compatibility with NT drivers and applications. This will
+    keep us busy for time to come—every time Microsoft updates the NT, we will have
+    to focus on maintaining our compatibility. We are currently sharing win32 API
+    information with the WINE project (at www.winehq.org).
+
+
+    The open-source operating system with NT drivers and applications started in 1996
+    when Wayne Majiks created code from FreeWin5. While many projects were in progress,
+    there was little code to show for it. Eventually, the जल्द and the project came
+    closest to success.
+
+
+    In January, the project leaders decided that it should have been scrapped or taken
+    elsewhere. We chose to make a fresh start and reactivated the project in February
+    1998. We renamed it ReactOS, as it was a reaction to the Microsoft operating system.
+    It took a few months to settle into their terms and work out philosophical issues.
+    But during this initial stage, we were writing code and becoming more interested
+    in doing around.
+
+
+    After a few months, ReactOS has progressed rapidly. We are currently in pre-alpha
+    0.0.1.3. The consistent development has continued to attract new members, and
+    we are exploring ways to get members more actively involved. New code development
+    has temporarily slowed down and we have got to fix bugs and doc
+
+
+    We also, however, do things differently than NT. Unfortunately, there''s a fine
+    line between maintaining compatibility and using better techniques. We hope, to
+    provide compatibility where Microsoft cannot. For example, many Linux users prefer
+    products that don''t support 100% per cent Java. Microsoft is integrating it into
+    the operating system, thereby showing out competitors. In some cases, ReactOS
+    will provide a solution and still maintain NT compatibility with drivers
+
+
+    ReactOS has a short but encouraging journey. Its final release will not make doubts
+    that we can. If we provide a viable alternative to Windows NT, we will have much
+    support.
+
+
+    Jason Filby is an officer for the Free Health Department, South Africa. He is
+    project coordinator for the ReactOS project, which he contributes on a part-time
+    basis. Readers may contact him at jasonfilby@yahoo.com.
+
+
+    Continued from page 33
+
+
+    to be back go and look at that more closely. For example, just the internet is
+    altering the dynamics of markets for individuals, it may also be irrevocably changing
+    the nature of software development. Software development
+
+
+    is, after all, simply a "mind of the minds" in innovation is expressed and changed
+    in the form of software. Linux is indeed a leader of such changes, understanding
+    it may help us equip for the things we need.
+
+
+    # ## About the Authors
+
+
+    Terry Bollinger is a principal information systems engineer at the Miner Corporation,
+    where he has worked on distributed systems architectures. He is interested in
+    software technology encompass such as issue, process, and is also interested in
+    the possibility that more fundamental foundations to software exist than have
+    been recognized. Among his interests is physics (he has given several lectures
+    on it emitted from quantum qubits), writing, science, and especially spending
+    time with his wife and four children.
+
+
+    Bollinger has a master''s and degree in computer science from the University of
+    Missouri at Rolia. Readers may contact him at terry@miner.org.
+
+
+    Peter Beckman is a senior scientist at the Advanced Computing Laboratory at Los
+    Alamos National Laboratory (LANL). He is the project leader for the Accelerated
+    Computing Initiative at LANL, and the lead for researchers at the ACL. He also
+    organizes the Extreme Linux workshops and activities (at www.extremune.org) and
+    enjoys linking between Apple''s Linux Mint "Blue Penguin" (cluster.apple.com/cluster/).
+
+
+    Beckman graduated in 1993 with a PhD in computer science from Indiana University.
+    Readers may contact him at beckman@lanl.org.
+
+
+    January/February 1999 — IEEE Software 35'
