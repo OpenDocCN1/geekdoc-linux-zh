@@ -1,0 +1,836 @@
+- - '#'
+  - Gtk+ / Gnome 应用开发指南
+- - '##'
+  - 图列表
+- - '##'
+  - 第 1 章 引言
+- - '##'
+  - 什么是 Gnome？
+- - '##'
+  - Gnome 开发框架
+- - '##'
+  - 非 Gnome 库
+- - '##'
+  - glib
+- - '##'
+  - GTK+
+- - '##'
+  - 第 1 章 引言
+- - '##'
+  - ORBit
+- - '##'
+  - Imlib
+- - '##'
+  - Gnome 库
+- - '##'
+  - libnome
+- - '##'
+  - libnomeui
+- - '##'
+  - libnorba
+- - '##'
+  - libzvt
+- - '##'
+  - libart_lpgpl
+- - '##'
+  - 其他库
+- - '##'
+  - gnome-print
+- - '##'
+  - gnome-xml
+- - '##'
+  - Guile
+- - '##'
+  - Bonobo
+- - '##'
+  - 关于头文件的说明
+- - '###'
+  - 图 2-1. 熟悉的 C 宏
+- - '###'
+  - 图 2-2. 在指针中存储整数的宏
+- - '##'
+  - 调试宏
+- - '##'
+  - 第 2 章 glib：可移植性与实用
+- - '###'
+  - 图 2-3. 前提条件检查
+- - '###'
+  - 图 2-4. 断言
+- - '##'
+  - 内存
+- - '##'
+  - 字符串处理
+- - '###'
+  - 图 2-14. 访问链表数据
+- - '###'
+  - 图 2-22. 创建 GNode
+- - '###'
+  - 图 2-23. 构建 GNode
+- - '###'
+  - 图 2-24. 构建 GNode
+- - '###'
+  - 图 2-25. 销毁 GNode
+- - '###'
+  - 图 2-26. GNode 预测
+- - '###'
+  - 图 2-27. GNode 属性
+- - '##'
+  - 其他特性
+- - '##'
+  - 第 3 章 GTK+ 基础
+- - '##'
+  - GTK+ 快速浏览
+- - '##'
+  - 一个完整的 Hello, World
+- - '##'
+  - 信号 (Signals)
+- - '##'
+  - 进入主循环
+- - '##'
+  - 关于信号和回调的更多内容
+- - '##'
+  - 容器与布局 (Containers And Layout)
+- - '##'
+  - 尺寸分配 (Size Allocation)
+- - '##'
+  - 请求 (Requisition)
+- - '##'
+  - 分配 (Allocation)
+- - '##'
+  - GtkBox
+- - '###'
+  - 图 3-4. GtkBox 填充
+- - '##'
+  - GtkBox 布局详情
+- - '##'
+  - 非均质框填充模式
+- - '##'
+  - 均质框填充模式
+- - '##'
+  - 框装箱总结
+- - '##'
+  - GtkTable
+- - '###'
+  - 图 3-12. GtkTable
+- - '##'
+  - GtkTable 示例
+- - '##'
+  - 其他布局组件
+- - '##'
+  - 手动影响布局
+- - '##'
+  - 组件生命周期
+- - '###'
+  - 图 3-23. 显示/实现组件
+- - '###'
+  - 图 3-24. 组件谓词
+- - '##'
+  - 其他组件概念
+- - '##'
+  - 敏感性
+- - '###'
+  - 图 3-25. 改变敏感性
+- - '###'
+  - 图 3-26. 敏感性
+- - '##'
+  - 焦点
+- - '##'
+  - 捕获 (Grabs)
+- - '##'
+  - 默认 (Default)
+- - '##'
+  - 组件状态
+- - '###'
+  - 图 3-27. 状态
+- - '##'
+  - 主循环 (The Main Loop)
+- - '##'
+  - 主循环基础
+- - '###'
+  - 图 3-28. 主循环
+- - '##'
+  - 退出函数
+- - '###'
+  - 图 3-29. 退出函数
+- - '##'
+  - 定时函数 (Timeout Functions)
+- - '##'
+  - 空闲函数 (Idle Functions)
+- - '##'
+  - 输入函数 (Input Functions)
+- - '##'
+  - 第 4 章 创建你的源码树 (Creating Your Source Tree)
+- - '##'
+  - Gnome 源码树概述 (Overview of a Gnome Source Tree)
+- - '##'
+  - 第 4 章 创建你的源文件树
+- - '##'
+  - configure.in
+- - '##'
+  - Makefile.am
+- - '##'
+  - 我们不做 autogen.sh 因为这是一个示例
+- - '##'
+  - 真实世界的程序不需要分发 autogen.sh
+- - '##'
+  - 表 4-1. 标准 make 目标
+- - '##'
+  - 相关的 GNU 文档
+- - '##'
+  - 安装支持文件
+- - '##'
+  - 安装 datfiles：文档和位图
+- - '##'
+  - 位图 (Pixmaps)
+- - '##'
+  - 文档
+- - '##'
+  - 不在二进制/数据目标中的文件必须在这里列出
+- - '##'
+  - 在 'make dist' 时包含在分发 tar 包中
+- - '##'
+  - 第 4 章 创建你的源树
+- - '##'
+  - 我们运行了 autogen.sh，因为这是一个示例程序
+- - '##'
+  - 实际程序不需要分发 autogen.sh
+- - '##'
+  - EXTRA_DIST
+- - '##'
+  - 第 5 章 Gnome 应用基础
+- - '##'
+  - 初始化库
+- - '##'
+  - 国际化
+- - '###'
+  - 图 5-2. 翻译宏
+- - '##'
+  - 使用 popt 进行参数解析
+- - '##'
+  - 保存配置信息
+- - '##'
+  - 读取存储的配置数据
+- - '##'
+  - 第 5 章 Gnome 基础
+- - '##'
+  - 章节迭代器
+- - '###'
+  - 图 5-6. 配置文件迭代器
+- - '##'
+  - 其他配置文件操作
+- - '##'
+  - 会话管理
+- - '##'
+  - 使用 GnomeClient
+- - '##'
+  - 第 6 章 主窗口：GnomeApp
+- - '##'
+  - GnomeApp 控件
+- - '##'
+  - 使用 GnomeUIInfo 菜单和工具栏
+- - '##'
+  - 将 GnomeUI 转换为组件
+- - '##'
+  - GnomeHello：示例
+- - '##'
+  - 添加状态栏
+- - '##'
+  - GnomeAppBar
+- - '##'
+  - GtkStatusBar
+- - '##'
+  - Gnome 文档和帮助菜单项
+- - '##'
+  - 菜单提示（Menu Hints）
+- - '##'
+  - 工具提示（Tooltips）
+- - '##'
+  - 收尾工作
+- - '##'
+  - 适应屏幕尺寸
+- - '##'
+  - 设置窗口类（Window Class）
+- - '##'
+  - 第 7 章 用户通信：对话框（Dialogs）
+- - '##'
+  - GnomeDialog 小部件
+- - '##'
+  - 创建对话框
+- - '###'
+  - 图 7-1. GnomeDialog构造函数
+- - '##'
+  - 填充对话框
+- - '##'
+  - 处理 GnomeDialog 信号
+- - '##'
+  - 润色工作
+- - '##'
+  - 模态对话框
+- - '##'
+  - 对话框示例
+- - '##'
+  - 特殊对话类型
+- - '##'
+  - GnomeAbout
+- - '##'
+  - GnomePropertyBox
+- - '##'
+  - GnomeMessageBox
+- - '##'
+  - 便捷函数
+- - '##'
+  - 第 8 章 Gnome 应用清单
+- - '##'
+  - 第 9 章 GTK+ 对象和类型
+- - '##'
+  - 对象结构
+- - '##'
+  - 类型检查和新类型
+- - '##'
+  - 初始化类
+- - '##'
+  - GtkObject 与类型
+- - '##'
+  - 参数
+- - '##'
+  - 设置对象
+- - '##'
+  - 在你的 GtkObject 类中使用参数
+- - '##'
+  - 发现可选参数
+- - '##'
+  - 添加新信号
+- - '##'
+  - 使用现有信号
+- - '##'
+  - 发射信号
+- - '##'
+  - 信号发生了什么
+- - '##'
+  - 对象初始化
+- - '##'
+  - 链式调用 (Chaining Up)
+- - '##'
+  - 对象附加数据 (Attaching Data)
+- - '##'
+  - GdkWindow
+- - '##'
+  - GdkWindow 和 GtkWidget
+- - '##'
+  - GdkWindow 属性
+- - '###'
+  - 图 10-1. GdkWindow
+- - '##'
+  - 视觉与映射
+- - '##'
+  - GdkVisual
+- - '##'
+  - 颜色
+- - '##'
+  - GdkColormap
+- - '##'
+  - 获取调色板
+- - '##'
+  - 可绘制对象与位图 (Pixmaps)
+- - '##'
+  - 事件
+- - '##'
+  - 事件类型
+- - '###'
+  - 图 10-2. GdkEventType 值
+- - '##'
+  - 事件掩码
+- - '###'
+  - 图 10-3. 事件掩码
+- - '##'
+  - 按钮
+- - '###'
+  - 图 10-5. 键和按钮事件的修码
+- - '##'
+  - 移动事件
+- - '##'
+  - 焦点
+- - '##'
+  - 键盘焦点
+- - '##'
+  - 暴露事件 (Expose Events)
+- - '##'
+  - 窗口变化 (Window Change Events)
+- - '##'
+  - 很少使用的事件 (Little-used Events)
+- - '##'
+  - 可见性事件 (Visibility Events)
+- - '##'
+  - 属性事件 (Property Events)
+- - '##'
+  - 选择事件 (Selection Events)
+- - '##'
+  - 客户端事件 (Client Events)
+- - '##'
+  - 拖放事件
+- - '##'
+  - 接近事件
+- - '##'
+  - 鼠标指针
+- - '##'
+  - 捕获指针
+- - '##'
+  - 位置
+- - '##'
+  - 更改光标
+- - '##'
+  - 字体
+- - '##'
+  - 字体指标 (Font Metrics)
+- - '##'
+  - 图形上下文 (Graphics Contexts)
+- - '##'
+  - 绘制
+- - '##'
+  - 点
+- - '##'
+  - 线
+- - '##'
+  - 矩形
+- - '##'
+  - 弧
+- - '##'
+  - 多边形
+- - '##'
+  - 像素图 (Pixmaps)
+- - '##'
+  - RGB 缓冲区
+- - '##'
+  - 资源管理
+- - '##'
+  - 像素图 (Pixmaps)
+- - '##'
+  - RGB 缓冲区
+- - '##'
+  - 资源管理
+- - '##'
+  - GtkStyle 和主题
+- - '##'
+  - 概述
+- - '##'
+  - Widget 的种类
+- - '##'
+  - Widget 的功能
+- - '##'
+  - GtkWidget 基类
+- - '##'
+  - GtkWidget 实例结构
+- - '##'
+  - Gtkwidget 类结构
+- - '##'
+  - 可写信号
+- - '##'
+  - 示例：GtkEv
+- - '##'
+  - 创建
+- - '##'
+  - 销毁 (Destruction)
+- - '##'
+  - 实现与映射 (Realization and Mapping)
+- - '##'
+  - 尺寸协商 (Size Negotiation)
+- - '##'
+  - 绘图 (Drawing)
+- - '##'
+  - 处理焦点
+- - '##'
+  - 显示、隐藏和映射
+- - '##'
+  - GtkContainer
+- - '##'
+  - GtkBin：只有一个子节点的容器
+- - '##'
+  - 添加和移除子组件
+- - '##'
+  - 遍历子组件
+- - '##'
+  - 组件类型
+- - '##'
+  - 其他 GtkBin 功能
+- - '##'
+  - GtkVBox：无窗口容器
+- - '##'
+  - 获取 GTK_NO_WINDOW 控件
+- - '##'
+  - 尺寸协商
+- - '##'
+  - 子参数 (Child Arguments)
+- - '##'
+  - 'GnomeAppBar: 一个简单的复合控件'
+- - '##'
+  - 坐标系
+- - '##'
+  - 仿射变换 (Affine Transformations)
+- - '##'
+  - 第 12 章 GnomeCanvas
+- - '##'
+  - 使用画布
+- - '##'
+  - 准备 GnomeCanvas 小部件
+- - '##'
+  - 滚动区域
+- - '##'
+  - 缩放
+- - '##'
+  - Gnome 项目与事件
+- - '##'
+  - 画布示例
+- - '##'
+  - 标准画布项目
+- - '##'
+  - 矩形与椭圆项目
+- - '###'
+  - 图 12-1. GnomeCanvasRE
+- - '##'
+  - 线项目
+- - '###'
+  - 图 12-2. GnomeCanvasLine 参数
+- - '##'
+  - 多边形项目
+- - '###'
+  - 图 12-3. GnomeCanvasPolygon 参数
+- - '##'
+  - 图像项目
+- - '###'
+  - 图 12-4. GnomeCanvasImage 参数
+- - '##'
+  - 文本项目
+- - '###'
+  - 图 12-5. GnomeCanvasText 参数
+- - '##'
+  - 组件项 (Widget Item)
+- - '###'
+  - 图 12-6. GnomeCanvas 参数
+- - '##'
+  - 第 13 章 编写一个 GnomeCanvasItem
+- - '##'
+  - 概述
+- - '##'
+  - GnomeRect
+- - '##'
+  - 绘制方法
+- - '##'
+  - 更新方法 (Update Method)
+- - '##'
+  - gnome_canvas_item_update_svp()
+- - '##'
+  - gnome_canvas_update_svp()
+- - '##'
+  - 请求更新
+- - '##'
+  - Render 方法（抗锯齿模式）
+- - '##'
+  - 速度与 RGB 渲染
+- - '##'
+  - 绘制方法（GDK 模式）
+- - '##'
+  - 其他方法
+- - '##'
+  - 事件
+- - '##'
+  - Point
+- - '##'
+  - Bounds
+- - '##'
+  - Realizing and Mapping
+- - '##'
+  - 第 14 章 GTK+/Gnome 层次结构
+- - '##'
+  - 总结
+- - '##'
+  - 控件 (Widgets)
+- - '##'
+  - GtkWidget
+- - '##'
+  - GtkContainer
+- - '##'
+  - GtkWindow
+- - '##'
+  - GtkBin
+- - '##'
+  - GtkBox
+- - '##'
+  - GtkHBox
+- - '##'
+  - GtkVBox
+- - '##'
+  - GnomeAppBar
+- - '##'
+  - GMenu
+- - '##'
+  - GtkCombo
+- - '##'
+  - GnomeEntry
+- - '##'
+  - GnomeFileEntry
+- - '##'
+  - GnomeNumberEntry
+- - '##'
+  - GnomeProcBar
+- - '##'
+  - GnomeDateEdit
+- - '##'
+  - GnomeIconSelection
+- - '##'
+  - GnomeLess
+- - '##'
+  - GnomePaperSelector
+- - '##'
+  - GnomePixmapEntry
+- - '##'
+  - GnomeSpell
+- - '##'
+  - GtkColorSelection
+- - '##'
+  - GtkGammaCurve
+- - '##'
+  - GtkButtonBox
+- - '##'
+  - GtkHButtonBox
+- - '##'
+  - GtkVButtonBox
+- - '##'
+  - GtkLayout
+- - '##'
+  - GnomeCanvas
+- - '##'
+  - GnomeIconList
+- - '##'
+  - GnomeBand
+- - '##'
+  - GnomeDock
+- - '##'
+  - GtkList
+- - '##'
+  - Gtkree
+- - '##'
+  - GtkFixed
+- - '##'
+  - GtkNotebook
+- - '##'
+  - GtkFontSelection
+- - '##'
+  - GtkPaned
+- - '##'
+  - GtkHPaned
+- - '##'
+  - GtkVPaned
+- - '##'
+  - GtkMenuShell
+- - '##'
+  - GtkMenuBar
+- - '##'
+  - GtkMenu
+- - '##'
+  - GtkPacker
+- - '##'
+  - GtkSocket
+- - '##'
+  - GtkTable
+- - '##'
+  - GtkTed
+- - '##'
+  - GtkToolbar
+- - '##'
+  - GtkTree
+- - '##'
+  - GnomeAnimator
+- - '##'
+  - GnomePixmap
+- - '##'
+  - GnomeStock
+- - '##'
+  - GtkMisc
+- - '##'
+  - GtkLabel
+- - '##'
+  - GtkAccel
+- - '##'
+  - GtkClock
+- - '##'
+  - GtkTips
+- - '##'
+  - GtkArrow
+- - '##'
+  - GtkImage
+- - '##'
+  - GtkPixmap
+- - '##'
+  - GtkCalendar
+- - '##'
+  - GtkDrawingArea
+- - '##'
+  - GtkEditable
+- - '##'
+  - GtkEntry
+- - '##'
+  - GtkSpinButton
+- - '##'
+  - GtkText
+- - '##'
+  - GtkRuler
+- - '##'
+  - GtkHRuler
+- - '##'
+  - GtkVRuler
+- - '##'
+  - GtkRange
+- - '##'
+  - GtkRange
+- - '##'
+  - GtkScale
+- - '##'
+  - GtkHScale
+- - '##'
+  - GtkVScale
+- - '##'
+  - GtkScrollbar
+- - '##'
+  - GtkHScrollbar
+- - '##'
+  - GtkVScrollbar
+- - '##'
+  - GtkSeparator
+- - '##'
+  - GtkHSeparator
+- - '##'
+  - GtkVSeparator
+- - '##'
+  - GtkPreview
+- - '##'
+  - GtkProgressBar
+- - '##'
+  - ZvtTerm
+- - '##'
+  - Canvas Items
+- - '##'
+  - GnomeCanvasRE
+- - '##'
+  - GnomeEllipse
+- - '##'
+  - GnomeRect
+- - '##'
+  - GnomeGroup
+- - '##'
+  - GnomeCanvasImage
+- - '##'
+  - GnomeLine
+- - '##'
+  - GnomePolygon
+- - '##'
+  - GnomeText
+- - '##'
+  - GnomeCanvasWidget
+- - '##'
+  - GnomeTextItem
+- - '##'
+  - GnomeClient
+- - '##'
+  - GnomeEntryEdit
+- - '##'
+  - GnomeDockLayout
+- - '##'
+  - GnomeMDIChild
+- - '##'
+  - GnomeMDenericChild
+- - '##'
+  - GnomeMDI
+- - '##'
+  - GtkData
+- - '##'
+  - GtkAdjustment
+- - '##'
+  - GtkTooltips
+- - '##'
+  - GtkItemFactory
+- - '##'
+  - 第 15 章 头文件
+- - '##'
+  - 第 16 章 常见问题
+- - '##'
+  - 问题与解答
+- - '###'
+  - 如何让我的应用程序发出声？
+- - '###'
+  - 我什么时候需要销毁小部件？
+- - '###'
+  - 当我在 glib 中开启内存分析时，我的应用程序变得不稳定。这是为什么？
+- - '###'
+  - 为了创建一个自定义显示，我想在任意位置放置小部件，或者快速移动它们，或者直接在其上图。如何做到？
+- - '##'
+  - 为什么我的内存调试工具在 glib 中出现内存泄漏？
+- - '##'
+  - 我从 GTK+ 收到了一堆“断言失败”（assertion failed）警告。这些是由什么引起的？
+- - '##'
+  - 为什么有些东西在 Gnome 中而不是 GTK+ 中？
+- - '##'
+  - 如何让窗口在屏幕居中？
+- - '##'
+  - 有没有小部件可以做到？
+- - '##'
+  - 当我 fork 时，我收到了一堆警告并且程序崩溃了。哪里错了？
+- - '##'
+  - 我什么时候需要调用 `gtk_widget_show()`？
+- - '##'
+  - 我不喜欢 [某个组件] 的外观。我该如何更改它的外观？
+- - '##'
+  - 第 16 章 常见解答
+- - '##'
+  - 感谢讲座，但我有一个充分的理由更改组件的外观。我该如何覆盖主题？
+- - '##'
+  - 为什么信号被指定为字符串不是整数或某种宏？
+- - '##'
+  - 为什么 GTK+ 用 C 语言编写？
+- - '##'
+  - 我的事件处理器只被调用了一次；这是为什么？
+- - '##'
+  - 我可以自己移动鼠标指针吗？
+- - '##'
+  - 如何从 pixmap 中读取像素？
+- - '##'
+  - 我正在使用 `gdk_draw_point()` 在屏幕上绘制大量点，速度慢得惊人。怎么了？我如何将图像数据渲染到屏幕？
+- - '##'
+  - 我正尝试设置 GtkLabel 的背景，但它不起作用。
+- - '##'
+  - 在 GTK+ 和 Gnome 源代码中，许多函数有两个变体：一个被称为 `gtk_whatever_foo()`，另一个被称为 `gtk_whatever_real_foo()`。它们之间有什么区别呢？
+- - '##'
+  - 我如何让一个小部件“变灰”，以便使用户无法选择它？
+- - '##'
+  - 我连接了 "button_press_event" 或其他事件信号，但回调函数从未被调用。
+- - '##'
+  - 我想在应用程序中使用箭头键控制，但 GTK+ 一直拦截事件以移动焦点。
+- - '##'
+  - GTK+ 有多继承吗？
+- - '##'
+  - 我收到了来自 GTK 的错误消息。我如何确定这些错误的原因？
+- - '##'
+  - 如何如何在不返回控制权给主循环的情况下更新 GUI？
+- - '##'
+  - 如何如何格式化代码以包含 GTK+ 或 Gnome？
+- - '##'
+  - 第 17 章 在线资源
+- - '##'
+  - 获取和编译库
+- - '##'
+  - 网站
+- - '##'
+  - 邮件列表
+- - '##'
+  - 互联网实时聊天 (IRC)
+- - '##'
+  - 本书
+- - '##'
+  - 第 18 章 代码列表
+- - '###'
+  - 'GnomeHello '
+- - '##'
+  - app.h
+- - '##'
+  - app.c
+- - '##'
+  - menus.c
