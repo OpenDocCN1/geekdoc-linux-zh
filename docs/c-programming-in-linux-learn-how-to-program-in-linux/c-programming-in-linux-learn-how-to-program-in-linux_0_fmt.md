@@ -1,0 +1,911 @@
+
+# Linux 下 C 语言实战：学习在 Linux 中编程
+
+## 设置你的系统
+
+本书假设你正在使用带有 KDE 或 Gnome 桌面的 Linux 操作系统。针对常见架构的具体设置说明请参阅 [`www.ubiubi.org/CProgrammingInLinux/`](http://www.ubiubi.org/CProgrammingInLinux/)
+
+如果你使用的是 KDE 桌面，你将使用 `Konqueror` 或 `Dolphin` 作为文件管理器，使用 `kate` 或 `kedit` 作为编辑器。
+
+在 Gnome 中，你可能会使用 `Nautilus` 和 `gedit`。
+
+你需要熟悉以“超级用户”（super user）身份执行某些操作的概念，这样你才有权限复制或编辑某些文件。这通常通过在 Linux 命令前加上`sudo`并提供密码来实现，如下例所示：
+
+```bash
+sudo cp hello3 /srv/www/cgi-bin/hello3
+```
+
+这会将文件`hello3`复制到 Apache 服务器存放通用网关接口或`cgi`程序的区域。
+
+在 KDE 中，执行`kdesu konqueror`会以超级用户身份打开文件管理器。
+
+在 Gnome 中，执行`gnomesu nautilus`会以超级用户身份打开文件管理器。你需要安装以下软件包：
+
+在全文中你将看到对`cgi-bin`文件夹的引用。该文件夹的位置在不同的 Linux 发行版之间有所不同。默认情况下，用于 Web 程序的文件夹是：
+
+- OpenSuse: `/srv/www/cgi-bin`
+- Ubuntu: `/usr/lib/cgi-bin`
+
+要将程序放在该处你需要超级用户权限，因此可能最好在你自己的家目录`/*****/public_html/cgi-bin`目录下创建一个文件夹，并修改 Apache 配置文件中的`ScriptAlias`和相关的`Directory`引用（OpenSuse 的`/etc/apache2/default-server.conf`或 Ubuntu 的`/etc/apache2/sites-available/default`）。
+
+# 1 Hello World
+
+## 1.1 Hello 程序 1
+
+使用文件管理器（在 KDE 中为 `Konqueror`，在 Gnome 中为 `Nautilus`）在你的家目录目录的某处创建一个新目录，名称应适合书中的所有示例，例如“Programming_In_Linux”，名称中不要包含空格。
+
+打开编辑器（在 KDE 中为`kate`，在 Gnome 中为`gedit`）并输入（或从提供的源码 zip 包中复制）以下内容：
+
+将文本保存为`chapter1_1.c`，存放在你在家目录下创建的新文件夹中。
+
+打开终端窗口并输入：
+
+```bash
+gcc -o hello chapter1_1.c
+```
+
+将程序编译成可执行的形式。
+
+现在输入`ls -l`列出此目录中所有文件的详细信息。你应该看到`chapter1_2.c`在那里，以及一个名为`hello`的文件，这就是你刚刚编写的编译 C 程序。
+
+现在输入：
+
+```bash
+./hello
+```
+
+来执行，或者运行该程序，它应该返回文本：“Hello you are learning C!!”。
+
+如果运行成功了，恭喜你，你现在是一个程序员了！
+
+### 程序结构分析：
+
+`/*** ***/`内部的部分是注释，不会被编译，仅供信息和参考。
+
+`#include...`部分告诉编译器需要哪些系统库以及此程序引用了哪些头文件。在我们的案例中使用了`printf`，它定义在`stdio.h`头文件中。
+
+`int main(int argc, char *argv[])`部分是实际程序的开始。这是一个入口，大多数 C 程序都有一个`main`函数。
+
+`int argc`是函数`main`的参数，是一个整数，表示传递给`char *argv[]`（指向字符字符串的指针列表）的字符字符串参数的数量，这些参数在我们运行程序时可能从命令行传递。
+
+指向某些项的指针是赋予这种数据类型的内存地址的名称。我们可以有一个整数的指针：`int *iptr`，或者一个浮点数的指针：`float *fPtr`。任何项列表都由`[]`描述，如果我们确切知道这个列表的大小，可能会将其声明为`[200]`。在这种情况下，我们知道第二个参数是指向字符字符串的指针列表。
+
+大括号中的所有其他内容都是主函数，在本例中，整个程序以行的形式表示。
+
+每一行或每个语句都以分号`;`结束。
+
+我们有像`printf(...)`这样的函数调用，它是对头文件`stdio.h`中定义的标准输入输出库的调用。
+
+在程序末尾，`return 0`通过向系统返回零来结束程序。
+
+返回值通常用于指示程序未正确运行时的成功或状态。
+
+## 1.2 Hello 程序 2
+
+将这个例子更进一步，观察程序入口函数声明处的程序开头：`int main(int argc, char *argv[])`。
+
+用通俗来说，这意味着：
+
+名为`main`的函数返回一个整数，它接受两个参数：一个名为`argc`的整数（表示命令行参数的数量），然后`*argv[]`，它是指向字符串的指针列表或数组，这些字符串是在从命令行运行程序时输入的实际参数。
+
+在我们开始恐慌之前，让我们重写程序来看看这一切意味着什么。
+
+将文本保存为`chapter1_2.c`放在同一个文件夹中。
+
+打开终端窗口并输入：
+
+```bash
+gcc -o hello2 chapter1_2.c
+```
+
+将程序编译成可执行的形式。
+
+现在输入`ls -l`列出此目录中所有文件的详细信息。你应该看到`chapter1_2.c`在那里，以及一个名为`hello2`的文件，这就是你刚刚编写的编译 C 程序。
+
+现在输入：
+
+```bash
+./hello2
+```
+
+来执行，或者运行该程序，它应该返回文本：“Hello you are learning C!!”。
+
+我们可以看到程序名称本身被算为一个行参数，并且数组中项的计数从零开始。
+
+现在输入：
+
+```bash
+./hello2 my name is Cerberus
+```
+
+执行程序，它应该返回文本：Hello you are learning C!!
+
+那么，这里发生了什么？看起来我们正在读取运行程序时输入的每个字符字符串（单词）。
+
+## 1.3 Hello 程序 3
+
+让我们变得真实一点，在网页中运行它。做一个额外的更改，添加第一个输出打印语句“Content-type:text/plain\n\n”，这告诉我们的服务器将传输什么类型的 MIME 类型。
+
+```bash
+gcc -o hello3 chapter1_3.c
+```
+
+编译并将编译文件`hello3`复制到你的`public_html/cgi-bin`目录（或者在你自己的机器上以超级用户身份将程序复制到`/srv/www/cgi-bin` (OpenSuse) 或`/usr/lib/cgi-bin` (Ubuntu)）。
+
+打开浏览器并输入 URL [`localhost/cgi-bin/hello3?Cerberus+`](http://localhost/cgi-bin/hello3?david%2Bhaskins)，你应该看到 C 程序可以生成网页内容。
+
+## 1.4 Hello 程序 4
+
+`main`函数签名的一个很少被记录的特征是它可以接受三个参数，我们现在查看最后一个参数`char *env[ ]`，它也是一个指向字符串的指针列表，但在这种情况下，这些是程序运行时可用的系统环境变量。
+
+使用`gcc -o hello4 chapter1_4.c`和`as`以超级用户身份编译，并将程序拷贝到`/srv/www/cgi-bin` (OpenSuse) 或`/usr/lib/cgi-bin` (Ubuntu)。你可以在编译程序的终端通过`./hello4`运行它，并将看到一长串环境变量列表。在浏览器中输入`http://localhost/cgi-bin/hello4`时，你将看到完全不同的内容。
+
+我们很快就会发现`QUERY_STRING`是一个与我们的程序通信的一个重要环境变量，在这种情况下，我们看到它的值为“Cerberus+”，或者说我们输入的 URL 中“?” 之后的所有内容。这是向通用网关接口（CGI）程序（如`hello4`）发送信息的有效方法，但我们应该将其限制为单个字符串。在我们的案例中，我们使用“+”来连接两个字符串。如果我们输入：“Cerberus”，浏览器会对其翻译，让我们看到：
+
+`QUERY_STRING=Cerberus%20`
+
+我们稍后将学习如何将复杂的输入值集合传输到我们的程序。
+
+## 1.5 Hello World 总结
+
+我们已经看到，一个带有极少量输入和一些输出的简单程序实际上是非常强大的，因为它揭示并暴露了我们计算机中大量的内部工作机制。
+
+尽管我们才刚刚开始，但已经遇到了许多我们将反复反复使用的关键概念：
+
+- 函数和参数
+- 数字（整数）和字符字符串作为数据类型
+- 列表或数组
+- 使用“for”和“while”的循环
+
+我们经历了一次刻意的巨大跨越：从编写一个仅运行在“终端屏幕”上的程序，变为一个可以在互联网浏览器中可见的程序。
+
+这是因为在像 Windows、Gnome 或 KDE 等窗口化系统中编写与用户交互的程序极其复杂，而且你不会经常被要求这样做。
+
+网页浏览器已成为我们现在所做的几乎事情的默认界面模式，因此我们最好从一开始就学会使用它。
+
+在接下来的所有章节中，我们将遵循这种模型：从基础技术开始，然后将其应用于基于 Web 的系统。
+
+在实践中，并没有大量的 C 通用网关接口编程，但有大量的基于 C 和 C++ 的代码作为 Apache 模块和 Microsoft IIS ISAPI DLL 运行。也许没有多少人知道 Ebay 的大部分是用 C / C++ 编写的。
+
+为什么？它是最快的运行方式，而且他们在全球实时市场中与“抢购手”的业务需要这种闪电的核心，因此没有其他方法可以获得那种性能。
+
+# 2 数据与内存
+
+## 2.1 简单的数据类型？
+
+当我们编写程序时，必须对世界的本质做出决策或断言，因为我们要声明并描述变量来表示想要包含在信息处理中的事物类型。
+
+这个过程具有深的哲学意义；我们做出本体论的断言，即此或彼事物存在；当我们选择特定的数据类型或数据类型集合来描述这些事物的属性时，我们做出了认识论的断言。这是一项责任重大的工作，不能轻率对待。
+
+作为一个实际例子，我们可能会声明一个看起来像地理数据库记录开头的结构。
+
+在这里，我们正在执行以下操作：
+
+- 断言我们在此应用程序中遇到的所有字符字符串将限制为 255 个字符，因此我们通过预处理器语句定义它——这些语句以`#`开头。
+- 断言城镇与县相关，县与国家以某种层级方式相关。
+- 断言人口以整数计算——没有半个人。
+- 断言位置将按照一种特定变体（WGS84）记录，该变体使用小数分数表示度、分、秒，是经纬度描述地球表面地点的约定。
+
+这些语句中的每一条都在函数作用范围内分配内存。
+
+## 2.2 什么是字符串？
+
+Java 和 C++ 等某些编程语言具有字符串数据类型，它隐藏了看似简单之下的某些复杂性。
+
+字符字符串的一个基本属性是它是系列长度不确定的字符。
+
+我们可以在键盘上输入的大部分单个字符由简单的 ASCII 代码表示，C `char`类型用于存储字符数据。
+
+字符串以`NULL`结尾的字符数组形式存储，因此数组必须足够大，能够容纳字符序列加一个。记住，数组成员始终从零开始。
+
+## 2.3 字符串可以“意味着”什么
+
+任何事情——赋予变量的名称及其意义或用途完全取决于观察者的想法。尝试一下
+
+在浏览器中输入：[`localhost/cgi-bin/data3?red`](http://localhost/cgi-bin/data3?red)，你应该看到这个：
+
+或者如果你发送任何参数，你将获得令意想不到的结果：
+
+我们在这里所做的是将字符串参数`argv[1]`作为 HTML `body`标签的背景颜色代码。我们将`Content-type`规范更改为`text/html`，奇迹的是，现在我们的程序正在生成 HTML 内容。这用一种语言在另一种语言内部表达。网络浏览器理解有限的颜色术语，而且颜色也可以定义为十六进制代码，例如`#FFFFFF`（白色）、`#FF0000`（红色）、`#00FF00`（绿色）、`#0000FF`（蓝色）。
+
+这个有趣的练习不仅仅是一个轻量级的技巧，这种“一个程序可以用另一种语言生成另一个程序”的想法是非常强大的，并且是整个互联网力量的背后。当我们从像这样的通用网关接口（CGI）程序生成 HTML（或 XML 或其他任何内容）时，我们正在创建动态内容，这些内容可以链接到实时变化的数据，而不是静态的预编辑网页。在实践中，大多数网站都是动态和静态内容的混合，但在这里我们看到了在非常简单的水平是如何实现的。
+
+在整本书中，我们将浏览器作为程序的首选界面，因此我们将生成 HTML 和二进制图像流 Web 内容，仅作为使程序力量立即生效的手段。在终端屏幕上盯着写的代码并不那么令人印象，而编写窗口类型的应用程序远没有那么简单。
+
+在实践中，你被要求编写的大部分软件运行在 Web 上，所以我们最好直接从这个想法开始。大多数 Web 应用还涉及多种语言，如 CSS、(X)HTML、XML、JavaScript、PHP、JAVA、JSP、ASP。.NET、SQL。如果这听起来很可怕，不要恐慌。对 C 语言的了解将让你看到，这些执行不同功能的语言在语法上都以 C 语言为基础。
+
+## 2.4 解析字符串
+
+从某种输入字符串中提取意义或有价值信息的工作被称为“解析”（parsing）。我们现在将构建另一个有趣的互联网可调用 CGI 程序，用以展示我们手中的力量。
+
+编译命令：`gcc -o data4 chapter2_4.c -lc`
+
+作为超级用户将程序拷贝到`/srv/www/cgi-bin` (OpenSuse) 或`/usr/lib/cgi-bin` (Ubuntu)。
+
+在浏览器中输入：[`localhost/cgi-bin/data4?red:blue:5:5:`](http://localhost/cgi-bin/data4?red%3Ablue%3A5%3A5)，你应该看到这个：
+
+在这个程序中，我们获取`argv[1]`（在这里是`yellow:blue:5:5:`）并使用库函数`strtok`对进行解析，该函数将字符串按任意字符`:`分割成标记（tokens），并使用这些标记作为字符串来指定颜色，使用整数来指定表格行和单元数。
+
+`atoi`函数将整数的字符串表示转换为整数（将“1”转换为 1）。
+
+`strtok`函数有点奇怪，第一次调用它时传入要解析的字符串名称，而在随后的调用中，第一个参数变为`NULL`。
+
+使用了`for(…)`循环机制来执行固定次数的操作。引入的 HTML 术语有：
+
+`<html>` `<body>` `<table>` `<tr>` 表格行 `<td>` 表格单元
+
+## 2.5 数据与内存 – 结论
+
+我们使用了一些简单的数据类型来表示某些信息并向程序传输输入，并组织和显示某些视觉输出。
+
+我们使用了嵌入在输出字符串中的 HTML，使输出在网络浏览器中可见。作为一个练习，尝试一下：
+
+编写一个程序放入你的`/public_html/cgi-bin`文件夹中，它可以在浏览器中调用，名称为运动队或国家以及一系列颜色（可能指定十六进制，例如`ff0000 = 红色 (rrggbb)`，用于球队颜色或地图颜色），并能显示一些合理的内容。我的版本看起来如下：
+
+# 3 函数、指针和结构体
+
+## 3.1 函数
+
+我们所有程序的入口被称为`main()`，这是一个函数，或者说是执行某些操作的代码，通常返回某些值。我们将程序结构化为函数，以防止它们变成一个屏幕或一个页面无法显示的长且不可读的代码块，并确保我们不会在到处都是重复的相同代码段。我们可以调用 C 语言内置的`printf`或`strtok`等库函数，也可以调用我们自己的或其他人的函数和函数库。我们必须确保适当的头文件存在并可被预处理器读取，并且源代码或编译后的库也存在且可访问。
+
+正如我们之前学过的，数据的作用域限制在声明它的函数中，因此我们使用指向数据和数据块的指针来传递给我们希望对这些数据进行某些操作的函数。我们已经看到字符串被处理为指向以`NULL`结尾的单字符数组的指针。
+
+在这个示例中，我们可以反复调用函数`doit`，它接收两个整数参数并返回某些数学计算的结果。
+
+编译：`gcc -o func1 chapter3_1.c -lm`
+
+拷贝到 cgi-bin：`cp func1 /home/Cerberus/public_html/cgi-bin/func1`
+
+（你应该使用提供的 Makefile，或者在学习进展过程中维护一个 Makefile，在进行的同时添加编译示例的目标。）
+
+浏览器中的结果所示，调用方式为“func1?5:5”。
+
+
+
+在这种情况下，我们函数的参数是以拷贝的形式发送的，在函数内部不会被修改，而只是被使用。如果我们想实际修改变量，必须将其指针传递给函数。
+
+`![](img/00024.jpeg)`
+
+我们通过`&result`传递变量`result`的地址，在`doit`函数中，我们通过`*result`解引用指针以获取浮点数并在`main`之外修改它的值。这与`chapter3_1.c`的输出相同。
+
+## 3.2 库函数
+
+C包含了许多用于执行任务的内置函数。到为止我们使用了`atoi`、`printf`、`sizeof`、`strtok`和`sqrt`。要获取任何内置库函数的详细信息，我们只需要输入：
+
+```c
+man 3 atoi
+```
+
+我们就会看到这些：
+
+`![](img/00025.jpeg)`
+
+这很好地告诉了关于该函数你需要的所有知识，如何使用它以及它的变体。最重要的是，它告诉了你应该包含哪个头文件。
+
+## 3.3 库函数快速参考
+
+所有可用函数的详细信息可以在[`www.gnu.org/software/libc/manual/`](http://www.gnu.org/software/libc/manual/)找到。
+
+`![](img/00026.jpeg)`
+
+在发现你需要做某事并因此寻找为此目的编写的函数或函数库之前，学习库函数是没有意义的。你需要理解签名 – 参数列表的含义以及如何使用它，以及函数将返回什么，或对作为指针传递的变量执行什么操作。
+
+## 3.4 数据结构
+
+有时我们希望将一组变量视为整体进行管理，也许是从数据库记录中获取所有值，并将整个记录在程序中传递以进行处理。为了实现这一点，我们可以将数据分组到结构中。
+
+此程序使用`struct`来为一个名为“玩家（player）”的实体定义一组属性。`main`函数包含一个拥有5个`players`数组的声明和实例化。我们依次将数组每个成员的指针传递给一个函数来对每一个进行排名。这使用了`switch`语句通过检查每个玩家名称的首字母来得出一个任意排名。然后，我们依次将数组每个成员的指针传递给一个打印详细信息的函数。
+
+`![](img/00027.jpeg)`
+
+### 结构的结果与威力
+
+结果所示，按照usual在浏览器中显示：
+
+`![](img/00028.jpeg)`
+
+这是一种非常强大的技术，虽然相当高级，但你必须有所了解。结构思想直接引出了类和对象的概念。
+
+我们可以看到，使用`struct`极大地简化了在程序中传递数据元素以完成不同任务的业务逻辑。如果我们对`struct`的定义进行更改，它仍然可以工作，我们只需要添加代码来处理新属性，而无需更改执行任务的函数的参数列表或签名。
+
+结构的定义实际上并没有创建任何数据，它只是列出了我们可以实例化的对象的正式形状。在`main`函数中，我们可以以所示的形式表示这种实例化，创建一个符合我们所做定义的数据元素序列列表。
+
+你可能已经看出，一个带有额外函数或方法的`struct`本质上就是Java中的`class`，在C++中也是如此。面向对象的语言就始于此，事实上，许多被描述为“面向对象”的早期系统实际上只是用C语言的`structs`构建的。
+
+例如，如果你看一眼Apache服务器的开发头文件，你会看到很多`structs`，例如在`httpd.h`的这段片段中：
+
+`![](img/00029.jpeg)`
+
+不要担心这些意味着什么——只需要注意到这是一种非常常见且强大的技术，而数据结构的设计（就像与其密切相关的数据库表设计一样）是你作为程序员需要理解的核心、关键且至关任务。
+
+你做出了哲学上的决定，认为世界是这样的，并且可以以此方式进行建模。这是一项沉重的责任——在哲学中，这项工作被称为本体论（什么是存在？）和认识论（我们如何知道它？）。我打赌你从从未想过你正在做这些！
+
+## 3.5 函数、指针与结构 – 结论
+
+我们使用了一些简单的数据类型来表示某些信息并向程序传输输入，并组织和显示了一些视觉输出。
+
+我们使用了嵌入在输出字符串中的HTML来使输出在网络浏览器中可见。我们学习了创建可复用的函数库。
+
+我们学习了数据结构以及使用指针在程序中传递它们的方法。
+
+### 练习：
+
+使用C库函数创建一个程序，实现以下功能：
+
+* 以写模式打开一个文件
+
+* 将命令行参数写入文件
+
+* 关闭文件
+
+* 以读模式打开文件
+
+* 读取内容
+
+* 关闭文件
+
+* 将这些内容打印到屏幕上
+
+这将让你获得发现问题、寻找合适的库函数以及在线或从书籍中寻找示例的经验。
+
+# 4 逻辑、循环与流程控制
+
+## 4.1 C流程控制的语法
+
+我们可以使用以下C结构来控制程序的执行。当我们能够通过计数来遍历一个序列或系列时：
+
+```c
+for( 初始值; 持续直到 ; 增量变化 )
+```
+
+```c
+{ 执行这个; 执行那个; 再执行这个; }
+```
+
+当我们等待某些条件的改变时：
+
+```c
+while( 如果为真 )
+```
+
+```c
+{ 执行这个; 执行那个; 再执行这个; }
+```
+
+或者，如果我们想至少执行一次：
+
+```c
+do { 执行这个; 执行那个; 再执行这个; } while (true)
+```
+
+进行测试：
+
+```c
+if (如果为真) { 执行这个; 执行那个; 再执行这个; }
+```
+
+当我们只有一个选项时：
+
+```c
+if (如果为真) { 执行这个; 执行那个; 再执行这个; }
+```
+
+当我们有更多选项时：
+
+```c
+if (如果为真) { 执行这个; 执行那个; 再执行这个; }
+```
+
+当我们根据整数或字符有更多选项时：
+
+```c
+switch (value) {
+    case 0: 执行这个; 执行那个; 再执行这个; break;
+    case n: 执行这个; 执行那个; 再执行这个; break;
+    default: 执行这个; 执行那个; 再执行这个; break;
+}
+```
+
+## 4.2 控制发生什么
+
+这部分完全关于`if`、`else`以及我们如何控制执行。为了让`QUERY_STRING`有意义并并在其中找到特定的值，我们必须进行解析，将其切分成若干部分，为此我们需要一些条件逻辑（`if`, `else`, 等）以及一些循环来遍历变量中的字符。执行此操作的基本函数理想情况下应该被创建，因为这是一个你可能需要重复执行的任务，所以拥有一段可以重复调用的代码是有意义的。
+
+在下一个示例中，我们添加了这个函数，输出上的明显区别是，我们在解析后可以将提取出的值插入到HTML框中。我们似乎成功地创建了类似`getParameter()`的函数——或者我们真的成功了吗？
+
+在第1章中，我们看到可以通过隐式的`getenv()`访问环境变量。
+
+`![](img/0030.jpeg)`
+
+在这里我们显示`QUERY_STRING`，除非在`action`属性中另有指定，否则这就是程序从表单获取的内容。HTML表单默认使用`GET`，将所有表单数据以`&`字符分隔的变量对的形式传输。
+
+`![](img/0031.jpeg)`
+
+在浏览器中调用此程序，我们看到了一个表单并可以在框中输入数据：
+
+`![](img/0032.jpeg)`
+
+在提交表单后，我们看到：
+
+`![](img/0033.jpeg)`
+
+如果我在第一个字段中输入CERBERUS !!!：
+
+`![](img/0035.jpeg)`
+
+我得到了这个结果：
+
+`![](img/0036.jpeg)`
+
+空格字符变成了`+`，而`!`变成了`%21`。
+
+这种编码发生是因为某些字符在传输协议本身中被显式使用。例如，`&`用于分隔`QUERY_STRING`的不同部分，而空格无法原样直接发送。
+
+任何想要使用来自`HTML`表单信息的程序都必须能够解码这些内容，而我们现在正尝试这样做。
+
+程序`chapter4_2.c`完成了我们目前为止看到的工作。它在同一个文件中包含一个`main`函数和一个`decode_value`函数。
+
+`decode_value`函数接收三个参数：
+
+1. 我们要查找的值的名称，例如`"ITEM1="`或`"ITEM2="`
+
+2. 如果找到该值，则准备将其存入的变量地址
+
+3. 要拷贝的最大字符数
+
+该函数在`QUERY_STRING`中查找值的起始和结束位置，然后将找到的字符逐个拷贝到`value`变量中，并添加一个`NULL`字符结束字符串。
+
+`![](img/00037.jpeg)`
+
+### 分解
+
+看起来我们需要对这个`decode_value`包进行一些实质性的工作，因为这项工作我们预计需要反复执行，所以编写一个可以重用的函数是有意义的。
+
+首先，我们可以将此函数放入一个名为`decode_value.c`的单独文件中，并为我们可能编写的所有函数创建一个名为`c_in_linux.h`的文件，并将所有内容编译成库。在`Makefile`中，我们可以添加：
+
+`![](img/00038.jpeg)`
+
+这看起来很糟糕且复杂，但它的意思是：输入`make all`将：
+
+- 编译`OBJ_SRC`列表中列出的所有`*.c`文件为对象文件`*.o`
+
+- 将所有对象文件编译成名为`lib_c_in_linux.a`的库归档文件
+
+- 使用这个新归档编译`chapter4-4`。
+
+这是我们将使用的模型，以保持文件尽可能小，并将代码的共享性最大化。
+
+我们现在可以有一个更简单的`"main"`函数文件，以及一些我们可能想要从任何地方调用的函数文件（尽管我们目前还不知道具体有哪些）。所有这些内容都组织在一个库文件中（归档为`*.a`）——这些也可以被编译为动态加载的共享对象`*.so`，它们非常像Windows的`DLLs`。这正是所有Linux软件编写和交付的方式。
+
+例如，`MySQL` C应用程序接口(API)包含：
+
+- `/usr/include/mysql`中的所有头文件
+
+- 库文件`/usr/lib/mysql/libmysqlclient.a`
+
+我们所做的实际上是整个Linux的组合方式——我们只是以相同的方式向其添加内容。
+
+我们的主文件现在看起来像：
+
+`![](img/00039.jpeg)`
+
+这段代码以相同的方式调用函数`decode_value`，但因为库`c_in_linux.a`在编译时被链接了，并且它可以访问列出库中所有函数的头文件`c_in_linux.h`，所以一切都能正常工作。
+
+尝试用伪代码描述解码此`QUERY_STRING`的过程：
+
+1. 获取`QUERY_STRING`
+
+2. 在内部查找搜索字符串`"ITEM1="`
+
+3. 查找`"ITEM1="`值的结尾
+
+4. 将值拷贝到我们的`"value"`变量中，翻译一些奇怪的代码，例如：
+
+   - `%21`是`!`
+
+   - `%23`是`#`
+
+这些特殊代码是由浏览器生成的，以便你在HTML表单中输入的任何内容都能安全地传输，而不会干扰HTTP协议。这类代码有很多，本章的任务就是完成这项任务，以便键盘上的每一个按键都能像你预期的那样工作！！
+
+程序`chapter4_3.c`调用了这个未完成的函数`decode_value`，到目前它只能处理空格字符和`!` —— 它在一段条件逻辑中使用`if`、`else`、`for`以及库函数`getenv`、`strcpy`、`strlen`、`strstr`，通过分析字符串来查找特定项目，然后将该项目拷贝到传递它的名为`value`的内存块中。
+
+结果显示解码后的值粘贴在了第一个字段中；
+
+`![](img/00040.jpeg)`
+
+`![](img/00041.jpeg)`
+
+## 4.3 逻辑、循环和流程结论
+
+控制程序流程最重要的部分是对你正在尝试做什么有一个清晰的思路。我们还学习了如何将代码拆分成易管理的块，并开始构建和使用我们自己的库和头文件。
+
+能够用普通的语言或伪代码表达一个过程是有用的，并帮助你将代码拆解成步骤。
+
+- 使用`for`循环显式计数已知有终点的项。
+
+- 使用`while`和`do...while`循环执行操作，直到某些条件改变。
+
+- 当整数或单个字符决定下一步操作时使用`switch`语句。
+
+- 当可以顺序测试互斥的情况时使用`if`、`else if`和`else`。
+
+复杂的`if`、`else`和`not`(`!`)条件判断组合可能会变得不可读。使用大括号`{ }`将它们分成块。
+
+### 练习
+
+现在有一个用的任务是完成`decode_value`函数，这样你就有了一个实用的工具从HTML表单中获取网页内容，解码键盘上所有的字母数字键。你将反复使用这个练习，所以将其做好是值得的。
+
+# 5 使用MySQL处理数据库
+
+## 5.1 不要重复造轮子
+
+每个项目都从从零开始是不明智的，因此我们在前人走过的道路的基础上进行构建。我们正在使用的所有`C`库都是由处理更底层碎片代码的人编写的，如果我们愿意，可以访问并修改这些代码。这就是开放系统（Open Systems）的意义。在实践中，我们只想使用可靠的服务，我们将使用的前两个是无处不在的——数据库访问和图形生成。
+
+## 5.2 MySQL API
+
+为了访问MySQL函数集，我们确保编译器可以访问头文件和库，并只需调用一些我们不需要编写的函数。在下一个示例中，我们将数据库代码与上一次的工作结合，并将解码后的数据插入数据库，然后读取我们目前获得的内容。
+
+在一个新的终端窗口中，输入：
+
+```
+mysql test
+create table C (ITEM1 varchar(255),ITEM2 varchar(255));
+```
+
+这会在已经存在的测试数据库中创建一个供程序写入的表。
+
+如果成功，看起来应该是这样的：
+
+`![](img/00042.jpeg)`
+
+定义的类型`MYSQL`、`MYSQL_RES`和`MYSQL_ROW`是预处理器定义，代表`mysql.h`中更复杂的`C`声明，我们只需要知道如何调用它们。MySQL提供了执行更复杂操作所需的所有信息。
+
+`![](img/0043.jpeg)`
+
+都理解了吗？
+
+在短短10行（高亮部分）`C`代码中，我们就将数据插入了数据库表并可以再次读取它，这非常省力。通过`mysql_init`我们获得一个类型为`MYSQL`的数据结构指针，然后可以使用`mysql_options`和`mysql_real_connect`连接到测试数据库，然后像在终端会话中一样执行SQL语句。查询结果可以通过`mysql_use_results`以`MYSQL_ROW`字符串数组的形式检索。我们使用`mysql_free_result`释放使用的内存并使用`mysql_close`关闭数据库。
+
+[`dev.mysql.com/doc/refman/5.1/en/index.html`](http://dev.mysql.com/doc/refman/5.1/en/index.html)
+
+## MySQL 5.1 参考手册 / 连接器与 API / MySQL C API 包括：
+
+`![](img/00044.jpeg)`
+
+
+
+`mysql_affected_rows()` `mysql_autocommit()` `mysql_change_user()` `mysql_character_set_name()` `mysql_close()` `mysql_commit()` `mysql_connect()` `mysql_create_db()` `mysql_data_seek()` `mysql_debug()` `mysql_drop_db()` `mysql_dump_debug_info()` `mysql_eof()`
+
+`mysql_errno()` `mysql_error()` `mysql_escape_string()` `mysql_fetch_field()` `mysql_fetch_field_direct()` `mysql_fetch_fields()` `mysql_fetch_lengths()` `mysql_fetch_row()` `mysql_field_count()` `mysql_field_seek()` `mysql_field_tell()` `mysql_free_result()`
+
+`mysql_get_character_set_info()` `mysql_get_client_info()` `mysql_get_client_version()` `mysql_get_host_info()` `mysql_get_proto_info()` `mysql_get_server_info()` `mysql_get_server_version()` `mysql_get_ssl_cipher()` `mysql_hex_string()` `mysql_info()`
+
+`mysql_init()`
+
+`mysql_insert_id()` `mysql_kill()` `mysql_library_end()`
+
+`mysql_library_init()` `mysql_list_dbs()` `mysql_list_fields()` `mysql_list_processes()` `mysql_list_tables()` `mysql_more_results()` `mysql_next_result()` `mysql_num_fields()` `mysql_num_rows()` `mysql_options()`
+
+`mysql_ping()` `mysql_query()` `mysql_real_connect()` `mysql_real_escape_string()` `mysql_real_query()` `mysql_refresh()` `mysql_reload()` `mysql_rollback()` `mysql_row_seek()` `mysql_row_tell()` `mysql_select_db()` `mysql_set_character_set()`
+
+`mysql_set_local_infile_default()` `mysql_set_local_infile_handler()` `mysql_set_server_option()` `mysql_shutdown()` `mysql_sqlstate()`
+
+`mysql_ssl_set()` `mysql_stat()` `mysql_store_result()`
+
+`mysql_thread_id()` `mysql_use_result()` `mysql_warning_count()`
+
+# 6 使用 GD 库绘制图形
+
+动态生成适应情况的有趣图像是一项愉快、具有挑战性且有回报的编程类型。我们将使用 Thomas Boutell 的 GD C 库，该库作为一个开放系统项目已经存在多年。
+
+## 6.1 生成二进制内容
+
+在这里，我们创建一张图像并向其中打印 `QUERY STRING` 中 `TEXT=` 部分的值，并将内容类型设置为 `image/gif`。`gdImageGif` 函数将二进制图像写入 `stdout`（即输出流）而不是文件，因此二进制图像数据会被发送回浏览器。
+
+![](img/00045.jpeg)
+
+当使用 `cgi-bin/gdgraph1?TEXT=Cerberus` 调用该程序时，会产生此输出：
+
+![](img/00046.jpeg)
+
+虽然这不是一个最华丽或吸引人的练习，但它至少演示了生成图形输出涉及的关键原理。通过 GD 库，你可以加载现有图像并生成多种格式（如 GIF、JPEG、PNG、WMBP），甚至创建动画 GIF。
+
+如果你用过 PHP 开发工具，你会发现这些 GD 库函数非常熟悉，因为它们几乎完全相同，这表明在 particular 情况下 PHP 是对同一个 C 库的封装。
+
+这里显示的文本使用的是内部字体之一，即 Tiny、Small、Medium Bold、Large 和 Giant，这些字体对于简单的标记足够了，但你也可以使用 TrueType 字体获得更吸引人的输出。
+
+可以创建带有线条或特定样式的几何图形、填充和空多边形，以及圆、弧。需要记住的主要点是，图像的原点是左上角，这对于任何学过数学的人来说可能都不符合直觉——至于为什么如此我从未发现，但只能想象第一个在该领域做任何事情的程序员恰好不知道图表（在图表中，我们认为原点 `x=0, y=0` 在左下角）。
+
+颜色以 0 到 255 范围 RGB 值指定，因此白色为 `255,255,255`，红色为 `255,0,0`。要计算精细的色调，可以使用像 GNU GIMP 这样的图形工具，它带有颜色选择器，你可以找到微妙的 RGB 值。一张图像的调色板可以使用另一张图像，如果有空间分配，可以使用请求或创建的调色中最接近的颜色。
+
+## 6.2 使用 TrueType 字体
+
+在这个示例中，我们修改了之前的程序以使用 TrueType 字体生成标签。
+
+![](img/00047.jpeg)
+
+我们像以前一样调用程序 `cgi-bin/gdgraph1?TEXT=C+PROGRAMMING+IN+LINUX` 以获得这种输出，你可能会发现这是一种更有实用的工具。你系统字体的位置和内容会有所不同，但代码提供了一个示例：
+
+- OpenSuse `/usr/share/fonts/truetype/*.ttf`
+
+- Ubuntu `/usr/share/fonts/truetype/ttf-dejavu/*.ttf`
+
+![](img/00048.jpeg)
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+[`gd.boutell.com`](http://gd.boutell.com)
+
+## 6.2 使用 TrueType 字体
+
+在此示例中，我们修改了之前的程序使用 TrueType 字体生成标签。
+
+![](img/00047.jpeg)
+
+我们像以前一样调用程序 `cgi-bin/gdgraph1?TEXT=C+PROGRAMMING+IN+LINUX` 以获得这种输出，你可能会发现这是一种更有实用的工具。你系统字体的位置和内容会有所不同，但代码提供了一个示例：
+
+- OpenSuse `/usr/share/fonts/truetype/*.ttf`
+
+- Ubuntu `/usr/share/fonts/truetype/ttf-dejavu/*.ttf`
+
+## 6.2 使用 TrueType 字体
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+[`gd.boutell.com`](http://gd.boutell.com)
+
+## 6.2 使用 TrueType 字体
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+[`gd.boutell.com`](http://gd.boutell.com)
+
+## 6.2 使用 TrueType 字体
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+[`gd.boutell.com`](http://gd.boutell.com)
+
+## 6.2 使用 TrueType 字体
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+[`gd.boutell.com`](http://gd.boutell.com)
+
+## 6.2 使用 TrueType 字体
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+[`gd.boutell.com`](http://gd.boutell.com)
+
+## 6.2 使用 TrueType 字体
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+[`gd.boutell.com`](http://gd.boutell.com)
+
+## 6.2 使用 TrueType 字体
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+[`gd.boutell.com`](http://gd.boutell.com)
+
+## 6.2 使用 TrueType 字体-：
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+[`gd.boutell.com`](http://gd.boutell.com)
+
+## 6.2 使用 TrueType 字体
+
+在这个示例中，我们修改了之前的程序使用 TrueType 字体生成标签。
+
+![](img/00047.jpeg)
+
+我们像以前一样调用程序 `cgi-bin/gdgraph1?TEXT=C+PROGRAMMING+IN+LINUX` 以获得这种输出，你可能会发现这是一种更有实用的工具。你系统字体的位置和内容会有所不同，但代码提供了一个示例：
+
+虽然这不是一个最华丽或吸引人的练习，但它至少演示了生成图形输出涉及的关键原理。通过 GD 库，你可以加载现有图像并生成多种格式（如 GIF、JPEG、PNG、WMBP），甚至创建动画 GIF。
+
+如果你用过 PHP 开发工具，你会发现这些 GD 库函数非常熟悉，因为它们几乎完全相同，这表明在情况下 PHP 是对同一个 C 库的封装。
+
+这里显示的文本使用的是内部字体之一，即 Tiny、Small、Medium Bold、Large 和 Giant，这些字体对于简单的标记足够了，但你也可以使用 TrueType 字体获得更吸引人的输出。
+
+可以创建带有线条或特定样式的几何图形、填充和空多边形，以及圆、弧。需要记住的主要点是，图像的原点是左上角，这对于任何学过数学的人来说可能都不符合直觉——至于为什么如此我从未发现，但只能想象第一个在该领域做任何事情的程序员恰好不知道图表（在图表中，我们认为原点 `x=0, y=0` 在左下角）。
+
+颜色以 0 到 255 范围 RGB 值指定，因此白色为 `255,255,255`，红色为 `255,0,0`。要计算精细的色调，可以使用像 GNU GIMP 这样的图形工具，它带有颜色选择器，你可以找到微妙的 RGB 值。一张图像的调色板可以使用另一张图像，如果有空间分配，可以使用请求或创建的调色中最接近的颜色。
+
+想要精通使用像 GD 这样的库，你必须准备好实验，并花费大量时间理解函数参数，详细查看可用文档：
+
+```c
+gdFontPtr gdFontGetSmall(void)
+gdFontPtr gdFontGetLarge(void)
+gdFontPtr gdFontGetMediumBold(void)
+gdFontPtr gdFontGetGiant(void)
+gdFontPtr gdFontGetTiny(void)
+
+void gdImageChar(gdImagePtr im, gdFontPtr font, int x, int y, int c, int color)
+void gdImageCharUp(gdImagePtr im, gdFontPtr font, int x, int y, int c, int color)
+
+void gdImageString(gdImagePtr im, gdFontPtr font, int x, int y, unsigned char*s, int color)
+void gdImageString16(gdImagePtr im, gdFontPtr font, int x, int y, unsigned short *s, int color)
+void gdImageStringUp(gdImagePtr im, gdFontPtr font, int x, int y, unsigned char*s, int color)
+void gdImageStringUp16(gdImagePtr im, gdFontPtr font, int x, int y, unsigned short*s, int color)
+
+char *gdImageStringFT(gdImagePtr im, int *brect, int fg, char *fontname, double ptsize, double angle, int x, int y, char*string)
+
+char *gdImageStringFTEx(gdImagePtr im, int *brect, int fg, char *fontname, double ptsize, double angle, int x, int y, gdFTString ExtraPtr strex)
+
+char *gdImageStringFTCircle(gdImagePtr im, int cx, int cy, double radius, double textRadius, double fillPortion, char*font, double point s, char*top, char*bottom, int fgcolor)
+
+char *gdImageStringTTF(gdImagePtr im, int *brect, int fg, char *fontname, double ptsize, double angle, int x, int y, char *string)
+```
+
+### 颜色处理函数
+
+```c
+int gdImageColorAllocate(gdImagePtr im, int r, int g, int b)
+int gdImageColorAllocateAlpha(gdImagePtr im, int r, int g, int b, int a)
+int gdImageColorClosest(gdImagePtr im, int r, int g, int b)
+int gdImageColorClosestAlpha(gdImagePtr im, int r, int g, int b, int a)
+int gdImageColorClosestHWB(gdImagePtr im, int r, int g, int b)
+int gdImageColorExact(gdImagePtr im, int r, int g, int b)
+int gdImageColorResolve(gdImagePtr im, int r, int g, int b)
+int gdImageColorResolveAlpha(gdImagePtr im, int r, int g, int b, int a)
+int gdImageColorsTotal(gdImagePtr im)(MACRO)
+int gdImageRed(gdImagePtr im, int c)(MACRO)
+int gdImageGreen(gdImagePtr im, int c)(MACRO)
+int gdImageBlue(gdImagePtr im, int c)(MACRO)
+int gdImageGetInterlaced(gdImagePtr im)(MACRO)
+int gdImageGetTransparent(gdImagePtr im)(MACRO)
+void gdImageColorDeallocate(gdImagePtr im, int color)
+void gdImageColorTransparent(gdImagePtr im, int color)
+void gdTrueColor(int red, int green, int blue)(MACRO)
+void gdTrueColorAlpha(int red, int green, int blue, int alpha)(MACRO)
+```
+
+### 缩放函数
+
+
+
+```c
+void gdImageCopy(gdImagePtr dst, gdImagePtr src, int dstX, int dstY, int srcX, int srcY, int w, int h)
+void gdImageCopyResized(gdImagePtr dst, gdImagePtr src, int dstX, int dstY, int srcX, int srcY, int destW, int destH, int srcW, int srcH)
+void gdImageCopyResampled(gdImagePtr dst, gdImagePtr src, int dstX, int dstY, int srcX, Int srcY, int destW, int destH, int srcW, int srcH)
+void gdImageCopyRotated(gdImagePtr dst, gdImagePtr src, double dstX, double dstY, int srcX, int srcY, int srcW, int srcH, int angle)
+void gdImageCopyMerge(gdImagePtr dst, gdImagePtr src, int dstX, int dstY, int srcX, int srcY, int w, int h, int pct)
+void gdImageCopyMergeGray(gdImagePtr dst, gdImagePtr src, int dstX, int dstY, int srcX, int srcY, int w, int h, int pct)
+void gdImagePaletteCopy(gdImagePtr dst, gdImagePtr src)
+void gdImageSquareToCircle(gdImagePtr im, int radius)
+void gdImageSharpen(gdImagePtr im, int pct)
+```
+
+### 杂项函数
+
+```c
+int gdImageCompare(gdImagePtr im1, gdImagePtr im2)
+int gdImageInterlace(gdImagePtr im, int interlace)
+void gdFree(void *ptr)
+```
+
+为了使用像这样的库，你需要熟悉这些参数，这些参数通常是库内部定义的数据类型，例如`gdmagePtr`，它是一个指向包含待处理或存储图像所有数据的结构的指针。这些内容看起来可能很寻常，但过一段时间后，你就会习惯这种语法，并从在线文档中看到这种复杂性中的模式。
+
+# 7 Apache C 模块
+
+## 7.1 更安全的 C Web 应用程序
+
+在现实生活中，很少有 Web 管理员会梦想让任何人运行 C 程序作为 CGI 内容生成器，因为存在崩溃和核心转储的风险。然而，Apache 服务器本身是用 C 语言编写的，其开发工具附带了一些简单的实用程序，允许你创建代码存根（code stubs），你可以将 C 程序放入其中，并在作为服务器的一部分加载时作为 Apache 模块运行，并在某种“沙箱”中安全地管理。在这里，我们将一个早期的示例并转换为 Apache 模块。
+
+Apache2 开发库中包含一个名为`apxs2`的工具，可以调用它为程序生成代码存根，该程序可以编译成模块，并由 Apache Web 服务器加载和管理。这些模块可以执行各种任务，但在我们的案例中，我们将做一些类似于 IIS 服务器中 ISAPI DLL 的工作。`apxs2`工具的具体位置会根据你使用的 Linux 发行版而变化，但在 OpenSuse 上它的运行方式如下。
+
+在终端中输入：
+
+```bash
+apxs2 -n labelmaker -g
+```
+
+![](img/00049.jpeg)
+
+这会创建一个你命名的名称（`labelmaker`）的文件夹、一个`Makefile`、一个可以被`Make`工具使用的`modules.mk`文件，以及一个名为`mod_labelmaker.c`的文件。
+
+生成的 C 文件类似于 Apache 的“Hello World”。它看起来可能很复杂，但它确实提供了一个很长的解释性注释头，非常值得阅读。其核心思想是，当 Apache 启动并指定位置，且任何在服务器配置文件中配置为需要加载的模块时，它们将被加载。`*_register_hooks`函数列出了可以在 Apache 服务器过程中特定阶段调用的函数名称和签名。在这种情况下，如果调用了名称[`localhost/labelmaker`](http://localhost/labelmaker)，该模块将被请求处理`*_handler`函数中发生的任何情况。
+
+服务器的配置可能有点繁琐，但在 OpenSuse 中，我们必须将其添加到：
+
+### `/etc/apache2/sites-available/default`
+
+```apache
+<Location /labelmaker>
+SetHandler labelmaker
+</Location>
+```
+
+并且在`/etc/config.sys/apache2`中，我们将我们的模块名称`labelmaker`添加到以逗号分隔的长列表中，行位于`APACHE_MODULES="...,labelmaker"`。现在进入`labelmaker`文件夹并输入：
+
+```bash
+sudo axs2 -c -i mod_labelmaker.c sudo /etc/init.d/apache2 restart
+```
+
+在浏览器中这样调用：
+
+![](img/00050.jpeg)
+
+![](img/00051.jpeg)
+
+## 7.2 添加某些功能
+
+现在我们可以将第 6 章中为图形库的工作作为替换处理函数插进来（在代码`Chapter7_1.c`中有两个处理函数，其中一个被注释掉了）。请注意（高亮的）对修改后的`decode_value`函数的调用，它使用`r->args`指针来获取`QUERY_STRING`而不是`getenv()`。此外 Apache 处理输出的方式也有所不同——通过调用`gdImageGifPtr`获取图像字节数组的指针，然后由`ap_rwrite`函数输出数据。我们需要在输出调用后使用`gdFree`释放指针。
+
+![](img/00052.jpeg)
+
+![](img/00053.jpeg)
+
+## 7.3 Apache 模块结论
+
+虽然编写和调试很困难，但这可能是最有回报且最深奥的领域，在其中你可以进行真正的、具有商业价值且可以安全部署的网络内容生成。很容易看出，如何通过颜色和字体参数来扩展此示例，从而创建一个实用的 Web 内容工具。
+
+关于 Apache 模块的清晰且简单的材料很少，但你可以先从在线文档开始：[`httpd.apache.org/docs/2.2/developer/`](http://httpd.apache.org/docs/2.2/developer/)
+
+最近一本值得阅读的书是 Nick Kew 出版的《Apache 模块教程》（The Apache Modules Book）。
+
+# 8 Ghost 项目
+
+## 8.1 一个 PHP 网站生成器项目
+
+使用`C`编写短程序来自动处理繁琐的任务，或者完成那些需要在大笨重工具上花费数小时调整的操作（例如邮件合并），这将是你学到后最感到欣幸的事情之一。这个项目非常节省时间。`Ghost`是一个轻量级的 PHP 生成器，供你自定义。
+
+如果你发现自己一直在不断构建 PHP 网站，那么一种能够一次性生成所有参数传递、解码、表单构建和数据库管理代码的工具将非常有用。像`Ruby on Rails`这样的工具提供了这种功能，但设置和运行要复杂得多，而且你最终会发现还需要学习另一种语言才能继续下去。
+
+开始使用此工具最好的方法可能是编译并运行它。将`ghost.zip`源码解压到你的`public_html`文件夹中，这将创建一个名为`ghost`的文件夹。`Makefile`包含一个目标`g1`，它可以编译并链接`ghost`。因此，进入`public_html/ghost`并输入：`make g1`。
+
+运行网站生成器，输入：
+
+```bash
+./ghost testwebsite data1 data2 data1 data3 data4 data6 data6
+```
+
+这将创建：
+
+- 一个文件夹`public_html/testwebsite`。
+- 一个名为`testwebsite`的`mysql`数据库表，带有文本字段`data1 data2 data1 data3 data4 data6 data6`。
+- 一个`testwebsite.css`文件。
+- 空的`header.html`和`footer.html`页面。
+- 一个`index.php`，它演示了如何对指定的数据项进行数据库表的表单输入处理、编辑、更新和删除。
+
+在浏览器中，你看到的是[`localhost/~yourname/testwebsite`](http://localhost/%7Eyourname/testwebsite)。
+
+![](img/00054.jpeg)
+
+这背后的思想是，创建和管理表单内容的所有机械性工作已完成，并且可以自定义。这张截图显示了提交一条记录的结果。顶行用于输入新数据，下几行允许对记录进行编辑或删除。这是一个允许你提取并应用到自己网站设计中的框架。
+
+让我们分段检查这些代码。
+
+第一部分声明了所需的数据并创建了文件夹和 CSS 文件。
+
+![](img/00055.jpeg)
+
+接下来生成`header.html`和`footer.html`文件。这些文件由`PHP`文件加载，可以作为通用的公共头部和页脚。CSS 文件在`header.html`文件中引用。
+
+![](img/00056.jpeg)
+
+接下来我们创建数据库。
+
+![](img/00057.jpeg)
+
+复杂的部分现在开始，即生成`php`脚本。理解此点的最好方法是在浏览器中查看页面源代码时检查程序的实际输出。
+
+顶行是一个表单，其中为运行`ghost`程序生成的表中的每一列都有一个文本框。
+
+![](img/00058.jpeg)
+
+对于表中的每一行，我们现在生成一个允许编辑数据的表单和一个用于执行删除操作的锚链接。
+
+![](img/00059.jpeg)
+
+仔细检查`index.php`文件将让你看到这一切发生在哪里，并能反推找到在`ghost.c`源码中生成这些`PHP`代码的地点。一个好主意是在打印件上使用荧光笔，因为我们把一种语言（`HTML`）嵌入另一种语言（`PHP`）中，而后者又在另一种语言内部，因此非常小心地使用转义字符`\`在需要的地方表示单引号和双引号，以确保这一切正常运行。这看起来可能很复杂——但`ghost`允许快速原型，使得花时间自定义`C`代码是值得的，这样你想要的`PHP`和数据库就能按照你的要求生成。
+
+这里是`PHP`文件`index.php`中生成编辑或删除行的部分。静态 HTML 被高亮显示，其他部分通过`MySQL PHP`函数调用插入。
+
+![](img/00060.jpeg)
+
+如你所见，大量繁琐且重复的工作已经实现了自动化。你可以通过修改`PHP`代码继续进行，或者深入自定义生成所有这些内容的`C`程序。
+
+我个人经常使用`ghost`来节省构建网站的时间，这就是我编写它的原因。我厌倦了编写几乎完全相同的代码来解码`HTML`表单并填充或更新数据库。
