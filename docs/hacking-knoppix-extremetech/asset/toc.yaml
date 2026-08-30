@@ -1,0 +1,616 @@
+- - '#'
+  - Live Linux 破解实战
+- - '##'
+  - 关于作者
+- - '##'
+  - 谢谢
+- - '##'
+  - 致谢
+- - '##'
+  - 引言
+- - '#'
+  - 第一部分：探索神奇的 Live Linux 工具箱
+- - '#'
+  - 第二部分：使用 Live Linux 救援与恢复系统
+- - '#'
+  - 第三部分：Live Linux 变体
+- - '#'
+  - 第四部分：自定义 Live Linux 和 Live CD
+- - '#'
+  - 附录
+- - '#'
+  - README：你真正需要知道的一些事情
+- - '#'
+  - 引言
+- - '#'
+  - livelinux-mkimage 脚本
+- - '##'
+  - 本书中使用的规范
+- - '##'
+  - xxiv 引言
+- - '#'
+  - 'dpkg-query -W --show=''$(Installed-Size) {Package}\n'' ↴ '
+- - '##'
+  - 黑客注意事项
+- - '##'
+  - 解开 Live Linux 工具包迷宫
+- - '##'
+  - 替换系统字体
+- - '#'
+  - 享受多媒体
+- - '#'
+  - 听声音
+- - '###'
+  - 使用 XMMS 听音乐
+- - '#'
+  - 使用 Audacity 编辑音频文件
+- - '#'
+  - 将 MP3 转换为 WAV
+- - '##'
+  - 通过命令行使用 ImageMagick 处理图形
+- - '#'
+  - 窗口截图
+- - '#'
+  - 区域截图
+- - '#'
+  - 全屏截图
+- - '#'
+  - 观看视频
+- - '#'
+  - 使用 xine 查看视频
+- - '#'
+  - 第1章 — 解开 Live Linux 工具箱迷宫 25
+- - '#'
+  - 使用 K3b 刻录 CD
+- - '##'
+  - 第 1 章 — 破解 Live Linux 工具包迷宫 29
+- - '##'
+  - 保持信息更新
+- - '##'
+  - 理解文件系统
+- - '#'
+  - 第二部分 — 穿过神奇的 Live Linux 工具
+- - '##'
+  - 第 1 章 — 破解 Live Linux 工具包迷宫 31
+- - '##'
+  - 微调 CD-R/W 文件系统
+- - '##'
+  - 文本编辑器
+- - '###'
+  - 在命令行中使用 vim 编辑配置文件
+- - '#'
+  - 第1章 — 解开 Live Linux 工具箱迷宫
+- - '#'
+  - 第一部分 — 导航 Live Linux 工具箱
+- - '##'
+  - 在命令行中使用 vim 编辑配置文件
+- - '##'
+  - 在命令行中使用编辑配置文件
+- - '#'
+  - 第1章 — 解开 Live Linux 工具箱迷宫 39
+- - '#'
+  - 使用 Scribus 进行桌面出版
+- - '##'
+  - 第二部分 — 探索神奇的 Live Linux 工具箱 42
+- - '##'
+  - 使用 onpare 两个或多个文件
+- - '##'
+  - 总结
+- - '##'
+  - 第 1 章 — 揭开 Live Linux 工具箱迷宫
+- - '##'
+  - 第 2 章 — Live Linux 网络工具最大化
+- - '###'
+  - 访问互联网
+- - '##'
+  - 让宽带工作
+- - '##'
+  - 无线漫游
+- - '##'
+  - 第 2 章 — Live Linux 工具最大化
+- - '##'
+  - 导航神奇的 Live Linux 工具箱
+- - '##'
+  - 设置静态地址
+- - '#'
+  - 第三部分 — 导航神奇的 Live Linux 工具箱 52
+- - '#'
+  - 在互联网上工作
+- - '#'
+  - 使用 BitTorrent 共享文件
+- - '#'
+  - 第三部分 — 导航神奇的 Live Linux 工具箱 54
+- - '#'
+  - apt-get update && apt-get install btorrent
+- - '#'
+  - 第 2 章 — 最大化 Live Linux 工具
+- - '#'
+  - 使用 Mozilla Firefox 浏览
+- - '#'
+  - 改进你的主页
+- - '#'
+  - 安装扩展
+- - '#'
+  - 推荐扩展
+- - '#'
+  - 聚焦你的搜索
+- - '#'
+  - 第三部分 — 导航神奇的 Live Linux 工具包 58
+- - '#'
+  - 使用 KMail 阅读和发送电子邮件
+- - '##'
+  - 第2章 — 充分利用 Live Linux 网络工具 61
+- - '##'
+  - 充分利用 KMail
+- - '##'
+  - 使用 Gaim 与好友即时通讯
+- - '##'
+  - 注册 IM 账户
+- - '##'
+  - 第一部分 —— 玩强大的 Live Linux 工具箱
+- - '##'
+  - 总结
+- - '##'
+  - 连接到其他机器和资源
+- - '##'
+  - 理解远程控制
+- - '##'
+  - 使用远程桌面连接控制另一台计算机
+- - '##'
+  - 第3 章
+- - '###'
+  - 本章内容
+- - '#'
+  - 第部分 — 探索强大的 Live Linux 工具箱 70
+- - '##'
+  - 注意
+- - '##'
+  - 设置 FreeNX
+- - '##'
+  - 注意事项
+- - '##'
+  - FreeNX 服务器的命令行控制
+- - '##'
+  - 理解 FTP
+- - '#'
+  - 使用 SFTP
+- - '#'
+  - 第 3 章 — 连接到其他机器 资源 75
+- - '#'
+  - 使用 SCP
+- - '#'
+  - 第三部分 — 导航神奇的 Live Linux 工具箱 76
+- - '#'
+  - 文件和打印机
+- - '#'
+  - 启动 Samba
+- - '#'
+  - 使用 Samba 访问文件和打印机
+- - '#'
+  - 第 3 章 — 连接到其他机器和资源 85
+- - '##'
+  - 使用 NFS 访问文件
+- - '##'
+  - 其他一些实用的 NFS 命令
+- - '#'
+  - mkdir /mnt/hometmp
+- - '##'
+  - 第 3 章 — 连接到其他机器和资源 85
+- - '##'
+  - 使用 Live Linux 救援和恢复系统
+- - '##'
+  - 使用 Live Linux 修复 Linux
+- - '##'
+  - 确保机器能够运行 Linux
+- - '##'
+  - 第 4 章
+- - '##'
+  - 修复启动问题
+- - '##'
+  - 恢复丢失的 MBR
+- - '###'
+  - 第 4 章 —— 使用 Live Linux 修复 Linux 93
+- - '##'
+  - 修复 LILO
+- - '##'
+  - 修复 GRUB
+- - '##'
+  - 处理关键系统文件
+- - '##'
+  - 重置忘记的 root 密码
+- - '#'
+  - 第 4 章 — 使用 Live Linux 95 修复 Linux
+- - '#'
+  - 修复 X
+- - '#'
+  - 执行文件系统检查
+- - '#'
+  - 检查并修复 Ext2 和 Ext3 文件系统
+- - '#'
+  - 检查并修复 ReiserFS 文件系统
+- - '##'
+  - 检查和修复其他文件系统
+- - '##'
+  - Linux 分区操作
+- - '##'
+  - 使用 Gparted 进行分区
+- - '##'
+  - 第 4 章 — 使用 Live Linux 修复
+- - '#'
+  - 第部分 — 使用 Live Linux 救援与恢复系统 102
+- - '##'
+  - 恢复丢失的分区
+- - '#'
+  - 第 4 章 — 使用 Live Linux 修复 (103)
+- - '##'
+  - 总结
+- - '#'
+  - 使用 Live Linux 修复 Windows
+- - '##'
+  - 调整 Windows 分区
+- - '#'
+  - 第部分 — 使用 Live Linux 救援和恢复系统 108
+- - '#'
+  - 第 5 章 — 使用 Live Linux 修复 Windows
+- - '##'
+  - 当关键文件出现问题时采取措施
+- - '##'
+  - 使用 boot.ini 解决问题
+- - '##'
+  - 当系统注册表在“挂掉”时编辑
+- - '##'
+  - 数据恢复
+- - '##'
+  - 将数据保存到 USB 盘
+- - '##'
+  - 将数据刻录到 CD 或 DVD
+- - '##'
+  - 通过网络复制
+- - '##'
+  - 第 5 章 — 使用 Live Linux 修复
+- - '##'
+  - 总结
+- - '##'
+  - Live Linux 评估
+- - '#'
+  - 使用 Live Linux 进行集群
+- - '##'
+  - 第 6 章
+- - '###'
+  - 本章内容
+- - '##'
+  - 使用 GnuPG 加密数据
+- - '##'
+  - 总结
+- - '##'
+  - Live Linux 评估
+- - '#'
+  - 第部分 — 使用 Live Linux 救援与恢复系统 24
+- - '##'
+  - 注意
+- - '##'
+  - 生成 GnuPG 密钥
+- - '#'
+  - 第部分 — 使用 Live Linux 救援与恢复系统 25
+- - '##'
+  - 注意
+- - '#'
+  - 第部分 — 使用 Live Linux 救援与恢复系统 26
+- - '##'
+  - 测试
+- - '##'
+  - 使用 Chkroot 验证是否存在根包
+- - '##'
+  - 使用 Nmap 扫描端口
+- - '#'
+  - 第 6 章 — 使用 Live Linux 评估
+- - '##'
+  - 第部分 — 使用 Linux 救援和恢复系统
+- - '##'
+  - 使用 Nessus 检查漏洞
+- - '#'
+  - 第部分 — 使用 Live Linux 救援和恢复系统 136
+- - '##'
+  - 使用 Linux 检查漏洞
+- - '#'
+  - 第 6 章 — 使用 Live Linux 评估 137
+- - '#'
+  - 第部分 — 使用 Live Linux 救援和恢复系统 138
+- - '##'
+  - 第 6 章 — 使用 Live Linux 评估 139
+- - '#'
+  - 第部分 — 使用 Live Linux 救援和恢复系统 140
+- - '###'
+  - 在网络上嗅探包
+- - '#'
+  - 第 6 章 — 使用 Live Linux 评估 141
+- - '##'
+  - 使用reshark 分析流量
+- - '##'
+  - 设置标题
+- - '##'
+  - 理解捕获过程
+- - '##'
+  - 过滤捕获
+- - '#'
+  - 第部分 — 使用 Live Linux 救援与恢复系统 146
+- - '##'
+  - 第 6 章 —— 使用 Live Linux 评估 147
+- - '##'
+  - 使用加密进行保护
+- - '##'
+  - 使用 Coroner's Toolkit 进行取证
+- - '##'
+  - 使用 Graveber
+- - '##'
+  - 第部分 — 使用 Live Linux 救援和恢复系统
+- - '##'
+  - 运行 mactime
+- - '##'
+  - 第6 章 — 使用 Live Linux 进行安全评估
+- - '##'
+  - 查看 Unrm 和 Lazarus
+- - '##'
+  - 理解 Unrm
+- - '##'
+  - 理解 Lazarus
+- - '#'
+  - 第部分 — 使用 Live Linux 救援和恢复系统 154
+- - '##'
+  - 使用 dd
+- - '#'
+  - 第 6 章 — 使用 Live Linux 评估 155
+- - '#'
+  - 第部分 — 使用 Live Linux 救援和恢复系统 154
+- - '##'
+  - 使用 dd
+- - '#'
+  - 第 6 章 — 使用 Live Linux 评估 155
+- - '##'
+  - 总结
+- - '##'
+  - Live Linux 变体
+- - '#'
+  - 使用 Live Linux 进行集群
+- - '#'
+  - 第三部分 — Live Linux 变体 160
+- - '##'
+  - 理解基础集群概念
+- - '#'
+  - 第 7 章 — 使用 Live Linux 进行集群化
+- - '##'
+  - 理解 ParallelLiveLinux
+- - '##'
+  - 设置 ParallelLiveLinux
+- - '#'
+  - 第三部分 — Live Linux 变体 162
+- - '#'
+  - 探索 ParallelLiveLinux 演示应用程序
+- - '#'
+  - 使用 Octave 进行内核回归
+- - '#'
+  - 第 7 章 — 使用 Live Linux 进行聚类 163
+- - '##'
+  - 计算周率
+- - '##'
+  - 将数据导入 ParallelLiveLinux 集群
+- - '##'
+  - 为 ParallelLiveLinux 创建持久化集群
+- - '##'
+  - 理解 ClusterLiveLinux
+- - '##'
+  - 设置 ClusterLiveLinux
+- - '#'
+  - 第 7 章 — 使用 Live Linux 169 进行集群
+- - '##'
+  - 探索 ClusterLiveLinux 应用
+- - '##'
+  - 使用 POV-Ray
+- - '#'
+  - 第 7 章 — 使用 Live Linux 进行聚类 171
+- - '#'
+  - 运行 John
+- - '#'
+  - 其他面向科学的 Live Linux 变体概览
+- - '#'
+  - BioLiveLinux
+- - '#'
+  - DistCClinux
+- - '#'
+  - Morphix-NLP
+- - '#'
+  - PaiPix
+- - '#'
+  - Quantian
+- - '#'
+  - 第三部分 — Live Linux 变体 176
+- - '##'
+  - 使用 Nikto 扫描你的 Web 服务器
+- - '#'
+  - nikto -h www.webserver.com
+- - '##'
+  - 作者的经验
+- - '#'
+  - 第三部分 — Live Linux 衍生
+- - '#'
+  - urlsnarf -i eth0 .tcp
+- - '#'
+  - driftnet - i eth0
+- - '#'
+  - driftnet - i eth0 -d /mnt/da2/driftnet_pix
+- - '#'
+  - 使用 Kismet 检测和嗅探无线网络
+- - '#'
+  - 探索 Helix
+- - '#'
+  - 使用 GRAB 对硬盘进行镜像
+- - '#'
+  - 使用 Retriever 查找硬盘上的所有镜像
+- - '#'
+  - 第 8 章 — 查看安全发行版 187
+- - '#'
+  - 第三部分 — Live Linux 变体 192
+- - '##'
+  - 查看 IE 历史记录
+- - '#'
+  - 第 8 章 — 检查安全发行版 193
+- - '##'
+  - 查看密码
+- - '#'
+  - 第 8 章 — 检查安全发行版 195
+- - '#'
+  - III部分 Linux 变体 196
+- - '##'
+  - 使用 INSERT
+- - '##'
+  - 使用 ClamAV 扫描病毒
+- - '#'
+  - 第三部分 — Live Linux 变体 200
+- - '##'
+  - 修改管理员密码
+- - '#'
+  - chntpw /mnt/hda1/Windows/System2/SAM
+- - '#'
+  - 测试系统的内存
+- - '#'
+  - memtest all /mnt/hda1/memtest.log
+- - '#'
+  - 追踪路由
+- - '#'
+  - 定制 Live Linux 和 CD
+- - '#'
+  - 第 9 章 — 修改你的 Linux
+- - '#'
+  - 第 9 章 — 修改你的 Linux
+- - '##'
+  - 第 10 章 重制你的 Linux
+- - '##'
+  - 第 10 章 — 修改你的 Linux
+- - '##'
+  - 第 11 章 — 修改你的 Linux
+- - '##'
+  - 第 12 章 — 修改你的 Linux
+- - '##'
+  - 附录 A
+- - '##'
+  - 附录 B
+- - '##'
+  - 使用 apt-get 和内核
+- - '##'
+  - 安装软件
+- - '#'
+  - 第部分 — 定制 Live Linux 和 Live CD
+- - '##'
+  - apt-get remove kernel-image-2.6.12
+- - '##'
+  - 为 Linux 内核添加 模块
+- - '#'
+  - 第部分 — 定制 Live Linux 和 Live CD 208
+- - '#'
+  - 第部分 — 定制 Live Linux 和 Live CD 209
+- - '##'
+  - livelinux-mkimage 脚本
+- - '##'
+  - 重制 (Remastering)
+- - '##'
+  - 本节内容
+- - '##'
+  - 准备 Live Linux
+- - '##'
+  - 挂载 KNPIX/KNPIX 文件
+- - '##'
+  - mount ... /cdrom/KNPIX/KNPIX
+- - '##'
+  - probe cloop file=/cdrom/KNPIX/KNPIX
+- - '##'
+  - mount ... /tmp/dir
+- - '##'
+  - umount /tmp/dir
+- - '##'
+  - rmdir /tmp/dir
+- - '##'
+  - 修改界面
+- - '##'
+  - 设置语言
+- - '##'
+  - apt-get install kde-i18n-nl
+- - '##'
+  - apt-get install mozilla-firefox-locale-nl
+- - '##'
+  - 选择桌面环境
+- - '##'
+  - apt-get install xfce4
+- - '##'
+  - 使用不同的内核
+- - '#'
+  - 第部分 — 定制 Live Linux 和 Live CD 219
+- - '##'
+  - apt-get remove kernel-image-2.6.12
+- - '##'
+  - apt-get install cloop-src
+- - '#'
+  - cd /usr/src
+- - '#'
+  - tar xvzf cloop.tar.gz
+- - '#'
+  - cd /usr/src/modules/cloop
+- - '#'
+  - cd /usr/src/kernel-source-2.6.11
+- - '#'
+  - make-kpkg modules_image
+- - '#'
+  - dpkg -i cloop-module-2.6.11_2.01.5-3_i386.deb
+- - '##'
+  - 更新 RAM 磁盘 (Initial RAM Disk)
+- - '#'
+  - cd /home/livelinux/boot/isolinux
+- - '#'
+  - gunzip minirdt.gz
+- - '#'
+  - mkdir /home/livelinux/minirt
+- - '#'
+  - mount -o loop minirt /home/livelinux/minirt
+- - '#'
+  - cd /home/livelinux/minirt
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '#'
+  - cp /home/livelinux/uncompressed/lib/modules/2.6.11/lib/
+- - '##'
+  - 复制内核
+- - '##'
+  - linux-linux/lib/modules/2.6.11/lib/
+- - '##'
+  - linux-linux/lib/modules/2.6.11/lib/
+- - '##'
+  - linux-linux/lib/modules/2.6.11/lib/
+- - '##'
+  - linux-linux/lib/modules/2.6.11/lib/
+- - '##'
+  - linux-linux/lib/modules/2.6.11/lib/
+- - '##'
+  - linux-linux/lib/modules/2.6.11/lib/
