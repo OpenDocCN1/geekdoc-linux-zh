@@ -1,0 +1,6113 @@
+
+# Fedora Linux 手页：用户命令卷 8 (Fedora Linux 手页用户命令)
+
+![](img/00002.jpeg)
+
+## 献辞
+
+本书献给 Michael Kerrisk 以及 Linux 文档项目（Linux Documentation Project）的团队。
+
+汇编与编辑：Gareth Morgan Thomas
+
+## 免责声明
+
+据我们所知，本手册中发布的所有文本除非另有说明，均属于公有领域。
+
+我们非常重视对公有领域的承诺。
+
+如果您有理由认为 LinuxManFiles.com 发布的任何文本尚未进入公有领域，请发送邮件至：editor at linuxmanfiles.com。
+
+![](img/svgimg0003.svg)
+
+www.LinuxManFiles.com
+
+# PERLSYMBIAN
+
+## 名称
+
+perlsyian - Syian OS 上的 Perl 版本 5
+
+## 描述
+
+本文描述了 Syian 操作系统的各种特性，这些特性将影响 Perl 版本 5（以下简称 Perl）的编译和/或运行。
+
+**注意：** 此端口（截至 0.4.1）不会编译为 Syian OS GUI 应用程序，而是生成一个 Syian DLL。该 DLL 包含一个名为 `CPerlBase` 的 C++ 类，可以使用（继承并）使用它将 Perl 嵌入应用程序中，请参见 `syian/README`。
+
+Perl 到 Syian 的基础端口仅实现了基本的 POSIX 类功能；没有实现任何额外的 Syian 或 Series 60、Series 80 或 UIQ 绑定。
+
+也可以为 `miniperl` 和 `perl` 生成 Syian 可执行文件，但由于 Syian 没有标准的命令行界面（设备上也没有全键盘），这些文件主要用作演示。
+
+### 在 Syian 上编译 Perl
+
+(0) 你需要安装适当的 Syian SDK。
+
+这些说明已经在各种 Nokia Series 60 Syian SDK（1.2 到 2.6，2.8 也应该可行，1.2 可以编译但无法运行）、Series 80 2.0 以及 Nokia 7710 (Series 90) SDK 下经过了测试。你可以从 Forum Nokia (L<>) 获取这些 SDK。我们还对 UIQ 2.1 进行了一个非常粗略的移植（“它可以编译”）。任何 SDK 的先决条件都是从 ActiveState 安装 ActivePerl，L<> 安装了 SDK 也意味着你需要安装了 Metrowerks CodeWarrior（测试中使用了 2.8 和 3.0）或安装了 Microsoft Visual C++ 6.0（至少需要 SP3，推荐 SP5）。请注意，例如 Series 60 2.0 VC SDK 的安装提到了 ActivePerl 构建 518，该版本（截至 2005 年年中）已不再存在于 ActiveState 网站。成功使用了 ActivePerl 5.8.4 构建 810 在 Syian 上编译 Perl。5.6.x 版本的 ActivePerl 不可用。尚未尝试过其他 SDK 或编译器，如 Visual.NET、仅命令行的 Visual.NET、Borland、GnuPoc 或 sdk2unix。这些说明几乎不支持旧版本的 Syian 或其他 SDK。欢迎用于其他版本、SDK、编译器、平台或设备运行此端口的补丁。
+
+(1) 从 <> 获取 Perl 源码包（例如 `perl-5.9.2.tar.gzisfine` 文件）并将其解压到你的 Windows 系统 `C:/SyiandirectoryofyourWindows` 中。
+
+(2) 切换到 perl 源码目录。
+
+```
+cd c:\Syian\perl-5.x.x
+```
+
+(3) 使用 SDK 自带的 perl 运行以下脚本
+
+`perl syian\config.pl` 使用 `cmd.exe`，Cygwin shell 将无法工作。PATH 应该包含 SDK 工具，包括 Perl，这在 `cmd.exe` 下应该是可能的。如果你没有，请查看 `syian\sdk.pl` 末尾关于如何设置环境以进行 Syian 编译说明。
+
+(4) 构建项目，通过以下方式
+
+在 `cmd.exe` 中执行 `make all`，或者使用 Metrowerks CodeWarrior、Visual C++ 6.0 或 Visual Studio 8（Visual C++ 2005 Express 版也可以运行）。如果你使用 VC IDE，你必须先通过 `cmd.exe` 运行 `syian\config.pl`，然后运行 `make win.mf vc6.mf` 来生成 VC6 的 Makefile 和工作空间。`"make vc6"` 将为 VC6 编译，`"make cw"` 将为 CodeWarrior 编译。
+
+以下 SDK 和编译器配置以及诺基亚手机在某些点经过测试（+ = 已编译并运行 PerlApp，- = 未运行），适用于 Perl 5.8.x 和 5.9.x：
+
+| SDK | VC | CW | 诺基亚手机 |
+| :--- | :--- | :--- | :--- |
+| S60 1.2 | + | + | 3650 (*) |
+| S60 2.0 | + | + | 6600 |
+| S60 2.1 | - | + | 6670 |
+| S60 2.6 | + | + | 6630 |
+| S60 2.8 | + | + | (未在设备中测试) |
+| S80 2.6 | - | + | 9300 |
+| S90 1.1 | + | - | 7710 |
+| UIQ 2.1 | - | + | (未在设备中测试) |
+
+(*) 可以编译但无法工作，遗憾的是，这是 Syian 的问题。
+
+如果你直接使用 `make`，它使用的是 SDK 中的 GNU make，它将根据需要为 Windows 链接器构建和 Arm 目标构建（默认为 'thu'）调用正确的 make 命令。构建脚本假设 C: 盘下的“绝对路径”SDK 安装路径，“subst 样式”将不起作用。
+
+如果使用 VC IDE，构建时可以使用例如：File->Open Workspace-> `C:\Syian\8.0a\S60_2nd_FP2\epoc32\build\syian\perl\perl\wins\perl.dsw`。链接器二进制文件将出现在 sa 目录。
+
+如果使用 VC IDE，在构建初期你会遇到很多警告，因为源代码中提到的许多头文件无法找到，但不严重，因为这些头文件没有被使用。Metrowerks 会产生许多关于未使用变量和空声明的警告，你可以忽略它们。
+
+当构建 Windows 和 Arm DLL 时，不要被快速飞过的长信息吓到：这是“导出冻结”阶段，整个（相当大的）Perl API 列在这里。
+
+构建完成后，你需要通过 `make perldll.sis` 创建 DLL SIS 文件，这会创建 `perlXYZ.sis` 文件（XYZ 为 Perl 版本），然后你可以将其安装到你的 Syian 设备中：此此的简单方法是通过蓝牙或红外发送它们并直接打开信息。
+
+由于安装后所有 Perl SIS 文件的总大小超过 2 MB，建议安装到内存卡（E: 盘）而不是 C: 盘。`perlXYZ.sis` 的大小约为 370 kB，但一旦进入设备，它大约占用一个 750 kB（根据应用程序管理器）。
+
+`perlXYZ.sis` 仅包含 Perl DLL：要创建一个包含部分标准（纯）Perl 库的额外 SIS 文件，请执行命令 `make perllib.sis`。包含了部分标准 Perl 库，并非全部：更多详情请参见 `L</HISTORY>` 或 `syian\install.cfg`（250 kB -> 700 kB）。还有部分标准 Perl XS 扩展（见 `L</HISTORY>`）：`make perlext.sis`，它将创建 `perlXYZext.sis`（290 kB -> 770 kB）。
+
+要编译演示程序 PerlApp，你首先需要在 SDK 下安装 Perl 头文件。要安装 Perl 头文件和类 `CPerlBase` 文档，以便你使用 SDK 编译 Perl 程序时不再需要 Perl 源码：`make sdkinstall`。目标目录为 `C:\Syian\perl\X.Y.Z`。更多详情请参见 `syian\PerlBase.pod`。
+
+头文件安装后，你可以为 PerlApp 创建一个 SIS：`make perlapp.sis`。`perlapp.sis`（11 kB -> 16 kB）将在 syian 子目录中构建，但也会复制到主目录。
+
+如果你想打包 Perl DLL（一个用于 WINS，一个用于 ARMI）、头文件和文档：`make perlsdk.zip` 将创建 `perlXYZsdk.zip`，该文件可以在带有 SDK 的另一个 Windows 系统中使用，而无需在该系统中编译 Perl。
+
+如果你想打包 PerlApp 源码：`make perlapp.zip`。如果你想打包 `perl.exe` 和 `miniperl.exe`，可以使用 `perlexe.sis` 和 `miniperlexe.sis` make 目标。你可能还需要库的 `perllib.sis` 甚至可能用于识别器的 `perlapp.sis`。make 目标 `allsis` 组合了上述所有 SIS 目标。
+
+编译后的清理可以使用 `make clean` 或 `make distclean`，取决于你想清理的程度。
+
+### 编译问题
+
+如果你在执行 `make` 之后看到：
+
+```
+cat makefile.sh >makefile 'cat' 不是内部或外部命令、可程序或批文件。
+```
+
+这意味着你需要（重新）运行 `syian\config.pl`。
+
+如果你得到错误：
+
+```
+perl' 不是内部或外部命令、可程序或批文件。
+```
+
+你可能需要重新安装 `syian\config.pl`。
+
+如果你看到：
+
+```
+系统找不到文件 C:\Syian...[忽略 1]
+```
+
+这并不严重，因为这些头文件没有被使用。Metrowerks 会产生许多关于未使用变量和空声明的警告，你可以忽略它们。
+
+当构建 Windows 和 Arm DLL 时，不要被快速飞过的长信息吓到：这是“导出冻结”阶段，整个（相当大的）Perl API 列在这里。
+
+构建完成后，你需要通过 `make perldll.sis` 创建 DLL SIS 文件，这会创建 `perlXYZ.sis` 文件（XYZ 为 Perl 版本），然后你可以将其安装到你的 Syian 设备中：此此的简单方法是通过蓝牙或红外发送并直接打开信息。
+
+由于安装后所有 Perl SIS 文件的总大小超过 2 MB，建议安装到内存卡（E: 盘）而不是 C: 盘。`perlXYZ.sis` 的大小约为 370 kB，但一旦进入设备大约 750 kB（根据应用程序管理器）。
+
+`perlXYZ.sis` 仅包含 Perl DLL：要创建一个包含部分标准（纯）Perl 库的额外 SIS 文件，请执行命令 `make perllib.sis`。包含了部分标准 Perl 库，并非全部：更多详情请参见 `L</HISTORY>` 或 `syian\install.cfg`（250 kB -> 700 kB）。还有部分标准 Perl XS 扩展（见 `L</HISTORY>`）：`make perlext.sis`，它将创建 `perlXYZext.sis`（290 kB -> 770 kB）。
+
+要编译演示程序 PerlApp，你首先需要在 SDK 下安装 Perl 头文件。要安装 Perl 头文件和类 `CPerlBase` 文档，以便你使用 SDK 编译 Perl 程序时不再需要 Perl 源码：`make sdkinstall`。目标目录为 `C:\Syian\perl\X.Y.Z`。更多详情请参见 `syian\PerlBase.pod`。
+
+头文件安装后，你可以为 PerlApp 创建一个 SIS：`make perlapp.sis`。`perlapp.sis`（11 kB -> 16 kB）将在 syian 子目录中构建，但也会复制到主目录。
+
+如果你想打包 Perl DLL（一个用于 WINS，一个用于 ARMI）、头文件和文档：`make perlsdk.zip` 将创建 `perlXYZsdk.zip`，该文件可以在带有 SDK 的另一个 Windows 系统中使用，而无需在该系统中编译 Perl。
+
+如果你想打包 PerlApp 源码：`make perlapp.zip`。如果你想打包 `perl.exe` 和 `miniperl.exe`，可以使用 `perlexe.sis` 和 `miniperlexe.sis` make 目标。你可能还需要库的 `perllib.sis` 甚至可能用于识别器的 `perlapp.sis`。make 目标 `allsis` 组合了上述所有 SIS 目标。
+
+编译后的清理可以使用 `make clean` 或 `make distclean`，取决于你想清理的程度。
+
+### 编译问题
+
+如果你在执行 `make` 之后看到：
+
+```
+cat makefile.sh >makefile 'cat' 不是内部或外部命令、可程序或批文件。
+```
+
+这意味着你需要（重新）运行 `syian\config.pl`。
+
+如果你得到错误：
+
+```
+perl' 不是内部或外部命令、可程序或批文件。
+```
+
+你可能需要重新安装 `syian\config.pl`。
+
+如果你看到：
+
+```
+系统找不到文件 C:\Syian...[忽略 1]
+```
+
+这并不严重，因为这些头文件没有被使用。Metrowerks 会产生许多关于未使用变量和空声明的警告，你可以忽略它们。
+
+### 在 Syian 中使用 Perl
+
+首先，请注意，在使用 Perl 时你对 Syian 设备拥有完全访问权限：除非你非常小心，否则会对你的设备造成很大损坏（例如删除系统文件）。在进行任何操作之前请务必备份。
+
+Perl 的移植大部分是使用 Syian STDLIB 库完成的。这是一个相当完整的库，但此类库中某些在非 UNIX 平台上通常不留实现的角落也遗留了实现，例如：`fork()`、`signals()`、用户/组 ID、适用于套接字的 `select()`、非阻塞套接字等。参见文件 `syian/config.sh*` 并查找 'undef' 以找到不支持的 API（或从 Perl Config 查看）。
+
+Syian 设备文件系统使用类似 DOS 的语法，“驱动器”通过冒号与路径分离，并使用反斜杠作为路径。驱动器的精确分配可能随平台而异，例如在 Series 60 上你可能会看到 C: 为主（闪存）内存，D: 为 RAM 盘，E: 为内存卡（MMC），Z: 为 ROM。在 Series 80 上 D: 是内存卡。在设备方面，NUL: 是空桶，COMx: 是串口线，IRCOMx: 是红外端口，TMP: 可能是 C:\System\Temp。在双引号字符串中请双这些反斜杠。
+
+### sisify.pl
+
+在 syian 子目录中有一个工具。
+
+Perl DLL 安装在 \System\Libs\。Perl 库和扩展 DLL 安装在 \System\Libs\Perl\X.Y.Z\。PerlApp 安装在 \System\Apps\，且 SIS 还在 \Perl\（在 Nokia 7710 上为 C:\Mydocs\Perl）安装了一些脚本。
+
+注意 Syian 文件系统非常敏感：它强烈于 \ 而不是 /。
+
+进行 XS / Syian C++ 编程时，先包含 Syian 头文件，然后是标准 C/POSIX 头文件，然后是 Perl 头文件，最后是任何头文件。
+
+`New()` 和 `Copy()` 遗憾地被 Syian 和 Perl 代码共同使用，如果你需要它们，你必须使用 cpp 技巧。PerlBase.h 取消了 Perl 的定义并将其重新定义为 `PerlNew()` 和 `PerlCopy()`。
+
+很多。参见 `syian/TODO`。
+
+## 警告
+
+从 Perl Syian 移植版本 0.4.1 开始，Perl 标准回归测试套件的任何部分尚未在运行移植版 Perl 的真实 Syian 设备上运行过，因此可能存在未发现的错误。因此，不提供任何保证。
+
+## 注意
+
+在为 Syian 或 Series 60、Series 80 或 Series 90 创建和扩展应用程序接口 (API) 时，建议不要在 API 名称中使用商标、注册商标或贸易名称。相反，开发人员应该考虑基于现有的（`C++` 或可能是 Java）公共组件和 API 命名进行命名，并根据新 API 所属的编程语言规则进行适当修改。
+
+Nokia 是 Nokia 公司的注册商标。Nokia 产品名称是 Nokia 的商标或注册商标。此处提到的其他产品和公司名称可能是其各自所有者的商标或贸易名称。
+
+## 作者
+
+Jarkko Hietaniemi
+
+### 版权
+
+Copyright (c) 2004-2005 Nokia。保留所有权利。
+
+Copyright (c) 2006-2007 Jarkko Hietaniemi。
+
+## 许可证
+
+Syian 移植版遵循与 Perl 本身相同的许可证条款。
+
+## 历史
+
+0.1.0: 2005 年 4 月
+
+（这在 Syian 安装程序中将显示为 "0.01"。）
+
+
+
+控制台窗口确实是一个非常简单的控制台：可以使用`"000"`获取换行符，`"C"`键是退格键。不要期望一个支持 vt100 或 ANSI 序列的终端。控制台也是`"ASCII"`的，你无法输入例如任何重音字母。由于明显的物理限制，控制台也非常小：（在 Nokia 6600 上）22 列，17 行。
+
+可用的以下库：`AnyDBM_File`, `AutoLoader`, `base`, `Carp`, `Config`, `Cwd`, `constant`, `DynaLoader`, `Exporter`, `File::Spec`, `integer`, `lib`, `strict`, `Syol`, `vars`, `warnings`, `XSLoader`
+
+可用的以下扩展模块有：`attributes`, `Compress::Zlib`, `Cwd`, `Data::Dumper`, `Devel::Peek`, `Digest::MD5`, `DynaLoader`, `Fcntl`, `File::Glob`, `Filter::Util::Call`, `IO`, `List::Util`, `MIME::Base64`, `PerlIO::scalar`, `PerlIO::via`, `SDBM_File`, `Socket`, `Storable`, `Ti::HiRes`
+
+出各种技术原因缺少以下扩展模块：`B`, `ByteLoader`, `Devel::DProf`, `Devel::PPPort`, `Encode`, `GDBM_File`, `I18N::Langinfo`, `IPC::SysV`, `NDBM_File`, `Opcode`, `PerlIO::encoding`, `POSIX`, `re`, `Safe`, `Sys::Hostna`, `Sys::Syslog`, `threads`, `threads::shared`, `Unicode::Normalize`
+
+不支持使用`MakeMaker`或`Module::*`构建和安装模块。
+
+不构建内核以外的`XS`。
+
+由于这是 0.x 版本，任何未来的发布几乎可以保证是不二进制兼容的。作为这一标志，Syian syol 导出保持未冻结状态，并且每次都会重新构建 .def 文件。
+
+## 0.2.0: 2005 年 10 月
+
+- `Perl 5.9.3` (patch level 25741)
+- 支持`Compress::Zlib`和`IO::Zlib`
+- 添加了`sisify.pl`
+
+我们保持二进制不兼容。
+
+## 0.3.0: 2005 年 10 月
+
+- `Perl 5.9.3` (patch level 25911)
+- 支持 Series 80 2.0 和 UIQ 2.1
+
+我们保持二进制不兼容。
+
+## 0.4.0: 2005 年 11 月
+
+- `Perl 5.9.3` (patch level 26052)
+- 添加了一个示例 Syian 扩展
+
+我们保持二进制不兼容。
+
+## 0.4.1: 2006 年 12 月
+
+- `Perl 5.9.5-to-be` (patch level 30002)
+- 添加的扩展：`Compress/Raw/Zlib`, `Digest/SHA`, `Hash/Util`, `Math/BigInt/FastCalc`, `Text/Soundex`, `Ti/Piece`
+- 由 alexander smishlajev 移植到 S90 1.1
+
+我们保持二进制不兼容。
+
+## 0.4.2: 2007 年 3 月
+
+- 跟 Perl `5.9.5-to-be` (patch level 30812)
+- 已测试可用 Microsoft Visual C++ 2005 Express 版构建（它使用 Microsoft Visual C 8，而不是旧的 VC6），测试使用的 SDK 为`S60_2nd_FP3`即 8.1a
+
+我们保持二进制不兼容。
+
+# Perl 语法
+
+## 名称
+
+perlsyn - Perl 语法
+
+## 描述
+
+一个 Perl 程序由一系列从上到部执行的声明和语句组成。循环、子程序和其他控制结构允许你在代码内部进行跳转。
+
+Perl 是一种自由格式语言：你可以按照你喜欢的方式对其进行格式化和缩进。空格主要用于分隔标记，不像 Python 等语言（空格在后者中是重要部分）。
+
+Perl 的许多语法元素是可选的。与其要求你对每个函数调用加上括号并声明每个变量，你通常可以省略此类显式元素，Perl 会推断你的意思。这被称为“我所意”（DWIM）。它允许程序员以他们熟悉的风格编写代码。
+
+Perl 借鉴了许多语言的语法和概念：awk, sed, C, Bourne Shell, Smalltalk, Lisp 以及
+
+### 声明
+
+语句序列可以包含作用域变量的声明，除了声明变量外，声明表现得像普通语句，并在语句序列中像普通语句一样被处理。因此它实际上具有编译时和运行时的影响。所有声明通常放在脚本的开头或结尾。然而，如果你使用`my()`、`state()`或`our()`创建作用域变量，你必须确保你的格式或子程序定义在你访问这些私有变量的块内。
+
+声明子程序允许该子程序从该点开始作为列表操作符使用。你可以通过说`sub na`来声明子程序而不定义它，如下：
+
+```perl
+sub myna; $ = myna $0 or die "can't get myna";
+```
+
+裸声明会将函数声明为列表操作符，而不是元运算符，因此你必须小心使用括号（或使用`or`代替`||`）。
+
+`||`运算符绑定过于紧密，无法直接在列表操作符后使用；它变成了最后一个元素的一部分。你可以始终对列表操作符加上括号，以将列表操作符变回更像函数调用的形式。或者，你可以使用原型`($)`将子程序转换为元运算符：
+
+```perl
+sub myna ($); $ = myna $0 || die "can't get myna";
+```
+
+现在它的解析符合你预期的了，但在这种情况下你仍然应该养成使用括号的习惯。关于原型的更多信息，请参见 perlsub。
+
+子程序声明也可以通过`require`语句加载，或者通过`use`语句同时加载并导入到你的命名空间中。有关此的详细信息，请参阅 perlmod。
+
+### 注释
+
+从`#`字符到行尾的文本都是注释，会被忽略。异常包括字符串或正则表达式内部的`#`。
+
+### 简单语句
+
+唯一的简单语句（statent）是为其副作用而求值的表达式。每个简单语句都必须以分号结尾，除非它是代码块中的最后一个语句，在这种情况下分号是可选的。但如果该块占据超过一行，请务必加上分号，因为你最终可能还会添加另一行。请注意，存在像`eval {}`、`sub {}`和`do {}`这样的运算符*看起来*像复合语句，但它们并不是——它们只是表达式中的项（TERMS）——因此当它们作为语句的最后一项使用时，需要显式终止。
+
+### 真与假
+
+数字`0`、字符串`'0'`和`' '`、空列表`()`以及`undef`在布尔上下文中都为假。所有其他值都为真。通过`!`或`not`对真值进行取反会返回一个特殊的假值。当将其求值为字符串时，它被视为`' '`，但作为数字时，它被视为`0`。大多数返回真或假的 Perl 运算符都是这样运行的。
+
+### 语句修饰符（Statent Modifiers）
+
+任何简单语句都可以可选地后跟一个`SINGLE`修饰符，位于终止分号（或块结束符）之前。可能的修饰符有：
+
+`if EXPR unless EXPR while EXPR until EXPR for LIST foreach LIST when EXPR`
+
+修饰符后面的`EXPR`被称为“条件”。它的真假决定了修饰符的行为。
+
+`if`仅当*仅当*条件为真时执行该语句。`unless`则相反，它在条件为真*除非*执行该语句（即：条件为假时执行）。
+
+`print "Basset hounds got long ears" if length $ear >= 10; go_outside() and play() unless $is_raining;`
+
+`for(each)`修饰符是一个迭代器：它为`LIST`中的每个项各执行一次语句（其中`$_`轮流别赋值为每个项）。
+
+`print "Hello $_!\n" for qw(world Dolly nurse);`
+
+`while`在条件为真*时*重复执行语句。`until`则相反，它在条件为真*为止*重复语句（或在条件为假时重复）：
+
+```perl
+# 这两者都从 0 数到 10。 print $i++ while $i <= 10; print $j++ until $j > 10;
+```
+
+`while`和`until`修饰符具有通常的“while 循环”语义（先求值条件），但应用于`do`-BLOCK（或 Perl4 的`do`-SUBROUTINE 语句）除外，在这种情况下，块在求值条件之前执行一次。
+
+这样做是为了让你写出这样的循环：
+
+```perl
+do { $line = <STDIN>; ... } until !defined($line) || $line eq ".\n"
+```
+
+参见`perlfunc`中的`do`。请注意，后文描述的循环控制语句在此结构中将*不会*起作用，因为修饰符不接受循环标签。抱歉。你始终可以在它内部放置另一个块（用于`next`）或在它周围放置一个块（用于`last`）来执行此类操作。对于`next`，只需双写大括号：
+
+```perl
+do {{ next if $x == $y; # do sothing here }} until $x++ > $z;
+```
+
+对于`last`，你必须写得更详细：
+
+```perl
+LOOP: { do { last if $x = $y**2; # do sothing here } while $x++ <= $z; }
+```
+
+**注意：** 使用语句修饰符条件或循环结构修饰的`my`、`state`或`our`（例如`my $x if ...`）的行为是**未定义的**。`my`变量的值可能是`undef`、任何之前赋值的值，或者也可能是任何其他值。不要依赖它。未来的 Perl 版本可能会执行与你尝试的版本不同的操作。此处暗有玄机（Here be dragons）。
+
+`when`修饰符是一个首次出现在 Perl 5.14 中的实验性功能。若要使用它，你应该包含一个`use v5.14`声明。（技术上讲，它只需要`switch`功能，但该特性在 5.14 之前不可用）。它仅在`foreach`循环或`given`块内部有效，且仅在智能匹配`"$_ ~~ EXPR"`为真时执行该语句。如果执行了语句，则会在`foreach`内部触发`next`，在`given`内部触发`break`。
+
+在当前实现下，`foreach`循环可以位于`when`修饰符动态作用范围内任何地方，但必须位于`given`块的词法范围内。这种限制在未来的发布中可能会放宽。参见下文的“Switch Statements”。
+
+### 复合语句（Compound Statents）
+
+在 Perl 中，定义作用域语句语句称为块（block）。块的边界由包含它的文件界定（对于需要的文件或整个程序），块的边界由字符串的范围界定（对于`eval`）。
+
+但通常，块由花括号（也称为大括号）界定。我们将这种语法结构称为 BLOCK。
+
+可以使用以下复合语句来控制流：
+
+`if (EXPR) BLOCK if (EXPR) BLOCK else BLOCK if (EXPR) BLOCK elsif (EXPR) BLOCK ... if (EXPR) BLOCK elsif (EXPR) BLOCK ... else BLOCK unless (EXPR) BLOCK unless (EXPR) BLOCK else BLOCK unless (EXPR) BLOCK elsif (EXPR) BLOCK ...`
+
+`next`命令开始循环的下一次迭代：
+
+```perl
+LINE: while (<STDIN>) { next LINE if /^#/; # discard comnts ... }
+```
+
+`last`命令立即退出当前的循环。如果有`continue`块，则不会执行它：
+
+```perl
+LINE: while (<STDIN>) { last LINE if /^$/; # exit when done with header ... }
+```
+
+`redo`命令在不重新评估条件的情况下重启循环块。如果有`continue`块，则*不会*执行。此命令通常用于那些想要对刚刚输入的内容自欺欺人的程序。
+
+例如，在处理类似`/etc/termcap`的文件时。如果你的输入行可能以反斜杠结尾以表示延续，你想跳过并获取下一个记录。
+
+```perl
+while (<>) { chomp; if (s/\\$//) { $_ .= <>; redo unless eof(); } # now process $_ }
+```
+
+这是对更显式写法的简写：
+
+```perl
+LINE: while (defined($line = <ARGV>)) { chomp($line); if ($line =~ s/\\$//) { $line .= <ARGV>; redo LINE unless eof(); # not eof(ARGV)! } # now process $line }
+```
+
+注意，如果上述代码中有`continue`块，它只会在被正则表达式删除的行上执行（因为`redo`跳过了`continue`块）。`continue`块通常用于重置行计数器或`m?pat?`一次性匹配：
+
+```perl
+# inspired by :1,$g/fred/s//WILMA/ while (<>) { m?(fred)? && s//WILMA $1 WILMA/; m?(barney)? && s//BETTY $1 BETTY/; m?(hor)? && s//MARGE $1 MARGE/; } continue { print "$ARGV $.: $_"; close ARGV if eof; # reset $. reset if eof; # reset ?pat? }
+```
+
+如果将单词`while`替换为`until`，测试含义就会反转，但条件在第一次迭代之前仍然会被测试。
+
+循环控制语句在`if`或`unless`中不起作用，因为它们不是循环。不过，你可以通过双层大括号让它们变成循环。
+
+```perl
+if (/pattern/) {{ last if /fred/; next if /barney/; # sa effect as "last", # but doesn't docunt as well # do sothing here }}}
+```
+
+这是因为块本身充当一个执行一次的循环，参见`Basic BLOCKs`（基础块）。
+
+Perl 4 中提供的`while/if BLOCK BLOCK`形式已不再可用。将任何`if BLOCK`的出现替换为`if (do BLOCK)`。
+
+### For 循环 (For Loops)
+
+Perl 的 C 风格`for`循环与相应的`while`循环一样；这意味着：
+
+```perl
+for ($i = 1; $i < 10; $i++) { ... }
+```
+
+等同于：
+
+```perl
+$i = 1; while ($i < 10) { ... } continue { $i++; }
+```
+
+有一个微小的区别：如果在`for`的初始化部分用`my`声明变量，则这些变量的词法作用域整个`for`循环（循环体和控制部分）。
+
+作为一种特殊情况，如果`for`循环（或相应的`while`循环）中的测试为空，它被视为真。也就是说，两者：
+
+```perl
+for (;;) { ... }
+```
+
+和
+
+```perl
+while () { ... }
+```
+
+都被视为无限循环。
+
+除了普通的数组索引循环，`for`还可以用于许多其他有趣的应用。这里有一个示例，可以避免在交互式文件描述符上显式测试文件结束导致程序看似挂起的问题：
+
+```perl
+$on_a_tty = -t STDIN && -t STDOUT; sub prompt { print "yes? " if $on_a_tty } for ( prompt(); <STDIN; prompt() ) { # do sothing }
+```
+
+使用`readline`（或运算符形式`<EXPR>`）作为`for`循环的条件，是以下内容的简写。这种行为与`while`循环条件的行为相同。
+
+```perl
+for ( prompt(); defined( $_ = <STDIN> ); prompt() ) { # do sothing }
+```
+
+### Foreach 循环 (Foreach Loops)
+
+`foreach`循环遍历普通列表值，并将标量变量`VAR`依次设置为列表的每个元素。如果变量前有关键字`my`，则它是词法作用域，因此仅在循环内可见。否则，该变量隐式局部于循环并在退出循环时恢复其原有值。如果变量之前用`my`声明过，它将使用该变量而不是全局变量，但它仍然局部于循环。这种隐含局部化*仅*发生在`foreach`循环中。
+
+`foreach`关键字实际上是`for`关键字的同义词，所以你可以使用任何一个。如果省略了`VAR`，则`$_`被设置为每个值。
+
+如果`LIST`中的任何元素都是左值（lvalue），你可以通过修改循环内部`VAR`来修改它。相反，如果`LIST`中的任何元素*不是*左值，任何修改该元素的尝试都将失败。换句话说，`foreach`循环索引变量是正在遍历的列表中每个项的隐式别名。
+
+如果`LIST`的任何部分是数组，如果你在循环中添加或删除元素，`foreach`会变得非常困惑。
+
+从 Perl 5.10.1 开始（实际上是 5.10.0，但它工作得并不正常），你可以说
+
+
+
+`use feature "switch";`
+
+来启用实验性的 `switch` 特性。这粗程度上基于旧版本的 Perl 6 提议，但它不再反映 Perl 6 的构造。每当你声明代码倾向于运行在 5.10 或更高版本的 Perl 下，你也会获得 `switch` 特性。例如：
+
+`use v5.14;`
+
+在 `switch` 特性下，Perl 获得了实验性关键字 `given`、`when`、`default`、`continue` 和 `break`。从 Perl 5.16 开始，可以在 `switch` 关键字前加上 `CORE::` 以在不使用 `use feature` 语句的情况下访问该特性。关键字 `given` 和 `when` 类似于其他语言中的 `switch` 和 `case`，因此上一节的代码可以重写为：
+
+`use v5.10.1; for ($var) { when (/^abc/) { $abc = 1 } when (/^def/) { $def = 1 } when (/^xyz/) { $xyz = 1 } default { $nothing = 1 } }`
+
+`foreach` 是设置主题器（topicalizer）的实验性方法。如果你想使用高度实验性的 `given`，可以这样写：
+
+`use v5.10.1; given ($var) { when (/^abc/) { $abc = 1 } when (/^def/) { $def = 1 } when (/^xyz/) { $xyz = 1 } default { $nothing = 1 } }`
+
+从 5.14 开始，也可以这样写：
+
+`use v5.14; for ($var) { $abc = 1 when /^abc/; $def = 1 when /^def/; $xyz = 1 when /^xyz/; default { $nothing = 1 } }`
+
+或者如果你不在乎安全起见，可以这样写：
+
+`use v5.14; given ($var) { $abc = 1 when /^abc/; $def = 1 when /^def/; $xyz = 1 when /^xyz/; default { $nothing = 1 } }`
+
+`given` 和 `when` 的参数处于标量上下文中，`given` 会为 `$_` 变量分配其主题值。
+
+`when` 的参数 `EXPR` 具体在做什么很难精确描述，但通常情况下，它会尝试猜测你想做什么。有时它被解释为 `"$_ ~~ EXPR"`，有时又不是。当它被 `given` 块词法包围时，其行为与被 `foreach` 循环动态包围时也不同。这些规则太复杂，无法在此描述。请参见后文的 `Experimental Details on given and when`。
+
+由于 Perl 5.10 到 5.16 之间 `given` 实现中的一个不幸的 bug，在这些实现中，由 `given` 控制的 `$_` 版本是原始值的逻辑作用域拷贝，而不是原始值的动态作用域别名（就像在 `foreach` 或原始及当前的 Perl 6 语言规范中那样）。这个 bug 在 Perl 5.18 中被修复。如果你确实需要一个词法上的 `$_`，请显式指定，但注意 `my $_` 现在已弃用，除非禁用了警告，否则会发出警告：
+
+```
+given(my $_ = EXPR) { ... }
+```
+
+如果你的代码仍需要在旧版本上运行，请坚持使用 `foreach` 作为你的主题器，这样你会不会那么不开心。
+
+### Goto
+
+虽然不适合胆小的人，但 Perl 确实支持 `goto` 语句。三种三种：`goto-LABEL`、`goto-EXPR` 和 `goto-NAME`。循环的 `LABEL` 实际上并不是 `goto` 的有效目标；它只是循环的名字。
+
+`goto-LABEL` 形式会找到标记为 `LABEL` 的语句并在那里恢复执行。它不能用于进入任何需要初始化的构造，例如子程序或 `foreach` 循环。它不能用于进入被优化掉的构造。它可以跳转到动态作用范围内的几乎任何地方，包括跳出子程序，但通常使用其他构造（如 `last` 或 `die`）更好。Perl 的作者从未觉得有必要使用这种形式的 `goto`（在 Perl 中是如此说——C 则是另一回事）。
+
+`goto-EXPR` 形式期望一个标签名称，其作用域将动态解析。这允许像 FORTRAN 那样进行计算 `goto`，但如果你是为了可维护性进行优化，则并不推荐这样做：
+
+```
+goto(("FOO", "BAR", "GLARCH")[$i]);
+```
+
+`goto-NAME` 形式非常有魔力，它会将对命名子程序的调用替换为当前运行的子程序。这被 `AUTOLOAD()` 子程序使用，用于加载另一个子程序，然后假装另一个子程序最初就被调用了（除了当前子程序对 `@_` 的任何修改都会传播到另一个子程序）。在 `goto` 之后，甚至 `caller()` 都无法判断此例是先被调用的。
+
+在几乎所有此类情况下，使用 `next`、`last` 或 `redo` 等结构化控制流机制比诉诸 `goto` 要好得多。对于某些应用，使用 `eval{}` 和 `die()` 的捕获与抛出对进行异常处理也是一种谨慎的方法。
+
+### 省略号语句
+
+从 Perl 5.12 开始，Perl 接受省略号 `...` 作为尚未实现的代码的占位符。这种形式的省略号（未实现的语句）不应与二进制翻转运算符 `...` 混淆。一个是一个语句，另一个是运算符。（Perl 通常不会混淆它们，因为通常 Perl 可以判断它想要运算符还是语句，但异常情况见下文。）
+
+当 Perl 5.12 或更高版本遇到省略号语句时，它会解析而不报错，但当你实际上尝试执行它时，Perl 会抛出一个带有 `Unimplented` 文本的异常：
+
+```
+use v5.12; sub unimplented { ... } eval { unimplented() }; if ($@ =~ /^Unimplented at /) { say "I found an ellipsis!"; }
+```
+
+你只能使用省略号语句来代表完整的语句。以下是省略号如何工作的示例：
+
+```
+use v5.12; { ... } sub foo { ... }; eval { ... }; sub { $n = shift; ... }; $x = do { ... }; say "Hurrah!";
+```
+
+省略号语句不能代表较大语句部分的表达式，因为 `...` 翻转运算符的版本（参见 perlop 中的 `Range Operators`）。
+
+这些尝试省略号的示例是语法错误：
+
+```
+use v5.12; print ...; open(my $fh, ">", "/dev/passwd") or ...; if ($condition && ... ) { say "Howdy"};
+```
+
+在某些情况下，Perl 无法立即区分表达式和语句。例如，块和匿名哈构造的语法看起来一样，除非大括号内有些东西给 Perl 提示。如果 Perl 没有猜到 `{ }` 是块，那么省略号就是语法错误。在这种情况下，它认为 `...` 不是省略号，因为它期望的是表达式而不是语句：
+
+```
+@transford = map { ... } @input;
+```
+
+在你的块内部，可以在省略号之前使用 `;` 来表示 `{ }` 是块而不是哈引用构造函数。现在省略号有效了：
+
+```
+@transford = map {; ... } @input;
+```
+
+注意：人们俗称为这个标点符号为 `yada-yada` 或三点，但它的真实名称是省略号。
+
+### PODs：需要的文档
+
+Perl 有一种将文档与源代码混合的机制。当它期望新语句开始时，如果编译器遇到以等号和单词开头的行，如下所示
+
+=head1 这里有 Pods!
+
+那么该文本以及直到包括以 =cut 开头的行内的所有文本都将被忽略。中间文本的格式在 perlpod 中描述。
+
+这允许你自由地混合源代码和文档文本，例如：
+
+=item snazzle($) snazzle() 函数将以你可能想象的最壮观的形式运行，甚至包括网络烟花。 =cut 回归到编译器，够了这些 pod 东西！sub snazzle($) { my $thingie = shift; ......... }
+
+请注意，pod 翻译器应该只查看以 pod 指令开头的段落（这会让解析更容易），而编译器实际上知道即使在段落中间也要查找 pod 转义字符。这确保了接后续的秘密内容会被编译器和翻译器同时忽略。
+
+```perl
+$a=3; =secret stuff warn "Neither POD nor CODE!?" =cut back print "got $a\n";
+```
+
+你可能不应该依赖 `warn()` 永远被 pod 格式化掉。并不是所有的 pod 翻译器在这方面都表现良好，而且也许编译器会变得更加挑剔。
+
+人们还可以使用 pod 指令来快速注释掉一段代码。
+
+### 普通注释（其实并非如此！）
+
+Perl 可以像 C 预处理器一样处理行指令（line directives）。通过这种方式，人们可以控制 Perl 在错误或警告信息中文件名和行号的处理（特别是对于使用 `eval()` 处理的字符串）。该机制的语法与大多数 C 预处理器几乎相同：它匹配以下正则表达式
+
+```perl
+# example: '# line 42 "new_filena.plx"' /^\# \s* line \s+ (\d+) \s* (?:\s("?)([^"]+)\g2)? \s* $/x
+```
+
+其中 `$1` 是下一行的行号，`$3` 是可选的文件名（带或不带引号）。注意，与现代 C 预处理器不同，`#` 之前不能有任何空格。
+
+行指令中包含一个相当明显的陷阱（gotcha）：调试器和分析器只会显示在文件中特定行号上最后出现的最后行源代码。务必留心，不要在稍后想要调试的代码中引起行号冲突。
+
+以下是你应该输入到命令行 shell 中的一些示例：
+
+```bash
+% perl # line 200 "bzzzt" # the '#' on the previous line must be the first char on line die 'foo'; __END__ foo at bzzzt line 201\. % perl # line 200 "bzzzt" eval qq[\n#line 2001 ""\ndie 'foo']; print $@; __END__ foo at - line 2001\. % perl eval qq[\n#line 200 "foo bar"\ndie 'foo']; print $@; __END__ foo at foo bar line 200\. % perl # line 345 "goop" eval "\n#line " . __LINE__ . ' "' . __FILE__ .\"\\"\ndie 'foo'"; print $@; __END__ foo at goop line 345\.
+```
+
+### 关于 given 和 when 的实验细节
+
+如前所述，`switch` 功能被认为具有高度实验性；它可能会在几乎不通知的情况下发生变化。特别是 `when` 具有复杂的行为，这些行为预计在未来将变得不那么复杂。不要依赖它目前的（错误的）实现。在 Perl 5.18 之前，`given` 也有一些复杂的行为，如果你的代码运行在旧版本的 Perl 上，仍然需要提这些这些。
+
+这是一个关于 `given` 的较长示例：
+
+```perl
+use feature ":5.10"; given ($foo) { when (undef) { say '$foo is undefined'; } when ("foo") { say '$foo is the string "foo"'; } when ([1,3,5,7,9]) { say '$foo is an odd digit'; continue; # Fall through } when ($_ < 100) { say '$foo is numerically less than 100'; } when (\&complicated_check) { say 'a complicated check for $foo is true'; } default { die q(I don't know what to do with $foo); } }
+```
+
+在 Perl 5.18 之前，`given(EXPR)` 将 `EXPR` 的值赋值给 `$_` 的词法作用域副本（!），而不是像 `foreach` 那样的动态作用域别名。这使得它类似于
+
+```perl
+do { my $_ = EXPR; ... }
+```
+
+不同之处块会通过成功的 `when` 或显式的 `break` 自动跳出。因为它只是一个副本，而且它是词法作用域的而非动态作用域，所以你无法对它进行你在 `foreach` 循环中习惯的那些操作。特别是，如果这些函数可能尝试访问 `$_`，那么它对任意函数调用将不起作用。对于这种情况，最好坚持使用 `foreach`。
+
+大部分的威力来自于有时可以适用的隐式智能匹配（smartmatching）。大多数时候，`when(EXPR)` 被视为对 `$_` 的隐式智能匹配，即 `$_ ~~ EXPR`。（有关智能匹配的更多信息，请参见 perlop 中的 `Smartmatch Operator`）。但当 `EXPR` 是下面列出的 10 种异常情况（或类似情况）之一时，它会被直接当作布尔值。
+
+1. 用户定义的子程序调用或方法调用。
+
+2. 形式为 `/REGEX/`、`$foo =~ /REGEX/` 或 `$foo =~ EXPR` 的正则表达式匹配。以及形式为 `!/REGEX/`、`$foo !~ /REGEX/` 或 `$foo !~ EXPR` 的否定正则表达式匹配。
+
+3. 使用显式 `~~` 运算符的智能匹配，例如 `EXPR ~~ EXPR`。
+
+**注意：** 你通常需要使用 `$c ~~ $_`，因为默认使用的是 `$_ ~~ $c`，这通常与你想要的相反。
+
+4. 布尔比较运算符，例如 `$_ < 10` 或 `$x eq "abc"`。
+
+另一个有用的快捷方法是，如果你将字面量数组或哈希作为 `given` 的参数，它会被转换为一个引用。例如，`given(@foo)` 与 `given(\@foo)` 是等价。
+
+`default` 的行为与 `when(1 == 1)` 完全相同，这意味着它总是匹配的。
+
+### 跳出块 (Breaking out)
+
+你可以使用 `break` 关键字跳出封装的 `given` 块。每个 `when` 块都会隐式地以 `break` 结束。
+
+### 穿透 (Fall-through)
+
+你可以使用 `continue` 关键字从一个 case 穿透到下一个 case：
+
+```
+given($foo) { when (/x/) { say '$foo contains an x'; continue } when (/y/) { say '$foo contains a y' } default { say '$foo does not contain a y' } }
+```
+
+### 返回值 (Return value)
+
+当 `given` 语句也是一个有效的表达式时（例如，当它是块的最后一个语句时），它的求值结果：
+
+- 一旦遇到显式的 `break`，立即返回一个空列表。
+
+- 如果存在成功的 `when`/`default` 子句，则返回该子句最后一个评估表达式的值。
+
+- 如果没有条件为真，则返回 `given` 块最后一个评估表达式的值。
+
+在后两种情况下，最后一个表达式是在应用于 `given` 块的上下文中进行求值的。
+
+请注意，与 `if` 和 `unless` 不同，失败的 `when` 语句始终求值为一个空列表。
+
+```
+my $price = do { given ($item) { when (["pear", "apple"]) { 1 } break when "vote"; # My vote cannot be bought 1e10 when /Mona Lisa/; "unknown"; } }; };
+```
+
+目前，`given` 块不能始终作为适当表达式使用。这在 Perl 未来的版本中可能会解决。
+
+### 在循环中切换 (Switching in a loop)
+
+你可以使用 `foreach()` 循环代替使用 `given()`。例如，这里是统计特定字符串在数组中出现次数的一种方法：
+
+```
+use v5.10.1; my $count = 0; for (@array) { when ("foo") { ++$count } } print "\@array contains $count copies of 'foo'\n";
+```
+
+或者在较新的版本中：
+
+```
+use v5.14; my $count = 0; for (@array) { ++$count when "foo"; } print "\@array contains $count copies of 'foo'\n";
+```
+
+在所有 `when` 块的末尾，有一个隐式的 `next`。如果你只对第一个匹配感兴趣，可以使用显式的 `last` 来覆盖它。
+
+如果你显式指定了循环变量（例如 `for $item (@array)`），这将会不起作用。你必须使用默认变量 `$_`。
+
+### 与 Perl 6 的区别 (Differences from Perl 6)
+
+Perl 5 的智能匹配（smartmatch）和 `given`/`when` 结构与 Perl 6 的对应物不兼容。最可见且最不重要的区别是，在 Perl 5 中，`given()` 和 `when()` 的参数必须加括号（当后者作为语句修饰符使用除外）。在 Perl 6 中，在 `if()`、`while()` 或 `when()` 等控制结构中括号始终是可选的；在 Perl 5 中，如果不引起大量的潜在混淆，无法使括号变为可选，因为 Perl 5 会将以下表达式：
+
+
+
+```perl
+given $foo { ... }
+```
+
+解析为 `given` 的参数是哈希 `%foo` 的一个元素，并将大括号解释为哈希元素语法。
+
+然而，还有许多许多其他差异。例如，以下代码在 Perl 5 中可以运行：
+
+```perl
+use v5.12;
+my @primary = ("red", "blue", "green");
+if (@primary ~~ "red") {
+    say "primary smartmatches red";
+}
+if ("red" ~~ @primary) {
+    say "red smartmatches primary";
+}
+say "that's all, folks!";
+```
+
+但在 Perl 6 中完全无法运行。相反地，你应该使用（可并行的）`any` 运算符：
+
+```perl
+if any(@primary) eq "red" {
+    say "primary smartmatches red";
+}
+if "red" eq any(@primary) {
+    say "red smartmatches primary";
+}
+```
+
+`perlop` 中 `Smartmatch Operator` 中的智能匹配表与 Perl 6 规范建议的并不相同，这主要是由于 Perl 6 和 Perl 5 数据模型之间的差异，但也因为 Perl 6 规范自 Perl 5 匆忙采用以来发生了变化。
+
+在 Perl 6 中，`when()` 始终会与其参数进行隐式智能匹配，而在 Perl 5 中，在上述大致概述的各种模糊定义的情况下，抑制这种隐式智能匹配是方便的（尽管可能会引起混惑）。这在很大程度上是因为 Perl 5 即使在内部也没有布尔类型。
+
+---
+
+# PERLSYNOLOGY
+
+## NAME
+
+`perlsynology` - 基于 Synology DSM 系统的 Perl 5
+
+## DESCRIPTION
+
+Synology 制造了大量的网络附属存储（NAS）设备，这些设备在大型企业、小型企业和家庭中非常受欢迎。
+
+NAS 系统配备了 Synology 存储管理器（DSM），这是一个精简的 Linux 系统，增强了多种用于管理 NAS 的工具。有多种硬件型号：Marvell Armada（ARMv5tel、ARMv7l）、Intel Atom（i686、x86_64）、Freescale QorIQ（PPC）等。完整列表请参见 Synology FAQ <>。
+
+由于它基于 Linux，NAS 可以运行许多软件。
+
+### 设置构建环境（Setting up the build environ）
+
+由于 DSM 是一个精简的 Linux 系统，它缺乏 Linux 上常见的许多工具。基础工具如 `sh`、`cp`、`rm` 是使用 BusyBox 实现的。
+
+使用常用的浏览器打开 DSM 管理页面并进入 Package Center。
+
+如果你想对 Perl 进行烟雾测试，请安装 `patch`。
+
+下一步是将源添加到系统库中。本文描述了 Synology 的各种特性。
+
+### 编译 Perl 5（Compiling Perl 5）
+
+设置好构建环境后，编译和测试 Perl 是简单的。你只需要像往常一样下载源码，并按如下所示添加 `Policy.sh` 文件：
+
+```bash
+# Administrivia. perladmin=""
+# Install Perl in a tree in /opt/perl instead of /opt/bin. prefix=/opt/perl
+# Select the compiler. Note that there is no 'cc' alias or link. cc=gcc
+# Build flags. ccflags="-DDEBUGGING"
+# Library and include paths. libpth="/lib" locincpth="/opt/include" loclibpth="/lib"
+```
+
+在你解压源码的目录中，执行熟悉的命令：
+
+```bash
+./Configure -des
+make
+make test
+make install
+```
+
+### 已知问题
+
+#### `Configure`
+
+暂无已知问题。
+
+#### `Build`
+
+错误信息 `"No error definitions found（未找到错误定义）"`。由于群晖（Synology）文件系统的结构特殊，无法找到错误代码的本地定义，就会生成此错误。
+
+此错误已在 Perl 5.19 版本的开发 git 中修复，提交 ID 为 `7a8f1212e5482613c8a5b0402528e3105b26ff24`。
+
+#### 测试失败
+
+`ext/DynaLoader/t/DynaLoader.t`
+
+由于群晖文件系统结构的特殊，导致一个子测试失败。缺少文件 `/lib/glibc.so`。
+
+警告：不要将 `/lib/glibc.so.6` 软链接到 `/lib/glibc.so`，否则系统组件将开始故障。
+
+### 对 Perl 5 进行冒烟测试
+
+如果编译成功完成，你可以按照 Test::Smoke 文档中的描述设置冒烟测试。
+
+进行冒烟测试需要一个运行中的 Perl。你可以安装群晖提供的 Perl 5.8.6 包，或者编译并安装你自己的更内核版本。
+
+请注意，我无法运行通过群晖任务计划启动的成功冒烟测试。我不得不通过在另一个系统上运行 `cron` 任务并通过 `ssh` 来启动冒烟测试：
+
+```bash
+ssh nas1 wrk/Test-Smoke/smoke/smokecurrent.sh
+```
+
+#### 本地补丁
+
+在使用冒烟测试应用本地补丁时，测试驱动会在应用后自动请求重新生成某些表。群晖提供的 Perl 5.8.6（至少在 DS413 上）并不具备生成这些表的能力。它会生成带有伪值的操作码，导致构建失败。
+
+你可以通过添加设置来防止重新生成：
+
+```perl
+'flags' => 0,
+```
+
+到冒烟配置中，或者通过添加另一个补丁，在 `regen.pl` 程序开头插入：
+
+```perl
+exit 0 if $] == 5.008006;
+```
+
+### 添加库
+
+上述过程描述了一个基础环境，因此产生的是基础版本的 Perl。如果你想为 Perl 添加额外的库，可能需要额外的设置。
+
+例如，基础版 Perl 不包含任何 DB 库（db、dbm、ndbm、gdsm）。你可以使用 iPKGui 添加这些内容，但你需要将环境变量 `LD_LIBRARY_PATH` 设置为适当的值：
+
+```bash
+LD_LIBRARY_PATH=/lib:/opt/lib
+export LD_LIBRARY_PATH
+```
+
+该设置在编译 Perl 时生效，在运行程序时也需要生效。
+
+## 修订
+
+2015 年 3 月，适用于群晖 DSM 5.1.5022。
+
+## 作者
+
+Johan Vromans <>、H. Merijn Brand <>。
+
+---
+
+# PERLBUG
+
+## 名称
+
+`perlbug` - 如何向 Perl 提交错误报告
+
+## 摘要
+
+```text
+perlbug
+
+perlbug [-v] [-aaddress] [-sssubject] [-bbody|-finputfile] [-Foutputfile]
+        [-rreturnaddress] [-eeditor] [-cadminaddress|-C] [-S] [-t] [-d] [-A] [-h] [-T]
+
+perlbug [-v] [-rreturnaddress]
+
+perlbug [-A] [-ok|-okay|-nok|-nokay]
+
+perlthanks
+```
+
+## 描述
+
+此程序旨在帮助你生成并发送关于 Perl 5 及其自带模块的错误报告（以及感谢信）。
+
+在大多数情况下，你可以直接从命令行交互式运行它，无需任何特殊参数，并按照提示操作。
+
+如果你在非标准端口（不属于标准发行版的端口）、二进制发行版或非核心模块（如 Tk、DBI 等）中发现错误，请查看与该发行版附带的文档以确定报告错误的正确位置。
+
+如果你无法使用 `perlbug` 发送报告（最可能是因为你的系统没有 `perlbug` 的发送方式），你可能可以使用此工具编写报告并将其保存到文件中，然后使用你的普通邮件客户端发送。
+
+在极端情况下，`perlbug` 在你的系统上运行效果可能不足以指导你编写错误报告。在这种情况下，你可能可以使用 `perlbug -d` 获取系统配置信息，将其包含在手动编写的错误报告中。
+
+在报告错误时，请检查以下清单：
+
+### 你运行的是什么版本的 Perl？
+
+在命令行输入 `perl -v` 即可查找。
+
+### 你运行的是最新发布的 Perl 版本吗？
+
+查看文档以确定。如果你没有使用最新发布版本，请尝试在最新稳定版本上复现你的错误。
+
+请注意，关于旧版本 Perl 错误的报告（特别是那些表明你没有测试当前 Perl 稳定版本的报告），受到构建和维护 Perl 的志愿者关注的程度可能比当前版本的错误报告少。
+
+此工具不适用于报告 Perl 5.0 之前的任何版本的错误。
+
+### 你确定你遇到的是一个错误吗？
+
+一个可以被复现的错误更有可能被修复。你对问题提供的任何见解都非常有帮助。换言之，请尝试分析问题并报告你的发现。
+
+### 你能用通俗英语描述这个错误吗？
+
+越容易理解可复现的错误，越可能被修复。你对问题提供的任何信息都将极有帮助。你可能需要使用调试器来找出哪里出了问题。
+
+如果你不确定某个错误信息是否是预期的，可能需要查阅相关文档。
+
+### 你有适当的测试用例吗？
+
+越容易复现你的错误，你的错误越可能被修复——如果无人能够复制你的问题，它可能不会被处理。
+
+一个良好的测试用例通常具有以下属性：代码短且简单；对外部命令、模块或库的依赖很少；无平台相关的代码（除非是平台特定的）；清晰简单。
+
+良好的测试用例几乎总是 Perl 测试套件的良好候选者。如果你有，请考虑编写测试用例以便将其纳入标准测试套件中。
+
+### 你包含了所有相关信息吗？
+
+确保包含具体的错误信息（如果有）。“Perl 给了一个错误”并不是一个错误信息。
+
+如果你获得了核心转储（或类似内容），你可能可以使用调试器（`dbx`、`gdb` 等）产生栈跟踪并包含在报告中。
+
+注意：除非你的 Perl 在编译时带有调试信息（通常使用 `-g`），否则栈跟踪可能很难使用，因为它可能只包含函数名而不包含参数。如果可能，请带有调试信息重新编译 Perl 并复现崩溃和栈跟踪。
+
+### 你能自己修复这个错误吗？
+
+如果是，那太棒了；带有补丁的错误报告比没有补丁的报告更容易获得关注和兴趣。请使用 `-p` 选项将补丁附加到报告中。在发送补丁时，尽可能使用 `git format-patch` 创建，尽管使用 `diff -pu` 创建的统一差异文件效果也差不多。
+
+你的补丁可能会被返回并带有修改请求，或者对你的修复请求更详细的解释。
+
+以下是创建高质量补丁的一些提示：
+
+确保补丁没有反向应用（`diff` 的第一个参数通常是原始文件，第二个参数是你修改后的文件）。在发送之前，请确保已通过 `git am` 或 `patch` 程序应用你的补丁来测试它。尝试遵循与你正要修补的代码相同的风格。确保你的补丁确实有效（如果你要修补的内容被 Perl 的测试套件覆盖，请运行 `make test`）。
+
+### 你能使用 `perlbug` 来提交报告吗？
+
+`perlbug` 会确保你的报告包含了关于你 Perl 版本的关键信息。如果你在输入报告后 `perlbug` 无法发送你的报告，你可能需要手动编写邮件，添加 `perlbug -d` 产生的输出并将其发送到相应地址。如果由于某种原因，你在系统上完全无法运行 `perlbug`，请务必包含运行 `perl -V` 产生的所有输出（注意 `V` 是大写）。
+
+无论你是使用 `perlbug` 还是手动发送邮件，请确保你的主题行（Subject）具有信息量。“a bug”并不包含信息量。“perl crashes”或“HELP!!!”也是如此。这些都没有帮助。对问题进行简要描述是可以的。
+
+### 你能使用 `perlbug` 来提交感谢信吗？
+
+是的，你可以通过使用 `-T` 选项或调用程序 `perlthanks` 来实现这一点。感谢信是好的。它能让人微笑。
+
+在完成你的任务后，请准备好等待、被告知 bug 在于你的代码中，或者可能完全没有收到回复。维护 Perl 的志愿者都是忙碌的人，所以如果你的问题是你代码中明显的 bug、难以理解的问题或现有报告的重复，你可能不会收到个人回复。
+
+如果修复你的 bug 对你来说很重要，请监控邮件列表（邮件列表经过审核的，你的信息可能需要一段时间才能显示）以及 Perl 开发版本的提交日志（commit logs），用友善的话语或提供冰的饮品来鼓励维护者。（请务必对维护者友善。骚扰或辱骂他们可能会产生与你想要相反的效果。）
+
+如果发布了新版本的 Perl 且你的 bug 仍然存在，请随时更新关于该 bug 的工单。
+
+## OPTIONS
+
+### `-a`
+
+发送报告的地址。默认是相应地址。
+
+### `-A`
+
+不向回复地址发送收到的 bug 确认。通常，只有当你是一个活跃监控 Perl 提交者以接收你信息的 Perl 维护者时，使用此选项才是合理的。
+
+### `-b`
+
+报告的正文。如果不在命令行或带有 `-f` 的文件中包含，你将获得编辑信息的机会。
+
+### `-C`
+
+不向管理员发送副本。
+
+### `-c`
+
+向该地址发送报告副本。默认是本地 Perl 管理员的地址（在构建 Perl 时记录）。
+
+### `-d`
+
+数据模式（当你重定向或管道输出时的默认值）。这会打印你的配置数据，而不发送任何内容。你可以配合 `-v` 使用获取更完整的数据。
+
+### `-e`
+
+使用的编辑器。
+
+### `-f`
+
+包含报告正文的文件。用此可以快速发送准备好的信息。
+
+### `-F`
+
+将结果输出到文件而不是作为邮件发送。这在没有直接连接互联网的机器上运行 `perlbug` 时特别有用。
+
+### `-h`
+
+打印选项的简要摘要。
+
+### `-ok`
+
+向 Perl 提交者报告在该系统构建成功。强制 `-S` 和 `-C`。强制并提供 `-s` 和 `-b` 的值。只有在无法猜测回复地址时才会提示（用于 `make`）。尊重通过 `-r` 指定的回复地址。你可以配合 `-v` 使用获取更完整的数据。只有当该系统少于 60 天时才会报告。
+
+### `-okay`
+
+与 `-ok` 相同，但它会报告较旧系统上的情况。
+
+### `-nok`
+
+报告在该系统构建失败。强制 `-C`。强制并提供 `-s` 的值，然后要求你编辑报告并说明出了什么。或者，可以使用 `-f` 提供准备好的报告。只有在无法猜测回复地址时才会提示（用于 `make`）。尊重通过 `-r` 指定的回复地址。你可以配合 `-v` 使用获取更完整的数据。只有当该系统少于 60 天时才会报告。
+
+### `-nokay`
+
+与 `-nok` 相同，但它会报告较旧系统上的情况。
+
+### `-p`
+
+包含在报告中的一个或多个补丁或其他文本附件。多个文件之间用逗号隔开。
+
+### `-r`
+
+你的回复地址。如果你不用此选项，程序将要求你确认其默认值。
+
+### `-S`
+
+不询问确认直接发送。
+
+### `-s`
+
+信息中包含的主题。如果你没有在命令行上提供，将会提示你。
+
+### `-t`
+
+测试模式。目标地址默认是相应地址。
+
+### `-T`
+
+发送感谢信而不是 bug 报告。
+
+### `-v`
+
+在报告中包含详细配置数据。
+
+## AUTHORS
+
+Kenneth Albanowski（<>），随后由 *doc* 编辑的 Gurusamy Sarathy（<>）、Tom Christiansen（<>）、Nathan Torkington（<>）、Charles F. Randall（<>）、Mike Guy（<>）、Dominic Dunlop（<>）、Hugo van der Sanden（<>）。
+
+## SEE ALSO
+
+`perl`（1）、`perldoc`（1）、`perlthanks`（1）、`perlfunc`（1）、`perldebtut`（1）、`perlhack`（1）。
+
+## BUGS
+
+未知（你猜什么被报告了？）
+
+# PERLUT
+
+## NAME
+
+`perlut` - Perl 线程教程
+
+## DESCRIPTION
+
+本教程描述了线程（称为 `ithreads`）。在这种模型中，每个线程在自己的解释器中运行，线程间的任何共享都是显式的。
+
+**NOTE**：曾经有一种旧的线程模型叫做 5005，它使用 `threads` 类。这种旧模型已知有问题，已被废弃，并在 5.10 版本中移除。强烈建议尽快将任何 5005 线程迁移到新模型。
+
+你可以通过运行 `perl -V` 并查看 `Platform` 部分查看你拥有哪种（或没有）线程方案。如果你有 `useithreads=define`，你有 `ithreads`；如果你有 `use5005threads=define`，你有 5005 threads。如果你两者都没有，说明你没有内置线程支持。如果你两者都有，那就麻烦了。
+
+`threads` 和 `threads::shared` 模块包含在 Perl 核心发行中。此外，它们作为独立的模块在 CPAN 上维护，因此你可以在那里检查任何更新。
+
+## 到底什么是线程？
+
+线程是程序中单一执行点的控制流。
+
+听起来非常像进程，不是吗？嗯，线程是进程的组成部分。每个进程至少有一个线程，而到目前，每个运行 Perl 的进程只有一个线程。但从 5.8 开始，你可以创建额外的线程。我们将展示如何做、何时做以及为什么。
+
+## 线程模型
+
+构建线程程序的基本方法有三种。你选择哪种模型取决于你的程序做什么。
+
+### Boss/Worker
+
+老板/工人模型通常有一个老板线程和一个或多个工人线程。老板线程收集或生成需要执行的任务，然后将这些任务分配给相应的工人线程。
+
+这种模型在 GUI 和服务器程序中很常见，其中主线程等待事件并将该事件传递给相应的工人线程进行处理。一旦事件传递出去，老板线程就会返回等待下一个事件。
+
+老板线程执行的工作相对较少。虽然任务执行速度不一定比任何其他方法快，但它通常具有更好的用户响应性能。
+
+### Work Crew
+
+在工作组模型（work crew model）中，会创建多个线程，它们本质上对不同的数据块执行相同的操作。它紧密地对应了经典的并行处理和向量处理器，即一组大量的处理器对许多数据块执行完全相同的操作。
+
+
+
+如果运行程序的系统会将多个线程分配到不同的处理器上，那么这种模型就特别有用。它在光线追踪或渲染引擎中也有用，单个线程可以传递中间结果以给用户提供视觉反馈。
+
+## 流水线 (Pipeline)
+
+流水线模型将任务划分为一系列步骤，并将上一步的结果传递给处理下一个步骤的线程。每个线程对每份数据执行一个操作，并将结果传递给队列中的下一个线程。
+
+如果你有多个处理器，这种模型最有意义，因为两个或多个线程将并行执行，尽管它在其他语境下也是合理的。它倾向于保持单个任务短小且简单，并允许流水线的某些部分阻塞（例如由于 I/O 或系统调用），而其他部分继续运行。如果你在不同的处理器上运行流水线的不同部分，你还可以利用每个处理器上的缓存。
+
+这种模型对于一种递归编程也非常方便，即不是让子程序调用自己，而是创建另一个线程。素数生成器和斐波那契生成器都能很好地映射到这种形式的流水线模型。（后面会介绍一个素数生成器的版本。）
+
+## Perl 线程是哪种线程？
+
+如果你有其他线程实现的经验，你可能会发现事情并不如你预期的那样简单。在处理 Perl 线程时，参考“Perl 线程不是 X 线程”（Perl Threads Are Not X Threads）对于所有 X 值都非常重要。它们不是 POSIX 线程、DecThreads、Java 的绿色线程或 Win32 线程。它们有相似之处，广泛的概念也是相同的，但如果你开始寻找实现细节，你将会感到失望或困惑。可能两者兼有。
+
+这并不是说 Perl 线程与以前过的任何东西都完全不同。它们并非如此。Perl 的线程模型很大程度上取决于其他线程模型，特别是 POSIX。尽管 Perl 不是 C 语言，但 Perl 线程不是 POSIX 线程。所以如果你发现自己正在寻找栈或线程优先级，那么是时候后退一步，思考你想做什么，以及 Perl 如何实现它。
+
+然而，重要的是，除非你操作系统的线程允许，否则 Perl 线程无法魔法般地完成某些工作。所以如果你的系统在 `sleep()` 时阻塞了整个进程，Perl 通常也会。
+
+`Perl` 线程是不同的.
+
+## 线程安全模块 (Thread-Safe Modules)
+
+线程的引入显著改变了 Perl 的内部结构。对于编写 XS 代码或外部库模块的人来说，这产生了影响。然而，由于 Perl 数据默认不在线程间共享，Perl 模块很有可能是线程安全的，或者可以很容易地变为线程安全。未标记为线程安全的模块在用于生产代码之前，应该进行测试或代码审查。
+
+并不是你可能使用的所有模块都是线程安全的，除非文档另有说明，否则你应该始终假设模块是不安全的。这包括作为核心部分分发的模块。线程是一个相对较新的特性，尽管如此，某些标准模块并不是线程安全的。
+
+即使一个模块是线程安全的，也不意味着该模块已经针对线程的良好工作进行了优化。一个模块可能被重写以利用线程化 Perl 中的新功能，从而提高线程环境下的性能。
+
+如果你出于某种原因在使用非线程安全的模块，你可以通过只在一个线程中使用它来保护自己。如果你需要多个线程访问此类模块，你可以使用信号量（semaphores）和大量的编程节律来控制对它的访问。信号量在 `semaphores` 中介绍。
+
+参见 `系统库的安全性`（Thread-Safety of System Libraries）。
+
+## 线程基础 (Thread Basics)
+
+`threads` 模块提供了编写线程程序所需的基本函数。在接下来的章节中，我们将涵盖基础知识，向你展示创建线程程序需要做什么。之后，我们将概述 `threads` 模块的一些让线程编程变得更简单的特性。
+
+### 基础线程支持
+
+线程支持是一个 Perl 编译选项。它是你在本地构建 Perl 时开启或关闭的，而不是在编译程序时。如果你的 Perl 编译时没有启用线程支持，那么任何使用线程的尝试都会失败。
+
+你的程序可以使用 `Config` 模块来检查线程是否启用。如果你的程序没有线程无法运行，你可以说类似：
+
+```perl
+use Config; $Config{useithreads} or die('需要重新编译 Perl 以运行此程序。');
+```
+
+一个使用可能线程模块的可能线程化程序可能有如下代码：
+
+```perl
+use Config; use MyMod; BEGIN { if ($Config{useithreads}) { # 我们有线程 require MyMod_threaded; import MyMod_threaded; } else { require MyMod_unthreaded; import MyMod_unthreaded; } } }
+```
+
+由于在有线程和无线程的情况下运行的代码通常非常相似，最好将线程特定的代码隔离在它自己的模块中。在我们上面的示例中，`MyMod_threaded` 就是这样的存在，并且只有在我们运行在线程化 Perl 上时才会导入它。
+
+### 关于示例的说明
+
+在实际情况下，应该注意在程序退出之前所有线程都已执行完毕。为了简单起见，这些示例**没有**采取这样做。原样运行这些示例将产生错误信息，通常是因为程序退出时仍有线程在运行。你不应该被这种情况。
+
+### 创建线程 (Creating Threads)
+
+`threads` 模块提供了创建新线程所需的工具。像任何其他模块一样，你需要告诉 Perl 你想使用它；`use threads;` 会导入创建基础线程所需的所有部分。
+
+创建线程最简单直接的方法是使用 `create()`：
+
+```perl
+use threads; my $thr = threads->create(\&sub1); sub sub1 { print("在线程中"); }
+```
+
+`create()` 方法接收一个子程序的引用并创建一个在引用的子程序中开始执行的新线程。控制权随后传递给子程序和调用者。
+
+如果你需要，程序可以在线程启动时将参数传递给子程序。只需将参数列表作为 `threads->create()` 调用的一部分即可，如下：
+
+```perl
+use threads; my $Param3 = 'foo'; my $thr1 = threads->create(\&sub1, 'Param 1', 'Param 2', $Param3); my @ParamList = (42, 'Hello', 3.14); my $thr2 = threads->create(\&sub1, @ParamList); my $thr3 = threads->create(\&sub1, qw(Param1 Param2 Param3)); sub sub1 { my @Inboundaters = @_; print("在线程中"); print('收到参数 >',join('<>',@Inboundaters), "<"); }
+```
+
+最后一个示例说明了线程的另一个特性。你可以使用相同的子程序派生多个线程。每个线程执行相同的子程序，但在独立的线程和可能的独立的参数环境中执行。
+
+`new()` 是 `create()` 的同义词。
+
+### 等待线程退出 (Waiting For A Thread To Exit)
+
+由于线程也是子程序，它们可以返回值。等待线程退出并提取它可能返回的值，你可以使用 `join()` 方法：
+
+```perl
+use threads; my ($thr) = threads->create(\&sub1); my @ReturnData = $thr->join(); print('线程返回：', join(', ', @ReturnData), "\n"); sub sub1 { return ('五十六', 'foo', 2); }
+```
+
+在上面的示例中，`join()` 方法在线程结束时立即返回。除了等待线程完成并收集线程可能返回的任何外，`join()` 还会对该线程执行任何必要的操作系统清理工作。这种清理可能非常重要，特别是对于创建大量线程的长时间运行程序。如果你不需要返回值，也不想等待线程完成，你应该调用 `detach()` 方法，如接文所述。
+
+注意：在上面的示例中，线程返回一个列表，因此要求线程创建的调用必须在列表上下文中进行（即 `my ($thr)`）。关于线程上下文和返回值的更多信息，请参阅 `threads` 节中的 `$thr->*join()` 以及 `threads` 节中的 `THREAD CONTEXT`。
+
+### 忽略线程
+
+`join()` 做了三件事：等待线程退出、对其进行清理，并返回线程可能产生的任何数据。但如果你对线程的返回值不感兴趣，而且真的不在乎线程何时完成呢？你只是想让线程在完成后被清理掉就行了。
+
+在这种情况下，你使用 `detach()` 方法。一旦线程被分离（detached），它将一直运行直到结束；然后 Perl 将自动对其进行清理。
+
+```
+use threads; my $thr = threads->create(\&sub1); # 创建线程
+$thr->detach(); # 现在我们正式地不再关心了
+sleep(15); # 让线程运行一段时间
+sub sub1 { my $count = 0; while (1) { $count++; print("\$count is $count\n"); (1); } }
+```
+
+一旦线程被分离，它可能就无法被合并（joined），并且它可能产生的任何返回数据（如果它已完成并在等待合并）都会丢失。`detach()` 也可以作为类方法调用，允许线程自己分离：
+
+```
+use threads; my $thr = threads->create(\&sub1); sub sub1 { threads->detach(); # 执行更多工作 }
+```
+
+### 进程和线程的终止
+
+使用线程时，必须小心确保它们都有机会运行完成，假设这是你所希望的。
+
+终止进程的操作将终止*所有*运行中的线程。`die()` 和 `exit()` 具有这种属性，而且当主线程退出时，perl 会执行退出，可能是隐式地通过运行代码末尾的，即使这不是你所愿的。
+
+作为这种情况的示例，这段代码打印了消息 `Perl exited with active threads: 2 running and unjoined`：
+
+```
+use threads; my $thr1 = threads->new(\&thrsub, "test1"); my $thr2 = threads->new(\&thrsub, "test2"); sub thrsub { my ($ssage) = @_; sleep 1; print "thread $ssage\n"; }
+```
+
+但当末尾添加以下行时：
+
+```
+$thr1->join(); $thr2->join();
+```
+
+它会打印两行输出，这是一个可能更有用的结果。
+
+## 线程与数据
+
+现在我们已经介绍了线程的基础知识，是时候讨论下一个主题了：数据。线程为数据访问引入了一些复杂性，非线程程序完全不需要担心这些。
+
+### 共享数据与非共享数据
+
+Perl `ithreads` 与旧的 5.005 风格线程，或者说与大多数其他线程系统的最大的区别在于，默认情况下没有数据是共享。当创建一个新的 Perl 线程时，与当前线程相关的所有数据都会复制到新线程，并随后成为该新线程的私有！这感觉类似于 Unix 进程 fork 时发生的情况，不同的是在这种情况下，数据只是被复制到同一进程内内存的不同部分，而不是发生了真实的 fork。
+
+然而，为了利用线程，通常希望线程之间至少共享某些数据。这是通过 `threads::shared` 模块和 `:shared` 属性实现的：
+
+```
+use threads; use threads::shared; my $foo :shared = 1; my $bar = 1; threads->create(sub { $foo++; $bar++; })->join(); print("$foo\n"); # 因为 $foo 是共享的，所以打印 2 print("$bar\n"); # 因为 $bar 不是共享的，所以打印 1
+```
+
+在共享数组的情况下，数组的所有元素都是共享的；对于共享哈希（hash），所有的键和值都是共享的。这对赋值给共享数组和哈希元素的内容产生了限制：只允许简单值或对共享变量的引用——这样做是为了防止私有变量意外变成共享。糟糕的赋值会导致线程死亡。例如：
+
+```
+use threads; use threads::shared; my $var = 1; my $svar :shared = 2; my %hash :shared; ... create so threads ... $hash{a} = 1; # 所有线程都能看到 exists($hash{a}) # 以及 $hash{a} == 1 $hash{a} = $var; # 好的 - 按值拷贝：效果与之前的 $hash{a} = $svar; # 好的 - 按值拷贝：效果与之前的 $hash{a} = \$svar; # 好的 - 对共享变量的引用 $hash{a} = \$var; # 这会导致死亡 delete($hash{a}); // 好的 - 所有线程都会看到 !exists($hash{a})
+```
+
+注意，共享变量保证了如果两个或多个线程尝试修改它，内部状态不会被损坏（前提是操作是受保护的）。但是，在此之后没有更多保证，正如下一节所示。
+
+### 线程陷阱：竞态条件
+
+虽然线程带来了一套实用的工具，但也带来了一些陷阱。一个陷阱就是竞态条件：
+
+```
+use threads; use threads::shared; my $x :shared = 1; my $thr1 = threads->create(\&sub1); my $thr2 = threads->create(\&sub2); $thr1->join(); $thr2->join(); print("$x\n"); sub sub1 { my $foo = $x; $x = $foo + 1; } sub sub2 { my $bar = $x; $x = $bar + 1; }
+```
+
+你认为 `$x` 会是多少？遗憾的答案是*取决于情况*。`sub1()` 和 `sub2()` 都访问 `$x`，一次读取，一次写入。取决于线程实现的调度算法到月球相位，`x` 可能是 2 或 3。
+
+竞态条件是由对共享数据的非同步访问引起的。如果没有显式的同步，无法确定在访问数据和更新数据之间没有发生任何 own。即使是这段简单的代码也有出错的可能性：
+
+```
+use threads; my $x :shared = 2; my $y :shared; my $z :shared; my $thr1 = threads->create(sub { $y = $x; $x = $y + 1; }); my $thr2 = threads->create(sub { $z = $x; $x = $z + 1; }); $thr1->join(); $thr2->join();
+```
+
+两个线程都访问 `$x`。每个线程都可能在任何一点被中断，或者以任何顺序执行。在最后，`$x` 可能是 3 或 4，且 `$y` 和 `$z` 都可能是 2 或 3。
+
+即使是 `$x += 5` 或 `$x++` 也不能保证原子性。每当你的程序访问可以其他线程访问的数据或资源时，你必须采取措施协调访问，否则会导致数据不一致和竞态条件。注意，Perl 会保护其内部免受你的竞态条件的影响，但它不会保护你。
+
+## 同步与控制
+
+Perl 提供了多种机制来协调线程与其数据之间的交互，以避免竞态条件等。其中某些设计是为了类似于 `pthreads` 等线程库中常用的技术；另一些是 Perl 特有的。通常，标准技术非常笨拙且难以实现（例如条件等待）。尽可能使用 Perl 技术（如队列）更容易，它们消除了很多困难的工作。
+
+### 控制访问：lock()
+
+`lock()` 函数获取一个共享变量并对其加锁。在持有锁的线程解锁之前，任何其他线程不能锁定该变量。当锁定线程退出包含 `lock()` 调用的块时，会自动解锁。使用 `lock()` 非常简单：这个示例有多个线程并行执行一些计算，并偶尔更新运行总和：
+
+```
+use threads; use threads::shared; my $total :shared = 0; sub calc { while (1) { my $result; # (... do so calculations and set $result ...) { lock($total); # Block until we obtain the lock $total += $result; } # Lock implicitly released at end of scope last if $result == 0; } } my $thr1 = threads->create(\&calc); my $thr2 = threads->create(\&calc); my $thr3 = threads->create(\&calc); $thr1->join(); $thr2->join(); $thr3->join(); print("total=$total\n"); }
+```
+
+`lock()` 会阻塞线程，直到被锁的变量可用为止。当 `lock()` 返回时，你的线程可以确定在包含该锁的块退出之前，其他线程都无法锁定该变量。
+
+需要注意的是，锁并不会阻止对相关变量的访问，只会阻止锁定的尝试。这符合 Perl 长期以来的“礼貌编程”传统，以及 `flock()` 为提供的建议性文件锁定。
+
+你可以锁定数组和哈希表，也可以锁定标量。然而，锁定数组不会阻塞后续对数组元素的锁定，只会阻塞对数组本身的锁定尝试。
+
+锁是递归的，因此线程多次锁定同一个变量是允许的。锁一直持续到该变量的最外层 `lock()` 离开作用域为止。例如：
+
+
+
+```perl
+my $x :shared;
+doit();
+
+sub doit {
+    {
+        {
+            lock($x);    # Wait for lock
+            lock($x);    # NOOP - we already have the lock
+            {
+                lock($x);    # NOOP
+                {
+                    lock($x);    # NOOP
+                    lockit_so_more();
+                }
+            }
+        }
+        # *** Implicit unlock here ***
+    }
+}
+
+sub lockit_so_more {
+    lock($x);    # NOOP
+}
+# Nothing happens here
+```
+
+注意，没有`unlock()`函数——解锁变量的唯一方法是让它离开作用域。
+
+锁既可以保护被锁变量中包含的数据，也可以用来保护其他内容，例如一段代码。在后一种情况下，相关变量并不持有任何有用数据，仅为了被锁的目的而存在。在这方面，该变量的行为类似于传统线程库中的文本和基本信号量。
+
+## 线程陷阱：死锁
+
+锁是同步数据访问的方便工具，正确使用它们是安全共享数据的关键。不幸的是，锁并非没有危险，特别是当涉及到多个锁时。考虑以下代码：
+
+```perl
+use threads;
+my $x :shared = 4;
+my $y :shared = 'foo';
+my $thr1 = threads->create(sub {
+    lock($x);
+    sleep(20);
+    lock($y);
+});
+my $thr2 = threads->create(sub {
+    lock($y);
+    sleep(20);
+    lock($x);
+});
+```
+
+这个程序可能会一直挂起，直到你杀死它为止。唯一不会挂起的方法是两个线程中的其中一个先获取了两个锁。一个保证会挂起的版本会更复杂一些，但原理是相同的。
+
+第一个线程将获取`$x`的锁，然后在经过一段暂停后（在此期间，第二个线程可能已经有时间执行了某些操作），尝试获取`$y`的锁。与此同时，第二个线程获取`$y`的锁，稍后尝试获取`$x`的锁。两个线程的第二次锁定尝试都将被阻塞，各自等待对方释放锁。
+
+这种状态被称为死锁，每当两个或多个线程尝试获取它们所拥有的资源的锁时，就会发生。每个线程都会阻塞，等待另一个线程释放资源的锁。然而，这种情况永远不会发生，因为持有资源的线程本身正在等待锁被释放。
+
+处理这类问题有多种方法。最好的方法始终让所有线程按照完全相同的顺序获取锁。例如，如果你锁定变量`$x`、`$y`和`$z`，始终在锁定`$y`之前锁定`$x`，在锁定`$z`之前锁定`$y`。最好缩短持有锁的时间以最小化死锁风险。
+
+下面描述的其他同步原语可能会遇到类似的问题。
+
+## 队列：数据传递
+
+队列是一种特殊的线程安全对象，允许你从一端放入数据并从另一端取出数据，而无需担心同步问题。它们非常直观，看起来如下：
+
+```perl
+use threads;
+use Thread::Queue;
+my $DataQueue = Thread::Queue->new();
+my $thr = threads->create(sub {
+    while (my $DataElent = $DataQueue->dequeue()) {
+        print("Popped $DataElent off the queue\n");
+    }
+});
+$DataQueue->enqueue(12);
+$DataQueue->enqueue("A", "B", "C");
+sleep(10);
+$DataQueue->enqueue(undef);
+$thr->join();
+```
+
+你通过`Thread::Queue->new()`创建队列。然后你可以使用`enqueue()`在末尾添加标量列表，并使用`dequeue()`从头部弹出标量。队列没有固定大小，可以根据需要增长以容纳推入的所有内容。
+
+如果队列为空，`dequeue()`会阻塞直到另一个线程推入内容。这使得队列成为事件循环和其他线程间通信的理想选择。
+
+## 信号量：同步数据访问
+
+信号量是一种通用的锁定机制。在最基础的形式下，它们的行为非常像可锁标量，不同在于它们不能持有数据，并且必须显式解锁。在高级形式下，它们充当计数器，允许多个线程同时进入。
+
+### 基础信号量
+
+信号量有两个方法：`down()`和`up()`：`down()`减少计数，而`up()`增加计数。如果`down()`尝试将计数减为负，它将阻塞直到计数足够大。这个程序提供了一个快速演示：
+
+```perl
+use threads;
+use Thread::Semaphore;
+my $semaphore = Thread::Semaphore->new();
+my $GlobalVariable :shared = 0;
+$thr1 = threads->create(\&sample_sub);
+$thr2 = threads->create(\&sample_sub);
+$thr3 = threads->create(\&sample_sub);
+
+sub sample_sub {
+    my $Nuer = shift(@_);
+    my $TryCount = 10;
+    while ($TryCount--) {
+        $semaphore->down();
+        my $LocalCopy = $GlobalVariable;
+        print("$TryCount left for $GlobalVariable\n");
+        $GlobalVariable++;
+        $semaphore->up();
+    }
+}
+
+$thr1->join();
+$thr2->join();
+$thr3->join();
+```
+
+### 高级信号量
+
+默认情况下，信号量的行为像锁，一次只一个线程`down()`它。然而，信号量还有其他用途。每个信号量都关联有一个计数器。默认情况下，信号量创建时计数设置为 1，`down()`将计数减 1，而`up()`增加 1。然而，我们可以仅通过传递不同的值来覆盖任何或所有默认值：
+
+```perl
+use threads;
+use Thread::Semaphore;
+my $semaphore = Thread::Semaphore->(5);
+my $thr1 = threads->create(\&sub1);
+my $thr2 = threads->create(\&sub1);
+
+sub sub1 {
+    $semaphore->(5);    # 减少计数五次
+    # 在此处执行操作
+    $semaphore->(5);    # 增加计数五次
+}
+$thr1->detach();
+$thr2->detach();
+```
+
+当然，问题是，为什么要这样做？为什么要创建一个初始计数不是 1 的信号量，或者为什么要减少或增加超过 1 个？答案是资源可用性。许多你想要管理访问的资源可以安全地被多个线程同时使用。
+
+例如，让我们一个 GUI 驱动的程序。它有一个信号量用于同步对显示器的访问，因此一次只有一个线程在绘图。这很方便，但当然，你不希望任何线程在设置妥当之前开始绘图。在这种情况下，你可以创建一个计数设置为 0 的信号量，并在准备好绘图时对其调用`up()`。
+
+计数大于 1 的信号量也用于建立配额。例如，假设你有一数量可以同时进行 I/O 操作的线程。你不希望所有线程同时进行读取或写入，因为这可能会导致你的 I/O 通道拥塞，或者耗尽进程的文件句柄配额。你可以使用初始化为任何时刻希望的并发 I/O 请求（或打开的文件）数量的信号量，并让你的线程静地自行阻塞和取消阻塞。
+
+在线程需要一次检出或返回多个资源的情况下，较大的增量或减量操作非常有用。
+
+## 等待条件
+
+`cond_wait()`和`cond_signal()`函数可以与锁结合使用，通知协作线程资源已可用。它们在用法上与`pthreads`中的函数非常相似。然而，对于大多数用途，队列的使用更简单、更直观。更多细节请参见`threads::shared`。
+
+## 放弃控制
+
+在某些情况下，你可能会发现让线程显式地放弃 CPU 给另一个线程是有用的。你可能正在进行某些处理器密集型操作，并希望确保用户界面线程被频繁调用。无论如何，在某些情况下你可能希望一个线程放弃处理器。
+
+Perl 的线程包提供了实现此点的`yield()`函数。`yield()`非常简单直观，其工作方式如下：
+
+```perl
+use threads;
+
+sub loop {
+    my $thread = shift;
+    my $foo = 50;
+    while($foo--) {
+        print("In thread $thread\n");
+    }
+    threads->yield();
+    $foo = 50;
+    while($foo--) {
+        print("In thread $thread\n");
+    }
+}
+
+my $thr1 = threads->create(\&loop, 'first');
+my $thr2 = threads->create(\&loop, 'second');
+my $thr3 = threads->create(\&loop, 'third');
+```
+
+重要的是，`yield()`只是放弃 CPU 的一个提示，实际发生什么取决于你的硬件、操作系统和线程库。在许多操作系统上，`yield()`是一个空操作（no-op）。因此，需要注意的是，人们不应该围绕`yield()`调用来构建线程调度。它在你的平台上可能有效，但在另一个平台上可能就不起作用。
+
+# 通用线程实用例程
+
+我们已经涵盖了 Perl 线程包的核心部分，有了这些工具，你应该已经走在了编写线程代码和包的道路。还有一些实用的小组件它们没有真正适合任何其他地方。
+
+## 我在哪个线程中？
+
+`threads->self()`类方法为程序提供了一种获取代表当前所在线程对象的方法。你可以像使用线程创建返回的对象一样使用这个对象。
+
+## 线程 ID
+
+`tid()`是一个线程对象方法，返回该对象所代表线程的 ID。线程 ID 是整数，程序中的主线程为 0。目前，Perl 为程序中创建的每个线程分配一个唯一的 TID，为创建的第一个线程分配 TID 1，并且每创建一个新线程 TID 增加 1。当作为类方法使用时，线程可以使用`threads->tid()`来获取它自己的 TID。
+
+## 这些线程是同一个吗？
+
+`equal()`方法接受两个线程对象，如果对象代表同一个线程，则返回真，否则返回假。
+
+线程对象还重载了`==`比较运算符，因此你可以像处理普通对象一样对它们进行比较。
+
+## 哪些线程正在运行？
+
+`threads->list()`返回一个线程对象列表，对应每个正在运行且未分离（detached）的线程。这对于许多事情很有用，包括在程序结束时进行清理（当然是从主 Perl 线程执行）：
+
+```perl
+# Loop through all the threads
+foreach my $thr (threads->list()) {
+    $thr->join();
+}
+```
+
+如果在主 Perl 线程结束时某些线程尚未完成运行，Perl 将发出警告并退出（die），因为 Perl 在其他线程运行时无法进行自身清理。
+
+注意：主 Perl 线程（线程 0）处于分离状态，因此不会出现在`threads->list()`返回的列表中。
+
+# 完整示例
+
+还感到困惑吗？现在是用一个示例程序来展示我们涵盖的内容了。这个程序使用线程寻找 pri nuers。
+
+```perl
+1 #!/usr/bin/perl
+2 # pri-pthread, courtesy of Tom Christiansen
+3
+4 use strict;
+5 use warnings;
+6
+7 use threads;
+8 use Thread::Queue;
+9
+10 sub check_num {
+11     my ($upstream, $cur_pri) = @_;
+12     my $kid;
+13     my $downstream = Thread::Queue->new();
+14     while (my $num = $upstream->dequeue()) {
+15         next unless ($num % $cur_pri);
+16         if ($kid) {
+17             $downstream->enqueue($num);
+18         } else {
+19             print("Found pri: $num\n");
+20             $kid = threads->create(\&check_num, $downstream, $num);
+21             if (! $kid) {
+22                 warn("Sorry. Ran out of threads.\n");
+23                 last;
+24             }
+25         }
+26     }
+27     if ($kid) {
+28         $downstream->enqueue(undef);
+29         $kid->join();
+30     }
+31 }
+32 my $stream = Thread::Queue->new();
+33 3..1000;
+34 check_num($stream, 2);
+```
+
+这是实现线程最简单的方法，也是大多数操作系统启动线程的方式。它的缺点是，由于操作系统对线程一无所知，如果其中一个线程阻塞，所有线程都会阻塞。典型的阻塞活动包括大多数系统调用、大多数 I/O 操作以及如`sleep()`等操作。
+
+内核线程是线程演化的下一步。操作系统感知内核线程，并对它们进行特殊处理。内核线程与用户态线程之间的主要区别在于阻塞。使用内核线程时，导致单个线程的操作不会阻塞其他线程。而在用户态线程中并非如此，内核会在进程级别上进行阻塞，而不是线程级别。
+
+这是一个巨大的进步，可以为多线程程序带来相对于非多线程程序显著的性能提升。例如，执行 I/O 操作时阻塞的线程不会阻塞正在执行其他任务的线程。尽管如此，无论系统有多少个 CPU，每个进程仍然同时只有一个线程在运行。
+
+由于内核线程可以在任何时候中断线程，它们将揭示你在程序中可能做的某些隐式锁假设。例如，诸如`$x = $x + 2`这样简单的操作，如果`$x`对其他线程可见，在内核线程下其行为可能是不可预测的，因为在从右侧获取值到存储新值之间，另一个线程可能已经更改了`$x`。
+
+多处理器内核线程是线程支持的最后一步。在具有多个 CPU 的机器上，多处理器内核线程允许操作系统调度两个多个线程在不同的 CPU 上同时运行。
+
+这可以为你的多线程程序带来巨大的性能提升，因为同一时刻会有多个线程执行。然而，作为权衡，任何在基础内核线程可能未显示的那些棘手的同步问题都会剧烈出现。
+
+除了操作系统参与线程的级别不同外，不同的操作系统（以及特定操作系统的不同线程实现）以不同的方式为线程分配 CPU 周期。
+
+协作多任务系统在发生两种情况之一时会让运行线程放弃控制。如果线程调用了让函数，它会放弃控制；如果线程执行了会导致阻塞的操作（例如执行 I/O），它也会放弃控制。在协作多任务实现中，一个线程如果愿意，可以饿死所有其他线程的 CPU。
+
+抢占式多任务系统会定期中断线程，由系统决定下一个运行哪个线程。在抢占式多任务系统中，一个线程通常不会垄断 CPU。
+
+在某些系统中，可以同时运行协作线程和抢占式线程。（例如，以实时优先级运行的线程通常表现为协作式，而以普通优先级运行的线程则表现为抢占式。）
+
+大多数现代操作系统现在支持抢占式多任务。
+
+# 性能考虑
+
+在比较 Perl 的`ithreads`与其他线程模型时，需要记住的主要点是：对于创建的每个新线程，必须获取父线程所有变量和数据的完整拷贝。因此，线程创建是非常昂贵的，无论从内存使用还是创建花费的时间来看。减少这些成本的理想方法是拥有数量较少的长寿线程，并且它们都在较早阶段创建（在基础线程积累过多数据之前）。当然，这并不总是可能的，因此必须做出妥协。然而，在线程创建后，它的性能和额外的内存使用与普通代码应该差异不大。
+
+另外注意，在当前的实现下，共享变量使用的内存稍多，速度也稍慢。
+
+# 进程级变更
+
+注意，虽然线程本身是独立的执行线程，且除非显式共享，否则 Perl 数据是线程私有的，但线程可以影响进程范围的状态，从而影响所有线程。
+
+最常见的例子是使用`chdir()`更改当前工作目录。一个线程调用`chdir()`，所有线程的工作目录都会发生改变。
+
+更剧烈的进程范围变更例子是`chroot()`：所有线程的根目录都会发生改变，且没有线程可以撤销它（与`chdir()`相）。
+
+进程范围变更的进一步示例还包括`umask()`以及更改 uid 和 gid。
+
+在考虑混合使用`fork()`和线程吗？请躺下等这种感觉过去。请注意`fork()`的语义在不同平台之间是不同的。例如，某些 Unix 系统会将所有当前线程拷贝到子进程中，而另一些则只复制调用`fork()`的线程。你已经收到警告了！
+
+同样，混合信号和线程可能会出现问题。实现取决于平台，即使是 POSIX 语义也可能不是你预期的（而且 Perl 甚至没有给你提供完整的 POSIX API）。例如，没有办法保证发送到多线程 Perl 应用程序的信号会被任何特定线程拦截。（不过，最近添加的功能确实提供了在线程之间发送信号的能力。更多细节请参阅 threads 中的“THREAD SIGNALLING”。）
+
+# 系统库的线程安全
+
+各种库调用是否是线程安全的， Perl 的控制之外的。经常遭受非线程安全的调用包括：`localti()`、`gmti()`、获取用户、组和网络信息的函数（如`getgrent()`、`gethostent()`、`getnetent()`等）、`readdir()`、`rand()`和`srand()`。通常，依赖于全局外部状态的调用都是。
+
+如果编译 Perl 的系统具有此类调用的线程安全变体，它们将被使用。在此之外，Perl 取决于调用的线程安全性或不安全性。请咨询你的 C 文档。
+
+在某些平台上，如果缓冲区太小，线程安全的库接口可能会失败（例如，用户数据库可能很大，而重入接口可能需要携带快照）。Perl 会从小缓冲区开始，不断重试并增长结果。如果这种无限制增长对安全或内存消耗不利，你可以重新定义`PERL_REENTANT_MAXSIZE`为允许的最大字节数。
+
+## 结论
+
+一个完整的线程教程可以写一本书（事实上也有），但通过我们在这里介绍的内容，你已经在成为多线程 Perl 专家道路上了。
+
+# 另见
+
+[threads 的 POD 文档](https://example.org/threads)
+
+CPAN 上的最新版本
+
+
+
+[`threads::shared` 的 POD 文档](https://example.org/threads%3A%3shared)
+
+CPAN 上的最新版本
+
+Perl 线程邮件列表
+
+## 参考文献
+
+感谢 `Jürgen Christoffel` 提供的简短参考文献：
+
+### 入门读物
+
+`Birrell, Andrew D. An Introduction to Programming with Threads. Digital Equipnt Corporation, 1989, DEC-SRC Research Report #35`（高度推荐）
+
+`Robbins, Kay. A., and Steven Robbins. Practical Unix Programming: A Guide to Concurrency, Comnication, and Multithreading. Prentice-Hall, 1996.`
+
+`Lewis, Bill, and Daniel J. Berg. Multithreaded Programming with Pthreads. Prentice Hall, 1997, ISBN 0-13-443698-9`（关于线程良好的介绍）。
+
+`Nelson, Greg (editor). Systems Programming with Modula-3. Prentice Hall, 1991, ISBN 0-13-590464-1.`
+
+### OS 相关
+
+`Boykin, Joseph, David Kirschen, Alan Langerman, and Susan LoVerso. Programming under Mach. Addison-Wesley, 1994, ISBN 0-201-52739-1.`
+
+`Nichols, Bradford, Dick Buttlar, and Jacqueline Proulx Farrell. Pthreads Programming. O'Reilly & Associates, 1996, ISBN 156592-115-1`（涵盖了 POSIX 线程）。
+
+`Tanenbaum, Andrew S. Distributed Operating Systems. Prentice Hall, 1995, ISBN 0-13-219908-4`（非常棒的教材）。
+
+`Silberschatz, Abraham, and Peter B. Galvin. Operating System Concepts, 4th ed. Addison-Wesley, 1995, ISBN 0-201-59292-4.`
+
+#### 其他参考文献
+
+`Arnold, Ken and Jas Gosling. The Java Programming Language, 2nd ed. Addison-Wesley, 1998, ISBN 0-201-31006-6.`
+
+`comp.programming.threads` FAQ, <>
+
+`Le Sergent, T. and B. Berthomieu. ``Incrental MultiThreaded Garbage Collection on Virtually Shared Memory Architectures'' in Memory Managent: Proc. of the International Workshop IWMM 92, St. Malo, France, Septeer 1992, Yves Bekkers and Jacques Cohen, eds. Springer, 1992, ISBN 3540-55940-X`（真实的线程应用）。
+
+`Artur Bergman, ``Where Wizards Fear To Tread'', June 11, 2002, <>`
+
+#### 致谢
+
+感谢（不分先后）`Chaim Frenkel`, `Steve Fink`, `Gurusamy Sarathy`, `Ilya Zakharevich`, `Benjamin Sugars`, `Ju.rgen Christoffel`, `Joshua Pritikin`, 以及 `Alan Burlison` 在事实核查和润色本文方面提供的帮助。非常感谢 `Tom Christiansen` 重写了优先级生成器。
+
+## 作者
+
+`Dan Sugalski` <<gt>
+
+由 `Arthur Bergman` 稍微修改以适应新的线程模型/模块。
+
+由 `Jo.rg Walter` <<gt> 稍作调整，使 Perl 代码的线程安全描述更加简洁。
+
+由 `Elizabeth Mattijsen` <<gt> 稍微调整顺序，减少了对 `yield()` 的强调。
+
+#### 版权
+
+本文最初版本发表于《The Perl Journal》10 期，版权所有 1998 The Perl Journal。经 `Jon Orwant` 和 The Perl Journal 许可提供。本文档可以与 Perl 本身相同的条款分发。
+
+---
+
+# PERLTIE
+
+#### way (NAME)
+
+`perltie` - 如何在简单变量中隐藏对象类
+
+#### 摘要 (SYNOPSIS)
+
+`tie VARIABLE, CLASSNAME, LIST $object = tied VARIABLE untie VARIABLE`
+
+#### 描述 (DESCRIPTION)
+
+在 Perl 5.0 版本发布之前，程序员可以使用 `dbmopen()` 将标准 Unix (3x) 格式的磁盘数据库神奇地连接到程序中的 `%HASH`。然而，他们的 Perl 要么是用某个特定的 `dbm` 库编译的，要么是用另一个，两者兼不可，你无法将这种机制扩展到其他包或变量类型。
+
+现在你可以做到了。
+
+`tie()` 函数将变量绑定到一个类（包），该类将为该变量提供访问方法的实现。一旦完成这一魔法操作，访问绑定的变量会自动触发相应类中的方法调用。类的复杂性隐藏在魔法方法调用之后。方法名使用全大写，这是 Perl 使用的一种约定，用于表示它们是隐式调用而非显式调用的——就像 `BEGIN()` 和 `END()` 函数一样。
+
+在 `tie()` 调用中，`VARIABLE` 是要施魔法的变量名。`CLASSNAME` 是实现正确类型对象的类名。`LIST` 中的任何额外参数将传递给该类相应的构造方法——即 `TIESCALAR()`、`TIEARRAY()`、`TIEHASH()` 或 `TIEHANDLE()`。（通常这些参数类似于传递给 C 语言 `dbminit()` 函数的参数）。由 `new` 方法返回的对象也会由 `tie()` 函数返回，如果你想访问 `CLASSNAME` 中的其他方法，这将会非常有用。（你实际上不需要返回一个正确“类型”的引用（例如 HASH 或 `CLASSNAME`），只要它是一个经过正确加封（blessed）的对象即可。）你还可以使用 `tied()` 函数获取底层对象的引用。
+
+与 `dbmopen()` 不同，`tie()` 函数不会为你 `use` 或 `require` 模块——你需要自己显式地这样做。
+
+### 绑定标量 (Tying Scalars)
+
+实现绑定标量的类应该定义以下方法：`TIESCALAR`、`FETCH`、`STORE`，以及可能的 `UNTIE` 和/或 `DESTROY`。
+
+让我们逐一查看，以一个标量绑定类为例，允许用户执行如下操作：
+
+`tie $his_speed, 'Nice', getppid(); tie $my_speed, 'Nice', $$;`
+
+现在，每当其中一个变量被访问时，其当前的系统优先级就会被检索并返回。如果这些变量被设置，进程的优先级就会发生改变！
+
+我们将使用 `Jarkko Hietaniemi` <> 的 `BSD::Resource` 类（未包含）来访问系统中的 `PRIO_PROCESS`、`PRIO_MIN` 和 `PRIO_MAX` 常量，以及 `getpriority()` 和 `setpriority()` 系统调用。这里是类的开头。
+
+```
+package Nice; use Carp; use BSD::Resource; use strict; $Nice::DEBUG = 0 unless defined $Nice::DEBUG; own
+```
+
+`TIESCALAR 类名, LIST`
+
+这是该类的构造方法。它预期返回一个新创建的标量（可能是匿名的）加封引用。
+
+```perl
+sub TIESCALAR {
+    my ($class, $var, @list) = @_;
+    my $pid = $list[0] || $$;
+    return bless($pid, $class);
+}
+```
+
+```perl
+sub FETCH {
+    my ($class, $var) = @_;
+    my $nicety = getpriority(PRIO_PROCESS, $$);
+    if ($!) {
+        confess "getpriority failed: $!";
+    }
+    return $nicety;
+}
+```
+
+*(注：由于原文中方法的代码实现不完整，我已根据文档上下文格式化了可用逻辑。)*
+
+实现绑定普通数组（tied ordinary array）的类应该定义以下方法：`TIEARRAY`、`FETCH`、`STORE`、`FETCHSIZE`、`STORESIZE`、`CLEAR` 以及可能的 `UNTIE` 和/或 `DESTROY`。
+
+`FETCHSIZE` 和 `STORESIZE` 用于提供 `$array` 以及相应的 `scalar(@array)` 访问。
+
+如果要在 perl 操作符通过对应的（但小写的）`na` 在绑定数组上操作，则需要 `POP`、`PUSH`、`SHIFT`、`UNSHIFT`、`SPLICE`、`DELETE` 和 `EXISTS`。可以使用 `Tie::Array` 类作为基类，根据上述基本方法实现前五个方法。`Tie::Array` 中 `DELETE` 和 `EXISTS` 的默认实现仅为 `croak`（报错）。
+
+此外，当 perl 原本会在真实数组中进行预扩展分配时，会调用 `EXTEND`。
+
+在本次讨论中，我们将实现一个在创建时元素大小为固定的数组。如果你尝试创建一个比固定大小更大的元素，将抛出异常。例如：
+
+```
+use FixedElem_Array; tie @array, 'FixedElem_Array', 3; $array[0] = 'cat'; # ok. $array[1] = 'dogs'; # exception, length('dogs') > 3\.
+```
+
+该类的前导代码如下：
+
+```
+package FixedElem_Array; use Carp; use strict;
+```
+
+#### TIEARRAY, LIST
+
+这是该类的构造函数。它预期返回一个已化的引用，通过该引用可以访问新数组（可能是匿名 `ARRAY` 引用）。
+
+在我们的示例中，为了向你展示你并不真的返回一个 `ARRAY` 引用，我们选择了一个 `HASH` 引用来表示我们的对象。`HASH` 作为通用记录类型非常好：`{ELEMSIZE}` 字段将存储允许的最大元素大小，`{ARRAY}` 字段将持有真实的 `ARRAY` 引用。如果类外部的人尝试解引用返回的对象（无疑认为它是 `ARRAY` 引用），程序将会崩溃。这正说明你应该尊重对象的私有性。
+
+```
+sub TIEARRAY { my $class = shift; my $elemsize = shift; if ( @_ || $elemsize =~ /\D/ ) { croak "usage: tie ARRAY, '" . __PACKAGE__ . "', elem_size"; } return bless { ELEMSIZE => $elemsize, ARRAY => [], }, $class; }
+```
+
+#### FETCH this, index
+
+每当访问（读取）绑定数组的单个元素时，此方法就会触发。除了自引用外，它还接收一个参数：我们要尝试获取的索引。
+
+```
+sub FETCH { my $self = shift; my $index = shift; return $self->{ARRAY}->[$index]; }
+```
+
+如果使用负数组索引从数组中读取，索引将在传递给 `FETCH` 之前，通过调用 `FETCHSIZE` 在内部转换为正索引。你可以通过给绑定数组类中的变量 `$NEGATIVE_INDICES` 赋值一个真值来禁用此功能。
+
+正如你可能注意到的，`FETCH` 方法（以及其他）的名称对于所有访问都是相同的，尽管构造函数的名称不同（`TIESCALAR` 与 `TIEARRAY`）。虽然在理论上你可以让同一个类处理多个绑定类型，但在实践中这会变得复杂，最简单的方法是每个类只保持一种绑定类型。
+
+#### STORE this, index, value
+
+每当绑定数组中的元素被设置（写入）时，此方法就会触发。除了自引用外，它接收两个参数：我们要尝试存储东西的索引以及我们尝试放在那里的值。
+
+在我们的示例中，`undef` 实际上是 `$self->{ELEMSIZE}` 个空格，因此在这里我们需要多做一点工作：
+
+```
+sub STORE { my $self = shift; my( $index, $value ) = @_; if ( length $value > $self->{ELEMSIZE} ) { croak "length of $value is greater than $self->{ELEMSIZE}"; } # 填充空白 $self->EXTEND( $index ) if $index > $self->FETCHSIZE(); # 右对齐以保持较小元素的大小 $self->{ARRAY}->[$index] = sprintf "%$self->{ELEMSIZE}s", $value; }
+```
+
+负数索引的处理方式与 `FETCH` 相同。
+
+#### FETCHSIZE this
+
+返回与对象 `this` 关联的绑定数组中的项总数（等于 `scalar(@array)`）。例如：
+
+```
+sub FETCHSIZE { my $self = shift; return scalar @{$self->{ARRAY}}; }
+```
+
+#### STORESIZE this, count
+
+将与对象 `this` 关联的绑定数组中的项总数设置为 `count`。如果这使得数组变大，则应对新位置返回类映射的 `undef`。如果数组变小，则 `count` 之外的项应被删除。
+
+在我们的示例中，'undef' 实际上是一个包含 `$self->{ELEMSIZE}` 个空格的元素。观察：
+
+```
+sub STORESIZE { my $self = shift; my $count = shift; if ( $count > $self->FETCHSIZE() ) { foreach ( $count - $self->FETCHSIZE() .. $count ) { $self->STORE( $_, '' ); } } elsif ( $count < $self->FETCHSIZE() ) { foreach ( 0 .. $self->FETCHSIZE() - $count - 2 ) { $self->POP(); } } }
+```
+
+#### EXTEND this, count
+
+告知数组可能会增长到 `count`。此方法用于优化分配。在我们的示例中，我们确保有 `count` 个项：
+
+```
+sub EXTEND { my $self = shift; my $count = shift; $self->STORESIZE($count); }
+```
+
+#### EXISTS this, key
+
+验证绑定数组中索引 `key` 的元素是否存在。在我们的示例中，如果不存在则返回 0，否则返回 1：
+
+```
+sub EXISTS { my $self = shift; my $index = shift; return 0 if ! defined $self->{ARRAY}[index]; return 1; }
+```
+
+#### DELETE this, key
+
+从绑定数组中删除索引 `key` 元素。在我们的示例中，它是 `$self->{ELEMSIZE}` 个空格：
+
+```
+sub DELETE { my $self = shift; my $index = shift; $self->STORE($index, ''); }
+```
+
+#### CLEAR this
+
+清除（删除）关联绑定数组的所有值。例如：
+
+```
+sub CLEAR { my $self = shift; $self->{ARRAY} = []; }
+```
+
+#### PUSH this, LIST
+
+将 `LIST` 元素追加到数组中。例如：
+
+```
+sub PUSH { my $self = shift; my @list = @_; my $last = $self->FETCHSIZE(); $self->STORE( $last + $_, $list[$_] ) foreach 0 .. $#list; return $self->FETCHSIZE(); }
+```
+
+#### POP this
+
+移除数组的最后一个元素并返回它。例如：
+
+```
+sub POP { my $self = shift; return pop @{$self->ARRAY}}; }
+```
+
+#### SHIFT this
+
+移除数组的第一个元素（其他元素向下移动）并返回它。例如：
+
+```
+sub SHIFT { my $self = shift; return shift @{$self->ARRAY}}; }
+```
+
+#### UNSHIFT this, LIST
+
+在数组开头插入 `LIST` 元素，移动现有元素以留出空间。例如：
+
+
+
+以下内容整理自 Perl 关于绑定变量的文档，涉及 `UNSHIFT`、`SPLICE` 等操作，以及绑定哈希、文件句柄的实现方法。
+
+---
+
+```perl
+sub UNSHIFT {
+    my $self = shift;
+    my @list = @_;
+    my $size = scalar(@list);
+    # 为我们的列表留出空间
+    @{$self->{ARRAY}}[$size .. $#{$self->{ARRAY}} + $size] = @{$self->{ARRAY}};
+    $self->STORE($_, $list[$_]) foreach 0 .. $#list;
+}
+```
+
+### SPLICE this, offset, length, LIST
+
+在数组上执行 `splice` 等操作。`offset` 是可选的，默认为零，负值从数组末尾计数。`length` 是可选的，默认为数组剩余部分。`LIST` 可能为空。返回位于 `offset` 处的原始元素列表。在我们的示例中，如果存在 `LIST`，我们将使用一种简便方法：
+
+```perl
+sub SPLICE {
+    my $self   = shift;
+    my $offset = shift || 0;
+    my $length = shift || $self->FETCHSIZE() - $offset;
+    my @list   = ();
+    if (@_) {
+        tie @list, __PACKAGE__, $self->{ELEMSIZE};
+        @list = @_;
+    }
+    return splice @{$self->{ARRAY}}, $offset, $length, @list;
+}
+```
+
+### UNTIE this
+
+当 `untie` 发生时调用。（见下文“`untie` 陷阱”）。
+
+### DESTROY this
+
+当绑定变量需要被析构时触发此方法。与标量绑定类一样，在有自己的垃圾回收的语言中，这几乎不需要，所以这次我们直接去掉了它。
+
+---
+
+哈希（Hashes）是第一个被绑定（tied）的 Perl 数据类型（参见 `dbmopen()`）。实现绑定哈希的类应该定义以下方法：`TIEHASH` 是构造函数。`FETCH` 和 `STORE` 访问键值对。`EXISTS` 报告键是否存在于哈希中，而 `DELETE` 删除一个键。`CLEAR` 通过删除所有键值对来清空哈希。`FIRSTKEY` 和 `NEXTKEY` 实现 `keys()` 和 `each()` 函数以遍历所有键。`SCALAR` 在绑定哈希在标量语境（scalar context）中被求值时触发。`UNTIE` 在发生 `untie` 操作时调用，而 `DESTROY` 在绑定变量被垃圾回收时调用。
+
+如果这听起来很复杂，你可以直接从标准的 `Tie::StdHash` 模块继承以获取大部分方法，仅重新定义那些有趣的方法即可。详情请参见 `Tie::Hash`。
+
+请记住，Perl 区分“键不存在于哈希中”和“键存在于哈希中但对应值为 `undef`”。这两种可能性可以通过 `exists()` 和 `defined()` 函数进行测试。
+
+这里有一个算是有趣的绑定哈希类示例：它为你提供一个表示特定用户配置文件（dot files）的哈希。你通过文件名（去掉前面的点）对哈希进行索引，并返回该文件的内容。例如：
+
+```perl
+use DotFiles;
+tie %dot, 'DotFiles';
+if ( $dot{profile} =~ /MANPATH/ ||
+     $dot{login}   =~ /MANPATH/ ||
+     $dot{cshrc}   =~ /MANPATH/ )
+{
+    print "you seem to set your MANPATH\n";
+}
+```
+
+或者这里是使用我们绑定类的另一个示例：
+
+```perl
+tie %him, 'DotFiles', 'daemon';
+foreach $f ( keys %him ) {
+    printf "daemon dot file %s is size %d\n", $f, length $him{$f};
+}
+```
+
+在我们的绑定哈希 `DotFiles` 示例中，我们使用普通哈希来构建包含几个重要字段的对象，其中只有 `{LIST}` 字段会被用户认为是真实的哈希。
+
+- `USER`：该对象代表的用户。
+- `HOME`：这些配置文件所在的位置。
+- `CLOBBER`：我们应该尝试更改或删除这些配置文件。
+- `LIST`：文件名和内容映射的哈希。
+
+这里是 `Dotfiles.pm` 的开头：
+
+```perl
+package DotFiles;
+use Carp;
+sub whowasi { (caller(1))[3] . '()' }
+my $DEBUG = 0;
+sub debug { $DEBUG = @_ ? shift : 1 }
+```
+
+这是 `DotFiles` 绑定哈希的方法。
+
+对于我们的示例，我们希望能够输出调试信息以帮助在开发期间进行追踪。我们在内部还保留了一个方便函数来帮助打印警告；`whowasi()` 返回调用它的函数名。
+
+### TIEHASH 类名，LIST
+
+这是该类的构造函数。它预期返回一个被祝福的引用（blessed reference），通过该引用可以访问新对象（可能但不一定是匿名哈希）。
+
+这里是构造函数：
+
+```perl
+sub TIEHASH {
+    my $self = shift;
+    my $user = shift || $>;
+    my $dotdir = shift || '';
+    croak "usage: @{[&whowasi]} [USER [DOTDIR]]" if @_;
+    $user = getpwuid($user) if $user =~ /^\d+$/;
+    my $dir = (getpwnam($user))[7] || croak "@{[&whowasi]}: no user $user";
+    $dir .= "/$dotdir" if $dotdir;
+    my $node = {
+        USER    => $user,
+        HOME    => $dir,
+        LIST    => {},
+        CLOBBER => 0,
+    };
+    opendir(DIR, $dir) || croak "@{[&whowasi]}: can't opendir $dir: $!";
+    foreach $dot ( grep /^\./ && -f "$dir/$_", readdir(DIR)) {
+        $dot =~ s/^\.//;
+        $node->{LIST}{$dot} = undef;
+    }
+    closedir DIR;
+    return bless $node, $self;
+}
+```
+
+值得注意的是，如果你要对 `readdir` 的返回值进行文件测试，最好加上相应的目录路径。否则，因为我们没有在那里（`chdir()`），它将测试错误的文件。
+
+### FETCH $this, key
+
+每当绑定哈希中的元素被访问（读取）时该方法都会被触发。它除了自引用外还接收一个参数：我们尝试获取其值的键。
+
+这里是我们 `DotFiles` 示例的 fetch：
+
+```perl
+sub FETCH {
+    carp &whowasi if $DEBUG;
+    my $self = shift;
+    my $dot = shift;
+    my $dir = $self->{HOME};
+    my $file = "$dir/.$dot";
+    unless (exists $self->{LIST}->{$dot} || -f $file) {
+        carp "@{[&whowasi]}: no $dot file" if $DEBUG;
+        return undef;
+    }
+    if (defined $self->{LIST}->{$dot}) {
+        return $self->{LIST}->{$dot};
+    } else {
+        return $self->{LIST}->{$dot} = `cat $dir/.$dot`;
+    }
+}
+```
+
+通过调用 Unix `cat`(1) 命令来编写很容易，但手动打开文件可能会更具移植性（而且更高效）。当然，由于配置文件是一个 Unix 概念，我们并不太担心。
+
+### STORE $this, key, value
+
+每当绑定哈希中的元素被设置（写入）时，该方法都会被触发。它除了自引用外还接收两个参数：我们尝试设置的索引，以及我们尝试放入的值。在我们的示例中，我们将小心不要让它们覆盖。
+
+```perl
+sub STORE {
+    carp &whowasi if $DEBUG;
+    my $self = shift;
+    my $dot = shift;
+    my $value = shift;
+    my $file = $self->{HOME} . "/.$dot";
+    open(my $f, '>', $file) || croak "@{[&whowasi]}: can't open $file: $!";
+    print $f $value;
+    close($f);
+}
+```
+
+### DELETE $this, key
+
+当从哈希中删除元素时，该方法会被触发，通常是通过使用 `delete()` 函数。`DELETE` 方法返回的是 `delete()` 调用的返回值。我们将返回是否删除成功。
+
+```perl
+sub DELETE {
+    carp &whowasi if $DEBUG;
+    my $self = shift;
+    my $dot = shift;
+    my $file = $self->{HOME} . "/.$dot";
+    if (exists $self->{LIST}->{$dot}) {
+        delete $self->{LIST}->{$dot};
+        return 1;
+    }
+    return 0;
+}
+```
+
+### CLEAR this
+
+当清空整个哈希时，该方法会被触发，通常是通过给它赋值空列表。在我们的示例中，这将删除用户所有的配置文件！这是一个危险的操作，他们必须将 `CLOBBER` 设置为大于 1 才能生效。
+
+```perl
+sub CLEAR {
+    carp &whowasi if $DEBUG;
+    my $self = shift;
+    croak "@{[&whowasi]}: won't remove all dot files for $self->{USER}"
+        unless $self->{CLOBBER} > 1;
+    my $dot;
+    foreach $dot ( keys %{$self->{LIST}}) {
+        $self->DELETE($dot);
+    }
+}
+```
+
+### EXISTS this, key
+
+当用户使用 `exists()` 函数时，该方法会被触发。在我们的示例中，我们将检查 `{LIST}` 哈希元素。
+
+```perl
+sub EXISTS {
+    carp &whowasi if $DEBUG;
+    my $self = shift;
+    my $dot = shift;
+    return exists $self->{LIST}->{$dot};
+}
+```
+
+### FIRSTKEY this
+
+当用户准备遍历哈希时，该方法会被触发，例如通过 `keys()` 或 `each()` 调用。
+
+```perl
+sub FIRSTKEY {
+    carp &whowasi if $DEBUG;
+    my $self = shift;
+    my $a = keys %{$self->{LIST}}; # 重置 each() 迭代器
+    each %{$self->{LIST}}
+}
+```
+
+### NEXTKEY this, lastkey
+
+该方法在 `keys()` 或 `each()` 迭代期间被触发。它有一个第二个参数，是最后一个访问的键。如果你在考虑排序或从多个序列中调用迭代器，或者实际上没有在任何地方存储项，这非常有用。
+
+对于我们的示例，我们正在使用真实的哈希，所以只需做简单的操作，但我们必须间接地通过 `LIST` 字段。
+
+```perl
+sub NEXTKEY {
+    carp &whowasi if $DEBUG;
+    my $self = shift;
+    return each %{ $self->{LIST} }
+}
+```
+
+### SCALAR
+
+当哈希在标量上下文中求值时，会调用此方法。为了模拟未绑定（untied）哈希的行为，当绑定的哈希为空时，此方法应返回假值。如果此方法不存在，perl 将进行合理的猜测，并在哈希处于迭代时返回真。如果不是如此，则会调用 `FIRSTKEY`，如果 `FIRSTKEY` 返回空列表，则结果为假，否则为真。
+
+然而，你**不应该**盲目地依赖 perl 总是做正确的事。特别是当你通过反复调用 `DELETE` 直到哈希清空时，perl 会错误地返回真。因此，当你想要绝对确保你的哈希在标量上下文中表现良好时，建议提供自己的 `SCALAR` 方法。
+
+在我们的示例中，我们只需要对 `$self->{LIST}` 引用的底层哈希调用 `scalar` 即可：
+
+```perl
+sub SCALAR {
+    carp &whowasi if $DEBUG;
+    my $self = shift;
+    return scalar %{ $self->{LIST} }
+}
+```
+
+### UNTIE
+
+发生 `untie` 时调用此方法。请参阅下文的“`untie` 陷阱”。
+
+### DESTROY
+
+当绑定的哈希即将超出作用范围时，触发此方法。除非你尝试添加调试或有辅助状态需要清理，否则你并不需要它。这是一个非常简单的函数：
+
+```perl
+sub DESTROY {
+    carp &whowasi if $DEBUG;
+}
+```
+
+注意，`keys()` 和 `values()` 等函数在大型对象（如 DBM 文件）上运行时可能会返回巨大的列表。你可能更喜欢使用 `each()` 函数来迭代此类对象。示例：
+
+```perl
+# print out history file offsets
+use NDBM_File;
+tie(%HIST, 'NDBM_File', '/usr/lib/news/history', 1, 0);
+while (($key,$val) = each %HIST) {
+    print $key, ' = ', unpack('L',$val), "\n";
+}
+untie(%HIST);
+```
+
+---
+
+# 绑定文件句柄 (Tying FileHandles)
+
+现在已部分实现。
+
+实现绑定文件句柄的类应该定义以下方法：`TIEHANDLE`、`PRINT`、`PRINTF`、`WRITE`、`READLINE`、`GETC`、`READ` 中的至少一个，以及可能的 `CLOSE`、`UNTIE` 和 `DESTROY`。该类还可以提供：`BINMODE`、`OPEN`、`EOF`、`FILENO`、`SEEK`、`TELL` —— 如果对句柄使用了相应的 perl 运算符。
+
+绑定 `STDERR` 时，将调用其 `PRINT` 方法发布警告和错误信息。此功能在调用期间临时禁用，因此你可以在 `PRINT` 中使用 `warn()` 而不会启动递归循环。与 `__WARN__` 和 `__DIE__` 处理器一样，`STDERR` 的 `PRINT` 方法可能被用来报告解析错误，因此 `perlvar` 中 `%SIG` 下的注意事项适用。
+
+当 perl 在其他程序中使用时，这一切特别有用，因为输出到 `STDOUT` 和 `STDERR` 可能需要进行特殊重定向。示例请参考 `nvi` 和 Apache 。
+
+绑定句柄时，`tie` 的第一个参数应以星号开头。因此，如果你绑定 `STDOUT`，请使用 `*STDOUT`。如果你将其赋值给标量变量（例如 `$handle`），请使用 `*$handle`。`tie $handle` 绑定的是标量变量 `$handle`，而不是内部的句柄。
+
+在我们的示例中，我们将创建一个大叫的句柄。
+
+```perl
+package Shout;
+```
+
+# TIEHANDLE 类构造, LIST
+
+这是该类的构造函数。它预期返回一个该类型的祝福引用（blessed reference）。该引用可以存储内部信息。
+
+```perl
+sub TIEHANDLE {
+    print "<shout>\n";
+    my $i;
+    bless \$i, shift
+}
+```
+
+# WRITE 方法, LIST
+
+当通过 `syswrite` 函数向句柄写入时，会调用此方法。
+
+```perl
+sub WRITE {
+    my $self = shift;
+    my($buf,$len,$offset) = @_;
+    print "WRITE called, \$buf=$buf, \$len=$len, \$offset=$offset";
+}
+```
+
+# PRINT 方法, LIST
+
+每当使用 `print()` 或 `say()` 函数打印绑定的句柄时，都会触发此方法。除了自引用外，它还期望传递给 print 函数的列表。
+
+```perl
+sub PRINT {
+    my $self = shift;
+    $$self++;
+    print join($,, map(uc($_), @_)), $\
+}
+```
+
+`say()` 的作用与 `print()` 相同，但 `$\` 会局部化为 `\n`，因此你不需要对 `PRINT()` 中的 `say()` 进行任何特殊处理。
+
+# PRINTF 方法, LIST
+
+每当使用 `printf()` 函数打印绑定的句柄时，都会触发此方法。除了自引用外，它还期望传递给 printf 函数的格式字符串和列表。
+
+```perl
+sub PRINTF {
+    shift;
+    my $fmt = shift;
+    print sprintf($fmt, @_);
+}
+```
+
+# READ 方法, LIST
+
+当通过 `read` 或 `sysread` 函数从句柄读取时，会调用此方法。
+
+```perl
+sub READ {
+    my $self = shift;
+    my $bufref = \$_[0];
+    my(undef,$len,$offset) = @_;
+    print "READ called, \$buf=$bufref, \$len=$len, \$offset=$offset";
+    # add to $$bufref, set $len to number of characters read
+    $len;
+}
+```
+
+# READLINE 方法
+
+当通过 `<HANDLE>` 或 `readline HANDLE` 读取句柄时，会调用此方法。
+
+
+
+根据`readline`，在标量上下文中它应该返回下一行，在没有更多数据时返回`undef`。在上下文中，它应该返回所有剩余行，或一个空列表。
+
+这里是修改后的之前的示例，使用了`comnt`方法（它需要绑定的对象）：
+
+```
+use strict; use Reer; my ($fred, $x); $x = tie $fred, 'Reer', 'myfile.txt'; $fred = 1; $fred = 4; comnt $x "changing..."; $fred = 5; untie $fred; system "cat myfile.txt";
+```
+
+执行这段代码时没有输出。原因如下：
+
+当一个变量被绑定（tied）时，它会与`TIESCALAR`、`TIEARRAY`或`TIEHASH`函数返回的对象相关联。该对象通常只有一个引用，即来自绑定变量的隐式引用。当调用`untie()`时，该引用会被销毁。然后，如上面的第一个示例，对象的析构函数（`DESTROY`）会被调用，这对于没有更多有效引用的对象来说是正常的；因此文件被关闭。
+
+然而，在第二个示例中，我们在`$x`中存储了该绑定对象的另一个引用。这意味着当调用`untie()`时，对象上仍然存在一个有效的引用，因此析构函数在当时不会被调用，从而文件没有关闭。没有输出的原因是因为文件缓冲区尚未刷新到磁盘。
+
+现在你已经知道了问题所在，你可以做什么来避免它呢？在引入可选的`UNTIE`方法之前，唯一的方法是使用老的`-w`标志。它会识别出任何调用`untie()`且对绑定对象仍有有效引用的实例。如果上面的第二个脚本在顶部附近使用`use warnings 'untie'`或带有`-w`标志运行，Perl会打印此警告信息：
+
+```
+untie attempted while 1 inner references still exist
+```
+
+为了让脚本正常工作并消除警告，请确保在调用`untie()`**之前**绑定对象上没有有效的引用：
+
+```
+undef $x; untie $fred;
+```
+
+现在由于`UNTIE`已经存在了，类设计者就可以决定类功能的哪些部分确实与`untie`相关，哪些部分与对象的销毁相关。对于给定的类来说，合理的做法取决于是否保留内部引用，以便在对象上调用非与绑定相关的方法。但在大多数情况下，将本应在`DESTROY`中的功能移动到`UNTIE`方法可能是合理的。
+
+如果`UNTIE`方法存在，则不会发生上述警告。相反，`UNTIE`方法将接收“额外”引用的计数，并可以在适当时发出自己的警告。例如，为了模拟没有`UNTIE`的情况，可以使用该方法：
+
+```
+sub UNTIE { my ($obj,$count) = @_; carp "untie attempted while $count inner references still exist" if $count; }
+```
+
+## 另请参见
+
+查看`DB_File`或`Config`以获取更多有趣的`tie()`实现。许多`tie()`实现的良好起点是`Tie::Scalar`、`Tie::Array`、`Tie::Hash`或`Tie::Handle`模块之一。
+
+## 缺陷
+
+`scalar(%hash)`提供的桶使用信息不可用。这意味着在布尔上下境下使用`%tied_hash`无法正常工作（目前它始终测试为假，无论哈希是否为空或是否包含元素）。
+
+绑定数组或哈希的本地化无效。退出作用域后，数组或哈希不会恢复。
+
+通过`scalar(keys(%hash))`或`scalar(values(%hash))`统计哈希中的条目数量是低效的，因为它需要通过`FIRSTKEY/NEXTKEY`遍历所有条目。
+
+绑定哈希/数组切片会导致多个`FETCH`/`STORE`对，没有用于切片操作的绑定方法。
+
+无法轻松地将多级数据结构（如嵌套哈希）绑定到`dbm`文件。第一个问题是除了`GDBM`和Berkeley DB之外的所有数据库都有大小限制，但除此之外，你还有如何在磁盘上表示引用的问题。一个尝试解决此需求的模块是`DBM::Deep`。请根据`perlmodlib`中的描述检查的CPAN站点获取源代码。注意，尽管名字如此，`DBM::Deep`并没有使用`dbm`。另一个解决该问题的早期尝试是`MLDBM`，它在CPAN上可用，但存在相当严重的限制。
+
+绑定句柄仍然不完整。`sysopen()`、`truncate()`、`flock()`、`fcntl()`、`stat()`和`-X`目前无法被捕获。
+
+## 作者
+
+Tom Christiansen
+
+`TIEHANDLE`由Sven Verdoolaege <>和Doug MacEachern <> 
+
+`UNTIE`由Nick Ing-Simmons <> 
+
+`SCALAR`由Tassilo von Parseval <> 
+
+绑定数组由Casey West <> 
+
+---
+
+# PERLTOC
+
+## 名字
+
+perltoc - perl 文档目录
+
+## 描述
+
+本页提供了其余Perl文档集的简要目录。它旨在用于快速扫描或通过grep查找，以定位你正在寻找的章节。
+
+## 基础文档
+
+### perl - Perl 5语言解释器
+
+#### 概要
+
+获取帮助
+
+概述
+
+教程
+
+参考手册
+
+内部原理与C语言接口
+
+杂项
+
+特定语言
+
+特定平台
+
+针对已删除文档的存根
+
+## 描述
+
+可用性 环境 作者文件 另请参见 诊断 缺陷 备注
+
+### perlintro --- Perl 的简要介绍和概述
+
+## 描述
+
+什么是Perl?
+
+运行Perl程序
+
+安全网
+
+基础语法概述
+
+#### 复杂记录哈希的声明
+
+# 复杂记录哈希的生成
+
+数据库连接 参见 作者
+
+## perllol - 在Perl中操作数组数组
+
+## 描述
+
+- 数组数组的声明与访问
+
+- 构建自定义数组
+
+- 访问与打印
+
+- 切片 (Slices)
+
+参见 方式
+
+## perlrequick - Perl正则表达式快速
+
+## 描述
+
+- 指南
+
+- 简单的单词匹配
+
+- 使用字符类
+
+- 匹配此或彼
+
+- 分组与层级匹配
+
+- 提取匹配项
+
+- 匹配重复
+
+- 更多匹配
+
+- 搜索与替换
+
+- 分割操作符
+
+- `use re 'strict'`
+
+BUG 参见 方式和版权
+
+致谢
+
+## perlretut - Perl正则表达式教程
+
+## 描述
+
+**第一部分：基础**
+
+- 简单的单词匹配
+
+- 使用字符类
+
+- 匹配此或彼
+
+- 分组与层级匹配
+
+- `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`
+
+- 提取匹配项
+
+- 反向引用
+
+- 相对反向引用
+
+- 非反向引用
+
+- 备选捕获分组
+
+- 位置信息
+
+- 非捕获分组
+
+- `0, 1, 2, 3, 4, 5, 6`
+
+- 独有性量符
+
+- 构建正则表达式
+
+- 在Perl中使用正则表达式
+
+**第二部分：高级工具**
+
+- 关于字符、字符串和字符类的更多内容
+
+- 编译与保存正则表达式
+
+- 在运行时组合正则表达式
+
+- 在正则表达式中添加注释和修饰符
+
+- 前向断言与后向断言
+
+- 使用独立子表达式防止回溯
+
+- 条件表达式
+
+- 定义模式
+
+- 递归模式
+
+- 一点魔法：在正则表达式中执行Perl代码
+
+- 回溯控制动词
+
+- 编译指令(Pragmas)与调试
+
+BUG 参见 方式和版权
+
+致谢
+
+## perlootut - Perl面向对象教程
+
+### 日期
+
+## 描述
+
+**面向对象基础**
+
+- 对象
+
+- 类
+
+- 方法
+
+- 属性
+
+- 多态
+
+- 继承
+
+- 封装
+
+- 组合
+
+- 角色(Roles)
+
+- 何时使用OO
+
+**PERL OO系统**
+
+- `Moose`: 声明式语法、内置角色、微型类型系统、完全内省与操作、自托管且可扩展、丰富的生态系统、更多功能
+
+- `Class::Accessor`
+
+- `Class::Tiny`
+
+- `Role::Tiny`
+
+- OO系统总结：`Moose`, `Class::Accessor`, `Class::Tiny`, `Role::Tiny`
+
+- 其他OO系统
+
+### 结论
+
+## perlperf - Perl性能与优化技术
+
+## 描述
+
+**概述**
+
+- 向侧迈一步
+
+- 向前迈一步
+
+- 再次向侧迈一步
+
+- 通用指南基准测试
+
+- 变量的赋值与取消引用
+
+- 搜索替换或tr
+
+**分析工具**
+
+- `Devel::DProf`
+
+- `Devel::Profiler`
+
+- `Devel::SmallProf`
+
+- `Devel::FastProf`
+
+- `Devel::NYTProf`
+
+**排序** 经过真实时间，用户CPU时间，系统CPU时间 **日志**
+
+- 如果开启`DEBUG`（常量）则记录
+
+后记 参见
+
+PERLDOCS
+
+MAN PAGES
+
+MODULES
+
+URLS
+
+作者
+
+#### perlstyle - Perl风格指南
+
+## 描述
+
+## perlcheat - Perl 5备查表
+
+## 描述
+
+- 表格内容
+
+- 致谢 作者 参见
+
+## perltrap - 给疏忽者的Perl陷阱
+
+## 描述
+
+- Awk陷阱
+
+- C/C++陷阱
+
+- JavaScript陷阱
+
+- Sed陷阱
+
+- Shell陷阱
+
+- Perl陷阱
+
+## perldebtut - Perl调试教程
+
+## 描述
+
+- `use strict`
+
+- 查看数据以及`-w`和`v`
+
+- `help`
+
+- 单步执行代码
+
+- `a`, `w`, `t`, `T`的占位符
+
+- 正则表达式
+
+- 输出提示
+
+- CGI
+
+- GUI
+
+#### 总结
+
+参见
+
+作者
+
+贡献者
+
+## perlfaq - 关于Perl的常见问题
+
+### 版本
+
+## 描述
+
+- 在哪里可以找到`perlfaq`
+
+- 如何使用`perlfaq`
+
+- 如何为`perlfaq`贡献
+
+- 如果我的问题在FAQ中没有找到怎么办？
+
+**目录**
+
+- `perlfaq1`: 关于Perl的通用问题
+
+- `perlfaq2`: 获取与学习Perl
+
+- `perlfaq3`: 编程工具
+
+- `perlfaq4`: 数据处理
+
+- `perlfaq5`: 文件与格式
+
+- `perlfaq6`: 正则表达式
+
+- `perlfaq7`: Perl语言通用问题
+
+- `perlfaq8`: 系统交互
+
+- `perlfaq9`: 网页、电子邮件与网络
+
+**问题列表**
+
+（重复上方列表）
+
+感谢 作者版权
+
+#### perlfaq1 - 关于Perl的通用问题
+
+### 版本
+
+## 描述
+
+- 什么是Perl？
+
+- 谁支持Perl？谁开发的它？为什么是免费的？
+
+- 我应该使用哪个版本的Perl？
+
+- `Perl 4`、`Perl 5`或`Perl 6`是什么？
+
+- `Perl 6`是什么？
+
+- Perl的稳定性如何？
+
+- Perl更新频率是多少？
+
+- Perl难吗？
+
+- Perl与`Java`、`Python`、`REXX`、`Sche`或`Tcl`等语言相比如何？
+
+- 我可以在Perl中完成`[task]`吗？
+
+- 什么情况下我不该用Perl编程？
+
+- `"perl"`和`"Perl"`的区别？
+
+- 什么是JAPH？
+
+- 我如何说服别人使用Perl？
+
+- `<>`
+
+作者版权
+
+## perlfaq2 - 获取与学习Perl
+
+### 版本
+
+## 描述
+
+- 哪些机器支持Perl？我在哪里获取？
+
+- 如何获取Perl的二进制版本？
+
+- 我没有C编译器。我如何构建自己的Perl解释器？
+
+- 我将二进制文件拷贝到了另一台机器，但脚本无法运行。
+
+- 我获取了源码并尝试编译，但`gdbm/dynamic loading/malloc/...`失败了。
+
+- 有哪些Perl模块可用？
+
+- `CPAN`是什么？
+
+- 哪里可以获取Perl的信息？
+
+- <>
+
+- `perl.com?`, `Mongers?`, `pm.org?`, `perl.org?`
+
+- 我可以在哪里提问？
+
+- Perl书籍
+
+- 哪些杂志介绍Perl？
+
+- 我在哪里可以购买商业版？
+
+作者版权
+
+#### perlfaq3 - 编程工具
+
+### 版本
+
+## 描述
+
+- 如何（任何操作）？
+
+- 基础：`perldata`: Perl数据类型、`perlvar`: Perl定义变量、`perlsyn`: Perl语法、`perlop`: Perl运算符与优先级、`perlsub`: 程序
+
+- 执行：`perlrun`: 如何执行Perl解释器、`perldebug`: Perl调试
+
+- 函数：`perlfunc`: Perl内置函数
+
+- 对象：`perlref`: Perl引用与嵌套结构
+
+- `perlmod`: Perl模块（包与符号表）
+
+- `perlj`: Perl对象、`perltie`: 如何将对象类隐藏在简单变量中
+
+- 数据结构：`perlref`: Perl引用与嵌套结构、`perllol`: 在Perl中操作数组数组、`perldsc`: Perl数据结构、模块、`perllocale`: Perl Locale（国际化与本地化）
+
+- 迁移到`perl5`
+
+- `perltrap`: 给疏忽者的Perl陷阱
+
+- `perl`: 与C链接、`perlxut`: 编写`XSUBs`教程、`perlxs`: XS语言参考手册、`perlcall`: 从C调用Perl的约定、`perlguts`: Perl API简介、`perleed`: 如何在程序中嵌入perl
+
+- 各种
+
+我如何交互式地使用Perl？
+
+- 我如何找到系统上安装了哪些模块？
+
+- 我如何调试我的Perl程序？
+
+- 我如何分析我的Perl程序？
+
+- 我如何对我的Perl程序进行交叉引用？
+
+- 是否有Perl的格式化工具？
+
+返回本地或作用域数据的引用是安全的吗？
+
+我如何释放数组或哈希表以缩小程序内存占用？
+
+我如何让我的CGI脚本更高效？
+
+我如何隐藏我的Perl程序的源代码？
+
+我如何将我的Perl程序编译成字节码或C语言？
+
+我如何让`#!perl`在`[MS-DOS,NT,...]`上工作？
+
+我可以在命令行中编写实用的Perl程序吗？
+
+为什么Perl单行命令（one-liners）在我的DOS/Mac/VMS系统上不起作用？
+
+我可以在哪里学习Perl的CGI或Web编程？
+
+我可以在哪里学习面向对象的Perl编程？
+
+我可以在哪里学习将C与Perl链接？
+
+我读过`perleed`、`perlguts`等，但我无法在我的C程序中嵌入perl；我哪里做错了？
+
+当我尝试运行我的脚本时，得到了这个错误信息。它意味着什么？
+
+MakeMaker是什么？
+
+作者与版权
+
+#### perlfaq4 - 数据处理
+
+版本
+
+描述
+
+数据：数字
+
+为什么我得到的是长小数（例如，19.9499999999999）而不是应该得到的数字（例如，19.95）？
+
+为什么`int()`坏了？
+
+为什么我的八进制数据没有被正确解析？
+
+Perl有`round()`函数吗？`ceil()`和`floor()`呢？三角函数呢？
+
+我如何在不同的数值表示法/基数/进制之间转换？
+
+我如何将十六进制转换为十进制，如何从十进制转换为十六进制，如何从八进制转换为十进制，如何从十进制转换为八进制，如何从二进制转换为十进制，如何从十进制转换为二进制？
+
+为什么`&`的工作方式不符合预期？
+
+我如何进行矩阵乘法？
+
+我如何对一系列整数进行操作？
+
+我如何输出罗马数字？
+
+为什么我的随机数不是随机的？
+
+我如何获取X和Y之间的一个随机数？
+
+数据：日期
+
+我如何找到一年的第几天或第几周？
+
+我如何找到当前的世纪或千纪？
+
+我如何比较两个日期并找到差值？
+
+我如何将字符串转换为时间戳秒（epoch seconds）？
+
+我如何找到儒略日？
+
+我如何找到昨天的日期？
+
+Perl有2000年问题或2038年问题吗？Perl符合Y2K标准吗？
+
+数据：字符串
+
+我如何验证输入？
+
+我如何对字符串取消转义？
+
+我如何删除连续的字符对？
+
+我如何展开字符串中的函数调用？
+
+我如何找到匹配/嵌套的任何内容？
+
+我如何反转字符串？
+
+我如何展开字符串中的制表符？
+
+我如何重新格式化段落？
+
+我如何访问或更改字符串的N个字符？
+
+我如何更改某个内容的第N次出现？
+
+我如何统计子字符串在字符串中出现的次数？
+
+我如何将一行中的所有单词首字母大写？
+
+我如何分割由`[character]`分隔的字符串，但在`[character]`内部除外？
+
+我如何去除字符串开头/结尾的空白？
+
+如何用空格填充字符串或用零填充数字？
+
+我如何从字符串中提取选定的列？
+
+我如何找到字符串的soundex数值？
+
+我如何扩展文本字符串中的变量？
+
+总是对`"$vars"`加引号会有什么问题？
+
+为什么我的`<<HERE`文档不起作用？
+
+`<<`部分后面不能有空格，起始标记末尾（可能）应该有一个分号，你不能（轻易地）在标记前面有任何空格，结束标记后至少需要一个行分隔符。
+
+数据：数组
+
+列表（list）和数组（array）有什么区别？
+
+`$array[1]`和`@array[1]`有什么区别？
+
+我如何从列表或数组删除重复元素？
+
+我如何判断某个元素是否存在于列表或数组中？
+
+我如何计算两个数组的差？我如何计算两个数组的交集？
+
+我如何测试两个数组或哈希表是否相等？
+
+我如何找到第一个符合特定条件的数组元素？
+
+我如何处理链表？
+
+我如何处理循环列表？
+
+我如何随机打乱数组？
+
+我如何处理/修改数组的每个元素？
+
+我如何从数组选择一个随机元素？
+
+我如何保留列表的N个元素？
+
+我如何根据（任意内容）排序数组？
+
+
+
+我如何操作位数组？
+
+为什么`defined()`在空数组和哈希表上返回真？
+
+数据：哈希表（关联数组）
+
+我如何处理整个哈希表？
+
+我如何合并两个哈希表？
+
+如果在遍历哈希表时添加或删除键会发生什么？
+
+我如何通过值查找哈希表元素？
+
+我如何知道哈希表中有多少条目？
+
+我如何对哈希表进行排序（可选按值而非键）？
+
+我如何始终保持我的哈希表有序？
+
+哈希表中的"delete"和"undef"有什么区别？
+
+为什么我的绑定哈希表（tied hashes）不区分定义/存在？
+
+我如何执行中途重置`each()`操作？
+
+我如何获取两个哈希表的唯一键？
+
+我如何将关联数组存储在 DBM 中？
+
+如果在遍历哈希表时添加或删除键会发生什么？
+
+我如何通过值查找一个元素？
+
+我如何让一个 key 工作？
+
+我如何将元素放入哈希？
+
+我如何检查一个 key 是否存在类/数组？
+
+我如何处理哈希表中的 key？
+
+我如何处理哈希表中的数组？
+
+数据：其他
+
+我如何正确处理二进制数据？
+
+我如何判断一个数值是浮点数？
+
+我如何跨程序保持持久数据？
+
+我如何遍历目录树？
+
+我如何输出类？
+
+我如何处理类对象？
+
+我如何对文件进行校验？
+
+我如何处理所有数组？
+
+我如何处理这些代码？
+
+作者与版权
+
+#### perlfaq5 - 文件与格式
+
+版本
+
+描述
+
+我如何刷新/取消缓冲输出句柄？为什么我要这样做？
+
+我如何在文件中修改、删除或插入一行，或者在文件开头追加？
+
+我如何统计文件中的行数？
+
+我如何从文件中删除 N 行？
+
+我如何在程序内部使用 Perl 的`-i`选项？
+
+我如何复制文件？
+
+我如何创建临时文件？
+
+我如何操作固定长度的文件？
+
+如何将句柄局部化？我如何在子程序之间传递句柄？我如何制作句柄的数组？
+
+我如何间接使用句柄？
+
+我如何配合`write()`使用？
+
+我如何向字符串`write()`？
+
+我如何使用句柄来输出字符串？
+
+我如何输出带有逗号的数字？
+
+我如何翻译文件中的波浪号 (~)？
+
+我如何以读写模式打开文件？为什么会清空它？
+
+我如何锁定文件？
+
+为什么我不能直接`open(FH, ">file.lock")`？
+
+我还是不理解锁定。我只想在文件末尾追加少量文本。我必须使用锁定吗？
+
+我如何随机更新二进制文件？
+
+我如何获取文件的时间戳？
+
+我如何在 Perl 中设置文件的时间戳？
+
+我如何一次输出到多个文件？
+
+我如何一次性读取整个文件？
+
+我如何按段落读取文件？
+
+我如何从文件读取单个字符？从键盘读取？
+
+我如何判断句柄上是否有字符在等待？
+
+我如何在 Perl 中实现 "tail -f"？
+
+我如何在 Perl 中`dup()`句柄？
+
+我如何通过数值关闭文件描述符？
+
+为什么我能在 DOS 路径中使用 "C:\temp\foo"？为什么`C:\temp\foo.exe`不起作用？
+
+为什么`glob("*.*")`不到所有文件？
+
+为什么 Perl 允许删除只读文件？为什么 "-i" 会覆盖保护的文件？这是 Perl 的 Bug 吗？
+
+我如何从文件中选择随机行？
+
+为什么在打印数组数组时会有奇怪的空格？
+
+我如何遍历目录树？
+
+我如何删除目录树？
+
+我如何复制整个目录？
+
+作者与版权
+
+#### perlfaq6 - 正则表达式
+
+版本
+
+描述
+
+我该如何在不创建不可读且不可维护代码的情况下，使用正则表达式？
+
+### perlfaq7 - General Perl Language Issues
+
+VERSION
+
+DESCRIPTION
+
+Can I get a BNF/yacc/RE for the Perl language?
+
+What are all these`$@%&*`punctuation signs, and how do I know when to use them?
+
+Do I always/never have to quote my strings or use semicolons and commas?
+
+How do I skip so return values?
+
+How do I temporarily block warnings?
+
+What's an extension?
+
+Why do Perl operators have different precedence than C operators?
+
+How do I declare/create a structure?
+
+How do I create a module?
+
+How do I adopt or take over a module already on CPAN?
+
+How do I create a class?
+
+How can I tell if a variable is tainted?
+
+What's a closure?
+
+What is variable suicide and how can I prevent it?
+
+How can I pass/return a {Function, FileHandle, Array, Hash, Method, Regex}?
+
+Passing Variables and Functions, Passing Filehandles, Passing Regexes, Passing Methods
+
+How do I create a static variable?
+
+What's the difference between dynamic and lexical (static) scoping? Between`local()`and`my()`?
+
+How can I access a dynamic variable while a similarly nad lexical is in scope?
+
+What's the difference between deep and shallow binding?
+
+Why doesn't`"my($foo) = <$fh>"`work right?
+
+How do I redefine a builtin function, operator, or thod?
+
+What's the difference between calling a function as`&foo`and`*foo()`?
+
+How do I create a switch or case statent?
+
+How can I catch accesses to undefined variables, functions, or thods?
+
+Why can't a thod included in this sa file be found?
+
+How can I find out my current or calling package?
+
+How can I comnt out a large block of Perl code?
+
+How do I clear a package?
+
+How can I use a variable as a variable na?
+
+What does "bad interpreter" an?
+
+Do I need to recompile XS modules when there is a change in the C library?
+
+AUTHOR AND COPYRIGHT
+
+#### perlfaq8 - System Interaction
+
+VERSION
+
+DESCRIPTION
+
+How do I find out which operating system I'm running under?
+
+How co`*exec()`doesn't return?
+
+How do I do fancy stuff with the keyboard/screen/mouse?
+
+Keyboard, Screen, Mouse
+
+... (rest of the text) ...
+
+STDIN, STDOUT, and STDERR are shared, Signals, Zoies
+
+How do I trap control characters/signals?
+
+How do I modify the shadow password file on a Unix system?
+
+How do I set the ti and date?
+
+How can I`*sleep()`or`*alarm()`for under a second?
+
+How can I asure ti under a second?
+
+How can I do an`*atexit()`or`*setjmp()`/*longjmp()`? (Exception handling)
+
+Why doesn't my sockets program work under System V (Solaris)? What does the error ssage "Protocol not supported" an?
+
+How can I call my system's unique C functions from Perl?
+
+Where do I get the include files to do`*ioctl()`or`*syscall()`?
+
+Why do setuid perl scripts complain about kernel problems?
+
+How can I open a pipe both to and from a command?
+
+Why can't I get the output of a command with`*system()`?
+
+How can I capture STDERR from an external command?
+
+Why doesn't`*open()`return an error when a pipe open fails?
+
+What's wrong with using backticks in a void context?
+
+How can I call backticks without shell processing?
+
+
+
+# Perl FAQ：正则表达式与通用问题
+
+## 正则之外的注释、正则内部的注释、不同的分隔符
+
+我在匹配多行时遇到了麻烦。问题出在哪里？
+
+我如何提取位于两个模式之间的行（这两个模式位于不同的行）？
+
+我如何用正则表达式匹配 XML、HTML 或其他棘手糟糕的东西？
+
+我把一个正则表达式放入 `$/` 中但不起作用。问题出在哪里？
+
+我如何在对左侧进行不区分大小写替换的同时，保留右侧的大小写？
+
+我如何让 `"\w"` 匹配国家字符集？
+
+我如何匹配一个感知区域的版本的 `"/[a-zA-Z]/"`？
+
+我如何对变量进行引用以便在正则表达式中使用？
+
+`"/o"` 实际上做什么用的？
+
+我如何使用正则表达式从文件中剔除 C 风格的注释？
+
+我可以使用 Perl 正则表达式匹配平衡文本吗？
+
+正则的“贪婪”意味着什么？我该如何避免它？
+
+我如何处理每行的每个单词？
+
+我如何打印单词频率或行频率的摘要？
+
+我如何进行近似匹配？
+
+我如何高效地一次匹配许多正则表达式？
+
+为什么使用 `"\b"` 的单词边界搜索不起作用？
+
+为什么使用 `$&`、`` `$ `` 或 `'$` 会减慢我的程序？
+
+`"\G"` 在正则表达式中有什么用处？
+
+Perl 正则表达式是 DFA 还是 NFA？它们符合 POSIX 标准吗？
+
+在空语境下使用 `grep` 有什么问题？
+
+我如何匹配带有字节字符的字符串？
+
+我如何匹配位于变量中的正则表达式？
+
+作者与版权
+
+## `perlfaq7`：通用 Perl 语言问题
+
+### 版本
+
+### 描述
+
+我可以为 Perl 语言获取一个 BNF/yacc/RE 吗？
+
+这些 `$@%&*` 标点符号全是什么？我如何知道什么时候使用它们？
+
+我是否总是或从不需要对字符串加引号，或使用分号和逗号？
+
+我如何跳过某些返回值？
+
+我如何临时阻塞警告？
+
+什么是扩展？
+
+为什么 Perl 运算符的优先级与 C 运算符不同？
+
+我如何声明或创建一个结构？
+
+我如何创建一个模块？
+
+我如何采用或接管已经在 CPAN 上的模块？
+
+我如何创建一个类？
+
+我如何判断一个变量是否被污染？
+
+什么是闭包？
+
+什么是变量自杀？我该如何防止它？
+
+我如何传递或返回一个 `{Function, FileHandle, Array, Hash, Method, Regex}`？
+
+传递变量和函数、传递文件句柄、传递正则表达式、传递方法。
+
+我如何创建一个静态变量？
+
+动态和词法（静态）作用域之间有什么区别？`local()` 和 `my()` 之间有什么区别？
+
+当一个类似的词法变量在作用域内时，我如何访问动态变量？
+
+深度绑定和浅绑定有什么区别？
+
+为什么 `"my($foo) = <$fh>"` 工作不正常？
+
+我如何重新定义一个内置函数、运算符或方法？
+
+使用 `&foo` 调用函数与使用 `*foo()` 有什么区别？
+
+我如何创建一个 `switch`（分支）或 `case`（情况）语句？
+
+我如何捕获对未定义变量、函数或方法的访问？
+
+为什么包含在该文件中的方法无法被找到？
+
+我如何找到我当前或调用的包？
+
+我如何注释掉大块 Perl 代码？
+
+我如何清除一个包？
+
+我如何将变量用作变量名？
+
+`bad interpreter`（错误的解释器）意味着什么？
+
+当 C 库发生变化时，需要重新编译 XS 模块吗？
+
+作者与版权
+
+## `perlfaq8`：系统交互
+
+### 版本
+
+### 描述
+
+我如何发现我正在什么操作系统下运行？
+
+为什么 `*exec()` 不返回？
+
+我如何对键盘、屏幕和鼠标进行花哨的操作？
+
+键盘、屏幕、鼠标。
+
+我如何用颜色输出内容？
+
+我如何能在不等待回车键的情况下只读取一个键？
+
+我如何检查键盘上的输入是否就绪？
+
+我如何清除屏幕？
+
+我如何获取屏幕大小？
+
+我如何向用户询问密码？
+
+我如何读写串口？
+
+锁文件、打开模式、行尾、刷新输出、非阻塞输入。
+
+`STDIN`、`STDOUT` 和 `STDERR` 是共享的、信号、句柄。
+
+我如何捕获控制字符或信号？
+
+我如何修改 Unix 系统上的影子密码文件？
+
+我如何设置时间和日期？
+
+我如何让 `*sleep()` 或 `*alarm()` 执行小于一秒？
+
+我如何确保它小于一秒？
+
+我如何执行 `*atexit()` 或 `*setjmp()`/`*longjmp()`？（异常处理）
+
+为什么我的套接程序在 System V（Solaris）下无法工作？错误信息 `"Protocol not supported"` 意味着什么？
+
+我如何从 Perl 调用系统特有的 C 函数？
+
+我在哪里获取执行 `*ioctl()` 或 `*syscall()` 的包含文件？
+
+为什么 `setuid` Perl 脚本会抱怨内核问题？
+
+我如何双向打开一个指向命令的管道？
+
+为什么我不能通过 `*system()` 获取命令的输出？
+
+我如何捕获外部命令的 `STDERR`？
+
+为什么当管道打开失败时 `*open()` 不返回错误？
+
+在空语境下使用反引号有什么问题？
+
+我如何能在不使用 shell 环境的情况下调用反引号？
+
+## `perlsyn`：Perl 语法
+
+### 描述
+
+### 声明
+
+### 注释
+
+### 简单语句
+
+### 真与假
+
+### 语句修饰
+
+### 复合语句
+
+### 循环控制
+
+### `for` 循环
+
+### `foreach` 循环
+
+### 基础块
+
+### `switch` 语句
+
+### `goto`
+
+### 省略号语句
+
+### POD：嵌入式文档
+
+### 普通注释（不是 POD！）
+
+### 关于 `given` 和 `when` 的实验细节
+
+1、2、3、4、5、6、7、8、9、10。
+
+## `perldata`：Perl 数据类型
+
+### 描述
+
+### 变量名
+
+### 标识符解析
+
+### 上下文
+
+### 标量值
+
+### 标量值构造函数
+
+### 列表值构造函数
+
+### 下标
+
+### 多维数组
+
+### 切片
+
+### 全局变量和文件句柄
+
+### 另见
+
+## `perlop`：Perl 运算符和优先级
+
+### 描述
+
+# 运算符优先级与结合性
+
+## 术语与列表运算符（左结合）
+
+- 箭头运算符（Arrow Operator）
+- 自增与自减
+- 幂运算
+- 符号型一元运算符
+- 绑定运算符（Binding Operators）
+- 乘法运算符
+- 加法运算符
+- 位移运算符
+- `Nad` 一元运算符（Nad Unary Operators）
+- 关系运算符
+- 等价运算符
+- 智能匹配运算符（Smartmatch Operator）
+  1. 空哈希或空数组进行匹配。
+  2. 即每个元素与另一个数组中相同索引的元素进行智能匹配。[3]
+  3. 如果发现循环引用，则回退到引用相等性。
+  4. 实际的数字，或者是看起来像数字的字符串。
+- 按位与
+- 按位或与位异或
+- C 风格逻辑与
+- C 风格逻辑或
+- 逻辑定义或（Logical Defined-Or）
+- 范围运算符
+- 条件运算符
+- 赋值运算符
+- 逗号运算符
+
+## 列表运算符（右结合）
+
+- 逻辑非
+- 逻辑与
+- 逻辑或与逻辑异或
+
+## Perl 中缺失的 C 运算符
+
+`unary &`、`unary *`、`(TYPE)`
+
+## 引号与类引号运算符
+
+`[1]`、`[2]`、`[3]`、`[4]`、`[5]`、`[6]`、`[7]`、`[8]`
+
+### 正则类引号运算符
+
+
+
+`"qr/STRING/msixpodualn"`
+
+`"m/PATTERN/msixpodualngc"`
+
+`"//PATTERN/msixpodualngc"`
+
+`Theemptypattern//`
+
+在列表上下文中的匹配，`"\G 断言"`
+
+`"m?PATTERN?msixpodualngc"`
+
+`"?PATTERN?msixpodualngc"`
+
+`"s/PATTERN/REPLACEMENT/msixpodualngcer"`
+
+### 类引号运算符
+
+```perl
+"q/STRING/"
+'STRING'
+
+"qq/STRING/"
+"*STRING*"
+
+"qx/STRING/"
+"`STRING`"
+
+"qw/STRING/"
+"tr/SEARCHLIST/REPLACEMENTLIST/cdsr"
+
+"y/SEARCHLIST/REPLACEMENTLIST/cdsr"
+
+"<<EOF"
+```
+
+- 双引号、单引号、反引号
+- 解析引号结构的详尽细节
+
+提供的文本是 Perl 文档主题的详尽索引或列表，可能源自手册或模块指南。由于源文本具有极强的重复性和碎片化特征，包含数以千计的重叠函数名、模块名和关键词，我已将其组织为结构化的 Markdown 格式，并应用了所要求的反引号、标题和代码块处理规则。
+
+# Perl 文档概览
+
+## 正则表达式与模式
+
+本节涵盖了 Perl 中正则表达式的各个方面，包括：
+
+- 查找结尾、插值、`<<'EOF'`、`m''`、`s'''` 模式、`q//`、`tr'''`、`y'''`、`s'''` 的替换、`tr///`、`y///`、`` `` ``、`qq//`、`qx//`、`<file*glob>`、`<<"EOF"`、`s///` 的替换、`?RE?` 中的 `RE`、`/RE/`、`m/RE/`、`s/RE/foo/`、解析正则表达式以及正则表达式优化。
+
+## 核心概念与基础
+
+- I/O 操作符
+- 常量折叠
+- 无操作（No-ops）
+- 位运算字符串操作符
+- 整数算术
+- 浮点算术
+- 大数
+
+## 子程序
+
+### `perlsub`：Perl 子程序
+
+#### 语法概要（SYNOPSIS）
+
+#### 描述（DESCRIPTION）
+
+本文后文会有记录、记录在 `perlmod` 中、`perlobj` 中、`perltie` 中、`perlIO::via` 中、`perlfunc` 中、`UNIVERSAL` 中、`perldebguts` 中；部分内容未记录，其在内部供 `overload` 特性使用。
+
+#### 签名（Signatures）
+
+- 通过 `*my()` 的私有变量
+- 持久私有变量
+- 通过 `*local()` 的临时值
+- 左值子程序
+- 词法子程序
+- 传递 `Symbol` 表项（typeglobs）
+- 何时仍使用 `*local()`
+- 引用传递
+- 原型（Prototypes）
+- 常量函数
+- 重写内置函数
+- 自动加载
+- 子程序属性
+
+#### 另请参阅（SEE ALSO）
+
+### `perlfunc`：Perl 内置函数
+
+#### 描述（DESCRIPTION）
+
+按类别划分的 Perl 函数：
+
+- 用于 `SCALAR` 或字符串的函数、正则表达式和模式匹配
+- 数值函数
+- 用于真实 `@ARRAY` 的函数
+- 用于列表数据的函数
+- 用于真实 `%HASH` 的函数
+- 输入和输出函数
+- 用于固定长度数据或记录的函数
+- 用于文件句柄、文件或目录的函数
+- 与 Perl 程序控制流相关的关键词
+- 与作用域相关的关键词
+- 杂项函数、进程和进程组的函数
+- 与 Perl 模块相关的关键词
+- 与类和面向对象相关的关键词
+- 低级 socket 函数、SystemV 进程间通信函数
+- 获取用户和组信息、获取网络信息、`Ti` 相关函数、非函数关键词
+
+#### 可移植性（Portability）
+
+#### Perl 函数字母顺序列表
+
+`-*X* FILEHANDLE`、`-*X* EXPR`、`-*X* DIRHANDLE`、`-*X*`、`abs VALUE`、`abs`、`accept NEWSOCKET`、`GENERICSSOCKET`、`alarm SECONDS`、`alarm`、`atan2 Y,X`、`bind SOCKET,NAME`、`binmode FILEHANDLE, LAYER`、`binmode FILEHANDLE`、`bless REF,CLASSNAME`、`bless REF`、`break`、`caller EXPR`、`caller`、`chdir EXPR`、`chdir FILEHANDLE`、`chdir DIRHANDLE`、`chdir`、`chmod LIST`、`chomp VARIABLE`、`chomp(LIST)`、`chomp`、`chop VARIABLE`、`chop(LIST)`、`chop`、`chown LIST`、`chr NUMBER`、`chr`、`chroot FILENAME`、`chroot`、`close FILEHANDLE`、`close`、`closedir DIRHANDLE`、`connect SOCKET,NAME`、`continue BLOCK`、`continue`、`cos EXPR`、`cos`、`crypt PLAINTEXT,SALT`、`dbmclose HASH`、`dbmopen HASH,DBNAME,MASK`、`defined EXPR`、`defined`、`die EXPR`、`die`、`digest EXPR`、`digest`、`dir EXPR`、`dir`、`glob EXPR`、`glob`、`grep EXPR`、`grep`、`head EXPR`、`head`、`join EXPR`、`join`、`keys EXPR`、`keys`、`kind EXPR`、`kind`、`la EXPR`、`la`、`last EXPR`、`last`、`link EXPR`、`link`、`list EXPR`、`list`、`local EXPR`、`local`、`log EXPR`、`log`、`mode EXPR`、`mode`、`next EXPR`、`next`、`open EXPR`、`open`、`opt EXPR`、`opt`、`or EXPR`、`or`、`ord EXPR`、`ord`、`parent EXPR`、`parent`、`pack EXPR`、`pack`、`printf EXPR`、`printf`、`prtimes EXPR`、`prtimes`、`psg EXPR`、`psg`、`quote EXPR`、`quote`、`quotem EXPR`、`quotem`、`rand EXPR`、`rand`、`rank EXPR`、`rank`、`read EXPR`、`read`、`recv EXPR`、`recv`、`ref EXPR`、`ref`、`refcmd EXPR`、`refcmd`、`regcmd_exp`、`seek EXPR`、`seek`、`select EXPR`、`select`、`shift EXPR`、`shift`、`sprintf EXPR`、`sprintf`、`skip EXPR`、`skip`、`sort EXPR`、`sort`、`splice EXPR`、`splice`、`split EXPR`、`split`、`substr EXPR`、`substr`、`sub EXPR`、`sub`、`sys EXPR`、`sys`、`syscall EXPR`、`syscall`、`tie EXPR`、`tie`、`time EXPR`、`time`、`times EXPR`、`title EXPR`、`title`、`unlink EXPR`、`unlink`、`undef EXPR`、`undef`、`union EXPR`、`union`、`until EXPR`、`until`、`unpack EXPR`、`unpack`、`use EXPR`、`use`、`value EXPR`、`value`、`vars EXPR`、`vars`、`vector EXPR`、`vector`、`warn EXPR`、`warn`、`wait EXPR`、`wait`、`while EXPR`、`win EXPR`、`win`、`write EXPR`、`write`、`wrap EXPR`、`wrap`、`yaml`。
+
+文中列出了大量的模块：
+
+- `perl::Object`
+- `perl::Array`
+- `perl::File`
+- `perl::Path`
+- `perl::Unicode`
+- `perl::Socket`
+- `perl::reclass`
+- `perl::Time`
+- `perl::JSON`
+- `perl::XML`
+- `perl::DBM`
+
+## 版本与变更
+
+文档详细列出了跨不同 Perl 版本的更改：
+
+- `perl5.00delta`
+- `perl5.005delta`
+- `perl5.010delta`
+- `perl5.011delta`
+- `perl5.012delta`
+- `perl5.013delta`
+- `perl5.014delta`
+- `perl5.016delta`
+- `perl5.018delta`
+- `perl5.019delta`
+- `perl5.020delta`
+- `perl5.021delta`
+- `perl5.022delta`
+- `perl5.023delta` 等。
+
+## 技术文档结构
+
+该文档遵循标准的 Perl 手册结构：
+
+- `SYNOPSIS`
+- `DESCRIPTION`
+- `OPTIONS`
+- `METHODS`
+- `SEE ALSO`
+
+```text
+- `perlsub`
+- `perlfunc`
+- `perlvar`
+```
+
+# 正则表达式前瞻
+
+你可以使用前瞻（look-ahead）来模拟类减法。例如，UTS#18 可能会写成：
+
+`[{Block=Greek}-[{UNASSIGNED}]]`
+
+在 Perl 中，可以写为：
+
+`(?!\p{Unassigned})\p{Block=Greek} (?=\p{Assigned})\p{Block=Greek}`
+
+但在这个特定的示例中，你可能真正想要：
+
+`\p{Greek}`
+
+它将匹配已知属于希腊字母的已分配字符。
+
+## CPAN 模块 `Unicode::Regex::Set`
+
+它确实实现了完整的 UTS#18 分组、交集、并集和移除（减法）语法。
+
+`自定义字符属性（User-Defined Character Properties）`
+
+`+` 用于并集，`-` 用于移除（集合差），`&` 用于交集。
+
+`[6]` `"\b"` `"\B"`
+
+`[7]` 注意 Perl 在匹配时执行的是全大小写折叠（Full case-folding），而非简单大小写折叠（Simple case-folding）：例如，`U+1F88` 等同于 `U+1F00 U+03B9`，而不是仅仅是 `U+1F80`。这种区别主要影响带有某些修饰符的希腊大写字母：全大小写折叠会将字母分解，而简单大小写折叠则将其映射为单个字符。
+
+`[8]` Perl 将 `"\n"` 视为行的起始和结束分隔符。Unicode 规定了更多应被这样解释的字符。这些是：
+
+`VT U+000B (\v in C)`、`FF U+000C (\f)`、`CR U+000D (\r)`、`NEL U+0085`、`LS U+2028`、`PS U+2029`
+
+正则表达式模式中的 `^` 和 `$` 应该匹配所有这些字符，但并没有。这些字符同样没有生效，但本应该影响 `<>`、`$.` 以及脚本行计数。
+
+此外，行不应在 `CRLF` 内部被拆分，即 `\r` 和 `\n` 之间没有空行。对于 `CRLF`，请尝试使用 `:crlf` 层（参见 `PerlIO`）。
+
+`[9]` 但可以使用 `Unicode::LineBreak`。该模块提供了符合 UAX#14 `Unicode 换行算法（Unicode Line Breaking Algorithm）` 的换行支持。
+
+`[10]` Perl 中使用的 UTF-8/UTF-EBCDIC 不仅允许 `"U+10000"` 到 `"U+10FFFF"`，还允许超出 `"U+10FFFF"` 的范围。
+
+## Level 2：扩展 Unicode 支持
+
+- `RL2.1 规范等效字符`：缺失 `[10][11]`
+- `RL2.2 默认字符簇`：缺失 `[12]`
+- `RL2.3 默认单词边界`：已完成 `[14]`
+- `RL2.4 默认松散匹配`：缺失 `[15]`
+- `RL2.5 归一化后的属性（Na Properties）`：已完成
+- `RL2.6 通配符属性`：缺失 `[10]`
+- 见 UAX#15“Unicode 规范化形式（Unicode Normalization Forms）”`[11]`，有 `Unicode::Normalize`，但未集成到正则中。
+- `[12]` 拥有 `\X` 和 `\b{gcb}`，但我们还没有“字符簇模式”。
+- `[14]` 见 UAX#29，单词边界（Word Boundaries）。
+- `[15]` 这已在第 3.13 节中涵盖（Unicode 6.0）。
+
+## Level 3：定制支持
+
+- `RL3.1 定制标点`：缺失
+- `RL3.2 定制字符簇`：缺失 `[17][18]`
+- `RL3.3 定制单词边界`：缺失
+- `RL3.4 定制松散匹配`：缺失
+- `RL3.5 定制范围`：缺失
+- `RL3.6 上下文匹配`：缺失 `[19]`
+- `RL3.7 增量匹配`：缺失（`RL3.8 Unicode 集合共享`）
+- `RL3.9 可能的匹配集`：缺失
+- `RL3.10 折叠匹配`：缺失 `[20]`
+- `RL3.11 子匹配器`：缺失 `[17]`
+- 见 UAX#10“Unicode 排序算法（Unicode Collation Algorithms）”`[18]`，有 `Unicode::Collate`，但未集成到正则中。
+- `[19]` 拥有 `(?<=x)` 和 `(?=x)`，但前瞻或后瞻应该看到目标子字符串之外。
+- `[20]` 需要对大小写以外的语言特征进行不敏感匹配，例如平假名到片假名、宽窄、简体中文到繁体中文（参见 UTR#30“字符折叠（Character Foldings）”）。
+
+## Unicode 编码
+
+Unicode 字符分配给代码点（code points），这些是抽象的数字。要使用这些数字，需要各种编码。
+
+### UTF-8
+
+UTF-8 是一种变长（1 到 4 字节）、字节序无关的编码。在 Perl 的大部分文档，包括本文的其他地方，“UTF-8”也指“UTF-EBCDIC”。但在本节中，“UTF-8”仅指代用于 ASCII 平台的编码。它是 7 位 US-ASCII 的超集，因此任何用 ASCII 编码的内容在编码为 UTF-8 时具有完全相同的表示。
+
+下表来自 Unicode 3.2。
+
+| 代码点 | 第一字节 | 第二字节 | 第三字节 | 第四字节 |
+| :--- | :--- | :--- | :--- | :--- |
+| U+0000..U+007F | 00..7F | | | |
+| U+0080..U+07FF | C2..DF | 80..BF | | |
+| U+0800..U+0FFF | E0..E7 | 80..BF | 80..BF | |
+| U+C000..U+DFFF | D0..DF | 80..BF | 80..BF | |
+| U+E000..U+FFFF | E0..EF | 80..BF | 80..BF | |
+| U+10000..U+3FFFF | F0..F3 | 80..BF | 80..BF | 80..BF |
+| U+40000..U+FFFFF | F4..F7 | 80..BF | 80..BF | 80..BF |
+| U+20000..U+10FFFF | F0..F4 | 80..BF | 80..BF | 80..BF |
+
+这种技巧的运作原理是：代码点 `U+FFFE` 的字符不应该出现在输入流中，因此字节序列 `0xFF 0xFE` 连续地作为小端格式表示的 `BOM`，而不能是大端格式表示的 `U+FFFE`。
+
+代理对（Surrogates）在 Unicode 中除了成对使用以表示其他代码点外，没有任何意义。然而，Perl 允许在内部单独表示它们，例如通过调用 `chr(0xD801)`，这样所有代码点，而不仅仅是适用于开放交换的有效点，都是可表示的。Unicode 确实为它们定义了语义，例如它们的 `General_Category` 为 `Cs`。但由于它们的使用具有一定的危险，如果尝试进行诸如取其小写、进行不区分大小写的匹配或输出它们等操作，Perl 将发出警告，使用警告类别 `surrogate`，它是 `utf8` 的子类别。（但在 5.14 之前的 Perl 版本中不要尝试这样做。）
+
+## UTF-32、UTF-32BE、UTF-32LE
+
+UTF-32 族与 UTF-16 族非常相似，不同之处在于单位是 32 位，因此不需要代理方案。UTF-32 是一种固定宽度编码。`BOM` 签名 BE 为 `0x00 0x00 0xFE 0xFF`，LE 为 `0xFF 0xFE 0x00 0x00`。
+
+## UCS-2、UCS-4
+
+由 ISO 10646 标准定义的旧固定宽度编码。UCS-2 是 16 位编码。与 UTF-16 不同，UCS-2 无法扩展到 `U+FFFF`，因为它不使用代理。UCS-4 是 32 位编码，功能上与 UTF-32 相同，区别在于 UCS-4 既不禁止代理，也不禁止大于 `0x10_FFFF` 的代码点。
+
+## UTF-7
+
+
+
+一种七位安全（非八位）编码，当传输或存储不支持八位时非常有用。由 `RFC 2152` 定义。
+
+### 非字符代码点
+
+Unicode 中留了 `66` 个代码点作为`非字符代码点`（noncharacter code points）。它们都具有`Unassigned`（`Cn`）`General_Category`，永远不会有字符分配到其中任何一个。它们是包括`U+FDD0`到`U+FDEF`在内的 `32` 个代码点，以及 `34` 个代码点：
+
+`U+FFFE U+FFFF U+1FFFE U+1FFFF U+2FFFE U+2FFFF ... U+EFFFE U+EFFFF U+FFFFE U+FFFFF U+10FFFE U+10FFFF`
+
+在 Unicode 7.0 之前，非字符“禁止在 Unicode 文本数据的开放交换中使用”，因此处理这些流的代码可以使用这些点作为哨兵，它们可以与字符数据混合，并且始终能与该数据区分开。（此处及下一段中的强调是在本本文中添加的。）
+
+Unicode 7.0 修改了措辞，将其变为“不建议在 Unicode 文本数据的开放交换中使用”。7.0 标准继续说道：
+
+“如果在开放交换中接收到非字符，应用程序不需要以任何方式解释它。然而，良好的做法是将其识别为非字符并采取适当措施，例如将其替换为替换字符`U+FFFD`，以指示文本中的问题。不建议直接从此类文本中删除非字符代码点，因为删除未解释的字符可能会导致潜在的安全问题。（参见第 3.2 节合规性要求中的 C7 条，以及 Unicode 技术报告 #36《Unicode 安全考虑》<>）。”
+
+之所以进行此更改是因为发现各种商业工具（如编辑器）或用于源码控制的工具，在编写时并没有处理使用这些代码点的程序文件，这在实际上几乎完全排除了它们的使用！这从来不是本意。它们一直原本的意图是在应用程序内部或协作的应用程序集内随心所欲地使用。
+
+如果你正在编写处理任何 Unicode 文本数据的代码（例如编辑器），且该代码应该能够处理任何 Unicode 文本数据，那么你不应该自己使用这些代码点，而是允许它们在输入中存在。如果你需要哨兵，应该使用不是合法的 Unicode 字符。对于 UTF-8 数据，可以使用字节`0xC1`和`0xC2`作为哨兵，因为它们永远不会出现在良好的 UTF-8 中。（UTF-EBCDIC 有相应的替代品）。你也可以将 Unicode 代码点存储在整数变量中，并使用负值作为哨兵。
+
+如果你没有在编写此类工具，那么是否接受非字符作为输入取决于你（尽管标准建议不要这样做）。如果你在 Perl 中进行严格的输入流检查，这些代码点将继续被禁止。这是为了保持向后兼容（否则可能会打开安全漏洞，因为一个假设非字符在到达它之前会被过滤掉的不知情的应用程序，现在可能没有任何警告就开始接收到它们）。要进行严格检查，你可以使用层`:encoding('UTF-8')`。
+
+如果尝试输出非字符，Perl 将继续发出警告（使用警告类别`nonchar`，它是`utf8`的子类别）。
+
+### Unicode 代码点之外
+
+在大多数情况下，Perl 在针对非 Unicode 代码点匹配 Unicode 属性时会发出警告，当`\p{}`返回`TRUE`而`\P{}`返回`FALSE`时。例如：（等一下，让我重新对齐文本流）
+
+在正则表达式中使用 Unicode 属性（`\p{}`和`\P{}`结构）匹配这些代码点的情况并不明确，处理方式随着我们经验的增加而变化。
+
+一种可能性是将对这些点的任何匹配都视为未定义。但由于 Perl 没有匹配未定义的概念，它将其转换为失败或`FALSE`。这与 Perl 在 5.14 到 5.18 之间的做法几乎但不完全相同。区别在于 Perl 将所有`\p{}`匹配视为失败，而将所有`\P{}`匹配视为成功。
+
+这样做的一个问题是会导致以下情况下产生意料之外且困惑的结果：
+
+```
+chr(0x11000) =~ \p{ASCII_Hex_Digit=True} # v5.18 失败
+chr(0x11000) =~ \p{ASCII_Hex_Digit=False} # v5.18 失败！
+```
+
+也就是说，它将两个匹配都视为未定义，并转换为假（各触发警告）。第一个案例是预期结果，但第二个案例可能违背直觉：“既然它们是互补的，怎么可能都是假？”另一个问题是实现会将许多 Unicode 属性匹配优化为已有的、更快的操作，这些操作不会触发警告。我们选择不放弃这些有助于大多数匹配的优化，仅仅为了在极少数发生针对上方 Unicode 代码点的匹配时才生成警告。
+
+由于这些问题，从 v5.20 开始，Perl 的做法是将非 Unicode 代码点视为普通的未分配 Unicode 字符，并相应地匹配。（注意：Unicode 具有异常的未分配代码点。例如，它拥有非字符代码点，以及一些在分配后注定从右向左写入的点，就像阿拉伯语和希伯来语一样。）
+
+```markdown
+chr(0x110000) =~ \p{ASCII_Hex_Digit=True} # 失败，无警告
+chr(0x110000) =~ \p{ASCII_Hex_Digit=False} # 成功，有警告
+```
+
+在这两个示例中，被匹配的字符都是非 Unicode 字符，因此 Unicode 并没有定义它们应该如何匹配。它显然不是 ASCII 十六进制数字，因此第一个示例显然应该失败，事实也确实如此，且没有警告。但人们认为，第二个示例应该得到一个未定义的（即`FALSE`）结果。因此，对它触发了警告。
+
+因此，触发警告的情况比在较早版本的 Perl 中少得多，并且只有在结果可能存在争议时才会触发。事实证明，Perl 所做的任何优化（或未来可能采取的任何优化）都没有导致警告被跳过，因此它解决了 Perl 早期方法中的两个问题。受此变化影响的最常用属性是`\p{Unassigned}`，它是`\p{General_Category=Unassigned}`的缩形式。从 v5.20 开始，所有非 Unicode 代码点都被视为`Unassigned`。在较早的版本中，匹配失败是因为结果被认为未定义。
+
+只有在本该触发警告但没有触发的情况下，通常是因为优化导致整个模式匹配甚至没有被尝试。例如，Perl 可能会发现，为了使一个字符串匹配某个正则表达式模式，该字符串必须包含子串`foobar`。在尝试匹配之前，Perl 可能会查找该子串，如果没有找到，将立即失败匹配而不会实际尝试；因此，即使字符串包含上述非 Unicode 代码点也不会生成警告。
+
+对于大多数应用程序来说，这种行为比早期的 Perl 更符合“随我所愿（Do what I mean）”。但对于需要严格遵守 Unicode 标准的代码，它捕获到的问题更少。因此，提供了一种额外的操作模式来适应此类代码。如果正则表达式模式在词作用域内编译，且`non_unicode`警告类被设置为致命（fatal），则会启用此模式，例如：
+
+```
+use warnings FATAL => "non_unicode"
+```
+
+（参见 `warnings`）。在这种操作模式下，Perl 将对所有针对非 Unicode 代码点的匹配触发警告（而不仅仅是那些有争议的），并跳过可能导致警告不输出的优化。（它目前在未实际尝试匹配时仍然不会警告，如上面的`foobar`示例所示。）
+
+总结来说，Perl 现在在正则表达式匹配中通常将非 Unicode 代码点视为典型的 Unicode 未分配代码点，仅在结果可能存在争议时才触发警告。然而，如果此警告被设置为致命，则它不会被跳过。
+
+这一切中存在一个例外。`\p{All}`看起来像是一个 Unicode 属性，但它是 Perl 的扩展，被定义为所有可能的代码点（无论是否为 Unicode）均为真，因此在与非 Unicode 代码点匹配时永远不会生成警告。（在 v5.20 之前，它是`\p{Any}`的精确同义词，匹配从`0`到`0x10FFFF`的代码点。）
+
+### Unicode 的安全性
+
+首先，请阅读 [Unicode Security Considerations]<>
+
+此外，请注意以下内容：
+
+#### 错误的 UTF-8
+
+遗憾的是，UTF-8 的原始规范为从一个输入 Unicode 字符生成多少字节的编码输出留留下了很大的解释空间。严格来说，应该生成最短可能的 UTF-8 字节序列，否则在 UTF-8 连接的接收端存在输入缓冲区溢出的潜在风险。Perl 总是生成最短长度的 UTF-8，在开启警告的情况下，Perl 会对非最短长度的 UTF-8 以及其他格式错误（例如代理对 surrogates，它们不是有效的交换的 Unicode 代码点）发出警告。
+
+如果你不熟悉 Unicode，正则表达式的模式匹配可能会让你感到意外。从 Perl 5.14 开始，提供了几种模式修饰符来控制这一点，称为字符集修饰符。细节见 `perlre` 中的 "Character set modifiers"。
+
+正如在其他地方讨论的那样，Perl 有一只脚（还是两只蹄子？）分别踏在两个世界中：ASCII 和单字节本地旧世界，以及 Unicode 的新世界，并在需要时升级。如果你的遗留代码没有显式使用 Unicode，则不应该发生到 Unicode 的切换。
+
+#### EBCDIC 上 Perl 中的 Unicode
+
+EBCDIC 平台支持 Unicode。请参见 `perlebcdic`。
+
+除非专门讨论 ASCII 与 EBCDIC 的问题，否则本文及其他地方对 UTF-8 编码的引用应被理解为 EBCDIC 平台上的 UTF-EBCDIC。参见 `perlebcdic` 中的 "Unicode and UTF"。
+
+由于 UTF-EBCDIC 与 UTF-8 非常相似，其差异大多对你隐藏了；`useutf8`（而不是类似`useutfebcdic`的东西）声明脚本处于该平台的“原生”8 位 Unicode 编码中。（同样适用于`:utf8`层。）
+
+#### 本地语言/区域（Locales）
+
+请参见 `perllocale` 中的 "Unicode and UTF-8"。
+
+#### Unicode 未发生的情况
+
+在 Perl 中，仍有许多地方 Unicode（以某种编码形式）可以作为参数传递或作为结果接收，或兼之，尽管 Perl 拥有广泛的方法来输入和输出 Unicode，以及其他几个“入口点”，例如`@ARGV`数组（它也可以被解释为 UTF-8）。
+
+以下是此类接口。另请参见 "The 'Unicode Bug'"。对于所有这些接口，Perl 目前（截至 v5.20）简单视为字节字符串，除非使用了`encoding`祈格。
+
+`chdir`, `chmod`, `chown`, `chroot`, `exec`, `link`, `lstat`, `mkdir`, `rmdir`, `stat`, `syink`, `truncate`, `unlink`, `uti`, `-X`
+
+`%ENV`
+
+`glob`（即`<*>`）
+
+`open`, `opendir`, `sysopen`
+
+`qx`（即反引号），`system`
+
+`readdir`, `readlink`
+
+### Unicode Bug（Unicode Bug）
+
+“Unicode bug”一词被应用于`Latin-1`块中的一致性，即 128 到 255 之间。在没有指定区域语言的情况下，与其他所有字符或代码点不同，这些字符根据生效的规则具有完全不同的语义。（高于 255 的字符在 ASCII 和 Unicode 规则下语义相同。）
+
+在 Unicode 规则下，这些字符被视为未分配字符。
+
+正如 "ASCII versus Unicode Rules" 中解释的，这会导致意外的结果。例如，如果向字符串中附加一个 255 以上的代码点，字符串的语义可能会突然从 ASCII 变为 Unicode。作为一个例子，请考虑以下程序及其输出：
+
+```
+$ perl -le' no feature 'unicode_strings'; $s1 = "\xC2"; $s2 = "\x{2660}"; for ($s1, $s2, $s1.$s2) { print /\w/ || 0; } ' 0 0 1
+```
+
+如果`s1`和`s2`中都没有`\w`，为什么它们的拼接结果却有一个呢？
+
+这种异常源于 Perl 尝试不干扰没有使用 Unicode 的旧程序，以及 Perl 想要无缝添加 Unicode 支持的愿望。但事实证明结果并不是无缝的。（顺便提一下，你可以选择在此类情况发生时收到警告。参见`encoding::warnings`。）
+
+`usefeature'unicode_strings'`从 Perl v5.12 开始添加，用于解决这个问题。它影响以下内容：
+
+更改标量的大小写，即使用`uc()`、`ucfirst()`、`lc()`和`lcfirst()`，或者在双引号上下文中（如正则表达式替换）中使用`\L`、`\U`、`\u`和`\l`。
+
+从 Perl 5.12.0 开始，在`unicode_strings`下，通常会使用 Unicode 规则。详情请参阅`perlfunc`中的`lc`，了解其如何与其他各种指令配合工作。
+
+使用不区分大小写（`/i`）的正则表达式匹配。
+
+从 Perl 5.14.0 开始，在`unicode_strings`作用范围内编译的正则表达式，即使在作用范围之外执行或编译进更大的正则表达式中，也会使用 Unicode 规则。
+
+在正则表达式中匹配多个属性中的任意一个。
+
+这些属性是`\b`（不带括号）、`\B`（不带括号）、`\s`、`\S`、`\w`、`\W`以及除`[:ascii:]]`之外的所有 Posix 字符类。
+
+从 Perl 5.14.0 开始，在`unicode_strings`作用范围内编译的正则表达式，即使在作用范围之外执行或编译进更大的正则表达式中，也会使用 Unicode 规则。
+
+在`quoteta`或其内联等价物`\Q`中。
+
+从 Perl 5.16.0 开始，在`unicode_strings`作用范围内使用一致的引用规则，如`perlfunc`中的`quoteta`所示。在此之前或范围之外，UTF-8 编码字符串中不会引用高于 127 的代码点，但在字节编码字符串中，128-255 之间的代码点始终会被引用。
+
+从上述可以看出，`unicode_strings`的效果随着几个 Perl 版本的发布而增强。（而且 Perl 对 Unicode 的支持持续改进；最好使用最新的可用版本，以获得尽可能完整和准确的结果。）注意，如果你使用了`use5.012`或更高版本，`unicode_strings`将被自动选择。
+
+对于早于上述版本的 Perl，或者当字符串传递给`unicode_strings`作用范围的函数时，请参阅下一节。
+
+### 在 Perl 中强制使用 Unicode（或取消强制 Unicode）
+
+正如（参见“当 Unicode 并不发生时”或“Unicode 漏洞”）所述，在某些情况下，你只需要强制将字节字符串转换为 UTF-8，反之亦然。可以使用标准模块`Encode`来实现，或者使用低级调用`utf8::upgrade($bytestring)`和`utf8::downgrade($utf8string[, FAIL_OK])`。
+
+注意，如果字符串包含不符合字节要求的字符，`utf8::downgrade()`可能会失败。
+
+在已经是目标状态的字符串上调用任何一个函数都不会。
+
+“ASCII 规则与 Unicode 规则”提供了让字符串使用 Unicode 规则的所有方法。
+
+### 在 XS 中使用 Unicode
+
+参见`perlguts`中的“Unicode Support”以介绍 XS 级别的 Unicode，并参见`perlapi`中的“Unicode Support”获取 API 详情。
+
+### 破解 Perl 以支持早期版本的 Unicode（仅限极资深黑客）
+
+Perl 默认带有最新支持的 Unicode 版本，但目标是允许你切换到任何更早的版本。然而，在 Perl v5.20 和 v5.22 中，最早可用的版本是 Unicode 5.1。Perl v5.18 能够处理所有更早的版本。
+
+从 Unicode 网站下载所需版本的 Unicode 文件 <>)。这些文件应该替换 Perl 源码树中`lib/unicore`中的现有文件。按照该目录下`README.perl`中的指令更改它们的某些名称，然后编译 perl（参见 INSTALL）。
+
+### 从 perl-5.6.X 迁移代码
+
+从 5.8 开始的 Perl 具有的 Unicode 模型与 5.6 不同。在 5.6 中，程序被要求使用`utf8`指令来声明给定的作用范围预期处理 Unicode 数据，并且必须确保只有 Unicode 数据到达该作用范围。如果你有在 5.6 上运行的代码，你可能对代码进行以下某些调整。示例的编写方式使得代码在 5.6 下继续工作，因此你可以安全地尝试它们。
+
+一个应该读取或写入 UTF-8 的文件句柄：
+
+```
+if ($] > 5.008) { binmode $fh, ":encoding(utf8)"; }
+```
+
+将传递给某个扩展的标量：
+
+无论是`Compress::Zlib`、`Apache::Request`还是任何在手册中没有 Unicode 概念的扩展，你都需要确保剥离 UTF8 标记。注意，在本文写作时（2012 年 1 月），上述模块不是感知 UTF-8 的。请检查文档以验证是否仍然如此。
+
+```
+if ($] > 5.008) { require Encode; $val = Encode::encode_utf8($val); # 转换为字节流 }
+```
+
+从扩展获取返回的标量：
+
+如果你认为标量是以 UTF-8 格式返回的，你很可能想要恢复 UTF8 标记：
+
+```
+if ($] > 5.008) { require Encode; $val = Encode::decode_utf8($val); }
+```
+
+如果确实确定是 UTF-8：
+
+```
+if ($] > 5.008) { require Encode; Encode::_utf8_on($val); }
+```
+
+
+
+用于 DBI `fetchrow`、`fetchrow` 和 `fetchrow_hashref` 的 `fetchrow_array` 和 `fetchrow_hashref` 包装器
+
+一个已知只包含 ASCII 的大型标量
+
+只包含 ASCII 但被标记为 UTF-8 的标量对你的程序没有好处。如果你识别出这种情况，只需移除 UTF8 标记：
+
+```
+utf8::downgrade($val) if $] > 5.008;
+```
+
+## BUGS
+
+另见上述“Unicode 漏洞”。
+
+### 与扩展的交互
+
+当 Perl 与扩展交换数据时，扩展应该能够理解 UTF8 标记并采取相应的行动。如果扩展不识别该标记，可能扩展会返回标记错误的数据。
+
+因此，如果你正在处理 Unicode 数据，如果 Unicode 数据出现任何问题，请查阅你所使用的每个模块的文档。如果文档完全没有提到 Unicode，请做最坏的打算，并可能需要查看源码以了解该模块的实现。对于受影响的函数，避免数据损坏的简单策略是始终显式地指定交换数据的编码。选择一种你认为扩展可以处理的编码。将传递给扩展的参数转换为该编码，并将结果从该编码转换回来。编写包装函数来为你完成转换，这样以后扩展跟上时，你就可以更改这些函数。
+
+为了举个例子，假设流行的 `Foo::Bar::escape_ht` 函数尚未处理 Unicode 数据。包装函数将把参数转换为原始 UTF-8，并将结果转换回 Perl 的内部表示，如下：
+
+```
+sub my_escape_ht ($) { my($what) = shift; return unless defined $what; Encode::decode_utf8(Foo::Bar::escape_ht( Encode::encode_utf8($what))); }
+```
+
+当扩展不转换数据而只是存储和检索数据时，你可以使用原本危险的 `Encode::_utf8_on()` 函数。假设用 C 编写的流行的 `Foo::Bar` 扩展提供 `param` 方法，允许你按照这些原型存储和检索数据：
+
+```
+$self->param($na, $value); # 设置标量 $value = $self->param($na); # 获取标量
+```
+
+如果尚未提供对任何编码的支持，可以编写一个带有如下 `param` 方法的派生类：
+
+```perl
+sub param { my($self,$na,$value) = @_; utf8::upgrade($na); # make sure it is UTF-8 encoded if (defined $value) { utf8::upgrade($value); # make sure it is UTF-8 encoded return $self->SUPER::param($na,$value); } else { my $ret = $self->SUPER::param($na); Encode::_utf8_on($ret); # we know, it is UTF-8 encoded return $ret; } }
+```
+
+因此，扩展程序为数据进入/出口点提供了过滤器，例如 `DB_File::filter_store_key` 及其系列。请关注扩展程序文档中的此类过滤器；它们可以使向 Unicode 数据的转换变得更容易。
+
+### 速度
+
+因此，处理 UTF-8 编码字符串的速度比处理字节编码字符串要慢。所有需要跳过字符的函数（如 `length()`、`substr()` 或 `index()`）或匹配正则表达式的函数，当底层数据为字节编码时运行速度会*更快*。
+
+在 Perl 5.8.0 中，这种缓慢程度通常非常惊人；在 Perl 5.8.1 中引入了缓存机制，改善了这种情况。总来说，对 UTF-8 编码字符串的操作仍然较慢。例如，Unicode 属性（字符类）如 `\p{Nd}` 已知比其更简单的对应项如 `[0-9]` 慢得多（5-20 倍，话虽如此，匹配 `Nd` 的 Unicode 字符数百个，而匹配 `[0-9]` 的 ASCII 字符只有 10 个）。
+
+## 另请
+
+`perlunitut`, `perluniintro`, `perluniprops`, `Encode`, `open`, `utf8`, `bytes`, `perlretut`, `perlvar` 中的 `${^UNICODE}'`, `<>`)。
+
+***
+
+# PERLUNICOOK
+
+## 名称
+
+`perlunicook` - 在 Perl 中处理 Unicode 的食谱级示例
+
+## 描述
+
+本手册页包含了短食谱，演示了如何在 Perl 中处理常见的 Unicode 操作，末尾附有一个完整的程序。单个食谱中任何未声明的变量假设其已具有之前适当的值。
+
+## 示例
+
+### X 0: 标准序言
+
+除非另有说明，以下所有示例都需要此标准序言才能正常工作，并根据你的系统调整 `#!` 解释器：
+
+```perl
+#!/usr/bin/env perl use utf8; # 使字面量和标识符可以是 UTF-8 use v5.12; # 或更高版本以获取 "unicode_strings" 特性 use strict; # 强制引用，声明变量 use warnings; # 默认开启警告 use warnings qw(FATAL utf8); # 将编码错误视为致命错误 use open qw(:std :utf8); # UTF-8 格式的未声明流 use charnas qw(:full :short); # v5.16 中不需要
+```
+
+这*确实*会让即使是 Unix 用户也对二进制流进行 `binmode` 设置，或使用 `:raw` 打开它们，但这无论如何都是交叉访问这些内容的唯一方法。
+
+**警告**：`use autodie`（2.26 之前）和 `use open` 并不兼容。
+
+### X 1: 通用 Unicode 感知过滤器
+
+始终在输入时进行分解，在输出时进行重组。
+
+```perl
+use Unicode::Normalize; while (<>) { $_ = NFD($_); # 分解 + 规范化重排序 ... } continue { print NFC($_); # 重组（可能的）+ 规范化重排序 }
+```
+
+### X 2: 微调 Unicode 警告
+
+从 v5.14 开始，Perl 区分了三种 UTF-8 警告子类。
+
+```perl
+use v5.14; # 更早版本不支持 subwarnings no warnings "nonchar"; # 66 个禁止的非字符 no warnings "surrogate"; # UTF-16/CESU-8 乱码 no warnings "non_unicode"; # 用于超过 0x10_FFFF 的码点
+```
+
+### X 3: 为标识符和字面量在 utf8 中声明源
+
+如果没有至关重要的 `use utf8` 声明，在字面量和标识符中使用 UTF-8 将无法正常工作。如果你使用了上面提供的标准序言，这种情况已经发生了。如果你这样做了，可以进行如下操作：
+
+```perl
+use utf8; my $asure = "A\B0ngstro.m"; my @Xsoft = qw( cp852 cp1251 cp1252 ); my @XXXXXXXXX = qw( XXXX XXXXX ); my @X = qw( koi8-f koi8-u koi8-r ); my $motto = "X X X"; # FAMILY, GROWING HEART, DROMEDARY CAMEL
+```
+
+如果你忘记了 `use utf8`，高字节将被误解为独立的字符，一切都无法正常工作。
+
+### X 4: 字符及其数字
+
+`ord` 和 `chr` 函数在所有码点上透明地工作，不仅仅是 ASCII，事实上，它们不只限于 Unicode。
+
+```perl
+# ASCII 字符 ord("A") chr(65) # 基础文字平面上的字符 ord("X") chr(0x3A3) # BMP 之外的 ord("X") # 数学斜体小写 N chr(0x1D45B) # Unicode 之外！（最高到 MAXINT） ord("\x{20_0000}") chr(0x20_0000)
+```
+
+### X 5: 按字符数字 Unicode 字面量
+
+在插值字面量中（无论是双引号字符串还是正则表达式），你都可以通过其数字来指定字符。
+
+```perl
+# 插值字面量示例
+```
+
+### X 6: 按数字获取字符
+
+```perl
+# 获取方法示例
+```
+
+### X 7: 按数字获取字符
+
+```perl
+# 获取方法示例
+```
+
+### X 8: 显式编码
+
+```perl
+# 显式编码示例
+```
+
+### X 9: Unicode 序列
+
+```perl
+# Unicode 序列示例
+```
+
+### X 10: 自定义别名
+
+```perl
+# 自定义别名示例
+```
+
+### X 11: CJK 码点
+
+```perl
+# CJK 码点示例
+```
+
+### X 13: 将程序参数解码为 utf8
+
+```bash
+$ perl -CA ... or $ export PERL_UNICODE=A or use Encode qw(decode_utf8); @ARGV = map { decode_utf8($_, 1) } @ARGV;
+```
+
+### X 14: 将程序参数解码为 locale 编码
+
+```bash
+# cpan -i Encode::Locale use Encode qw(locale); use Encode::Locale; # 使用 "locale" 作为 encode/decode 的参数 @ARGV = map { decode(locale => $_, 1) } @ARGV;
+```
+
+### X 15: 将 STD{IN,OUT,ERR} 声明为 utf8
+
+使用命令行选项、环境变量或显式调用 `binmode`：
+
+```bash
+$ perl -CS ... or $ export PERL_UNICODE=S or use open qw(:std :utf8); or binmode(STDIN, ":utf8"); binmode(STDOUT, ":utf8"); binmode(STDERR, ":utf8");
+```
+
+### X 16: 将 STD{IN,OUT,ERR} 声明为 locale 编码
+
+```bash
+# cpan -i Encode::Locale use Encode; use Encode::Locale; # 或作为 binmode 或 open 的流 binmode STDIN, ":encoding(console_in)" if -t STDIN; binmode STDOUT, ":encoding(console_out)" if -t STDOUT; binmode STDERR, ":encoding(console_out)" if -t STDERR;
+```
+
+### X 17: 让文件 I/O 默认使用 utf8
+
+未指定编码参数打开的文件将使用 UTF-8 编码：
+
+```bash
+$ perl -CD ... or $ export PERL_UNICODE=D or use open qw(:utf8);
+```
+
+### X 18: 让所有 I/O 和参数默认使用 utf8
+
+```bash
+$ perl -CSDA ... or $ export PERL_UNICODE=SDA or use open qw(:std :utf8); use Encode qw(decode_utf8); @ARGV = map { decode_utf8($_, 1) } @ARGV;
+```
+
+### X 19: 使用特定编码打开文件
+
+指定流编码。这是处理编码文本的正常方式，而不是调用低级函数。
+
+```perl
+# input file open(my $in_file, "< :encoding(UTF-16)", "wintext"); OR open(my $in_file, "<", "wintext"); binmode($in_file, ":encoding(UTF-16)"); THEN my $line = <$in_file>; # output file open($out_file, "> :encoding(cp1252)", "wintext"); OR open(my $out_file, ">", "wintext"); binmode($out_file, ":encoding(cp1252)"); THEN print $out_file "so text\n";
+```
+
+这里可以指定比编码更多的层。例如，咒语 `:raw :encoding(UTF-16LE) :crlf` 包含了隐式的 CRLF 处理。
+
+### X 20: Unicode 大小写
+
+Unicode 大写与 ASCII 大写非常不同。
+
+```perl
+uc("henry X") # "HENRY X" uc("tschu.β") # "TSCHU.SS" 注意 β => SS # 两者皆真: "tschu.β" =~ /TSCHU.SS/i # 注意 β => SS "XXXXXXX" =~ /XXXXXXX/i # 注意 X,X,X 纯性
+```
+
+### X 21: Unicode 不区分大小写的比较
+
+CPAN 的 `Unicode::CaseFold` 模块中也可用，来自 v5.16 的新函数 `fc` 提供了与 `/i` 模式修符一直使用的相同的 Unicode 大小转换（casefolding）功能：
+
+```perl
+use feature "fc"; # fc() 函数来自 v5.16 # 不区分大小写排序 my @sorted = sort { fc($a) cmp fc($b) } @list; # 两者皆真: fc("tschu.β") eq fc("TSCHU.SS") fc("XXXXXXX") eq fc("XXXXXXX")
+```
+
+### X 22: 在正则中匹配 Unicode 换行序列
+
+Unicode 换行符匹配双字符 CRLF 字形或七个垂直空白字符中的任意一个。适用于处理来自不同操作系统的文本文件。
+
+```perl
+\R s/\R/\n/g; # 将所有换行符归一化为 \n
+```
+
+### X 23: 获取字符类别
+
+查找数字代码点的通用类别。
+
+```perl
+use Unicode::UCD qw(charinfo); my $cat = charinfo(0x3A3)->{category}; # "Lu"
+```
+
+### X 24: 在内置字符类中禁用 Unicode 感知
+
+禁用 `\w`、`\b`、`\s`、`\d` 和 POSIX 类在当前作用域或仅在单个正则中对 Unicode 正常工作。
+
+```perl
+use v5.14; use re "/a"; # OR my($num) = $str =~ /(\d+)/a;
+```
+
+或者使用特定的非 Unicode 属性，如 `\p{ahex}` 和 `\p{POSIX_Digit}`。无论字符集修饰符（`/d /u /l /a /aa`）应该产生什么影响，属性仍然正常工作。
+
+### X 25: 在正则中使用 \p, \P 匹配 Unicode 属性
+
+这些都匹配具有给定属性的单个代码点。使用 `\P` 替换 `\p` 来匹配缺少该属性的单个代码点。
+
+```perl
+
+
+
+`\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pL`, `\pN`, `\pp`, `\pN`, `\pp`, `\pN`, `\p`, `\p`, `\p`, `\,`, `\p`, `\pN`, `\p`, `\ \`, `\p`, `\ \`, `\,`, `\ \`, `\,`, `\ \,`, `\ \`, `\,`, `\,`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\p`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\ \`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`, `\,`
+
+
+
+### X 13：将程序参数解码为 UTF-8
+
+```bash
+$ perl -CA ...
+# 或
+$ export PERL_UNICODE=A
+# 或
+use Encode qw(decode_utf8);
+@ARGV = map { decode_utf8($_, 1) } @ARGV;
+```
+
+### X 14：将程序参数解码为 locale 编码
+
+```perl
+# cpan -i Encode::Locale
+use Encode qw(locale);
+use Encode::Locale;
+
+# 使用 "locale" 作为 encode/decode 的参数
+@ARGV = map { decode(locale => $_, 1) } @ARGV;
+```
+
+### X 15：将 `STDIN`、`STDOUT` 和 `STDERR` 声明为 UTF-8
+
+使用命令行选项、环境变量或显式调用`binmode`：
+
+```bash
+$ perl -CS ...
+# 或
+$ export PERL_UNICODE=S
+# 或
+use open qw(:std :utf8);
+# 或
+binmode(STDIN, ":utf8");
+binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
+```
+
+### X 16：将 `STDIN`、`STDOUT` 和 `STDERR` 声明为 locale 编码
+
+```perl
+# cpan -i Encode::Locale
+use Encode;
+use Encode::Locale;
+
+# 或者作为 binmode 或 open 的流
+binmode STDIN, ":encoding(console_in)" if -t STDIN;
+binmode STDOUT, ":encoding(console_out)" if -t STDOUT;
+binmode STDERR, ":encoding(console_out)" if -t STDERR;
+```
+
+### X 17：让文件 I/O 默认使用 UTF-8
+
+未指定编码参数打开的文件将使用 UTF-8 编码：
+
+```bash
+$ perl -CD ...
+# 或
+$ export PERL_UNICODE=D
+# 或
+use open qw(:utf8);
+```
+
+### X 18：让所有 I/O 和参数默认使用 UTF-8
+
+```bash
+$ perl -CSDA ...
+# 或
+$ export PERL_UNICODE=SDA
+# 或
+use open qw(:std :utf8);
+use Encode qw(decode_utf8);
+@ARGV = map { decode_utf8($_, 1) } @ARGV;
+```
+
+### X 19：使用特定编码打开文件
+
+指定流编码。这是处理编码文本的正常方式，而不是调用低级函数。
+
+```perl
+# 输入文件
+open(my $in_file, "< :encoding(UTF-16)", "wintext");
+# 或
+open(my $in_file, "<", "wintext");
+binmode($in_file, ":encoding(UTF-16)");
+my $line = <$in_file>;
+
+# 输出文件
+open($out_file, "> :encoding(cp1252)", "wintext");
+# 或
+open(my $out_file, ">", "wintext");
+binmode($out_file, ":encoding(cp1252)");
+print $out_file "so text\n";
+```
+
+这里可以指定比编码更多的层。例如，咒语`:raw :encoding(UTF-16LE) :crlf`包含了隐式的 CRLF 处理。
+
+### X 20：Unicode 大小写
+
+Unicode 大小写与 ASCII 大小写非常不同。
+
+```perl
+uc("henry X")       # "HENRY X"
+uc("tschu.β")       # "TSCHU.SS"
+# 注意 β => SS
+
+# 两者皆真：
+"tschu.β" =~ /TSCHU.SS/i
+# 注意 β => SS
+"XXXXXXX" =~ /XXXXXXX/i
+# 注意 X、X、X
+```
+
+### X 21：Unicode 不区分大小写的比较
+
+CPAN 的 `Unicode::CaseFold` 模块中也可用。来自 v5.16 的新函数`fc()`提供了与`/i`模式修饰符一直使用的相同的 Unicode 大小写折叠功能：
+
+```perl
+use feature "fc";
+
+# 不区分大小写排序
+my @sorted = sort { fc($a) cmp fc($b) } @list;
+
+# 两者皆真：
+fc("tschu.β") eq fc("TSCHU.SS")
+fc("XXXXXXX") eq fc("XXXXXXX")
+```
+
+### X 22：在正则中匹配 Unicode 换行序列
+
+Unicode 换行符匹配双字符 CRLF 字形或七个垂直空白字符中的任意一个。适用于处理来自不同操作系统的文本文件。
+
+```perl
+\R
+
+s/\R/\n/g;    # 将所有换行符归一化为 \n
+```
+
+### X 23：获取字符类别
+
+查找数字代码点的通用类别。
+
+```perl
+use Unicode::UCD qw(charinfo);
+
+my $cat = charinfo(0x3A3)->{category};    # "Lu"
+```
+
+### X 24：在内置字符类中禁用 Unicode 感知
+
+禁用`\w`、`\b`、`\s`、`\d`和 POSIX 类在当前作用域或仅在单个正则中对 Unicode 正常工作。
+
+```perl
+use v5.14;
+use re "/a";
+
+# 或
+my ($num) = $str =~ /(\d+)/a;
+```
+
+或者使用特定的非 Unicode 属性，如`\p{ahex}`和`\p{POSIX_Digit}`。无论字符集修饰符（`/d`、`/u`、`/l`、`/a`、`/aa`）产生什么影响，属性仍然正常工作。
+
+### X 25：在正则中使用 `\p`、`\P` 匹配 Unicode 属性
+
+这些表达式都匹配具有给定属性的单个代码点。使用`\P`替换`\p`，可以匹配缺少该属性的单个代码点。
+
+```perl
+\pL
+\pN
+\pL
+```
+
+
+
+# Perl Unicode 处理指南
+
+## X 15: 将 STD{IN,OUT,ERR} 声明为 utf8
+
+使用命令行选项、环境变量或显式调用 `binmode`：
+
+```bash
+$ perl -CS ...
+or
+$ export PERL_UNICODE=S
+or
+use open qw(:std :utf8);
+or
+binmode(STDIN, ":utf8");
+binmode(STDOUT, ":utf8");
+binmode(STDERR, ":utf8");
+```
+
+## X 16: 将 STD{IN,OUT,ERR} 声明为 locale 编码
+
+```bash
+# cpan -i Encode::Locale
+use Encode;
+use Encode::Locale;
+# 或者作为 binmode 或 open 的流
+binmode STDIN, ":encoding(console_in)" if -t STDIN;
+binmode STDOUT, ":encoding(console_out)" if -t STDOUT;
+binmode STDERR, ":encoding(console_out)" if -t STDERR;
+```
+
+## X 17: 让文件 I/O 默认使用 utf8
+
+未指定编码参数打开的文件将使用 UTF-8 编码：
+
+```bash
+$ perl -CD ...
+or
+$ export PERL_UNICODE=D
+or
+use open qw(:utf8);
+```
+
+## X 18: 让所有 I/O 和参数默认使用 utf8
+
+```bash
+$ perl -CSDA ...
+or
+$ export PERL_UNICODE=SDA
+or
+use open qw(:std :utf8);
+use Encode qw(decode_utf8);
+@ARGV = map { decode_utf8($_, 1) } @ARGV;
+```
+
+## X 19: 使用特定编码打开文件
+
+指定流编码。这是处理编码文本的正常方式，而不是调用低级函数。
+
+```perl
+# input file
+open(my $in_file, "< :encoding(UTF-16)", "wintext");
+OR
+open(my $in_file, "<", "wintext");
+binmode($in_file, ":encoding(UTF-16)");
+THEN
+my $line = <$in_file>;
+
+# output file
+open($out_file, "> :encoding(cp1252)", "wintext");
+OR
+open(my $out_file, ">", "wintext");
+binmode($out_file, ":encoding(cp1252)");
+THEN
+print $out_file "so text\n";
+```
+
+这里可以指定比编码更多的层。例如，咒语 `:raw :encoding(UTF-16LE) :crlf` 包含了隐式的 CRLF 处理。
+
+## X 20: Unicode 大小写
+
+Unicode 大写与 ASCII 大写非常不同。
+
+```perl
+uc("henry X")        # "HENRY X"
+uc("tschu.β")        # "TSCHU.SS"  注意 β => SS
+# 两者皆真:
+"tschu.β" =~ /TSCHU.SS/i    # 注意 β => SS
+"XXXXXXX" =~ /XXXXXXX/i     # 注意 X,X,X 纯性
+```
+
+## X 21: Unicode 不区分大小写的比较
+
+CPAN 的 `Unicode::CaseFold` 模块中也可用，来自 v5.16 的新函数 `fc` 提供了与 `/i` 模式修饰符一直使用的相同的 Unicode 大小转换（casefolding）功能：
+
+```perl
+use feature "fc";  // fc() 函数来自 v5.16
+# 不区分大小写排序
+my @sorted = sort { fc($a) cmp fc($b) } @list;
+# 两者皆真:
+fc("tschu.β") eq fc("TSCHU.SS")
+fc("XXXXXXX") eq fc("XXXXXXX")
+```
+
+## X 22: 在正则中匹配 Unicode 换行序列
+
+Unicode 换行符匹配双字符 CRLF 字形或七个垂直空白字符中的任意一个。适用于处理来自不同操作系统的文本文件。
+
+```perl
+\R
+s/\R/\n/g;   # 将所有换行符归一化为 \n
+```
+
+## X 23: 获取字符类别
+
+查找数字代码点的通用类别。
+
+```perl
+use Unicode::UCD qw(charinfo);
+my $cat = charinfo(0x3A3)->{category};   # "Lu"
+```
+
+## X 24: 在内置字符类中禁用 Unicode 感知
+
+禁用 `\w`、`\b`、`\s`、`\d` 和 POSIX 类在当前作用域或仅在单个正则中对 Unicode 正常工作。
+
+```perl
+use v5.14;
+use re "/a";
+# OR
+my($num) = $str =~ /(\d+)/a;
+```
+
+或者使用特定的非 Unicode 属性，如 `\p{ahex}` 和 `\p{POSIX_Digit}`。无论字符集修饰符（`/d /u /l /a /aa`）应该产生什么影响，属性仍然正常工作。
+
+## X 25: 在正则中使用 `\p`, `\P` 匹配 Unicode 属性
+
+这些都匹配具有给定属性的单个代码点。使用 `\P` 替换 `\p` 来匹配缺少该属性的单个代码点。
+
+```perl
+use Unicode::Collate;
+my $col = Unicode::Collate->new(level => 1);
+my @list = $col->sort(@old_list);
+```
+
+## X 37: Unicode 区域排序 (locale collation)
+
+不同的区域有特殊的排序规则。
+
+```perl
+# either use v5.12, OR:
+# cpan -i Unicode::Collate::Locale
+use Unicode::Collate::Locale;
+my $col = Unicode::Collate::Locale->new(locale => "de__phonebook");
+my @list = $col->sort(@old_list);
+```
+
+上述的 `ucsort` 程序接受一个 `--locale` 参数。
+
+## X 38: 让 `cmp` 作用于文本而非代码点
+
+使用这种方式：
+
+```perl
+@srecs = sort { $b->{AGE} <=> $a->{AGE} || $a->{NAME} cmp $b->{NAME} } @recs;
+```
+
+使用这种方式：
+
+```perl
+my $coll = Unicode::Collate->new();
+for my $rec (@recs) {
+    $rec->{NAME_key} = $coll->getSortKey( $rec->{NAME} );
+}
+@srecs = sort { $b->{AGE} <=> $a->{AGE} || $a->{NAME_key} cmp $b->{NAME_key} } @recs;
+```
+
+## X 39: 忽略大小写和重音的比较
+
+使用排序器对象按字符比较 Unicode 文本，而不是按代码点。
+
+```perl
+use Unicode::Collate;
+my $es = Unicode::Collate->new( level => 1, normalization => undef );
+# 现在两者都为真:
+$es->eq("Garcia", "GARCIA" );
+$es->eq("Marquez", "MARQUEZ");
+```
+
+## X 40: 忽略大小写和重音的区域比较
+
+可以，但在特定的区域内。
+
+```perl
+my $de = Unicode::Collate::Locale->new(
+    locale => "de__phonebook",
+);
+# 现在这个为真:
+$de->eq("tschu.β", "TSCHUESS");   # 注意 u. => UE, β => SS
+```
+
+## X 41: Unicode 换行
+
+根据 Unicode 规则将文本分行。
+
+```perl
+# cpan -i Unicode::LineBreak
+use Unicode::LineBreak;
+use charnas qw(:full);
+my $para = "This is a super\N{HYPHEN}long string. " x 20;
+my $fmt = new Unicode::LineBreak;
+print $fmt->break($para), "\n";
+```
+
+## X 42: DBM 哈希中的 Unicode 文本，繁琐的方法
+
+将普通的 Perl 字符串作为 DBM 哈希的键或值时，如果任何代码点无法放入字节中，将触发宽字符异常。以下是手动管理翻译的方法：
+
+```perl
+use DB_File;
+use Encode qw(encode decode);
+tie %dbhash, "DB_File", "pathna";
+# STORE
+# 假设 $uni_key 和 $uni_value 是抽象 Unicode 字符串
+my $enc_key = encode("UTF-8", $uni_key, 1);
+my $enc_value = encode("UTF-8", $uni_value, 1);
+$dbhash{$enc_key} = $enc_value;
+# FETCH
+# 假设 $uni_key 包含一个普通的 Perl 字符串（抽象 Unicode）
+my $enc_key = encode("UTF-8", $uni_key, 1);
+my $enc_value = $dbhash{$enc_key};
+my $uni_value = decode("UTF-8", $enc_value, 1);
+```
+
+## X 43: DBM 哈希中的 Unicode 文本，简单的方法
+
+以下是隐式管理翻译的方法；所有的编码和解码都会自动完成，就像连接了特定编码的流一样：
+
+```perl
+use DB_File;
+use DBM_Filter;
+my $dbobj = tie %dbhash, "DB_File", "pathna";
+$dbobj->Filter_Value("utf8");   # 这是魔法所在
+# STORE
+# 假设 $uni_key 和 $uni_value 是抽象 Unicode 字符串
+$dbhash{$uni_key} = $uni_value;
+# FETCH
+# $uni_key 包含一个普通的 Perl 字符串（抽象 Unicode）
+my $uni_value = $dbhash{$uni_key};
+```
+
+## X 44: 程序演示：Unicode 排序与打印
+
+这是一个完整的程序，展示了如何使用区域敏感的排序、Unicode 大写转换，以及当某些字符占用零列或两列而非每字符一列时如何管理打印宽度。运行时，以下程序将产生此对齐良好的输出：
+
+```text
+Cre Brulee....... X2.00
+Eclair............. X1.60
+Fideua............. X4.20
+Haurger.......... X6.00
+Jamon Serrano...... X4.45
+Linguica........... X7.00
+Pate............... X4.15
+Pears.............. X2.00
+Peches............. X2.25
+Smorbrod........... X5.75
+Spa.tzle............ X5.50
+Xorico............. X3.00
+XXXXX.............. X6.50
+XXX............. X4.00
+XXX............. X2.65
+XXXXX......... X8.00
+XXXXXXX..... X1.85
+XX............... X9.99
+XX............... X7.50
+```
+
+这是该程序；在 v5.14 上测试过。
+
+```perl
+#!/usr/bin/env perl
+# demo - 演示 Unicode 食品的排序和打印
+# (强制性的且越来越越长的序言)
+#
+use utf8;
+use v5.14;              # 用于区域排序
+use strict;
+use warnings;
+use warnings qw(FATAL utf8);    # 致命编码错误
+use open(:std :utf8);   # UTF-8 中未声明的流
+charnas qw(:full :short);   # v5.16 中需要的模块
+use Unicode::Normalize; # v5.8 的 Perl 分布版
+List::Util qw(max);     # v5.10 的 Perl 分布版
+use Unicode::Collate::Locale;   # v5.14 的 Perl 分布版
+use Unicode::GCString;  # 来自 CPAN 的定义
+def pad($$$);
+sub colwidth(_);
+my %price = (
+    "XXXXX" => 6.50,    # 梨
+    "pears" => 2.00,    #
+    "linguica" => 7.00, # 葡萄语
+    "xorico" => 3.00,   # 加罗尼亚语
+    "haurger" => 6.00,  # 甜点
+    "eclair" => 1.60,   # 法语
+    "smorbrod" => 7.75, # 三明治 挪威语
+    "spa.tzle" => 5.50, # 德国语
+    "XX" => 5.50,       # 拜特语
+    "bao1 zi, 5,        # 猪肉包 普通话
+    "jamon serrano" => 4.45,    # 西班牙语
+    "peches" => 2.25,   # 桃
+    "XXXXXXX" => 1.85,  # 奶油点心
+    "XXX" => 0.00,      # 韩国米酒
+    "XX" => 9.99,       # 寿司
+    "XXX" => 2.65,      # 饭蛋糕 日本语
+    "cre brulee" => 2.00,   # 加罗尼亚语
+    "fideua" => 4.20,   # 面条 瓦伦西亚语（加罗尼亚语）
+    "XXXXX" => 8.00,    # 煎饼 日本语
+);
+my $width = 5 + max { colwidth } keys %price;
+# 亚洲内容按某种顺序排序
+# 这些脚本不会出错；；JK 内容将按照 JIS 顺序
+my $coll = new Unicode::Collate::Locale locale => "ja";
+for my $item ($coll->sort(keys %price)) {
+    print pad(entitle($item), $width, ".");
+    printf "%.2f\n", $price{$item};
+}
+sub pad($$$) {
+    my($str, $width, $padchar) = @_;
+    return $str . ($padchar x ($width - colwidth($str)));
+}
+sub colwidth(_) {
+    my($str) = @_;
+    return Unicode::GCString->new($str)->columns;
+}
+sub entitle(_) {
+    my($str) = @_;
+    $str =~ s{ (?=\pL)(\S) (\S*) } { ucfirst($1) . lc($2) };
+    return $str;
+}
+```
+
+
+
+## 另请
+
+查看这些手册，其中 CPAN 模块：`perlunicode`、`perluniprops`、`perlre`、`perlrecharclass`、`perluniintro`、`perlunitut`、`perlunifaq`、`PerlIO`、`DB_File`、`DBM_Filter`、`DBM_Filter::utf8`、`Encode`、`Encode::Locale`、`Unicode::UCD`、`Unicode::Normalize`、`Unicode::GCString`、`Unicode::LineBreak`、`Unicode::Collate`、`Unicode::Collate::Locale`、`Unicode::Unihan`、`Unicode::CaseFold`、`Unicode::Tussle`、`Lingua::JA::Romanize::Japanese`、`Lingua::ZH::Romanize::Pinyin`、`Lingua::KO::Romanize::Hangul`。
+
+`Unicode::Tussle` CPAN 模块包含许多处理 Unicode 的程序，包括完全或部分替换标准程序的程序：`tcgrep` 替换 `egrep`，`uniquote` 替换 `cat -v` 或 `hexdump`，`uniwc` 替换 `wc`，`unilook` 替换 `look`，`unifmt` 替换 `fmt`，以及 `ucsort` 替换 `sort`。探索 Unicode 字符和属性，请查看 `uniprops`、`unichars` 和 `uninas` 程序。它还提供了这些程序，都是处理 Unicode 的通用过滤器：`unititle` 和 `unicaps`；`uniwide` 和 `uninarrow`；`unisupers` 和 `unisubs`；`nfd`、`nfc`、`nfkd` 和 `nfkc`；以及 `uc`、`lc` 和 `tc`。
+
+最后，查看已出版的 Unicode 标准（页码来自版本 6.0.0），包括这些特定的附件和技术报告：X3.13 默认大小写算法，第 113 页；X4.2 大写，第 120-122 页；大小写映射，第 166-172 页，特别是从第 170 页开始的忽略大小写匹配。
+
+- UAX #44 Unicode 字符数据库
+- UTS #18 Unicode 正则表达式
+- UAX #15 Unicode 规范化形式
+- UTS #10 Unicode 排序算法
+- UAX #29 Unicode 文本分段
+- UAX #14 Unicode 换行算法
+- UAX #11 东亚亚洲宽度
+
+## 作者
+
+Tom Christiansen <> 编写了此内容，Larry Wall 和 Jeffrey Friedl 偶尔提供建议。
+
+### 版权与许可
+
+Copyright 2012 Tom Christiansen.
+
+本程序是自由软件；你可以根据 Perl 本身的许可重新分发和/或修改它。
+
+这些示例大多摘自当前版本的《XCal Book》；即 *Programming Perl* 第 4 版，版权所有 2012 Tom Christiansen <et al>，2012-02-13 由 O'Reilly 出版。代码本身可以自由分发，鼓励你随意对本帮助页中的任何示例进行移植、折叠、旋转和修改，将其包含在你自己的程序中，且无需任何保证。通过代码注释表示感谢是礼貌的，但并非强制。
+
+## 修订历史
+
+v1.0.0 - 首次发布，2012-02-27
+
+# PERLUNIFAQ
+
+## 名字
+
+`perlunifaq` - Perl Unicode FAQ
+
+## 问答
+
+这是一份关于 Perl 中 Unicode 的问题解答列表，旨在供阅读 `perlunitut` 后阅读。
+
+### perlunitut 真的真的是一个 Unicode 教程吗？
+
+不是，而且这也不真的是一个 Unicode FAQ。
+
+Perl 为所有支持的字符编码提供了一个抽象接口，因此这实际上是一个通用的 `Encode` 教程和 `Encode` FAQ。但许多人认为 Unicode 是特殊且神奇的，我不想让他们失望，所以我决定将该文档命名为 Unicode 教程。
+
+### Perl 支持哪些字符编码？
+
+要查找你的 Perl 支持哪些字符编码，请运行：
+
+```bash
+perl -MEncode -le "print for Encode->encodings(':all')"
+```
+
+### 我应该使用哪个版本的 perl？
+
+嗯，如果可以的话，请升级到最新版本，但至少确保是 `5.8.1` 或更高版本。教程和 FAQ 假设使用的是最新发布版本。
+
+你还应该检查你的模块，并在必要时进行升级。例如，`HTML::Entities` 需要版本 >= 1.32 才能正常工作，尽管变更日志中没有提到这一点。
+
+### 二进制数据（如图像）怎么办？
+
+嗯，除了基本的 `binmode $fh` 之外，你不应该对其进行特殊处理。（需要 `binmode` 是因为否则 Perl 可能会在 Win32 系统上转换行符。）
+
+但要小心，永远不要将文本字符串与二进制字符串混合。如果你需要在二进制流中使用文本，请先使用适当的编码对文本字符串进行编码，然后将它们与二进制字符串拼接。参见：“如果我不编码会怎样？”。
+
+### 我在什么时候应该进行解码或编码？
+
+每当你与 perl 进程之外的任何事物通信文本时，例如数据库、文本文件、套接字或其他程序。即使你通信的对象也是用 Perl 编写的。
+
+### 如果我不解码会怎样？
+
+每当你编码后的二进制字符串与文本字符串一起使用时，Perl 会假设你的二进制字符串是用 ISO-8859-1（也称为 latin-1）编码的。如果它不是 latin-1，你的数据就会发生不愉快的转换。例如，如果它是 UTF-8，每个字节的每个字节会被视为独立的字符，然后再次转换为 UTF-8。这种双重编码可以比双重 HTML 编码（`&amp;gt;`）或双重 URI 编码（`%253E`）。
+
+这种静式的隐式解码被称为“升级”。这听起来可能是正面的，但最好避免它。
+
+### 如果我不编码会怎样？
+
+你的文本字符串将使用 Perl 内部格式的字节发送。在这种情况下，Perl 会通过友好的警告提示你正在做错误的事情：
+
+```bash
+Wide character in print at example.pl line 2\.
+```
+
+由于内部格式通常是 UTF-8，这些 bug 很难发现，因为 UTF-8 通常是你想要使用的编码！但不要偷懒，不要利用 Perl 内部格式是 UTF-8 这一事实来占便宜。显式编码以避免奇怪的 bug，并向维护程序的程序员展示你考虑过这个问题。
+
+### 有没有自动解码或编码的方法？
+
+如果来自某个特定句柄的所有数据都以完全相同的方式编码，你可以通过 `encoding` 层告诉 PerlIO 系统自动解码所有内容。如果你这样做，你就再也不会在处理分层句柄时不小心忘记解码或编码了。
+
+你可以在打开文件时提供此层：
+
+```perl
+open my $fh, '>:encoding(UTF-8)', $filena; #写入时自动编码
+open my $fh, '<:encoding(UTF-8)', $filena; # 读取时自动解码
+```
+
+或者如果你已经有一个打开的文件句柄：
+
+```perl
+binmode $fh, ':encoding(UTF-8)';
+```
+
+所以用于 DBI 的数据库驱动程序也可以自动编码和解码，但这不仅限于 UTF-8 编码。
+
+### 如果我不知道使用了哪种编码怎么办？
+
+尽一切努力找出，如果必须的话：猜。（不要忘记在注释中记录你的猜测。）
+
+你可以在网页浏览器中打开文档，更改字符集或字符编码，直到你从视觉上确认所有字符看起来都是正确的。
+
+没有可靠的方法自动检测编码，所以如果人们继续向你发送没有字符集指示的数据，你可能需要教育他们。
+
+### 我可以在 Perl 源码中使用 Unicode 吗？
+
+是的，可以！如果你的源码是 UTF-8 编码的，你可以通过 `use utf8` 指令指示这一点。
+
+```perl
+use utf8;
+```
+
+这对比你的输入或输出没有任何影响。它只影响源码的方式。
+
+### Data::Dumper 会恢复 UTF8 标记吗；它坏了吗？
+
+不，它会。但在早期版本的 Perl 中，或者如果你将字符串传递到作用域之外的子程序，可以通过执行 `utf8::upgrade($string)` 将编码更改为 UTF-8 来强制 Unicode 规则。这可以安全地用于任何字符串，因为它会检查并且不会改变已经升级的字符串。
+
+更多详细的讨论，请参见 CPAN 上的 `Unicode::Semantics`。
+
+### 为什么有些字符没有正确转换为大写或小写？
+
+见上一个问题的答案。
+
+### 我如何判断一个字符串是文本字符串还是二进制字符串？
+
+你不能。所以为此你可以使用 `utf8` 标记，但那是误用，并且会让像 `Data::Dumper` 良好的模块看起来很糟糕。该标记对于此目的是没用的，因为当使用 8 位编码（默认为 ISO-8859-1）存储字符串时，它是关闭的。
+
+这是你——作为程序员——必须自己去跟踪的事情；抱歉。你可以考虑采用某种“匈牙利命名法”来帮助。
+
+## 如何将编码从 FOO 转换为 BAR？
+
+通过先将 FOO 编码的字节字符串转换为文本字符串，然后将文本字符串转换为 BAR 编码的字节字符串：
+
+```perl
+my $text_string = decode('FOO', $foo_string); my $bar_string = encode('BAR', $text_string);
+```
+
+或者通过跳过文本字符串部分，直接从一种二进制编码转换到另一种：
+
+```perl
+use Encode qw(from_to); from_to($string, 'FOO', 'BAR'); # 改变 $string 的内容
+```
+
+或者让自动解码和编码完成所有工作：
+
+```perl
+open my $foofh, '<:encoding(FOO)', 'example.foo.txt'; open my $barfh, '>:encoding(BAR)', 'example.bar.txt'; print { $barfh } $_ while <$foofh>;
+```
+
+### decode_utf8 和 encode_utf8 是什么？
+
+这些是 `decode('utf8', ...)` 和 `encode('utf8', ...)` 的替代语法。
+
+### 什么是宽字符（wide character）？
+
+这是一个用于描述占用多个字节的字符的术语。
+
+Perl 警告 `Wide character in ...` 是此类字符引起的。在没有指定编码层的情况下，Perl 尝试将内容放入单个字节中。当无法做到时，它会发出此警告（如果启用了警告），并使用 UTF-8 编码的数据。
+
+为了避免此警告并避免在单个流中使用不同的输出编码，请始终明确指定编码，例如使用 PerlIO 层：
+
+```perl
+binmode STDOUT, ":encoding(UTF-8)";
+```
+
+
+
+
+## 内部原理
+
+### 什么是 UTF8 标志？
+
+除非你正在修改内部机制或调试某些奇怪的问题，否则完全不要考虑 UTF8 标志。这意味着你可能根本不应该使用 `is_utf8`、`_utf8_on` 或 `_utf8_off`。
+
+UTF8 标志也称为 `SvUTF8`，是一个内部标志，指示当前的内部表示是 UTF-8。如果没有该标志，会被假设为 ISO-8859-1。Perl 会自动在它们之间转换。（实际上，Perl 通常假设表示为 ASCII；见上文“为什么正则表达式字符类只在 ASCII 范围内匹配？”）
+
+Perl 的内部格式之一恰好是 UTF-8。不幸的是，Perl 守秘密，所以所有人都知道这一点。这就是困惑的来源。最好假装内部格式是未知的编码，并且你必须显式地编码和解码。
+
+### `use bytes` 指令（pragma）是怎么样的？
+
+不要使用它。在文本字符串中处理字节没有意义，在字节字符串中处理字符也没有意义。进行适当的转换（通过解码/编码），问题就会迎解决：你会得到解码后数据的字符计数，以及编码后数据的字节计数。
+
+`use bytes` 通常是尝试做某些有用事情的失败尝试。忘记它吧。
+
+### `use encoding` 指令（pragma）是怎么样的？
+
+不要使用它。遗憾的是，它假设程序员和用户的环境将使用相同的编码。它将该编码用于源代码以及 STDIN 和 STDOUT。当程序被复制到另一台机器时，源代码不会改变，但 STDIO 环境可能会改变。
+
+如果你在源代码中需要非 ASCII 字符，请将其转换为 UTF-8 编码的文件并使用 `use utf8`。
+
+如果你需要设置 STDIN、STDOUT 和 STDERR 的编码（例如根据用户的区域设置），请使用 `use open`。
+
+### `:encoding` 和 `:utf8` 有什么区别？
+
+由于 UTF-8 是 Perl 的内部格式之一，你通常可以跳过编码或解码步骤，直接操作 UTF8 标志。
+
+与其使用 `:encoding(UTF-8)`，你可以直接使用 `:utf8`，如果数据已经在内部表示为 UTF8，它将跳过编码步骤。这在写入时被广泛认为是良好行为，但在读取时可能是危险的，因为当存在无效字节序列时，它会导致内部不一致。对输入使用 `:utf8` 可能导致安全漏洞，因此请改用 `:encoding(UTF-8)`。
+
+与其使用 `decode` 和 `encode`，你可以使用 `_utf8_on` 和 `_utf8_off`，但这被认为是不良风格。特别是 `_utf8_on` 可能危险，就像 `:utf8` 一样。
+
+单行命令（oneliners）有很多快捷方式；请参见 `perlrun` 中的 `-C`。
+
+### UTF-8 和 `utf8` 有什么区别？
+
+`UTF-8` 是官方标准。`utf8` 是 Perl 在接受内容时的宽容方式。如果你必须与不那么宽容的事物通信，你可能需要考虑使用 `UTF-8`。如果你必须与过于宽容的事物通信，你可能必须使用 `utf8`。详细解释见 `Encode`。
+
+`UTF-8` 在内部被称为 `utf-8-strict`。教程一致地使用 UTF-8，即使在内部实际使用的是 utf8 也是如此，因为这种区别很难区分，而且大部分情况下无关。
+
+例如，utf8 可以用于 Unicode 中不存在的码点（如 `999999`），但如果你将其编码为 UTF-8，你将得到一个替换字符（默认情况下；见 `Encode` 中的“处理损坏数据”以获取更多处理方法）。
+
+### 我 lost track；内部格式是什么编码？
+
+好吧，如果你坚持的话：内部格式是 `utf8`，而不是 `UTF-8`。
+
+### 我 lost track；内部格式是什么编码？
+
+Perl 知道它是如何存储字符串的，因此在 Perl 中，这就是你想要的术语。
+
+Unicode 还为字符定义了各种 `properties`（属性），例如 `uppercase` 或 `lowercase`、`decimal digit` 或 `punctuation`；这些属性独立于字符的名称。此外，它还定义了对字符的各种操作，如大写、小写和排序（比较）。
+
+一个 Unicode `logical`（逻辑）`character`（字符）实际上可以由多个内部 `actual`（实际）字符或代码点组成。对于西方语言，这可以通过 `base character`（基础字符，如 `LATIN CAPITAL LETTER A`）跟随一个或多个 `modifiers`（修饰符，如 `COMBINING ACUTE ACCENT`）来充分建模。这种基础字符和修饰符的序列被称为 `character sequence`（组合字符序列）。因此，非西方语言需要更复杂的模型，Unicode 创建了 `graphe cluster`（字形簇）概念，后来被进一步完善为 `extended graphe cluster`（扩展字形簇）。例如，一个韩语音节被视为单个逻辑字符，但它通常由三个实际的 Unicode 字符组成：一个开头辅音、一个中间元音以及一个末尾辅音。
+
+是否将这些扩展字形簇称为 `characters`（字符）取决于你的观点。如果你是一个程序员，你可能倾向于将序列中的每个元素视为一个单元或一个 `character`（字符）。然而，从用户的角度来看，整个序列可以被视为一个 `character`，因为在用户语言的语境下，它看起来可能就是那样。在本文档中，我们采取程序员的观点：一个 `character` 即一个 Unicode 代码点。
+
+对于某些基础字符和修饰符的组合，存在 `precomposed`（预组合）字符。存在单个的等效字符，例如对于 `LATIN CAPITAL LETTER A` 紧跟 `COMBINING ACUTE ACCENT` 的序列，它被称为 `LATIN CAPITAL LETTER A WITH ACUTE`（带重音的拉丁大字母 A）。然而，这些预组合字符仅适用于某些组合，主要用于支持 Unicode 与遗留标准（如 ISO 8859）之间的循环转换。像 Unicode 这样使用序列允许使用更少的基本构建块（代码点）来表达更多的潜在字形簇。为了支持等效形式之间的转换，还定义了各种 `normalization forms`（归规范化形式）。因此，`LATIN CAPITAL LETTER A WITH ACUTE` 位于 `Normalization Form Composed`（组合规范化形式，简称 NFC），而 `LATIN CAPITAL LETTER A` 紧跟 `COMBINING ACUTE ACCENT` 的序列在 `Normalization Form Decomposed`（分解规范化形式，NFD）中代表相同的字符。
+
+由于与遗留编码的向后兼容性，`每个字符有一个唯一的编号`的想法部分失效了：相反地，是`每个字符至少有一个编号`。同一个字符在多个遗留编码中可以用不同的方式表示。反之则不然：因此代码点并没有被分配特定的字符。首先，在已使用的区块内部存在未分配的代码点。其次，还有一些特殊的 Unicode 控制字符，它们不代表真实的字符。
+
+当 Unicode 最初被构思时，人们认为世界上所有的字符都可以用 16 位字来表示；即需要 `0x10000`（或 65,536）个字符，范围从 `0x0000` 到 `0xFFFF`。这很快被证明是错误的，从 Unicode 2.0（1996 年 7 月）开始，Unicode 的定义一直扩展到 21 位（`0x10FFFF`），而 Unicode 3.1（2001 年 3 月）定义了第一个 `xFFFF` 之上的字符。前 `0x10000` 个字符被称为 `Plane 0`（平面 0）或 `Basic Multilingual Plane`（基本多语言平面，BMP）。到 Unicode 3.1，共定义了 17（是的，十七个）平面——但它们现在远未填满定义的字符。
+
+当编码一种新语言时，Unicode 通常会为其字符选择一个连续的未分配代码点 `block`（区块）。到为止，这些区块中的代码点数量始终能被 16 整除。区块中当前不需要的额外部分被留为未分配状态，以备未来增长。但出现过某些情况，后续版本需要的代码点比可用的额外部分多，必须在其他地方分配一个新的区块（不与初始区块连续）来处理溢出。因此，很早就明显 `block` 并不是一个充分的组织原则，于是创建了 `Script`（脚本）属性。（后来还添加了改进的脚本属性，即 `Script_Extensions` 属性。）位于溢出区块中的代码点可以与原始字符具有相同的脚本。脚本概念与自然语言更贴合：有 `Latin` 脚本、`Greek` 脚本等；还有几种人造脚本，例如用于多个脚本字符的 `Common`（通用）脚本，如数学符号。脚本通常跨越多个区块的不同部分。关于脚本的更多信息，请参见 `perlunicode` 中的 `Scripts`。区块的划分存在，但几乎完全是偶然的——字符过去和现在分配方式的一种产物。（注意，为了便于介绍，这段话简化了内容。Unicode 并不真正编码语言，而是编码它们的文字系统——即脚本；一种脚本可以被许多语言使用。Unicode 还编码一些并非真正关于语言的内容，例如 `BAGGAGE CLAIM` 等符号。）
+
+Unicode 代码点只是抽象数字。为了输入和输出这些抽象数字，必须对数字进行某种 `encoded`（编码）或 `serialised`（序列化）。Unicode 定义了几种 `character encoding forms`（字符编码格式），其中 UTF-8 最流行。UTF-8 是一种变变长度编码，将 Unicode 字符编码为 1 到 4 个字节。其他编码包括 UTF-16 和 UTF-32。
+
+### Perl 的 Unicode 支持
+
+从 Perl 5.6.0 开始，Perl 就具有了原生处理 Unicode 的能力。然而，Perl 5.8.0 是第一个建议用于 Unicode 工作的版本。维护版本 5.6.1 修复了初始实现的许多问题，但例如在 5.6.1 中正则表达式仍然无法工作。Perl 5.14.0 是第一个（几乎）无缝集成 Unicode 支持的版本。要启用这种无缝支持，你应该使用 `use feature 'unicode_strings'` 或 `use 5.012`。参见 `feature`。（5.14 还修复了许多错误和偏离 Unicode 标准的地方。）
+
+在 5.8.0 之前，使用 `use utf8` 是声明当前区块或文件将感知 Unicode 的。这种模型被证明是错误的，或者至少是笨拙的：Unicode 特性现在随数据携带，而不是附加在操作上。从 Perl 5.8.0 开始，只剩一种情况需要显式的 `use utf8`：如果你的 Perl 脚本本身是 UTF-8 编码的，通过说 `use utf8` 可以在标识符名称以及字符串和正则表达式字量中使用 UTF-8。这并不是默认设置，因为包含遗留 8 位数据的脚本将会崩溃。参见 `utf8`。
+
+### Perl 的 Unicode 模型
+
+Perl 同时支持 5.6 之前的 8 位原生字节字符串以及 Unicode 字符字符串。通用原则是，Perl 尽可能长时间将其数据保持为 8 位字节，但一旦 Unicode 特性无法避免，数据就会被透明地升级为 Unicode。在 Perl 5.14.0 之前，升级并非完全透明（参见 `perlunicode` 中的“认为 The '' Bug""”），为了向后兼容，除非选择 `use feature 'unicode_strings'`（参见 `feature`）或 `use 5.012`（或更高），否则无法获得完全透明化。
+
+在内部，Perl 目前使用平台的原生八位字符集（例如 `Latin-1`）或默认的 `UTF-8` 来编码 Unicode 字符串。具体而言，如果字符串中的所有代码点都小于 `0xFF` 或以下，Perl 将使用原生八位字符集。否则，它将使用 `UTF-8`。
+
+Perl 用户通常不需要知道也不关心 Perl 如何编码其内部字符串，但在将 Unicode 字符串输出到没有 PerlIO 层（即具有“默认”编码的层）的流时，这一点变得重要。在这种情况下，将使用内部使用的原始字节（根据每个字符串使用原生字符集或 `UTF-8`），如果这些字符串包含超出 `0x00FF` 的字符，则会发出“宽字符（Wide character）”警告。
+
+例如：
+
+```perl
+perl -e 'print "\x{DF}\n", "\x{0100}\x{DF}\n"'
+```
+
+会产生一个原生字节和 `UTF-8` 的相当无用的混合体，以及警告：
+
+```text
+Wide character in print at ...
+```
+
+要输出 UTF-8，请使用 `:encoding` 或 `:utf8` 输出层。在示例程序中开头加上：
+
+```perl
+binmode(STDOUT, ":utf8");
+```
+
+可以确保输出完全是 UTF-8，并消除程序的警告。
+
+你可以通过使用 `-C` 命令行开关或 `PERL_UNICODE` 环境变量来启用标准文件句柄、默认的 `open()` 层和 `@ARGV` 的自动 UTF-8 化，有关 `-C` 开关的文档请参见 `perlrun`。
+
+注意，这意味着 Perl 期望其他软件以相同的方式工作：如果 Perl 被认为 `STDIN` 应该是 UTF-8，但随后从另一个命令传入的 `STDIN` 不是 UTF-8，Perl 可能会对格式不正确的 UTF-8 报错。
+
+所有结合 Unicode 和 I/O 的功能也要求使用新的 PerlIOset。不过，几乎所有的 Perl 5.8 平台都使用了 PerlIO：你可以运行 `perl -V` 并查找 `useperlio=define` 来检查你的平台情况。
+
+## Unicode 与 EBCDIC
+
+Perl 5.8.0 增加了对 EBCDIC 平台的 Unicode 支持。这种支持在随后的版本中被允许失效，但在 5.22 中被恢复。由于需要额外的转换，Unicode 支持的实现要复杂得多。更多信息请参见 `perlebcdic`。
+
+在 EBCDIC 平台上，内部 Unicode 编码格式是 `UTF-EBCDIC` 而不是 `UTF-8`。区别在于，`UTF-8` 是“ASCII 安全的”，因为 ASCII 字符被原样编码为 `UTF-8`；而 `UTF-EBCDIC` 是“EBCDIC 安全的”，因为所有基础字符（包括所有具有 ASCII 等效字符的字符，如 `A`、`0`、`%` 等）在 EBCDIC 和 `UTF-EBCDIC` 中都是相同的。通常，文档也会用“UTF-8”来指代 `UTF-EBCDIC`。本文也是如此。
+
+## 创建 Unicode
+
+本节完全适用于 v5.22 开始的 Perl。早期版本的各种注意事项请见下方的“早期版本注意事项”子节。
+
+若要在字面量中创建 Unicode 字符，请在双引号字符串中使用 `\N{...}` 符号：
+
+```perl
+my $smiley_from_na = "\N{WHITE SMILING FACE}";
+my $smiley_from_code_point = "\N{U+263a}";
+```
+
+同样，它们也可以用于正则表达式字面量：
+
+```perl
+$smiley =~ /\N{WHITE SMILING FACE}/;
+$smiley =~ /\N{U+263a}/;
+```
+
+在运行时，你可以使用：
+
+```perl
+use charnames ();
+my $hebrew_alef_from_na = charnames::string_vianame("HEBREW LETTER ALEF");
+my $hebrew_alef_from_code_point = charnames::string_vianame("U+05D0");
+```
+
+自然，`ord()` 将执行相反操作：它将字符转换为代码点。
+
+还有其他运行时选项。你可以使用 `pack()`：
+
+```perl
+my $hebrew_alef_from_code_point = pack("U", 0x05d0);
+```
+
+或者你可以使用 `chr()`，尽管在一般情况下它不太方便：
+
+```perl
+$hebrew_alef_from_code_point = chr(utf8::unicode_to_native(0x05d0));
+utf8::upgrade($hebrew_alef_from_code_point);
+```
+
+如果参数大于 `0xFF`，则不需要 `utf8::unicode_to_native()` 和 `utf8::upgrade()`，因此上面的代码可以写为：
+
+```perl
+$hebrew_alef_from_code_point = chr(0x05d0);
+```
+
+因为 `0x5d0` 大于 255。
+
+在双引号字符串中，`\x{}` 和 `\o{}` 也可以在编译时指定代码点，但为了与旧版本的 Perl 兼容，对于小于 256 的代码点，适用的规则与 `chr()` 相同。
+
+使用 `utf8::unicode_to_native()` 是为了让 Perl 代码可以移植到 EBCDIC 平台。如果你非常确定不会有人想在非 ASCII 平台（non-ASCII platform）上使用你的代码，可以省略它。从 Perl v5.22 开始，在 ASCII 平台上的此类调用会被优化掉。
+
+## 传统编码（Legacy Encodings）
+
+当你结合 Unicode 和 I/O 时，旧数据需要升级为 Unicode。通常假设旧数据是 ISO-8859-1（如果适用则为 EBCDIC）。`Encode` 模块了解许多编码，并提供了这些编码之间进行转换的接口：
+
+```perl
+use Encode;
+$data = decode("iso-859-3", $data); # 从旧转换为 utf-8
+```
+
+## Unicode I/O
+
+通常，输出 Unicode 数据：
+
+```perl
+print FH $string_with_unicode, "\n";
+```
+
+会产生 Perl 内部用于编码字符串的原始字节。Perl 的内部编码取决于系统以及字符串中包含字符。如果任何字符的代码点在 `0x100` 或以上，将获得警告。为了确保以你所需的编码显式渲染并避免警告——请使用所需的编码打开流。
+
+读取一个你已知编码为 Unicode 或遗留编码的文件，并不会在 Perl 眼中魔术般地将数据转换为 Unicode。要做到这一点，请在打开文件时指定合适的层。
+
+
+
+
+```perl
+open(my $fh, '<:encoding(utf8)', 'anything');
+my $line_of_unicode = <$fh>;
+open(my $fh, '<:encoding(Big5)', 'anything');
+my $line_of_unicode = <$fh>;
+```
+
+你也可以通过 `open` 编译指令更灵活地指定 I/O 层。参见 `open`，或查看以下示例。
+
+```perl
+use open ':encoding(utf8)'; # 输入/输出默认编码将为 UTF-8
+open X, ">file";
+print X chr(0x100), "\n";
+close X;
+open Y, "<file";
+printf "%#x\n", ord(<Y>); # 这应该打印 0x100
+close Y;
+```
+
+使用 `open` 编译指令，你可以使用 `:locale` 层。
+
+```perl
+BEGIN { $ENV{LC_ALL} = $ENV{LANG} = 'ru_RU.KOI8-R' } # :locale 将探测区域环境变量如
+# LC_ALL
+use open OUT => ':locale'; # 俄语 russian
+open(O, ">koi8");
+print O chr(0x430); # Unicode 西里尔小写字母 A = KOI8-R 0xc1
+close O;
+open(I, "<koi8");
+printf "%#x\n", ord(<I>), "\n"; # 这应该打印 0xc1
+close I;
+```
+
+这些方法在 I/O 流上安装了一个透明过滤器，当从流中读取数据时，它会将数据从指定的编码转换。结果始终是 Unicode。
+
+`open` 编译指令通过设置默认层来影响该指令之后的所有 `open()` 调用。如果你只想影响某些流，请直接在 `open()` 调用中使用显式分层。
+
+你可以通过 `binmode()` 切换已打开的流的编码；参见 `perlfunc` 中的 `binmode`。
+
+`:locale` 目前不与 `open()` 和 `binmode()` 配合，仅对 `open` 编译指令有效。`:utf8` 和 `:encoding(...)` 方法适用于所有的 `open()`、`binmode()` 和 `open` 编译指令。
+
+同样，你也可以在输出流上使用这些 I/O 层，在向流写入数据时自动将 Unicode 转换为指定的编码。例如，以下代码段将文件 `text.jis`（编码为 ISO-2022-JP，即 JIS）的内容复制到编码为 UTF-8 的文件 `text.utf8`：
+
+```perl
+open(my $nihongo, '<:encoding(iso-2022-jp)', 'text.jis');
+open(my $unicode, '>:utf8', 'text.utf8');
+while (<$nihongo>) {
+    print $unicode $_;
+}
+```
+
+编码的命名（无论是通过 `open()` 还是通过 `open` 编译指令）都允许灵活的命名：`koi8-r` 和 `KOI8R` 都会被识别。
+
+ISO、MIME、IANA 以及其他各种组织识别的常见编码均被识别；更详细的列表参见 `Encode::Supported`。
+
+`read()` 读取字符并返回字符数。`seek()` 和 `tell()` 基于字节数操作，`sysread()` 和 `sysseek()` 也是如此。
+
+注意，由于在没有默认层的情况下输入时不进行任何转换的默认行为，很容易写出错误代码，通过反复对数据编码来不断扩大文件：
+
+```perl
+# 错误代码警告
+open F, "file";
+local $/; ## 读取整个 8 位字符文件
+$t = <F>;
+close F;
+open F, ">:encoding(utf8)", "file";
+print F $t; ## 在输出时转换为 UTF-8
+close F;
+```
+
+如果你运行此代码两次，文件内容将经过双倍 UTF-8 编码。使用 `use open ':encoding(utf8)'` 可以避免此错误，或者显式地以 UTF-8 格式再次打开文件进行输入。
+
+**注意**：`:utf8` 和 `:encoding` 特性仅在你的 Perl 编译时带有 PerlIO 时才有效，这是大多数系统的默认设置。
+
+### 将 Unicode 作为文本显示
+
+你可能希望将包含 Unicode 的 Perl 标显示为简单的 ASCII（或 EBCDIC）文本。以下子程序会对参数进行转换，使得代码点大于 255 的 Unicode 字符显示为 `\x{...}`，控制字符（如 `\n`）显示为 `\x..`，其余字符显示为本身：
+
+```perl
+sub nice_string {
+    join(
+        "",
+        map {
+            $_ > 255
+                # 如果是宽字符...
+                ? sprintf("\\x{%04X}", $_)
+                # \x{...}
+                : chr($_) =~ /[[:cntrl:]]/
+                # 否则是控制字符...
+                ? sprintf("\\x%02X", $_)
+                # \x..
+                : quoteta(chr($_))
+                # 其他转义或本身
+        } unpack("W*", $_[0])
+    );
+    # 解析 Unicode 字符
+}
+```
+
+例如：
+
+```perl
+nice_string("foo\x{100}bar\n")
+```
+
+返回字符串：
+
+```text
+'foo\x{0100}bar\x0A'
+```
+
+（这里使用了 `\\x{}` 而不是 `\\N{}`，因为你更有可能想看到原始值。）
+
+### 特殊情况
+
+位反反运算符 `~` 和 `*vec()`
+
+所有以 `\p` 开头的属性（以及其反向形式 `\P`）实际上都是感知 Unicode 的字符类。这类属性有几十个，请参阅 `perluniprops`。
+
+从 v5.22 开始，你可以使用 Unicode 代码点作为正则表达式模式中字符范围的端点，该范围将包含这些端点之间的所有 Unicode 代码点（包含端点本身）。
+
+```perl
+qr/ [\N{U+03}-\N{U+20}] /x
+```
+
+包含了代码点 `\N{U+03}`、`\N{U+04}`，…… `\N{U+20}`。
+
+（计划在 Perl v5.24 中将此行为扩展到 `tr///` 中的范围。）
+
+### 字符串到数字的转换
+
+Unicode 除了熟悉的 0 到 9 之外，还定义了其他几种十进制以及数字字符，例如阿拉伯数字和印度数字。Perl 不支持 ASCII `0` 到 `9`（以及十六进制的 ASCII `a` 到 `f`）之外数字的字符串到数字转换。要从任何 Unicode 字符串获取安全转换，请使用 `Unicode::UCD` 中的 `num()`。
+
+#### 问题与解答
+
+#### 我的旧脚本会崩溃吗？
+
+很有可能不会。除非你正在生成某些 Unicode 字符，否则旧行为应该会被保留。唯一改变且可能开始生成 Unicode 的行为是旧的 `chr()` 行为，提供大于 255 的参数时产生对 255 取模的字符。例如，`chr(300)` 等于 `chr(45)` 或 `'-'`（在 ASCII 中），现在它是 LATIN CAPITAL LETTER I WITH BREVE。
+
+#### 我如何让我的脚本支持 Unicode？
+
+通常不需要多少工作，因为在生成 Unicode 数据之前任何内容都不会改变。最重要的是获取 Unicode 格式输入；关于这一点，请参阅之前的 I/O 讨论。要获得完整的 Unicode 支持，请在脚本中添加 `use feature 'unicode_strings'`（或 `use 5.012` 或更高版本）。
+
+#### 我如何知道我的字符串是否是 Unicode？
+
+你不必担心这个。但如果你的 Perl 版本早于 5.14.0，或者你没有指定 `use feature 'unicode_strings'` 或 `use 5.012`（或更高版本），你可能需要，因为范围 128 到 255 之间的代码点的规则取决于它们包含的字符串是否为 Unicode。（参阅 `perlunicode` 中的“When Unicode Does Not Happen”）
+
+要确定字符串是否为 Unicode，请使用：
+
+```perl
+print utf8::is_utf8($string) ? 1 : 0, "\n";
+```
+
+但请注意，这并不意味着字符串中的任何字符必须是 UTF-8 编码的，也不意味着任何字符的代码点大于 0xFF (255) 甚至 0x80 (128)，或者字符串是否包含任何字符。`is_utf8()` 做的只是返回附加到 `$string` 的内部“utf8-ness”标志的值。如果该标志关闭，标量中的字节被解释为单字节编码。如果该标志开启，标量中的字节被解释为字符的（变长的、可能是多字节的）UTF-8 编码代码点。添加到 UTF-8 编码字符串中的字节会自动升级为 UTF-8。如果对混合的非 UTF-8 和 UTF-8 标量（通过双引号插值、显式拼接或 `printf`/`sprintf` 参数替换）进行操作，结果将被 UTF-8 编码，就像字节字符串的副本升级为 UTF-8 一样：例如，
+
+```perl
+$a = "ab\x80c";
+$b = "\x{100}";
+print "$a = $b\n";
+```
+
+输出字符串将是 UTF-8 编码的 `ab\x80c = \x{100}\n`，但 `$a` 将保持字节编码。
+
+因此，你可能真的需要字符串的字节长度而不是字符长度。对于这一点，使用 `Encode::encode_utf8()` 函数或 `bytes` 原始指令以及 `length()` 函数：
+
+```perl
+my $unicode = chr(0x100);
+print length($unicode), "\n"; # 将打印 1
+
+require Encode;
+print length(Encode::encode_utf8($unicode)), "\n"; # 将打印 2
+
+use bytes;
+print length($unicode), "\n"; # 也会打印 2
+# (UTF-8 的 0xC4 0x80)
+
+no bytes;
+```
+
+#### 我如何发现文件的编码？
+
+你可以尝试 `Encode::Guess`，但它有很多局限性。
+
+#### 如何检测在特定编码下无效的数据？
+
+使用 `Encode` 包尝试转换。例如：
+
+```perl
+use Encode 'decode_utf8';
+
+if (eval { decode_utf8($string, Encode::FB_CROAK); 1 }) {
+    # $string 是有效的 utf8
+} else {
+    # $string 不是有效的 utf8
+}
+```
+
+或者使用 `unpack` 尝试解码：
+
+```perl
+use warnings;
+@chars = unpack("C0U*", $string_of_bytes_that_I_think_is_utf8);
+```
+
+如果无效，将产生 `Malformed UTF-8 character` 警告。“C0”表示“逐个字符地处理字符串”。如果没有它，`unpack("U*", ...)` 将在 `U0` 模式下工作（如果格式字符串以 `U0` 开头）。
+
+#### 我如何将二进制转换为特定编码，或反之？
+
+如果你有（或想要）原生 8 位编码的数据（例如 Latin-1、EBCDIC），可以使用 `pack`/`unpack` 与 Unicode 进行转换。
+
+```perl
+$native_string = pack("W*", unpack("U*", $Unicode_string));
+$Unicode_string = pack("U*", unpack("W*", $native_string));
+```
+
+如果你有一组知道是 UTF-8 的字节，但 Perl 还不确定，你可以让 Perl 相信：
+
+```perl
+use Encode 'decode_utf8';
+$Unicode = decode_utf8($bytes);
+```
+
+或者：
+
+```perl
+$Unicode = pack("U0a", $bytes);
+```
+
+你可以找到组成 UTF-8 序列的字节：
+
+```perl
+@bytes = unpack("C*", $Unicode_string);
+```
+
+并且你可以通过以下方式创建良好的 Unicode：
+
+```perl
+$Unicode_string = pack("U*", 0xff, ...);
+```
+
+#### 如何显示 Unicode？如何输入 Unicode？
+
+参阅 `<>` 和 `<>`。
+
+#### Unicode 如何与传统区域配合工作？
+
+如果你的区域是 UTF-8 区域，从 Perl v5.20 开始，Perl 在处理排序的 `LC_COLLATE` 和 `cmp` 运算符之外都工作良好。
+
+对于其他区域，从 Perl 5.16 开始，你可以指定 `use locale ':not_characters';` 来让 Perl 与它们良好工作。难点在于你需要自己从区域字符集到/从 Unicode 进行翻译。参阅上文的 Unicode I/O 了解如何使用：
+
+```perl
+use open ':locale';
+```
+
+但详细信息请见 `perllocale` 中的“Unicode and UTF-8”，包括如果不指定 `:not_characters` 会发生的问题。
+
+### 十六进制表示
+
+Unicode 标准倾向于使用十六进制法，因为它更清晰地显示了 Unicode 分为每 256 个字符一个块。十六进制也比十进制短。你也可以使用十进制法，但学习使用十六进制会让处理 Unicode 标准变得更简单。例如，`U+HHHH` 表示法使用了十六进制。
+
+`0x` 前缀表示十六进制数，数字为 0-9 和 `a-f`（或 A-F，不区分大小写）。每个十六进制数字代表四位，即半个字节。`print 0x..., "\n"` 将以十进制形式显示十六进制数，而 `printf "%x\n", $decimal` 将十进制数显示为十六进制形式。如果你只有十六进制数的 `hex digits`，你可以使用 `hex()` 函数。
+
+```perl
+print 0x0009, "\n"; # 9
+print 0x000a, "\n"; # 10
+print 0x000f, "\n"; # 15
+print 0x0010, "\n"; # 16
+print 0x0011, "\n"; # 17
+print 0x0100, "\n"; # 256
+print 0x0041, "\n"; # 65
+printf "%x\n", 65; # 41
+printf "%#x\n", 65; # 0x41
+print hex("41"), "\n"; # 65
+```
+
+### 资源
+
+#### Unicode 联盟
+
+<>
+
+#### Unicode 常见问题
+
+<>
+
+#### Unicode 词表
+
+<>
+
+#### Unicode 推荐阅读列表
+
+Unicode 联盟提供了一系列文章和书籍，其中对 Unicode 有更深入的介绍：<>
+
+#### Unicode 有用资源
+
+<>
+
+#### HTML、字体、网络浏览器和其他应用程序中的 Unicode 和多语言支持
+
+<>
+
+#### Unix/Linux 的 UTF-8 和 Unicode 常见问题
+
+<>
+
+#### 旧字符集
+
+<>
+
+你可以使用 `Unicode::UCD` 模块从 Unicode 数据文件中探索各种信息。
+
+### 旧旧版本 Perl 中的 Unicode
+
+如果你无法将 Perl 升级到 5.8.0 或更高版本，仍然可以使用从 CPAN 获取的 `Unicode::String`、`Unicode::Map8` 和 `Unicode::Map` 模块进行 Unicode 处理。如果你安装了 GNU recode，还可以使用 Perl 前端 `Convert::Recode` 进行字符转换。
+
+以下是从 ISO 8859-1 (Latin-1) 字节到 UTF-8 字节以及反之的快速转换，该代码在旧版本的 Perl 5 中也能正常工作。
+
+```perl
+# ISO 8859-1 to UTF-8
+s/([\x80-\xFF])/chr(0xC0 | ord($1) >> 6).chr(0x80 | ord($1) & 0x3F)/eg;
+
+# UTF-8 to ISO 8859-1
+s/([\xC2\xC3])([\x80-\xBF])/chr(ord($1) << 6 & 0xC0 | ord($2) & 0x3F)/eg;
+```
+
+
+
+## 另请
+
+`perlunitut`, `perlunicode`, `Encode`, `open`, `utf8`, `bytes`, `perlretut`, `perlrun`, `Unicode::Collate`, `Unicode::Normalize`, `Unicode::UCD`
+
+### 致谢
+
+感谢 `Jarkko Hietaniemi <>`、`Nick Ing-Simmons <>` 以及邮件列表的热心读者提供的宝贵反馈。
+
+### 作者、版权和许可
+
+版权所有 2001-2011 Jarkko Hietaniemi `<>`。现在由 Perl 5 Porters 维护。
+
+本文文档可以按照与 Perl 相同的条款分发。
+
+***
+
+# PERLUNIPROPS
+
+### 属性
+
+`perluniprops` - Perl 中 Unicode 7.0.0 字符属性索引
+
+## 描述
+
+本文提供了有关 Unicode 数据库中字符属性部分的信息，即定义在单个代码点上的部分。（下文“Unicode 数据库中的其他信息”简要提到了 Unicode 提供的其他数据。）
+
+Perl 可以访问所有非临时性的 Unicode 字符属性，尽管并非所有属性都默认启用。省略的部分是 Unihan 属性（通过 CPAN 模块 `Unicode::Unihan` 访问）以及某些弃用的或 Unicode 内部属性。（安装时可以选择重新编译 Perl 的表格来更改此。请参见 `未被 Perl 接受的 Unicode 字符属性`。）
+
+对于大多数用途，通过 Perl 核心访问 Unicode 属性是通过正则表达式匹配，如下一节所述。对于某些特殊目的以及为了访问不适合正则表达式匹配的属性，Perl 处理的所有 Unicode 字符属性都可以标准的 `Unicode::UCD` 模块访问，见“通过 `Unicode::UCD` 访问的属性”节。
+
+Perl 还为 Unicode 属性提供了一些额外的扩展和简写别名。
+
+本文列出了所有可用属性，并未尝试解释每个属性的真实含义。对每个 Perl 扩展都有简要描述；请参见 `perlunicode` 中的 `其他属性` 以获取更多信息。关于 Blocks、Scripts、General_Category 和 Bidi_Class 的详细信息在 perlunicode 中，但若要了解官方 Unicode 属性的复杂之处，请参考 Unicode 标准。一个很好的起点是 `https://www.unicode.org/reports/tr44/`。
+
+注意，你可以定义自己的属性；请参见 `perlunicode` 中的 `用户自定义字符属性`。
+
+### 通过 `\p{}` 和 `\P{}` 访问的属性
+
+Perl 正则表达式 `\p{}` 和 `\P{}` 允许访问大多数 Unicode 字符属性。下表显示了所有这些构造，包括单形式和复合形式。
+
+**复合形式**由两个部分组成，用等号或冒号分隔。第一个部分是属性名，第二个部分是用于匹配的属性特定值，例如 `\p{Script: Greek}` 和 `\p{Script=Greek}` 都用于匹配 `Script` 属性值为 `Greek` 的字符。
+
+**单形式**（如 `\p{Greek}`）大部分是其复合形式的 Perl 定义简写。表格显示了这些等价关系。（在我们的示例中，`\p{Greek}` 是 `\p{Script: Greek}` 的简写）。还有少数 Perl 定义的但不是复合形式简写的单形式，其中之一是 `\p{Word}`。
+
+在解析这些构造时，Perl 总是忽略大括号 `{}` 内部的大小写差异。但在下表中，条目开头的 'T' 表示该条目使用了更紧（更严格）的规则：即使正则表达式没有指定 `/x` 修饰符也是如此。
+
+单形式 (`\p{na}`）更严格的规则：
+
+空格、连字符和下划线是敏感的，除非：
+
+- 非单词字符相邻空格
+- 分隔数字的下划线
+
+这意味着例如，你可以自由添加或删除相邻大括号（但在括号内）的空格而不影响含义。
+
+复合形式（`\p{na=value}` 或 `\p{na:value}`）更严格的规则：上述针对单形式的更严格规则适用于冒号或等号右侧的所有内容；宽松的规则仍然适用于左侧的所有内容。
+
+这意味着例如，你可以自由添加或删除相邻大括号以及冒号或等号的空格（但在括号内）。
+
+这些属性被 Unicode 认为是过时的，但仍然可用。过时有几种类型：
+
+**稳定的**
+
+某个属性可能是稳定的。这种判定并不表示该属性应该或不应该被使用；相反，它声明该属性将不会为新编码的字符进行维护或扩展。此类属性在表中标记为 'S'。
+
+**弃用的**
+
+某个属性可能是弃用的，也许因为其原始意图已被另一个属性取代，或者因为其规范有严重缺陷。这意味着强烈不建议使用它，因此除非正则表达式在 `nowarnings'deprecated'` 语句的作用范围内，否则使用时将发出警告。'D' 标记了表中的此类条目，该属性最详细描述版本的条目处将给出弃用原因，并可能提供建议。Perl 可能会发布此类警告，即使属性未被 Unicode 官方弃用，当曾经被其匹配的字符或代码点现在不再时。这是为了警告你的程序可能可能与早期的 Unicode 版本不同。
+
+弃用的属性可能会在未来的 Perl 版本中变得不可用，因此最好避免使用它们。
+
+弃用的属性可能也是稳定的，但这一事实并未显示。
+
+**过时**
+
+表格中标记为 `O` 的属性被视为（普通的）过时（obsolete）。通常，这种标记赋予 Unicode 曾经用于内部目的（但已不再使用）的属性。
+
+因此，Perl 扩展是为了向后兼容而存在的，不建议使用，但它们并不是过时的。表格中的 `X` 标记了每一个此类条目。未来的 Unicode 版本可能会在不警告的情况下强制移除这些扩展之一，并用另一个具有相同名称但含义不同的属性来替换。请改用所示的等效形式。
+
+`Block` 属性中的匹配具有以 `In_` 开头的快捷方式。例如，`\p{Block=Latin1}` 可以写为 `\p{In_Latin1}`。为了向后兼容，如果与另一个快捷方式没有冲突，这些也可以写成 `\p{Latin1}` 或 `\p{Is_Latin1}`。但是，请注意（N.B.），存在许多此类冲突的快捷方式。不建议对 `Block` 使用这些形式，并对其进行了此类标记，这不仅是因为可能对匹配的是什么产生困惑，还因为 Unicode 的后续版本可能会抢占该快捷方式，导致你的程序不再正确。请改用 `In_` 以避免这种情况，或者更清晰地使用复合形式，例如 `\p{blk:latin1}`。更多关于此的信息请参见 `perlunicode` 中的 `Blocks`。
+
+下表有两列。左列包含要查找的 `\p{}` 结构，前面可能带有上述的标记；右列包含关于它们的信息，如描述或同义词。表格显示了每个具有此类形式的属性的单形式和复合形式。如果左列是属性的短名称，右列将提供更长、更具描述性的名称；如果左列是最长名称，右列将显示任何等效的短名称（在适用情况下，同时显示单形式和复合形式）。
+
+如果不需要括号来指定属性（例如 `\pL`），则左列将包含带括号和不带括号的两种形式。
+
+如果某个属性的含义与通常预期的不同，右列还会向你发出警告。
+
+所有单形式都是 Perl 扩展；少数复合形式也是，并已对此进行标记。
+
+（括号）中的数字表示该属性匹配的 Unicode 代码点总数。为了强调，那些完全匹配任何代码点的属性也列在表格后的单独章节中。
+
+大多数属性无论是否指定 `/i` 不区分大小写的匹配都匹配相同的代码点。但有少数属性受影响。这些在第二列中用符号 `"(/i=`other_property`)"` 表示。在不区分大小写的匹配下，它们匹配的代码点与属性 `other_property` 相同。
+
+大多数非 Perl 定义的属性没有提供描述（请参见 `https://www.unicode.org/reports/tr44/`）。
+
+为了紧凑起见，`*****` 被作通配符，而不是显示所有可能的组合。例如，如下条条目：
+
+```
+\p{Gc: *} \p{General_Category: *}
+```
+
+表示 `Gc` 是 `General_Category` 的同义词，任何对后者有效的内容对前者也有效。同样地，
+
+```
+\p{Is_*} \p{*}
+```
+
+
+
+表示当且仅当例如 `\p{Foo}` 存在时，`\p{Is_Foo}` 和 `\p{IsFoo}` 也是有效的，且它们是相同的内容。同样地，`\p{Foo=Bar}` 的含义与 `\p{Is_Foo=Bar}` 和 `\p{IsFoo=Bar}` 相同。这里的 `*` 限制为不以下划线开头的内容。
+
+此外，在二进制属性中，`Yes`、`T` 和 `True` 都是 `Y` 的同义词。`No`、`F` 和 `False` 都是 `N` 的同义词。表格显示 `Y*` 和 `N*` 表示这一点，没有为其他可能性设置单独的条目。注意，并非所有具有 `Yes` 和 `No` 属性都是二进制的，它们的所有值都完整写出而不使用此通配符，并在描述中有一个 `NOT` 子句来强调它们不是二进制的。这些属性也需要复合形式来匹配，而真正的二进制属性同时提供单形式和复合形式。
+
+注意在下方的短名称显示中，所有非必要的下划线已删除。
+
+### 图例摘要
+
+- `*****` 是通配符
+- 信息列中的 `(\d+)` 给此属性匹配的 Unicode 代码点数量。
+- `D` 表示已弃用（deprecated）。
+- `O` 表示已过时（obsolete）。
+- `S` 表示已稳定（stabilized）。
+- `T` 表示适用于更严紧（tighter）的名称匹配。
+- `X` 表示不建议使用这种形式，且可能是不稳定的。
+
+# Unicode 属性
+
+`NAME INFO X \p{Aegean_Nuers} \p{Block=Aegean_Nuers} (64) T \p{Age: 1.1} \p{Age=V1_1} (33_979) T \p{Age: 2.0} \p{Age=V2_0} (144_521) T \p{Age: 2.1} \p{Age=V2_1} (2) T \p{Age: 3.0} \p{Age=V3_0} (10_307) T \p{Age: 3.1} \p{Age=V3_1} (44_978) T \p{Age: 3.2} \p{Age=V3_2} (1016) T \p{Age: 4.0} \p{Age=V4_0} (1226) T \p{Age: 4.1} \p{Age=V4_1} (1273) T \p{Age: 5.0} \p{Age=V5_0} (1369) T \p{Age: 5.1} \p{Age=V5_1} (1624) T \p{Age: 5.2} \p{Age=V5_2} (6648) T \p{Age: 6.0} \p{Age=V6_0} (2088) T \p{Age: 6.1} \p{Age=V6_1} (732) T \p{Age: 6.2} \p{Age=V6_2} (1) T \p{Age: 6.3} \p{Age=V6_3} (5) T \p{Age: 7.0} \p{Age=V7_0} (2834) \p{Age: NA} \p{Age=Unassigned} (861_509 plus all above-Unicode code points) \p{Age: Unassigned} 截至目前，该代码点的用法尚未在任何 Unicode 版本中分配。（简写：\p{Age=NA}) (861_509 加上上述所有 Unicode 代码点) \p{Age: V1_1} 代码点的用法在 1.1 版本中引入 (33_979) \p{Age: V2_0} 代码点的用法在 2.0 版本中引入；另参见属性 'Present_In' (144_521) \p{Age: V2_1} 代码点的用法在 2.1 版本中引入；另参见属性 'Present_In' (2) \p{Age: V3_0} 代码点的用法在 3.0 版本中引入；另参见属性 'Present_In' (10_307) \p{Age: V3_1} 代码点的用法在 3.1 版本中引入；另参见属性 'Present_In' (44_978) \p{Age: V3_2} 代码点的用法在 3.2 版本中引入；另参见属性 'Present_In' (1016) \p{Age: V4_0} 代码点的用法在 4.0 版本中引入；另参见属性 'Present_In' (1226) \p{Age: V4_1} 代码点的用法在 4.1 版本中引入；另参见属性 'Present_In' (1273) \p{Age: V5_0} 代码点的用法在 5.0 版本中引入；另参见属性 'Present_In' (1369) \p{Age: V5_1} 代码点的用法在 5.1 版本中引入；另参见属性 'Present_In' (1624) \p{Age: V5_2} 代码点的用法在 5.2 版本中引入；另参见属性 'Present_In' (6648) \p{Age: V6_0} 代码点的用法在 6.0 版本中引入；另参见属性 'Present_In' (2088) \p{Age: V6_1} 代码点的用法在 6.1 版本中引入；另参见属性 'Present_In' (732) \p{Age: V6_2} 代码点的用法在 6.2 版本中引入；另参见属性 'Present_In' (1) \p{Age: V6_3} 代码点的用法在 6.3 版本中引入；另参见属性 'Present_In' (5) \p{Age: V7_0} 代码点的用法在 7.0 版本中引入；另参见属性 'Present_In' (2834) \p{Aghb} \p{Caucasian_Albanian} (= \p{Script= Caucasian_Albanian}) (NOT \p{Block= Caucasian_Albanian}) (53) \p{AHex} \p{PosixXDigit} (= \p{ASCII_Hex_Digit=Y}) (22) \p{AHex: *} \p{ASCII_Hex_Digit: *} X \p{Alchemical} \p{Alchemical_Syols} (= \p{Block= Alchemical_Syols}) (128) X \p{Alchemical_Syols} \p{Block= Alchemical_Syols} (简写：\p{Alchemical}) (128) \p{All} 所有的代码点，包括上述 Unicode 代码点。Sa 作为 qr./s (1_14_12 加上上述 Unicode 代码点) \p{Alnum} \p{XPosixAlnum} \p{Alpha} \p{XPosixAlpha} (= \p{Alphabetic=Y}) (104_07) \p{Alpha: *} \p{Alphabetic} \p{XPosixAlpha} (= \p{Alphabetic=Y}) (104_07) \p{Alphabetic: N} (简写：\p{Alpha=N}, \p{Alpha}) (1_10_35 加上上述 Unicode 代码点) \p{Alphabetic: Y} (简写：\p{Alpha=Y}, \p{Alpha}) (104_07) X \p{Alphabetic_PF} \p{Alphabetic_Presentation_Forms} (= \p{Block=Alphabetic_Presentation_Forms}) (80) X \p{Alphabetic_Presentation_Forms} \p{Block=Alphabetic_Presentation_Forms} (简写：\p{AlphabeticPF}, \p{InAlphabeticPF}) (80) X \p{Ancient_Greek} \p{Ancient_Greek_Musical_Notation} (= \p{Block=Ancient_Greek_Musical_Notation}) (80) X \p{Ancient_Greek_Musical_Notation} \p{Block=Ancient_Greek_Musical_Notation} (简写：\p{AncientGreekMusic}, \p{InAncientGreekMusic}) (80) \p{Ancient_Greek_Nuers} \p{Ancient_Greek_Nuers} (= \p{Block=Ancient_Greek_Nuers}) (80) X \p{Ancient_Syols} \p{Ancient_Syols} (= \p{Block=Ancient_Syols}) (64) X \p{Any} 所有的 Unicode 代码点：[\x{0000}-\x{1FFFF}] (1_14_12) \p{Arab} \p{Arabic} (= \p{Script=Arabic}) (NOT \p{Block=Arabic}) (144) \p{Arabic} \p{Script=Arabic} (简写：\p{Arab}; NOT \p{Block=Arabic}) (244) X \p{Arabic_Ext_A} \p{Arabic_Extended_A} (= \p{Block=Arabic_Extended_A}) (96) X \p{Arabic_Extended_A} \p{Block=Arabic_Extended_A} (简写：\p{ArabicExtA}, \p{InArabicExtA}) (96) \p{Arabic_Math} \p{Arabic_Mathematical_Alphabetic_Syols} (= \p{Block=Arabic_Mathematical_Alphabetic_Syols}) (256) X \p{Arabic_Mathematical_Alphabetic_Syols} \p{Block=Arabic_Mathematical_Alphabetic_Syols} (简写：\p{ArabicMath}, \p{InArabicMath}) (256) \p{Arabic_PF_A} \p{Arabic_Presentation_Forms_A} (= \p{Block=Arabic_Presentation_Forms_A}) (688) X \p{Arabic_PF_B} \p{Arabic_Presentation_Forms_B} (= \p{Block=Arabic_Presentation_Forms_B}) (144) X \p{Arabic_Presentation_Forms_A} \p{Block=Arabic_Presentation_Forms_A} (简写：\p{ArabicPFA}, \p{InArabicPFA}) (688) X \p{Arabic_Presentation_Forms_B} \p{Block=Arabic_Presentation_Forms_B} (简写：\p{ArabicPFB}, \p{InArabicPFB}) (144) X \p{Arabic_Sup} \p{Arabic_Supplent} (= \p{Block=Arabic_Supplent}) (48) X \p{Arabic_Supplent} \p{Block=Arabic_Supplent} (简写：\p{ArabicSup}, \p{InArabicSup}) (48) \p{Arnian} \p{Script=Arnian} (简写：\p{Armn}; NOT \p{Block=Arnian}) (93) \p{Armi} \p{Imperial_Aramaic} (= \p{Script=Imperial_Aramaic}) (NOT \p{Block=Imperial_Aramaic}) (31) \p{Armn} \p{Arnian} (= \p{Script=Arnian}) (NOT \p{Block=Arnian}) (93) X \p{Arrows} \p{Block=Arrows} (112) \p{ASCII} \p{Block=Basic_Latin} [[:ASCII:]] (128) \p{ASCII_Hex_Digit} \p{PosixXDigit} (= \p{ASCII_Hex_Digit=Y}) (22) \p{ASCII_Hex_Digit: N*} (简写：\p{AHex=N}, \p{AHex}) (1_114_090 加上上述所有 Unicode 代码点) \p{ASCII_Hex_Digit: Y*} (简写：\p{AHex=Y}, \p{AHex}) (22) \p{Assigned} 所有已分配的代码点 (252_537) \p{Avestan} \p{Script=Avestan} (简写：\p{Avst}; NOT \p{Block=Avestan}) (61) \p{Avst} \p{Script=Avestan} (= \p{Script=Avestan}) (NOT \p{Block=Avestan}) (61) \p{Bali}
+
+在 VMS 下，这反映了实际的 VMS 退出状态；即当 pragma `use vmsish 'status'` 生效时，它与 `$?` 相同。
+
+此变量在 Perl v5.10.0 中引入。
+
+### `$EXTENDED_OS_ERROR`
+
+### `$^E`
+
+特定于当前操作系统的错误信息。大多数情况下，它仅在 VMS、OS/2 和 Win32（以及对于 MacPerl）下与 `$!` 不同。在所有其他平台上，`$^E` 总是与 `$!` 相同。
+
+在 VMS 下，`$^E` 提供上一次系统错误的具体 VMS 状态值。与 `$!` 提供的信息相比，它关于上次系统错误更为具体。当 `$!` 被设置为 `EVMSERR` 时，这一点尤为重要。
+
+在 OS/2 下，`$^E` 被设置为通过 CRT 或直接从 perl 调用 OS/2 API 的最后错误代码。
+
+在 Win32 下，`$^E` 始终返回 Win32 调用 `GetLastError()` 报告的最后一个错误信息，它描述了 Win32 API 内部的最后一个错误。大多数 Win32 特定的代码将通过 `$^E` 报告错误。ANSI C 和 Unix 类调用设置 `errno`，因此大多数可移植的 Perl 代码通过 `$!` 报告错误。
+
+`$!` 描述中提到的注意事项通常适用于 `$^E`。
+
+此变量在 Perl 5.003 中引入。
+
+助记符：额外的错误解释（Extra error explanation）。
+
+### `$EXCEPTIONS_BEING_CAUGHT`
+
+### `$^S`
+
+解释器的当前状态。
+
+```
+$^S State --------- ------------------------------------- 
+undef Parsing module, eval, or main program 
+true (1) Executing an eval 
+false (0) Otherwise
+```
+
+第一种状态可能发生在 `$SIG{__DIE__}` 和 `$SIG{__WARN__}` 处理器中。
+
+`EXCEPTIONS_BEING_CAUGHT` 的英文名称略带误导性，因为 `undef` 值并不指示异常是否正在被捕获，因为主程序的编译不会捕获异常。
+
+此变量在 Perl 5.004 中引入。
+
+### `$WARNING`
+
+### `$^W`
+
+警告开关的当前值，如果使用了 `-w` 则初始为 true，否则为 false，但可以被直接修改。
+
+参见 `warnings`。
+
+助记符：与 `-w` 开关有关。
+
+### `${^WARNING_BITS}`
+
+由 `use warnings` pragma 启用的当前警告检查集。作用域与 `$^H` 和 `%^H` 变量相同。具体值被视为 `warnings` pragma 的内部内容，可能会在不同的 Perl 版本之间发生变化。
+
+此变量在 Perl v5.6.0 中引入。
+
+### `$OS_ERROR`
+
+### `$ERRNO`
+
+### `$!`
+
+当被引用时，`$!` 获取 C 语言整数变量 `errno` 的当前值。如果给 `$!` 赋值一个数值，该值将存储在 `errno` 中。当作为字符串引用时，`$!` 产生与 `errno` 对应的系统错误字符串。
+
+许多系统或库调用在失败时会设置 `errno` 以指示失败原因。它们在成功时通常**不会**将 `errno` 设置为零。因此，`errno` 以及 `$!` 仅在**失败**后*立即*才有意义：
+
+```
+if (open my $fh, "<", $filena) {
+    # 这里 $! 是无意义的...
+} else {
+    # 只有在这里 $! 有意义...
+    # 在此之后 $! 可能是无意义的。
+}
+# 因为这里我们可能成功也可能失败，
+# $! 是无意义的。
+```
+
+在这里，*无意义*意味着 `$!` 可能与 `open()` 操作符的结果无关。对 `$!` 的赋值也是转瞬即逝的。它可以在调用 `die()` 操作符之前立即使用，设置退出值，或检查与错误 *n* 对应的系统错误字符串，或将 `$!` 恢复到有意义的状态。
+
+助记符：刚才发生了什么？（What just went bang?）
+
+### `%OS_ERROR`
+
+### `%ERRNO`
+
+### `%!`
+
+`%!` 中的每个元素仅在 `$!` 设置为该值时才具有真值。例如，当且仅当 `$!` 的当前值为 `ENOENT` 时，`${ENOENT}` 为真；也就是说如果最近的错误是"No such file or directory"（或其等效含义：并非所有操作系统都提供完全相同的错误，并非所有语言也是如此）。要检查特定键在你的系统上是否有意义，请使用 `exists $!{the_key}`；对于合法键列表，请使用 `keys %!`。更多信息请参见 `Errno`，也请参见"$!'"。
+
+此变量在 Perl 5.005 中引入。
+
+### `$CHILD_ERROR`
+
+### `$?`
+
+由最后一个管道关闭、反引号（``` `` ```）命令、`wait()` 或 `waitpid()` 的成功调用，或来自 `system()` 操作符返回的状态。这只是传统 Unix `wait()` 系统调用返回的 16 位状态字（或者伪装成它的样子）。因此，子进程的退出值实际上是 (`$? >> 8`)，而 `$? & 127` 给出进程死于哪个信号（如果有的话），而 `$? & 128` 则报告是否存在核心转储（core dump）。
+
+
+
+此外，如果 C 语言支持 `h_errno` 变量，当任何 `gethost*()` 函数失败时，其值将通过 `$?` 返回。
+
+如果你为 `SIGCHLD` 安装了信号处理程序，那么在该处理程序之外，`$?` 的值通常是错误的。
+
+在 `END` 子程序内部，`$?` 包含将传递给 `exit()` 的值。你可以在 `END` 子程序中修改 `$?` 来更改程序的退出状态。例如：
+
+```perl
+END { $? = 1 if $? == 255; # die 会让它变成 255 }
+```
+
+在 VMS 下，pragma `use vmsish 'status'` 会使 `$?` 反映实际的 VMS 退出状态，而不是默认的 POSIX 状态；详情请见 `perlvms` 中的 `$?`。
+
+助记：类似于 `sh` 和 `ksh`。
+
+### `$EVAL_ERROR`
+
+### `$@`
+
+来自上一个 `eval()` 操作符的 Perl 语法错误消息。如果 `$@` 为空字符串，则上一个 `eval()` 解析并执行正确（尽管你调用的操作可能以正常方式失败了）。
+
+警告信息不会在此变量中收集。不过，你可以通过如 `%SIG` 所示设置 `$SIG{__WARN__}` 来设置一个处理警告的例程。
+
+助记：语法错误在 `at` 哪里？
+
+## 与解释器状态相关的变量
+
+这些变量提供了有关当前解释器状态的信息。
+
+### `$COMPILING`
+
+### `$^C`
+
+与 `-c` 开关相关的标志的当前值。主要用于 `-MO=...`，允许代码在编译时更改其行为，例如在编译时进行 `AUTOLOAD` 而不是正常的延迟加载。设置 `$^C = 1` 类似于调用 `B::minus_c`。
+
+此变量是在 Perl v5.6.0 中添加的。
+
+### `$DEBUGGING`
+
+### `$^D`
+
+调试标志的当前值。可以被读取或设置。与其命令行等效值一样，你可以使用数值或符号值，例如 `$^D = 10` 或 `$^D = "st"`。
+
+助记：`-D` 开关的值。
+
+### `${^ENCODING}`
+
+**已弃用！！！**
+
+指向用于将源代码转换为 Unicode 的 `Encode` 对象的对象引用。得益于此变量，你的 Perl 脚本不需要写成 UTF-8 编码。默认值为 `undef`。
+
+由于设计和实现上的缺陷，将此变量设置为 `undef` 以外的任何值都已弃用。计划在未来的 Perl 版本中移除它。它的目的是允许你的非 ASCII Perl 脚本不需要写成 UTF-8 编码；在处理 UTF-8 编码文本的编辑器流行之前这很有用，但那是很久以前的事了。它会导致许多问题，例如影响未预期到它的模块的操作，导致通用的混乱。使用它可能会导致段错误（segfaults）。
+
+如果你需要此类功能，应该使用编码 pragma，它也已弃用，但副作用较少。
+
+如果你是因为代码由于他人使用此变量而受到负面影响才来到这里的，通常可以通过以下方法进行规避：
+
+```perl
+local ${^ENCODING};
+```
+
+在损坏的函数开头附近。这在包含它的函数的执行范围内取消该变量。
+
+此变量是在 Perl 5.8.2 中添加的。
+
+### `${^GLOBAL_PHASE}`
+
+Perl 解释器的当前阶段。
+
+可能的值有：
+
+#### `CONSTRUCT`
+
+正在通过 `perl_construct` 构建 `PerlInterpreter*`。此值主要用于完整性，并供底层的 C 变量 `PL_phase` 使用。在解释器构造完成之前，实际上无法执行 Perl 代码。
+
+#### `START`
+
+这是全局编译时间。它基本上包括在从顶层程序编译期间直接或间接执行的每一个 `BEGIN` 块。
+
+此阶段未命名 `BEGIN` 以避免与 `BEGIN`-块混淆，因为那些块是在任何编译单元的编译期间执行的，而不仅仅是顶层程序。在运行时进入的新局部编译时间（例如通过 `eval "use SoModule"` 等结构）不是全局解释器阶段，因此不会被 `${^GLOBAL_PHASE}` 反映。
+
+#### `CHECK`
+
+执行任何 `CHECK` 块。
+
+#### `INIT`
+
+类似于 `CHECK`，但针对 `INIT`-块而非 `CHECK`-块。
+
+#### `RUN`
+
+主运行时，即 `PL_main_root` 的执行。
+
+#### `END`
+
+执行任何 `END` 块。
+
+#### `DESTRUCT`
+
+全局析构。
+
+另请注意，`UNITCHECK`-块没有值。这是因为它们是为每个编译单元单独运行的，因此不是全局解释器阶段。
+
+并不是每个程序都必须经过每个可能的阶段，但从一个阶段到另一个阶段的转换只能按照上述顺序发生。
+
+所有阶段的 Perl 代码示例：
+
+```perl
+BEGIN { print "compile-time: ${^GLOBAL_PHASE}" } INIT { print "init-time: ${^GLOBAL_PHASE}" } CHECK { print "check-time: ${^GLOBAL_PHASE}" } { package::Phase; sub new { ($class, $ti) = @_; bless $ti, $class; } sub DESTROY { my $self = shift; print "$self: ${^GLOBAL_PHASE}"; } } print "run-time: ${^GLOBAL_PHASE}"; my $destruct = Print::Phase->new("package variables are garbage collected before END"); END { print "end-time: ${^GLOBAL_PHASE}" } our $destruct = Print::Phase->new("package variables are garbage collected after END");
+```
+
+此变量是在 Perl 5.14 中添加的。
+
+### `$^H`
+
+警告：此变量供内部使用。其可用性和内容可能会更改。
+
+它包含 Perl 解释器的编译时提示。编译结束时，此变量的值恢复为解释器启动时的值。当 `perl` 开始解析提供作用域的块（例如 `eval` 体、要求的文件、循环体或条件块）时，`$^H` 的现有值会被保存，但其值保持不变。当块完成后，它恢复保存的值。这里有一个示例：
+
+```perl
+sub add_100 { $^H |= 0x100 } sub foo { DB::DB($ti); }
+```
+
+`use strict 'vars'` 的条件版本：
+
+```bash
+BEGIN { require strict; import('vars') if $condition }
+```
+
+此变量是在 Perl 5.003 中添加的。
+
+### `%^H`
+
+`%^H` 哈希表提供了类似于 `$^H` 的作用域语义。这对于实现作用域 pragma 很有用。运行时访问的所有条目都会字符串化，因此只能容纳简单值。
+
+在放入 `%^H` 时，为了与其他用户冲突，应使用模块名称（其主包名）和 `/` 字符。例如，模块 `Foo::Bar` 应该使用 `Foo::Bar/baz`。
+
+此变量是在 Perl v5.6.0 中添加的。
+
+### `${^OPEN}`
+
+PerlIO 使用的内部变量。两个部分的字符串，由 `\0` 字节分隔，第一部分描述输入层，第二部分描述输出层。
+
+此变量是在 Perl v5.8.0 中添加的。
+
+### `$PERLDB` 和 `^P`
+
+用于调试支持的内部变量。各个位的含义可能会更改，但目前指示：
+
+- `0x01`：调试子程序进入/退出。
+- `0x02`：逐行调试。导致每个执行的语句调用 `DB::DB()` 子程序。也会保存源行（如 `0x400`）。
+- `0x04`：关闭优化。
+- `0x08`：为未来的交互检查保留更多数据。
+- `0x10`：保留定义子程序的源行信息。
+- `0x20`：开启单步。
+- `0x40`：报告时使用子程序地址而非名称。
+- `0x80`：同样报告 `goto &subroutine`。
+- `0x100`：根据编译位置为 `eval` 提供信息性的“文件”名称。
+- `0x200`：根据编译位置为匿名子程序提供信息性的名称。
+- `0x400`：将源代码行保存到 `@{"_<$filename>"}`。
+- `0x800`：保存源码时，包含不产生子程序的 `eval`。
+- `0x1000`：保存源码时，包含未编译的源码。
+
+这些位可能仅在编译时有效，因此仅在运行时有效。这是一个新机制，细节可能会更改。另见 `perldebuts`。
+
+### `${^TAINT}`
+
+反映污染模式是开启还是关闭。`1` 表示开启（程序使用 `-T` 运行），`0` 表示关闭，`-1` 表示仅启用了污染警告（即使用 `-t` 或 `-TU`）。
+
+此变量是只读的。此变量是在 Perl v5.8.0 中添加的。
+
+### `${^UNICODE}`
+
+反映 Perl 的某些 Unicode 设置。更多信息见 `perlrun` 中的 `-C` 开关。此变量在启动期间设置，之后只读。此变量是在 Perl 5.2 中添加的。
+
+### `${^UTF8CACHE}`
+
+此变量控制内部 UTF-8 缓存的状态。`1` 表示开启（默认），`0` 表示关闭，`-1` 表示通过将所有结果与线性扫描对比进行调试并在出现任何差异时崩溃（panic）。
+
+此变量是在 Perl 5.9 中添加的。它可能会在不通知的情况下更改或删除。
+
+### `${^UTF8LOCALE}`
+
+此变量指示 `perl` 在启动时是否检测到 UTF-8 locale。`perl` 在其处于 locale 感知模式时（例如使用 `-CL` 开关运行时）使用此信息；见 `perlrun`。
+
+此变量是在 Perl 5.8.8 中添加的。
+
+## 已弃用和移除的变量
+
+弃用一个变量宣布了维护者最终将其从语言中移除的意图。它可能仍然可用，尽管其状态已弃用。使用它会触发警告。一旦变量被移除，其使用将触发错误。详情见 `perldiag`。
+
+### `$#`
+
+`#` 是一个可以用于格式化数组最后一个索引的变量。在弃用周期后，它在 Perl 5.10.0 中被移除，现在使用它会触发警告：`# 不再支持`。
+
+`$` 是获取数组最后一个索引的符号。两者之间没有关系。在 Perl 5 中已弃用。
+
+### `$*`
+
+`*` 是可以用于启用内联匹配的变量。在弃用周期后，它的魔法在 Perl 5.10.0 中被移除。现在使用它会触发警告：`* 不再支持`。你应该使用 `s` 和 `m` 修饰符。在 Perl 5 中已弃用。
+
+### `$[`
+
+此变量存储数组第一个元素的索引以及字符串第一个字符的索引。默认值为 `0`，但理论上你可以将其设置为 `1` 以让 Perl 行为更像 `awk`（或 Fortran）在索引时。
+
+在 Perl 5 之后，`[` 被视为编译器指令，无法影响任何其他文件（例如 `strict`）。它的使用是高度不建议的。
+
+在 Perl 5.10.0 之前，可以在外部作用域看到 `[`，这不像编译器指令（例如 `strict`）。现在它始终是作用域的。
+
+在 Perl 16 之后，它由 `arraybase` 模块实现。详情见 `arraybase`。允许将其赋值为 `0`，但任何其他值都会产生错误。
+
+助记：`[` 开始索引。在 Perl 5.12.0 中已弃用。
+
+# PERLVMS
+
+## 名称
+
+`perlvms` - Perl 的 VMS 特定文档
+
+## 说明
+
+下面收集了关于 Perl 在 VMS 上行为的说明。作为 Perl 文档的补充，因此我们关注的是 Perl 在 VMS 下与在 Unix 下的不同，以及 Perl 与操作系统其余部分的交互。我们没有尝试复制 Perl 文档的完整描述，那些可以在 Perl 分布的 `.pod` 子目录下找到。
+
+我们希望这些说明能让你在 VMS 上编写 Perl 脚本时避免困惑和浪费睡眠。如果你发现我们遗掉了认为应该出现在这里的内容，请留言。
+
+## 安装
+
+构建和安装 Perl 5 的方向可以在 Perl 分布的主目录下的 `README.vms` 文件中找到。
+
+## Perl 镜像组织
+
+### 核心镜像
+
+在构建过程中会产生三个 Perl 镜像。
+
+`Miniperl.Exe` 是一个执行镜像，包含了 Perl 的所有基本功能，无法利用 Perl 扩展，并且有一个硬编码的纯 Perl 模块加载列表。它广泛用于构建和测试 Perl 以及各种扩展，但没有安装。
+
+大部分 Perl 位于共享镜像 `PerlShr.Exe` 中，执行镜像和所有 Perl 扩展都链接到这里。通常通过逻辑名称 `PERLSHR` 定位，可以将镜像放在 `SYS$SHARE` 中使其加载，但不建议这样做。
+
+虽然你可能出于性能考虑而安装镜像，但不应带有权限安装它；如果这样做，结果将不是你预期的，因为权限在 Perl 启动期间被禁用了。
+
+最后，`Perl.Exe` 是一个包含 Perl 主入口以及初始化代码的执行镜像。它应该放在公共目录中并设置为可执行。
+
+Perl 扩展是包，提供了 XS 和 Perl 代码来为 Perl 添加新功能（XS 是一种简化编写与 Perl 交互的 C 代码的语言，详情见 `perlxs`）。扩展的 Perl 代码被视为任何其他模块——通过脚本中适当的 `use` 或 `require` 语句可用。
+
+### 安装静态扩展
+
+由于静态扩展直接整合到 `PerlShr.Exe` 中，你必须重新构建 Perl 来包含新扩展。
+
+你应该编辑用于构建 Perl 的主 `Makefile`，将扩展的名称添加到 `ext` 宏，并将扩展的对象文件添加到 `extobj` 宏。然后你还需要构建扩展的对象文件。
+
+扩展提供的机器代码可以通过两种方式与 Perl 的其余部分连接。
+
+在**静态**配置中，每当调用 Perl 时，扩展的对象代码直接链接到 `PerlShr.Exe`。
+
+在**动态**配置中，扩展的机器代码被放在单独的共享镜像中，当脚本 `use` 或 `require` 扩展时由 Perl 的 `DynaLoader` 映射。这允许你将扩展作为一个独立的实体维护，代价是跟踪额外的共享镜像。
+
+### 安装动态扩展
+
+通常，Perl 扩展的发行包包含一个 `Makefile.PL` 文件，这是一个 Perl 程序，用于创建 `Makefile` 文件，该文件用于构建和安装扩展所需的文件。
+
+扩展包应该解压到**不是** Perl 源码目录的树下，构建扩展的过程如下：
+
+```text
+$ perl Makefile.PL ! 创建 Makefile
+$ mmk ! 构建必要的文件
+$ mmk test ! 运行测试，如果提供了
+$ mmk install ! 安装到公共树
+```
+
+VMS 对此过程的支持在当前的版本中是足够的。
+
+# PINFO
+
+## 名称
+
+`pinfo` - 基于 curses 的 info 浏览器
+
+## 环境
+
+有一个变量 `$INFOPATH`，可以指定搜索 info 文件的路径。它的格式类似于 `$PATH` 变量。一个示例如下：
+
+`/usr/info:/somewhere/info:/not/even/in/info`
+
+目录由冒号分隔。
+
+## 颜色和键定义
+
+有 `~/.info` 和 `[prefix]/etc/info` 配置文件，用于本地和全局配置（`prefix` 是 info 安装的目录，例如 `/usr/local`）。
+
+这里是这样的文件的示例；我们将讨论内容：
+
+```text
+# 是一些颜色设置。条目之间的空格是可选的。
+COL_NORMAL = COLOR_WHITE, COLOR_BLACK
+COL_MENU = COLOR_RED, COLOR_BLACK
+COL_SELECTED = COLOR_BLUE, COLOR_BLACK
+COL_NOTESELECT = COLOR_RED, COLOR_BLACK
+COL_NOTE = COLOR_GREEN, COLOR_BLACK
+COL_TOPLINE = COLOR_YELLOW, COLOR_BLUE
+COL_BOTTOLINE = COLOR_YELLOW, COLOR_BLUE
+COL_MANUAL = COLOR_WHITE, COLOR_BLACK
+COL_MANUALITALIC = COLOR_WHITE, COLOR_BLACK
+COL_URL = COLOR_MAGENTA, COLOR_BLACK
+COL_URL_SELECTED = COLOR_RED, COLOR_BLACK
+COL_INFOHIGHLIGHT = COLOR_WHITE, COLOR_BLACK
+# 是一些键绑定...
+KEY_TOTALSEARCH_1 = 's'
+KEY_TOTALSEARCH_2 = 'S'
+KEY_SEARCH_1 = '/'
+KEY_SEARCH_2 = '.'
+KEY_SEARCH_AGAIN_1 = 'g'
+KEY_SEARCH_AGAIN_2 = 'G'
+KEY_GOTO_1 = 'm'
+KEY_GOTO_2 = 'M'
+KEY_HOME_1 = 'h'
+KEY_HOME_2 = 'H'
+KEY_PREVNODE_1 = 'p'
+KEY_PREVNODE_2 = 'P'
+KEY_NEXTNODE_1 = 'n'
+KEY_NEXTNODE_2 = 'N'
+KEY_UP_1 = 'u'
+KEY_UP_2 = 'U'
+KEY_END_1 = 'e'
+KEY_END_2 = 'E'
+KEY_PGDN_1 = ' '
+KEY_PGDN_2 = ' '
+KEY_PGDN_AUTO_1 = 0
+KEY_PGDN_AUTO_2 = ' '
+KEY_PPAGE_1 = ' '
+KEY_PPAGE_2 = ' '
+```
+
+如你所示，格式是简单的。首先我解释颜色定义。首先输入一个颜色名称（示例中包含了所有可用颜色）。还有一个特殊的颜色 `COLOR_DEFAULT`（表示透明）。然后输入前景颜色和背景颜色。我们希望前景颜色高亮（例如浅蓝色、浅绿色）。`BLINK` 属性是闪烁属性，在其他配置中是背景高亮。
+
+现在来看键定义。在这里我们首先放入键名（再次，示例包含了所有的键）；然后输入它的值——要么用引号包裹，要么是键码数字（如 `KEY_REFRESH_1`），如果是特殊键，则是其助记代码（例如 `KEY_FOLLOWLINK_1` 中的）。
+
+如果你想通过代码值指定键，使用提供的程序 `testkey` 来获取所需的值。这主要是一个功能，当你想要添加 `CTRL`+字母键绑定等。
+
+对于每个功能，你可以绑定两个键，例如，你可以将 Enter 和光标右都绑定到 `FollowLink` 功能。如上面的示例所示，两个键名为 `KEY_FOLLOWLINK_1` 和 `KEY_FOLLOWLINK_2`。
+
+这里是键名的解释：
+
+
+
+**KEY_TOTALSEARCH_1**: 搜索 `info` 文件所有节点的键。
+
+**KEY_TOTALSEARCH_2**: 搜索 `info` 文件所有节点的备用键。
+
+**KEY_SEARCH_1**: 搜索当前节点（或手册）的键。
+
+**KEY_SEARCH_2**: 搜索当前节点（或手册）的备用键。
+
+**KEY_SEARCH_AGAIN_1**: 重复上一次搜索的键。
+
+**KEY_SEARCH_AGAIN_2**: 重复上一次搜索的备用键。
+
+**KEY_GOTO_1**: 显式跳转到节点（通过指定）的键。
+
+**KEY_GOTO_2**: 显式跳转到节点（通过指定）的备用键。
+
+**KEY_PREVNODE_1**: 头部中标记为 `'Prev'` 的节点键。在 `man` 查看器中这跳转到上一个章节。
+
+**KEY_PREVNODE_2**: 头部中标记为 `'Prev'` 的节点备用键。在 `man` 查看器中这跳转到上一个章节。
+
+**KEY_NEXTNODE_1**: 头部中标记为 `'Next'` 的节点键。
+
+**KEY_NEXTNODE_2**: 头部中标记为 `'Next'` 的节点备用键。在 `man` 查看器中这跳转到下一个章节。
+
+**KEY_UP_1**: 向上滚动的键。
+
+**KEY_UP_2**: 向上滚动的备用键。
+
+**KEY_END_1**: 跳到节点末尾的键。
+
+**KEY_END_2**: 跳到节点末尾的备用键。
+
+**KEY_PGDN_1**: 向翻页的键。
+
+**KEY_PGDN_2**: 向翻页的备用键。
+
+**KEY_PGDN_AUTO_1**: 当在节点末尾时跳转到下一个节点的键。
+
+**KEY_PGDN_AUTO_2**: 当在节点末尾时跳转到下一个节点的备用键。
+
+**KEY_PPAGE_1**: 翻页的键。
+
+**KEY_PPAGE_2**: 翻页的备用键。
+
+---
+
+`${^TAINT}` 反映污染模式是开启还是关闭。1 表示开启（程序使用 `-T` 运行），0 表示关闭，-1 表示仅启用了污染警告（即使用 `-t` 或 `-TU`）。此变量是只读的。此变量是在 Perl v5.8.0 中添加的。
+
+`${^UNICODE}` 反映 Perl 的某些 Unicode 设置。更多信息见 `perlrun` 中的 `-C` 开关。此变量在启动期间设置，之后只读。此变量是在 Perl 5.2 中添加的。
+
+`${^UTF8CACHE}` 此变量控制内部 UTF-8 缓存的状态。1 表示开启（默认），0 表示关闭，-1 表示通过将所有结果与线性扫描对比进行调试并在出现任何差异时崩溃（`panic`）。此变量是在 Perl 5.9 中添加的。它可能会在不通知的情况下更改或删除。
+
+`${^UTF8LOCALE}` 此变量指示 `perl` 在启动时是否检测到 UTF-8 locale。`perl` 在其处于 locale 感知模式时（例如使用 `-CL` 开关运行时）使用此信息；见 `perlrun`。此变量是在 Perl 5.8.8 中添加的。
+
+---
+
+# PERLVOS
+
+## 名称
+
+`perlvos` - 用于 Stratus OpenVOS 的 Perl
+
+## 概览
+
+此文件包含了在 Stratus OpenVOS 上构建 `perl` 的说明。`Perl` 是一种在许多系统中流行的脚本语言。见 `perlbook` 了解一些关于 Perl 的书籍。
+
+## 说明
+
+从源码构建 `perl`。此版本的 Perl 需要动态链接支持，该支持在 OpenVOS Release 17.1 中找到，因此不支持 OpenVOS Release 17.0 或更早版本。如果你正在运行 VOS Release 14.4 或更高版本，可以通过从 Stratus Technologies 购买 GNU Tools 产品获取预编译的 `perl` 副本。
+
+### 在 OpenVOS 中构建 perl
+
+要在 Stratus 平台上从源码构建 `perl`，你需要 OpenVOS Release 17.1.0 或更高版本。遵循构建 `perl` 的正常说明；例如进入 `bash`，运行 `Configure` 脚本，然后使用 `make`。
+
+### 在 OpenVOS 中安装 perl
+
+1. 使用 `Configure` 脚本构建 `perl` 后，确保你对 `/ported` 和所有子目录具有修改和写入权限。然后输入 `make install`。
+
+2. 虽然目前没有特定架构的扩展或模块随 `perl` 发布，可以使用以下目录：
+
+   - 架构无关的文件：`/ported/lib/perl5/site`
+   - 架构相关的文件：`/ported/lib/perl5/site`
+
+3. 你可以检查 `@INC` 变量来查看 Perl 搜索目录的顺序。
