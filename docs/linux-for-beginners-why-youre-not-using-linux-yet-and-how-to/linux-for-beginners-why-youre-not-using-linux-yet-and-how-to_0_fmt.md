@@ -1,0 +1,3863 @@
+
+# Linux 入门指南：为什么你还没有开始 Linux 以及如何克服命令行恐惧症
+
+![Image](img/Image00086.jpg)
+
+## 互补书籍
+
+[![Amazon Book](https://www.amazon.com/dp/1719439559)](https://www.amazon.com/dp/1719439559)
+
+# 关于本书
+
+你是否曾经尝试过安装 Linux，结果却因系统崩溃而被迫，最终放弃并换回旧的 Windows 或 macOS？或者你是否对该选择哪种发行版、第一次使用终端感到无所措，或者仅仅无法执行在旧系统上就能完成的任务而感到困扰？
+
+> “你可能需要几周时间来适应 Linux 文件系统，对吧？错了。”
+
+Linux 正在变得越来越流行，Google、Facebook 和 IBM 等公司都在以各种形式使用 Linux。这归功于它卓越的隐私性、可靠性和安全性。财富商业预测预计，Linux 市场将在未来 7 年内增长 402%，现在是开始学习 Linux 的最佳时机。所以，如果所谓的“Linux 学习曲线”阻碍了你的脚步，不要让它阻住你。我们称之为神话，因为在正确的循序渐进指导下，它恰如其名——一个神话。
+
+> “仅仅因为你是一个新手，并不意味着它应该是困难的。”
+
+本书的编写目的是引导你完成 Linux 环境中的第一步。如果你是一个完全的新手，或者需要复习 Linux，那么你选择了正确的书。在接下来的章节中，我们将详细介绍 Linux 的多样性和历史，然后继续从零开始设置 Linux 系统。在这里，我们将一步步引导你完成设置和配置过程。
+
+我们将通过涵盖许多基础终端命令来详细介绍臭名昭彰的命令行。我们将讨论特定主题，例如选择发行版、添加图形用户界面、包管理、导航文件系统和目录、分区、软件选择以及使用帮助系统。
+
+我们还会查看保持 Linux 系统运行所需的管理和维护任务。这包括网络安全、用户和组管理、库操作、硬件和软件管理、日志文件解读，以及每个精通 Linux 用户应该知道的其他方面。
+
+对于书中的示例，我们使用 `Debian` Linux 发行版作为参考。然而，大多数解释适用于大多数发行版，特别是基于 `Debian` 的发行版，如 `Ubuntu`、`Mint`、`Pop!` 和 `Kali`。`Debian` 仅仅是由于由于其出色的稳定性而使用并偏好的选择。我们非常欢迎你使用不同的 Linux 发行版。到本书结束，你将完成从头到 Linux 设置和配置，并能够熟练地使用 Linux。
+
+# 1. 什么是 Linux？
+
+Linux 是基于 UNIX 原则的操作系统的内核名称。该名字源于其芬兰发明者 Linus Torvalds 的名字（Linus 的开头），并遵循了其他基于 UNIX 系统的命名方法（最后一个字母是 x）。今天，Linux 由全球数以万的人开发和维护。
+
+操作系统的内核是它的心脏。它是计算机硬件与你用户之间进行通信的基础。操作系统是不同软件组件的集合：内核、各种工具以及配套的库。它是一种扩展计算机基础操作系统（即 BIOS）的软件。
+
+## 1.1 从 UNIX 到 Linux
+
+Linux 的历史可以追溯到 20 世纪 90 年代。要理解 Linux 背后的故事，我们还要简要回顾世界大战后的计算机早期。
+
+那时，计算机占据整个建筑，从机械元件向电子元件（如微处理器和多层电路）的转变正在进行。此外，在 20 世纪 60 年代和 70 年代，硬件和软件非常昂贵且不统一。存在各种特定厂商的平台，每个平台都有自己的接口、传输和交换协议以及操作系统。这些单机设备之间的通信需要特定的知识。开发 UNIX 的目的是克服这些障碍，并扩大计算机的使用。
+
+### UNIX
+
+1965 年初，多路信息处理服务（Multics）的开发开始。Multics 是麻省理工学院（MIT）、通用电气（GE）和贝尔实验室/AT&T 合作的结果。在开发者 Ken Thompson 和 Dennis Ritchie 的领导下，他们开发的主要产品是 Unics。后来它被更名为 UNIX。UNIX 操作系统主要位于加利州大学伯克利分校。
+
+### UNIX 变体
+
+UNIX 概念被许可给几家公司，他们开发并维护了自己的 UNIX 变体。这包括 `Solaris/SUN OS`（太阳物业，现由 Oracle 收购）、`AIX`（IBM）、`Scenix`（西门子）、`SCO UNIX`、`Xenix`（微软），以及 `HP-UX`（惠普）、`NeXTSTEP`、`Mac OS`（苹果）和 `Android`（谷歌）。
+
+开源实现包含了伯克利系统发行版（BSD）及其变体：`NetBSD`、`OpenBSD` 和 `FreeBSD`。今天，Linux 是开源开发者中最流行的免费软件。上述系统也有强有力的商业支持。
+
+### UNIX 哲学
+
+UNIX 设计时遵循了几个严格的原则。这些原则涵盖了移植性、多任务和多用户导向，并结合了时间共享方法。此外，它基于 `TCP/IP` 方案的网络连接。
+
+原始开发是用 `C` 语言完成的，这使其能够独立于硬件平台。它通过精选开发工具和库交付，允许你根据特定需求轻松扩展。它虽然简单，但具有强大的任务自动化能力，支持复杂且可维护的脚本。
+
+UNIX 类似于工具箱，由各种工具组成。每种工具都有特定的用途，并专为该任务设计。其核心思想是每个任务使用一个工具。为了实现更复杂的目标，你可以将几个工具组合成链。以下示例通过管道结合了两个命令 `ls` 和 `wc`，能够统计当前目录下 Python 文件的数量。
+
+```bash
+ls *.py | wc -l6
+```
+
+我们将在指南的后续部分详细解释这些命令及其用法。
+
+## 1.2 Linux 简史
+
+与 UNIX 类似，Linux 操作系统有着不同的根源，并基于多位大师的作品。其中包括 Richard M. Stallman、Andrew S. Tanenbaum 和 Linus Torvalds。
+
+Richard M. Stallman 是麻省的一位黑客和开发者，他是自由软件基金会（FSF）的首任主席，也是 `GNU` 项目之父。`GNU` 是口号 `GNU is Not UNIX` 的缩写。该项目的目标是开发一个自由的 UNIX 操作系统。直到 20 世纪 90 年代初，工具集可用但内核仍然缺失。整个软件于 1983 年左右根据 `GNU` 公许可（GPL）发布。
+
+Linux 的下一步来自 Andrew S. Tanenbaum。当时他是阿姆斯特丹大学的教授。为了他的学生，他开发了 `Minix`，这是一个用于教育目的操作系统，旨在演示和理解 UNIX 原则。正如他指出的，`Minix` 并非用于实际生产。
+
+Linus Torvalds 是赫尔辛基大学的一名芬兰学生，他是 `Minix` 的用户并对其局限性感到不满。1990 年，他开始基于 `Minix` 的思想、UNIX 原则和 `POSIX` 标准开发一个全新的操作系统。他的动力是拥有一个既易于理解又能最大限度发挥硬件极限的系统。他还想玩得开心，并没有商业意图。Linux 背后的整个故事在他名为自传的《只求乐趣》（`Just for Fun`）的书中都有描述。如今，Linus Torvalds 监督着 Linux 内核的开发。
+
+为了让 Linux 对外产生吸引力，它需要漂亮的标志。根据一次吉祥物竞赛，人们提交了大量的提案。Larry Ewing 提交了他书中封面上所示企鹅的想法，他的提案获胜了。这只带着调皮微笑、体态肥满的企鹅命名为 `Tux`，代表了一个快乐且满意的用户形象。
+
+## 1.3 Linux 的用途范围
+
+Linux 最初为基于 Intel 的系统设计，如今运行在各种平台上。其中特别包括 ARM 架构（命名为 `arm` 和 `arm64`）、Motorola/Freescale 的 `68k` 架构（`m68k`）、Intel x86（`i386` 和 `amd64`）、IBM `s390`（`s390`）、PowerPC（`powerpc`）和 SPARC（`sparc`）。
+
+从一开始，Linux 就专注于服务器系统。它广泛用于 Web 服务器、文件服务器、邮件和新闻服务器、互联网网关、无线路由器和防火墙。作为计算单元，它帮助渲染了视频序列和整个电影，如《泰坦尼克号》、《史瑞克》和《玩具总员》。此外，Linux 还应用于汽车产品、航天、军事、物流和工程环境。自 2006 年以来，Linux 服务器运行着全球所有的交易所。它还运行着几乎所有的互联网搜索引擎。
+
+在过去的十年里，Linux 也征服了桌面。由于其高度的灵性和稳定性，它可以作为文本处理、图形设计、桌面出版、电子计算、通信（电子邮件、聊天、音频和视频）以及手机和电视界面的可靠配置。
+
+## 1.4 Linux 认证
+
+Linux 的广泛使用增加了对清楚自己业务的工程师和用户的需求。此时，获得 Linux 认证将变得非常有优势。这些认证可以分为通用类（不针对特定发行版）和专项类（针对特定 Linux 发行版）。下面的列表给出了目前存在的主要认证概览。
+
+### 通用认证
+
+- Linux Essentials
+- LPIC-1: Linux 服务器专业认证
+- LPIC-2: Linux 工程师
+- Linux Foundation Certified System Administrator (LFCS)
+- Linux Foundation Certified Engineer (LFCE)
+- CompTIA A+
+- CompTIA Network+
+
+### 针对发行版的认证
+
+- RedHat Certified Engineer (RHCE)
+- RedHat Certified System Architect (RHCSA)
+- RedHat Certified Architect (RCA)
+- SUSE Certified Administrator (SCA)
+- SUSE Certified Engineer (SCE)
+- SUSE Enterprise Architect (SEA)
+
+# 2. 软件许可
+
+与市面上的大多数产品一样，软件也带有相应的许可。软件许可描述了软件的使用方法，并允许或限制其使用。对于商业软件，仅在非常严格的边界内允许更改和复制。例如，许可限制你并行使用 5 个用户，并要求你获取另一个许可块来添加第 6 或第 7 个用户。常见的许可包括微软的 Shared Source 和 Apple 许可。
+
+对于开源软件，许可限制要少得多。更改和复制被明确允许，在某些情况下为了针对特定用户和目的进行改进甚至是鼓励的。目标是确保软件现在和将来对所有人可用。这种所谓的“拷贝左”（Copyleft）原则确保了每个人在需要时都有权进行适配，对受保护软件的使用和分发的限制被降到最低。用于单个 Linux 组件及其工具的常用许可包括 `GNU` 公许可（GPL）、BSD 许可和 Apache 许可。
+
+开源软件许可遵循几条自由规则：
+
+- 为任何目的使用程序（无限使用权 - 自由 0）。
+- 理解程序如何工作以及如何根据你的需求更改它（阅读程序源代码的权利 - 自由 1）。
+- 制作软件副本以帮助你的邻居（分发权 - 自由 2）。
+- 改进软件并发布你的更改，以便所有其他用户也能从你的改进中受益（自由 3）。
+
+这确保了可用软件的质量不断提高，并且每个人都能获得这些改进。使用 `GPL` 时，更改必须使用相同的许可发布。其他开源许可（如 `BSD`）没有这种强制性要求。
+
+# 3. Linux 发行版
+
+有一些术语可能会让 Linux 初学者感到困惑。第一个是它的名称，Linux 与 GNU/Linux。正如第 1 章之前描述，Linux 术语仅指 Linux 内核。实际上，许多用户将 Linux 称为整个操作系统，包括内核、库和工具。Linux 术语在实践中也包含所有运行在 Linux 上或供该操作系统可用的程序。
+
+此外，`GNU/Linux` 的描述需要一些解释。带有此名称前缀的 Linux 发行版通过 `GNU` 实现的系统工具和程序来完善。其中一个例子就是 `Debian GNU/Linux`。正如第 1 章所指，`GNU` 项目源于理查德·曼·斯尔曼（Richard M. Stallman）的发起以及他开发自由 `UNIX` 系统的梦想。基于他在 MIT 的经验与其他同事的合作，他选择使用现有的免费软件来重写他需要的工具。这包括 `TeX` 排版系统以及 `X11` 窗口系统。他尽可能在 `GPL` 许可证下发布这些重写的工具，以便让所有感兴趣的人都能免费地使用他的工作成果。
+
+## 什么是 Linux 发行版？
+
+Linux 发行版是一系列相互匹配的软件包集合。一个发行版由一个软件开发者团队维护，团队的每个成员专注于发行版中一个不同的软件包。他们作为一个团队共同努力，确保单个软件包是最新更新的，并且不会与同一发布版本的其他软件包发生冲突。
+
+截至 2020 年，对于 `Debian GNU/Linux 10`，官方存储库包含超过 59,000 个不同的软件包。存储库是一个具有特定用途的软件包目录。`Debian GNU/Linux` 根据开发状态对其软件包进行分类。官方存储库命名为 `stable`（稳定），反映了当前的稳定软件包。其他存储库命名为 `testing`（测试）和 `unstable`（不稳定），工作方式相同，但不属于官方软件包。
+
+通常，一个 Linux 发行版包含 Linux 内核软件包、引导加载程序、`GNU` 工具和库、带有窗口环境的图形桌面环境，以及额外的软件，如 Web 浏览器、电子邮件客户端、数据库和文档。软件以两种方式提供：源码和编译后的二进制包。这允许你理解软件是如何设计的，对其进行研究，并根据你的个人需求进行调整。这一步被描述为第 2 章所示列表中的第一种自由。
+
+根据 Linux 发行版重点的不同，它还包含特定用途的软件包，例如网络或取证工具、用于教育目的的科学软件以及多媒体应用。更多细节见下文。
+
+## 选择 Linux 发行版
+
+根据 Distrowatch 的数据，存在超过 600 个不同的 Linux 发行版。主要问题之一是：使用哪个 Linux 发行版？根据我们的经验，我们有以下建议：
+
+*   对于初学者：`Ubuntu`、`Xubuntu`、`openSUSE`、`Linux Mint`。
+*   对于有经验的高级用户：`Debian GNU/Linux`、`Red Hat Enterprise Linux` (`RHEL`)、`Fedora`、`CentOS`。
+*   对于开发者：`Arch Linux`、`Gentoo`、`Slackware`。
+
+书中的示例使用了 `Debian GNU/Linux`。尽管这个发行版被推荐给高级用户，但它对新手仍然非常友好，我们将在指南中演示。但选择它最重要的原因是它的稳定性，以及我们在过去 20 年在服务器和桌面系统中长期使用它建立的信任。其他 Linux 发行版的波动太大。我们看到初学者犯的最大错误是在开始时选择安装一个不稳定的发行版，这在很多情况下会破坏你的 Linux 体验并让你完全放弃 Linux。
+
+非常欢迎你选择不同的 Linux 发行版。只需确保它没有已知的稳定性问题即可。本书的大部分内容适用于大多数发行版。但如果你是一个完全的新手，我们强烈建议至少在本指南期间坚持使用 `Debian`，我们将逐步引导你完成安装和配置。
+
+通常，选择 Linux 发行版可以取决于几个标准：
+
+*   其可用性：免费或商业用途。
+*   其用途：桌面、服务器、Wi-Fi 路由器/网络设备。
+*   目标受众：终端用户、网络工程师、系统管理员、开发者。
+*   软件包格式：`.deb`、`.rpm`、`.tar.gz`。
+*   更新频率：每个 Linux 发行版都有自己的更新周期。
+*   提供的支持：可以是免费的（基于社区），也可以是付费（基于支持合同）。
+
+在选择发行版时，我们建议选择稳定、定期更新并符合你电脑用途的发行版。下面你将看到每个主要 Linux 发行版的简短描述。
+
+![Image](img/Image00001.gif)
+
+### Debian GNU/Linux
+
+`Debian GNU/Linux`（简称 `Debian`）建立于 1993 年，是一个完全免费且基于社区的操作系统，遵循 `GNU` 原则。超过 1,000 名开发者自愿地对其持续工作。`Debian` 的开发背后没有公司，这意味着不涉及商业利益。
+
+一个设计目标是为积极提供服务的计算机提供一个稳定可靠的操作系统。它针对那些知道自己想要什么并且 `Debian` 开发者维护并使用自己软件的用户。软件包以 `.deb` 格式提供，并根据以下许可证分类：
+
+*   `Main`：自由软件。
+*   `Contrib`：依赖非免费软件的自由软件。
+*   `Non-free`：具有非免费许可证的软件包。
+
+`Debian` 在服务器和桌面系统上运行良好。支持多种架构，如 `ARM EABI` (`arm`)、`IA-64` (`Itanium`)、`MIPS`、`MIPSel`、`powerpc`、`s390`（32 位和 64 位），以及 `sparc`、`i386`（32 位）和 `amd64`（64 位）。每个版本的代号基于电影《玩具总动员》中角色的名字，例如 `Debian GNU/Linux 9` 的 `Stretch` 和 `Debian GNU/Linux 10` 的 `Buster`。
+
+![Image](img/Image00002.gif)
+
+### Ubuntu
+
+`Ubuntu` 是一个由 `Canonical Ltd` 公司资助的免费 Linux 发行版。它基于 `Debian` 但更侧重于初学者。这就是为什么每个任务只包含一个工具。`Ubuntu` 团队以引入缺乏稳定性的全新元素而闻。这是我们在与新手交流时收到的最大抱怨之一。由于这个原因，我们不向初学者推荐 `Ubuntu`。人气并不同于易用性。我们的首选是 `Debian`，`Mint` 是一个很好的第二选择。
+
+软件包以 `.deb` 格式提供，并根据来自 `Canonical` 的支持分类：
+
+*   `Main`：由 `Canonical` 支持的自由软件。
+*   `Restricted`：由 `Canonical` 支持的非免费软件。
+*   `Universe`：不受支持的自由软件。
+*   `Multiverse`：不受支持的非免费软件。
+
+`Ubuntu` 提供三个官方版本：`Ubuntu Desktop`、`Ubuntu Server` 和 `Ubuntu Core`（用于物联网）。支持多种架构，如 `i386`、`IA-32`、`amd64`、`ARMhf` (`ARMv7 VFP3-D16`)、`ARM64`、`powerpc`（64 位）和 `s390x`。
+
+
+
+最初于 2004 年发布，每年发布两次：一次在四月，另一次在十月。版本号反映了发布时间：`18.04` 指 2018 年 4 月发布的版本。版本的代号基于一个形容词和一个动物，例如 `Ubuntu 14.10` 的 `Utopic Unicorn`。
+
+![](img/Image00003.gif)
+
+## Linux Mint
+
+`Linux Mint` 旨在提供一种 Windows 用户会喜欢的更熟悉的桌面体验，并且开箱即用良好的硬件和多媒体支持。`Mint` 的 `Cinnamon Desktop` 版本因其与 Windows 环境的相似而深受粉丝喜爱，甚至支持相似的快捷键。由于其整体稳定性，这是一个我们可以放心推荐的发行版。
+
+Mint 是一个非商业性的发行版，它基于 `Ubuntu` 并遵循相同的发布方案。其首次发布可以追溯到 2006 年。截至 2014 年，每年发布两次，在 `Ubuntu` 发布一个月后发布。版本的代号是以字母 a 结尾的女性名字，例如版本 6 的代号 `Felicia`。Linux Mint 支持 `IA-32` 和 `amd64` 两种架构。
+
+![](img/Image00004.gif)
+
+## 红帽企业 Linux (RHEL)
+
+RHEL 是一种商业 Linux 发行版。它基于 Red Hat Linux（于 1995 年至 2004 年间）以及 `Fedora` 19 和 20 的组合。其原始发布日期追溯到 2000 年。它对企业客户的关注包括长期支持、培训和认证计划（见第 1 章）。红帽的社区项目被称为 `Fedora`（见下文）。
+
+软件包以 `.rpm` 格式（红帽软件包管理器）提供。RHEL 支持 `arm`（64 位）、`i386`、`amd64`、`powerpc` 以及 `s390` 和 `zSeries`。该发行版同时针对服务器和桌面。版本的代号似乎是随机的，因为它没有遵循类似于 `Debian` 或 `Ubuntu` 使用的方案。
+
+![](img/Image00005.gif)
+
+## Fedora
+
+Fedora 是一个主要面向桌面用户的社区级 Linux 发行版。它基于红帽企业 Linux (`RHEL`) 并由红帽赞助。它于 2003 年推出，当时 Red Hat Linux 的支持结束。截至 2020 年，它提供以下版本：
+
+- Workstation（工作站）：针对 `pc`。
+- Server（服务器）：针对服务器。
+- IoT：针对 IoT 生态系统。
+
+Fedora 支持 `amd64`、`armhf`、`powerpc`、`MIPS`、`s390` 和 `RISC-V` 架构。该发行版的周期较短，大约每 6 个月发布一个新版本。版本的代号没有遵循固定的命名方案，主要由城市名称组成。
+
+![](img/Image00006.gif)
+
+## CentOS
+
+CentOS 是“社区企业操作系统”（Community Enterprise Operating System）的缩写。与 Fedora 一样，它基于红帽企业 Linux，并在二进制软件包上保持兼容。这允许在 CentOS 上使用最初针对 `RHEL` 设计和开发的软件。与 Fedora 不同，它侧重于桌面和服务器的企业级使用，并提供长期支持。CentOS 的首次发布可以追溯到 2004 年 5 月。其软件包来自三个不同的仓库：
+
+- Base（基础库）：常规、稳定的软件包。
+- Updates（更新）：安全、错误修复或增强更新。
+- Addons（附加组件）：构建构成主 CentOS 发行版的较大软件包所需的包，但这些包在上游并不提供。
+
+CentOS 支持 `i386` 和 `amd64` 架构。不支持其他架构。
+
+![](img/Image00007.gif)
+
+## openSUSE
+
+openSUSE Linux 发行版的根源于 `SUSE Linux` 和商业版的 `SUSE Linux Professional`，后者于 1994 年首次发布。`SUSE` 名字是原始德国所有者 `Gesellschaft für Software- und Systementwicklung GmbH` 的缩写。
+
+openSUSE 基于 Red Hat Linux 和 `Slackware` 的结构，并使用 `.rpm` 作为软件存档格式。它支持 `i586`、`x86-64` 和 `ARM` 架构。openSUSE 项目旨在每八个月发布一个新版本。与 Fedora 类似，版本的代号没有遵循固定的命名方案。
+
+![](img/Image00008.gif)
+
+## Arch Linux
+
+Arch Linux 是一个免费的 Linux 发行版，于 2002 年首次发布。它遵循滚动发布（rolling release）原则，导致每月更新。目前，核心团队由约 25 名开发者组成，并受到许多被称为“信任用户”的其他开发者支持。Arch Linux 使用 `Pacman` 作为软件包管理系统。软件包存储在四个软件仓库中：
+
+- Core（核心）：基础系统的软件包。
+- Extra（额外）：如桌面环境和数据库等附加软件包。
+- Community（社区）：由信任用户维护的软件包。
+- Multilib：可以在多个架构上使用的软件包。
+
+Arch Linux 支持 `amd64` 架构。2007 年之前的早期版本代号没有遵循特定方案，最近的发布遵循标准的数字格式。
+
+![](img/Image00009.gif)
+
+## Gentoo
+
+与 Arch Linux 一样，Gentoo 也遵循滚动发布原则。每周提供新的安装镜像，首次发布于 2002 年。Gentoo 的特殊之处在于它是一个基于源码的发行版。在安装软件之前，必须先进行编译。支持的架构包括 `alpha`、`amd64`、`arm`、`hppa`、`IA-64`、`m68k`、`MIPS`、`powerpc`、`s390`、`sh` 和 `sparc`。
+
+![](img/Image00010.gif)
+
+## Slackware
+
+Slackware 是最老的活跃 Linux 发行版。首次发布追溯到 1992 年。定期发布没有固定间隔。它面向专业用户并尽可能给予他们自由。Slackware 使用压缩的 `.tar.gz` 存档作为软件包格式，支持 `i486`、`alpha`、`sparc` 和 `arm` 四种架构。该发行版也移植到了 `s390` 架构。
+
+# 4. 设置 Linux 系统
+
+如前一节所述，我们将使用 `Debian` 进行演示。回顾一下，`Debian` 是一个提供极佳稳定性的发行版，一旦你的技能和知识超过了初级阶段，它的扩展性就非常出色。在本章中，我们将安装并配置 `Debian`，向你展示过程中的每一个步骤。
+
+## 4.1 安装类型
+
+Debian 提供了多种正确设置的方法。这包括图形界面安装和文本安装；我们将使用前者。对于安装媒体，Debian 开发者提供了三种变体：
+
+- 适用于 32 位和 64 位的 CD 或 DVD。
+- 适用于 32 位和 64 位的网络镜像（所谓的 `Netinst-ISO`）。
+- 适用于 32 位或 64 位的微 CD。
+
+我们还提供了测试媒体。这些包括 32 位和 64 位的 Live 镜像，允许你在将 Debian 安装到电脑之前进行尝试。在编写本指南期间，版本 10 是 Debian 的当前稳定版本。这里描述的设置基于此版本和 `amd64` 架构。
+
+从 `www.debian.org/distrib` 下载网络镜像后，不再需要静态镜像。相反，它取决于你的互联网连接以检索要安装的软件包并保持操作系统更新。
+
+整个过程将花费你大约几个小时，并允许你根据特定需求进行精简的软件选择。你不需要的软件包将不会出现在你的系统中。然而，当你觉得需要时，可以随时添加。
+
+我们安装的目标系统是一个基于 `XFCE` 的单用户桌面系统，带有网络浏览器和音乐播放器。对于网络浏览器，我们使用 `Mozilla Firefox`；对于音乐播放器，使用 `VLC`。这两个程序都是 Linux 发行版的永久组件。我们用于演示的环境是一个基于 `VirtualBox` 的虚拟机，拥有 4 GB 内存和 8 GB 磁盘空间。
+
+## 4.2 逐步安装 Linux
+
+### 启动菜单
+
+要开始安装 Debian，首先从你下载的 ISO 镜像启动计算机（在本例中为 `VirtualBox` 镜像）。如果你也使用虚拟机，请参考你的虚拟机供应商网站获取如何启用 ISO 镜像的帮助。接下来，等待启动菜单在屏幕上出现。下面的图像显示了提供的不同选项。使用光标键可以在启动菜单中导航，回车键选择项目。
+
+![](img/Image00011.gif)
+
+不同的选项有：
+
+- 图形化安装：使用图形化安装程序启动安装过程。
+- 安装：使用文本安装程序启动安装过程。
+- 高级选项：选择更多选项，如专家模式、自动安装或救援模式（详细信息见下图）。
+- 无障碍高对比度安装菜单：切换到高对比度的黑白主题。
+- 帮助：获取进一步帮助。
+- 使用语音合成安装：在语音支持下启动安装过程。
+
+![](img/Image00012.gif)
+
+从主启动菜单中选择 `Graphical install`（图形化安装）选项，按 `Enter` 键继续。
+
+### 语言选择
+
+接下来，选择你希望在整个安装过程中使用的语言。对话框和消息将相应地翻译。此选择不会不可逆转地决定你 Linux 系统的语言，你以后可以随时选择不同的语言。
+
+下图显示了对话框。英语已被预选，因此你只需点击对话框右下角的 `Continue`（继续）按钮即可继续。
+
+![](img/Image00013.gif)
+
+### 位置选择
+
+第三，对你的位置进行选择（见下图）。根据你之前设置的语言，列表将列出主要使用该语言的国家。这也会影响本地区域设置，例如你计算机所在的时区。如果需要不同的设置，请选择列表末尾的 `other`（其他）选项并从那里开始。完成后，点击 `Continue`（继续）按钮进入第四步。
+
+![](img/Image00014.gif)
+
+### 键盘选择
+
+第四，从列表中选择你的键盘布局（见下图）。对于美国，预选项目是美式英语。如果你使用不同的键盘布局，请从列表中选择正确的选项。完成后，点击 `Continue`（继续）按钮进入第五步。
+
+![](img/Image00015.gif)
+
+### 网络设置
+
+第五步包括从 ISO 镜像中加载安装程序组件，并检测网络硬件以加载正确的网络驱动程序。然后，安装程序将尝试连接互联网，通过本地网络服务器通过 `DHCP` 获取 IP 地址。
+
+完成后，你可以设置计算机的主机名（见下文）。为你的机器选择一个唯一的名称，该名称由单个名称组成且在你的本地网络网段中不存在。使用水果、地点、乐器、作曲家和电影角色命名是很常见的。在这种情况下，我们选择了名称 `debian106`，它简单代表 Linux 发行版及其版本号。
+
+![](img/Image00016.gif)
+
+完成后，点击 `Continue`（继续）按钮进入第六步，添加如 `yourcompany.com` 类的域名。在这种情况下，这是需要的。因此我们留空输入框。点击对话框右下角的 `Continue` 按钮继续安装。
+
+![](img/Image00017.gif)
+
+### 用户与角色
+
+我们的 Linux 系统至少需要两个用户才能正常运行。一个是具有固定名称 `Root` 的管理员用户，另一个是普通用户，在这种情况下我们仅将其命名为 `User`。
+
+在接下来的两个步骤中，你将为 root 用户设置密码，并为普通用户设置全名和账户名。简单起见，我们使用 `Debian User` 作为全名，`User` 作为账户名。对于这两个用户，请选择一个不同且你能记住的密码。稍后登录计算机时需要这些密码。
+
+![](img/Image00018.gif)
+
+### 时区
+
+设置正确的时区对于与其他服务的通信非常重要，特别是在网络中。从下所示的列表中选择该值。列表中的项目基于你之前选择的位置。完成后，点击 `Continue`（继续）按钮定义存储媒体及相应的分区。
+
+![](img/Image00019.gif)
+
+### 存储媒体与分区
+
+Linux 系统可以分布在多个不同的存储媒体上，如硬盘和闪存驱动器。此外，存储媒体可以分为多个磁盘分区。为了实现这一点，设置程序提供了以下方法：
+
+- 引导式 - 使用整个磁盘：按照提供的步骤操作，并使用整个磁盘空间进行 Linux 安装。这将创建固定大小的分区。
+- 引导式 - 使用整个磁盘并设置 LVM：按照提供的步骤操作，并使用整个磁盘空间进行 Linux 安装。此选项利用逻辑卷管理（`LVM`）创建分区以后可以更改大小的分区。
+- 引导式 - 使用整个磁盘并设置加密 LVM：按照提供的步骤操作，并使用整个磁盘空间进行 Linux 安装。此选项利用逻辑卷管理（`LVM`）创建分区以后可以更改大小的加密分区。
+- 手动：逐个创建分区。这是专家模式，需要对分区和文件系统参数有更深入的了解。
+
+![](img/Image00020.gif)
+
+从列表中选择 `Guided - use entire disk`（引导式 - 使用整个磁盘）。分区大小的值根据经验选择，并通过算法实现。不需要手动计算。点击对话框右下角的 `Continue` 按钮继续安装。
+
+接下来，选择要分区的磁盘。在我们的案例中，只有一个可用磁盘（见下图）。在指南的后续，第一个 SCSI 磁盘将被称为 `/dev/sda`。
+
+![](img/Image00021.gif)
+
+磁盘分区是指存储媒体上被独立组织的区域，旨在包含 Linux 文件系统树的一个分支。目前没有通用的方法来正确地进行这种分离。本指南显示了一个适用于基础系统的简单且安全的解决方案。对话框中的菜单提供以下选项：
+
+- 所有文件放在一个分区中：仅使用单个分区来存放程序和用户数据。
+- 独立的 `/home` 分区：在独立的分区中存储程序和用户数据。
+- 独立的 `/home`、`/var` 和 `/tmp` 分区：在独立的分区中存储用户数据、变量数据临时数据。
+
+如下所示，选择第二个选项 `Separate /home`。点击 `Continue` 按钮继续安装。
+
+![](img/Image00022.gif)
+
+下一步是确认分区方案。这是根据经验计算的，包含以下分区：
+
+- `sda1`：第一个磁盘的分区是主分区，大小为 2.8 GB，格式化为 `ext4` 文件系统，称为文件系统树的根部分（`/`）。
+- `sda5`：第一个磁盘的第五分区是逻辑分区，大小为 2.1 GB，格式化为交换分区。
+- `sda6`：第一个磁盘的第六分区是逻辑分区，大小为 3.6 GB，格式化为 `ext4` 文件系统，用于存储用户数据，称为家目录（`/home`）。
+
+由于历史原因，硬盘只能包含四个主分区。第四个分区在分为逻辑分区或逻辑驱动时被称为扩展分区。在我们的情况下，逻辑分区 `/dev/sda5` 和 `/dev/sda6` 存储在主分区 `/dev/sda4` 上。分区 `/dev/sda2` 和 `/dev/sda3` 未使用。
+
+![](img/Image00023.gif)
+
+从上方列表中选择 `Finish partitioning and write changes to disk`（完成分区并将写入磁盘）。点击右下角的 `Continue` 按钮继续并确认分区方案（见图）。从列表中选择 `yes` 并点击 `Continue` 按钮分区磁盘。注意，所选存储设备上的所有数据将丢失，磁盘将变为空。
+
+![](img/Image00024.gif)
+
+在将存储媒体划分为单个分区后，将按照定义的文件系统对分区进行格式化。在我们的案例中，分区 `/dev/sda1` 和 `/dev/sda6` 使用 `ext4` 文件系统，分区 `/dev/sda5` 使用交换分区。一旦完成此步骤，下一步将安装 Debian 基础系统。
+
+### 包管理
+
+ISO 镜像包含了安装程序和用于设置 Linux 基础系统的软件包。例如，这包括在下方将安装的 Linux 内核。
+
+![](img/Image00025.gif)
+
+接下来，你需要决定是否使用额外的安装介质。在我们的情况下，我们只有一个安装盘，因此可以从菜单中选择 `No`（见下文）。然后点击 `Continue` 按钮继续。
+
+![](img/Image00026.gif)
+
+正如前面提到的，Debian 的软件是以软件包的形式组织的。这些软件包提供在多个软件仓库中。这些仓库通过由大学、个人、公司和其他组织维护的软件包镜像站提供。这些镜像位于不同的国家。
+
+在下一步中，你必须决定从哪个国家获取你的 Debian 软件包。建议选择一个地理位置上靠近你的镜像，以最大限度地减少数据通过网络从镜像传输到你计算机的时间。作为第一步，请选择你所在的国家。
+
+![](img/Image00027.gif)
+
+作为第二步，从列表中选择一个优选镜像（见下文）。列表包含了大学、互联网提供商、政府服务和其他组织。
+
+![](img/Image00028.gif)
+
+如果你的计算机网络包含用于与外部通信的代理服务器，请在此输入适当的信息。在这种情况下，我们没有该服务器，因此留空输入字段。点击 `Continue` 按钮继续。
+
+![](img/Image00029.gif)
+
+一旦设置单个参数，Debian 安装程序就会连接到之前选择的软件包镜像并从那里检索软件包列表。软件包列表包含了可用软件包，包括名称、大小和描述。取决于你网络连接的质量和带宽，这一步可能需要一段时间。
+
+![](img/Image00030.gif)
+
+接下来，你会被要求参加 `Popcon`，即 Debian 软件包流行度竞赛。这些信息是可选的，仅供负责 Debian 包的开发者团队使用。根据 `Popcon`，他们可以确定哪些 Debian 软件包是安装频率最高的。该信息对安装镜像的准备，以及在不同架构下保留或舍弃哪些软件包具有直接影响。
+
+在我们的情况下，我们不参与 `Popcon`，并将选择设置为 `No`。点击 `Continue` 继续选择软件任务（`tasksel`）。
+
+![](img/Image00031.gif)
+
+### 软件选择
+
+
+
+Debian 提供了精心安排的软件包选择，称为`tasks`（任务）。其背后的想法是将用于特定用途的软件包分组，以简化安装。从对话框中的列表（见下文）中，你可以在不同的桌面环境以及 Web 服务器、打印服务器、SSH 服务器和标准系统程序之间进行选择。为了获得精简的安装，仅启用列表中的最后两项。我们稍后安装 XFCE 桌面环境。
+
+![](img/Image00032.gif)
+
+确认软件选择后，Debian 安装程序将从软件包镜像检索所需的软件包、解压然后安装它们。下方的条显示了进度。在这种情况下，必须下载 140 个软件包。
+
+![](img/Image00033.gif)
+
+## 设置 GRUB
+
+为了启动我们新安装的 Debian 系统，我们还需要设置启动信息。这个过程被称为启动系统。处理这一步骤的软件组件名为通用统一引导加载程序（准确地说是`GRUB`或`GNU GRUB`）。`Yes`选项已经被预选，因此我们可以点击`Continue`继续。
+
+![](img/Image00034.gif)
+
+Debian 安装程序需要知道将`GRUB`安装在何处。图像中的菜单列出了需要考虑的存储介质。在我们的情况下，我们选择列表中的第二项（`/dev/sda`）。然后点击`Continue`继续。
+
+![](img/Image00035.gif)
+
+现在我们几乎已经完成了基础安装，唯一需要做的就是阅读一个对话框。
+
+## 完成安装
+
+以下对话框告知你安装已完成。然后点击`Continue`重启新安装的系统。
+
+![](img/Image00036.gif)
+
+几秒钟后，文本`GRUB`启动菜单将出现在屏幕上（见下文提取）。启动菜单包含两个选项：`Debian GNU/Linux`和`Advanced options for Debian GNU/Linux`。第一个菜单项被突出显示并预选。第二个菜单项允许你设置启动选项。有关这些选项的完整列表，请查看 GNU `GRUB`手册：[www.gnu.org/software/grub/manual/grub](http://www.gnu.org/software/grub/manual/grub)
+
+保持第一个菜单项被选中并按`Enter`继续并启动新系统。
+
+| Debian GNU/Linux   Advanced options for Debian GNU/Linux |
+
+你的 Debian 系统将启动并初始化必要的系统服务。这一步将需要几秒钟完成。最后，在名为`tty1`的第一个文本终端上将看到一个黑白屏幕，并要求你登录系统。登录提示由你的 Linux 系统主机名（`debian106`）跟随空格和单词`login`组成。
+
+| Debian GNU/Linux 10 debian106 tty1debian106 login: _ |
+
+登录系统后，你可以添加更多软件以使用基于 XFCE 桌面的图形用户界面。在安装过程的这一步，只能通过管理员 root 用户身份登录才能添加更多软件。
+
+要这样做，在登录提示处输入`root`，按`Enter`，等待`Password:`文本出现并输入你之前为 root 用户设置的密码。Linux 系统将用登录消息欢迎你（见下文）。登录消息将显示当前运行的 Linux 内核版本以及使用建议。
+
+| Debian GNU/Linux 10 debian106 tty1debian106 login: rootPassword:Linux debian106 4.19.0-11-amd64 #1 SMP Debian 4.19.146-1 (2020-09-17) x86_64The programs included with the Debian GNU/Linux system are free software; 每个程序的确切分发条款在`/usr/share/doc/*/copyright`中的单独文件中说明。Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law. |
+
+在欢迎消息之后，Debian 打开了一个命令行提示符：
+
+| root@debian106 ~# |
+
+此命令行提示符由四个部分部分组成：
+
+* `root`: 登录用户的名称。
+
+* `debian106`: Linux 系统的主机名。
+
+* `~`: 当前目录。在这种情况下，它是当前登录用户的家目录。如果没有其他设置，对于普通用户它被定义为`/home/username`，对于管理员用户定义为`/root`。`~`只是它的缩写。
+
+* `#`: 登录符号。`#`符号代表 root 用户，而`$`用于没有管理员权限的普通用户。以后在使用各种命令时你会看到这个符号。
+
+**重要**：你现在以管理员 root 用户身份登录。请小心你输入的命令，并在有疑问时双重检查。任何错误都可能导致你必须修复 Linux 系统。
+
+## 4.3 添加图形用户界面
+
+在当前阶段，Debian 系统已完全激活并可以可以直接使用。对于适用于普通用户的桌面系统来说，它仍然缺少一个美观且易用的图形用户界面，以便使其看起来和感觉更接近你已经习惯的 Windows 或 macOS 系统。在这一步中，我们将改变这一点并安装 XFCE 桌面管理器。
+
+为了这样做，我们将安装以下软件包：
+
+* `aptitude`软件包管理器。
+
+* `xdm`显示管理器。
+
+* `xfce4`桌面环境。
+
+Debian 使用软件包管理器`apt`来处理软件包及相关包列表的安装、更新和删除。此外，`apt`会解决所有的软件包依赖关系，并确保系统上有相关的软件。在我们的案例中，需要从软件包镜像检索并安装约 170 MB 的数据。如之前提到的，这需要可用的互联网连接来下载所需的软件包。
+
+要安装这三个软件包，请在命令行提示符处输入以下命令。只需在`#`符号后输入命令：
+
+```bash
+root@debian106 ~# apt-get install aptitude xdm xfce4
+```
+
+`apt`将显示有关要安装软件包的更多信息。这包括依赖包列表和推荐包。最后，你将看到命令行提示符。输入`Y`或按`Enter`来安装`Aptitude`、`xdm`和`xfce4`以及依赖包。对于`xdm`显示管理器，有两个对话框需要确认。在两个框上都按`Enter`以确认使用`xdm`。
+
+获取要安装的软件包需要一段时间。完成后，命令行提示符将再次出现。要激活关于图形桌面环境的更改，请重启系统。在命令行提示符处输入如下命令`reboot`：
+
+```bash
+root@debian106 ~# reboot
+```
+
+重启 Linux 系统后，Debian 用一个图形化启动界面欢迎我们（见下文）。按`Enter`以默认设置启动 Linux 系统。
+
+![](img/Image00037.gif)
+
+几秒钟，将看到一个图形登录界面。使用之前创建的名为`user`的普通用户登录系统。输入`user`，按`Enter`，然后输入用户的密码。然后再次按`Enter`确认并登录。
+
+接下来，将看到`XFCE`桌面（见下文）。桌面带有几个默认元素：一个顶部导航栏、一个底部导航栏和桌面图标。这些元素在下文中将详细解释。
+
+![](img/Image00038.gif)
+
+### 顶部导航栏
+
+顶部导航栏包含几个元素：应用程序菜单、时钟、系统托盘和电源菜单。这些元素允许你管理应用程序和系统设置。
+
+### 底部导航栏
+
+底部导航栏（或任务栏）显示当前打开的窗口，并提供在它们之间切换的按钮。它还包含应用程序启动器。
+
+### 桌面图标
+
+桌面图标是文件夹、文件或应用程序的快捷方式。这些元素提供了快速访问频繁使用项目的途径。
+
+## 4.4 添加软件包
+
+为了正确使用 Linux，你还必须学习如何添加软件包。在下面你将看到如何使用`apt`和`apt-get`命令。
+
+添加软件包最简单的方法是通过图形界面，但命令行通常更强大且更灵活。
+
+### 使用`apt-get`
+
+要使用`apt-get`命令安装软件包，语法为：
+
+```bash
+sudo apt-get install <package_name>
+```
+
+例如，要安装`aptitude`、`xdm`和`xfce4`，你可以使用：
+
+```bash
+root@debian106 ~# apt-get install aptitude xdm xfce4
+```
+
+输出将以白色背景和较大的字体显示安装信息。
+
+### 使用`apt`
+
+`apt`命令是`apt-get`的较新的替代方案。它更用户用户，并提供了更好的进度条。要安装软件包，使用：
+
+```bash
+sudo apt install <package_name>
+```
+
+例如，要安装`aptitude`，你可以使用：
+
+```bash
+root@debian106 ~# apt install aptitude
+```
+
+输出将以白色背景和较大的字体显示安装信息。
+
+### 更新和删除软件包
+
+要更新可用软件包列表，使用：
+
+```bash
+sudo apt update
+```
+
+要将所有已安装软件包升级到最新版本，使用：
+
+```bash
+sudo apt upgrade
+```
+
+要删除一个软件包，使用：
+
+```bash
+sudo apt remove <package_name>
+```
+
+## 4.5 退出 Linux
+
+为了使用 Linux，你还必须学习如何退出 Linux 并重启系统。我们将看到两种方法，第一种基于图形界面，第二种可以用于非图形系统（如服务器）。
+
+### 退出 XFCE 桌面环境
+
+退出 XFCE 桌面并注销当前会话简单的方法是点击顶部导航栏右角的按钮。按钮标记有你的用户名，在我们的案例中是`user`。从小菜单中选择标记为`Log Out`（注销）的最后一项。或者，你可以从左上角的应用程序按钮中选择`Log Out`项。
+
+![](img/Image0039.gif)
+
+### 关闭 Linux 系统
+
+关闭整个 Linux 系统的方法与退出 XFCE 类似。点击顶部导航栏右角的按钮并选择`Shutdown`（关机）。从对话窗口点击标记为`Shutdown`的按钮以停止 Linux 系统。
+
+从终端会话，你可以使用命令`halt`或`shutdown -h`。
+
+```bash
+## halt
+```
+
+### 重启 Linux 系统
+
+要重启 Linux 系统，点击顶部导航栏右角的按钮并选择项`Restart`（重启）。从对话窗口点击标记为`Restart`的按钮以重启 Linux 系统。
+
+从终端会话，你可以使用命令`reboot`。
+
+```bash
+## reboot
+```
+
+![](img/Image0040.gif)
+
+现代 Linux 系统具有相当一致的目录结构，该结构基于文件系统层次结构标准（FHS）。该定义规定了存在哪些主目录以及其中存储了哪些内容。FHS 由 Linux 基金维护。FHS 的最新版本是 3.0，于 2015 年发布。第 3 章中提到的 Linux 发行版都遵循 FHS 结构。以下是正在常用的目录：
+
+| 目录 | 描述 |
+| :--- | :--- |
+| `/` | 主要层次结构根和整个文件系统层次结构的根目录 |
+| `/bin` | 所有用户所需的命令二进制文件 |
+| `/boot` | 引导器 |
+| `/etc` | etcetera 的缩写，包含特定于系统的系统级配置文件 |
+| `/home` | 用户的家目录 |
+| `/lib` | `/bin`和`/sbin`中二进制文件所需的库 |
+| `/media` | 可移动介质的挂载点 |
+| `/proc` | processes 的缩写，是 Linux 内核的虚拟文件系统 |
+| `/root` | root 用户的家目录 |
+| `/sbin` | 必要的系统二进制文件 |
+| `/tmp` | 临时数据和文件 |
+| `/usr` | Unix 系统资源，包含用户工具和应用程序 |
+| `/var` | 可变数据，如日志和数据库文件 |
+
+某些 Linux 发行版拥有额外的目录如`/opt`或使用符号链接。Linux 还有一些常用的缩写，这些对你的日常工作非常有帮助：
+
+| 缩写 | 描述 |
+| :--- | :--- |
+| `$HOME` | 包含用户家目录的本地变量 |
+| `~` | 指向用户家目录，例如`/home/tom` |
+| `.` | 指向当前目录 |
+| `..` | 指向父目录 |
+
+你可以在终端命令行和 shell 脚本中使用缩写来缩短命令。接下来我们将查看其中一些命令。
+
+## 5.2 目录命令
+
+与文件一样，Linux 提供了一系列命令来列出、创建、删除、更改和重命名目录。你可以在终端中使用这些命令。
+
+### 列出目录
+
+要列出目录，使用`ls`命令配合开关`-d`（`--directory`的缩写），如下所示：
+
+```bash
+$ ls -d */finances/projects/work/...
+```
+
+此示例列出了当前目录下的目录名称。输出中的点线（`...`）表示列表较长，此处省略了输出。
+
+使用`ls`命令的两种常用方式是不带任何选项，以及带有选项`-la`（`-l -a`的缩写，意为详细列出全部）。第一个输出仅显示普通文件的条目名称，而第二个输出则列出普通条目隐藏条目。要列出包括以点（`.`）开头的隐藏在内的所有目录，请如下使用`find`命令：
+
+```bash
+$ find . -maxdepth 1 -type d./projects./.mozilla./.ipython./.dbus./video...
+```
+
+`tree`命令递归搜索目录并非常漂亮地输出整个目录结构。开关`-d`将输出限制为仅目录，其显示形式如下：
+
+```bash
+$ tree -d.
+
+|–––– archive |–––– ballet-zebola | | |–––– documents | | |–––– invoices | |–––– charles-darwin-university|–––– projects|–––– .dbus|–––– .ipython|–––– .mozilla...
+```
+
+### 创建目录
+
+要创建目录，请使用`mkdir`命令（make directory）。下一个示例在当前目录下创建一个名为`training`的新条目：
+
+```bash
+$ mkdir training
+```
+
+开关`-v`（`--verbose`的缩写）会打印一条命令执行成功的额外消息。
+
+```bash
+$ mkdir -v training
+
+mkdir: directory "training" created
+```
+
+开关`-p`（`--parents`的缩写）允许你创建整个子目录结构。尚不存在父目录也会创建。以下示例创建了`training`目录以及其子目录`linux`（第 1 层）和`lpic1`（第 2 层）。
+
+```bash
+$ mkdir -p training/linux/lpic1
+```
+
+要在同一层级创建两个子目录，请利用底层命令行解释器的功能。`Bash`使用大括号`{ }`中的值来实现此。。下一个示例展示了你如何一次性创建`training/linux/lpic1`和`training/linux/lpic2`两个目录：
+
+```bash
+$ mkdir -p training/linux/{lpic1,lpic2}
+```
+
+### 删除目录
+
+删除目录使用`rmdir`命令（remove directory）。下一个示例删除了当前目录中名为`training`的条目：
+
+```bash
+$ rmdir training
+```
+
+与`mkdir`一样，开关`-v`（`--verbose`的缩写）会打印一条命令执行成功的额外消息。
+
+```bash
+$ rmdir -v training
+
+mkdir: directory is removed, "training"
+```
+
+只要目录是空的，这种方法就有效。如果你的目录包含文件或子目录等任何条目，使用此消息时`rmdir`命令会报错并保持目录不变：
+
+```bash
+$ rmdir training
+
+rmdir: failed to remove `training`: Directory not empty
+```
+
+要解决这种情况，`rm`命令（remove）配合开关`-r`（`--recursive`的缩写）就变得非常有用。此时，`rm`会递归删除所有条目。以下示例结合了开关`-r`和`-v`来删除一个文件和三个目录。
+
+```bash
+$ tree training/training/
+
+|–––– lpic1 |–––– introduction.txt|–––– lpic22 directories, 1 file
+
+$ rm -rv training/„training/lpic1/introduction.txt"
+
+" was removedDirectory was removed: „training/lpic1"Directory was removed: „training/lpic2"Directory was removed: „training/"
+```
+
+在删除文件和目录时为了安全起见，请使用选项`-i`（`--interactive`）配合`-v`（`--verbose`）。在删除文件之前，`rm`将请求你的显式确认，并打印状态消息。
+
+### 更改目录
+
+`cd`（change directory）命令允许你在系统中移动。要向根目录向上移动一级，请使用此命令：
+
+```bash
+$ cd ..
+```
+
+
+
+要向子目录移动，请输入`cd`命令后跟目录名称。命令`cd /home/user/test`将直接带你进入`/home/user/test`目录。
+
+正如之前解释过的，有一些快捷方式可用。命令`cd ~`（波浪号）和`cd $HOME`将始终带你回到家目录，而`cd /`将带你进入`/`目录。
+
+**提示**：由于 Linux 是区分大小写的，因此`cd`与`CD`不一样。在使用大小写字母时务必小心。
+
+### 重命名目录
+
+`mv`命令是 move 的缩写，用于移动和重命名文件及目录。它需要两个名称：原始文件的名称及其新名称。要将目录名称从`lpic1`更改为`lpic-1`，请输入以下内容：
+
+```bash
+$ mv lpic1 lpic-1
+```
+
+原始文件将被删除，新条目将接收当前时间戳。使用选项`-i`（或`--interactive`）可以防止覆盖现有文件。
+
+## 5.3 基于终端的文件管理器
+
+在命令行中导航 Linux 并不是理想状况。基于终端和图形化的文件管理器是极佳的替代方案。基于终端的文件管理器运行在终端内部，不会在桌面上打开单独的窗口。有很多程序可用，这就是为什么我们只向你介绍我们喜爱的几个。
+
+### GNU Midnight Commander (mc)
+
+[www.midnight-commander.org](http://www.midnight-commander.org)
+
+这是一个免费的、全屏的、文本模式可视化文件管理器，允许你搜索、复制、移动以及删除单个或多个文件，甚至是整个目录树。`mc`集成了查看器和编辑器。
+
+![](img/Image0044.gif)
+
+### The Vi File Manager (vifm)
+
+[`vifm.info/`](https://vifm.info/)
+
+与`mc`类似，Vi 文件管理器 (`vifm`) 基于 curses 界面带有两个导航窗口。它提供了一个类似 Vi(m) 的环境来管理文件和目录。如果你熟悉 Vi 的快捷键绑定，那么这个文件管理器适合你。
+
+![](img/Image00045.gif)
+
+类似于基于终端的文件管理器，图形化文件管理器也有助于在 Linux 中进行导航。这些文件管理器会在独立的窗口中打开，但提供了更好的用户体验。同样，这里有很多程序可用，因此我们只在下方列出了我们喜爱的。
+
+### Konqueror
+
+[`packages.debian.org/stretch/konqueror`](https://packages.debian.org/stretch/konqueror)
+
+Konqueror 是 KDE 桌面环境的一个强大文件管理器。Konqueror 提供了简单的文件管理功能，如复制、移动、搜索和删除文件及目录，以及一些高级特性和功能，如访问压缩包、浏览和刻录音频 CD，以及对 FTP、SFTP 服务器和 SAMBA (Windows) 共享的支持。
+
+![](img/Image00046.gif)
+
+### Nautilus
+
+[`wiki.gnome.org/Apps/Nautilus`](https://wiki.gnome.org/Apps/Nautilus)
+
+Nautilus 是 GNOME 桌面上的文件管理器。它提供了对 Linux 系统上文件的轻松导航和管理。这包括简单的文件管理功能，如复制、移动、搜索和删除文件及目录，以及轻松访问本地和远程文件。
+
+![](img/Image00047.gif)
+
+### Dolphin
+
+[www.kde.org/applications/system/dolphin/](http://www.kde.org/applications/system/dolphin/)
+
+Dolphin 是作为 KDE 应用程序包的一部分开发的轻量级文件管理器。它的设计目标是简单、灵活和完全自定义，允许用户非常轻松在 Linux 系统中浏览、定位、打开、复制和移动文件。
+
+![](img/Image00048.gif)
+
+### Thunar
+
+[`docs.xfce.org/xfce/thunar/start`](https://docs.xfce.org/xfce/thunar/start)
+
+Thunar 是适用于 XFCE 桌面的现代、轻量级文件管理器。它的设计目标是快速、响应和易于使用。我们在这里列出它是因为它具有简洁直观的界面并提供了重要的用户选项。
+
+![](img/Image00049.gif)
+
+# 6. 终端与 Shell 简介
+
+使用 Linux 操作系统需要你了解终端和命令行。了解它们是什么，并稍微熟悉它们的用法以及可用的标准命令至关重要。但不要害怕，我们将详细描述每一个。这些术语听起来比实际要吓人得多。
+
+以文本格式与系统通信的能力是程序员偏爱 Linux 的原因之一，因为这是程序员向计算机发出指令的正常方式。另一个原因是这种方式对系统实现的绝对控制，这是其他操作系统（即使有它们自己的命令行解释器）无法提供的。
+
+一些初学者甚至报告说，使用并熟悉以这种文本格式发布命令使得向程序开发的过渡变得更加容易和快速了。
+
+## 6.1 什么是终端？
+
+终端被描述为“在某些其他显示架构中模拟视频终端的程序。虽然它通常与 shell 或文本终端同义，但终端一词涵盖了所有远程终端，包括图形界面。图形化用户界面内部的终端模拟器通常被称为终端窗口”。
+
+准确地说，终端仅仅是外部软件。终端内部运行着一个称为`shell`的命令行解释器。终端是你通过 GUI 与`shell`交互的方式。
+
+Debian 支持很长的终端软件列表。包括`Aterm`，以及`GNOME terminal`、`Kterm`、`Mate Terminal`、`Rxvt`、`Xterm`和`Xvt`。这些不同的终端软件实现在稳定性、对字符集的支持、设计、颜色和字体，以及应用背景图像或处理透明度方面有所不同。
+
+在书中，我们将使用`GNOME terminal`，因为它稳定、简单且可调节。要增加或减少终端窗口内显示内容的大小，请使用双键组合`CTRL+`和`CTRL-`。
+
+## 6.2 什么是 Shell？
+
+简单来说，`shell`是一个复杂的命令行解释器。`shell`读取你的命令，在某些条件下对其进行修改，然后执行结果。
+
+在从命令行读取到执行实际结果之间，`shell`必须解释你输入内容中包含的特殊字符。下表显示了可用的特殊字符：
+
+| 字符 | 含义 |
+| :--- | :--- |
+| `$name` | 变量替换 |
+| `name=` | 变量赋值 |
+| `'command'` | 命令替换 |
+| `$( command )` | 命令替换 |
+| `< > >> 2> 2>>` | 输入和输出重定向 |
+| `\|` | 命令的管道传输 |
+| `" ' \`` | 引号标记 |
+| `* [ ] ?` | 创建文件名（通配符） |
+| `;` | 分隔命令 |
+| `&` | 在后台运行命令 |
+| `\|\| &&` | 在特定条件下运行命令 |
+| `{ } ( )` | 组合命令 |
+
+纯出于好奇，`shell`通过以下过程将命令行划分为单个单词以确定命令：
+
+| 步骤 | 描述 | 特殊字符 |
+| :--- | :--- | :--- |
+| 1 | 读取到命令分隔符并进行标记（命令替换） | `\n` `&` `\|\|` `&&` `;` `$(...)` `"..."` `'...'` |
+| 2 | 标记（输入/输出重定向，值赋值） | `< > >> 2> 2>>` `name=` |
+| 3 | 划分为单个单词 | 空格，制表符 |
+| 4 | 变量替换 | `$name` |
+| 5 | 命令替换 | 标记，参见步骤 1 和 2 |
+| 6 | 输入/输出重定向 | 标记，参见步骤 1 和 2 |
+| 7 | 变量赋值 | 标记，参见步骤 1 和 2 |
+| 8 | 划分为单词 | `IFS` |
+| 9 | 创建文件名 | `* [ ]` |
+| 10 | 命令执行 | |
+
+在步骤 1 和 2 中，标记发生在步骤 5 到 7，且没有后续操作。在标记完成后，`shell`移除所有特殊字符。在步骤 10 中，命令行包含执行命令所需的参数。`shell`将第一个单词解释为命令名称，其余单词为参数：
+
+```
+command arg1 arg2 ...
+```
+
+## 6.3 可用的 Shell
+
+你的 Linux 系统允许使用各种 shell。每个 shell 都可以通过 Debian 包管理器（我们之前安装的 Aptitude）作为软件包获取。shell 的列表很长，因此我们只列出了常用的可用 shell：
+
+*   Almquist Shell (ash)
+*   Bourne Again Shell (bash)
+*   Debian Almquist Shell (dash)
+*   Z Shell (zsh)
+*   C Shell (csh)
+*   Korn Shell (ksh)
+*   Tenex C Shell (tcsh)
+
+除非另有说明，本指南中的示例基于 Bourne Again Shell (bash)。在编写此文档时，这是 Debian 的默认 shell。
+
+你的 Linux 系统允许哪些其他 shell 是在配置文件`/etc/shells`中设置的。使用`cat`命令可以查看允许的 shell 列表。`cat`将在第 7 章详细讨论。现在只需知道该命令只需输出文件内容到屏幕。
+
+```bash
+cat /etc/shells
+## /etc/shells: 有效的登录 shell
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+/usr/bin/screen
+```
+
+当前终端使用的 shell 名称存储在名为`$0`的 shell 变量中。以下简单命令输出 shell 的名称：
+
+```bash
+echo $0
+#bash
+```
+
+要更改当前使用的 shell，请查看配置文件`/etc/passwd`以及第 10 章涵盖的`chsh`命令。
+
+乍一看，shell 脚本听起来可能很令人生畏，但其实非常简单。在最形式的形式，它只是存储在文件中的一系列`UNIX/Linux`命令，并由命令行解释器逐行执行。shell 脚本类似于在终端中输入单条命令，但它们是批量执行的。这使得执行速度快得多，并有助于实现任务自动化。在本指南中，我们不会深入探讨 shell 脚本编程的复杂性，但值得注意的是 shell 脚本的推荐结构。
+
+*   `Shebang line`（Shebang 行） - 定义了使用哪个程序来妥善处理 shebang 行之后的指令。该行以`#!`开头，这是一个双字节数字，指示后续行是一个可执行的 shell 脚本。shebang 之后是用于处理指令的解释器或程序的路径。
+
+*   `Docstring`（文档字符串） - 对脚本功能和代码软件许可的简短描述。这可以是一个单行，也可以是详细的描述。此类行以`#`开头，并被 shell 视为注释。
+
+*   `Commands`（命令） - 要由 shell 执行的单个命令组合。如所述，这可以像我们下面示例中那样只有的一行指令，也可以是一个完整的程序。
+
+*   `Exit state`（退出状态） - 定义脚本的返回值。除非另有说明，否则将返回脚本中执行的最后一条命令的退出状态。通常在成功时返回`0`，在出错时返回`1`到`255`之间的值。
+
+下面的基础脚本包含了上述提到的所有元素。该脚本的目的是确定计算机的运行时间（uptime）。
+
+```bash
+#!/bin/bash
+## determine the uptime of the system
+## Released under GNU Public License (GPL)
+uptime
+## define exit state: no error
+exit 0
+```
+
+执行 shell 脚本有两种方法。我们可以调用`Bash`等 shell 来运行它，或者为脚本设置可执行标志并运行它。第一种方法使用`Bash`，如下：
+
+```bash
+$ bash uptime.sh
+12:20:31 up 7 days, 2:09, 6 users, load average: 0,74, 0,40, 0,27
+```
+
+第二种方法基于两个步骤。首先，我们使用`chmod`命令为脚本设置可执行标志，如下：
+
+```bash
+$ chmod u+x uptime.sh
+```
+
+然后我们可以运行脚本：
+
+```bash
+$ ./uptime.sh
+12:26:07 up 7 days, 2:14, 6 users, load average: 0,23, 0,34, 0,28
+```
+
+# 7 文本处理
+
+Linux 大部分运行在文本文件上。例如，存储在`/etc`中的配置文件也是以文本文件的形式存储的。Linux 提供了一套丰富的文本处理命令，这些命令非常全面且节省时间。了解它们是什么以及如何工作，对于后续许多深入研究 Linux 的章节将起到至关的作用。在本章中，我们将查看这些命令并演示如何使用它们。
+
+## 7.1 文本处理命令
+
+### cat
+
+是 concatenate（连接）的缩写，`cat`将文件内容输出到屏幕或标准输出。命令`cat /etc/passwd`将`/etc/passwd`文件的所有行输出到屏幕。
+
+```bash
+$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev: /usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin...
+```
+
+`cat`还可以使用重定向操作符`>`写入文本文件。为此，只需使用重定向操作符和你的文本文件名。例如：
+
+```bash
+cat > output.txt
+```
+
+随后输入你想要输出的文本行。要退出，按下`Ctrl+D`，并输入`cat output.txt`查看结果。
+
+```bash
+$ cat > output.txt
+hello world
+this is a test
+to see if cat works
+$ cat output.txt
+hello world
+this is a test
+to see if cat works
+```
+
+`cat`的其他有用选项：
+
+*   `-E`（`ends`的缩写）：在每行的末尾显示`$`。
+*   `-n`（`number`的缩写）：对所有行编号，包括空行和非空行。
+*   `-s`（`blank`的缩写）：抑制多个空行。
+
+假设我们有一个名为`output.txt`的文本文件。要查看它，输入：
+
+```bash
+$ cat -n output.txt
+1 hello world
+2 this is a test
+3 to see if cat works
+```
+
+### tac
+
+`tac`命令的工作方式与`cat`相同，但反向显示行。使用节的文件，让我们显示：
+
+```bash
+$ tac output.txt
+```
+
+### more
+
+虽然`cat`和`tac`一次显示整个文件，但`more`让你一次查看一个屏幕的文件。假设我们有一个名为`alice.txt`的大文本文件。要查看它，输入：
+
+```bash
+more alice.txt
+```
+
+这会显示从文件开始的一个屏幕。使用空格键翻页。或者，按回键向下滚动一行。`more`命令的缺点是它只能向下滚动而不能回滚。对于这一点，可以使用`less`命令。
+
+* `n` - 匹配`<regex>`的下一个文本实例。
+* `N` - 匹配`<regex>`的上一个文本实例。
+* `:n` - 在同一命令打开多个文件时，切换到下一个文件。
+* `:p` - 在同一命令打开多个文件时，切换到上一个文件。
+* `q` - 退出。
+
+## head
+
+此命令输出文件的前`n`行。如果没有指定`n`，默认值为十行。下面的示例显示了对`/etc/passwd`文件的默认`head`使用。
+
+
+
+```bash
+$ head /etc/passwdroot:x:0:0:root:/root:/bin/bashdaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologinbin:x:2:2:bin:/bin:/usr/sbin/nologinsys:x:3:3:sys:/dev: /usr/sbin/nologinsync:x:4:65534:sync:/bin:/bin/syncgames:x:5:60:games:/usr/games:/usr/sbin/nologinman:x:6:12:man:/var/cache/man:/usr/sbin/nologinlp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologinmail:x:8:8:mail:/var/mail:/usr/sbin/nologinnews:x:9:9:news:/var/spool/news:/usr/sbin/nologin$
+```
+
+要输出 `/etc/passwd` 文件的前六行，请输入以下命令：
+
+```bash
+$ head -n6 /etc/passwdroot:x:0:0:root:/root:/bin/bashdaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologinbin:x:2:2:bin:/bin:/usr/sbin/nologinsys:x:3:3:sys:/dev: /usr/sbin/nologinsync:x:4:65534:sync:/bin:/bin/syncgames:x:5:60:games:/usr/games:/usr/sbin/nologin$
+```
+
+`head` 的反面是 `tail`，我们将在下文中解释。
+
+## tail
+
+`tail` 命令输出文件的最后 `n` 行。如果没有指定 `n`，默认输出最后十行。下面的示例显示了 `/etc/passwd` 文件的最后 5 行。
+
+```bash
+$ tail -n5 /etc/passwdusbmux:x:109:46:usbmux daemon,,,:/var/lib/usbmux:/bin/falsepulse:x:110:114:PulseAudio daemon,,,:/var/run/pulse:/bin/falseightdm:x:111:116:Light Display Manager:/var/lib/lightdm:/bin/falsefelix:x:1001:1001:Felix,,,:/home/felix:/bin/bashcaro:x:1002:1002:Caro,,,:/home/caro:/bin/bash$
+```
+
+此外，`tail` 可以通过 `-f`（或 `--follow`）来跟踪日志文件的进度。随着更多数据追加到文件末尾，屏幕上的输出会更新。要随着更新实时输出 `/var/log/syslog` 最后 20 行的内容，请使用以下命令：
+
+```bash
+$ tail -f -n 20 /var/log/syslog
+```
+
+## sort
+
+顾如名，此命令用于对文件进行排序。除此之外，它还有以下选项：
+
+* `-R`: 随机排序。
+
+* `-r`: 反转排序顺序。
+
+* `-n`: 数值排序。
+
+要按字母顺序对 `/etc/passwd` 文件的前五行排序，请使用此命令：
+
+```bash
+$ head -n5 /etc/passwd | sortbin:x:2:2:bin:/bin:/usr/sbin/nologindaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologinroot:x:0:0:root:/root:/bin/bashsync:x:4:65534:sync:/bin:/bin/syncsys:x:3:3:sys:/dev:/usr/sbin/nologin$
+```
+
+使用选项 `-r` 反转排序顺序：
+
+```bash
+$ head -n5 /etc/passwd | sort -rsys:x:3:3:sys:/dev:/usr/sbin/nologinsync:x:4:65534:sync:/bin:/bin/syncroot:x:0:0:root:/root:/bin/bashdaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologinbin:x:2:2:bin:/bin:/usr/sbin/nologin$
+```
+
+## uniq
+
+此命令用于报告或删除已排序文件中的重复行。除此之外，它还有以下选项：
+
+* `-c`（`--count` 的缩写）：输出每行出现的频率。
+
+* `-d`（`--repeated` 的缩写）：报告出现多次的行。
+
+* `-u`（`--unique` 的缩写）：报告只出现一次的行。
+
+下面的示例显示了 `uniq` 的基本用法。输出包含只出现一次的行。
+
+```bash
+$ cat names.sortedGreg     1967John     1986John     1986Kate     1948Pete     1977$ uniq names.sortedGreg     1967John     1986Kate     1948Pete     1977$
+```
+
+## cut
+
+`cut` 命令从文件中提取指定的字段。它需要一个分隔符来检测字段边界。下面的示例显示了从 `/etc/passwd` 文件中提取名称和用户 ID。这些是每行的第一和第三字段（选项 `-f`），且字段由冒号分隔（选项 `-d`）。
+
+```bash
+$ cut -d":" -f1,3 /etc/passwd...colord:108saned:109usbmux:110geoclue:111sshd:112uuidd:113pulse:114rtkit:115avahi:116...$
+```
+
+## tr
+
+此命令背后的思想是对字符串进行翻译、替换和删除。`tr` 从 `stdin` 读取并输出到 `stdout`。它有以下选项：
+
+* `-d`（`--delete` 的缩写）：从字符串中删除指定的字符。
+
+* `-s`（`--squeeze-repeats` 的缩写）：将重复的字符替换为单个。
+
+* `-t`（`--truncate-set1` 的缩写）：截断给定的字符集。
+
+下面的第一个示例演示了如何将小写字母转换为大写。`tr` 接受两组字符：原始字符和替换字符。两个集合中的字符数量必须相同。
+
+```bash
+$ cat bigfilethis is file onethis is file twothis is file three$ cat bigfile | tr [a-z] [A-Z]THIS IS FILE ONETHIS IS FILE TWOTHIS IS FILE THREE$
+```
+
+第二个示例演示了如何将重复的空格替换为单个。空格被定义为一组字符，包括空格、制表符、回车或换行符。
+
+```bash
+$ echo "tools for        developers" | tr -s [:space:]tools for developers$ echo "tools for        developers" | tr -s [:space:] "-"tools-for-developers$
+```
+
+## diff
+
+此工具分析两个文件并打印不同的行。此外，`diff` 会输出用于将第一个文件转换为第二个文件所需的步骤描述。下面的示例演示了两个文件的这种情况。输出行 `1c1` 意味着 `file1` 的第一行需要更改以得到 `file2` 的第一行。下方是使用连字符分隔的两个文件中的引用行。
+
+```bash
+$ cat file1this is file onewith a second line$ cat file2this is file twowith a second line$ diff file1 file21c1< this is file one---> this is file two$
+```
+
+## nl
+
+`nl` 类似于 `cat`（在本章开头讨论过），但会在输出的每行开头添加行号。
+
+```bash
+$ nl places     1 Amsterdam     2 Berlin     3 Bern     4 Cape Town$
+```
+
+## wc
+
+`wc` 是 word count 的缩写，分别统计输入的行、单词和单个字符。除非另有指定，所有三个值都会被打印：
+
+```bash
+$ wc places4 5 32 places
+```
+
+除此之外，`wc` 还提供了以下选项来限制输出：
+
+* `-l`: 输出行数，以及文件名。
+
+* `-w`: 输出单词数，以及文件名。
+
+* `-c`: 输出字符数，以及文件名。
+
+此示例显示了如何统计文件的行数：
+
+```bash
+$ wc -l places
+```
+
+## 7.2 Introduction to grep
+
+命令行工具 `grep` 是 Linux 中最基础且强大的命令之一，以至于有作者专门为它编写了指南。`grep` 作为一个过滤器，只打印匹配模式的文本行。
+
+该命令在文本数据上工作，并结合一个要查找的模式。在此语文中，数据指的是来自 `stdin` 或文件的字符序列，模式可以格式化的字符序列或正则表达式。`grep` 支持四种模式样式：
+
+* `-G`（`--basic-regexp`）：模式格式为基础正则表达式。这是默认情况。
+
+* `-F`（`--fixed-strings`）：模式不是正则表达式，而是被解释为固定字符串。也可以缩写为 `fgrep`。
+
+* `-E`（`--extended-regexp`）：模式格式为扩展正则表达式，允许一组额外的字符集。也可以缩写为 `egrep`。
+
+* `-P`（`--perl-regexp`）：模式按照遵循 Perl 语法的正则表达式进行解释。
+
+`grep` 提供的选项非常多。以下是几个值得注意的选项列表：
+
+* `-c`: 统计并打印匹配的数量，但不打印匹配项本身。
+
+* `--color`: 高亮显示搜索匹配项。
+
+* `-H`（`--with-filename` 的缩写）：输出每行的开头都是找到匹配项的文件名。
+
+* `-i`: 忽略大小写，同时包含小写和大写匹配项。
+
+* `-l`（`--files-with-matches` 的缩写）：仅打印匹配搜索的文件名。
+
+* `-L`（`--files-without-matches` 的缩写）：仅打印不匹配搜索的文件名。
+
+* `-n`（`--line-number` 的缩写）：输出每行的开头都是文件中对应匹配项的行号。
+
+* `-r`（`--recursive` 的缩写）：在目录结构中递归搜索，将所有子目录包含在搜索范围内。
+
+* `-v`: 打印所有不匹配搜索模式的行。
+
+通过几个实用的示例，这些选项将变得更加清晰。首先，我们将在一个或多个 AsciiDoc 文件（`.adoc`）中搜索固定字符串 `Linux`。输出由包含该模式的行。
+
+```bash
+$ grep Linux *.adoc
+The Linux Environment. First Steps$
+```
+
+接下来，我们执行相同的搜索，但还会输出模式所在的文件名和行号。输出每行的开头是文件名，后跟一个冒号（`:`）、行号、另一个冒号，然后是匹配模式的行。在我们的示例中，模式位于 `introduction.adoc` 文件的第 1 行。
+
+```bash
+$ grep -Hn Linux *.adoc
+introduction.adoc:1:The Linux Environment. First Steps.$
+```
+
+这次，我们将再次在一个或多个 AsciiDoc 文件中搜索字符串 `Linux`，但搜索中将同时包含小写和大写字符。
+
+```bash
+$ grep -i Linux *.adoc
+The Linux Environment. First Steps.include::what-about-linux/what-about-linux.adocinclude::linux-in-day-to-day-life/linux-in-day-to-day-life.adocinclude::navigating-linux/navigating-linux.adocinclude::using-the-linux-terminal/using-the-linux-terminal.adoc$
+```
+
+接下来，我们将反向搜索，只显示不包含模式 `Linux` 的文件名。
+
+```bash
+$ grep -vrl Linux */*.adoc
+acknowledgements/acknowledgements.adocgetting-help/getting-help.adoclinux-in-day-to-day-life/linux-in-day-to-day-life.adocnavigating-linux/navigating-linux.adocpreface/preface.adocreferences/references.adocsetting-up-debian/setting-up-debian.adocsoftware-licenses/software-licenses.adocus-the-linux-terminal/using-the-linux-terminal.adocwhat-about-linux/what-about-linux.adocx11/x11.adoc$
+```
+
+现在让我们来看几个稍微复杂一点示例。在这种情况下，我们将利用之前在指南中见过的 `ls` 命令，并针对特定的模式范围对输出进行过滤。具体来说，我们将搜索文件名中包含数字 12 到 16 的 PDF 文档。
+
+```bash
+$ ls E*.pdf | egrep --color '1[2-6].pdf$'
+E_20160012.pdfE_20160013.pdfE_20160014.pdfE_20160015.pdfE_20160016.pdf$
+```
+
+对于下一个示例，我们将搜索当前目录下所有包含模式 `nanostation`（一个产品名）的 TeX 文件，该模式开头可以是大写或小写的 `n`，名称中间可以是大写或小写的 `s`。
+
+```bash
+$ egrep --color '[Nn]ano[Ss]tation' *.tex
+B0047.tex:Ubiquiti NanoStation M2B0057.tex:Ubiquiti Nanostation M2 LocoB0092.tex:Ubiquiti Nanostation M5$
+```
+
+最后，我们列出所有在系统上不再已安装但仍有配置的软件包。这里我们使用 `dpkg` 命令，你将在第 14 章中学习更多关于它的知识。在我们的示例中，它简单地列出了已安装的包及其状态。然后 `grep` 命令过滤出所有以两个字符 `rc` 开头的行，它代表 `removed`（已删除）和 `configured`（已配置）。
+
+```bash
+$ dpkg -l | egrep '^rc'
+rc doxygen-gui 1.8.8-5 amd64 GUI configuration tool for doxygen
+rc kdiff3 0.9.98-1 amd64 compares and merges 2 or 3 files or
+rc ktorrent 4.3.1-2+b1 amd64 BitTorrent client based on the KDE platform
+rc libacpi0 0.2-4 amd64 general purpose library for ACPI...$
+```
+
+## 7. 组合命令
+
+Linux 命令本身已经非常强大了，但你可以通过管道组合它们或重定向输入/输出来进一步增强其功能。我们将在下面演示如何实现这一点。
+
+### 管道 (Piping)
+
+管道（使用键盘上位于 `\` 上方的字符 `|`）是将两个或多个命令连接成链的方法。一个命令的输出不会发送到 `stdout`，而是直接作为下一个命令的输入。命令之间的这种直接连接允许它们协同工作。下面的示例展示了 `cat` 命令和 `wc` 命令通过管道统计文件的单词数。
+
+```bash
+$ cat file2
+this is file twith a second line
+$ cat file2 | wc -w
+8
+```
+
+### 重定向 (Redirection)
+
+重定向是一种改变标准输入输出设备的功能，在执行命令时，它可以改变输入/输出。标准输入 (`stdin`) 是键盘，标准输出 (`stdout`) 是屏幕。重定向由 `>`、`>>` 和 `<` 符号指示：`>` 将输出发送到指定的文件（如果文件已存在则会被完全替换）；`<` 则从指定的输入源读取数据。下面的第一个示例使用 `>>` 运算符在现有文件的末尾添加第三行文本。
+
+```bash
+$ echo "line 3" >> file2
+$ cat file2
+this is file twith a second line
+line 3
+```
+
+第二个示例通过重定向标准输出更进一步。`cat` 命令读取 `music.mp3` 并将其输出发送到设备 `/dev/audio`，它是音频设备。
+
+```bash
+$ cat music.mp3 > /dev/audio
+```
+
+下一个示例结合了输入输出重定向。`wc` 命令从 `file2` 读取内容并使用选项 `-w` 统计单词。输出随后发送到 `stdout` 并通过 `>>` 运算符追加到文件 `statistics`。
+
+```bash
+$ cat file2
+this is file twith a second line
+line 3
+$ wc -w < file2
+10
+$ wc -w < file2 >> statistics
+$ cat statistics
+10
+```
+
+# 8. Linux 启动过程
+
+## 8.1 启动和引导顺序
+
+我们首先查看所有 Linux 第一个进程，启动过程。启动 UNIX/Linux 系统是一个复杂的多个过程，包含以下高级步骤：
+
+1. 基础输入输出系统 (BIOS) 执行主引导记录 (MBR)。较新的系统使用统一扩展固件接口 (UEFI)。
+
+
+
+2. MBR 执行引导加载程序，例如通用引导加载程序（`GRUB`）或 Linux Loader（`LILO`）。
+
+3. 引导加载程序随后执行 Linux 内核。
+
+4. Linux 内核通过`/sbin/init`运行`init`进程以启动操作系统。
+
+5. `Init`然后执行运行级别的`init.d`或`systemd`。
+
+这些步骤将在下面详细解释。
+
+### BIOS 和 UEFI
+
+启动计算机时，会运行`BIOS`或`UEFI`。该软件由计算机主板上特定厂商的固件内存芯片提供，专门针对该主板定制。`BIOS`或`UEFI`首先执行一些系统完整性检查。然后，它按照预先的顺序搜索硬盘、CD/DVD 驱动器、USB 驱动器和网络，并启动找到的第一个引导程序。该引导程序随后被加载到内存中并接管系统。简单来说，`BIOS`或`UEFI`加载并执行了引导程序。
+
+在启动时，通常有一个选项允许`F1`、`F2`、`F12`、`Escape`或`Delete`进入`BIOS`或`UEFI`菜单。在这里可以更改引导程序的搜索顺序。做出更改后，通常按`F10`键保存更改并使用新设置重启系统。在大多数现代系统中，`BIOS`已不再被使用，而是被`UEFI BIOS`取代。`UEFI BIOS`由统一 EFI 论坛（Unified EFI Forum）维护。Debian 对`UEFI`的支持是默认设置的一部分。
+
+与`BIOS`相比，`UEFI`具有以下优势：
+
+- 使用 GUID 分区表（`GPT`）使用大容量磁盘（超过 2 TB）的能力。
+- 独立 CPU 的架构。
+- 独立 CPU 的驱动程序。
+- 包含网络能力的灵活预操作系统环境。
+- 模块化设计。
+- 向后和向前兼容性。
+
+要确定 Debian 系统是否通过`UEFI`启动，请检查目录`/sys/firmware/efi`。如果该目录存在，则系统运行在`UEFI`模式。没有`UEFI`的系统将返回以下内容：
+
+```text
+$ ls /sys/firmware/efi
+ls: cannot access /sys/firmware/efi: No such file or directory
+```
+
+#### MBR
+
+主引导记录（`MBR`）位于可引导磁盘的扇区。通常，这是`/dev/hda`或`/dev/sda`。它包含了关于磁盘逻辑分区的所有信息。`MBR`的大小小于 512 字节，包含以下三个部分：
+
+1. 前 446 字节中的主引导程序信息。
+2. 接下来的 64 字节中的分区表信息。
+3. 最后两个字节中的`MBR`验证检查（签名）。
+
+`MBR`包含了关于`GRUB`的信息。简单来说，它加载并执行`GRUB`引导程序。可以通过以下方式结合`coreutils`包和`bsdmainutils`包中的`dd`（磁盘转储）和`hexdump`命令查看`MBR`的内容：
+
+```bash
+dd if=/dev/sda bs=512 count=1 | hexdump -C
+```
+
+在上述代码中，`dd`以 512 字节为块为单位，逐块读取第一个 SCSI 磁盘`/dev/sda`的内容。`count=1`选项将此步骤限制为仅读取第一个块。然后，`dd`的输出通过`-C`选项传递给`hexdump`。`hexdump`的输出以 ASCII 字符显示。下面的示例更详细说明了这一点。
+
+![](img/Image00050.gif)
+
+`dd`命令也可以用于创建`MBR`的备份，如下所示。输出文件为`mbr.bin`，使用`of=mbr.bin`选项指定，其中`of`是 output file（输出文件）。
+
+```bash
+dd if=/dev/sda bs=512 count=1 of=mbr.bin
+1+0 records in
+1+0 records out
+512 bytes copied, 0.000371249 s, 1.4MB/s
+file mbr.bin
+mbr.bin: DOS/MBR boot sector
+```
+
+## GRUB
+
+处理 Linux 启动的软件称为全局统一引导程序（`GRUB`），确切说是`GNU GRUB`。它的功能是在启动时从`BIOS`手中接管，加载自身，将 Linux 内核加载到内存中，然后将执行权交给 Linux 内核。一旦内核接管，`GRUB`就完成了它的工作，不再需要。
+
+注意，`GRUB`版本 1 已被`GRUB2`代替，前者被称为`GRUB Legacy`。为了简单起见，`GRUB2`简称为`GRUB`。
+
+在启动时，`GRUB`显示启动界面并提供一个用于启动启动的菜单。系统中存在的 Linux 内核镜像越多，条目列表越长。下面的图片显示了带有两个菜单条目的默认安装。除非另有说明，第一个菜单指向默认条目。
+
+![](img/Image00037.gif)
+
+`GRUB`等待几秒，然后加载从菜单中选择的内核镜像。第一个条目指向`GRUB`配置文件`/boot/grub2/grub.cfg`中指定的默认镜像。该配置文件在 Linux 安装期间生成，并在每当安装新的 Linux 内核时自动重新生成。
+
+### Linux 内核
+
+在这一步中，根文件系统根据`GRUB`配置文件中`root=`条目指定的进行挂载。然后内核执行`/sbin/init`程序。内核使用名为`initrd`（Initial RAM Disk 的缩写）的文件作为临时根文件系统，直到内核启动并挂载真正的根文件系统。它包含了访问硬盘分区、文件系统和其他硬件组件所需的所有驱动程序。
+
+## 8.2 备用引导程序
+
+`GRUB`并不是开源世界中唯一的引导程序。其他引导程序包括：
+
+- `BURG` - 名字缩写自`GRUB`的 Brand-new Unified Loader（全新的统一引导程序，如果你问我们的话，反过来给 GRUB 起名有点牵强）。它是`GRUB`的一个分支，具有更大的个性化配置空间。
+- `SYSLINUX` - 用于网络和 CD/DVD 驱动器的轻量级引导程序。
+- `ISOLINUX` - 来自`SYSLINUX`项目的引导程序，通常用于 Linux Live CD 和可引导安装 CD。
+- `gummiboot` - 用于具有文本模式界面的 EFI 计算机引导程序。它旨在作为 GNU`GRUB`的极简替代方案，可以检测到的镜像（包括 Linux 内核镜像、操作系统和其他引导程序），不需要配置文件，提供基本的基于菜单的界面，还可以与`systemd`集成以提供性能数据。
+- `Libreboot` - 一种轻量级系统，仅执行加载和运行现代 32 位或 64 位操作系统所需的最少任务。下面的图片显示了`Libreboot`的菜单。
+- `rEFInd` - 一种带有 GUI 的 EFI 计算机引导管理器。`rEFInd`可用于启动多个操作系统，并提供了一种进入和探索 EFI 预启动环境的方法。
+
+![](img/Image00051.jpg)
+
+## 8.3 查看启动过程
+
+Linux 生成一个日志文件以便审查启动过程并读取其随附的消息。在 Linux 8 之前，启动日志以文本文件形式存储在`/var/log/boot`。Linux 8 引入了`systemd`，格式和位置发生了变化。要检索启动日志，请如下所示使用`journalctl`（必须是 root 权限）：
+
+```bash
+journalctl -b
+```
+
+`systemd`以特殊格式存储日志消息。`journalctl`读取日志并按时间顺序显示消息。最早的条目在前，可以使用箭头键来回滚动条目。输出包含四列：日期（时间戳）、主机名、消息类型（内核）以及消息本身。
+
+```text
+…Aug 20 09:36:08 debian106 kernel: Linux version 4.9.0-7-amd64 (debian-kernel@lists.
+Aug 20 09:36:08 debian106 kernel: Command line: BOOT_IMAGE=/boot/vmlinux-4.9.0-7-am
+Aug 20 09:36:08 debian106 kernel: x86/fpu: Legacy x87 FPU detected
+Aug 20 09:36:08 debian106 kernel: e820: BIOS-provided physical RAM map:
+Aug 20 09:36:08 debian106 kernel: BIOS-e820: [mem 0x0000000000000000-0x00
+Aug 20 09:36:08 debian106 kernel: BIOS-e820: [mem 0x000000000009fc00-0x00
+Aug 20 09:36:08 debian106 kernel: BIOS-e820: [mem 0x0000000000000000-0x00
+Aug 20 09:36:08 debian106 kernel: BIOS-e820: [mem 0x00000000000f0000-0x00
+Aug 20 09:36:08 debian106 kernel: BIOS-e820: [mem 0x0000000000100000-0x00
+Aug 20 09:36:08 debian106 kernel: BIOS-e820: [mem 0x00000000c4af0000-0x00
+Aug 20 09:36:08 debian106 kernel: BIOS-e820: [mem 0x00000000fffc0000-0x00
+Aug 20 09:36:08 debian106 kernel: NX (Execute Disable protection: active
+Aug 20 09:36:08 debian106 kernel: SMBIOS 2.5 present.
+Aug 20 09:36:08 debian106 kernel: DMI: innotek GmbH VirtualBox/VirtualBox, BIOS
+Aug 20 09:36:08 debian106 kernel: e820: update [mem 0x00000000-oxooooofff] usable
+Aug 20 09:36:08 debian106 kernel: MTRR default type: uncachable
+Aug 20 09:36:08 debian106 kernel: MTRR variable ranges disabled:
+Aug 20 09:36:08 debian106 kernel: MTRR: Disabled….
+```
+
+若要查看记录的启动列表，可以使用`list-boots`选项。输出包含三列：启动项编号（0 表示最后一个启动项）、用于识别启动项的哈希以及时间戳。下面的示例显示了输出。
+
+```text
+# journalctl --list-boots
+0 5f41f5e968b34d068320f0f13237b7e2 Tue 2020-09-04 19:16:12 EDT
+lines 1-1/1 (END)
+```
+
+`journalctl`的替代方案是`dmesg`。此命令允许你查看整个启动过程，包括 BIOS 消息。下面的图片显示了你会获得的输出。每行由三部分组成：左侧括号内打印的日期（时间戳）、冒号（`:`）之前打印的组件以及最后打印的消息。在彩色显示器上，这三部分通过颜色区分，即绿色、黄色和黑色。
+
+![](img/Image00052.gif)
+
+## 8.4 重启和停止系统的命令
+
+在重启和停止系统时，有几个常用的命令。要重启 Linux，可以使用`reboot`或`shutdown`。停止 Linux，可以调用`halt`、`poweroff`或`shutdown`。下面我们将讨论一些实际示例。
+
+```bash
+shutdown -r now
+```
+
+上述命令将重启系统。`-r`选项指定重启并启动系统。`now`选项是一个时间参数，立即执行操作。你也可以使用`reboot`命令来执行与`shutdown -r now`命令相同的操作。
+
+```bash
+reboot
+```
+
+`shutdown`命令也可以通过`-h`选项来停止系统。这指示 Linux 停机。
+
+```bash
+shutdown -h now
+```
+
+同样使用了`now`时间参数来立即停止系统。时间参数也可以指定精确时间。下面示例中的命令将在五分钟后关闭系统。它还将通过发送相关消息通知所有用户关机事宜。该消息将在所有打开的终端中可见。
+
+```bash
+shutdown -h +5 "Server shutdown due to maintenance in 5 min"
+Shutdown scheduled for Thu 2020-09-06 02:28:30 EDT, use 'shutdown -c'
+```
+
+与重启系统类似，停止 Linux 也有一个`-h`选项。
+
+```bash
+halt
+```
+
+`halt`、`poweroff`和`shutdown`命令会优雅地停止系统。注意`shutdown`命令需要管理员权限。
+
+# 9. 硬件管理
+
+## 9.1 硬件检测
+
+自动检测曾经某种程度上带有随机性，并不总是可靠。在过去的几年里这得到了显著改进。
+
+```text
+/proc/cmdline
+BOOT_IMAGE=/boot/vmlinux-4.9.0-7-am
+Aug 20 09:36:08 debian106 kernel: x
+```
+
+## 9.2 使用`/proc`文件系统
+
+`/proc`是一个虚拟文件系统，也称为内存文件系统，由内核创建。它显示有关运行内核的信息。下面的示例显示了`/proc`的内容：
+
+```text
+/proc/uptime
+1250.54
+```
+
+`/proc`中的进程被分配了几个文件。下面的示例显示了进程 ID（PID）的结构。
+
+```text
+/proc/433
+```
+
+`/proc`中的进程被分配了几个文件。下面的示例显示：
+
+- `/proc/PID/cmdline` - 命令行参数。
+- `/proc/PID/cpu` - 进程执行的当前和上一个 CPU。
+- `/proc/PID/cwd` - 当前工作目录的链接。
+- `/proc/PID/environ` - 环境变量的值。
+- `/proc/PID/exe` - 进程可执行文件的链接。
+- `/proc/PID/fd` - 包含所有文件描述符的目录。
+- `/proc/PID/maps` - 可执行文件和库文件的映射。
+- `/proc/PID/mem` - 进程持有的内存。
+- `/proc/PID/root` - 进程根目录的链接。
+- `/proc/PID/stat` - 进程状态。
+- `/proc/PID/statm` - 进程内存状态。
+- `/proc/PID/status` - 人类可读的进程状态。
+
+如果你想更多关于`/proc`文件系统的信息，请查看`/proc`的 Man Page（手册页缩写）。它涵盖的内容比本指南范围内的要得多。Man Pages 的访问将在第 19 章中讨论。
+
+## 9.3 命令行工具
+
+#### 使用`cpuid`检测 CPU
+
+为了获取有关 Linux 系统中 CPU 的更多信息，请使用`cpuid`命令。该工具可以通过名为`cpuid`的 Debian 包获取。此命令返回的详细信息示例所示。
+
+```bash
+$ cpuid
+CPU 0:
+vendor_id = "GenuineIntel"
+version information (1/eax):
+processor type = primary processor (0)
+family = Intel Pentium Pro/II/III/Celeron/Core/Core 2/Atom, AMD Athlon/Duron -, Cyrix M2, VIA C3 (6)
+model = 0xd (13)
+stepping id = 0x4 (4)
+extended family = 0x0 (0)
+extended model = 0x3 (3)
+(simple synth) = Intel Pentium II / Pentium III / Pentium M / Celeron / Celeron M / Core / Core 2 / Core i / Xeon / Atom (unknown model)
+miscellaneous (1/ebx):
+process local APIC physical ID = 0x0 (0)
+cpu count = 0x10 (16)
+CLFLUSH line size = 0x8 (8)
+brand index = 0x0 (0)
+brand id = 0x00 (0): unknown
+feature information (1/edx):
+x87 FPU on chip = true
+virtual-8086 mode enhancement = true
+debugging extensions = true
+page size extensions = true
+time stamp counter = true
+RDMSR and WRMSR support = true
+physical address extensions = true
+machine check exception = true
+CMPXCHG8B inst. = true
+APIC on chip = true
+...
+$
+```
+
+# 使用`dmidecode`检测硬件
+
+`dmidecode`命令报告了关于已安装系统组件的详细数据，例如处理器、主板和内存。这些信息基于桌面管理接口（DMI），该框架通过将桌面、笔记本电脑或服务器的各个组件从管理它们的软件中抽象出来，从而对它们进行分类。该工具可以通过同名的 Debian 软件包获取。下面的示例显示了在 VirtualBox 环境下于 Debian 中执行时的输出。
+
+
+
+```text
+## dmidecode 3.0
+Getting SMBIOS data from sysfs.SMBIOS 2.5 present.10 structures occupying 450 bytes.Table at 0x000E1000.Handle 0x0000, DMI type 0, 20 bytes
+BIOS Information
+    Vendor: innotek GmbH
+    Version: VirtualBox
+    Release Date: 12/01/2006
+    Address: 0xE0000
+    Runtime Size: 128 kB
+    Characteristics:
+        ISA is supported
+        PCI is supported
+        Boot from CD is supported
+        Selectable boot is supported
+        8042 keyboard services are supported (int 9h)
+        CGA/mono video services are supported (int 10h)
+        ACPI is supported
+Handle 0x0001, DMI type 1, 27 bytes
+System Information
+    Manufacturer: innotek GmbH
+    Product Name: VirtualBox
+    Version: 1.2
+    Serial Number: 0
+```
+
+## 9. 图形化工具
+
+还有可以收集和显示硬件信息的图形化工具。这些工具提供了图形界面，许多用户更喜欢这种界面。其中一些工具包括硬件列表 (`lshw`) 和 `hardinfo`。下面的图片展示了使用 `hardinfo` 显示的内存信息。
+
+# 10. 用户与组管理
+
+## 10.1 用户数据的存储
+
+Linux 是多用户操作系统，这意味着多个用户可以同时访问系统。为了让系统管理这些用户和组，它将这些数据存储在几个文件中：
+
+* `/etc/passwd` - 用户数据。
+
+* `/etc/shadow` - 加密密码。
+
+* `/etc/group` - 组数据。
+
+* `/etc/gshadow` - 加密组密码。
+
+这些文件是基于文本的数据库，具有定义的结构。可以使用文本编辑器或 `passwd`、`chage`、`chsh` 和 `usermod` 命令修改这些文件的内容。
+
+### /etc/passwd
+
+此文件包含除密码以外的所有用户属性。每行由七列组成，列之间用冒号（`:`）分隔。属性分别是用户名、密码、用户 ID (UID)、组 ID (GID)、GECOS 字段、主目录和 shell（外壳）。第一个属性是指 UNIX 用户名，在系统中必须是唯一的。密码字段仅包含一个 `x`。密码本身的值已移动到 `/etc/shadow`（见下一节），该属性仅保留用于向后兼容。`UID` 指用户 ID，数值范围介于 0 到 65535 之间。在 Debian 上，root 用户 `UID` 为 0，服务用户为 1 到 999，普通用户从 1000 开始。下面的示例显示了 root 用户和普通用户的信息。
+
+```bash
+$ grep root /etc/passwd
+root:x:0:0:root:/bin/bash own$ grep user /etc/passwd
+user:x:1000:1000:Debian User,123,456:/home/user:/bin/bash
+```
+
+`GID` 属性是指用户主组的组 ID。GECOS 是 General Comprehensive System（通用综合系统）的缩写，包含用户的全名，有时还包含用逗号分隔的用户数据，如房间号和电话号码。Home 是用户的主目录，shell 是用户的默认 shell。确切地说，它是当用户登录时立即执行的程序。
+
+### /etc/shadow
+
+此文件包含用户的加密密码和过期数据。格式与我们上面讨论的 `/etc/passwd` 类似。每行由八列组成，列之间用冒号分隔。属性分别是用户名、密码、最后修改日期、最小使用期、最大使用期、警告期、闲期和过期日期。第一个属性再次指向 UNIX 用户名，但在这种情况下，密码字段包含哈希值。`lastchange` 指自 1970 年 1 月 1 日以来最后更改密码的天数。接两个属性 `minimum` 和 `maximum` 显示更改密码所需的最小天数和密码有效的天数。`warn` 显示密码过期前的警告天数。`inactive` 指密码过期后账户被禁用的天数，`expire` 是账户过期日期。下面的示例显示了普通用户的属性。密码存储在第二列中。
+
+```bash
+## grep user /etc/shadow
+user:$6$QB0brh$R9sa5Q1Owyw4SViqMcumbqnx1173:::999999:::
+```
+
+要显示账户详情，调用 `chage` 命令并加上 `-l`（对应 `--list`）选项以及用户名。下面的示例列出了用户 `user` 的详情。
+
+```bash
+## chage -l user
+Last password change:     Aug 20, 2020
+Password expires:         never
+Password inactive:        never
+Account expires:         never
+Minimum number of days between password change: 0
+Maximum number of days between password change: 99999
+Number of days of warning before password expires: 7
+```
+
+如你从上面的示例所示，账户没有过期日期。为了将此值设置为 2019 年 12 月 31 日，调用 `usermod` 命令并加上 `-e`（对应 `--expiredate`）以及用户名。
+
+```bash
+## usermod -e 2019-12-31 user
+```
+
+要锁定和解锁用户账户`usermod` 命令有两个选项 `-L`（对应 `--lock`）和 `-U`（对应 `--unlock`）。下一个示例锁定了 `user` 用户。用户可以继续工作并完成会话，但无法再次登录系统。
+
+```bash
+## usermod -L user
+```
+
+### /etc/group
+
+此文件包含组属性。每行由四列组成，列之间再次用冒号分隔。属性分别是组名、密码、组 ID 和其成员列表。`groupname` 属性类似于用户名属性，是指 UNIX 组名，该名称在系统中必须是唯一的。密码字段包含一个 `x`，因为该值已移动到 `/etc/gshadow` 文件，该字段仅保留用于向后兼容。
+
+`members` 属性提供了一个用逗号分隔的访问组的用户列表。`GID` 是唯一的组 ID，数值范围在 0 到 65535 之间，分配方式与 `UID` 类似。用户 `root` 的 `GID` 为 0，`services` 于 1 到 999，而普通用户从 1000 开始。下面的代码段显示了 root 和普通用户的情况。
+
+```bash
+$ grep root /etc/group
+root:x:0:
+```
+
+下面的示例显示了用户所属的组名称。
+
+```bash
+$ grep "^user" /etc/group
+user:x:1000:cdrom:x:24,floppy:x:25,audio:x:29,dip:x:30,video:x:44,plugdev:x:46,netdev:x:108,bluetooth:x:111:
+```
+
+### /etc/gshadow
+
+该文件包含组的加密密码和用户数据。格式与 `/etc/shadow` 类似。每行由由冒号分隔的四列组成。属性分别是组名、密码、管理员和成员列表。`group` 属性仍然是 UNIX 组名，密码为加密密码。管理员是可以使用 `passwd` 命令添加或删除其他成员的组员，而成员是组中的非管理员成员。
+
+## 10.2 用户和组命令
+
+Linux 系统中有多个命令可用于管理用户和组。我们将查看查看和更改用户信息、更改密码、创建和删除用户账户所需的命令，以及组命令。另有说明，这些命令可以以普通用户身份运行。
+
+### whoami
+
+`whoami` 命令如下所示返回你的当前用户 ID：
+
+```
+$ whoami
+user
+```
+
+### who
+
+`who` 命令显示当前登录到你的 Linux 系统的用户。输出的第一列以用户的登录名开始。紧随其后的是终端名称，其中 `console` 代表登录终端，`pts` 是伪终端会话的缩写。最后两列包含登录时间和用户所在的主机。
+
+```
+user    console 2020-08-20 09:36 (:0)
+user    pts/1   2020-08-20 09:47 (:0)
+user    pts/3   2020-08-20 09:47 (:0)
+```
+
+`w` 通过增加额外信息来扩展 `who` 的输出。`w` 的单列包含用户的登录名（`LOGIN`）、终端名称（`TTY`）、用户所在的主机（`FROM`）、空闲时间（`IDLE`）、CPU 使用率（`JCPU`、`PCPU`）以及用户执行的最后一个命令（`WHAT`）。
+
+```
+USER     TTY     LOGIN       FROM             IDLE  JCPU  PCPU    WHAT
+user     console 2020-08-20 09:36          0.00s 0.00s 0.00s
+user     pts/1    2020-08-20 09:47          1.00s 0.00s 0.00s -w
+user     pts/3    2020-08-20 09:47          0.00s 0.00s 0.00s -w
+```
+
+### users
+
+与上述不同，`users` 仅在单行中以空格分隔的列表输出用户名。
+
+```
+$ users
+user
+```
+
+### id and groups
+
+`id` 命令输出当前用户的用户和组信息。从左到右列显示用户 ID（`UID`）、组 ID（`GID`）以及用户所属的组名称。
+
+```bash
+$ id
+uid=1000(user) gid=1000(user) groups=1000(user),cdrom(24),floppy(25),audio(29),dip(30),video(44),plugdev(46),netdev(108),bluetooth(111)
+```
+
+要列出用户所属的所有组名称，你也可以调用 `groups` 命令。输出是空格分隔的组名列表。
+
+```bash
+$ groups
+user cdrom audio dip video plugdev bluetooth
+```
+
+### passwd
+
+如第 4 章所述，Linux 系统至少有两个用户：一个管理员 root 用户和一个我们简称为 `user` 的普通用户。每个账户也受到密码保护。为了更改密码，请使用 Debian 软件包中的 `passwd` 命令。如下所示，先输入当前密码，按回车，输入新密码，按回车确认，再次输入新密码并再次按回车。
+
+```
+$ passwd
+Changing for user.(current)
+UNIX password:Enter new password:
+Retype new password:password updated successfully
+```
+
+作为普通用户，你只允许更改自己的密码。管理员 root 用户也可以为自己以及其他用户设置新密码。在这种情况下，我们通过添加用户名来调用 `passwd`。
+
+```bash
+## passwd felix
+Changing for felix.(current)
+UNIX password:Enter new password:
+Retype new password:password updated successfully
+```
+
+密码以哈希值存储在名为 `/etc/shadow` 的文件中。该文件仅对管理员可见。下面的示例显示了如何借助 `grep` 命令提取用户 `user` 的信息。
+
+```bash
+## grep user /etc/shadow
+user:$6$QB0brhON$R9saRX5Q1/OwYW4SViqeh6McumbqnxkJRAl…shFyblLBTZxlCoggH12p21:17763:0:99999:7:::#
+```
+
+### chfn
+
+该命令也来自 Debian `passwd` 软件包，用于更改存储在你系统 `/etc/passwd` 中的用户信息。基础设置在安装你的 Debian 系统时已经完成。要修改这些信息，你可以在交互模式下不带任何参数运行 `chfn`，或者带有以下一个或多个选项来适配特定值：
+
+- `-f` 或 `--full-name`：更改用户的全名。
+
+- `-h` 或 `--home-phone`：更改家庭电话。
+
+- `-r` 或 `--room`：更改用户的房间号。
+
+- `-w` 或 `--work-phone`：更改工作电话。
+
+下面的示例将家庭电话条目更改为 135：
+
+```bash
+$ chfn -h 135
+Password:$
+```
+
+### chsh
+
+该命令（同样来自 Debian `passwd` 软件包）更改你登录 Linux 系统时使用的 shell。同样，这些信息存储在 `/etc/passwd` 中。允许使用的 shell 受限于名为 `/etc/shells` 的配置文件中的条目。
+
+`chsh` 的工作与 `chfn` 命令类似。在不带进一步选项的情况下调用时，将使用交互方法：
+
+```
+$ chsh
+Password:
+Changing the shell
+Enter new shell, or press Enter for default [/bin/bash]: /bin/bash
+```
+
+`chsh` 接受选项 `-s`（`--shell` 的缩写）在非交互模式下设置 shell。下面的示例显示了命令行：
+
+```bash
+$ chsh -s /bin/bash
+```
+
+为了修改你之外其他用户的 shell，请带用户名参数调用 `chsh` 命令。注意，只有管理员可以为其他用户执行此操作。
+
+```bash
+## chsh felix /bin/bash
+```
+
+## 10.3 添加用户 caro
+
+```bash
+## adduser caro
+正在添加用户 'caro' ...正在创建组 'caro' (1002) ...正在添加用户 'caro' (1002) 并加入组 'caro' ...创建主目录 '/home/caro' ...从 '/etc/skel' 复制文件 ...输入新的 UNIX 密码：
+再次输入新的 UNIX 密码：
+passwd: 更新成功
+正在更改 caro 用户信息
+输入新值，或按回车使用默认值             全名 []: Caro
+房间号 []:
+工作电话 []:
+家庭电话 []:
+其他 []:
+信息正确吗？[Y/n] y
+# |
+```
+
+设置好新用户后，`/etc/passwd` 中的条目如下：
+
+```bash
+## grep caro /etc/passwd
+caro:x:1002:1002:Caro, , , :/home/caro:/bin/bash
+# |
+```
+
+## 10.4 deluser
+
+删除用户账户是通过 `deluser` 命令完成的，而删除组可以通过 `delgroup` 完成。若要在不删除用户任何文件的情况下删除用户，请使用 root 用户运行以下命令：
+
+```bash
+## deluser felix
+```
+
+`deluser` 命令提供以下选项用于精调其执行过程：
+
+*   `--group`: 删除一个组，等同于 `delgroup`。
+
+*   `--system`: 仅当用户为系统用户时删除。
+
+*   `--backup`: 将用户主目录中的文件备份到名为 `/$user.tar.gz` 或 `/$user.tar.bz2` 的文件中。
+
+*   `--backup-to`: 将用户主目录中的文件备份到指定的文件。
+
+*   `--remove-all-files`: 从系统中删除所有属于用户的文件。如果指定了备份，则会在执行备份后删除文件。
+
+```bash
+## deluser --remove-all-files felix
+```
+
+# 11 文件系统
+
+文件系统是控制数据如何在驱动器上存储的一种。如果数据没有结构化，将无法知道特定条目何时结束以及下一个条目何时开始。文件系统将数据分成若干部分，每个部分都有唯一的名称。这样，信息可以很容易被隔离和识别。文件系统上的每组数据被称为条目（entry）。文件系统中的条目可以是文件、目录（也称为文件夹）、引用（也称为链接）、套接字（sockets）和 fifo（也称为命名管道）。
+
+文件系统中的每个条目包含关于它的以下数据：
+
+*   `name` - 条目的名称。
+
+*   `permissions` - 哪个用户是条目的所有者并允许读取、写入和执行该条目。
+
+*   `creation time, last modified time, last access time` - 条目最后创建、修改或访问的时间。
+
+*   `file size, number of blocks, IO blocks` - 该条目在文件系统中需要多少磁盘空间。
+
+*   `inode number` - 索引节点的缩写，指数据条目开始位置的块编号。
+
+*   `number of symlinks` - 指向该条目的引用或符号链接的数量。
+
+你可以使用 `stat` 命令获取上述信息。`stat` 是 Debian 软件包 `coreutils` 的一部分，只需要检查条目的名称。下面的示例显示了文件 `documentation.pdf` 的信息。
+
+
+
+```bash
+$ stat documentation.pdf
+File: documentation.pdf
+Size: 512             Blocks: 8            IO Block: 4096 regular file
+Device: 808h/2056d           Inode: 260927           Links: 1
+Access: (0644/-rw-r--r--)     Uid: (0/root)       Gid: (0/root)
+Access: 2020-09-04 18:44:30.071901792 -0400
+Modify: 2020-09-04 18:44:22.358157773 -0400
+Change: 2020-09-06 18:08:14.528658813 -0400
+Birth: -$
+```
+
+Midnight Commander (`mc`) 也以一种稍微精炼的方式显示这些信息：
+
+![](img/Image00055.gif)
+
+此外，在 XFCE 桌面上右键点击文件图标会打开一个属性窗口，显示日常使用所需的大部分信息：
+
+![](img/Image00056.gif)
+
+## 11.1 常用文件系统类型
+
+有很多系统非常流行并被广泛使用。包括 `FAT`, `ext2`, `ext3`, `ext4`, `JFS`, `XFS`, `ZFS`, `ReiserFS` 和 `SWAP`。让我们详细查看其中的每一个。
+
+### 文件分配表 (FAT)
+
+`FAT` 起于 1977 年引入软磁盘，随后在 DOS 和 Microsoft Windows 9X 时代用于硬盘。直到现在，几乎所有的操作系统都支持它，并且可以作为不同系统之间的数据传输媒介。它常用于 USB 驱动器等外部介质。原始 `FAT` 系统只是一个 8 位系统，最大文件大小为 8MB，支持 6:3 的文件名且没有子目录。`FAT` 有 3 种主要变体：
+
+*   `FAT12` - 12 位文件分配表。支持使用 4KB 簇时最大 16MB 的卷大小，或使用 8KB 簇时最大 32MB 的卷大小。
+
+*   `FAT16` - 16 位文件分配表。支持使用 32KB 簇时最大 2GB 的卷大小，或使用 64KB 簇时最大 4GB 的卷大小。文件名必须是带有 OEM 字符的 8:3 格式或 256 个 UCS 字符。
+
+*   `FAT32` - 支持 512B 扇区下最大 2TB、2KB 扇区下 8TB 以及 4KB 簇下 32TB 的最大文件大小。
+
+### 第二扩展系统 (ext2)
+
+这是 Linux 的第一个消费级文件系统，在 `ext3` 成为主流之前，它是 RedHat 等 Linux 发行版的默认文件系统。
+
+### 第三扩展系统 (ext3)
+
+`ext3` 是 `ext2` 的日志版本，速度没有 `ext4`、`JFS`、`XFS` 或 `ReiserFS` 快，但消耗的 CPU 更少。`ext3` 支持 16GB 的文件和 32TiB 的文件系统。
+
+### 第四扩展系统 (ext4)
+
+`ext4` 是 `ext3` 的扩展，具有额外功能，如大文件系统支持。它支持高达 16TiB 的文件和高达 1EiB 的文件系统。范围（extent）是连续的块范围，这使得处理大文件更加高效。
+
+### 日志文件系统 (JFS)
+
+`JFS` 最初为 IBM 的 AIX Unix 系统开发，后移植到 OS/2。`JFS` 是一个完全的 64 位文件系统，使用范围（extents），支持无限数量的小文件以及高达 4PB 的大文件。
+
+### XFS
+
+`XFS` 是由 Silicon Graphics (SGI) 在 1993 年为 IRIX 操作系统开发的日志文件系统。它将物理卷划分为分配区，允许更高效的并行 I/O 和文件系统带宽，并支持高达 8EiB 的大文件。
+
+### ZFS
+
+Z 字节文件系统 (`ZFS`) 结合了文件系统和卷管理器 (`LVM`)。由 SUN Microsystems 于 2005 年发布，具有可扩展性，并包含了针对数据损坏的广泛保护、支持高存储容量、高效的数据压缩、文件系统与卷管理的集成、快照和写时克隆、RAID-Z 以及针对网络文件系统 (`NFS`) 第 版本的原生访问控制列表 (`ACLs`)。这两个项目 `OpenZFS` 和 `ZFS on Linux` 继续该文件系统的开发。
+
+### ReiserFS
+
+`ReiserFS` 是一种通用的日志文件系统，使用基于 B+树的 Apple 分区映射管理目录内容。`ReiserFS` 版本 3 是 SUSE、Elive、Xandros、Linspire 和 YOPER 发行版的默认文件系统。对 `ReiserFS` 版本 4 的支持已下降到除了与新 Linux 内核兼容外，开发已停止。
+
+### 交换空间 (Swap Space)
+
+交换空间用于 Linux 在内存页未使用时将其换出。交换空间用户不可访问，且不能用于普通文件存储。交换空间的使用如下：
+
+*   桌面系统 - 使用系统总内存的 2 倍。这样当同时运行多个大型程序时，未使用的内存可以保存到磁盘，使程序运行更高效。
+
+*   服务器系统 - 使用总内存容量的 `0.5x`。服务器不应进行频繁的交换（swapping），因此一半的内存就足够。
+
+*   内存小于 1GB 的旧系统 - 尽可能使用交换空间，因为系统需要大量的交换操作才能高效运行。
+
+除了使用独立的交换分区（swap partition），也可以使用交换文件（swap file）。这是通过 `dd` 在现有分区上创建一个固定大小的文件来实现的。这种方法的优点是不需要固定的交换分区，并且以后可以为了效率调整其大小。
+
+## 11.2 文件系统命令
+
+以下命令用于管理文件系统：
+
+*   `fdisk` 和 `cfdisk` - 显示、创建和删除磁盘上带有文件系统的分区。下面的图片显示了 `cfdisk` 的界面。
+
+*   `mkfs` - make file system 的缩写，用于创建文件系统。
+
+*   `mkswap` - make swap 的缩写，用于创建交换文件系统。
+
+*   `badblocks` - 显示文件系统上的坏块。
+
+*   `fsck` - file system check 的缩写，用于检查并修复 Linux 文件系统。
+
+*   `dumpe2fs` - 显示有关文件系统的信息。
+
+*   `file` - 确定文件系统中条目的类型。
+
+*   `link` 和 `unlink` - 创建和删除指向文件的链接。
+
+*   `ln` - link 的缩写，用于创建硬链接和软链接。
+
+*   `ls` - 显示条目（文件、目录、链接、套接字或 fifo）的信息。
+
+*   `lsof` - 显示已打开文件的列表。
+
+*   `stat` - 显示条目保留的所有信息。
+
+*   `sync` - 将驱动缓存与磁盘同步。
+
+*   `mount` 和 `umount` - 启用或禁用带有文件系统的设备。
+
+*   `tune2fs` - 调整 `ext2`、`ext3` 和 `ext4` 文件系统上的文件系统参数。
+
+![](img/Image00057.gif)
+
+## 11.3 实际示例
+
+在下面的示例中，我们将查看如何使用上面讨论的命令。我们将模拟一个内存磁盘，在上面创建一个适当的文件系统，挂载它并在上面存储数据。首先，我们将使用 `dd` 如下所示创建一个大小为 10MB 的文件：
+
+```bash
+$ dd if=/dev/zero of=memory.image bs=512b count=40
+```
+
+该文件仅包含零，因为数据是从一个名为 `/dev/zero` 的设备读取的，该设备只返回零。输出结果以 512 字节的块大小写入 40 次写入 `memory.image` 文件。下面的示例显示了 `dd` 的输出以及使用 `ls` 查看输出文件的大小。
+
+```bash
+$ dd if=/dev/zero of=memory.image bs=512b count=40
+40+0 records in40+0 records out10485760 bytes (10 MB, 10MiB) copied, 0.0156379 s, 671 MB/s
+$ ls -lah memory.image
+-rw-r--r-- 1 user user 10M Sep 9 05:28 memory.image
+```
+
+下一步，我们使用 `mkfs.ext4` 命令在文件上创建 `ext4` 文件系统：
+
+```bash
+$ /sbin/mkfs.ext4 memory.image 10M
+mk2fs 1.43.4 (31-Jan-2017)
+Discarding device blocks: done
+Creating filesystem with 10240 1k blocks and 2560 inodes
+Filesystem UUID: 52c89176-a665-48b3-9bf6-2abb9b2ad721
+Superblock backups stored on blocks:             8193
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: done
+$ ls -lah memory.image
+-rw-r--r-- 1 user user 10M Sep 9 05:40 memory.image
+```
+
+这产生了一个具有 10240 个 1K 块的文件系统，留有 2560 个条目的空间。接下来，我们使用 `mkdir` 命令创建一个挂载点：
+
+```bash
+$ mkdir /tmp/image
+```
+
+`mount` 命令帮助如下方式集成镜像：
+
+```bash
+$ su
+## mount memory.image /tmp/image
+```
+
+现在我们可以在挂载的设备上存储数据。在这里，`cp` 命令派上了用场。`cp` 命令复制文件。为了正常操作，它需要两个名称：原始文件名和副本文件名。原始文件不会被触动并保持完整。副本与原始文件内容相同，但具有当前时间戳。使用选项 `-i`（或 `--interactive`）防止覆盖现有文件。在示例中，我们使用 `cp -v` 来产生额外的输出。
+
+```bash
+$ su
+## cp -v documentation.pdf /tmp/image/.
+'documentation.pdf' -> '/tmp/image/./documentation.pdf'
+## ls /tmp/image/documentation.pdf
+lost+found
+## sync
+## umount /tmp/image
+```
+
+在卸载设备之前，执行 `sync` 以清除缓存并将数据写入磁盘。最后，我们可以如下所示卸载文件系统：
+
+```bash
+## umount /tmp/image
+exit
+```
+
+## 12. 磁盘存储管理
+
+在本章中，我们将查看如何处理存储设备和文件系统，这包括设备和文件系统的命名，以及挂载和卸载。
+
+## 12.1 设备命名
+
+`/dev` 中的一切都是设备。当系统启动时，它会检测诸如 `sda`、`sdb`、`sdc` 等设备。这些是硬盘。设备可以是 `USB`、`SCSI`、`SATA`、`PATA`。SD 卡标记为 `mmc0`。CD/DVD 驱动器标记为 `cdrom` 或 `dvd`。
+
+IDE 驱动器可以是 `hd0`、`hdb` 等。分区由数字表示，例如 `sda1`、`sda2` 等。
+
+## 12.2 主分区、扩展分区和逻辑分区
+
+查看分区结构，来自 `util-linux` 包的 `lsblk` 命令非常有帮助。`lsblk` 是 list devices 的缩写。该命令可以输出所有使用的设备（如第一个示例）以及所有未使用的设备（如第二个示例）。
+
+![](img/Image00058.gif)
+
+![](img/Image00059.gif)
+
+这七列代表以下信息：
+
+- `NAME`: 设备名称。
+
+- `MAJ:MIN`: 设备的主从编号。
+
+- `RM`: 0 表示设备是固定的，1 表示设备是可以移除的。
+
+- `SIZE`: 以人类可读格式的设备大小。
+
+- `RO`: 1 表示设备为只读，0 表示否。
+
+- `TYPE`: 设备类型。
+
+要列出挂载的文件系统，请使用 `mount` 命令或 `findmnt` 命令。这两个命令都是 `mount` 包的一部分。在不带进一步选项的情况下，`findmnt` 所有挂载的文件系统。这个列表可能会长。为了只选择 `ext4` 文件系统，可以使用选项 `-t ext4`（`--type ext4` 的缩写）。
+
+![](img/Image00060.gif)
+
+## 12.3 udev, df and du
+
+`udev` 是用户空间 `/dev` 的缩写，是 Linux 内核的设备管理器。一旦 `udev` 运行，它找到的驱动器将显示在 `/dev/disk` 目录下。该目录包含几个子目录，如下所示。请注意，子目录的数量取决于 Linux 发行版并取决于 Linux 内核的版本。每当 Linux 系统识别到磁盘时，信息就会显示在这里。我们可以使用这些信息来查找哪些挂载点正在使用。
+
+## /dev/disk/by-id
+
+这显示了 Linux 看到的分区名称以及指向这些分区的挂载点。
+
+```bash
+| # ls -al /dev/disk/by-id
+total 0drwxr-xr-x 2 root root 220 Sep 5 07:14 .
+drwxr-xr-x 7 root root 140 Sep 5 07:14 ..
+lrwxrwxrwx 1 root root 9 Sep 5 07:14 ata-VBOX_CD-ROM_VBO-01f00…/sr0
+lrwxrwxrwx 1 root root 9 Sep 5 07:14 ata-VBOX_HARDDISK_VBb9372…/sda
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK…part1…/sda1
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK…part2…/sda2
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK…part3…/sda3
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK…part5…/sda5
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK…part6…/sda6
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK…part7…/sda7
+lrwxrwxrwx 1 root root 9 Sep 5 07:29 ata-VBOX_HARDDISK_VBc544…/sdb |
+```
+
+## /dev/disk/by-path
+
+这显示了底层硬件定义以及挂载到它们上的挂载点。
+
+```bash
+| # ls -al /dev/disk/by-path
+total 0drwxr-xr-x 2 root root 220 Sep 5 07:14 .
+drwxr-xr-x 7 root root 140 Sep 5 07:14 ..
+lrwxrwxrwx 1 root root 9 Sep 5 07:14 pci-0000:00:01.1-ata-1…/sr0
+lrwxrwxrwx 1 root root 9 Sep 5 07:14 pci-0000:00:0d.0-ata-1…/sda
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 pci-0000:00:0d.0…part1…/sda1
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 pci-0000:00:0d.0…part2…/sda2
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 pci-0000:00:0d.0…part3…/sda3
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 pci-0000:00:0d.0…part5…/sda5
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 pci-0000:00:0d.0…part6…/sda6
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 pci-0000:00:0d.0…part7…/sda7
+lrwxrwxrwx 1 root root 9 Sep 5 07:29 pci-0000:00:0d.0-ata-2…/sdb |
+```
+
+## /dev/disk/by-label
+
+这显示了哪些标签被应用于哪些挂载点。
+
+```bash
+| # ls -al /dev/disk/by-label
+total 0drwxr-xr-x 2 root root 220 Sep 5 07:14 .
+drwxr-xr-x 7 root root 140 Sep 5 07:14 ..
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 home -> ../../sda7
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 root -> ../../sda1
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 var -> ../../sda6 |
+```
+
+## /dev/disk/by-uuid
+
+这显示了每个挂载点的 UUID 标签。
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```  
+if (condVar > someVal) {console.log("xxx")}
+```
+
+# 查看磁盘分区信息
+
+执行以下命令查看`/dev/disk/by-uuid`目录下的分区信息：
+
+```  
+# ls -al /dev/disk/by-uuid
+total 0
+drwxr-xr-x 2 root root 220 Sep 5 07:14 .
+drwxr-xr-x 7 root root 140 Sep 5 07:14 ..
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 9ef7106a-c885-4cbe-aaa1…/sda2
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 ac2823cc-a7b4-bf3-808e…/sda7
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 d2f4fd43-4f76-41c9afa…/sda6
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 dc78e6f6-8a4f-be0-9192…/sda1
+lrwxrwxrwx 1 root root 10 Sep 5 07:14 faef6770-b865-43d2-b1f6…/sda5
+```
+
+## /dev/disk/by-part
+
+分区表（GPT）的一部分，用于主引导记录（MBR）相关的磁盘分区。
+
+## df 和 du
+
+要查看哪些文件系统已挂载以及使用了多少可用块，请调用`df`命令。`df`是disk free的缩写。该命令提供了多种选项：
+
+- `df -h`：以人类可读的格式列出。
+- `df -k`：以千字节列出。
+- `df -m`：以兆字节列出。
+- `df`：以默认块大小列出。有时这使用500KB，可能会让人困惑。
+
+同样，`du`会计算目录使用的磁盘空间。标准输出显示每个条目的值，可能会让人困惑。要获取目录的摘要，可以通过三个参数扩展命令行：`-s`（摘要）、`-c`（总计）和`-h`（人类可读）。
+
+## 12.4 挂载文件系统
+
+在使用文件系统之前，必须将其挂载为目录树的一部分。大多数情况下，这在启动时自动完成，但也可以手动进行。我们在上一章末尾简要查看了手动挂载的命令，但在这里我们将详细介绍它们的用法。
+
+为了演示，我们将第二个SCSI磁盘（`/dev/sdb1`）的分区挂载到`/space`。首先，挂载文件系统时必须是root用户。接下来，如果`/space`目录不存在，必须使用`mkdir`创建它：
+
+```  
+# mkdir /space
+```
+
+然后运行`mount`命令包含此目录：
+
+```  
+# mount /dev/sdb1 /space
+```
+
+大多数情况下Linux会自动检测文件系统类型。如果没有自动检测，请使用`-t`参数（type的缩写）加上文件系统类型进行强制执行。此步骤假设相关的文件系统类型已安装并被Linux内核识别。要列出Linux内核支持的文件系统，可以使用如下的`cat`、`awk`、`sed`、`ls`和`sort`命令组合。
+
+尚未讨论的命令中，`sort`用于按顺序排序文件，将在第7章详细讨论。除了这个示例外，我们不会对`awk`和`sed`进行详细介绍。
+
+```  
+$ (cat /proc/filesystems | awk '{print $NF}' | sed '/^$/d' | ls -1 /lib/modules/$(uname -r)/fs | sort -u)
+```
+
+以下命令扩展了上面的命令，将第二个SCSI磁盘（`sdb1`）的分区使用`ext3`文件系统挂载到`/space`：
+
+```  
+# mount -t ext3 /dev/sdb1 /space
+```
+
+## 12.5 卸载文件系统
+
+如果文件系统正忙或在使用中，则无法卸载。要找到哪些程序正在使用该文件系统，可以使用`lsof`包中的`lsof`命令。`lsof`是list of open files的缩写。下面的示例演示了如何使用该命令，并显示了`/home/user/Music`目录。
+
+这提供了使用该目录的程序列表。此外，如果用户在该目录中工作，你必须使用`cd`命令更改目录。要卸载我们在上一节中挂载的`/space`目录，必须再次以root用户登录。接下来，通过调用`lsof /space`命令测试是否有其他程序正在使用`/space`。
+
+```  
+$# lsof /space
+```
+
+然后输入`umount /space`。如果没有收到错误消息，则`/space`已成功卸载。或者，运行带有`-v`（verbose的缩写）的`umount`命令以查看事务消息。最后，输入`df -k`查看新的分区状态。
+
+```  
+## umount /space
+# exit
+```
+
+## 12.6 自动挂载挂载点
+
+要在系统启动期间自动挂载挂载点，请在配置文件`/etc/fstab`中添加一个条目。`fstab`是file system table的缩写。下面的示例显示了配置文件的内容。
+
+## cat /etc/fstab
+
+`/etc/fstab`：静态文件系统信息。
+
+## 使用'blkid'输出设备的通用唯一标识符；这可以配合`UUID=`使用，作为一种更健壮的设备命名方式，即使在磁盘添加或移除也能正常工作。参见`fstab(5)`。
+
+## <文件系统><挂载点><类型><选项><dump><pass>
+
+```text
+/ was on /dev/sda1 during installation
+UUID=dc78e6f6-8a4f-4be0-9192-e4ca37838765     /      ext4     errors      0 1
+/home was on /dev/sda7 during installation
+UUID=ac2823cc-a7b4-4bf3-808e-e13401e11eaf     /home    ext4     defaults     0 2
+/tmp was on /dev/sda5 during installation
+UUID=faef6770-b865-43d2-b1f6-56352413d7c4     /tmp     ext4     defaults     0 2
+/var was on /dev/sda6 during installation
+UUID=d2f4fd43-4f76-414c-9afa-6a53d4cd1d9c     /var     ext4     defaults     0 2
+swap was on /dev/sda2 during installation
+UUID=9ef7106a-c885-4cbe-aaa1-8e2b77ee73cf     none     swap     sw     0 0
+/dev/sr0/media/cdrom0 udf,iso9660 user,noauto 0 0
+```
+
+文件`/etc/fstab`中的列（字段）如下：
+
+- `filesystem`：指定文件系统的UUID（`UUID=xxxxx`）、名称（`/dev/sdb1`）或文件系统的标签（`LABEL=home`）。
+- `mount point`：定义文件系统挂载的目录。
+- `type`：允许的文件系统类型逗号分隔列表。
+- `options`：逗号分隔的选项列表。
+- `dump`：文件中的备份信息，`0` =关闭，`1` =开启。
+- `pass`：文件系统检查的顺序，从`1`开始。`0`表示最后。
+
+请记住，单列之间由制表符分隔，空格无法正常工作。提示：要查找挂载点的UUID，请查看`/dev/disk/by-uuid`。
+
+要添加一个设备以实现自动挂载，只需通过添加一行来扩展`/etc/fstab`文件。为了在启动时将分区`/dev/sdb1`挂载为`/space`并使用`ext3`文件系统，请在旧系统上添加此行：
+
+```text
+/dev/sdb1 /space ext3 defaults 0 0
+```
+
+在支持UUID的现代系统中，使用以下行。请注意将`7ca005b2-a7ff-4757-bfdf-81004d4072ef`的值替换为您分区的UUID：
+
+```text
+UUID=7ca005b2-a7ff-4757-bfdf-81004d4072ef /space ext3 defaults 0 0
+```
+
+现在`/dev/sdb1`将在启动时始终挂载为`/space`。你可能会好奇使用UUID的好处是什么。通过使用UUID，分区被清晰地标识，即使以后磁盘顺序发生变化。
+
+要生成UUID（或重新生成一个新的），请使用`uuidgen`命令行工具。它提供两个选项。第一个是`-r`（`--random`的缩写），生成基于随机的UUID。此方法创建一个主要由随机位组成的UUID。如果不显式指定，这是默认值。
+
+```bash
+$ uuidgen -r4d545248-cf36-4d24-91ab-64a9ed276072
+```
+
+第二个选项是`-t`（`--time`的缩写），生成基于时间的UUID。此方法根据系统时钟加上（如果存在）系统的以太网硬件地址创建UUID。
+
+```bash
+$ uuidgen -t4afa1166-bcf1-11e8-9a0a-68f728ff3d63
+```
+
+`uuidgen`命令将新生成的UUID写入`stdout`。你可以直接将新UUID复制并粘贴到`/etc/fstab`中，为分区引用唯一标识符。
+
+## 12.7 设置新分区
+
+`fdisk`及其对应工具`cfdisk`和`gparted`的原理是查看磁盘上的分区并添加、删除或编辑分区。在本节中，我们将查看`fdisk`，它是Debian的标准软件包，也适用于所有主要的Linux发行版。`cfdisk`和`gparted`是非标准软件包，可能需要单独安装。我们将在第4章和第14章中讨论额外软件包的安装。
+
+要使用`fdisk`，以root用户身份输入`fdisk`后跟驱动名称。下面的示例显示了名为`/dev/sda`的第一个SCSI磁盘。
+
+```bash
+## fdisk /dev/sda
+```
+
+这将打开一个如下屏幕。在命令行提示符处按`p`打印分区：
+
+```text
+## fdisk /dev/sda
+Welcome to fdisk (util-linux 2.29).
+更改将保留在内存中，直到你决定写入。
+在使用写入命令前请小心。
+Command (m for help): p
+Disk /dev/sda: 30 GiB, 3221225470 bytes, 62914560 sectors
+Units: sectors of 1 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x2e4f25d8
+Device     Boot     Start      End     Sectors     Size    Id     Type
+/dev/sda1    *      2048     7813119    7811072     3.7G      83     Linux
+/dev/sda2            7813120    11718655    3905536     1.9G      82     Linux
+/dev/sda3            11720702    62912511    5111810    24.4G     5      Extended
+/dev/sda5            11720704    12695551     974848     476M      83     Linux
+/dev/sda6            12697600    32227327    19529727     9.3G      83     Linux
+/dev/sda7            32229327    41943040    30683136    14.6G      83     Linux
+```
+
+要获取命令列表，输入`m`。
+
+```text
+Command (m for help):
+a  create new partition
+b  toggle bootable flag
+c  create new table
+d  delete a partition
+e  create extended partition
+f  print partition
+g  create new GPT table
+h  help menu
+i  print information about partition
+l  list free space
+m  help menu
+n  add new partition
+o  create new DOS table
+p  print partition table
+q  quit without saving
+s  show fs signature
+t  change partition type
+u  print units
+v  verify partition table
+w  write table to disk
+x  exit
+```
+
+## 使用fdisk进行分区
+
+```
+Command (m for help): n
+Partition type p primary (1 primary, 0 extended, 3 free) e extended (container for logical partitions)
+Select (default p): e
+Partition number (2-4, default 2):
+First sector (8390656-41943039, default 8390656):
+Last sector, +sectors or +size{K,M,G,T,P} (8390656-41943039, default 41943039):
+Created a new partition 2 of type 'Extended' and of size 16 GiB.
+Command (m for help): p
+Disk /dev/sdb: 20 GiB, 21474836480 bytes, 41943040 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x056efeb2
+Device      Boot      Start     End     Sectors     Size     Id     Type
+/dev/sdb1            2048      8390655    8388608      4G      83   Linux
+/dev/sdb2            8390656    41943039    33552384     16G      5      Extended
+```
+
+现在让我们创建一个交换空间（swap space）。再次输入`n`来创建一个新分区。这次没有剩余空间创建主分区，所以我们只能创建逻辑分区。我们使用默认的`First Sector`起始扇区，并在`Last Sector`结束扇区处选择`+1G`，回车使用默认值。输入`p`查看结果，可以看到逻辑分区`/dev/sdb5`已经创建。输入`f`显示磁盘上剩余的可用空间。
+
+
+
+```
+| Command (m for help): n
+All space for primary partitions is in use.
+Adding logical partition 5
+First sector (8392704-41943039, default 8392704):
+Last sector, +sectors or +size{K,M,G,T,P} (8392704-41943039, default 41943039): +1G
+Created a new partition 5 of type 'Linux' and of size 1 GiB.
+Command (m for help): p
+Disk /dev/sdb: 20 GiB, 21474836480 bytes, 41943040 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x056efeb2
+Device      Boot      Start      End     Sectors     Size     Id     Type
+/dev/sdb1            2048      8390655     8388608      4G      83   Linux
+/dev/sdb2            8390656    41943039    33552384     16G      5      Extended
+/dev/sdb5            8392704    10489855    2097152      1G      83   Linux
+Command (m for help): F
+Unpartitioned space /dev/sdb: 15 GiB, 1610298162 bytes, 3145136 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+Start      End     Sectors     Size
+1049194    41943039    3145136     15G
+```
+
+最后，让我们使用所有剩余空间创建一个分区。操作方法与上一个分区相同，但这次我们选择了所有的默认选项。之后输入 `p` 显示分区 `/dev/sdb6` 已创建。
+
+```
+| Command (m for help): n
+All space for primary partitions is in use.
+Adding logical partition 6
+First sector (1049194-41943039, default 1049194):
+Last sector, +sectors or +size{K,M,G,T,P} (1049194-41943039, default 41943039):
+Created a new partition 6 of type 'Linux' and of size 15 GiB.
+Command (m for help): p
+Disk /dev/sdb: 20 GiB, 21474836480 bytes, 41943040 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x056efeb2
+Device      Boot      Start      End     Sectors     Size     Id     Type
+/dev/sdb1            2048      8390655     8388608      4G      83   Linux
+/dev/sdb2            8390656    41943039    33552384     16G      5      Extended
+/dev/sdb5            8392704    10489855    2097152      1G      83   Linux
+/dev/sdb6            1049194    41943039    3145136     15G      83   Linux
+```
+
+现在我们将分区 `/dev/sdb5` 修改为交换空间。要做到这一点，在 `fdisk` 中输入 `t` 来更改分区类型。输入分区编号 `5`，然后输入 `l` 列出可用类型。我们要的类型是 `Linux swap`。
+
+```
+| Command (m for help): t
+Partition number (1,2,5,6,default 6): 5
+Partition type (L to list all): L
+0 Empty
+1 FAT1
+2 XENIX root
+3 XENIX usr
+4 FAT16 <32M
+5 Extended
+6 FAT16
+7 HPFS/NTFS/exFAT
+8 AIX
+9 AIX bootable...
+82 Linux swap
+83 Linux
+84 OS/hidden
+85 extended
+86 NTFS volume set
+87 NTFS volume set
+88 plaintext
+Partition type (L to list all): 82
+Changed type of partition 'Linux' to 'Linux swap'.
+Command (m for help): p
+Disk /dev/sdb: 20 GiB, 21474836480 bytes, 41943040 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x056efeb2
+Device      Boot      Start      End     Sectors     Size     Id     Type
+/dev/sdb1            2048      8390655     8388608      4G      83   Linux
+/dev/sdb2            8390656    41943039    33552384     16G      5      Extended
+/dev/sdb5            8392704    10489855    2097152      1G      82   Linux swap
+/dev/sdb6            1049194    41943039    3145136     15G      83   Linux
+```
+
+到为止还没有写入磁盘。要完成这一点，我们需要输入 `w` 保存并同步磁盘。然后输入 `q` 退出 `fdisk`。输入 `ls -al /dev/disk/by` 查看新创建的分区。下一步，使用这些新创建的分区来挂载文件系统。
+
+```
+## ls -al /dev/disk/by
+total 0
+drwxr-xr-x 2 root root 300 Sep 5 12:54 .
+drwxr-xr-x 7 root root 140 Sep 5 07:14 ..
+lrwtwxr-x 1 root root 9 Sep 5 07:14 ata-VBOX_CD-ROM...sr0
+lrwtwxr-x 1 root root 9 Sep 5 07:14 ata-VBOX_HARDDISK...sda
+lrwtwxr-x 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK...part1
+lrwtwxr-x 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK...part2
+lrwtwxr-x 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK...part3
+lrwtwxr-x 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK...part5
+lrwtwxr-x 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK...part6
+lrwtwxr-x 1 root root 10 Sep 5 07:14 ata-VBOX_HARDDISK...part7
+lrwtwxr-x 1 root root 9 Sep 5 12:54 ata-VBOX_HARDDISK...sd
+lrwtwxr-x 1 root root 10 Sep 5 12:54 ata-VBOX_HARDDISK...part1
+lrwtwxr-x 1 root root 10 Sep 5 12:54 ata-VBOX_HARDDISK...part2
+lrwtwxr-x 1 root root 10 Sep 5 12:54 ata-VBOX_HARDDISK...part5
+lrwtwxr-x 1 root root 10 Sep 5 12:54 ata-VBOX_HARDDISK...part6
+```
+
+## 创建新文件系统
+
+到目前为止我们只有空分区。这些分区需要填充适当的文件系统。我们将按照 own 挂载新文件系统：
+
+`/dev/sdb1` `/mnt/root` ext2
+
+`/dev/sdb5` swap
+
+`/dev/sdb6` `/mnt/home` ext4
+
+要做到这一点，首先我们创建需要的挂载点：
+
+```
+## mkdir /mnt/root
+## mkdir /mnt/home
+```
+
+然后为了添加文件系统，我们执行以下命令：
+
+```
+## mkfs /dev/sdb1
+mk2fs 1.43.4 (31-Jan-2017)
+Creating filesystem with 1048576 4k blocks and 262144 inodes
+Filesystem UUID: 8e70eeac-83cb-43f1-a402-a10fdec95
+Superblock backups stored on blocks: 32768,98304,163840,229376,294912,819200,884736
+Allocating group tables: done
+Writing inode tables: done
+Writing superblocks and filesystem accounting information: done
+## mkfs.ext4 /dev/sdb6
+mk2fs 1.43.4 (31-Jan-2017)
+Creating filesystem with 3931392 4k blocks and 983040 inodes
+Filesystem UUID: e7ab67d6-53a6-4c1a-9ee2-5f36d183bef5
+Superblock backups stored on blocks: 32768,98304,163840,229376,294912,819200,884736,1605632,2654208
+```
+
+```bash
+tune2fs -L root /dev/sdb1 tune2fs -L home /dev/sdb6
+```
+
+现在我们可以使用 `mount` 命令挂载新分区。输入 `df` 来查看结果。
+
+![](img/Image00063.gif)
+
+最后一步，让我们在配置文件 `/etc/fstab` 中添加条目，以便在启动时自动挂载这些文件系统。首先将 `/etc/fstab` 复制为 `/etc/fstab.bak`：
+
+```bash
+cp /etc/fstab /etc/fstab.bak
+```
+
+然后，为了获取新分区的块 ID，输入 `lsblk -f`。`-f` 选项（`--fs` 的写）会在输出中扩展额外的文件系统信息。
+
+![](img/Image00064.gif)
+
+现在编辑配置文件 `/etc/fstab`，并按如下所示添加最后两行。
+
+```text
+cat fstab
+/etc/fstab: 文件系统信息。
+使用 'blkid' 打印设备的通用唯一标识符；可以使用 UUID= 作为更健壮的设备命名方法，即使在磁盘添加或移除时也能工作。参见 fstab(5)。
+<文件系统><挂载点><类型><选项><dump><pass>
+/ 安装期间位于 /dev/sda1
+UUID=dc78e6f0-8a4f-4be0-9192-e4ca37838765     /      ext4      errors=      0 1
+/home 安装期间位于 /dev/sda7
+UUID=ac2823cc-a7b4-4bf3-808e-e13401e11eaf     /home      ext4      defaults      0 2
+/tmp 安装期间位于 /dev/sda5
+UUID=faef6770-b865-43d2-b1f6-56352413d7c4     /tmp      ext4      defaults      0 2
+/var 安装期间位于 /dev/sda6
+UUID=d2f4fd43-4f76-414c-9afa-6a5344cd1d9c     /var      ext4      defaults      0 2
+swap 安装期间位于 /dev/sda2
+UUID=9ef7106a-c885-4cbe-aaa1-8e2b77ee73cf     none     swap      sw      0 0
+/dev/sr0  /media/cdrom0  udf,iso9660 user,noauto 0 0
+UUID=8e70eeac-83cb-43f1-a402-a10fdecab950 /mnt/root ext2 default 0 2
+UUID=e7ab67d6-53a6-4c1a-9ee2-5f36d18bef5 /mnt/home ext4 default 0 2
+```
+
+然后使用 `reboot` 重启系统以使用新分区，并调用 `df` 查看新创建的分区。
+
+![](img/Image00065.gif)
+
+![](http://www.amazon.com/gp/customer-reviews/write-a-review.html?asin=B07HDTG58D)
+
+# 13. 使用链接
+
+链接并不是 Linux 特有的，但如果你来自基于 Windows 的系统，那么它的概念略有不同。当你需要一个文件同时存在于多个地方时，链接非常有用。例如，在你的下载文件夹和音乐文件夹中都拥有同一个文件，而无需创建一个占用空间的副本。
+
+如果你在不同位置保留了同一组照片或视频的大型存档（许多摄影师和录像师倾向于这样做），使用链接可能会为你节省数 GB 的空间。Linux 文件系统中了两类型的链接：硬链接和软链接。我们将在接下来详细解释这两种两种链接。
+
+## 13.1 硬链接
+
+硬链接在组织文件时提供了更大的灵活性。例如，你可以在一个地方按艺术家组织音乐，在另一个地方按流派组织音乐，而系统中不会产生多于一个物理副本。
+
+硬链接将文件名链接到磁盘上存储文件的位置（对 `inode` 的引用）。它仅仅是现有文件的一个额外名称。每个文件可以有多个硬链接，但必须至少有一个。如果不存在指向该文件的链接，则文件将被删除，磁盘空间将释放给其他文件。然而，只要数据没有被覆盖，文件中的数据仍然存在并可以恢复。
+
+系统上的每个文件名都是硬链接。硬链接不能指向目录、软链接、字符设备或块设备、管道或套接字。如果有多个硬链接指向文件，它们必须位于同一个文件系统中。要创建链接，Linux 使用两个命令：`link` 和 `ln`。`link` 命令专门用于硬链接。它调用 `link()` 函数并且在尝试创建链接时不进行错误检查。相比之下，`ln` 具有错误检查功能并且可以创建硬链接和软链接。
+
+下面的命令为文件 `test` 创建了三个名为 `link1`、`link2` 和 `link3` 的硬链接。`touch` 命令用于更新文件的访问日期或修改日期，有两种工作方式：如果文件已存在，则将访问和修改的时间戳设置为当前时间戳。如果文件不存在，将创建一个具有当前时间戳的空文件。
+
+```bash
+touch test
+ln test link1
+ln test link2
+ln test link3
+```
+
+`ls -i` 的输出显示了两列：inode 号和文件名（`-i` 是 `-inode` 的缩写）。你可以看到四个文件 `link1`、`link2`、`link3` 和 `test` 的 inode 号是相同的，它们指向同一个 inode。
+
+```bash
+ls -i test link126930 link226930 link326930
+```
+
+此外，`stat` 命令提供了关于该条目的更详细信息。
+
+
+
+## 文件链接与软链接
+
+在Linux系统中，文件链接分为硬链接和软链接两种类型，它们是文件系统管理中的重要概念。
+
+### 硬链接示例
+
+使用`touch test`创建文件后，可以通过`ln`命令创建多个硬链接。使用`stat test`查看文件状态信息。
+
+```bash
+touch test
+ln test link1
+ln test link2
+ln test link3
+stat test
+    File: test
+    Size: 0
+    Blocks: 0
+    IO Block: 4
+    Device: 808h/256d
+    Inode: 26930
+    Links: 4
+    Access: (644/-rw-r--)
+    Uid: (1000/user)
+    Gid: (1000/user)
+    Access: 2020-09-19 16:51:10.039125119
+    Modify: 2020-09-19 16:51:10.039125119
+    Change: 2020-09-19 16:51:10.039125119
+    Birth: -
+```
+
+## 13.2 软链接
+
+软链接，也称为符号链接，是文件系统中指向另一个文件名的链接。它非常像Windows系统上的快捷方式。与硬链接不同，软链接不包含目标文件的数据，它只是指向文件系统某处的另一个条目。这种差异使得软链接具有硬链接不具备的特性，例如链接到目录、字符设备、块设备或通过NFS网络的远程计算机的文件。
+
+要在Linux中创建软链接，我们将使用带有`-s`选项的相同`ln`命令。`-s`是`--symbolic`的缩写。
+
+```bash
+touch test
+ln -s test link1
+ln -s test link2
+ln -s test link3
+```
+
+再次，`ls -i`的输出了两列：inode号和文件名。你会发现四个文件的inode号是不同的，`link1`、`link2`、`link3`和`test`指向不同的inode。
+
+```bash
+ls -i test softlink260931 link1260932 link2260933
+```
+
+如果你带有`-l`选项（长格式）调用`ls`命令，输出所示。最左侧列以`l`（表示link）开头，最右侧列显示软链接指向的文件名。
+
+```bash
+ls -l softlink
+lrwxrwxrwx 1 user user 4 Sep 15 14:05 link1 -> test
+lrwxrwxrwx 1 user user 4 Sep 15 14:05 link2 -> test
+lrwxrwxrwx 1 user user 4 Sep 15 14:05 link3 -> test
+```
+
+## 13.3 示例
+
+在这个示例中，我们将观察如何使用硬链接连接两个文件，以及再次取消它们。首先，我们使用`echo`创建名为`file1`的文件并重定向输出。`echo`是Shell内命令，用于输出文本。该命令还会打印变量的值。
+
+```bash
+echo "This is File One" > file1
+cat file1
+This is File One
+```
+
+接下来，将`file2`链接到`file1`，并将`file2`的内容输出到`stdout`。
+
+```bash
+link file1 file2
+cat file2
+This is File One
+```
+
+现在它们都是同一个文件。让我们修改`file2`看看发生了什么。
+
+```bash
+echo "This is line Two" >> file2
+cat file2
+This is File One
+This is line Two
+cat file1
+This is File One
+This is line Two
+```
+
+从下例中可以看出，`file1`和`file2`都被视为同一个文件。
+
+```bash
+ls -l
+total 0
+echo "This is File One" > file1
+cat file1
+This is File One
+link file1 file2
+cat file2
+This is File One
+echo "This is line Two" >> file2
+cat file2
+This is File One
+This is line Two
+cat file1
+This is File One
+This is line Two
+```
+
+取消链接`file1`会删除指向`file1`的硬链接，但`file2`仍然存在，文件不会被删除。
+
+```bash
+unlink file1
+ls file2
+```
+
+取消链接`file2`会删除硬链接并同时删除该文件，因为没有剩余指向该文件的硬链接了。该文件不再存在，其在硬盘上占用的空间被标记为可覆盖。
+
+```bash
+$ unlink file1
+$ ls file2
+$ cat file2
+This is File One
+This is line Two
+$ unlink file2
+$ ls
+$ ls -al
+total 8
+drwxr-xr-x  2 jk jk 4096 Sep 18 08:22 .
+drwxr-xr-x 23 jk jk 4096 Sep 18 08:15 ..
+```
+
+# 14. 软件包管理
+
+在当今世界，软件可能非常复杂。这种复杂性部分源于程序被拆分为单个组件并以单个软件包的形式提供，例如二进制数据、共享库和文档。这种软件开发的概念被称为模块化，并被广泛接受和使用。例如，Debian提供了超过50,000个不同的软件包。
+
+软件包管理涵盖了处理这些软件包所需的所有操作，包括安装、配置、移除和更新软件包。它还涵盖了解决依赖关系（相互依赖的软件包）。
+
+## 14.1 理解软件包架构
+
+为了解释Linux软件包架构，我们将以Debian为例。Debian发行版以其稳定性和卓越的软件包系统而闻名。以下描述适用于所有自Debian的Linux发行版，例如Ubuntu、Linux Mint、Knoppix、Kali Linux、Grml和Xandros。请注意，软件包的名称可能不同，特定发行版的软件包镜像以及软件包分类名称也是如此。
+
+Debian软件包管理生态系统包含许多不同的组件，如软件包列表、软件包源、软件包镜像、不同的软件包、管理软件包设置的软件以及软件包缓存。下文将对这些组件进行更详细介绍。
+
+### 软件包列表
+
+Debian包含一个可用软件包的列表。该列表在`/etc/apt/sources`文件中引用，以及`/etc/apt/sources.list.d`目录下的特定组件和个人新增。例如，即时通讯软件Skype使用`skype-stable.list`文件。列表使用文本格式，每行一个软件包源：
+
+```
+| deb http://ftp.de.debian.org/debian/ stretch main contrib non-free
+deb-src http://ftp.de.debian.org/debian/ stretch main contrib non-free |
+```
+
+每行要么引用二进制软件包类型（`deb`），要么引用源软件包类型（`deb-src`）。软件包类型之后是软件包源，它指向提供软件包的仓库。接下来，该行包含Debian版本的名称，可以指定为版本的昵称或分支。
+
+昵称源于电影《玩具总动员》中的一个角色。分支指的是版本的开发阶段，可以是`oldoldstable`（上上版本）、`oldstable`（上一个版本）、`stable`（当前版本）、`testing`（下一个版本）、`unstable`（未来版本）或`experimental`（实验性）。分支名称之后是软件包分类。
+
+Debian 9 Stretch安全更新条目如下：
+
+```
+| deb http://security.debian.org/ stretch/updates main contrib non-free
+deb-src http://security.debian.org/ stretch/updates main contrib non-free |
+```
+
+为了从引用的软件包源刷新软件包列表，请调用以下命令：
+
+```bash
+# apt-get update
+Get:1 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Ign:2 http://ftp.us.debian.org/debian stretch InRelease
+Get:3 http://ftp.us.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:4 http://security.debian.org/debian-security stretch/updates/main Sources [179 kB]
+Get:5 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [447 kB]
+Hit:6 http://ftp.us.debian.org/debian stretch Release
+Get:8 http://ftp.us.debian.org/debian stretch-updates/main Sources.diff/Index [5,164 B]
+Get:9 http://ftp.us.debian.org/debian stretch-updates/main amd64 Packages.diff/Index [5,164 B]
+Get:10 http://ftp.us.debian.org/debian stretch-updates/main Translation-en.diff/Index [3,688 B]
+Get:11 http://ftp.us.debian.org/debian stretch-updates/main Sources 2018-07-31-2010.17.pdiff [385 B]
+Get:12 http://ftp.us.debian.org/debian stretch-updates/main amd64 Packages 2018-07-31-2010.17.pdiff [1,388 B]
+…
+```
+
+### 软件包源
+
+Debian项目维护着官方软件包源列表，称为软件包镜像。该列表分为主镜像和从用镜像。主镜像提供所有支持的架构，而从用镜像仅提供子集。对于美国，官方主软件包镜像是：
+
+```
+| ftp.us.debian.org |
+```
+
+您可以在以下地址查看所需软件包镜像的当前状态：
+
+```
+| https://mirror-master.debian.org/status/mirror-status.html |
+```
+
+![](img/Image00067.gif)
+
+### 软件包类型
+
+Debian将其软件包分为三类：
+
+- `Main` - 自由软件包。
+
+- `Contrib` - 依赖非自由软件包的自由软件包。
+
+- `Non-free` - 不提供源代码的非自由软件包。
+
+属于非自由类的软件包包括固件驱动程序、Skype即时通讯软件和Flash插件。源列表中的每一个条目都指定了它们的软件分类。
+
+### 软件包管理工具
+
+为了维护安装在您的Linux系统上的软件包选择，可以使用几种工具：
+
+- `dpkg` - 用于管理单个软件包。
+
+- `apt`, `aptitude`, `synaptic` - 用于管理带有依赖关系的软件包。
+
+- `tasksel` - 用于管理整个软件集合（任务）。
+
+下图描述了这些工具运行的不同级别以及它们如何协同工作。两个带有虚线轮廓的框指的是处理软件包管理任务的共享库。
+
+![](img/Image00068.gif)
+
+在较低层次，我们有`dpkg`。它的任务是安装单个Debian软件包或移除已安装软件包的内容。为了查询软件包和文件，它使用了`dpkg-deb`和`dpkg-query`两个工具。`dpkg`允许您维护软件包基础，但不处理软件包依赖关系。
+
+通常，上层由`apt`、`aptitude`和`synaptic`工具表示。这些工具的任务是将所有操作合并到一个应用程序中以简化软件包管理。这些工具使用共享库`libapt-inst`或`libapt-pkg`，或者直接与`dpkg`通信以执行软件包管理任务。这包括处理软件包依赖。
+
+### 软件包缓存
+
+软件包缓存位于`/var/cache/apt/archives`。每当通过`apt-get`或`aptitude`安装软件包时，相应的软件包就会检索并本地存储在此位置。为了说明，下面使用`ls`列出了缓存的deb软件包。
+
+```bash
+$ ls /var/cache/apt/archives/*.deb
+/var/cache/apt/archives/cpuid_20140123-2_amd64.deb
+/var/cache/apt/archives/libxml2-utils_2.9.1+dfsg1-5+deb8u7_amd64.deb
+/var/cache/apt/archives/python3-bitarray_0.8.1-1_amd64.deb
+/var/cache/apt/archives/python-bitarray_0.8.1-1_amd64.deb
+$
+```
+
+安装的软件越多，缓存的deb软件包就越多。建议使用`aptitude`或`apt-cache`定期清理软件包缓存。
+
+```bash
+# aptitude clean
+# apt-cache clean
+```
+
+## 14.2 日常管理任务
+
+本节涉及Linux所有者和管理员日常生活中需要的基本软件包管理操作。
+
+### 显示已安装的软件包
+
+命令`dpkg -l`列出已安装的软件包及其状态。下图显示了输出。
+
+![](img/Image00069.gif)
+
+单列包含以下信息：
+
+- `status` - 软件包的状态，例如已完全安装 (`ii`) 或已移除但仍配置 (`rc`)。
+
+- `name` - 软件包名称。
+
+- `version` - 软件包版本。
+
+- `architecture` - 构建软件包的架构或平台。
+
+- `description` - 软件包的简要描述。
+
+### 安装软件包
+
+要安装软件包，请使用`apt-get`命令。下面的输出显示了安装`htop`软件包的示例。
+
+```bash
+# apt-get install htop
+Reading package lists… Done
+Building dependency tree
+Reading state information… Done
+Suggested packages:      strace
+The following NEW packages will be installed:
+      htop
+0 upgraded, 1 newly installed, 0 to remove and 35 not updated.
+Need to get 88.2 kB of archives.
+After this operation, 224 kB of additional disk space will be used.
+Get:1 http:..ftp.us.debian.org/Debian stratch/main amd64 htop amd64 2.0.2-1 [88.2 kB]
+Fetched 88.2 kB in 1s (76.6 kB/s)
+Selecting previously unselected package htop. 
+(Reading database … 82741 files and directories currently installed.)
+Preparing to unpack …/htop_2.0.2-1_amd64.deb …
+Unpacking htop (2.0.2-1) …
+Processing triggers for mime-support (3.60) …
+Processing triggers for desktop-file-utils (0.23-1) …
+Processing triggers for man-db (2.7.6.1-2) …
+Setting up htop (2.0.2-1) …
+#
+```
+
+### 更新已安装软件包
+
+更新已安装软件包非常简单，按照以下方法即可：首先，按照本章前面的介绍使用`apt-get update`更新软件包列表。然后运行`apt-get install`来更新软件包。如果软件包有可用版本，将从软件包镜像获取新包，移除旧包并安装新包。
+
+### 移除已安装软件包
+
+移除已安装软件包的方法类似于安装或更新。`apt-get`命令具有移除软件包的选项，如下所示。
+
+```bash
+# apt-get remove htop
+Reading package lists… Done
+Building dependency tree
+Reading state information… Done
+The following packages will be REMOVED:
+      htop
+0 upgraded, 0 newly installed, 1 to remove and 35 not updated.
+After this operation, 224 kB of additional disk space will be freed.
+Do you want to continue? [Y/n]
+(Reading database … 82751 files and directories currently installed.)
+Removing htop (2.0.2-1) …
+Processing triggers for mime-support (3.60) …
+Processing triggers for desktop-file-utils (0.23-1) …
+Processing triggers for man-db (2.7.6.1-2) …
+#
+```
+
+
+
+此步骤会移除软件包的所有内容，保留配置文件。要彻底移除软件包及其配置文件，请按如下所示添加`--purge`参数：
+
+```
+# apt-get remove --purge htop
+#
+```
+
+## 寻找 Linux 替代方案
+
+你可能会发现某些程序与 Linux 不兼容，且仅为 Windows 或 macOS 创建。然而，Linux 的伟大之处在于，对于每一个 Windows 或 macOS 应用，几乎总有一个 Linux 替代方案。以下是寻找 Linux 专用应用的两个优秀资源。
+
+* [`www.linuxalt.com/`](https://www.linuxalt.com/)
+* [`linuxappfinder.com/alternatives`](https://linuxappfinder.com/alternatives)
+
+## 15 进程管理
+
+理解程序的执行对于成为一名优秀的系统管理员至关重要，对普通用户也很有用。在本章中，我们将更详细地查看进程，以及如何处理和操作进程。
+
+程序的运行实例被称为“进程”。它由程序指令、从文件中读取的数据以及其他程序或系统用户的输入组成。每个进程都会被分配一个进程 ID（`PID`），允许系统跟踪所有进程。系统启动过程有一个`PID` 0，然后初始进程具有`PID` 1，并按顺序此类推。初始进程`PID` 1 在较旧的 Linux 系统上是指`/sbin/initd`，在现代 Linux 系统上是指`/sbin/systemd`。
+
+### 15.1 进程相关操作
+
+#### ps 和 pstree
+
+要列出所有运行中的进程，请使用`ps`命令或`pstree`命令。
+
+```
+# ps
+PID     TTY             TIME           CMD
+628     pts/0           00:00:00        su
+629     pts/0           00:00:00        bash
+2507    pts/0           00:00:00        ps
+#
+```
+
+上述`ps`的输出包含四列，内容如下：
+
+* `PID`: 进程 ID。
+* `TTY`: 调用命令的终端。
+* `TIME`: 进程运行的时间。
+* `CMD`: 调用的命令。
+
+可以使用以下开关来获取额外信息：
+
+* `-e`: 显示所有进程。
+* `-p`: 显示指定进程的信息。
+* `-C`: 显示指定的命令。
+* `-u`: 显示属于该用户名的进程。
+
+```
+# ps -u
+PID     TTY             TIME           CMD
+628     pts/0           00:00:00        su
+629     pts/0           00:00:00        bash
+2507    pts/0           00:00:00        ps
+```
+
+`pstree`命令与`ps`类似，但它以树的形式显示进程。一个实用的开关是`-p`，它可以将进程 ID 添加到名称中。
+
+#### pidof
+
+`pidof`命令简单显示指定进程的 ID。
+
+```
+# pidof
+```
+
+#### pgrep
+
+`pgrep`是用于进程的`grep`命令。该命令遍历当前运行的进程并输出匹配模式的进程 ID。下面的示例显示了两次调用。第一次调用请求`pgrep`搜索名称包含字符串`term`的进程并仅输出进程 ID。第二次调用使用选项`-l`（`--list-name`的缩写）和`-a`（`--full`的缩写）来显示进程 ID 和对应的名称。
+
+```
+# pgrep term
+pgrep -la term
+```
+
+#### top
+
+`top`命令根据活跃程度显示进程。最活跃的进程位于顶部，列表每秒更新一次。单列包含进程 ID（`PID`）、所有者用户名（`USER`）、进程优先级（`PR`）、nice 值（`NI`）、虚拟内存使用（`VIRT`）、预留内存（`RES`）、共享内存（`SHR`）、CPU 和内存使用百分比（`%CPU`、`%MEM`）、进程运行时间（`TIME+`）以及用于调用进程的命令（`COMMAND`）。
+
+#### htop
+
+`htop`是一个额外的软件包（请参考第 4 章和第 14 章关于安装额外软件包的内容），包含一个具交互性的`top`版本。列布局与`top`类似。使用导航和功能键选择、排序或删除进程。功能键如下：
+
+* `F1`: 显示帮助。
+* `F2`: 配置`htop`。
+* `F3`: 在进程列表中搜索。
+* `F4`: 过滤终端输出。
+* `F5`: 以进程树的形式显示进程。
+* `F6`: 更改进程排序顺序。
+* `F7`: 降低选中进程的 nice 值。
+* `F8`: 增加选中进程的 nice 值。
+* `F9`: 终止选中进程。
+* `F10`: 退出程序。
+
+### 15.2 前台和后台进程
+
+进程有两种类型：前台进程和后台进程。前台进程通过终端会话初始化并控制。也就是说，必须有用户连接到系统启动这些进程，且进程在执行期间会占用终端。相反，后台进程不连接到终端，也不显式需要任何用户输入。因此，它们在等待完成时不占用终端，并允许你运行多个进程。
+
+可以使用`&`符号在后台初始化进程。
+
+```
+$ process1 &
+```
+
+要将运行中的进程发送到后台，请使用`bg`命令后接作业 ID。或者，`fg`会将进程发送到前台。你可以使用`jobs`命令显示当前正在运行的作业及其相关的作业 ID：
+
+```
+$ process1 &
+$ process2 &
+$ jobs
+[1]+ Running process1
+[2]- Running process2
+$
+```
+
+### 15.3 停止和终止进程
+
+如果一个运行中的程序变得无响应并导致系统负载过高，我们可以做些什么来停止并移除它？幸运的是，我们有几种选项允许我们向程序发送特定的信号来停止它。在本例中使用的命令是`kill`命令以及相应的开关。除此，我们还有以下开关：
+
+* `SIGHUP` (1) - 挂断信号。程序可以监听此信号并采取采取操作。当你关闭终端时，此信号会被发送到在终端中运行的进程。
+* `SIGINT` (2) - 中断信号。此信号发送给进程以中断它们。程序可以处理此信号并采取行动。你也可以通过在运行程序的终端窗口中输入`CTRL+C`直接发出此信号。
+* `SIGTERM` (15) - 终止信号。此信号发送给进程以终止它们。同样，程序可以处理此信号并采取行动，例如在终止之前将数据写入文件。这是`kill`命令在未指定信号时发送的默认信号。
+* `SIGKILL` (9) - 强制杀死信号。此信号会导致 Linux 内核立即终止进程。程序无法监听此信号。
+
+要终止并杀死一个名为`hangingProgram`的程序，你必须首先标识该程序。你可以通过使用`pgrep`如下所示找到相关的进程：
+
+```
+$ pgrep hangingProgram
+3167
+$
+```
+
+接下来，向标识的进程发送`SIGTERM`信号：
+
+```
+$ kill -SIGTERM 3167
+```
+
+作为替代方案，你可以按照如下方式调用`kill`：
+
+```
+$ kill -15 3167
+```
+
+或者，你也可以通过按下`CTRL+Z`停止挂起的进程，然后使用此命令删除进程：
+
+```
+$ kill -SIGKILL 3167
+```
+
+如上文所示，该命令的效果相同：
+
+```
+$ kill -9 3167
+```
+
+### 15.4 调整进程优先级
+
+你机器的处理器可以同时管理多个任务。我们可以为 CPU 在执行不同任务时设定需要遵循的准则。这些准则被称为`niceness`（性值）或`nice values`。Linux 的 niceness 范围从 -20 到 19，数字越小，表示任务的优先级越高。如果 nice 值很高（例如 19），任务将 own 设置为最低优先级，CPU 将在任何有机会时处理它。默认的 nice 值 0。
+
+你可以使用`ps`如下显示进程的 nice 级别：
+
+```
+$ ps -o pid,comm,nice -p 1808
+PID COMMAND NI
+1808 bash 0
+$
+```
+
+第一列包含进程 ID (PID)，第二列包含命令，第三列包含 nice 级别 (NI)。如上例所示，PID 为`1808`的`bash`进程的 nice 级别为 0。可以使用`renice`命令调整现有进程的 nice 级别。要将上述进程的 nice 级别降低到 10，请执行以下命令。记住，只有 root 用户才能对进程应用负的 nice 值。
+
+```
+$ renice 10 -p 1808
+```
+
+## 16. 系统与网络安全
+
+本章的理念是建立如何设置和运行安全系统的基本理解。在接下来的章节中，我们将关注更具实操性的方法，查看开放端口、现有和活动用户、限制远程访问、更新软件以及利用可用计算能力。
+
+### 16.1 开放端口
+
+如果你从一开始就开始关注，可能还记得我们使用极简安装设置了 Linux 发行版。我们只安装了实际需要的软件包，并在以后需要时再安装其他软件。我们建议所有新安装都这样做，因为其结果是一个非常精简、高性能的系统，所需的资源最少。第二个原因是有限的软件限制了系统内部潜在安全问题的数量。
+
+作为下一步，我们将检查从 Linux 系统外部可用的服务数量。这被称为端口扫描。协助我们的工具是命令行工具`netcat`和`nmap`（Network Mapper 的缩写），以及它的图形版本`zenmap`。
+
+#### netcat
+
+以下`nc`（`netcat`）命令开始扫描本地桌面系统（`localhost`）在端口 1 到 1024 之间可用的网络服务。开关`-zv`启用端口的详细扫描：
+
+```
+$ nc -zv localhost 1-1024
+localhost [127.0.0.1] 631 (ipp) open
+localhost [127.0.0.1] 111 (sunrpc) open
+localhost [127.0.0.1] 80 (http) open
+localhost [127.0.0.1] 25 (smtp) open
+localhost [127.0.0.1] 22 (ssh) open
+$
+```
+
+`nc`每行报告一个服务。上面的结果是：
+
+* `631`: 打印协议 (IPP)
+* `111`: Sunrpc
+* `80`: 超文本传输协议 (HTTP)
+* `25`: 简单邮件传输协议 (SMTP)
+* `22`: 安全 Shell (SSH)
+
+要检查端口是否开放，我们使用`nc -zv`。
+
+```
+nc -zv localhost 1-1024
+localhost [127.0.0.1] 631 (ipp) open
+localhost [127.0.0.1] 111 (sunrpc) open
+localhost [127.0.0.1] 80 (http) open
+localhost [127.0.0.1] 25 (smtp) open
+localhost [127.0.0.1] 22 (ssh) open
+```
+
+#### nmap
+
+我们将查看的下一个命令是`nmap`。开关`-T4`设置计时，`-A`启用操作系统检测。这一步骤被称为操作系统探测。
+
+```
+nmap -T4 -A localhost
+```
+
+报告非常详细，包含了有关检测到的操作系统以及服务的信息。两个结果显示从外部可访问的服务只有 OpenSSH（Open Shell 的缩写）。
+
+### 16.2 本地与远程用户
+
+Linux 系统的安全性包括用户及其账户。在第 10 章中我们查看了`w`、`who`和`users`等基本命令。现在我们将处理更高级的用户检测方法。
+
+要查看哪些本地账户，你可以查看`/etc/passwd`文件并验证这些条目。普通用户账户的用户 ID (UID) 从 1000 开始。
+
+为了查看哪些本地用户登录了系统，可以使用`lslogins`命令。`lslogins`从不同的配置文件提取用户信息并以非常漂亮的方式显示结果。
+
+以管理员身份调用时，`lslogins`会添加`PWD-LOCK`和`PWD-DENY`两列信息。这些列显示关联账户是否被锁定，或者是否拒绝通过密码登录。
+
+![](img/Image00075.gif)
+
+为了查看特定用户的详细信息，`lslogins`使用切换开关`-u`后跟用户名，以及使用`--time iso`以可读的格式显示时间。
+
+```
+# lslogins -u user --time iso
+Username:           user
+UID:           1000
+Gecos field:           Debian User,123,456,135
+Home directory:           /home/user
+Shell:             /bin/bash
+No login:           no
+Password is locked:           no
+Password not required:           no
+Login by password disabled:           no
+Primary group:           user
+GID:           1000
+Supplementary groups:           Bluetooth, cdrom, floppy, audio, dip, video, plugdev, netdev
+Supplementary group IDs:           111, 24, 25, 29, 30, 44, 46, 108
+Hushed:           no
+Password expiration warn interval:           7
+Password changed:           2018-08-20
+Maximum change time:           99999
+Running processes:           32
+Last logs:
+2020-10-05T12:11:19+0200 systemd[438]: Time has been changed
+2020-10-05T12:11:52+0200 systemd[438]: Time has been changed
+2020-10-05T12:12:24+0200 systemd[438]: Time has been changed
+#
+```
+
+如上所述，`lslogins`仅评估本地登录尝试。要检索来自远程系统的登录尝试，请使用`getent`命令。它还评估支持`/etc/nsswitch.conf`中配置的服务名称切换（NSS）库的数据库，涵盖了轻量级目录访问协议（LDAP）和网络信息系统（NIS）等服务。要获取用户`cararo`的信息，按如下方式调用`getent`：
+
+```
+$ getent passwd caroaro
+x:1005:1005:Caro,,,:/home/caro:/bin/bash
+$
+```
+
+这两个命令`last`和`lastlog`也可以显示哪些用户最后登录了。`last`报告详细的登录情况，如下所示。这些列包含用户名、终端和会话信息。
+
+```
+$ last
+user pts/13 :0 Fri Oct 5 09:41 still logged in
+user pts/13 :0 Thu Oct 4 15:12 - 15:24 (00:12)
+user pts/13 :0 Thu Oct 4 14:28 - 14:59 (00:31)
+user pts/11 :0 Thu Oct 4 14:12 still logged in
+user pts/8 :0 Thu Oct 4 14:04 still logged in
+user pts/8 :0 Thu Oct 4 11:34 - 11:49 (00:15)
+$
+```
+
+`lastlog`命令打印最后登录用户的统计信息。下方的第一个示例显示了所有用户的情况，第二个示例显示了特定用户的情况。
+
+![](img/Image00076.gif)
+
+![](img/Image00077.gif)
+
+### 16.3 限制远程访问
+
+Linux 具有限制对系统的远程访问的能力。`/etc/hosts.allow`和`/etc/hosts.deny`两个文件调节来自其他系统对 TCP 服务的访问。该限制涵盖了单个主机、IP 地址和整个网段。
+
+`/etc/hosts.allow`文件显式地允许访问，而`/etc/hosts.deny`禁止访问。由于`/etc/hosts.allow`文件中的访问规则首先应用，因此它们的优先级高于`/etc/hosts.deny`中指定的规则。因此，如果`/etc/hosts.allow`允许对某个服务的访问，则`/etc/hosts.deny`中拒绝该相同服务的规则将否忽略。
+
+第一个示例说明了如何限制所有以`example.net`结尾的主名的设备的 SSH 访问：
+
+```
+# /etc/hosts.deny
+ALL: ALL
+# /etc/hosts.allow
+sshd : .example.net
+```
+
+第二个示例限制了来自`192.168.30.*`子网 IP 地址的设备访问：
+
+```
+# /etc/hosts.deny
+ALL: ALL
+# /etc/hosts.allow
+ALL : 192.168.30.*
+```
+
+第三个示例显示了如何允许所有以`example.net`结尾的主名的访问，但`login.example.net`除外：
+
+```
+# /etc/hosts.deny
+ALL: ALL
+# /etc/hosts.allow
+sshd : .example.net EXCEPT login.example.net
+```
+
+
+
+注意，TCP 封装服务不会缓存主机访问文件中的规则，因此`/etc/hosts.allow`或`/etc/hosts.deny`的任何更改将立即生效，无需重启网络服务。
+
+### 16.4 未使用的软件
+
+除了端口和账户，我们还必须查看系统上安装的软件。正如我们之前提到的，在软件方面，越少越好。这条规则背后的想法是保持你的服务器精简高效。只安装你真正需要的软件包。如果存在提供未未使用服务的需要的包，请删除它们。安装的包越少，出现未修补代码和安全问题的概率就越小。
+
+可以使用`deborphan`识别残留的软件包。下方的示例显示了`deborphan`发现了两个包：`iceweasel`和`netcat`。第一列显示包的大小，后面是包类别（main/oldlibs）、包名，然后是包的类型（extra）。
+
+```bash
+# deborphan -szP     235 main/oldlibs           iceweasel           extra      32 main/oldlibs           netcat           extra# |
+```
+
+可以使用下面的命令删除不再需要的包。这可以清理系统中的残留未用库和旧依赖项。
+
+```bash
+# apt-get autoremove
+```
+
+删除未使用的软件非常有帮助。保持剩余包处于最新状态也很重要，我们在第 14 章中讨论过。
+
+### 16.5 有用的网络和系统命令
+
+#### `uname`
+
+`uname`是 UNIX name 的缩写。该命令显示系统信息，例如 Linux 内核的准确名称和版本以及你计算机的主机名。
+
+下面的示例显示了使用参数`-a`（`all`的缩写）调用`uname`命令。输出包含操作系统名称（Linux）、主机名（debian106）、内核版本及其编译日期（4.9.8-7-amd64 #1 SMP Debian 4.9.110-1 (2018-07-05））以及系统架构（x86_64）。
+
+```bash
+$ uname -a
+Linux debian106 4.9.0-7-amd64 #1 SMP Debian 4.9.110-1 (2018-07-05) x86_64 GNU/Linux
+```
+
+#### `uptime`
+
+`uptime`显示系统运行了多久。它显示当前时间（07:36），随后是运行时间（21:56）、登录用户数（1）以及平均负载（load average: 0.47, 0.43, 0.29），持续最后 15 分钟。
+
+```bash
+$ uptime
+07:36 up 21:56, 1 user, load average: 0.47, 0.43, 0.29
+```
+
+若要以更好的方式查看运行时间，请使用选项`-p`（`pretty`的缩写）。下方的示例显示了人类易读的版本。系统已运行 22 小时。
+
+```bash
+$ uptime -p
+up 22 hours
+```
+
+#### `ip`
+
+`ip`命令（带有关键字`address show`）显示当前的网络配置。下方的示例显示了回环接口（lo）和以太网接口（enp0s3）。以太网接口配置了 IP 地址`10.0.2.15`。网络接口缩写为：
+
+- `Lo`：回环接口。用于访问本地代理或 Web 服务器。
+- `eth0`：连接到交换机或路由器的以太网接口。
+- `wlan0`：无线接口。
+- `ppp0`：第点对点接口，通过 VPN 或拨号连接。
+
+```bash
+$ ip address show
+1: lo: <LOOPBACK, UP, LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+  link/loopback 00: 00: 00: 00: 00: 00 brd 00: 00: 00: 00: 00: 00
+  inet 127.0.0.1/8 scope host
+  valid_lft forever preferred_lft forever
+  inet6 ::1/128 scope host
+  valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST, UP, LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+  link/ether 08: 00: 27: e3: 5c: 79 brd ff: ff: ff: ff: ff: ff
+  inet 10.0.2.15/24 brd 10.0.2.255 scope global enp0s3
+  valid_lft forever preferred_lft forever
+  inet6 fe80::a00:27ff:fee3:5c79/64 scope link
+  valid_lft forever preferred_lft forever
+```
+
+#### `ping`
+
+`ping`向指定的 IP 地址或主机名发送 ICMP 网络数据包，并显示往返时间。下方的示例演示了主机`http://www.google.com`的操作。
+
+```bash
+$ ping google.com
+PING google.com (127.217.23.142) 56(84) bytes of data.
+64 bytes from fra16s18-in-f14.1e100.net (172.217.23.142): icp_seq=1 ttl=63 time=36.9 ms
+64 bytes from fra16s18-in-f14.1e100.net (172.217.23.142): icp_seq=2 ttl=63 time=37.9 ms
+64 bytes from fra16s18-in-f14.1e100.net (172.217.23.142): icp_seq=3 ttl=63 time=40.1 ms
+^C
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 36.953/38.353/40.193/1.377 ms
+```
+
+# 17. 共享库
+
+Linux 与任何其他操作系统一样，都包含了用于不同目的的文件集合，例如二进制文件（编译后的程序代码）、运行时解释代码（用 Perl 或 Python 等程序编写的代码）、配置文件、日志文件、库和用户数据。
+
+在编程世界中，库（library）是一系列预编译的代码片段，它们可以在其他程序中使用。这些库包含了函数、类和数据结构。它们允许重用已经存在并经过测试的代码，因此用户不需要重复发明轮子。结果是，库极大地简化了程序员的生活。Linux 中最突出的库示例是标准 C 库`libc`以及`libc`的 GNU 版本`glibc`。
+
+Linux 区分了静态链接和动态链接的二进制程序。静态链接意味着库中的例程（routines）成为了程序的一部分。相比之下，动态链接意味着库中的例程仅被引用而不成为程序的一部分。静态链接的程序彼此完全独立，但需要更多的磁盘空间。动态链接的程序较小，但依赖于引用的库，这意味着如果引用的库已经在内存中，它们的加载速度会更快。这些库被称为共享库或动态库。
+
+## 17.1 命名规范
+
+共享库的文件名通常用`.so`扩展，它是 shared object（共享对象）的缩写。除了文件名，共享库还有一个被称为`soname`的库名。例如，`libc`的`soname`是`libc.so.6`。在这里，`lib`是前缀，`c`是描述性名称，`so`是 shared object 的缩写，而`6`是库的版本（应用程序二进制接口 ABI 的版本）。包含路径的文件名为`/lib64/libc.so.6`。注意，`soname`是指向文件名的符号链接。
+
+通常这些文件存在于以下目录：
+
+- 默认路径：`/usr/local/lib`、`/usr/local/lib64`、`/usr/lib`、`/usr/lib64`。
+- 系统启动库：`/lib`、`/lib64`。
+
+然而，程序员可以在自定义位置安装库。库路径在配置文件`/etc/ld.so.conf`中定义。可以通过以下方式定义库的位置：
+
+```bash
+cat /etc/ld.so.conf
+include /etc/ld.so.conf.d/*.conf
+```
+
+以下命令说明了如何使用`find`命令在你的 Linux 系统上查找共享库：
+
+```bash
+find / -name *.so
+/lib/klibc-IpHHGKKbZi_yZ7GPagmQz2GwVAQ.so
+/lib/security/pam_vbox.so
+/lib/security/pam_gnome_keyring.so
+/lib/x86_64-linux-gnu/libnss_hesiod-2.19.so
+/lib/x86_64-linux-gnu/libnss_compat-2.19.so
+/lib/x86_64-linux-gnu/libnss_files-2.19.so
+/lib/x86_64-linux-gnu/libnss_dns-2.19.so
+/lib/x86_64-linux-gnu/security/pam_namespace.so
+/lib/x86_64-linux-gnu/security/pam_env.so
+/lib/x86_64-linux-gnu/security/pam_filter.so
+...
+```
+
+## 17.2 使用 `ldd` 识别引用的库
+
+要找出二进制文件使用了哪些共享对象，我们可以使用`ldd`命令。例如，要查找文件管理器 Midnight Commander（`mc`）的共享对象，请输入`ldd /usr/bin/mc`。输出中的每一行由`soname`后跟文件名和括号中的哈希值组成。
+
+```bash
+ldd /usr/bin/mc
+    linux-vdso.so.1 (0x00007ffd555fb000)
+    libslang.so.2 => /lib/x86_64-linux-gnu/libslang.so.2 (0x00007f483d6bb000)
+    libgpm.so.2 => /lib/x86_64-linux-gnu/libgpm.so.2 (0x00007f483d4b500)
+    libext2fs.so.2 => /lib/x86_64-linux-gnu/libext2fs.so.2 (0x00007f483d26e00)
+    libssh2.so.1 => /lib/x86_64-linux-gnu/libssh2.so.1 (0x00007f483d04500)
+    libgmodule-2.0.so.0 => /lib/x86_64-linux-gnu/libgmodule-2.0.so.0 (0x00007f48ce41000)
+    libglib-2.0.so.0 => /lib/x86_64-linux-gnu/libglib-2.0.so.0 (0x00007f48cb31000)
+    libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f48c914000)
+    libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f48c569000)
+    libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f48c364000)
+    libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f48c063000)
+    libcom_err.so.2 => /lib/x86_64-linux-gnu/libcom_err.so.2 (0x00007f48be5f000)
+    libz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x00007f48bc4300)
+    libgcrypt.so.20 => /lib/x86_64-linux-gnu/libgcrypt.so.20 (0x00007f48b96200)
+    libpcre.so.3 => /lib/x86_64-linux-gnu/libpcre.so.3 (0x00007f48b5f700)
+    lib-error.so.0 => /lib/x86_64-linux-gnu/lib-error.so.0 (0x00007f48b4e100)
+```
+
+如果二进制文件是静态链接的，库中的例程成为了程序的一部分。相比之下，动态链接意味着库中的例程仅被引用而不成为程序的一部分。
+
+## 17.3 使用 `objdump` 识别引用的库
+
+要找出二进制文件使用了哪些共享对象，我们可以使用`objdump`命令。例如，要查看 Midnight Commander（`mc`）文件的共享对象，输入`objdump -p /usr/bin/mc | grep NEEDED`。输出中`NEEDED`的行包含了所需的库。
+
+```bash
+objdump -p /usr/bin/mc | grep NEEDED
+NEEDED: libslang.so.2
+NEEDED: libgpm.so.2
+NEEDED: libext2fs.so.2
+NEEDED: libssh2.so.1
+NEEDED: libgmodule-2.0.so.0
+NEEDED: libglib-2.0.so.0
+NEEDED: libpthread.so.0
+NEEDED: libc.so.6
+NEEDED: libdl.so.2
+NEEDED: libm.so.6
+NEEDED: libcom_err.so.2
+NEEDED: libz.so.1
+NEEDED: libgcrypt.so.20
+NEEDED: libpcre.so.3
+NEEDED: lib-error.so.0
+```
+
+## 17.4 使用 `grep` 识别引用的库
+
+你可以使用`grep`来过滤`ldd`的输出，以查找特定的库。
+
+```bash
+ldd /usr/bin/mc | grep libc
+```
+
+| …Oct 1 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): session opened for user root by (uid=0)Oct 1 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): session closed for user rootOct 1 09:04:14 debian106 systemd-logind[323]: Operation 'sleep' finished.Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event3 (Power Button)Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event4 (Sleep Button)Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event5 (Video Bus)Oct 1 15:09:03 debian106 systemd-logind[342]: New seat seat0.Oct 1 15:09:04 debian106 sshd[392]: Server listening on 0.0.0.0 port 22.Oct 1 15:09:04 debian106 sshd[392]: Server listening on :: port 22.Oct 1 15:09:04 debian106 sshd[392]: Received SIGNUP; restarting.… |
+
+`/var/log/kern.log`
+
+在这里你将找到与 Linux 内核相关的消息。
+
+
+
+| ...Oct 8 19:19:34 debian106 kernel: [893330.867019] usb 2-1: new low-speed USB device number 37 using xhci_hcdOct 8 19:19:34 debian106 kernel: [893331.000139] usb 2-1: New USB device found, idVendor=046d, idProduct=c03dOct 8 19:19:34 debian106 kernel: [893331.000142] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0Oct 8 19:19:34 debian106 kernel: [893331.000144] usb 2-1: Product: USB-PS/2 Optical MouseOct 8 19:19:34 debian106 kernel: [893331.000145] usb 2-1: Manufacturer: LogitechOct 8 19:19:34 debian106 kernel: [893331.000259] usb 2-1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframesOct 8 19:19:34 debian106 kernel: [893331.004037] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.0/0003:046D:C03D.001B/input/input45Oct 8 19:19:34 debian106 kernel: [893331.004198] hid-generic 0003:046D:C03D.001B: input hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:00:14.0-1/input0... |
+
+`/var/log/dpkg.log`
+
+该文件属于`dpkg`（我们在第 14 章中讨论过），记录了与安装、更新和删除包相关的更改。
+
+| ...2020-10-06 21:52:41 startup packages configure2020-10-06 21:53:21 startup archives unpack2020-10-06 21:53:21 upgrade php5-gd:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 status triggers-pending libapache2-mod-php5:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status half-configured php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status half-installed php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 upgrade php-readline:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u1 |
+
+`/var/log/apt/history`
+
+与上文件类似，该文件记录了`apt`执行的安装、更新和删除包的更改。
+
+| ....Start-Date: 2018-10-06 21:50:02Upgrade: imagemagick-6.q16:amd64 (6.8.9.5+deb8u13, 6.8.9.5+deb8u14), imagemagick:amd64 (6.8.9.5+deb8u13)End-Date: 2018-10-06 21:50:04Start-Date: 2018-10-06 21:51:05Upgrade: bind-host:amd64 (9.9.5.5+deb8u15, 9.9.5.5+deb8u14), lwres:amd64 (9.9.5.5+deb8u15), libdns:amd64 (9.9.5.5+deb8u15), libiscfg:amd64 (9.9.5.5+deb8u15), libbind-9.9.5.5+deb8u1), dnsutils:amd64 (9.9.5.5+deb8u15), libisc:amd64 (9.9.5.5+deb8u16)End-Date: 2018-10-06 21:51:07.... |
+
+## 18.2 常用命令与图形化工具
+
+除了上述的日志文件外，还有系统命令可以显示你机器的相关信息。
+
+### dmesg
+
+如第 8 章所述，此命令允许你查看整个启动过程，包括 BIOS 消息。
+
+```bash
+dmesg
+```
+
+### journalctl -b
+
+同样在第 8 章介绍，此命令显示系统的启动消息。
+
+```bash
+journalctl -b
+```
+
+### journalctl _UID=1000
+
+此命令显示特定用户的日志条目。在此实例中，它显示用户 ID 为`1000`的用户的条目。
+
+```bash
+journalctl _UID=1000
+```
+
+### journalctl --disk-usage
+
+要查看存储日志文件需要多少磁盘空间，如下使用开关`--disk-usage`：
+
+```bash
+journalctl --disk-usage
+```
+
+
+
+### `/var/log/syslog`
+
+```text
+…Oct 1 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct 1 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): session closed for user root
+Oct 1 09:04:14 debian106 systemd-logind[323]: Operation 'sleep' finished.
+Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event3 (Power Button)
+Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event4 (Sleep Button)
+Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event5 (Video Bus)
+Oct 1 15:09:03 debian106 systemd-logind[342]: New seat seat0.
+Oct 1 15:09:04 debian106 sshd[392]: Server listening on 0.0.0.0 port 22.
+Oct 1 15:09:04 debian106 sshd[392]: Server listening on :: port 22.
+Oct 1 15:09:04 debian106 sshd[392]: Received SIGNUP; restarting.
+…
+```
+
+### `/var/log/kern.log`
+
+在这里你将找到与 Linux 内核相关的消息。
+
+```text
+...Oct 8 19:19:34 debian106 kernel: [893330.867019] usb 2-1: new low-speed USB device -number 37 using xhci_hcd
+Oct 8 19:19:34 debian106 kernel: [893331.000139] usb 2-1: New USB device found, -idVendor=046d, idProduct=c03d
+Oct 8 19:19:34 debian106 kernel: [893331.000142] usb 2-1: New USB device strings: Mfr -=1, Product=2, SerialNumber=0
+Oct 8 19:19:34 debian106 kernel: [893331.000144] usb 2-1: Product: USB-PS/2 Optical -Mouse
+Oct 8 19:19:34 debian106 kernel: [893331.000145] usb 2-1: Manufacturer: Logitech
+Oct 8 19:19:34 debian106 kernel: [893331.000259] usb 2-1: ep 0x81 - rounding interval -to 64 microframes, ep desc says 80 microframes
+Oct 8 19:19:34 debian106 kernel: [893331.004037] input: Logitech USB-PS/2 Optical Mouse -as /devices/pci000000000000:00:14.0/usb2/2-1/2-1:1.0/0003:046D:C03D.001B/input/ -input45
+Oct 8 19:19:34 debian106 kernel: [893331.004198] hid-generic 0003:046D:C03D.001B: input -hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb --0000:00:14.0-1/input0...
+```
+
+### `/var/log/dpkg.log`
+
+该文件属于 `dpkg`（我们在第 14 章中讨论过），记录了与安装、更新和删除包相关的更改。
+
+```text
+...2020-10-06 21:52:41 startup packages configure
+2020-10-06 21:53:21 startup archives unpack
+2020-10-06 21:53:21 upgrade php5-gd:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u1
+2020-10-06 21:53:21 status triggers-pending libapache2-mod-php5:amd64 5.6.36+dfsg-0+deb8u1
+2020-10-06 21:53:21 status half-configured php5-gd:amd64 5.6.36+dfsg-0+deb8u1
+2020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.36+dfsg-0+deb8u1
+2020-10-06 21:53:21 status half-installed php5-gd:amd64 5.6.36+dfsg-0+deb8u1
+2020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u1
+2020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u1
+2020-10-06 21:53:21 upgrade php-readline:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u1
+```
+
+### `/var/log/apt/history`
+
+与上一个文件类似，该文件记录了 `apt` 执行的安装、更新和删除包的更改。
+
+```text
+....Start-Date: 2018-10-06 21:50:02
+Upgrade: imagemagick-6.q16:amd64 (6.8.9.5+deb8u13, 6.8.9.5+deb8u14), imagemagick:amd64 (6.8.9.5+deb8u13)
+End-Date: 2018-10-06 21:50:04
+Start-Date: 2018-10-06 21:51:05
+Upgrade: bind-host:amd64 (9.9.5.5+deb8u15, 9.9.5.5+deb8u14), lwres:amd64 (9.9.5.5+deb8u15), libdns:amd64 (9.9.5.5+deb8u15), libiscfg:amd64 (9.9.5.5+deb8u15), libbind-9.9.5.5+deb8u1), dnsutils:amd64 (9.9.5.5+deb8u15), libisc:amd64 (9.9.5.5+deb8u16)
+End-Date: 2018-10-06 21:51:07
+....
+```
+
+## 18.2 常用命令与图形化工具
+
+除了上述的日志文件外，还有系统命令可以显示你机器的相关信息。
+
+### `dmesg`
+
+如第 8 章所述，此命令允许你查看整个启动过程，包括 BIOS 消息。
+
+```bash
+dmesg
+```
+
+### `journalctl -b`
+
+同样在第 8 章介绍，此命令显示系统的启动消息。
+
+```bash
+journalctl -b
+```
+
+### `journalctl _UID=1000`
+
+此命令显示特定用户的日志条目。在此实例中，它显示用户 ID 为 `1000` 的用户的条目。
+
+```bash
+journalctl _UID=1000
+```
+
+### `journalctl --disk-usage`
+
+要查看存储日志文件需要多少磁盘空间，如下使用开关 `--disk-usage`：
+
+```bash
+journalctl --disk-usage
+```
+
+
+
+| …Oct 1 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): session opened for user root by (uid=0)Oct 1 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): session closed for user rootOct 1 09:04:14 debian106 systemd-logind[323]: Operation 'sleep' finished.Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event3 (Power Button)Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event4 (Sleep Button)Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event5 (Video Bus)Oct 1 15:09:03 debian106 systemd-logind[342]: New seat seat0.Oct 1 15:09:04 debian106 sshd[392]: Server listening on 0.0.0.0 port 22.Oct 1 15:09:04 debian106 sshd[392]: Server listening on :: port 22.Oct 1 15:09:04 debian106 sshd[392]: Received SIGNUP; restarting.… |
+
+`/var/log/kern.log`
+
+在这里你将找到与 Linux 内核相关的消息。
+
+| ...Oct 8 19:19:34 debian106 kernel: [893330.867019] usb 2-1: new low-speed USB device  -number 37 using xhci_hcdOct 8 19:19:34 debian106 kernel: [893331.000139] usb 2-1: New USB device found,  -idVendor=046d, idProduct=c03dOct 8 19:19:34 debian106 kernel: [893331.000142] usb 2-1: New USB device strings: Mfr  -=1, Product=2, SerialNumber=0Oct 8 19:19:34 debian106 kernel: [893331.000144] usb 2-1: Product: USB-PS/2 Optical  -MouseOct 8 19:19:34 debian106 kernel: [893331.000145] usb 2-1: Manufacturer: LogitechOct 8 19:19:34 debian106 kernel: [893331.000259] usb 2-1: ep 0x81 - rounding interval  -to 64 microframes, ep desc says 80 microframesOct 8 19:19:34 debian106 kernel: [893331.004037] input: Logitech USB-PS/2 Optical Mouse  -as /devices/pci000000000000:00:14.0/usb2/2-1/2-1:1.0/0003:046D:C03D.001B/input/  -input45Oct 8 19:19:34 debian106 kernel: [893331.004198] hid-generic 0003:046D:C03D.001B: input  -hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb  --0000:00:14.0-1/input0... |
+
+`/var/log/dpkg.log`
+
+该文件属于 `dpkg`（我们在第 14 章中讨论过），记录了与安装、更新和删除包相关的更改。
+
+| ...2020-10-06 21:52:41 startup packages configure2020-10-06 21:53:21 startup archives unpack2020-10-06 21:53:21 upgrade php5-gd:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 status triggers-pending libapache2-mod-php5:amd64 5.6.36+dfsg-0+  -deb8u12020-10-06 21:53:21 status half-configured php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status half-installed php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 upgrade php-readline:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u1 |
+
+`/var/log/apt/history`
+
+与上一个文件类似，该文件记录了 `apt` 执行的安装、更新和删除包的更改。
+
+| ....Start-Date: 2018-10-06 21:50:02Upgrade: imagemagick-6.q16:amd64 (6.8.9.5+deb8u13, 6.8.9.5+deb8u14), imagemagick:amd64 (6.8.9.5+deb8u13)End-Date: 2018-10-06 21:50:04Start-Date: 2018-10-06 21:51:05Upgrade: bind-host:amd64 (9.9.5.5+deb8u15, 9.9.5.5+deb8u14), lwres:amd64 (9.9.5.5+deb8u15), libDNS:amd64 (9.9.5.5+deb8u15), libiscfg:amd64 (9.9.5.5+deb8u15), libbind-9.9.5.5+deb8u1), dnsutils:amd64 (9.9.5.5+deb8u15), libisc:amd64 (9.9.5.5+deb8u16)End-Date: 2018-10-06 21:51:07.
+
+## 18.2 常用命令与图形化工具
+
+除了上述的日志文件外，还有系统命令可以显示你机器的相关信息。
+
+### dmesg
+
+如第 8 章所述，此命令允许你查看整个启动过程，包括 BIOS 消息。
+
+```
+dmesg
+```
+
+### journalctl -b
+
+同样在第 8 章介绍，此命令显示系统的启动消息。
+
+```
+journalctl -b
+```
+
+### journalctl _UID=1000
+
+此命令显示特定用户的日志条目。在此实例中，它显示用户 ID 为 `1000` 的用户的条目。
+
+```
+journalctl _UID=1000
+```
+
+### journalctl --disk-usage
+
+要查看存储日志文件需要多少磁盘空间，如下使用开关`--disk-usage`：
+
+```
+journalctl --disk-usage
+```
+
+
+
+| …Oct 1 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): session opened for user root by (uid=0)Oct 1 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): session closed for user rootOct 1 09:04:14 debian106 systemd-logind[323]: Operation 'sleep' finished.Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event3 (Power Button)Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event4 (Sleep Button)Oct 1 15:09:03 debian106 systemd-logind[342]: Watching system buttons on /dev/input/event5 (Video Bus)Oct 1 15:09:03 debian106 systemd-logind[342]: New seat seat0.Oct 1 15:09:04 debian106 sshd[392]: Server listening on 0.0.0.0 port 22.Oct 1 15:09:04 debian106 sshd[392]: Server listening on :: port 22.Oct 1 15:09:04 debian106 sshd[392]: Received SIGNUP; restarting.… |
+
+`/var/log/kern.log`
+
+在这里你将找到与 Linux 内核相关的消息。
+
+| ...Oct 8 19:19:34 debian106 kernel: [893330.867019] usb 2-1: new low-speed USB device  -number 37 using xhci_hcdOct 8 19:19:34 debian106 kernel: [893331.000139] usb 2-1: New USB device found,  -idVendor=046d, idProduct=c03dOct 8 19:19:34 debian106 kernel: [893331.000142] usb 2-1: New USB device strings: Mfr  -=1, Product=2, SerialNumber=0Oct 8 19:19:34 debian106 kernel: [893331.000144] usb 2-1: Product: USB-PS/2 Optical  -MouseOct 8 19:19:34 debian106 kernel: [893331.000145] usb 2-1: Manufacturer: LogitechOct 8 19:19:34 debian106 kernel: [893331.000259] usb 2-1: ep 0x81 - rounding interval  -to 64 microframes, ep desc says 80 microframesOct 8 19:19:34 debian106 kernel: [893331.004037] input: Logitech USB-PS/2 Optical Mouse  -as /devices/pci000000000000:00:14.0/usb2/2-1/2-1:1.0/0003:046D:C03D.001B/input/  -input45Oct 8 19:19:34 debian106 kernel: [893331.004198] hid-generic 0003:046D:C03D.001B: input  -hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb  --0000:00:14.0-1/input0... |
+
+`/var/log/dpkg.log`
+
+该文件属于 `dpkg`（我们在第 14 章中讨论过），记录了与安装、更新和删除包相关的更改。
+
+| ...2020-10-06 21:52:41 startup packages configure2020-10-06 21:53:21 startup archives unpack2020-10-06 21:53:21 upgrade php5-gd:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 status triggers-pending libapache2-mod-php5:amd64 5.6.36+dfsg-0+  -deb8u12020-10-06 21:53:21 status half-configured php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status half-installed php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 upgrade php-readline:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u1 |
+
+`/var/log/apt/history`
+
+与上一个文件类似，该文件记录了 `apt` 执行的安装、更新和删除包的更改。
+
+| ....Start-Date: 2018-10-06 21:50:02Upgrade: imagemagick-6.q16:amd64 (6.8.9.5+deb8u13, 6.8.9.5+deb8u14), imagemagick:amd64 (6.8.9.5+deb8u13)End-Date: 2018-10-06 21:50:04Start-Date: 2018-10-06 21:51:05Upgrade: bind-host:amd64 (9.9.5.5+deb8u15, 9.9.5.5+deb8u14), lwres:amd64 (9.9.5.5+deb8u15), libDNS:amd64 (9.9.5.5+deb8u15), libiscfg:amd64 (9.9.5.5+deb8u15), libbind-9.9.5.5+deb8u1), dnsutils:amd64 (9.9.5.5+deb8u15), libisc:amd64 (9.9.5.5+deb8u16)End-Date: 2018-10-06 21:51:07....
+
+## 18.2 常用命令与图形化工具
+
+除了上述的日志文件外，还有系统命令可以显示你机器的相关信息。
+
+### dmesg
+
+如第 8 章所述，此命令允许你查看整个启动过程，包括 BIOS 消息。
+
+```bash
+dmesg
+```
+
+## journalctl -b
+
+同样在第 8 章介绍，此命令显示系统的启动消息。
+
+```bash
+journalctl -b
+```
+
+### journalctl _UID=1000
+
+此命令显示特定用户的日志条目。在此实例中，它显示用户 ID 为 `1000` 的用户的条目。
+
+```bash
+journalctl _UID=1000
+```
+
+### journalctl --disk-usage
+
+要查看存储日志文件需要多少磁盘空间，如下使用开关 `--disk-usage`：
+
+```bash
+journalctl --disk-usage
+```
+
+对不起，我之前的回复中出现了严重的逻辑错误。以下是针对您提供的文本的正确翻译：
+
+[content]
+
+| …10 月 1 日 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): 用户 root 的会话已打开 (uid=0)10 月 1 日 07:30:01 debian106 CRON[4251]: pam_unix(cron:session): 用户 root 的会话已关闭 10 月 1 日 09:04:14 debian106 systemd-logind[323]: 操作 'sleep' 已完成。10 月 1 日 15:09:03 debian106 systemd-logind[342]: 监控 /dev/input/event3 (电源按钮)10 月 1 日 15:09:03 debian106 systemd-logind[342]: 监控 /dev/input/event4 (睡眠按钮)10 月 1 日 15:09:03 debian106 systemd-logind[342]: 监控 /dev/input/event5 (视频总线)10 月 1 日 15:09:03 debian106 systemd-logind[342]: 新席 seat0。10 月 1 日 15:09:04 debian106 sshd[392]: 服务器在 0.0.0.0 端口 22 上监听。10 月 1 日 15:09:04 debian106 sshd[392]: 服务器在 :: 端口 22 上监听。10 月 1 日 15:09:04 debian106 sshd[392]: 接收 SIGNUP；正在重启… |
+
+`/var/log/kern.log`
+
+在这里你将找到与 Linux 内核相关的消息。
+
+| ...10 月 8 日 19:19:34 debian106 kernel: [893330.867019] usb 2-1: 新低速 USB 设备  -编号 37 使用 xhci_hcd10 月 8 日 19:19:34 debian106 kernel: [893331.000139] usb 2-1: 发现新 USB 设备，  -idVendor=046d, idProduct=c03d10 月 8 日 19:19:34 debian106 kernel: [893331.000142] usb 2-1: 新 USB 设备字符串: Mfr  -=1, Product=2, SerialNumber=010 月 8 日 19:19:34 debian106 kernel: [893331.000144] usb 2-1: 产品: USB-PS/2 光学鼠标 10 月 8 日 19:19:34 debian106 kernel: [893331.000145] usb 2-1: 制造商: Logitech10 月 8 日 19:19:34 debian106 kernel: [893331.000259] usb 2-1: ep 0x81 - 轮询间隔  -调整到 64 微帧，ep desc 说为 80 微帧 10 月 8 日 19:19:34 debian106 kernel: [893331.004037] input: Logitech USB-PS/2 光学鼠标  -作为 /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.0/0003:046D:C03D.001B/input/  -input4510 月 8 日 19:19:34 debian106 kernel: [893331.004198] hid-generic 0003:046D:C03D.001B: input  -hidraw0: USB HID v1.10 鼠标 [Logitech USB-PS/2 光学鼠标] 在 usb  --0000:00:14.0-1/input0... |
+
+`/var/log/dpkg.log`
+
+该文件属于 `dpkg`（我们在第 14 章中讨论过），记录了与安装、更新和删除包相关的更改。
+
+| ...2020-10-06 21:52:41 startup packages configure2020-10-06 21:53:21 startup archives unpack2020-10-06 21:53:21 upgrade php5-gd:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 status triggers-pending libapache2-mod-php5:amd64 5.6.36+dfsg-0+  -deb8u12020-10-06 21:53:21 status half-configured php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status half-installed php5-gd:amd64 5.6.36+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 status unpacked php5-gd:amd64 5.6.38+dfsg-0+deb8u12020-10-06 21:53:21 upgrade php-readline:amd64 5.6.36+dfsg-0+deb8u1 5.6.38+dfsg-0+deb8u1 |
+
+`/var/log/apt/history`
+
+与上一个文件类似，该文件记录了 `apt` 执行的安装、更新和删除包的更改。
+
+| ....Start-Date: 2018-10-06 21:50:02Upgrade: imagemagick-6.q16:amd64 (6.8.9.5+deb8u13, 6.8.9.5+deb8u14), imagemagick:amd64 (6.8.9.5+deb8u13)End-Date: 2018-10-06 21:50:04Start-Date: 2018-10-06 21:51:05Upgrade: bind-host:amd64 (9.9.5.5+deb8u15, 9.9.5.5+deb8u14), lwres:amd64 (9.9.5.5+deb8u15), libDNS:amd64 (9.9.5.5+deb8u15), libiscfg:amd64 (9.9.5.5+deb8u15), libbind-9.9.5.5+deb8u1), dnsutils:amd64 (9.9.5.5+deb8u15), libisc:amd64 (9.9.5.5+deb8u16)End-Date: 2018-10-06 21:51:07....
+
+## 18.2 常用命令与图形化工具
+
+除了上述的日志文件外，还有系统命令可以显示你机器的相关信息。
+
+### dmesg
+
+如第 8 章所述，此命令允许你查看整个启动过程，包括 BIOS 消息。
+
+```bash
+dmesg
+```
+
+## journalctl -b
+
+同样在第 8 章介绍，此命令显示系统的启动消息。
+
+```bash
+journalctl -b
+```
+
+### journalctl _UID=1000
+
+此命令显示特定用户的日志条目。在此实例中，它显示用户 ID 为 `1000` 的用户的条目。
+
+```bash
+journalctl _UID=1000
+```
+
+### journalctl --disk-usage
+
+要查看存储日志文件需要多少磁盘空间，如下使用开关 `--disk-usage`：
+
+```bash
+journalctl --disk-usage
+```
+
+`whatis` 在其索引数据库中搜索字符串（该数据库由 `mandb` 程序维护），并从该命令帮助页的 `NAME` 节中选取一个简短描述。下面的示例展示了 `mv` 和 `man` 两个命令的使用情况。
+
+| $ whatis mv (1) - 移动（重命名）文件$ whatis man (1) - 在线参考手册的接口 man (7) - 用于格式 man 页的宏$ | | |
+
+另一个选项是 `whereis` 命令，它对于定位 Linux 系统中的命令帮助页非常有帮助。这是一个非常简单的实用。下面的示例展示了 `mv` 和 `man` 两个命令的情况。
+
+| $ whereis mv: /bin/mv /usr/share/man/man1/mv.1.gz$whereis man: /usr/bin/man /usr/local/man /usr/share/man /usr/share/man/man1/man.1.gz /usr/share/man/man7/man.7.gz$ | | |
+
+每个命令还提供了额外的信息和配置示例。这些内容存储在 `/usr/share/doc` 目录下，每个程序都有自己的子目录。内容是标准化的，且因程序而异。每个用户都可以访问这些内容。下方显示了目录片段。
+
+![](img/Image00083.gif)
+
+## 19.4 外部帮助
+
+如果软件工具自带的帮助不够，需要进一步的解释，就需要用到外部资源了。可以咨询一些在线社区，例如：
+
+* LinuxHint - [`support.linuxhint.com`](https://support.linuxhint.com)
+
+* LinuxHelp - [`www.linuxhelp.com`](https://www.linuxhelp.com)
+
+
+
+另一个选项是 Linux 用户组 (LUG)。LUG 是来自同一地理位置、对 Linux 操作系统有共同兴趣的人组成的群体。他们以松散关联的人群或定期聚会的协会的形式组织。可以通过`LugsList` [`lugslist.com`](http://lugslist.com) 获取全球 LUG 的完整列表。
+
+![](img/Image00084.gif)
+
+许多 LUG 会组织聚会和活动，以分享想法、交流经验并相互学习。这包括本地和国际活动。
+
+![](http://www.amazon.com/gp/customer-reviews/write-a-review.html?asin=B07HDTG58D)
+
+## 关于作者
+
+Nathan Clark 是一位拥有超过 20 年软件行业经验的专家程序员。
+
+他拥有麻省理工学院（MIT）的硕士学位，曾任于美国一些领先的软件公司，积累了丰富的软件设计和开发知识。
+
+Nathan 和他的妻子 Sarah 在 2009 年创立了自己的开发公司，以便承担更具挑战性和创造性的项目。今天，他们为来自世界各地的高端客户提供服务。
+
+Nathan 喜欢通过书籍分享编程知识，为客户开发创新的软件解决方案，并在空闲时间看经典的科幻电影。
