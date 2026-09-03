@@ -1,0 +1,237 @@
+- - '#'
+  - OSINT 的 Linux：初学者 21 天课程
+- - '##'
+  - 这门课程适合什么人？
+- - '##'
+  - 哪些人应该避开这门课程？
+- - '#'
+  - 第 0 天 准备工作
+- - '##'
+  - cd linux-for-OSINT-21-day/Day_1
+- - '##'
+  - Day 2. 基础 Bash 语法
+- - '###'
+  - 变量和字符串拼接
+- - '###'
+  - 条件运算符
+- - '###'
+  - 循环
+- - '###'
+  - while 循环
+- - '###'
+  - until 循环
+- - '###'
+  - for 循环
+- - '##'
+  - 第 3 天. 安装和运行工具
+- - '##'
+  - zip -sf archive.zip
+- - '##'
+  - 我们找到了 27 个 snaps
+- - '##'
+  - 搜索 'excel'
+- - '##'
+  - 第 4 天 批量处理
+- - '##'
+  - 将 .txt 文件保存为 .csv
+- - '##'
+  - bash convert_files.sh
+- - '##'
+  - Xargs
+- - '##'
+  - Cd 第 5 天
+- - '##'
+  - xargs -n 1 curl -O < urls.txt
+- - '###'
+  - curl -X
+- - '##'
+  - 轻松生成 curl 命令
+- - '#'
+  - grep -F gmail Day_6/example.txt
+- - '##'
+  - grep -F i gmail Day_6/example.txt
+- - '##'
+  - example.txt U emails.txt U commands.txt U
+- - '##'
+  - PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL
+- - '##'
+  - grep -n "gmail" example.txt
+- - '##'
+  - 第 7 天
+- - '##'
+  - sed /[0-9]/no/g digits.txt
+- - '##'
+  - 问题 输出 端口 调试 控制台 终端
+- - '##'
+  - And a Happy NewYeargit/Linux-for-OSINT-21-day/Day_7 (main) $ sed '1,30 s/Happy/Merry/g'
+    sed_sample.txt
+- - '#'
+  - AWK
+- - '#'
+  - 第 8 天 Vim 文本编辑器
+- - '##'
+  - sudo apt update
+- - '##'
+  - sudo apt install vim
+- - '##'
+  - 问题 输出调试控制台 终端
+- - '##'
+  - 退出
+- - '#'
+  - screen -r demo-screen
+- - '##'
+  - screen -XS demo-screen quit
+- - '##'
+  - screen -ls
+- - '#'
+  - Crontab
+- - '##'
+  - /etc/crontab 系统级 crontab
+- - '##'
+  - 与其他 crontab 不同，当你编辑此文件时
+- - '##'
+  - crontab guru
+- - '##'
+  - “从周一到周五，每天的 22:00。”
+- - '#'
+  - 第 10 天。文本分析和编辑工具
+- - '##'
+  - Cat
+- - '##'
+  - Cut
+- - '##'
+  - Uniq
+- - '##'
+  - Sort
+- - '##'
+  - Iconv
+- - '##'
+  - 转录音频
+- - '##'
+  - sudo apt install pocketsphinx pocketsphinx-en-us
+- - '##'
+  - sphinx-f -i test_spec_wav -o test_spec_16000.wav
+- - '##'
+  - 从图像中提取文本
+- - '##'
+  - tesseract text.png text.txt
+- - '##'
+  - 翻译文本
+- - '##'
+  - sudo install-shell
+- - '#'
+  - 第12 天
+- - '##'
+  - 在 AAO-HNSF 患者分单中添加您的 Logo 和地址的说明
+- - '###'
+  - 1 下载并保存患者分单
+- - '###'
+  - 2 上传你的 Logo 和地址
+- - '###'
+  - 3 你已准备好打印了！
+- - '#'
+  - 从 PDF 提取文本
+- - '##'
+  - pdftotext result.txt
+- - '##'
+  - 从 PDF 提取图像
+- - '##'
+  - libreoffice -h
+- - '##'
+  - libreoffice --headless --convert-to txt example.docx
+- - '##'
+  - libreoffice --headless --convert-to csv example.xlsx
+- - '#'
+  - cd Day 14
+- - '##'
+  - XML
+- - '##'
+  - EXPLORER
+- - '##'
+  - TIMELINE
+- - '##'
+  - COUNTRY
+- - '##'
+  - CSV
+- - '#'
+  - 资源管理器
+- - '##'
+  - in2csv -k people json test.json > test_json_to.csv
+- - '#'
+  - 第 15天：爬取 (Scraping)
+- - '##'
+  - Katana
+- - '##'
+  - katana
+- - '##'
+  - Nuclei
+- - '##'
+  - 如果你想爬取其他标签而不是 `<title>` 标签怎么办？
+- - '##'
+  - HTML2TEXT
+- - '##'
+  - html2text example.html
+- - '##'
+  - 其他工具
+- - '#'
+  - 第 16 天。网络搜索自动化工具
+- - '##'
+  - DuckDuckGo 搜索自动化
+- - '##'
+  - pip install netlas
+- - '##'
+  - netlas -h
+- - '##'
+  - netlas save 你的 API 密钥
+- - '#'
+  - 第17 天 文件共享站点、种子、FTP
+- - '##'
+  - FTP
+- - '##'
+  - Torrents
+- - '##'
+  - File sharing services
+- - '##'
+  - Social media
+- - '##'
+  - Whois
+- - '##'
+  - github.com
+- - '##'
+  - Netlas
+- - '#'
+  - 20 个领域调查 Python 软件包
+- - '#'
+  - 第 19 天 Git 和 Github
+- - '##'
+  - 创建仓库
+- - '##'
+  - explainshell.com
+- - '##'
+  - 重定向输出
+- - '##'
+  - phind 用于下载 google 主页的搜索聊天命令
+- - '##'
+  - 建议
+- - '##'
+  - 代码检查器
+- - '##'
+  - ShellCheck
+- - '#'
+  - 第 21 天。哪种 Linux 发行版更好用？
+- - '##'
+  - 最新虚拟机镜像
+- - '#'
+  - README © CC0-1.0 许可证
+- - '##'
+  - 发布版本
+- - '##'
+  - 软件包
+- - '##'
+  - 贡献者 266
+- - '##'
+  - Awesome Shell
+- - '#'
+  - 接下来要做什么？
+- - '##'
+  - 应用。在 Windows 上可以完成相同的事情吗？
